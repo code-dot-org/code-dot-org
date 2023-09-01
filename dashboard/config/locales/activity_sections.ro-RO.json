@@ -15522,7 +15522,7 @@
         },
         "63df0c6e-ae3d-4724-9c1d-2ecd5bf8986a": {
           "tips": [
-            "Una dintre modalitățile folosite pentru a prezenta Ora de Codare, dacă nu sunteți foarte familiarizat(ă) cu programarea, este să le arătați elevilor unul dintre [videoclipurile noastre inspiraționale](https://hourofcode.com/us/resources#videos). Alegeți-l pe cel care, în opinia dvs., va avea cel mai puternic impact pentru elevi și distribuiți-l acum. Pentru elevii de gimnaziu vă sugerăm [Hour of Code a sosit](https://youtu.be/FC5FbmsH4fw).”"
+            "Una dintre modalitățile folosite pentru a prezenta Ora de Codare, dacă nu sunteți foarte familiarizat(ă) cu programarea, este să le arătați elevilor unul dintre [videoclipurile noastre inspiraționale][0]. Alegeți-l pe cel care, în opinia dvs., va avea cel mai puternic impact pentru elevi și distribuiți-l acum. Pentru elevii de gimnaziu vă sugerăm [Hour of Code a sosit][1].”"
           ]
         },
         "f96053ea-387e-47d5-a018-65619ec093b0": {
@@ -15535,7 +15535,7 @@
         },
         "91cc858b-9f90-4134-b890-237f457e8423": {
           "name": "Minecraft: Voiaj Acvatic",
-          "description": "Provocați elevii să finalizeze tutorialul [Minecraft: Voyage Aquatic](http://studio.code.org/s/aquatic/lessons/1/levels/1).\n\nÎn funcție de vârsta și abilitățile elevilor dvs., puteți lua în considerare:\n\n-   Pentru studenții mai tineri, vă sugerăm să vă împărțiți clasa în perechi și să cereți fiecărui grup să lucreze împreună pentru a finaliza tutorialul folosind [programarea perechi](https://youtu.be/vgkahOzFH2Q).\n-   Pentru elevii din clasele mijlocii, constatăm că lucrul individual la tutoriale funcționează bine. Uneori, este de ajutor să le permiteți elevilor să-și aleagă propriul tutorial. Dacă elevii nu sunt interesați de Minecraft, pot obține o experiență similară cu tutorialele [Cod cu Anna și Elsa](https://studio.code.org/s/frozen/stage/1/puzzle/1) sau [Star Wars](https://code.org/starwars).\n-   Pentru cursanții mai în vârstă sau adulți, tutorialul [Minecraft: Voyage Aquatic](http://studio.code.org/s/aquatic/lessons/1/levels/1) funcționează extrem de bine fie ca o provocare independentă, fie ca activitate de programare în pereche."
+          "description": "Provocați elevii să finalizeze tutorialul [Minecraft: Voyage Aquatic][0].\n\nÎn funcție de vârsta și abilitățile elevilor dvs., puteți lua în considerare:\n\n-   Pentru studenții mai tineri, vă sugerăm să vă împărțiți clasa în perechi și să cereți fiecărui grup să lucreze împreună pentru a finaliza tutorialul folosind [programarea perechi][1].\n-   Pentru elevii din clasele mijlocii, constatăm că lucrul individual la tutoriale funcționează bine. Uneori, este de ajutor să le permiteți elevilor să-și aleagă propriul tutorial. Dacă elevii nu sunt interesați de Minecraft, pot obține o experiență similară cu tutorialele [Cod cu Anna și Elsa][2] sau [Star Wars][3].\n-   Pentru cursanții mai în vârstă sau adulți, tutorialul [Minecraft: Voyage Aquatic][4] funcționează extrem de bine fie ca o provocare independentă, fie ca activitate de programare în pereche."
         },
         "900f3fd4-40aa-42f7-89fc-e5240b2db143": {
           "tips": [
@@ -15543,7 +15543,7 @@
           ]
         },
         "1be305a6-52f5-40bb-a8d5-f851a3c61a3a": {
-          "description": "Dacă un elev sau un grup de elevi termină mai devreme, poate încerca un alt tutorial vizitând [code.org/learn](http://code.org/learn)."
+          "description": "Dacă un elev sau un grup de elevi termină mai devreme, poate încerca un alt tutorial vizitând [code.org/learn][0]."
         },
         "29412a26-dd7b-4990-a8bb-7e6f7bfa00d6": {
           "name": "Informare",
@@ -15551,18 +15551,18 @@
         },
         "7e26ffea-ccaa-4969-9b40-01573fbe4303": {
           "name": "Sărbătoriți",
-          "description": "Explicați faptul că astăzi veți petrece o oră codând, deoarece săptămâna aceasta este Săptămâna Educației în Informatică și milioane de alți elevi de pe tot globul au participat la o oră de codare săptămâna aceasta. Felicită elevii pentru că fac parte din această mișcare mondială.\n\nOferiți fiecărui elev [un certificat](https://studio.code.org/certificates/batch?course=bWM=) sau o diplomă cu numele său."
+          "description": "Explicați faptul că astăzi veți petrece o oră codând, deoarece săptămâna aceasta este Săptămâna Educației în Informatică și milioane de alți elevi de pe tot globul au participat la o oră de codare săptămâna aceasta. Felicită elevii pentru că fac parte din această mișcare mondială.\n\nOferiți fiecărui elev [un certificat][0] sau o diplomă cu numele său."
         },
         "de9c3d28-c38a-4d2e-af91-a72a92d31f52": {
           "name": "Pașii următori",
-          "description": "Spuneți elevilor că, dacă le-a plăcut activitatea de astăzi, au multe opțiuni pentru a continua să programeze. Încurajați elevii să acceseze [code.org/learn](<>) pentru o listă de opțiuni sau, dacă planificați oricare dintre activitățile de extindere care urmează, spuneți elevilor ce urmează să se întâmple la clasa dvs. "
+          "description": "Spuneți elevilor că, dacă le-a plăcut activitatea de astăzi, au multe opțiuni pentru a continua să programeze. Încurajați elevii să acceseze [code.org/learn][0] pentru o listă de opțiuni sau, dacă planificați oricare dintre activitățile de extindere care urmează, spuneți elevilor ce urmează să se întâmple la clasa dvs. "
         },
         "ebf68fd6-9cfe-4fc2-93b4-e61860fc853b": {
-          "description": "Oferiți fiecărui elev un [„Bilet de ieșire”](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) (biletel unde poate nota)și cereți-le să rezume ceea ce au învățat astăzi, cum s-au simțit sau ce au trăit. Elevii pot să deseneze, să scrie sau să se exprime în orice mod în care se simt confortabil. Colectați aceste note de la fiecare student care iese din sală. Dacă doriți, puteți posta „Biletele de ieșire” pe un avizier sau într-un loc vizibil din școală, ca o amintire a Orei de codare."
+          "description": "Oferiți fiecărui elev un [„Bilet de ieșire”][0] (biletel unde poate nota)și cereți-le să rezume ceea ce au învățat astăzi, cum s-au simțit sau ce au trăit. Elevii pot să deseneze, să scrie sau să se exprime în orice mod în care se simt confortabil. Colectați aceste note de la fiecare student care iese din sală. Dacă doriți, puteți posta „Biletele de ieșire” pe un avizier sau într-un loc vizibil din școală, ca o amintire a Orei de codare."
         },
         "f3360f34-a0a8-4d3d-98e2-fe6176ad0e2e": {
           "name": "Dincolo de o Oră de Cod ",
-          "description": "După ce se termină Ora de codare, există multe modalități de a continua să predați informatică în sala de clasă. Iată câteva idei:\n\n-   **Predați cursurile [Code Studio Computer Science Fundamentals](http://code.org/educate/k5)**. Aceste șase cursuri sunt concepute pentru tinerii cursanți. Elevii parcurg o serie de puzzle-uri care îi învață să codeze, iar educatorii au acces la planuri de lecții captivante care ajută ca învățarea să prindă viață. Code.org oferă dezvoltare profesională gratuită pentru aceste cursuri, online sau în persoană.\n-   **Accesați [Puteți preda informatica](https://code.org/teach)** pentru mai multe sugestii de cursuri.\n-   **Invitați un expert în informatică să discute cu clasa dvs. despre munca lui**. Nu cunoașteți niciun informatician local? Luați legătura cu un voluntar pe [harta voluntarului](https://code.org/volunteer/local)"
+          "description": "După ce se termină Ora de codare, există multe modalități de a continua să predați informatică în sala de clasă. Iată câteva idei:\n\n-   **Predați cursurile [Code Studio Computer Science Fundamentals][0]**. Aceste șase cursuri sunt concepute pentru tinerii cursanți. Elevii parcurg o serie de puzzle-uri care îi învață să codeze, iar educatorii au acces la planuri de lecții captivante care ajută ca învățarea să prindă viață. Code.org oferă dezvoltare profesională gratuită pentru aceste cursuri, online sau în persoană.\n-   **Accesați [Puteți preda informatica][1]** pentru mai multe sugestii de cursuri.\n-   **Invitați un expert în informatică să discute cu clasa dvs. despre munca lui**. Nu cunoașteți niciun informatician local? Luați legătura cu un voluntar pe [harta voluntarului][2]"
         },
         "6b51b4f1-5b1d-4b29-af25-c48d716a2d22": {
           "description": "#### Urați-le Bun venit elevilor în clasă și prezentați pe scurt activitatea ce se va desfășura în ziua respectivă.\n\n_Spuneți-le: „Astăzi vom petrece o oră învățând să codăm. A mai auzit cineva de aici de termenul „cod”? Ce înseamnă?\"_\n\nElevii ar putea menționa că un „cod” este ca un mesaj secret sau că are legătură într-un fel cu computerele.",
@@ -15950,7 +15950,7 @@
         },
         "aced2726-6ed1-4645-9fd2-eccfe982584f": {
           "tips": [
-            "Una dintre modalitățile folosite pentru a prezenta Ora de codare, dacă nu sunteți foarte familiarizat(ă) cu programarea, este să le arătați elevilor unul dintre [videoclipurile noastre inspiraționale](https://hourofcode.com/us/resources#videos). Alegeți-l pe cel care, în opinia dvs., va avea cel mai puternic impact pentru elevi și distribuiți-l acum. Pentru elevii de gimnaziu vă sugerăm [Hour of Code a sosit](https://youtu.be/qYZF6oIZtfc).”"
+            "Una dintre modalitățile folosite pentru a prezenta Ora de codare, dacă nu sunteți foarte familiarizat(ă) cu programarea, este să le arătați elevilor unul dintre [videoclipurile noastre inspiraționale][0]. Alegeți-l pe cel care, în opinia dvs., va avea cel mai puternic impact pentru elevi și distribuiți-l acum. Pentru elevii de gimnaziu vă sugerăm [Hour of Code a sosit][1].”"
           ]
         },
         "a0692bbb-9e61-49d2-ac85-96bd4a922f5a": {
@@ -15958,7 +15958,7 @@
         },
         "8af57fdb-d7be-4cc2-9964-8f7eed4102f9": {
           "name": "Codul Flappy",
-          "description": "Provocați-vă elevii să finalizeze tutorialul [Make a Flappy Game](https://studio.code.org/flappy/1).\n\nÎn funcție de vârsta și abilitățile elevilor dvs., puteți lua în considerare:\n\n-   Pentru elevii de gimnaziu și liceu, vă sugerăm să alegeți tutoriale care permit jocul gratuit și crearea de aplicații sau jocuri. Puteți solicita elevilor să lucreze independent sau în perechi sau în grupuri mici. Există multe alte tutoriale pe [code.org/learn](http://code.org/learn) care permit crearea gratuită, inclusiv [Playlab](https://studio.code.org/s/playlab/stage/1/puzzle/1) și noul nostru instrument beta [AppLab](https://code.org/educate/applab).\n-   Pentru elevii mai tineri, vă sugerăm să vă împărțiți clasa în perechi sau în grupuri foarte mici (cu câte trei până la patru elevi fiecare) și să cereți fiecărui grup să lucreze împreună pentru a finaliza tutorialul folosind [programarea perechi](https://youtu.be/vgkahOzFH2Q).\n-   Pentru cursanții adulți, tutorialul [Scrie primul program de calculator](https://studio.code.org/hoc/1) funcționează extrem de bine fie ca o provocare independentă, fie ca o activitate de programare pe perechi."
+          "description": "Provocați-vă elevii să finalizeze tutorialul [Make a Flappy Game][0].\n\nÎn funcție de vârsta și abilitățile elevilor dvs., puteți lua în considerare:\n\n-   Pentru elevii de gimnaziu și liceu, vă sugerăm să alegeți tutoriale care permit jocul gratuit și crearea de aplicații sau jocuri. Puteți solicita elevilor să lucreze independent sau în perechi sau în grupuri mici. Există multe alte tutoriale pe [code.org/learn][1] care permit crearea gratuită, inclusiv [Playlab][2] și noul nostru instrument beta [AppLab][3].\n-   Pentru elevii mai tineri, vă sugerăm să vă împărțiți clasa în perechi sau în grupuri foarte mici (cu câte trei până la patru elevi fiecare) și să cereți fiecărui grup să lucreze împreună pentru a finaliza tutorialul folosind [programarea perechi][4].\n-   Pentru cursanții adulți, tutorialul [Scrie primul program de calculator][5] funcționează extrem de bine fie ca o provocare independentă, fie ca o activitate de programare pe perechi."
         },
         "47fe47af-9de3-4ba5-8193-1f489bef9544": {
           "tips": [
@@ -15966,7 +15966,7 @@
           ]
         },
         "55f2f6a9-8e6b-49c2-8988-e2a09956e222": {
-          "description": "Dacă un elev sau un grup de elevi termină mai devreme, poate încerca un alt tutorial vizitând [code.org/learn](http://code.org/learn)."
+          "description": "Dacă un elev sau un grup de elevi termină mai devreme, poate încerca un alt tutorial vizitând [code.org/learn][0]."
         },
         "cd649101-5c1f-4bcb-9258-3cabf2bfccb6": {
           "name": "Informare",
@@ -15974,7 +15974,7 @@
         },
         "ca7d5e61-0396-4885-934c-0d70ab63b072": {
           "name": "Sărbătoriți",
-          "description": "Explicați-le elvilor faptul că veți petrece o oră programând astăzi, deoarece săptămâna aceasta este Săptămâna Educației în Tehnologia Computerelor și milioane de alți elevi de pe tot globul au învățat și o oră de codare săptămâna aceasta. Felicită elevii pentru că fac parte din această mișcare mondială.\n\nOferiți fiecărui elevt un [certificat](http://code.org/certificates) sau Diplomă cu numele său."
+          "description": "Explicați-le elvilor faptul că veți petrece o oră programând astăzi, deoarece săptămâna aceasta este Săptămâna Educației în Tehnologia Computerelor și milioane de alți elevi de pe tot globul au învățat și o oră de codare săptămâna aceasta. Felicită elevii pentru că fac parte din această mișcare mondială.\n\nOferiți fiecărui elevt un [certificat][0] sau Diplomă cu numele său."
         },
         "d4bf5db5-6884-4166-ae90-3a5cd01b9695": {
           "name": "Pașii următori",
@@ -15986,7 +15986,7 @@
         },
         "f7c11887-da26-4c7b-be7a-1b84d330ed30": {
           "name": "Dincolo de o Oră de Cod ",
-          "description": "#### După Ora de Codare\n\nDupă ce se termină Ora de Codare, există multe modalități de a continua să predați informatica în sala de clasă. Iată câteva idei:\n\n-   Predați cursurile [Code Studio Computer Science Fundamentals](http://code.org/educate/k5). Aceste șase cursuri sunt concepute pentru tinerii cursanți. Elevii parcurg singuri o serie de puzzle-uri care îi învață să codeze, iar profesorii au acces la planuri de lecții captivante care ajută ca învățarea să prindă viață. Code.org oferă dezvoltare profesională gratuită pentru aceste cursuri, online sau în persoană.\n-   Invitați un expert în informatică să discute cu clasa dvs. despre munca sa. Nu cunoașteți niciun expert în domeniu? Adresați-vă unui voluntar pe [harta voluntarului][2]."
+          "description": "#### După Ora de Codare\n\nDupă ce se termină Ora de Codare, există multe modalități de a continua să predați informatica în sala de clasă. Iată câteva idei:\n\n-   Predați cursurile [Code Studio Computer Science Fundamentals][0]. Aceste șase cursuri sunt concepute pentru tinerii cursanți. Elevii parcurg singuri o serie de puzzle-uri care îi învață să codeze, iar profesorii au acces la planuri de lecții captivante care ajută ca învățarea să prindă viață. Code.org oferă dezvoltare profesională gratuită pentru aceste cursuri, online sau în persoană.\n-   Invitați un expert în informatică să discute cu clasa dvs. despre munca sa. Nu cunoașteți niciun expert în domeniu? Adresați-vă unui voluntar pe [harta voluntarului][2]."
         },
         "4fddbdf5-8e43-4536-bdaa-98b0b8c240ad": {
           "name": "Pregătirea ",
@@ -15994,7 +15994,7 @@
         },
         "55cc55a9-45cb-4bbd-bf37-2de8a2abd9db": {
           "tips": [
-            "Dacă aveți timp sau dacă elevii dvs. au nevoie de informații suplimentare, ați putea lua în considerare oferirea materialilului [„The Drawing Machine”](https://code.org/curriculum/misc/hocunplugged/Teacher) înainte de evenimentul Ora de codare. Această lecție scurtă prezintă elevilor ideea desenului asistat de computer, care îi va pregăti pentru succes cu [tutorialul Cod cu Anna și Elsa](https://studio.code.org/s/frozen/stage/1/puzzle/1)."
+            "Dacă aveți timp sau dacă elevii dvs. au nevoie de informații suplimentare, ați putea lua în considerare oferirea materialilului [„The Drawing Machine”][0] înainte de evenimentul Ora de codare. Această lecție scurtă prezintă elevilor ideea desenului asistat de computer, care îi va pregăti pentru succes cu [tutorialul Cod cu Anna și Elsa][1]."
           ]
         },
         "46e7088b-b207-46ae-be95-3ceacecc3f35": {
@@ -16002,7 +16002,7 @@
         },
         "063fb28a-8520-4c66-9821-3be0f0d1ed5f": {
           "tips": [
-            "Una dintre modalitățile folosite pentru a prezenta Ora de Codare, dacă nu sunteți foarte familiarizat(ă) cu programarea, este să le arătați elevilor unul dintre [videoclipurile noastre inspiraționale](https://hourofcode.com/us/resources#videos). Alegeți-l pe cel care, în opinia dvs., va avea cel mai puternic impact pentru elevi și distribuiți-l acum. Pentru elevii de gimnaziu vă sugerăm [Hour of Code a sosit](https://youtu.be/FC5FbmsH4fw).”"
+            "Una dintre modalitățile folosite pentru a prezenta Ora de Codare, dacă nu sunteți foarte familiarizat(ă) cu programarea, este să le arătați elevilor unul dintre [videoclipurile noastre inspiraționale][0]. Alegeți-l pe cel care, în opinia dvs., va avea cel mai puternic impact pentru elevi și distribuiți-l acum. Pentru elevii de gimnaziu vă sugerăm [Hour of Code a sosit][1].”"
           ]
         },
         "c18f0050-ba65-4f12-8cc6-fe7f16b5806b": {
@@ -16010,7 +16010,7 @@
         },
         "e5e802d6-9ee4-4ef3-aab2-616ac241b5f8": {
           "name": "Programati cu Anna și Elsa",
-          "description": "Provocați-vă elevii să finalizeze tutorialul [Codul cu Anna și Elsa](https://studio.code.org/s/frozen/stage/1/puzzle/1).\n\nÎn funcție de vârsta și abilitățile elevilor dvs., puteți lua în considerare:\n\n-   Pentru studenții mai tineri, vă sugerăm să vă împărțiți clasa în perechi sau în grupuri foarte mici (de la trei până la patru elevi fiecare) și să cereți fiecărui grup să lucreze împreună pentru a finaliza tutorialul folosind [programarea perechi](https://youtu.be/vgkahOzFH2Q). Elevii din clasele mai mici pot să întâmpina dificultăți în înțelegerea noțiunilor de matematică din tutorial (necesită o înțelegere de bază a măsurării unghiurilor). Dacă elevii dvs. sunt mai tineri, luați în considerare furnizarea unui plan suplimentar de lecție, [„Mașina de desen”](https://code.org/curriculum/misc/hocunplugged/Teacher) pentru a prezenta elementele de bază înainte de a începe Ora de codare.\n-   Pentru elevii mai mari, constatăm că lucrul individual la tutoriale funcționează bine. Uneori, este de ajutor să le permiteți elevilor să-și aleagă propriul tutorial. Dacă elevii nu sunt interesați de Frozen, ei pot obține o experiență similară cu tutorialul [Scrie primul program de calculator](https://studio.code.org/hoc/1).\n-   Pentru cursanții adulți, [Cod with Anna and Elsa](https://studio.code.org/s/frozen/stage/1/puzzle/1) funcționează extrem de bine fie ca o provocare individuală, fie ca activitate de programare în pereche."
+          "description": "Provocați-vă elevii să finalizeze tutorialul [Codul cu Anna și Elsa][0].\n\nÎn funcție de vârsta și abilitățile elevilor dvs., puteți lua în considerare:\n\n-   Pentru studenții mai tineri, vă sugerăm să vă împărțiți clasa în perechi sau în grupuri foarte mici (de la trei până la patru elevi fiecare) și să cereți fiecărui grup să lucreze împreună pentru a finaliza tutorialul folosind [programarea perechi][1]. Elevii din clasele mai mici pot să întâmpina dificultăți în înțelegerea noțiunilor de matematică din tutorial (necesită o înțelegere de bază a măsurării unghiurilor). Dacă elevii dvs. sunt mai tineri, luați în considerare furnizarea unui plan suplimentar de lecție, [„Mașina de desen”][2] pentru a prezenta elementele de bază înainte de a începe Ora de codare.\n-   Pentru elevii mai mari, constatăm că lucrul individual la tutoriale funcționează bine. Uneori, este de ajutor să le permiteți elevilor să-și aleagă propriul tutorial. Dacă elevii nu sunt interesați de Frozen, ei pot obține o experiență similară cu tutorialul [Scrie primul program de calculator][3].\n-   Pentru cursanții adulți, [Cod with Anna and Elsa][4] funcționează extrem de bine fie ca o provocare individuală, fie ca activitate de programare în pereche."
         },
         "bdb8b54a-c21d-4bcf-a960-67ecf0468a7f": {
           "tips": [
@@ -16018,15 +16018,15 @@
           ]
         },
         "da8b52b2-8db6-440d-add3-8578161f59e2": {
-          "description": "Dacă un elev sau un grup de elevi termină mai devreme, poate încerca un alt tutorial vizitând [code.org/learn](http://code.org/learn)."
+          "description": "Dacă un elev sau un grup de elevi termină mai devreme, poate încerca un alt tutorial vizitând [code.org/learn][0]."
         },
         "38799019-2b81-4c28-a239-762b90e0f5e3": {
           "name": "Informare",
-          "description": "Dați fiecărui elev câteva bilețele sau cartonașe pentru note. Facilitați o activitate rapidă de tip [„Whip Around”](http://www.theteachertoolkit.com/index.php/tool/whip-around):\n\n-   Faceți o solicitare deschisă, care poate să aibă mai multe răspunsuri, cum ar fi „Distribuiți ceva care v-a plăcut cu adevărat la activitatea de la Ora de cod pe care ați finalizat-o” sau „Distribuiți unele abilități pe care le-ați învățat astăzi”.\n-   Rugați-i pe elevi să noteze cât mai multe răspunsuri posibile, câte o idee pentru fiecare bilețel sau fișă.\n     „Întrebați” aleatoriu elevii participanți, numind câte un student. Rugați elevii să împărtășească unul dintre răspunsurile lor. Când sunt numiți, elevii nu trebuie să repete un răspuns; trebuie să adauge ceva nou.\n-   După ce ați terminat, cereți elevilor să discute care idei și teme au apărut cel mai des în răspunsurile lor."
+          "description": "Dați fiecărui elev câteva bilețele sau cartonașe pentru note. Facilitați o activitate rapidă de tip [„Whip Around”][0]:\n\n-   Faceți o solicitare deschisă, care poate să aibă mai multe răspunsuri, cum ar fi „Distribuiți ceva care v-a plăcut cu adevărat la activitatea de la Ora de cod pe care ați finalizat-o” sau „Distribuiți unele abilități pe care le-ați învățat astăzi”.\n-   Rugați-i pe elevi să noteze cât mai multe răspunsuri posibile, câte o idee pentru fiecare bilețel sau fișă.\n     „Întrebați” aleatoriu elevii participanți, numind câte un student. Rugați elevii să împărtășească unul dintre răspunsurile lor. Când sunt numiți, elevii nu trebuie să repete un răspuns; trebuie să adauge ceva nou.\n-   După ce ați terminat, cereți elevilor să discute care idei și teme au apărut cel mai des în răspunsurile lor."
         },
         "e9751fff-a71d-4d90-b401-0ccbf3356c44": {
           "name": "Sărbătoriți",
-          "description": "Explicați-le elvilor faptul că veți petrece o oră programând astăzi, deoarece săptămâna aceasta este Săptămâna Educației în Tehnologia Computerelor și milioane de alți elevi de pe tot globul au învățat și o oră de codare săptămâna aceasta. Felicită elevii pentru că fac parte din această mișcare mondială.\n\nOferiți fiecărui elevt un [certificat](http://code.org/certificates) sau Diplomă cu numele său."
+          "description": "Explicați-le elvilor faptul că veți petrece o oră programând astăzi, deoarece săptămâna aceasta este Săptămâna Educației în Tehnologia Computerelor și milioane de alți elevi de pe tot globul au învățat și o oră de codare săptămâna aceasta. Felicită elevii pentru că fac parte din această mișcare mondială.\n\nOferiți fiecărui elevt un [certificat][0] sau Diplomă cu numele său."
         },
         "3596cc47-e661-4d00-943e-ed858c4f6f5d": {
           "name": "Pașii următori",
@@ -16037,7 +16037,7 @@
         },
         "3a8c30ae-50bb-4a85-99d8-b62c9f7e1bbf": {
           "name": "Dincolo de o Oră de Cod ",
-          "description": "#### După Ora de Codare\n\nDupă ce se termină Ora de Codare, există mai multe modalități de a continua să predați informatica în sala de clasă. Iată câteva idei:\n\n-   Predați cursurile [Code Studio Computer Science Fundamentals](http://code.org/educate/k5). Aceste șase cursuri sunt concepute pentru tinerii cursanți. Elevii parcurg singuri o serie de puzzle-uri care îi învață să codeze, iar profesorii au acces la planuri de lecții captivante care ajută ca învățarea să prindă viață. Code.org oferă dezvoltare profesională gratuită pentru aceste cursuri, online sau în persoană.\n-   Cercetați o parte dintre carierele în programare pe care le-ați identificat astăzi. Găsiți resurse pentru planificarea proiectelor de cercetare în carieră pe [Sharemylesson.com](http://www.sharemylesson.com/TaxonomySearchResults.aspx?area=resources&keywords=career+research).\n-   **Invitați un expert în informatică să discute cu clasa dvs. despre munca lui**. Dacă nu cunoașteți niciun voluntar, căutați  pe [harta voluntarilor](https://code.org/volunteer/local)."
+          "description": "#### După Ora de Codare\n\nDupă ce se termină Ora de Codare, există mai multe modalități de a continua să predați informatica în sala de clasă. Iată câteva idei:\n\n-   Predați cursurile [Code Studio Computer Science Fundamentals][0]. Aceste șase cursuri sunt concepute pentru tinerii cursanți. Elevii parcurg singuri o serie de puzzle-uri care îi învață să codeze, iar profesorii au acces la planuri de lecții captivante care ajută ca învățarea să prindă viață. Code.org oferă dezvoltare profesională gratuită pentru aceste cursuri, online sau în persoană.\n-   Cercetați o parte dintre carierele în programare pe care le-ați identificat astăzi. Găsiți resurse pentru planificarea proiectelor de cercetare în carieră pe [Sharemylesson.com][1].\n-   **Invitați un expert în informatică să discute cu clasa dvs. despre munca lui**. Dacă nu cunoașteți niciun voluntar, căutați  pe [harta voluntarilor][2]."
         },
         "a2f60a17-c25f-4c4d-9f2d-384486d7a67d": {
           "name": "Pregătirea ",
@@ -16045,7 +16045,7 @@
         },
         "c857d03e-91e3-4949-8ccc-79a2aec463c8": {
           "tips": [
-            "Una dintre modalitățile folosite pentru a prezenta Ora de codare, dacă nu sunteți foarte familiarizat(ă) cu programarea, este să le arătați elevilor unul dintre [videoclipurile noastre inspiraționale](https://hourofcode.com/us/resources#videos). Alegeți-l pe cel care, în opinia dvs., va avea cel mai puternic impact pentru elevi și distribuiți-l acum. Pentru elevii de gimnaziu vă sugerăm [Hour of Code a sosit](https://youtu.be/qYZF6oIZtfc).”"
+            "Una dintre modalitățile folosite pentru a prezenta Ora de codare, dacă nu sunteți foarte familiarizat(ă) cu programarea, este să le arătați elevilor unul dintre [videoclipurile noastre inspiraționale][0]. Alegeți-l pe cel care, în opinia dvs., va avea cel mai puternic impact pentru elevi și distribuiți-l acum. Pentru elevii de gimnaziu vă sugerăm [Hour of Code a sosit][1].”"
           ]
         },
         "8ad0974f-b2ad-4632-bfe5-8c8760cd2e45": {
@@ -16053,7 +16053,7 @@
         },
         "0e395269-9740-4229-a7ac-b18b9f4eced9": {
           "name": "Laboratorul de Joacă Gumball",
-          "description": "Provocați-vă elevii să finalizeze tutorialul [Gumball Play Lab](https://studio.code.org/s/gumball/lessons/1/levels/1) .\n\nÎn funcție de vârsta și abilitățile elevilor dvs., puteți lua în considerare:\n\n-   Pentru elevii de gimnaziu și liceu, vă sugerăm să alegeți tutoriale care permit jocul gratuit și crearea de aplicații sau jocuri. Puteți solicita elevilor să lucreze independent sau în perechi sau în grupuri mici. Există multe alte tutoriale pe [code.org/learn](http://code.org/learn) care permit crearea gratuită, inclusiv [Make a Flappy Game](https://studio.code.org/s/flappy) și noul nostru instrument beta [AppLab](https://code.org/educate/applab).\n-   Pentru elevii mai tineri, vă sugerăm să vă împărțiți clasa în perechi sau în grupuri foarte mici (cu câte trei până la patru elevi fiecare) și să cereți fiecărui grup să lucreze împreună pentru a finaliza tutorialul folosind [programarea pe perechi](https://youtu.be/vgkahOzFH2Q).\n-   Pentru cursanții adulți, tutorialul [Scrie primul program de calculator](https://studio.code.org/hoc/1) funcționează extrem de bine fie ca o provocare independentă, fie ca o activitate de programare pe perechi."
+          "description": "Provocați-vă elevii să finalizeze tutorialul [Gumball Play Lab][0] .\n\nÎn funcție de vârsta și abilitățile elevilor dvs., puteți lua în considerare:\n\n-   Pentru elevii de gimnaziu și liceu, vă sugerăm să alegeți tutoriale care permit jocul gratuit și crearea de aplicații sau jocuri. Puteți solicita elevilor să lucreze independent sau în perechi sau în grupuri mici. Există multe alte tutoriale pe [code.org/learn][1] care permit crearea gratuită, inclusiv [Make a Flappy Game][2] și noul nostru instrument beta [AppLab][3].\n-   Pentru elevii mai tineri, vă sugerăm să vă împărțiți clasa în perechi sau în grupuri foarte mici (cu câte trei până la patru elevi fiecare) și să cereți fiecărui grup să lucreze împreună pentru a finaliza tutorialul folosind [programarea pe perechi][4].\n-   Pentru cursanții adulți, tutorialul [Scrie primul program de calculator][5] funcționează extrem de bine fie ca o provocare independentă, fie ca o activitate de programare pe perechi."
         },
         "eea63453-59c2-4c48-8d04-d6612d379584": {
           "tips": [
@@ -16061,7 +16061,7 @@
           ]
         },
         "fd77d784-72d9-4687-843d-7d1ecd17b9a1": {
-          "description": "Dacă un elev sau un grup de elevi termină mai devreme, poate încerca un alt tutorial vizitând [code.org/learn](http://code.org/learn)."
+          "description": "Dacă un elev sau un grup de elevi termină mai devreme, poate încerca un alt tutorial vizitând [code.org/learn][0]."
         },
         "0815f2e7-8336-48ae-8ac0-5d0af1f956d9": {
           "name": "Informare",
@@ -16069,7 +16069,7 @@
         },
         "3b92bb05-ac4c-4717-afce-ed3d10f54527": {
           "name": "Sărbătoriți",
-          "description": "Explicați-le elvilor faptul că veți petrece o oră programând astăzi, deoarece săptămâna aceasta este Săptămâna Educației în Tehnologia Computerelor și milioane de alți elevi de pe tot globul au învățat și o oră de codare săptămâna aceasta. Felicită elevii pentru că fac parte din această mișcare mondială.\n\nOferiți fiecărui elevt un [certificat](http://code.org/certificates) sau Diplomă cu numele său."
+          "description": "Explicați-le elvilor faptul că veți petrece o oră programând astăzi, deoarece săptămâna aceasta este Săptămâna Educației în Tehnologia Computerelor și milioane de alți elevi de pe tot globul au învățat și o oră de codare săptămâna aceasta. Felicită elevii pentru că fac parte din această mișcare mondială.\n\nOferiți fiecărui elevt un [certificat][0] sau Diplomă cu numele său."
         },
         "59cd05df-cb4d-4280-8700-840826c01845": {
           "name": "Pașii următori",
@@ -16081,7 +16081,7 @@
         },
         "2836d5f0-0808-4868-bc34-bbd3cf8b631f": {
           "name": "Dincolo de o Oră de Cod ",
-          "description": "#### După Ora de Codare\n\nDupă ce se termină Ora de Codare, există multe modalități de a continua să predați informatica în sala de clasă. Iată câteva idei:\n\n-   Predați cursurile [Code Studio Computer Science Fundamentals](http://code.org/educate/k5). Aceste șase cursuri sunt concepute pentru tinerii cursanți. Elevii parcurg singuri o serie de puzzle-uri care îi învață să codeze, iar profesorii au acces la planuri de lecții captivante care ajută ca învățarea să prindă viață. Code.org oferă dezvoltare profesională gratuită pentru aceste cursuri, online sau în persoană.\n-   Invitați un expert în informatică să discute cu clasa dvs. despre munca sa. Nu cunoașteți niciun expert în domeniu? Adresați-vă unui voluntar pe [harta voluntarului][2]."
+          "description": "#### După Ora de Codare\n\nDupă ce se termină Ora de Codare, există multe modalități de a continua să predați informatica în sala de clasă. Iată câteva idei:\n\n-   Predați cursurile [Code Studio Computer Science Fundamentals][0]. Aceste șase cursuri sunt concepute pentru tinerii cursanți. Elevii parcurg singuri o serie de puzzle-uri care îi învață să codeze, iar profesorii au acces la planuri de lecții captivante care ajută ca învățarea să prindă viață. Code.org oferă dezvoltare profesională gratuită pentru aceste cursuri, online sau în persoană.\n-   Invitați un expert în informatică să discute cu clasa dvs. despre munca sa. Nu cunoașteți niciun expert în domeniu? Adresați-vă unui voluntar pe [harta voluntarului][2]."
         },
         "c4d6d315-bb5c-47d7-bc5e-f5fce2e4ae67": {
           "name": "Pregătirea ",
@@ -16095,18 +16095,18 @@
         },
         "ce182c47-efed-4526-bb9c-f4ec66b052a4": {
           "name": "Suport general",
-          "description": "Iată câteva sfaturi care ar trebui să-i ajute pe elevi, indiferent de nivelul la care lucrează\n\n-   **Colaborați cu colegii:** Încurajați elevii să se consulte cu un coleg de bancă atunci când se blochează. În funcție de vârsta și abilitățile elevilor dvs., ați putea lua în considerare împărțirea oficială a clasei în perechi pentru a finaliza tutorialul folosind [programarea perechi](https://youtu.be/vgkahOzFH2Q).\n\n-   **Citiți instrucțiunile:** De obicei, instrucțiunile oferă sfaturi utile despre cum să finalizați nivelul. Înainte de a oferi elevilor răspunsul, asigurați-vă că au analizat cu atenție instrucțiunile, sugestiile, videoclipurile și orice cod de pornire.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **V-ați blocat? Căutați indicii:** Fiecare nivel include un indiciu cu sfaturi despre cum să treceți un nivel, inclusiv ce blocuri de cod să încercați.\n\n-   **Fă-ți timp și experimentează.** În general, instrucțiunile le spun elevilor ce să facă, dar ar trebui să se simtă liberi să-și încerce propriile idei."
+          "description": "Iată câteva sfaturi care ar trebui să-i ajute pe elevi, indiferent de nivelul la care lucrează\n\n-   **Colaborați cu colegii:** Încurajați elevii să se consulte cu un coleg de bancă atunci când se blochează. În funcție de vârsta și abilitățile elevilor dvs., ați putea lua în considerare împărțirea oficială a clasei în perechi pentru a finaliza tutorialul folosind [programarea perechi][0].\n\n-   **Citiți instrucțiunile:** De obicei, instrucțiunile oferă sfaturi utile despre cum să finalizați nivelul. Înainte de a oferi elevilor răspunsul, asigurați-vă că au analizat cu atenție instrucțiunile, sugestiile, videoclipurile și orice cod de pornire.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **V-ați blocat? Căutați indicii:** Fiecare nivel include un indiciu cu sfaturi despre cum să treceți un nivel, inclusiv ce blocuri de cod să încercați.\n\n-   **Fă-ți timp și experimentează.** În general, instrucțiunile le spun elevilor ce să facă, dar ar trebui să se simtă liberi să-și încerce propriile idei."
         },
         "893dba56-7c8e-4897-949b-de514de76011": {
           "name": "Bună Lume",
           "progression_name": "Bună Lume"
         },
         "05ad915a-32e0-4799-90a2-2a53efb937f1": {
-          "description": "Dacă un grup de elevi sau un elev termină devreme, încurajați-l să continue construirea unui proiect la ultimul nivel. Dacă elevii nu sunt siguri ce altceva să facă, le puteți pune întrebări:\n\n-   Ce alte sprite-uri (caractere) ai putea adăuga la proiectul tău?\n-   Te-ai uitat prin biblioteca de costume sau ai încercat să-ți desenezi propriul costum?\n-   Ce altceva le-ai putea spune caracterelor tale să spună?\n-   Ce ar trebui să facă aceste personaje când sunt apăsate?\n-   Invitați elevii să împărtășească idei și să învețe unii de la alții. De asemenea, pot încerca un alt tutorial vizitând [code.org/learn](https://code.org/learn)."
+          "description": "Dacă un grup de elevi sau un elev termină devreme, încurajați-l să continue construirea unui proiect la ultimul nivel. Dacă elevii nu sunt siguri ce altceva să facă, le puteți pune întrebări:\n\n-   Ce alte sprite-uri (caractere) ai putea adăuga la proiectul tău?\n-   Te-ai uitat prin biblioteca de costume sau ai încercat să-ți desenezi propriul costum?\n-   Ce altceva le-ai putea spune caracterelor tale să spună?\n-   Ce ar trebui să facă aceste personaje când sunt apăsate?\n-   Invitați elevii să împărtășească idei și să învețe unii de la alții. De asemenea, pot încerca un alt tutorial vizitând [code.org/learn][0]."
         },
         "d5d3f8eb-f17e-4f26-88a8-ca6422ed7a1f": {
           "name": "Reflecţie",
-          "description": "#### Chestionar\n\nCereți elevilor să se gândească la ce au făcut astăzi. Ce au învățat despre cod? Caractere? Evenimente?\n\nCe părere au despre informatică și codare după ce au petrecut o oră explorând?\n\n#### Pașii următori\n\nSpuneți elevilor că, dacă le-a plăcut activitatea de astăzi, au multe opțiuni pentru a continua să codeze. Vizitați [CS Connections](https://code.org/educate/csc) pentru idei despre cum să integrați informatica în alte materii sau citiți mai multe despre [ofertele noastre de cursuri pentru școlile primare](https://code.org/educate/curriculum/elementary-school)."
+          "description": "#### Chestionar\n\nCereți elevilor să se gândească la ce au făcut astăzi. Ce au învățat despre cod? Caractere? Evenimente?\n\nCe părere au despre informatică și codare după ce au petrecut o oră explorând?\n\n#### Pașii următori\n\nSpuneți elevilor că, dacă le-a plăcut activitatea de astăzi, au multe opțiuni pentru a continua să codeze. Vizitați [CS Connections][0] pentru idei despre cum să integrați informatica în alte materii sau citiți mai multe despre [ofertele noastre de cursuri pentru școlile primare][1]."
         },
         "aad08892-e7b6-4fdc-bfd6-8199118fc2d6": {
           "name": "Pregătirea ",
@@ -16120,18 +16120,18 @@
         },
         "0a05af25-05aa-4e56-92ce-f14570cc1c64": {
           "name": "Suport general",
-          "description": "Iată câteva sfaturi care ar trebui să-i ajute pe elevi, indiferent de nivelul la care lucrează\n\n-   **Colaborați cu colegii:** Încurajați elevii să se consulte cu un coleg de bancă atunci când se blochează. În funcție de vârsta și abilitățile elevilor dvs., ați putea lua în considerare împărțirea oficială a clasei în perechi pentru a finaliza tutorialul folosind [programarea perechi](https://youtu.be/vgkahOzFH2Q).\n\n-   **Citiți instrucțiunile:** De obicei, instrucțiunile oferă sfaturi utile despre cum să finalizați nivelul. Înainte de a oferi elevilor răspunsul, asigurați-vă că au analizat cu atenție instrucțiunile, sugestiile, videoclipurile și orice cod de pornire.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **V-ați blocat? Căutați indicii:** Fiecare nivel include un indiciu cu sfaturi despre cum să treceți un nivel, inclusiv ce blocuri de cod să încercați.\n\n-   **Fă-ți timp și experimentează.** În general, instrucțiunile le spun elevilor ce să facă, dar ar trebui să se simtă liberi să-și încerce propriile idei."
+          "description": "Iată câteva sfaturi care ar trebui să-i ajute pe elevi, indiferent de nivelul la care lucrează\n\n-   **Colaborați cu colegii:** Încurajați elevii să se consulte cu un coleg de bancă atunci când se blochează. În funcție de vârsta și abilitățile elevilor dvs., ați putea lua în considerare împărțirea oficială a clasei în perechi pentru a finaliza tutorialul folosind [programarea perechi][0].\n\n-   **Citiți instrucțiunile:** De obicei, instrucțiunile oferă sfaturi utile despre cum să finalizați nivelul. Înainte de a oferi elevilor răspunsul, asigurați-vă că au analizat cu atenție instrucțiunile, sugestiile, videoclipurile și orice cod de pornire.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **V-ați blocat? Căutați indicii:** Fiecare nivel include un indiciu cu sfaturi despre cum să treceți un nivel, inclusiv ce blocuri de cod să încercați.\n\n-   **Fă-ți timp și experimentează.** În general, instrucțiunile le spun elevilor ce să facă, dar ar trebui să se simtă liberi să-și încerce propriile idei."
         },
         "f6a21949-1c94-4269-acae-98046f6a9052": {
           "name": "Bună Lume",
           "progression_name": "Bună Lume"
         },
         "3e2a74f4-d574-42fd-9bf3-5b319526299a": {
-          "description": "Dacă un grup de elevi sau un elev termină devreme, încurajați-l să continue construirea unui proiect la ultimul nivel. Dacă elevii nu sunt siguri ce altceva să facă, le puteți pune întrebări:\n\n-   Ce alte sprite-uri (caractere) ai putea adăuga la proiectul tău?\n-   Te-ai uitat prin biblioteca de costume sau ai încercat să-ți desenezi propriul costum?\n-   Ce altceva le-ai putea spune caracterelor tale să spună?\n-   Ce ar trebui să facă aceste personaje când sunt apăsate?\n-   Invitați elevii să împărtășească idei și să învețe unii de la alții. De asemenea, pot încerca un alt tutorial vizitând [code.org/learn](https://code.org/learn)."
+          "description": "Dacă un grup de elevi sau un elev termină devreme, încurajați-l să continue construirea unui proiect la ultimul nivel. Dacă elevii nu sunt siguri ce altceva să facă, le puteți pune întrebări:\n\n-   Ce alte sprite-uri (caractere) ai putea adăuga la proiectul tău?\n-   Te-ai uitat prin biblioteca de costume sau ai încercat să-ți desenezi propriul costum?\n-   Ce altceva le-ai putea spune caracterelor tale să spună?\n-   Ce ar trebui să facă aceste personaje când sunt apăsate?\n-   Invitați elevii să împărtășească idei și să învețe unii de la alții. De asemenea, pot încerca un alt tutorial vizitând [code.org/learn][0]."
         },
         "f95b4eed-639e-483e-bef7-ead9abf4808e": {
           "name": "Reflecţie",
-          "description": "#### Chestionar\n\nCereți elevilor să se gândească la ce au făcut astăzi. Ce au învățat despre cod? Caractere? Evenimente?\n\nCe părere au despre informatică și codare după ce au petrecut o oră explorând?\n\n#### Pașii următori\n\nSpuneți elevilor că, dacă le-a plăcut activitatea de astăzi, au multe opțiuni pentru a continua să codeze. Vizitați [CS Connections](https://code.org/educate/csc) pentru idei despre cum să integrați informatica în alte materii sau citiți mai multe despre [ofertele noastre de cursuri pentru școlile primare](https://code.org/educate/curriculum/elementary-school)."
+          "description": "#### Chestionar\n\nCereți elevilor să se gândească la ce au făcut astăzi. Ce au învățat despre cod? Caractere? Evenimente?\n\nCe părere au despre informatică și codare după ce au petrecut o oră explorând?\n\n#### Pașii următori\n\nSpuneți elevilor că, dacă le-a plăcut activitatea de astăzi, au multe opțiuni pentru a continua să codeze. Vizitați [CS Connections][0] pentru idei despre cum să integrați informatica în alte materii sau citiți mai multe despre [ofertele noastre de cursuri pentru școlile primare][1]."
         },
         "5ba761c1-02df-411f-96cd-69a8327e0d2c": {
           "name": "Pregătirea ",
@@ -16145,18 +16145,18 @@
         },
         "11f167ca-2cf6-4e6b-8857-316c5cb55f82": {
           "name": "Suport general",
-          "description": "Iată câteva sfaturi care ar trebui să-i ajute pe elevi, indiferent de nivelul la care lucrează\n\n-   **Colaborați cu colegii:** Încurajați elevii să se consulte cu un coleg de bancă atunci când se blochează. În funcție de vârsta și abilitățile elevilor dvs., ați putea lua în considerare împărțirea oficială a clasei în perechi pentru a finaliza tutorialul folosind [programarea perechi](https://youtu.be/vgkahOzFH2Q).\n\n-   **Citiți instrucțiunile:** De obicei, instrucțiunile oferă sfaturi utile despre cum să finalizați nivelul. Înainte de a oferi elevilor răspunsul, asigurați-vă că au analizat cu atenție instrucțiunile, sugestiile, videoclipurile și orice cod de pornire.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **V-ați blocat? Căutați indicii:** Fiecare nivel include un indiciu cu sfaturi despre cum să treceți un nivel, inclusiv ce blocuri de cod să încercați.\n\n-   **Fă-ți timp și experimentează.** În general, instrucțiunile le spun elevilor ce să facă, dar ar trebui să se simtă liberi să-și încerce propriile idei."
+          "description": "Iată câteva sfaturi care ar trebui să-i ajute pe elevi, indiferent de nivelul la care lucrează\n\n-   **Colaborați cu colegii:** Încurajați elevii să se consulte cu un coleg de bancă atunci când se blochează. În funcție de vârsta și abilitățile elevilor dvs., ați putea lua în considerare împărțirea oficială a clasei în perechi pentru a finaliza tutorialul folosind [programarea perechi][0].\n\n-   **Citiți instrucțiunile:** De obicei, instrucțiunile oferă sfaturi utile despre cum să finalizați nivelul. Înainte de a oferi elevilor răspunsul, asigurați-vă că au analizat cu atenție instrucțiunile, sugestiile, videoclipurile și orice cod de pornire.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **V-ați blocat? Căutați indicii:** Fiecare nivel include un indiciu cu sfaturi despre cum să treceți un nivel, inclusiv ce blocuri de cod să încercați.\n\n-   **Fă-ți timp și experimentează.** În general, instrucțiunile le spun elevilor ce să facă, dar ar trebui să se simtă liberi să-și încerce propriile idei."
         },
         "c721eddb-4cfb-4237-a031-0730bbfdc926": {
           "name": "Bună Lume",
           "progression_name": "Bună Lume"
         },
         "8341212e-8528-4ad8-9c02-22066467054b": {
-          "description": "Dacă un grup de elevi sau un elev termină devreme, încurajați-l să continue construirea unui proiect la ultimul nivel. Dacă elevii nu sunt siguri ce altceva să facă, le puteți pune întrebări:\n\n-   Ce alte sprite-uri (caractere) ai putea adăuga la proiectul tău?\n-   Te-ai uitat prin biblioteca de costume sau ai încercat să-ți desenezi propriul costum?\n-   Ce altceva le-ai putea spune caracterelor tale să spună?\n-   Ce ar trebui să facă aceste personaje când sunt apăsate?\n-   Invitați elevii să împărtășească idei și să învețe unii de la alții. De asemenea, pot încerca un alt tutorial vizitând [code.org/learn](https://code.org/learn)."
+          "description": "Dacă un grup de elevi sau un elev termină devreme, încurajați-l să continue construirea unui proiect la ultimul nivel. Dacă elevii nu sunt siguri ce altceva să facă, le puteți pune întrebări:\n\n-   Ce alte sprite-uri (caractere) ai putea adăuga la proiectul tău?\n-   Te-ai uitat prin biblioteca de costume sau ai încercat să-ți desenezi propriul costum?\n-   Ce altceva le-ai putea spune caracterelor tale să spună?\n-   Ce ar trebui să facă aceste personaje când sunt apăsate?\n-   Invitați elevii să împărtășească idei și să învețe unii de la alții. De asemenea, pot încerca un alt tutorial vizitând [code.org/learn][0]."
         },
         "656eee11-dc6d-428e-8849-6e4b31dc8c81": {
           "name": "Reflecţie",
-          "description": "#### Chestionar\n\nCereți elevilor să se gândească la ce au făcut astăzi. Ce au învățat despre cod? Caractere? Evenimente?\n\nCe părere au despre informatică și codare după ce au petrecut o oră explorând?\n\n#### Pașii următori\n\nSpuneți elevilor că, dacă le-a plăcut activitatea de astăzi, au multe opțiuni pentru a continua să codeze. Vizitați [CS Connections](https://code.org/educate/csc) pentru idei despre cum să integrați informatica în alte materii sau citiți mai multe despre [ofertele noastre de cursuri pentru școlile primare](https://code.org/educate/curriculum/elementary-school)."
+          "description": "#### Chestionar\n\nCereți elevilor să se gândească la ce au făcut astăzi. Ce au învățat despre cod? Caractere? Evenimente?\n\nCe părere au despre informatică și codare după ce au petrecut o oră explorând?\n\n#### Pașii următori\n\nSpuneți elevilor că, dacă le-a plăcut activitatea de astăzi, au multe opțiuni pentru a continua să codeze. Vizitați [CS Connections][0] pentru idei despre cum să integrați informatica în alte materii sau citiți mai multe despre [ofertele noastre de cursuri pentru școlile primare][1]."
         },
         "9d3ef78a-4043-489e-898b-f407c914f698": {
           "name": "Pregătirea ",
@@ -16170,18 +16170,18 @@
         },
         "2ff80a97-db35-4d10-9703-4d0cc3ff0c3a": {
           "name": "Suport general",
-          "description": "Iată câteva sfaturi care ar trebui să-i ajute pe elevi, indiferent de nivelul la care lucrează\n\n-   **Colaborați cu colegii:** Încurajați elevii să se consulte cu un coleg de bancă atunci când se blochează. În funcție de vârsta și abilitățile elevilor dvs., ați putea lua în considerare împărțirea oficială a clasei în perechi pentru a finaliza tutorialul folosind [programarea perechi](https://youtu.be/vgkahOzFH2Q).\n\n-   **Citiți instrucțiunile:** De obicei, instrucțiunile oferă sfaturi utile despre cum să finalizați nivelul. Înainte de a oferi elevilor răspunsul, asigurați-vă că au analizat cu atenție instrucțiunile, sugestiile, videoclipurile și orice cod de pornire.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **V-ați blocat? Căutați indicii:** Fiecare nivel include un indiciu cu sfaturi despre cum să treceți un nivel, inclusiv ce blocuri de cod să încercați.\n\n-   **Fă-ți timp și experimentează.** În general, instrucțiunile le spun elevilor ce să facă, dar ar trebui să se simtă liberi să-și încerce propriile idei."
+          "description": "Iată câteva sfaturi care ar trebui să-i ajute pe elevi, indiferent de nivelul la care lucrează\n\n-   **Colaborați cu colegii:** Încurajați elevii să se consulte cu un coleg de bancă atunci când se blochează. În funcție de vârsta și abilitățile elevilor dvs., ați putea lua în considerare împărțirea oficială a clasei în perechi pentru a finaliza tutorialul folosind [programarea perechi][0].\n\n-   **Citiți instrucțiunile:** De obicei, instrucțiunile oferă sfaturi utile despre cum să finalizați nivelul. Înainte de a oferi elevilor răspunsul, asigurați-vă că au analizat cu atenție instrucțiunile, sugestiile, videoclipurile și orice cod de pornire.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **V-ați blocat? Căutați indicii:** Fiecare nivel include un indiciu cu sfaturi despre cum să treceți un nivel, inclusiv ce blocuri de cod să încercați.\n\n-   **Fă-ți timp și experimentează.** În general, instrucțiunile le spun elevilor ce să facă, dar ar trebui să se simtă liberi să-și încerce propriile idei."
         },
         "70daba44-c26e-4286-95ae-50cbd8724b2d": {
           "name": "Bună Lume",
           "progression_name": "Bună Lume"
         },
         "77cef9f9-1949-455b-a0bd-f2cbc4a32986": {
-          "description": "Dacă un grup de elevi sau un elev termină devreme, încurajați-l să continue construirea unui proiect la ultimul nivel. Dacă elevii nu sunt siguri ce altceva să facă, le puteți pune întrebări:\n\n-   Ce alte sprite-uri (caractere) ai putea adăuga la proiectul tău?\n-   Te-ai uitat prin biblioteca de costume sau ai încercat să-ți desenezi propriul costum?\n-   Ce altceva le-ai putea spune caracterelor tale să spună?\n-   Ce ar trebui să facă aceste personaje când sunt apăsate?\n-   Invitați elevii să împărtășească idei și să învețe unii de la alții. De asemenea, pot încerca un alt tutorial vizitând [code.org/learn](https://code.org/learn)."
+          "description": "Dacă un grup de elevi sau un elev termină devreme, încurajați-l să continue construirea unui proiect la ultimul nivel. Dacă elevii nu sunt siguri ce altceva să facă, le puteți pune întrebări:\n\n-   Ce alte sprite-uri (caractere) ai putea adăuga la proiectul tău?\n-   Te-ai uitat prin biblioteca de costume sau ai încercat să-ți desenezi propriul costum?\n-   Ce altceva le-ai putea spune caracterelor tale să spună?\n-   Ce ar trebui să facă aceste personaje când sunt apăsate?\n-   Invitați elevii să împărtășească idei și să învețe unii de la alții. De asemenea, pot încerca un alt tutorial vizitând [code.org/learn][0]."
         },
         "ec905c64-2e80-49d0-8da3-7d75ed8d0693": {
           "name": "Reflecţie",
-          "description": "#### Chestionar\n\nCereți elevilor să se gândească la ce au făcut astăzi. Ce au învățat despre cod? Caractere? Evenimente?\n\nCe părere au despre informatică și codare după ce au petrecut o oră explorând?\n\n#### Pașii următori\n\nSpuneți elevilor că, dacă le-a plăcut activitatea de astăzi, au multe opțiuni pentru a continua să codeze. Vizitați [CS Connections](https://code.org/educate/csc) pentru idei despre cum să integrați informatica în alte materii sau citiți mai multe despre [ofertele noastre de cursuri pentru școlile primare](https://code.org/educate/curriculum/elementary-school)."
+          "description": "#### Chestionar\n\nCereți elevilor să se gândească la ce au făcut astăzi. Ce au învățat despre cod? Caractere? Evenimente?\n\nCe părere au despre informatică și codare după ce au petrecut o oră explorând?\n\n#### Pașii următori\n\nSpuneți elevilor că, dacă le-a plăcut activitatea de astăzi, au multe opțiuni pentru a continua să codeze. Vizitați [CS Connections][0] pentru idei despre cum să integrați informatica în alte materii sau citiți mai multe despre [ofertele noastre de cursuri pentru școlile primare][1]."
         },
         "6c387b78-14b7-4209-919a-97dbf64b9bc2": {
           "name": "Pregătirea ",
@@ -16195,18 +16195,18 @@
         },
         "cc4e7bc2-813a-4d4a-be58-83d08ca5d970": {
           "name": "Suport general",
-          "description": "Iată câteva sfaturi care ar trebui să-i ajute pe elevi, indiferent de nivelul la care lucrează\n\n-   **Colaborați cu colegii:** Încurajați elevii să se consulte cu un coleg de bancă atunci când se blochează. În funcție de vârsta și abilitățile elevilor dvs., ați putea lua în considerare împărțirea oficială a clasei în perechi pentru a finaliza tutorialul folosind [programarea perechi](https://youtu.be/vgkahOzFH2Q).\n\n-   **Citiți instrucțiunile:** De obicei, instrucțiunile oferă sfaturi utile despre cum să finalizați nivelul. Înainte de a oferi elevilor răspunsul, asigurați-vă că au analizat cu atenție instrucțiunile, sugestiile, videoclipurile și orice cod de pornire.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **V-ați blocat? Căutați indicii:** Fiecare nivel include un indiciu cu sfaturi despre cum să treceți un nivel, inclusiv ce blocuri de cod să încercați.\n\n-   **Fă-ți timp și experimentează.** În general, instrucțiunile le spun elevilor ce să facă, dar ar trebui să se simtă liberi să-și încerce propriile idei."
+          "description": "Iată câteva sfaturi care ar trebui să-i ajute pe elevi, indiferent de nivelul la care lucrează\n\n-   **Colaborați cu colegii:** Încurajați elevii să se consulte cu un coleg de bancă atunci când se blochează. În funcție de vârsta și abilitățile elevilor dvs., ați putea lua în considerare împărțirea oficială a clasei în perechi pentru a finaliza tutorialul folosind [programarea perechi][0].\n\n-   **Citiți instrucțiunile:** De obicei, instrucțiunile oferă sfaturi utile despre cum să finalizați nivelul. Înainte de a oferi elevilor răspunsul, asigurați-vă că au analizat cu atenție instrucțiunile, sugestiile, videoclipurile și orice cod de pornire.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **V-ați blocat? Căutați indicii:** Fiecare nivel include un indiciu cu sfaturi despre cum să treceți un nivel, inclusiv ce blocuri de cod să încercați.\n\n-   **Fă-ți timp și experimentează.** În general, instrucțiunile le spun elevilor ce să facă, dar ar trebui să se simtă liberi să-și încerce propriile idei."
         },
         "062143a1-3063-4af1-864a-2ad1f9c88dd5": {
           "name": "Bună Lume",
           "progression_name": "Bună Lume"
         },
         "da91f0fe-e142-453f-a093-8e367d0a1454": {
-          "description": "Dacă un grup de elevi sau un elev termină devreme, încurajați-l să continue construirea unui proiect la ultimul nivel. Dacă elevii nu sunt siguri ce altceva să facă, le puteți pune întrebări:\n\n-   Ce alte sprite-uri (caractere) ai putea adăuga la proiectul tău?\n-   Te-ai uitat prin biblioteca de costume sau ai încercat să-ți desenezi propriul costum?\n-   Ce altceva le-ai putea spune caracterelor tale să spună?\n-   Ce ar trebui să facă aceste personaje când sunt apăsate?\n-   Invitați elevii să împărtășească idei și să învețe unii de la alții. De asemenea, pot încerca un alt tutorial vizitând [code.org/learn](https://code.org/learn)."
+          "description": "Dacă un grup de elevi sau un elev termină devreme, încurajați-l să continue construirea unui proiect la ultimul nivel. Dacă elevii nu sunt siguri ce altceva să facă, le puteți pune întrebări:\n\n-   Ce alte sprite-uri (caractere) ai putea adăuga la proiectul tău?\n-   Te-ai uitat prin biblioteca de costume sau ai încercat să-ți desenezi propriul costum?\n-   Ce altceva le-ai putea spune caracterelor tale să spună?\n-   Ce ar trebui să facă aceste personaje când sunt apăsate?\n-   Invitați elevii să împărtășească idei și să învețe unii de la alții. De asemenea, pot încerca un alt tutorial vizitând [code.org/learn][0]."
         },
         "f5756484-7296-4391-99e2-7b2678653934": {
           "name": "Reflecţie",
-          "description": "#### Chestionar\n\nCereți elevilor să se gândească la ce au făcut astăzi. Ce au învățat despre cod? Caractere? Evenimente?\n\nCe părere au despre informatică și codare după ce au petrecut o oră explorând?\n\n#### Pașii următori\n\nSpuneți elevilor că, dacă le-a plăcut activitatea de astăzi, au multe opțiuni pentru a continua să codeze. Vizitați [CS Connections](https://code.org/educate/csc) pentru idei despre cum să integrați informatica în alte materii sau citiți mai multe despre [ofertele noastre de cursuri pentru școlile primare](https://code.org/educate/curriculum/elementary-school)."
+          "description": "#### Chestionar\n\nCereți elevilor să se gândească la ce au făcut astăzi. Ce au învățat despre cod? Caractere? Evenimente?\n\nCe părere au despre informatică și codare după ce au petrecut o oră explorând?\n\n#### Pașii următori\n\nSpuneți elevilor că, dacă le-a plăcut activitatea de astăzi, au multe opțiuni pentru a continua să codeze. Vizitați [CS Connections][0] pentru idei despre cum să integrați informatica în alte materii sau citiți mai multe despre [ofertele noastre de cursuri pentru școlile primare][1]."
         },
         "bcc9e44c-ad4e-4efc-a12e-e9c74a5c1960": {
           "name": "Pregătirea ",
@@ -16220,25 +16220,25 @@
         },
         "0d1c3be1-c6e4-437f-85b9-4912d1cd725b": {
           "name": "Suport general",
-          "description": "Iată câteva sfaturi care ar trebui să-i ajute pe elevi, indiferent de nivelul la care lucrează\n\n-   **Colaborați cu colegii:** Încurajați elevii să se consulte cu un coleg de bancă atunci când se blochează. În funcție de vârsta și abilitățile elevilor dvs., ați putea lua în considerare împărțirea oficială a clasei în perechi pentru a finaliza tutorialul folosind [programarea perechi](https://youtu.be/vgkahOzFH2Q).\n\n-   **Citiți instrucțiunile:** De obicei, instrucțiunile oferă sfaturi utile despre cum să finalizați nivelul. Înainte de a oferi elevilor răspunsul, asigurați-vă că au analizat cu atenție instrucțiunile, sugestiile, videoclipurile și orice cod de pornire.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **V-ați blocat? Căutați indicii:** Fiecare nivel include un indiciu cu sfaturi despre cum să treceți un nivel, inclusiv ce blocuri de cod să încercați.\n\n-   **Fă-ți timp și experimentează.** În general, instrucțiunile le spun elevilor ce să facă, dar ar trebui să se simtă liberi să-și încerce propriile idei."
+          "description": "Iată câteva sfaturi care ar trebui să-i ajute pe elevi, indiferent de nivelul la care lucrează\n\n-   **Colaborați cu colegii:** Încurajați elevii să se consulte cu un coleg de bancă atunci când se blochează. În funcție de vârsta și abilitățile elevilor dvs., ați putea lua în considerare împărțirea oficială a clasei în perechi pentru a finaliza tutorialul folosind [programarea perechi][0].\n\n-   **Citiți instrucțiunile:** De obicei, instrucțiunile oferă sfaturi utile despre cum să finalizați nivelul. Înainte de a oferi elevilor răspunsul, asigurați-vă că au analizat cu atenție instrucțiunile, sugestiile, videoclipurile și orice cod de pornire.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **V-ați blocat? Căutați indicii:** Fiecare nivel include un indiciu cu sfaturi despre cum să treceți un nivel, inclusiv ce blocuri de cod să încercați.\n\n-   **Fă-ți timp și experimentează.** În general, instrucțiunile le spun elevilor ce să facă, dar ar trebui să se simtă liberi să-și încerce propriile idei."
         },
         "fcf13574-b04a-42a7-9e17-ef0dba0bfe33": {
           "name": "Bună Lume",
           "progression_name": "Bună Lume"
         },
         "7cccfa6d-83c2-4d74-a71f-c9134fb1d0c2": {
-          "description": "Dacă un grup de elevi sau un elev termină devreme, încurajați-l să continue construirea unui proiect la ultimul nivel. Dacă elevii nu sunt siguri ce altceva să facă, le puteți pune întrebări:\n\n-   Ce alte sprite-uri (caractere) ai putea adăuga la proiectul tău?\n-   Te-ai uitat prin biblioteca de costume sau ai încercat să-ți desenezi propriul costum?\n-   Ce altceva le-ai putea spune caracterelor tale să spună?\n-   Ce ar trebui să facă aceste personaje când sunt apăsate?\n-   Invitați elevii să împărtășească idei și să învețe unii de la alții. De asemenea, pot încerca un alt tutorial vizitând [code.org/learn](https://code.org/learn)."
+          "description": "Dacă un grup de elevi sau un elev termină devreme, încurajați-l să continue construirea unui proiect la ultimul nivel. Dacă elevii nu sunt siguri ce altceva să facă, le puteți pune întrebări:\n\n-   Ce alte sprite-uri (caractere) ai putea adăuga la proiectul tău?\n-   Te-ai uitat prin biblioteca de costume sau ai încercat să-ți desenezi propriul costum?\n-   Ce altceva le-ai putea spune caracterelor tale să spună?\n-   Ce ar trebui să facă aceste personaje când sunt apăsate?\n-   Invitați elevii să împărtășească idei și să învețe unii de la alții. De asemenea, pot încerca un alt tutorial vizitând [code.org/learn][0]."
         },
         "574954ea-9128-428b-9965-b0d34518c11d": {
           "name": "Reflecţie",
-          "description": "#### Chestionar\n\nCereți elevilor să se gândească la ce au făcut astăzi. Ce au învățat despre cod? Caractere? Evenimente?\n\nCe părere au despre informatică și codare după ce au petrecut o oră explorând?\n\n#### Pașii următori\n\nSpuneți elevilor că, dacă le-a plăcut activitatea de astăzi, au multe opțiuni pentru a continua să codeze. Vizitați [CS Connections](https://code.org/educate/csc) pentru idei despre cum să integrați informatica în alte materii sau citiți mai multe despre [ofertele noastre de cursuri pentru școlile primare](https://code.org/educate/curriculum/elementary-school)."
+          "description": "#### Chestionar\n\nCereți elevilor să se gândească la ce au făcut astăzi. Ce au învățat despre cod? Caractere? Evenimente?\n\nCe părere au despre informatică și codare după ce au petrecut o oră explorând?\n\n#### Pașii următori\n\nSpuneți elevilor că, dacă le-a plăcut activitatea de astăzi, au multe opțiuni pentru a continua să codeze. Vizitați [CS Connections][0] pentru idei despre cum să integrați informatica în alte materii sau citiți mai multe despre [ofertele noastre de cursuri pentru școlile primare][1]."
         },
         "79f9bd46-60a5-4891-ad3b-8369879847fc": {
           "description": "#### Pregătirea\n\nUrați Bun venit elevilor în clasă și prezentați pe scurt activitatea zilei.\n\nElevii se bucură de un adevărat răsfăț cu această lecție. Este posibil ca majoritatea elevilor să fi auzit de Minecraft, dar este bine să oferiți o scurtă introducere pentru cei care nu cunosc acest joc.\nMinecraft este un joc de blocuri. Puteți juca ca Alex sau Steve în timp ce lucrați prin labirinturi. Va trebui să ridicați obiecte și să explorați într-o lume formată din blocuri.\n\n_Spuneți-le: „Astăzi vom petrece o oră învățând să codăm. A mai auzit cineva de aici de termenul „cod”? Ce înseamnă?\"_\n\nElevii ar putea menționa că un „cod” este ca un mesaj secret sau că are legătură într-un fel cu computerele."
         },
         "cc1ed89e-268e-472b-9bce-4f976d8c2ea3": {
           "tips": [
-            "Una dintre modalitățile folosite pentru a prezenta Ora de Codare, dacă nu sunteți foarte familiarizat(ă) cu programarea, este să le arătați elevilor unul dintre [videoclipurile noastre inspiraționale](https://hourofcode.com/us/resources#videos). Alegeți-l pe cel care, în opinia dvs., va avea cel mai puternic impact pentru elevi și distribuiți-l acum. Pentru elevii de gimnaziu vă sugerăm [Hour of Code a sosit](https://youtu.be/FC5FbmsH4fw).”"
+            "Una dintre modalitățile folosite pentru a prezenta Ora de Codare, dacă nu sunteți foarte familiarizat(ă) cu programarea, este să le arătați elevilor unul dintre [videoclipurile noastre inspiraționale][0]. Alegeți-l pe cel care, în opinia dvs., va avea cel mai puternic impact pentru elevi și distribuiți-l acum. Pentru elevii de gimnaziu vă sugerăm [Hour of Code a sosit][1].”"
           ]
         },
         "850945f6-6352-403b-a73f-3fb613f4728a": {
@@ -16251,7 +16251,7 @@
         },
         "fc5c47f6-08fa-4702-86a3-e687a2ad5bc1": {
           "name": "Minecraft: Călătoria eroului",
-          "description": "Provocă-ți elevii să finalizeze tutorialul [Minecraft: Hero's Journey](https://studio.code.org/s/hero/lessons/1/levels/1).\n\nÎn funcție de vârsta și abilitățile elevilor dvs., puteți lua în considerare:\n\n-   Pentru studenții mai tineri, vă sugerăm să vă împărțiți clasa în perechi și să cereți fiecărui grup să lucreze împreună pentru a finaliza tutorialul folosind [tehnica programării pe perechi](https://youtu.be/vgkahOzFH2Q).\n-   Pentru elevii din clasele mijlocii, constatăm că lucrul independent la tutoriale funcționează bine. Uneori, este de ajutor să le permiteți elevilor să-și aleagă propriul tutorial. Dacă studenții nu sunt interesați de Minecraft, pot obține o experiență similară cu tutorialele [Cod cu Anna și Elsa](https://studio.code.org/s/frozen/stage/1/puzzle/1) sau [Star Wars](https://code.org/starwars).\n-   Pentru cursanții mai în vârstă sau adulți, tutorialul [Minecraft: Hero's Journey](https://studio.code.org/s/hero/lessons/1/levels/1) funcționează extrem de bine fie ca o provocare independentă, fie ca activitate de programare în pereche."
+          "description": "Provocă-ți elevii să finalizeze tutorialul [Minecraft: Hero's Journey][0].\n\nÎn funcție de vârsta și abilitățile elevilor dvs., puteți lua în considerare:\n\n-   Pentru studenții mai tineri, vă sugerăm să vă împărțiți clasa în perechi și să cereți fiecărui grup să lucreze împreună pentru a finaliza tutorialul folosind [tehnica programării pe perechi][1].\n-   Pentru elevii din clasele mijlocii, constatăm că lucrul independent la tutoriale funcționează bine. Uneori, este de ajutor să le permiteți elevilor să-și aleagă propriul tutorial. Dacă studenții nu sunt interesați de Minecraft, pot obține o experiență similară cu tutorialele [Cod cu Anna și Elsa][2] sau [Star Wars][3].\n-   Pentru cursanții mai în vârstă sau adulți, tutorialul [Minecraft: Hero's Journey][4] funcționează extrem de bine fie ca o provocare independentă, fie ca activitate de programare în pereche."
         },
         "296703c2-cad7-43bb-b3cf-4ffb525e7ad1": {
           "tips": [
@@ -16259,7 +16259,7 @@
           ]
         },
         "b518cf9c-9568-4e85-a520-0e2a81c3b330": {
-          "description": "Dacă un elev sau un grup de elevi termină mai devreme, poate încerca un alt tutorial vizitând [code.org/learn](http://code.org/learn)."
+          "description": "Dacă un elev sau un grup de elevi termină mai devreme, poate încerca un alt tutorial vizitând [code.org/learn][0]."
         },
         "34238f3b-6699-4e27-b77a-54bcd8d57459": {
           "progression_name": "Minecraft: Călătoria eroului"
@@ -16270,18 +16270,18 @@
         },
         "145782a9-a436-4615-9827-0f75d7e4b3a0": {
           "name": "Sărbătoriți",
-          "description": "Explicați faptul că astăzi veți petrece o oră codând, deoarece săptămâna aceasta este Săptămâna Educației în Informatică și milioane de alți elevi de pe tot globul au participat la o oră de codare săptămâna aceasta. Felicită elevii pentru că fac parte din această mișcare mondială.\n\nOferiți fiecărui elev [un certificat](https://studio.code.org/certificates/batch?course=bWM=) sau o diplomă cu numele său."
+          "description": "Explicați faptul că astăzi veți petrece o oră codând, deoarece săptămâna aceasta este Săptămâna Educației în Informatică și milioane de alți elevi de pe tot globul au participat la o oră de codare săptămâna aceasta. Felicită elevii pentru că fac parte din această mișcare mondială.\n\nOferiți fiecărui elev [un certificat][0] sau o diplomă cu numele său."
         },
         "cc38f575-4db4-4ca6-ab2f-a9d8557f16cf": {
           "name": "Pașii următori",
-          "description": "Spuneți elevilor că, dacă le-a plăcut activitatea de astăzi, au multe opțiuni pentru a continua să programeze. Încurajați elevii să acceseze [code.org/learn](<>) pentru o listă de opțiuni sau, dacă planificați oricare dintre activitățile de extindere care urmează, spuneți elevilor ce urmează să se întâmple la clasa dvs. "
+          "description": "Spuneți elevilor că, dacă le-a plăcut activitatea de astăzi, au multe opțiuni pentru a continua să programeze. Încurajați elevii să acceseze [code.org/learn][0] pentru o listă de opțiuni sau, dacă planificați oricare dintre activitățile de extindere care urmează, spuneți elevilor ce urmează să se întâmple la clasa dvs. "
         },
         "e276fe28-3302-4ba2-94cc-aaf03b3d2d06": {
-          "description": "Oferiți fiecărui elev un [„Bilet de ieșire”](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) (biletel unde poate nota)și cereți-le să rezume ceea ce au învățat astăzi, cum s-au simțit sau ce au trăit. Elevii pot să deseneze, să scrie sau să se exprime în orice mod în care se simt confortabil. Colectați aceste note de la fiecare student care iese din sală. Dacă doriți, puteți posta „Biletele de ieșire” pe un avizier sau într-un loc vizibil din școală, ca o amintire a Orei de Codare."
+          "description": "Oferiți fiecărui elev un [„Bilet de ieșire”][0] (biletel unde poate nota)și cereți-le să rezume ceea ce au învățat astăzi, cum s-au simțit sau ce au trăit. Elevii pot să deseneze, să scrie sau să se exprime în orice mod în care se simt confortabil. Colectați aceste note de la fiecare student care iese din sală. Dacă doriți, puteți posta „Biletele de ieșire” pe un avizier sau într-un loc vizibil din școală, ca o amintire a Orei de Codare."
         },
         "147a2b22-0cba-4505-81ef-770b81eee73e": {
           "name": "Dincolo de o Oră de Cod ",
-          "description": "După ce se termină Ora de Codare, există multe modalități de a continua să predați informatică în sala de clasă. Iată câteva idei:\n\n-   **Predați cursurile [Code Studio Computer Science Fundamentals](http://code.org/educate/k5)**. Aceste șase cursuri sunt concepute pentru tinerii cursanți. Elevii își parcurg o serie de puzzle-uri care îi învață să codifice, iar educatorii au acces la planuri de lecții captivante care ajută la învățarea să prindă viață. Code.org oferă dezvoltare profesională gratuită pentru aceste cursuri, online sau în persoană.\n-   **Accesați [Puteți preda informatica](https://code.org/teach)** pentru mai multe sugestii de cursuri.\n-   **Invitați un expert în informatică să discute cu clasa dvs. despre munca lui**. Nu cunoașteți niciun informatician local? Luați legătura cu un voluntar pe [harta voluntarului](https://code.org/volunteer/local)"
+          "description": "După ce se termină Ora de Codare, există multe modalități de a continua să predați informatică în sala de clasă. Iată câteva idei:\n\n-   **Predați cursurile [Code Studio Computer Science Fundamentals][0]**. Aceste șase cursuri sunt concepute pentru tinerii cursanți. Elevii își parcurg o serie de puzzle-uri care îi învață să codifice, iar educatorii au acces la planuri de lecții captivante care ajută la învățarea să prindă viață. Code.org oferă dezvoltare profesională gratuită pentru aceste cursuri, online sau în persoană.\n-   **Accesați [Puteți preda informatica][1]** pentru mai multe sugestii de cursuri.\n-   **Invitați un expert în informatică să discute cu clasa dvs. despre munca lui**. Nu cunoașteți niciun informatician local? Luați legătura cu un voluntar pe [harta voluntarului][2]"
         },
         "9475b0bd-6a58-4318-b3e5-0d77cfe5a35d": {
           "tips": [
@@ -16380,7 +16380,7 @@
         },
         "6b55015f-aebc-401b-b0c9-c40a5fd0056e": {
           "tips": [
-            "Una dintre modalitățile folosite pentru a prezenta Ora de Codare, dacă nu sunteți foarte familiarizat(ă) cu programarea, este să le arătați elevilor unul dintre [videoclipurile noastre inspiraționale](https://hourofcode.com/us/resources#videos). Alegeți-l pe cel care, în opinia dvs., va avea cel mai puternic impact pentru elevi și distribuiți-l acum. Pentru elevii de gimnaziu vă sugerăm [Hour of Code a sosit](https://youtu.be/FC5FbmsH4fw).”"
+            "Una dintre modalitățile folosite pentru a prezenta Ora de Codare, dacă nu sunteți foarte familiarizat(ă) cu programarea, este să le arătați elevilor unul dintre [videoclipurile noastre inspiraționale][0]. Alegeți-l pe cel care, în opinia dvs., va avea cel mai puternic impact pentru elevi și distribuiți-l acum. Pentru elevii de gimnaziu vă sugerăm [Hour of Code a sosit][1].”"
           ]
         },
         "e841a687-1da5-46c7-b31e-42629fe0377c": {
@@ -16393,7 +16393,7 @@
         },
         "9aba0e85-a709-43f5-8cfb-251671159b3a": {
           "name": "Labirint",
-          "description": "Provocați elevii să finalizeze această activitate [Scrieți primul program de calculator](https://studio.code.org/hoc/1).\n\nÎn funcție de vârsta și abilitățile elevilor dvs., puteți lua în considerare:\n\n-   Pentru studenții mai tineri, vă sugerăm să vă împărțiți clasa în perechi sau în grupuri foarte mici (de la trei până la patru elevi) și să cereți fiecărui grup să lucreze împreună pentru a finaliza tutorialul folosind [programarea în perechi](https://youtu.be/vgkahOzFH2Q).\n-   Pentru elevii din clasele mijlocii, constatăm că lucrul independent la tutoriale funcționează bine. Uneori, este de ajutor să le permiteți elevilor să-și aleagă propriul tutorial. Dacă studenții nu sunt interesați de Angry Birds, ei pot obține o experiență similară cu tutorialele [Cod with Anna and Elsa](https://studio.code.org/s/frozen/stage/1/puzzle/1) sau [Make a Flappy Game](https://studio.code.org/flappy/1).\n-   Pentru cursanții în vârstă sau adulți, tutorialul [Scrie primul program de calculator](https://studio.code.org/hoc/1) funcționează extrem de bine fie ca o provocare independentă, fie ca activitate de programare în pereche."
+          "description": "Provocați elevii să finalizeze această activitate [Scrieți primul program de calculator][0].\n\nÎn funcție de vârsta și abilitățile elevilor dvs., puteți lua în considerare:\n\n-   Pentru studenții mai tineri, vă sugerăm să vă împărțiți clasa în perechi sau în grupuri foarte mici (de la trei până la patru elevi) și să cereți fiecărui grup să lucreze împreună pentru a finaliza tutorialul folosind [programarea în perechi][1].\n-   Pentru elevii din clasele mijlocii, constatăm că lucrul independent la tutoriale funcționează bine. Uneori, este de ajutor să le permiteți elevilor să-și aleagă propriul tutorial. Dacă studenții nu sunt interesați de Angry Birds, ei pot obține o experiență similară cu tutorialele [Cod with Anna and Elsa][2] sau [Make a Flappy Game][3].\n-   Pentru cursanții în vârstă sau adulți, tutorialul [Scrie primul program de calculator][4] funcționează extrem de bine fie ca o provocare independentă, fie ca activitate de programare în pereche."
         },
         "524f2e35-6286-4585-879e-96e7286e8a6d": {
           "tips": [
@@ -16401,7 +16401,7 @@
           ]
         },
         "3f29a14c-3903-4615-8a6b-d1961b57dc7b": {
-          "description": "Dacă un elev sau un grup de elevi termină mai devreme, poate încerca un alt tutorial vizitând [code.org/learn](http://code.org/learn)."
+          "description": "Dacă un elev sau un grup de elevi termină mai devreme, poate încerca un alt tutorial vizitând [code.org/learn][0]."
         },
         "50db3674-3387-4932-ba7e-c9f176ebd976": {
           "name": "Informare",
@@ -16409,18 +16409,18 @@
         },
         "46f387e2-c275-4c57-acec-c9709e7f44fc": {
           "name": "Sărbătoriți",
-          "description": "Explicați faptul că astăzi veți petrece o oră codând, deoarece săptămâna aceasta este Săptămâna Educației în Informatică și milioane de alți elevi de pe tot globul au participat la o oră de codare săptămâna aceasta. Felicită elevii pentru că fac parte din această mișcare mondială.\n\nOferiți fiecărui elev [un certificat](http://code.org/certificates) sau o diplomă cu numele său."
+          "description": "Explicați faptul că astăzi veți petrece o oră codând, deoarece săptămâna aceasta este Săptămâna Educației în Informatică și milioane de alți elevi de pe tot globul au participat la o oră de codare săptămâna aceasta. Felicită elevii pentru că fac parte din această mișcare mondială.\n\nOferiți fiecărui elev [un certificat][0] sau o diplomă cu numele său."
         },
         "692a60f1-d3a2-44d3-8c58-19461d6b5999": {
           "name": "Pașii următori",
           "description": "Spuneți elevilor că, dacă le-a plăcut activitatea de astăzi, au multe opțiuni pentru a continua să programeze. Încurajați elevii să acceseze [code.org/learn] pentru o listă de opțiuni sau, dacă planificați oricare dintre activitățile de extindere care urmează, spuneți elevilor ce urmează să se întâmple la clasa dvs. "
         },
         "c00f4730-69b0-4533-bf47-253647c6715f": {
-          "description": "Oferiți fiecărui elev un [„Bilet de ieșire”](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) (biletel unde poate nota)și cereți-le să rezume ceea ce au învățat astăzi, cum s-au simțit sau ce au trăit. Elevii pot să deseneze, să scrie sau să se exprime în orice mod în care se simt confortabil. Colectați aceste note de la fiecare student care iese din sală. Dacă doriți, puteți posta „Biletele de ieșire” pe un avizier sau într-un loc vizibil din școală, ca o amintire a Orei de codare."
+          "description": "Oferiți fiecărui elev un [„Bilet de ieșire”][0] (biletel unde poate nota)și cereți-le să rezume ceea ce au învățat astăzi, cum s-au simțit sau ce au trăit. Elevii pot să deseneze, să scrie sau să se exprime în orice mod în care se simt confortabil. Colectați aceste note de la fiecare student care iese din sală. Dacă doriți, puteți posta „Biletele de ieșire” pe un avizier sau într-un loc vizibil din școală, ca o amintire a Orei de codare."
         },
         "6e6e32c8-6dfd-4075-b1c7-0c96b6853b09": {
           "name": "Dincolo de o Oră de Cod ",
-          "description": "#### După Ora de Codare\n\nDupă ce se termină Ora de Codare, există multe modalități de a continua să predați informatica în sala de clasă. Iată câteva idei:\n\n-   Predați cursurile [Code Studio Computer Science Fundamentals](http://code.org/educate/k5). Aceste șase cursuri sunt concepute pentru tinerii cursanți. Elevii parcurg singuri o serie de puzzle-uri care îi învață să codeze, iar profesorii au acces la planuri de lecții captivante care ajută ca învățarea să prindă viață. \n    Code.org oferă dezvoltare profesională gratuită pentru aceste cursuri, online sau în persoană."
+          "description": "#### După Ora de Codare\n\nDupă ce se termină Ora de Codare, există multe modalități de a continua să predați informatica în sala de clasă. Iată câteva idei:\n\n-   Predați cursurile [Code Studio Computer Science Fundamentals][0]. Aceste șase cursuri sunt concepute pentru tinerii cursanți. Elevii parcurg singuri o serie de puzzle-uri care îi învață să codeze, iar profesorii au acces la planuri de lecții captivante care ajută ca învățarea să prindă viață. \n    Code.org oferă dezvoltare profesională gratuită pentru aceste cursuri, online sau în persoană."
         },
         "5858c0fa-a7a6-44c2-afcb-bfb816b18a5b": {
           "name": "Ajustări pentru profesorii claselor mai mici",
@@ -16432,7 +16432,7 @@
         },
         "fc04ef5f-0d78-418b-9311-e12201106453": {
           "tips": [
-            "Una dintre modalitățile folosite pentru a prezenta Ora de codare, dacă nu sunteți foarte familiarizat(ă) cu programarea, este să le arătați elevilor unul dintre [videoclipurile noastre inspiraționale](https://hourofcode.com/us/resources#videos). Alegeți-l pe cel care, în opinia dvs., va avea cel mai puternic impact pentru elevi și distribuiți-l acum. Pentru elevii de gimnaziu vă sugerăm [Hour of Code a sosit](https://youtu.be/qYZF6oIZtfc).”"
+            "Una dintre modalitățile folosite pentru a prezenta Ora de codare, dacă nu sunteți foarte familiarizat(ă) cu programarea, este să le arătați elevilor unul dintre [videoclipurile noastre inspiraționale][0]. Alegeți-l pe cel care, în opinia dvs., va avea cel mai puternic impact pentru elevi și distribuiți-l acum. Pentru elevii de gimnaziu vă sugerăm [Hour of Code a sosit][1].”"
           ]
         },
         "ea8a3bf2-1425-482a-9f98-a5b30d6ee809": {
@@ -16440,7 +16440,7 @@
         },
         "c628ba28-35c2-4ded-a19d-74079377b309": {
           "name": "Laboratorul Joaca Ice Age",
-          "description": "Provocați-vă elevii să finalizeze tutorialul [Ice Age Play Lab](https://studio.code.org/s/iceage/lessons/1/levels/1).\n\nÎn funcție de vârsta și abilitățile elevilor dvs., puteți lua în considerare:\n\n-   Pentru elevii de gimnaziu și liceu, vă sugerăm să alegeți tutoriale care permit jocul gratuit și crearea de aplicații sau jocuri. Puteți solicita elevilor să lucreze independent sau în perechi sau în grupuri mici. Există multe alte tutoriale pe [code.org/learn](http://code.org/learn) care permit crearea gratuită, inclusiv [Make a Flappy Game](https://studio.code.org/s/flappy) și noul nostru instrument beta [AppLab](https://code.org/educate/applab).\n-   Pentru elevii mai tineri, vă sugerăm să vă împărțiți clasa în perechi sau în grupuri foarte mici (cu câte trei până la patru elevi fiecare) și să cereți fiecărui grup să lucreze împreună pentru a finaliza tutorialul folosind [programarea pe perechi](https://youtu.be/vgkahOzFH2Q).\n-   Pentru cursanții adulți, tutorialul [Scrie primul program de calculator](https://studio.code.org/hoc/1) funcționează extrem de bine fie ca o provocare independentă, fie ca o activitate de programare pe perechi."
+          "description": "Provocați-vă elevii să finalizeze tutorialul [Ice Age Play Lab][0].\n\nÎn funcție de vârsta și abilitățile elevilor dvs., puteți lua în considerare:\n\n-   Pentru elevii de gimnaziu și liceu, vă sugerăm să alegeți tutoriale care permit jocul gratuit și crearea de aplicații sau jocuri. Puteți solicita elevilor să lucreze independent sau în perechi sau în grupuri mici. Există multe alte tutoriale pe [code.org/learn][1] care permit crearea gratuită, inclusiv [Make a Flappy Game][2] și noul nostru instrument beta [AppLab][3].\n-   Pentru elevii mai tineri, vă sugerăm să vă împărțiți clasa în perechi sau în grupuri foarte mici (cu câte trei până la patru elevi fiecare) și să cereți fiecărui grup să lucreze împreună pentru a finaliza tutorialul folosind [programarea pe perechi][4].\n-   Pentru cursanții adulți, tutorialul [Scrie primul program de calculator][5] funcționează extrem de bine fie ca o provocare independentă, fie ca o activitate de programare pe perechi."
         },
         "548dc37b-f338-4a52-a77e-7380794c64f2": {
           "tips": [
@@ -16448,7 +16448,7 @@
           ]
         },
         "86d8427e-15bf-420c-b405-3d1f1c3c46c6": {
-          "description": "Dacă un elev sau un grup de elevi termină mai devreme, poate încerca un alt tutorial vizitând [code.org/learn](http://code.org/learn)."
+          "description": "Dacă un elev sau un grup de elevi termină mai devreme, poate încerca un alt tutorial vizitând [code.org/learn][0]."
         },
         "d8b92f56-a741-43ac-9d6f-3fdf1c452001": {
           "name": "Informare",
@@ -16456,7 +16456,7 @@
         },
         "3d63393a-9146-4027-8783-247e19637d25": {
           "name": "Sărbătoriți",
-          "description": "Explicați-le elvilor faptul că veți petrece o oră programând astăzi, deoarece săptămâna aceasta este Săptămâna Educației în Tehnologia Computerelor și milioane de alți elevi de pe tot globul au învățat și o oră de codare săptămâna aceasta. Felicită elevii pentru că fac parte din această mișcare mondială.\n\nOferiți fiecărui elevt un [certificat](http://code.org/certificates) sau Diplomă cu numele său."
+          "description": "Explicați-le elvilor faptul că veți petrece o oră programând astăzi, deoarece săptămâna aceasta este Săptămâna Educației în Tehnologia Computerelor și milioane de alți elevi de pe tot globul au învățat și o oră de codare săptămâna aceasta. Felicită elevii pentru că fac parte din această mișcare mondială.\n\nOferiți fiecărui elevt un [certificat][0] sau Diplomă cu numele său."
         },
         "4ae122fa-da6f-4aaf-b2f8-c68fd0bb68af": {
           "name": "Pașii următori",
@@ -16468,7 +16468,7 @@
         },
         "4ae8bc68-25be-4eaa-ae1e-b9bfe8623a23": {
           "name": "Dincolo de o Oră de Cod ",
-          "description": "#### După Ora de Codare\n\nDupă ce se termină Ora de Codare, există multe modalități de a continua să predați informatica în sala de clasă. Iată câteva idei:\n\n-   Predați cursurile [Code Studio Lecții fundamentaele de Informatică](http://code.org/educate/k5). Aceste șase cursuri sunt concepute pentru tinerii cursanți. Elevii parcurg singuri o serie de puzzle-uri care îi învață să codeze, iar profesorii au acces la planuri de lecții captivante care ajută ca învățarea să prindă viață. \n    Code.org oferă dezvoltare profesională gratuită pentru aceste cursuri, online sau în persoană.\n-   Invitați un expert în informatică să discute cu clasa dvs. despre munca sa. Nu cunoașteți niciun expert în domeniu? Adresați-vă unui voluntar pe [harta voluntarului][2]."
+          "description": "#### După Ora de Codare\n\nDupă ce se termină Ora de Codare, există multe modalități de a continua să predați informatica în sala de clasă. Iată câteva idei:\n\n-   Predați cursurile [Code Studio Lecții fundamentaele de Informatică][0]. Aceste șase cursuri sunt concepute pentru tinerii cursanți. Elevii parcurg singuri o serie de puzzle-uri care îi învață să codeze, iar profesorii au acces la planuri de lecții captivante care ajută ca învățarea să prindă viață. \n    Code.org oferă dezvoltare profesională gratuită pentru aceste cursuri, online sau în persoană.\n-   Invitați un expert în informatică să discute cu clasa dvs. despre munca sa. Nu cunoașteți niciun expert în domeniu? Adresați-vă unui voluntar pe [harta voluntarului][2]."
         },
         "88079aec-5c42-4f3f-bbb6-cba4f8866c92": {
           "name": "Pregătirea ",
@@ -16476,7 +16476,7 @@
         },
         "6874de98-8778-447b-8453-0138809b2c7e": {
           "tips": [
-            "Una dintre modalitățile folosite pentru a prezenta Ora de codare, dacă nu sunteți foarte familiarizat(ă) cu programarea, este să le arătați elevilor unul dintre [videoclipurile noastre inspiraționale](https://hourofcode.com/us/resources#videos). Alegeți-l pe cel care, în opinia dvs., va avea cel mai puternic impact pentru elevi și distribuiți-l acum. Pentru elevii de gimnaziu vă sugerăm [Hour of Code a sosit](https://youtu.be/qYZF6oIZtfc).”"
+            "Una dintre modalitățile folosite pentru a prezenta Ora de codare, dacă nu sunteți foarte familiarizat(ă) cu programarea, este să le arătați elevilor unul dintre [videoclipurile noastre inspiraționale][0]. Alegeți-l pe cel care, în opinia dvs., va avea cel mai puternic impact pentru elevi și distribuiți-l acum. Pentru elevii de gimnaziu vă sugerăm [Hour of Code a sosit][1].”"
           ]
         },
         "82e4a494-65fb-40ac-b2c2-323044e15b77": {
@@ -16484,7 +16484,7 @@
         },
         "bd5d11f4-9c4c-4f24-bb9f-482392bd65aa": {
           "name": "Laborator de joacă Disney Infinity",
-          "description": "Provocați-vă elevii să finalizeze tutorialul [Disney Infinity Play Lab](https://studio.code.org/s/infinity/lessons/1/levels/1) .\n\nÎn funcție de vârsta și abilitățile elevilor dvs., puteți lua în considerare:\n\n-   Pentru elevii de gimnaziu și liceu, vă sugerăm să alegeți tutoriale care permit jocul gratuit și crearea de aplicații sau jocuri. Puteți solicita elevilor să lucreze independent sau în perechi sau în grupuri mici. Există multe alte tutoriale pe [code.org/learn](http://code.org/learn) care permit crearea gratuită, inclusiv [Make a Flappy Game](https://studio.code.org/s/flappy) și noul nostru instrument beta [AppLab](https://code.org/educate/applab).\n-   Pentru elevii mai tineri, vă sugerăm să vă împărțiți clasa în perechi sau în grupuri foarte mici (cu câte trei până la patru elevi fiecare) și să cereți fiecărui grup să lucreze împreună pentru a finaliza tutorialul folosind [programarea pe perechi](https://youtu.be/vgkahOzFH2Q).\n-   Pentru cursanții adulți, tutorialul [Scrie primul program de calculator](https://studio.code.org/hoc/1) funcționează extrem de bine fie ca o provocare independentă, fie ca o activitate de programare pe perechi."
+          "description": "Provocați-vă elevii să finalizeze tutorialul [Disney Infinity Play Lab][0] .\n\nÎn funcție de vârsta și abilitățile elevilor dvs., puteți lua în considerare:\n\n-   Pentru elevii de gimnaziu și liceu, vă sugerăm să alegeți tutoriale care permit jocul gratuit și crearea de aplicații sau jocuri. Puteți solicita elevilor să lucreze independent sau în perechi sau în grupuri mici. Există multe alte tutoriale pe [code.org/learn][1] care permit crearea gratuită, inclusiv [Make a Flappy Game][2] și noul nostru instrument beta [AppLab][3].\n-   Pentru elevii mai tineri, vă sugerăm să vă împărțiți clasa în perechi sau în grupuri foarte mici (cu câte trei până la patru elevi fiecare) și să cereți fiecărui grup să lucreze împreună pentru a finaliza tutorialul folosind [programarea pe perechi][4].\n-   Pentru cursanții adulți, tutorialul [Scrie primul program de calculator][5] funcționează extrem de bine fie ca o provocare independentă, fie ca o activitate de programare pe perechi."
         },
         "b1ea2c15-24bb-475a-bb3f-bbc8ea1a51c0": {
           "tips": [
@@ -16492,7 +16492,7 @@
           ]
         },
         "712a8a98-3ab7-43d0-8f6f-a68e6984b009": {
-          "description": "Dacă un elev sau un grup de elevi termină mai devreme, poate încerca un alt tutorial vizitând [code.org/learn](http://code.org/learn)."
+          "description": "Dacă un elev sau un grup de elevi termină mai devreme, poate încerca un alt tutorial vizitând [code.org/learn][0]."
         },
         "a0530acf-3bce-4de9-b392-fe8725044086": {
           "name": "Informare",
@@ -16500,7 +16500,7 @@
         },
         "ceaf9d96-e806-48e1-9a95-30566999264e": {
           "name": "Sărbătoriți",
-          "description": "Explicați faptul că astăzi veți petrece o oră codând, deoarece săptămâna aceasta este Săptămâna Educației în Informatică și milioane de alți elevi de pe tot globul au participat la o oră de codare săptămâna aceasta. Felicită elevii pentru că fac parte din această mișcare mondială.\n\nOferiți fiecărui elev [un certificat](http://code.org/certificates) sau o diplomă cu numele său."
+          "description": "Explicați faptul că astăzi veți petrece o oră codând, deoarece săptămâna aceasta este Săptămâna Educației în Informatică și milioane de alți elevi de pe tot globul au participat la o oră de codare săptămâna aceasta. Felicită elevii pentru că fac parte din această mișcare mondială.\n\nOferiți fiecărui elev [un certificat][0] sau o diplomă cu numele său."
         },
         "680268d8-e3db-4f80-b56d-dfe40ada4d77": {
           "name": "Pașii următori",
@@ -16512,7 +16512,7 @@
         },
         "38f15942-4a08-48f7-a0c4-e04232bc9bdc": {
           "name": "Dincolo de o Oră de Cod ",
-          "description": "#### După Ora de Codare\n\nDupă ce se termină Ora de Codare, există multe modalități de a continua să predați informatica în sala de clasă. Iată câteva idei:\n\n-   Predați cursurile [Code Studio Computer Science Fundamentals](http://code.org/educate/k5). Aceste șase cursuri sunt concepute pentru tinerii cursanți. Elevii parcurg singuri o serie de puzzle-uri care îi învață să codeze, iar profesorii au acces la planuri de lecții captivante care ajută ca învățarea să prindă viață. Code.org oferă dezvoltare profesională gratuită pentru aceste cursuri, online sau în persoană.\n-   Invitați un expert în informatică să discute cu clasa dvs. despre munca sa. Nu cunoașteți niciun expert în domeniu? Adresați-vă unui voluntar pe [harta voluntarului][2]."
+          "description": "#### După Ora de Codare\n\nDupă ce se termină Ora de Codare, există multe modalități de a continua să predați informatica în sala de clasă. Iată câteva idei:\n\n-   Predați cursurile [Code Studio Computer Science Fundamentals][0]. Aceste șase cursuri sunt concepute pentru tinerii cursanți. Elevii parcurg singuri o serie de puzzle-uri care îi învață să codeze, iar profesorii au acces la planuri de lecții captivante care ajută ca învățarea să prindă viață. Code.org oferă dezvoltare profesională gratuită pentru aceste cursuri, online sau în persoană.\n-   Invitați un expert în informatică să discute cu clasa dvs. despre munca sa. Nu cunoașteți niciun expert în domeniu? Adresați-vă unui voluntar pe [harta voluntarului][2]."
         },
         "a16594a7-8312-4ac3-87c8-fd2d5d6e5bfb": {
           "name": "Introducere",
@@ -16520,7 +16520,7 @@
         },
         "6415b9b2-1e23-43ee-9d0c-e65efcb0d65c": {
           "tips": [
-            "Una dintre modalitățile folosite pentru a prezenta Ora de Codare, dacă nu sunteți foarte familiarizat(ă) cu programarea, este să le arătați elevilor unul dintre [videoclipurile noastre inspiraționale](https://hourofcode.com/us/resources#videos). Alegeți-l pe cel care, în opinia dvs., va avea cel mai puternic impact pentru elevi și distribuiți-l acum. Pentru elevii de gimnaziu vă sugerăm [Hour of Code a sosit](https://youtu.be/FC5FbmsH4fw).”"
+            "Una dintre modalitățile folosite pentru a prezenta Ora de Codare, dacă nu sunteți foarte familiarizat(ă) cu programarea, este să le arătați elevilor unul dintre [videoclipurile noastre inspiraționale][0]. Alegeți-l pe cel care, în opinia dvs., va avea cel mai puternic impact pentru elevi și distribuiți-l acum. Pentru elevii de gimnaziu vă sugerăm [Hour of Code a sosit][1].”"
           ]
         },
         "3fee530c-6d5f-44da-89f7-cfae73040787": {
@@ -16533,16 +16533,16 @@
         },
         "aafa75c2-9439-415c-b42f-cac8ddfc2874": {
           "name": "Minecraft Adventurer",
-          "description": "Provocați elevii să finalizeze tutorialul [Minecraft: Aventurierul](studio.code.org/s/mc/lessons/1/levels/1).\n\nÎn funcție de vârsta și abilitățile elevilor dvs., puteți lua în considerare:\n\n-   Pentru studenții mai tineri, vă sugerăm să vă împărțiți clasa în perechi și să cereți fiecărui grup să lucreze împreună pentru a finaliza tutorialul folosind [tehnica programării pe perechi](https://youtu.be/vgkahOzFH2Q).\n-   Pentru elevii din clasele mijlocii, constatăm că lucrul independent la tutoriale funcționează bine. Uneori, este de ajutor să le permiteți elevilor să-și aleagă propriul tutorial. Dacă studenții nu sunt interesați de Minecraft, pot obține o experiență similară cu tutorialele [Cod cu Anna și Elsa](https://studio.code.org/s/frozen/stage/1/puzzle/1) sau [Star Wars](https://code.org/starwars).\n-   Pentru cursanții mai în vârstă sau adulți, tutorialul  [Minecraft](https://hourofcode.com/mc) funcționează extrem de bine fie ca o provocare independentă, fie ca activitate de programare în pereche.",
+          "description": "Provocați elevii să finalizeze tutorialul [Minecraft: Aventurierul][0].\n\nÎn funcție de vârsta și abilitățile elevilor dvs., puteți lua în considerare:\n\n-   Pentru studenții mai tineri, vă sugerăm să vă împărțiți clasa în perechi și să cereți fiecărui grup să lucreze împreună pentru a finaliza tutorialul folosind [tehnica programării pe perechi][1].\n-   Pentru elevii din clasele mijlocii, constatăm că lucrul independent la tutoriale funcționează bine. Uneori, este de ajutor să le permiteți elevilor să-și aleagă propriul tutorial. Dacă studenții nu sunt interesați de Minecraft, pot obține o experiență similară cu tutorialele [Cod cu Anna și Elsa][2] sau [Star Wars][3].\n-   Pentru cursanții mai în vârstă sau adulți, tutorialul  [Minecraft][4] funcționează extrem de bine fie ca o provocare independentă, fie ca activitate de programare în pereche.",
           "tips": [
             "Asigurați-vă că testați și dvs. tutorialul, înainte de a le cere elevilor să încerce. În acest fel, veți ști la ce să vă așteptați și veți putea lua decizii dacă îi lăsați pe elevi să-și aleagă propriul tutorial sau dacă doriți să atribuiți tutoriale în funcție de nevoile elevilor."
           ]
         },
         "1766511d-3639-46a3-911f-acc7f8c4b922": {
-          "description": "Dacă un elev sau un grup de elevi termină mai devreme, poate încerca un alt tutorial vizitând [code.org/learn](http://code.org/learn)."
+          "description": "Dacă un elev sau un grup de elevi termină mai devreme, poate încerca un alt tutorial vizitând [code.org/learn][0]."
         },
         "8c990fee-4a0f-4d70-a635-ab66a8195193": {
-          "description": "Oferiți fiecărui elev un [„Bilet de ieșire”](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) (biletel unde poate nota)și cereți-le să rezume ceea ce au învățat astăzi, cum s-au simțit sau ce au trăit. Elevii pot să deseneze, să scrie sau să se exprime în orice mod în care se simt confortabil. Colectați aceste note de la fiecare student care iese din sală. Dacă doriți, puteți posta „Biletele de ieșire” pe un avizier sau într-un loc vizibil din școală, ca o amintire a Orei de Codare."
+          "description": "Oferiți fiecărui elev un [„Bilet de ieșire”][0] (biletel unde poate nota)și cereți-le să rezume ceea ce au învățat astăzi, cum s-au simțit sau ce au trăit. Elevii pot să deseneze, să scrie sau să se exprime în orice mod în care se simt confortabil. Colectați aceste note de la fiecare student care iese din sală. Dacă doriți, puteți posta „Biletele de ieșire” pe un avizier sau într-un loc vizibil din școală, ca o amintire a Orei de Codare."
         },
         "bcdecd77-2efb-44b5-9fdc-e244d1f5ccf6": {
           "name": "Informare",
@@ -16550,7 +16550,7 @@
         },
         "6b574c8b-2319-4244-acc8-fb8405fa5737": {
           "name": "Sărbătoriți",
-          "description": "Explicați faptul că astăzi veți petrece o oră codând, deoarece săptămâna aceasta este Săptămâna Educației în Informatică și milioane de alți elevi de pe tot globul au participat la o oră de codare săptămâna aceasta. Felicită elevii pentru că fac parte din această mișcare mondială.\n\nOferiți fiecărui elev [un certificat](https://studio.code.org/certificates/batch?course=bWM=) sau o diplomă cu numele său."
+          "description": "Explicați faptul că astăzi veți petrece o oră codând, deoarece săptămâna aceasta este Săptămâna Educației în Informatică și milioane de alți elevi de pe tot globul au participat la o oră de codare săptămâna aceasta. Felicită elevii pentru că fac parte din această mișcare mondială.\n\nOferiți fiecărui elev [un certificat][0] sau o diplomă cu numele său."
         },
         "02dfa607-4f9e-404c-bdae-f9f423fa526c": {
           "name": "Pașii următori",
@@ -16558,7 +16558,7 @@
         },
         "5bc8aefa-7bb0-4f22-a555-321738755b8c": {
           "name": "Dincolo de o Oră de Cod ",
-          "description": "După ce se termină Ora de Codare, există multe modalități de a continua să predați informatică în sala de clasă. Iată câteva idei:\n\n-   **Predați cursurile [Code Studio Computer Science Fundamentals](http://code.org/educate/k5)**. Aceste șase cursuri sunt concepute pentru tinerii cursanți. Elevii își parcurg o serie de puzzle-uri care îi învață să codifice, iar educatorii au acces la planuri de lecții captivante care ajută la învățarea să prindă viață. \n    Code.org oferă dezvoltare profesională gratuită pentru aceste cursuri, online sau în persoană.\n-   **Accesați [Puteți preda informatica](https://code.org/teach)** pentru mai multe sugestii de cursuri.\n-   **Invitați un expert în informatică să discute cu clasa dvs. despre munca lui**. Nu cunoașteți niciun informatician local? Luați legătura cu un voluntar pe [harta voluntarului](https://code.org/volunteer/local)"
+          "description": "După ce se termină Ora de Codare, există multe modalități de a continua să predați informatică în sala de clasă. Iată câteva idei:\n\n-   **Predați cursurile [Code Studio Computer Science Fundamentals][0]**. Aceste șase cursuri sunt concepute pentru tinerii cursanți. Elevii își parcurg o serie de puzzle-uri care îi învață să codifice, iar educatorii au acces la planuri de lecții captivante care ajută la învățarea să prindă viață. \n    Code.org oferă dezvoltare profesională gratuită pentru aceste cursuri, online sau în persoană.\n-   **Accesați [Puteți preda informatica][1]** pentru mai multe sugestii de cursuri.\n-   **Invitați un expert în informatică să discute cu clasa dvs. despre munca lui**. Nu cunoașteți niciun informatician local? Luați legătura cu un voluntar pe [harta voluntarului][2]"
         },
         "563d9088-3ce6-48c1-aa79-6f673e089247": {
           "name": "Introducere",
@@ -16566,7 +16566,7 @@
         },
         "9f1107d0-cde6-4f78-911c-5018ea9264e0": {
           "tips": [
-            "Una dintre modalitățile folosite pentru a prezenta Ora de Codare, dacă nu sunteți foarte familiarizat(ă) cu programarea, este să le arătați elevilor unul dintre [videoclipurile noastre inspiraționale](https://hourofcode.com/us/resources#videos). Alegeți-l pe cel care, în opinia dvs., va avea cel mai puternic impact pentru elevi și distribuiți-l acum. Pentru elevii de gimnaziu vă sugerăm [Hour of Code a sosit](https://youtu.be/FC5FbmsH4fw).”"
+            "Una dintre modalitățile folosite pentru a prezenta Ora de Codare, dacă nu sunteți foarte familiarizat(ă) cu programarea, este să le arătați elevilor unul dintre [videoclipurile noastre inspiraționale][0]. Alegeți-l pe cel care, în opinia dvs., va avea cel mai puternic impact pentru elevi și distribuiți-l acum. Pentru elevii de gimnaziu vă sugerăm [Hour of Code a sosit][1].”"
           ]
         },
         "ed8509fa-59b4-43a4-bd4a-05a5018387c2": {
@@ -16579,7 +16579,7 @@
         },
         "75d779c4-24f7-40be-bf92-b0c094c16d11": {
           "name": "Minecraft Designer Hour of Code",
-          "description": "Provocă-ți elevii să finalizeze activitatea [Minecraft: Proiectant](http://studio.code.org/s/minecraft/lessons/1/levels/1).\n\nÎn funcție de vârsta și abilitățile elevilor dvs., puteți lua în considerare:\n\n-   Pentru studenții mai tineri, vă sugerăm să vă împărțiți clasa în perechi și să cereți fiecărui grup să lucreze împreună pentru a finaliza tutorialul folosind [tehnica programării pe perechi](https://youtu.be/vgkahOzFH2Q).\n-   Pentru elevii din clasele mijlocii, constatăm că lucrul independent la tutoriale funcționează bine. Uneori, este de ajutor să le permiteți elevilor să-și aleagă propriul tutorial. Dacă studenții nu sunt interesați de Minecraft, pot obține o experiență similară cu tutorialele [Cod cu Anna și Elsa](https://studio.code.org/s/frozen/stage/1/puzzle/1) sau [Star Wars](https://code.org/starwars).\n-   Pentru cursanții mai în vârstă sau adulți, tutorialul [Minecraft: Proiectant](http://studio.code.org/s/minecraft/lessons/1/levels/1) funcționează extrem de bine fie ca o provocare independentă, fie ca activitate de programare în pereche."
+          "description": "Provocă-ți elevii să finalizeze activitatea [Minecraft: Proiectant][0].\n\nÎn funcție de vârsta și abilitățile elevilor dvs., puteți lua în considerare:\n\n-   Pentru studenții mai tineri, vă sugerăm să vă împărțiți clasa în perechi și să cereți fiecărui grup să lucreze împreună pentru a finaliza tutorialul folosind [tehnica programării pe perechi][1].\n-   Pentru elevii din clasele mijlocii, constatăm că lucrul independent la tutoriale funcționează bine. Uneori, este de ajutor să le permiteți elevilor să-și aleagă propriul tutorial. Dacă studenții nu sunt interesați de Minecraft, pot obține o experiență similară cu tutorialele [Cod cu Anna și Elsa][2] sau [Star Wars][3].\n-   Pentru cursanții mai în vârstă sau adulți, tutorialul [Minecraft: Proiectant][4] funcționează extrem de bine fie ca o provocare independentă, fie ca activitate de programare în pereche."
         },
         "8d4ecee7-5f04-4f80-9673-c2aec0c5ab9d": {
           "tips": [
@@ -16587,7 +16587,7 @@
           ]
         },
         "307ffdf6-e274-484b-a10f-329ddfe568dc": {
-          "description": "Dacă un elev sau un grup de elevi termină mai devreme, poate încerca un alt tutorial vizitând [code.org/learn](http://code.org/learn)."
+          "description": "Dacă un elev sau un grup de elevi termină mai devreme, poate încerca un alt tutorial vizitând [code.org/learn][0]."
         },
         "70935a98-82e9-4553-94f7-90a4e615dd34": {
           "name": "Informare",
@@ -16595,18 +16595,18 @@
         },
         "5f00e31d-70fa-4bb2-9bef-223793082f5c": {
           "name": "Sărbătoriți",
-          "description": "Explicați faptul că astăzi veți petrece o oră codând, deoarece săptămâna aceasta este Săptămâna Educației în Informatică și milioane de alți elevi de pe tot globul au participat la o oră de codare săptămâna aceasta. Felicită elevii pentru că fac parte din această mișcare mondială.\n\nOferiți fiecărui elev [un certificat](https://studio.code.org/certificates/batch?course=bWM=) sau o diplomă cu numele său."
+          "description": "Explicați faptul că astăzi veți petrece o oră codând, deoarece săptămâna aceasta este Săptămâna Educației în Informatică și milioane de alți elevi de pe tot globul au participat la o oră de codare săptămâna aceasta. Felicită elevii pentru că fac parte din această mișcare mondială.\n\nOferiți fiecărui elev [un certificat][0] sau o diplomă cu numele său."
         },
         "20b7009c-3a45-4211-a9ad-c65f56099200": {
           "name": "Pașii următori",
-          "description": "Spuneți elevilor că, dacă le-a plăcut activitatea de astăzi, au multe opțiuni pentru a continua să programeze. Încurajați elevii să acceseze [code.org/learn](<>) pentru o listă de opțiuni sau, dacă planificați oricare dintre activitățile de extindere care urmează, spuneți elevilor ce urmează să se întâmple la clasa dvs. "
+          "description": "Spuneți elevilor că, dacă le-a plăcut activitatea de astăzi, au multe opțiuni pentru a continua să programeze. Încurajați elevii să acceseze [code.org/learn][0] pentru o listă de opțiuni sau, dacă planificați oricare dintre activitățile de extindere care urmează, spuneți elevilor ce urmează să se întâmple la clasa dvs. "
         },
         "85fc4f24-eb97-4ff5-813f-4af3e5497034": {
-          "description": "Oferiți fiecărui elev un [„Bilet de ieșire”](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) (biletel unde poate nota)și cereți-le să rezume ceea ce au învățat astăzi, cum s-au simțit sau ce au trăit. Elevii pot să deseneze, să scrie sau să se exprime în orice mod în care se simt confortabil. Colectați aceste note de la fiecare student care iese din sală. Dacă doriți, puteți posta „Biletele de ieșire” pe un avizier sau într-un loc vizibil din școală, ca o amintire a Orei de Codare."
+          "description": "Oferiți fiecărui elev un [„Bilet de ieșire”][0] (biletel unde poate nota)și cereți-le să rezume ceea ce au învățat astăzi, cum s-au simțit sau ce au trăit. Elevii pot să deseneze, să scrie sau să se exprime în orice mod în care se simt confortabil. Colectați aceste note de la fiecare student care iese din sală. Dacă doriți, puteți posta „Biletele de ieșire” pe un avizier sau într-un loc vizibil din școală, ca o amintire a Orei de Codare."
         },
         "7f24d7ca-8a9e-417c-ac8e-18ca3ab48ac1": {
           "name": "Dincolo de o Oră de Cod ",
-          "description": "#### După Ora de Codare\n\nDupă ce se termină Ora de codare, există multe modalități de a continua să predați informatică în sala de clasă. Iată câteva idei:\n\n-   Predați cursurile [Code Studio Computer Science Fundamentals](http://code.org/educate/k5). Aceste șase cursuri sunt concepute pentru tinerii cursanți. Elevii parcurg singuri o serie de puzzle-uri care îi învață să codeze, iar profesorii au acces la planuri de lecții captivante care ajută ca învățarea să prindă viață. Code.org oferă dezvoltare profesională gratuită pentru aceste cursuri, online sau în persoană.\n-   Accesați [Puteți preda informatica](https://code.org/teach) pentru mai multe sugestii de cursuri.\n-   Invitați un expert în informatică să discute cu clasa dvs. despre munca sa. Nu cunoașteți niciun expert în domeniu? Adresați-vă unui voluntar pe [harta voluntarului](https://code.org/volunteer/local)."
+          "description": "#### După Ora de Codare\n\nDupă ce se termină Ora de codare, există multe modalități de a continua să predați informatică în sala de clasă. Iată câteva idei:\n\n-   Predați cursurile [Code Studio Computer Science Fundamentals][0]. Aceste șase cursuri sunt concepute pentru tinerii cursanți. Elevii parcurg singuri o serie de puzzle-uri care îi învață să codeze, iar profesorii au acces la planuri de lecții captivante care ajută ca învățarea să prindă viață. Code.org oferă dezvoltare profesională gratuită pentru aceste cursuri, online sau în persoană.\n-   Accesați [Puteți preda informatica][1] pentru mai multe sugestii de cursuri.\n-   Invitați un expert în informatică să discute cu clasa dvs. despre munca sa. Nu cunoașteți niciun expert în domeniu? Adresați-vă unui voluntar pe [harta voluntarului][2]."
         },
         "54b95e4d-58b7-4551-9782-7ce134f4e457": {
           "name": "Creați entuziasm!",
@@ -16874,7 +16874,7 @@
         },
         "6fa68bdd-8f9b-4d69-b54e-28141ee6d732": {
           "tips": [
-            "Una dintre modalitățile folosite pentru a prezenta Ora de Codare, dacă nu sunteți foarte familiarizat(ă) cu programarea, este să le arătați elevilor unul dintre [videoclipurile noastre inspiraționale](https://hourofcode.com/us/resources#videos). Alegeți-l pe cel care, în opinia dvs., va avea cel mai puternic impact pentru elevi și distribuiți-l acum. Pentru elevii de gimnaziu vă sugerăm [Ora de Codare a sosit](https://youtu.be/FC5FbmsH4fw)."
+            "Una dintre modalitățile folosite pentru a prezenta Ora de Codare, dacă nu sunteți foarte familiarizat(ă) cu programarea, este să le arătați elevilor unul dintre [videoclipurile noastre inspiraționale][0]. Alegeți-l pe cel care, în opinia dvs., va avea cel mai puternic impact pentru elevi și distribuiți-l acum. Pentru elevii de gimnaziu vă sugerăm [Ora de Codare a sosit][1]."
           ]
         },
         "7f1244d9-811b-410c-96b2-9f7086959c6b": {
@@ -16882,7 +16882,7 @@
         },
         "a69a3310-4b81-4e04-8313-51044489351a": {
           "name": "Star Wars: Programarea unei galaxii",
-          "description": "Provocă-ți elevii să finalizeze această activitate [Star Wars: Building a Galaxy with Code](https://studio.code.org/s/starwars/lessons/1/levels/1) .\n\nÎn funcție de vârsta și abilitățile elevilor dvs., puteți lua în considerare:\n\n-   Pentru cei mai tineri, vă sugerăm să vă împărțiți clasa în perechi și să cereți fiecărui grup să lucreze împreună pentru a finaliza tutorialul folosind [tehnica de programare in perechi](https://youtu.be/vgkahOzFH2Q).\n-   Pentru elevii din clasele mijlocii, constatăm că lucrul independent la tutoriale funcționează bine. Uneori, este de ajutor să le permiteți elevilor să-și aleagă propriul tutorial. Dacă elevii nu sunt interesați de Star Wars, pot obține o experiență similară cu tutorialul [Write Your First Computer Program](https://studio.code.org/hoc/1).\n-   Pentru elevii mai în vârstă sau adulți, tutorialul  [Star Wars: Building a Galaxy with Code]4 funcționează extrem de bine fie ca o provocare independentă, fie ca activitate de programare în pereche."
+          "description": "Provocă-ți elevii să finalizeze această activitate [Star Wars: Building a Galaxy with Code][0] .\n\nÎn funcție de vârsta și abilitățile elevilor dvs., puteți lua în considerare:\n\n-   Pentru cei mai tineri, vă sugerăm să vă împărțiți clasa în perechi și să cereți fiecărui grup să lucreze împreună pentru a finaliza tutorialul folosind [tehnica de programare in perechi][1].\n-   Pentru elevii din clasele mijlocii, constatăm că lucrul independent la tutoriale funcționează bine. Uneori, este de ajutor să le permiteți elevilor să-și aleagă propriul tutorial. Dacă elevii nu sunt interesați de Star Wars, pot obține o experiență similară cu tutorialul [Write Your First Computer Program][2].\n-   Pentru elevii mai în vârstă sau adulți, tutorialul  [Star Wars: Building a Galaxy with Code]4 funcționează extrem de bine fie ca o provocare independentă, fie ca activitate de programare în pereche."
         },
         "b17f8e8a-6b46-4f46-a4fc-894cf561bb9d": {
           "tips": [
@@ -16890,15 +16890,15 @@
           ]
         },
         "eb72d828-788d-4090-9e4f-71423c081948": {
-          "description": "La finalul tutorialului, elevii au posibilitatea de a construi un joc Star Wars. Dacă elevii termină mai devreme, încurajați-i să încerce fiecare câteva din jocurile colegilor și apoi să-și facă propriile jocuri mai interesante sau mai provocatoare.\n\nDe asemenea, puteți lăsa un grup de elevi sau un elev să încerce un alt tutorial, vizitând [code.org/learn](http://code.org/learn)."
+          "description": "La finalul tutorialului, elevii au posibilitatea de a construi un joc Star Wars. Dacă elevii termină mai devreme, încurajați-i să încerce fiecare câteva din jocurile colegilor și apoi să-și facă propriile jocuri mai interesante sau mai provocatoare.\n\nDe asemenea, puteți lăsa un grup de elevi sau un elev să încerce un alt tutorial, vizitând [code.org/learn][0]."
         },
         "bec776b1-a8cd-4e18-a1bc-be30f2942863": {
           "name": "Informare",
-          "description": "Dați fiecărui elev câteva bilețele sau cartonașe pentru note. Facilitați o activitate rapidă de tip [„Whip Around”](http://www.theteachertoolkit.com/index.php/tool/whip-around):\n\n-   Faceți o solicitare deschisă, care poate să aibă mai multe răspunsuri, cum ar fi „Distribuiți ceva care v-a plăcut cu adevărat la activitatea de la Ora de cod pe care ați finalizat-o” sau „Distribuiți unele abilități pe care le-ați învățat astăzi”.\n-   Rugați-i pe elevi să noteze cât mai multe răspunsuri posibile, câte o idee pentru fiecare bilețel sau fișă.\n     „Întrebați” aleatoriu elevii participanți, numind câte un student. Rugați elevii să împărtășească unul dintre răspunsurile lor. Când sunt numiți, elevii nu trebuie să repete un răspuns; trebuie să adauge ceva nou.\n-   După ce ați terminat, cereți elevilor să discute care idei și teme au apărut cel mai des în răspunsurile lor."
+          "description": "Dați fiecărui elev câteva bilețele sau cartonașe pentru note. Facilitați o activitate rapidă de tip [„Whip Around”][0]:\n\n-   Faceți o solicitare deschisă, care poate să aibă mai multe răspunsuri, cum ar fi „Distribuiți ceva care v-a plăcut cu adevărat la activitatea de la Ora de cod pe care ați finalizat-o” sau „Distribuiți unele abilități pe care le-ați învățat astăzi”.\n-   Rugați-i pe elevi să noteze cât mai multe răspunsuri posibile, câte o idee pentru fiecare bilețel sau fișă.\n     „Întrebați” aleatoriu elevii participanți, numind câte un student. Rugați elevii să împărtășească unul dintre răspunsurile lor. Când sunt numiți, elevii nu trebuie să repete un răspuns; trebuie să adauge ceva nou.\n-   După ce ați terminat, cereți elevilor să discute care idei și teme au apărut cel mai des în răspunsurile lor."
         },
         "4cb35c62-404e-42b9-9eaf-09ec2f485a2b": {
           "name": "Sărbătoriți",
-          "description": "Explicați-le elvilor faptul că veți petrece o oră programând astăzi, deoarece săptămâna aceasta este Săptămâna Educației în Tehnologia Computerelor și milioane de alți elevi de pe tot globul au învățat și o oră de codare săptămâna aceasta. Felicită elevii pentru că fac parte din această mișcare mondială.\n\nOferiți fiecărui elevt un [certificat](http://code.org/certificates) sau Diplomă cu numele său."
+          "description": "Explicați-le elvilor faptul că veți petrece o oră programând astăzi, deoarece săptămâna aceasta este Săptămâna Educației în Tehnologia Computerelor și milioane de alți elevi de pe tot globul au învățat și o oră de codare săptămâna aceasta. Felicită elevii pentru că fac parte din această mișcare mondială.\n\nOferiți fiecărui elevt un [certificat][0] sau Diplomă cu numele său."
         },
         "80ff32c9-0373-4125-a65e-bef5f0e21cba": {
           "name": "Pașii următori",
@@ -16906,7 +16906,7 @@
         },
         "57e403d7-a8be-47fc-bb97-1a068e2469ed": {
           "name": "Dincolo de o Oră de Cod ",
-          "description": "#### După Ora de Codare\n\nDupă ce se termină Ora de Codare, există mai multe modalități de a continua să predați informatica în sala de clasă. Iată câteva idei:\n\n-   Predați cursurile [Code Studio Computer Science Fundamentals](http://code.org/educate/k5). Aceste șase cursuri sunt concepute pentru tinerii cursanți. Elevii parcurg singuri o serie de puzzle-uri care îi învață să codeze, iar profesorii au acces la planuri de lecții captivante care ajută ca învățarea să prindă viață. Code.org oferă dezvoltare profesională gratuită pentru aceste cursuri, online sau în persoană.\n-   Cercetați o parte dintre carierele în programare pe care le-ați identificat astăzi. Găsiți resurse pentru planificarea proiectelor de cercetare în carieră pe [Sharemylesson.com](http://www.sharemylesson.com/TaxonomySearchResults.aspx?area=resources&keywords=career+research).\n-   **Invitați un expert în informatică să discute cu clasa dvs. despre munca lui**. Dacă nu cunoașteți niciun voluntar, căutați  pe [harta voluntarilor](https://code.org/volunteer/local)."
+          "description": "#### După Ora de Codare\n\nDupă ce se termină Ora de Codare, există mai multe modalități de a continua să predați informatica în sala de clasă. Iată câteva idei:\n\n-   Predați cursurile [Code Studio Computer Science Fundamentals][0]. Aceste șase cursuri sunt concepute pentru tinerii cursanți. Elevii parcurg singuri o serie de puzzle-uri care îi învață să codeze, iar profesorii au acces la planuri de lecții captivante care ajută ca învățarea să prindă viață. Code.org oferă dezvoltare profesională gratuită pentru aceste cursuri, online sau în persoană.\n-   Cercetați o parte dintre carierele în programare pe care le-ați identificat astăzi. Găsiți resurse pentru planificarea proiectelor de cercetare în carieră pe [Sharemylesson.com][1].\n-   **Invitați un expert în informatică să discute cu clasa dvs. despre munca lui**. Dacă nu cunoașteți niciun voluntar, căutați  pe [harta voluntarilor][2]."
         },
         "d0f5c55b-b19c-418c-8dc6-f87a80e08f45": {
           "description": "Rugați elevii să adauge notițele sau fișele lor de însemnări la  harta mentală dedicată „Educației în Informatică” înainte de a părăsi sala. Încercați să completați Avizierul clasei cu o mulțime de idei grozave despre ce este Educația în domeniul Informaticii și de ce este importantă această educație."
@@ -16917,14 +16917,14 @@
         },
         "88f6ccc1-0efa-4c60-985c-971a235d5645": {
           "tips": [
-            "Una dintre modalitățile folosite pentru a prezenta Ora de Codare, dacă nu sunteți foarte familiarizat(ă) cu programarea, este să le arătați elevilor unul dintre [videoclipurile noastre inspiraționale](https://hourofcode.com/us/resources#videos). Alegeți-l pe cel care, în opinia dvs., va avea cel mai puternic impact pentru elevi și distribuiți-l acum. Pentru elevii de gimnaziu vă sugerăm [Ora de Codare a sosit](https://youtu.be/FC5FbmsH4fw)."
+            "Una dintre modalitățile folosite pentru a prezenta Ora de Codare, dacă nu sunteți foarte familiarizat(ă) cu programarea, este să le arătați elevilor unul dintre [videoclipurile noastre inspiraționale][0]. Alegeți-l pe cel care, în opinia dvs., va avea cel mai puternic impact pentru elevi și distribuiți-l acum. Pentru elevii de gimnaziu vă sugerăm [Ora de Codare a sosit][1]."
           ]
         },
         "dbeab27b-4231-4281-be73-ae2aaa3d94b2": {
           "description": "Explicați că în domeniul informaticii, „cod” înseamnă un set de instrucțiuni pe care un computer le poate înțelege. Spuneți elevilor că astăzi vor exersa „codarea”, „programarea” și „depanarea”.\n\nDefiniți:\n\n-   **Codare** înseamnă a scrie cod sau a scrie instrucțiuni pentru un computer.\n-   **Programare**, în mod similar, înseamnă a scrie cod sau instrucțiuni. Astăzi, vei programa cu blocuri pe computer (dacă folosești un tutorial online) sau cu pix și hârtie (dacă folosești o activitate deconectată).\n-   **Depanare** înseamnă să verificați codul pentru erori și să încercați să remediați erorile.\n\nCereți elevilor să dea câteva exemple de posturi despre care au auzit și care sunt legate de codare. Elevii pot menționa lucruri precum „programator”, „informatician”, „dezvoltator de software” sau „inginer”. Înregistrați răspunsurile elevilor pe panoul „Informatică”, și astfel veți crea o hartă mentală a informațiilor pe care elevii le împărtășesc.\n\n**Spune:** _Aveți dreptate, copii! Nu există răspunsuri corecte sau greșite aici... aproape orice job în zilele noastre implică un fel de cunoaștere a codului. Deși există multe, multe cariere care necesită anumite cunoștințe de codare, învățarea codării este ceva ce poate face oricine. Și o vom face astăzi. Lucrurile pe care le vom face astăzi s-ar putea să nu pară imediat așa, dar tot ceea ce înveți astăzi ar putea duce la crearea următoarelor Angry Birds sau Twitter._"
         },
         "0ac387c0-d67a-4177-aacf-837ce03c55aa": {
-          "description": "Provocă-ți elevii să finalizeze această activitate [Star Wars: Building a Galaxy with Code](https://studio.code.org/s/starwarsblocks/lessons/1/levels/1) .\n\nÎn funcție de vârsta și abilitățile elevilor dvs., puteți lua în considerare:\n\n-   Pentru cei mai tineri, vă sugerăm să vă împărțiți clasa în perechi și să cereți fiecărui grup să lucreze împreună pentru a finaliza tutorialul folosind [tehnica de programare in perechi](https://youtu.be/vgkahOzFH2Q).\n-   Pentru elevii din clasele mijlocii, constatăm că lucrul independent la tutoriale funcționează bine. Uneori, este de ajutor să le permiteți elevilor să-și aleagă propriul tutorial. Dacă elevii nu sunt interesați de Star Wars, pot obține o experiență similară cu tutorialul [Write Your First Computer Program](https://studio.code.org/hoc/1).\n-   Pentru elevii mai în vârstă sau adulți, tutorialul  [Star Wars: Building a Galaxy with Code]4 funcționează extrem de bine fie ca o provocare independentă, fie ca activitate de programare în pereche."
+          "description": "Provocă-ți elevii să finalizeze această activitate [Star Wars: Building a Galaxy with Code][0] .\n\nÎn funcție de vârsta și abilitățile elevilor dvs., puteți lua în considerare:\n\n-   Pentru cei mai tineri, vă sugerăm să vă împărțiți clasa în perechi și să cereți fiecărui grup să lucreze împreună pentru a finaliza tutorialul folosind [tehnica de programare in perechi][1].\n-   Pentru elevii din clasele mijlocii, constatăm că lucrul independent la tutoriale funcționează bine. Uneori, este de ajutor să le permiteți elevilor să-și aleagă propriul tutorial. Dacă elevii nu sunt interesați de Star Wars, pot obține o experiență similară cu tutorialul [Write Your First Computer Program][2].\n-   Pentru elevii mai în vârstă sau adulți, tutorialul  [Star Wars: Building a Galaxy with Code]4 funcționează extrem de bine fie ca o provocare independentă, fie ca activitate de programare în pereche."
         },
         "88879c41-12f5-4d2e-86e6-93925b83d7d0": {
           "tips": [
@@ -16932,15 +16932,15 @@
           ]
         },
         "719affd9-c1a0-4b0c-8bc3-22060893f5e0": {
-          "description": "La finalul tutorialului, elevii au posibilitatea de a construi un joc Star Wars. Dacă elevii termină mai devreme, încurajați-i să încerce fiecare câteva din jocurile colegilor și apoi să-și facă propriile jocuri mai interesante sau mai provocatoare.\n\nDe asemenea, puteți lăsa un grup de elevi sau un elev să încerce un alt tutorial, vizitând [code.org/learn](http://code.org/learn)."
+          "description": "La finalul tutorialului, elevii au posibilitatea de a construi un joc Star Wars. Dacă elevii termină mai devreme, încurajați-i să încerce fiecare câteva din jocurile colegilor și apoi să-și facă propriile jocuri mai interesante sau mai provocatoare.\n\nDe asemenea, puteți lăsa un grup de elevi sau un elev să încerce un alt tutorial, vizitând [code.org/learn][0]."
         },
         "afb5ecc7-af66-492d-96bb-2412754005e0": {
           "name": "Informare",
-          "description": "Dați fiecărui elev câteva bilețele sau cartonașe pentru note. Facilitați o activitate rapidă de tip [„Whip Around”](http://www.theteachertoolkit.com/index.php/tool/whip-around):\n\n-   Faceți o solicitare deschisă, care poate să aibă mai multe răspunsuri, cum ar fi „Distribuiți ceva care v-a plăcut cu adevărat la activitatea de la Ora de cod pe care ați finalizat-o” sau „Distribuiți unele abilități pe care le-ați învățat astăzi”.\n-   Rugați-i pe elevi să noteze cât mai multe răspunsuri posibile, câte o idee pentru fiecare bilețel sau fișă.\n     „Întrebați” aleatoriu elevii participanți, numind câte un student. Rugați elevii să împărtășească unul dintre răspunsurile lor. Când sunt numiți, elevii nu trebuie să repete un răspuns; trebuie să adauge ceva nou.\n-   După ce ați terminat, cereți elevilor să discute care idei și teme au apărut cel mai des în răspunsurile lor."
+          "description": "Dați fiecărui elev câteva bilețele sau cartonașe pentru note. Facilitați o activitate rapidă de tip [„Whip Around”][0]:\n\n-   Faceți o solicitare deschisă, care poate să aibă mai multe răspunsuri, cum ar fi „Distribuiți ceva care v-a plăcut cu adevărat la activitatea de la Ora de cod pe care ați finalizat-o” sau „Distribuiți unele abilități pe care le-ați învățat astăzi”.\n-   Rugați-i pe elevi să noteze cât mai multe răspunsuri posibile, câte o idee pentru fiecare bilețel sau fișă.\n     „Întrebați” aleatoriu elevii participanți, numind câte un student. Rugați elevii să împărtășească unul dintre răspunsurile lor. Când sunt numiți, elevii nu trebuie să repete un răspuns; trebuie să adauge ceva nou.\n-   După ce ați terminat, cereți elevilor să discute care idei și teme au apărut cel mai des în răspunsurile lor."
         },
         "16a6a4db-d853-478e-9945-3f0d17865e80": {
           "name": "Sărbătoriți",
-          "description": "Explicați-le elvilor faptul că veți petrece o oră programând astăzi, deoarece săptămâna aceasta este Săptămâna Educației în Tehnologia Computerelor și milioane de alți elevi de pe tot globul au învățat și o oră de codare săptămâna aceasta. Felicită elevii pentru că fac parte din această mișcare mondială.\n\nOferiți fiecărui elevt un [certificat](http://code.org/certificates) sau Diplomă cu numele său."
+          "description": "Explicați-le elvilor faptul că veți petrece o oră programând astăzi, deoarece săptămâna aceasta este Săptămâna Educației în Tehnologia Computerelor și milioane de alți elevi de pe tot globul au învățat și o oră de codare săptămâna aceasta. Felicită elevii pentru că fac parte din această mișcare mondială.\n\nOferiți fiecărui elevt un [certificat][0] sau Diplomă cu numele său."
         },
         "450db873-f55e-4f30-bbb9-5dfde5bf47e4": {
           "name": "Pașii următori",
@@ -16948,7 +16948,7 @@
         },
         "5ec42aed-0b79-49f8-bd64-0716e60498a4": {
           "name": "Dincolo de o Oră de Cod ",
-          "description": "#### După Ora de Codare\n\nDupă ce se termină Ora de Codare, există mai multe modalități de a continua să predați informatica în sala de clasă. Iată câteva idei:\n\n-   Predați cursurile [Code Studio Computer Science Fundamentals](http://code.org/educate/k5). Aceste șase cursuri sunt concepute pentru tinerii cursanți. Elevii parcurg singuri o serie de puzzle-uri care îi învață să codeze, iar profesorii au acces la planuri de lecții captivante care ajută ca învățarea să prindă viață. Code.org oferă dezvoltare profesională gratuită pentru aceste cursuri, online sau în persoană.\n-   Cercetați o parte dintre carierele în programare pe care le-ați identificat astăzi. Găsiți resurse pentru planificarea proiectelor de cercetare în carieră pe [Sharemylesson.com](http://www.sharemylesson.com/TaxonomySearchResults.aspx?area=resources&keywords=career+research).\n-   **Invitați un expert în informatică să discute cu clasa dvs. despre munca lui**. Dacă nu cunoașteți niciun voluntar, căutați  pe [harta voluntarilor](https://code.org/volunteer/local)."
+          "description": "#### După Ora de Codare\n\nDupă ce se termină Ora de Codare, există mai multe modalități de a continua să predați informatica în sala de clasă. Iată câteva idei:\n\n-   Predați cursurile [Code Studio Computer Science Fundamentals][0]. Aceste șase cursuri sunt concepute pentru tinerii cursanți. Elevii parcurg singuri o serie de puzzle-uri care îi învață să codeze, iar profesorii au acces la planuri de lecții captivante care ajută ca învățarea să prindă viață. Code.org oferă dezvoltare profesională gratuită pentru aceste cursuri, online sau în persoană.\n-   Cercetați o parte dintre carierele în programare pe care le-ați identificat astăzi. Găsiți resurse pentru planificarea proiectelor de cercetare în carieră pe [Sharemylesson.com][1].\n-   **Invitați un expert în informatică să discute cu clasa dvs. despre munca lui**. Dacă nu cunoașteți niciun voluntar, căutați  pe [harta voluntarilor][2]."
         },
         "b0fff664-80cc-4318-b031-edf88ad1aebc": {
           "description": "Rugați elevii să adauge notițele sau fișele lor de însemnări la  harta mentală dedicată „Educației în Informatică” înainte de a părăsi sala. Încercați să completați Avizierul clasei cu o mulțime de idei grozave despre ce este Educația în domeniul Informaticii și de ce este importantă această educație."
@@ -17014,7 +17014,7 @@
         },
         "bacf1db7-dc91-41b8-ad71-9fb655e18dfa": {
           "tips": [
-            "-   În laborator, întâi ne liniștim\n-   Amintiți-vă să nu mestecați gumă sau bomboane\n-   Igienizați-vă mâinile\n-   Alege partenerul tău de computer\n-   Asigurați-vă că primul „șofer” poate ajunge la mouse\n-   Când sunteți frustrați, nu loviți și nu scuturați computerul sau monitorul\n-   Urmați [Regula 20/20/20](http://www.anthro.com/blog/2013/10/how-to-prevent-eye-strain-with-the-20-20-20-rule#.WOU39BLyu35).\n-   Cum să faci față [Dispozitivelor](https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll) la fiecare 20-30 de minute (necesită o conectare gratuită pe GoNoodle).\n-   Întrebați-vă partenerul înainte de a-l întreba pe profesor\n-   Păstrați volumul jos pentru ca toți ceilalți să-și poată auzi partenerii\n-   Folosește-ți jurnalul pentru a ține evidența sentimentelor și a soluțiilor"
+            "-   În laborator, întâi ne liniștim\n-   Amintiți-vă să nu mestecați gumă sau bomboane\n-   Igienizați-vă mâinile\n-   Alege partenerul tău de computer\n-   Asigurați-vă că primul „șofer” poate ajunge la mouse\n-   Când sunteți frustrați, nu loviți și nu scuturați computerul sau monitorul\n-   Urmați [Regula 20/20/20][0].\n-   Cum să faci față [Dispozitivelor][1] la fiecare 20-30 de minute (necesită o conectare gratuită pe GoNoodle).\n-   Întrebați-vă partenerul înainte de a-l întreba pe profesor\n-   Păstrați volumul jos pentru ca toți ceilalți să-și poată auzi partenerii\n-   Folosește-ți jurnalul pentru a ține evidența sentimentelor și a soluțiilor"
           ]
         },
         "aa328958-bd87-4dbb-8585-cb33f905051f": {
@@ -17037,7 +17037,7 @@
           ]
         },
         "66f2f042-aa67-41db-a756-4ab6e5623f77": {
-          "description": "Provocați elevii să finalizeze tutorialul [Jigsaw](http://studio.code.org/s/jigsaw/lessons/1/levels/1).\n\n-   Încurajați elevii cu întrebări/provocări să înceapă prin a-și întreba colegul partener.\n-   Întrebările fără răspuns pot fi transmise unui grup din apropiere, care ar putea cunoaște deja soluția.\n-   Rugați elevii să descrie problema pe care o văd. Ce ar trebui să facă? Ce face? Ce îți spune asta?\n-   Amintiți-le elevilor că frustrarea este un pas pe calea spre învățare și că persistența va da roade.\n-   Dacă un student este încă blocat după toate acestea, puneți întrebări principale pentru a-l determina pe elev să detecteze singur o eroare."
+          "description": "Provocați elevii să finalizeze tutorialul [Jigsaw][0].\n\n-   Încurajați elevii cu întrebări/provocări să înceapă prin a-și întreba colegul partener.\n-   Întrebările fără răspuns pot fi transmise unui grup din apropiere, care ar putea cunoaște deja soluția.\n-   Rugați elevii să descrie problema pe care o văd. Ce ar trebui să facă? Ce face? Ce îți spune asta?\n-   Amintiți-le elevilor că frustrarea este un pas pe calea spre învățare și că persistența va da roade.\n-   Dacă un student este încă blocat după toate acestea, puneți întrebări principale pentru a-l determina pe elev să detecteze singur o eroare."
         },
         "11068ad0-f20b-4daf-94cd-7b4549b76f3a": {
           "progression_name": "Nivele"
@@ -17047,10 +17047,10 @@
           "description": "Rugați elevii să scrie sau să deseneze despre ceea ce au învățat sau despre cum s-au simțit când au terminat puzzle-urile.\n\n**Solicitări:**\n\n-   Puteți să desenați o secvență pentru a vă pregăti să mergeți la laboratorul de informatică?\n-   Trasați un Regulament al laboratorului de informatică „Ce avem voie să facem” și ce „Nu avem voie să facem”\n-   Desenați și etichetați numele părții computerului pe care ați folosit-o când ați dat click și trageți în timpul puzzle-urilor. (buton mouse, ecran tactil, trackpad)"
         },
         "8f47b370-5569-4a34-b105-c765a39c8460": {
-          "description": "Oferiți fiecărui elev un [Bilet de ieșire](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) și cereți-i să noteze pe el ceea ce a învățat astăzi, cum s-a simțit sau ce a trăit. Elevii pot să deseneze, să scrie sau să se exprime în orice mod în care se simt confortabil. Colectați  „Biletele de ieșire” de la fiecare elev care iese din sală. Dacă doriți, puteți posta „Biletele de ieșire” pe un avizier sau într-un loc vizibil din școală, ca o amintire a Orei de codare."
+          "description": "Oferiți fiecărui elev un [Bilet de ieșire][0] și cereți-i să noteze pe el ceea ce a învățat astăzi, cum s-a simțit sau ce a trăit. Elevii pot să deseneze, să scrie sau să se exprime în orice mod în care se simt confortabil. Colectați  „Biletele de ieșire” de la fiecare elev care iese din sală. Dacă doriți, puteți posta „Biletele de ieșire” pe un avizier sau într-un loc vizibil din școală, ca o amintire a Orei de codare."
         },
         "6ddc599f-da51-4adc-9dcc-f13b8b53e760": {
-          "description": "#### După Ora de Codare\n\nDupă ce se termină Ora de codare, există multe modalități de a continua să predați informatică în sala de clasă. Iată câteva idei:\n\n-   Predați cursurile [Code Studio Computer Science Fundamentals](http://code.org/educate/k5). Aceste șase cursuri sunt concepute pentru tinerii cursanți. Elevii parcurg singuri o serie de puzzle-uri care îi învață să codeze, iar profesorii au acces la planuri de lecții captivante care ajută ca învățarea să prindă viață. \n    Code.org oferă dezvoltare profesională gratuită pentru aceste cursuri, online sau în persoană.\n\n-   Invitați un expert în informatică să discute cu clasa dvs. despre munca sa. Nu cunoașteți niciun expert în domeniu? Adresați-vă unui voluntar pe [harta voluntarului][2]."
+          "description": "#### După Ora de Codare\n\nDupă ce se termină Ora de codare, există multe modalități de a continua să predați informatică în sala de clasă. Iată câteva idei:\n\n-   Predați cursurile [Code Studio Computer Science Fundamentals][0]. Aceste șase cursuri sunt concepute pentru tinerii cursanți. Elevii parcurg singuri o serie de puzzle-uri care îi învață să codeze, iar profesorii au acces la planuri de lecții captivante care ajută ca învățarea să prindă viață. \n    Code.org oferă dezvoltare profesională gratuită pentru aceste cursuri, online sau în persoană.\n\n-   Invitați un expert în informatică să discute cu clasa dvs. despre munca sa. Nu cunoașteți niciun expert în domeniu? Adresați-vă unui voluntar pe [harta voluntarului][2]."
         },
         "b16d189d-d990-44c4-be49-8f81ac81a96e": {
           "description": "#### Organizare preliminară\n\nUrați-bun venit elevilor la oră și prezentați-le activitatea zilei.",

@@ -4,6 +4,7 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "curriculum_umbrella": "CSD Virtual PL",
       "hideable_lessons": true,
       "is_migrated": true,
       "student_detail_progress_view": true,
@@ -11,8 +12,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-08-02 00:09:52 UTC",
-    "published_state": null,
+    "serialized_at": "2023-08-29 17:31:43 UTC",
+    "published_state": "in_development",
     "instruction_type": null,
     "instructor_audience": null,
     "participant_audience": null,
@@ -167,6 +168,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD Module 3 Overview_2023"
+        ],
         "progression": "Module 3 Overview"
       },
       "bonus": false,
@@ -189,6 +193,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD M3 Check-in_2023"
+        ],
         "progression": "Check In (~5 mins)"
       },
       "bonus": false,
@@ -211,6 +218,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD M3 Theme Introduction_2023"
+        ],
         "progression": "Theme Introduction (~5 mins)"
       },
       "bonus": false,
@@ -233,6 +243,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD Module 3 Curriculum Investigation Overview_2023"
+        ],
         "progression": "Curriculum Investigation (~60 mins)"
       },
       "bonus": false,
@@ -255,6 +268,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 3 - U4L1 Investigation_2023"
+        ],
         "progression": "Curriculum Investigation (~60 mins)"
       },
       "bonus": false,
@@ -277,6 +293,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 3 - Problem Solving Process Guide_2023"
+        ],
         "progression": "Curriculum Investigation (~60 mins)"
       },
       "bonus": false,
@@ -299,6 +318,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD Module 3 Problem Solving Process_2023"
+        ],
         "progression": "Curriculum Investigation (~60 mins)"
       },
       "bonus": false,
@@ -321,6 +343,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 3 - U4L2 Investigation_2023"
+        ],
         "progression": "Curriculum Investigation (~60 mins)"
       },
       "bonus": false,
@@ -343,6 +368,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD Module 3 U4L2 Reflection_2023"
+        ],
         "progression": "Curriculum Investigation (~60 mins)"
       },
       "bonus": false,
@@ -365,6 +393,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD Module 3 U4L2 Intro Group Dynamics_2023"
+        ],
         "progression": "Supporting Effective Group Work (~5 mins)"
       },
       "bonus": false,
@@ -387,6 +418,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD Module 3 Equity - 2021_2023"
+        ],
         "progression": "Equity and Data (~5 mins)"
       },
       "bonus": false,
@@ -409,6 +443,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 3 Wrap Up_2023"
+        ],
         "progression": "Module 3 Asynchronous Wrap Up (~10 mins)"
       },
       "bonus": false,

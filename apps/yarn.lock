@@ -1533,7 +1533,7 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
-"@blockly/block-shareable-procedures@^1.2.10":
+"@blockly/block-shareable-procedures@~1.2.11":
   version "1.2.11"
   resolved "https://registry.yarnpkg.com/@blockly/block-shareable-procedures/-/block-shareable-procedures-1.2.11.tgz#eeb8ad219517f4459e2b5515e8f6dad12997d9d3"
   integrity sha512-RTTmiKM8EJAi29jcKyCmfxgt7MiVyQjhsMOy01TG9kBoLpoD6Nx8OYg81DJToefltF0+0fblYV5lGQCeT7mB8w==
@@ -3483,6 +3483,11 @@
     "@babel/runtime" "^7.12.5"
     "@testing-library/dom" "^8.0.0"
     "@types/react-dom" "<18.0.0"
+
+"@testing-library/user-event@^14.4.3":
+  version "14.4.3"
+  resolved "https://registry.yarnpkg.com/@testing-library/user-event/-/user-event-14.4.3.tgz#af975e367743fa91989cd666666aec31a8f50591"
+  integrity sha512-kCUc5MEwaEMakkO5x7aoD+DLi02ehmEM2QCGWvNqAS1dV/fAvORWEjnjsEIvml59M7Y5kCkWN6fCCyPOe8OL6Q==
 
 "@tootallnate/once@2":
   version "2.0.0"

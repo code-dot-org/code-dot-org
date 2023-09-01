@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": "csa-software-engineering",
-    "serialized_at": "2023-08-08 14:21:58 UTC",
+    "serialized_at": "2023-08-31 23:18:17 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -26,21 +26,9 @@
   },
   "lesson_groups": [
     {
-      "key": "lessonGroup-4",
-      "user_facing": true,
-      "position": 1,
-      "properties": {
-        "display_name": "Pre-Survey"
-      },
-      "seeding_key": {
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "csa-software-engineering"
-      }
-    },
-    {
       "key": "lessonGroup-2",
       "user_facing": true,
-      "position": 2,
+      "position": 1,
       "properties": {
         "display_name": "Chapter 1: GitHub and Copilot"
       },
@@ -52,7 +40,7 @@
     {
       "key": "lessonGroup-3",
       "user_facing": true,
-      "position": 3,
+      "position": 2,
       "properties": {
         "display_name": "Chapter 2: Computer Vision"
       },
@@ -64,7 +52,7 @@
     {
       "key": "lessonGroup-5",
       "user_facing": true,
-      "position": 4,
+      "position": 3,
       "properties": {
         "display_name": "Post-Survey"
       },
@@ -76,29 +64,28 @@
   ],
   "lessons": [
     {
-      "key": "lesson-7",
-      "name": "Software Engineering and Computer Vision Pre-Survey",
-      "absolute_position": 1,
-      "lockable": true,
-      "has_lesson_plan": false,
-      "relative_position": 1,
-      "properties": {
-        "assessment": true
-      },
-      "seeding_key": {
-        "lesson.key": "lesson-7",
-        "lesson_group.key": "lessonGroup-4",
-        "script.name": "csa-software-engineering"
-      }
-    },
-    {
       "key": "lesson-9",
       "name": "Setup",
-      "absolute_position": 2,
-      "lockable": false,
+      "absolute_position": 1,
+      "lockable": true,
       "has_lesson_plan": true,
       "relative_position": 1,
       "properties": {
+        "announcements": [
+          {
+            "key": "842c83be-7d6b-4989-bf19-a8dbbef7cedf",
+            "notice": "Technical Issues May Happen!",
+            "details": "Setting up a local development environment can be tricky and can longer than anticipated. If students run into issues along the way, don't worry! It happens even to the most experienced developers. Most of the time, going back through a step fixes the issue. Be prepared to spend a couple of days on setup instead of just one depending on the size of your class.",
+            "link": "",
+            "type": "warning",
+            "visibility": "Teacher-only",
+            "dismissible": true,
+            "buttonText": ""
+          }
+        ],
+        "overview": "This lesson lays the groundwork for students' upcoming software development journey by installing the following software tools:\n\n* the Java JDK\n* Maven\n* VS Code Insiders\n\nStudents also set up a GitHub account, download Git, and integrate it within the VS Code environment. To ensure a smooth progression and identify any technical issues early, they complete a setup test to verify the correct installation and configuration of their tools.\n\nFor Mac users, an additional TensorFlow setup is necessary, which will enable them to run and explore the computer vision apps in the next chapter.",
+        "preparation": "* If students do not have access to installing software on their computers, complete the Software Setup section before class or make arrangements with your school's IT department to install the software.",
+        "student_overview": "Hey there! Today, we're setting up the tools you'll need for our exciting journey into software development. First, we'll install some essential software like Java JDK, Maven, and VS Code Insiders. Then, we'll step into the realm of version control by creating a GitHub account and integrating Git with our coding environment. Don't worry, we'll run a test to make sure everything's working perfectly. For those using a Mac, we have an extra setup for TensorFlow, preparing us for some cool computer vision apps we'll explore soon."
       },
       "seeding_key": {
         "lesson.key": "lesson-9",
@@ -109,7 +96,7 @@
     {
       "key": "lesson-1",
       "name": "Intro to GitHub",
-      "absolute_position": 3,
+      "absolute_position": 2,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 2,
@@ -127,7 +114,7 @@
     {
       "key": "lesson-2",
       "name": "Intro to Copilot",
-      "absolute_position": 4,
+      "absolute_position": 3,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 3,
@@ -145,7 +132,7 @@
     {
       "key": "lesson-3",
       "name": "Build with Copilot",
-      "absolute_position": 5,
+      "absolute_position": 4,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 4,
@@ -163,11 +150,14 @@
     {
       "key": "lesson-4",
       "name": "Intro to AI Models",
-      "absolute_position": 6,
+      "absolute_position": 5,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
+        "overview": "**Why is it essential for datasets to be diverse and comprehensive, especially when these datasets are used in real-world applications affecting human lives?**\n\nIn this lesson, students explore the intricacies of decision-making in AI, with a specific focus on computer vision models. Beginning with a relatable scenario, they explore the complexity of choices, prompting reflections on the factors that influence both human and machine decisions. Through interactive activities with the MediaPipe Object Detection model and engaging videos, students witness firsthand the impact of training data on AI predictions and grapple with the consequences of potential biases in the datasets. By examining datasheets of real-world object detection datasets, they further hone their evaluation skills, determining the suitability of datasets for specific applications, such as autonomous driving.",
+        "preparation": "* Preview the MediaPipe models\n* Preview the *How Computer Vision Works*, *Training Data and Bias*, and *Datasheets for Datasets* videos\n* Print copies of the Object Detection Dataset Datasheets handout (one for each student)\n* Anticipate how you will guide the discussion on racial and gender bias, considering that some students may have experiences similar to those discussed in this lesson",
+        "student_overview": "**Why is it essential for datasets to be diverse and comprehensive, especially when these datasets are used in real-world applications affecting human lives?**\n\nIn this lesson, we're diving into the fascinating world of how machines \"see\" and make decisions. Ever wondered how a self-driving car decides when to stop or go, or how it recognizes objects on the road? That's all thanks to something called computer vision. We'll be playing around with cool tools that detect objects, and the exploring how the data used to train these tools can influence what they detect (or don't). We'll also discuss the potential consequences if a tool doesn't \"see\" things right, especially in high-stakes situations like driving. By the end of this lesson, you'll have a deeper understanding of the powerful (and sometimes flawed) world of AI and how it interacts with our daily lives."
       },
       "seeding_key": {
         "lesson.key": "lesson-4",
@@ -178,11 +168,14 @@
     {
       "key": "lesson-5",
       "name": "Training Your Model",
-      "absolute_position": 7,
+      "absolute_position": 6,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 6,
       "properties": {
+        "overview": "**How do software engineers train a model?**\n\nIn this lesson, students explore how AI can be integrated into existing Java programs. They use Teachable Machine to gain hands-on experience in training computer vision models, emphasizing the importance of data classification and iterative refinement. As students engage in discussions and practical exercises, they develop a nuanced understanding of AI's capabilities, its constraints, and the ethical considerations underpinning its application.",
+        "preparation": "* Preview the Teachable Machine tutorial videos\n* Print copies of the Train Your Model handout (one for each student)",
+        "student_overview": "**How do software engineers train a model?**\n\nIn this lesson, you'll explore how AI can potentially give a fresh twist to simple Java programs. You'll start by choosing a Java program to brainstorm ways to make it smarter with AI. Using Teachable Machine, you'll get hands-on experience in training a computer to recognize images. Along the way, you'll learn about the steps to train a model, the importance of data categories, and even discover some challenges AI faces."
       },
       "seeding_key": {
         "lesson.key": "lesson-5",
@@ -193,11 +186,14 @@
     {
       "key": "lesson-6",
       "name": "Using Your Model",
-      "absolute_position": 8,
+      "absolute_position": 7,
       "lockable": false,
       "has_lesson_plan": true,
       "relative_position": 7,
       "properties": {
+        "overview": "**How does the integration of computer vision enhance the user experience in modern applications, and what are the potential risks associated with it?**\n\nIn this lesson, students will explore the intracacies of integrating computer vision models into pre-existing apps, allowing them to understand both the technical and ethical facets of the process. They reflect on the advantages and potential pitfalls of using computer vision, emphasizing its real-world implications on user experience and data privacy. Students then gain hands-on experience adapting apps to function with Teachable Machine models and subsequently test their iterations, while also strengthening their software engineering skills using GitHub and Copilot.",
+        "preparation": "* Print copies of the Use Your Model handout (one for each student)",
+        "student_overview": "**How do engineers modify existing programs to incorporate computer vision programs, and what are the societal and computing impacts?**\n\nIn this lesson, you'll get hands-on experience in taking existing apps and supercharging them with the power of AI using the models you created with Teachable Machine. But we won't just be looking at the tech side of things – we'll also consider the big picture. What are the benefits and challenges of using computer vision in apps? How does it change the user experience, and what ethical questions arise when collecting visual data? By the end of the lesson, you'll not only have enhanced an app with AI but also pondered the responsibilities that come with this technology."
       },
       "seeding_key": {
         "lesson.key": "lesson-6",
@@ -208,10 +204,10 @@
     {
       "key": "lesson-8",
       "name": "Software Engineering and Computer Vision Post-Survey",
-      "absolute_position": 9,
+      "absolute_position": 8,
       "lockable": true,
       "has_lesson_plan": false,
-      "relative_position": 2,
+      "relative_position": 1,
       "properties": {
         "assessment": true
       },
@@ -224,14 +220,71 @@
   ],
   "lesson_activities": [
     {
-      "key": "9f549c81-09f7-43f1-b880-eeb1f816e21a",
+      "key": "2c3c5c62-0020-402d-8031-254a365888cf",
       "position": 1,
       "properties": {
+        "duration": 15,
+        "name": "Software Setup"
       },
       "seeding_key": {
-        "lesson_activity.key": "9f549c81-09f7-43f1-b880-eeb1f816e21a",
-        "lesson.key": "lesson-7",
-        "lesson_group.key": "lessonGroup-4",
+        "lesson_activity.key": "2c3c5c62-0020-402d-8031-254a365888cf",
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-software-engineering"
+      }
+    },
+    {
+      "key": "4d9c5b1c-46fe-4291-bb96-d4531c43a3c2",
+      "position": 2,
+      "properties": {
+        "duration": 10,
+        "name": "GitHub Setup"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "4d9c5b1c-46fe-4291-bb96-d4531c43a3c2",
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-software-engineering"
+      }
+    },
+    {
+      "key": "74f34124-e751-4f31-a118-f8b8d7155340",
+      "position": 3,
+      "properties": {
+        "duration": 10,
+        "name": "Testing"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "74f34124-e751-4f31-a118-f8b8d7155340",
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-software-engineering"
+      }
+    },
+    {
+      "key": "a96bc3e2-d14b-415f-bdf8-6d09c2535699",
+      "position": 4,
+      "properties": {
+        "name": "TensorFlow Setup (Mac Only)"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "a96bc3e2-d14b-415f-bdf8-6d09c2535699",
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-software-engineering"
+      }
+    },
+    {
+      "key": "b3cb7347-1972-4257-ad8c-15614c9827fa",
+      "position": 5,
+      "properties": {
+        "duration": 10,
+        "name": "Pre-Survey"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "b3cb7347-1972-4257-ad8c-15614c9827fa",
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "csa-software-engineering"
       }
     },
@@ -350,7 +403,7 @@
       "key": "aaa3fa9f-f208-478b-b7d2-741c37fc125f",
       "position": 2,
       "properties": {
-        "duration": 30,
+        "duration": 75,
         "name": "Activity"
       },
       "seeding_key": {
@@ -375,21 +428,123 @@
       }
     },
     {
-      "key": "9c6ed412-64c9-493a-baf6-80502d7c8663",
+      "key": "4554b731-995b-4fe4-b7b6-93d39cd7322c",
       "position": 1,
       "properties": {
+        "duration": 15,
+        "name": "Warm Up"
       },
       "seeding_key": {
-        "lesson_activity.key": "9c6ed412-64c9-493a-baf6-80502d7c8663",
+        "lesson_activity.key": "4554b731-995b-4fe4-b7b6-93d39cd7322c",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa-software-engineering"
+      }
+    },
+    {
+      "key": "66990522-3855-48b7-a32e-ba9e42385c71",
+      "position": 2,
+      "properties": {
+        "duration": 60,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "66990522-3855-48b7-a32e-ba9e42385c71",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa-software-engineering"
+      }
+    },
+    {
+      "key": "ae5a7a59-d5da-4793-a152-e2bfa9b31448",
+      "position": 3,
+      "properties": {
+        "duration": 15,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ae5a7a59-d5da-4793-a152-e2bfa9b31448",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa-software-engineering"
+      }
+    },
+    {
+      "key": "fb174f8c-025b-40f9-90fd-5e5dca5f5292",
+      "position": 1,
+      "properties": {
+        "duration": 10,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "fb174f8c-025b-40f9-90fd-5e5dca5f5292",
         "lesson.key": "lesson-5",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csa-software-engineering"
       }
     },
     {
-      "key": "95719263-6508-423b-b80b-37faf9391bca",
+      "key": "e8485f8f-1c67-4308-8920-05d2cc5d9945",
+      "position": 2,
+      "properties": {
+        "duration": 30,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e8485f8f-1c67-4308-8920-05d2cc5d9945",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa-software-engineering"
+      }
+    },
+    {
+      "key": "930c3299-c1ec-4f74-ba35-ae637ed67e6d",
+      "position": 3,
+      "properties": {
+        "duration": 5,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "930c3299-c1ec-4f74-ba35-ae637ed67e6d",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa-software-engineering"
+      }
+    },
+    {
+      "key": "593f43ef-d35a-432a-99c5-c508a012f0ce",
       "position": 1,
       "properties": {
+        "duration": 10,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "593f43ef-d35a-432a-99c5-c508a012f0ce",
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa-software-engineering"
+      }
+    },
+    {
+      "key": "22596ff9-9846-443d-b3e2-63aeb15c3f3c",
+      "position": 2,
+      "properties": {
+        "duration": 70,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "22596ff9-9846-443d-b3e2-63aeb15c3f3c",
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa-software-engineering"
+      }
+    },
+    {
+      "key": "95719263-6508-423b-b80b-37faf9391bca",
+      "position": 3,
+      "properties": {
+        "duration": 10,
+        "name": "Wrap Up"
       },
       "seeding_key": {
         "lesson_activity.key": "95719263-6508-423b-b80b-37faf9391bca",
@@ -413,14 +568,63 @@
   ],
   "activity_sections": [
     {
-      "key": "31416248-8ec1-4a17-a7dc-b1a4dc9be6e7",
+      "key": "d091f96d-d213-48d1-a71e-6a48243ad56d",
       "position": 1,
       "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students complete the software setup to download and install the following:\n\n* Java JDK\n* Maven\n* VS Code Insiders",
+        "progression_name": "Software Setup"
+      },
+      "seeding_key": {
+        "activity_section.key": "d091f96d-d213-48d1-a71e-6a48243ad56d",
+        "lesson_activity.key": "2c3c5c62-0020-402d-8031-254a365888cf"
+      }
+    },
+    {
+      "key": "87fa51d1-8123-4ad8-a770-69119c6baca6",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students complete the GitHub setup to:\n\n* Create a GitHub account\n* Download and install Git\n* Configure Git in VS Code",
+        "progression_name": "GitHub Setup"
+      },
+      "seeding_key": {
+        "activity_section.key": "87fa51d1-8123-4ad8-a770-69119c6baca6",
+        "lesson_activity.key": "4d9c5b1c-46fe-4291-bb96-d4531c43a3c2"
+      }
+    },
+    {
+      "key": "dd1fb269-2cb2-45f9-b287-a8994ae215d0",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students complete the setup test to make sure their software is correctly installed and configured.",
+        "progression_name": "Software Setup Test"
+      },
+      "seeding_key": {
+        "activity_section.key": "dd1fb269-2cb2-45f9-b287-a8994ae215d0",
+        "lesson_activity.key": "74f34124-e751-4f31-a118-f8b8d7155340"
+      }
+    },
+    {
+      "key": "17af55e8-75ff-4ca9-b192-86d60e07a9ff",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** If students are using Macs, have them complete the TensorFlow setup so they can run the computer vision apps in Chapter 2.",
+        "progression_name": "TensorFlow Setup (Mac Only)"
+      },
+      "seeding_key": {
+        "activity_section.key": "17af55e8-75ff-4ca9-b192-86d60e07a9ff",
+        "lesson_activity.key": "a96bc3e2-d14b-415f-bdf8-6d09c2535699"
+      }
+    },
+    {
+      "key": "ab8e0630-2901-43f6-b6f7-df1ffda02b3a",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students complete the Pre-Survey and Assessment.",
         "progression_name": "Pre-Survey and Assessment: Software Engineering and Computer Vision"
       },
       "seeding_key": {
-        "activity_section.key": "31416248-8ec1-4a17-a7dc-b1a4dc9be6e7",
-        "lesson_activity.key": "9f549c81-09f7-43f1-b880-eeb1f816e21a"
+        "activity_section.key": "ab8e0630-2901-43f6-b6f7-df1ffda02b3a",
+        "lesson_activity.key": "b3cb7347-1972-4257-ad8c-15614c9827fa"
       }
     },
     {
@@ -1023,7 +1227,7 @@
       "position": 1,
       "properties": {
         "description": "Tools like Copilot can help us fix errors in our code, create new programs, or add new features to existing programs. As these tools improve, they can be useful as part of the software development process. How we use these tools, though, might be different depending on the problem we are trying to solve.",
-        "duration": "20",
+        "duration": "65",
         "name": "Copilot as a Dev Tool",
         "remarks": true
       },
@@ -1137,20 +1341,723 @@
       }
     },
     {
-      "key": "b524bfa6-e5a3-4fef-934e-ed6996080f5b",
+      "key": "a21a7479-6500-4eac-b10e-32bc6ee47c2a",
       "position": 1,
       "properties": {
+        "description": "We often think of decision-making as a uniquely human trait. But as technology has progressed, we've built machines that can make decisions too. But how do these machines decide? And more importantly, how do they interpret and act upon the world around them? Let's start with a scenario where you'll have to make a split-second decision. I want you to place yourself in the situation and think about all the factors that might influence your choice.",
+        "name": "Making Decisions",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "a21a7479-6500-4eac-b10e-32bc6ee47c2a",
+        "lesson_activity.key": "4554b731-995b-4fe4-b7b6-93d39cd7322c"
+      }
+    },
+    {
+      "key": "41bea7a0-984a-49fa-8a4d-7050e6d4d645",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _Imagine you were driving down a road being followed closely by another car and all of a sudden, a tree branch fell in front of you from the left and a garbage can blew out in front of you from the right. If you had to choose only one way to react, which would you pick?_\n\n_(1) Swerve to the left._\n\n_(2) Swerve to the right._\n\n_(3) Break sharply._\n\n**Discussion Goal:** Students should reflect on and choose one of the given reactions, considering the immediate implications and potential consequences of each choice. They should begin to realize the complexities of decision-making, emphasizing that various factors inform our choices.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Have students journal individually, then have students share by showing on their fingers which option they chose. This situation is purposefully vague, and the class may find itself split between the three options. Use the voting around the room to transition into a short whole-class discussion.\n\nDepending on the time you have for this discussion and how deep you'd like to go, you might choose to have your students spend time on the [**Moral Machine**](https://www.moralmachine.net/), which is \"a platform for gathering a human perspective on moral decisions made by machine intelligence, such as self-driving cars.\"\n\nAllow several students to share their answers so a wide variety of ideas are heard. Use some of what you heard as examples in your remarks to transition to today’s activities."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "41bea7a0-984a-49fa-8a4d-7050e6d4d645",
+        "lesson_activity.key": "4554b731-995b-4fe4-b7b6-93d39cd7322c"
+      }
+    },
+    {
+      "key": "8d36a809-bb3f-4ff7-861a-8a8966a18379",
+      "position": 3,
+      "properties": {
+        "description": "Thank you all for sharing your ideas! I heard a lot of different features that helped you make a decision, but I also heard some people make different decisions even in the same situation. This same thing can happen with computers too - the decisions it makes can be different from the ones we expect, even in very similar situations. Today, we’ll look at how we can test a computer model to see what kinds of decisions its making and make sure those decisions are fair. But first, let's learn a bit more about how computer vision models, the type of models we'll be using, work.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "8d36a809-bb3f-4ff7-861a-8a8966a18379",
+        "lesson_activity.key": "4554b731-995b-4fe4-b7b6-93d39cd7322c"
+      }
+    },
+    {
+      "key": "6b2c7b0f-ff5b-4475-9826-79f0b887b959",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show the video – _How Computer Vision Works_.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "To encourage active engagement with the video and reflect on the _How Computer Vision Works_ video, have students:\n\n* Write down 3 features that they found particularly useful or interesting.\n* Identify 2 aspects or uses of computer vision that they'd like to explore or understand better.\n* Reflect on 1 way they might implement computer vision in their own personal projects."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "6b2c7b0f-ff5b-4475-9826-79f0b887b959",
+        "lesson_activity.key": "4554b731-995b-4fe4-b7b6-93d39cd7322c"
+      }
+    },
+    {
+      "key": "cc7c3563-e124-4355-a2bb-3da8c3e052f8",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
+        "duration": "30",
+        "name": "MediaPipe Model Testing"
+      },
+      "seeding_key": {
+        "activity_section.key": "cc7c3563-e124-4355-a2bb-3da8c3e052f8",
+        "lesson_activity.key": "66990522-3855-48b7-a32e-ba9e42385c71"
+      }
+    },
+    {
+      "key": "a614beea-a01f-4aae-bc72-a28d8bac8e5f",
+      "position": 2,
+      "properties": {
+        "description": "Now that we've seen a few examples of how computer vision can be used, let's try out some things we saw in the video.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "a614beea-a01f-4aae-bc72-a28d8bac8e5f",
+        "lesson_activity.key": "66990522-3855-48b7-a32e-ba9e42385c71"
+      }
+    },
+    {
+      "key": "75ad3a6a-d225-483a-87d3-1ae2cff15c72",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Send students to the MediaPipe Object Detection model demo and let them play with the model using their own webcam for a minute or two. Instruct students not to worry about the dropdowns but to make sure they play around with the two sliders at the bottom.",
+        "progression_name": "MediaPipe Object Detection Model Demo",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "As you circulate around, encourage students who haven't discovered the sliders to mess around with them and see what they notice."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "75ad3a6a-d225-483a-87d3-1ae2cff15c72",
+        "lesson_activity.key": "66990522-3855-48b7-a32e-ba9e42385c71"
+      }
+    },
+    {
+      "key": "c9395f06-82c1-408e-b72c-3499c57d562f",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _What did you notice as you played with the model? What do you wonder?_\n\n**Discussion Goal:** Students should notice the effects of adjusting the two sliders and share observations about the model's behavior. They should recognize the impact of parameter adjustments on AI model outputs and share questions about how these models function.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The primary goal is to make sure students understand how the tool works, including the two sliders. You may also get students commenting about matters around accuracy (\"It doesn't recognize any of our hats!\") and/or bias (\"It recognizes iPhones but not Android phones!\"). Keep these comments in mind to loop back to later in the lesson."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "c9395f06-82c1-408e-b72c-3499c57d562f",
+        "lesson_activity.key": "66990522-3855-48b7-a32e-ba9e42385c71"
+      }
+    },
+    {
+      "key": "fd4f1d60-f6a4-4e1f-9a00-184c665893a6",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define _confidence score_.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the auto dog door scenario.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Have students download the image files to test the model with.",
+        "progression_name": "MediaPipe Model Testing: Image Files"
+      },
+      "seeding_key": {
+        "activity_section.key": "fd4f1d60-f6a4-4e1f-9a00-184c665893a6",
+        "lesson_activity.key": "66990522-3855-48b7-a32e-ba9e42385c71"
+      }
+    },
+    {
+      "key": "50f44639-5fa3-49e5-a4da-c293d10d0ed9",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students test the images in the **Dog** folder. If students have time, have them find their own images of dogs to test.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:*** Click through the animated slide to display the prompts.\n\n* _What were your results? Which dogs would the model let in?_\n* _Which dogs would the model keep locked out?_\n\n**Discussion Goal:**  Students should note which images yield high or low confidence scores. They should share their findings about the model's accuracy in identifying different dogs and any potential patterns or biases in its decisions. Students may also bring up that they notice certain types of dogs (breed, size, face shape, color etc.) were detected less often, which could be an opportunity to foreshadow the concept of bias.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Use this discussion to connect back to the example given in the video about how models can struggle to detect everything accurately, given how they are trained."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "50f44639-5fa3-49e5-a4da-c293d10d0ed9",
+        "lesson_activity.key": "66990522-3855-48b7-a32e-ba9e42385c71"
+      }
+    },
+    {
+      "key": "78a630d6-649a-4703-940a-04a6e7a3b5ec",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define _bias_."
+      },
+      "seeding_key": {
+        "activity_section.key": "78a630d6-649a-4703-940a-04a6e7a3b5ec",
+        "lesson_activity.key": "66990522-3855-48b7-a32e-ba9e42385c71"
+      }
+    },
+    {
+      "key": "8be5cbe7-5eb2-4d67-b7ce-690236ad2783",
+      "position": 8,
+      "properties": {
+        "description": "Now that we've seen how the model handles something like dogs, let's look at something that has potentially higher-stakes when it comes to the impact on society. We already talked at the beginning of the lesson about a situation involving driving. Now we will see how this model would work as part of an autonomous driving system.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "8be5cbe7-5eb2-4d67-b7ce-690236ad2783",
+        "lesson_activity.key": "66990522-3855-48b7-a32e-ba9e42385c71"
+      }
+    },
+    {
+      "key": "9b30952c-6c1c-4fbd-a78d-32e81ed4498c",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the self-driving cars scenario.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students test the images in the **Cars/Trucks/Bikes etc** folder. If students have time, have them find their own images of things a car might encounter on the road to test.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Look and listen for students picking up on characteristics in images that they think might be leading to inaccurate or lacking predictions from the model. Encourage students to look for more images on the web to test those hypotheses.\n\nIf your students are struggling to notice differences in how objects are detected, you might choose to model a comparison of two images. The two screenshots below show how the model handles these two images. Showing these two images one after the other could help open the discussion about the results of this model.\n\n![](https://images.code.org/99cdcf9750cefd88f3412ab343615c13-cars.png)"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "9b30952c-6c1c-4fbd-a78d-32e81ed4498c",
+        "lesson_activity.key": "66990522-3855-48b7-a32e-ba9e42385c71"
+      }
+    },
+    {
+      "key": "94ebac45-6250-4809-a411-a0119dc31f49",
+      "position": 10,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n\n* _What were your results?_\n* _Did the results you got make sense? Or did some of them feel unfair?_\n\n**Discussion Goal:** Students should critically assess how the model identifies and distinguishes between various vehicles and road objects. They should reflect on the model's predictions, identifying any instances where the model might have made unexpected or \"unfair\" decisions. Students should begin to realize the intricacies and potential pitfalls in AI model responses and the importance of accuracy and fairness in real-world applications like self-driving cars.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Use this discussion to highlight areas where the model did not perform as well as it could have. Draw out the fact that \"unusual\" looking vehicles we less recognized by the model and push your class to think about the consequences of that disparity. Ask students whether they think this something they think is fair."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "94ebac45-6250-4809-a411-a0119dc31f49",
+        "lesson_activity.key": "66990522-3855-48b7-a32e-ba9e42385c71"
+      }
+    },
+    {
+      "key": "1e29621d-dc08-4bf1-8050-2897f51c6f0d",
+      "position": 11,
+      "properties": {
+        "description": "It's crucial to recognize that the foundation of any AI model's decision-making capabilities lies in its training data. But what happens when that data isn't all-encompassing or is skewed in a certain direction? Let's take a look at some real datasets and consider their impacts on models so we can uncover the relationship between training data and potential biases in AI outcomes.",
+        "duration": "30",
+        "name": "Training Data and Bias",
+        "remarks": true,
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Optional Video: Training Data and Bias** -  if you're students seem to be struggling to understand how bias in the data can lead to models that perform in unfair ways, you can show the Training Data and Bias video that walks through this concept in more detail."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "1e29621d-dc08-4bf1-8050-2897f51c6f0d",
+        "lesson_activity.key": "66990522-3855-48b7-a32e-ba9e42385c71"
+      }
+    },
+    {
+      "key": "4141de4a-bbf2-4b06-88fd-757765b703b3",
+      "position": 12,
+      "properties": {
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** COCO Datatset - Activity Guide\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students navigate to the COCO dataset via the link on the MediaPipe model and explore the dataset following the directions in the activity guide.",
+        "progression_name": "COCO - Common Objects in Context Dataset"
+      },
+      "seeding_key": {
+        "activity_section.key": "4141de4a-bbf2-4b06-88fd-757765b703b3",
+        "lesson_activity.key": "66990522-3855-48b7-a32e-ba9e42385c71"
+      }
+    },
+    {
+      "key": "f3c88e49-71a1-4e83-8418-8721af2ad316",
+      "position": 13,
+      "properties": {
+        "description": "It's great to see examples of the data like this as it helps us get a better understanding of the dataset and its potential uses. However, we saw that a model trained on this dataset isn't great for all purposes, like use in a self-driving car. Having a biased or inaccurate model is clearly a problem, and it's another reason our role as evaluators and testers of machine learning models is so important. This is also a problem that people in the machine learning community are trying to solve. Let's listen to one possible solution, then we'll talk about how we can use this idea when creating our own machine learning models.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "f3c88e49-71a1-4e83-8418-8721af2ad316",
+        "lesson_activity.key": "66990522-3855-48b7-a32e-ba9e42385c71"
+      }
+    },
+    {
+      "key": "f2e976a3-29fd-41ac-a310-9508fe0d58ca",
+      "position": 14,
+      "properties": {
+        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show the video – _Datasheets for Datasets_.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define _datasheet_."
+      },
+      "seeding_key": {
+        "activity_section.key": "f2e976a3-29fd-41ac-a310-9508fe0d58ca",
+        "lesson_activity.key": "66990522-3855-48b7-a32e-ba9e42385c71"
+      }
+    },
+    {
+      "key": "9c788f7b-dc9b-4b3d-85c7-a27b8bd31130",
+      "position": 15,
+      "properties": {
+        "description": "We've now learned that \"the data is the code\" when it comes to machine learning models, and we've also heard about best practices when documenting these datasets with datasheets. Now let's take a look at datasheets for three object detection datasets and use the information there to make a recommendation to the car company about which dataset is most appropriate to train its model on.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "9c788f7b-dc9b-4b3d-85c7-a27b8bd31130",
+        "lesson_activity.key": "66990522-3855-48b7-a32e-ba9e42385c71"
+      }
+    },
+    {
+      "key": "1c8d01b6-27f1-4dca-804a-e38fface31d3",
+      "position": 16,
+      "properties": {
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Object Detection Dataset Datasheets handout.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students complete the Object Detection Dataset Datasheets handout.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "While these are real datasets and the source URLs are accurate, these datasets do not have datasheets published by the respective curators. [**Here is an example**](https://huggingface.co/datasets/imagenet-1k) of a datasheet for the ImageNet dataset created by a third party, which was the source material for some of what appears in the activity guide."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "1c8d01b6-27f1-4dca-804a-e38fface31d3",
+        "lesson_activity.key": "66990522-3855-48b7-a32e-ba9e42385c71"
+      }
+    },
+    {
+      "key": "be4b9dc8-769c-4363-b86b-8dec58ab52f3",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _Would you recommend that the car company train their model using this Common Objects in Context dataset? Why or why not?_\n\n**Discussion Goal:** Students should consider the contents, source, and primary intentions behind the dataset in order to determine its suitability for training a car-based model.",
+        "name": "Which Model to Use?",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Use these discussions to highlight the features of each datasheet, specifically the metadata about the dataset and its uses."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "be4b9dc8-769c-4363-b86b-8dec58ab52f3",
+        "lesson_activity.key": "ae5a7a59-d5da-4793-a152-e2bfa9b31448"
+      }
+    },
+    {
+      "key": "83684814-7526-4624-a562-560bfb156986",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _Would you recommend that the car company train their model using this ImageNet dataset? Why or why not?_\n\n**Discussion Goal:** Students should consider the vastness of ImageNet, its diverse categories, and discern if it's specific enough for training a car AI model.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _Would you recommend that the car company train their model using this Waymo Open Dataset? Why or why not?_\n\n**Discussion Goal:** Students should realize the direct relevance of this dataset to driving scenarios and the comprehensive nature of data collected from actual road conditions. Students will most likely see clearly that it is the most appropriate for training an autonomous driving-related model.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
+      },
+      "seeding_key": {
+        "activity_section.key": "83684814-7526-4624-a562-560bfb156986",
+        "lesson_activity.key": "ae5a7a59-d5da-4793-a152-e2bfa9b31448"
+      }
+    },
+    {
+      "key": "c0539c98-2f4b-4fb9-8c37-68480a1a5ae4",
+      "position": 3,
+      "properties": {
+        "description": "Now that we've had some exposure and practice with models trained by others, we are ready to collect our own data and train our own model in the next lesson.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "c0539c98-2f4b-4fb9-8c37-68480a1a5ae4",
+        "lesson_activity.key": "ae5a7a59-d5da-4793-a152-e2bfa9b31448"
+      }
+    },
+    {
+      "key": "bf585f91-9cdf-4065-8141-2148d8db7dcd",
+      "position": 4,
+      "properties": {
+        "description": "---"
+      },
+      "seeding_key": {
+        "activity_section.key": "bf585f91-9cdf-4065-8141-2148d8db7dcd",
+        "lesson_activity.key": "ae5a7a59-d5da-4793-a152-e2bfa9b31448"
+      }
+    },
+    {
+      "key": "526fa96f-8454-4097-9149-239f477aa8e4",
+      "position": 5,
+      "properties": {
+        "description": "_Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket._",
+        "name": "Assessment: Check for Understanding",
+        "progression_name": "Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "526fa96f-8454-4097-9149-239f477aa8e4",
+        "lesson_activity.key": "ae5a7a59-d5da-4793-a152-e2bfa9b31448"
+      }
+    },
+    {
+      "key": "a83c43e8-3d0b-436d-be49-c00337ee0c26",
+      "position": 6,
+      "properties": {
+        "description": "This lesson survey helps us learn more about how the lesson went for your students. Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey.",
+        "name": "Lesson Survey",
         "progression_name": "End of Lesson Survey"
       },
       "seeding_key": {
-        "activity_section.key": "b524bfa6-e5a3-4fef-934e-ed6996080f5b",
-        "lesson_activity.key": "9c6ed412-64c9-493a-baf6-80502d7c8663"
+        "activity_section.key": "a83c43e8-3d0b-436d-be49-c00337ee0c26",
+        "lesson_activity.key": "ae5a7a59-d5da-4793-a152-e2bfa9b31448"
+      }
+    },
+    {
+      "key": "2826f403-1687-49f1-807e-229e7d70c95b",
+      "position": 1,
+      "properties": {
+        "description": "Today, we're going to be training a model that can be used in an existing Java program. Before you train the model, you're going to first pick the existing Java program that you will work on.",
+        "name": "Select a Program",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "2826f403-1687-49f1-807e-229e7d70c95b",
+        "lesson_activity.key": "fb174f8c-025b-40f9-90fd-5e5dca5f5292"
+      }
+    },
+    {
+      "key": "02a023ca-dc7c-44cd-9f0e-95cb57960847",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Train Your Model activity guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students complete the Select a Program section of the activity guide.",
+        "progression_name": "Select a Program"
+      },
+      "seeding_key": {
+        "activity_section.key": "02a023ca-dc7c-44cd-9f0e-95cb57960847",
+        "lesson_activity.key": "fb174f8c-025b-40f9-90fd-5e5dca5f5292"
+      }
+    },
+    {
+      "key": "47b87af0-e032-4af7-873e-b4f888087bf5",
+      "position": 3,
+      "properties": {
+        "description": "**Group:** Place students who picked the same Java program in pairs or small groups of three.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _How could you incorporate an AI model into your program?_\n\n**Discussion Goal:** Students should share ideas about how AI integration might enhance the functionality of their chosen program. They should point out AI's role, its impact on user experience, and may even identify potential challenges."
+      },
+      "seeding_key": {
+        "activity_section.key": "47b87af0-e032-4af7-873e-b4f888087bf5",
+        "lesson_activity.key": "fb174f8c-025b-40f9-90fd-5e5dca5f5292"
+      }
+    },
+    {
+      "key": "d0b7682b-d152-4c27-9d7a-c607bb96d965",
+      "position": 1,
+      "properties": {
+        "description": "We're going to be using Teachable Machine for computer vision. Teachable Machine makes it easy for us to train a computer to recognize images. The steps in training our model is to gather samples, train, and then to test and retrain.",
+        "name": "Train Your Model",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "d0b7682b-d152-4c27-9d7a-c607bb96d965",
+        "lesson_activity.key": "e8485f8f-1c67-4308-8920-05d2cc5d9945"
+      }
+    },
+    {
+      "key": "6cfe4920-9c84-4948-86c3-99c832abafd3",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define _**class**_.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _What classes might you need for your model?_\n\n**Discussion Goal:** Students should identify and describe specific categories or types of data their AI model would need to recognize or differentiate between. They should consider the distinct outputs or decisions the model is expected to make and group the data into clear, manageable classes.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Probe students further to have them articulate the relevance of each class to the program's functionality and how each contributes to the desired AI-enhanced experience."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "6cfe4920-9c84-4948-86c3-99c832abafd3",
+        "lesson_activity.key": "e8485f8f-1c67-4308-8920-05d2cc5d9945"
+      }
+    },
+    {
+      "key": "5fe14687-d2a1-4cdf-9ebd-d27ef4c1f7cb",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students complete the Teachable Machine portion of the activity guide.",
+        "progression_name": "Teachable Machine",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Students should save their model somewhere where they can access it in the next lesson."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "5fe14687-d2a1-4cdf-9ebd-d27ef4c1f7cb",
+        "lesson_activity.key": "e8485f8f-1c67-4308-8920-05d2cc5d9945"
+      }
+    },
+    {
+      "key": "dc6e897c-3506-4f8c-b920-eb8b4e11e6f7",
+      "position": 1,
+      "properties": {
+        "description": "Some of you may have had to retrain your model as you were testing. It is important to consider the limitations of AI computer vision.",
+        "name": "Limitations of AI",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "dc6e897c-3506-4f8c-b920-eb8b4e11e6f7",
+        "lesson_activity.key": "930c3299-c1ec-4f74-ba35-ae637ed67e6d"
+      }
+    },
+    {
+      "key": "bdc38fce-0efa-4d0a-b444-0fa1d4aff0ea",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts:\n\n* _When did your model not work?_\n* _How did you retrain it?_\n\n**Discussion Goal:** Students share situations when their model did not work. For example, if students were training a model to detect rock, paper, scissors, their model may not work if two hands show two different symbols. They may share that they added additional categories (classes) to detect unknown symbols.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
+      },
+      "seeding_key": {
+        "activity_section.key": "bdc38fce-0efa-4d0a-b444-0fa1d4aff0ea",
+        "lesson_activity.key": "930c3299-c1ec-4f74-ba35-ae637ed67e6d"
+      }
+    },
+    {
+      "key": "11e78375-dd47-4f22-b54e-6d2948f13e49",
+      "position": 3,
+      "properties": {
+        "description": "---"
+      },
+      "seeding_key": {
+        "activity_section.key": "11e78375-dd47-4f22-b54e-6d2948f13e49",
+        "lesson_activity.key": "930c3299-c1ec-4f74-ba35-ae637ed67e6d"
+      }
+    },
+    {
+      "key": "a2cfb4a1-8325-447b-8388-f9c287858fd6",
+      "position": 4,
+      "properties": {
+        "description": "_Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket._",
+        "name": "Assessment: Check for Understanding",
+        "progression_name": "Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "a2cfb4a1-8325-447b-8388-f9c287858fd6",
+        "lesson_activity.key": "930c3299-c1ec-4f74-ba35-ae637ed67e6d"
+      }
+    },
+    {
+      "key": "a2a9ae68-6bad-4ea7-8826-1b1bebba2410",
+      "position": 5,
+      "properties": {
+        "description": "This lesson survey helps us learn more about how the lesson went for your students. Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey.",
+        "name": "Lesson Survey",
+        "progression_name": "End of Lesson Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "a2a9ae68-6bad-4ea7-8826-1b1bebba2410",
+        "lesson_activity.key": "930c3299-c1ec-4f74-ba35-ae637ed67e6d"
+      }
+    },
+    {
+      "key": "d4bd626b-56b3-4b05-aeb3-e6ac965515d6",
+      "position": 1,
+      "properties": {
+        "description": "Today, we're going to incorporate our computer vision model into your chosen app. Let's start first by thinking about the pluses and minuses of using computer vision in these apps.",
+        "name": "Why Computer Vision?",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "d4bd626b-56b3-4b05-aeb3-e6ac965515d6",
+        "lesson_activity.key": "593f43ef-d35a-432a-99c5-c508a012f0ce"
+      }
+    },
+    {
+      "key": "96272ff4-5d94-4e7e-8673-3732bee6bec6",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Use Your Model activity guide.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students complete the Why Computer Vision section of the activity guide.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _Think back to the Java app you chose last lesson. How might incorporating computer vision make it a better app? How might it make the app worse?_\n\n**Discussion Goal:** Students reflect on the pros and cons of incorporating computer vision. They may predict that adding computer vision will make the app more interactive and fun. They may also note that if the model isn't trained well, the app will not work. In addition, using computer vision requires collecting more video and image data from the user."
+      },
+      "seeding_key": {
+        "activity_section.key": "96272ff4-5d94-4e7e-8673-3732bee6bec6",
+        "lesson_activity.key": "593f43ef-d35a-432a-99c5-c508a012f0ce"
+      }
+    },
+    {
+      "key": "e9446298-f70d-4062-897c-a49b004f8577",
+      "position": 1,
+      "properties": {
+        "description": "In the previous lesson, you used your app without computer vision. Today, you will modify your app to work with your Teachable Machine model.",
+        "duration": "35",
+        "name": "Incorporating Your Model",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "e9446298-f70d-4062-897c-a49b004f8577",
+        "lesson_activity.key": "22596ff9-9846-443d-b3e2-63aeb15c3f3c"
+      }
+    },
+    {
+      "key": "b078cbb8-a347-49c3-8a0b-0c28be42945c",
+      "position": 2,
+      "properties": {
+        "description": "**Group:** Place students in pairs or small groups of three.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students follow the Incorporate Your Model section of the activity guide.",
+        "progression_name": "Incorporate Your Model",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "These repos are different versions of the apps and contain code for loading and processing the Teachable Machine model to make predictions. It's not required or important for students to understand this code, however, if students are curious, encourage them to use Copilot to explain it."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "b078cbb8-a347-49c3-8a0b-0c28be42945c",
+        "lesson_activity.key": "22596ff9-9846-443d-b3e2-63aeb15c3f3c"
+      }
+    },
+    {
+      "key": "8d9de5c6-7ec0-41b2-b448-62cd749e8b6c",
+      "position": 3,
+      "properties": {
+        "description": "Now that you've implemented the logic needed to incorporate your model, let's merge your changes to your group's main branch and test it out. You may find that you need to make changes to either your model or code, and that's okay! Remember that software engineering is an iterative and collaborative process.",
+        "duration": "20",
+        "name": "Testing Your App",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "8d9de5c6-7ec0-41b2-b448-62cd749e8b6c",
+        "lesson_activity.key": "22596ff9-9846-443d-b3e2-63aeb15c3f3c"
+      }
+    },
+    {
+      "key": "d0ab28a3-41a2-4a31-82bf-b41e9653cf84",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students complete the Merge and Test Your App section of the activity guide.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "You could choose to spend more time on this portion to allow students to add additional features to the app. Students could brainstorm one or two additional features or general improvements they want to add and repeat the process of creating branches and submitting pull requests to merge their new features or improvements to the main branch to test."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "d0ab28a3-41a2-4a31-82bf-b41e9653cf84",
+        "lesson_activity.key": "22596ff9-9846-443d-b3e2-63aeb15c3f3c"
+      }
+    },
+    {
+      "key": "acd2c44c-30e9-41ab-888d-5822bb0d8769",
+      "position": 5,
+      "properties": {
+        "description": "In a previous lesson, we learned about datasheets, which can be used to help document the datasets used to train our machine learning models. They help people develop machine learning models, and people using those models understand more about the data underpinning the models and their predictions.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "acd2c44c-30e9-41ab-888d-5822bb0d8769",
+        "lesson_activity.key": "22596ff9-9846-443d-b3e2-63aeb15c3f3c"
+      }
+    },
+    {
+      "key": "e9caed86-4a8c-4883-8c97-60740459c993",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review datasheets.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students complete the Create a Datasheet section of the activity guide."
+      },
+      "seeding_key": {
+        "activity_section.key": "e9caed86-4a8c-4883-8c97-60740459c993",
+        "lesson_activity.key": "22596ff9-9846-443d-b3e2-63aeb15c3f3c"
+      }
+    },
+    {
+      "key": "e972ea15-449a-40fb-8b4a-7effab2ba0e3",
+      "position": 7,
+      "properties": {
+        "description": "Now that you have tried your own app, it's time to try a different one!",
+        "duration": "15",
+        "name": "Try Another App",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "e972ea15-449a-40fb-8b4a-7effab2ba0e3",
+        "lesson_activity.key": "22596ff9-9846-443d-b3e2-63aeb15c3f3c"
+      }
+    },
+    {
+      "key": "c2991d0f-4bb6-45b6-8b88-c72fb0621153",
+      "position": 8,
+      "properties": {
+        "description": "**Group:** Place students in pairs with a partner that worked on a different app than themselves.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students try their partner's app and complete the Your Partner's App section of the activity guide."
+      },
+      "seeding_key": {
+        "activity_section.key": "c2991d0f-4bb6-45b6-8b88-c72fb0621153",
+        "lesson_activity.key": "22596ff9-9846-443d-b3e2-63aeb15c3f3c"
+      }
+    },
+    {
+      "key": "3d6035bc-24e7-4452-bafc-6da3d9d8b150",
+      "position": 1,
+      "properties": {
+        "description": "Now that you have used some apps with computer vision, we're going to think about when software engineers should or should not use computer vision.",
+        "name": "Software Engineering and Computer Vision",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "3d6035bc-24e7-4452-bafc-6da3d9d8b150",
+        "lesson_activity.key": "95719263-6508-423b-b80b-37faf9391bca"
+      }
+    },
+    {
+      "key": "7efc3659-ed7e-4144-834a-d909a73807ad",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Show the quote by computer scientists Remi Denton and Timnit Gebru.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students complete the Software Engineering and Computer Vision portion of the activity guide.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _Given what you wrote down and the previous quote, when do you think software engineers should or should not use computer vision?_\n\n**Discussion Goal:** Students share that although it is important to make sure that the model works and is not biased, software engineers should also think critically about whether or not their computer vision model should exist and how it can be used.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "If students are interested in learning more about Emily Denton and Timnit Gebru's work, the quote is taken from their [**workshop**](https://sites.google.com/view/fatecv-tutorial/schedule) \"Tutorial on Fairness Accountability Transparency and Ethics in Computer Vision\" at CVPR 2020.\n\nStudents can also research more about the [**Algorithmic Justice League**](https://www.ajl.org/) and learn about the [**questionable use of Artificial Intelligence for job applications**](https://interaktiv.br.de/ki-bewerbung/en/)."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "7efc3659-ed7e-4144-834a-d909a73807ad",
+        "lesson_activity.key": "95719263-6508-423b-b80b-37faf9391bca"
+      }
+    },
+    {
+      "key": "d4f32b77-4ee8-4e12-9d60-48cfa64fa4f6",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day."
+      },
+      "seeding_key": {
+        "activity_section.key": "d4f32b77-4ee8-4e12-9d60-48cfa64fa4f6",
+        "lesson_activity.key": "95719263-6508-423b-b80b-37faf9391bca"
+      }
+    },
+    {
+      "key": "43b8430c-1d64-480a-b720-a01b953439bf",
+      "position": 4,
+      "properties": {
+        "description": "---"
+      },
+      "seeding_key": {
+        "activity_section.key": "43b8430c-1d64-480a-b720-a01b953439bf",
+        "lesson_activity.key": "95719263-6508-423b-b80b-37faf9391bca"
+      }
+    },
+    {
+      "key": "f89a4443-6537-4574-a086-9997385e3d2a",
+      "position": 5,
+      "properties": {
+        "description": "_Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket._",
+        "name": "Assessment: Check for Understanding",
+        "progression_name": "Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "f89a4443-6537-4574-a086-9997385e3d2a",
+        "lesson_activity.key": "95719263-6508-423b-b80b-37faf9391bca"
       }
     },
     {
       "key": "4740f9e6-a3b7-407b-a28f-625ab45aea89",
-      "position": 1,
+      "position": 6,
       "properties": {
+        "description": "This lesson survey helps us learn more about how the lesson went for your students. Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey.",
+        "name": "Lesson Survey",
         "progression_name": "End of Lesson Survey"
       },
       "seeding_key": {
@@ -1175,6 +2082,181 @@
       "chapter": 1,
       "position": 1,
       "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csa-se-setup-part1"
+        ],
+        "progression": "Software Setup"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csa-se-setup-part1"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-software-engineering",
+        "activity_section.key": "d091f96d-d213-48d1-a71e-6a48243ad56d"
+      },
+      "level_keys": [
+        "csa-se-setup-part1"
+      ]
+    },
+    {
+      "chapter": 2,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csa-se-setup-part2"
+        ],
+        "progression": "Software Setup"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csa-se-setup-part2"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-software-engineering",
+        "activity_section.key": "d091f96d-d213-48d1-a71e-6a48243ad56d"
+      },
+      "level_keys": [
+        "csa-se-setup-part2"
+      ]
+    },
+    {
+      "chapter": 3,
+      "position": 3,
+      "activity_section_position": 3,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csa-se-setup-part3"
+        ],
+        "progression": "Software Setup"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csa-se-setup-part3"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-software-engineering",
+        "activity_section.key": "d091f96d-d213-48d1-a71e-6a48243ad56d"
+      },
+      "level_keys": [
+        "csa-se-setup-part3"
+      ]
+    },
+    {
+      "chapter": 4,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csa-se-setup-part4"
+        ],
+        "progression": "GitHub Setup"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csa-se-setup-part4"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-software-engineering",
+        "activity_section.key": "87fa51d1-8123-4ad8-a770-69119c6baca6"
+      },
+      "level_keys": [
+        "csa-se-setup-part4"
+      ]
+    },
+    {
+      "chapter": 5,
+      "position": 5,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csa-se-setup-part5"
+        ],
+        "progression": "GitHub Setup"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csa-se-setup-part5"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-software-engineering",
+        "activity_section.key": "87fa51d1-8123-4ad8-a770-69119c6baca6"
+      },
+      "level_keys": [
+        "csa-se-setup-part5"
+      ]
+    },
+    {
+      "chapter": 6,
+      "position": 6,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csa-se-setup-part6"
+        ],
+        "progression": "Software Setup Test"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csa-se-setup-part6"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-software-engineering",
+        "activity_section.key": "dd1fb269-2cb2-45f9-b287-a8994ae215d0"
+      },
+      "level_keys": [
+        "csa-se-setup-part6"
+      ]
+    },
+    {
+      "chapter": 7,
+      "position": 7,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "csa-se-setup-part7"
+        ],
+        "progression": "TensorFlow Setup (Mac Only)"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "csa-se-setup-part7"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-software-engineering",
+        "activity_section.key": "17af55e8-75ff-4ca9-b192-86d60e07a9ff"
+      },
+      "level_keys": [
+        "csa-se-setup-part7"
+      ]
+    },
+    {
+      "chapter": 8,
+      "position": 8,
+      "activity_section_position": 1,
       "assessment": true,
       "properties": {
         "level_keys": [
@@ -1187,17 +2269,17 @@
         "script_level.level_keys": [
           "CSA-SE-CV-PreSurvey-and-Assessment"
         ],
-        "lesson.key": "lesson-7",
-        "lesson_group.key": "lessonGroup-4",
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "csa-software-engineering",
-        "activity_section.key": "31416248-8ec1-4a17-a7dc-b1a4dc9be6e7"
+        "activity_section.key": "ab8e0630-2901-43f6-b6f7-df1ffda02b3a"
       },
       "level_keys": [
         "CSA-SE-CV-PreSurvey-and-Assessment"
       ]
     },
     {
-      "chapter": 2,
+      "chapter": 9,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1222,7 +2304,7 @@
       ]
     },
     {
-      "chapter": 3,
+      "chapter": 10,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -1247,7 +2329,7 @@
       ]
     },
     {
-      "chapter": 4,
+      "chapter": 11,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
@@ -1272,7 +2354,7 @@
       ]
     },
     {
-      "chapter": 5,
+      "chapter": 12,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1297,7 +2379,7 @@
       ]
     },
     {
-      "chapter": 6,
+      "chapter": 13,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
@@ -1322,7 +2404,7 @@
       ]
     },
     {
-      "chapter": 7,
+      "chapter": 14,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
@@ -1347,7 +2429,7 @@
       ]
     },
     {
-      "chapter": 8,
+      "chapter": 15,
       "position": 4,
       "activity_section_position": 1,
       "assessment": true,
@@ -1372,7 +2454,7 @@
       ]
     },
     {
-      "chapter": 9,
+      "chapter": 16,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1397,7 +2479,7 @@
       ]
     },
     {
-      "chapter": 10,
+      "chapter": 17,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
@@ -1422,7 +2504,7 @@
       ]
     },
     {
-      "chapter": 11,
+      "chapter": 18,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
@@ -1447,8 +2529,208 @@
       ]
     },
     {
-      "chapter": 12,
+      "chapter": 19,
       "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA-CV-L1-L1"
+        ],
+        "progression": "MediaPipe Object Detection Model Demo"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA-CV-L1-L1"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa-software-engineering",
+        "activity_section.key": "75ad3a6a-d225-483a-87d3-1ae2cff15c72"
+      },
+      "level_keys": [
+        "CSA-CV-L1-L1"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA-CV-L1-L2"
+        ],
+        "progression": "MediaPipe Model Testing: Image Files"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA-CV-L1-L2"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa-software-engineering",
+        "activity_section.key": "fd4f1d60-f6a4-4e1f-9a00-184c665893a6"
+      },
+      "level_keys": [
+        "CSA-CV-L1-L2"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA-CV-L1-L3"
+        ],
+        "progression": "COCO - Common Objects in Context Dataset"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA-CV-L1-L3"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa-software-engineering",
+        "activity_section.key": "4141de4a-bbf2-4b06-88fd-757765b703b3"
+      },
+      "level_keys": [
+        "CSA-CV-L1-L3"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSA-CV-L1-L4"
+        ],
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA-CV-L1-L4"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa-software-engineering",
+        "activity_section.key": "526fa96f-8454-4097-9149-239f477aa8e4"
+      },
+      "level_keys": [
+        "CSA-CV-L1-L4"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSA-CV-L1-Survey"
+        ],
+        "progression": "End of Lesson Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA-CV-L1-Survey"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa-software-engineering",
+        "activity_section.key": "a83c43e8-3d0b-436d-be49-c00337ee0c26"
+      },
+      "level_keys": [
+        "CSA-CV-L1-Survey"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA-CV-L2-L1"
+        ],
+        "progression": "Select a Program"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA-CV-L2-L1"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa-software-engineering",
+        "activity_section.key": "02a023ca-dc7c-44cd-9f0e-95cb57960847"
+      },
+      "level_keys": [
+        "CSA-CV-L2-L1"
+      ]
+    },
+    {
+      "chapter": 25,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA-CV-L2-L2"
+        ],
+        "progression": "Teachable Machine"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA-CV-L2-L2"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa-software-engineering",
+        "activity_section.key": "5fe14687-d2a1-4cdf-9ebd-d27ef4c1f7cb"
+      },
+      "level_keys": [
+        "CSA-CV-L2-L2"
+      ]
+    },
+    {
+      "chapter": 26,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSA-CV-L2-L3"
+        ],
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA-CV-L2-L3"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa-software-engineering",
+        "activity_section.key": "a2cfb4a1-8325-447b-8388-f9c287858fd6"
+      },
+      "level_keys": [
+        "CSA-CV-L2-L3"
+      ]
+    },
+    {
+      "chapter": 27,
+      "position": 4,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
@@ -1465,15 +2747,65 @@
         "lesson.key": "lesson-5",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csa-software-engineering",
-        "activity_section.key": "b524bfa6-e5a3-4fef-934e-ed6996080f5b"
+        "activity_section.key": "a2a9ae68-6bad-4ea7-8826-1b1bebba2410"
       },
       "level_keys": [
         "CSA-CV-L2-Survey"
       ]
     },
     {
-      "chapter": 13,
+      "chapter": 28,
       "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA-CV-L3-L1"
+        ],
+        "progression": "Incorporate Your Model"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA-CV-L3-L1"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa-software-engineering",
+        "activity_section.key": "b078cbb8-a347-49c3-8a0b-0c28be42945c"
+      },
+      "level_keys": [
+        "CSA-CV-L3-L1"
+      ]
+    },
+    {
+      "chapter": 29,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSA-CV-L3-L2"
+        ],
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA-CV-L3-L2"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa-software-engineering",
+        "activity_section.key": "f89a4443-6537-4574-a086-9997385e3d2a"
+      },
+      "level_keys": [
+        "CSA-CV-L3-L2"
+      ]
+    },
+    {
+      "chapter": 30,
+      "position": 3,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
@@ -1497,7 +2829,7 @@
       ]
     },
     {
-      "chapter": 14,
+      "chapter": 31,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -1525,14 +2857,98 @@
   "levels_script_levels": [
     {
       "seeding_key": {
+        "level.key": "csa-se-setup-part1",
+        "script_level.level_keys": [
+          "csa-se-setup-part1"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-software-engineering",
+        "activity_section.key": "d091f96d-d213-48d1-a71e-6a48243ad56d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csa-se-setup-part2",
+        "script_level.level_keys": [
+          "csa-se-setup-part2"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-software-engineering",
+        "activity_section.key": "d091f96d-d213-48d1-a71e-6a48243ad56d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csa-se-setup-part3",
+        "script_level.level_keys": [
+          "csa-se-setup-part3"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-software-engineering",
+        "activity_section.key": "d091f96d-d213-48d1-a71e-6a48243ad56d"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csa-se-setup-part4",
+        "script_level.level_keys": [
+          "csa-se-setup-part4"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-software-engineering",
+        "activity_section.key": "87fa51d1-8123-4ad8-a770-69119c6baca6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csa-se-setup-part5",
+        "script_level.level_keys": [
+          "csa-se-setup-part5"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-software-engineering",
+        "activity_section.key": "87fa51d1-8123-4ad8-a770-69119c6baca6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csa-se-setup-part6",
+        "script_level.level_keys": [
+          "csa-se-setup-part6"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-software-engineering",
+        "activity_section.key": "dd1fb269-2cb2-45f9-b287-a8994ae215d0"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "csa-se-setup-part7",
+        "script_level.level_keys": [
+          "csa-se-setup-part7"
+        ],
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-software-engineering",
+        "activity_section.key": "17af55e8-75ff-4ca9-b192-86d60e07a9ff"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "CSA-SE-CV-PreSurvey-and-Assessment",
         "script_level.level_keys": [
           "CSA-SE-CV-PreSurvey-and-Assessment"
         ],
-        "lesson.key": "lesson-7",
-        "lesson_group.key": "lessonGroup-4",
+        "lesson.key": "lesson-9",
+        "lesson_group.key": "lessonGroup-2",
         "script.name": "csa-software-engineering",
-        "activity_section.key": "31416248-8ec1-4a17-a7dc-b1a4dc9be6e7"
+        "activity_section.key": "ab8e0630-2901-43f6-b6f7-df1ffda02b3a"
       }
     },
     {
@@ -1657,6 +3073,102 @@
     },
     {
       "seeding_key": {
+        "level.key": "CSA-CV-L1-L1",
+        "script_level.level_keys": [
+          "CSA-CV-L1-L1"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa-software-engineering",
+        "activity_section.key": "75ad3a6a-d225-483a-87d3-1ae2cff15c72"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA-CV-L1-L2",
+        "script_level.level_keys": [
+          "CSA-CV-L1-L2"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa-software-engineering",
+        "activity_section.key": "fd4f1d60-f6a4-4e1f-9a00-184c665893a6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA-CV-L1-L3",
+        "script_level.level_keys": [
+          "CSA-CV-L1-L3"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa-software-engineering",
+        "activity_section.key": "4141de4a-bbf2-4b06-88fd-757765b703b3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA-CV-L1-L4",
+        "script_level.level_keys": [
+          "CSA-CV-L1-L4"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa-software-engineering",
+        "activity_section.key": "526fa96f-8454-4097-9149-239f477aa8e4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA-CV-L1-Survey",
+        "script_level.level_keys": [
+          "CSA-CV-L1-Survey"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa-software-engineering",
+        "activity_section.key": "a83c43e8-3d0b-436d-be49-c00337ee0c26"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA-CV-L2-L1",
+        "script_level.level_keys": [
+          "CSA-CV-L2-L1"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa-software-engineering",
+        "activity_section.key": "02a023ca-dc7c-44cd-9f0e-95cb57960847"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA-CV-L2-L2",
+        "script_level.level_keys": [
+          "CSA-CV-L2-L2"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa-software-engineering",
+        "activity_section.key": "5fe14687-d2a1-4cdf-9ebd-d27ef4c1f7cb"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA-CV-L2-L3",
+        "script_level.level_keys": [
+          "CSA-CV-L2-L3"
+        ],
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa-software-engineering",
+        "activity_section.key": "a2cfb4a1-8325-447b-8388-f9c287858fd6"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "CSA-CV-L2-Survey",
         "script_level.level_keys": [
           "CSA-CV-L2-Survey"
@@ -1664,7 +3176,31 @@
         "lesson.key": "lesson-5",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csa-software-engineering",
-        "activity_section.key": "b524bfa6-e5a3-4fef-934e-ed6996080f5b"
+        "activity_section.key": "a2a9ae68-6bad-4ea7-8826-1b1bebba2410"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA-CV-L3-L1",
+        "script_level.level_keys": [
+          "CSA-CV-L3-L1"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa-software-engineering",
+        "activity_section.key": "b078cbb8-a347-49c3-8a0b-0c28be42945c"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA-CV-L3-L2",
+        "script_level.level_keys": [
+          "CSA-CV-L3-L2"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa-software-engineering",
+        "activity_section.key": "f89a4443-6537-4574-a086-9997385e3d2a"
       }
     },
     {
@@ -1718,6 +3254,30 @@
       }
     },
     {
+      "name": "[KEY] Train Your Model",
+      "url": "https://docs.google.com/document/d/1QM2mqU_lnonkdndOrXV354gckTLK0nh_0zlPxEnO2C4/edit?usp=drive_link",
+      "key": "_key_train_your_model",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_train_your_model"
+      }
+    },
+    {
+      "name": "[KEY] Use Your Model",
+      "url": "https://docs.google.com/document/d/1ZyqyrnyCy4RJVpTC7LawIjQKEWiTyoOp31h9W6TSxGE/edit?usp=sharing",
+      "key": "_key_use_your_model",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Answer Key"
+      },
+      "seeding_key": {
+        "resource.key": "_key_use_your_model"
+      }
+    },
+    {
       "name": "BinaryBazaar App",
       "url": "https://docs.google.com/document/d/1Obs0IoQ4IPKmAbOJCAqA86VfqQaykMnAs9OageySJWI/edit?usp=sharing",
       "key": "binarybazaar_app",
@@ -1744,7 +3304,7 @@
     },
     {
       "name": "BrandBook Repo",
-      "url": "https://github.com/jamjamgobambam/brandbook",
+      "url": "https://github.com/code-dot-org/csa-se-lesson2b",
       "key": "brandbook_repo",
       "properties": {
         "audience": "Student",
@@ -1768,7 +3328,7 @@
     },
     {
       "name": "ByteBud Repo",
-      "url": "https://github.com/jamjamgobambam/bytebud",
+      "url": "https://github.com/code-dot-org/csa-se-lesson2e",
       "key": "bytebud_repo",
       "properties": {
         "audience": "Student",
@@ -1776,6 +3336,42 @@
       },
       "seeding_key": {
         "resource.key": "bytebud_repo"
+      }
+    },
+    {
+      "name": "COCO - Common Objects in Context Dataset",
+      "url": "https://cocodataset.org/#home",
+      "key": "coco_-_common_objects_in_context_dataset",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "coco_-_common_objects_in_context_dataset"
+      }
+    },
+    {
+      "name": "COCO Dataset Exploration",
+      "url": "https://docs.google.com/document/d/1ozYwGdZiQNZD87efW9AmVsjAuUICqdYAEggRMknxIeo/edit?usp=sharing",
+      "key": "coco_dataset_exploration",
+      "properties": {
+        "audience": "Student",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "coco_dataset_exploration"
+      }
+    },
+    {
+      "name": "Datasheets for Datasets",
+      "url": "https://vimeo.com/639588440",
+      "key": "datasheets_for_datasets",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "datasheets_for_datasets"
       }
     },
     {
@@ -1868,8 +3464,20 @@
       }
     },
     {
+      "name": "Guessing Game Repo",
+      "url": "https://github.com/code-dot-org/csa-cv-lesson2a",
+      "key": "guessing_game_repo",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "guessing_game_repo"
+      }
+    },
+    {
       "name": "Harmony Helper Repo",
-      "url": "https://github.com/jamjamgobambam/harmonyhelper",
+      "url": "https://github.com/code-dot-org/csa-se-lesson2c",
       "key": "harmony_helper_repo",
       "properties": {
         "audience": "Student",
@@ -1881,7 +3489,7 @@
     },
     {
       "name": "Honest Headlines Repo",
-      "url": "https://github.com/jamjamgobambam/honestheadlines",
+      "url": "https://github.com/code-dot-org/csa-se-lesson2g",
       "key": "honest_headlines_repo",
       "properties": {
         "audience": "Student",
@@ -1901,6 +3509,42 @@
       },
       "seeding_key": {
         "resource.key": "how_ai_works_chatbots_and_large_language_models"
+      }
+    },
+    {
+      "name": "How Computer Vision Works",
+      "url": "https://www.youtube.com/watch?v=2hXG8v8p0KM",
+      "key": "how_computer_vision_works",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "how_computer_vision_works"
+      }
+    },
+    {
+      "name": "Image Files",
+      "url": "https://drive.google.com/file/d/1dnhvbfde7zKupHwz6LjTGTP_OGbp3wPp/view?usp=drive_link",
+      "key": "image_files",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "image_files"
+      }
+    },
+    {
+      "name": "Intro to AI Models",
+      "url": "https://docs.google.com/presentation/d/1fCLQ_tjJbp5eFxrbQ1BFA0RPdJutiUbcl9aAMGKmM80/edit?usp=sharing",
+      "key": "intro_to_ai_models",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "intro_to_ai_models"
       }
     },
     {
@@ -1941,8 +3585,33 @@
       }
     },
     {
+      "name": "MediaPipe Object Detection Model",
+      "url": "https://mediapipe-studio.webapps.google.com/studio/demo/object\\_detector",
+      "key": "mediapipe_object_detection_model",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "mediapipe_object_detection_model"
+      }
+    },
+    {
+      "name": "Object Detection Datasets Datasheets",
+      "url": "https://docs.google.com/document/d/1Lc-BGSoBMSf5aiSy0_OAgbtVYv-A0kdesklxpe0iTqs/edit?usp=drive_link",
+      "key": "object_detection_datasets_datasheets",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "object_detection_datasets_datasheets"
+      }
+    },
+    {
       "name": "PixelPedia Repo",
-      "url": "https://github.com/jamjamgobambam/pixelpedia",
+      "url": "https://github.com/code-dot-org/csa-se-lesson2d",
       "key": "pixelpedia_repo",
       "properties": {
         "audience": "Student",
@@ -1953,8 +3622,20 @@
       }
     },
     {
+      "name": "Rock, Paper, Scissors Repo",
+      "url": "https://github.com/code-dot-org/csa-cv-lesson2b",
+      "key": "rock_paper_scissors_repo",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "rock_paper_scissors_repo"
+      }
+    },
+    {
       "name": "SocialSense Repo",
-      "url": "https://github.com/jamjamgobambam/socialsense",
+      "url": "https://github.com/code-dot-org/csa-se-lesson2f",
       "key": "socialsense_repo",
       "properties": {
         "audience": "Student",
@@ -2002,8 +3683,56 @@
       }
     },
     {
+      "name": "Teachable Machine",
+      "url": "https://teachablemachine.withgoogle.com/",
+      "key": "teachable_machine",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "teachable_machine"
+      }
+    },
+    {
+      "name": "Teachable Machine Tutorial 1: Gather",
+      "url": "https://www.youtube.com/watch?v=DFBbSTvtpy4",
+      "key": "teachable_machine_tutorial_1_gather",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "teachable_machine_tutorial_1_gather"
+      }
+    },
+    {
+      "name": "Teachable Machine Tutorial 2: Train",
+      "url": "https://www.youtube.com/watch?v=CO67EQ0ZWgA",
+      "key": "teachable_machine_tutorial_2_train",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "teachable_machine_tutorial_2_train"
+      }
+    },
+    {
+      "name": "Teachable Machine Tutorial 3: Export",
+      "url": "https://www.youtube.com/watch?v=n-zeeRLBgd0",
+      "key": "teachable_machine_tutorial_3_export",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "teachable_machine_tutorial_3_export"
+      }
+    },
+    {
       "name": "TextTrekkers Repo",
-      "url": "https://github.com/jamjamgobambam/texttrekkers",
+      "url": "https://github.com/code-dot-org/csa-se-lesson2h",
       "key": "texttrekkers_repo",
       "properties": {
         "audience": "Student",
@@ -2014,8 +3743,57 @@
       }
     },
     {
+      "name": "Train Your Model",
+      "url": "https://docs.google.com/document/d/13nh3Tao6YPTKVNx7yRoMIqgt9MdPfNnRLHc9Pwwp728/edit?usp=sharing",
+      "key": "train_your_model",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "train_your_model"
+      }
+    },
+    {
+      "name": "Training Data and Bias",
+      "url": "https://youtu.be/x2mRoFNm22g",
+      "key": "training_data_and_bias",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "training_data_and_bias"
+      }
+    },
+    {
+      "name": "Training Your Model",
+      "url": "https://docs.google.com/presentation/d/1UL78CHMg64FYEu5afQpzxZm2D0AsFxebmdNhI4WOOeA/edit?usp=sharing",
+      "key": "training_your_model",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "training_your_model"
+      }
+    },
+    {
+      "name": "Unlock the App Repo",
+      "url": "https://github.com/code-dot-org/csa-cv-lesson2c",
+      "key": "unlock_the_app_repo",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "unlock_the_app_repo"
+      }
+    },
+    {
       "name": "Urban Explorer Repo",
-      "url": "https://github.com/jamjamgobambam/urbanexplorer",
+      "url": "https://github.com/code-dot-org/csa-se-lesson2a",
       "key": "urban_explorer_repo",
       "properties": {
         "audience": "Student",
@@ -2023,6 +3801,31 @@
       },
       "seeding_key": {
         "resource.key": "urban_explorer_repo"
+      }
+    },
+    {
+      "name": "Use Your Model",
+      "url": "https://docs.google.com/document/d/1vt8Rvuf_rJQWfrIze3pepNW8ZiVh6hZmjgqndFmIh1I/edit?usp=drive_link",
+      "key": "use_your_model",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "use_your_model"
+      }
+    },
+    {
+      "name": "Using Your Model",
+      "url": "https://docs.google.com/presentation/d/1s9ml7ucEZ8YjbtbQsClGV41enK7eTqyS9NkANcYok0k/edit?usp=sharing",
+      "key": "using_your_model",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "using_your_model"
       }
     },
     {
@@ -2274,6 +4077,138 @@
         "lesson.key": "lesson-3",
         "resource.key": "weatherwise_repo"
       }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "coco_-_common_objects_in_context_dataset"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "coco_dataset_exploration"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "datasheets_for_datasets"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "how_computer_vision_works"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "image_files"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "intro_to_ai_models"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "mediapipe_object_detection_model"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "object_detection_datasets_datasheets"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "training_data_and_bias"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "_key_train_your_model"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "guessing_game_repo"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "rock_paper_scissors_repo"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "teachable_machine"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "teachable_machine_tutorial_1_gather"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "teachable_machine_tutorial_2_train"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "teachable_machine_tutorial_3_export"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "train_your_model"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "training_your_model"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "resource.key": "unlock_the_app_repo"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "_key_use_your_model"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "use_your_model"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "resource.key": "using_your_model"
+      }
     }
   ],
   "scripts_resources": [
@@ -2289,6 +4224,16 @@
   ],
   "vocabularies": [
     {
+      "key": "bias",
+      "word": "bias",
+      "definition": "when a decision favors some things and deprioritizes or excludes others",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "bias"
+      }
+    },
+    {
       "key": "branch",
       "word": "branch",
       "definition": "a separate line of development",
@@ -2296,6 +4241,36 @@
       },
       "seeding_key": {
         "vocabulary.key": "branch"
+      }
+    },
+    {
+      "key": "class",
+      "word": "class",
+      "definition": "a category that a machine learning model learns",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "class"
+      }
+    },
+    {
+      "key": "confidence_score",
+      "word": "confidence score",
+      "definition": "a measure of confidence that a computer model has about a prediction",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "confidence_score"
+      }
+    },
+    {
+      "key": "datasheet",
+      "word": "datasheet",
+      "definition": "used to help document the datasets used to train machine learning models",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "datasheet"
       }
     },
     {
@@ -2385,12 +4360,46 @@
         "lesson.key": "lesson-2",
         "vocabulary.key": "large_language_model"
       }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "vocabulary.key": "bias"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "vocabulary.key": "confidence_score"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "vocabulary.key": "datasheet"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "vocabulary.key": "class"
+      }
     }
   ],
   "lessons_programming_expressions": [
 
   ],
   "objectives": [
+    {
+      "key": "0290eaac-e408-4d8c-b5cc-10fb534c54ef",
+      "properties": {
+        "description": "Explain the basic principles of computer vision, how machines interpret visual data, and the significance of decision-making in AI models"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "objective.key": "0290eaac-e408-4d8c-b5cc-10fb534c54ef"
+      }
+    },
     {
       "key": "0a9d0395-1533-4019-a288-7776dab579e3",
       "properties": {
@@ -2402,6 +4411,16 @@
       }
     },
     {
+      "key": "219f3556-f548-4ac7-9c78-38f90be3642c",
+      "properties": {
+        "description": "Analyze an existing Java program to propose meaningful ways to enhance its functionality through the incorporation of an AI model"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "objective.key": "219f3556-f548-4ac7-9c78-38f90be3642c"
+      }
+    },
+    {
       "key": "2c320089-6428-4f43-925d-e2d6d099a07a",
       "properties": {
         "description": "Use GitHub Copilot to debug and enhance existing code"
@@ -2409,6 +4428,16 @@
       "seeding_key": {
         "lesson.key": "lesson-3",
         "objective.key": "2c320089-6428-4f43-925d-e2d6d099a07a"
+      }
+    },
+    {
+      "key": "35cb2cda-7d4d-48c3-b6bb-d79eb60e87c0",
+      "properties": {
+        "description": "Train a model, identifying scenarios where the model may not perform as expected, and implement retraining strategies to refine its accuracy"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "objective.key": "35cb2cda-7d4d-48c3-b6bb-d79eb60e87c0"
       }
     },
     {
@@ -2429,6 +4458,36 @@
       "seeding_key": {
         "lesson.key": "lesson-1",
         "objective.key": "5ef421af-06fb-4d7f-be73-02fd7b6f17e7"
+      }
+    },
+    {
+      "key": "79a30105-ee97-4bea-a4da-73a07833c34c",
+      "properties": {
+        "description": "Evaluate the suitability of different datasets for specific AI applications"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "objective.key": "79a30105-ee97-4bea-a4da-73a07833c34c"
+      }
+    },
+    {
+      "key": "8f7adb86-0855-442a-9a63-cbc63ab82c69",
+      "properties": {
+        "description": "Assess the accuracy and potential biases of AI models and the implications of these biases, especially in real-world applications like self-driving cars"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "objective.key": "8f7adb86-0855-442a-9a63-cbc63ab82c69"
+      }
+    },
+    {
+      "key": "91eed728-2975-4e1e-9705-f15d576cf18d",
+      "properties": {
+        "description": "Identify advantages and disadvantages of incorporating computer vision into applications"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "objective.key": "91eed728-2975-4e1e-9705-f15d576cf18d"
       }
     },
     {
@@ -2480,6 +4539,26 @@
         "lesson.key": "lesson-1",
         "objective.key": "da147a36-5372-47fe-b36f-bb9887ef56cc"
       }
+    },
+    {
+      "key": "f44a9d36-d581-42fc-858d-c62f75a7af20",
+      "properties": {
+        "description": "Modify an existing app to function with a Teachable Machine model"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "objective.key": "f44a9d36-d581-42fc-858d-c62f75a7af20"
+      }
+    },
+    {
+      "key": "f881fdb4-6103-4561-9885-8637bf59177c",
+      "properties": {
+        "description": "Explain the core steps involved in training an AI model using tools like Teachable Machine, specifically in the context of computer vision"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "objective.key": "f881fdb4-6103-4561-9885-8637bf59177c"
+      }
     }
   ],
   "lessons_standards": [
@@ -2488,6 +4567,69 @@
         "lesson.key": "lesson-1",
         "framework.shortcode": "csta",
         "standard.shortcode": "3B-AP-20"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-A-iii.3-5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-C-i.9-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-C-iii.3-5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-C-iii.6-8"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-IC-21"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-IC-25"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-11"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-IC-24"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-6",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3B-AP-22"
       }
     }
   ],

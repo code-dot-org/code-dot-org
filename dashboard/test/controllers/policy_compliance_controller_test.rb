@@ -78,6 +78,43 @@ class PolicyComplianceControllerTest < ActionDispatch::IntegrationTest
     end
   end
 
+  test "if a user enters their own email as their parent email, should just redirect back" do
+    user = create(:young_student, :without_parent_permission, email: 'test@studentemail.com')
+    sign_in user
+
+    assert_emails 0 do
+      post '/policy_compliance/child_account_consent', params:
+        {
+          'parent-email': 'test@studentemail.com',
+        }
+      assert_redirected_to lockout_path
+    end
+  end
+
+  test "if a user enters their own email with a subaddress/plus address, it should redirect back" do
+    user = create(:young_student, :without_parent_permission, email: 'test@studentemail.com')
+    sign_in user
+
+    assert_emails 0 do
+      post '/policy_compliance/child_account_consent', params:
+        {
+          'parent-email': 'test+foo@studentemail.com',
+        }
+      assert_redirected_to lockout_path
+    end
+  end
+
+  test "if a user enters an invalid email, it should return a 400" do
+    user = create(:young_student, :without_parent_permission)
+    sign_in user
+
+    post '/policy_compliance/child_account_consent', params:
+      {
+        'parent-email': 'bademail',
+      }
+    assert_response :bad_request
+  end
+
   test "should update user and send an email to the parent upon creating the request" do
     user = create(:young_student, :without_parent_permission
 )

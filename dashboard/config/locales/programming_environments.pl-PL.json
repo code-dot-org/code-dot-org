@@ -528,6 +528,7 @@
                 "clearTimeout": {
                   "palette_params": {
                     "timeout": {
+                      "description": "Wartość zwracana przez funkcję setTimeout do anulowania.",
                       "type": "liczba"
                     }
                   },
@@ -770,6 +771,9 @@
                   "palette_params": {
                     "callback": {
                       "type": "funkcja"
+                    },
+                    "url": {
+                      "description": "Adres internetowy usługi, która zwraca dane."
                     }
                   }
                 },
@@ -1230,6 +1234,11 @@
             "turtle": {
               "expressions": {
                 "arcLeft": {
+                  "examples": {
+                    "Example: Negative Angle": {
+                      "description": "arcLeft zawsze przesuwa żółwia w kierunku przeciwnym do ruchu wskazówek zegara. Dla ujemnego _angle_ żółw przesuwa się o (360+_angle_) stopni."
+                    }
+                  },
                   "palette_params": {
                     "angle": {
                       "type": "liczba"
@@ -1241,6 +1250,11 @@
                   "short_description": "Przesuwa żółwia do przodu i w lewo po gładkim, okrągłym łuku."
                 },
                 "arcRight": {
+                  "examples": {
+                    "Example: U-Turn": {
+                      "description": "Płynnie obróć żółwia."
+                    }
+                  },
                   "palette_params": {
                     "angle": {
                       "type": "liczba"
@@ -1257,10 +1271,18 @@
                     }
                   }
                 },
+                "getDirection": {
+                  "return_value": "Zwraca liczbę całkowitą z zakresu od 0 do 359 reprezentującą kierunek, w którym zwrócony jest żółw. ",
+                  "short_description": "Zwraca bieżący kierunek, w którym zwrócony jest ten żółw. Zero stopni oznacza, że jest skierowany w górę. Kierunek zwiększa zgodnie z ruchem wskazówek zegara."
+                },
                 "getX": {
+                  "content": "Współrzędna x to odległość żółwia od lewej strony ekranu.",
                   "examples": {
                     "Am I off the screen?": {
                       "name": "Czy jestem poza ekranem?"
+                    },
+                    "To the Right": {
+                      "description": "Przesuń żółwia o 50 pikseli w prawo."
                     }
                   },
                   "short_description": "Pobiera aktualną współrzędną x żółwia w pikselach."
@@ -1286,12 +1308,15 @@
                 "moveBackward": {
                   "palette_params": {
                     "pixels": {
+                      "description": "Liczba pikseli, o którą przesunąć żółwia do tyłu od jego aktualnego kierunku. Jeśli nie jest podana, żółw przesunie się naprzód o 25 pikseli",
                       "type": "liczba"
                     }
                   },
-                  "short_description": "Przesuwa żółwia do tyłu o daną ilość pikseli od aktualnego kierunku."
+                  "short_description": "Przesuwa żółwia do tyłu o daną ilość pikseli od aktualnego kierunku.",
+                  "tips": "-   Użyj [penUp()](/docs/applab/penUp) przed wywołaniem moveBackward (), aby żółw nie rysował podczas ruchu.\n-   Domyślny rozmiar ekranu to 320 pikseli szerokości i 450 pikseli wysokości, ale możesz przesunąć żółwia poza ekran, wykraczając poza te wymiary.\n-   Istnieją trzy sposoby przesuwania żółwia w linii prostej:\n    -   Określ liczbę pikseli, aby przesunąć żółwia w kierunku, w którym jest skierowany korzystając z [moveForward(pixels)](/docs/applab/moveForward) lub moveBackward(pixels).\n    -   Określ liczbę pikseli w kierunku x i y, aby przesunąć żółwia korzystając z [move(x,y)](/docs/applab/move), niezależnie od kierunku, w którym żółw jest zwrócony.\n    -   Określ współrzędne x i y na ekranie, aby przesunąć żółwia korzystając z [moveTo(x,y)](/docs/applab/moveTo), niezależnie od kierunku, w którym zwrócony jest żółw."
                 },
                 "moveForward": {
+                  "content": "moveForward() jest najprostszym sposobem na przesunięcie żółwia w linii prostej w kierunku, w którym jest skierowany. W użyciu z turnLeft() oraz turnRight() możesz przemieszczać żółwia w dowolne miejsce lub rysować dowolne obrazy z prostych linii.",
                   "palette_params": {
                     "pixels": {
                       "type": "liczba"
@@ -1302,9 +1327,11 @@
                 "moveTo": {
                   "palette_params": {
                     "x": {
+                      "description": "Współrzędna x na ekranie, na którą przesunąć żółwia.",
                       "type": "liczba"
                     },
                     "y": {
+                      "description": "Współrzędna y na ekranie, na którą przesunąć żółwia.",
                       "type": "liczba"
                     }
                   },
@@ -1389,22 +1416,63 @@
             "ui_controls": {
               "expressions": {
                 "button": {
+                  "content": "Tworzy na ekranie przycisk wyświetlający podany _text_ i do którego odwołuje się dane _id_ na domyślnej pozycji (0,0).\n\nWiele aplikacji używa przycisków, aby pozwolić użytkownikowi zainicjować niektóre działania aplikacji. Kontroler zdarzeń musi zostać stworzony na każdy rodzaj interakcji użytkownika z przyciskiem używając [`onEvent()`(#fff176)](/docs/applab/onEvent/) oraz _id_.",
                   "examples": {
                     "Example: Simple Turtle Control 1": {
+                      "description": "Przesuń żółwia do przodu za każdym wciśnięciem przycisku.",
                       "name": "Przykład: Proste sterowanie żółwiem 1"
                     },
                     "Example: Simple Turtle Control 2": {
+                      "description": "Przesuń żółwia do przodu lub do tyłu w zależności od wciśniętego przycisku.",
                       "name": "Przykład: Proste sterowanie żółwiem 2"
+                    }
+                  },
+                  "palette_params": {
+                    "id": {
+                      "description": "Unikalny identyfikator przycisku. id służy do odwoływania się do przycisku w kontrolerach zdarzeń lub innych funkcjach modyfikujących elementy interfejsu użytkownika. Musi zaczynać się od litery, nie zawierać spacji,  i może zawierać litery, cyfry, - oraz \\_."
+                    },
+                    "text": {
+                      "description": "Tekst wyświetlany na przycisku. "
                     }
                   },
                   "short_description": "Tworzy na ekranie przycisk wyświetlający podany tekst i do którego odwołuje się przez dany id, na domyślnej pozycji (0,0)."
                 },
                 "checkbox": {
+                  "examples": {
+                    "Example: Checkbox Click Event": {
+                      "description": "Pobierz i wyświetl wartość pola wyboru."
+                    },
+                    "Example: Privacy Statement": {
+                      "name": "Przykład: Oświadczenie o ochronie prywatności"
+                    }
+                  },
                   "palette_params": {
                     "checked": {
+                      "description": "Czy pole wyboru jest początkowo zaznaczone.",
                       "type": "wartość logiczna"
+                    },
+                    "id": {
+                      "description": "Unikalny identyfikator elementu ekranu. Musi zaczynać się literą, nie zawierać spacji, może zawierać litery, cyfry, - oraz \\_. |"
                     }
-                  }
+                  },
+                  "short_description": "Tworzy na ekranie pole wyboru z początkowo określoną wartością logiczną checked i do którego odwołuje się przez dany id, na domyślnej pozycji (0,0)."
+                },
+                "deleteElement": {
+                  "examples": {
+                    "Delete on Click": {
+                      "name": "Usuń po Kliknięciu"
+                    },
+                    "Squash the ant swarm!": {
+                      "description": " Mrówki będą losowo pojawiać się na ekranie co sekundę przez minutę. Kliknij mrówkę, aby ją zgnieść i usunąć z ekranu.",
+                      "name": "Zgnieć rój mrówek!"
+                    }
+                  },
+                  "palette_params": {
+                    "id": {
+                      "description": "ID elementu interfejsu użytkownika, do którego odwołuje się ten kontroler zdarzeń. Musi zaczynać się literą, nie zawierać spacji, może zawierać litery, cyfry, - oraz \\_."
+                    }
+                  },
+                  "short_description": "Usuwa element o podanym id."
                 },
                 "dropdown": {
                   "examples": {
@@ -1414,33 +1482,84 @@
                     "Example Two Moods": {
                       "name": "Przykład: Dwa nastroje"
                     }
+                  },
+                  "palette_params": {
+                    "option1": {
+                      "description": "Tekst wyświetlany na rozwijanym menu."
+                    },
+                    "option2": {
+                      "description": "Tekst wyświetlany na rozwijanym menu."
+                    }
                   }
                 },
                 "getChecked": {
-                  "return_value": "Logiczna prawda lub fałsz."
+                  "examples": {
+                    "Example: Finding the Checked Item": {
+                      "name": "Przykład: Szukanie Zaznaczonego Elementu"
+                    }
+                  },
+                  "palette_params": {
+                    "id": {
+                      "description": " Unikalny identyfikator elementu ekranu. Musi zaczynać się literą, nie zawierać spacji, może zawierać litery, cyfry, - oraz \\_."
+                    }
+                  },
+                  "return_value": "Logiczna prawda lub fałsz.",
+                  "short_description": "Pobiera stan pola wyboru lub przycisku radiowego.",
+                  "tips": "-   Pole wyboru lub przycisk radiowy można również utworzyć w trybie projektowania."
+                },
+                "getImageURL": {
+                  "examples": {
+                    "Example: Image Swap": {
+                      "description": "Wciśnij przycisk, aby zmienić obrazek postaci z psa na pszczołę i z powrotem.",
+                      "name": "Przykład: Zamiana Obrazków"
+                    }
+                  },
+                  "palette_params": {
+                    "id": {
+                      "description": "Unikalny identyfikator elementu ekranu. Musi zaczynać się literą, nie zawierać spacji, może zawierać litery, cyfry, - oraz \\_."
+                    }
+                  },
+                  "return_value": "Zwraca ciąg znaków zawierający url obrazka dla danego id.",
+                  "short_description": "Pobiera adres URL dla danego id elementu obrazka.",
+                  "tips": "-   Zwrócony ciąg zawiera URL obrazka. Na przykład zwraca http\\:// code.org/images/logo.png jako https\\:// studio.code.org/media?u=http%3A%2F%2Fcode.org%2Fimages%2Flogo.png"
                 },
                 "getNumber": {
                   "examples": {
                     "Example: Fahrenheit to Celsius": {
                       "name": "Przykład: Stopnie Fahrenheita na Celsjusza"
                     }
-                  }
+                  },
+                  "palette_params": {
+                    "id": {
+                      "description": "Unikalny identyfikator elementu ekranu. Musi zaczynać się literą, nie zawierać spacji, może zawierać litery, cyfry, - oraz \\_."
+                    }
+                  },
+                  "return_value": "Liczba zawierająca zawartość elementu ekranu.",
+                  "short_description": "Pobiera liczbę z określonego elementu ekranu."
                 },
                 "getProperty": {
                   "palette_params": {
                     "id": {
+                      "description": "ID elementu interfejsu użytkownika, do którego odwołuje się ta funkcja. Musi zaczynać się literą, nie zawierać spacji, może zawierać litery, cyfry, - oraz \\_.",
                       "type": "Łańcuch"
                     },
                     "property": {
+                      "description": "Właściwość do pobrania.",
                       "type": "Łańcuch"
                     }
-                  }
+                  },
+                  "short_description": "Obecna wartość właściwości wybranego elementu."
                 },
                 "getText": {
                   "examples": {
                     "Example Random Thoughts": {
                       "description": " Zademonstruj czytanie, a następnie czyszczenie pola TextInput.",
                       "name": "Przykład: losowe myśli"
+                    }
+                  },
+                  "palette_params": {
+                    "id": {
+                      "description": "Unikalny identyfikator elementu ekranu. Musi zaczynać się literą, nie zawierać spacji, może zawierać litery, cyfry, - oraz \\_."
                     }
                   },
                   "return_value": "Łańcuch zawierający zawartość elementu ekranu.",
@@ -1453,8 +1572,14 @@
                       "name": "Czy jestem poza ekranem?"
                     }
                   },
+                  "palette_params": {
+                    "id": {
+                      "description": "ID elementu interfejsu użytkownika, którego znajduje pozycję x. Musi zaczynać się literą, nie zawierać spacji, może zawierać litery, cyfry, - oraz \\_."
+                    }
+                  },
                   "return_value": "Zwraca liczbę reprezentującą bieżącą współrzędną x w pikselach elementu interfejsu użytkownika w wyświetlaczu aplikacji.",
-                  "short_description": "Pobiera pozycję x elementu."
+                  "short_description": "Pobiera pozycję x elementu.",
+                  "tips": "-   Domyślny rozmiar ekranu to 320 pikseli szerokości i 450 pikseli wysokości, ale możesz przenieść element interfejsu użytkownika poza ekran, wykraczając poza te wymiary.\n-   Element interfejsu użytkownika można przesunąć poza ekran, zatem \\_getXPosition () \\_ może zwrócić liczbę ujemną, jeśli element znajduje się poza ekranem po lewej stronie, a \\_getXposition () \\_ może zwrócić liczbę większą niż 320, jeśli element jest poza ekranem po prawej stronie.\n\n<img src='https://images.code.org/7de9a1ac26ad8630ebcb92e608c3803c-image-1445616750775.jpg'>"
                 },
                 "getYPosition": {
                   "examples": {
@@ -1462,14 +1587,26 @@
                       "description": "Sprawdź, czy logo zostało wyświetlone zbyt blisko dolnej krawędzi.",
                       "name": "Czy jestem poza ekranem?"
                     }
+                  },
+                  "palette_params": {
+                    "id": {
+                      "description": "ID elementu interfejsu użytkownika, którego znajduje pozycję x. Musi zaczynać się literą, nie zawierać spacji, może zawierać litery, cyfry, - oraz \\_."
+                    }
                   }
                 },
                 "hideElement": {
                   "examples": {
                     "Blinking": {
-                      "description": " Spraw, by logo Code.org migotało."
+                      "description": " Spraw, by logo Code.org migotało.",
+                      "name": "Miganie"
                     }
                   },
+                  "palette_params": {
+                    "id": {
+                      "description": " ID elementu interfejsu użytkownika, do którego odwołuje się ten kontroler zdarzeń. Musi zaczynać się literą, nie zawierać spacji, może zawierać litery, cyfry, - oraz \\_. "
+                    }
+                  },
+                  "return_value": "Brak wartości zwracanej. Modyfikuje tylko wyświetlanie.",
                   "tips": "-   [showElement](/applab/docs/showElement) jest często używany z hideElement."
                 },
                 "image": {
@@ -1548,9 +1685,17 @@
                   }
                 },
                 "radioButton": {
+                  "examples": {
+                    "Example: Finding the Checked Item": {
+                      "name": "Przykład: Szukanie Zaznaczonego Elementu"
+                    }
+                  },
                   "palette_params": {
                     "checked": {
                       "type": "wartość logiczna"
+                    },
+                    "id": {
+                      "description": "Unikalny identyfikator elementu ekranu. Musi zaczynać się literą, nie zawierać spacji, może zawierać litery, cyfry, - oraz \\_."
                     }
                   }
                 },
@@ -1579,11 +1724,30 @@
                   "palette_params": {
                     "checked": {
                       "type": "wartość logiczna"
+                    },
+                    "id": {
+                      "description": "Unikalny identyfikator elementu ekranu. Musi zaczynać się literą, nie zawierać spacji, może zawierać litery, cyfry, - oraz \\_. |"
+                    }
+                  }
+                },
+                "setImageURL": {
+                  "examples": {
+                    "Example: Image Swap": {
+                      "description": "Wciśnij przycisk, aby zmienić obrazek postaci z psa na pszczołę i z powrotem.",
+                      "name": "Przykład: Zamiana Obrazków"
+                    }
+                  },
+                  "palette_params": {
+                    "id": {
+                      "description": "Unikalny identyfikator elementu ekranu. Musi zaczynać się literą, nie zawierać spacji, może zawierać litery, cyfry, - oraz \\_."
                     }
                   }
                 },
                 "setNumber": {
                   "palette_params": {
+                    "id": {
+                      "description": " Unikalny identyfikator elementu ekranu. Musi zaczynać się literą, nie zawierać spacji, może zawierać litery, cyfry, - oraz \\_."
+                    },
                     "number": {
                       "type": "liczba"
                     }
@@ -1593,6 +1757,9 @@
                   "palette_params": {
                     "height": {
                       "type": "liczba"
+                    },
+                    "id": {
+                      "description": "ID elementu interfejsu użytkownika, do którego odwołuje się ten kontroler zdarzeń. Musi zaczynać się literą, nie zawierać spacji, może zawierać litery, cyfry, - oraz \\_."
                     },
                     "width": {
                       "type": "liczba"
@@ -1608,6 +1775,7 @@
                 "setProperty": {
                   "palette_params": {
                     "id": {
+                      "description": "ID elementu interfejsu użytkownika, do którego odwołuje się ta funkcja. Musi zaczynać się literą, nie zawierać spacji, może zawierać litery, cyfry, - oraz \\_.",
                       "type": "Łańcuch"
                     },
                     "property": {
@@ -1625,6 +1793,9 @@
                     "height": {
                       "type": "liczba"
                     },
+                    "id": {
+                      "description": "ID elementu interfejsu użytkownika, do którego odwołuje się ten kontroler zdarzeń. Musi zaczynać się literą, nie zawierać spacji, może zawierać litery, cyfry, - oraz \\_."
+                    },
                     "width": {
                       "type": "liczba"
                     }
@@ -1635,9 +1806,24 @@
                     "Example Random Thoughts": {
                       "name": "Przykład: losowe myśli"
                     }
+                  },
+                  "palette_params": {
+                    "id": {
+                      "description": "Unikalny identyfikator elementu ekranu. Musi zaczynać się literą, nie zawierać spacji, może zawierać litery, cyfry, - oraz \\_."
+                    }
                   }
                 },
                 "showElement": {
+                  "examples": {
+                    "Blinking": {
+                      "name": "Miganie"
+                    }
+                  },
+                  "palette_params": {
+                    "id": {
+                      "description": "ID elementu interfejsu użytkownika, do którego odwołuje się ten kontroler zdarzeń. Musi zaczynać się literą, nie zawierać spacji, może zawierać litery, cyfry, - oraz \\_."
+                    }
+                  },
                   "short_description": "Pokazuje element  o podanym id."
                 },
                 "textInput": {

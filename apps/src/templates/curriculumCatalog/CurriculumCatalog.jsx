@@ -12,17 +12,22 @@ import CurriculumCatalogFilters from './CurriculumCatalogFilters';
 import CurriculumCatalogCard from '@cdo/apps/templates/curriculumCatalog/CurriculumCatalogCard';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
+import {queryParams} from '../../code-studio/utils';
 
 const CurriculumCatalog = ({
   curriculaData,
   isEnglish,
   languageNativeName,
+  isInUS,
   ...props
 }) => {
   const [filteredCurricula, setFilteredCurricula] = useState(curriculaData);
   const [assignSuccessMessage, setAssignSuccessMessage] = useState('');
   const [showAssignSuccessMessage, setShowAssignSuccessMessage] =
     useState(false);
+  const [expandedCardKey, setExpandedCardKey] = useState(null);
+
+  const isQuickViewDisplayed = queryParams()['quick_view'] === 'true';
 
   const handleAssignSuccess = assignmentData => {
     setAssignSuccessMessage(
@@ -43,6 +48,10 @@ const CurriculumCatalog = ({
   const handleCloseAssignSuccessMessage = () => {
     setShowAssignSuccessMessage(false);
     setAssignSuccessMessage('');
+  };
+
+  const handleExpandedCardChange = key => {
+    setExpandedCardKey(expandedCardKey === key ? null : key);
   };
 
   // Renders search results based on the applied filters (or shows the No matching curriculums
@@ -73,9 +82,18 @@ const CurriculumCatalog = ({
                 script_id,
                 is_standalone_unit,
                 is_translated,
+                //Expanded Card Props
+                device_compatibility,
+                description,
+                professional_learning_program,
+                video,
+                published_date,
+                self_paced_pl_course_offering_path,
+                available_resources,
               }) => (
                 <CurriculumCatalogCard
                   key={key}
+                  courseKey={key}
                   courseDisplayName={display_name}
                   courseDisplayNameWithLatestYear={
                     display_name_with_latest_year
@@ -94,6 +112,19 @@ const CurriculumCatalog = ({
                   scriptId={script_id}
                   isStandAloneUnit={is_standalone_unit}
                   onAssignSuccess={response => handleAssignSuccess(response)}
+                  quickViewDisplayed={isQuickViewDisplayed}
+                  deviceCompatibility={device_compatibility}
+                  description={description}
+                  professionalLearningProgram={professional_learning_program}
+                  video={video}
+                  publishedDate={published_date}
+                  selfPacedPlCourseOfferingPath={
+                    self_paced_pl_course_offering_path
+                  }
+                  isExpanded={expandedCardKey === key}
+                  onQuickViewClick={() => handleExpandedCardChange(key)}
+                  isInUS={isInUS}
+                  availableResources={available_resources}
                   {...props}
                 />
               )
@@ -159,6 +190,7 @@ CurriculumCatalog.propTypes = {
   curriculaData: PropTypes.arrayOf(curriculumDataShape),
   isEnglish: PropTypes.bool.isRequired,
   languageNativeName: PropTypes.string.isRequired,
+  isInUS: PropTypes.bool.isRequired,
 };
 
 export default CurriculumCatalog;

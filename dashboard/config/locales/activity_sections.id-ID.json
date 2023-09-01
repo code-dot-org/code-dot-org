@@ -22527,7 +22527,7 @@
         },
         "63df0c6e-ae3d-4724-9c1d-2ecd5bf8986a": {
           "tips": [
-            "Salah satu cara untuk mengenalkan Hour of Code jika Anda sendiri belum begitu kenal coding adalah menunjukkan salah satu [video inspiratif kami](https://hourofcode.com/us/resources#videos). Pilih video yang menurut Anda akan menginspirasi siswa dan bagikan sekarang juga. Bagi pembelajar yang masih muda, kami sarankan [Hour of Code ada di Sini](https://youtu.be/FC5FbmsH4fw).”"
+            "Salah satu cara untuk mengenalkan Hour of Code jika Anda sendiri belum begitu kenal coding adalah menunjukkan salah satu [video inspiratif kami][0]. Pilih video yang menurut Anda akan menginspirasi siswa dan bagikan sekarang juga. Bagi pembelajar yang masih muda, kami sarankan [Hour of Code ada di Sini][1].”"
           ]
         },
         "f96053ea-387e-47d5-a018-65619ec093b0": {
@@ -22540,7 +22540,7 @@
         },
         "91cc858b-9f90-4134-b890-237f457e8423": {
           "name": "Minecraft: Perjalanan Air",
-          "description": "Tantang siswa Anda untuk menyelesaikan tutorial [Minecraft: Voyage Aquatic](http://studio.code.org/s/aquatic/lessons/1/levels/1).\n\nTergantung pada usia dan kemampuan siswa, Anda dapat mempertimbangkan:\n\n-   Untuk siswa yang lebih muda, kami sarankan Anda membagi kelas menjadi beberapa pasangan dan meminta tiap kelompok untuk bekerja sama menyelesaikan tutorial menggunakan [pemrograman berpasangan](https://youtu.be/vgkahOzFH2Q).\n-   Untuk pelajar di tingkat SMP, mengerjakan tutorial secara mandiri sangat cocok bagi mereka. Terkadang, ada baiknya membiarkan siswa untuk memilih tutorialnya sendiri. Jika siswa tidak tertarik dengan Minecraft, mereka bisa mendapatkan pengalaman serupa dengan tutorial [Coding bersama Anna dan Elsa](https://studio.code.org/s/frozen/stage/1/puzzle/1) atau [Star Wars](https://code.org/starwars).\n-   Untuk pelajar yang lebih tua atau dewasa, tutorial [Minecraft: Voyage Aquatic](http://studio.code.org/s/aquatic/lessons/1/levels/1) sangat cocok bagi mereka, baik sebagai tantangan mandiri atau sebagai kegiatan pemrograman berpasangan."
+          "description": "Tantang siswa Anda untuk menyelesaikan tutorial [Minecraft: Voyage Aquatic][0].\n\nTergantung pada usia dan kemampuan siswa, Anda dapat mempertimbangkan:\n\n-   Untuk siswa yang lebih muda, kami sarankan Anda membagi kelas menjadi beberapa pasangan dan meminta tiap kelompok untuk bekerja sama menyelesaikan tutorial menggunakan [pemrograman berpasangan][1].\n-   Untuk pelajar di tingkat SMP, mengerjakan tutorial secara mandiri sangat cocok bagi mereka. Terkadang, ada baiknya membiarkan siswa untuk memilih tutorialnya sendiri. Jika siswa tidak tertarik dengan Minecraft, mereka bisa mendapatkan pengalaman serupa dengan tutorial [Coding bersama Anna dan Elsa][2] atau [Star Wars][3].\n-   Untuk pelajar yang lebih tua atau dewasa, tutorial [Minecraft: Voyage Aquatic][4] sangat cocok bagi mereka, baik sebagai tantangan mandiri atau sebagai kegiatan pemrograman berpasangan."
         },
         "900f3fd4-40aa-42f7-89fc-e5240b2db143": {
           "tips": [
@@ -22548,7 +22548,7 @@
           ]
         },
         "1be305a6-52f5-40bb-a8d5-f851a3c61a3a": {
-          "description": "Jika satu kelompok atau siswa selesai lebih awal, mereka dapat mencoba tutorial lain dengan membuka [code.org/learn](http://code.org/learn)."
+          "description": "Jika satu kelompok atau siswa selesai lebih awal, mereka dapat mencoba tutorial lain dengan membuka [code.org/learn][0]."
         },
         "29412a26-dd7b-4990-a8bb-7e6f7bfa00d6": {
           "name": "Pengarahan singkat",
@@ -22556,18 +22556,18 @@
         },
         "7e26ffea-ccaa-4969-9b40-01573fbe4303": {
           "name": "Rayakan",
-          "description": "Jelaskan bahwa Anda menghabiskan satu jam coding hari ini, karena pekan ini adalah Pekan Pendidikan Ilmu Komputer, dan jutaan siswa lain di seluruh dunia juga telah mempelajari satu Hour of Code pekan ini. Ucapkan selamat kepada siswa karena telah menjadi bagian dari gerakan ini.\n\nBerikan [sertifikat](https://studio.code.org/certificates/batch?course=bWM=) yang berisi nama mereka kepada tiap siswa."
+          "description": "Jelaskan bahwa Anda menghabiskan satu jam coding hari ini, karena pekan ini adalah Pekan Pendidikan Ilmu Komputer, dan jutaan siswa lain di seluruh dunia juga telah mempelajari satu Hour of Code pekan ini. Ucapkan selamat kepada siswa karena telah menjadi bagian dari gerakan ini.\n\nBerikan [sertifikat][0] yang berisi nama mereka kepada tiap siswa."
         },
         "de9c3d28-c38a-4d2e-af91-a72a92d31f52": {
           "name": "Langkah berikutnya",
-          "description": "Sampaikan kepada siswa bahwa jika mereka menyukai kegiatan hari ini, mereka punya banyak pilihan untuk melanjutkan kegiatan coding. Anjurkan siswa untuk membuka [code.org/learn](<>) untuk melihat daftar pilihan, atau, jika Anda merencanakan kegiatan lanjutan, beri tahu siswa tentang topik selanjutnya di kelas Anda."
+          "description": "Sampaikan kepada siswa bahwa jika mereka menyukai kegiatan hari ini, mereka punya banyak pilihan untuk melanjutkan kegiatan coding. Anjurkan siswa untuk membuka [code.org/learn][0] untuk melihat daftar pilihan, atau, jika Anda merencanakan kegiatan lanjutan, beri tahu siswa tentang topik selanjutnya di kelas Anda."
         },
         "ebf68fd6-9cfe-4fc2-93b4-e61860fc853b": {
-          "description": "Berikan [“Tiket Keluar”](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) kepada setiap siswa dan minta mereka merangkum yang telah mereka pelajari hari ini, bagaimana perasaan mereka, atau apa yang telah mereka alami. Mereka bisa menggambar, menulis, atau mengekspresikan diri senyaman hatinya. Kumpulkan “Tiket Keluar” dari tiap siswa yang keluar ruangan. Jika diinginkan, Anda dapat memposting “Tiket Keluar” di papan buletin atau di tempat pengumuman di sekolah sebagai pengingat Hour of Code Anda."
+          "description": "Berikan [“Tiket Keluar”][0] kepada setiap siswa dan minta mereka merangkum yang telah mereka pelajari hari ini, bagaimana perasaan mereka, atau apa yang telah mereka alami. Mereka bisa menggambar, menulis, atau mengekspresikan diri senyaman hatinya. Kumpulkan “Tiket Keluar” dari tiap siswa yang keluar ruangan. Jika diinginkan, Anda dapat memposting “Tiket Keluar” di papan buletin atau di tempat pengumuman di sekolah sebagai pengingat Hour of Code Anda."
         },
         "f3360f34-a0a8-4d3d-98e2-fe6176ad0e2e": {
           "name": "Setelah Satu Jam Kode",
-          "description": "Setelah Hour of Code Anda berakhir, ada banyak cara untuk tetap mengajarkan ilmu komputer di kelas K-5 Anda. Berikut beberapa diantaranya:\n\n-   **Mengajarkan kursus [Dasar-dasar Ilmu Komputer Code Studio](http://code.org/educate/k5)**. Keenam kursus ini dirancang untuk pelajar muda. Siswa mengerjakan sejumlah puzzle yang mengajari mereka cara membuat kode, dan pendidik dapat mengakses rencana pembelajaran menarik yang membantu menghidupkan proses pembelajaran. Code.org menawarkan pengembangan profesi gratis untuk kursus-kursus di atas, baik secara online atau langsung.\n\n-   **Buka [Anda bisa Mengajarkan Ilmu Komputer](https://code.org/teach)** untuk saran kursus lainnya.\n\n-   **Mengundang pakar ilmu komputer untuk berbicara perihal pekerjaannya kepada siswa-siwa Anda di dalam kelas.** Tidak mengenal ilmuwan komputer setempat? Hubungi relawan di [peta relawan](https://code.org/volunteer/local) kami."
+          "description": "Setelah Hour of Code Anda berakhir, ada banyak cara untuk tetap mengajarkan ilmu komputer di kelas K-5 Anda. Berikut beberapa diantaranya:\n\n-   **Mengajarkan kursus [Dasar-dasar Ilmu Komputer Code Studio][0]**. Keenam kursus ini dirancang untuk pelajar muda. Siswa mengerjakan sejumlah puzzle yang mengajari mereka cara membuat kode, dan pendidik dapat mengakses rencana pembelajaran menarik yang membantu menghidupkan proses pembelajaran. Code.org menawarkan pengembangan profesi gratis untuk kursus-kursus di atas, baik secara online atau langsung.\n\n-   **Buka [Anda bisa Mengajarkan Ilmu Komputer][1]** untuk saran kursus lainnya.\n\n-   **Mengundang pakar ilmu komputer untuk berbicara perihal pekerjaannya kepada siswa-siwa Anda di dalam kelas.** Tidak mengenal ilmuwan komputer setempat? Hubungi relawan di [peta relawan][2] kami."
         },
         "6b51b4f1-5b1d-4b29-af25-c48d716a2d22": {
           "description": "#### Melakukan Persiapan\n\nSambut siswa di kelas dan perkenalkan secara singkat kegiatan di hari itu.\n\n**Katakan:** _Hari ini kita akan belajar coding selama satu jam. Adakah di sini yang pernah mendengar istilah \"kode\" sebelumnya? Apa artinya?_\n\nSiswa mungkin menjawab bahwa \"kode\" adalah semacam pesan rahasia, atau ada kaitannya dengan komputer.",
@@ -22958,7 +22958,7 @@
         },
         "aced2726-6ed1-4645-9fd2-eccfe982584f": {
           "tips": [
-            "Salah satu cara untuk mengenalkan Hour of Code jika Anda sendiri belum begitu kenal coding adalah menunjukkan salah satu [video inspiratif kami](https://hourofcode.com/us/resources#videos). Pilih video yang menurut Anda akan menginspirasi siswa dan bagikan sekarang juga. Bagi pembelajar yang masih muda, kami sarankan [Semua Orang Bisa Belajar](https://youtu.be/qYZF6oIZtfc).”"
+            "Salah satu cara untuk mengenalkan Hour of Code jika Anda sendiri belum begitu kenal coding adalah menunjukkan salah satu [video inspiratif kami][0]. Pilih video yang menurut Anda akan menginspirasi siswa dan bagikan sekarang juga. Bagi pembelajar yang masih muda, kami sarankan [Semua Orang Bisa Belajar][1].”"
           ]
         },
         "a0692bbb-9e61-49d2-ac85-96bd4a922f5a": {
@@ -22966,7 +22966,7 @@
         },
         "8af57fdb-d7be-4cc2-9964-8f7eed4102f9": {
           "name": "Flappy Code",
-          "description": "Tantang siswa Anda untuk menyelesaikan tutorial [Membuat Game Flappy](https://studio.code.org/flappy/1).\n\nTergantung pada usia dan kemampuan siswa, Anda dapat mempertimbangkan:\n\n-   Untuk siswa SMP dan SMA, kami sarankan untuk memilih tutorial yang memungkinkan bermain bebas dan pembuatan aplikasi atau game. Anda dapat meminta siswa belajar mandiri atau berpasangan atau dalam kelompok kecil. Ada banyak tutorial lain di [code.org/learn](http://code.org/learn) yang memungkinkan kreasi gratis, termasuk [Playlab](https://studio.code.org/s/playlab/stage/1/puzzle/1) dan alat beta kami yang baru [AppLab](https://code.org/educate/applab).\n-   Untuk siswa yang lebih muda, kami sarankan untuk membagi kelas menjadi beberapa pasangan atau kelompok yang sangat kecil (masing-masing tiga hingga empat siswa) dan minta tiap kelompok untuk bekerja sama dalam menyelesaikan tutorial menggunakan [pemrograman berpasangan](https://youtu.be/vgkahOzFH2Q).\n-   Untuk pelajar dewasa, tutorial [Tulis program komputer pertamamu](https://studio.code.org/hoc/1) sangat cocok bagi mereka, baik sebagai tantangan mandiri atau sebagai kegiatan pemrograman berpasangan."
+          "description": "Tantang siswa Anda untuk menyelesaikan tutorial [Membuat Game Flappy][0].\n\nTergantung pada usia dan kemampuan siswa, Anda dapat mempertimbangkan:\n\n-   Untuk siswa SMP dan SMA, kami sarankan untuk memilih tutorial yang memungkinkan bermain bebas dan pembuatan aplikasi atau game. Anda dapat meminta siswa belajar mandiri atau berpasangan atau dalam kelompok kecil. Ada banyak tutorial lain di [code.org/learn][1] yang memungkinkan kreasi gratis, termasuk [Playlab][2] dan alat beta kami yang baru [AppLab][3].\n-   Untuk siswa yang lebih muda, kami sarankan untuk membagi kelas menjadi beberapa pasangan atau kelompok yang sangat kecil (masing-masing tiga hingga empat siswa) dan minta tiap kelompok untuk bekerja sama dalam menyelesaikan tutorial menggunakan [pemrograman berpasangan][4].\n-   Untuk pelajar dewasa, tutorial [Tulis program komputer pertamamu][5] sangat cocok bagi mereka, baik sebagai tantangan mandiri atau sebagai kegiatan pemrograman berpasangan."
         },
         "47fe47af-9de3-4ba5-8193-1f489bef9544": {
           "tips": [
@@ -22974,7 +22974,7 @@
           ]
         },
         "55f2f6a9-8e6b-49c2-8988-e2a09956e222": {
-          "description": "Jika satu kelompok atau seorang siswa selesai lebih awal, mereka dapat mencoba tutorial lain dengan membuka [code.org/learn](http://code.org/learn)."
+          "description": "Jika satu kelompok atau seorang siswa selesai lebih awal, mereka dapat mencoba tutorial lain dengan membuka [code.org/learn][0]."
         },
         "cd649101-5c1f-4bcb-9258-3cabf2bfccb6": {
           "name": "Pengarahan singkat",
@@ -22982,7 +22982,7 @@
         },
         "ca7d5e61-0396-4885-934c-0d70ab63b072": {
           "name": "Rayakan",
-          "description": "Jelaskan bahwa Anda menghabiskan satu jam belajar coding hari ini, karena pekan ini adalah Pekan Pendidikan Ilmu Komputer, dan jutaan siswa lain di seluruh dunia juga telah belajar satu Hour of Code pekan ini. Ucapkan selamat kepada semua siswa karena telah menjadi bagian dari gerakan yang mendunia ini.\n\nBerikan [sertifikat](http://code.org/certificates) yang berisi nama mereka kepada tiap siswa."
+          "description": "Jelaskan bahwa Anda menghabiskan satu jam belajar coding hari ini, karena pekan ini adalah Pekan Pendidikan Ilmu Komputer, dan jutaan siswa lain di seluruh dunia juga telah belajar satu Hour of Code pekan ini. Ucapkan selamat kepada semua siswa karena telah menjadi bagian dari gerakan yang mendunia ini.\n\nBerikan [sertifikat][0] yang berisi nama mereka kepada tiap siswa."
         },
         "d4bf5db5-6884-4166-ae90-3a5cd01b9695": {
           "name": "Langkah berikutnya",
@@ -22994,7 +22994,7 @@
         },
         "f7c11887-da26-4c7b-be7a-1b84d330ed30": {
           "name": "Setelah Satu Jam Kode",
-          "description": "Setelah Hour of Code Anda berakhir, ada banyak cara untuk tetap mengajarkan ilmu komputer di kelas K-5 Anda. Berikut beberapa diantaranya:\n\n-   **Mengajarkan kursus [Dasar-dasar Ilmu Komputer Code Studio](http://code.org/educate/k5)**. Keenam kursus ini dirancang untuk pelajar muda. Siswa mengerjakan sejumlah puzzle yang mengajari mereka cara membuat code, dan pendidik dapat mengakses rencana pembelajaran menarik yang membantu menghidupkan proses pembelajaran. Code.org menawarkan pengembangan profesi gratis untuk kursus-kursus di atas, baik secara online atau langsung.\n-   **Mengundang pakar ilmu komputer untuk berbicara perihal pekerjaannya kepada siswa-siswa Anda di dalam kelas.** Tidak mengenal adanya sukarelawan? Hubungi relawan di [peta relawan][2]."
+          "description": "Setelah Hour of Code Anda berakhir, ada banyak cara untuk tetap mengajarkan ilmu komputer di kelas K-5 Anda. Berikut beberapa diantaranya:\n\n-   **Mengajarkan kursus [Dasar-dasar Ilmu Komputer Code Studio][0]**. Keenam kursus ini dirancang untuk pelajar muda. Siswa mengerjakan sejumlah puzzle yang mengajari mereka cara membuat code, dan pendidik dapat mengakses rencana pembelajaran menarik yang membantu menghidupkan proses pembelajaran. Code.org menawarkan pengembangan profesi gratis untuk kursus-kursus di atas, baik secara online atau langsung.\n-   **Mengundang pakar ilmu komputer untuk berbicara perihal pekerjaannya kepada siswa-siswa Anda di dalam kelas.** Tidak mengenal adanya sukarelawan? Hubungi relawan di [peta relawan][2]."
         },
         "4fddbdf5-8e43-4536-bdaa-98b0b8c240ad": {
           "name": "Melakukan Persiapan",
@@ -23002,7 +23002,7 @@
         },
         "55cc55a9-45cb-4bbd-bf37-2de8a2abd9db": {
           "tips": [
-            "Jika ada waktu atau jika siswa Anda memerlukan informasi dasar, Anda dapat mempertimbangkan untuk menyampaikan materi [\"Mesin Penggambar\"](https://code.org/curriculum/misc/hocunplugged/Teacher) sebelum acara Hour of Code Anda. Pelajaran singkat ini mengenalkan siswa pada ide menggambar dengan bantuan komputer, yang akan menyiapkan mereka agar lebih sukses dalam [tutorial Coding bersama Anna dan Elsa](https://studio.code.org/s/frozen/stage/1/puzzle/1)."
+            "Jika ada waktu atau jika siswa Anda memerlukan informasi dasar, Anda dapat mempertimbangkan untuk menyampaikan materi [\"Mesin Penggambar\"][0] sebelum acara Hour of Code Anda. Pelajaran singkat ini mengenalkan siswa pada ide menggambar dengan bantuan komputer, yang akan menyiapkan mereka agar lebih sukses dalam [tutorial Coding bersama Anna dan Elsa][1]."
           ]
         },
         "46e7088b-b207-46ae-be95-3ceacecc3f35": {
@@ -23010,7 +23010,7 @@
         },
         "063fb28a-8520-4c66-9821-3be0f0d1ed5f": {
           "tips": [
-            "Salah satu cara untuk mengenalkan Hour of Code jika Anda sendiri belum begitu kenal coding adalah menunjukkan salah satu [video inspiratif kami](https://hourofcode.com/us/resources#videos). Pilih video yang menurut Anda akan menginspirasi siswa dan bagikan sekarang juga. Bagi pelajar SMP, kami menyarankan [Hour of Code ada di Sini](https://youtu.be/FC5FbmsH4fw).”"
+            "Salah satu cara untuk mengenalkan Hour of Code jika Anda sendiri belum begitu kenal coding adalah menunjukkan salah satu [video inspiratif kami][0]. Pilih video yang menurut Anda akan menginspirasi siswa dan bagikan sekarang juga. Bagi pelajar SMP, kami menyarankan [Hour of Code ada di Sini][1].”"
           ]
         },
         "c18f0050-ba65-4f12-8cc6-fe7f16b5806b": {
@@ -23018,7 +23018,7 @@
         },
         "e5e802d6-9ee4-4ef3-aab2-616ac241b5f8": {
           "name": "Koding dengan Anna dan Elsa",
-          "description": "Tantang siswa Anda untuk menyelesaikan tutorial [Code bersama Anna dan Elsa](https://studio.code.org/s/frozen/stage/1/puzzle/1).\n\nTergantung pada usia dan kemampuan siswa, Anda dapat mempertimbangkan:\n\n-   Untuk siswa yang lebih muda, kami sarankan Anda membagi kelas menjadi beberapa pasangan atau kelompok yang sangat kecil (masing-masing tiga sampai empat siswa) dan minta tiap kelompok untuk bekerja sama menyelesaikan tutorial menggunakan [pemrograman berpasangan](https://youtu.be/vgkahOzFH2Q). -   Siswa kelas K-5 mungkin kesulitan dengan matematika di tutorial ini (karena memerlukan pemahaman dasar tentang pengukuran sudut). Jika siswa Anda masih muda, pertimbangkan untuk memberikan materi tambahan ['Mesin Penggambar'](https://code.org/curriculum/misc/hocunplugged/Teacher) untuk mengenalkan dasar-dasarnya sebelum memulai Hour of Code Anda.\n-   Bagi siswa yang lebih tua, mengerjakan tutorial secara mandiri sangat cocok bagi mereka. Terkadang, ada baiknya membiarkan siswa untuk memilih tutorialnya sendiri. Jika siswa tidak tertarik dengan Froen, mereka bisa mendapatkan pengalaman serupa dengan tutorial [Buat Program Komputer Pertamamu](https://studio.code.org/hoc/1)\n-   Untuk siswa yang lebih tua, [Code bersama Anna dan Elsa](https://studio.code.org/s/frozen/stage/1/puzzle/1) sangat cocok, baik sebagai tantangan mandiri atau sebagai kegiatan pemrograman berpasangan."
+          "description": "Tantang siswa Anda untuk menyelesaikan tutorial [Code bersama Anna dan Elsa][0].\n\nTergantung pada usia dan kemampuan siswa, Anda dapat mempertimbangkan:\n\n-   Untuk siswa yang lebih muda, kami sarankan Anda membagi kelas menjadi beberapa pasangan atau kelompok yang sangat kecil (masing-masing tiga sampai empat siswa) dan minta tiap kelompok untuk bekerja sama menyelesaikan tutorial menggunakan [pemrograman berpasangan][1]. -   Siswa kelas K-5 mungkin kesulitan dengan matematika di tutorial ini (karena memerlukan pemahaman dasar tentang pengukuran sudut). Jika siswa Anda masih muda, pertimbangkan untuk memberikan materi tambahan ['Mesin Penggambar'][2] untuk mengenalkan dasar-dasarnya sebelum memulai Hour of Code Anda.\n-   Bagi siswa yang lebih tua, mengerjakan tutorial secara mandiri sangat cocok bagi mereka. Terkadang, ada baiknya membiarkan siswa untuk memilih tutorialnya sendiri. Jika siswa tidak tertarik dengan Froen, mereka bisa mendapatkan pengalaman serupa dengan tutorial [Buat Program Komputer Pertamamu][3]\n-   Untuk siswa yang lebih tua, [Code bersama Anna dan Elsa][4] sangat cocok, baik sebagai tantangan mandiri atau sebagai kegiatan pemrograman berpasangan."
         },
         "bdb8b54a-c21d-4bcf-a960-67ecf0468a7f": {
           "tips": [
@@ -23026,15 +23026,15 @@
           ]
         },
         "da8b52b2-8db6-440d-add3-8578161f59e2": {
-          "description": "Jika satu kelompok atau siswa selesai lebih awal, mereka dapat mencoba tutorial lain dengan membuka [code.org/learn](http://code.org/learn)."
+          "description": "Jika satu kelompok atau siswa selesai lebih awal, mereka dapat mencoba tutorial lain dengan membuka [code.org/learn][0]."
         },
         "38799019-2b81-4c28-a239-762b90e0f5e3": {
           "name": "Pengarahan singkat",
-          "description": "Berikan catatan tempel atau kartu catatan kepada tiap siswa. Lakukan kegiatan cepat [“Whip Around”](http://www.theteachertoolkit.com/index.php/tool/whip-around):\n\n-   Ajukan pertanyaan yang memiliki banyak jawaban seperti \"Bagikan kembali sesuatu yang sangat kalian sukai tentang kegiatan Hour of Code yang diselesaikan\" atau \"Bagikan keterampilan yang kalian pelajari hari ini.\"\n-   Minta siswa menuliskan tanggapan sebanyak mungkin, satu ide per catatan tempel atau kartu catatan.\n     \"Kelilinglah\" di dalam ruangan, dan panggil siswa satu per satu. Minta siswa untuk membagikan salah satu tanggapan mereka. Saat dipanggil, siswa tidak boleh mengulang jawaban; mereka harus menambahkan jawaban yang baru.\n-   Setelah menyelesaikan kegiatan, minta siswa untuk mendiskusikan ide dan tema mana yang paling banyak muncul dalam tanggapan mereka."
+          "description": "Berikan catatan tempel atau kartu catatan kepada tiap siswa. Lakukan kegiatan cepat [“Whip Around”][0]:\n\n-   Ajukan pertanyaan yang memiliki banyak jawaban seperti \"Bagikan kembali sesuatu yang sangat kalian sukai tentang kegiatan Hour of Code yang diselesaikan\" atau \"Bagikan keterampilan yang kalian pelajari hari ini.\"\n-   Minta siswa menuliskan tanggapan sebanyak mungkin, satu ide per catatan tempel atau kartu catatan.\n     \"Kelilinglah\" di dalam ruangan, dan panggil siswa satu per satu. Minta siswa untuk membagikan salah satu tanggapan mereka. Saat dipanggil, siswa tidak boleh mengulang jawaban; mereka harus menambahkan jawaban yang baru.\n-   Setelah menyelesaikan kegiatan, minta siswa untuk mendiskusikan ide dan tema mana yang paling banyak muncul dalam tanggapan mereka."
         },
         "e9751fff-a71d-4d90-b401-0ccbf3356c44": {
           "name": "Rayakan",
-          "description": "Jelaskan bahwa Anda menghabiskan satu jam belajar coding hari ini, karena pekan ini adalah Pekan Pendidikan Ilmu Komputer, dan jutaan siswa lain di seluruh dunia juga telah belajar satu Hour of Code pekan ini. Ucapkan selamat kepada semua siswa karena telah menjadi bagian dari gerakan yang mendunia ini.\n\nBerikan [sertifikat](http://code.org/certificates) yang berisi nama mereka kepada tiap siswa."
+          "description": "Jelaskan bahwa Anda menghabiskan satu jam belajar coding hari ini, karena pekan ini adalah Pekan Pendidikan Ilmu Komputer, dan jutaan siswa lain di seluruh dunia juga telah belajar satu Hour of Code pekan ini. Ucapkan selamat kepada semua siswa karena telah menjadi bagian dari gerakan yang mendunia ini.\n\nBerikan [sertifikat][0] yang berisi nama mereka kepada tiap siswa."
         },
         "3596cc47-e661-4d00-943e-ed858c4f6f5d": {
           "name": "Langkah berikutnya",
@@ -23045,7 +23045,7 @@
         },
         "3a8c30ae-50bb-4a85-99d8-b62c9f7e1bbf": {
           "name": "Setelah Satu Jam Kode",
-          "description": "Setelah Hour of Code Anda berakhir, ada banyak cara untuk tetap mengajarkan ilmu komputer di kelas K-5 Anda. Berikut beberapa diantaranya:\n\n-   **Mengajarkan kursus [Dasar-dasar Ilmu Komputer Code Studio](http://code.org/educate/k5)**. Keenam kursus ini dirancang untuk pelajar muda. Siswa mengerjakan sejumlah puzzle yang mengajari mereka cara membuat kode, dan pendidik dapat mengakses rencana pembelajaran menarik yang membantu menghidupkan proses pembelajaran. Code.org menawarkan pengembangan profesi gratis untuk kursus-kursus di atas, baik secara online atau langsung.\n-   Mencari tahu karier di bidang coding yang Anda ketahui saat ini. Cari informasi tentang merencanakan proyek penelitian karier di \\[[Sharemylesson.com](http://www.sharemylesson.com/TaxonomySearchResults.aspx?area=resources&keywords=career+research).\n-   **Mengundang pakar ilmu komputer untuk berbicara perihal pekerjaannya kepada siswa-siswa Anda di dalam kelas.** Tidak mengenal adanya sukarelawan? Hubungi relawan di [peta relawan](https://code.org/volunteer/local)."
+          "description": "Setelah Hour of Code Anda berakhir, ada banyak cara untuk tetap mengajarkan ilmu komputer di kelas K-5 Anda. Berikut beberapa diantaranya:\n\n-   **Mengajarkan kursus [Dasar-dasar Ilmu Komputer Code Studio][0]**. Keenam kursus ini dirancang untuk pelajar muda. Siswa mengerjakan sejumlah puzzle yang mengajari mereka cara membuat kode, dan pendidik dapat mengakses rencana pembelajaran menarik yang membantu menghidupkan proses pembelajaran. Code.org menawarkan pengembangan profesi gratis untuk kursus-kursus di atas, baik secara online atau langsung.\n-   Mencari tahu karier di bidang coding yang Anda ketahui saat ini. Cari informasi tentang merencanakan proyek penelitian karier di \\[[Sharemylesson.com][1].\n-   **Mengundang pakar ilmu komputer untuk berbicara perihal pekerjaannya kepada siswa-siswa Anda di dalam kelas.** Tidak mengenal adanya sukarelawan? Hubungi relawan di [peta relawan][2]."
         },
         "a2f60a17-c25f-4c4d-9f2d-384486d7a67d": {
           "name": "Melakukan Persiapan",
@@ -23053,7 +23053,7 @@
         },
         "c857d03e-91e3-4949-8ccc-79a2aec463c8": {
           "tips": [
-            "Salah satu cara untuk mengenalkan Hour of Code jika Anda sendiri belum begitu kenal coding adalah menunjukkan salah satu [video inspiratif kami](https://hourofcode.com/us/resources#videos). Pilih video yang menurut Anda akan menginspirasi siswa dan bagikan sekarang juga. Bagi pembelajar yang masih muda, kami sarankan [Semua Orang Bisa Belajar](https://youtu.be/qYZF6oIZtfc).”"
+            "Salah satu cara untuk mengenalkan Hour of Code jika Anda sendiri belum begitu kenal coding adalah menunjukkan salah satu [video inspiratif kami][0]. Pilih video yang menurut Anda akan menginspirasi siswa dan bagikan sekarang juga. Bagi pembelajar yang masih muda, kami sarankan [Semua Orang Bisa Belajar][1].”"
           ]
         },
         "8ad0974f-b2ad-4632-bfe5-8c8760cd2e45": {
@@ -23061,7 +23061,7 @@
         },
         "0e395269-9740-4229-a7ac-b18b9f4eced9": {
           "name": "Laboratorium Bermain Gumball",
-          "description": "Tantang siswa Anda untuk menyelesaikan tutorial [Gumball Play Lab](https://studio.code.org/s/gumball/lessons/1/levels/1).\n\nTergantung pada usia dan kemampuan siswa, Anda dapat mempertimbangkan:\n\n-   Untuk siswa SMP dan SMA, kami sarankan untuk memilih tutorial yang memungkinkan bermain bebas dan pembuatan aplikasi atau game. Anda dapat meminta siswa belajar mandiri atau berpasangan atau dalam kelompok kecil. Ada banyak tutorial lain di [code.org/learn](http://code.org/learn) yang memungkinkan kreasi gratis, misalnya [Membuat Game Flappy](https://studio.code.org/s/flappy) dan alat beta kami yang baru [AppLab](https://code.org/educate/applab).\n-   Untuk siswa yang lebih muda, kami sarankan untuk membagi kelas menjadi beberapa pasangan atau kelompok yang sangat kecil (masing-masing tiga hingga empat siswa) dan minta tiap kelompok untuk bekerja sama dalam menyelesaikan tutorial menggunakan [pair programming](https://youtu.be/vgkahOzFH2Q).\n-   Untuk pelajar dewasa, tutorial [Tulis program komputer pertamamu](https://studio.code.org/hoc/1) sangat cocok bagi mereka, baik sebagai tantangan mandiri atau sebagai kegiatan pemrograman berpasangan."
+          "description": "Tantang siswa Anda untuk menyelesaikan tutorial [Gumball Play Lab][0].\n\nTergantung pada usia dan kemampuan siswa, Anda dapat mempertimbangkan:\n\n-   Untuk siswa SMP dan SMA, kami sarankan untuk memilih tutorial yang memungkinkan bermain bebas dan pembuatan aplikasi atau game. Anda dapat meminta siswa belajar mandiri atau berpasangan atau dalam kelompok kecil. Ada banyak tutorial lain di [code.org/learn][1] yang memungkinkan kreasi gratis, misalnya [Membuat Game Flappy][2] dan alat beta kami yang baru [AppLab][3].\n-   Untuk siswa yang lebih muda, kami sarankan untuk membagi kelas menjadi beberapa pasangan atau kelompok yang sangat kecil (masing-masing tiga hingga empat siswa) dan minta tiap kelompok untuk bekerja sama dalam menyelesaikan tutorial menggunakan [pair programming][4].\n-   Untuk pelajar dewasa, tutorial [Tulis program komputer pertamamu][5] sangat cocok bagi mereka, baik sebagai tantangan mandiri atau sebagai kegiatan pemrograman berpasangan."
         },
         "eea63453-59c2-4c48-8d04-d6612d379584": {
           "tips": [
@@ -23069,7 +23069,7 @@
           ]
         },
         "fd77d784-72d9-4687-843d-7d1ecd17b9a1": {
-          "description": "Jika satu kelompok atau siswa selesai lebih awal, mereka dapat mencoba tutorial lain dengan membuka [code.org/learn](http://code.org/learn)."
+          "description": "Jika satu kelompok atau siswa selesai lebih awal, mereka dapat mencoba tutorial lain dengan membuka [code.org/learn][0]."
         },
         "0815f2e7-8336-48ae-8ac0-5d0af1f956d9": {
           "name": "Pengarahan singkat",
@@ -23077,7 +23077,7 @@
         },
         "3b92bb05-ac4c-4717-afce-ed3d10f54527": {
           "name": "Rayakan",
-          "description": "Jelaskan bahwa Anda menghabiskan satu jam belajar coding hari ini, karena pekan ini adalah Pekan Pendidikan Ilmu Komputer, dan jutaan siswa lain di seluruh dunia juga telah belajar satu Hour of Code pekan ini. Ucapkan selamat kepada semua siswa karena telah menjadi bagian dari gerakan yang mendunia ini.\n\nBerikan [sertifikat](http://code.org/certificates) yang berisi nama mereka kepada tiap siswa."
+          "description": "Jelaskan bahwa Anda menghabiskan satu jam belajar coding hari ini, karena pekan ini adalah Pekan Pendidikan Ilmu Komputer, dan jutaan siswa lain di seluruh dunia juga telah belajar satu Hour of Code pekan ini. Ucapkan selamat kepada semua siswa karena telah menjadi bagian dari gerakan yang mendunia ini.\n\nBerikan [sertifikat][0] yang berisi nama mereka kepada tiap siswa."
         },
         "59cd05df-cb4d-4280-8700-840826c01845": {
           "name": "Langkah berikutnya",
@@ -23089,7 +23089,7 @@
         },
         "2836d5f0-0808-4868-bc34-bbd3cf8b631f": {
           "name": "Di luar  Hour of Code",
-          "description": "Setelah Hour of Code Anda berakhir, ada banyak cara untuk tetap mengajarkan ilmu komputer di kelas K-5 Anda. Berikut beberapa diantaranya:\n\n-   **Mengajarkan kursus [Dasar-dasar Ilmu Komputer Code Studio](http://code.org/educate/k5)**. Keempat kursus ini dirancang untuk pelajar muda. Siswa mengerjakan sejumlah puzzle yang mengajari mereka cara membuat kode, dan pendidik dapat mengakses rencana pembelajaran menarik yang membantu menghidupkan proses pembelajaran. Code.org menawarkan pengembangan profesi gratis untuk kursus-kursus di atas, baik secara online atau langsung.\n-   **Mengundang pakar ilmu komputer untuk berbicara perihal pekerjaannya kepada siswa-siswa Anda di dalam kelas.** Tidak mengenal sukarelawan? Hubungi relawan di [peta relawan](https://code.org/volunteer/local)."
+          "description": "Setelah Hour of Code Anda berakhir, ada banyak cara untuk tetap mengajarkan ilmu komputer di kelas K-5 Anda. Berikut beberapa diantaranya:\n\n-   **Mengajarkan kursus [Dasar-dasar Ilmu Komputer Code Studio][0]**. Keempat kursus ini dirancang untuk pelajar muda. Siswa mengerjakan sejumlah puzzle yang mengajari mereka cara membuat kode, dan pendidik dapat mengakses rencana pembelajaran menarik yang membantu menghidupkan proses pembelajaran. Code.org menawarkan pengembangan profesi gratis untuk kursus-kursus di atas, baik secara online atau langsung.\n-   **Mengundang pakar ilmu komputer untuk berbicara perihal pekerjaannya kepada siswa-siswa Anda di dalam kelas.** Tidak mengenal sukarelawan? Hubungi relawan di [peta relawan][1]."
         },
         "c4d6d315-bb5c-47d7-bc5e-f5fce2e4ae67": {
           "name": "Melakukan Persiapan",
@@ -23210,7 +23210,7 @@
         },
         "cc1ed89e-268e-472b-9bce-4f976d8c2ea3": {
           "tips": [
-            "Salah satu cara untuk mengenalkan Hour of Code jika Anda sendiri belum begitu kenal coding adalah menunjukkan salah satu [video inspiratif kami](https://hourofcode.com/us/resources#videos). Pilih video yang menurut Anda akan menginspirasi siswa dan bagikan sekarang juga. Bagi pembelajar yang masih muda, kami sarankan [Hour of Code ada di Sini](https://youtu.be/FC5FbmsH4fw).”"
+            "Salah satu cara untuk mengenalkan Hour of Code jika Anda sendiri belum begitu kenal coding adalah menunjukkan salah satu [video inspiratif kami][0]. Pilih video yang menurut Anda akan menginspirasi siswa dan bagikan sekarang juga. Bagi pembelajar yang masih muda, kami sarankan [Hour of Code ada di Sini][1].”"
           ]
         },
         "850945f6-6352-403b-a73f-3fb613f4728a": {
@@ -23223,7 +23223,7 @@
         },
         "fc5c47f6-08fa-4702-86a3-e687a2ad5bc1": {
           "name": "Minecraft: Perjalanan Pahlawan",
-          "description": "Tantang siswa Anda untuk menyelesaikan kegiatan [Minecraft: Hero's Journey](https://studio.code.org/s/hero/lessons/1/levels/1) ini.\n\nTergantung pada usia dan kemampuan siswa, Anda dapat mempertimbangkan:\n\n-   Untuk siswa yang lebih muda, kami sarankan Anda membagi kelas menjadi beberapa pasangan dan meminta tiap kelompok untuk bekerja sama menyelesaikan tutorial menggunakan [pemrograman berpasangan](https://youtu.be/vgkahOzFH2Q).\n-   Untuk pelajar SMP, mengerjakan tutorial secara mandiri sangat cocok bagi mereka. Terkadang, ada baiknya membiarkan siswa untuk memilih tutorialnya sendiri. Jika siswa tidak tertarik dengan Minecraft, mereka bisa mendapatkan pengalaman serupa dengan tutorial [Coding bersama Anna dan Elsa](https://studio.code.org/s/frozen/stage/1/puzzle/1) atau [Star Wars](https://code.org/starwars).\n-   Untuk pelajar yang lebih tua atau dewasa, tutorial [Minecraft: Hero's Journey](https://studio.code.org/s/hero/lessons/1/levels/1) sangat cocok bagi mereka, baik sebagai tantangan mandiri atau sebagai kegiatan pemrograman berpasangan."
+          "description": "Tantang siswa Anda untuk menyelesaikan kegiatan [Minecraft: Hero's Journey][0] ini.\n\nTergantung pada usia dan kemampuan siswa, Anda dapat mempertimbangkan:\n\n-   Untuk siswa yang lebih muda, kami sarankan Anda membagi kelas menjadi beberapa pasangan dan meminta tiap kelompok untuk bekerja sama menyelesaikan tutorial menggunakan [pemrograman berpasangan][1].\n-   Untuk pelajar SMP, mengerjakan tutorial secara mandiri sangat cocok bagi mereka. Terkadang, ada baiknya membiarkan siswa untuk memilih tutorialnya sendiri. Jika siswa tidak tertarik dengan Minecraft, mereka bisa mendapatkan pengalaman serupa dengan tutorial [Coding bersama Anna dan Elsa][2] atau [Star Wars][3].\n-   Untuk pelajar yang lebih tua atau dewasa, tutorial [Minecraft: Hero's Journey][4] sangat cocok bagi mereka, baik sebagai tantangan mandiri atau sebagai kegiatan pemrograman berpasangan."
         },
         "296703c2-cad7-43bb-b3cf-4ffb525e7ad1": {
           "tips": [
@@ -23231,7 +23231,7 @@
           ]
         },
         "b518cf9c-9568-4e85-a520-0e2a81c3b330": {
-          "description": "Jika satu kelompok atau siswa selesai lebih awal, mereka dapat mencoba tutorial lain dengan membuka [code.org/learn](http://code.org/learn)."
+          "description": "Jika satu kelompok atau siswa selesai lebih awal, mereka dapat mencoba tutorial lain dengan membuka [code.org/learn][0]."
         },
         "34238f3b-6699-4e27-b77a-54bcd8d57459": {
           "progression_name": "Minecraft: Perjalanan Pahlawan"
@@ -23242,18 +23242,18 @@
         },
         "145782a9-a436-4615-9827-0f75d7e4b3a0": {
           "name": "Rayakan",
-          "description": "Jelaskan bahwa Anda menghabiskan satu jam coding hari ini, karena pekan ini adalah Pekan Pendidikan Ilmu Komputer, dan jutaan siswa lain di seluruh dunia juga telah mempelajari satu Hour of Code pekan ini. Ucapkan selamat kepada siswa karena telah menjadi bagian dari gerakan ini.\n\nBerikan [sertifikat](https://studio.code.org/certificates/batch?course=bWM=) yang berisi nama mereka kepada tiap siswa."
+          "description": "Jelaskan bahwa Anda menghabiskan satu jam coding hari ini, karena pekan ini adalah Pekan Pendidikan Ilmu Komputer, dan jutaan siswa lain di seluruh dunia juga telah mempelajari satu Hour of Code pekan ini. Ucapkan selamat kepada siswa karena telah menjadi bagian dari gerakan ini.\n\nBerikan [sertifikat][0] yang berisi nama mereka kepada tiap siswa."
         },
         "cc38f575-4db4-4ca6-ab2f-a9d8557f16cf": {
           "name": "Langkah berikutnya",
-          "description": "Sampaikan kepada siswa bahwa jika mereka menyukai kegiatan hari ini, mereka punya banyak pilihan untuk melanjutkan kegiatan coding. Anjurkan siswa untuk membuka [code.org/learn](<>) untuk melihat daftar pilihan, atau, jika Anda merencanakan kegiatan lanjutan, beri tahu siswa tentang topik selanjutnya di kelas Anda."
+          "description": "Sampaikan kepada siswa bahwa jika mereka menyukai kegiatan hari ini, mereka punya banyak pilihan untuk melanjutkan kegiatan coding. Anjurkan siswa untuk membuka [code.org/learn][0] untuk melihat daftar pilihan, atau, jika Anda merencanakan kegiatan lanjutan, beri tahu siswa tentang topik selanjutnya di kelas Anda."
         },
         "e276fe28-3302-4ba2-94cc-aaf03b3d2d06": {
-          "description": "Berikan [“Tiket Keluar”](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) kepada setiap siswa dan minta mereka merangkum yang telah mereka pelajari hari ini, bagaimana perasaan mereka, atau apa yang telah mereka alami. Mereka bisa menggambar, menulis, atau mengekspresikan diri senyaman hatinya. Kumpulkan “Tiket Keluar” dari tiap siswa yang keluar ruangan. Jika diinginkan, Anda dapat memposting “Tiket Keluar” di papan buletin atau di tempat pengumuman di sekolah sebagai pengingat Hour of Code Anda."
+          "description": "Berikan [“Tiket Keluar”][0] kepada setiap siswa dan minta mereka merangkum yang telah mereka pelajari hari ini, bagaimana perasaan mereka, atau apa yang telah mereka alami. Mereka bisa menggambar, menulis, atau mengekspresikan diri senyaman hatinya. Kumpulkan “Tiket Keluar” dari tiap siswa yang keluar ruangan. Jika diinginkan, Anda dapat memposting “Tiket Keluar” di papan buletin atau di tempat pengumuman di sekolah sebagai pengingat Hour of Code Anda."
         },
         "147a2b22-0cba-4505-81ef-770b81eee73e": {
           "name": "Setelah Satu Jam Kode",
-          "description": "Setelah Hour of Code Anda berakhir, ada banyak cara untuk tetap mengajarkan ilmu komputer di kelas K-5 Anda. Berikut beberapa diantaranya:\n\n-   **Mengajarkan kursus [Dasar-dasar Ilmu Komputer Code Studio](http://code.org/educate/k5)**. Keenam kursus ini dirancang untuk pelajar muda. Siswa mengerjakan sejumlah puzzle yang mengajari mereka cara membuat kode, dan pendidik dapat mengakses rencana pembelajaran menarik yang membantu menghidupkan proses pembelajaran. Code.org menawarkan pengembangan profesi gratis untuk kursus-kursus di atas, baik secara online atau langsung.\n\n-   **Buka [Anda bisa Mengajarkan Ilmu Komputer](https://code.org/teach)** untuk saran kursus lainnya.\n\n-   **Mengundang pakar ilmu komputer untuk berbicara perihal pekerjaannya kepada siswa-siwa Anda di dalam kelas.** Tidak mengenal ilmuwan komputer setempat? Hubungi relawan di [peta relawan](https://code.org/volunteer/local) kami."
+          "description": "Setelah Hour of Code Anda berakhir, ada banyak cara untuk tetap mengajarkan ilmu komputer di kelas K-5 Anda. Berikut beberapa diantaranya:\n\n-   **Mengajarkan kursus [Dasar-dasar Ilmu Komputer Code Studio][0]**. Keenam kursus ini dirancang untuk pelajar muda. Siswa mengerjakan sejumlah puzzle yang mengajari mereka cara membuat kode, dan pendidik dapat mengakses rencana pembelajaran menarik yang membantu menghidupkan proses pembelajaran. Code.org menawarkan pengembangan profesi gratis untuk kursus-kursus di atas, baik secara online atau langsung.\n\n-   **Buka [Anda bisa Mengajarkan Ilmu Komputer][1]** untuk saran kursus lainnya.\n\n-   **Mengundang pakar ilmu komputer untuk berbicara perihal pekerjaannya kepada siswa-siwa Anda di dalam kelas.** Tidak mengenal ilmuwan komputer setempat? Hubungi relawan di [peta relawan][2] kami."
         },
         "9475b0bd-6a58-4318-b3e5-0d77cfe5a35d": {
           "tips": [
@@ -23352,7 +23352,7 @@
         },
         "6b55015f-aebc-401b-b0c9-c40a5fd0056e": {
           "tips": [
-            "Salah satu cara untuk mengenalkan Hour of Code jika Anda sendiri belum begitu kenal coding adalah menunjukkan salah satu [video inspiratif kami](https://hourofcode.com/us/resources#videos). Pilih video yang menurut Anda akan menginspirasi siswa dan bagikan sekarang juga. Bagi pembelajar yang masih muda, kami sarankan [Hour of Code ada di Sini](https://youtu.be/FC5FbmsH4fw).”"
+            "Salah satu cara untuk mengenalkan Hour of Code jika Anda sendiri belum begitu kenal coding adalah menunjukkan salah satu [video inspiratif kami][0]. Pilih video yang menurut Anda akan menginspirasi siswa dan bagikan sekarang juga. Bagi pembelajar yang masih muda, kami sarankan [Hour of Code ada di Sini][1].”"
           ]
         },
         "e841a687-1da5-46c7-b31e-42629fe0377c": {
@@ -23365,7 +23365,7 @@
         },
         "9aba0e85-a709-43f5-8cfb-251671159b3a": {
           "name": "Labirin",
-          "description": "Tantang siswa Anda untuk menyelesaikan tutorial [Tulis program komputer pertamu](https://studio.code.org/hoc/1).\n\nTergantung pada usia dan kemampuan siswa, Anda dapat mempertimbangkan:\n\n-   Untuk siswa yang lebih muda, kami sarankan Anda membagi kelas menjadi beberapa pasangan atau kelompok yang sangat kecil (masing-masing tiga sampai empat siswa) dan meminta tiap kelompok untuk bekerja sama menyelesaikan tutorial menggunakan [pemrograman berpasangan](https://youtu.be/vgkahOzFH2Q).\n-   Untuk pelajar SMP, mengerjakan tutorial secara mandiri sangat cocok bagi mereka. Terkadang, ada baiknya membiarkan siswa untuk memilih tutorialnya sendiri. Jika siswa tidak tertarik dengan Angry Birds, mereka bisa mendapatkan pengalaman serupa dengan tutorial [Coding bersama Anna dan Elsa](https://studio.code.org/s/frozen/stage/1/puzzle/1) atau [Membuat Game Flappy](https://studio.code.org/flappy/1).\n-   Untuk pelajar yang lebih tua atau dewasa, tutorial [Tulis program komputer pertamamu](https://studio.code.org/hoc/1) sangat cocok bagi mereka, baik sebagai tantangan mandiri atau sebagai kegiatan pemrograman berpasangan."
+          "description": "Tantang siswa Anda untuk menyelesaikan tutorial [Tulis program komputer pertamu][0].\n\nTergantung pada usia dan kemampuan siswa, Anda dapat mempertimbangkan:\n\n-   Untuk siswa yang lebih muda, kami sarankan Anda membagi kelas menjadi beberapa pasangan atau kelompok yang sangat kecil (masing-masing tiga sampai empat siswa) dan meminta tiap kelompok untuk bekerja sama menyelesaikan tutorial menggunakan [pemrograman berpasangan][1].\n-   Untuk pelajar SMP, mengerjakan tutorial secara mandiri sangat cocok bagi mereka. Terkadang, ada baiknya membiarkan siswa untuk memilih tutorialnya sendiri. Jika siswa tidak tertarik dengan Angry Birds, mereka bisa mendapatkan pengalaman serupa dengan tutorial [Coding bersama Anna dan Elsa][2] atau [Membuat Game Flappy][3].\n-   Untuk pelajar yang lebih tua atau dewasa, tutorial [Tulis program komputer pertamamu][4] sangat cocok bagi mereka, baik sebagai tantangan mandiri atau sebagai kegiatan pemrograman berpasangan."
         },
         "524f2e35-6286-4585-879e-96e7286e8a6d": {
           "tips": [
@@ -23373,7 +23373,7 @@
           ]
         },
         "3f29a14c-3903-4615-8a6b-d1961b57dc7b": {
-          "description": "Jika satu kelompok atau siswa selesai lebih awal, mereka dapat mencoba tutorial lain dengan membuka [code.org/learn](http://code.org/learn)."
+          "description": "Jika satu kelompok atau siswa selesai lebih awal, mereka dapat mencoba tutorial lain dengan membuka [code.org/learn][0]."
         },
         "50db3674-3387-4932-ba7e-c9f176ebd976": {
           "name": "Pengarahan singkat",
@@ -23381,18 +23381,18 @@
         },
         "46f387e2-c275-4c57-acec-c9709e7f44fc": {
           "name": "Rayakan",
-          "description": "Jelaskan bahwa Anda menghabiskan satu jam coding hari ini, karena pekan ini adalah Pekan Pendidikan Ilmu Komputer, dan jutaan siswa lain di seluruh dunia juga telah mempelajari satu Hour of Code pekan ini. Ucapkan selamat kepada siswa karena telah menjadi bagian dari gerakan ini.\n\nBerikan [sertifikat](http://code.org/certificates) yang berisi nama mereka kepada tiap siswa."
+          "description": "Jelaskan bahwa Anda menghabiskan satu jam coding hari ini, karena pekan ini adalah Pekan Pendidikan Ilmu Komputer, dan jutaan siswa lain di seluruh dunia juga telah mempelajari satu Hour of Code pekan ini. Ucapkan selamat kepada siswa karena telah menjadi bagian dari gerakan ini.\n\nBerikan [sertifikat][0] yang berisi nama mereka kepada tiap siswa."
         },
         "692a60f1-d3a2-44d3-8c58-19461d6b5999": {
           "name": "Langkah berikutnya",
           "description": "Sampaikan kepada siswa bahwa jika mereka menyukai kegiatan hari ini, mereka punya banyak pilihan untuk melanjutkan kegiatan coding. Anjurkan siswa untuk membuka [code.org/learn] untuk melihat daftar pilihan, atau, jika Anda merencanakan kegiatan lanjutan, beri tahu siswa tentang topik selanjutnya di kelas Anda."
         },
         "c00f4730-69b0-4533-bf47-253647c6715f": {
-          "description": "Berikan [“Tiket Keluar”](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) kepada setiap siswa dan minta mereka merangkum yang telah mereka pelajari hari ini, bagaimana perasaan mereka, atau apa yang telah mereka alami. Mereka bisa menggambar, menulis, atau mengekspresikan diri senyaman hatinya. Kumpulkan “Tiket Keluar” dari tiap siswa yang keluar ruangan. Jika diinginkan, Anda dapat memposting “Tiket Keluar” di papan buletin atau di tempat pengumuman di sekolah sebagai pengingat Hour of Code Anda."
+          "description": "Berikan [“Tiket Keluar”][0] kepada setiap siswa dan minta mereka merangkum yang telah mereka pelajari hari ini, bagaimana perasaan mereka, atau apa yang telah mereka alami. Mereka bisa menggambar, menulis, atau mengekspresikan diri senyaman hatinya. Kumpulkan “Tiket Keluar” dari tiap siswa yang keluar ruangan. Jika diinginkan, Anda dapat memposting “Tiket Keluar” di papan buletin atau di tempat pengumuman di sekolah sebagai pengingat Hour of Code Anda."
         },
         "6e6e32c8-6dfd-4075-b1c7-0c96b6853b09": {
           "name": "Setelah Satu Jam Kode",
-          "description": "Setelah Hour of Code Anda berakhir, ada banyak cara untuk tetap mengajarkan ilmu komputer di kelas K-5 Anda. Berikut beberapa diantaranya:\n\n-   **Mengajarkan kursus [Dasar-dasar Ilmu Komputer Code Studio](http://code.org/educate/k5)**. Keenam kursus ini dirancang untuk pelajar muda. Siswa mengerjakan sejumlah puzzle yang mengajari mereka cara membuat code, dan pendidik dapat mengakses rencana pembelajaran menarik yang membantu menghidupkan proses pembelajaran. Code.org menawarkan pengembangan profesi gratis untuk kursus-kursus di atas, baik secara online atau langsung."
+          "description": "Setelah Hour of Code Anda berakhir, ada banyak cara untuk tetap mengajarkan ilmu komputer di kelas K-5 Anda. Berikut beberapa diantaranya:\n\n-   **Mengajarkan kursus [Dasar-dasar Ilmu Komputer Code Studio][0]**. Keenam kursus ini dirancang untuk pelajar muda. Siswa mengerjakan sejumlah puzzle yang mengajari mereka cara membuat code, dan pendidik dapat mengakses rencana pembelajaran menarik yang membantu menghidupkan proses pembelajaran. Code.org menawarkan pengembangan profesi gratis untuk kursus-kursus di atas, baik secara online atau langsung."
         },
         "5858c0fa-a7a6-44c2-afcb-bfb816b18a5b": {
           "name": "Penyesuaian untuk Guru-guru K-2",
@@ -23404,7 +23404,7 @@
         },
         "fc04ef5f-0d78-418b-9311-e12201106453": {
           "tips": [
-            "Salah satu cara untuk mengenalkan Hour of Code jika Anda sendiri belum begitu kenal coding adalah menunjukkan salah satu [video inspiratif kami](https://hourofcode.com/us/resources#videos). Pilih video yang menurut Anda akan menginspirasi siswa dan bagikan sekarang juga. Bagi pembelajar yang masih muda, kami sarankan [Semua Orang Bisa Belajar](https://youtu.be/qYZF6oIZtfc).”"
+            "Salah satu cara untuk mengenalkan Hour of Code jika Anda sendiri belum begitu kenal coding adalah menunjukkan salah satu [video inspiratif kami][0]. Pilih video yang menurut Anda akan menginspirasi siswa dan bagikan sekarang juga. Bagi pembelajar yang masih muda, kami sarankan [Semua Orang Bisa Belajar][1].”"
           ]
         },
         "ea8a3bf2-1425-482a-9f98-a5b30d6ee809": {
@@ -23412,7 +23412,7 @@
         },
         "c628ba28-35c2-4ded-a19d-74079377b309": {
           "name": "Laboratorium Bermain Ice Age",
-          "description": "Tantang siswa Anda untuk menyelesaikan tutorial [Ice Age Play Lab](https://studio.code.org/s/iceage/lessons/1/levels/1).\n\nTergantung pada usia dan kemampuan siswa, Anda dapat mempertimbangkan:\n\n-   Untuk siswa SMP dan SMA, kami sarankan untuk memilih tutorial yang memungkinkan bermain bebas dan pembuatan aplikasi atau game. Anda dapat meminta siswa belajar mandiri atau berpasangan atau dalam kelompok kecil. Ada banyak tutorial lain di [code.org/learn](http://code.org/learn) yang memungkinkan kreasi gratis, termasuk [Membuat Game Flappy](https://studio.code.org/s/flappy) dan alat beta kami yang baru [AppLab](https://code.org/educate/applab).\n-   Untuk siswa yang lebih muda, kami sarankan untuk membagi kelas menjadi beberapa pasangan atau kelompok yang sangat kecil (masing-masing tiga hingga empat siswa) dan minta tiap kelompok untuk bekerja sama dalam menyelesaikan tutorial menggunakan [pemrograman berpasangan](https://youtu.be/vgkahOzFH2Q).\n-   Untuk pelajar dewasa, tutorial [Tulis program komputer pertamamu](https://studio.code.org/hoc/1) sangat cocok bagi mereka, baik sebagai tantangan mandiri atau sebagai kegiatan pemrograman berpasangan."
+          "description": "Tantang siswa Anda untuk menyelesaikan tutorial [Ice Age Play Lab][0].\n\nTergantung pada usia dan kemampuan siswa, Anda dapat mempertimbangkan:\n\n-   Untuk siswa SMP dan SMA, kami sarankan untuk memilih tutorial yang memungkinkan bermain bebas dan pembuatan aplikasi atau game. Anda dapat meminta siswa belajar mandiri atau berpasangan atau dalam kelompok kecil. Ada banyak tutorial lain di [code.org/learn][1] yang memungkinkan kreasi gratis, termasuk [Membuat Game Flappy][2] dan alat beta kami yang baru [AppLab][3].\n-   Untuk siswa yang lebih muda, kami sarankan untuk membagi kelas menjadi beberapa pasangan atau kelompok yang sangat kecil (masing-masing tiga hingga empat siswa) dan minta tiap kelompok untuk bekerja sama dalam menyelesaikan tutorial menggunakan [pemrograman berpasangan][4].\n-   Untuk pelajar dewasa, tutorial [Tulis program komputer pertamamu][5] sangat cocok bagi mereka, baik sebagai tantangan mandiri atau sebagai kegiatan pemrograman berpasangan."
         },
         "548dc37b-f338-4a52-a77e-7380794c64f2": {
           "tips": [
@@ -23420,7 +23420,7 @@
           ]
         },
         "86d8427e-15bf-420c-b405-3d1f1c3c46c6": {
-          "description": "Jika satu kelompok atau siswa selesai lebih awal, mereka dapat mencoba tutorial lain dengan membuka [code.org/learn](http://code.org/learn)."
+          "description": "Jika satu kelompok atau siswa selesai lebih awal, mereka dapat mencoba tutorial lain dengan membuka [code.org/learn][0]."
         },
         "d8b92f56-a741-43ac-9d6f-3fdf1c452001": {
           "name": "Pengarahan singkat",
@@ -23428,7 +23428,7 @@
         },
         "3d63393a-9146-4027-8783-247e19637d25": {
           "name": "Rayakan",
-          "description": "Jelaskan bahwa Anda menghabiskan satu jam belajar coding hari ini, karena pekan ini adalah Pekan Pendidikan Ilmu Komputer, dan jutaan siswa lain di seluruh dunia juga telah belajar satu Hour of Code pekan ini. Ucapkan selamat kepada semua siswa karena telah menjadi bagian dari gerakan yang mendunia ini.\n\nBerikan [sertifikat](http://code.org/certificates) yang berisi nama mereka kepada tiap siswa."
+          "description": "Jelaskan bahwa Anda menghabiskan satu jam belajar coding hari ini, karena pekan ini adalah Pekan Pendidikan Ilmu Komputer, dan jutaan siswa lain di seluruh dunia juga telah belajar satu Hour of Code pekan ini. Ucapkan selamat kepada semua siswa karena telah menjadi bagian dari gerakan yang mendunia ini.\n\nBerikan [sertifikat][0] yang berisi nama mereka kepada tiap siswa."
         },
         "4ae122fa-da6f-4aaf-b2f8-c68fd0bb68af": {
           "name": "Langkah berikutnya",
@@ -23440,7 +23440,7 @@
         },
         "4ae8bc68-25be-4eaa-ae1e-b9bfe8623a23": {
           "name": "Setelah Satu Jam Kode",
-          "description": "Setelah Hour of Code Anda berakhir, ada banyak cara untuk tetap mengajarkan ilmu komputer di kelas K-5 Anda. Berikut beberapa diantaranya:\n\n-   **Mengajarkan kursus [Dasar-dasar Ilmu Komputer Code Studio](http://code.org/educate/k5)**. Keempat kursus ini dirancang untuk pelajar muda. Siswa mengerjakan sejumlah puzzle yang mengajari mereka cara membuat kode, dan pendidik dapat mengakses rencana pembelajaran menarik yang membantu menghidupkan proses pembelajaran. Code.org menawarkan pengembangan profesi gratis untuk kursus-kursus di atas, baik secara online atau langsung.\n-   **Mengundang pakar ilmu komputer untuk berbicara perihal pekerjaannya kepada siswa-siswa Anda di dalam kelas.** Tidak mengenal sukarelawan? Hubungi relawan di [peta relawan](https://code.org/volunteer/local)."
+          "description": "Setelah Hour of Code Anda berakhir, ada banyak cara untuk tetap mengajarkan ilmu komputer di kelas K-5 Anda. Berikut beberapa diantaranya:\n\n-   **Mengajarkan kursus [Dasar-dasar Ilmu Komputer Code Studio][0]**. Keempat kursus ini dirancang untuk pelajar muda. Siswa mengerjakan sejumlah puzzle yang mengajari mereka cara membuat kode, dan pendidik dapat mengakses rencana pembelajaran menarik yang membantu menghidupkan proses pembelajaran. Code.org menawarkan pengembangan profesi gratis untuk kursus-kursus di atas, baik secara online atau langsung.\n-   **Mengundang pakar ilmu komputer untuk berbicara perihal pekerjaannya kepada siswa-siswa Anda di dalam kelas.** Tidak mengenal sukarelawan? Hubungi relawan di [peta relawan][1]."
         },
         "88079aec-5c42-4f3f-bbb6-cba4f8866c92": {
           "name": "Melakukan Persiapan",
@@ -23448,7 +23448,7 @@
         },
         "6874de98-8778-447b-8453-0138809b2c7e": {
           "tips": [
-            "Salah satu cara untuk mengenalkan Hour of Code jika Anda sendiri belum begitu kenal coding adalah menunjukkan salah satu [video inspiratif kami](https://hourofcode.com/us/resources#videos). Pilih video yang menurut Anda akan menginspirasi siswa dan bagikan sekarang juga. Bagi pembelajar yang masih muda, kami sarankan [Semua Orang Bisa Belajar](https://youtu.be/qYZF6oIZtfc).”"
+            "Salah satu cara untuk mengenalkan Hour of Code jika Anda sendiri belum begitu kenal coding adalah menunjukkan salah satu [video inspiratif kami][0]. Pilih video yang menurut Anda akan menginspirasi siswa dan bagikan sekarang juga. Bagi pembelajar yang masih muda, kami sarankan [Semua Orang Bisa Belajar][1].”"
           ]
         },
         "82e4a494-65fb-40ac-b2c2-323044e15b77": {
@@ -23456,7 +23456,7 @@
         },
         "bd5d11f4-9c4c-4f24-bb9f-482392bd65aa": {
           "name": "Disney Infinity Play Lab",
-          "description": "Tantang siswa Anda untuk menyelesaikan tutorial [Disney Infinity Play Lab](https://studio.code.org/s/infinity/lessons/1/levels/1).\n\nTergantung pada usia dan kemampuan siswa, Anda dapat mempertimbangkan:\n\n-   Untuk siswa SMP dan SMA, kami sarankan untuk memilih tutorial yang memungkinkan bermain bebas dan pembuatan aplikasi atau game. Anda dapat meminta siswa belajar mandiri atau berpasangan atau dalam kelompok kecil. Ada banyak tutorial lain di [code.org/learn](http://code.org/learn) yang memungkinkan kreasi gratis, misalnya [Membuat Game Flappy](https://studio.code.org/s/flappy) dan alat beta kami yang baru [AppLab](https://code.org/educate/applab).\n-   Untuk siswa yang lebih muda, kami sarankan untuk membagi kelas menjadi beberapa pasangan atau kelompok yang sangat kecil (masing-masing tiga hingga empat siswa) dan minta tiap kelompok untuk bekerja sama dalam menyelesaikan tutorial menggunakan [pemrograman berpasangan](https://youtu.be/vgkahOzFH2Q).\n-   Untuk pelajar dewasa, tutorial [Tulis program komputer pertamamu](https://studio.code.org/hoc/1) sangat cocok bagi mereka, baik sebagai tantangan mandiri atau sebagai kegiatan pemrograman berpasangan."
+          "description": "Tantang siswa Anda untuk menyelesaikan tutorial [Disney Infinity Play Lab][0].\n\nTergantung pada usia dan kemampuan siswa, Anda dapat mempertimbangkan:\n\n-   Untuk siswa SMP dan SMA, kami sarankan untuk memilih tutorial yang memungkinkan bermain bebas dan pembuatan aplikasi atau game. Anda dapat meminta siswa belajar mandiri atau berpasangan atau dalam kelompok kecil. Ada banyak tutorial lain di [code.org/learn][1] yang memungkinkan kreasi gratis, misalnya [Membuat Game Flappy][2] dan alat beta kami yang baru [AppLab][3].\n-   Untuk siswa yang lebih muda, kami sarankan untuk membagi kelas menjadi beberapa pasangan atau kelompok yang sangat kecil (masing-masing tiga hingga empat siswa) dan minta tiap kelompok untuk bekerja sama dalam menyelesaikan tutorial menggunakan [pemrograman berpasangan][4].\n-   Untuk pelajar dewasa, tutorial [Tulis program komputer pertamamu][5] sangat cocok bagi mereka, baik sebagai tantangan mandiri atau sebagai kegiatan pemrograman berpasangan."
         },
         "b1ea2c15-24bb-475a-bb3f-bbc8ea1a51c0": {
           "tips": [
@@ -23464,7 +23464,7 @@
           ]
         },
         "712a8a98-3ab7-43d0-8f6f-a68e6984b009": {
-          "description": "Jika satu kelompok atau siswa selesai lebih awal, mereka dapat mencoba tutorial lain dengan membuka [code.org/learn](http://code.org/learn)."
+          "description": "Jika satu kelompok atau siswa selesai lebih awal, mereka dapat mencoba tutorial lain dengan membuka [code.org/learn][0]."
         },
         "a0530acf-3bce-4de9-b392-fe8725044086": {
           "name": "Pengarahan singkat",
@@ -23472,7 +23472,7 @@
         },
         "ceaf9d96-e806-48e1-9a95-30566999264e": {
           "name": "Rayakan",
-          "description": "Jelaskan bahwa Anda menghabiskan satu jam coding hari ini, karena pekan ini adalah Pekan Pendidikan Ilmu Komputer, dan jutaan siswa lain di seluruh dunia juga telah mempelajari satu Hour of Code pekan ini. Ucapkan selamat kepada siswa karena telah menjadi bagian dari gerakan ini.\n\nBerikan [sertifikat](http://code.org/certificates) yang berisi nama mereka kepada tiap siswa."
+          "description": "Jelaskan bahwa Anda menghabiskan satu jam coding hari ini, karena pekan ini adalah Pekan Pendidikan Ilmu Komputer, dan jutaan siswa lain di seluruh dunia juga telah mempelajari satu Hour of Code pekan ini. Ucapkan selamat kepada siswa karena telah menjadi bagian dari gerakan ini.\n\nBerikan [sertifikat][0] yang berisi nama mereka kepada tiap siswa."
         },
         "680268d8-e3db-4f80-b56d-dfe40ada4d77": {
           "name": "Langkah berikutnya",
@@ -23484,7 +23484,7 @@
         },
         "38f15942-4a08-48f7-a0c4-e04232bc9bdc": {
           "name": "Setelah Satu Jam Kode",
-          "description": "Setelah Hour of Code Anda berakhir, ada banyak cara untuk tetap mengajarkan ilmu komputer di kelas K-5 Anda. Berikut beberapa diantaranya:\n\n-   **Mengajarkan kursus [Dasar-dasar Ilmu Komputer Code Studio](http://code.org/educate/k5)**. Keempat kursus ini dirancang untuk pelajar muda. Siswa mengerjakan sejumlah puzzle yang mengajari mereka cara membuat kode, dan pendidik dapat mengakses rencana pembelajaran menarik yang membantu menghidupkan proses pembelajaran. Code.org menawarkan pengembangan profesi gratis untuk kursus-kursus di atas, baik secara online atau langsung.\n-   **Mengundang pakar ilmu komputer untuk berbicara perihal pekerjaannya kepada siswa-siswa Anda di dalam kelas.** Tidak mengenal sukarelawan? Hubungi relawan di [peta relawan](https://code.org/volunteer/local)."
+          "description": "Setelah Hour of Code Anda berakhir, ada banyak cara untuk tetap mengajarkan ilmu komputer di kelas K-5 Anda. Berikut beberapa diantaranya:\n\n-   **Mengajarkan kursus [Dasar-dasar Ilmu Komputer Code Studio][0]**. Keempat kursus ini dirancang untuk pelajar muda. Siswa mengerjakan sejumlah puzzle yang mengajari mereka cara membuat kode, dan pendidik dapat mengakses rencana pembelajaran menarik yang membantu menghidupkan proses pembelajaran. Code.org menawarkan pengembangan profesi gratis untuk kursus-kursus di atas, baik secara online atau langsung.\n-   **Mengundang pakar ilmu komputer untuk berbicara perihal pekerjaannya kepada siswa-siswa Anda di dalam kelas.** Tidak mengenal sukarelawan? Hubungi relawan di [peta relawan][1]."
         },
         "a16594a7-8312-4ac3-87c8-fd2d5d6e5bfb": {
           "name": "Pendahuluan",
@@ -23492,7 +23492,7 @@
         },
         "6415b9b2-1e23-43ee-9d0c-e65efcb0d65c": {
           "tips": [
-            "Salah satu cara untuk mengenalkan Hour of Code jika Anda sendiri belum begitu kenal coding adalah menunjukkan salah satu [video inspiratif kami](https://hourofcode.com/us/resources#videos). Pilih video yang menurut Anda akan menginspirasi siswa dan bagikan sekarang juga. Bagi pembelajar yang masih muda, kami sarankan [Hour of Code ada di Sini](https://youtu.be/FC5FbmsH4fw).”"
+            "Salah satu cara untuk mengenalkan Hour of Code jika Anda sendiri belum begitu kenal coding adalah menunjukkan salah satu [video inspiratif kami][0]. Pilih video yang menurut Anda akan menginspirasi siswa dan bagikan sekarang juga. Bagi pembelajar yang masih muda, kami sarankan [Hour of Code ada di Sini][1].”"
           ]
         },
         "3fee530c-6d5f-44da-89f7-cfae73040787": {
@@ -23505,16 +23505,16 @@
         },
         "aafa75c2-9439-415c-b42f-cac8ddfc2874": {
           "name": "Petualang Minecraft",
-          "description": "Tantang siswa Anda untuk menyelesaikan tutorial [Minecraft: Petualang](studio.code.org/s/mc/lessons/1/levels/1) ini.\n\nTergantung pada usia dan kemampuan siswa, Anda dapat mempertimbangkan:\n\n-   Untuk siswa yang lebih muda, kami sarankan Anda membagi kelas menjadi beberapa pasangan dan meminta tiap kelompok untuk bekerja sama menyelesaikan tutorial menggunakan [pemrograman berpasangan](https://youtu.be/vgkahOzFH2Q).\n-   Untuk pelajar SMP, mengerjakan tutorial secara mandiri sangat cocok bagi mereka. Terkadang, ada baiknya membiarkan siswa untuk memilih tutorialnya sendiri. Jika siswa tidak tertarik dengan Minecraft, mereka bisa mendapatkan pengalaman serupa dengan tutorial [Coding bersama Anna dan Elsa](https://studio.code.org/s/frozen/stage/1/puzzle/1) atau [Star Wars](https://code.org/starwars).\n-   Untuk pelajar yang lebih tua atau dewasa, tutorial [Minecraft](https://hourofcode.com/mc) sangat cocok bagi mereka, baik sebagai tantangan mandiri atau sebagai kegiatan pemrograman berpasangan.",
+          "description": "Tantang siswa Anda untuk menyelesaikan tutorial [Minecraft: Petualang][0] ini.\n\nTergantung pada usia dan kemampuan siswa, Anda dapat mempertimbangkan:\n\n-   Untuk siswa yang lebih muda, kami sarankan Anda membagi kelas menjadi beberapa pasangan dan meminta tiap kelompok untuk bekerja sama menyelesaikan tutorial menggunakan [pemrograman berpasangan][1].\n-   Untuk pelajar SMP, mengerjakan tutorial secara mandiri sangat cocok bagi mereka. Terkadang, ada baiknya membiarkan siswa untuk memilih tutorialnya sendiri. Jika siswa tidak tertarik dengan Minecraft, mereka bisa mendapatkan pengalaman serupa dengan tutorial [Coding bersama Anna dan Elsa][2] atau [Star Wars][3].\n-   Untuk pelajar yang lebih tua atau dewasa, tutorial [Minecraft][4] sangat cocok bagi mereka, baik sebagai tantangan mandiri atau sebagai kegiatan pemrograman berpasangan.",
           "tips": [
             "Pastikan untuk memainkan sendiri tutorial yang Anda pilih, sebelum meminta siswa untuk mencobanya. Dengan begitu, Anda bisa tahu apa yang akan terjadi dan dapat mengambil keputusan apakah akan membiarkan siswa memilih tutorialnya sendiri, atau jika Anda ingin menetapkan tutorial berdasarkan kebutuhan siswa."
           ]
         },
         "1766511d-3639-46a3-911f-acc7f8c4b922": {
-          "description": "Jika satu kelompok atau siswa selesai lebih awal, mereka dapat mencoba tutorial lain dengan membuka [code.org/learn](http://code.org/learn)."
+          "description": "Jika satu kelompok atau siswa selesai lebih awal, mereka dapat mencoba tutorial lain dengan membuka [code.org/learn][0]."
         },
         "8c990fee-4a0f-4d70-a635-ab66a8195193": {
-          "description": "Berikan [“Tiket Keluar”](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) kepada setiap siswa dan minta mereka merangkum yang telah mereka pelajari hari ini, bagaimana perasaan mereka, atau apa yang telah mereka alami. Mereka bisa menggambar, menulis, atau mengekspresikan diri senyaman hatinya. Kumpulkan “Tiket Keluar” dari tiap siswa yang keluar ruangan. Jika diinginkan, Anda dapat memposting “Tiket Keluar” di papan buletin atau di tempat pengumuman di sekolah sebagai pengingat Hour of Code Anda."
+          "description": "Berikan [“Tiket Keluar”][0] kepada setiap siswa dan minta mereka merangkum yang telah mereka pelajari hari ini, bagaimana perasaan mereka, atau apa yang telah mereka alami. Mereka bisa menggambar, menulis, atau mengekspresikan diri senyaman hatinya. Kumpulkan “Tiket Keluar” dari tiap siswa yang keluar ruangan. Jika diinginkan, Anda dapat memposting “Tiket Keluar” di papan buletin atau di tempat pengumuman di sekolah sebagai pengingat Hour of Code Anda."
         },
         "bcdecd77-2efb-44b5-9fdc-e244d1f5ccf6": {
           "name": "Pengarahan singkat",
@@ -23522,7 +23522,7 @@
         },
         "6b574c8b-2319-4244-acc8-fb8405fa5737": {
           "name": "Rayakan",
-          "description": "Jelaskan bahwa Anda menghabiskan satu jam coding hari ini, karena pekan ini adalah Pekan Pendidikan Ilmu Komputer, dan jutaan siswa lain di seluruh dunia juga telah mempelajari satu Hour of Code pekan ini. Ucapkan selamat kepada siswa karena telah menjadi bagian dari gerakan ini.\n\nBerikan [sertifikat](https://studio.code.org/certificates/batch?course=bWM=) yang berisi nama mereka kepada tiap siswa."
+          "description": "Jelaskan bahwa Anda menghabiskan satu jam coding hari ini, karena pekan ini adalah Pekan Pendidikan Ilmu Komputer, dan jutaan siswa lain di seluruh dunia juga telah mempelajari satu Hour of Code pekan ini. Ucapkan selamat kepada siswa karena telah menjadi bagian dari gerakan ini.\n\nBerikan [sertifikat][0] yang berisi nama mereka kepada tiap siswa."
         },
         "02dfa607-4f9e-404c-bdae-f9f423fa526c": {
           "name": "Langkah berikutnya",
@@ -23530,7 +23530,7 @@
         },
         "5bc8aefa-7bb0-4f22-a555-321738755b8c": {
           "name": "Setelah Satu Jam Kode",
-          "description": "Setelah Hour of Code Anda berakhir, ada banyak cara untuk tetap mengajarkan ilmu komputer di kelas K-5 Anda. Berikut beberapa diantaranya:\n\n-   **Mengajarkan kursus [Dasar-dasar Ilmu Komputer Code Studio](http://code.org/educate/k5)**. Keempat kursus ini dirancang untuk pelajar muda. Siswa mengerjakan sejumlah puzzle yang mengajari mereka cara membuat code, dan pendidik dapat mengakses rencana pembelajaran menarik yang membantu menghidupkan proses pembelajaran. Code.org menawarkan pengembangan profesi gratis untuk kursus-kursus di atas, baik secara online atau langsung.\n\n-   **Buka [Anda bisa Mengajarkan Ilmu Komputer](https://code.org/teach)** untuk saran kursus lainnya.\n\n-   **Mengundang pakar ilmu komputer untuk berbicara perihal pekerjaannya kepada siswa-siwa Anda di dalam kelas.** Tidak mengenal ilmuwan komputer setempat? Hubungi relawan di [peta relawan](https://code.org/volunteer/local) kami."
+          "description": "Setelah Hour of Code Anda berakhir, ada banyak cara untuk tetap mengajarkan ilmu komputer di kelas K-5 Anda. Berikut beberapa diantaranya:\n\n-   **Mengajarkan kursus [Dasar-dasar Ilmu Komputer Code Studio][0]**. Keempat kursus ini dirancang untuk pelajar muda. Siswa mengerjakan sejumlah puzzle yang mengajari mereka cara membuat code, dan pendidik dapat mengakses rencana pembelajaran menarik yang membantu menghidupkan proses pembelajaran. Code.org menawarkan pengembangan profesi gratis untuk kursus-kursus di atas, baik secara online atau langsung.\n\n-   **Buka [Anda bisa Mengajarkan Ilmu Komputer][1]** untuk saran kursus lainnya.\n\n-   **Mengundang pakar ilmu komputer untuk berbicara perihal pekerjaannya kepada siswa-siwa Anda di dalam kelas.** Tidak mengenal ilmuwan komputer setempat? Hubungi relawan di [peta relawan][2] kami."
         },
         "563d9088-3ce6-48c1-aa79-6f673e089247": {
           "name": "Pendahuluan",
@@ -23538,7 +23538,7 @@
         },
         "9f1107d0-cde6-4f78-911c-5018ea9264e0": {
           "tips": [
-            "Salah satu cara untuk mengenalkan Hour of Code jika Anda sendiri belum begitu kenal coding adalah menunjukkan salah satu [video inspiratif kami](https://hourofcode.com/us/resources#videos). Pilih video yang menurut Anda akan menginspirasi siswa dan bagikan sekarang juga. Bagi pembelajar yang masih muda, kami sarankan [Hour of Code ada di Sini](https://youtu.be/FC5FbmsH4fw).”"
+            "Salah satu cara untuk mengenalkan Hour of Code jika Anda sendiri belum begitu kenal coding adalah menunjukkan salah satu [video inspiratif kami][0]. Pilih video yang menurut Anda akan menginspirasi siswa dan bagikan sekarang juga. Bagi pembelajar yang masih muda, kami sarankan [Hour of Code ada di Sini][1].”"
           ]
         },
         "ed8509fa-59b4-43a4-bd4a-05a5018387c2": {
@@ -23551,7 +23551,7 @@
         },
         "75d779c4-24f7-40be-bf92-b0c094c16d11": {
           "name": "Desainer Hour of Code Minecraft",
-          "description": "Tantang siswa Anda untuk menyelesaikan kegiatan [Minecraft: Desainer](http://studio.code.org/s/minecraft/lessons/1/levels/1) ini.\n\nTergantung pada usia dan kemampuan siswa, Anda dapat mempertimbangkan:\n\n-   Untuk siswa yang lebih muda, kami sarankan Anda membagi kelas menjadi beberapa pasangan dan meminta tiap kelompok untuk bekerja sama menyelesaikan tutorial menggunakan [pemrograman berpasangan](https://youtu.be/vgkahOzFH2Q).\n-   Untuk siswa SMP, mengerjakan tutorial secara mandiri sangat cocok bagi mereka. Terkadang, ada baiknya membiarkan siswa untuk memilih tutorialnya sendiri. Jika siswa tidak tertarik dengan Minecraft, mereka bisa mendapatkan pengalaman serupa dengan tutorial [Coding bersama Anna dan Elsa](https://studio.code.org/s/frozen/stage/1/puzzle/1) atau [Star Wars](https://code.org/starwars).\n-   Untuk pelajar yang lebih tua atau dewasa, tutorial [Minecraft: Desainer](http://studio.code.org/s/minecraft/lessons/1/levels/1) sangat cocok bagi mereka, baik sebagai tantangan mandiri atau sebagai kegiatan pemrograman berpasangan."
+          "description": "Tantang siswa Anda untuk menyelesaikan kegiatan [Minecraft: Desainer][0] ini.\n\nTergantung pada usia dan kemampuan siswa, Anda dapat mempertimbangkan:\n\n-   Untuk siswa yang lebih muda, kami sarankan Anda membagi kelas menjadi beberapa pasangan dan meminta tiap kelompok untuk bekerja sama menyelesaikan tutorial menggunakan [pemrograman berpasangan][1].\n-   Untuk siswa SMP, mengerjakan tutorial secara mandiri sangat cocok bagi mereka. Terkadang, ada baiknya membiarkan siswa untuk memilih tutorialnya sendiri. Jika siswa tidak tertarik dengan Minecraft, mereka bisa mendapatkan pengalaman serupa dengan tutorial [Coding bersama Anna dan Elsa][2] atau [Star Wars][3].\n-   Untuk pelajar yang lebih tua atau dewasa, tutorial [Minecraft: Desainer][4] sangat cocok bagi mereka, baik sebagai tantangan mandiri atau sebagai kegiatan pemrograman berpasangan."
         },
         "8d4ecee7-5f04-4f80-9673-c2aec0c5ab9d": {
           "tips": [
@@ -23559,7 +23559,7 @@
           ]
         },
         "307ffdf6-e274-484b-a10f-329ddfe568dc": {
-          "description": "Jika satu kelompok atau siswa selesai lebih awal, mereka dapat mencoba tutorial lain dengan membuka [code.org/learn](http://code.org/learn)."
+          "description": "Jika satu kelompok atau siswa selesai lebih awal, mereka dapat mencoba tutorial lain dengan membuka [code.org/learn][0]."
         },
         "70935a98-82e9-4553-94f7-90a4e615dd34": {
           "name": "Pengarahan singkat",
@@ -23567,18 +23567,18 @@
         },
         "5f00e31d-70fa-4bb2-9bef-223793082f5c": {
           "name": "Rayakan",
-          "description": "Jelaskan bahwa Anda menghabiskan satu jam coding hari ini, karena pekan ini adalah Pekan Pendidikan Ilmu Komputer, dan jutaan siswa lain di seluruh dunia juga telah mempelajari satu Hour of Code pekan ini. Ucapkan selamat kepada siswa karena telah menjadi bagian dari gerakan ini.\n\nBerikan [sertifikat](https://studio.code.org/certificates/batch?course=bWM=) yang berisi nama mereka kepada tiap siswa."
+          "description": "Jelaskan bahwa Anda menghabiskan satu jam coding hari ini, karena pekan ini adalah Pekan Pendidikan Ilmu Komputer, dan jutaan siswa lain di seluruh dunia juga telah mempelajari satu Hour of Code pekan ini. Ucapkan selamat kepada siswa karena telah menjadi bagian dari gerakan ini.\n\nBerikan [sertifikat][0] yang berisi nama mereka kepada tiap siswa."
         },
         "20b7009c-3a45-4211-a9ad-c65f56099200": {
           "name": "Langkah berikutnya",
-          "description": "Sampaikan kepada siswa bahwa jika mereka menyukai kegiatan hari ini, mereka punya banyak pilihan untuk melanjutkan kegiatan coding. Anjurkan siswa untuk membuka [code.org/learn](<>) untuk melihat daftar pilihan, atau, jika Anda merencanakan kegiatan lanjutan, beri tahu siswa tentang topik selanjutnya di kelas Anda."
+          "description": "Sampaikan kepada siswa bahwa jika mereka menyukai kegiatan hari ini, mereka punya banyak pilihan untuk melanjutkan kegiatan coding. Anjurkan siswa untuk membuka [code.org/learn][0] untuk melihat daftar pilihan, atau, jika Anda merencanakan kegiatan lanjutan, beri tahu siswa tentang topik selanjutnya di kelas Anda."
         },
         "85fc4f24-eb97-4ff5-813f-4af3e5497034": {
-          "description": "Berikan [“Tiket Keluar”](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) kepada setiap siswa dan minta mereka merangkum yang telah mereka pelajari hari ini, bagaimana perasaan mereka, atau apa yang telah mereka alami. Mereka bisa menggambar, menulis, atau mengekspresikan diri senyaman hatinya. Kumpulkan “Tiket Keluar” dari tiap siswa yang keluar ruangan. Jika diinginkan, Anda dapat memposting “Tiket Keluar” di papan buletin atau di tempat pengumuman di sekolah sebagai pengingat Hour of Code Anda."
+          "description": "Berikan [“Tiket Keluar”][0] kepada setiap siswa dan minta mereka merangkum yang telah mereka pelajari hari ini, bagaimana perasaan mereka, atau apa yang telah mereka alami. Mereka bisa menggambar, menulis, atau mengekspresikan diri senyaman hatinya. Kumpulkan “Tiket Keluar” dari tiap siswa yang keluar ruangan. Jika diinginkan, Anda dapat memposting “Tiket Keluar” di papan buletin atau di tempat pengumuman di sekolah sebagai pengingat Hour of Code Anda."
         },
         "7f24d7ca-8a9e-417c-ac8e-18ca3ab48ac1": {
           "name": "Setelah Satu Jam Kode",
-          "description": "Setelah Hour of Code Anda berakhir, ada banyak cara untuk tetap mengajarkan ilmu komputer di kelas K-5 Anda. Berikut beberapa diantaranya:\n\n-   **Mengajarkan kursus [Dasar-dasar Ilmu Komputer Code Studio](http://code.org/educate/k5)**. Keenam kursus ini dirancang untuk pelajar muda. Siswa mengerjakan sejumlah puzzle yang mengajari mereka cara membuat kode, dan pendidik dapat mengakses rencana pembelajaran menarik yang membantu menghidupkan proses pembelajaran. Code.org menawarkan pengembangan profesi gratis untuk kursus-kursus di atas, baik secara online atau langsung.\n\n-   **Buka [Anda bisa Mengajarkan Ilmu Komputer](https://code.org/teach)** untuk saran kursus lainnya.\n\n-   **Mengundang pakar ilmu komputer untuk berbicara perihal pekerjaannya kepada siswa-siwa Anda di dalam kelas.** Tidak mengenal ilmuwan komputer setempat? Hubungi relawan di [peta relawan](https://code.org/volunteer/local) kami."
+          "description": "Setelah Hour of Code Anda berakhir, ada banyak cara untuk tetap mengajarkan ilmu komputer di kelas K-5 Anda. Berikut beberapa diantaranya:\n\n-   **Mengajarkan kursus [Dasar-dasar Ilmu Komputer Code Studio][0]**. Keenam kursus ini dirancang untuk pelajar muda. Siswa mengerjakan sejumlah puzzle yang mengajari mereka cara membuat kode, dan pendidik dapat mengakses rencana pembelajaran menarik yang membantu menghidupkan proses pembelajaran. Code.org menawarkan pengembangan profesi gratis untuk kursus-kursus di atas, baik secara online atau langsung.\n\n-   **Buka [Anda bisa Mengajarkan Ilmu Komputer][1]** untuk saran kursus lainnya.\n\n-   **Mengundang pakar ilmu komputer untuk berbicara perihal pekerjaannya kepada siswa-siwa Anda di dalam kelas.** Tidak mengenal ilmuwan komputer setempat? Hubungi relawan di [peta relawan][2] kami."
         },
         "54b95e4d-58b7-4551-9782-7ce134f4e457": {
           "name": "Ciptakan Keseruan!",
@@ -23846,7 +23846,7 @@
         },
         "6fa68bdd-8f9b-4d69-b54e-28141ee6d732": {
           "tips": [
-            "Salah satu cara untuk mengenalkan Hour of Code jika Anda sendiri belum begitu kenal coding adalah menunjukkan salah satu [video inspiratif](https://hourofcode.com/us/resources#videos) kami. Pilih video yang menurut Anda akan menginspirasi siswa dan bagikan sekarang juga. Bagi pelajar yang masih muda, kami menyarankan [Hour of Code ada di Sini](https://youtu.be/FC5FbmsH4fw)."
+            "Salah satu cara untuk mengenalkan Hour of Code jika Anda sendiri belum begitu kenal coding adalah menunjukkan salah satu [video inspiratif][0] kami. Pilih video yang menurut Anda akan menginspirasi siswa dan bagikan sekarang juga. Bagi pelajar yang masih muda, kami menyarankan [Hour of Code ada di Sini][1]."
           ]
         },
         "7f1244d9-811b-410c-96b2-9f7086959c6b": {
@@ -23854,7 +23854,7 @@
         },
         "a69a3310-4b81-4e04-8313-51044489351a": {
           "name": "Star Wars: Dirikan sebuah galaksi dengan Code",
-          "description": "Tantang siswa Anda untuk menyelesaikan tutorial [Star Wars: Membangun Galaksi dengan Code](https://studio.code.org/s/starwars/lessons/1/levels/1).\n\nTergantung pada usia dan kemampuan siswa, Anda dapat mempertimbangkan:\n\n-   Untuk siswa yang lebih muda, kami sarankan Anda membagi kelas menjadi beberapa pasangan dan meminta tiap kelompok untuk bekerja sama menyelesaikan tutorial menggunakan [pemrograman berpasangan](https://youtu.be/vgkahOzFH2Q).\n-   Untuk pelajar yang lebih tua, mengerjakan tutorial secara mandiri sangat cocok bagi mereka. Terkadang, ada baiknya membiarkan siswa untuk memilih tutorialnya sendiri. Jika siswa tidak tertarik dengan Star Wars, mereka bisa mendapatkan pengalaman serupa dengan tutorial [Tulis Program Komputer Pertamamu](https://studio.code.org/hoc/1).\n-   Untuk pelajar dewasa, [Star Wars: Membangun Galaksi dengan Code](https://studio.code.org/s/starwars/lessons/1/levels/1) sangat cocok bagi mereka, baik sebagai tantangan mandiri atau sebagai kegiatan pemrograman berpasangan."
+          "description": "Tantang siswa Anda untuk menyelesaikan tutorial [Star Wars: Membangun Galaksi dengan Code][0].\n\nTergantung pada usia dan kemampuan siswa, Anda dapat mempertimbangkan:\n\n-   Untuk siswa yang lebih muda, kami sarankan Anda membagi kelas menjadi beberapa pasangan dan meminta tiap kelompok untuk bekerja sama menyelesaikan tutorial menggunakan [pemrograman berpasangan][1].\n-   Untuk pelajar yang lebih tua, mengerjakan tutorial secara mandiri sangat cocok bagi mereka. Terkadang, ada baiknya membiarkan siswa untuk memilih tutorialnya sendiri. Jika siswa tidak tertarik dengan Star Wars, mereka bisa mendapatkan pengalaman serupa dengan tutorial [Tulis Program Komputer Pertamamu][2].\n-   Untuk pelajar dewasa, [Star Wars: Membangun Galaksi dengan Code][3] sangat cocok bagi mereka, baik sebagai tantangan mandiri atau sebagai kegiatan pemrograman berpasangan."
         },
         "b17f8e8a-6b46-4f46-a4fc-894cf561bb9d": {
           "tips": [
@@ -23862,15 +23862,15 @@
           ]
         },
         "eb72d828-788d-4090-9e4f-71423c081948": {
-          "description": "Di akhir tutorial, siswa berkesempatan untuk membuat game Star Wars. Jika siswa selesai lebih awal, anjurkan mereka untuk mencoba game satu sama lain dan kemudian membuat game mereka sendiri lebih menarik atau menantang.\n\nAnda juga dapat membiarkan satu grup atau siswa mencoba tutorial lain dengan mengunjungi [code.org/learn](http://code.org/learn)."
+          "description": "Di akhir tutorial, siswa berkesempatan untuk membuat game Star Wars. Jika siswa selesai lebih awal, anjurkan mereka untuk mencoba game satu sama lain dan kemudian membuat game mereka sendiri lebih menarik atau menantang.\n\nAnda juga dapat membiarkan satu grup atau siswa mencoba tutorial lain dengan mengunjungi [code.org/learn][0]."
         },
         "bec776b1-a8cd-4e18-a1bc-be30f2942863": {
           "name": "Pengarahan singkat",
-          "description": "Berikan catatan tempel atau kartu catatan kepada tiap siswa. Lakukan kegiatan cepat [“Whip Around”](http://www.theteachertoolkit.com/index.php/tool/whip-around):\n\n-   Ajukan pertanyaan yang memiliki banyak jawaban seperti \"Bagikan kembali sesuatu yang sangat kalian sukai tentang kegiatan Hour of Code yang diselesaikan\" atau \"Bagikan keterampilan yang kalian pelajari hari ini.\"\n-   Minta siswa menuliskan tanggapan sebanyak mungkin, satu ide per catatan tempel atau kartu catatan.\n     \"Kelilinglah\" di dalam ruangan, dan panggil siswa satu per satu. Minta siswa untuk membagikan salah satu tanggapan mereka. Saat dipanggil, siswa tidak boleh mengulang jawaban; mereka harus menambahkan jawaban yang baru.\n-   Setelah menyelesaikan kegiatan, minta siswa untuk mendiskusikan ide dan tema mana yang paling banyak muncul dalam tanggapan mereka."
+          "description": "Berikan catatan tempel atau kartu catatan kepada tiap siswa. Lakukan kegiatan cepat [“Whip Around”][0]:\n\n-   Ajukan pertanyaan yang memiliki banyak jawaban seperti \"Bagikan kembali sesuatu yang sangat kalian sukai tentang kegiatan Hour of Code yang diselesaikan\" atau \"Bagikan keterampilan yang kalian pelajari hari ini.\"\n-   Minta siswa menuliskan tanggapan sebanyak mungkin, satu ide per catatan tempel atau kartu catatan.\n     \"Kelilinglah\" di dalam ruangan, dan panggil siswa satu per satu. Minta siswa untuk membagikan salah satu tanggapan mereka. Saat dipanggil, siswa tidak boleh mengulang jawaban; mereka harus menambahkan jawaban yang baru.\n-   Setelah menyelesaikan kegiatan, minta siswa untuk mendiskusikan ide dan tema mana yang paling banyak muncul dalam tanggapan mereka."
         },
         "4cb35c62-404e-42b9-9eaf-09ec2f485a2b": {
           "name": "Rayakan",
-          "description": "Jelaskan bahwa Anda menghabiskan satu jam belajar coding hari ini, karena pekan ini adalah Pekan Pendidikan Ilmu Komputer, dan jutaan siswa lain di seluruh dunia juga telah belajar satu Hour of Code pekan ini. Ucapkan selamat kepada semua siswa karena telah menjadi bagian dari gerakan yang mendunia ini.\n\nBerikan [sertifikat](http://code.org/certificates) yang berisi nama mereka kepada tiap siswa."
+          "description": "Jelaskan bahwa Anda menghabiskan satu jam belajar coding hari ini, karena pekan ini adalah Pekan Pendidikan Ilmu Komputer, dan jutaan siswa lain di seluruh dunia juga telah belajar satu Hour of Code pekan ini. Ucapkan selamat kepada semua siswa karena telah menjadi bagian dari gerakan yang mendunia ini.\n\nBerikan [sertifikat][0] yang berisi nama mereka kepada tiap siswa."
         },
         "80ff32c9-0373-4125-a65e-bef5f0e21cba": {
           "name": "Langkah berikutnya",
@@ -23878,7 +23878,7 @@
         },
         "57e403d7-a8be-47fc-bb97-1a068e2469ed": {
           "name": "Setelah Satu Jam Kode",
-          "description": "Setelah Hour of Code Anda berakhir, ada banyak cara untuk tetap mengajarkan ilmu komputer di kelas K-5 Anda. Berikut beberapa diantaranya:\n\n-   **Mengajarkan kursus [Dasar-dasar Ilmu Komputer Code Studio](http://code.org/educate/k5)**. Keenam kursus ini dirancang untuk pelajar muda. Siswa mengerjakan sejumlah puzzle yang mengajari mereka cara membuat kode, dan pendidik dapat mengakses rencana pembelajaran menarik yang membantu menghidupkan proses pembelajaran. Code.org menawarkan pengembangan profesi gratis untuk kursus-kursus di atas, baik secara online atau langsung.\n-   Mencari tahu karier di bidang coding yang Anda ketahui saat ini. Cari informasi tentang merencanakan proyek penelitian karier di \\[[Sharemylesson.com](http://www.sharemylesson.com/TaxonomySearchResults.aspx?area=resources&keywords=career+research).\n-   **Mengundang pakar ilmu komputer untuk berbicara perihal pekerjaannya kepada siswa-siswa Anda di dalam kelas.** Tidak mengenal adanya sukarelawan? Hubungi relawan di [peta relawan](https://code.org/volunteer/local)."
+          "description": "Setelah Hour of Code Anda berakhir, ada banyak cara untuk tetap mengajarkan ilmu komputer di kelas K-5 Anda. Berikut beberapa diantaranya:\n\n-   **Mengajarkan kursus [Dasar-dasar Ilmu Komputer Code Studio][0]**. Keenam kursus ini dirancang untuk pelajar muda. Siswa mengerjakan sejumlah puzzle yang mengajari mereka cara membuat kode, dan pendidik dapat mengakses rencana pembelajaran menarik yang membantu menghidupkan proses pembelajaran. Code.org menawarkan pengembangan profesi gratis untuk kursus-kursus di atas, baik secara online atau langsung.\n-   Mencari tahu karier di bidang coding yang Anda ketahui saat ini. Cari informasi tentang merencanakan proyek penelitian karier di \\[[Sharemylesson.com][1].\n-   **Mengundang pakar ilmu komputer untuk berbicara perihal pekerjaannya kepada siswa-siswa Anda di dalam kelas.** Tidak mengenal adanya sukarelawan? Hubungi relawan di [peta relawan][2]."
         },
         "d0f5c55b-b19c-418c-8dc6-f87a80e08f45": {
           "description": "Mintalah siswa untuk menambahkan catatan tempel “Whip Around” mereka atau kartu catatan ke peta pikiran \"Ilmu Komputer\" Anda saat mereka keluar dari ruangan. Cobalah memuat papan dengan berbagai gagasan hebat tentang apakah CS itu dan mengapa itu penting."
@@ -23889,14 +23889,14 @@
         },
         "88f6ccc1-0efa-4c60-985c-971a235d5645": {
           "tips": [
-            "Salah satu cara untuk mengenalkan Hour of Code jika Anda sendiri belum begitu kenal coding adalah menunjukkan salah satu [video inspiratif](https://hourofcode.com/us/resources#videos) kami. Pilih video yang menurut Anda akan menginspirasi siswa dan bagikan sekarang juga. Bagi pelajar yang masih muda, kami menyarankan [Hour of Code ada di Sini](https://youtu.be/FC5FbmsH4fw)."
+            "Salah satu cara untuk mengenalkan Hour of Code jika Anda sendiri belum begitu kenal coding adalah menunjukkan salah satu [video inspiratif][0] kami. Pilih video yang menurut Anda akan menginspirasi siswa dan bagikan sekarang juga. Bagi pelajar yang masih muda, kami menyarankan [Hour of Code ada di Sini][1]."
           ]
         },
         "dbeab27b-4231-4281-be73-ae2aaa3d94b2": {
           "description": "Jelaskan bahwa dalam ilmu komputer, “kode” berarti kumpulan perintah yang dapat dipahami oleh komputer. Beri tahu siswa bahwa hari ini, mereka akan berlatih \"coding\", \"pemrograman\", dan \"debugging\".\n\nJelaskan:\n\n **Coding** berarti menulis kode, atau menulis perintah untuk komputer.\n\n-   **Pemrograman**, sama artinya dengan menulis kode atau perintah. Hari ini, kalian akan membuat program dengan blok di komputer (jika menggunakan tutorial online) atau dengan pena dan kertas (jika kegiatannya tanpa komputer).\n-   **Debugging** berarti memeriksa kesalahan pada kode dan mencoba memperbaiki kesalahan.\n\nMinta siswa untuk menyebutkan beberapa pekerjaan yang pernah mereka dengar yang berhubungan dengan coding. Siswa mungkin menyebutkan hal-hal seperti \"programmer\", \"ahli komputer\", \"pengembang perangkat lunak,\" atau \"insinyur\". Tuliskan tanggapan siswa di papan “Ilmu Komputer” Anda, buatlah mind map (peta konsep) dari informasi yang disampaikan oleh siswa Anda.\n\n**Katakan.** _Kalian benar! Tidak ada jawaban yang benar atau salah di sini ... hampir semua pekerjaan di masa kini membutuhkan pengetahuan tentang kode. Meskipun ada banyak karier yang membutuhkan pengetahuan tentang coding, belajar coding adalah sesuatu yang bisa dilakukan oleh siapapun. Dan kita akan melakukannya hari ini. Yang akan kita lakukan hari ini mungkin tidak tampak seperti pekerjaan-pekerjaan tadi, tetapi semua yang kalian pelajari hari ini dapat menghasilkan pembuatan Angry Birds atau Twitter berikutnya._"
         },
         "0ac387c0-d67a-4177-aacf-837ce03c55aa": {
-          "description": "Tantang siswa Anda untuk menyelesaikan tutorial [Star Wars: Membangun Galaksi dengan Code](https://studio.code.org/s/starwarsblocks/lessons/1/levels/1).\n\nTergantung pada usia dan kemampuan siswa, Anda dapat mempertimbangkan:\n\n-   Untuk siswa yang lebih muda, kami sarankan Anda membagi kelas menjadi beberapa pasangan dan meminta tiap kelompok untuk bekerja sama menyelesaikan tutorial menggunakan [pemrograman berpasangan](https://youtu.be/vgkahOzFH2Q).\n-   Untuk pelajar yang lebih tua, mengerjakan tutorial secara mandiri sangat cocok bagi mereka. Terkadang, ada baiknya membiarkan siswa untuk memilih tutorialnya sendiri. Jika siswa tidak tertarik dengan Star Wars, mereka bisa mendapatkan pengalaman serupa dengan tutorial [Tulis Program Komputer Pertamamu](https://studio.code.org/hoc/1).\n-   Untuk pelajar dewasa, [Star Wars: Membangun Galaksi dengan Code](https://studio.code.org/s/starwarsblocks/lessons/1/levels/1) sangat cocok bagi mereka, baik sebagai tantangan mandiri atau sebagai kegiatan pemrograman berpasangan."
+          "description": "Tantang siswa Anda untuk menyelesaikan tutorial [Star Wars: Membangun Galaksi dengan Code][0].\n\nTergantung pada usia dan kemampuan siswa, Anda dapat mempertimbangkan:\n\n-   Untuk siswa yang lebih muda, kami sarankan Anda membagi kelas menjadi beberapa pasangan dan meminta tiap kelompok untuk bekerja sama menyelesaikan tutorial menggunakan [pemrograman berpasangan][1].\n-   Untuk pelajar yang lebih tua, mengerjakan tutorial secara mandiri sangat cocok bagi mereka. Terkadang, ada baiknya membiarkan siswa untuk memilih tutorialnya sendiri. Jika siswa tidak tertarik dengan Star Wars, mereka bisa mendapatkan pengalaman serupa dengan tutorial [Tulis Program Komputer Pertamamu][2].\n-   Untuk pelajar dewasa, [Star Wars: Membangun Galaksi dengan Code][3] sangat cocok bagi mereka, baik sebagai tantangan mandiri atau sebagai kegiatan pemrograman berpasangan."
         },
         "88879c41-12f5-4d2e-86e6-93925b83d7d0": {
           "tips": [
@@ -23904,15 +23904,15 @@
           ]
         },
         "719affd9-c1a0-4b0c-8bc3-22060893f5e0": {
-          "description": "Di akhir tutorial, siswa berkesempatan untuk membuat game Star Wars. Jika siswa selesai lebih awal, anjurkan mereka untuk mencoba game satu sama lain dan kemudian membuat game mereka sendiri lebih menarik atau menantang.\n\nAnda juga dapat membiarkan satu grup atau siswa mencoba tutorial lain dengan mengunjungi [code.org/learn](http://code.org/learn)."
+          "description": "Di akhir tutorial, siswa berkesempatan untuk membuat game Star Wars. Jika siswa selesai lebih awal, anjurkan mereka untuk mencoba game satu sama lain dan kemudian membuat game mereka sendiri lebih menarik atau menantang.\n\nAnda juga dapat membiarkan satu grup atau siswa mencoba tutorial lain dengan mengunjungi [code.org/learn][0]."
         },
         "afb5ecc7-af66-492d-96bb-2412754005e0": {
           "name": "Pengarahan singkat",
-          "description": "Berikan catatan tempel atau kartu catatan kepada tiap siswa. Lakukan kegiatan cepat [“Whip Around”](http://www.theteachertoolkit.com/index.php/tool/whip-around):\n\n-   Ajukan pertanyaan yang memiliki banyak jawaban seperti \"Bagikan kembali sesuatu yang sangat kalian sukai tentang kegiatan Hour of Code yang diselesaikan\" atau \"Bagikan keterampilan yang kalian pelajari hari ini.\"\n-   Minta siswa menuliskan tanggapan sebanyak mungkin, satu ide per catatan tempel atau kartu catatan.\n     \"Kelilinglah\" di dalam ruangan, dan panggil siswa satu per satu. Minta siswa untuk membagikan salah satu tanggapan mereka. Saat dipanggil, siswa tidak boleh mengulang jawaban; mereka harus menambahkan jawaban yang baru.\n-   Setelah menyelesaikan kegiatan, minta siswa untuk mendiskusikan ide dan tema mana yang paling banyak muncul dalam tanggapan mereka."
+          "description": "Berikan catatan tempel atau kartu catatan kepada tiap siswa. Lakukan kegiatan cepat [“Whip Around”][0]:\n\n-   Ajukan pertanyaan yang memiliki banyak jawaban seperti \"Bagikan kembali sesuatu yang sangat kalian sukai tentang kegiatan Hour of Code yang diselesaikan\" atau \"Bagikan keterampilan yang kalian pelajari hari ini.\"\n-   Minta siswa menuliskan tanggapan sebanyak mungkin, satu ide per catatan tempel atau kartu catatan.\n     \"Kelilinglah\" di dalam ruangan, dan panggil siswa satu per satu. Minta siswa untuk membagikan salah satu tanggapan mereka. Saat dipanggil, siswa tidak boleh mengulang jawaban; mereka harus menambahkan jawaban yang baru.\n-   Setelah menyelesaikan kegiatan, minta siswa untuk mendiskusikan ide dan tema mana yang paling banyak muncul dalam tanggapan mereka."
         },
         "16a6a4db-d853-478e-9945-3f0d17865e80": {
           "name": "Rayakan",
-          "description": "Jelaskan bahwa Anda menghabiskan satu jam belajar coding hari ini, karena pekan ini adalah Pekan Pendidikan Ilmu Komputer, dan jutaan siswa lain di seluruh dunia juga telah belajar satu Hour of Code pekan ini. Ucapkan selamat kepada semua siswa karena telah menjadi bagian dari gerakan yang mendunia ini.\n\nBerikan [sertifikat](http://code.org/certificates) yang berisi nama mereka kepada tiap siswa."
+          "description": "Jelaskan bahwa Anda menghabiskan satu jam belajar coding hari ini, karena pekan ini adalah Pekan Pendidikan Ilmu Komputer, dan jutaan siswa lain di seluruh dunia juga telah belajar satu Hour of Code pekan ini. Ucapkan selamat kepada semua siswa karena telah menjadi bagian dari gerakan yang mendunia ini.\n\nBerikan [sertifikat][0] yang berisi nama mereka kepada tiap siswa."
         },
         "450db873-f55e-4f30-bbb9-5dfde5bf47e4": {
           "name": "Langkah berikutnya",
@@ -23920,7 +23920,7 @@
         },
         "5ec42aed-0b79-49f8-bd64-0716e60498a4": {
           "name": "Setelah Satu Jam Kode",
-          "description": "Setelah Hour of Code Anda berakhir, ada banyak cara untuk tetap mengajarkan ilmu komputer di kelas K-5 Anda. Berikut beberapa diantaranya:\n\n-   **Mengajarkan kursus [Dasar-dasar Ilmu Komputer Code Studio](http://code.org/educate/k5)**. Keenam kursus ini dirancang untuk pelajar muda. Siswa mengerjakan sejumlah puzzle yang mengajari mereka cara membuat kode, dan pendidik dapat mengakses rencana pembelajaran menarik yang membantu menghidupkan proses pembelajaran. Code.org menawarkan pengembangan profesi gratis untuk kursus-kursus di atas, baik secara online atau langsung.\n-   Mencari tahu karier di bidang coding yang Anda ketahui saat ini. Cari informasi tentang merencanakan proyek penelitian karier di \\[[Sharemylesson.com](http://www.sharemylesson.com/TaxonomySearchResults.aspx?area=resources&keywords=career+research).\n-   **Mengundang pakar ilmu komputer untuk berbicara perihal pekerjaannya kepada siswa-siswa Anda di dalam kelas.** Tidak mengenal adanya sukarelawan? Hubungi relawan di [peta relawan](https://code.org/volunteer/local)."
+          "description": "Setelah Hour of Code Anda berakhir, ada banyak cara untuk tetap mengajarkan ilmu komputer di kelas K-5 Anda. Berikut beberapa diantaranya:\n\n-   **Mengajarkan kursus [Dasar-dasar Ilmu Komputer Code Studio][0]**. Keenam kursus ini dirancang untuk pelajar muda. Siswa mengerjakan sejumlah puzzle yang mengajari mereka cara membuat kode, dan pendidik dapat mengakses rencana pembelajaran menarik yang membantu menghidupkan proses pembelajaran. Code.org menawarkan pengembangan profesi gratis untuk kursus-kursus di atas, baik secara online atau langsung.\n-   Mencari tahu karier di bidang coding yang Anda ketahui saat ini. Cari informasi tentang merencanakan proyek penelitian karier di \\[[Sharemylesson.com][1].\n-   **Mengundang pakar ilmu komputer untuk berbicara perihal pekerjaannya kepada siswa-siswa Anda di dalam kelas.** Tidak mengenal adanya sukarelawan? Hubungi relawan di [peta relawan][2]."
         },
         "b0fff664-80cc-4318-b031-edf88ad1aebc": {
           "description": "Mintalah siswa untuk menambahkan catatan tempel “Whip Around” mereka atau kartu catatan ke peta pikiran \"Ilmu Komputer\" Anda saat mereka keluar dari ruangan. Cobalah memuat papan dengan berbagai gagasan hebat tentang apakah CS itu dan mengapa itu penting."
@@ -24034,7 +24034,7 @@
         },
         "bacf1db7-dc91-41b8-ad71-9fb655e18dfa": {
           "tips": [
-            "-   Bergerak dengan tenang di dalam lab\n-   Jangan mengunyah gula-gula atau permen karet\n-   Bersihkan tangan kalian\n-   Duduk dengan teman kalian di satu komputer\n-   Pastikan \"driver\" pertama dapat menjangkau mouse\n-   Saat bingung, jangan memukul atau menggoyangkan komputer atau monitor\n-   Ikuti [Aturan 20/20/20](http://www.anthro.com/blog/2013/10/how-to-prevent-eye-strain-with-the-20-20-20-rule#.WOU39BLyu35).\n-   Cara menghadapi [Wiggles](https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll) setiap 20-30 menit (memerlukan login gratis di GoNoodle).\n-   Tanyakan pada teman sebelum bertanya pada guru\n-   Kecilkan volume agar semua orang dapat mendengar temannya\n-   Gunakan jurnal kalian untuk melacak perasaan dan solusi"
+            "-   Bergerak dengan tenang di dalam lab\n-   Jangan mengunyah gula-gula atau permen karet\n-   Bersihkan tangan kalian\n-   Duduk dengan teman kalian di satu komputer\n-   Pastikan \"driver\" pertama dapat menjangkau mouse\n-   Saat bingung, jangan memukul atau menggoyangkan komputer atau monitor\n-   Ikuti [Aturan 20/20/20][0].\n-   Cara menghadapi [Wiggles][1] setiap 20-30 menit (memerlukan login gratis di GoNoodle).\n-   Tanyakan pada teman sebelum bertanya pada guru\n-   Kecilkan volume agar semua orang dapat mendengar temannya\n-   Gunakan jurnal kalian untuk melacak perasaan dan solusi"
           ]
         },
         "aa328958-bd87-4dbb-8585-cb33f905051f": {
@@ -24057,7 +24057,7 @@
           ]
         },
         "66f2f042-aa67-41db-a756-4ab6e5623f77": {
-          "description": "Tantang siswa Anda untuk menyelesaikan tutorial [Jigsaw](http://studio.code.org/s/jigsaw/lessons/1/levels/1).\n\n-   Semangati murid untuk memulai dengan pertanyaan/tantangan dengan bertanya kepada teman\n-   Pertanyaan yang tak terjawab dapat dilontarkan ke kelompok siswa terdekat, yang barangkali sudah tahu solusinya.\n-   Minta siswa untuk menjelaskan masalah yang mereka lihat. Apa yang harusnya dilakukan? Apa yang dilakukannya? Apa yang Anda pahami dari hal tersebut?\n-   Ingatkan siswa yang bingung bahwa kebingungan adalah hal yang akan ditemui dalam proses belajar, dan bahwa kegigihan akan berbuah manis.\n-   Jika soswa masih mengalami kebuntuan setelah melakukan semua hal di atas, ajukan pertanyaan yang menggiring siswa untuk menemukan sendiri kesalahannya."
+          "description": "Tantang siswa Anda untuk menyelesaikan tutorial [Jigsaw][0].\n\n-   Semangati murid untuk memulai dengan pertanyaan/tantangan dengan bertanya kepada teman\n-   Pertanyaan yang tak terjawab dapat dilontarkan ke kelompok siswa terdekat, yang barangkali sudah tahu solusinya.\n-   Minta siswa untuk menjelaskan masalah yang mereka lihat. Apa yang harusnya dilakukan? Apa yang dilakukannya? Apa yang Anda pahami dari hal tersebut?\n-   Ingatkan siswa yang bingung bahwa kebingungan adalah hal yang akan ditemui dalam proses belajar, dan bahwa kegigihan akan berbuah manis.\n-   Jika soswa masih mengalami kebuntuan setelah melakukan semua hal di atas, ajukan pertanyaan yang menggiring siswa untuk menemukan sendiri kesalahannya."
         },
         "11068ad0-f20b-4daf-94cd-7b4549b76f3a": {
           "progression_name": "Tingkat"
@@ -24067,10 +24067,10 @@
           "description": "Minta siswa untuk menulis atau menggambarkan apa yang telah mereka pelajari, atau bagaimana perasaan mereka selesai menyelesaikan puzzle.\n\n**Prompt:**\n\n-   Bisakah Anda menggambarkan urutan persiapan diri untuk masuk ke lab komputer?\n-   Gambarlah \"Perintah” dan \"Larangan” di lab komputer\n-   Gambarlah dan labeli nama bagian komputer yang Anda gunakan ketika mengklik dan menarik/drag selama mengerjakan puzzle. (tombol mouse, layar sentuh, trackpad)"
         },
         "8f47b370-5569-4a34-b105-c765a39c8460": {
-          "description": "Berikan [“Tiket Keluar”](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) kepada tiap siswa dan minta mereka merangkum pelajaran yang telah dipelajari hari ini, kesan yang mereka rasakan, atau apa yang mereka alami. Siswa dapat menggambar, menulis, atau mengekspresikan diri senyaman hatinya. Kumpulkan “Tiket Keluar” dari tiap siswa yang keluar ruangan. Jika diinginkan, Anda dapat memposting “Tiket Keluar” di papan buletin atau di tempat yang mencolok di sekolah sebagai pengingat Hour of Code Anda."
+          "description": "Berikan [“Tiket Keluar”][0] kepada tiap siswa dan minta mereka merangkum pelajaran yang telah dipelajari hari ini, kesan yang mereka rasakan, atau apa yang mereka alami. Siswa dapat menggambar, menulis, atau mengekspresikan diri senyaman hatinya. Kumpulkan “Tiket Keluar” dari tiap siswa yang keluar ruangan. Jika diinginkan, Anda dapat memposting “Tiket Keluar” di papan buletin atau di tempat yang mencolok di sekolah sebagai pengingat Hour of Code Anda."
         },
         "6ddc599f-da51-4adc-9dcc-f13b8b53e760": {
-          "description": "#### Di Luar Hour of Code\n\nSetelah Hour of Code Anda berakhir, ada banyak cara untuk tetap mengajarkan ilmu komputer di kelas K-5 Anda. Berikut beberapa diantaranya:\n\n-   Mengajarkan kursus [Code Studio Computer Science Fundamentals](http://code.org/educate/k5). Keenam kursus ini dirancang untuk pelajar muda. Murid mengerjakan sendiri serangkaian puzzle yang mengajari mereka cara membuat kode, dan pendidik dapat mengakses rencana pembelajaran menarik yang membantu menghidupkan proses pembelajaran. Code.org menawarkan pengembangan profesional gratis untuk kursus-kursus di atas, baik secara online atau pribadi.\n\n-   Mengundang pakar ilmu komputer untuk berbicara perihal pekerjaannya kepada siswa-siwa Anda di dalam kelas. Tidak mengenal ilmuwan komputer setempat? Hubungi relawan di [peta relawan](https://code.org/volunteer/local) kami"
+          "description": "#### Di Luar Hour of Code\n\nSetelah Hour of Code Anda berakhir, ada banyak cara untuk tetap mengajarkan ilmu komputer di kelas K-5 Anda. Berikut beberapa diantaranya:\n\n-   Mengajarkan kursus [Code Studio Computer Science Fundamentals][0]. Keenam kursus ini dirancang untuk pelajar muda. Murid mengerjakan sendiri serangkaian puzzle yang mengajari mereka cara membuat kode, dan pendidik dapat mengakses rencana pembelajaran menarik yang membantu menghidupkan proses pembelajaran. Code.org menawarkan pengembangan profesional gratis untuk kursus-kursus di atas, baik secara online atau pribadi.\n\n-   Mengundang pakar ilmu komputer untuk berbicara perihal pekerjaannya kepada siswa-siwa Anda di dalam kelas. Tidak mengenal ilmuwan komputer setempat? Hubungi relawan di [peta relawan][1] kami"
         },
         "b16d189d-d990-44c4-be49-8f81ac81a96e": {
           "description": "#### Mempersiapkan Diri \n\nSambut murid di kelas dan perkenalkan aktivitas kelas hari itu.",

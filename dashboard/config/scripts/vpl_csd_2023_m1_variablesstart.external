@@ -1,0 +1,16 @@
+name 'vpl-csd-2023-m1-variablesstart'
+editor_experiment ''
+display_name 'Introduction to Debugging'
+
+title 'Debugging Session'
+markdown <<MARKDOWN
+# Unit 3: Interactive Animations and Games
+
+## Overview
+
+##### The next few levels will be a quick recap of the Unit 3: Interactive Animations and Games content that was covered during the Summer Workshop. In the synchronous portion of the workshop, you **may** engage with a Model Lesson for U3L9: Sprite Properties.
+
+## Role of the Teacher
+
+##### As you work through the following activities, consider your role as the teacher. As lead learner, the teacher's role is to model and encourage effective learning strategies. Part of this is helping students find, develop, and use resources to support their learning. As you move through the following activities, think about where your students might struggle and how you might connect them with resources to solve their problems and find success.
+MARKDOWN

@@ -1,5 +1,6 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 41,
   "created_at": "2022-09-21T13:10:23.000Z",
   "level_num": "custom",
@@ -172,7 +173,7 @@
     },
     "edit_code": true,
     "embed": "true",
-    "long_instructions": "# Test Your Board\r\n\r\nThis level is just a quick test to make sure your board is working. To run this test, do the following:\r\n\r\n1. Plug your board into your computer with a USB cable\r\n2. Click \"Run\"\r\n3. Wait a few seconds for either a Success or Error screen to pop up\r\n4. If your test was successful, move on to the next level. If not, try some of the troubleshooting steps\r\n\r\n## Troubleshooting\r\n\r\nThere are a number of things that could prevent your test from passing.\r\n\r\n1. Try refreshing the page and running the test again (you should refresh the page for each of the following ideas as well)\r\n2. Try connecting your board to a different USB port\r\n3. Try a different USB cable. Some USB cables can only be used for charging, so make sure your cable supports data transfer!\r\n4. Try a different board\r\n5. Go to [studio.code.org/maker/setup](/maker/setup) to run a more detailed test",
+    "long_instructions": "# Test Your Board\r\n\r\nThis level is just a quick test to make sure your board is working. To run this test, do the following:\r\n\r\n1. Plug your board into your computer with a USB cable\r\n2. Click \"Run\"\r\n3. Wait a few seconds for either a Success or Error screen to pop up\r\n4. If your test was successful, move on to the next level. If not, try some of the troubleshooting steps\r\n\r\n## Troubleshooting\r\n\r\nThere are a number of things that could prevent your test from passing.\r\n\r\n1. Open the Help and Tips tab, then click Maker Setup to open the setup page and connect your device to the browser.\r\n2. Try refreshing the page and running the test again (you should refresh the page for each of the following ideas as well)\r\n3. Try connecting your board to a different USB port\r\n4. Try a different USB cable. Some USB cables can only be used for charging, so make sure your cable supports data transfer!\r\n5. Try a different board",
     "instructions_important": "false",
     "start_blocks": "if (\"board\" in window) {\r\n  setScreen(\"success\");\r\n  led.blink(500);\r\n} else {\r\n  setScreen(\"error\");\r\n}",
     "is_k1": "false",
@@ -206,7 +207,7 @@
     "beginner_mode": "false",
     "start_html": "<div id=\"designModeViz\" class=\"appModern withCrosshair\" data-radium=\"true\" style=\"display: none; width: 320px; height: 450px;\"><div class=\"screen\" tabindex=\"1\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;\"><label style=\"margin: 0px; padding: 2px; line-height: 1; font-size: 14px; overflow: hidden; word-wrap: break-word; color: rgb(51, 51, 51); max-width: 320px; width: 10px; height: 135px; position: absolute; left: 160px; top: 195px; background-color: rgb(212, 212, 212);\" id=\"label2\"></label><label style=\"margin: 0px; padding: 2px; line-height: 1; font-size: 26px; overflow: hidden; word-wrap: break-word; color: rgb(51, 51, 51); max-width: 320px; width: 290px; height: 83px; position: absolute; left: 15px; top: 15px; text-align: center;\" id=\"instructions\">Plug in your Circuit Playground and click \"Run\"</label><img src=\"//curriculum.code.org/images/circuitplayground/cp_board.png\" data-canonical-image-url=\"//curriculum.code.org/images/circuitplayground/cp_board.png\" id=\"board_img\" style=\"height: 115px; width: 115px; position: absolute; left: 108px; top: 315px; margin: 0px;\"><img data-canonical-image-url=\"icon://fa-usb\" id=\"image2\" style=\"height: 45px; width: 45px; position: absolute; left: 140px; top: 240px; margin: 0px;\"><img data-canonical-image-url=\"icon://fa-desktop\" id=\"image3\" style=\"height: 100px; width: 100px; position: absolute; left: 115px; top: 120px; margin: 0px;\" data-icon-color=\"#00adbc\"></div><div class=\"screen\" tabindex=\"1\" id=\"success\" style=\"display: none; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;\"><label style=\"margin: 0px; padding: 2px; line-height: 1; font-size: 40px; overflow: hidden; word-wrap: break-word; color: rgb(51, 51, 51); max-width: 320px; width: 320px; height: 45px; position: absolute; left: 0px; top: 15px; text-align: center;\" id=\"label3\">Success!</label><img src=\"//curriculum.code.org/images/circuitplayground/cp_board.png\" data-canonical-image-url=\"//curriculum.code.org/images/circuitplayground/cp_board.png\" id=\"image4\" style=\"height: 210.986px; width: 210px; position: absolute; left: 55px; top: 135px; margin: 0px;\"></div><div class=\"screen\" tabindex=\"1\" id=\"error\" style=\"display: none; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0;\"><label style=\"margin: 0px; padding: 2px; line-height: 1; font-size: 40px; overflow: hidden; word-wrap: break-word; color: rgb(51, 51, 51); max-width: 320px; width: 320px; height: 85px; position: absolute; left: 0px; top: 60px; text-align: center;\" id=\"label4\">Board Not Detected!</label><label style=\"margin: 0px; padding: 2px; line-height: 1; font-size: 14px; overflow: hidden; word-wrap: break-word; color: rgb(51, 51, 51); max-width: 320px; width: 125px; height: 19px; position: absolute; left: 35px; top: 190px;\" id=\"label5\">Try the following:</label><label style=\"margin: 0px; padding: 2px; line-height: 1; font-size: 14px; overflow: hidden; word-wrap: break-word; color: rgb(51, 51, 51); max-width: 320px; width: 222px; height: 19px; position: absolute; left: 50px; top: 215px;\" id=\"label6\">Refresh this page and try again</label><label style=\"margin: 0px; padding: 2px; line-height: 1; font-size: 14px; overflow: hidden; word-wrap: break-word; color: rgb(51, 51, 51); max-width: 320px; width: 249px; height: 19px; position: absolute; left: 50px; top: 235px;\" id=\"label7\">Plug the board into a different USB</label><label style=\"margin: 0px; padding: 2px; line-height: 1; font-size: 14px; overflow: hidden; word-wrap: break-word; color: rgb(51, 51, 51); max-width: 320px; width: 240px; height: 19px; position: absolute; left: 50px; top: 255px;\" id=\"label8\">Visit studio.code.org/maker/setup</label></div></div>",
     "fail_on_lint_errors": "false",
-    "makerlab_enabled": "true",
+    "makerlab_enabled": "circuitPlayground",
     "disable_procedure_autopopulate": "false",
     "top_level_procedure_autopopulate": "false",
     "hide_share_and_remix": "false",
@@ -220,11 +221,16 @@
     "libraries_enabled": "false",
     "validation_enabled": "false",
     "ai_enabled": "false",
-    "preload_asset_list": null
+    "reference_links": [
+      "/maker/setup"
+    ],
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ]
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-21T13:10:23.807+00:00\",\"changed\":[\"cloned from \\\"CSDU6 Circuit Playground Test_2222\\\"\"],\"cloned_from\":\"CSDU6 Circuit Playground Test_2222\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-21T13:10:23.807+00:00\",\"changed\":[\"cloned from \\\"CSDU6 Circuit Playground Test_2222\\\"\"],\"cloned_from\":\"CSDU6 Circuit Playground Test_2222\"},{\"changed_at\":\"2023-08-14 16:10:25 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-08-16 17:00:34 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-08-21 22:54:21 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

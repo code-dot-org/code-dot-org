@@ -5,7 +5,7 @@
   "is_featured": false,
   "assignable": true,
   "curriculum_type": "Standalone Unit",
-  "marketing_initiative": null,
+  "marketing_initiative": "CSD",
   "grade_levels": "6,7,8,9,10,11,12",
   "header": "teacher_led",
   "image": "https://images.code.org/354488da87cbb925dcf2a2a40c29b598-AIML.png",
@@ -13,8 +13,8 @@
   "school_subject": null,
   "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"not_recommended\",\"mobile\":\"incompatible\",\"no_device\":\"incompatible\"}",
   "description": "Explore how computers learn from data to make decisions, then develop projects around real-world data and design an app to solve a personally relevant problem.",
-  "professional_learning_program": "code.org/apply",
-  "video": null,
-  "published_date": null,
+  "professional_learning_program": "https://code.org/apply",
+  "video": "https://www.youtube-nocookie.com/embed/bGJ05vdI3xA/?autoplay=1&enablejsapi=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=1&v=bGJ05vdI3xA&wmode=transparent",
+  "published_date": "2023-07-10 04:00:00 UTC",
   "self_paced_pl_course_offering_id": 460
 }

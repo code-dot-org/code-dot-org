@@ -1588,6 +1588,10 @@ it:
             corso e le risorse per gli insegnanti. \n\n**Tempo suggerito:** 1 ora"
           name: piattaforma-di-autoapprendimento-csa
           title: Navigare nel sito Code.org per gli Insegnanti di CSA Pilota
+        csa-software-engineering:
+          lessons:
+            lesson-9:
+              name: Configurazione
         csa-u6-dev:
           lesson_groups:
             lessonGroup-2:
@@ -2070,14 +2074,15 @@ it:
             più ampia ricerca della risoluzione dei problemi. Ti eserciterai a utilizzare
             un processo di risoluzione dei problemi per affrontare una serie di problemi,
             sfide e scenari del mondo reale. Successivamente, imparerai come i computer
-            inseriscono, emettono, archiviano ed elaborano i dati per aiutare gli
-            esseri umani a risolvere i problemi. L'unità si conclude con un progetto
-            in cui si progetta un'applicazione che aiuta a risolvere un problema a
-            scelta. \n\n**Guida all'organizzazione del corso per l'Unità 1**\n\n-
-            \  Il Capitolo 1 dell'Unità 1 deve essere completato prima di qualsiasi
-            altra unità di \"Alla scoperta dell'informatica\"\n-   Sono previste lezioni
-            alternative per alcune lezioni dell'Unità 1, a seconda del contesto della
-            classe\n-   Puoi visualizzare la [Guida al piano di studi](https://docs.google.com/document/d/1myJwrDyRlAjwVNDS3gs-3JaJNhogsGMt9Swo-bpySgE/preview)
+            gestiscono l'ingresso, l'uscita, l'archiviazione e l'elaborazione dei
+            dati per aiutare gli esseri umani a risolvere i problemi. L'unità si conclude
+            con un progetto in cui si progetta un'applicazione che aiuta a risolvere
+            un problema a scelta. \n\n**Guida all'organizzazione del corso per l'Unità
+            1**\n\n-   Il Capitolo 1 dell'Unità 1 deve essere completato prima di
+            qualsiasi altra unità di \"Alla scoperta dell'informatica\"\n-   Sono
+            previste lezioni alternative per alcune lezioni dell'Unità 1, a seconda
+            del contesto della classe\n-   Puoi visualizzare la [Guida al piano di
+            studi](https://docs.google.com/document/d/1myJwrDyRlAjwVNDS3gs-3JaJNhogsGMt9Swo-bpySgE/preview)
             e la [Guida all'organizzazione del corso](https://docs.google.com/document/d/1u-eIlB2cAwMuSckzbMWkteQIcsXgez7FTrbjP8PBB4o/preview)
             completa per ulteriori informazioni su questa unità"
           lesson_groups:
@@ -2257,11 +2262,12 @@ it:
             sulle tue pagine web. Dopo aver deciso quali contenuti condividere con
             il mondo, imparerai come strutturare e modellare le tue pagine usando
             HTML e CSS. Potrai anche mettere in pratica preziose abilità di programmazione
-            come il debugging, l'uso delle risorse e il lavoro di squadra.   \n\n**Implementation
-            Guide dell'Unità 2**\n\n-   Completa il Capitolo 1  dell'Unità 1 prima
-            di iniziare questa unità\n-   Le linee guida su come supportare gli studenti
-            negli esercizi di programmazione e su come differenziare le attività sono
-            disponibili nella [Guida alla correzione dei problemi](https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/preview)
+            come il debugging, l'uso delle risorse e il lavoro di squadra.   \n\n**Guida
+            all'organizzazione del corso per l'Unità 2**\n\n-   Completa il Capitolo
+            1  dell'Unità 1 prima di iniziare questa unità\n-   Le linee guida su
+            come supportare gli studenti negli esercizi di programmazione e su come
+            differenziare le attività sono disponibili nella [Guida alla correzione
+            dei problemi](https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/preview)
             e [Guida alla differenziazione](https://docs.google.com/document/d/15Y6Mo3fMUtHq16SSskABgcYE-5xfk-Ewv0z_o4uaLdI/preview)\n-
             \  È possibile visualizzare la [Guida al programma dl corso](https://docs.google.com/document/d/1myJwrDyRlAjwVNDS3gs-3JaJNhogsGMt9Swo-bpySgE/preview)
             e la [Implementation Guide] completa[3] per ulteriori informazioni su
@@ -4869,6 +4875,8 @@ it:
           student_description: Impara i concetti base dell'informatica con i personaggi
             di Angry Birds, Plant vs. Zombies, e Scrat di L'Era Glaciale!
           title: Labirinto Classico
+        how-ai-works-2023:
+          title: Come funziona l'IA
         iceage:
           description: Crea una storia oppure fai un gioco con il Laboratorio con
             L'Era Glaciale!
@@ -5049,6 +5057,11 @@ it:
               display_name: Eventi
             lessonGroup-7:
               display_name: Progetto di fine corso
+            lessonGroup-8:
+              display_name: Dati
+          lessons:
+            lesson-1:
+              name: Dati
         nevada-standards-aligned-fourth-grade-2023:
           description: Abbiamo creato il Corso E per gli alunni della quarta primaria.
             Il corso inizia con un'introduzione allo ambiente di programmazione denominato
@@ -5113,6 +5126,11 @@ it:
               display_name: Eventi
             lessonGroup-6:
               display_name: Dati
+            lessonGroup-8:
+              display_name: Sistemi informatici
+          lessons:
+            lesson-1:
+              name: Sistemi informatici
         nevada-standards-aligned-third-grade-2023:
           description: Abbiamo creato il corso D per gli alunni della terza primaria.
             Il corso inizia con una rassegna dei concetti trovati nei corsi precedenti,

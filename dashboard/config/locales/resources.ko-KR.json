@@ -543,14 +543,14 @@
           "name": "교사용 포럼"
         },
         "csd_curriculum_guide/csd/2021": {
+          "url": "https://docs.google.com/document/d/1myJwrDyRlAjwVNDS3gs-3JaJNhogsGMt9Swo-bpySgE/preview",
           "type": "자료",
-          "name": "CSD 커리큘럼 가이드",
-          "url": "https://docs.google.com/document/d/1myJwrDyRlAjwVNDS3gs-3JaJNhogsGMt9Swo-bpySgE/preview"
+          "name": "CSD 커리큘럼 가이드"
         },
         "csd_implementation_guide/csd/2021": {
+          "url": "https://docs.google.com/document/d/1u-eIlB2cAwMuSckzbMWkteQIcsXgez7FTrbjP8PBB4o/preview",
           "type": "자료",
-          "name": "CSD 구현 가이드",
-          "url": "https://docs.google.com/document/d/1u-eIlB2cAwMuSckzbMWkteQIcsXgez7FTrbjP8PBB4o/preview"
+          "name": "CSD 구현 가이드"
         },
         "csd_unit_1_-_problem_solving_and_computing/csd/2021": {
           "type": "슬라이드"
@@ -605,6 +605,14 @@
         },
         "solving-problems-tangrams-2020/csd/2021": {
           "type": "자료"
+        },
+        "csd_guide_to_debugging/csd/2021": {
+          "url": "https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/preview",
+          "name": "CSD 디버깅 가이드"
+        },
+        "csd_guide_to_differentiation/csd/2021": {
+          "url": "https://docs.google.com/document/d/15Y6Mo3fMUtHq16SSskABgcYE-5xfk-Ewv0z_o4uaLdI/preview",
+          "name": "차별화를 위한 CSD 가이드"
         },
         "exploring-web-pages-exemplar-2020/csd/2021": {
           "name": "웹 페이지 탐구"
@@ -1233,14 +1241,6 @@
         },
         "planning-your-innovation/csd/2021": {
           "type": "프로젝트 가이드"
-        },
-        "csd_guide_to_debugging/csd/2021": {
-          "name": "CSD 디버깅 가이드",
-          "url": "https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/preview"
-        },
-        "csd_guide_to_differentiation/csd/2021": {
-          "name": "차별화를 위한 CSD 가이드",
-          "url": "https://docs.google.com/document/d/15Y6Mo3fMUtHq16SSskABgcYE-5xfk-Ewv0z_o4uaLdI/preview"
         },
         "all_code_5/csd/2021": {
           "name": "모든 코드",
@@ -3320,6 +3320,12 @@
         "exploring_problem_solving_games_/csd/2022": {
           "type": "슬라이드"
         },
+        "csd_guide_to_debugging/csd/2022": {
+          "url": "https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/preview"
+        },
+        "csd_guide_to_differentiation/csd/2022": {
+          "url": "https://docs.google.com/document/d/15Y6Mo3fMUtHq16SSskABgcYE-5xfk-Ewv0z_o4uaLdI/preview"
+        },
         "exploring_web_pages/csd/2022": {
           "name": "웹 페이지 탐구"
         },
@@ -4755,6 +4761,9 @@
           "url": "https://docs.google.com/document/d/1_fc870l0ndjhUMazjwLSaJOx9lIMsvbd3BYYEtLykIY/edit",
           "type": "포스터"
         },
+        "csf_course_a_lesson_slides/coursea/2022": {
+          "type": "슬라이드"
+        },
         "20_20_20_rule/coursea/2022": {
           "name": "20/20/20 규칙",
           "url": "http://www.anthro.com/blog/2013/10/how-to-prevent-eye-strain-with-the-20-20-20-rule#.WOU39BLyu35",
@@ -4774,6 +4783,9 @@
           "name": "Wiggles - GoNoodle",
           "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
           "type": "동영상"
+        },
+        "csf_course_a_lesson_slides_1/coursea/2022": {
+          "type": "슬라이드"
         },
         "feeling_faces_-_emotion_image/coursea/2022": {
           "name": "감정 얼굴- 이모션 이미지",
@@ -4800,6 +4812,9 @@
           "url": "https://youtu.be/hrnhiKAQ1_k",
           "type": "언플러그드 동영상"
         },
+        "csf_course_a_lesson_slides_2/coursea/2022": {
+          "type": "슬라이드"
+        },
         "unplugged_blockly_blocks_grades_k-1_/coursea/2022": {
           "name": "언플러그드 블러클리 블록 (K-1학년)",
           "url": "https://docs.google.com/presentation/d/1PoSQZUCUj6yw6g1yZImaHu5Gn4Gdok0iDmrrmXInavQ/edit",
@@ -4809,6 +4824,9 @@
           "name": "Wiggles - GoNoodle",
           "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
           "type": "동영상"
+        },
+        "csf_course_a_lesson_slides_3/coursea/2022": {
+          "type": "슬라이드"
         },
         "debugging_with_the_step_button/coursea/2022": {
           "name": "스텝버튼으로 디버깅하기",
@@ -4820,10 +4838,16 @@
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit",
           "type": "자료"
         },
+        "csf_course_a_lesson_slides_4/coursea/2022": {
+          "type": "슬라이드"
+        },
         "feeling_faces_-_emotion_image_1/coursea/2022": {
           "name": "감정 얼굴- 이모션 이미지",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit",
           "type": "자료"
+        },
+        "csf_course_a_lesson_slides_5/coursea/2022": {
+          "type": "슬라이드"
         },
         "happy_map_cards_xl/coursea/2022": {
           "name": "해피 맵 카드 XL",
@@ -4835,6 +4859,9 @@
           "url": "https://docs.google.com/document/d/14qEVzSR7pr0slqkRn2WM8XxVyeDhdmfhtsmTrERCTNs/edit",
           "type": "학습 교구"
         },
+        "csf_course_a_lesson_slides_6/coursea/2022": {
+          "type": "슬라이드"
+        },
         "feeling_faces/coursea/2022": {
           "name": "감정 얼굴",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/",
@@ -4845,15 +4872,24 @@
           "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
           "type": "동영상"
         },
+        "csf_course_a_lesson_slides_7/coursea/2022": {
+          "type": "슬라이드"
+        },
         "csf_lesson_recommendations/coursea/2022": {
           "name": "CSF 레슨 권장 사항",
           "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing",
           "type": "자료"
         },
+        "csf_course_a_lesson_slides_8/coursea/2022": {
+          "type": "슬라이드"
+        },
         "pause_and_think_online/coursea/2022": {
           "name": "잠시 멈추고 생각하기 온라인",
           "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
           "type": "동영상"
+        },
+        "csf_course_a_lesson_slides_9/coursea/2022": {
+          "type": "슬라이드"
         },
         "the_big_event/coursea/2022": {
           "name": "큰 이벤트",
@@ -4875,9 +4911,15 @@
           "url": "https://docs.google.com/document/d/1A9yAObCTJwHsIKtaBZY8KaGwgbxbfolpbIpeJfZRgvs/edit",
           "type": "컨트롤러 이미지"
         },
+        "csf_course_a_lesson_slides_10/coursea/2022": {
+          "type": "슬라이드"
+        },
         "cs_fundamentals_main_activity_tips/coursea/2022": {
           "name": "CS 기초 메인 활동 팁",
           "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing"
+        },
+        "csf_course_a_lesson_slides_11/coursea/2022": {
+          "type": "슬라이드"
         },
         "artist_project_planning_guide/coursea/2022": {
           "name": "아티스트 프로젝트 계획 가이드",
@@ -4888,6 +4930,9 @@
           "name": "아티스트 프로젝트 계획 가이드",
           "url": "https://docs.google.com/document/d/13AiHjPrDE3DFnwH3qKnty6M3PbHsZcd-0YoZz4ZmC3E/template/preview",
           "type": "답안지"
+        },
+        "csf_course_a_lesson_slides_12/coursea/2022": {
+          "type": "슬라이드"
         },
         "common_core_and_ngss_guidance/courseb/2022": {
           "name": "커몬 코어 (Common Core) 및 NGSS 가이던스",
@@ -4945,6 +4990,9 @@
           "name": "디지털 흔적: 교육용 PPT",
           "url": "https://docs.google.com/presentation/d/1jNMWXhnNjlqK44LQ_bpAtmDmdHPeYqJeVBwegi5BnM4/edit",
           "type": "슬라이드 모음"
+        },
+        "csf_course_b_lesson_slides/courseb/2022": {
+          "type": "슬라이드"
         },
         "feeling_faces_emotion_image/courseb/2022": {
           "name": "감정을 나타내는 얼굴- 이모션 이미지",

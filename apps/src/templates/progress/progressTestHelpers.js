@@ -286,6 +286,5 @@ export const fakeProgressTableReduxInitialState = (
     },
     unitSelection: {scriptId: scriptData.id},
     locales: {localeCode: 'en-US'},
-    isRtl: false,
   };
 };

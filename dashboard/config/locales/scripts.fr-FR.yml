@@ -2498,6 +2498,8 @@ fr:
               display_name: Leçons alternatives
             lessonGroup-6:
               display_name: Enquête de fin d'unité
+            lessonGroup-7:
+              display_name: Bacs à sable
           lessons:
             lesson-1:
               name: Bienvenue chez CSA
@@ -2628,6 +2630,8 @@ fr:
               display_name: Leçons alternatives
             lessonGroup-5:
               display_name: Enquête de fin d'unité
+            lessonGroup-6:
+              display_name: Bacs à sable
           lessons:
             lesson-1:
               name: Attributs
@@ -2643,6 +2647,8 @@ fr:
               name: Ce mot clé
             lesson-15:
               name: 'Unité 2 : Enquête'
+            lesson-17:
+              name: Asphalt Art Project — Jour 2
             lesson-2:
               name: Constructeurs sans arguments
             lesson-3:
@@ -2760,6 +2766,8 @@ fr:
               display_name: Leçons alternatives
             lessonGroup-5:
               display_name: Enquête de fin d'unité
+            lessonGroup-6:
+              display_name: Bacs à sable
           lessons:
             lesson-1:
               name: Tableaux unidimensionnels (1D)
@@ -2773,6 +2781,8 @@ fr:
               name: Projet Data for Social Good [Version d'un jour]
             lesson-14:
               name: 'Unité 3 : Enquête'
+            lesson-16:
+              name: Asphalt Art Project — Jour 2
             lesson-2:
               name: Modification d'éléments
             lesson-3:
@@ -2873,6 +2883,8 @@ fr:
               display_name: Leçons alternatives
             lessonGroup-5:
               display_name: Enquête de fin d'unité
+            lessonGroup-6:
+              display_name: Bacs à sable
           lessons:
             lesson-1:
               name: Projet d'art des données abstraites [Version d'un jour]
@@ -2888,6 +2900,8 @@ fr:
               name: Déclarations à sélection multiple
             lesson-15:
               name: 'Unité 4 : Enquête'
+            lesson-17:
+              name: Asphalt Art Project — Jour 2
             lesson-2:
               name: Projet d'art des données abstraites
             lesson-3:
@@ -3011,6 +3025,8 @@ fr:
               display_name: Leçons alternatives
             lessonGroup-5:
               display_name: Enquête de fin d'unité
+            lessonGroup-6:
+              display_name: Bacs à sable
           lessons:
             lesson-1:
               name: Tableaux bidimensionnels (2D)
@@ -3024,6 +3040,8 @@ fr:
               name: Projet narratif personnel [Version d'un jour]
             lesson-14:
               name: 'Unité 5 : Enquête'
+            lesson-16:
+              name: Asphalt Art Project — Jour 2
             lesson-2:
               name: Éléments d'un tableau 2D
             lesson-3:
@@ -3116,6 +3134,8 @@ fr:
               display_name: Leçons alternatives
             lessonGroup-5:
               display_name: Enquête de fin d'unité
+            lessonGroup-6:
+              display_name: Bacs à sable
           lessons:
             lesson-1:
               name: Planification du projet
@@ -3129,6 +3149,8 @@ fr:
               name: Projet de traitement du langage naturel [Version d'un jour]
             lesson-14:
               name: 'Unité 6 : Enquête'
+            lesson-16:
+              name: Asphalt Art Project — Jour 2
             lesson-2:
               name: Sous-chaînes
             lesson-3:
@@ -3268,6 +3290,8 @@ fr:
               display_name: Enquête de fin d'unité
             lessonGroup-5:
               display_name: Leçons alternatives
+            lessonGroup-6:
+              display_name: Bacs à sable
           lessons:
             lesson-1:
               name: Planification du projet
@@ -3281,6 +3305,8 @@ fr:
               name: 'Unité 7 : Enquête'
             lesson-14:
               name: Codage créatif avec The Theater Project [Version d'un jour]
+            lesson-16:
+              name: Asphalt Art Project — Jour 2
             lesson-2:
               name: Références d'objets en tant que paramètres
             lesson-3:
@@ -3419,6 +3445,8 @@ fr:
               display_name: Enquête
             lessonGroup-5:
               display_name: Leçons alternatives
+            lessonGroup-6:
+              display_name: Bacs à sable
           lessons:
             lesson-1:
               name: Planification du projet
@@ -3430,6 +3458,8 @@ fr:
               name: Unité 8 Évaluation
             lesson-13:
               name: Codage créatif avec le projet Console [Version d'un jour]
+            lesson-15:
+              name: Asphalt Art Project — Jour 2
             lesson-2:
               name: Recherche
             lesson-3:
@@ -3550,6 +3580,11 @@ fr:
               display_name: Révision et pratique
             lessonGroup-3:
               display_name: Examens simulés
+            lessonGroup-4:
+              display_name: Bacs à sable
+          lessons:
+            lesson-2:
+              name: Asphalt Art Project — Jour 2
           student_description: Cette unité vous prépare à l'examen AP CSA en passant
             en revue les concepts clés, en vous entraînant à poser des questions à
             choix multiples et à réponse libre et en renforçant les stratégies de
@@ -10515,6 +10550,8 @@ fr:
             aux personnages de Angry Birds, de Plantes vs Zombies et Scrat de l'Âge
             de glace !
           title: Labyrinthe classique
+        how-ai-works-2023:
+          title: Comment fonctionne l'IA
         iceage:
           description: Crée une histoire ou fais un jeu avec le Labo de jeux Âge de
             Glace !
@@ -10835,6 +10872,11 @@ fr:
               display_name: Événements
             lessonGroup-7:
               display_name: Projet de fin de cours
+            lessonGroup-8:
+              display_name: Données
+          lessons:
+            lesson-1:
+              name: Données
         nevada-standards-aligned-fourth-grade-2023:
           description: Nous avons créé le cours E pour des élèves de CM1. Le cours
             commence par une introduction à l'outil de programmation Labo des Sprites.
@@ -10899,6 +10941,11 @@ fr:
               display_name: Événements
             lessonGroup-6:
               display_name: Données
+            lessonGroup-8:
+              display_name: Systèmes informatiques
+          lessons:
+            lesson-1:
+              name: Systèmes informatiques
         nevada-standards-aligned-third-grade-2023:
           description: Nous avons créé le cours D pour les élèves de CE2. Le cours
             commence par un examen des notions abordées dans les cours précédents,
@@ -12459,6 +12506,22 @@ fr:
               name: 'Suite du module 6 : Méthodes de chaîne dans l''unité 6'
           name: vpl-csa-2022
           title: Formation professionnelle virtuelle CSA
+        vpl-csa-2023-m1:
+          title: Module 1
+        vpl-csa-2023-m2:
+          title: Module 2
+        vpl-csa-2023-m3:
+          title: Module 3
+        vpl-csa-2023-m4:
+          title: Module 4
+        vpl-csa-2023-m5:
+          title: Module 5
+        vpl-csa-2023-m6:
+          title: Module 6
+        vpl-csa-2023-m7:
+          title: Module 7
+        vpl-csa-2023-m8:
+          title: Module 8
         vpl-csd-2020:
           name: vpl-csd-2020
           title: Apprentissage professionnel virtuel CS Discoveries 2020 - 21
@@ -12486,6 +12549,22 @@ fr:
           title: Apprentissage professionnel virtuel CS Discoveries 2021 - 22
         vpl-csd-2022:
           title: Apprentissage professionnel virtuel CS Discoveries 2022 - 23
+        vpl-csd-2023-m1:
+          title: Module 1
+        vpl-csd-2023-m2:
+          title: Module 2
+        vpl-csd-2023-m3:
+          title: Module 3
+        vpl-csd-2023-m4:
+          title: Module 4
+        vpl-csd-2023-m5:
+          title: Module 5
+        vpl-csd-2023-m6:
+          title: Module 6
+        vpl-csd-2023-m7:
+          title: Module 7
+        vpl-csd-2023-m8:
+          title: Module 8
         vpl-csd-ci-1:
           description: "Ce module de formation professionnelle est conçu pour vous
             aider à vous préparer à enseigner aux élèves la résolution de problèmes
@@ -12976,6 +13055,22 @@ fr:
           title: Principes CS Apprentissage professionnel virtuel 21 - 22
         vpl-csp-2022:
           title: CS Principles Apprentissage professionnel virtuel 22 - 23
+        vpl-csp-2023-m1:
+          title: Module 1
+        vpl-csp-2023-m2:
+          title: Module 2
+        vpl-csp-2023-m3:
+          title: Module 3
+        vpl-csp-2023-m4:
+          title: Module 4
+        vpl-csp-2023-m5:
+          title: Module 5
+        vpl-csp-2023-m6:
+          title: Module 6
+        vpl-csp-2023-m7:
+          title: Module 7
+        vpl-csp-2023-m8:
+          title: Module 8
         web-development-2023:
           lesson_groups:
             lessonGroup-2:

@@ -1787,7 +1787,6 @@ FactoryBot.define do
 
   factory :learning_goal do
     association :rubric
-    sequence(:key) {|n| "lg_#{n}"}
     position {0}
     learning_goal {"Test Learning Goal"}
     ai_enabled {false}
@@ -1797,5 +1796,9 @@ FactoryBot.define do
     association :learning_goal
     understanding {0}
     teacher_description {"Description for teacher"}
+  end
+
+  factory :learning_goal_evaluation do
+    association :learning_goal
   end
 end

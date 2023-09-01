@@ -2048,6 +2048,10 @@ tr:
             **Önerilen süre:** 1 saat
           name: bba-kişisel-planlı-pl
           title: BBA Pilot Öğretmenleri için Code.org'da Gezinme
+        csa-software-engineering:
+          lessons:
+            lesson-9:
+              name: Kurulum
         csa-u6-dev:
           lesson_groups:
             lessonGroup-2:
@@ -2119,6 +2123,8 @@ tr:
               display_name: Bildiklerini Göster
             lessonGroup-5:
               display_name: Alternatif Dersler
+            lessonGroup-7:
+              display_name: Sandbox'lar
           lessons:
             lesson-2:
               name: Java Laboratuvarı
@@ -2209,6 +2215,8 @@ tr:
               display_name: Bildiklerini Göster
             lessonGroup-4:
               display_name: Alternatif Dersler
+            lessonGroup-6:
+              display_name: Sandbox'lar
           lessons:
             lesson-4:
               name: Değişkenler
@@ -2321,6 +2329,8 @@ tr:
               display_name: Bildiklerini Göster
             lessonGroup-4:
               display_name: Alternatif Dersler
+            lessonGroup-6:
+              display_name: Sandbox'lar
           lessons:
             lesson-1:
               name: Bir Boyutlu (1D) Diziler
@@ -2417,6 +2427,8 @@ tr:
               display_name: Bildiklerini Göster
             lessonGroup-4:
               display_name: Alternatif Dersler
+            lessonGroup-6:
+              display_name: Sandbox'lar
           lessons:
             lesson-9:
               name: Rastgele
@@ -2532,6 +2544,8 @@ tr:
               display_name: Bildiklerini Göster
             lessonGroup-4:
               display_name: Alternatif Dersler
+            lessonGroup-6:
+              display_name: Sandbox'lar
         csa5-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -2648,6 +2662,8 @@ tr:
               display_name: Bildiklerini Göster
             lessonGroup-4:
               display_name: Alternatif Dersler
+            lessonGroup-6:
+              display_name: Sandbox'lar
           student_description: Bu ünite, sizi 'ArrayList' sınıfını kullanarak listeler
             oluşturmaya alıştırmak için veri yapılarını genişletmeye devam ediyor.
             Bu süreçte, "Tamsayı" ve "Duble" sınıflarını öğrenir ve metin dosyalarından
@@ -2796,6 +2812,8 @@ tr:
               display_name: Bildiklerini Göster
             lessonGroup-5:
               display_name: Alternatif Dersler
+            lessonGroup-6:
+              display_name: Sandbox'lar
           lessons:
             lesson-6:
               name: Fikri Mülkiyet
@@ -2951,6 +2969,8 @@ tr:
               display_name: Anket
             lessonGroup-5:
               display_name: Alternatif Dersler
+            lessonGroup-6:
+              display_name: Sandbox'lar
           student_description: Bu ünitede, 1D ve 2D dizileri ve `ArrayList`leri aramaya
             ve sıralamaya yönelik yaygın yaklaşımları keşfetmek için öğrendiğiniz
             algoritmaları genişleteceksiniz. Bu süreçte, ifade yürütme sayılarını
@@ -3050,6 +3070,8 @@ tr:
               display_name: İnceleme ve Uygulama
             lessonGroup-3:
               display_name: Deneme Sınavları
+            lessonGroup-4:
+              display_name: Sandbox'lar
         csa9-pilot:
           lesson_groups:
             lessonGroup-2:
@@ -8800,6 +8822,8 @@ tr:
             Devrinden sincap Scrat ile birlikte bilgisayar biliminin temel yapısını
             dene!
           title: Klasik Labirent
+        how-ai-works-2023:
+          title: Yapay Zeka Nasıl Çalışır?
         iceage:
           description: Buz devri Oyun Laboratuvarı ile hikaye yarat veya oyun yap!
           description_short: Buz devri Oyun Laboratuvarı ile hikaye yarat veya oyun
@@ -9081,6 +9105,11 @@ tr:
               display_name: Olaylar
             lessonGroup-7:
               display_name: Ders Projesinin Sonu
+            lessonGroup-8:
+              display_name: Veri
+          lessons:
+            lesson-1:
+              name: Veri
         nevada-standards-aligned-fourth-grade-2023:
           description: Dördüncü sınıftaki öğrenciler için Kurs E'yi oluşturduk. Kurs,
             Sprite Lab programlama aracına giriş ile başlar. Öğrenciler, çevrimiçi
@@ -9143,6 +9172,11 @@ tr:
               display_name: Olaylar
             lessonGroup-6:
               display_name: Veri
+            lessonGroup-8:
+              display_name: Bilişim Sistemleri
+          lessons:
+            lesson-1:
+              name: Bilişim Sistemleri
         nevada-standards-aligned-third-grade-2023:
           description: Üçüncü sınıftaki öğrenciler için D kursu oluşturduk. Kurs,
             döngüler ve olaylar da dahil olmak üzere önceki kurslarda bulunan kavramların
@@ -10259,6 +10293,22 @@ tr:
             csf_data:
               display_name: Kod Baytları için Virüs Simülasyonu
           title: Salgın Simülasyonu Yapmak
+        vpl-csa-2023-m1:
+          title: Modül 1
+        vpl-csa-2023-m2:
+          title: Modül 2
+        vpl-csa-2023-m3:
+          title: Modül 3
+        vpl-csa-2023-m4:
+          title: Modül 4
+        vpl-csa-2023-m5:
+          title: Modül 5
+        vpl-csa-2023-m6:
+          title: Modül 6
+        vpl-csa-2023-m7:
+          title: Modül 7
+        vpl-csa-2023-m8:
+          title: Modül 8
         vpl-csd-2020:
           name: vpl-csd-2020
           title: Bilgisayar Bilimi Keşifleri Sanal Profesyonel Öğrenim 2020 - 21
@@ -10282,6 +10332,22 @@ tr:
               display_name: Modül 8
             lesson group:
               display_name: ders grubu görünen adı
+        vpl-csd-2023-m1:
+          title: Modül 1
+        vpl-csd-2023-m2:
+          title: Modül 2
+        vpl-csd-2023-m3:
+          title: Modül 3
+        vpl-csd-2023-m4:
+          title: Modül 4
+        vpl-csd-2023-m5:
+          title: Modül 5
+        vpl-csd-2023-m6:
+          title: Modül 6
+        vpl-csd-2023-m7:
+          title: Modül 7
+        vpl-csd-2023-m8:
+          title: Modül 8
         vpl-csd-ci-1:
           description: |-
             Bu profesyonel öğrenim modülü, Code.org'un Problem Çözme ve Bilgi İşlem ünitesini öğretmeye hazırlanmanıza yardımcı olmak için tasarlanmıştır.
@@ -10694,6 +10760,22 @@ tr:
           lesson_groups:
             lesson group:
               display_name: ders grubu görünen adı
+        vpl-csp-2023-m1:
+          title: Modül 1
+        vpl-csp-2023-m2:
+          title: Modül 2
+        vpl-csp-2023-m3:
+          title: Modül 3
+        vpl-csp-2023-m4:
+          title: Modül 4
+        vpl-csp-2023-m5:
+          title: Modül 5
+        vpl-csp-2023-m6:
+          title: Modül 6
+        vpl-csp-2023-m7:
+          title: Modül 7
+        vpl-csp-2023-m8:
+          title: Modül 8
         web-development-2023:
           lesson_groups:
             lessonGroup-2:

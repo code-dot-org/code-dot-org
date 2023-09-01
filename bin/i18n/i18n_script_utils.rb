@@ -1,39 +1,44 @@
 require File.expand_path('../../../dashboard/config/environment', __FILE__)
+require File.expand_path('../../../pegasus/helpers/pegasus_languages', __FILE__)
 
 require 'cdo/google/drive'
 require 'cdo/honeybadger'
 require 'cgi'
 require 'fileutils'
 require 'psych'
+require 'ruby-progressbar'
+require 'parallel'
 
-I18N_SOURCE_DIR = "i18n/locales/source"
+I18N_LOCALES_DIR = 'i18n/locales'.freeze
+I18N_SOURCE_DIR = File.join(I18N_LOCALES_DIR, 'source').freeze
+I18N_ORIGINAL_DIR = File.join(I18N_LOCALES_DIR, 'original').freeze
 
 CROWDIN_PROJECTS = {
   codeorg: {
-    config_file: File.join(File.dirname(__FILE__), "codeorg_crowdin.yml"),
-    identity_file: File.join(File.dirname(__FILE__), "crowdin_credentials.yml"),
-    etags_json: File.join(File.dirname(__FILE__), "crowdin", "codeorg_etags.json"),
-    files_to_sync_out_json: File.join(File.dirname(__FILE__), "crowdin", "codeorg_files_to_sync_out.json")
+    config_file:            CDO.dir('bin/i18n/codeorg_crowdin.yml'),
+    identity_file:          CDO.dir('bin/i18n/crowdin_credentials.yml'),
+    etags_json:             CDO.dir('bin/i18n/crowdin/codeorg_etags.json'),
+    files_to_sync_out_json: CDO.dir('bin/i18n/crowdin/codeorg_files_to_sync_out.json')
   },
   'codeorg-markdown': {
-    config_file: File.join(File.dirname(__FILE__), "codeorg_markdown_crowdin.yml"),
-    identity_file: File.join(File.dirname(__FILE__), "crowdin_credentials.yml"),
-    etags_json: File.join(File.dirname(__FILE__), "crowdin", "codeorg-markdown_etags.json"),
-    files_to_sync_out_json: File.join(File.dirname(__FILE__), "crowdin", "codeorg-markdown_files_to_sync_out.json")
+    config_file:            CDO.dir('bin/i18n/codeorg_markdown_crowdin.yml'),
+    identity_file:          CDO.dir('bin/i18n/crowdin_credentials.yml'),
+    etags_json:             CDO.dir('bin/i18n/crowdin/codeorg-markdown_etags.json'),
+    files_to_sync_out_json: CDO.dir('bin/i18n/crowdin/codeorg-markdown_files_to_sync_out.json')
   },
   'hour-of-code': {
-    config_file: File.join(File.dirname(__FILE__), "hourofcode_crowdin.yml"),
-    identity_file: File.join(File.dirname(__FILE__), "crowdin_credentials.yml"),
-    etags_json: File.join(File.dirname(__FILE__), "crowdin", "hour-of-code_etags.json"),
-    files_to_sync_out_json: File.join(File.dirname(__FILE__), "crowdin", "hour-of-code_files_to_sync_out.json")
+    config_file:            CDO.dir('bin/i18n/hourofcode_crowdin.yml'),
+    identity_file:          CDO.dir('bin/i18n/crowdin_credentials.yml'),
+    etags_json:             CDO.dir('bin/i18n/crowdin/hour-of-code_etags.json'),
+    files_to_sync_out_json: CDO.dir('bin/i18n/crowdin/hour-of-code_files_to_sync_out.json')
   },
   'codeorg-restricted': {
-    config_file: File.join(File.dirname(__FILE__), "codeorg_restricted_crowdin.yml"),
-    identity_file: File.join(File.dirname(__FILE__), "crowdin_credentials.yml"),
-    etags_json: File.join(File.dirname(__FILE__), "crowdin", "codeorg-restricted_etags.json"),
-    files_to_sync_out_json: File.join(File.dirname(__FILE__), "crowdin", "codeorg-restricted_files_to_sync_out.json")
-  }
-}
+    config_file:            CDO.dir('bin/i18n/codeorg_restricted_crowdin.yml'),
+    identity_file:          CDO.dir('bin/i18n/crowdin_credentials.yml'),
+    etags_json:             CDO.dir('bin/i18n/crowdin/codeorg-restricted_etags.json'),
+    files_to_sync_out_json: CDO.dir('bin/i18n/crowdin/codeorg-restricted_files_to_sync_out.json')
+  },
+}.freeze
 
 CROWDIN_TEST_PROJECTS = {
   'codeorg-testing': {
@@ -51,6 +56,9 @@ CROWDIN_TEST_PROJECTS = {
 }
 
 class I18nScriptUtils
+  PROGRESS_BAR_FORMAT = '%t: |%B| %p% %a'.freeze
+  PARALLEL_PROCESSES = Parallel.processor_count / 2
+
   # Because we log many of the i18n operations to slack, we often want to
   # explicitly force stdout to operate synchronously, rather than buffering
   # output and dumping a whole lot of output into slack all at once.
@@ -254,37 +262,45 @@ class I18nScriptUtils
     header.slice!("title")
   end
 
-  # If a script is updated such that its destination directory changes after
+  # For resources like `course_content` and `curriculum_content`,
+  # sync-in creates the unit course_version/course_offering directory structure
+  # (e.g. `i18n/locales/source/curriculum_content/2017/csd/csd1.json`).
+  #
+  # If a unit is updated such that its destination directory changes after
   # creation, we can end up in a situation in which we have multiple copies of
-  # the script file in the repo, which makes it difficult for the sync out to
+  # the unit file in the repo, which makes it difficult for the sync out to
   # know which is the canonical version.
   #
   # To prevent that, here we proactively check for existing files in the
-  # filesystem with the same filename as our target script file, but a
-  # different directory. If found, we refuse to create the second such script
+  # filesystem with the same filename as our target unit file, but a
+  # different directory. If found, we refuse to create the second such unit
   # file and notify of the attempt, so the issue can be manually resolved.
+  #
+  # Example:
+  #   If `course_version` of the unit `csd1` was changed from `2017` to `2023`,
+  #   the new unit file `i18n/locales/source/curriculum_content/2023/csd/csd1.json` should not be created
+  #   until the previous unit file `i18n/locales/source/curriculum_content/2017/csd/csd1.json` is synced-out
   #
   # Note we could try here to remove the old version of the file both from the
   # filesystem and from github, but it would be significantly harder to also
   # remove it from Crowdin.
-  def self.unit_directory_change?(script_i18n_name, script_i18n_filename)
-    level_content_directory = CDO.dir(File.join(I18N_SOURCE_DIR, 'course_content'))
-
-    matching_files = Dir.glob(File.join(level_content_directory, "**", script_i18n_name)).reject do |other_filename|
-      other_filename == script_i18n_filename
+  def self.unit_directory_change?(content_dir, unit_i18n_filename, unit_i18n_filepath)
+    matching_files = Dir.glob(File.join(content_dir, "**", unit_i18n_filename)).reject do |other_filename|
+      other_filename == unit_i18n_filepath
     end
 
     return false if matching_files.empty?
 
     # Clean up the file paths, just to make our output a little nicer
-    base = Pathname.new(level_content_directory)
+    base = Pathname.new(content_dir)
     relative_matching = matching_files.map {|filename| Pathname.new(filename).relative_path_from(base)}
-    relative_new = Pathname.new(script_i18n_filename).relative_path_from(base)
-    script_name = File.basename(script_i18n_name, '.*')
-    error_class = 'Destination directory for script is attempting to change'
-    error_message = "Script #{script_name} wants to output strings to #{relative_new}, but #{relative_matching.join(' and ')} already exists"
+    relative_new = Pathname.new(unit_i18n_filepath).relative_path_from(base)
+    unit_name = File.basename(unit_i18n_filename, '.*')
+    error_class = 'Destination directory for unit is attempting to change'
+    error_message = "Unit #{unit_name} wants to output strings to #{relative_new}, but #{relative_matching.join(' and ')} already exists"
     log_error(error_class, error_message)
-    return true
+
+    true
   end
 
   def self.log_error(error_class, error_message)
@@ -294,5 +310,76 @@ class I18nScriptUtils
     #   error_message: error_message
     # )
     puts "[#{error_class}] #{error_message}"
+  end
+
+  def self.fix_yml_file(filepath)
+    # Ryby implementation of the removed perl script `bin/i18n-codeorg/lib/fix-ruby-yml.pl`
+    # while(<>) {
+    #   # Remove ---
+    #   s/^---\n//;
+    #   # Fixes the "no:" problem.
+    #   s/^([a-z]+(?:-[A-Z]+)?):(.*)/"\1":\2/g;
+    #   print;
+    # }
+
+    yml_data = File.read(filepath)
+
+    yml_data.sub!(/^---\n/, '')                             # Remove ---
+    yml_data.gsub!(/^([a-z]+(?:-[A-Z]+)?):(.*)/, '"\1":\2') # Fixes the "no:" problem.
+
+    File.write(filepath, yml_data)
+  end
+
+  # Return true iff the specified file in the specified locale had changes
+  # since the last successful sync-out.
+  #
+  # @param locale [String] the locale code to check. This can be either the
+  #  four-letter code used internally (ie, "es-ES", "es-MX", "it-IT", etc), OR
+  #  the two-letter code used by crowdin, for those languages for which we have
+  #  only a single variation ("it", "de", etc).
+  #
+  # @param file [String] the path to the file to check. Note that this should be
+  #  the relative path of the file as it exists within the locale directory; ie
+  #  "/dashboard/base.yml", "/blockly-mooc/maze.json",
+  #  "/course_content/2018/coursea-2018.json", etc.
+  def self.file_changed?(locale, file)
+    @change_data ||= CROWDIN_PROJECTS.map do |_project_identifier, project_options|
+      # TODO: investigate the condition as a potential cause of sync fails
+      unless File.exist?(project_options[:files_to_sync_out_json])
+        raise <<~ERR
+          File not found #{project_options[:files_to_sync_out_json]}.
+
+          We expect to find a file containing a list of files changed by the most
+          recent sync down; if this file does not exist, it likely means that no
+          sync down has been run on this machine, so there is nothing to sync out
+        ERR
+      end
+      JSON.load_file(project_options[:files_to_sync_out_json])
+    end
+
+    crowdin_code = PegasusLanguages.get_code_by_locale(locale)
+
+    @change_data.any? {|change_data| change_data.dig(locale, file) || change_data.dig(crowdin_code, file)}
+  end
+
+  # Formats strings like 'en-US' to 'en_us'
+  #
+  # @param [String] locale the BCP 47 (IETF language tag) format (e.g., 'en-US')
+  # @return [String] the BCP 47 (IETF language tag) JS format (e.g., 'en_us')
+  def self.to_js_locale(locale)
+    locale.tr('-', '_').downcase
+  end
+
+  def self.create_progress_bar(**args)
+    ProgressBar.create(**args, format: PROGRESS_BAR_FORMAT)
+  end
+
+  def self.process_in_threads(data_array, **args)
+    Parallel.each(data_array, **args, in_threads: PARALLEL_PROCESSES) {|data| yield(data)}
+  end
+
+  def self.delete_empty_crowdin_locale_dir(crowdin_locale)
+    crowdin_locale_dir = CDO.dir(File.join(I18N_LOCALES_DIR, crowdin_locale))
+    FileUtils.rm_r(crowdin_locale_dir) if Dir.empty?(crowdin_locale_dir)
   end
 end

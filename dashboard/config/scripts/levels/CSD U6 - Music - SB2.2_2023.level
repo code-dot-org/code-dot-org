@@ -1,5 +1,6 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 41,
   "created_at": "2022-09-21T13:17:42.000Z",
   "level_num": "custom",
@@ -49,7 +50,7 @@
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
-    "makerlab_enabled": "true",
+    "makerlab_enabled": "circuitPlayground",
     "long_instructions": "# Arrays and Songs\r\n\r\nThis code is the same as the last level - when you press the buttons in order, they play the beginning of \"Ode To Joy\".\r\n\r\nLet's update the song to play the beginning of \"Freres Jacques\" instead. We'll only need to change the values in the `notes` array and the rest of the code should work automatically!\r\n\r\n## Do This\r\n1) Update the `notes` array to use the following notes: `[\"C4\", \"D4\", \"E4\", \"C4\", \"C4\", \"D4\", \"E4\", \"C4\"]`\r\n\t- ::: details [**Show Me How**]\r\n    ![](https://images.code.org/44d1cad15f2c828d12469c91ca8a44e6-image-1649186360567.gif)\r\n    :::\r\n\r\n**Run Your Code!** You should be able to press the buttons and a new song will play.\r\n\r\n",
     "parent_level_id": 20595,
     "name_suffix": "_2023",
@@ -62,16 +63,16 @@
     "reference_links": [
       "/courses/csd-2022/guides/playing-notes",
       "/courses/csd-2022/guides/arrays",
-      "/courses/csd-2022/guides/modifying-arrays"
+      "/courses/csd-2022/guides/modifying-arrays",
+      "/maker/setup"
     ],
     "start_html": "<div id=\"designModeViz\" class=\"appModern clip-content\" tabindex=\"1\" data-radium=\"true\" style=\"width: 320px; height: 450px; display: none;\"><div class=\"screen\" tabindex=\"1\" data-theme=\"default\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(255, 255, 255);\"><label style=\"margin: 0px; line-height: 1; overflow: hidden; overflow-wrap: break-word; max-width: 320px; border-style: solid; text-rendering: optimizespeed; color: rgb(77, 87, 95); background-color: rgba(0, 0, 0, 0); border-color: rgb(77, 87, 95); border-radius: 0px; border-width: 0px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; font-size: 17px; padding: 2px 15px; width: 310px; height: 50px; position: absolute; left: 5px; top: 5px; text-align: center;\" id=\"titleLabel\">Click the buttons from top to bottom to hear a song!</label><button id=\"note1Button\" style=\"padding: 0px; margin: 0px; border-style: solid; height: 40px; width: 140px; background-color: rgb(255, 164, 0); color: rgb(255, 255, 255); border-color: rgb(77, 87, 95); border-radius: 4px; border-width: 1px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; font-size: 15px; position: absolute; left: 90px; top: 75px;\">Note 1</button><button id=\"note2Button\" style=\"padding: 0px; margin: 0px; border-style: solid; height: 40px; width: 140px; background-color: rgb(255, 164, 0); color: rgb(255, 255, 255); border-color: rgb(77, 87, 95); border-radius: 4px; border-width: 1px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; font-size: 15px; position: absolute; left: 90px; top: 120px;\">Note 2</button><button id=\"note3Button\" style=\"padding: 0px; margin: 0px; border-style: solid; height: 40px; width: 140px; background-color: rgb(255, 164, 0); color: rgb(255, 255, 255); border-color: rgb(77, 87, 95); border-radius: 4px; border-width: 1px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; font-size: 15px; position: absolute; left: 90px; top: 165px;\">Note 3</button><button id=\"note4Button\" style=\"padding: 0px; margin: 0px; border-style: solid; height: 40px; width: 140px; background-color: rgb(255, 164, 0); color: rgb(255, 255, 255); border-color: rgb(77, 87, 95); border-radius: 4px; border-width: 1px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; font-size: 15px; position: absolute; left: 90px; top: 210px;\">Note 4</button><button id=\"note5Button\" style=\"padding: 0px; margin: 0px; border-style: solid; height: 40px; width: 140px; background-color: rgb(255, 164, 0); color: rgb(255, 255, 255); border-color: rgb(77, 87, 95); border-radius: 4px; border-width: 1px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; font-size: 15px; position: absolute; left: 90px; top: 255px;\">Note 5</button><button id=\"note6Button\" style=\"padding: 0px; margin: 0px; border-style: solid; height: 40px; width: 140px; background-color: rgb(255, 164, 0); color: rgb(255, 255, 255); border-color: rgb(77, 87, 95); border-radius: 4px; border-width: 1px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; font-size: 15px; position: absolute; left: 90px; top: 300px;\">Note 6</button><button id=\"note7Button\" style=\"padding: 0px; margin: 0px; border-style: solid; height: 40px; width: 140px; background-color: rgb(255, 164, 0); color: rgb(255, 255, 255); border-color: rgb(77, 87, 95); border-radius: 4px; border-width: 1px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; font-size: 15px; position: absolute; left: 90px; top: 345px;\">Note 7</button><button id=\"note8Button\" style=\"padding: 0px; margin: 0px; border-style: solid; height: 40px; width: 140px; background-color: rgb(255, 164, 0); color: rgb(255, 255, 255); border-color: rgb(77, 87, 95); border-radius: 4px; border-width: 1px; font-family: &quot;Arial Black&quot;, Gadget, sans-serif; font-size: 15px; position: absolute; left: 90px; top: 390px;\">Note 8</button></div></div>",
     "start_blocks": "//Update the array below\r\nvar notes = [\"B4\", \"B4\", \"C5\", \"D5\", \"D5\", \"C5\", \"B4\", \"A4\"];\r\n\r\nonEvent(\"note1Button\", \"click\", function() {\r\n  buzzer.note(notes[0], 100);\r\n});\r\nonEvent(\"note2Button\", \"click\", function() {\r\n  buzzer.note(notes[1], 100);\r\n});\r\nonEvent(\"note3Button\", \"click\", function() {\r\n  buzzer.note(notes[2], 100);\r\n});\r\nonEvent(\"note4Button\", \"click\", function() {\r\n  buzzer.note(notes[3], 100);\r\n});\r\nonEvent(\"note5Button\", \"click\", function() {\r\n  buzzer.note(notes[4], 100);\r\n});\r\nonEvent(\"note6Button\", \"click\", function() {\r\n  buzzer.note(notes[5], 100);\r\n});\r\nonEvent(\"note7Button\", \"click\", function() {\r\n  buzzer.note(notes[6], 100);\r\n});\r\nonEvent(\"note8Button\", \"click\", function() {\r\n  buzzer.note(notes[7], 100);\r\n});\r\n",
     "encrypted_examples": "1cy5Jz/SJh8BSl6hzvlGhFbYVZ0r8idsGc8cyv/drd5LRaSsqh4s83WHDuEl\nhVCGys+2UgnVIJ2sx+qdWLjCNQ==\n",
     "preload_asset_list": null
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-21T13:17:42.717+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Music - SB2.2_2022\\\"\"],\"cloned_from\":\"CSD U6 - Music - SB2.2_2022\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-21T13:17:42.717+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Music - SB2.2_2022\\\"\"],\"cloned_from\":\"CSD U6 - Music - SB2.2_2022\"},{\"changed_at\":\"2023-08-16 19:33:32 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"reference_links\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

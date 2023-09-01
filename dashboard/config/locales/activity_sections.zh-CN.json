@@ -24532,7 +24532,7 @@
         },
         "63df0c6e-ae3d-4724-9c1d-2ecd5bf8986a": {
           "tips": [
-            "如果你自己对编程不是很熟悉，介绍编程一小时时，可以播放其中一个[our inspirational videos](https://hourofcode.com/us/resources#videos)。选择一个你认为能够启发学生灵感的视频，并立即分享。对于年轻学员，我们推荐“[The Hour of Code is Here](https://youtu.be/FC5FbmsH4fw)”。"
+            "如果你自己对编程不是很熟悉，介绍编程一小时时，可以播放其中一个[our inspirational videos][0]。选择一个你认为能够启发学生灵感的视频，并立即分享。对于年轻学员，我们推荐“[The Hour of Code is Here][1]”。"
           ]
         },
         "f96053ea-387e-47d5-a018-65619ec093b0": {
@@ -24545,7 +24545,7 @@
         },
         "91cc858b-9f90-4134-b890-237f457e8423": {
           "name": "《我的世界》：水上航行",
-          "description": "挑战你的学生完成[Minecraft: Voyage Aquatic](http://studio.code.org/s/aquatic/lessons/1/levels/1)教程。  \n\n根据学生的年龄和能力，你可以考虑：  \n\n-   对于年龄较小的学生，我们建议你将班级分成两人一组，让每组一起使用[pair programming](https://youtu.be/vgkahOzFH2Q)完成教程。  \n-   对于中年级的学员，我们发现独立学习教程效果很好。有时，允许学生选择他们自己的教程会有帮助。如果学生对《我的世界》不感兴趣，他们可以通过[Code with Anna and Elsa](https://studio.code.org/s/frozen/stage/1/puzzle/1)或[Star Wars](https://code.org/starwars)教程获得类似的体验。  \n-   对于年长或成年学员，[Minecraft: Voyage Aquatic](http://studio.code.org/s/aquatic/lessons/1/levels/1)教程作为独立挑战或结对编程活动都非常好。"
+          "description": "挑战你的学生完成[Minecraft: Voyage Aquatic][0]教程。  \n\n根据学生的年龄和能力，你可以考虑：  \n\n-   对于年龄较小的学生，我们建议你将班级分成两人一组，让每组一起使用[pair programming][1]完成教程。  \n-   对于中年级的学员，我们发现独立学习教程效果很好。有时，允许学生选择他们自己的教程会有帮助。如果学生对《我的世界》不感兴趣，他们可以通过[Code with Anna and Elsa][2]或[Star Wars][3]教程获得类似的体验。  \n-   对于年长或成年学员，[Minecraft: Voyage Aquatic][4]教程作为独立挑战或结对编程活动都非常好。"
         },
         "900f3fd4-40aa-42f7-89fc-e5240b2db143": {
           "tips": [
@@ -24553,7 +24553,7 @@
           ]
         },
         "1be305a6-52f5-40bb-a8d5-f851a3c61a3a": {
-          "description": "如果有小组或个人提前完成，他们可以访问[code.org/learn](http://code.org/learn)尝试其它教程。"
+          "description": "如果有小组或个人提前完成，他们可以访问[code.org/learn][0]尝试其它教程。"
         },
         "29412a26-dd7b-4990-a8bb-7e6f7bfa00d6": {
           "name": "汇报",
@@ -24561,18 +24561,18 @@
         },
         "7e26ffea-ccaa-4969-9b40-01573fbe4303": {
           "name": "鼓励",
-          "description": "解释你今天花了一个小时写代码，因为这周是计算机科学教育周，全球数以百万计的学生也在这周学习编程一小时。祝贺学生参与这个世界性运动。\n\n给每个学生一张写有其名字的[certificate](https://studio.code.org/certificates/batch?course=bWM=)。"
+          "description": "解释你今天花了一个小时写代码，因为这周是计算机科学教育周，全球数以百万计的学生也在这周学习编程一小时。祝贺学生参与这个世界性运动。\n\n给每个学生一张写有其名字的[certificate][0]。"
         },
         "de9c3d28-c38a-4d2e-af91-a72a92d31f52": {
           "name": "下一步",
-          "description": "让学生知道，如果他们喜欢今天的活动，他们有很多继续编码的选择。鼓励学生访问[code.org/learn](<>)获取选项列表。此外，如果你正在计划接下来的任何扩展活动，告诉学生你的课堂接下来会发生什么。"
+          "description": "让学生知道，如果他们喜欢今天的活动，他们有很多继续编码的选择。鼓励学生访问[code.org/learn][0]获取选项列表。此外，如果你正在计划接下来的任何扩展活动，告诉学生你的课堂接下来会发生什么。"
         },
         "ebf68fd6-9cfe-4fc2-93b4-e61860fc853b": {
-          "description": "给每位学生发一张[“Exit Ticket”](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing)，并让他们总结今天所学的知识、自己的感受或体验的内容。学生可以画出、写出或用任何自己喜欢的方式来表达自己。在每位学生离开教室时收集其“课堂反馈条”。如果你喜欢的话，你可以在公告栏或学校某个显眼的地方张贴“课堂反馈条”，作为编程一小时的提示。"
+          "description": "给每位学生发一张[“Exit Ticket”][0]，并让他们总结今天所学的知识、自己的感受或体验的内容。学生可以画出、写出或用任何自己喜欢的方式来表达自己。在每位学生离开教室时收集其“课堂反馈条”。如果你喜欢的话，你可以在公告栏或学校某个显眼的地方张贴“课堂反馈条”，作为编程一小时的提示。"
         },
         "f3360f34-a0a8-4d3d-98e2-fe6176ad0e2e": {
           "name": "超越一小时代码",
-          "description": "编程一小时结束后，有多种方法可以继续在K-5课堂教授计算机科学。这里有一些思路：\n\n-   **教授[Code Studio Computer Science Fundamentals](http://code.org/educate/k5)课程**。这六门课程专为低龄学习者而设计。学生通过一系列谜题学习编码，教师使用有趣的课程计划，有助于让学习变得更生动。Code.org在线或面对面为这些课程提供免费辅导。\n-   **访问[You can Teach Computer Science](https://code.org/teach)**获取更多课程建议。\n-   **邀请计算机科学专家向班上学生讲述其工作**。不认识任何本地计算机科学家？通过我们的[volunteer map](https://code.org/volunteer/local)联系志愿者。"
+          "description": "编程一小时结束后，有多种方法可以继续在K-5课堂教授计算机科学。这里有一些思路：\n\n-   **教授[Code Studio Computer Science Fundamentals][0]课程**。这六门课程专为低龄学习者而设计。学生通过一系列谜题学习编码，教师使用有趣的课程计划，有助于让学习变得更生动。Code.org在线或面对面为这些课程提供免费辅导。\n-   **访问[You can Teach Computer Science][1]**获取更多课程建议。\n-   **邀请计算机科学专家向班上学生讲述其工作**。不认识任何本地计算机科学家？通过我们的[volunteer map][2]联系志愿者。"
         },
         "6b51b4f1-5b1d-4b29-af25-c48d716a2d22": {
           "description": "#### 搭建舞台\n\n欢迎学生来上课，简单介绍当天的活动。  \n\n**说：**_今天我们要花一个小时学习编码。有人听说过“密码”这个词吗？这是什么意思？_\n\n学生们可能会提到“代码”就像一个秘密信息，或者它在某种程度上与计算机有关。",
@@ -24963,7 +24963,7 @@
         },
         "aced2726-6ed1-4645-9fd2-eccfe982584f": {
           "tips": [
-            "如果你自己对编程不是很熟悉，介绍编程一小时时，可以播放其中一个[our inspirational videos](https://hourofcode.com/us/resources#videos)。选择一个你认为能够启发学生灵感的视频，并立即分享。对于年轻学员，我们推荐“[Anybody Can Learn](https://youtu.be/qYZF6oIZtfc)”。"
+            "如果你自己对编程不是很熟悉，介绍编程一小时时，可以播放其中一个[our inspirational videos][0]。选择一个你认为能够启发学生灵感的视频，并立即分享。对于年轻学员，我们推荐“[Anybody Can Learn][1]”。"
           ]
         },
         "a0692bbb-9e61-49d2-ac85-96bd4a922f5a": {
@@ -24971,7 +24971,7 @@
         },
         "8af57fdb-d7be-4cc2-9964-8f7eed4102f9": {
           "name": "飞扬的代码",
-          "description": "挑战你的学生完成[Make a Flappy Game](https://studio.code.org/flappy/1)教程。\n\n 根据学生的年龄和能力，你可以考虑：\n\n-   对于初高中学生，我们建议你选择可以自由发挥和创建应用程序或游戏的教程。你可以让学生独立学习、结对学习或分组学习。在[code.org/learn](http://code.org/learn)上还有许多其他的教程，包括[Playlab](https://studio.code.org/s/playlab/stage/1/puzzle/1)和我们的新测试版工具[AppLab](https://code.org/educate/applab)。  \n-   对于年龄较小的学生，我们建议你将班级分成两人一组或非常小的小组（每个小组3-4名学生），并要求每个小组一起使用[pair programming](https://youtu.be/vgkahOzFH2Q)完成教程。  \n-   对于成人学员来说，[Write your first computer program](https://studio.code.org/hoc/1)教程作为独立挑战或结对编程活动非常适合。"
+          "description": "挑战你的学生完成[Make a Flappy Game][0]教程。\n\n 根据学生的年龄和能力，你可以考虑：\n\n-   对于初高中学生，我们建议你选择可以自由发挥和创建应用程序或游戏的教程。你可以让学生独立学习、结对学习或分组学习。在[code.org/learn][1]上还有许多其他的教程，包括[Playlab][2]和我们的新测试版工具[AppLab][3]。  \n-   对于年龄较小的学生，我们建议你将班级分成两人一组或非常小的小组（每个小组3-4名学生），并要求每个小组一起使用[pair programming][4]完成教程。  \n-   对于成人学员来说，[Write your first computer program][5]教程作为独立挑战或结对编程活动非常适合。"
         },
         "47fe47af-9de3-4ba5-8193-1f489bef9544": {
           "tips": [
@@ -24979,7 +24979,7 @@
           ]
         },
         "55f2f6a9-8e6b-49c2-8988-e2a09956e222": {
-          "description": "如果有小组或个人提前完成，他们可以访问[code.org/learn](http://code.org/learn)尝试其它教程。"
+          "description": "如果有小组或个人提前完成，他们可以访问[code.org/learn][0]尝试其它教程。"
         },
         "cd649101-5c1f-4bcb-9258-3cabf2bfccb6": {
           "name": "汇报",
@@ -24987,7 +24987,7 @@
         },
         "ca7d5e61-0396-4885-934c-0d70ab63b072": {
           "name": "鼓励",
-          "description": "解释你今天花了一个小时写代码，因为这周是计算机科学教育周，全球数以百万计的学生也在这周学习编程一小时。祝贺学生参与这个世界性运动。\n\n给每个学生一张写有其名字的[certificate](http://code.org/certificates)。"
+          "description": "解释你今天花了一个小时写代码，因为这周是计算机科学教育周，全球数以百万计的学生也在这周学习编程一小时。祝贺学生参与这个世界性运动。\n\n给每个学生一张写有其名字的[certificate][0]。"
         },
         "d4bf5db5-6884-4166-ae90-3a5cd01b9695": {
           "name": "下一步",
@@ -24999,7 +24999,7 @@
         },
         "f7c11887-da26-4c7b-be7a-1b84d330ed30": {
           "name": "超越一小时代码",
-          "description": "编程一小时结束后，有多种方法可以继续在K-5教室教授计算机科学。这里有一些思路：\n\n-   **教授[Code Studio Computer Science Fundamentals](http://code.org/educate/k5)课程**。这六门课程专为低龄学习者而设计。学生们通过一系列谜题学习编码，教师使用有趣的课程计划，有助于让学习变得更生动。Code.org在线或面对面为这些课程提供免费辅导。\n-   **邀请计算机科学专家向班上学生讲述其工作**。不认识志愿者？可以在[volunteer map](https://code.org/volunteer/local)上联系一些。"
+          "description": "编程一小时结束后，有多种方法可以继续在K-5教室教授计算机科学。这里有一些思路：\n\n-   **教授[Code Studio Computer Science Fundamentals][0]课程**。这六门课程专为低龄学习者而设计。学生们通过一系列谜题学习编码，教师使用有趣的课程计划，有助于让学习变得更生动。Code.org在线或面对面为这些课程提供免费辅导。\n-   **邀请计算机科学专家向班上学生讲述其工作**。不认识志愿者？可以在[volunteer map][1]上联系一些。"
         },
         "4fddbdf5-8e43-4536-bdaa-98b0b8c240ad": {
           "name": "搭建舞台",
@@ -25007,7 +25007,7 @@
         },
         "55cc55a9-45cb-4bbd-bf37-2de8a2abd9db": {
           "tips": [
-            "如果你有时间，或者你的学生需要更多背景信息，你可能会考虑在编程一小时活动之前讲授[\"The Drawing Machine\"](https://code.org/curriculum/misc/hocunplugged/Teacher)。这节简短的课程向学生介绍计算机辅助绘图的思路，这将帮助他们在[Code with Anna and Elsa tutorial](https://studio.code.org/s/frozen/stage/1/puzzle/1)上更成功。"
+            "如果你有时间，或者你的学生需要更多背景信息，你可能会考虑在编程一小时活动之前讲授[\"The Drawing Machine\"][0]。这节简短的课程向学生介绍计算机辅助绘图的思路，这将帮助他们在[Code with Anna and Elsa tutorial][1]上更成功。"
           ]
         },
         "46e7088b-b207-46ae-be95-3ceacecc3f35": {
@@ -25015,7 +25015,7 @@
         },
         "063fb28a-8520-4c66-9821-3be0f0d1ed5f": {
           "tips": [
-            "如果你自己对编程不是很熟悉，介绍编程一小时时，可以播放其中一个[our inspirational videos](https://hourofcode.com/us/resources#videos)。选择一个你认为能够启发学生灵感的视频，并立即分享。对于中年级学员，我们推荐“[The Hour of Code is Here](https://youtu.be/FC5FbmsH4fw)”。"
+            "如果你自己对编程不是很熟悉，介绍编程一小时时，可以播放其中一个[our inspirational videos][0]。选择一个你认为能够启发学生灵感的视频，并立即分享。对于中年级学员，我们推荐“[The Hour of Code is Here][1]”。"
           ]
         },
         "c18f0050-ba65-4f12-8cc6-fe7f16b5806b": {
@@ -25023,7 +25023,7 @@
         },
         "e5e802d6-9ee4-4ef3-aab2-616ac241b5f8": {
           "name": "和安娜、爱莎一起编程",
-          "description": "挑战你的学生完成[Code with Anna and Elsa](https://studio.code.org/s/frozen/stage/1/puzzle/1)教程。  \n\n根据学生的年龄和能力，你可以考虑：  \n\n-   对于年龄较小的学生，我们建议你将班级分成两人一组或非常小的小组（每组3-4名学生），让每组一起使用[pair programming](https://youtu.be/vgkahOzFH2Q)完成教程。K-5年级的学生可能会在教程中的数学部分遇到困难（需要对角度测量有基本的了解）。如果你的学生比较年轻，考虑提供补充课程计划，[\"The Drawing Machine\"](https://code.org/curriculum/misc/hocunplugged/Teacher)在编程一小时之前介绍基础知识。\n-   对于年龄较大的学生，我们发现独立学习教程效果很好。有时，允许学生选择他们自己的教程会有帮助。如果学生对《冰雪奇缘》不感兴趣，他们可以通过[Write Your First Computer Program](https://studio.code.org/hoc/1)教程获得类似的体验。  \n-   对于成年学员，[Code with Anna and Elsa](https://studio.code.org/s/frozen/stage/1/puzzle/1)教程作为独立挑战或结对编程活动都非常好。"
+          "description": "挑战你的学生完成[Code with Anna and Elsa][0]教程。  \n\n根据学生的年龄和能力，你可以考虑：  \n\n-   对于年龄较小的学生，我们建议你将班级分成两人一组或非常小的小组（每组3-4名学生），让每组一起使用[pair programming][1]完成教程。K-5年级的学生可能会在教程中的数学部分遇到困难（需要对角度测量有基本的了解）。如果你的学生比较年轻，考虑提供补充课程计划，[\"The Drawing Machine\"][2]在编程一小时之前介绍基础知识。\n-   对于年龄较大的学生，我们发现独立学习教程效果很好。有时，允许学生选择他们自己的教程会有帮助。如果学生对《冰雪奇缘》不感兴趣，他们可以通过[Write Your First Computer Program][3]教程获得类似的体验。  \n-   对于成年学员，[Code with Anna and Elsa][4]教程作为独立挑战或结对编程活动都非常好。"
         },
         "bdb8b54a-c21d-4bcf-a960-67ecf0468a7f": {
           "tips": [
@@ -25031,15 +25031,15 @@
           ]
         },
         "da8b52b2-8db6-440d-add3-8578161f59e2": {
-          "description": "如果有小组或个人提前完成，他们可以访问[code.org/learn](http://code.org/learn)尝试其它教程。"
+          "description": "如果有小组或个人提前完成，他们可以访问[code.org/learn][0]尝试其它教程。"
         },
         "38799019-2b81-4c28-a239-762b90e0f5e3": {
           "name": "汇报",
-          "description": "给每个学生一些便利贴或便签。推进快速[“Whip Around”](http://www.theteachertoolkit.com/index.php/tool/whip-around)活动：\n\n-   提出一个有多个答案的提示，如“分享你完成的编程一小时活动中你真正喜欢的东西”或“分享你今天学到的一些技能”。  \n-   让学生写下尽可能多的答案，每张便利贴或便签卡写下一个想法。  \n-   在教室里“打转”，一次叫一个学生。让学生分享他们的一个回答。被点名时，学生不能重复回答；他们必须添加一些新的东西。  \n-   在完成问答后，让学生讨论他们的回答中出现最多的想法和主题。"
+          "description": "给每个学生一些便利贴或便签。推进快速[“Whip Around”][0]活动：\n\n-   提出一个有多个答案的提示，如“分享你完成的编程一小时活动中你真正喜欢的东西”或“分享你今天学到的一些技能”。  \n-   让学生写下尽可能多的答案，每张便利贴或便签卡写下一个想法。  \n-   在教室里“打转”，一次叫一个学生。让学生分享他们的一个回答。被点名时，学生不能重复回答；他们必须添加一些新的东西。  \n-   在完成问答后，让学生讨论他们的回答中出现最多的想法和主题。"
         },
         "e9751fff-a71d-4d90-b401-0ccbf3356c44": {
           "name": "鼓励",
-          "description": "解释你今天花了一个小时写代码，因为这周是计算机科学教育周，全球数以百万计的学生也在这周学习编程一小时。祝贺学生参与这个世界性运动。\n\n给每个学生一张写有其名字的[certificate](http://code.org/certificates)。"
+          "description": "解释你今天花了一个小时写代码，因为这周是计算机科学教育周，全球数以百万计的学生也在这周学习编程一小时。祝贺学生参与这个世界性运动。\n\n给每个学生一张写有其名字的[certificate][0]。"
         },
         "3596cc47-e661-4d00-943e-ed858c4f6f5d": {
           "name": "下一步",
@@ -25050,7 +25050,7 @@
         },
         "3a8c30ae-50bb-4a85-99d8-b62c9f7e1bbf": {
           "name": "超越一小时代码",
-          "description": "编程一小时结束后，有多种方法可以继续在K-5教室教授计算机科学。这里有一些思路：\n\n-   **教授[Code Studio Computer Science Fundamentals](http://code.org/educate/k5)课程**。这六门课程专为低龄学习者而设计。学生们通过一系列谜题学习编码，教师使用有趣的课程计划，有助于让学习变得更生动。Code.org在线或面对面为这些课程提供免费辅导。\n-   研究你今天了解到的一些编程职业。在[Sharemylesson.com](http://www.sharemylesson.com/TaxonomySearchResults.aspx?area=resources&keywords=career+research)上找到关于职业规划研究项目的资源。\n-   **邀请计算机科学专家向班上学生讲述其工作**。如果不认识任何志愿者，可通过[volunteer map](https://code.org/volunteer/local)联系一些。"
+          "description": "编程一小时结束后，有多种方法可以继续在K-5教室教授计算机科学。这里有一些思路：\n\n-   **教授[Code Studio Computer Science Fundamentals][0]课程**。这六门课程专为低龄学习者而设计。学生们通过一系列谜题学习编码，教师使用有趣的课程计划，有助于让学习变得更生动。Code.org在线或面对面为这些课程提供免费辅导。\n-   研究你今天了解到的一些编程职业。在[Sharemylesson.com][1]上找到关于职业规划研究项目的资源。\n-   **邀请计算机科学专家向班上学生讲述其工作**。如果不认识任何志愿者，可通过[volunteer map][2]联系一些。"
         },
         "a2f60a17-c25f-4c4d-9f2d-384486d7a67d": {
           "name": "搭建舞台",
@@ -25058,7 +25058,7 @@
         },
         "c857d03e-91e3-4949-8ccc-79a2aec463c8": {
           "tips": [
-            "如果你自己对编程不是很熟悉，介绍编程一小时时，可以播放其中一个[our inspirational videos](https://hourofcode.com/us/resources#videos)。选择一个你认为能够启发学生灵感的视频，并立即分享。对于年轻学员，我们推荐“[Anybody Can Learn](https://youtu.be/qYZF6oIZtfc)”。"
+            "如果你自己对编程不是很熟悉，介绍编程一小时时，可以播放其中一个[our inspirational videos][0]。选择一个你认为能够启发学生灵感的视频，并立即分享。对于年轻学员，我们推荐“[Anybody Can Learn][1]”。"
           ]
         },
         "8ad0974f-b2ad-4632-bfe5-8c8760cd2e45": {
@@ -25066,7 +25066,7 @@
         },
         "0e395269-9740-4229-a7ac-b18b9f4eced9": {
           "name": "陶阿甘游戏实验室",
-          "description": "挑战你的学生完成[Gumball Play Lab](https://studio.code.org/s/gumball/lessons/1/levels/1)教程。\n\n 根据学生的年龄和能力，你可以考虑：\n\n-   对于初高中学生，我们建议你选择可以自由发挥和创建应用程序或游戏的教程。你可以让学生独立学习、结对学习或分组学习。在[code.org/learn](http://code.org/learn)上还有许多其他的教程，包括[Make a Flappy Game](https://studio.code.org/s/flappy)和我们的新测试版工具[AppLab](https://code.org/educate/applab)。  \n-   对于年龄较小的学生，我们建议你将班级分成两人一组或非常小的小组（每个小组3-4名学生），并要求每个小组一起使用[pair programming](https://youtu.be/vgkahOzFH2Q)完成教程。  \n-   对于成人学员来说，[Write your first computer program](https://studio.code.org/hoc/1)教程作为独立挑战或结对编程活动非常适合。"
+          "description": "挑战你的学生完成[Gumball Play Lab][0]教程。\n\n 根据学生的年龄和能力，你可以考虑：\n\n-   对于初高中学生，我们建议你选择可以自由发挥和创建应用程序或游戏的教程。你可以让学生独立学习、结对学习或分组学习。在[code.org/learn][1]上还有许多其他的教程，包括[Make a Flappy Game][2]和我们的新测试版工具[AppLab][3]。  \n-   对于年龄较小的学生，我们建议你将班级分成两人一组或非常小的小组（每个小组3-4名学生），并要求每个小组一起使用[pair programming][4]完成教程。  \n-   对于成人学员来说，[Write your first computer program][5]教程作为独立挑战或结对编程活动非常适合。"
         },
         "eea63453-59c2-4c48-8d04-d6612d379584": {
           "tips": [
@@ -25074,7 +25074,7 @@
           ]
         },
         "fd77d784-72d9-4687-843d-7d1ecd17b9a1": {
-          "description": "如果有小组或个人提前完成，他们可以访问[code.org/learn](http://code.org/learn)尝试其它教程。"
+          "description": "如果有小组或个人提前完成，他们可以访问[code.org/learn][0]尝试其它教程。"
         },
         "0815f2e7-8336-48ae-8ac0-5d0af1f956d9": {
           "name": "汇报",
@@ -25082,7 +25082,7 @@
         },
         "3b92bb05-ac4c-4717-afce-ed3d10f54527": {
           "name": "鼓励",
-          "description": "解释你今天花了一个小时写代码，因为这周是计算机科学教育周，全球数以百万计的学生也在这周学习编程一小时。祝贺学生参与这个世界性运动。\n\n给每个学生一张写有其名字的[certificate](http://code.org/certificates)。"
+          "description": "解释你今天花了一个小时写代码，因为这周是计算机科学教育周，全球数以百万计的学生也在这周学习编程一小时。祝贺学生参与这个世界性运动。\n\n给每个学生一张写有其名字的[certificate][0]。"
         },
         "59cd05df-cb4d-4280-8700-840826c01845": {
           "name": "下一步",
@@ -25094,7 +25094,7 @@
         },
         "2836d5f0-0808-4868-bc34-bbd3cf8b631f": {
           "name": "超越一小时代码",
-          "description": "编程一小时结束后，有多种方法可以继续在K-5教室教授计算机科学。这里有一些思路：\n\n-   **教授[Code Studio Computer Science Fundamentals](http://code.org/educate/k5)课程**。这四门课程专为低龄学习者而设计。学生们通过一系列谜题学习编码，教师使用有趣的课程计划，有助于让学习变得更生动。Code.org在线或面对面为这些课程提供免费辅导。\n-   **邀请计算机科学专家向班上学生讲述其工作**。不认识志愿者？可以在[volunteer map](https://code.org/volunteer/local)上联系一些。"
+          "description": "编程一小时结束后，有多种方法可以继续在K-5教室教授计算机科学。这里有一些思路：\n\n-   **教授[Code Studio Computer Science Fundamentals][0]课程**。这四门课程专为低龄学习者而设计。学生们通过一系列谜题学习编码，教师使用有趣的课程计划，有助于让学习变得更生动。Code.org在线或面对面为这些课程提供免费辅导。\n-   **邀请计算机科学专家向班上学生讲述其工作**。不认识志愿者？可以在[volunteer map][1]上联系一些。"
         },
         "c4d6d315-bb5c-47d7-bc5e-f5fce2e4ae67": {
           "name": "搭建舞台",
@@ -25108,18 +25108,18 @@
         },
         "ce182c47-efed-4526-bb9c-f4ec66b052a4": {
           "name": "一般支持",
-          "description": "这里有一些建议，无论学生的学习水平如何，对他们都应该有帮助\n\n-   **与周围的人合作：**鼓励学生在被卡住时与周围的人检查。根据学生的年龄和能力，你可能会考虑正式地将你的班级分成两人一组，使用[结对编程](https://youtu.be/vgkahOzFH2Q)来完成教程。  \n\n-   **阅读说明：**说明通常提供如何完成级别的有用提示。在给学生答案之前，确保他们已经仔细地查看了说明、提示、视频和任何入门代码。\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **卡住了？寻找提示：**每个级别都包含关于如何通过级别的建议提示，包括要尝试哪些代码模块。 \n\n-   **花时间去尝试。**说明通常告诉学生该做什么，但他们也可以自由尝试自己的思路。"
+          "description": "这里有一些建议，无论学生的学习水平如何，对他们都应该有帮助\n\n-   **与周围的人合作：**鼓励学生在被卡住时与周围的人检查。根据学生的年龄和能力，你可能会考虑正式地将你的班级分成两人一组，使用[结对编程][0]来完成教程。  \n\n-   **阅读说明：**说明通常提供如何完成级别的有用提示。在给学生答案之前，确保他们已经仔细地查看了说明、提示、视频和任何入门代码。\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **卡住了？寻找提示：**每个级别都包含关于如何通过级别的建议提示，包括要尝试哪些代码模块。 \n\n-   **花时间去尝试。**说明通常告诉学生该做什么，但他们也可以自由尝试自己的思路。"
         },
         "893dba56-7c8e-4897-949b-de514de76011": {
           "name": "你好世界",
           "progression_name": "你好世界"
         },
         "05ad915a-32e0-4799-90a2-2a53efb937f1": {
-          "description": "如果团队或个人提前完成，鼓励他们在最后一个级别继续构建项目。如果学生不确定还能做什么，你可以用问题来提示他们：\n\n-   你还可以在项目中添加其他哪些精灵图？\n-   你有没有看过服装库或尝试绘制自己的精灵图服装？\n-   你的精灵图还能说些什么？\n-   当你点击精灵图时，它们应该做什么？\n-   邀请学生分享想法，互相学习。他们还可以访问[code.org/learn](https://code.org/learn)尝试其他教程。"
+          "description": "如果团队或个人提前完成，鼓励他们在最后一个级别继续构建项目。如果学生不确定还能做什么，你可以用问题来提示他们：\n\n-   你还可以在项目中添加其他哪些精灵图？\n-   你有没有看过服装库或尝试绘制自己的精灵图服装？\n-   你的精灵图还能说些什么？\n-   当你点击精灵图时，它们应该做什么？\n-   邀请学生分享想法，互相学习。他们还可以访问[code.org/learn][0]尝试其他教程。"
         },
         "d5d3f8eb-f17e-4f26-88a8-ca6422ed7a1f": {
           "name": "反射",
-          "description": "#### 汇报\n\n要求学生反思当天的活动。关于编程、精灵图、事件，他们学到了什么？\n\n在花了一个小时进行探索之后，他们对计算机科学和编程有什么感觉？\n\n#### 后续步骤\n\n让学生知道，如果他们喜欢今天的活动，他们拥有许多继续编程的选择。访问[CS Connections](https://code.org/educate/csc)了解如何将计算机科学整合到其他学科的思路，或进一步阅读我们[为小学提供的课程](https://code.org/educate/curriculum/elementary-school)。"
+          "description": "#### 汇报\n\n要求学生反思当天的活动。关于编程、精灵图、事件，他们学到了什么？\n\n在花了一个小时进行探索之后，他们对计算机科学和编程有什么感觉？\n\n#### 后续步骤\n\n让学生知道，如果他们喜欢今天的活动，他们拥有许多继续编程的选择。访问[CS Connections][0]了解如何将计算机科学整合到其他学科的思路，或进一步阅读我们[为小学提供的课程][1]。"
         },
         "aad08892-e7b6-4fdc-bfd6-8199118fc2d6": {
           "name": "搭建舞台",
@@ -25133,18 +25133,18 @@
         },
         "0a05af25-05aa-4e56-92ce-f14570cc1c64": {
           "name": "一般支持",
-          "description": "这里有一些建议，无论学生的学习水平如何，对他们都应该有帮助\n\n-   **与周围的人合作：**鼓励学生在被卡住时与周围的人检查。根据学生的年龄和能力，你可能会考虑正式地将你的班级分成两人一组，使用[结对编程](https://youtu.be/vgkahOzFH2Q)来完成教程。  \n\n-   **阅读说明：**说明通常提供如何完成级别的有用提示。在给学生答案之前，确保他们已经仔细地查看了说明、提示、视频和任何入门代码。\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **卡住了？寻找提示：**每个级别都包含关于如何通过级别的建议提示，包括要尝试哪些代码模块。 \n\n-   **花时间去尝试。**说明通常告诉学生该做什么，但他们也可以自由尝试自己的思路。"
+          "description": "这里有一些建议，无论学生的学习水平如何，对他们都应该有帮助\n\n-   **与周围的人合作：**鼓励学生在被卡住时与周围的人检查。根据学生的年龄和能力，你可能会考虑正式地将你的班级分成两人一组，使用[结对编程][0]来完成教程。  \n\n-   **阅读说明：**说明通常提供如何完成级别的有用提示。在给学生答案之前，确保他们已经仔细地查看了说明、提示、视频和任何入门代码。\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **卡住了？寻找提示：**每个级别都包含关于如何通过级别的建议提示，包括要尝试哪些代码模块。 \n\n-   **花时间去尝试。**说明通常告诉学生该做什么，但他们也可以自由尝试自己的思路。"
         },
         "f6a21949-1c94-4269-acae-98046f6a9052": {
           "name": "你好世界",
           "progression_name": "你好世界"
         },
         "3e2a74f4-d574-42fd-9bf3-5b319526299a": {
-          "description": "如果团队或个人提前完成，鼓励他们在最后一个级别继续构建项目。如果学生不确定还能做什么，你可以用问题来提示他们：\n\n-   你还可以在项目中添加其他哪些精灵图？\n-   你有没有看过服装库或尝试绘制自己的精灵图服装？\n-   你的精灵图还能说些什么？\n-   当你点击精灵图时，它们应该做什么？\n-   邀请学生分享想法，互相学习。他们还可以访问[code.org/learn](https://code.org/learn)尝试其他教程。"
+          "description": "如果团队或个人提前完成，鼓励他们在最后一个级别继续构建项目。如果学生不确定还能做什么，你可以用问题来提示他们：\n\n-   你还可以在项目中添加其他哪些精灵图？\n-   你有没有看过服装库或尝试绘制自己的精灵图服装？\n-   你的精灵图还能说些什么？\n-   当你点击精灵图时，它们应该做什么？\n-   邀请学生分享想法，互相学习。他们还可以访问[code.org/learn][0]尝试其他教程。"
         },
         "f95b4eed-639e-483e-bef7-ead9abf4808e": {
           "name": "反射",
-          "description": "#### 汇报\n\n要求学生反思当天的活动。关于编程、精灵图、事件，他们学到了什么？\n\n在花了一个小时进行探索之后，他们对计算机科学和编程有什么感觉？\n\n#### 后续步骤\n\n让学生知道，如果他们喜欢今天的活动，他们拥有许多继续编程的选择。访问[CS Connections](https://code.org/educate/csc)了解如何将计算机科学整合到其他学科的思路，或进一步阅读我们[为小学提供的课程](https://code.org/educate/curriculum/elementary-school)。"
+          "description": "#### 汇报\n\n要求学生反思当天的活动。关于编程、精灵图、事件，他们学到了什么？\n\n在花了一个小时进行探索之后，他们对计算机科学和编程有什么感觉？\n\n#### 后续步骤\n\n让学生知道，如果他们喜欢今天的活动，他们拥有许多继续编程的选择。访问[CS Connections][0]了解如何将计算机科学整合到其他学科的思路，或进一步阅读我们[为小学提供的课程][1]。"
         },
         "5ba761c1-02df-411f-96cd-69a8327e0d2c": {
           "name": "搭建舞台",
@@ -25158,18 +25158,18 @@
         },
         "11f167ca-2cf6-4e6b-8857-316c5cb55f82": {
           "name": "一般支持",
-          "description": "这里有一些建议，无论学生的学习水平如何，对他们都应该有帮助\n\n-   **与周围的人合作：**鼓励学生在被卡住时与周围的人检查。根据学生的年龄和能力，你可能会考虑正式地将你的班级分成两人一组，使用[结对编程](https://youtu.be/vgkahOzFH2Q)来完成教程。  \n\n-   **阅读说明：**说明通常提供如何完成级别的有用提示。在给学生答案之前，确保他们已经仔细地查看了说明、提示、视频和任何入门代码。\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **卡住了？寻找提示：**每个级别都包含关于如何通过级别的建议提示，包括要尝试哪些代码模块。 \n\n-   **花时间去尝试。**说明通常告诉学生该做什么，但他们也可以自由尝试自己的思路。"
+          "description": "这里有一些建议，无论学生的学习水平如何，对他们都应该有帮助\n\n-   **与周围的人合作：**鼓励学生在被卡住时与周围的人检查。根据学生的年龄和能力，你可能会考虑正式地将你的班级分成两人一组，使用[结对编程][0]来完成教程。  \n\n-   **阅读说明：**说明通常提供如何完成级别的有用提示。在给学生答案之前，确保他们已经仔细地查看了说明、提示、视频和任何入门代码。\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **卡住了？寻找提示：**每个级别都包含关于如何通过级别的建议提示，包括要尝试哪些代码模块。 \n\n-   **花时间去尝试。**说明通常告诉学生该做什么，但他们也可以自由尝试自己的思路。"
         },
         "c721eddb-4cfb-4237-a031-0730bbfdc926": {
           "name": "你好世界",
           "progression_name": "你好世界"
         },
         "8341212e-8528-4ad8-9c02-22066467054b": {
-          "description": "如果团队或个人提前完成，鼓励他们在最后一个级别继续构建项目。如果学生不确定还能做什么，你可以用问题来提示他们：\n\n-   你还可以在项目中添加其他哪些精灵图？\n-   你有没有看过服装库或尝试绘制自己的精灵图服装？\n-   你的精灵图还能说些什么？\n-   当你点击精灵图时，它们应该做什么？\n-   邀请学生分享想法，互相学习。他们还可以访问[code.org/learn](https://code.org/learn)尝试其他教程。"
+          "description": "如果团队或个人提前完成，鼓励他们在最后一个级别继续构建项目。如果学生不确定还能做什么，你可以用问题来提示他们：\n\n-   你还可以在项目中添加其他哪些精灵图？\n-   你有没有看过服装库或尝试绘制自己的精灵图服装？\n-   你的精灵图还能说些什么？\n-   当你点击精灵图时，它们应该做什么？\n-   邀请学生分享想法，互相学习。他们还可以访问[code.org/learn][0]尝试其他教程。"
         },
         "656eee11-dc6d-428e-8849-6e4b31dc8c81": {
           "name": "反射",
-          "description": "#### 汇报\n\n要求学生反思当天的活动。关于编程、精灵图、事件，他们学到了什么？\n\n在花了一个小时进行探索之后，他们对计算机科学和编程有什么感觉？\n\n#### 后续步骤\n\n让学生知道，如果他们喜欢今天的活动，他们拥有许多继续编程的选择。访问[CS Connections](https://code.org/educate/csc)了解如何将计算机科学整合到其他学科的思路，或进一步阅读我们[为小学提供的课程](https://code.org/educate/curriculum/elementary-school)。"
+          "description": "#### 汇报\n\n要求学生反思当天的活动。关于编程、精灵图、事件，他们学到了什么？\n\n在花了一个小时进行探索之后，他们对计算机科学和编程有什么感觉？\n\n#### 后续步骤\n\n让学生知道，如果他们喜欢今天的活动，他们拥有许多继续编程的选择。访问[CS Connections][0]了解如何将计算机科学整合到其他学科的思路，或进一步阅读我们[为小学提供的课程][1]。"
         },
         "9d3ef78a-4043-489e-898b-f407c914f698": {
           "name": "搭建舞台",
@@ -25183,18 +25183,18 @@
         },
         "2ff80a97-db35-4d10-9703-4d0cc3ff0c3a": {
           "name": "一般支持",
-          "description": "这里有一些建议，无论学生的学习水平如何，对他们都应该有帮助\n\n-   **与周围的人合作：**鼓励学生在被卡住时与周围的人检查。根据学生的年龄和能力，你可能会考虑正式地将你的班级分成两人一组，使用[结对编程](https://youtu.be/vgkahOzFH2Q)来完成教程。  \n\n-   **阅读说明：**说明通常提供如何完成级别的有用提示。在给学生答案之前，确保他们已经仔细地查看了说明、提示、视频和任何入门代码。\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **卡住了？寻找提示：**每个级别都包含关于如何通过级别的建议提示，包括要尝试哪些代码模块。 \n\n-   **花时间去尝试。**说明通常告诉学生该做什么，但他们也可以自由尝试自己的思路。"
+          "description": "这里有一些建议，无论学生的学习水平如何，对他们都应该有帮助\n\n-   **与周围的人合作：**鼓励学生在被卡住时与周围的人检查。根据学生的年龄和能力，你可能会考虑正式地将你的班级分成两人一组，使用[结对编程][0]来完成教程。  \n\n-   **阅读说明：**说明通常提供如何完成级别的有用提示。在给学生答案之前，确保他们已经仔细地查看了说明、提示、视频和任何入门代码。\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **卡住了？寻找提示：**每个级别都包含关于如何通过级别的建议提示，包括要尝试哪些代码模块。 \n\n-   **花时间去尝试。**说明通常告诉学生该做什么，但他们也可以自由尝试自己的思路。"
         },
         "70daba44-c26e-4286-95ae-50cbd8724b2d": {
           "name": "你好世界",
           "progression_name": "你好世界"
         },
         "77cef9f9-1949-455b-a0bd-f2cbc4a32986": {
-          "description": "如果团队或个人提前完成，鼓励他们在最后一个级别继续构建项目。如果学生不确定还能做什么，你可以用问题来提示他们：\n\n-   你还可以在项目中添加其他哪些精灵图？\n-   你有没有看过服装库或尝试绘制自己的精灵图服装？\n-   你的精灵图还能说些什么？\n-   当你点击精灵图时，它们应该做什么？\n-   邀请学生分享想法，互相学习。他们还可以访问[code.org/learn](https://code.org/learn)尝试其他教程。"
+          "description": "如果团队或个人提前完成，鼓励他们在最后一个级别继续构建项目。如果学生不确定还能做什么，你可以用问题来提示他们：\n\n-   你还可以在项目中添加其他哪些精灵图？\n-   你有没有看过服装库或尝试绘制自己的精灵图服装？\n-   你的精灵图还能说些什么？\n-   当你点击精灵图时，它们应该做什么？\n-   邀请学生分享想法，互相学习。他们还可以访问[code.org/learn][0]尝试其他教程。"
         },
         "ec905c64-2e80-49d0-8da3-7d75ed8d0693": {
           "name": "反射",
-          "description": "#### 汇报\n\n要求学生反思当天的活动。关于编程、精灵图、事件，他们学到了什么？\n\n在花了一个小时进行探索之后，他们对计算机科学和编程有什么感觉？\n\n#### 后续步骤\n\n让学生知道，如果他们喜欢今天的活动，他们拥有许多继续编程的选择。访问[CS Connections](https://code.org/educate/csc)了解如何将计算机科学整合到其他学科的思路，或进一步阅读我们[为小学提供的课程](https://code.org/educate/curriculum/elementary-school)。"
+          "description": "#### 汇报\n\n要求学生反思当天的活动。关于编程、精灵图、事件，他们学到了什么？\n\n在花了一个小时进行探索之后，他们对计算机科学和编程有什么感觉？\n\n#### 后续步骤\n\n让学生知道，如果他们喜欢今天的活动，他们拥有许多继续编程的选择。访问[CS Connections][0]了解如何将计算机科学整合到其他学科的思路，或进一步阅读我们[为小学提供的课程][1]。"
         },
         "6c387b78-14b7-4209-919a-97dbf64b9bc2": {
           "name": "搭建舞台",
@@ -25208,18 +25208,18 @@
         },
         "cc4e7bc2-813a-4d4a-be58-83d08ca5d970": {
           "name": "一般支持",
-          "description": "这里有一些建议，无论学生的学习水平如何，对他们都应该有帮助\n\n-   **与周围的人合作：**鼓励学生在被卡住时与周围的人检查。根据学生的年龄和能力，你可能会考虑正式地将你的班级分成两人一组，使用[结对编程](https://youtu.be/vgkahOzFH2Q)来完成教程。  \n\n-   **阅读说明：**说明通常提供如何完成级别的有用提示。在给学生答案之前，确保他们已经仔细地查看了说明、提示、视频和任何入门代码。\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **卡住了？寻找提示：**每个级别都包含关于如何通过级别的建议提示，包括要尝试哪些代码模块。 \n\n-   **花时间去尝试。**说明通常告诉学生该做什么，但他们也可以自由尝试自己的思路。"
+          "description": "这里有一些建议，无论学生的学习水平如何，对他们都应该有帮助\n\n-   **与周围的人合作：**鼓励学生在被卡住时与周围的人检查。根据学生的年龄和能力，你可能会考虑正式地将你的班级分成两人一组，使用[结对编程][0]来完成教程。  \n\n-   **阅读说明：**说明通常提供如何完成级别的有用提示。在给学生答案之前，确保他们已经仔细地查看了说明、提示、视频和任何入门代码。\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **卡住了？寻找提示：**每个级别都包含关于如何通过级别的建议提示，包括要尝试哪些代码模块。 \n\n-   **花时间去尝试。**说明通常告诉学生该做什么，但他们也可以自由尝试自己的思路。"
         },
         "062143a1-3063-4af1-864a-2ad1f9c88dd5": {
           "name": "你好世界",
           "progression_name": "你好世界"
         },
         "da91f0fe-e142-453f-a093-8e367d0a1454": {
-          "description": "如果团队或个人提前完成，鼓励他们在最后一个级别继续构建项目。如果学生不确定还能做什么，你可以用问题来提示他们：\n\n-   你还可以在项目中添加其他哪些精灵图？\n-   你有没有看过服装库或尝试绘制自己的精灵图服装？\n-   你的精灵图还能说些什么？\n-   当你点击精灵图时，它们应该做什么？\n-   邀请学生分享想法，互相学习。他们还可以访问[code.org/learn](https://code.org/learn)尝试其他教程。"
+          "description": "如果团队或个人提前完成，鼓励他们在最后一个级别继续构建项目。如果学生不确定还能做什么，你可以用问题来提示他们：\n\n-   你还可以在项目中添加其他哪些精灵图？\n-   你有没有看过服装库或尝试绘制自己的精灵图服装？\n-   你的精灵图还能说些什么？\n-   当你点击精灵图时，它们应该做什么？\n-   邀请学生分享想法，互相学习。他们还可以访问[code.org/learn][0]尝试其他教程。"
         },
         "f5756484-7296-4391-99e2-7b2678653934": {
           "name": "反射",
-          "description": "#### 汇报\n\n要求学生反思当天的活动。关于编程、精灵图、事件，他们学到了什么？\n\n在花了一个小时进行探索之后，他们对计算机科学和编程有什么感觉？\n\n#### 后续步骤\n\n让学生知道，如果他们喜欢今天的活动，他们拥有许多继续编程的选择。访问[CS Connections](https://code.org/educate/csc)了解如何将计算机科学整合到其他学科的思路，或进一步阅读我们[为小学提供的课程](https://code.org/educate/curriculum/elementary-school)。"
+          "description": "#### 汇报\n\n要求学生反思当天的活动。关于编程、精灵图、事件，他们学到了什么？\n\n在花了一个小时进行探索之后，他们对计算机科学和编程有什么感觉？\n\n#### 后续步骤\n\n让学生知道，如果他们喜欢今天的活动，他们拥有许多继续编程的选择。访问[CS Connections][0]了解如何将计算机科学整合到其他学科的思路，或进一步阅读我们[为小学提供的课程][1]。"
         },
         "bcc9e44c-ad4e-4efc-a12e-e9c74a5c1960": {
           "name": "搭建舞台",
@@ -25233,25 +25233,25 @@
         },
         "0d1c3be1-c6e4-437f-85b9-4912d1cd725b": {
           "name": "一般支持",
-          "description": "这里有一些建议，无论学生的学习水平如何，对他们都应该有帮助\n\n-   **与周围的人合作：**鼓励学生在被卡住时与周围的人检查。根据学生的年龄和能力，你可能会考虑正式地将你的班级分成两人一组，使用[结对编程](https://youtu.be/vgkahOzFH2Q)来完成教程。  \n\n-   **阅读说明：**说明通常提供如何完成级别的有用提示。在给学生答案之前，确保他们已经仔细地查看了说明、提示、视频和任何入门代码。\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **卡住了？寻找提示：**每个级别都包含关于如何通过级别的建议提示，包括要尝试哪些代码模块。 \n\n-   **花时间去尝试。**说明通常告诉学生该做什么，但他们也可以自由尝试自己的思路。"
+          "description": "这里有一些建议，无论学生的学习水平如何，对他们都应该有帮助\n\n-   **与周围的人合作：**鼓励学生在被卡住时与周围的人检查。根据学生的年龄和能力，你可能会考虑正式地将你的班级分成两人一组，使用[结对编程][0]来完成教程。  \n\n-   **阅读说明：**说明通常提供如何完成级别的有用提示。在给学生答案之前，确保他们已经仔细地查看了说明、提示、视频和任何入门代码。\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **卡住了？寻找提示：**每个级别都包含关于如何通过级别的建议提示，包括要尝试哪些代码模块。 \n\n-   **花时间去尝试。**说明通常告诉学生该做什么，但他们也可以自由尝试自己的思路。"
         },
         "fcf13574-b04a-42a7-9e17-ef0dba0bfe33": {
           "name": "你好世界",
           "progression_name": "你好世界"
         },
         "7cccfa6d-83c2-4d74-a71f-c9134fb1d0c2": {
-          "description": "如果团队或个人提前完成，鼓励他们在最后一个级别继续构建项目。如果学生不确定还能做什么，你可以用问题来提示他们：\n\n-   你还可以在项目中添加其他哪些精灵图？\n-   你有没有看过服装库或尝试绘制自己的精灵图服装？\n-   你的精灵图还能说些什么？\n-   当你点击精灵图时，它们应该做什么？\n-   邀请学生分享想法，互相学习。他们还可以访问[code.org/learn](https://code.org/learn)尝试其他教程。"
+          "description": "如果团队或个人提前完成，鼓励他们在最后一个级别继续构建项目。如果学生不确定还能做什么，你可以用问题来提示他们：\n\n-   你还可以在项目中添加其他哪些精灵图？\n-   你有没有看过服装库或尝试绘制自己的精灵图服装？\n-   你的精灵图还能说些什么？\n-   当你点击精灵图时，它们应该做什么？\n-   邀请学生分享想法，互相学习。他们还可以访问[code.org/learn][0]尝试其他教程。"
         },
         "574954ea-9128-428b-9965-b0d34518c11d": {
           "name": "反射",
-          "description": "#### 汇报\n\n要求学生反思当天的活动。关于编程、精灵图、事件，他们学到了什么？\n\n在花了一个小时进行探索之后，他们对计算机科学和编程有什么感觉？\n\n#### 后续步骤\n\n让学生知道，如果他们喜欢今天的活动，他们拥有许多继续编程的选择。访问[CS Connections](https://code.org/educate/csc)了解如何将计算机科学整合到其他学科的思路，或进一步阅读我们[为小学提供的课程](https://code.org/educate/curriculum/elementary-school)。"
+          "description": "#### 汇报\n\n要求学生反思当天的活动。关于编程、精灵图、事件，他们学到了什么？\n\n在花了一个小时进行探索之后，他们对计算机科学和编程有什么感觉？\n\n#### 后续步骤\n\n让学生知道，如果他们喜欢今天的活动，他们拥有许多继续编程的选择。访问[CS Connections][0]了解如何将计算机科学整合到其他学科的思路，或进一步阅读我们[为小学提供的课程][1]。"
         },
         "79f9bd46-60a5-4891-ad3b-8369879847fc": {
           "description": "#### 搭建舞台\n\n欢迎学生来上课，简单介绍当天的活动。  \n\n这节课对学生来说是一种真正的享受。你的大多数学生可能听说过《我的世界》，但给那些可能不知道的人简单介绍一下。\n《我的世界》是一个方块游戏。你可以扮演Alex或Steve穿越迷宫。你需要捡起物品，在一个由立方体组成的世界中探索。  \n\n_说：“今天我们要花一个小时学习编码。有人听说过“代码”这个词吗？这是什么意思？”_\n\n学生可能会提到“代码”就像一个秘密信息，或者它在某种程度上与计算机有关。"
         },
         "cc1ed89e-268e-472b-9bce-4f976d8c2ea3": {
           "tips": [
-            "如果你自己对编程不是很熟悉，介绍编程一小时时，可以播放其中一个[our inspirational videos](https://hourofcode.com/us/resources#videos)。选择一个你认为能够启发学生灵感的视频，并立即分享。对于年轻学员，我们推荐“[The Hour of Code is Here](https://youtu.be/FC5FbmsH4fw)”。"
+            "如果你自己对编程不是很熟悉，介绍编程一小时时，可以播放其中一个[our inspirational videos][0]。选择一个你认为能够启发学生灵感的视频，并立即分享。对于年轻学员，我们推荐“[The Hour of Code is Here][1]”。"
           ]
         },
         "850945f6-6352-403b-a73f-3fb613f4728a": {
@@ -25264,7 +25264,7 @@
         },
         "fc5c47f6-08fa-4702-86a3-e687a2ad5bc1": {
           "name": "《我的世界》: 英雄之旅",
-          "description": "挑战你的学生完成[Minecraft: Hero's Journey](https://studio.code.org/s/hero/lessons/1/levels/1)教程。  \n\n根据学生的年龄和能力，你可以考虑：  \n\n-   对于年龄较小的学生，我们建议你将班级分成两人一组，让每组一起使用[pair programming](https://youtu.be/vgkahOzFH2Q)完成教程。  \n-   对于中年级的学员，我们发现独立学习教程效果很好。有时，允许学生选择他们自己的教程会有帮助。如果学生对《我的世界》不感兴趣，他们可以通过[Code with Anna and Elsa](https://studio.code.org/s/frozen/stage/1/puzzle/1)或[Star Wars](https://code.org/starwars)教程获得类似的体验。  \n-   对于年长或成年学员，[Minecraft: Hero's Journey](https://studio.code.org/s/hero/lessons/1/levels/1)教程作为独立挑战或结对编程活动都非常好。"
+          "description": "挑战你的学生完成[Minecraft: Hero's Journey][0]教程。  \n\n根据学生的年龄和能力，你可以考虑：  \n\n-   对于年龄较小的学生，我们建议你将班级分成两人一组，让每组一起使用[pair programming][1]完成教程。  \n-   对于中年级的学员，我们发现独立学习教程效果很好。有时，允许学生选择他们自己的教程会有帮助。如果学生对《我的世界》不感兴趣，他们可以通过[Code with Anna and Elsa][2]或[Star Wars][3]教程获得类似的体验。  \n-   对于年长或成年学员，[Minecraft: Hero's Journey][4]教程作为独立挑战或结对编程活动都非常好。"
         },
         "296703c2-cad7-43bb-b3cf-4ffb525e7ad1": {
           "tips": [
@@ -25272,7 +25272,7 @@
           ]
         },
         "b518cf9c-9568-4e85-a520-0e2a81c3b330": {
-          "description": "如果有小组或个人提前完成，他们可以访问[code.org/learn](http://code.org/learn)尝试其它教程。"
+          "description": "如果有小组或个人提前完成，他们可以访问[code.org/learn][0]尝试其它教程。"
         },
         "34238f3b-6699-4e27-b77a-54bcd8d57459": {
           "progression_name": "《我的世界》: 英雄之旅"
@@ -25283,18 +25283,18 @@
         },
         "145782a9-a436-4615-9827-0f75d7e4b3a0": {
           "name": "鼓励祝贺",
-          "description": "解释你今天花了一个小时写代码，因为这周是计算机科学教育周，全球数以百万计的学生也在这周学习编程一小时。祝贺学生参与这个世界性运动。\n\n给每个学生一张写有其名字的[certificate](https://studio.code.org/certificates/batch?course=bWM=)。"
+          "description": "解释你今天花了一个小时写代码，因为这周是计算机科学教育周，全球数以百万计的学生也在这周学习编程一小时。祝贺学生参与这个世界性运动。\n\n给每个学生一张写有其名字的[certificate][0]。"
         },
         "cc38f575-4db4-4ca6-ab2f-a9d8557f16cf": {
           "name": "下一步",
-          "description": "让学生知道，如果他们喜欢今天的活动，他们有很多继续编码的选择。鼓励学生访问[code.org/learn](<>)获取选项列表。此外，如果你正在计划接下来的任何扩展活动，告诉学生你的课堂接下来会发生什么。"
+          "description": "让学生知道，如果他们喜欢今天的活动，他们有很多继续编码的选择。鼓励学生访问[code.org/learn][0]获取选项列表。此外，如果你正在计划接下来的任何扩展活动，告诉学生你的课堂接下来会发生什么。"
         },
         "e276fe28-3302-4ba2-94cc-aaf03b3d2d06": {
-          "description": "给每位学生发一张[“Exit Ticket”](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing)，并让他们总结今天所学的知识、自己的感受或体验的内容。学生可以画出、写出或用任何自己喜欢的方式来表达自己。在每位学生离开教室时收集其“课堂反馈条”。如果你喜欢的话，你可以在公告栏或学校某个显眼的地方张贴“课堂反馈条”，作为编程一小时的提示。"
+          "description": "给每位学生发一张[“Exit Ticket”][0]，并让他们总结今天所学的知识、自己的感受或体验的内容。学生可以画出、写出或用任何自己喜欢的方式来表达自己。在每位学生离开教室时收集其“课堂反馈条”。如果你喜欢的话，你可以在公告栏或学校某个显眼的地方张贴“课堂反馈条”，作为编程一小时的提示。"
         },
         "147a2b22-0cba-4505-81ef-770b81eee73e": {
           "name": "超越一小时代码",
-          "description": "编程一小时结束后，有多种方法可以继续在K-5课堂教授计算机科学。这里有一些思路：\n\n-   **教授[Code Studio Computer Science Fundamentals](http://code.org/educate/k5)课程**。这六门课程专为低龄学习者而设计。学生通过一系列谜题学习编码，教师使用有趣的课程计划，有助于让学习变得更生动。Code.org在线或面对面为这些课程提供免费辅导。\n-   **访问[You can Teach Computer Science](https://code.org/teach)**获取更多课程建议。\n-   **邀请计算机科学专家向班上学生讲述其工作**。不认识任何本地计算机科学家？通过我们的[volunteer map](https://code.org/volunteer/local)联系志愿者。"
+          "description": "编程一小时结束后，有多种方法可以继续在K-5课堂教授计算机科学。这里有一些思路：\n\n-   **教授[Code Studio Computer Science Fundamentals][0]课程**。这六门课程专为低龄学习者而设计。学生通过一系列谜题学习编码，教师使用有趣的课程计划，有助于让学习变得更生动。Code.org在线或面对面为这些课程提供免费辅导。\n-   **访问[You can Teach Computer Science][1]**获取更多课程建议。\n-   **邀请计算机科学专家向班上学生讲述其工作**。不认识任何本地计算机科学家？通过我们的[volunteer map][2]联系志愿者。"
         },
         "9475b0bd-6a58-4318-b3e5-0d77cfe5a35d": {
           "tips": [
@@ -25393,7 +25393,7 @@
         },
         "6b55015f-aebc-401b-b0c9-c40a5fd0056e": {
           "tips": [
-            "如果你自己对编程不是很熟悉，介绍编程一小时时，可以播放其中一个[our inspirational videos](https://hourofcode.com/us/resources#videos)。选择一个你认为能够启发学生灵感的视频，并立即分享。对于年轻学员，我们推荐“[The Hour of Code is Here](https://youtu.be/FC5FbmsH4fw)”。"
+            "如果你自己对编程不是很熟悉，介绍编程一小时时，可以播放其中一个[our inspirational videos][0]。选择一个你认为能够启发学生灵感的视频，并立即分享。对于年轻学员，我们推荐“[The Hour of Code is Here][1]”。"
           ]
         },
         "e841a687-1da5-46c7-b31e-42629fe0377c": {
@@ -25406,7 +25406,7 @@
         },
         "9aba0e85-a709-43f5-8cfb-251671159b3a": {
           "name": "迷宫",
-          "description": "挑战你的学生完成[Write your first computer program](https://studio.code.org/hoc/1)教程。  \n\n根据学生的年龄和能力，你可以考虑：  \n\n-   对于年龄较小的学生，我们建议你将班级分成两人一组或非常小的小组（每组3-4名学生），让每组一起使用[pair programming](https://youtu.be/vgkahOzFH2Q)完成教程。  \n-   对于中年级的学员，我们发现独立学习教程效果很好。有时，允许学生选择他们自己的教程会有帮助。如果学生对《愤怒的小鸟》不感兴趣，他们可以通过[Code with Anna and Elsa](https://studio.code.org/s/frozen/stage/1/puzzle/1)或[Make a Flappy Game](https://studio.code.org/flappy/1)教程获得类似的体验。  \n-   对于年长或成年学员，[Write your first computer program](https://studio.code.org/hoc/1)教程作为独立挑战或结对编程活动都非常好。"
+          "description": "挑战你的学生完成[Write your first computer program][0]教程。  \n\n根据学生的年龄和能力，你可以考虑：  \n\n-   对于年龄较小的学生，我们建议你将班级分成两人一组或非常小的小组（每组3-4名学生），让每组一起使用[pair programming][1]完成教程。  \n-   对于中年级的学员，我们发现独立学习教程效果很好。有时，允许学生选择他们自己的教程会有帮助。如果学生对《愤怒的小鸟》不感兴趣，他们可以通过[Code with Anna and Elsa][2]或[Make a Flappy Game][3]教程获得类似的体验。  \n-   对于年长或成年学员，[Write your first computer program][4]教程作为独立挑战或结对编程活动都非常好。"
         },
         "524f2e35-6286-4585-879e-96e7286e8a6d": {
           "tips": [
@@ -25414,7 +25414,7 @@
           ]
         },
         "3f29a14c-3903-4615-8a6b-d1961b57dc7b": {
-          "description": "如果有小组或个人提前完成，他们可以访问[code.org/learn](http://code.org/learn)尝试其它教程。"
+          "description": "如果有小组或个人提前完成，他们可以访问[code.org/learn][0]尝试其它教程。"
         },
         "50db3674-3387-4932-ba7e-c9f176ebd976": {
           "name": "汇报",
@@ -25422,18 +25422,18 @@
         },
         "46f387e2-c275-4c57-acec-c9709e7f44fc": {
           "name": "鼓励",
-          "description": "解释你今天花了一个小时写代码，因为这周是计算机科学教育周，全球数以百万计的学生也在这周学习编程一小时。祝贺学生参与这个世界性运动。\n\n给每个学生一张写有其名字的[certificate](http://code.org/certificates)。"
+          "description": "解释你今天花了一个小时写代码，因为这周是计算机科学教育周，全球数以百万计的学生也在这周学习编程一小时。祝贺学生参与这个世界性运动。\n\n给每个学生一张写有其名字的[certificate][0]。"
         },
         "692a60f1-d3a2-44d3-8c58-19461d6b5999": {
           "name": "下一步",
           "description": "让学生知道，如果他们喜欢今天的活动，他们有很多继续编码的选择。鼓励学生访问code.org/learn获取选项列表。此外，如果你正在计划接下来的任何扩展活动，告诉学生你的课堂接下来会发生什么。"
         },
         "c00f4730-69b0-4533-bf47-253647c6715f": {
-          "description": "给每位学生发一张[“Exit Ticket”](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing)，并让他们总结今天所学的知识、自己的感受或体验的内容。学生可以画出、写出或用任何自己喜欢的方式来表达自己。在每位学生离开教室时收集其“课堂反馈条”。如果你喜欢的话，你可以在公告栏或学校某个显眼的地方张贴“课堂反馈条”，作为编程一小时的提示。"
+          "description": "给每位学生发一张[“Exit Ticket”][0]，并让他们总结今天所学的知识、自己的感受或体验的内容。学生可以画出、写出或用任何自己喜欢的方式来表达自己。在每位学生离开教室时收集其“课堂反馈条”。如果你喜欢的话，你可以在公告栏或学校某个显眼的地方张贴“课堂反馈条”，作为编程一小时的提示。"
         },
         "6e6e32c8-6dfd-4075-b1c7-0c96b6853b09": {
           "name": "超越一小时代码",
-          "description": "编程一小时结束后，有多种方法可以继续在K-5课堂教授计算机科学。这里有一些思路：\n\n-   **教授[Code Studio Computer Science Fundamentals](http://code.org/educate/k5)课程**。这六门课程专为低龄学习者而设计。学生通过一系列谜题学习编码，教师使用有趣的课程计划，有助于让学习变得更生动。Code.org在线或面对面为这些课程提供免费辅导。"
+          "description": "编程一小时结束后，有多种方法可以继续在K-5课堂教授计算机科学。这里有一些思路：\n\n-   **教授[Code Studio Computer Science Fundamentals][0]课程**。这六门课程专为低龄学习者而设计。学生通过一系列谜题学习编码，教师使用有趣的课程计划，有助于让学习变得更生动。Code.org在线或面对面为这些课程提供免费辅导。"
         },
         "5858c0fa-a7a6-44c2-afcb-bfb816b18a5b": {
           "name": "K-2教师调整",
@@ -25445,7 +25445,7 @@
         },
         "fc04ef5f-0d78-418b-9311-e12201106453": {
           "tips": [
-            "如果你自己对编程不是很熟悉，介绍编程一小时时，可以播放其中一个[our inspirational videos](https://hourofcode.com/us/resources#videos)。选择一个你认为能够启发学生灵感的视频，并立即分享。对于年轻学员，我们推荐“[Anybody Can Learn](https://youtu.be/qYZF6oIZtfc)”。"
+            "如果你自己对编程不是很熟悉，介绍编程一小时时，可以播放其中一个[our inspirational videos][0]。选择一个你认为能够启发学生灵感的视频，并立即分享。对于年轻学员，我们推荐“[Anybody Can Learn][1]”。"
           ]
         },
         "ea8a3bf2-1425-482a-9f98-a5b30d6ee809": {
@@ -25453,7 +25453,7 @@
         },
         "c628ba28-35c2-4ded-a19d-74079377b309": {
           "name": "冰川时代实验室",
-          "description": "挑战你的学生完成[Ice Age Play Lab](https://studio.code.org/s/iceage/lessons/1/levels/1)教程。\n\n 根据学生的年龄和能力，你可以考虑：\n\n-   对于初高中学生，我们建议你选择可以自由发挥和创建应用程序或游戏的教程。你可以让学生独立学习、结对学习或分组学习。在[code.org/learn](http://code.org/learn)上还有许多其他的教程，包括[Make a Flappy Game](https://studio.code.org/s/flappy)和我们的新测试版工具[AppLab](https://code.org/educate/applab)。  \n-   对于年龄较小的学生，我们建议你将班级分成两人一组或非常小的小组（每个小组3-4名学生），并要求每个小组一起使用[pair programming](https://youtu.be/vgkahOzFH2Q)完成教程。  \n-   对于成人学员来说，[Write your first computer program](https://studio.code.org/hoc/1)教程作为独立挑战或结对编程活动非常适合。"
+          "description": "挑战你的学生完成[Ice Age Play Lab][0]教程。\n\n 根据学生的年龄和能力，你可以考虑：\n\n-   对于初高中学生，我们建议你选择可以自由发挥和创建应用程序或游戏的教程。你可以让学生独立学习、结对学习或分组学习。在[code.org/learn][1]上还有许多其他的教程，包括[Make a Flappy Game][2]和我们的新测试版工具[AppLab][3]。  \n-   对于年龄较小的学生，我们建议你将班级分成两人一组或非常小的小组（每个小组3-4名学生），并要求每个小组一起使用[pair programming][4]完成教程。  \n-   对于成人学员来说，[Write your first computer program][5]教程作为独立挑战或结对编程活动非常适合。"
         },
         "548dc37b-f338-4a52-a77e-7380794c64f2": {
           "tips": [
@@ -25461,7 +25461,7 @@
           ]
         },
         "86d8427e-15bf-420c-b405-3d1f1c3c46c6": {
-          "description": "如果有小组或个人提前完成，他们可以访问[code.org/learn](http://code.org/learn)尝试其它教程。"
+          "description": "如果有小组或个人提前完成，他们可以访问[code.org/learn][0]尝试其它教程。"
         },
         "d8b92f56-a741-43ac-9d6f-3fdf1c452001": {
           "name": "汇报",
@@ -25469,7 +25469,7 @@
         },
         "3d63393a-9146-4027-8783-247e19637d25": {
           "name": "鼓励",
-          "description": "解释你今天花了一个小时写代码，因为这周是计算机科学教育周，全球数以百万计的学生也在这周学习编程一小时。祝贺学生参与这个世界性运动。\n\n给每个学生一张写有其名字的[certificate](http://code.org/certificates)。"
+          "description": "解释你今天花了一个小时写代码，因为这周是计算机科学教育周，全球数以百万计的学生也在这周学习编程一小时。祝贺学生参与这个世界性运动。\n\n给每个学生一张写有其名字的[certificate][0]。"
         },
         "4ae122fa-da6f-4aaf-b2f8-c68fd0bb68af": {
           "name": "下一步",
@@ -25481,7 +25481,7 @@
         },
         "4ae8bc68-25be-4eaa-ae1e-b9bfe8623a23": {
           "name": "超越一小时代码",
-          "description": "编程一小时结束后，有多种方法可以继续在K-5教室教授计算机科学。这里有一些思路：\n\n-   **教授[Code Studio Computer Science Fundamentals](http://code.org/educate/k5)课程**。这四门课程专为低龄学习者而设计。学生们通过一系列谜题学习编码，教师使用有趣的课程计划，有助于让学习变得更生动。Code.org在线或面对面为这些课程提供免费辅导。\n-   **邀请计算机科学专家向班上学生讲述其工作**。不认识志愿者？可以在[volunteer map](https://code.org/volunteer/local)上联系一些。"
+          "description": "编程一小时结束后，有多种方法可以继续在K-5教室教授计算机科学。这里有一些思路：\n\n-   **教授[Code Studio Computer Science Fundamentals][0]课程**。这四门课程专为低龄学习者而设计。学生们通过一系列谜题学习编码，教师使用有趣的课程计划，有助于让学习变得更生动。Code.org在线或面对面为这些课程提供免费辅导。\n-   **邀请计算机科学专家向班上学生讲述其工作**。不认识志愿者？可以在[volunteer map][1]上联系一些。"
         },
         "88079aec-5c42-4f3f-bbb6-cba4f8866c92": {
           "name": "搭建舞台",
@@ -25489,7 +25489,7 @@
         },
         "6874de98-8778-447b-8453-0138809b2c7e": {
           "tips": [
-            "如果你自己对编程不是很熟悉，介绍编程一小时时，可以播放其中一个[our inspirational videos](https://hourofcode.com/us/resources#videos)。选择一个你认为能够启发学生灵感的视频，并立即分享。对于年轻学员，我们推荐“[Anybody Can Learn](https://youtu.be/qYZF6oIZtfc)”。"
+            "如果你自己对编程不是很熟悉，介绍编程一小时时，可以播放其中一个[our inspirational videos][0]。选择一个你认为能够启发学生灵感的视频，并立即分享。对于年轻学员，我们推荐“[Anybody Can Learn][1]”。"
           ]
         },
         "82e4a494-65fb-40ac-b2c2-323044e15b77": {
@@ -25497,7 +25497,7 @@
         },
         "bd5d11f4-9c4c-4f24-bb9f-482392bd65aa": {
           "name": "迪斯尼无限游戏实验室",
-          "description": "挑战你的学生完成[Disney Infinity Play Lab](https://studio.code.org/s/infinity/lessons/1/levels/1)教程。\n\n 根据学生的年龄和能力，你可以考虑：\n\n-   对于初高中学生，我们建议你选择可以自由发挥和创建应用程序或游戏的教程。你可以让学生独立学习、结对学习或分组学习。在[code.org/learn](http://code.org/learn)上还有许多其他的教程，包括[Make a Flappy Game](https://studio.code.org/s/flappy)和我们的新测试版工具[AppLab](https://code.org/educate/applab)。  \n-   对于年龄较小的学生，我们建议你将班级分成两人一组或非常小的小组（每个小组3-4名学生），并要求每个小组一起使用[pair programming](https://youtu.be/vgkahOzFH2Q)完成教程。  \n-   对于成人学员来说，[Write your first computer program](https://studio.code.org/hoc/1)教程作为独立挑战或结对编程活动非常适合。"
+          "description": "挑战你的学生完成[Disney Infinity Play Lab][0]教程。\n\n 根据学生的年龄和能力，你可以考虑：\n\n-   对于初高中学生，我们建议你选择可以自由发挥和创建应用程序或游戏的教程。你可以让学生独立学习、结对学习或分组学习。在[code.org/learn][1]上还有许多其他的教程，包括[Make a Flappy Game][2]和我们的新测试版工具[AppLab][3]。  \n-   对于年龄较小的学生，我们建议你将班级分成两人一组或非常小的小组（每个小组3-4名学生），并要求每个小组一起使用[pair programming][4]完成教程。  \n-   对于成人学员来说，[Write your first computer program][5]教程作为独立挑战或结对编程活动非常适合。"
         },
         "b1ea2c15-24bb-475a-bb3f-bbc8ea1a51c0": {
           "tips": [
@@ -25505,7 +25505,7 @@
           ]
         },
         "712a8a98-3ab7-43d0-8f6f-a68e6984b009": {
-          "description": "如果有小组或个人提前完成，他们可以访问[code.org/learn](http://code.org/learn)尝试其它教程。"
+          "description": "如果有小组或个人提前完成，他们可以访问[code.org/learn][0]尝试其它教程。"
         },
         "a0530acf-3bce-4de9-b392-fe8725044086": {
           "name": "汇报",
@@ -25513,7 +25513,7 @@
         },
         "ceaf9d96-e806-48e1-9a95-30566999264e": {
           "name": "鼓励",
-          "description": "解释你今天花了一个小时写代码，因为这周是计算机科学教育周，全球数以百万计的学生也在这周学习编程一小时。祝贺学生参与这个世界性运动。\n\n给每个学生一张写有其名字的[certificate](http://code.org/certificates)。"
+          "description": "解释你今天花了一个小时写代码，因为这周是计算机科学教育周，全球数以百万计的学生也在这周学习编程一小时。祝贺学生参与这个世界性运动。\n\n给每个学生一张写有其名字的[certificate][0]。"
         },
         "680268d8-e3db-4f80-b56d-dfe40ada4d77": {
           "name": "下一步",
@@ -25525,7 +25525,7 @@
         },
         "38f15942-4a08-48f7-a0c4-e04232bc9bdc": {
           "name": "超越一小时代码",
-          "description": "编程一小时结束后，有多种方法可以继续在K-5教室教授计算机科学。这里有一些思路：\n\n-   **教授[Code Studio Computer Science Fundamentals](http://code.org/educate/k5)课程**。这四门课程专为低龄学习者而设计。学生们通过一系列谜题学习编码，教师使用有趣的课程计划，有助于让学习变得更生动。Code.org在线或面对面为这些课程提供免费辅导。\n-   **邀请计算机科学专家向班上学生讲述其工作**。不认识志愿者？可以在[volunteer map](https://code.org/volunteer/local)上联系一些。"
+          "description": "编程一小时结束后，有多种方法可以继续在K-5教室教授计算机科学。这里有一些思路：\n\n-   **教授[Code Studio Computer Science Fundamentals][0]课程**。这四门课程专为低龄学习者而设计。学生们通过一系列谜题学习编码，教师使用有趣的课程计划，有助于让学习变得更生动。Code.org在线或面对面为这些课程提供免费辅导。\n-   **邀请计算机科学专家向班上学生讲述其工作**。不认识志愿者？可以在[volunteer map][1]上联系一些。"
         },
         "a16594a7-8312-4ac3-87c8-fd2d5d6e5bfb": {
           "name": "介绍",
@@ -25533,7 +25533,7 @@
         },
         "6415b9b2-1e23-43ee-9d0c-e65efcb0d65c": {
           "tips": [
-            "如果你自己对编程不是很熟悉，介绍编程一小时时，可以播放其中一个[our inspirational videos](https://hourofcode.com/us/resources#videos)。选择一个你认为能够启发学生灵感的视频，并立即分享。对于年轻学员，我们推荐“[The Hour of Code is Here](https://youtu.be/FC5FbmsH4fw)”。"
+            "如果你自己对编程不是很熟悉，介绍编程一小时时，可以播放其中一个[our inspirational videos][0]。选择一个你认为能够启发学生灵感的视频，并立即分享。对于年轻学员，我们推荐“[The Hour of Code is Here][1]”。"
           ]
         },
         "3fee530c-6d5f-44da-89f7-cfae73040787": {
@@ -25546,16 +25546,16 @@
         },
         "aafa75c2-9439-415c-b42f-cac8ddfc2874": {
           "name": "《我的世界》大冒险",
-          "description": "挑战你的学生完成[Minecraft: Adventurer](studio.code.org/s/mc/lessons/1/levels/1)教程。  \n\n根据学生的年龄和能力，你可以考虑：  \n\n-   对于年龄较小的学生，我们建议你将班级分成两人一组，让每组一起使用[pair programming](https://youtu.be/vgkahOzFH2Q)完成教程。  \n-   对于中年级的学员，我们发现独立学习教程效果很好。有时，允许学生选择他们自己的教程会有帮助。如果学生对《我的世界》不感兴趣，他们可以通过[Code with Anna and Elsa](https://studio.code.org/s/frozen/stage/1/puzzle/1)或[Star Wars](https://code.org/starwars)教程获得类似的体验。  \n-   对于年长或成年学员，[Minecraft](https://hourofcode.com/mc)教程作为独立挑战或结对编程活动都非常好。",
+          "description": "挑战你的学生完成[Minecraft: Adventurer][0]教程。  \n\n根据学生的年龄和能力，你可以考虑：  \n\n-   对于年龄较小的学生，我们建议你将班级分成两人一组，让每组一起使用[pair programming][1]完成教程。  \n-   对于中年级的学员，我们发现独立学习教程效果很好。有时，允许学生选择他们自己的教程会有帮助。如果学生对《我的世界》不感兴趣，他们可以通过[Code with Anna and Elsa][2]或[Star Wars][3]教程获得类似的体验。  \n-   对于年长或成年学员，[Minecraft][4]教程作为独立挑战或结对编程活动都非常好。",
           "tips": [
             "在让学生尝试之前，记得让自己先体验你选择的教程。这样你就会知道会发生什么，并可以决定是让学生选择他们自己的教程，还是你想根据学生的需要分配教程。"
           ]
         },
         "1766511d-3639-46a3-911f-acc7f8c4b922": {
-          "description": "如果有小组或个人提前完成，他们可以访问[code.org/learn](http://code.org/learn)尝试其它教程。"
+          "description": "如果有小组或个人提前完成，他们可以访问[code.org/learn][0]尝试其它教程。"
         },
         "8c990fee-4a0f-4d70-a635-ab66a8195193": {
-          "description": "给每位学生发一张[“Exit Ticket”](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing)，并让他们总结今天所学的知识、自己的感受或体验的内容。学生可以画出、写出或用任何自己喜欢的方式来表达自己。在每位学生离开教室时收集其“课堂反馈条”。如果你喜欢的话，你可以在公告栏或学校某个显眼的地方张贴“课堂反馈条”，作为编程一小时的提示。"
+          "description": "给每位学生发一张[“Exit Ticket”][0]，并让他们总结今天所学的知识、自己的感受或体验的内容。学生可以画出、写出或用任何自己喜欢的方式来表达自己。在每位学生离开教室时收集其“课堂反馈条”。如果你喜欢的话，你可以在公告栏或学校某个显眼的地方张贴“课堂反馈条”，作为编程一小时的提示。"
         },
         "bcdecd77-2efb-44b5-9fdc-e244d1f5ccf6": {
           "name": "汇报",
@@ -25563,7 +25563,7 @@
         },
         "6b574c8b-2319-4244-acc8-fb8405fa5737": {
           "name": "鼓励",
-          "description": "解释你今天花了一个小时写代码，因为这周是计算机科学教育周，全球数以百万计的学生也在这周学习编程一小时。祝贺学生参与这个世界性运动。\n\n给每个学生一张写有其名字的[certificate](https://studio.code.org/certificates/batch?course=bWM=)。"
+          "description": "解释你今天花了一个小时写代码，因为这周是计算机科学教育周，全球数以百万计的学生也在这周学习编程一小时。祝贺学生参与这个世界性运动。\n\n给每个学生一张写有其名字的[certificate][0]。"
         },
         "02dfa607-4f9e-404c-bdae-f9f423fa526c": {
           "name": "下一步",
@@ -25571,7 +25571,7 @@
         },
         "5bc8aefa-7bb0-4f22-a555-321738755b8c": {
           "name": "超越一小时代码",
-          "description": "编程一小时结束后，有多种方法可以继续在K-5课堂教授计算机科学。这里有一些思路：\n\n-   **教授[Code Studio Computer Science Fundamentals](http://code.org/educate/k5)课程**。这四门课程专为低龄学习者而设计。学生通过一系列谜题学习编码，教师使用有趣的课程计划，有助于让学习变得更生动。Code.org在线或面对面为这些课程提供免费辅导。\n-   **访问[You can Teach Computer Science](https://code.org/teach)**获取更多课程建议。\n-   **邀请计算机科学专家向班上学生讲述其工作**。不认识任何本地计算机科学家？通过我们的[volunteer map](https://code.org/volunteer/local)联系志愿者。"
+          "description": "编程一小时结束后，有多种方法可以继续在K-5课堂教授计算机科学。这里有一些思路：\n\n-   **教授[Code Studio Computer Science Fundamentals][0]课程**。这四门课程专为低龄学习者而设计。学生通过一系列谜题学习编码，教师使用有趣的课程计划，有助于让学习变得更生动。Code.org在线或面对面为这些课程提供免费辅导。\n-   **访问[You can Teach Computer Science][1]**获取更多课程建议。\n-   **邀请计算机科学专家向班上学生讲述其工作**。不认识任何本地计算机科学家？通过我们的[volunteer map][2]联系志愿者。"
         },
         "563d9088-3ce6-48c1-aa79-6f673e089247": {
           "name": "介绍",
@@ -25579,7 +25579,7 @@
         },
         "9f1107d0-cde6-4f78-911c-5018ea9264e0": {
           "tips": [
-            "如果你自己对编程不是很熟悉，介绍编程一小时时，可以播放其中一个[our inspirational videos](https://hourofcode.com/us/resources#videos)。选择一个你认为能够启发学生灵感的视频，并立即分享。对于年轻学员，我们推荐“[The Hour of Code is Here](https://youtu.be/FC5FbmsH4fw)”。"
+            "如果你自己对编程不是很熟悉，介绍编程一小时时，可以播放其中一个[our inspirational videos][0]。选择一个你认为能够启发学生灵感的视频，并立即分享。对于年轻学员，我们推荐“[The Hour of Code is Here][1]”。"
           ]
         },
         "ed8509fa-59b4-43a4-bd4a-05a5018387c2": {
@@ -25592,7 +25592,7 @@
         },
         "75d779c4-24f7-40be-bf92-b0c094c16d11": {
           "name": "我的世界 编码时间设计师",
-          "description": "挑战你的学生完成这个[Minecraft: Designer](http://studio.code.org/s/minecraft/lessons/1/levels/1)活动。  \n\n根据学生的年龄和能力，你可以考虑：  \n\n-   对于年龄较小的学生，我们建议你将班级分成两人一组，让每组一起使用[pair programming](https://youtu.be/vgkahOzFH2Q)完成教程。  \n-   对于中年级的学员，我们发现独立学习教程效果很好。有时，允许学生选择他们自己的教程会有帮助。如果学生对《我的世界》不感兴趣，他们可以通过[Code with Anna and Elsa](https://studio.code.org/s/frozen/stage/1/puzzle/1)或[Star Wars](https://code.org/starwars)教程获得类似的体验。  \n-   对于年长或成年学员，[Minecraft: Designer](http://studio.code.org/s/minecraft/lessons/1/levels/1)教程作为独立挑战或结对编程活动都非常好。"
+          "description": "挑战你的学生完成这个[Minecraft: Designer][0]活动。  \n\n根据学生的年龄和能力，你可以考虑：  \n\n-   对于年龄较小的学生，我们建议你将班级分成两人一组，让每组一起使用[pair programming][1]完成教程。  \n-   对于中年级的学员，我们发现独立学习教程效果很好。有时，允许学生选择他们自己的教程会有帮助。如果学生对《我的世界》不感兴趣，他们可以通过[Code with Anna and Elsa][2]或[Star Wars][3]教程获得类似的体验。  \n-   对于年长或成年学员，[Minecraft: Designer][4]教程作为独立挑战或结对编程活动都非常好。"
         },
         "8d4ecee7-5f04-4f80-9673-c2aec0c5ab9d": {
           "tips": [
@@ -25600,7 +25600,7 @@
           ]
         },
         "307ffdf6-e274-484b-a10f-329ddfe568dc": {
-          "description": "如果有小组或个人提前完成，他们可以访问[code.org/learn](http://code.org/learn)尝试其它教程。"
+          "description": "如果有小组或个人提前完成，他们可以访问[code.org/learn][0]尝试其它教程。"
         },
         "70935a98-82e9-4553-94f7-90a4e615dd34": {
           "name": "汇报",
@@ -25608,18 +25608,18 @@
         },
         "5f00e31d-70fa-4bb2-9bef-223793082f5c": {
           "name": "鼓励",
-          "description": "解释你今天花了一个小时写代码，因为这周是计算机科学教育周，全球数以百万计的学生也在这周学习编程一小时。祝贺学生参与这个世界性运动。\n\n给每个学生一张写有其名字的[certificate](https://studio.code.org/certificates/batch?course=bWM=)。"
+          "description": "解释你今天花了一个小时写代码，因为这周是计算机科学教育周，全球数以百万计的学生也在这周学习编程一小时。祝贺学生参与这个世界性运动。\n\n给每个学生一张写有其名字的[certificate][0]。"
         },
         "20b7009c-3a45-4211-a9ad-c65f56099200": {
           "name": "下一步",
-          "description": "让学生知道，如果他们喜欢今天的活动，他们有很多继续编码的选择。鼓励学生访问[code.org/learn](<>)获取选项列表。此外，如果你正在计划接下来的任何扩展活动，告诉学生你的课堂接下来会发生什么。"
+          "description": "让学生知道，如果他们喜欢今天的活动，他们有很多继续编码的选择。鼓励学生访问[code.org/learn][0]获取选项列表。此外，如果你正在计划接下来的任何扩展活动，告诉学生你的课堂接下来会发生什么。"
         },
         "85fc4f24-eb97-4ff5-813f-4af3e5497034": {
-          "description": "给每位学生发一张[“Exit Ticket”](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing)，并让他们总结今天所学的知识、自己的感受或体验的内容。学生可以画出、写出或用任何自己喜欢的方式来表达自己。在每位学生离开教室时收集其“课堂反馈条”。如果你喜欢的话，你可以在公告栏或学校某个显眼的地方张贴“课堂反馈条”，作为编程一小时的提示。"
+          "description": "给每位学生发一张[“Exit Ticket”][0]，并让他们总结今天所学的知识、自己的感受或体验的内容。学生可以画出、写出或用任何自己喜欢的方式来表达自己。在每位学生离开教室时收集其“课堂反馈条”。如果你喜欢的话，你可以在公告栏或学校某个显眼的地方张贴“课堂反馈条”，作为编程一小时的提示。"
         },
         "7f24d7ca-8a9e-417c-ac8e-18ca3ab48ac1": {
           "name": "超越一小时代码",
-          "description": "编程一小时结束后，有多种方法可以继续在K-5课堂教授计算机科学。这里有一些思路：\n\n-   **教授[Code Studio Computer Science Fundamentals](http://code.org/educate/k5)课程**。这六门课程专为低龄学习者而设计。学生通过一系列谜题学习编码，教师使用有趣的课程计划，有助于让学习变得更生动。Code.org在线或面对面为这些课程提供免费辅导。\n-   **访问[You can Teach Computer Science](https://code.org/teach)**获取更多课程建议。\n-   **邀请计算机科学专家向班上学生讲述其工作**。不认识任何本地计算机科学家？通过我们的[volunteer map](https://code.org/volunteer/local)联系志愿者。"
+          "description": "编程一小时结束后，有多种方法可以继续在K-5课堂教授计算机科学。这里有一些思路：\n\n-   **教授[Code Studio Computer Science Fundamentals][0]课程**。这六门课程专为低龄学习者而设计。学生通过一系列谜题学习编码，教师使用有趣的课程计划，有助于让学习变得更生动。Code.org在线或面对面为这些课程提供免费辅导。\n-   **访问[You can Teach Computer Science][1]**获取更多课程建议。\n-   **邀请计算机科学专家向班上学生讲述其工作**。不认识任何本地计算机科学家？通过我们的[volunteer map][2]联系志愿者。"
         },
         "54b95e4d-58b7-4551-9782-7ce134f4e457": {
           "name": "建立兴奋感！",
@@ -25887,7 +25887,7 @@
         },
         "6fa68bdd-8f9b-4d69-b54e-28141ee6d732": {
           "tips": [
-            "如果你自己对编程不是很熟悉，介绍编程一小时时，可以播放其中一个[inspirational videos](https://hourofcode.com/us/resources#videos)。选择一个你认为能够启发学生灵感的视频，并立即分享。对于年轻学员，我们推荐[The Hour of Code is Here](https://youtu.be/FC5FbmsH4fw).。"
+            "如果你自己对编程不是很熟悉，介绍编程一小时时，可以播放其中一个[inspirational videos][0]。选择一个你认为能够启发学生灵感的视频，并立即分享。对于年轻学员，我们推荐[The Hour of Code is Here][1].。"
           ]
         },
         "7f1244d9-811b-410c-96b2-9f7086959c6b": {
@@ -25895,7 +25895,7 @@
         },
         "a69a3310-4b81-4e04-8313-51044489351a": {
           "name": "星球大战: 用代码构建一个星系",
-          "description": "挑战你的学生完成[Star Wars: Building a Galaxy with Code](https://studio.code.org/s/starwars/lessons/1/levels/1)教程。  \n\n根据学生的年龄和能力，你可以考虑：  \n\n-   对于年龄较小的学生，我们建议你将班级分成两人一组，让每组一起使用[pair programming](https://youtu.be/vgkahOzFH2Q)完成教程。\n-   对于年龄较大的学生，我们发现独立学习教程效果很好。有时，允许学生选择他们自己的教程会有帮助。如果学生对《星球大战》不感兴趣，他们可以通过[Write Your First Computer Program](https://studio.code.org/hoc/1)教程获得类似的体验。  \n-   对于成年学员，[Star Wars: Building a Galaxy with Code](https://studio.code.org/s/starwars/lessons/1/levels/1)教程作为独立挑战或结对编程活动都非常好。"
+          "description": "挑战你的学生完成[Star Wars: Building a Galaxy with Code][0]教程。  \n\n根据学生的年龄和能力，你可以考虑：  \n\n-   对于年龄较小的学生，我们建议你将班级分成两人一组，让每组一起使用[pair programming][1]完成教程。\n-   对于年龄较大的学生，我们发现独立学习教程效果很好。有时，允许学生选择他们自己的教程会有帮助。如果学生对《星球大战》不感兴趣，他们可以通过[Write Your First Computer Program][2]教程获得类似的体验。  \n-   对于成年学员，[Star Wars: Building a Galaxy with Code][3]教程作为独立挑战或结对编程活动都非常好。"
         },
         "b17f8e8a-6b46-4f46-a4fc-894cf561bb9d": {
           "tips": [
@@ -25903,15 +25903,15 @@
           ]
         },
         "eb72d828-788d-4090-9e4f-71423c081948": {
-          "description": "在教程的最后，学生有机会构建一个星球大战游戏。如果学生完成的早，鼓励他们尝试彼此的游戏，然后使自己的游戏更有趣或更具挑战性。  \n\n你也可以通过访问[code.org/learn](http://code.org/learn)让小组或个人尝试另一个教程。"
+          "description": "在教程的最后，学生有机会构建一个星球大战游戏。如果学生完成的早，鼓励他们尝试彼此的游戏，然后使自己的游戏更有趣或更具挑战性。  \n\n你也可以通过访问[code.org/learn][0]让小组或个人尝试另一个教程。"
         },
         "bec776b1-a8cd-4e18-a1bc-be30f2942863": {
           "name": "汇报",
-          "description": "给每个学生一些便利贴或便签。推进快速[“Whip Around”](http://www.theteachertoolkit.com/index.php/tool/whip-around)活动：\n\n-   提出一个有多个答案的提示，如“分享你完成的编程一小时活动中你真正喜欢的东西”或“分享你今天学到的一些技能”。  \n-   让学生写下尽可能多的答案，每张便利贴或便签卡写下一个想法。  \n-   在教室里“打转”，一次叫一个学生。让学生分享他们的一个回答。被点名时，学生不能重复回答；他们必须添加一些新的东西。  \n-   在完成问答后，让学生讨论他们的回答中出现最多的想法和主题。"
+          "description": "给每个学生一些便利贴或便签。推进快速[“Whip Around”][0]活动：\n\n-   提出一个有多个答案的提示，如“分享你完成的编程一小时活动中你真正喜欢的东西”或“分享你今天学到的一些技能”。  \n-   让学生写下尽可能多的答案，每张便利贴或便签卡写下一个想法。  \n-   在教室里“打转”，一次叫一个学生。让学生分享他们的一个回答。被点名时，学生不能重复回答；他们必须添加一些新的东西。  \n-   在完成问答后，让学生讨论他们的回答中出现最多的想法和主题。"
         },
         "4cb35c62-404e-42b9-9eaf-09ec2f485a2b": {
           "name": "鼓励",
-          "description": "解释你今天花了一个小时写代码，因为这周是计算机科学教育周，全球数以百万计的学生也在这周学习编程一小时。祝贺学生参与这个世界性运动。\n\n给每个学生一张写有其名字的[certificate](http://code.org/certificates)。"
+          "description": "解释你今天花了一个小时写代码，因为这周是计算机科学教育周，全球数以百万计的学生也在这周学习编程一小时。祝贺学生参与这个世界性运动。\n\n给每个学生一张写有其名字的[certificate][0]。"
         },
         "80ff32c9-0373-4125-a65e-bef5f0e21cba": {
           "name": "下一步",
@@ -25919,7 +25919,7 @@
         },
         "57e403d7-a8be-47fc-bb97-1a068e2469ed": {
           "name": "超越一小时代码",
-          "description": "编程一小时结束后，有多种方法可以继续在K-5教室教授计算机科学。这里有一些思路：\n\n-   **教授[Code Studio Computer Science Fundamentals](http://code.org/educate/k5)课程**。这六门课程专为低龄学习者而设计。学生们通过一系列谜题学习编码，教师使用有趣的课程计划，有助于让学习变得更生动。Code.org在线或面对面为这些课程提供免费辅导。\n-   研究你今天了解到的一些编程职业。在[Sharemylesson.com](http://www.sharemylesson.com/TaxonomySearchResults.aspx?area=resources&keywords=career+research)上找到关于职业规划研究项目的资源。\n-   **邀请计算机科学专家向班上学生讲述其工作**。如果不认识任何志愿者，可通过[volunteer map](https://code.org/volunteer/local)联系一些。"
+          "description": "编程一小时结束后，有多种方法可以继续在K-5教室教授计算机科学。这里有一些思路：\n\n-   **教授[Code Studio Computer Science Fundamentals][0]课程**。这六门课程专为低龄学习者而设计。学生们通过一系列谜题学习编码，教师使用有趣的课程计划，有助于让学习变得更生动。Code.org在线或面对面为这些课程提供免费辅导。\n-   研究你今天了解到的一些编程职业。在[Sharemylesson.com][1]上找到关于职业规划研究项目的资源。\n-   **邀请计算机科学专家向班上学生讲述其工作**。如果不认识任何志愿者，可通过[volunteer map][2]联系一些。"
         },
         "d0f5c55b-b19c-418c-8dc6-f87a80e08f45": {
           "description": "要求学生在出门时将便签或便条纸添加到“计算机科学”思维导图中。尝试在黑板上写满关于CS是什么以及它为什么重要的各种好点子。"
@@ -25930,14 +25930,14 @@
         },
         "88f6ccc1-0efa-4c60-985c-971a235d5645": {
           "tips": [
-            "如果你自己对编程不是很熟悉，介绍编程一小时时，可以播放其中一个[inspirational videos](https://hourofcode.com/us/resources#videos)。选择一个你认为能够启发学生灵感的视频，并立即分享。对于年轻学员，我们推荐[The Hour of Code is Here](https://youtu.be/FC5FbmsH4fw).。"
+            "如果你自己对编程不是很熟悉，介绍编程一小时时，可以播放其中一个[inspirational videos][0]。选择一个你认为能够启发学生灵感的视频，并立即分享。对于年轻学员，我们推荐[The Hour of Code is Here][1].。"
           ]
         },
         "dbeab27b-4231-4281-be73-ae2aaa3d94b2": {
           "description": "解释在计算机科学中，“代码”是指一组计算机可以理解的指令。让学生知道，今天他们要练习“编码”、“编程”和“调试”。  \n\n定义：  \n\n-   **编码**指编写代码，或为计算机编写指令。 \n-   **编程**，类似地，指编写代码或指令。今天，你可以在计算机上使用模块编程（如果你使用的是在线教程）或使用纸笔编程（如果你使用的是离线活动）。  \n-   **调试**指检查代码中的错误并试图修复错误。\n\n让学生说出一些他们听说过的与编码相关的工作。学生可能会提到“程序员”、“计算机科学家”、“软件开发人员”或“工程师”。在你的“计算机科学”面板上捕捉学生的反应，把学生分享的信息做成思维导图。  \n\n**说：**_大家说得对！这里没有正确或错误的答案。如今，几乎任何工作都需要一些代码知识。有很多很多的职业需要一些编码知识，学习编码是任何人都可以做的事情。我们今天就要来做。我们今天做的事情可能跟这些不完全一样，但你今天学到的一切可能会引领你制作下一个《愤怒的小鸟》或Twitter。_"
         },
         "0ac387c0-d67a-4177-aacf-837ce03c55aa": {
-          "description": "挑战你的学生完成[Star Wars: Building a Galaxy with Code](https://studio.code.org/s/starwarsblocks/lessons/1/levels/1)教程。  \n\n根据学生的年龄和能力，你可以考虑：  \n\n-   对于年龄较小的学生，我们建议你将班级分成两人一组，让每组一起使用[pair programming](https://youtu.be/vgkahOzFH2Q)完成教程。\n-   对于年龄较大的学生，我们发现独立学习教程效果很好。有时，允许学生选择他们自己的教程会有帮助。如果学生对《星球大战》不感兴趣，他们可以通过[Write Your First Computer Program](https://studio.code.org/hoc/1)教程获得类似的体验。  \n-   对于成年学员，[Star Wars: Building a Galaxy with Code](https://studio.code.org/s/starwarsblocks/lessons/1/levels/1)教程作为独立挑战或结对编程活动都非常好。"
+          "description": "挑战你的学生完成[Star Wars: Building a Galaxy with Code][0]教程。  \n\n根据学生的年龄和能力，你可以考虑：  \n\n-   对于年龄较小的学生，我们建议你将班级分成两人一组，让每组一起使用[pair programming][1]完成教程。\n-   对于年龄较大的学生，我们发现独立学习教程效果很好。有时，允许学生选择他们自己的教程会有帮助。如果学生对《星球大战》不感兴趣，他们可以通过[Write Your First Computer Program][2]教程获得类似的体验。  \n-   对于成年学员，[Star Wars: Building a Galaxy with Code][3]教程作为独立挑战或结对编程活动都非常好。"
         },
         "88879c41-12f5-4d2e-86e6-93925b83d7d0": {
           "tips": [
@@ -25945,15 +25945,15 @@
           ]
         },
         "719affd9-c1a0-4b0c-8bc3-22060893f5e0": {
-          "description": "在教程的最后，学生有机会构建一个星球大战游戏。如果学生完成的早，鼓励他们尝试彼此的游戏，然后使自己的游戏更有趣或更具挑战性。  \n\n你也可以通过访问[code.org/learn](http://code.org/learn)让小组或个人尝试另一个教程。"
+          "description": "在教程的最后，学生有机会构建一个星球大战游戏。如果学生完成的早，鼓励他们尝试彼此的游戏，然后使自己的游戏更有趣或更具挑战性。  \n\n你也可以通过访问[code.org/learn][0]让小组或个人尝试另一个教程。"
         },
         "afb5ecc7-af66-492d-96bb-2412754005e0": {
           "name": "汇报",
-          "description": "给每个学生一些便利贴或便签。推进快速[“Whip Around”](http://www.theteachertoolkit.com/index.php/tool/whip-around)活动：\n\n-   提出一个有多个答案的提示，如“分享你完成的编程一小时活动中你真正喜欢的东西”或“分享你今天学到的一些技能”。  \n-   让学生写下尽可能多的答案，每张便利贴或便签卡写下一个想法。  \n-   在教室里“打转”，一次叫一个学生。让学生分享他们的一个回答。被点名时，学生不能重复回答；他们必须添加一些新的东西。  \n-   在完成问答后，让学生讨论他们的回答中出现最多的想法和主题。"
+          "description": "给每个学生一些便利贴或便签。推进快速[“Whip Around”][0]活动：\n\n-   提出一个有多个答案的提示，如“分享你完成的编程一小时活动中你真正喜欢的东西”或“分享你今天学到的一些技能”。  \n-   让学生写下尽可能多的答案，每张便利贴或便签卡写下一个想法。  \n-   在教室里“打转”，一次叫一个学生。让学生分享他们的一个回答。被点名时，学生不能重复回答；他们必须添加一些新的东西。  \n-   在完成问答后，让学生讨论他们的回答中出现最多的想法和主题。"
         },
         "16a6a4db-d853-478e-9945-3f0d17865e80": {
           "name": "鼓励",
-          "description": "解释你今天花了一个小时写代码，因为这周是计算机科学教育周，全球数以百万计的学生也在这周学习编程一小时。祝贺学生参与这个世界性运动。\n\n给每个学生一张写有其名字的[certificate](http://code.org/certificates)。"
+          "description": "解释你今天花了一个小时写代码，因为这周是计算机科学教育周，全球数以百万计的学生也在这周学习编程一小时。祝贺学生参与这个世界性运动。\n\n给每个学生一张写有其名字的[certificate][0]。"
         },
         "450db873-f55e-4f30-bbb9-5dfde5bf47e4": {
           "name": "下一步",
@@ -25961,7 +25961,7 @@
         },
         "5ec42aed-0b79-49f8-bd64-0716e60498a4": {
           "name": "超越一小时代码",
-          "description": "编程一小时结束后，有多种方法可以继续在K-5教室教授计算机科学。这里有一些思路：\n\n-   **教授[Code Studio Computer Science Fundamentals](http://code.org/educate/k5)课程**。这六门课程专为低龄学习者而设计。学生们通过一系列谜题学习编码，教师使用有趣的课程计划，有助于让学习变得更生动。Code.org在线或面对面为这些课程提供免费辅导。\n-   研究你今天了解到的一些编程职业。在[Sharemylesson.com](http://www.sharemylesson.com/TaxonomySearchResults.aspx?area=resources&keywords=career+research)上找到关于职业规划研究项目的资源。\n-   **邀请计算机科学专家向班上学生讲述其工作**。如果不认识任何志愿者，可通过[volunteer map](https://code.org/volunteer/local)联系一些。"
+          "description": "编程一小时结束后，有多种方法可以继续在K-5教室教授计算机科学。这里有一些思路：\n\n-   **教授[Code Studio Computer Science Fundamentals][0]课程**。这六门课程专为低龄学习者而设计。学生们通过一系列谜题学习编码，教师使用有趣的课程计划，有助于让学习变得更生动。Code.org在线或面对面为这些课程提供免费辅导。\n-   研究你今天了解到的一些编程职业。在[Sharemylesson.com][1]上找到关于职业规划研究项目的资源。\n-   **邀请计算机科学专家向班上学生讲述其工作**。如果不认识任何志愿者，可通过[volunteer map][2]联系一些。"
         },
         "b0fff664-80cc-4318-b031-edf88ad1aebc": {
           "description": "要求学生在出门时将便签或便条纸添加到“计算机科学”思维导图中。尝试在黑板上写满关于CS是什么以及它为什么重要的各种好点子。"
@@ -26087,7 +26087,7 @@
         },
         "bacf1db7-dc91-41b8-ad71-9fb655e18dfa": {
           "tips": [
-            "-   在实验室里保持身体平静  \n-   记住不要嚼口香糖或糖果  \n-   洗手  \n-   和你的同伴坐在一台电脑前  \n-   确保第一个“驱动者”可以触及鼠标  \n-   当你感到沮丧时，不要击打或摇晃电脑或显示器  \n-   遵循[20/20/20Rule](http://www.anthro.com/blog/2013/10/how-to-prevent-eye-strain-with-the-20-20-20-rule#.WOU39BLyu35) \n-   如何处理每20-30分钟出现的[Wiggles](https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll)（需要免费登录GoNoodle）  \n-   问老师之前先问你的同伴  \n-   小声点，这样每个人都能听到对方的声音  \n-   用日志记录你的感受和解决方法"
+            "-   在实验室里保持身体平静  \n-   记住不要嚼口香糖或糖果  \n-   洗手  \n-   和你的同伴坐在一台电脑前  \n-   确保第一个“驱动者”可以触及鼠标  \n-   当你感到沮丧时，不要击打或摇晃电脑或显示器  \n-   遵循[20/20/20Rule][0] \n-   如何处理每20-30分钟出现的[Wiggles][1]（需要免费登录GoNoodle）  \n-   问老师之前先问你的同伴  \n-   小声点，这样每个人都能听到对方的声音  \n-   用日志记录你的感受和解决方法"
           ]
         },
         "aa328958-bd87-4dbb-8585-cb33f905051f": {
@@ -26110,7 +26110,7 @@
           ]
         },
         "66f2f042-aa67-41db-a756-4ab6e5623f77": {
-          "description": "挑战你的学生完成[Jigsaw](http://studio.code.org/s/jigsaw/lessons/1/levels/1)教程。\n\n-   鼓励有问题/挑战的学生从问他们的搭档开始。\n-   未回答的问题可以升级到附近的团队，他们可能已经知道解决方案。\n-   让学生描述他们看到的问题。它应该做什么？它会做什么的？这说明了什么？\n-   提醒沮丧的学生，挫折是学习道路上的一步，坚持会有回报。\n-   如果一个学生在所有这些之后仍然卡住，询问一些引导性问题，让学生自己发现错误。"
+          "description": "挑战你的学生完成[Jigsaw][0]教程。\n\n-   鼓励有问题/挑战的学生从问他们的搭档开始。\n-   未回答的问题可以升级到附近的团队，他们可能已经知道解决方案。\n-   让学生描述他们看到的问题。它应该做什么？它会做什么的？这说明了什么？\n-   提醒沮丧的学生，挫折是学习道路上的一步，坚持会有回报。\n-   如果一个学生在所有这些之后仍然卡住，询问一些引导性问题，让学生自己发现错误。"
         },
         "11068ad0-f20b-4daf-94cd-7b4549b76f3a": {
           "progression_name": "关卡"
@@ -26120,10 +26120,10 @@
           "description": "让学生写下或画出他们所学到的东西或他们完成难题后的感受。\n\n**提示：**\n\n-   你能画出准备去计算机实验室的序列吗?\n-   绘制出计算机实验室中的“做”和“不做”\n-   绘制和标记你在难题期间点击和拖动时使用的计算机部件的名称。（鼠标按钮、触摸屏、触控板）"
         },
         "8f47b370-5569-4a34-b105-c765a39c8460": {
-          "description": "给每位学生发一张[课堂反馈条](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing)，并让他们总结今天所学的知识、自己的感受或体验的内容。学生可以画出、写出或用任何自己喜欢的方式来表达自己。在每位学生离开教室时收集其“课堂反馈条”。如果你喜欢的话，你可以在公告栏或学校某个显眼的地方张贴“课堂反馈条”，作为你《编程一小时》课程的提示。"
+          "description": "给每位学生发一张[课堂反馈条][0]，并让他们总结今天所学的知识、自己的感受或体验的内容。学生可以画出、写出或用任何自己喜欢的方式来表达自己。在每位学生离开教室时收集其“课堂反馈条”。如果你喜欢的话，你可以在公告栏或学校某个显眼的地方张贴“课堂反馈条”，作为你《编程一小时》课程的提示。"
         },
         "6ddc599f-da51-4adc-9dcc-f13b8b53e760": {
-          "description": "#### 编程一小时之后\n\n编程一小时结束后，有多种方法可以继续在K-5教室教授计算机科学。这里有一些思路：\n\n-   教授[代码工作室计算机科学基础](http://code.org/educate/k5)课程。这六门课程专为低龄学习者而设计。学生们通过一系列谜题学习编码，教师使用有趣的课程计划，有助于让学习变得更生动。Code.org在线或亲身为这些课程提供免费辅导。\n\n-   邀请计算机科学专家向班上学生讲述其工作。不认识任何本地计算机科学家吗？通过我们的[志愿者地图](https://code.org/volunteer/local)联系志愿者"
+          "description": "#### 编程一小时之后\n\n编程一小时结束后，有多种方法可以继续在K-5教室教授计算机科学。这里有一些思路：\n\n-   教授[代码工作室计算机科学基础][0]课程。这六门课程专为低龄学习者而设计。学生们通过一系列谜题学习编码，教师使用有趣的课程计划，有助于让学习变得更生动。Code.org在线或亲身为这些课程提供免费辅导。\n\n-   邀请计算机科学专家向班上学生讲述其工作。不认识任何本地计算机科学家吗？通过我们的[志愿者地图][1]联系志愿者"
         },
         "b16d189d-d990-44c4-be49-8f81ac81a96e": {
           "description": "#### 课程铺垫欢迎学生上课，\n\n并简要介绍当天的活动。",

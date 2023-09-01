@@ -1,21 +1,21 @@
-require 'fileutils'
-require 'json'
-
 require_relative '../../i18n_script_utils'
-require_relative '../../../animation_assets/manifest_builder'
+
+Dir[File.expand_path('../animations/**/*.rb', __FILE__)].sort.each {|file| require file}
 
 module I18n
   module Resources
     module Apps
       module Animations
-        I18N_SOURCE_FILE_PATH = CDO.dir(File.join(I18N_SOURCE_DIR, 'animations/spritelab_animation_library.json')).freeze
+        DIR_NAME = 'animations'.freeze
+        I18N_SOURCE_DIR_PATH = CDO.dir(File.join(I18N_SOURCE_DIR, DIR_NAME)).freeze
+        SPRITELAB_FILE_NAME = 'spritelab_animation_library.json'.freeze
 
         def self.sync_in
-          FileUtils.mkdir_p(File.dirname(I18N_SOURCE_FILE_PATH))
+          SyncIn.perform
+        end
 
-          animation_strings = ManifestBuilder.new({spritelab: true, quiet: true}).get_animation_strings
-
-          File.write(I18N_SOURCE_FILE_PATH, JSON.pretty_generate(animation_strings))
+        def self.sync_out
+          SyncOut.perform
         end
       end
     end

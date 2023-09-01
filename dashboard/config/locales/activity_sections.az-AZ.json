@@ -20754,7 +20754,7 @@
         },
         "63df0c6e-ae3d-4724-9c1d-2ecd5bf8986a": {
           "tips": [
-            "Əgər siz kodlaşdırma ilə çox tanış deyilsinizsə, Kod Saatını təqdim etməyin bir yolu [ilhamverici videolarımızdan](https://hourofcode.com/us/resources#videos) birini göstərməkdir. Tələbələrinizin ruhlandırıcı tapacağını düşündüyünüz birini seçin və indi paylaşın. Gənc öyrənənlər üçün “[Kod Saatı Buradadır](https://youtu.be/FC5FbmsH4fw)”i təklif edirik."
+            "Əgər siz kodlaşdırma ilə çox tanış deyilsinizsə, Kod Saatını təqdim etməyin bir yolu [ilhamverici videolarımızdan][0] birini göstərməkdir. Tələbələrinizin ruhlandırıcı tapacağını düşündüyünüz birini seçin və indi paylaşın. Gənc öyrənənlər üçün “[Kod Saatı Buradadır][1]”i təklif edirik."
           ]
         },
         "f96053ea-387e-47d5-a018-65619ec093b0": {
@@ -20767,7 +20767,7 @@
         },
         "91cc858b-9f90-4134-b890-237f457e8423": {
           "name": "Minecraft: Voyage Aquatic",
-          "description": "Tələbələrinizi [Minecraft: Voyage Aquatic](http://studio.code.org/s/aquatic/lessons/1/levels/1) təlimatını tamamlamağa çağırın.\n\nŞagirdlərinizin yaşından və qabiliyyətindən asılı olaraq, aşağıdakıları nəzərdən keçirə bilərsiniz:\n\n-   Gənc tələbələr üçün, sinfinizi cütlərə bölmənizi və hər qrupdan [qoşa proqramlaşdırma](https://youtu.be/vgkahOzFH2Q) istifadə edərək dərsliyi tamamlamaq üçün birlikdə işləməyi xahiş etməyi təklif edirik.\n-   Orta siniflərdə oxuyanlar üçün biz görürük ki, dərs vəsaitləri üzərində müstəqil işləmək yaxşı nəticə verir. Bəzən bu, tələbələrə öz dərsliklərini seçmək imkanı verir. Əgər tələbələr Minecraftla maraqlanmırlarsa, onlar [Anna və Elza ilə kod](https://studio.code.org/s/frozen/stage/1/puzzle/1) və ya [Ulduz Döyüşləri](https://code.org/starwars) dərslikləri ilə oxşar təcrübə əldə edə bilərlər.\n-   Yaşlı və ya böyüklər üçün [Minecraft: Voyage Aquatic](http://studio.code.org/s/aquatic/lessons/1/levels/1) dərsliyi. müstəqil çağırış və ya cüt proqramlaşdırma fəaliyyəti kimi çox yaxşı işləyir."
+          "description": "Tələbələrinizi [Minecraft: Voyage Aquatic][0] təlimatını tamamlamağa çağırın.\n\nŞagirdlərinizin yaşından və qabiliyyətindən asılı olaraq, aşağıdakıları nəzərdən keçirə bilərsiniz:\n\n-   Gənc tələbələr üçün, sinfinizi cütlərə bölmənizi və hər qrupdan [qoşa proqramlaşdırma][1] istifadə edərək dərsliyi tamamlamaq üçün birlikdə işləməyi xahiş etməyi təklif edirik.\n-   Orta siniflərdə oxuyanlar üçün biz görürük ki, dərs vəsaitləri üzərində müstəqil işləmək yaxşı nəticə verir. Bəzən bu, tələbələrə öz dərsliklərini seçmək imkanı verir. Əgər tələbələr Minecraftla maraqlanmırlarsa, onlar [Anna və Elza ilə kod][2] və ya [Ulduz Döyüşləri][3] dərslikləri ilə oxşar təcrübə əldə edə bilərlər.\n-   Yaşlı və ya böyüklər üçün [Minecraft: Voyage Aquatic][4] dərsliyi. müstəqil çağırış və ya cüt proqramlaşdırma fəaliyyəti kimi çox yaxşı işləyir."
         },
         "900f3fd4-40aa-42f7-89fc-e5240b2db143": {
           "tips": [
@@ -20775,7 +20775,7 @@
           ]
         },
         "1be305a6-52f5-40bb-a8d5-f851a3c61a3a": {
-          "description": "Qrup və ya fərd erkən bitirsə, onlar [code.org/learn](http://code.org/learn) saytına daxil olaraq başqa dərsliyə cəhd edə bilərlər."
+          "description": "Qrup və ya fərd erkən bitirsə, onlar [code.org/learn][0] saytına daxil olaraq başqa dərsliyə cəhd edə bilərlər."
         },
         "29412a26-dd7b-4990-a8bb-7e6f7bfa00d6": {
           "name": "Xülasə",
@@ -20783,18 +20783,18 @@
         },
         "7e26ffea-ccaa-4969-9b40-01573fbe4303": {
           "name": "Qeyd etmək",
-          "description": "Bu gün kodlaşdırmaya bir saat sərf etdiyinizi izah edin, çünki bu həftə CS Təhsil Həftəsidir və bütün dünyada milyonlarla digər tələbə də bu həftə bir Saat Kod öyrənir. Tələbələri bu ümumdünya hərəkatının bir hissəsi olduqları üçün təbrik edirik.\n\nHər bir tələbəyə adı ilə [sertifikat](https://studio.code.org/certificates/batch?course=bWM=) verin."
+          "description": "Bu gün kodlaşdırmaya bir saat sərf etdiyinizi izah edin, çünki bu həftə CS Təhsil Həftəsidir və bütün dünyada milyonlarla digər tələbə də bu həftə bir Saat Kod öyrənir. Tələbələri bu ümumdünya hərəkatının bir hissəsi olduqları üçün təbrik edirik.\n\nHər bir tələbəyə adı ilə [sertifikat][0] verin."
         },
         "de9c3d28-c38a-4d2e-af91-a72a92d31f52": {
           "name": "Növbəti addımlar",
-          "description": "Şagirdlərə bildirin ki, əgər bugünkü fəaliyyətdən həzz aldılarsa, kodlamağa davam etmək üçün çoxlu seçimləri var. Tələbələri seçimlər siyahısı üçün [code.org/learn](<>) saytına daxil olmağa sövq edin və ya bundan sonra əlavə fəaliyyətlərdən hər hansı birini planlaşdırırsınızsa, tələbələrə sinifinizdə nələrin gələcəyini söyləyin."
+          "description": "Şagirdlərə bildirin ki, əgər bugünkü fəaliyyətdən həzz aldılarsa, kodlamağa davam etmək üçün çoxlu seçimləri var. Tələbələri seçimlər siyahısı üçün [code.org/learn][0] saytına daxil olmağa sövq edin və ya bundan sonra əlavə fəaliyyətlərdən hər hansı birini planlaşdırırsınızsa, tələbələrə sinifinizdə nələrin gələcəyini söyləyin."
         },
         "ebf68fd6-9cfe-4fc2-93b4-e61860fc853b": {
-          "description": "Hər bir tələbəyə [“Çıxış Bileti”](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) verin və onlardan bu gün öyrəndiklərini, hiss etdiklərini və ya yaşadıqlarını ümumiləşdirmələrini xahiş edin. Tələbələr özlərini rahat hiss etdikləri istənilən şəkildə çəkə, yaza və ya ifadə edə bilərlər. Otaqdan çıxarkən hər bir tələbədən “Çıxış Bileti” toplayın. İstəyirsinizsə, “Çıxış biletləri”ni bülleten lövhəsində və ya Kod Saatınızı xatırlatmaq üçün məktəbin görkəmli bir yerində yerləşdirə bilərsiniz."
+          "description": "Hər bir tələbəyə [“Çıxış Bileti”][0] verin və onlardan bu gün öyrəndiklərini, hiss etdiklərini və ya yaşadıqlarını ümumiləşdirmələrini xahiş edin. Tələbələr özlərini rahat hiss etdikləri istənilən şəkildə çəkə, yaza və ya ifadə edə bilərlər. Otaqdan çıxarkən hər bir tələbədən “Çıxış Bileti” toplayın. İstəyirsinizsə, “Çıxış biletləri”ni bülleten lövhəsində və ya Kod Saatınızı xatırlatmaq üçün məktəbin görkəmli bir yerində yerləşdirə bilərsiniz."
         },
         "f3360f34-a0a8-4d3d-98e2-fe6176ad0e2e": {
           "name": "Kod Saatı bitəndən sonra",
-          "description": "Kod Saatı başa çatdıqdan sonra K-5 sinifinizdə kompüter elmlərini tədris etməyə davam etməyin bir çox yolu var. Budur bəzi fikirlər:\n\n-   **[Code Studio Kompüter Elmlərinin Əsasları](http://code.org/educate/k5) kurslarını öyrədin**. Bu altı kurs gənc öyrənənlər üçün nəzərdə tutulub. Şagirdlər onlara kodlaşdırmağı öyrədən bulmacalar silsiləsi üzərində işləyirlər və pedaqoqlar öyrənmənin canlı olmasına kömək edən cəlbedici dərs planlarına çıxış əldə edirlər. Code.org bu kurslar üçün onlayn və ya şəxsən pulsuz peşəkar inkişaf təklif edir.\n-   **Daha çox kurs təklifləri üçün [You can Teach Computer Science](https://code.org/teach)** səhifəsinə daxil olun.\n-   **Kompüter elmləri mütəxəssisini öz işi haqqında sinifinizlə danışmağa dəvət edin**. Heç bir yerli kompüter alimi tanımırsınız? [könüllü xəritəmizdə](https://code.org/volunteer/local) könüllü ilə əlaqə saxlayın"
+          "description": "Kod Saatı başa çatdıqdan sonra K-5 sinifinizdə kompüter elmlərini tədris etməyə davam etməyin bir çox yolu var. Budur bəzi fikirlər:\n\n-   **[Code Studio Kompüter Elmlərinin Əsasları][0] kurslarını öyrədin**. Bu altı kurs gənc öyrənənlər üçün nəzərdə tutulub. Şagirdlər onlara kodlaşdırmağı öyrədən bulmacalar silsiləsi üzərində işləyirlər və pedaqoqlar öyrənmənin canlı olmasına kömək edən cəlbedici dərs planlarına çıxış əldə edirlər. Code.org bu kurslar üçün onlayn və ya şəxsən pulsuz peşəkar inkişaf təklif edir.\n-   **Daha çox kurs təklifləri üçün [You can Teach Computer Science][1]** səhifəsinə daxil olun.\n-   **Kompüter elmləri mütəxəssisini öz işi haqqında sinifinizlə danışmağa dəvət edin**. Heç bir yerli kompüter alimi tanımırsınız? [könüllü xəritəmizdə][2] könüllü ilə əlaqə saxlayın"
         },
         "6b51b4f1-5b1d-4b29-af25-c48d716a2d22": {
           "description": "#### Səhnənin qurulması\n\nŞagirdləri sinfə salamlayın və günün fəaliyyətini qısaca təqdim edin.\n\n**Deyin:** _Bu gün kodlamağı öyrənməyə bir saat sərf edəcəyik. Burada kimsə əvvəllər “kod” ifadəsini eşitmişdir? Bunun mənası nədi?_\n\nTələbələr “kodun” gizli mesaj kimi olduğunu və ya hansısa şəkildə kompüterlərlə əlaqəli olduğunu qeyd edə bilərlər.",
@@ -21184,7 +21184,7 @@
         },
         "aced2726-6ed1-4645-9fd2-eccfe982584f": {
           "tips": [
-            "Əgər siz kodlaşdırma ilə çox tanış deyilsinizsə, Kod Saatını təqdim etməyin bir yolu [ilhamverici videolarımızdan](https://hourofcode.com/us/resources#videos) birini göstərməkdir. Tələbələrinizin ruhlandırıcı tapacağını düşündüyünüz birini seçin və indi paylaşın. Gənc öyrənənlər üçün “[Hər kəs öyrənə bilər](https://youtu.be/qYZF6oIZtfc)”i təklif edirik."
+            "Əgər siz kodlaşdırma ilə çox tanış deyilsinizsə, Kod Saatını təqdim etməyin bir yolu [ilhamverici videolarımızdan][0] birini göstərməkdir. Tələbələrinizin ruhlandırıcı tapacağını düşündüyünüz birini seçin və indi paylaşın. Gənc öyrənənlər üçün “[Hər kəs öyrənə bilər][1]”i təklif edirik."
           ]
         },
         "a0692bbb-9e61-49d2-ac85-96bd4a922f5a": {
@@ -21192,7 +21192,7 @@
         },
         "8af57fdb-d7be-4cc2-9964-8f7eed4102f9": {
           "name": "Qanadlı Kod",
-          "description": "Tələbələrinizə [Make a Flappy Game](https://studio.code.org/flappy/1) təlimatını tamamlamağa çağırın.\n\nŞagirdlərinizin yaşından və qabiliyyətindən asılı olaraq, aşağıdakıları nəzərdən keçirə bilərsiniz:\n\n-   Orta və yuxarı sinif şagirdləri üçün pulsuz oynamağa və proqram və ya oyun yaratmağa imkan verən dərsliklər seçməyi təklif edirik. Siz tələbələrin müstəqil və ya cüt və ya kiçik qruplarda işləməsini təmin edə bilərsiniz. [code.org/learn](http://code.org/learn) saytında [Playlab](https://studio.code.org/s/playlab/stage/1/puzzle/1) və yeni beta alətimiz [AppLab](https://code.org/educate/applab) daxil olmaqla, pulsuz yaratmağa imkan verən bir çox başqa dərsliklər var.\n-   Gənc tələbələr üçün, sinfinizi cütlərə və ya çox kiçik qruplara (hər biri üç-dörd şagird) bölmənizi və hər qrupdan [qoşa proqramlaşdırma](https://youtu.be/vgkahOzFH2Q) istifadə edərək dərsliyi tamamlamaq üçün birlikdə işləməyi xahiş etməyi təklif edirik.\n-   Böyüklər üçün [İlk kompüter proqramınızı yazın](https://studio.code.org/hoc/1) dərsliyi ya müstəqil tapşırıq, ya da cüt proqramlaşdırma fəaliyyəti kimi çox yaxşı işləyir."
+          "description": "Tələbələrinizə [Make a Flappy Game][0] təlimatını tamamlamağa çağırın.\n\nŞagirdlərinizin yaşından və qabiliyyətindən asılı olaraq, aşağıdakıları nəzərdən keçirə bilərsiniz:\n\n-   Orta və yuxarı sinif şagirdləri üçün pulsuz oynamağa və proqram və ya oyun yaratmağa imkan verən dərsliklər seçməyi təklif edirik. Siz tələbələrin müstəqil və ya cüt və ya kiçik qruplarda işləməsini təmin edə bilərsiniz. [code.org/learn][1] saytında [Playlab][2] və yeni beta alətimiz [AppLab][3] daxil olmaqla, pulsuz yaratmağa imkan verən bir çox başqa dərsliklər var.\n-   Gənc tələbələr üçün, sinfinizi cütlərə və ya çox kiçik qruplara (hər biri üç-dörd şagird) bölmənizi və hər qrupdan [qoşa proqramlaşdırma][4] istifadə edərək dərsliyi tamamlamaq üçün birlikdə işləməyi xahiş etməyi təklif edirik.\n-   Böyüklər üçün [İlk kompüter proqramınızı yazın][5] dərsliyi ya müstəqil tapşırıq, ya da cüt proqramlaşdırma fəaliyyəti kimi çox yaxşı işləyir."
         },
         "47fe47af-9de3-4ba5-8193-1f489bef9544": {
           "tips": [
@@ -21200,7 +21200,7 @@
           ]
         },
         "55f2f6a9-8e6b-49c2-8988-e2a09956e222": {
-          "description": "Qrup və ya fərd erkən bitirsə, onlar [code.org/learn](http://code.org/learn) saytına daxil olaraq başqa dərsliyə cəhd edə bilərlər."
+          "description": "Qrup və ya fərd erkən bitirsə, onlar [code.org/learn][0] saytına daxil olaraq başqa dərsliyə cəhd edə bilərlər."
         },
         "cd649101-5c1f-4bcb-9258-3cabf2bfccb6": {
           "name": "Xülasə",
@@ -21208,7 +21208,7 @@
         },
         "ca7d5e61-0396-4885-934c-0d70ab63b072": {
           "name": "Qeyd etmək",
-          "description": "Bu gün kodlaşdırmaya bir saat sərf etdiyinizi izah edin, çünki bu həftə CS Təhsil Həftəsidir və bütün dünyada milyonlarla digər tələbə də bu həftə bir Saat Kod öyrənir. Tələbələri bu ümumdünya hərəkatının bir hissəsi olduqları üçün təbrik edirik.\n\nHər bir tələbəyə adı ilə [sertifikat](http://code.org/certificates) verin."
+          "description": "Bu gün kodlaşdırmaya bir saat sərf etdiyinizi izah edin, çünki bu həftə CS Təhsil Həftəsidir və bütün dünyada milyonlarla digər tələbə də bu həftə bir Saat Kod öyrənir. Tələbələri bu ümumdünya hərəkatının bir hissəsi olduqları üçün təbrik edirik.\n\nHər bir tələbəyə adı ilə [sertifikat][0] verin."
         },
         "d4bf5db5-6884-4166-ae90-3a5cd01b9695": {
           "name": "Növbəti addımlar",
@@ -21220,7 +21220,7 @@
         },
         "f7c11887-da26-4c7b-be7a-1b84d330ed30": {
           "name": "Kod Saatı bitəndən sonra",
-          "description": "Kod Saatı başa çatdıqdan sonra K-5 sinifinizdə kompüter elmlərini tədris etməyə davam etməyin bir çox yolu var. Budur bəzi fikirlər:\n\n-   **[Code Studio Computer Science Fundamentals](http://code.org/educate/k5) kurslarını öyrədin**. Bu altı kurs gənc öyrənənlər üçün nəzərdə tutulub. Şagirdlər onlara kodlaşdırmağı öyrədən bulmacalar silsiləsi üzərində işləyirlər və pedaqoqlar öyrənmənin canlı olmasına kömək edən cəlbedici dərs planlarına çıxış əldə edirlər. Code.org bu kurslar üçün onlayn və ya şəxsən pulsuz peşəkar inkişaf təklif edir.\n-   **Kompüter elmləri mütəxəssisini öz işi haqqında sinifinizlə danışmağa dəvət edin**. Heç bir könüllü tanımıram, [volunteer map](https://code.org/volunteer/local) bir neçə nəfərlə əlaqə saxlayın."
+          "description": "Kod Saatı başa çatdıqdan sonra K-5 sinifinizdə kompüter elmlərini tədris etməyə davam etməyin bir çox yolu var. Budur bəzi fikirlər:\n\n-   **[Code Studio Computer Science Fundamentals][0] kurslarını öyrədin**. Bu altı kurs gənc öyrənənlər üçün nəzərdə tutulub. Şagirdlər onlara kodlaşdırmağı öyrədən bulmacalar silsiləsi üzərində işləyirlər və pedaqoqlar öyrənmənin canlı olmasına kömək edən cəlbedici dərs planlarına çıxış əldə edirlər. Code.org bu kurslar üçün onlayn və ya şəxsən pulsuz peşəkar inkişaf təklif edir.\n-   **Kompüter elmləri mütəxəssisini öz işi haqqında sinifinizlə danışmağa dəvət edin**. Heç bir könüllü tanımıram, [volunteer map][1] bir neçə nəfərlə əlaqə saxlayın."
         },
         "4fddbdf5-8e43-4536-bdaa-98b0b8c240ad": {
           "name": "Səhnənin qurulması",
@@ -21228,7 +21228,7 @@
         },
         "55cc55a9-45cb-4bbd-bf37-2de8a2abd9db": {
           "tips": [
-            "Əgər vaxtınız varsa və ya tələbələrinizə bir az daha çox məlumat lazımdırsa, Kod Saatı tədbirinizdən əvvəl [\"The Drawing Machine\"](https://code.org/curriculum/misc/hocunplugged/Teacher)-ni çatdırmağı düşünə bilərsiniz. Bu qısa dərs tələbələri [Anna və Elza ilə Kod dərsliyi](https://studio.code.org/s/frozen/stage/1/puzzle/1) ilə daha çox uğur qazanmağa hazırlayan kompüter dəstəyi ilə rəsm ideyası ilə tanış edir."
+            "Əgər vaxtınız varsa və ya tələbələrinizə bir az daha çox məlumat lazımdırsa, Kod Saatı tədbirinizdən əvvəl [\"The Drawing Machine\"][0]-ni çatdırmağı düşünə bilərsiniz. Bu qısa dərs tələbələri [Anna və Elza ilə Kod dərsliyi][1] ilə daha çox uğur qazanmağa hazırlayan kompüter dəstəyi ilə rəsm ideyası ilə tanış edir."
           ]
         },
         "46e7088b-b207-46ae-be95-3ceacecc3f35": {
@@ -21236,7 +21236,7 @@
         },
         "063fb28a-8520-4c66-9821-3be0f0d1ed5f": {
           "tips": [
-            "Əgər siz kodlaşdırma ilə çox tanış deyilsinizsə, Kod Saatını təqdim etməyin bir yolu [ilhamverici videolarımızdan](https://hourofcode.com/us/resources#videos) birini göstərməkdir. Tələbələrinizin ruhlandırıcı tapacağını düşündüyünüz birini seçin və indi paylaşın. Orta siniflərdə oxuyanlar üçün “[Kod Saatı Buradadır](https://youtu.be/FC5FbmsH4fw)”i təklif edirik."
+            "Əgər siz kodlaşdırma ilə çox tanış deyilsinizsə, Kod Saatını təqdim etməyin bir yolu [ilhamverici videolarımızdan][0] birini göstərməkdir. Tələbələrinizin ruhlandırıcı tapacağını düşündüyünüz birini seçin və indi paylaşın. Orta siniflərdə oxuyanlar üçün “[Kod Saatı Buradadır][1]”i təklif edirik."
           ]
         },
         "c18f0050-ba65-4f12-8cc6-fe7f16b5806b": {
@@ -21244,7 +21244,7 @@
         },
         "e5e802d6-9ee4-4ef3-aab2-616ac241b5f8": {
           "name": "Anna və Elza ilə proqramlaşdır",
-          "description": "Tələbələrinizə [Anna və Elza ilə Kod](https://studio.code.org/s/frozen/stage/1/puzzle/1) təlimatını tamamlamağa çağırın.\n\nŞagirdlərinizin yaşından və qabiliyyətindən asılı olaraq, aşağıdakıları nəzərdən keçirə bilərsiniz:\n\n-   Gənc tələbələr üçün, sinfinizi cütlərə və ya çox kiçik qruplara (hər biri üç-dörd şagird) bölmənizi və hər qrupdan [qoşa proqramlaşdırma](https://youtu.be/vgkahOzFH2Q) istifadə edərək dərsliyi tamamlamaq üçün birlikdə işləməyi xahiş etməyi təklif edirik. K-5 sinif şagirdləri dərslikdə riyaziyyatla mübarizə apara bilər (bu, bucaq ölçülməsinin əsas anlayışını tələb edir). Tələbələriniz gənc tərəfdədirsə, Kod Saatını asanlaşdırmaqdan əvvəl əsasları təqdim etmək üçün əlavə dərs planını [\"The Drawing Machine\"](https://code.org/curriculum/misc/hocunplugged/Teacher) təqdim etməyi düşünün.\n-   Yaşlı tələbələr üçün dərs vəsaitləri üzərində müstəqil işləməyin yaxşı nəticə verdiyini görürük. Bəzən bu, tələbələrə öz dərsliklərini seçmək imkanı verir. Əgər tələbələr Frozen ilə maraqlanmırlarsa, onlar [Birinci Kompüter Proqramını Yaz](https://studio.code.org/hoc/1) təlimatı ilə oxşar təcrübə əldə edə bilərlər.\n-   Yetkin öyrənənlər üçün [Anna və Elza ilə Kod](https://studio.code.org/s/frozen/stage/1/puzzle/1) ya müstəqil çağırış, ya da cüt proqramlaşdırma fəaliyyəti kimi çox yaxşı işləyir."
+          "description": "Tələbələrinizə [Anna və Elza ilə Kod][0] təlimatını tamamlamağa çağırın.\n\nŞagirdlərinizin yaşından və qabiliyyətindən asılı olaraq, aşağıdakıları nəzərdən keçirə bilərsiniz:\n\n-   Gənc tələbələr üçün, sinfinizi cütlərə və ya çox kiçik qruplara (hər biri üç-dörd şagird) bölmənizi və hər qrupdan [qoşa proqramlaşdırma][1] istifadə edərək dərsliyi tamamlamaq üçün birlikdə işləməyi xahiş etməyi təklif edirik. K-5 sinif şagirdləri dərslikdə riyaziyyatla mübarizə apara bilər (bu, bucaq ölçülməsinin əsas anlayışını tələb edir). Tələbələriniz gənc tərəfdədirsə, Kod Saatını asanlaşdırmaqdan əvvəl əsasları təqdim etmək üçün əlavə dərs planını [\"The Drawing Machine\"][2] təqdim etməyi düşünün.\n-   Yaşlı tələbələr üçün dərs vəsaitləri üzərində müstəqil işləməyin yaxşı nəticə verdiyini görürük. Bəzən bu, tələbələrə öz dərsliklərini seçmək imkanı verir. Əgər tələbələr Frozen ilə maraqlanmırlarsa, onlar [Birinci Kompüter Proqramını Yaz][3] təlimatı ilə oxşar təcrübə əldə edə bilərlər.\n-   Yetkin öyrənənlər üçün [Anna və Elza ilə Kod][4] ya müstəqil çağırış, ya da cüt proqramlaşdırma fəaliyyəti kimi çox yaxşı işləyir."
         },
         "bdb8b54a-c21d-4bcf-a960-67ecf0468a7f": {
           "tips": [
@@ -21252,15 +21252,15 @@
           ]
         },
         "da8b52b2-8db6-440d-add3-8578161f59e2": {
-          "description": "Qrup və ya fərd erkən bitirsə, onlar [code.org/learn](http://code.org/learn) saytına daxil olaraq başqa dərsliyə cəhd edə bilərlər."
+          "description": "Qrup və ya fərd erkən bitirsə, onlar [code.org/learn][0] saytına daxil olaraq başqa dərsliyə cəhd edə bilərlər."
         },
         "38799019-2b81-4c28-a239-762b90e0f5e3": {
           "name": "Xülasə",
-          "description": "Hər bir tələbəyə bir neçə yapışqan qeyd və ya qeyd kartı verin. Sürətli [“Whip Around”](http://www.theteachertoolkit.com/index.php/tool/whip-around) fəaliyyətini asanlaşdırın:\n\n-   “Tamamladığınız Kod Saatı fəaliyyəti haqqında həqiqətən bəyəndiyiniz bir şeyi paylaşın” və ya “Bu gün öyrəndiyiniz bəzi bacarıqları paylaşın” kimi bir neçə cavabı olan sorğu verin.\n-   Şagirdlərdən mümkün qədər çox cavab yazsınlar, hər yapışqan qeyd və ya qeyd kartı üçün bir fikir.\n     Hər dəfə bir tələbəni çağıraraq otağın ətrafında \"qamçılayın\". Şagirdlərin cavablarından birini paylaşmasını xahiş edin. Tələbələr çağırıldıqda cavabı təkrarlamamalıdırlar; yeni bir şey əlavə etməlidirlər.\n-   Şagirdlərin cavablarında ən çox hansı fikir və mövzuların göründüyünü müzakirə edin."
+          "description": "Hər bir tələbəyə bir neçə yapışqan qeyd və ya qeyd kartı verin. Sürətli [“Whip Around”][0] fəaliyyətini asanlaşdırın:\n\n-   “Tamamladığınız Kod Saatı fəaliyyəti haqqında həqiqətən bəyəndiyiniz bir şeyi paylaşın” və ya “Bu gün öyrəndiyiniz bəzi bacarıqları paylaşın” kimi bir neçə cavabı olan sorğu verin.\n-   Şagirdlərdən mümkün qədər çox cavab yazsınlar, hər yapışqan qeyd və ya qeyd kartı üçün bir fikir.\n     Hər dəfə bir tələbəni çağıraraq otağın ətrafında \"qamçılayın\". Şagirdlərin cavablarından birini paylaşmasını xahiş edin. Tələbələr çağırıldıqda cavabı təkrarlamamalıdırlar; yeni bir şey əlavə etməlidirlər.\n-   Şagirdlərin cavablarında ən çox hansı fikir və mövzuların göründüyünü müzakirə edin."
         },
         "e9751fff-a71d-4d90-b401-0ccbf3356c44": {
           "name": "Qeyd etmək",
-          "description": "Bu gün kodlaşdırmaya bir saat sərf etdiyinizi izah edin, çünki bu həftə CS Təhsil Həftəsidir və bütün dünyada milyonlarla digər tələbə də bu həftə bir Saat Kod öyrənir. Tələbələri bu ümumdünya hərəkatının bir hissəsi olduqları üçün təbrik edirik.\n\nHər bir tələbəyə adı ilə [sertifikat](http://code.org/certificates) verin."
+          "description": "Bu gün kodlaşdırmaya bir saat sərf etdiyinizi izah edin, çünki bu həftə CS Təhsil Həftəsidir və bütün dünyada milyonlarla digər tələbə də bu həftə bir Saat Kod öyrənir. Tələbələri bu ümumdünya hərəkatının bir hissəsi olduqları üçün təbrik edirik.\n\nHər bir tələbəyə adı ilə [sertifikat][0] verin."
         },
         "3596cc47-e661-4d00-943e-ed858c4f6f5d": {
           "name": "Növbəti addımlar",
@@ -21271,7 +21271,7 @@
         },
         "3a8c30ae-50bb-4a85-99d8-b62c9f7e1bbf": {
           "name": "Kod Saatı bitəndən sonra",
-          "description": "Kod Saatı başa çatdıqdan sonra K-5 sinifinizdə kompüter elmlərini tədris etməyə davam etməyin bir çox yolu var. Budur bəzi fikirlər:\n\n-   **[Code Studio Kompüter Elmlərinin Əsasları](http://code.org/educate/k5) kurslarını öyrədin**. Bu altı kurs gənc öyrənənlər üçün nəzərdə tutulub. Şagirdlər onlara kodlaşdırmağı öyrədən bulmacalar silsiləsi üzərində işləyirlər və pedaqoqlar öyrənmənin canlı olmasına kömək edən cəlbedici dərs planlarına çıxış əldə edirlər. Code.org bu kurslar üçün onlayn və ya şəxsən pulsuz peşəkar inkişaf təklif edir.\n-   Bu gün müəyyən etdiyiniz bəzi kodlaşdırma karyeralarını araşdırın. [Sharemylesson.com](http://www.sharemylesson.com/TaxonomySearchResults.aspx?area=resources&keywords=career+research) saytında karyera tədqiqat layihələrinin planlaşdırılması ilə bağlı resursları tapın.\n-   **Kompüter elmləri mütəxəssisini öz işi haqqında sinifinizlə danışmağa dəvət edin**. Heç bir könüllü tanımıram, [könüllülər xəritəsində](https://code.org/volunteer/local) bir neçə nəfərlə əlaqə saxlayın."
+          "description": "Kod Saatı başa çatdıqdan sonra K-5 sinifinizdə kompüter elmlərini tədris etməyə davam etməyin bir çox yolu var. Budur bəzi fikirlər:\n\n-   **[Code Studio Kompüter Elmlərinin Əsasları][0] kurslarını öyrədin**. Bu altı kurs gənc öyrənənlər üçün nəzərdə tutulub. Şagirdlər onlara kodlaşdırmağı öyrədən bulmacalar silsiləsi üzərində işləyirlər və pedaqoqlar öyrənmənin canlı olmasına kömək edən cəlbedici dərs planlarına çıxış əldə edirlər. Code.org bu kurslar üçün onlayn və ya şəxsən pulsuz peşəkar inkişaf təklif edir.\n-   Bu gün müəyyən etdiyiniz bəzi kodlaşdırma karyeralarını araşdırın. [Sharemylesson.com][1] saytında karyera tədqiqat layihələrinin planlaşdırılması ilə bağlı resursları tapın.\n-   **Kompüter elmləri mütəxəssisini öz işi haqqında sinifinizlə danışmağa dəvət edin**. Heç bir könüllü tanımıram, [könüllülər xəritəsində][2] bir neçə nəfərlə əlaqə saxlayın."
         },
         "a2f60a17-c25f-4c4d-9f2d-384486d7a67d": {
           "name": "Səhnənin qurulması",
@@ -21279,7 +21279,7 @@
         },
         "c857d03e-91e3-4949-8ccc-79a2aec463c8": {
           "tips": [
-            "Əgər siz kodlaşdırma ilə çox tanış deyilsinizsə, Kod Saatını təqdim etməyin bir yolu [ilhamverici videolarımızdan](https://hourofcode.com/us/resources#videos) birini göstərməkdir. Tələbələrinizin ruhlandırıcı tapacağını düşündüyünüz birini seçin və indi paylaşın. Gənc öyrənənlər üçün “[Hər kəs öyrənə bilər](https://youtu.be/qYZF6oIZtfc)”i təklif edirik."
+            "Əgər siz kodlaşdırma ilə çox tanış deyilsinizsə, Kod Saatını təqdim etməyin bir yolu [ilhamverici videolarımızdan][0] birini göstərməkdir. Tələbələrinizin ruhlandırıcı tapacağını düşündüyünüz birini seçin və indi paylaşın. Gənc öyrənənlər üçün “[Hər kəs öyrənə bilər][1]”i təklif edirik."
           ]
         },
         "8ad0974f-b2ad-4632-bfe5-8c8760cd2e45": {
@@ -21287,7 +21287,7 @@
         },
         "0e395269-9740-4229-a7ac-b18b9f4eced9": {
           "name": "Gumball Play Laboratoriyası",
-          "description": "Tələbələrinizə [Gumball Play Lab](https://studio.code.org/s/gumball/lessons/1/levels/1) təlimatını tamamlamağa çağırın.\n\nŞagirdlərinizin yaşından və qabiliyyətindən asılı olaraq, aşağıdakıları nəzərdən keçirə bilərsiniz:\n\n-   Orta və yuxarı sinif şagirdləri üçün pulsuz oynamağa və proqram və ya oyun yaratmağa imkan verən dərsliklər seçməyi təklif edirik. Siz tələbələrin müstəqil və ya cüt və ya kiçik qruplarda işləməsini təmin edə bilərsiniz. [code.org/learn](http://code.org/learn) saytında  [Flappy Oyunu yaratmaq](https://studio.code.org/s/flappy) və yeni beta alətimiz [AppLab](https://code.org/educate/applab) daxil olmaqla, pulsuz yaratmağa imkan verən bir çox başqa dərsliklər var.\n-   Gənc tələbələr üçün, sinfinizi cütlərə və ya çox kiçik qruplara (hər biri üç-dörd şagird) bölmənizi və hər qrupdan [qoşa proqramlaşdırma](https://youtu.be/vgkahOzFH2Q) istifadə edərək dərsliyi tamamlamaq üçün birlikdə işləməyi xahiş etməyi təklif edirik.\n-   Böyüklər üçün [İlk kompüter proqramınızı yazın](https://studio.code.org/hoc/1) dərsliyi ya müstəqil tapşırıq, ya da cüt proqramlaşdırma fəaliyyəti kimi çox yaxşı işləyir."
+          "description": "Tələbələrinizə [Gumball Play Lab][0] təlimatını tamamlamağa çağırın.\n\nŞagirdlərinizin yaşından və qabiliyyətindən asılı olaraq, aşağıdakıları nəzərdən keçirə bilərsiniz:\n\n-   Orta və yuxarı sinif şagirdləri üçün pulsuz oynamağa və proqram və ya oyun yaratmağa imkan verən dərsliklər seçməyi təklif edirik. Siz tələbələrin müstəqil və ya cüt və ya kiçik qruplarda işləməsini təmin edə bilərsiniz. [code.org/learn][1] saytında  [Flappy Oyunu yaratmaq][2] və yeni beta alətimiz [AppLab][3] daxil olmaqla, pulsuz yaratmağa imkan verən bir çox başqa dərsliklər var.\n-   Gənc tələbələr üçün, sinfinizi cütlərə və ya çox kiçik qruplara (hər biri üç-dörd şagird) bölmənizi və hər qrupdan [qoşa proqramlaşdırma][4] istifadə edərək dərsliyi tamamlamaq üçün birlikdə işləməyi xahiş etməyi təklif edirik.\n-   Böyüklər üçün [İlk kompüter proqramınızı yazın][5] dərsliyi ya müstəqil tapşırıq, ya da cüt proqramlaşdırma fəaliyyəti kimi çox yaxşı işləyir."
         },
         "eea63453-59c2-4c48-8d04-d6612d379584": {
           "tips": [
@@ -21295,7 +21295,7 @@
           ]
         },
         "fd77d784-72d9-4687-843d-7d1ecd17b9a1": {
-          "description": "Qrup və ya fərd erkən bitirsə, onlar [code.org/learn](http://code.org/learn) saytına daxil olaraq başqa dərsliyə cəhd edə bilərlər."
+          "description": "Qrup və ya fərd erkən bitirsə, onlar [code.org/learn][0] saytına daxil olaraq başqa dərsliyə cəhd edə bilərlər."
         },
         "0815f2e7-8336-48ae-8ac0-5d0af1f956d9": {
           "name": "Xülasə",
@@ -21303,7 +21303,7 @@
         },
         "3b92bb05-ac4c-4717-afce-ed3d10f54527": {
           "name": "Qeyd etmək",
-          "description": "Bu gün kodlaşdırmaya bir saat sərf etdiyinizi izah edin, çünki bu həftə CS Təhsil Həftəsidir və bütün dünyada milyonlarla digər tələbə də bu həftə bir Saat Kod öyrənir. Tələbələri bu ümumdünya hərəkatının bir hissəsi olduqları üçün təbrik edirik.\n\nHər bir tələbəyə adı ilə [sertifikat](http://code.org/certificates) verin."
+          "description": "Bu gün kodlaşdırmaya bir saat sərf etdiyinizi izah edin, çünki bu həftə CS Təhsil Həftəsidir və bütün dünyada milyonlarla digər tələbə də bu həftə bir Saat Kod öyrənir. Tələbələri bu ümumdünya hərəkatının bir hissəsi olduqları üçün təbrik edirik.\n\nHər bir tələbəyə adı ilə [sertifikat][0] verin."
         },
         "59cd05df-cb4d-4280-8700-840826c01845": {
           "name": "Növbəti addımlar",
@@ -21315,7 +21315,7 @@
         },
         "2836d5f0-0808-4868-bc34-bbd3cf8b631f": {
           "name": "Kod Saatı bitəndən sonra",
-          "description": "Kod Saatı başa çatdıqdan sonra K-5 sinifinizdə kompüter elmlərini tədris etməyə davam etməyin bir çox yolu var. Budur bəzi fikirlər:\n\n-   **[Code Studio Computer Science Fundamentals](http://code.org/educate/k5) kurslarını öyrədin**. Bu altı kurs gənc öyrənənlər üçün nəzərdə tutulub. Şagirdlər onlara kodlaşdırmağı öyrədən bulmacalar silsiləsi üzərində işləyirlər və pedaqoqlar öyrənmənin canlı olmasına kömək edən cəlbedici dərs planlarına çıxış əldə edirlər. Code.org bu kurslar üçün onlayn və ya şəxsən pulsuz peşəkar inkişaf təklif edir.\n-   **Kompüter elmləri mütəxəssisini öz işi haqqında sinifinizlə danışmağa dəvət edin**. Heç bir könüllü tanımıram, [volunteer map](https://code.org/volunteer/local) bir neçə nəfərlə əlaqə saxlayın."
+          "description": "Kod Saatı başa çatdıqdan sonra K-5 sinifinizdə kompüter elmlərini tədris etməyə davam etməyin bir çox yolu var. Budur bəzi fikirlər:\n\n-   **[Code Studio Computer Science Fundamentals][0] kurslarını öyrədin**. Bu altı kurs gənc öyrənənlər üçün nəzərdə tutulub. Şagirdlər onlara kodlaşdırmağı öyrədən bulmacalar silsiləsi üzərində işləyirlər və pedaqoqlar öyrənmənin canlı olmasına kömək edən cəlbedici dərs planlarına çıxış əldə edirlər. Code.org bu kurslar üçün onlayn və ya şəxsən pulsuz peşəkar inkişaf təklif edir.\n-   **Kompüter elmləri mütəxəssisini öz işi haqqında sinifinizlə danışmağa dəvət edin**. Heç bir könüllü tanımıram, [volunteer map][1] bir neçə nəfərlə əlaqə saxlayın."
         },
         "c4d6d315-bb5c-47d7-bc5e-f5fce2e4ae67": {
           "name": "Səhnənin qurulması",
@@ -21329,18 +21329,18 @@
         },
         "ce182c47-efed-4526-bb9c-f4ec66b052a4": {
           "name": "Ümumi Dəstək",
-          "description": "Budur, üzərində işlədikləri səviyyədən asılı olmayaraq tələbələrə kömək edəcək bir neçə ipucu\n\n-   **Qonşularla əməkdaşlıq edin:** Şagirdləri ilişib qalanda qonşusu ilə yoxlamağa təşviq edin. Tələbələrinizin yaşından və bacarığından asılı olaraq, [cüt proqramlaşdırma](https://youtu.be/vgkahOzFH2Q) istifadə edərək dərsliyi tamamlamaq üçün sinifinizi rəsmi olaraq cütlərə bölməyi düşünə bilərsiniz.\n\n-   **Təlimatları oxuyun:** Təlimatlar adətən səviyyəni necə başa çatdırmaq üçün faydalı məsləhətlər verir. Tələbələrə cavab verməzdən əvvəl onların təlimatlara, göstərişlərə, videolara və hər hansı başlanğıc koduna diqqətlə baxdıqlarından əmin olun.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **İlişmisiniz? Məsləhətlərə baxın:** Hər səviyyəyə hansı kod bloklarının sınaqdan keçirilməsi də daxil olmaqla, səviyyəni necə keçmək barədə məsləhətlər var.\n\n-   **Vaxtınızı və təcrübənizi ayırın.** Təlimatlar ümumiyyətlə tələbələrə nə etməli olduqlarını deyir, lakin onlar həm də öz fikirlərini sınamaqdan çəkinməlidirlər."
+          "description": "Budur, üzərində işlədikləri səviyyədən asılı olmayaraq tələbələrə kömək edəcək bir neçə ipucu\n\n-   **Qonşularla əməkdaşlıq edin:** Şagirdləri ilişib qalanda qonşusu ilə yoxlamağa təşviq edin. Tələbələrinizin yaşından və bacarığından asılı olaraq, [cüt proqramlaşdırma][0] istifadə edərək dərsliyi tamamlamaq üçün sinifinizi rəsmi olaraq cütlərə bölməyi düşünə bilərsiniz.\n\n-   **Təlimatları oxuyun:** Təlimatlar adətən səviyyəni necə başa çatdırmaq üçün faydalı məsləhətlər verir. Tələbələrə cavab verməzdən əvvəl onların təlimatlara, göstərişlərə, videolara və hər hansı başlanğıc koduna diqqətlə baxdıqlarından əmin olun.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **İlişmisiniz? Məsləhətlərə baxın:** Hər səviyyəyə hansı kod bloklarının sınaqdan keçirilməsi də daxil olmaqla, səviyyəni necə keçmək barədə məsləhətlər var.\n\n-   **Vaxtınızı və təcrübənizi ayırın.** Təlimatlar ümumiyyətlə tələbələrə nə etməli olduqlarını deyir, lakin onlar həm də öz fikirlərini sınamaqdan çəkinməlidirlər."
         },
         "893dba56-7c8e-4897-949b-de514de76011": {
           "name": "Salam Dünya",
           "progression_name": "Salam Dünya"
         },
         "05ad915a-32e0-4799-90a2-2a53efb937f1": {
-          "description": "Bir qrup və ya fərd erkən bitirsə, onları sonuncu səviyyədə layihə qurmağa davam etməyə təşviq edin. Tələbələr başqa nə edəcəklərinə əmin deyillərsə, onlara suallar verə bilərsiniz:\n\n-   Layihənizə daha hansı spritləri əlavə edə bilərsiniz?\n-   Kostyum kitabxanasına baxmısınız və ya öz sprite kostyumunuzu çəkməyə çalışmısınız?\n-   Spritləriniz başqa nə deyə bilərdiniz?\n-   Spritləriniz kliklənəndə nə etməlidir?\n-   Tələbələri fikirlərini bölüşməyə və bir-birindən öyrənməyə dəvət edin. Onlar həmçinin [code.org/learn](https://code.org/learn) saytına daxil olaraq başqa dərsliyə cəhd edə bilərlər."
+          "description": "Bir qrup və ya fərd erkən bitirsə, onları sonuncu səviyyədə layihə qurmağa davam etməyə təşviq edin. Tələbələr başqa nə edəcəklərinə əmin deyillərsə, onlara suallar verə bilərsiniz:\n\n-   Layihənizə daha hansı spritləri əlavə edə bilərsiniz?\n-   Kostyum kitabxanasına baxmısınız və ya öz sprite kostyumunuzu çəkməyə çalışmısınız?\n-   Spritləriniz başqa nə deyə bilərdiniz?\n-   Spritləriniz kliklənəndə nə etməlidir?\n-   Tələbələri fikirlərini bölüşməyə və bir-birindən öyrənməyə dəvət edin. Onlar həmçinin [code.org/learn][0] saytına daxil olaraq başqa dərsliyə cəhd edə bilərlər."
         },
         "d5d3f8eb-f17e-4f26-88a8-ca6422ed7a1f": {
           "name": "Əksetmə",
-          "description": "#### Məlumat\n\nŞagirdlərdən günün fəaliyyətləri haqqında düşünmələrini xahiş edin. Kodlaşdırma haqqında nə öyrəndilər? Sprites? Hadisələr?\n\nTədqiqata bir saat sərf etdikdən sonra kompüter elmləri və kodlaşdırmaya münasibət necədir?\n\n#### Növbəti addımlar\n\nŞagirdlərə bildirin ki, əgər bugünkü fəaliyyətdən həzz aldılarsa, kodlamağa davam etmək üçün çoxlu seçimləri var. Kompüter elmini digər fənlərə necə inteqrasiya etmək barədə fikirlər üçün [CS Connections](https://code.org/educate/csc) səhifəsinə daxil olun və ya [ibtidai məktəblər üçün kurs təklifləri](https://code.org/educate/curriculum/elementary-school) haqqında ətraflı oxuyun."
+          "description": "#### Məlumat\n\nŞagirdlərdən günün fəaliyyətləri haqqında düşünmələrini xahiş edin. Kodlaşdırma haqqında nə öyrəndilər? Sprites? Hadisələr?\n\nTədqiqata bir saat sərf etdikdən sonra kompüter elmləri və kodlaşdırmaya münasibət necədir?\n\n#### Növbəti addımlar\n\nŞagirdlərə bildirin ki, əgər bugünkü fəaliyyətdən həzz aldılarsa, kodlamağa davam etmək üçün çoxlu seçimləri var. Kompüter elmini digər fənlərə necə inteqrasiya etmək barədə fikirlər üçün [CS Connections][0] səhifəsinə daxil olun və ya [ibtidai məktəblər üçün kurs təklifləri][1] haqqında ətraflı oxuyun."
         },
         "aad08892-e7b6-4fdc-bfd6-8199118fc2d6": {
           "name": "Səhnənin qurulması",
@@ -21354,18 +21354,18 @@
         },
         "0a05af25-05aa-4e56-92ce-f14570cc1c64": {
           "name": "Ümumi Dəstək",
-          "description": "Budur, üzərində işlədikləri səviyyədən asılı olmayaraq tələbələrə kömək edəcək bir neçə ipucu\n\n-   **Qonşularla əməkdaşlıq edin:** Şagirdləri ilişib qalanda qonşusu ilə yoxlamağa təşviq edin. Tələbələrinizin yaşından və bacarığından asılı olaraq, [cüt proqramlaşdırma](https://youtu.be/vgkahOzFH2Q) istifadə edərək dərsliyi tamamlamaq üçün sinifinizi rəsmi olaraq cütlərə bölməyi düşünə bilərsiniz.\n\n-   **Təlimatları oxuyun:** Təlimatlar adətən səviyyəni necə başa çatdırmaq üçün faydalı məsləhətlər verir. Tələbələrə cavab verməzdən əvvəl onların təlimatlara, göstərişlərə, videolara və hər hansı başlanğıc koduna diqqətlə baxdıqlarından əmin olun.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **İlişmisiniz? Məsləhətlərə baxın:** Hər səviyyəyə hansı kod bloklarının sınaqdan keçirilməsi də daxil olmaqla, səviyyəni necə keçmək barədə məsləhətlər var.\n\n-   **Vaxtınızı və təcrübənizi ayırın.** Təlimatlar ümumiyyətlə tələbələrə nə etməli olduqlarını deyir, lakin onlar həm də öz fikirlərini sınamaqdan çəkinməlidirlər."
+          "description": "Budur, üzərində işlədikləri səviyyədən asılı olmayaraq tələbələrə kömək edəcək bir neçə ipucu\n\n-   **Qonşularla əməkdaşlıq edin:** Şagirdləri ilişib qalanda qonşusu ilə yoxlamağa təşviq edin. Tələbələrinizin yaşından və bacarığından asılı olaraq, [cüt proqramlaşdırma][0] istifadə edərək dərsliyi tamamlamaq üçün sinifinizi rəsmi olaraq cütlərə bölməyi düşünə bilərsiniz.\n\n-   **Təlimatları oxuyun:** Təlimatlar adətən səviyyəni necə başa çatdırmaq üçün faydalı məsləhətlər verir. Tələbələrə cavab verməzdən əvvəl onların təlimatlara, göstərişlərə, videolara və hər hansı başlanğıc koduna diqqətlə baxdıqlarından əmin olun.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **İlişmisiniz? Məsləhətlərə baxın:** Hər səviyyəyə hansı kod bloklarının sınaqdan keçirilməsi də daxil olmaqla, səviyyəni necə keçmək barədə məsləhətlər var.\n\n-   **Vaxtınızı və təcrübənizi ayırın.** Təlimatlar ümumiyyətlə tələbələrə nə etməli olduqlarını deyir, lakin onlar həm də öz fikirlərini sınamaqdan çəkinməlidirlər."
         },
         "f6a21949-1c94-4269-acae-98046f6a9052": {
           "name": "Salam Dünya",
           "progression_name": "Salam Dünya"
         },
         "3e2a74f4-d574-42fd-9bf3-5b319526299a": {
-          "description": "Bir qrup və ya fərd erkən bitirsə, onları sonuncu səviyyədə layihə qurmağa davam etməyə təşviq edin. Tələbələr başqa nə edəcəklərinə əmin deyillərsə, onlara suallar verə bilərsiniz:\n\n-   Layihənizə daha hansı spritləri əlavə edə bilərsiniz?\n-   Kostyum kitabxanasına baxmısınız və ya öz sprite kostyumunuzu çəkməyə çalışmısınız?\n-   Spritləriniz başqa nə deyə bilərdiniz?\n-   Spritləriniz kliklənəndə nə etməlidir?\n-   Tələbələri fikirlərini bölüşməyə və bir-birindən öyrənməyə dəvət edin. Onlar həmçinin [code.org/learn](https://code.org/learn) saytına daxil olaraq başqa dərsliyə cəhd edə bilərlər."
+          "description": "Bir qrup və ya fərd erkən bitirsə, onları sonuncu səviyyədə layihə qurmağa davam etməyə təşviq edin. Tələbələr başqa nə edəcəklərinə əmin deyillərsə, onlara suallar verə bilərsiniz:\n\n-   Layihənizə daha hansı spritləri əlavə edə bilərsiniz?\n-   Kostyum kitabxanasına baxmısınız və ya öz sprite kostyumunuzu çəkməyə çalışmısınız?\n-   Spritləriniz başqa nə deyə bilərdiniz?\n-   Spritləriniz kliklənəndə nə etməlidir?\n-   Tələbələri fikirlərini bölüşməyə və bir-birindən öyrənməyə dəvət edin. Onlar həmçinin [code.org/learn][0] saytına daxil olaraq başqa dərsliyə cəhd edə bilərlər."
         },
         "f95b4eed-639e-483e-bef7-ead9abf4808e": {
           "name": "Əksetmə",
-          "description": "#### Məlumat\n\nŞagirdlərdən günün fəaliyyətləri haqqında düşünmələrini xahiş edin. Kodlaşdırma haqqında nə öyrəndilər? Sprites? Hadisələr?\n\nTədqiqata bir saat sərf etdikdən sonra kompüter elmləri və kodlaşdırmaya münasibət necədir?\n\n#### Növbəti addımlar\n\nŞagirdlərə bildirin ki, əgər bugünkü fəaliyyətdən həzz aldılarsa, kodlamağa davam etmək üçün çoxlu seçimləri var. Kompüter elmini digər fənlərə necə inteqrasiya etmək barədə fikirlər üçün [CS Connections](https://code.org/educate/csc) səhifəsinə daxil olun və ya [ibtidai məktəblər üçün kurs təklifləri](https://code.org/educate/curriculum/elementary-school) haqqında ətraflı oxuyun."
+          "description": "#### Məlumat\n\nŞagirdlərdən günün fəaliyyətləri haqqında düşünmələrini xahiş edin. Kodlaşdırma haqqında nə öyrəndilər? Sprites? Hadisələr?\n\nTədqiqata bir saat sərf etdikdən sonra kompüter elmləri və kodlaşdırmaya münasibət necədir?\n\n#### Növbəti addımlar\n\nŞagirdlərə bildirin ki, əgər bugünkü fəaliyyətdən həzz aldılarsa, kodlamağa davam etmək üçün çoxlu seçimləri var. Kompüter elmini digər fənlərə necə inteqrasiya etmək barədə fikirlər üçün [CS Connections][0] səhifəsinə daxil olun və ya [ibtidai məktəblər üçün kurs təklifləri][1] haqqında ətraflı oxuyun."
         },
         "5ba761c1-02df-411f-96cd-69a8327e0d2c": {
           "name": "Səhnənin qurulması",
@@ -21379,18 +21379,18 @@
         },
         "11f167ca-2cf6-4e6b-8857-316c5cb55f82": {
           "name": "Ümumi Dəstək",
-          "description": "Budur, üzərində işlədikləri səviyyədən asılı olmayaraq tələbələrə kömək edəcək bir neçə ipucu\n\n-   **Qonşularla əməkdaşlıq edin:** Şagirdləri ilişib qalanda qonşusu ilə yoxlamağa təşviq edin. Tələbələrinizin yaşından və bacarığından asılı olaraq, [cüt proqramlaşdırma](https://youtu.be/vgkahOzFH2Q) istifadə edərək dərsliyi tamamlamaq üçün sinifinizi rəsmi olaraq cütlərə bölməyi düşünə bilərsiniz.\n\n-   **Təlimatları oxuyun:** Təlimatlar adətən səviyyəni necə başa çatdırmaq üçün faydalı məsləhətlər verir. Tələbələrə cavab verməzdən əvvəl onların təlimatlara, göstərişlərə, videolara və hər hansı başlanğıc koduna diqqətlə baxdıqlarından əmin olun.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **İlişmisiniz? Məsləhətlərə baxın:** Hər səviyyəyə hansı kod bloklarının sınaqdan keçirilməsi də daxil olmaqla, səviyyəni necə keçmək barədə məsləhətlər var.\n\n-   **Vaxtınızı və təcrübənizi ayırın.** Təlimatlar ümumiyyətlə tələbələrə nə etməli olduqlarını deyir, lakin onlar həm də öz fikirlərini sınamaqdan çəkinməlidirlər."
+          "description": "Budur, üzərində işlədikləri səviyyədən asılı olmayaraq tələbələrə kömək edəcək bir neçə ipucu\n\n-   **Qonşularla əməkdaşlıq edin:** Şagirdləri ilişib qalanda qonşusu ilə yoxlamağa təşviq edin. Tələbələrinizin yaşından və bacarığından asılı olaraq, [cüt proqramlaşdırma][0] istifadə edərək dərsliyi tamamlamaq üçün sinifinizi rəsmi olaraq cütlərə bölməyi düşünə bilərsiniz.\n\n-   **Təlimatları oxuyun:** Təlimatlar adətən səviyyəni necə başa çatdırmaq üçün faydalı məsləhətlər verir. Tələbələrə cavab verməzdən əvvəl onların təlimatlara, göstərişlərə, videolara və hər hansı başlanğıc koduna diqqətlə baxdıqlarından əmin olun.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **İlişmisiniz? Məsləhətlərə baxın:** Hər səviyyəyə hansı kod bloklarının sınaqdan keçirilməsi də daxil olmaqla, səviyyəni necə keçmək barədə məsləhətlər var.\n\n-   **Vaxtınızı və təcrübənizi ayırın.** Təlimatlar ümumiyyətlə tələbələrə nə etməli olduqlarını deyir, lakin onlar həm də öz fikirlərini sınamaqdan çəkinməlidirlər."
         },
         "c721eddb-4cfb-4237-a031-0730bbfdc926": {
           "name": "Salam Dünya",
           "progression_name": "Salam Dünya"
         },
         "8341212e-8528-4ad8-9c02-22066467054b": {
-          "description": "Bir qrup və ya fərd erkən bitirsə, onları sonuncu səviyyədə layihə qurmağa davam etməyə təşviq edin. Tələbələr başqa nə edəcəklərinə əmin deyillərsə, onlara suallar verə bilərsiniz:\n\n-   Layihənizə daha hansı spritləri əlavə edə bilərsiniz?\n-   Kostyum kitabxanasına baxmısınız və ya öz sprite kostyumunuzu çəkməyə çalışmısınız?\n-   Spritləriniz başqa nə deyə bilərdiniz?\n-   Spritləriniz kliklənəndə nə etməlidir?\n-   Tələbələri fikirlərini bölüşməyə və bir-birindən öyrənməyə dəvət edin. Onlar həmçinin [code.org/learn](https://code.org/learn) saytına daxil olaraq başqa dərsliyə cəhd edə bilərlər."
+          "description": "Bir qrup və ya fərd erkən bitirsə, onları sonuncu səviyyədə layihə qurmağa davam etməyə təşviq edin. Tələbələr başqa nə edəcəklərinə əmin deyillərsə, onlara suallar verə bilərsiniz:\n\n-   Layihənizə daha hansı spritləri əlavə edə bilərsiniz?\n-   Kostyum kitabxanasına baxmısınız və ya öz sprite kostyumunuzu çəkməyə çalışmısınız?\n-   Spritləriniz başqa nə deyə bilərdiniz?\n-   Spritləriniz kliklənəndə nə etməlidir?\n-   Tələbələri fikirlərini bölüşməyə və bir-birindən öyrənməyə dəvət edin. Onlar həmçinin [code.org/learn][0] saytına daxil olaraq başqa dərsliyə cəhd edə bilərlər."
         },
         "656eee11-dc6d-428e-8849-6e4b31dc8c81": {
           "name": "Əksetmə",
-          "description": "#### Məlumat\n\nŞagirdlərdən günün fəaliyyətləri haqqında düşünmələrini xahiş edin. Kodlaşdırma haqqında nə öyrəndilər? Sprites? Hadisələr?\n\nTədqiqata bir saat sərf etdikdən sonra kompüter elmləri və kodlaşdırmaya münasibət necədir?\n\n#### Növbəti addımlar\n\nŞagirdlərə bildirin ki, əgər bugünkü fəaliyyətdən həzz aldılarsa, kodlamağa davam etmək üçün çoxlu seçimləri var. Kompüter elmini digər fənlərə necə inteqrasiya etmək barədə fikirlər üçün [CS Connections](https://code.org/educate/csc) səhifəsinə daxil olun və ya [ibtidai məktəblər üçün kurs təklifləri](https://code.org/educate/curriculum/elementary-school) haqqında ətraflı oxuyun."
+          "description": "#### Məlumat\n\nŞagirdlərdən günün fəaliyyətləri haqqında düşünmələrini xahiş edin. Kodlaşdırma haqqında nə öyrəndilər? Sprites? Hadisələr?\n\nTədqiqata bir saat sərf etdikdən sonra kompüter elmləri və kodlaşdırmaya münasibət necədir?\n\n#### Növbəti addımlar\n\nŞagirdlərə bildirin ki, əgər bugünkü fəaliyyətdən həzz aldılarsa, kodlamağa davam etmək üçün çoxlu seçimləri var. Kompüter elmini digər fənlərə necə inteqrasiya etmək barədə fikirlər üçün [CS Connections][0] səhifəsinə daxil olun və ya [ibtidai məktəblər üçün kurs təklifləri][1] haqqında ətraflı oxuyun."
         },
         "9d3ef78a-4043-489e-898b-f407c914f698": {
           "name": "Səhnənin qurulması",
@@ -21404,18 +21404,18 @@
         },
         "2ff80a97-db35-4d10-9703-4d0cc3ff0c3a": {
           "name": "Ümumi Dəstək",
-          "description": "Budur, üzərində işlədikləri səviyyədən asılı olmayaraq tələbələrə kömək edəcək bir neçə ipucu\n\n-   **Qonşularla əməkdaşlıq edin:** Şagirdləri ilişib qalanda qonşusu ilə yoxlamağa təşviq edin. Tələbələrinizin yaşından və bacarığından asılı olaraq, [cüt proqramlaşdırma](https://youtu.be/vgkahOzFH2Q) istifadə edərək dərsliyi tamamlamaq üçün sinifinizi rəsmi olaraq cütlərə bölməyi düşünə bilərsiniz.\n\n-   **Təlimatları oxuyun:** Təlimatlar adətən səviyyəni necə başa çatdırmaq üçün faydalı məsləhətlər verir. Tələbələrə cavab verməzdən əvvəl onların təlimatlara, göstərişlərə, videolara və hər hansı başlanğıc koduna diqqətlə baxdıqlarından əmin olun.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **İlişmisiniz? Məsləhətlərə baxın:** Hər səviyyəyə hansı kod bloklarının sınaqdan keçirilməsi də daxil olmaqla, səviyyəni necə keçmək barədə məsləhətlər var.\n\n-   **Vaxtınızı və təcrübənizi ayırın.** Təlimatlar ümumiyyətlə tələbələrə nə etməli olduqlarını deyir, lakin onlar həm də öz fikirlərini sınamaqdan çəkinməlidirlər."
+          "description": "Budur, üzərində işlədikləri səviyyədən asılı olmayaraq tələbələrə kömək edəcək bir neçə ipucu\n\n-   **Qonşularla əməkdaşlıq edin:** Şagirdləri ilişib qalanda qonşusu ilə yoxlamağa təşviq edin. Tələbələrinizin yaşından və bacarığından asılı olaraq, [cüt proqramlaşdırma][0] istifadə edərək dərsliyi tamamlamaq üçün sinifinizi rəsmi olaraq cütlərə bölməyi düşünə bilərsiniz.\n\n-   **Təlimatları oxuyun:** Təlimatlar adətən səviyyəni necə başa çatdırmaq üçün faydalı məsləhətlər verir. Tələbələrə cavab verməzdən əvvəl onların təlimatlara, göstərişlərə, videolara və hər hansı başlanğıc koduna diqqətlə baxdıqlarından əmin olun.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **İlişmisiniz? Məsləhətlərə baxın:** Hər səviyyəyə hansı kod bloklarının sınaqdan keçirilməsi də daxil olmaqla, səviyyəni necə keçmək barədə məsləhətlər var.\n\n-   **Vaxtınızı və təcrübənizi ayırın.** Təlimatlar ümumiyyətlə tələbələrə nə etməli olduqlarını deyir, lakin onlar həm də öz fikirlərini sınamaqdan çəkinməlidirlər."
         },
         "70daba44-c26e-4286-95ae-50cbd8724b2d": {
           "name": "Salam Dünya",
           "progression_name": "Salam Dünya"
         },
         "77cef9f9-1949-455b-a0bd-f2cbc4a32986": {
-          "description": "Bir qrup və ya fərd erkən bitirsə, onları sonuncu səviyyədə layihə qurmağa davam etməyə təşviq edin. Tələbələr başqa nə edəcəklərinə əmin deyillərsə, onlara suallar verə bilərsiniz:\n\n-   Layihənizə daha hansı spritləri əlavə edə bilərsiniz?\n-   Kostyum kitabxanasına baxmısınız və ya öz sprite kostyumunuzu çəkməyə çalışmısınız?\n-   Spritləriniz başqa nə deyə bilərdiniz?\n-   Spritləriniz kliklənəndə nə etməlidir?\n-   Tələbələri fikirlərini bölüşməyə və bir-birindən öyrənməyə dəvət edin. Onlar həmçinin [code.org/learn](https://code.org/learn) saytına daxil olaraq başqa dərsliyə cəhd edə bilərlər."
+          "description": "Bir qrup və ya fərd erkən bitirsə, onları sonuncu səviyyədə layihə qurmağa davam etməyə təşviq edin. Tələbələr başqa nə edəcəklərinə əmin deyillərsə, onlara suallar verə bilərsiniz:\n\n-   Layihənizə daha hansı spritləri əlavə edə bilərsiniz?\n-   Kostyum kitabxanasına baxmısınız və ya öz sprite kostyumunuzu çəkməyə çalışmısınız?\n-   Spritləriniz başqa nə deyə bilərdiniz?\n-   Spritləriniz kliklənəndə nə etməlidir?\n-   Tələbələri fikirlərini bölüşməyə və bir-birindən öyrənməyə dəvət edin. Onlar həmçinin [code.org/learn][0] saytına daxil olaraq başqa dərsliyə cəhd edə bilərlər."
         },
         "ec905c64-2e80-49d0-8da3-7d75ed8d0693": {
           "name": "Əksetmə",
-          "description": "#### Məlumat\n\nŞagirdlərdən günün fəaliyyətləri haqqında düşünmələrini xahiş edin. Kodlaşdırma haqqında nə öyrəndilər? Sprites? Hadisələr?\n\nTədqiqata bir saat sərf etdikdən sonra kompüter elmləri və kodlaşdırmaya münasibət necədir?\n\n#### Növbəti addımlar\n\nŞagirdlərə bildirin ki, əgər bugünkü fəaliyyətdən həzz aldılarsa, kodlamağa davam etmək üçün çoxlu seçimləri var. Kompüter elmini digər fənlərə necə inteqrasiya etmək barədə fikirlər üçün [CS Connections](https://code.org/educate/csc) səhifəsinə daxil olun və ya [ibtidai məktəblər üçün kurs təklifləri](https://code.org/educate/curriculum/elementary-school) haqqında ətraflı oxuyun."
+          "description": "#### Məlumat\n\nŞagirdlərdən günün fəaliyyətləri haqqında düşünmələrini xahiş edin. Kodlaşdırma haqqında nə öyrəndilər? Sprites? Hadisələr?\n\nTədqiqata bir saat sərf etdikdən sonra kompüter elmləri və kodlaşdırmaya münasibət necədir?\n\n#### Növbəti addımlar\n\nŞagirdlərə bildirin ki, əgər bugünkü fəaliyyətdən həzz aldılarsa, kodlamağa davam etmək üçün çoxlu seçimləri var. Kompüter elmini digər fənlərə necə inteqrasiya etmək barədə fikirlər üçün [CS Connections][0] səhifəsinə daxil olun və ya [ibtidai məktəblər üçün kurs təklifləri][1] haqqında ətraflı oxuyun."
         },
         "6c387b78-14b7-4209-919a-97dbf64b9bc2": {
           "name": "Səhnənin qurulması",
@@ -21429,18 +21429,18 @@
         },
         "cc4e7bc2-813a-4d4a-be58-83d08ca5d970": {
           "name": "Ümumi Dəstək",
-          "description": "Budur, üzərində işlədikləri səviyyədən asılı olmayaraq tələbələrə kömək edəcək bir neçə ipucu\n\n-   **Qonşularla əməkdaşlıq edin:** Şagirdləri ilişib qalanda qonşusu ilə yoxlamağa təşviq edin. Tələbələrinizin yaşından və bacarığından asılı olaraq, [cüt proqramlaşdırma](https://youtu.be/vgkahOzFH2Q) istifadə edərək dərsliyi tamamlamaq üçün sinifinizi rəsmi olaraq cütlərə bölməyi düşünə bilərsiniz.\n\n-   **Təlimatları oxuyun:** Təlimatlar adətən səviyyəni necə başa çatdırmaq üçün faydalı məsləhətlər verir. Tələbələrə cavab verməzdən əvvəl onların təlimatlara, göstərişlərə, videolara və hər hansı başlanğıc koduna diqqətlə baxdıqlarından əmin olun.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **İlişmisiniz? Məsləhətlərə baxın:** Hər səviyyəyə hansı kod bloklarının sınaqdan keçirilməsi də daxil olmaqla, səviyyəni necə keçmək barədə məsləhətlər var.\n\n-   **Vaxtınızı və təcrübənizi ayırın.** Təlimatlar ümumiyyətlə tələbələrə nə etməli olduqlarını deyir, lakin onlar həm də öz fikirlərini sınamaqdan çəkinməlidirlər."
+          "description": "Budur, üzərində işlədikləri səviyyədən asılı olmayaraq tələbələrə kömək edəcək bir neçə ipucu\n\n-   **Qonşularla əməkdaşlıq edin:** Şagirdləri ilişib qalanda qonşusu ilə yoxlamağa təşviq edin. Tələbələrinizin yaşından və bacarığından asılı olaraq, [cüt proqramlaşdırma][0] istifadə edərək dərsliyi tamamlamaq üçün sinifinizi rəsmi olaraq cütlərə bölməyi düşünə bilərsiniz.\n\n-   **Təlimatları oxuyun:** Təlimatlar adətən səviyyəni necə başa çatdırmaq üçün faydalı məsləhətlər verir. Tələbələrə cavab verməzdən əvvəl onların təlimatlara, göstərişlərə, videolara və hər hansı başlanğıc koduna diqqətlə baxdıqlarından əmin olun.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **İlişmisiniz? Məsləhətlərə baxın:** Hər səviyyəyə hansı kod bloklarının sınaqdan keçirilməsi də daxil olmaqla, səviyyəni necə keçmək barədə məsləhətlər var.\n\n-   **Vaxtınızı və təcrübənizi ayırın.** Təlimatlar ümumiyyətlə tələbələrə nə etməli olduqlarını deyir, lakin onlar həm də öz fikirlərini sınamaqdan çəkinməlidirlər."
         },
         "062143a1-3063-4af1-864a-2ad1f9c88dd5": {
           "name": "Salam Dünya",
           "progression_name": "Salam Dünya"
         },
         "da91f0fe-e142-453f-a093-8e367d0a1454": {
-          "description": "Bir qrup və ya fərd erkən bitirsə, onları sonuncu səviyyədə layihə qurmağa davam etməyə təşviq edin. Tələbələr başqa nə edəcəklərinə əmin deyillərsə, onlara suallar verə bilərsiniz:\n\n-   Layihənizə daha hansı spritləri əlavə edə bilərsiniz?\n-   Kostyum kitabxanasına baxmısınız və ya öz sprite kostyumunuzu çəkməyə çalışmısınız?\n-   Spritləriniz başqa nə deyə bilərdiniz?\n-   Spritləriniz kliklənəndə nə etməlidir?\n-   Tələbələri fikirlərini bölüşməyə və bir-birindən öyrənməyə dəvət edin. Onlar həmçinin [code.org/learn](https://code.org/learn) saytına daxil olaraq başqa dərsliyə cəhd edə bilərlər."
+          "description": "Bir qrup və ya fərd erkən bitirsə, onları sonuncu səviyyədə layihə qurmağa davam etməyə təşviq edin. Tələbələr başqa nə edəcəklərinə əmin deyillərsə, onlara suallar verə bilərsiniz:\n\n-   Layihənizə daha hansı spritləri əlavə edə bilərsiniz?\n-   Kostyum kitabxanasına baxmısınız və ya öz sprite kostyumunuzu çəkməyə çalışmısınız?\n-   Spritləriniz başqa nə deyə bilərdiniz?\n-   Spritləriniz kliklənəndə nə etməlidir?\n-   Tələbələri fikirlərini bölüşməyə və bir-birindən öyrənməyə dəvət edin. Onlar həmçinin [code.org/learn][0] saytına daxil olaraq başqa dərsliyə cəhd edə bilərlər."
         },
         "f5756484-7296-4391-99e2-7b2678653934": {
           "name": "Əksetmə",
-          "description": "#### Məlumat\n\nŞagirdlərdən günün fəaliyyətləri haqqında düşünmələrini xahiş edin. Kodlaşdırma haqqında nə öyrəndilər? Sprites? Hadisələr?\n\nTədqiqata bir saat sərf etdikdən sonra kompüter elmləri və kodlaşdırmaya münasibət necədir?\n\n#### Növbəti addımlar\n\nŞagirdlərə bildirin ki, əgər bugünkü fəaliyyətdən həzz aldılarsa, kodlamağa davam etmək üçün çoxlu seçimləri var. Kompüter elmini digər fənlərə necə inteqrasiya etmək barədə fikirlər üçün [CS Connections](https://code.org/educate/csc) səhifəsinə daxil olun və ya [ibtidai məktəblər üçün kurs təklifləri](https://code.org/educate/curriculum/elementary-school) haqqında ətraflı oxuyun."
+          "description": "#### Məlumat\n\nŞagirdlərdən günün fəaliyyətləri haqqında düşünmələrini xahiş edin. Kodlaşdırma haqqında nə öyrəndilər? Sprites? Hadisələr?\n\nTədqiqata bir saat sərf etdikdən sonra kompüter elmləri və kodlaşdırmaya münasibət necədir?\n\n#### Növbəti addımlar\n\nŞagirdlərə bildirin ki, əgər bugünkü fəaliyyətdən həzz aldılarsa, kodlamağa davam etmək üçün çoxlu seçimləri var. Kompüter elmini digər fənlərə necə inteqrasiya etmək barədə fikirlər üçün [CS Connections][0] səhifəsinə daxil olun və ya [ibtidai məktəblər üçün kurs təklifləri][1] haqqında ətraflı oxuyun."
         },
         "bcc9e44c-ad4e-4efc-a12e-e9c74a5c1960": {
           "name": "Səhnənin qurulması",
@@ -21454,25 +21454,25 @@
         },
         "0d1c3be1-c6e4-437f-85b9-4912d1cd725b": {
           "name": "Ümumi Dəstək",
-          "description": "Budur, üzərində işlədikləri səviyyədən asılı olmayaraq tələbələrə kömək edəcək bir neçə ipucu\n\n-   **Qonşularla əməkdaşlıq edin:** Şagirdləri ilişib qalanda qonşusu ilə yoxlamağa təşviq edin. Tələbələrinizin yaşından və bacarığından asılı olaraq, [cüt proqramlaşdırma](https://youtu.be/vgkahOzFH2Q) istifadə edərək dərsliyi tamamlamaq üçün sinifinizi rəsmi olaraq cütlərə bölməyi düşünə bilərsiniz.\n\n-   **Təlimatları oxuyun:** Təlimatlar adətən səviyyəni necə başa çatdırmaq üçün faydalı məsləhətlər verir. Tələbələrə cavab verməzdən əvvəl onların təlimatlara, göstərişlərə, videolara və hər hansı başlanğıc koduna diqqətlə baxdıqlarından əmin olun.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **İlişmisiniz? Məsləhətlərə baxın:** Hər səviyyəyə hansı kod bloklarının sınaqdan keçirilməsi də daxil olmaqla, səviyyəni necə keçmək barədə məsləhətlər var.\n\n-   **Vaxtınızı və təcrübənizi ayırın.** Təlimatlar ümumiyyətlə tələbələrə nə etməli olduqlarını deyir, lakin onlar həm də öz fikirlərini sınamaqdan çəkinməlidirlər."
+          "description": "Budur, üzərində işlədikləri səviyyədən asılı olmayaraq tələbələrə kömək edəcək bir neçə ipucu\n\n-   **Qonşularla əməkdaşlıq edin:** Şagirdləri ilişib qalanda qonşusu ilə yoxlamağa təşviq edin. Tələbələrinizin yaşından və bacarığından asılı olaraq, [cüt proqramlaşdırma][0] istifadə edərək dərsliyi tamamlamaq üçün sinifinizi rəsmi olaraq cütlərə bölməyi düşünə bilərsiniz.\n\n-   **Təlimatları oxuyun:** Təlimatlar adətən səviyyəni necə başa çatdırmaq üçün faydalı məsləhətlər verir. Tələbələrə cavab verməzdən əvvəl onların təlimatlara, göstərişlərə, videolara və hər hansı başlanğıc koduna diqqətlə baxdıqlarından əmin olun.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **İlişmisiniz? Məsləhətlərə baxın:** Hər səviyyəyə hansı kod bloklarının sınaqdan keçirilməsi də daxil olmaqla, səviyyəni necə keçmək barədə məsləhətlər var.\n\n-   **Vaxtınızı və təcrübənizi ayırın.** Təlimatlar ümumiyyətlə tələbələrə nə etməli olduqlarını deyir, lakin onlar həm də öz fikirlərini sınamaqdan çəkinməlidirlər."
         },
         "fcf13574-b04a-42a7-9e17-ef0dba0bfe33": {
           "name": "Salam Dünya",
           "progression_name": "Salam Dünya"
         },
         "7cccfa6d-83c2-4d74-a71f-c9134fb1d0c2": {
-          "description": "Bir qrup və ya fərd erkən bitirsə, onları sonuncu səviyyədə layihə qurmağa davam etməyə təşviq edin. Tələbələr başqa nə edəcəklərinə əmin deyillərsə, onlara suallar verə bilərsiniz:\n\n-   Layihənizə daha hansı spritləri əlavə edə bilərsiniz?\n-   Kostyum kitabxanasına baxmısınız və ya öz sprite kostyumunuzu çəkməyə çalışmısınız?\n-   Spritləriniz başqa nə deyə bilərdiniz?\n-   Spritləriniz kliklənəndə nə etməlidir?\n-   Tələbələri fikirlərini bölüşməyə və bir-birindən öyrənməyə dəvət edin. Onlar həmçinin [code.org/learn](https://code.org/learn) saytına daxil olaraq başqa dərsliyə cəhd edə bilərlər."
+          "description": "Bir qrup və ya fərd erkən bitirsə, onları sonuncu səviyyədə layihə qurmağa davam etməyə təşviq edin. Tələbələr başqa nə edəcəklərinə əmin deyillərsə, onlara suallar verə bilərsiniz:\n\n-   Layihənizə daha hansı spritləri əlavə edə bilərsiniz?\n-   Kostyum kitabxanasına baxmısınız və ya öz sprite kostyumunuzu çəkməyə çalışmısınız?\n-   Spritləriniz başqa nə deyə bilərdiniz?\n-   Spritləriniz kliklənəndə nə etməlidir?\n-   Tələbələri fikirlərini bölüşməyə və bir-birindən öyrənməyə dəvət edin. Onlar həmçinin [code.org/learn][0] saytına daxil olaraq başqa dərsliyə cəhd edə bilərlər."
         },
         "574954ea-9128-428b-9965-b0d34518c11d": {
           "name": "Əksetmə",
-          "description": "#### Məlumat\n\nŞagirdlərdən günün fəaliyyətləri haqqında düşünmələrini xahiş edin. Kodlaşdırma haqqında nə öyrəndilər? Sprites? Hadisələr?\n\nTədqiqata bir saat sərf etdikdən sonra kompüter elmləri və kodlaşdırmaya münasibət necədir?\n\n#### Növbəti addımlar\n\nŞagirdlərə bildirin ki, əgər bugünkü fəaliyyətdən həzz aldılarsa, kodlamağa davam etmək üçün çoxlu seçimləri var. Kompüter elmini digər fənlərə necə inteqrasiya etmək barədə fikirlər üçün [CS Connections](https://code.org/educate/csc) səhifəsinə daxil olun və ya [ibtidai məktəblər üçün kurs təklifləri](https://code.org/educate/curriculum/elementary-school) haqqında ətraflı oxuyun."
+          "description": "#### Məlumat\n\nŞagirdlərdən günün fəaliyyətləri haqqında düşünmələrini xahiş edin. Kodlaşdırma haqqında nə öyrəndilər? Sprites? Hadisələr?\n\nTədqiqata bir saat sərf etdikdən sonra kompüter elmləri və kodlaşdırmaya münasibət necədir?\n\n#### Növbəti addımlar\n\nŞagirdlərə bildirin ki, əgər bugünkü fəaliyyətdən həzz aldılarsa, kodlamağa davam etmək üçün çoxlu seçimləri var. Kompüter elmini digər fənlərə necə inteqrasiya etmək barədə fikirlər üçün [CS Connections][0] səhifəsinə daxil olun və ya [ibtidai məktəblər üçün kurs təklifləri][1] haqqında ətraflı oxuyun."
         },
         "79f9bd46-60a5-4891-ad3b-8369879847fc": {
           "description": "#### Səhnənin qurulması\n\nŞagirdləri sinfə salamlayın və günün fəaliyyətini qısaca təqdim edin.\n\nTələbələr bu dərsdən əsl zövq alırlar. Çox güman ki, tələbələrinizin əksəriyyəti Minecraft haqqında eşitmişdir, lakin bilməyənlər üçün qısa bir giriş verin.\nMinecraft kublar oyunudur. Labirintlər üzərində işləyərkən Alex və ya Stiv kimi oynaya bilərsiniz. Siz əşyaları götürməli və əşyaların kublarından ibarət dünyanı araşdırmalısınız.\n\n_Deyin: “Bu gün kodlamağı öyrənməyə bir saat sərf edəcəyik. Burada kimsə əvvəllər “kod” ifadəsini eşitmişdir? Bunun mənası nədi?\"_\n\nTələbələr “kodun” gizli mesaj kimi olduğunu və ya hansısa şəkildə kompüterlərlə əlaqəli olduğunu qeyd edə bilərlər."
         },
         "cc1ed89e-268e-472b-9bce-4f976d8c2ea3": {
           "tips": [
-            "Əgər siz kodlaşdırma ilə çox tanış deyilsinizsə, Kod Saatını təqdim etməyin bir yolu [ilhamverici videolarımızdan](https://hourofcode.com/us/resources#videos) birini göstərməkdir. Tələbələrinizin ruhlandırıcı tapacağını düşündüyünüz birini seçin və indi paylaşın. Gənc öyrənənlər üçün “[Kod Saatı Buradadır](https://youtu.be/FC5FbmsH4fw)”i təklif edirik."
+            "Əgər siz kodlaşdırma ilə çox tanış deyilsinizsə, Kod Saatını təqdim etməyin bir yolu [ilhamverici videolarımızdan][0] birini göstərməkdir. Tələbələrinizin ruhlandırıcı tapacağını düşündüyünüz birini seçin və indi paylaşın. Gənc öyrənənlər üçün “[Kod Saatı Buradadır][1]”i təklif edirik."
           ]
         },
         "850945f6-6352-403b-a73f-3fb613f4728a": {
@@ -21485,7 +21485,7 @@
         },
         "fc5c47f6-08fa-4702-86a3-e687a2ad5bc1": {
           "name": "Minecraft: Qəhrəmanın səyahəti",
-          "description": "Tələbələrinizi [Minecraft: Qəhrəmanın Səyahəti](https://studio.code.org/s/hero/lessons/1/levels/1) təlimatını tamamlamağa çağırın.\n\nŞagirdlərinizin yaşından və qabiliyyətindən asılı olaraq, aşağıdakıları nəzərdən keçirə bilərsiniz:\n\n-   Gənc tələbələr üçün, sinfinizi cütlərə bölmənizi və hər qrupdan [qoşa proqramlaşdırma](https://youtu.be/vgkahOzFH2Q) istifadə edərək dərsliyi tamamlamaq üçün birlikdə işləməyi xahiş etməyi təklif edirik.\n-   Orta siniflərdə oxuyanlar üçün biz görürük ki, dərs vəsaitləri üzərində müstəqil işləmək yaxşı nəticə verir. Bəzən bu, tələbələrə öz dərsliklərini seçmək imkanı verir. Əgər tələbələr Minecraftla maraqlanmırlarsa, onlar [Anna və Elza ilə kod](https://studio.code.org/s/frozen/stage/1/puzzle/1) və ya [Ulduz Döyüşləri](https://code.org/starwars) dərslikləri ilə oxşar təcrübə əldə edə bilərlər.\n-   Yaşlı və ya yetkin öyrənənlər üçün [Minecraft: Qəhrəmanın Səyahəti](https://studio.code.org/s/hero/lessons/1/levels/1) dərsliyi ya müstəqil problem və ya cüt proqramlaşdırma fəaliyyəti kimi çox yaxşı işləyir."
+          "description": "Tələbələrinizi [Minecraft: Qəhrəmanın Səyahəti][0] təlimatını tamamlamağa çağırın.\n\nŞagirdlərinizin yaşından və qabiliyyətindən asılı olaraq, aşağıdakıları nəzərdən keçirə bilərsiniz:\n\n-   Gənc tələbələr üçün, sinfinizi cütlərə bölmənizi və hər qrupdan [qoşa proqramlaşdırma][1] istifadə edərək dərsliyi tamamlamaq üçün birlikdə işləməyi xahiş etməyi təklif edirik.\n-   Orta siniflərdə oxuyanlar üçün biz görürük ki, dərs vəsaitləri üzərində müstəqil işləmək yaxşı nəticə verir. Bəzən bu, tələbələrə öz dərsliklərini seçmək imkanı verir. Əgər tələbələr Minecraftla maraqlanmırlarsa, onlar [Anna və Elza ilə kod][2] və ya [Ulduz Döyüşləri][3] dərslikləri ilə oxşar təcrübə əldə edə bilərlər.\n-   Yaşlı və ya yetkin öyrənənlər üçün [Minecraft: Qəhrəmanın Səyahəti][4] dərsliyi ya müstəqil problem və ya cüt proqramlaşdırma fəaliyyəti kimi çox yaxşı işləyir."
         },
         "296703c2-cad7-43bb-b3cf-4ffb525e7ad1": {
           "tips": [
@@ -21493,7 +21493,7 @@
           ]
         },
         "b518cf9c-9568-4e85-a520-0e2a81c3b330": {
-          "description": "Qrup və ya fərd erkən bitirsə, onlar [code.org/learn](http://code.org/learn) saytına daxil olaraq başqa dərsliyə cəhd edə bilərlər."
+          "description": "Qrup və ya fərd erkən bitirsə, onlar [code.org/learn][0] saytına daxil olaraq başqa dərsliyə cəhd edə bilərlər."
         },
         "34238f3b-6699-4e27-b77a-54bcd8d57459": {
           "progression_name": "Minecraft: Qəhrəmanın səyahəti"
@@ -21504,18 +21504,18 @@
         },
         "145782a9-a436-4615-9827-0f75d7e4b3a0": {
           "name": "Qeyd etmək",
-          "description": "Bu gün kodlaşdırmaya bir saat sərf etdiyinizi izah edin, çünki bu həftə CS Təhsil Həftəsidir və bütün dünyada milyonlarla digər tələbə də bu həftə bir Saat Kod öyrənir. Tələbələri bu ümumdünya hərəkatının bir hissəsi olduqları üçün təbrik edirik.\n\nHər bir tələbəyə adı ilə [sertifikat](https://studio.code.org/certificates/batch?course=bWM=) verin."
+          "description": "Bu gün kodlaşdırmaya bir saat sərf etdiyinizi izah edin, çünki bu həftə CS Təhsil Həftəsidir və bütün dünyada milyonlarla digər tələbə də bu həftə bir Saat Kod öyrənir. Tələbələri bu ümumdünya hərəkatının bir hissəsi olduqları üçün təbrik edirik.\n\nHər bir tələbəyə adı ilə [sertifikat][0] verin."
         },
         "cc38f575-4db4-4ca6-ab2f-a9d8557f16cf": {
           "name": "Növbəti addımlar",
-          "description": "Şagirdlərə bildirin ki, əgər bugünkü fəaliyyətdən həzz aldılarsa, kodlamağa davam etmək üçün çoxlu seçimləri var. Tələbələri seçimlər siyahısı üçün [code.org/learn](<>) saytına daxil olmağa sövq edin və ya bundan sonra əlavə fəaliyyətlərdən hər hansı birini planlaşdırırsınızsa, tələbələrə sinifinizdə nələrin gələcəyini söyləyin."
+          "description": "Şagirdlərə bildirin ki, əgər bugünkü fəaliyyətdən həzz aldılarsa, kodlamağa davam etmək üçün çoxlu seçimləri var. Tələbələri seçimlər siyahısı üçün [code.org/learn][0] saytına daxil olmağa sövq edin və ya bundan sonra əlavə fəaliyyətlərdən hər hansı birini planlaşdırırsınızsa, tələbələrə sinifinizdə nələrin gələcəyini söyləyin."
         },
         "e276fe28-3302-4ba2-94cc-aaf03b3d2d06": {
-          "description": "Hər bir tələbəyə [“Çıxış Bileti”](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) verin və onlardan bu gün öyrəndiklərini, hiss etdiklərini və ya yaşadıqlarını ümumiləşdirmələrini xahiş edin. Tələbələr özlərini rahat hiss etdikləri istənilən şəkildə çəkə, yaza və ya ifadə edə bilərlər. Otaqdan çıxarkən hər bir tələbədən “Çıxış Bileti” toplayın. İstəyirsinizsə, “Çıxış biletləri”ni bülleten lövhəsində və ya Kod Saatınızı xatırlatmaq üçün məktəbin görkəmli bir yerində yerləşdirə bilərsiniz."
+          "description": "Hər bir tələbəyə [“Çıxış Bileti”][0] verin və onlardan bu gün öyrəndiklərini, hiss etdiklərini və ya yaşadıqlarını ümumiləşdirmələrini xahiş edin. Tələbələr özlərini rahat hiss etdikləri istənilən şəkildə çəkə, yaza və ya ifadə edə bilərlər. Otaqdan çıxarkən hər bir tələbədən “Çıxış Bileti” toplayın. İstəyirsinizsə, “Çıxış biletləri”ni bülleten lövhəsində və ya Kod Saatınızı xatırlatmaq üçün məktəbin görkəmli bir yerində yerləşdirə bilərsiniz."
         },
         "147a2b22-0cba-4505-81ef-770b81eee73e": {
           "name": "Kod Saatı bitəndən sonra",
-          "description": "Kod Saatı başa çatdıqdan sonra K-5 sinifinizdə kompüter elmlərini tədris etməyə davam etməyin bir çox yolu var. Budur bəzi fikirlər:\n\n-   **[Code Studio Kompüter Elmlərinin Əsasları](http://code.org/educate/k5) kurslarını öyrədin**. Bu altı kurs gənc öyrənənlər üçün nəzərdə tutulub. Şagirdlər onlara kodlaşdırmağı öyrədən bulmacalar silsiləsi üzərində işləyirlər və pedaqoqlar öyrənmənin canlı olmasına kömək edən cəlbedici dərs planlarına çıxış əldə edirlər. Code.org bu kurslar üçün onlayn və ya şəxsən pulsuz peşəkar inkişaf təklif edir.\n-   **Daha çox kurs təklifləri üçün [You can Teach Computer Science](https://code.org/teach)** səhifəsinə daxil olun.\n-   **Kompüter elmləri mütəxəssisini öz işi haqqında sinifinizlə danışmağa dəvət edin**. Heç bir yerli kompüter alimi tanımırsınız? [könüllü xəritəmizdə](https://code.org/volunteer/local) könüllü ilə əlaqə saxlayın"
+          "description": "Kod Saatı başa çatdıqdan sonra K-5 sinifinizdə kompüter elmlərini tədris etməyə davam etməyin bir çox yolu var. Budur bəzi fikirlər:\n\n-   **[Code Studio Kompüter Elmlərinin Əsasları][0] kurslarını öyrədin**. Bu altı kurs gənc öyrənənlər üçün nəzərdə tutulub. Şagirdlər onlara kodlaşdırmağı öyrədən bulmacalar silsiləsi üzərində işləyirlər və pedaqoqlar öyrənmənin canlı olmasına kömək edən cəlbedici dərs planlarına çıxış əldə edirlər. Code.org bu kurslar üçün onlayn və ya şəxsən pulsuz peşəkar inkişaf təklif edir.\n-   **Daha çox kurs təklifləri üçün [You can Teach Computer Science][1]** səhifəsinə daxil olun.\n-   **Kompüter elmləri mütəxəssisini öz işi haqqında sinifinizlə danışmağa dəvət edin**. Heç bir yerli kompüter alimi tanımırsınız? [könüllü xəritəmizdə][2] könüllü ilə əlaqə saxlayın"
         },
         "9475b0bd-6a58-4318-b3e5-0d77cfe5a35d": {
           "tips": [
@@ -21607,7 +21607,7 @@
         },
         "6b55015f-aebc-401b-b0c9-c40a5fd0056e": {
           "tips": [
-            "Əgər siz kodlaşdırma ilə çox tanış deyilsinizsə, Kod Saatını təqdim etməyin bir yolu [ilhamverici videolarımızdan](https://hourofcode.com/us/resources#videos) birini göstərməkdir. Tələbələrinizin ruhlandırıcı tapacağını düşündüyünüz birini seçin və indi paylaşın. Gənc öyrənənlər üçün “[Kod Saatı Buradadır](https://youtu.be/FC5FbmsH4fw)”i təklif edirik."
+            "Əgər siz kodlaşdırma ilə çox tanış deyilsinizsə, Kod Saatını təqdim etməyin bir yolu [ilhamverici videolarımızdan][0] birini göstərməkdir. Tələbələrinizin ruhlandırıcı tapacağını düşündüyünüz birini seçin və indi paylaşın. Gənc öyrənənlər üçün “[Kod Saatı Buradadır][1]”i təklif edirik."
           ]
         },
         "e841a687-1da5-46c7-b31e-42629fe0377c": {
@@ -21620,7 +21620,7 @@
         },
         "9aba0e85-a709-43f5-8cfb-251671159b3a": {
           "name": "Labirint",
-          "description": "Tələbələrinizə [Write your first computer program](https://studio.code.org/hoc/1) təlimatını tamamlamağa çağırın.\n\nŞagirdlərinizin yaşından və qabiliyyətindən asılı olaraq, aşağıdakıları nəzərdən keçirə bilərsiniz:\n\n-   Gənc tələbələr üçün, sinfinizi cütlərə və ya çox kiçik qruplara (hər biri üç-dörd şagird) bölmənizi və hər qrupdan [pair programming](https://youtu.be/vgkahOzFH2Q) istifadə edərək dərsliyi tamamlamaq üçün birlikdə işləməyi xahiş etməyi təklif edirik.\n-   Orta siniflərdə oxuyanlar üçün biz görürük ki, dərs vəsaitləri üzərində müstəqil işləmək yaxşı nəticə verir. Bəzən bu, tələbələrə öz dərsliklərini seçmək imkanı verir. Tələbələr Angry Birds ilə maraqlanmırlarsa, onlar [Code with Anna and Elsa](https://studio.code.org/s/frozen/stage/1/puzzle/1) və ya [Make a Flappy Game](https://studio.code.org/flappy/1) dərslikləri ilə oxşar təcrübə əldə edə bilərlər.\n-   Yaşlı və ya böyüklər üçün [Write your first computer program](https://studio.code.org/hoc/1) dərsliyi ya müstəqil tapşırıq, ya da cüt proqramlaşdırma fəaliyyəti kimi çox yaxşı işləyir."
+          "description": "Tələbələrinizə [Write your first computer program][0] təlimatını tamamlamağa çağırın.\n\nŞagirdlərinizin yaşından və qabiliyyətindən asılı olaraq, aşağıdakıları nəzərdən keçirə bilərsiniz:\n\n-   Gənc tələbələr üçün, sinfinizi cütlərə və ya çox kiçik qruplara (hər biri üç-dörd şagird) bölmənizi və hər qrupdan [pair programming][1] istifadə edərək dərsliyi tamamlamaq üçün birlikdə işləməyi xahiş etməyi təklif edirik.\n-   Orta siniflərdə oxuyanlar üçün biz görürük ki, dərs vəsaitləri üzərində müstəqil işləmək yaxşı nəticə verir. Bəzən bu, tələbələrə öz dərsliklərini seçmək imkanı verir. Tələbələr Angry Birds ilə maraqlanmırlarsa, onlar [Code with Anna and Elsa][2] və ya [Make a Flappy Game][3] dərslikləri ilə oxşar təcrübə əldə edə bilərlər.\n-   Yaşlı və ya böyüklər üçün [Write your first computer program][4] dərsliyi ya müstəqil tapşırıq, ya da cüt proqramlaşdırma fəaliyyəti kimi çox yaxşı işləyir."
         },
         "524f2e35-6286-4585-879e-96e7286e8a6d": {
           "tips": [
@@ -21628,7 +21628,7 @@
           ]
         },
         "3f29a14c-3903-4615-8a6b-d1961b57dc7b": {
-          "description": "Qrup və ya fərd erkən bitirsə, onlar [code.org/learn](http://code.org/learn) saytına daxil olaraq başqa dərsliyə cəhd edə bilərlər."
+          "description": "Qrup və ya fərd erkən bitirsə, onlar [code.org/learn][0] saytına daxil olaraq başqa dərsliyə cəhd edə bilərlər."
         },
         "50db3674-3387-4932-ba7e-c9f176ebd976": {
           "name": "Xülasə",
@@ -21636,18 +21636,18 @@
         },
         "46f387e2-c275-4c57-acec-c9709e7f44fc": {
           "name": "Qeyd etmək",
-          "description": "Bu gün kodlaşdırmaya bir saat sərf etdiyinizi izah edin, çünki bu həftə CS Təhsil Həftəsidir və bütün dünyada milyonlarla digər tələbə də bu həftə bir Saat Kod öyrənir. Tələbələri bu ümumdünya hərəkatının bir hissəsi olduqları üçün təbrik edirik.\n\nHər bir tələbəyə adı ilə [sertifikat](http://code.org/certificates) verin."
+          "description": "Bu gün kodlaşdırmaya bir saat sərf etdiyinizi izah edin, çünki bu həftə CS Təhsil Həftəsidir və bütün dünyada milyonlarla digər tələbə də bu həftə bir Saat Kod öyrənir. Tələbələri bu ümumdünya hərəkatının bir hissəsi olduqları üçün təbrik edirik.\n\nHər bir tələbəyə adı ilə [sertifikat][0] verin."
         },
         "692a60f1-d3a2-44d3-8c58-19461d6b5999": {
           "name": "Növbəti addımlar",
           "description": "Şagirdlərə bildirin ki, əgər bugünkü fəaliyyətdən həzz aldılarsa, kodlamağa davam etmək üçün çoxlu seçimləri var. Tələbələri seçimlər siyahısı üçün [code.org/learn] saytına daxil olmağa sövq edin və ya bundan sonra əlavə fəaliyyətlərdən hər hansı birini planlaşdırırsınızsa, tələbələrə sinifinizdə nələrin gələcəyini söyləyin."
         },
         "c00f4730-69b0-4533-bf47-253647c6715f": {
-          "description": "Hər bir tələbəyə [“Çıxış Bileti”](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) verin və onlardan bu gün öyrəndiklərini, hiss etdiklərini və ya yaşadıqlarını ümumiləşdirmələrini xahiş edin. Tələbələr özlərini rahat hiss etdikləri istənilən şəkildə çəkə, yaza və ya ifadə edə bilərlər. Otaqdan çıxarkən hər bir tələbədən “Çıxış Bileti” toplayın. İstəyirsinizsə, “Çıxış biletləri”ni bülleten lövhəsində və ya Kod Saatınızı xatırlatmaq üçün məktəbin görkəmli bir yerində yerləşdirə bilərsiniz."
+          "description": "Hər bir tələbəyə [“Çıxış Bileti”][0] verin və onlardan bu gün öyrəndiklərini, hiss etdiklərini və ya yaşadıqlarını ümumiləşdirmələrini xahiş edin. Tələbələr özlərini rahat hiss etdikləri istənilən şəkildə çəkə, yaza və ya ifadə edə bilərlər. Otaqdan çıxarkən hər bir tələbədən “Çıxış Bileti” toplayın. İstəyirsinizsə, “Çıxış biletləri”ni bülleten lövhəsində və ya Kod Saatınızı xatırlatmaq üçün məktəbin görkəmli bir yerində yerləşdirə bilərsiniz."
         },
         "6e6e32c8-6dfd-4075-b1c7-0c96b6853b09": {
           "name": "Kod Saatı bitəndən sonra",
-          "description": "Kod Saatı başa çatdıqdan sonra K-5 sinifinizdə kompüter elmlərini tədris etməyə davam etməyin bir çox yolu var. Budur bəzi fikirlər:\n\n-   **[Code Studio Computer Science Fundamentals](http://code.org/educate/k5) kurslarını öyrədin**. Bu altı kurs gənc öyrənənlər üçün nəzərdə tutulub. Şagirdlər onlara kodlaşdırmağı öyrədən bulmacalar silsiləsi üzərində işləyirlər və pedaqoqlar öyrənmənin canlı olmasına kömək edən cəlbedici dərs planlarına çıxış əldə edirlər. Code.org bu kurslar üçün onlayn və ya şəxsən pulsuz peşəkar inkişaf təklif edir."
+          "description": "Kod Saatı başa çatdıqdan sonra K-5 sinifinizdə kompüter elmlərini tədris etməyə davam etməyin bir çox yolu var. Budur bəzi fikirlər:\n\n-   **[Code Studio Computer Science Fundamentals][0] kurslarını öyrədin**. Bu altı kurs gənc öyrənənlər üçün nəzərdə tutulub. Şagirdlər onlara kodlaşdırmağı öyrədən bulmacalar silsiləsi üzərində işləyirlər və pedaqoqlar öyrənmənin canlı olmasına kömək edən cəlbedici dərs planlarına çıxış əldə edirlər. Code.org bu kurslar üçün onlayn və ya şəxsən pulsuz peşəkar inkişaf təklif edir."
         },
         "5858c0fa-a7a6-44c2-afcb-bfb816b18a5b": {
           "name": "K-2 Müəllimləri üçün düzəlişlər",
@@ -21659,14 +21659,14 @@
         },
         "fc04ef5f-0d78-418b-9311-e12201106453": {
           "tips": [
-            "Əgər siz kodlaşdırma ilə çox tanış deyilsinizsə, Kod Saatını təqdim etməyin bir yolu [ilhamverici videolarımızdan](https://hourofcode.com/us/resources#videos) birini göstərməkdir. Tələbələrinizin ruhlandırıcı tapacağını düşündüyünüz birini seçin və indi paylaşın. Gənc öyrənənlər üçün “[Hər kəs öyrənə bilər](https://youtu.be/qYZF6oIZtfc)”i təklif edirik."
+            "Əgər siz kodlaşdırma ilə çox tanış deyilsinizsə, Kod Saatını təqdim etməyin bir yolu [ilhamverici videolarımızdan][0] birini göstərməkdir. Tələbələrinizin ruhlandırıcı tapacağını düşündüyünüz birini seçin və indi paylaşın. Gənc öyrənənlər üçün “[Hər kəs öyrənə bilər][1]”i təklif edirik."
           ]
         },
         "ea8a3bf2-1425-482a-9f98-a5b30d6ee809": {
           "description": "Açıqlayın ki, kompüter elmində “kod” kompüterin başa düşə biləcəyi təlimatlar toplusu deməkdir. Şagirdlərə bildirin ki, bu gün onlar “kodlaşdırma”, “proqramlaşdırma” və “sazlama” ilə məşğul olacaqlar.\n\nMüəyyənləşdirmək:\n\n-   **Kodlaşdırma** kod yazmaq və ya kompüter üçün təlimatlar yazmaq deməkdir.\n-   **Proqramlaşdırma**, eynilə, kod və ya təlimat yazmaq deməkdir. Bu gün siz kompüterdə bloklarla (onlayn dərslikdən istifadə edirsinizsə) və ya qələm və kağızla (əgər siz şəbəkədən kənar fəaliyyətdən istifadə edirsinizsə) proqramlaşdıracaqsınız.\n-   **Debugging** kodu səhvlərə görə yoxlamaq və səhvləri düzəltməyə çalışmaq deməkdir.\n\nTələbələrdən orta məktəbi bitirdikdən sonra ideal növbəti addımlarının nə ola biləcəyi barədə düşünmələrini xahiş edin. Şagirdlərdən növbəti addımın kompüterdən istifadə etmələrini tələb edəcəyinə inanırlarsa, əllərini qaldırmalarını xahiş edin. Hər kəs əlini qaldırmalıdır, çünki kompüterlər ətrafımızdadır...telefonlarımızda, maşınlarımızda, hətta mikrodalğalı sobalarımızda və qabyuyan maşınlarımızda!\n\nTələbələrdən Amerika Birləşmiş Ştatlarında neçə K12 məktəbinin olduğunu təxmin etmələrini xahiş edin. Cavab təxminən 100.000-dir. İndi tələbələrdən bu K12 məktəblərindən neçəsinin kompüter elmləri kursu təklif etdiyini təxmin etmələrini xahiş edin. Cavab 4 məktəbdən 1-dən azdır. Bu o deməkdir ki, ABŞ əhalisinin 25%-dən azının məktəbdə kompüter elmini öyrənmək imkanı var. Tələbələrdən soruşun: bu, gəncin kompüterlə bağlı təcrübəsi azdırsa və ya heç olmasa, arzuladıqları işi yerinə yetirmək və ya ideal kollecinə daxil olmaq qabiliyyətinə necə təsir edir? Və bu problem təkcə ABŞ-da deyil, bütün dünyada mövcuddur.\n\nİzah edin ki, bütün dünyada tələbələriniz kimi gənclər də bu ədalətsizliyə -- kompüter elmləri təhsilinə çıxışın olmamasına diqqət yetirmək üçün Kod Saatı tədbirində iştirak edirlər. Sinifiniz yalnız CS-nin əsaslarını öyrənmək və bir az əylənmək üçün deyil, həm də mövqe tutmaq və CS-nin hamı üçün əhəmiyyəti haqqında danışmaq üçün səsinizdən istifadə etmək üçün iştirak edəcək."
         },
         "c628ba28-35c2-4ded-a19d-74079377b309": {
-          "description": "Tələbələrinizi [Ice Age Play Lab](https://studio.code.org/s/iceage/lessons/1/levels/1) təlimatını tamamlamağa çağırın.\n\nŞagirdlərinizin yaşından və qabiliyyətindən asılı olaraq, aşağıdakıları nəzərdən keçirə bilərsiniz:\n\n-   Orta və yuxarı sinif şagirdləri üçün pulsuz oynamağa və proqram və ya oyun yaratmağa imkan verən dərsliklər seçməyi təklif edirik. Siz tələbələrin müstəqil və ya cüt və ya kiçik qruplarda işləməsini təmin edə bilərsiniz. [code.org/learn](http://code.org/learn) saytında [Make a Flappy Game](https://studio.code.org/s/flappy) və yeni beta alətimiz [AppLab](https://code.org/educate/applab) daxil olmaqla, pulsuz yaratmağa imkan verən bir çox başqa dərsliklər var.\n-   Gənc tələbələr üçün, sinfinizi cütlərə və ya çox kiçik qruplara (hər biri üç-dörd şagird) bölmənizi və hər qrupdan [pair programming](https://youtu.be/vgkahOzFH2Q) istifadə edərək dərsliyi tamamlamaq üçün birlikdə işləməyi xahiş etməyi təklif edirik.\n-   Böyüklər üçün [Write your first computer program](https://studio.code.org/hoc/1) dərsliyi ya müstəqil tapşırıq, ya da cüt proqramlaşdırma fəaliyyəti kimi çox yaxşı işləyir."
+          "description": "Tələbələrinizi [Ice Age Play Lab][0] təlimatını tamamlamağa çağırın.\n\nŞagirdlərinizin yaşından və qabiliyyətindən asılı olaraq, aşağıdakıları nəzərdən keçirə bilərsiniz:\n\n-   Orta və yuxarı sinif şagirdləri üçün pulsuz oynamağa və proqram və ya oyun yaratmağa imkan verən dərsliklər seçməyi təklif edirik. Siz tələbələrin müstəqil və ya cüt və ya kiçik qruplarda işləməsini təmin edə bilərsiniz. [code.org/learn][1] saytında [Make a Flappy Game][2] və yeni beta alətimiz [AppLab][3] daxil olmaqla, pulsuz yaratmağa imkan verən bir çox başqa dərsliklər var.\n-   Gənc tələbələr üçün, sinfinizi cütlərə və ya çox kiçik qruplara (hər biri üç-dörd şagird) bölmənizi və hər qrupdan [pair programming][4] istifadə edərək dərsliyi tamamlamaq üçün birlikdə işləməyi xahiş etməyi təklif edirik.\n-   Böyüklər üçün [Write your first computer program][5] dərsliyi ya müstəqil tapşırıq, ya da cüt proqramlaşdırma fəaliyyəti kimi çox yaxşı işləyir."
         },
         "548dc37b-f338-4a52-a77e-7380794c64f2": {
           "tips": [
@@ -21674,7 +21674,7 @@
           ]
         },
         "86d8427e-15bf-420c-b405-3d1f1c3c46c6": {
-          "description": "Qrup və ya fərd erkən bitirsə, onlar [code.org/learn](http://code.org/learn) saytına daxil olaraq başqa dərsliyə cəhd edə bilərlər."
+          "description": "Qrup və ya fərd erkən bitirsə, onlar [code.org/learn][0] saytına daxil olaraq başqa dərsliyə cəhd edə bilərlər."
         },
         "d8b92f56-a741-43ac-9d6f-3fdf1c452001": {
           "name": "Xülasə",
@@ -21682,7 +21682,7 @@
         },
         "3d63393a-9146-4027-8783-247e19637d25": {
           "name": "Qeyd etmək",
-          "description": "Bu gün kodlaşdırmaya bir saat sərf etdiyinizi izah edin, çünki bu həftə CS Təhsil Həftəsidir və bütün dünyada milyonlarla digər tələbə də bu həftə bir Saat Kod öyrənir. Tələbələri bu ümumdünya hərəkatının bir hissəsi olduqları üçün təbrik edirik.\n\nHər bir tələbəyə adı ilə [sertifikat](http://code.org/certificates) verin."
+          "description": "Bu gün kodlaşdırmaya bir saat sərf etdiyinizi izah edin, çünki bu həftə CS Təhsil Həftəsidir və bütün dünyada milyonlarla digər tələbə də bu həftə bir Saat Kod öyrənir. Tələbələri bu ümumdünya hərəkatının bir hissəsi olduqları üçün təbrik edirik.\n\nHər bir tələbəyə adı ilə [sertifikat][0] verin."
         },
         "4ae122fa-da6f-4aaf-b2f8-c68fd0bb68af": {
           "name": "Növbəti addımlar",
@@ -21694,7 +21694,7 @@
         },
         "4ae8bc68-25be-4eaa-ae1e-b9bfe8623a23": {
           "name": "Kod Saatı bitəndən sonra",
-          "description": "Kod Saatı başa çatdıqdan sonra K-5 sinifinizdə kompüter elmlərini tədris etməyə davam etməyin bir çox yolu var. Budur bəzi fikirlər:\n\n-   **[Code Studio Computer Science Fundamentals](http://code.org/educate/k5) kurslarını öyrədin**. Bu altı kurs gənc öyrənənlər üçün nəzərdə tutulub. Şagirdlər onlara kodlaşdırmağı öyrədən bulmacalar silsiləsi üzərində işləyirlər və pedaqoqlar öyrənmənin canlı olmasına kömək edən cəlbedici dərs planlarına çıxış əldə edirlər. Code.org bu kurslar üçün onlayn və ya şəxsən pulsuz peşəkar inkişaf təklif edir.\n-   **Kompüter elmləri mütəxəssisini öz işi haqqında sinifinizlə danışmağa dəvət edin**. Heç bir könüllü tanımıram, [volunteer map](https://code.org/volunteer/local) bir neçə nəfərlə əlaqə saxlayın."
+          "description": "Kod Saatı başa çatdıqdan sonra K-5 sinifinizdə kompüter elmlərini tədris etməyə davam etməyin bir çox yolu var. Budur bəzi fikirlər:\n\n-   **[Code Studio Computer Science Fundamentals][0] kurslarını öyrədin**. Bu altı kurs gənc öyrənənlər üçün nəzərdə tutulub. Şagirdlər onlara kodlaşdırmağı öyrədən bulmacalar silsiləsi üzərində işləyirlər və pedaqoqlar öyrənmənin canlı olmasına kömək edən cəlbedici dərs planlarına çıxış əldə edirlər. Code.org bu kurslar üçün onlayn və ya şəxsən pulsuz peşəkar inkişaf təklif edir.\n-   **Kompüter elmləri mütəxəssisini öz işi haqqında sinifinizlə danışmağa dəvət edin**. Heç bir könüllü tanımıram, [volunteer map][1] bir neçə nəfərlə əlaqə saxlayın."
         },
         "88079aec-5c42-4f3f-bbb6-cba4f8866c92": {
           "name": "Səhnənin qurulması",
@@ -21702,7 +21702,7 @@
         },
         "6874de98-8778-447b-8453-0138809b2c7e": {
           "tips": [
-            "Əgər siz kodlaşdırma ilə çox tanış deyilsinizsə, Kod Saatını təqdim etməyin bir yolu [ilhamverici videolarımızdan](https://hourofcode.com/us/resources#videos) birini göstərməkdir. Tələbələrinizin ruhlandırıcı tapacağını düşündüyünüz birini seçin və indi paylaşın. Gənc öyrənənlər üçün “[Hər kəs öyrənə bilər](https://youtu.be/qYZF6oIZtfc)”i təklif edirik."
+            "Əgər siz kodlaşdırma ilə çox tanış deyilsinizsə, Kod Saatını təqdim etməyin bir yolu [ilhamverici videolarımızdan][0] birini göstərməkdir. Tələbələrinizin ruhlandırıcı tapacağını düşündüyünüz birini seçin və indi paylaşın. Gənc öyrənənlər üçün “[Hər kəs öyrənə bilər][1]”i təklif edirik."
           ]
         },
         "82e4a494-65fb-40ac-b2c2-323044e15b77": {
@@ -21710,7 +21710,7 @@
         },
         "bd5d11f4-9c4c-4f24-bb9f-482392bd65aa": {
           "name": "Disney Sonsuz Oyun Labaratoriyası",
-          "description": "Tələbələrinizə [Disney Infinity Play Lab](https://studio.code.org/s/infinity/lessons/1/levels/1) təlimatını tamamlamağa çağırın.\n\nŞagirdlərinizin yaşından və qabiliyyətindən asılı olaraq, aşağıdakıları nəzərdən keçirə bilərsiniz:\n\n-   Orta və yuxarı sinif şagirdləri üçün pulsuz oynamağa və proqram və ya oyun yaratmağa imkan verən dərsliklər seçməyi təklif edirik. Siz tələbələrin müstəqil və ya cüt və ya kiçik qruplarda işləməsini təmin edə bilərsiniz. [code.org/learn](http://code.org/learn) saytında [Make a Flappy Game](https://studio.code.org/s/flappy) və yeni beta alətimiz [AppLab](https://code.org/educate/applab) daxil olmaqla, pulsuz yaratmağa imkan verən bir çox başqa dərsliklər var.\n-   Gənc tələbələr üçün, sinfinizi cütlərə və ya çox kiçik qruplara (hər biri üç-dörd şagird) bölmənizi və hər qrupdan [qoşa proqramlaşdırma](https://youtu.be/vgkahOzFH2Q) istifadə edərək dərsliyi tamamlamaq üçün birlikdə işləməyi xahiş etməyi təklif edirik.\n-   Böyüklər üçün [İlk kompüter proqramınızı yazın](https://studio.code.org/hoc/1) dərsliyi ya müstəqil tapşırıq, ya da cüt proqramlaşdırma fəaliyyəti kimi çox yaxşı işləyir."
+          "description": "Tələbələrinizə [Disney Infinity Play Lab][0] təlimatını tamamlamağa çağırın.\n\nŞagirdlərinizin yaşından və qabiliyyətindən asılı olaraq, aşağıdakıları nəzərdən keçirə bilərsiniz:\n\n-   Orta və yuxarı sinif şagirdləri üçün pulsuz oynamağa və proqram və ya oyun yaratmağa imkan verən dərsliklər seçməyi təklif edirik. Siz tələbələrin müstəqil və ya cüt və ya kiçik qruplarda işləməsini təmin edə bilərsiniz. [code.org/learn][1] saytında [Make a Flappy Game][2] və yeni beta alətimiz [AppLab][3] daxil olmaqla, pulsuz yaratmağa imkan verən bir çox başqa dərsliklər var.\n-   Gənc tələbələr üçün, sinfinizi cütlərə və ya çox kiçik qruplara (hər biri üç-dörd şagird) bölmənizi və hər qrupdan [qoşa proqramlaşdırma][4] istifadə edərək dərsliyi tamamlamaq üçün birlikdə işləməyi xahiş etməyi təklif edirik.\n-   Böyüklər üçün [İlk kompüter proqramınızı yazın][5] dərsliyi ya müstəqil tapşırıq, ya da cüt proqramlaşdırma fəaliyyəti kimi çox yaxşı işləyir."
         },
         "b1ea2c15-24bb-475a-bb3f-bbc8ea1a51c0": {
           "tips": [
@@ -21718,7 +21718,7 @@
           ]
         },
         "712a8a98-3ab7-43d0-8f6f-a68e6984b009": {
-          "description": "Qrup və ya fərd erkən bitirsə, onlar [code.org/learn](http://code.org/learn) saytına daxil olaraq başqa dərsliyə cəhd edə bilərlər."
+          "description": "Qrup və ya fərd erkən bitirsə, onlar [code.org/learn][0] saytına daxil olaraq başqa dərsliyə cəhd edə bilərlər."
         },
         "a0530acf-3bce-4de9-b392-fe8725044086": {
           "name": "Xülasə",
@@ -21726,7 +21726,7 @@
         },
         "ceaf9d96-e806-48e1-9a95-30566999264e": {
           "name": "Qeyd etmək",
-          "description": "Bu gün kodlaşdırmaya bir saat sərf etdiyinizi izah edin, çünki bu həftə CS Təhsil Həftəsidir və bütün dünyada milyonlarla digər tələbə də bu həftə bir Saat Kod öyrənir. Tələbələri bu ümumdünya hərəkatının bir hissəsi olduqları üçün təbrik edirik.\n\nHər bir tələbəyə adı ilə [sertifikat](http://code.org/certificates) verin."
+          "description": "Bu gün kodlaşdırmaya bir saat sərf etdiyinizi izah edin, çünki bu həftə CS Təhsil Həftəsidir və bütün dünyada milyonlarla digər tələbə də bu həftə bir Saat Kod öyrənir. Tələbələri bu ümumdünya hərəkatının bir hissəsi olduqları üçün təbrik edirik.\n\nHər bir tələbəyə adı ilə [sertifikat][0] verin."
         },
         "680268d8-e3db-4f80-b56d-dfe40ada4d77": {
           "name": "Növbəti addımlar",
@@ -21738,7 +21738,7 @@
         },
         "38f15942-4a08-48f7-a0c4-e04232bc9bdc": {
           "name": "Kod Saatı bitəndən sonra",
-          "description": "Kod Saatı başa çatdıqdan sonra K-5 sinifinizdə kompüter elmlərini tədris etməyə davam etməyin bir çox yolu var. Budur bəzi fikirlər:\n\n-   **[Code Studio Computer Science Fundamentals](http://code.org/educate/k5) kurslarını öyrədin**. Bu altı kurs gənc öyrənənlər üçün nəzərdə tutulub. Şagirdlər onlara kodlaşdırmağı öyrədən bulmacalar silsiləsi üzərində işləyirlər və pedaqoqlar öyrənmənin canlı olmasına kömək edən cəlbedici dərs planlarına çıxış əldə edirlər. Code.org bu kurslar üçün onlayn və ya şəxsən pulsuz peşəkar inkişaf təklif edir.\n-   **Kompüter elmləri mütəxəssisini öz işi haqqında sinifinizlə danışmağa dəvət edin**. Heç bir könüllü tanımıram, [volunteer map](https://code.org/volunteer/local) bir neçə nəfərlə əlaqə saxlayın."
+          "description": "Kod Saatı başa çatdıqdan sonra K-5 sinifinizdə kompüter elmlərini tədris etməyə davam etməyin bir çox yolu var. Budur bəzi fikirlər:\n\n-   **[Code Studio Computer Science Fundamentals][0] kurslarını öyrədin**. Bu altı kurs gənc öyrənənlər üçün nəzərdə tutulub. Şagirdlər onlara kodlaşdırmağı öyrədən bulmacalar silsiləsi üzərində işləyirlər və pedaqoqlar öyrənmənin canlı olmasına kömək edən cəlbedici dərs planlarına çıxış əldə edirlər. Code.org bu kurslar üçün onlayn və ya şəxsən pulsuz peşəkar inkişaf təklif edir.\n-   **Kompüter elmləri mütəxəssisini öz işi haqqında sinifinizlə danışmağa dəvət edin**. Heç bir könüllü tanımıram, [volunteer map][1] bir neçə nəfərlə əlaqə saxlayın."
         },
         "a16594a7-8312-4ac3-87c8-fd2d5d6e5bfb": {
           "name": "Giriş",
@@ -21746,7 +21746,7 @@
         },
         "6415b9b2-1e23-43ee-9d0c-e65efcb0d65c": {
           "tips": [
-            "Əgər siz kodlaşdırma ilə çox tanış deyilsinizsə, Kod Saatını təqdim etməyin bir yolu [ilhamverici videolarımızdan](https://hourofcode.com/us/resources#videos) birini göstərməkdir. Tələbələrinizin ruhlandırıcı tapacağını düşündüyünüz birini seçin və indi paylaşın. Gənc öyrənənlər üçün “[Kod Saatı Buradadır](https://youtu.be/FC5FbmsH4fw)”i təklif edirik."
+            "Əgər siz kodlaşdırma ilə çox tanış deyilsinizsə, Kod Saatını təqdim etməyin bir yolu [ilhamverici videolarımızdan][0] birini göstərməkdir. Tələbələrinizin ruhlandırıcı tapacağını düşündüyünüz birini seçin və indi paylaşın. Gənc öyrənənlər üçün “[Kod Saatı Buradadır][1]”i təklif edirik."
           ]
         },
         "3fee530c-6d5f-44da-89f7-cfae73040787": {
@@ -21759,16 +21759,16 @@
         },
         "aafa75c2-9439-415c-b42f-cac8ddfc2874": {
           "name": "Minecraft Macəraçısı",
-          "description": "[Minecraft: Adventurer](studio.code.org/s/mc/lessons/1/levels/1) təlimatını tamamlamaq üçün tələbələrinizə çağırış edin.\n\nŞagirdlərinizin yaşından və qabiliyyətindən asılı olaraq, aşağıdakıları nəzərdən keçirə bilərsiniz:\n\n-   Gənc tələbələr üçün, sinfinizi cütlərə bölmənizi və hər qrupdan [pair programming](https://youtu.be/vgkahOzFH2Q) istifadə edərək dərsliyi tamamlamaq üçün birlikdə işləməyi xahiş etməyi təklif edirik.\n-   Orta siniflərdə oxuyanlar üçün biz görürük ki, dərs vəsaitləri üzərində müstəqil işləmək yaxşı nəticə verir. Bəzən bu, tələbələrə öz dərsliklərini seçmək imkanı verir. Əgər tələbələr Minecraftla maraqlanmırlarsa, onlar [Code with Anna and Elsa](https://studio.code.org/s/frozen/stage/1/puzzle/1) və ya [Star Wars](https://code.org/starwars) dərslikləri ilə oxşar təcrübə əldə edə bilərlər.\n-   Yaşlı və ya yetkin öyrənənlər üçün [Minecraft](https://hourofcode.com/mc) dərsliyi ya müstəqil problem və ya cüt proqramlaşdırma fəaliyyəti kimi çox yaxşı işləyir.",
+          "description": "[Minecraft: Adventurer][0] təlimatını tamamlamaq üçün tələbələrinizə çağırış edin.\n\nŞagirdlərinizin yaşından və qabiliyyətindən asılı olaraq, aşağıdakıları nəzərdən keçirə bilərsiniz:\n\n-   Gənc tələbələr üçün, sinfinizi cütlərə bölmənizi və hər qrupdan [pair programming][1] istifadə edərək dərsliyi tamamlamaq üçün birlikdə işləməyi xahiş etməyi təklif edirik.\n-   Orta siniflərdə oxuyanlar üçün biz görürük ki, dərs vəsaitləri üzərində müstəqil işləmək yaxşı nəticə verir. Bəzən bu, tələbələrə öz dərsliklərini seçmək imkanı verir. Əgər tələbələr Minecraftla maraqlanmırlarsa, onlar [Code with Anna and Elsa][2] və ya [Star Wars][3] dərslikləri ilə oxşar təcrübə əldə edə bilərlər.\n-   Yaşlı və ya yetkin öyrənənlər üçün [Minecraft][4] dərsliyi ya müstəqil problem və ya cüt proqramlaşdırma fəaliyyəti kimi çox yaxşı işləyir.",
           "tips": [
             "Tələbələrinizdən onlara cəhd etmələrini xahiş etməzdən əvvəl seçdiyiniz dərsləri özünüz oynadığınızdan əmin olun. Beləliklə, siz nə gözlədiyinizi biləcəksiniz və tələbələrə öz dərsliklərini seçib-seçməmələri və ya tələbə ehtiyaclarına uyğun olaraq dərs vəsaitləri təyin etmək barədə qərar qəbul edə bilərsiniz."
           ]
         },
         "1766511d-3639-46a3-911f-acc7f8c4b922": {
-          "description": "Qrup və ya fərd erkən bitirsə, onlar [code.org/learn](http://code.org/learn) saytına daxil olaraq başqa dərsliyə cəhd edə bilərlər."
+          "description": "Qrup və ya fərd erkən bitirsə, onlar [code.org/learn][0] saytına daxil olaraq başqa dərsliyə cəhd edə bilərlər."
         },
         "8c990fee-4a0f-4d70-a635-ab66a8195193": {
-          "description": "Hər bir tələbəyə [“Çıxış Bileti”](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) verin və onlardan bu gün öyrəndiklərini, hiss etdiklərini və ya yaşadıqlarını ümumiləşdirmələrini xahiş edin. Tələbələr özlərini rahat hiss etdikləri istənilən şəkildə çəkə, yaza və ya ifadə edə bilərlər. Otaqdan çıxarkən hər bir tələbədən “Çıxış Bileti” toplayın. İstəyirsinizsə, “Çıxış biletləri”ni bülleten lövhəsində və ya Kod Saatınızı xatırlatmaq üçün məktəbin görkəmli bir yerində yerləşdirə bilərsiniz."
+          "description": "Hər bir tələbəyə [“Çıxış Bileti”][0] verin və onlardan bu gün öyrəndiklərini, hiss etdiklərini və ya yaşadıqlarını ümumiləşdirmələrini xahiş edin. Tələbələr özlərini rahat hiss etdikləri istənilən şəkildə çəkə, yaza və ya ifadə edə bilərlər. Otaqdan çıxarkən hər bir tələbədən “Çıxış Bileti” toplayın. İstəyirsinizsə, “Çıxış biletləri”ni bülleten lövhəsində və ya Kod Saatınızı xatırlatmaq üçün məktəbin görkəmli bir yerində yerləşdirə bilərsiniz."
         },
         "bcdecd77-2efb-44b5-9fdc-e244d1f5ccf6": {
           "name": "Xülasə",
@@ -21776,7 +21776,7 @@
         },
         "6b574c8b-2319-4244-acc8-fb8405fa5737": {
           "name": "Qeyd etmək",
-          "description": "Bu gün kodlaşdırmaya bir saat sərf etdiyinizi izah edin, çünki bu həftə CS Təhsil Həftəsidir və bütün dünyada milyonlarla digər tələbə də bu həftə bir Saat Kod öyrənir. Tələbələri bu ümumdünya hərəkatının bir hissəsi olduqları üçün təbrik edirik.\n\nHər bir tələbəyə adı ilə [sertifikat](https://studio.code.org/certificates/batch?course=bWM=) verin."
+          "description": "Bu gün kodlaşdırmaya bir saat sərf etdiyinizi izah edin, çünki bu həftə CS Təhsil Həftəsidir və bütün dünyada milyonlarla digər tələbə də bu həftə bir Saat Kod öyrənir. Tələbələri bu ümumdünya hərəkatının bir hissəsi olduqları üçün təbrik edirik.\n\nHər bir tələbəyə adı ilə [sertifikat][0] verin."
         },
         "02dfa607-4f9e-404c-bdae-f9f423fa526c": {
           "name": "Növbəti addımlar",
@@ -21784,7 +21784,7 @@
         },
         "5bc8aefa-7bb0-4f22-a555-321738755b8c": {
           "name": "Kod Saatı bitəndən sonra",
-          "description": "Kod Saatı başa çatdıqdan sonra K-5 sinifinizdə kompüter elmlərini tədris etməyə davam etməyin bir çox yolu var. Budur bəzi fikirlər:\n\n-   **[Code Studio Computer Science Fundamentals](http://code.org/educate/k5) kurslarını öyrədin**. Bu dörd kurs gənc öyrənənlər üçün nəzərdə tutulub. Şagirdlər onlara kodlaşdırmağı öyrədən bulmacalar silsiləsi üzərində işləyirlər və pedaqoqlar öyrənmənin canlı olmasına kömək edən cəlbedici dərs planlarına çıxış əldə edirlər. Code.org bu kurslar üçün onlayn və ya şəxsən pulsuz peşəkar inkişaf təklif edir.\n-   **Daha çox kurs təklifləri üçün [You can Teach Computer Science](https://code.org/teach)** səhifəsinə daxil olun.\n-   **Kompüter elmləri mütəxəssisini öz işi haqqında sinifinizlə danışmağa dəvət edin**. Heç bir yerli kompüter alimi tanımırsınız? [volunteer map](https://code.org/volunteer/local) könüllü ilə əlaqə saxlayın"
+          "description": "Kod Saatı başa çatdıqdan sonra K-5 sinifinizdə kompüter elmlərini tədris etməyə davam etməyin bir çox yolu var. Budur bəzi fikirlər:\n\n-   **[Code Studio Computer Science Fundamentals][0] kurslarını öyrədin**. Bu dörd kurs gənc öyrənənlər üçün nəzərdə tutulub. Şagirdlər onlara kodlaşdırmağı öyrədən bulmacalar silsiləsi üzərində işləyirlər və pedaqoqlar öyrənmənin canlı olmasına kömək edən cəlbedici dərs planlarına çıxış əldə edirlər. Code.org bu kurslar üçün onlayn və ya şəxsən pulsuz peşəkar inkişaf təklif edir.\n-   **Daha çox kurs təklifləri üçün [You can Teach Computer Science][1]** səhifəsinə daxil olun.\n-   **Kompüter elmləri mütəxəssisini öz işi haqqında sinifinizlə danışmağa dəvət edin**. Heç bir yerli kompüter alimi tanımırsınız? [volunteer map][2] könüllü ilə əlaqə saxlayın"
         },
         "563d9088-3ce6-48c1-aa79-6f673e089247": {
           "name": "Giriş",
@@ -21792,7 +21792,7 @@
         },
         "9f1107d0-cde6-4f78-911c-5018ea9264e0": {
           "tips": [
-            "Əgər siz kodlaşdırma ilə çox tanış deyilsinizsə, Kod Saatını təqdim etməyin bir yolu [ilhamverici videolarımızdan](https://hourofcode.com/us/resources#videos) birini göstərməkdir. Tələbələrinizin ruhlandırıcı tapacağını düşündüyünüz birini seçin və indi paylaşın. Gənc öyrənənlər üçün “[Kod Saatı Buradadır](https://youtu.be/FC5FbmsH4fw)”i təklif edirik."
+            "Əgər siz kodlaşdırma ilə çox tanış deyilsinizsə, Kod Saatını təqdim etməyin bir yolu [ilhamverici videolarımızdan][0] birini göstərməkdir. Tələbələrinizin ruhlandırıcı tapacağını düşündüyünüz birini seçin və indi paylaşın. Gənc öyrənənlər üçün “[Kod Saatı Buradadır][1]”i təklif edirik."
           ]
         },
         "ed8509fa-59b4-43a4-bd4a-05a5018387c2": {
@@ -21805,7 +21805,7 @@
         },
         "75d779c4-24f7-40be-bf92-b0c094c16d11": {
           "name": "Minecraft: Dizayner",
-          "description": "Bu [Minecraft: Dizayner](http://studio.code.org/s/minecraft/lessons/1/levels/1) fəaliyyətini tamamlamaq üçün tələbələrinizə çağırış edin.\n\nŞagirdlərinizin yaşından və qabiliyyətindən asılı olaraq, aşağıdakıları nəzərdən keçirə bilərsiniz:\n\n-   Gənc tələbələr üçün, sinfinizi cütlərə bölmənizi və hər qrupdan [qoşa proqramlaşdırma](https://youtu.be/vgkahOzFH2Q) istifadə edərək dərsliyi tamamlamaq üçün birlikdə işləməyi xahiş etməyi təklif edirik.\n-   Orta siniflərdə oxuyanlar üçün biz görürük ki, dərs vəsaitləri üzərində müstəqil işləmək yaxşı nəticə verir. Bəzən bu, tələbələrə öz dərsliklərini seçmək imkanı verir. Əgər tələbələr Minecraftla maraqlanmırlarsa, onlar [Anna və Elza ilə kod](https://studio.code.org/s/frozen/stage/1/puzzle/1) və ya [Ulduz Döyüşləri](https://code.org/starwars) dərslikləri ilə oxşar təcrübə əldə edə bilərlər.\n-   Yaşlı və ya yetkin öyrənənlər üçün [Minecraft: Dizayner](http://studio.code.org/s/minecraft/lessons/1/levels/1) dərsliyi ya müstəqil problem və ya cüt proqramlaşdırma fəaliyyəti kimi çox yaxşı işləyir."
+          "description": "Bu [Minecraft: Dizayner][0] fəaliyyətini tamamlamaq üçün tələbələrinizə çağırış edin.\n\nŞagirdlərinizin yaşından və qabiliyyətindən asılı olaraq, aşağıdakıları nəzərdən keçirə bilərsiniz:\n\n-   Gənc tələbələr üçün, sinfinizi cütlərə bölmənizi və hər qrupdan [qoşa proqramlaşdırma][1] istifadə edərək dərsliyi tamamlamaq üçün birlikdə işləməyi xahiş etməyi təklif edirik.\n-   Orta siniflərdə oxuyanlar üçün biz görürük ki, dərs vəsaitləri üzərində müstəqil işləmək yaxşı nəticə verir. Bəzən bu, tələbələrə öz dərsliklərini seçmək imkanı verir. Əgər tələbələr Minecraftla maraqlanmırlarsa, onlar [Anna və Elza ilə kod][2] və ya [Ulduz Döyüşləri][3] dərslikləri ilə oxşar təcrübə əldə edə bilərlər.\n-   Yaşlı və ya yetkin öyrənənlər üçün [Minecraft: Dizayner][4] dərsliyi ya müstəqil problem və ya cüt proqramlaşdırma fəaliyyəti kimi çox yaxşı işləyir."
         },
         "8d4ecee7-5f04-4f80-9673-c2aec0c5ab9d": {
           "tips": [
@@ -21813,7 +21813,7 @@
           ]
         },
         "307ffdf6-e274-484b-a10f-329ddfe568dc": {
-          "description": "Qrup və ya fərd erkən bitirsə, onlar [code.org/learn](http://code.org/learn) saytına daxil olaraq başqa dərsliyə cəhd edə bilərlər."
+          "description": "Qrup və ya fərd erkən bitirsə, onlar [code.org/learn][0] saytına daxil olaraq başqa dərsliyə cəhd edə bilərlər."
         },
         "70935a98-82e9-4553-94f7-90a4e615dd34": {
           "name": "Xülasə",
@@ -21821,18 +21821,18 @@
         },
         "5f00e31d-70fa-4bb2-9bef-223793082f5c": {
           "name": "Qeyd etmək",
-          "description": "Bu gün kodlaşdırmaya bir saat sərf etdiyinizi izah edin, çünki bu həftə CS Təhsil Həftəsidir və bütün dünyada milyonlarla digər tələbə də bu həftə bir Saat Kod öyrənir. Tələbələri bu ümumdünya hərəkatının bir hissəsi olduqları üçün təbrik edirik.\n\nHər bir tələbəyə adı ilə [sertifikat](https://studio.code.org/certificates/batch?course=bWM=) verin."
+          "description": "Bu gün kodlaşdırmaya bir saat sərf etdiyinizi izah edin, çünki bu həftə CS Təhsil Həftəsidir və bütün dünyada milyonlarla digər tələbə də bu həftə bir Saat Kod öyrənir. Tələbələri bu ümumdünya hərəkatının bir hissəsi olduqları üçün təbrik edirik.\n\nHər bir tələbəyə adı ilə [sertifikat][0] verin."
         },
         "20b7009c-3a45-4211-a9ad-c65f56099200": {
           "name": "Növbəti addımlar",
-          "description": "Şagirdlərə bildirin ki, əgər bugünkü fəaliyyətdən həzz aldılarsa, kodlamağa davam etmək üçün çoxlu seçimləri var. Tələbələri seçimlər siyahısı üçün [code.org/learn](<>) saytına daxil olmağa sövq edin və ya bundan sonra əlavə fəaliyyətlərdən hər hansı birini planlaşdırırsınızsa, tələbələrə sinifinizdə nələrin gələcəyini söyləyin."
+          "description": "Şagirdlərə bildirin ki, əgər bugünkü fəaliyyətdən həzz aldılarsa, kodlamağa davam etmək üçün çoxlu seçimləri var. Tələbələri seçimlər siyahısı üçün [code.org/learn][0] saytına daxil olmağa sövq edin və ya bundan sonra əlavə fəaliyyətlərdən hər hansı birini planlaşdırırsınızsa, tələbələrə sinifinizdə nələrin gələcəyini söyləyin."
         },
         "85fc4f24-eb97-4ff5-813f-4af3e5497034": {
-          "description": "Hər bir tələbəyə [“Çıxış Bileti”](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) verin və onlardan bu gün öyrəndiklərini, hiss etdiklərini və ya yaşadıqlarını ümumiləşdirmələrini xahiş edin. Tələbələr özlərini rahat hiss etdikləri istənilən şəkildə çəkə, yaza və ya ifadə edə bilərlər. Otaqdan çıxarkən hər bir tələbədən “Çıxış Bileti” toplayın. İstəyirsinizsə, “Çıxış biletləri”ni bülleten lövhəsində və ya Kod Saatınızı xatırlatmaq üçün məktəbin görkəmli bir yerində yerləşdirə bilərsiniz."
+          "description": "Hər bir tələbəyə [“Çıxış Bileti”][0] verin və onlardan bu gün öyrəndiklərini, hiss etdiklərini və ya yaşadıqlarını ümumiləşdirmələrini xahiş edin. Tələbələr özlərini rahat hiss etdikləri istənilən şəkildə çəkə, yaza və ya ifadə edə bilərlər. Otaqdan çıxarkən hər bir tələbədən “Çıxış Bileti” toplayın. İstəyirsinizsə, “Çıxış biletləri”ni bülleten lövhəsində və ya Kod Saatınızı xatırlatmaq üçün məktəbin görkəmli bir yerində yerləşdirə bilərsiniz."
         },
         "7f24d7ca-8a9e-417c-ac8e-18ca3ab48ac1": {
           "name": "Kod Saatı bitəndən sonra",
-          "description": "Kod Saatı başa çatdıqdan sonra K-5 sinifinizdə kompüter elmlərini tədris etməyə davam etməyin bir çox yolu var. Budur bəzi fikirlər:\n\n-   **[Code Studio Kompüter Elmlərinin Əsasları](http://code.org/educate/k5) kurslarını öyrədin**. Bu altı kurs gənc öyrənənlər üçün nəzərdə tutulub. Şagirdlər onlara kodlaşdırmağı öyrədən bulmacalar silsiləsi üzərində işləyirlər və pedaqoqlar öyrənmənin canlı olmasına kömək edən cəlbedici dərs planlarına çıxış əldə edirlər. Code.org bu kurslar üçün onlayn və ya şəxsən pulsuz peşəkar inkişaf təklif edir.\n-   **Daha çox kurs təklifləri üçün [You can Teach Computer Science](https://code.org/teach)** səhifəsinə daxil olun.\n-   **Kompüter elmləri mütəxəssisini öz işi haqqında sinifinizlə danışmağa dəvət edin**. Heç bir yerli kompüter alimi tanımırsınız? [könüllü xəritəmizdə](https://code.org/volunteer/local) könüllü ilə əlaqə saxlayın"
+          "description": "Kod Saatı başa çatdıqdan sonra K-5 sinifinizdə kompüter elmlərini tədris etməyə davam etməyin bir çox yolu var. Budur bəzi fikirlər:\n\n-   **[Code Studio Kompüter Elmlərinin Əsasları][0] kurslarını öyrədin**. Bu altı kurs gənc öyrənənlər üçün nəzərdə tutulub. Şagirdlər onlara kodlaşdırmağı öyrədən bulmacalar silsiləsi üzərində işləyirlər və pedaqoqlar öyrənmənin canlı olmasına kömək edən cəlbedici dərs planlarına çıxış əldə edirlər. Code.org bu kurslar üçün onlayn və ya şəxsən pulsuz peşəkar inkişaf təklif edir.\n-   **Daha çox kurs təklifləri üçün [You can Teach Computer Science][1]** səhifəsinə daxil olun.\n-   **Kompüter elmləri mütəxəssisini öz işi haqqında sinifinizlə danışmağa dəvət edin**. Heç bir yerli kompüter alimi tanımırsınız? [könüllü xəritəmizdə][2] könüllü ilə əlaqə saxlayın"
         },
         "54b95e4d-58b7-4551-9782-7ce134f4e457": {
           "name": "Həyəcan yarat!",
@@ -22096,7 +22096,7 @@
         },
         "6fa68bdd-8f9b-4d69-b54e-28141ee6d732": {
           "tips": [
-            "Əgər kodlaşdırma ilə çox tanış deyilsinizsə, Kod Saatını təqdim etməyin bir yolu [ilhamverici videolarımızdan](https://hourofcode.com/us/resources#videos) birini göstərməkdir. Tələbələrinizin ruhlandırıcı tapacağını düşündüyünüz birini seçin və indi paylaşın. Gənc öyrənənlər üçün [The Hour of Code is here](https://youtu.be/FC5FbmsH4fw) təklif edirik."
+            "Əgər kodlaşdırma ilə çox tanış deyilsinizsə, Kod Saatını təqdim etməyin bir yolu [ilhamverici videolarımızdan][0] birini göstərməkdir. Tələbələrinizin ruhlandırıcı tapacağını düşündüyünüz birini seçin və indi paylaşın. Gənc öyrənənlər üçün [The Hour of Code is here][1] təklif edirik."
           ]
         },
         "7f1244d9-811b-410c-96b2-9f7086959c6b": {
@@ -22104,7 +22104,7 @@
         },
         "a69a3310-4b81-4e04-8313-51044489351a": {
           "name": "Ulduz Müharibələri: Qalaktikanı proqramlaşdırın",
-          "description": "Tələbələrinizi [Ulduz Döyüşləri: Kodla Qalaktikanın qurulması](https://studio.code.org/s/starwars/lessons/1/levels/1) təlimatını tamamlamaq üçün çağırın.\n\nŞagirdlərinizin yaşından və qabiliyyətindən asılı olaraq, aşağıdakıları nəzərdən keçirə bilərsiniz:\n\n-   Gənc tələbələr üçün, sinifinizi cütlərə bölmənizi və hər bir cütdən [cütlə proqramlaşdırma](https://youtu.be/vgkahOzFH2Q) istifadə edərək dərsliyi tamamlamaq üçün birlikdə işləməyi xahiş etməyi təklif edirik.\n-   Yaşlı tələbələr üçün dərs vəsaitləri üzərində müstəqil işləməyin yaxşı nəticə verdiyini görürük. Bəzən bu, tələbələrə öz dərsliklərini seçmək imkanı verir. Tələbələr Ulduz Döyüşləri ilə maraqlanmırlarsa, [Birinci Kompüter Proqramını Yaz](https://studio.code.org/hoc/1) təlimatı ilə oxşar təcrübə əldə edə bilərlər.\n-   Yetkin öyrənənlər üçün [Ulduz Döyüşləri: Kodla Qalaktikanın qurulması](https://studio.code.org/s/starwars/lessons/1/levels/1) ya müstəqil çağırış, ya da cüt proqramlaşdırma fəaliyyəti kimi çox yaxşı işləyir."
+          "description": "Tələbələrinizi [Ulduz Döyüşləri: Kodla Qalaktikanın qurulması][0] təlimatını tamamlamaq üçün çağırın.\n\nŞagirdlərinizin yaşından və qabiliyyətindən asılı olaraq, aşağıdakıları nəzərdən keçirə bilərsiniz:\n\n-   Gənc tələbələr üçün, sinifinizi cütlərə bölmənizi və hər bir cütdən [cütlə proqramlaşdırma][1] istifadə edərək dərsliyi tamamlamaq üçün birlikdə işləməyi xahiş etməyi təklif edirik.\n-   Yaşlı tələbələr üçün dərs vəsaitləri üzərində müstəqil işləməyin yaxşı nəticə verdiyini görürük. Bəzən bu, tələbələrə öz dərsliklərini seçmək imkanı verir. Tələbələr Ulduz Döyüşləri ilə maraqlanmırlarsa, [Birinci Kompüter Proqramını Yaz][2] təlimatı ilə oxşar təcrübə əldə edə bilərlər.\n-   Yetkin öyrənənlər üçün [Ulduz Döyüşləri: Kodla Qalaktikanın qurulması][3] ya müstəqil çağırış, ya da cüt proqramlaşdırma fəaliyyəti kimi çox yaxşı işləyir."
         },
         "b17f8e8a-6b46-4f46-a4fc-894cf561bb9d": {
           "tips": [
@@ -22112,15 +22112,15 @@
           ]
         },
         "eb72d828-788d-4090-9e4f-71423c081948": {
-          "description": "Dərsliyin sonunda tələbələr Ulduz Döyüşləri oyunu qurmaq imkanı əldə edirlər. Şagirdləri erkən bitirsələr, onları bir-birlərinin oyunlarını sınamağa təşviq edin və sonra öz oyunlarını daha maraqlı və ya çətinləşdirin.\n\nSiz həmçinin [code.org/learn](http://code.org/learn) saytına daxil olaraq qrup və ya fərdin başqa dərslik cəhdinə icazə verə bilərsiniz."
+          "description": "Dərsliyin sonunda tələbələr Ulduz Döyüşləri oyunu qurmaq imkanı əldə edirlər. Şagirdləri erkən bitirsələr, onları bir-birlərinin oyunlarını sınamağa təşviq edin və sonra öz oyunlarını daha maraqlı və ya çətinləşdirin.\n\nSiz həmçinin [code.org/learn][0] saytına daxil olaraq qrup və ya fərdin başqa dərslik cəhdinə icazə verə bilərsiniz."
         },
         "bec776b1-a8cd-4e18-a1bc-be30f2942863": {
           "name": "Xülasə",
-          "description": "Hər bir tələbəyə bir neçə yapışqan qeyd və ya qeyd kartı verin. Sürətli [“Whip Around”](http://www.theteachertoolkit.com/index.php/tool/whip-around) fəaliyyətini asanlaşdırın:\n\n-   “Tamamladığınız Kod Saatı fəaliyyəti haqqında həqiqətən bəyəndiyiniz bir şeyi paylaşın” və ya “Bu gün öyrəndiyiniz bəzi bacarıqları paylaşın” kimi bir neçə cavabı olan sorğu verin.\n-   Şagirdlərdən mümkün qədər çox cavab yazsınlar, hər yapışqan qeyd və ya qeyd kartı üçün bir fikir.\n     Hər dəfə bir tələbəni çağıraraq otağın ətrafında \"qamçılayın\". Şagirdlərin cavablarından birini paylaşmasını xahiş edin. Tələbələr çağırıldıqda cavabı təkrarlamamalıdırlar; yeni bir şey əlavə etməlidirlər.\n-   Şagirdlərin cavablarında ən çox hansı fikir və mövzuların göründüyünü müzakirə edin."
+          "description": "Hər bir tələbəyə bir neçə yapışqan qeyd və ya qeyd kartı verin. Sürətli [“Whip Around”][0] fəaliyyətini asanlaşdırın:\n\n-   “Tamamladığınız Kod Saatı fəaliyyəti haqqında həqiqətən bəyəndiyiniz bir şeyi paylaşın” və ya “Bu gün öyrəndiyiniz bəzi bacarıqları paylaşın” kimi bir neçə cavabı olan sorğu verin.\n-   Şagirdlərdən mümkün qədər çox cavab yazsınlar, hər yapışqan qeyd və ya qeyd kartı üçün bir fikir.\n     Hər dəfə bir tələbəni çağıraraq otağın ətrafında \"qamçılayın\". Şagirdlərin cavablarından birini paylaşmasını xahiş edin. Tələbələr çağırıldıqda cavabı təkrarlamamalıdırlar; yeni bir şey əlavə etməlidirlər.\n-   Şagirdlərin cavablarında ən çox hansı fikir və mövzuların göründüyünü müzakirə edin."
         },
         "4cb35c62-404e-42b9-9eaf-09ec2f485a2b": {
           "name": "Qeyd etmək",
-          "description": "Bu gün kodlaşdırmaya bir saat sərf etdiyinizi izah edin, çünki bu həftə CS Təhsil Həftəsidir və bütün dünyada milyonlarla digər tələbə də bu həftə bir Saat Kod öyrənir. Tələbələri bu ümumdünya hərəkatının bir hissəsi olduqları üçün təbrik edirik.\n\nHər bir tələbəyə adı ilə [sertifikat](http://code.org/certificates) verin."
+          "description": "Bu gün kodlaşdırmaya bir saat sərf etdiyinizi izah edin, çünki bu həftə CS Təhsil Həftəsidir və bütün dünyada milyonlarla digər tələbə də bu həftə bir Saat Kod öyrənir. Tələbələri bu ümumdünya hərəkatının bir hissəsi olduqları üçün təbrik edirik.\n\nHər bir tələbəyə adı ilə [sertifikat][0] verin."
         },
         "80ff32c9-0373-4125-a65e-bef5f0e21cba": {
           "name": "Növbəti addımlar",
@@ -22128,7 +22128,7 @@
         },
         "57e403d7-a8be-47fc-bb97-1a068e2469ed": {
           "name": "Kod Saatı bitəndən sonra",
-          "description": "Kod Saatı başa çatdıqdan sonra K-5 sinifinizdə kompüter elmlərini tədris etməyə davam etməyin bir çox yolu var. Budur bəzi fikirlər:\n\n-   **[Code Studio Kompüter Elmlərinin Əsasları](http://code.org/educate/k5) kurslarını öyrədin**. Bu altı kurs gənc öyrənənlər üçün nəzərdə tutulub. Şagirdlər onlara kodlaşdırmağı öyrədən bulmacalar silsiləsi üzərində işləyirlər və pedaqoqlar öyrənmənin canlı olmasına kömək edən cəlbedici dərs planlarına çıxış əldə edirlər. Code.org bu kurslar üçün onlayn və ya şəxsən pulsuz peşəkar inkişaf təklif edir.\n-   Bu gün müəyyən etdiyiniz bəzi kodlaşdırma karyeralarını araşdırın. [Sharemylesson.com](http://www.sharemylesson.com/TaxonomySearchResults.aspx?area=resources&keywords=career+research) saytında karyera tədqiqat layihələrinin planlaşdırılması ilə bağlı resursları tapın.\n-   **Kompüter elmləri mütəxəssisini öz işi haqqında sinifinizlə danışmağa dəvət edin**. Heç bir könüllü tanımıram, [könüllülər xəritəsində](https://code.org/volunteer/local) bir neçə nəfərlə əlaqə saxlayın."
+          "description": "Kod Saatı başa çatdıqdan sonra K-5 sinifinizdə kompüter elmlərini tədris etməyə davam etməyin bir çox yolu var. Budur bəzi fikirlər:\n\n-   **[Code Studio Kompüter Elmlərinin Əsasları][0] kurslarını öyrədin**. Bu altı kurs gənc öyrənənlər üçün nəzərdə tutulub. Şagirdlər onlara kodlaşdırmağı öyrədən bulmacalar silsiləsi üzərində işləyirlər və pedaqoqlar öyrənmənin canlı olmasına kömək edən cəlbedici dərs planlarına çıxış əldə edirlər. Code.org bu kurslar üçün onlayn və ya şəxsən pulsuz peşəkar inkişaf təklif edir.\n-   Bu gün müəyyən etdiyiniz bəzi kodlaşdırma karyeralarını araşdırın. [Sharemylesson.com][1] saytında karyera tədqiqat layihələrinin planlaşdırılması ilə bağlı resursları tapın.\n-   **Kompüter elmləri mütəxəssisini öz işi haqqında sinifinizlə danışmağa dəvət edin**. Heç bir könüllü tanımıram, [könüllülər xəritəsində][2] bir neçə nəfərlə əlaqə saxlayın."
         },
         "d0f5c55b-b19c-418c-8dc6-f87a80e08f45": {
           "description": "Qapıdan çıxarkən tələbələrdən \"Kompüter Elmləri\" zehni xəritəsinə öz yapışqan qeydlərini və ya qeyd kartlarını əlavə etmələrini xahiş edin. Lövhəni CS-nin nə olduğu və nə üçün vacib olduğu haqqında çoxlu gözəl fikirlərlə doldurmağa çalışın."
@@ -22139,14 +22139,14 @@
         },
         "88f6ccc1-0efa-4c60-985c-971a235d5645": {
           "tips": [
-            "Əgər kodlaşdırma ilə çox tanış deyilsinizsə, Kod Saatını təqdim etməyin bir yolu [ilhamverici videolarımızdan](https://hourofcode.com/us/resources#videos) birini göstərməkdir. Tələbələrinizin ruhlandırıcı tapacağını düşündüyünüz birini seçin və indi paylaşın. Gənc öyrənənlər üçün [The Hour of Code is here](https://youtu.be/FC5FbmsH4fw) təklif edirik."
+            "Əgər kodlaşdırma ilə çox tanış deyilsinizsə, Kod Saatını təqdim etməyin bir yolu [ilhamverici videolarımızdan][0] birini göstərməkdir. Tələbələrinizin ruhlandırıcı tapacağını düşündüyünüz birini seçin və indi paylaşın. Gənc öyrənənlər üçün [The Hour of Code is here][1] təklif edirik."
           ]
         },
         "dbeab27b-4231-4281-be73-ae2aaa3d94b2": {
           "description": "Açıqlayın ki, kompüter elmində “kod” kompüterin başa düşə biləcəyi təlimatlar toplusu deməkdir. Şagirdlərə bildirin ki, bu gün onlar “kodlaşdırma”, “proqramlaşdırma” və “sazlama” ilə məşğul olacaqlar.\n\nMüəyyənləşdirmək:\n\n-   **Kodlaşdırma** kod yazmaq və ya kompüter üçün təlimatlar yazmaq deməkdir.\n-   **Proqramlaşdırma**, eynilə, kod və ya təlimat yazmaq deməkdir. Bu gün siz kompüterdə bloklarla (onlayn dərslikdən istifadə edirsinizsə) və ya qələm və kağızla (əgər siz şəbəkədən kənar fəaliyyətdən istifadə edirsinizsə) proqramlaşdıracaqsınız.\n-   **Debugging** kodu səhvlərə görə yoxlamaq və səhvləri düzəltməyə çalışmaq deməkdir.\n\nŞagirdlərdən kodlaşdırma ilə bağlı eşitdikləri bəzi işləri adlandırmalarını xahiş edin. Tələbələr “proqramçı”, “kompüter alimi”, “proqram təminatı tərtibatçısı” və ya “mühəndis” kimi şeyləri qeyd edə bilərlər. “Kompüter Elmləri” lövhənizdə tələbə cavablarını çəkin, tələbələrinizin paylaşdığı məlumatların ağıl xəritəsini tərtib edin.\n\n**Deyin:** _Doğru deyirsiniz, dostlar! Burada düzgün və ya yanlış cavablar yoxdur...bu günlərdə demək olar ki, hər hansı bir iş bir növ kod biliklərini ehtiva edir. Bəzi kodlaşdırma biliklərini tələb edən bir çox karyera olsa da, kodlamağı öyrənmək hər kəsin edə biləcəyi bir işdir. Və bu gün bunu edəcəyik. Bu gün edəcəyimiz şeylər dərhal bunlar kimi görünməyə bilər, lakin bu gün öyrəndiyiniz hər şey növbəti Angry Birds və ya Twitter-in yaranmasına səbəb ola bilər._"
         },
         "0ac387c0-d67a-4177-aacf-837ce03c55aa": {
-          "description": "Tələbələrinizi [Ulduz Döyüşləri: Kodla Qalaktikanın qurulması](https://studio.code.org/s/starwarsblocks/lessons/1/levels/1) təlimatını tamamlamaq üçün çağırın.\n\nŞagirdlərinizin yaşından və qabiliyyətindən asılı olaraq, aşağıdakıları nəzərdən keçirə bilərsiniz:\n\n-   Gənc tələbələr üçün, sinifinizi cütlərə bölmənizi və hər bir cütdən [cütlə proqramlaşdırma](https://youtu.be/vgkahOzFH2Q) istifadə edərək dərsliyi tamamlamaq üçün birlikdə işləməyi xahiş etməyi təklif edirik.\n-   Yaşlı tələbələr üçün dərs vəsaitləri üzərində müstəqil işləməyin yaxşı nəticə verdiyini görürük. Bəzən bu, tələbələrə öz dərsliklərini seçmək imkanı verir. Tələbələr Ulduz Döyüşləri ilə maraqlanmırlarsa, [Birinci Kompüter Proqramını Yaz](https://studio.code.org/hoc/1) təlimatı ilə oxşar təcrübə əldə edə bilərlər.\n-   Yetkin öyrənənlər üçün [Ulduz Döyüşləri: Kodla Qalaktikanın qurulması](https://studio.code.org/s/starwarsblocks/lessons/1/levels/1) ya müstəqil çağırış, ya da cüt proqramlaşdırma fəaliyyəti kimi çox yaxşı işləyir."
+          "description": "Tələbələrinizi [Ulduz Döyüşləri: Kodla Qalaktikanın qurulması][0] təlimatını tamamlamaq üçün çağırın.\n\nŞagirdlərinizin yaşından və qabiliyyətindən asılı olaraq, aşağıdakıları nəzərdən keçirə bilərsiniz:\n\n-   Gənc tələbələr üçün, sinifinizi cütlərə bölmənizi və hər bir cütdən [cütlə proqramlaşdırma][1] istifadə edərək dərsliyi tamamlamaq üçün birlikdə işləməyi xahiş etməyi təklif edirik.\n-   Yaşlı tələbələr üçün dərs vəsaitləri üzərində müstəqil işləməyin yaxşı nəticə verdiyini görürük. Bəzən bu, tələbələrə öz dərsliklərini seçmək imkanı verir. Tələbələr Ulduz Döyüşləri ilə maraqlanmırlarsa, [Birinci Kompüter Proqramını Yaz][2] təlimatı ilə oxşar təcrübə əldə edə bilərlər.\n-   Yetkin öyrənənlər üçün [Ulduz Döyüşləri: Kodla Qalaktikanın qurulması][3] ya müstəqil çağırış, ya da cüt proqramlaşdırma fəaliyyəti kimi çox yaxşı işləyir."
         },
         "88879c41-12f5-4d2e-86e6-93925b83d7d0": {
           "tips": [
@@ -22154,15 +22154,15 @@
           ]
         },
         "719affd9-c1a0-4b0c-8bc3-22060893f5e0": {
-          "description": "Dərsliyin sonunda tələbələr Ulduz Döyüşləri oyunu qurmaq imkanı əldə edirlər. Şagirdləri erkən bitirsələr, onları bir-birlərinin oyunlarını sınamağa təşviq edin və sonra öz oyunlarını daha maraqlı və ya çətinləşdirin.\n\nSiz həmçinin [code.org/learn](http://code.org/learn) saytına daxil olaraq qrup və ya fərdin başqa dərslik cəhdinə icazə verə bilərsiniz."
+          "description": "Dərsliyin sonunda tələbələr Ulduz Döyüşləri oyunu qurmaq imkanı əldə edirlər. Şagirdləri erkən bitirsələr, onları bir-birlərinin oyunlarını sınamağa təşviq edin və sonra öz oyunlarını daha maraqlı və ya çətinləşdirin.\n\nSiz həmçinin [code.org/learn][0] saytına daxil olaraq qrup və ya fərdin başqa dərslik cəhdinə icazə verə bilərsiniz."
         },
         "afb5ecc7-af66-492d-96bb-2412754005e0": {
           "name": "Xülasə",
-          "description": "Hər bir tələbəyə bir neçə yapışqan qeyd və ya qeyd kartı verin. Sürətli [“Whip Around”](http://www.theteachertoolkit.com/index.php/tool/whip-around) fəaliyyətini asanlaşdırın:\n\n-   “Tamamladığınız Kod Saatı fəaliyyəti haqqında həqiqətən bəyəndiyiniz bir şeyi paylaşın” və ya “Bu gün öyrəndiyiniz bəzi bacarıqları paylaşın” kimi bir neçə cavabı olan sorğu verin.\n-   Şagirdlərdən mümkün qədər çox cavab yazsınlar, hər yapışqan qeyd və ya qeyd kartı üçün bir fikir.\n     Hər dəfə bir tələbəni çağıraraq otağın ətrafında \"qamçılayın\". Şagirdlərin cavablarından birini paylaşmasını xahiş edin. Tələbələr çağırıldıqda cavabı təkrarlamamalıdırlar; yeni bir şey əlavə etməlidirlər.\n-   Şagirdlərin cavablarında ən çox hansı fikir və mövzuların göründüyünü müzakirə edin."
+          "description": "Hər bir tələbəyə bir neçə yapışqan qeyd və ya qeyd kartı verin. Sürətli [“Whip Around”][0] fəaliyyətini asanlaşdırın:\n\n-   “Tamamladığınız Kod Saatı fəaliyyəti haqqında həqiqətən bəyəndiyiniz bir şeyi paylaşın” və ya “Bu gün öyrəndiyiniz bəzi bacarıqları paylaşın” kimi bir neçə cavabı olan sorğu verin.\n-   Şagirdlərdən mümkün qədər çox cavab yazsınlar, hər yapışqan qeyd və ya qeyd kartı üçün bir fikir.\n     Hər dəfə bir tələbəni çağıraraq otağın ətrafında \"qamçılayın\". Şagirdlərin cavablarından birini paylaşmasını xahiş edin. Tələbələr çağırıldıqda cavabı təkrarlamamalıdırlar; yeni bir şey əlavə etməlidirlər.\n-   Şagirdlərin cavablarında ən çox hansı fikir və mövzuların göründüyünü müzakirə edin."
         },
         "16a6a4db-d853-478e-9945-3f0d17865e80": {
           "name": "Qeyd etmək",
-          "description": "Bu gün kodlaşdırmaya bir saat sərf etdiyinizi izah edin, çünki bu həftə CS Təhsil Həftəsidir və bütün dünyada milyonlarla digər tələbə də bu həftə bir Saat Kod öyrənir. Tələbələri bu ümumdünya hərəkatının bir hissəsi olduqları üçün təbrik edirik.\n\nHər bir tələbəyə adı ilə [sertifikat](http://code.org/certificates) verin."
+          "description": "Bu gün kodlaşdırmaya bir saat sərf etdiyinizi izah edin, çünki bu həftə CS Təhsil Həftəsidir və bütün dünyada milyonlarla digər tələbə də bu həftə bir Saat Kod öyrənir. Tələbələri bu ümumdünya hərəkatının bir hissəsi olduqları üçün təbrik edirik.\n\nHər bir tələbəyə adı ilə [sertifikat][0] verin."
         },
         "450db873-f55e-4f30-bbb9-5dfde5bf47e4": {
           "name": "Növbəti addımlar",
@@ -22170,7 +22170,7 @@
         },
         "5ec42aed-0b79-49f8-bd64-0716e60498a4": {
           "name": "Kod Saatı bitəndən sonra",
-          "description": "Kod Saatı başa çatdıqdan sonra K-5 sinifinizdə kompüter elmlərini tədris etməyə davam etməyin bir çox yolu var. Budur bəzi fikirlər:\n\n-   **[Code Studio Kompüter Elmlərinin Əsasları](http://code.org/educate/k5) kurslarını öyrədin**. Bu altı kurs gənc öyrənənlər üçün nəzərdə tutulub. Şagirdlər onlara kodlaşdırmağı öyrədən bulmacalar silsiləsi üzərində işləyirlər və pedaqoqlar öyrənmənin canlı olmasına kömək edən cəlbedici dərs planlarına çıxış əldə edirlər. Code.org bu kurslar üçün onlayn və ya şəxsən pulsuz peşəkar inkişaf təklif edir.\n-   Bu gün müəyyən etdiyiniz bəzi kodlaşdırma karyeralarını araşdırın. [Sharemylesson.com](http://www.sharemylesson.com/TaxonomySearchResults.aspx?area=resources&keywords=career+research) saytında karyera tədqiqat layihələrinin planlaşdırılması ilə bağlı resursları tapın.\n-   **Kompüter elmləri mütəxəssisini öz işi haqqında sinifinizlə danışmağa dəvət edin**. Heç bir könüllü tanımıram, [könüllülər xəritəsində](https://code.org/volunteer/local) bir neçə nəfərlə əlaqə saxlayın."
+          "description": "Kod Saatı başa çatdıqdan sonra K-5 sinifinizdə kompüter elmlərini tədris etməyə davam etməyin bir çox yolu var. Budur bəzi fikirlər:\n\n-   **[Code Studio Kompüter Elmlərinin Əsasları][0] kurslarını öyrədin**. Bu altı kurs gənc öyrənənlər üçün nəzərdə tutulub. Şagirdlər onlara kodlaşdırmağı öyrədən bulmacalar silsiləsi üzərində işləyirlər və pedaqoqlar öyrənmənin canlı olmasına kömək edən cəlbedici dərs planlarına çıxış əldə edirlər. Code.org bu kurslar üçün onlayn və ya şəxsən pulsuz peşəkar inkişaf təklif edir.\n-   Bu gün müəyyən etdiyiniz bəzi kodlaşdırma karyeralarını araşdırın. [Sharemylesson.com][1] saytında karyera tədqiqat layihələrinin planlaşdırılması ilə bağlı resursları tapın.\n-   **Kompüter elmləri mütəxəssisini öz işi haqqında sinifinizlə danışmağa dəvət edin**. Heç bir könüllü tanımıram, [könüllülər xəritəsində][2] bir neçə nəfərlə əlaqə saxlayın."
         },
         "b0fff664-80cc-4318-b031-edf88ad1aebc": {
           "description": "Qapıdan çıxarkən tələbələrdən \"Kompüter Elmləri\" zehni xəritəsinə öz yapışqan qeydlərini və ya qeyd kartlarını əlavə etmələrini xahiş edin. Lövhəni CS-nin nə olduğu və nə üçün vacib olduğu haqqında çoxlu gözəl fikirlərlə doldurmağa çalışın."
@@ -22269,7 +22269,7 @@
         },
         "bacf1db7-dc91-41b8-ad71-9fb655e18dfa": {
           "tips": [
-            "-   Laboratoriyada sakit bədənlərdən istifadə edin\n-   Saqqız və ya konfet çeynəməməyi unutmayın\n-   Əllərinizi dezinfeksiya edin\n-   Partnyorunuzla bir kompüterdə oturun\n-   İlk \"sürücü\"nün siçana çata bildiyinə əmin olun\n-   Əsəbləşdiyiniz zaman kompüteri və ya monitoru vurmayın və silkələməyin\n-   [20/20/20 Qaydaya](http://www.anthro.com/blog/2013/10/how-to-prevent-eye-strain-with-the-20-20-20-rule#.WOU39BLyu35) əməl edin.\n-   Hər 20-30 dəqiqədən bir [Wiggles](https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll) ilə necə məşğul olmaq olar (GoNoodle-a pulsuz giriş tələb olunur).\n-   Müəllimdən soruşmazdan əvvəl yoldaşınızdan soruşun\n-   Səsi azaldın ki, hər kəs öz tərəfdaşlarını eşitsin\n-   Hissləri və həll yollarını izləmək üçün jurnalınızdan istifadə edin"
+            "-   Laboratoriyada sakit bədənlərdən istifadə edin\n-   Saqqız və ya konfet çeynəməməyi unutmayın\n-   Əllərinizi dezinfeksiya edin\n-   Partnyorunuzla bir kompüterdə oturun\n-   İlk \"sürücü\"nün siçana çata bildiyinə əmin olun\n-   Əsəbləşdiyiniz zaman kompüteri və ya monitoru vurmayın və silkələməyin\n-   [20/20/20 Qaydaya][0] əməl edin.\n-   Hər 20-30 dəqiqədən bir [Wiggles][1] ilə necə məşğul olmaq olar (GoNoodle-a pulsuz giriş tələb olunur).\n-   Müəllimdən soruşmazdan əvvəl yoldaşınızdan soruşun\n-   Səsi azaldın ki, hər kəs öz tərəfdaşlarını eşitsin\n-   Hissləri və həll yollarını izləmək üçün jurnalınızdan istifadə edin"
           ]
         },
         "aa328958-bd87-4dbb-8585-cb33f905051f": {
@@ -22292,7 +22292,7 @@
           ]
         },
         "66f2f042-aa67-41db-a756-4ab6e5623f77": {
-          "description": "Tələbələrinizə [Jigsaw](http://studio.code.org/s/jigsaw/lessons/1/levels/1) təlimatını tamamlamağa çağırın.\n\n-   Tələbələri sualları/çağırışları ilə tərəfdaşlarından soruşmaqla başlamağa təşviq edin.\n-   Cavabsız suallar həllini artıq bilən yaxınlıqdakı qrupa çatdırıla bilər.\n-   Şagirdlərdən gördükləri problemi təsvir edin. Nə etməli? Bu nə edir? Bu sizə nə deyir?\n-   Əsəbiləşmiş tələbələrə xatırladın ki, məyusluq öyrənmə yolunda bir addımdır və əzmkarlıq öz bəhrəsini verəcək.\n-   Əgər bütün bunlardan sonra tələbə hələ də ilişib qalırsa, tələbənin öz başına bir səhvi aşkar etməsi üçün aparıcı suallar verin."
+          "description": "Tələbələrinizə [Jigsaw][0] təlimatını tamamlamağa çağırın.\n\n-   Tələbələri sualları/çağırışları ilə tərəfdaşlarından soruşmaqla başlamağa təşviq edin.\n-   Cavabsız suallar həllini artıq bilən yaxınlıqdakı qrupa çatdırıla bilər.\n-   Şagirdlərdən gördükləri problemi təsvir edin. Nə etməli? Bu nə edir? Bu sizə nə deyir?\n-   Əsəbiləşmiş tələbələrə xatırladın ki, məyusluq öyrənmə yolunda bir addımdır və əzmkarlıq öz bəhrəsini verəcək.\n-   Əgər bütün bunlardan sonra tələbə hələ də ilişib qalırsa, tələbənin öz başına bir səhvi aşkar etməsi üçün aparıcı suallar verin."
         },
         "11068ad0-f20b-4daf-94cd-7b4549b76f3a": {
           "progression_name": "Səviyyələr"
@@ -22302,7 +22302,7 @@
           "description": "Tələbələrinizə [Jigsaw][0] təlimatını tamamlamağa çağırın.\n\n-   Tələbələri sualları/çağırışları ilə tərəfdaşlarından soruşmaqla başlamağa təşviq edin.\n-   Cavabsız suallar həllini artıq bilən yaxınlıqdakı qrupa çatdırıla bilər.\n-   Şagirdlərdən gördükləri problemi təsvir edin. Nə etməli? Bu nə edir? Bu sizə nə deyir?\n-   Əsəbiləşmiş tələbələrə xatırladın ki, məyusluq öyrənmə yolunda bir addımdır və əzmkarlıq öz bəhrəsini verəcək.\n-   Əgər bütün bunlardan sonra tələbə hələ də ilişib qalırsa, tələbənin öz başına bir səhvi aşkar etməsi üçün aparıcı suallar verin."
         },
         "8f47b370-5569-4a34-b105-c765a39c8460": {
-          "description": "Hər bir tələbəyə [Çıxış Bileti](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) verin və onlardan bu gün öyrəndiklərini, hiss etdiklərini və ya yaşadıqlarını ümumiləşdirmələrini xahiş edin. Tələbələr özlərini rahat hiss etdikləri istənilən şəkildə çəkə, yaza və ya ifadə edə bilərlər. Otaqdan çıxarkən hər bir tələbədən “Çıxış Bileti” toplayın. İstəyirsinizsə, “Çıxış biletləri”ni bülleten lövhəsində və ya Kod Saatınızı xatırlatmaq üçün məktəbin görkəmli bir yerində yerləşdirə bilərsiniz."
+          "description": "Hər bir tələbəyə [Çıxış Bileti][0] verin və onlardan bu gün öyrəndiklərini, hiss etdiklərini və ya yaşadıqlarını ümumiləşdirmələrini xahiş edin. Tələbələr özlərini rahat hiss etdikləri istənilən şəkildə çəkə, yaza və ya ifadə edə bilərlər. Otaqdan çıxarkən hər bir tələbədən “Çıxış Bileti” toplayın. İstəyirsinizsə, “Çıxış biletləri”ni bülleten lövhəsində və ya Kod Saatınızı xatırlatmaq üçün məktəbin görkəmli bir yerində yerləşdirə bilərsiniz."
         },
         "b16d189d-d990-44c4-be49-8f81ac81a96e": {
           "description": "#### Səhnənin qurulması\n\nŞagirdləri sinifə salamlayın və günün fəaliyyətini təqdim edin.",

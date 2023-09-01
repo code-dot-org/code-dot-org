@@ -1,4 +1,5 @@
 {
+  "addEventHeader": "아래의 링크를 클릭하여 이벤트가 발생할 때 작성한 코드를 실행시키는 함수를 추가하세요.",
   "catActions": "동작",
   "catControl": "반복",
   "catEvents": "이벤트",

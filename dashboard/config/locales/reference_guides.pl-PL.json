@@ -17,7 +17,7 @@
         },
         "csd-2022/applab-overview": {
           "display_name": "Streszczenie",
-          "content": "App Lab to narzędzie zbudowane z [JavaScript](/concepts/javascript/), które może być używane do tworzenia aplikacji. Więcej informacji na temat poleceń w aplikacji App Lab znajduje się w [Dokumentacja App Lab](/docs/applab/)."
+          "content": "App Lab to narzędzie zbudowane z [JavaScript](./javascript-overview), które może być używane do tworzenia aplikacji. Więcej informacji na temat poleceń w aplikacji App Lab znajduje się w [Dokumentacja App Lab](/docs/applab/)."
         },
         "csd-2022/arrays": {
           "display_name": "Tablice"
@@ -33,7 +33,7 @@
         },
         "csd-2022/circuit-playground-parent": {
           "display_name": "Adafruit Circuit plac zabaw",
-          "content": "Te zasoby odnoszą się konkretnie do funkcji [Circuit Playground](/maker/circuitplayground)."
+          "content": "Te zasoby odnoszą się konkretnie do funkcji [Circuit Playground](https://code.org/maker/circuitplayground)."
         },
         "csd-2022/classes": {
           "display_name": "Klasy"
@@ -132,7 +132,7 @@
         },
         "csd-2022/microbit-parent": {
           "display_name": "BBC micro:bit",
-          "content": "Te zasoby odnoszą się konkretnie do funkcji [BBC micro:bit](/maker/microbit)"
+          "content": "Te zasoby odnoszą się konkretnie do funkcji [BBC micro:bit](https://code.org/maker/microbit)"
         },
         "csd-2022/microbit-physical-input": {
           "display_name": "Wejście fizyczne micro:bita ",

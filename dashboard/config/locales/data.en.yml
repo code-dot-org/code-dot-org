@@ -797,6 +797,15 @@ en:
         csc_bookcovers_intro: Coding Book Covers
         llms-cobranded: 'How AI Works: Chatbots and Large Language Models'
         generative-ai-cobranded: 'How AI Works: Generative AI'
+        csa-overview: A New Approach to AP Computer Science A
+        what-is-creativity: What is Creativity?
+        poetry-programming: Poetry & Programming
+        push-yourself: Push yourself. Anyone can learn.
+        classic-maze-intro: Classic Maze - Introduction
+        code-break: Take a Code Break
+        blockchain-introd: 'How Blockchain Works: Introduction'
+        ai-ethis: Ethics & AI
+        how-ai-works-lessons: 'How AI Works: Lessons Overview'
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block

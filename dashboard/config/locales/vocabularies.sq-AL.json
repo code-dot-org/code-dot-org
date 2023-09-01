@@ -3,10 +3,15 @@
     "data": {
       "vocabularies": {
         "copyright/csd/2021": {
-          "word": "E drejta e autorit"
+          "word": "E drejta e autorit",
+          "definition": "të drejtën ekskluzive ligjore për të shtypur, publikuar, interpretuar, filmuar ose regjistruar materiale letrare, artistike ose muzikore, dhe për të autorizuar të tjerët të bëjnë të njëjtën gjë"
+        },
+        "bug/csd/2021": {
+          "word": "Bug",
+          "definition": "Pjesë e një programi që nuk funksionon si duhet."
         },
         "debugging/csd/2021": {
-          "word": "Rregullimi",
+          "word": "Debugging",
           "definition": "Gjetja dhe rregullimi i problemeve në një algoritëm ose program."
         },
         "program/csd/2021": {
@@ -14,7 +19,11 @@
           "definition": "Një algoritëm që është koduar në diçka që mund të drejtohet nga një makinë."
         },
         "variable/csd/2021": {
-          "word": "Variabël"
+          "word": "Variabël",
+          "definition": "Një etiketë për një pjesë të informacionit të përdorur në një program."
+        },
+        "sprite/csd/2021": {
+          "word": "Sprite"
         },
         "condition/csd/2021": {
           "word": "Kusht"
@@ -28,19 +37,48 @@
         "function/csd/2021": {
           "word": "Funksion"
         },
+        "user/csd/2021": {
+          "word": "Përdorues",
+          "definition": "Dikush që përdor një objekt, duke përfshirë softuerin dhe harduerin."
+        },
         "machine_learning/csd/2021": {
+          "word": "Mësimi i Makinave",
           "definition": "Si kompjuterët njohin modelet dhe marrin vendime pa u programuar në mënyrë eksplicite"
         },
+        "algorithm/coursea/2021": {
+          "word": "Algoritëm",
+          "definition": "Një listë hapash për të përfunduar një detyrë."
+        },
         "debugging/coursea/2021": {
-          "word": "Rregullimi",
+          "word": "Debugging",
           "definition": "Gjetja dhe rregullimi i problemeve në një algoritëm ose program."
         },
         "program/coursea/2021": {
           "word": "Programi",
           "definition": "Një algoritëm që është koduar në diçka që mund të drejtohet nga një makinë."
         },
+        "click/coursea/2021": {
+          "word": "Kliko",
+          "definition": "Shtypni butonin e mausit"
+        },
         "double_click/coursea/2021": {
-          "word": "Klikimi i dyfishtë"
+          "word": "Klikimi i dyfishtë",
+          "definition": "Shtypni butonin e mausit shumë shpejt"
+        },
+        "drag/coursea/2021": {
+          "word": "Tërhiq",
+          "definition": "Kliko butonin e mausit dhe mbajeni ndërsa e lëvizni treguesin e mausit në një vend të ri"
+        },
+        "drop/coursea/2021": {
+          "definition": "Lirojeni butonin e mausit për të “lëshuar” artikullin që po e tërhiqni"
+        },
+        "bug/coursea/2021": {
+          "word": "Bug",
+          "definition": "Pjesë e një programi që nuk funksionon si duhet."
+        },
+        "programming/coursea/2021": {
+          "word": "Programimi",
+          "definition": "Arti i krijimit të një programi."
         },
         "loop/coursea/2021": {
           "word": "Unazë përsëritëse",
@@ -50,55 +88,126 @@
           "word": "Event",
           "definition": "Një veprim që shkakton diçka të ndodhë."
         },
+        "algorithm/courseb/2021": {
+          "word": "Algoritëm",
+          "definition": "Një listë hapash për të përfunduar një detyrë."
+        },
+        "bug/courseb/2021": {
+          "word": "Bug",
+          "definition": "Pjesë e një programi që nuk funksionon si duhet."
+        },
         "debugging/courseb/2021": {
-          "word": "Rregullimi",
-          "definition": "Gjetja dhe rregullimi i problemeve në një algoritëm ose program."
+          "word": "Debugging",
+          "definition": "Gjetja dhe korrigjimi i problemeve në një algoritëm ose program."
+        },
+        "click/courseb/2021": {
+          "word": "Kliko",
+          "definition": "Shtypni butonin e mausit"
         },
         "double_click/courseb/2021": {
-          "word": "Klikimi i dyfishtë"
+          "word": "Klikimi i dyfishtë",
+          "definition": "Shtypni butonin e mausit shumë shpejt"
+        },
+        "drag/courseb/2021": {
+          "word": "Tërhiq",
+          "definition": "Kliko butonin e mausit dhe mbajeni ndërsa e lëvizni treguesin e mausit në një vend të ri"
+        },
+        "drop/courseb/2021": {
+          "word": "Lësho",
+          "definition": "Lirojeni butonin e mausit për të “lëshuar” artikullin që po e tërhiqni"
         },
         "program/courseb/2021": {
           "word": "Programi",
           "definition": "Një algoritëm që është koduar në diçka që mund të drejtohet nga një makinë."
         },
+        "programming/courseb/2021": {
+          "definition": "Arti i krijimit të një programi.",
+          "word": "Programimi"
+        },
+        "persistence/courseb/2021": {
+          "word": "Këmbngulje",
+          "definition": "Duke u përpjekur përsëri dhe përsëri, edhe kur diçka është shumë e vështirë."
+        },
         "loop/courseb/2021": {
-          "word": "Unazë përsëritëse",
+          "word": "Loop",
           "definition": "Veprimi i të bërit diçka pa pushim."
+        },
+        "repeat/courseb/2021": {
+          "word": "Përsërit",
+          "definition": "Bërja e një veprimi përsëri."
         },
         "event/courseb/2021": {
           "word": "Event",
           "definition": "Një veprim që shkakton diçka të ndodhë."
         },
+        "algorithm/coursec/2021": {
+          "word": "Algoritmi",
+          "definition": "Një listë hapash për të përfunduar një detyrë."
+        },
+        "bug/coursec/2021": {
+          "word": "Bug",
+          "definition": "Pjesë e një programi që nuk funksionon si duhet."
+        },
         "debugging/coursec/2021": {
-          "word": "Rregullimi",
+          "word": "Debugging",
           "definition": "Gjetja dhe rregullimi i problemeve në një algoritëm ose program."
         },
         "program/coursec/2021": {
           "word": "Programi",
           "definition": "Një algoritëm që është koduar në diçka që mund të drejtohet nga një makinë."
         },
+        "sequencing/coursec/2021": {
+          "word": "Sekuencimi",
+          "definition": "Vendosja e komandave në mënyrë korrekte në mënyrë që kompjuterët të lexojnë komandat."
+        },
+        "programming/coursec/2021": {
+          "definition": "Arti i krijimit të një programi."
+        },
         "loop/coursec/2021": {
-          "word": "Unazë përsëritëse",
+          "word": "Loop",
           "definition": "Veprimi i të bërit diçka pa pushim."
+        },
+        "repeat/coursec/2021": {
+          "definition": "Bërja e një veprimi përsëri."
         },
         "event/coursec/2021": {
           "word": "Event",
           "definition": "Një veprim që shkakton diçka të ndodhë."
         },
         "binary/coursec/2021": {
-          "word": "Binare"
+          "word": "Binare",
+          "definition": "Një mënyrë për të përfaqësuar informacionin duke përdorur vetëm dy opsione."
+        },
+        "algorithm/coursed/2021": {
+          "word": "Algoritëm",
+          "definition": "Një listë hapash për të përfunduar një detyrë."
         },
         "program/coursed/2021": {
           "word": "Programi",
           "definition": "Një algoritëm që është koduar në diçka që mund të drejtohet nga një makinë."
         },
+        "bug/coursed/2021": {
+          "word": "Bug",
+          "definition": "Pjesë e një programi që nuk funksionon si duhet."
+        },
         "debugging/coursed/2021": {
-          "word": "Rregullimi",
+          "word": "Debugging",
           "definition": "Gjetja dhe rregullimi i problemeve në një algoritëm ose program."
         },
         "loop/coursed/2021": {
           "word": "Unazë përsëritëse",
           "definition": "Veprimi i të bërit diçka pa pushim."
+        },
+        "programming/coursed/2021": {
+          "definition": "Arti i krijimit të një programi."
+        },
+        "frustrated/coursed/2021": {
+          "word": "I frustruar",
+          "definition": "Ndjesia e të qenit të mërzitur ose të zemëruar sepse diçka nuk është ashtu siç dëshiron."
+        },
+        "persistence/coursed/2021": {
+          "word": "Këmbngulje",
+          "definition": "Duke u përpjekur përsëri dhe përsëri, edhe kur diçka është shumë e vështirë."
         },
         "event/coursed/2021": {
           "word": "Event",
@@ -111,19 +220,41 @@
           "word": "Kushtet",
           "definition": "Deklaratat që funksionojnë vetëm nën kushte të caktuara."
         },
+        "pseudocode/coursed/2021": {
+          "word": "pseudokod",
+          "definition": "Një përshkrim i thjeshtë i gjuhës së hapave në një algoritëm"
+        },
         "condition/coursed/2021": {
           "word": "Kusht",
           "definition": "Diçka që kontrollon një program për të parë nëse është e vërtetë përpara se të lejojë një veprim."
         },
+        "while_loop/coursed/2021": {
+          "word": "While Loop",
+          "definition": "Një loop që vazhdon të përsëritet përderisa një kusht është i vërtetë."
+        },
+        "until/coursed/2021": {
+          "word": "Deri ",
+          "definition": "Një komandë që ju thotë të bëni diçka vetëm deri në pikën që diçka të bëhet e vërtetë."
+        },
+        "algorithm/coursee/2021": {
+          "word": "algoritëm",
+          "definition": "Një listë e hapave për të përfunduar një detyrë"
+        },
         "behavior/coursee/2021": {
-          "word": "Sjellja"
+          "word": "Sjellja",
+          "definition": "Një veprim që një sprite kryen vazhdimisht derisa t'i thuhet të ndalojë."
+        },
+        "sprite/coursee/2021": {
+          "word": "Sprite",
+          "definition": "Një grafikë në ekran me një vendndodhje, madhësi dhe paraqitje."
         },
         "event/coursee/2021": {
           "word": "Event",
           "definition": "Një veprim që shkakton diçka të ndodhë."
         },
         "copyright/coursee/2021": {
-          "word": "E drejta e autorit"
+          "word": "E drejta e autorit",
+          "definition": "të drejtën ekskluzive ligjore për të shtypur, publikuar, interpretuar, filmuar ose regjistruar materiale letrare, artistike ose muzikore, dhe për të autorizuar të tjerët të bëjnë të njëjtën gjë"
         },
         "loop/coursee/2021": {
           "word": "Unazë përsëritëse",
@@ -141,56 +272,171 @@
           "word": "Kushtet",
           "definition": "Deklaratat që funksionojnë vetëm nën kushte të caktuara."
         },
+        "while_loop/coursee/2021": {
+          "word": "While Loop",
+          "definition": "Një loop që vazhdon të përsëritet përderisa një kusht është i vërtetë."
+        },
         "define/coursee/2021": {
-          "word": "Përcakto"
+          "word": "Përcakto",
+          "definition": "Kuptoni detajet e problemeve që po përpiqeni të zgjidhni"
+        },
+        "prepare/coursee/2021": {
+          "word": "Përgatit",
+          "definition": "Hulumtoni, planifikoni dhe merrni materiale për aktivitetin që do të bëni"
         },
         "reflect/coursee/2021": {
-          "word": "Reflekto"
+          "word": "Reflekto",
+          "definition": "Mendoni me kujdes për diçka me qëllimin për të përmirësuar rezultatin në të ardhmen"
+        },
+        "try/coursee/2021": {
+          "word": "Provoni",
+          "definition": "Përpjekje për të bërë diçka"
+        },
+        "sprite/coursef/2021": {
+          "word": "Sprite",
+          "definition": "Një grafikë në ekran me një vendndodhje, madhësi dhe paraqitje."
+        },
+        "user/coursef/2021": {
+          "word": "Përdorues",
+          "definition": "Dikush që përdor një objekt, duke përfshirë softuerin dhe harduerin."
+        },
+        "algorithm/coursef/2021": {
+          "word": "Algoritmi",
+          "definition": "Një listë hapash për të përfunduar një detyrë."
         },
         "behavior/coursef/2021": {
-          "word": "Sjellja"
+          "word": "Sjellja",
+          "definition": "Një veprim që një sprite kryen vazhdimisht derisa t'i thuhet të ndalojë."
         },
         "program/coursef/2021": {
           "word": "Programi",
-          "definition": "Një algoritëm që është koduar në diçka që mund të drejtohet nga një makinë."
+          "definition": "Një algoritëm që është koduar në diçka që mund të drjetohet nga një makinë."
         },
         "event/coursef/2021": {
           "word": "Event",
           "definition": "Një veprim që shkakton diçka të ndodhë."
         },
         "variable/coursef/2021": {
-          "word": "Variabël"
+          "word": "Variabël",
+          "definition": "Një etiketë për një pjesë të informacionit të përdorur në një program."
+        },
+        "input/coursef/2021": {
+          "word": "Hyrja",
+          "definition": "Informacioni që kompjuterët marrin nga përdoruesit."
+        },
+        "prompt/coursef/2021": {
+          "word": "Kërkesë (Prompt)",
+          "definition": "Një mesazh në ekranin e kompjuterit që pret të dhëna nga përdoruesi."
         },
         "loop/coursef/2021": {
-          "word": "Unazë përsëritëse",
+          "word": "Loop",
           "definition": "Veprimi i të bërit diçka pa pushim."
         },
+        "repeat/coursef/2021": {
+          "word": "Përsëritje",
+          "definition": "Bërja e një veprimi në mënyrë të përsëritshme."
+        },
+        "for_loop/coursef/2021": {
+          "definition": "Loops që kanë një fillim, fund dhe rritje të paracaktuar (interval hapash)."
+        },
+        "models_and_simulations/coursef/2021": {
+          "word": "Modelet dhe Simulimet",
+          "definition": "një program që përsërit ose imiton tiparet kryesore të një ngjarjeje të botës reale në mënyrë që të hetojë sjelljen e saj pa kosto, kohë ose rrezik për kryerjen e një eksperimenti në jetën reale."
+        },
         "machine_learning/coursef/2021": {
+          "word": "Mësimi i Makinave",
           "definition": "Si kompjuterët njohin modelet dhe marrin vendime pa u programuar në mënyrë eksplicite"
         },
+        "dns/coursef/2021": {
+          "word": "DNS",
+          "definition": "shkurt për Domain Name System, ky sistem përkthen emrat e domain-eve (si p.sh. example.com) në IP adresat (si 93.184.216.34)"
+        },
+        "dsl_cable/coursef/2021": {
+          "word": "DSL/kabllo",
+          "definition": "Një metodë e dërgimit të informacionit duke përdorur kabllo telefonike ose televizive."
+        },
+        "fiber_optic_cable/coursef/2021": {
+          "word": "Kabllo me fibra optike",
+          "definition": "Një lidhje që përdor dritën për të transmetuar informacion"
+        },
         "internet/coursef/2021": {
-          "word": "Internet"
+          "word": "Internet",
+          "definition": "Një grup kompjuterësh dhe serverash që janë të lidhur me njëri-tjetrin."
+        },
+        "ip_address/coursef/2021": {
+          "word": "IP Adresa",
+          "definition": "Një numër i caktuar për çdo artikull që është i lidhur me internetin."
+        },
+        "packets/coursef/2021": {
+          "word": "Paketa",
+          "definition": "Pjesa të vogla informacioni që janë formuar me kujdes nga copa më të mëdha informacioni."
+        },
+        "servers/coursef/2021": {
+          "word": "Serverat",
+          "definition": "Kompjuter që ekzistojnë vetëm për të siguruar gjëra për të tjerët."
+        },
+        "url/coursef/2021": {
+          "word": "URL",
+          "definition": "Një adresë e lehtë për tu mbajtur mend për thirrjen e një faqe në internet (si www.code.org)."
+        },
+        "wi_fi/coursef/2021": {
+          "word": "Wi-Fi",
+          "definition": "Një metodë pa tela e dërgimit të informacionit duke përdorur valët e radios."
         },
         "define/coursef/2021": {
-          "word": "Përcakto"
+          "word": "Përcakto",
+          "definition": "Kuptoni detajet e problemeve që po përpiqeni të zgjidhni"
+        },
+        "prepare/coursef/2021": {
+          "word": "Përgatit",
+          "definition": "Hulumtoni, planifikoni dhe merrni materiale për aktivitetin që do të bëni"
         },
         "reflect/coursef/2021": {
-          "word": "Reflekto"
+          "word": "Reflekto",
+          "definition": "Mendoni me kujdes për diçka me qëllimin për të përmirësuar rezultatin në të ardhmen"
+        },
+        "try/coursef/2021": {
+          "word": "Provoni",
+          "definition": "Përpjekje për të bërë diçka"
+        },
+        "algorithm/express/2021": {
+          "word": "Algoritmi",
+          "definition": "Një listë hapash për të përfunduar një detyrë."
+        },
+        "bug/express/2021": {
+          "word": "Bug",
+          "definition": "Pjesë e një programi që nuk funksionon si duhet."
         },
         "debugging/express/2021": {
-          "word": "Rregullimi",
+          "word": "Debugging",
           "definition": "Gjetja dhe rregullimi i problemeve në një algoritëm ose program."
+        },
+        "sequencing/express/2021": {
+          "word": "Sekuencimi",
+          "definition": "Vendosja e komandave në mënyrë korrekte në mënyrë që kompjuterët të lexojnë komandat."
         },
         "program/express/2021": {
           "word": "Programi",
-          "definition": "Një algoritëm që është koduar në diçka që mund të drejtohet nga një makinë."
+          "definition": "algoritëm që është koduar në diçka që mund të drejtohet nga një makinë."
+        },
+        "programming/express/2021": {
+          "definition": "Arti i krijimit të një programi."
         },
         "behavior/express/2021": {
-          "word": "Sjellja"
+          "word": "Behavior (Sjellja)",
+          "definition": "Një veprim që një sprite kryen vazhdimisht derisa t'i thuhet të ndalojë."
+        },
+        "sprite/express/2021": {
+          "word": "Sprite",
+          "definition": "Një grafikë në ekran me një vendndodhje, madhësi dhe paraqitje."
         },
         "event/express/2021": {
-          "word": "Event",
-          "definition": "Një veprim që shkakton diçka të ndodhë."
+          "word": "Eventi",
+          "definition": "veprim që shkakton diçka të ndodhë."
+        },
+        "code/express/2021": {
+          "word": "Kodi",
+          "definition": "për të shkruar kodin, ose për të shkruar udhëzime për një kompjuter."
         },
         "loop/express/2021": {
           "word": "Unazë përsëritëse",
@@ -204,29 +450,75 @@
           "word": "Kushtet",
           "definition": "Deklaratat që funksionojnë vetëm nën kushte të caktuara."
         },
+        "while_loop/express/2021": {
+          "word": "While Loop",
+          "definition": "Një loop që vazhdon të përsëritet përderisa një kusht është i vërtetë."
+        },
+        "until/express/2021": {
+          "word": "Deri ",
+          "definition": "Një komandë që ju thotë të bëni diçka vetëm deri në pikën që diçka të bëhet e vërtetë."
+        },
         "function/express/2021": {
           "word": "Funksion",
           "definition": "Një pjesë kodi që mund ta aktivizoni lehtësisht vazhdimisht."
         },
         "variable/express/2021": {
-          "word": "Variabël"
+          "word": "Variabël",
+          "definition": "Një etiketë për një pjesë të informacionit të përdorur në një program."
         },
         "define/express/2021": {
-          "word": "Përcakto"
+          "word": "Përcakto",
+          "definition": "Kuptoni detajet e problemeve që po përpiqeni të zgjidhni"
+        },
+        "prepare/express/2021": {
+          "word": "Përgatit",
+          "definition": "Hulumtoni, planifikoni dhe merrni materiale për aktivitetin që do të bëni"
         },
         "reflect/express/2021": {
-          "word": "Reflekto"
+          "word": "Reflekto",
+          "definition": "Mendoni me kujdes për diçka me qëllimin për të përmirësuar rezultatin në të ardhmen"
+        },
+        "try/express/2021": {
+          "word": "Provoni",
+          "definition": "Përpjekje për të bërë diçka"
+        },
+        "click/pre-express/2021": {
+          "word": "Kliko",
+          "definition": "Shtypni butonin e mausit"
         },
         "double_click/pre-express/2021": {
-          "word": "Klikimi i dyfishtë"
+          "word": "Klikimi i dyfishtë",
+          "definition": "Shtypni butonin e mausit shumë shpejt"
+        },
+        "drag/pre-express/2021": {
+          "word": "Tërhiq",
+          "definition": "Kliko butonin e mausit dhe mbajeni ndërsa e lëvizni treguesin e mausit në një vend të ri"
+        },
+        "drop/pre-express/2021": {
+          "definition": "Lirojeni butonin e mausit për të “lëshuar” artikullin që po e tërhiqni"
+        },
+        "algorithm/pre-express/2021": {
+          "word": "Algoritëm",
+          "definition": "Një listë hapash për të përfunduar një detyrë."
+        },
+        "bug/pre-express/2021": {
+          "word": "Bug",
+          "definition": "Pjesë e një programi që nuk funksionon si duhet."
         },
         "debugging/pre-express/2021": {
-          "word": "Rregullimi",
+          "word": "Debugging",
           "definition": "Gjetja dhe rregullimi i problemeve në një algoritëm ose program."
         },
         "program/pre-express/2021": {
           "word": "Programi",
           "definition": "Një algoritëm që është koduar në diçka që mund të drejtohet nga një makinë."
+        },
+        "programming/pre-express/2021": {
+          "definition": "Arti i krijimit të një programi."
+        },
+        "persistence/pre-express/2021": {
+          "word": "Këmbngulje",
+          "definition": "Duke u përpjekur përsëri dhe përsëri, edhe kur diçka është shumë e vështirë."
         },
         "loop/pre-express/2021": {
           "word": "Unazë përsëritëse",
@@ -237,10 +529,15 @@
           "definition": "Një veprim që shkakton diçka të ndodhë."
         },
         "copyright/csd/2022": {
-          "word": "E drejta e autorit"
+          "word": "E drejta e autorit",
+          "definition": "të drejtën ekskluzive ligjore për të shtypur, publikuar, interpretuar, filmuar ose regjistruar materiale letrare, artistike ose muzikore, dhe për të autorizuar të tjerët të bëjnë të njëjtën gjë"
+        },
+        "bug/csd/2022": {
+          "word": "Bug",
+          "definition": "Pjesë e një programi që nuk funksionon si duhet."
         },
         "debugging/csd/2022": {
-          "word": "Rregullimi",
+          "word": "Debugging",
           "definition": "Gjetja dhe rregullimi i problemeve në një algoritëm ose program."
         },
         "program/csd/2022": {
@@ -248,7 +545,11 @@
           "definition": "Një algoritëm që është koduar në diçka që mund të drejtohet nga një makinë."
         },
         "variable/csd/2022": {
-          "word": "Variabël"
+          "word": "Variabël",
+          "definition": "Një etiketë për një pjesë të informacionit të përdorur në një program."
+        },
+        "sprite/csd/2022": {
+          "word": "Sprite"
         },
         "condition/csd/2022": {
           "word": "Kusht"
@@ -262,7 +563,12 @@
         "function/csd/2022": {
           "word": "Funksion"
         },
+        "user/csd/2022": {
+          "word": "Përdorues",
+          "definition": "Dikush që përdor një objekt, duke përfshirë softuerin dhe harduerin."
+        },
         "machine_learning/csd/2022": {
+          "word": "Mësimi i Makinave",
           "definition": "Si kompjuterët njohin modelet dhe marrin vendime pa u programuar në mënyrë eksplicite"
         },
         "algorithm/coursea/2022": {
@@ -275,7 +581,7 @@
         },
         "program/coursea/2022": {
           "word": "Programi",
-          "definition": "Një algoritëm që është kodifikuar në diçka që mund të ekzekutohet nga një makinë."
+          "definition": "Një algoritëm që është koduar në diçka që mund të ekzekutohet nga një makinë."
         },
         "click/coursea/2022": {
           "word": "Kliko",
@@ -287,11 +593,11 @@
         },
         "drag/coursea/2022": {
           "word": "Tërhiq",
-          "definition": "Kliko butonin e mausit dhe të mbajeni kur e lëvizni treguesin e mausit në një vend të ri"
+          "definition": "Kliko butonin e mausit dhe të mbajeni ndërsa e lëvizni treguesin e mausit në një vend të ri"
         },
         "drop/coursea/2022": {
           "word": "Lësho",
-          "definition": "Lëshoni butonin e mausit për të “lëshuar” artikullin që po e tërhiqni"
+          "definition": "Lirojeni butonin e mausit për të “lëshuar” artikullin që po e tërhiqni"
         },
         "bug/coursea/2022": {
           "word": "Bug",
@@ -314,7 +620,7 @@
           "definition": "Një veprim që shkakton diçka të ndodhë."
         },
         "algorithm/courseb/2022": {
-          "word": "Algoritme",
+          "word": "Algoritmi",
           "definition": "Një listë e hapave për të përfunduar një detyrë. "
         },
         "bug/courseb/2022": {
@@ -322,7 +628,7 @@
           "definition": "Pjesë e një programi që nuk funksionon si duhet."
         },
         "debugging/courseb/2022": {
-          "word": "Rregullimi",
+          "word": "Debugging",
           "definition": "Gjetja dhe rregullimi i problemeve në një algoritëm ose program."
         },
         "click/courseb/2022": {
@@ -374,8 +680,8 @@
           "definition": "Pjesë e një programi që nuk funksionon si duhet."
         },
         "debugging/coursec/2022": {
-          "word": "Rregullimi",
-          "definition": "Gjetja dhe rregullimi i problemeve në një algoritëm ose program."
+          "word": "Debugging",
+          "definition": "Gjetja dhe korrigjimi i problemeve në një algoritëm ose program."
         },
         "program/coursec/2022": {
           "word": "Programi",
@@ -386,18 +692,19 @@
           "definition": "Vendosja e komandave në mënyrë korrekte në mënyrë që kompjuterët të lexojnë komandat."
         },
         "persistence/coursec/2022": {
+          "word": "Këmbngulje",
           "definition": "Të mos heqësh dorë."
         },
         "programming/coursec/2022": {
-          "word": "Programim",
+          "word": "Programimi",
           "definition": "Arti i krijimit të një programi."
         },
         "angle/coursec/2022": {
           "word": "Këndi",
-          "definition": "Ku dy anët e një forme vijnë së bashku, të matura në shkallë."
+          "definition": "Ku dy anët e një forme bashkohen, të matura në shkallë."
         },
         "loop/coursec/2022": {
-          "word": "Unazë përsëritëse",
+          "word": "Loop",
           "definition": "Veprimi i të bërit diçka pa pushim."
         },
         "repeat/coursec/2022": {
@@ -409,28 +716,47 @@
           "definition": "Një veprim që shkakton diçka të ndodhë."
         },
         "data/coursec/2022": {
-          "word": "të dhëna",
-          "definition": "Një koleksion informacioni"
+          "word": "Të dhëna",
+          "definition": "Një përmbledhje informacionesh"
         },
         "graph/coursec/2022": {
           "word": "Grafiku",
           "definition": "Një foto ose një diagram që përfaqëson të dhëna ose vlera në një mënyrë të organizuar"
         },
         "binary/coursec/2022": {
-          "word": "Binare",
+          "word": "Binarë",
           "definition": "Një mënyrë për të përfaqësuar informacionin duke përdorur vetëm dy opsione."
+        },
+        "algorithm/coursed/2022": {
+          "word": "Algoritëm",
+          "definition": "Një listë hapash për të përfunduar një detyrë."
         },
         "program/coursed/2022": {
           "word": "Programi",
           "definition": "Një algoritëm që është koduar në diçka që mund të drejtohet nga një makinë."
         },
+        "bug/coursed/2022": {
+          "word": "Bug",
+          "definition": "Pjesë e një programi që nuk funksionon si duhet."
+        },
         "debugging/coursed/2022": {
-          "word": "Rregullimi",
+          "word": "Debugging",
           "definition": "Gjetja dhe rregullimi i problemeve në një algoritëm ose program."
         },
         "loop/coursed/2022": {
           "word": "Unazë përsëritëse",
           "definition": "Veprimi i të bërit diçka pa pushim."
+        },
+        "programming/coursed/2022": {
+          "definition": "Arti i krijimit të një programi."
+        },
+        "frustrated/coursed/2022": {
+          "word": "I frustruar",
+          "definition": "Ndjesia e të qenit të mërzitur ose të zemëruar sepse diçka nuk është ashtu siç dëshiron."
+        },
+        "persistence/coursed/2022": {
+          "word": "Këmbngulje",
+          "definition": "Duke u përpjekur përsëri dhe përsëri, edhe kur diçka është shumë e vështirë."
         },
         "event/coursed/2022": {
           "word": "Event",
@@ -443,38 +769,97 @@
           "word": "Kushtet",
           "definition": "Deklaratat që funksionojnë vetëm nën kushte të caktuara."
         },
+        "pseudocode/coursed/2022": {
+          "word": "pseudokod",
+          "definition": "Një përshkrim i thjeshtë i gjuhës së hapave në një algoritëm"
+        },
         "condition/coursed/2022": {
           "word": "Kusht",
           "definition": "Diçka që kontrollon një program për të parë nëse është e vërtetë përpara se të lejojë një veprim."
         },
+        "while_loop/coursed/2022": {
+          "word": "While Loop",
+          "definition": "Një loop që vazhdon të përsëritet përderisa një kusht është i vërtetë."
+        },
+        "until/coursed/2022": {
+          "word": "Deri ",
+          "definition": "Një komandë që ju thotë të bëni diçka vetëm deri në pikën që diçka të bëhet e vërtetë."
+        },
         "behavior/coursee/2022": {
-          "word": "Sjellja"
+          "word": "Sjellja",
+          "definition": "Një veprim që një sprite kryen vazhdimisht derisa t'i thuhet të ndalojë."
+        },
+        "sprite/coursee/2022": {
+          "word": "Sprite",
+          "definition": "Një grafik në ekran me një vendndodhje, madhësi dhe pamje."
         },
         "loop/coursee/2022": {
-          "word": "Unazë përsëritëse",
+          "word": "Loop",
           "definition": "Veprimi i të bërit diçka pa pushim."
         },
+        "repeat/coursee/2022": {
+          "word": "Përsëritje",
+          "definition": "Për të bërë diçka përsëri."
+        },
         "function/coursee/2022": {
-          "word": "Funksion"
+          "word": "Funksion",
+          "definition": "Një pjesë kodi që mund ta thirrni në mënyrë të përsëritshme. "
+        },
+        "call_a_function/coursee/2022": {
+          "word": "Thirrni një funksion",
+          "definition": "Përdorimi i emrit të funksionit për t'i thënë kompjuterit të ekzekutojë kodin e shkruar në funksion."
+        },
+        "declare_a_function/coursee/2022": {
+          "word": "Deklaroni një funksion",
+          "definition": "Plotësoni një funksion me kod dhe jepni funksionit një emër."
         },
         "condition/coursee/2022": {
-          "word": "Kusht"
+          "word": "Kusht",
+          "definition": "Një deklaratë që një program kontrollon për të parë nëse është e vërtetë apo e gabuar. Nëse është e vërtetë, ndërmerret një veprim. Përndryshe, veprimi injorohet."
         },
         "conditionals/coursee/2022": {
           "word": "Kushtet",
           "definition": "Deklaratat që funksionojnë vetëm nën kushte të caktuara."
         },
+        "while_loop/coursee/2022": {
+          "word": "While Loop",
+          "definition": "Një loop që vazhdon të përsëritet kur një kusht është i vërtetë."
+        },
         "copyright/coursee/2022": {
-          "word": "E drejta e autorit"
+          "word": "Të drejtat e autorit",
+          "definition": "e drejta ekskluzive ligjore për të shtypur, botuar, interpretuar, filmuar ose regjistruar materiale letrare, artistike ose muzikore dhe për të autorizuar të tjerët të bëjnë të njëjtën gjë"
         },
         "define/coursee/2022": {
-          "word": "Përcakto"
+          "word": "Përcakto",
+          "definition": "Kuptoni detajet e problemeve që po përpiqeni të zgjidhni"
+        },
+        "prepare/coursee/2022": {
+          "word": "Përgatit",
+          "definition": "Hulumtoni, planifikoni dhe merrni materiale për aktivitetin që do të bëni"
         },
         "reflect/coursee/2022": {
-          "word": "Reflekto"
+          "word": "Reflekto",
+          "definition": "Mendoni me kujdes për diçka me qëllimin për të përmirësuar rezultatin në të ardhmen"
+        },
+        "try/coursee/2022": {
+          "word": "Provo",
+          "definition": "Përpjekje për të bërë diçka"
+        },
+        "sprite/coursef/2022": {
+          "word": "Sprite",
+          "definition": "Një grafik në ekran me një vendndodhje, madhësi dhe pamje."
+        },
+        "user/coursef/2022": {
+          "word": "Përdorues",
+          "definition": "Dikush që përdor një objekt, duke përfshirë softuerin dhe harduerin."
+        },
+        "algorithm/coursef/2022": {
+          "word": "Algoritmi",
+          "definition": "Një listë e hapave për të përfunduar një detyrë."
         },
         "behavior/coursef/2022": {
-          "word": "Sjellja"
+          "word": "Sjellja",
+          "definition": "Një veprim që një sprite kryen vazhdimisht derisa t'i thuhet të ndalojë."
         },
         "program/coursef/2022": {
           "word": "Programi",
@@ -485,34 +870,113 @@
           "definition": "Një veprim që shkakton diçka të ndodhë."
         },
         "variable/coursef/2022": {
-          "word": "Variabël"
+          "word": "Variabël",
+          "definition": "Një etiketë për një pjesë të informacionit të përdorur në një program."
+        },
+        "input/coursef/2022": {
+          "definition": "Informacioni që kompjuterët marrin nga përdoruesit."
+        },
+        "prompt/coursef/2022": {
+          "word": "Kërkesë (Prompt)",
+          "definition": "Një mesazh në ekranin e kompjuterit që pret të dhëna nga përdoruesi."
+        },
+        "models_and_simulations/coursef/2022": {
+          "word": "Modelet dhe Simulimet",
+          "definition": "një program që përsërit ose imiton tiparet kryesore të një ngjarjeje të botës reale në mënyrë që të hetojë sjelljen e saj pa koston, kohën ose rrezikun e kryerjes së një eksperimenti në jetën reale."
         },
         "machine_learning/coursef/2022": {
+          "word": "Mësimi i Makinave",
           "definition": "Si kompjuterët njohin modelet dhe marrin vendime pa u programuar në mënyrë eksplicite"
         },
+        "dns/coursef/2022": {
+          "word": "DNS",
+          "definition": "shkurt për Domain Name System, ky sistem përkthen emrat e domain-eve (si p.sh. example.com) në IP adresat (si 93.184.216.34)"
+        },
+        "dsl_cable/coursef/2022": {
+          "word": "DSL/kabllo",
+          "definition": "Një metodë e dërgimit të informacionit duke përdorur kabllo telefonike ose televizive."
+        },
+        "fiber_optic_cable/coursef/2022": {
+          "word": "Kabllo me fibra optike",
+          "definition": "Një lidhje që përdor dritën për të transmetuar informacion"
+        },
         "internet/coursef/2022": {
-          "word": "Internet"
+          "word": "Internet",
+          "definition": "Një grup kompjuterësh dhe serverash që janë të lidhur me njëri-tjetrin."
+        },
+        "ip_address/coursef/2022": {
+          "word": "IP adresa",
+          "definition": "Një numër i caktuar për çdo artikull që është i lidhur me internetin."
+        },
+        "packets/coursef/2022": {
+          "word": "Paketa",
+          "definition": "Pjesa të vogla informacioni që janë formuar me kujdes nga copa më të mëdha informacioni."
+        },
+        "servers/coursef/2022": {
+          "word": "Serverat",
+          "definition": "Kompjuter që ekzistojnë vetëm për të siguruar gjëra për të tjerët."
+        },
+        "url/coursef/2022": {
+          "word": "URL",
+          "definition": "Një adresë e lehtë për tu mbajtur mend për thirrjen e një faqe në internet (si www.code.org)."
+        },
+        "wi_fi/coursef/2022": {
+          "word": "Wi-Fi",
+          "definition": "Një metodë pa tela e dërgimit të informacionit duke përdorur valët e radios."
         },
         "define/coursef/2022": {
-          "word": "Përcakto"
+          "word": "Përcakto",
+          "definition": "Kuptoni detajet e problemeve që po përpiqeni të zgjidhni"
+        },
+        "prepare/coursef/2022": {
+          "word": "Përgatit",
+          "definition": "Hulumtoni, planifikoni dhe merrni materiale për aktivitetin që do të bëni"
         },
         "reflect/coursef/2022": {
-          "word": "Reflekto"
+          "word": "Reflekto",
+          "definition": "Mendoni me kujdes për diçka me qëllimin për të përmirësuar rezultatin në të ardhmen"
+        },
+        "try/coursef/2022": {
+          "word": "Provo",
+          "definition": "Përpjekje për të bërë diçka"
+        },
+        "algorithm/express/2022": {
+          "word": "Algoritmi",
+          "definition": "Një listë hapash për të përfunduar një detyrë."
+        },
+        "bug/express/2022": {
+          "word": "Bug-i",
+          "definition": "Pjesë e një programi që nuk funksionon si duhet."
         },
         "debugging/express/2022": {
-          "word": "Rregullimi",
-          "definition": "Gjetja dhe rregullimi i problemeve në një algoritëm ose program."
+          "word": "Debugging",
+          "definition": "Gjetja dhe korrigjimi i problemeve në një algoritëm ose program."
+        },
+        "sequencing/express/2022": {
+          "word": "Sekuenca",
+          "definition": "Vendosja e komandave në mënyrë korrekte në mënyrë që kompjuterët të lexojnë komandat."
         },
         "program/express/2022": {
           "word": "Programi",
           "definition": "Një algoritëm që është koduar në diçka që mund të drejtohet nga një makinë."
         },
+        "programming/express/2022": {
+          "definition": "Arti i krijimit të një programi."
+        },
         "behavior/express/2022": {
-          "word": "Sjellja"
+          "word": "Sjellja",
+          "definition": "Një veprim që një sprite kryen vazhdimisht derisa t'i thuhet të ndalojë."
+        },
+        "sprite/express/2022": {
+          "word": "Sprite",
+          "definition": "Një grafik në ekran me një vendndodhje, madhësi dhe pamje."
         },
         "event/express/2022": {
           "word": "Event",
           "definition": "Një veprim që shkakton diçka të ndodhë."
+        },
+        "code/express/2022": {
+          "definition": "për të shkruar kodin, ose për të shkruar udhëzime për një kompjuter."
         },
         "loop/express/2022": {
           "word": "Unazë përsëritëse",
@@ -526,29 +990,75 @@
           "word": "Kushtet",
           "definition": "Deklaratat që funksionojnë vetëm nën kushte të caktuara."
         },
+        "while_loop/express/2022": {
+          "word": "While Loop",
+          "definition": "Një loop që vazhdon të përsëritet përderisa një kusht është i vërtetë."
+        },
+        "until/express/2022": {
+          "word": "Deri ",
+          "definition": "Një komandë që ju thotë të bëni diçka vetëm deri në pikën që diçka të bëhet e vërtetë."
+        },
         "function/express/2022": {
           "word": "Funksion",
           "definition": "Një pjesë kodi që mund ta aktivizoni lehtësisht vazhdimisht."
         },
         "variable/express/2022": {
-          "word": "Variabël"
+          "word": "Variabël",
+          "definition": "Një etiketë për një pjesë të informacionit të përdorur në një program."
         },
         "define/express/2022": {
-          "word": "Përcakto"
+          "word": "Përcakto",
+          "definition": "Kuptoni detajet e problemeve që po përpiqeni të zgjidhni"
+        },
+        "prepare/express/2022": {
+          "word": "Përgatit",
+          "definition": "Hulumtoni, planifikoni dhe merrni materiale për aktivitetin që do të bëni"
         },
         "reflect/express/2022": {
-          "word": "Reflekto"
+          "word": "Reflekto",
+          "definition": "Mendoni me kujdes për diçka me qëllimin për të përmirësuar rezultatin në të ardhmen"
+        },
+        "try/express/2022": {
+          "word": "Provoni",
+          "definition": "Përpjekje për të bërë diçka"
+        },
+        "click/pre-express/2022": {
+          "word": "Kliko",
+          "definition": "Shtypni butonin e mausit"
         },
         "double_click/pre-express/2022": {
-          "word": "Klikimi i dyfishtë"
+          "word": "Klikimi i dyfishtë",
+          "definition": "Shtypni butonin e mausit shumë shpejt"
+        },
+        "drag/pre-express/2022": {
+          "word": "Tërhiq",
+          "definition": "Kliko butonin e mausit dhe mbajeni ndërsa e lëvizni treguesin e mausit në një vend të ri"
+        },
+        "drop/pre-express/2022": {
+          "definition": "Lirojeni butonin e mausit për të “lëshuar” artikullin që po e tërhiqni"
+        },
+        "algorithm/pre-express/2022": {
+          "word": "Algoritëm",
+          "definition": "Një listë hapash për të përfunduar një detyrë."
+        },
+        "bug/pre-express/2022": {
+          "word": "Bug",
+          "definition": "Pjesë e një programi që nuk funksionon si duhet."
         },
         "debugging/pre-express/2022": {
-          "word": "Rregullimi",
+          "word": "Debugging",
           "definition": "Gjetja dhe rregullimi i problemeve në një algoritëm ose program."
         },
         "program/pre-express/2022": {
           "word": "Programi",
           "definition": "Një algoritëm që është koduar në diçka që mund të drejtohet nga një makinë."
+        },
+        "programming/pre-express/2022": {
+          "definition": "Arti i krijimit të një programi."
+        },
+        "persistence/pre-express/2022": {
+          "word": "Këmbngulje",
+          "definition": "Duke u përpjekur përsëri dhe përsëri, edhe kur diçka është shumë e vështirë."
         },
         "loop/pre-express/2022": {
           "word": "Unazë përsëritëse",
@@ -570,7 +1080,7 @@
           "definition": "Deklaratat që funksionojnë vetëm nën kushte të caktuara."
         },
         "debugging/aquatic/unversioned": {
-          "word": "Rregullimi",
+          "word": "Debugging",
           "definition": "Gjetja dhe rregullimi i problemeve në një algoritëm ose program."
         },
         "loops/aquatic/unversioned": {
@@ -586,7 +1096,7 @@
           "definition": "(v) për të shkruar kodin, ose për të shkruar udhëzime për një kompjuter."
         },
         "debugging/artist/unversioned": {
-          "word": "Rregullimi",
+          "word": "Debugging",
           "definition": "Gjetja dhe rregullimi i problemeve në një algoritëm ose program."
         },
         "program/artist/unversioned": {
@@ -597,7 +1107,7 @@
           "definition": "(v) për të shkruar kodin, ose për të shkruar udhëzime për një kompjuter."
         },
         "debugging/basketball/unversioned": {
-          "word": "Rregullimi",
+          "word": "Debugging",
           "definition": "Gjetja dhe rregullimi i problemeve në një algoritëm ose program."
         },
         "event/basketball/unversioned": {
@@ -657,7 +1167,7 @@
           "definition": "(v) për të shkruar kodin, ose për të shkruar udhëzime për një kompjuter."
         },
         "debugging/flappy/unversioned": {
-          "word": "Rregullimi",
+          "word": "Debugging",
           "definition": "Gjetja dhe rregullimi i problemeve në një algoritëm ose program."
         },
         "program/flappy/unversioned": {
@@ -668,7 +1178,7 @@
           "definition": "(v) për të shkruar kodin, ose për të shkruar udhëzime për një kompjuter."
         },
         "debugging/frozen/unversioned": {
-          "word": "Rregullimi",
+          "word": "Debugging",
           "definition": "Gjetja dhe rregullimi i problemeve në një algoritëm ose program."
         },
         "program/frozen/unversioned": {
@@ -679,7 +1189,7 @@
           "definition": "(v) për të shkruar kodin, ose për të shkruar udhëzime për një kompjuter."
         },
         "debugging/gumball/unversioned": {
-          "word": "Rregullimi",
+          "word": "Debugging",
           "definition": "Gjetja dhe rregullimi i problemeve në një algoritëm ose program."
         },
         "program/gumball/unversioned": {
@@ -690,7 +1200,7 @@
           "definition": "(v) për të shkruar kodin, ose për të shkruar udhëzime për një kompjuter."
         },
         "debugging/hero/unversioned": {
-          "word": "Rregullimi",
+          "word": "Debugging",
           "definition": "Gjetja dhe rregullimi i problemeve në një algoritëm ose program."
         },
         "function/hero/unversioned": {
@@ -729,7 +1239,7 @@
           "definition": "(v) për të shkruar kodin, ose për të shkruar udhëzime për një kompjuter."
         },
         "debugging/hourofcode/unversioned": {
-          "word": "Rregullimi",
+          "word": "Debugging",
           "definition": "Gjetja dhe rregullimi i problemeve në një algoritëm ose program."
         },
         "program/hourofcode/unversioned": {
@@ -740,7 +1250,7 @@
           "definition": "(v) për të shkruar kodin, ose për të shkruar udhëzime për një kompjuter."
         },
         "debugging/iceage/unversioned": {
-          "word": "Rregullimi",
+          "word": "Debugging",
           "definition": "Gjetja dhe rregullimi i problemeve në një algoritëm ose program."
         },
         "program/iceage/unversioned": {
@@ -751,7 +1261,7 @@
           "definition": "(v) për të shkruar kodin, ose për të shkruar udhëzime për një kompjuter."
         },
         "debugging/infinity/unversioned": {
-          "word": "Rregullimi",
+          "word": "Debugging",
           "definition": "Gjetja dhe rregullimi i problemeve në një algoritëm ose program."
         },
         "program/infinity/unversioned": {
@@ -762,7 +1272,7 @@
           "definition": "(v) për të shkruar kodin, ose për të shkruar udhëzime për një kompjuter."
         },
         "debugging/mc/unversioned": {
-          "word": "Rregullimi",
+          "word": "Debugging",
           "definition": "Gjetja dhe rregullimi i problemeve në një algoritëm ose program."
         },
         "program/mc/unversioned": {
@@ -773,7 +1283,7 @@
           "definition": "(v) për të shkruar kodin, ose për të shkruar udhëzime për një kompjuter."
         },
         "debugging/minecraft/unversioned": {
-          "word": "Rregullimi",
+          "word": "Debugging",
           "definition": "Gjetja dhe rregullimi i problemeve në një algoritëm ose program."
         },
         "event/minecraft/unversioned": {
@@ -789,6 +1299,7 @@
           "definition": "Një algoritëm që është koduar në diçka që mund të drejtohet nga një makinë."
         },
         "machine_learning/oceans/unversioned": {
+          "word": "Mësimi i Makinave",
           "definition": "Si kompjuterët njohin modelet dhe marrin vendime pa u programuar në mënyrë eksplicite"
         },
         "event/outbreak/unversioned": {
@@ -796,14 +1307,14 @@
           "definition": "Një veprim që shkakton diçka të ndodhë."
         },
         "models_and_simulations/outbreak/unversioned": {
-          "word": "",
+          "word": "Modelet dhe Simulimet",
           "definition": ""
         },
         "code/playlab/unversioned": {
           "definition": "(v) për të shkruar kodin, ose për të shkruar udhëzime për një kompjuter."
         },
         "debugging/playlab/unversioned": {
-          "word": "Rregullimi",
+          "word": "Debugging",
           "definition": "Gjetja dhe rregullimi i problemeve në një algoritëm ose program."
         },
         "program/playlab/unversioned": {
@@ -824,7 +1335,7 @@
           "word": "Kod"
         },
         "debugging/sports/unversioned": {
-          "word": "Rregullimi",
+          "word": "Debugging",
           "definition": "Gjetja dhe rregullimi i problemeve në një algoritëm ose program."
         },
         "event/sports/unversioned": {
@@ -839,7 +1350,7 @@
           "definition": "(v) për të shkruar kodin, ose për të shkruar udhëzime për një kompjuter."
         },
         "debugging/starwars/unversioned": {
-          "word": "Rregullimi",
+          "word": "Debugging",
           "definition": "Gjetja dhe rregullimi i problemeve në një algoritëm ose program."
         },
         "program/starwars/unversioned": {
@@ -850,7 +1361,7 @@
           "definition": "(v) për të shkruar kodin, ose për të shkruar udhëzime për një kompjuter."
         },
         "debugging/starwarsblocks/unversioned": {
-          "word": "Rregullimi",
+          "word": "Debugging",
           "definition": "Gjetja dhe rregullimi i problemeve në një algoritëm ose program."
         },
         "program/starwarsblocks/unversioned": {

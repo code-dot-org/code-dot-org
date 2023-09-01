@@ -194,6 +194,8 @@ dv:
   grade_level_label_elementary: Elementary School
   grade_level_label_middle: Middle School
   grade_level_label_high: High School
+  students_label: Students
+  teachers_label: Teachers
   teacher_label_csf: CS Fundamentals Teacher
   teacher_label_csd: CS Discoveries Teacher
   teacher_label_csp: CS Principles Teacher
@@ -207,7 +209,9 @@ dv:
   call_to_action_explore_unit: Explore unit
   call_to_action_explore_curriculum: Explore curriculum
   call_to_action_explore_curriculum_options: Explore curriculum options
+  call_to_action_explore_lessons: Explore lessons
   call_to_action_explore_modules: Explore modules
+  call_to_action_explore_module: Explore module
   call_to_action_explore_workshops: Explore workshops
   call_to_action_explore_course: Explore course
   call_to_action_explore_courses: Explore courses
@@ -254,8 +258,12 @@ dv:
   call_to_action_see_module_details: See module details
   call_to_action_start_modules: Start modules
   call_to_action_see_course_details: See course details
+  call_to_action_see_lesson_details: See lesson details
   call_to_action_learn_about_approach: Learn more about our approach
   call_to_action_try_java_lab: Try Java Lab
+  call_to_action_notify_available: Notify me when available
+  call_to_action_register_early_access: Register for early access
+  call_to_action_open_positions: View open positions
   aria_label_call_to_action_afe: Learn more about Amazon Future Engineer
   aria_label_call_to_action_teaching_csf: Start the Teaching Computer Science Fundamentals
     professional learning program
@@ -328,6 +336,23 @@ dv:
   aria_label_call_to_action_csf_course_d: See Course D details
   aria_label_call_to_action_csf_course_e: See Course E details
   aria_label_call_to_action_csf_course_f: See Course F details
+  aria_label_call_to_action_ai_pl_101_videos: Watch AI 101 for Teachers videos
+  aria_label_call_to_action_ai_teaching_module: Explore the Teaching AI and Machine
+    Learning module
+  aria_label_call_to_action_how_ai_works_lesson_01: See the Introduction to Machine
+    Learning lesson details
+  aria_label_call_to_action_how_ai_works_lesson_02: See the Computer Vision lesson
+    details
+  aria_label_call_to_action_how_ai_works_lesson_03: See the Neural Networks lesson
+    details
+  aria_label_call_to_action_how_ai_works_lesson_04: See the Chatbots and Large Language
+    Models lesson details
+  aria_label_call_to_action_how_ai_works_lesson_05: See the Generative Images lesson
+    details
+  aria_label_call_to_action_how_ai_works_lesson_06: See the Algorithmic Bias lesson
+    details
+  aria_label_call_to_action_how_ai_works_lesson_07: See the Our AI Code of Ethics
+    lesson details
   video_title_professional_learning_program: Code.org's Professional Learning Program
   curriculum_name_csf: Computer Science Fundamentals
   curriculum_name_csf_02: Any CS Fundamentals (Course A-F)
@@ -437,6 +462,10 @@ dv:
   module_label_student_tool: Student tool
   module_label_student_product: Product
   module_label_student_content_resources: Content & resources
+  module_label_new: New
+  module_label_coming_soon: Coming soon
+  module_label_video_series: Video series
+  module_label_self_paced: Self-paced module
   module_ages_5_10: 5-10
   module_ages_11_18: 11-18
   module_ages_7_18: 7-18
@@ -459,9 +488,13 @@ dv:
   module_grade_9_12_teachers: 9-12 Teachers
   module_level_beginner: Beginner
   module_level_intermediate: Intermediate
+  module_duration_45_mins: 45 minutes
+  module_duration_1_hr: 1 hour
   module_duration_2_hrs: 2 hours
   module_duration_3_hrs: 3 hours
+  module_duration_5_hrs: 5 hours
   module_duration_8_hrs: 8 hours
+  module_duration_20_hrs: 20 hours
   module_duration_35_hrs: 35 hours
   module_duration_lesson: Lesson
   module_duration_week: Week
@@ -530,6 +563,7 @@ dv:
   heading_no_devices: No devices? We have you covered
   heading_java_lab: Java Lab
   heading_objects_first: Objects first
+  heading_these_lessons_will: 'These lessons will:'
   professional_learning_section_desc: Get the support you need as you prepare to teach.
     Teachers love it, with over 90% ranking it the best professional development ever!
   professional_learning_section_desc_short: Get the support you need as you prepare
@@ -605,9 +639,14 @@ dv:
     and secondary curricula around the world through new reports, policy recommendations,
     and public engagement opportunities.
   ai_pl_callout_title: AI 101 for Teachers
-  ai_pl_callout_desc_01: Discover the groundbreaking world of artificial intelligence
-    (AI) and its transformative potential in education with our comprehensive online
-    learning series for teachers.
+  ai_pl_callout_desc_01: This is a free, foundational online learning series for any
+    teacher and educator interested in the groundbreaking world of artificial intelligence
+    (AI) and its transformative potential in education. Partners Code.org, ETS, ISTE
+    and Khan Academy are offering engaging sessions with renowned experts that will
+    demystify AI, explore responsible implementation, address bias, and showcase how
+    AI-powered learning can revolutionize student outcomes. Join us on this journey
+    of exploration and empowerment, and unlock the future of teaching with and about
+    AI.
   ai_pl_callout_desc_02: Code.org, ETS, ISTE and Khan Academy are partnering to bring
     educators a professional learning series that supports teachers as they adapt
     to AI’s impacts on the classroom.
@@ -654,6 +693,11 @@ dv:
   ai_curriculum_grades_03: 'Grade Levels: 3-12'
   ai_curriculum_duration_03: 'Duration: 1 hour'
   ai_curriculum_btn_aria_label_03: Try the AI for Oceans activity
+  ai_curriculum_title_04: How AI Works
+  ai_curriculum_desc_04: These lessons supplement the How AI Works video series. Each
+    lesson is paired with a single video from the series, diving-deeper into the concepts
+    introduced in the videos.
+  ai_curriculum_btn_aria_label_04: Explore How AI Works lessons
   ai_carousel_heading: 'What teachers say about AI with Code.org:'
   ai_carousel_quote_01: This lesson also gave my students the opportunity to see that
     there is an element of opinion in classification systems. Later, when we started
@@ -670,11 +714,15 @@ dv:
   ai_pl_list_04: Consider real-world implications of AI and machine learning.
   ai_pl_list_05: Explore end of chapter projects.
   ai_pl_duration: 'Duration: 2 hours'
+  ai_pl_title: Teaching AI and Machine Learning
+  ai_pl_desc: Introduction to artificial intelligence and machine learning. Train
+    a machine learning model using AI Lab. and engage with machine learning apps.
+    Consider real-world implications of AI and machine learning.
   ai_video_series_title: How AI Works
-  ai_video_series_desc: With an introduction by Microsoft CEO Satya Nadella, this
-    series of short videos will introduce you to how artificial intelligence works
-    and why it matters. Then delve into issues like algorithmic bias and the ethics
-    of AI decision-making.
+  ai_video_series_desc: This series of short videos will introduce you to how artificial
+    intelligence works and why it matters. Then delve into issues like algorithmic
+    bias and the ethics of AI decision-making. Watch the video series below, or [check
+    out our How AI Works lessons](%{how_ai_works_url})!
   ai_resources_heading: Additional resources
   ai_resources_desc: Interested in learning more about AI? Here are some additional
     resources that can help extend your students' learning.
@@ -694,8 +742,10 @@ dv:
     and peer-to-peer learning opportunities.
   ai_resources_btn_aria_label_03: Explore the AI for Teachers website
   ai_pl_101_hero_heading: AI 101 for Teachers
-  ai_pl_101_hero_desc: Discover the transformative potential of artificial intelligence
-    (AI) in education with our free online learning series for educators.
+  ai_pl_101_hero_desc: Discover the groundbreaking world of artificial intelligence
+    (AI) and its transformative potential in education with our foundational online
+    learning series for teachers.
+  ai_pl_101_hero_desc_02: A comprehensive online learning series for teachers.
   ai_pl_101_hero_presented: Presented by
   ai_pl_101_intro_heading: What is AI 101 for Teachers?
   ai_pl_101_intro_text: AI 101 for Teachers is a free, foundational online professional
@@ -719,25 +769,111 @@ dv:
     to stop spending time on prep tasks they don’t love, and focus on what they do
     love—teaching.
   ai_pl_101_explore__button_1: Try Khanmigo
-  ai_pl_101_explore_title_2: Artificial Intelligence Explorations for Educators
-  ai_pl_101_explore__desc_2: For six years, this 15-hour online course from ISTE has
-    been guiding K-12 educators on the essentials of AI for teaching and learning.
-    The course is offered three times per year and is fully asynchronous with the
-    ongoing support of an expert instructor.
+  ai_pl_101_explore_title_2: AI Explorations for Educators
+  ai_pl_101_explore__desc_2: This 15-hour online course from ISTE guides K-12 educators
+    on the essentials of AI for teaching and learning. The course is offered three
+    times per year and is fully asynchronous with the ongoing support of an expert
+    instructor.
   ai_pl_101_explore__button_2: Start the course
-  ai_pl_101_explore_title_3: AI Curriculum
-  ai_pl_101_explore__desc_3: In Code.org’s AI Curriculum for grades 3-12, students
-    use fun activities to see how computers learn from data. The curriculum also invites
-    students to investigate machine learning and data while reflecting on the ethical
-    implications of AI.
+  ai_pl_101_explore_title_3: AI Curricula
+  ai_pl_101_explore__desc_3: In Code.org’s How AI Works videos and lessons for grades
+    6-12, students learn basic principles about AI and use fun activities to see how
+    computers learn from data, while reflecting on the ethical implications of AI.
   ai_pl_101_explore__button_3: Explore curricula
   ai_pl_101_explore_title_4: ETS’s Criterion Interactive
-  ai_pl_101_explore__desc_4: 'This guided five-paragraph writing platform coaches
-    learners through five critical phases of the writing process: Prepare/Plan, Write,
-    Revise, Edit, Reflect. ETS personalizes the writing experience by leveraging cutting-edge
-    scoring models and AI, assisting teachers in providing iterative feedback and
-    formative assessment throughout the writing experience.'
+  ai_pl_101_explore__desc_4: 'This AI-powered writing platform coaches learners through
+    five critical phases of the writing process: Prepare/Plan, Write, Revise, Edit,
+    Reflect, providing iterative feedback throughout the writing experience.'
   ai_pl_101_explore__button_4: Explore tool
+  ai_pl_101_video_title_1: Fireside Chat with Sal Khan and Hadi Partovi
+  ai_pl_101_video_desc_1: "Join Sal Khan (Khan Academy) and Hadi Partovi (Code.org)
+    for a fireside chat on embracing artificial intelligence in the classroom. Expect
+    a lively discussion including some of the most controversial topics \tsurrounding
+    AI today."
+  ai_pl_101_video_title_2: Demystifying AI for Educators
+  ai_pl_101_video_desc_2: Introduction to the fundamentals of Artificial Intelligence
+    which will equip you with the foundational knowledge to understand the profound
+    impact of AI in our society and its increasing relevance to the field of education.
+    You will gain practical insights into leveraging AI for tasks in the classroom,
+    and saving time on administrative tasks.
+  ai_pl_101_video_title_3: Transforming Learning with AI
+  ai_pl_101_video_desc_3: Explore the intersection of AI and education. This session
+    explores how AI can be combined with pedagogy to enhance student learning. It
+    is a must-attend for educators seeking to leverage AI to transform their teaching
+    practices to enrich their students’ learning experiences.
+  ai_pl_101_video_title_4: Ensuring a Responsible Approach to AI
+  ai_pl_101_video_desc_4: Explore the ethical considerations and best practices for
+    incorporating artificial intelligence in educational environments. This session
+    will provide concrete strategies, resources, and real-world examples, all aimed
+    at understanding the potential biases of AI, and the ethical considerations that
+    come with it.
+  ai_pl_101_video_title_5: Bringing AI to the Classroom
+  ai_pl_101_video_desc_5: This session focuses on teaching about AI, evaluating and
+    utilizing AI educational tools, and leveraging AI for student assessment. With
+    a rich blend of theory, practical examples, and resources, it aims to empower
+    educators to navigate the AI landscape and enhance student learning experiences.
+  ai_pl_101_video_desc_6: 'Learn more about the new technology driving the large changes
+    in AI, featuring two new videos on Large Language Models (like ChatGPT) and Generative
+    AI. Hear how these new technologies work directly from the experts: Mira Murati,
+    CTO of OpenAI, and Cristóbal Valenzuela, CEO of RunwayML.'
+  how_ai_works_hero_heading: How AI Works
+  how_ai_works_hero_desc: Dive into the world of AI with "How AI Works," our video
+    series and accompanying lessons!
+  how_ai_works_intro_desc: This series of short videos and accompanying in-classroom
+    lessons will introduce you and your students to how artificial intelligence works
+    and why it matters. You can choose individual lessons based on topic, explore
+    the whole series of topics in one class or teach all 7 lessons to give a deeper
+    dive.
+  how_ai_works_intro_list_01: Introduce you to artificial intelligence and machine
+    learning
+  how_ai_works_intro_list_02: Dive into how generative AI works, including large language
+    models (LLMs) and image generation
+  how_ai_works_intro_list_03: Explore bias, ethics, privacy and the responsible use
+    of AI
+  how_ai_works_intro_list_04: Touch on real world applications of AI, including computer
+    vision
+  how_ai_works_lessons_heading: AI lessons for your class
+  how_ai_works_lesson_title_01: Introduction to Machine Learning
+  how_ai_works_lesson_desc_01: Learn about a form of artificial intelligence called
+    machine learning and how they can use the Problem Solving Process to help train
+    a robot to solve problems. Participate in machine learning activities where a
+    robot is learning how to detect patterns in fish.
+  how_ai_works_lesson_title_02: Computer Vision
+  how_ai_works_lesson_desc_02: Learn how computer vision works. Watch a video explaining
+    computer vision and how a computer "sees". Then design an algorithm that uses
+    a network to decide what number the seven segment display is displaying and test
+    it.
+  how_ai_works_lesson_title_03: Neural Networks
+  how_ai_works_lesson_desc_03: Learn how neural networks work. Use a widgets to explore
+    neural networks in a hands on way. Watch a video explaining neural networks. Finally
+    discuss the need for diverse perspectives when creating recommendation systems.
+  how_ai_works_lesson_title_04: Chatbots and Large Language Models
+  how_ai_works_lesson_desc_04: Learn what an Large Language Model (LLM) is and how
+    it works, then use an LLM to co-create a text with AI. Finally, discuss about
+    whether or not LLMs are intelligent or creative.
+  how_ai_works_lesson_title_05: Generative Images
+  how_ai_works_lesson_desc_05: Learn how AI can generate images, then explore a diffusion
+    AI widget and discuss whether or not these models are creative.
+  how_ai_works_lesson_title_06: Algorithmic Bias
+  how_ai_works_lesson_desc_06: Practice cropping images to uncover the bias underlying
+    the Twitter cropping algorithm, then read and watch a video about the discovery
+    of this biased algorithm. Finally, discuss ways to recognize and reduce bias in
+    algorithms.
+  how_ai_works_lesson_title_07: Our AI Code of Ethics
+  how_ai_works_lesson_desc_07: Conduct research using articles and videos that expose
+    ethical pitfalls in an artificial intelligence area of their choice. Assemble
+    a class-wide "Our AI Code of Ethics" resource for AI creators and legislators
+    everywhere.
+  how_ai_works_lessons_in_a_day_title: How AI Works in a Day
+  how_ai_works_lessons_in_a_day_desc: Only have a day? There's also the option to
+    introduce the whole series to students in a single day. Perfect for any subject-area
+    teacher looking to introduce students to AI, or even for as a lesson for a guest
+    teacher.
+  how_ai_works_lessons_in_a_day_desc_02: Introduce all of the "How AI Works" videos
+    in one day. Students follow along with each video by matching vocabulary from
+    the video, then answering a reflection question about each video.
+  how_ai_works_resources_desc: Interested in learning more about AI? Here are some
+    additional resources that can help extend you and your students' learning.
   ai_vid_intro_caption: Introducing How AI Works
   ai_vid_chatbots_caption: How Chatbots and Large Language Models Work
   ai_vid_creativity_caption: Does AI Have Creativity and Imagination?
@@ -1063,10 +1199,10 @@ dv:
   teach_page_additional_materials_list_heading_03: Classroom Posters
   teach_page_additional_materials_list_desc_03: Print these posters of diverse role
     models to hang in your school and inspire your students to try computer science.
-  csp_page_top_desc: Free set of elementary curricula that introduces students to
-    the foundational concepts of computer science and challenges them to explore how
-    computing and technology can impact the world. Can be taught as an introductory
-    class and as an AP course.
+  csp_page_top_desc: Free year-long curriculum that introduces students to the foundational
+    concepts of computer science and challenges them to explore how computing and
+    technology can impact the world. Can be taught as an introductory class and as
+    an AP course.
   csp_page_intro_heading: Free, AP® CSP endorsed, high school introductory course
   csp_page_intro_list_01: Culturally responsive pedagogy
   csp_page_intro_list_02: Real-world problem investigation
@@ -1324,9 +1460,9 @@ dv:
   csc_page_faq_question_05: What materials do I need for CS Connections?
   csc_page_faq_answer_05: Ideally, each student will have their own computer and teachers
     will have a projector to display the slideshow that corresponds with each lesson.
-  csf_page_top_desc: Free year-long curriculum that introduces students to the foundational
-    concepts of computer science and challenges them to explore how computing and
-    technology can impact the world.
+  csf_page_top_desc: Free set of elementary curricula that introduces students to
+    the foundational concepts of computer science and challenges them to explore how
+    computing and technology can impact the world.
   csf_page_intro_heading: Free, and fun, elementary courses for each grade
   csf_page_intro_list_01: Six courses, one for each elementary grade
   csf_page_intro_list_02: Equitable introductory CS courses
@@ -1616,6 +1752,7 @@ dv:
   not_found_desc: The requested page was not found
   not_found_instructions: Check the web address and resubmit or choose a link from
     the list below.
+  company_code_dot_org: Code.org
   company_4-H: 4-H Youth Development
   company_asa: Afterschool Alliance
   company_asos: ASOS
@@ -1668,6 +1805,7 @@ dv:
   company_evsd: East Valley School District
   company_eastonvilleschooldistrict: Eatonville School District
   company_enumclawschooldistrict: Enumclaw School District
+  company_ets: ETS
   company_everettsd: Everette Public Schools
   company_fsusd: Fairfield-Suisun Unified School District
   company_fayettecountypublicschools: Fayette County Public Schools
@@ -1689,6 +1827,7 @@ dv:
   company_houstonisd: Houston Independent School District
   company_hcpss: Howard County Public Schools
   company_idla: Idaho Digital Learning Academy
+  company_iste: ISTE
   company_janesvilleschooldistrict: Janesville School District
   company_johnstoncountyschools: Johnston County Schools
   company_lps: Lincoln Public School
@@ -2348,7 +2487,7 @@ dv:
   footer_built_on_github: Built on GitHub from Microsoft
   footer_menu_partners: Partners
   footer_menu_contact: Contact us
-  footer_menu_support: Support
+  footer_menu_support: ސަޕޯރޓު
   footer_menu_terms: Terms
   footer_menu_privacy: Privacy Policy
   footer_menu_cookie: Cookie Notice
@@ -2372,7 +2511,7 @@ dv:
   tutorial_chibitronics_name: 'Chibitronics: Illuminated Story'
   tutorial_athlete_name: Code your own sports game
   tutorial_moana_name: 'Moana: Wayfinding with Code'
-  tutorial_star-wars_name: 'Star Wars: Building a Galaxy with Code'
+  tutorial_star-wars_name: 'ސްޓަރ ވޯސް: ކޯޑުން ގެލެކްސީއެއް ބިލްޑް ކުރުން'
   tutorial_gumadventure_name: Gumball's Coding Adventure
   tutorial_mchoc_name: Minecraft Hour of Code
   tutorial_vidnews_name: 'Vidcode: Code the News'
@@ -2394,7 +2533,7 @@ dv:
   tutorial_tynkerch_name: Counter Hack
   tutorial_lightbot_name: Lightbot
   tutorial_hoc_name: Placeholder for new code.org/hoc
-  tutorial_code_name: Write your first computer program
+  tutorial_code_name: އެން މެ ފުރަތަމަ ކޮމްޕިއުޓަރ ޕްރޮގްރާމް ލިޔެލަމާ
   tutorial_tinspire_name: 10 Minutes of Code for the TI-Nspire CX
   tutorial_itchbounceball_name: ITCH Bouncing Ball (in Scratch)
   tutorial_vidclim_name: 'Vidcode: Climate Science & Code'
@@ -2601,13 +2740,13 @@ dv:
   tutorial_spheroi_name: 'Blocks 1: Intro'
   tutorial_spherol_name: 'Blocks 3: Lights'
   tutorial_spherov_name: 'Blocks 4: Variables'
-  tutorial_swb_name: 'Star Wars: Building a Galaxy with Code'
-  tutorial_build-a-galaxy_name: 'Star Wars: Building a Galaxy with Code'
+  tutorial_swb_name: 'ސްޓަރ ވޯސް: ކޯޑުން ގެލެކްސީއެއް ބިލްޑް ކުރުން'
+  tutorial_build-a-galaxy_name: 'ސްޓަރ ވޯސް: ކޯޑުން ގެލެކްސީއެއް ބިލްޑް ކުރުން'
   tutorial_alicesims_name: Storyboarding and Programming with Alice and The Sims
   tutorial_tchr_name: Teacher Led Lesson Plans
   tutorial_robogame_name: The Robot Games
   tutorial_tap_name: Tynker on Tablets
-  tutorial_cintl_name: Write your first computer program
+  tutorial_cintl_name: އެން މެ ފުރަތަމަ ކޮމްޕިއުޓަރ ޕްރޮގްރާމް ލިޔެލަމާ
   tutorial_itchstop_name: ITCH Stop Frame Animation (Scratch)
   tutorial_tynkerpn_name: 'Peep: Nature Walk'
   tutorial_tynkerpd_name: 'Peep: Dance with Friends'
@@ -2934,7 +3073,7 @@ dv:
   tutorial_allcancodeapps_name: 'Allcancode Platform: Build web and mobile apps in
     Blockly'
   tutorial_n2y_name: Bitt Bott Explores Earth
-  tutorial_microsoftarcade_name: Play, Design & Code Retro Arcade Games
+  tutorial_microsoftarcade_name: Play, Design, & Code with MakeCode Arcade
   tutorial_csfirstunplugged_name: CS First Unplugged
   tutorial_toxicodepython_name: Discover Python with Silent Teacher
   tutorial_codecombatozaria_name: 'Ozaria: Your Journey Begins'
@@ -2953,7 +3092,7 @@ dv:
     Mickey'
   tutorial_scigirlsquest_name: 'SciGirls: Code Quest'
   tutorial_codespeakbreathe_name: Code a Meditation Breathing App
-  tutorial_vidcodeface_name: Facetracking
+  tutorial_vidcodeface_name: Facetracker
   tutorial_educodemaze_name: Design Your Own Maze!
   tutorial_educoderace_name: Code your own racing game!
   tutorial_codespeakchatbot_name: Code a Chatbot with the Female CS Pioneers
@@ -3053,15 +3192,16 @@ dv:
   tutorial_codejumper_name: 'Networks: Messages of Kindness'
   tutorial_meeempathy_name: A Minecraft Tale of Two Villages
   tutorial_danceparty_shortdescription: Code a Dance Party to share with your friends.
-    Featuring Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara, and 25 more!
+    Featuring Beyoncé, Lizzo, Harry Styles, Lil Nas X, Selena Gomez, music from Disney's
+    'Encanto', and more!
   tutorial_chibitronics_shortdescription: Program a paper circuit to light up your
     own story.
   tutorial_athlete_shortdescription: Choose between making a basketball game or mix
     and match across sports!
   tutorial_moana_shortdescription: Moana is brave, fearless, and is determined to
     find her own path.
-  tutorial_star-wars_shortdescription: Learn to program droids, and create your own
-    Star Wars game in a galaxy far, far away.
+  tutorial_star-wars_shortdescription: ޑްރޮއިޑް ޕްރޮޮގްރާމްކުރާށާއި، ދުރުގައިވާ ގެލެކްސީއެއްގައި
+    އަމިއްލަ ސްޓަރ ވޯޯސް ގޭމެއް ކްރިއޭޓްކުރަން ދަސްކުރޭ.
   tutorial_gumadventure_shortdescription: Use code to continue an episode of The Amazing
     World of Gumball.
   tutorial_mchoc_shortdescription: Minecraft is back for the Hour of Code with a brand
@@ -3422,14 +3562,14 @@ dv:
   tutorial_csfirst_shortdescription: Animate a story about two characters on the ocean.
     Add your own style!
   tutorial_loopedy_shortdescription: Make a dance using loops!
-  tutorial_dsw_shortdescription: Learn to program droids, and create your own Star
-    Wars game in a galaxy far, far away.
-  tutorial_dswb_shortdescription: Learn to program droids, and create your own Star
-    Wars game in a galaxy far, far away.
-  tutorial_ssw_shortdescription: Learn to program droids, and create your own Star
-    Wars game in a galaxy far, far away.
-  tutorial_sswb_shortdescription: Learn to program droids, and create your own Star
-    Wars game in a galaxy far, far away.
+  tutorial_dsw_shortdescription: ޑްރޮއިޑް ޕްރޮޮގްރާމްކުރާށާއި، ދުރުގައިވާ ގެލެކްސީއެއްގައި
+    އަމިއްލަ ސްޓަރ ވޯޯސް ގޭމެއް ކްރިއޭޓްކުރަން ދަސްކުރޭ.
+  tutorial_dswb_shortdescription: ޑްރޮއިޑް ޕްރޮޮގްރާމްކުރާށާއި، ދުރުގައިވާ ގެލެކްސީއެއްގައި
+    އަމިއްލަ ސްޓަރ ވޯޯސް ގޭމެއް ކްރިއޭޓްކުރަން ދަސްކުރޭ.
+  tutorial_ssw_shortdescription: ޑްރޮއިޑް ޕްރޮޮގްރާމްކުރާށާއި، ދުރުގައިވާ ގެލެކްސީއެއްގައި
+    އަމިއްލަ ސްޓަރ ވޯޯސް ގޭމެއް ކްރިއޭޓްކުރަން ދަސްކުރޭ.
+  tutorial_sswb_shortdescription: ޑްރޮއިޑް ޕްރޮޮގްރާމްކުރާށާއި، ދުރުގައިވާ ގެލެކްސީއެއްގައި
+    އަމިއްލަ ސްޓަރ ވޯޯސް ގޭމެއް ކްރިއޭޓްކުރަން ދަސްކުރޭ.
   tutorial_kodable-unplugged_shortdescription: A fun unplugged exercise
   tutorial_scratch_shortdescription: Create your own interactive games, stories, and
     animations with Scratch!
@@ -3458,10 +3598,10 @@ dv:
   tutorial_spherol_shortdescription: Learn how to control Sphero's lights and get
     creative with programming.
   tutorial_spherov_shortdescription: Bring Hot Potato to life with Sphero!
-  tutorial_swb_shortdescription: Learn to program droids, and create your own Star
-    Wars game in a galaxy far, far away.
-  tutorial_build-a-galaxy_shortdescription: Learn to program droids, and create your
-    own Star Wars game in a galaxy far, far away.
+  tutorial_swb_shortdescription: ޑްރޮއިޑް ޕްރޮޮގްރާމްކުރާށާއި، ދުރުގައިވާ ގެލެކްސީއެއްގައި
+    އަމިއްލަ ސްޓަރ ވޯޯސް ގޭމެއް ކްރިއޭޓްކުރަން ދަސްކުރޭ.
+  tutorial_build-a-galaxy_shortdescription: ޑްރޮއިޑް ޕްރޮޮގްރާމްކުރާށާއި، ދުރުގައިވާ
+    ގެލެކްސީއެއްގައި އަމިއްލަ ސްޓަރ ވޯޯސް ގޭމެއް ކްރިއޭޓްކުރަން ދަސްކުރޭ.
   tutorial_alicesims_shortdescription: 'Tell stories and be creative while learning
     to code. '
   tutorial_tchr_shortdescription: Be inspired to design your own Hour of Code event
@@ -4211,10 +4351,11 @@ dv:
     web and mobile apps from design to delivery.
   tutorial_n2y_shortdescription: Help Bitt Bott explore Earth using direction arrows.
   tutorial_dance2019_longdescription: Code a Dance Party to share with your friends.
-    Featuring Katy Perry, Shawn Mendes, Lil Nas X, Panic! At The Disco, Jonas Brothers,
-    and many more!
+    Featuring Beyoncé, Lizzo, Harry Styles, Lil Nas X, Selena Gomez, music from Disney's
+    'Encanto', and more!
   tutorial_danceparty_longdescription: Code a Dance Party to share with your friends.
-    Featuring Katy Perry, Madonna, J. Balvin, Sia, Keith Urban, Ciara, and 25 more!
+    Featuring Beyoncé, Lizzo, Harry Styles, Lil Nas X, Selena Gomez, music from Disney's
+    'Encanto', and more!
   tutorial_chibitronics_longdescription: Program a paper circuit to light up your
     own story.
   tutorial_athlete_longdescription: Choose between making a basketball game or mix
@@ -4227,8 +4368,8 @@ dv:
     and those trying coding for the first time. Available in 23 languages and localized
     outside of the United States. This tutorial is available free online and includes
     a digital toolkit in English and Spanish for educators and event organizers.
-  tutorial_star-wars_longdescription: Learn to program droids, and create your own
-    Star Wars game in a galaxy far, far away.
+  tutorial_star-wars_longdescription: ޑްރޮއިޑް ޕްރޮޮގްރާމްކުރާށާއި، ދުރުގައިވާ ގެލެކްސީއެއްގައި
+    އަމިއްލަ ސްޓަރ ވޯޯސް ގޭމެއް ކްރިއޭޓްކުރަން ދަސްކުރޭ.
   tutorial_gumadventure_longdescription: In the Amazing World of Gumball episode "The
     Signal," a glitch affects how the characters relate to each other. In this activity,
     continue the story by making your own glitch and imagining how Gumball and his
@@ -5127,14 +5268,14 @@ dv:
   tutorial_loopedy_longdescription: The goal of a good programmer is to write a program
     that is a short, clear, and effective as possible. In this lesson, students will
     learn how write programs using loops.
-  tutorial_dsw_longdescription: Learn to program droids, and create your own Star
-    Wars game in a galaxy far, far away.
-  tutorial_dswb_longdescription: Learn to program droids, and create your own Star
-    Wars game in a galaxy far, far away.
-  tutorial_ssw_longdescription: Learn to program droids, and create your own Star
-    Wars game in a galaxy far, far away.
-  tutorial_sswb_longdescription: Learn to program droids, and create your own Star
-    Wars game in a galaxy far, far away.
+  tutorial_dsw_longdescription: ޑްރޮއިޑް ޕްރޮޮގްރާމްކުރާށާއި، ދުރުގައިވާ ގެލެކްސީއެއްގައި
+    އަމިއްލަ ސްޓަރ ވޯޯސް ގޭމެއް ކްރިއޭޓްކުރަން ދަސްކުރޭ.
+  tutorial_dswb_longdescription: ޑްރޮއިޑް ޕްރޮޮގްރާމްކުރާށާއި، ދުރުގައިވާ ގެލެކްސީއެއްގައި
+    އަމިއްލަ ސްޓަރ ވޯޯސް ގޭމެއް ކްރިއޭޓްކުރަން ދަސްކުރޭ.
+  tutorial_ssw_longdescription: ޑްރޮއިޑް ޕްރޮޮގްރާމްކުރާށާއި، ދުރުގައިވާ ގެލެކްސީއެއްގައި
+    އަމިއްލަ ސްޓަރ ވޯޯސް ގޭމެއް ކްރިއޭޓްކުރަން ދަސްކުރޭ.
+  tutorial_sswb_longdescription: ޑްރޮއިޑް ޕްރޮޮގްރާމްކުރާށާއި، ދުރުގައިވާ ގެލެކްސީއެއްގައި
+    އަމިއްލަ ސްޓަރ ވޯޯސް ގޭމެއް ކްރިއޭޓްކުރަން ދަސްކުރޭ.
   tutorial_kodable-unplugged_longdescription: 'Designed for use with plain paper,
     the fuzzFamily Frenzy is an introduction to programming logic for kids 5 and up.
     A teacher should explain the game, then students program a partner to complete
@@ -5190,10 +5331,10 @@ dv:
     Sphero. Learn how to use variables, loop until, and randomness within bounds to
     bring Hot Potato to life. When you're all done, grab some friends and start tossing.
     Don't get caught with the Sphero when the time runs out!
-  tutorial_swb_longdescription: Learn to program droids, and create your own Star
-    Wars game in a galaxy far, far away.
-  tutorial_build-a-galaxy_longdescription: Learn to program droids, and create your
-    own Star Wars game in a galaxy far, far away.
+  tutorial_swb_longdescription: ޑްރޮއިޑް ޕްރޮޮގްރާމްކުރާށާއި، ދުރުގައިވާ ގެލެކްސީއެއްގައި
+    އަމިއްލަ ސްޓަރ ވޯޯސް ގޭމެއް ކްރިއޭޓްކުރަން ދަސްކުރޭ.
+  tutorial_build-a-galaxy_longdescription: ޑްރޮއިޑް ޕްރޮޮގްރާމްކުރާށާއި، ދުރުގައިވާ
+    ގެލެކްސީއެއްގައި އަމިއްލަ ސްޓަރ ވޯޯސް ގޭމެއް ކްރިއޭޓްކުރަން ދަސްކުރޭ.
   tutorial_alicesims_longdescription: 'Follow the animation production process from
     storyboarding to programming with Alice and The Sims.  Let creativity and storytelling
     drive your learning in a drag and drop coding environment.  The project will guide
@@ -7022,7 +7163,7 @@ dv:
   tutorial_athlete_string_detail_grades: Grades 2+
   tutorial_moana_string_detail_grades: Grades 2+
   tutorial_star-wars_string_detail_grades: Grades 2+
-  tutorial_gumadventure_string_detail_grades: Grades 6-8
+  tutorial_gumadventure_string_detail_grades: ގްރޭޑް 6-8
   tutorial_mchoc_string_detail_grades: Grades 2+
   tutorial_vidnews_string_detail_grades: Grades 6+
   tutorial_kodable-pre_string_detail_grades: Pre-reader - Grade 5
@@ -7059,7 +7200,7 @@ dv:
   tutorial_art_string_detail_grades: Grades 2+
   tutorial_tynkerbrick_string_detail_grades: Grades 2+
   tutorial_itchbio_string_detail_grades: Grades 6+
-  tutorial_itchj_string_detail_grades: Grades 6-8
+  tutorial_itchj_string_detail_grades: ގްރޭޑް 6-8
   tutorial_tickleo_string_detail_grades: Grades 2+
   tutorial_hopgeo_string_detail_grades: Grades 2-8
   tutorial_tynkermult_string_detail_grades: Grades 2-8
@@ -7081,12 +7222,12 @@ dv:
   tutorial_tynkercm_string_detail_grades: Grades 2+
   tutorial_codesterswintergreet_string_detail_grades: Grades 2+
   tutorial_codestersc_string_detail_grades: Grades 6+
-  tutorial_codestersturtle_string_detail_grades: Grades 6-8
+  tutorial_codestersturtle_string_detail_grades: ގްރޭޑް 6-8
   tutorial_penjee_string_detail_grades: Grades 6+
   tutorial_trinket_string_detail_grades: Grades 2+
   tutorial_frogger_string_detail_grades: Grades 6+
   tutorial_tynkereco_string_detail_grades: Grades 2-8
-  tutorial_mitedarc_string_detail_grades: Grades 6-8
+  tutorial_mitedarc_string_detail_grades: ގްރޭޑް 6-8
   tutorial_khan_string_detail_grades: Grades 6+
   tutorial_tynkerd_string_detail_grades: Grades 6+
   tutorial_cdmy_string_detail_grades: Grades 9+
@@ -7100,33 +7241,33 @@ dv:
   tutorial_capost_string_detail_grades: Grades 6+
   tutorial_marco_string_detail_grades: Grades 2-8
   tutorial_codestersflappybike_string_detail_grades: Grades 6+
-  tutorial_kanopong_string_detail_grades: Grades 6-8
+  tutorial_kanopong_string_detail_grades: ގްރޭޑް 6-8
   tutorial_tynkerright_string_detail_grades: Grades 2-8
   tutorial_touchdevelop_string_detail_grades: do-not-show
   tutorial_tynkercc_string_detail_grades: Grades 6+
   tutorial_bamboo_string_detail_grades: Grades 2-5
   tutorial_robojav_string_detail_grades: Grades 6+
   tutorial_roboba_string_detail_grades: Grades 6+
-  tutorial_knodsnake_string_detail_grades: Grades 6-8
+  tutorial_knodsnake_string_detail_grades: ގްރޭޑް 6-8
   tutorial_soccharater_string_detail_grades: Grades 6+
   tutorial_silent_string_detail_grades: Grades 6+
   tutorial_robomesh_string_detail_grades: Grades 2+
   tutorial_amaze_string_detail_grades: Grades 2+
   tutorial_codestersds_string_detail_grades: Grades 2+
-  tutorial_knodtext_string_detail_grades: Grades 6-8
+  tutorial_knodtext_string_detail_grades: ގްރޭޑް 6-8
   tutorial_alicegar_string_detail_grades: Grades 6+
   tutorial_codesterstransform_string_detail_grades: Grades 6+
   tutorial_flexfrog_string_detail_grades: Grades 6+
   tutorial_codemoji_string_detail_grades: do-not-show
   tutorial_robobii_string_detail_grades: Grades 6+
-  tutorial_robobm_string_detail_grades: Grades 6-8
+  tutorial_robobm_string_detail_grades: ގްރޭޑް 6-8
   tutorial_codingrobots_string_detail_grades: Grades 2+
   tutorial_robob_string_detail_grades: Grades 6+
   tutorial_coders_string_detail_grades: Grades 9+
   tutorial_tynkerhw_string_detail_grades: Grades 2-8
   tutorial_tynkermh_string_detail_grades: Grades 2-8
   tutorial_caphoto_string_detail_grades: Grades 6+
-  tutorial_mozillahw_string_detail_grades: Grades 6-8
+  tutorial_mozillahw_string_detail_grades: ގްރޭޑް 6-8
   tutorial_ticklep_string_detail_grades: do-not-show
   tutorial_bbot_string_detail_grades: Grades 2+
   tutorial_scratchg_string_detail_grades: Grades 6+
@@ -7163,21 +7304,21 @@ dv:
   tutorial_bbcphys_string_detail_grades: do-not-show
   tutorial_bitsbox_string_detail_grades: Grades 2-8
   tutorial_tlcemo_string_detail_grades: Grades 2-8
-  tutorial_crd_string_detail_grades: Grades 6-8
+  tutorial_crd_string_detail_grades: ގްރޭޑް 6-8
   tutorial_bbcbio_string_detail_grades: do-not-show
   tutorial_ticklebb8_string_detail_grades: Grades 2+
   tutorial_grok_string_detail_grades: do-not-show
   tutorial_ijournalist_string_detail_grades: Grades 2-8
   tutorial_bbcmusic_string_detail_grades: do-not-show
-  tutorial_secretcodes_string_detail_grades: Grades 6-8
+  tutorial_secretcodes_string_detail_grades: ގްރޭޑް 6-8
   tutorial_tlchex_string_detail_grades: Grades 6+
   tutorial_tickles_string_detail_grades: Grades 2+
   tutorial_ozogame_string_detail_grades: All ages
   tutorial_vidcodeio_string_detail_grades: Grades 2+
   tutorial_tlcbrain_string_detail_grades: Grades 6+
-  tutorial_hopquiz_string_detail_grades: Grades 6-8
+  tutorial_hopquiz_string_detail_grades: ގްރޭޑް 6-8
   tutorial_unfortunate_string_detail_grades: Grades 2-5
-  tutorial_cha_string_detail_grades: Grades 6-8
+  tutorial_cha_string_detail_grades: ގްރޭޑް 6-8
   tutorial_elaseq_string_detail_grades: Pre-reader - Grade 5
   tutorial_bbcmathi_string_detail_grades: do-not-show
   tutorial_tlcpixel_string_detail_grades: Grades 2-8
@@ -7297,13 +7438,13 @@ dv:
   tutorial_grokem_string_detail_grades: Grades 6+
   tutorial_kodmaze_string_detail_grades: Pre-reader - Grade 5
   tutorial_codestersa_string_detail_grades: Grades 2-8
-  tutorial_cmdodo_string_detail_grades: Grades 3-5
+  tutorial_cmdodo_string_detail_grades: ގްރޭޑް 3-5
   tutorial_tynkerspace_string_detail_grades: Grades 2-5
   tutorial_gfbloons_string_detail_grades: Grades 9+
   tutorial_raspipong_string_detail_grades: Grades 9+
   tutorial_codehsvr_string_detail_grades: Grades 6+
-  tutorial_codesterstp_string_detail_grades: Grades 6-8
-  tutorial_codestersbb_string_detail_grades: Grades 6-8
+  tutorial_codesterstp_string_detail_grades: ގްރޭޑް 6-8
+  tutorial_codestersbb_string_detail_grades: ގްރޭޑް 6-8
   tutorial_gfcrossyroad_string_detail_grades: Grades 9+
   tutorial_googleww_string_detail_grades: Grades 9+
   tutorial_codehsjsapp_string_detail_grades: Grades 6+
@@ -7315,8 +7456,8 @@ dv:
   tutorial_hopcrossyroad_string_detail_grades: Grades 2-8
   tutorial_switchglitch_string_detail_grades: Grades 2-5
   tutorial_codecar_string_detail_grades: Grades 6+
-  tutorial_codesterscp_string_detail_grades: Grades 6-8
-  tutorial_grokpetblock_string_detail_grades: Grades 6-8
+  tutorial_codesterscp_string_detail_grades: ގްރޭޑް 6-8
+  tutorial_grokpetblock_string_detail_grades: ގްރޭޑް 6-8
   tutorial_techbim_string_detail_grades: University
   tutorial_techfpp_string_detail_grades: University
   tutorial_codesterscr_string_detail_grades: Grades 2-8
@@ -7346,7 +7487,7 @@ dv:
   tutorial_gpbcatapult_string_detail_grades: Grades 6+
   tutorial_quorumastro_string_detail_grades: Grades 6+
   tutorial_alicewonder_string_detail_grades: Grades 2-5
-  tutorial_rginter_string_detail_grades: Grades 6-8
+  tutorial_rginter_string_detail_grades: ގްރޭޑް 6-8
   tutorial_cssgrid_string_detail_grades: Grades 6+
   tutorial_jshero_string_detail_grades: Grades 9+
   tutorial_codemojipy_string_detail_grades: Grades 2-5
@@ -7354,7 +7495,7 @@ dv:
   tutorial_gpbcircle_string_detail_grades: Grades 6+
   tutorial_gpbpaint_string_detail_grades: Grades 6+
   tutorial_cocomarcade_string_detail_grades: Grades 6+
-  tutorial_beetik_string_detail_grades: Grades 6-8
+  tutorial_beetik_string_detail_grades: ގްރޭޑް 6-8
   tutorial_codedj_string_detail_grades: Grades 6+
   tutorial_rgadvan_string_detail_grades: Grades 6+
   tutorial_codehsrn_string_detail_grades: Grades 9+
@@ -7386,7 +7527,7 @@ dv:
   tutorial_kodpizzapre_string_detail_grades: Pre-reader - Grade 1
   tutorial_kodpizza_string_detail_grades: Grades 2-5
   tutorial_kodwomen_string_detail_grades: Grades 2-8
-  tutorial_tfunplug_string_detail_grades: Grades 6-8
+  tutorial_tfunplug_string_detail_grades: ގްރޭޑް 6-8
   tutorial_lbvariables_string_detail_grades: Grades 2-8
   tutorial_lbfunctions_string_detail_grades: Grades 2-8
   tutorial_lblogic_string_detail_grades: Grades 2+
@@ -7410,9 +7551,9 @@ dv:
   tutorial_legodetect_string_detail_grades: Grades 6+
   tutorial_legolight_string_detail_grades: Grades 6+
   tutorial_alexa_string_detail_grades: Grades 9+
-  tutorial_grokpetmicro_string_detail_grades: Grades 6-8
+  tutorial_grokpetmicro_string_detail_grades: ގްރޭޑް 6-8
   tutorial_pirateplunder_string_detail_grades: Grades 2-8
-  tutorial_cadj_string_detail_grades: Grades 6-8
+  tutorial_cadj_string_detail_grades: ގްރޭޑް 6-8
   tutorial_cacrazy_string_detail_grades: Grades 2-8
   tutorial_cajump_string_detail_grades: Grades 2-8
   tutorial_carest_string_detail_grades: Grades 2-8
@@ -7442,8 +7583,8 @@ dv:
   tutorial_blockscadclock_string_detail_grades: Grades 9+
   tutorial_blockscaddinner_string_detail_grades: Grades 2-5
   tutorial_blockscadicecream_string_detail_grades: Grades 6+
-  tutorial_blockscadpizza_string_detail_grades: Grades 6-8
-  tutorial_blockscadsugar_string_detail_grades: Grades 6-8
+  tutorial_blockscadpizza_string_detail_grades: ގްރޭޑް 6-8
+  tutorial_blockscadsugar_string_detail_grades: ގްރޭޑް 6-8
   tutorial_bsgridlight_string_detail_grades: Grades 2+
   tutorial_bpartscratch_string_detail_grades: Grades 6+
   tutorial_bpartvid_string_detail_grades: Grades 6+
@@ -7454,11 +7595,11 @@ dv:
   tutorial_bpmathscratch_string_detail_grades: Grades 2-5
   tutorial_bpmathvid_string_detail_grades: Grades 6+
   tutorial_bpmlkscratch_string_detail_grades: Grades 2-8
-  tutorial_bpmlkvid_string_detail_grades: Grades 6-8
+  tutorial_bpmlkvid_string_detail_grades: ގްރޭޑް 6-8
   tutorial_bpsafetyscratch_string_detail_grades: Grades 2-5
-  tutorial_bpsafetyvid_string_detail_grades: Grades 6-8
+  tutorial_bpsafetyvid_string_detail_grades: ގްރޭޑް 6-8
   tutorial_bpsciencescratch_string_detail_grades: Grades 2-5
-  tutorial_bpsciencevid_string_detail_grades: Grades 6-8
+  tutorial_bpsciencevid_string_detail_grades: ގްރޭޑް 6-8
   tutorial_bptechscratch_string_detail_grades: Grades 6+
   tutorial_bptechvid_string_detail_grades: Grades 6+
   tutorial_caflags_string_detail_grades: Grades 6+
@@ -7484,7 +7625,7 @@ dv:
   tutorial_sushicards_string_detail_grades: Grades 2-8
   tutorial_codesparkcreate_string_detail_grades: Pre-reader - Grade 5
   tutorial_hardvsoft_string_detail_grades: Pre-reader - Grade 5
-  tutorial_codestersecard_string_detail_grades: Grades 6-8
+  tutorial_codestersecard_string_detail_grades: ގްރޭޑް 6-8
   tutorial_codesterslogo_string_detail_grades: Grades 6+
   tutorial_codesterstshirt_string_detail_grades: Grades 6+
   tutorial_codewards_string_detail_grades: Grades 2-8
@@ -7525,7 +7666,7 @@ dv:
   tutorial_talktome_string_detail_grades: Grades 6+
   tutorial_mobilecspmap_string_detail_grades: Grades 6+
   tutorial_ozorandom_string_detail_grades: Grades 2+
-  tutorial_ozotroll_string_detail_grades: Grades 6-8
+  tutorial_ozotroll_string_detail_grades: ގްރޭޑް 6-8
   tutorial_peblioart_string_detail_grades: Grades 9+
   tutorial_astropi_string_detail_grades: Grades 6+
   tutorial_rgart_string_detail_grades: Grades 2-5
@@ -7542,7 +7683,7 @@ dv:
   tutorial_spherocomm_string_detail_grades: Grades 2-8
   tutorial_spherocommunity_string_detail_grades: Grades 2-5
   tutorial_spherofunctions_string_detail_grades: Grades 6+
-  tutorial_spheroinfrared_string_detail_grades: Grades 6-8
+  tutorial_spheroinfrared_string_detail_grades: ގްރޭޑް 6-8
   tutorial_spherolightsensor_string_detail_grades: Grades 2-8
   tutorial_spheromansion_string_detail_grades: Grades 2-8
   tutorial_roadblocks_string_detail_grades: Grades 2-8
@@ -7585,7 +7726,7 @@ dv:
   tutorial_microsoftarcade_string_detail_grades: Grades 2+
   tutorial_csfirstunplugged_string_detail_grades: Grades 2-8
   tutorial_toxicodepython_string_detail_grades: Grades 6+
-  tutorial_codecombatozaria_string_detail_grades: Grades 6-8
+  tutorial_codecombatozaria_string_detail_grades: ގްރޭޑް 6-8
   tutorial_vidcodedate_string_detail_grades: Grades 6+
   tutorial_codemonkeyspace_string_detail_grades: Grades 2-8
   tutorial_codespeakhappy_string_detail_grades: Grades 2-8
@@ -7623,11 +7764,11 @@ dv:
   tutorial_codespeaktime_string_detail_grades: Grades 2-8
   tutorial_itchwebcam_string_detail_grades: Grades 6+
   tutorial_itchball_string_detail_grades: Grades 2-8
-  tutorial_ttrace_string_detail_grades: Grades 6-8
+  tutorial_ttrace_string_detail_grades: ގްރޭޑް 6-8
   tutorial_plethora_string_detail_grades: Grades 2+
   tutorial_educodesecret_string_detail_grades: Grades 6+
   tutorial_itchshapes_string_detail_grades: Grades 6+
-  tutorial_codeguppytext_string_detail_grades: Grades 6-8
+  tutorial_codeguppytext_string_detail_grades: ގްރޭޑް 6-8
   tutorial_vidcodeplastiche_string_detail_grades: Grades 6+
   tutorial_educativechatbot_string_detail_grades: Grades 9+
   tutorial_educodebasics_string_detail_grades: Grades 6+
@@ -7635,9 +7776,9 @@ dv:
   tutorial_htmlacademyphp_string_detail_grades: Grades 6+
   tutorial_gamefrootdistance_string_detail_grades: Grades 2+
   tutorial_codesterscovid_string_detail_grades: 'Grades 6-8 '
-  tutorial_ttbunker_string_detail_grades: Grades 6-8
+  tutorial_ttbunker_string_detail_grades: ގްރޭޑް 6-8
   tutorial_cuttle_string_detail_grades: Grades 6+
-  tutorial_bsdjokes_string_detail_grades: Grades 6-8
+  tutorial_bsdjokes_string_detail_grades: ގްރޭޑް 6-8
   tutorial_rptree_string_detail_grades: Grades 6+
   tutorial_codestersunity_string_detail_grades: Grades 6+
   tutorial_codesterssoccer_string_detail_grades: Grades 6+
@@ -7646,13 +7787,13 @@ dv:
   tutorial_cafarming_string_detail_grades: Grades 2-8
   tutorial_blocksmithyeti_string_detail_grades: Grades 9+
   tutorial_codecapture_string_detail_grades: Grades 6+
-  tutorial_codehslitter_string_detail_grades: Grades 6-8
-  tutorial_bsdocean_string_detail_grades: Grades 6-8
+  tutorial_codehslitter_string_detail_grades: ގްރޭޑް 6-8
+  tutorial_bsdocean_string_detail_grades: ގްރޭޑް 6-8
   tutorial_itchplatformer_string_detail_grades: Grades 6+
   tutorial_codejika_string_detail_grades: Grades 6+
-  tutorial_gamefrootclicker_string_detail_grades: Grades 6-8
-  tutorial_rmagicequity_string_detail_grades: Grades 6-8
-  tutorial_ttfreestyle_string_detail_grades: Grades 6-8
+  tutorial_gamefrootclicker_string_detail_grades: ގްރޭޑް 6-8
+  tutorial_rmagicequity_string_detail_grades: ގްރޭޑް 6-8
+  tutorial_ttfreestyle_string_detail_grades: ގްރޭޑް 6-8
   tutorial_ozobotcolor2_string_detail_grades: Grades 2+
   tutorial_ozobotcolor3_string_detail_grades: Grades 2+
   tutorial_clcarbon_string_detail_grades: Grades 6+
@@ -7677,8 +7818,8 @@ dv:
   tutorial_hellorubycsin60_string_detail_grades: Pre-reader - Grade 5
   tutorial_clfashion1_string_detail_grades: Grades 6+
   tutorial_irobottraffic_string_detail_grades: Grades 2-5
-  tutorial_edisonmystery_string_detail_grades: Grades 6-8
-  tutorial_microbitseaturtles_string_detail_grades: Grades 6-8
+  tutorial_edisonmystery_string_detail_grades: ގްރޭޑް 6-8
+  tutorial_microbitseaturtles_string_detail_grades: ގްރޭޑް 6-8
   tutorial_ozobotknow_string_detail_grades: Grades 2+
   tutorial_imagilabs_string_detail_grades: Grades 2-8
   tutorial_irobotsimulator_string_detail_grades: Grades 2-8
@@ -7688,14 +7829,14 @@ dv:
   tutorial_ozobotnouns_string_detail_grades: Grades 2-5
   tutorial_nasa3d_string_detail_grades: Grades 6+
   tutorial_blupants_string_detail_grades: Grades 6+
-  tutorial_legodance_string_detail_grades: Grades 6-8
+  tutorial_legodance_string_detail_grades: ގްރޭޑް 6-8
   tutorial_nearpodcoding_string_detail_grades: Grades 9+
   tutorial_kcjplastic_string_detail_grades: Grades 2+
   tutorial_legojourney_string_detail_grades: Grades 2-8
   tutorial_legohopper_string_detail_grades: Grades 2-8
   tutorial_catrobatembroidery_string_detail_grades: Grades 6+
   tutorial_irobotphone_string_detail_grades: Grades 2-8
-  tutorial_codeguppydraw_string_detail_grades: Grades 6-8
+  tutorial_codeguppydraw_string_detail_grades: ގްރޭޑް 6-8
   tutorial_codejumper_string_detail_grades: Grades 2-8
   tutorial_meeempathy_string_detail_grades: Grades 2+
   tutorial_dance2019_string_platforms: All modern browsers, Android tablet, iPad,
@@ -10452,7 +10593,7 @@ dv:
   tutorial_hyperpadpong_string_detail_grades: Grades 9+
   tutorial_tynkerland_string_detail_grades: Grades 2-8
   tutorial_trinketgirl_string_detail_grades: Grades 6+
-  tutorial_rpimosquito_string_detail_grades: Grades 6-8
+  tutorial_rpimosquito_string_detail_grades: ގްރޭޑް 6-8
   tutorial_tynkermars_string_detail_grades: Grades 6+
   tutorial_cityx_string_detail_grades: Grades 6+
   tutorial_vidcodemap_string_detail_grades: Grades 6+
@@ -10464,8 +10605,8 @@ dv:
   tutorial_kanoart_string_detail_grades: Grades 2-5
   tutorial_dragonscript_string_detail_grades: Grades 9+
   tutorial_uwcloud_string_detail_grades: Grades 2+
-  tutorial_htmlmuffin_string_detail_grades: Grades 6-8
-  tutorial_microsoftpizza_string_detail_grades: Grades 6-8
+  tutorial_htmlmuffin_string_detail_grades: ގްރޭޑް 6-8
+  tutorial_microsoftpizza_string_detail_grades: ގްރޭޑް 6-8
   tutorial_stemc_blckhole_string_detail_grades: Grades 9+
   tutorial_careconfigure_string_detail_grades: Grades 6+
   tutorial_rpiscratch_string_detail_grades: Grades 2-5
@@ -10474,10 +10615,10 @@ dv:
   tutorial_ttpassage_string_detail_grades: Grades 2-8
   tutorial_tynkerhtmlen_string_detail_grades: Grades 2+
   tutorial_ttfrog_string_detail_grades: Grades 2-8
-  tutorial_codemojijava_string_detail_grades: Grades 6-8
+  tutorial_codemojijava_string_detail_grades: ގްރޭޑް 6-8
   tutorial_ccfirewall_string_detail_grades: Grades 6+
-  tutorial_htmljs_string_detail_grades: Grades 6-8
-  tutorial_ttaqueducts_string_detail_grades: Grades 6-8
+  tutorial_htmljs_string_detail_grades: ގްރޭޑް 6-8
+  tutorial_ttaqueducts_string_detail_grades: ގްރޭޑް 6-8
   tutorial_vtgame_string_detail_grades: Grades 6+
   tutorial_baroborav_string_detail_grades: Grades 6+
   tutorial_baroboobstacle_string_detail_grades: Grades 2+
@@ -10512,8 +10653,8 @@ dv:
   tutorial_tcadloops_string_detail_grades: Grades 5-6
   tutorial_phidgets_string_detail_grades: Grades 9+
   tutorial_modvariables_string_detail_grades: Grades 6+
-  tutorial_codestersmicro_string_detail_grades: Grades 6-8
-  tutorial_codestersdata_string_detail_grades: Grades 6-8
+  tutorial_codestersmicro_string_detail_grades: ގްރޭޑް 6-8
+  tutorial_codestersdata_string_detail_grades: ގްރޭޑް 6-8
   tutorial_ikodexmas_string_detail_grades: Grades 2-5
   tutorial_rpisensehat_string_detail_grades: Grades 6+
   tutorial_mee_string_detail_grades: Grades 2+
@@ -10843,7 +10984,7 @@ dv:
   tutorial_cacloud_name: Operation Cloud
   tutorial_blocksmithbot_name: Bot is sus?!
   tutorial_hatchmario_name: 'Mario''s Secret Adventure: Build Your Own 3D Mario Game'
-  tutorial_microsoftforest_name: Save the Forest!
+  tutorial_microsoftforest_name: Save the Forest with MakeCode Arcade
   tutorial_blackbirdscreen_name: Screen Saver
   tutorial_toxicodecompute2_name: Discover Python with Compute it
   tutorial_minecrafttimecraft_name: Minecraft Timecraft
@@ -11369,7 +11510,7 @@ dv:
   tutorial_cacloud_string_detail_grades: Grades 6+
   tutorial_blocksmithbot_string_detail_grades: Grades 2-8
   tutorial_hatchmario_string_detail_grades: Grades 2+
-  tutorial_microsoftforest_string_detail_grades: Grades 2+
+  tutorial_microsoftforest_string_detail_grades: Grades 5+
   tutorial_blackbirdscreen_string_detail_grades: Grades 6+
   tutorial_toxicodecompute2_string_detail_grades: Grades 2+
   tutorial_minecrafttimecraft_string_detail_grades: Grades 2+
@@ -11391,7 +11532,7 @@ dv:
   tutorial_creaticode_string_detail_grades: Grades 6+
   tutorial_kcjhockey_string_detail_grades: Grades 2+
   tutorial_ttdungeon_string_detail_grades: Grades 6+
-  tutorial_ccai_string_detail_grades: Grades 6-8
+  tutorial_ccai_string_detail_grades: ގްރޭޑް 6-8
   tutorial_bsdai_string_detail_grades: Grades 6+
   tutorial_stemdata_string_detail_grades: Grades 9+
   tutorial_thunkableinfo_string_detail_grades: Grades 6+
@@ -11403,7 +11544,7 @@ dv:
   tutorial_ttsprouts_string_detail_grades: Grades 2+
   tutorial_ttmaze_string_detail_grades: Grades 6+
   tutorial_codetribe_string_detail_grades: Grades 2-8
-  tutorial_ttcanyon_string_detail_grades: Grades 6-8
+  tutorial_ttcanyon_string_detail_grades: ގްރޭޑް 6-8
   tutorial_kcjxtrail_string_detail_grades: Grades 2-8
   tutorial_codespeakroad_string_detail_grades: Grades 2-8
   tutorial_educodelair_string_detail_grades: Grades 6+
@@ -11412,7 +11553,7 @@ dv:
   tutorial_educodeforest_string_detail_grades: Grades 6+
   tutorial_educodehorus_string_detail_grades: Grades 6+
   tutorial_codespeakpokemon_string_detail_grades: Grades 6+
-  tutorial_stemholiday_string_detail_grades: Grades 6-8
+  tutorial_stemholiday_string_detail_grades: ގްރޭޑް 6-8
   tutorial_codespeakpixel_string_detail_grades: Grades 6+
   tutorial_codespellsnexus_string_detail_grades: Grades 6+
   tutorial_carnegieslime_string_detail_grades: Grades 2-8
@@ -11433,7 +11574,7 @@ dv:
   tutorial_spheroinout_string_detail_grades: Pre-reader - Grade 5
   tutorial_edisonblueprint_string_detail_grades: Grades 6+
   tutorial_edisonmaze_string_detail_grades: Grades 2-8
-  tutorial_milnefunctions_string_detail_grades: Grades 6-8
+  tutorial_milnefunctions_string_detail_grades: ގްރޭޑް 6-8
   tutorial_sasmap_string_detail_grades: Grades 2-5
   tutorial_firstrobotics_string_detail_grades: Grades 6+
   tutorial_sasdata_string_detail_grades: Grades 2+
@@ -11530,8 +11671,9 @@ dv:
   tutorial_ai4alldance_string_platforms: All modern browsers
   tutorial_ai4allneural_string_platforms: All modern browsers
   tutorial_spheroinout_string_platforms: Unplugged
-  tutorial_edisonblueprint_string_platforms: All modern browsers
-  tutorial_edisonmaze_string_platforms: All modern browsers
+  tutorial_edisonblueprint_string_platforms: All modern browsers, Android tablet,
+    iPad
+  tutorial_edisonmaze_string_platforms: All modern browsers, Android tablet, iPad
   tutorial_milnefunctions_string_platforms: All modern browsers, Screen reader
   tutorial_sasmap_string_platforms: All modern browsers, iPad, Screen reader
   tutorial_firstrobotics_string_platforms: All modern browsers
@@ -12212,23 +12354,23 @@ dv:
     you can share while you're networking with people who can help or guide you in
     your career or college journey.
   tutorial_rpccw_string_detail_grades: Grades 2-5
-  tutorial_rpledfirefly_string_detail_grades: Grades 6-8
+  tutorial_rpledfirefly_string_detail_grades: ގްރޭޑް 6-8
   tutorial_rpcharting_string_detail_grades: Grades 9+
   tutorial_rpsolar_string_detail_grades: Grades 9+
-  tutorial_rpwebcards_string_detail_grades: Grades 6-8
-  tutorial_codeclubhworld_string_detail_grades: Grades 6-8
+  tutorial_rpwebcards_string_detail_grades: ގްރޭޑް 6-8
+  tutorial_codeclubhworld_string_detail_grades: ގްރޭޑް 6-8
   tutorial_codeclubspells_string_detail_grades: Grades 2-5
-  tutorial_coderdojoanime_string_detail_grades: Grades 6-8
-  tutorial_coderdojotarget_string_detail_grades: Grades 6-8
+  tutorial_coderdojoanime_string_detail_grades: ގްރޭޑް 6-8
+  tutorial_coderdojotarget_string_detail_grades: ގްރޭޑް 6-8
   tutorial_creaticodescratch_string_detail_grades: Grades 6+
-  tutorial_bbsierpinski_string_detail_grades: Grades 6-8
+  tutorial_bbsierpinski_string_detail_grades: ގްރޭޑް 6-8
   tutorial_bbstopwatch_string_detail_grades: Grades 6+
   tutorial_idrpatterns_string_detail_grades: Pre-reader - Grade 5
   tutorial_idrshapes_string_detail_grades: Pre-reader - Grade 5
   tutorial_edisondetect_string_detail_grades: Grades 2-8
   tutorial_edisonmusical_string_detail_grades: Grades 6+
   tutorial_codemonkeydiglit_string_detail_grades: Grades 2-8
-  tutorial_bsdrockpaper_string_detail_grades: Grades 6-8
+  tutorial_bsdrockpaper_string_detail_grades: ގްރޭޑް 6-8
   tutorial_microbitreaction_string_detail_grades: Grades 2-5
   tutorial_kinderanimal_string_detail_grades: Pre-reader - Grade 5
   tutorial_kindersinger_string_detail_grades: Pre-reader - Grade 5
@@ -12242,19 +12384,19 @@ dv:
   tutorial_spheroincolor_string_detail_grades: Pre-reader - Grade 5
   tutorial_kcjdominos_string_detail_grades: Grades 2-8
   tutorial_spherocolortheory_string_detail_grades: Grades 6+
-  tutorial_codecombatesports_string_detail_grades: Grades 6-8
+  tutorial_codecombatesports_string_detail_grades: ގްރޭޑް 6-8
   tutorial_spherodigdisplay_string_detail_grades: Grades 2-8
   tutorial_spherorvrincolor_string_detail_grades: Grades 6+
   tutorial_clbinary_string_detail_grades: Grades 2+
   tutorial_sascollabcode_string_detail_grades: Pre-reader +
-  tutorial_codecombatgoblins_string_detail_grades: Grades 6-8
+  tutorial_codecombatgoblins_string_detail_grades: ގްރޭޑް 6-8
   tutorial_scratchstorytelling_string_detail_grades: Grades 2-8
   tutorial_crayolasymbols_string_detail_grades: Grades 2+
   tutorial_crayoladrawacode_string_detail_grades: Pre-reader - Grade 8
   tutorial_crayolafollowmycode_string_detail_grades: Pre-reader - Grade 8
-  tutorial_madpicturethis_string_detail_grades: Grades 6-8
+  tutorial_madpicturethis_string_detail_grades: ގްރޭޑް 6-8
   tutorial_mindmakersmaps_string_detail_grades: Grades 9+
-  tutorial_mindmakersjorel_string_detail_grades: Grades 6-8
+  tutorial_mindmakersjorel_string_detail_grades: ގްރޭޑް 6-8
   tutorial_mindmakersroboland_string_detail_grades: Grades 2-5
   tutorial_mindmakersrobolandjr_string_detail_grades: Pre-reader - Grade 1
   tutorial_codehsdraw_string_detail_grades: Grades 2-8
@@ -12263,7 +12405,7 @@ dv:
   tutorial_bekidscoding_string_detail_grades: Pre-reader - Grade 5
   tutorial_rodocodehr_string_detail_grades: Pre-reader - Grade 5
   tutorial_microbitdice_string_detail_grades: Grades 2-5
-  tutorial_madflashcard_string_detail_grades: Grades 6-8
+  tutorial_madflashcard_string_detail_grades: ގްރޭޑް 6-8
   tutorial_madappwars_string_detail_grades: Grades 6+
   tutorial_kodablepuppies_string_detail_grades: Pre-reader - Grade 5
   tutorial_googlesuperhero_string_detail_grades: Grades 2-8
@@ -12275,15 +12417,15 @@ dv:
   tutorial_hatchxrtrex_string_detail_grades: Grades 2+
   tutorial_blocksmithguinea_string_detail_grades: Grades 2+
   tutorial_pickcodeshapes_string_detail_grades: Grades 6+
-  tutorial_codesterssketch_string_detail_grades: Grades 6-8
+  tutorial_codesterssketch_string_detail_grades: ގްރޭޑް 6-8
   tutorial_pickcodechatbot_string_detail_grades: Grades 6+
-  tutorial_codestersfish_string_detail_grades: Grades 6-8
-  tutorial_codestershedgehog_string_detail_grades: Grades 6-8
+  tutorial_codestersfish_string_detail_grades: ގްރޭޑް 6-8
+  tutorial_codestershedgehog_string_detail_grades: ގްރޭޑް 6-8
   tutorial_pickcodeggame_string_detail_grades: Grades 9+
-  tutorial_codestersdino_string_detail_grades: Grades 6-8
+  tutorial_codestersdino_string_detail_grades: ގްރޭޑް 6-8
   tutorial_pickcodemtpaint_string_detail_grades: Grades 9+
   tutorial_microsoftcarnival_string_detail_grades: Grades 2+
-  tutorial_thunkablescavenger_string_detail_grades: Grades 6-8
+  tutorial_thunkablescavenger_string_detail_grades: ގްރޭޑް 6-8
   tutorial_codeillusionfund_string_detail_grades: Pre-reader - Grade 5
   tutorial_codeillusiongoofybeg_string_detail_grades: Grades 2+
   tutorial_codeillusiongoofyint_string_detail_grades: Grades 6+
@@ -12298,10 +12440,10 @@ dv:
   tutorial_intelinofield_string_detail_grades: Pre-reader - Grade 5
   tutorial_cablockchain_string_detail_grades: Grades 6+
   tutorial_nasaparachute_string_detail_grades: Grades 2-5
-  tutorial_nasascratch_string_detail_grades: Grades 6-8
-  tutorial_nasaorbit_string_detail_grades: Grades 6-8
-  tutorial_nasapackage_string_detail_grades: Grades 6-8
-  tutorial_nasalunar_string_detail_grades: Grades 6-8
+  tutorial_nasascratch_string_detail_grades: ގްރޭޑް 6-8
+  tutorial_nasaorbit_string_detail_grades: ގްރޭޑް 6-8
+  tutorial_nasapackage_string_detail_grades: ގްރޭޑް 6-8
+  tutorial_nasalunar_string_detail_grades: ގްރޭޑް 6-8
   tutorial_meeestate_string_detail_grades: Grades 2+
   tutorial_imagipixelart_string_detail_grades: Grades 2-8
   tutorial_kcjhealth_string_detail_grades: Grades 6+
@@ -12777,6 +12919,114 @@ dv:
   accessibility_card_text_10: An adaptation of Code.org’s AP Computer Science Principles
     curriculum using Quorum, an evidence-based language originally designed to provide
     accessibility for blind or visually-impaired students.
+  engineering_hero_heading: Join our engineering team!
+  engineering_hero_desc: As we continue to expand our engineering team, we wanted
+    to share more about our engineering organization at Code.org and some of the unique
+    aspects of working here. If you are interested in applying for one of our roles,
+    we'd love to hear from you!
+  engineering_team_title: Meet the engineering team at Code.org
+  engineering_team_card_text_1: This is (most of) us at our in-person get together
+    during the summer of 2023! This crowd is divided into four sub-teams within our
+    engineering team who work together to build and serve the platform for all our
+    students and teachers.
+  engineering_team_card_text_2: If you are interested in applying for one of our roles,
+    we'd love to hear from you! You can find a list of open positions on our Careers
+    page.
+  engineering_our_team_title: Our engineering team
+  engineering_our_team_desc: 'The engineering team at Code.org is divided into four
+    sub-teams that build and support different areas of our platform:'
+  engineering_our_team_sub_title_1: Student Learning Team
+  engineering_our_team_text_1: Our Student Learning Team owns all our activities (we
+    call them labs) that our students use each day. This team works mostly on front-end
+    tech (we use React and a lot of custom JS) and we have a great working relationship
+    with many partners and open source projects. For example, we use [Google's Blockly](%{youtube_url})
+    for all of our block-based programming. We support students in their learning
+    journey all the way from Kindergarten through 12th grade.
+  engineering_our_team_sub_title_2: Teacher Experience Team
+  engineering_our_team_text_2: Our Teacher Experience Team builds the tools that attract
+    new teachers to Code.org (we call these acquisition products) and develops the
+    platform that empowers our existing teachers to teach our curriculum (our teacher
+    tools). As with our student tools, we rely on React to build our front-end and
+    our server-side components are served using Ruby on Rails.
+  engineering_our_team_sub_title_3: Platform Team
+  engineering_our_team_text_3: Our Platform Team owns core components that serve the
+    needs of our student and teacher teams (for example, authentication and user profile)
+    and also has the mission of reaching students who we can't yet reach. This includes
+    building integrations that connect us with schools that use different Learning
+    Management Systems (LMS) and packaging our curriculum so that it can be used in
+    remote schools who don't have access to reliable internet.
+  engineering_our_team_sub_title_4: Infrastructure Team
+  engineering_our_team_text_4: Our Infrastructure Team provides the backbone for the
+    platform that supports our students and teachers. This includes our hosting infrastructure
+    and related services (we use AWS), data management, security programs, developer
+    and deployment services and much more. This team also owns our scaling and provisioning
+    systems, which are critical during Hour of Code, where we invite every student
+    in the world to complete an hour of coding with us.
+  engineering_faq_question_1: What does Code.org do?
+  engineering_faq_answer_1_a: Code.org is an education innovation nonprofit dedicated
+    to the vision that every student in every school has the opportunity to learn
+    computer science as part of their core K-12 education.
+  engineering_faq_answer_1_b: We expand access to computer science in schools, with
+    a focus on increasing participation by young women and students from other underrepresented
+    groups. The leading provider of K-12 computer science curriculum in the largest
+    school districts in the United States, Code.org also organizes the annual Hour
+    of Code campaign, which has engaged more than 15% of all students in the world.
+  engineering_faq_answer_1_c: Code.org is supported by generous donors including Microsoft,
+    Amazon, Google and many others.
+  engineering_faq_question_2: What is Code.org’s developer experience and tooling?
+  engineering_faq_answer_2: Our developer experience may be different to what you’ve
+    seen in your past roles. Working closely with our product team, we ship to production
+    every weekday and we have a variety of cadences - sometimes you are writing code
+    that goes live that day; other times you are on longer term projects - and while
+    we do follow 2-weekly sprints, we do so in a lightweight way. We index towards
+    getting the right things done the right way vs. taking a purist view of any particular
+    methodology. [All our code](%{code_url}) is open source and we use JIRA and GitHub
+    pull requests to track all of our work items. We also care a lot about quality
+    and testing and are fortunate to have incredible support from [SauceLabs](%{saucelabs_url}),
+    who help us run our suite of UI tests on various student devices (e.g., iPads)
+    in their cloud device farm.
+  engineering_faq_question_3: What is the engineer on-call rotation at Code.org?
+  engineering_faq_answer_3: Our 30+ engineering team shares on-call responsibilities.
+    Each engineer covers a 24-hour shift and uses our escalation paths and playbooks
+    to respond to site outages or other live-site issues. We are proud of our site’s
+    reliability - on average, each engineer is only woken up once per year for issues
+    that are typically quick to resolve. Instead, the "Developer of the Day" usually
+    spends a portion of their workday managing the production deployment and triaging
+    less urgent issues.
+  engineering_faq_question_4: Are you a remote-friendly / WFH organization?
+  engineering_faq_answer_4_a: Yes! In 2019, shortly before the pandemic, Code.org
+    became a remote-first organization. Today, we have engineers in every US time
+    zone and accommodate working hours accordingly. Most of our meetings happen between
+    the hours of 10am and 3pm PT.
+  engineering_faq_answer_4_b: We also recognize the value of in-person time, and every
+    quarter we get together in person, typically in Seattle. Two of these events (we
+    call them Kick-off week and “Codechella”) bring everyone in the organization together
+    in January and June - and the engineering and product teams meet separately in
+    April and October.
+  engineering_faq_answer_4_c: We strongly believe in spending time with our students
+    and teachers, so many of these in-person events include trips into schools and
+    classrooms to gather feedback or play-test our products
+  engineering_faq_question_5: What makes the engineering team at Code.org unique?
+  engineering_faq_answer_5_a: 'Beyond solving challenging technical problems, we have
+    a few things that make our engineering org different from others you may have
+    worked in:'
+  engineering_faq_answer_5_b_1: We all share our passion for our mission.
+  engineering_faq_answer_5_b_2: Each of us is here to support the mission to expand
+    access to computer science for every student across the world. We all have our
+    unique story and perspective about what drives us towards this mission.
+  engineering_faq_answer_5_c_1: We care deeply about each other.
+  engineering_faq_answer_5_c_2: When engineers are struggling with an issue, we step
+    in and we help. One of our principles is that we are hard on problems, but kind
+    to each other. We promote engineers regularly, but we don't prescribe over-engineered
+    solutions just to support someone's promotion path. Instead, we invest in our
+    engineers with a generous professional development budget and access to other
+    learning opportunities.
+  engineering_faq_answer_5_d_1: We work hard, but we set clear boundaries.
+  engineering_faq_answer_5_d_2: While we support students across the world, we hold
+    ourselves accountable for clear boundaries between work and home life. We enjoy
+    no-meetings Wednesdays, taking our PTO (5 weeks total, which includes an org-wide
+    2-week office closure at the end of the year aka Winter Break), half working day
+    on Fridays during the summer aka Summer Fridays, and other generous benefits.
   language_code:
     ar: Arabic
     az: Azerbaijani

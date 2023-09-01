@@ -173,6 +173,8 @@ he:
   grade_level_label_elementary: בית ספר יסודי
   grade_level_label_middle: חטיבת ביניים
   grade_level_label_high: בית ספר תיכון
+  students_label: סטודנטים
+  teachers_label: מורים
   teacher_label_csf: מורה יסודות במדעי המחשב
   teacher_label_csd: מורה לתגליות במדעי המחשב
   teacher_label_csp: מורה לעקרונות CS
@@ -186,7 +188,9 @@ he:
   call_to_action_explore_unit: חקור את היחידה
   call_to_action_explore_curriculum: חקור את תוכנית הלימודים
   call_to_action_explore_curriculum_options: חקור אפשרויות תכנית לימודים
+  call_to_action_explore_lessons: חקור שיעורים
   call_to_action_explore_modules: חקור מודולים
+  call_to_action_explore_module: חקור מודול
   call_to_action_explore_workshops: חקור סדנאות
   call_to_action_explore_course: חקור את הקורס
   call_to_action_explore_courses: חקור קורסים
@@ -233,8 +237,12 @@ he:
   call_to_action_see_module_details: ראה פרטי מודול
   call_to_action_start_modules: התחל מודולים
   call_to_action_see_course_details: ראה פרטי הקורס
+  call_to_action_see_lesson_details: ראה פרטי השיעור
   call_to_action_learn_about_approach: למידע נוסף על הגישה שלנו
   call_to_action_try_java_lab: נסה את מעבדת ג'אווה
+  call_to_action_notify_available: הודע לי כאשר זמין
+  call_to_action_register_early_access: הירשם לגישה מוקדמת
+  call_to_action_open_positions: הצג עמדות פתוחות
   aria_label_call_to_action_afe: למידע נוסף על מהנדס העתיד של אמזון
   aria_label_call_to_action_teaching_csf: התחל את תוכנית הלמידה המקצועית של יסודות
     מדעי המחשב
@@ -299,6 +307,18 @@ he:
   aria_label_call_to_action_csf_course_d: ראה פרטי קורס D
   aria_label_call_to_action_csf_course_e: ראה פרטי קורס E
   aria_label_call_to_action_csf_course_f: ראה פרטי קורס F
+  aria_label_call_to_action_ai_pl_101_videos: צפה ב- AI 101 לסרטוני מורים
+  aria_label_call_to_action_ai_teaching_module: חקור את מודול הוראת AI ולמידת מכונה
+  aria_label_call_to_action_how_ai_works_lesson_01: עיין בפרטי השיעור מבוא ללמידה
+    חישובית
+  aria_label_call_to_action_how_ai_works_lesson_02: עיין בפרטי שיעור ראיית המחשב
+  aria_label_call_to_action_how_ai_works_lesson_03: עיין בפרטי השיעור ברשתות עצביות
+  aria_label_call_to_action_how_ai_works_lesson_04: עיין בפרטי השיעור של צ'אטבוטים
+    ומודלים בשפה גדולה
+  aria_label_call_to_action_how_ai_works_lesson_05: עיין בפרטי השיעור של תמונות גנראטיביות
+  aria_label_call_to_action_how_ai_works_lesson_06: עיין בפרטי שיעור ההטיה האלגוריתמית
+  aria_label_call_to_action_how_ai_works_lesson_07: עיין בפרטי השיעור שלנו בקוד האתיקה
+    של AI
   video_title_professional_learning_program: תוכנית הלמידה המקצועית של Code.org
   curriculum_name_csf: יסודות מדעי המחשב
   curriculum_name_csf_02: כל יסודות CS (קורס A-F)
@@ -404,6 +424,10 @@ he:
   module_label_student_tool: כלי סטודנטים
   module_label_student_product: מוצר
   module_label_student_content_resources: תוכן ומשאבים
+  module_label_new: חדש
+  module_label_coming_soon: בקרוב
+  module_label_video_series: סדרת וידאו
+  module_label_self_paced: מודול בקצב עצמי
   module_ages_5_10: 5-10
   module_ages_11_18: 11-18
   module_ages_7_18: 7-18
@@ -426,9 +450,13 @@ he:
   module_grade_9_12_teachers: 9-12 מורים
   module_level_beginner: למתחילים
   module_level_intermediate: ביניים
+  module_duration_45_mins: 45 דקות
+  module_duration_1_hr: 1 שעה
   module_duration_2_hrs: 2 שעות
   module_duration_3_hrs: 3 שעות
+  module_duration_5_hrs: 5 שעות
   module_duration_8_hrs: 8 שעות
+  module_duration_20_hrs: 20 שעות
   module_duration_35_hrs: 35 שעות
   module_duration_lesson: שיעור
   module_duration_week: שבוע
@@ -496,6 +524,7 @@ he:
   heading_no_devices: אין מכשירים? יש לנו אותך מכוסה
   heading_java_lab: מעבדת ג'אווה
   heading_objects_first: אובייקטים ראשונים
+  heading_these_lessons_will: 'שיעורים אלה יהיו:'
   professional_learning_section_desc: קבל את התמיכה שאתה צריך בזמן שאתה מתכונן ללמד.
     מורים אוהבים את זה, עם למעלה מ -90% מדרגים אותו כהתפתחות המקצועית הטובה ביותר
     אי פעם!
@@ -611,6 +640,10 @@ he:
   ai_curriculum_grades_03: 'רמות כיתה: 3-12'
   ai_curriculum_duration_03: 'משך הפעילות: שעה'
   ai_curriculum_btn_aria_label_03: נסה את פעילות ה- AI לאוקיינוסים
+  ai_curriculum_title_04: איך AI עובד
+  ai_curriculum_desc_04: שיעורים אלה משלימים את סדרת הווידיאו כיצד AI עובד. כל שיעור
+    משויך לסרטון יחיד מהסדרה, צולל עמוק יותר לתוך המושגים שהוצגו בסרטונים.
+  ai_curriculum_btn_aria_label_04: גלה כיצד AI עובד שיעורים
   ai_carousel_heading: 'מה המורים אומרים על AI עם Code.org:'
   ai_carousel_quote_01: שיעור זה גם נתן לתלמידים שלי את ההזדמנות לראות שיש אלמנט של
     דעה במערכות סיווג. מאוחר יותר, כשהתחלנו לראות כיצד הטיה יכולה להסתיים ב- AI, הצלחתי
@@ -625,6 +658,9 @@ he:
   ai_pl_list_04: שקול השלכות בעולם האמיתי של AI ולמידת מכונה.
   ai_pl_list_05: חקור פרויקטים של סוף הפרק.
   ai_pl_duration: 'משך הפעילות: שעתיים'
+  ai_pl_title: הוראת AI ולמידת מכונה
+  ai_pl_desc: מבוא לבינה מלאכותית ולמידת מכונה. הכשר מודל למידת מכונה באמצעות מעבדת
+    AI. ולעסוק באפליקציות למידת מכונה. שקול השלכות בעולם האמיתי של AI ולמידת מכונה.
   ai_video_series_title: איך AI עובד
   ai_video_series_desc: עם הקדמה של מנכ"ל מיקרוסופט, סטיה נדלה, סדרת הסרטונים הקצרים
     הזו תציג בפניכם כיצד בינה מלאכותית עובדת ומדוע היא חשובה. לאחר מכן התעמק בנושאים
@@ -647,6 +683,7 @@ he:
   ai_pl_101_hero_heading: AI 101 למורים
   ai_pl_101_hero_desc: גלה את הפוטנציאל הטרנספורמטיבי של בינה מלאכותית (AI) בחינוך
     עם סדרת הלמידה המקוונת החינמית שלנו למחנכים.
+  ai_pl_101_hero_desc_02: סדרת למידה מקוונת מקיפה למורים.
   ai_pl_101_hero_presented: מוצג על ידי
   ai_pl_101_intro_heading: מהו AI 101 למורים?
   ai_pl_101_intro_text: AI 101 למורים היא סדרת למידה מקצועית מקוונת בחינם לכל מורה
@@ -682,6 +719,82 @@ he:
     ETS מתאימה אישית את חווית הכתיבה על ידי מינוף מודלים מתקדמים של ניקוד ובינה מלאכותית,
     ומסייעת למורים במתן משוב איטרטיבי והערכה מעצבת לאורך כל חווית הכתיבה.'
   ai_pl_101_explore__button_4: כלי חקור
+  ai_pl_101_video_title_1: צ'אט ליד האש עם סאל חאן והאדי פרטובי
+  ai_pl_101_video_desc_1: הצטרף לסאל חאן (אקדמיית חאן) והאדי פרטובי (Code.org) לשיחה
+    על חיבוק בינה מלאכותית בכיתה. צפו לדיון ער הכולל כמה מהנושאים השנויים במחלוקת
+    ביותר סביב AI כיום.
+  ai_pl_101_video_title_2: ביטול מיסטיפיקציה של AI למחנכים
+  ai_pl_101_video_desc_2: היכרות עם היסודות של בינה מלאכותית אשר יצייד אותך עם הידע
+    הבסיסי כדי להבין את ההשפעה העמוקה של AI בחברה שלנו ואת הרלוונטיות הגוברת שלה לתחום
+    החינוך. תוכלו לקבל תובנות מעשיות על מינוף AI למשימות בכיתה, ולחסוך זמן במשימות
+    ניהוליות.
+  ai_pl_101_video_title_3: שינוי למידה עם AI
+  ai_pl_101_video_desc_3: חקור את הצומת של AI וחינוך. מפגש זה בוחן כיצד ניתן לשלב
+    AI עם פדגוגיה כדי לשפר את למידת התלמידים. זהו חובה להשתתף עבור אנשי חינוך המבקשים
+    למנף AI כדי לשנות את שיטות ההוראה שלהם כדי להעשיר את חוויות הלמידה של תלמידיהם.
+  ai_pl_101_video_title_4: הבטחת גישה אחראית ל- AI
+  ai_pl_101_video_desc_4: חקור את השיקולים האתיים ושיטות העבודה המומלצות לשילוב בינה
+    מלאכותית בסביבות חינוכיות. מפגש זה יספק אסטרטגיות קונקרטיות, משאבים ודוגמאות בעולם
+    האמיתי, כולן מכוונות להבנת ההטיות הפוטנציאליות של AI, ואת השיקולים האתיים הנלווים
+    לכך.
+  ai_pl_101_video_title_5: הבאת AI לכיתה
+  ai_pl_101_video_desc_5: מפגש זה מתמקד בהוראה על AI, הערכה ושימוש בכלים חינוכיים
+    של AI, ומינוף AI להערכת תלמידים. עם שילוב עשיר של תיאוריה, דוגמאות מעשיות ומשאבים,
+    היא שואפת להעצים אנשי חינוך לנווט בנוף הבינה המלאכותית ולשפר את חוויות הלמידה
+    של התלמידים.
+  ai_pl_101_video_desc_6: 'למידע נוסף על הטכנולוגיה החדשה המניעה את השינויים הגדולים
+    ב- AI, הכוללת שני סרטונים חדשים במודלים של שפה גדולה (כמו ChatGPT) ו- AI Generative.
+    שמע כיצד הטכנולוגיות החדשות הללו עובדות ישירות מהמומחים: מירה מוראטי, CTO של OpenAI,
+    וכריסטובל ולנצואלה, מנכ"ל RunwayML.'
+  how_ai_works_hero_heading: איך AI עובד
+  how_ai_works_hero_desc: לצלול לתוך העולם של AI עם "איך AI עובד", סדרת הווידאו שלנו
+    ושיעורים נלווים!
+  how_ai_works_intro_desc: סדרה זו של סרטונים קצרים ושיעורים נלווים בכיתה תציג בפניכם
+    ולתלמידיכם כיצד פועלת בינה מלאכותית ומדוע היא חשובה. אתה יכול לבחור שיעורים פרטניים
+    על בסיס נושא, לחקור את כל סדרת הנושאים בכיתה אחת או ללמד את כל 7 השיעורים כדי
+    לצלול עמוק יותר.
+  how_ai_works_intro_list_01: הכירו לכם בינה מלאכותית ולמידת מכונה
+  how_ai_works_intro_list_02: צלול כיצד פועל AI גנראטיבי, כולל מודלים בשפה גדולה (LLM)
+    ויצירת תמונות
+  how_ai_works_intro_list_03: חקור הטיה, אתיקה, פרטיות ושימוש אחראי ב- AI
+  how_ai_works_intro_list_04: גע ביישומי AI בעולם האמיתי, כולל ראייה ממוחשבת
+  how_ai_works_lessons_heading: שיעורי AI לשיעור שלך
+  how_ai_works_lesson_title_01: מבוא ללמידת מכונה
+  how_ai_works_lesson_desc_01: למד על צורה של בינה מלאכותית הנקראת למידת מכונה וכיצד
+    הם יכולים להשתמש בתהליך פתרון הבעיות כדי לסייע באימון רובוט לפתרון בעיות. השתתף
+    בפעילויות למידת מכונה בהן רובוט לומד כיצד לזהות דפוסים בדגים.
+  how_ai_works_lesson_title_02: ראייה ממוחשבת
+  how_ai_works_lesson_desc_02: למד כיצד פועלת ראיית מחשב. צפה בסרטון המסביר ראיית
+    מחשב וכיצד מחשב "רואה". לאחר מכן תכנן אלגוריתם המשתמש ברשת כדי להחליט איזה מספר
+    תצוגת שבעת הקטעים מציגה ולבדוק אותו.
+  how_ai_works_lesson_title_03: רשתות עצביות
+  how_ai_works_lesson_desc_03: למד כיצד פועלות רשתות עצביות. השתמש בווידג'טים כדי
+    לחקור רשתות עצביות בידיים בדרך. צפו בסרטון המסביר רשתות עצביות. לבסוף דנו בצורך
+    בפרספקטיבות מגוונות בעת יצירת מערכות המלצות.
+  how_ai_works_lesson_title_04: צ'אטבוטים ומודלים בשפה גדולה
+  how_ai_works_lesson_desc_04: למד מהו מודל שפה גדולה (LLM) וכיצד הוא פועל, ולאחר
+    מכן השתמש ב- LLM כדי ליצור טקסט משותף עם AI. לבסוף, דנו בשאלה האם LLMs הם אינטליגנטים
+    או יצירתיים או לא.
+  how_ai_works_lesson_title_05: תמונות גנראטיביות
+  how_ai_works_lesson_desc_05: למד כיצד AI יכול ליצור תמונות, ואז חקור יישומון AI
+    דיפוזיה ודון אם המודלים הללו יצירתיים או לא.
+  how_ai_works_lesson_title_06: הטיה אלגוריתמית
+  how_ai_works_lesson_desc_06: תרגל חיתוך תמונות כדי לחשוף את ההטיה העומדת בבסיס אלגוריתם
+    החיתוך בטוויטר, ואז קרא וצפה בסרטון על גילוי האלגוריתם המוטה הזה. לבסוף, דון בדרכים
+    לזהות ולהפחית הטיה באלגוריתמים.
+  how_ai_works_lesson_title_07: קוד האתיקה של AI
+  how_ai_works_lesson_desc_07: ערכו מחקר באמצעות מאמרים וסרטונים החושפים מלכודות אתיות
+    בתחום בינה מלאכותית לפי בחירתם. הרכיב משאב "קוד האתיקה של AI שלנו" לכל הכיתה עבור
+    יוצרי AI ומחוקקים בכל מקום.
+  how_ai_works_lessons_in_a_day_title: איך AI עובד ביום אחד
+  how_ai_works_lessons_in_a_day_desc: יש לך רק יום? יש גם אפשרות להציג את כל הסדרה
+    לסטודנטים ביום אחד. מושלם עבור כל מורה בתחום הנושא המעוניין להכיר לתלמידים AI,
+    או אפילו כשיעור למורה אורח.
+  how_ai_works_lessons_in_a_day_desc_02: הציגו את כל סרטוני "איך AI עובד" ביום אחד.
+    התלמידים עוקבים אחר כל סרטון על ידי התאמת אוצר המילים מהסרטון, ואז עונים על שאלת
+    השתקפות לגבי כל סרטון.
+  how_ai_works_resources_desc: מעוניינים ללמוד עוד על AI? להלן כמה משאבים נוספים שיכולים
+    לעזור להרחיב את הלמידה שלך ואת התלמידים שלך.
   ai_vid_intro_caption: היכרות עם אופן הפעולה של AI
   ai_vid_chatbots_caption: כיצד פועלים צ'אטבוטים ומודלים בשפה גדולה
   ai_vid_creativity_caption: האם ל- AI יש יצירתיות ודמיון?
@@ -965,10 +1078,10 @@ he:
   teach_page_additional_materials_list_heading_03: כרזות כיתה
   teach_page_additional_materials_list_desc_03: הדפס פוסטרים אלה של מודלים לחיקוי
     מגוונים לתלייה בבית הספר שלך ולעורר את התלמידים שלך לנסות מדעי המחשב.
-  csp_page_top_desc: Free set of elementary curricula that introduces students to
-    the foundational concepts of computer science and challenges them to explore how
-    computing and technology can impact the world. Can be taught as an introductory
-    class and as an AP course.
+  csp_page_top_desc: Free year-long curriculum that introduces students to the foundational
+    concepts of computer science and challenges them to explore how computing and
+    technology can impact the world. Can be taught as an introductory class and as
+    an AP course.
   csp_page_intro_heading: Free, AP® CSP endorsed, high school introductory course
   csp_page_intro_list_01: Culturally responsive pedagogy
   csp_page_intro_list_02: Real-world problem investigation
@@ -1484,6 +1597,7 @@ he:
   not_found_title: הדף לא נמצא
   not_found_desc: הדף המבוקש לא נמצא
   not_found_instructions: בדוק את כתובת העמוד או בחר קישור מהרשימה הבאה.
+  company_code_dot_org: קוד.org
   company_4-H: פיתוח נוער 4-H
   company_asa: ברית אחה"צ
   company_asos: אסוס
@@ -1536,6 +1650,7 @@ he:
   company_evsd: מחוז בית הספר איסט ואלי
   company_eastonvilleschooldistrict: מחוז בית הספר איטונוויל
   company_enumclawschooldistrict: מחוז בית הספר אנומקלו
+  company_ets: ETS
   company_everettsd: בתי ספר ציבוריים של אוורט
   company_fsusd: מחוז בית הספר המאוחד פיירפילד-סויסון
   company_fayettecountypublicschools: בתי ספר ציבוריים במחוז פייט
@@ -1557,6 +1672,7 @@ he:
   company_houstonisd: מחוז בית הספר העצמאי של יוסטון
   company_hcpss: בתי ספר ציבוריים במחוז הווארד
   company_idla: האקדמיה ללמידה דיגיטלית באיידהו
+  company_iste: ISTE
   company_janesvilleschooldistrict: מחוז בית הספר ג'נסוויל
   company_johnstoncountyschools: בתי ספר במחוז ג'ונסטון
   company_lps: בית הספר הציבורי לינקולן
@@ -10735,8 +10851,10 @@ he:
   tutorial_ai4alldance_string_platforms: כל הדפדפנים המודרניים
   tutorial_ai4allneural_string_platforms: כל הדפדפנים המודרניים
   tutorial_spheroinout_string_platforms: מנותק
-  tutorial_edisonblueprint_string_platforms: כל הדפדפנים המודרניים
-  tutorial_edisonmaze_string_platforms: כל הדפדפנים המודרניים
+  tutorial_edisonblueprint_string_platforms: כל גרסאות הדפדפנים המתקדמים, טאבלט אנדרואיד
+    ואייפד
+  tutorial_edisonmaze_string_platforms: כל גרסאות הדפדפנים המתקדמים, טאבלט אנדרואיד
+    ואייפד
   tutorial_milnefunctions_string_platforms: כל הדפדפנים המודרניים, קורא מסך
   tutorial_sasmap_string_platforms: כל הדפדפנים המודרניים, iPad, קורא מסך
   tutorial_firstrobotics_string_platforms: כל הדפדפנים המודרניים
@@ -11912,6 +12030,102 @@ he:
   accessibility_card_text_10: עיבוד לתכנית הלימודים של עקרונות מדעי המחשב AP של Code.org
     באמצעות Quorum, שפה מבוססת ראיות שנועדה במקור לספק נגישות לתלמידים עיוורים או
     לקויי ראייה.
+  engineering_hero_heading: הצטרפו לצוות ההנדסה שלנו!
+  engineering_hero_desc: ככל שאנו ממשיכים להרחיב את צוות ההנדסה שלנו, רצינו לשתף יותר
+    על ארגון ההנדסה שלנו ב- Code.org וכמה מההיבטים הייחודיים של העבודה כאן. אם אתה
+    מעוניין להגיש מועמדות לאחד התפקידים שלנו, נשמח לשמוע ממך!
+  engineering_team_title: הכירו את צוות ההנדסה ב- Code.org
+  engineering_team_card_text_1: זהו (רובנו) במפגש האישי שלנו במהלך קיץ 2023! קהל זה
+    מחולק לארבעה צוותי משנה בצוות ההנדסה שלנו שעובדים יחד כדי לבנות ולשרת את הפלטפורמה
+    לכל התלמידים והמורים שלנו.
+  engineering_team_card_text_2: אם אתה מעוניין להגיש מועמדות לאחד התפקידים שלנו, נשמח
+    לשמוע ממך! תוכל למצוא רשימה של משרות פתוחות בדף הקריירה שלנו.
+  engineering_our_team_title: צוות ההנדסה שלנו
+  engineering_our_team_desc: 'צוות ההנדסה ב- Code.org מחולק לארבעה צוותי משנה הבונים
+    ותומכים בתחומים שונים בפלטפורמה שלנו:'
+  engineering_our_team_sub_title_1: צוות הלמידה של התלמידים
+  engineering_our_team_text_1: צוות הלמידה של הסטודנטים שלנו הוא הבעלים של כל הפעילויות
+    שלנו (אנו קוראים להן מעבדות) שהתלמידים שלנו משתמשים בהן מדי יום. צוות זה עובד
+    בעיקר על טכנולוגיה חזיתית (אנו משתמשים ב- React והרבה JS מותאמים אישית) ויש לנו
+    יחסי עבודה נהדרים עם שותפים רבים ופרויקטים בקוד פתוח. לדוגמה, אנו משתמשים ב- [Google
+    Blockly] (%{youtube_url}) עבור כל התכנות מבוסס הבלוקים שלנו. אנו תומכים בתלמידים
+    במסע הלמידה שלהם כל הדרך מהגן ועד כיתה י"ב.
+  engineering_our_team_sub_title_2: צוות התנסות במורה
+  engineering_our_team_text_2: צוות חווית המורים שלנו בונה את הכלים שמושכים מורים
+    חדשים ל- Code.org (אנו קוראים למוצרי רכישה אלה) ומפתח את הפלטפורמה המעצימה את
+    המורים הקיימים שלנו ללמד את תוכנית הלימודים שלנו (כלי המורים שלנו). בדומה לכלי
+    הסטודנטים שלנו, אנו מסתמכים על React כדי לבנות את הקצה הקדמי שלנו והרכיבים בצד
+    השרת שלנו מוגשים באמצעות Ruby on Rails.
+  engineering_our_team_sub_title_3: צוות פלטפורמה
+  engineering_our_team_text_3: צוות הפלטפורמה שלנו מחזיק ברכיבי ליבה המשרתים את הצרכים
+    של צוותי התלמידים והמורים שלנו (למשל, אימות ופרופיל משתמש) ויש לו גם את המשימה
+    להגיע לתלמידים שעדיין לא נוכל להגיע אליהם. זה כולל בניית אינטגרציות שמחברות אותנו
+    עם בתי ספר המשתמשים במערכות ניהול למידה שונות (LMS) ואריזת תוכנית הלימודים שלנו
+    כך שניתן יהיה להשתמש בה בבתי ספר מרוחקים שאין להם גישה לאינטרנט אמין.
+  engineering_our_team_sub_title_4: צוות תשתיות
+  engineering_our_team_text_4: צוות התשתיות שלנו מספק את עמוד השדרה לפלטפורמה התומכת
+    בתלמידים ובמורים שלנו. זה כולל את תשתית האחסון והשירותים הנלווים שלנו (אנו משתמשים
+    ב- AWS), ניהול נתונים, תוכניות אבטחה, שירותי מפתחים ופריסה ועוד. צוות זה מחזיק
+    גם במערכות קנה המידה וההקצאה שלנו, שהן קריטיות במהלך שעת הקוד, שם אנו מזמינים
+    כל תלמיד בעולם להשלים איתנו שעה של קידוד.
+  engineering_faq_question_1: מה עושה Code.org?
+  engineering_faq_answer_1_a: Code.org היא עמותה לחדשנות חינוכית המוקדשת לחזון שלכל
+    תלמיד בכל בית ספר יש את ההזדמנות ללמוד מדעי המחשב כחלק מחינוך הליבה שלהם K-12.
+  engineering_faq_answer_1_b: אנו מרחיבים את הגישה למדעי המחשב בבתי הספר, תוך התמקדות
+    בהגדלת ההשתתפות של נשים צעירות ותלמידים מקבוצות אחרות שאינן מיוצגות. Code.org,
+    הספקית המובילה של תכנית הלימודים במדעי המחשב K-12 במחוזות בתי הספר הגדולים בארצות
+    הברית, מארגנת גם את קמפיין Hour of Code השנתי, שעסק ביותר מ -15% מכלל התלמידים
+    בעולם.
+  engineering_faq_answer_1_c: Code.org נתמך על ידי תורמים נדיבים כולל מיקרוסופט, אמזון,
+    גוגל ורבים אחרים.
+  engineering_faq_question_2: מהו הניסיון והכלים למפתחים של Code.org?
+  engineering_faq_answer_2: Our developer experience may be different to what you’ve
+    seen in your past roles. Working closely with our product team, we ship to production
+    every weekday and we have a variety of cadences - sometimes you are writing code
+    that goes live that day; other times you are on longer term projects - and while
+    we do follow 2-weekly sprints, we do so in a lightweight way. We index towards
+    getting the right things done the right way vs. taking a purist view of any particular
+    methodology. [All our code](%{code_url}) is open source and we use JIRA and GitHub
+    pull requests to track all of our work items. We also care a lot about quality
+    and testing and are fortunate to have incredible support from [SauceLabs](%{saucelabs_url}),
+    who help us run our suite of UI tests on various student devices (e.g., iPads)
+    in their cloud device farm.
+  engineering_faq_question_3: מהו סיבוב המהנדס בכוננות ב- Code.org?
+  engineering_faq_answer_3: צוות ההנדסה שלנו 30+ חולק אחריות תורנית. כל מהנדס מכסה
+    משמרת של 24 שעות ומשתמש בנתיבי ההסלמה ובספרי המשחקים שלנו כדי להגיב להפסקות אתרים
+    או לבעיות אחרות באתר חי. אנו גאים באמינות האתר שלנו - בממוצע, כל מהנדס מתעורר
+    רק פעם בשנה בגלל בעיות שבדרך כלל מהירות לפתור. במקום זאת, "מפתח היום" בדרך כלל
+    מבלה חלק מיום העבודה שלו בניהול פריסת הייצור ומשלב בעיות פחות דחופות.
+  engineering_faq_question_4: האם אתה ארגון ידידותי לרחוק/WFH?
+  engineering_faq_answer_4_a: כן! בשנת 2019, זמן קצר לפני המגיפה, Code.org הפך לארגון
+    מרוחק ראשון. כיום יש לנו מהנדסים בכל אזור זמן בארה"ב ומתאימים את שעות העבודה בהתאם.
+    רוב הפגישות שלנו מתרחשות בין השעות 10:00-15:00 PT.
+  engineering_faq_answer_4_b: אנו מכירים גם בערך הזמן האישי, ובכל רבעון אנו נפגשים
+    באופן אישי, בדרך כלל בסיאטל. שניים מהאירועים הללו (אנו קוראים להם שבוע בעיטת הפתיחה
+    ו- "Codechella") מפגישים את כולם בארגון בינואר ויוני - וצוותי ההנדסה והמוצרים
+    נפגשים בנפרד באפריל ובאוקטובר.
+  engineering_faq_answer_4_c: אנו מאמינים מאוד בבילוי עם התלמידים והמורים שלנו, ולכן
+    רבים מהאירועים האישיים הללו כוללים טיולים לבתי ספר וכיתות כדי לאסוף משוב או לבחון
+    את המוצרים שלנו
+  engineering_faq_question_5: מה מייחד את צוות ההנדסה ב- Code.org?
+  engineering_faq_answer_5_a: 'מעבר לפתרון בעיות טכניות מאתגרות, יש לנו כמה דברים
+    שהופכים את הארגון ההנדסי שלנו לשונה מאחרים שאולי עבדת בהם:'
+  engineering_faq_answer_5_b_1: כולנו חולקים את התשוקה שלנו למשימה שלנו.
+  engineering_faq_answer_5_b_2: כל אחד מאיתנו נמצא כאן כדי לתמוך במשימה להרחיב את
+    הגישה למדעי המחשב עבור כל סטודנט ברחבי העולם. לכולנו יש את הסיפור והפרספקטיבה
+    הייחודיים שלנו לגבי מה שמניע אותנו לקראת משימה זו.
+  engineering_faq_answer_5_c_1: אכפת לנו מאוד אחד מהשני.
+  engineering_faq_answer_5_c_2: כאשר מהנדסים נאבקים עם בעיה, אנחנו נכנסים ואנחנו עוזרים.
+    אחד העקרונות שלנו הוא שאנחנו קשים בבעיות, אבל אדיבים זה לזה. אנו מקדמים מהנדסים
+    באופן קבוע, אך איננו רושמים פתרונות מהונדסים יתר על המידה רק כדי לתמוך בנתיב הקידומים
+    של מישהו. במקום זאת, אנו משקיעים במהנדסים שלנו עם תקציב פיתוח מקצועי נדיב וגישה
+    להזדמנויות למידה אחרות.
+  engineering_faq_answer_5_d_1: אנחנו עובדים קשה, אבל אנחנו מציבים גבולות ברורים.
+  engineering_faq_answer_5_d_2: בעוד אנו תומכים בסטודנטים ברחבי העולם, אנו מחזיקים
+    את עצמנו אחראים לגבולות ברורים בין עבודה לחיי הבית. אנו נהנים מימי רביעי ללא פגישות,
+    ולוקחים את ה- PTO שלנו (5 שבועות בסך הכל, הכולל סגירת משרדים בת שבועיים בסוף השנה
+    המכונה חופשת חורף), חצי יום עבודה בימי שישי במהלך הקיץ המכונה ימי שישי בקיץ, והטבות
+    נדיבות אחרות.
   language_code:
     ar: ערבית
     az: אזרבייז'ני

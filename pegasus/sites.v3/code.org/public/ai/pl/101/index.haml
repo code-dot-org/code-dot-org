@@ -8,15 +8,6 @@ theme: responsive_full_width
 %link{href: "/css/generated/design-system-pegasus.css", rel: "stylesheet"}
 %link{href: "/css/generated/ai-pl-101-styles.css", rel: "stylesheet"}
 
--# FontAwesome icons
-- icon_sparkles = "fa-solid fa-sparkles"
-- icon_lightbulb = "fa-solid fa-lightbulb"
-- icon_magnifying_glass = "fa-solid fa-magnifying-glass"
-- icon_book = "fa-solid fa-book"
-- icon_person_chalkboard = "fa-solid fa-person-chalkboard"
-- icon_video = "fa-solid fa-video"
-- icon_megaphone = "fa-solid fa-megaphone"
-
 %section.hero-banner-basic.hero-ai-pl-webinar{style: "display: block !important"}
   .wrapper
     .text-wrapper.col-75
@@ -29,6 +20,8 @@ theme: responsive_full_width
           %img{src: "/images/ai/pl/101/ets--w.png", height: "26px", alt: "ETS"}
           %img{src: "/images/ai/pl/101/iste--w.png", height: "18px", alt: "ISTE"}
           %img{src: "/images/ai/pl/101/khan--w.png", height: "20px", alt: "Khan Academy"}
+      %a.link-button.white{href: "#newsletter-signup"}
+        =hoc_s(:call_to_action_register_early_access)
 
 %section.bg-neutral-light.video-101.bg-neutral-light{id: "ai-pl-callout"}
   .wrapper

@@ -572,6 +572,24 @@ class UserTest < ActiveSupport::TestCase
     end
   end
 
+  test "saving user strips display name and family name" do
+    user = create :student, name: '  test name  ', family_name: '  test fam name  '
+    user.save
+    user.reload
+    assert_equal user.name, 'test name'
+    assert_equal user.family_name, 'test fam name'
+
+    user.name = '  test name 2  '
+    user.save
+    user.reload
+    assert_equal user.name, 'test name 2'
+
+    user.family_name = '  test fam name 2  '
+    user.save
+    user.reload
+    assert_equal user.family_name, 'test fam name 2'
+  end
+
   test "can create a user with age" do
     Timecop.travel Time.local(2013, 9, 1, 12, 0, 0) do
       assert_creates(User) do
@@ -3477,7 +3495,7 @@ class UserTest < ActiveSupport::TestCase
       courses_and_scripts = @student.recent_student_courses_and_units(false)
       assert_equal 2, courses_and_scripts.length
 
-      assert_equal ['Computer Science Discoveries', 'Unit Other'], courses_and_scripts.map {|cs| cs[:title]}
+      assert_equal(['Computer Science Discoveries', 'Unit Other'], courses_and_scripts.map {|cs| cs[:title]})
     end
 
     test "it does not return pl scripts that are in returned pl courses" do
@@ -3487,7 +3505,7 @@ class UserTest < ActiveSupport::TestCase
       courses_and_scripts = @teacher.recent_pl_courses_and_units(false)
       assert_equal 2, courses_and_scripts.length
 
-      assert_equal ['Computer Science Discoveries PL Course', 'PL Unit Other'], courses_and_scripts.map {|cs| cs[:title]}
+      assert_equal(['Computer Science Discoveries PL Course', 'PL Unit Other'], courses_and_scripts.map {|cs| cs[:title]})
     end
 
     test "it optionally does not return primary course in returned student courses" do
@@ -3509,7 +3527,7 @@ class UserTest < ActiveSupport::TestCase
 
       assert_equal 1, courses_and_scripts.length
 
-      assert_equal ['testcourse'], courses_and_scripts.map {|cs| cs[:name]}
+      assert_equal(['testcourse'], courses_and_scripts.map {|cs| cs[:name]})
     end
   end
 

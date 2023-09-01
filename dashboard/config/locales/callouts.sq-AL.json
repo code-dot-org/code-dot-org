@@ -391,6 +391,45 @@
         "Underground Iron_2021": {
           "craft_what_is_iron": "Hidhe në erë këtë hekur!"
         },
+        "courseC_PlayLab_events82022": {
+          "courseC_PlayLab_events8_callout1": "Përdoreni këtë bllok kur prekin Waddles dhe Chomp!"
+        },
+        "courseC_maze_programming1_2021": {
+          "grade2_CaringForNewPet_0_1": "Pasi të keni lidhur të gjitha blloqet, shtypni \"Ekzekuto\" për të nisur programin tuaj."
+        },
+        "courseC_maze_programming2_2021": {
+          "courseC_maze_programming2_1": "Kjo është kutia e veglave. Është vendi ku do të gjeni blloqe shtesë për të përfunduar enigmat tuaja."
+        },
+        "courseC_maze_programming3_2021": {
+          "courseC_maze_programming3_2": "Mund të tërheqësh blloqe shtesë te kutia e veglave për t'i hedhur ato larg.",
+          "courseC_maze_programming3_3": "Këto blloqe janë guri dhe nuk mund të hidhen larg."
+        },
+        "courseC_maze_programming4_2021": {
+          "courseC_maze_programming4_1": "Ky është kufiri juaj i bllokimit. Ai ju tregon se sa nga këto blloqe ju kanë mbetur për të përdorur."
+        },
+        "courseC_maze_programming5_2021": {
+          "": "Këto blloqe nuk kanë numra në to. Mund të përdorni sa të doni!"
+        },
+        "courseC_maze_programming7_2021": {
+          "courseC_maze_programming7_1": "Kjo është enigma juaj e parë sfiduese! Këto janë menduar të jenë të vështira dhe mund të kërkojnë disa përpjekje.",
+          "courseC_maze_programming7_2": "Këto blloqe janë guri dhe nuk mund të hidhen larg."
+        },
+        "courseD_maze_intro5a_2021": {
+          "": "Këto blloqe nuk kanë numra në to. Ti mund të përdorësh aq shumë sa i dëshiron!"
+        },
+        "courseD_maze_ramp1_2021": {
+          "grade2_CaringForNewPet_0_1": "Pas lidhjes së të gjitha blloqeve shtypni “Run” për të filluar programin tuaj."
+        },
+        "courseD_maze_ramp2_2021": {
+          "courseC_maze_programming2_1": "Kjo është kutia e veglave. Është vendi ku do të gjeni blloqe shtesë për të përfunduar enigmat tuaja."
+        },
+        "courseD_maze_ramp3_2021": {
+          "courseC_maze_programming3_2": "Mund të tërheqësh blloqe shtesë te kutia e veglave për t'i hedhur ato larg.",
+          "stone_block_2": "Blloqet hiri nuk mund të hidhen larg."
+        },
+        "courseD_maze_ramp5_2021": {
+          "": "Këto blloqe nuk kanë numra në to. Ti mund të përdorësh aq shumë sa i dëshiron!"
+        },
         "courseE_aboutme_22022": {
           "": "Kliko këtu për të shtuar kostume në projektin tuaj."
         },

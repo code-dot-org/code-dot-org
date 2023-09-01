@@ -1,8 +1,11 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
+import ReactTooltip from 'react-tooltip';
+import _ from 'lodash';
 import i18n from '@cdo/locale';
 import {editStudent} from './manageStudentsRedux';
+import {tableLayoutStyles} from '../tables/tableConstants';
 
 class ManageStudentFamilyNameCell extends Component {
   static propTypes = {
@@ -10,6 +13,8 @@ class ManageStudentFamilyNameCell extends Component {
     familyName: PropTypes.string,
     isEditing: PropTypes.bool,
     editedValue: PropTypes.string,
+    sectionId: PropTypes.number,
+    inputDisabled: PropTypes.bool,
 
     //Provided by redux
     editStudent: PropTypes.func.isRequired,
@@ -23,22 +28,29 @@ class ManageStudentFamilyNameCell extends Component {
   };
 
   render() {
-    const {familyName, editedValue} = this.props;
+    const {familyName, editedValue, inputDisabled} = this.props;
+    const tooltipId = inputDisabled ? _.uniqueId() : '';
 
     return (
-      <div>
+      <div style={tableLayoutStyles.tableText}>
         {!this.props.isEditing && <div>{familyName}</div>}
         {this.props.isEditing && (
           <div>
-            <input
-              style={styles.inputBox}
-              // Since familyName is optional, explicitly prevent value from
-              // being set to undefined.
-              value={editedValue || ''}
-              onChange={this.onChangeName}
-              placeholder={i18n.familyName()}
-              aria-label={i18n.familyName()}
-            />
+            <span data-for={tooltipId} data-tip>
+              <input
+                style={styles.inputBox}
+                // Since familyName is optional, explicitly prevent value from
+                // being set to undefined.
+                value={editedValue || ''}
+                onChange={this.onChangeName}
+                placeholder={i18n.familyName()}
+                aria-label={i18n.familyName()}
+                disabled={inputDisabled}
+              />
+              <ReactTooltip id={tooltipId} role="tooltip" effect="solid">
+                <div>{i18n.disabledForTeacherAccountsTooltip()}</div>
+              </ReactTooltip>
+            </span>
           </div>
         )}
       </div>
@@ -48,7 +60,7 @@ class ManageStudentFamilyNameCell extends Component {
 
 const styles = {
   inputBox: {
-    width: 225,
+    width: 210,
   },
 };
 

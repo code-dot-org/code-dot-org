@@ -2,6 +2,7 @@ import * as GoogleBlockly from 'blockly/core';
 import BlockSvgFrame from '../../addons/blockSvgFrame';
 import msg from '@cdo/locale';
 import {procedureDefMutator} from './mutators/procedureDefMutator';
+import experiments from '@cdo/apps/util/experiments';
 
 // In Lab2, the level properties are in Redux, not appOptions. To make this work in Lab2,
 // we would need to send that property from the backend and save it in lab2Redux.
@@ -59,6 +60,7 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
       'procedure_defnoreturn_set_comment_helper',
       'procedure_def_set_no_return_helper',
       'procedures_block_frame',
+      'modal_procedures_no_destroy',
     ],
     mutator: 'procedure_def_mutator',
   },
@@ -85,6 +87,7 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
       'procedure_caller_context_menu_mixin',
       'procedure_caller_onchange_mixin',
       'procedure_callernoreturn_get_def_block_mixin',
+      'modal_procedures_no_destroy',
     ],
     mutator: 'procedure_caller_mutator',
   },
@@ -92,16 +95,21 @@ export const blocks = GoogleBlockly.common.createBlockDefinitionsFromJsonArray([
 
 // Respond to the click of a call block's edit button
 export const editButtonHandler = function () {
-  console.log('edit button clicked!');
-
-  // Eventually, this will be where we create a modal function editor.
-  // For now, just find the function definition block and select it.
-  const workspace = this.getSourceBlock().workspace;
-  const name = this.getSourceBlock().getFieldValue('NAME');
-  const definition = GoogleBlockly.Procedures.getDefinition(name, workspace);
-  if (definition) {
-    workspace.centerOnBlock(definition.id);
-    definition.select();
+  if (experiments.isEnabled(experiments.MODAL_FUNCTION_EDITOR)) {
+    const procedure = this.getSourceBlock().getProcedureModel();
+    if (procedure) {
+      Blockly.functionEditor.showForFunction(procedure);
+    }
+  } else {
+    // If we aren't using the new modal function editor yet, just center the block that
+    // was clicked.
+    const workspace = this.getSourceBlock().workspace;
+    const name = this.getSourceBlock().getFieldValue('NAME');
+    const definition = GoogleBlockly.Procedures.getDefinition(name, workspace);
+    if (definition) {
+      workspace.centerOnBlock(definition.id);
+      definition.select();
+    }
   }
 };
 
@@ -136,6 +144,21 @@ GoogleBlockly.Extensions.register('procedures_block_frame', function () {
       }
     });
   }
+});
+
+// Override the destroy function to not destroy the procedure. We need to do this
+// so that when we clear the modal function editor we don't remove the procedure
+// from the procedure map.
+GoogleBlockly.Extensions.register('modal_procedures_no_destroy', function () {
+  const mixin = {
+    destroy: function () {
+      // no-op
+      // this overrides the destroy hook registered
+      // in the procedure_def_get_def_mixin
+    },
+  };
+  // We can't register this as a mixin since we're overwriting existing methods
+  Object.assign(this, mixin);
 });
 
 // TODO: After updating to Blockly v10, remove this local copy of
