@@ -566,7 +566,7 @@ class ApiController < ApplicationController
     text_response_levels = script.text_response_levels
 
     data = section.students.map do |student|
-      student_hash = {id: student.id, name: student.name}
+      student_hash = {id: student.id, name: student.name, familyName: student.family_name}
 
       text_response_levels.filter_map do |level_hash|
         last_attempt = student.last_attempt_for_any(level_hash[:levels])
