@@ -474,14 +474,14 @@ class CourseOffering < ApplicationRecord
     lessons = units&.first&.lessons
 
     return nil unless lessons
-    lesson_plan = lessons.first.lesson_plan_html_url
+    lesson_plan = lessons.first&.lesson_plan_html_url
     expanded_card_resources = {"Lesson Plan" => lesson_plan}
 
     lessons.each do |lesson|
       break if expanded_card_resources.size >= 5
-      lesson.resources.each do |resource|
+      lesson.resources&.each do |resource|
         properties = resource.properties
-        next unless properties.key?('type')
+        next unless properties&.key?('type')
         type = properties['type']
         type = "Slide Deck" if type == "Slides"
         type = "Answer Key" if type == "Exemplar"
