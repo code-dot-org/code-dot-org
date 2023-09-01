@@ -5,7 +5,6 @@ import i18n from '@cdo/locale';
 import {getCurrentUnitData} from './sectionProgressRedux';
 import {ViewType, scriptDataPropType} from './sectionProgressConstants';
 import {getSelectedScriptFriendlyName} from '@cdo/apps/redux/unitSelectionRedux';
-import firehoseClient from '../../lib/util/firehose';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import color from '../../util/color';
@@ -28,19 +27,6 @@ class ProgressViewHeader extends Component {
   }
 
   navigateToScript = () => {
-    firehoseClient.putRecord(
-      {
-        study: 'teacher_dashboard_actions',
-        study_group: 'progress',
-        event: 'go_to_script',
-        data_json: JSON.stringify({
-          section_id: this.props.sectionId,
-          script_id: this.props.scriptId,
-        }),
-      },
-      {includeUserId: true}
-    );
-
     analyticsReporter.sendEvent(EVENTS.PROGRESS_VIEWED, {
       sectionId: this.props.sectionId,
       unitId: this.props.scriptId,
