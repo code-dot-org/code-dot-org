@@ -33,8 +33,6 @@ export default class ProjectCard extends React.Component {
       showSubmittedHeader: false, // may need to change this state in the future to utilize the report cookies - if gallery ever keeps an immediate report
       showSubmitConfirmation: false,
       captchaCompleted: false,
-      reportButtonHovered: false,
-      reportButtonPressed: false,
       checkboxes: [
         {name: 'Cyberbullying', checked: false},
         {name: 'Offensive-Content', checked: false},
@@ -151,22 +149,6 @@ export default class ProjectCard extends React.Component {
     }
   }
 
-  handleButtonMouseEnter = () => {
-    this.setState({reportButtonHovered: true});
-  };
-
-  handleButtonMouseLeave = () => {
-    this.setState({reportButtonHovered: false});
-  };
-
-  handleButtonMouseDown = () => {
-    this.setState({reportButtonPressed: true});
-  };
-
-  handleButtonMouseUp = () => {
-    this.setState({reportButtonPressed: false});
-  };
-
   handleCheckboxChange = checkboxName => {
     this.setState(prevState => {
       const updatedCheckboxes = prevState.checkboxes.map(checkbox =>
@@ -211,8 +193,6 @@ export default class ProjectCard extends React.Component {
       checkboxes,
       showSubmittedHeader,
       submitButtonEnabled,
-      reportButtonHovered,
-      reportButtonPressed,
       showSubmitConfirmation,
     } = this.state;
 
@@ -270,6 +250,7 @@ export default class ProjectCard extends React.Component {
                     onClick={this.cancel}
                     style={{
                       ...styles.transparentButton,
+                      background: 'none',
                       width: 24,
                       height: 24,
                       fontSize: 16,
@@ -279,8 +260,8 @@ export default class ProjectCard extends React.Component {
                     <FontAwesome icon="x" style={{color: '#D4D5D7'}} />
                   </button>
                 </div>
-                <hr style={styles.popUpLines} />
-                <p style={styles.popUpBody}>
+                <hr className={style.popUpLines} />
+                <p className={style.popUpBody}>
                   Why are you reporting this content?
                 </p>
                 <div>
@@ -307,9 +288,9 @@ export default class ProjectCard extends React.Component {
                         }}
                       />
                       <span
+                        className={style.popUpBody}
                         style={{
                           flex: '1',
-                          ...styles.popUpBody,
                           verticalAlign: 'middle',
                         }}
                       >
@@ -327,16 +308,12 @@ export default class ProjectCard extends React.Component {
                     data-expired-callback="onCaptchaExpired"
                   />
                 ) : null}
-                <hr style={styles.popUpLines} />
+                <hr className={style.popUpLines} />
                 <div style={{display: 'flex', justifyContent: 'flex-end'}}>
                   <Button
                     onClick={this.cancel}
                     text={'Cancel'}
-                    color={Button.ButtonColor.white}
-                    style={{
-                      borderColor: color.neutral_dark,
-                      color: color.neutral_dark,
-                    }}
+                    color={Button.ButtonColor.neutralDark}
                   />
                   <Button
                     onClick={this.handleSubmit}
@@ -351,7 +328,7 @@ export default class ProjectCard extends React.Component {
           </AccessibleDialog>
         ) : null}
 
-        <div style={styles.card}>
+        <div className={style.card}>
           {!showSubmittedHeader ? (
             <div
               style={{
@@ -370,24 +347,13 @@ export default class ProjectCard extends React.Component {
                   padding: 6,
                   marginRight: 16,
                   boxShadow: 'none',
-                  background: reportButtonPressed
-                    ? '#fbe0dd'
-                    : reportButtonHovered
-                    ? '#fbe0dd'
-                    : 'none',
                 }}
-                onMouseEnter={this.handleButtonMouseEnter}
-                onMouseLeave={this.handleButtonMouseLeave}
-                onMouseDown={this.handleButtonMouseDown}
-                onMouseUp={this.handleButtonMouseUp}
+                className={style.cautionButton}
               >
                 <FontAwesome
                   icon="circle-exclamation"
+                  className={style.cautionIcon}
                   style={{
-                    color:
-                      reportButtonHovered || reportButtonPressed
-                        ? '#e5311a'
-                        : '#7F8286',
                     fontSize: 16,
                   }}
                 />
@@ -424,7 +390,7 @@ export default class ProjectCard extends React.Component {
             >
               <img
                 src={projectData.thumbnailUrl || PROJECT_DEFAULT_IMAGE}
-                style={styles.image}
+                className={style.image}
                 alt={i18n.projectThumbnail()}
               />
             </a>
@@ -443,38 +409,40 @@ export default class ProjectCard extends React.Component {
           </a>
           <div style={noTimeOnCardStyle}>
             {isPublicGallery && projectData.studentName && (
-              <span style={styles.firstInitial}>
+              <span className={style.firstInitial}>
                 {i18n.by()}:&nbsp;
-                <span style={styles.bold}>{projectData.studentName}</span>
+                <span className={style.bold}>{projectData.studentName}</span>
               </span>
             )}
             {isPublicGallery && projectData.studentAgeRange && (
-              <span style={styles.ageRange}>
+              <span className={style.ageRange}>
                 {i18n.age()}:&nbsp;
-                <span style={styles.bold}>{projectData.studentAgeRange}</span>
+                <span className={style.bold}>
+                  {projectData.studentAgeRange}
+                </span>
               </span>
             )}
           </div>
           {shouldShowPublicDetails && !projectData.isFeatured && (
-            <div style={styles.lastEdit}>
+            <div className={style.lastEdit}>
               {i18n.published()}:&nbsp;
               <UnlocalizedTimeAgo
-                style={styles.bold}
+                className={style.bold}
                 dateString={projectData.publishedAt}
               />
             </div>
           )}
           {shouldShowPublicDetails && projectData.isFeatured && (
-            <div style={styles.lastEdit}>
-              <span style={styles.bold}>{i18n.featuredProject()}</span>
+            <div className={style.lastEdit}>
+              <span className={style.bold}>{i18n.featuredProject()}</span>
             </div>
           )}
           {isPersonalGallery && projectData.updatedAt && (
-            <div style={styles.lastEdit}>
+            <div className={style.lastEdit}>
               {i18n.projectLastUpdated()}:&nbsp;
               <UnlocalizedTimeAgo
-                style={styles.bold}
                 dateString={projectData.updatedAt}
+                className={style.bold}
               />
             </div>
           )}
@@ -485,16 +453,9 @@ export default class ProjectCard extends React.Component {
 }
 
 const styles = {
-  card: {
-    border: '1px solid #bbbbbb',
-    borderRadius: 2,
-    width: 214,
-    backgroundColor: color.neutral_light,
-  },
   transparentButton: {
     boxShadow: 'none',
     outline: 'none',
-    background: 'none',
     border: 'none',
     cursor: 'pointer',
   },
@@ -516,29 +477,6 @@ const styles = {
     color: color.neutral_dark,
     textDecoration: 'none',
   },
-  lastEdit: {
-    paddingLeft: 15,
-    paddingRight: 10,
-    paddingBottom: 10,
-    fontSize: 11,
-    fontFamily: '"Gotham", sans-serif',
-    color: color.neutral_dark,
-  },
-  ageRange: {
-    paddingLeft: 10,
-    paddingTop: 5,
-    fontSize: 11,
-    fontFamily: '"Gotham", sans-serif',
-    color: color.neutral_dark,
-  },
-  firstInitial: {
-    paddingTop: 5,
-    fontSize: 11,
-    paddingLeft: 15,
-    paddingRight: 15,
-    fontFamily: '"Gotham", sans-serif',
-    color: color.neutral_dark,
-  },
   thumbnail: {
     width: 214,
     height: 150,
@@ -550,29 +488,7 @@ const styles = {
   fullThumbnail: {
     height: 214,
   },
-  image: {
-    flexShrink: 0,
-    width: '100%',
-    weight: '100%',
-  },
-  bold: {
-    fontFamily: '"Gotham 5r", sans-serif',
-  },
   noTime: {
     paddingBottom: 10,
-  },
-  popUpLines: {
-    borderColor: '#D4D5D7',
-    width: 400,
-    height: 1,
-    marginTop: 10,
-    marginBottom: 10,
-    marginRight: 5,
-    marginLeft: 5,
-  },
-  popUpBody: {
-    fontFamily: '"Gotham 4r", sans-serif',
-    fontColor: '#292F36',
-    fontSize: 14,
   },
 };
