@@ -203,7 +203,7 @@ RUN \
   #
   # We don't copy in .git (huge), but `bundle exec rake install` references .git in 
   # a couple places, like git hooks, and fails without it, create a blank .git for now
-  git init --quiet && \
+  git init -b staging --quiet && \
   true
 
 # NOTE: `COPY --link` has been disabled in Docker 24 due to a bug in moby
