@@ -6,8 +6,8 @@ require 'cdo/aws/metrics'
 #
 class EmailDeliveryInterceptor
   def self.delivering_email(message)
-    action = ActionMailerMetrics.get_message_action(message)
-    mailer_class = ActionMailerMetrics.get_message_class(message)
+    action = ActionMailerMetrics.get_message_action(message) || 'unknown_action'
+    mailer_class = ActionMailerMetrics.get_message_class(message) || 'unknown_class'
     metrics = [
       {
         metric_name: :EmailToSend,
