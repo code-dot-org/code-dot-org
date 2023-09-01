@@ -469,7 +469,9 @@ class CourseOffering < ApplicationRecord
   end
 
   def get_available_resources(locale_code='en-us')
-    lessons = latest_published_version(locale_code).units.first.lessons
+    latest_version = latest_published_version(locale_code)
+    units = latest_version&.units
+    lessons = units&.first&.lessons
 
     return nil if lessons.empty?
     lesson_plan = lessons.first.lesson_plan_html_url
