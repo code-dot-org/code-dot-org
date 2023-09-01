@@ -1,5 +1,10 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
+  "game_id": 41,
+  "created_at": "2022-09-21T13:13:06.000Z",
+  "level_num": "custom",
+  "user_id": 1,
   "properties": {
     "skin": "applab",
     "edit_code": true,
@@ -54,7 +59,8 @@
       "/courses/csd-2022/guides/physical-input",
       "/courses/csd-2022/guides/variables",
       "/courses/csd-2022/guides/counter-patterns-with-event",
-      "/courses/csd-2022/guides/if-statements-2"
+      "/courses/csd-2022/guides/if-statements-2",
+      "/maker/setup"
     ],
     "start_html": "<div id=\"designModeViz\" class=\"appModern clip-content\" tabindex=\"1\" data-radium=\"true\" style=\"width: 320px; height: 450px;\"><div class=\"screen\" tabindex=\"1\" data-theme=\"default\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(255, 255, 255);\"><img src=\"/level_starter_assets/CSD U6 - If Variables - SB6_2222/fire_left_v2.png?t=1650477719000\" data-canonical-image-url=\"image://fire_left_v2.png\" data-image-type=\"file\" data-object-fit=\"contain\" id=\"leftFire\" style=\"height: 450px; width: 130px; border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 0px; position: absolute; left: -45px; top: -2.22045e-16px; margin: 0px;\"><img src=\"/level_starter_assets/CSD U6 - If Variables - SB6_2222/fire_right_v2.png?t=1650477867000\" data-canonical-image-url=\"image://fire_right_v2.png\" data-image-type=\"file\" data-object-fit=\"contain\" id=\"rightFire\" style=\"height: 500px; width: 135px; border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 0px; position: absolute; left: 235px; top: -15px; margin: 0px;\"><img data-canonical-image-url=\"image://Breadloaf.png\" data-image-type=\"file\" data-object-fit=\"contain\" id=\"toastImg\" style=\"height: 100px; width: 100px; border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 0px; position: absolute; left: 100px; top: 175px; margin: 0px;\" data-icon-color=\"#0f31e3\" src=\"/level_starter_assets/CSD U6 - If Variables - SB6_2222/Breadloaf.png\"></div></div>",
     "starter_assets": {
@@ -89,13 +95,8 @@
     "encrypted_examples": "F4vRfhdYK27T11guWPgcfv4YbDvx69zpA4zc8g3GtS3LEXxu2A0TSOt4IvqP\nTLGSpn4ZUZmM4KYxKvL92aFauA==\n",
     "preload_asset_list": null
   },
-  "game_id": 41,
-  "published": true,
-  "created_at": "2022-09-21T13:13:06.000Z",
-  "level_num": "custom",
-  "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-21T13:13:06.430+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - If Variables - SB6_2222\\\"\"],\"cloned_from\":\"CSD U6 - If Variables - SB6_2222\"},{\"changed_at\":\"2023-03-28 18:04:37 +0000\",\"changed\":[\"makerlab_enabled\",\"long_instructions\",\"code_functions\",\"start_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-21T13:13:06.430+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - If Variables - SB6_2222\\\"\"],\"cloned_from\":\"CSD U6 - If Variables - SB6_2222\"},{\"changed_at\":\"2023-03-28 18:04:37 +0000\",\"changed\":[\"makerlab_enabled\",\"long_instructions\",\"code_functions\",\"start_blocks\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-08-16 17:30:59 +0000\",\"changed\":[\"reference_links\",\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

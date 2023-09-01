@@ -31,26 +31,19 @@ class TeacherBasedExperiment < Experiment
   validates :percentage, inclusion: 0..100
 
   # NOTE: The min_user_id value is inclusive, the max_user_id value is exclusive.
-  def enabled?(user: nil, section: nil)
-    is_teacher = user.try(:teacher?)
-    return false unless section || is_teacher
+  def enabled?(user: nil)
+    return if user.nil?
 
-    if is_teacher
-      user_id = user.id
-      sections = user.sections
-    else
-      user_id = section.user_id
-      sections = [section]
+    sections = user.teacher? ? user.sections : user.sections_as_student
+
+    sections.any? do |s|
+      teacher_id_modulus = s.user_id % 100
+      ((teacher_id_modulus >= min_user_id && teacher_id_modulus < max_user_id) ||
+        teacher_id_modulus < overflow_max_user_id) &&
+      (earliest_section_at.nil? || s.first_activity_at.nil? ||
+        earliest_section_at < s.first_activity_at) &&
+      (latest_section_at.nil? ||
+          (s.first_activity_at && latest_section_at > s.first_activity_at))
     end
-    user_id_modulus = user_id % 100
-
-    return ((user_id_modulus >= min_user_id && user_id_modulus < max_user_id) ||
-        user_id_modulus < overflow_max_user_id) &&
-      sections.any? do |s|
-        (earliest_section_at.nil? || s.first_activity_at.nil? ||
-          earliest_section_at < s.first_activity_at) &&
-        (latest_section_at.nil? ||
-           (s.first_activity_at && latest_section_at > s.first_activity_at))
-      end
   end
 end

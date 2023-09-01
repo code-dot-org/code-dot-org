@@ -60,7 +60,6 @@
   "poem-art": "나만의 시",
   "poetry": "시를 이용해 코딩하기",
   "hello-world-animals": "헬로 월드: 동물",
-  "vpl-csp": "CS 원리 가상 전문가 학습",
   "edit-code": "코드 수정",
   "tesstest921": "tesstest921",
   "poetry-hoc3": "poetry-hoc3",
@@ -96,5 +95,6 @@
   "focus-on-design-with-purpose": "목적을 구현하는 설계(CS 입문)",
   "focus-on-impact-in-society": "사회에 미치는 영향(CS 입문)",
   "focus-on-data": "데이터(CS 입문)",
-  "focus-on-creativity": "창의성(CS 입문)"
+  "focus-on-creativity": "창의성(CS 입문)",
+  "how-ai-works": "AI 작동방법"
 }

@@ -75,6 +75,7 @@
     "@storybook/manager-webpack5": "^6.5.16",
     "@storybook/react": "^6.5.16",
     "@testing-library/react": "^12.1.5",
+    "@testing-library/user-event": "^14.4.3",
     "@types/jquery": "^3.5.16",
     "aws-sdk": "2.1231.0",
     "babel-loader": "^8.2.2",
@@ -244,7 +245,7 @@
   },
   "dependencies": {
     "@amplitude/analytics-browser": "^1.5.4",
-    "@blockly/block-shareable-procedures": "^1.2.10",
+    "@blockly/block-shareable-procedures": "~1.2.11",
     "@blockly/field-grid-dropdown": "~2.0.2",
     "@blockly/keyboard-navigation": "0.3.6",
     "@blockly/plugin-cross-tab-copy-paste": "^2.0.7",

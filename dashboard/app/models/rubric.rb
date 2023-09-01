@@ -17,6 +17,16 @@ class Rubric < ApplicationRecord
   belongs_to :level
   belongs_to :lesson
 
+  def summarize
+    {
+      learningGoals: learning_goals.map(&:summarize),
+      lesson: {
+        name: lesson.name,
+        position: lesson.relative_position,
+      }
+    }
+  end
+
   def seeding_key(seed_context)
     my_lesson = seed_context.lessons.find {|l| l.id == lesson_id}
     my_lesson.seeding_key(seed_context)

@@ -5,7 +5,7 @@
   "is_featured": false,
   "assignable": true,
   "curriculum_type": "Course",
-  "marketing_initiative": null,
+  "marketing_initiative": "CSD",
   "grade_levels": "6,7,8,9,10,11,12",
   "header": "collections",
   "image": "https://images.code.org/3f978500b75787a94105d629930b0222-DesignWithPurpose.png",
@@ -13,8 +13,8 @@
   "school_subject": null,
   "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"incompatible\",\"mobile\":\"incompatible\",\"no_device\":\"incompatible\"}",
   "description": "In this unit, students are challenged to think about user needs when it comes to designing websites and apps.",
-  "professional_learning_program": "code.org/apply",
+  "professional_learning_program": "https://code.org/apply",
   "video": null,
-  "published_date": null,
+  "published_date": "2023-07-10 04:00:00 UTC",
   "self_paced_pl_course_offering_id": 443
 }

@@ -190,6 +190,8 @@ nl:
   grade_level_label_elementary: Basisschool
   grade_level_label_middle: Middelbare school
   grade_level_label_high: Middelbare school
+  students_label: Leerlingen
+  teachers_label: Leraren
   teacher_label_csf: Docent CS Fundamentals
   teacher_label_csd: Docent CS Discoveries
   teacher_label_csp: Docent CS Principles
@@ -203,7 +205,9 @@ nl:
   call_to_action_explore_unit: Eenheid verkennen
   call_to_action_explore_curriculum: Ontdek het curriculum
   call_to_action_explore_curriculum_options: Bekijk de opties voor het curriculum
+  call_to_action_explore_lessons: Lessen ontdekken
   call_to_action_explore_modules: Ontdek de modules
+  call_to_action_explore_module: Module ontdekken
   call_to_action_explore_workshops: Ontdek workshops
   call_to_action_explore_course: Cursus ontdekken
   call_to_action_explore_courses: Ontdek cursussen
@@ -251,8 +255,12 @@ nl:
   call_to_action_see_module_details: Moduledetails bekijken
   call_to_action_start_modules: Modules starten
   call_to_action_see_course_details: Bekijk de details van de cursus
+  call_to_action_see_lesson_details: Bekijk de lesdetails
   call_to_action_learn_about_approach: Meer informatie over onze aanpak
   call_to_action_try_java_lab: Probeer Java Lab
+  call_to_action_notify_available: Laat het me weten als het beschikbaar is
+  call_to_action_register_early_access: Registreer voor vroege toegang
+  call_to_action_open_positions: Bekijk openstaande vacatures
   aria_label_call_to_action_afe: Meer informatie over Amazon Future Engineer
   aria_label_call_to_action_teaching_csf: Start het professionele leerprogramma Teaching
     Computer Science Fundamentals
@@ -320,6 +328,23 @@ nl:
   aria_label_call_to_action_csf_course_d: Bekijk de details van cursus D
   aria_label_call_to_action_csf_course_e: Bekijk de details van cursus E
   aria_label_call_to_action_csf_course_f: Bekijk de details van cursus F
+  aria_label_call_to_action_ai_pl_101_videos: Bekijk de video's over AI 101 voor docenten
+  aria_label_call_to_action_ai_teaching_module: Ontdek de module Teaching AI en Machine
+    Learning
+  aria_label_call_to_action_how_ai_works_lesson_01: Bekijk de lesinformatie over Introduction
+    to Machine Learning
+  aria_label_call_to_action_how_ai_works_lesson_02: Bekijk de details van de Computer
+    Vision-lessen
+  aria_label_call_to_action_how_ai_works_lesson_03: Bekijk de lesinformatie over Neural
+    Networks
+  aria_label_call_to_action_how_ai_works_lesson_04: Bekijk de lesdetails van Chatbots
+    en Large Language Models
+  aria_label_call_to_action_how_ai_works_lesson_05: Bekijk de lesdetails van Generative
+    Images
+  aria_label_call_to_action_how_ai_works_lesson_06: Bekijk de lesinformatie over Algorithmic
+    Bias
+  aria_label_call_to_action_how_ai_works_lesson_07: Bekijk de lesdetails van de Our
+    AI Code of Ethics
   video_title_professional_learning_program: Het professionele leerprogramma van Code.org
   curriculum_name_csf: Grondbeginselen van de informatica
   curriculum_name_csf_02: Alle basisbeginselen van CS (cursus A-F)
@@ -437,6 +462,10 @@ nl:
   module_label_student_tool: Hulpmiddel voor studenten
   module_label_student_product: Produkt
   module_label_student_content_resources: Inhoud en bronnen
+  module_label_new: Nieuw
+  module_label_coming_soon: Binnenkort beschikbaar
+  module_label_video_series: Videoserie
+  module_label_self_paced: Module in eigen tempo
   module_ages_5_10: 5-10
   module_ages_11_18: 11-18
   module_ages_7_18: 7-18
@@ -459,9 +488,13 @@ nl:
   module_grade_9_12_teachers: 9-12 leraren
   module_level_beginner: Beginner
   module_level_intermediate: Intermediair
+  module_duration_45_mins: 45 minuten
+  module_duration_1_hr: 1 uur
   module_duration_2_hrs: 2 uur
   module_duration_3_hrs: 3 uur
+  module_duration_5_hrs: 5 uur
   module_duration_8_hrs: 8 uur
+  module_duration_20_hrs: 20 uur
   module_duration_35_hrs: 35 uur
   module_duration_lesson: Les
   module_duration_week: Week
@@ -536,6 +569,7 @@ nl:
   heading_no_devices: Geen apparaten? Wij staan voor u klaar
   heading_java_lab: Javalab
   heading_objects_first: Objecten eerst
+  heading_these_lessons_will: 'Deze lessen zullen:'
   professional_learning_section_desc: Krijg de ondersteuning die je nodig hebt terwijl
     je je voorbereidt om les te geven. Leraren vinden het geweldig, meer dan 90% vindt
     het de beste professionele ontwikkeling ooit!
@@ -667,6 +701,11 @@ nl:
   ai_curriculum_grades_03: 'Graadniveaus: 3-12'
   ai_curriculum_duration_03: 'Duur: 1 uur'
   ai_curriculum_btn_aria_label_03: Probeer de AI for Oceans-activiteit
+  ai_curriculum_title_04: Hoe AI werkt
+  ai_curriculum_desc_04: Deze lessen vormen een aanvulling op de videoserie How AI
+    Works. Elke les is gekoppeld aan een enkele video uit de serie, waarin dieper
+    wordt ingegaan op de concepten die in de video's zijn geïntroduceerd.
+  ai_curriculum_btn_aria_label_04: Ontdek de lessen over hoe AI werkt
   ai_carousel_heading: 'Wat docenten zeggen over AI met Code.org:'
   ai_carousel_quote_01: Deze les gaf mijn leerlingen ook de kans om te zien dat er
     een element van mening schuilt in classificatiesystemen. Later, toen we begonnen
@@ -685,6 +724,10 @@ nl:
   ai_pl_list_04: Overweeg de gevolgen van AI en machine learning in de echte wereld.
   ai_pl_list_05: Ontdek projecten aan het einde van het hoofdstuk.
   ai_pl_duration: 'Duur: 2 uur'
+  ai_pl_title: AI en machine learning aanleren
+  ai_pl_desc: Inleiding tot kunstmatige intelligentie en machine learning. Train een
+    machine learning-model met AI Lab. en maak gebruik van machine learning-apps.
+    Overweeg de gevolgen van AI en machine learning in de echte wereld.
   ai_video_series_title: Hoe AI werkt
   ai_video_series_desc: Met een introductie door Satya Nadella, CEO van Microsoft,
     laat deze serie korte video's je kennismaken met hoe kunstmatige intelligentie
@@ -711,6 +754,7 @@ nl:
   ai_pl_101_hero_heading: AI 101 voor docenten
   ai_pl_101_hero_desc: Ontdek het transformatieve potentieel van kunstmatige intelligentie
     (AI) in het onderwijs met onze gratis online leerserie voor docenten.
+  ai_pl_101_hero_desc_02: Een uitgebreide online leerserie voor docenten.
   ai_pl_101_hero_presented: Gepresenteerd door
   ai_pl_101_intro_heading: Wat is AI 101 voor docenten?
   ai_pl_101_intro_text: AI 101 for Teachers is een gratis, fundamentele online serie
@@ -755,6 +799,98 @@ nl:
     door gebruik te maken van geavanceerde scoremodellen en AI, en helpt docenten
     bij het geven van iteratieve feedback en formatieve beoordelingen tijdens de schrijfervaring.'
   ai_pl_101_explore__button_4: Tool verkennen
+  ai_pl_101_video_title_1: Chat bij het haardvuur met Sal Khan en Hadi Partovi
+  ai_pl_101_video_desc_1: Praat samen met Sal Khan (Khan Academy) en Hadi Partovi
+    (Code.org) bij het haardvuur over het omarmen van kunstmatige intelligentie in
+    de klas. Verwacht een levendige discussie, waaronder enkele van de meest controversiële
+    onderwerpen rond AI van vandaag.
+  ai_pl_101_video_title_2: Ontraadselende AI voor docenten
+  ai_pl_101_video_desc_2: Inleiding tot de grondbeginselen van kunstmatige intelligentie,
+    die u zal voorzien van de basiskennis om de diepgaande impact van AI in onze samenleving
+    en de toenemende relevantie ervan voor het onderwijs te begrijpen. Je krijgt praktische
+    inzichten in het gebruik van AI voor taken in de klas en bespaart tijd op administratieve
+    taken.
+  ai_pl_101_video_title_3: Leren transformeren met AI
+  ai_pl_101_video_desc_3: Ontdek het snijvlak van AI en onderwijs. In deze sessie
+    wordt onderzocht hoe AI kan worden gecombineerd met pedagogie om het leren van
+    studenten te verbeteren. Het is een must voor docenten die AI willen gebruiken
+    om hun onderwijspraktijken te transformeren om de leerervaringen van hun leerlingen
+    te verrijken.
+  ai_pl_101_video_title_4: Zorgen voor een verantwoorde benadering van AI
+  ai_pl_101_video_desc_4: Ontdek de ethische overwegingen en beste praktijken voor
+    de integratie van kunstmatige intelligentie in onderwijsomgevingen. Deze sessie
+    biedt concrete strategieën, bronnen en praktijkvoorbeelden, allemaal gericht op
+    het begrijpen van de mogelijke vooroordelen van AI en de ethische overwegingen
+    die daarmee gepaard gaan.
+  ai_pl_101_video_title_5: AI naar de klas brengen
+  ai_pl_101_video_desc_5: Deze sessie richt zich op onderwijs over AI, het evalueren
+    en gebruiken van AI-onderwijshulpmiddelen en het gebruik van AI voor de beoordeling
+    van studenten. Met een rijke mix van theorie, praktische voorbeelden en hulpmiddelen
+    is het bedoeld om docenten in staat te stellen door het AI-landschap te navigeren
+    en de leerervaringen van studenten te verbeteren.
+  ai_pl_101_video_desc_6: 'Lees meer over de nieuwe technologie die de grote veranderingen
+    in AI aanstuurt, waaronder twee nieuwe video''s over grote taalmodellen (zoals
+    ChatGPT) en Generative AI. Luister rechtstreeks van de experts hoe deze nieuwe
+    technologieën werken: Mira Murati, CTO van OpenAI, en Cristóbal Valenzuela, CEO
+    van RunwayML.'
+  how_ai_works_hero_heading: Hoe AI werkt
+  how_ai_works_hero_desc: Duik in de wereld van AI met „How AI Works”, onze videoserie
+    en bijbehorende lessen!
+  how_ai_works_intro_desc: Deze serie korte video's en bijbehorende lessen in de klas
+    laten jou en je leerlingen kennismaken met hoe kunstmatige intelligentie werkt
+    en waarom het belangrijk is. Je kunt individuele lessen kiezen op basis van het
+    onderwerp, de hele reeks onderwerpen in één klas verkennen of alle 7 lessen geven
+    om een diepere duik te geven.
+  how_ai_works_intro_list_01: Laat je kennismaken met kunstmatige intelligentie en
+    machine learning
+  how_ai_works_intro_list_02: Duik in hoe generatieve AI werkt, waaronder grote taalmodellen
+    (LLM's) en het genereren van afbeeldingen
+  how_ai_works_intro_list_03: Ontdek vooringenomenheid, ethiek, privacy en verantwoord
+    gebruik van AI
+  how_ai_works_intro_list_04: Kom meer te weten over toepassingen van AI in de echte
+    wereld, waaronder computervisie
+  how_ai_works_lessons_heading: AI-lessen voor jouw klas
+  how_ai_works_lesson_title_01: Inleiding tot machine learning
+  how_ai_works_lesson_desc_01: Kom meer te weten over een vorm van kunstmatige intelligentie,
+    machine learning genaamd, en hoe ze het probleemoplossingsproces kunnen gebruiken
+    om een robot te helpen problemen op te lossen. Neem deel aan machine learning-activiteiten
+    waarbij een robot leert patronen in vissen te detecteren.
+  how_ai_works_lesson_title_02: Computervisie
+  how_ai_works_lesson_desc_02: Ontdek hoe computervisie werkt. Bekijk een video waarin
+    computervisie wordt uitgelegd en hoe een computer „ziet”. Ontwerp vervolgens een
+    algoritme dat een netwerk gebruikt om te bepalen welk getal op het scherm met
+    zeven segmenten wordt weergegeven en test dit.
+  how_ai_works_lesson_title_03: Neurale netwerken
+  how_ai_works_lesson_desc_03: Ontdek hoe neurale netwerken werken. Gebruik een widget
+    om neurale netwerken op een praktische manier te verkennen. Bekijk een video waarin
+    neurale netwerken worden uitgelegd. Bespreek ten slotte de noodzaak van verschillende
+    perspectieven bij het creëren van aanbevelingssystemen.
+  how_ai_works_lesson_title_04: Chatbots en grote taalmodellen
+  how_ai_works_lesson_desc_04: Ontdek wat een Large Language Model (LLM) is en hoe
+    het werkt, en gebruik vervolgens een LLM om samen met AI een tekst te maken. Bespreek
+    ten slotte of LLM's intelligent of creatief zijn.
+  how_ai_works_lesson_title_05: Generatieve afbeeldingen
+  how_ai_works_lesson_desc_05: Ontdek hoe AI afbeeldingen kan genereren, verken vervolgens
+    een diffuse AI-widget en bespreek of deze modellen al dan niet creatief zijn.
+  how_ai_works_lesson_title_06: Algoritmische vooringenomenheid
+  how_ai_works_lesson_desc_06: Oefen met het bijsnijden van afbeeldingen om de bias
+    achter het bijsnijdalgoritme van Twitter te ontdekken en lees en bekijk vervolgens
+    een video over de ontdekking van dit vooringenomen algoritme. Bespreek ten slotte
+    manieren om vooringenomenheid in algoritmen te herkennen en te verminderen.
+  how_ai_works_lesson_title_07: Onze ethische code voor AI
+  how_ai_works_lesson_desc_07: Doe onderzoek aan de hand van artikelen en video's
+    die ethische valkuilen blootleggen op een gebied van kunstmatige intelligentie
+    naar keuze. Stel een klassebrede „Our AI Code of Ethics” -bron samen voor AI-makers
+    en -wetgevers overal ter wereld.
+  how_ai_works_lessons_in_a_day_title: Hoe AI in één dag werkt
+  how_ai_works_lessons_in_a_day_desc: Heb je maar een dag? Er is ook de mogelijkheid
+    om de hele serie op één dag aan studenten voor te stellen. Perfect voor elke vakdocent
+    die studenten kennis wil laten maken met AI, of zelfs als les voor een gastdocent.
+  how_ai_works_lessons_in_a_day_desc_02: Introduceer alle „How AI Works” -video's
+    op één dag. De leerlingen volgen elke video door de woordenschat uit de video
+    te vergelijken en vervolgens een reflectievraag over elke video te beantwoorden.
+  how_ai_works_resources_desc: Wil je meer weten over AI? Hier zijn enkele aanvullende
+    bronnen die kunnen helpen om het leerproces van u en uw leerlingen uit te breiden.
   ai_vid_intro_caption: Maak kennis met hoe AI werkt
   ai_vid_chatbots_caption: Hoe chatbots en grote taalmodellen werken
   ai_vid_creativity_caption: Heeft AI creativiteit en verbeelding?
@@ -1099,10 +1235,10 @@ nl:
   teach_page_additional_materials_list_desc_03: Print deze posters van verschillende
     rolmodellen om in je school op te hangen en inspireer je leerlingen om informatica
     uit te proberen.
-  csp_page_top_desc: Free set of elementary curricula that introduces students to
-    the foundational concepts of computer science and challenges them to explore how
-    computing and technology can impact the world. Can be taught as an introductory
-    class and as an AP course.
+  csp_page_top_desc: Free year-long curriculum that introduces students to the foundational
+    concepts of computer science and challenges them to explore how computing and
+    technology can impact the world. Can be taught as an introductory class and as
+    an AP course.
   csp_page_intro_heading: Free, AP® CSP endorsed, high school introductory course
   csp_page_intro_list_01: Culturally responsive pedagogy
   csp_page_intro_list_02: Real-world problem investigation
@@ -1674,6 +1810,7 @@ nl:
   not_found_desc: De gevraagde pagina werd niet gevonden
   not_found_instructions: Controleer het webadres en verstuur opnieuw, of kies een
     link uit de onderstaande lijst.
+  company_code_dot_org: Code.org
   company_4-H: 4-H Youth Development
   company_asa: Afterschool Alliance
   company_asos: ASOS
@@ -1726,6 +1863,7 @@ nl:
   company_evsd: East Valley School District
   company_eastonvilleschooldistrict: Eatonville schooldistrict
   company_enumclawschooldistrict: Enumclaw schooldistrict
+  company_ets: ETS
   company_everettsd: Everette openbare scholen
   company_fsusd: Fairfield-Suisun Unified School District
   company_fayettecountypublicschools: Fayette County openbare scholen
@@ -1747,6 +1885,7 @@ nl:
   company_houstonisd: Onafhankelijk schooldistrict van Houston
   company_hcpss: Openbare scholen in Howard County
   company_idla: Idaho Digital Learning Academy
+  company_iste: SITE
   company_janesvilleschooldistrict: Schooldistrict Janesville
   company_johnstoncountyschools: Scholen in Johnston County
   company_lps: Lincoln Public School
@@ -11962,8 +12101,8 @@ nl:
   tutorial_ai4alldance_string_platforms: Alle moderne browsers
   tutorial_ai4allneural_string_platforms: Alle moderne browsers
   tutorial_spheroinout_string_platforms: Niet aangesloten
-  tutorial_edisonblueprint_string_platforms: Alle moderne browsers
-  tutorial_edisonmaze_string_platforms: Alle moderne browsers
+  tutorial_edisonblueprint_string_platforms: Webgebaseerd, Android tablet, iPad
+  tutorial_edisonmaze_string_platforms: Webgebaseerd, Android tablet, iPad
   tutorial_milnefunctions_string_platforms: Alle moderne browsers, schermlezer
   tutorial_sasmap_string_platforms: Alle moderne browsers, iPad, schermlezer
   tutorial_firstrobotics_string_platforms: Alle moderne browsers
@@ -13224,6 +13363,123 @@ nl:
   accessibility_card_text_10: Een aanpassing van het AP Computer Science Principles-curriculum
     van Code.org met behulp van Quorum, een op bewijzen gebaseerde taal die oorspronkelijk
     is ontworpen om blinde of slechtziende studenten toegankelijk te maken.
+  engineering_hero_heading: Sluit je aan bij ons technische team!
+  engineering_hero_desc: Terwijl we ons engineeringteam blijven uitbreiden, wilden
+    we meer vertellen over onze technische organisatie op Code.org en enkele van de
+    unieke aspecten van het werken hier. Als je geïnteresseerd bent om te solliciteren
+    voor een van onze functies, dan horen we graag van je!
+  engineering_team_title: Ontmoet het technische team op Code.org
+  engineering_team_card_text_1: Dit zijn (de meesten van) ons tijdens onze persoonlijke
+    bijeenkomst in de zomer van 2023! Dit publiek is verdeeld in vier subteams binnen
+    ons ingenieursteam die samenwerken om het platform voor al onze studenten en docenten
+    te bouwen en te bedienen.
+  engineering_team_card_text_2: Als je geïnteresseerd bent om te solliciteren voor
+    een van onze functies, dan horen we graag van je! Je vindt een lijst met openstaande
+    vacatures op onze carrièrepagina.
+  engineering_our_team_title: Ons ingenieursteam
+  engineering_our_team_desc: 'Het engineeringteam van Code.org is verdeeld in vier
+    subteams die verschillende onderdelen van ons platform bouwen en ondersteunen:'
+  engineering_our_team_sub_title_1: Leerteam voor studenten
+  engineering_our_team_text_1: Ons leerteam voor studenten is eigenaar van al onze
+    activiteiten (we noemen ze labs) die onze studenten elke dag gebruiken. Dit team
+    werkt voornamelijk aan front-end technologie (we gebruiken React en veel aangepaste
+    JS) en we hebben een goede werkrelatie met veel partners en open source-projecten.
+    We gebruiken bijvoorbeeld [Google's Blockly] (%{youtube_url}) voor al onze blokgebaseerde
+    programmering. We ondersteunen leerlingen tijdens hun leertraject van de kleuterschool
+    tot de 12e klas.
+  engineering_our_team_sub_title_2: Ervaringsteam voor docenten
+  engineering_our_team_text_2: Ons Teacher Experience-team ontwikkelt de tools die
+    nieuwe leraren naar Code.org lokken (we noemen dit acquisitieproducten) en ontwikkelt
+    het platform dat onze bestaande leraren in staat stelt om ons curriculum te onderwijzen
+    (onze tools voor leerkrachten). Net als bij onze tools voor studenten vertrouwen
+    we op React om onze front-end te bouwen en onze servercomponenten worden bediend
+    met Ruby on Rails.
+  engineering_our_team_sub_title_3: Platformteam
+  engineering_our_team_text_3: Ons platformteam bezit kerncomponenten die voldoen
+    aan de behoeften van onze studenten- en docententeams (bijvoorbeeld authenticatie
+    en gebruikersprofiel) en heeft ook de missie om studenten te bereiken die we nog
+    niet kunnen bereiken. Dit omvat het bouwen van integraties die ons verbinden met
+    scholen die verschillende Learning Management Systems (LMS) gebruiken en het verpakken
+    van ons curriculum zodat het kan worden gebruikt op afgelegen scholen die geen
+    toegang hebben tot betrouwbaar internet.
+  engineering_our_team_sub_title_4: Infrastructuurteam
+  engineering_our_team_text_4: Ons infrastructuurteam vormt de ruggengraat van het
+    platform dat onze studenten en docenten ondersteunt. Dit omvat onze hostinginfrastructuur
+    en gerelateerde services (we gebruiken AWS), gegevensbeheer, beveiligingsprogramma's,
+    ontwikkelaars- en implementatieservices en nog veel meer. Dit team is ook eigenaar
+    van onze schaal- en bevoorradingssystemen, die cruciaal zijn tijdens Hour of Code,
+    waarbij we elke student ter wereld uitnodigen om een uur met ons te coderen.
+  engineering_faq_question_1: Wat doet Code.org?
+  engineering_faq_answer_1_a: Code.org is een non-profitorganisatie zonder winstoogmerk
+    die zich inzet voor de visie dat elke student op elke school de mogelijkheid heeft
+    om informatica te leren als onderdeel van hun basisonderwijs in het basisonderwijs
+    in het basisonderwijs.
+  engineering_faq_answer_1_b: We breiden de toegang tot informatica op scholen uit,
+    met een focus op het vergroten van de participatie van jonge vrouwen en studenten
+    uit andere ondervertegenwoordigde groepen. Code.org is de toonaangevende leverancier
+    van K-12-informatica-leerplannen in de grootste schooldistricten van de Verenigde
+    Staten en organiseert ook de jaarlijkse Hour of Code-campagne, waarbij meer dan
+    15% van alle studenten in de wereld betrokken is.
+  engineering_faq_answer_1_c: Code.org wordt ondersteund door gulle donateurs, waaronder
+    Microsoft, Amazon, Google en vele anderen.
+  engineering_faq_question_2: Wat is de ontwikkelaarservaring en tools van Code.org?
+  engineering_faq_answer_2: Onze ontwikkelaarservaring kan anders zijn dan wat je
+    in je vorige functies hebt gezien. In nauwe samenwerking met ons productteam verzenden
+    we elke werkdag naar de productie en we hebben verschillende cadans - soms schrijf
+    je code die die dag live gaat; soms ben je bezig met projecten voor de langere
+    termijn - en hoewel we tweewekelijkse sprints volgen, doen we dat op een eenvoudige
+    manier. We zetten ons in om de juiste dingen op de juiste manier gedaan te krijgen
+    in plaats van een puristische kijk op een bepaalde methodologie. [Al onze code]
+    (%{code_url}) is open source en we gebruiken pull-aanvragen van JIRA en GitHub
+    om al onze werkitems bij te houden. We geven ook veel om kwaliteit en testen en
+    hebben het geluk dat we geweldige ondersteuning krijgen van [SauceLabs](%{saucelabs_url}),
+    die ons helpt onze reeks UI-tests uit te voeren op verschillende apparaten van
+    studenten (bijvoorbeeld iPads) in hun cloud device farm.
+  engineering_faq_question_3: Wat is de oproepfunctie voor technici bij Code.org?
+  engineering_faq_answer_3: Ons technische team van meer dan 30 jaar deelt de verantwoordelijkheden
+    op afroep. Elke technicus werkt 24 uur per dag en gebruikt onze escalatiepaden
+    en draaiboeken om te reageren op uitval van de site of andere problemen op de
+    locatie. We zijn trots op de betrouwbaarheid van onze site - gemiddeld wordt elke
+    technicus maar één keer per jaar wakker gemaakt voor problemen die doorgaans snel
+    worden opgelost. In plaats daarvan besteedt de „Developer of the Day” gewoonlijk
+    een deel van zijn werkdag aan het beheren van de productie-implementatie en het
+    oplossen van minder urgente problemen.
+  engineering_faq_question_4: Bent u een afstandsvriendelijke/WFH-organisatie?
+  engineering_faq_answer_4_a: Ja! In 2019, kort voor de pandemie, werd Code.org een
+    organisatie op afstand. Tegenwoordig hebben we ingenieurs in elke Amerikaanse
+    tijdzone en passen we de werkuren dienovereenkomstig aan. De meeste van onze bijeenkomsten
+    vinden plaats tussen 10.00 en 15.00 uur PT.
+  engineering_faq_answer_4_b: We erkennen ook de waarde van persoonlijke tijd, en
+    elk kwartaal komen we persoonlijk bij elkaar, meestal in Seattle. Twee van deze
+    evenementen (we noemen ze Kick-off week en „Codechella”) brengen iedereen in de
+    organisatie samen in januari en juni - en de engineering- en productteams komen
+    afzonderlijk bijeen in april en oktober.
+  engineering_faq_answer_4_c: We geloven er sterk in om tijd door te brengen met onze
+    leerlingen en docenten, dus veel van deze persoonlijke evenementen omvatten uitstapjes
+    naar scholen en klaslokalen om feedback te verzamelen of onze producten te testen
+  engineering_faq_question_5: Wat maakt het technische team van Code.org uniek?
+  engineering_faq_answer_5_a: 'Naast het oplossen van uitdagende technische problemen,
+    hebben we een aantal dingen die onze technische organisatie anders maken dan andere
+    waar je misschien hebt gewerkt:'
+  engineering_faq_answer_5_b_1: We delen allemaal onze passie voor onze missie.
+  engineering_faq_answer_5_b_2: Ieder van ons is hier om de missie te ondersteunen
+    om de toegang tot informatica voor elke student over de hele wereld uit te breiden.
+    We hebben allemaal ons unieke verhaal en perspectief over wat ons naar deze missie
+    drijft.
+  engineering_faq_answer_5_c_1: We geven veel om elkaar.
+  engineering_faq_answer_5_c_2: Als ingenieurs met een probleem worstelen, komen we
+    tussenbeide en helpen we. Een van onze uitgangspunten is dat we hard omgaan met
+    problemen, maar vriendelijk voor elkaar zijn. We promoten regelmatig ingenieurs,
+    maar we schrijven geen overontwikkelde oplossingen voor om iemands promotietraject
+    te ondersteunen. In plaats daarvan investeren we in onze ingenieurs met een royaal
+    budget voor professionele ontwikkeling en toegang tot andere leermogelijkheden.
+  engineering_faq_answer_5_d_1: We werken hard, maar we stellen duidelijke grenzen.
+  engineering_faq_answer_5_d_2: Hoewel we studenten over de hele wereld ondersteunen,
+    houden we onszelf verantwoordelijk voor duidelijke grenzen tussen werk en privéleven.
+    We houden ervan om op woensdag niet te vergaderen, waarbij we onze PTO nemen (in
+    totaal 5 weken, inclusief een kantoorsluiting van 2 weken aan het einde van het
+    jaar, oftewel Winter Break), een halve werkdag op vrijdag in de zomer, oftewel
+    zomervrijdagen, en andere genereuze voordelen.
   language_code:
     ar: Arabisch
     az: Azerbeidzjaans

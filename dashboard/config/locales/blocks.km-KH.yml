@@ -28,7 +28,7 @@ km:
             sprites: ទាំងអស់
           MOVE1:
             MOVES.ClapHigh: ទេះដៃខ្ពស់
-            MOVES.Drop: ទម្លាក់
+            MOVES.Drop: ទម្លាក់ (Drop)
             MOVES.Fresh: ស្រស់ស្រាយ
             MOVES.Kick: ផ្កាយ
             MOVES.Rest: គ្មាន
@@ -36,7 +36,7 @@ km:
             MOVES.ThisOrThat: នេះ ឬនោះ
           MOVE2:
             MOVES.ClapHigh: ទេះដៃខ្ពស់
-            MOVES.Drop: ទម្លាក់
+            MOVES.Drop: ទម្លាក់ (Drop)
             MOVES.Fresh: ស្រស់ស្រាយ
             MOVES.Kick: ផ្កាយ
             MOVES.Rest: គ្មាន
@@ -70,7 +70,7 @@ km:
           MOVE:
             '"rand"': ចៃដន្យ
             MOVES.ClapHigh: ទេះដៃខ្ពស់
-            MOVES.Drop: ទម្លាក់
+            MOVES.Drop: ទម្លាក់ (Drop)
             MOVES.Fresh: ស្រស់ស្រាយ
             MOVES.Kick: ផ្កាយ
             MOVES.Rest: គ្មាន
@@ -82,7 +82,7 @@ km:
           MOVE:
             '"rand"': ចៃដន្យ
             MOVES.ClapHigh: ទេះដៃខ្ពស់
-            MOVES.Drop: ទម្លាក់
+            MOVES.Drop: ទម្លាក់ (Drop)
             MOVES.Fresh: ស្រស់ស្រាយ
             MOVES.Kick: ផ្កាយ
             MOVES.Rest: គ្មាន
@@ -138,7 +138,7 @@ km:
           MOVE:
             '"rand"': ចៃដន្យ
             MOVES.ClapHigh: ទេះដៃខ្ពស់
-            MOVES.Drop: ទម្លាក់
+            MOVES.Drop: ទម្លាក់ (Drop)
             MOVES.Fresh: ស្រស់ស្រាយ
             MOVES.Kick: ផ្កាយ
             MOVES.Rest: គ្មាន
@@ -157,7 +157,7 @@ km:
           MOVE:
             '"rand"': ចៃដន្យ
             MOVES.ClapHigh: ទេះដៃខ្ពស់
-            MOVES.Drop: ទម្លាក់
+            MOVES.Drop: ទម្លាក់ (Drop)
             MOVES.Fresh: ស្រស់ស្រាយ
             MOVES.Kick: ផ្កាយ
             MOVES.Rest: គ្មាន
@@ -202,7 +202,7 @@ km:
         options:
           DANCE:
             MOVES.ClapHigh: ទេះដៃខ្ពស់
-            MOVES.Drop: ទម្លាក់
+            MOVES.Drop: ទម្លាក់ (Drop)
             MOVES.Fresh: ស្រស់ស្រាយ
             MOVES.Kick: ផ្កាយ
             MOVES.Rest: គ្មាន
@@ -225,7 +225,7 @@ km:
             "{x: 300, y: 100}": ខាងលើស្ដាំ
             "{x: 300, y: 200}": ស្តាំ
             "{x: 300, y: 300}": បាតក្រោមខាងស្ដាំ
-            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": ចៃដន្យ
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": ចៃដន្យ (ឆ្លាស់)
         text: "{SPRITE} លោត​ទៅ {LOCATION}"
       Dancelab_jumpToEach:
         options:
@@ -251,7 +251,7 @@ km:
             "{x: 300, y: 100}": ខាងលើស្ដាំ
             "{x: 300, y: 200}": ស្តាំ
             "{x: 300, y: 300}": បាតក្រោមខាងស្ដាំ
-            "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": ចៃដន្យ
+            "{x: randomNumber(60, 340), y: randomNumber(60, 340)}": ចៃដន្យ (ឆ្លាស់)
         text: លោត {GROUP} ទៅ {LOCATION}
       Dancelab_layoutSprites:
         options:
@@ -266,7 +266,7 @@ km:
             '"inner"': ខាងក្នុង ការ៉េ
             '"left"': ជួរឈរខាងឆ្វេង
             '"plus"': សញ្ញាបូក
-            '"random"': ចៃដន្យ
+            '"random"': ចៃដន្យ (ឆ្លាស់)
             '"right"': ជួរឈរខាងស្ដាំ
             '"row"': ជួរ
             '"spiral"': រាងគូទខ្យង
@@ -305,7 +305,7 @@ km:
             "{x: 300, y: 100}": ខាងលើស្ដាំ
             "{x: 300, y: 200}": ស្តាំ
             "{x: 300, y: 300}": បាតក្រោមខាងស្ដាំ
-            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": ចៃដន្យ
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": ចៃដន្យ (ឆ្លាស់)
         text: បង្កើតថ្មី  {COSTUME} នៅ {LOCATION}
       Dancelab_makeNewDanceSprite:
         options:
@@ -327,7 +327,7 @@ km:
             "{x: 300, y: 100}": ខាងលើស្ដាំ
             "{x: 300, y: 200}": ស្តាំ
             "{x: 300, y: 300}": បាតក្រោមខាងស្ដាំ
-            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": ចៃដន្យ
+            "{x: randomNumber(50, 350), y: randomNumber(50, 350)}": ចៃដន្យ (ឆ្លាស់)
       Dancelab_makeNewDanceSpriteGroup:
         options:
           COSTUME:
@@ -353,7 +353,7 @@ km:
             '"inner"': ខាងក្នុង ការ៉េ
             '"left"': ជួរឈរខាងឆ្វេង
             '"plus"': សញ្ញាបូក
-            '"random"': ចៃដន្យ
+            '"random"': ចៃដន្យ (ឆ្លាស់)
             '"right"': ជួរឈរខាងស្ដាំ
             '"row"': ជួរ
             '"spiral"': រាងគូទខ្យង
@@ -376,7 +376,7 @@ km:
             '"disco"': ការ៉េ
             '"disco_ball"': បាល់ឌីស្កូ
             '"fireworks"': កាំជ្រួច
-            '"galaxy"': លំហ
+            '"galaxy"': space key
             '"none"': គ្មាន
             '"snowflakes"': ព្រិល
             '"sparkles"': ផ្កាភ្លើង
@@ -405,7 +405,7 @@ km:
             '"disco_ball"': បាល់ឌីស្កូ
             '"fireworks"': កាំជ្រួច
             '"flowers"': ផ្កា
-            '"galaxy"': លំហ
+            '"galaxy"': space key
             '"growing_stars"': ផ្កាយកុំពុងរីកមាឌ
             '"higher_power"': ថាមពល
             '"music_wave"': សញ្ញារលកតន្ត្រី
@@ -729,7 +729,7 @@ km:
             '"down"': ចុះ
             '"left"': ឆ្វេង
             '"right"': ស្តាំ
-            '"space"': លំហ​អាកាស
+            '"space"': space key
             '"up"': ឡើង
             '"x"': x
             '"y"': y
@@ -862,7 +862,7 @@ km:
         options:
           DANCE:
             MOVES.ClapHigh: ទេះដៃខ្ពស់
-            MOVES.Drop: ទម្លាក់
+            MOVES.Drop: ទម្លាក់ (Drop)
             MOVES.Fresh: ស្រស់ស្រាយ
             MOVES.Kick: ផ្កាយ
             MOVES.Rest: គ្មាន
@@ -976,9 +976,9 @@ km:
         options:
           SOUND:
             '"sound://category_jump/vibrant_game_jumping_up_1.mp3"': លោត
-        text: ចាក់សំឡេង {SOUND}
+        text: លេងសំឡេង {SOUND}
       Poetry_playSoundOptionsSpace:
-        text: ចាក់សំឡេង {SOUND}
+        text: លេងសំឡេង {SOUND}
       Poetry_setBackground:
         text: កំណត់ពណ៌ផ្ទៃខាងក្រោយ  {COLOR}
       Poetry_setBackgroundEffect:
@@ -1039,7 +1039,7 @@ km:
           FORMAT:
             '"border"': នៅគេម
             '"grid"': ក្រឡាចត្រង្គ
-            '"random"': ចៃដន្យ
+            '"random"': ចៃដន្យ (ឆ្លាស់)
             '"row"': ជួរ
       aalab_someGraduallyStartIntervention:
         options:
@@ -1074,26 +1074,98 @@ km:
             '"down"': ចុះ
             '"left"': ឆ្វេង
             '"right"': ស្តាំ
-            '"space"': លំហ​អាកាស
+            '"space"': space key
             '"up"': ឡើង
         text: នៅពេល {KEY} បានចុច
       craft_ifPath:
         options:
           DIR:
             "'ahead'": នៅខាងមុខ
+            "'left'": បត់ឆ្វេង
+            "'right'": បត់ស្ដាំ
+        text: |-
+          ប្រសិនបើមានផ្លូវ  {DIR}
+          {STATEMENT}
       craft_ifStandingOn:
         options:
           TYPE:
-            "'planksOak'": ក្តារឈើសែន
+            "'blueCoralBlock'": ផ្កាថ្មខៀវ
+            "'planksOak'": បន្ទះក្ដា
+            "'redCoralBlock'": ផ្កាថ្មក្រហម
             "'sand'": ខ្សាច់
+            "'seaLantern'": ចង្កៀងសមុទ្រ
+            "'wool_blue'": ទឹកជ្រៅ
+        text: |-
+          ប្រសិនបើឈរលើ {TYPE}
+          {STATEMENT}
       craft_ifStandingOnLimit:
         options:
           TYPE:
+            "'darkPrismarine'": ថ្មកែវខ្មៅ
             "'sand'": ខ្សាច់
+            "'seaLantern'": ចង្កៀងសមុទ្រ
+        text: |-
+          ប្រសិនបើឈរលើ {TYPE}
+          {STATEMENT}
       craft_moveForward:
         text: ផ្លាស់ទីទៅមុខ
+      craft_placeBlock:
+        options:
+          blockType:
+            '"blackConcrete"': ដុំបេតុងខ្មៅ
+            '"blueCoralBlock"': ដុំផ្កាថ្មពណ៌ខៀវ
+            '"blueDeadCoralBlock"': ដុំផ្កាថ្មពណ៌ខៀវក្រម៉ៅ
+            '"blueIce"': ដុំទឹកកកខៀវ
+            '"chiseledStoneBricks"': ដុំថ្មក្បាច់
+            '"crackedStoneBricks"': ដុំឥដ្ឋថ្មប្រេះ
+            '"darkPrismarine"': ថ្មកែវខ្មៅ
+            '"kelp"': សារ៉ាយសមុទ្រ
+            '"magentaCoralBlock"': ដុំផ្កាថ្មពណ៌ស្វាយ
+            '"magentaDeadCoralBlock"': ដុំផ្កាថ្មពណ៌ស្វាយក្រម៉ៅ
+            '"mossyStoneBricks"': ដុំឥដ្ឋថ្ម mossy
+            '"packedIce"': ដុំទឹកកកខៀវក្រម៉ៅ
+            '"pinkCoralBlock"': ដុំផ្កាថ្មពណ៌ផ្កាឈូក
+            '"pinkDeadCoralBlock"': ដុំផ្កាថ្មពណ៌ផ្កាឈូកក្រម៉ៅ
+            '"polishedGranite"': ដុំថ្មក្រានីតប៉ូលា
+            '"prismarine"': ថ្មកែវ
+            '"readDeadCoralBlock"': ដុំផ្កាថ្មពណ៌ក្រហមក្រម៉ៅ
+            '"redCoralBlock"': ដុំផ្កាថ្មពណ៌ក្រហម
+            '"seaGrass"': ស្មៅសមុទ្រ
+            '"seaLantern"': ចង្កៀងសមុទ្រ
+            '"stoneBricks"': ដុំឥដ្ឋថ្ម
+            '"strippedDarkOak"': ដុំឈើខ្មៅ
+            '"strippedOak"': ដុំឈើ
+            '"yellowCoralBlock"': ដុំផ្កាថ្មពណ៌លឿង
+            '"yellowDeadCoralBlock"': ដុំផ្កាថ្មពណ៌លឿងក្រម៉ៅ
+        text: ដាក់ {blockType}
+      craft_placePrismarine:
+        text: ដាក់ថ្មកែវ
       craft_placeTorch:
         text: ដាក់ភ្លើងគប់
+      craft_repeatUntilConduit:
+        text: |-
+          ធ្វើរហូត conduit រួចរាល់
+          {STATEMENT}
+      craft_repeatUntilGoal:
+        text: |-
+          ធ្វើរហូតដល់គោលដៅ
+          {STATEMENT}
+      craft_spawnEntity:
+        options:
+          ENTITY:
+            '"cod"': ត្រី
+            '"dolphin"': ផ្សោត
+            '"salmon"': ត្រីសាម៉ុង
+            '"seaTurtle"': អណ្តើកសមុទ្រ
+            '"squid"': មឹក
+            '"tropicalFish"': ត្រីត្រូពិច
+        text: បង្កើត {ENTITY}
+      craft_turn:
+        options:
+          DIR:
+            left: ឆ្វេង ↺
+            right: ស្ដាំ ↻
+        text: បត់ {DIR}
       gamelab_addBehaviorSimple:
         text: sprite {SPRITE} ចាប់ផ្តើម {BEHAVIOR}
       gamelab_atTime:
@@ -1170,7 +1242,7 @@ km:
             '"down"': ចុះ
             '"left"': ឆ្វេង
             '"right"': ស្តាំ
-            '"space"': លំហ​អាកាស
+            '"space"': space key
             '"up"': ឡើង
             '"x"': x
             '"y"': y
@@ -1185,7 +1257,7 @@ km:
             '"down"': ចុះ
             '"left"': ឆ្វេង
             '"right"': ស្តាំ
-            '"space"': លំហ​អាកាស
+            '"space"': space key
             '"up"': ឡើង
             '"x"': x
             '"y"': y
@@ -1251,7 +1323,7 @@ km:
       gamelab_objectSpritePointer:
         text: "{SPRITE}"
       gamelab_playSound:
-        text: ចាក់សំឡេង {SOUND}
+        text: លេងសំឡេង {SOUND}
       gamelab_playSoundOptions:
         options:
           SOUND:
@@ -1259,14 +1331,15 @@ km:
             "'sound://category_animals/chicken.mp3'": មេមាន់
             "'sound://category_animals/cow.mp3'": មេគោ
             "'sound://category_animals/dog.mp3'": ឆ្កែ
+            "'sound://category_animals/dolphin.mp3'": ផ្សោត
             "'sound://category_animals/sheep.mp3'": ចៀម
             "'sound://category_collect/clicky_crunch.mp3'": ខាំ
             "'sound://category_digital/jump_7.mp3'": លោត
-        text: ចាក់សំឡេង {SOUND}
+        text: លេងសំឡេង {SOUND}
       gamelab_playSoundOptionsSoccer:
-        text: ចាក់សំឡេង {SOUND}
+        text: លេងសំឡេង {SOUND}
       gamelab_playSoundOptionsSpace:
-        text: ចាក់សំឡេង {SOUND}
+        text: លេងសំឡេង {SOUND}
       gamelab_playerBehaviors:
         options:
           BEHAVIOR:
@@ -1361,7 +1434,7 @@ km:
             '"down"': ចុះ
             '"left"': ឆ្វេង
             '"right"': ស្តាំ
-            '"space"': លំហ​អាកាស
+            '"space"': space key
             '"up"': ឡើង
         text: នៅពេល {KEY} បានចុច
       gamelab_whenLeftArrow:
@@ -1376,7 +1449,7 @@ km:
             '"down"': ចុះ
             '"left"': ឆ្វេង
             '"right"': ស្តាំ
-            '"space"': លំហ​អាកាស
+            '"space"': space key
             '"up"': ឡើង
       storylab_setForegroundEffect2:
         options:

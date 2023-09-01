@@ -725,6 +725,8 @@ zh-CN:
         csa_sorting_algorithms: 'CSA：排序算法'
         star_quilts_intro_to_artist: 'Star Quilts：艺术家简介'
         upload_sprites_backgrounds: 上传自定义精灵和背景
+        what-is-creativity: 什么是创造力?
+        code-break: 观看代码小憩
     callout:
       text:
         drag_blocks: 拖动一个"移动"的块，并将它吸到别的模块下面

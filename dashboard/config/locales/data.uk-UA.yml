@@ -781,13 +781,14 @@ uk:
         applab_intro_welcome: Апп Лаб - Початок Роботи
         artist_intro: Вступ до художника
         c_and_c_digital_sharing: Обмін та поширення онлайн
+        code-break: Зробіть перерву на код
         csc-ecosystems-intro: Імітація морської екосистеми
         csc-starquilts-intro: Кодуємо геометричний зірковий узор
         csc_timecapsule_intro: Пишемо код для капсули часу
         csd_applab_arrays: Вступ до масивів
-        csd_applab_designmode: 'Відкриття інформатики: Лабораторія додатків - Режим
+        csd_applab_designmode: 'Відкриття інформатики: Лабораторія застосунків - Режим
           дизайну'
-        csd_applab_designmode_short: Режим дизайну Лабораторії додатків
+        csd_applab_designmode_short: Режим дизайну Лабораторії застосунків
         csd_applab_loops: Цикли в Лабораторії додатків
         csd_applab_parameters: Функції з параметрами
         csd_concept_binary_data: 'Як комп''ютери працюють: Двійкове кодування і дані'
@@ -942,6 +943,7 @@ uk:
         teaching_problem_solving: 'Вивчаємо Основи інформатики: Навчаємось вирішувати
           проблеми'
         tutorial_puzzle_challenge: Урок - Головоломка
+        what-is-creativity: Що таке креативність?
         what_is_an_event: Що таке подія?
         what_is_cs: Що таке інформатика?
         why_unplugged_lessons: Безмашинна інформатика

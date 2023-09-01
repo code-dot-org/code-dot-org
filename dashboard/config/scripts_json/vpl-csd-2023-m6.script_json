@@ -12,8 +12,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-08-02 00:10:15 UTC",
-    "published_state": null,
+    "serialized_at": "2023-08-18 03:56:39 UTC",
+    "published_state": "in_development",
     "instruction_type": null,
     "instructor_audience": null,
     "participant_audience": null,
@@ -146,6 +146,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD Module 6 Overview_2023"
+        ],
         "progression": "Module 6 Overview"
       },
       "bonus": false,
@@ -168,6 +171,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 6 - CI_2023"
+        ],
         "progression": "Lesson Investigation (~60 mins)"
       },
       "bonus": false,
@@ -190,6 +196,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 6 - CI - U5L6_2023"
+        ],
         "progression": "Lesson Investigation (~60 mins)"
       },
       "bonus": false,
@@ -212,6 +221,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD Module 6 U5L6 Reflection_2023"
+        ],
         "progression": "Lesson Investigation (~60 mins)"
       },
       "bonus": false,
@@ -234,6 +246,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 6 - Problem Solving Process Guide_2023"
+        ],
         "progression": "Lesson Investigation (~60 mins)"
       },
       "bonus": false,
@@ -256,6 +271,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 6 - CI - U5L9_2023"
+        ],
         "progression": "Lesson Investigation (~60 mins)"
       },
       "bonus": false,
@@ -278,6 +296,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD Module 6 PSP Reflection_2023"
+        ],
         "progression": "Lesson Investigation (~60 mins)"
       },
       "bonus": false,
@@ -300,6 +321,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD Module 6 U5L9 Reflection_2023"
+        ],
         "progression": "Lesson Investigation (~60 mins)"
       },
       "bonus": false,
@@ -322,6 +346,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 6 - CI - U5L13_2023"
+        ],
         "progression": "Lesson Investigation (~60 mins)"
       },
       "bonus": false,
@@ -344,6 +371,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD Module 6 U5L13 Reflection_2023"
+        ],
         "progression": "Lesson Investigation (~60 mins)"
       },
       "bonus": false,
@@ -366,6 +396,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD Module 6 Unit Reflection_2023"
+        ],
         "progression": "Lesson Investigation (~60 mins)"
       },
       "bonus": false,
@@ -388,6 +421,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 6 - Conclusions and Connections_2023"
+        ],
         "progression": "Conclusions and Connections (~10 mins)"
       },
       "bonus": false,
@@ -410,6 +446,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD U5 Chapter 1 Project_2023"
+        ],
         "progression": "Conclusions and Connections (~10 mins)"
       },
       "bonus": false,
@@ -432,6 +471,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD U5 Chapter 2 Project_2023"
+        ],
         "progression": "Conclusions and Connections (~10 mins)"
       },
       "bonus": false,
@@ -454,6 +496,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD Module 5 - Differentiation_2023"
+        ],
         "progression": "Differentiation (~10 mins)"
       },
       "bonus": false,
@@ -476,6 +521,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 5 Wrap Up_2023"
+        ],
         "progression": "Wrap Up (~10 mins)"
       },
       "bonus": false,

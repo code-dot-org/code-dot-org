@@ -1958,6 +1958,8 @@ ta:
             Ice Age! ஆகியவற்றின் எழுத்துக்களைக் கொண்டு கணினி அறிவியலின் அடிப்படைகளை
             முயற்சிக்கவும்!
           title: கிளாசிக் மேஸி
+        how-ai-works-2023:
+          title: AI எவ்வாறு இயங்குகிறது
         iceage:
           name: பனியுகம்
         infinity:
@@ -2023,6 +2025,11 @@ ta:
               display_name: நிகழ்வுகள்
             lessonGroup-7:
               display_name: பாடநெறி திட்டத்தின் முடிவு
+            lessonGroup-8:
+              display_name: தகவல்கள்
+          lessons:
+            lesson-1:
+              name: தகவல்கள்
         nevada-standards-aligned-fourth-grade-2023:
           lesson_groups:
             lessonGroup-3:
@@ -2057,6 +2064,11 @@ ta:
               display_name: நிகழ்வுகள்
             lessonGroup-6:
               display_name: தகவல்கள்
+            lessonGroup-8:
+              display_name: கம்ப்யூட்டிங் சிஸ்டம்ஸ்
+          lessons:
+            lesson-1:
+              name: கம்ப்யூட்டிங் சிஸ்டம்ஸ்
         nevada-standards-aligned-third-grade-2023:
           lesson_groups:
             lessonGroup-2:

@@ -24761,7 +24761,7 @@
         },
         "63df0c6e-ae3d-4724-9c1d-2ecd5bf8986a": {
           "tips": [
-            "Kodlamaya pek aşina değilseniz Hour of Code etkinliğini tanıtmak için [ilham verici videolarımızdan](https://hourofcode.com/us/resources#videos) birini gösterebilirsiniz. Öğrencilerinizin ilham verici bulacağını düşündüğünüz birini seçin ve onlarla paylaşın. Küçük öğrenciler için \"[Hour of Code Etkinliğine Hoş Geldiniz](https://youtu.be/FC5FbmsH4fw)\" güzel bir seçenek olabilir."
+            "Kodlamaya pek aşina değilseniz Hour of Code etkinliğini tanıtmak için [ilham verici videolarımızdan][0] birini gösterebilirsiniz. Öğrencilerinizin ilham verici bulacağını düşündüğünüz birini seçin ve onlarla paylaşın. Küçük öğrenciler için \"[Hour of Code Etkinliğine Hoş Geldiniz][1]\" güzel bir seçenek olabilir."
           ]
         },
         "f96053ea-387e-47d5-a018-65619ec093b0": {
@@ -24774,7 +24774,7 @@
         },
         "91cc858b-9f90-4134-b890-237f457e8423": {
           "name": "Minecraft: Su Yolculuğu",
-          "description": "Öğrencilerinizden [Minecraft: Voyage Aquatic](http://studio.code.org/s/aquatic/lessons/1/levels/1) öğreticisini tamamlamalarını isteyin.\n\nÖğrencilerinizin yaşına ve yeteneklerine bağlı olarak şunları düşünebilirsiniz:\n\n-   Küçük öğrenciler için, sınıfınızı çiftler veya küçük gruplar (her biri üç ila dört öğrenci) şeklinde ayırabilirsiniz. Her gruptan [eşli programlama](https://youtu.be/vgkahOzFH2Q) kullanarak öğreticiyi tamamlamak için birlikte çalışmasını isteyebilirsiniz.\n-   Orta sınıflardaki öğrenciler için, öğreticiler üzerinde bağımsız çalışmanın iyi sonuç verdiğini görüyoruz. Bazen öğrencilerin kendi eğitimlerini seçmelerine izin vermek yardımcı olur. Öğrenciler Minecraft ile ilgilenmiyorlarsa [Anna ve Elsa ile Kodlama](https://studio.code.org/s/frozen/stage/1/puzzle/1) veya [Starwars](https://code.org/starwars) öğreticileriyle benzer bir deneyim yaşayabilirler.\n-   Daha yaşlı veya yetişkin öğrenciler için, [Minecraft: Voyage Aquatic](http://studio.code.org/s/aquatic/lessons/1/levels/1) öğreticisi, bağımsız bir meydan okuma veya çift programlama etkinliği olarak son derece etkilidir."
+          "description": "Öğrencilerinizden [Minecraft: Voyage Aquatic][0] öğreticisini tamamlamalarını isteyin.\n\nÖğrencilerinizin yaşına ve yeteneklerine bağlı olarak şunları düşünebilirsiniz:\n\n-   Küçük öğrenciler için, sınıfınızı çiftler veya küçük gruplar (her biri üç ila dört öğrenci) şeklinde ayırabilirsiniz. Her gruptan [eşli programlama][1] kullanarak öğreticiyi tamamlamak için birlikte çalışmasını isteyebilirsiniz.\n-   Orta sınıflardaki öğrenciler için, öğreticiler üzerinde bağımsız çalışmanın iyi sonuç verdiğini görüyoruz. Bazen öğrencilerin kendi eğitimlerini seçmelerine izin vermek yardımcı olur. Öğrenciler Minecraft ile ilgilenmiyorlarsa [Anna ve Elsa ile Kodlama][2] veya [Starwars][3] öğreticileriyle benzer bir deneyim yaşayabilirler.\n-   Daha yaşlı veya yetişkin öğrenciler için, [Minecraft: Voyage Aquatic][4] öğreticisi, bağımsız bir meydan okuma veya çift programlama etkinliği olarak son derece etkilidir."
         },
         "900f3fd4-40aa-42f7-89fc-e5240b2db143": {
           "tips": [
@@ -24782,7 +24782,7 @@
           ]
         },
         "1be305a6-52f5-40bb-a8d5-f851a3c61a3a": {
-          "description": "Öğrenciler grup veya bireysel olarak erken bitirirse, [code.org/learn](http://code.org/learn) adresini ziyaret ederek başka bir öğreticiyi deneyebilir."
+          "description": "Öğrenciler grup veya bireysel olarak erken bitirirse, [code.org/learn][0] adresini ziyaret ederek başka bir öğreticiyi deneyebilir."
         },
         "29412a26-dd7b-4990-a8bb-7e6f7bfa00d6": {
           "name": "Dönüt Alın",
@@ -24790,18 +24790,18 @@
         },
         "7e26ffea-ccaa-4969-9b40-01573fbe4303": {
           "name": "Tebrik Edin",
-          "description": "Bu hafta BB Eğitim Haftası ve dünya çapında milyonlarca öğrenci bu hafta bir Hour of Code eğitimi görecek. Bu nedenle öğrencilerinize bugün bir saat kodlamayla geçireceğinizi açıklayın. Öğrencileri bu dünya çapındaki hareketin bir parçası oldukları için tebrik edin.\n\nHer öğrenciye üzerinde adının yazılı olduğu bir [sertifika](https://studio.code.org/certificates/batch?course=bWM=) verin."
+          "description": "Bu hafta BB Eğitim Haftası ve dünya çapında milyonlarca öğrenci bu hafta bir Hour of Code eğitimi görecek. Bu nedenle öğrencilerinize bugün bir saat kodlamayla geçireceğinizi açıklayın. Öğrencileri bu dünya çapındaki hareketin bir parçası oldukları için tebrik edin.\n\nHer öğrenciye üzerinde adının yazılı olduğu bir [sertifika][0] verin."
         },
         "de9c3d28-c38a-4d2e-af91-a72a92d31f52": {
           "name": "Sonraki Adımlar",
-          "description": "Öğrencilere, bugünkü aktiviteden hoşlandılarsa, kodlamaya devam etmek için birçok seçeneğe sahip olduklarını bildirin. Seçenekler listesi için [code.org/learn](<>) adresini ziyaret etmeye teşvik edin veya takip eden ekstra etkinliklerden birini yapmayı planlıyorsanız, öğrencilere sırada ne işleyeceğinizden bahsedin."
+          "description": "Öğrencilere, bugünkü aktiviteden hoşlandılarsa, kodlamaya devam etmek için birçok seçeneğe sahip olduklarını bildirin. Seçenekler listesi için [code.org/learn][0] adresini ziyaret etmeye teşvik edin veya takip eden ekstra etkinliklerden birini yapmayı planlıyorsanız, öğrencilere sırada ne işleyeceğinizden bahsedin."
         },
         "ebf68fd6-9cfe-4fc2-93b4-e61860fc853b": {
-          "description": "Her öğrenciye bir [“Çıkış Bileti”](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) verin ve onlardan bugün ne öğrendiklerini, nasıl hissettiklerini veya neler deneyimlediklerini özetlemelerini isteyin. Öğrenciler düşüncelerini ister çizim yaparak ister yazılı bir şekilde dile getirebilir. Odadan çıkarken öğrenciden bir “Çıkış Bileti” aldığınıza emin olun. Dilerseniz “Çıkış Biletleri”ni bir duyuru panosuna veya okulun göz önünde bulunan bir yerine Hour of Code etkinliğini hatırlatması için asabilirsiniz."
+          "description": "Her öğrenciye bir [“Çıkış Bileti”][0] verin ve onlardan bugün ne öğrendiklerini, nasıl hissettiklerini veya neler deneyimlediklerini özetlemelerini isteyin. Öğrenciler düşüncelerini ister çizim yaparak ister yazılı bir şekilde dile getirebilir. Odadan çıkarken öğrenciden bir “Çıkış Bileti” aldığınıza emin olun. Dilerseniz “Çıkış Biletleri”ni bir duyuru panosuna veya okulun göz önünde bulunan bir yerine Hour of Code etkinliğini hatırlatması için asabilirsiniz."
         },
         "f3360f34-a0a8-4d3d-98e2-fe6176ad0e2e": {
           "name": "Hour of Code Ötesi",
-          "description": "Hour of Code etkinliğiniz sona erdikten sonra, K-5 sınıfınızda bilgisayar bilimi hakkında eğitime devam etmenin birçok yolu vardır. İşte bazı fikirler:\n\n-   **[Kod Stüdyosu Bilgisayar Biliminin Temelleri](http://code.org/educate/k5) kurslarını** öğretin. Bu altı kurs, genç öğrenciler için tasarlanmıştır. Öğrenciler, onlara kodlamayı öğreten bir dizi bulmaca üzerinde çalışırlar ve eğitimciler, öğrenmeyi canlandırmaya yardımcı olan ilgi çekici ders planlarına erişebilir. Code.org, bu kurslar için çevrimiçi veya yüz yüze ücretsiz mesleki gelişim sunmaktadır.\n-   **Daha fazla kurs önerisi için [Siz de Bilgisayar Bilimini Öğretebilirsiniz](https://code.org/teach) sayfasını ziyaret edin.**\n-   \\*\\*Sınıfınızla çalışmaları hakkında konuşması için bir bilgisayar bilimi uzmanını davet edin. Yerel bilgisayar bilimcilerini tanımıyor musunuz? [Gönüllü haritamızdan](https://code.org/volunteer/local) bir gönüllüye ulaşın."
+          "description": "Hour of Code etkinliğiniz sona erdikten sonra, K-5 sınıfınızda bilgisayar bilimi hakkında eğitime devam etmenin birçok yolu vardır. İşte bazı fikirler:\n\n-   **[Kod Stüdyosu Bilgisayar Biliminin Temelleri][0] kurslarını** öğretin. Bu altı kurs, genç öğrenciler için tasarlanmıştır. Öğrenciler, onlara kodlamayı öğreten bir dizi bulmaca üzerinde çalışırlar ve eğitimciler, öğrenmeyi canlandırmaya yardımcı olan ilgi çekici ders planlarına erişebilir. Code.org, bu kurslar için çevrimiçi veya yüz yüze ücretsiz mesleki gelişim sunmaktadır.\n-   **Daha fazla kurs önerisi için [Siz de Bilgisayar Bilimini Öğretebilirsiniz][1] sayfasını ziyaret edin.**\n-   \\*\\*Sınıfınızla çalışmaları hakkında konuşması için bir bilgisayar bilimi uzmanını davet edin. Yerel bilgisayar bilimcilerini tanımıyor musunuz? [Gönüllü haritamızdan][2] bir gönüllüye ulaşın."
         },
         "6b51b4f1-5b1d-4b29-af25-c48d716a2d22": {
           "description": "#### Hazırlık Aşaması\n\nÖğrencilerinizi karşılayın ve kısaca günün etkinliğinden bahsedin.\n\n_“Bugün kodlamayı öğrenmek için bir saatlik bir etkinliğimiz olacak. Aranızda daha önce \"kod\" terimini duyan var mı? Bunun anlamı nedir?\"_ gibi sorular yöneltebilirsiniz. \n\nÖğrenciler \"kod\"un gizli bir mesaj gibi olduğunu veya bir şekilde bilgisayarlarla ilgili olduğunu söyleyebilirler.",
@@ -25192,7 +25192,7 @@
         },
         "aced2726-6ed1-4645-9fd2-eccfe982584f": {
           "tips": [
-            "Kodlamaya pek aşina değilseniz Hour of Code etkinliğini tanıtmak için [ilham verici videolarımızdan](https://hourofcode.com/us/resources#videos) birini gösterebilirsiniz. Öğrencilerinizin ilham verici bulacağını düşündüğünüz birini seçin ve onlarla paylaşın. Küçük öğrenciler için \"[Herkes Öğrenebilir](https://youtu.be/qYZF6oIZtfc)\" güzel bir seçenek olabilir."
+            "Kodlamaya pek aşina değilseniz Hour of Code etkinliğini tanıtmak için [ilham verici videolarımızdan][0] birini gösterebilirsiniz. Öğrencilerinizin ilham verici bulacağını düşündüğünüz birini seçin ve onlarla paylaşın. Küçük öğrenciler için \"[Herkes Öğrenebilir][1]\" güzel bir seçenek olabilir."
           ]
         },
         "a0692bbb-9e61-49d2-ac85-96bd4a922f5a": {
@@ -25200,7 +25200,7 @@
         },
         "8af57fdb-d7be-4cc2-9964-8f7eed4102f9": {
           "name": "Flappy Kod",
-          "description": "Öğrencilerinizden [Flappy Oyunu](https://studio.code.org/flappy/1) öğreticisini tamamlamalarını isteyin.\n\nÖğrencilerinizin yaşına ve yeteneklerine bağlı olarak şunları düşünebilirsiniz:\n\n-   Ortaokul ve lise öğrencileri için, ücretsiz bir şekilde uygulama veya oyun oluşturmaya izin veren öğreticiler seçmenizi öneririz. Öğrencilerin bağımsız olarak veya çiftler veya küçük gruplar halinde çalışmasını sağlayabilirsiniz. [code.org/learn](http://code.org/learn) üzerinde ücretsiz oluşturmaya izin veren birçok öğretici vardır. [Playlab](https://studio.code.org/s/playlab/stage/1/puzzle/1) ve yeni beta aracımız [AppLab](https://code.org/educate/applab) bunların başlıcalarındandır.\n-   Daha küçük öğrenciler için, sınıfınızı çiftlere veya çok küçük gruplara (her biri üç ila dört öğrenci) ayırmanızı ve her gruptan [eşli programlama](https://youtu.be/vgkahOzFH2Q) kullanarak öğreticiyi tamamlamak için birlikte çalışmasını istemenizi öneririz.\n-   Yetişkin öğrenciler için, [İlk bilgisayar programınızı yazın](https://studio.code.org/hoc/1) öğreticisi, bağımsız bir meydan okuma veya bir çift programlama etkinliği olarak son derece etkilidir."
+          "description": "Öğrencilerinizden [Flappy Oyunu][0] öğreticisini tamamlamalarını isteyin.\n\nÖğrencilerinizin yaşına ve yeteneklerine bağlı olarak şunları düşünebilirsiniz:\n\n-   Ortaokul ve lise öğrencileri için, ücretsiz bir şekilde uygulama veya oyun oluşturmaya izin veren öğreticiler seçmenizi öneririz. Öğrencilerin bağımsız olarak veya çiftler veya küçük gruplar halinde çalışmasını sağlayabilirsiniz. [code.org/learn][1] üzerinde ücretsiz oluşturmaya izin veren birçok öğretici vardır. [Playlab][2] ve yeni beta aracımız [AppLab][3] bunların başlıcalarındandır.\n-   Daha küçük öğrenciler için, sınıfınızı çiftlere veya çok küçük gruplara (her biri üç ila dört öğrenci) ayırmanızı ve her gruptan [eşli programlama][4] kullanarak öğreticiyi tamamlamak için birlikte çalışmasını istemenizi öneririz.\n-   Yetişkin öğrenciler için, [İlk bilgisayar programınızı yazın][5] öğreticisi, bağımsız bir meydan okuma veya bir çift programlama etkinliği olarak son derece etkilidir."
         },
         "47fe47af-9de3-4ba5-8193-1f489bef9544": {
           "tips": [
@@ -25208,7 +25208,7 @@
           ]
         },
         "55f2f6a9-8e6b-49c2-8988-e2a09956e222": {
-          "description": "Öğrenciler grup veya bireysel olarak erken bitirirse, [code.org/learn](http://code.org/learn) adresini ziyaret ederek başka bir öğreticiyi deneyebilir."
+          "description": "Öğrenciler grup veya bireysel olarak erken bitirirse, [code.org/learn][0] adresini ziyaret ederek başka bir öğreticiyi deneyebilir."
         },
         "cd649101-5c1f-4bcb-9258-3cabf2bfccb6": {
           "name": "Dönüt Alın",
@@ -25216,7 +25216,7 @@
         },
         "ca7d5e61-0396-4885-934c-0d70ab63b072": {
           "name": "Tebrik Edin",
-          "description": "Bu hafta BB Eğitim Haftası ve dünya çapında milyonlarca öğrenci bu hafta bir Hour of Code eğitimi görecek. Bu nedenle öğrencilerinize bugün bir saat kodlamayla geçireceğinizi açıklayın. Öğrencileri bu dünya çapındaki hareketin bir parçası oldukları için tebrik edin.\n\nHer öğrenciye üzerinde adının yazılı olduğu bir [certificate](http://code.org/certificates) verin."
+          "description": "Bu hafta BB Eğitim Haftası ve dünya çapında milyonlarca öğrenci bu hafta bir Hour of Code eğitimi görecek. Bu nedenle öğrencilerinize bugün bir saat kodlamayla geçireceğinizi açıklayın. Öğrencileri bu dünya çapındaki hareketin bir parçası oldukları için tebrik edin.\n\nHer öğrenciye üzerinde adının yazılı olduğu bir [certificate][0] verin."
         },
         "d4bf5db5-6884-4166-ae90-3a5cd01b9695": {
           "name": "Sonraki Adımlar",
@@ -25228,7 +25228,7 @@
         },
         "f7c11887-da26-4c7b-be7a-1b84d330ed30": {
           "name": "Hour of Code'un Ötesi",
-          "description": "Hour of Code etkinliğiniz sona erdikten sonra, K-5 sınıfınızda bilgisayar bilimi öğretmeye devam etmenin birçok yolu vardır. İşte bazı fikirler:\n\n-   **[Kod Stüdyosu Bilgisayar Biliminin Temelleri](http://code.org/educate/k5) kurslarını öğretin**. Bu altı kurs, genç öğrenciler için tasarlanmıştır. Öğrenciler, onlara kodlamayı öğreten bir dizi bulmaca üzerinde çalışırlar ve eğitimciler, öğrenmenin canlanmasına yardımcı olan ilgi çekici ders planlarına erişebilir. Code.org, bu kurslar için çevrimiçi veya yüz yüze ücretsiz mesleki gelişim sunmaktadır.\n-   **Sınıfınızla çalışmaları hakkında konuşması için bir bilgisayar bilimi uzmanını davet edin**. Hiç gönüllü tanımıyorsanız, [gönüllü haritasından](https://code.org/volunteer/local) birkaç kişiye ulaşın."
+          "description": "Hour of Code etkinliğiniz sona erdikten sonra, K-5 sınıfınızda bilgisayar bilimi öğretmeye devam etmenin birçok yolu vardır. İşte bazı fikirler:\n\n-   **[Kod Stüdyosu Bilgisayar Biliminin Temelleri][0] kurslarını öğretin**. Bu altı kurs, genç öğrenciler için tasarlanmıştır. Öğrenciler, onlara kodlamayı öğreten bir dizi bulmaca üzerinde çalışırlar ve eğitimciler, öğrenmenin canlanmasına yardımcı olan ilgi çekici ders planlarına erişebilir. Code.org, bu kurslar için çevrimiçi veya yüz yüze ücretsiz mesleki gelişim sunmaktadır.\n-   **Sınıfınızla çalışmaları hakkında konuşması için bir bilgisayar bilimi uzmanını davet edin**. Hiç gönüllü tanımıyorsanız, [gönüllü haritasından][1] birkaç kişiye ulaşın."
         },
         "4fddbdf5-8e43-4536-bdaa-98b0b8c240ad": {
           "name": "Hazırlık Aşaması",
@@ -25236,7 +25236,7 @@
         },
         "55cc55a9-45cb-4bbd-bf37-2de8a2abd9db": {
           "tips": [
-            "Zamanınız yeterliyse ve öğrencilerinizin biraz daha arka plan bilgisine ihtiyacı varsa, Hour of Code etkinliğinizden önce [\"Çizim Makinesi\"](https://code.org/curriculum/misc/hocunplugged/Teacher) etkinliğini kullanmayı düşünebilirsiniz. Bu kısa ders, öğrencilere [Anna ve Elsa ile Kodlama öğreticisi](https://studio.code.org/s/frozen/stage/1/puzzle/1) ile daha başarılı olmalarını sağlayacak bilgisayar destekli çizim fikrini tanıtır."
+            "Zamanınız yeterliyse ve öğrencilerinizin biraz daha arka plan bilgisine ihtiyacı varsa, Hour of Code etkinliğinizden önce [\"Çizim Makinesi\"][0] etkinliğini kullanmayı düşünebilirsiniz. Bu kısa ders, öğrencilere [Anna ve Elsa ile Kodlama öğreticisi][1] ile daha başarılı olmalarını sağlayacak bilgisayar destekli çizim fikrini tanıtır."
           ]
         },
         "46e7088b-b207-46ae-be95-3ceacecc3f35": {
@@ -25244,7 +25244,7 @@
         },
         "063fb28a-8520-4c66-9821-3be0f0d1ed5f": {
           "tips": [
-            "Kodlamaya pek aşina değilseniz Hour of Code etkinliğini tanıtmak için [ilham verici videolarımızdan](https://hourofcode.com/us/resources#videos) birini gösterebilirsiniz. Öğrencilerinizin ilham verici bulacağını düşündüğünüz birini seçin ve onlarla paylaşın. Orta sınıflardaki öğrenciler için [Hour of Code Burada](https://youtu.be/FC5FbmsH4fw) güzel bir seçenek olabilir."
+            "Kodlamaya pek aşina değilseniz Hour of Code etkinliğini tanıtmak için [ilham verici videolarımızdan][0] birini gösterebilirsiniz. Öğrencilerinizin ilham verici bulacağını düşündüğünüz birini seçin ve onlarla paylaşın. Orta sınıflardaki öğrenciler için [Hour of Code Burada][1] güzel bir seçenek olabilir."
           ]
         },
         "c18f0050-ba65-4f12-8cc6-fe7f16b5806b": {
@@ -25252,7 +25252,7 @@
         },
         "e5e802d6-9ee4-4ef3-aab2-616ac241b5f8": {
           "name": "Anna ve Elsa ile kodlama yap",
-          "description": "Öğrencilerinizden [Anna ve Elsa ile Kodlama](https://studio.code.org/s/frozen/stage/1/puzzle/1) eğitimini tamamlamalarını isteyin.\n\nÖğrencilerinizin yaşına ve yeteneklerine bağlı olarak şunları düşünebilirsiniz:\n\n-   Küçük öğrenciler için, sınıfınızı çiftler veya küçük gruplar (her biri üç ila dört öğrenci) şeklinde ayırabilirsiniz. Her gruptan [eşli programlama](https://youtu.be/vgkahOzFH2Q) kullanarak öğreticiyi tamamlamak için birlikte çalışmasını isteyebilirsiniz. K-5 sınıflarındaki öğrenciler için öğreticideki matematik zorlayıcı olabilir (açı ölçümüne ilişkin temel bir bilgi gerektirmektedir). Öğrencileriniz genç ise, Hour of Code etkinliğinizi kolaylaştırmadan önce temel bilgileri tanıtmak için ek ders planını [\"Çizim Makinesi\"](https://code.org/curriculum/misc/hocunplugged/Teacher) sunmayı düşünün.\n-   Daha büyük öğrenciler için, öğreticiler üzerinde bağımsız çalışmanın iyi sonuç verdiğini görüyoruz. Bazen öğrencilerin kendi eğitimlerini seçmelerine izin vermek yardımcı olabilir. Öğrenciler Frozen ile ilgilenmiyorlarsa, [İlk Bilgisayar Programınızı Yazın](https://studio.code.org/hoc/1) öğreticisiyle benzer bir deneyim yaşayabilirler.\n-   Yetişkin öğrenciler için, [Anna ve Elsa ile Kodlama](https://studio.code.org/s/frozen/stage/1/puzzle/1), bağımsız bir meydan okuma veya eşli programlama etkinliği olarak son derece etkilidir."
+          "description": "Öğrencilerinizden [Anna ve Elsa ile Kodlama][0] eğitimini tamamlamalarını isteyin.\n\nÖğrencilerinizin yaşına ve yeteneklerine bağlı olarak şunları düşünebilirsiniz:\n\n-   Küçük öğrenciler için, sınıfınızı çiftler veya küçük gruplar (her biri üç ila dört öğrenci) şeklinde ayırabilirsiniz. Her gruptan [eşli programlama][1] kullanarak öğreticiyi tamamlamak için birlikte çalışmasını isteyebilirsiniz. K-5 sınıflarındaki öğrenciler için öğreticideki matematik zorlayıcı olabilir (açı ölçümüne ilişkin temel bir bilgi gerektirmektedir). Öğrencileriniz genç ise, Hour of Code etkinliğinizi kolaylaştırmadan önce temel bilgileri tanıtmak için ek ders planını [\"Çizim Makinesi\"][2] sunmayı düşünün.\n-   Daha büyük öğrenciler için, öğreticiler üzerinde bağımsız çalışmanın iyi sonuç verdiğini görüyoruz. Bazen öğrencilerin kendi eğitimlerini seçmelerine izin vermek yardımcı olabilir. Öğrenciler Frozen ile ilgilenmiyorlarsa, [İlk Bilgisayar Programınızı Yazın][3] öğreticisiyle benzer bir deneyim yaşayabilirler.\n-   Yetişkin öğrenciler için, [Anna ve Elsa ile Kodlama][4], bağımsız bir meydan okuma veya eşli programlama etkinliği olarak son derece etkilidir."
         },
         "bdb8b54a-c21d-4bcf-a960-67ecf0468a7f": {
           "tips": [
@@ -25260,15 +25260,15 @@
           ]
         },
         "da8b52b2-8db6-440d-add3-8578161f59e2": {
-          "description": "Öğrenciler grup veya bireysel olarak erken bitirirse, [code.org/learn](http://code.org/learn) adresini ziyaret ederek başka bir öğreticiyi deneyebilir."
+          "description": "Öğrenciler grup veya bireysel olarak erken bitirirse, [code.org/learn][0] adresini ziyaret ederek başka bir öğreticiyi deneyebilir."
         },
         "38799019-2b81-4c28-a239-762b90e0f5e3": {
           "name": "Dönüt Alın",
-          "description": "Her öğrenciye birkaç adet yapışkan not veya not kartları verin. Bir [“Hızlı Fikirler”](http://www.theteachertoolkit.com/index.php/tool/whip-around) aktivitesi başlatın:\n\n-   “Tamamlamış olduğunuz Hour of Code aktivitesi ile ilgili gerçekten sevdiğiniz bir şeyi paylaşın” veya “Bugün öğrendiğiniz becerilerden bazılarını paylaşın\" gibi tek bir cevabı olmayan sorular yöneltin.\n-   Her bir yapışkanlı kağıtta veya not kartında bir fikir olacak şekilde, öğrencilerin mümkün olduğunca fazla cevap yazmasını sağlayın.\n    Odada bir tur atın ve her seferinde bir öğrenciye söz verin. Öğrencilerden yanıtlarından birini paylaşmasını isteyin. Söz aldıklarında, öğrenciler verilen bir yanıtı tekrarlamamasını, yeni bir şey eklemesini sağlayın.\n-   Odadaki turunuzu tamamladıktan sonra, yanıtlarında en çok hangi fikirlerin veya temaların olduğunu öğrencilerle tartışın. "
+          "description": "Her öğrenciye birkaç adet yapışkan not veya not kartları verin. Bir [“Hızlı Fikirler”][0] aktivitesi başlatın:\n\n-   “Tamamlamış olduğunuz Hour of Code aktivitesi ile ilgili gerçekten sevdiğiniz bir şeyi paylaşın” veya “Bugün öğrendiğiniz becerilerden bazılarını paylaşın\" gibi tek bir cevabı olmayan sorular yöneltin.\n-   Her bir yapışkanlı kağıtta veya not kartında bir fikir olacak şekilde, öğrencilerin mümkün olduğunca fazla cevap yazmasını sağlayın.\n    Odada bir tur atın ve her seferinde bir öğrenciye söz verin. Öğrencilerden yanıtlarından birini paylaşmasını isteyin. Söz aldıklarında, öğrenciler verilen bir yanıtı tekrarlamamasını, yeni bir şey eklemesini sağlayın.\n-   Odadaki turunuzu tamamladıktan sonra, yanıtlarında en çok hangi fikirlerin veya temaların olduğunu öğrencilerle tartışın. "
         },
         "e9751fff-a71d-4d90-b401-0ccbf3356c44": {
           "name": "Tebrik Edin",
-          "description": "Bu hafta BB Eğitim Haftası ve dünya çapında milyonlarca öğrenci bu hafta bir Hour of Code eğitimi görecek. Bu nedenle öğrencilerinize bugün bir saat kodlamayla geçireceğinizi açıklayın. Öğrencileri bu dünya çapındaki hareketin bir parçası oldukları için tebrik edin.\n\nHer öğrenciye üzerinde adının yazılı olduğu bir [certificate](http://code.org/certificates) verin."
+          "description": "Bu hafta BB Eğitim Haftası ve dünya çapında milyonlarca öğrenci bu hafta bir Hour of Code eğitimi görecek. Bu nedenle öğrencilerinize bugün bir saat kodlamayla geçireceğinizi açıklayın. Öğrencileri bu dünya çapındaki hareketin bir parçası oldukları için tebrik edin.\n\nHer öğrenciye üzerinde adının yazılı olduğu bir [certificate][0] verin."
         },
         "3596cc47-e661-4d00-943e-ed858c4f6f5d": {
           "name": "Sonraki Adımlar",
@@ -25279,7 +25279,7 @@
         },
         "3a8c30ae-50bb-4a85-99d8-b62c9f7e1bbf": {
           "name": "Kod saatinin ötesi",
-          "description": "Hour of Code etkinliğiniz sona erdikten sonra K-5 sınıfınızda bilgisayar bilimi hakkında eğitime devam etmenin birçok yolu vardır. İşte bazı fikirler:\n\n-   **[Kod Stüdyosu Bilgisayar Biliminin Temelleri](http://code.org/educate/k5) kurslarını öğretin**. Bu altı kurs, genç öğrenciler için tasarlanmıştır. Öğrenciler, onlara kodlamayı öğreten bir dizi bulmaca üzerinde çalışırlar ve eğitimciler, öğrenmenin canlanmasına yardımcı olan ilgi çekici ders planlarına erişebilir. Code.org, bu kurslar için çevrimiçi veya yüz yüze ücretsiz mesleki gelişim sunmaktadır.\n-   Bugün hakkında konuştuğunuz kodlama bilgisi gerektiren kariyer seçeneklerinden bazılarını araştırın. [Sharemylesson.com](http://www.sharemylesson.com/TaxonomySearchResults.aspx?area=resources&keywords=career+research) adresinde kariyer araştırma projeleri hakkında kaynaklar bulun.\n-   **Sınıfınızla çalışmaları hakkında konuşması için bir bilgisayar bilimi uzmanını davet edin**. Hiç gönüllü tanımıyorsanız, [gönüllü haritasından](https://code.org/volunteer/local) birkaç kişiye ulaşın."
+          "description": "Hour of Code etkinliğiniz sona erdikten sonra K-5 sınıfınızda bilgisayar bilimi hakkında eğitime devam etmenin birçok yolu vardır. İşte bazı fikirler:\n\n-   **[Kod Stüdyosu Bilgisayar Biliminin Temelleri][0] kurslarını öğretin**. Bu altı kurs, genç öğrenciler için tasarlanmıştır. Öğrenciler, onlara kodlamayı öğreten bir dizi bulmaca üzerinde çalışırlar ve eğitimciler, öğrenmenin canlanmasına yardımcı olan ilgi çekici ders planlarına erişebilir. Code.org, bu kurslar için çevrimiçi veya yüz yüze ücretsiz mesleki gelişim sunmaktadır.\n-   Bugün hakkında konuştuğunuz kodlama bilgisi gerektiren kariyer seçeneklerinden bazılarını araştırın. [Sharemylesson.com][1] adresinde kariyer araştırma projeleri hakkında kaynaklar bulun.\n-   **Sınıfınızla çalışmaları hakkında konuşması için bir bilgisayar bilimi uzmanını davet edin**. Hiç gönüllü tanımıyorsanız, [gönüllü haritasından][2] birkaç kişiye ulaşın."
         },
         "a2f60a17-c25f-4c4d-9f2d-384486d7a67d": {
           "name": "Hazırlık Aşaması",
@@ -25287,7 +25287,7 @@
         },
         "c857d03e-91e3-4949-8ccc-79a2aec463c8": {
           "tips": [
-            "Kodlamaya pek aşina değilseniz Hour of Code etkinliğini tanıtmak için [ilham verici videolarımızdan](https://hourofcode.com/us/resources#videos) birini gösterebilirsiniz. Öğrencilerinizin ilham verici bulacağını düşündüğünüz birini seçin ve onlarla paylaşın. Küçük öğrenciler için \"[Herkes Öğrenebilir](https://youtu.be/qYZF6oIZtfc)\" güzel bir seçenek olabilir."
+            "Kodlamaya pek aşina değilseniz Hour of Code etkinliğini tanıtmak için [ilham verici videolarımızdan][0] birini gösterebilirsiniz. Öğrencilerinizin ilham verici bulacağını düşündüğünüz birini seçin ve onlarla paylaşın. Küçük öğrenciler için \"[Herkes Öğrenebilir][1]\" güzel bir seçenek olabilir."
           ]
         },
         "8ad0974f-b2ad-4632-bfe5-8c8760cd2e45": {
@@ -25295,7 +25295,7 @@
         },
         "0e395269-9740-4229-a7ac-b18b9f4eced9": {
           "name": "Gumball oyun Labaratuarı",
-          "description": "Öğrencilerinizden [Gumball Oyun Laboratuvarı](https://studio.code.org/s/gumball/lessons/1/levels/1) öğreticisini tamamlamalarını isteyin.\n\nÖğrencilerinizin yaşına ve yeteneklerine bağlı olarak şunları düşünebilirsiniz: \n\n-   Ortaokul ve lise öğrencileri için, ücretsiz oynamaya ve uygulama veya oyun oluşturmaya izin veren öğreticiler seçmenizi öneririz. Öğrencilerin bağımsız olarak veya çiftler veya küçük gruplar halinde çalışmasını sağlayabilirsiniz. [code.org/learn](http://code.org/learn) adresinde [Flappy Oyunu Yapın](https://studio.code.org/s/flappy) ve yeni beta aracımız [AppLab](https://code.org/educate/applab) dahil olmak üzere ücretsiz içerik oluşturmaya izin veren birçok başka öğretici bulunmaktadır.\n-   Daha küçük öğrenciler için, sınıfınızı çiftlere veya çok küçük gruplara (her biri üç ila dört öğrenci) ayırabilirsiniz. Her gruptan [eşli programlama](https://youtu.be/vgkahOzFH2Q) kullanarak öğreticiyi tamamlamak için birlikte çalışmasını isteyebilirsiniz.\n-   Yetişkin öğrenciler için, [İlk bilgisayar programınızı yazın](https://studio.code.org/hoc/1) öğreticisi, bağımsız bir meydan okuma veya bir çift programlama etkinliği olarak son derece etkilidir."
+          "description": "Öğrencilerinizden [Gumball Oyun Laboratuvarı][0] öğreticisini tamamlamalarını isteyin.\n\nÖğrencilerinizin yaşına ve yeteneklerine bağlı olarak şunları düşünebilirsiniz: \n\n-   Ortaokul ve lise öğrencileri için, ücretsiz oynamaya ve uygulama veya oyun oluşturmaya izin veren öğreticiler seçmenizi öneririz. Öğrencilerin bağımsız olarak veya çiftler veya küçük gruplar halinde çalışmasını sağlayabilirsiniz. [code.org/learn][1] adresinde [Flappy Oyunu Yapın][2] ve yeni beta aracımız [AppLab][3] dahil olmak üzere ücretsiz içerik oluşturmaya izin veren birçok başka öğretici bulunmaktadır.\n-   Daha küçük öğrenciler için, sınıfınızı çiftlere veya çok küçük gruplara (her biri üç ila dört öğrenci) ayırabilirsiniz. Her gruptan [eşli programlama][4] kullanarak öğreticiyi tamamlamak için birlikte çalışmasını isteyebilirsiniz.\n-   Yetişkin öğrenciler için, [İlk bilgisayar programınızı yazın][5] öğreticisi, bağımsız bir meydan okuma veya bir çift programlama etkinliği olarak son derece etkilidir."
         },
         "eea63453-59c2-4c48-8d04-d6612d379584": {
           "tips": [
@@ -25303,7 +25303,7 @@
           ]
         },
         "fd77d784-72d9-4687-843d-7d1ecd17b9a1": {
-          "description": "Öğrenciler grup veya bireysel olarak erken bitirirse, [code.org/learn](http://code.org/learn) adresini ziyaret ederek başka bir öğreticiyi deneyebilir."
+          "description": "Öğrenciler grup veya bireysel olarak erken bitirirse, [code.org/learn][0] adresini ziyaret ederek başka bir öğreticiyi deneyebilir."
         },
         "0815f2e7-8336-48ae-8ac0-5d0af1f956d9": {
           "name": "Dönüt Alın",
@@ -25311,7 +25311,7 @@
         },
         "3b92bb05-ac4c-4717-afce-ed3d10f54527": {
           "name": "Tebrik Edin",
-          "description": "Bu hafta BB Eğitim Haftası ve dünya çapında milyonlarca öğrenci bu hafta bir Hour of Code eğitimi görecek. Bu nedenle öğrencilerinize bugün bir saat kodlamayla geçireceğinizi açıklayın. Öğrencileri bu dünya çapındaki hareketin bir parçası oldukları için tebrik edin.\n\nHer öğrenciye üzerinde adının yazılı olduğu bir [certificate](http://code.org/certificates) verin."
+          "description": "Bu hafta BB Eğitim Haftası ve dünya çapında milyonlarca öğrenci bu hafta bir Hour of Code eğitimi görecek. Bu nedenle öğrencilerinize bugün bir saat kodlamayla geçireceğinizi açıklayın. Öğrencileri bu dünya çapındaki hareketin bir parçası oldukları için tebrik edin.\n\nHer öğrenciye üzerinde adının yazılı olduğu bir [certificate][0] verin."
         },
         "59cd05df-cb4d-4280-8700-840826c01845": {
           "name": "Sonraki Adımlar",
@@ -25323,7 +25323,7 @@
         },
         "2836d5f0-0808-4868-bc34-bbd3cf8b631f": {
           "name": "Kod saatinin ötesi",
-          "description": "Hour of Code etkinliğiniz sona erdikten sonra, K-5 sınıfınızda bilgisayar bilimi öğretmeye devam etmenin birçok yolu vardır. İşte bazı fikirler:\n\n-   **[Kod Stüdyosu Bilgisayar Biliminin Temelleri](http://code.org/educate/k5) kurslarını öğretin**. Bu dört kurs genç öğrenciler için tasarlanmıştır. Öğrenciler, onlara kodlamayı öğreten bir dizi bulmaca üzerinde çalışırlar ve eğitimciler, öğrenmenin canlanmasına yardımcı olan ilgi çekici ders planlarına erişebilir. Code.org, bu kurslar için çevrimiçi veya yüz yüze ücretsiz mesleki gelişim sunmaktadır.\n-   **Sınıfınızla çalışmaları hakkında konuşması için bir bilgisayar bilimi uzmanını davet edin**. Hiç gönüllü tanımıyorsanız, [gönüllü haritasından](https://code.org/volunteer/local) birkaç kişiye ulaşın."
+          "description": "Hour of Code etkinliğiniz sona erdikten sonra, K-5 sınıfınızda bilgisayar bilimi öğretmeye devam etmenin birçok yolu vardır. İşte bazı fikirler:\n\n-   **[Kod Stüdyosu Bilgisayar Biliminin Temelleri][0] kurslarını öğretin**. Bu dört kurs genç öğrenciler için tasarlanmıştır. Öğrenciler, onlara kodlamayı öğreten bir dizi bulmaca üzerinde çalışırlar ve eğitimciler, öğrenmenin canlanmasına yardımcı olan ilgi çekici ders planlarına erişebilir. Code.org, bu kurslar için çevrimiçi veya yüz yüze ücretsiz mesleki gelişim sunmaktadır.\n-   **Sınıfınızla çalışmaları hakkında konuşması için bir bilgisayar bilimi uzmanını davet edin**. Hiç gönüllü tanımıyorsanız, [gönüllü haritasından][1] birkaç kişiye ulaşın."
         },
         "c4d6d315-bb5c-47d7-bc5e-f5fce2e4ae67": {
           "name": "Hazırlık Aşaması",
@@ -25337,18 +25337,18 @@
         },
         "ce182c47-efed-4526-bb9c-f4ec66b052a4": {
           "name": "Genel Destek",
-          "description": "Çalıştıkları seviyeden bağımsız olarak öğrencilere yardımcı olması gereken birkaç ipucu aşağıda verilmiştir\n\n-   **Arkadaşlarla İşbirliği:** Öğrencileri, takılıp kaldıklarında bir arkadaşlarına danışmaya teşvik edin. Öğrencilerinizin yaşına ve yeteneklerine bağlı olarak, [eşli programlama](https://youtu.be/vgkahOzFH2Q) kullanarak öğreticiyi tamamlamak üzere sınıfınızı ikili gruplara ayırmayı düşünebilirsiniz.\n\n-   **Talimatları Okuyun:** Talimatlar genellikle seviyeyi nasıl tamamlayacağınız konusunda yardımcı ipuçları sağlar. Öğrencilere cevabı vermeden önce, yönergeleri, ipuçlarını, videoları ve varsa başlangıç ​​kodunu dikkatlice incelediklerinden emin olun.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Takıldınız mı? İpuçları arayın:** Her seviye, hangi kod bloklarının deneneceği de dahil olmak üzere, bir seviyenin nasıl geçileceğine dair tavsiyeler veren bir ipucu içerir.\n\n-   **Acele etmeyin ve deneyin.** Talimatlar öğrencilere genel olarak ne yapmaları gerektiğini söyler ancak öğrenciler kendi fikirlerini denemekten de çekinmemelidirler."
+          "description": "Çalıştıkları seviyeden bağımsız olarak öğrencilere yardımcı olması gereken birkaç ipucu aşağıda verilmiştir\n\n-   **Arkadaşlarla İşbirliği:** Öğrencileri, takılıp kaldıklarında bir arkadaşlarına danışmaya teşvik edin. Öğrencilerinizin yaşına ve yeteneklerine bağlı olarak, [eşli programlama][0] kullanarak öğreticiyi tamamlamak üzere sınıfınızı ikili gruplara ayırmayı düşünebilirsiniz.\n\n-   **Talimatları Okuyun:** Talimatlar genellikle seviyeyi nasıl tamamlayacağınız konusunda yardımcı ipuçları sağlar. Öğrencilere cevabı vermeden önce, yönergeleri, ipuçlarını, videoları ve varsa başlangıç ​​kodunu dikkatlice incelediklerinden emin olun.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Takıldınız mı? İpuçları arayın:** Her seviye, hangi kod bloklarının deneneceği de dahil olmak üzere, bir seviyenin nasıl geçileceğine dair tavsiyeler veren bir ipucu içerir.\n\n-   **Acele etmeyin ve deneyin.** Talimatlar öğrencilere genel olarak ne yapmaları gerektiğini söyler ancak öğrenciler kendi fikirlerini denemekten de çekinmemelidirler."
         },
         "893dba56-7c8e-4897-949b-de514de76011": {
           "name": "Merhaba Dünya",
           "progression_name": "Merhaba Dünya"
         },
         "05ad915a-32e0-4799-90a2-2a53efb937f1": {
-          "description": "Bir grup veya kişi erken bitirirse, onları son seviyede bir proje oluşturmaya devam etmeleri için teşvik edin. Öğrenciler başka ne yapacaklarından emin değillerse onlara sorular sorabilirsiniz:\n\n-   Projenize başka hangi hareketli nesneleri ekleyebilirsiniz?\n-   Kostüm kütüphanesine baktınız mı veya kendi hareketli nesne kostümünüzü çizmeyi denediniz mi?\n-   Hareketli nesnelerinize başka ne söyletebilirsiniz?\n-   Hareketli nesneleriniz tıklandığında ne yapmalı?\n-   Öğrencileri fikirlerini paylaşmaya ve birbirlerinden öğrenmeye davet edin. Ayrıca [code.org/learn](https://code.org/learn) adresini ziyaret ederek başka bir öğreticiyi deneyebilirler."
+          "description": "Bir grup veya kişi erken bitirirse, onları son seviyede bir proje oluşturmaya devam etmeleri için teşvik edin. Öğrenciler başka ne yapacaklarından emin değillerse onlara sorular sorabilirsiniz:\n\n-   Projenize başka hangi hareketli nesneleri ekleyebilirsiniz?\n-   Kostüm kütüphanesine baktınız mı veya kendi hareketli nesne kostümünüzü çizmeyi denediniz mi?\n-   Hareketli nesnelerinize başka ne söyletebilirsiniz?\n-   Hareketli nesneleriniz tıklandığında ne yapmalı?\n-   Öğrencileri fikirlerini paylaşmaya ve birbirlerinden öğrenmeye davet edin. Ayrıca [code.org/learn][0] adresini ziyaret ederek başka bir öğreticiyi deneyebilirler."
         },
         "d5d3f8eb-f17e-4f26-88a8-ca6422ed7a1f": {
           "name": "Yansıma",
-          "description": "#### Değerlendirme\n\nÖğrencilerden günün aktiviteleri hakkında ne düşündüklerini açıklamalarını isteyin. Kodlama hakkında ne öğrendiler? Hareketli Nesneler? Olaylar?\n\nKeşfetmek için bir saat harcadıktan sonra bilgisayar bilimi ve kodlama hakkında ne düşünüyorlar?\n\n#### Sonraki Adımlar\n\nÖğrencilere, bugünkü aktiviteden hoşlandılarsa, kodlamaya devam etmek için birçok seçeneğe sahip olduklarını bildirin. Bilgisayar biliminin diğer derslere nasıl entegre edileceğine ilişkin fikirler için [CS Connections](https://code.org/educate/csc) adresini ziyaret edin veya [ilkokullar için kurs tekliflerimiz](https://code.org/educate/curriculum/elementary-school) hakkında daha fazla bilgi edinin."
+          "description": "#### Değerlendirme\n\nÖğrencilerden günün aktiviteleri hakkında ne düşündüklerini açıklamalarını isteyin. Kodlama hakkında ne öğrendiler? Hareketli Nesneler? Olaylar?\n\nKeşfetmek için bir saat harcadıktan sonra bilgisayar bilimi ve kodlama hakkında ne düşünüyorlar?\n\n#### Sonraki Adımlar\n\nÖğrencilere, bugünkü aktiviteden hoşlandılarsa, kodlamaya devam etmek için birçok seçeneğe sahip olduklarını bildirin. Bilgisayar biliminin diğer derslere nasıl entegre edileceğine ilişkin fikirler için [CS Connections][0] adresini ziyaret edin veya [ilkokullar için kurs tekliflerimiz][1] hakkında daha fazla bilgi edinin."
         },
         "aad08892-e7b6-4fdc-bfd6-8199118fc2d6": {
           "name": "Hazırlık Aşaması",
@@ -25362,18 +25362,18 @@
         },
         "0a05af25-05aa-4e56-92ce-f14570cc1c64": {
           "name": "Genel Destek",
-          "description": "Çalıştıkları seviyeden bağımsız olarak öğrencilere yardımcı olması gereken birkaç ipucu aşağıda verilmiştir\n\n-   **Arkadaşlarla İşbirliği:** Öğrencileri, takılıp kaldıklarında bir arkadaşlarına danışmaya teşvik edin. Öğrencilerinizin yaşına ve yeteneklerine bağlı olarak, [eşli programlama](https://youtu.be/vgkahOzFH2Q) kullanarak öğreticiyi tamamlamak üzere sınıfınızı ikili gruplara ayırmayı düşünebilirsiniz.\n\n-   **Talimatları Okuyun:** Talimatlar genellikle seviyeyi nasıl tamamlayacağınız konusunda yardımcı ipuçları sağlar. Öğrencilere cevabı vermeden önce, yönergeleri, ipuçlarını, videoları ve varsa başlangıç ​​kodunu dikkatlice incelediklerinden emin olun.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Takıldınız mı? İpuçları arayın:** Her seviye, hangi kod bloklarının deneneceği de dahil olmak üzere, bir seviyenin nasıl geçileceğine dair tavsiyeler veren bir ipucu içerir.\n\n-   **Acele etmeyin ve deneyin.** Talimatlar öğrencilere genel olarak ne yapmaları gerektiğini söyler ancak öğrenciler kendi fikirlerini denemekten de çekinmemelidirler."
+          "description": "Çalıştıkları seviyeden bağımsız olarak öğrencilere yardımcı olması gereken birkaç ipucu aşağıda verilmiştir\n\n-   **Arkadaşlarla İşbirliği:** Öğrencileri, takılıp kaldıklarında bir arkadaşlarına danışmaya teşvik edin. Öğrencilerinizin yaşına ve yeteneklerine bağlı olarak, [eşli programlama][0] kullanarak öğreticiyi tamamlamak üzere sınıfınızı ikili gruplara ayırmayı düşünebilirsiniz.\n\n-   **Talimatları Okuyun:** Talimatlar genellikle seviyeyi nasıl tamamlayacağınız konusunda yardımcı ipuçları sağlar. Öğrencilere cevabı vermeden önce, yönergeleri, ipuçlarını, videoları ve varsa başlangıç ​​kodunu dikkatlice incelediklerinden emin olun.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Takıldınız mı? İpuçları arayın:** Her seviye, hangi kod bloklarının deneneceği de dahil olmak üzere, bir seviyenin nasıl geçileceğine dair tavsiyeler veren bir ipucu içerir.\n\n-   **Acele etmeyin ve deneyin.** Talimatlar öğrencilere genel olarak ne yapmaları gerektiğini söyler ancak öğrenciler kendi fikirlerini denemekten de çekinmemelidirler."
         },
         "f6a21949-1c94-4269-acae-98046f6a9052": {
           "name": "Merhaba Dünya",
           "progression_name": "Merhaba Dünya"
         },
         "3e2a74f4-d574-42fd-9bf3-5b319526299a": {
-          "description": "Bir grup veya kişi erken bitirirse, onları son seviyede bir proje oluşturmaya devam etmeleri için teşvik edin. Öğrenciler başka ne yapacaklarından emin değillerse onlara sorular sorabilirsiniz:\n\n-   Projenize başka hangi hareketli nesneleri ekleyebilirsiniz?\n-   Kostüm kütüphanesine baktınız mı veya kendi hareketli nesne kostümünüzü çizmeyi denediniz mi?\n-   Hareketli nesnelerinize başka ne söyletebilirsiniz?\n-   Hareketli nesneleriniz tıklandığında ne yapmalı?\n-   Öğrencileri fikirlerini paylaşmaya ve birbirlerinden öğrenmeye davet edin. Ayrıca [code.org/learn](https://code.org/learn) adresini ziyaret ederek başka bir öğreticiyi deneyebilirler."
+          "description": "Bir grup veya kişi erken bitirirse, onları son seviyede bir proje oluşturmaya devam etmeleri için teşvik edin. Öğrenciler başka ne yapacaklarından emin değillerse onlara sorular sorabilirsiniz:\n\n-   Projenize başka hangi hareketli nesneleri ekleyebilirsiniz?\n-   Kostüm kütüphanesine baktınız mı veya kendi hareketli nesne kostümünüzü çizmeyi denediniz mi?\n-   Hareketli nesnelerinize başka ne söyletebilirsiniz?\n-   Hareketli nesneleriniz tıklandığında ne yapmalı?\n-   Öğrencileri fikirlerini paylaşmaya ve birbirlerinden öğrenmeye davet edin. Ayrıca [code.org/learn][0] adresini ziyaret ederek başka bir öğreticiyi deneyebilirler."
         },
         "f95b4eed-639e-483e-bef7-ead9abf4808e": {
           "name": "Yansıma",
-          "description": "#### Değerlendirme\n\nÖğrencilerden günün aktiviteleri hakkında ne düşündüklerini açıklamalarını isteyin. Kodlama hakkında ne öğrendiler? Hareketli Nesneler? Olaylar?\n\nKeşfetmek için bir saat harcadıktan sonra bilgisayar bilimi ve kodlama hakkında ne düşünüyorlar?\n\n#### Sonraki Adımlar\n\nÖğrencilere, bugünkü aktiviteden hoşlandılarsa, kodlamaya devam etmek için birçok seçeneğe sahip olduklarını bildirin. Bilgisayar biliminin diğer derslere nasıl entegre edileceğine ilişkin fikirler için [CS Connections](https://code.org/educate/csc) adresini ziyaret edin veya [ilkokullar için kurs tekliflerimiz](https://code.org/educate/curriculum/elementary-school) hakkında daha fazla bilgi edinin."
+          "description": "#### Değerlendirme\n\nÖğrencilerden günün aktiviteleri hakkında ne düşündüklerini açıklamalarını isteyin. Kodlama hakkında ne öğrendiler? Hareketli Nesneler? Olaylar?\n\nKeşfetmek için bir saat harcadıktan sonra bilgisayar bilimi ve kodlama hakkında ne düşünüyorlar?\n\n#### Sonraki Adımlar\n\nÖğrencilere, bugünkü aktiviteden hoşlandılarsa, kodlamaya devam etmek için birçok seçeneğe sahip olduklarını bildirin. Bilgisayar biliminin diğer derslere nasıl entegre edileceğine ilişkin fikirler için [CS Connections][0] adresini ziyaret edin veya [ilkokullar için kurs tekliflerimiz][1] hakkında daha fazla bilgi edinin."
         },
         "5ba761c1-02df-411f-96cd-69a8327e0d2c": {
           "name": "Hazırlık Aşaması",
@@ -25387,18 +25387,18 @@
         },
         "11f167ca-2cf6-4e6b-8857-316c5cb55f82": {
           "name": "Genel Destek",
-          "description": "Çalıştıkları seviyeden bağımsız olarak öğrencilere yardımcı olması gereken birkaç ipucu aşağıda verilmiştir\n\n-   **Arkadaşlarla İşbirliği:** Öğrencileri, takılıp kaldıklarında bir arkadaşlarına danışmaya teşvik edin. Öğrencilerinizin yaşına ve yeteneklerine bağlı olarak, [eşli programlama](https://youtu.be/vgkahOzFH2Q) kullanarak öğreticiyi tamamlamak üzere sınıfınızı ikili gruplara ayırmayı düşünebilirsiniz.\n\n-   **Talimatları Okuyun:** Talimatlar genellikle seviyeyi nasıl tamamlayacağınız konusunda yardımcı ipuçları sağlar. Öğrencilere cevabı vermeden önce, yönergeleri, ipuçlarını, videoları ve varsa başlangıç ​​kodunu dikkatlice incelediklerinden emin olun.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Takıldınız mı? İpuçları arayın:** Her seviye, hangi kod bloklarının deneneceği de dahil olmak üzere, bir seviyenin nasıl geçileceğine dair tavsiyeler veren bir ipucu içerir.\n\n-   **Acele etmeyin ve deneyin.** Talimatlar öğrencilere genel olarak ne yapmaları gerektiğini söyler ancak öğrenciler kendi fikirlerini denemekten de çekinmemelidirler."
+          "description": "Çalıştıkları seviyeden bağımsız olarak öğrencilere yardımcı olması gereken birkaç ipucu aşağıda verilmiştir\n\n-   **Arkadaşlarla İşbirliği:** Öğrencileri, takılıp kaldıklarında bir arkadaşlarına danışmaya teşvik edin. Öğrencilerinizin yaşına ve yeteneklerine bağlı olarak, [eşli programlama][0] kullanarak öğreticiyi tamamlamak üzere sınıfınızı ikili gruplara ayırmayı düşünebilirsiniz.\n\n-   **Talimatları Okuyun:** Talimatlar genellikle seviyeyi nasıl tamamlayacağınız konusunda yardımcı ipuçları sağlar. Öğrencilere cevabı vermeden önce, yönergeleri, ipuçlarını, videoları ve varsa başlangıç ​​kodunu dikkatlice incelediklerinden emin olun.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Takıldınız mı? İpuçları arayın:** Her seviye, hangi kod bloklarının deneneceği de dahil olmak üzere, bir seviyenin nasıl geçileceğine dair tavsiyeler veren bir ipucu içerir.\n\n-   **Acele etmeyin ve deneyin.** Talimatlar öğrencilere genel olarak ne yapmaları gerektiğini söyler ancak öğrenciler kendi fikirlerini denemekten de çekinmemelidirler."
         },
         "c721eddb-4cfb-4237-a031-0730bbfdc926": {
           "name": "Merhaba Dünya",
           "progression_name": "Merhaba Dünya"
         },
         "8341212e-8528-4ad8-9c02-22066467054b": {
-          "description": "Bir grup veya kişi erken bitirirse, onları son seviyede bir proje oluşturmaya devam etmeleri için teşvik edin. Öğrenciler başka ne yapacaklarından emin değillerse onlara sorular sorabilirsiniz:\n\n-   Projenize başka hangi hareketli nesneleri ekleyebilirsiniz?\n-   Kostüm kütüphanesine baktınız mı veya kendi hareketli nesne kostümünüzü çizmeyi denediniz mi?\n-   Hareketli nesnelerinize başka ne söyletebilirsiniz?\n-   Hareketli nesneleriniz tıklandığında ne yapmalı?\n-   Öğrencileri fikirlerini paylaşmaya ve birbirlerinden öğrenmeye davet edin. Ayrıca [code.org/learn](https://code.org/learn) adresini ziyaret ederek başka bir öğreticiyi deneyebilirler."
+          "description": "Bir grup veya kişi erken bitirirse, onları son seviyede bir proje oluşturmaya devam etmeleri için teşvik edin. Öğrenciler başka ne yapacaklarından emin değillerse onlara sorular sorabilirsiniz:\n\n-   Projenize başka hangi hareketli nesneleri ekleyebilirsiniz?\n-   Kostüm kütüphanesine baktınız mı veya kendi hareketli nesne kostümünüzü çizmeyi denediniz mi?\n-   Hareketli nesnelerinize başka ne söyletebilirsiniz?\n-   Hareketli nesneleriniz tıklandığında ne yapmalı?\n-   Öğrencileri fikirlerini paylaşmaya ve birbirlerinden öğrenmeye davet edin. Ayrıca [code.org/learn][0] adresini ziyaret ederek başka bir öğreticiyi deneyebilirler."
         },
         "656eee11-dc6d-428e-8849-6e4b31dc8c81": {
           "name": "Yansıma",
-          "description": "#### Değerlendirme\n\nÖğrencilerden günün aktiviteleri hakkında ne düşündüklerini açıklamalarını isteyin. Kodlama hakkında ne öğrendiler? Hareketli Nesneler? Olaylar?\n\nKeşfetmek için bir saat harcadıktan sonra bilgisayar bilimi ve kodlama hakkında ne düşünüyorlar?\n\n#### Sonraki Adımlar\n\nÖğrencilere, bugünkü aktiviteden hoşlandılarsa, kodlamaya devam etmek için birçok seçeneğe sahip olduklarını bildirin. Bilgisayar biliminin diğer derslere nasıl entegre edileceğine ilişkin fikirler için [CS Connections](https://code.org/educate/csc) adresini ziyaret edin veya [ilkokullar için kurs tekliflerimiz](https://code.org/educate/curriculum/elementary-school) hakkında daha fazla bilgi edinin."
+          "description": "#### Değerlendirme\n\nÖğrencilerden günün aktiviteleri hakkında ne düşündüklerini açıklamalarını isteyin. Kodlama hakkında ne öğrendiler? Hareketli Nesneler? Olaylar?\n\nKeşfetmek için bir saat harcadıktan sonra bilgisayar bilimi ve kodlama hakkında ne düşünüyorlar?\n\n#### Sonraki Adımlar\n\nÖğrencilere, bugünkü aktiviteden hoşlandılarsa, kodlamaya devam etmek için birçok seçeneğe sahip olduklarını bildirin. Bilgisayar biliminin diğer derslere nasıl entegre edileceğine ilişkin fikirler için [CS Connections][0] adresini ziyaret edin veya [ilkokullar için kurs tekliflerimiz][1] hakkında daha fazla bilgi edinin."
         },
         "9d3ef78a-4043-489e-898b-f407c914f698": {
           "name": "Hazırlık Aşaması",
@@ -25412,18 +25412,18 @@
         },
         "2ff80a97-db35-4d10-9703-4d0cc3ff0c3a": {
           "name": "Genel Destek",
-          "description": "Çalıştıkları seviyeden bağımsız olarak öğrencilere yardımcı olması gereken birkaç ipucu aşağıda verilmiştir\n\n-   **Arkadaşlarla İşbirliği:** Öğrencileri, takılıp kaldıklarında bir arkadaşlarına danışmaya teşvik edin. Öğrencilerinizin yaşına ve yeteneklerine bağlı olarak, [eşli programlama](https://youtu.be/vgkahOzFH2Q) kullanarak öğreticiyi tamamlamak üzere sınıfınızı ikili gruplara ayırmayı düşünebilirsiniz.\n\n-   **Talimatları Okuyun:** Talimatlar genellikle seviyeyi nasıl tamamlayacağınız konusunda yardımcı ipuçları sağlar. Öğrencilere cevabı vermeden önce, yönergeleri, ipuçlarını, videoları ve varsa başlangıç ​​kodunu dikkatlice incelediklerinden emin olun.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Takıldınız mı? İpuçları arayın:** Her seviye, hangi kod bloklarının deneneceği de dahil olmak üzere, bir seviyenin nasıl geçileceğine dair tavsiyeler veren bir ipucu içerir.\n\n-   **Acele etmeyin ve deneyin.** Talimatlar öğrencilere genel olarak ne yapmaları gerektiğini söyler ancak öğrenciler kendi fikirlerini denemekten de çekinmemelidirler."
+          "description": "Çalıştıkları seviyeden bağımsız olarak öğrencilere yardımcı olması gereken birkaç ipucu aşağıda verilmiştir\n\n-   **Arkadaşlarla İşbirliği:** Öğrencileri, takılıp kaldıklarında bir arkadaşlarına danışmaya teşvik edin. Öğrencilerinizin yaşına ve yeteneklerine bağlı olarak, [eşli programlama][0] kullanarak öğreticiyi tamamlamak üzere sınıfınızı ikili gruplara ayırmayı düşünebilirsiniz.\n\n-   **Talimatları Okuyun:** Talimatlar genellikle seviyeyi nasıl tamamlayacağınız konusunda yardımcı ipuçları sağlar. Öğrencilere cevabı vermeden önce, yönergeleri, ipuçlarını, videoları ve varsa başlangıç ​​kodunu dikkatlice incelediklerinden emin olun.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Takıldınız mı? İpuçları arayın:** Her seviye, hangi kod bloklarının deneneceği de dahil olmak üzere, bir seviyenin nasıl geçileceğine dair tavsiyeler veren bir ipucu içerir.\n\n-   **Acele etmeyin ve deneyin.** Talimatlar öğrencilere genel olarak ne yapmaları gerektiğini söyler ancak öğrenciler kendi fikirlerini denemekten de çekinmemelidirler."
         },
         "70daba44-c26e-4286-95ae-50cbd8724b2d": {
           "name": "Merhaba Dünya",
           "progression_name": "Merhaba Dünya"
         },
         "77cef9f9-1949-455b-a0bd-f2cbc4a32986": {
-          "description": "Bir grup veya kişi erken bitirirse, onları son seviyede bir proje oluşturmaya devam etmeleri için teşvik edin. Öğrenciler başka ne yapacaklarından emin değillerse onlara sorular sorabilirsiniz:\n\n-   Projenize başka hangi hareketli nesneleri ekleyebilirsiniz?\n-   Kostüm kütüphanesine baktınız mı veya kendi hareketli nesne kostümünüzü çizmeyi denediniz mi?\n-   Hareketli nesnelerinize başka ne söyletebilirsiniz?\n-   Hareketli nesneleriniz tıklandığında ne yapmalı?\n-   Öğrencileri fikirlerini paylaşmaya ve birbirlerinden öğrenmeye davet edin. Ayrıca [code.org/learn](https://code.org/learn) adresini ziyaret ederek başka bir öğreticiyi deneyebilirler."
+          "description": "Bir grup veya kişi erken bitirirse, onları son seviyede bir proje oluşturmaya devam etmeleri için teşvik edin. Öğrenciler başka ne yapacaklarından emin değillerse onlara sorular sorabilirsiniz:\n\n-   Projenize başka hangi hareketli nesneleri ekleyebilirsiniz?\n-   Kostüm kütüphanesine baktınız mı veya kendi hareketli nesne kostümünüzü çizmeyi denediniz mi?\n-   Hareketli nesnelerinize başka ne söyletebilirsiniz?\n-   Hareketli nesneleriniz tıklandığında ne yapmalı?\n-   Öğrencileri fikirlerini paylaşmaya ve birbirlerinden öğrenmeye davet edin. Ayrıca [code.org/learn][0] adresini ziyaret ederek başka bir öğreticiyi deneyebilirler."
         },
         "ec905c64-2e80-49d0-8da3-7d75ed8d0693": {
           "name": "Yansıma",
-          "description": "#### Değerlendirme\n\nÖğrencilerden günün aktiviteleri hakkında ne düşündüklerini açıklamalarını isteyin. Kodlama hakkında ne öğrendiler? Hareketli Nesneler? Olaylar?\n\nKeşfetmek için bir saat harcadıktan sonra bilgisayar bilimi ve kodlama hakkında ne düşünüyorlar?\n\n#### Sonraki Adımlar\n\nÖğrencilere, bugünkü aktiviteden hoşlandılarsa, kodlamaya devam etmek için birçok seçeneğe sahip olduklarını bildirin. Bilgisayar biliminin diğer derslere nasıl entegre edileceğine ilişkin fikirler için [CS Connections](https://code.org/educate/csc) adresini ziyaret edin veya [ilkokullar için kurs tekliflerimiz](https://code.org/educate/curriculum/elementary-school) hakkında daha fazla bilgi edinin."
+          "description": "#### Değerlendirme\n\nÖğrencilerden günün aktiviteleri hakkında ne düşündüklerini açıklamalarını isteyin. Kodlama hakkında ne öğrendiler? Hareketli Nesneler? Olaylar?\n\nKeşfetmek için bir saat harcadıktan sonra bilgisayar bilimi ve kodlama hakkında ne düşünüyorlar?\n\n#### Sonraki Adımlar\n\nÖğrencilere, bugünkü aktiviteden hoşlandılarsa, kodlamaya devam etmek için birçok seçeneğe sahip olduklarını bildirin. Bilgisayar biliminin diğer derslere nasıl entegre edileceğine ilişkin fikirler için [CS Connections][0] adresini ziyaret edin veya [ilkokullar için kurs tekliflerimiz][1] hakkında daha fazla bilgi edinin."
         },
         "6c387b78-14b7-4209-919a-97dbf64b9bc2": {
           "name": "Hazırlık Aşaması",
@@ -25437,18 +25437,18 @@
         },
         "cc4e7bc2-813a-4d4a-be58-83d08ca5d970": {
           "name": "Genel Destek",
-          "description": "Çalıştıkları seviyeden bağımsız olarak öğrencilere yardımcı olması gereken birkaç ipucu aşağıda verilmiştir\n\n-   **Arkadaşlarla İşbirliği:** Öğrencileri, takılıp kaldıklarında bir arkadaşlarına danışmaya teşvik edin. Öğrencilerinizin yaşına ve yeteneklerine bağlı olarak, [eşli programlama](https://youtu.be/vgkahOzFH2Q) kullanarak öğreticiyi tamamlamak üzere sınıfınızı ikili gruplara ayırmayı düşünebilirsiniz.\n\n-   **Talimatları Okuyun:** Talimatlar genellikle seviyeyi nasıl tamamlayacağınız konusunda yardımcı ipuçları sağlar. Öğrencilere cevabı vermeden önce, yönergeleri, ipuçlarını, videoları ve varsa başlangıç ​​kodunu dikkatlice incelediklerinden emin olun.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Takıldınız mı? İpuçları arayın:** Her seviye, hangi kod bloklarının deneneceği de dahil olmak üzere, bir seviyenin nasıl geçileceğine dair tavsiyeler veren bir ipucu içerir.\n\n-   **Acele etmeyin ve deneyin.** Talimatlar öğrencilere genel olarak ne yapmaları gerektiğini söyler ancak öğrenciler kendi fikirlerini denemekten de çekinmemelidirler."
+          "description": "Çalıştıkları seviyeden bağımsız olarak öğrencilere yardımcı olması gereken birkaç ipucu aşağıda verilmiştir\n\n-   **Arkadaşlarla İşbirliği:** Öğrencileri, takılıp kaldıklarında bir arkadaşlarına danışmaya teşvik edin. Öğrencilerinizin yaşına ve yeteneklerine bağlı olarak, [eşli programlama][0] kullanarak öğreticiyi tamamlamak üzere sınıfınızı ikili gruplara ayırmayı düşünebilirsiniz.\n\n-   **Talimatları Okuyun:** Talimatlar genellikle seviyeyi nasıl tamamlayacağınız konusunda yardımcı ipuçları sağlar. Öğrencilere cevabı vermeden önce, yönergeleri, ipuçlarını, videoları ve varsa başlangıç ​​kodunu dikkatlice incelediklerinden emin olun.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Takıldınız mı? İpuçları arayın:** Her seviye, hangi kod bloklarının deneneceği de dahil olmak üzere, bir seviyenin nasıl geçileceğine dair tavsiyeler veren bir ipucu içerir.\n\n-   **Acele etmeyin ve deneyin.** Talimatlar öğrencilere genel olarak ne yapmaları gerektiğini söyler ancak öğrenciler kendi fikirlerini denemekten de çekinmemelidirler."
         },
         "062143a1-3063-4af1-864a-2ad1f9c88dd5": {
           "name": "Merhaba Dünya",
           "progression_name": "Merhaba Dünya"
         },
         "da91f0fe-e142-453f-a093-8e367d0a1454": {
-          "description": "Bir grup veya kişi erken bitirirse, onları son seviyede bir proje oluşturmaya devam etmeleri için teşvik edin. Öğrenciler başka ne yapacaklarından emin değillerse onlara sorular sorabilirsiniz:\n\n-   Projenize başka hangi hareketli nesneleri ekleyebilirsiniz?\n-   Kostüm kütüphanesine baktınız mı veya kendi hareketli nesne kostümünüzü çizmeyi denediniz mi?\n-   Hareketli nesnelerinize başka ne söyletebilirsiniz?\n-   Hareketli nesneleriniz tıklandığında ne yapmalı?\n-   Öğrencileri fikirlerini paylaşmaya ve birbirlerinden öğrenmeye davet edin. Ayrıca [code.org/learn](https://code.org/learn) adresini ziyaret ederek başka bir öğreticiyi deneyebilirler."
+          "description": "Bir grup veya kişi erken bitirirse, onları son seviyede bir proje oluşturmaya devam etmeleri için teşvik edin. Öğrenciler başka ne yapacaklarından emin değillerse onlara sorular sorabilirsiniz:\n\n-   Projenize başka hangi hareketli nesneleri ekleyebilirsiniz?\n-   Kostüm kütüphanesine baktınız mı veya kendi hareketli nesne kostümünüzü çizmeyi denediniz mi?\n-   Hareketli nesnelerinize başka ne söyletebilirsiniz?\n-   Hareketli nesneleriniz tıklandığında ne yapmalı?\n-   Öğrencileri fikirlerini paylaşmaya ve birbirlerinden öğrenmeye davet edin. Ayrıca [code.org/learn][0] adresini ziyaret ederek başka bir öğreticiyi deneyebilirler."
         },
         "f5756484-7296-4391-99e2-7b2678653934": {
           "name": "Yansıma",
-          "description": "#### Değerlendirme\n\nÖğrencilerden günün aktiviteleri hakkında ne düşündüklerini açıklamalarını isteyin. Kodlama hakkında ne öğrendiler? Hareketli Nesneler? Olaylar?\n\nKeşfetmek için bir saat harcadıktan sonra bilgisayar bilimi ve kodlama hakkında ne düşünüyorlar?\n\n#### Sonraki Adımlar\n\nÖğrencilere, bugünkü aktiviteden hoşlandılarsa, kodlamaya devam etmek için birçok seçeneğe sahip olduklarını bildirin. Bilgisayar biliminin diğer derslere nasıl entegre edileceğine ilişkin fikirler için [CS Connections](https://code.org/educate/csc) adresini ziyaret edin veya [ilkokullar için kurs tekliflerimiz](https://code.org/educate/curriculum/elementary-school) hakkında daha fazla bilgi edinin."
+          "description": "#### Değerlendirme\n\nÖğrencilerden günün aktiviteleri hakkında ne düşündüklerini açıklamalarını isteyin. Kodlama hakkında ne öğrendiler? Hareketli Nesneler? Olaylar?\n\nKeşfetmek için bir saat harcadıktan sonra bilgisayar bilimi ve kodlama hakkında ne düşünüyorlar?\n\n#### Sonraki Adımlar\n\nÖğrencilere, bugünkü aktiviteden hoşlandılarsa, kodlamaya devam etmek için birçok seçeneğe sahip olduklarını bildirin. Bilgisayar biliminin diğer derslere nasıl entegre edileceğine ilişkin fikirler için [CS Connections][0] adresini ziyaret edin veya [ilkokullar için kurs tekliflerimiz][1] hakkında daha fazla bilgi edinin."
         },
         "bcc9e44c-ad4e-4efc-a12e-e9c74a5c1960": {
           "name": "Hazırlık Aşaması",
@@ -25462,25 +25462,25 @@
         },
         "0d1c3be1-c6e4-437f-85b9-4912d1cd725b": {
           "name": "Genel Destek",
-          "description": "Çalıştıkları seviyeden bağımsız olarak öğrencilere yardımcı olması gereken birkaç ipucu aşağıda verilmiştir\n\n-   **Arkadaşlarla İşbirliği:** Öğrencileri, takılıp kaldıklarında bir arkadaşlarına danışmaya teşvik edin. Öğrencilerinizin yaşına ve yeteneklerine bağlı olarak, [eşli programlama](https://youtu.be/vgkahOzFH2Q) kullanarak öğreticiyi tamamlamak üzere sınıfınızı ikili gruplara ayırmayı düşünebilirsiniz.\n\n-   **Talimatları Okuyun:** Talimatlar genellikle seviyeyi nasıl tamamlayacağınız konusunda yardımcı ipuçları sağlar. Öğrencilere cevabı vermeden önce, yönergeleri, ipuçlarını, videoları ve varsa başlangıç ​​kodunu dikkatlice incelediklerinden emin olun.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Takıldınız mı? İpuçları arayın:** Her seviye, hangi kod bloklarının deneneceği de dahil olmak üzere, bir seviyenin nasıl geçileceğine dair tavsiyeler veren bir ipucu içerir.\n\n-   **Acele etmeyin ve deneyin.** Talimatlar öğrencilere genel olarak ne yapmaları gerektiğini söyler ancak öğrenciler kendi fikirlerini denemekten de çekinmemelidirler."
+          "description": "Çalıştıkları seviyeden bağımsız olarak öğrencilere yardımcı olması gereken birkaç ipucu aşağıda verilmiştir\n\n-   **Arkadaşlarla İşbirliği:** Öğrencileri, takılıp kaldıklarında bir arkadaşlarına danışmaya teşvik edin. Öğrencilerinizin yaşına ve yeteneklerine bağlı olarak, [eşli programlama][0] kullanarak öğreticiyi tamamlamak üzere sınıfınızı ikili gruplara ayırmayı düşünebilirsiniz.\n\n-   **Talimatları Okuyun:** Talimatlar genellikle seviyeyi nasıl tamamlayacağınız konusunda yardımcı ipuçları sağlar. Öğrencilere cevabı vermeden önce, yönergeleri, ipuçlarını, videoları ve varsa başlangıç ​​kodunu dikkatlice incelediklerinden emin olun.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Takıldınız mı? İpuçları arayın:** Her seviye, hangi kod bloklarının deneneceği de dahil olmak üzere, bir seviyenin nasıl geçileceğine dair tavsiyeler veren bir ipucu içerir.\n\n-   **Acele etmeyin ve deneyin.** Talimatlar öğrencilere genel olarak ne yapmaları gerektiğini söyler ancak öğrenciler kendi fikirlerini denemekten de çekinmemelidirler."
         },
         "fcf13574-b04a-42a7-9e17-ef0dba0bfe33": {
           "name": "Merhaba Dünya",
           "progression_name": "Merhaba Dünya"
         },
         "7cccfa6d-83c2-4d74-a71f-c9134fb1d0c2": {
-          "description": "Bir grup veya kişi erken bitirirse, onları son seviyede bir proje oluşturmaya devam etmeleri için teşvik edin. Öğrenciler başka ne yapacaklarından emin değillerse onlara sorular sorabilirsiniz:\n\n-   Projenize başka hangi hareketli nesneleri ekleyebilirsiniz?\n-   Kostüm kütüphanesine baktınız mı veya kendi hareketli nesne kostümünüzü çizmeyi denediniz mi?\n-   Hareketli nesnelerinize başka ne söyletebilirsiniz?\n-   Hareketli nesneleriniz tıklandığında ne yapmalı?\n-   Öğrencileri fikirlerini paylaşmaya ve birbirlerinden öğrenmeye davet edin. Ayrıca [code.org/learn](https://code.org/learn) adresini ziyaret ederek başka bir öğreticiyi deneyebilirler."
+          "description": "Bir grup veya kişi erken bitirirse, onları son seviyede bir proje oluşturmaya devam etmeleri için teşvik edin. Öğrenciler başka ne yapacaklarından emin değillerse onlara sorular sorabilirsiniz:\n\n-   Projenize başka hangi hareketli nesneleri ekleyebilirsiniz?\n-   Kostüm kütüphanesine baktınız mı veya kendi hareketli nesne kostümünüzü çizmeyi denediniz mi?\n-   Hareketli nesnelerinize başka ne söyletebilirsiniz?\n-   Hareketli nesneleriniz tıklandığında ne yapmalı?\n-   Öğrencileri fikirlerini paylaşmaya ve birbirlerinden öğrenmeye davet edin. Ayrıca [code.org/learn][0] adresini ziyaret ederek başka bir öğreticiyi deneyebilirler."
         },
         "574954ea-9128-428b-9965-b0d34518c11d": {
           "name": "Yansıma",
-          "description": "#### Değerlendirme\n\nÖğrencilerden günün aktiviteleri hakkında ne düşündüklerini açıklamalarını isteyin. Kodlama hakkında ne öğrendiler? Hareketli Nesneler? Olaylar?\n\nKeşfetmek için bir saat harcadıktan sonra bilgisayar bilimi ve kodlama hakkında ne düşünüyorlar?\n\n#### Sonraki Adımlar\n\nÖğrencilere, bugünkü aktiviteden hoşlandılarsa, kodlamaya devam etmek için birçok seçeneğe sahip olduklarını bildirin. Bilgisayar biliminin diğer derslere nasıl entegre edileceğine ilişkin fikirler için [CS Connections](https://code.org/educate/csc) adresini ziyaret edin veya [ilkokullar için kurs tekliflerimiz](https://code.org/educate/curriculum/elementary-school) hakkında daha fazla bilgi edinin."
+          "description": "#### Değerlendirme\n\nÖğrencilerden günün aktiviteleri hakkında ne düşündüklerini açıklamalarını isteyin. Kodlama hakkında ne öğrendiler? Hareketli Nesneler? Olaylar?\n\nKeşfetmek için bir saat harcadıktan sonra bilgisayar bilimi ve kodlama hakkında ne düşünüyorlar?\n\n#### Sonraki Adımlar\n\nÖğrencilere, bugünkü aktiviteden hoşlandılarsa, kodlamaya devam etmek için birçok seçeneğe sahip olduklarını bildirin. Bilgisayar biliminin diğer derslere nasıl entegre edileceğine ilişkin fikirler için [CS Connections][0] adresini ziyaret edin veya [ilkokullar için kurs tekliflerimiz][1] hakkında daha fazla bilgi edinin."
         },
         "79f9bd46-60a5-4891-ad3b-8369879847fc": {
           "description": "#### Hazırlık Aşaması\n\nÖğrencilerinizi karşılayın ve kısaca günün etkinliğinden bahsedin.\n\nÖğrencilerinizi bu derste çok özel bir şey bekliyor. Öğrencilerinizin çoğu Minecraft'ı duymuş olabilir, ancak bilmeyenler için kısaca bir özet geçin.\nMinecraft bir küp oyunudur. Labirentlerde çalışırken Alex veya Steve olarak oynayabilirsiniz. Eşyaları toplamanız ve eşya küplerinden oluşan bir dünyayı keşfetmeniz gerekmektedir.\n\n_“Bugün kodlamayı öğrenmek için bir saatlik bir etkinliğimiz olacak. Aranızda daha önce \"kod\" terimini duyan var mı? Bunun anlamı ne?\" diyerek bir başlangıç yapın._\n\nÖğrenciler \"kod\"un gizli bir mesaj gibi olduğunu veya bir şekilde bilgisayarlarla ilgili olduğunu söyleyebilirler."
         },
         "cc1ed89e-268e-472b-9bce-4f976d8c2ea3": {
           "tips": [
-            "Kodlamaya pek aşina değilseniz Hour of Code etkinliğini tanıtmak için [ilham verici videolarımızdan](https://hourofcode.com/us/resources#videos) birini gösterebilirsiniz. Öğrencilerinizin ilham verici bulacağını düşündüğünüz birini seçin ve onlarla paylaşın. Küçük öğrenciler için \"[Hour of Code Etkinliğine Hoş Geldiniz](https://youtu.be/FC5FbmsH4fw)\" güzel bir seçenek olabilir."
+            "Kodlamaya pek aşina değilseniz Hour of Code etkinliğini tanıtmak için [ilham verici videolarımızdan][0] birini gösterebilirsiniz. Öğrencilerinizin ilham verici bulacağını düşündüğünüz birini seçin ve onlarla paylaşın. Küçük öğrenciler için \"[Hour of Code Etkinliğine Hoş Geldiniz][1]\" güzel bir seçenek olabilir."
           ]
         },
         "850945f6-6352-403b-a73f-3fb613f4728a": {
@@ -25493,7 +25493,7 @@
         },
         "fc5c47f6-08fa-4702-86a3-e687a2ad5bc1": {
           "name": "Minecraft: Kahramanın Yolculuğu",
-          "description": "Öğrencilerinizden [Minecraft: Kahramanın Yolculuğu](https://studio.code.org/s/hero/lessons/1/levels/1) eğitimini tamamlamalarını isteyin.\n\nÖğrencilerinizin yaşına ve yeteneklerine bağlı olarak şunları düşünebilirsiniz:\n\n-   Daha küçük öğrenciler için, sınıfınızı çiftlere ayırabilirsiniz. Her gruptan [eşli programlama](https://youtu.be/vgkahOzFH2Q) kullanarak öğreticiyi tamamlamak için birlikte çalışmasını isteyebilirsiniz.\n-   Orta sınıflardaki öğrenciler için, öğreticiler üzerinde bağımsız çalışmanın iyi sonuç verdiğini görüyoruz. Bazen öğrencilerin kendi eğitimlerini seçmelerine izin vermek yardımcı olabilir. Öğrenciler Minecraft ile ilgilenmiyorlarsa [Anna ve Elsa ile Kodlama](https://studio.code.org/s/frozen/stage/1/puzzle/1) veya [Star Wars](https://code.org/starwars) öğreticileriyle benzer bir deneyim yaşayabilirler.\n-   Daha yaşlı veya yetişkin öğrenciler için [Minecraft: Kahramanın Yolculuğu](https://studio.code.org/s/hero/lessons/1/levels/1) öğreticisi, bağımsız bir meydan okuma veya bir çift programlama etkinliği olarak son derece etkilidir."
+          "description": "Öğrencilerinizden [Minecraft: Kahramanın Yolculuğu][0] eğitimini tamamlamalarını isteyin.\n\nÖğrencilerinizin yaşına ve yeteneklerine bağlı olarak şunları düşünebilirsiniz:\n\n-   Daha küçük öğrenciler için, sınıfınızı çiftlere ayırabilirsiniz. Her gruptan [eşli programlama][1] kullanarak öğreticiyi tamamlamak için birlikte çalışmasını isteyebilirsiniz.\n-   Orta sınıflardaki öğrenciler için, öğreticiler üzerinde bağımsız çalışmanın iyi sonuç verdiğini görüyoruz. Bazen öğrencilerin kendi eğitimlerini seçmelerine izin vermek yardımcı olabilir. Öğrenciler Minecraft ile ilgilenmiyorlarsa [Anna ve Elsa ile Kodlama][2] veya [Star Wars][3] öğreticileriyle benzer bir deneyim yaşayabilirler.\n-   Daha yaşlı veya yetişkin öğrenciler için [Minecraft: Kahramanın Yolculuğu][4] öğreticisi, bağımsız bir meydan okuma veya bir çift programlama etkinliği olarak son derece etkilidir."
         },
         "296703c2-cad7-43bb-b3cf-4ffb525e7ad1": {
           "tips": [
@@ -25501,7 +25501,7 @@
           ]
         },
         "b518cf9c-9568-4e85-a520-0e2a81c3b330": {
-          "description": "Öğrenciler grup veya bireysel olarak erken bitirirse, [code.org/learn](http://code.org/learn) adresini ziyaret ederek başka bir öğreticiyi deneyebilir."
+          "description": "Öğrenciler grup veya bireysel olarak erken bitirirse, [code.org/learn][0] adresini ziyaret ederek başka bir öğreticiyi deneyebilir."
         },
         "34238f3b-6699-4e27-b77a-54bcd8d57459": {
           "progression_name": "Minecraft: Kahramanın Yolculuğu"
@@ -25512,18 +25512,18 @@
         },
         "145782a9-a436-4615-9827-0f75d7e4b3a0": {
           "name": "Tebrik Edin",
-          "description": "Bu hafta BB Eğitim Haftası ve dünya çapında milyonlarca öğrenci bu hafta bir Hour of Code eğitimi görecek. Bu nedenle öğrencilerinize bugün bir saat kodlamayla geçireceğinizi açıklayın. Öğrencileri bu dünya çapındaki hareketin bir parçası oldukları için tebrik edin.\n\nHer öğrenciye üzerinde adının yazılı olduğu bir [sertifika](https://studio.code.org/certificates/batch?course=bWM=) verin."
+          "description": "Bu hafta BB Eğitim Haftası ve dünya çapında milyonlarca öğrenci bu hafta bir Hour of Code eğitimi görecek. Bu nedenle öğrencilerinize bugün bir saat kodlamayla geçireceğinizi açıklayın. Öğrencileri bu dünya çapındaki hareketin bir parçası oldukları için tebrik edin.\n\nHer öğrenciye üzerinde adının yazılı olduğu bir [sertifika][0] verin."
         },
         "cc38f575-4db4-4ca6-ab2f-a9d8557f16cf": {
           "name": "Sonraki Adımlar",
-          "description": "Öğrencilere, bugünkü aktiviteden hoşlandılarsa, kodlamaya devam etmek için birçok seçeneğe sahip olduklarını bildirin. Seçenekler listesi için [code.org/learn](<>) adresini ziyaret etmeye teşvik edin veya takip eden ekstra etkinliklerden birini yapmayı planlıyorsanız, öğrencilere sırada ne işleyeceğinizden bahsedin."
+          "description": "Öğrencilere, bugünkü aktiviteden hoşlandılarsa, kodlamaya devam etmek için birçok seçeneğe sahip olduklarını bildirin. Seçenekler listesi için [code.org/learn][0] adresini ziyaret etmeye teşvik edin veya takip eden ekstra etkinliklerden birini yapmayı planlıyorsanız, öğrencilere sırada ne işleyeceğinizden bahsedin."
         },
         "e276fe28-3302-4ba2-94cc-aaf03b3d2d06": {
-          "description": "Her öğrenciye bir [“Çıkış Bileti”](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) verin ve onlardan bugün ne öğrendiklerini, nasıl hissettiklerini veya neler deneyimlediklerini özetlemelerini isteyin. Öğrenciler düşüncelerini ister çizim yaparak ister yazılı bir şekilde dile getirebilir. Odadan çıkarken öğrenciden bir “Çıkış Bileti” aldığınıza emin olun. Dilerseniz “Çıkış Biletleri”ni bir duyuru panosuna veya okulun göz önünde bulunan bir yerine Hour of Code etkinliğini hatırlatması için asabilirsiniz."
+          "description": "Her öğrenciye bir [“Çıkış Bileti”][0] verin ve onlardan bugün ne öğrendiklerini, nasıl hissettiklerini veya neler deneyimlediklerini özetlemelerini isteyin. Öğrenciler düşüncelerini ister çizim yaparak ister yazılı bir şekilde dile getirebilir. Odadan çıkarken öğrenciden bir “Çıkış Bileti” aldığınıza emin olun. Dilerseniz “Çıkış Biletleri”ni bir duyuru panosuna veya okulun göz önünde bulunan bir yerine Hour of Code etkinliğini hatırlatması için asabilirsiniz."
         },
         "147a2b22-0cba-4505-81ef-770b81eee73e": {
           "name": "Kod saatinin ötesi",
-          "description": "Hour of Code etkinliğiniz sona erdikten sonra, K-5 sınıfınızda bilgisayar bilimi hakkında eğitime devam etmenin birçok yolu vardır. İşte bazı fikirler:\n\n-   **[Kod Stüdyosu Bilgisayar Biliminin Temelleri](http://code.org/educate/k5) kurslarını** öğretin. Bu altı kurs, genç öğrenciler için tasarlanmıştır. Öğrenciler, onlara kodlamayı öğreten bir dizi bulmaca üzerinde çalışırlar ve eğitimciler, öğrenmeyi canlandırmaya yardımcı olan ilgi çekici ders planlarına erişebilir. Code.org, bu kurslar için çevrimiçi veya yüz yüze ücretsiz mesleki gelişim sunmaktadır.\n-   **Daha fazla kurs önerisi için [Siz de Bilgisayar Bilimini Öğretebilirsiniz](https://code.org/teach) sayfasını ziyaret edin.**\n-   \\*\\*Sınıfınızla çalışmaları hakkında konuşması için bir bilgisayar bilimi uzmanını davet edin. Yerel bilgisayar bilimcilerini tanımıyor musunuz? [Gönüllü haritamızdan](https://code.org/volunteer/local) bir gönüllüye ulaşın."
+          "description": "Hour of Code etkinliğiniz sona erdikten sonra, K-5 sınıfınızda bilgisayar bilimi hakkında eğitime devam etmenin birçok yolu vardır. İşte bazı fikirler:\n\n-   **[Kod Stüdyosu Bilgisayar Biliminin Temelleri][0] kurslarını** öğretin. Bu altı kurs, genç öğrenciler için tasarlanmıştır. Öğrenciler, onlara kodlamayı öğreten bir dizi bulmaca üzerinde çalışırlar ve eğitimciler, öğrenmeyi canlandırmaya yardımcı olan ilgi çekici ders planlarına erişebilir. Code.org, bu kurslar için çevrimiçi veya yüz yüze ücretsiz mesleki gelişim sunmaktadır.\n-   **Daha fazla kurs önerisi için [Siz de Bilgisayar Bilimini Öğretebilirsiniz][1] sayfasını ziyaret edin.**\n-   \\*\\*Sınıfınızla çalışmaları hakkında konuşması için bir bilgisayar bilimi uzmanını davet edin. Yerel bilgisayar bilimcilerini tanımıyor musunuz? [Gönüllü haritamızdan][2] bir gönüllüye ulaşın."
         },
         "9475b0bd-6a58-4318-b3e5-0d77cfe5a35d": {
           "tips": [
@@ -25622,7 +25622,7 @@
         },
         "6b55015f-aebc-401b-b0c9-c40a5fd0056e": {
           "tips": [
-            "Kodlamaya pek aşina değilseniz Hour of Code etkinliğini tanıtmak için [ilham verici videolarımızdan](https://hourofcode.com/us/resources#videos) birini gösterebilirsiniz. Öğrencilerinizin ilham verici bulacağını düşündüğünüz birini seçin ve onlarla paylaşın. Küçük öğrenciler için \"[Hour of Code Etkinliğine Hoş Geldiniz](https://youtu.be/FC5FbmsH4fw)\" güzel bir seçenek olabilir."
+            "Kodlamaya pek aşina değilseniz Hour of Code etkinliğini tanıtmak için [ilham verici videolarımızdan][0] birini gösterebilirsiniz. Öğrencilerinizin ilham verici bulacağını düşündüğünüz birini seçin ve onlarla paylaşın. Küçük öğrenciler için \"[Hour of Code Etkinliğine Hoş Geldiniz][1]\" güzel bir seçenek olabilir."
           ]
         },
         "e841a687-1da5-46c7-b31e-42629fe0377c": {
@@ -25635,7 +25635,7 @@
         },
         "9aba0e85-a709-43f5-8cfb-251671159b3a": {
           "name": "Labirent",
-          "description": "Öğrencilerinizden [İlk Bilgisayar Programınızı Yazın](https://studio.code.org/hoc/1) öğreticisini tamamlamalarını isteyin.\n\nÖğrencilerinizin yaşına ve yeteneklerine bağlı olarak şunları düşünebilirsiniz:\n\n-   Küçük öğrenciler için, sınıfınızı çiftler veya küçük gruplar (her biri üç ila dört öğrenci) şeklinde ayırabilirsiniz. Her gruptan [eşli programlama](https://youtu.be/vgkahOzFH2Q) kullanarak öğreticiyi tamamlamak için birlikte çalışmasını isteyebilirsiniz. \n-   Orta sınıflardaki öğrenciler için, öğreticiler üzerinde bağımsız çalışmanın iyi sonuç verdiğini görüyoruz. Bazen öğrencilerin kendi eğitimlerini seçmelerine izin vermek yardımcı olur. Öğrenciler Angry Birds ile ilgilenmiyorlarsa [Anna ve Elsa ile Kodlama](https://studio.code.org/s/frozen/stage/1/puzzle/1) veya [Flappy Oyunu Yarat](https://studio.code.org/flappy/1) öğreticileriyle benzer bir deneyim yaşayabilirler.\n-   Daha yaşlı veya yetişkin öğrenciler için, [İlk bilgisayar programınızı yazın](https://studio.code.org/hoc/1) öğreticisi, bağımsız bir meydan okuma veya çift programlama etkinliği olarak son derece etkilidir."
+          "description": "Öğrencilerinizden [İlk Bilgisayar Programınızı Yazın][0] öğreticisini tamamlamalarını isteyin.\n\nÖğrencilerinizin yaşına ve yeteneklerine bağlı olarak şunları düşünebilirsiniz:\n\n-   Küçük öğrenciler için, sınıfınızı çiftler veya küçük gruplar (her biri üç ila dört öğrenci) şeklinde ayırabilirsiniz. Her gruptan [eşli programlama][1] kullanarak öğreticiyi tamamlamak için birlikte çalışmasını isteyebilirsiniz. \n-   Orta sınıflardaki öğrenciler için, öğreticiler üzerinde bağımsız çalışmanın iyi sonuç verdiğini görüyoruz. Bazen öğrencilerin kendi eğitimlerini seçmelerine izin vermek yardımcı olur. Öğrenciler Angry Birds ile ilgilenmiyorlarsa [Anna ve Elsa ile Kodlama][2] veya [Flappy Oyunu Yarat][3] öğreticileriyle benzer bir deneyim yaşayabilirler.\n-   Daha yaşlı veya yetişkin öğrenciler için, [İlk bilgisayar programınızı yazın][4] öğreticisi, bağımsız bir meydan okuma veya çift programlama etkinliği olarak son derece etkilidir."
         },
         "524f2e35-6286-4585-879e-96e7286e8a6d": {
           "tips": [
@@ -25643,7 +25643,7 @@
           ]
         },
         "3f29a14c-3903-4615-8a6b-d1961b57dc7b": {
-          "description": "Öğrenciler grup veya bireysel olarak erken bitirirse, [code.org/learn](http://code.org/learn) adresini ziyaret ederek başka bir öğreticiyi deneyebilir."
+          "description": "Öğrenciler grup veya bireysel olarak erken bitirirse, [code.org/learn][0] adresini ziyaret ederek başka bir öğreticiyi deneyebilir."
         },
         "50db3674-3387-4932-ba7e-c9f176ebd976": {
           "name": "Dönüt Alın",
@@ -25651,18 +25651,18 @@
         },
         "46f387e2-c275-4c57-acec-c9709e7f44fc": {
           "name": "Tebrik Edin",
-          "description": "Bu hafta BB Eğitim Haftası ve dünya çapında milyonlarca öğrenci bu hafta bir Hour of Code eğitimi görecek. Bu nedenle öğrencilerinize bugün bir saat kodlamayla geçireceğinizi açıklayın. Öğrencileri bu dünya çapındaki hareketin bir parçası oldukları için tebrik edin.\n\nHer öğrenciye üzerinde adının yazılı olduğu bir [sertifika](http://code.org/certificates) verin."
+          "description": "Bu hafta BB Eğitim Haftası ve dünya çapında milyonlarca öğrenci bu hafta bir Hour of Code eğitimi görecek. Bu nedenle öğrencilerinize bugün bir saat kodlamayla geçireceğinizi açıklayın. Öğrencileri bu dünya çapındaki hareketin bir parçası oldukları için tebrik edin.\n\nHer öğrenciye üzerinde adının yazılı olduğu bir [sertifika][0] verin."
         },
         "692a60f1-d3a2-44d3-8c58-19461d6b5999": {
           "name": "Sonraki Adımlar",
           "description": "Öğrencilere, bugünkü aktiviteden hoşlandılarsa, kodlamaya devam etmek için birçok seçeneğe sahip olduklarını bildirin. Öğrencileri diğer seçenekler için code.org/learn adresine yönlendirin veya takip eden ekstra etkinliklerinden herhangi birini planlıyorsanız, öğrencilere sırada ne işleyeceğinizi söyleyin."
         },
         "c00f4730-69b0-4533-bf47-253647c6715f": {
-          "description": "Her öğrenciye bir [“Çıkış Bileti”](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) verin ve onlardan bugün ne öğrendiklerini, nasıl hissettiklerini veya neler deneyimlediklerini özetlemelerini isteyin. Öğrenciler düşüncelerini ister çizim yaparak ister yazılı bir şekilde dile getirebilir. Odadan çıkarken öğrenciden bir “Çıkış Bileti” aldığınıza emin olun. Dilerseniz “Çıkış Biletleri”ni bir duyuru panosuna veya okulun göz önünde bulunan bir yerine Hour of Code etkinliğini hatırlatması için asabilirsiniz."
+          "description": "Her öğrenciye bir [“Çıkış Bileti”][0] verin ve onlardan bugün ne öğrendiklerini, nasıl hissettiklerini veya neler deneyimlediklerini özetlemelerini isteyin. Öğrenciler düşüncelerini ister çizim yaparak ister yazılı bir şekilde dile getirebilir. Odadan çıkarken öğrenciden bir “Çıkış Bileti” aldığınıza emin olun. Dilerseniz “Çıkış Biletleri”ni bir duyuru panosuna veya okulun göz önünde bulunan bir yerine Hour of Code etkinliğini hatırlatması için asabilirsiniz."
         },
         "6e6e32c8-6dfd-4075-b1c7-0c96b6853b09": {
           "name": "Kod saatinin ötesi",
-          "description": "Hour of Code etkinliğiniz sona erdikten sonra, K-5 sınıfınızda bilgisayar bilimi öğretmeye devam etmenin birçok yolu vardır. İşte bazı fikirler: \n\n-   **[Kod Stüdyosu Bilgisayar Biliminin Temelleri](http://code.org/educate/k5) kurslarını öğretin**. Bu altı kurs, genç öğrenciler için tasarlanmıştır. Öğrenciler, onlara kodlamayı öğreten bir dizi bulmaca üzerinde çalışırlar ve eğitimciler, öğrenmenin canlanmasına yardımcı olan ilgi çekici ders planlarına erişebilir. Code.org, bu kurslar için çevrimiçi veya yüz yüze ücretsiz mesleki gelişim sunmaktadır. "
+          "description": "Hour of Code etkinliğiniz sona erdikten sonra, K-5 sınıfınızda bilgisayar bilimi öğretmeye devam etmenin birçok yolu vardır. İşte bazı fikirler: \n\n-   **[Kod Stüdyosu Bilgisayar Biliminin Temelleri][0] kurslarını öğretin**. Bu altı kurs, genç öğrenciler için tasarlanmıştır. Öğrenciler, onlara kodlamayı öğreten bir dizi bulmaca üzerinde çalışırlar ve eğitimciler, öğrenmenin canlanmasına yardımcı olan ilgi çekici ders planlarına erişebilir. Code.org, bu kurslar için çevrimiçi veya yüz yüze ücretsiz mesleki gelişim sunmaktadır. "
         },
         "5858c0fa-a7a6-44c2-afcb-bfb816b18a5b": {
           "name": "K-2 Öğretmenleri için Düzenlemeler",
@@ -25674,7 +25674,7 @@
         },
         "fc04ef5f-0d78-418b-9311-e12201106453": {
           "tips": [
-            "Kodlamaya pek aşina değilseniz Hour of Code etkinliğini tanıtmak için [ilham verici videolarımızdan](https://hourofcode.com/us/resources#videos) birini gösterebilirsiniz. Öğrencilerinizin ilham verici bulacağını düşündüğünüz birini seçin ve onlarla paylaşın. Küçük öğrenciler için \"[Herkes Öğrenebilir](https://youtu.be/qYZF6oIZtfc)\" güzel bir seçenek olabilir."
+            "Kodlamaya pek aşina değilseniz Hour of Code etkinliğini tanıtmak için [ilham verici videolarımızdan][0] birini gösterebilirsiniz. Öğrencilerinizin ilham verici bulacağını düşündüğünüz birini seçin ve onlarla paylaşın. Küçük öğrenciler için \"[Herkes Öğrenebilir][1]\" güzel bir seçenek olabilir."
           ]
         },
         "ea8a3bf2-1425-482a-9f98-a5b30d6ee809": {
@@ -25682,7 +25682,7 @@
         },
         "c628ba28-35c2-4ded-a19d-74079377b309": {
           "name": "Buz Devri Oyun Laboratuvarı",
-          "description": "Öğrencilerinizden [Ice Age Oyun Laboratuvarı](https://studio.code.org/s/iceage/lessons/1/levels/1) öğreticisini tamamlamalarını isteyin.\n\nÖğrencilerinizin yaşına ve yeteneklerine bağlı olarak şunları düşünebilirsiniz: \n\n-   Ortaokul ve lise öğrencileri için, ücretsiz oynamaya ve uygulama veya oyun oluşturmaya izin veren öğreticiler seçmenizi öneririz. Öğrencilerin bağımsız olarak veya çiftler veya küçük gruplar halinde çalışmasını sağlayabilirsiniz. [Code.org/learn](http://code.org/learn) adresinde [Flappy Oyunu Yapın](https://studio.code.org/s/flappy) ve yeni beta aracımız [AppLab](https://code.org/educate/applab) dahil olmak üzere ücretsiz içerik oluşturmaya izin veren birçok başka öğretici bulunmaktadır.\n-   Daha küçük öğrenciler için, sınıfınızı çiftlere veya çok küçük gruplara (her biri üç ila dört öğrenci) ayırabilirsiniz. Her gruptan [eşli programlama](https://youtu.be/vgkahOzFH2Q) kullanarak öğreticiyi tamamlamak için birlikte çalışmasını isteyebilirsiniz.\n-   Yetişkin öğrenciler için, [İlk bilgisayar programınızı yazın](https://studio.code.org/hoc/1) öğreticisi, bağımsız bir meydan okuma veya bir çift programlama etkinliği olarak son derece etkilidir."
+          "description": "Öğrencilerinizden [Ice Age Oyun Laboratuvarı][0] öğreticisini tamamlamalarını isteyin.\n\nÖğrencilerinizin yaşına ve yeteneklerine bağlı olarak şunları düşünebilirsiniz: \n\n-   Ortaokul ve lise öğrencileri için, ücretsiz oynamaya ve uygulama veya oyun oluşturmaya izin veren öğreticiler seçmenizi öneririz. Öğrencilerin bağımsız olarak veya çiftler veya küçük gruplar halinde çalışmasını sağlayabilirsiniz. [Code.org/learn][1] adresinde [Flappy Oyunu Yapın][2] ve yeni beta aracımız [AppLab][3] dahil olmak üzere ücretsiz içerik oluşturmaya izin veren birçok başka öğretici bulunmaktadır.\n-   Daha küçük öğrenciler için, sınıfınızı çiftlere veya çok küçük gruplara (her biri üç ila dört öğrenci) ayırabilirsiniz. Her gruptan [eşli programlama][4] kullanarak öğreticiyi tamamlamak için birlikte çalışmasını isteyebilirsiniz.\n-   Yetişkin öğrenciler için, [İlk bilgisayar programınızı yazın][5] öğreticisi, bağımsız bir meydan okuma veya bir çift programlama etkinliği olarak son derece etkilidir."
         },
         "548dc37b-f338-4a52-a77e-7380794c64f2": {
           "tips": [
@@ -25690,7 +25690,7 @@
           ]
         },
         "86d8427e-15bf-420c-b405-3d1f1c3c46c6": {
-          "description": "Öğrenciler grup veya bireysel olarak erken bitirirse, [code.org/learn](http://code.org/learn) adresini ziyaret ederek başka bir öğreticiyi deneyebilir."
+          "description": "Öğrenciler grup veya bireysel olarak erken bitirirse, [code.org/learn][0] adresini ziyaret ederek başka bir öğreticiyi deneyebilir."
         },
         "d8b92f56-a741-43ac-9d6f-3fdf1c452001": {
           "name": "Dönüt Alın",
@@ -25698,7 +25698,7 @@
         },
         "3d63393a-9146-4027-8783-247e19637d25": {
           "name": "Tebrik Edin",
-          "description": "Bu hafta BB Eğitim Haftası ve dünya çapında milyonlarca öğrenci bu hafta bir Hour of Code eğitimi görecek. Bu nedenle öğrencilerinize bugün bir saat kodlamayla geçireceğinizi açıklayın. Öğrencileri bu dünya çapındaki hareketin bir parçası oldukları için tebrik edin.\n\nHer öğrenciye üzerinde adının yazılı olduğu bir [certificate](http://code.org/certificates) verin."
+          "description": "Bu hafta BB Eğitim Haftası ve dünya çapında milyonlarca öğrenci bu hafta bir Hour of Code eğitimi görecek. Bu nedenle öğrencilerinize bugün bir saat kodlamayla geçireceğinizi açıklayın. Öğrencileri bu dünya çapındaki hareketin bir parçası oldukları için tebrik edin.\n\nHer öğrenciye üzerinde adının yazılı olduğu bir [certificate][0] verin."
         },
         "4ae122fa-da6f-4aaf-b2f8-c68fd0bb68af": {
           "name": "Sonraki Adımlar",
@@ -25710,7 +25710,7 @@
         },
         "4ae8bc68-25be-4eaa-ae1e-b9bfe8623a23": {
           "name": "Kod saatinin ötesi",
-          "description": "Hour of Code etkinliğiniz sona erdikten sonra, K-5 sınıfınızda bilgisayar bilimi öğretmeye devam etmenin birçok yolu vardır. İşte bazı fikirler:\n\n-   **[Kod Stüdyosu Bilgisayar Biliminin Temelleri](http://code.org/educate/k5) kurslarını öğretin**. Bu dört kurs genç öğrenciler için tasarlanmıştır. Öğrenciler, onlara kodlamayı öğreten bir dizi bulmaca üzerinde çalışırlar ve eğitimciler, öğrenmenin canlanmasına yardımcı olan ilgi çekici ders planlarına erişebilir. Code.org, bu kurslar için çevrimiçi veya yüz yüze ücretsiz mesleki gelişim sunmaktadır.\n-   **Sınıfınızla çalışmaları hakkında konuşması için bir bilgisayar bilimi uzmanını davet edin**. Hiç gönüllü tanımıyorsanız, [gönüllü haritasından](https://code.org/volunteer/local) birkaç kişiye ulaşın."
+          "description": "Hour of Code etkinliğiniz sona erdikten sonra, K-5 sınıfınızda bilgisayar bilimi öğretmeye devam etmenin birçok yolu vardır. İşte bazı fikirler:\n\n-   **[Kod Stüdyosu Bilgisayar Biliminin Temelleri][0] kurslarını öğretin**. Bu dört kurs genç öğrenciler için tasarlanmıştır. Öğrenciler, onlara kodlamayı öğreten bir dizi bulmaca üzerinde çalışırlar ve eğitimciler, öğrenmenin canlanmasına yardımcı olan ilgi çekici ders planlarına erişebilir. Code.org, bu kurslar için çevrimiçi veya yüz yüze ücretsiz mesleki gelişim sunmaktadır.\n-   **Sınıfınızla çalışmaları hakkında konuşması için bir bilgisayar bilimi uzmanını davet edin**. Hiç gönüllü tanımıyorsanız, [gönüllü haritasından][1] birkaç kişiye ulaşın."
         },
         "88079aec-5c42-4f3f-bbb6-cba4f8866c92": {
           "name": "Hazırlık Aşaması",
@@ -25718,7 +25718,7 @@
         },
         "6874de98-8778-447b-8453-0138809b2c7e": {
           "tips": [
-            "Kodlamaya pek aşina değilseniz Hour of Code etkinliğini tanıtmak için [ilham verici videolarımızdan](https://hourofcode.com/us/resources#videos) birini gösterebilirsiniz. Öğrencilerinizin ilham verici bulacağını düşündüğünüz birini seçin ve onlarla paylaşın. Küçük öğrenciler için \"[Herkes Öğrenebilir](https://youtu.be/qYZF6oIZtfc)\" güzel bir seçenek olabilir."
+            "Kodlamaya pek aşina değilseniz Hour of Code etkinliğini tanıtmak için [ilham verici videolarımızdan][0] birini gösterebilirsiniz. Öğrencilerinizin ilham verici bulacağını düşündüğünüz birini seçin ve onlarla paylaşın. Küçük öğrenciler için \"[Herkes Öğrenebilir][1]\" güzel bir seçenek olabilir."
           ]
         },
         "82e4a494-65fb-40ac-b2c2-323044e15b77": {
@@ -25726,7 +25726,7 @@
         },
         "bd5d11f4-9c4c-4f24-bb9f-482392bd65aa": {
           "name": "Disney Infinity Play Laboratuarı",
-          "description": "Öğrencilerinizden [Disney Infinity Oyun Laboratuvarı](https://studio.code.org/s/infinity/lessons/1/levels/1) öğreticisini tamamlamalarını isteyin.\n\nÖğrencilerinizin yaşına ve yeteneklerine bağlı olarak şunları düşünebilirsiniz: \n\n-   Ortaokul ve lise öğrencileri için, ücretsiz oynamaya ve uygulama veya oyun oluşturmaya izin veren öğreticiler seçmenizi öneririz. Öğrencilerin bağımsız olarak veya çiftler veya küçük gruplar halinde çalışmasını sağlayabilirsiniz. [code.org/learn](http://code.org/learn) adresinde [Flappy Oyunu Yapın](https://studio.code.org/s/flappy) ve yeni beta aracımız [AppLab](https://code.org/educate/applab) dahil olmak üzere ücretsiz içerik oluşturmaya izin veren birçok başka öğretici bulunmaktadır.\n-   Daha küçük öğrenciler için, sınıfınızı çiftlere veya çok küçük gruplara (her biri üç ila dört öğrenci) ayırabilirsiniz. Her gruptan [eşli programlama](https://youtu.be/vgkahOzFH2Q) kullanarak öğreticiyi tamamlamak için birlikte çalışmasını isteyebilirsiniz.\n-   Yetişkin öğrenciler için, [İlk bilgisayar programınızı yazın](https://studio.code.org/hoc/1) öğreticisi, bağımsız bir meydan okuma veya bir çift programlama etkinliği olarak son derece etkilidir."
+          "description": "Öğrencilerinizden [Disney Infinity Oyun Laboratuvarı][0] öğreticisini tamamlamalarını isteyin.\n\nÖğrencilerinizin yaşına ve yeteneklerine bağlı olarak şunları düşünebilirsiniz: \n\n-   Ortaokul ve lise öğrencileri için, ücretsiz oynamaya ve uygulama veya oyun oluşturmaya izin veren öğreticiler seçmenizi öneririz. Öğrencilerin bağımsız olarak veya çiftler veya küçük gruplar halinde çalışmasını sağlayabilirsiniz. [code.org/learn][1] adresinde [Flappy Oyunu Yapın][2] ve yeni beta aracımız [AppLab][3] dahil olmak üzere ücretsiz içerik oluşturmaya izin veren birçok başka öğretici bulunmaktadır.\n-   Daha küçük öğrenciler için, sınıfınızı çiftlere veya çok küçük gruplara (her biri üç ila dört öğrenci) ayırabilirsiniz. Her gruptan [eşli programlama][4] kullanarak öğreticiyi tamamlamak için birlikte çalışmasını isteyebilirsiniz.\n-   Yetişkin öğrenciler için, [İlk bilgisayar programınızı yazın][5] öğreticisi, bağımsız bir meydan okuma veya bir çift programlama etkinliği olarak son derece etkilidir."
         },
         "b1ea2c15-24bb-475a-bb3f-bbc8ea1a51c0": {
           "tips": [
@@ -25734,7 +25734,7 @@
           ]
         },
         "712a8a98-3ab7-43d0-8f6f-a68e6984b009": {
-          "description": "Öğrenciler grup veya bireysel olarak erken bitirirse, [code.org/learn](http://code.org/learn) adresini ziyaret ederek başka bir öğreticiyi deneyebilir."
+          "description": "Öğrenciler grup veya bireysel olarak erken bitirirse, [code.org/learn][0] adresini ziyaret ederek başka bir öğreticiyi deneyebilir."
         },
         "a0530acf-3bce-4de9-b392-fe8725044086": {
           "name": "Dönüt Alın",
@@ -25742,7 +25742,7 @@
         },
         "ceaf9d96-e806-48e1-9a95-30566999264e": {
           "name": "Tebrik Edin",
-          "description": "Bu hafta BB Eğitim Haftası ve dünya çapında milyonlarca öğrenci bu hafta bir Hour of Code eğitimi görecek. Bu nedenle öğrencilerinize bugün bir saat kodlamayla geçireceğinizi açıklayın. Öğrencileri bu dünya çapındaki hareketin bir parçası oldukları için tebrik edin.\n\nHer öğrenciye üzerinde adının yazılı olduğu bir [sertifika](http://code.org/certificates) verin."
+          "description": "Bu hafta BB Eğitim Haftası ve dünya çapında milyonlarca öğrenci bu hafta bir Hour of Code eğitimi görecek. Bu nedenle öğrencilerinize bugün bir saat kodlamayla geçireceğinizi açıklayın. Öğrencileri bu dünya çapındaki hareketin bir parçası oldukları için tebrik edin.\n\nHer öğrenciye üzerinde adının yazılı olduğu bir [sertifika][0] verin."
         },
         "680268d8-e3db-4f80-b56d-dfe40ada4d77": {
           "name": "Sonraki Adımlar",
@@ -25754,7 +25754,7 @@
         },
         "38f15942-4a08-48f7-a0c4-e04232bc9bdc": {
           "name": "Kod saatinin ötesi",
-          "description": "Hour of Code etkinliğiniz sona erdikten sonra, K-5 sınıfınızda bilgisayar bilimi öğretmeye devam etmenin birçok yolu vardır. İşte bazı fikirler:\n\n-   **[Kod Stüdyosu Bilgisayar Biliminin Temelleri](http://code.org/educate/k5) kurslarını öğretin**. Bu dört kurs genç öğrenciler için tasarlanmıştır. Öğrenciler, onlara kodlamayı öğreten bir dizi bulmaca üzerinde çalışırlar ve eğitimciler, öğrenmenin canlanmasına yardımcı olan ilgi çekici ders planlarına erişebilir. Code.org, bu kurslar için çevrimiçi veya yüz yüze ücretsiz mesleki gelişim sunmaktadır.\n-   **Sınıfınızla çalışmaları hakkında konuşması için bir bilgisayar bilimi uzmanını davet edin**. Hiç gönüllü tanımıyorsanız, [gönüllü haritasından](https://code.org/volunteer/local) birkaç kişiye ulaşın."
+          "description": "Hour of Code etkinliğiniz sona erdikten sonra, K-5 sınıfınızda bilgisayar bilimi öğretmeye devam etmenin birçok yolu vardır. İşte bazı fikirler:\n\n-   **[Kod Stüdyosu Bilgisayar Biliminin Temelleri][0] kurslarını öğretin**. Bu dört kurs genç öğrenciler için tasarlanmıştır. Öğrenciler, onlara kodlamayı öğreten bir dizi bulmaca üzerinde çalışırlar ve eğitimciler, öğrenmenin canlanmasına yardımcı olan ilgi çekici ders planlarına erişebilir. Code.org, bu kurslar için çevrimiçi veya yüz yüze ücretsiz mesleki gelişim sunmaktadır.\n-   **Sınıfınızla çalışmaları hakkında konuşması için bir bilgisayar bilimi uzmanını davet edin**. Hiç gönüllü tanımıyorsanız, [gönüllü haritasından][1] birkaç kişiye ulaşın."
         },
         "a16594a7-8312-4ac3-87c8-fd2d5d6e5bfb": {
           "name": "Giriş",
@@ -25762,7 +25762,7 @@
         },
         "6415b9b2-1e23-43ee-9d0c-e65efcb0d65c": {
           "tips": [
-            "Kodlamaya pek aşina değilseniz Hour of Code etkinliğini tanıtmak için [ilham verici videolarımızdan](https://hourofcode.com/us/resources#videos) birini gösterebilirsiniz. Öğrencilerinizin ilham verici bulacağını düşündüğünüz birini seçin ve onlarla paylaşın. Küçük öğrenciler için \"[Hour of Code Etkinliğine Hoş Geldiniz](https://youtu.be/FC5FbmsH4fw)\" güzel bir seçenek olabilir."
+            "Kodlamaya pek aşina değilseniz Hour of Code etkinliğini tanıtmak için [ilham verici videolarımızdan][0] birini gösterebilirsiniz. Öğrencilerinizin ilham verici bulacağını düşündüğünüz birini seçin ve onlarla paylaşın. Küçük öğrenciler için \"[Hour of Code Etkinliğine Hoş Geldiniz][1]\" güzel bir seçenek olabilir."
           ]
         },
         "3fee530c-6d5f-44da-89f7-cfae73040787": {
@@ -25775,16 +25775,16 @@
         },
         "aafa75c2-9439-415c-b42f-cac8ddfc2874": {
           "name": "Minecraft Maceracısı",
-          "description": "Öğrencilerinizden [Minecraft: Maceracı](studio.code.org/s/mc/lessons/1/levels/1) öğreticisini tamamlamalarını isteyin.\n\nÖğrencilerinizin yaşına ve yeteneklerine bağlı olarak şunları düşünebilirsiniz: \n\n-   Küçük öğrenciler için, sınıfınızı çiftler veya küçük gruplar (her biri üç ila dört öğrenci) şeklinde ayırabilirsiniz. Her gruptan [eşli programlama](https://youtu.be/vgkahOzFH2Q) kullanarak öğreticiyi tamamlamak için birlikte çalışmasını isteyebilirsiniz.\n-   Orta sınıflardaki öğrenciler için, öğreticiler üzerinde bağımsız çalışmanın iyi sonuç verdiğini görüyoruz. Bazen öğrencilerin kendi eğitimlerini seçmelerine izin vermek yardımcı olur. Öğrenciler Minecraft ile ilgilenmiyorlarsa [Anna ve Elsa ile Kodlama](https://studio.code.org/s/frozen/stage/1/puzzle/1) veya [Star Wars](https://code.org/starwars) öğreticileriyle benzer bir deneyim yaşayabilirler.\n-   Daha yaşlı veya yetişkin öğrenciler için, [Minecraft](https://hourofcode.com/mc) öğreticisi, bağımsız bir meydan okuma veya çift programlama etkinliği olarak son derece etkilidir.",
+          "description": "Öğrencilerinizden [Minecraft: Maceracı][0] öğreticisini tamamlamalarını isteyin.\n\nÖğrencilerinizin yaşına ve yeteneklerine bağlı olarak şunları düşünebilirsiniz: \n\n-   Küçük öğrenciler için, sınıfınızı çiftler veya küçük gruplar (her biri üç ila dört öğrenci) şeklinde ayırabilirsiniz. Her gruptan [eşli programlama][1] kullanarak öğreticiyi tamamlamak için birlikte çalışmasını isteyebilirsiniz.\n-   Orta sınıflardaki öğrenciler için, öğreticiler üzerinde bağımsız çalışmanın iyi sonuç verdiğini görüyoruz. Bazen öğrencilerin kendi eğitimlerini seçmelerine izin vermek yardımcı olur. Öğrenciler Minecraft ile ilgilenmiyorlarsa [Anna ve Elsa ile Kodlama][2] veya [Star Wars][3] öğreticileriyle benzer bir deneyim yaşayabilirler.\n-   Daha yaşlı veya yetişkin öğrenciler için, [Minecraft][4] öğreticisi, bağımsız bir meydan okuma veya çift programlama etkinliği olarak son derece etkilidir.",
           "tips": [
             "Öğrencilerinizden denemelerini istemeden önce, seçtiğiniz dersleri kendiniz test ettiğinizden emin olun. Bu şekilde ne bekleyeceğinizi bilir ve öğrencilerin kendi eğitimlerini seçmelerine izin verip vermeme veya öğrenci ihtiyaçlarına göre eğitimler atamak isteyip istemediğiniz konusunda kararlar verebilirsiniz."
           ]
         },
         "1766511d-3639-46a3-911f-acc7f8c4b922": {
-          "description": "Öğrenciler grup veya bireysel olarak erken bitirirse, [code.org/learn](http://code.org/learn) adresini ziyaret ederek başka bir öğreticiyi deneyebilir."
+          "description": "Öğrenciler grup veya bireysel olarak erken bitirirse, [code.org/learn][0] adresini ziyaret ederek başka bir öğreticiyi deneyebilir."
         },
         "8c990fee-4a0f-4d70-a635-ab66a8195193": {
-          "description": "Her öğrenciye bir [“Çıkış Bileti”](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) verin ve onlardan bugün ne öğrendiklerini, nasıl hissettiklerini veya neler deneyimlediklerini özetlemelerini isteyin. Öğrenciler düşüncelerini ister çizim yaparak ister yazılı bir şekilde dile getirebilir. Odadan çıkarken öğrenciden bir “Çıkış Bileti” aldığınıza emin olun. Dilerseniz “Çıkış Biletleri”ni bir duyuru panosuna veya okulun göz önünde bulunan bir yerine Hour of Code etkinliğini hatırlatması için asabilirsiniz."
+          "description": "Her öğrenciye bir [“Çıkış Bileti”][0] verin ve onlardan bugün ne öğrendiklerini, nasıl hissettiklerini veya neler deneyimlediklerini özetlemelerini isteyin. Öğrenciler düşüncelerini ister çizim yaparak ister yazılı bir şekilde dile getirebilir. Odadan çıkarken öğrenciden bir “Çıkış Bileti” aldığınıza emin olun. Dilerseniz “Çıkış Biletleri”ni bir duyuru panosuna veya okulun göz önünde bulunan bir yerine Hour of Code etkinliğini hatırlatması için asabilirsiniz."
         },
         "bcdecd77-2efb-44b5-9fdc-e244d1f5ccf6": {
           "name": "Dönüt Alın",
@@ -25792,7 +25792,7 @@
         },
         "6b574c8b-2319-4244-acc8-fb8405fa5737": {
           "name": "Tebrik Edin",
-          "description": "Bu hafta BB Eğitim Haftası ve dünya çapında milyonlarca öğrenci bu hafta bir Hour of Code eğitimi görecek. Bu nedenle öğrencilerinize bugün bir saat kodlamayla geçireceğinizi açıklayın. Öğrencileri bu dünya çapındaki hareketin bir parçası oldukları için tebrik edin.\n\nHer öğrenciye üzerinde adının yazılı olduğu bir [sertifika](https://studio.code.org/certificates/batch?course=bWM=) verin."
+          "description": "Bu hafta BB Eğitim Haftası ve dünya çapında milyonlarca öğrenci bu hafta bir Hour of Code eğitimi görecek. Bu nedenle öğrencilerinize bugün bir saat kodlamayla geçireceğinizi açıklayın. Öğrencileri bu dünya çapındaki hareketin bir parçası oldukları için tebrik edin.\n\nHer öğrenciye üzerinde adının yazılı olduğu bir [sertifika][0] verin."
         },
         "02dfa607-4f9e-404c-bdae-f9f423fa526c": {
           "name": "Sonraki Adımlar",
@@ -25800,7 +25800,7 @@
         },
         "5bc8aefa-7bb0-4f22-a555-321738755b8c": {
           "name": "Hour of Code Ötesi",
-          "description": "Hour of Code etkinliğiniz sona erdikten sonra, K-5 sınıfınızda bilgisayar bilimi hakkında eğitime devam etmenin birçok yolu vardır. İşte bazı fikirler:\n\n-   **[Kod Stüdyosu Bilgisayar Biliminin Temelleri](http://code.org/educate/k5) kurslarını öğretin**. Bu dört ders genç öğrenciler için tasarlanmıştır. Öğrenciler kodlamayı öğrenmelerini sağlayacak bir dizi bulmacayı çözmeye çalışır, eğitimciler de öğrenmeyi canlı hale getirecek ilginç ders planlarına erişim sağlayabilirler. Code.org, bu dersler için, çevrimiçi veya yüz yüze, ücretsiz profesyonel gelişim hizmeti sunmaktadır.\n-   **Daha fazla kurs önerisi için [Siz de Bilgisayar Bilimini Öğretebilirsiniz](https://code.org/teach) sayfasını ziyaret edin.**\n-   **Sınıfınızla çalışmaları hakkında konuşması için bir bilgisayar bilimi uzmanını davet edin**. Yerel bilgisayar bilimcilerini tanımıyor musunuz? [Gönüllü haritamızdan](https://code.org/volunteer/local) bir gönüllüye ulaşın."
+          "description": "Hour of Code etkinliğiniz sona erdikten sonra, K-5 sınıfınızda bilgisayar bilimi hakkında eğitime devam etmenin birçok yolu vardır. İşte bazı fikirler:\n\n-   **[Kod Stüdyosu Bilgisayar Biliminin Temelleri][0] kurslarını öğretin**. Bu dört ders genç öğrenciler için tasarlanmıştır. Öğrenciler kodlamayı öğrenmelerini sağlayacak bir dizi bulmacayı çözmeye çalışır, eğitimciler de öğrenmeyi canlı hale getirecek ilginç ders planlarına erişim sağlayabilirler. Code.org, bu dersler için, çevrimiçi veya yüz yüze, ücretsiz profesyonel gelişim hizmeti sunmaktadır.\n-   **Daha fazla kurs önerisi için [Siz de Bilgisayar Bilimini Öğretebilirsiniz][1] sayfasını ziyaret edin.**\n-   **Sınıfınızla çalışmaları hakkında konuşması için bir bilgisayar bilimi uzmanını davet edin**. Yerel bilgisayar bilimcilerini tanımıyor musunuz? [Gönüllü haritamızdan][2] bir gönüllüye ulaşın."
         },
         "563d9088-3ce6-48c1-aa79-6f673e089247": {
           "name": "Giriş",
@@ -25808,7 +25808,7 @@
         },
         "9f1107d0-cde6-4f78-911c-5018ea9264e0": {
           "tips": [
-            "Kodlamaya pek aşina değilseniz Hour of Code etkinliğini tanıtmak için [ilham verici videolarımızdan](https://hourofcode.com/us/resources#videos) birini gösterebilirsiniz. Öğrencilerinizin ilham verici bulacağını düşündüğünüz birini seçin ve onlarla paylaşın. Küçük öğrenciler için \"[Hour of Code Etkinliğine Hoş Geldiniz](https://youtu.be/FC5FbmsH4fw)\" güzel bir seçenek olabilir."
+            "Kodlamaya pek aşina değilseniz Hour of Code etkinliğini tanıtmak için [ilham verici videolarımızdan][0] birini gösterebilirsiniz. Öğrencilerinizin ilham verici bulacağını düşündüğünüz birini seçin ve onlarla paylaşın. Küçük öğrenciler için \"[Hour of Code Etkinliğine Hoş Geldiniz][1]\" güzel bir seçenek olabilir."
           ]
         },
         "ed8509fa-59b4-43a4-bd4a-05a5018387c2": {
@@ -25821,7 +25821,7 @@
         },
         "75d779c4-24f7-40be-bf92-b0c094c16d11": {
           "name": "Minecraft Tasarımcısı",
-          "description": "Öğrencilerinizden [Minecraft: Tasarım](http://studio.code.org/s/minecraft/lessons/1/levels/1) etkinliğini tamamlamalarını isteyin.\n\nÖğrencilerinizin yaşına ve yeteneklerine bağlı olarak şunları düşünebilirsiniz:\n\n-   Daha küçük öğrenciler için, sınıfınızı çiftlere ayırabilirsiniz. Her gruptan [eşli programlama](https://youtu.be/vgkahOzFH2Q) kullanarak öğreticiyi tamamlamak için birlikte çalışmasını isteyebilirsiniz.\n-   Orta sınıflardaki öğrenciler için, öğreticiler üzerinde bağımsız çalışmanın iyi sonuç verdiğini görüyoruz. Bazen öğrencilerin kendi eğitimlerini seçmelerine izin vermek yardımcı olabilir. Öğrenciler, Minecraft ile ilgilenmiyorlarsa [Anna ve Elsa ile Kodlama](https://studio.code.org/s/frozen/stage/1/puzzle/1) veya [Star Wars](https://code.org/starwars) öğreticileriyle benzer bir deneyim yaşayabilirler.\n-   Daha yaşlı veya yetişkin öğrenciler için, [Minecraft: Tasarım](http://studio.code.org/s/minecraft/lessons/1/levels/1) öğreticisi, bağımsız bir meydan okuma veya bir çift programlama etkinliği olarak son derece etkilidir."
+          "description": "Öğrencilerinizden [Minecraft: Tasarım][0] etkinliğini tamamlamalarını isteyin.\n\nÖğrencilerinizin yaşına ve yeteneklerine bağlı olarak şunları düşünebilirsiniz:\n\n-   Daha küçük öğrenciler için, sınıfınızı çiftlere ayırabilirsiniz. Her gruptan [eşli programlama][1] kullanarak öğreticiyi tamamlamak için birlikte çalışmasını isteyebilirsiniz.\n-   Orta sınıflardaki öğrenciler için, öğreticiler üzerinde bağımsız çalışmanın iyi sonuç verdiğini görüyoruz. Bazen öğrencilerin kendi eğitimlerini seçmelerine izin vermek yardımcı olabilir. Öğrenciler, Minecraft ile ilgilenmiyorlarsa [Anna ve Elsa ile Kodlama][2] veya [Star Wars][3] öğreticileriyle benzer bir deneyim yaşayabilirler.\n-   Daha yaşlı veya yetişkin öğrenciler için, [Minecraft: Tasarım][4] öğreticisi, bağımsız bir meydan okuma veya bir çift programlama etkinliği olarak son derece etkilidir."
         },
         "8d4ecee7-5f04-4f80-9673-c2aec0c5ab9d": {
           "tips": [
@@ -25829,7 +25829,7 @@
           ]
         },
         "307ffdf6-e274-484b-a10f-329ddfe568dc": {
-          "description": "Öğrenciler grup veya bireysel olarak erken bitirirse, [code.org/learn](http://code.org/learn) adresini ziyaret ederek başka bir öğreticiyi deneyebilir."
+          "description": "Öğrenciler grup veya bireysel olarak erken bitirirse, [code.org/learn][0] adresini ziyaret ederek başka bir öğreticiyi deneyebilir."
         },
         "70935a98-82e9-4553-94f7-90a4e615dd34": {
           "name": "Dönüt Alın",
@@ -25837,18 +25837,18 @@
         },
         "5f00e31d-70fa-4bb2-9bef-223793082f5c": {
           "name": "Tebrik Edin",
-          "description": "Bu hafta BB Eğitim Haftası ve dünya çapında milyonlarca öğrenci bu hafta bir Hour of Code eğitimi görecek. Bu nedenle öğrencilerinize bugün bir saat kodlamayla geçireceğinizi açıklayın. Öğrencileri bu dünya çapındaki hareketin bir parçası oldukları için tebrik edin.\n\nHer öğrenciye üzerinde adının yazılı olduğu bir [sertifika](https://studio.code.org/certificates/batch?course=bWM=) verin."
+          "description": "Bu hafta BB Eğitim Haftası ve dünya çapında milyonlarca öğrenci bu hafta bir Hour of Code eğitimi görecek. Bu nedenle öğrencilerinize bugün bir saat kodlamayla geçireceğinizi açıklayın. Öğrencileri bu dünya çapındaki hareketin bir parçası oldukları için tebrik edin.\n\nHer öğrenciye üzerinde adının yazılı olduğu bir [sertifika][0] verin."
         },
         "20b7009c-3a45-4211-a9ad-c65f56099200": {
           "name": "Sonraki Adımlar",
-          "description": "Öğrencilere, bugünkü aktiviteden hoşlandılarsa, kodlamaya devam etmek için birçok seçeneğe sahip olduklarını bildirin. Seçenekler listesi için [code.org/learn](<>) adresini ziyaret etmeye teşvik edin veya takip eden ekstra etkinliklerden birini yapmayı planlıyorsanız, öğrencilere sırada ne işleyeceğinizden bahsedin."
+          "description": "Öğrencilere, bugünkü aktiviteden hoşlandılarsa, kodlamaya devam etmek için birçok seçeneğe sahip olduklarını bildirin. Seçenekler listesi için [code.org/learn][0] adresini ziyaret etmeye teşvik edin veya takip eden ekstra etkinliklerden birini yapmayı planlıyorsanız, öğrencilere sırada ne işleyeceğinizden bahsedin."
         },
         "85fc4f24-eb97-4ff5-813f-4af3e5497034": {
-          "description": "Her öğrenciye bir [“Çıkış Bileti”](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) verin ve onlardan bugün ne öğrendiklerini, nasıl hissettiklerini veya neler deneyimlediklerini özetlemelerini isteyin. Öğrenciler düşüncelerini ister çizim yaparak ister yazılı bir şekilde dile getirebilir. Odadan çıkarken öğrenciden bir “Çıkış Bileti” aldığınıza emin olun. Dilerseniz “Çıkış Biletleri”ni bir duyuru panosuna veya okulun göz önünde bulunan bir yerine Hour of Code etkinliğini hatırlatması için asabilirsiniz."
+          "description": "Her öğrenciye bir [“Çıkış Bileti”][0] verin ve onlardan bugün ne öğrendiklerini, nasıl hissettiklerini veya neler deneyimlediklerini özetlemelerini isteyin. Öğrenciler düşüncelerini ister çizim yaparak ister yazılı bir şekilde dile getirebilir. Odadan çıkarken öğrenciden bir “Çıkış Bileti” aldığınıza emin olun. Dilerseniz “Çıkış Biletleri”ni bir duyuru panosuna veya okulun göz önünde bulunan bir yerine Hour of Code etkinliğini hatırlatması için asabilirsiniz."
         },
         "7f24d7ca-8a9e-417c-ac8e-18ca3ab48ac1": {
           "name": "Hour of Code Ötesi",
-          "description": "Hour of Code etkinliğiniz sona erdikten sonra, K-5 sınıfınızda bilgisayar bilimi hakkında eğitime devam etmenin birçok yolu vardır. İşte bazı fikirler:\n\n-   **[Kod Stüdyosu Bilgisayar Biliminin Temelleri](http://code.org/educate/k5) kurslarını** öğretin. Bu altı kurs, genç öğrenciler için tasarlanmıştır. Öğrenciler, onlara kodlamayı öğreten bir dizi bulmaca üzerinde çalışırlar ve eğitimciler, öğrenmeyi canlandırmaya yardımcı olan ilgi çekici ders planlarına erişebilir. Code.org, bu kurslar için çevrimiçi veya yüz yüze ücretsiz mesleki gelişim sunmaktadır.\n-   **Daha fazla kurs önerisi için [Siz de Bilgisayar Bilimini Öğretebilirsiniz](https://code.org/teach) sayfasını ziyaret edin.**\n-   \\*\\*Sınıfınızla çalışmaları hakkında konuşması için bir bilgisayar bilimi uzmanını davet edin. Yerel bilgisayar bilimcilerini tanımıyor musunuz? [Gönüllü haritamızdan](https://code.org/volunteer/local) bir gönüllüye ulaşın."
+          "description": "Hour of Code etkinliğiniz sona erdikten sonra, K-5 sınıfınızda bilgisayar bilimi hakkında eğitime devam etmenin birçok yolu vardır. İşte bazı fikirler:\n\n-   **[Kod Stüdyosu Bilgisayar Biliminin Temelleri][0] kurslarını** öğretin. Bu altı kurs, genç öğrenciler için tasarlanmıştır. Öğrenciler, onlara kodlamayı öğreten bir dizi bulmaca üzerinde çalışırlar ve eğitimciler, öğrenmeyi canlandırmaya yardımcı olan ilgi çekici ders planlarına erişebilir. Code.org, bu kurslar için çevrimiçi veya yüz yüze ücretsiz mesleki gelişim sunmaktadır.\n-   **Daha fazla kurs önerisi için [Siz de Bilgisayar Bilimini Öğretebilirsiniz][1] sayfasını ziyaret edin.**\n-   \\*\\*Sınıfınızla çalışmaları hakkında konuşması için bir bilgisayar bilimi uzmanını davet edin. Yerel bilgisayar bilimcilerini tanımıyor musunuz? [Gönüllü haritamızdan][2] bir gönüllüye ulaşın."
         },
         "54b95e4d-58b7-4551-9782-7ce134f4e457": {
           "name": "Heyecan Yaratın!",
@@ -26116,7 +26116,7 @@
         },
         "6fa68bdd-8f9b-4d69-b54e-28141ee6d732": {
           "tips": [
-            "Kodlamaya pek aşina değilseniz Hour of Code etkinliğini tanıtmak için [ilham verici videolarımızdan](https://hourofcode.com/us/resources#videos) birini gösterebilirsiniz. Öğrencilerinizin ilham verici bulacağını düşündüğünüz birini seçin ve onlarla paylaşın. Küçük öğrenciler için \"[Hour of Code Etkinliği Burada](https://youtu.be/FC5FbmsH4fw)\" güzel bir seçenek olabilir."
+            "Kodlamaya pek aşina değilseniz Hour of Code etkinliğini tanıtmak için [ilham verici videolarımızdan][0] birini gösterebilirsiniz. Öğrencilerinizin ilham verici bulacağını düşündüğünüz birini seçin ve onlarla paylaşın. Küçük öğrenciler için \"[Hour of Code Etkinliği Burada][1]\" güzel bir seçenek olabilir."
           ]
         },
         "7f1244d9-811b-410c-96b2-9f7086959c6b": {
@@ -26124,7 +26124,7 @@
         },
         "a69a3310-4b81-4e04-8313-51044489351a": {
           "name": "Yıldız Savaşları: Kod İle Bir Galaksi İnşa Etmek",
-          "description": "Öğrencilerinizden [Star Wars: Kodla Bir Galaksi İnşa Etmek](https://studio.code.org/s/starwars/lessons/1/levels/1) öğreticisini tamamlamalarını isteyin.\n\nÖğrencilerinizin yaşına ve yeteneklerine bağlı olarak şunları düşünebilirsiniz: \n\n-   Küçük öğrenciler için, sınıfınızı çiftlere ayırabilirsiniz. Her gruptan [eşli programlama](https://youtu.be/vgkahOzFH2Q) kullanarak öğreticiyi tamamlamak için birlikte çalışmasını isteyebilirsiniz.\n-   Orta sınıflardaki öğrenciler için, öğreticiler üzerinde bağımsız çalışmanın iyi sonuç verdiğini görüyoruz. Bazen öğrencilerin kendi eğitimlerini seçmelerine izin vermek yardımcı olabilir. Öğrenciler Star Wars ile ilgilenmiyorlarsa [İlk bilgisayar programınızı yazın](https://studio.code.org/hoc/1) öğreticisiyle benzer bir deneyim yaşayabilirler.\n-   Daha yaşlı veya yetişkin öğrenciler için [Star Wars: Kodla Bir Galaksi İnşa Etmek][4] öğreticisi, bağımsız bir meydan okuma veya bir eşli programlama etkinliği olarak son derece etkilidir."
+          "description": "Öğrencilerinizden [Star Wars: Kodla Bir Galaksi İnşa Etmek][0] öğreticisini tamamlamalarını isteyin.\n\nÖğrencilerinizin yaşına ve yeteneklerine bağlı olarak şunları düşünebilirsiniz: \n\n-   Küçük öğrenciler için, sınıfınızı çiftlere ayırabilirsiniz. Her gruptan [eşli programlama][1] kullanarak öğreticiyi tamamlamak için birlikte çalışmasını isteyebilirsiniz.\n-   Orta sınıflardaki öğrenciler için, öğreticiler üzerinde bağımsız çalışmanın iyi sonuç verdiğini görüyoruz. Bazen öğrencilerin kendi eğitimlerini seçmelerine izin vermek yardımcı olabilir. Öğrenciler Star Wars ile ilgilenmiyorlarsa [İlk bilgisayar programınızı yazın][2] öğreticisiyle benzer bir deneyim yaşayabilirler.\n-   Daha yaşlı veya yetişkin öğrenciler için [Star Wars: Kodla Bir Galaksi İnşa Etmek][4] öğreticisi, bağımsız bir meydan okuma veya bir eşli programlama etkinliği olarak son derece etkilidir."
         },
         "b17f8e8a-6b46-4f46-a4fc-894cf561bb9d": {
           "tips": [
@@ -26132,15 +26132,15 @@
           ]
         },
         "eb72d828-788d-4090-9e4f-71423c081948": {
-          "description": "Eğitimin sonunda öğrenciler bir Star Wars oyunu oluşturma fırsatına sahip olacak. Öğrenciler erken bitirirse, birbirlerinin oyunlarını denemeleri ve ardından kendi oyunlarını daha ilginç veya zorlu hale getirmeleri için onları teşvik edin.\n\nAyrıca [code.org/learn](http://code.org/learn) adresini ziyaret ederek bir grubun veya öğrencinin başka bir öğretici denemesine izin verebilirsiniz."
+          "description": "Eğitimin sonunda öğrenciler bir Star Wars oyunu oluşturma fırsatına sahip olacak. Öğrenciler erken bitirirse, birbirlerinin oyunlarını denemeleri ve ardından kendi oyunlarını daha ilginç veya zorlu hale getirmeleri için onları teşvik edin.\n\nAyrıca [code.org/learn][0] adresini ziyaret ederek bir grubun veya öğrencinin başka bir öğretici denemesine izin verebilirsiniz."
         },
         "bec776b1-a8cd-4e18-a1bc-be30f2942863": {
           "name": "Dönüt Alın",
-          "description": "Her öğrenciye birkaç adet yapışkan not veya not kartları verin. Bir [“Hızlı Fikirler”](http://www.theteachertoolkit.com/index.php/tool/whip-around) aktivitesi başlatın:\n\n-   “Tamamlamış olduğunuz Hour of Code aktivitesi ile ilgili gerçekten sevdiğiniz bir şeyi paylaşın” veya “Bugün öğrendiğiniz becerilerden bazılarını paylaşın\" gibi tek bir cevabı olmayan sorular yöneltin.\n-   Her bir yapışkanlı kağıtta veya not kartında bir fikir olacak şekilde, öğrencilerin mümkün olduğunca fazla cevap yazmasını sağlayın.\n    Odada bir tur atın ve her seferinde bir öğrenciye söz verin. Öğrencilerden yanıtlarından birini paylaşmasını isteyin. Söz aldıklarında, öğrenciler verilen bir yanıtı tekrarlamamasını, yeni bir şey eklemesini sağlayın.\n-   Odadaki turunuzu tamamladıktan sonra, yanıtlarında en çok hangi fikirlerin veya temaların olduğunu öğrencilerle tartışın. "
+          "description": "Her öğrenciye birkaç adet yapışkan not veya not kartları verin. Bir [“Hızlı Fikirler”][0] aktivitesi başlatın:\n\n-   “Tamamlamış olduğunuz Hour of Code aktivitesi ile ilgili gerçekten sevdiğiniz bir şeyi paylaşın” veya “Bugün öğrendiğiniz becerilerden bazılarını paylaşın\" gibi tek bir cevabı olmayan sorular yöneltin.\n-   Her bir yapışkanlı kağıtta veya not kartında bir fikir olacak şekilde, öğrencilerin mümkün olduğunca fazla cevap yazmasını sağlayın.\n    Odada bir tur atın ve her seferinde bir öğrenciye söz verin. Öğrencilerden yanıtlarından birini paylaşmasını isteyin. Söz aldıklarında, öğrenciler verilen bir yanıtı tekrarlamamasını, yeni bir şey eklemesini sağlayın.\n-   Odadaki turunuzu tamamladıktan sonra, yanıtlarında en çok hangi fikirlerin veya temaların olduğunu öğrencilerle tartışın. "
         },
         "4cb35c62-404e-42b9-9eaf-09ec2f485a2b": {
           "name": "Tebrik Edin",
-          "description": "Bu hafta BB Eğitim Haftası ve dünya çapında milyonlarca öğrenci bu hafta bir Hour of Code eğitimi görecek. Bu nedenle öğrencilerinize bugün bir saat kodlamayla geçireceğinizi açıklayın. Öğrencileri bu dünya çapındaki hareketin bir parçası oldukları için tebrik edin.\n\nHer öğrenciye üzerinde adının yazılı olduğu bir [certificate](http://code.org/certificates) verin."
+          "description": "Bu hafta BB Eğitim Haftası ve dünya çapında milyonlarca öğrenci bu hafta bir Hour of Code eğitimi görecek. Bu nedenle öğrencilerinize bugün bir saat kodlamayla geçireceğinizi açıklayın. Öğrencileri bu dünya çapındaki hareketin bir parçası oldukları için tebrik edin.\n\nHer öğrenciye üzerinde adının yazılı olduğu bir [certificate][0] verin."
         },
         "80ff32c9-0373-4125-a65e-bef5f0e21cba": {
           "name": "Sonraki Adımlar",
@@ -26148,7 +26148,7 @@
         },
         "57e403d7-a8be-47fc-bb97-1a068e2469ed": {
           "name": "Hour of Code Ötesi",
-          "description": "Hour of Code etkinliğiniz sona erdikten sonra K-5 sınıfınızda bilgisayar bilimi hakkında eğitime devam etmenin birçok yolu vardır. İşte bazı fikirler:\n\n-   **[Kod Stüdyosu Bilgisayar Biliminin Temelleri](http://code.org/educate/k5) kurslarını öğretin**. Bu altı kurs, genç öğrenciler için tasarlanmıştır. Öğrenciler, onlara kodlamayı öğreten bir dizi bulmaca üzerinde çalışırlar ve eğitimciler, öğrenmenin canlanmasına yardımcı olan ilgi çekici ders planlarına erişebilir. Code.org, bu kurslar için çevrimiçi veya yüz yüze ücretsiz mesleki gelişim sunmaktadır.\n-   Bugün hakkında konuştuğunuz kodlama bilgisi gerektiren kariyer seçeneklerinden bazılarını araştırın. [Sharemylesson.com](http://www.sharemylesson.com/TaxonomySearchResults.aspx?area=resources&keywords=career+research) adresinde kariyer araştırma projeleri hakkında kaynaklar bulun.\n-   **Sınıfınızla çalışmaları hakkında konuşması için bir bilgisayar bilimi uzmanını davet edin**. Hiç gönüllü tanımıyorsanız, [gönüllü haritasından](https://code.org/volunteer/local) birkaç kişiye ulaşın."
+          "description": "Hour of Code etkinliğiniz sona erdikten sonra K-5 sınıfınızda bilgisayar bilimi hakkında eğitime devam etmenin birçok yolu vardır. İşte bazı fikirler:\n\n-   **[Kod Stüdyosu Bilgisayar Biliminin Temelleri][0] kurslarını öğretin**. Bu altı kurs, genç öğrenciler için tasarlanmıştır. Öğrenciler, onlara kodlamayı öğreten bir dizi bulmaca üzerinde çalışırlar ve eğitimciler, öğrenmenin canlanmasına yardımcı olan ilgi çekici ders planlarına erişebilir. Code.org, bu kurslar için çevrimiçi veya yüz yüze ücretsiz mesleki gelişim sunmaktadır.\n-   Bugün hakkında konuştuğunuz kodlama bilgisi gerektiren kariyer seçeneklerinden bazılarını araştırın. [Sharemylesson.com][1] adresinde kariyer araştırma projeleri hakkında kaynaklar bulun.\n-   **Sınıfınızla çalışmaları hakkında konuşması için bir bilgisayar bilimi uzmanını davet edin**. Hiç gönüllü tanımıyorsanız, [gönüllü haritasından][2] birkaç kişiye ulaşın."
         },
         "d0f5c55b-b19c-418c-8dc6-f87a80e08f45": {
           "description": "Çıkmadan önce öğrencilerden \"Bilgisayar Bilimi\" zihin haritanıza \"Hızlı Fikirler\" yapışkan notlarını veya not kartları eklemelerini isteyin. Tahtayı BB’nin ne olduğu ve niye önemli olduğuyla ilgili çok sayıda harika fikirle doldurmaya çalışın."
@@ -26159,14 +26159,14 @@
         },
         "88f6ccc1-0efa-4c60-985c-971a235d5645": {
           "tips": [
-            "Kodlamaya pek aşina değilseniz Hour of Code etkinliğini tanıtmak için [ilham verici videolarımızdan](https://hourofcode.com/us/resources#videos) birini gösterebilirsiniz. Öğrencilerinizin ilham verici bulacağını düşündüğünüz birini seçin ve onlarla paylaşın. Küçük öğrenciler için \"[Hour of Code Etkinliği Burada](https://youtu.be/FC5FbmsH4fw)\" güzel bir seçenek olabilir."
+            "Kodlamaya pek aşina değilseniz Hour of Code etkinliğini tanıtmak için [ilham verici videolarımızdan][0] birini gösterebilirsiniz. Öğrencilerinizin ilham verici bulacağını düşündüğünüz birini seçin ve onlarla paylaşın. Küçük öğrenciler için \"[Hour of Code Etkinliği Burada][1]\" güzel bir seçenek olabilir."
           ]
         },
         "dbeab27b-4231-4281-be73-ae2aaa3d94b2": {
           "description": "Bilgisayar biliminde “kod” teriminin bir bilgisayarın anlayabileceği bir dizi talimat anlamına geldiğini açıklayın. Öğrencilere bugün “kodlama”, “programlama” ve “hata ayıklama” pratiği yapacaklarını söyleyin. \n\nAşağıdaki tanımları paylaşın:\n\n-   **Kodlama**, kod yazmak veya bir bilgisayar için talimat yazmak anlamına gelir.\n-   **Programlama**, benzer şekilde kod veya talimat yazmak anlamına gelir. Bugün, bilgisayardaki bloklarla (çevrimiçi bir eğitim kullanıyorsanız) veya kalem ve kağıtla (bilgisayarsız bir etkinlik kullanıyorsanız) programlama yapacaksınız.\n-   **Hata ayıklama**, kodu hatalara karşı kontrol etmek ve hataları düzeltmeye çalışmak anlamına gelir.\n\nÖğrencilerden, kodlama ile ilgili olduğunu düşündükleri bazı işleri adlandırmalarını isteyin. Öğrenciler “programcı”, “bilgisayar bilimcisi”, “yazılım geliştiricisi” veya “mühendis” gibi işlerden bahsedebilir. Öğrencilerinizin paylaştığı bilgilerin bir zihin haritasını çıkararak, \"Bilgisayar Bilimi\" panonuza ekleyin. \n\n**Öğrencilerinize şunları söyleyin:** _Haklısınız! Bu konuda doğru ya da yanlış bir cevap yok... Bugünlerde hemen hemen her iş kolu bir tür kod bilgisi gerektiriyor. Kodlama bilgisi gerektiren pek çok kariyer fırsatı vardır ve kodlamayı öğrenmek hemen hemen herkesin yapabileceği bir şeydir. Ve biz de bugün bunu göstereceğiz. Bugün yapacağımız şeyler ilk bakışta kodlama gibi görünmeyebilir, ancak öğrenecekleriniz bir sonraki Angry Birds veya Twitter'ı yapmanıza yardım edebilir.\"_"
         },
         "0ac387c0-d67a-4177-aacf-837ce03c55aa": {
-          "description": "Öğrencilerinizden [Star Wars: Kodla Bir Galaksi İnşa Etmek](https://studio.code.org/s/starwarsblocks/lessons/1/levels/1) öğreticisini tamamlamalarını isteyin.\n\nÖğrencilerinizin yaşına ve yeteneklerine bağlı olarak şunları düşünebilirsiniz: \n\n-   Küçük öğrenciler için, sınıfınızı çiftlere ayırabilirsiniz. Her gruptan [eşli programlama](https://youtu.be/vgkahOzFH2Q) kullanarak öğreticiyi tamamlamak için birlikte çalışmasını isteyebilirsiniz.\n-   Orta sınıflardaki öğrenciler için, öğreticiler üzerinde bağımsız çalışmanın iyi sonuç verdiğini görüyoruz. Bazen öğrencilerin kendi eğitimlerini seçmelerine izin vermek yardımcı olabilir. Öğrenciler Star Wars ile ilgilenmiyorlarsa [İlk bilgisayar programınızı yazın](https://studio.code.org/hoc/1) öğreticisiyle benzer bir deneyim yaşayabilirler.\n-   Daha yaşlı veya yetişkin öğrenciler için [Star Wars: Kodla Bir Galaksi İnşa Etmek][4] öğreticisi, bağımsız bir meydan okuma veya bir eşli programlama etkinliği olarak son derece etkilidir."
+          "description": "Öğrencilerinizden [Star Wars: Kodla Bir Galaksi İnşa Etmek][0] öğreticisini tamamlamalarını isteyin.\n\nÖğrencilerinizin yaşına ve yeteneklerine bağlı olarak şunları düşünebilirsiniz: \n\n-   Küçük öğrenciler için, sınıfınızı çiftlere ayırabilirsiniz. Her gruptan [eşli programlama][1] kullanarak öğreticiyi tamamlamak için birlikte çalışmasını isteyebilirsiniz.\n-   Orta sınıflardaki öğrenciler için, öğreticiler üzerinde bağımsız çalışmanın iyi sonuç verdiğini görüyoruz. Bazen öğrencilerin kendi eğitimlerini seçmelerine izin vermek yardımcı olabilir. Öğrenciler Star Wars ile ilgilenmiyorlarsa [İlk bilgisayar programınızı yazın][2] öğreticisiyle benzer bir deneyim yaşayabilirler.\n-   Daha yaşlı veya yetişkin öğrenciler için [Star Wars: Kodla Bir Galaksi İnşa Etmek][4] öğreticisi, bağımsız bir meydan okuma veya bir eşli programlama etkinliği olarak son derece etkilidir."
         },
         "88879c41-12f5-4d2e-86e6-93925b83d7d0": {
           "tips": [
@@ -26174,15 +26174,15 @@
           ]
         },
         "719affd9-c1a0-4b0c-8bc3-22060893f5e0": {
-          "description": "Eğitimin sonunda öğrenciler bir Star Wars oyunu oluşturma fırsatına sahip olacak. Öğrenciler erken bitirirse, birbirlerinin oyunlarını denemeleri ve ardından kendi oyunlarını daha ilginç veya zorlu hale getirmeleri için onları teşvik edin.\n\nAyrıca [code.org/learn](http://code.org/learn) adresini ziyaret ederek bir grubun veya öğrencinin başka bir öğretici denemesine izin verebilirsiniz."
+          "description": "Eğitimin sonunda öğrenciler bir Star Wars oyunu oluşturma fırsatına sahip olacak. Öğrenciler erken bitirirse, birbirlerinin oyunlarını denemeleri ve ardından kendi oyunlarını daha ilginç veya zorlu hale getirmeleri için onları teşvik edin.\n\nAyrıca [code.org/learn][0] adresini ziyaret ederek bir grubun veya öğrencinin başka bir öğretici denemesine izin verebilirsiniz."
         },
         "afb5ecc7-af66-492d-96bb-2412754005e0": {
           "name": "Dönüt Alın",
-          "description": "Her öğrenciye birkaç adet yapışkan not veya not kartları verin. Bir [“Hızlı Fikirler”](http://www.theteachertoolkit.com/index.php/tool/whip-around) aktivitesi başlatın:\n\n-   “Tamamlamış olduğunuz Hour of Code aktivitesi ile ilgili gerçekten sevdiğiniz bir şeyi paylaşın” veya “Bugün öğrendiğiniz becerilerden bazılarını paylaşın\" gibi tek bir cevabı olmayan sorular yöneltin.\n-   Her bir yapışkanlı kağıtta veya not kartında bir fikir olacak şekilde, öğrencilerin mümkün olduğunca fazla cevap yazmasını sağlayın.\n    Odada bir tur atın ve her seferinde bir öğrenciye söz verin. Öğrencilerden yanıtlarından birini paylaşmasını isteyin. Söz aldıklarında, öğrenciler verilen bir yanıtı tekrarlamamasını, yeni bir şey eklemesini sağlayın.\n-   Odadaki turunuzu tamamladıktan sonra, yanıtlarında en çok hangi fikirlerin veya temaların olduğunu öğrencilerle tartışın. "
+          "description": "Her öğrenciye birkaç adet yapışkan not veya not kartları verin. Bir [“Hızlı Fikirler”][0] aktivitesi başlatın:\n\n-   “Tamamlamış olduğunuz Hour of Code aktivitesi ile ilgili gerçekten sevdiğiniz bir şeyi paylaşın” veya “Bugün öğrendiğiniz becerilerden bazılarını paylaşın\" gibi tek bir cevabı olmayan sorular yöneltin.\n-   Her bir yapışkanlı kağıtta veya not kartında bir fikir olacak şekilde, öğrencilerin mümkün olduğunca fazla cevap yazmasını sağlayın.\n    Odada bir tur atın ve her seferinde bir öğrenciye söz verin. Öğrencilerden yanıtlarından birini paylaşmasını isteyin. Söz aldıklarında, öğrenciler verilen bir yanıtı tekrarlamamasını, yeni bir şey eklemesini sağlayın.\n-   Odadaki turunuzu tamamladıktan sonra, yanıtlarında en çok hangi fikirlerin veya temaların olduğunu öğrencilerle tartışın. "
         },
         "16a6a4db-d853-478e-9945-3f0d17865e80": {
           "name": "Tebrik Edin",
-          "description": "Bu hafta BB Eğitim Haftası ve dünya çapında milyonlarca öğrenci bu hafta bir Hour of Code eğitimi görecek. Bu nedenle öğrencilerinize bugün bir saat kodlamayla geçireceğinizi açıklayın. Öğrencileri bu dünya çapındaki hareketin bir parçası oldukları için tebrik edin.\n\nHer öğrenciye üzerinde adının yazılı olduğu bir [certificate](http://code.org/certificates) verin."
+          "description": "Bu hafta BB Eğitim Haftası ve dünya çapında milyonlarca öğrenci bu hafta bir Hour of Code eğitimi görecek. Bu nedenle öğrencilerinize bugün bir saat kodlamayla geçireceğinizi açıklayın. Öğrencileri bu dünya çapındaki hareketin bir parçası oldukları için tebrik edin.\n\nHer öğrenciye üzerinde adının yazılı olduğu bir [certificate][0] verin."
         },
         "450db873-f55e-4f30-bbb9-5dfde5bf47e4": {
           "name": "Sonraki Adımlar",
@@ -26190,7 +26190,7 @@
         },
         "5ec42aed-0b79-49f8-bd64-0716e60498a4": {
           "name": "Kod saatinin ötesi",
-          "description": "Hour of Code etkinliğiniz sona erdikten sonra K-5 sınıfınızda bilgisayar bilimi hakkında eğitime devam etmenin birçok yolu vardır. İşte bazı fikirler:\n\n-   **[Kod Stüdyosu Bilgisayar Biliminin Temelleri](http://code.org/educate/k5) kurslarını öğretin**. Bu altı kurs, genç öğrenciler için tasarlanmıştır. Öğrenciler, onlara kodlamayı öğreten bir dizi bulmaca üzerinde çalışırlar ve eğitimciler, öğrenmenin canlanmasına yardımcı olan ilgi çekici ders planlarına erişebilir. Code.org, bu kurslar için çevrimiçi veya yüz yüze ücretsiz mesleki gelişim sunmaktadır.\n-   Bugün hakkında konuştuğunuz kodlama bilgisi gerektiren kariyer seçeneklerinden bazılarını araştırın. [Sharemylesson.com](http://www.sharemylesson.com/TaxonomySearchResults.aspx?area=resources&keywords=career+research) adresinde kariyer araştırma projeleri hakkında kaynaklar bulun.\n-   **Sınıfınızla çalışmaları hakkında konuşması için bir bilgisayar bilimi uzmanını davet edin**. Hiç gönüllü tanımıyorsanız, [gönüllü haritasından](https://code.org/volunteer/local) birkaç kişiye ulaşın."
+          "description": "Hour of Code etkinliğiniz sona erdikten sonra K-5 sınıfınızda bilgisayar bilimi hakkında eğitime devam etmenin birçok yolu vardır. İşte bazı fikirler:\n\n-   **[Kod Stüdyosu Bilgisayar Biliminin Temelleri][0] kurslarını öğretin**. Bu altı kurs, genç öğrenciler için tasarlanmıştır. Öğrenciler, onlara kodlamayı öğreten bir dizi bulmaca üzerinde çalışırlar ve eğitimciler, öğrenmenin canlanmasına yardımcı olan ilgi çekici ders planlarına erişebilir. Code.org, bu kurslar için çevrimiçi veya yüz yüze ücretsiz mesleki gelişim sunmaktadır.\n-   Bugün hakkında konuştuğunuz kodlama bilgisi gerektiren kariyer seçeneklerinden bazılarını araştırın. [Sharemylesson.com][1] adresinde kariyer araştırma projeleri hakkında kaynaklar bulun.\n-   **Sınıfınızla çalışmaları hakkında konuşması için bir bilgisayar bilimi uzmanını davet edin**. Hiç gönüllü tanımıyorsanız, [gönüllü haritasından][2] birkaç kişiye ulaşın."
         },
         "b0fff664-80cc-4318-b031-edf88ad1aebc": {
           "description": "Çıkmadan önce öğrencilerden \"Bilgisayar Bilimi\" zihin haritanıza \"Hızlı Fikirler\" yapışkan notlarını veya not kartları eklemelerini isteyin. Tahtayı BB’nin ne olduğu ve niye önemli olduğuyla ilgili çok sayıda harika fikirle doldurmaya çalışın."
@@ -26310,7 +26310,7 @@
         },
         "bacf1db7-dc91-41b8-ad71-9fb655e18dfa": {
           "tips": [
-            "-   Laboratuvarda sakin kalın\n-   Sakız veya şeker çiğnemeyin\n-   Ellerinizi dezenfekte edin\n-   Eşinizle bir bilgisayarda oturun\n-   İlk \"sürücünün\" fareye ulaşabildiğinden emin olun\n-   Sinirlendiğinizde, bilgisayara veya monitöre vurmayın veya bunları sallamayın\n-   [20/20/20 Kuralına](http://www.anthro.com/blog/2013/10/how-to-prevent-eye-strain-with-the-20-20-20-rule#.WOU39BLyu35) uyun.\n-   Her 20-30 dakikada bir [Kıpırdamalar](https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll) ile nasıl başa çıkılır (GoNoodle'da ücretsiz oturum açmayı gerektirir).\n-   Öğretmene sormadan önce eşinize sorun\n-   Herkesin eşlerini duyabilmesi için sesi düşük tutun\n-   Duyguları ve çözümleri takip etmek için günlüğünüzü kullanın"
+            "-   Laboratuvarda sakin kalın\n-   Sakız veya şeker çiğnemeyin\n-   Ellerinizi dezenfekte edin\n-   Eşinizle bir bilgisayarda oturun\n-   İlk \"sürücünün\" fareye ulaşabildiğinden emin olun\n-   Sinirlendiğinizde, bilgisayara veya monitöre vurmayın veya bunları sallamayın\n-   [20/20/20 Kuralına][0] uyun.\n-   Her 20-30 dakikada bir [Kıpırdamalar][1] ile nasıl başa çıkılır (GoNoodle'da ücretsiz oturum açmayı gerektirir).\n-   Öğretmene sormadan önce eşinize sorun\n-   Herkesin eşlerini duyabilmesi için sesi düşük tutun\n-   Duyguları ve çözümleri takip etmek için günlüğünüzü kullanın"
           ]
         },
         "aa328958-bd87-4dbb-8585-cb33f905051f": {
@@ -26333,7 +26333,7 @@
           ]
         },
         "66f2f042-aa67-41db-a756-4ab6e5623f77": {
-          "description": "Öğrencilerinize [Yapboz](http://studio.code.org/s/jigsaw/lessons/1/levels/1) öğreticisini tamamlamaları için meydan okuyun.\n\n-   Öğrencileri, ortaklarına sorarak başlamaları için sorularla/zorluklarla teşvik edin.\n-   Cevaplanmamış sorular, çözümü zaten bilen yakındaki bir gruba iletilebilir.\n-   Öğrencilerden gördükleri sorunu tarif etmelerini isteyin. Ne yapması gerekiyor? Ne yapıyor? Size ne anlatıyor?\n-   Hayal kırıklığı yaşayan öğrencilere, hayal kırıklığının, öğrenme yolunda bir adım olduğunu ve ısrarın meyvesini vereceğini hatırlatın.\n-   Tüm bunlardan sonra bir öğrenci yine de takılıp kalıyorsa öğrencinin bir hatayı kendi başına bulmasını sağlamak için yönlendirici sorular sorun."
+          "description": "Öğrencilerinize [Yapboz][0] öğreticisini tamamlamaları için meydan okuyun.\n\n-   Öğrencileri, ortaklarına sorarak başlamaları için sorularla/zorluklarla teşvik edin.\n-   Cevaplanmamış sorular, çözümü zaten bilen yakındaki bir gruba iletilebilir.\n-   Öğrencilerden gördükleri sorunu tarif etmelerini isteyin. Ne yapması gerekiyor? Ne yapıyor? Size ne anlatıyor?\n-   Hayal kırıklığı yaşayan öğrencilere, hayal kırıklığının, öğrenme yolunda bir adım olduğunu ve ısrarın meyvesini vereceğini hatırlatın.\n-   Tüm bunlardan sonra bir öğrenci yine de takılıp kalıyorsa öğrencinin bir hatayı kendi başına bulmasını sağlamak için yönlendirici sorular sorun."
         },
         "11068ad0-f20b-4daf-94cd-7b4549b76f3a": {
           "progression_name": "Seviyeler"
@@ -26343,10 +26343,10 @@
           "description": "Öğrencilerden, öğrendikleri veya bulmacaları tamamladıklarındaki hisleri hakkında yazmalarını veya çizmelerini isteyin.\n\n**Sorular:**\n\n-   Bilgisayar laboratuvarına gitmek için hazırlanma konusunda bir dizi çizebilir misin?\n-   Bilgisayar laboratuvarında \"Yapılması Gereken\" bir şey ve \"Yapılmaması Gereken\" bir şey çizin\n-   Bulmacalar sırasında tıklayıp sürüklerken kullandığınız bilgisayar bölümünün adını çizin ve etiketleyin (fare düğmesi, dokunmatik ekran, dokunmatik fare)"
         },
         "8f47b370-5569-4a34-b105-c765a39c8460": {
-          "description": "Her öğrenciye bir [Çıkış Bileti](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) verin ve bugün ne öğrendiklerini, nasıl hissettiklerini veya neleri deneyimlediklerini kısaca anlatmalarını isteyin. Öğrenciler çizebilir, yazabilir veya rahat hissettikleri herhangi bir şekilde kendilerini ifade edebilirler. Öğrenciler odadan çıkarken her birinden bir \"Çıkış Bileti\" alın. İsterseniz, Hour of Code'u hatırlatan bir şey olarak \"Çıkış Biletleri\"ni okuldaki bir ilan panosuna veya göz önündeki bir başka yere asabilirsiniz."
+          "description": "Her öğrenciye bir [Çıkış Bileti][0] verin ve bugün ne öğrendiklerini, nasıl hissettiklerini veya neleri deneyimlediklerini kısaca anlatmalarını isteyin. Öğrenciler çizebilir, yazabilir veya rahat hissettikleri herhangi bir şekilde kendilerini ifade edebilirler. Öğrenciler odadan çıkarken her birinden bir \"Çıkış Bileti\" alın. İsterseniz, Hour of Code'u hatırlatan bir şey olarak \"Çıkış Biletleri\"ni okuldaki bir ilan panosuna veya göz önündeki bir başka yere asabilirsiniz."
         },
         "6ddc599f-da51-4adc-9dcc-f13b8b53e760": {
-          "description": "#### Hour of Code'un Ötesi\n\nK-5 sınıfınızda Hour of Code'un sonrasında da bilgisayar bilimleri öğretmeye devam etmenin birçok yolu var. İşte bazı fikirler:\n\n-   [Code Studio Computer Science Fundamentals](http://code.org/educate/k5) derslerini öğretin. Bu altı ders genç öğrenciler için tasarlanmıştır. Öğrenciler kodlamayı öğrenmelerini sağlayacak bir dizi bulmacayı çözmeye çalışır, eğitimciler de öğrenmeyi canlı hale getirecek ilginç ders planlarına erişim sağlayabilirler. Code.org, bu dersler için, çevrimiçi veya yüz yüze, ücretsiz profesyonel gelişim hizmeti sunuyor.\n-   Sınıfınıza çalışmalarıyla ilgili bir konuşma yapmak üzere bir bilgisayar bilimi uzmanı davet edin. Bulunduğunuz yerde hiçbir bilgisayar bilimcisi tanımıyor musunuz? O halde, [gönüllü haritası](https://code.org/volunteer/local)'ndan bir gönüllüye ulaşın."
+          "description": "#### Hour of Code'un Ötesi\n\nK-5 sınıfınızda Hour of Code'un sonrasında da bilgisayar bilimleri öğretmeye devam etmenin birçok yolu var. İşte bazı fikirler:\n\n-   [Code Studio Computer Science Fundamentals][0] derslerini öğretin. Bu altı ders genç öğrenciler için tasarlanmıştır. Öğrenciler kodlamayı öğrenmelerini sağlayacak bir dizi bulmacayı çözmeye çalışır, eğitimciler de öğrenmeyi canlı hale getirecek ilginç ders planlarına erişim sağlayabilirler. Code.org, bu dersler için, çevrimiçi veya yüz yüze, ücretsiz profesyonel gelişim hizmeti sunuyor.\n-   Sınıfınıza çalışmalarıyla ilgili bir konuşma yapmak üzere bir bilgisayar bilimi uzmanı davet edin. Bulunduğunuz yerde hiçbir bilgisayar bilimcisi tanımıyor musunuz? O halde, [gönüllü haritası][1]'ndan bir gönüllüye ulaşın."
         },
         "b16d189d-d990-44c4-be49-8f81ac81a96e": {
           "description": "#### Sahneyi kurma\n\nÖğrencileri sınıfa davet edin ve günün etkinliğini tanıtın.",

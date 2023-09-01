@@ -863,6 +863,7 @@ pt:
         artist_intro: Introdução ao Artista
         c_and_c_digital_sharing: Compartilhamento Digital
         c_and_c_great_to_create: É Ótimo Criar e Jogar Limpo
+        code-break: Faça uma quebra de código
         conditionals_with_cards: Lição offline em Ação - Condicionais com Cartões
         cs-principles-intro-to-objects: 'Princípios de CS: Introdução aos Objetos'
         csa-alias-video: Iguais e aliases
@@ -939,11 +940,13 @@ pt:
         csa_writing_a_method: 'CSA: Escrevendo um método'
         csc-ecosystems-intro: Introdução aos ecossistemas
         csc-event-short-intro: Breve introdução aos eventos
+        csc-mapmakers-intro: Codificação de Mapas Interativos
         csc-poem-art-intro: Vídeo de introdução
         csc-poem-art-outro: Outro vídeo
         csc-sprite-lab-pixel-editor: Desenhe seu próprio Sprite
         csc-starquilts-intro: 'CSC: Star Quilts'
         csc_animal_adaptations_intro: Introdução às adaptações de animais
+        csc_bookcovers_intro: Codificando Capas de Livros
         csc_fm_pilot: Máquinas funcionais (piloto)
         csc_fm_pilot_v2: 'Introdução às máquinas funcionais '
         csc_timecapsule_intro: Introdução ao Time Capsule
@@ -1160,6 +1163,7 @@ pt:
         u7-libraries-explanation: 'App Lab: Crie seus próprios blocos - Como usar
           bibliotecas'
         upload_sprites_backgrounds: Fazendo upload de sprites e planos de fundo personalizados
+        what-is-creativity: O que é criatividade?
         what_is_an_event: O que é um evento?
         what_is_cs: O que é ciência da computação?
         why-should-teach-unplugged-activities: 'FAQ: Por que devo ensinar atividades

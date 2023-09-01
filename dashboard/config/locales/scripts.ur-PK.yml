@@ -1110,6 +1110,11 @@ ur:
               display_name: لوپس
             lessonGroup-6:
               display_name: ایونٹس/واقعات
+            lessonGroup-8:
+              display_name: ڈیٹا
+          lessons:
+            lesson-1:
+              name: ڈیٹا
         nevada-standards-aligned-fourth-grade-2023:
           lesson_groups:
             lessonGroup-3:
@@ -1138,6 +1143,11 @@ ur:
               display_name: ایونٹس/واقعات
             lessonGroup-6:
               display_name: ڈیٹا
+            lessonGroup-8:
+              display_name: کمپیوٹنگ سسٹمز
+          lessons:
+            lesson-1:
+              name: کمپیوٹنگ سسٹمز
         nevada-standards-aligned-third-grade-2023:
           lesson_groups:
             lessonGroup-2:

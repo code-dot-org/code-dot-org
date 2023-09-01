@@ -30770,7 +30770,7 @@
         },
         "63df0c6e-ae3d-4724-9c1d-2ecd5bf8986a": {
           "tips": [
-            "Una forma de presentar la Hora del Código si no estás muy familiarizado con la codificación es mostrar uno de [nuestros vídeos inspiradores](https://hourofcode.com/us/resources#videos). Elige uno que creas que tus alumnos encontrarán inspirador y compártelo ahora. Para los alumnos más jóvenes, sugerimos \"[La Hora del Código está Aquí](https://youtu.be/FC5FbmsH4fw)\"."
+            "Una forma de presentar la Hora del Código si no estás muy familiarizado con la codificación es mostrar uno de [nuestros vídeos inspiradores][0]. Elige uno que creas que tus alumnos encontrarán inspirador y compártelo ahora. Para los alumnos más jóvenes, sugerimos \"[La Hora del Código está Aquí][1]\"."
           ]
         },
         "f96053ea-387e-47d5-a018-65619ec093b0": {
@@ -30783,7 +30783,7 @@
         },
         "91cc858b-9f90-4134-b890-237f457e8423": {
           "name": "Minecraft: Voyage Aquatic",
-          "description": "Anima a tus alumnos a completar el tutorial. [Minecraft: Viaje Acuático](http://studio.code.org/s/aquatic/lessons/1/levels/1) \n\nDependiendo de la edad y la capacidad de tus alumnos, podrías considerar: \n\n-   Para los estudiantes más jóvenes, te sugerimos que dividas la clase en parejas y pidas a cada grupo que trabaje en conjunto para completar el tutorial usando [programación en parejas](https://youtu.be/vgkahOzFH2Q).\n-   Para los alumnos de los grados intermedios, nos parece que trabajar de forma independiente en las tutorías funciona bien. A veces ayuda el hecho de permitir a los alumnos elegir su propio tutorial. Si los alumnos no están interesados en Minecraft, pueden tener una experiencia similar con los tutoriales [Programa con Anna y Elsa](https://studio.code.org/s/frozen/stage/1/puzzle/1) or [Star Wars](https://code.org/starwars).\n-   Para los alumnos mayores o adultos, el tutorial [Minecraft: Viaje Acuático](http://studio.code.org/s/aquatic/lessons/1/levels/1) funciona muy bien como reto independiente o como actividad de programación en parejas."
+          "description": "Anima a tus alumnos a completar el tutorial. [Minecraft: Viaje Acuático][0] \n\nDependiendo de la edad y la capacidad de tus alumnos, podrías considerar: \n\n-   Para los estudiantes más jóvenes, te sugerimos que dividas la clase en parejas y pidas a cada grupo que trabaje en conjunto para completar el tutorial usando [programación en parejas][1].\n-   Para los alumnos de los grados intermedios, nos parece que trabajar de forma independiente en las tutorías funciona bien. A veces ayuda el hecho de permitir a los alumnos elegir su propio tutorial. Si los alumnos no están interesados en Minecraft, pueden tener una experiencia similar con los tutoriales [Programa con Anna y Elsa][2] or [Star Wars][3].\n-   Para los alumnos mayores o adultos, el tutorial [Minecraft: Viaje Acuático][4] funciona muy bien como reto independiente o como actividad de programación en parejas."
         },
         "900f3fd4-40aa-42f7-89fc-e5240b2db143": {
           "tips": [
@@ -30791,7 +30791,7 @@
           ]
         },
         "1be305a6-52f5-40bb-a8d5-f851a3c61a3a": {
-          "description": "Si un grupo o individuo termina antes, pueden intentar otro tutorial visitando [code.org/learn](http://code.org/learn)."
+          "description": "Si un grupo o individuo termina antes, pueden intentar otro tutorial visitando [code.org/learn][0]."
         },
         "29412a26-dd7b-4990-a8bb-7e6f7bfa00d6": {
           "name": "Informe",
@@ -30799,18 +30799,18 @@
         },
         "7e26ffea-ccaa-4969-9b40-01573fbe4303": {
           "name": "A Celebrar",
-          "description": "Comenta que hoy van a pasar una hora codificando porque esta semana es la Semana de la Educación en Ciencias de la Computación, y que millones de estudiantes de todo el mundo también han estado aprendiendo una Hora de Código esta semana. Felicita a los estudiantes por formar parte de este movimiento mundial.\n\nEntrega a cada estudiante un [certificate](https://studio.code.org/certificates/batch?course=bWM=) certificado con su nombre."
+          "description": "Comenta que hoy van a pasar una hora codificando porque esta semana es la Semana de la Educación en Ciencias de la Computación, y que millones de estudiantes de todo el mundo también han estado aprendiendo una Hora de Código esta semana. Felicita a los estudiantes por formar parte de este movimiento mundial.\n\nEntrega a cada estudiante un [certificate][0] certificado con su nombre."
         },
         "de9c3d28-c38a-4d2e-af91-a72a92d31f52": {
           "name": "Siguientes Pasos",
-          "description": "Haz saber a los alumnos que si han disfrutado de la actividad de hoy, tienen muchas opciones para seguir codificando. Anima a los alumnos a visitar [code.org/learn](<>) para ver una lista de opciones o, si estás planeando alguna de las actividades de extensión que siguen, cuéntales lo que viene a continuación en tu aula."
+          "description": "Haz saber a los alumnos que si han disfrutado de la actividad de hoy, tienen muchas opciones para seguir codificando. Anima a los alumnos a visitar [code.org/learn][0] para ver una lista de opciones o, si estás planeando alguna de las actividades de extensión que siguen, cuéntales lo que viene a continuación en tu aula."
         },
         "ebf68fd6-9cfe-4fc2-93b4-e61860fc853b": {
-          "description": "Entrega a cada alumno un [\"Ticket de Salida\"](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) y pídeles que resuman lo que han aprendido hoy, cómo se han sentido o qué han experimentado. Los alumnos pueden dibujar, escribir o expresarse de cualquier forma que les resulte cómoda. Recoge un \"Ticket de Salida\" de cada alumno al salir del aula. Si lo deseas, puedes colocar los \" Tickets de Salida\" en un tablón de anuncios o en algún lugar destacado de la escuela como recordatorio de tu Hora del Código."
+          "description": "Entrega a cada alumno un [\"Ticket de Salida\"][0] y pídeles que resuman lo que han aprendido hoy, cómo se han sentido o qué han experimentado. Los alumnos pueden dibujar, escribir o expresarse de cualquier forma que les resulte cómoda. Recoge un \"Ticket de Salida\" de cada alumno al salir del aula. Si lo deseas, puedes colocar los \" Tickets de Salida\" en un tablón de anuncios o en algún lugar destacado de la escuela como recordatorio de tu Hora del Código."
         },
         "f3360f34-a0a8-4d3d-98e2-fe6176ad0e2e": {
           "name": "Más de una Hora de Code",
-          "description": "Una vez finalizada la Hora del Código, hay muchas maneras de seguir enseñando informática en tu aula de K-5. Aquí tienes algunas ideas:\n\n-   Enseña los cursos [Fundamentos de Ciencias de la Computación de Code Studio](http://code.org/educate/k5). Estos seis cursos están diseñados para jóvenes estudiantes. Los estudiantes se abren paso a través de una serie de rompecabezas que les enseñan a codificar, y los profesores tienen acceso a atractivos planes de estudio que ayudan a que el aprendizaje cobre vida. Code.org ofrece desarrollo profesional gratuito para estos cursos, en línea o en forma presencial.\n-   **Visita [Tú puedes Enseñar Ciencias de la Computación](https://code.org/teach)** para ver más sugerencias de cursos.\n-   **Invita a un experto en informática a hablar en tu clase sobre su trabajo**. ¿No conoces a ningún informático local? Ponte en contacto con un voluntario en nuestro [mapa de voluntarios](https://code.org/volunteer/local)"
+          "description": "Una vez finalizada la Hora del Código, hay muchas maneras de seguir enseñando informática en tu aula de K-5. Aquí tienes algunas ideas:\n\n-   Enseña los cursos [Fundamentos de Ciencias de la Computación de Code Studio][0]. Estos seis cursos están diseñados para jóvenes estudiantes. Los estudiantes se abren paso a través de una serie de rompecabezas que les enseñan a codificar, y los profesores tienen acceso a atractivos planes de estudio que ayudan a que el aprendizaje cobre vida. Code.org ofrece desarrollo profesional gratuito para estos cursos, en línea o en forma presencial.\n-   **Visita [Tú puedes Enseñar Ciencias de la Computación][1]** para ver más sugerencias de cursos.\n-   **Invita a un experto en informática a hablar en tu clase sobre su trabajo**. ¿No conoces a ningún informático local? Ponte en contacto con un voluntario en nuestro [mapa de voluntarios][2]"
         },
         "6b51b4f1-5b1d-4b29-af25-c48d716a2d22": {
           "description": "#### Preparando el Terreno\n\nDamos la bienvenida a los alumnos a la clase y presentamos muy brevemente la actividad del día.\n\n**Comenta:** \\_Hoy vamos a dedicar una hora a aprender a codificar. ¿Alguien ha oído antes el término \"código\"? ¿Qué significa?\n\nLos alumnos pueden mencionar que un \"código\" es como un mensaje secreto, o que está relacionado con los ordenadores de alguna manera.",
@@ -31201,7 +31201,7 @@
         },
         "aced2726-6ed1-4645-9fd2-eccfe982584f": {
           "tips": [
-            "Una forma de presentar la Hora del Código si no estás muy familiarizado con la codificación es mostrar uno de [nuestros vídeos inspiradores](https://hourofcode.com/us/resources#videos). Elige uno que creas que tus alumnos encontrarán inspirador y compártelo ahora. Para los más jóvenes, sugerimos \"[Cualquiera puede aprender](https://youtu.be/qYZF6oIZtfc)\"."
+            "Una forma de presentar la Hora del Código si no estás muy familiarizado con la codificación es mostrar uno de [nuestros vídeos inspiradores][0]. Elige uno que creas que tus alumnos encontrarán inspirador y compártelo ahora. Para los más jóvenes, sugerimos \"[Cualquiera puede aprender][1]\"."
           ]
         },
         "a0692bbb-9e61-49d2-ac85-96bd4a922f5a": {
@@ -31209,7 +31209,7 @@
         },
         "8af57fdb-d7be-4cc2-9964-8f7eed4102f9": {
           "name": "Código Flappy",
-          "description": "Desafía a tus alumnos a completar el ejercicio [Hacer un Juego Flappy](https://studio.code.org/flappy/1).\n\nDependiendo de la edad y la capacidad de tus alumnos, puedes considerar: \n\n-   Para los alumnos de secundaria y bachillerato, te sugerimos elegir tutoriales que permitan el juego libre y la creación de aplicaciones o juegos. Puedes hacer que los alumnos trabajen de forma independiente o en parejas o pequeños grupos. Hay muchos otros tutoriales en [code.org/learn](http://code.org/learn) que permiten la creación libre, incluyendo [Playlab](https://studio.code.org/s/playlab/stage/1/puzzle/1) y nuestra nueva herramienta beta [AppLab](https://code.org/educate/applab).\n-   Para los alumnos más jóvenes, te sugerimos dividir tu clase en parejas o grupos muy pequeños (de tres a cuatro alumnos cada uno) y pedir a cada grupo que trabaje conjuntamente para completar el tutorial utilizando [programación en parejas](https://youtu.be/vgkahOzFH2Q).\n-   Para los alumnos adultos, el tutorial [Escribe tu primer programa de ordenador](https://studio.code.org/hoc/1) funciona muy bien como desafío independiente o como actividad de programación en parejas."
+          "description": "Desafía a tus alumnos a completar el ejercicio [Hacer un Juego Flappy][0].\n\nDependiendo de la edad y la capacidad de tus alumnos, puedes considerar: \n\n-   Para los alumnos de secundaria y bachillerato, te sugerimos elegir tutoriales que permitan el juego libre y la creación de aplicaciones o juegos. Puedes hacer que los alumnos trabajen de forma independiente o en parejas o pequeños grupos. Hay muchos otros tutoriales en [code.org/learn][1] que permiten la creación libre, incluyendo [Playlab][2] y nuestra nueva herramienta beta [AppLab][3].\n-   Para los alumnos más jóvenes, te sugerimos dividir tu clase en parejas o grupos muy pequeños (de tres a cuatro alumnos cada uno) y pedir a cada grupo que trabaje conjuntamente para completar el tutorial utilizando [programación en parejas][4].\n-   Para los alumnos adultos, el tutorial [Escribe tu primer programa de ordenador][5] funciona muy bien como desafío independiente o como actividad de programación en parejas."
         },
         "47fe47af-9de3-4ba5-8193-1f489bef9544": {
           "tips": [
@@ -31217,7 +31217,7 @@
           ]
         },
         "55f2f6a9-8e6b-49c2-8988-e2a09956e222": {
-          "description": "Si un grupo o individuo termina antes, pueden intentar otro tutorial visitando [code.org/learn](http://code.org/learn)."
+          "description": "Si un grupo o individuo termina antes, pueden intentar otro tutorial visitando [code.org/learn][0]."
         },
         "cd649101-5c1f-4bcb-9258-3cabf2bfccb6": {
           "name": "Informe",
@@ -31225,7 +31225,7 @@
         },
         "ca7d5e61-0396-4885-934c-0d70ab63b072": {
           "name": "A Celebrar",
-          "description": "Explica que hoy vas a pasar una hora codificando, porque esta semana es la Semana de la Educación en Informática, y millones de otros estudiantes en todo el mundo también han estado aprendiendo una Hora de Código esta semana. Felicita a los estudiantes por formar parte de este movimiento mundial.\n\nEntrega a cada estudiante un [certificate](http://code.org/certificates) con su nombre."
+          "description": "Explica que hoy vas a pasar una hora codificando, porque esta semana es la Semana de la Educación en Informática, y millones de otros estudiantes en todo el mundo también han estado aprendiendo una Hora de Código esta semana. Felicita a los estudiantes por formar parte de este movimiento mundial.\n\nEntrega a cada estudiante un [certificate][0] con su nombre."
         },
         "d4bf5db5-6884-4166-ae90-3a5cd01b9695": {
           "name": "Siguientes Pasos",
@@ -31237,7 +31237,7 @@
         },
         "f7c11887-da26-4c7b-be7a-1b84d330ed30": {
           "name": "Más de una Hora de Code",
-          "description": "Una vez finalizada la Hora del Código, hay muchas maneras de seguir enseñando informática en tu aula de K-5. Aquí tienes algunas ideas:\n\n-   **Enseña los cursos [Fundamentos de Ciencias de la Computación de Code Studio](http://code.org/educate/k5)**. Estos seis cursos están diseñados para jóvenes estudiantes. Los estudiantes se abren paso a través de una serie de rompecabezas que les enseñan a codificar, y los educadores tienen acceso a atractivos planes de lecciones que ayudan a que el aprendizaje cobre vida. Code.org ofrece formación profesional gratuita para estos cursos, en línea o en persona.\n-   **Invita a un experto en informática para que hable en tu clase sobre su trabajo**. Si no conoces a ningún voluntario, ponte en contacto con algunos de los que aparecen en el [mapa de voluntarios](https://code.org/volunteer/local)."
+          "description": "Una vez finalizada la Hora del Código, hay muchas maneras de seguir enseñando informática en tu aula de K-5. Aquí tienes algunas ideas:\n\n-   **Enseña los cursos [Fundamentos de Ciencias de la Computación de Code Studio][0]**. Estos seis cursos están diseñados para jóvenes estudiantes. Los estudiantes se abren paso a través de una serie de rompecabezas que les enseñan a codificar, y los educadores tienen acceso a atractivos planes de lecciones que ayudan a que el aprendizaje cobre vida. Code.org ofrece formación profesional gratuita para estos cursos, en línea o en persona.\n-   **Invita a un experto en informática para que hable en tu clase sobre su trabajo**. Si no conoces a ningún voluntario, ponte en contacto con algunos de los que aparecen en el [mapa de voluntarios][1]."
         },
         "4fddbdf5-8e43-4536-bdaa-98b0b8c240ad": {
           "name": "Preparando el terreno",
@@ -31245,7 +31245,7 @@
         },
         "55cc55a9-45cb-4bbd-bf37-2de8a2abd9db": {
           "tips": [
-            "Si tienes tiempo o si tus alumnos necesitan un poco más de información de apoyo, puedes considerar la posibilidad de impartir [\"La Máquina de Dibujar\"](https://code.org/curriculum/misc/hocunplugged/Teacher) antes de tu actividad de La Hora del Código. Esta breve lección introduce a los estudiantes en la idea del dibujo asistido por ordenador, lo que les preparará para tener más éxito con el [tutorial de Código con Anna y Elsa](https://studio.code.org/s/frozen/stage/1/puzzle/1)."
+            "Si tienes tiempo o si tus alumnos necesitan un poco más de información de apoyo, puedes considerar la posibilidad de impartir [\"La Máquina de Dibujar\"][0] antes de tu actividad de La Hora del Código. Esta breve lección introduce a los estudiantes en la idea del dibujo asistido por ordenador, lo que les preparará para tener más éxito con el [tutorial de Código con Anna y Elsa][1]."
           ]
         },
         "46e7088b-b207-46ae-be95-3ceacecc3f35": {
@@ -31253,7 +31253,7 @@
         },
         "063fb28a-8520-4c66-9821-3be0f0d1ed5f": {
           "tips": [
-            "Una forma de presentar la Hora del Código, si no estás muy familiarizado con la codificación, es mostrar uno de [nuestros vídeos inspiradores](https://hourofcode.com/us/resources#videos). Elige uno que creas que tus alumnos encontrarán inspirador y compártelo ahora. Para los alumnos de los grados intermedios, sugerimos \"[La Hora del Código está Aquí](https://youtu.be/FC5FbmsH4fw)\"."
+            "Una forma de presentar la Hora del Código, si no estás muy familiarizado con la codificación, es mostrar uno de [nuestros vídeos inspiradores][0]. Elige uno que creas que tus alumnos encontrarán inspirador y compártelo ahora. Para los alumnos de los grados intermedios, sugerimos \"[La Hora del Código está Aquí][1]\"."
           ]
         },
         "c18f0050-ba65-4f12-8cc6-fe7f16b5806b": {
@@ -31261,7 +31261,7 @@
         },
         "e5e802d6-9ee4-4ef3-aab2-616ac241b5f8": {
           "name": "Programa con Ana y Elsa",
-          "description": "Desafía a tus alumnos a completar el tutorial [Código con Anna y Elsa](https://studio.code.org/s/frozen/stage/1/puzzle/1).\n\nDependiendo de la edad y la capacidad de tus alumnos, puedes considerar: \n\n-   En el caso de los alumnos más jóvenes, te sugerimos que dividas la clase en parejas o en grupos muy pequeños (de tres a cuatro alumnos cada uno) y que pidas a cada grupo que trabaje en conjunto para completar el tutorial utilizando la [programación en parejas](https://youtu.be/vgkahOzFH2Q). Los estudiantes de los grados K-5 pueden tener dificultades con las matemáticas del tutorial (requiere una comprensión básica de la medición de ángulos). Si tus alumnos son más jóvenes, considera la posibilidad de impartir el plan de lección complementario, [\"La Máquina de Dibujar\"](https://code.org/curriculum/misc/hocunplugged/Teacher) para introducir los fundamentos antes de impartir tu Hora del Código.\n-   En el caso de los estudiantes de mayor edad, nos parece que trabajar de forma independiente en los tutoriales funciona bien. A veces ayuda permitir a los estudiantes elegir su propio tutorial. Si los estudiantes no están interesados en Frozen, pueden obtener una experiencia similar con el tutorial [Escribe tu Primer Programa Informático](https://studio.code.org/hoc/1).\n-   Para los estudiantes adultos, [Código con Anna y Elsa](https://studio.code.org/s/frozen/stage/1/puzzle/1) funciona muy bien como reto independiente o como actividad de programación en parejas."
+          "description": "Desafía a tus alumnos a completar el tutorial [Código con Anna y Elsa][0].\n\nDependiendo de la edad y la capacidad de tus alumnos, puedes considerar: \n\n-   En el caso de los alumnos más jóvenes, te sugerimos que dividas la clase en parejas o en grupos muy pequeños (de tres a cuatro alumnos cada uno) y que pidas a cada grupo que trabaje en conjunto para completar el tutorial utilizando la [programación en parejas][1]. Los estudiantes de los grados K-5 pueden tener dificultades con las matemáticas del tutorial (requiere una comprensión básica de la medición de ángulos). Si tus alumnos son más jóvenes, considera la posibilidad de impartir el plan de lección complementario, [\"La Máquina de Dibujar\"][2] para introducir los fundamentos antes de impartir tu Hora del Código.\n-   En el caso de los estudiantes de mayor edad, nos parece que trabajar de forma independiente en los tutoriales funciona bien. A veces ayuda permitir a los estudiantes elegir su propio tutorial. Si los estudiantes no están interesados en Frozen, pueden obtener una experiencia similar con el tutorial [Escribe tu Primer Programa Informático][3].\n-   Para los estudiantes adultos, [Código con Anna y Elsa][4] funciona muy bien como reto independiente o como actividad de programación en parejas."
         },
         "bdb8b54a-c21d-4bcf-a960-67ecf0468a7f": {
           "tips": [
@@ -31269,15 +31269,15 @@
           ]
         },
         "da8b52b2-8db6-440d-add3-8578161f59e2": {
-          "description": "Si un grupo o individuo termina antes, pueden intentar otro tutorial visitando [code.org/learn](http://code.org/learn)."
+          "description": "Si un grupo o individuo termina antes, pueden intentar otro tutorial visitando [code.org/learn][0]."
         },
         "38799019-2b81-4c28-a239-762b90e0f5e3": {
           "name": "Informe",
-          "description": "Entrega a cada alumno unas cuantas notas adhesivas o tarjetas. Facilita una actividad rápida de: [\"Látigo Alrededor\"](http://www.theteachertoolkit.com/index.php/tool/whip-around)\n\n-   Plantea una pregunta que tenga múltiples respuestas, como \"Comparte algo que te haya gustado de la actividad de la Hora del Código que has completado\" o \"Comparte algunas habilidades que hayas aprendido hoy\".\n-   Pide a los alumnos que escriban tantas respuestas como sea posible, una idea por nota adhesiva o tarjeta de notas.\n    \"Látigo\" alrededor de la sala, llamando a un estudiante cada vez. Pídeles que compartan una de sus respuestas. Cuando se les llame, los alumnos no deben repetir una respuesta; deben añadir algo nuevo.\n-   Después de la ronda, pide a los alumnos que comenten qué ideas y temas han aparecido más en sus respuestas."
+          "description": "Entrega a cada alumno unas cuantas notas adhesivas o tarjetas. Facilita una actividad rápida de: [\"Látigo Alrededor\"][0]\n\n-   Plantea una pregunta que tenga múltiples respuestas, como \"Comparte algo que te haya gustado de la actividad de la Hora del Código que has completado\" o \"Comparte algunas habilidades que hayas aprendido hoy\".\n-   Pide a los alumnos que escriban tantas respuestas como sea posible, una idea por nota adhesiva o tarjeta de notas.\n    \"Látigo\" alrededor de la sala, llamando a un estudiante cada vez. Pídeles que compartan una de sus respuestas. Cuando se les llame, los alumnos no deben repetir una respuesta; deben añadir algo nuevo.\n-   Después de la ronda, pide a los alumnos que comenten qué ideas y temas han aparecido más en sus respuestas."
         },
         "e9751fff-a71d-4d90-b401-0ccbf3356c44": {
           "name": "A Celebrar",
-          "description": "Explica que hoy vas a pasar una hora codificando, porque esta semana es la Semana de la Educación en Informática, y millones de otros estudiantes en todo el mundo también han estado aprendiendo una Hora de Código esta semana. Felicita a los estudiantes por formar parte de este movimiento mundial.\n\nEntrega a cada estudiante un [certificate](http://code.org/certificates) con su nombre."
+          "description": "Explica que hoy vas a pasar una hora codificando, porque esta semana es la Semana de la Educación en Informática, y millones de otros estudiantes en todo el mundo también han estado aprendiendo una Hora de Código esta semana. Felicita a los estudiantes por formar parte de este movimiento mundial.\n\nEntrega a cada estudiante un [certificate][0] con su nombre."
         },
         "3596cc47-e661-4d00-943e-ed858c4f6f5d": {
           "name": "Siguientes Pasos",
@@ -31288,7 +31288,7 @@
         },
         "3a8c30ae-50bb-4a85-99d8-b62c9f7e1bbf": {
           "name": "Más de una Hora de Code",
-          "description": "Una vez finalizada la Hora del Código, hay muchas maneras de seguir enseñando informática en tu aula de K-5. Aquí tienes algunas ideas:\n\n-   **Enseña los cursos [Fundamentos de Ciencias de la Computación de Code Studio](http://code.org/educate/k5)**. Estos seis cursos están diseñados para jóvenes estudiantes. Los alumnos se abren paso a través de una serie de rompecabezas que les enseñan a codificar, y los educadores tienen acceso a atractivos planes de lecciones que ayudan a que el aprendizaje cobre vida. Code.org ofrece desarrollo profesional gratuito para estos cursos, en línea o presencial.\n-   Investiga algunas de las carreras de codificación que has identificado hoy. Encuentra recursos sobre la planificación de proyectos de investigación de carreras en [Sharemylesson.com](http://www.sharemylesson.com/TaxonomySearchResults.aspx?area=resources&keywords=career+research).\n-   **Invita a un experto en informática para que hable en tu clase sobre su trabajo**. Si no conoces a ningún voluntario, ponte en contacto con algunos de los que aparecen en el [mapa de voluntarios](https://code.org/volunteer/local)."
+          "description": "Una vez finalizada la Hora del Código, hay muchas maneras de seguir enseñando informática en tu aula de K-5. Aquí tienes algunas ideas:\n\n-   **Enseña los cursos [Fundamentos de Ciencias de la Computación de Code Studio][0]**. Estos seis cursos están diseñados para jóvenes estudiantes. Los alumnos se abren paso a través de una serie de rompecabezas que les enseñan a codificar, y los educadores tienen acceso a atractivos planes de lecciones que ayudan a que el aprendizaje cobre vida. Code.org ofrece desarrollo profesional gratuito para estos cursos, en línea o presencial.\n-   Investiga algunas de las carreras de codificación que has identificado hoy. Encuentra recursos sobre la planificación de proyectos de investigación de carreras en [Sharemylesson.com][1].\n-   **Invita a un experto en informática para que hable en tu clase sobre su trabajo**. Si no conoces a ningún voluntario, ponte en contacto con algunos de los que aparecen en el [mapa de voluntarios][2]."
         },
         "a2f60a17-c25f-4c4d-9f2d-384486d7a67d": {
           "name": "Preparando el terreno",
@@ -31296,7 +31296,7 @@
         },
         "c857d03e-91e3-4949-8ccc-79a2aec463c8": {
           "tips": [
-            "Una forma de presentar la Hora del Código si no estás muy familiarizado con la codificación es mostrar uno de [nuestros vídeos inspiradores](https://hourofcode.com/us/resources#videos). Elige uno que creas que tus alumnos encontrarán inspirador y compártelo ahora. Para los más jóvenes, sugerimos \"[Cualquiera puede aprender](https://youtu.be/qYZF6oIZtfc)\"."
+            "Una forma de presentar la Hora del Código si no estás muy familiarizado con la codificación es mostrar uno de [nuestros vídeos inspiradores][0]. Elige uno que creas que tus alumnos encontrarán inspirador y compártelo ahora. Para los más jóvenes, sugerimos \"[Cualquiera puede aprender][1]\"."
           ]
         },
         "8ad0974f-b2ad-4632-bfe5-8c8760cd2e45": {
@@ -31304,7 +31304,7 @@
         },
         "0e395269-9740-4229-a7ac-b18b9f4eced9": {
           "name": "Laboratorio de juegos de Gumball",
-          "description": "Desafía a tus alumnos a completar el tutorial [Gumball Play Lab](https://studio.code.org/s/gumball/lessons/1/levels/1).\n\nDependiendo de la edad y la capacidad de tus alumnos, puedes considerar: \n\n-   Para los alumnos de secundaria y bachillerato, te sugerimos que elijas tutoriales que permitan el juego libre y la creación de aplicaciones o juegos. Puedes hacer que los alumnos trabajen de forma independiente o en parejas o pequeños grupos. Hay muchos otros tutoriales en [code.org/learn](http://code.org/learn) que permiten la creación libre, incluyendo el [Make a Flappy Game](https://studio.code.org/s/flappy) y nuestra nueva herramienta beta [AppLab](https://code.org/educate/applab).\n-   Para los alumnos más jóvenes, te sugerimos que dividas tu clase en parejas o grupos muy pequeños (de tres a cuatro alumnos cada uno) y pidas a cada grupo que trabaje conjuntamente para completar el tutorial utilizando [Programación en parejas](https://youtu.be/vgkahOzFH2Q).\n-   Para los alumnos adultos, el tutorial [Escribe tu primer programa de ordenador](https://studio.code.org/hoc/1) funciona muy bien como reto independiente o como actividad de programación en parejas."
+          "description": "Desafía a tus alumnos a completar el tutorial [Gumball Play Lab][0].\n\nDependiendo de la edad y la capacidad de tus alumnos, puedes considerar: \n\n-   Para los alumnos de secundaria y bachillerato, te sugerimos que elijas tutoriales que permitan el juego libre y la creación de aplicaciones o juegos. Puedes hacer que los alumnos trabajen de forma independiente o en parejas o pequeños grupos. Hay muchos otros tutoriales en [code.org/learn][1] que permiten la creación libre, incluyendo el [Make a Flappy Game][2] y nuestra nueva herramienta beta [AppLab][3].\n-   Para los alumnos más jóvenes, te sugerimos que dividas tu clase en parejas o grupos muy pequeños (de tres a cuatro alumnos cada uno) y pidas a cada grupo que trabaje conjuntamente para completar el tutorial utilizando [Programación en parejas][4].\n-   Para los alumnos adultos, el tutorial [Escribe tu primer programa de ordenador][5] funciona muy bien como reto independiente o como actividad de programación en parejas."
         },
         "eea63453-59c2-4c48-8d04-d6612d379584": {
           "tips": [
@@ -31312,7 +31312,7 @@
           ]
         },
         "fd77d784-72d9-4687-843d-7d1ecd17b9a1": {
-          "description": "Si un grupo o individuo termina antes, pueden intentar otro tutorial visitando [code.org/learn](http://code.org/learn)."
+          "description": "Si un grupo o individuo termina antes, pueden intentar otro tutorial visitando [code.org/learn][0]."
         },
         "0815f2e7-8336-48ae-8ac0-5d0af1f956d9": {
           "name": "Informe",
@@ -31320,7 +31320,7 @@
         },
         "3b92bb05-ac4c-4717-afce-ed3d10f54527": {
           "name": "A Celebrar",
-          "description": "Explica que hoy vas a pasar una hora codificando, porque esta semana es la Semana de la Educación en Informática, y millones de otros estudiantes en todo el mundo también han estado aprendiendo una Hora de Código esta semana. Felicita a los estudiantes por formar parte de este movimiento mundial.\n\nEntrega a cada estudiante un [certificate](http://code.org/certificates) con su nombre."
+          "description": "Explica que hoy vas a pasar una hora codificando, porque esta semana es la Semana de la Educación en Informática, y millones de otros estudiantes en todo el mundo también han estado aprendiendo una Hora de Código esta semana. Felicita a los estudiantes por formar parte de este movimiento mundial.\n\nEntrega a cada estudiante un [certificate][0] con su nombre."
         },
         "59cd05df-cb4d-4280-8700-840826c01845": {
           "name": "Siguientes Pasos",
@@ -31332,7 +31332,7 @@
         },
         "2836d5f0-0808-4868-bc34-bbd3cf8b631f": {
           "name": "Más de una Hora de Code",
-          "description": "Una vez finalizada la Hora del Código, hay muchas maneras de seguir enseñando informática en tu aula de K-5. Aquí tienes algunas ideas:\n\n-   Enseña los cursos [Fundamentos de las Ciencias de la Computación de Code Studio](http://code.org/educate/k5). Estos cuatro cursos están diseñados para jóvenes estudiantes. Los estudiantes se abren paso a través de una serie de rompecabezas que les enseñan a codificar, y los educadores tienen acceso a atractivos planes de lecciones que ayudan a que el aprendizaje cobre vida. Code.org ofrece desarrollo profesional gratuito para estos cursos, en línea o de forma presencial.\n-   **Invita a un experto en ciencias de la computación para que hable en tu clase sobre su trabajo**. Si no conoces a ningún voluntario, ponte en contacto con algunos de los que aparecen en el [mapa de voluntarios](https://code.org/volunteer/local)."
+          "description": "Una vez finalizada la Hora del Código, hay muchas maneras de seguir enseñando informática en tu aula de K-5. Aquí tienes algunas ideas:\n\n-   Enseña los cursos [Fundamentos de las Ciencias de la Computación de Code Studio][0]. Estos cuatro cursos están diseñados para jóvenes estudiantes. Los estudiantes se abren paso a través de una serie de rompecabezas que les enseñan a codificar, y los educadores tienen acceso a atractivos planes de lecciones que ayudan a que el aprendizaje cobre vida. Code.org ofrece desarrollo profesional gratuito para estos cursos, en línea o de forma presencial.\n-   **Invita a un experto en ciencias de la computación para que hable en tu clase sobre su trabajo**. Si no conoces a ningún voluntario, ponte en contacto con algunos de los que aparecen en el [mapa de voluntarios][1]."
         },
         "c4d6d315-bb5c-47d7-bc5e-f5fce2e4ae67": {
           "name": "Preparando el terreno",
@@ -31346,18 +31346,18 @@
         },
         "ce182c47-efed-4526-bb9c-f4ec66b052a4": {
           "name": "Apoyo General",
-          "description": "Estos son algunos consejos que deberían ayudar a los estudiantes independientemente del nivel en el que estén trabajando\n\n-   **Colabora con los compañeros:** Anima a los estudiantes a consultar con un compañero cuando se atasquen. Dependiendo de la edad y la capacidad de tus alumnos, puedes considerar la posibilidad de dividir formalmente tu clase en parejas para completar el tutorial utilizando la [programación por parejas](https://youtu.be/vgkahOzFH2Q).  \n\n-   **Lee las instrucciones:** Las instrucciones suelen proporcionar consejos útiles sobre cómo completar el nivel. Antes de dar la respuesta a los alumnos, asegúrate de que han mirado detenidamente las instrucciones, las pistas, los vídeos y cualquier código de inicio.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **¿Atascado? Busca las pistas:** Cada nivel incluye una pista con consejos para superar un nivel, incluyendo qué bloques de código probar. \n\n-   **Tómate tu tiempo y experimenta.** Las instrucciones indican a los alumnos de forma general lo que deben hacer, pero también deben considerarse libres de probar sus propias ideas."
+          "description": "Estos son algunos consejos que deberían ayudar a los estudiantes independientemente del nivel en el que estén trabajando\n\n-   **Colabora con los compañeros:** Anima a los estudiantes a consultar con un compañero cuando se atasquen. Dependiendo de la edad y la capacidad de tus alumnos, puedes considerar la posibilidad de dividir formalmente tu clase en parejas para completar el tutorial utilizando la [programación por parejas][0].  \n\n-   **Lee las instrucciones:** Las instrucciones suelen proporcionar consejos útiles sobre cómo completar el nivel. Antes de dar la respuesta a los alumnos, asegúrate de que han mirado detenidamente las instrucciones, las pistas, los vídeos y cualquier código de inicio.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **¿Atascado? Busca las pistas:** Cada nivel incluye una pista con consejos para superar un nivel, incluyendo qué bloques de código probar. \n\n-   **Tómate tu tiempo y experimenta.** Las instrucciones indican a los alumnos de forma general lo que deben hacer, pero también deben considerarse libres de probar sus propias ideas."
         },
         "893dba56-7c8e-4897-949b-de514de76011": {
           "name": "Hola Mundo",
           "progression_name": "Hola Mundo"
         },
         "05ad915a-32e0-4799-90a2-2a53efb937f1": {
-          "description": "Si un grupo o individuo termina antes, anímalo a seguir construyendo un proyecto en el último nivel. Si los alumnos no están seguros de qué más hacer, puedes animarles con preguntas:\n\n-   ¿Qué otros sprites podrías añadir a tu proyecto?\n-   ¿Has mirado en la biblioteca de disfraces o has intentado dibujar tu propio disfraz de sprites?\n-   ¿Qué más podrías hacer que dijeran tus sprites?\n-   ¿Qué deberían hacer tus sprites cuando se les hace clic?\n-   Invita a los alumnos a compartir ideas y a aprender unos de otros. También pueden intentar otro tutorial visitando [code.org/learn](https://code.org/learn)."
+          "description": "Si un grupo o individuo termina antes, anímalo a seguir construyendo un proyecto en el último nivel. Si los alumnos no están seguros de qué más hacer, puedes animarles con preguntas:\n\n-   ¿Qué otros sprites podrías añadir a tu proyecto?\n-   ¿Has mirado en la biblioteca de disfraces o has intentado dibujar tu propio disfraz de sprites?\n-   ¿Qué más podrías hacer que dijeran tus sprites?\n-   ¿Qué deberían hacer tus sprites cuando se les hace clic?\n-   Invita a los alumnos a compartir ideas y a aprender unos de otros. También pueden intentar otro tutorial visitando [code.org/learn][0]."
         },
         "d5d3f8eb-f17e-4f26-88a8-ca6422ed7a1f": {
           "name": "Reflexión",
-          "description": "#### Informe\n\nPide a los alumnos que reflexionen sobre las actividades del día. ¿Qué han aprendido sobre la codificación? ¿Sprites? ¿Eventos?\n\n¿Cómo se sienten con respecto a la informática y la codificación después de pasar una hora explorando?\n\n#### Próximos Pasos\n\nComenta a los alumnos que, si han disfrutado de la actividad de hoy, tienen muchas opciones para seguir codificando. Visita [Conexiones CS](https://code.org/educate/csc) para obtener ideas sobre cómo integrar las ciencias de la computación en otras asignaturas o lee más sobre nuestra [oferta de cursos para escuelas primarias](https://code.org/educate/curriculum/elementary-school)."
+          "description": "#### Informe\n\nPide a los alumnos que reflexionen sobre las actividades del día. ¿Qué han aprendido sobre la codificación? ¿Sprites? ¿Eventos?\n\n¿Cómo se sienten con respecto a la informática y la codificación después de pasar una hora explorando?\n\n#### Próximos Pasos\n\nComenta a los alumnos que, si han disfrutado de la actividad de hoy, tienen muchas opciones para seguir codificando. Visita [Conexiones CS][0] para obtener ideas sobre cómo integrar las ciencias de la computación en otras asignaturas o lee más sobre nuestra [oferta de cursos para escuelas primarias][1]."
         },
         "aad08892-e7b6-4fdc-bfd6-8199118fc2d6": {
           "name": "Preparando el terreno",
@@ -31371,18 +31371,18 @@
         },
         "0a05af25-05aa-4e56-92ce-f14570cc1c64": {
           "name": "Apoyo General",
-          "description": "Estos son algunos consejos que deberían ayudar a los estudiantes independientemente del nivel en el que estén trabajando\n\n-   **Colabora con los compañeros:** Anima a los estudiantes a consultar con un compañero cuando se atasquen. Dependiendo de la edad y la capacidad de tus alumnos, puedes considerar la posibilidad de dividir formalmente tu clase en parejas para completar el tutorial utilizando la [programación por parejas](https://youtu.be/vgkahOzFH2Q).  \n\n-   **Lee las instrucciones:** Las instrucciones suelen proporcionar consejos útiles sobre cómo completar el nivel. Antes de dar la respuesta a los alumnos, asegúrate de que han mirado detenidamente las instrucciones, las pistas, los vídeos y cualquier código de inicio.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **¿Atascado? Busca las pistas:** Cada nivel incluye una pista con consejos para superar un nivel, incluyendo qué bloques de código probar. \n\n-   **Tómate tu tiempo y experimenta.** Las instrucciones indican a los alumnos de forma general lo que deben hacer, pero también deben considerarse libres de probar sus propias ideas."
+          "description": "Estos son algunos consejos que deberían ayudar a los estudiantes independientemente del nivel en el que estén trabajando\n\n-   **Colabora con los compañeros:** Anima a los estudiantes a consultar con un compañero cuando se atasquen. Dependiendo de la edad y la capacidad de tus alumnos, puedes considerar la posibilidad de dividir formalmente tu clase en parejas para completar el tutorial utilizando la [programación por parejas][0].  \n\n-   **Lee las instrucciones:** Las instrucciones suelen proporcionar consejos útiles sobre cómo completar el nivel. Antes de dar la respuesta a los alumnos, asegúrate de que han mirado detenidamente las instrucciones, las pistas, los vídeos y cualquier código de inicio.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **¿Atascado? Busca las pistas:** Cada nivel incluye una pista con consejos para superar un nivel, incluyendo qué bloques de código probar. \n\n-   **Tómate tu tiempo y experimenta.** Las instrucciones indican a los alumnos de forma general lo que deben hacer, pero también deben considerarse libres de probar sus propias ideas."
         },
         "f6a21949-1c94-4269-acae-98046f6a9052": {
           "name": "Hola Mundo",
           "progression_name": "Hola Mundo"
         },
         "3e2a74f4-d574-42fd-9bf3-5b319526299a": {
-          "description": "Si un grupo o individuo termina antes, anímalo a seguir construyendo un proyecto en el último nivel. Si los alumnos no están seguros de qué más hacer, puedes animarles con preguntas:\n\n-   ¿Qué otros sprites podrías añadir a tu proyecto?\n-   ¿Has mirado en la biblioteca de disfraces o has intentado dibujar tu propio disfraz de sprites?\n-   ¿Qué más podrías hacer que dijeran tus sprites?\n-   ¿Qué deberían hacer tus sprites cuando se les hace clic?\n-   Invita a los alumnos a compartir ideas y a aprender unos de otros. También pueden intentar otro tutorial visitando [code.org/learn](https://code.org/learn)."
+          "description": "Si un grupo o individuo termina antes, anímalo a seguir construyendo un proyecto en el último nivel. Si los alumnos no están seguros de qué más hacer, puedes animarles con preguntas:\n\n-   ¿Qué otros sprites podrías añadir a tu proyecto?\n-   ¿Has mirado en la biblioteca de disfraces o has intentado dibujar tu propio disfraz de sprites?\n-   ¿Qué más podrías hacer que dijeran tus sprites?\n-   ¿Qué deberían hacer tus sprites cuando se les hace clic?\n-   Invita a los alumnos a compartir ideas y a aprender unos de otros. También pueden intentar otro tutorial visitando [code.org/learn][0]."
         },
         "f95b4eed-639e-483e-bef7-ead9abf4808e": {
           "name": "Reflexión",
-          "description": "#### Informe\n\nPide a los alumnos que reflexionen sobre las actividades del día. ¿Qué han aprendido sobre la codificación? ¿Sprites? ¿Eventos?\n\n¿Cómo se sienten con respecto a la informática y la codificación después de pasar una hora explorando?\n\n#### Próximos Pasos\n\nComenta a los alumnos que, si han disfrutado de la actividad de hoy, tienen muchas opciones para seguir codificando. Visita [Conexiones CS](https://code.org/educate/csc) para obtener ideas sobre cómo integrar las ciencias de la computación en otras asignaturas o lee más sobre nuestra [oferta de cursos para escuelas primarias](https://code.org/educate/curriculum/elementary-school)."
+          "description": "#### Informe\n\nPide a los alumnos que reflexionen sobre las actividades del día. ¿Qué han aprendido sobre la codificación? ¿Sprites? ¿Eventos?\n\n¿Cómo se sienten con respecto a la informática y la codificación después de pasar una hora explorando?\n\n#### Próximos Pasos\n\nComenta a los alumnos que, si han disfrutado de la actividad de hoy, tienen muchas opciones para seguir codificando. Visita [Conexiones CS][0] para obtener ideas sobre cómo integrar las ciencias de la computación en otras asignaturas o lee más sobre nuestra [oferta de cursos para escuelas primarias][1]."
         },
         "5ba761c1-02df-411f-96cd-69a8327e0d2c": {
           "name": "Preparando el terreno",
@@ -31396,18 +31396,18 @@
         },
         "11f167ca-2cf6-4e6b-8857-316c5cb55f82": {
           "name": "Apoyo General",
-          "description": "Estos son algunos consejos que deberían ayudar a los estudiantes independientemente del nivel en el que estén trabajando\n\n-   **Colabora con los compañeros:** Anima a los estudiantes a consultar con un compañero cuando se atasquen. Dependiendo de la edad y la capacidad de tus alumnos, puedes considerar la posibilidad de dividir formalmente tu clase en parejas para completar el tutorial utilizando la [programación por parejas](https://youtu.be/vgkahOzFH2Q).  \n\n-   **Lee las instrucciones:** Las instrucciones suelen proporcionar consejos útiles sobre cómo completar el nivel. Antes de dar la respuesta a los alumnos, asegúrate de que han mirado detenidamente las instrucciones, las pistas, los vídeos y cualquier código de inicio.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **¿Atascado? Busca las pistas:** Cada nivel incluye una pista con consejos para superar un nivel, incluyendo qué bloques de código probar. \n\n-   **Tómate tu tiempo y experimenta.** Las instrucciones indican a los alumnos de forma general lo que deben hacer, pero también deben considerarse libres de probar sus propias ideas."
+          "description": "Estos son algunos consejos que deberían ayudar a los estudiantes independientemente del nivel en el que estén trabajando\n\n-   **Colabora con los compañeros:** Anima a los estudiantes a consultar con un compañero cuando se atasquen. Dependiendo de la edad y la capacidad de tus alumnos, puedes considerar la posibilidad de dividir formalmente tu clase en parejas para completar el tutorial utilizando la [programación por parejas][0].  \n\n-   **Lee las instrucciones:** Las instrucciones suelen proporcionar consejos útiles sobre cómo completar el nivel. Antes de dar la respuesta a los alumnos, asegúrate de que han mirado detenidamente las instrucciones, las pistas, los vídeos y cualquier código de inicio.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **¿Atascado? Busca las pistas:** Cada nivel incluye una pista con consejos para superar un nivel, incluyendo qué bloques de código probar. \n\n-   **Tómate tu tiempo y experimenta.** Las instrucciones indican a los alumnos de forma general lo que deben hacer, pero también deben considerarse libres de probar sus propias ideas."
         },
         "c721eddb-4cfb-4237-a031-0730bbfdc926": {
           "name": "Hola Mundo",
           "progression_name": "Hola Mundo"
         },
         "8341212e-8528-4ad8-9c02-22066467054b": {
-          "description": "Si un grupo o individuo termina antes, anímalo a seguir construyendo un proyecto en el último nivel. Si los alumnos no están seguros de qué más hacer, puedes animarles con preguntas:\n\n-   ¿Qué otros sprites podrías añadir a tu proyecto?\n-   ¿Has mirado en la biblioteca de disfraces o has intentado dibujar tu propio disfraz de sprites?\n-   ¿Qué más podrías hacer que dijeran tus sprites?\n-   ¿Qué deberían hacer tus sprites cuando se les hace clic?\n-   Invita a los alumnos a compartir ideas y a aprender unos de otros. También pueden intentar otro tutorial visitando [code.org/learn](https://code.org/learn)."
+          "description": "Si un grupo o individuo termina antes, anímalo a seguir construyendo un proyecto en el último nivel. Si los alumnos no están seguros de qué más hacer, puedes animarles con preguntas:\n\n-   ¿Qué otros sprites podrías añadir a tu proyecto?\n-   ¿Has mirado en la biblioteca de disfraces o has intentado dibujar tu propio disfraz de sprites?\n-   ¿Qué más podrías hacer que dijeran tus sprites?\n-   ¿Qué deberían hacer tus sprites cuando se les hace clic?\n-   Invita a los alumnos a compartir ideas y a aprender unos de otros. También pueden intentar otro tutorial visitando [code.org/learn][0]."
         },
         "656eee11-dc6d-428e-8849-6e4b31dc8c81": {
           "name": "Reflexión",
-          "description": "#### Informe\n\nPide a los alumnos que reflexionen sobre las actividades del día. ¿Qué han aprendido sobre la codificación? ¿Sprites? ¿Eventos?\n\n¿Cómo se sienten con respecto a la informática y la codificación después de pasar una hora explorando?\n\n#### Próximos Pasos\n\nComenta a los alumnos que, si han disfrutado de la actividad de hoy, tienen muchas opciones para seguir codificando. Visita [Conexiones CS](https://code.org/educate/csc) para obtener ideas sobre cómo integrar las ciencias de la computación en otras asignaturas o lee más sobre nuestra [oferta de cursos para escuelas primarias](https://code.org/educate/curriculum/elementary-school)."
+          "description": "#### Informe\n\nPide a los alumnos que reflexionen sobre las actividades del día. ¿Qué han aprendido sobre la codificación? ¿Sprites? ¿Eventos?\n\n¿Cómo se sienten con respecto a la informática y la codificación después de pasar una hora explorando?\n\n#### Próximos Pasos\n\nComenta a los alumnos que, si han disfrutado de la actividad de hoy, tienen muchas opciones para seguir codificando. Visita [Conexiones CS][0] para obtener ideas sobre cómo integrar las ciencias de la computación en otras asignaturas o lee más sobre nuestra [oferta de cursos para escuelas primarias][1]."
         },
         "9d3ef78a-4043-489e-898b-f407c914f698": {
           "name": "Preparando el terreno",
@@ -31421,18 +31421,18 @@
         },
         "2ff80a97-db35-4d10-9703-4d0cc3ff0c3a": {
           "name": "Apoyo General",
-          "description": "Estos son algunos consejos que deberían ayudar a los estudiantes independientemente del nivel en el que estén trabajando\n\n-   **Colabora con los compañeros:** Anima a los estudiantes a consultar con un compañero cuando se atasquen. Dependiendo de la edad y la capacidad de tus alumnos, puedes considerar la posibilidad de dividir formalmente tu clase en parejas para completar el tutorial utilizando la [programación por parejas](https://youtu.be/vgkahOzFH2Q).  \n\n-   **Lee las instrucciones:** Las instrucciones suelen proporcionar consejos útiles sobre cómo completar el nivel. Antes de dar la respuesta a los alumnos, asegúrate de que han mirado detenidamente las instrucciones, las pistas, los vídeos y cualquier código de inicio.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **¿Atascado? Busca las pistas:** Cada nivel incluye una pista con consejos para superar un nivel, incluyendo qué bloques de código probar. \n\n-   **Tómate tu tiempo y experimenta.** Las instrucciones indican a los alumnos de forma general lo que deben hacer, pero también deben considerarse libres de probar sus propias ideas."
+          "description": "Estos son algunos consejos que deberían ayudar a los estudiantes independientemente del nivel en el que estén trabajando\n\n-   **Colabora con los compañeros:** Anima a los estudiantes a consultar con un compañero cuando se atasquen. Dependiendo de la edad y la capacidad de tus alumnos, puedes considerar la posibilidad de dividir formalmente tu clase en parejas para completar el tutorial utilizando la [programación por parejas][0].  \n\n-   **Lee las instrucciones:** Las instrucciones suelen proporcionar consejos útiles sobre cómo completar el nivel. Antes de dar la respuesta a los alumnos, asegúrate de que han mirado detenidamente las instrucciones, las pistas, los vídeos y cualquier código de inicio.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **¿Atascado? Busca las pistas:** Cada nivel incluye una pista con consejos para superar un nivel, incluyendo qué bloques de código probar. \n\n-   **Tómate tu tiempo y experimenta.** Las instrucciones indican a los alumnos de forma general lo que deben hacer, pero también deben considerarse libres de probar sus propias ideas."
         },
         "70daba44-c26e-4286-95ae-50cbd8724b2d": {
           "name": "Hola Mundo",
           "progression_name": "Hola Mundo"
         },
         "77cef9f9-1949-455b-a0bd-f2cbc4a32986": {
-          "description": "Si un grupo o individuo termina antes, anímalo a seguir construyendo un proyecto en el último nivel. Si los alumnos no están seguros de qué más hacer, puedes animarles con preguntas:\n\n-   ¿Qué otros sprites podrías añadir a tu proyecto?\n-   ¿Has mirado en la biblioteca de disfraces o has intentado dibujar tu propio disfraz de sprites?\n-   ¿Qué más podrías hacer que dijeran tus sprites?\n-   ¿Qué deberían hacer tus sprites cuando se les hace clic?\n-   Invita a los alumnos a compartir ideas y a aprender unos de otros. También pueden intentar otro tutorial visitando [code.org/learn](https://code.org/learn)."
+          "description": "Si un grupo o individuo termina antes, anímalo a seguir construyendo un proyecto en el último nivel. Si los alumnos no están seguros de qué más hacer, puedes animarles con preguntas:\n\n-   ¿Qué otros sprites podrías añadir a tu proyecto?\n-   ¿Has mirado en la biblioteca de disfraces o has intentado dibujar tu propio disfraz de sprites?\n-   ¿Qué más podrías hacer que dijeran tus sprites?\n-   ¿Qué deberían hacer tus sprites cuando se les hace clic?\n-   Invita a los alumnos a compartir ideas y a aprender unos de otros. También pueden intentar otro tutorial visitando [code.org/learn][0]."
         },
         "ec905c64-2e80-49d0-8da3-7d75ed8d0693": {
           "name": "Reflexión",
-          "description": "#### Informe\n\nPide a los alumnos que reflexionen sobre las actividades del día. ¿Qué han aprendido sobre la codificación? ¿Sprites? ¿Eventos?\n\n¿Cómo se sienten con respecto a la informática y la codificación después de pasar una hora explorando?\n\n#### Próximos Pasos\n\nComenta a los alumnos que, si han disfrutado de la actividad de hoy, tienen muchas opciones para seguir codificando. Visita [Conexiones CS](https://code.org/educate/csc) para obtener ideas sobre cómo integrar las ciencias de la computación en otras asignaturas o lee más sobre nuestra [oferta de cursos para escuelas primarias](https://code.org/educate/curriculum/elementary-school)."
+          "description": "#### Informe\n\nPide a los alumnos que reflexionen sobre las actividades del día. ¿Qué han aprendido sobre la codificación? ¿Sprites? ¿Eventos?\n\n¿Cómo se sienten con respecto a la informática y la codificación después de pasar una hora explorando?\n\n#### Próximos Pasos\n\nComenta a los alumnos que, si han disfrutado de la actividad de hoy, tienen muchas opciones para seguir codificando. Visita [Conexiones CS][0] para obtener ideas sobre cómo integrar las ciencias de la computación en otras asignaturas o lee más sobre nuestra [oferta de cursos para escuelas primarias][1]."
         },
         "6c387b78-14b7-4209-919a-97dbf64b9bc2": {
           "name": "Preparando el terreno",
@@ -31446,18 +31446,18 @@
         },
         "cc4e7bc2-813a-4d4a-be58-83d08ca5d970": {
           "name": "Apoyo General",
-          "description": "Estos son algunos consejos que deberían ayudar a los estudiantes independientemente del nivel en el que estén trabajando\n\n-   **Colabora con los compañeros:** Anima a los estudiantes a consultar con un compañero cuando se atasquen. Dependiendo de la edad y la capacidad de tus alumnos, puedes considerar la posibilidad de dividir formalmente tu clase en parejas para completar el tutorial utilizando la [programación por parejas](https://youtu.be/vgkahOzFH2Q).  \n\n-   **Lee las instrucciones:** Las instrucciones suelen proporcionar consejos útiles sobre cómo completar el nivel. Antes de dar la respuesta a los alumnos, asegúrate de que han mirado detenidamente las instrucciones, las pistas, los vídeos y cualquier código de inicio.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **¿Atascado? Busca las pistas:** Cada nivel incluye una pista con consejos para superar un nivel, incluyendo qué bloques de código probar. \n\n-   **Tómate tu tiempo y experimenta.** Las instrucciones indican a los alumnos de forma general lo que deben hacer, pero también deben considerarse libres de probar sus propias ideas."
+          "description": "Estos son algunos consejos que deberían ayudar a los estudiantes independientemente del nivel en el que estén trabajando\n\n-   **Colabora con los compañeros:** Anima a los estudiantes a consultar con un compañero cuando se atasquen. Dependiendo de la edad y la capacidad de tus alumnos, puedes considerar la posibilidad de dividir formalmente tu clase en parejas para completar el tutorial utilizando la [programación por parejas][0].  \n\n-   **Lee las instrucciones:** Las instrucciones suelen proporcionar consejos útiles sobre cómo completar el nivel. Antes de dar la respuesta a los alumnos, asegúrate de que han mirado detenidamente las instrucciones, las pistas, los vídeos y cualquier código de inicio.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **¿Atascado? Busca las pistas:** Cada nivel incluye una pista con consejos para superar un nivel, incluyendo qué bloques de código probar. \n\n-   **Tómate tu tiempo y experimenta.** Las instrucciones indican a los alumnos de forma general lo que deben hacer, pero también deben considerarse libres de probar sus propias ideas."
         },
         "062143a1-3063-4af1-864a-2ad1f9c88dd5": {
           "name": "Hola Mundo",
           "progression_name": "Hola Mundo"
         },
         "da91f0fe-e142-453f-a093-8e367d0a1454": {
-          "description": "Si un grupo o individuo termina antes, anímalo a seguir construyendo un proyecto en el último nivel. Si los alumnos no están seguros de qué más hacer, puedes animarles con preguntas:\n\n-   ¿Qué otros sprites podrías añadir a tu proyecto?\n-   ¿Has mirado en la biblioteca de disfraces o has intentado dibujar tu propio disfraz de sprites?\n-   ¿Qué más podrías hacer que dijeran tus sprites?\n-   ¿Qué deberían hacer tus sprites cuando se les hace clic?\n-   Invita a los alumnos a compartir ideas y a aprender unos de otros. También pueden intentar otro tutorial visitando [code.org/learn](https://code.org/learn)."
+          "description": "Si un grupo o individuo termina antes, anímalo a seguir construyendo un proyecto en el último nivel. Si los alumnos no están seguros de qué más hacer, puedes animarles con preguntas:\n\n-   ¿Qué otros sprites podrías añadir a tu proyecto?\n-   ¿Has mirado en la biblioteca de disfraces o has intentado dibujar tu propio disfraz de sprites?\n-   ¿Qué más podrías hacer que dijeran tus sprites?\n-   ¿Qué deberían hacer tus sprites cuando se les hace clic?\n-   Invita a los alumnos a compartir ideas y a aprender unos de otros. También pueden intentar otro tutorial visitando [code.org/learn][0]."
         },
         "f5756484-7296-4391-99e2-7b2678653934": {
           "name": "Reflexión",
-          "description": "#### Informe\n\nPide a los alumnos que reflexionen sobre las actividades del día. ¿Qué han aprendido sobre la codificación? ¿Sprites? ¿Eventos?\n\n¿Cómo se sienten con respecto a la informática y la codificación después de pasar una hora explorando?\n\n#### Próximos Pasos\n\nComenta a los alumnos que, si han disfrutado de la actividad de hoy, tienen muchas opciones para seguir codificando. Visita [Conexiones CS](https://code.org/educate/csc) para obtener ideas sobre cómo integrar las ciencias de la computación en otras asignaturas o lee más sobre nuestra [oferta de cursos para escuelas primarias](https://code.org/educate/curriculum/elementary-school)."
+          "description": "#### Informe\n\nPide a los alumnos que reflexionen sobre las actividades del día. ¿Qué han aprendido sobre la codificación? ¿Sprites? ¿Eventos?\n\n¿Cómo se sienten con respecto a la informática y la codificación después de pasar una hora explorando?\n\n#### Próximos Pasos\n\nComenta a los alumnos que, si han disfrutado de la actividad de hoy, tienen muchas opciones para seguir codificando. Visita [Conexiones CS][0] para obtener ideas sobre cómo integrar las ciencias de la computación en otras asignaturas o lee más sobre nuestra [oferta de cursos para escuelas primarias][1]."
         },
         "bcc9e44c-ad4e-4efc-a12e-e9c74a5c1960": {
           "name": "Preparando el terreno",
@@ -31471,25 +31471,25 @@
         },
         "0d1c3be1-c6e4-437f-85b9-4912d1cd725b": {
           "name": "Apoyo General",
-          "description": "Estos son algunos consejos que deberían ayudar a los estudiantes independientemente del nivel en el que estén trabajando\n\n-   **Colabora con los compañeros:** Anima a los estudiantes a consultar con un compañero cuando se atasquen. Dependiendo de la edad y la capacidad de tus alumnos, puedes considerar la posibilidad de dividir formalmente tu clase en parejas para completar el tutorial utilizando la [programación por parejas](https://youtu.be/vgkahOzFH2Q).  \n\n-   **Lee las instrucciones:** Las instrucciones suelen proporcionar consejos útiles sobre cómo completar el nivel. Antes de dar la respuesta a los alumnos, asegúrate de que han mirado detenidamente las instrucciones, las pistas, los vídeos y cualquier código de inicio.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **¿Atascado? Busca las pistas:** Cada nivel incluye una pista con consejos para superar un nivel, incluyendo qué bloques de código probar. \n\n-   **Tómate tu tiempo y experimenta.** Las instrucciones indican a los alumnos de forma general lo que deben hacer, pero también deben considerarse libres de probar sus propias ideas."
+          "description": "Estos son algunos consejos que deberían ayudar a los estudiantes independientemente del nivel en el que estén trabajando\n\n-   **Colabora con los compañeros:** Anima a los estudiantes a consultar con un compañero cuando se atasquen. Dependiendo de la edad y la capacidad de tus alumnos, puedes considerar la posibilidad de dividir formalmente tu clase en parejas para completar el tutorial utilizando la [programación por parejas][0].  \n\n-   **Lee las instrucciones:** Las instrucciones suelen proporcionar consejos útiles sobre cómo completar el nivel. Antes de dar la respuesta a los alumnos, asegúrate de que han mirado detenidamente las instrucciones, las pistas, los vídeos y cualquier código de inicio.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **¿Atascado? Busca las pistas:** Cada nivel incluye una pista con consejos para superar un nivel, incluyendo qué bloques de código probar. \n\n-   **Tómate tu tiempo y experimenta.** Las instrucciones indican a los alumnos de forma general lo que deben hacer, pero también deben considerarse libres de probar sus propias ideas."
         },
         "fcf13574-b04a-42a7-9e17-ef0dba0bfe33": {
           "name": "Hola Mundo",
           "progression_name": "Hola Mundo"
         },
         "7cccfa6d-83c2-4d74-a71f-c9134fb1d0c2": {
-          "description": "Si un grupo o individuo termina antes, anímalo a seguir construyendo un proyecto en el último nivel. Si los alumnos no están seguros de qué más hacer, puedes animarles con preguntas:\n\n-   ¿Qué otros sprites podrías añadir a tu proyecto?\n-   ¿Has mirado en la biblioteca de disfraces o has intentado dibujar tu propio disfraz de sprites?\n-   ¿Qué más podrías hacer que dijeran tus sprites?\n-   ¿Qué deberían hacer tus sprites cuando se les hace clic?\n-   Invita a los alumnos a compartir ideas y a aprender unos de otros. También pueden intentar otro tutorial visitando [code.org/learn](https://code.org/learn)."
+          "description": "Si un grupo o individuo termina antes, anímalo a seguir construyendo un proyecto en el último nivel. Si los alumnos no están seguros de qué más hacer, puedes animarles con preguntas:\n\n-   ¿Qué otros sprites podrías añadir a tu proyecto?\n-   ¿Has mirado en la biblioteca de disfraces o has intentado dibujar tu propio disfraz de sprites?\n-   ¿Qué más podrías hacer que dijeran tus sprites?\n-   ¿Qué deberían hacer tus sprites cuando se les hace clic?\n-   Invita a los alumnos a compartir ideas y a aprender unos de otros. También pueden intentar otro tutorial visitando [code.org/learn][0]."
         },
         "574954ea-9128-428b-9965-b0d34518c11d": {
           "name": "Reflexión",
-          "description": "#### Informe\n\nPide a los alumnos que reflexionen sobre las actividades del día. ¿Qué han aprendido sobre la codificación? ¿Sprites? ¿Eventos?\n\n¿Cómo se sienten con respecto a la informática y la codificación después de pasar una hora explorando?\n\n#### Próximos Pasos\n\nComenta a los alumnos que, si han disfrutado de la actividad de hoy, tienen muchas opciones para seguir codificando. Visita [Conexiones CS](https://code.org/educate/csc) para obtener ideas sobre cómo integrar las ciencias de la computación en otras asignaturas o lee más sobre nuestra [oferta de cursos para escuelas primarias](https://code.org/educate/curriculum/elementary-school)."
+          "description": "#### Informe\n\nPide a los alumnos que reflexionen sobre las actividades del día. ¿Qué han aprendido sobre la codificación? ¿Sprites? ¿Eventos?\n\n¿Cómo se sienten con respecto a la informática y la codificación después de pasar una hora explorando?\n\n#### Próximos Pasos\n\nComenta a los alumnos que, si han disfrutado de la actividad de hoy, tienen muchas opciones para seguir codificando. Visita [Conexiones CS][0] para obtener ideas sobre cómo integrar las ciencias de la computación en otras asignaturas o lee más sobre nuestra [oferta de cursos para escuelas primarias][1]."
         },
         "79f9bd46-60a5-4891-ad3b-8369879847fc": {
           "description": "#### Preparando el Terreno\n\nDa la bienvenida a los alumnos a la clase y presenta muy brevemente la actividad del día. \n\nEsta lección es un verdadero placer para los alumnos. Es probable que la mayoría de tus alumnos hayan oído hablar de Minecraft, pero haz una breve introducción para los que no lo sepan.\nMinecraft es un juego de bloques. Puedes jugar como Alex o Steve mientras recorres laberintos. Tendrás que recoger objetos y explorar en un mundo hecho de bloques de cosas.\n\n_Diles: \"Hoy vamos a dedicar una hora a aprender a codificar. ¿Alguien ha oído antes el término \"código\"? ¿Qué significa?_\n\nLos alumnos pueden mencionar que un \"código\" es como un mensaje secreto, o que está relacionado con los ordenadores de alguna manera."
         },
         "cc1ed89e-268e-472b-9bce-4f976d8c2ea3": {
           "tips": [
-            "Una forma de presentar la Hora del Código si no estás muy familiarizado con la codificación es mostrar uno de [nuestros vídeos inspiradores](https://hourofcode.com/us/resources#videos). Elige uno que creas que tus alumnos encontrarán inspirador y compártelo ahora. Para los alumnos más jóvenes, sugerimos \"[La Hora del Código está Aquí](https://youtu.be/FC5FbmsH4fw)\"."
+            "Una forma de presentar la Hora del Código si no estás muy familiarizado con la codificación es mostrar uno de [nuestros vídeos inspiradores][0]. Elige uno que creas que tus alumnos encontrarán inspirador y compártelo ahora. Para los alumnos más jóvenes, sugerimos \"[La Hora del Código está Aquí][1]\"."
           ]
         },
         "850945f6-6352-403b-a73f-3fb613f4728a": {
@@ -31502,7 +31502,7 @@
         },
         "fc5c47f6-08fa-4702-86a3-e687a2ad5bc1": {
           "name": "Minecraft: El Viaje del Héroe",
-          "description": "Desafía a tus alumnos a completar el tutorial de [Minecraft: Hero's Journey](https://studio.code.org/s/hero/lessons/1/levels/1).\n\nDependiendo de la edad y la capacidad de sus alumnos, puede considerar: \n\n-   Para los alumnos más jóvenes, te sugerimos que dividas la clase en parejas y pidas a cada grupo que trabaje en conjunto para completar el tutorial utilizando la [programación en parejas](https://youtu.be/vgkahOzFH2Q).\n-   En el caso de los alumnos de grado medio, nos parece que trabajar de forma independiente en los tutoriales funciona bien. A veces, resulta útil permitir a los alumnos que elijan su propio tutorial. Si los alumnos no están interesados en Minecraft, pueden tener una experiencia similar con los tutoriales [Código con Anna y Elsa](https://studio.code.org/s/frozen/stage/1/puzzle/1) o [Star Wars](https://code.org/starwars).\n-   Para los alumnos mayores o adultos, el tutorial [Minecraft: Hero's Journey](https://studio.code.org/s/hero/lessons/1/levels/1) funciona muy bien como reto independiente o como actividad de programación en parejas."
+          "description": "Desafía a tus alumnos a completar el tutorial de [Minecraft: Hero's Journey][0].\n\nDependiendo de la edad y la capacidad de sus alumnos, puede considerar: \n\n-   Para los alumnos más jóvenes, te sugerimos que dividas la clase en parejas y pidas a cada grupo que trabaje en conjunto para completar el tutorial utilizando la [programación en parejas][1].\n-   En el caso de los alumnos de grado medio, nos parece que trabajar de forma independiente en los tutoriales funciona bien. A veces, resulta útil permitir a los alumnos que elijan su propio tutorial. Si los alumnos no están interesados en Minecraft, pueden tener una experiencia similar con los tutoriales [Código con Anna y Elsa][2] o [Star Wars][3].\n-   Para los alumnos mayores o adultos, el tutorial [Minecraft: Hero's Journey][4] funciona muy bien como reto independiente o como actividad de programación en parejas."
         },
         "296703c2-cad7-43bb-b3cf-4ffb525e7ad1": {
           "tips": [
@@ -31510,7 +31510,7 @@
           ]
         },
         "b518cf9c-9568-4e85-a520-0e2a81c3b330": {
-          "description": "Si un grupo o individuo termina antes, pueden intentar otro tutorial visitando [code.org/learn](http://code.org/learn)."
+          "description": "Si un grupo o individuo termina antes, pueden intentar otro tutorial visitando [code.org/learn][0]."
         },
         "34238f3b-6699-4e27-b77a-54bcd8d57459": {
           "progression_name": "Minecraft: El Viaje del Héroe"
@@ -31521,18 +31521,18 @@
         },
         "145782a9-a436-4615-9827-0f75d7e4b3a0": {
           "name": "A Celebrar",
-          "description": "Comenta que hoy van a pasar una hora codificando porque esta semana es la Semana de la Educación en Ciencias de la Computación, y que millones de estudiantes de todo el mundo también han estado aprendiendo una Hora de Código esta semana. Felicita a los estudiantes por formar parte de este movimiento mundial.\n\nEntrega a cada estudiante un [certificate](https://studio.code.org/certificates/batch?course=bWM=) certificado con su nombre."
+          "description": "Comenta que hoy van a pasar una hora codificando porque esta semana es la Semana de la Educación en Ciencias de la Computación, y que millones de estudiantes de todo el mundo también han estado aprendiendo una Hora de Código esta semana. Felicita a los estudiantes por formar parte de este movimiento mundial.\n\nEntrega a cada estudiante un [certificate][0] certificado con su nombre."
         },
         "cc38f575-4db4-4ca6-ab2f-a9d8557f16cf": {
           "name": "Siguientes Pasos",
-          "description": "Haz saber a los alumnos que si han disfrutado de la actividad de hoy, tienen muchas opciones para seguir codificando. Anima a los alumnos a visitar [code.org/learn](<>) para ver una lista de opciones o, si estás planeando alguna de las actividades de extensión que siguen, cuéntales lo que viene a continuación en tu aula."
+          "description": "Haz saber a los alumnos que si han disfrutado de la actividad de hoy, tienen muchas opciones para seguir codificando. Anima a los alumnos a visitar [code.org/learn][0] para ver una lista de opciones o, si estás planeando alguna de las actividades de extensión que siguen, cuéntales lo que viene a continuación en tu aula."
         },
         "e276fe28-3302-4ba2-94cc-aaf03b3d2d06": {
-          "description": "Entrega a cada alumno un [\"Ticket de Salida\"](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) y pídeles que resuman lo que han aprendido hoy, cómo se han sentido o qué han experimentado. Los alumnos pueden dibujar, escribir o expresarse de cualquier forma que les resulte cómoda. Recoge un \"Ticket de Salida\" de cada alumno al salir del aula. Si lo deseas, puedes colocar los \" Tickets de Salida\" en un tablón de anuncios o en algún lugar destacado de la escuela como recordatorio de tu Hora del Código."
+          "description": "Entrega a cada alumno un [\"Ticket de Salida\"][0] y pídeles que resuman lo que han aprendido hoy, cómo se han sentido o qué han experimentado. Los alumnos pueden dibujar, escribir o expresarse de cualquier forma que les resulte cómoda. Recoge un \"Ticket de Salida\" de cada alumno al salir del aula. Si lo deseas, puedes colocar los \" Tickets de Salida\" en un tablón de anuncios o en algún lugar destacado de la escuela como recordatorio de tu Hora del Código."
         },
         "147a2b22-0cba-4505-81ef-770b81eee73e": {
           "name": "Más de una Hora de Code",
-          "description": "Una vez finalizada la Hora del Código, hay muchas maneras de seguir enseñando informática en tu aula de K-5. Aquí tienes algunas ideas:\n\n-   Enseña los cursos [Fundamentos de Ciencias de la Computación de Code Studio](http://code.org/educate/k5). Estos seis cursos están diseñados para jóvenes estudiantes. Los estudiantes se abren paso a través de una serie de rompecabezas que les enseñan a codificar, y los profesores tienen acceso a atractivos planes de estudio que ayudan a que el aprendizaje cobre vida. Code.org ofrece desarrollo profesional gratuito para estos cursos, en línea o en forma presencial.\n-   **Visita [Tú puedes Enseñar Ciencias de la Computación](https://code.org/teach)** para ver más sugerencias de cursos.\n-   **Invita a un experto en informática a hablar en tu clase sobre su trabajo**. ¿No conoces a ningún informático local? Ponte en contacto con un voluntario en nuestro [mapa de voluntarios](https://code.org/volunteer/local)"
+          "description": "Una vez finalizada la Hora del Código, hay muchas maneras de seguir enseñando informática en tu aula de K-5. Aquí tienes algunas ideas:\n\n-   Enseña los cursos [Fundamentos de Ciencias de la Computación de Code Studio][0]. Estos seis cursos están diseñados para jóvenes estudiantes. Los estudiantes se abren paso a través de una serie de rompecabezas que les enseñan a codificar, y los profesores tienen acceso a atractivos planes de estudio que ayudan a que el aprendizaje cobre vida. Code.org ofrece desarrollo profesional gratuito para estos cursos, en línea o en forma presencial.\n-   **Visita [Tú puedes Enseñar Ciencias de la Computación][1]** para ver más sugerencias de cursos.\n-   **Invita a un experto en informática a hablar en tu clase sobre su trabajo**. ¿No conoces a ningún informático local? Ponte en contacto con un voluntario en nuestro [mapa de voluntarios][2]"
         },
         "9475b0bd-6a58-4318-b3e5-0d77cfe5a35d": {
           "tips": [
@@ -31631,7 +31631,7 @@
         },
         "6b55015f-aebc-401b-b0c9-c40a5fd0056e": {
           "tips": [
-            "Una forma de presentar la Hora del Código si no estás muy familiarizado con la codificación es mostrar uno de [nuestros vídeos inspiradores](https://hourofcode.com/us/resources#videos). Elige uno que creas que tus alumnos encontrarán inspirador y compártelo ahora. Para los alumnos más jóvenes, sugerimos \"[La Hora del Código está Aquí](https://youtu.be/FC5FbmsH4fw)\"."
+            "Una forma de presentar la Hora del Código si no estás muy familiarizado con la codificación es mostrar uno de [nuestros vídeos inspiradores][0]. Elige uno que creas que tus alumnos encontrarán inspirador y compártelo ahora. Para los alumnos más jóvenes, sugerimos \"[La Hora del Código está Aquí][1]\"."
           ]
         },
         "e841a687-1da5-46c7-b31e-42629fe0377c": {
@@ -31644,7 +31644,7 @@
         },
         "9aba0e85-a709-43f5-8cfb-251671159b3a": {
           "name": "Laberinto",
-          "description": "Anima a tus alumnos a completar el tutorial [Escribe tu primer programa de ordenador](https://studio.code.org/hoc/1).\n\nDependiendo de la edad y la capacidad de tus alumnos, puedes considerar: \n\n-   Para los alumnos más jóvenes, te sugerimos que dividas la clase en parejas o en grupos muy pequeños (de tres a cuatro alumnos cada uno) y que pidas a cada grupo que trabaje conjuntamente para completar el tutorial utilizando [Programación en parejas](https://youtu.be/vgkahOzFH2Q).\n-   En el caso de los alumnos de los grados intermedios, nos parece que trabajar de forma independiente en los tutoriales funciona bien. A veces, resulta útil permitir que los alumnos elijan su propio tutorial. Si los alumnos no están interesados en Angry Birds, pueden tener una experiencia similar con los tutoriales [Codificando con Anna y Elsa](https://studio.code.org/s/frozen/stage/1/puzzle/1) o [Hacer un Juego Flappy](https://studio.code.org/flappy/1).- Para los alumnos mayores o adultos, el tutorial [Escribe tu primer programa de ordenador](https://studio.code.org/hoc/1) funciona muy bien como reto independiente o como actividad de programación en parejas."
+          "description": "Anima a tus alumnos a completar el tutorial [Escribe tu primer programa de ordenador][0].\n\nDependiendo de la edad y la capacidad de tus alumnos, puedes considerar: \n\n-   Para los alumnos más jóvenes, te sugerimos que dividas la clase en parejas o en grupos muy pequeños (de tres a cuatro alumnos cada uno) y que pidas a cada grupo que trabaje conjuntamente para completar el tutorial utilizando [Programación en parejas][1].\n-   En el caso de los alumnos de los grados intermedios, nos parece que trabajar de forma independiente en los tutoriales funciona bien. A veces, resulta útil permitir que los alumnos elijan su propio tutorial. Si los alumnos no están interesados en Angry Birds, pueden tener una experiencia similar con los tutoriales [Codificando con Anna y Elsa][2] o [Hacer un Juego Flappy][3].- Para los alumnos mayores o adultos, el tutorial [Escribe tu primer programa de ordenador][4] funciona muy bien como reto independiente o como actividad de programación en parejas."
         },
         "524f2e35-6286-4585-879e-96e7286e8a6d": {
           "tips": [
@@ -31652,7 +31652,7 @@
           ]
         },
         "3f29a14c-3903-4615-8a6b-d1961b57dc7b": {
-          "description": "Si un grupo o individuo termina antes, pueden intentar otro tutorial visitando [code.org/learn](http://code.org/learn)."
+          "description": "Si un grupo o individuo termina antes, pueden intentar otro tutorial visitando [code.org/learn][0]."
         },
         "50db3674-3387-4932-ba7e-c9f176ebd976": {
           "name": "Informe",
@@ -31660,18 +31660,18 @@
         },
         "46f387e2-c275-4c57-acec-c9709e7f44fc": {
           "name": "A Celebrar",
-          "description": "Comenta que hoy van a pasar una hora codificando porque esta semana es la Semana de la Educación en Ciencias de la Computación, y que millones de estudiantes de todo el mundo también han estado aprendiendo una Hora de Código esta semana. Felicita a los estudiantes por formar parte de este movimiento mundial.\n\nEntrega a cada estudiante un [certificate](http://code.org/certificates) certificado con su nombre."
+          "description": "Comenta que hoy van a pasar una hora codificando porque esta semana es la Semana de la Educación en Ciencias de la Computación, y que millones de estudiantes de todo el mundo también han estado aprendiendo una Hora de Código esta semana. Felicita a los estudiantes por formar parte de este movimiento mundial.\n\nEntrega a cada estudiante un [certificate][0] certificado con su nombre."
         },
         "692a60f1-d3a2-44d3-8c58-19461d6b5999": {
           "name": "Siguientes Pasos",
           "description": "Informa a los alumnos de que, si han disfrutado de la actividad de hoy, tienen muchas opciones para seguir codificando. Anima a los alumnos a visitar code.org/learn para obtener una lista de opciones o, si estás planeando alguna de las actividades de extensión que siguen, cuéntales lo que viene a continuación en tu aula."
         },
         "c00f4730-69b0-4533-bf47-253647c6715f": {
-          "description": "Entrega a cada alumno un [\"Ticket de Salida\"](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) y pídeles que resuman lo que han aprendido hoy, cómo se han sentido o qué han experimentado. Los alumnos pueden dibujar, escribir o expresarse de cualquier forma que les resulte cómoda. Recoge un \"Ticket de Salida\" de cada alumno al salir del aula. Si lo deseas, puedes colocar los \" Tickets de Salida\" en un tablón de anuncios o en algún lugar destacado de la escuela como recordatorio de tu Hora del Código."
+          "description": "Entrega a cada alumno un [\"Ticket de Salida\"][0] y pídeles que resuman lo que han aprendido hoy, cómo se han sentido o qué han experimentado. Los alumnos pueden dibujar, escribir o expresarse de cualquier forma que les resulte cómoda. Recoge un \"Ticket de Salida\" de cada alumno al salir del aula. Si lo deseas, puedes colocar los \" Tickets de Salida\" en un tablón de anuncios o en algún lugar destacado de la escuela como recordatorio de tu Hora del Código."
         },
         "6e6e32c8-6dfd-4075-b1c7-0c96b6853b09": {
           "name": "Más de una Hora de Code",
-          "description": "Una vez finalizada la Hora del Código, hay muchas maneras de seguir enseñando informática en tu aula de K-5. Aquí tienes algunas ideas:\n\n-   **Enseña los cursos [Fundamentos de las Ciencias de la Computación de Code Studio](http://code.org/educate/k5)**. Estos seis cursos están diseñados para jóvenes estudiantes. Los estudiantes se abren paso a través de una serie de rompecabezas que les enseñan a codificar, y los educadores tienen acceso a atractivos planes de lecciones que ayudan a que el aprendizaje cobre vida. Code.org ofrece formación profesional gratuita para estos cursos, en línea o en forma presencial."
+          "description": "Una vez finalizada la Hora del Código, hay muchas maneras de seguir enseñando informática en tu aula de K-5. Aquí tienes algunas ideas:\n\n-   **Enseña los cursos [Fundamentos de las Ciencias de la Computación de Code Studio][0]**. Estos seis cursos están diseñados para jóvenes estudiantes. Los estudiantes se abren paso a través de una serie de rompecabezas que les enseñan a codificar, y los educadores tienen acceso a atractivos planes de lecciones que ayudan a que el aprendizaje cobre vida. Code.org ofrece formación profesional gratuita para estos cursos, en línea o en forma presencial."
         },
         "5858c0fa-a7a6-44c2-afcb-bfb816b18a5b": {
           "name": "Ajustes para Profesores de K-2",
@@ -31683,7 +31683,7 @@
         },
         "fc04ef5f-0d78-418b-9311-e12201106453": {
           "tips": [
-            "Una forma de presentar la Hora del Código si no estás muy familiarizado con la codificación es mostrar uno de [nuestros vídeos inspiradores](https://hourofcode.com/us/resources#videos). Elige uno que creas que tus alumnos encontrarán inspirador y compártelo ahora. Para los más jóvenes, sugerimos \"[Cualquiera puede aprender](https://youtu.be/qYZF6oIZtfc)\"."
+            "Una forma de presentar la Hora del Código si no estás muy familiarizado con la codificación es mostrar uno de [nuestros vídeos inspiradores][0]. Elige uno que creas que tus alumnos encontrarán inspirador y compártelo ahora. Para los más jóvenes, sugerimos \"[Cualquiera puede aprender][1]\"."
           ]
         },
         "ea8a3bf2-1425-482a-9f98-a5b30d6ee809": {
@@ -31691,7 +31691,7 @@
         },
         "c628ba28-35c2-4ded-a19d-74079377b309": {
           "name": "Laboratorio de juegos de la Edad de hielo",
-          "description": "Anima a tus alumnos a completar el tutorial [Edad de Hielo del Laboratorio de Juegos](https://studio.code.org/s/iceage/lessons/1/levels/1).\nDependiendo de la edad y la capacidad de tus alumnos, puedes considerar: \n\n-   Para los alumnos de secundaria y bachillerato, te sugerimos que elijas tutoriales que permitan el juego libre y la creación de aplicaciones o juegos. Puedes hacer que los alumnos trabajen de forma independiente, en parejas o pequeños grupos. Hay muchos otros tutoriales en [code.org/learn](http://code.org/learn) que permiten la creación libre, incluyendo el [Hacer un Juego Flappy](https://studio.code.org/s/flappy) y nuestra nueva herramienta beta [AppLab](https://code.org/educate/applab).\n-   Para los alumnos más jóvenes, te sugerimos que dividas tu clase en parejas o grupos muy pequeños (de tres a cuatro alumnos cada uno) y pidas a cada grupo que trabaje conjuntamente para completar el tutorial utilizando [Programación en parejas](https://youtu.be/vgkahOzFH2Q).\n-   Para los alumnos adultos, el tutorial [Escribe tu primer programa de ordenador](https://studio.code.org/hoc/1) funciona muy bien como reto independiente o como actividad de programación en parejas."
+          "description": "Anima a tus alumnos a completar el tutorial [Edad de Hielo del Laboratorio de Juegos][0].\nDependiendo de la edad y la capacidad de tus alumnos, puedes considerar: \n\n-   Para los alumnos de secundaria y bachillerato, te sugerimos que elijas tutoriales que permitan el juego libre y la creación de aplicaciones o juegos. Puedes hacer que los alumnos trabajen de forma independiente, en parejas o pequeños grupos. Hay muchos otros tutoriales en [code.org/learn][1] que permiten la creación libre, incluyendo el [Hacer un Juego Flappy][2] y nuestra nueva herramienta beta [AppLab][3].\n-   Para los alumnos más jóvenes, te sugerimos que dividas tu clase en parejas o grupos muy pequeños (de tres a cuatro alumnos cada uno) y pidas a cada grupo que trabaje conjuntamente para completar el tutorial utilizando [Programación en parejas][4].\n-   Para los alumnos adultos, el tutorial [Escribe tu primer programa de ordenador][5] funciona muy bien como reto independiente o como actividad de programación en parejas."
         },
         "548dc37b-f338-4a52-a77e-7380794c64f2": {
           "tips": [
@@ -31699,7 +31699,7 @@
           ]
         },
         "86d8427e-15bf-420c-b405-3d1f1c3c46c6": {
-          "description": "Si un grupo o individuo termina antes, pueden intentar otro tutorial visitando [code.org/learn](http://code.org/learn)."
+          "description": "Si un grupo o individuo termina antes, pueden intentar otro tutorial visitando [code.org/learn][0]."
         },
         "d8b92f56-a741-43ac-9d6f-3fdf1c452001": {
           "name": "Informe",
@@ -31707,7 +31707,7 @@
         },
         "3d63393a-9146-4027-8783-247e19637d25": {
           "name": "A Celebrar",
-          "description": "Explica que hoy vas a pasar una hora codificando, porque esta semana es la Semana de la Educación en Informática, y millones de otros estudiantes en todo el mundo también han estado aprendiendo una Hora de Código esta semana. Felicita a los estudiantes por formar parte de este movimiento mundial.\n\nEntrega a cada estudiante un [certificate](http://code.org/certificates) con su nombre."
+          "description": "Explica que hoy vas a pasar una hora codificando, porque esta semana es la Semana de la Educación en Informática, y millones de otros estudiantes en todo el mundo también han estado aprendiendo una Hora de Código esta semana. Felicita a los estudiantes por formar parte de este movimiento mundial.\n\nEntrega a cada estudiante un [certificate][0] con su nombre."
         },
         "4ae122fa-da6f-4aaf-b2f8-c68fd0bb68af": {
           "name": "Siguientes Pasos",
@@ -31719,7 +31719,7 @@
         },
         "4ae8bc68-25be-4eaa-ae1e-b9bfe8623a23": {
           "name": "Más de una Hora de Code",
-          "description": "Una vez finalizada la Hora del Código, hay muchas maneras de seguir enseñando informática en tu aula de K-5. Aquí tienes algunas ideas:\n\n-   Enseña los cursos [Fundamentos de las Ciencias de la Computación de Code Studio](http://code.org/educate/k5). Estos cuatro cursos están diseñados para jóvenes estudiantes. Los estudiantes se abren paso a través de una serie de rompecabezas que les enseñan a codificar, y los educadores tienen acceso a atractivos planes de lecciones que ayudan a que el aprendizaje cobre vida. Code.org ofrece desarrollo profesional gratuito para estos cursos, en línea o de forma presencial.\n-   **Invita a un experto en ciencias de la computación para que hable en tu clase sobre su trabajo**. Si no conoces a ningún voluntario, ponte en contacto con algunos de los que aparecen en el [mapa de voluntarios](https://code.org/volunteer/local)."
+          "description": "Una vez finalizada la Hora del Código, hay muchas maneras de seguir enseñando informática en tu aula de K-5. Aquí tienes algunas ideas:\n\n-   Enseña los cursos [Fundamentos de las Ciencias de la Computación de Code Studio][0]. Estos cuatro cursos están diseñados para jóvenes estudiantes. Los estudiantes se abren paso a través de una serie de rompecabezas que les enseñan a codificar, y los educadores tienen acceso a atractivos planes de lecciones que ayudan a que el aprendizaje cobre vida. Code.org ofrece desarrollo profesional gratuito para estos cursos, en línea o de forma presencial.\n-   **Invita a un experto en ciencias de la computación para que hable en tu clase sobre su trabajo**. Si no conoces a ningún voluntario, ponte en contacto con algunos de los que aparecen en el [mapa de voluntarios][1]."
         },
         "88079aec-5c42-4f3f-bbb6-cba4f8866c92": {
           "name": "Preparando el terreno",
@@ -31727,7 +31727,7 @@
         },
         "6874de98-8778-447b-8453-0138809b2c7e": {
           "tips": [
-            "Una forma de presentar la Hora del Código si no estás muy familiarizado con la codificación es mostrar uno de [nuestros vídeos inspiradores](https://hourofcode.com/us/resources#videos). Elige uno que creas que tus alumnos encontrarán inspirador y compártelo ahora. Para los más jóvenes, sugerimos \"[Cualquiera puede aprender](https://youtu.be/qYZF6oIZtfc)\"."
+            "Una forma de presentar la Hora del Código si no estás muy familiarizado con la codificación es mostrar uno de [nuestros vídeos inspiradores][0]. Elige uno que creas que tus alumnos encontrarán inspirador y compártelo ahora. Para los más jóvenes, sugerimos \"[Cualquiera puede aprender][1]\"."
           ]
         },
         "82e4a494-65fb-40ac-b2c2-323044e15b77": {
@@ -31735,7 +31735,7 @@
         },
         "bd5d11f4-9c4c-4f24-bb9f-482392bd65aa": {
           "name": "Laboratorio de Juego Disney Infinity",
-          "description": "Estimula a tus alumnos a completar el tutorial de [Disney Infinity Play Lab](https://studio.code.org/s/infinity/lessons/1/levels/1).\n\nDependiendo de la edad y la capacidad de sus alumnos, puedes considerar: \n\n-   Para los alumnos de secundaria y bachillerato, te sugerimos que elijas tutoriales que permitan el juego libre y la creación de aplicaciones o juegos. Puedes hacer que los alumnos trabajen de forma independiente, en parejas o pequeños grupos. Hay muchos otros tutoriales en [code.org/learn](http://code.org/learn) que permiten la creación libre, incluyendo el [Make a Flappy Game](https://studio.code.org/s/flappy) y nuestra nueva herramienta beta [AppLab](https://code.org/educate/applab).\n-   Para los alumnos más jóvenes, te sugerimos que dividas tu clase en parejas o grupos muy pequeños (de tres a cuatro alumnos cada uno) y pidas a cada grupo que trabaje conjuntamente para completar el tutorial utilizando [Programación en parejas](https://youtu.be/vgkahOzFH2Q).\n-   Para los alumnos adultos, el tutorial [Escribe tu primer programa de ordenador](https://studio.code.org/hoc/1) funciona muy bien como reto independiente o como actividad de programación en parejas."
+          "description": "Estimula a tus alumnos a completar el tutorial de [Disney Infinity Play Lab][0].\n\nDependiendo de la edad y la capacidad de sus alumnos, puedes considerar: \n\n-   Para los alumnos de secundaria y bachillerato, te sugerimos que elijas tutoriales que permitan el juego libre y la creación de aplicaciones o juegos. Puedes hacer que los alumnos trabajen de forma independiente, en parejas o pequeños grupos. Hay muchos otros tutoriales en [code.org/learn][1] que permiten la creación libre, incluyendo el [Make a Flappy Game][2] y nuestra nueva herramienta beta [AppLab][3].\n-   Para los alumnos más jóvenes, te sugerimos que dividas tu clase en parejas o grupos muy pequeños (de tres a cuatro alumnos cada uno) y pidas a cada grupo que trabaje conjuntamente para completar el tutorial utilizando [Programación en parejas][4].\n-   Para los alumnos adultos, el tutorial [Escribe tu primer programa de ordenador][5] funciona muy bien como reto independiente o como actividad de programación en parejas."
         },
         "b1ea2c15-24bb-475a-bb3f-bbc8ea1a51c0": {
           "tips": [
@@ -31743,7 +31743,7 @@
           ]
         },
         "712a8a98-3ab7-43d0-8f6f-a68e6984b009": {
-          "description": "Si un grupo o individuo termina antes, pueden intentar otro tutorial visitando [code.org/learn](http://code.org/learn)."
+          "description": "Si un grupo o individuo termina antes, pueden intentar otro tutorial visitando [code.org/learn][0]."
         },
         "a0530acf-3bce-4de9-b392-fe8725044086": {
           "name": "Informe",
@@ -31751,7 +31751,7 @@
         },
         "ceaf9d96-e806-48e1-9a95-30566999264e": {
           "name": "A Celebrar",
-          "description": "Comenta que hoy van a pasar una hora codificando porque esta semana es la Semana de la Educación en Ciencias de la Computación, y que millones de estudiantes de todo el mundo también han estado aprendiendo una Hora de Código esta semana. Felicita a los estudiantes por formar parte de este movimiento mundial.\n\nEntrega a cada estudiante un [certificate](http://code.org/certificates) certificado con su nombre."
+          "description": "Comenta que hoy van a pasar una hora codificando porque esta semana es la Semana de la Educación en Ciencias de la Computación, y que millones de estudiantes de todo el mundo también han estado aprendiendo una Hora de Código esta semana. Felicita a los estudiantes por formar parte de este movimiento mundial.\n\nEntrega a cada estudiante un [certificate][0] certificado con su nombre."
         },
         "680268d8-e3db-4f80-b56d-dfe40ada4d77": {
           "name": "Siguientes Pasos",
@@ -31763,7 +31763,7 @@
         },
         "38f15942-4a08-48f7-a0c4-e04232bc9bdc": {
           "name": "Más de una Hora de Code",
-          "description": "Una vez finalizada la Hora del Código, hay muchas maneras de seguir enseñando informática en tu aula de K-5. Aquí tienes algunas ideas:\n\n-   Enseña los cursos [Fundamentos de las Ciencias de la Computación de Code Studio](http://code.org/educate/k5). Estos cuatro cursos están diseñados para jóvenes estudiantes. Los estudiantes se abren paso a través de una serie de rompecabezas que les enseñan a codificar, y los educadores tienen acceso a atractivos planes de lecciones que ayudan a que el aprendizaje cobre vida. Code.org ofrece desarrollo profesional gratuito para estos cursos, en línea o de forma presencial.\n-   **Invita a un experto en ciencias de la computación para que hable en tu clase sobre su trabajo**. Si no conoces a ningún voluntario, ponte en contacto con algunos de los que aparecen en el [mapa de voluntarios](https://code.org/volunteer/local)."
+          "description": "Una vez finalizada la Hora del Código, hay muchas maneras de seguir enseñando informática en tu aula de K-5. Aquí tienes algunas ideas:\n\n-   Enseña los cursos [Fundamentos de las Ciencias de la Computación de Code Studio][0]. Estos cuatro cursos están diseñados para jóvenes estudiantes. Los estudiantes se abren paso a través de una serie de rompecabezas que les enseñan a codificar, y los educadores tienen acceso a atractivos planes de lecciones que ayudan a que el aprendizaje cobre vida. Code.org ofrece desarrollo profesional gratuito para estos cursos, en línea o de forma presencial.\n-   **Invita a un experto en ciencias de la computación para que hable en tu clase sobre su trabajo**. Si no conoces a ningún voluntario, ponte en contacto con algunos de los que aparecen en el [mapa de voluntarios][1]."
         },
         "a16594a7-8312-4ac3-87c8-fd2d5d6e5bfb": {
           "name": "Introducción",
@@ -31771,7 +31771,7 @@
         },
         "6415b9b2-1e23-43ee-9d0c-e65efcb0d65c": {
           "tips": [
-            "Una forma de presentar la Hora del Código si no estás muy familiarizado con la codificación es mostrar uno de [nuestros vídeos inspiradores](https://hourofcode.com/us/resources#videos). Elige uno que creas que tus alumnos encontrarán inspirador y compártelo ahora. Para los alumnos más jóvenes, sugerimos \"[La Hora del Código está Aquí](https://youtu.be/FC5FbmsH4fw)\"."
+            "Una forma de presentar la Hora del Código si no estás muy familiarizado con la codificación es mostrar uno de [nuestros vídeos inspiradores][0]. Elige uno que creas que tus alumnos encontrarán inspirador y compártelo ahora. Para los alumnos más jóvenes, sugerimos \"[La Hora del Código está Aquí][1]\"."
           ]
         },
         "3fee530c-6d5f-44da-89f7-cfae73040787": {
@@ -31784,16 +31784,16 @@
         },
         "aafa75c2-9439-415c-b42f-cac8ddfc2874": {
           "name": "Aventurero de Minecraft",
-          "description": "Desafía a tus alumnos a completar el tutorial [Minecraft: Aventurero](studio.code.org/s/mc/lessons/1/levels/1).\n\nDependiendo de la edad y la capacidad de tus alumnos, puedes considerar: \n\n-   Para los alumnos más jóvenes, te sugerimos que dividas tu clase en parejas y pidas a cada grupo que trabaje en conjunto para completar el tutorial utilizando la [programación en parejas](https://youtu.be/vgkahOzFH2Q).\n-   En el caso de los alumnos de grado medio, nos parece que trabajar de forma independiente en los tutoriales funciona bien. A veces, resulta útil permitir a los alumnos que elijan su propio tutorial. Si los alumnos no están interesados en Minecraft, pueden tener una experiencia similar con los tutoriales [Código con Anna y Elsa](https://studio.code.org/s/frozen/stage/1/puzzle/1) o [Star Wars](https://code.org/starwars).\n-   Para los alumnos mayores o adultos, el tutorial [Minecraft](https://hourofcode.com/mc) funciona muy bien como desafío independiente o como actividad de programación en parejas.",
+          "description": "Desafía a tus alumnos a completar el tutorial [Minecraft: Aventurero][0].\n\nDependiendo de la edad y la capacidad de tus alumnos, puedes considerar: \n\n-   Para los alumnos más jóvenes, te sugerimos que dividas tu clase en parejas y pidas a cada grupo que trabaje en conjunto para completar el tutorial utilizando la [programación en parejas][1].\n-   En el caso de los alumnos de grado medio, nos parece que trabajar de forma independiente en los tutoriales funciona bien. A veces, resulta útil permitir a los alumnos que elijan su propio tutorial. Si los alumnos no están interesados en Minecraft, pueden tener una experiencia similar con los tutoriales [Código con Anna y Elsa][2] o [Star Wars][3].\n-   Para los alumnos mayores o adultos, el tutorial [Minecraft][4] funciona muy bien como desafío independiente o como actividad de programación en parejas.",
           "tips": [
             "Asegúrate de practicar tú mismo los tutoriales elegidos, antes de pedir a tus alumnos que lo intenten. De este modo, sabrás qué puedes esperar y podrás decidir si dejas que los alumnos elijan su propio tutorial, o si quieres asignar los tutoriales en función de las necesidades de los alumnos."
           ]
         },
         "1766511d-3639-46a3-911f-acc7f8c4b922": {
-          "description": "Si un grupo o individuo termina antes, pueden intentar otro tutorial visitando [code.org/learn](http://code.org/learn)."
+          "description": "Si un grupo o individuo termina antes, pueden intentar otro tutorial visitando [code.org/learn][0]."
         },
         "8c990fee-4a0f-4d70-a635-ab66a8195193": {
-          "description": "Entrega a cada alumno un [\"Ticket de Salida\"](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) y pídeles que resuman lo que han aprendido hoy, cómo se han sentido o qué han experimentado. Los alumnos pueden dibujar, escribir o expresarse de cualquier forma que les resulte cómoda. Recoge un \"Ticket de Salida\" de cada alumno al salir del aula. Si lo deseas, puedes colocar los \" Tickets de Salida\" en un tablón de anuncios o en algún lugar destacado de la escuela como recordatorio de tu Hora del Código."
+          "description": "Entrega a cada alumno un [\"Ticket de Salida\"][0] y pídeles que resuman lo que han aprendido hoy, cómo se han sentido o qué han experimentado. Los alumnos pueden dibujar, escribir o expresarse de cualquier forma que les resulte cómoda. Recoge un \"Ticket de Salida\" de cada alumno al salir del aula. Si lo deseas, puedes colocar los \" Tickets de Salida\" en un tablón de anuncios o en algún lugar destacado de la escuela como recordatorio de tu Hora del Código."
         },
         "bcdecd77-2efb-44b5-9fdc-e244d1f5ccf6": {
           "name": "Informe",
@@ -31801,7 +31801,7 @@
         },
         "6b574c8b-2319-4244-acc8-fb8405fa5737": {
           "name": "A Celebrar",
-          "description": "Comenta que hoy van a pasar una hora codificando porque esta semana es la Semana de la Educación en Ciencias de la Computación, y que millones de estudiantes de todo el mundo también han estado aprendiendo una Hora de Código esta semana. Felicita a los estudiantes por formar parte de este movimiento mundial.\n\nEntrega a cada estudiante un [certificate](https://studio.code.org/certificates/batch?course=bWM=) certificado con su nombre."
+          "description": "Comenta que hoy van a pasar una hora codificando porque esta semana es la Semana de la Educación en Ciencias de la Computación, y que millones de estudiantes de todo el mundo también han estado aprendiendo una Hora de Código esta semana. Felicita a los estudiantes por formar parte de este movimiento mundial.\n\nEntrega a cada estudiante un [certificate][0] certificado con su nombre."
         },
         "02dfa607-4f9e-404c-bdae-f9f423fa526c": {
           "name": "Siguientes Pasos",
@@ -31809,7 +31809,7 @@
         },
         "5bc8aefa-7bb0-4f22-a555-321738755b8c": {
           "name": "Más de una Hora de Code",
-          "description": "Una vez finalizada la Hora del Código, hay muchas maneras de seguir enseñando informática en tu aula de K-5. Aquí tienes algunas ideas:\n\n-   **Enseña los cursos [Fundamentos de las Ciencias de la Computación de Code Studio](http://code.org/educate/k5)**. Estos cuatro cursos están diseñados para jóvenes estudiantes. Los estudiantes se abren camino a través de una serie de rompecabezas que les enseñan a codificar, y los profesores tienen acceso a atractivos planes de estudio que ayudan a que el aprendizaje cobre vida. Code.org ofrece desarrollo profesional gratuito para estos cursos, en línea o en forma presencial.\n-   **Visita [Tú Puedes Enseñar Informática](https://code.org/teach)** para ver más sugerencias de cursos.\n-   **Invita a un experto en ciencias de la computación para que hable en tu clase sobre su trabajo**. ¿No conoces a ningún informático local? Ponte en contacto con un voluntario en nuestro [mapa de voluntarios](https://code.org/volunteer/local)"
+          "description": "Una vez finalizada la Hora del Código, hay muchas maneras de seguir enseñando informática en tu aula de K-5. Aquí tienes algunas ideas:\n\n-   **Enseña los cursos [Fundamentos de las Ciencias de la Computación de Code Studio][0]**. Estos cuatro cursos están diseñados para jóvenes estudiantes. Los estudiantes se abren camino a través de una serie de rompecabezas que les enseñan a codificar, y los profesores tienen acceso a atractivos planes de estudio que ayudan a que el aprendizaje cobre vida. Code.org ofrece desarrollo profesional gratuito para estos cursos, en línea o en forma presencial.\n-   **Visita [Tú Puedes Enseñar Informática][1]** para ver más sugerencias de cursos.\n-   **Invita a un experto en ciencias de la computación para que hable en tu clase sobre su trabajo**. ¿No conoces a ningún informático local? Ponte en contacto con un voluntario en nuestro [mapa de voluntarios][2]"
         },
         "563d9088-3ce6-48c1-aa79-6f673e089247": {
           "name": "Introducción",
@@ -31817,7 +31817,7 @@
         },
         "9f1107d0-cde6-4f78-911c-5018ea9264e0": {
           "tips": [
-            "Una forma de presentar la Hora del Código si no estás muy familiarizado con la codificación es mostrar uno de [nuestros vídeos inspiradores](https://hourofcode.com/us/resources#videos). Elige uno que creas que tus alumnos encontrarán inspirador y compártelo ahora. Para los alumnos más jóvenes, sugerimos \"[La Hora del Código está Aquí](https://youtu.be/FC5FbmsH4fw)\"."
+            "Una forma de presentar la Hora del Código si no estás muy familiarizado con la codificación es mostrar uno de [nuestros vídeos inspiradores][0]. Elige uno que creas que tus alumnos encontrarán inspirador y compártelo ahora. Para los alumnos más jóvenes, sugerimos \"[La Hora del Código está Aquí][1]\"."
           ]
         },
         "ed8509fa-59b4-43a4-bd4a-05a5018387c2": {
@@ -31830,7 +31830,7 @@
         },
         "75d779c4-24f7-40be-bf92-b0c094c16d11": {
           "name": "Diseñador de Minecraft Hora de Código",
-          "description": "Desafía a tus alumnos a completar esta actividad [Minecraft: Designer](http://studio.code.org/s/minecraft/lessons/1/levels/1).\n\nDependiendo de la edad y la capacidad de tus alumnos, puedes considerar: \n\n-   Para los alumnos más jóvenes, te sugerimos que dividas tu clase en parejas y pidas a cada grupo que trabaje conjuntamente para completar el tutorial utilizando la [programación por parejas](https://youtu.be/vgkahOzFH2Q).\n-   En el caso de los alumnos de grado medio, nos parece que trabajar de forma independiente en los tutoriales funciona bien. A veces, resulta útil permitir a los alumnos que elijan su propio tutorial. Si los alumnos no están interesados en Minecraft, pueden tener una experiencia similar con los tutoriales [Código con Anna y Elsa](https://studio.code.org/s/frozen/stage/1/puzzle/1) o [Star Wars](https://code.org/starwars).\n-   Para los alumnos mayores o adultos, el tutorial [Minecraft: Designer](http://studio.code.org/s/minecraft/lessons/1/levels/1) funciona muy bien como reto independiente o como actividad de programación en parejas."
+          "description": "Desafía a tus alumnos a completar esta actividad [Minecraft: Designer][0].\n\nDependiendo de la edad y la capacidad de tus alumnos, puedes considerar: \n\n-   Para los alumnos más jóvenes, te sugerimos que dividas tu clase en parejas y pidas a cada grupo que trabaje conjuntamente para completar el tutorial utilizando la [programación por parejas][1].\n-   En el caso de los alumnos de grado medio, nos parece que trabajar de forma independiente en los tutoriales funciona bien. A veces, resulta útil permitir a los alumnos que elijan su propio tutorial. Si los alumnos no están interesados en Minecraft, pueden tener una experiencia similar con los tutoriales [Código con Anna y Elsa][2] o [Star Wars][3].\n-   Para los alumnos mayores o adultos, el tutorial [Minecraft: Designer][4] funciona muy bien como reto independiente o como actividad de programación en parejas."
         },
         "8d4ecee7-5f04-4f80-9673-c2aec0c5ab9d": {
           "tips": [
@@ -31838,7 +31838,7 @@
           ]
         },
         "307ffdf6-e274-484b-a10f-329ddfe568dc": {
-          "description": "Si un grupo o individuo termina antes, pueden intentar otro tutorial visitando [code.org/learn](http://code.org/learn)."
+          "description": "Si un grupo o individuo termina antes, pueden intentar otro tutorial visitando [code.org/learn][0]."
         },
         "70935a98-82e9-4553-94f7-90a4e615dd34": {
           "name": "Informe",
@@ -31846,18 +31846,18 @@
         },
         "5f00e31d-70fa-4bb2-9bef-223793082f5c": {
           "name": "A Celebrar",
-          "description": "Comenta que hoy van a pasar una hora codificando porque esta semana es la Semana de la Educación en Ciencias de la Computación, y que millones de estudiantes de todo el mundo también han estado aprendiendo una Hora de Código esta semana. Felicita a los estudiantes por formar parte de este movimiento mundial.\n\nEntrega a cada estudiante un [certificate](https://studio.code.org/certificates/batch?course=bWM=) certificado con su nombre."
+          "description": "Comenta que hoy van a pasar una hora codificando porque esta semana es la Semana de la Educación en Ciencias de la Computación, y que millones de estudiantes de todo el mundo también han estado aprendiendo una Hora de Código esta semana. Felicita a los estudiantes por formar parte de este movimiento mundial.\n\nEntrega a cada estudiante un [certificate][0] certificado con su nombre."
         },
         "20b7009c-3a45-4211-a9ad-c65f56099200": {
           "name": "Siguientes Pasos",
-          "description": "Haz saber a los alumnos que si han disfrutado de la actividad de hoy, tienen muchas opciones para seguir codificando. Anima a los alumnos a visitar [code.org/learn](<>) para ver una lista de opciones o, si estás planeando alguna de las actividades de extensión que siguen, cuéntales lo que viene a continuación en tu aula."
+          "description": "Haz saber a los alumnos que si han disfrutado de la actividad de hoy, tienen muchas opciones para seguir codificando. Anima a los alumnos a visitar [code.org/learn][0] para ver una lista de opciones o, si estás planeando alguna de las actividades de extensión que siguen, cuéntales lo que viene a continuación en tu aula."
         },
         "85fc4f24-eb97-4ff5-813f-4af3e5497034": {
-          "description": "Entrega a cada alumno un [\"Ticket de Salida\"](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) y pídeles que resuman lo que han aprendido hoy, cómo se han sentido o qué han experimentado. Los alumnos pueden dibujar, escribir o expresarse de cualquier forma que les resulte cómoda. Recoge un \"Ticket de Salida\" de cada alumno al salir del aula. Si lo deseas, puedes colocar los \" Tickets de Salida\" en un tablón de anuncios o en algún lugar destacado de la escuela como recordatorio de tu Hora del Código."
+          "description": "Entrega a cada alumno un [\"Ticket de Salida\"][0] y pídeles que resuman lo que han aprendido hoy, cómo se han sentido o qué han experimentado. Los alumnos pueden dibujar, escribir o expresarse de cualquier forma que les resulte cómoda. Recoge un \"Ticket de Salida\" de cada alumno al salir del aula. Si lo deseas, puedes colocar los \" Tickets de Salida\" en un tablón de anuncios o en algún lugar destacado de la escuela como recordatorio de tu Hora del Código."
         },
         "7f24d7ca-8a9e-417c-ac8e-18ca3ab48ac1": {
           "name": "Más de una Hora de Code",
-          "description": "Una vez finalizada la Hora del Código, hay muchas maneras de seguir enseñando informática en tu aula de K-5. Aquí tienes algunas ideas:\n\n-   Enseña los cursos [Fundamentos de Ciencias de la Computación de Code Studio](http://code.org/educate/k5). Estos seis cursos están diseñados para jóvenes estudiantes. Los estudiantes se abren paso a través de una serie de rompecabezas que les enseñan a codificar, y los profesores tienen acceso a atractivos planes de estudio que ayudan a que el aprendizaje cobre vida. Code.org ofrece desarrollo profesional gratuito para estos cursos, en línea o en forma presencial.\n-   **Visita [Tú puedes Enseñar Ciencias de la Computación](https://code.org/teach)** para ver más sugerencias de cursos.\n-   **Invita a un experto en informática a hablar en tu clase sobre su trabajo**. ¿No conoces a ningún informático local? Ponte en contacto con un voluntario en nuestro [mapa de voluntarios](https://code.org/volunteer/local)"
+          "description": "Una vez finalizada la Hora del Código, hay muchas maneras de seguir enseñando informática en tu aula de K-5. Aquí tienes algunas ideas:\n\n-   Enseña los cursos [Fundamentos de Ciencias de la Computación de Code Studio][0]. Estos seis cursos están diseñados para jóvenes estudiantes. Los estudiantes se abren paso a través de una serie de rompecabezas que les enseñan a codificar, y los profesores tienen acceso a atractivos planes de estudio que ayudan a que el aprendizaje cobre vida. Code.org ofrece desarrollo profesional gratuito para estos cursos, en línea o en forma presencial.\n-   **Visita [Tú puedes Enseñar Ciencias de la Computación][1]** para ver más sugerencias de cursos.\n-   **Invita a un experto en informática a hablar en tu clase sobre su trabajo**. ¿No conoces a ningún informático local? Ponte en contacto con un voluntario en nuestro [mapa de voluntarios][2]"
         },
         "54b95e4d-58b7-4551-9782-7ce134f4e457": {
           "name": "¡Crear Emoción!",
@@ -32125,7 +32125,7 @@
         },
         "6fa68bdd-8f9b-4d69-b54e-28141ee6d732": {
           "tips": [
-            "Una forma de presentar la Hora del Código, si no estás muy familiarizado con la codificación, es mostrar uno de nuestros [vídeos inspiradores](https://hourofcode.com/us/resources#videos). Elige uno que creas que tus alumnos encontrarán inspirador y compártelo ahora. Para los alumnos más jóvenes, sugerimos [La Hora del Código está Aquí](https://youtu.be/FC5FbmsH4fw)."
+            "Una forma de presentar la Hora del Código, si no estás muy familiarizado con la codificación, es mostrar uno de nuestros [vídeos inspiradores][0]. Elige uno que creas que tus alumnos encontrarán inspirador y compártelo ahora. Para los alumnos más jóvenes, sugerimos [La Hora del Código está Aquí][1]."
           ]
         },
         "7f1244d9-811b-410c-96b2-9f7086959c6b": {
@@ -32133,7 +32133,7 @@
         },
         "a69a3310-4b81-4e04-8313-51044489351a": {
           "name": "La guerra de las galaxias: cómo construir una galaxia con código",
-          "description": "Anima a tus alumnos a completar el tutorial [Star Wars: Building a Galaxy with Code](https://studio.code.org/s/starwars/lessons/1/levels/1).\n\nDependiendo de la edad y la capacidad de tus alumnos, puedes considerar: \n\n-   Para los estudiantes más jóvenes, te sugerimos que dividas la clase en parejas y pidas a cada una de ellas que trabajen juntas para completar el tutorial utilizando la [programación en parejas](https://youtu.be/vgkahOzFH2Q). \n-   En el caso de los alumnos más mayores, nos parece que trabajar de forma independiente en los tutoriales funciona bien. A veces es útil permitir que los alumnos elijan su propio tutorial. Si los alumnos no están interesados en La guerra de las galaxias, pueden tener una experiencia similar con el tutorial [Escribe tu Primer Programa Informático](https://studio.code.org/hoc/1).\n-   Para los estudiantes adultos, [Star Wars: Building a Galaxy with Code](https://studio.code.org/s/starwars/lessons/1/levels/1) funciona muy bien como reto independiente o como actividad de programación en parejas."
+          "description": "Anima a tus alumnos a completar el tutorial [Star Wars: Building a Galaxy with Code][0].\n\nDependiendo de la edad y la capacidad de tus alumnos, puedes considerar: \n\n-   Para los estudiantes más jóvenes, te sugerimos que dividas la clase en parejas y pidas a cada una de ellas que trabajen juntas para completar el tutorial utilizando la [programación en parejas][1]. \n-   En el caso de los alumnos más mayores, nos parece que trabajar de forma independiente en los tutoriales funciona bien. A veces es útil permitir que los alumnos elijan su propio tutorial. Si los alumnos no están interesados en La guerra de las galaxias, pueden tener una experiencia similar con el tutorial [Escribe tu Primer Programa Informático][2].\n-   Para los estudiantes adultos, [Star Wars: Building a Galaxy with Code][3] funciona muy bien como reto independiente o como actividad de programación en parejas."
         },
         "b17f8e8a-6b46-4f46-a4fc-894cf561bb9d": {
           "tips": [
@@ -32141,15 +32141,15 @@
           ]
         },
         "eb72d828-788d-4090-9e4f-71423c081948": {
-          "description": "Al final del tutorial, los alumnos tienen la oportunidad de construir un juego de Star Wars. Si los alumnos terminan antes, anímelos a probar los juegos de los demás y a hacer sus propios juegos más interesantes o desafiantes.\n\nTambién puedes dejar que un grupo o individuo intente otro tutorial visitando [code.org/learn](http://code.org/learn)."
+          "description": "Al final del tutorial, los alumnos tienen la oportunidad de construir un juego de Star Wars. Si los alumnos terminan antes, anímelos a probar los juegos de los demás y a hacer sus propios juegos más interesantes o desafiantes.\n\nTambién puedes dejar que un grupo o individuo intente otro tutorial visitando [code.org/learn][0]."
         },
         "bec776b1-a8cd-4e18-a1bc-be30f2942863": {
           "name": "Informe",
-          "description": "Entrega a cada alumno unas cuantas notas adhesivas o tarjetas. Facilita una actividad rápida de: [\"Látigo Alrededor\"](http://www.theteachertoolkit.com/index.php/tool/whip-around)\n\n-   Plantea una pregunta que tenga múltiples respuestas, como \"Comparte algo que te haya gustado de la actividad de la Hora del Código que has completado\" o \"Comparte algunas habilidades que hayas aprendido hoy\".\n-   Pide a los alumnos que escriban tantas respuestas como sea posible, una idea por nota adhesiva o tarjeta de notas.\n    \"Látigo\" alrededor de la sala, llamando a un estudiante cada vez. Pídeles que compartan una de sus respuestas. Cuando se les llame, los alumnos no deben repetir una respuesta; deben añadir algo nuevo.\n-   Después de la ronda, pide a los alumnos que comenten qué ideas y temas han aparecido más en sus respuestas."
+          "description": "Entrega a cada alumno unas cuantas notas adhesivas o tarjetas. Facilita una actividad rápida de: [\"Látigo Alrededor\"][0]\n\n-   Plantea una pregunta que tenga múltiples respuestas, como \"Comparte algo que te haya gustado de la actividad de la Hora del Código que has completado\" o \"Comparte algunas habilidades que hayas aprendido hoy\".\n-   Pide a los alumnos que escriban tantas respuestas como sea posible, una idea por nota adhesiva o tarjeta de notas.\n    \"Látigo\" alrededor de la sala, llamando a un estudiante cada vez. Pídeles que compartan una de sus respuestas. Cuando se les llame, los alumnos no deben repetir una respuesta; deben añadir algo nuevo.\n-   Después de la ronda, pide a los alumnos que comenten qué ideas y temas han aparecido más en sus respuestas."
         },
         "4cb35c62-404e-42b9-9eaf-09ec2f485a2b": {
           "name": "A Celebrar",
-          "description": "Explica que hoy vas a pasar una hora codificando, porque esta semana es la Semana de la Educación en Informática, y millones de otros estudiantes en todo el mundo también han estado aprendiendo una Hora de Código esta semana. Felicita a los estudiantes por formar parte de este movimiento mundial.\n\nEntrega a cada estudiante un [certificate](http://code.org/certificates) con su nombre."
+          "description": "Explica que hoy vas a pasar una hora codificando, porque esta semana es la Semana de la Educación en Informática, y millones de otros estudiantes en todo el mundo también han estado aprendiendo una Hora de Código esta semana. Felicita a los estudiantes por formar parte de este movimiento mundial.\n\nEntrega a cada estudiante un [certificate][0] con su nombre."
         },
         "80ff32c9-0373-4125-a65e-bef5f0e21cba": {
           "name": "Siguientes Pasos",
@@ -32157,7 +32157,7 @@
         },
         "57e403d7-a8be-47fc-bb97-1a068e2469ed": {
           "name": "Más de una Hora de Code",
-          "description": "Una vez finalizada la Hora del Código, hay muchas maneras de seguir enseñando informática en tu aula de K-5. Aquí tienes algunas ideas:\n\n-   **Enseña los cursos [Fundamentos de Ciencias de la Computación de Code Studio](http://code.org/educate/k5)**. Estos seis cursos están diseñados para jóvenes estudiantes. Los alumnos se abren paso a través de una serie de rompecabezas que les enseñan a codificar, y los educadores tienen acceso a atractivos planes de lecciones que ayudan a que el aprendizaje cobre vida. Code.org ofrece desarrollo profesional gratuito para estos cursos, en línea o presencial.\n-   Investiga algunas de las carreras de codificación que has identificado hoy. Encuentra recursos sobre la planificación de proyectos de investigación de carreras en [Sharemylesson.com](http://www.sharemylesson.com/TaxonomySearchResults.aspx?area=resources&keywords=career+research).\n-   **Invita a un experto en informática para que hable en tu clase sobre su trabajo**. Si no conoces a ningún voluntario, ponte en contacto con algunos de los que aparecen en el [mapa de voluntarios](https://code.org/volunteer/local)."
+          "description": "Una vez finalizada la Hora del Código, hay muchas maneras de seguir enseñando informática en tu aula de K-5. Aquí tienes algunas ideas:\n\n-   **Enseña los cursos [Fundamentos de Ciencias de la Computación de Code Studio][0]**. Estos seis cursos están diseñados para jóvenes estudiantes. Los alumnos se abren paso a través de una serie de rompecabezas que les enseñan a codificar, y los educadores tienen acceso a atractivos planes de lecciones que ayudan a que el aprendizaje cobre vida. Code.org ofrece desarrollo profesional gratuito para estos cursos, en línea o presencial.\n-   Investiga algunas de las carreras de codificación que has identificado hoy. Encuentra recursos sobre la planificación de proyectos de investigación de carreras en [Sharemylesson.com][1].\n-   **Invita a un experto en informática para que hable en tu clase sobre su trabajo**. Si no conoces a ningún voluntario, ponte en contacto con algunos de los que aparecen en el [mapa de voluntarios][2]."
         },
         "d0f5c55b-b19c-418c-8dc6-f87a80e08f45": {
           "description": "Pídele a los alumnos que añadan sus notas adhesivas \"importantes\" o tarjetas de notas a su mapa mental de \"Ciencias de Computación\" antes de que salgan de clase. Trata de llenar el cuadro con muchas ideas acerca de lo que son las Ciencias de Computación y por qué son importantes."
@@ -32168,14 +32168,14 @@
         },
         "88f6ccc1-0efa-4c60-985c-971a235d5645": {
           "tips": [
-            "Una forma de presentar la Hora del Código, si no estás muy familiarizado con la codificación, es mostrar uno de nuestros [vídeos inspiradores](https://hourofcode.com/us/resources#videos). Elige uno que creas que tus alumnos encontrarán inspirador y compártelo ahora. Para los alumnos más jóvenes, sugerimos [La Hora del Código está Aquí](https://youtu.be/FC5FbmsH4fw)."
+            "Una forma de presentar la Hora del Código, si no estás muy familiarizado con la codificación, es mostrar uno de nuestros [vídeos inspiradores][0]. Elige uno que creas que tus alumnos encontrarán inspirador y compártelo ahora. Para los alumnos más jóvenes, sugerimos [La Hora del Código está Aquí][1]."
           ]
         },
         "dbeab27b-4231-4281-be73-ae2aaa3d94b2": {
           "description": "Explica que en informática, \"código\" significa un conjunto de instrucciones que un ordenador puede interpretar. Indica a los alumnos que hoy van a practicar la \"codificación\", la \"programación\" y la \"depuración\".\n\nDefinir:\n\n-   **Codificar** significa escribir código, o escribir instrucciones para un ordenador.\n-   **Programar**, igualmente, significa escribir código o instrucciones. Hoy, programarás con bloques en el ordenador (si estás usando un tutorial online) o con lápiz y papel (si estás usando una actividad no conectada).\n-   **Depuración** significa comprobar el código en busca de errores y tratar de solucionarlos.\n\nPide a los alumnos que nombren algunos trabajos de los que hayan oído hablar relacionados con la codificación. Los alumnos pueden mencionar cosas como \"programador\", \"informático\", \"desarrollador de software\" o \"ingeniero\". Apunta las respuestas de los alumnos en tu pizarra de \"Ciencias de la Computación\", haciendo un mapa mental de la información que comparten tus alumnos. \n\n**Diles:** _¡Tenéis razón, amigos! No hay respuestas correctas o incorrectas aquí... casi cualquier trabajo hoy en día implica algún tipo de conocimiento de código. Aunque hay muchas, muchas carreras que requieren algún conocimiento de codificación, aprender a codificar es algo que cualquiera puede hacer. Y nosotros vamos a hacerlo hoy. Puede que las cosas que vamos a hacer hoy no lo parezcan a primera vista, pero todo lo que aprendas hoy podría llevarte a crear el próximo Angry Birds o Twitter._"
         },
         "0ac387c0-d67a-4177-aacf-837ce03c55aa": {
-          "description": "Anima a tus alumnos a completar el tutorial [Star Wars: Building a Galaxy with Code](https://studio.code.org/s/starwarsblocks/lessons/1/levels/1).\n\nDependiendo de la edad y la capacidad de tus alumnos, puedes considerar: \n\n-   Para los estudiantes más jóvenes, te sugerimos que dividas la clase en parejas y pidas a cada una de ellas que trabajen juntas para completar el tutorial utilizando la [programación en parejas](https://youtu.be/vgkahOzFH2Q). \n-   En el caso de los alumnos más mayores, nos parece que trabajar de forma independiente en los tutoriales funciona bien. A veces es útil permitir que los alumnos elijan su propio tutorial. Si los alumnos no están interesados en La guerra de las galaxias, pueden tener una experiencia similar con el tutorial [Escribe tu Primer Programa Informático](https://studio.code.org/hoc/1).\n-   Para los estudiantes adultos, [Star Wars: Building a Galaxy with Code](https://studio.code.org/s/starwarsblocks/lessons/1/levels/1) funciona muy bien como reto independiente o como actividad de programación en parejas."
+          "description": "Anima a tus alumnos a completar el tutorial [Star Wars: Building a Galaxy with Code][0].\n\nDependiendo de la edad y la capacidad de tus alumnos, puedes considerar: \n\n-   Para los estudiantes más jóvenes, te sugerimos que dividas la clase en parejas y pidas a cada una de ellas que trabajen juntas para completar el tutorial utilizando la [programación en parejas][1]. \n-   En el caso de los alumnos más mayores, nos parece que trabajar de forma independiente en los tutoriales funciona bien. A veces es útil permitir que los alumnos elijan su propio tutorial. Si los alumnos no están interesados en La guerra de las galaxias, pueden tener una experiencia similar con el tutorial [Escribe tu Primer Programa Informático][2].\n-   Para los estudiantes adultos, [Star Wars: Building a Galaxy with Code][3] funciona muy bien como reto independiente o como actividad de programación en parejas."
         },
         "88879c41-12f5-4d2e-86e6-93925b83d7d0": {
           "tips": [
@@ -32183,15 +32183,15 @@
           ]
         },
         "719affd9-c1a0-4b0c-8bc3-22060893f5e0": {
-          "description": "Al final del tutorial, los alumnos tienen la oportunidad de construir un juego de Star Wars. Si los alumnos terminan antes, anímelos a probar los juegos de los demás y a hacer sus propios juegos más interesantes o desafiantes.\n\nTambién puedes dejar que un grupo o individuo intente otro tutorial visitando [code.org/learn](http://code.org/learn)."
+          "description": "Al final del tutorial, los alumnos tienen la oportunidad de construir un juego de Star Wars. Si los alumnos terminan antes, anímelos a probar los juegos de los demás y a hacer sus propios juegos más interesantes o desafiantes.\n\nTambién puedes dejar que un grupo o individuo intente otro tutorial visitando [code.org/learn][0]."
         },
         "afb5ecc7-af66-492d-96bb-2412754005e0": {
           "name": "Informe",
-          "description": "Entrega a cada alumno unas cuantas notas adhesivas o tarjetas. Facilita una actividad rápida de: [\"Látigo Alrededor\"](http://www.theteachertoolkit.com/index.php/tool/whip-around)\n\n-   Plantea una pregunta que tenga múltiples respuestas, como \"Comparte algo que te haya gustado de la actividad de la Hora del Código que has completado\" o \"Comparte algunas habilidades que hayas aprendido hoy\".\n-   Pide a los alumnos que escriban tantas respuestas como sea posible, una idea por nota adhesiva o tarjeta de notas.\n    \"Látigo\" alrededor de la sala, llamando a un estudiante cada vez. Pídeles que compartan una de sus respuestas. Cuando se les llame, los alumnos no deben repetir una respuesta; deben añadir algo nuevo.\n-   Después de la ronda, pide a los alumnos que comenten qué ideas y temas han aparecido más en sus respuestas."
+          "description": "Entrega a cada alumno unas cuantas notas adhesivas o tarjetas. Facilita una actividad rápida de: [\"Látigo Alrededor\"][0]\n\n-   Plantea una pregunta que tenga múltiples respuestas, como \"Comparte algo que te haya gustado de la actividad de la Hora del Código que has completado\" o \"Comparte algunas habilidades que hayas aprendido hoy\".\n-   Pide a los alumnos que escriban tantas respuestas como sea posible, una idea por nota adhesiva o tarjeta de notas.\n    \"Látigo\" alrededor de la sala, llamando a un estudiante cada vez. Pídeles que compartan una de sus respuestas. Cuando se les llame, los alumnos no deben repetir una respuesta; deben añadir algo nuevo.\n-   Después de la ronda, pide a los alumnos que comenten qué ideas y temas han aparecido más en sus respuestas."
         },
         "16a6a4db-d853-478e-9945-3f0d17865e80": {
           "name": "A Celebrar",
-          "description": "Explica que hoy vas a pasar una hora codificando, porque esta semana es la Semana de la Educación en Informática, y millones de otros estudiantes en todo el mundo también han estado aprendiendo una Hora de Código esta semana. Felicita a los estudiantes por formar parte de este movimiento mundial.\n\nEntrega a cada estudiante un [certificate](http://code.org/certificates) con su nombre."
+          "description": "Explica que hoy vas a pasar una hora codificando, porque esta semana es la Semana de la Educación en Informática, y millones de otros estudiantes en todo el mundo también han estado aprendiendo una Hora de Código esta semana. Felicita a los estudiantes por formar parte de este movimiento mundial.\n\nEntrega a cada estudiante un [certificate][0] con su nombre."
         },
         "450db873-f55e-4f30-bbb9-5dfde5bf47e4": {
           "name": "Siguientes Pasos",
@@ -32199,7 +32199,7 @@
         },
         "5ec42aed-0b79-49f8-bd64-0716e60498a4": {
           "name": "Más de una Hora de Code",
-          "description": "Una vez finalizada la Hora del Código, hay muchas maneras de seguir enseñando informática en tu aula de K-5. Aquí tienes algunas ideas:\n\n-   **Enseña los cursos [Fundamentos de Ciencias de la Computación de Code Studio](http://code.org/educate/k5)**. Estos seis cursos están diseñados para jóvenes estudiantes. Los alumnos se abren paso a través de una serie de rompecabezas que les enseñan a codificar, y los educadores tienen acceso a atractivos planes de lecciones que ayudan a que el aprendizaje cobre vida. Code.org ofrece desarrollo profesional gratuito para estos cursos, en línea o presencial.\n-   Investiga algunas de las carreras de codificación que has identificado hoy. Encuentra recursos sobre la planificación de proyectos de investigación de carreras en [Sharemylesson.com](http://www.sharemylesson.com/TaxonomySearchResults.aspx?area=resources&keywords=career+research).\n-   **Invita a un experto en informática para que hable en tu clase sobre su trabajo**. Si no conoces a ningún voluntario, ponte en contacto con algunos de los que aparecen en el [mapa de voluntarios](https://code.org/volunteer/local)."
+          "description": "Una vez finalizada la Hora del Código, hay muchas maneras de seguir enseñando informática en tu aula de K-5. Aquí tienes algunas ideas:\n\n-   **Enseña los cursos [Fundamentos de Ciencias de la Computación de Code Studio][0]**. Estos seis cursos están diseñados para jóvenes estudiantes. Los alumnos se abren paso a través de una serie de rompecabezas que les enseñan a codificar, y los educadores tienen acceso a atractivos planes de lecciones que ayudan a que el aprendizaje cobre vida. Code.org ofrece desarrollo profesional gratuito para estos cursos, en línea o presencial.\n-   Investiga algunas de las carreras de codificación que has identificado hoy. Encuentra recursos sobre la planificación de proyectos de investigación de carreras en [Sharemylesson.com][1].\n-   **Invita a un experto en informática para que hable en tu clase sobre su trabajo**. Si no conoces a ningún voluntario, ponte en contacto con algunos de los que aparecen en el [mapa de voluntarios][2]."
         },
         "b0fff664-80cc-4318-b031-edf88ad1aebc": {
           "description": "Pídele a los alumnos que añadan sus notas adhesivas \"importantes\" o tarjetas de notas a su mapa mental de \"Ciencias de Computación\" antes de que salgan de clase. Trata de llenar el cuadro con muchas ideas acerca de lo que son las Ciencias de Computación y por qué son importantes."
@@ -32325,7 +32325,7 @@
         },
         "bacf1db7-dc91-41b8-ad71-9fb655e18dfa": {
           "tips": [
-            "-   Procura mantener la calma en el laboratorio\n-   Recuerda no masticar chicles ni caramelos\n-   Desinfecta tus manos\n-   Siéntate con tu compañero en un ordenador\n-   Asegúrate de que el primer \"conductor\" pueda alcanzar el ratón\n-   Cuando te sientas frustrado, no golpees ni agites el ordenador o el monitor\n-   Sigue la [Regla 20/20/20](http://www.anthro.com/blog/2013/10/how-to-prevent-eye-strain-with-the-20-20-20-rule#.WOU39BLyu35).\n-   Cómo lidiar con los [Wiggles](https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll) cada 20-30 minutos (requiere un inicio de sesión gratuito en GoNoodle).\n-   Pregunta a tu compañero antes de preguntar al profesor\n-   Baja el volumen para que los demás puedan oír a sus compañeros\n-   Utiliza tu diario para anotar los sentimientos y las soluciones"
+            "-   Procura mantener la calma en el laboratorio\n-   Recuerda no masticar chicles ni caramelos\n-   Desinfecta tus manos\n-   Siéntate con tu compañero en un ordenador\n-   Asegúrate de que el primer \"conductor\" pueda alcanzar el ratón\n-   Cuando te sientas frustrado, no golpees ni agites el ordenador o el monitor\n-   Sigue la [Regla 20/20/20][0].\n-   Cómo lidiar con los [Wiggles][1] cada 20-30 minutos (requiere un inicio de sesión gratuito en GoNoodle).\n-   Pregunta a tu compañero antes de preguntar al profesor\n-   Baja el volumen para que los demás puedan oír a sus compañeros\n-   Utiliza tu diario para anotar los sentimientos y las soluciones"
           ]
         },
         "aa328958-bd87-4dbb-8585-cb33f905051f": {
@@ -32348,7 +32348,7 @@
           ]
         },
         "66f2f042-aa67-41db-a756-4ab6e5623f77": {
-          "description": "Desafía a tus alumnos a completar el tutorial [Jigsaw](http://studio.code.org/s/jigsaw/lessons/1/levels/1).\n\n-   Anima a los alumnos que tengan dudas o desafíos a que empiecen por preguntar a su compañero.\n-   Las preguntas sin respuesta se pueden dirigir a un grupo cercano, que podría conocer ya la solución.\n-   Haz que los alumnos describan el problema que están viendo. ¿Qué se supone que hace? ¿Qué hace? ¿Qué les dice eso?\n-   Recuerda a los alumnos frustrados que la frustración es un paso en el camino del aprendizaje y que la perseverancia dará sus frutos.\n-   Si un alumno sigue atascado después de todo esto, hazle preguntas orientativas para que detecte un error por sí mismo."
+          "description": "Desafía a tus alumnos a completar el tutorial [Jigsaw][0].\n\n-   Anima a los alumnos que tengan dudas o desafíos a que empiecen por preguntar a su compañero.\n-   Las preguntas sin respuesta se pueden dirigir a un grupo cercano, que podría conocer ya la solución.\n-   Haz que los alumnos describan el problema que están viendo. ¿Qué se supone que hace? ¿Qué hace? ¿Qué les dice eso?\n-   Recuerda a los alumnos frustrados que la frustración es un paso en el camino del aprendizaje y que la perseverancia dará sus frutos.\n-   Si un alumno sigue atascado después de todo esto, hazle preguntas orientativas para que detecte un error por sí mismo."
         },
         "11068ad0-f20b-4daf-94cd-7b4549b76f3a": {
           "progression_name": "Niveles"
@@ -32358,10 +32358,10 @@
           "description": "Solicita a los alumnos que escriban o dibujen sobre lo que han aprendido o cómo se han sentido al terminar los rompecabezas.\n\n**Sugerencias:**\n\n-   ¿Puedes dibujar una secuencia sobre cómo prepararte para ir al laboratorio de informática?\n-   Dibuja un \"Hacer\" y un \"No hacer\" en el laboratorio de informática\n-   Dibuja y rotula el nombre de la parte del ordenador que utilizaste al hacer clic y arrastrar durante los rompecabezas. (botón del ratón, pantalla táctil, trackpad)"
         },
         "8f47b370-5569-4a34-b105-c765a39c8460": {
-          "description": "Entrega a cada alumno un [Ticket de Salida](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) y pídeles que resuman lo que han aprendido hoy, cómo se han sentido o qué han experimentado. Los alumnos pueden dibujar, escribir o expresarse de cualquier forma que les resulte cómoda. Recoge un \"Ticket de salida\" de cada alumno al salir del aula. Si lo desea, puede colgar los \" Tickets de Salida\" en un tablón de anuncios o en algún lugar destacado de la escuela como recordatorio de su Hora del Código."
+          "description": "Entrega a cada alumno un [Ticket de Salida][0] y pídeles que resuman lo que han aprendido hoy, cómo se han sentido o qué han experimentado. Los alumnos pueden dibujar, escribir o expresarse de cualquier forma que les resulte cómoda. Recoge un \"Ticket de salida\" de cada alumno al salir del aula. Si lo desea, puede colgar los \" Tickets de Salida\" en un tablón de anuncios o en algún lugar destacado de la escuela como recordatorio de su Hora del Código."
         },
         "6ddc599f-da51-4adc-9dcc-f13b8b53e760": {
-          "description": "#### Más allá de la Hora del Código\n\nUna vez finalizada la Hora del Código, hay muchas maneras de continuar con la enseñanza de las ciencias de la computación en tu aula de K-5. He aquí algunas ideas:\n\n-   Enseña los cursos [Code Studio Fundamentos de Informática](http://code.org/educate/k5). Estos seis cursos están diseñados para jóvenes estudiantes. Los estudiantes se abren camino a través de una serie de rompecabezas que les enseñan a codificar, y los educadores tienen acceso a atractivos planes de estudio que ayudan a que el aprendizaje cobre vida. Code.org ofrece formación del profesorado gratuita para estos cursos, en línea o presencial.\n\n-   Invita a un experto en informática para que hable en tu clase sobre su trabajo. ¿No conoces a ningún informático local? Ponte en contacto con un voluntario en nuestro [mapa de voluntarios](https://code.org/volunteer/local)"
+          "description": "#### Más allá de la Hora del Código\n\nUna vez finalizada la Hora del Código, hay muchas maneras de continuar con la enseñanza de las ciencias de la computación en tu aula de K-5. He aquí algunas ideas:\n\n-   Enseña los cursos [Code Studio Fundamentos de Informática][0]. Estos seis cursos están diseñados para jóvenes estudiantes. Los estudiantes se abren camino a través de una serie de rompecabezas que les enseñan a codificar, y los educadores tienen acceso a atractivos planes de estudio que ayudan a que el aprendizaje cobre vida. Code.org ofrece formación del profesorado gratuita para estos cursos, en línea o presencial.\n\n-   Invita a un experto en informática para que hable en tu clase sobre su trabajo. ¿No conoces a ningún informático local? Ponte en contacto con un voluntario en nuestro [mapa de voluntarios][1]"
         },
         "b16d189d-d990-44c4-be49-8f81ac81a96e": {
           "description": "#### Preparando el Escenario\n\nDa la bienvenida a los alumnos a la clase y presenta la actividad del día.",

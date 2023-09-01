@@ -724,6 +724,8 @@ ja:
         how-ai-works-creativity-full: AIに創造性と想像力はあるのか？
         how-ai-works-llms-part1: チャットボットと大規模言語モデル Part 1
         how-ai-works-llms-part2: チャットボットと大規模言語モデル Part 2
+        what-is-creativity: 創造性とは？
+        code-break: コードブレークを行う
     callout:
       text:
         drag_blocks: '「移動」ブロックをドラッグして、ほかのブロックの下にくっつけてください。'

@@ -1,11 +1,261 @@
 @use 'sass:math';
+@import 'phase1-design-system';
+
+$container-width: 960px;
+
+.bodyText {
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.buttonsContainer {
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+  text-align: center;
+  button,
+  a,
+  a:link,
+  a:visited {
+    margin: 0;
+    height: 40px;
+    font-size: 1em;
+    line-height: 36.5px;
+  }
+}
+
+.centerContentContainer {
+  display: flex;
+  column-gap: 48px;
+}
+
+.closeButton {
+  display: flex;
+  justify-content: end;
+  line-height: normal;
+
+  button {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    outline: none;
+    height: auto;
+  }
+
+  button:active {
+    border: none !important;
+  }
+
+  button:hover {
+    background-color: transparent;
+  }
+
+  i {
+    text-decoration: none;
+    color: $neutral_dark80;
+    font-size: 20px;
+  }
+}
+
+.compatibilityContainer {
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+}
+
+.courseOfferingContainer {
+  width: 736px;
+  padding: 16px 32px 16px 16px;
+  box-sizing: border-box;
+}
+
+.descriptionContainer {
+  margin-bottom: 20px;
+}
+
+.descriptionText {
+  font-size: 0.875em;
+}
+
+.descriptionVideoContainer {
+  width: 440px;
+}
 
 .expandedCardContainer {
-  position: absolute;
-  background-color: #f9f9f9;
-  color: #333;
-  border: 1px solid #ccc;
+  position: relative;
+  background-color: $neutral_white;
+  border: 1px solid $neutral_dark;
   border-radius: 4px;
-  padding: 10px;
+  width: $container-width;
+  box-sizing: border-box;
+}
+
+.circleCheck {
+  color: $product_affirmative_default !important;
+}
+
+.circleXmark {
+  color: $product_negative_default !important;
+}
+
+.triangleExclamation {
+  color: $product_caution_default !important;
+}
+
+.flexDivider {
+  display: flex;
+}
+
+.horizontalDivider {
+  border-top: 1px solid $neutral_dark20;
+}
+
+.iconStyle {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  outline: none;
+}
+
+.iconWithDescription {
+  display: flex;
+  align-items: center;
+  column-gap: 8px;
+  white-space: nowrap;
+
+  > p {
+    font-size: 0.875em;
+    margin: 0;
+    color: $neutral_dark;
+  }
+
+  i {
+    font-size: 0.875em;
+    color: $neutral_dark80;
+  }
+}
+
+.infoContainer {
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
+}
+
+.linksContainer {
+  width: 200px;
+  hr {
+    margin: 8px 0;
+  }
+
+  i {
+    margin-inline-start: 8px;
+  }
+}
+
+.professionalLearningContainer {
+  a {
+    color: $brand_secondary_default !important;
+    text-decoration: underline !important;
+  }
+
+  a:hover {
+    color: $brand_secondary_dark !important;
+    text-decoration: none !important;
+  }
+}
+
+.relatedContainer {
+  margin-top: 32px;
+
+  h4 {
+    margin-bottom: 0;
+  }
+
+  hr {
+    margin-top: 8px;
+    margin-bottom: 16px;
+  }
+}
+
+.relatedCurriculaContainer {
+  background-color: $neutral_light;
+  width: 224px;
+  padding: 16px;
+  border-radius: 0 4px 4px 0;
+}
+
+.resourcesContainer {
+  margin-bottom: 40px;
+
+  h4 {
+    margin-bottom: 0;
+  }
+
+  hr {
+    margin: 8px 0;
+  }
+
+  a {
+    text-decoration: none;
+    color: $neutral_dark !important;
+  }
+
+  a:hover {
+    color: $brand_secondary_default !important;
+  }
+
+  p {
+    font-size: 14px;
+    margin-bottom: 0;
+  }
+}
+
+.subjectsText {
+  overflow: hidden;
+  white-space: normal;
+}
+
+.thickDivider {
+  border-top: 2px solid $neutral_dark20;
+}
+
+.videoContainer {
+  height: 246.5px;
+  width: 100%;
+}
+
+.arrowContainer {
+  position: relative;
+  max-width: 600px;
+  height: auto;
+  border: 1px solid $neutral_white;
+  padding-top: 16px;
+  box-sizing: border-box;
+}
+
+.arrowContainer::before {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-top: 1px solid $neutral_dark;
+  border-left: 1px solid $neutral_dark;
+  top: 100%;
+  left: 54.5%;
+  margin-left: -25px;
+  content: '';
+  transform: rotate(45deg);
+  margin-top: -9px;
+  background: $neutral_white;
   z-index: 1;
+}
+
+.mediaContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.imageContainer {
+  height: 166px;
 }

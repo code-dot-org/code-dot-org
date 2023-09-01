@@ -18,26 +18,26 @@ nav: how_to_nav
 
 ## 2. Explore Activities and Tutorials
 
-生徒が自らのペースで学習できるバラエティに富んだ楽しい[チュートリアル]({{ urls/learn }})を年齢層や経験レベルに応じて提供しています。 It’s popular for students to try self-led tutorials, though many activities include lesson plans for teachers to guide discussion or extend the activity as well.
+生徒が自らのペースで学習できるバラエティに富んだ楽しい[チュートリアル]({{ urls/learn }})を年齢層や経験レベルに応じて提供しています。 学生が自主学習型のチュートリアルを試すのが一般的ですが、多くのアクティビティには、教師がディスカッションを導いたり、アクティビティを拡張できる授業計画も含まれています。
 
-Explore the activities and decide ahead of time if you want to choose a single tutorial for all of your students, or let each child pick their own.
+アクティビティを見て、すべての生徒向けに1つのチュートリアルを選択するか、それぞれの子供に自分で選択させるかを事前に決めてください。
 
 [<img src="/images/fit-700/tutorials.png" />]({{ urls/learn }})
 
 ## 3. Create your Plan for the Day
 
-### Think about your technology needs - computers are optional!
+### 必要なテクノロジーについて考えましょう（コンピュータは必須ではありません！）
 
-- 最良のHour of Code体験にはインターネット接続されたコンピュータがつきものです。 But you don’t need a computer for every child, and you can even do the Hour of Code without a computer at all! For [unplugged activities](/learn), simply filter the Classroom Technology section to show options for “No computers or devices”.
-- 児童・生徒のコンピュータやデバイス上でチュートリアルをテストします。ブラウザ上で音声やビデオが正しく動くか確認します。 Have low bandwidth? Plan to show videos at the front of the class, so each student isn't downloading their own videos. Or try the offline tutorials.
+- 最良のHour of Code体験にはインターネット接続されたコンピュータがつきものです。 けれども、必ずしも一人一台のコンピュータを用意する必要はありません。もっと言えばコンピュータがない環境でもHour of Codeを行うことができます。 [パソコンを使わないアクティビティ](/learn)を探すには、クラスルームテクノロジーのセクションをフィルターにかけ「コンピュータやデバイスなし」のオプションを表示します。
+- 児童・生徒のコンピュータやデバイス上でチュートリアルをテストします。ブラウザ上で音声やビデオが正しく動くか確認します。 ネットワーク通信速度が遅いですか？ クラスの冒頭でビデオを全体に見せれば、各自がビデオをダウンロードする必要はありません。 もしくは、オフラインチュートリアルを試してみてください。
 - いくつかのチュートリアルでは音声が流れます。その場合は、ヘッドフォンを準備するか、生徒に自分のものを持ってくるように頼みます。
-- Don't have enough devices? Use [pair programming](https://www.youtube.com/watch?v=vgkahOzFH2Q). 生徒たちがグループで活動すれば、先生にあまり頼らずにお互い助け合いながら進めることができます。 さらに、子どもたちはコンピュータサイエンスが一人だけでやるものではないことに気づくでしょう。
+- 十分な数のデバイスがありませんか？ [ペアプログラミング](https://www.youtube.com/watch?v=vgkahOzFH2Q)の出番です。 生徒たちがグループで活動すれば、先生にあまり頼らずにお互い助け合いながら進めることができます。 さらに、子どもたちはコンピュータサイエンスが一人だけでやるものではないことに気づくでしょう。
 
 <img src="/images/fit-350/group_ipad.jpg" />
 
 ### Pick a day and time
 
-People around the world join in the Hour of Code celebration during CS Education Week (December 9-13) when the latest tutorials and activities are released. But you can do an Hour of Code any day of the year!
+People around the world join in the Hour of Code celebration during CS Education Week (December 9-13) when the latest tutorials and activities are released. けれども、Hour of Codeは一年中いつでも行うことができます！
 
 ## 4. Promote your Hour of Code
 

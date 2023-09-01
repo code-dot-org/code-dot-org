@@ -8,6 +8,7 @@ import InstructionsWithWorkspace from './instructions/InstructionsWithWorkspace'
 import CodeWorkspace from './CodeWorkspace';
 import Overlay from './Overlay';
 import VisualizationResizeBar from '../lib/ui/VisualizationResizeBar';
+import ModalFunctionEditor from '@cdo/apps/blockly/components/ModalFunctionEditor';
 
 /**
  * Top-level React wrapper for our standard blockly apps.
@@ -42,6 +43,7 @@ class AppView extends React.Component {
         <VisualizationResizeBar />
         <InstructionsWithWorkspace>
           <CodeWorkspace />
+          <ModalFunctionEditor />
         </InstructionsWithWorkspace>
       </StudioAppWrapper>
     );

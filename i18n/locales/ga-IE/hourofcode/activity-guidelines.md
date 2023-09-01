@@ -1,5 +1,5 @@
 ---
-title: Activity Guidelines
+title: Treoirlínte Gníomhaíochta
 ---
 
 <style>
@@ -8,271 +8,276 @@ title: Activity Guidelines
   }
 </style>
 
-# Guidelines for creating and submitting tutorials and lessons for Hour of Code™ and Computer Science Education Week
+# Treoirlínte maidir le ranganna teagaisc agus ceachtanna a chruthú agus a chur isteach le haghaidh Uair an Chóid™ agus Seachtain Oideachais na Ríomheolaíochta
 
-Code.org hosts a variety of Hour of Code™ activities, lessons, and videos on the Code.org and Hour of Code websites. The current list is at [hourofcode.com/learn]({{ urls/learn }}).
+Code.org hóstach ar éagsúlacht na Uair an Chóid™ gníomhaíochtaí, ceachtanna, agus físeáin ar an Code.org agus Uair na láithreáin ghréasáin Cód. The current list is at [hourofcode.com/learn]({{ urls/learn }}).
 
-Want to submit your own self-guided tutorial, teacher-led lesson, or robotics/maker activity that explains a computer science principle? Join this global movement and help participants around the world get started with an hour of code or go further with multi-lesson, day-long, or week-long activities.
+Ar mhaith leat do rang teagaisc féin-threoraithe féin, ceacht faoi stiúir an mhúinteora, nó gníomhaíocht róbataiceacha/déantóra a chur isteach a mhíníonn prionsabal eolaíochta ríomhaireachta? Bí ar an ngluaiseacht dhomhanda seo agus cuidigh le rannpháirtithe ar fud an domhain tosú le uair an chloig de chód nó téigh níos faide le gníomhaíochtaí ilcheachta, lae nó seachtaine.
 
-**After reading the guidelines, you can submit your activity through our [Hour of Code™ Activity Submission page](https://forms.gle/eeAt6kVuz3RKg5n18). You can submit an activity at any time, but the deadline for inclusion in any given calendar year is October 1. (For example, any activities received after October 1, 2023, will not be listed for 2023's Hour of Code.)** If you have any questions about your activity submission, please reach out to us at support@code.org.
+**Tar éis duit na treoirlínte a léamh, is féidir leat do ghníomhaíocht a chur isteach trínár leathanach [Hour of Code™ Aighneacht Gníomhaíochta](https://docs.google.com/forms/d/e/1FAIpQLSdsdTKU6pD5qXlPUQWlgrjESRlm2L02wkTcZQuL8hz9OEvzNQ/viewform). Is féidir leat gníomhaíocht a chur isteach ag am ar bith, ach is é an 1 Deireadh Fómhair an spriocdháta le cur san áireamh in aon bhliain féilire ar leith. (Mar shampla, ní dhéanfar aon ghníomhaíochtaí a gheofar tar éis 1 Deireadh Fómhair, 2023, a liostú le haghaidh Uair an Chóid 2023.)** Má tá aon cheist agat faoi d'aighneacht gníomhaíochta, déan teagmháil linn ag support@code.org.
 
-A few tips:
+Tá roinnt leideanna:
 
-1. **Submit more than one activity**: If you’ve built activities for different levels, different ages, or other categories, we list your activities separately so each teacher can find the right thing for their classroom. Submit each tutorial or activity individually. Given the number of submissions we have seen in recent years, we will have time to review **up to 5 activities** per partner. After that, we will make a best effort to review as many as possible before Hour of Code begins.
+1. **Cuir isteach gníomhaíocht níos mó ná aon**: Má tá gníomhaíochtaí tógtha agat do leibhéil éagsúla, aoiseanna difriúla nó catagóirí eile, liostaímid do ghníomhaíochtaí ar leithligh ionas gur féidir le gach múinteoir an rud ceart a fháil dá seomra ranga. Cuir isteach gach teagaisc nó gníomhaíocht ina n-aonar. Mar gheall ar líon na n-aighneachtaí atá feicthe againn le blianta beaga anuas, beidh am againn athbhreithniú a dhéanamh ar **suas le 5 ghníomhaíocht** in aghaidh an pháirtí. Ina dhiaidh sin, déanfaimid iarracht is fearr athbhreithniú a dhéanamh ar an oiread agus is féidir sula dtosaíonn Uair an Chóid.
 
-2. **Beyond beginner lessons**: In addition to lessons for teachers and students who are learning computer science for the first time, we list learning experiences for computer science-savvy classrooms that want to go a little bit further! Help us by submitting lessons for classes that are already comfortable with the basics.
+2. **Beyond ceachtanna thosaitheoirí**: Chomh maith le ceachtanna do mhúinteoirí agus do mhic léinn atá ag foghlaim eolaíocht ríomhaireachta den chéad uair, liostaímid eispéiris foghlama do sheomraí ranga eolaíochta-savvy ríomhaireachta atá ag iarraidh dul beagán níos faide! Cabhraigh linn trí cheachtanna a chur isteach do ranganna atá compordach leis na buneilimintí cheana féin.
 
-3. **Subject areas**: Have a great lesson idea that integrates Computer Science into Math? History? Language Arts? Science? Art? Or another subject? We’ve had numerous requests from teachers who want to connect the Hour of Code to their subject area. Teachers can filter for their classroom type (grade band or subject area) so we need your help filling in gaps to offer classroom activities or lesson plans that relate CS to every major subject area for different grade bands. We also continue to have a “Computer Science” category for teachers who are looking for generic CS activities.
+3. **Réimsí ábhair**: An bhfuil smaoineamh ceacht iontach a chomhtháthaíonn Eolaíocht Ríomhaireachta i Math? Stair? Na hEalaíona Teanga? Eolaíocht? Ealaín? Nó ábhar eile? Bhí go leor iarrataí againn ó mhúinteoirí atá ag iarraidh Uair an Chóid a nascadh lena réimse ábhair. Is féidir le múinteoirí scagadh a dhéanamh dá gcineál seomra ranga (banda grád nó limistéar ábhair) agus mar sin teastaíonn do chabhair uainn bearnaí a líonadh chun gníomhaíochtaí seomra ranga nó pleananna ceachta a thairiscint a bhaineann le CS le gach mórréimse ábhair do bhandaí grád éagsúla. Leanaimid de chatagóir “Eolaíocht Ríomhaireachta” a bheith againn do mhúinteoirí atá ag lorg gníomhaíochtaí cineálacha CS.
 
 <a id="top"></a>
 
-## Index:
+## Innéacs:
 
-- [What to submit](#whatsubmit)
-- [General guidelines for creating an Hour of Code™ activity](#guidelines)
-- [How to Submit](#submit)
-- [How activities will be evaluated](#inclusion)
-- [Suggestions for designing your activity](#design)
-- [Trademark Guidelines](#tm)
-- [Tracking Pixel](#pixel)
-- [Promoting your activity, CSEdWeek, and Hour of Code](#promote)
+- [Cad ba chóir a chur isteach](#whatsubmit)
+- [Treoirlínte ginearálta maidir le gníomhaíocht Uair an Chóid™ a chruthú](#guidelines)
+- [Conas a chur isteach](#submit)
+- [Conas a dhéanfar measúnú ar ghníomhaíochtaí](#inclusion)
+- [Moltaí maidir le do ghníomhaíocht a dhearadh](#design)
+- [Treoirlínte Trádmharc](#tm)
+- [Rianú picteilíní](#pixel)
+- [Do ghníomhaíocht a chur chun cinn, CSEDWeek, agus Uair an Chóid](#promote)
 
 <a id="whatsubmit"></a>
 
-## What to submit
+## Cad ba chóir a chur isteach
 
-**Self-guided puzzle or game ([example](https://code.org/dance))**
+**Féin-treoraithe bhfreagra nó cluiche ([sampla](https://code.org/dance))**
 
-These activities are designed for students to self-direct through a tutorial. They don’t require much instruction from a teacher or teacher prep work.
+Dearadh na gníomhaíochtaí seo do mhic léinn féin-dhíreach a dhéanamh trí rang teagaisc. Níl siad a cheangal ar teagasc i bhfad ó mhúinteoir nó obair prep múinteoir.
 
 **Teacher Facilitated lesson ([example](https://studio.code.org/s/course1/lessons/2/levels/1), [template](https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8axKIzv8YI56JGA))**
 
-Now that hundreds of thousands of educators have tried the Hour of Code, many classrooms are ready for more creative activities that teach the basics of computer science. To help more advanced teachers find inspiration, we collect and curate "teacher-led" lessons and activity plans for Hour of Code veterans.
+Anois go ndearna na céadta mílte oideachasóirí iarracht ar Uair an Chóid, tá go leor seomraí ranga réidh le haghaidh gníomhaíochtaí níos cruthaithí a mhúineann buneilimintí na heolaíochta ríomhaireachta. Chun cabhrú le múinteoirí níos airde inspioráid a fháil, bailímid agus coimeádaimid ceachtanna agus pleananna gníomhaíochta “faoi stiúir an mhúinteora” do shean-saighdiúirí Uair an Chóid.
 
-One type of activity that we will feature for experienced teachers are “open sandbox” creation projects. Activities that encourage students to build their own app, game, website or other project. If facilitated properly, more open-ended activities can better showcase the creative nature of computer science.
+Is é ceann de chineál gníomhaíochta go mbeidh muid gné do mhúinteoirí taithí acu “bosca gainimh oscailte” tionscadail a chruthú. Gníomhaíochtaí a spreagann mic léinn a n-aip, cluiche, suíomh Gréasáin nó tionscadal eile féin a thógáil. Má éascaítear i gceart iad, is féidir le gníomhaíochtaí níos oscailte nádúr cruthaitheach na ríomheolaíochta a thaispeáint níos fearr.
 
-Some educators may also prefer to host Hour of Code activities that follow a traditional lesson format rather than a guided-puzzle/game experience.
+B'fhéidir gurbh fhearr le roinnt oideachasóirí gníomhaíochtaí Uair an Chóid a óstáil a leanann formáid cheachta traidisiúnta seachas eispéireas treoir-puzzle/cluiche.
 
-You can start with this [template](https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8axKIzv8YI56JGA) for your lesson plan.
+Is féidir leat tosú leis an teimpléad [](https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8axKIzv8YI56JGA) seo do do phlean ceachta.
 
-**Activities for teachers in other subjects/fields**
+**Gníomhaíochtaí do mhúinteoirí in ábhair/réimsí eile**
 
-We also feature lesson plans designed for different subject areas. For example, a one-hour lesson plan for teaching code in a geometry class. Or a mad-lib exercise for English class. Or a creative quiz-creation activity for history class. These can help recruit teachers in other subject areas to guide an Hour of Code activity that is unique to their field, while demonstrating how CS can influence and enhance many different subject areas.
+Tá pleananna ceachta againn freisin atá deartha do réimsí éagsúla ábhair. Mar shampla, plean ceachta uair an chloig do chód teagaisc i rang céimseata. Nó cleachtadh mad-lib don rang Béarla. Nó gníomhaíocht chruthaitheach tráth na gceist a chruthú don rang staire. Is féidir leo seo cabhrú le múinteoirí a earcú i réimsí ábhair eile chun gníomhaíocht Uair an Chóid a threorú atá uathúil dá réimse féin, agus léiríonn siad conas is féidir le CS tionchar a imirt ar go leor réimsí éagsúla ábhair agus iad a fheabhsú.
 
-Examples:
+Samplaí:
 
-- Mirror Images (an activity for an art teacher)
-- An arduino activity for a physics teacher
-- A history of technology activity for a history teacher
-- And see [this list](https://docs.google.com/document/d/19jQ2VhBUyIn30VFbfdHOVpmlymhNiB0AkEqRxHz3dr0/edit) for more ideas from educators (or add your own to the list to inspire others)
+- Scáthán Íomhánna (gníomhaíocht do mhúinteoir ealaíne)
+- Gníomhaíocht arduino do mhúinteoir fisice
+- Stair gníomhaíochta teicneolaíochta do mhúinteoir staire
+- Agus féach [an liosta seo](https://docs.google.com/document/d/19jQ2VhBUyIn30VFbfdHOVpmlymhNiB0AkEqRxHz3dr0/edit) le haghaidh tuilleadh smaointe ó oideachasóirí (nó cuir do chuid féin leis an liosta chun daoine eile a spreagadh)
 
-**For students with special needs**
+**Do mhic léinn a bhfuil riachtanais speisialta acu**
 
-If you create an activity or tutorial that is designed for special needs students, please call that out in the description. In particular, there are very few options for the vision-impaired. If your activity is designed for this audience, please let us know.
+Má chruthaíonn tú gníomhaíocht nó rang teagaisc atá deartha do mhic léinn riachtanas speisialta, glaoigh air sin sa chur síos. Go háirithe, is beag rogha atá ann do dhaoine lagamhairc. Má tá do ghníomhaíocht deartha don lucht féachana seo, cuir in iúl dúinn.
 
-[**Back to the top**](#top)
+[**Ar ais go dtí an barr**](#top)
 
 <a id="guidelines"></a>
 
-## General guidelines for creating an Hour of Code activity
+## Treoirlínte ginearálta maidir le gníomhaíocht Uair an Chóid a chruthú
 
-The goal of an Hour of Code is to give beginners an accessible first taste of computer science or programming. The tone should be that:
+Is é an sprioc de Uair an Chóid a thabhairt thosaitheoirí blas an chéad inrochtana na heolaíochta ríomhaireachta nó cláir. Ba chóir go mbeadh an ton mar seo a leanas:
 
-- Anybody can learn computer science - regardless of age, gender, race, or ability/disability.
-- Computer science is connected to a wide variety of fields and interests. Everybody should learn it!
-- Encourage students to create something unique that can be shared with parents/friends or online.
+- Is féidir le duine ar bith eolaíocht ríomhaireachta a fhoghlaim - beag beann ar aois, inscne, cine, nó cumas/míchumas.
+- Tá eolaíocht ríomhaireachta ceangailte le réimse leathan réimsí agus spéiseanna. Ba chóir do gach duine é a fhoghlaim!
+- Spreag mic léinn rud uathúil a chruthú is féidir a roinnt le tuismitheoirí/cairde nó ar líne.
 
-The activities should teach a computer science concept such as loops, conditionals, encryption, or how the Internet works. An activity can also teach about how computer science connects to real world occupations, events, or history. For example, teaching UX design to make apps that are meaningful for an audience or cause. We discourage activities that focus on the syntax of programming rather than the concepts. For example, we will list, but not highlight, activities that teach HTML. Similarly, we discourage block programming lessons that focus on setting/changing configuration options rather than learning how to model an algorithm or process.
+Ba chóir na gníomhaíochtaí a mhúineadh coincheap eolaíocht ríomhaireachta ar nós lúba, conditionals, criptithe, nó conas a oibríonn an Idirlíon. Is féidir le gníomhaíocht múineadh freisin faoin gcaoi a nascann eolaíocht ríomhaireachta le gairmeacha, imeachtaí nó stair an domhain réadaigh. Mar shampla, dearadh UX a mhúineadh chun aipeanna a dhéanamh a bhfuil brí leo do lucht féachana nó do chúis. Spreagann muid gníomhaíochtaí a dhíríonn ar chomhréir na gclár seachas na coincheapa. Mar shampla, liostóimid gníomhaíochtaí a mhúineann HTML, ach gan aird a tharraingt orthu. Ar an gcaoi chéanna, díspreagann muid bloccheachtanna cláraithe a dhíríonn ar roghanna cumraíochta a shocrú/a athrú seachas foghlaim conas algartam nó próiseas a shamhaltú.
 
-*Technical requirements:* Because of the wide variety of school and classroom technology setups, the best activities are Web-based or smartphone-friendly, or otherwise unplugged-style activities that teach computer science concepts without the use of a computer (see <http://csunplugged.com/>). Activities that require an app-install, desktop app, or game-console experiences are okay but not ideal. We will not list activities that require sign up or payment. (Robotics activities can require robotics purchase.)
+*Technical requirements:* Because of the wide variety of school and classroom technology setups, the best activities are Web-based or smartphone-friendly, or otherwise unplugged-style activities that teach computer science concepts without the use of a computer (see <http://csunplugged.com/>). Tá gníomhaíochtaí a éilíonn aip-shuiteáil, aip deisce, nó eispéiris consól cluiche ceart go leor ach níl siad oiriúnach. Ní liostóimid gníomhaíochtaí a dteastaíonn clárú nó íocaíocht uathu. (Is féidir le gníomhaíochtaí róbataic a cheangal ar cheannach róbataic.)
 
-*Student-led (Self-Guided) Format:* The original Hour of Code was built mostly on the success of self-guided tutorials or lessons, optionally facilitated by the teacher. There are plenty of existing options, but if you want to create a new one, these activities should be designed so they can be fun for a student working alone, or in a classroom whose teacher has minimal prep or CS background. They should provide directions for students as opposed to an open-ended hour-long challenge. Ideally, the instructions and tutorials are integrated directly into the programming platform, to avoid switching tabs or windows between the tutorial and the programming platform.
+*Formáid faoi stiúir an Mhic Léinn (Féin-Threoraithe):* Tógadh an Uair an Chóid bunaidh den chuid is mó ar rath ranganna teagaisc nó ceachtanna féin-threoraithe, arna éascú ag an múinteoir go roghnach. Tá neart na roghanna atá ann cheana, ach más mian leat a chruthú ceann nua, Ba chóir na gníomhaíochtaí a dhearadh ionas gur féidir leo a bheith spraoi do mhac léinn ag obair ina n-aonar, nó i seomra ranga a bhfuil a múinteoir prep íosta nó CS cúlra. Ba chóir dóibh treoracha a sholáthar do mhic léinn seachas dúshlán oscailte uair an chloig. Go hidéalach, déantar na treoracha agus na ranganna teagaisc a chomhtháthú go díreach san ardán cláraithe, chun cluaisíní nó fuinneoga a athrú idir an rang teagaisc agus an t-ardán cláraithe.
 
-To get a sense of the wide variety of types of tutorials and lesson plans you can create, visit the [Hour of Code Activities page](https://hourofcode.com/us/learn).
+Chun tuiscint a fháil ar an réimse leathan cineálacha ranganna teagaisc agus pleananna ceachta is féidir leat a chruthú, tabhair cuairt ar an [Uair de Ghníomhaíochtaí Cód leathanach](https://hourofcode.com/us/learn).
 
-[**Back to the top**](#top)
+[**Ar ais go dtí an barr**](#top)
 
 <a id="submit"></a>
 
-## How to submit
+## Conas a chur isteach
 
-Visit the [Hour of Code™ Activity Submission page](https://forms.gle/eeAt6kVuz3RKg5n18) and complete the questions to submit your activity.
+Tabhair cuairt ar leathanach [Uair an Chóid™ Aighneacht Gníomhaíochta](https://docs.google.com/forms/d/e/1FAIpQLSdsdTKU6pD5qXlPUQWlgrjESRlm2L02wkTcZQuL8hz9OEvzNQ/viewform) agus comhlánaigh na ceisteanna chun do ghníomhaíocht a chur isteach.
 
-What you’ll need:
+Cad beidh ort:
 
-* Name and email of the primary contact representing the submitted activity
-* Activity Name (cannot include “Hour of Code” in the name)
-* URL link to the activity
-* An activity description (max character count: 400) 
-    * Please include in the description whether it’s mainly student-guided or teacher-facilitated. Additionally, some schools are interested in knowing if Hour of Code activities address Common Core or Next Generation Science Standards. If the activity addresses specific standards, consider including this information.
-* Recommended grade level(s) for intended users. You may refer to the \[Computer Science Teachers’ Association’s K-12 Standards\] (https://k12cs.org/framework-statements-by-grade-band/) for grade-appropriate computer science concepts. Example grade levels include: 
-    * Kindergarten - Grade 1 (ages 4-6)
-    * Grades 2-5 (ages 7-10)
-    * Grades 6-8 (ages 11-13)
-    * Grades 9+ (ages 14+)
-* A list of subject areas your activity covers (in addition to Computer Science). For example, if a math teacher can use your activity to teach about angles or parabolas, list as math. If you have a mad libs activity that teaches verbs/nouns/etc. choose language arts.
-* A list of programming languages your activity teaches. I.e. C/C++, Java, JavaScript, etc. or language independent (for lesson plans that can be taught in multiple languages)
-* A list of supported natural languages. Note: Language-detection is the responsibility of the activity provider; we will redirect all users to the single URL provided.
-* What level of experience should an educator have to use your activity? (e.g. Beginner or Comfortable.) And, what level of experience should the students have? If you’d like to prepare more advanced Hour of Code™ Activities, please include the prior knowledge needed in the description of your activity.
-* The length of your activity 
-    * 1 hour only
-    * 1 hour with follow-on course
-    * 2-6 hours (can be multiple lessons)
-* A list of accessibility accommodations, if your activity has them. These include screen reader compatibility, text-to-speech capabilities, use of high-contrast colors, or any other accommodations made for learners with disabilities.
+* Ainm agus ríomhphost an phríomhtheagmhála a léiríonn an ghníomhaíocht a cuireadh isteach
+* Ainm Gníomhaíochta (ní féidir “Uair an Chóid” a áireamh san ainm)
+* Nasc URL leis an ngníomhaíocht
+* An bhfuil AI: Tá nó Níl san áireamh sa ghníomhaíocht seo
+* Cur síos ar ghníomhaíocht (líon na gcarachtar uasta: 400) 
+    * Cuir san áireamh sa chur síos cibé an bhfuil sé treoraithe mac léinn-nó múinteoir-éascaithe den chuid is mó. Ina theannta sin, tá suim ag roinnt scoileanna a fháil amach an dtugann gníomhaíochtaí Uair an Chóid aghaidh ar Chaighdeáin Eolaíochta Coiteanna Croí nó na Chéad Ghlúine Eile. Má thugann an ghníomhaíocht aghaidh ar chaighdeáin shonracha, smaoinigh ar an bhfaisnéis seo a áireamh.
+* Leibhéal/leibhéil ghráid mholta d'úsáideoirí atá beartaithe. Is féidir leat a tharchur chuig an \[Múinteoirí Eolaíochta Ríomhaireachta 'Caighdeáin K-12 Association\] (https://k12cs.org/framework-statements-by-grade-band/) do coincheapa eolaíocht ríomhaireachta grád-oiriúnach. I measc na leibhéil ghrád Sampla: 
+    * Kindergarten - Grád 1 (aois 4-6)
+    * Gráid 2-5 (aois 7-10)
+    * Gráid 6-8 (aois 11-13)
+    * Gráid 9+ (aois 14+)
+* Tá liosta de theangacha cláir Múineann do ghníomhaíocht. Ie C/C ++, Java, JavaScript, srl. nó teanga neamhspleách (do phleananna ceachta is féidir a mhúineadh i dteangacha éagsúla) roghnaigh na healaíona teanga.
+* Liosta de theangacha nádúrtha tacaithe. Nóta: Is é an soláthraí gníomhaíochta atá freagrach as braiteadh teanga; déanfaimid gach úsáideoir a atreorú chuig an URL aonair a chuirtear ar fáil. nó teanga neamhspleách (do phleananna ceachta is féidir a mhúineadh i dteangacha éagsúla)
+* Cén leibhéal taithí ba chóir a bheith ag oideachasóir chun do ghníomhaíocht a úsáid? (m.sh. bunleibhéal nó Compordach.) Agus, cén leibhéal taithí ba chóir a bheith ag na mic léinn?
+* Cén leibhéal taithí ba chóir a bheith ag oideachasóir chun do ghníomhaíocht a úsáid? (m.sh. bunleibhéal nó Compordach.) Agus, cén leibhéal taithí ba chóir a bheith ag na mic léinn? Más mian leat a ullmhú Uair níos airde de Chód™ Gníomhaíochtaí, le do thoil san áireamh an t-eolas roimh ré ag teastáil sa chur síos ar do ghníomhaíocht.
+* Fad do ghníomhaíochta 
+    * 1 uair an chloig amháin
+    * 1 uair an chloig le cúrsa leantach
+    * 2-6 uair an chloig (is féidir a bheith ina gceachtanna iolracha)
+* Tá liosta de na socruithe inrochtaineachta, má tá do ghníomhaíocht acu. Ina measc seo tá comhoiriúnacht léitheora scáileáin, cumais téacs-go-hurlabhra, úsáid dathanna ardchodarsnachta, nó aon chóiríocht eile a dhéantar d'fhoghlaimeoirí faoi mhíchumas.
 
-#### Additional things you’ll need when submitting Lesson Plans
+#### Rudaí breise a bheidh uait agus Pleananna Ceachta á gcur isteach agat
 
-* Link to your lesson plan. This can be a web page, dropbox link, google drive or similar service.
-* What software and/or hardware the teacher will need to do your lesson plan (Scratch? Robots? Nothing?)
+* Nasc le do phlean ceachta. Is féidir seo a bheith ina leathanach gréasáin, nasc dropbox, google drive nó seirbhís den chineál céanna.
+* Cad iad na bogearraí agus/nó crua-earraí a bheidh de dhíth ar an múinteoir chun do phlean ceachta a dhéanamh (Scratch? Robots? Ní dhéanfaidh aon ní?)
 
-#### Additional things you’ll need when submitting Online Activities
+#### Rudaí breise a bheidh de dhíth ort agus Gníomhaíochtaí Ar Líne á gcur isteach
 
-* Name and logo of your organization
-* Whether it is COPPA compliant or not
-* A URL link to teacher notes (optional)
-* A list of tested/compatible platforms: 
-    * Web based: Which platforms have you tested? 
-        * OS - Mac, Win, and other versions
-        * Browsers - IE11, Edge, Firefox, Chrome, Safari
-        * iOS mobile Safari (mobile-optimized)
-        * Android Chrome (mobile-optimized)
-    * Non web-based: specify platform for native code (Mac, Win, iOS, Android, xBox, other)
+* Ainm agus lógó d'eagraíochta
+* Cibé an bhfuil sé comhlíontach le COPPA nó nach bhfuil
+* Nasc URL le nótaí múinteoirí (roghnach)
+* Liosta de na hardáin thástála/comhoiriúnacha: 
+    * Bunaithe ar an ngréasán: Cé na hardáin a ndearna tú tástáil orthu? 
+        * OS - Mac, Win, agus leaganacha eile
+        * Brabhsálaithe - IE11, Edge, Firefox, Chrome, Safari
+        * Safari soghluaiste iOS (optamaithe le soghluaiste)
+        * Android Chrome (optamaithe le soghluaiste)
+    * Neamh-bunaithe ar an ngréasán: sonraigh ardán do chód dúchais (Mac, Win, iOS, Android, Xbox, eile)
     * Unplugged
-* Screenshot or marketing image of the Hour of Code activity. Please send at least one image with 4:3 dimensions. It should be at least 520px by 390px. This image should have NO text on it (other than your logo), in order to make it more accessible for non-English speakers. If an appropriate image is not provided, we may take our own screenshot of your tutorial OR we may choose not to list it. All images must be submitted as a URL link to a .jpg, .jpeg, or .png.
-* In order to more accurately track participation, third party tutorial partners need to include 1-pixel tracking images on the first page of their Hour of Code tutorials. See the [Tracking Pixel](#pixel) section below for more details.
+* Seat nó íomhá margaíochta de ghníomhaíocht Uair an Chóid. Seol íomhá amháin ar a laghad le toisí 4:3. Ba chóir go mbeadh 520px ar a laghad faoi 390px. Níor cheart go mbeadh NÍL téacs ar an íomhá seo (seachas do lógó), d'fhonn í a dhéanamh níos inrochtana do chainteoirí nach cainteoirí Béarla iad. Mura gcuirtear íomhá chuí ar fáil, féadfaimid ár seat féin de do rang teagaisc a thógáil NÓ is féidir linn a roghnú gan é a liostáil. Caithfear gach íomhá a chur isteach mar nasc URL chuig .jpg, .jpeg, nó .png.
+* D'fhonn rannpháirtíocht a rianú níos cruinne, ní mór do chomhpháirtithe teagaisc tríú páirtí íomhánna rianaithe 1-picteilín a áireamh ar an gcéad leathanach dá ranganna teagaisc Uair an Chóid. Féach an rannán [Tracking Pixel](#pixel) thíos le haghaidh tuilleadh sonraí.
 * Upon finishing your activity, users should be directed to [code.org/api/hour/finish](https://code.org/api/hour/finish) where they will be able to: 
-    * Share on social media that they completed the Hour of Code
-    * Receive a certificate that they completed the Hour of Code
-    * See leaderboards about which countries/cities have the highest participation rates in Hour of Code activities
+    * Comhroinn ar na meáin shóisialta gur chríochnaigh siad Uair an Chóid
+    * Deimhniú a fháil gur chomhlíon siad Uair an Chóid
+    * Féach leaderboards faoi a bhfuil na tíortha/cathracha na rátaí rannpháirtíochta is airde i ngníomhaíochtaí Uair an Chóid
     * For users who spend an hour on your activity and don’t complete it, please include a button on your activity that says “I’m finished with my Hour of Code” which links back to [code.org/api/hour/finish](https://code.org/api/hour/finish) as well.
-* (Optional) We may follow-up with an online survey/form link asking for a report of the following activity metrics: 
-    * For online activities (especially smartphone/tablet apps): 
-        * Number of users
-        * How many completed the task
-        * Average time on task
-        * Number of total lines of code written over all users
-        * How many continued on to further learning (measured as any user who finishes the task and goes onto additional tasks at your site)
-    * For offline activities 
-        * Number of downloads of paper version of activity (if applicable)
+* (Roghnach) Féadfaimid obair leantach a dhéanamh le suirbhé ar líne/nasc foirme ag iarraidh tuairisc ar na méadrachtaí gníomhaíochta seo a leanas: 
+    * Le haghaidh gníomhaíochtaí ar líne (go háirithe fón cliste/aipeanna táibléid): 
+        * Líon na n-úsáideoirí
+        * Cé mhéad a chríochnaigh an tasc
+        * Meán-am ar an tasc
+        * Líon na línte iomlán de chód scríofa thar gach úsáideoir
+        * Cé mhéad ar aghaidh go dtí tuilleadh foghlama (thomhas mar aon úsáideoir a chríochnaíonn an tasc agus a théann isteach tascanna breise ar do shuíomh)
+    * Le haghaidh gníomhaíochtaí as líne 
+        * Líon na n-íoslódálacha ar leagan páipéir gníomhaíochta (más infheidhme)
 
-#### Additional things you’ll need when submitting Robotics
+#### Rudaí breise a bheidh uait agus Róbataic á gcur isteach
 
-* If you submit a robotics activity, we need to know the cost per student for robotics.
-* To evaluate robotics activities for inclusion on the website, we will need you to send sample kits to reviewers.
+* Má chuireann tú gníomhaíocht róbataic isteach, ní mór dúinn an costas in aghaidh an mhic léinn do róbataic a bheith ar eolas againn.
+* Chun gníomhaíochtaí róbataic a mheas lena gcur san áireamh ar an suíomh Gréasáin, beidh orainn trealamh samplacha a sheoladh chuig athbhreithneoirí.
 
-[**Back to the top**](#top)
+[**Ar ais go dtí an barr**](#top)
 
 <a id="inclusion"></a>
 
-## How activities will be evaluated
+## Conas a dhéanfar measúnú ar ghníomhaíochtaí
 
-A diverse committee of computer science educators will rank submissions based on qualitative and quantitative criteria. All activities that fit the basic criteria will be listed. Teachers will be able to filter and sort to find the best activities for their classroom.
+Déanfaidh coiste éagsúil oideachasóirí ríomheolaíochta aighneachtaí a rangú bunaithe ar chritéir cháilíochtúla agus chainníochtúla. Liostófar na gníomhaíochtaí go léir a d'oirfeadh do na critéir bhunúsacha.
 
-The rubric for evaluating activities and lesson plans will look for the following criteria on all activities and rank them accordingly:
+Maidir le gníomhaíochtaí traidisiúnta códaithe, déanfaidh coiste éagsúil oideachasóirí eolaíochta ríomhaireachta aighneachtaí a rangú bunaithe ar chritéir cháilíochtúla agus chainníochtúla. Liostófar na gníomhaíochtaí go léir a d'oirfeadh do na critéir bhunúsacha. Beidh múinteoirí in ann scagadh agus sórtáil a dhéanamh chun na gníomhaíochtaí is fearr dá seomra ranga a aimsiú.
 
-- High production quality
-- Promote learning by all demographic groups (esp. students underrepresented in CS, like young women, students from marginalized racial and ethnic groups, and students with disabilities)
-- Educational (teaches computer science concepts well)
-- Fun and engaging
-- Encourages students to create something unique they can share (For younger students: with parents and classmates. For olders students: on the Internet)
+Má dhéanann an coiste athbhreithnithe an ghníomhaíocht a nialas i gcáilíocht táirgeachta (mar gheall ar dhrochfhabhtanna nó treoracha a fhágann go bhfuil sé an-deacair é a úsáid), chun foghlaim a chur chun cinn i ngrúpaí tearcionadaithe (mar gheall ar ábhar ciníochta/sexist), i luach oideachais (ní mhúineann coincheapa CS), nó spraoi/gabháil (mar gheall ar a bheith deacair/díspreagadh do mhic léinn oibriú tríd), ní liostófar an ghníomhaíocht.
 
-If the review committee rates the activity a zero in production quality (due to bad bugs or instructions that make it very hard to use), in promoting learning in underrepresented groups (due to racist/sexist material), in educational value (does not teach CS concepts), or fun/engaging (due to being difficult/discouraging for students to work through), the activity will not be listed.
+- Ardchaighdeán táirgeachta
+- Foghlaim a chur chun cinn ag gach grúpa déimeagrafach (esp. mic léinn faoi ghannionadaíocht i CS, cosúil le mná óga, mic léinn ó ghrúpaí ciníocha agus eitneacha imeallaithe, agus mic léinn faoi mhíchumas)
+- Oideachasúil (múineann sé coincheapa eolaíochta ríomhaireachta go maith)
+- Spraoi agus tarraingteach
+- Spreagann sé mic léinn rud uathúil is féidir leo a roinnt a chruthú (Do mhic léinn níos óige: le tuismitheoirí agus le comhghleacaithe ranga. Do mhic léinn seanóirí: ar an Idirlíon)
 
-In addition, in order to be listed, all activities must:
+Ina theannta sin, d'fhonn a bheith liostaithe, ní mór do na gníomhaíochtaí go léir:
 
-- Be appropriate for a public school classroom (no guns, no explicit/mature content, no religious content, etc.)
-- Require no sign up
-- Require no payment (exception for robotics activities these can require robot/kit purchase)
+Maidir le gníomhaíochtaí féintreoraithe do mhúinteoirí agus do mhic léinn nua, beidh an coiste athbhreithnithe ag lorg an bhfuil:
 
-For self-directed activities for new teachers and students the review committee will be looking for whether:
+- Bí oiriúnach do sheomra ranga scoile poiblí (gan gunnaí, gan aon ábhar follasach/aibí, gan aon ábhar reiligiúnach, srl.)
+- A cheangal ar aon síniú suas
+- A cheangal ar aon íocaíocht (eisceacht do ghníomhaíochtaí róbataic féidir iad seo a cheangal ar robot/trealamh a cheannach)
 
-- Teachers can use the tutorial or activity with no background in computer science
-- Students can be successful with no background in computer science
-- Students can direct themselves through the tutorial without parental or teacher guidance
+Maidir le gníomhaíochtaí féintreoraithe do mhúinteoirí agus do mhic léinn nua, beidh an coiste athbhreithnithe ag lorg an bhfuil:
 
-Teachers and students will be able to search through and filter our list of activities based on filters such as grade, experience level, subject, hardware, etc. By default, we will show lesson plans and activities first that:
+- Is féidir le múinteoirí an rang teagaisc nó an ghníomhaíocht a úsáid gan aon chúlra sa ríomheolaíocht
+- Is féidir le mic léinn a bheith rathúil gan aon chúlra san eolaíocht ríomhaireachta
+- Is féidir le mic léinn iad féin a threorú tríd an rang teagaisc gan treoir tuismitheora nó múinteoirí
 
-- Receive the highest ratings from the review committee
-- Are one hour self-directed activities designed for beginners (students and teachers)
-- Appeal to a wide range of users (across platforms, languages, and ages)
-- Require no installation
-- Are new this year
+Beidh múinteoirí agus mic léinn in ann ár liosta gníomhaíochtaí a chuardach agus a scagadh bunaithe ar scagairí amhail grád, leibhéal taithí, ábhar, crua-earraí, srl. De réir réamhshocraithe, taispeánfaimid pleananna agus gníomhaíochtaí ceachta ar dtús:
 
-[**Back to the top**](#top)
+- Faigh na rátálacha is airde ón gcoiste athbhreithnithe
+- An bhfuil gníomhaíochtaí féin-threoraithe uair an chloig atá deartha do thosaitheoirí (mic léinn agus múinteoirí)
+- Achomharc chuig raon leathan úsáideoirí (ar fud ardáin, teangacha agus aoiseanna)
+- A cheangal ar aon suiteáil
+- An bhfuil nua i mbliana
+
+[**Ar ais go dtí an barr**](#top)
 
 <a id="design"></a>
 
-## Suggestions for designing one hour self guided tutorials
+## Moltaí maidir le ranganna teagaisc féin-threoraithe uair an chloig a dhearadh
 
-You can include the [Hour of Code logo](https://hourofcode.com/us/promote/resources#logo) in your tutorial, but this is not required. If you use the Hour of Code logo, see the trademark guidelines below. <u>Under no circumstances can the Code.org logo and name be used.</u> Both are trademarked, and can’t be co-mingled with a 3rd party brand name without express written permission.
+Ní gá do ghníomhaíochtaí AI a áireamh, cé go bhfuilimid ag iarraidh níos mó gníomhaíochtaí a bhaineann le AI a thairiscint.
 
-**Make sure that the average student can finish comfortably in an hour.** Consider adding an open-ended activity at the end for students who move more quickly through the lesson. Remember that most kids will be absolute beginners to computer science and coding.
+**Cuir nótaí múinteoirí san áireamh.** Ba chóir go mbeadh an chuid is mó de na gníomhaíochtaí dírithe ar an scoláire, ach má dhéanann múinteoir gníomhaíocht a éascú nó a bhainistiú, cuir treoracha soiléire agus simplí don mhúinteoir san áireamh i bhfoirm nótaí múinteora ag URL ar leith a chuirtear isteach le do ghníomhaíocht. Ní amháin go bhfuil na mic léinn novices, tá cuid de na múinteoirí chomh maith. Cuir eolas san áireamh mar:
 
-**Include teacher notes.** Most activities should be student-directed, but if an activity is facilitated or managed by a teacher, please include clear and simple directions for the teacher in the form of teacher-notes at a separate URL submitted with your activity. Not only are the students novices, some of the teachers are as well. Include info such as:
+**Aiseolas a ionchorprú ag deireadh na gníomhaíochta.** (Eg “Chríochnaigh tú 10 leibhéal agus d'fhoghlaim tú faoi lúba! Post iontach!”)
 
-- What platforms and browsers does the tutorial work best on?
-- Does it work on smartphones? Tablets?
-- Do you recommend pair programming?
-- Considerations for use in a classroom? E.g. if there are videos, advise teachers to show the videos on a projected screen for the entire classroom to view together
+**Mic léinn a spreagadh chun postáil chuig na meáin shóisialta (nuair is cuí) nuair atá siad críochnaithe.** Mar shampla “Tá Uair an Chóid déanta agam le ________ An bhfuil tú? #HourOfCode” nó “Tá #HourOfCode déanta agam mar chuid de #CSEdWeek. An bhfuil tú?
 
-**Incorporate feedback at the end of the activity.** (E.g. “You finished 10 levels and learned about loops! Great job!”)
+- Cad iad na hardáin agus na brabhsálaithe is fearr a oibríonn an rang teagaisc?
+- An oibríonn sé ar fhóin chliste? Táibléad?
+- An molann tú cláir bheirte?
+- Breithnithe le húsáid i seomra ranga? Mar shampla, má tá físeáin ann, cuir comhairle ar mhúinteoirí na físeáin a thaispeáint ar scáileán réamh-mheasta don seomra ranga ar fad le feiceáil le chéile
 
-**Encourage students to post to social media (where appropriate) when they've finished.** For example “I’ve done an Hour of Code with ________ Have you? #HourOfCode” or “I’ve done an #HourOfCode as a part of #CSEdWeek. Have you? @Scratch.” Use the hashtag **#HourOfCode** (with capital letters H, O, C)
+**Aiseolas a ionchorprú ag deireadh na gníomhaíochta.** (Eg “Chríochnaigh tú 10 leibhéal agus d'fhoghlaim tú faoi lúba! Post iontach!”)
 
-**Create your activity in Spanish or in other languages besides English.**
+**Mic léinn a spreagadh chun postáil chuig na meáin shóisialta (nuair is cuí) nuair atá siad críochnaithe.** Mar shampla “Tá Uair an Chóid déanta agam le ________ An bhfuil tú? #HourOfCode” nó “Tá #HourOfCode déanta agam mar chuid de #CSEdWeek. An bhfuil tú? @Scratch.” Bain úsáid as an hashtag **#HourOfCode** (le príomhlitreacha H, O, C)
 
-**Explain or connect the activity to a socially significant context.** Computer programming becomes a superpower when students see how it can change the world for the better!
+**Cruthaigh do ghníomhaíocht i Spáinnis nó i dteangacha eile seachas Béarla.**
 
-**Make sure your tutorial can be used in a [Pair Programming](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) paradigm.** This is particularly useful for the Hour of Code because many classrooms do not have 1:1 hardware for all students.
+**An ghníomhaíocht a mhíniú nó a nascadh le comhthéacs atá suntasach go sóisialta.** Thiocfaidh chun bheith cláir ríomhaire superpower nuair a fheiceann mic léinn conas is féidir é a athrú ar an domhan chun feabhais!
 
-[**Back to the top**](#top)
+**Déan cinnte gur féidir do rang teagaisc a úsáid i bparaidím [Péire Programming](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) .** Tá sé seo úsáideach go háirithe do Uair an Chóid toisc nach bhfuil crua-earraí 1:1 ag go leor seomraí ranga do gach mac léinn.
+
+[**Ar ais go dtí an barr**](#top)
 
 <a id="tm"></a>
 
-## Trademark Guidelines
+## Treoirlínte Trádmharc
 
-Hour of Code® and Hora del Código® are registered trademarks of Code.org. Many of our tutorial partners have used our "Hour of Code" trademarks on their web sites in connection with their Hour of Code activities. We don't want to prevent this usage, but we want to make sure the usage falls within a few limits:
+Uair an Chóid® agus Hora del Código® trádmharcanna cláraithe de Code.org. Go leor dár gcomhpháirtithe teagaisc a bheith in úsáid ár “Uair an Chóid” trádmharcanna ar a láithreáin ghréasáin i dtaca lena Uair na ngníomhaíochtaí Cód. Nílimid ag iarraidh an úsáid seo a chosc, ach ba mhaith linn a chinntiú go dtagann an úsáid laistigh de chúpla teorainn:
 
-1. Use “Hour of Code” only in connection with non-commercial CS Education activities in the context of the Hour of Code campaign, and for no other purpose.
-2. Any reference to "Hour of Code" should be used in a fashion that doesn't suggest that it's your own brand name, but that it rather references the Hour of Code as a grassroots movement. Good example: "Participate in the Hour of Code ® at ACMECorp.com". Bad example: "Try Hour of Code by ACME Corp".
-3. Use a “®” superscript in the most prominent places you mention "Hour of Code", both on your web site and in app descriptions.
-4. Include language on the page (or in the footer), including links to the Hour of Code, CSEdWeek and Code.org web sites, that discloses both the following: a. Hour of Code® and Hora del Código® are registered trademarks of Code.org; and b. “The '[Hour of Code](http://hourofcode.com/) ® is a nationwide initiative by [Code.org](http://code.org/) to introduce millions of students to one hour of computer science and computer programming.”
-5. Do not use "Hour of Code" in app names.
-6. Do not use “Hour of Code” in connection with any commercial use or purpose (e.g., placing your Hour of Code activity behind a paywall; promoting another paid service as part of your Hour of Code activity; selling Hour of Code merchandise).
-7. Do not use “Hour of Code” in connection with any activity that requires a login or account creation.
+1. Bain úsáid as “Uair an Chóid” ach amháin i dtaca le gníomhaíochtaí neamhthráchtála CS Oideachais i gcomhthéacs an fheachtais Uair an Chóid, agus chun aon chríche eile.
+2. Ba chóir aon tagairt do “Uair an Chóid” a úsáid ar bhealach nach dtugann le tuiscint go bhfuil sé d'ainm branda féin, ach go dtugann sé tagairt in áit an Uair an Chóid mar ghluaiseacht Grassroots. Sampla maith: “Páirt a ghlacadh i Uair an Chóid® ag Acmecorp.com”. Droch-shampla: “Bain triail as Uair an Chóid ag ACME Corp”.
+3. Bain úsáid as forscríbhinn “®” sna háiteanna is suntasaí a luann tú “Uair an Chóid”, ar do shuíomh Gréasáin agus i dtuairiscí aipeanna.
+4. Cuir teanga ar an leathanach (nó sa buntásc), lena n-áirítear naisc chuig an Uair an Chóid, CsedWeek agus Code.org láithreáin ghréasáin, go nochtann an dá an méid seo a leanas: a. Hour of Code® agus Hora del Código® trádmharcanna cláraithe de Code.org; agus b. “An '[Uair an Chóid](http://hourofcode.com/) ® Is tionscnamh ar fud na tíre ag [Code.org](http://code.org/) na milliúin mac léinn a thabhairt isteach chun uair an chloig de eolaíocht ríomhaireachta agus cláir ríomhaireachta.”
+5. Ná húsáid “Uair an Chóid” in ainmneacha app.
+6. Ná húsáid “Uair an Chóid” i dtaca le haon úsáid nó cuspóir tráchtála (m.sh., a chur ar do Uair an Chóid ghníomhaíocht taobh thiar de paywall; seirbhís íoctha eile a chur chun cinn mar chuid de do Uair an Chóid gníomhaíochta; díol Uair an Chóid marsantas).
+7. Ná húsáid “Uair an Chóid” i dtaca le haon ghníomhaíocht a éilíonn logáil isteach nó cuntas a chruthú.
 
-[**Back to the top**](#top)
+[**Ar ais go dtí an barr**](#top)
 
 <a id="pixel"></a>
 
-## Tracking Pixel
+## Rianú picteilíní
 
-In order to more accurately track participation we ask every tutorial partner to include a 1-pixel tracking image on the first page of their Hour of Code tutorials. The pixel-image must be on the start page only. Do not include on any interim pages of your tutorial.
+Má tá do teagaisc ceadaithe agus san áireamh ar an leathanach teagaisc deiridh, Code.org Beidh ar fáil duit le picteilín rianú uathúil chun tú a chomhtháthú isteach i do teagaisc. Féach an sampla thíos. Ná cuir san áireamh ar aon leathanaigh eatramhacha de do rang teagaisc.
 
-This will allow us to count users who do your Hour of Code tutorial. It will lead to more accurate participation counts for your tutorial.
+Tabharfaidh sé seo deis dúinn d'úsáideoirí a dhéanann do rang teagaisc Uair an Chóid a chomhaireamh. Beidh sé mar thoradh ar chomhaireamh rannpháirtíochta níos cruinne do do teagaisc.
 
-If your tutorial is approved and included on the final tutorial page, Code.org will provide you with a unique tracking pixel for you to integrate into your tutorial. See example below.
+Má tá do teagaisc ceadaithe agus san áireamh ar an leathanach teagaisc deiridh, Code.org Beidh ar fáil duit le picteilín rianú uathúil chun tú a chomhtháthú isteach i do teagaisc. Féach an sampla thíos.
 
-NOTE: this isn't important to do for installable apps (iOS/Android apps, or desktop-install apps)
+TABHAIR FAOI DEARA: nach bhfuil sé seo tábhachtach a dhéanamh le haghaidh apps installable (iOS/apps Android, nó apps desktop-shuiteáil)
 
-Example tracking pixels for Dance Party:
+Sampla rianú picteilíní do Damhsa Páirtí:
 
 IMG SRC = <http://code.org/api/hour/begin_dance.png>   
 
 
-[**Back to the top**](#top)
+[**Ar ais go dtí an barr**](#top)
 
 <a id="promote"></a>
 
-## Promoting your activities, CSEdWeek, and Hour of Code
+## Do ghníomhaíochtaí a chur chun cinn, CSEDWeek, agus Uair an Chóid
 
-Please promote your activity to your network! Direct them to your Hour of Code page. Your users are much more likely to react to a mailing from you about your activity. Use the international Hour of Code campaign during Computer Science Education Week as an excuse to encourage users to invite others to join in, and help us reach more students!
+Cuir do ghníomhaíocht chun cinn le do líonra le do thoil! Déan iad a threorú chuig do leathanach Uair an Chóid. Tá do úsáideoirí i bhfad níos mó seans ann chun freagairt do phoist ó tú faoi do ghníomhaíocht. Bain úsáid as an fheachtas idirnáisiúnta Uair an Chóid le linn Sheachtain Oideachais na Ríomheolaíochta mar leithscéal chun úsáideoirí a spreagadh chun cuireadh a thabhairt do dhaoine eile páirt a ghlacadh ann, agus cabhrú linn teacht ar níos mó mac léinn!
 
-- Feature Hour of Code and CSEdWeek on your website. Ex: <http://www.tynker.com/hour-of-code>
-- Promote Hour of Code using social media, traditional media, mailing lists, etc, using hashtag #HourOfCode (with capital letters H, O, C)
-- Host a local event or ask your employees to host an event at local schools or community groups.
-- See our [resource kit](https://hourofcode.com/us/promote) for further information.
+- Gné Uair an Chóid agus CSEDWeek ar do láithreán gréasáin. Ex: <http://www.tynker.com/hour-of-code>
+- Uair an Chóid a Chur Chun Cinn ag baint úsáide as na meáin shóisialta, na meáin thraidisiúnta, liostaí seoltaí, srl., Ag baint úsáide as hashtag #HourOfCode (le príomhlitreacha H, O, C)
+- Ócáid áitiúil a óstáil nó iarr ar d'fhostaithe imeacht a óstáil i scoileanna áitiúla nó i ngrúpaí pobail.
+- Féach ar ár [trealamh acmhainne](https://hourofcode.com/us/promote) le haghaidh tuilleadh eolais.
 
-[**Back to the top**](#top)
+[**Ar ais go dtí an barr**](#top)
 
 {{ signup_button }}

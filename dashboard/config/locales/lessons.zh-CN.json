@@ -5008,14 +5008,14 @@
         "applab-intro/Intro to App Lab": {
           "name": "应用程序实验室简介",
           "overview": "本教程旨在快速介绍应用实验室编程环境，作为构建和共享应用程序的强大工具。教程本身教学生在JavaScript中使用模块或文本创建和控制按钮、文本、图像、声音和屏幕。在教程结束时，学生有时间将他们开始构建的项目扩展为“选择自己的冒险”、“贺卡”或“性格测试”应用程序。他们也可以继续构建code.org/applab页面上显示的更多项目。  \n\n祝你在应用实验室愉快地完成编程一小时！\n\n**年龄适宜性：**本教程为13岁以上的学生设计。因为它允许学生上传自定义的声音和图像，年轻的学生不应该在没有监督的情况下使用它。为了保护学生的隐私，如果你的学生年龄在13岁以下，他们将不能使用本教程，除非你首先在你管理的区域为他们设置账户。",
-          "preparation": "### 在《一小时编程》前一周\n\n-   预习[Hour of Code Eductor Guide](http://hourofcode.com/resources/how-to/) 和 [Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)，便于开始计划《编程一小时》活动。\n    \\-如果你希望收到教室支持，[Register your Hour of Code event](http://hourofcode.com) 。\n-   自己复习并完成在线教程\n-   在要求学生完成之前，一定要先测试一下。检查自己的技术，并决定是否需要在你的编程一小时前进行故障检查。\n\n### 《编程一小时》的前一天\n\n-   在本课程计划结束后，打印一份或多份[Exit Ticket examples](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing)，或者编制自己的课堂反馈条。\n-   每个完成活动的学生都会收到一张 [certificate](http://code.org/certificates)。最好在开始前为每个人打印，这样在《编程一小时》活动结束后更容易。",
+          "preparation": "### 在《一小时编程》前一周\n\n-   预习[Hour of Code Eductor Guide][0] 和 [Best Practices from Successful Educators][1]，便于开始计划《编程一小时》活动。\n    \\-如果你希望收到教室支持，[Register your Hour of Code event][2] 。\n-   自己复习并完成在线教程\n-   在要求学生完成之前，一定要先测试一下。检查自己的技术，并决定是否需要在你的编程一小时前进行故障检查。\n\n### 《编程一小时》的前一天\n\n-   在本课程计划结束后，打印一份或多份[Exit Ticket examples][3]，或者编制自己的课堂反馈条。\n-   每个完成活动的学生都会收到一张 [certificate][4]。最好在开始前为每个人打印，这样在《编程一小时》活动结束后更容易。",
           "purpose": "这个课程是你的学生参加应用实验室的第一步。教程自己应当是一个容易理解的、具备广泛功能的强大工具。学生在教学过程中会有一个积极体验，更重要的是鼓励学生们在应用实验室保持构建。这也仅仅是对所有可用工具的浅层次使用，因此，他们可以使用 code.org/applab 页面或者项目走廊，通过他们想要创造的更复杂的项目来激发更多灵感。",
           "student_overview": "在本教程的最后，你将能够扩展一个项目，你开始构建一个“选择你自己的冒险”、“贺卡”或“性格测试”应用程序。你也可以继续构建code.org/applab页面上显示的更多项目。 \n\n祝你在应用实验室愉快地完成编程一小时！"
         },
         "aquatic/Aquatic": {
           "name": "《我的世界》：水上航行",
           "overview": "在本课程中，所有年龄段的学习者都将在一个安全、支持性的环境中获得编码和计算机科学的入门体验。本课对任何6岁以上的学生都很有效。年龄较小的学习者可能完不成本教程，但是在一个小时的习题中会收获有很多乐趣。高中生基本上都会完成辅导课程，最后有时间玩自由游戏。",
-          "preparation": "### 编程一小时前一周\n\n-   复习[Hour of Code Eductor Guide](http://hourofcode.com/resources/how-to/)和[Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)，便于开始计划编程一小时活动。\n-   如果你想要得到礼物或课堂支持，[Register your Hour of Code event](http://hourofcode.com)。\n-   自己复习并完成在线教程： [Minecraft: Voyage Aquatic](http://studio.code.org/s/aquatic/lessons/1/levels/1)\n-   在要求学生完成之前，记得先测试一下。检查自己的技术设备，并决定是否需要在编写代码前进行故障检查。\n\n### 编程一小时前一天\n\n-   在本课程计划结束时，打印一份或多份[Exit Ticket examples](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing)，或者自己编制。\n-   每个完成活动的学生都应该收到一张证书。提前为每个人[Print one](https://studio.code.org/certificates/batch?course=bWM=)，使之在编程一小时结束时更简单。",
+          "preparation": "### 编程一小时前一周\n\n-   复习[Hour of Code Eductor Guide][0]和[Best Practices from Successful Educators][1]，便于开始计划编程一小时活动。\n-   如果你想要得到礼物或课堂支持，[Register your Hour of Code event][2]。\n-   自己复习并完成在线教程： [Minecraft: Voyage Aquatic][3]\n-   在要求学生完成之前，记得先测试一下。检查自己的技术设备，并决定是否需要在编写代码前进行故障检查。\n\n### 编程一小时前一天\n\n-   在本课程计划结束时，打印一份或多份[Exit Ticket examples][4]，或者自己编制。\n-   每个完成活动的学生都应该收到一张证书。提前为每个人[Print one][5]，使之在编程一小时结束时更简单。",
           "purpose": "本课介绍编码和编程（使用模块）的核心计算机科学概念，以及简单的调试技术和条件语句。这组难题建立循环知识的基础上，将巩固相关知识，并引入条件语句。通过将这两个概念结合在一起，学生将能够探索在令人兴奋的新环境中创造有趣和创新项目的潜力。",
           "student_overview": "在本课中，所有年龄段的学员都将在一个安全的支持性环境中获得编程和计算机科学的入门经验。"
         },
@@ -5064,64 +5064,64 @@
         "flappy/Flappy Code": {
           "name": "飞扬的代码",
           "overview": "在本课中，学习者将获得有关计算机科学的入门经验，并使用基本模块代码创建一个游戏。本课程是为10-16岁的中年级学生设计的，但是可以根据所提供的差异化建议，为较低或较高年龄的学习者调整课程。",
-          "preparation": "### 在《一小时编程》前一周\n\n-   预习[Hour of Code Eductor Guide](http://hourofcode.com/resources/how-to/)，便于开始计划《一小时编程》活动。\n    \\-[Register your Hour of Code event](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)。\n-   自己复习并完成在线教程：[制作数字鸟游戏](https://studio.code.org/flappy/1)\n-   在要求学生完成之前，一定要先测试一下。检查自己的技术，并决定是否需要在编写代码前进行故障检查。\n\n### 《一小时编程》的前一天\n\n-   在黑板上写下“编码”、“编程”和“调试”，或者如果你有术语展示墙的话，直接把它们添加到上面。\n-   每个完成活动的学生都应该颁发一张证书。开始前为每个人打印[Print one](http://code.org/certificates)，使《一小时编程》的结束时间更简单。",
+          "preparation": "### 在《一小时编程》前一周\n\n-   预习[Hour of Code Eductor Guide][0]，便于开始计划《一小时编程》活动。\n    \\-[Register your Hour of Code event][1]。\n-   自己复习并完成在线教程：[制作数字鸟游戏][3]\n-   在要求学生完成之前，一定要先测试一下。检查自己的技术，并决定是否需要在编写代码前进行故障检查。\n\n### 《一小时编程》的前一天\n\n-   在黑板上写下“编码”、“编程”和“调试”，或者如果你有术语展示墙的话，直接把它们添加到上面。\n-   每个完成活动的学生都应该颁发一张证书。开始前为每个人打印[Print one][4]，使《一小时编程》的结束时间更简单。",
           "purpose": "本课介绍编码和编程（使用模块）的核心计算机科学概念，以及简单的调试技术。",
           "student_overview": "在本课中，学习者将获得有关计算机科学的入门经验，并使用基本模块代码创建一个游戏。本课程是为10-16岁的中年级学生设计的，但是可以根据所提供的差异化建议，为较低或较高年龄的学习者调整课程。"
         },
         "frozen/Artist": {
           "name": "和安娜、爱莎一起编程",
           "overview": "在本课程中，所有年龄的学习者在一个安全的、支持性的环境中获得编程和计算机科学的入门体验。本课程是为10-13岁的中年级学生设计的，但可以根据提供的差异化建议来对更小或更大的学习者进行调整。学生应对简单的几何和绘图角度有基本的了解。",
-          "preparation": "### 编程一小时前一周\n\n-   复习[Hour of Code Educator Guide](http://hourofcode.com/resources/how-to/)和[Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)，便于开始计划编程一小时活动。\n-   如果你想获得材料或课堂支持，请[Register your Hour of Code event](http://hourofcode.com)。\n-   自己复习并完成在线教程：[Coding with Anna and Elsa](https://studio.code.org/s/frozen/stage/1/puzzle/1)\n-   在要求学生完成之前，一定要先测试一下。检查自己的技术设备，并决定是否需要在编程一小时前进行故障检查。\n-   复习补充课程计划，[\"The Drawing Machine\"](https://code.org/curriculum/misc/hocunplugged/Teacher)，以确定你是否希望在编程一小时之前先进行此课程。\n\n### 编程一小时前一天\n\n-   在黑板上写下“编码”、“编程”和“调试”。如果你有术语展示墙的话，可以直接把它们添加到上面。\n-   在黑板上或公告板中间的纸上写下“计算机科学”这几个字。作为准备和评估活动的[\"mind map\"](https://en.wikipedia.org/wiki/Mind_map)来使用。\n-   为学生提供量角器，以测量角度\n-   每个完成活动的学生都应该颁发一张[certificate](http://code.org/certificates)。提前为每个学生打印证书，使之在编程一小时结束时更简单。",
+          "preparation": "### 编程一小时前一周\n\n-   复习[Hour of Code Educator Guide][0]和[Best Practices from Successful Educators][1]，便于开始计划编程一小时活动。\n-   如果你想获得材料或课堂支持，请[Register your Hour of Code event][2]。\n-   自己复习并完成在线教程：[Coding with Anna and Elsa][3]\n-   在要求学生完成之前，一定要先测试一下。检查自己的技术设备，并决定是否需要在编程一小时前进行故障检查。\n-   复习补充课程计划，[\"The Drawing Machine\"][4]，以确定你是否希望在编程一小时之前先进行此课程。\n\n### 编程一小时前一天\n\n-   在黑板上写下“编码”、“编程”和“调试”。如果你有术语展示墙的话，可以直接把它们添加到上面。\n-   在黑板上或公告板中间的纸上写下“计算机科学”这几个字。作为准备和评估活动的[\"mind map\"][5]来使用。\n-   为学生提供量角器，以测量角度\n-   每个完成活动的学生都应该颁发一张[certificate][6]。提前为每个学生打印证书，使之在编程一小时结束时更简单。",
           "purpose": "本课介绍编码和编程（使用模块）的核心计算机科学概念，以及简单的调试技术。",
           "student_overview": "在本课程中，所有年龄的学习者在一个安全的、支持性的环境中获得编程和计算机科学的入门体验。本课程是为10-13岁的中年级学生设计的，但可以根据提供的差异化建议来对更小或更大的学习者进行调整。学生应对简单的几何和绘图角度有基本的了解。"
         },
         "gumball/Gumball Play Lab": {
           "name": "陶阿甘游戏实验室",
           "overview": "在本课中，学习者将获得有关计算机科学的入门经验，并使用基本模块代码创建一个游戏。本课程是为10-16岁的中年级学生设计的，但是可以根据所提供的差异化建议，为较低或较高年龄的学习者调整课程。",
-          "preparation": "### 编程一小时前一周\n\n-   复习[Hour of Code Educator Guide](http://hourofcode.com/resources/how-to/)和[Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)，便于开始计划编程一小时活动。\n-   如果你想获得材料或课堂支持，请[Register your Hour of Code event](http://hourofcode.com)。\n-   自己复习并完成在线教程：[Gumball Play Lab](https://studio.code.org/s/gumball/lessons/1/levels/1)\n-   在要求学生完成之前，一定要先测试一下。检查自己的技术设备，并决定是否需要在编程一小时前进行故障检查。\n\n### 编程一小时前一天\n\n-   在黑板上写下“编码”、“编程”和“调试”。如果你有术语展示墙的话，可以直接把它们添加到上面。\n-   每个完成活动的学生都应该颁发一张[certificate](http://code.org/certificates)。提前为每个学生[Print one](http://code.org/certificates)，使之在编程一小时结束时更简单。",
+          "preparation": "### 编程一小时前一周\n\n-   复习[Hour of Code Educator Guide][0]和[Best Practices from Successful Educators][1]，便于开始计划编程一小时活动。\n-   如果你想获得材料或课堂支持，请[Register your Hour of Code event][2]。\n-   自己复习并完成在线教程：[Gumball Play Lab][3]\n-   在要求学生完成之前，一定要先测试一下。检查自己的技术设备，并决定是否需要在编程一小时前进行故障检查。\n\n### 编程一小时前一天\n\n-   在黑板上写下“编码”、“编程”和“调试”。如果你有术语展示墙的话，可以直接把它们添加到上面。\n-   每个完成活动的学生都应该颁发一张[certificate][4]。提前为每个学生[Print one][4]，使之在编程一小时结束时更简单。",
           "purpose": "本课介绍编码和编程（使用模块）的核心计算机科学概念，以及简单的调试技术。",
           "student_overview": "在本课中，学习者将获得有关计算机科学的入门经验，并使用基本模块代码创建一个游戏。本课程是为10-16岁的中年级学生设计的，但是可以根据所提供的差异化建议，为较低或较高年龄的学习者调整课程。"
         },
         "hello-world-animals-2021/Hello World": {
           "name": "你好世界：动物",
-          "overview": "在本课中，学生将在精灵图实验室通过编程学习计算机科学的基础知识。精灵图实验室是一个可以用来创建富有想象力的有趣项目的工具。学生将学习创建和动画化精灵图，并使用事件使它们互动。 \n\n本课有多个版本。每个版本教授相同的概念，但拥有不同的图像，以吸引不同的学生。更多信息请访问[Hello World着陆页。](https://code.org/helloworld)",
-          "preparation": "-   通过玩谜题为你的课堂寻找任何潜在的问题领域。\n-   使用[CS Connections](https://code.org/educate/csc)的资源，在初始教程之后为更多的计算机科学学习制定计划。",
-          "purpose": "本课程旨在帮助学生在精灵图实验室中创建简单的编程项目。通过这项技能，学生可以创建任何主题的项目，如另一个学校主题或与他们个人相关的东西。访问[CS Connections](https://code.org/educate/csc)了解如何将计算机科学整合到其他学科的思路。"
+          "overview": "在本课中，学生将在精灵图实验室通过编程学习计算机科学的基础知识。精灵图实验室是一个可以用来创建富有想象力的有趣项目的工具。学生将学习创建和动画化精灵图，并使用事件使它们互动。 \n\n本课有多个版本。每个版本教授相同的概念，但拥有不同的图像，以吸引不同的学生。更多信息请访问[Hello World着陆页。][0]",
+          "preparation": "-   通过玩谜题为你的课堂寻找任何潜在的问题领域。\n-   使用[CS Connections][0]的资源，在初始教程之后为更多的计算机科学学习制定计划。",
+          "purpose": "本课程旨在帮助学生在精灵图实验室中创建简单的编程项目。通过这项技能，学生可以创建任何主题的项目，如另一个学校主题或与他们个人相关的东西。访问[CS Connections][0]了解如何将计算机科学整合到其他学科的思路。"
         },
         "hello-world-emoji-2021/Hello World": {
           "name": "你好世界：表情符号",
-          "overview": "在本课中，学生将在精灵图实验室通过编程学习计算机科学的基础知识。精灵图实验室是一个可以用来创建富有想象力的有趣项目的工具。学生将学习创建和动画化精灵图，并使用事件使它们互动。 \n\n本课有多个版本。每个版本教授相同的概念，但拥有不同的图像，以吸引不同的学生。更多信息请访问[Hello World着陆页。](https://code.org/helloworld)",
-          "preparation": "-   通过玩谜题为你的课堂寻找任何潜在的问题领域。\n-   使用[CS Connections](https://code.org/educate/csc)的资源，在初始教程之后为更多的计算机科学学习制定计划。",
-          "purpose": "本课程旨在帮助学生在精灵图实验室中创建简单的编程项目。通过这项技能，学生可以创建任何主题的项目，如另一个学校主题或与他们个人相关的东西。访问[CS Connections](https://code.org/educate/csc)了解如何将计算机科学整合到其他学科的思路。"
+          "overview": "在本课中，学生将在精灵图实验室通过编程学习计算机科学的基础知识。精灵图实验室是一个可以用来创建富有想象力的有趣项目的工具。学生将学习创建和动画化精灵图，并使用事件使它们互动。 \n\n本课有多个版本。每个版本教授相同的概念，但拥有不同的图像，以吸引不同的学生。更多信息请访问[Hello World着陆页。][0]",
+          "preparation": "-   通过玩谜题为你的课堂寻找任何潜在的问题领域。\n-   使用[CS Connections][0]的资源，在初始教程之后为更多的计算机科学学习制定计划。",
+          "purpose": "本课程旨在帮助学生在精灵图实验室中创建简单的编程项目。通过这项技能，学生可以创建任何主题的项目，如另一个学校主题或与他们个人相关的东西。访问[CS Connections][0]了解如何将计算机科学整合到其他学科的思路。"
         },
         "hello-world-food-2021/Hello World": {
           "name": "你好世界：食物",
-          "overview": "在本课中，学生将在精灵图实验室通过编程学习计算机科学的基础知识。精灵图实验室是一个可以用来创建富有想象力的有趣项目的工具。学生将学习创建和动画化精灵图，并使用事件使它们互动。 \n\n本课有多个版本。每个版本教授相同的概念，但拥有不同的图像，以吸引不同的学生。更多信息请访问[Hello World着陆页。](https://code.org/helloworld)",
-          "preparation": "-   通过玩谜题为你的课堂寻找任何潜在的问题领域。\n-   使用[CS Connections](https://code.org/educate/csc)的资源，在初始教程之后为更多的计算机科学学习制定计划。",
-          "purpose": "本课程旨在帮助学生在精灵图实验室中创建简单的编程项目。通过这项技能，学生可以创建任何主题的项目，如另一个学校主题或与他们个人相关的东西。访问[CS Connections](https://code.org/educate/csc)了解如何将计算机科学整合到其他学科的思路。"
+          "overview": "在本课中，学生将在精灵图实验室通过编程学习计算机科学的基础知识。精灵图实验室是一个可以用来创建富有想象力的有趣项目的工具。学生将学习创建和动画化精灵图，并使用事件使它们互动。 \n\n本课有多个版本。每个版本教授相同的概念，但拥有不同的图像，以吸引不同的学生。更多信息请访问[Hello World着陆页。][0]",
+          "preparation": "-   通过玩谜题为你的课堂寻找任何潜在的问题领域。\n-   使用[CS Connections][0]的资源，在初始教程之后为更多的计算机科学学习制定计划。",
+          "purpose": "本课程旨在帮助学生在精灵图实验室中创建简单的编程项目。通过这项技能，学生可以创建任何主题的项目，如另一个学校主题或与他们个人相关的东西。访问[CS Connections][0]了解如何将计算机科学整合到其他学科的思路。"
         },
         "hello-world-retro-2021/Hello World": {
           "name": "你好 World：复古",
-          "overview": "在本课中，学生将在精灵图实验室通过编程学习计算机科学的基础知识。精灵图实验室是一个可以用来创建富有想象力的有趣项目的工具。学生将学习创建和动画化精灵图，并使用事件使它们互动。 \n\n本课有多个版本。每个版本教授相同的概念，但拥有不同的图像，以吸引不同的学生。更多信息请访问[Hello World着陆页。](https://code.org/helloworld)",
-          "preparation": "-   通过玩谜题为你的课堂寻找任何潜在的问题领域。\n-   使用[CS Connections](https://code.org/educate/csc)的资源，在初始教程之后为更多的计算机科学学习制定计划。",
-          "purpose": "本课程旨在帮助学生在精灵图实验室中创建简单的编程项目。通过这项技能，学生可以创建任何主题的项目，如另一个学校主题或与他们个人相关的东西。访问[CS Connections](https://code.org/educate/csc)了解如何将计算机科学整合到其他学科的思路。"
+          "overview": "在本课中，学生将在精灵图实验室通过编程学习计算机科学的基础知识。精灵图实验室是一个可以用来创建富有想象力的有趣项目的工具。学生将学习创建和动画化精灵图，并使用事件使它们互动。 \n\n本课有多个版本。每个版本教授相同的概念，但拥有不同的图像，以吸引不同的学生。更多信息请访问[Hello World着陆页。][0]",
+          "preparation": "-   通过玩谜题为你的课堂寻找任何潜在的问题领域。\n-   使用[CS Connections][0]的资源，在初始教程之后为更多的计算机科学学习制定计划。",
+          "purpose": "本课程旨在帮助学生在精灵图实验室中创建简单的编程项目。通过这项技能，学生可以创建任何主题的项目，如另一个学校主题或与他们个人相关的东西。访问[CS Connections][0]了解如何将计算机科学整合到其他学科的思路。"
         },
         "hello-world-soccer-2022/Hello World: Food": {
           "name": "你好世界：足球",
-          "overview": "在本课中，学生将在精灵图实验室通过编程学习计算机科学的基础知识。精灵图实验室是一个可以用来创建富有想象力的有趣项目的工具。学生将学习创建和动画化精灵图，并使用事件使它们互动。 \n\n本课有多个版本。每个版本教授相同的概念，但拥有不同的图像，以吸引不同的学生。更多信息请访问[Hello World着陆页。](https://code.org/helloworld)",
-          "preparation": "-   通过玩谜题为你的课堂寻找任何潜在的问题领域。\n-   使用[CS Connections](https://code.org/educate/csc)的资源，在初始教程之后为更多的计算机科学学习制定计划。",
-          "purpose": "本课程旨在帮助学生在精灵图实验室中创建简单的编程项目。通过这项技能，学生可以创建任何主题的项目，如另一个学校主题或与他们个人相关的东西。访问[CS Connections](https://code.org/educate/csc)了解如何将计算机科学整合到其他学科的思路。"
+          "overview": "在本课中，学生将在精灵图实验室通过编程学习计算机科学的基础知识。精灵图实验室是一个可以用来创建富有想象力的有趣项目的工具。学生将学习创建和动画化精灵图，并使用事件使它们互动。 \n\n本课有多个版本。每个版本教授相同的概念，但拥有不同的图像，以吸引不同的学生。更多信息请访问[Hello World着陆页。][0]",
+          "preparation": "-   通过玩谜题为你的课堂寻找任何潜在的问题领域。\n-   使用[CS Connections][0]的资源，在初始教程之后为更多的计算机科学学习制定计划。",
+          "purpose": "本课程旨在帮助学生在精灵图实验室中创建简单的编程项目。通过这项技能，学生可以创建任何主题的项目，如另一个学校主题或与他们个人相关的东西。访问[CS Connections][0]了解如何将计算机科学整合到其他学科的思路。"
         },
         "hello-world-space-2022/Hello World: Food": {
           "name": "你好世界：太空",
-          "overview": "在本课中，学生将在精灵图实验室通过编程学习计算机科学的基础知识。精灵图实验室是一个可以用来创建富有想象力的有趣项目的工具。学生将学习创建和动画化精灵图，并使用事件使它们互动。 \n\n本课有多个版本。每个版本教授相同的概念，但拥有不同的图像，以吸引不同的学生。更多信息请访问[Hello World着陆页。](https://code.org/helloworld)",
-          "preparation": "-   通过玩谜题为你的课堂寻找任何潜在的问题领域。\n-   使用[CS Connections](https://code.org/educate/csc)的资源，在初始教程之后为更多的计算机科学学习制定计划。",
-          "purpose": "本课程旨在帮助学生在精灵图实验室中创建简单的编程项目。通过这项技能，学生可以创建任何主题的项目，如另一个学校主题或与他们个人相关的东西。访问[CS Connections](https://code.org/educate/csc)了解如何将计算机科学整合到其他学科的思路。"
+          "overview": "在本课中，学生将在精灵图实验室通过编程学习计算机科学的基础知识。精灵图实验室是一个可以用来创建富有想象力的有趣项目的工具。学生将学习创建和动画化精灵图，并使用事件使它们互动。 \n\n本课有多个版本。每个版本教授相同的概念，但拥有不同的图像，以吸引不同的学生。更多信息请访问[Hello World着陆页。][0]",
+          "preparation": "-   通过玩谜题为你的课堂寻找任何潜在的问题领域。\n-   使用[CS Connections][0]的资源，在初始教程之后为更多的计算机科学学习制定计划。",
+          "purpose": "本课程旨在帮助学生在精灵图实验室中创建简单的编程项目。通过这项技能，学生可以创建任何主题的项目，如另一个学校主题或与他们个人相关的东西。访问[CS Connections][0]了解如何将计算机科学整合到其他学科的思路。"
         },
         "hero/Minecraft Hour of Code": {
           "name": "《我的世界》: 英雄之旅",
           "overview": "在本课程中，所有年龄段的学习者都将在一个安全、支持性的环境中获得编码和计算机科学的入门体验。本课对任何6岁以上的学生都很有效。年龄较小的学习者可能完不成本教程，但是在一个小时的习题中会收获有很多乐趣。高中生基本上都会完成辅导课程，最后有时间玩自由游戏。",
-          "preparation": "### 编程一小时前一周\n\n-   复习[Hour of Code Eductor Guide](http://hourofcode.com/resources/how-to/)和[Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)，便于开始计划编程一小时活动。\n-   如果你想要得到礼物或课堂支持，[Register your Hour of Code event](http://hourofcode.com)。\n-   自己复习并完成在线教程：[Minecraft: Hero's Journey](studio.code.org/s/hero/lessons/1/levels/1)\n-   在要求学生完成之前，记得先测试一下。检查自己的技术设备，并决定是否需要在编写代码前进行故障检查。\n\n### 编程一小时前一天\n\n-   在本课程计划结束时，打印一份或多份[Exit Ticket examples](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing)，或者自己编制。\n-   每个完成活动的学生都应该收到一张证书。提前为每个学生[Print one](https://studio.code.org/certificates/batch?course=bWM=)，使之在编程一小时结束时更简单。",
+          "preparation": "### 编程一小时前一周\n\n-   复习[Hour of Code Eductor Guide][0]和[Best Practices from Successful Educators][1]，便于开始计划编程一小时活动。\n-   如果你想要得到礼物或课堂支持，[Register your Hour of Code event][2]。\n-   自己复习并完成在线教程：[Minecraft: Hero's Journey][3]\n-   在要求学生完成之前，记得先测试一下。检查自己的技术设备，并决定是否需要在编写代码前进行故障检查。\n\n### 编程一小时前一天\n\n-   在本课程计划结束时，打印一份或多份[Exit Ticket examples][4]，或者自己编制。\n-   每个完成活动的学生都应该收到一张证书。提前为每个学生[Print one][5]，使之在编程一小时结束时更简单。",
           "purpose": "本课介绍编码和编程（使用模块）的核心计算机科学概念，简单的调试技术以及函数的作用。",
           "student_overview": "在本课中，所有年龄段的学员都将在一个安全的支持性环境中获得编程和计算机科学的入门经验。"
         },
@@ -5135,35 +5135,35 @@
         "hourofcode/Maze": {
           "name": "迷宫",
           "overview": "在本课程中，所有年龄段的学习者都将在一个安全、支持性的环境中获得编码和计算机科学的入门体验。本课程是为4-10岁的较低年龄学习者而设计，但也可以根据提供的差异化建议，对年龄较大的学习者进行调整。",
-          "preparation": "### 编程一小时前一周\n\n-   复习[Hour of Code Eductor Guide](http://hourofcode.com/resources/how-to/)和[Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)，便于开始计划编程一小时活动。\n-   如果你想要得到礼物或课堂支持，[Register your Hour of Code event](http://hourofcode.com)。\n-   自己复习并完成在线教程：[Write your first computer program](https://studio.code.org/hoc/1)\n-   在要求学生完成之前，记得先测试一下。检查自己的技术设备，并决定是否需要在编写代码前进行故障检查。\n\n### 编程一小时前一天\n\n-   在本课程计划结束时，打印一份或多份[Exit Ticket examples](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing)，或者自己编制。\n-   每个完成活动的学生都应该收到一张证书。提前为每个学生[Print one](http://code.org/certificates)，使之在编程一小时结束时更简单。",
+          "preparation": "### 编程一小时前一周\n\n-   复习[Hour of Code Eductor Guide][0]和[Best Practices from Successful Educators][1]，便于开始计划编程一小时活动。\n-   如果你想要得到礼物或课堂支持，[Register your Hour of Code event][2]。\n-   自己复习并完成在线教程：[Write your first computer program][3]\n-   在要求学生完成之前，记得先测试一下。检查自己的技术设备，并决定是否需要在编写代码前进行故障检查。\n\n### 编程一小时前一天\n\n-   在本课程计划结束时，打印一份或多份[Exit Ticket examples][4]，或者自己编制。\n-   每个完成活动的学生都应该收到一张证书。提前为每个学生[Print one][5]，使之在编程一小时结束时更简单。",
           "purpose": "本课介绍编码和编程（使用模块）的核心计算机科学概念，以及简单的调试技术。",
           "student_overview": "在本课程中，所有年龄段的学习者都将在一个安全、支持性的环境中获得编码和计算机科学的入门体验。本课程是为4-10岁的较低年龄学习者而设计，但也可以根据提供的差异化建议，对年龄较大的学习者进行调整。"
         },
         "iceage/Ice Age Play Lab": {
           "name": "冰川时代实验室",
           "overview": "在本课中，学习者将获得有关计算机科学的入门经验，并使用基本模块代码创建一个游戏。本课程是为10-16岁的中年级学生设计的，但是可以根据所提供的差异化建议，为较低或较高年龄的学习者调整课程。",
-          "preparation": "### 编程一小时前一周\n\n-   复习[Hour of Code Educator Guide](http://hourofcode.com/resources/how-to/)和[Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)，便于开始计划编程一小时活动。\n-   如果你想获得材料或课堂支持，请[Register your Hour of Code event](http://hourofcode.com)。\n-   自己复习并完成在线教程：[Ice Age Play Lab](https://studio.code.org/s/iceage/lessons/1/levels/1)\n-   在要求学生完成之前，一定要先测试一下。检查自己的技术设备，并决定是否需要在编程一小时前进行故障检查。\n\n### 编程一小时前一天\n\n-   在黑板上写下“编码”、“编程”和“调试”。如果你有术语展示墙的话，可以直接把它们添加到上面。\n-   每个完成活动的学生都应该颁发一张[certificate]。提前为每个学生[Print one](http://code.org/certificates)，使之在编程一小时结束时更简单。",
+          "preparation": "### 编程一小时前一周\n\n-   复习[Hour of Code Educator Guide][0]和[Best Practices from Successful Educators][1]，便于开始计划编程一小时活动。\n-   如果你想获得材料或课堂支持，请[Register your Hour of Code event][2]。\n-   自己复习并完成在线教程：[Ice Age Play Lab][3]\n-   在要求学生完成之前，一定要先测试一下。检查自己的技术设备，并决定是否需要在编程一小时前进行故障检查。\n\n### 编程一小时前一天\n\n-   在黑板上写下“编码”、“编程”和“调试”。如果你有术语展示墙的话，可以直接把它们添加到上面。\n-   每个完成活动的学生都应该颁发一张[certificate]。提前为每个学生[Print one][4]，使之在编程一小时结束时更简单。",
           "purpose": "本课介绍编码和编程（使用模块）的核心计算机科学概念，以及简单的调试技术。",
           "student_overview": "在这节课中，学习者将获得计算机科学的入门经验，并使用基本的模块代码创建一个游戏。"
         },
         "infinity/Infinity": {
           "name": "迪斯尼无限游戏实验室",
           "overview": "在本课中，学习者将获得有关计算机科学的入门经验，并使用基本模块代码创建一个游戏。本课程是为10-16岁的中年级学生设计的，但是可以根据所提供的差异化建议，为较低或较高年龄的学习者调整课程。",
-          "preparation": "### 编程一小时前一周\n\n-   复习[Hour of Code Educator Guide](http://hourofcode.com/resources/how-to/)和[Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)，便于开始计划编程一小时活动。\n-   如果你想获得材料或课堂支持，请[Register your Hour of Code event](http://hourofcode.com)。\n-   自己复习并完成在线教程：[Disney Infinity Play Lab](https://studio.code.org/s/playlab/stage/1/puzzle/1)\n-   在要求学生完成之前，一定要先测试一下。检查自己的技术设备，并决定是否需要在编程一小时前进行故障检查。\n\n### 编程一小时前一天\n\n-   在黑板上写下“编码”、“编程”和“调试”。如果你有术语展示墙的话，可以直接把它们添加到上面。\n-   每个完成活动的学生都应该颁发一张[certificate](http://code.org/certificates)。提前为每个学生[Print one](http://code.org/certificates)，使之在编程一小时结束时更简单。",
+          "preparation": "### 编程一小时前一周\n\n-   复习[Hour of Code Educator Guide][0]和[Best Practices from Successful Educators][1]，便于开始计划编程一小时活动。\n-   如果你想获得材料或课堂支持，请[Register your Hour of Code event][2]。\n-   自己复习并完成在线教程：[Disney Infinity Play Lab][3]\n-   在要求学生完成之前，一定要先测试一下。检查自己的技术设备，并决定是否需要在编程一小时前进行故障检查。\n\n### 编程一小时前一天\n\n-   在黑板上写下“编码”、“编程”和“调试”。如果你有术语展示墙的话，可以直接把它们添加到上面。\n-   每个完成活动的学生都应该颁发一张[certificate][4]。提前为每个学生[Print one][4]，使之在编程一小时结束时更简单。",
           "purpose": "本课介绍编码和编程（使用模块）的核心计算机科学概念，以及简单的调试技术。",
           "student_overview": "在这节课中，学习者将获得计算机科学的入门经验，并使用基本的模块代码创建一个游戏。"
         },
         "mc/Hour of Code 2015": {
           "name": "我的世界 编程一小时",
           "overview": "在本课程中，所有年龄段的学习者都将在一个安全、支持性的环境中获得编码和计算机科学的入门体验。本课对任何6岁以上的学生都很有效。年龄较小的学习者可能完不成本教程，但是在一个小时的习题中会收获有很多乐趣。高中生基本上都会完成辅导课程，最后有时间玩自由游戏。",
-          "preparation": "### 编程一小时前一周\n\n-   复习[Hour of Code Eductor Guide](http://hourofcode.com/resources/how-to/)和[Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)，便于开始计划编程一小时活动。\n-   如果你想要得到礼物或课堂支持，[Register your Hour of Code event](http://hourofcode.com)。\n-   自己复习并完成在线教程：[Minecraft: Adventurer](studio.code.org/s/mc/lessons/1/levels/1)\n-   在要求学生完成之前，记得先测试一下。检查自己的技术设备，并决定是否需要在编写代码前进行故障检查。\n\n### 编程一小时前一天\n\n-   在本课程计划结束时，打印一份或多份[Exit Ticket examples](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing)，或者自己编制。\n-   每个完成活动的学生都应该收到一张证书。提前为每个学生[Print one](https://studio.code.org/certificates/batch?course=bWM=)，使之在编程一小时结束时更简单。",
+          "preparation": "### 编程一小时前一周\n\n-   复习[Hour of Code Eductor Guide][0]和[Best Practices from Successful Educators][1]，便于开始计划编程一小时活动。\n-   如果你想要得到礼物或课堂支持，[Register your Hour of Code event][2]。\n-   自己复习并完成在线教程：[Minecraft: Adventurer][3]\n-   在要求学生完成之前，记得先测试一下。检查自己的技术设备，并决定是否需要在编写代码前进行故障检查。\n\n### 编程一小时前一天\n\n-   在本课程计划结束时，打印一份或多份[Exit Ticket examples][4]，或者自己编制。\n-   每个完成活动的学生都应该收到一张证书。提前为每个学生[Print one][5]，使之在编程一小时结束时更简单。",
           "purpose": "本课介绍编码和编程（使用模块）的核心计算机科学概念，以及简单的调试技术。",
           "student_overview": "在本课程中，所有年龄段的学习者都将在一个安全、支持性的环境中获得编码和计算机科学的入门体验。本课对任何6岁以上的学生都很有效。年龄较小的学习者可能完不成本教程，但是在一个小时的习题中会收获有很多乐趣。高中生基本上都会完成辅导课程，最后有时间玩自由游戏。"
         },
         "minecraft/Minecraft Hour of Code Designer": {
           "name": "我的世界 编码时间设计师",
           "overview": "在本课程中，所有年龄段的学习者都将在一个安全、支持性的环境中获得编码和计算机科学的入门体验。本课对任何6岁以上的学生都很有效。年龄较小的学习者可能完不成本教程，但是在一个小时的习题中会收获有很多乐趣。高中生基本上都会完成辅导课程，最后有时间玩自由游戏。",
-          "preparation": "### 编程一小时前一周\n\n-   复习[Hour of Code Eductor Guide](http://hourofcode.com/resources/how-to/)和[Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)，便于开始计划编程一小时活动。\n-   如果你想要得到礼物或课堂支持，[Register your Hour of Code event](http://hourofcode.com)。\n-   自己复习并完成在线教程：[Minecraft: Designer](https://studio.code.org/s/minecraft/lessons/1/levels/1)\n-   在要求学生完成之前，记得先测试一下。检查自己的技术设备，并决定是否需要在编写代码前进行故障检查。\n\n### 编程一小时前一天\n\n-   在本课程计划结束时，打印一份或多份[Exit Ticket examples](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing)，或者自己编制。\n-   每个完成活动的学生都应该收到一张证书。提前为每个人[Print one](https://studio.code.org/certificates/batch?course=bWM=)，使之在编程一小时结束时更简单。",
+          "preparation": "### 编程一小时前一周\n\n-   复习[Hour of Code Eductor Guide][0]和[Best Practices from Successful Educators][1]，便于开始计划编程一小时活动。\n-   如果你想要得到礼物或课堂支持，[Register your Hour of Code event][2]。\n-   自己复习并完成在线教程：[Minecraft: Designer][3]\n-   在要求学生完成之前，记得先测试一下。检查自己的技术设备，并决定是否需要在编写代码前进行故障检查。\n\n### 编程一小时前一天\n\n-   在本课程计划结束时，打印一份或多份[Exit Ticket examples][4]，或者自己编制。\n-   每个完成活动的学生都应该收到一张证书。提前为每个人[Print one][5]，使之在编程一小时结束时更简单。",
           "purpose": "本课介绍编码和编程（使用模块）的核心计算机科学概念，以及简单的调试技术。",
           "student_overview": "在本课程中，所有年龄段的学习者都将在一个安全、支持性的环境中获得编码和计算机科学的入门体验。本课对任何6岁以上的学生都很有效。年龄较小的学习者可能完不成本教程，但是在一个小时的习题中会收获有很多乐趣。高中生基本上都会完成辅导课程，最后有时间玩自由游戏。"
         },
@@ -5201,15 +5201,15 @@
         },
         "starwars/Hour of Code 2015": {
           "name": "星球大战：用代码构建一个星系-JavaScript",
-          "overview": "在这节课中，所有年龄的学习者在一个安全的支持性环境中获得编程和计算机科学的入门体验。这节课有两个版本。这个版本同时使用了拖放模块和JavaScript。学生需要能够在键盘上打字。对于使用电脑的年龄较大的学生来说，学习JavaScript可能会很有趣，也会带来额外的挑战。如果你的课堂上有一些已经学过一些编程的学生，那么这个版本的教程也很有用。建议11岁以上儿童使用。\n\n还推荐[Blockly version](https://studio.code.org/s/starwarsblocks/lessons/1/levels/1)，可供使用无键盘移动设备的学生、年轻学生和国际学生使用。",
-          "preparation": "### 编程一小时前一周\n\n-   复习[Hour of Code Educator Guide](http://hourofcode.com/resources/how-to/)和[Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)，便于开始计划编程一小时活动。\n-   自己复习并完成在线教程：[Star Wars: Building a Galaxy with Code](https://studio.code.org/s/starwars/lessons/1/levels/1)\n-   在要求学生完成之前，一定要先测试一下。检查自己的技术设备，并决定是否需要在编程一小时前进行故障检查。\n\n### 编程一小时前一天\n\n-   在黑板上写下“编码”、“编程”和“调试”。如果你有术语展示墙的话，可以直接把它们添加到上面。\n-   在黑板上或公告板中间的纸上写下“计算机科学”这几个字。作为准备和评估活动的[\"mind map\"](https://en.wikipedia.org/wiki/Mind_map)来使用。\n-   每个完成活动的学生都应该颁发一张[certificate](http://code.org/certificates)。提前为每个学生打印证书，使之在编程一小时结束时更简单。",
+          "overview": "在这节课中，所有年龄的学习者在一个安全的支持性环境中获得编程和计算机科学的入门体验。这节课有两个版本。这个版本同时使用了拖放模块和JavaScript。学生需要能够在键盘上打字。对于使用电脑的年龄较大的学生来说，学习JavaScript可能会很有趣，也会带来额外的挑战。如果你的课堂上有一些已经学过一些编程的学生，那么这个版本的教程也很有用。建议11岁以上儿童使用。\n\n还推荐[Blockly version][0]，可供使用无键盘移动设备的学生、年轻学生和国际学生使用。",
+          "preparation": "### 编程一小时前一周\n\n-   复习[Hour of Code Educator Guide][0]和[Best Practices from Successful Educators][1]，便于开始计划编程一小时活动。\n-   自己复习并完成在线教程：[Star Wars: Building a Galaxy with Code][2]\n-   在要求学生完成之前，一定要先测试一下。检查自己的技术设备，并决定是否需要在编程一小时前进行故障检查。\n\n### 编程一小时前一天\n\n-   在黑板上写下“编码”、“编程”和“调试”。如果你有术语展示墙的话，可以直接把它们添加到上面。\n-   在黑板上或公告板中间的纸上写下“计算机科学”这几个字。作为准备和评估活动的[\"mind map\"][3]来使用。\n-   每个完成活动的学生都应该颁发一张[certificate][4]。提前为每个学生打印证书，使之在编程一小时结束时更简单。",
           "purpose": "本课介绍编码和编程（使用模块）的核心计算机科学概念，包括排序和事件。本教程的JavaScript 版本还让学生体验输入代码的过程。",
           "student_overview": "在本课程中，所有年龄段的学习者都将在一个安全、支持性的环境中获得编码和计算机科学的入门体验。本课程有两个版本。 "
         },
         "starwarsblocks/Hour of Code 2015": {
           "name": "星球大战：用代码建造星系（Blockly）",
-          "overview": "在本课中，所有年龄段的学员都将在一个支持性的安全环境中获得编程和计算机科学的入门体验。本课有两个版本。该版本使用拖放模块，最适合使用无键盘移动设备的学生、年轻学生和国际学生。建议6岁以上儿童使用。  \n\n此外还提供[JavaScript](s/starwars)版本。对于年龄较大的计算机学生来说，学习JavaScript可能是有趣的，并提供额外的挑战。请注意，JavaScript语法没有经过翻译，对于第一个编程一小时，这里的翻译模块给出了更好的介绍。如果班上有学生已经学过一些编码，那么这个教程版本也很不错。建议11岁以上儿童使用。",
-          "preparation": "### 编程一小时前一周\n\n-   复习[Hour of Code Educator Guide](http://hourofcode.com/resources/how-to/)和[Best Practices from Successful Educators](http://www.slideshare.net/TeachCode/hour-of-code-best-practices-for-successful-educators-51273466)，便于开始计划编程一小时活动。\n-   自己复习并完成在线教程：[Star Wars: Building a Galaxy with Code](https://studio.code.org/s/starwarsblocks/lessons/1/levels/1)\n-   在要求学生完成之前，一定要先测试一下。检查自己的技术设备，并决定是否需要在编程一小时前进行故障检查。\n\n### 编程一小时前一天\n\n-   在黑板上写下“编码”、“编程”和“调试”。如果你有术语展示墙的话，可以直接把它们添加到上面。\n-   在黑板上或公告板中间的纸上写下“计算机科学”这几个字。作为准备和评估活动的[\"mind map\"](https://en.wikipedia.org/wiki/Mind_map)来使用。\n-   每个完成活动的学生都应该颁发一张[certificate](http://code.org/certificates)。提前为每个学生打印证书，使之在编程一小时结束时更简单。",
+          "overview": "在本课中，所有年龄段的学员都将在一个支持性的安全环境中获得编程和计算机科学的入门体验。本课有两个版本。该版本使用拖放模块，最适合使用无键盘移动设备的学生、年轻学生和国际学生。建议6岁以上儿童使用。  \n\n此外还提供[JavaScript][0]版本。对于年龄较大的计算机学生来说，学习JavaScript可能是有趣的，并提供额外的挑战。请注意，JavaScript语法没有经过翻译，对于第一个编程一小时，这里的翻译模块给出了更好的介绍。如果班上有学生已经学过一些编码，那么这个教程版本也很不错。建议11岁以上儿童使用。",
+          "preparation": "### 编程一小时前一周\n\n-   复习[Hour of Code Educator Guide][0]和[Best Practices from Successful Educators][1]，便于开始计划编程一小时活动。\n-   自己复习并完成在线教程：[Star Wars: Building a Galaxy with Code][2]\n-   在要求学生完成之前，一定要先测试一下。检查自己的技术设备，并决定是否需要在编程一小时前进行故障检查。\n\n### 编程一小时前一天\n\n-   在黑板上写下“编码”、“编程”和“调试”。如果你有术语展示墙的话，可以直接把它们添加到上面。\n-   在黑板上或公告板中间的纸上写下“计算机科学”这几个字。作为准备和评估活动的[\"mind map\"][3]来使用。\n-   每个完成活动的学生都应该颁发一张[certificate][4]。提前为每个学生打印证书，使之在编程一小时结束时更简单。",
           "purpose": "本课介绍编码和编程（使用模块）的核心计算机科学概念，包括排序和事件。本教程的JavaScript 版本还让学生体验输入代码的过程。",
           "student_overview": "在本课程中，所有年龄段的学习者都将在一个安全、支持性的环境中获得编码和计算机科学的入门体验。本课程有两个版本。 "
         },
@@ -5736,7 +5736,7 @@
         "jigsaw/Jigsaw": {
           "name": "拼图",
           "overview": "这一课会给学生们一个想法，让他们在到计算机实验室的时候有些什么期望。从简单讨论来给他们讲一些计算机实验室的举止，然后会让他们进一步用计算机来完成在线的难题。",
-          "preparation": "-   回顾[常识教育](https://www.commonsense.org/education/digital-citizenship)网站，了解更多网上安全方面的内容。",
+          "preparation": "-   回顾[常识教育][0]网站，了解更多网上安全方面的内容。",
           "purpose": "本课的主要目标是让学生积累计算机的使用经验。课程涵盖最基本的计算机功能，如点击、拖动和拖放，我们正在为将来的习题创造一个更加平等的竞争环境。本课程还提供了一个介绍基本计算机硬件术语（可能包括“鼠标”、“触控板”或“触摸屏”，取决于你的设备）的好机会。",
           "student_overview": "点击并拖拽来完成难题。"
         },

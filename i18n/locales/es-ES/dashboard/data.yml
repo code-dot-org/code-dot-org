@@ -733,6 +733,8 @@ es:
         csc-ecosystems-intro: Introducción a Ecosistemas
         PL_CSD_MicroBit_Intro: Introducción al Micro:bit
         csc_animal_adaptations_intro: Introducción a las Adaptaciones Animales
+        what-is-creativity: '¿Qué es la creatividad?'
+        code-break: Tómate un Descanso con Código
     callout:
       text:
         drag_blocks: Arrastra un bloque de "mover" y pégalo debajo del otro bloque

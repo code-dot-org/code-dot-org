@@ -38,8 +38,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>Taneční večírek</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Naprogramujte taneční večírek, který pak budete sdílet s rodinou a přáteli. Vystoupí Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez, hudba z Disneyho „Encanto“ a další!</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>Taneční párty</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">KóduJTE taneční párty, kterou můžete sdílet s přáteli a rodinou. Vystoupí Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez, hudba z Disneyho „Encanto“ a další!</div>
         <a class="linktag" id="danceparty" href="/dance" target="_blank"><button>Try activity</button></a>
     </span>
   </div>
@@ -53,8 +53,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Hodina programování Minecraft</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Minecraft a Hodina programování jsou tu zase, tentokrát se zbrusu novou aktivitou! Cestujte skrze Minecraft pomocí programování.</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Hodina kódu Minecraft</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Minecraft je zpět na Hodinu kódu se zcela novou aktivitou! Cestujte skrze Minecraft pomocí programování.</div>
         <br>
         <a class="linktag" id="minecraft" href="/minecraft" target="_blank"><button>Zkuste tuto aktivitu</button></a>
     </span>
@@ -69,8 +69,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>Umělá inteligence pro oceány</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Pomozte umělé inteligenci vyčistit oceány tím, že ji naučíte detekovat odpad! Učte se o školicích datech, o podjatosti a o tom, jak může umělá inteligence řešit problémy světa. Zobrazit <a class="linktag" id="oceans-lesson" href="https://curriculum.code.org/hoc/plugged/9/" target="_blank">plán lekcí</a>.</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>Umělá inteligence pro oceány</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Pomozte umělé inteligenci vyčistit oceány tím, že jej trénuje k detekci odpadků! Učte se o školicích datech, o podjatosti a o tom, jak může umělá inteligence řešit problémy světa. Zobrazit <a class="linktag" id="oceans-lesson" href="https://curriculum.code.org/hoc/plugged/9/" target="_blank">plán lekcí</a>.</div>
         <a class="linktag" id="aiforoceans" href="https://studio.code.org/s/oceans/lessons/1/levels/1" target="_blank"><button>Zkusit aktivitu</button></a>
     </span>
   </div>
@@ -96,9 +96,9 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>Jak fungují počítače</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Tato série krátkých videí s úvodem s Billem Gatesem vysvětluje, co dělá počítač počítačem a jak fungují počítačové obvody.</div>
-        <a class="linktag" id="howcomputers" href="https://www.youtube.com/watch?v=OAx_6-wdslM&list=PLzdnOPI1iJNcsRwJhvksEo1tJqjIqWbN-" target="_blank"><button>Sledujte sérii videí</button></a>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>Jak fungují počítače</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">S úvodem Billa Gatese, tato série šesti krátkých videí vysvětluje, co dělá počítač počítačem a jak fungují počítačové obvody.</div>
+        <a class="linktag" id="howcomputers" href="https://www.youtube.com/watch?v=OAx_6-wdslM&list=PLzdnOPI1iJNcsRwJhvksEo1tJqjIqWbN-" target="_blank"><button>Podívejte se na video série</button></a>
     </span>
   </div>
 </div>
@@ -111,9 +111,9 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Jak funguje Internet</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">V této sérii osmi krátkých videí se dozvíte, jak byl vynalezen internet, co je to HTML a jak fungují vyhledávače jako například Google.</div>
-        <a class="linktag" id="howinternet" href="https://www.youtube.com/watch?v=Dxcc6ycZ73M&list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7-" target="_blank"><button>Sledujte sérii videí</button></a>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Jak funguje internet</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">V této sérii osmi krátkých videí se dozvíte, jak byl internet vynalezen, co je HTML, a jak fungují vyhledávače jako Google.</div>
+        <a class="linktag" id="howinternet" href="https://www.youtube.com/watch?v=Dxcc6ycZ73M&list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7-" target="_blank"><button>Podívejte se na video série</button></a>
     </span>
   </div>
 </div>
@@ -126,8 +126,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Jak funguje umělá inteligence</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">V této sérii krátkých videí se dozvíte více o tom, jak funguje umělá inteligence a proč na tom záleží. Vystoupí výkonný ředitel společnosti Microsoft Satya Nadella a rozmanité spektrum odborníků.</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Jak AI funguje</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Zjistěte, jak AI funguje a proč je to důležité s touto sérií krátkých videí. Vystoupí výkonný ředitel společnosti Microsoft Satya Nadella a rozmanité spektrum odborníků.</div>
         <a class="linktag" id="ai-videos" href="/ai#ai-videos" target="_blank"><button>Sledujte sérii videí</button></a>
     </span>
   </div>
@@ -176,8 +176,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>Úvod do Laboratoře her</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Programujte animace, interaktivní umění a hry v Laboratoři her. Začněte od jednoduchých tvarů a pokračujte k pokročilejším animacím a hrám založeným na sprajtech.</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>Úvod do herní laboratoře</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Programové animace, interaktivní umění, a hry v Game Lab. Začněte od jednoduchých tvarů a pokračujte k pokročilejším animacím a hrám založeným na sprajtech.</div>
         <a class="linktag" id="gamelab-intro" href="https://studio.code.org/s/csd3-virtual" target="_blank"><button>Zkuste modul</button></a>
     </span>
   </div>
@@ -191,9 +191,9 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Programování želvy v Laboratoři aplikací</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Pomocí jednoduchých příkazů jazyka JavaScript kreslete tvary a obrázky pomocí virtuální „želvy“. Navrhněte a naprogramujte si svou vlastní digitální scénu!</div>
-        <a class="linktag" id="turtle-applab" href="https://studio.code.org/s/csp3-virtual" target="_blank"><button>Zkuste modul</button></a>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Programování želv v App Lab</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Pomocí jednoduchých příkazů JavaScriptu můžete kreslit tvary a obrázky pomocí virtuální „želvy“. Navrhněte a naprogramujte svou vlastní digitální scénu!</div>
+        <a class="linktag" id="turtle-applab" href="https://studio.code.org/s/csp3-virtual" target="_blank"><button>Vyzkoušejte modul</button></a>
     </span>
   </div>
 </div>
@@ -206,8 +206,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Programování založené na událostech v Laboratoři aplikací</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Naučte se navrhovat aplikace reagující na kliknutí a stisky tlačítek. Vytvořte sérii jednoduchých aplikací  žijících na webu!</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Programování řízené událostmi v App Lab</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Naučte se navrhovat aplikace, které reagují na kliknutí a stisknutí kláves. Vytvořte sérii jednoduchých aplikací  žijících na webu!</div>
         <a class="linktag" id="events-applab" href="https://studio.code.org/s/csp5-virtual" target="_blank"><button>Zkuste modul</button></a>
     </span>
   </div>
@@ -312,8 +312,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; margin-top:10px"><strong>CodeBytes</strong></h3>
-        <div class="smalltext" style="color: dimgray;">CodeBytes jsou snadno zpracovatelné dvacetiminutové interaktivní lekce propojující počítačové vědy a témata z reálného světa. Vycvičte umělou inteligenci tak, aby četla znakový jazyk, navrhněte aplikaci nadobro, probádejte svět Minecraft a další!</div>
+        <h3 class="tutorial-info-h" style="margin-top:10px"><strong>CodeBytes</strong></h3>
+        <div class="smalltext" style="color: dimgray;">CodeBytes jsou snadno stravitelné, 20minutové interaktivní lekce kombinující informatiku s tématy z reálného světa. Vycvičte umělou inteligenci tak, aby četla znakový jazyk, navrhněte aplikaci nadobro, probádejte svět Minecraft a další!</div>
         <br>
         <br>
         <a class="linktag" id="codebytes" href="https://code.org/codebytes" target="_blank"><button>Zobrazit epizody</button></a>
@@ -329,8 +329,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; margin-top:10px"><strong>Code Break</strong></h3>
-        <div class="smalltext" style="color: dimgray; ">Udělejte si Code Break, aby Vás počítačová věda nepřestala bavit! Můžete vytvořit šifru s Ashtonem Kutcherem, učit se o proměnných s Yarou Shahidi a dokonce se i podívat na to, jak funguje internet, se skutečným vynálezcem internetu Vintem Cerfem!</div>
+        <h3 class="tutorial-info-h" style="margin-top:10px"><strong>Code Break</strong></h3>
+        <div class="smalltext" style="">Udržujte počítačovou vědu zábavou tím, že si vezmete Code Break! Můžete vytvořit šifru s Ashtonem Kutcherem, učit se o proměnných s Yarou Shahidi a dokonce se i podívat na to, jak funguje internet, se skutečným vynálezcem internetu Vintem Cerfem!</div>
         <br>
         <a class="linktag" id="codebreak" href="https://code.org/break" target="_blank"><button>Napojte se</button></a>
     </span>

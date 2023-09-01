@@ -196,6 +196,8 @@ ro:
   grade_level_label_elementary: Școala elementară
   grade_level_label_middle: Școala Gimnazială
   grade_level_label_high: Liceu
+  students_label: Participanți
+  teachers_label: Profesori
   teacher_label_csf: Profesor de Noțiuni de Bază în Informatică
   teacher_label_csd: Profesor Descoperirile Informaticii
   teacher_label_csp: Profesor de Principii în Informatică
@@ -209,7 +211,9 @@ ro:
   call_to_action_explore_unit: Explorați unitatea
   call_to_action_explore_curriculum: Explorați curriculumul
   call_to_action_explore_curriculum_options: Explorați opțiunile curriculare
+  call_to_action_explore_lessons: Explorați lecțiile
   call_to_action_explore_modules: Explorați modulele
+  call_to_action_explore_module: Explorați modulul
   call_to_action_explore_workshops: Explorați atelierele
   call_to_action_explore_course: Explorați cursul
   call_to_action_explore_courses: Explorați cursurile
@@ -257,8 +261,12 @@ ro:
   call_to_action_see_module_details: Vedeți detaliile modulului
   call_to_action_start_modules: Porniți modulele
   call_to_action_see_course_details: Vedeți detaliile cursului
+  call_to_action_see_lesson_details: Vezi detaliile lecției
   call_to_action_learn_about_approach: Aflați mai multe despre abordarea noastră
   call_to_action_try_java_lab: Încercați Java Lab
+  call_to_action_notify_available: Anunță-mă când este disponibil
+  call_to_action_register_early_access: Înregistrați-vă pentru acces anticipat
+  call_to_action_open_positions: Vizualizați pozițiile deschise
   aria_label_call_to_action_afe: Aflați mai multe despre Amazon Future Engineer
   aria_label_call_to_action_teaching_csf: Începeți programul de învățare profesională
     Predarea informaticii Fundamentals
@@ -330,6 +338,24 @@ ro:
   aria_label_call_to_action_csf_course_d: Vedeți detaliile cursului D
   aria_label_call_to_action_csf_course_e: Vedeți detaliile cursului E
   aria_label_call_to_action_csf_course_f: Vedeți detaliile cursului F
+  aria_label_call_to_action_ai_pl_101_videos: Urmăriți videoclipuri AI 101 pentru
+    profesori
+  aria_label_call_to_action_ai_teaching_module: Explorați modulul de predare AI și
+    învățare automată
+  aria_label_call_to_action_how_ai_works_lesson_01: Consultați detaliile lecției Introducere
+    în învățarea automată
+  aria_label_call_to_action_how_ai_works_lesson_02: Consultați detaliile lecției Computer
+    Vision
+  aria_label_call_to_action_how_ai_works_lesson_03: Consultați detaliile lecției Rețele
+    neuronale
+  aria_label_call_to_action_how_ai_works_lesson_04: Consultați detaliile lecției Chatbots
+    și Large Language Models
+  aria_label_call_to_action_how_ai_works_lesson_05: Consultați detaliile lecției Generative
+    Images
+  aria_label_call_to_action_how_ai_works_lesson_06: Consultați detaliile lecției de
+    părtinire algoritmică
+  aria_label_call_to_action_how_ai_works_lesson_07: Consultați detaliile lecției noastre
+    despre Codul nostru de etică AI
   video_title_professional_learning_program: Programul de învățare profesională al
     Code.org
   curriculum_name_csf: Bazele informaticii
@@ -451,6 +477,10 @@ ro:
   module_label_student_tool: Instrument pentru elevi
   module_label_student_product: Produs
   module_label_student_content_resources: Conținut & resurse
+  module_label_new: Nou
+  module_label_coming_soon: În curând
+  module_label_video_series: Serii video
+  module_label_self_paced: Modul auto-ritmat
   module_ages_5_10: 5-10
   module_ages_11_18: 11-18
   module_ages_7_18: 7-18
@@ -473,9 +503,13 @@ ro:
   module_grade_9_12_teachers: Profesori 9-12
   module_level_beginner: Începător
   module_level_intermediate: Intermediar
+  module_duration_45_mins: 45 minute
+  module_duration_1_hr: 1 oră
   module_duration_2_hrs: 2 ore
   module_duration_3_hrs: 3 ore
+  module_duration_5_hrs: 5 ore
   module_duration_8_hrs: 8 ore
+  module_duration_20_hrs: 20 de ore
   module_duration_35_hrs: 35 de ore
   module_duration_lesson: Lecție
   module_duration_week: Săptămână
@@ -551,6 +585,7 @@ ro:
   heading_no_devices: Nu există dispozitive? Vă acoperim noi
   heading_java_lab: Laboratorul Java
   heading_objects_first: Obiectele mai întâi
+  heading_these_lessons_will: 'Aceste lecții vor:'
   professional_learning_section_desc: Obțineți sprijinul de care aveți nevoie în timp
     ce vă pregătiți să predați. Profesorii o adoră, peste 90% dintre ei considerând-o
     cea mai bună dezvoltare profesională!
@@ -685,6 +720,11 @@ ro:
   ai_curriculum_grades_03: 'Niveluri de clasă: 3-12'
   ai_curriculum_duration_03: 'Durata: 1 oră'
   ai_curriculum_btn_aria_label_03: Încercați activitatea AI for Oceans
+  ai_curriculum_title_04: Cum funcționează AI
+  ai_curriculum_desc_04: Aceste lecții completează seria video How AI Works. Fiecare
+    lecție este asociată cu un singur videoclip din serie, scufundându-se mai adânc
+    în conceptele introduse în videoclipuri.
+  ai_curriculum_btn_aria_label_04: Explorați modul în care funcționează AI lecțiile
   ai_carousel_heading: 'Ce spun profesorii despre AI cu Code.org:'
   ai_carousel_quote_01: Această lecție a oferit, de asemenea, elevilor mei posibilitatea
     de a vedea că există un element de opinie în sistemele de clasificare. Mai târziu,
@@ -704,6 +744,11 @@ ro:
     automate.
   ai_pl_list_05: Explorați proiectele de sfârșit de capitol.
   ai_pl_duration: 'Durata: 2 ore'
+  ai_pl_title: Predarea AI și învățarea automată
+  ai_pl_desc: Introducere în inteligența artificială și învățarea automată. Antrenează
+    un model de învățare automată folosind AI Lab. și interacționează cu aplicații
+    de învățare automată. Luați în considerare implicațiile din lumea reală ale AI
+    și învățării automate.
   ai_video_series_title: Cum funcționează AI
   ai_video_series_desc: Cu o introducere a CEO-ului Microsoft Satya Nadella, această
     serie de videoclipuri scurte vă va prezenta cum funcționează inteligența artificială
@@ -731,6 +776,7 @@ ro:
   ai_pl_101_hero_desc: Descoperiți potențialul transformațional al inteligenței artificiale
     (IA) în educație cu ajutorul seriilor noastre gratuite de învățare online pentru
     educatori.
+  ai_pl_101_hero_desc_02: O serie cuprinzătoare de învățare online pentru profesori.
   ai_pl_101_hero_presented: Prezentat de
   ai_pl_101_intro_heading: Ce este IA 101 pentru Profesori?
   ai_pl_101_intro_text: IA 101 pentru Profesori este o serie de învățare profesională
@@ -774,6 +820,100 @@ ro:
     prin utilizarea modelelor de notare de ultimă oră și IA, ajutând profesorii să
     ofere feedback iterativ și evaluare formativă de-a lungul experienței de scriere.'
   ai_pl_101_explore__button_4: Instrument de explorare
+  ai_pl_101_video_title_1: Discuție de foc cu Sal Khan și Hadi Partovi
+  ai_pl_101_video_desc_1: Alăturați-vă lui Sal Khan (Academia Khan) și Hadi Partovi
+    (Code.org) pentru o discuție la foc despre îmbrățișarea inteligenței artificiale
+    în clasă. Așteptați-vă la o discuție plină de viață, inclusiv unele dintre cele
+    mai controversate subiecte legate de AI astăzi.
+  ai_pl_101_video_title_2: Demistificarea AI pentru educatori
+  ai_pl_101_video_desc_2: Introducere în fundamentele inteligenței artificiale, care
+    vă va dota cu cunoștințele fundamentale pentru a înțelege impactul profund al
+    AI în societatea noastră și relevanța sa crescândă pentru domeniul educației.
+    Veți obține informații practice despre utilizarea AI pentru sarcinile din clasă
+    și despre economisirea timpului pentru sarcinile administrative.
+  ai_pl_101_video_title_3: Transformarea învățării cu AI
+  ai_pl_101_video_desc_3: Explorați intersecția dintre AI și educație. Această sesiune
+    explorează modul în care AI poate fi combinată cu pedagogia pentru a îmbunătăți
+    învățarea elevilor. Este o participare obligatorie pentru educatorii care doresc
+    să folosească AI pentru a-și transforma practicile de predare pentru a îmbogăți
+    experiențele de învățare ale elevilor lor.
+  ai_pl_101_video_title_4: Asigurarea unei abordări responsabile a IA
+  ai_pl_101_video_desc_4: Explorați considerațiile etice și cele mai bune practici
+    pentru încorporarea inteligenței artificiale în mediile educaționale. Această
+    sesiune va oferi strategii concrete, resurse și exemple din lumea reală, toate
+    menite să înțeleagă potențialele prejudecăți ale AI și considerațiile etice care
+    vin odată cu aceasta.
+  ai_pl_101_video_title_5: Aducerea AI în sala de clasă
+  ai_pl_101_video_desc_5: Această sesiune se concentrează pe predarea despre AI, evaluarea
+    și utilizarea instrumentelor educaționale AI și valorificarea AI pentru evaluarea
+    elevilor. Cu un amestec bogat de teorie, exemple practice și resurse, își propune
+    să împuternicească educatorii să navigheze în peisajul AI și să îmbunătățească
+    experiențele de învățare ale elevilor.
+  ai_pl_101_video_desc_6: 'Aflați mai multe despre noua tehnologie care determină
+    schimbările majore în AI, oferind două videoclipuri noi pe modele de limbi mari
+    (cum ar fi ChatGPT) și AI generativă. Ascultați cum funcționează aceste noi tehnologii
+    direct de la experți: Mira Murati, CTO al OpenAI și Cristóbal Valenzuela, CEO
+    al RunwayML.'
+  how_ai_works_hero_heading: Cum funcționează AI
+  how_ai_works_hero_desc: Scufundați-vă în lumea AI cu „How AI Works”, seria noastră
+    video și lecțiile însoțitoare!
+  how_ai_works_intro_desc: Această serie de videoclipuri scurte și lecții însoțitoare
+    în clasă vă vor prezenta pe dvs. și pe elevii dvs. cum funcționează inteligența
+    artificială și de ce contează. Puteți alege lecții individuale bazate pe subiect,
+    puteți explora întreaga serie de subiecte dintr-o clasă sau puteți preda toate
+    cele 7 lecții pentru a face o scufundare mai profundă.
+  how_ai_works_intro_list_01: Vă prezentăm inteligența artificială și învățarea automată
+  how_ai_works_intro_list_02: Scufundați-vă în modul în care funcționează AI generativă,
+    inclusiv modele lingvistice mari (LLM) și generarea de imagini
+  how_ai_works_intro_list_03: Explorați prejudecățile, etica, confidențialitatea și
+    utilizarea responsabilă a AI
+  how_ai_works_intro_list_04: Atingeți aplicațiile din lumea reală ale AI, inclusiv
+    viziunea computerizată
+  how_ai_works_lessons_heading: Lecții AI pentru clasa ta
+  how_ai_works_lesson_title_01: Introducere în învățarea automată
+  how_ai_works_lesson_desc_01: Aflați despre o formă de inteligență artificială numită
+    învățare automată și cum pot folosi procesul de rezolvare a problemelor pentru
+    a ajuta la instruirea unui robot pentru rezolvarea problemelor. Participați la
+    activități de învățare automată în care un robot învață cum să detecteze tiparele
+    la pești.
+  how_ai_works_lesson_title_02: Viziune computerizată
+  how_ai_works_lesson_desc_02: Aflați cum funcționează viziunea computerizată. Urmăriți
+    un videoclip care explică viziunea computerului și modul în care un computer „vede”.
+    Apoi proiectați un algoritm care utilizează o rețea pentru a decide ce număr afișează
+    afișajul cu șapte segmente și pentru a-l testa.
+  how_ai_works_lesson_title_03: Rețele neuronale
+  how_ai_works_lesson_desc_03: Aflați cum funcționează rețelele neuronale. Utilizați
+    un widget pentru a explora rețelele neuronale într-un mod direct. Urmăriți un
+    videoclip care explică rețelele neuronale. În cele din urmă, discutați despre
+    necesitatea unor perspective diverse atunci când creați sisteme de recomandare.
+  how_ai_works_lesson_title_04: Chatbots și modele de limbi mari
+  how_ai_works_lesson_desc_04: Aflați ce este un model de limbă mare (LLM) și cum
+    funcționează, apoi utilizați un LLM pentru a co-crea un text cu AI. În cele din
+    urmă, discutați dacă LLM-urile sunt sau nu inteligente sau creative.
+  how_ai_works_lesson_title_05: Imagini generative
+  how_ai_works_lesson_desc_05: Aflați cum AI poate genera imagini, apoi explorați
+    un widget AI de difuzie și discutați dacă aceste modele sunt sau nu creative.
+  how_ai_works_lesson_title_06: Bias algoritmic
+  how_ai_works_lesson_desc_06: Practicați decuparea imaginilor pentru a descoperi
+    părtinirea care stă la baza algoritmului de decupare Twitter, apoi citiți și urmăriți
+    un videoclip despre descoperirea acestui algoritm părtinitor. În cele din urmă,
+    discutați modalități de recunoaștere și reducere a prejudecății în algoritmi.
+  how_ai_works_lesson_title_07: Codul nostru de etică AI
+  how_ai_works_lesson_desc_07: Efectuați cercetări folosind articole și videoclipuri
+    care expun capcanele etice într-o zonă de inteligență artificială la alegere.
+    Asamblați o resursă „Codul nostru de etică AI” la nivel de clasă pentru creatorii
+    și legiuitorii AI de pretutindeni.
+  how_ai_works_lessons_in_a_day_title: Cum funcționează AI într-o zi
+  how_ai_works_lessons_in_a_day_desc: Ai doar o zi? Există, de asemenea, opțiunea
+    de a introduce întreaga serie studenților într-o singură zi. Perfect pentru orice
+    profesor din domeniu care dorește să introducă elevii în AI sau chiar pentru ca
+    lecție pentru un profesor invitat.
+  how_ai_works_lessons_in_a_day_desc_02: Introduceți toate videoclipurile „Cum funcționează
+    AI” într-o singură zi. Elevii urmăresc împreună cu fiecare videoclip potrivind
+    vocabularul din videoclip, apoi răspunzând la o întrebare de reflecție despre
+    fiecare videoclip.
+  how_ai_works_resources_desc: Vrei să afli mai multe despre AI? Iată câteva resurse
+    suplimentare care vă pot ajuta să extindeți învățarea dvs. și a elevilor dvs.
   ai_vid_intro_caption: Prezentarea modului în care funcționează AI
   ai_vid_chatbots_caption: Cum funcționează chatbot-urile și modelele lingvistice
     mari
@@ -1121,10 +1261,10 @@ ro:
   teach_page_additional_materials_list_desc_03: Tipăriți aceste afișe ale diverselor
     modele de rol ca să le expuneți în școala dv. și să inspire elevii dv. să încerce
     informatica.
-  csp_page_top_desc: Free set of elementary curricula that introduces students to
-    the foundational concepts of computer science and challenges them to explore how
-    computing and technology can impact the world. Can be taught as an introductory
-    class and as an AP course.
+  csp_page_top_desc: Free year-long curriculum that introduces students to the foundational
+    concepts of computer science and challenges them to explore how computing and
+    technology can impact the world. Can be taught as an introductory class and as
+    an AP course.
   csp_page_intro_heading: Free, AP® CSP endorsed, high school introductory course
   csp_page_intro_list_01: Culturally responsive pedagogy
   csp_page_intro_list_02: Real-world problem investigation
@@ -1270,181 +1410,191 @@ ro:
     Closed captioning, Immersive reader
   csd_page_pick_a_course_heading: Alegerea cursului Descoperiri în Informatică potrivit
     pentru clasa ta
-  csd_page_pick_a_course_desc: Cu setul divers de opțiuni oferite pentru CS Discoveries,
-    există un curs pentru toate nevoile diferite.
+  csd_page_pick_a_course_desc: Datorită setului divers de opțiuni oferit pentru Descoperirile
+    în Informatică, există un curs pentru toate nevoile diferite.
   csd_page_pick_a_course_heading_02: Cum doriți să alegeți conținutul?
-  csd_page_courses_year_desc: Prin intermediul a 7 unități, studenții explorează o
-    mare varietate de subiecte.
+  csd_page_courses_year_desc: Prin intermediul a 7 unități, elevii explorează o mare
+    varietate de subiecte.
   csd_page_courses_year_action_block_desc: 'Un curs introductiv de informatică care
-    împuternicește studenții să creeze artefacte autentice și să se angajeze în informatică
-    ca mediu pentru creativitate, comunicare, rezolvarea problemelor și distracție. '
-  csd_page_courses_flexible_units_desc: Fiecare unitate de CS Discoveries poate fi
-    utilizată singură, fără experiență anterioară necesară, ceea ce vă permite să
-    alegeți unitățile exacte care funcționează pentru sala de clasă.
-  csd_page_courses_collections_desc: Scufundați-vă mai adânc într-o zonă cu un set
-    de unități axate pe un anumit subiect.
-  csd_page_faq_question_01: CS Discoveries este mapat la standarde?
-  csd_page_faq_answer_01: CS Discoveries a fost scris folosind atât Cadrul K-12 pentru
-    informatică, cât și standardele CSTA 2017 ca îndrumare. În prezent, fiecare lecție
-    din CS Discoveries conține mapări la standardele relevante CSTA 2017. [Un rezumat
-    al mapărilor standardelor poate fi găsit aici] (%{mappings_url}). O versiune Google
-    Sheets a standardelor poate fi găsită la [Standarde CSD] (%{csd_standards_url}).
+    împuternicește cursanții să creeze artefacte autentice și să se angajeze în informatică
+    ca mediu de creativitate, comunicare, rezolvarea problemelor și distracție. '
+  csd_page_courses_flexible_units_desc: Fiecare unitate a cursului Descoperiri în
+    Informatică poate fi utilizată pe cont propriu, fără a fi necesară o experiență
+    prealabilă, ceea ce vă permite să alegeți unitățile precise care funcționează
+    pentru clasa dvs..
+  csd_page_courses_collections_desc: Aprofundați o zonă cu un set de unități axate
+    pe un anumit subiect.
+  csd_page_faq_question_01: Este cursul Descoperiri în Informatică corelat cu standardele?
+  csd_page_faq_answer_01: Descoperiri în Informatică a fost scris folosind ca îndrumare
+    atât Cadrul pentru Informatică K-12, cât și standardele CSTA 2017. În prezent,
+    fiecare lecție a cursului Descoperiri în Informatică conține corespondențe cu
+    standardele CSTA 2017 relevante. [Un rezumat al corespondențelor cu standardele
+    poate fi găsit aici](%{mappings_url}). O versiune Google Sheets a standardelor
+    poate fi găsită la [CSD Standards](%{csd_standards_url}).
   csd_page_faq_question_02: Cum /Unde pot obține dezvoltare profesională pentru acest
     curs?
-  csd_page_faq_answer_02: Programul nostru de învățare profesională oferă sprijin
+  csd_page_faq_answer_02: Programul nostru de Învățare Profesională oferă sprijin
     pe tot parcursul anului. Programul începe cu un atelier de vară de cinci zile,
     unde veți avea ocazia să lucrați practic cu programa și să întâlniți alți profesori
     din zona dvs. Pe tot parcursul anului, oferim ateliere de urmărire și sprijin
-    pe forum. Nu aveți nevoie de nicio experiență anterioară în informatică pentru
-    a începe. Și profesorilor le place! 90% o clasează ca fiind cea mai bună dezvoltare
-    profesională din toate timpurile. [Faceți clic aici pentru a aplica și a afla
-    mai multe] (%{apply_url}).
-  csd_page_faq_question_03: Predau CS Discoveries, dar am mai puțin de un semestru
-    cu studenții mei. Ce ați recomanda?
+    pe forum. Nu aveți nevoie de nicio experiență prealabilă în informatică pentru
+    a începe. Și profesorilor le place! 90% dintre aceștia o clasează ca fiind cea
+    mai bună dezvoltare profesională din toate timpurile. [Faceți clic aici pentru
+    a aplica și a afla mai multe] (%{apply_url}).
+  csd_page_faq_question_03: Predau Descoperiri în Informatică, dar am mai puțin de
+    un semestru cu elevii mei. Ce ați recomanda?
   csd_page_faq_answer_03_01: Profesorii care au un program restrâns, incapabili să
-    predea toate unitățile CS Discoveries pe parcursul unui an școlar, pot acum să
-    atribuie cu ușurință un set specific de unități CS Discoveries pe baza a ceea
-    ce doresc să se concentreze. Aceste colecții sunt în continuare aceleași unități
-    exacte găsite în CS Discoveries, pur și simplu grupate pe baza recomandărilor
-    noastre de mai jos pentru a se scufunda adânc într-o zonă specifică a CS Discoveries.
-    Fiecare colecție este de aproximativ un semestru sau puțin mai puțin de un semestru.
-    [Faceți clic aici pentru a vedea opțiunile noastre de colecții] (%{collections_url}).
+    predea toate unitățile Descoperiri în Informatică pe parcursul unui an școlar,
+    pot acum să atribuie cu ușurință un set specific de unități din cursul Descoperiri
+    în Informatică pe baza celor pe care doresc să se concentreze. Aceste colecții
+    sunt în continuare aceleași unități exacte găsite în cursul Descoperiri în Informatică,
+    pur și simplu grupate pe baza recomandărilor noastre de mai jos pentru a aprofunda
+    o zonă specifică din cursul Descoperiri în Informatică. Fiecare colecție durează
+    aproximativ sau mai puțin de un semestru. [Faceți clic aici pentru a vedea opțiunile
+    noastre de colecții] (%{collections_url}).
   csd_page_faq_answer_03_02: Pentru profesorii care au un program și mai restrâns,
-    aceștia au capacitatea de a atribui o singură unitate la un moment dat din CS
-    Discoveries fără a atribui întregul curs. Sperăm că acest lucru ajută la sprijinirea
-    sălilor de clasă care predau unități de CS Discoveries încorporate ca parte a
-    cursurilor mai mari sau când predau informatica într-un program limitat. [Click
-    aici pentru a vedea unitățile noastre flexibile] (%).
-  csd_page_faq_question_04: Ce materiale și consumabile sunt necesare pentru CS Discoveries?
+    aceștia au capacitatea de a atribui o singură unitate la un moment dat din cursul
+    Descoperiri în Informatică fără a atribui întregul curs. Sperăm că acest lucru
+    ajută la sprijinirea claselor unde se predau unități din cursul Descoperiri în
+    Informatică, încorporate ca parte a cursurilor mai mari sau când se predă informatica
+    într-un program limitat. [Click aici pentru a vedea unitățile noastre flexibile]
+    (%).
+  csd_page_faq_question_04: Ce materiale și consumabile sunt necesare pentru cursul
+    Descoperiri în Informatică?
   csd_page_faq_answer_04_01: Un cost potențial de luat în considerare la predarea
     acestui curs este tipărirea. Multe lecții au fișe care sunt concepute pentru a
     ghida elevii prin activități. Deși nu este necesar ca toate aceste fișe să fie
     tipărite, multe au fost concepute pentru a fi tipărite și recomandăm cu tărie
     imprimarea atunci când este posibil.
   csd_page_faq_answer_04_02: 'Dincolo de tipărire, unele lecții necesită rechizite
-    și manipulări tipice pentru clasă, cum ar fi: jurnale studențești, hârtie poster,
-    markeri/creioane colorate, foarfece, resturi de hârtie, lipici sau bandă, note
-    post-it sau cărți index (sau hârtie de dimensiuni similare) și rigle sau o margine
-    dreaptă de un fel.'
+    și  materiale de manipulare tipice pentru clasă, precum: jurnale studențești,
+    hârtie poster, markeri/creioane colorate, foarfece, resturi de hârtie, lipici
+    sau bandă, note post-it sau cărți index (sau hârtie de dimensiuni similare) și
+    rigle sau un fel de margine.'
   csd_page_faq_answer_04_03: 'În plus față de aceste materiale generale de curs, următoarele
-    elemente sunt solicitate în unități specifice:'
-  csd_page_faq_answer_04_04: Rezolvarea problemelor și calculul
+    elemente sunt solicitate în unitățile specifice:'
+  csd_page_faq_answer_04_04: Rezolvarea Problemelor și Calculul
   csd_page_faq_answer_04_05: Folie de aluminiu, recipient pentru apă, bănuți (rețineți
     că bănuții pot fi înlocuiți cu un alt tip de greutate de aceeași dimensiune).
-    Activități alternative sunt disponibile dacă nu aveți acces la aceste consumabile.
-  csd_page_faq_answer_04_06: Crearea aplicațiilor cu dispozitive (opțiunea A și opțiunea
-    B)
-  csd_page_faq_answer_04_07: 'Option A: Classroom set of Circuit Playgrounds. Check
-    out [code.org/maker/circuitplayground](%{url}) for more details.'
-  csd_page_faq_answer_04_08: 'Option B: Classroom set of micro:bit devices. Check
-    out [code.org/maker/microbit](%{url}) for more details.'
-  csd_page_faq_answer_04_09: Consumabile pentru producător, cum ar fi cutii goale
-    de șervețel sau role de carton sau hârtie zgârietură
-  csd_page_faq_answer_04_10: "*Notă: Unitatea Creating Apps with Devices are două
-    opțiuni de implementare - una pentru cei care folosesc circuite de joacă și una
-    pentru cei care folosesc micro:bit. Profesorii nu ar trebui să cumpere ambele
-    seturi de dispozitive sau să predea ambele opțiuni de unitate, deoarece sunt echivalente
-    și acoperă același conținut."
-  csd_page_faq_question_06: Cum se potrivește CS Discoveries cu celelalte cursuri
-    Code.org?
-  csd_page_faq_answer_06_01: CS Discoveries este conceput pentru a se potrivi în mod
-    natural între cursurile noastre [CS Fundamentals] (%{csf_url}) și cursul nostru
-    [Principiile CS] (%{csp_url}). În timp ce fiecare dintre aceste cursuri este conceput
-    pentru a fi un punct de intrare adecvat vârstei în informatică, studenții cu experiență
-    anterioară vor găsi multe subiecte noi de explorat și vor revizui subiecte familiare
-    în contexte noi și mai provocatoare.
+    Sunt disponibile activități alternative dacă nu aveți acces la aceste consumabile.
+  csd_page_faq_answer_04_06: Crearea Aplicațiilor cu ajutorul Dispozitivelor (opțiunea
+    A și opțiunea B)
+  csd_page_faq_answer_04_07: 'Opțiunea A: Set de Locuri de Joacă în Circuit în clasă.
+    Consultați [code.org/maker/circuitplayground](%{url}) pentru mai multe detalii.'
+  csd_page_faq_answer_04_08: 'Opțiunea B: Set de dispozitive micro:bit pentru clasă.
+    Consultați [code.org/maker/microbit](%{url}) pentru mai multe detalii.'
+  csd_page_faq_answer_04_09: Consumabile pentru Executant, cum ar fi cutii goale de
+    șervețele sau role de carton sau maculatură
+  csd_page_faq_answer_04_10: "*Notă: Unitatea Crearea se Aplicații cu ajutorul Dispozitivelor
+    are două opțiuni de implementare - una pentru cei care folosesc locuri de joacă
+    de circuit și una pentru cei care folosesc micro:bit. Profesorii nu ar trebui
+    să cumpere ambele seturi de dispozitive sau să predea ambele opțiuni de unitate,
+    deoarece sunt echivalente și acoperă același conținut."
+  csd_page_faq_question_06: Cum se potrivește cursul Descoperiri în Informatică cu
+    celelalte cursuri Code.org?
+  csd_page_faq_answer_06_01: Cursul Descoperiri în Informatică este conceput pentru
+    a se potrivi în mod natural între cursurile noastre [CS Fundamentals] (%{csf_url})
+    și cursul nostru [Principiile Informaticii] (%{csp_url}). În timp ce fiecare dintre
+    aceste cursuri este conceput pentru a fi un punct de intrare în informatică adecvat
+    vârstei, elevii cu experiență anterioară vor găsi multe subiecte noi de explorat
+    și vor revizui subiecte familiare în contexte noi și mai provocatoare.
   csc_page_top_desc: Faceți conexiuni între informatică (CS) și alte materii precum
     matematica, artele limbajului, știința și studiile sociale.
   csc_page_intro_heading: Predați CS în timp ce acoperiți standardele de bază ale
     subiectului
   csc_page_intro_list_01: Încorporați CS în alte subiecte
-  csc_page_intro_list_02: Consolidarea învățării la alte discipline
-  csc_page_intro_list_03: Respectă standardele de bază ale subiectului
+  csc_page_intro_list_02: Consolidați învățarea în alte discipline
+  csc_page_intro_list_03: Respectați standardele de bază ale subiectului
   csc_page_intro_list_04: Mod distractiv de a învăța elevii despre informatică
   csc_page_intro_list_05: Open-ended projects for more personalized learning
-  csc_page_intro_list_06: Ușor pentru orice profesor cu orice fundal
+  csc_page_intro_list_06: Ușor pentru orice profesor cu orice pregătire
   csc_page_curriculum_glance_topics: Interdisciplinar
   csc_page_curriculum_glance_devices: Laptop, Chromebook, Tabletă
   csc_page_curriculum_glance_tools: Laboratorul Sprite
-  csc_page_curriculum_glance_professional_learning: Module cu ritm propriu
+  csc_page_curriculum_glance_professional_learning: Module în ritm propriu
   csc_page_curriculum_glance_professional_languages: Română
   csc_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
-  csc_page_quote: Apreciez foarte mult cât de temeinice și bine ritmate sunt lecțiile.
+  csc_page_quote: Apreciez foarte mult cât de amănunțite și de bine ritmate sunt lecțiile.
     Nu sunt familiarizat cu informatica, dar cu lecțiile pe care le oferiți mă simt
-    încrezător în a-i ajuta pe elevii mei să înțeleagă conceptele și să le lege de
-    programa noastră.
-  csc_page_find_a_module_desc: Ofertele noastre actuale CS Connections sunt destinate
-    sălilor de clasă a III-a până la a V-a și sunt concepute pentru a lua o săptămână
-    de lecții de 45 de minute în fiecare zi.
-  csc_page_faq_question_01: Conexiunile CS sunt mapate la standarde?
-  csc_page_faq_answer_01: Da! CS Connections este mapat la standardele comune de stat
-    de bază (CCSS) pentru ELA și matematică, Standardele științifice de generație
-    următoare (NGSS) și Standardele Asociației Profesorilor de Informatică (CSTA).
-  csc_page_faq_question_02: Cât costă predarea CS Connections?
+    încrezător să îmi ajut elevii să înțeleagă conceptele și să le integrez în programa
+    noastră școlară.
+  csc_page_find_a_module_desc: Ofertele noastre actuale de Conexiuni în Informatică
+    sunt destinate claselor a III-a până la a V-a și sunt concepute pentru a lua o
+    săptămână de lecții de 45 de minute în fiecare zi.
+  csc_page_faq_question_01: Corespund Conexiunile în Informatică standardelor?
+  csc_page_faq_answer_01: Da! Conexiunile în Informatică corespund Standardelor Comune
+    Principale de Stat (CCSS) pentru ELA și Matematică, Standardele Științifice de
+    Generație Următoarea (NGSS) și Standardele Asociației Profesorilor de Informatică
+    (CSTA).
+  csc_page_faq_question_02: Cât costă să predai Conexiuni în Informatică?
   csc_page_faq_answer_02: Our curriculum and platform are available at [no cost](%{cost_url})
     for anyone, anywhere, to teach!
-  csc_page_faq_question_03: Cum /Unde pot obține dezvoltare profesională pentru CS
-    Connections?
-  csc_page_faq_answer_03: Oferim dezvoltare profesională în ritm propriu pentru CS
-    Connections. Prin citirea, vizualizarea videoclipurilor, completarea puzzle-urilor
+  csc_page_faq_question_03: Cum /Unde pot obține dezvoltare profesională pentru Conexiuni
+    în Informatică?
+  csc_page_faq_answer_03: Oferim dezvoltare profesională în ritm propriu pentru Conexiuni
+    în Informatică. Prin citirea, vizualizarea videoclipurilor, completarea puzzle-urilor
     interactive și reflectarea asupra învățării dvs., vă veți dezvolta propria înțelegere
-    în timp ce vă pregătiți să predați oricare dintre modulele CS Connections din
-    sala de clasă. [Începeți aici] (%{get_started_url}).
-  csc_page_faq_answer_03_coming_soon: Învățarea profesională pentru CS Connections
-    vine în curând!
-  csc_page_faq_question_04: Care este momentul recomandat pentru predarea CS Connections?
-  csc_page_faq_answer_04: Fiecare modul CS Connections este proiectat să dureze o
-    săptămână.
-  csc_page_faq_question_05: Ce materiale am nevoie pentru CS Connections?
+    în timp ce vă pregătiți să predați în clasă oricare dintre modulele Conexiunilor
+    în Informatică. [Începeți aici] (%{get_started_url}).
+  csc_page_faq_answer_03_coming_soon: Învățarea profesională pentru Conexiuni în Informatică
+    se lansează în curând!
+  csc_page_faq_question_04: Care este momentul recomandat pentru predarea Conexiunilor
+    în Informatică?
+  csc_page_faq_answer_04: Fiecare modul Conexiuni în Informatică este proiectat să
+    dureze o săptămână.
+  csc_page_faq_question_05: De ce materiale am nevoie pentru Conexiuni în Informatică?
   csc_page_faq_answer_05: În mod ideal, fiecare elev va avea propriul computer, iar
     profesorii vor avea un proiector pentru a afișa prezentarea de diapozitive care
     corespunde fiecărei lecții.
-  csf_page_top_desc: Curriculum gratuit pe tot parcursul anului, care introduce studenții
-    în conceptele fundamentale ale informaticii și îi provoacă să exploreze modul
-    în care calculul și tehnologia pot avea impact asupra lumii.
+  csf_page_top_desc: Set gratuit de programe școlare pentru învățământul elementar
+    care îi introduce pe elevi în conceptele fundamentale ale informaticii și îi provoacă
+    să exploreze modul în care informatica și tehnologia pot avea un impact asupra
+    lumii.
   csf_page_intro_heading: Cursuri elementare gratuite și distractive pentru fiecare
     clasă
   csf_page_intro_list_01: Șase cursuri, câte unul pentru fiecare clasă elementară
-  csf_page_intro_list_02: Cursuri introductive echitabile CS
+  csf_page_intro_list_02: Cursuri introductive, echitabile de Informatică
   csf_page_intro_list_03: Utilizați același curs pentru toți elevii din aceeași clasă,
     indiferent de experiența lor
-  csf_page_intro_list_04: Toate cursurile fac puncte de intrare adecvate pentru studenți
-  csf_page_quote: Predau cursul încă de luni după atelier. Elevii și cu mine ne place
-    (la fel și profesorii lor din clasă!!!)
-  csf_page_curriculum_glance_topics: Programare, Internet, Jocuri și animație, Artă
-    și design, Design de aplicații
+  csf_page_intro_list_04: Toate cursurile aduc puncte de intrare adecvate pentru studenți
+  csf_page_quote: Predau cursul încă de luni după atelier. Mie și elevilor NE PLACE
+    (la fel și profesorii lor de la clasă!!!)
+  csf_page_curriculum_glance_topics: Programare, Internet, Jocuri și Animație, Artă
+    și Design, Design de Aplicații
   csf_page_curriculum_glance_devices: Laptop, Chromebook, Tabletă
-  csf_page_curriculum_glance_tools: Sprite Lab, Play Lab
+  csf_page_curriculum_glance_tools: Laboratorul Sprite, Laboratorul de Joacă
   csf_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
     Modules
-  csf_page_curriculum_glance_languages: Arabă, Bahasa Indoneziană, Catalană, Chineză
-    simplificată, Chineză tradițională, Cehă, Franceză, Germană, Hindi, Italiană,
-    Japoneză, Coreeană, Kannada, Malay, Marathi, Mongolă, Poloneză, Portugheză-BR,
-    Română, Rusă, Slovacă, Tagalog, Tamil, Thailandeză, Turcă, Ucraineană, Spaniolă
-    Latam, Urdu, Spaniolă, Uzbecă, Vietnameză
+  csf_page_curriculum_glance_languages: Arabă, Indoneziană, Catalană, Chineză simplificată,
+    Chineză tradițională, Cehă, Franceză, Germană, Hindi, Italiană, Japoneză, Coreeană,
+    Kannada, Malay, Marathi, Mongolă, Poloneză, Portugheză-BR, Română, Rusă, Slovacă,
+    Tagalog, Tamil, Thailandeză, Turcă, Ucraineană, Spaniolă Latam, Urdu, Spaniolă,
+    Uzbecă, Vietnameză
   csf_page_curriculum_glance_accessibility_features: Text-to-speech, Closed captioning,
     Immersive reader
-  csf_page_pick_a_course_heading: Alegerea cursului CS Fundamentals potrivit pentru
-    clasa ta
-  csf_page_pick_a_course_desc: Cu setul divers de opțiuni oferite pentru CS Fundamentals,
-    există un curs pentru toate nevoile diferite.
+  csf_page_pick_a_course_heading: Alegerea cursului de Noțiuni de Bază în Informatică
+    potrivit pentru clasa ta
+  csf_page_pick_a_course_desc: Datorită setului divers de opțiuni oferit pentru Noțiuni
+    de Bază în Informatică, există un curs pentru toate nevoile diferite.
   csf_page_pick_a_course_heading_02: Cum vor interacționa elevii dvs. cu conținutul?
-  csf_page_courses_heading: Cursuri special concepute pentru sala de clasă elementară
-  csf_page_courses_desc: Găsiți cursul pentru nota pe care o predați. Fiecare curs
+  csf_page_courses_heading: Cursuri special concepute pentru clasa elementară
+  csf_page_courses_desc: Găsiți cursul pentru clasa pe care o predați. Fiecare curs
     durează aproximativ o lună.
-  csf_page_courses_self_paced_heading: Curriculumuri elementare cu ritm propriu
+  csf_page_courses_self_paced_heading: Programe școlare elementare în ritmul propriu
   csf_page_courses_self_paced_desc: Profesorii joacă un rol critic în învățarea elevilor,
     predând activitățile noastre deconectate și conducând discuții întregi de clasă,
-    cu toate acestea, recunoaștem că CS Fundamentals nu este întotdeauna predat într-un
-    cadru tradițional de clasă. Oferim două cursuri expres în ritm propriu alături
-    de cursurile A-F. Aceste cursuri exprese sunt concepute pentru situațiile în care
-    profesorii permit fiecărui elev să lucreze în propriul ritm independent.
-  csf_page_faq_question_01: CS Fundamentals este mapat la standarde?
-  csf_page_faq_answer_01_01: 'CS Fundamentals a fost scris folosind atât Cadrul K-12
-    pentru informatică, cât și standardele CSTA ca îndrumare. În prezent, fiecare
-    lecție din CS Fundamentals conține mapări la standardele CSTA relevante. Rezumatul
-    tuturor mapărilor CSTA pentru fiecare curs poate fi găsit la:'
+    cu toate acestea, recunoaștem că cusul Noțiuni de Bază în Informaticănnu este
+    întotdeauna predat într-un cadru tradițional de clasă. Oferim două cursuri expres
+    în ritm propriu alături de cursurile A-F. Aceste cursuri exprese sunt concepute
+    pentru situațiile în care profesorii permit fiecărui elev să lucreze în propriul
+    ritm independent.
+  csf_page_faq_question_01: Este cursul Noțiuni de Bază în Informatică conform standardelor?
+  csf_page_faq_answer_01_01: 'Cursul Noțiuni de Bază în Informatică a fost scris folosind,
+    ca îndrumare, atât Cadrul K-12 pentru Informatică, cât și standardele CSTA. În
+    prezent, fiecare lecție a Noțiuni de bază în Informatică conține corespondențe
+    cu standardele CSTA relevante. Rezumatul tuturor corespondențelor CSTA pentru
+    fiecare curs poate fi găsit la:'
   csf_page_faq_answer_01_list_01: "[Standarde Curs A] (%{course_a_url})"
   csf_page_faq_answer_01_list_02: "[Standarde Curs B] (%{course_b_url})"
   csf_page_faq_answer_01_list_03: "[Standarde Curs C] (%{course_c_url})"
@@ -1453,40 +1603,42 @@ ro:
   csf_page_faq_answer_01_list_06: "[Standarde Curs F] (%{course_f_url})"
   csf_page_faq_answer_01_02: O versiune Google Sheets a standardelor poate fi găsită
     la [Standarde CSF] (%{csf_standards_url}).
-  csf_page_faq_question_02: Cum pot aduce CS Fundamentals la întreaga mea școală?
-  csf_page_faq_answer_02: Cel mai important curriculum K-12 CS din Statele Unite,
-    programul nostru elementar s-a dovedit eficient în districtele școlare urbane
-    majore, cum ar fi Dallas, precum și în districtele rurale mici din Iowa. Nu este
+  csf_page_faq_question_02: Cum pot aduce Noțiunile de Bază în Informatică pentru
+    toată mea școală?
+  csf_page_faq_answer_02: Principalul plan de învățământ K-12 CS din Statele Unite,
+    programul nostru elementar s-a dovedit a fi eficient în districte școlare urbane
+    importante, precum Dallas, precum și în districte rurale mici din Iowa. Nu este
     nevoie să angajați specialiști pentru a preda CS. Programul nostru este conceput
-    în mod unic pentru a sprijini profesorii noi în CS, oferind în același timp flexibilitatea
-    de a evolua lecțiile pentru a se potrivi nevoilor elevilor. [Distribuiți această
-    broșură] (%{brochure_url}) cu administratorii școlii și districtului dvs. sau
-    [sugerați-i să arunce o privire la pagina noastră de administratori] (%{admins_url})
-    special conceput pentru a răspunde la cele mai frecvente întrebări ale administratorilor.
-  csf_page_faq_question_03: Cât costă predarea CS Fundamentals?
-  csf_page_faq_question_04: Cum /Unde pot obține dezvoltare profesională pentru CS
-    Fundamentals?
+    în mod unic pentru a sprijini profesorii începători în CS, oferind în același
+    timp flexibilitatea de a evolua lecțiile pentru a se adapta la nevoile elevilor.
+    [Împărtășiți această broșură](%{brochure_url}) cu administratorii școlii și districtului
+    dumneavoastră sau [sugerați-le să arunce o privire pe pagina noastră pentru administratori](%{admins_url})
+    special concepută pentru a răspunde la cele mai frecvente întrebări ale administratorilor.
+  csf_page_faq_question_03: Cât costă să predai Noțiuni de Bază în Informatică?
+  csf_page_faq_question_04: Cum /Unde pot obține dezvoltare profesională pentru Noțiuni
+    de Bază în Informatică?
   csf_page_faq_answer_04_01: Nou în predarea informaticii? Nu vă faceți griji! Majoritatea
     profesorilor noștri nu au predat niciodată informatică. Alăturați-vă profesorilor
-    locali pentru sprijin inspirat și practic pentru a implementa informatica în sala
-    de clasă. Partenerii noștri regionali oferă ateliere Code.org de înaltă calitate,
-    de o zi, pentru profesori individuali sau pentru PD la nivel școlar. [Înscrieți-vă
-    la un atelier de dezvoltare profesională în apropierea dvs.] (%{sign_up_url})!
-  csf_page_faq_answer_04_02: Join over 100,000 teachers who have participated in our
-    workshops. The majority of our workshop attendees say, 'It's the best professional
-    development I've ever attended.' In fact, [90% of attendees would recommend our
-    program to other teachers](%{rec_url})!
-  csf_page_faq_question_05: Care este momentul recomandat pentru predarea Fundamentelor
-    CS?
+    locali pentru sprijin inspirat și practic pentru a implementa informatica în clasă.
+    Partenerii noștri regionali oferă ateliere Code.org de înaltă calitate, de o zi,
+    pentru profesori individuali sau pentru Dezvoltarea Profesională la nivel școlar.
+    [Înscrieți-vă la un atelier de dezvoltare profesională în apropierea dvs.] (%{sign_up_url})!
+  csf_page_faq_answer_04_02: 'Alăturați-vă celor peste 100.000 de profesori care au
+    participat la atelierele noastre. Majoritatea participanților la atelierele noastre
+    spun: "Este cea mai bună dezvoltare profesională la care am participat vreodată".
+    De fapt, [90% dintre participanți ar recomanda programul nostru altor profesori](%{rec_url})!'
+  csf_page_faq_question_05: Care este momentul recomandat pentru predarea Noțiunilor
+    de Bază în Informatică?
   csf_page_faq_answer_05: Fiecare curs CSF include 13-17 lecții concepute pentru perioade
     de 45 de minute. Recomandăm tuturor elevilor să treacă de la lecție la lecție
-    într-un ritm stabilit de profesor. Există multe niveluri de proiect conduse de
-    profesori concepute pentru a fi experimentate la unison, în timp ce lecțiile de
-    formare a abilităților pot fi finalizate de studenți în ritmul lor.
-  csf_page_faq_question_06: Ce materiale am nevoie pentru CS Fundamentals?
-  csf_page_faq_answer_06: Many lessons have handouts that guide students through activities.
-    These resources can be printed or assigned digitally. Some lessons call for typical
-    classroom supplies and manipulatives. [Visit the CSF Syllabus to learn more](%{syllabus_url}).
+    într-un ritm stabilit de profesor. Există multe niveluri de proiecte conduse de
+    profesori, concepute pentru a fi experimentate la unison, în timp ce lecțiile
+    de formare a abilităților pot fi finalizate de elevi în ritmul lor.
+  csf_page_faq_question_06: De ce materiale am nevoie pentru Noțiuni de Bază în Informatică?
+  csf_page_faq_answer_06: Multe lecții sunt însoțite de fișe care îi ghidează pe elevi
+    prin activități. Aceste resurse pot fi tipărite sau alocate în format digital.
+    Unele lecții necesită rechizite tipice pentru clasă și materiale de manipulare.
+    [Vizitați Syllabus CSF pentru a afla mai multe](%{syllabus_url}).
   csa_page_top_desc: Introduce students to software engineering and object-oriented
     design while they learn the Java programming language in this free curriculum
     for [AP® Computer Science A (AP® CSA)](%{csa_url}).
@@ -1702,6 +1854,7 @@ ro:
   not_found_desc: Pagina solicitată nu a fost găsită
   not_found_instructions: Verificați adresa de web şi retrimiteţi sau selectaţi un
     link din lista de mai jos.
+  company_code_dot_org: Code.org
   company_4-H: Dezvoltarea tineretului
   company_asa: Alianta Afterschool
   company_asos: ASOS
@@ -1754,6 +1907,7 @@ ro:
   company_evsd: District Şcolar East Valley
   company_eastonvilleschooldistrict: District Şcolar Eatonville
   company_enumclawschooldistrict: District Şcolar Enumclaw
+  company_ets: ETS
   company_everettsd: Şcoli Publice Everette
   company_fsusd: District Şcolar Fairfield-Suisun Unified
   company_fayettecountypublicschools: Şcoli Publice Județene Fayette
@@ -1775,6 +1929,7 @@ ro:
   company_houstonisd: Districtul școlar independent Houston
   company_hcpss: Școlile publice din județul Howard
   company_idla: Academia de învățare digitală din Idaho
+  company_iste: PÂRTIE
   company_janesvilleschooldistrict: Districtul școlar Janesville
   company_johnstoncountyschools: Școlile județului Johnston
   company_lps: Școala Publică Lincoln
@@ -12137,8 +12292,10 @@ ro:
   tutorial_ai4alldance_string_platforms: Toate browserele moderne
   tutorial_ai4allneural_string_platforms: Toate browserele moderne
   tutorial_spheroinout_string_platforms: Deconectat
-  tutorial_edisonblueprint_string_platforms: Toate browserele moderne
-  tutorial_edisonmaze_string_platforms: Toate browserele moderne
+  tutorial_edisonblueprint_string_platforms: Toate browserele moderne, tableta Android,
+    iPad
+  tutorial_edisonmaze_string_platforms: Toate browserele moderne, tableta Android,
+    iPad
   tutorial_milnefunctions_string_platforms: Toate browserele moderne
   tutorial_sasmap_string_platforms: Toate browserele moderne, iPad, Cititor de ecran
   tutorial_firstrobotics_string_platforms: Toate browserele moderne
@@ -13346,93 +13503,215 @@ ro:
     alături de un bug Volkswagen multicolor.
   accessibility_hero_heading: Accesibilitate la Code.org
   accessibility_hero_desc: Suntem dedicați eliminării barierelor care împiedică incluziunea
-    și participarea deplină a studenților și educatorilor cu dizabilități, asigurându-ne
+    și participarea deplină a elevilor și educatorilor cu dizabilități, asigurându-ne
     că FIECARE elev are acces la informatică.
   accessibility_efforts_title: Eforturile noastre pentru 2023
-  accessibility_efforts_desc: 'Pentru a atinge obiectivul nostru de a avea o platformă
+  accessibility_efforts_desc: 'Pentru a realiza obiectivul nostru de a avea o platformă
     complet accesibilă, implementăm un plan de acțiune cuprinzător care include:'
   accessibility_efforts_card_title_1: Instruire internă privind accesibilitatea
   accessibility_efforts_card_desc_1: Echipele noastre de produse și inginerie vor
     finaliza o instruire cuprinzătoare privind accesibilitatea până în decembrie 2023.
   accessibility_efforts_card_title_2: Analiza VPAT
-  accessibility_efforts_card_desc_2: Completarea [Șablonului voluntar de accesibilitate
-    a produselor] (%{voluntary_url}) pentru a stabili un nivel de referință și a măsura
-    progresul anual. Rezultatele sunt disponibile pe această pagină până în septembrie
+  accessibility_efforts_card_desc_2: A se completa [Șablonul Voluntar de Accesibilitate
+    la Produse] (%{voluntary_url}) pentru stabilirea unui nivel de referință și măsurarea
+    progresului anual. Rezultatele sunt disponibile pe această pagină până în septembrie
     2023.
   accessibility_efforts_card_title_3: Instrumente care susțin designul accesibil
   accessibility_efforts_card_desc_3: 'Membrii echipei vor avea acces la instrumente
     care asigură că toate funcțiile noi sunt proiectate și construite având în vedere
     accesibilitatea. '
-  accessibility_efforts_card_title_4: Curriculum accesibil
+  accessibility_efforts_card_title_4: Plan de învățământ accesibil
   accessibility_efforts_card_desc_4: Vom atinge [conformitatea WCAG Level AA] (%{wcag_url})
     pentru primele câteva unități de principii de informatică și descoperiri în informatică
     până în decembrie 2023.
   accessibility_explore_title: Explorați resursele de accesibilitate ale Code.org
   accessibility_explore_text: Pagina noastră de resurse de accesibilitate oferă documentație
     cuprinzătoare și îndrumări pentru caracteristicile și instrumentele noastre, inclusiv
-    lecții accesibile Hour of Code, cititoare captivante, navigare prin tastatură
+    lecții accesibile Hour of Code, cititoare fascinante, navigare prin tastatură
     și opțiuni de personalizare.
-  accessibility_explore_button: Vizualizați pagina resurse de accesibilitate
-  accessibility_help_us_title: Ajutați-ne să îmbunătățim
+  accessibility_explore_button: Vizualizați pagina de resurse de accesibilitate
+  accessibility_help_us_title: Ajutați-Ne să Îmbunătățim
   accessibility_help_us_text: La Code.org, suntem agili și receptivi la feedback.
     Dacă aveți recomandări care să ne ajute să îmbunătățim accesibilitatea instrumentelor
     și resurselor noastre, vă rugăm să ne contactați. Vă mulțumim că ne-ați ajutat
     să facem informatica disponibilă pentru toți studenții!
   accessibility_help_us_button: Spune-ne cum putem îmbunătăți
-  accessibility_commit_title: Angajamentul Code.org pentru accesibilitate
+  accessibility_commit_title: Angajamentul la Accesibilitate al Code.org
   accessibility_commit_text_1: Code.org consideră că informatica este fundamentală
     pentru toți studenții și ne angajăm să asigurăm echitatea, accesul și oportunitatea
-    pe platforma noastră și în curriculum-ul nostru.
+    pe platforma noastră și în planul nostru de învățământ.
   accessibility_commit_text_2: Adoptăm o abordare holistică pentru a sprijini nevoile
-    de învățare ale tuturor studenților și lucrăm pentru a elimina lacunele în accesul
-    la educația informatică pentru studenții cu dizabilități.
-  accessibility_commit_text_3: Începem puțin, dar ne vom măsura progresul și vom repeta
-    continuu până când vom putea aborda chiar și cele mai complexe provocări de accesibilitate.
+    de învățare ale tuturor cursanților și lucrăm pentru a elimina lacunele în accesul
+    la educația informatică pentru elevii cu dizabilități.
+  accessibility_commit_text_3: Începem de la zero, dar ne vom măsura progresul și
+    vom repeta continuu până când vom putea aborda chiar și cele mai complexe provocări
+    de accesibilitate.
   accessibility_commit_text_4: La Code.org, ne-am angajat să îmbunătățim continuu
     accesibilitatea instrumentelor noastre și suntem încântați să facem acest pas
-    important către o mai mare echitate, acces și oportunități pentru toți studenții
+    important către o mai mare echitate, acces și oportunități pentru toți elevii
     și educatorii.
-  accessibility_partner_title: Partenerii și recomandările noastre
-  accessibility_partner_desc: Recomandăm următoarele resurse pentru studenții și profesorii
+  accessibility_partner_title: Partenerii și Recomandările noastre
+  accessibility_partner_desc: Recomandăm următoarele resurse pentru elevii și profesorii
     care caută conținut mai accesibil în domeniul informaticii.
-  accessibility_card_title_1: AccessCsForAll
-  accessibility_card_text_1: Resurse pentru profesori pentru a aduce calculatoare
-    accesibile în școlile secundare și pentru elevii de liceu cu dizabilități pentru
-    a se conecta cu mentorii din spațiul tehnologic.
-  accessibility_card_title_2: Blocks4All
-  accessibility_card_text_2: Un mediu de programare bazat pe blocuri pentru iPad care
-    învață concepte de programare de bază folosind robotul Dash. Accesibil cu VoiceOver,
-    Comutare Control și Control vocal.
+  accessibility_card_title_1: AccesareaCsPentruToți
+  accessibility_card_text_1: Resurse pentru profesori pentru a aduce calculatoarele
+    accesibile în licee și pentru elevii de liceu cu dizabilități ca să se conecteze
+    cu mentorii din spațiul tehnologiei.
+  accessibility_card_title_2: Blocuri4All
+  accessibility_card_text_2: Un mediu de programare pr bază de blocuri pentru iPad,
+    care învață concepte de programare de bază folosind robotul Dash. Accesibil cu
+    VoiceOver, Comutare Control și Control vocal.
   accessibility_card_title_3: Cod Jumper
-  accessibility_card_text_3: Un ajutor/resursă de codificare fizică pentru studenții
+  accessibility_card_text_3: Un ajutor/resursă de codificare fizică pentru elevii
     cu deficiențe de vedere.
-  accessibility_card_title_4: CSForAll
+  accessibility_card_title_4: CSPentruToți
   accessibility_card_text_4: O organizație care coordonează proiecte și programe cu
     diferite organizații din Statele Unite.
-  accessibility_card_title_5: Codul copiilor surzi
+  accessibility_card_title_5: Codul Copiilor Surzi
   accessibility_card_text_5: Promovează educația în domeniul informaticii și tehnologiei
-    pentru a împuternici studenții care sunt surzi sau cu deficiențe de auz.
-  accessibility_card_title_6: Toată lumea poate codifica
-  accessibility_card_text_6: Un curriculum conceput de Apple pentru Swift Playgrounds
-    care oferă VoiceOver (TTS modificat) și curriculum adaptat pentru studenții cu
-    nevoi de accesibilitate.
+    pentru a-i înzestra pe elevii surzi sau cu deficiențe de auz.
+  accessibility_card_title_6: Toți Pot Codifica
+  accessibility_card_text_6: Un plan de învățământ conceput de Apple pentru Swift
+    Playgrounds, care oferă VoiceOver (TTS modificat) și cursuri adaptate pentru cursanții
+    cu nevoi de accesibilitate.
   accessibility_card_title_7: Academia Khan
-  accessibility_card_text_7: Un furnizor de curriculum cu diverse acomodări, inclusiv
-    subtitrări, transcrieri și capacitatea de a reduce mișcarea animației și de a
-    ascunde conținutul dependent vizual. Găzduiește câteva programe de învățământ
-    Code.org, plus programe de calcul suplimentare.
+  accessibility_card_text_7: Un furnizor de programe de studiu cu diverse adaptări,
+    inclusiv subtitrări, transcrieri și capacitatea de a reduce mișcarea animației
+    și de a ascunde conținutul dependent din punct de vedere vizual. Găzduiește unele
+    programe de studii Code.org, plus alte programe de studii de informatică.
   accessibility_card_title_8: Circuite Snap
-  accessibility_card_text_8: Un produs educațional care predă electronică cu componente
-    electronice fără lipire. Poate include un pachet de acces pentru studenții cu
-    deficiențe de vedere.
+  accessibility_card_text_8: Un produs educațional care învață electronica cu ajutorul
+    unor componente electronice fără lipire și cu asamblare rapidă. Poate include
+    un pachet de acces pentru studenții cu deficiențe de vedere.
   accessibility_card_title_9: Spherou
   accessibility_card_text_9: O minge robotică interactivă de codificare și un kit
-    de educație STEM pentru studenții cu dizabilități intelectuale. Trebuie să fie
+    de educație STEM pentru cursanții cu dizabilități intelectuale. Trebuie să fie
     asociat cu o aplicație adecvată.
-  accessibility_card_title_10: 'Cvorum '
-  accessibility_card_text_10: O adaptare a curriculum-ului AP Computer Science Principles
-    al Code.org folosind Quorum, un limbaj bazat pe dovezi conceput inițial pentru
-    a oferi accesibilitate studenților nevăzători sau cu deficiențe de vedere.
+  accessibility_card_title_10: 'Quorum '
+  accessibility_card_text_10: O adaptare a programului de studii AP Computer Science
+    Principles de la Code.org folosind Quorum, un limbaj bazat pe dovezi, conceput
+    inițial pentru a oferi accesibilitate pentru cursanții nevăzători sau cu deficiențe
+    de vedere.
+  engineering_hero_heading: Alăturați-vă echipei noastre de ingineri!
+  engineering_hero_desc: Pe măsură ce continuăm să ne extindem echipa de ingineri,
+    am dorit să împărtășim mai multe despre organizația noastră de inginerie la Code.org
+    și câteva dintre aspectele unice ale muncii aici. Dacă sunteți interesat să aplicați
+    pentru unul dintre rolurile noastre, ne-ar plăcea să auzim de la dvs.!
+  engineering_team_title: Faceți cunoștință cu echipa de ingineri la Code.org
+  engineering_team_card_text_1: Acesta este (majoritatea) dintre noi la reunirea noastră
+    personală în vara anului 2023! Această mulțime este împărțită în patru sub-echipe
+    din cadrul echipei noastre de inginerie care lucrează împreună pentru a construi
+    și a servi platforma pentru toți studenții și profesorii noștri.
+  engineering_team_card_text_2: Dacă sunteți interesat să aplicați pentru unul dintre
+    rolurile noastre, ne-ar plăcea să auzim de la dvs.! Puteți găsi o listă de posturi
+    deschise pe pagina noastră Cariere.
+  engineering_our_team_title: Echipa noastră de ingineri
+  engineering_our_team_desc: 'Echipa de ingineri de la Code.org este împărțită în
+    patru sub-echipe care construiesc și susțin diferite domenii ale platformei noastre:'
+  engineering_our_team_sub_title_1: Echipa de învățare a studenților
+  engineering_our_team_text_1: Echipa noastră de învățare a studenților deține toate
+    activitățile noastre (le numim laboratoare) pe care elevii noștri le folosesc
+    în fiecare zi. Această echipă lucrează mai ales pe tehnologie front-end (folosim
+    React și o mulțime de JS personalizate) și avem o relație de lucru excelentă cu
+    mulți parteneri și proiecte open source. De exemplu, folosim [Google Blockly]
+    (%{youtube_url}) pentru toată programarea noastră bazată pe blocuri. Sprijinim
+    elevii în călătoria lor de învățare de la grădiniță până la clasa a XII-a.
+  engineering_our_team_sub_title_2: Echipa de experiență a profesorilor
+  engineering_our_team_text_2: Echipa noastră de experiență pentru profesori construiește
+    instrumentele care atrag noi profesori la Code.org (numim aceste produse de achiziție)
+    și dezvoltă platforma care le permite profesorilor noștri existenți să predea
+    curriculum-ul nostru (instrumentele noastre pentru profesori). Ca și în cazul
+    instrumentelor noastre pentru studenți, ne bazăm pe React pentru a construi front-end-ul
+    nostru, iar componentele noastre de pe server sunt servite folosind Ruby on Rails.
+  engineering_our_team_sub_title_3: Echipa Platformei
+  engineering_our_team_text_3: Echipa noastră de platformă deține componente de bază
+    care servesc nevoilor echipelor noastre de studenți și profesori (de exemplu,
+    autentificare și profil de utilizator) și are, de asemenea, misiunea de a ajunge
+    la studenți la care nu putem ajunge încă. Aceasta include construirea de integrări
+    care ne conectează cu școlile care utilizează diferite sisteme de management al
+    învățării (LMS) și ambalarea curriculum-ului nostru astfel încât să poată fi utilizat
+    în școli îndepărtate care nu au acces la internet fiabil.
+  engineering_our_team_sub_title_4: Echipa Infrastructură
+  engineering_our_team_text_4: Echipa noastră de infrastructură oferă coloana vertebrală
+    pentru platforma care sprijină studenții și profesorii noștri. Aceasta include
+    infrastructura noastră de găzduire și serviciile conexe (folosim AWS), gestionarea
+    datelor, programele de securitate, serviciile de dezvoltare și implementare și
+    multe altele. Această echipă deține, de asemenea, sistemele noastre de scalare
+    și aprovizionare, care sunt esențiale în timpul Hour of Code, unde invităm fiecare
+    student din lume să finalizeze o oră de programare cu noi.
+  engineering_faq_question_1: Ce face Code.org?
+  engineering_faq_answer_1_a: Code.org este o organizație non-profit de inovare educațională
+    dedicată viziunii conform căreia fiecare elev din fiecare școală are posibilitatea
+    de a învăța informatica ca parte a educației lor de bază K-12.
+  engineering_faq_answer_1_b: Extindem accesul la informatică în școli, cu accent
+    pe creșterea participării femeilor tinere și a studenților din alte grupuri subreprezentate.
+    Cel mai important furnizor de curriculum K-12 în cele mai mari districte școlare
+    din Statele Unite, Code.org organizează, de asemenea, campania anuală Hour of
+    Code, care a implicat mai mult de 15% din toți studenții din lume.
+  engineering_faq_answer_1_c: Code.org este susținut de donatori generoși, inclusiv
+    Microsoft, Amazon, Google și mulți alții.
+  engineering_faq_question_2: Ce este experiența și instrumentele pentru dezvoltatori
+    Code.org?
+  engineering_faq_answer_2: Experiența noastră de dezvoltator poate fi diferită de
+    ceea ce ați văzut în rolurile anterioare. Lucrând îndeaproape cu echipa noastră
+    de produse, livrăm la producție în fiecare zi a săptămânii și avem o varietate
+    de cadențe - uneori scrieți cod care intră în direct în acea zi; alteori sunteți
+    pe proiecte pe termen lung - și în timp ce urmăm sprinturi de 2 săptămâni, facem
+    acest lucru într-un mod ușor. Ne orientăm spre a face lucrurile corecte în mod
+    corect față de a lua o viziune puristă asupra oricărei metodologii particulare.
+    [Tot codul nostru] (%{code_url}) este open source și folosim cererile de tragere
+    JIRA și GitHub pentru a urmări toate articolele noastre de lucru. De asemenea,
+    ne pasă foarte mult de calitate și testare și suntem norocoși să avem asistență
+    incredibilă de la [SauceLabs](%{saucelabs_url}), care ne ajută să rulăm suita
+    noastră de teste UI pe diverse dispozitive pentru studenți (de exemplu, iPad-uri)
+    în ferma lor de dispozitive cloud.
+  engineering_faq_question_3: Ce este rotația inginerului de gardă la Code.org?
+  engineering_faq_answer_3: Echipa noastră de peste 30 de ingineri împarte responsabilitățile
+    de gardă. Fiecare inginer acoperă o schimbare de 24 de ore și folosește căile
+    noastre de escaladare și caietele de joc pentru a răspunde la întreruperile site-ului
+    sau la alte probleme ale site-ului live. Suntem mândri de fiabilitatea site-ului
+    nostru - în medie, fiecare inginer este trezit doar o dată pe an pentru probleme
+    care sunt de obicei rapid de rezolvat. În schimb, „Dezvoltatorul zilei” își petrece
+    de obicei o parte din ziua de lucru gestionând implementarea producției și triind
+    probleme mai puțin urgente.
+  engineering_faq_question_4: Sunteți o organizație prietenoasă cu distanța/WFH?
+  engineering_faq_answer_4_a: Da! În 2019, cu puțin înainte de pandemie, Code.org
+    a devenit o organizație de la distanță. Astăzi, avem ingineri în fiecare fus orar
+    din SUA și acomodăm programul de lucru în consecință. Majoritatea întâlnirilor
+    noastre au loc între orele 10:00 și 15:00 PT.
+  engineering_faq_answer_4_b: Recunoaștem, de asemenea, valoarea timpului în persoană
+    și în fiecare trimestru ne reunim personal, de obicei în Seattle. Două dintre
+    aceste evenimente (le numim Kick-off week și „Codechella”) reunesc pe toți cei
+    din organizație în ianuarie și iunie - iar echipele de inginerie și produse se
+    întâlnesc separat în aprilie și octombrie.
+  engineering_faq_answer_4_c: Credem cu tărie în petrecerea timpului cu elevii și
+    profesorii noștri, astfel încât multe dintre aceste evenimente în persoană includ
+    excursii în școli și săli de clasă pentru a aduna feedback sau a testa produsele
+    noastre.
+  engineering_faq_question_5: Ce face echipa de ingineri de la Code.org unică?
+  engineering_faq_answer_5_a: 'Dincolo de rezolvarea problemelor tehnice provocatoare,
+    avem câteva lucruri care fac ca organizația noastră de inginerie să fie diferită
+    de altele în care ați lucrat:'
+  engineering_faq_answer_5_b_1: Cu toții împărtășim pasiunea noastră pentru misiunea
+    noastră.
+  engineering_faq_answer_5_b_2: Fiecare dintre noi este aici pentru a sprijini misiunea
+    de a extinde accesul la informatică pentru fiecare student din întreaga lume.
+    Cu toții avem povestea și perspectiva noastră unică despre ceea ce ne conduce
+    spre această misiune.
+  engineering_faq_answer_5_c_1: Ne pasă profund unul de celălalt.
+  engineering_faq_answer_5_c_2: Când inginerii se luptă cu o problemă, intrăm și ajutăm.
+    Unul dintre principiile noastre este că suntem duri în probleme, dar amabili unul
+    cu celălalt. Promovăm inginerii în mod regulat, dar nu prescriem soluții supra-proiectate
+    doar pentru a sprijini calea de promovare a cuiva. În schimb, investim în inginerii
+    noștri cu un buget generos de dezvoltare profesională și acces la alte oportunități
+    de învățare.
+  engineering_faq_answer_5_d_1: Muncim din greu, dar stabilim limite clare.
+  engineering_faq_answer_5_d_2: În timp ce sprijinim studenții din întreaga lume,
+    ne asumăm responsabilitatea pentru granițele clare dintre muncă și viața de acasă.
+    Ne bucurăm de miercurea fără întâlniri, luând PTO (5 săptămâni în total, care
+    include o închidere a biroului de 2 săptămâni la sfârșitul anului, aka Winter
+    Break), jumătate de zi lucrătoare vinerea în timpul verii alias vinerea de vară,
+    și alte beneficii generoase.
   language_code:
     ar: arabic
     az: azeră

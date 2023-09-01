@@ -1,5 +1,5 @@
 ---
-title: Hour of Code Press Release for Elected Officials
+title: নির্বাচিত কর্মকর্তাদের জন্য কোড প্রেস রিলিজের ঘন্টা
 ---
 
 {{ signup_button }}

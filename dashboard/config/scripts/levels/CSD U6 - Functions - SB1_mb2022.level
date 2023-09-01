@@ -1,5 +1,10 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
+  "game_id": 41,
+  "created_at": "2023-02-01T10:52:25.000Z",
+  "level_num": "custom",
+  "user_id": 1,
   "properties": {
     "skin": "applab",
     "code_functions": {
@@ -61,7 +66,8 @@
       "/courses/csd-2022/guides/functions",
       "/courses/csd-2022/guides/variables",
       "/courses/csd-2022/guides/random-numbers",
-      "/courses/csd-2022/guides/microbit-display"
+      "/courses/csd-2022/guides/microbit-display",
+      "/maker/setup"
     ],
     "starter_assets": {
       "Alien_01.png": "24cea49b-e503-4ae5-8cdd-2e56ba07b6b5.png",
@@ -78,16 +84,11 @@
     "start_blocks": "//Events\r\nonEvent(\"greenAlien1\", \"click\", function() {\r\n  //Create a surprise image\r\n  surpriseImage();\r\n});\r\nonEvent(\"yellowAlien1\", \"click\", function() {\r\n  //Create a meh image\r\n  mehImage();\r\n});\r\n\r\n//2) When you click an alien, change the LEDs to match the mood of the alien\r\nonEvent(\"greenAlien2\", \"click\", function() {\r\n  //Create a surprise image\r\n  \r\n});\r\nonEvent(\"yellowAlien2\", \"click\", function() {\r\n  //Create a meh image\r\n  \r\n});\r\nonEvent(\"greenAlien3\", \"click\", function() {\r\n  //Create a surprise image\r\n  \r\n});\r\nonEvent(\"yellowAlien3\", \"click\", function() {\r\n  //Create a meh image\r\n  \r\n});\r\nonEvent(\"greenAlien4\", \"click\", function() {\r\n  //Create a surprise image\r\n  \r\n});\r\nonEvent(\"yellowAlien4\", \"click\", function() {\r\n  //Create a meh image\r\n  \r\n});\r\n\r\n\r\n// Functions\r\nfunction mehImage() {\r\n  ledScreen.display([\r\n  ([0, 1, 0, 1, 0]),\r\n  ([0, 0, 0, 0, 0]),\r\n  ([0, 0, 0, 0, 0]),\r\n  ([1, 1, 1, 1, 1]),\r\n  ([0, 0, 0, 0, 0])\r\n  ]);\r\n}\r\nfunction surpriseImage() {\r\n  ledScreen.display([\r\n  ([0, 1, 0, 1, 0]),\r\n  ([0, 0, 0, 0, 0]),\r\n  ([0, 1, 1, 1, 0]),\r\n  ([1, 0, 0, 0, 1]),\r\n  ([0, 1, 1, 1, 0])\r\n  ]);\r\n}\r\n",
     "callout_json": "[\r\n {\r\n  \"localization_key\": \"CSD U6L14.3 - functions\",\r\n  \"callout_text\": \"This section defines two functions\",\r\n  \"element_id\": \"\",\r\n  \"on\": \"functions\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\",\r\n     \"codeString\": \"// Functions\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"right center\",\r\n    \"at\": \"left center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n },\r\n {\r\n  \"localization_key\": \"CSD U6L14.3 - examples\",\r\n  \"callout_text\": \"This event has already been completed\",\r\n  \"element_id\": \"\",\r\n  \"on\": \"examples\",\r\n  \"qtip_config\": {\r\n   \"codeStudio\": {\r\n    \"canReappear\": true,\r\n    \"dropletPaletteCategory\": \"\",\r\n     \"codeString\": \"surpriseImage();\"\r\n   },\r\n   \"style\": {\r\n    \"classes\": \"\"\r\n   },\r\n   \"position\": {\r\n    \"my\": \"right center\",\r\n    \"at\": \"left center\",\r\n    \"adjust\": {\r\n     \"x\": 0,\r\n     \"y\": 0\r\n    }\r\n   }\r\n  }\r\n }\r\n]",
     "video_key": "csd_u6_call_define_functions",
-    "preload_asset_list": null,
-    "encrypted_examples": "igHsnvhcQXINDohXBS29Ko9aXbdcPRvxUI/vtjyC+eBukKOLqzHp7x5JSwMG\nRbvNfJHJuuJN0zv9Y+JzXeulfA==\n"
+    "encrypted_examples": "igHsnvhcQXINDohXBS29Ko9aXbdcPRvxUI/vtjyC+eBukKOLqzHp7x5JSwMG\nRbvNfJHJuuJN0zv9Y+JzXeulfA==\n",
+    "preload_asset_list": null
   },
-  "game_id": 41,
-  "published": true,
-  "created_at": "2023-02-01T10:52:25.000Z",
-  "level_num": "custom",
-  "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-02-01T10:52:25.208+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Functions - SB1_2222\\\"\"],\"cloned_from\":\"CSD U6 - Functions - SB1_2222\"},{\"changed_at\":\"2023-02-10 22:08:04 +0000\",\"changed\":[\"code_functions\",\"hide_design_mode\",\"makerlab_enabled\",\"long_instructions\",\"reference_links\",\"start_blocks\",\"callout_json\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-02-10 22:12:07 +0000\",\"changed\":[\"start_html\",\"start_blocks\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-02-10 22:27:04 +0000\",\"changed\":[\"code_functions\",\"never_autoplay_video\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-03-29 22:49:41 +0000\",\"changed\":[\"code_functions\",\"reference_links\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-03-29 22:50:59 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-02-01T10:52:25.208+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Functions - SB1_2222\\\"\"],\"cloned_from\":\"CSD U6 - Functions - SB1_2222\"},{\"changed_at\":\"2023-02-10 22:08:04 +0000\",\"changed\":[\"code_functions\",\"hide_design_mode\",\"makerlab_enabled\",\"long_instructions\",\"reference_links\",\"start_blocks\",\"callout_json\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-02-10 22:12:07 +0000\",\"changed\":[\"start_html\",\"start_blocks\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-02-10 22:27:04 +0000\",\"changed\":[\"code_functions\",\"never_autoplay_video\",\"start_blocks\",\"preload_asset_list\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-03-29 22:49:41 +0000\",\"changed\":[\"code_functions\",\"reference_links\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-03-29 22:50:59 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-08-21 23:14:22 +0000\",\"changed\":[\"code_functions\",\"reference_links\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

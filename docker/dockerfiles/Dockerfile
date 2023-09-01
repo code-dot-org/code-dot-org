@@ -135,7 +135,7 @@ RUN locale-gen en_US.UTF-8
 # install mysql
 RUN curl -sSLOJ https://dev.mysql.com/get/mysql-apt-config_0.8.22-1_all.deb && \
     echo "mysql-apt-config mysql-apt-config/select-server select mysql-5.7" | /usr/bin/debconf-set-selections && \
-    dpkg -i mysql-apt-config_0.8.22-1_all.deb || apt-get -fy install && \
+    dpkg -i mysql-apt-config_0.8.22-1_all.deb || apt-get --fix-broken --yes install && \
     rm -rf mysql-apt-config_0.8.22-1_all.deb && \
     apt-get update && \
     # warning: mysql-server debconf hangs forever if wget is already installed (!)

@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": "csa-software-engineering",
-    "serialized_at": "2023-08-14 22:32:56 UTC",
+    "serialized_at": "2023-08-22 18:08:29 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -155,6 +155,9 @@
       "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
+        "overview": "**Why is it essential for datasets to be diverse and comprehensive, especially when these datasets are used in real-world applications affecting human lives?**\n\nIn this lesson, students explore the intricacies of decision-making in AI, with a specific focus on computer vision models. Beginning with a relatable scenario, they explore the complexity of choices, prompting reflections on the factors that influence both human and machine decisions. Through interactive activities with the MediaPipe Object Detection model and engaging videos, students witness firsthand the impact of training data on AI predictions and grapple with the consequences of potential biases in the datasets. By examining datasheets of real-world object detection datasets, they further hone their evaluation skills, determining the suitability of datasets for specific applications, such as autonomous driving.",
+        "preparation": "* Preview the MediaPipe models\n* Preview the *How Computer Vision Works*, *Training Data and Bias*, and *Datasheets for Datasets* videos\n* Print copies of the Object Detection Dataset Datasheets handout (one for each student)\n* Anticipate how you will guide the discussion on racial and gender bias, considering that some students may have experiences similar to those discussed in this lesson",
+        "student_overview": "**Why is it essential for datasets to be diverse and comprehensive, especially when these datasets are used in real-world applications affecting human lives?**\n\nIn this lesson, we're diving into the fascinating world of how machines \"see\" and make decisions. Ever wondered how a self-driving car decides when to stop or go, or how it recognizes objects on the road? That's all thanks to something called computer vision. We'll be playing around with cool tools that detect objects, and the exploring how the data used to train these tools can influence what they detect (or don't). We'll also discuss the potential consequences if a tool doesn't \"see\" things right, especially in high-stakes situations like driving. By the end of this lesson, you'll have a deeper understanding of the powerful (and sometimes flawed) world of AI and how it interacts with our daily lives."
       },
       "seeding_key": {
         "lesson.key": "lesson-4",
@@ -400,7 +403,7 @@
       "key": "aaa3fa9f-f208-478b-b7d2-741c37fc125f",
       "position": 2,
       "properties": {
-        "duration": 30,
+        "duration": 75,
         "name": "Activity"
       },
       "seeding_key": {
@@ -421,6 +424,48 @@
         "lesson_activity.key": "de529ace-1001-4ac5-9d65-ba63a32883f0",
         "lesson.key": "lesson-3",
         "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-software-engineering"
+      }
+    },
+    {
+      "key": "4554b731-995b-4fe4-b7b6-93d39cd7322c",
+      "position": 1,
+      "properties": {
+        "duration": 15,
+        "name": "Warm Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "4554b731-995b-4fe4-b7b6-93d39cd7322c",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa-software-engineering"
+      }
+    },
+    {
+      "key": "66990522-3855-48b7-a32e-ba9e42385c71",
+      "position": 2,
+      "properties": {
+        "duration": 60,
+        "name": "Activity"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "66990522-3855-48b7-a32e-ba9e42385c71",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa-software-engineering"
+      }
+    },
+    {
+      "key": "ae5a7a59-d5da-4793-a152-e2bfa9b31448",
+      "position": 3,
+      "properties": {
+        "duration": 15,
+        "name": "Wrap Up"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "ae5a7a59-d5da-4793-a152-e2bfa9b31448",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
         "script.name": "csa-software-engineering"
       }
     },
@@ -1182,7 +1227,7 @@
       "position": 1,
       "properties": {
         "description": "Tools like Copilot can help us fix errors in our code, create new programs, or add new features to existing programs. As these tools improve, they can be useful as part of the software development process. How we use these tools, though, might be different depending on the problem we are trying to solve.",
-        "duration": "20",
+        "duration": "65",
         "name": "Copilot as a Dev Tool",
         "remarks": true
       },
@@ -1293,6 +1338,367 @@
       "seeding_key": {
         "activity_section.key": "c0ae7433-1d5f-4437-b237-180ba3644467",
         "lesson_activity.key": "de529ace-1001-4ac5-9d65-ba63a32883f0"
+      }
+    },
+    {
+      "key": "a21a7479-6500-4eac-b10e-32bc6ee47c2a",
+      "position": 1,
+      "properties": {
+        "description": "We often think of decision-making as a uniquely human trait. But as technology has progressed, we've built machines that can make decisions too. But how do these machines decide? And more importantly, how do they interpret and act upon the world around them? Let's start with a scenario where you'll have to make a split-second decision. I want you to place yourself in the situation and think about all the factors that might influence your choice.",
+        "name": "Making Decisions",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "a21a7479-6500-4eac-b10e-32bc6ee47c2a",
+        "lesson_activity.key": "4554b731-995b-4fe4-b7b6-93d39cd7322c"
+      }
+    },
+    {
+      "key": "41bea7a0-984a-49fa-8a4d-7050e6d4d645",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _Imagine you were driving down a road being followed closely by another car and all of a sudden, a tree branch fell in front of you from the left and a garbage can blew out in front of you from the right. If you had to choose only one way to react, which would you pick?_\n\n_(1) Swerve to the left._\n\n_(2) Swerve to the right._\n\n_(3) Break sharply._\n\n**Discussion Goal:** Students should reflect on and choose one of the given reactions, considering the immediate implications and potential consequences of each choice. They should begin to realize the complexities of decision-making, emphasizing that various factors inform our choices.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Have students journal individually, then have students share by showing on their fingers which option they chose. This situation is purposefully vague, and the class may find itself split between the three options. Use the voting around the room to transition into a short whole-class discussion.\n\nDepending on the time you have for this discussion and how deep you'd like to go, you might choose to have your students spend time on the [**Moral Machine**](https://www.moralmachine.net/), which is \"a platform for gathering a human perspective on moral decisions made by machine intelligence, such as self-driving cars.\"\n\nAllow several students to share their answers so a wide variety of ideas are heard. Use some of what you heard as examples in your remarks to transition to today’s activities."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "41bea7a0-984a-49fa-8a4d-7050e6d4d645",
+        "lesson_activity.key": "4554b731-995b-4fe4-b7b6-93d39cd7322c"
+      }
+    },
+    {
+      "key": "8d36a809-bb3f-4ff7-861a-8a8966a18379",
+      "position": 3,
+      "properties": {
+        "description": "Thank you all for sharing your ideas! I heard a lot of different features that helped you make a decision, but I also heard some people make different decisions even in the same situation. This same thing can happen with computers too - the decisions it makes can be different from the ones we expect, even in very similar situations. Today, we’ll look at how we can test a computer model to see what kinds of decisions its making and make sure those decisions are fair. But first, let's learn a bit more about how computer vision models, the type of models we'll be using, work.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "8d36a809-bb3f-4ff7-861a-8a8966a18379",
+        "lesson_activity.key": "4554b731-995b-4fe4-b7b6-93d39cd7322c"
+      }
+    },
+    {
+      "key": "6b2c7b0f-ff5b-4475-9826-79f0b887b959",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show the video – _How Computer Vision Works_.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "To encourage active engagement with the video and reflect on the _How Computer Vision Works_ video, have students:\n\n* Write down 3 features that they found particularly useful or interesting.\n* Identify 2 aspects or uses of computer vision that they'd like to explore or understand better.\n* Reflect on 1 way they might implement computer vision in their own personal projects."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "6b2c7b0f-ff5b-4475-9826-79f0b887b959",
+        "lesson_activity.key": "4554b731-995b-4fe4-b7b6-93d39cd7322c"
+      }
+    },
+    {
+      "key": "cc7c3563-e124-4355-a2bb-3da8c3e052f8",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the lesson objectives.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the Question of the Day.",
+        "duration": "30",
+        "name": "MediaPipe Model Testing"
+      },
+      "seeding_key": {
+        "activity_section.key": "cc7c3563-e124-4355-a2bb-3da8c3e052f8",
+        "lesson_activity.key": "66990522-3855-48b7-a32e-ba9e42385c71"
+      }
+    },
+    {
+      "key": "a614beea-a01f-4aae-bc72-a28d8bac8e5f",
+      "position": 2,
+      "properties": {
+        "description": "Now that we've seen a few examples of how computer vision can be used, let's try out some things we saw in the video.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "a614beea-a01f-4aae-bc72-a28d8bac8e5f",
+        "lesson_activity.key": "66990522-3855-48b7-a32e-ba9e42385c71"
+      }
+    },
+    {
+      "key": "75ad3a6a-d225-483a-87d3-1ae2cff15c72",
+      "position": 3,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Send students to the MediaPipe Object Detection model demo and let them play with the model using their own webcam for a minute or two. Instruct students not to worry about the dropdowns but to make sure they play around with the two sliders at the bottom.",
+        "progression_name": "MediaPipe Object Detection Model Demo",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "As you circulate around, encourage students who haven't discovered the sliders to mess around with them and see what they notice."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "75ad3a6a-d225-483a-87d3-1ae2cff15c72",
+        "lesson_activity.key": "66990522-3855-48b7-a32e-ba9e42385c71"
+      }
+    },
+    {
+      "key": "c9395f06-82c1-408e-b72c-3499c57d562f",
+      "position": 4,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _What did you notice as you played with the model? What do you wonder?_\n\n**Discussion Goal:** Students should notice the effects of adjusting the two sliders and share observations about the model's behavior. They should recognize the impact of parameter adjustments on AI model outputs and share questions about how these models function.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "The primary goal is to make sure students understand how the tool works, including the two sliders. You may also get students commenting about matters around accuracy (\"It doesn't recognize any of our hats!\") and/or bias (\"It recognizes iPhones but not Android phones!\"). Keep these comments in mind to loop back to later in the lesson."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "c9395f06-82c1-408e-b72c-3499c57d562f",
+        "lesson_activity.key": "66990522-3855-48b7-a32e-ba9e42385c71"
+      }
+    },
+    {
+      "key": "fd4f1d60-f6a4-4e1f-9a00-184c665893a6",
+      "position": 5,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define _confidence score_.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the auto dog door scenario.\n\n<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Have students download the image files to test the model with.",
+        "progression_name": "MediaPipe Model Testing: Image Files"
+      },
+      "seeding_key": {
+        "activity_section.key": "fd4f1d60-f6a4-4e1f-9a00-184c665893a6",
+        "lesson_activity.key": "66990522-3855-48b7-a32e-ba9e42385c71"
+      }
+    },
+    {
+      "key": "50f44639-5fa3-49e5-a4da-c293d10d0ed9",
+      "position": 6,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students test the images in the **Dog** folder. If students have time, have them find their own images of dogs to test.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:*** Click through the animated slide to display the prompts.\n\n* _What were your results? Which dogs would the model let in?_\n* _Which dogs would the model keep locked out?_\n\n**Discussion Goal:**  Students should note which images yield high or low confidence scores. They should share their findings about the model's accuracy in identifying different dogs and any potential patterns or biases in its decisions. Students may also bring up that they notice certain types of dogs (breed, size, face shape, color etc.) were detected less often, which could be an opportunity to foreshadow the concept of bias.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Use this discussion to connect back to the example given in the video about how models can struggle to detect everything accurately, given how they are trained."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "50f44639-5fa3-49e5-a4da-c293d10d0ed9",
+        "lesson_activity.key": "66990522-3855-48b7-a32e-ba9e42385c71"
+      }
+    },
+    {
+      "key": "78a630d6-649a-4703-940a-04a6e7a3b5ec",
+      "position": 7,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define _bias_."
+      },
+      "seeding_key": {
+        "activity_section.key": "78a630d6-649a-4703-940a-04a6e7a3b5ec",
+        "lesson_activity.key": "66990522-3855-48b7-a32e-ba9e42385c71"
+      }
+    },
+    {
+      "key": "8be5cbe7-5eb2-4d67-b7ce-690236ad2783",
+      "position": 8,
+      "properties": {
+        "description": "Now that we've seen how the model handles something like dogs, let's look at something that has potentially higher-stakes when it comes to the impact on society. We already talked at the beginning of the lesson about a situation involving driving. Now we will see how this model would work as part of an autonomous driving system.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "8be5cbe7-5eb2-4d67-b7ce-690236ad2783",
+        "lesson_activity.key": "66990522-3855-48b7-a32e-ba9e42385c71"
+      }
+    },
+    {
+      "key": "9b30952c-6c1c-4fbd-a78d-32e81ed4498c",
+      "position": 9,
+      "properties": {
+        "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Introduce the self-driving cars scenario.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students test the images in the **Cars/Trucks/Bikes etc** folder. If students have time, have them find their own images of things a car might encounter on the road to test.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Look and listen for students picking up on characteristics in images that they think might be leading to inaccurate or lacking predictions from the model. Encourage students to look for more images on the web to test those hypotheses.\n\nIf your students are struggling to notice differences in how objects are detected, you might choose to model a comparison of two images. The two screenshots below show how the model handles these two images. Showing these two images one after the other could help open the discussion about the results of this model.\n\n![](https://images.code.org/99cdcf9750cefd88f3412ab343615c13-cars.png)"
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "9b30952c-6c1c-4fbd-a78d-32e81ed4498c",
+        "lesson_activity.key": "66990522-3855-48b7-a32e-ba9e42385c71"
+      }
+    },
+    {
+      "key": "94ebac45-6250-4809-a411-a0119dc31f49",
+      "position": 10,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** Click through the animated slide to display the prompts.\n\n* _What were your results?_\n* _Did the results you got make sense? Or did some of them feel unfair?_\n\n**Discussion Goal:** Students should critically assess how the model identifies and distinguishes between various vehicles and road objects. They should reflect on the model's predictions, identifying any instances where the model might have made unexpected or \"unfair\" decisions. Students should begin to realize the intricacies and potential pitfalls in AI model responses and the importance of accuracy and fairness in real-world applications like self-driving cars.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Use this discussion to highlight areas where the model did not perform as well as it could have. Draw out the fact that \"unusual\" looking vehicles we less recognized by the model and push your class to think about the consequences of that disparity. Ask students whether they think this something they think is fair."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "94ebac45-6250-4809-a411-a0119dc31f49",
+        "lesson_activity.key": "66990522-3855-48b7-a32e-ba9e42385c71"
+      }
+    },
+    {
+      "key": "1e29621d-dc08-4bf1-8050-2897f51c6f0d",
+      "position": 11,
+      "properties": {
+        "description": "It's crucial to recognize that the foundation of any AI model's decision-making capabilities lies in its training data. But what happens when that data isn't all-encompassing or is skewed in a certain direction? Let's take a look at some real datasets and consider their impacts on models so we can uncover the relationship between training data and potential biases in AI outcomes.",
+        "duration": "30",
+        "name": "Training Data and Bias",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "1e29621d-dc08-4bf1-8050-2897f51c6f0d",
+        "lesson_activity.key": "66990522-3855-48b7-a32e-ba9e42385c71"
+      }
+    },
+    {
+      "key": "4141de4a-bbf2-4b06-88fd-757765b703b3",
+      "position": 12,
+      "properties": {
+        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show the video – _Training Data and Bias_.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students navigate to the COCO dataset via the link on the MediaPipe model and look around on the site, focusing specifically on the **Explore** section under the **Dataset** menu.",
+        "progression_name": "COCO - Common Objects in Context Dataset"
+      },
+      "seeding_key": {
+        "activity_section.key": "4141de4a-bbf2-4b06-88fd-757765b703b3",
+        "lesson_activity.key": "66990522-3855-48b7-a32e-ba9e42385c71"
+      }
+    },
+    {
+      "key": "f3c88e49-71a1-4e83-8418-8721af2ad316",
+      "position": 13,
+      "properties": {
+        "description": "It's great to see examples of the data like this as it helps us get a better understanding of the dataset and its potential uses. However, we saw that a model trained on this dataset isn't great for all purposes, like use in a self-driving car. Having a biased or inaccurate model is clearly a problem, and it's another reason our role as evaluators and testers of machine learning models is so important. This is also a problem that people in the machine learning community are trying to solve. Let's listen to one possible solution, then we'll talk about how we can use this idea when creating our own machine learning models.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "f3c88e49-71a1-4e83-8418-8721af2ad316",
+        "lesson_activity.key": "66990522-3855-48b7-a32e-ba9e42385c71"
+      }
+    },
+    {
+      "key": "f2e976a3-29fd-41ac-a310-9508fe0d58ca",
+      "position": 14,
+      "properties": {
+        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show the video – _Datasheets for Datasets_.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Define _datasheet_."
+      },
+      "seeding_key": {
+        "activity_section.key": "f2e976a3-29fd-41ac-a310-9508fe0d58ca",
+        "lesson_activity.key": "66990522-3855-48b7-a32e-ba9e42385c71"
+      }
+    },
+    {
+      "key": "9c788f7b-dc9b-4b3d-85c7-a27b8bd31130",
+      "position": 15,
+      "properties": {
+        "description": "We've now learned that \"the data is the code\" when it comes to machine learning models, and we've also heard about best practices when documenting these datasets with datasheets. Now let's take a look at datasheets for three object detection datasets and use the information there to make a recommendation to the car company about which dataset is most appropriate to train its model on.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "9c788f7b-dc9b-4b3d-85c7-a27b8bd31130",
+        "lesson_activity.key": "66990522-3855-48b7-a32e-ba9e42385c71"
+      }
+    },
+    {
+      "key": "1c8d01b6-27f1-4dca-804a-e38fface31d3",
+      "position": 16,
+      "properties": {
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Give each student a copy of the Object Detection Dataset Datasheets handout.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students complete the Object Detection Dataset Datasheets handout.",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "While these are real datasets and the source URLs are accurate, these datasets do not have datasheets published by the respective curators. [**Here is an example**](https://huggingface.co/datasets/imagenet-1k) of a datasheet for the ImageNet dataset created by a third party, which was the source material for some of what appears in the activity guide."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "1c8d01b6-27f1-4dca-804a-e38fface31d3",
+        "lesson_activity.key": "66990522-3855-48b7-a32e-ba9e42385c71"
+      }
+    },
+    {
+      "key": "be4b9dc8-769c-4363-b86b-8dec58ab52f3",
+      "position": 1,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _Would you recommend that the car company train their model using this Common Objects in Context dataset? Why or why not?_\n\n**Discussion Goal:** Students should consider the contents, source, and primary intentions behind the dataset in order to determine its suitability for training a car-based model.",
+        "name": "Which Model to Use?",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "Use these discussions to highlight the features of each datasheet, specifically the metadata about the dataset and its uses."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "be4b9dc8-769c-4363-b86b-8dec58ab52f3",
+        "lesson_activity.key": "ae5a7a59-d5da-4793-a152-e2bfa9b31448"
+      }
+    },
+    {
+      "key": "83684814-7526-4624-a562-560bfb156986",
+      "position": 2,
+      "properties": {
+        "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _Would you recommend that the car company train their model using this ImageNet dataset? Why or why not?_\n\n**Discussion Goal:** Students should consider the vastness of ImageNet, its diverse categories, and discern if it's specific enough for training a car AI model.\n\n<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Discuss:** _Would you recommend that the car company train their model using this Waymo Open Dataset? Why or why not?_\n\n**Discussion Goal:** Students should realize the direct relevance of this dataset to driving scenarios and the comprehensive nature of data collected from actual road conditions. Students will most likely see clearly that it is the most appropriate for training an autonomous driving-related model.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the concepts covered in this lesson.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Review the Question of the Day.\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Key Vocabulary"
+      },
+      "seeding_key": {
+        "activity_section.key": "83684814-7526-4624-a562-560bfb156986",
+        "lesson_activity.key": "ae5a7a59-d5da-4793-a152-e2bfa9b31448"
+      }
+    },
+    {
+      "key": "c0539c98-2f4b-4fb9-8c37-68480a1a5ae4",
+      "position": 3,
+      "properties": {
+        "description": "Now that we've had some exposure and practice with models trained by others, we are ready to collect our own data and train our own model in the next lesson.",
+        "remarks": true
+      },
+      "seeding_key": {
+        "activity_section.key": "c0539c98-2f4b-4fb9-8c37-68480a1a5ae4",
+        "lesson_activity.key": "ae5a7a59-d5da-4793-a152-e2bfa9b31448"
+      }
+    },
+    {
+      "key": "bf585f91-9cdf-4065-8141-2148d8db7dcd",
+      "position": 4,
+      "properties": {
+        "description": "---"
+      },
+      "seeding_key": {
+        "activity_section.key": "bf585f91-9cdf-4065-8141-2148d8db7dcd",
+        "lesson_activity.key": "ae5a7a59-d5da-4793-a152-e2bfa9b31448"
+      }
+    },
+    {
+      "key": "526fa96f-8454-4097-9149-239f477aa8e4",
+      "position": 5,
+      "properties": {
+        "description": "_Check For Understanding Question(s) and solutions can be found in each lesson on Code Studio. These questions can be used for an exit ticket._",
+        "name": "Assessment: Check for Understanding",
+        "progression_name": "Check for Understanding"
+      },
+      "seeding_key": {
+        "activity_section.key": "526fa96f-8454-4097-9149-239f477aa8e4",
+        "lesson_activity.key": "ae5a7a59-d5da-4793-a152-e2bfa9b31448"
+      }
+    },
+    {
+      "key": "a83c43e8-3d0b-436d-be49-c00337ee0c26",
+      "position": 6,
+      "properties": {
+        "description": "This lesson survey helps us learn more about how the lesson went for your students. Although their answers are anonymous, the aggregated data will be available to you once at least five students have completed the survey.",
+        "name": "Lesson Survey",
+        "progression_name": "End of Lesson Survey"
+      },
+      "seeding_key": {
+        "activity_section.key": "a83c43e8-3d0b-436d-be49-c00337ee0c26",
+        "lesson_activity.key": "ae5a7a59-d5da-4793-a152-e2bfa9b31448"
       }
     },
     {
@@ -2122,6 +2528,134 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA-CV-L1-L1"
+        ],
+        "progression": "MediaPipe Object Detection Model Demo"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA-CV-L1-L1"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa-software-engineering",
+        "activity_section.key": "75ad3a6a-d225-483a-87d3-1ae2cff15c72"
+      },
+      "level_keys": [
+        "CSA-CV-L1-L1"
+      ]
+    },
+    {
+      "chapter": 20,
+      "position": 2,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA-CV-L1-L2"
+        ],
+        "progression": "MediaPipe Model Testing: Image Files"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA-CV-L1-L2"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa-software-engineering",
+        "activity_section.key": "fd4f1d60-f6a4-4e1f-9a00-184c665893a6"
+      },
+      "level_keys": [
+        "CSA-CV-L1-L2"
+      ]
+    },
+    {
+      "chapter": 21,
+      "position": 3,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA-CV-L1-L3"
+        ],
+        "progression": "COCO - Common Objects in Context Dataset"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA-CV-L1-L3"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa-software-engineering",
+        "activity_section.key": "4141de4a-bbf2-4b06-88fd-757765b703b3"
+      },
+      "level_keys": [
+        "CSA-CV-L1-L3"
+      ]
+    },
+    {
+      "chapter": 22,
+      "position": 4,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSA-CV-L1-L4"
+        ],
+        "progression": "Check for Understanding"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA-CV-L1-L4"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa-software-engineering",
+        "activity_section.key": "526fa96f-8454-4097-9149-239f477aa8e4"
+      },
+      "level_keys": [
+        "CSA-CV-L1-L4"
+      ]
+    },
+    {
+      "chapter": 23,
+      "position": 5,
+      "activity_section_position": 1,
+      "assessment": true,
+      "properties": {
+        "level_keys": [
+          "CSA-CV-L1-Survey"
+        ],
+        "progression": "End of Lesson Survey"
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "CSA-CV-L1-Survey"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa-software-engineering",
+        "activity_section.key": "a83c43e8-3d0b-436d-be49-c00337ee0c26"
+      },
+      "level_keys": [
+        "CSA-CV-L1-Survey"
+      ]
+    },
+    {
+      "chapter": 24,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+        "level_keys": [
+          "CSA-CV-L2-L1"
+        ],
         "progression": "Select a Program"
       },
       "bonus": false,
@@ -2139,11 +2673,14 @@
       ]
     },
     {
-      "chapter": 20,
+      "chapter": 25,
       "position": 2,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA-CV-L2-L2"
+        ],
         "progression": "Teachable Machine"
       },
       "bonus": false,
@@ -2161,11 +2698,14 @@
       ]
     },
     {
-      "chapter": 21,
+      "chapter": 26,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA-CV-L2-L3"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -2183,11 +2723,14 @@
       ]
     },
     {
-      "chapter": 22,
+      "chapter": 27,
       "position": 4,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA-CV-L2-Survey"
+        ],
         "progression": "End of Lesson Survey"
       },
       "bonus": false,
@@ -2205,11 +2748,14 @@
       ]
     },
     {
-      "chapter": 23,
+      "chapter": 28,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "CSA-CV-L3-L1"
+        ],
         "progression": "Incorporate Your Model"
       },
       "bonus": false,
@@ -2227,11 +2773,14 @@
       ]
     },
     {
-      "chapter": 24,
+      "chapter": 29,
       "position": 2,
       "activity_section_position": 1,
       "assessment": true,
       "properties": {
+        "level_keys": [
+          "CSA-CV-L3-L2"
+        ],
         "progression": "Check for Understanding"
       },
       "bonus": false,
@@ -2249,7 +2798,7 @@
       ]
     },
     {
-      "chapter": 25,
+      "chapter": 30,
       "position": 3,
       "activity_section_position": 1,
       "assessment": true,
@@ -2274,7 +2823,7 @@
       ]
     },
     {
-      "chapter": 26,
+      "chapter": 31,
       "position": 1,
       "activity_section_position": 1,
       "assessment": true,
@@ -2518,6 +3067,66 @@
     },
     {
       "seeding_key": {
+        "level.key": "CSA-CV-L1-L1",
+        "script_level.level_keys": [
+          "CSA-CV-L1-L1"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa-software-engineering",
+        "activity_section.key": "75ad3a6a-d225-483a-87d3-1ae2cff15c72"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA-CV-L1-L2",
+        "script_level.level_keys": [
+          "CSA-CV-L1-L2"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa-software-engineering",
+        "activity_section.key": "fd4f1d60-f6a4-4e1f-9a00-184c665893a6"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA-CV-L1-L3",
+        "script_level.level_keys": [
+          "CSA-CV-L1-L3"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa-software-engineering",
+        "activity_section.key": "4141de4a-bbf2-4b06-88fd-757765b703b3"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA-CV-L1-L4",
+        "script_level.level_keys": [
+          "CSA-CV-L1-L4"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa-software-engineering",
+        "activity_section.key": "526fa96f-8454-4097-9149-239f477aa8e4"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "CSA-CV-L1-Survey",
+        "script_level.level_keys": [
+          "CSA-CV-L1-Survey"
+        ],
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa-software-engineering",
+        "activity_section.key": "a83c43e8-3d0b-436d-be49-c00337ee0c26"
+      }
+    },
+    {
+      "seeding_key": {
         "level.key": "CSA-CV-L2-L1",
         "script_level.level_keys": [
           "CSA-CV-L2-L1"
@@ -2640,7 +3249,7 @@
     },
     {
       "name": "[KEY] Train Your Model",
-      "url": "https://docs.google.com/document/d/1QM2mqU\\_lnonkdndOrXV354gckTLK0nh\\_0zlPxEnO2C4/edit",
+      "url": "https://docs.google.com/document/d/1QM2mqU_lnonkdndOrXV354gckTLK0nh_0zlPxEnO2C4/edit?usp=drive_link",
       "key": "_key_train_your_model",
       "properties": {
         "audience": "Verified Teacher",
@@ -2689,7 +3298,7 @@
     },
     {
       "name": "BrandBook Repo",
-      "url": "https://github.com/jamjamgobambam/brandbook",
+      "url": "https://github.com/code-dot-org/csa-se-lesson2b",
       "key": "brandbook_repo",
       "properties": {
         "audience": "Student",
@@ -2713,7 +3322,7 @@
     },
     {
       "name": "ByteBud Repo",
-      "url": "https://github.com/jamjamgobambam/bytebud",
+      "url": "https://github.com/code-dot-org/csa-se-lesson2e",
       "key": "bytebud_repo",
       "properties": {
         "audience": "Student",
@@ -2721,6 +3330,30 @@
       },
       "seeding_key": {
         "resource.key": "bytebud_repo"
+      }
+    },
+    {
+      "name": "COCO - Common Objects in Context Dataset",
+      "url": "https://cocodataset.org/#home",
+      "key": "coco_-_common_objects_in_context_dataset",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "coco_-_common_objects_in_context_dataset"
+      }
+    },
+    {
+      "name": "Datasheets for Datasets",
+      "url": "https://vimeo.com/639588440",
+      "key": "datasheets_for_datasets",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "datasheets_for_datasets"
       }
     },
     {
@@ -2826,7 +3459,7 @@
     },
     {
       "name": "Harmony Helper Repo",
-      "url": "https://github.com/jamjamgobambam/harmonyhelper",
+      "url": "https://github.com/code-dot-org/csa-se-lesson2c",
       "key": "harmony_helper_repo",
       "properties": {
         "audience": "Student",
@@ -2838,7 +3471,7 @@
     },
     {
       "name": "Honest Headlines Repo",
-      "url": "https://github.com/jamjamgobambam/honestheadlines",
+      "url": "https://github.com/code-dot-org/csa-se-lesson2g",
       "key": "honest_headlines_repo",
       "properties": {
         "audience": "Student",
@@ -2858,6 +3491,42 @@
       },
       "seeding_key": {
         "resource.key": "how_ai_works_chatbots_and_large_language_models"
+      }
+    },
+    {
+      "name": "How Computer Vision Works",
+      "url": "https://www.youtube.com/watch?v=2hXG8v8p0KM",
+      "key": "how_computer_vision_works",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "how_computer_vision_works"
+      }
+    },
+    {
+      "name": "Image Files",
+      "url": "https://drive.google.com/file/d/1dnhvbfde7zKupHwz6LjTGTP_OGbp3wPp/view?usp=drive_link",
+      "key": "image_files",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "image_files"
+      }
+    },
+    {
+      "name": "Intro to AI Models",
+      "url": "https://docs.google.com/presentation/d/1fCLQ_tjJbp5eFxrbQ1BFA0RPdJutiUbcl9aAMGKmM80/edit?usp=sharing",
+      "key": "intro_to_ai_models",
+      "properties": {
+        "audience": "Verified Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "intro_to_ai_models"
       }
     },
     {
@@ -2898,8 +3567,33 @@
       }
     },
     {
+      "name": "MediaPipe Object Detection Model",
+      "url": "https://mediapipe-studio.webapps.google.com/studio/demo/object\\_detector",
+      "key": "mediapipe_object_detection_model",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "mediapipe_object_detection_model"
+      }
+    },
+    {
+      "name": "Object Detection Datasets Datasheets",
+      "url": "https://docs.google.com/document/d/1Lc-BGSoBMSf5aiSy0_OAgbtVYv-A0kdesklxpe0iTqs/edit?usp=drive_link",
+      "key": "object_detection_datasets_datasheets",
+      "properties": {
+        "audience": "Student",
+        "include_in_pdf": true,
+        "type": "Handout"
+      },
+      "seeding_key": {
+        "resource.key": "object_detection_datasets_datasheets"
+      }
+    },
+    {
       "name": "PixelPedia Repo",
-      "url": "https://github.com/jamjamgobambam/pixelpedia",
+      "url": "https://github.com/code-dot-org/csa-se-lesson2d",
       "key": "pixelpedia_repo",
       "properties": {
         "audience": "Student",
@@ -2923,7 +3617,7 @@
     },
     {
       "name": "SocialSense Repo",
-      "url": "https://github.com/jamjamgobambam/socialsense",
+      "url": "https://github.com/code-dot-org/csa-se-lesson2f",
       "key": "socialsense_repo",
       "properties": {
         "audience": "Student",
@@ -3020,7 +3714,7 @@
     },
     {
       "name": "TextTrekkers Repo",
-      "url": "https://github.com/jamjamgobambam/texttrekkers",
+      "url": "https://github.com/code-dot-org/csa-se-lesson2h",
       "key": "texttrekkers_repo",
       "properties": {
         "audience": "Student",
@@ -3041,6 +3735,18 @@
       },
       "seeding_key": {
         "resource.key": "train_your_model"
+      }
+    },
+    {
+      "name": "Training Data and Bias",
+      "url": "https://youtu.be/x2mRoFNm22g",
+      "key": "training_data_and_bias",
+      "properties": {
+        "audience": "Student",
+        "type": "Video"
+      },
+      "seeding_key": {
+        "resource.key": "training_data_and_bias"
       }
     },
     {
@@ -3069,7 +3775,7 @@
     },
     {
       "name": "Urban Explorer Repo",
-      "url": "https://github.com/jamjamgobambam/urbanexplorer",
+      "url": "https://github.com/code-dot-org/csa-se-lesson2a",
       "key": "urban_explorer_repo",
       "properties": {
         "audience": "Student",
@@ -3081,7 +3787,7 @@
     },
     {
       "name": "Use Your Model",
-      "url": "https://docs.google.com/document/d/1vt8Rvuf\\_rJQWfrIze3pepNW8ZiVh6hZmjgqndFmIh1I/edit",
+      "url": "https://docs.google.com/document/d/1vt8Rvuf_rJQWfrIze3pepNW8ZiVh6hZmjgqndFmIh1I/edit?usp=drive_link",
       "key": "use_your_model",
       "properties": {
         "audience": "Student",
@@ -3356,6 +4062,54 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "coco_-_common_objects_in_context_dataset"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "datasheets_for_datasets"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "how_computer_vision_works"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "image_files"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "intro_to_ai_models"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "mediapipe_object_detection_model"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "object_detection_datasets_datasheets"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "training_data_and_bias"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "lesson-5",
         "resource.key": "_key_train_your_model"
       }
@@ -3446,6 +4200,16 @@
   ],
   "vocabularies": [
     {
+      "key": "bias",
+      "word": "bias",
+      "definition": "when a decision favors some things and deprioritizes or excludes others",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "bias"
+      }
+    },
+    {
       "key": "branch",
       "word": "branch",
       "definition": "a separate line of development",
@@ -3463,6 +4227,26 @@
       },
       "seeding_key": {
         "vocabulary.key": "class"
+      }
+    },
+    {
+      "key": "confidence_score",
+      "word": "confidence score",
+      "definition": "a measure of confidence that a computer model has about a prediction",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "confidence_score"
+      }
+    },
+    {
+      "key": "datasheet",
+      "word": "datasheet",
+      "definition": "used to help document the datasets used to train machine learning models",
+      "properties": {
+      },
+      "seeding_key": {
+        "vocabulary.key": "datasheet"
       }
     },
     {
@@ -3555,6 +4339,24 @@
     },
     {
       "seeding_key": {
+        "lesson.key": "lesson-4",
+        "vocabulary.key": "bias"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "vocabulary.key": "confidence_score"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "vocabulary.key": "datasheet"
+      }
+    },
+    {
+      "seeding_key": {
         "lesson.key": "lesson-5",
         "vocabulary.key": "class"
       }
@@ -3564,6 +4366,16 @@
 
   ],
   "objectives": [
+    {
+      "key": "0290eaac-e408-4d8c-b5cc-10fb534c54ef",
+      "properties": {
+        "description": "Explain the basic principles of computer vision, how machines interpret visual data, and the significance of decision-making in AI models"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "objective.key": "0290eaac-e408-4d8c-b5cc-10fb534c54ef"
+      }
+    },
     {
       "key": "0a9d0395-1533-4019-a288-7776dab579e3",
       "properties": {
@@ -3622,6 +4434,26 @@
       "seeding_key": {
         "lesson.key": "lesson-1",
         "objective.key": "5ef421af-06fb-4d7f-be73-02fd7b6f17e7"
+      }
+    },
+    {
+      "key": "79a30105-ee97-4bea-a4da-73a07833c34c",
+      "properties": {
+        "description": "Evaluate the suitability of different datasets for specific AI applications"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "objective.key": "79a30105-ee97-4bea-a4da-73a07833c34c"
+      }
+    },
+    {
+      "key": "8f7adb86-0855-442a-9a63-cbc63ab82c69",
+      "properties": {
+        "description": "Assess the accuracy and potential biases of AI models and the implications of these biases, especially in real-world applications like self-driving cars"
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "objective.key": "8f7adb86-0855-442a-9a63-cbc63ab82c69"
       }
     },
     {
@@ -3711,6 +4543,48 @@
         "lesson.key": "lesson-1",
         "framework.shortcode": "csta",
         "standard.shortcode": "3B-AP-20"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-A-iii.3-5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-C-i.9-12"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-C-iii.3-5"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "framework.shortcode": "ai4k12-2021",
+        "standard.shortcode": "3-C-iii.6-8"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "2-IC-21"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "framework.shortcode": "csta",
+        "standard.shortcode": "3A-IC-25"
       }
     },
     {

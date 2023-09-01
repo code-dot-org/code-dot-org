@@ -12,8 +12,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-08-02 00:10:51 UTC",
-    "published_state": null,
+    "serialized_at": "2023-08-18 03:56:49 UTC",
+    "published_state": "in_development",
     "instruction_type": null,
     "instructor_audience": null,
     "participant_audience": null,
@@ -200,6 +200,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD Module 7 Overview_2023"
+        ],
         "progression": "Module 7 Overview"
       },
       "bonus": false,
@@ -222,6 +225,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD M7 Theme Introduction_2023"
+        ],
         "progression": "Theme Introduction (~5 mins)"
       },
       "bonus": false,
@@ -244,6 +250,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 7 - CI-U6_2023"
+        ],
         "progression": "Curriculum Investigation Overview"
       },
       "bonus": false,
@@ -266,6 +275,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 7 - CI - U6L1_2023"
+        ],
         "progression": "Unit 6: Lesson 1 - Innovations in Computing (~10 mins)"
       },
       "bonus": false,
@@ -288,6 +300,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 7 - CI_2023"
+        ],
         "progression": "Unit 6: Lesson 3 - Updating Screen Elements (~20 mins)"
       },
       "bonus": false,
@@ -310,6 +325,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 7 - CI - U6L2a_2023"
+        ],
         "progression": "Unit 6: Lesson 3 - Updating Screen Elements (~20 mins)"
       },
       "bonus": false,
@@ -332,6 +350,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - M7 - U6L2 Level 2_2023"
+        ],
         "progression": "Unit 6: Lesson 3 - Updating Screen Elements (~20 mins)"
       },
       "bonus": false,
@@ -354,6 +375,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - M7 - U6L2 Level 3_2023"
+        ],
         "progression": "Unit 6: Lesson 3 - Updating Screen Elements (~20 mins)"
       },
       "bonus": false,
@@ -376,6 +400,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - M7 - U6L2 Level 4_2023"
+        ],
         "progression": "Unit 6: Lesson 3 - Updating Screen Elements (~20 mins)"
       },
       "bonus": false,
@@ -398,6 +425,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - M7 U6L2 Level 5_2023"
+        ],
         "progression": "Unit 6: Lesson 3 - Updating Screen Elements (~20 mins)"
       },
       "bonus": false,
@@ -420,6 +450,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD Module  U6L2 Reflection_2023"
+        ],
         "progression": "Unit 6: Lesson 3 - Updating Screen Elements (~20 mins)"
       },
       "bonus": false,
@@ -442,6 +475,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 7 - CI - U6L3_2023"
+        ],
         "progression": "Unit 6: Lesson 2 - The Circuit Playground (~20 mins)"
       },
       "bonus": false,
@@ -464,6 +500,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 7 - CI - U6L4_2023"
+        ],
         "progression": "Unit 6: Lesson 4 - Board Events (~10 mins)"
       },
       "bonus": false,
@@ -486,6 +525,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - M7 U6L4 Level 2_2023"
+        ],
         "progression": "Unit 6: Lesson 4 - Board Events (~10 mins)"
       },
       "bonus": false,
@@ -508,6 +550,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - M7 - U6L4 Level 3_2023"
+        ],
         "progression": "Unit 6: Lesson 4 - Board Events (~10 mins)"
       },
       "bonus": false,
@@ -530,6 +575,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD Module 8 U6L4 Reflection_2023"
+        ],
         "progression": "Unit 6: Lesson 4 - Board Events (~10 mins)"
       },
       "bonus": false,
@@ -552,6 +600,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD Module 7 PSP Reflection_2023"
+        ],
         "progression": "Reflection: Problem Solving Process for Programming (~5 mins)"
       },
       "bonus": false,
@@ -574,6 +625,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 7 Wrap Up_2023"
+        ],
         "progression": "Module 7 Asynchronous Wrap Up (~10 mins)"
       },
       "bonus": false,

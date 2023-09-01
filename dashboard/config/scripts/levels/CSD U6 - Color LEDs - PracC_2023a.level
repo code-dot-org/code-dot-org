@@ -1,5 +1,6 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 41,
   "created_at": "2023-03-17T17:00:08.000Z",
   "level_num": "custom",
@@ -91,7 +92,8 @@
       "/courses/csd-2022/guides/booleans-and-comparison-operators",
       "/courses/csd-2022/guides/physical-input",
       "/courses/csd-2022/guides/producing-output",
-      "/courses/csd-2022/guides/board-events"
+      "/courses/csd-2022/guides/board-events",
+      "/maker/setup"
     ],
     "callout_json": "[]",
     "start_blocks": "onEvent(\"onButton\", \"click\", function( ) {\r\n  //1) When you press the onButton, the alarm turns on with lights and sound\r\n  \r\n});\r\n\r\nonEvent(\"offButton\", \"click\", function( ) {\r\n  //2) When you press the offButton, all lights and sound turn off\r\n  \r\n});\r\n\r\n",
@@ -102,9 +104,8 @@
     "encrypted_examples": "hz2m3TbNkSY4HogiyTg9TKqvdFN6W/sU/GSCpbe1rpj5lPTI6G1XbUMRihHP\n8w6vfQH1D/bCSrqjCIkeo1hvSg==\n",
     "preload_asset_list": null
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-03-17T17:00:08.929+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Color LEDs - PracC_2222\\\"\"],\"cloned_from\":\"CSD U6 - Color LEDs - PracC_2222\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-03-17T17:00:08.929+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Color LEDs - PracC_2222\\\"\"],\"cloned_from\":\"CSD U6 - Color LEDs - PracC_2222\"},{\"changed_at\":\"2023-08-16 17:43:57 +0000\",\"changed\":[\"code_functions\",\"reference_links\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>
