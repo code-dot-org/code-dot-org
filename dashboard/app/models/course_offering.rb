@@ -473,7 +473,7 @@ class CourseOffering < ApplicationRecord
     units = latest_version&.units
     lessons = units&.first&.lessons
 
-    return nil if lessons.empty?
+    return nil unless lessons
     lesson_plan = lessons.first.lesson_plan_html_url
     expanded_card_resources = {"Lesson Plan" => lesson_plan}
 
