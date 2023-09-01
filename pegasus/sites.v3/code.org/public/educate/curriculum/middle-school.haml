@@ -12,9 +12,9 @@ theme: responsive_full_width
       =hoc_s(:curricula_title_middle)
     %p.video-101__text=hoc_s(:curricula_desc_middle)
     = view :middle_school_curricula_video
-    %hr{style: "border-top: 1px solid #bababa; margin: 2rem 0"}
-    .div{style: "text-align: center; margin-bottom: 72px"}
-      %p{style: "text-align: center; margin-botton: 2rem"}
+    %hr
+    %div.centered
+      %p
         =hoc_s(:heading_explore_curriculum_catalog)
       %a.link-button.secondary{href: "https://studio.code.org/catalog"}
         =hoc_s(:call_to_action_explore_curriculum_catalog)
