@@ -201,7 +201,6 @@ designMode.assignImageType = function (element, image_source) {
   } else if (image_source === '') {
     return ImageMode.DEFAULT;
   } else {
-    console.log('file', image_source);
     return ImageMode.FILE;
   }
 };
@@ -345,7 +344,6 @@ designMode.updateProperty = function (
     }
     // Set an image on a button.
     case 'image':
-      console.log('case image element', element);
       var originalValue = element.getAttribute('data-canonical-image-url');
       element.setAttribute('data-canonical-image-url', value);
 
@@ -406,9 +404,7 @@ designMode.updateProperty = function (
     }
     // Set an image on an image element.
     case 'picture':
-      console.log('case picture');
       originalValue = element.getAttribute('data-canonical-image-url');
-      console.log('originalValue', originalValue);
       element.setAttribute('data-canonical-image-url', value);
 
       dataImageType = designMode.assignImageType(element, value);
@@ -419,9 +415,6 @@ designMode.updateProperty = function (
       } else if (DATA_PREFIX_REGEX.test(value)) {
         element.src = value;
       } else {
-        console.log('value', value);
-        console.log('check if !isCurriculumLevel then remove image://');
-        console.log(getStore().getState().pageConstants.isCurriculumLevel);
         if (!getStore().getState().pageConstants.isCurriculumLevel) {
           value = value.replace('image://', '');
         }
@@ -430,7 +423,6 @@ designMode.updateProperty = function (
             ? '/blockly/media/1x1.gif'
             : `${assetPrefix.fixPath(value)}${cacheBustSuffix}`;
       }
-      console.log('element.src', element.src);
       break;
     case 'hidden':
       // Add a class that shows as 30% opacity in design mode, and invisible

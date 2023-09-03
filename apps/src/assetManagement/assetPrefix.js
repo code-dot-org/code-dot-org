@@ -52,7 +52,6 @@ export function init(config) {
  * @returns {string}
  */
 export function fixPath(filename) {
-  console.log(filename);
   // Rewrite urls to pass through our media proxy. Unless of course we are in an
   // exported app, in which case our media proxy won't be good for anything
   // anyway.
@@ -85,9 +84,7 @@ export function fixPath(filename) {
   }
 
   if (STARTER_ASSET_PREFIX_REGEX.test(filename)) {
-    console.log('starter asset prefix');
     const state = getStore().getState();
-    console.log('state', state);
     return filename.replace(
       STARTER_ASSET_PREFIX,
       starterAssetPathPrefix(state.level.name)
