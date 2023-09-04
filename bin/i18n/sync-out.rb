@@ -31,7 +31,6 @@ module I18n
       rename_from_crowdin_name_to_locale
       restore_redacted_files
       distribute_translations
-      copy_untranslated_apps
       restore_markdown_headers
       Services::I18n::CurriculumSyncUtils.sync_out
       HocSyncUtils.sync_out
@@ -93,21 +92,6 @@ module I18n
       FileUtils.rm_r Dir.glob("i18n/locales/*").grep(/i18n\/locales\/[A-Z].*/)
     end
 
-    def self.find_malformed_links_images(locale, file_path)
-      return unless File.exist?(file_path)
-      is_json = File.extname(file_path) == '.json'
-      data =
-        if is_json
-          JSON.parse(File.read(file_path))
-        else
-          YAML.load_file(file_path)
-        end
-
-      return unless data
-      return unless data&.values&.first&.length
-      I18nScriptUtils.recursively_find_malformed_links_images(data, locale, file_path)
-    end
-
     def self.restore_redacted_files
       locales = PegasusLanguages.get_locale
       original_dir = "i18n/locales/original"
@@ -125,7 +109,6 @@ module I18n
       puts "Restoring redacted files in #{locales.count} locales, parallelized between #{Parallel.processor_count / 2} processes"
 
       # Prepare some collection literals
-      app_types_with_link = %w(applab gamelab weblab)
       resource_and_vocab_paths = [
         'i18n/locales/original/dashboard/scripts.yml',
         'i18n/locales/original/dashboard/courses.yml'
@@ -164,13 +147,13 @@ module I18n
               plugins << 'visualCodeBlock'
               plugins << 'link'
               plugins << 'resourceLink'
-            elsif app_types_with_link.include?(File.basename(original_path, '.json'))
-              plugins << 'link'
+            elsif I18n::Resources::Apps::Labs::REDACTABLE.include?(File.basename(original_path, '.json'))
+              next # moved to I18n::Resources::Apps::Labs::SyncOut#restore_crawding_locale_files
             end
             RedactRestoreUtils.restore(original_path, translated_path, translated_path, plugins)
           end
 
-          find_malformed_links_images(locale, translated_path)
+          I18nScriptUtils.find_malformed_links_images(locale, translated_path)
         end
         I18nScriptUtils.upload_malformed_restorations(locale)
       end
@@ -349,17 +332,6 @@ module I18n
         ### Course Content
         distribute_course_content(locale)
 
-        ### Apps
-        js_locale = I18nScriptUtils.to_js_locale(locale)
-        Dir.glob("#{locale_dir}/blockly-mooc/*.json") do |loc_file|
-          relative_path = loc_file.delete_prefix(locale_dir)
-          next unless I18nScriptUtils.file_changed?(locale, relative_path)
-
-          basename = File.basename(loc_file, '.json')
-          destination = "apps/i18n/#{basename}/#{js_locale}.json"
-          I18nScriptUtils.sanitize_file_and_write(loc_file, destination)
-        end
-
         ### Pegasus markdown
         Dir.glob("#{locale_dir}/codeorg-markdown/**/*.*") do |loc_file|
           relative_path = loc_file.delete_prefix("#{locale_dir}/codeorg-markdown")
@@ -455,19 +427,6 @@ module I18n
       end
 
       puts "Distribution finished!"
-    end
-
-    # For untranslated apps, copy English file for all locales
-    def self.copy_untranslated_apps
-      untranslated_apps = %w(calc eval netsim)
-
-      PegasusLanguages.get_locale.each do |prop|
-        next unless prop[:locale_s] != 'en-US'
-        untranslated_apps.each do |app|
-          app_locale = prop[:locale_s].tr('-', '_').downcase!
-          FileUtils.cp_r "apps/i18n/#{app}/en_us.json", "apps/i18n/#{app}/#{app_locale}.json"
-        end
-      end
     end
 
     # In the sync in, we slice the YAML headers of the files we upload to crowdin

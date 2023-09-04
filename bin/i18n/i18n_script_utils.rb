@@ -437,12 +437,25 @@ class I18nScriptUtils
     FileUtils.rm_r(from_dir)
   end
 
+  def self.locale_dir(locale, *paths)
+    CDO.dir(File.join(I18N_LOCALES_DIR, locale, *paths))
+  end
+
   def self.delete_empty_crowdin_locale_dir(crowdin_locale)
-    crowdin_locale_dir = CDO.dir(File.join(I18N_LOCALES_DIR, crowdin_locale))
+    crowdin_locale_dir = locale_dir(crowdin_locale)
 
     return unless File.exist?(crowdin_locale_dir)
     return unless Dir.empty?(crowdin_locale_dir)
 
     FileUtils.rm_r(crowdin_locale_dir)
+  end
+
+  def self.find_malformed_links_images(locale, file_path)
+    return unless File.exist?(file_path)
+
+    data = parse_file(file_path) rescue nil
+    return unless data&.values&.first&.length
+
+    recursively_find_malformed_links_images(data, locale, file_path)
   end
 end

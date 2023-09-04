@@ -2,6 +2,8 @@ require_relative '../../../../test_helper'
 require_relative '../../../../../i18n/resources/apps/external_sources/sync_out'
 
 describe I18n::Resources::Apps::ExternalSources::SyncOut do
+  let(:sync_out) {I18n::Resources::Apps::Labs::SyncIn.new}
+
   def around
     FakeFS.with_fresh {yield}
   end
@@ -19,7 +21,7 @@ describe I18n::Resources::Apps::ExternalSources::SyncOut do
   end
 
   describe '#execute' do
-    let(:described_instance) {I18n::Resources::Apps::ExternalSources::SyncOut.new}
+    let(:sync_out) {I18n::Resources::Apps::ExternalSources::SyncOut.new}
 
     let(:crowdin_locale) {'crowdin_locale'}
     let(:i18n_locale) {'i18n-LOCALE'}
@@ -52,7 +54,7 @@ describe I18n::Resources::Apps::ExternalSources::SyncOut do
       it 'deletes empty Crowdin locale dir' do
         I18nScriptUtils.expects(:delete_empty_crowdin_locale_dir).with(crowdin_locale).once
 
-        described_instance.execute
+        sync_out.execute
       end
 
       context 'if Crowdin locale `external-sources/ml-playground/ml_playground.json` file exists' do
@@ -68,7 +70,7 @@ describe I18n::Resources::Apps::ExternalSources::SyncOut do
             expected_apps_i18n_ml_playground_file_content
           )
 
-          described_instance.execute
+          sync_out.execute
 
           assert File.exist?(apps_i18n_ml_playground_file_path)
           assert_equal JSON.dump(expected_apps_i18n_ml_playground_file_content), File.read(apps_i18n_ml_playground_file_path)
@@ -78,7 +80,7 @@ describe I18n::Resources::Apps::ExternalSources::SyncOut do
           assert File.exist?(crowdin_locale_ml_playground_file_path)
           refute File.exist?(i18n_locale_ml_playground_file_path)
 
-          described_instance.execute
+          sync_out.execute
 
           refute File.exist?(crowdin_locale_ml_playground_file_path)
           assert File.exist?(i18n_locale_ml_playground_file_path)
@@ -105,7 +107,7 @@ describe I18n::Resources::Apps::ExternalSources::SyncOut do
               expected_apps_i18n_ml_playground_file_content
             )
 
-            described_instance.execute
+            sync_out.execute
 
             assert File.exist?(apps_i18n_ml_playground_file_path)
             assert_equal JSON.dump(expected_apps_i18n_ml_playground_file_content), File.read(apps_i18n_ml_playground_file_path)
@@ -118,7 +120,7 @@ describe I18n::Resources::Apps::ExternalSources::SyncOut do
             assert File.exist?(i18n_locale_ml_playground_file_path)
             refute File.exist?(i18n_locale_ml_playground_dataset_file_path)
 
-            described_instance.execute
+            sync_out.execute
 
             refute File.exist?(crowdin_locale_ml_playground_file_path)
             refute File.exist?(crowdin_locale_ml_playground_dataset_file_path)
@@ -144,7 +146,7 @@ describe I18n::Resources::Apps::ExternalSources::SyncOut do
             expected_apps_i18n_ml_playground_file_content
           )
 
-          described_instance.execute
+          sync_out.execute
 
           assert File.exist?(apps_i18n_ml_playground_file_path)
           assert_equal JSON.dump(expected_apps_i18n_ml_playground_file_content), File.read(apps_i18n_ml_playground_file_path)
@@ -154,7 +156,7 @@ describe I18n::Resources::Apps::ExternalSources::SyncOut do
           assert File.exist?(crowdin_locale_ml_playground_dataset_file_path)
           refute File.exist?(i18n_locale_ml_playground_dataset_file_path)
 
-          described_instance.execute
+          sync_out.execute
 
           refute File.exist?(crowdin_locale_ml_playground_dataset_file_path)
           assert File.exist?(i18n_locale_ml_playground_dataset_file_path)
@@ -170,7 +172,7 @@ describe I18n::Resources::Apps::ExternalSources::SyncOut do
         it 'distributes the file' do
           I18nScriptUtils.expects(:sort_and_sanitize).with(blockly_core_file_content).once.returns(blockly_core_file_content)
 
-          described_instance.execute
+          sync_out.execute
 
           assert File.exist?(apps_lib_blockly_i18n_js_file_path)
           assert_equal %Q[Blockly.Msg.BLOCKLY_CORE = "Crowdin \\"translation\\"";\n], File.read(apps_lib_blockly_i18n_js_file_path)
@@ -180,7 +182,7 @@ describe I18n::Resources::Apps::ExternalSources::SyncOut do
           assert File.exist?(crowdin_locale_blockly_core_file_path)
           refute File.exist?(i18n_locale_blockly_core_file_path)
 
-          described_instance.execute
+          sync_out.execute
 
           refute File.exist?(crowdin_locale_blockly_core_file_path)
           assert File.exist?(i18n_locale_blockly_core_file_path)
@@ -210,7 +212,7 @@ describe I18n::Resources::Apps::ExternalSources::SyncOut do
               Blockly.Msg.BLOCKLY_CORE_2 = "Source 2 \\"translation\\"";
             JS
 
-            described_instance.execute
+            sync_out.execute
 
             assert File.exist?(apps_lib_blockly_i18n_js_file_path)
             assert_equal expected_apps_lib_blockly_i18n_js_file_content, File.read(apps_lib_blockly_i18n_js_file_path)
@@ -220,7 +222,7 @@ describe I18n::Resources::Apps::ExternalSources::SyncOut do
             assert File.exist?(crowdin_locale_blockly_core_file_path)
             assert File.exist?(i18n_locale_blockly_core_file_path)
 
-            described_instance.execute
+            sync_out.execute
 
             refute File.exist?(crowdin_locale_blockly_core_file_path)
             assert File.exist?(i18n_locale_blockly_core_file_path)
@@ -245,7 +247,7 @@ describe I18n::Resources::Apps::ExternalSources::SyncOut do
       end
 
       it 'does not distribute the files' do
-        described_instance.execute
+        sync_out.execute
 
         refute File.exist?(apps_i18n_ml_playground_file_path)
         refute File.exist?(apps_lib_blockly_i18n_js_file_path)
@@ -260,7 +262,7 @@ describe I18n::Resources::Apps::ExternalSources::SyncOut do
         refute File.exist?(i18n_locale_ml_playground_dataset_file_path)
         refute File.exist?(i18n_locale_blockly_core_file_path)
 
-        described_instance.execute
+        sync_out.execute
 
         refute File.exist?(crowdin_locale_ml_playground_file_path)
         refute File.exist?(crowdin_locale_ml_playground_dataset_file_path)
@@ -274,7 +276,7 @@ describe I18n::Resources::Apps::ExternalSources::SyncOut do
       it 'deletes empty Crowdin locale dir' do
         I18nScriptUtils.expects(:delete_empty_crowdin_locale_dir).with(crowdin_locale).once
 
-        described_instance.execute
+        sync_out.execute
       end
     end
   end
