@@ -5,11 +5,19 @@ import {allowConsoleErrors} from '../../util/testUtils';
 import designMode from '@cdo/apps/applab/designMode';
 import * as elementUtils from '@cdo/apps/applab/designElements/elementUtils';
 import {assets as assetsApi} from '@cdo/apps/clientApi';
-
 import {
   getImportableProject,
   importScreensAndAssets,
 } from '@cdo/apps/applab/import';
+import pageConstantsReducer, {
+  setPageConstants,
+} from '@cdo/apps/redux/pageConstants';
+import {
+  getStore,
+  registerReducers,
+  stubRedux,
+  restoreRedux,
+} from '@cdo/apps/redux';
 
 describe('The applab/import module', () => {
   allowConsoleErrors();
@@ -369,6 +377,17 @@ describe('The applab/import module', () => {
           [project.screens[0], project.screens[1]],
           [{filename: 'asset3.png'}, {filename: 'asset4.png'}]
         ).then(onResolve, onReject);
+        stubRedux();
+        registerReducers({pageConstants: pageConstantsReducer});
+        getStore().dispatch(
+          setPageConstants({
+            isCurriculumLevel: true,
+          })
+        );
+      });
+
+      afterEach(() => {
+        restoreRedux();
       });
 
       it('will import the specified screens', () => {
@@ -382,6 +401,7 @@ describe('The applab/import module', () => {
         expect(elementUtils.getPrefixedElementById('importedInput')).not.to.be
           .null;
         expect(elementUtils.getPrefixedElementById('img1')).not.to.be.null;
+        restoreRedux();
       });
 
       it('will copy the assets that are going to be replaced', () => {
