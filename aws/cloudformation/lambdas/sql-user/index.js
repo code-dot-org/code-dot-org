@@ -1,5 +1,5 @@
 const mysql = require("mysql");
-const { sendCfnResponse } = require("./common/cfn-response");
+const { sendCfnResponse } = require("cfn-response");
 
 const queryPromise = (connection, query) => {
   return new Promise((resolve, reject) => {
