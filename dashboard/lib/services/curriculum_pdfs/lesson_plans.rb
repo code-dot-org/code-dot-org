@@ -39,8 +39,8 @@ module Services
 
         # Check S3 to see if we've already generated a PDF for the given lesson.
         def lesson_plan_pdf_exists_for?(lesson, student_facing=false)
-          pathname = get_lesson_plan_pathname(lesson, student_facing).to_s
-          return pdf_exists_at?(pathname)
+          pathname = get_lesson_plan_pathname(lesson, student_facing)
+          AWS::S3.cached_exists_in_bucket?(S3_BUCKET, pathname.to_s)
         end
 
         # Generate the PDF for the given lesson into the given directory. Can
