@@ -167,39 +167,6 @@
         - EVENT
         - TRIGGER
 
-  SQLUserWriter: <%= lambda_fn 'SQLUserCloudFormationResource',
-    DBServerHost: '!GetAtt AuroraCluster.Endpoint.Address',
-    DBAdminUsername: '!Sub "{{resolve:secretsmanager:${DatabaseSecretAdmin}:SecretString:username}}"',
-    DBAdminPassword: '!Sub "{{resolve:secretsmanager:${DatabaseSecretAdmin}:SecretString:password}}"',
-    Name: '!Sub "{{resolve:secretsmanager:${DatabaseSecretWriter}:SecretString:username}}"',
-    ClientHost: '%',
-    Password: '!Sub "{{resolve:secretsmanager:${DatabaseSecretWriter}:SecretString:password}}"',
-    # TODO: Add database name suffix dynamically.
-    Databases: ['pegasus_development', 'dashboard_development'],
-    Privileges: %w(
-      SELECT
-      INSERT
-      UPDATE
-      DELETE
-      CREATE
-      DROP
-      REFERENCES
-      INDEX
-      ALTER
-      CREATE\ TEMPORARY\ TABLES
-      LOCK\ TABLES
-      EXECUTE
-      CREATE\ VIEW
-      SHOW\ VIEW
-      CREATE\ ROUTINE
-      ALTER\ ROUTINE
-      EVENT
-      TRIGGER
-    )
-  %>
-
-
-
 <% if database-%>
 # We don't yet provision the production database cluster/instances via CloudFormation, but we're incrementally
 # working towards that. Start with provisioning the DB Instance and Cluster ParameterGroups via this template.
