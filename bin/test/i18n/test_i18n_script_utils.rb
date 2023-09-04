@@ -381,4 +381,196 @@ describe I18nScriptUtils do
       end
     end
   end
+
+  describe '.contains_malformed_link_or_image' do
+    let(:contains_malformed_link_or_image) {I18nScriptUtils.contains_malformed_link_or_image(translation)}
+
+    context 'when the translation contains malformed redaction syntax "[...] [0]"' do
+      let(:translation) {'some [test] [0] translation'}
+
+      it 'returns true' do
+        assert contains_malformed_link_or_image
+      end
+    end
+
+    context 'when the translation contains similarly malformed markdown "[link] (example.com)"' do
+      let(:translation) {'some [link/to/something] (test.example) translation'}
+
+      it 'returns true' do
+        assert contains_malformed_link_or_image
+      end
+    end
+
+    context 'when the translation does not contains any malformed links or images' do
+      let(:translation) {'translation_without_malformed_links_or_images'}
+
+      it 'returns false' do
+        refute contains_malformed_link_or_image
+      end
+    end
+  end
+
+  describe '.report_malformed_restoration' do
+    let(:malformed_restorations) {I18nScriptUtils.instance_variable_get(:@malformed_restorations)}
+
+    after do
+      I18nScriptUtils.instance_variable_set(:@malformed_restorations, nil)
+    end
+
+    it 'assigns @malformed_restorations with data to restore' do
+      key1 = 'expected_key1'
+      translation1 = 'expected_translation1'
+      file_name1 = 'file_name1'
+
+      key2 = 'expected_key2'
+      translation2 = 'expected_translation2'
+      file_name2 = 'file_name2'
+
+      I18nScriptUtils.report_malformed_restoration(key1, translation1, file_name1)
+      assert_equal [['Key', 'File Name', 'Translation'], [key1, file_name1, translation1]], malformed_restorations
+
+      I18nScriptUtils.report_malformed_restoration(key2, translation2, file_name2)
+      assert_equal [['Key', 'File Name', 'Translation'], [key1, file_name1, translation1], [key2, file_name2, translation2]], malformed_restorations
+    end
+  end
+
+  describe '.recursively_find_malformed_links_images' do
+    let(:key_str) {'key_str'}
+    let(:file_name) {'/file_name.json'}
+    let(:hash_key) {'hash_key'}
+    let(:hash_val) {'hash_val'}
+    let(:hash_data) {{hash_key => hash_val}}
+
+    context 'when a hash value contains malformed link or image' do
+      let(:hash_val) {'hash_val_with_malformed_link_or_image'}
+
+      before do
+        I18nScriptUtils.expects(:contains_malformed_link_or_image).with(hash_val).returns(true)
+      end
+
+      it 'reports malformed restoration' do
+        I18nScriptUtils.expects(:report_malformed_restoration).with('key_str.hash_key', hash_val, file_name).once
+
+        I18nScriptUtils.recursively_find_malformed_links_images(hash_data, key_str, file_name)
+      end
+    end
+
+    context 'when a hash value does not contain malformed link or image' do
+      let(:hash_val) {'hash_val_without_malformed_link_or_image'}
+
+      before do
+        I18nScriptUtils.expects(:contains_malformed_link_or_image).with(hash_val).returns(false)
+      end
+
+      it 'reports malformed restoration' do
+        I18nScriptUtils.expects(:report_malformed_restoration).never
+
+        I18nScriptUtils.recursively_find_malformed_links_images(hash_data, key_str, file_name)
+      end
+    end
+
+    context 'when a hash value is a hash' do
+      let(:child_hash_key) {'child_hash_key'}
+      let(:child_hash_val) {'child_hash_val'}
+      let(:hash_val) {{child_hash_key => child_hash_val}}
+
+      before do
+        I18nScriptUtils.expects(:contains_malformed_link_or_image).with(child_hash_val).returns(true)
+      end
+
+      it 'recursively find malformed links images in the hash value' do
+        I18nScriptUtils.expects(:report_malformed_restoration).with('key_str.hash_key.child_hash_key', child_hash_val, file_name).once
+
+        I18nScriptUtils.recursively_find_malformed_links_images(hash_data, key_str, file_name)
+      end
+    end
+  end
+
+  describe '.find_malformed_links_images' do
+    let(:locale) {'en-US'}
+    let(:file_path) {'/file.json'}
+    let(:file_data) {{key: ['value']}}
+
+    before do
+      FileUtils.touch(file_path)
+      I18nScriptUtils.stubs(:parse_file).with(file_path).returns(file_data)
+    end
+
+    it 'recursively finds malformed links images' do
+      I18nScriptUtils.expects(:recursively_find_malformed_links_images).with(file_data, locale, file_path).once
+
+      I18nScriptUtils.find_malformed_links_images(locale, file_path)
+    end
+
+    context 'when the file does not exist' do
+      let(:non_existent_file_path) {'/non_existent_file.json'}
+
+      it 'does not recursively find malformed links images' do
+        I18nScriptUtils.expects(:recursively_find_malformed_links_images).never
+
+        I18nScriptUtils.find_malformed_links_images(locale, non_existent_file_path)
+      end
+    end
+
+    context 'when the file is empty' do
+      let(:file_data) {nil}
+
+      it 'does not recursively find malformed links images' do
+        I18nScriptUtils.expects(:recursively_find_malformed_links_images).never
+
+        I18nScriptUtils.find_malformed_links_images(locale, file_path)
+      end
+    end
+  end
+
+  describe '.upload_malformed_restorations' do
+    let(:locale) {'expected_locale'}
+    let(:malformed_restorations) {['expected_malformed_restorations']}
+    let(:gdrive_export_secret) {'expected_gdrive_export_secret'}
+
+    before do
+      I18nScriptUtils.instance_variable_set(:@malformed_restorations, malformed_restorations)
+      CDO.stubs(:gdrive_export_secret).returns(gdrive_export_secret)
+      Google::Drive.any_instance.stubs(:add_sheet_to_spreadsheet)
+    end
+
+    after do
+      I18nScriptUtils.instance_variable_set(:@malformed_restorations, nil)
+    end
+
+    it 'updates the google sheet "i18n_bad_translations" with data from @malformed_restorations' do
+      google_drive_mock = mock
+      StringIO.expects(:new).once.with(JSON.dump(gdrive_export_secret)).returns('expected_service_account_key')
+      Google::Drive.expects(:new).with(service_account_key: 'expected_service_account_key').once.returns(google_drive_mock)
+      google_drive_mock.expects(:add_sheet_to_spreadsheet).with(malformed_restorations, 'i18n_bad_translations', locale).once
+
+      I18nScriptUtils.upload_malformed_restorations(locale)
+
+      assert_nil I18nScriptUtils.instance_variable_get(:@malformed_restorations)
+    end
+
+    context 'when @malformed_restorations is blank' do
+      let(:malformed_restorations) {nil}
+
+      it 'does not update the google sheet "i18n_bad_translations" with data from @malformed_restorations' do
+        Google::Drive.any_instance.expects(:add_sheet_to_spreadsheet).never
+
+        I18nScriptUtils.upload_malformed_restorations(locale)
+
+        assert_nil I18nScriptUtils.instance_variable_get(:@malformed_restorations)
+      end
+    end
+
+    context 'when CDO.gdrive_export_secret is not present' do
+      let(:gdrive_export_secret) {nil}
+
+      it 'does not update the google sheet "i18n_bad_translations" with data from @malformed_restorations' do
+        Google::Drive.any_instance.expects(:add_sheet_to_spreadsheet).never
+
+        I18nScriptUtils.upload_malformed_restorations(locale)
+
+        assert_nil I18nScriptUtils.instance_variable_get(:@malformed_restorations)
+      end
+    end
+  end
 end
