@@ -115,7 +115,7 @@
     Properties:
       Description: 'Custom CloudFormation Resource: Create/Update/Delete a SQL User and its permissions in a MySQL database.'
       FunctionName: !Sub "SQLUser-CloudFormation-Custom-Resource-${AWS::StackName}"
-      Code: <%=js_zip 'lambdas/sql_user', 'lambdas/cfn_response.rb' %>
+      Code: <%=js_zip 'lambdas/sql_user'%>
       Handler: sql_user.lambda_handler
       Runtime: nodejs18.x
       MemorySize: 1024
