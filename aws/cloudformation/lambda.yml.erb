@@ -273,24 +273,6 @@ Resources:
             - "ec2:DescribeImages"
             Resource: '*'
       PermissionsBoundary: !ImportValue IAM-DevPermissions
-  SQLUser:
-    Type: AWS::Lambda::Function
-    Properties:
-      Description: 'Create/Update/Delete a SQL User and its permissions in a MySQL database.'
-      FunctionName: SQLUser
-      Code: <%=lambda_zip 'lambdas/sql_user', 'cfn_response.rb' %>
-      Handler: sql_user.lambda_handler
-      Runtime: ruby3.2
-      MemorySize: 1024
-      Timeout: 30
-      Role: !GetAtt SQLUserRole.Arn
-  SQLUserRole:
-    Type: AWS::IAM::Role
-    Properties:
-      <%=service_role 'lambda'%>
-      Path: /
-      ManagedPolicyArns: ['arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole']
-      PermissionsBoundary: !ImportValue IAM-DevPermissions
   LambdaSecurityGroup:
     Type: AWS::EC2::SecurityGroup
     Properties:

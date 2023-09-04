@@ -110,6 +110,63 @@
       Name: !Sub "CfnStack/${AWS::StackName}/db_endpoint_proxy_reporting"
       SecretString: <%=DATABASE_CONFIGURATION[:db_endpoint_proxy_reporting]%>
 
+  SQLUserLambda:
+    Type: AWS::Lambda::Function
+    Properties:
+      Description: 'Custom CloudFormation Resource: Create/Update/Delete a SQL User and its permissions in a MySQL database.'
+      FunctionName: !Sub "SQLUser-CloudFormation-Custom-Resource-${AWS::StackName}"
+      Code: <%=lambda_zip '../lambdas/sql_user', '../lambdas/cfn_response.rb' %>
+      Handler: sql_user.lambda_handler
+      Runtime: nodejs18.x
+      MemorySize: 1024
+      Timeout: 30
+      Role: !GetAtt SQLUserRole.Arn
+  SQLUserRole:
+    Type: AWS::IAM::Role
+    Properties:
+      <%=service_role 'lambda'%>
+      Path: /
+      ManagedPolicyArns: ['arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole']
+      Policies:
+        # TODO: Provision a Policy and use it in both the SQL User and DBProxy Roles.
+        - PolicyName: GetDBCredentials
+          PolicyDocument:
+            Statement:
+              - {Effect: Allow, Action: 'secretsmanager:GetSecretValue', Resource: !Ref DatabaseSecretAdmin}
+              - {Effect: Allow, Action: 'secretsmanager:GetSecretValue', Resource: !Ref DatabaseSecretWriter}
+              - {Effect: Allow, Action: 'secretsmanager:GetSecretValue', Resource: !Ref DatabaseSecretReader}
+      PermissionsBoundary: !ImportValue IAM-DevPermissions
+
+  WriterSQLUser:
+    Type: 'Custom::SQLUser'
+    Properties:
+      ServiceToken: !GetAtt SQLUserLambda.Arn
+      DBServerHost: !GetAtt AuroraCluster.Endpoint.Address
+      DBAdminUsername: !Sub "{{resolve:secretsmanager:${DatabaseSecretAdmin}:SecretString:username}}"
+      DBAdminPassword: !Sub "{{resolve:secretsmanager:${DatabaseSecretAdmin}:SecretString:password}}"
+      Name: !Sub "{{resolve:secretsmanager:${DatabaseSecretWriter}:SecretString:username}}"
+      ClientHost: '%'
+      Password: !Sub "{{resolve:secretsmanager:${DatabaseSecretWriter}:SecretString:password}}"
+      Privileges:
+        - SELECT
+        - INSERT
+        - UPDATE
+        - DELETE
+        - CREATE
+        - DROP
+        - REFERENCES
+        - INDEX
+        - ALTER
+        - CREATE TEMPORARY TABLES
+        - LOCK TABLES
+        - EXECUTE
+        - CREATE VIEW
+        - SHOW VIEW
+        - CREATE ROUTINE
+        - ALTER ROUTINE
+        - EVENT
+        - TRIGGER
+
   SQLUserWriter: <%= lambda_fn 'SQLUserCloudFormationResource',
     DBServerHost: '!GetAtt AuroraCluster.Endpoint.Address',
     DBAdminUsername: '!Sub "{{resolve:secretsmanager:${DatabaseSecretAdmin}:SecretString:username}}"',
