@@ -37,8 +37,10 @@ module Services
         # Check S3 to see if we've already generated an overview PDF for the
         # given script
         def script_overview_pdf_exists_for?(script)
-          pathname = get_script_overview_pathname(script).to_s
-          return pdf_exists_at?(pathname)
+          AWS::S3.cached_exists_in_bucket?(
+            S3_BUCKET,
+            get_script_overview_pathname(script).to_s
+          )
         end
 
         # Generate a PDF containing not only the Unit page itself but also
