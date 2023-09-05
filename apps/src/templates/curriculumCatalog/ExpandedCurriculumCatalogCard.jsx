@@ -67,6 +67,30 @@ const ExpandedCurriculumCatalogCard = ({
     return ++availableResourceCounter < Object.keys(availableResources).length;
   };
 
+  const propsObject = {
+    courseDisplayName,
+    duration,
+    gradeRange,
+    subjectsAndTopics,
+    deviceCompatibility,
+    description,
+    professionalLearningProgram,
+    video,
+    publishedDate,
+    selfPacedPlCourseOfferingPath,
+    pathToCourse,
+    assignButtonOnClick,
+    assignButtonDescription,
+    onClose,
+    isInUS,
+    imageSrc,
+    imageAltText,
+    availableResources,
+  };
+
+  // Log the props object
+  console.log('All Props:', propsObject);
+
   return (
     <div>
       <div

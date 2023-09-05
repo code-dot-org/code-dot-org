@@ -55,13 +55,27 @@ describe('CurriculumCatalogExpandedCard', () => {
     store = getStore();
     defaultProps = {
       courseDisplayName: 'AI for Oceans',
-      courseDisplayNameWithLatestYear: 'AI for Oceans (2022)',
       duration: 'quarter',
-      gradesArray: ['4', '5', '6', '7', '8'],
-      isEnglish: true,
+      gradeRange: 'Grades: 3-12',
+      subjectsAndTopics: ['Artificial Intelligence', 'Data'],
+      deviceCompatibility:
+        '{"computer":"ideal","chromebook":"ideal","tablet":"ideal","mobile":"ideal","no_device":"incompatible"}',
+      description:
+        'In this fun introduction to artificial intelligence, you train a real machine learning model to identify sea creatures and trash in the ocean. ',
+      professionalLearningProgram: null,
+      video:
+        'https://www.youtube-nocookie.com/embed/KHbwOetbmbs/?autoplay=1&enablejsapi=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=1&v=KHbwOetbmbs&wmode=transparent',
+      publishedDate: '2019-12-01T13:00:00.000Z',
+      selfPacedPlCourseOfferingPath: null,
       pathToCourse: '/s/course',
-      scriptId: 1,
-      isSignedOut: true,
+      //   assignButtonOnClick: handleClickAssign(),
+      assignButtonDescription: 'Assign AI for Oceans to your classroom',
+      //   onClose: onQuickViewClick(),
+      isInUS: true,
+      imageSrc:
+        'https://images.code.org/58cc5271d85e017cf5030ea510ae2715-AI for Oceans.png',
+      imageAltText: '',
+      availableResources: {'Lesson Plan': '/s/oceans/lessons/1'},
     };
   });
 
@@ -72,6 +86,6 @@ describe('CurriculumCatalogExpandedCard', () => {
   it('renders course name', () => {
     renderCurriculumExpandedCard();
 
-    screen.getByRole('heading', {name: defaultProps.courseName});
+    screen.getByRole('heading', {name: defaultProps.courseDisplayName});
   });
 });
