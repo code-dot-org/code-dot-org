@@ -4,12 +4,14 @@
 #helperLibraries.in.collapse
 
   %p
+    Select from the available helper libraries. Note that currently used libraries are listed at the top.
+  %p
     Select
     %a.select_all{href: '#'} all
     \/
     %a.select_none{href: '#'} none
     (shift-click or cmd-click to select multiple).
-  = f.select :helper_libraries, ((@level.helper_libraries || ["NativeSpriteLab"]) + Library.distinct.pluck(:name).sort_by(&:downcase)).uniq, {}, {size: 12, multiple: true}
+  = f.select :helper_libraries, ((@level.helper_libraries || []) + Library.distinct.pluck(:name).sort_by(&:downcase)).uniq, {}, {size: 12, multiple: true}
 
-  %p Libraries currently used:
+  %p Libraries currently used (does not update until level is saved):
   = @libraries = @level.helper_libraries
