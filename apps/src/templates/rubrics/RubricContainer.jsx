@@ -43,24 +43,28 @@ export default function RubricContainer({
   const {lesson} = rubric;
 
   const [isSubmittingToStudent, setIsSubmittingToStudent] = useState(false);
-  const [submitError, setSubmitError] = useState(null);
+  const [errorSubmitting, setErrorSubmitting] = useState(false);
+  const [lastSubmittedTimestamp, setLastSubmittedTimestamp] = useState(false);
   const submitFeedbackToStudent = () => {
     setIsSubmittingToStudent(true);
-    setSubmitError(null);
+    setErrorSubmitting(false);
     const body = JSON.stringify({
       student_id: studentLevelInfo.id,
     });
     const endPoint = `/rubrics/${rubric.id}/submit_evaluations`;
     HttpClient.post(endPoint, body, true, {'Content-Type': 'application/json'})
-      .then(response => {
+      .then(response => response.json())
+      .then(json => {
         setIsSubmittingToStudent(false);
-        if (!response.ok) {
-          console.log(response);
-          setSubmitError('Error submitting to student');
+        if (!json.submittedAt) {
+          throw new Error('Unexpected response object');
         }
+        const lasteSubmittedDateObj = new Date(json.submittedAt);
+        setLastSubmittedTimestamp(lasteSubmittedDateObj.toLocaleString());
       })
-      .catch(() => {
-        // catch error?
+      .catch(error => {
+        setIsSubmittingToStudent(false);
+        setErrorSubmitting(true);
       });
   };
 
@@ -126,10 +130,13 @@ export default function RubricContainer({
                 className={style.submitToStudentButton}
                 disabled={isSubmittingToStudent}
               />
-              {submitError && (
+              {errorSubmitting && (
                 <BodyThreeText className={style.errorMessage}>
-                  Error submitting to student
+                  Error submitting feedback to student.
                 </BodyThreeText>
+              )}
+              {!errorSubmitting && lastSubmittedTimestamp && (
+                <BodyThreeText>{`Feedback submitted at ${lastSubmittedTimestamp}`}</BodyThreeText>
               )}
             </div>
           </div>
