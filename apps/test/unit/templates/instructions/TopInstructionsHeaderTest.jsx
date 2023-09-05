@@ -14,7 +14,7 @@ const DEFAULT_PROPS = {
   isCSDorCSP: true,
   displayHelpTab: true,
   displayFeedback: true,
-  levelHasRubric: false,
+  levelHasMiniRubric: false,
   isViewingAsTeacher: false,
   isViewingAsInstructorInTraining: false,
   hasBackgroundMusic: false,
@@ -78,9 +78,9 @@ describe('TopInstructionsHeader', () => {
     expect(commentTab.props().selected).to.be.true;
   });
 
-  it('on the comments tab selects when displayFeedback and levelHasRubric text is rubric', () => {
+  it('on the comments tab selects when displayFeedback and levelHasMiniRubric text is rubric', () => {
     const wrapper = setUp({
-      levelHasRubric: true,
+      levelHasMiniRubric: true,
       displayFeedback: true,
       tabSelected: TabType.COMMENTS,
     });
@@ -88,9 +88,9 @@ describe('TopInstructionsHeader', () => {
     expect(commentTab.props().text).to.equal(i18n.rubric());
   });
 
-  it('on the comments tab selects when displayFeedback and levelHasRubric = false text is feedback', () => {
+  it('on the comments tab selects when displayFeedback and levelHasMiniRubric = false text is feedback', () => {
     const wrapper = setUp({
-      levelHasRubric: false,
+      levelHasMiniRubric: false,
       displayFeedback: true,
       tabSelected: TabType.COMMENTS,
     });

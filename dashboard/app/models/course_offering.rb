@@ -315,6 +315,7 @@ class CourseOffering < ApplicationRecord
       key: key,
       display_name: localized_display_name,
       display_name_with_latest_year: display_name_with_latest_year(locale_code),
+      marketing_initiative: marketing_initiative,
       grade_levels: grade_levels,
       duration: duration,
       image: image,

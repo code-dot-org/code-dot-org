@@ -15,7 +15,7 @@ export default function RubricFloatingActionButton({
   studentLevelInfo,
   reportingData,
 }) {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(!!studentLevelInfo);
 
   const handleClick = () => {
     const eventName = isOpen
