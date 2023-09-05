@@ -15,7 +15,7 @@
 #
 # Where can I ask a question about this config?
 # Reach out to the #i18n slack channel.
-PATH=/home/ubuntu/.rbenv/shims:/home/ubuntu/.nvm/versions/node/v18.16.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+PATH=/home/ubuntu/.rbenv/shims:/home/ubuntu/.nvm/versions/node/v20.5.1/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 HOME=/home/ubuntu
 
 # Run a CI Build to update the server from staging. We do this primarily to
