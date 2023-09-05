@@ -27,7 +27,7 @@ module Cdo::CloudFormation
     # Hard-coded constants and default values.
     CHEF_BIN = '/usr/local/bin/chef-cdo-app'
     CHEF_KEY = rack_env?(:adhoc) ? 'adhoc/chef' : 'chef'
-    IMAGE_ID = ENV['IMAGE_ID'] || 'ami-07d0cf3af28718ef8' # ubuntu/images/hvm-ssd/ubuntu-bionic-18.04-amd64-server-20190722.1
+    IMAGE_ID = ENV['IMAGE_ID'] || 'ami-0261755bbcb8c4a84' # ubuntu/images/hvm-ssd/ubuntu-focal-20.04-amd64-server-20230517
     INSTANCE_TYPE = rack_env?(:production) ? 'm5.12xlarge' : 't2.2xlarge'
     ORIGIN = "https://github.com/code-dot-org/code-dot-org.git"
     CHEF_VERSION = '17.6.18'
