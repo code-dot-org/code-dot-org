@@ -57,6 +57,15 @@ export const translatedCourseOfferingDurations = {
   lesson: i18n.lesson(),
 };
 
+export const translatedCourseOfferingMarketingInitiatives = {
+  csa: i18n.marketingInitiativeCSA(),
+  csc: i18n.marketingInitiativeCSC(),
+  csd: i18n.marketingInitiativeCSD(),
+  csf: i18n.marketingInitiativeCSF(),
+  csp: i18n.marketingInitiativeCSP(),
+  hoc: i18n.marketingInitiativeHOC(),
+};
+
 export const translatedGradeLevels = {
   kindergarten: i18n.kindergarten(),
   grade_1: i18n.gradeLevel({number: 1}),
