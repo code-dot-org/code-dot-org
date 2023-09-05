@@ -415,6 +415,9 @@ designMode.updateProperty = function (
       } else if (DATA_PREFIX_REGEX.test(value)) {
         element.src = value;
       } else {
+        if (!getStore().getState().pageConstants.isCurriculumLevel) {
+          value = value.replace('image://', '');
+        }
         element.src =
           value === ''
             ? '/blockly/media/1x1.gif'
