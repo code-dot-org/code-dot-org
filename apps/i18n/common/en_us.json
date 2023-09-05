@@ -595,6 +595,7 @@
   "createAccountToShare": "Create a Code.org account to share your project",
   "createAccountToShareDescription": "You must create a Code.org account before you can share and publish your project. Creating an account will also let you save your progress and continue to work on your project later.",
   "createBlocklyBehavior": "Create a Behavior",
+  "createBlocklyFunction": "Create a Function",
   "createClassSections": "Create class sections",
   "createClassSectionsToAssign": "Create class section to assign a curriculum",
   "createClassSectionToAssignButton": "Create Section",
