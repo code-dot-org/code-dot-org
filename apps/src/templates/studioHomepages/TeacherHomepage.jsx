@@ -61,6 +61,11 @@ export const UnconnectedTeacherHomepage = ({
   const teacherReminders = useRef(null);
   const flashes = useRef(null);
 
+  /* We are hiding the AFE banner to free up space on the Teacher Homepage (September 2023) when
+   * we want to show the AFE banner again remove the next line and uses of 'shouldShowAFEBanner'.
+   */
+  const shouldShowAFEBanner = false;
+
   /* We are hiding the PL application banner to free up space on the Teacher Homepage (May 2023)
    * when we want to show the Census banner again set this to true
    */
@@ -154,7 +159,7 @@ export const UnconnectedTeacherHomepage = ({
   // Verify background image works for both LTR and RTL languages.
   const backgroundUrl = '/shared/images/banners/teacher-homepage-hero.jpg';
 
-  const showAFEBanner = isEnglish && afeEligible;
+  const showAFEBanner = shouldShowAFEBanner && isEnglish && afeEligible;
 
   // Send one analytics event when a teacher logs in. Use session storage to determine
   // whether they've just logged in.
