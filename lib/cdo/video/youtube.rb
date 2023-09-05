@@ -18,7 +18,7 @@ class Youtube
   #
   # When downloading from YouTube, an HTTP head request will first check the absence of the file.
   # If `force`==true, the head request will be skipped.
-  def self.process(id, filename=nil, force=false)
+  def self.process(id, filename = nil, force = false)
     raise 'Invalid YouTube ID' unless /^#{Video::YOUTUBE_ID_REGEX}$/o.match?(id)
     if filename.nil? && !force
       thumbnail_url = "https:#{CDO.videos_url}/youtube/#{id}.jpg"

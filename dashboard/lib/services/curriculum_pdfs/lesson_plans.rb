@@ -29,7 +29,7 @@ module Services
         # Build the full user-facing url where a PDF can be found for the given lesson.
         #
         # Expect this to look something like this: "https://lesson-plans.code.org/csp1-2021/20210909014219/teacher-lesson-plans/Welcome+to+CSP.pdf"
-        def get_lesson_plan_url(lesson, student_facing=false)
+        def get_lesson_plan_url(lesson, student_facing = false)
           versioned = lesson_plan_pdf_exists_for?(lesson, student_facing)
           pathname = get_lesson_plan_pathname(lesson, student_facing, versioned: versioned)
           return nil if pathname.blank?
@@ -38,14 +38,14 @@ module Services
         end
 
         # Check S3 to see if we've already generated a PDF for the given lesson.
-        def lesson_plan_pdf_exists_for?(lesson, student_facing=false)
+        def lesson_plan_pdf_exists_for?(lesson, student_facing = false)
           pathname = get_lesson_plan_pathname(lesson, student_facing)
           AWS::S3.cached_exists_in_bucket?(S3_BUCKET, pathname.to_s)
         end
 
         # Generate the PDF for the given lesson into the given directory. Can
         # provide either a teacher- or a student-facing version of the content.
-        def generate_lesson_pdf(lesson, directory="/tmp/", student_facing=false)
+        def generate_lesson_pdf(lesson, directory = "/tmp/", student_facing = false)
           url = student_facing ? Rails.application.routes.url_helpers.script_lesson_student_url(lesson.script, lesson) : Rails.application.routes.url_helpers.script_lesson_url(lesson.script, lesson)
           pathname = get_lesson_plan_pathname(lesson, student_facing)
           fallback_pathname = get_lesson_plan_pathname(lesson, student_facing, versioned: false)

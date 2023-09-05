@@ -83,7 +83,7 @@ module Poste
   #   WARNING: The contact to unsubscribe is chosen using hashed_email.
   # @param hashed_email [string] the MD5 hash of the email to unsubscribe.
   # @param params [hash] A hash of parameters, including ip_address.
-  def self.unsubscribe(email, hashed_email, params={})
+  def self.unsubscribe(email, hashed_email, params = {})
     email = email.strip.downcase if email
     now = DateTime.now
 
@@ -116,7 +116,7 @@ module Poste
       @header, @html, @text = parse_template(File.read(path))
     end
 
-    def render(params={})
+    def render(params = {})
       if params.key?('form_id')
         form = Form2.from_row(POSTE_DB[:forms].where(id: params['form_id']).first)
         params.merge! form.data
@@ -152,12 +152,12 @@ module Poste
       [header, html, text]
     end
 
-    private def render_header(bound, locals={})
+    private def render_header(bound, locals = {})
       return {} unless @header.present?
       YAML.safe_load(renderer.render(inline: @header, type: :erb, locals: locals))
     end
 
-    private def render_html(bound, locals={})
+    private def render_html(bound, locals = {})
       return nil unless @html.present?
       # All our emails regardless of the extension they use are parsed as ERB
       # in addition to their regular template type.
@@ -171,7 +171,7 @@ module Poste
       html
     end
 
-    private def render_text(bound, locals={})
+    private def render_text(bound, locals = {})
       return nil unless @text.present?
       renderer.render(inline: @text, type: :erb, locals: locals)
     end
@@ -320,7 +320,7 @@ class Deliverer
     "#{name} <#{email}>".strip
   end
 
-  private def parse_address(address, defaults={})
+  private def parse_address(address, defaults = {})
     address = address.to_s.strip
     return parse_email_address_string(address) unless address.empty?
 
@@ -390,7 +390,7 @@ module Poste2
 
   # TODO(asher): Refactor create_recipient and ensure_recipient to share common
   # code.
-  def self.create_recipient(email, params={})
+  def self.create_recipient(email, params = {})
     email = email.to_s.strip.downcase
     hashed_email = Digest::MD5.hexdigest(email)
     raise ArgumentError, "Invalid email address (#{email})" unless email_address?(email)
@@ -428,7 +428,7 @@ module Poste2
   end
 
   DEFAULT_IP_ADDRESS = '127.0.0.1'.freeze
-  def self.ensure_recipient(email, params={})
+  def self.ensure_recipient(email, params = {})
     email = email.to_s.strip.downcase
     hashed_email = Digest::MD5.hexdigest(email)
     raise ArgumentError, 'Invalid email address' unless email_address?(email)

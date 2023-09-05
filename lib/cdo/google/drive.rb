@@ -37,7 +37,7 @@ module Google
       @session
     end
 
-    def initialize(params={})
+    def initialize(params = {})
       $log.debug 'Establishing Google Drive session'
       @session = if params[:service_account_key]
                    GoogleDrive::Session.from_service_account_key params[:service_account_key]

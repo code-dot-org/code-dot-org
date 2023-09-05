@@ -45,7 +45,7 @@ module Services
 
         # Generate a PDF containing not only the Unit page itself but also
         # all Lesson Plans within the script.
-        def generate_script_overview_pdf(script, directory="/tmp/")
+        def generate_script_overview_pdf(script, directory = "/tmp/")
           ChatClient.log("Generating script overview PDF for #{script.name.inspect}")
           pdfs_dir = Dir.mktmpdir(__method__.to_s)
           pdfs = []

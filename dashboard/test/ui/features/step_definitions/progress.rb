@@ -14,7 +14,7 @@ end
 # nature of progress bubbles and can be slow, especially when verifying that a bubble
 # displays 'not_tried'. Passing no_wait=true skips all waits and immediately verifies
 # the bubble.
-def verify_progress(selector, test_result, no_wait=false)
+def verify_progress(selector, test_result, no_wait = false)
   case test_result
   when 'perfect'
     background_color = color_string('perfect')
