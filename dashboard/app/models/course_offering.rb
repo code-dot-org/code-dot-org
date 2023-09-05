@@ -333,7 +333,7 @@ class CourseOffering < ApplicationRecord
       video: video,
       published_date: published_date,
       self_paced_pl_course_offering_path: get_self_paced_pl_course_offering_path(locale_code),
-      available_resources: get_available_resources(locale_code)
+      available_resources: self_paced_pl_course_offering&.path_to_latest_published_version(locale_code),
     }
   end
 
@@ -386,6 +386,7 @@ class CourseOffering < ApplicationRecord
   # seed_all
   def self.seed_record(file_path)
     properties = properties_from_file(File.read(file_path))
+    properties["self_paced_pl_course_offering_id"] = CourseOffering.find_by_key(properties["self_paced_pl_course_offering_key"])&.id
     properties.delete(:self_paced_pl_course_offering_key)
     course_offering = CourseOffering.find_or_initialize_by(key: properties[:key])
     course_offering.update! properties
@@ -493,12 +494,5 @@ class CourseOffering < ApplicationRecord
       end
     end
     expanded_card_resources
-  end
-
-  def get_self_paced_pl_course_offering_path(locale_code = 'en-us')
-    file_path = Rails.root.join(Rails.root, 'config', 'course_offerings', "#{key}.json")
-    data = JSON.parse(file_path.read)
-    key_value = data['self_paced_pl_course_offering_key']
-    CourseOffering.find_by(key: key_value)&.path_to_latest_published_version(locale_code)
   end
 end
