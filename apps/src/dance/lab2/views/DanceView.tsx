@@ -2,6 +2,7 @@ import Instructions from '@cdo/apps/lab2/views/components/Instructions';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import React from 'react';
 import moduleStyles from './dance-view.module.scss';
+const commonI18n = require('@cdo/locale');
 
 const DANCE_VISUALIZATION_ID = 'dance-visualization';
 const BLOCKLY_DIV_ID = 'dance-blockly-div';
@@ -24,14 +25,14 @@ const DanceView: React.FunctionComponent = () => {
       <div className={moduleStyles.workArea}>
         <PanelContainer
           id="dance-instructions-panel"
-          headerText="Instructions"
+          headerText={commonI18n.instructions()}
           className={moduleStyles.instructionsArea}
         >
           <Instructions layout="horizontal" />
         </PanelContainer>
         <PanelContainer
           id="dance-workspace-panel"
-          headerText="Workspace"
+          headerText={commonI18n.workspaceHeaderShort()}
           className={moduleStyles.workspaceArea}
         >
           <div id={BLOCKLY_DIV_ID} />
