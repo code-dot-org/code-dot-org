@@ -332,8 +332,8 @@ class CourseOffering < ApplicationRecord
       professional_learning_program: professional_learning_program,
       video: video,
       published_date: published_date,
-      self_paced_pl_course_offering_path: get_self_paced_pl_course_offering_path(locale_code),
-      available_resources: self_paced_pl_course_offering&.path_to_latest_published_version(locale_code),
+      self_paced_pl_course_offering_path: self_paced_pl_course_offering&.path_to_latest_published_version(locale_code),
+      available_resources: get_available_resources(locale_code)
     }
   end
 
