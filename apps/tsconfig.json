@@ -17,7 +17,7 @@
     "./src/code-studio/pd/components/*.js*",
     "./src/code-studio/*.js",
     "./test/**/*.ts",
-    "./test/**/*.tsx",
+    "./test/**/*.tsx"
   ],
   "compilerOptions": {
     "jsx": "react",
@@ -36,7 +36,9 @@
     "allowJs": true,
     "baseUrl": "./",
     "paths": {
-      "@cdo/apps/*": ["./src/*"]
-    }
+      "@cdo/apps/*": ["./src/*"],
+      "@cdo/i18n/*": ["./i18n/*"]
+    },
+    "resolveJsonModule": true
   }
 }
