@@ -4,7 +4,7 @@
   "repository": "code-dot-org/code-dot-org",
   "license": "SEE LICENSE IN LICENSE",
   "engines": {
-    "node": "^18.16.0",
+    "node": "^20.5.1",
     "npm": "^9.5.1"
   },
   "scripts": {
@@ -165,6 +165,7 @@
     "mock-firmata": "0.2.0",
     "moment": "^2.29.4",
     "newrelic": "^1.27.2",
+    "node-gyp": "^9.4.0",
     "node-js-marker-clusterer": "^1.0.0",
     "path-browserify": "^1.0.1",
     "pepjs": "^0.4.3",

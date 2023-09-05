@@ -62,15 +62,15 @@ RUN apt-get update && \
         python3-pip
 
 # install node
-RUN curl -sSLOJ https://nodejs.org/dist/v18.16.0/node-v18.16.0.tar.gz && \
-    tar -xzf node-v18.16.0.tar.gz && \
-    rm node-v18.16.0.tar.gz && \
-    cd node-v18.16.0 && \
+RUN curl -sSLOJ https://nodejs.org/dist/v20.5.1/node-v20.5.1.tar.gz && \
+    tar -xzf node-v20.5.1.tar.gz && \
+    rm node-v20.5.1.tar.gz && \
+    cd node-v20.5.1 && \
     ./configure && \
     make -j `nproc` && \
     make install PREFIX=/build && \
     cd .. && \
-    rm -r node-v18.16.0
+    rm -r node-v20.5.1
 
 
 #########################################################
