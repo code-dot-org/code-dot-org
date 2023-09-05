@@ -6,6 +6,7 @@ import sinon from 'sinon';
 import {expect} from '../../util/reconfiguredChai';
 
 import Toggle from '@cdo/apps/componentLibrary/toggle';
+
 describe('Design System - Toggle', () => {
   it('Toggle - renders with correct label', () => {
     render(
