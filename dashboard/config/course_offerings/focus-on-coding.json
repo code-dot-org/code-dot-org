@@ -5,7 +5,7 @@
   "is_featured": false,
   "assignable": true,
   "curriculum_type": "Course",
-  "marketing_initiative": null,
+  "marketing_initiative": "CSD",
   "grade_levels": "6,7,8,9,10,11,12",
   "header": "collections",
   "image": "https://images.code.org/1051573352c6954036412cd466a8b4a9-Programming.png",

@@ -128,7 +128,8 @@
   }
 
   &__image,
-  &__video {
+  &__video,
+  &__slides {
 
     @media (min-width: 971px) {
       margin: 20px 0 20px 20px;
