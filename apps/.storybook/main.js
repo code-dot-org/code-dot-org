@@ -8,7 +8,7 @@ const staticDirs = envConstants.STORYBOOK_STATIC_ASSETS ? [
 
 module.exports = {
   stories: ['../src/**/*.story.@(js|jsx|ts|tsx)'],
-  staticDirs: staticDirs,
+  staticDirs,
   addons: [
     '@storybook/addon-a11y',
     '@storybook/addon-essentials',
