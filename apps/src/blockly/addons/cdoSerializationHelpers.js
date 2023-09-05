@@ -1,5 +1,6 @@
 import BlockSvgUnused from './blockSvgUnused';
-import {WORKSPACE_PADDING} from '../constants';
+import {WORKSPACE_PADDING, SETUP_TYPES} from '../constants';
+import {partitionBlocksByType} from './cdoUtils';
 import {frameSizes} from './cdoConstants';
 
 const {HEADER_HEIGHT, MARGIN_BOTTOM, MARGIN_SIDE, MARGIN_TOP} = frameSizes;
@@ -79,8 +80,14 @@ export function positionBlocksOnWorkspace(workspace, blockOrderMap) {
   const topBlocks = workspace.getTopBlocks(SORT_BY_POSITION);
 
   const orderedBlocks = reorderBlocks(topBlocks, blockOrderMap);
+  // Handles a rare case when immovable setup/when run blocks are not at the top of the workspace
+  const orderedBlocksSetupFirst = partitionBlocksByType(
+    orderedBlocks,
+    SETUP_TYPES,
+    false
+  );
 
-  orderedBlocks.forEach(block => {
+  orderedBlocksSetupFirst.forEach(block => {
     positionBlockWithCursor(block, cursor);
   });
 }
