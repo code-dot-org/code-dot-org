@@ -13,9 +13,9 @@ module I18n
   module SyncIn
     def self.perform
       puts "Sync in starting"
-      I18n::Resources::Apps.sync_in
-      I18n::Resources::Dashboard.sync_in
-      I18n::Resources::Pegasus.sync_in
+      I18n::Metrics.report_runtime('Apps', 'in') {I18n::Resources::Apps.sync_in}
+      I18n::Metrics.report_runtime('Dashboard', 'in') {I18n::Resources::Dashboard.sync_in}
+      I18n::Metrics.report_runtime('Pegasus', 'in') {I18n::Resources::Pegasus.sync_in}
       Metrics.report_success(true, 'in', 'sync-in')
       puts "Sync in completed successfully"
     rescue => exception
