@@ -11,6 +11,14 @@ Consider the code segment below.
 
 ```
 Painter myPainter = new Painter();
+
+myPainter.turnLeft();
+myPainter.turnLeft();
+myPainter.turnLeft();
+
+myPainter.move();
+myPainter.turnLeft();
+
 myPainter.move();
 myPainter.takePaint();
 myPainter.turnLeft();

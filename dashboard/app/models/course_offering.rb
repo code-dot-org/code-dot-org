@@ -315,6 +315,7 @@ class CourseOffering < ApplicationRecord
       key: key,
       display_name: localized_display_name,
       display_name_with_latest_year: display_name_with_latest_year(locale_code),
+      marketing_initiative: marketing_initiative,
       grade_levels: grade_levels,
       duration: duration,
       image: image,
@@ -473,15 +474,15 @@ class CourseOffering < ApplicationRecord
     units = latest_version&.units
     lessons = units&.first&.lessons
 
-    return nil if lessons.empty?
-    lesson_plan = lessons.first.lesson_plan_html_url
+    return nil unless lessons
+    lesson_plan = lessons&.first&.lesson_plan_html_url
     expanded_card_resources = {"Lesson Plan" => lesson_plan}
 
     lessons.each do |lesson|
       break if expanded_card_resources.size >= 5
-      lesson.resources.each do |resource|
+      lesson.resources&.each do |resource|
         properties = resource.properties
-        next unless properties.key?('type')
+        next unless properties&.key?('type')
         type = properties['type']
         type = "Slide Deck" if type == "Slides"
         type = "Answer Key" if type == "Exemplar"

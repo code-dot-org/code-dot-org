@@ -1,4 +1,5 @@
 require File.expand_path('../../../dashboard/config/environment', __FILE__)
+require File.expand_path('../../../pegasus/helpers/pegasus_languages', __FILE__)
 
 require 'cdo/google/drive'
 require 'cdo/honeybadger'
@@ -369,12 +370,71 @@ class I18nScriptUtils
     locale.tr('-', '_').downcase
   end
 
+  def self.sort_and_sanitize(hash)
+    hash.sort_by {|key, _| key}.each_with_object({}) do |(key, value), result|
+      case value
+      when Hash
+        # ensure we always call sort_and_sanitize on the hash to avoid top-level empty objects
+        sorted_hash = sort_and_sanitize(value)
+        result[key] = sorted_hash unless sorted_hash.empty?
+      when Array
+        result[key] = value.filter_map {|v| v.is_a?(Hash) ? sort_and_sanitize(v) : v}
+      when String
+        result[key] = value.gsub(/\\r/, "\r") unless value.empty?
+      else
+        result[key] = value unless value.nil?
+      end
+    end
+  end
+
+  def self.sanitize_data_and_write(data, dest_path)
+    sorted_data = sort_and_sanitize(data)
+
+    dest_data =
+      case File.extname(dest_path)
+      when '.yaml', '.yml'
+        sorted_data.to_yaml
+      when '.json'
+        JSON.pretty_generate(sorted_data)
+      else
+        raise "do not know how to serialize localization data to #{dest_path}"
+      end
+
+    FileUtils.mkdir_p(File.dirname(dest_path))
+    File.write(dest_path, dest_data)
+  end
+
+  def self.parse_file(path)
+    case File.extname(path)
+    when '.yaml', '.yml'
+      YAML.load_file(path)
+    when '.json'
+      JSON.load_file(path)
+    else
+      raise "do not know how to parse file #{path.inspect}"
+    end
+  end
+
+  def self.sanitize_file_and_write(loc_path, dest_path)
+    loc_data = parse_file(loc_path)
+    sanitize_data_and_write(loc_data, dest_path)
+  end
+
   def self.create_progress_bar(**args)
     ProgressBar.create(**args, format: PROGRESS_BAR_FORMAT)
   end
 
   def self.process_in_threads(data_array, **args)
     Parallel.each(data_array, **args, in_threads: PARALLEL_PROCESSES) {|data| yield(data)}
+  end
+
+  # Renames directory
+  # @param [String] from_dir, e.g. `i18n/locales/English/resource`
+  # @param [String] to_dir, e.g. `i18n/locales/en-US/resource`
+  def self.rename_dir(from_dir, to_dir)
+    FileUtils.mkdir_p(to_dir)
+    FileUtils.cp_r File.join(from_dir, '.'), to_dir
+    FileUtils.rm_r(from_dir)
   end
 
   def self.delete_empty_crowdin_locale_dir(crowdin_locale)
