@@ -13,13 +13,6 @@ const useModalFunctionEditor = window.appOptions?.level?.useModalFunctionEditor;
 const modalFunctionEditorExperimentEnabled = experiments.isEnabled(
   experiments.MODAL_FUNCTION_EDITOR
 );
-const functionDefinitionBlock = {
-  kind: 'block',
-  type: 'procedures_defnoreturn',
-  fields: {
-    NAME: Blockly.Msg.PROCEDURES_DEFNORETURN_PROCEDURE,
-  },
-};
 
 /**
  * A dictionary of our custom procedure block definitions, used across labs.
@@ -202,10 +195,22 @@ GoogleBlockly.Extensions.registerMutator(
 export function flyoutCategory(workspace, functionEditorOpen = false) {
   const blockList = [];
 
+  // Note: Blockly.Msg was undefined when this code was extracted into global scope
+  const functionDefinitionBlock = {
+    kind: 'block',
+    type: 'procedures_defnoreturn',
+    fields: {
+      NAME: Blockly.Msg.PROCEDURES_DEFNORETURN_PROCEDURE,
+    },
+  };
+
   if (functionEditorOpen) {
     // No-op - cannot create new functions while the modal editor is open
   } else if (useModalFunctionEditor) {
-    const newFunctionButton = getNewFunctionButtonWithCallback(workspace);
+    const newFunctionButton = getNewFunctionButtonWithCallback(
+      workspace,
+      functionDefinitionBlock
+    );
     blockList.push(newFunctionButton);
   } else {
     blockList.push(functionDefinitionBlock);
@@ -247,7 +252,10 @@ export function flyoutCategory(workspace, functionEditorOpen = false) {
   return blockList;
 }
 
-const getNewFunctionButtonWithCallback = workspace => {
+const getNewFunctionButtonWithCallback = (
+  workspace,
+  functionDefinitionBlock
+) => {
   let callbackKey, callback;
   if (modalFunctionEditorExperimentEnabled) {
     callbackKey = 'newProcedureCallback';
