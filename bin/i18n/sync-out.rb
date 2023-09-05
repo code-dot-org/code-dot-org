@@ -138,7 +138,7 @@ module I18n
 
         original_files.each do |original_path|
           relative_path = original_path.delete_prefix(original_dir)
-          next unless file_changed?(locale, relative_path)
+          next unless I18nScriptUtils.file_changed?(locale, relative_path)
 
           translated_path = original_path.sub("original", locale)
           next unless File.file?(translated_path)
