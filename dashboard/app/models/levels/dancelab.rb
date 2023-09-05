@@ -59,10 +59,6 @@ class Dancelab < GamelabJr
     true
   end
 
-  def uses_lab2?
-    uses_lab2
-  end
-
   def common_blocks(type)
   end
 
