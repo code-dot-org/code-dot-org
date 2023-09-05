@@ -123,6 +123,13 @@
   grade_level_label_middle: "Middle School"
   grade_level_label_high: "High School"
 
+  curricula_title_elementary: "Elementary School Curricula"
+  curricula_desc_elementary: "Browse the fun, free courses and activities that invite you to explore computer science with your elementary school students."
+  curricula_title_middle: "Middle School Curricula"
+  curricula_desc_middle: "Browse the engaging offerings that enable you and your middle school students to explore computer science together."
+  curricula_title_high: "High School Curricula"
+  curricula_desc_high: "Browse the compelling courses and activities that invite you and your high school students to dig deeper into computer science."
+
   students_label: "Students"
   teachers_label: "Teachers"
 
@@ -153,6 +160,13 @@
   call_to_action_explore_choice_level: "Explore example choice level"
   call_to_action_explore_collection: "Explore collection"
   call_to_action_explore_unplugged_lesson: "Explore unplugged lessons"
+  call_to_action_explore_csf: "Explore CS Fundamentals"
+  call_to_action_explore_csd: "Explore CS Discoveries"
+  call_to_action_explore_csp: "Explore CS Principles"
+  call_to_action_explore_csc: "Explore CS Connections"
+  call_to_action_explore_csa: "Explore AP® Computer Science A"
+  call_to_action_explore_maker: "Explore Maker curricula"
+  call_to_action_explore_hoc: "Explore Hour of Code tutorials"
   call_to_action_try_app_lab: "Try App Lab"
   call_to_action_view_lesson_plan: 'View lesson plan'
   call_to_action_self_paced_pl: 'Start self-paced professional learning'
@@ -273,6 +287,8 @@
   curriculum_name_csa: "AP® Computer Science A"
   curriculum_name_csc_02: "Any CS Connections Module"
   curriculum_name_ai: "AI & Machine Learning"
+  curriculum_name_artificial_intelligence: "Artificial Intelligence (AI)"
+  curriculum_name_maker: "Maker"
   curriculum_name_maker_cp: "Creating Apps with Devices (Circuit Playground)"
   curriculum_name_maker_microbit: "Creating Apps with Devices (micro:bit)"
   curriculum_name_creating_apps_with_devices: "Creating Apps with Devices"
@@ -297,6 +313,8 @@
   curriculum_desc_design_process: "Focus on considering the societal impact of computing. Through design challenges, students empathize with others' needs and develop solutions."
   curriculum_desc_data_society: "Emphasizes the role of data in problem-solving and the assistance of computers in this process. Cover representation systems and associated challenges. Discover how data collections aid problem-solving."
   curriculum_desc_creating_apps_with_devices: "Explore the role of physical devices in computing. Develop programs that utilize hardware inputs and outputs. There is a version of this unit for both the micro:bit and Circuit Playground."
+  curriculum_desc_csa: "Introduce students to software engineering and object-oriented design while they learn the Java programming language in this free curriculum for AP® Computer Science A (AP® CSA)."
+  curriculum_desc_maker: "Maker education takes STEM (Science, Technology, Engineering, Mathematics) a step further by inviting hands-on experience and collaboration into the classroom to help teach problem solving and critical thinking."
 
   collection_hardware: "Focus on Hardware"
   collection_hardware_desc: "Empowers students to use data and physical devices to solve problems."
@@ -343,6 +361,8 @@
   module_grade_2_5: "2-5"
   module_grade_3_5: "3-5"
   module_grade_3_8: "3-8"
+  module_grade_k_12: "K-12"
+  module_grade_3_12: "3-12"
   module_grade_6_12: "6-12"
   module_grade_6_10: "6-10"
   module_grade_9_12: "9-12"
@@ -427,6 +447,7 @@
   heading_java_lab: "Java Lab"
   heading_objects_first: "Objects first"
   heading_these_lessons_will: "These lessons will:"
+  heading_explore_curriculum_catalog: "Explore all of our courses in the Curriculum Catalog"
 
   professional_learning_section_desc: "Get the support you need as you prepare to teach. Teachers love it, with over 90% ranking it the best professional development ever!"
   professional_learning_section_desc_short: "Get the support you need as you prepare to teach."
