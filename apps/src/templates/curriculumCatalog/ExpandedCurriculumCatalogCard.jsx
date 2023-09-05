@@ -162,7 +162,7 @@ const ExpandedCurriculumCatalogCard = ({
                         {resoucesOrder.map(
                           resource =>
                             availableResources[resource] && (
-                              <div>
+                              <div key={resource}>
                                 <BodyTwoText>
                                   {translatedAvailableResources[resource]}{' '}
                                 </BodyTwoText>
@@ -218,7 +218,7 @@ const ExpandedCurriculumCatalogCard = ({
               <hr className={style.horizontalDivider} />
               <div className={style.compatibilityContainer}>
                 {Object.keys(devices).map(device => (
-                  <div className={style.iconWithDescription}>
+                  <div key={device} className={style.iconWithDescription}>
                     <FontAwesome
                       icon={iconData[devices[device]].icon}
                       className={`fa-solid ${iconData[devices[device]].color}`}
@@ -285,10 +285,10 @@ ExpandedCurriculumCatalogCard.propTypes = {
   subjectsAndTopics: PropTypes.arrayOf(PropTypes.string).isRequired,
   deviceCompatibility: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
-  professionalLearningProgram: PropTypes.string.isRequired,
-  video: PropTypes.string.isRequired,
+  professionalLearningProgram: PropTypes.string,
+  video: PropTypes.string,
   publishedDate: PropTypes.string.isRequired,
-  selfPacedPlCourseOfferingPath: PropTypes.string.isRequired,
+  selfPacedPlCourseOfferingPath: PropTypes.string,
   pathToCourse: PropTypes.string,
   assignButtonOnClick: PropTypes.func,
   assignButtonDescription: PropTypes.string,

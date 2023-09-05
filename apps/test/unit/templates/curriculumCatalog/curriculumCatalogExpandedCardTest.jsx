@@ -2,7 +2,7 @@ import React from 'react';
 import {fireEvent, render, screen} from '@testing-library/react';
 import {pull} from 'lodash';
 import {expect} from '../../../util/reconfiguredChai';
-import CurriculumCatalogCard from '@cdo/apps/templates/curriculumCatalog/CurriculumCatalogCard';
+import ExpandedCurriculumCatalogCard from '@cdo/apps/templates/curriculumCatalog/ExpandedCurriculumCatalogCard';
 import {
   subjectsAndTopicsOrder,
   translatedCourseOfferingCsTopics,
@@ -42,6 +42,8 @@ describe('CurriculumCatalogExpandedCard', () => {
 
   let defaultProps;
   let store;
+  const assignButtonOnClick = jest.fn();
+  const onClose = jest.fn();
   const renderCurriculumExpandedCard = (props = defaultProps) =>
     render(
       <Provider store={store}>
@@ -68,9 +70,9 @@ describe('CurriculumCatalogExpandedCard', () => {
       publishedDate: '2019-12-01T13:00:00.000Z',
       selfPacedPlCourseOfferingPath: null,
       pathToCourse: '/s/course',
-      //   assignButtonOnClick: handleClickAssign(),
+      assignButtonOnClick: assignButtonOnClick,
       assignButtonDescription: 'Assign AI for Oceans to your classroom',
-      //   onClose: onQuickViewClick(),
+      onClose: onClose,
       isInUS: true,
       imageSrc:
         'https://images.code.org/58cc5271d85e017cf5030ea510ae2715-AI for Oceans.png',
