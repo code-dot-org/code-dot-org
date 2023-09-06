@@ -263,4 +263,7 @@ COPY --chown=${UID} --from=code.org-rbenv ${SRC}/Gemfile ${SRC}/Gemfile
 
 SHELL [ "zsh", "-l", "-c" ]
 
-CMD tail -f /dev/null
+# CMD tail -f /dev/null
+CMD \
+  eval "$(rbenv init -)" && \
+  ./bin/dashboard-server
