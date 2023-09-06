@@ -26,7 +26,7 @@ module Forms
 
     cached def events_by_country(
       kind,
-      except_country='US',
+      except_country = 'US',
       country_column: COUNTRY_CODE,
       entire_school: false,
       review_approved: false,
@@ -44,7 +44,7 @@ module Forms
 
     cached def events_by_state(
       kind,
-      country='US',
+      country = 'US',
       explain: false,
       country_column: COUNTRY_CODE,
       entire_school: false,
@@ -68,8 +68,8 @@ module Forms
 
     cached def events_by_name(
       kind,
-      country='US',
-      state=nil,
+      country = 'US',
+      state = nil,
       explain: false,
       country_column: COUNTRY_CODE,
       state_column: STATE_CODE,

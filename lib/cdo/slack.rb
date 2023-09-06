@@ -118,7 +118,7 @@ class Slack
   # @return [Boolean] Whether the text was posted to Slack successfully.
   # WARNING: This function mutates params.
   # NOTE: This function utilizes an incoming webhook, not the Slack token
-  def self.message(text, params={})
+  def self.message(text, params = {})
     return false unless CDO.slack_endpoint
     params[:channel] = "##{Slack::CHANNEL_MAP[params[:channel]] || params[:channel]}"
     slackified_text = slackify text
