@@ -28,7 +28,7 @@ export default class ProjectCard extends React.Component {
 
     this.state = {
       showReportAbuse: false,
-      showSubmittedHeader: false, // may need to change this state in the future to utilize the report cookies - if gallery ever keeps an immediate report
+      showSubmittedHeader: false, // may need to change this state in the future to utilize report cookies - if gallery ever keeps an immediate report
       showSubmitConfirmation: false,
       captchaCompleted: false,
       checkboxes: [
