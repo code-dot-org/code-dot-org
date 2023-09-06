@@ -7,7 +7,13 @@ import i18n from '@cdo/locale';
 import {editStudent} from './manageStudentsRedux';
 import {tableLayoutStyles} from '../tables/tableConstants';
 
-function ManageStudentFamilyNameCell({id, familyName, isEditing, editedValue, inputDisabled}) {
+function ManageStudentFamilyNameCell({
+  id,
+  familyName,
+  isEditing,
+  editedValue,
+  inputDisabled,
+}) {
   const dispatch = useDispatch();
 
   const onChangeName = e => {
@@ -17,9 +23,9 @@ function ManageStudentFamilyNameCell({id, familyName, isEditing, editedValue, in
   };
 
   const tooltipId = inputDisabled ? _.uniqueId() : '';
- 
+
   return (
-    <div>
+    <div style={tableLayoutStyles.tableText}>
       {!isEditing && <div>{familyName}</div>}
       {isEditing && (
         <div>
