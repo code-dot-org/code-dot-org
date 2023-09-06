@@ -264,4 +264,26 @@ describe('ProgressTableView', () => {
     wrapper.onToggleRow(rowData.student.id);
     expect(wrapper.state.rows).to.have.lengthOf(STUDENTS.length);
   });
+
+  it('sorts by family name', () => {
+    // The default test helper sorts by given name
+    const givenNameWrapper = setUp()
+      .find(UnconnectedProgressTableView)
+      .instance();
+
+    const overrideState = {currentUser: {isSortedByFamilyName: true}};
+    const familyNameWrapper = setUp(ViewType.SUMMARY, overrideState)
+      .find(UnconnectedProgressTableView)
+      .instance();
+
+    expect(givenNameWrapper.state.rows).to.have.lengthOf(STUDENTS.length);
+    expect(familyNameWrapper.state.rows).to.have.lengthOf(STUDENTS.length);
+
+    // The student generator makes the first student have the first given name
+    // alphabetically. The last student has the first family name alphabetically
+    expect(givenNameWrapper.state.rows[0].student.id).to.equal(0);
+    expect(familyNameWrapper.state.rows[0].student.id).to.equal(
+      STUDENTS.length - 1
+    );
+  });
 });
