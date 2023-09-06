@@ -38,9 +38,9 @@ class ReportAbuseController < ApplicationController
         return head :forbidden
       end
 
-      name = current_user&.name
-      email = current_user&.email
-      age = current_user&.age
+      name = current_user&.name || "User not signed in"
+      email = current_user&.email || "User not signed in"
+      age = current_user&.age || "User not signed in"
       abuse_url = CDO.studio_url(params[:abuse_url]) # reformats url
 
       send_abuse_report(name, email, age, abuse_url)
