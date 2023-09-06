@@ -70,6 +70,7 @@ function initPage() {
         rubric={rubric}
         studentLevelInfo={studentLevelInfo}
         reportingData={reportingData}
+        currentLevelName={config.level_name}
       />,
       rubricFabMountPoint
     );
