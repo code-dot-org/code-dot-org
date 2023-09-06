@@ -2768,6 +2768,15 @@
         "0ac99530-32e3-4005-8c05-a087ba7fddca": {
           "name": "Nivelet"
         },
+        "d57b5dae-d9df-4412-9501-893bc3fe13f2": {
+          "name": "Modifikimet e mësimit"
+        },
+        "d07bf4d7-6a25-4ff6-9d01-adea55e214a3": {
+          "name": "Konfigurimi Teknik"
+        },
+        "6ba2d996-2523-4b0a-b7a6-a499ac4a11ec": {
+          "name": "Anketë CSD para kursit"
+        },
         "3c2debf5-2b7b-43a9-b8bf-7462c01c6068": {
           "name": "Parapërgatitje"
         },
@@ -2776,6 +2785,9 @@
         },
         "694fdbc9-0938-41a0-8646-8f04d7fb37fd": {
           "name": "Përmbledhje "
+        },
+        "630fc7fe-bf16-4a13-9e9b-c553cc89881f": {
+          "name": "Modifikimet e mësimit"
         },
         "135ce2c3-2a89-400c-a42e-4e8b71e2a309": {
           "name": "Parapërgatitje"
@@ -2789,6 +2801,9 @@
         "75941c07-de18-45db-b260-4cd48e0f1bf0": {
           "name": "Mësim shtesë"
         },
+        "f4f000c2-a4d3-4abc-a74b-f82cd0763966": {
+          "name": "Modifikimet e mësimit"
+        },
         "a80e7362-2c08-40a7-9c59-b0d89cf1df88": {
           "name": "Parapërgatitje"
         },
@@ -2797,6 +2812,9 @@
         },
         "28a6cba3-27e6-4129-a08e-57c0fa0ae303": {
           "name": "Përmbledhje "
+        },
+        "5dc9a356-5043-40cc-9e4c-154a4f2f59a3": {
+          "name": "Modifikimet e mësimit"
         },
         "17fde997-cb09-459a-a1fb-8e8d9a582343": {
           "name": "Parapërgatitje"
@@ -2807,6 +2825,9 @@
         "23c77bb1-85ea-4391-a235-0161f782c996": {
           "name": "Përmbledhje "
         },
+        "5408a452-af28-4695-bad4-f4faee4ca9cc": {
+          "name": "Modifikimet e mësimit"
+        },
         "2329539a-1db5-45ec-b998-3d2f32f6b03c": {
           "name": "Parapërgatitje"
         },
@@ -2815,6 +2836,9 @@
         },
         "72440372-3248-4b04-b266-0604ddc73ebe": {
           "name": "Përmbledhje "
+        },
+        "f8bb7c14-8994-4d30-89da-876e17cb7c37": {
+          "name": "Modifikimet e mësimit"
         },
         "05118f86-6a73-4845-98b1-8ae7b80a3548": {
           "name": "Parapërgatitje"
@@ -2825,14 +2849,23 @@
         "cb343ba8-a1d1-442d-a038-3f54c35175c8": {
           "name": "Përmbledhje "
         },
+        "513355cc-0fcb-4cef-be82-502d1776f914": {
+          "name": "Modifikimet e mësimit"
+        },
         "4046b95d-cc3b-4913-ad2f-591fae47b6a4": {
           "name": "Parapërgatitje"
         },
         "185f50c6-2c50-4650-91f6-f061d1051c91": {
           "name": "Aktiviteti"
         },
+        "c68b28b6-c6ee-4bf5-8fd6-f579f36e5182": {
+          "name": "Prezantimi i modelit IOSP"
+        },
         "886dade4-6e12-469f-af94-8afa519f5531": {
           "name": "Përmbledhje "
+        },
+        "222bb994-3c71-4f14-b795-15f3f6ebaa0e": {
+          "name": "Modifikimet e mësimit"
         },
         "0b410a5f-fa45-4bac-a573-be593612cb48": {
           "name": "Parapërgatitje"
@@ -2846,6 +2879,12 @@
         "73080877-a97f-4bdc-a8b7-4210cf0f40c7": {
           "name": "Mësim shtesë"
         },
+        "287570f9-42d3-434a-a1df-6482860fc1df": {
+          "name": "Konfigurimi Teknik"
+        },
+        "500e5c48-de6b-416e-8df7-f6b10beb7060": {
+          "name": "Anketë CSD para kursit"
+        },
         "6c10e88f-a232-4ac7-91cb-97ff2bc7d461": {
           "name": "Parapërgatitje"
         },
@@ -2855,6 +2894,12 @@
         "3288a325-7eb2-47c6-bbc4-9eb0c1686045": {
           "name": "Përmbledhje "
         },
+        "de8c2b38-c4ff-458f-8356-f650c7b58436": {
+          "name": "Konfigurimi Teknik"
+        },
+        "76131c35-1c28-4338-8643-6c55296414ca": {
+          "name": "Anketë CSD para kursit"
+        },
         "2b979bba-aad6-49d0-a32a-d436d4288649": {
           "name": "Parapërgatitje"
         },
@@ -2863,6 +2908,12 @@
         },
         "bc72b27d-760e-4e23-aa40-d8141b949e20": {
           "name": "Përmbledhje "
+        },
+        "83123736-f2a8-4fdc-97c7-5ed673d1b2d1": {
+          "name": "Konfigurimi Teknik"
+        },
+        "8b23f249-eb39-4cf4-8269-6d381fdc77b4": {
+          "name": "Anketë CSD para kursit"
         },
         "747f358d-231e-4d8e-9f58-ac2a57daa0cf": {
           "name": "Parapërgatitje"
@@ -2891,6 +2942,9 @@
         "a4b0740b-a9d1-41f7-9d20-00f1d77f878d": {
           "name": "Përmbledhje "
         },
+        "7c74d83b-4571-4346-bca2-9a6e1cb926f3": {
+          "name": "Modifikimet e mësimit"
+        },
         "a0381dd6-760a-46a9-9217-7e7744252d97": {
           "name": "Parapërgatitje"
         },
@@ -2899,6 +2953,9 @@
         },
         "d5f9994e-0aec-4d0f-a93a-adb8a3b91d33": {
           "name": "Përmbledhje "
+        },
+        "19043808-e22b-4373-bb0b-9ccac3ab949b": {
+          "name": "Modifikimet e mësimit"
         },
         "a0692a63-008e-4013-9089-9f9c9b22d67c": {
           "name": "Parapërgatitje"
@@ -2909,6 +2966,9 @@
         "2682c85b-7410-43b6-bc18-87f0be2e0e86": {
           "name": "Përmbledhje "
         },
+        "57f76f74-a8e4-410d-a7e4-91c62a990b03": {
+          "name": "Modifikimet e mësimit"
+        },
         "5ea39814-570e-4b27-a399-fe1e3f197d77": {
           "name": "Parapërgatitje"
         },
@@ -2917,6 +2977,9 @@
         },
         "abef0d1e-8187-462f-ac08-0130f1499397": {
           "name": "Përmbledhje "
+        },
+        "ec6cd9a5-fb52-48fb-b15a-984d4ce84f5f": {
+          "name": "Modifikimet e mësimit"
         },
         "ff0f61fd-a59d-4c4b-aae7-ad0c35798747": {
           "name": "Parapërgatitje"
@@ -2927,6 +2990,9 @@
         "68062c41-3e39-40ec-9cae-d096b0bdca24": {
           "name": "Përmbledhje "
         },
+        "29e7d7ec-f74b-4d8e-9d55-cd1ade072e78": {
+          "name": "Modifikimet e mësimit"
+        },
         "13fad4d8-f6df-4655-9054-9fdb847371db": {
           "name": "Parapërgatitje"
         },
@@ -2935,6 +3001,9 @@
         },
         "011f9436-4daa-4a08-8f54-2b767dc556b6": {
           "name": "Përmbledhje "
+        },
+        "b582aa3a-6ce7-47a6-85e2-16c66a64c92d": {
+          "name": "Modifikimet e mësimit"
         },
         "2882d381-78b9-4874-8f84-6b9e4c251861": {
           "name": "Parapërgatitje"
@@ -2945,6 +3014,9 @@
         "2d66b959-ae8c-430d-b72c-fe68923080c5": {
           "name": "Përmbledhje "
         },
+        "8d97665c-65b1-4019-985e-2f95f0628fcf": {
+          "name": "Modifikimet e mësimit"
+        },
         "479d0cbe-6860-44be-bd76-9d7e266e0785": {
           "name": "Parapërgatitje"
         },
@@ -2953,6 +3025,9 @@
         },
         "442c4f1b-bf6a-4e06-a8a7-92ebb259d010": {
           "name": "Përmbledhje "
+        },
+        "357c7db1-4d26-4eeb-af22-2f85b1517d09": {
+          "name": "Modifikimet e mësimit"
         },
         "d8c9fbdb-b731-44f3-aa89-3bfd07111678": {
           "name": "Parapërgatitje"
@@ -2963,6 +3038,9 @@
         "c83ce210-dedc-4eec-bdcf-a5a96c75ecdf": {
           "name": "Përmbledhje "
         },
+        "3c8baa3a-4de5-4880-b6b8-ee25ebe562d6": {
+          "name": "Modifikimet e mësimit"
+        },
         "cb8113ad-e18f-49a9-9cb5-bfb45ee43bc4": {
           "name": "Parapërgatitje"
         },
@@ -2971,6 +3049,9 @@
         },
         "38e02771-58d3-4d6c-a01a-a7dd0b87bace": {
           "name": "Përmbledhje "
+        },
+        "35f45b40-0f0b-4a84-bbdd-d6862a3a3ac0": {
+          "name": "Modifikimet e mësimit"
         },
         "17a16dd3-54c2-4e6a-b6cf-f6bbb3394f62": {
           "name": "Parapërgatitje"
@@ -2981,11 +3062,17 @@
         "7899e7b1-0a30-4699-bcae-48dd6a61c8f3": {
           "name": "Përmbledhje "
         },
+        "0ec1d9e8-2008-458a-a7aa-9129a4b95ed2": {
+          "name": "Modifikimet e mësimit"
+        },
         "54db6e45-9f93-4f70-aef0-f2820b64ad6d": {
           "name": "Parapërgatitje"
         },
         "30ea67ca-4696-43c4-af86-24edbe8bea45": {
           "name": "Përmbledhje "
+        },
+        "21820bed-f5c7-49c3-9b49-79f69d0a1ab5": {
+          "name": "Modifikimet e mësimit"
         },
         "481b15da-1d94-404a-859d-31a4cfe544ef": {
           "name": "Parapërgatitje"
@@ -2996,6 +3083,9 @@
         "4f356bf0-fd92-4065-80a2-21c525b4f1dc": {
           "name": "Përmbledhje "
         },
+        "5b8c6be4-7794-4512-b633-654f98a56153": {
+          "name": "Modifikimet e mësimit"
+        },
         "ff6415fc-9140-4824-ac75-30b80fff14ce": {
           "name": "Parapërgatitje"
         },
@@ -3005,14 +3095,23 @@
         "c9582674-40a5-483b-b016-17a03f824858": {
           "name": "Përmbledhje "
         },
+        "d022ef54-5b76-4800-9d60-4c05b46ae225": {
+          "name": "Modifikimet e mësimit"
+        },
         "d0d7583f-c507-4ad5-92fa-0dff5d463423": {
           "name": "Parapërgatitje"
         },
         "d5dd115f-dd41-4a16-b59f-0f77bb79ed00": {
           "name": "Aktiviteti"
         },
+        "af86f558-77c1-432e-a909-e02c93ad7c7c": {
+          "name": "Formimi i grupeve"
+        },
         "47478503-0688-4122-8566-0aed5c015b89": {
           "name": "Përmbledhje "
+        },
+        "938915ec-566d-46c0-bf52-928f6dc0d6dd": {
+          "name": "Modifikimet e mësimit"
         },
         "0e81302e-2d3e-4a15-a0be-8b8efd6c082f": {
           "name": "Parapërgatitje"
@@ -3023,6 +3122,9 @@
         "972e8bec-fac2-49b3-ab29-8d58ddfa01f1": {
           "name": "Përmbledhje "
         },
+        "1956ac65-46c9-4a62-9249-f14d17e554d9": {
+          "name": "Modifikimet e mësimit"
+        },
         "ba30039c-8c54-4e5a-a810-18052eac7d45": {
           "name": "Parapërgatitje"
         },
@@ -3031,6 +3133,9 @@
         },
         "f069eb58-8da9-4a3d-a082-89f69e6b8e75": {
           "name": "Përmbledhje "
+        },
+        "3a9fab25-70d9-49fd-b319-966764dd6101": {
+          "name": "Modifikimet e mësimit"
         },
         "6fed748d-07a5-4be9-a535-2a1bd073cbd5": {
           "name": "Parapërgatitje"
@@ -3041,6 +3146,9 @@
         "e600c19e-5d9d-48c3-8e58-0a91b9c93574": {
           "name": "Përmbledhje "
         },
+        "3aff1958-2fc8-4449-ae64-a28eebb0d2b1": {
+          "name": "Modifikimet e mësimit"
+        },
         "ed6098ff-6be9-40e7-838e-eef99d12259b": {
           "name": "Parapërgatitje"
         },
@@ -3049,6 +3157,9 @@
         },
         "378bdb3f-7f63-4ac5-aeb3-957a4b98a354": {
           "name": "Përmbledhje "
+        },
+        "a0484671-605e-44ec-89c0-f42d54b1dc69": {
+          "name": "Modifikimet e mësimit"
         },
         "0051624b-1122-464c-a805-9dfd4e8afb4c": {
           "name": "Parapërgatitje"
@@ -3059,6 +3170,9 @@
         "c68e1b20-2fee-4a79-8b34-e6f38c9cd672": {
           "name": "Përmbledhje "
         },
+        "c5341676-ea59-415c-893c-2e56efb823a3": {
+          "name": "Modifikimet e mësimit"
+        },
         "3a252e7c-c299-41f2-8617-a6b165dfd91f": {
           "name": "Parapërgatitje"
         },
@@ -3068,11 +3182,20 @@
         "6bef749f-9fe6-445c-b873-bb9040b750b2": {
           "name": "Përmbledhje "
         },
+        "55bcb29a-1215-4946-b5ab-bad9395e232b": {
+          "name": "Modifikimet e mësimit"
+        },
         "5994929e-9d47-4037-9bf0-50728d56d31d": {
           "name": "Parapërgatitje"
         },
+        "7d6a40f7-3dce-4820-a330-59810b38dc39": {
+          "name": "Kritika dhe përsëritje"
+        },
         "bb408703-11ec-4822-a86b-b8625a121f6f": {
           "name": "Showcase"
+        },
+        "5faf4484-24e1-457d-8aaa-936904fec0c6": {
+          "name": "Modifikimet e mësimit"
         },
         "9ca8c23c-8a83-49ad-8730-a9dbf170d403": {
           "name": "Parapërgatitje"
@@ -3083,6 +3206,9 @@
         "9df9685e-8a25-4529-a130-ccacacc23186": {
           "name": "Përmbledhje "
         },
+        "d3975f3d-44de-46c8-a995-423cd29d2b0e": {
+          "name": "Modifikimet e mësimit"
+        },
         "5f4ab37a-26cb-4570-9e78-2a1a7ce16e21": {
           "name": "Parapërgatitje"
         },
@@ -3091,6 +3217,9 @@
         },
         "7e1b94ab-eb54-41ae-a003-fcbdc79f109c": {
           "name": "Përmbledhje "
+        },
+        "0cf5933c-75fd-49c6-9f63-1afdeb99892b": {
+          "name": "Modifikimet e mësimit"
         },
         "fa7bb816-68d0-4964-a4c9-acf09377edc3": {
           "name": "Parapërgatitje"
@@ -3101,6 +3230,9 @@
         "71aa25b3-9d43-4c6a-b01c-c0dca65cf932": {
           "name": "Përmbledhje "
         },
+        "57247884-1eca-40ac-abb4-36cf446a6ae4": {
+          "name": "Modifikimet e mësimit"
+        },
         "7e77a0b3-3a58-4d8d-9efa-b796c1496bde": {
           "name": "Parapërgatitje"
         },
@@ -3109,6 +3241,9 @@
         },
         "0e14ff41-9ad6-4802-a118-4b50a607b384": {
           "name": "Përmbledhje "
+        },
+        "92c95b0a-5909-4de6-9501-c206eb277d18": {
+          "name": "Modifikimet e mësimit"
         },
         "fa1d9228-1d94-46f9-8a49-d075d82546d9": {
           "name": "Parapërgatitje"
@@ -3119,6 +3254,9 @@
         "ca4d5d58-a1a8-4574-8413-b8e79a0a06d7": {
           "name": "Përmbledhje "
         },
+        "dad741db-e1fa-4efc-a1a5-9189172fd079": {
+          "name": "Modifikimet e mësimit"
+        },
         "3cca2572-607f-4925-8b36-6cf02506c1b6": {
           "name": "Parapërgatitje"
         },
@@ -3127,6 +3265,9 @@
         },
         "1ba97808-b668-42ed-9ba3-5f2da7b8912b": {
           "name": "Përmbledhje "
+        },
+        "e8906779-7748-4fae-9495-4140c38daffe": {
+          "name": "Modifikimet e mësimit"
         },
         "936100bf-97fb-4931-84be-dda8766c0ec4": {
           "name": "Parapërgatitje"
@@ -3137,6 +3278,9 @@
         "207bc633-dfe5-4c4d-b366-c1f5081676c1": {
           "name": "Përmbledhje "
         },
+        "18b942a4-0349-4392-923f-170a70cb6c8b": {
+          "name": "Modifikimet e mësimit"
+        },
         "c1ba8c1a-11db-4139-8f1c-dfebadfdb0df": {
           "name": "Parapërgatitje"
         },
@@ -3146,17 +3290,32 @@
         "bf836bc8-4853-4f43-b055-a8aa18ddfa9a": {
           "name": "Përmbledhje "
         },
+        "9c63c110-299c-465c-b6ac-456d561ff1c0": {
+          "name": "Modifikimet e mësimit"
+        },
         "5fdd8ca9-e42d-49ff-9edf-d9cc7c935d9e": {
           "name": "Parapërgatitje"
         },
         "2e5b6973-dcd9-405c-958d-2366095f4375": {
           "name": "Aktiviteti"
         },
+        "3e93f640-d708-4ed5-a00a-4205f6dcd4fb": {
+          "name": "Përmbledhje "
+        },
+        "9368b7ab-08ee-4900-b007-3a008552079f": {
+          "name": "Modifikimet e mësimit"
+        },
         "6dfd29b9-13c7-4603-989a-bbeecf4800ff": {
           "name": "Parapërgatitje"
         },
         "2edac65a-ce15-4b8c-afc8-a2faebdeb5f4": {
           "name": "Aktiviteti"
+        },
+        "e7216a36-908d-4036-8dc3-e7b6a49c1b78": {
+          "name": "Përmbledhje "
+        },
+        "5346ecf1-b80b-44cb-ad37-ea10eb8561c2": {
+          "name": "Modifikimet e mësimit"
         },
         "e0b108a8-9649-4dbe-81b2-18f26ef90572": {
           "name": "Parapërgatitje"
@@ -3167,6 +3326,9 @@
         "6b3615be-6022-43a7-b634-56545dd94ace": {
           "name": "Përmbledhje "
         },
+        "0fa9a305-278c-4646-8533-02397317bb18": {
+          "name": "Modifikimet e mësimit"
+        },
         "434c6d86-9182-4098-bdf9-a778a50a078a": {
           "name": "Parapërgatitje"
         },
@@ -3176,11 +3338,20 @@
         "8cc7e493-e930-4f8a-9f43-38e3d9ea0995": {
           "name": "Përmbledhje "
         },
+        "30b9ca8a-86a0-4058-b2f5-e24d9f636c10": {
+          "name": "Modifikimet e mësimit"
+        },
         "f34a570f-40d4-4d59-a68b-73775272bd4c": {
           "name": "Parapërgatitje"
         },
         "e22dd0d5-97b3-4829-9d90-3a213360c254": {
           "name": "Aktiviteti"
+        },
+        "7867053c-45a1-4d10-a159-8dc70ab53a0b": {
+          "name": "Përmbledhje "
+        },
+        "42b55089-127b-435f-be68-691d07bd60f2": {
+          "name": "Modifikimet e mësimit"
         },
         "bec6d0f0-443d-4368-aa3e-6ff205f0524d": {
           "name": "Parapërgatitje"
@@ -3191,6 +3362,9 @@
         "80d10416-519e-40e1-b040-0ab3e3b8a4c3": {
           "name": "Përmbledhje "
         },
+        "87db84f0-e19c-4e75-a1ae-c66dbac3bad5": {
+          "name": "Modifikimet e mësimit"
+        },
         "e9f7c2c0-864d-48ee-b321-8d5f9be28800": {
           "name": "Parapërgatitje"
         },
@@ -3199,6 +3373,9 @@
         },
         "9e5054c4-f57d-41fd-aa15-6eedcc5041a1": {
           "name": "Përmbledhje "
+        },
+        "bae868db-d958-4188-819b-7d9975721b16": {
+          "name": "Modifikimet e mësimit"
         },
         "7d4b68b8-c0ed-439b-996f-a3f992dc9824": {
           "name": "Parapërgatitje"
@@ -3209,6 +3386,9 @@
         "7f760e13-4b60-497a-ae95-c9d54292a9f7": {
           "name": "Përmbledhje "
         },
+        "75823632-be81-4248-bd63-e69a3658941b": {
+          "name": "Modifikimet e mësimit"
+        },
         "b73c5968-42c4-4b4c-ac51-a6694f99c29b": {
           "name": "Parapërgatitje"
         },
@@ -3217,6 +3397,9 @@
         },
         "6ad1cd24-169f-4b80-b9a4-8cc111becfd1": {
           "name": "Përmbledhje "
+        },
+        "6726d5e9-166b-4785-926b-549a92cf1ee5": {
+          "name": "Modifikimet e mësimit"
         },
         "177ca896-863b-456d-8703-29c35534f2d5": {
           "name": "Parapërgatitje"
@@ -3227,6 +3410,9 @@
         "639761f1-fc44-4250-ab0d-0e4b0565f95e": {
           "name": "Përmbledhje "
         },
+        "f3ca30bb-b17a-46fb-83d1-b49c20b2ba20": {
+          "name": "Modifikimet e mësimit"
+        },
         "bd0c46dd-1416-4ca4-9882-cc070c732bcb": {
           "name": "Parapërgatitje"
         },
@@ -3236,11 +3422,20 @@
         "c6e39bf8-d155-4322-af89-d5f58cd9b3c0": {
           "name": "Përmbledhje "
         },
+        "3cc0dc1b-7e13-4bdb-9d40-a075b7c9597e": {
+          "name": "Modifikimet e mësimit"
+        },
         "78332cff-112e-4d7a-b0d5-dc027283de09": {
           "name": "Parapërgatitje"
         },
         "d469a158-6f03-4bb2-a6bb-2fb04adc68bd": {
           "name": "Aktiviteti"
+        },
+        "20be7e0b-da27-4cf7-b721-de78b253d8ab": {
+          "name": "Përmbledhje "
+        },
+        "055947d6-e6ec-4356-9343-4a1b2a5fe229": {
+          "name": "Modifikimet e mësimit"
         },
         "91e4043a-b85e-4965-bb48-7dba5ae5b20d": {
           "name": "Parapërgatitje"
@@ -3251,6 +3446,9 @@
         "1b7d7bd8-edb9-4d7e-b267-fb05ddf8073b": {
           "name": "Përmbledhje "
         },
+        "e6a3f6b5-8159-4012-acbd-273af0e5e707": {
+          "name": "Modifikimet e mësimit"
+        },
         "4500c96e-1367-4b79-867f-061dfdb75d5c": {
           "name": "Parapërgatitje"
         },
@@ -3260,11 +3458,20 @@
         "125cb229-4471-49d1-b3a4-c331c9307b78": {
           "name": "Përmbledhje "
         },
+        "68968d00-b2cb-436f-8b21-fa47c41e6c13": {
+          "name": "Modifikimet e mësimit"
+        },
         "82bb121e-9ad5-4b29-bf75-30eb4170b1dd": {
           "name": "Parapërgatitje"
         },
         "2f663cbe-39d3-44bc-b3d0-3847de8616ed": {
           "name": "Aktiviteti"
+        },
+        "c611b357-4152-4524-ba71-e3531cc97d9d": {
+          "name": "Përmbledhje "
+        },
+        "d5f8482f-a875-457a-83a0-8fe8c8697621": {
+          "name": "Modifikimet e mësimit"
         },
         "28cdb81b-9ed2-4623-8c97-76a04c4b296f": {
           "name": "Parapërgatitje"
@@ -3275,6 +3482,9 @@
         "e7c14a3d-ad5f-429b-9ad3-a851e1247e58": {
           "name": "Përmbledhje "
         },
+        "a3891ced-312c-4f1f-9823-28cdaf9a131f": {
+          "name": "Modifikimet e mësimit"
+        },
         "5057296f-03f5-4ac1-b9b7-4b1e170c1224": {
           "name": "Parapërgatitje"
         },
@@ -3284,6 +3494,9 @@
         "165ce06e-00dc-48c5-ac86-7b2ca67f7484": {
           "name": "Përmbledhje "
         },
+        "42d4a6d3-fc40-44cd-ab78-799ce99a9ddb": {
+          "name": "Modifikimet e mësimit"
+        },
         "69970ef2-e960-449e-8650-84b53151315d": {
           "name": "Parapërgatitje"
         },
@@ -3292,6 +3505,9 @@
         },
         "928bd72d-482c-4234-8e05-57b235528194": {
           "name": "Përmbledhje "
+        },
+        "acdadc8a-d94d-4ee3-bdcb-67a234ee4130": {
+          "name": "Modifikimet e mësimit"
         },
         "d318c194-f178-4185-be90-b70771605b6d": {
           "name": "Parapërgatitje"
@@ -3719,6 +3935,9 @@
         "0f9b927e-0931-463c-85dd-f92b58eea3dd": {
           "name": "Aktiviteti"
         },
+        "e32a87eb-1d65-4f06-ae77-f9c2f4aaf4ec": {
+          "name": "Përmbledhje "
+        },
         "5dfcbd45-2a32-4d96-a2a6-6dd72eabcaf8": {
           "name": "Parapërgatitje"
         },
@@ -3730,6 +3949,9 @@
         },
         "cdcd4d00-c6df-40db-a0c7-37064a6fcf40": {
           "name": "Aktiviteti"
+        },
+        "3a46632a-43c7-47d3-85b7-e119bf9900ff": {
+          "name": "Përmbledhje "
         },
         "1e259b12-ec38-426b-944e-f5778651c422": {
           "name": "Parapërgatitje"
@@ -5585,6 +5807,12 @@
         "8324d97f-4ce6-4304-8cec-9d75a4f1ca80": {
           "name": "Nivelet"
         },
+        "bc687e20-23c5-4c35-8a58-ab03724de645": {
+          "name": "Konfigurimi Teknik"
+        },
+        "871d9312-3b99-4003-b738-be355d6a92f0": {
+          "name": "Anketë CSD para kursit"
+        },
         "e4a1b801-8e00-42e8-b7fc-fa00f74c5225": {
           "name": "Parapërgatitje"
         },
@@ -5648,6 +5876,9 @@
         "9fe916be-c6e6-4110-92a5-f8d81c66f4fa": {
           "name": "Aktiviteti"
         },
+        "b63c9025-bb68-49c4-9c1f-49f206eccb06": {
+          "name": "Prezantimi i modelit IOSP"
+        },
         "61faf936-d364-48d0-8e60-2f830583fa78": {
           "name": "Përmbledhje "
         },
@@ -5663,6 +5894,12 @@
         "7098db4e-836b-453e-8429-69229359a98d": {
           "name": "Mësim shtesë"
         },
+        "fa7bb32a-9079-4be8-a086-333ff091c7c4": {
+          "name": "Konfigurimi Teknik"
+        },
+        "7d66371e-9f65-4b5c-bb0b-1d3d98db0cde": {
+          "name": "Anketë CSD para kursit"
+        },
         "4891ceab-a23e-43af-a690-d4fd35b61d51": {
           "name": "Parapërgatitje"
         },
@@ -5672,6 +5909,12 @@
         "05dbaeb6-d8ea-4080-bb89-91e0f44f250f": {
           "name": "Përmbledhje "
         },
+        "53429f6c-9b1a-43fa-9a8e-ed9049a3ba28": {
+          "name": "Konfigurimi Teknik"
+        },
+        "e0aa6cce-ef80-41fc-b437-37e7bc543bf2": {
+          "name": "Anketë CSD para kursit"
+        },
         "cd5ffe12-60ad-4579-bba1-01cc93c1d482": {
           "name": "Parapërgatitje"
         },
@@ -5680,6 +5923,12 @@
         },
         "ff72a25c-c616-4b0b-a0b2-580ba043bae5": {
           "name": "Përmbledhje "
+        },
+        "e4635ad3-22e6-4ca3-a47a-c5cb4399141f": {
+          "name": "Konfigurimi Teknik"
+        },
+        "f116e7aa-a36e-47be-b2a4-459fd7fa6f0a": {
+          "name": "Anketë CSD para kursit"
         },
         "f986b891-90fb-4cb6-810d-df9b0542ddfd": {
           "name": "Parapërgatitje"
@@ -5828,6 +6077,9 @@
         "1b86c4c4-fe9b-4fb6-b514-18f581445cc3": {
           "name": "Aktiviteti"
         },
+        "06493f49-cf92-41f2-8b5f-c39264524d3a": {
+          "name": "Formimi i grupeve"
+        },
         "c64be7c4-7e90-4ad0-b357-48875f7c3f4a": {
           "name": "Përmbledhje "
         },
@@ -5887,6 +6139,9 @@
         },
         "e11819a0-81a5-414c-b3fe-71e31ccfaaf7": {
           "name": "Parapërgatitje"
+        },
+        "7f1d3b52-252a-4c4b-87a5-0c983b8a9c64": {
+          "name": "Kritika dhe përsëritje"
         },
         "cb6bf053-345c-47af-a7b9-39a67a9c70fa": {
           "name": "Showcase"
@@ -5972,11 +6227,17 @@
         "04c570b6-1657-47dd-a90f-26f7ce510830": {
           "name": "Aktiviteti"
         },
+        "95143d23-7e19-48a8-8b21-6c4df0c6c901": {
+          "name": "Përmbledhje "
+        },
         "88d2e8d2-0264-49f8-8cf6-60f7580d4055": {
           "name": "Parapërgatitje"
         },
         "ac23bd8d-6baf-42d4-8aef-d322a53d99d7": {
           "name": "Aktiviteti"
+        },
+        "32bebf15-32d1-4b13-b256-79bff01e2e9c": {
+          "name": "Përmbledhje "
         },
         "44a7328d-f579-4a62-b88f-c577b965ce02": {
           "name": "Parapërgatitje"
@@ -6001,6 +6262,9 @@
         },
         "5c4c0ced-8cfb-42e6-af12-a96934458594": {
           "name": "Aktiviteti"
+        },
+        "3e41533e-7cd0-402a-acee-8d32a288c904": {
+          "name": "Përmbledhje "
         },
         "43cd18fc-8b9d-4601-a153-e8d2244ef3ef": {
           "name": "Parapërgatitje"
@@ -6062,6 +6326,9 @@
         "feb7e645-107d-4334-af6c-de26fedf3e43": {
           "name": "Aktiviteti"
         },
+        "48055820-8bfe-43a2-b39b-b23d461f313b": {
+          "name": "Përmbledhje "
+        },
         "ddfbcbdd-45a0-4976-a52f-aa64c5e61a77": {
           "name": "Parapërgatitje"
         },
@@ -6085,6 +6352,9 @@
         },
         "7eb392a8-4fee-468e-8069-090228cfcac9": {
           "name": "Aktiviteti"
+        },
+        "f141f932-8f4a-49ad-a55b-7c631cd8099c": {
+          "name": "Përmbledhje "
         },
         "2e55afbe-ae39-45bb-988a-8cac756ca299": {
           "name": "Parapërgatitje"
@@ -6539,8 +6809,14 @@
         "fb244265-6cd6-459d-bc88-e056d9902b8d": {
           "name": "Aktiviteti"
         },
+        "ee81ca1c-5e75-40ee-880c-e12ef70a34f5": {
+          "name": "Përmbledhje "
+        },
         "cdebc121-9bb7-4512-a38f-ec2adaabed91": {
           "name": "Aktiviteti"
+        },
+        "ea249449-8468-4a0f-9291-66fcb8e755c1": {
+          "name": "Përmbledhje "
         },
         "591f1e39-f37c-4e7b-862b-f450ba4d018a": {
           "name": "Parapërgatitje"
