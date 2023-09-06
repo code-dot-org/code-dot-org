@@ -166,13 +166,14 @@ class ReportAbuseController < ApplicationController
     # Temporarily ignore anonymous reports and only allow verified teachers
     # and signed in users to report.
     restrict_reporting_to_verified_users = DCDO.get('restrict-abuse-reporting-to-verified', true)
-    if current_user&.verified_teacher?
-      20
-    elsif current_user && !restrict_reporting_to_verified_users
-      10
-    else
-      0
-    end
+    amount =
+      if current_user&.verified_teacher?
+        20
+      elsif current_user && !restrict_reporting_to_verified_users
+        10
+      else
+        0
+      end
     begin
       value = Projects.new(get_storage_id).increment_abuse(channel_id, amount)
     rescue ArgumentError, OpenSSL::Cipher::CipherError
