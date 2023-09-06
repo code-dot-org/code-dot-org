@@ -1057,6 +1057,7 @@
   "featureUnpublishedWarning": "This project is currently unpublished. It can still be marked as featured, but it will not show in the gallery until the owner publishes it.",
   "feedback": "Feedback",
   "feedbackAll": "All Teacher Feedback",
+  "feedbackAvailableOnLevel": "Feedback will be available on Level {levelPosition}",
   "feedbackCommentAreaHeader": "Teacher Feedback",
   "feedbackDownloadFileName": "Feedback for {sectionName} in {scriptName} on {date}.csv",
   "feedbackDownloadOverview": "This CSV file contains all feedback you’ve completed for your section {sectionName} in levels within **{scriptName}**. You can leave feedback for your students by going to a level in this unit, viewing a student's work, and clicking the \"Feedback\" tab.",
