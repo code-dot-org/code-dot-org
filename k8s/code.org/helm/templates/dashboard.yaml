@@ -34,6 +34,7 @@ spec:
         image: "{{.Values.image}}"
         ports:
         - containerPort: 3000
+        tty: true # dashboard stdout logging assumes a tty
         volumeMounts:
         - mountPath: /home/code.org/.aws
           name: aws-google
