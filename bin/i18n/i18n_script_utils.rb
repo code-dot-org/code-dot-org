@@ -439,6 +439,10 @@ class I18nScriptUtils
 
   def self.delete_empty_crowdin_locale_dir(crowdin_locale)
     crowdin_locale_dir = CDO.dir(File.join(I18N_LOCALES_DIR, crowdin_locale))
-    FileUtils.rm_r(crowdin_locale_dir) if Dir.empty?(crowdin_locale_dir)
+
+    return unless File.exist?(crowdin_locale_dir)
+    return unless Dir.empty?(crowdin_locale_dir)
+
+    FileUtils.rm_r(crowdin_locale_dir)
   end
 end
