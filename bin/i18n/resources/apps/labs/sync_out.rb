@@ -4,6 +4,7 @@ require 'fileutils'
 require 'json'
 
 require_relative '../../../i18n_script_utils'
+require_relative '../../../utils/malformed_i18n_reporter'
 require_relative '../labs'
 
 module I18n
@@ -26,7 +27,7 @@ module I18n
               locale = pegasus_lang[:locale_s]
 
               unless locale == 'en-US'
-                mutex.synchronize {restore_crawding_locale_files(locale, crowdin_locale_resource_dir)}
+                restore_crawding_locale_files(locale, crowdin_locale_resource_dir)
                 distribute_crawding_locale_files(locale, crowdin_locale_resource_dir)
               end
 
@@ -57,6 +58,8 @@ module I18n
           end
 
           def restore_crawding_locale_files(locale, crowdin_locale_resource_dir)
+            malformed_i18n_reporter = I18n::Utils::MalformedI18nReporter.new(locale)
+
             REDACTABLE.each do |lab_name|
               i18n_original_file_path = CDO.dir(I18N_ORIGINAL_DIR, DIR_NAME, "#{lab_name}.json")
               next unless File.exist?(i18n_original_file_path)
@@ -72,9 +75,10 @@ module I18n
                 REDACT_PLUGINS
               )
 
-              I18nScriptUtils.find_malformed_links_images(locale, crowdin_locale_file_path)
+              malformed_i18n_reporter.process_file(crowdin_locale_file_path)
             end
-            I18nScriptUtils.upload_malformed_restorations(locale)
+
+            malformed_i18n_reporter.report
           end
 
           def lab_i18n_file_path(lab_name, js_locale)

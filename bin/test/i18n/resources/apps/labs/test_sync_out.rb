@@ -10,7 +10,6 @@ describe I18n::Resources::Apps::Labs::SyncOut do
 
   before do
     STDOUT.stubs(:print)
-    I18nScriptUtils.stubs(:find_malformed_links_images)
     I18nScriptUtils.stubs(:upload_malformed_restorations)
     RedactRestoreUtils.stubs(:restore)
   end
@@ -34,6 +33,8 @@ describe I18n::Resources::Apps::Labs::SyncOut do
     let(:apps_i18n_lab_file_path) {CDO.dir('apps/i18n', lab, "#{i18n_js_locale}.json")}
     let(:en_apps_i18n_lab_file_path) {CDO.dir('apps/i18n', lab, 'en_us.json')}
 
+    let(:malformed_i18n_reporter) {stub}
+
     let(:expect_crowdin_file_restoration) do
       RedactRestoreUtils.expects(:restore).with(
         i18n_original_file_path,
@@ -42,11 +43,11 @@ describe I18n::Resources::Apps::Labs::SyncOut do
         %w[link]
       )
     end
-    let(:expect_malformed_links_images_reporting) do
-      I18nScriptUtils.expects(:find_malformed_links_images).with(i18n_locale, crowdin_locale_file_path)
+    let(:expect_crowdin_locale_file_processing_by_malformed_i18n_reporter) do
+      malformed_i18n_reporter.expects(:process_file).with(crowdin_locale_file_path)
     end
-    let(:expect_malformed_restorations_uploading) do
-      I18nScriptUtils.expects(:upload_malformed_restorations).with(i18n_locale)
+    let(:expect_invalid_i18n_reporting) do
+      malformed_i18n_reporter.expects(:report)
     end
     let(:expect_crowdin_locale_file_distribution) do
       I18nScriptUtils.expects(:sanitize_file_and_write).with(crowdin_locale_file_path, apps_i18n_lab_file_path)
@@ -59,6 +60,7 @@ describe I18n::Resources::Apps::Labs::SyncOut do
     end
 
     before do
+      I18n::Utils::MalformedI18nReporter.stubs(:new).with(i18n_locale).returns(malformed_i18n_reporter)
       PegasusLanguages.stubs(:get_crowdin_name_and_locale).returns([{crowdin_name_s: crowdin_locale, locale_s: i18n_locale}])
       I18nScriptUtils.stubs(:to_js_locale).with(i18n_locale).returns(i18n_js_locale)
 
@@ -84,8 +86,8 @@ describe I18n::Resources::Apps::Labs::SyncOut do
           execution_sequence = sequence('execution')
 
           expect_crowdin_file_restoration.never
-          expect_malformed_links_images_reporting.never
-          expect_malformed_restorations_uploading.once
+          expect_crowdin_locale_file_processing_by_malformed_i18n_reporter.never
+          expect_invalid_i18n_reporting.once
 
           expect_crowdin_locale_file_distribution.in_sequence(execution_sequence)
           expect_crowdin_locale_dir_renaming.in_sequence(execution_sequence)
@@ -103,8 +105,8 @@ describe I18n::Resources::Apps::Labs::SyncOut do
             execution_sequence = sequence('execution')
 
             expect_crowdin_file_restoration.in_sequence(execution_sequence)
-            expect_malformed_links_images_reporting.in_sequence(execution_sequence)
-            expect_malformed_restorations_uploading.in_sequence(execution_sequence)
+            expect_crowdin_locale_file_processing_by_malformed_i18n_reporter.in_sequence(execution_sequence)
+            expect_invalid_i18n_reporting.in_sequence(execution_sequence)
             expect_crowdin_locale_file_distribution.in_sequence(execution_sequence)
             expect_crowdin_locale_dir_renaming.in_sequence(execution_sequence)
             expect_empty_crowdin_locale_dir_deletion.in_sequence(execution_sequence)
@@ -122,8 +124,8 @@ describe I18n::Resources::Apps::Labs::SyncOut do
             execution_sequence = sequence('execution')
 
             expect_crowdin_file_restoration.never
-            expect_malformed_links_images_reporting.never
-            expect_malformed_restorations_uploading.once
+            expect_crowdin_locale_file_processing_by_malformed_i18n_reporter.never
+            expect_invalid_i18n_reporting.once
             expect_crowdin_locale_file_distribution.never
 
             expect_crowdin_locale_dir_renaming.in_sequence(execution_sequence)
@@ -151,8 +153,8 @@ describe I18n::Resources::Apps::Labs::SyncOut do
             execution_sequence = sequence('execution')
 
             expect_crowdin_file_restoration.never
-            expect_malformed_links_images_reporting.never
-            expect_malformed_restorations_uploading.never
+            expect_crowdin_locale_file_processing_by_malformed_i18n_reporter.never
+            expect_invalid_i18n_reporting.never
             expect_crowdin_locale_file_distribution.never
             expect_crowdin_locale_dir_renaming.in_sequence(execution_sequence)
             expect_empty_crowdin_locale_dir_deletion.in_sequence(execution_sequence)
