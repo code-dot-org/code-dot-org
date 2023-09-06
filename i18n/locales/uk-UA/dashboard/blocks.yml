@@ -1473,6 +1473,10 @@ uk:
           CONDITION:
             '"when"': коли
             '"while"': поки
+      gamelab_spriteSayTime:
+        text: "{SPRITE}говорить{TEXT1}протягом{NUM}секунд"
+      gamelab_spriteThinkTime:
+        text: "{SPRITE}думає{TEXT1}протягом{NUM}секунд"
       gamelab_spriteThink_fables4:
         options:
           THOUGHT:
