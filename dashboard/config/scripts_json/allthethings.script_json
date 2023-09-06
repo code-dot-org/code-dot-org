@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-08-18 17:05:56 UTC",
+    "serialized_at": "2023-09-05 19:46:49 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -799,6 +799,21 @@
         "lesson_group.key": "",
         "script.name": "allthethings"
       }
+    },
+    {
+      "key": "lesson-52",
+      "name": "Dance Lab2",
+      "absolute_position": 52,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 49,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-52",
+        "lesson_group.key": "",
+        "script.name": "allthethings"
+      }
     }
   ],
   "lesson_activities": [
@@ -1459,6 +1474,18 @@
         "lesson_group.key": "",
         "script.name": "allthethings"
       }
+    },
+    {
+      "key": "fdc0f83f-442b-47e4-8f5a-8ca827acf9e2",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "fdc0f83f-442b-47e4-8f5a-8ca827acf9e2",
+        "lesson.key": "lesson-52",
+        "lesson_group.key": "",
+        "script.name": "allthethings"
+      }
     }
   ],
   "activity_sections": [
@@ -1970,6 +1997,16 @@
       "seeding_key": {
         "activity_section.key": "b3608bf0-72c8-4abc-8ed2-f66fbde0eb82",
         "lesson_activity.key": "6b12d6f3-6c14-4c9d-aaab-4052da94fe1a"
+      }
+    },
+    {
+      "key": "c34e51d8-607b-4436-854d-f77eb3240711",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "c34e51d8-607b-4436-854d-f77eb3240711",
+        "lesson_activity.key": "fdc0f83f-442b-47e4-8f5a-8ca827acf9e2"
       }
     }
   ],
@@ -6291,6 +6328,48 @@
       "level_keys": [
         "CSD U3 Sprites scene challenge_allthethings"
       ]
+    },
+    {
+      "chapter": 178,
+      "position": 1,
+      "activity_section_position": 1,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Dance Lab2 Level 1"
+        ],
+        "lesson.key": "lesson-52",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "c34e51d8-607b-4436-854d-f77eb3240711"
+      },
+      "level_keys": [
+        "Dance Lab2 Level 1"
+      ]
+    },
+    {
+      "chapter": 179,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "Dance Lab2 Level 2"
+        ],
+        "lesson.key": "lesson-52",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "c34e51d8-607b-4436-854d-f77eb3240711"
+      },
+      "level_keys": [
+        "Dance Lab2 Level 2"
+      ]
     }
   ],
   "levels_script_levels": [
@@ -8542,6 +8621,30 @@
         "lesson_group.key": "",
         "script.name": "allthethings",
         "activity_section.key": "b3608bf0-72c8-4abc-8ed2-f66fbde0eb82"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Dance Lab2 Level 1",
+        "script_level.level_keys": [
+          "Dance Lab2 Level 1"
+        ],
+        "lesson.key": "lesson-52",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "c34e51d8-607b-4436-854d-f77eb3240711"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "Dance Lab2 Level 2",
+        "script_level.level_keys": [
+          "Dance Lab2 Level 2"
+        ],
+        "lesson.key": "lesson-52",
+        "lesson_group.key": "",
+        "script.name": "allthethings",
+        "activity_section.key": "c34e51d8-607b-4436-854d-f77eb3240711"
       }
     }
   ],
