@@ -16,6 +16,7 @@ import ProgressTableDetailCell from '@cdo/apps/templates/sectionProgress/progres
 import ProgressTableLevelIconSet from '@cdo/apps/templates/sectionProgress/progressTables/ProgressTableLevelIconSet';
 import {ViewType} from '@cdo/apps/templates/sectionProgress/sectionProgressConstants';
 import {createStore, combineReducers} from 'redux';
+import currentUser from '@cdo/apps/templates/currentUserRedux';
 import progress from '@cdo/apps/code-studio/progressRedux';
 import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import sectionProgress from '@cdo/apps/templates/sectionProgress/sectionProgressRedux';
@@ -46,6 +47,7 @@ const initialState = fakeProgressTableReduxInitialState(
 const setUp = (currentView = ViewType.SUMMARY, overrideState = {}) => {
   const store = createStore(
     combineReducers({
+      currentUser,
       progress,
       teacherSections,
       sectionProgress,
