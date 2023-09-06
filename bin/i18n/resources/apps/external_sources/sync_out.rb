@@ -40,9 +40,9 @@ module I18n
 
                 I18nScriptUtils.rename_dir(crowdin_locale_blockly_core_dir, File.join(i18n_locale_dir, BLOCKLY_CORE_DIR_NAME))
               end
-            ensure
-              I18nScriptUtils.delete_empty_crowdin_locale_dir(crowdin_locale)
 
+              I18nScriptUtils.remove_empty_dir(I18nScriptUtils.locale_dir(crowdin_locale))
+            ensure
               mutex.synchronize {progress_bar.increment}
             end
 

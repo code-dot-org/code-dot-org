@@ -37,7 +37,7 @@ module I18n
               i18n_spritelab_file_path = I18nScriptUtils.locale_dir(locale, DIR_NAME, SPRITELAB_FILE_NAME)
 
               I18nScriptUtils.rename_dir(File.dirname(crowdin_spritelab_file_path), File.dirname(i18n_spritelab_file_path))
-              I18nScriptUtils.delete_empty_crowdin_locale_dir(crowdin_locale)
+              I18nScriptUtils.remove_empty_dir(I18nScriptUtils.locale_dir(crowdin_locale))
 
               next if locale == 'en-US'
 

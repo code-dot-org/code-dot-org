@@ -345,39 +345,38 @@ describe I18nScriptUtils do
     end
   end
 
-  describe '.delete_empty_crowdin_locale_dir' do
-    let(:crowdin_locale) {'expected_crowdin_locale'}
-    let(:crowdin_locale_dir_path) {CDO.dir(File.join('i18n/locales', crowdin_locale))}
+  describe '.remove_empty_dir' do
+    let(:dir) {'/expected_dir'}
 
     before do
-      FileUtils.mkdir_p(crowdin_locale_dir_path)
+      FileUtils.mkdir_p(dir)
     end
 
     context 'when Crowdin locale dir does not exist' do
       it 'does not raise the error "No such file or directory"' do
-        I18nScriptUtils.delete_empty_crowdin_locale_dir('unexpected_crowdin_locale')
+        I18nScriptUtils.remove_empty_dir('non/existent/dir')
       end
     end
 
     context 'when Crowdin locale dir is empty' do
-      it 'deletes the Crowdin locale dir' do
-        assert File.directory?(crowdin_locale_dir_path)
+      it 'removes the Crowdin locale dir' do
+        assert File.directory?(dir)
 
-        I18nScriptUtils.delete_empty_crowdin_locale_dir(crowdin_locale)
+        I18nScriptUtils.remove_empty_dir(dir)
 
-        refute File.directory?(crowdin_locale_dir_path)
+        refute File.directory?(dir)
       end
     end
 
     context 'when Crowdin locale dir is not empty' do
       before do
-        FileUtils.touch(File.join(crowdin_locale_dir_path, 'test.txt'))
+        FileUtils.touch(File.join(dir, 'test.txt'))
       end
 
-      it 'does not delete the Crowdin locale dir' do
-        I18nScriptUtils.delete_empty_crowdin_locale_dir(crowdin_locale)
+      it 'does not remove the Crowdin locale dir' do
+        I18nScriptUtils.remove_empty_dir(dir)
 
-        assert File.directory?(crowdin_locale_dir_path)
+        assert File.directory?(dir)
       end
     end
   end

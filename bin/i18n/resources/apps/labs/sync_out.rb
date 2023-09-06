@@ -31,9 +31,8 @@ module I18n
               end
 
               I18nScriptUtils.rename_dir(crowdin_locale_resource_dir, I18nScriptUtils.locale_dir(locale, DIR_NAME))
+              I18nScriptUtils.remove_empty_dir(I18nScriptUtils.locale_dir(crowdin_locale))
             ensure
-              I18nScriptUtils.delete_empty_crowdin_locale_dir(crowdin_locale)
-
               mutex.synchronize {progress_bar.increment}
             end
 

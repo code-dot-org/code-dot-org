@@ -52,7 +52,7 @@ describe I18n::Resources::Apps::ExternalSources::SyncOut do
       let(:i18n_locale) {'not-EN'}
 
       it 'deletes empty Crowdin locale dir' do
-        I18nScriptUtils.expects(:delete_empty_crowdin_locale_dir).with(crowdin_locale).once
+        I18nScriptUtils.expects(:remove_empty_dir).with(CDO.dir('i18n/locales', crowdin_locale)).once
 
         sync_out.execute
       end
@@ -274,7 +274,7 @@ describe I18n::Resources::Apps::ExternalSources::SyncOut do
       end
 
       it 'deletes empty Crowdin locale dir' do
-        I18nScriptUtils.expects(:delete_empty_crowdin_locale_dir).with(crowdin_locale).once
+        I18nScriptUtils.expects(:remove_empty_dir).with(CDO.dir('i18n/locales', crowdin_locale)).once
 
         sync_out.execute
       end

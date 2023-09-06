@@ -441,13 +441,11 @@ class I18nScriptUtils
     CDO.dir(File.join(I18N_LOCALES_DIR, locale, *paths))
   end
 
-  def self.delete_empty_crowdin_locale_dir(crowdin_locale)
-    crowdin_locale_dir = locale_dir(crowdin_locale)
+  def self.remove_empty_dir(dir)
+    return unless File.exist?(dir)
+    return unless Dir.empty?(dir)
 
-    return unless File.exist?(crowdin_locale_dir)
-    return unless Dir.empty?(crowdin_locale_dir)
-
-    FileUtils.rm_r(crowdin_locale_dir)
+    FileUtils.rm_r(dir)
   end
 
   def self.find_malformed_links_images(locale, file_path)
