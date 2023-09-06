@@ -85,7 +85,7 @@
   gap: 0.5rem;
   align-self: stretch;
 
-  h5 {
+  h5, p {
     margin-bottom: 0;
   }
 }
@@ -94,9 +94,6 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
-}
-p.singleMetadatum {
-  margin-bottom: 0;
 }
 
 .learningGoalContainer {

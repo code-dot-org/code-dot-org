@@ -25,30 +25,93 @@ describe('RubricContainer', () => {
       position: 3,
       name: 'Data Structures',
     },
+    level: {
+      name: 'test_level',
+      position: 7,
+    },
+  };
+
+  const defaultProps = {
+    rubric: defaultRubric,
+    teacherHasEnabledAi: true,
+    studentLevelInfo: {},
+    currentLevelName: 'test_level',
   };
 
   const processEventLoop = () => new Promise(resolve => setTimeout(resolve, 0));
 
-  it('shows learning goals', () => {
+  it('shows learning goals with correct props when viewing student work on assessment level', () => {
     const wrapper = shallow(
-      <RubricContainer rubric={defaultRubric} teacherHasEnabledAi />
+      <RubricContainer
+        {...defaultProps}
+        studentLevelInfo={{name: 'Grace Hopper', timeSpent: 706}}
+      />
     );
     const renderedLearningGoals = wrapper.find('LearningGoal');
     expect(renderedLearningGoals).to.have.lengthOf(2);
     expect(
       renderedLearningGoals.at(0).props().learningGoal.learningGoal
     ).to.equal('goal 1');
+    expect(renderedLearningGoals.at(0).props().canProvideFeedback).to.equal(
+      true
+    );
     expect(
       renderedLearningGoals.at(1).props().learningGoal.learningGoal
     ).to.equal('goal 2');
+    expect(renderedLearningGoals.at(1).props().canProvideFeedback).to.equal(
+      true
+    );
+  });
+
+  it('shows learning goals with correct props when viewing student work on non assessment level', () => {
+    const wrapper = shallow(
+      <RubricContainer
+        {...defaultProps}
+        studentLevelInfo={{name: 'Grace Hopper', timeSpent: 706}}
+        currentLevelName="non_assessment_level"
+      />
+    );
+    const renderedLearningGoals = wrapper.find('LearningGoal');
+    expect(renderedLearningGoals).to.have.lengthOf(2);
+    expect(
+      renderedLearningGoals.at(0).props().learningGoal.learningGoal
+    ).to.equal('goal 1');
+    expect(renderedLearningGoals.at(0).props().canProvideFeedback).to.equal(
+      false
+    );
+    expect(
+      renderedLearningGoals.at(1).props().learningGoal.learningGoal
+    ).to.equal('goal 2');
+    expect(renderedLearningGoals.at(1).props().canProvideFeedback).to.equal(
+      false
+    );
+  });
+
+  it('shows learning goals with correct props when not viewing student work', () => {
+    const wrapper = shallow(
+      <RubricContainer {...defaultProps} studentLevelInfo={null} />
+    );
+    const renderedLearningGoals = wrapper.find('LearningGoal');
+    expect(renderedLearningGoals).to.have.lengthOf(2);
+    expect(
+      renderedLearningGoals.at(0).props().learningGoal.learningGoal
+    ).to.equal('goal 1');
+    expect(renderedLearningGoals.at(0).props().canProvideFeedback).to.equal(
+      false
+    );
+    expect(
+      renderedLearningGoals.at(1).props().learningGoal.learningGoal
+    ).to.equal('goal 2');
+    expect(renderedLearningGoals.at(1).props().canProvideFeedback).to.equal(
+      false
+    );
   });
 
   it('shows level title', () => {
     // mount is needed in order for text() to work
     const wrapper = mount(
       <RubricContainer
-        rubric={defaultRubric}
-        teacherHasEnabledAi
+        {...defaultProps}
         studentLevelInfo={{
           name: 'Grace Hopper',
         }}
@@ -61,8 +124,7 @@ describe('RubricContainer', () => {
     // mount is needed in order for text() to work
     const wrapper = mount(
       <RubricContainer
-        rubric={defaultRubric}
-        teacherHasEnabledAi
+        {...defaultProps}
         studentLevelInfo={{
           name: 'Grace Hopper',
           timeSpent: 305,
@@ -81,8 +143,7 @@ describe('RubricContainer', () => {
     // mount is needed in order for text() to work
     const wrapper = mount(
       <RubricContainer
-        rubric={defaultRubric}
-        teacherHasEnabledAi
+        {...defaultProps}
         studentLevelInfo={{
           name: 'Grace Hopper',
         }}
@@ -92,6 +153,23 @@ describe('RubricContainer', () => {
     expect(wrapper.text()).to.not.include('time spent');
     expect(wrapper.text()).to.include('0 attempts');
     expect(wrapper.text()).to.not.include('last updated');
+  });
+
+  it('doesnt show student level data if not on level for evaluation', () => {
+    // mount is needed in order for text() to work
+    const wrapper = mount(
+      <RubricContainer
+        {...defaultProps}
+        studentLevelInfo={{
+          name: 'Grace Hopper',
+          attempts: 6,
+        }}
+        currentLevelName="not_test_level"
+      />
+    );
+    expect(wrapper.text()).to.include('Grace Hopper');
+    expect(wrapper.text()).to.not.include('6 attempts');
+    expect(wrapper.text()).to.include('Feedback will be available on Level 7');
   });
 
   it('shows submit button if student data', () => {

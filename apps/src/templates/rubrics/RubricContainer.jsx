@@ -36,11 +36,13 @@ export default function RubricContainer({
   rubric,
   studentLevelInfo,
   teacherHasEnabledAi,
+  currentLevelName,
   reportingData,
 }) {
-  // TODO: [AITT-113] Also check if viewing the right level to give feedback
-  const canProvideFeedback = !!studentLevelInfo;
+  const onLevelForEvaluation = currentLevelName === rubric.level.name;
+  const canProvideFeedback = !!studentLevelInfo && onLevelForEvaluation;
   const {lesson} = rubric;
+  const rubricLevel = rubric.level;
 
   const [isSubmittingToStudent, setIsSubmittingToStudent] = useState(false);
   const [errorSubmitting, setErrorSubmitting] = useState(false);
@@ -84,28 +86,37 @@ export default function RubricContainer({
                   lessonName: lesson.name,
                 })}
               </Heading5>
-              <div className={style.studentMetadata}>
-                {studentLevelInfo.timeSpent && (
+              {onLevelForEvaluation && (
+                <div className={style.studentMetadata}>
+                  {studentLevelInfo.timeSpent && (
+                    <BodyThreeText className={style.singleMetadatum}>
+                      <FontAwesome icon="clock" />
+                      <span>{formatTimeSpent(studentLevelInfo.timeSpent)}</span>
+                    </BodyThreeText>
+                  )}
                   <BodyThreeText className={style.singleMetadatum}>
-                    <FontAwesome icon="clock" />
-                    <span>{formatTimeSpent(studentLevelInfo.timeSpent)}</span>
+                    <FontAwesome icon="rocket" />
+                    {i18n.numAttempts({
+                      numAttempts: studentLevelInfo.attempts || 0,
+                    })}
                   </BodyThreeText>
-                )}
-                <BodyThreeText className={style.singleMetadatum}>
-                  <FontAwesome icon="rocket" />
-                  {i18n.numAttempts({
-                    numAttempts: studentLevelInfo.attempts || 0,
+                  {studentLevelInfo.lastAttempt && (
+                    <BodyThreeText className={style.singleMetadatum}>
+                      <FontAwesome icon="calendar" />
+                      <span>
+                        {formatLastAttempt(studentLevelInfo.lastAttempt)}
+                      </span>
+                    </BodyThreeText>
+                  )}
+                </div>
+              )}
+              {!onLevelForEvaluation && rubricLevel?.position && (
+                <BodyThreeText>
+                  {i18n.feedbackAvailableOnLevel({
+                    levelPosition: rubricLevel.position,
                   })}
                 </BodyThreeText>
-                {studentLevelInfo.lastAttempt && (
-                  <BodyThreeText className={style.singleMetadatum}>
-                    <FontAwesome icon="calendar" />
-                    <span>
-                      {formatLastAttempt(studentLevelInfo.lastAttempt)}
-                    </span>
-                  </BodyThreeText>
-                )}
-              </div>
+              )}
             </div>
           </div>
         )}
@@ -151,4 +162,5 @@ RubricContainer.propTypes = {
   reportingData: reportingDataShape,
   studentLevelInfo: studentLevelInfoShape,
   teacherHasEnabledAi: PropTypes.bool,
+  currentLevelName: PropTypes.string,
 };
