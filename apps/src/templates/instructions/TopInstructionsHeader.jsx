@@ -18,7 +18,7 @@ function TopInstructionsHeader(props) {
     isCSDorCSP,
     displayHelpTab,
     displayFeedback,
-    levelHasRubric,
+    levelHasMiniRubric,
     displayDocumentationTab,
     displayReviewTab,
     isViewingAsTeacher,
@@ -123,7 +123,7 @@ function TopInstructionsHeader(props) {
               onClick={handleCommentTabClick}
               selected={tabSelected === TabType.COMMENTS}
               isLegacyTextColor={isOldPurpleColor}
-              text={levelHasRubric ? i18n.rubric() : i18n.feedback()}
+              text={levelHasMiniRubric ? i18n.rubric() : i18n.feedback()}
               teacherOnly={teacherOnly}
               isMinecraft={isMinecraft}
               isRtl={isRtl}
@@ -276,7 +276,7 @@ TopInstructionsHeader.propTypes = {
   isCSDorCSP: PropTypes.bool,
   displayHelpTab: PropTypes.bool,
   displayFeedback: PropTypes.bool,
-  levelHasRubric: PropTypes.bool,
+  levelHasMiniRubric: PropTypes.bool,
   displayDocumentationTab: PropTypes.bool,
   displayReviewTab: PropTypes.bool,
   isViewingAsTeacher: PropTypes.bool,
