@@ -8,7 +8,7 @@ class MatchDSL < ContentDSL
 
   def question(text) @hash[:questions] << {text: text} end
 
-  def answer(text, correct=nil, feedback=nil)
+  def answer(text, correct = nil, feedback = nil)
     answer = {text: text}
     answer[:correct] = correct unless correct.nil?
     answer[:feedback] = feedback unless feedback.nil?
