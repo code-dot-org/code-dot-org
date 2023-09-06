@@ -13,6 +13,6 @@ data:
     - master: redis://redis:6379
 
     # FIXME: do these default to these values already? remove if so
-    dashboard_enable_pegasus: false
+    dashboard_enable_pegasus: true
     build_apps: true
     use_my_apps: true
