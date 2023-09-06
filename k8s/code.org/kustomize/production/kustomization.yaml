@@ -6,3 +6,4 @@ bases:
 
 resources:
 - locals.yaml
+- dashboard-autoscaler.yaml
