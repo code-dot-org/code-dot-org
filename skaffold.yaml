@@ -85,12 +85,9 @@ profiles:
               ]
 
 portForward:
-- resourceType: Deployment
+- resourceType: Service
   resourceName: dashboard
   port: 3000
-- resourceType: StatefulSet
+- resourceType: Service
   resourceName: dashboard-db
   port: 3306
-# - resourceType: deployment
-#   resourceName: svc/kubernetes-dashboard-nginx-controller
-#   port: 8443:443
