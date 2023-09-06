@@ -151,7 +151,7 @@ class WaitingToConnect extends Component {
     return (
       <Overlay {...this.props}>
         <Icon icon="cog" spin />
-        <Text>Waiting for board to connect...</Text>
+        <Text>{applabI18n.waitingForConnect()}</Text>
       </Overlay>
     );
   }

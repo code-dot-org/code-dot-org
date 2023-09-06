@@ -518,6 +518,7 @@
   "makerSetupWebSerialSupportArticle": "If you have any issues, please refer to our [WebSerial Support Article](https://support.code.org/hc/en-us/articles/9953258694669).",
   "makerSetupWindows7Drivers": "(Windows 7) Install the [Adafruit Windows drivers](https://learn.adafruit.com/adafruit-feather-32u4-basic-proto/using-with-arduino-ide#install-drivers-windows-only).",
   "makerTryAgain": "Try Again",
+  "makerWaitingForConnect": "Waiting for board to connect...",
   "manageAssets": "Click to view or update your images and sounds.",
   "nextLevel": "Congratulations! You have completed this puzzle.",
   "no": "No",

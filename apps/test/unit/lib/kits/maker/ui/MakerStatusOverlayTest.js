@@ -94,7 +94,7 @@ describe('MakerStatusOverlay', () => {
     });
 
     it('and waiting text', () => {
-      expect(wrapper.text()).to.include('Waiting for board to connect...');
+      expect(wrapper.text()).to.include(applabI18n.makerWaitingforConnect());
     });
 
     it('and no button', () => {
@@ -159,13 +159,15 @@ describe('MakerStatusOverlay', () => {
     });
 
     it('and error text', () => {
-      expect(wrapper.text()).to.include('Make sure your board is plugged in.');
+      expect(wrapper.text()).to.include(applabI18n.makerCheckPluggedIn());
     });
 
     it('and a "Try Again" button', () => {
       const selector = 'button.try-again';
       expect(wrapper).to.have.descendants(selector);
-      expect(wrapper.find(selector).text()).to.include('Try Again');
+      expect(wrapper.find(selector).text()).to.include(
+        applabI18n.makerTryAgain()
+      );
     });
 
     it('that calls the provided try again handler', () => {
@@ -178,7 +180,9 @@ describe('MakerStatusOverlay', () => {
     it('and a "Run Without Board" button', () => {
       const selector = 'button.run-without-board';
       expect(wrapper).to.have.descendants(selector);
-      expect(wrapper.find(selector).text()).to.include('Run Without Board');
+      expect(wrapper.find(selector).text()).to.include(
+        applabI18n.makerRunWithoutBoard()
+      );
     });
 
     it('that calls the try again handler and useVirtualBoardOnNextRun handler', () => {
@@ -193,7 +197,9 @@ describe('MakerStatusOverlay', () => {
     it('and a "Setup Instructions" button', () => {
       const selector = 'button.setup-instructions';
       expect(wrapper).to.have.descendants(selector);
-      expect(wrapper.find(selector).text()).to.include('Setup Instructions');
+      expect(wrapper.find(selector).text()).to.include(
+        applabI18n.makerSetupInstructions()
+      );
     });
 
     it('that navigates to the Maker Setup page', () => {
