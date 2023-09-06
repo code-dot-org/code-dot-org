@@ -15,7 +15,10 @@ Feature: Policy Compliance and Parental Permission
     Then element "#lockout-submit" is enabled
 
     # Ensure that we are now "pending"
+    And I take note of the current loaded page
     When I press "lockout-submit"
+    Then I wait until I am on a different page than I noted before
+
     Then I wait to see "#lockout-panel-form"
     And element "#permission-status" contains text "Pending"
 
@@ -56,7 +59,9 @@ Feature: Policy Compliance and Parental Permission
     And element "#permission-status" contains text "Pending"
 
     # Perform a "resend"
+    And I take note of the current loaded page
     When I press "lockout-resend"
+    Then I wait until I am on a different page than I noted before
     Then I wait to see "#lockout-panel-form"
 
   Scenario: New under 13 account should be able to send a different email
@@ -74,7 +79,10 @@ Feature: Policy Compliance and Parental Permission
     Then element "#lockout-submit" is enabled
 
     # Ensure that we are now "pending"
+    And I take note of the current loaded page
     When I press "lockout-submit"
+    Then I wait until I am on a different page than I noted before
+
     Then I wait to see "#lockout-panel-form"
     And element "#permission-status" contains text "Pending"
 
@@ -84,6 +92,9 @@ Feature: Policy Compliance and Parental Permission
     Then element "#lockout-submit" is enabled
 
     # Ensure that the new email was used
+    And I take note of the current loaded page
     When I press "lockout-submit"
+    Then I wait until I am on a different page than I noted before
+
     Then I wait to see "#lockout-panel-form"
     And element "#parent-email" has value "parent2@example.com"
