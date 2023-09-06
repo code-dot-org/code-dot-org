@@ -144,7 +144,11 @@ steps:
 
   - name: ui-tests
     # see: docker/dockerfiles/Dockerfile
+<<<<<<< HEAD
     image: codedotorg/code-dot-org:nodejs-20.5.1
+=======
+    image: codedotorg/code-dot-org:1.8.2
+>>>>>>> staging
     pull: always
     volumes:
       - name: rbenv
@@ -210,6 +214,10 @@ trigger:
     - pull_request
 ---
 kind: signature
+<<<<<<< HEAD
 hmac: 58bc7b4a2e57beb644d109116788a93b34194fb808f77819d0599611c75d12ac
+=======
+hmac: 2271780a3a761db23e78570831c6f9ca8f2e335fd65b13c7104151e5173d535a
+>>>>>>> staging
 
 ...
