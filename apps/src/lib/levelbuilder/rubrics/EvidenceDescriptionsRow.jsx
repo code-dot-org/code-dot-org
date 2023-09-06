@@ -1,16 +1,48 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export default function EvidenceDescriptionsRow({isAiEnabled, evidenceLabel}) {
+export default function EvidenceDescriptionsRow({
+  isAiEnabled,
+  evidenceLabel,
+  evidenceLevelData,
+  understanding,
+  updateLearningGoal,
+}) {
+  const handleTeacherDescriptionChange = event => {
+    updateLearningGoal(
+      evidenceLevelData.learningGoalId,
+      'evidenceLevels',
+      event.target.value,
+      understanding,
+      'teacherDescription'
+    );
+  };
+
+  const handleAiPromptChange = event => {
+    updateLearningGoal(
+      evidenceLevelData.learningGoalId,
+      'evidenceLevels',
+      event.target.value,
+      understanding,
+      'aiPrompt'
+    );
+  };
+
   return (
     <div style={styles.grid}>
       <label style={styles.gridLabels}>{evidenceLabel}</label>
-      <textarea style={styles.textareaBoxes} />
+      <textarea
+        style={styles.textareaBoxes}
+        value={evidenceLevelData.teacherDescription}
+        onChange={handleTeacherDescriptionChange}
+      />
       <textarea
         className={'ui-test-ai-prompt-textbox'}
         style={styles.textareaBoxes}
         disabled={!isAiEnabled}
         required={isAiEnabled}
+        value={evidenceLevelData.aiPrompt}
+        onChange={handleAiPromptChange}
       />
     </div>
   );
@@ -19,6 +51,9 @@ export default function EvidenceDescriptionsRow({isAiEnabled, evidenceLabel}) {
 EvidenceDescriptionsRow.propTypes = {
   isAiEnabled: PropTypes.bool,
   evidenceLabel: PropTypes.string,
+  evidenceLevelData: PropTypes.object,
+  understanding: PropTypes.number,
+  updateLearningGoal: PropTypes.func,
 };
 
 const styles = {

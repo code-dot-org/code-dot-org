@@ -25,6 +25,32 @@ export default function RubricsContainer({
             learningGoal: '',
             aiEnabled: false,
             position: 1,
+            evidenceLevels: [
+              {
+                learningGoalId: 'learningGoal-1',
+                teacherDescription: '',
+                understanding: 0,
+                aiPrompt: '',
+              },
+              {
+                learningGoalId: 'learningGoal-1',
+                teacherDescription: '',
+                understanding: 1,
+                aiPrompt: '',
+              },
+              {
+                learningGoalId: 'learningGoal-1',
+                teacherDescription: '',
+                understanding: 2,
+                aiPrompt: '',
+              },
+              {
+                learningGoalId: 'learningGoal-1',
+                teacherDescription: '',
+                understanding: 3,
+                aiPrompt: '',
+              },
+            ],
           },
         ]
   );
@@ -55,6 +81,32 @@ export default function RubricsContainer({
       learningGoal: '',
       aiEnabled: false,
       position: nextPosition,
+      evidenceLevels: [
+        {
+          learningGoalId: newId,
+          teacherDescription: '',
+          understanding: 0,
+          aiPrompt: '',
+        },
+        {
+          learningGoalId: newId,
+          teacherDescription: '',
+          understanding: 1,
+          aiPrompt: '',
+        },
+        {
+          learningGoalId: newId,
+          teacherDescription: '',
+          understanding: 2,
+          aiPrompt: '',
+        },
+        {
+          learningGoalId: newId,
+          teacherDescription: '',
+          understanding: 3,
+          aiPrompt: '',
+        },
+      ],
     };
   };
 
@@ -76,13 +128,42 @@ export default function RubricsContainer({
     setLearningGoalList(updatedLearningGoalList);
   };
 
-  const updateLearningGoal = (idToUpdate, keyToUpdate, newValue) => {
+  const updateLearningGoal = (
+    idToUpdate,
+    keyToUpdate,
+    newValue,
+    evidenceLevel,
+    descriptionType
+  ) => {
     const newLearningGoalData = learningGoalList.map(learningGoal => {
       if (idToUpdate === learningGoal.id) {
-        return {
-          ...learningGoal,
-          [keyToUpdate]: newValue,
-        };
+        if (keyToUpdate === 'evidenceLevels') {
+          if (descriptionType === 'teacherDescription') {
+            const newEvidenceLevels = learningGoal.evidenceLevels;
+            newEvidenceLevels.find(
+              level => level.understanding === evidenceLevel
+            ).teacherDescription = newValue;
+            return {
+              ...learningGoal,
+              [keyToUpdate]: newEvidenceLevels,
+            };
+          }
+          if (descriptionType === 'aiPrompt') {
+            const newEvidenceLevels = learningGoal.evidenceLevels;
+            newEvidenceLevels.find(
+              level => level.understanding === evidenceLevel
+            ).aiPrompt = newValue;
+            return {
+              ...learningGoal,
+              [keyToUpdate]: newEvidenceLevels,
+            };
+          }
+        } else {
+          return {
+            ...learningGoal,
+            [keyToUpdate]: newValue,
+          };
+        }
       } else {
         return learningGoal;
       }
@@ -125,7 +206,9 @@ export default function RubricsContainer({
     })
       .then(response => response.json())
       .then(data => {
-        navigateToHref(data.redirectUrl);
+        if (!rubric) {
+          navigateToHref(data.redirectUrl);
+        }
       })
       .catch(err => {
         console.error('Error saving rubric:' + err);
