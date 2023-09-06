@@ -4,6 +4,7 @@ import {expect} from '../../../../../util/deprecatedChai';
 import {mount} from 'enzyme';
 import sinon from 'sinon';
 import {UnconnectedMakerStatusOverlay} from '@cdo/apps/lib/kits/maker/ui/MakerStatusOverlay';
+import applabI18n from '@cdo/applab/locale';
 
 describe('MakerStatusOverlay', () => {
   const testProps = {
@@ -126,36 +127,8 @@ describe('MakerStatusOverlay', () => {
     });
 
     it('and error text', () => {
-      expect(wrapper.text()).to.include('This level requires the');
-      expect(wrapper.text()).to.include('Code.org Maker App');
-    });
-
-    it('and a "Setup Instructions" button', () => {
-      const selector = 'button.setup-instructions';
-      expect(wrapper).to.have.descendants(selector);
-      expect(wrapper.find(selector).text()).to.include(
-        'Get Code.org Maker App'
-      );
-    });
-
-    it('that navigates to the Maker Setup page', () => {
-      const selector = 'button.setup-instructions';
-      expect(handleOpenSetupPage).not.to.have.been.called;
-      wrapper.find(selector).simulate('click');
-      expect(handleOpenSetupPage).to.have.been.calledOnce;
-    });
-
-    it('and a "Disable Maker Toolkit" button', () => {
-      const selector = 'button.disable-maker-toolkit';
-      expect(wrapper).to.have.descendants(selector);
-      expect(wrapper.find(selector).text()).to.include('Disable Maker Toolkit');
-    });
-
-    it('that calls the disableMaker handler', () => {
-      const selector = 'button.disable-maker-toolkit';
-      expect(handleDisableMaker).not.to.have.been.called;
-      wrapper.find(selector).simulate('click');
-      expect(handleDisableMaker).to.have.been.calledOnce;
+      expect(wrapper.text()).to.include(applabI18n.makerLevelRequired());
+      expect(wrapper.text()).to.include(applabI18n.makerChromeBrowser());
     });
   });
 
