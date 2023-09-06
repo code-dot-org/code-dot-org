@@ -277,6 +277,8 @@ GEM
       rouge (>= 1.0.0)
     bindata (2.4.10)
     bindex (0.8.1)
+    binding_of_caller (1.0.0)
+      debug_inspector (>= 0.0.1)
     bootsnap (1.16.0)
       msgpack (~> 1.2)
     bootstrap-sass (2.3.2.2)
@@ -336,6 +338,7 @@ GEM
       rubyzip
       tableschema
     date (3.3.3)
+    debug_inspector (1.1.0)
     declarative (0.0.20)
     devise (4.7.3)
       bcrypt (~> 3.0)
@@ -950,6 +953,7 @@ DEPENDENCIES
   bcrypt (= 3.1.13)
   benchmark-ips
   better_errors (>= 2.7.0)
+  binding_of_caller
   bootsnap (>= 1.14.0)
   bootstrap-sass (~> 2.3.2.2)
   brakeman

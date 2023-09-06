@@ -72,6 +72,9 @@ group :development do
   # FIXME @snickell before merge: push to branch on code-dot-org/aws-google and update here once perms added
   gem 'aws-google', '>= 0.2.1', github: 'snickell/aws-google', branch: 'cli-only-auth'
 
+  # Enable interactive repl on `/__better_errors`
+  gem 'binding_of_caller'
+
   gem 'web-console', '~> 4.2.0'
   # Bootsnap pre-caches Ruby require paths + bytecode and speeds up boot time significantly.
   # We only use it in development atm to get a feel for it, and the benefit is greatest here.
