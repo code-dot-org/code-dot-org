@@ -19,6 +19,7 @@ require 'active_support/core_ext/object/blank'
 require_relative 'hoc_sync_utils'
 require_relative 'i18n_script_utils'
 require_relative 'redact_restore_utils'
+require_relative 'utils/malformed_i18n_reporter'
 require_relative '../animation_assets/manifest_builder'
 
 Dir[File.expand_path('../resources/**/*.rb', __FILE__)].sort.each {|file| require file}
@@ -120,6 +121,8 @@ module I18n
         next if locale == 'en-US'
         next unless File.directory?("i18n/locales/#{locale}/")
 
+        malformed_i18n_reporter = I18n::Utils::MalformedI18nReporter.new(locale)
+
         original_files.each do |original_path|
           relative_path = original_path.delete_prefix(original_dir)
           next unless I18nScriptUtils.file_changed?(locale, relative_path)
@@ -154,9 +157,9 @@ module I18n
             RedactRestoreUtils.restore(original_path, translated_path, translated_path, plugins)
           end
 
-          I18nScriptUtils.find_malformed_links_images(locale, translated_path)
+          malformed_i18n_reporter.process_file(translated_path)
         end
-        I18nScriptUtils.upload_malformed_restorations(locale)
+        malformed_i18n_reporter.report
       end
       puts "Restoration finished!"
     end

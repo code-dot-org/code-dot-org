@@ -1,7 +1,6 @@
 require File.expand_path('../../../dashboard/config/environment', __FILE__)
 require File.expand_path('../../../pegasus/helpers/pegasus_languages', __FILE__)
 
-require 'cdo/google/drive'
 require 'cdo/honeybadger'
 require 'cgi'
 require 'fileutils'
@@ -127,46 +126,6 @@ class I18nScriptUtils
 
   def self.run_bash_script(location)
     I18nScriptUtils.run_standalone_script("bash #{location}")
-  end
-
-  def self.report_malformed_restoration(key, translation, file_name)
-    @malformed_restorations ||= [["Key", "File Name", "Translation"]]
-    @malformed_restorations << [key, file_name, translation]
-  end
-
-  def self.upload_malformed_restorations(locale)
-    return if @malformed_restorations.blank?
-    if CDO.gdrive_export_secret
-      begin
-        @google_drive ||= Google::Drive.new(service_account_key: StringIO.new(CDO.gdrive_export_secret.to_json))
-        @google_drive.add_sheet_to_spreadsheet(@malformed_restorations, "i18n_bad_translations", locale)
-      rescue
-        puts "Failed to upload malformed restorations for #{locale}"
-      end
-    end
-    @malformed_restorations = nil
-  end
-
-  def self.recursively_find_malformed_links_images(hash, key_str, file_name)
-    hash.each do |key, val|
-      if val.is_a?(Hash)
-        I18nScriptUtils.recursively_find_malformed_links_images(val, "#{key_str}.#{key}", file_name)
-      else
-        I18nScriptUtils.report_malformed_restoration("#{key_str}.#{+key}", val, file_name) if I18nScriptUtils.contains_malformed_link_or_image(val)
-      end
-    end
-  end
-
-  # This function currently looks for
-  # 1. Translations with malformed redaction syntax, i.e. [] [0] (note the space)
-  # 2. Translations with similarly malformed markdown, i.e. [link] (example.com)
-  # If this function finds either of these cases in the string, it return true.
-  def self.contains_malformed_link_or_image(translation)
-    malformed_redaction_regex = /\[.*\]\s+\[[0-9]+\]/
-    malformed_markdown_regex = /\[.*\]\s+\(.+\)/
-    non_malformed_redaction = (translation =~ malformed_redaction_regex).nil?
-    non_malformed_translation = (translation =~ malformed_markdown_regex).nil?
-    return !(non_malformed_redaction && non_malformed_translation)
   end
 
   def self.get_level_url_key(script, level)
@@ -364,7 +323,7 @@ class I18nScriptUtils
 
   # Formats strings like 'en-US' to 'en_us'
   #
-  # @param [String] locale the BCP 47 (IETF language tag) format (e.g., 'en-US')
+  # @param locale [String] the BCP 47 (IETF language tag) format (e.g., 'en-US')
   # @return [String] the BCP 47 (IETF language tag) JS format (e.g., 'en_us')
   def self.to_js_locale(locale)
     locale.tr('-', '_').downcase
@@ -446,14 +405,5 @@ class I18nScriptUtils
     return unless Dir.empty?(dir)
 
     FileUtils.rm_r(dir)
-  end
-
-  def self.find_malformed_links_images(locale, file_path)
-    return unless File.exist?(file_path)
-
-    data = parse_file(file_path) rescue nil
-    return unless data&.values&.first&.length
-
-    recursively_find_malformed_links_images(data, locale, file_path)
   end
 end
