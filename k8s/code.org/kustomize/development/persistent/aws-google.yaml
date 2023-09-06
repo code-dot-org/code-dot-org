@@ -1,0 +1,12 @@
+apiVersion: v1 
+kind: PersistentVolumeClaim 
+metadata:   
+  name: aws-google
+  labels:
+    app: dashboard
+spec:
+  resources:
+    requests:
+      storage: 5Mi  
+  accessModes:
+    - ReadWriteMany

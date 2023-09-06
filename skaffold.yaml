@@ -68,6 +68,11 @@ profiles:
     rawYaml:
     - ./k8s/code.org/raw/*.yaml
 
+- name: dev-kustomize
+  manifests:
+    kustomize:
+      paths:
+      - ./k8s/code.org/kustomize/development
 
 portForward:
 - resourceType: Deployment
