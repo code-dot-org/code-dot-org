@@ -61,8 +61,8 @@ export const UnconnectedTeacherHomepage = ({
   const teacherReminders = useRef(null);
   const flashes = useRef(null);
 
-  /* We are hiding the AFE banner to free up space on the Teacher Homepage (September 2023) when
-   * we want to show the AFE banner again remove the next line and uses of 'shouldShowAFEBanner'.
+  /* We are hiding the AFE banner to free up space on the Teacher Homepage as of September 2023).
+   * When we want to show the AFE banner again remove the next line and uses of 'shouldShowAFEBanner'.
    */
   const shouldShowAFEBanner = false;
 
