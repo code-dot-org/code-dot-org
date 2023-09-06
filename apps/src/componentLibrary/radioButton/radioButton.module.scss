@@ -64,7 +64,7 @@
   }
 
   // Focus styles
-  input[type="radio"]:focus + .radioIcon {
+  input[type="radio"]:focus-visible + .radioIcon {
     outline: 2px solid $light_primary_500;
     outline-offset: 2px;
   }
