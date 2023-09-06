@@ -1,347 +1,339 @@
 {
-  "columnDetailsMaximumValue": "максимум",
-  "columnDetailsMinimumValue": "мінімум",
-  "columnInspectorDescription": "Опис",
-  "correctAnswer": "Правильно",
-  "dataCardLastUpdated": "Останнє оновлення",
+  "columnDetailsMaximumValue": "حداکثر",
+  "columnDetailsMinimumValue": "حداقل",
+  "columnInspectorDescription": "توضیحات",
+  "correctAnswer": "صحیح است",
+  "dataCardLastUpdated": "آخرین بروزرسانی",
   "datasets": {
     "abalone": {
       "fields": {
-        "Height": {
-          "id": "Висота"
-        },
         "Length": {
-          "id": "Тривалість"
+          "id": "طول"
         }
       }
     },
     "bike_sharing": {
       "fields": {
         "Month": {
-          "id": "Місяць"
+          "id": "ماه"
         },
         "index": {
-          "id": "індекс"
+          "id": "شاخص"
         }
       }
     },
     "billionaires": {
       "fields": {
         "Age": {
-          "id": "Вік"
+          "id": "سن"
         },
         "Gender": {
-          "id": "Стать"
+          "id": "جنسیت"
         }
       }
     },
     "boba_toy": {
       "fields": {
         "banana": {
-          "id": "банан"
+          "id": "موز"
         }
       }
     },
     "census_part": {
       "fields": {
         "age": {
-          "id": "вік"
+          "id": "سن"
         }
       }
     },
     "club_random_toy": {
       "fields": {
         "color": {
-          "id": "колір"
+          "id": "رنگ"
         },
         "food": {
-          "id": "їжа"
+          "id": "ماده خوراکی"
         },
         "music": {
-          "id": "музика"
+          "id": "موسیقی"
         }
       }
     },
     "heart": {
       "fields": {
         "Age": {
-          "id": "Вік"
+          "id": "سن"
         }
       }
     },
     "insurance_cost": {
       "fields": {
         "age": {
-          "id": "вік"
+          "id": "سن"
         }
       }
     },
     "loneliness_interests": {
       "fields": {
         "Internet": {
-          "id": "Інтернет"
+          "id": "اینترنت"
         },
         "Writing": {
-          "id": "Написання"
+          "id": "نوشتن"
         }
       }
     },
     "loneliness_music": {
       "fields": {
         "Country": {
-          "id": "Країна"
+          "id": "کشور"
         },
         "Music": {
-          "id": "Музика"
+          "id": "موسیقی"
         }
       }
     },
     "medical_priority": {
       "fields": {
         "age": {
-          "id": "вік"
+          "id": "سن"
         }
       }
     },
     "movies": {
       "fields": {
         "Country": {
-          "id": "Країна"
+          "id": "کشور"
         },
         "Name": {
-          "id": "Ім’я"
+          "id": "نام"
         },
         "Score": {
-          "id": "Рахунок"
+          "id": "امتیاز"
         },
         "Star": {
-          "id": "Зірка"
+          "id": "استار - ستاره (رقص)"
         }
       }
     },
     "naan_toy": {
       "fields": {
         "cheese": {
-          "id": "сир"
+          "id": "پنیر"
         },
         "chicken": {
-          "id": "курка"
+          "id": "مرغ"
+        },
+        "lamb": {
+          "id": "بره"
         },
         "onion": {
-          "id": "цибуля"
+          "id": "پیاز"
         }
       }
     },
     "nutrition": {
       "fields": {
         "Category": {
-          "id": "Категорія"
+          "id": "دسته"
         },
         "Description": {
-          "id": "Опис"
+          "id": "توضیحات"
         }
       }
     },
     "poke_toy": {
       "fields": {
         "avocado": {
-          "id": "авокадо"
+          "id": "آواکادو"
+        },
+        "ginger": {
+          "id": "زنجبیل"
         },
         "onion": {
-          "id": "цибуля"
+          "id": "پیاز"
         }
       }
     },
     "poutine_toy": {
       "fields": {
         "bacon": {
-          "id": "шинка"
+          "id": "بیکن"
         },
         "cheese": {
-          "id": "сир"
+          "id": "پنیر"
         },
         "lobster": {
-          "id": "лобстер"
+          "id": "لابستر"
         },
         "meat": {
-          "id": "м'ясо"
+          "id": "گوشت"
         },
         "mushrooms": {
-          "id": "гриби"
+          "id": "قارچ ها"
         }
       }
     },
     "raspado_toy": {
       "fields": {
         "lime": {
-          "id": "лайм"
+          "id": "لیموترش"
         },
         "strawberry": {
-          "id": "полуниця"
+          "id": "توت فرنگی"
         }
       }
     },
     "safari_toy": {
       "fields": {
         "alligator": {
-          "id": "алігатор"
+          "id": "تمساح\n"
         },
         "elephant": {
-          "id": "слон"
+          "id": "فیل"
         },
         "people": {
-          "id": "люди"
+          "id": "افراد"
         },
         "rhino": {
-          "id": "носоріг"
+          "id": "کرگدن"
         },
         "trees": {
-          "id": "дерева"
+          "id": "درخت"
         }
       },
-      "name": "Сафарі"
+      "name": "سافاری"
     },
     "salad_toy": {
       "fields": {
         "avocado": {
-          "id": "авокадо"
+          "id": "آواکادو"
         },
         "beans": {
-          "id": "боби"
+          "id": "لوبیا"
         },
         "cheese": {
-          "id": "сир"
+          "id": "پنیر"
         },
         "chicken": {
-          "id": "курка"
+          "id": "مرغ"
         },
         "fruit": {
-          "id": "фрукт"
+          "id": "میوه"
+        },
+        "tomato": {
+          "id": "گوجه"
         }
       }
     },
     "salsa_toy": {
       "fields": {
         "avocado": {
-          "id": "авокадо"
+          "id": "آواکادو"
         },
         "beans": {
-          "id": "боби"
+          "id": "لوبیا"
         },
         "corn": {
-          "id": "кукурудзу"
+          "id": "ذرت"
         },
         "lime": {
-          "id": "лайм"
+          "id": "لیموترش"
         },
         "onion": {
-          "id": "цибуля"
+          "id": "پیاز"
         }
       }
     },
     "shapes_v1_toy": {
       "fields": {
-        "sides": {
-          "id": "сторони"
-        },
         "size": {
-          "id": "розмір"
+          "id": "اندازه"
         }
       }
     },
     "shapes_v2_toy": {
       "fields": {
-        "sides": {
-          "id": "сторони"
-        },
         "size": {
-          "id": "розмір"
+          "id": "اندازه"
         }
       }
     },
     "shoe_survey_toy": {
       "fields": {
         "day": {
-          "id": "день"
+          "id": "روز"
+        },
+        "shoe": {
+          "id": "کفش"
         },
         "weather": {
-          "id": "погода"
+          "id": "آب و هوا"
         }
       }
     },
     "songs": {
       "fields": {
         "Artist": {
-          "id": "Художник"
+          "id": "هنرمند"
         }
       }
     },
     "student_alcohol_consumption": {
       "fields": {
         "age": {
-          "id": "вік"
+          "id": "سن"
         },
         "health": {
-          "id": "здоров’я"
+          "id": "سلامتی"
         },
         "school": {
-          "id": "школа"
+          "id": "مدرسه"
         }
       }
     },
     "student_survey": {
       "fields": {
         "Achievements": {
-          "id": "Досягнення"
+          "id": "دستاوردها"
         },
         "Age": {
-          "description": "Вік",
-          "id": "Вік"
+          "description": "سن",
+          "id": "سن"
         },
         "Country": {
-          "id": "Країна"
-        },
-        "Empathy": {
-          "id": "Емпатія"
+          "id": "کشور"
         },
         "Gender": {
-          "description": "Стать",
-          "id": "Стать"
-        },
-        "Height": {
-          "description": "Висота",
-          "id": "Висота"
+          "description": "جنسیت",
+          "id": "جنسیت"
         },
         "Internet": {
-          "id": "Інтернет"
+          "id": "اینترنت"
         },
         "Music": {
-          "id": "Музика"
+          "id": "موسیقی"
         },
         "Writing": {
-          "id": "Написання"
+          "id": "نوشتن"
         }
       }
     },
     "zoo": {
       "fields": {
         "Aquatic": {
-          "id": "Водні"
+          "id": "آبزی"
         }
       }
     }
   },
-  "incorrectAnswer": "Неправильно",
-  "modelCardFeatures": "Ознаки",
-  "modelCardLabel": "Мітка",
-  "modelCardPossibleValuesMaximum": "максимум",
-  "modelCardPossibleValuesMinimum": "мінімум",
-  "navigateBack": "Назад",
-  "navigateDone": "Кінець",
-  "navigateForward": "Продовжити",
-  "predictButton": "Прогнозування",
-  "resultsTableFeatureHeader": "Ознаки",
-  "saveProgress": "Зберегти",
-  "trainModelHeading": "Тренування",
-  "tryAgain": "Спробуйте знову"
+  "modelCardPossibleValuesMaximum": "حداکثر",
+  "modelCardPossibleValuesMinimum": "حداقل",
+  "navigateBack": "بازگشت",
+  "navigateDone": "تمام کن",
+  "navigateForward": "ادامه",
+  "predictButton": "پیشبینی کردن",
+  "saveProgress": "ذخيره",
+  "tryAgain": "دوباره تلاش کنید",
+  "uniqueOptionsWarningNotice": "توجه"
 }
