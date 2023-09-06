@@ -9,13 +9,14 @@ import Toggle from '@cdo/apps/componentLibrary/toggle';
 
 describe('Design System - Toggle', () => {
   it('Toggle - renders with correct label', () => {
+    const toggleLabel = 'Toggle label';
     render(
-      <Toggle name="test-toggle" value="test-toggle" label="Toggle label" />
+      <Toggle name="test-toggle" value="test-toggle" label={toggleLabel} />
     );
 
     const toggle = screen.getByDisplayValue('test-toggle');
     expect(toggle).to.exist;
-    expect(screen.getByText('Toggle label')).to.exist;
+    expect(screen.getByText(toggleLabel)).to.exist;
   });
 
   it('Toggle - changes checked state on click', async () => {
