@@ -1,8 +1,8 @@
 class RubricsController < ApplicationController
   include Rails.application.routes.url_helpers
 
-  before_action :require_levelbuilder_mode_or_test_env
-  load_and_authorize_resource
+  before_action :require_levelbuilder_mode_or_test_env, except: [:submit_evaluations]
+  load_and_authorize_resource except: [:submit_evaluations]
 
   # GET /rubrics/:rubric_id/edit
   def edit
@@ -41,12 +41,7 @@ class RubricsController < ApplicationController
     end
   end
 
-  private
-
-  def rubric_params
-    params.transform_keys(&:underscore).permit(:level_id, :lesson_id, learning_goals_attributes: [:learning_goal, :ai_enabled, :position])
-  end
-
+  # POST /rubrics/:id/submit_evaluations
   def submit_evaluations
     permitted_params = params.permit(:id, :student_id)
     learning_goal_ids = LearningGoal.where(rubric_id: permitted_params[:id]).pluck(:id)
@@ -57,5 +52,11 @@ class RubricsController < ApplicationController
     else
       return head :bad_request
     end
+  end
+
+  private
+
+  def rubric_params
+    params.transform_keys(&:underscore).permit(:level_id, :lesson_id, learning_goals_attributes: [:learning_goal, :ai_enabled, :position])
   end
 end

@@ -172,10 +172,11 @@ describe('RubricContainer', () => {
     expect(wrapper.text()).to.include('Feedback will be available on Level 7');
   });
 
-  it('shows submit button if student data', () => {
+  it('shows submit button if has student data and on level for evaluation', () => {
     const wrapper = shallow(
       <RubricContainer
         rubric={defaultRubric}
+        currentLevelName="test_level"
         studentLevelInfo={{name: 'Grace Hopper'}}
         canProvideFeedback
       />
@@ -188,6 +189,7 @@ describe('RubricContainer', () => {
       <RubricContainer
         rubric={defaultRubric}
         teacherHasEnabledAi
+        currentLevelName="test_level"
         studentLevelInfo={{name: 'Grace Hopper'}}
       />
     );
@@ -203,6 +205,7 @@ describe('RubricContainer', () => {
     postStub.restore();
     expect(wrapper.find('Button').props().disabled).to.be.true;
     await processEventLoop();
+    wrapper.update();
     expect(wrapper.find('Button').props().disabled).to.be.false;
     expect(wrapper.find('BodyThreeText').at(1).props().children).to.include(
       'Feedback submitted at'
@@ -215,6 +218,7 @@ describe('RubricContainer', () => {
         rubric={defaultRubric}
         teacherHasEnabledAi
         studentLevelInfo={{name: 'Grace Hopper'}}
+        currentLevelName="test_level"
       />
     );
     const postStub = sinon.stub(HttpClient, 'post').returns(Promise.reject());

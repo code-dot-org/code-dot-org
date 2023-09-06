@@ -335,7 +335,7 @@ Dashboard::Application.routes.draw do
       end
     end
 
-    resources :rubrics, only: [:edit, :new] do
+    resources :rubrics, only: [:create, :edit, :new, :update] do
       member do
         post 'submit_evaluations'
       end

@@ -131,11 +131,11 @@ export default function RubricContainer({
             />
           ))}
         </div>
-        {!!studentLevelInfo && (
+        {canProvideFeedback && (
           <div className={style.rubricContainerFooter}>
             <div className={style.submitToStudentButtonAndError}>
               <Button
-                text="Submit to student"
+                text={i18n.submitToStudent()}
                 color={Button.ButtonColor.brandSecondaryDefault}
                 onClick={submitFeedbackToStudent}
                 className={style.submitToStudentButton}
@@ -143,11 +143,15 @@ export default function RubricContainer({
               />
               {errorSubmitting && (
                 <BodyThreeText className={style.errorMessage}>
-                  Error submitting feedback to student.
+                  {i18n.errorSubmittingFeedback()}
                 </BodyThreeText>
               )}
-              {!errorSubmitting && lastSubmittedTimestamp && (
-                <BodyThreeText>{`Feedback submitted at ${lastSubmittedTimestamp}`}</BodyThreeText>
+              {!errorSubmitting && !!lastSubmittedTimestamp && (
+                <BodyThreeText>
+                  {i18n.feedbackSubmittedAt({
+                    timestamp: lastSubmittedTimestamp,
+                  })}
+                </BodyThreeText>
               )}
             </div>
           </div>
