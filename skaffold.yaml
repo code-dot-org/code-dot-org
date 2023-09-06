@@ -54,7 +54,7 @@ deploy:
             # a pre-deploy hook, so they aren't destroyed when `skaffold dev` quits
             command: [
               "sh", "-c", 
-              "kubectl apply -f k8s/code.org/persistent --context=$SKAFFOLD_KUBE_CONTEXT --namespace=$SKAFFOLD_NAMESPACES"
+              "kubectl apply -f k8s/code.org/raw/persistent --context=$SKAFFOLD_KUBE_CONTEXT --namespace=$SKAFFOLD_NAMESPACES"
             ]
 manifests:
   rawYaml:
