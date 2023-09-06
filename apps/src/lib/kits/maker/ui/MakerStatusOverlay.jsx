@@ -197,7 +197,7 @@ class BoardNotFound extends Component {
         <UniformWidth>
           <OverlayButton
             primary
-            text={applabI18n.tryAgain()}
+            text={applabI18n.makerTryAgain()}
             className="try-again"
             onClick={this.props.handleTryAgain}
           />
