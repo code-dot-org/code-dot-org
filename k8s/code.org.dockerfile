@@ -261,9 +261,8 @@ COPY --chown=${UID} --from=code.org-rbenv ${SRC}/Gemfile ${SRC}/Gemfile
 #
 # DONE HACK WORKAROUNDS FOR APPLE SILICON
 
-SHELL [ "zsh", "-l", "-c" ]
+SHELL [ "zsh", "-ic" ]
 
+ENTRYPOINT [ "zsh", "-ic" ]
 # CMD tail -f /dev/null
-CMD \
-  eval "$(rbenv init -)" && \
-  ./bin/dashboard-server
+CMD [ "./bin/dashboard-server" ]
