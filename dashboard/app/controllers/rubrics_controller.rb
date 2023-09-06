@@ -35,9 +35,10 @@ class RubricsController < ApplicationController
     @lesson = @rubric.lesson
 
     if @rubric.update(rubric_params)
-      redirect_to edit_rubric_path(@rubric.id), notice: 'Rubric was successfully updated.'
+      render json: @rubric
+      # tried redirect, couldn't get it to work.  Need to add notice. redirect_to edit_rubric_path(@rubric.id), notice: 'Rubric was successfully updated.'
     else
-      render :edit
+      render action: 'edit'
     end
   end
 
