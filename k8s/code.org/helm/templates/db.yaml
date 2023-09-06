@@ -3,30 +3,28 @@ kind: Service
 metadata:
   name: {{ include "dashboard.fullname" . }}-db
   labels:
-    {{- include "dashboard.labels" . | nindent 4 }}
+    app.kubernetes.io/name: {{ include "dashboard.fullname" . }}-db
 spec:
-  selector:
-    {{- include "dashboard.selectorLabels" . | nindent 4 }}
   ports:
     - protocol: TCP
       port: 3306
+  selector:
+    app.kubernetes.io/name: {{ include "dashboard.fullname" . }}-db
 ---
 apiVersion: apps/v1
 kind: StatefulSet
 metadata:
   name: {{ include "dashboard.fullname" . }}-db
-  labels:
-    {{- include "dashboard.labels" . | nindent 4 }}
 spec:
   serviceName: {{ include "dashboard.fullname" . }}-db
   replicas: 1
   selector:
     matchLabels:
-      {{- include "dashboard.selectorLabels" . | nindent 6 }}
+      app.kubernetes.io/name: {{ include "dashboard.fullname" . }}-db
   template:
     metadata:
       labels:
-        {{- include "dashboard.selectorLabels" . | nindent 8 }}
+        app.kubernetes.io/name: {{ include "dashboard.fullname" . }}-db
     spec:
       containers:
       - name: db
