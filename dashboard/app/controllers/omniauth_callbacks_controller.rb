@@ -374,7 +374,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     has_auth_email = user.migrated? && user.authentication_options.any? {|ao| ao.hashed_email.present?}
     user.persisted? && user.oauth_student? &&
     user.email.blank? && user.hashed_email.blank? &&
-      # Also *all* AuthenticationOption's emails are blank
+    # Also *all* AuthenticationOption's emails are blank
     !has_auth_email && !user.has_activity?
   end
 

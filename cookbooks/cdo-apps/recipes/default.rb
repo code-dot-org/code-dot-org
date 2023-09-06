@@ -98,8 +98,8 @@ include_recipe 'cdo-apps::build'
 
 # Install nodejs if apps build specified in attributes.
 if node['cdo-secrets']["build_apps"] ||
-  # Or install nodejs if the daemon builds apps packages in this environment.
-  # TODO keep this logic in sync with `BUILD_PACKAGE` in `package.rake`.
+   # Or install nodejs if the daemon builds apps packages in this environment.
+   # TODO keep this logic in sync with `BUILD_PACKAGE` in `package.rake`.
    (node['cdo-apps']['daemon'] && %w[staging test adhoc].include?(node.chef_environment))
   include_recipe 'cdo-nodejs'
   include_recipe 'cdo-apps::google_chrome'

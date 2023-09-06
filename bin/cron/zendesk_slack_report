@@ -80,7 +80,7 @@ class Zendesk
   def groups
     @groups ||= self.class.
                 get(
-        "/api/v2/groups.json",
+                  "/api/v2/groups.json",
         {basic_auth: {username: 'dev@code.org/token', password: CDO.zendesk_dev_token}}
       ).
                 parsed_response["groups"].
@@ -91,7 +91,7 @@ class Zendesk
   def users
     @users ||= self.class.
                get(
-        "/api/v2/users.json?role[]=admin",
+                 "/api/v2/users.json?role[]=admin",
         {basic_auth: {username: 'dev@code.org/token', password: CDO.zendesk_dev_token}}
       ).
                parsed_response["users"].

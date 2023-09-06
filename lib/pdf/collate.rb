@@ -35,9 +35,9 @@ module PDF
     all_paths = body.each_line.map(&:strip).
                 reject {|s| s.nil? || s == ''}.
                 map do |filename|
-        next filename if string_is_url(filename)
-        File.expand_path(filename, File.dirname(collate_file))
-      end
+      next filename if string_is_url(filename)
+      File.expand_path(filename, File.dirname(collate_file))
+    end
     return [options, all_paths]
   end
 

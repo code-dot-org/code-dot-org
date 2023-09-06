@@ -20,9 +20,9 @@ class Api::V1::SchoolAutocomplete < AutocompleteHelper
       matches = match_terms.join ' + '
       rows = rows.
              where("MATCH(name, city) AGAINST(? IN BOOLEAN MODE)", terms.join(' ')).
-        # This SQL string is not at risk for injection vulnerabilites because
-        # matches contains exclusively strings which have been sanitized by
-        # activerecord, so it's safe to wrap in Arel.sql
+             # This SQL string is not at risk for injection vulnerabilites because
+             # matches contains exclusively strings which have been sanitized by
+             # activerecord, so it's safe to wrap in Arel.sql
              order(Arel.sql("(#{matches}) DESC, state, city, name"))
     elsif search_by_zip?((query = query.strip))
       query = "#{query[0, 5]}%"
@@ -32,9 +32,9 @@ class Api::V1::SchoolAutocomplete < AutocompleteHelper
       return [] if query.length < MIN_WORD_LENGTH + 2
       rows = rows.
              where("MATCH(name,city) AGAINST(? IN BOOLEAN MODE)", query).
-        # This SQL string is not at risk for injection vulnerabilites because
-        # it's being sanitized by activerecord, so it's safe to wrap in
-        # Arel.sql
+             # This SQL string is not at risk for injection vulnerabilites because
+             # it's being sanitized by activerecord, so it's safe to wrap in
+             # Arel.sql
              order(ActiveRecord::Base.sanitize_sql_for_order([Arel.sql("MATCH(name,city) AGAINST(? IN BOOLEAN MODE) DESC, state, city, name"), query]))
     end
 

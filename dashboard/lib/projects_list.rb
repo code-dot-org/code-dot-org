@@ -232,9 +232,9 @@ module ProjectsList
                                                  join(user_project_storage_ids, id: Sequel[:projects][:storage_id]).
                                                  join(:users, id: Sequel[user_project_storage_ids][:user_id]).
                                                  where(
-          unfeatured_at: nil,
-          project_type: project_type.to_s,
-          state: 'active'
+                                                   unfeatured_at: nil,
+                                                   project_type: project_type.to_s,
+                                                   state: 'active'
         ).
                                                  exclude(published_at: nil).
                                                  exclude(abuse_score: 0...).

@@ -95,14 +95,14 @@ module Pd::SurveyPipeline
         expected_result << submission_no_content.
                            merge(question_content[qid].except(:sub_questions)).
                            merge(
-            qid: DailySurveyJoiner.compute_descendant_key(qid, "Sub question #{i + 1}"),
-            name: DailySurveyJoiner.compute_descendant_key(qname, "Sub question #{i + 1}"),
-            text: "#{qtext} -> Sub question #{i + 1}",
-            type: TYPE_RADIO,
-            answer: "Option #{i + 1}",
-            answer_type: ANSWER_SINGLE_SELECT,
-            max_value: question_content[qid][:options].length,
-            parent: qname
+                             qid: DailySurveyJoiner.compute_descendant_key(qid, "Sub question #{i + 1}"),
+                             name: DailySurveyJoiner.compute_descendant_key(qname, "Sub question #{i + 1}"),
+                             text: "#{qtext} -> Sub question #{i + 1}",
+                             type: TYPE_RADIO,
+                             answer: "Option #{i + 1}",
+                             answer_type: ANSWER_SINGLE_SELECT,
+                             max_value: question_content[qid][:options].length,
+                             parent: qname
           )
       end
 

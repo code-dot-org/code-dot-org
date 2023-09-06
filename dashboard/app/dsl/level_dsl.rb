@@ -33,9 +33,9 @@ class LevelDSL < BaseDSL
   # @override
   def i18n_hash
     fields = self.class.i18n_fields.
-      # we stringify the keys in the hash below, so also stringify these
+             # we stringify the keys in the hash below, so also stringify these
              map(&:to_str).
-      # sort the fields here so the resulting hash is also sorted
+             # sort the fields here so the resulting hash is also sorted
              sort
 
     @hash.

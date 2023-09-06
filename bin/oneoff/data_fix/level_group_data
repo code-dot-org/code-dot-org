@@ -107,8 +107,8 @@ def migrate_level_group_user_level(user_level, level_source_data)
   level_source = LevelSource.
                  create_with(data: new_data_json).
                  find_or_create_by(
-      md5: new_data_json_md5,
-      level_id: user_level.level_id
+                   md5: new_data_json_md5,
+                   level_id: user_level.level_id
     )
   user_level.level_source_id = level_source.id
 
@@ -126,9 +126,9 @@ def create_sublevel_user_level(user_level, sublevel_level_id, sublevel_raw_data)
   # Determine if there is an existing sublevel UserLevel, doing nothing if so.
   sublevel_user_level = UserLevel.
                         where(
-      user_id: user_level.user_id,
-      level_id: sublevel_level_id,
-      script_id: user_level.script_id
+                          user_id: user_level.user_id,
+                          level_id: sublevel_level_id,
+                          script_id: user_level.script_id
     ).
                         first
   return if sublevel_user_level
@@ -140,8 +140,8 @@ def create_sublevel_user_level(user_level, sublevel_level_id, sublevel_raw_data)
   sublevel_level_source = LevelSource.
                           create_with(data: data).
                           find_or_create_by(
-      md5: md5,
-      level_id: sublevel_level_id
+                            md5: md5,
+                            level_id: sublevel_level_id
     )
 
   # Actually create the UserLevel for the sublevel.

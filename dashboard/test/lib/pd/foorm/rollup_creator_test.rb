@@ -58,7 +58,7 @@ module Pd::Foorm
       setup_csf_workshop
       rollup = RollupCreator.
                calculate_averaged_rollup(
-          @summarized_answers,
+                 @summarized_answers,
           @question_details,
           @facilitators,
           split_by_facilitator: true

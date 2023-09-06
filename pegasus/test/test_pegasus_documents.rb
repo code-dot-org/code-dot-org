@@ -78,7 +78,7 @@ class PegasusTest < Minitest::Test
     all_documents = app.helpers.all_documents.reject do |page|
       # 'Splat' documents not yet handled.
       page[:uri].end_with?('/splat', '/splat.fetch') ||
-      # Private routes not yet handled.
+        # Private routes not yet handled.
         page[:uri].start_with?('/private')
     end
 

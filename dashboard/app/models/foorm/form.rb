@@ -228,8 +228,8 @@ class Foorm::Form < ApplicationRecord
     if has_facilitator_questions
       filtered_submissions = filtered_submissions.
                              reject do |submission|
-          submission.workshop_metadata&.facilitator_specific?
-        end
+        submission.workshop_metadata&.facilitator_specific?
+      end
     end
 
     # Default headers are the non-facilitator specific set of questions.

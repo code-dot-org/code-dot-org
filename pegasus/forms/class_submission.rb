@@ -178,13 +178,13 @@ class ClassSubmission < Form
   def self.query(params)
     query = ::PEGASUS_DB[:forms].
             where(
-        {
-          kind: name,
-          review: "approved"
-        }
+              {
+                kind: name,
+                review: "approved"
+              }
       ).
             exclude(
-        Sequel.function(:coalesce, Forms.json('processed_data.class_format_category_s'), '') => "online"
+              Sequel.function(:coalesce, Forms.json('processed_data.class_format_category_s'), '') => "online"
       )
 
     unless params['class_format_category_s'].nil_or_empty?

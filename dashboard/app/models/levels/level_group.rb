@@ -291,8 +291,8 @@ class LevelGroup < DSLDefined
       level_group = script_level.levels[0]
       levelgroup_results = get_levelgroup_survey_results(script_level, section).
                            each_with_index do |result, index|
-          result[:question_index] = index
-        end
+        result[:question_index] = index
+      end
 
       # We will have results, even empty ones, for each student that submitted
       # an answer.

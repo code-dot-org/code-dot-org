@@ -732,9 +732,9 @@ class Lesson < ApplicationRecord
     lessons = Lesson.eager_load(script: :course_version).
               where("scripts.properties -> '$.curriculum_umbrella' = ?", script.curriculum_umbrella).
               where(key: key).
-      # This SQL string is not at risk for injection vulnerabilites because
-      # it's not actually using any user-provided values, just
-      # levelbuilder-defined ones, so it's safe to wrap in Arel.sql
+              # This SQL string is not at risk for injection vulnerabilites because
+              # it's not actually using any user-provided values, just
+              # levelbuilder-defined ones, so it's safe to wrap in Arel.sql
               order(Arel.sql("scripts.properties -> '$.version_year'"), 'scripts.name')
     lessons - [self]
   end

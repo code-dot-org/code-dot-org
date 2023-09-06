@@ -124,11 +124,11 @@ class VolunteerEngineerSubmission2015 < VolunteerEngineerSubmission
   def self.query(params)
     query = ::PEGASUS_DB[:forms].
             where(
-        kind: name,
-        Forms.json('data.allow_contact_b') => true,
+              kind: name,
+              Forms.json('data.allow_contact_b') => true,
       ).
             exclude(
-        Sequel.function(:coalesce, Forms.json('data.unsubscribed_s'), '') => UNSUBSCRIBE_FOREVER
+              Sequel.function(:coalesce, Forms.json('data.unsubscribed_s'), '') => UNSUBSCRIBE_FOREVER
       ).
             order(Sequel.desc(:id))
 
