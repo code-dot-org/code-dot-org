@@ -43,6 +43,11 @@ profiles:
   activation:
     - command: dev
     - kubeContext: docker-desktop
+
+- name: dev-raw
+  manifests:
+    rawYaml:
+    - ./k8s/code.org/raw/*.yaml
   deploy:
     kubectl:
       hooks:
@@ -54,11 +59,6 @@ profiles:
                 "sh", "-c", 
                 "kubectl apply -f k8s/code.org/raw/persistent --context=$SKAFFOLD_KUBE_CONTEXT --namespace=$SKAFFOLD_NAMESPACES"
               ]
-
-- name: dev-raw
-  manifests:
-    rawYaml:
-    - ./k8s/code.org/raw/*.yaml
 
 - name: dev-kustomize
   manifests:
