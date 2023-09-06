@@ -1,0 +1,20 @@
+---
+title: Middle School Curricula
+theme: responsive_full_width
+---
+
+%link{href: "/css/generated/design-system-pegasus.css", rel: "stylesheet"}
+%link{href: "/css/generated/page/school-curricula.css", rel: "stylesheet"}
+
+%section
+  .wrapper
+    %h1
+      =hoc_s(:curricula_title_middle)
+    %p.video-101__text=hoc_s(:curricula_desc_middle)
+    = view :middle_school_curricula_video
+    %hr
+    %div.centered
+      %p
+        =hoc_s(:heading_explore_curriculum_catalog)
+      %a.link-button.secondary{href: "https://studio.code.org/catalog"}
+        =hoc_s(:call_to_action_explore_curriculum_catalog)
