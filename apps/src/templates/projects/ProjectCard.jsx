@@ -10,6 +10,7 @@ import AccessibleDialog from '@cdo/apps/templates/AccessibleDialog';
 import RailsAuthenticityToken from '../../lib/util/RailsAuthenticityToken';
 import style from './project-card.module.scss';
 import Button from '@cdo/apps/templates/Button';
+import CheckBox from '@cdo/apps/componentLibrary/checkbox/Checkbox.tsx';
 
 const PROJECT_DEFAULT_IMAGE = '/blockly/media/projects/project_default.png';
 
@@ -233,22 +234,13 @@ export default class ProjectCard extends React.Component {
                 </p>
                 <div>
                   {checkboxes.map(checkbox => (
-                    <label key={checkbox.name} className={style.checkboxLabel}>
-                      <input
-                        type="checkbox"
-                        checked={checkbox.checked}
-                        onChange={() =>
-                          this.handleCheckboxChange(checkbox.name)
-                        }
-                        className={style.checkboxInput}
-                      />
-                      <span
-                        className={style.popUpBody}
-                        style={{...styles.checkboxSpan}}
-                      >
-                        {checkbox.name.replace(/-/g, ' ')}
-                      </span>
-                    </label>
+                    <CheckBox
+                      label={checkbox.name.replace(/-/g, ' ')}
+                      checked={checkbox.checked}
+                      onChange={() => this.handleCheckboxChange(checkbox.name)}
+                      size="s"
+                      style={{outline: 'none'}}
+                    />
                   ))}
                 </div>
                 {isAnyCheckboxSelected ? (
