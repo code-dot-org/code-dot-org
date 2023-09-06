@@ -14,6 +14,7 @@ import {
 } from '../redux';
 import {UnsupportedBrowserError} from '../MakerError';
 import OverlayButton from './OverlayButton';
+import applabI18n from '@cdo/applab/locale';
 
 const overlayDimensionsPropTypes = {
   width: PropTypes.number.isRequired,
@@ -32,7 +33,6 @@ export class UnconnectedMakerStatusOverlay extends Component {
     isWrongBrowser: PropTypes.bool.isRequired,
     hasConnectionError: PropTypes.bool.isRequired,
     handleTryAgain: PropTypes.func.isRequired,
-    handleDisableMaker: PropTypes.func.isRequired,
     useVirtualBoardOnNextRun: PropTypes.func.isRequired,
     handleOpenSetupPage: PropTypes.func.isRequired,
   };
@@ -46,20 +46,13 @@ export class UnconnectedMakerStatusOverlay extends Component {
       isWrongBrowser,
       hasConnectionError,
       handleTryAgain,
-      handleDisableMaker,
       handleOpenSetupPage,
     } = this.props;
     const dimensions = {width, height, scale};
     if (isConnecting) {
       return <WaitingToConnect {...dimensions} />;
     } else if (isWrongBrowser) {
-      return (
-        <UnsupportedBrowser
-          {...dimensions}
-          handleDisableMaker={handleDisableMaker}
-          handleOpenSetupPage={handleOpenSetupPage}
-        />
-      );
+      return <UnsupportedBrowser {...dimensions} />;
     } else if (hasConnectionError) {
       return (
         <BoardNotFound
@@ -174,9 +167,9 @@ class UnsupportedBrowser extends Component {
       <Overlay {...this.props}>
         <Icon icon="exclamation-triangle" />
         <Text>
-          This level requires that you use
+          {applabI18n.makerLevelRequires()}
           <br />
-          the Chrome browser.
+          {applabI18n.makerChromeBrowser()}
         </Text>
       </Overlay>
     );
@@ -200,21 +193,21 @@ class BoardNotFound extends Component {
     return (
       <Overlay {...this.props}>
         <Icon icon="exclamation-triangle" />
-        <Text>Make sure your board is plugged in.</Text>
+        <Text>{applabI18n.makerCheckPluggedIn()}</Text>
         <UniformWidth>
           <OverlayButton
             primary
-            text="Try Again"
+            text={applabI18n.tryAgain()}
             className="try-again"
             onClick={this.props.handleTryAgain}
           />
           <OverlayButton
-            text="Run Without Board"
+            text={applabI18n.makerRunWithoutBoard()}
             className="run-without-board"
             onClick={this.handleRunWithoutBoard}
           />
           <OverlayButton
-            text="Setup Instructions"
+            text={applabI18n.makerSetupInstructions()}
             className="setup-instructions"
             onClick={this.props.handleOpenSetupPage}
           />
