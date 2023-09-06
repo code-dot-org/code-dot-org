@@ -70,17 +70,17 @@ profiles:
   deploy:
     helm:
       releases:
-      - name: code-org
+      - name: dashboard
         chartPath: ./k8s/code.org/helm
         setValueTemplates:
           image: "{{.IMAGE_FULLY_QUALIFIED}}"
 
 portForward:
 - resourceType: Deployment
-  resourceName: code-org
+  resourceName: dashboard
   port: 3000
 - resourceType: StatefulSet
-  resourceName: db
+  resourceName: dashboard-db
   port: 3306
 # - resourceType: deployment
 #   resourceName: svc/kubernetes-dashboard-nginx-controller
