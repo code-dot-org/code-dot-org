@@ -127,7 +127,7 @@ describe('MakerStatusOverlay', () => {
     });
 
     it('and error text', () => {
-      expect(wrapper.text()).to.include(applabI18n.makerLevelRequired());
+      expect(wrapper.text()).to.include(applabI18n.makerLevelRequires());
       expect(wrapper.text()).to.include(applabI18n.makerChromeBrowser());
     });
   });
