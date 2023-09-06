@@ -22178,7 +22178,7 @@
         },
         "63df0c6e-ae3d-4724-9c1d-2ecd5bf8986a": {
           "tips": [
-            "Jednou z možností, jak představit Hodinu kódu, pokud sami nemáte s kódováním dostatečnou zkušenost, je ukázat jedno z [našich inspiračních videí][0]. Vyberte takové, o kterém si myslíte, že bude vaše studenty inspirovat, a pusťte jim ho. Pro mladší žáky doporučujeme video „[Hodina kódu je tady][1]“."
+            "Jednou z možností, jak představit Hodinu kódu, pokud sami nemáte s kódováním dostatečnou zkušenost, je ukázat jedno z [našich inspiračních videí](https://hourofcode.com/us/resources#videos). Vyberte takové, o kterém si myslíte, že bude vaše studenty inspirovat, a pusťte jim ho. Pro mladší žáky doporučujeme video „[Hodina kódu je tady](https://youtu.be/FC5FbmsH4fw)“."
           ]
         },
         "f96053ea-387e-47d5-a018-65619ec093b0": {
@@ -22191,7 +22191,7 @@
         },
         "91cc858b-9f90-4134-b890-237f457e8423": {
           "name": "Minecraft: Vodní plavba",
-          "description": "Řekněte žákům, ať se pokusí dokončit kurz [Minecraft: Vodní cesta][0].\n\nV závislosti na věku a dovednostech žáků můžete zvážit následující: \n\n-   U mladších dětí doporučujeme, abyste třídu rozdělili do dvojic a vyzvali žáky, ať na kurzu pracují společně – zvolte metodu [programování ve dvojicích][1].\n-   U žáků středních ročníků funguje dobře, když na kurzu pracují samostatně. Někdy pomůže, když žákům dovolíte, aby si kurz vybrali sami. Pokud je Minecraft nezajímá, podobnou aktivitu nabízí i kurzy [Kódování s Annou a Elsou][2] nebo [Star Wars][3].\n-   U starších studentů a dospělých funguje velice dobře kurz [Minecraft: Vodní cesta][4], a to jako úkol pro jednotlivce i jako aktivita programování ve dvojicích."
+          "description": "Řekněte žákům, ať se pokusí dokončit kurz [Minecraft: Vodní cesta](http://studio.code.org/s/aquatic/lessons/1/levels/1).\n\nV závislosti na věku a dovednostech žáků můžete zvážit následující: \n\n-   U mladších dětí doporučujeme, abyste třídu rozdělili do dvojic a vyzvali žáky, ať na kurzu pracují společně – zvolte metodu [programování ve dvojicích](https://youtu.be/vgkahOzFH2Q).\n-   U žáků středních ročníků funguje dobře, když na kurzu pracují samostatně. Někdy pomůže, když žákům dovolíte, aby si kurz vybrali sami. Pokud je Minecraft nezajímá, podobnou aktivitu nabízí i kurzy [Kódování s Annou a Elsou](https://studio.code.org/s/frozen/stage/1/puzzle/1) nebo [Star Wars](https://code.org/starwars).\n-   U starších studentů a dospělých funguje velice dobře kurz [Minecraft: Vodní cesta](http://studio.code.org/s/aquatic/lessons/1/levels/1), a to jako úkol pro jednotlivce i jako aktivita programování ve dvojicích."
         },
         "900f3fd4-40aa-42f7-89fc-e5240b2db143": {
           "tips": [
@@ -22199,7 +22199,7 @@
           ]
         },
         "1be305a6-52f5-40bb-a8d5-f851a3c61a3a": {
-          "description": "Když skupina nebo jednotlivec skončí dřív, může zkusit další z kurzů na [code.org/learn][0]."
+          "description": "Když skupina nebo jednotlivec skončí dřív, může zkusit další z kurzů na [code.org/learn](http://code.org/learn)."
         },
         "29412a26-dd7b-4990-a8bb-7e6f7bfa00d6": {
           "name": "Shrnutí",
@@ -22207,18 +22207,18 @@
         },
         "7e26ffea-ccaa-4969-9b40-01573fbe4303": {
           "name": "Oslavujte",
-          "description": "Vysvětlete, že dnes strávíte jednu hodinu programováním, protože tento týden je týden výuky počítačových věd a miliony dalších studentů po celém světě tento týden také absolvovaly Hodinu kódu. Poblahopřejte studentům, že se tohoto celosvětového hnutí zúčastnili.\n\nDejte všem studentům [certifikáty][0] s jejich jmény."
+          "description": "Vysvětlete, že dnes strávíte jednu hodinu programováním, protože tento týden je týden výuky počítačových věd a miliony dalších studentů po celém světě tento týden také absolvovaly Hodinu kódu. Poblahopřejte studentům, že se tohoto celosvětového hnutí zúčastnili.\n\nDejte všem studentům [certifikáty](https://studio.code.org/certificates/batch?course=bWM=) s jejich jmény."
         },
         "de9c3d28-c38a-4d2e-af91-a72a92d31f52": {
           "name": "Další kroky",
-          "description": "Sdělte studentům, že pokud se jim dnešní aktivita líbila, mají spoustu možností, jak se v programování dál rozvíjet. Doporučte jim, ať navštíví web [code.org/learn][0], kde najdou seznam možností. A pokud máte v plánu absolvovat nějaké doplňující aktivity, řekněte jim, co je čeká v příští hodině s vámi."
+          "description": "Sdělte studentům, že pokud se jim dnešní aktivita líbila, mají spoustu možností, jak se v programování dál rozvíjet. Doporučte jim, ať navštíví web [code.org/learn](<>), kde najdou seznam možností. A pokud máte v plánu absolvovat nějaké doplňující aktivity, řekněte jim, co je čeká v příští hodině s vámi."
         },
         "ebf68fd6-9cfe-4fc2-93b4-e61860fc853b": {
-          "description": "Dejte všem studentům [„výstupní lístky“][0] a požádejte je, aby shrnuli, co se dnes naučili, jaký měli pocit nebo co zažili. Studenti můžou kreslit, psát nebo se vyjádřit jakýmkoli způsobem, který uznají za vhodný. Pak od nich při odchodu z učebny všechny „výstupní lístky“ vyberte. Jestliže chcete, můžete tyto lístky zveřejnit na nástěnce nebo na nějakém viditelném místě ve škole jako připomínku Hodiny kódu."
+          "description": "Dejte všem studentům [„výstupní lístky“](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) a požádejte je, aby shrnuli, co se dnes naučili, jaký měli pocit nebo co zažili. Studenti můžou kreslit, psát nebo se vyjádřit jakýmkoli způsobem, který uznají za vhodný. Pak od nich při odchodu z učebny všechny „výstupní lístky“ vyberte. Jestliže chcete, můžete tyto lístky zveřejnit na nástěnce nebo na nějakém viditelném místě ve škole jako připomínku Hodiny kódu."
         },
         "f3360f34-a0a8-4d3d-98e2-fe6176ad0e2e": {
           "name": "Za Hodinou kódu",
-          "description": "Je mnoho způsobů, jak můžete po skončení Hodiny kódu pokračovat ve výuce informatiky s žáky prvního stupně. Tady je několik tipů:\n\n-   **Odučte kurzy [Základy informatiky Code Studia][0]**. Těchto šest kurzů je navrženo pro mladší žáky, kteří se díky sérii zadání seznámí se základy kódování. Pedagogové získají přístup k zajímavým plánům hodin, které jim pomůžou zpestřit výuku. Code.org nabízí k těmto kurzům bezplatný profesní rozvoj, a to jak online, tak prezenční.\n-   Další doporučení na kurzy najdete v části **[Můžete učit informatiku][1]**.\n-   **Pozvěte do třídy odborníka na informatiku, aby promluvil o své práci.** Nemáte takového odborníka ve svém okolí? Najděte si nějakého v naší [mapě dobrovolníků][2]."
+          "description": "Je mnoho způsobů, jak můžete po skončení Hodiny kódu pokračovat ve výuce informatiky s žáky prvního stupně. Tady je několik tipů:\n\n-   **Odučte kurzy [Základy informatiky Code Studia](http://code.org/educate/k5)**. Těchto šest kurzů je navrženo pro mladší žáky, kteří se díky sérii zadání seznámí se základy kódování. Pedagogové získají přístup k zajímavým plánům hodin, které jim pomůžou zpestřit výuku. Code.org nabízí k těmto kurzům bezplatný profesní rozvoj, a to jak online, tak prezenční.\n-   Další doporučení na kurzy najdete v části **[Můžete učit informatiku](https://code.org/teach)**.\n-   **Pozvěte do třídy odborníka na informatiku, aby promluvil o své práci.** Nemáte takového odborníka ve svém okolí? Najděte si nějakého v naší [mapě dobrovolníků](https://code.org/volunteer/local)."
         },
         "6b51b4f1-5b1d-4b29-af25-c48d716a2d22": {
           "description": "#### Příprava scény\n\nPřivítejte studenty ve třídě a velmi stručně uveďte aktivitu pro daný den. \n\n**Řekněte:** _Dnes strávíme jednu hodinu tím, že se budeme učit psát kód. Slyšel už někdo z vás slovo „kód“? Co to znamená?_\n\nStudenti možná zmíní, že „kód“ je jako tajná zpráva nebo že je to něco, co souvisí s počítači.",
@@ -22609,7 +22609,7 @@
         },
         "aced2726-6ed1-4645-9fd2-eccfe982584f": {
           "tips": [
-            "Jednou z možností, jak představit Hodinu kódu, pokud sami nemáte s kódováním dostatečnou zkušenost, je ukázat jedno z [našich inspiračních videí][0]. Vyberte takové, o kterém si myslíte, že bude vaše studenty inspirovat, a pusťte jim ho. Pro mladší žáky doporučujeme video „[Zvládne to každý][1]“."
+            "Jednou z možností, jak představit Hodinu kódu, pokud sami nemáte s kódováním dostatečnou zkušenost, je ukázat jedno z [našich inspiračních videí](https://hourofcode.com/us/resources#videos). Vyberte takové, o kterém si myslíte, že bude vaše studenty inspirovat, a pusťte jim ho. Pro mladší žáky doporučujeme video „[Zvládne to každý](https://youtu.be/qYZF6oIZtfc)“."
           ]
         },
         "a0692bbb-9e61-49d2-ac85-96bd4a922f5a": {
@@ -22617,7 +22617,7 @@
         },
         "8af57fdb-d7be-4cc2-9964-8f7eed4102f9": {
           "name": "Flappy",
-          "description": "Vyzvěte studenty, aby absolvovali kurz [Vytvořte hru Flappy][0].\n\nV závislosti na věku a dovednostech studentů můžete zvážit následující: \n\n-   U žáků druhého stupně základních škol a studentů středních škol doporučujeme zvolit kurzy, které umožňují volnou hru a vytváření aplikací nebo her. Studenty můžete nechat pracovat samostatně, ve dvojicích nebo v malých skupinách. Na webu [code.org/learn][1] je spousta dalších kurzů, které umožňují volně vytvářet, jako jsou [Play Lab][2] nebo náš nový nástroj v beta verzi [App Lab][3].\n-   U mladších žáků doporučujeme rozdělit třídu do dvojic nebo velmi malých skupin (po třech nebo čtyřech žácích) a říct členům každé skupiny, ať na dokončení kurzu pracují společně – využijte metodu [programování ve dvojicích][4].\n-   U dospělých funguje kurz [Napiš svůj první počítačový program][5] velmi dobře jako výzva pro individuální práci i jako aktivita programování ve dvojicích."
+          "description": "Vyzvěte studenty, aby absolvovali kurz [Vytvořte hru Flappy](https://studio.code.org/flappy/1).\n\nV závislosti na věku a dovednostech studentů můžete zvážit následující: \n\n-   U žáků druhého stupně základních škol a studentů středních škol doporučujeme zvolit kurzy, které umožňují volnou hru a vytváření aplikací nebo her. Studenty můžete nechat pracovat samostatně, ve dvojicích nebo v malých skupinách. Na webu [code.org/learn](http://code.org/learn) je spousta dalších kurzů, které umožňují volně vytvářet, jako jsou [Play Lab](https://studio.code.org/s/playlab/stage/1/puzzle/1) nebo náš nový nástroj v beta verzi [App Lab](https://code.org/educate/applab).\n-   U mladších žáků doporučujeme rozdělit třídu do dvojic nebo velmi malých skupin (po třech nebo čtyřech žácích) a říct členům každé skupiny, ať na dokončení kurzu pracují společně – využijte metodu [programování ve dvojicích](https://youtu.be/vgkahOzFH2Q).\n-   U dospělých funguje kurz [Napiš svůj první počítačový program](https://studio.code.org/hoc/1) velmi dobře jako výzva pro individuální práci i jako aktivita programování ve dvojicích."
         },
         "47fe47af-9de3-4ba5-8193-1f489bef9544": {
           "tips": [
@@ -22625,7 +22625,7 @@
           ]
         },
         "55f2f6a9-8e6b-49c2-8988-e2a09956e222": {
-          "description": "Když skupina nebo jednotlivec skončí dřív, může zkusit další z kurzů na [code.org/learn][0]."
+          "description": "Když skupina nebo jednotlivec skončí dřív, může zkusit další z kurzů na [code.org/learn](http://code.org/learn)."
         },
         "cd649101-5c1f-4bcb-9258-3cabf2bfccb6": {
           "name": "Shrnutí",
@@ -22633,7 +22633,7 @@
         },
         "ca7d5e61-0396-4885-934c-0d70ab63b072": {
           "name": "Oslavujte",
-          "description": "Vysvětlete, že dnes strávíte jednu hodinu programováním, protože tento týden je týden výuky počítačových věd a miliony dalších studentů po celém světě tento týden také absolvovaly Hodinu kódu. Poblahopřejte studentům, že se tohoto celosvětového hnutí zúčastnili.\n\nDejte všem studentům [certifikáty][0] s jejich jmény."
+          "description": "Vysvětlete, že dnes strávíte jednu hodinu programováním, protože tento týden je týden výuky počítačových věd a miliony dalších studentů po celém světě tento týden také absolvovaly Hodinu kódu. Poblahopřejte studentům, že se tohoto celosvětového hnutí zúčastnili.\n\nDejte všem studentům [certifikáty](http://code.org/certificates) s jejich jmény."
         },
         "d4bf5db5-6884-4166-ae90-3a5cd01b9695": {
           "name": "Další kroky",
@@ -22645,7 +22645,7 @@
         },
         "f7c11887-da26-4c7b-be7a-1b84d330ed30": {
           "name": "Za Hodinou kódu",
-          "description": "Je spousta způsobů, jak můžete i po skončení Hodiny kódu ve třídě prvního stupně ZŠ pokračovat v učení informatiky. Tady je několik tipů:\n\n-   **Odučte kurzy programu [Základy informatiky Code Studia][0]**. Těchto šest kurzů je určených pro mladé žáky. Děti se na sérii úloh naučí programovat a pedagogové získají přístup k zajímavým plánům hodin, které jim pomůžou zpestřit výuku. Code.org nabízí k těmto kurzům bezplatný profesní rozvoj, a to jak online, tak prezenční.\n-   **Pozvěte odborníka na počítačovou vědu, aby před třídou promluvil o své práci.** Žádné dobrovolníky neznáte? Oslovte některé z naší [mapy dobrovolníků][1]."
+          "description": "Je spousta způsobů, jak můžete i po skončení Hodiny kódu ve třídě prvního stupně ZŠ pokračovat v učení informatiky. Tady je několik tipů:\n\n-   **Odučte kurzy programu [Základy informatiky Code Studia](http://code.org/educate/k5)**. Těchto šest kurzů je určených pro mladé žáky. Děti se na sérii úloh naučí programovat a pedagogové získají přístup k zajímavým plánům hodin, které jim pomůžou zpestřit výuku. Code.org nabízí k těmto kurzům bezplatný profesní rozvoj, a to jak online, tak prezenční.\n-   **Pozvěte odborníka na počítačovou vědu, aby před třídou promluvil o své práci.** Žádné dobrovolníky neznáte? Oslovte některé z naší [mapy dobrovolníků](https://code.org/volunteer/local)."
         },
         "4fddbdf5-8e43-4536-bdaa-98b0b8c240ad": {
           "name": "Příprava scény",
@@ -22653,7 +22653,7 @@
         },
         "55cc55a9-45cb-4bbd-bf37-2de8a2abd9db": {
           "tips": [
-            "Pokud máte čas nebo studenti potřebují trochu víc informací, můžete zvážit, jestli před událostí Hodina kódu neodučíte kurz [„Kreslicí stroj“][0]. Tato krátká lekce představí studentům koncept kreslení za pomoci počítače, takže budou mít lepší předpoklady dobře zvládnout kurz [Programování s Annou a Elsou][1]."
+            "Pokud máte čas nebo studenti potřebují trochu víc informací, můžete zvážit, jestli před událostí Hodina kódu neodučíte kurz [„Kreslicí stroj“](https://code.org/curriculum/misc/hocunplugged/Teacher). Tato krátká lekce představí studentům koncept kreslení za pomoci počítače, takže budou mít lepší předpoklady dobře zvládnout kurz [Programování s Annou a Elsou](https://studio.code.org/s/frozen/stage/1/puzzle/1)."
           ]
         },
         "46e7088b-b207-46ae-be95-3ceacecc3f35": {
@@ -22661,7 +22661,7 @@
         },
         "063fb28a-8520-4c66-9821-3be0f0d1ed5f": {
           "tips": [
-            "Jednou z možností, jak představit Hodinu kódu, pokud sami nemáte s kódováním dostatečnou zkušenost, je ukázat jedno z [našich inspiračních videí][0]. Vyberte takové, o kterém si myslíte, že bude vaše studenty inspirovat, a pusťte jim ho. Pro studenty středních ročníků doporučujeme video „[Hodina kódu je tady][1]“."
+            "Jednou z možností, jak představit Hodinu kódu, pokud sami nemáte s kódováním dostatečnou zkušenost, je ukázat jedno z [našich inspiračních videí](https://hourofcode.com/us/resources#videos). Vyberte takové, o kterém si myslíte, že bude vaše studenty inspirovat, a pusťte jim ho. Pro studenty středních ročníků doporučujeme video „[Hodina kódu je tady](https://youtu.be/FC5FbmsH4fw)“."
           ]
         },
         "c18f0050-ba65-4f12-8cc6-fe7f16b5806b": {
@@ -22669,7 +22669,7 @@
         },
         "e5e802d6-9ee4-4ef3-aab2-616ac241b5f8": {
           "name": "Kóduj s Annou a Elsou",
-          "description": "Řekněte žákům, ať se pokusí dokončit kurz [Programování s Annou a Elsou][0].\n\nV závislosti na věku a dovednostech žáků můžete zvážit následující: \n\n-   U mladších žáků doporučujeme rozdělit třídu do dvojic nebo velmi malých skupin (po třech nebo čtyřech žácích) a říct členům každé skupiny, ať na dokončení kurzu pracují společně – využijte metodu [programování ve dvojicích][1]. Žáci prvního stupně můžou mít při tomto kurzu problémy s matematikou (kurz vyžaduje základní znalosti měření úhlů). Pokud tedy učíte mladší děti, je vhodné před zahájením Hodiny kódu odučit učební plán [„Kreslicí stroj“][2], který je seznámí se základy.\n-   U starších žáků funguje dobře, když na kurzu pracují samostatně. Někdy pomůže, když jim dovolíte, aby si kurz vybrali sami. Pokud je Frozen nezajímá, podobnou aktivitu nabízí i kurz [Napiš svůj první počítačový program][3].\n-   Také u dospělých funguje dobře kurz [Programování s Annou a Elsou][4], ať už jako samostatná aktivita, nebo aktivita programování ve dvojicích."
+          "description": "Řekněte žákům, ať se pokusí dokončit kurz [Programování s Annou a Elsou](https://studio.code.org/s/frozen/stage/1/puzzle/1).\n\nV závislosti na věku a dovednostech žáků můžete zvážit následující: \n\n-   U mladších žáků doporučujeme rozdělit třídu do dvojic nebo velmi malých skupin (po třech nebo čtyřech žácích) a říct členům každé skupiny, ať na dokončení kurzu pracují společně – využijte metodu [programování ve dvojicích](https://youtu.be/vgkahOzFH2Q). Žáci prvního stupně můžou mít při tomto kurzu problémy s matematikou (kurz vyžaduje základní znalosti měření úhlů). Pokud tedy učíte mladší děti, je vhodné před zahájením Hodiny kódu odučit učební plán [„Kreslicí stroj“](https://code.org/curriculum/misc/hocunplugged/Teacher), který je seznámí se základy.\n-   U starších žáků funguje dobře, když na kurzu pracují samostatně. Někdy pomůže, když jim dovolíte, aby si kurz vybrali sami. Pokud je Frozen nezajímá, podobnou aktivitu nabízí i kurz [Napiš svůj první počítačový program](https://studio.code.org/hoc/1).\n-   Také u dospělých funguje dobře kurz [Programování s Annou a Elsou](https://studio.code.org/s/frozen/stage/1/puzzle/1), ať už jako samostatná aktivita, nebo aktivita programování ve dvojicích."
         },
         "bdb8b54a-c21d-4bcf-a960-67ecf0468a7f": {
           "tips": [
@@ -22677,15 +22677,15 @@
           ]
         },
         "da8b52b2-8db6-440d-add3-8578161f59e2": {
-          "description": "Když skupina nebo jednotlivec skončí dřív, může zkusit další z kurzů na [code.org/learn][0]."
+          "description": "Když skupina nebo jednotlivec skončí dřív, může zkusit další z kurzů na [code.org/learn](http://code.org/learn)."
         },
         "38799019-2b81-4c28-a239-762b90e0f5e3": {
           "name": "Shrnutí",
-          "description": "Dejte každému studentovi pár poznámkových štítků nebo kartiček. Udělejte krátkou aktivitu [„Whip Around“][0]:\n\n-   Položte otázky, které se dají zodpovědět různými způsoby, například „Co se vám líbilo na právě dokončené aktivitě Hodina kódu?“ nebo „Jaké nové dovednosti jste dnes získali?“.\n-   Nechte studenty, ať napíšou na kartičky co nejvíc různých odpovědí, na každou kartičku jednu.\n    Procházejte třídou a zastavujte se postupně u jednotlivých studentů. Nechte je, ať jednu z odpovědí přečtou nahlas. Studenti by měli vybírat odpovědi, které ještě nezazněly.\n-   Na konci vyzvěte studenty k diskuzi o tom, která témata se v jejich odpovědích objevila nejčastěji."
+          "description": "Dejte každému studentovi pár poznámkových štítků nebo kartiček. Udělejte krátkou aktivitu [„Whip Around“](http://www.theteachertoolkit.com/index.php/tool/whip-around):\n\n-   Položte otázky, které se dají zodpovědět různými způsoby, například „Co se vám líbilo na právě dokončené aktivitě Hodina kódu?“ nebo „Jaké nové dovednosti jste dnes získali?“.\n-   Nechte studenty, ať napíšou na kartičky co nejvíc různých odpovědí, na každou kartičku jednu.\n    Procházejte třídou a zastavujte se postupně u jednotlivých studentů. Nechte je, ať jednu z odpovědí přečtou nahlas. Studenti by měli vybírat odpovědi, které ještě nezazněly.\n-   Na konci vyzvěte studenty k diskuzi o tom, která témata se v jejich odpovědích objevila nejčastěji."
         },
         "e9751fff-a71d-4d90-b401-0ccbf3356c44": {
           "name": "Oslavujte",
-          "description": "Vysvětlete, že dnes strávíte jednu hodinu programováním, protože tento týden je týden výuky počítačových věd a miliony dalších studentů po celém světě tento týden také absolvovaly Hodinu kódu. Poblahopřejte studentům, že se tohoto celosvětového hnutí zúčastnili.\n\nDejte všem studentům [certifikáty][0] s jejich jmény."
+          "description": "Vysvětlete, že dnes strávíte jednu hodinu programováním, protože tento týden je týden výuky počítačových věd a miliony dalších studentů po celém světě tento týden také absolvovaly Hodinu kódu. Poblahopřejte studentům, že se tohoto celosvětového hnutí zúčastnili.\n\nDejte všem studentům [certifikáty](http://code.org/certificates) s jejich jmény."
         },
         "3596cc47-e661-4d00-943e-ed858c4f6f5d": {
           "name": "Další kroky",
@@ -22696,7 +22696,7 @@
         },
         "3a8c30ae-50bb-4a85-99d8-b62c9f7e1bbf": {
           "name": "Za Hodinou kódu",
-          "description": "Je spousta způsobů, jak můžete i po skončení Hodiny kódu ve třídě prvního stupně ZŠ pokračovat v učení informatiky. Tady je několik tipů:\n\n-   **Odučte kurzy programu [Základy informatiky Code Studia][0]**. Těchto šest kurzů je určených pro mladé žáky. Děti se na sérii úloh naučí programovat a pedagogové získají přístup k zajímavým plánům hodin, které jim pomůžou zpestřit výuku. Code.org nabízí k těmto kurzům bezplatný profesní rozvoj, a to jak online, tak prezenční.\n-   Informujte se o některých pracovních pozicích v informatice, o kterých dnes padla zmínka. Zdroje k plánování projektů v oblasti zkoumání kariérních možností najdete na webu [Sharemylesson.com][1].\n-   **Pozvěte odborníka na počítačovou vědu, aby před třídou promluvil o své práci.** Žádné dobrovolníky neznáte? Oslovte některé z naší [mapy dobrovolníků][2]."
+          "description": "Je spousta způsobů, jak můžete i po skončení Hodiny kódu ve třídě prvního stupně ZŠ pokračovat v učení informatiky. Tady je několik tipů:\n\n-   **Odučte kurzy programu [Základy informatiky Code Studia](http://code.org/educate/k5)**. Těchto šest kurzů je určených pro mladé žáky. Děti se na sérii úloh naučí programovat a pedagogové získají přístup k zajímavým plánům hodin, které jim pomůžou zpestřit výuku. Code.org nabízí k těmto kurzům bezplatný profesní rozvoj, a to jak online, tak prezenční.\n-   Informujte se o některých pracovních pozicích v informatice, o kterých dnes padla zmínka. Zdroje k plánování projektů v oblasti zkoumání kariérních možností najdete na webu [Sharemylesson.com](http://www.sharemylesson.com/TaxonomySearchResults.aspx?area=resources&keywords=career+research).\n-   **Pozvěte odborníka na počítačovou vědu, aby před třídou promluvil o své práci.** Žádné dobrovolníky neznáte? Oslovte některé z naší [mapy dobrovolníků](https://code.org/volunteer/local)."
         },
         "a2f60a17-c25f-4c4d-9f2d-384486d7a67d": {
           "name": "Příprava scény",
@@ -22704,7 +22704,7 @@
         },
         "c857d03e-91e3-4949-8ccc-79a2aec463c8": {
           "tips": [
-            "Jednou z možností, jak představit Hodinu kódu, pokud sami nemáte s kódováním dostatečnou zkušenost, je ukázat jedno z [našich inspiračních videí][0]. Vyberte takové, o kterém si myslíte, že bude vaše studenty inspirovat, a pusťte jim ho. Pro mladší žáky doporučujeme video „[Zvládne to každý][1]“."
+            "Jednou z možností, jak představit Hodinu kódu, pokud sami nemáte s kódováním dostatečnou zkušenost, je ukázat jedno z [našich inspiračních videí](https://hourofcode.com/us/resources#videos). Vyberte takové, o kterém si myslíte, že bude vaše studenty inspirovat, a pusťte jim ho. Pro mladší žáky doporučujeme video „[Zvládne to každý](https://youtu.be/qYZF6oIZtfc)“."
           ]
         },
         "8ad0974f-b2ad-4632-bfe5-8c8760cd2e45": {
@@ -22712,7 +22712,7 @@
         },
         "0e395269-9740-4229-a7ac-b18b9f4eced9": {
           "name": "Gumball Play Lab",
-          "description": "Vyzvěte studenty, aby absolvovali kurz [Gumball v Play Labu][0].\n\nV závislosti na věku a dovednostech studentů můžete zvážit následující: \n\n-   U žáků druhého stupně základních škol a studentů středních škol doporučujeme zvolit kurzy, které umožňují volnou hru a vytváření aplikací nebo her. Studenty můžete nechat pracovat samostatně, ve dvojicích nebo v malých skupinách. Na webu [code.org/learn][1] je spousta dalších kurzů, které umožňují volně vytvářet, jako jsou [Vytvořte hru Flappy][2] nebo náš nový nástroj v beta verzi [App Lab][3].\n-   U mladších žáků doporučujeme rozdělit třídu do dvojic nebo velmi malých skupin (po třech nebo čtyřech žácích) a říct členům každé skupiny, ať na dokončení kurzu pracují společně – využijte metodu [programování ve dvojicích][4].\n-   U dospělých funguje kurz [Napiš svůj první počítačový program][5] velmi dobře jako výzva pro individuální práci i jako aktivita programování ve dvojicích."
+          "description": "Vyzvěte studenty, aby absolvovali kurz [Gumball v Play Labu](https://studio.code.org/s/gumball/lessons/1/levels/1).\n\nV závislosti na věku a dovednostech studentů můžete zvážit následující: \n\n-   U žáků druhého stupně základních škol a studentů středních škol doporučujeme zvolit kurzy, které umožňují volnou hru a vytváření aplikací nebo her. Studenty můžete nechat pracovat samostatně, ve dvojicích nebo v malých skupinách. Na webu [code.org/learn](http://code.org/learn) je spousta dalších kurzů, které umožňují volně vytvářet, jako jsou [Vytvořte hru Flappy](https://studio.code.org/s/flappy) nebo náš nový nástroj v beta verzi [App Lab](https://code.org/educate/applab).\n-   U mladších žáků doporučujeme rozdělit třídu do dvojic nebo velmi malých skupin (po třech nebo čtyřech žácích) a říct členům každé skupiny, ať na dokončení kurzu pracují společně – využijte metodu [programování ve dvojicích](https://youtu.be/vgkahOzFH2Q).\n-   U dospělých funguje kurz [Napiš svůj první počítačový program](https://studio.code.org/hoc/1) velmi dobře jako výzva pro individuální práci i jako aktivita programování ve dvojicích."
         },
         "eea63453-59c2-4c48-8d04-d6612d379584": {
           "tips": [
@@ -22720,7 +22720,7 @@
           ]
         },
         "fd77d784-72d9-4687-843d-7d1ecd17b9a1": {
-          "description": "Když skupina nebo jednotlivec skončí dřív, může zkusit další z kurzů na [code.org/learn][0]."
+          "description": "Když skupina nebo jednotlivec skončí dřív, může zkusit další z kurzů na [code.org/learn](http://code.org/learn)."
         },
         "0815f2e7-8336-48ae-8ac0-5d0af1f956d9": {
           "name": "Shrnutí",
@@ -22728,7 +22728,7 @@
         },
         "3b92bb05-ac4c-4717-afce-ed3d10f54527": {
           "name": "Oslavujte",
-          "description": "Vysvětlete, že dnes strávíte jednu hodinu programováním, protože tento týden je týden výuky počítačových věd a miliony dalších studentů po celém světě tento týden také absolvovaly Hodinu kódu. Poblahopřejte studentům, že se tohoto celosvětového hnutí zúčastnili.\n\nDejte všem studentům [certifikáty][0] s jejich jmény."
+          "description": "Vysvětlete, že dnes strávíte jednu hodinu programováním, protože tento týden je týden výuky počítačových věd a miliony dalších studentů po celém světě tento týden také absolvovaly Hodinu kódu. Poblahopřejte studentům, že se tohoto celosvětového hnutí zúčastnili.\n\nDejte všem studentům [certifikáty](http://code.org/certificates) s jejich jmény."
         },
         "59cd05df-cb4d-4280-8700-840826c01845": {
           "name": "Další kroky",
@@ -22740,7 +22740,7 @@
         },
         "2836d5f0-0808-4868-bc34-bbd3cf8b631f": {
           "name": "Za Hodinou kódu",
-          "description": "Je spousta způsobů, jak můžete i po skončení Hodiny kódu ve třídě prvního stupně ZŠ pokračovat v učení informatiky. Tady je několik tipů:\n\n-   **Odučte kurzy programu [Základy informatiky Code Studia][0]**. Tyto čtyři kurzy jsou určené pro mladé žáky. Děti se na sérii úloh naučí programovat a pedagogové získají přístup k zajímavým plánům hodin, které jim pomůžou zpestřit výuku. Code.org nabízí k těmto kurzům bezplatný profesní rozvoj, a to jak online, tak prezenční.\n-   **Pozvěte odborníka na počítačovou vědu, aby před třídou promluvil o své práci.** Žádné dobrovolníky neznáte? Oslovte některé z naší [mapy dobrovolníků][1]."
+          "description": "Je spousta způsobů, jak můžete i po skončení Hodiny kódu ve třídě prvního stupně ZŠ pokračovat v učení informatiky. Tady je několik tipů:\n\n-   **Odučte kurzy programu [Základy informatiky Code Studia](http://code.org/educate/k5)**. Tyto čtyři kurzy jsou určené pro mladé žáky. Děti se na sérii úloh naučí programovat a pedagogové získají přístup k zajímavým plánům hodin, které jim pomůžou zpestřit výuku. Code.org nabízí k těmto kurzům bezplatný profesní rozvoj, a to jak online, tak prezenční.\n-   **Pozvěte odborníka na počítačovou vědu, aby před třídou promluvil o své práci.** Žádné dobrovolníky neznáte? Oslovte některé z naší [mapy dobrovolníků](https://code.org/volunteer/local)."
         },
         "c4d6d315-bb5c-47d7-bc5e-f5fce2e4ae67": {
           "name": "Příprava scény",
@@ -22754,18 +22754,18 @@
         },
         "ce182c47-efed-4526-bb9c-f4ec66b052a4": {
           "name": "Obecná podpora",
-          "description": "Tady je několik rad, které by měly studentům pomoci bez ohledu na to, na jaké úrovni pracují\n\n-   **Spolupracujte se svými sousedy:** Vybídněte studenty, aby v okamžiku, kdy jim něco nepůjde, zapojili svého souseda. Podle věku a schopnosti Vašich studentů budete možná zvažovat formální rozdělení své třídy do dvojic, abyste výukový kurz dokončili metodou [párového programování][0].  \n\n-   **Přečtěte si návod:** Návod obyčejně poskytuje užitečné rady o tom, jak absolvovat danou úroveň. Než dáte studentům odpověď, ujistěte se, zda se pozorně podívali na návody, nápovědy, videa, a na veškerý úvodní kód.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Nejde Vám to? Poohlédněte se po nápovědách:** Každá úroveň zahrnuje nápovědnou radu o tom, jak absolvovat úroveň, včetně toho, jaké bloky kódu vyzkoušet. \n\n-   **Dejte si na čas a experimentujte.** Návod studentům sděluje co obecně dělat, ale také by si měli být vědomi, že mají svobodu zkusit své vlastní nápady."
+          "description": "Tady je několik rad, které by měly studentům pomoci bez ohledu na to, na jaké úrovni pracují\n\n-   **Spolupracujte se svými sousedy:** Vybídněte studenty, aby v okamžiku, kdy jim něco nepůjde, zapojili svého souseda. Podle věku a schopnosti Vašich studentů budete možná zvažovat formální rozdělení své třídy do dvojic, abyste výukový kurz dokončili metodou [párového programování](https://youtu.be/vgkahOzFH2Q).  \n\n-   **Přečtěte si návod:** Návod obyčejně poskytuje užitečné rady o tom, jak absolvovat danou úroveň. Než dáte studentům odpověď, ujistěte se, zda se pozorně podívali na návody, nápovědy, videa, a na veškerý úvodní kód.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Nejde Vám to? Poohlédněte se po nápovědách:** Každá úroveň zahrnuje nápovědnou radu o tom, jak absolvovat úroveň, včetně toho, jaké bloky kódu vyzkoušet. \n\n-   **Dejte si na čas a experimentujte.** Návod studentům sděluje co obecně dělat, ale také by si měli být vědomi, že mají svobodu zkusit své vlastní nápady."
         },
         "893dba56-7c8e-4897-949b-de514de76011": {
           "name": "Ahoj, světe",
           "progression_name": "Ahoj, světe"
         },
         "05ad915a-32e0-4799-90a2-2a53efb937f1": {
-          "description": "Jestliže nějaká skupina nebo nějaký jednotlivec skončí dříve, vybídněte je, aby pokračovali budováním projektu na poslední úrovni. Jestliže studentům nebude jasné, co jiného mají dělat, můžete je vyzvat otázkami:\n\n-   Jaké jiné sprajty byste mohli přidat ke svému projektu?\n-   Podívali jste se do knihovny kostýmů nebo jste se pokusili nakreslit si pro svůj sprajt vlastní kostým?\n-   Co jiného by mohly Vaše sprajty říkat?\n-   Co by mohly Vaše sprajty dělat, když se na ně klikne?\n-   Vyzvěte studenty, aby si navzájem sdělovali své nápady a aby se navzájem učili jeden od druhého. Také se mohou pokusit o absolvování jiného výukového kurzu návštěvou stránky [code.org/learn][0]."
+          "description": "Jestliže nějaká skupina nebo nějaký jednotlivec skončí dříve, vybídněte je, aby pokračovali budováním projektu na poslední úrovni. Jestliže studentům nebude jasné, co jiného mají dělat, můžete je vyzvat otázkami:\n\n-   Jaké jiné sprajty byste mohli přidat ke svému projektu?\n-   Podívali jste se do knihovny kostýmů nebo jste se pokusili nakreslit si pro svůj sprajt vlastní kostým?\n-   Co jiného by mohly Vaše sprajty říkat?\n-   Co by mohly Vaše sprajty dělat, když se na ně klikne?\n-   Vyzvěte studenty, aby si navzájem sdělovali své nápady a aby se navzájem učili jeden od druhého. Také se mohou pokusit o absolvování jiného výukového kurzu návštěvou stránky [code.org/learn](https://code.org/learn)."
         },
         "d5d3f8eb-f17e-4f26-88a8-ca6422ed7a1f": {
           "name": "Reflexe",
-          "description": "#### Vyslechněte zpětnou vazbu\n\nPožádejte studenty, aby se zamysleli nad aktivitami dnešního dne. Co se o psaní kódu učili? Sprajty? Události?\n\nJaký mají z počítačové vědy a psaní kódu po strávení jedné hodiny poznáváním pocit?\n\n#### Další kroky\n\nDejte studentům vědět, že jestliže se jim dnešní aktivita líbila, mají mnoho možností, jak mohou pokračovat v psaní kódu. Navštivte [CS Connections][0], kde najdete nápady, jak integrovat počítačovou vědu do jiných předmětů nebo si přečtěte více o našich [nabídkách kurzů pro základní školy][1]."
+          "description": "#### Vyslechněte zpětnou vazbu\n\nPožádejte studenty, aby se zamysleli nad aktivitami dnešního dne. Co se o psaní kódu učili? Sprajty? Události?\n\nJaký mají z počítačové vědy a psaní kódu po strávení jedné hodiny poznáváním pocit?\n\n#### Další kroky\n\nDejte studentům vědět, že jestliže se jim dnešní aktivita líbila, mají mnoho možností, jak mohou pokračovat v psaní kódu. Navštivte [CS Connections](https://code.org/educate/csc), kde najdete nápady, jak integrovat počítačovou vědu do jiných předmětů nebo si přečtěte více o našich [nabídkách kurzů pro základní školy](https://code.org/educate/curriculum/elementary-school)."
         },
         "aad08892-e7b6-4fdc-bfd6-8199118fc2d6": {
           "name": "Příprava scény",
@@ -22779,18 +22779,18 @@
         },
         "0a05af25-05aa-4e56-92ce-f14570cc1c64": {
           "name": "Obecná podpora",
-          "description": "Tady je několik rad, které by měly studentům pomoci bez ohledu na to, na jaké úrovni pracují\n\n-   **Spolupracujte se svými sousedy:** Vybídněte studenty, aby v okamžiku, kdy jim něco nepůjde, zapojili svého souseda. Podle věku a schopnosti Vašich studentů budete možná zvažovat formální rozdělení své třídy do dvojic, abyste výukový kurz dokončili metodou [párového programování][0].  \n\n-   **Přečtěte si návod:** Návod obyčejně poskytuje užitečné rady o tom, jak absolvovat danou úroveň. Než dáte studentům odpověď, ujistěte se, zda se pozorně podívali na návody, nápovědy, videa, a na veškerý úvodní kód.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Nejde Vám to? Poohlédněte se po nápovědách:** Každá úroveň zahrnuje nápovědnou radu o tom, jak absolvovat úroveň, včetně toho, jaké bloky kódu vyzkoušet. \n\n-   **Dejte si na čas a experimentujte.** Návod studentům sděluje co obecně dělat, ale také by si měli být vědomi, že mají svobodu zkusit své vlastní nápady."
+          "description": "Tady je několik rad, které by měly studentům pomoci bez ohledu na to, na jaké úrovni pracují\n\n-   **Spolupracujte se svými sousedy:** Vybídněte studenty, aby v okamžiku, kdy jim něco nepůjde, zapojili svého souseda. Podle věku a schopnosti Vašich studentů budete možná zvažovat formální rozdělení své třídy do dvojic, abyste výukový kurz dokončili metodou [párového programování](https://youtu.be/vgkahOzFH2Q).  \n\n-   **Přečtěte si návod:** Návod obyčejně poskytuje užitečné rady o tom, jak absolvovat danou úroveň. Než dáte studentům odpověď, ujistěte se, zda se pozorně podívali na návody, nápovědy, videa, a na veškerý úvodní kód.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Nejde Vám to? Poohlédněte se po nápovědách:** Každá úroveň zahrnuje nápovědnou radu o tom, jak absolvovat úroveň, včetně toho, jaké bloky kódu vyzkoušet. \n\n-   **Dejte si na čas a experimentujte.** Návod studentům sděluje co obecně dělat, ale také by si měli být vědomi, že mají svobodu zkusit své vlastní nápady."
         },
         "f6a21949-1c94-4269-acae-98046f6a9052": {
           "name": "Ahoj, světe",
           "progression_name": "Ahoj, světe"
         },
         "3e2a74f4-d574-42fd-9bf3-5b319526299a": {
-          "description": "Jestliže nějaká skupina nebo nějaký jednotlivec skončí dříve, vybídněte je, aby pokračovali budováním projektu na poslední úrovni. Jestliže studentům nebude jasné, co jiného mají dělat, můžete je vyzvat otázkami:\n\n-   Jaké jiné sprajty byste mohli přidat ke svému projektu?\n-   Podívali jste se do knihovny kostýmů nebo jste se pokusili nakreslit si pro svůj sprajt vlastní kostým?\n-   Co jiného by mohly Vaše sprajty říkat?\n-   Co by mohly Vaše sprajty dělat, když se na ně klikne?\n-   Vyzvěte studenty, aby si navzájem sdělovali své nápady a aby se navzájem učili jeden od druhého. Také se mohou pokusit o absolvování jiného výukového kurzu návštěvou stránky [code.org/learn][0]."
+          "description": "Jestliže nějaká skupina nebo nějaký jednotlivec skončí dříve, vybídněte je, aby pokračovali budováním projektu na poslední úrovni. Jestliže studentům nebude jasné, co jiného mají dělat, můžete je vyzvat otázkami:\n\n-   Jaké jiné sprajty byste mohli přidat ke svému projektu?\n-   Podívali jste se do knihovny kostýmů nebo jste se pokusili nakreslit si pro svůj sprajt vlastní kostým?\n-   Co jiného by mohly Vaše sprajty říkat?\n-   Co by mohly Vaše sprajty dělat, když se na ně klikne?\n-   Vyzvěte studenty, aby si navzájem sdělovali své nápady a aby se navzájem učili jeden od druhého. Také se mohou pokusit o absolvování jiného výukového kurzu návštěvou stránky [code.org/learn](https://code.org/learn)."
         },
         "f95b4eed-639e-483e-bef7-ead9abf4808e": {
           "name": "Reflexe",
-          "description": "#### Vyslechněte zpětnou vazbu\n\nPožádejte studenty, aby se zamysleli nad aktivitami dnešního dne. Co se o psaní kódu učili? Sprajty? Události?\n\nJaký mají z počítačové vědy a psaní kódu po strávení jedné hodiny poznáváním pocit?\n\n#### Další kroky\n\nDejte studentům vědět, že jestliže se jim dnešní aktivita líbila, mají mnoho možností, jak mohou pokračovat v psaní kódu. Navštivte [CS Connections][0], kde najdete nápady, jak integrovat počítačovou vědu do jiných předmětů nebo si přečtěte více o našich [nabídkách kurzů pro základní školy][1]."
+          "description": "#### Vyslechněte zpětnou vazbu\n\nPožádejte studenty, aby se zamysleli nad aktivitami dnešního dne. Co se o psaní kódu učili? Sprajty? Události?\n\nJaký mají z počítačové vědy a psaní kódu po strávení jedné hodiny poznáváním pocit?\n\n#### Další kroky\n\nDejte studentům vědět, že jestliže se jim dnešní aktivita líbila, mají mnoho možností, jak mohou pokračovat v psaní kódu. Navštivte [CS Connections](https://code.org/educate/csc), kde najdete nápady, jak integrovat počítačovou vědu do jiných předmětů nebo si přečtěte více o našich [nabídkách kurzů pro základní školy](https://code.org/educate/curriculum/elementary-school)."
         },
         "5ba761c1-02df-411f-96cd-69a8327e0d2c": {
           "name": "Příprava scény",
@@ -22804,18 +22804,18 @@
         },
         "11f167ca-2cf6-4e6b-8857-316c5cb55f82": {
           "name": "Obecná podpora",
-          "description": "Tady je několik rad, které by měly studentům pomoci bez ohledu na to, na jaké úrovni pracují\n\n-   **Spolupracujte se svými sousedy:** Vybídněte studenty, aby v okamžiku, kdy jim něco nepůjde, zapojili svého souseda. Podle věku a schopnosti Vašich studentů budete možná zvažovat formální rozdělení své třídy do dvojic, abyste výukový kurz dokončili metodou [párového programování][0].  \n\n-   **Přečtěte si návod:** Návod obyčejně poskytuje užitečné rady o tom, jak absolvovat danou úroveň. Než dáte studentům odpověď, ujistěte se, zda se pozorně podívali na návody, nápovědy, videa, a na veškerý úvodní kód.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Nejde Vám to? Poohlédněte se po nápovědách:** Každá úroveň zahrnuje nápovědnou radu o tom, jak absolvovat úroveň, včetně toho, jaké bloky kódu vyzkoušet. \n\n-   **Dejte si na čas a experimentujte.** Návod studentům sděluje co obecně dělat, ale také by si měli být vědomi, že mají svobodu zkusit své vlastní nápady."
+          "description": "Tady je několik rad, které by měly studentům pomoci bez ohledu na to, na jaké úrovni pracují\n\n-   **Spolupracujte se svými sousedy:** Vybídněte studenty, aby v okamžiku, kdy jim něco nepůjde, zapojili svého souseda. Podle věku a schopnosti Vašich studentů budete možná zvažovat formální rozdělení své třídy do dvojic, abyste výukový kurz dokončili metodou [párového programování](https://youtu.be/vgkahOzFH2Q).  \n\n-   **Přečtěte si návod:** Návod obyčejně poskytuje užitečné rady o tom, jak absolvovat danou úroveň. Než dáte studentům odpověď, ujistěte se, zda se pozorně podívali na návody, nápovědy, videa, a na veškerý úvodní kód.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Nejde Vám to? Poohlédněte se po nápovědách:** Každá úroveň zahrnuje nápovědnou radu o tom, jak absolvovat úroveň, včetně toho, jaké bloky kódu vyzkoušet. \n\n-   **Dejte si na čas a experimentujte.** Návod studentům sděluje co obecně dělat, ale také by si měli být vědomi, že mají svobodu zkusit své vlastní nápady."
         },
         "c721eddb-4cfb-4237-a031-0730bbfdc926": {
           "name": "Ahoj, světe",
           "progression_name": "Ahoj, světe"
         },
         "8341212e-8528-4ad8-9c02-22066467054b": {
-          "description": "Jestliže nějaká skupina nebo nějaký jednotlivec skončí dříve, vybídněte je, aby pokračovali budováním projektu na poslední úrovni. Jestliže studentům nebude jasné, co jiného mají dělat, můžete je vyzvat otázkami:\n\n-   Jaké jiné sprajty byste mohli přidat ke svému projektu?\n-   Podívali jste se do knihovny kostýmů nebo jste se pokusili nakreslit si pro svůj sprajt vlastní kostým?\n-   Co jiného by mohly Vaše sprajty říkat?\n-   Co by mohly Vaše sprajty dělat, když se na ně klikne?\n-   Vyzvěte studenty, aby si navzájem sdělovali své nápady a aby se navzájem učili jeden od druhého. Také se mohou pokusit o absolvování jiného výukového kurzu návštěvou stránky [code.org/learn][0]."
+          "description": "Jestliže nějaká skupina nebo nějaký jednotlivec skončí dříve, vybídněte je, aby pokračovali budováním projektu na poslední úrovni. Jestliže studentům nebude jasné, co jiného mají dělat, můžete je vyzvat otázkami:\n\n-   Jaké jiné sprajty byste mohli přidat ke svému projektu?\n-   Podívali jste se do knihovny kostýmů nebo jste se pokusili nakreslit si pro svůj sprajt vlastní kostým?\n-   Co jiného by mohly Vaše sprajty říkat?\n-   Co by mohly Vaše sprajty dělat, když se na ně klikne?\n-   Vyzvěte studenty, aby si navzájem sdělovali své nápady a aby se navzájem učili jeden od druhého. Také se mohou pokusit o absolvování jiného výukového kurzu návštěvou stránky [code.org/learn](https://code.org/learn)."
         },
         "656eee11-dc6d-428e-8849-6e4b31dc8c81": {
           "name": "Reflexe",
-          "description": "#### Vyslechněte zpětnou vazbu\n\nPožádejte studenty, aby se zamysleli nad aktivitami dnešního dne. Co se o psaní kódu učili? Sprajty? Události?\n\nJaký mají z počítačové vědy a psaní kódu po strávení jedné hodiny poznáváním pocit?\n\n#### Další kroky\n\nDejte studentům vědět, že jestliže se jim dnešní aktivita líbila, mají mnoho možností, jak mohou pokračovat v psaní kódu. Navštivte [CS Connections][0], kde najdete nápady, jak integrovat počítačovou vědu do jiných předmětů nebo si přečtěte více o našich [nabídkách kurzů pro základní školy][1]."
+          "description": "#### Vyslechněte zpětnou vazbu\n\nPožádejte studenty, aby se zamysleli nad aktivitami dnešního dne. Co se o psaní kódu učili? Sprajty? Události?\n\nJaký mají z počítačové vědy a psaní kódu po strávení jedné hodiny poznáváním pocit?\n\n#### Další kroky\n\nDejte studentům vědět, že jestliže se jim dnešní aktivita líbila, mají mnoho možností, jak mohou pokračovat v psaní kódu. Navštivte [CS Connections](https://code.org/educate/csc), kde najdete nápady, jak integrovat počítačovou vědu do jiných předmětů nebo si přečtěte více o našich [nabídkách kurzů pro základní školy](https://code.org/educate/curriculum/elementary-school)."
         },
         "9d3ef78a-4043-489e-898b-f407c914f698": {
           "name": "Příprava scény",
@@ -22829,18 +22829,18 @@
         },
         "2ff80a97-db35-4d10-9703-4d0cc3ff0c3a": {
           "name": "Obecná podpora",
-          "description": "Tady je několik rad, které by měly studentům pomoci bez ohledu na to, na jaké úrovni pracují\n\n-   **Spolupracujte se svými sousedy:** Vybídněte studenty, aby v okamžiku, kdy jim něco nepůjde, zapojili svého souseda. Podle věku a schopnosti Vašich studentů budete možná zvažovat formální rozdělení své třídy do dvojic, abyste výukový kurz dokončili metodou [párového programování][0].  \n\n-   **Přečtěte si návod:** Návod obyčejně poskytuje užitečné rady o tom, jak absolvovat danou úroveň. Než dáte studentům odpověď, ujistěte se, zda se pozorně podívali na návody, nápovědy, videa, a na veškerý úvodní kód.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Nejde Vám to? Poohlédněte se po nápovědách:** Každá úroveň zahrnuje nápovědnou radu o tom, jak absolvovat úroveň, včetně toho, jaké bloky kódu vyzkoušet. \n\n-   **Dejte si na čas a experimentujte.** Návod studentům sděluje co obecně dělat, ale také by si měli být vědomi, že mají svobodu zkusit své vlastní nápady."
+          "description": "Tady je několik rad, které by měly studentům pomoci bez ohledu na to, na jaké úrovni pracují\n\n-   **Spolupracujte se svými sousedy:** Vybídněte studenty, aby v okamžiku, kdy jim něco nepůjde, zapojili svého souseda. Podle věku a schopnosti Vašich studentů budete možná zvažovat formální rozdělení své třídy do dvojic, abyste výukový kurz dokončili metodou [párového programování](https://youtu.be/vgkahOzFH2Q).  \n\n-   **Přečtěte si návod:** Návod obyčejně poskytuje užitečné rady o tom, jak absolvovat danou úroveň. Než dáte studentům odpověď, ujistěte se, zda se pozorně podívali na návody, nápovědy, videa, a na veškerý úvodní kód.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Nejde Vám to? Poohlédněte se po nápovědách:** Každá úroveň zahrnuje nápovědnou radu o tom, jak absolvovat úroveň, včetně toho, jaké bloky kódu vyzkoušet. \n\n-   **Dejte si na čas a experimentujte.** Návod studentům sděluje co obecně dělat, ale také by si měli být vědomi, že mají svobodu zkusit své vlastní nápady."
         },
         "70daba44-c26e-4286-95ae-50cbd8724b2d": {
           "name": "Ahoj, světe",
           "progression_name": "Ahoj, světe"
         },
         "77cef9f9-1949-455b-a0bd-f2cbc4a32986": {
-          "description": "Jestliže nějaká skupina nebo nějaký jednotlivec skončí dříve, vybídněte je, aby pokračovali budováním projektu na poslední úrovni. Jestliže studentům nebude jasné, co jiného mají dělat, můžete je vyzvat otázkami:\n\n-   Jaké jiné sprajty byste mohli přidat ke svému projektu?\n-   Podívali jste se do knihovny kostýmů nebo jste se pokusili nakreslit si pro svůj sprajt vlastní kostým?\n-   Co jiného by mohly Vaše sprajty říkat?\n-   Co by mohly Vaše sprajty dělat, když se na ně klikne?\n-   Vyzvěte studenty, aby si navzájem sdělovali své nápady a aby se navzájem učili jeden od druhého. Také se mohou pokusit o absolvování jiného výukového kurzu návštěvou stránky [code.org/learn][0]."
+          "description": "Jestliže nějaká skupina nebo nějaký jednotlivec skončí dříve, vybídněte je, aby pokračovali budováním projektu na poslední úrovni. Jestliže studentům nebude jasné, co jiného mají dělat, můžete je vyzvat otázkami:\n\n-   Jaké jiné sprajty byste mohli přidat ke svému projektu?\n-   Podívali jste se do knihovny kostýmů nebo jste se pokusili nakreslit si pro svůj sprajt vlastní kostým?\n-   Co jiného by mohly Vaše sprajty říkat?\n-   Co by mohly Vaše sprajty dělat, když se na ně klikne?\n-   Vyzvěte studenty, aby si navzájem sdělovali své nápady a aby se navzájem učili jeden od druhého. Také se mohou pokusit o absolvování jiného výukového kurzu návštěvou stránky [code.org/learn](https://code.org/learn)."
         },
         "ec905c64-2e80-49d0-8da3-7d75ed8d0693": {
           "name": "Reflexe",
-          "description": "#### Vyslechněte zpětnou vazbu\n\nPožádejte studenty, aby se zamysleli nad aktivitami dnešního dne. Co se o psaní kódu učili? Sprajty? Události?\n\nJaký mají z počítačové vědy a psaní kódu po strávení jedné hodiny poznáváním pocit?\n\n#### Další kroky\n\nDejte studentům vědět, že jestliže se jim dnešní aktivita líbila, mají mnoho možností, jak mohou pokračovat v psaní kódu. Navštivte [CS Connections][0], kde najdete nápady, jak integrovat počítačovou vědu do jiných předmětů nebo si přečtěte více o našich [nabídkách kurzů pro základní školy][1]."
+          "description": "#### Vyslechněte zpětnou vazbu\n\nPožádejte studenty, aby se zamysleli nad aktivitami dnešního dne. Co se o psaní kódu učili? Sprajty? Události?\n\nJaký mají z počítačové vědy a psaní kódu po strávení jedné hodiny poznáváním pocit?\n\n#### Další kroky\n\nDejte studentům vědět, že jestliže se jim dnešní aktivita líbila, mají mnoho možností, jak mohou pokračovat v psaní kódu. Navštivte [CS Connections](https://code.org/educate/csc), kde najdete nápady, jak integrovat počítačovou vědu do jiných předmětů nebo si přečtěte více o našich [nabídkách kurzů pro základní školy](https://code.org/educate/curriculum/elementary-school)."
         },
         "6c387b78-14b7-4209-919a-97dbf64b9bc2": {
           "name": "Příprava scény",
@@ -22854,18 +22854,18 @@
         },
         "cc4e7bc2-813a-4d4a-be58-83d08ca5d970": {
           "name": "Obecná podpora",
-          "description": "Tady je několik rad, které by měly studentům pomoci bez ohledu na to, na jaké úrovni pracují\n\n-   **Spolupracujte se svými sousedy:** Vybídněte studenty, aby v okamžiku, kdy jim něco nepůjde, zapojili svého souseda. Podle věku a schopnosti Vašich studentů budete možná zvažovat formální rozdělení své třídy do dvojic, abyste výukový kurz dokončili metodou [párového programování][0].  \n\n-   **Přečtěte si návod:** Návod obyčejně poskytuje užitečné rady o tom, jak absolvovat danou úroveň. Než dáte studentům odpověď, ujistěte se, zda se pozorně podívali na návody, nápovědy, videa, a na veškerý úvodní kód.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Nejde Vám to? Poohlédněte se po nápovědách:** Každá úroveň zahrnuje nápovědnou radu o tom, jak absolvovat úroveň, včetně toho, jaké bloky kódu vyzkoušet. \n\n-   **Dejte si na čas a experimentujte.** Návod studentům sděluje co obecně dělat, ale také by si měli být vědomi, že mají svobodu zkusit své vlastní nápady."
+          "description": "Tady je několik rad, které by měly studentům pomoci bez ohledu na to, na jaké úrovni pracují\n\n-   **Spolupracujte se svými sousedy:** Vybídněte studenty, aby v okamžiku, kdy jim něco nepůjde, zapojili svého souseda. Podle věku a schopnosti Vašich studentů budete možná zvažovat formální rozdělení své třídy do dvojic, abyste výukový kurz dokončili metodou [párového programování](https://youtu.be/vgkahOzFH2Q).  \n\n-   **Přečtěte si návod:** Návod obyčejně poskytuje užitečné rady o tom, jak absolvovat danou úroveň. Než dáte studentům odpověď, ujistěte se, zda se pozorně podívali na návody, nápovědy, videa, a na veškerý úvodní kód.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Nejde Vám to? Poohlédněte se po nápovědách:** Každá úroveň zahrnuje nápovědnou radu o tom, jak absolvovat úroveň, včetně toho, jaké bloky kódu vyzkoušet. \n\n-   **Dejte si na čas a experimentujte.** Návod studentům sděluje co obecně dělat, ale také by si měli být vědomi, že mají svobodu zkusit své vlastní nápady."
         },
         "062143a1-3063-4af1-864a-2ad1f9c88dd5": {
           "name": "Ahoj, světe",
           "progression_name": "Ahoj, světe"
         },
         "da91f0fe-e142-453f-a093-8e367d0a1454": {
-          "description": "Jestliže nějaká skupina nebo nějaký jednotlivec skončí dříve, vybídněte je, aby pokračovali budováním projektu na poslední úrovni. Jestliže studentům nebude jasné, co jiného mají dělat, můžete je vyzvat otázkami:\n\n-   Jaké jiné sprajty byste mohli přidat ke svému projektu?\n-   Podívali jste se do knihovny kostýmů nebo jste se pokusili nakreslit si pro svůj sprajt vlastní kostým?\n-   Co jiného by mohly Vaše sprajty říkat?\n-   Co by mohly Vaše sprajty dělat, když se na ně klikne?\n-   Vyzvěte studenty, aby si navzájem sdělovali své nápady a aby se navzájem učili jeden od druhého. Také se mohou pokusit o absolvování jiného výukového kurzu návštěvou stránky [code.org/learn][0]."
+          "description": "Jestliže nějaká skupina nebo nějaký jednotlivec skončí dříve, vybídněte je, aby pokračovali budováním projektu na poslední úrovni. Jestliže studentům nebude jasné, co jiného mají dělat, můžete je vyzvat otázkami:\n\n-   Jaké jiné sprajty byste mohli přidat ke svému projektu?\n-   Podívali jste se do knihovny kostýmů nebo jste se pokusili nakreslit si pro svůj sprajt vlastní kostým?\n-   Co jiného by mohly Vaše sprajty říkat?\n-   Co by mohly Vaše sprajty dělat, když se na ně klikne?\n-   Vyzvěte studenty, aby si navzájem sdělovali své nápady a aby se navzájem učili jeden od druhého. Také se mohou pokusit o absolvování jiného výukového kurzu návštěvou stránky [code.org/learn](https://code.org/learn)."
         },
         "f5756484-7296-4391-99e2-7b2678653934": {
           "name": "Reflexe",
-          "description": "#### Vyslechněte zpětnou vazbu\n\nPožádejte studenty, aby se zamysleli nad aktivitami dnešního dne. Co se o psaní kódu učili? Sprajty? Události?\n\nJaký mají z počítačové vědy a psaní kódu po strávení jedné hodiny poznáváním pocit?\n\n#### Další kroky\n\nDejte studentům vědět, že jestliže se jim dnešní aktivita líbila, mají mnoho možností, jak mohou pokračovat v psaní kódu. Navštivte [CS Connections][0], kde najdete nápady, jak integrovat počítačovou vědu do jiných předmětů nebo si přečtěte více o našich [nabídkách kurzů pro základní školy][1]."
+          "description": "#### Vyslechněte zpětnou vazbu\n\nPožádejte studenty, aby se zamysleli nad aktivitami dnešního dne. Co se o psaní kódu učili? Sprajty? Události?\n\nJaký mají z počítačové vědy a psaní kódu po strávení jedné hodiny poznáváním pocit?\n\n#### Další kroky\n\nDejte studentům vědět, že jestliže se jim dnešní aktivita líbila, mají mnoho možností, jak mohou pokračovat v psaní kódu. Navštivte [CS Connections](https://code.org/educate/csc), kde najdete nápady, jak integrovat počítačovou vědu do jiných předmětů nebo si přečtěte více o našich [nabídkách kurzů pro základní školy](https://code.org/educate/curriculum/elementary-school)."
         },
         "bcc9e44c-ad4e-4efc-a12e-e9c74a5c1960": {
           "name": "Příprava scény",
@@ -22879,25 +22879,25 @@
         },
         "0d1c3be1-c6e4-437f-85b9-4912d1cd725b": {
           "name": "Obecná podpora",
-          "description": "Tady je několik rad, které by měly studentům pomoci bez ohledu na to, na jaké úrovni pracují\n\n-   **Spolupracujte se svými sousedy:** Vybídněte studenty, aby v okamžiku, kdy jim něco nepůjde, zapojili svého souseda. Podle věku a schopnosti Vašich studentů budete možná zvažovat formální rozdělení své třídy do dvojic, abyste výukový kurz dokončili metodou [párového programování][0].  \n\n-   **Přečtěte si návod:** Návod obyčejně poskytuje užitečné rady o tom, jak absolvovat danou úroveň. Než dáte studentům odpověď, ujistěte se, zda se pozorně podívali na návody, nápovědy, videa, a na veškerý úvodní kód.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Nejde Vám to? Poohlédněte se po nápovědách:** Každá úroveň zahrnuje nápovědnou radu o tom, jak absolvovat úroveň, včetně toho, jaké bloky kódu vyzkoušet. \n\n-   **Dejte si na čas a experimentujte.** Návod studentům sděluje co obecně dělat, ale také by si měli být vědomi, že mají svobodu zkusit své vlastní nápady."
+          "description": "Tady je několik rad, které by měly studentům pomoci bez ohledu na to, na jaké úrovni pracují\n\n-   **Spolupracujte se svými sousedy:** Vybídněte studenty, aby v okamžiku, kdy jim něco nepůjde, zapojili svého souseda. Podle věku a schopnosti Vašich studentů budete možná zvažovat formální rozdělení své třídy do dvojic, abyste výukový kurz dokončili metodou [párového programování](https://youtu.be/vgkahOzFH2Q).  \n\n-   **Přečtěte si návod:** Návod obyčejně poskytuje užitečné rady o tom, jak absolvovat danou úroveň. Než dáte studentům odpověď, ujistěte se, zda se pozorně podívali na návody, nápovědy, videa, a na veškerý úvodní kód.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Nejde Vám to? Poohlédněte se po nápovědách:** Každá úroveň zahrnuje nápovědnou radu o tom, jak absolvovat úroveň, včetně toho, jaké bloky kódu vyzkoušet. \n\n-   **Dejte si na čas a experimentujte.** Návod studentům sděluje co obecně dělat, ale také by si měli být vědomi, že mají svobodu zkusit své vlastní nápady."
         },
         "fcf13574-b04a-42a7-9e17-ef0dba0bfe33": {
           "name": "Ahoj, světe",
           "progression_name": "Ahoj, světe"
         },
         "7cccfa6d-83c2-4d74-a71f-c9134fb1d0c2": {
-          "description": "Jestliže nějaká skupina nebo nějaký jednotlivec skončí dříve, vybídněte je, aby pokračovali budováním projektu na poslední úrovni. Jestliže studentům nebude jasné, co jiného mají dělat, můžete je vyzvat otázkami:\n\n-   Jaké jiné sprajty byste mohli přidat ke svému projektu?\n-   Podívali jste se do knihovny kostýmů nebo jste se pokusili nakreslit si pro svůj sprajt vlastní kostým?\n-   Co jiného by mohly Vaše sprajty říkat?\n-   Co by mohly Vaše sprajty dělat, když se na ně klikne?\n-   Vyzvěte studenty, aby si navzájem sdělovali své nápady a aby se navzájem učili jeden od druhého. Také se mohou pokusit o absolvování jiného výukového kurzu návštěvou stránky [code.org/learn][0]."
+          "description": "Jestliže nějaká skupina nebo nějaký jednotlivec skončí dříve, vybídněte je, aby pokračovali budováním projektu na poslední úrovni. Jestliže studentům nebude jasné, co jiného mají dělat, můžete je vyzvat otázkami:\n\n-   Jaké jiné sprajty byste mohli přidat ke svému projektu?\n-   Podívali jste se do knihovny kostýmů nebo jste se pokusili nakreslit si pro svůj sprajt vlastní kostým?\n-   Co jiného by mohly Vaše sprajty říkat?\n-   Co by mohly Vaše sprajty dělat, když se na ně klikne?\n-   Vyzvěte studenty, aby si navzájem sdělovali své nápady a aby se navzájem učili jeden od druhého. Také se mohou pokusit o absolvování jiného výukového kurzu návštěvou stránky [code.org/learn](https://code.org/learn)."
         },
         "574954ea-9128-428b-9965-b0d34518c11d": {
           "name": "Reflexe",
-          "description": "#### Vyslechněte zpětnou vazbu\n\nPožádejte studenty, aby se zamysleli nad aktivitami dnešního dne. Co se o psaní kódu učili? Sprajty? Události?\n\nJaký mají z počítačové vědy a psaní kódu po strávení jedné hodiny poznáváním pocit?\n\n#### Další kroky\n\nDejte studentům vědět, že jestliže se jim dnešní aktivita líbila, mají mnoho možností, jak mohou pokračovat v psaní kódu. Navštivte [CS Connections][0], kde najdete nápady, jak integrovat počítačovou vědu do jiných předmětů nebo si přečtěte více o našich [nabídkách kurzů pro základní školy][1]."
+          "description": "#### Vyslechněte zpětnou vazbu\n\nPožádejte studenty, aby se zamysleli nad aktivitami dnešního dne. Co se o psaní kódu učili? Sprajty? Události?\n\nJaký mají z počítačové vědy a psaní kódu po strávení jedné hodiny poznáváním pocit?\n\n#### Další kroky\n\nDejte studentům vědět, že jestliže se jim dnešní aktivita líbila, mají mnoho možností, jak mohou pokračovat v psaní kódu. Navštivte [CS Connections](https://code.org/educate/csc), kde najdete nápady, jak integrovat počítačovou vědu do jiných předmětů nebo si přečtěte více o našich [nabídkách kurzů pro základní školy](https://code.org/educate/curriculum/elementary-school)."
         },
         "79f9bd46-60a5-4891-ad3b-8369879847fc": {
           "description": "#### Příprava scény\n\nPřivítejte studenty v hodině a velmi krátce představte aktivitu dne. \n\nTuto lekci si studenti opravdu užijí. Většina z nich pravděpodobně ví, co je Minecraft, přesto tuto hru krátce představte pro ty, kteří o ní ještě neslyšeli.\nMinecraft je hra tvořená kostkami. V roli Alexe nebo Steva hledáte cestu bludištěm. Sbíráte předměty a prozkoumáváte svět vystavěný z kostek.\n\n_Řekněte: „Dnes věnujeme jednu hodinu tomu, že se budeme učit kódovat. Slyšel už někdo z vás o kódování? Co to znamená?“_\n\nStudenti možná odpoví, že „kód“ je jako tajná zpráva anebo že se to nějak týká počítačů."
         },
         "cc1ed89e-268e-472b-9bce-4f976d8c2ea3": {
           "tips": [
-            "Jednou z možností, jak představit Hodinu kódu, pokud sami nemáte s kódováním dostatečnou zkušenost, je ukázat jedno z [našich inspiračních videí][0]. Vyberte takové, o kterém si myslíte, že bude vaše studenty inspirovat, a pusťte jim ho. Pro mladší žáky doporučujeme video „[Hodina kódu je tady][1]“."
+            "Jednou z možností, jak představit Hodinu kódu, pokud sami nemáte s kódováním dostatečnou zkušenost, je ukázat jedno z [našich inspiračních videí](https://hourofcode.com/us/resources#videos). Vyberte takové, o kterém si myslíte, že bude vaše studenty inspirovat, a pusťte jim ho. Pro mladší žáky doporučujeme video „[Hodina kódu je tady](https://youtu.be/FC5FbmsH4fw)“."
           ]
         },
         "850945f6-6352-403b-a73f-3fb613f4728a": {
@@ -22910,7 +22910,7 @@
         },
         "fc5c47f6-08fa-4702-86a3-e687a2ad5bc1": {
           "name": "Minecraft: Cesta hrdiny",
-          "description": "Řekněte žákům, ať se pokusí dokončit kurz [Minecraft: Hero's Journey][0].\n\nV závislosti na věku a dovednostech žáků můžete zvážit následující: \n\n-   U mladších dětí doporučujeme, abyste třídu rozdělili do dvojic a vyzvali žáky, ať na kurzu pracují společně – zvolte metodu [programování ve dvojicích][1].\n-   U žáků středních ročníků funguje dobře, když na kurzu pracují samostatně. Někdy pomůže, když žákům dovolíte, aby si kurz vybrali sami. Pokud je Minecraft nezajímá, podobnou aktivitu nabízí i kurzy [Kódování s Annou a Elsou][2] nebo [Star Wars][3].\n-   U starších studentů a dospělých funguje velice dobře kurz [Minecraft: Hero's Journey][4], a to jako úkol pro jednotlivce i jako aktivita programování ve dvojicích."
+          "description": "Řekněte žákům, ať se pokusí dokončit kurz [Minecraft: Hero's Journey](https://studio.code.org/s/hero/lessons/1/levels/1).\n\nV závislosti na věku a dovednostech žáků můžete zvážit následující: \n\n-   U mladších dětí doporučujeme, abyste třídu rozdělili do dvojic a vyzvali žáky, ať na kurzu pracují společně – zvolte metodu [programování ve dvojicích](https://youtu.be/vgkahOzFH2Q).\n-   U žáků středních ročníků funguje dobře, když na kurzu pracují samostatně. Někdy pomůže, když žákům dovolíte, aby si kurz vybrali sami. Pokud je Minecraft nezajímá, podobnou aktivitu nabízí i kurzy [Kódování s Annou a Elsou](https://studio.code.org/s/frozen/stage/1/puzzle/1) nebo [Star Wars](https://code.org/starwars).\n-   U starších studentů a dospělých funguje velice dobře kurz [Minecraft: Hero's Journey](https://studio.code.org/s/hero/lessons/1/levels/1), a to jako úkol pro jednotlivce i jako aktivita programování ve dvojicích."
         },
         "296703c2-cad7-43bb-b3cf-4ffb525e7ad1": {
           "tips": [
@@ -22918,7 +22918,7 @@
           ]
         },
         "b518cf9c-9568-4e85-a520-0e2a81c3b330": {
-          "description": "Když skupina nebo jednotlivec skončí dřív, může zkusit další z kurzů na [code.org/learn][0]."
+          "description": "Když skupina nebo jednotlivec skončí dřív, může zkusit další z kurzů na [code.org/learn](http://code.org/learn)."
         },
         "34238f3b-6699-4e27-b77a-54bcd8d57459": {
           "progression_name": "Minecraft: Cesta hrdiny"
@@ -22929,18 +22929,18 @@
         },
         "145782a9-a436-4615-9827-0f75d7e4b3a0": {
           "name": "Oslavujte",
-          "description": "Vysvětlete, že dnes strávíte jednu hodinu programováním, protože tento týden je týden výuky počítačových věd a miliony dalších studentů po celém světě tento týden také absolvovaly Hodinu kódu. Poblahopřejte studentům, že se tohoto celosvětového hnutí zúčastnili.\n\nDejte všem studentům [certifikáty][0] s jejich jmény."
+          "description": "Vysvětlete, že dnes strávíte jednu hodinu programováním, protože tento týden je týden výuky počítačových věd a miliony dalších studentů po celém světě tento týden také absolvovaly Hodinu kódu. Poblahopřejte studentům, že se tohoto celosvětového hnutí zúčastnili.\n\nDejte všem studentům [certifikáty](https://studio.code.org/certificates/batch?course=bWM=) s jejich jmény."
         },
         "cc38f575-4db4-4ca6-ab2f-a9d8557f16cf": {
           "name": "Další kroky",
-          "description": "Sdělte studentům, že pokud se jim dnešní aktivita líbila, mají spoustu možností, jak se v programování dál rozvíjet. Doporučte jim, ať navštíví web [code.org/learn][0], kde najdou seznam možností. A pokud máte v plánu absolvovat nějaké doplňující aktivity, řekněte jim, co je čeká v příští hodině s vámi."
+          "description": "Sdělte studentům, že pokud se jim dnešní aktivita líbila, mají spoustu možností, jak se v programování dál rozvíjet. Doporučte jim, ať navštíví web [code.org/learn](<>), kde najdou seznam možností. A pokud máte v plánu absolvovat nějaké doplňující aktivity, řekněte jim, co je čeká v příští hodině s vámi."
         },
         "e276fe28-3302-4ba2-94cc-aaf03b3d2d06": {
-          "description": "Dejte všem studentům [„výstupní lístky“][0] a požádejte je, aby shrnuli, co se dnes naučili, jaký měli pocit nebo co zažili. Studenti můžou kreslit, psát nebo se vyjádřit jakýmkoli způsobem, který uznají za vhodný. Pak od nich při odchodu z učebny všechny „výstupní lístky“ vyberte. Jestliže chcete, můžete tyto lístky zveřejnit na nástěnce nebo na nějakém viditelném místě ve škole jako připomínku Hodiny kódu."
+          "description": "Dejte všem studentům [„výstupní lístky“](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) a požádejte je, aby shrnuli, co se dnes naučili, jaký měli pocit nebo co zažili. Studenti můžou kreslit, psát nebo se vyjádřit jakýmkoli způsobem, který uznají za vhodný. Pak od nich při odchodu z učebny všechny „výstupní lístky“ vyberte. Jestliže chcete, můžete tyto lístky zveřejnit na nástěnce nebo na nějakém viditelném místě ve škole jako připomínku Hodiny kódu."
         },
         "147a2b22-0cba-4505-81ef-770b81eee73e": {
           "name": "Za Hodinou kódu",
-          "description": "Je mnoho způsobů, jak můžete po skončení Hodiny kódu pokračovat ve výuce informatiky s žáky prvního stupně. Tady je několik tipů:\n\n-   **Odučte kurzy [Základy informatiky Code Studia][0]**. Těchto šest kurzů je navrženo pro mladší žáky, kteří se díky sérii zadání seznámí se základy kódování. Pedagogové získají přístup k zajímavým plánům hodin, které jim pomůžou zpestřit výuku. Code.org nabízí k těmto kurzům bezplatný profesní rozvoj, a to jak online, tak prezenční.\n-   Další doporučení na kurzy najdete v části **[Můžete učit informatiku][1]**.\n-   **Pozvěte do třídy odborníka na informatiku, aby promluvil o své práci.** Nemáte takového odborníka ve svém okolí? Najděte si nějakého v naší [mapě dobrovolníků][2]."
+          "description": "Je mnoho způsobů, jak můžete po skončení Hodiny kódu pokračovat ve výuce informatiky s žáky prvního stupně. Tady je několik tipů:\n\n-   **Odučte kurzy [Základy informatiky Code Studia](http://code.org/educate/k5)**. Těchto šest kurzů je navrženo pro mladší žáky, kteří se díky sérii zadání seznámí se základy kódování. Pedagogové získají přístup k zajímavým plánům hodin, které jim pomůžou zpestřit výuku. Code.org nabízí k těmto kurzům bezplatný profesní rozvoj, a to jak online, tak prezenční.\n-   Další doporučení na kurzy najdete v části **[Můžete učit informatiku](https://code.org/teach)**.\n-   **Pozvěte do třídy odborníka na informatiku, aby promluvil o své práci.** Nemáte takového odborníka ve svém okolí? Najděte si nějakého v naší [mapě dobrovolníků](https://code.org/volunteer/local)."
         },
         "9475b0bd-6a58-4318-b3e5-0d77cfe5a35d": {
           "tips": [
@@ -23039,7 +23039,7 @@
         },
         "6b55015f-aebc-401b-b0c9-c40a5fd0056e": {
           "tips": [
-            "Jednou z možností, jak představit Hodinu kódu, pokud sami nemáte s kódováním dostatečnou zkušenost, je ukázat jedno z [našich inspiračních videí][0]. Vyberte takové, o kterém si myslíte, že bude vaše studenty inspirovat, a pusťte jim ho. Pro mladší žáky doporučujeme video „[Hodina kódu je tady][1]“."
+            "Jednou z možností, jak představit Hodinu kódu, pokud sami nemáte s kódováním dostatečnou zkušenost, je ukázat jedno z [našich inspiračních videí](https://hourofcode.com/us/resources#videos). Vyberte takové, o kterém si myslíte, že bude vaše studenty inspirovat, a pusťte jim ho. Pro mladší žáky doporučujeme video „[Hodina kódu je tady](https://youtu.be/FC5FbmsH4fw)“."
           ]
         },
         "e841a687-1da5-46c7-b31e-42629fe0377c": {
@@ -23052,7 +23052,7 @@
         },
         "9aba0e85-a709-43f5-8cfb-251671159b3a": {
           "name": "Bludiště",
-          "description": "Řekněte studentům, ať se pokusí dokončit kurz [Napiš svůj první počítačový program][0].\n\nV závislosti na věku a dovednostech studentů můžete zvážit následující: \n\n-   U mladších žáků doporučujeme rozdělit třídu do dvojic nebo velmi malých skupin (po třech nebo čtyřech žácích) a říct členům každé skupiny, ať na dokončení kurzu pracují společně – využijte metodu [programování ve dvojicích][1].\n-   U žáků středních ročníků funguje dobře, když na kurzu pracují samostatně. Někdy pomůže, když žákům dovolíte, aby si kurz vybrali sami. Pokud jim hra Angry Birds nic neříká, podobnou aktivitu nabízí i kurzy [Kódování s Annou a Elsou][2] nebo [Vytvořte hru Flappy][3].\n-   U starších studentů a dospělých funguje velice dobře kurz [Napiš svůj první počítačový program][4], a to jako úkol pro jednotlivce i jako aktivita programování ve dvojicích."
+          "description": "Řekněte studentům, ať se pokusí dokončit kurz [Napiš svůj první počítačový program](https://studio.code.org/hoc/1).\n\nV závislosti na věku a dovednostech studentů můžete zvážit následující: \n\n-   U mladších žáků doporučujeme rozdělit třídu do dvojic nebo velmi malých skupin (po třech nebo čtyřech žácích) a říct členům každé skupiny, ať na dokončení kurzu pracují společně – využijte metodu [programování ve dvojicích](https://youtu.be/vgkahOzFH2Q).\n-   U žáků středních ročníků funguje dobře, když na kurzu pracují samostatně. Někdy pomůže, když žákům dovolíte, aby si kurz vybrali sami. Pokud jim hra Angry Birds nic neříká, podobnou aktivitu nabízí i kurzy [Kódování s Annou a Elsou](https://studio.code.org/s/frozen/stage/1/puzzle/1) nebo [Vytvořte hru Flappy](https://studio.code.org/flappy/1).\n-   U starších studentů a dospělých funguje velice dobře kurz [Napiš svůj první počítačový program](https://studio.code.org/hoc/1), a to jako úkol pro jednotlivce i jako aktivita programování ve dvojicích."
         },
         "524f2e35-6286-4585-879e-96e7286e8a6d": {
           "tips": [
@@ -23060,7 +23060,7 @@
           ]
         },
         "3f29a14c-3903-4615-8a6b-d1961b57dc7b": {
-          "description": "Když skupina nebo jednotlivec skončí dřív, může zkusit další z kurzů na [code.org/learn][0]."
+          "description": "Když skupina nebo jednotlivec skončí dřív, může zkusit další z kurzů na [code.org/learn](http://code.org/learn)."
         },
         "50db3674-3387-4932-ba7e-c9f176ebd976": {
           "name": "Shrnutí",
@@ -23068,18 +23068,18 @@
         },
         "46f387e2-c275-4c57-acec-c9709e7f44fc": {
           "name": "Oslavujte",
-          "description": "Vysvětlete, že dnes strávíte jednu hodinu programováním, protože tento týden je týden výuky počítačových věd a miliony dalších studentů po celém světě tento týden také absolvovaly Hodinu kódu. Poblahopřejte studentům, že se tohoto celosvětového hnutí zúčastnili.\n\nDejte všem studentům [certifikáty][0] s jejich jmény."
+          "description": "Vysvětlete, že dnes strávíte jednu hodinu programováním, protože tento týden je týden výuky počítačových věd a miliony dalších studentů po celém světě tento týden také absolvovaly Hodinu kódu. Poblahopřejte studentům, že se tohoto celosvětového hnutí zúčastnili.\n\nDejte všem studentům [certifikáty](http://code.org/certificates) s jejich jmény."
         },
         "692a60f1-d3a2-44d3-8c58-19461d6b5999": {
           "name": "Další kroky",
           "description": "Sdělte studentům, že pokud se jim dnešní aktivita líbila, mají spoustu možností, jak se v programování dál rozvíjet. Doporučte jim, ať navštíví web code.org/learn, kde najdou seznam možností. A pokud máte v plánu absolvovat nějaké doplňující aktivity, řekněte jim, co je čeká v příští hodině s vámi."
         },
         "c00f4730-69b0-4533-bf47-253647c6715f": {
-          "description": "Dejte všem studentům [„výstupní lístky“][0] a požádejte je, aby shrnuli, co se dnes naučili, jaký měli pocit nebo co zažili. Studenti můžou kreslit, psát nebo se vyjádřit jakýmkoli způsobem, který uznají za vhodný. Pak od nich při odchodu z učebny všechny „výstupní lístky“ vyberte. Jestliže chcete, můžete tyto lístky zveřejnit na nástěnce nebo na nějakém viditelném místě ve škole jako připomínku Hodiny kódu."
+          "description": "Dejte všem studentům [„výstupní lístky“](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) a požádejte je, aby shrnuli, co se dnes naučili, jaký měli pocit nebo co zažili. Studenti můžou kreslit, psát nebo se vyjádřit jakýmkoli způsobem, který uznají za vhodný. Pak od nich při odchodu z učebny všechny „výstupní lístky“ vyberte. Jestliže chcete, můžete tyto lístky zveřejnit na nástěnce nebo na nějakém viditelném místě ve škole jako připomínku Hodiny kódu."
         },
         "6e6e32c8-6dfd-4075-b1c7-0c96b6853b09": {
           "name": "Za Hodinou kódu",
-          "description": "Je spousta způsobů, jak můžete i po skončení Hodiny kódu ve třídě prvního stupně ZŠ pokračovat v učení informatiky. Tady je několik tipů:\n\n-   **Odučte kurzy programu [Základy informatiky Code Studia][0]**. Těchto šest kurzů je určených pro mladé žáky. Děti se na sérii úloh naučí programovat a pedagogové získají přístup k zajímavým plánům hodin, které jim pomůžou zpestřit výuku. Code.org nabízí k těmto kurzům bezplatný profesní rozvoj, a to jak online, tak prezenční."
+          "description": "Je spousta způsobů, jak můžete i po skončení Hodiny kódu ve třídě prvního stupně ZŠ pokračovat v učení informatiky. Tady je několik tipů:\n\n-   **Odučte kurzy programu [Základy informatiky Code Studia](http://code.org/educate/k5)**. Těchto šest kurzů je určených pro mladé žáky. Děti se na sérii úloh naučí programovat a pedagogové získají přístup k zajímavým plánům hodin, které jim pomůžou zpestřit výuku. Code.org nabízí k těmto kurzům bezplatný profesní rozvoj, a to jak online, tak prezenční."
         },
         "5858c0fa-a7a6-44c2-afcb-bfb816b18a5b": {
           "name": "Úpravy pro učitele mateřských škol",
@@ -23091,7 +23091,7 @@
         },
         "fc04ef5f-0d78-418b-9311-e12201106453": {
           "tips": [
-            "Jednou z možností, jak představit Hodinu kódu, pokud sami nemáte s kódováním dostatečnou zkušenost, je ukázat jedno z [našich inspiračních videí][0]. Vyberte takové, o kterém si myslíte, že bude vaše studenty inspirovat, a pusťte jim ho. Pro mladší žáky doporučujeme video „[Zvládne to každý][1]“."
+            "Jednou z možností, jak představit Hodinu kódu, pokud sami nemáte s kódováním dostatečnou zkušenost, je ukázat jedno z [našich inspiračních videí](https://hourofcode.com/us/resources#videos). Vyberte takové, o kterém si myslíte, že bude vaše studenty inspirovat, a pusťte jim ho. Pro mladší žáky doporučujeme video „[Zvládne to každý](https://youtu.be/qYZF6oIZtfc)“."
           ]
         },
         "ea8a3bf2-1425-482a-9f98-a5b30d6ee809": {
@@ -23099,7 +23099,7 @@
         },
         "c628ba28-35c2-4ded-a19d-74079377b309": {
           "name": "Doba ledová Play Lab",
-          "description": "Vyzvěte studenty, aby absolvovali kurz [Doba ledová v Play Labu][0].\n\nV závislosti na věku a dovednostech studentů můžete zvážit následující: \n\n-   U žáků druhého stupně základních škol a studentů středních škol doporučujeme zvolit kurzy, které umožňují volnou hru a vytváření aplikací nebo her. Studenty můžete nechat pracovat samostatně, ve dvojicích nebo v malých skupinách. Na webu [code.org/learn][1] je spousta dalších kurzů, které umožňují volně vytvářet, jako jsou [Vytvořte hru Flappy][2] nebo náš nový nástroj v beta verzi [App Lab][3].\n-   U mladších žáků doporučujeme rozdělit třídu do dvojic nebo velmi malých skupin (po třech nebo čtyřech žácích) a říct členům každé skupiny, ať na dokončení kurzu pracují společně – využijte metodu [programování ve dvojicích][4].\n-   U dospělých funguje kurz [Napiš svůj první počítačový program][5] velmi dobře jako výzva pro individuální práci i jako aktivita programování ve dvojicích."
+          "description": "Vyzvěte studenty, aby absolvovali kurz [Doba ledová v Play Labu](https://studio.code.org/s/iceage/lessons/1/levels/1).\n\nV závislosti na věku a dovednostech studentů můžete zvážit následující: \n\n-   U žáků druhého stupně základních škol a studentů středních škol doporučujeme zvolit kurzy, které umožňují volnou hru a vytváření aplikací nebo her. Studenty můžete nechat pracovat samostatně, ve dvojicích nebo v malých skupinách. Na webu [code.org/learn](http://code.org/learn) je spousta dalších kurzů, které umožňují volně vytvářet, jako jsou [Vytvořte hru Flappy](https://studio.code.org/s/flappy) nebo náš nový nástroj v beta verzi [App Lab](https://code.org/educate/applab).\n-   U mladších žáků doporučujeme rozdělit třídu do dvojic nebo velmi malých skupin (po třech nebo čtyřech žácích) a říct členům každé skupiny, ať na dokončení kurzu pracují společně – využijte metodu [programování ve dvojicích](https://youtu.be/vgkahOzFH2Q).\n-   U dospělých funguje kurz [Napiš svůj první počítačový program](https://studio.code.org/hoc/1) velmi dobře jako výzva pro individuální práci i jako aktivita programování ve dvojicích."
         },
         "548dc37b-f338-4a52-a77e-7380794c64f2": {
           "tips": [
@@ -23107,7 +23107,7 @@
           ]
         },
         "86d8427e-15bf-420c-b405-3d1f1c3c46c6": {
-          "description": "Když skupina nebo jednotlivec skončí dřív, může zkusit další z kurzů na [code.org/learn][0]."
+          "description": "Když skupina nebo jednotlivec skončí dřív, může zkusit další z kurzů na [code.org/learn](http://code.org/learn)."
         },
         "d8b92f56-a741-43ac-9d6f-3fdf1c452001": {
           "name": "Shrnutí",
@@ -23115,7 +23115,7 @@
         },
         "3d63393a-9146-4027-8783-247e19637d25": {
           "name": "Oslavujte",
-          "description": "Vysvětlete, že dnes strávíte jednu hodinu programováním, protože tento týden je týden výuky počítačových věd a miliony dalších studentů po celém světě tento týden také absolvovaly Hodinu kódu. Poblahopřejte studentům, že se tohoto celosvětového hnutí zúčastnili.\n\nDejte všem studentům [certifikáty][0] s jejich jmény."
+          "description": "Vysvětlete, že dnes strávíte jednu hodinu programováním, protože tento týden je týden výuky počítačových věd a miliony dalších studentů po celém světě tento týden také absolvovaly Hodinu kódu. Poblahopřejte studentům, že se tohoto celosvětového hnutí zúčastnili.\n\nDejte všem studentům [certifikáty](http://code.org/certificates) s jejich jmény."
         },
         "4ae122fa-da6f-4aaf-b2f8-c68fd0bb68af": {
           "name": "Další kroky",
@@ -23127,7 +23127,7 @@
         },
         "4ae8bc68-25be-4eaa-ae1e-b9bfe8623a23": {
           "name": "Za Hodinou kódu",
-          "description": "Je spousta způsobů, jak můžete i po skončení Hodiny kódu ve třídě prvního stupně ZŠ pokračovat v učení informatiky. Tady je několik tipů:\n\n-   **Odučte kurzy programu [Základy informatiky Code Studia][0]**. Tyto čtyři kurzy jsou určené pro mladé žáky. Děti se na sérii úloh naučí programovat a pedagogové získají přístup k zajímavým plánům hodin, které jim pomůžou zpestřit výuku. Code.org nabízí k těmto kurzům bezplatný profesní rozvoj, a to jak online, tak prezenční.\n-   **Pozvěte odborníka na počítačovou vědu, aby před třídou promluvil o své práci.** Žádné dobrovolníky neznáte? Oslovte některé z naší [mapy dobrovolníků][1]."
+          "description": "Je spousta způsobů, jak můžete i po skončení Hodiny kódu ve třídě prvního stupně ZŠ pokračovat v učení informatiky. Tady je několik tipů:\n\n-   **Odučte kurzy programu [Základy informatiky Code Studia](http://code.org/educate/k5)**. Tyto čtyři kurzy jsou určené pro mladé žáky. Děti se na sérii úloh naučí programovat a pedagogové získají přístup k zajímavým plánům hodin, které jim pomůžou zpestřit výuku. Code.org nabízí k těmto kurzům bezplatný profesní rozvoj, a to jak online, tak prezenční.\n-   **Pozvěte odborníka na počítačovou vědu, aby před třídou promluvil o své práci.** Žádné dobrovolníky neznáte? Oslovte některé z naší [mapy dobrovolníků](https://code.org/volunteer/local)."
         },
         "88079aec-5c42-4f3f-bbb6-cba4f8866c92": {
           "name": "Příprava scény",
@@ -23135,7 +23135,7 @@
         },
         "6874de98-8778-447b-8453-0138809b2c7e": {
           "tips": [
-            "Jednou z možností, jak představit Hodinu kódu, pokud sami nemáte s kódováním dostatečnou zkušenost, je ukázat jedno z [našich inspiračních videí][0]. Vyberte takové, o kterém si myslíte, že bude vaše studenty inspirovat, a pusťte jim ho. Pro mladší žáky doporučujeme video „[Zvládne to každý][1]“."
+            "Jednou z možností, jak představit Hodinu kódu, pokud sami nemáte s kódováním dostatečnou zkušenost, je ukázat jedno z [našich inspiračních videí](https://hourofcode.com/us/resources#videos). Vyberte takové, o kterém si myslíte, že bude vaše studenty inspirovat, a pusťte jim ho. Pro mladší žáky doporučujeme video „[Zvládne to každý](https://youtu.be/qYZF6oIZtfc)“."
           ]
         },
         "82e4a494-65fb-40ac-b2c2-323044e15b77": {
@@ -23143,7 +23143,7 @@
         },
         "bd5d11f4-9c4c-4f24-bb9f-482392bd65aa": {
           "name": "Disney Infinity Play Lab",
-          "description": "Vyzvěte studenty, aby absolvovali kurz [Disney Infinity v Play Labu][0].\n\nV závislosti na věku a dovednostech studentů můžete zvážit následující: \n\n-   U žáků druhého stupně základních škol a studentů středních škol doporučujeme zvolit kurzy, které umožňují volnou hru a vytváření aplikací nebo her. Studenty můžete nechat pracovat samostatně, ve dvojicích nebo v malých skupinách. Na webu [code.org/learn][1] je spousta dalších kurzů, které umožňují volně vytvářet, jako jsou [Vytvořte hru Flappy][2] nebo náš nový nástroj v beta verzi [App Lab][3].\n-   U mladších žáků doporučujeme rozdělit třídu do dvojic nebo velmi malých skupin (po třech nebo čtyřech žácích) a říct členům každé skupiny, ať na dokončení kurzu pracují společně – využijte metodu [programování ve dvojicích][4].\n-   U dospělých funguje kurz [Napiš svůj první počítačový program][5] velmi dobře jako výzva pro individuální práci i jako aktivita programování ve dvojicích."
+          "description": "Vyzvěte studenty, aby absolvovali kurz [Disney Infinity v Play Labu](https://studio.code.org/s/infinity/lessons/1/levels/1).\n\nV závislosti na věku a dovednostech studentů můžete zvážit následující: \n\n-   U žáků druhého stupně základních škol a studentů středních škol doporučujeme zvolit kurzy, které umožňují volnou hru a vytváření aplikací nebo her. Studenty můžete nechat pracovat samostatně, ve dvojicích nebo v malých skupinách. Na webu [code.org/learn](http://code.org/learn) je spousta dalších kurzů, které umožňují volně vytvářet, jako jsou [Vytvořte hru Flappy](https://studio.code.org/s/flappy) nebo náš nový nástroj v beta verzi [App Lab](https://code.org/educate/applab).\n-   U mladších žáků doporučujeme rozdělit třídu do dvojic nebo velmi malých skupin (po třech nebo čtyřech žácích) a říct členům každé skupiny, ať na dokončení kurzu pracují společně – využijte metodu [programování ve dvojicích](https://youtu.be/vgkahOzFH2Q).\n-   U dospělých funguje kurz [Napiš svůj první počítačový program](https://studio.code.org/hoc/1) velmi dobře jako výzva pro individuální práci i jako aktivita programování ve dvojicích."
         },
         "b1ea2c15-24bb-475a-bb3f-bbc8ea1a51c0": {
           "tips": [
@@ -23151,7 +23151,7 @@
           ]
         },
         "712a8a98-3ab7-43d0-8f6f-a68e6984b009": {
-          "description": "Když skupina nebo jednotlivec skončí dřív, může zkusit další z kurzů na [code.org/learn][0]."
+          "description": "Když skupina nebo jednotlivec skončí dřív, může zkusit další z kurzů na [code.org/learn](http://code.org/learn)."
         },
         "a0530acf-3bce-4de9-b392-fe8725044086": {
           "name": "Shrnutí",
@@ -23159,7 +23159,7 @@
         },
         "ceaf9d96-e806-48e1-9a95-30566999264e": {
           "name": "Oslavujte",
-          "description": "Vysvětlete, že dnes strávíte jednu hodinu programováním, protože tento týden je týden výuky počítačových věd a miliony dalších studentů po celém světě tento týden také absolvovaly Hodinu kódu. Poblahopřejte studentům, že se tohoto celosvětového hnutí zúčastnili.\n\nDejte všem studentům [certifikáty][0] s jejich jmény."
+          "description": "Vysvětlete, že dnes strávíte jednu hodinu programováním, protože tento týden je týden výuky počítačových věd a miliony dalších studentů po celém světě tento týden také absolvovaly Hodinu kódu. Poblahopřejte studentům, že se tohoto celosvětového hnutí zúčastnili.\n\nDejte všem studentům [certifikáty](http://code.org/certificates) s jejich jmény."
         },
         "680268d8-e3db-4f80-b56d-dfe40ada4d77": {
           "name": "Další kroky",
@@ -23171,7 +23171,7 @@
         },
         "38f15942-4a08-48f7-a0c4-e04232bc9bdc": {
           "name": "Za Hodinou kódu",
-          "description": "Je spousta způsobů, jak můžete i po skončení Hodiny kódu ve třídě prvního stupně ZŠ pokračovat v učení informatiky. Tady je několik tipů:\n\n-   **Odučte kurzy programu [Základy informatiky Code Studia][0]**. Tyto čtyři kurzy jsou určené pro mladé žáky. Děti se na sérii úloh naučí programovat a pedagogové získají přístup k zajímavým plánům hodin, které jim pomůžou zpestřit výuku. Code.org nabízí k těmto kurzům bezplatný profesní rozvoj, a to jak online, tak prezenční.\n-   **Pozvěte odborníka na počítačovou vědu, aby před třídou promluvil o své práci.** Žádné dobrovolníky neznáte? Oslovte některé z naší [mapy dobrovolníků][1]."
+          "description": "Je spousta způsobů, jak můžete i po skončení Hodiny kódu ve třídě prvního stupně ZŠ pokračovat v učení informatiky. Tady je několik tipů:\n\n-   **Odučte kurzy programu [Základy informatiky Code Studia](http://code.org/educate/k5)**. Tyto čtyři kurzy jsou určené pro mladé žáky. Děti se na sérii úloh naučí programovat a pedagogové získají přístup k zajímavým plánům hodin, které jim pomůžou zpestřit výuku. Code.org nabízí k těmto kurzům bezplatný profesní rozvoj, a to jak online, tak prezenční.\n-   **Pozvěte odborníka na počítačovou vědu, aby před třídou promluvil o své práci.** Žádné dobrovolníky neznáte? Oslovte některé z naší [mapy dobrovolníků](https://code.org/volunteer/local)."
         },
         "a16594a7-8312-4ac3-87c8-fd2d5d6e5bfb": {
           "name": "Úvod",
@@ -23179,7 +23179,7 @@
         },
         "6415b9b2-1e23-43ee-9d0c-e65efcb0d65c": {
           "tips": [
-            "Jednou z možností, jak představit Hodinu kódu, pokud sami nemáte s kódováním dostatečnou zkušenost, je ukázat jedno z [našich inspiračních videí][0]. Vyberte takové, o kterém si myslíte, že bude vaše studenty inspirovat, a pusťte jim ho. Pro mladší žáky doporučujeme video „[Hodina kódu je tady][1]“."
+            "Jednou z možností, jak představit Hodinu kódu, pokud sami nemáte s kódováním dostatečnou zkušenost, je ukázat jedno z [našich inspiračních videí](https://hourofcode.com/us/resources#videos). Vyberte takové, o kterém si myslíte, že bude vaše studenty inspirovat, a pusťte jim ho. Pro mladší žáky doporučujeme video „[Hodina kódu je tady](https://youtu.be/FC5FbmsH4fw)“."
           ]
         },
         "3fee530c-6d5f-44da-89f7-cfae73040787": {
@@ -23192,16 +23192,16 @@
         },
         "aafa75c2-9439-415c-b42f-cac8ddfc2874": {
           "name": "Minecraft Adventurer",
-          "description": "Řekněte žákům, ať se pokusí dokončit kurz [Minecraft: Adventurer][0].\n\nV závislosti na věku a dovednostech žáků můžete zvážit následující: \n\n-   U mladších dětí doporučujeme, abyste třídu rozdělili do dvojic a vyzvali žáky, ať na kurzu pracují společně – zvolte metodu [programování ve dvojicích][1].\n-   U žáků středních ročníků funguje dobře, když na kurzu pracují samostatně. Někdy pomůže, když žákům dovolíte, aby si kurz vybrali sami. Pokud je Minecraft nezajímá, podobnou aktivitu nabízí i kurzy [Kódování s Annou a Elsou][2] nebo [Star Wars][3].\n-   U starších studentů a dospělých funguje velice dobře kurz [Minecraft: Adventurer][4], a to jako úkol pro jednotlivce i jako aktivita programování ve dvojicích.",
+          "description": "Řekněte žákům, ať se pokusí dokončit kurz [Minecraft: Adventurer](studio.code.org/s/mc/lessons/1/levels/1).\n\nV závislosti na věku a dovednostech žáků můžete zvážit následující: \n\n-   U mladších dětí doporučujeme, abyste třídu rozdělili do dvojic a vyzvali žáky, ať na kurzu pracují společně – zvolte metodu [programování ve dvojicích](https://youtu.be/vgkahOzFH2Q).\n-   U žáků středních ročníků funguje dobře, když na kurzu pracují samostatně. Někdy pomůže, když žákům dovolíte, aby si kurz vybrali sami. Pokud je Minecraft nezajímá, podobnou aktivitu nabízí i kurzy [Kódování s Annou a Elsou](https://studio.code.org/s/frozen/stage/1/puzzle/1) nebo [Star Wars](https://code.org/starwars).\n-   U starších studentů a dospělých funguje velice dobře kurz [Minecraft: Adventurer](https://hourofcode.com/mc), a to jako úkol pro jednotlivce i jako aktivita programování ve dvojicích.",
           "tips": [
             "Než studenty vyzvete, aby se pustili do absolvování kurzu, zkuste ho nejdřív dokončit sami. Tak budete vědět, co od kurzu očekávat, a můžete se rozhodnout, jestli necháte studenty, ať si sami zvolí ten, který se jim líbí, anebo jim přiřadíte kurz na základě jejich potřeb."
           ]
         },
         "1766511d-3639-46a3-911f-acc7f8c4b922": {
-          "description": "Když skupina nebo jednotlivec skončí dřív, může zkusit další z kurzů na [code.org/learn][0]."
+          "description": "Když skupina nebo jednotlivec skončí dřív, může zkusit další z kurzů na [code.org/learn](http://code.org/learn)."
         },
         "8c990fee-4a0f-4d70-a635-ab66a8195193": {
-          "description": "Dejte všem studentům [„výstupní lístky“][0] a požádejte je, aby shrnuli, co se dnes naučili, jaký měli pocit nebo co zažili. Studenti můžou kreslit, psát nebo se vyjádřit jakýmkoli způsobem, který uznají za vhodný. Pak od nich při odchodu z učebny všechny „výstupní lístky“ vyberte. Jestliže chcete, můžete tyto lístky zveřejnit na nástěnce nebo na nějakém viditelném místě ve škole jako připomínku Hodiny kódu."
+          "description": "Dejte všem studentům [„výstupní lístky“](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) a požádejte je, aby shrnuli, co se dnes naučili, jaký měli pocit nebo co zažili. Studenti můžou kreslit, psát nebo se vyjádřit jakýmkoli způsobem, který uznají za vhodný. Pak od nich při odchodu z učebny všechny „výstupní lístky“ vyberte. Jestliže chcete, můžete tyto lístky zveřejnit na nástěnce nebo na nějakém viditelném místě ve škole jako připomínku Hodiny kódu."
         },
         "bcdecd77-2efb-44b5-9fdc-e244d1f5ccf6": {
           "name": "Shrnutí",
@@ -23209,7 +23209,7 @@
         },
         "6b574c8b-2319-4244-acc8-fb8405fa5737": {
           "name": "Oslavujte",
-          "description": "Vysvětlete, že dnes strávíte jednu hodinu programováním, protože tento týden je týden výuky počítačových věd a miliony dalších studentů po celém světě tento týden také absolvovaly Hodinu kódu. Poblahopřejte studentům, že se tohoto celosvětového hnutí zúčastnili.\n\nDejte všem studentům [certifikáty][0] s jejich jmény."
+          "description": "Vysvětlete, že dnes strávíte jednu hodinu programováním, protože tento týden je týden výuky počítačových věd a miliony dalších studentů po celém světě tento týden také absolvovaly Hodinu kódu. Poblahopřejte studentům, že se tohoto celosvětového hnutí zúčastnili.\n\nDejte všem studentům [certifikáty](https://studio.code.org/certificates/batch?course=bWM=) s jejich jmény."
         },
         "02dfa607-4f9e-404c-bdae-f9f423fa526c": {
           "name": "Další kroky",
@@ -23217,7 +23217,7 @@
         },
         "5bc8aefa-7bb0-4f22-a555-321738755b8c": {
           "name": "Za Hodinou kódu",
-          "description": "Je mnoho způsobů, jak můžete po skončení Hodiny kódu pokračovat ve výuce informatiky s žáky prvního stupně. Tady je několik tipů:\n\n-   **Odučte kurzy [Základy informatiky Code Studia][0]**. Tyto čtyři kurzy jsou navržené pro mladší žáky, kteří se díky sérii zadání seznámí se základy kódování. Pedagogové získají přístup k zajímavým plánům hodin, které jim pomůžou zpestřit výuku. Code.org nabízí k těmto kurzům bezplatný profesní rozvoj, a to jak online, tak prezenční.\n-   Další doporučení na kurzy najdete v části **[Můžete učit informatiku][1]**.\n-   **Pozvěte do třídy odborníka na informatiku, aby promluvil o své práci.** Nemáte takového odborníka ve svém okolí? Najděte si nějakého v naší [mapě dobrovolníků][2]."
+          "description": "Je mnoho způsobů, jak můžete po skončení Hodiny kódu pokračovat ve výuce informatiky s žáky prvního stupně. Tady je několik tipů:\n\n-   **Odučte kurzy [Základy informatiky Code Studia](http://code.org/educate/k5)**. Tyto čtyři kurzy jsou navržené pro mladší žáky, kteří se díky sérii zadání seznámí se základy kódování. Pedagogové získají přístup k zajímavým plánům hodin, které jim pomůžou zpestřit výuku. Code.org nabízí k těmto kurzům bezplatný profesní rozvoj, a to jak online, tak prezenční.\n-   Další doporučení na kurzy najdete v části **[Můžete učit informatiku](https://code.org/teach)**.\n-   **Pozvěte do třídy odborníka na informatiku, aby promluvil o své práci.** Nemáte takového odborníka ve svém okolí? Najděte si nějakého v naší [mapě dobrovolníků](https://code.org/volunteer/local)."
         },
         "563d9088-3ce6-48c1-aa79-6f673e089247": {
           "name": "Úvod",
@@ -23225,7 +23225,7 @@
         },
         "9f1107d0-cde6-4f78-911c-5018ea9264e0": {
           "tips": [
-            "Jednou z možností, jak představit Hodinu kódu, pokud sami nemáte s kódováním dostatečnou zkušenost, je ukázat jedno z [našich inspiračních videí][0]. Vyberte takové, o kterém si myslíte, že bude vaše studenty inspirovat, a pusťte jim ho. Pro mladší žáky doporučujeme video „[Hodina kódu je tady][1]“."
+            "Jednou z možností, jak představit Hodinu kódu, pokud sami nemáte s kódováním dostatečnou zkušenost, je ukázat jedno z [našich inspiračních videí](https://hourofcode.com/us/resources#videos). Vyberte takové, o kterém si myslíte, že bude vaše studenty inspirovat, a pusťte jim ho. Pro mladší žáky doporučujeme video „[Hodina kódu je tady](https://youtu.be/FC5FbmsH4fw)“."
           ]
         },
         "ed8509fa-59b4-43a4-bd4a-05a5018387c2": {
@@ -23238,7 +23238,7 @@
         },
         "75d779c4-24f7-40be-bf92-b0c094c16d11": {
           "name": "Hodina kódu Minecraft Designer",
-          "description": "Řekněte žákům, ať se pokusí dokončit tuto aktivitu [Minecraft: Designer][0].\n\nV závislosti na věku a dovednostech žáků můžete zvážit následující: \n\n-   U mladších dětí doporučujeme, abyste třídu rozdělili do dvojic a vyzvali žáky, ať na kurzu pracují společně – zvolte metodu [programování ve dvojicích][1].\n-   U žáků středních ročníků funguje dobře, když na kurzu pracují samostatně. Někdy pomůže, když žákům dovolíte, aby si kurz vybrali sami. Pokud je Minecraft nezajímá, podobnou aktivitu nabízí i kurzy [Kódování s Annou a Elsou][2] nebo [Star Wars][3].\n-   U starších studentů a dospělých funguje velice dobře kurz [Minecraft: Designer][4], a to jako úkol pro jednotlivce i jako aktivita programování ve dvojicích."
+          "description": "Řekněte žákům, ať se pokusí dokončit tuto aktivitu [Minecraft: Designer](http://studio.code.org/s/minecraft/lessons/1/levels/1).\n\nV závislosti na věku a dovednostech žáků můžete zvážit následující: \n\n-   U mladších dětí doporučujeme, abyste třídu rozdělili do dvojic a vyzvali žáky, ať na kurzu pracují společně – zvolte metodu [programování ve dvojicích](https://youtu.be/vgkahOzFH2Q).\n-   U žáků středních ročníků funguje dobře, když na kurzu pracují samostatně. Někdy pomůže, když žákům dovolíte, aby si kurz vybrali sami. Pokud je Minecraft nezajímá, podobnou aktivitu nabízí i kurzy [Kódování s Annou a Elsou](https://studio.code.org/s/frozen/stage/1/puzzle/1) nebo [Star Wars](https://code.org/starwars).\n-   U starších studentů a dospělých funguje velice dobře kurz [Minecraft: Designer](http://studio.code.org/s/minecraft/lessons/1/levels/1), a to jako úkol pro jednotlivce i jako aktivita programování ve dvojicích."
         },
         "8d4ecee7-5f04-4f80-9673-c2aec0c5ab9d": {
           "tips": [
@@ -23246,7 +23246,7 @@
           ]
         },
         "307ffdf6-e274-484b-a10f-329ddfe568dc": {
-          "description": "Když skupina nebo jednotlivec skončí dřív, může zkusit další z kurzů na [code.org/learn][0]."
+          "description": "Když skupina nebo jednotlivec skončí dřív, může zkusit další z kurzů na [code.org/learn](http://code.org/learn)."
         },
         "70935a98-82e9-4553-94f7-90a4e615dd34": {
           "name": "Shrnutí",
@@ -23254,18 +23254,18 @@
         },
         "5f00e31d-70fa-4bb2-9bef-223793082f5c": {
           "name": "Oslavujte",
-          "description": "Vysvětlete, že dnes strávíte jednu hodinu programováním, protože tento týden je týden výuky počítačových věd a miliony dalších studentů po celém světě tento týden také absolvovaly Hodinu kódu. Poblahopřejte studentům, že se tohoto celosvětového hnutí zúčastnili.\n\nDejte všem studentům [certifikáty][0] s jejich jmény."
+          "description": "Vysvětlete, že dnes strávíte jednu hodinu programováním, protože tento týden je týden výuky počítačových věd a miliony dalších studentů po celém světě tento týden také absolvovaly Hodinu kódu. Poblahopřejte studentům, že se tohoto celosvětového hnutí zúčastnili.\n\nDejte všem studentům [certifikáty](https://studio.code.org/certificates/batch?course=bWM=) s jejich jmény."
         },
         "20b7009c-3a45-4211-a9ad-c65f56099200": {
           "name": "Další kroky",
-          "description": "Sdělte studentům, že pokud se jim dnešní aktivita líbila, mají spoustu možností, jak se v programování dál rozvíjet. Doporučte jim, ať navštíví web [code.org/learn][0], kde najdou seznam možností. A pokud máte v plánu absolvovat nějaké doplňující aktivity, řekněte jim, co je čeká v příští hodině s vámi."
+          "description": "Sdělte studentům, že pokud se jim dnešní aktivita líbila, mají spoustu možností, jak se v programování dál rozvíjet. Doporučte jim, ať navštíví web [code.org/learn](<>), kde najdou seznam možností. A pokud máte v plánu absolvovat nějaké doplňující aktivity, řekněte jim, co je čeká v příští hodině s vámi."
         },
         "85fc4f24-eb97-4ff5-813f-4af3e5497034": {
-          "description": "Dejte všem studentům [„výstupní lístky“][0] a požádejte je, aby shrnuli, co se dnes naučili, jaký měli pocit nebo co zažili. Studenti můžou kreslit, psát nebo se vyjádřit jakýmkoli způsobem, který uznají za vhodný. Pak od nich při odchodu z učebny všechny „výstupní lístky“ vyberte. Jestliže chcete, můžete tyto lístky zveřejnit na nástěnce nebo na nějakém viditelném místě ve škole jako připomínku Hodiny kódu."
+          "description": "Dejte všem studentům [„výstupní lístky“](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) a požádejte je, aby shrnuli, co se dnes naučili, jaký měli pocit nebo co zažili. Studenti můžou kreslit, psát nebo se vyjádřit jakýmkoli způsobem, který uznají za vhodný. Pak od nich při odchodu z učebny všechny „výstupní lístky“ vyberte. Jestliže chcete, můžete tyto lístky zveřejnit na nástěnce nebo na nějakém viditelném místě ve škole jako připomínku Hodiny kódu."
         },
         "7f24d7ca-8a9e-417c-ac8e-18ca3ab48ac1": {
           "name": "Za Hodinou kódu",
-          "description": "Je mnoho způsobů, jak můžete po skončení Hodiny kódu pokračovat ve výuce informatiky s žáky prvního stupně. Tady je několik tipů:\n\n-   **Odučte kurzy [Základy informatiky Code Studia][0]**. Těchto šest kurzů je navrženo pro mladší žáky, kteří se díky sérii zadání seznámí se základy kódování. Pedagogové získají přístup k zajímavým plánům hodin, které jim pomůžou zpestřit výuku. Code.org nabízí k těmto kurzům bezplatný profesní rozvoj, a to jak online, tak prezenční.\n-   Další doporučení na kurzy najdete v části **[Můžete učit informatiku][1]**.\n-   **Pozvěte do třídy odborníka na informatiku, aby promluvil o své práci.** Nemáte takového odborníka ve svém okolí? Najděte si nějakého v naší [mapě dobrovolníků][2]."
+          "description": "Je mnoho způsobů, jak můžete po skončení Hodiny kódu pokračovat ve výuce informatiky s žáky prvního stupně. Tady je několik tipů:\n\n-   **Odučte kurzy [Základy informatiky Code Studia](http://code.org/educate/k5)**. Těchto šest kurzů je navrženo pro mladší žáky, kteří se díky sérii zadání seznámí se základy kódování. Pedagogové získají přístup k zajímavým plánům hodin, které jim pomůžou zpestřit výuku. Code.org nabízí k těmto kurzům bezplatný profesní rozvoj, a to jak online, tak prezenční.\n-   Další doporučení na kurzy najdete v části **[Můžete učit informatiku](https://code.org/teach)**.\n-   **Pozvěte do třídy odborníka na informatiku, aby promluvil o své práci.** Nemáte takového odborníka ve svém okolí? Najděte si nějakého v naší [mapě dobrovolníků](https://code.org/volunteer/local)."
         },
         "54b95e4d-58b7-4551-9782-7ce134f4e457": {
           "name": "Vytvářejte vzrušení!",
@@ -23533,7 +23533,7 @@
         },
         "6fa68bdd-8f9b-4d69-b54e-28141ee6d732": {
           "tips": [
-            "Jednou z možností, jak představit Hodinu kódu, pokud sami nemáte s kódováním dostatečnou zkušenost, je ukázat jedno z našich [inspiračních videí][0]. Vyberte takové, o kterém si myslíte, že bude vaše studenty inspirovat, a pusťte jim ho. Pro mladší žáky doporučujeme video [Hodina kódu je tady][1]."
+            "Jednou z možností, jak představit Hodinu kódu, pokud sami nemáte s kódováním dostatečnou zkušenost, je ukázat jedno z našich [inspiračních videí](https://hourofcode.com/us/resources#videos). Vyberte takové, o kterém si myslíte, že bude vaše studenty inspirovat, a pusťte jim ho. Pro mladší žáky doporučujeme video [Hodina kódu je tady](https://youtu.be/FC5FbmsH4fw)."
           ]
         },
         "7f1244d9-811b-410c-96b2-9f7086959c6b": {
@@ -23541,7 +23541,7 @@
         },
         "a69a3310-4b81-4e04-8313-51044489351a": {
           "name": "Star Wars: Budování galaxie",
-          "description": "Řekněte studentům, ať se pokusí dokončit tento kurz [Star Wars: Budování galaxie pomocí kódu][0].\n\nV závislosti na věku a dovednostech studentů můžete zvážit následující: \n\n-   U mladších dětí doporučujeme, abyste třídu rozdělili do dvojic a vyzvali žáky, ať na kurzu pracují společně – zvolte metodu [programování ve dvojicích][1]. \n-   U starších žáků funguje dobře, když na kurzu pracují samostatně. Někdy pomůže, když žákům dovolíte, aby si kurz vybrali sami. Pokud je Hvězdné války nezajímají, podobnou aktivitu nabízí i kurz [Napiš svůj první počítačový program][2].\n-   U dospělých funguje velice dobře kurz [Star Wars: Budování galaxie pomocí kódu][3], a to jako úkol pro jednotlivce i jako aktivita programování ve dvojicích."
+          "description": "Řekněte studentům, ať se pokusí dokončit tento kurz [Star Wars: Budování galaxie pomocí kódu](https://studio.code.org/s/starwars/lessons/1/levels/1).\n\nV závislosti na věku a dovednostech studentů můžete zvážit následující: \n\n-   U mladších dětí doporučujeme, abyste třídu rozdělili do dvojic a vyzvali žáky, ať na kurzu pracují společně – zvolte metodu [programování ve dvojicích](https://youtu.be/vgkahOzFH2Q). \n-   U starších žáků funguje dobře, když na kurzu pracují samostatně. Někdy pomůže, když žákům dovolíte, aby si kurz vybrali sami. Pokud je Hvězdné války nezajímají, podobnou aktivitu nabízí i kurz [Napiš svůj první počítačový program](https://studio.code.org/hoc/1).\n-   U dospělých funguje velice dobře kurz [Star Wars: Budování galaxie pomocí kódu](https://studio.code.org/s/starwars/lessons/1/levels/1), a to jako úkol pro jednotlivce i jako aktivita programování ve dvojicích."
         },
         "b17f8e8a-6b46-4f46-a4fc-894cf561bb9d": {
           "tips": [
@@ -23549,15 +23549,15 @@
           ]
         },
         "eb72d828-788d-4090-9e4f-71423c081948": {
-          "description": "Na konci kurzu budou mít studenti příležitost vytvořit hru Star Wars. Pokud skončí dřív, vyzvěte je, ať si vzájemně vyzkouší své hry a pak ať zkusí svoji vlastní hru zdokonalit tím, že zvýší její poutavost nebo náročnost.\n\nPřípadně můžete nechat skupinu nebo jednotlivce, ať se pustí do dalšího kurzu na stránce [code.org/learn][0]."
+          "description": "Na konci kurzu budou mít studenti příležitost vytvořit hru Star Wars. Pokud skončí dřív, vyzvěte je, ať si vzájemně vyzkouší své hry a pak ať zkusí svoji vlastní hru zdokonalit tím, že zvýší její poutavost nebo náročnost.\n\nPřípadně můžete nechat skupinu nebo jednotlivce, ať se pustí do dalšího kurzu na stránce [code.org/learn](http://code.org/learn)."
         },
         "bec776b1-a8cd-4e18-a1bc-be30f2942863": {
           "name": "Shrnutí",
-          "description": "Dejte každému studentovi pár poznámkových štítků nebo kartiček. Udělejte krátkou aktivitu [„Whip Around“][0]:\n\n-   Položte otázky, které se dají zodpovědět různými způsoby, například „Co se vám líbilo na právě dokončené aktivitě Hodina kódu?“ nebo „Jaké nové dovednosti jste dnes získali?“.\n-   Nechte studenty, ať napíšou na kartičky co nejvíc různých odpovědí, na každou kartičku jednu.\n    Procházejte třídou a zastavujte se postupně u jednotlivých studentů. Nechte je, ať jednu z odpovědí přečtou nahlas. Studenti by měli vybírat odpovědi, které ještě nezazněly.\n-   Na konci vyzvěte studenty k diskuzi o tom, která témata se v jejich odpovědích objevila nejčastěji."
+          "description": "Dejte každému studentovi pár poznámkových štítků nebo kartiček. Udělejte krátkou aktivitu [„Whip Around“](http://www.theteachertoolkit.com/index.php/tool/whip-around):\n\n-   Položte otázky, které se dají zodpovědět různými způsoby, například „Co se vám líbilo na právě dokončené aktivitě Hodina kódu?“ nebo „Jaké nové dovednosti jste dnes získali?“.\n-   Nechte studenty, ať napíšou na kartičky co nejvíc různých odpovědí, na každou kartičku jednu.\n    Procházejte třídou a zastavujte se postupně u jednotlivých studentů. Nechte je, ať jednu z odpovědí přečtou nahlas. Studenti by měli vybírat odpovědi, které ještě nezazněly.\n-   Na konci vyzvěte studenty k diskuzi o tom, která témata se v jejich odpovědích objevila nejčastěji."
         },
         "4cb35c62-404e-42b9-9eaf-09ec2f485a2b": {
           "name": "Oslavujte",
-          "description": "Vysvětlete, že dnes strávíte jednu hodinu programováním, protože tento týden je týden výuky počítačových věd a miliony dalších studentů po celém světě tento týden také absolvovaly Hodinu kódu. Poblahopřejte studentům, že se tohoto celosvětového hnutí zúčastnili.\n\nDejte všem studentům [certifikáty][0] s jejich jmény."
+          "description": "Vysvětlete, že dnes strávíte jednu hodinu programováním, protože tento týden je týden výuky počítačových věd a miliony dalších studentů po celém světě tento týden také absolvovaly Hodinu kódu. Poblahopřejte studentům, že se tohoto celosvětového hnutí zúčastnili.\n\nDejte všem studentům [certifikáty](http://code.org/certificates) s jejich jmény."
         },
         "80ff32c9-0373-4125-a65e-bef5f0e21cba": {
           "name": "Další kroky",
@@ -23565,7 +23565,7 @@
         },
         "57e403d7-a8be-47fc-bb97-1a068e2469ed": {
           "name": "Za Hodinou kódu",
-          "description": "Je spousta způsobů, jak můžete i po skončení Hodiny kódu ve třídě prvního stupně ZŠ pokračovat v učení informatiky. Tady je několik tipů:\n\n-   **Odučte kurzy programu [Základy informatiky Code Studia][0]**. Těchto šest kurzů je určených pro mladé žáky. Děti se na sérii úloh naučí programovat a pedagogové získají přístup k zajímavým plánům hodin, které jim pomůžou zpestřit výuku. Code.org nabízí k těmto kurzům bezplatný profesní rozvoj, a to jak online, tak prezenční.\n-   Informujte se o některých pracovních pozicích v informatice, o kterých dnes padla zmínka. Zdroje k plánování projektů v oblasti zkoumání kariérních možností najdete na webu [Sharemylesson.com][1].\n-   **Pozvěte odborníka na počítačovou vědu, aby před třídou promluvil o své práci.** Žádné dobrovolníky neznáte? Oslovte některé z naší [mapy dobrovolníků][2]."
+          "description": "Je spousta způsobů, jak můžete i po skončení Hodiny kódu ve třídě prvního stupně ZŠ pokračovat v učení informatiky. Tady je několik tipů:\n\n-   **Odučte kurzy programu [Základy informatiky Code Studia](http://code.org/educate/k5)**. Těchto šest kurzů je určených pro mladé žáky. Děti se na sérii úloh naučí programovat a pedagogové získají přístup k zajímavým plánům hodin, které jim pomůžou zpestřit výuku. Code.org nabízí k těmto kurzům bezplatný profesní rozvoj, a to jak online, tak prezenční.\n-   Informujte se o některých pracovních pozicích v informatice, o kterých dnes padla zmínka. Zdroje k plánování projektů v oblasti zkoumání kariérních možností najdete na webu [Sharemylesson.com](http://www.sharemylesson.com/TaxonomySearchResults.aspx?area=resources&keywords=career+research).\n-   **Pozvěte odborníka na počítačovou vědu, aby před třídou promluvil o své práci.** Žádné dobrovolníky neznáte? Oslovte některé z naší [mapy dobrovolníků](https://code.org/volunteer/local)."
         },
         "d0f5c55b-b19c-418c-8dc6-f87a80e08f45": {
           "description": "Požádejte studenty, aby zapsali své postřehy na lepicí papírky a při odchodu je nalepili na myšlenkovou mapu „Informatika“. Zkuste zaplnit nástěnku spoustou skvělých myšlenek o tom, co je to informatika a proč na ní záleží."
@@ -23576,14 +23576,14 @@
         },
         "88f6ccc1-0efa-4c60-985c-971a235d5645": {
           "tips": [
-            "Jednou z možností, jak představit Hodinu kódu, pokud sami nemáte s kódováním dostatečnou zkušenost, je ukázat jedno z našich [inspiračních videí][0]. Vyberte takové, o kterém si myslíte, že bude vaše studenty inspirovat, a pusťte jim ho. Pro mladší žáky doporučujeme video [Hodina kódu je tady][1]."
+            "Jednou z možností, jak představit Hodinu kódu, pokud sami nemáte s kódováním dostatečnou zkušenost, je ukázat jedno z našich [inspiračních videí](https://hourofcode.com/us/resources#videos). Vyberte takové, o kterém si myslíte, že bude vaše studenty inspirovat, a pusťte jim ho. Pro mladší žáky doporučujeme video [Hodina kódu je tady](https://youtu.be/FC5FbmsH4fw)."
           ]
         },
         "dbeab27b-4231-4281-be73-ae2aaa3d94b2": {
           "description": "Vysvětlete, že „kód“ v informatice je série pokynů srozumitelných pro počítač. Řekněte studentům, že dnes si procvičí „kódování“, „programování“ a „ladění“.\n\nDefinice:\n\n-   **Kódování** je psaní kódu nebo pokynů pro počítač.\n-   **Programování** je podobný pojem a znamená psaní kódu nebo pokynů. Dnes budete programovat pomocí bloků na počítači (v případě, že absolvujete online kurz) nebo pomocí tužky a papíru (pokud děláte aktivitu bez počítače).\n-   **Ladění** je hledání chyb v kódu a snaha o jejich opravu.\n\nŘekněte studentům, ať vyjmenují povolání, která souvisejí s kódováním. Možná zmíní pracovní pozice jako „programátor“, „informatik“, „vývojář softwaru“ nebo „inženýr“. Zapište odpovědi studentů na tabuli Informatika – z vědomostí studentů tak vytvoříte myšlenkovou mapu. \n\n**Řekněte:** _Máte pravdu. Neexistuje žádná správná ani špatná odpověď… dnes se určitá znalost kódu uplatní téměř v každé práci. Bez ohledu na to, jakou kariérní dráhu si zvolíte, bude vyžadovat určitou dovednost psaní kódu – a kódovat se může naučit každý. My se tomu budeme věnovat dnes. Možná vám dnešní aktivita úplně jako kódování připadat nebude, ale co se dnes naučíme, vás postupně může přivést až k napsání příštích Angry Birds nebo třeba nového Twitteru._"
         },
         "0ac387c0-d67a-4177-aacf-837ce03c55aa": {
-          "description": "Řekněte studentům, ať se pokusí dokončit tento kurz [Star Wars: Budování galaxie pomocí kódu][0].\n\nV závislosti na věku a dovednostech studentů můžete zvážit následující: \n\n-   U mladších dětí doporučujeme, abyste třídu rozdělili do dvojic a vyzvali žáky, ať na kurzu pracují společně – zvolte metodu [programování ve dvojicích][1]. \n-   U starších žáků funguje dobře, když na kurzu pracují samostatně. Někdy pomůže, když žákům dovolíte, aby si kurz vybrali sami. Pokud je Hvězdné války nezajímají, podobnou aktivitu nabízí i kurz [Napiš svůj první počítačový program][2].\n-   U dospělých funguje velice dobře kurz [Star Wars: Budování galaxie pomocí kódu][3], a to jako úkol pro jednotlivce i jako aktivita programování ve dvojicích."
+          "description": "Řekněte studentům, ať se pokusí dokončit tento kurz [Star Wars: Budování galaxie pomocí kódu](https://studio.code.org/s/starwarsblocks/lessons/1/levels/1).\n\nV závislosti na věku a dovednostech studentů můžete zvážit následující: \n\n-   U mladších dětí doporučujeme, abyste třídu rozdělili do dvojic a vyzvali žáky, ať na kurzu pracují společně – zvolte metodu [programování ve dvojicích](https://youtu.be/vgkahOzFH2Q). \n-   U starších žáků funguje dobře, když na kurzu pracují samostatně. Někdy pomůže, když žákům dovolíte, aby si kurz vybrali sami. Pokud je Hvězdné války nezajímají, podobnou aktivitu nabízí i kurz [Napiš svůj první počítačový program](https://studio.code.org/hoc/1).\n-   U dospělých funguje velice dobře kurz [Star Wars: Budování galaxie pomocí kódu](https://studio.code.org/s/starwarsblocks/lessons/1/levels/1), a to jako úkol pro jednotlivce i jako aktivita programování ve dvojicích."
         },
         "88879c41-12f5-4d2e-86e6-93925b83d7d0": {
           "tips": [
@@ -23591,15 +23591,15 @@
           ]
         },
         "719affd9-c1a0-4b0c-8bc3-22060893f5e0": {
-          "description": "Na konci kurzu budou mít studenti příležitost vytvořit hru Star Wars. Pokud skončí dřív, vyzvěte je, ať si vzájemně vyzkouší své hry a pak ať zkusí svoji vlastní hru zdokonalit tím, že zvýší její poutavost nebo náročnost.\n\nPřípadně můžete nechat skupinu nebo jednotlivce, ať se pustí do dalšího kurzu na stránce [code.org/learn][0]."
+          "description": "Na konci kurzu budou mít studenti příležitost vytvořit hru Star Wars. Pokud skončí dřív, vyzvěte je, ať si vzájemně vyzkouší své hry a pak ať zkusí svoji vlastní hru zdokonalit tím, že zvýší její poutavost nebo náročnost.\n\nPřípadně můžete nechat skupinu nebo jednotlivce, ať se pustí do dalšího kurzu na stránce [code.org/learn](http://code.org/learn)."
         },
         "afb5ecc7-af66-492d-96bb-2412754005e0": {
           "name": "Shrnutí",
-          "description": "Dejte každému studentovi pár poznámkových štítků nebo kartiček. Udělejte krátkou aktivitu [„Whip Around“][0]:\n\n-   Položte otázky, které se dají zodpovědět různými způsoby, například „Co se vám líbilo na právě dokončené aktivitě Hodina kódu?“ nebo „Jaké nové dovednosti jste dnes získali?“.\n-   Nechte studenty, ať napíšou na kartičky co nejvíc různých odpovědí, na každou kartičku jednu.\n    Procházejte třídou a zastavujte se postupně u jednotlivých studentů. Nechte je, ať jednu z odpovědí přečtou nahlas. Studenti by měli vybírat odpovědi, které ještě nezazněly.\n-   Na konci vyzvěte studenty k diskuzi o tom, která témata se v jejich odpovědích objevila nejčastěji."
+          "description": "Dejte každému studentovi pár poznámkových štítků nebo kartiček. Udělejte krátkou aktivitu [„Whip Around“](http://www.theteachertoolkit.com/index.php/tool/whip-around):\n\n-   Položte otázky, které se dají zodpovědět různými způsoby, například „Co se vám líbilo na právě dokončené aktivitě Hodina kódu?“ nebo „Jaké nové dovednosti jste dnes získali?“.\n-   Nechte studenty, ať napíšou na kartičky co nejvíc různých odpovědí, na každou kartičku jednu.\n    Procházejte třídou a zastavujte se postupně u jednotlivých studentů. Nechte je, ať jednu z odpovědí přečtou nahlas. Studenti by měli vybírat odpovědi, které ještě nezazněly.\n-   Na konci vyzvěte studenty k diskuzi o tom, která témata se v jejich odpovědích objevila nejčastěji."
         },
         "16a6a4db-d853-478e-9945-3f0d17865e80": {
           "name": "Oslavujte",
-          "description": "Vysvětlete, že dnes strávíte jednu hodinu programováním, protože tento týden je týden výuky počítačových věd a miliony dalších studentů po celém světě tento týden také absolvovaly Hodinu kódu. Poblahopřejte studentům, že se tohoto celosvětového hnutí zúčastnili.\n\nDejte všem studentům [certifikáty][0] s jejich jmény."
+          "description": "Vysvětlete, že dnes strávíte jednu hodinu programováním, protože tento týden je týden výuky počítačových věd a miliony dalších studentů po celém světě tento týden také absolvovaly Hodinu kódu. Poblahopřejte studentům, že se tohoto celosvětového hnutí zúčastnili.\n\nDejte všem studentům [certifikáty](http://code.org/certificates) s jejich jmény."
         },
         "450db873-f55e-4f30-bbb9-5dfde5bf47e4": {
           "name": "Další kroky",
@@ -23607,7 +23607,7 @@
         },
         "5ec42aed-0b79-49f8-bd64-0716e60498a4": {
           "name": "Za Hodinou kódu",
-          "description": "Je spousta způsobů, jak můžete i po skončení Hodiny kódu ve třídě prvního stupně ZŠ pokračovat v učení informatiky. Tady je několik tipů:\n\n-   **Odučte kurzy programu [Základy informatiky Code Studia][0]**. Těchto šest kurzů je určených pro mladé žáky. Děti se na sérii úloh naučí programovat a pedagogové získají přístup k zajímavým plánům hodin, které jim pomůžou zpestřit výuku. Code.org nabízí k těmto kurzům bezplatný profesní rozvoj, a to jak online, tak prezenční.\n-   Informujte se o některých pracovních pozicích v informatice, o kterých dnes padla zmínka. Zdroje k plánování projektů v oblasti zkoumání kariérních možností najdete na webu [Sharemylesson.com][1].\n-   **Pozvěte odborníka na počítačovou vědu, aby před třídou promluvil o své práci.** Žádné dobrovolníky neznáte? Oslovte některé z naší [mapy dobrovolníků][2]."
+          "description": "Je spousta způsobů, jak můžete i po skončení Hodiny kódu ve třídě prvního stupně ZŠ pokračovat v učení informatiky. Tady je několik tipů:\n\n-   **Odučte kurzy programu [Základy informatiky Code Studia](http://code.org/educate/k5)**. Těchto šest kurzů je určených pro mladé žáky. Děti se na sérii úloh naučí programovat a pedagogové získají přístup k zajímavým plánům hodin, které jim pomůžou zpestřit výuku. Code.org nabízí k těmto kurzům bezplatný profesní rozvoj, a to jak online, tak prezenční.\n-   Informujte se o některých pracovních pozicích v informatice, o kterých dnes padla zmínka. Zdroje k plánování projektů v oblasti zkoumání kariérních možností najdete na webu [Sharemylesson.com](http://www.sharemylesson.com/TaxonomySearchResults.aspx?area=resources&keywords=career+research).\n-   **Pozvěte odborníka na počítačovou vědu, aby před třídou promluvil o své práci.** Žádné dobrovolníky neznáte? Oslovte některé z naší [mapy dobrovolníků](https://code.org/volunteer/local)."
         },
         "b0fff664-80cc-4318-b031-edf88ad1aebc": {
           "description": "Požádejte studenty, aby zapsali své postřehy na lepicí papírky a při odchodu je nalepili na myšlenkovou mapu „Informatika“. Zkuste zaplnit nástěnku spoustou skvělých myšlenek o tom, co je to informatika a proč na ní záleží."
@@ -23721,7 +23721,7 @@
         },
         "bacf1db7-dc91-41b8-ad71-9fb655e18dfa": {
           "tips": [
-            "-   Po počítačové učebně se pohybujte tiše\n-   Nezapomeňte, že do počítačové učebny nepatří žvýkačky ani bonbony\n-   Dezinfikujte si ruce\n-   Sdílejte počítač s partnerem\n-   Dbejte na to, aby první „řidič“ dosáhl na myš\n-   Když jste frustrovaní, nebouchejte do počítače ani do monitoru a netřeste jimi\n-   Dodržujte [pravidlo 20/20/20][0].\n-   Jak se vypořádat s [Wiggles][1] každých 20–30 minut (vyžaduje bezplatné přihlášení na GoNoodle).\n-   Když něco nevíte, zeptejte se nejdřív partnera a až pak učitele\n-   Nezvyšujte příliš hlas, aby se slyšeli i ostatní\n-   Zaznamenávejte si do deníku své pocity a řešení"
+            "-   Po počítačové učebně se pohybujte tiše\n-   Nezapomeňte, že do počítačové učebny nepatří žvýkačky ani bonbony\n-   Dezinfikujte si ruce\n-   Sdílejte počítač s partnerem\n-   Dbejte na to, aby první „řidič“ dosáhl na myš\n-   Když jste frustrovaní, nebouchejte do počítače ani do monitoru a netřeste jimi\n-   Dodržujte [pravidlo 20/20/20](http://www.anthro.com/blog/2013/10/how-to-prevent-eye-strain-with-the-20-20-20-rule#.WOU39BLyu35).\n-   Jak se vypořádat s [Wiggles](https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll) každých 20–30 minut (vyžaduje bezplatné přihlášení na GoNoodle).\n-   Když něco nevíte, zeptejte se nejdřív partnera a až pak učitele\n-   Nezvyšujte příliš hlas, aby se slyšeli i ostatní\n-   Zaznamenávejte si do deníku své pocity a řešení"
           ]
         },
         "aa328958-bd87-4dbb-8585-cb33f905051f": {
@@ -23744,7 +23744,7 @@
           ]
         },
         "66f2f042-aa67-41db-a756-4ab6e5623f77": {
-          "description": "Naveďte studenty, ať dokončí kurz [Jigsaw][0].\n\n-   Povzbuďte studenty, kteří mají otázky nebo čelí nějaké výzvě, aby se nejprve zeptali spoužáka, se kterým spolupracují.\n-   Nezodpovězené otázky lze řešit se sousední skupinou, která už může znát řešení.\n-   Požádejte studenty, aby popsali problém, který řeší. Co by měl kód dělat? Co dělá? O čem to vypovídá?\n-   Připomeňte studentům, kteří pociťují frustraci, že frustrace je krokem na cestě k učení a že vytrvalost se vyplatí.\n-   Pokud se student po tom všem stále zasekává, položte mu návodné otázky, aby chybu sám odhalil."
+          "description": "Naveďte studenty, ať dokončí kurz [Jigsaw](http://studio.code.org/s/jigsaw/lessons/1/levels/1).\n\n-   Povzbuďte studenty, kteří mají otázky nebo čelí nějaké výzvě, aby se nejprve zeptali spoužáka, se kterým spolupracují.\n-   Nezodpovězené otázky lze řešit se sousední skupinou, která už může znát řešení.\n-   Požádejte studenty, aby popsali problém, který řeší. Co by měl kód dělat? Co dělá? O čem to vypovídá?\n-   Připomeňte studentům, kteří pociťují frustraci, že frustrace je krokem na cestě k učení a že vytrvalost se vyplatí.\n-   Pokud se student po tom všem stále zasekává, položte mu návodné otázky, aby chybu sám odhalil."
         },
         "11068ad0-f20b-4daf-94cd-7b4549b76f3a": {
           "progression_name": "Úrovně"
@@ -23754,10 +23754,10 @@
           "description": "Nechte studenty, ať napíšou nebo nakreslí, co se naučili a jaký měli pocit, když úlohu dokončili.\n\n**Výzvy:**\n\n-   Dokážete nakreslit pořadí, v jakém se připravujete na cestu do počítačové učebny?\n-   Nakreslete, co se v počítačové učebně dělá a co se nedělá.\n-   Nakreslete a označte názvy příslušenství počítače, která jste během řešení úlohy používali ke klikání a přetahování (tlačítko myši, dotyková obrazovka, trackpad)."
         },
         "8f47b370-5569-4a34-b105-c765a39c8460": {
-          "description": "Dejte studentům [odchodové lístky][0] a požádejte je, aby shrnuli, co se dnes naučili, jaké měli pocity nebo co prožívali. Studenti mohou kreslit, psát nebo se vyjadřovat, jakkoli uznají za vhodné. Pak od nich při odchodu z místnosti všechny odchodové lístky vyberte. Pokud chcete, můžete lístky ve škole vyvěsit na nějaké nástěnce nebo jiném dobře viditelném místě jako připomínku Hodiny kódu."
+          "description": "Dejte studentům [odchodové lístky](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) a požádejte je, aby shrnuli, co se dnes naučili, jaké měli pocity nebo co prožívali. Studenti mohou kreslit, psát nebo se vyjadřovat, jakkoli uznají za vhodné. Pak od nich při odchodu z místnosti všechny odchodové lístky vyberte. Pokud chcete, můžete lístky ve škole vyvěsit na nějaké nástěnce nebo jiném dobře viditelném místě jako připomínku Hodiny kódu."
         },
         "6ddc599f-da51-4adc-9dcc-f13b8b53e760": {
-          "description": "#### Za hranice Hodiny kódu\n\nJe spousta způsobů, jak můžete i po skončení Hodiny kódu ve třídě prvního stupně ZŠ pokračovat v učení počítačové vědy. Tady je několik námětů:\n\n-   Vyučujte kurzy programu [Základy informatiky Code Studia][0]. Těchto šest kurzů je určených pro mladé žáky. Děti se na sérii úloh naučí programovat a pedagogové získají přístup k zajímavým plánům hodin, které jim pomůžou zpestřit výuku. Code.org nabízí k těmto kurzům bezplatný profesní rozvoj, a to jak online, tak prezenční.\n-   Pozvěte odborníka na počítačovou vědu, aby před třídou promluvil o své práci. Neznáte žádné informatiky v okolí? Oslovte některého dobrovolníka z naší [mapy dobrovolníků][1]"
+          "description": "#### Za hranice Hodiny kódu\n\nJe spousta způsobů, jak můžete i po skončení Hodiny kódu ve třídě prvního stupně ZŠ pokračovat v učení počítačové vědy. Tady je několik námětů:\n\n-   Vyučujte kurzy programu [Základy informatiky Code Studia](http://code.org/educate/k5). Těchto šest kurzů je určených pro mladé žáky. Děti se na sérii úloh naučí programovat a pedagogové získají přístup k zajímavým plánům hodin, které jim pomůžou zpestřit výuku. Code.org nabízí k těmto kurzům bezplatný profesní rozvoj, a to jak online, tak prezenční.\n-   Pozvěte odborníka na počítačovou vědu, aby před třídou promluvil o své práci. Neznáte žádné informatiky v okolí? Oslovte některého dobrovolníka z naší [mapy dobrovolníků](https://code.org/volunteer/local)"
         },
         "b16d189d-d990-44c4-be49-8f81ac81a96e": {
           "description": "#### Příprava scény\n\nPřivítejte studenty na hodině a představte dnešní aktivitu.",
