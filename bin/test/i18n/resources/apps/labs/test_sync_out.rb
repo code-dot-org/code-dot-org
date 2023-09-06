@@ -55,7 +55,7 @@ describe I18n::Resources::Apps::Labs::SyncOut do
       I18nScriptUtils.expects(:rename_dir).with(File.dirname(crowdin_locale_file_path), File.dirname(i18n_locale_file_path))
     end
     let(:expect_empty_crowdin_locale_dir_deletion) do
-      I18nScriptUtils.expects(:delete_empty_crowdin_locale_dir).with(crowdin_locale)
+      I18nScriptUtils.expects(:remove_empty_dir).with(CDO.dir('i18n/locales', crowdin_locale))
     end
 
     before do

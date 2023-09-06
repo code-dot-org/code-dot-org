@@ -76,12 +76,13 @@ module I18n
       # Move directories like `i18n/locales/Italian` to `i18n/locales/it-it` for
       # all languages in our system
       PegasusLanguages.get_crowdin_name_and_locale.each do |prop|
-        next unless File.directory?("i18n/locales/#{prop[:crowdin_name_s]}/")
+        crowdin_locale_dir = I18nScriptUtils.locale_dir(prop[:crowdin_name_s])
+        next unless File.exist?(crowdin_locale_dir)
 
         # copy and remove rather than moving so we can easily and recursively deal
         # with existing files
-        FileUtils.cp_r "i18n/locales/#{prop[:crowdin_name_s]}/.", "i18n/locales/#{prop[:locale_s]}"
-        FileUtils.rm_r "i18n/locales/#{prop[:crowdin_name_s]}"
+        i18n_locale_dir = I18nScriptUtils.locale_dir(prop[:locale_s])
+        I18nScriptUtils.rename_dir(crowdin_locale_dir, i18n_locale_dir)
       end
 
       # Now, any remaining directories named after the language name (rather than
