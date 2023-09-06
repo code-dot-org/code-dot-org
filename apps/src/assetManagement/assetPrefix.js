@@ -82,9 +82,11 @@ export function fixPath(filename) {
   if (SOUND_PREFIX_REGEX.test(filename)) {
     return filename.replace(SOUND_PREFIX, soundPathPrefix);
   }
-
+  const state = getStore().getState();
+  if (!state.pageConstants.isCurriculumLevel) {
+    filename = filename.replace(STARTER_ASSET_PREFIX, '');
+  }
   if (STARTER_ASSET_PREFIX_REGEX.test(filename)) {
-    const state = getStore().getState();
     return filename.replace(
       STARTER_ASSET_PREFIX,
       starterAssetPathPrefix(state.level.name)
