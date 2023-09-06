@@ -142,8 +142,8 @@ def proficient?(line)
   end
   # Loops.
   if line[13] + line[14] + line[15] >= 3 ||
-    line[18] + line[19] + line[20] >= 3 ||
-    line[23] + line[24] + line[25] >= 3
+      line[18] + line[19] + line[20] >= 3 ||
+      line[23] + line[24] + line[25] >= 3
     concept_count += 1
   end
   # Events.
@@ -156,7 +156,7 @@ def proficient?(line)
   end
   # Functions.
   if line[38] + line[39] + line[40] >= 3 ||
-    line[43] + line[44] + line[45] >= 3
+      line[43] + line[44] + line[45] >= 3
     concept_count += 1
   end
   # Conditionals.

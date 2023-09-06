@@ -360,7 +360,7 @@ class Pd::Enrollment < ApplicationRecord
   # Returns true if the given workshop is an Admin or Admin/Counselor workshop
   private_class_method def self.admin_workshop?(workshop)
     workshop.course == Pd::Workshop::COURSE_ADMIN ||
-    workshop.course == Pd::Workshop::COURSE_ADMIN_COUNSELOR
+      workshop.course == Pd::Workshop::COURSE_ADMIN_COUNSELOR
   end
 
   # Returns if the given workshop uses Foorm for survey completion (assuming the workshop does receive exit
@@ -371,8 +371,8 @@ class Pd::Enrollment < ApplicationRecord
   # And returns true otherwise.
   private_class_method def self.currently_receives_foorm_survey(workshop)
     !(workshop.workshop_ending_date < Date.new(2020, 9, 1) && workshop.csf_201?) &&
-    !(workshop.workshop_ending_date < Date.new(2020, 5, 8) &&
-    (workshop.csf_intro? || workshop.local_summer? || workshop.csp_wfrt?))
+      !(workshop.workshop_ending_date < Date.new(2020, 5, 8) &&
+      (workshop.csf_intro? || workshop.local_summer? || workshop.csp_wfrt?))
   end
 
   private_class_method def self.filter_for_foorm_survey_completion(enrollments, select_completed)

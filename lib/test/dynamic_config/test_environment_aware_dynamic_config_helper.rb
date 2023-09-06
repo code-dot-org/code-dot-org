@@ -46,7 +46,7 @@ class EnvironmentAwareDynamicConfigHelperTest < Minitest::Test
   # Simple helper method to DRY up the code
   private def created_datastore_for_current_environment
     return EnvironmentAwareDynamicConfigHelper.
-      create_datastore_cache('test_create_datastore_cache').
-      instance_variable_get(:@datastore)
+        create_datastore_cache('test_create_datastore_cache').
+        instance_variable_get(:@datastore)
   end
 end

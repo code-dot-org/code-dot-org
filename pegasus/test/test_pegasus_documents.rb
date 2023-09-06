@@ -79,7 +79,7 @@ class PegasusTest < Minitest::Test
       # 'Splat' documents not yet handled.
       page[:uri].end_with?('/splat', '/splat.fetch') ||
       # Private routes not yet handled.
-      page[:uri].start_with?('/private')
+        page[:uri].start_with?('/private')
     end
 
     tidy = system('which tidy >/dev/null 2>&1')

@@ -297,8 +297,8 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   private def prepare_locale_cookie(user)
     # Set user-account locale only if no cookie is already set.
     if user.locale &&
-      user.locale != request.env['cdo.locale'] &&
-      cookies[:language_].nil?
+        user.locale != request.env['cdo.locale'] &&
+        cookies[:language_].nil?
 
       set_locale_cookie(user.locale)
     end

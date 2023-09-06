@@ -34,20 +34,6 @@ Layout/HashAlignment:
 Layout/LineEndStringConcatenationIndentation:
   Enabled: false
 
-# Offense count: 462
-# This cop supports safe auto-correction (--auto-correct).
-# Configuration parameters: EnforcedStyle, IndentationWidth.
-# SupportedStyles: aligned, indented, indented_relative_to_receiver
-Layout/MultilineMethodCallIndentation:
-  Enabled: false
-
-# Offense count: 190
-# This cop supports safe auto-correction (--auto-correct).
-# Configuration parameters: EnforcedStyle, IndentationWidth.
-# SupportedStyles: aligned, indented
-Layout/MultilineOperationIndentation:
-  Enabled: false
-
 # Offense count: 292
 # This cop supports safe auto-correction (--auto-correct).
 # Configuration parameters: EnforcedStyle.
