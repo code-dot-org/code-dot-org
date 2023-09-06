@@ -1,14 +1,6 @@
 apiVersion: skaffold/v4beta4
 kind: Config
 build:
-  # tagPolicy:
-  #   gitCommit:
-  #     ignoreChanges: true
-
-  # For dev ease atm, adds :latest, switch to gitCommit policy long term
-  tagPolicy:
-    sha256: {}
-  
   artifacts:
   - image: code.org
     sync:
