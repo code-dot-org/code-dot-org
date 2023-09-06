@@ -59,10 +59,10 @@ export default function RubricContainer({
         if (!json.submittedAt) {
           throw new Error('Unexpected response object');
         }
-        const lasteSubmittedDateObj = new Date(json.submittedAt);
-        setLastSubmittedTimestamp(lasteSubmittedDateObj.toLocaleString());
+        const lastSubmittedDateObj = new Date(json.submittedAt);
+        setLastSubmittedTimestamp(lastSubmittedDateObj.toLocaleString());
       })
-      .catch(error => {
+      .catch(() => {
         setIsSubmittingToStudent(false);
         setErrorSubmitting(true);
       });

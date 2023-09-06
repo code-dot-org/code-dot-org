@@ -1,6 +1,8 @@
 import React from 'react';
 import {expect} from '../../../util/reconfiguredChai';
 import {mount, shallow} from 'enzyme';
+import sinon from 'sinon';
+import HttpClient from '@cdo/apps/util/HttpClient';
 import RubricContainer from '@cdo/apps/templates/rubrics/RubricContainer';
 
 describe('RubricContainer', () => {
@@ -24,6 +26,8 @@ describe('RubricContainer', () => {
       name: 'Data Structures',
     },
   };
+
+  const processEventLoop = () => new Promise(resolve => setTimeout(resolve, 0));
 
   it('shows learning goals', () => {
     const wrapper = shallow(
@@ -88,5 +92,61 @@ describe('RubricContainer', () => {
     expect(wrapper.text()).to.not.include('time spent');
     expect(wrapper.text()).to.include('0 attempts');
     expect(wrapper.text()).to.not.include('last updated');
+  });
+
+  it('shows submit button if student data', () => {
+    const wrapper = shallow(
+      <RubricContainer
+        rubric={defaultRubric}
+        studentLevelInfo={{name: 'Grace Hopper'}}
+        canProvideFeedback
+      />
+    );
+    expect(wrapper.find('Button').length).to.equal(1);
+  });
+
+  it('handles successful submit button click', async () => {
+    const wrapper = shallow(
+      <RubricContainer
+        rubric={defaultRubric}
+        teacherHasEnabledAi
+        studentLevelInfo={{name: 'Grace Hopper'}}
+      />
+    );
+    const postStub = sinon.stub(HttpClient, 'post').returns(
+      Promise.resolve({
+        json: () => {
+          return {submittedAt: '1990-07-31T00:00:00.000Z'};
+        },
+      })
+    );
+    wrapper.find('Button').simulate('click');
+    expect(postStub).to.have.been.calledOnce;
+    postStub.restore();
+    expect(wrapper.find('Button').props().disabled).to.be.true;
+    await processEventLoop();
+    expect(wrapper.find('Button').props().disabled).to.be.false;
+    expect(wrapper.find('BodyThreeText').at(1).props().children).to.include(
+      'Feedback submitted at'
+    );
+  });
+
+  it('handles error on submit button click', async () => {
+    const wrapper = shallow(
+      <RubricContainer
+        rubric={defaultRubric}
+        teacherHasEnabledAi
+        studentLevelInfo={{name: 'Grace Hopper'}}
+      />
+    );
+    const postStub = sinon.stub(HttpClient, 'post').returns(Promise.reject());
+    wrapper.find('Button').simulate('click');
+    expect(postStub).to.have.been.calledOnce;
+    postStub.restore();
+    expect(wrapper.find('Button').props().disabled).to.be.true;
+    await processEventLoop();
+    expect(wrapper.find('BodyThreeText').at(1).props().children).to.equal(
+      'Error submitting feedback to student.'
+    );
   });
 });
