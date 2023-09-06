@@ -8,6 +8,8 @@ import {expect} from '../../util/reconfiguredChai';
 import RadioButton from '@cdo/apps/componentLibrary/radioButton';
 describe('Design System - Radio Button', () => {
   it('RadioButton - renders with correct label', () => {
+    const radioButtonLabel = 'Radio Button label';
+
     render(
       <RadioButton
         name="test-radioButton"
@@ -19,7 +21,7 @@ describe('Design System - Radio Button', () => {
     const radioButton = screen.getByDisplayValue('test-radioButton');
 
     expect(radioButton).to.exist;
-    expect(screen.getByText('Radio Button label')).to.exist;
+    expect(screen.getByText(radioButtonLabel)).to.exist;
   });
 
   it('RadioButton - selects button when clicked, once selected - remains selected if clicked again', async () => {

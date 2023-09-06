@@ -41,9 +41,9 @@ describe('Design System - Radio Buttons Group', () => {
     expect(radioButton1).to.exist;
     expect(radioButton2).to.exist;
     expect(radioButton3).to.exist;
-    expect(screen.getByText('Radio Button1 label')).to.exist;
-    expect(screen.getByText('Radio Button2 label')).to.exist;
-    expect(screen.getByText('Radio Button3 label')).to.exist;
+    expect(screen.getByText(radioButtonsData[0].label)).to.exist;
+    expect(screen.getByText(radioButtonsData[1].label)).to.exist;
+    expect(screen.getByText(radioButtonsData[2].label)).to.exist;
     expect(radioButton1.checked).to.be.false;
     expect(radioButton2.checked).to.be.true;
     expect(radioButton3.checked).to.be.false;
