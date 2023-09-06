@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: {{ include "code.org.fullname" . }}
+  name: {{ include "dashboard.fullname" . }}
   labels:
-    {{- include "code.org.labels" . | nindent 4 }}
+    {{- include "dashboard.labels" . | nindent 4 }}
 spec:
   selector:
-    {{- include "code.org.selectorLabels" . | nindent 4 }}
+    {{- include "dashboard.selectorLabels" . | nindent 4 }}
   ports:
     - protocol: TCP
       port: 3000
@@ -14,20 +14,20 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "code.org.fullname" . }}
+  name: {{ include "dashboard.fullname" . }}
   labels:
-    {{- include "code.org.labels" . | nindent 4 }}
+    {{- include "dashboard.labels" . | nindent 4 }}
 spec:
   {{- if not .Values.autoscaling.enabled }}
   replicas: {{ .Values.replicaCount }}
   {{- end }}
   selector:
     matchLabels:
-      {{- include "code.org.selectorLabels" . | nindent 6 }}
+      {{- include "dashboard.selectorLabels" . | nindent 6 }}
   template:
     metadata:
       labels:
-        {{- include "code.org.selectorLabels" . | nindent 8 }}
+        {{- include "dashboard.selectorLabels" . | nindent 8 }}
     spec:
       containers:
       - name: dashboard
@@ -45,7 +45,7 @@ spec:
           name: aws-google
           subPath: gcloud
         - mountPath: /code-dot-org/locals.yml
-          name: dashboard
+          name: dashboard-locals
           subPath: locals.yml
         # FIXME: THIS IS FOR DEBUGGING PURPOSES
         - mountPath: /mnt/aws-google
@@ -74,9 +74,9 @@ spec:
         - name: aws-config
           secret:
             secretName: aws-config
-        - name: dashboard
+        - name: dashboard-locals
           configMap:
-            name: dashboard
+            name: dashboard-locals
             
       securityContext:
         # these should match the UID/GID defined in code.org.dockerfile

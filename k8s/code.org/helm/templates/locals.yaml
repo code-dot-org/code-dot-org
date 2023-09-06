@@ -1,7 +1,9 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: dashboard
+  name: {{ include "dashboard.fullname" . }}-locals
+  labels:
+    {{- include "dashboard.labels" . | nindent 4 }}
 data:
   locals.yml: |
     # db_credential_admin: {"username":"code.org", "password":"FIXME_WITH_REAL_PASSWORD"}
