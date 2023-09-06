@@ -39,9 +39,8 @@ class Pd::WorkshopEnrollmentController < ApplicationController
     else
       @enrollment = ::Pd::Enrollment.new workshop: @workshop
       @enrollment.full_name = current_user.name
-      application_alt_email = latest_accepted_application.form_data_hash["alternateEmail"]
-      @enrollment.email = application_alt_email ? application_alt_email : current_user.email
-      @enrollment.email_confirmation = application_alt_email ? application_alt_email : current_user.email
+      @enrollment.email = current_user.email_for_enrollments
+      @enrollment.email_confirmation = current_user.email_for_enrollments
 
       session_dates = @workshop.sessions.map(&:formatted_date_with_start_and_end_times)
 
@@ -136,9 +135,9 @@ class Pd::WorkshopEnrollmentController < ApplicationController
     end
 
     if current_user.student?
-      if User.hash_email(@enrollment.email) == current_user.hashed_email
+      if User.hash_email(@enrollment.email) == current_user.hashed_email || @enrollment.email == current_user.email_for_enrollments
         # Email matches user's hashed email. Upgrade to teacher and set email.
-        current_user.upgrade_to_teacher(@enrollment.email)
+        current_user.upgrade_to_teacher(current_user.email)
       else
         # No email match. Redirect to upgrade page.
         redirect_to controller: 'pd/session_attendance', action: 'upgrade_account'
@@ -174,16 +173,16 @@ class Pd::WorkshopEnrollmentController < ApplicationController
     @workshop.organizer_or_facilitator? user
   end
 
-  # Gets the workshop enrollment associated with the current user id or email if one exists.
-  # Otherwise returns a new enrollment for that user.
+  # Gets the workshop enrollment associated with the current user id or email used for
+  # enrollments. Otherwise returns a new enrollment for that user.
   private def get_workshop_user_enrollment
     @workshop.enrollments.where(
-      'user_id = ? OR email = ?', current_user.id, current_user.email
+      'user_id = ? OR email = ?', current_user.id, current_user.email_for_enrollments
     ).first || Pd::Enrollment.new(
       pd_workshop_id: @workshop.id,
       user_id: current_user.id,
       full_name: current_user.name,
-      email: current_user.email
+      email: current_user.email_for_enrollments
     )
   end
 
@@ -222,12 +221,5 @@ class Pd::WorkshopEnrollmentController < ApplicationController
       user: current_user,
       status: 'accepted'
       ).any?
-  end
-
-  private def latest_accepted_application
-    Pd::Application::TeacherApplication.where(
-      user: current_user,
-      status: 'accepted'
-    ).order(application_year: :desc).first
   end
 end

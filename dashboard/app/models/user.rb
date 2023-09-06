@@ -398,6 +398,18 @@ class User < ApplicationRecord
     primary_contact_info.try(:hashed_email) || ''
   end
 
+  # Email used for the user's enrollments:
+  # Returns the 'alternateEmail' field from the user's latest accepted teacher application if it exists to
+  # help ensure the enrollment emails are delivered. Otherwise, returns the user's email.
+  def email_for_enrollments
+    latest_accepted_app = Pd::Application::TeacherApplication.where(
+      user: self,
+      status: 'accepted'
+    ).order(application_year: :desc).first&.form_data_hash
+    alternate_email = latest_accepted_app['alternateEmail']
+    alternate_email ? alternate_email : email
+  end
+
   # assign a course to a facilitator that is qualified to teach it
   def course_as_facilitator=(course)
     courses_as_facilitator << courses_as_facilitator.find_or_create_by(facilitator_id: id, course: course)
