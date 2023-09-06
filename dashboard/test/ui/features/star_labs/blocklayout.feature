@@ -1,3 +1,4 @@
+@chrome
 Feature: Block auto-layout
 
 Background:
