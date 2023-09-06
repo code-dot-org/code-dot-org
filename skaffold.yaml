@@ -74,6 +74,15 @@ profiles:
         chartPath: ./k8s/code.org/helm
         setValueTemplates:
           image: "{{.IMAGE_FULLY_QUALIFIED}}"
+      hooks:
+        before:
+          - host:
+              # we create the storage objects in k8s/code.org/persistent-storage using
+              # a pre-deploy hook, so they aren't destroyed when `skaffold dev` quits
+              command: [
+                "sh", "-c", 
+                "kubectl apply -f k8s/code.org/raw/persistent --context=$SKAFFOLD_KUBE_CONTEXT --namespace=$SKAFFOLD_NAMESPACES"
+              ]
 
 portForward:
 - resourceType: Deployment
