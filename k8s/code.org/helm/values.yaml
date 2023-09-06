@@ -1,11 +1,9 @@
-replicaCount: 1
-
 image: code.org:latest
-
+environment: development
+replicaCount: 1
 autoscaling:
   enabled: false
   minReplicas: 1
   maxReplicas: 10
-  targetCPUUtilizationPercentage: 80
-  # targetMemoryUtilizationPercentage: 80
+
 
