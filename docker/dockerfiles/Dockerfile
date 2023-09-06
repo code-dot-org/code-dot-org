@@ -7,7 +7,7 @@
 #########################################################
 FROM ubuntu:20.04 as base
 #########################################################
-# multi-stage build for parallel compiling node & ruby: 
+# multi-stage build for parallel compiling ruby:
 # see: https://docs.docker.com/build/building/multi-stage/
 #
 # For adding regular deps, skip to `primary-layer` below
@@ -45,32 +45,6 @@ RUN apt-get update && \
 RUN groupadd --gid 3434 ${USER} && \
     useradd --uid 3434 --gid ${GROUP} --shell /bin/bash --create-home ${USER} && \
     printf "${USER} ALL=NOPASSWD: ALL\n" > /etc/sudoers.d/50-${USER}
-
-#########################################################
-FROM ubuntu:20.04 as node
-#########################################################
-# compile node to /build, this layer is merged at the end
-#########################################################
-
-RUN apt-get update && \
-    apt-get install -y --no-install-recommends \
-        build-essential \
-        curl \
-        g++ \
-        g++-8 \
-        gcc-8 \
-        python3-pip
-
-# install node
-RUN curl -sSLOJ https://nodejs.org/dist/v20.5.1/node-v20.5.1.tar.gz && \
-    tar -xzf node-v20.5.1.tar.gz && \
-    rm node-v20.5.1.tar.gz && \
-    cd node-v20.5.1 && \
-    ./configure && \
-    make -j `nproc` && \
-    make install PREFIX=/build && \
-    cd .. && \
-    rm -r node-v20.5.1
 
 
 #########################################################
@@ -156,6 +130,15 @@ RUN service mysql start && \
     echo "GRANT SELECT ON dashboard_test.* TO 'readonly'@'localhost';" | mysql && \
     service mysql stop
 
+# install node
+# based on instructions at https://github.com/nodesource/distributions#nodejs
+RUN apt-get update && \
+		apt-get install -y ca-certificates curl gnupg && \
+		mkdir -p /etc/apt/keyrings && \
+		curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | sudo gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg && \
+    echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_20.x nodistro main" | tee /etc/apt/sources.list.d/nodesource.list &&\
+    apt-get update && apt-get install nodejs -y
+
 # install yarn
 RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - && \
     echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list && \
@@ -216,9 +199,8 @@ WORKDIR /home/${USER}
 # docker exec -it <container_name> bash, which bypasses the entrypoint script.
 RUN echo 'eval "$(rbenv init -)"' >> ~/.bashrc
 
-# Finally, merge in the node & ruby layers
+# Finally, merge in the ruby layer
 COPY --from=rbenv --chown=${USER}:${GROUP} /home/${USER}/.rbenv /home/${USER}/.rbenv
-COPY --from=node /build /usr/local
 
 COPY entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
