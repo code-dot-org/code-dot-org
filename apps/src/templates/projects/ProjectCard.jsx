@@ -7,8 +7,6 @@ import {studio} from '@cdo/apps/lib/util/urlHelpers';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import getScriptData from '@cdo/apps/util/getScriptData';
 import AccessibleDialog from '@cdo/apps/templates/AccessibleDialog';
-import cookies from 'js-cookie';
-import _ from 'lodash';
 import RailsAuthenticityToken from '../../lib/util/RailsAuthenticityToken';
 import style from './project-card.module.scss';
 import Button from '@cdo/apps/templates/Button';
@@ -136,17 +134,6 @@ export default class ProjectCard extends React.Component {
       submitButtonEnabled: false,
       captchaCompleted: false,
     });
-  }
-
-  writeCookie() {
-    // Use cookies from 'js-cookie' package
-    if (cookies.get('reported_abuse')) {
-      const reportedProjectIds = JSON.parse(cookies.get('reported_abuse'));
-      reportedProjectIds.push(this.props.projectData.channel); // Using channel for the project as the ID
-      cookies.set('reported_abuse', _.uniq(reportedProjectIds));
-    } else {
-      cookies.set('reported_abuse', [this.props.projectData.channel]); // Using channel for the project as the ID
-    }
   }
 
   handleCheckboxChange = checkboxName => {
