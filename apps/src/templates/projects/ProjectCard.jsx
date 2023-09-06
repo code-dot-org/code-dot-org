@@ -112,7 +112,6 @@ export default class ProjectCard extends React.Component {
     })
       .then(response => {
         if (response.ok) {
-          this.writeCookie();
           this.setState({
             showSubmittedHeader: true,
             showSubmitConfirmation: true,
@@ -203,46 +202,27 @@ export default class ProjectCard extends React.Component {
             className={style.reportAbusePopUp}
           >
             {showSubmitConfirmation ? (
-              <div
-                style={{
-                  display: 'flex',
-                  flexDirection: 'column',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                }}
-              >
-                <h3 style={{margin: 10}}>Thank you!</h3>
-                <p style={{margin: 10}}>
-                  Thanks for helping us to keep Code.org safe!
-                </p>
+              <div className={style.submitConfirmation}>
+                <h3>Thank you!</h3>
+                <p>Thanks for helping us to keep Code.org safe!</p>
                 <Button
                   onClick={this.cancel}
                   text={'Continue'}
                   color={Button.ButtonColor.brandSecondaryDefault}
-                  style={{margin: 10}}
                 />
               </div>
             ) : (
               <div>
-                <div
-                  style={{
-                    display: 'flex',
-                    justifyContent: 'space-between',
-                    alignItems: 'center',
-                  }}
-                >
+                <div className={style.popUpTitle}>
                   <h3 style={{margin: 0}}>Report Abuse</h3>
                   <button
                     type="reset"
                     onClick={this.cancel}
-                    style={{
-                      ...styles.transparentButton,
-                      background: 'none',
-                      width: 24,
-                      height: 24,
-                      fontSize: 16,
-                      padding: 5,
-                    }}
+                    // style={{
+                    //   ...styles.transparentButton,
+                    //   ...styles.xButton,
+                    // }}
+                    className={style.xButton}
                   >
                     <FontAwesome icon="x" style={{color: '#D4D5D7'}} />
                   </button>
@@ -253,33 +233,18 @@ export default class ProjectCard extends React.Component {
                 </p>
                 <div>
                   {checkboxes.map(checkbox => (
-                    <label
-                      key={checkbox.name}
-                      style={{
-                        display: 'flex',
-                        alignItems: 'center',
-                        marginTop: 5,
-                        marginBottom: 5,
-                      }}
-                    >
+                    <label key={checkbox.name} className={style.checkboxLabel}>
                       <input
                         type="checkbox"
                         checked={checkbox.checked}
                         onChange={() =>
                           this.handleCheckboxChange(checkbox.name)
                         }
-                        style={{
-                          marginRight: 10,
-                          marginTop: 0,
-                          accentColor: '#0093A4',
-                        }}
+                        className={style.checkboxInput}
                       />
                       <span
                         className={style.popUpBody}
-                        style={{
-                          flex: '1',
-                          verticalAlign: 'middle',
-                        }}
+                        style={{...styles.checkboxSpan}}
                       >
                         {checkbox.name.replace(/-/g, ' ')}
                       </span>
@@ -296,7 +261,7 @@ export default class ProjectCard extends React.Component {
                   />
                 ) : null}
                 <hr className={style.popUpLines} />
-                <div style={{display: 'flex', justifyContent: 'flex-end'}}>
+                <div className={style.popUpButtonHolder}>
                   <Button
                     onClick={this.cancel}
                     text={'Cancel'}
@@ -320,29 +285,18 @@ export default class ProjectCard extends React.Component {
             <div
               style={{
                 ...thumbnailStyle,
-                height: 40,
-                display: 'flex',
-                alignItems: 'center',
+                ...styles.header,
                 justifyContent: 'flex-end',
               }}
             >
               <button
                 type="button"
                 onClick={this.showReportAbusePopUp}
-                style={{
-                  ...styles.transparentButton,
-                  padding: 6,
-                  marginRight: 16,
-                  boxShadow: 'none',
-                }}
                 className={style.cautionButton}
               >
                 <FontAwesome
                   icon="circle-exclamation"
                   className={style.cautionIcon}
-                  style={{
-                    fontSize: 16,
-                  }}
                 />
               </button>
             </div>
@@ -350,22 +304,11 @@ export default class ProjectCard extends React.Component {
             <div
               style={{
                 ...thumbnailStyle,
-                height: 40,
-                display: 'flex',
-                alignItems: 'center',
+                ...styles.header,
                 justifyContent: 'center',
               }}
             >
-              <p
-                style={{
-                  margin: 'auto',
-                  color: 'red',
-                  fontFamily: '"Gotham 5r", sans-serif',
-                  fontSize: 12,
-                }}
-              >
-                Reported
-              </p>
+              <p className={style.reported}>Reported</p>
             </div>
           )}
 
@@ -440,12 +383,6 @@ export default class ProjectCard extends React.Component {
 }
 
 const styles = {
-  transparentButton: {
-    boxShadow: 'none',
-    outline: 'none',
-    border: 'none',
-    cursor: 'pointer',
-  },
   title: {
     paddingLeft: 15,
     paddingRight: 10,
@@ -477,5 +414,14 @@ const styles = {
   },
   noTime: {
     paddingBottom: 10,
+  },
+  checkboxSpan: {
+    flex: '1',
+    verticalAlign: 'middle',
+  },
+  header: {
+    height: 40,
+    display: 'flex',
+    alignItems: 'center',
   },
 };

@@ -4,18 +4,42 @@
 
 .cautionButton {
   background-color: transparent;
+  box-shadow: none;
+  outline: none;
+  border: none;
+  padding: 6px;
+  margin-right: 16px;
+  cursor: pointer;
 }
 
 .cautionButton:hover {
   background-color: #fbe0dd;
+  box-shadow: none;
 }
 
 .cautionIcon {
   color: #7f8286;
+  font-size: 16;
 }
 
 .cautionButton:hover .cautionIcon {
   color: #e5311a;
+}
+
+.xButton {
+  box-shadow: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  background: none;
+  width: 24px;
+  height: 24px;
+  font-size: 16px;
+  padding: 5px;
+}
+
+.xButton:hover {
+  box-shadow: none;
 }
 
 $color-neutral-light: #f7f8fa;
@@ -78,4 +102,46 @@ $color-neutral-dark: #292f36;
   font-family: 'Gotham 4r', sans-serif;
   color: #292f36;
   font-size: 14px;
+}
+
+.submitConfirmation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.submitConfirmation > * {
+  margin: 10px;
+}
+
+.popUpTitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.checkboxLabel {
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.checkboxInput {
+  margin-right: 10px;
+  margin-top: 0;
+  accent-color: #0093A4;
+}
+
+.popUpButtonHolder {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.reported {
+  margin: auto;
+  color: #e5311a;
+  font-family: 'Gotham 5r', sans-serif;
+  font-size: 12;
 }
