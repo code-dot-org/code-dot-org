@@ -353,6 +353,12 @@ describe I18nScriptUtils do
       FileUtils.mkdir_p(crowdin_locale_dir_path)
     end
 
+    context 'when Crowdin locale dir does not exist' do
+      it 'does not raise the error "No such file or directory"' do
+        I18nScriptUtils.delete_empty_crowdin_locale_dir('unexpected_crowdin_locale')
+      end
+    end
+
     context 'when Crowdin locale dir is empty' do
       it 'deletes the Crowdin locale dir' do
         assert File.directory?(crowdin_locale_dir_path)
