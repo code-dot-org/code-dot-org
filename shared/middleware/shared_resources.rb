@@ -38,7 +38,7 @@ class SharedResources < Sinatra::Base
   end
 
   helpers do
-    def cache_for(seconds, proxy_seconds=nil)
+    def cache_for(seconds, proxy_seconds = nil)
       proxy_seconds ||= seconds / 2
       cache_control(:public, :must_revalidate, max_age: seconds, s_maxage: proxy_seconds)
     end
