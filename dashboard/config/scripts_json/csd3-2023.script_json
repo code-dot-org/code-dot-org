@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-08-29 22:05:48 UTC",
+    "serialized_at": "2023-09-05 16:42:22 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -16078,7 +16078,7 @@
   "resources": [
     {
       "name": "(Warm Up) Word Search",
-      "url": "https://docs.google.com/document/d/1ebaf_cmMsIxI0j_WGQL2xry4URBOMWzp-7KwqayMFFU/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1Mk9elfN5zVH2LLaY6Z5-c-97wt1k9qDCyMfxRBlB8qM/edit?usp=sharing",
       "key": "_warm_up_word_search",
       "properties": {
         "audience": "Student",
