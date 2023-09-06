@@ -1,15 +1,6 @@
 import {expect} from '../../util/reconfiguredChai';
 import designMode from '@cdo/apps/applab/designMode';
 import elementLibrary from '@cdo/apps/applab/designElements/library';
-import pageConstantsReducer, {
-  setPageConstants,
-} from '@cdo/apps/redux/pageConstants';
-import {
-  getStore,
-  registerReducers,
-  stubRedux,
-  restoreRedux,
-} from '@cdo/apps/redux';
 
 describe('appendPx', () => {
   it('returns a valid css positive integer', function () {
@@ -189,16 +180,8 @@ describe('setProperty and read Property', () => {
       expect(dropdown.value).to.equal('Eta Theta');
     });
     it('Uses the asset timestamp in the source path for pictures', () => {
-      stubRedux();
-      registerReducers({pageConstants: pageConstantsReducer});
-      getStore().dispatch(
-        setPageConstants({
-          isCurriculumLevel: true,
-        })
-      );
       designMode.updateProperty(picture, 'picture', 'picture.jpg', 123456);
       expect(picture.src).to.contain('picture.jpg?t=123456');
-      restoreRedux();
     });
   });
 
