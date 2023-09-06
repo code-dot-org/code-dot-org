@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import PropTypes from 'prop-types';
 import style from './rubrics.module.scss';
 const icon = require('@cdo/static/AI-FAB.png');
 import RubricContainer from './RubricContainer';
@@ -13,14 +14,15 @@ import {
 export default function RubricFloatingActionButton({
   rubric,
   studentLevelInfo,
+  currentLevelName,
   reportingData,
 }) {
   const [isOpen, setIsOpen] = useState(!!studentLevelInfo);
 
   const handleClick = () => {
     const eventName = isOpen
-      ? EVENTS.RUBRIC_CLOSED_FROM_FAB
-      : EVENTS.RUBRIC_OPENED_FROM_FAB;
+      ? EVENTS.RUBRIC_CLOSED_FROM_FAB_EVENT
+      : EVENTS.RUBRIC_OPENED_FROM_FAB_EVENT;
     analyticsReporter.sendEvent(eventName, reportingData);
     setIsOpen(!isOpen);
   };
@@ -40,6 +42,7 @@ export default function RubricFloatingActionButton({
           rubric={rubric}
           studentLevelInfo={studentLevelInfo}
           reportingData={reportingData}
+          currentLevelName={currentLevelName}
           teacherHasEnabledAi
         />
       )}
@@ -50,5 +53,6 @@ export default function RubricFloatingActionButton({
 RubricFloatingActionButton.propTypes = {
   rubric: rubricShape,
   studentLevelInfo: studentLevelInfoShape,
+  currentLevelName: PropTypes.string,
   reportingData: reportingDataShape,
 };
