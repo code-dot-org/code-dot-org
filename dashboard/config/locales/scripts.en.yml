@@ -4570,6 +4570,8 @@ en:
             cspSurvey:
               display_name: Content
           student_description: You’ll program animations, interactive art, and games in Game Lab. Start off with simple shapes and build up to more sophisticated sprite-based animations and games, using the same programming concepts and the design process computer scientists use daily. In the final project, you’ll develop a personalized, interactive program.
+          lessons: {}
+          name: csd3-virtual
         ui-test-script-in-course-2017:
           lesson_groups:
             lg_1:
