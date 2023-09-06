@@ -25,6 +25,38 @@ module Services
           # the direct S3 link.
           DEBUG ? "https://#{S3_BUCKET}.s3.amazonaws.com" : "https://lesson-plans.code.org"
         end
+
+        def pdf_exists_at?(pathname)
+          return false if pathname.blank?
+
+          # Only use the shared cache if it's backed by MemCache (as it is in
+          # prod), not if it's using the filesystem-backed cache (as it does
+          # everywhere else).
+          #
+          # The filesystem-backed cache won't ever automatically expire entries
+          # and we don't manually expire upon generation, so we want to avoid
+          # using it or our PDF generation logic will keep regenerating the
+          # same PDFs indefinitely.
+          should_cache = CDO.shared_cache.is_a?(ActiveSupport::Cache::MemCacheStore)
+
+          if should_cache
+            cache_key = "CurriculumPdfs/pdf_exists/#{pathname.inspect}"
+            return CDO.shared_cache.read(cache_key) if CDO.shared_cache.exist?(cache_key)
+          end
+
+          result = AWS::S3.exists_in_bucket(S3_BUCKET, pathname)
+
+          # Note that we don't set an explicit `expires_in` value here. We
+          # expect that PDFs will only ever go from not generated to generated
+          # as the result of content changes, which should also update the
+          # identifying pathname. We also expect that PDFs will never go away
+          # once generated. If either of these expectations is invalidated in
+          # the future, we should probably start automatically expiring these
+          # cache values.
+          CDO.shared_cache.write(cache_key, result) if should_cache
+
+          return result
+        end
       end
     end
   end
