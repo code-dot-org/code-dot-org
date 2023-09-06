@@ -1,4 +1,4 @@
-apiVersion: skaffold/v4beta4
+apiVersion: skaffold/v4beta6
 kind: Config
 build:
   artifacts:
@@ -66,9 +66,18 @@ profiles:
       paths:
       - ./k8s/code.org/kustomize/development
 
+- name: dev-helm
+  deploy:
+    helm:
+      releases:
+      - name: code-org
+        chartPath: ./k8s/code.org/helm
+        setValueTemplates:
+          image: "{{.IMAGE_FULLY_QUALIFIED}}"
+
 portForward:
 - resourceType: Deployment
-  resourceName: dashboard
+  resourceName: code-org
   port: 3000
 - resourceType: StatefulSet
   resourceName: db

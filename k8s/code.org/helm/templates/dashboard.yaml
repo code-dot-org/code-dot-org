@@ -1,0 +1,85 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "code.org.fullname" . }}
+  labels:
+    {{- include "code.org.labels" . | nindent 4 }}
+spec:
+  selector:
+    {{- include "code.org.selectorLabels" . | nindent 4 }}
+  ports:
+    - protocol: TCP
+      port: 3000
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "code.org.fullname" . }}
+  labels:
+    {{- include "code.org.labels" . | nindent 4 }}
+spec:
+  {{- if not .Values.autoscaling.enabled }}
+  replicas: {{ .Values.replicaCount }}
+  {{- end }}
+  selector:
+    matchLabels:
+      {{- include "code.org.selectorLabels" . | nindent 6 }}
+  template:
+    metadata:
+      labels:
+        {{- include "code.org.selectorLabels" . | nindent 8 }}
+    spec:
+      containers:
+      - name: dashboard
+        image: "{{.Values.image}}"
+        ports:
+        - containerPort: 3000
+        volumeMounts:
+        - mountPath: /home/code.org/.aws
+          name: aws-google
+          subPath: aws
+        - mountPath: "/home/code.org/.aws/config"
+          name: aws-config
+          subPath: aws-config
+        - mountPath: /home/code.org/.config/gcloud
+          name: aws-google
+          subPath: gcloud
+        - mountPath: /code-dot-org/locals.yml
+          name: dashboard
+          subPath: locals.yml
+        # FIXME: THIS IS FOR DEBUGGING PURPOSES
+        - mountPath: /mnt/aws-google
+          name: aws-google
+        securityContext:
+          allowPrivilegeEscalation: true # TODO: this should depend on whether in local dev vs deployed?
+
+          
+      # initContainers:
+      # # FIXME AWS CONFIG: we use this hack to avoid committing
+      # # aws/config into git until we're DOUBLE PLUS /VERY/ SURE that the 
+      # # Google Oauth2 "secret" inside aws/config, which our 
+      # # AWS Account Access Doc (https://docs.google.com/document/d/1dDfEOhyyNYI2zIv4LI--ErJj6OVEJopFLqPxcI0RXOA/edit)
+      # # say is "not secret", is really really truly is not secret.
+      # - name: aws-config
+      #   image: busybox:1.28
+      #   command: ['sh', '-c', "cp /code-dot-org/aws.config /home/code.org/aws/config"]
+      #   volumeMounts:
+      #     - mountPath: /mnt/aws-google
+      #       name: aws-google
+          
+      volumes:
+        - name: aws-google
+          persistentVolumeClaim:
+            claimName: aws-google
+        - name: aws-config
+          secret:
+            secretName: aws-config
+        - name: dashboard
+          configMap:
+            name: dashboard
+            
+      securityContext:
+        # these should match the UID/GID defined in code.org.dockerfile
+        runAsUser: 1000
+        runAsGroup: 1000
+        fsGroup: 1000
