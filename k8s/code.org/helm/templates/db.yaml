@@ -1,10 +1,12 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: db
+  name: {{ include "dashboard.fullname" . }}-db
+  labels:
+    {{- include "dashboard.labels" . | nindent 4 }}
 spec:
   selector:
-    app: db
+    {{- include "dashboard.selectorLabels" . | nindent 4 }}
   ports:
     - protocol: TCP
       port: 3306
@@ -12,17 +14,19 @@ spec:
 apiVersion: apps/v1
 kind: StatefulSet
 metadata:
-  name: db
+  name: {{ include "dashboard.fullname" . }}-db
+  labels:
+    {{- include "dashboard.labels" . | nindent 4 }}
 spec:
-  serviceName: "db"
+  serviceName: {{ include "dashboard.fullname" . }}-db
   replicas: 1
   selector:
     matchLabels:
-      app: db
+      {{- include "dashboard.selectorLabels" . | nindent 6 }}
   template:
     metadata:
       labels:
-        app: db
+        {{- include "dashboard.selectorLabels" . | nindent 8 }}
     spec:
       containers:
       - name: db
@@ -39,11 +43,11 @@ spec:
         - name: MARIADB_PASSWORD
           value: FIXME_WITH_REAL_PASSWORD
         volumeMounts:
-        - name: db-data
+        - name: mysql-data
           mountPath: /var/lib/mysql/
   volumeClaimTemplates:
   - metadata:
-      name: db-data
+      name: mysql-data
     spec:
       accessModes: [ "ReadWriteOnce" ]
       resources:
