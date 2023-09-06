@@ -90,8 +90,8 @@ module Pd
           jotform_questions.partition {|q| q['name'].end_with? '-summary'}
 
         replacement_text_by_name = text_replacements.
-          index_by {|q| q['name'].delete_suffix('-summary')}.
-          transform_values {|q| q['text']}
+                                   index_by {|q| q['name'].delete_suffix('-summary')}.
+                                   transform_values {|q| q['text']}
 
         questions_to_parse =
           remaining_questions.reject {|q| IGNORED_QUESTION_TYPES.include?(get_type(q))}

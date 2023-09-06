@@ -66,7 +66,7 @@ class LtiV1Controller < ApplicationController
     # check state and nonce in response and id_token against cached values
     cached_state_and_nonce = read_cache params[:state]
     return unauthorized_status unless (params[:state] == cached_state_and_nonce[:state]) &&
-      (decoded_jwt_no_auth[:nonce] == cached_state_and_nonce[:nonce])
+                                      (decoded_jwt_no_auth[:nonce] == cached_state_and_nonce[:nonce])
 
     begin
       # verify the jwt via the integration's public keyset

@@ -33,9 +33,9 @@ def get_rows
   # We want to export all teachers enrolled in CSP 5-day summer workshops who have scholarship_status = yes_eir
 
   potential_workshops = Pd::Workshop.
-    where(course: Pd::SharedWorkshopConstants::COURSE_CSP, subject: Pd::SharedWorkshopConstants::SUBJECT_SUMMER_WORKSHOP).
-    scheduled_end_on_or_after(EARLIEST_WORKSHOP_END_DATE).
-    pluck(:id)
+                        where(course: Pd::SharedWorkshopConstants::COURSE_CSP, subject: Pd::SharedWorkshopConstants::SUBJECT_SUMMER_WORKSHOP).
+                        scheduled_end_on_or_after(EARLIEST_WORKSHOP_END_DATE).
+                        pluck(:id)
 
   Pd::Enrollment.
     where(pd_workshop_id: potential_workshops).

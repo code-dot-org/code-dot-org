@@ -4,9 +4,9 @@
 # Skip if this is running a Rake task (e.g. rake db:setup), when running rails console,
 # or when caching is disabled.
 if File.basename($0) != 'rake' &&
-    !defined?(Rails::Console) &&
-    Unit.should_cache? &&
-    !Rails.application.config.skip_script_preload
+   !defined?(Rails::Console) &&
+   Unit.should_cache? &&
+   !Rails.application.config.skip_script_preload
   # Populate the shared in-memory cache from the database.
   Unit.unit_cache_to_cache unless Rails.cache.is_a?(ActiveSupport::Cache::MemoryStore)
   Unit.script_cache

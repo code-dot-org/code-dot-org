@@ -48,8 +48,8 @@ S3_LOGS_PREFIX = CDO.name.freeze
 # @return [String] Hyperlink to uploaded log, or empty string
 def upload_log_and_get_link(key, body, metadata)
   log_url = AWS::S3::LogUploader.
-      new(S3_LOGS_BUCKET, S3_LOGS_PREFIX).
-      upload_log(
+            new(S3_LOGS_BUCKET, S3_LOGS_PREFIX).
+            upload_log(
         key,
         body,
         {metadata: metadata}

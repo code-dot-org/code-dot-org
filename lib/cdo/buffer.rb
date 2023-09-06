@@ -35,7 +35,7 @@ module Cdo
       @log = log
 
       @task = RescheduledTask.new(0.0, &method(:flush_batch)).
-        with_observer(&method(:schedule_flush))
+              with_observer(&method(:schedule_flush))
 
       @buffer = []
       @buffer.extend(MonitorMixin)
@@ -139,8 +139,8 @@ module Cdo
 
       # Flush now if the batch is full or when force flushing.
       wait = 0.0 if force ||
-        @buffer.length >= @batch_count ||
-        size(@buffer.map(&:object)) >= @batch_size
+                    @buffer.length >= @batch_count ||
+                    size(@buffer.map(&:object)) >= @batch_size
 
       # Wait until min_interval has passed since the last flush.
       min_delay = @min_interval - (now - @last_flush.to_f)
@@ -162,8 +162,8 @@ module Cdo
       @buffer.synchronize do
         batch << @buffer.shift until
           @buffer.empty? ||
-            batch.length >= @batch_count ||
-            size((batch + [@buffer.first]).map(&:object)) > @batch_size
+          batch.length >= @batch_count ||
+          size((batch + [@buffer.first]).map(&:object)) > @batch_size
       end
       batch
     end

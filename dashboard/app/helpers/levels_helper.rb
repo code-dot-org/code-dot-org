@@ -713,7 +713,7 @@ module LevelsHelper
     # Request-dependent option
     if request
       app_options[:isUS] = request.location.try(:country_code) == 'US' ||
-          (!Rails.env.production? && request.location.try(:country_code) == 'RD')
+                           (!Rails.env.production? && request.location.try(:country_code) == 'RD')
     end
     app_options[:send_to_phone_url] = send_to_phone_url if app_options[:isUS]
 
@@ -770,13 +770,13 @@ module LevelsHelper
     unless @blockly_loaded
       @blockly_loaded = true
       blocks = blocks + content_tag(:div, '', {id: 'codeWorkspace', style: 'display: none'}) +
-      content_tag(:style, '.blocklySvg { background: none; }') +
-      content_tag(:script, '', src: webpack_asset_path('js/blockly.js')) +
-      content_tag(:script, '', src: webpack_asset_path("js/#{js_locale}/blockly_locale.js")) +
-      content_tag(:script, '', src: webpack_asset_path('js/common.js')) +
-      content_tag(:script, '', src: webpack_asset_path("js/#{js_locale}/#{app}_locale.js")) +
-      content_tag(:script, '', src: webpack_asset_path("js/#{app}.js"), 'data-appoptions': options.to_json) +
-      content_tag(:script, '', src: webpack_asset_path('js/embedBlocks.js'))
+               content_tag(:style, '.blocklySvg { background: none; }') +
+               content_tag(:script, '', src: webpack_asset_path('js/blockly.js')) +
+               content_tag(:script, '', src: webpack_asset_path("js/#{js_locale}/blockly_locale.js")) +
+               content_tag(:script, '', src: webpack_asset_path('js/common.js')) +
+               content_tag(:script, '', src: webpack_asset_path("js/#{js_locale}/#{app}_locale.js")) +
+               content_tag(:script, '', src: webpack_asset_path("js/#{app}.js"), 'data-appoptions': options.to_json) +
+               content_tag(:script, '', src: webpack_asset_path('js/embedBlocks.js'))
     end
 
     blocks
@@ -1025,7 +1025,7 @@ module LevelsHelper
         old_image_size = ImageSize.path(level_source_image.s3_url)
         new_image_size = ImageSize.new(Base64.decode64(level_image))
         upgradable = new_image_size.width > old_image_size.width &&
-          new_image_size.height > old_image_size.height
+                     new_image_size.height > old_image_size.height
       end
       if !level_source_image || upgradable
         level_source_image = LevelSourceImage.new(level_source: level_source)

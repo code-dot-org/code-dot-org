@@ -223,8 +223,8 @@ module Pd
 
     def get_workshop_by_course_and_subject(course:, subject:, should_have_attended:)
       enrolled_workshops = Workshop.
-        where(course: course, subject: subject).
-        enrolled_in_by(current_user)
+                           where(course: course, subject: subject).
+                           enrolled_in_by(current_user)
 
       if enrolled_workshops.blank?
         render :not_enrolled

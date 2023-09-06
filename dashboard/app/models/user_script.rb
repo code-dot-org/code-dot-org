@@ -50,9 +50,9 @@ class UserScript < ApplicationRecord
   # Given a set of scripts, look up which of them a user has progress in, using a single query.
   def self.lookup_hash(for_user, script_names)
     filtered_progress = Set.new UserScript.
-      joins(:script).
-      where(user: for_user, scripts: {name: script_names}).
-      pluck(:name)
+                        joins(:script).
+                        where(user: for_user, scripts: {name: script_names}).
+                        pluck(:name)
     script_names.index_with do |name|
       filtered_progress.include?(name)
     end

@@ -51,8 +51,8 @@ module Api::V1::Pd
     def get_authorization_and_filter(user, workshop_id)
       return [false, nil] unless user
       return [true, nil] if user.program_manager? ||
-        user.workshop_organizer? ||
-        user.workshop_admin?
+                            user.workshop_organizer? ||
+                            user.workshop_admin?
 
       workshop = Pd::Workshop.find(workshop_id)
       # Only other user authorized to view this workshop besides those checked above is a

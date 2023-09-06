@@ -9,9 +9,9 @@ module UserHelpers
 
   def self.generate_username(queryable, name)
     prefix = name.split.first.downcase.
-      gsub(/[^#{USERNAME_ALLOWED_CHARACTERS.source}]+/, ' ')[0..USERNAME_MAX_LENGTH - 5].
-      squish.
-      tr(' ', '_')
+             gsub(/[^#{USERNAME_ALLOWED_CHARACTERS.source}]+/, ' ')[0..USERNAME_MAX_LENGTH - 5].
+             squish.
+             tr(' ', '_')
 
     if prefix.empty? || prefix == ''
       prefix = 'coder' + rand(100000..999999).to_s

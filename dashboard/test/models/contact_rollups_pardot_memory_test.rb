@@ -56,7 +56,7 @@ class ContactRollupsPardotMemoryTest < ActiveSupport::TestCase
 
     prospects.each do |prospect|
       record = ContactRollupsPardotMemory.
-        find_by(email: prospect['email'], pardot_id: prospect['id'].to_i)
+               find_by(email: prospect['email'], pardot_id: prospect['id'].to_i)
 
       refute_nil record
       refute_nil record.pardot_id_updated_at
@@ -106,7 +106,7 @@ class ContactRollupsPardotMemoryTest < ActiveSupport::TestCase
 
     # Execute SQL query to find new contacts to add to Pardot
     results = ActiveRecord::Base.connection.
-      exec_query(ContactRollupsPardotMemory.query_new_contacts).map do |record|
+              exec_query(ContactRollupsPardotMemory.query_new_contacts).map do |record|
       record['email']
     end
 
@@ -212,7 +212,7 @@ class ContactRollupsPardotMemoryTest < ActiveSupport::TestCase
 
     # Execute SQL query
     results = ActiveRecord::Base.connection.
-      exec_query(ContactRollupsPardotMemory.query_updated_contacts).map do |record|
+              exec_query(ContactRollupsPardotMemory.query_updated_contacts).map do |record|
       record.slice('email', 'pardot_id_changed')
     end
 

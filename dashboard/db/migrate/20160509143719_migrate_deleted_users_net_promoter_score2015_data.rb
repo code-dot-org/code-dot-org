@@ -13,13 +13,13 @@ class MigrateDeletedUsersNetPromoterScore2015Data < ActiveRecord::Migration[4.2]
         ActiveRecord::Base.record_timestamps = false
         begin
           User.only_deleted.where("properties LIKE '%survey2015%'").
-              find_each do |user|
+            find_each do |user|
             if user.survey2015_value || user.survey2015_comment
               # Skip the user if we already transferred their response before
               # the account was deleted.
               existing_survey_result = SurveyResult.
-                where(user_id: user.id, kind: 'NetPromoterScore2015').
-                any?
+                                       where(user_id: user.id, kind: 'NetPromoterScore2015').
+                                       any?
               if existing_survey_result
                 next
               end

@@ -108,9 +108,9 @@ class Experiment < ApplicationRecord
   def self.update_cache
     now = DateTime.now
     @@experiments = Experiment.
-      where('start_at IS NULL or start_at < ?', now).
-      where('end_at IS NULL or end_at > ?', now).
-      to_a
+                    where('start_at IS NULL or start_at < ?', now).
+                    where('end_at IS NULL or end_at > ?', now).
+                    to_a
     @@experiments_loaded = now
   end
 

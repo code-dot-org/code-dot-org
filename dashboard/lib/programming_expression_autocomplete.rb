@@ -7,7 +7,7 @@ class ProgrammingExpressionAutocomplete < AutocompleteHelper
     rows = rows.where(programming_environment: programming_environment) if programming_environment
 
     rows = rows.
-        where("MATCH(name,category) AGAINST(? in BOOLEAN MODE)", query)
+           where("MATCH(name,category) AGAINST(? in BOOLEAN MODE)", query)
 
     rows = rows.limit(100)
     total_rows = rows.length

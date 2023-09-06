@@ -6,14 +6,14 @@ require_relative '../../config/environment'
 def puzzles(has_teacher)
   has_teacher = "#{has_teacher ? 'IN' : 'NOT IN'} (SELECT DISTINCT(student_user_id) FROM followers)"
   levels = UserLevel.
-    joins(:user).
-    where("user_levels.best_result >= 20 AND users.id #{has_teacher} AND users.birthday is not null").
-    where("users.user_type = 'student'").
-    count.to_f
+           joins(:user).
+           where("user_levels.best_result >= 20 AND users.id #{has_teacher} AND users.birthday is not null").
+           where("users.user_type = 'student'").
+           count.to_f
   users = User.
-    where("id #{has_teacher} AND users.birthday is not null").
-    where("users.user_type = 'student'").
-    count
+          where("id #{has_teacher} AND users.birthday is not null").
+          where("users.user_type = 'student'").
+          count
 
   levels / users.to_f
 end
@@ -30,19 +30,19 @@ def courses_1_2_3_puzzles(has_teacher)
   end
   has_teacher = "#{has_teacher ? 'IN' : 'NOT IN'} (SELECT DISTINCT(student_user_id) FROM followers)"
   levels = UserLevel.
-    joins(:user).
-    where("user_levels.best_result >= 20").
-    where("users.id #{has_teacher}").
-    where.not(users: {birthday: nil}).
-    where("users.user_type = 'student'").
-    where("users.id in (select distinct user_id from user_scripts where script_id in (#{script_ids.join(',')}))").
-    count.to_f
+           joins(:user).
+           where("user_levels.best_result >= 20").
+           where("users.id #{has_teacher}").
+           where.not(users: {birthday: nil}).
+           where("users.user_type = 'student'").
+           where("users.id in (select distinct user_id from user_scripts where script_id in (#{script_ids.join(',')}))").
+           count.to_f
   users = User.
-    where("users.id #{has_teacher}").
-    where.not(users: {birthday: nil}).
-    where("users.user_type = 'student'").
-    where("users.id in (select distinct user_id from user_scripts where script_id in (#{script_ids.join(',')}))").
-    count.to_f
+          where("users.id #{has_teacher}").
+          where.not(users: {birthday: nil}).
+          where("users.user_type = 'student'").
+          where("users.id in (select distinct user_id from user_scripts where script_id in (#{script_ids.join(',')}))").
+          count.to_f
 
   # WARNING: The division by levels was added as part of a cleanup PR, not as
   # part of the original script.

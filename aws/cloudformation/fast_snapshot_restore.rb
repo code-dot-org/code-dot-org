@@ -31,9 +31,9 @@ def find(properties)
   image_ids = properties['ImageIds']
   raise 'Invalid ImageIds' if image_ids.empty? || image_ids.length > 10
   snapshots = EC2.
-    describe_images(image_ids: image_ids).
-    images.
-    map {|image| image.block_device_mappings[0].ebs.snapshot_id}
+              describe_images(image_ids: image_ids).
+              images.
+              map {|image| image.block_device_mappings[0].ebs.snapshot_id}
   raise 'No snapshots found' if snapshots.empty?
   [azs, snapshots]
 end

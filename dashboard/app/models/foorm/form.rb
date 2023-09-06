@@ -227,7 +227,7 @@ class Foorm::Form < ApplicationRecord
 
     if has_facilitator_questions
       filtered_submissions = filtered_submissions.
-        reject do |submission|
+                             reject do |submission|
           submission.workshop_metadata&.facilitator_specific?
         end
     end
@@ -271,7 +271,7 @@ class Foorm::Form < ApplicationRecord
           # Add same facilitator number identifier to facilitator-specific questions,
           # such that they map to the appropriate headers.
           facilitator_response_with_facilitator_number = facilitator_response.
-            formatted_answers_with_facilitator_number(facilitator_number)
+                                                         formatted_answers_with_facilitator_number(facilitator_number)
 
           # Add facilitator-specific response to answers,
           # and prep a new set of headers to add to cover facilitator-specific questions.

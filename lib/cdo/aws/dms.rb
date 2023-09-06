@@ -212,13 +212,13 @@ module Cdo
         task = status
 
         return task.status == 'stopped' &&
-          task.stop_reason.include?('FULL_LOAD_ONLY_FINISHED') &&
-          task.full_load_progress_percent == 100 &&
-          task.tables_loaded > 0 &&
-          task.tables_loading == 0 &&
-          task.tables_queued == 0 &&
-          task.tables_errored == 0 &&
-          task.table_statistics.all? {|table| table.table_state == 'Table completed'}
+               task.stop_reason.include?('FULL_LOAD_ONLY_FINISHED') &&
+               task.full_load_progress_percent == 100 &&
+               task.tables_loaded > 0 &&
+               task.tables_loading == 0 &&
+               task.tables_queued == 0 &&
+               task.tables_errored == 0 &&
+               task.table_statistics.all? {|table| table.table_state == 'Table completed'}
       end
     end
   end

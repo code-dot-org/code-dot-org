@@ -253,7 +253,7 @@ def dotd_menu(dotd_name)
       end
       menu.choice(:DTS) do
         unless GitHub.compare(base: 'staging', head: 'levelbuilder').
-            any? {|message| message.include?('levelbuilder content changes')}
+               any? {|message| message.include?('levelbuilder content changes')}
           warn_and_confirm 'No content commit available to merge from levelbuilder to staging'
           next
         end

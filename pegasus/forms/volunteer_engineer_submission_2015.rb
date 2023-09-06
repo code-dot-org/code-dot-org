@@ -123,14 +123,14 @@ class VolunteerEngineerSubmission2015 < VolunteerEngineerSubmission
 
   def self.query(params)
     query = ::PEGASUS_DB[:forms].
-      where(
+            where(
         kind: name,
         Forms.json('data.allow_contact_b') => true,
       ).
-      exclude(
+            exclude(
         Sequel.function(:coalesce, Forms.json('data.unsubscribed_s'), '') => UNSUBSCRIBE_FOREVER
       ).
-      order(Sequel.desc(:id))
+            order(Sequel.desc(:id))
 
     # UNSUBSCRIBE_HOC means a volunteer said "I want to unsubscribe until the next Hour of Code".
     # We don't want them to be getting volunteer requests until then.  So, if we're not currently

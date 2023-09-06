@@ -112,8 +112,8 @@ module RakeUtils
 
   def self.nproc
     count = ENV['PARALLEL_TEST_PROCESSORS'] ||
-      (File.executable?('/usr/bin/nproc') && `/usr/bin/nproc`) ||
-      Parallel.processor_count
+            (File.executable?('/usr/bin/nproc') && `/usr/bin/nproc`) ||
+            Parallel.processor_count
     count.to_i
   end
 

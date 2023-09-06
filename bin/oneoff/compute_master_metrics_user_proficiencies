@@ -59,8 +59,8 @@ def proficient?(line, level)
   for_loops_count += line[22] if level <= 2
   for_loops_count += line[21] if level <= 1
   if repeat_loops_count >= 3 ||
-    repeat_until_while_count >= 3 ||
-    for_loops_count >= 3
+     repeat_until_while_count >= 3 ||
+     for_loops_count >= 3
     concept_count += 1
   end
 

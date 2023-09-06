@@ -84,11 +84,11 @@ class VideosController < ApplicationController
     key = params[:key]
     # Create a temporary video object from default attributes if an entry isn't found in the DB.
     @video = Video.current_locale.find_by_key(key) ||
-      Video.new(
-        key: key,
-        youtube_code: key,
-        download: Video.download_url(key)
-      )
+             Video.new(
+               key: key,
+               youtube_code: key,
+               download: Video.download_url(key)
+             )
   end
 
   # Never trust parameters from the scary internet, only allow the white list through.

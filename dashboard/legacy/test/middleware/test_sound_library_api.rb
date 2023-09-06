@@ -109,7 +109,7 @@ class SoundLibraryTest < FilesApiTestBase
   # Ensure no versions of the specified object currently exist.
   def assert_empty(bucket, key)
     response = AWS::S3.create_client.
-      list_object_versions(bucket: bucket, prefix: key)
+               list_object_versions(bucket: bucket, prefix: key)
     versions = response.versions.concat(response.delete_markers)
     assert versions.empty?, "s3://#{bucket}/#{key} is not empty."
   end

@@ -399,17 +399,17 @@ class RegistrationsController < Devise::RegistrationsController
     return false if user.migrated? && user.encrypted_password.blank? && params[:user][:password].blank?
 
     email_is_changing = params[:user][:email].present? &&
-      user.email != params[:user][:email]
+                        user.email != params[:user][:email]
     hashed_email_is_changing = params[:user][:hashed_email].present? &&
-      user.hashed_email != params[:user][:hashed_email]
+                               user.hashed_email != params[:user][:hashed_email]
     parent_email_is_changing = params[:user][:parent_email].present? &&
-      user.parent_email != params[:user][:parent_email]
+                               user.parent_email != params[:user][:parent_email]
     new_email_matches_hashed_email = email_is_changing &&
-      User.hash_email(params[:user][:email]) == user.hashed_email
+                                     User.hash_email(params[:user][:email]) == user.hashed_email
     (email_is_changing && !new_email_matches_hashed_email) ||
-      hashed_email_is_changing ||
-      parent_email_is_changing ||
-      params[:user][:password].present?
+    hashed_email_is_changing ||
+    parent_email_is_changing ||
+    params[:user][:password].present?
   end
 
   # Accept only whitelisted params for update and upgrade.

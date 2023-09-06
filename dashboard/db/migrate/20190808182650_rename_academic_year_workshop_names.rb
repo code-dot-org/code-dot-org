@@ -24,16 +24,16 @@ class RenameAcademicYearWorkshopNames < ActiveRecord::Migration[5.0]
   def up
     CSD_SUBJECTS.each do |subject_name|
       csd_workshop_ids = Pd::Workshop.where(course: CSD_COURSE, subject: subject_name[:from]).
-        scheduled_start_on_or_after(CUTOFF_DATE).
-        pluck(:id)
+                         scheduled_start_on_or_after(CUTOFF_DATE).
+                         pluck(:id)
 
       Pd::Workshop.where(id: csd_workshop_ids).update_all(subject: subject_name[:to])
     end
 
     CSP_SUBJECTS.each do |subject_name|
       csp_workshop_ids = Pd::Workshop.where(course: CSP_COURSE, subject: subject_name[:from]).
-        scheduled_start_on_or_after(CUTOFF_DATE).
-        pluck(:id)
+                         scheduled_start_on_or_after(CUTOFF_DATE).
+                         pluck(:id)
 
       Pd::Workshop.where(id: csp_workshop_ids).update_all(subject: subject_name[:to])
     end
@@ -42,16 +42,16 @@ class RenameAcademicYearWorkshopNames < ActiveRecord::Migration[5.0]
   def down
     CSD_SUBJECTS.each do |subject_name|
       csd_workshop_ids = Pd::Workshop.where(course: CSD_COURSE, subject: subject_name[:to]).
-        scheduled_start_on_or_after(CUTOFF_DATE).
-        pluck(:id)
+                         scheduled_start_on_or_after(CUTOFF_DATE).
+                         pluck(:id)
 
       Pd::Workshop.where(id: csd_workshop_ids).update_all(subject: subject_name[:from])
     end
 
     CSP_SUBJECTS.each do |subject_name|
       csp_workshop_ids = Pd::Workshop.where(course: CSP_COURSE, subject: subject_name[:to]).
-        scheduled_start_on_or_after(CUTOFF_DATE).
-        pluck(:id)
+                         scheduled_start_on_or_after(CUTOFF_DATE).
+                         pluck(:id)
 
       Pd::Workshop.where(id: csp_workshop_ids).update_all(subject: subject_name[:from])
     end

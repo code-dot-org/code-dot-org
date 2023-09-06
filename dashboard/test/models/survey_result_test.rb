@@ -12,7 +12,7 @@ class SurveyResultTest < ActiveSupport::TestCase
   test 'all attributes are labeled as free-response or non-free-response' do
     SurveyResult::ALL_ATTRS.each do |attr|
       assert SurveyResult::FREE_RESPONSE_ATTRS.include?(attr) ||
-        SurveyResult::NON_FREE_RESPONSE_ATTRS.include?(attr)
+             SurveyResult::NON_FREE_RESPONSE_ATTRS.include?(attr)
     end
   end
 end

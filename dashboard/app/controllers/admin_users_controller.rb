@@ -26,9 +26,9 @@ class AdminUsersController < ApplicationController
     return unless params[:email]
     hashed_email = User.hash_email(params[:email])
     teacher = User.where(user_type: User::TYPE_TEACHER).
-      where(hashed_email: hashed_email).
-      where(email: '').
-      first
+              where(hashed_email: hashed_email).
+              where(email: '').
+              first
 
     if teacher
       teacher.update!(email: params[:email])
@@ -103,7 +103,7 @@ class AdminUsersController < ApplicationController
       level: level
     )
     if user_level.persisted? &&
-      user_level.best_result > ActivityConstants::MAXIMUM_NONOPTIMAL_RESULT
+       user_level.best_result > ActivityConstants::MAXIMUM_NONOPTIMAL_RESULT
       flash[:alert] = "UserLevel (ID: #{user_level.id}) already green"
       redirect_to :manual_pass_form
       return
@@ -124,10 +124,10 @@ class AdminUsersController < ApplicationController
 
     if @target_user
       @user_scripts = UserScript.
-        where(user_id: @target_user.id).
-        order(updated_at: :desc).
-        limit(100).
-        offset(script_offset)
+                      where(user_id: @target_user.id).
+                      order(updated_at: :desc).
+                      limit(100).
+                      offset(script_offset)
     end
   end
 
@@ -165,8 +165,8 @@ class AdminUsersController < ApplicationController
     @target_user = User.find(params[:user_id])
     @script = Unit.get_from_cache(params[:script_id])
     @user_level_count = UserLevel.
-      where(user_id: @target_user.id, script_id: @script.id).
-      count
+                        where(user_id: @target_user.id, script_id: @script.id).
+                        count
   end
 
   def delete_progress
@@ -219,9 +219,9 @@ class AdminUsersController < ApplicationController
       end
     elsif permission.present?
       @users_with_permission = restricted_users.
-                                 joins(:permissions).
-                                 where(user_permissions: {permission: permission}).
-                                 order(:email)
+                               joins(:permissions).
+                               where(user_permissions: {permission: permission}).
+                               order(:email)
       @users_with_permission = @users_with_permission.page(page).per(page_size)
     end
   end

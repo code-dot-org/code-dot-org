@@ -59,7 +59,7 @@ class ProgrammingEnvironmentsControllerTest < ActionController::TestCase
 
     create :programming_environment
     stubbed_request = stub_request(:get, "https://curriculum.code.org/docs/").
-      to_return(body: 'curriculum.code.org/docs content', headers: {})
+                      to_return(body: 'curriculum.code.org/docs content', headers: {})
 
     get :docs_index
     assert_response :ok

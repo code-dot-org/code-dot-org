@@ -414,9 +414,9 @@ class Documents < Sinatra::Base
           # of serverside database or filesystem access (ie, **never under any
           # circumstances** ERB or HAML).
           locals = split[1].scan(/("(?:\\.|[^"])*"|[^\s]*):\s*("(?:\\.|[^"])*"|[^\s]*)/).
-            map(&:compact).
-            to_h.
-            transform_values {|v| @actionview.sanitize(v.delete_prefix('"').delete_suffix('"').gsub('\"', '"'))}
+                   map(&:compact).
+                   to_h.
+                   transform_values {|v| @actionview.sanitize(v.delete_prefix('"').delete_suffix('"').gsub('\"', '"'))}
 
           if locals.present?
             path = resolve_view_template(uri)
@@ -479,9 +479,9 @@ class Documents < Sinatra::Base
         Dir.glob("#{site_glob}/**/*{#{settings.template_extnames.join(',')}}").map do |file|
           # Reduce file to URI.
           uri = file.
-            sub(site_sub, '').
-            sub(/(#{settings.template_extnames.join('|')})*$/, '').
-            sub(/\/index$/, '')
+                sub(site_sub, '').
+                sub(/(#{settings.template_extnames.join('|')})*$/, '').
+                sub(/\/index$/, '')
 
           # hourofcode.com has custom logic to resolve `/:country/:language/:path` URIs to
           # `/:language/:path` document paths, so prepend default `us` country code to reduce document path to URI.

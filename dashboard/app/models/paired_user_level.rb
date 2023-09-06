@@ -30,11 +30,11 @@ class PairedUserLevel < ApplicationRecord
   #   with pair programming (as driver or navigator)
   def self.pairs(user_level_ids)
     drivers = PairedUserLevel.
-      where(driver_user_level_id: user_level_ids).
-      pluck(:driver_user_level_id)
+              where(driver_user_level_id: user_level_ids).
+              pluck(:driver_user_level_id)
     navigators = PairedUserLevel.
-      where(navigator_user_level_id: user_level_ids).
-      pluck(:navigator_user_level_id)
+                 where(navigator_user_level_id: user_level_ids).
+                 pluck(:navigator_user_level_id)
     return drivers | navigators
   end
 
@@ -52,13 +52,13 @@ class PairedUserLevel < ApplicationRecord
     initial_hash = Hash[users.map {|user| [user.id, Set.new]}]
     user_ids = users.map(&:id)
     drivers = PairedUserLevel.
-      joins(:driver_user_level).
-      where(user_levels: {user_id: user_ids}).
-      pluck('user_levels.user_id', 'user_levels.id')
+              joins(:driver_user_level).
+              where(user_levels: {user_id: user_ids}).
+              pluck('user_levels.user_id', 'user_levels.id')
     navigators = PairedUserLevel.
-      joins(:navigator_user_level).
-      where(user_levels: {user_id: user_ids}).
-      pluck('user_levels.user_id', 'user_levels.id')
+                 joins(:navigator_user_level).
+                 where(user_levels: {user_id: user_ids}).
+                 pluck('user_levels.user_id', 'user_levels.id')
     drivers.
       concat(navigators).
       inject(initial_hash) do |memo, (user_id, user_level_id)|

@@ -3,10 +3,10 @@ class AddUniqueConstraintToPdWorkshopAttendance < ActiveRecord::Migration[4.2]
     reversible do |dir|
       dir.up do
         duplicate_attendance_values = Pd::Attendance.with_deleted.
-          select('pd_session_id, teacher_id, count(*)').
-          group(:pd_session_id, :teacher_id).
-          having('count(*) > 1').
-          pluck(:pd_session_id, :teacher_id)
+                                      select('pd_session_id, teacher_id, count(*)').
+                                      group(:pd_session_id, :teacher_id).
+                                      having('count(*) > 1').
+                                      pluck(:pd_session_id, :teacher_id)
 
         # Destroy all but the latest of each set
         duplicate_attendance_values.each do |pd_session_id, teacher_id|

@@ -19,8 +19,8 @@ module Pd::Application
       @year = APPLICATION_CURRENT_YEAR
 
       @application = TEACHER_APPLICATION_CLASS.
-        where(application_year: @year).
-        find_by(user: current_user)
+                     where(application_year: @year).
+                     find_by(user: current_user)
       if @application
         return render :submitted unless @application.status == 'incomplete' || @application.status == 'reopened'
         @application_id = @application.try(:id)

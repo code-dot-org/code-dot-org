@@ -47,14 +47,14 @@ class LevelLoader
       # order to create certain associations (in particular
       # level_concept_difficulty) when we bulk-load the level properties.
       new_level_names = level_file_names.
-        reject {|name| existing_level_names.include? name}
+                        reject {|name| existing_level_names.include? name}
       Level.import!(new_level_names.map {|name| {name: name}})
 
       # Load level properties from disk and build a collection of levels that
       # have changed.
       changed_levels = level_file_paths.
-          filter_map {|path| Services::LevelFiles.load_custom_level(path, level_md5s_by_name)}.
-          select(&:changed?)
+                       filter_map {|path| Services::LevelFiles.load_custom_level(path, level_md5s_by_name)}.
+                       select(&:changed?)
 
       if [:development, :adhoc].include?(rack_env) && !CDO.properties_encryption_key
         puts "WARNING: skipping seeding encrypted levels because CDO.properties_encryption_key is not defined"
@@ -71,7 +71,7 @@ class LevelLoader
       immutable_lcd_columns = %i{id level_id created_at}
       changed_lcds = changed_levels.filter_map(&:level_concept_difficulty)
       lcd_update_columns = LevelConceptDifficulty.columns.map(&:name).map(&:to_sym).
-        reject {|column| immutable_lcd_columns.include? column}
+                           reject {|column| immutable_lcd_columns.include? column}
       LevelConceptDifficulty.import! changed_lcds, on_duplicate_key_update: lcd_update_columns
 
       # activerecord-import doesn't trigger before_save and before_create hooks
@@ -86,7 +86,7 @@ class LevelLoader
       # Bulk-import changed levels.
       immutable_level_columns = %i(id name created_at)
       update_columns = Level.columns.map(&:name).map(&:to_sym).
-        reject {|column| immutable_level_columns.include? column}
+                       reject {|column| immutable_level_columns.include? column}
       Level.import! changed_levels, on_duplicate_key_update: update_columns
 
       # now we want to run some after_save callbacks, which didn't get run when

@@ -313,8 +313,8 @@ class ManifestBuilder
       # If they are unchanged, just use the old metadata (+aliases).
       # This saves us from actually downloading the files from S3
       if previous_metadata[name].is_a?(Hash) &&
-          previous_metadata[name]['jsonLastModified'] == objects['json'].last_modified.to_s &&
-          previous_metadata[name]['pngLastModified'] == objects['png'].last_modified.to_s
+         previous_metadata[name]['jsonLastModified'] == objects['json'].last_modified.to_s &&
+         previous_metadata[name]['pngLastModified'] == objects['png'].last_modified.to_s
         verbose "#{bold name} is unchanged, using old metadata"
         next previous_metadata[name]
       end

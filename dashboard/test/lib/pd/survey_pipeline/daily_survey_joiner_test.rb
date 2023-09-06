@@ -93,8 +93,8 @@ module Pd::SurveyPipeline
         qtext = question_content[qid][:text]
 
         expected_result << submission_no_content.
-          merge(question_content[qid].except(:sub_questions)).
-          merge(
+                           merge(question_content[qid].except(:sub_questions)).
+                           merge(
             qid: DailySurveyJoiner.compute_descendant_key(qid, "Sub question #{i + 1}"),
             name: DailySurveyJoiner.compute_descendant_key(qname, "Sub question #{i + 1}"),
             text: "#{qtext} -> Sub question #{i + 1}",

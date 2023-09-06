@@ -19,7 +19,7 @@ class SurveyResultsController < ApplicationController
   # necessary.
   def survey_result_params
     whitelisted_params = params.require(:survey).
-      permit(SurveyResult::ALL_ATTRS.map(&:to_sym) + [:kind])
+                         permit(SurveyResult::ALL_ATTRS.map(&:to_sym) + [:kind])
     whitelisted_params.each do |k, v|
       whitelisted_params[k] = v.force_encoding('BINARY').encode(
         'utf-8',
@@ -28,9 +28,9 @@ class SurveyResultsController < ApplicationController
       )
     end
     if whitelisted_params[:nps_comment] &&
-      whitelisted_params[:nps_comment].length > 1000
+       whitelisted_params[:nps_comment].length > 1000
       whitelisted_params[:nps_comment] = whitelisted_params[:nps_comment].
-        truncate(1000)
+                                         truncate(1000)
     end
     whitelisted_params
   end

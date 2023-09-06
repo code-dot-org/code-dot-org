@@ -52,8 +52,8 @@ module Poste
   # specified hashed_email.
   def self.dashboard_student?(hashed_email)
     dashboard_user = DASHBOARD_DB[:users].
-      where(hashed_email: hashed_email).
-      first
+                     where(hashed_email: hashed_email).
+                     first
     return !dashboard_user.nil? && dashboard_user[:user_type] == 'student'
   end
 

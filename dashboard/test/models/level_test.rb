@@ -21,7 +21,7 @@ class LevelTest < ActiveSupport::TestCase
   # TYPES_WITH_IDEAL_LEVEL_SOURCE.include or TYPES_WITHOUT_IDEAL_LEVEL_SOURCE.include.
   def raise_unless_specifies_ideal_level_source(level_class)
     unless (Level::TYPES_WITH_IDEAL_LEVEL_SOURCE.include? level_class.to_s) ||
-      (Level::TYPES_WITHOUT_IDEAL_LEVEL_SOURCE.include? level_class.to_s)
+           (Level::TYPES_WITHOUT_IDEAL_LEVEL_SOURCE.include? level_class.to_s)
       raise "#{level_class} does not specify if it has ideal level sources"
     end
     level_class.descendants.each do |descendant|

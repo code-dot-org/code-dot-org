@@ -43,13 +43,13 @@ module Cdo
           db_cluster_parameter_group_name: copy_source_cluster_parameter_group.db_cluster_parameter_group_name
         )
         source_writer_instance_identifier = source_cluster.
-          db_cluster_members.
-          find(&:is_cluster_writer).
-          db_instance_identifier
+                                            db_cluster_members.
+                                            find(&:is_cluster_writer).
+                                            db_instance_identifier
         source_writer_instance = rds_client.
-          describe_db_instances({db_instance_identifier: source_writer_instance_identifier}).
-          db_instances.
-          first
+                                 describe_db_instances({db_instance_identifier: source_writer_instance_identifier}).
+                                 db_instances.
+                                 first
 
         copy_source_writer_instance_parameter_group = rds_client.copy_db_parameter_group(
           source_db_parameter_group_identifier: source_writer_instance[:db_parameter_groups][0][:db_parameter_group_name],
@@ -128,10 +128,10 @@ module Cdo
         begin
           # describe_db_cluster will Raise a DBClusterNotFound Error when the cluster has been deleted.
           cluster_state = rds_client.
-            describe_db_clusters({db_cluster_identifier: db_cluster_id}).
-            db_clusters.
-            first.
-            status
+                          describe_db_clusters({db_cluster_identifier: db_cluster_id}).
+                          db_clusters.
+                          first.
+                          status
         rescue Aws::RDS::Errors::DBClusterNotFoundFault => exception
           cluster_state = 'deleted'
           CDO.log.info "Database Cluster #{db_cluster_id} has been deleted. #{exception}"

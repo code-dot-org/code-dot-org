@@ -362,7 +362,7 @@ class ScriptLevelsController < ApplicationController
   private def find_next_level_for_session(script)
     script.script_levels.detect do |sl|
       sl.valid_progression_level? &&
-          (client_state.level_progress(sl) < Activity::MINIMUM_PASS_RESULT)
+        (client_state.level_progress(sl) < Activity::MINIMUM_PASS_RESULT)
     end
   end
 
@@ -523,8 +523,8 @@ class ScriptLevelsController < ApplicationController
     end
 
     @code_review_enabled_for_level = @level.is_a?(Javalab) &&
-      current_user.present? &&
-      (current_user.teacher? || (current_user&.sections_as_student&.any?(&:code_review_enabled?) && !current_user.code_review_groups.empty?))
+                                     current_user.present? &&
+                                     (current_user.teacher? || (current_user&.sections_as_student&.any?(&:code_review_enabled?) && !current_user.code_review_groups.empty?))
 
     # Javalab exemplar URLs include ?exemplar=true as a URL param
     if params[:exemplar]

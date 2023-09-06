@@ -145,7 +145,7 @@ class TransfersController < ApplicationController
     end
 
     stay_enrolled_in_current_section = params[:stay_enrolled_in_current_section] &&
-      params[:stay_enrolled_in_current_section] != 'false'
+                                       params[:stay_enrolled_in_current_section] != 'false'
     students.each do |student|
       if new_section.user == current_user
         follower_same_user_teacher = student.followeds.find_by_section_id(current_section.id)

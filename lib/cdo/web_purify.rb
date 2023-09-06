@@ -66,10 +66,10 @@ module WebPurify
 
     # Convert language codes to a list of two character codes, comma separated.
     language_codes = language_codes.
-      map {|language_code| language_code[0..1]}.
-      map {|code| ISO_639_1_TO_WEBPURIFY[code] || code}.
-      uniq.
-      join(',')
+                     map {|language_code| language_code[0..1]}.
+                     map {|code| ISO_639_1_TO_WEBPURIFY[code] || code}.
+                     uniq.
+                     join(',')
 
     chunks = split_text(text)
     expletives = []

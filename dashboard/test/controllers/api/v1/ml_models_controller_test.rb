@@ -101,12 +101,12 @@ class Api::V1::MlModelsControllerTest < ActionController::TestCase
     sign_in @not_owner
 
     database_model_data = UserMlModel.where(user_id: @owner.id).
-      map {|user_ml_model| {id: user_ml_model.model_id}}
+                          map {|user_ml_model| {id: user_ml_model.model_id}}
 
     get :names
 
     api_model_data = JSON.parse(@response.body).
-      map {|user_ml_model| {id: user_ml_model.model_id}}
+                     map {|user_ml_model| {id: user_ml_model.model_id}}
 
     intersection = api_model_data & database_model_data
 

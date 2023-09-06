@@ -109,8 +109,8 @@ while batch_start_id < options[:end_id]
 
   PEGASUS_DB.transaction do
     batch_rows_updated = HOC_ACTIVITY.
-      where(Sequel.lit('id >= ? AND id < ? AND name IS NOT NULL', batch_start_id, batch_end_id)).
-      update(name: nil)
+                         where(Sequel.lit('id >= ? AND id < ? AND name IS NOT NULL', batch_start_id, batch_end_id)).
+                         update(name: nil)
     raise Sequel::Rollback if options[:dry_run]
   end
   total_rows_updated += batch_rows_updated

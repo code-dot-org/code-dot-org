@@ -26,7 +26,7 @@ def main
     SQL
   ).each do |row|
     ip_address = row[:started_ip] || row[:pixel_started_ip] ||
-      row[:pixel_finished_ip] || row[:finished_ip]
+                 row[:pixel_finished_ip] || row[:finished_ip]
     location = Geocoder.search(ip_address).first
     if location
       if location.latitude && location.longitude

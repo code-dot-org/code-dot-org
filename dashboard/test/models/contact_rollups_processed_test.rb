@@ -303,15 +303,15 @@ class ContactRollupsProcessedTest < ActiveSupport::TestCase
       }
     }
     all_inputs = {}.
-      merge!(users_input).
-      merge!(pd_enrollments_input).
-      merge!(pd_attendances_input).
-      merge!(followers_input).
-      merge!(census_submissions_input).
-      merge!(forms_input).
-      merge!(section_courses_input).
-      merge!(section_curricula_input).
-      merge!(user_permissions_input)
+                 merge!(users_input).
+                 merge!(pd_enrollments_input).
+                 merge!(pd_attendances_input).
+                 merge!(followers_input).
+                 merge!(census_submissions_input).
+                 merge!(forms_input).
+                 merge!(section_courses_input).
+                 merge!(section_curricula_input).
+                 merge!(user_permissions_input)
 
     tests = [
       {

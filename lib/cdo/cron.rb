@@ -11,10 +11,10 @@ module Cdo
       Time.use_zone(time_zone) do
         Chronic.time_class = Time.zone
         times = DateTime.now.
-          all_week.
-          select(&:on_weekday?).
-          map {|day| Chronic.parse(time_str, now: day)}.
-          map(&:utc)
+                all_week.
+                select(&:on_weekday?).
+                map {|day| Chronic.parse(time_str, now: day)}.
+                map(&:utc)
         day_names = times.map {|day| day.strftime('%a').upcase}
         "0 #{times.first.hour} * * #{day_names.first}-#{day_names.last}"
       end

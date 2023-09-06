@@ -111,7 +111,7 @@ class Ability
 
       can :create, CodeReview do |code_review, project|
         code_review.user_id == user.id &&
-        project.owner_id == user.id
+          project.owner_id == user.id
       end
       can :edit, CodeReview, user_id: user.id
       can :index_code_reviews, Project do |project|
@@ -174,16 +174,16 @@ class Ability
         # For now, that's only Javalab.
         if level_to_view.is_a?(Javalab)
           project_level_id = level_to_view.project_template_level.try(:id) ||
-            level_to_view.id
+                             level_to_view.id
 
           if user != user_to_assume &&
-            !user_to_assume.student_of?(user) &&
-            can?(:code_review, user_to_assume) &&
-            CodeReview.open_reviews.find_by(
-              user_id: user_to_assume.id,
-              script_id: script_level.script_id,
-              project_level_id: project_level_id
-            )
+             !user_to_assume.student_of?(user) &&
+             can?(:code_review, user_to_assume) &&
+             CodeReview.open_reviews.find_by(
+               user_id: user_to_assume.id,
+               script_id: script_level.script_id,
+               project_level_id: project_level_id
+             )
             can_view_as_user_for_code_review = true
           end
         end
@@ -377,8 +377,8 @@ class Ability
     # levelbuilder permission will mimic levelbuilder_mode instead of production
     # by default.
     if user.persisted? &&
-      user.permission?(UserPermission::LEVELBUILDER) &&
-      (Rails.application.config.levelbuilder_mode || rack_env?(:test))
+       user.permission?(UserPermission::LEVELBUILDER) &&
+       (Rails.application.config.levelbuilder_mode || rack_env?(:test))
       can :manage, [
         Block,
         SharedBlocklyFunction,

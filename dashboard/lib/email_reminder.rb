@@ -34,10 +34,10 @@ class EmailReminder
   # Return the IDs of the requests.
   def find_requests_needing_reminder
     reqs = ParentalPermissionRequest.joins(:user).
-      select(:id).
-      where(created_at: @max_reminder_age..@min_reminder_age).
-      where(reminders_sent: ...MAX_LIFETIME_REMINDERS).
-      where("JSON_EXTRACT(users.properties, '$.child_account_compliance_state') != ?", Policies::ChildAccount::ComplianceState::PERMISSION_GRANTED)
+           select(:id).
+           where(created_at: @max_reminder_age..@min_reminder_age).
+           where(reminders_sent: ...MAX_LIFETIME_REMINDERS).
+           where("JSON_EXTRACT(users.properties, '$.child_account_compliance_state') != ?", Policies::ChildAccount::ComplianceState::PERMISSION_GRANTED)
 
     CDO.log.info "Found #{reqs.length} requests needing reminders"
     reqs

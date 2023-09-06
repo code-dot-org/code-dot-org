@@ -48,8 +48,8 @@ class HocSignup2014 < Form
   def self.update_on_upsert(new_data)
     return nil unless new_data[:kind] && new_data[:email] && new_data[:name]
     existing_form = DB[:forms].
-      where(kind: new_data[:kind], email: new_data[:email], name: new_data[:name]).
-      first
+                    where(kind: new_data[:kind], email: new_data[:email], name: new_data[:name]).
+                    first
     existing_form ? existing_form[:secret] : nil
   end
 end

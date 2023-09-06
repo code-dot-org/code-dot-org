@@ -32,8 +32,8 @@ def get_contained_question(contained_level)
   contained_question_text = nil
   if contained_level.properties['questions']
     contained_question_text = contained_level.
-      properties['questions'].
-      first['text']
+                              properties['questions'].
+                              first['text']
   end
 
   if contained_question_markdown.nil?
@@ -56,7 +56,7 @@ def main
       page.levels.each_with_index do |contained_level, position_index|
         next unless contained_level.type == 'Multi'
         next if contained_levels.
-          any? {|existing_contained_level| existing_contained_level[:level_id] == contained_level.id}
+                any? {|existing_contained_level| existing_contained_level[:level_id] == contained_level.id}
 
         contained_question = get_contained_question(contained_level)
         contained_levels << {

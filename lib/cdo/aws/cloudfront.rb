@@ -150,21 +150,21 @@ module AWS
               ErrorCode: error,
             }
           end +
-          SERVER_ERROR_CODES.map do |error|
-            {
-              ErrorCachingMinTTL: ERROR_CACHE_TTL,
-              ErrorCode: error,
-              ResponseCode: error,
-              ResponsePagePath: '/assets/error-pages/site-down.html'
-            }.tap do |error_response_hash|
-              # Don't use friendly error pages on some environments (such as adhocs and LevelBuilder).
-              unless CDO.custom_error_response
-                error_response_hash[:ErrorCachingMinTTL] = 0
-                error_response_hash.delete(:ResponseCode)
-                error_response_hash.delete(:ResponsePagePath)
+            SERVER_ERROR_CODES.map do |error|
+              {
+                ErrorCachingMinTTL: ERROR_CACHE_TTL,
+                ErrorCode: error,
+                ResponseCode: error,
+                ResponsePagePath: '/assets/error-pages/site-down.html'
+              }.tap do |error_response_hash|
+                # Don't use friendly error pages on some environments (such as adhocs and LevelBuilder).
+                unless CDO.custom_error_response
+                  error_response_hash[:ErrorCachingMinTTL] = 0
+                  error_response_hash.delete(:ResponseCode)
+                  error_response_hash.delete(:ResponsePagePath)
+                end
               end
-            end
-          end,
+            end,
         DefaultCacheBehavior: cache_behavior(config[:default]),
         DefaultRootObject: '',
         Enabled: true,
@@ -248,7 +248,7 @@ module AWS
       # Include Host header in CloudFront's cache key to match Varnish for custom origins.
       # Include S3 forward headers for s3 origins.
       headers = behavior_config[:headers] +
-        (s3 ? S3_FORWARD_HEADERS : %w(Host CloudFront-Forwarded-Proto))
+                (s3 ? S3_FORWARD_HEADERS : %w(Host CloudFront-Forwarded-Proto))
       cookie_config = behavior_config[:cookies].is_a?(Array) ?
         {
           Forward: 'whitelist',
@@ -267,7 +267,7 @@ module AWS
       # Behaviors including session cookies aren't cacheable anyway, so don't bother
       # running the extra header-normalization function for these.
       normalize_accept_language = false if behavior_config[:cookies] == 'all' ||
-        (behavior_config[:cookies].is_a?(Array) && behavior_config[:cookies].include?('rack.session'))
+                                           (behavior_config[:cookies].is_a?(Array) && behavior_config[:cookies].include?('rack.session'))
 
       {
         AllowedMethods: ALLOWED_METHODS,

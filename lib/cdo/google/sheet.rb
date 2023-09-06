@@ -71,8 +71,8 @@ module Google
       acl.each do |entry|
         email = entry.email_address
         next if email.blank? ||
-          email.end_with?('@code.org') ||
-          email == CDO.gdrive_export_secret['client_email']
+                email.end_with?('@code.org') ||
+                email == CDO.gdrive_export_secret['client_email']
         emails << email
       end
       emails

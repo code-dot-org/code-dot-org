@@ -84,10 +84,10 @@ module Pd::Foorm
       rollups = {general: {}, facilitator: {}}
       facilitators.each_key do |facilitator_id|
         workshop_ids = Pd::Workshop.
-          where(course: course_name).
-          in_state(STATE_ENDED).
-          facilitated_by(User.find(facilitator_id)).
-          pluck(:id)
+                       where(course: course_name).
+                       in_state(STATE_ENDED).
+                       facilitated_by(User.find(facilitator_id)).
+                       pluck(:id)
         facilitator_rollup = get_rollup_for_workshop_ids(
           workshop_ids,
           questions_to_summarize,
@@ -142,9 +142,9 @@ module Pd::Foorm
     #   for the given workshop id.
     def self.get_raw_data_for_workshop(workshop_id, facilitator_id=nil)
       ws_submissions = Pd::WorkshopSurveyFoormSubmission.
-        where(pd_workshop_id: workshop_id).
-        joins(:foorm_submission).
-        where(foorm_submissions: {form_name: ALL_PARTICIPANT_SURVEY_CONFIG_PATHS})
+                       where(pd_workshop_id: workshop_id).
+                       joins(:foorm_submission).
+                       where(foorm_submissions: {form_name: ALL_PARTICIPANT_SURVEY_CONFIG_PATHS})
       if facilitator_id
         ws_submissions = ws_submissions.where(facilitator_id: facilitator_id).or(ws_submissions.where(facilitator_id: nil))
       end

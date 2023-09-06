@@ -21,8 +21,8 @@ module Api::V1::Pd
 
       ROLES.each do |role|
         apps = get_applications_by_role(role, include_associations: false).
-          select(:status, "count(id) AS total").
-          group(:status)
+               select(:status, "count(id) AS total").
+               group(:status)
 
         if regional_partner_value == REGIONAL_PARTNERS_NONE
           apps = apps.where(regional_partner_id: nil)

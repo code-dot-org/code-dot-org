@@ -75,7 +75,7 @@ class Pd::Attendance < ApplicationRecord
     attendance = nil
     Retryable.retryable(on: ActiveRecord::RecordNotUnique) do
       attendance = Pd::Attendance.with_deleted.find_by(search_params) ||
-        Pd::Attendance.create!(search_params)
+                   Pd::Attendance.create!(search_params)
     end
 
     attendance.restore! if attendance.deleted?

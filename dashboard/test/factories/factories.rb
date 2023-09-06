@@ -1208,8 +1208,8 @@ FactoryBot.define do
 
     after(:build) do |follower, evaluator|
       follower.user = evaluator.user ||
-        evaluator.section.try(:user) ||
-        build(:teacher)
+                      evaluator.section.try(:user) ||
+                      build(:teacher)
       follower.section = evaluator.section || build(:section, user: follower.user)
     end
   end

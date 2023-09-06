@@ -327,7 +327,7 @@ class BucketHelper
 
     # Delete all versions and delete markers
     objects_to_delete = (version_list.versions + version_list.delete_markers).
-      map {|v| v.to_h.slice(:key, :version_id)}
+                        map {|v| v.to_h.slice(:key, :version_id)}
     result = s3.delete_objects(
       bucket: @bucket,
       delete: {
@@ -352,9 +352,9 @@ class BucketHelper
       map do |version|
         comment = with_comments ?
           DASHBOARD_DB[:project_commits].
-          select(:comment).
-          where(storage_app_id: storage_app_id, object_version_id: version.version_id).
-          first&.
+            select(:comment).
+            where(storage_app_id: storage_app_id, object_version_id: version.version_id).
+            first&.
           fetch(:comment) :
           nil
         {

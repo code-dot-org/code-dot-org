@@ -828,7 +828,7 @@ class SectionTest < ActiveSupport::TestCase
     # @param {number} num_non_programming_levels
     def simulate_student_progress(script, student, num_programming_levels, num_non_programing_levels)
       progress_levels = script.levels.select {|level| level.is_a?(Unplugged)}.last(num_non_programing_levels) +
-        script.levels.select {|level| !level.is_a?(Unplugged)}.last(num_programming_levels)
+                        script.levels.select {|level| !level.is_a?(Unplugged)}.last(num_programming_levels)
 
       progress_levels.each do |level|
         create :user_level, level: level, user: student, script: script

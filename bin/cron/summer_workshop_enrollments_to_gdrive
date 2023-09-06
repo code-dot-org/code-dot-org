@@ -29,14 +29,14 @@ def get_rows
   ]
 
   workshop_ids_this_year = Pd::Workshop.
-    where(subject: Pd::SharedWorkshopConstants::SUBJECT_SUMMER_WORKSHOP).
-    scheduled_end_on_or_after(EARLIEST_WORKSHOP_END_DATE).
-    scheduled_start_on_or_before(LATEST_WORKSHOP_START_DATE).
-    pluck(:id)
+                           where(subject: Pd::SharedWorkshopConstants::SUBJECT_SUMMER_WORKSHOP).
+                           scheduled_end_on_or_after(EARLIEST_WORKSHOP_END_DATE).
+                           scheduled_start_on_or_before(LATEST_WORKSHOP_START_DATE).
+                           pluck(:id)
 
   enrollments_this_year = Pd::Enrollment.
-    includes(:workshop).
-    where(pd_workshop_id: workshop_ids_this_year)
+                          includes(:workshop).
+                          where(pd_workshop_id: workshop_ids_this_year)
 
   enrollments_this_year.find_each do |enrollment|
     results << [

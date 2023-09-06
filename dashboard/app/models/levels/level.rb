@@ -206,7 +206,7 @@ class Level < ApplicationRecord
           i18n_key = "data.callouts.#{name}.#{callout_definition['localization_key']}"
           callout_text = (should_localize? &&
             I18n.t(i18n_key, default: nil)) ||
-            callout_definition['callout_text']
+                         callout_definition['callout_text']
 
           Callout.new(
             element_id: callout_definition['element_id'],
@@ -359,8 +359,8 @@ class Level < ApplicationRecord
 
   def self.where_we_want_to_calculate_ideal_level_source
     where.not(type: TYPES_WITHOUT_IDEAL_LEVEL_SOURCE).
-    where(ideal_level_source_id: nil).
-    to_a.reject {|level| level.try(:free_play)}
+      where(ideal_level_source_id: nil).
+      to_a.reject {|level| level.try(:free_play)}
   end
 
   def calculate_ideal_level_source_id
@@ -692,7 +692,7 @@ class Level < ApplicationRecord
 
   def show_help_and_tips_in_level_editor?
     (uses_droplet? || is_a?(Blockly) || is_a?(Weblab) || is_a?(Ailab) || is_a?(Javalab)) &&
-    !(is_a?(NetSim) || is_a?(GamelabJr) || is_a?(Dancelab) || is_a?(BubbleChoice))
+      !(is_a?(NetSim) || is_a?(GamelabJr) || is_a?(Dancelab) || is_a?(BubbleChoice))
   end
 
   def localized_teacher_markdown

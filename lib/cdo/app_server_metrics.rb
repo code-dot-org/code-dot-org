@@ -44,8 +44,8 @@ module Cdo
 
     def spawn_reporting_task
       @spawn_reporting_task ||= Concurrent::TimerTask.new(execution_interval: @interval, &method(:collect_metrics)).
-        with_observer {|_, _, ex| Honeybadger.notify(ex) if ex}.
-        execute
+                                with_observer {|_, _, ex| Honeybadger.notify(ex) if ex}.
+                                execute
     end
 
     # Periodically collect unicorn-listener metrics.

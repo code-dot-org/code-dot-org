@@ -76,8 +76,8 @@ class Api::V1::Pd::WorkshopsController < ApplicationController
   # regional partners, and an empty set for everyone else.
   def upcoming_teachercons
     workshops = Pd::Workshop.
-      scheduled_start_on_or_after(Time.zone.today.beginning_of_day).
-      where(subject: Pd::Workshop::SUBJECT_TEACHER_CON)
+                scheduled_start_on_or_after(Time.zone.today.beginning_of_day).
+                where(subject: Pd::Workshop::SUBJECT_TEACHER_CON)
 
     if params[:course]
       workshops = workshops.where(course: params[:course])
@@ -89,11 +89,11 @@ class Api::V1::Pd::WorkshopsController < ApplicationController
       # regional partners get to see workshops associated with their matching
       # teachercon
       cities = current_user.
-        regional_partners.
-        filter_map {|partner| get_matching_teachercon(partner)}.
-        to_set.
-        pluck(:city).
-        map {|city| "%#{city}%"}
+               regional_partners.
+               filter_map {|partner| get_matching_teachercon(partner)}.
+               to_set.
+               pluck(:city).
+               map {|city| "%#{city}%"}
 
       query = Array.new(cities.length, "location_address like ?").join(" OR ")
       workshops = workshops.where(query, *cities)
@@ -151,7 +151,7 @@ class Api::V1::Pd::WorkshopsController < ApplicationController
     end
 
     @workshops = Pd::Workshop.scheduled_start_on_or_after(Time.zone.today.beginning_of_day).
-      where(conditions).where.not(processed_location: nil)
+                 where(conditions).where.not(processed_location: nil)
     if params['geojson']
       render json: to_geojson(@workshops)
     else
@@ -171,8 +171,8 @@ class Api::V1::Pd::WorkshopsController < ApplicationController
     # The below user types have permission to set the regional partner. CSF Facilitators
     # can initially set the regional partner, but cannot edit it once it is set.
     can_update_regional_partner = current_user.permission?(UserPermission::WORKSHOP_ORGANIZER) ||
-      current_user.permission?(UserPermission::PROGRAM_MANAGER) ||
-      current_user.permission?(UserPermission::WORKSHOP_ADMIN)
+                                  current_user.permission?(UserPermission::PROGRAM_MANAGER) ||
+                                  current_user.permission?(UserPermission::WORKSHOP_ADMIN)
 
     new_workshop_params = workshop_params(can_update_regional_partner)
 

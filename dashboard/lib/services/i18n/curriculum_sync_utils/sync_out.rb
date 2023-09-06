@@ -61,7 +61,7 @@ module Services
               # Filter for only lessons which are "numbered".
               # Only these lessons guarantee that their relative position is unique.
               lessons = Lesson.joins(:script).
-                where(
+                        where(
                   'scripts.name': route_params[:script_id],
                   relative_position: route_params[:position].to_i,
                 ).select(&:numbered_lesson?)
@@ -89,8 +89,8 @@ module Services
               course_version_key = split_course_name.pop
               course_offering_key = split_course_name.join("-")
               reference_guide = CourseOffering.find_by_key(course_offering_key).
-                course_versions.find_by_key(course_version_key).
-                reference_guides.find_by_key(route_params[:key])
+                                course_versions.find_by_key(course_version_key).
+                                reference_guides.find_by_key(route_params[:key])
               if reference_guide.nil?
                 warn "Could not find reference_guide for url #{reference_guide_url.inspect}"
                 next

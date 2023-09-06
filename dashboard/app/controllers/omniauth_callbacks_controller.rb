@@ -297,8 +297,8 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   private def prepare_locale_cookie(user)
     # Set user-account locale only if no cookie is already set.
     if user.locale &&
-      user.locale != request.env['cdo.locale'] &&
-      cookies[:language_].nil?
+       user.locale != request.env['cdo.locale'] &&
+       cookies[:language_].nil?
 
       set_locale_cookie(user.locale)
     end
@@ -359,7 +359,7 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
 
   private def just_authorized_google_classroom?
     current_user&.providers&.include?(AuthenticationOption::GOOGLE) &&
-      has_google_oauth2_scope?('classroom.rosters.readonly')
+    has_google_oauth2_scope?('classroom.rosters.readonly')
   end
 
   private def has_google_oauth2_scope?(scope_name)
@@ -373,9 +373,9 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
     # student hasn't made progress with the initial account
     has_auth_email = user.migrated? && user.authentication_options.any? {|ao| ao.hashed_email.present?}
     user.persisted? && user.oauth_student? &&
-      user.email.blank? && user.hashed_email.blank? &&
+    user.email.blank? && user.hashed_email.blank? &&
       # Also *all* AuthenticationOption's emails are blank
-      !has_auth_email && !user.has_activity?
+    !has_auth_email && !user.has_activity?
   end
 
   # Looks for an existing user with an email address matching the oauth credentials.

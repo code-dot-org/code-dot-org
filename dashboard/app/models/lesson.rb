@@ -711,8 +711,8 @@ class Lesson < ApplicationRecord
       ]
     }
     lessons = Lesson.eager_load(load_params).
-      where(script: related_units).
-      where(key: key).to_a
+              where(script: related_units).
+              where(key: key).to_a
 
     # we cannot do the sort in the SQL query, because we don't know which
     # association get_course_version will use to find the course version.
@@ -730,12 +730,12 @@ class Lesson < ApplicationRecord
     # CourseOffering, this implementation will need to change to be more like
     # related_lessons.
     lessons = Lesson.eager_load(script: :course_version).
-      where("scripts.properties -> '$.curriculum_umbrella' = ?", script.curriculum_umbrella).
-      where(key: key).
+              where("scripts.properties -> '$.curriculum_umbrella' = ?", script.curriculum_umbrella).
+              where(key: key).
       # This SQL string is not at risk for injection vulnerabilites because
       # it's not actually using any user-provided values, just
       # levelbuilder-defined ones, so it's safe to wrap in Arel.sql
-      order(Arel.sql("scripts.properties -> '$.version_year'"), 'scripts.name')
+              order(Arel.sql("scripts.properties -> '$.version_year'"), 'scripts.name')
     lessons - [self]
   end
 

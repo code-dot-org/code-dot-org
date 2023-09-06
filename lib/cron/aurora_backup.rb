@@ -38,7 +38,7 @@ module AuroraBackup
       resp = rds_client_backup.describe_db_cluster_snapshots(max_records: 100, include_shared: true)
       shared_snapshots = resp.db_cluster_snapshots.select do |snap|
         snap.db_cluster_snapshot_identifier.start_with?('arn:aws:rds:') &&
-            snap.db_cluster_snapshot_identifier.end_with?(temp_snapshot_name)
+          snap.db_cluster_snapshot_identifier.end_with?(temp_snapshot_name)
       end
     end
 
@@ -85,8 +85,8 @@ module AuroraBackup
 
     # Find the latest automated backup
     sorted_snapshots = production_cluster.snapshots.
-        select {|snap| snap.status == 'available' && !snap.db_cluster_snapshot_identifier.start_with?(TEMP_SNAPSHOT_PREFIX)}.
-        sort_by(&:snapshot_create_time)
+                       select {|snap| snap.status == 'available' && !snap.db_cluster_snapshot_identifier.start_with?(TEMP_SNAPSHOT_PREFIX)}.
+                       sort_by(&:snapshot_create_time)
 
     unless sorted_snapshots.any?
       raise AuroraBackupError, "No available automated snapshots found for #{cluster_id}"

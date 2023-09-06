@@ -52,11 +52,11 @@ class Api::V1::PeerReviewSubmissionsController < ApplicationController
     # This query gets the latest submission for each user+level, paginated, and returns a
     # recordset with pagination metadata and correctly-ordered, partially-populated models.
     reviews = reviews.
-      page(page).
-      per(per).
-      order('id DESC').
-      group(:submitter_id, :level_id).
-      select('max(peer_reviews.id) id, submitter_id, level_id')
+              page(page).
+              per(per).
+              order('id DESC').
+              group(:submitter_id, :level_id).
+              select('max(peer_reviews.id) id, submitter_id, level_id')
 
     # This query gets matching fully-hydrated models in the correct order.
     real_reviews = PeerReview.find(reviews.map(&:id))
@@ -91,11 +91,11 @@ class Api::V1::PeerReviewSubmissionsController < ApplicationController
     # Here, gather all the submission dates we need in one query and organize them for easy
     # access while generating the report.
     submission_times_by_user_script_level = PeerReview.
-      where(submitter_id: enrollments.map(&:user_id)).
-      pluck(:submitter_id, :script_id, :level_id, :created_at).
-      group_by {|pr| pr[0..2]}. # group by [submitter_id, script_id, level_id]
-      map {|k, prs| [k, prs.map {|pr| pr[3]}]}. # only keep :created_at in values
-      to_h
+                                            where(submitter_id: enrollments.map(&:user_id)).
+                                            pluck(:submitter_id, :script_id, :level_id, :created_at).
+                                            group_by {|pr| pr[0..2]}. # group by [submitter_id, script_id, level_id]
+                                            map {|k, prs| [k, prs.map {|pr| pr[3]}]}. # only keep :created_at in values
+                                            to_h
 
     enrollments.each do |enrollment|
       peer_review_submissions = Hash.new

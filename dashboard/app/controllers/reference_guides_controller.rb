@@ -21,9 +21,9 @@ class ReferenceGuidesController < ApplicationController
     # redirect to the show page for the first guide within a category
     course_version_id = CurriculumHelper.find_matching_course_version(params[:course_course_name])&.id
     first_category_key = ReferenceGuide.where(course_version_id: course_version_id, parent_reference_guide_key: nil).
-      order('position').first&.key
+                         order('position').first&.key
     first_child_key = ReferenceGuide.where(course_version_id: course_version_id, parent_reference_guide_key: first_category_key).
-      order('position').first&.key
+                      order('position').first&.key
     redirect_to course_reference_guide_path(params[:course_course_name], first_child_key)
   end
 

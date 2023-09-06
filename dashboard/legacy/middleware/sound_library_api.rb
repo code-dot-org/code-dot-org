@@ -30,10 +30,10 @@ class SoundLibraryApi < Sinatra::Base
 
     begin
       result = Aws::S3::Bucket.
-        new(SOUND_LIBRARY_BUCKET, client: AWS::S3.create_client).
-        object_versions(prefix: sound_name).
-        find {|version| !version.head.delete_marker}.
-        get
+               new(SOUND_LIBRARY_BUCKET, client: AWS::S3.create_client).
+               object_versions(prefix: sound_name).
+               find {|version| !version.head.delete_marker}.
+               get
       content_type result.content_type
       cache_for 3600
       result.body

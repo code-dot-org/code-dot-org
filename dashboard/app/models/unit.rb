@@ -726,7 +726,7 @@ class Unit < ApplicationRecord
     return nil if family_name.blank?
 
     unit_versions = Unit.get_family_from_cache(family_name).
-      sort_by(&:version_year).reverse
+                    sort_by(&:version_year).reverse
 
     # Only select stable, supported units (ignore supported locales if locale is an English-speaking locale).
     # Match on version year if one is supplied.
@@ -769,7 +769,7 @@ class Unit < ApplicationRecord
     return nil unless family_name && user
 
     family_unit_versions = Unit.get_family_from_cache(family_name).
-      sort_by(&:version_year).freeze
+                           sort_by(&:version_year).freeze
     family_unit_names = family_unit_versions.map(&:name)
     progress = UserScript.lookup_hash(user, family_unit_names)
 
@@ -790,7 +790,7 @@ class Unit < ApplicationRecord
     script_levels.map do |script_level|
       script_level.levels.map do |level|
         next if level.contained_levels.empty? ||
-          TEXT_RESPONSE_TYPES.exclude?(level.contained_levels.first.class)
+                TEXT_RESPONSE_TYPES.exclude?(level.contained_levels.first.class)
         text_response_levels << {
           script_level: script_level,
           levels: [level.contained_levels.first]

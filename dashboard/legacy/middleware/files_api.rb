@@ -763,7 +763,7 @@ class FilesApi < Sinatra::Base
     end
 
     deleting_separate_file = unescaped_delete_filename_downcased &&
-      unescaped_delete_filename_downcased != unescaped_filename_downcased
+                             unescaped_delete_filename_downcased != unescaped_filename_downcased
     # if we're also deleting a file (on rename), remove it from the manifest (don't remove from manifest)
     if deleting_separate_file
       reject_result = manifest.reject! {|e| e['filename'].downcase == unescaped_delete_filename_downcased}

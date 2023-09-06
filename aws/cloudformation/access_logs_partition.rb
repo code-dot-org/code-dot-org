@@ -20,7 +20,7 @@ CREATED_PARTITIONS = {}
 
 def handler(event:, context:)
   partition = event['Records'][0].dig('s3', 'object', 'key').
-    delete_prefix(PREFIX).split('/').tap(&:pop).join('/')
+              delete_prefix(PREFIX).split('/').tap(&:pop).join('/')
 
   CREATED_PARTITIONS[partition] ||=
     begin

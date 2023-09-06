@@ -40,7 +40,7 @@ class Pd::ScholarshipInfo < ApplicationRecord
 
   def self.update_or_create(user, application_year, course, scholarship_status)
     scholarship_info = Pd::ScholarshipInfo.find_by(user: user, application_year: application_year, course: course) ||
-      Pd::ScholarshipInfo.new(user: user, application_year: application_year, course: course)
+                       Pd::ScholarshipInfo.new(user: user, application_year: application_year, course: course)
     scholarship_info.update(scholarship_status: scholarship_status)
   end
 

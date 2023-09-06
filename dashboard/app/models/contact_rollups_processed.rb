@@ -175,7 +175,7 @@ class ContactRollupsProcessed < ApplicationRecord
         end
 
         if !output[sources].key?('last_data_updated_at') ||
-          data_updated_at > output[sources]['last_data_updated_at']
+           data_updated_at > output[sources]['last_data_updated_at']
           output[sources]['last_data_updated_at'] = data_updated_at
         end
       end
@@ -295,9 +295,9 @@ class ContactRollupsProcessed < ApplicationRecord
     # pegasus form roles are user-generated data, use an allowed list to filter them
     pegasus_roles = extract_field contact_data, 'pegasus.forms', 'role'
     cleaned_pegasus_roles = pegasus_roles.
-      compact.
-      map(&:downcase).
-      select {|role| ALLOWED_FORM_ROLES.include? role}
+                            compact.
+                            map(&:downcase).
+                            select {|role| ALLOWED_FORM_ROLES.include? role}
 
     uniq_form_roles = (cleaned_census_roles + cleaned_pegasus_roles).uniq.sort.join(',')
     return uniq_form_roles.empty? ? {} : {form_roles: uniq_form_roles}

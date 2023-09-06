@@ -32,12 +32,12 @@ module SchoolInfoInterstitialHelper
     return false unless school_info
 
     check_school_type = (school_info.public_school? || school_info.private_school? || school_info.charter_school?) &&
-      school_info.complete? && school_info.usa?
+                        school_info.complete? && school_info.usa?
 
     check_last_confirmation_date = user_school_info.last_confirmation_date.to_datetime < 1.year.ago
 
     check_last_seen_school_info_interstitial = user.last_seen_school_info_interstitial&.to_datetime.nil? ||
-      user.last_seen_school_info_interstitial.to_datetime < 7.days.ago
+                                               user.last_seen_school_info_interstitial.to_datetime < 7.days.ago
 
     check_last_seen_school_info_interstitial && check_last_confirmation_date && check_school_type
   end

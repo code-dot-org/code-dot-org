@@ -761,7 +761,7 @@ class User < ApplicationRecord
 
     if ((email.present? && (other_user = User.find_by_email_or_hashed_email(email))) ||
         (hashed_email.present? && (other_user = User.find_by_hashed_email(hashed_email)))) &&
-        other_user != self
+       other_user != self
       errors.add :email, I18n.t('errors.messages.taken')
     end
   end
@@ -1169,7 +1169,7 @@ class User < ApplicationRecord
 
   def user_levels_by_level(script)
     user_levels_for_script = user_levels.
-      where(script_id: script.id)
+                             where(script_id: script.id)
     User.index_user_levels_by_level_id(user_levels_for_script)
   end
 
@@ -1712,9 +1712,9 @@ class User < ApplicationRecord
   # Query to get the user_script the user was most recently assigned.
   def most_recently_assigned_user_script
     user_scripts.
-    where("assigned_at").
-    order(assigned_at: :desc).
-    first
+      where("assigned_at").
+      order(assigned_at: :desc).
+      first
   end
 
   # Get script object of the user_script the user was most recently
@@ -1733,9 +1733,9 @@ class User < ApplicationRecord
   # in.
   def user_script_with_most_recent_progress
     user_scripts.
-    where("last_progress_at").
-    order(last_progress_at: :desc).
-    first
+      where("last_progress_at").
+      order(last_progress_at: :desc).
+      first
   end
 
   # Get script object of the user_script the user made the most recent
@@ -1754,7 +1754,7 @@ class User < ApplicationRecord
   # recent progress in a script.
   def last_assignment_after_most_recent_progress?
     most_recently_assigned_user_script[:assigned_at] >=
-    user_script_with_most_recent_progress[:last_progress_at]
+      user_script_with_most_recent_progress[:last_progress_at]
   end
 
   # Check if the user's most recently assigned script is associated with at least
@@ -1784,7 +1784,7 @@ class User < ApplicationRecord
     unit_group_units_script_ids = courses_as_participant.map(&:default_unit_group_units).flatten.pluck(:script_id).uniq
 
     user_scripts = Queries::ScriptActivity.in_progress_and_completed_scripts(self).
-      select {|user_script| unit_group_units_script_ids.exclude?(user_script.script_id)}
+                   select {|user_script| unit_group_units_script_ids.exclude?(user_script.script_id)}
 
     pl_user_scripts = user_scripts.select {|us| us.script.pl_course?}
 
@@ -1824,7 +1824,7 @@ class User < ApplicationRecord
     unit_group_units_script_ids = courses_as_participant.map(&:default_unit_group_units).flatten.pluck(:script_id).uniq
 
     user_scripts = Queries::ScriptActivity.in_progress_and_completed_scripts(self).
-      select {|user_script| unit_group_units_script_ids.exclude?(user_script.script_id)}
+                   select {|user_script| unit_group_units_script_ids.exclude?(user_script.script_id)}
 
     user_student_scripts = user_scripts.select {|us| !us.script.pl_course?}
 
@@ -1951,7 +1951,7 @@ class User < ApplicationRecord
       end
 
       if user_proficiency.basic_proficiency_at.nil? &&
-          user_proficiency.proficient?
+         user_proficiency.proficient?
         user_proficiency.basic_proficiency_at = time_now
       end
 
@@ -1969,8 +1969,8 @@ class User < ApplicationRecord
     script = nil
     Retryable.retryable on: [Mysql2::Error, ActiveRecord::RecordNotUnique], matching: /Duplicate entry/ do
       user_level = UserLevel.
-        where(user_id: user_id, level_id: level_id, script_id: script_id).
-        first_or_initialize
+                   where(user_id: user_id, level_id: level_id, script_id: script_id).
+                   first_or_initialize
 
       if !user_level.passing? && ActivityConstants.passing?(new_result)
         new_level_completed = true
@@ -1979,10 +1979,10 @@ class User < ApplicationRecord
       script = Unit.get_from_cache(script_id)
       script_valid = script.csf? && script.name != Unit::COURSE1_NAME
       if (!user_level.perfect? || user_level.best_result == ActivityConstants::MANUAL_PASS_RESULT) &&
-        new_result >= ActivityConstants::BEST_PASS_RESULT &&
-        script_valid &&
-        HintViewRequest.no_hints_used?(user_id, script_id, level_id) &&
-        AuthoredHintViewRequest.no_hints_used?(user_id, script_id, level_id)
+         new_result >= ActivityConstants::BEST_PASS_RESULT &&
+         script_valid &&
+         HintViewRequest.no_hints_used?(user_id, script_id, level_id) &&
+         AuthoredHintViewRequest.no_hints_used?(user_id, script_id, level_id)
         new_csf_level_perfected = true
       end
 
@@ -1990,7 +1990,7 @@ class User < ApplicationRecord
       # We increment the attempt count unless they've already perfected the level.
       user_level.attempts += 1 unless user_level.perfect? && user_level.best_result != ActivityConstants::FREE_PLAY_RESULT
       user_level.best_result = new_result if user_level.best_result.nil? ||
-        new_result > user_level.best_result
+                                             new_result > user_level.best_result
 
       user_level.submitted = submitted
       # We only lock levels of type LevelGroup
@@ -2648,7 +2648,7 @@ class User < ApplicationRecord
   # well-formed email address.
   private def validate_parent_email
     errors.add(:parent_email) unless parent_email.nil? ||
-      Cdo::EmailValidator.email_address?(parent_email)
+                                     Cdo::EmailValidator.email_address?(parent_email)
   end
 
   US_STATE_DROPDOWN_OPTIONS = {

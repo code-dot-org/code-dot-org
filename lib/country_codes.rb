@@ -287,11 +287,11 @@ EU_COUNTRY_CODES = %w(
 
 # EEA = EU + Iceland, Liechtenstein and Norway.
 EEA_COUNTRY_CODES = EU_COUNTRY_CODES +
-  %w(
-    IS
-    LI
-    NO
-  )
+                    %w(
+                      IS
+                      LI
+                      NO
+                    )
 
 LATAM_COUNTRY_CODES = LATAM_ES_COUNTRY_CODES + LATAM_PT_COUNTRY_CODES
 

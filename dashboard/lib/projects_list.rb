@@ -139,7 +139,7 @@ module ProjectsList
         featured_published_projects[project_group] = []
         project_types.each do |project_type|
           featured_published_projects[project_group] <<
-          fetch_featured_projects_by_type(project_type)
+            fetch_featured_projects_by_type(project_type)
         end
         featured_published_projects[project_group].flatten!
       end
@@ -227,18 +227,18 @@ module ProjectsList
       user_project_storage_ids = "#{CDO.dashboard_db_name}__user_project_storage_ids".to_sym
 
       project_featured_project_user_combo_data = DASHBOARD_DB[:featured_projects].
-        select(*project_and_featured_project_and_user_fields).
-        join(projects, id: :storage_app_id).
-        join(user_project_storage_ids, id: Sequel[:projects][:storage_id]).
-        join(:users, id: Sequel[user_project_storage_ids][:user_id]).
-        where(
+                                                 select(*project_and_featured_project_and_user_fields).
+                                                 join(projects, id: :storage_app_id).
+                                                 join(user_project_storage_ids, id: Sequel[:projects][:storage_id]).
+                                                 join(:users, id: Sequel[user_project_storage_ids][:user_id]).
+                                                 where(
           unfeatured_at: nil,
           project_type: project_type.to_s,
           state: 'active'
         ).
-        exclude(published_at: nil).
-        exclude(abuse_score: 0...).
-        order(Sequel.desc(:published_at)).limit(8).all.shuffle!
+                                                 exclude(published_at: nil).
+                                                 exclude(abuse_score: 0...).
+                                                 order(Sequel.desc(:published_at)).limit(8).all.shuffle!
       extract_data_for_featured_project_cards(project_featured_project_user_combo_data)
     end
 
@@ -335,15 +335,15 @@ module ProjectsList
         project_groups.map do |project_group|
           project_types = PUBLISHED_PROJECT_TYPE_GROUPS[project_group]
           projects[project_group] = Projects.table.
-            select(*project_and_user_fields).
-            join(user_project_storage_ids, id: :storage_id).
-            join(users, id: :user_id).
-            where(state: 'active', project_type: project_types).
-            where {published_before.nil? || published_at < DateTime.parse(published_before)}.
-            exclude(published_at: nil).
-            order(Sequel.desc(:published_at)).
-            limit(limit).
-            filter_map {|project_and_user| get_published_project_and_user_data project_and_user}
+                                    select(*project_and_user_fields).
+                                    join(user_project_storage_ids, id: :storage_id).
+                                    join(users, id: :user_id).
+                                    where(state: 'active', project_type: project_types).
+                                    where {published_before.nil? || published_at < DateTime.parse(published_before)}.
+                                    exclude(published_at: nil).
+                                    order(Sequel.desc(:published_at)).
+                                    limit(limit).
+                                    filter_map {|project_and_user| get_published_project_and_user_data project_and_user}
         end
       end
     end

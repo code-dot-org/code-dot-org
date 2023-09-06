@@ -41,8 +41,8 @@ class CertificateImagesController < ApplicationController
 
   private def recognized_course_name?(name)
     name.nil? ||
-      name == ScriptConstants::ACCELERATED_NAME ||
-      CertificateImage.prefilled_title_course?(name) ||
-      CurriculumHelper.find_matching_course_version(name)
+    name == ScriptConstants::ACCELERATED_NAME ||
+    CertificateImage.prefilled_title_course?(name) ||
+    CurriculumHelper.find_matching_course_version(name)
   end
 end

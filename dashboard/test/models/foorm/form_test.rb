@@ -108,8 +108,8 @@ class Foorm::FormTest < ActiveSupport::TestCase
     }
 
     expected_headers = other_general_headers.
-      merge(form.readable_questions[:general]).
-      merge(form.readable_questions_with_facilitator_number(form.readable_questions, 1))
+                       merge(form.readable_questions[:general]).
+                       merge(form.readable_questions_with_facilitator_number(form.readable_questions, 1))
 
     expected_response = general_submission.formatted_answers
 
@@ -140,12 +140,12 @@ class Foorm::FormTest < ActiveSupport::TestCase
     }
 
     expected_headers = other_general_headers.
-      merge(form.readable_questions[:general]).
-      merge(other_facilitator_headers).
-      merge(form.readable_questions_with_facilitator_number(form.readable_questions, 1))
+                       merge(form.readable_questions[:general]).
+                       merge(other_facilitator_headers).
+                       merge(form.readable_questions_with_facilitator_number(form.readable_questions, 1))
 
     expected_response = general_submission.formatted_answers.
-      merge(facilitator_submission.formatted_answers_with_facilitator_number(1))
+                        merge(facilitator_submission.formatted_answers_with_facilitator_number(1))
 
     assert_equal get_csv_string([expected_headers.values, expected_response.values_at(*expected_headers.keys)]),
       form.submissions_to_csv
@@ -176,12 +176,12 @@ class Foorm::FormTest < ActiveSupport::TestCase
     }
 
     expected_headers = other_general_headers.
-      merge(form.readable_questions[:general]).
-      merge(other_facilitator_headers).
-      merge(form.readable_questions_with_facilitator_number(form.readable_questions, 1))
+                       merge(form.readable_questions[:general]).
+                       merge(other_facilitator_headers).
+                       merge(form.readable_questions_with_facilitator_number(form.readable_questions, 1))
 
     expected_response_1 = general_submission_1.formatted_answers.
-      merge(facilitator_submission_1.formatted_answers_with_facilitator_number(1))
+                          merge(facilitator_submission_1.formatted_answers_with_facilitator_number(1))
 
     expected_response_2 = general_submission_2.formatted_answers
 
@@ -220,12 +220,12 @@ class Foorm::FormTest < ActiveSupport::TestCase
     }
 
     expected_headers = other_general_headers.
-      merge(form.readable_questions[:general]).
-      merge(other_facilitator_headers).
-      merge(form.readable_questions_with_facilitator_number(form.readable_questions, 1))
+                       merge(form.readable_questions[:general]).
+                       merge(other_facilitator_headers).
+                       merge(form.readable_questions_with_facilitator_number(form.readable_questions, 1))
 
     expected_response_1 = general_submission_1.formatted_answers.
-      merge(facilitator_submission_1.formatted_answers_with_facilitator_number(1))
+                          merge(facilitator_submission_1.formatted_answers_with_facilitator_number(1))
 
     # filter on just one of the submissions, expect to only see that submission's data
     expected_rows = [
@@ -263,12 +263,12 @@ class Foorm::FormTest < ActiveSupport::TestCase
     }
 
     expected_headers = other_general_headers.
-      merge(form.readable_questions[:general]).
-      merge(other_facilitator_headers).
-      merge(form.readable_questions_with_facilitator_number(form.readable_questions, 1))
+                       merge(form.readable_questions[:general]).
+                       merge(other_facilitator_headers).
+                       merge(form.readable_questions_with_facilitator_number(form.readable_questions, 1))
 
     expected_response_1 = general_submission_1.formatted_answers.
-      merge(facilitator_submission_1.formatted_answers_with_facilitator_number(1))
+                          merge(facilitator_submission_1.formatted_answers_with_facilitator_number(1))
 
     expected_rows = [
       expected_headers.values,

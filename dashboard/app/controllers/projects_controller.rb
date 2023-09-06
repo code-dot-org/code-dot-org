@@ -212,8 +212,8 @@ class ProjectsController < ApplicationController
   def combine_projects_and_featured_projects_data
     projects = "#{CDO.dashboard_db_name}__projects".to_sym
     project_featured_project_combo_data = DASHBOARD_DB[:featured_projects].
-      select(*project_and_featured_project_fields).
-      join(projects, id: :storage_app_id, state: 'active').all
+                                          select(*project_and_featured_project_fields).
+                                          join(projects, id: :storage_app_id, state: 'active').all
     extract_data_for_tables(project_featured_project_combo_data)
   end
 

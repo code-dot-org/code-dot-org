@@ -105,8 +105,8 @@ def migrate_level_group_user_level(user_level, level_source_data)
   new_data_json_md5 = Digest::MD5.hexdigest new_data_json
 
   level_source = LevelSource.
-    create_with(data: new_data_json).
-    find_or_create_by(
+                 create_with(data: new_data_json).
+                 find_or_create_by(
       md5: new_data_json_md5,
       level_id: user_level.level_id
     )
@@ -125,12 +125,12 @@ end
 def create_sublevel_user_level(user_level, sublevel_level_id, sublevel_raw_data)
   # Determine if there is an existing sublevel UserLevel, doing nothing if so.
   sublevel_user_level = UserLevel.
-    where(
+                        where(
       user_id: user_level.user_id,
       level_id: sublevel_level_id,
       script_id: user_level.script_id
     ).
-    first
+                        first
   return if sublevel_user_level
 
   # Before creating the sublevel UserLevel, verify the existence of an
@@ -138,8 +138,8 @@ def create_sublevel_user_level(user_level, sublevel_level_id, sublevel_raw_data)
   data = get_data sublevel_raw_data, user_level.id
   md5 = Digest::MD5.hexdigest data
   sublevel_level_source = LevelSource.
-    create_with(data: data).
-    find_or_create_by(
+                          create_with(data: data).
+                          find_or_create_by(
       md5: md5,
       level_id: sublevel_level_id
     )

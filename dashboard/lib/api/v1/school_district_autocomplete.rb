@@ -11,10 +11,10 @@ class Api::V1::SchoolDistrictAutocomplete < AutocompleteHelper
     return [] if query.length < MIN_WORD_LENGTH + 2
 
     rows = SchoolDistrict.limit(limit).
-      where("MATCH(name,city) AGAINST(? IN BOOLEAN MODE)", query).
+           where("MATCH(name,city) AGAINST(? IN BOOLEAN MODE)", query).
       # This SQL string is not at risk for injection vulnerabilites because
       # it's being sanitized by activerecord, so it's safe to wrap in Arel.sql
-      order(ActiveRecord::Base.sanitize_sql_for_order([Arel.sql("MATCH(name,city) AGAINST(? IN BOOLEAN MODE) DESC, state, city, name"), query]))
+           order(ActiveRecord::Base.sanitize_sql_for_order([Arel.sql("MATCH(name,city) AGAINST(? IN BOOLEAN MODE) DESC, state, city, name"), query]))
 
     return rows.map do |row|
       Serializer.new(row).attributes

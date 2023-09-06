@@ -93,7 +93,7 @@ class TestFlakiness
 
   cached def self.test_summary
     if File.exist?(CACHE_FILENAME) &&
-        (Time.now - File.mtime(CACHE_FILENAME)) < CACHE_TTL
+       (Time.now - File.mtime(CACHE_FILENAME)) < CACHE_TTL
       return JSON.parse(File.read(CACHE_FILENAME))
     end
 

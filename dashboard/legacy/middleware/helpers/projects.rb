@@ -293,9 +293,9 @@ class Projects
   def set_content_moderation(channel_id, disable)
     _owner, project_id = storage_decrypt_channel_id(channel_id)
     rows_changed = @table.
-      where(id: project_id).
-      exclude(state: 'deleted').
-      update({skip_content_moderation: disable})
+                   where(id: project_id).
+                   exclude(state: 'deleted').
+                   update({skip_content_moderation: disable})
     raise NotFound, "channel `#{channel_id}` not found" unless rows_changed > 0
 
     disable

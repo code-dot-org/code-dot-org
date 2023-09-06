@@ -83,8 +83,8 @@ class UserLevel < ApplicationRecord
     return @latest_paired_user_level if defined? @latest_paired_user_level
     @latest_paired_user_level =
       PairedUserLevel.where(driver_user_level_id: id).
-        or(PairedUserLevel.where(navigator_user_level_id: id)).
-        last
+      or(PairedUserLevel.where(navigator_user_level_id: id)).
+      last
   end
 
   # Returns whether this UserLevel represents progress completed by a pairing

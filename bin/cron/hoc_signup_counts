@@ -22,16 +22,16 @@ def main
   # Note that country_counts and us_state_counts are of the form
   # [{"country" => nil, "count" => 1}, {"country" => "Afghanistan", "count" => 2}, ...].
   country_counts = PEGASUS_REPORTING_DB_READONLY[:forms].
-    where(forms__kind: "HocSignup#{year}").
-    join(:form_geos, form_id: :forms__id).
-    group_and_count(:form_geos__country).
-    all
+                   where(forms__kind: "HocSignup#{year}").
+                   join(:form_geos, form_id: :forms__id).
+                   group_and_count(:form_geos__country).
+                   all
   us_state_counts = PEGASUS_REPORTING_DB_READONLY[:forms].
-    where(forms__kind: "HocSignup#{year}").
-    join(:form_geos, form_id: :forms__id).
-    where(form_geos__country: 'United States').
-    group_and_count(:form_geos__state).
-    all
+                    where(forms__kind: "HocSignup#{year}").
+                    join(:form_geos, form_id: :forms__id).
+                    where(form_geos__country: 'United States').
+                    group_and_count(:form_geos__state).
+                    all
 
   # Transform the data into more accessible hashes of the form
   # {'' => 1, 'Afghanistan' => 2, ...}

@@ -25,24 +25,24 @@ def get_all_progress(script_id)
   }
 
   data[:user_scripts] = UserScript.
-    where(script_id: script_id).
-    to_a.
-    map(&:serializable_hash)
+                        where(script_id: script_id).
+                        to_a.
+                        map(&:serializable_hash)
   data[:user_levels] = UserLevel.
-    where(script_id: script_id).
-    where(user_id:
+                       where(script_id: script_id).
+                       where(user_id:
       data[:user_scripts].filter_map do |user_script|
         user_script['user_id']
       end
     ).
-    to_a.
-    map(&:serializable_hash)
+                       to_a.
+                       map(&:serializable_hash)
   data[:user_levels].each do |user_level|
     data[:activities] << Activity.
-      where(level_id: user_level['level_id']).
-      where(user_id: user_level['user_id']).
-      to_a.
-      map(&:serializable_hash)
+                         where(level_id: user_level['level_id']).
+                         where(user_id: user_level['user_id']).
+                         to_a.
+                         map(&:serializable_hash)
     data[:activities].flatten!
   end
 

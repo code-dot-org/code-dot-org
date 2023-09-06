@@ -34,7 +34,7 @@ rescue Selenium::WebDriver::Error::StaleElementReferenceError
   true
 rescue Selenium::WebDriver::Error::WebDriverError => exception
   return true if exception.message.include?('stale element reference') ||
-    exception.message.include?('no such element')
+                 exception.message.include?('no such element')
   puts "Unknown error: #{exception}"
   true
 end
@@ -52,7 +52,7 @@ def page_load(wait = true, blank_tab: false)
     unless blank_tab
       wait_until do
         (url = @browser.current_url) != '' &&
-           url != 'about:blank' &&
+          url != 'about:blank' &&
           @browser.execute_script('return document.readyState;') == 'complete'
       end
     end
@@ -962,7 +962,7 @@ And(/^I set the language cookie$/) do
   }
 
   if ENV['DASHBOARD_TEST_DOMAIN'] && ENV['DASHBOARD_TEST_DOMAIN'] =~ /\.code.org/ &&
-      ENV['PEGASUS_TEST_DOMAIN'] && ENV['PEGASUS_TEST_DOMAIN'] =~ /\.code.org/
+     ENV['PEGASUS_TEST_DOMAIN'] && ENV['PEGASUS_TEST_DOMAIN'] =~ /\.code.org/
     params[:domain] = '.code.org' # top level domain cookie
   end
 
@@ -976,7 +976,7 @@ And(/^I set the pagemode cookie to "([^"]*)"$/) do |cookie_value|
   }
 
   if ENV['DASHBOARD_TEST_DOMAIN'] && ENV['DASHBOARD_TEST_DOMAIN'] =~ /\.code.org/ &&
-      ENV['PEGASUS_TEST_DOMAIN'] && ENV['PEGASUS_TEST_DOMAIN'] =~ /\.code.org/
+     ENV['PEGASUS_TEST_DOMAIN'] && ENV['PEGASUS_TEST_DOMAIN'] =~ /\.code.org/
     params[:domain] = '.code.org' # top level domain cookie
   end
 

@@ -38,7 +38,7 @@ class Poetry < GamelabJr
   # not in the list of poems for the standalone_app.
   def sanitize_default_poem
     self.default_poem = nil if Poetry.standalone_apps_with_poems.exclude?(standalone_app_name) ||
-      Poetry.poem_keys_for_standalone_app(standalone_app_name).exclude?(default_poem)
+                               Poetry.poem_keys_for_standalone_app(standalone_app_name).exclude?(default_poem)
   end
 
   # Set the available poems to nil if the standalone_app does not have poems.
@@ -56,7 +56,7 @@ class Poetry < GamelabJr
     # If there is a default poem and dropdown poem(s), check that the default poem is
     # in the dropdown poem list.
     if default_poem.present? && Poetry.standalone_apps_with_poems.include?(standalone_app_name) &&
-      available_poems && !available_poems.empty? && available_poems.exclude?(default_poem)
+       available_poems && !available_poems.empty? && available_poems.exclude?(default_poem)
       errors.add(:default_poem, "selected default poem is not in dropdown poem list")
     end
   end

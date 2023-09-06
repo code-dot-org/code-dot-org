@@ -46,7 +46,7 @@ File.readlines(ARGV[0]).each do |line|
   # we can ignore users who have not signed in since the proxies list was
   # updated prior to https://github.com/code-dot-org/code-dot-org/pull/28635
   old_account = user.current_sign_in_at.present? &&
-    user.current_sign_in_at < "2017-11-17 12:25:11 -0800".to_datetime
+                user.current_sign_in_at < "2017-11-17 12:25:11 -0800".to_datetime
   if old_account
     puts("#{line.strip} - skip - old account")
     next
@@ -58,10 +58,10 @@ File.readlines(ARGV[0]).each do |line|
   # who are associated with a school in the US, so that we can reduce the
   # proportion of students with data we're wiping from 13% to 8%.
   has_us_teacher = user.student? &&
-    user.teachers.any? do |teacher|
-      teacher.within_united_states? ||
-        teacher.user_school_infos.any? {|usi| usi.school_info.usa?}
-    end
+                   user.teachers.any? do |teacher|
+                     teacher.within_united_states? ||
+                       teacher.user_school_infos.any? {|usi| usi.school_info.usa?}
+                   end
   if has_us_teacher
     puts("#{line.strip} - skip - has US teacher")
     next

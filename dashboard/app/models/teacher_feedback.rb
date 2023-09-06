@@ -52,10 +52,10 @@ class TeacherFeedback < ApplicationRecord
 
     # accomodate feedbacks associated with a Bubble Choice sublevel
     script_level = BubbleChoice.
-      parent_levels(level.name).
-      map(&:script_levels).
-      flatten.
-      find {|sl| sl.script_id == script_id}
+                   parent_levels(level.name).
+                   map(&:script_levels).
+                   flatten.
+                   find {|sl| sl.script_id == script_id}
 
     raise "no script level found for teacher feedback #{id}" unless script_level
     script_level

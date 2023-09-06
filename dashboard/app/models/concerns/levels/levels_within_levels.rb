@@ -56,7 +56,7 @@ module Levels
         parent_level.levels_child_levels.each do |parent_levels_child_level|
           child_level = parent_levels_child_level.child_level
           cloned_child_level = child_level.
-            clone_with_suffix(new_suffix, editor_experiment: editor_experiment)
+                               clone_with_suffix(new_suffix, editor_experiment: editor_experiment)
           parent_levels_child_level.child_level = cloned_child_level
           parent_levels_child_level.save!
         end
@@ -87,7 +87,7 @@ module Levels
     def all_descendant_levels
       my_child_levels = all_child_levels
       child_descendant_levels = my_child_levels.
-        map(&:all_descendant_levels).flatten
+                                map(&:all_descendant_levels).flatten
       my_child_levels + child_descendant_levels
     end
 

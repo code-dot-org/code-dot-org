@@ -32,7 +32,7 @@ class ApplicationController < ActionController::Base
   def fix_crawlers_with_bad_accept_headers
     # append text/html as an acceptable response type for Edmodo and weebly-agent's malformed HTTP_ACCEPT header.
     if request.formats.include?("image/*") &&
-        (request.user_agent.include?("Edmodo") || request.user_agent.include?("weebly-agent"))
+       (request.user_agent.include?("Edmodo") || request.user_agent.include?("weebly-agent"))
       request.formats.append Mime[:html]
     end
   end

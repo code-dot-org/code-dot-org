@@ -121,8 +121,8 @@ module Pd::SurveyPipeline
           # Map question options to numbers
           if question[:options]
             question[:option_map] = question[:options].each_with_index.
-              map {|x, i| [x, i + 1]}.
-              to_h
+                                    map {|x, i| [x, i + 1]}.
+                                    to_h
           end
 
           question[:answer_type] = QUESTION_TO_ANSWER_TYPES[question[:type]] || ANSWER_UNKNOWN

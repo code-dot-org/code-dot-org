@@ -89,9 +89,9 @@ class CodeReviewsController < ApplicationController
     # is in and usually just zero or one since the student is unlikely to be in
     # more than one section that has code review enabled.
     followeds = student.
-      followeds.
-      includes(:section).
-      select {|followed| followed.section.code_review_enabled?}
+                followeds.
+                includes(:section).
+                select {|followed| followed.section.code_review_enabled?}
 
     # For each Follower object, get the user_ids of the other members in the
     # code review group; combine the results and return as a single array.

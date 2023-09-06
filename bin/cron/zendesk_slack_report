@@ -79,24 +79,24 @@ class Zendesk
 
   def groups
     @groups ||= self.class.
-      get(
+                get(
         "/api/v2/groups.json",
         {basic_auth: {username: 'dev@code.org/token', password: CDO.zendesk_dev_token}}
       ).
-      parsed_response["groups"].
-      map {|g| [g["id"], g["name"]]}.
-      to_h
+                parsed_response["groups"].
+                map {|g| [g["id"], g["name"]]}.
+                to_h
   end
 
   def users
     @users ||= self.class.
-      get(
+               get(
         "/api/v2/users.json?role[]=admin",
         {basic_auth: {username: 'dev@code.org/token', password: CDO.zendesk_dev_token}}
       ).
-      parsed_response["users"].
-      map {|u| [u["id"], u["email"]]}.
-      to_h
+               parsed_response["users"].
+               map {|u| [u["id"], u["email"]]}.
+               to_h
   end
 
   def group_search(groups:, statuses:)
@@ -187,9 +187,9 @@ def get_tickets_by_group
 
   # Ticket count by group name
   group_counts = group_results.
-    group_by {|x| x["group_id"]}.
-    map {|group_id, tickets| [zendesk.groups[group_id], tickets.count]}.
-    to_h
+                 group_by {|x| x["group_id"]}.
+                 map {|group_id, tickets| [zendesk.groups[group_id], tickets.count]}.
+                 to_h
 
   # Report out for each Slack room
   MONITORING_GROUPS.each do |slack_room, groups|
@@ -223,10 +223,10 @@ def get_tickets_by_user
 
   # Ticket count by user email
   user_counts = user_results.
-    reject {|x| x["assignee_id"].nil?}.
-    group_by {|x| x["assignee_id"]}.
-    map {|assignee_id, tickets| [zendesk.users[assignee_id], tickets.count]}.
-    to_h
+                reject {|x| x["assignee_id"].nil?}.
+                group_by {|x| x["assignee_id"]}.
+                map {|assignee_id, tickets| [zendesk.users[assignee_id], tickets.count]}.
+                to_h
 
   # Report out for each Slack room
   MONITORING_USERS.each do |slack_room, users|

@@ -146,8 +146,8 @@ module Pd::Foorm
         question_details.each do |question, question_data|
           question_data[:form_keys].each do |form|
             next unless summaries_by_form[form_type] &&
-              summaries_by_form[form_type][form] &&
-              summaries_by_form[form_type][form][question]
+                        summaries_by_form[form_type][form] &&
+                        summaries_by_form[form_type][form][question]
             question_summary = summaries_by_form[form_type][form][question]
             included_form = true
             if form_type == :facilitator

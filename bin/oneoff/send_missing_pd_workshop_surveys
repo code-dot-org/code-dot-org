@@ -16,9 +16,9 @@ def main
   # and make sure their associated enrollment.survey_sent_at field is set.
   count = 0
   deliveries = DB[:poste_deliveries].where(message_id: dashboard_message_id).
-    where('sent_at > "2016-07-01"').
-    where(Sequel.like(:params, '%Please take a minute to complete this short survey%')).
-    where(Sequel.like(:params, "%pd-workshop-survey%"))
+               where('sent_at > "2016-07-01"').
+               where(Sequel.like(:params, '%Please take a minute to complete this short survey%')).
+               where(Sequel.like(:params, "%pd-workshop-survey%"))
 
   deliveries.each do |delivery|
     body = JSON.parse(delivery[:params])["body"]

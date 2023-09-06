@@ -25,10 +25,10 @@ class CircuitPlaygroundDiscountCode < ApplicationRecord
     code = nil
     Retryable.retryable(on: ActiveRecord::RecordNotSaved) do
       codes = where(full_discount: full_discount).
-        where(claimed_at: nil).
-        where(voided_at: nil).
-        where(expiration_field.gt(Time.now)).
-        limit(WARN_COUNT)
+              where(claimed_at: nil).
+              where(voided_at: nil).
+              where(expiration_field.gt(Time.now)).
+              limit(WARN_COUNT)
 
       if codes.count < WARN_COUNT
         Honeybadger.notify(

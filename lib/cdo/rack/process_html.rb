@@ -59,7 +59,7 @@ module Rack
       # Skip processing empty entity body responses and responses with
       # no-transform set.
       if Utils::STATUS_WITH_NO_ENTITY_BODY.include?(status) ||
-          headers['Cache-Control'].to_s =~ /\bno-transform\b/
+         headers['Cache-Control'].to_s =~ /\bno-transform\b/
         return false
       end
 
@@ -71,19 +71,19 @@ module Rack
 
       # Skip if response body is too short
       if @min_length && headers['Content-Length'] &&
-          @min_length > headers['Content-Length'].to_i
+         @min_length > headers['Content-Length'].to_i
         return false
       end
 
       # Skip if :include is provided and evaluates to false
       if @include &&
-          !(@include == env['PATH_INFO'])
+         !(@include == env['PATH_INFO'])
         return false
       end
 
       # Skip if :exclude is provided and evaluates to true
       if @exclude &&
-          @exclude == env['PATH_INFO']
+         @exclude == env['PATH_INFO']
         return false
       end
 

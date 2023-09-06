@@ -58,9 +58,9 @@ class Match < DSLDefined
 
   def question_content_class
     question_content_blank = properties['content1'].blank? &&
-      properties['content2'].blank? &&
-      properties['content3'].blank? &&
-      properties['markdown'].blank?
+                             properties['content2'].blank? &&
+                             properties['content3'].blank? &&
+                             properties['markdown'].blank?
 
     return question_content_blank ? nil : "question"
   end

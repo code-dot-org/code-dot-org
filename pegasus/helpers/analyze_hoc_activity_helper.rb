@@ -11,10 +11,10 @@ PEGASUS_DB_READER = sequel_connect(CDO.pegasus_db_reader, CDO.pegasus_db_reader,
 WEIGHTED_COUNT = "SUM( " \
   "IF(session REGEXP '^_.*_'," +
   # Parses the session weight 'xyz' from the session '_xyz_abcdefghijk'.
-  "   SUBSTRING(SUBSTRING_INDEX(session, '_', 2) FROM 2)," +
+                 "   SUBSTRING(SUBSTRING_INDEX(session, '_', 2) FROM 2)," +
   # The session does not specify the session weight, default to one.
-  "   1) " \
-  ") AS count".freeze
+                 "   1) " \
+                 ") AS count".freeze
 
 # Generates a MySQL Query over a range of dates and configurable subset
 # of rows from the hoc_activity table

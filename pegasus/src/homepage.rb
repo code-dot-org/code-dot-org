@@ -70,8 +70,8 @@ class Homepage
 
   def self.validate_announcements_data(announcements_data)
     return false unless announcements_data && announcements_data[:pages] &&
-      announcements_data[:banners] &&
-      announcements_data[:banners].respond_to?(:each_value)
+                        announcements_data[:banners] &&
+                        announcements_data[:banners].respond_to?(:each_value)
 
     announcements_data[:banners].each_value do |banner|
       return false unless validate_banner(banner)

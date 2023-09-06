@@ -26,7 +26,7 @@ end
 
 if adhocs.any?
   msg = "Stopping #{adhocs.length} adhoc instances:\n" +
-    adhocs.map {|a| a.tags.detect {|t| t.key == 'Name'}&.value}.join("\n")
+        adhocs.map {|a| a.tags.detect {|t| t.key == 'Name'}&.value}.join("\n")
   ChatClient.message 'adhoc', msg
 
   Aws::EC2::Instance::Collection.new([adhocs]).batch_stop(dry_run: dry_run)

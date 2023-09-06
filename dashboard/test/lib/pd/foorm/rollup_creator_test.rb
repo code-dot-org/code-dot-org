@@ -57,7 +57,7 @@ module Pd::Foorm
     test 'creates correct facilitator rollup' do
       setup_csf_workshop
       rollup = RollupCreator.
-        calculate_averaged_rollup(
+               calculate_averaged_rollup(
           @summarized_answers,
           @question_details,
           @facilitators,

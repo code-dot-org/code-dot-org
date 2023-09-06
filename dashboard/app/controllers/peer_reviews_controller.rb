@@ -27,9 +27,9 @@ class PeerReviewsController < ApplicationController
     @course_unit_map = {}.tap do |course_unit_map|
       plc_courses.each do |course|
         course_unit_map[course.id] = course.
-          plc_course_units.
-          select {|course_unit| !course_unit.deprecated?}.
-          map {|course_unit| [course_unit.name, course_unit.id]}
+                                     plc_course_units.
+                                     select {|course_unit| !course_unit.deprecated?}.
+                                     map {|course_unit| [course_unit.name, course_unit.id]}
       end
     end
 

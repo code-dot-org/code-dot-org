@@ -66,8 +66,8 @@ class LevelSource < ApplicationRecord
   #   encryption does not exist.
   def self.decrypt_level_source_id(encrypted_level_source_id_user_id, ignore_missing_user: false)
     level_source_id, user_id = Encryption.
-      decrypt_string(Base64.urlsafe_decode64(encrypted_level_source_id_user_id)).
-      split(':')
+                               decrypt_string(Base64.urlsafe_decode64(encrypted_level_source_id_user_id)).
+                               split(':')
     return level_source_id.to_i if ignore_missing_user || user_id.nil? || User.find_by_id(user_id)
     nil
   rescue

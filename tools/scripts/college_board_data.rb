@@ -267,10 +267,10 @@ end
 # @return [Integer] The row as an integer, e.g., 18 or 19 or 13.
 def get_row_from_column_row(column_row)
   one_based_row = column_row.
-    chars.
-    reject {|c| c.ord >= 'A'.ord && c.ord <= 'Z'.ord}.
-    join.
-    to_i
+                  chars.
+                  reject {|c| c.ord >= 'A'.ord && c.ord <= 'Z'.ord}.
+                  join.
+                  to_i
   one_based_row - 1
 end
 
@@ -279,9 +279,9 @@ end
 # @return [Integer] The column as an (zero-based) integer, e.g., 9 or 10 or 28.
 def get_column_from_column_row(column_row)
   column_as_string = column_row.
-    chars.
-    reject {|c| c.ord >= '0'.ord && c.ord <= '9'.ord}.
-    join
+                     chars.
+                     reject {|c| c.ord >= '0'.ord && c.ord <= '9'.ord}.
+                     join
   convert_column_to_integer(column_as_string)
 end
 

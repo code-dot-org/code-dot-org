@@ -15,7 +15,7 @@ class Api::V1::Pd::RegionalPartnerMiniContactsControllerTest < ActionDispatch::I
 
   test 'create returns error if email is missing' do
     form_data = build(:pd_regional_partner_mini_contact_hash).
-      merge("email" => "")
+                merge("email" => "")
     refute_valid_form(form_data)
     response_body = JSON.parse(response.body)
     assert_equal ['email'], response_body['errors']['form_data']
@@ -23,7 +23,7 @@ class Api::V1::Pd::RegionalPartnerMiniContactsControllerTest < ActionDispatch::I
 
   test 'create returns error if zip is missing' do
     form_data = build(:pd_regional_partner_mini_contact_hash).
-      merge("zip" => "")
+                merge("zip" => "")
     refute_valid_form(form_data)
     response_body = JSON.parse(response.body)
     assert_equal ['zip'], response_body['errors']['form_data']

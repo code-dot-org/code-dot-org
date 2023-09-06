@@ -237,7 +237,7 @@ def parse_options
     opt_parser.parse!(ARGV)
     # Standardize: Drop leading dot-slash on feature paths
     options.features = ARGV + (options.features || []).
-        map! {|feature| feature.gsub(/^\.\//, '')}
+                       map! {|feature| feature.gsub(/^\.\//, '')}
 
     if options.force_db_access
       options.pegasus_db_access = true

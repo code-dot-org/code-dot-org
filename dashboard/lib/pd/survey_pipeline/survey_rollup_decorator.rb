@@ -170,7 +170,7 @@ module Pd::SurveyPipeline
         categories.each do |category|
           category_scores =
             question_averages.select {|q_name, _| q_name.start_with? "#{category}_"}.
-              values.compact
+            values.compact
 
           result[category] = category_scores.present? ?
               (category_scores.sum * 1.0 / category_scores.length).round(2) : nil

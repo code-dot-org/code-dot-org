@@ -2546,8 +2546,8 @@ class UserTest < ActiveSupport::TestCase
     )
 
     user_proficiency = UserProficiency.
-      where(user_id: user_proficiency.user_id).
-      first
+                       where(user_id: user_proficiency.user_id).
+                       first
     refute user_proficiency.nil?
     assert_equal 0, user_proficiency.repeat_loops_d1_count
     assert_equal 2 + 1, user_proficiency.repeat_loops_d2_count
@@ -2576,7 +2576,7 @@ class UserTest < ActiveSupport::TestCase
     level = create :level
     student = create :student
     level_concept_difficulty = LevelConceptDifficulty.
-      create(level: level, events: 5)
+                               create(level: level, events: 5)
     UserProficiency.create(
       user_id: student.id, sequencing_d3_count: 6, repeat_loops_d4_count: 7,
       events_d5_count: 8, basic_proficiency_at: TIME
@@ -2592,7 +2592,7 @@ class UserTest < ActiveSupport::TestCase
   test 'track_proficiency updates if newly proficient' do
     level = create :level
     level_concept_difficulty = LevelConceptDifficulty.
-      create(level_id: level.id, events: 5)
+                               create(level_id: level.id, events: 5)
     student = create :student
     UserProficiency.create(
       user_id: student.id, sequencing_d3_count: 3, repeat_loops_d3_count: 3,
@@ -2617,8 +2617,8 @@ class UserTest < ActiveSupport::TestCase
     )
 
     user_proficiency = UserProficiency.
-      where(user_id: user_proficiency.user_id).
-      first
+                       where(user_id: user_proficiency.user_id).
+                       first
     refute user_proficiency.nil?
     assert user_proficiency.basic_proficiency_at.nil?
   end

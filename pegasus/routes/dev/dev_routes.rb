@@ -50,8 +50,8 @@ post '/api/dev/check-dts' do
   forbidden! unless verify_signature(CDO.github_webhook_secret)
   data = JSON.parse(params[:payload])
   unless CHECK_DTS_ACTIONS.include?(data['action']) &&
-      request.env['HTTP_X_GITHUB_EVENT'] == 'pull_request' &&
-      data['pull_request']['base']['ref'] == 'staging'
+         request.env['HTTP_X_GITHUB_EVENT'] == 'pull_request' &&
+         data['pull_request']['base']['ref'] == 'staging'
     status 202
     next 'I only check the DTS status for PRs against staging'
   end
@@ -69,8 +69,8 @@ post '/api/dev/check-dtsn' do
   forbidden! unless verify_signature(CDO.github_webhook_secret)
   data = JSON.parse(params[:payload])
   unless CHECK_DTS_ACTIONS.include?(data['action']) &&
-      request.env['HTTP_X_GITHUB_EVENT'] == 'pull_request' &&
-      data['pull_request']['base']['ref'] == 'staging-next'
+         request.env['HTTP_X_GITHUB_EVENT'] == 'pull_request' &&
+         data['pull_request']['base']['ref'] == 'staging-next'
     status 202
     next 'I only check the DTSN status for PRs against staging-next'
   end

@@ -54,8 +54,8 @@ module Pd::SurveyPipeline
 
         form_submissions.each_pair do |submission_id, submission_content|
           shared_submission_info = submission_content.
-            merge(form_id: form_id, submission_id: submission_id).
-            except(:answers)
+                                   merge(form_id: form_id, submission_id: submission_id).
+                                   except(:answers)
 
           submission_content[:answers]&.each do |qid, ans|
             question = parsed_questions[form_id][qid]
@@ -85,13 +85,13 @@ module Pd::SurveyPipeline
                 next if sub_ans[:answer].blank?
                 # Create flatten question-answer record
                 results << shared_submission_info.
-                  merge(new_question).
-                  merge(qid: new_qid, answer: sub_ans[:answer])
+                           merge(new_question).
+                           merge(qid: new_qid, answer: sub_ans[:answer])
               end
             else
               results << shared_submission_info.
-                merge(question).
-                merge(qid: qid, answer: ans)
+                         merge(question).
+                         merge(qid: qid, answer: ans)
             end
           end
         end

@@ -290,7 +290,7 @@ class LevelGroup < DSLDefined
     level_group_script_levels.each do |script_level|
       level_group = script_level.levels[0]
       levelgroup_results = get_levelgroup_survey_results(script_level, section).
-        each_with_index do |result, index|
+                           each_with_index do |result, index|
           result[:question_index] = index
         end
 

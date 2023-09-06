@@ -490,7 +490,7 @@ class Section < ApplicationRecord
 
       # Count students who have made progress on 5+ programming levels in both units
       next unless (csd2_progress_level_ids & csd2_programming_level_ids).count >= 5 &&
-          (csd3_progress_level_ids & csd3_programming_level_ids).count >= 5
+                  (csd3_progress_level_ids & csd3_programming_level_ids).count >= 5
 
       num_students_with_sufficient_progress += 1
       return true if num_students_with_sufficient_progress >= 10

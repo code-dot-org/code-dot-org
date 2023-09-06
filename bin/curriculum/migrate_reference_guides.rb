@@ -91,8 +91,8 @@ def convert_concept_map_url_to_ref_guide_url(url, course_name, course_version_id
   # turned into key-2, key-3, etc due to deduplication (right now there's no duplication between siblings)
   final_key = keys.reduce(nil) do |last_parent, key|
     result = ReferenceGuide.
-      where(course_version_id: course_version_id, parent_reference_guide_key: last_parent).
-      where("reference_guides.key LIKE ?", "#{key}%").first
+             where(course_version_id: course_version_id, parent_reference_guide_key: last_parent).
+             where("reference_guides.key LIKE ?", "#{key}%").first
     puts "no guide found for #{last_parent}, #{key}" unless result
     result.key
   end

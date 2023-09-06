@@ -42,7 +42,7 @@ class UpdateAcademicYearWorkshopSubjects < ActiveRecord::Migration[5.0]
   def up
     CSD_SUBJECTS.each do |subject_name|
       csd_workshops = Pd::Workshop.where(course: CSD_COURSE, subject: subject_name[:from]).
-        scheduled_start_on_or_after(CUTOFF_DATE)
+                      scheduled_start_on_or_after(CUTOFF_DATE)
 
       updates = {
         subject: subject_name[:to],
@@ -57,7 +57,7 @@ class UpdateAcademicYearWorkshopSubjects < ActiveRecord::Migration[5.0]
 
     CSP_SUBJECTS.each do |subject_name|
       csp_workshops = Pd::Workshop.where(course: CSP_COURSE, subject: subject_name[:from]).
-        scheduled_start_on_or_after(CUTOFF_DATE)
+                      scheduled_start_on_or_after(CUTOFF_DATE)
 
       updates = {
         subject: subject_name[:to],
@@ -81,7 +81,7 @@ class UpdateAcademicYearWorkshopSubjects < ActiveRecord::Migration[5.0]
   def down
     CSD_SUBJECTS.each do |subject_name|
       csd_workshops = Pd::Workshop.where(course: CSD_COURSE, subject: subject_name[:to]).
-        scheduled_start_on_or_after(CUTOFF_DATE)
+                      scheduled_start_on_or_after(CUTOFF_DATE)
 
       csd_workshops.each do |csd_workshop|
         csd_workshop.update(subject: subject_name[:from])
@@ -90,7 +90,7 @@ class UpdateAcademicYearWorkshopSubjects < ActiveRecord::Migration[5.0]
 
     CSP_SUBJECTS.each do |subject_name|
       csp_workshops = Pd::Workshop.where(course: CSP_COURSE, subject: subject_name[:to]).
-        scheduled_start_on_or_after(CUTOFF_DATE)
+                      scheduled_start_on_or_after(CUTOFF_DATE)
 
       csp_workshops.each do |csp_workshop|
         csp_workshop.update(subject: subject_name[:from])

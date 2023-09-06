@@ -158,7 +158,7 @@ class FilesApiTestHelper
   def ensure_aws_credentials
     list_objects
     credentials_missing = !last_response.successful? &&
-        last_response.body.index('Aws::Errors::MissingCredentialsError')
+                          last_response.body.index('Aws::Errors::MissingCredentialsError')
     credentials_msg = <<-TEXT.gsub(/^\s+/, '').chomp
       Aws::Errors::MissingCredentialsError: if you are running these tests locally,
       follow these instructions to configure your AWS credentials and try again:

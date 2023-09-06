@@ -85,7 +85,7 @@ def main(options)
   updated_reference_guide_count = 0
 
   course_version = CourseOffering.where(key: options.course_offering).last.
-    course_versions.where(key: options.course_version).last
+                   course_versions.where(key: options.course_version).last
 
   puts "Confirm course version (y/n):"
   puts course_version.to_json
