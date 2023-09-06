@@ -32,7 +32,7 @@ class ManageStudentNameCell extends Component {
     const studentUrl = scriptUrlForStudent(sectionId, scriptName, id);
 
     return (
-      <div>
+      <div style={tableLayoutStyles.tableText}>
         {!this.props.isEditing && (
           <div>
             {studentUrl && (
@@ -75,7 +75,7 @@ class ManageStudentNameCell extends Component {
 
 const styles = {
   inputBox: {
-    width: 225,
+    width: 210,
   },
   details: {
     fontSize: 12,

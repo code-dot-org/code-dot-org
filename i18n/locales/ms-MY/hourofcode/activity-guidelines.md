@@ -103,6 +103,7 @@ Perkara yang anda akan perlukan
 * Nama dan e-mel hubungan utama yang mewakili aktiviti yang dihantar
 * Nama aktiviti (tidak boleh memasukkan "Jam Kod" dalam namanya)
 * Pautan URL kepada aktiviti tersebut
+* Adakah aktiviti ini termasuk AI: Ya atau Tidak
 * Huraian aktiviti (bilangan aksara maksimum: 400) 
     * Sila sertakan dalam huraian sama ada ia terutamanya dipimpin pelajar atau dikendalikan oleh guru. Selain itu, sebilangan sekolah berminat untuk mengetahui sama ada aktiviti Jam Kod menekankan Teras Umum atau Standard Sains Generasi Akan Datang. Jika aktivitinya memenuhi standard khusus, pertimbangkan untuk memasukkan maklumat ini.
 * Tahap gred yang disarankan untuk pengguna yang dimaksudkan. Anda boleh merujuk kepada \[Computer Science Teachers’ Association’s K-12 Standards\] (https://k12cs.org/framework-statements-by-grade-band/) untuk konsep sains komputer yang sesuai mengikut gred. Contoh tahap gred termasuk: 
@@ -110,9 +111,9 @@ Perkara yang anda akan perlukan
     * Gred 2-5 (umur 7-10)
     * Gred 6-8 (umur 11-13)
     * Gred 9+ (umur 14+)
-* Senarai bidang subjek yang dirangkumi oleh aktiviti anda (selain Sains Komputer). Sebagai contoh, jika guru matematik boleh menggunakan aktiviti anda untuk mengajar tentang sudut atau parabola, senaraikannya sebagai matematik. Jika anda mempunyai aktiviti mad-lib yang mengajar kata kerja/kata nama/dan sebagainya pilih seni bahasa.
-* Senarai bahasa pengaturcaraan yang diajar oleh aktiviti anda. Iaitu C/C++, Java, JavaScript dan sebagainya. atau bebas bahasa (untuk rancangan pelajaran yang boleh diajar dalam pelbagai bahasa)
-* Senarai bahasa semula jadi yang disokong. Catatan: Pengesanan bahasa ialah tanggungjawab penyedia aktiviti; kami akan mengarahkan semua pengguna pergi ke URL tunggal yang disediakan.
+* Senarai bahasa pengaturcaraan yang diajar oleh aktiviti anda. Iaitu C/C++, Java, JavaScript dan sebagainya. atau bebas bahasa (untuk rancangan pelajaran yang boleh diajar dalam pelbagai bahasa) pilih seni bahasa.
+* Senarai bahasa semula jadi yang disokong. Catatan: Pengesanan bahasa ialah tanggungjawab penyedia aktiviti; kami akan mengarahkan semua pengguna pergi ke URL tunggal yang disediakan. atau bebas bahasa (untuk rancangan pelajaran yang boleh diajar dalam pelbagai bahasa)
+* Apakah tahap pengalaman yang mesti dimiliki oleh pendidik untuk menggunakan aktiviti anda? (misalnya Baru Bermula atau Selesa.) Dan, apakah tahap pengalaman yang perlu dimiliki oleh pelajar?
 * Apakah tahap pengalaman yang mesti dimiliki oleh pendidik untuk menggunakan aktiviti anda? (misalnya Baru Bermula atau Selesa.) Dan, apakah tahap pengalaman yang perlu dimiliki oleh pelajar? Jika anda ingin menyediakan Aktiviti Hour of Code™ (Jam Kod) yang lebih canggih, sila sertakan pengetahuan sebelum ini yang diperlukan dalam huraian aktiviti anda.
 * Tempoh aktiviti anda 
     * I jam sahaja
@@ -166,9 +167,11 @@ Perkara yang anda akan perlukan
 
 ## Cara aktiviti akan dinilaikan
 
-Jawatankuasa pendidik sains komputer yang pelbagai akan menetapkan kedudukan berdasarkan kriteria kualitatif dan kuantitatif. Semua aktiviti yang sesuai dengan kriteria asas akan disenaraikan. Guru akan boleh menyaring dan mengisih bagi mencari aktiviti terbaik untuk kelas mereka.
+Jawatankuasa pendidik sains komputer yang pelbagai akan menetapkan kedudukan berdasarkan kriteria kualitatif dan kuantitatif. Semua aktiviti yang sesuai dengan kriteria asas akan disenaraikan.
 
-Rubrik pemarkahan untuk menilai aktiviti dan rancangan pelajaran akan mencari kriteria berikut atas semua aktiviti dan menentukan kedudukan dengan sewajarnya:
+Untuk aktiviti pengekodan tradisional, jawatankuasa pendidik sains komputer yang pelbagai akan menilai penyerahan berdasarkan kriteria kualitatif dan kuantitatif. Semua aktiviti yang sesuai dengan kriteria asas akan disenaraikan. Guru akan boleh menyaring dan mengisih bagi mencari aktiviti terbaik untuk kelas mereka.
+
+Jika jawatankuasa penilaian mengadarkan aktiviti tersebut sebagai sifar dalam kualiti pengeluaran (disebabkan pepijat atau arahan yang teruk serta menjadikannya sangat sukar digunakan), dalam mempromosikan pembelajaran bagi kumpulan yang terpencil (disebabkan berkaitan dengan perkauman/seksis), dalam nilai pendidikan (tidak mengajar Konsep CS), atau menyeronokkan/menarik (disebabkan sukar/tawar hati untuk pelajar menyelesaikannya), aktiviti tersebut tidak akan disenaraikan.
 
 - Kualiti pengeluaran yang tinggi
 - Promosikan pembelajaran oleh semua kumpulan demografi (terutamanya pelajar yang terpencil dalam CS, seperti wanita muda, pelajar dari kumpulan kaum dan etnik yang terpinggir dan pelajar kurang upaya)
@@ -176,9 +179,9 @@ Rubrik pemarkahan untuk menilai aktiviti dan rancangan pelajaran akan mencari kr
 - Menyeronokkan dan menarik
 - Galakkan pelajar untuk mencipta sesuatu yang unik yang boleh mereka kongsikan (Untuk pelajar yang lebih muda: dengan ibu bapa dan rakan sekelas. Untuk pelajar yang lebih tua: di Internet)
 
-Jika jawatankuasa penilaian mengadarkan aktiviti tersebut sebagai sifar dalam kualiti pengeluaran (disebabkan pepijat atau arahan yang teruk serta menjadikannya sangat sukar digunakan), dalam mempromosikan pembelajaran bagi kumpulan yang terpencil (disebabkan berkaitan dengan perkauman/seksis), dalam nilai pendidikan (tidak mengajar Konsep CS), atau menyeronokkan/menarik (disebabkan sukar/tawar hati untuk pelajar menyelesaikannya), aktiviti tersebut tidak akan disenaraikan.
-
 Di samping itu, untuk disenaraikan, semua aktiviti mesti:
+
+Untuk aktiviti kendiri untuk guru dan pelajar baru jawatankuasa semakan akan mencari sama ada:
 
 - Wajar untuk kelas sekolah awam (tiada senjata api, tiada kandungan eksplisit/orang dewasa, tiada kandungan agama dan sebagainya)
 - Tidak perlu mendaftar
@@ -204,20 +207,22 @@ Guru dan pelajar boleh mencari dan menyaring senarai aktiviti kami berdasarkan s
 
 ## Garis panduan menghantar untuk semakan kualitatif awal
 
-Anda boleh sertakan [logo Jam Kod](https://hourofcode.com/us/promote/resources#logo) dalam tutorial anda, tetapi ia tidak diperlukan. Jika anda menggunakan logo Jam Kod, sila lihat garis panduan tanda dagangan di bawah. <u>Dalam apa jua keadaan sekalipun logo dan nama Code.org tidak boleh digunakan.</u> Kedua-duanya sudah menjadi tanda dagangan dan tidak boleh disatukan dengan jenama pihak ke-3 tanpa kebenaran bertulis yang jelas.
-
-Sila ambil perhatian: Ini ialah garis panduan umum untuk memberikan maklum balas. Penilaian awal aktiviti anda mungkin mengandungi maklum balas di seluruh kategori ini, atau hanya boleh masukkan maklum balas di dalam satu atau dua.
+Aktiviti tidak perlu termasuk AI, walaupun kami ingin menawarkan lebih banyak aktiviti berkaitan AI.
 
 **Sertakan catatan guru.** Kebanyakan besar aktiviti hendaklah terarah pelajar, tetapi jika aktiviti dikendalikan atau diuruskan oleh guru, sila sertakan arahan yang jelas dan mudah untuk guru dalam bentuk catatan guru di URL berasingan yang dihantar dengan aktiviti anda. Bukan sahaja pelajar baharu, malah sebilangan guru juga begitu. Sertakan maklumat seperti:
+
+Semua aktiviti yang dihantar untuk penilaian awal akan menerima maklum balas menjelang 1 September. Kami juga akan memberikan pautan kepada borang yang boleh anda gunakan untuk menerangkan perubahan khusus yang dibuat kepada aktiviti sebagai tindak balas untuk maklum balas.
+
+Setiap aktiviti yang dihantar sebelum 1 Oktober akan menerima penilaian standard, sama ada ia menerima penilaian awal atau tidak. Semasa tempoh penilaian standard (September-Oktober), penilai akan memberikan tumpuan kepada penilaian aktiviti mengikut kriteria yang dihuraikan dalam bahagian "Cara aktiviti akan dinilaikan" di atas. Melainkan jika anda mengetahui perubahan khusus kepada aktiviti, penilai boleh dan kemungkinan akan bergantung pada maklum balas penilaian awal untuk menilaikan aktiviti.
 
 - Apakah platform dan pelayar yang paling sesuai digunakan oleh tutorial?
 - Adakah ia berfungsi pada telefon pintar? Tablet?
 - Adakah anda menyarankan pengaturcaraan berpasangan?
 - Pertimbangan untuk digunakan di dalam kelas? Misalnya, jika terdapat video, nasihatkan guru untuk menunjukkan video tersebut pada skrin tayangan supaya seluruh kelas dapat menonton bersama
 
-Semua aktiviti yang dihantar untuk penilaian awal akan menerima maklum balas menjelang 1 September. Kami juga akan memberikan pautan kepada borang yang boleh anda gunakan untuk menerangkan perubahan khusus yang dibuat kepada aktiviti sebagai tindak balas untuk maklum balas.
+**Gabungkan maklum balas pada akhir aktiviti.** (Misalnya “Anda berjaya menyelesaikan 10 tahap dan mempelajari tentang gelung! Syabas!”)
 
-Setiap aktiviti yang dihantar sebelum 1 Oktober akan menerima penilaian standard, sama ada ia menerima penilaian awal atau tidak. Semasa tempoh penilaian standard (September-Oktober), penilai akan memberikan tumpuan kepada penilaian aktiviti mengikut kriteria yang dihuraikan dalam bahagian "Cara aktiviti akan dinilaikan" di atas. Melainkan jika anda mengetahui perubahan khusus kepada aktiviti, penilai boleh dan kemungkinan akan bergantung pada maklum balas penilaian awal untuk menilaikan aktiviti. @Scratch.” Gunakan tanda pagar **#HourOfCode** (dengan huruf besar H, O, C)
+**Galakkan pelajar untuk menyiarkan di dalam media sosial (sekiranya wajar) apabila mereka telah selesai.** Sebagai contoh “Saya telah melakukan Jam Kod dengan ________ Sudahkah anda? #HourOfCode” atau “Saya telah lengkapkan #HourOfCode sebagai sebahagian daripada #CSEdWeek. Sudahkah anda? @Scratch.” Gunakan tanda pagar **#HourOfCode** (dengan huruf besar H, O, C)
 
 **Cipta aktiviti anda dalam bahasa Sepanyol atau dalam bahasa lain selain Bahasa Inggeris.**
 
@@ -231,7 +236,7 @@ Setiap aktiviti yang dihantar sebelum 1 Oktober akan menerima penilaian standard
 
 ## Cadangan untuk mereka bentuk tutorial pandu diri selama sejam
 
-**Gabungkan maklum balas pada akhir aktiviti.** (Misalnya “Anda berjaya menyelesaikan 10 tahap dan mempelajari tentang gelung! Syabas!”) Kami tidak mahu menghalang penggunaan ini, tetapi kami ingin memastikan penggunaannya berada dalam beberapa had:
+Hour of Code® dan Hora del Código® adalah tanda dagangan berdaftar Code.org. Banyak rakan tutorial kami telah menggunakan tanda dagangan “Hour of Code” kami di laman web mereka berkaitan dengan aktiviti Hour of Code mereka. Kami tidak mahu menghalang penggunaan ini, tetapi kami ingin memastikan penggunaannya berada dalam beberapa had:
 
 1. Gunakan “Hour of Code” hanya berkaitan dengan aktiviti CS Education bukan komersial dalam konteks kempen Hour of Code, dan tanpa tujuan lain.
 2. Mana-mana rujukan kepada "Hour of Code" sepatutnya digunakan di dalam fesyen yang tidak menunjukkan ia merupakan nama jenama anda, tetapi lebih merujuk kepada Jam Kod sebagai pergerakan akar umbi. Contoh yang baik: “Mengambil bahagian dalam Hour of Code® di AcmeCorp.com”. Contoh yang kurang baik: "Cubalah Hour of Code oleh ACME Corp".
@@ -247,13 +252,13 @@ Setiap aktiviti yang dihantar sebelum 1 Oktober akan menerima penilaian standard
 
 ## Garis Panduan Tanda Dagangan
 
-Untuk menjejaki penyertaan dengan lebih tepat, kami meminta setiap rakan kongsi tutorial untuk memasukkan imej penjejak 1-piksel pada halaman pertama tutorial Jam Kod mereka. Imej piksel mesti berada pada halaman permulaan sahaja. Jangan sertakannya pada mana-mana halaman sementara tutorial anda.
+Jika tutorial anda diluluskan dan disertakan pada halaman tutorial terakhir, Code.org akan memberikan anda piksel penjejak yang unik untuk anda integrasikan dalam tutorial anda. Lihat contoh di bawah. Jangan sertakannya pada mana-mana halaman sementara tutorial anda.
 
 Ini akan membolehkan kami mengira pengguna yang melakukan tutorial Jam Kod anda. Ini akan membawa kepada jumlah penyertaan yang lebih tepat untuk tutorial anda.
 
 Jika tutorial anda diluluskan dan disertakan pada halaman tutorial terakhir, Code.org akan memberikan anda piksel penjejak yang unik untuk anda integrasikan dalam tutorial anda. Lihat contoh di bawah.
 
-CATATAN: ini tidak penting dilakukan untuk aplikasi yang boleh dipasang (aplikasi iOS/Android, atau aplikasi pemasangan desktop)
+IMG SRC = <http://code.org/api/hour/begin_dance.png>
 
 Contoh piksel penjejak untuk Majlis Tari-Menari:
 
@@ -266,7 +271,7 @@ IMG SRC = <http://code.org/api/hour/begin_dance.png>
 
 ## Piksel Penjejak
 
-Ini akan membolehkan kami mengira pengguna yang melakukan tutorial Jam Kod anda. Ini akan membawa kepada jumlah penyertaan yang lebih tepat untuk tutorial anda. Pengguna anda lebih cenderung untuk bertindak balas terhadap e-mel daripada anda tentang aktiviti anda. Gunakan kempen Jam Kod antarabangsa semasa Minggu Pendidikan Sains Komputer sebagai alasan untuk menggalakkan pengguna menjemput individu lain untuk turut serta dan membantu kami menjangkau lebih ramai pelajar!
+Sila promosikan aktiviti anda kepada rangkaian anda! Minta mereka pergi ke halaman Jam Kod anda. Pengguna anda lebih cenderung untuk bertindak balas terhadap e-mel daripada anda tentang aktiviti anda. Gunakan kempen Jam Kod antarabangsa semasa Minggu Pendidikan Sains Komputer sebagai alasan untuk menggalakkan pengguna menjemput individu lain untuk turut serta dan membantu kami menjangkau lebih ramai pelajar!
 
 - Paparkan Jam Kod and CSEdWeek pada laman web anda. Contoh: <http://www.tynker.com/hour-of-code>
 - Promosikan Jam Kod dengan menggunakan media sosial, media tradisional, senarai e-mel dan sebagainya, gunakan tanda pagar #HourOfCode (dengan huruf besar H, O, C)
@@ -275,4 +280,4 @@ Ini akan membolehkan kami mengira pengguna yang melakukan tutorial Jam Kod anda.
 
 [**Kembali ke bahagian atas**](#top)
 
-CATATAN: ini tidak penting dilakukan untuk aplikasi yang boleh dipasang (aplikasi iOS/Android, atau aplikasi pemasangan desktop)
+{{ signup_button }}

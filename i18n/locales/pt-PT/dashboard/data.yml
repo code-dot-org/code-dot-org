@@ -707,6 +707,7 @@ pt:
         csa_sorting_algorithms: 'CSA: Algoritmos de classificação'
         star_quilts_intro_to_artist: 'Star Quilts: Introdução ao artista'
         upload_sprites_backgrounds: Fazendo upload de sprites e planos de fundo personalizados
+        what-is-creativity: O que é criatividade?
     callout:
       text:
         drag_blocks: Arrasta um bloco "mover" e encaixa-o debaixo de outro bloco

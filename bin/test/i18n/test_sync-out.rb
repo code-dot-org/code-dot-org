@@ -5,11 +5,11 @@ class I18n::SyncOutTest < Minitest::Test
   def test_performing
     exec_seq = sequence('execution')
 
+    I18n::Resources::Apps.expects(:sync_out).in_sequence(exec_seq)
     I18n::SyncOut.expects(:rename_from_crowdin_name_to_locale).in_sequence(exec_seq)
     I18n::SyncOut.expects(:restore_redacted_files).in_sequence(exec_seq)
-    I18n::SyncOut.expects(:distribute_translations).with(false).in_sequence(exec_seq)
+    I18n::SyncOut.expects(:distribute_translations).in_sequence(exec_seq)
     I18n::SyncOut.expects(:copy_untranslated_apps).in_sequence(exec_seq)
-    I18n::SyncOut.expects(:rebuild_blockly_js_files).in_sequence(exec_seq)
     I18n::SyncOut.expects(:restore_markdown_headers).in_sequence(exec_seq)
     Services::I18n::CurriculumSyncUtils.expects(:sync_out).in_sequence(exec_seq)
     HocSyncUtils.expects(:sync_out).in_sequence(exec_seq)
@@ -22,33 +22,15 @@ class I18n::SyncOutTest < Minitest::Test
     end
   end
 
-  def test_performing_with_manifests_upload
-    expected_upload_manifests_arg = 'expected_upload_manifests_arg'
-
-    I18n::SyncOut.expects(:rename_from_crowdin_name_to_locale)
-    I18n::SyncOut.expects(:restore_redacted_files)
-    I18n::SyncOut.expects(:distribute_translations).with(expected_upload_manifests_arg).once
-    I18n::SyncOut.expects(:copy_untranslated_apps)
-    I18n::SyncOut.expects(:rebuild_blockly_js_files)
-    I18n::SyncOut.expects(:restore_markdown_headers)
-    Services::I18n::CurriculumSyncUtils.expects(:sync_out)
-    HocSyncUtils.expects(:sync_out)
-    I18nScriptUtils.expects(:run_standalone_script)
-    I18nScriptUtils.expects(:run_standalone_script)
-    I18n::SyncOut.expects(:clean_up_sync_out)
-
-    I18n::SyncOut.perform(upload_manifests: expected_upload_manifests_arg)
-  end
-
   def test_exception_handling
     expected_error = 'expected_error'
 
+    I18n::Resources::Apps.stubs(:sync_out).raises(expected_error)
     I18n::SyncOut.stubs(:rename_from_crowdin_name_to_locale).raises(expected_error)
     I18n::SyncOut.stubs(:rename_from_crowdin_name_to_locale).raises(expected_error)
     I18n::SyncOut.stubs(:restore_redacted_files).raises(expected_error)
     I18n::SyncOut.stubs(:distribute_translations).raises(expected_error)
     I18n::SyncOut.stubs(:copy_untranslated_apps).raises(expected_error)
-    I18n::SyncOut.stubs(:rebuild_blockly_js_files).raises(expected_error)
     I18n::SyncOut.stubs(:restore_markdown_headers).raises(expected_error)
     Services::I18n::CurriculumSyncUtils.stubs(:sync_out).raises(expected_error)
     HocSyncUtils.stubs(:sync_out).raises(expected_error)

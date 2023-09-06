@@ -6014,6 +6014,8 @@ ca:
               display_name: Lliçons alternatives
             lessonGroup-6:
               display_name: Enquesta de final d'unitat
+            lessonGroup-7:
+              display_name: Caixes de sorra
           title: Programació Orientada a Objectes
         csa2-2023:
           lessons:
@@ -6047,6 +6049,8 @@ ca:
               name: La paraula clau aquesta
             lesson-15:
               name: Unitat 2 Enquesta
+            lesson-17:
+              name: Projecte Art Asfalt — Dia 2
           lesson_groups:
             lessonGroup-2:
               display_name: Contingut
@@ -6056,6 +6060,8 @@ ca:
               display_name: Lliçons alternatives
             lessonGroup-5:
               display_name: Enquesta de final d'unitat
+            lessonGroup-6:
+              display_name: Caixes de sorra
           title: Estructura i disseny de classes
         csa3-2023:
           lessons:
@@ -6087,6 +6093,8 @@ ca:
               name: Dades per a Social Good Project [Versió d'1 dia]
             lesson-14:
               name: Unitat 3 Enquesta
+            lesson-16:
+              name: Projecte Art Asfalt — Dia 2
           lesson_groups:
             lessonGroup-2:
               display_name: Contingut
@@ -6096,6 +6104,8 @@ ca:
               display_name: Lliçons alternatives
             lessonGroup-5:
               display_name: Enquesta de final d'unitat
+            lessonGroup-6:
+              display_name: Caixes de sorra
           title: Matrius i algoritmes
         csa4-2023:
           lessons:
@@ -6129,6 +6139,8 @@ ca:
               name: Declaracions de selecció múltiple
             lesson-15:
               name: Unitat 4 Enquesta
+            lesson-17:
+              name: Projecte Art Asfalt — Dia 2
           lesson_groups:
             lessonGroup-2:
               display_name: Contingut
@@ -6138,6 +6150,8 @@ ca:
               display_name: Lliçons alternatives
             lessonGroup-5:
               display_name: Enquesta de final d'unitat
+            lessonGroup-6:
+              display_name: Caixes de sorra
           title: Condicions i lògica
         csa5-2023:
           lessons:
@@ -6169,6 +6183,8 @@ ca:
               name: Projecte de Narrativa Personal [Versió 1 Dia]
             lesson-14:
               name: Unitat 5 Enquesta
+            lesson-16:
+              name: Projecte Art Asfalt — Dia 2
           lesson_groups:
             lessonGroup-2:
               display_name: Contingut
@@ -6178,6 +6194,8 @@ ca:
               display_name: Lliçons alternatives
             lessonGroup-5:
               display_name: Enquesta de final d'unitat
+            lessonGroup-6:
+              display_name: Caixes de sorra
           title: Matrius bidimensionals
         csa6-2023:
           lessons:
@@ -6209,6 +6227,8 @@ ca:
               name: Projecte de Processament del Llenguatge Natural [Versió d'1 dia]
             lesson-14:
               name: Unitat 6 Enquesta
+            lesson-16:
+              name: Projecte Art Asfalt — Dia 2
           lesson_groups:
             lessonGroup-2:
               display_name: Contingut
@@ -6218,6 +6238,8 @@ ca:
               display_name: Lliçons alternatives
             lessonGroup-5:
               display_name: Enquesta de final d'unitat
+            lessonGroup-6:
+              display_name: Caixes de sorra
           title: ArrayLists i Mètodes de cadena
         csa7-2023:
           lessons:
@@ -6247,6 +6269,8 @@ ca:
               name: Unitat 7 Enquesta
             lesson-14:
               name: Codificació creativa amb el projecte teatral [Versió d'1 dia]
+            lesson-16:
+              name: Projecte Art Asfalt — Dia 2
           lesson_groups:
             lessonGroup-2:
               display_name: Contingut
@@ -6256,6 +6280,8 @@ ca:
               display_name: Enquesta de final d'unitat
             lessonGroup-5:
               display_name: Lliçons alternatives
+            lessonGroup-6:
+              display_name: Caixes de sorra
           title: Mètode de descomposició i recursivitat
         csa8-2023:
           lessons:
@@ -6285,6 +6311,8 @@ ca:
               name: Unitat 8 Avaluació
             lesson-13:
               name: Codificació creativa amb el projecte de la consola [Versió d'1 dia]
+            lesson-15:
+              name: Projecte Art Asfalt — Dia 2
           lesson_groups:
             lessonGroup-2:
               display_name: Contingut
@@ -6294,6 +6322,8 @@ ca:
               display_name: Enquesta
             lessonGroup-5:
               display_name: Lliçons alternatives
+            lessonGroup-6:
+              display_name: Caixes de sorra
           title: Cercar i ordenar
         vpl-csd3-ayw-pilot-2022:
           lessons:
@@ -7397,11 +7427,16 @@ ca:
           description_short: Aprendre a programar amb dispositius físics.
           name: csd6a-2023
         csa9-2023:
+          lessons:
+            lesson-2:
+              name: Projecte Art Asfalt — Dia 2
           lesson_groups:
             lessonGroup-2:
               display_name: Revisió i pràctica
             lessonGroup-3:
               display_name: Exàmens simulacre
+            lessonGroup-4:
+              display_name: Caixes de sorra
           description_short: Els estudiants es preparen per l'examen AP CSA mitjançant la pràctica d'estratègies per a les preguntes d'elecció múltiple i de resposta lliure.
           description: Aquesta unitat prepara els estudiants per a l'examen d'AP CSA mitjançant la revisió dels conceptes clau, la pràctica de preguntes d'elecció múltiple i de resposta lliure, i l'enfortiment de les estratègies de presa de proves. Els estudiants identifiquen fortaleses i àrees de millora per crear plans d'estudi individualitzats per centrar la seva pràctica i autoavaluar el seu progrés.
           student_description: Aquesta unitat us prepara per a l'examen AP CSA mitjançant la revisió dels conceptes clau, la pràctica de preguntes d'elecció múltiple i de resposta lliure, i l'enfortiment de les estratègies de presa de proves. Identifiques fortaleses i àrees de millora per crear plans d'estudi individualitzats per enfocar la pràctica i autoavaluar el teu progrés.

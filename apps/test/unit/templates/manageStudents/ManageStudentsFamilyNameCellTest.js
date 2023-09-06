@@ -37,4 +37,20 @@ describe('ManageStudentFamilyNameCell', () => {
     );
     expect(wrapper.find('input').exists());
   });
+
+  it('renders disabled family name input when inputDisabled is true', () => {
+    const wrapper = mount(
+      <Provider store={getStore()}>
+        <ManageStudentFamilyNameCell
+          {...DEFAULT_PROPS}
+          familyName={'FamName'}
+          isEditing={true}
+          inputDisabled={true}
+        />
+      </Provider>
+    );
+    const input = wrapper.find('input');
+    expect(input.exists());
+    expect(input.prop('disabled')).to.be.true;
+  });
 });

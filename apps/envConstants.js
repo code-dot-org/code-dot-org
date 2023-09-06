@@ -45,5 +45,7 @@ module.exports = {
   BROWSER: process.env.BROWSER,
   // If set, will turn on react hot loader and run the webpack dev server
   HOT: !!process.env.HOT,
-  LEVEL_TYPE: process.env.LEVEL_TYPE
+  LEVEL_TYPE: process.env.LEVEL_TYPE,
+  // Include static assets when serving storybook locally
+  STORYBOOK_STATIC_ASSETS: process.env.STORYBOOK_STATIC_ASSETS,
 };

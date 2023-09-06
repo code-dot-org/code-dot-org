@@ -248,6 +248,8 @@ ky:
   call_to_action_learn_about_approach: Learn more about our approach
   call_to_action_try_java_lab: Try Java Lab
   call_to_action_notify_available: Notify me when available
+  call_to_action_register_early_access: Register for early access
+  call_to_action_open_positions: View open positions
   aria_label_call_to_action_afe: Learn more about Amazon Future Engineer
   aria_label_call_to_action_teaching_csf: Start the Teaching Computer Science Fundamentals
     professional learning program
@@ -705,7 +707,8 @@ ky:
   ai_video_series_title: How AI Works
   ai_video_series_desc: This series of short videos will introduce you to how artificial
     intelligence works and why it matters. Then delve into issues like algorithmic
-    bias and the ethics of AI decision-making.
+    bias and the ethics of AI decision-making. Watch the video series below, or [check
+    out our How AI Works lessons](%{how_ai_works_url})!
   ai_resources_heading: Additional resources
   ai_resources_desc: Interested in learning more about AI? Here are some additional
     resources that can help extend your students' learning.
@@ -13007,6 +13010,114 @@ ky:
   accessibility_card_text_10: An adaptation of Code.org’s AP Computer Science Principles
     curriculum using Quorum, an evidence-based language originally designed to provide
     accessibility for blind or visually-impaired students.
+  engineering_hero_heading: Join our engineering team!
+  engineering_hero_desc: As we continue to expand our engineering team, we wanted
+    to share more about our engineering organization at Code.org and some of the unique
+    aspects of working here. If you are interested in applying for one of our roles,
+    we'd love to hear from you!
+  engineering_team_title: Meet the engineering team at Code.org
+  engineering_team_card_text_1: This is (most of) us at our in-person get together
+    during the summer of 2023! This crowd is divided into four sub-teams within our
+    engineering team who work together to build and serve the platform for all our
+    students and teachers.
+  engineering_team_card_text_2: If you are interested in applying for one of our roles,
+    we'd love to hear from you! You can find a list of open positions on our Careers
+    page.
+  engineering_our_team_title: Our engineering team
+  engineering_our_team_desc: 'The engineering team at Code.org is divided into four
+    sub-teams that build and support different areas of our platform:'
+  engineering_our_team_sub_title_1: Student Learning Team
+  engineering_our_team_text_1: Our Student Learning Team owns all our activities (we
+    call them labs) that our students use each day. This team works mostly on front-end
+    tech (we use React and a lot of custom JS) and we have a great working relationship
+    with many partners and open source projects. For example, we use [Google's Blockly](%{youtube_url})
+    for all of our block-based programming. We support students in their learning
+    journey all the way from Kindergarten through 12th grade.
+  engineering_our_team_sub_title_2: Teacher Experience Team
+  engineering_our_team_text_2: Our Teacher Experience Team builds the tools that attract
+    new teachers to Code.org (we call these acquisition products) and develops the
+    platform that empowers our existing teachers to teach our curriculum (our teacher
+    tools). As with our student tools, we rely on React to build our front-end and
+    our server-side components are served using Ruby on Rails.
+  engineering_our_team_sub_title_3: Platform Team
+  engineering_our_team_text_3: Our Platform Team owns core components that serve the
+    needs of our student and teacher teams (for example, authentication and user profile)
+    and also has the mission of reaching students who we can't yet reach. This includes
+    building integrations that connect us with schools that use different Learning
+    Management Systems (LMS) and packaging our curriculum so that it can be used in
+    remote schools who don't have access to reliable internet.
+  engineering_our_team_sub_title_4: Infrastructure Team
+  engineering_our_team_text_4: Our Infrastructure Team provides the backbone for the
+    platform that supports our students and teachers. This includes our hosting infrastructure
+    and related services (we use AWS), data management, security programs, developer
+    and deployment services and much more. This team also owns our scaling and provisioning
+    systems, which are critical during Hour of Code, where we invite every student
+    in the world to complete an hour of coding with us.
+  engineering_faq_question_1: What does Code.org do?
+  engineering_faq_answer_1_a: Code.org is an education innovation nonprofit dedicated
+    to the vision that every student in every school has the opportunity to learn
+    computer science as part of their core K-12 education.
+  engineering_faq_answer_1_b: We expand access to computer science in schools, with
+    a focus on increasing participation by young women and students from other underrepresented
+    groups. The leading provider of K-12 computer science curriculum in the largest
+    school districts in the United States, Code.org also organizes the annual Hour
+    of Code campaign, which has engaged more than 15% of all students in the world.
+  engineering_faq_answer_1_c: Code.org is supported by generous donors including Microsoft,
+    Amazon, Google and many others.
+  engineering_faq_question_2: What is Code.org’s developer experience and tooling?
+  engineering_faq_answer_2: Our developer experience may be different to what you’ve
+    seen in your past roles. Working closely with our product team, we ship to production
+    every weekday and we have a variety of cadences - sometimes you are writing code
+    that goes live that day; other times you are on longer term projects - and while
+    we do follow 2-weekly sprints, we do so in a lightweight way. We index towards
+    getting the right things done the right way vs. taking a purist view of any particular
+    methodology. [All our code](%{code_url}) is open source and we use JIRA and GitHub
+    pull requests to track all of our work items. We also care a lot about quality
+    and testing and are fortunate to have incredible support from [SauceLabs](%{saucelabs_url}),
+    who help us run our suite of UI tests on various student devices (e.g., iPads)
+    in their cloud device farm.
+  engineering_faq_question_3: What is the engineer on-call rotation at Code.org?
+  engineering_faq_answer_3: Our 30+ engineering team shares on-call responsibilities.
+    Each engineer covers a 24-hour shift and uses our escalation paths and playbooks
+    to respond to site outages or other live-site issues. We are proud of our site’s
+    reliability - on average, each engineer is only woken up once per year for issues
+    that are typically quick to resolve. Instead, the "Developer of the Day" usually
+    spends a portion of their workday managing the production deployment and triaging
+    less urgent issues.
+  engineering_faq_question_4: Are you a remote-friendly / WFH organization?
+  engineering_faq_answer_4_a: Yes! In 2019, shortly before the pandemic, Code.org
+    became a remote-first organization. Today, we have engineers in every US time
+    zone and accommodate working hours accordingly. Most of our meetings happen between
+    the hours of 10am and 3pm PT.
+  engineering_faq_answer_4_b: We also recognize the value of in-person time, and every
+    quarter we get together in person, typically in Seattle. Two of these events (we
+    call them Kick-off week and “Codechella”) bring everyone in the organization together
+    in January and June - and the engineering and product teams meet separately in
+    April and October.
+  engineering_faq_answer_4_c: We strongly believe in spending time with our students
+    and teachers, so many of these in-person events include trips into schools and
+    classrooms to gather feedback or play-test our products
+  engineering_faq_question_5: What makes the engineering team at Code.org unique?
+  engineering_faq_answer_5_a: 'Beyond solving challenging technical problems, we have
+    a few things that make our engineering org different from others you may have
+    worked in:'
+  engineering_faq_answer_5_b_1: We all share our passion for our mission.
+  engineering_faq_answer_5_b_2: Each of us is here to support the mission to expand
+    access to computer science for every student across the world. We all have our
+    unique story and perspective about what drives us towards this mission.
+  engineering_faq_answer_5_c_1: We care deeply about each other.
+  engineering_faq_answer_5_c_2: When engineers are struggling with an issue, we step
+    in and we help. One of our principles is that we are hard on problems, but kind
+    to each other. We promote engineers regularly, but we don't prescribe over-engineered
+    solutions just to support someone's promotion path. Instead, we invest in our
+    engineers with a generous professional development budget and access to other
+    learning opportunities.
+  engineering_faq_answer_5_d_1: We work hard, but we set clear boundaries.
+  engineering_faq_answer_5_d_2: While we support students across the world, we hold
+    ourselves accountable for clear boundaries between work and home life. We enjoy
+    no-meetings Wednesdays, taking our PTO (5 weeks total, which includes an org-wide
+    2-week office closure at the end of the year aka Winter Break), half working day
+    on Fridays during the summer aka Summer Fridays, and other generous benefits.
   language_code:
     ar: Arabic
     az: Azerbaijani

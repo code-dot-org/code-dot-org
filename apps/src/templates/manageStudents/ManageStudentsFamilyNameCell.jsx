@@ -1,10 +1,13 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import {useDispatch} from 'react-redux';
+import ReactTooltip from 'react-tooltip';
+import _ from 'lodash';
 import i18n from '@cdo/locale';
 import {editStudent} from './manageStudentsRedux';
+import {tableLayoutStyles} from '../tables/tableConstants';
 
-function ManageStudentFamilyNameCell({id, familyName, isEditing, editedValue}) {
+function ManageStudentFamilyNameCell({id, familyName, isEditing, editedValue, inputDisabled}) {
   const dispatch = useDispatch();
 
   const onChangeName = e => {
@@ -13,20 +16,28 @@ function ManageStudentFamilyNameCell({id, familyName, isEditing, editedValue}) {
     dispatch(editStudent(id, {familyName: newValue}));
   };
 
+  const tooltipId = inputDisabled ? _.uniqueId() : '';
+ 
   return (
     <div>
       {!isEditing && <div>{familyName}</div>}
       {isEditing && (
         <div>
-          <input
-            id="uitest-family-name"
-            style={styles.inputBox}
-            // Because familyName is optional, allow empty string
-            value={editedValue || ''}
-            onChange={onChangeName}
-            placeholder={i18n.familyName()}
-            aria-label={i18n.familyName()}
-          />
+          <span data-for={tooltipId} data-tip>
+            <input
+              id="uitest-family-name"
+              style={styles.inputBox}
+              // Because familyName is optional, allow empty string
+              value={editedValue || ''}
+              onChange={onChangeName}
+              placeholder={i18n.familyName()}
+              aria-label={i18n.familyName()}
+              disabled={inputDisabled}
+            />
+            <ReactTooltip id={tooltipId} role="tooltip" effect="solid">
+              <div>{i18n.disabledForTeacherAccountsTooltip()}</div>
+            </ReactTooltip>
+          </span>
         </div>
       )}
     </div>
@@ -35,7 +46,7 @@ function ManageStudentFamilyNameCell({id, familyName, isEditing, editedValue}) {
 
 const styles = {
   inputBox: {
-    width: 225,
+    width: 210,
   },
 };
 
@@ -44,6 +55,7 @@ ManageStudentFamilyNameCell.propTypes = {
   familyName: PropTypes.string,
   isEditing: PropTypes.bool,
   editedValue: PropTypes.string,
+  inputDisabled: PropTypes.bool,
 };
 
 export default ManageStudentFamilyNameCell;

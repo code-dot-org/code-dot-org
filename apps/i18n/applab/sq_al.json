@@ -12,6 +12,7 @@
   "connectToBoard": "Lidhu me Bordin",
   "container": "krijoni enë",
   "containerTooltip": "Krijon një enë ndarjeje dhe vendos HTML e saj të brendshme.",
+  "designElementEvent_click": "Kliko",
   "designElementPhotoSelectClickDescription": "Shkaktohet kur zgjidhet një foto.",
   "designElementProperty_checked": "kontrolluar",
   "designElementProperty_fitImage_none": "asnjë",

@@ -1,18 +1,28 @@
 import React, {useState} from 'react';
+import PropTypes from 'prop-types';
 import style from './rubrics.module.scss';
 const icon = require('@cdo/static/AI-FAB.png');
 import RubricContainer from './RubricContainer';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import {rubricShape, reportingDataShape} from './rubricShapes';
+import {
+  rubricShape,
+  reportingDataShape,
+  studentLevelInfoShape,
+} from './rubricShapes';
 
-export default function RubricFloatingActionButton({rubric, reportingData}) {
-  const [isOpen, setIsOpen] = useState(false);
+export default function RubricFloatingActionButton({
+  rubric,
+  studentLevelInfo,
+  currentLevelName,
+  reportingData,
+}) {
+  const [isOpen, setIsOpen] = useState(!!studentLevelInfo);
 
   const handleClick = () => {
     const eventName = isOpen
-      ? EVENTS.RUBRIC_CLOSED_FROM_FAB
-      : EVENTS.RUBRIC_OPENED_FROM_FAB;
+      ? EVENTS.RUBRIC_CLOSED_FROM_FAB_EVENT
+      : EVENTS.RUBRIC_OPENED_FROM_FAB_EVENT;
     analyticsReporter.sendEvent(eventName, reportingData);
     setIsOpen(!isOpen);
   };
@@ -26,8 +36,15 @@ export default function RubricFloatingActionButton({rubric, reportingData}) {
         onClick={handleClick}
         type="button"
       />
+      {/* TODO: do not hardcode in AI setting */}
       {isOpen && (
-        <RubricContainer rubric={rubric} reportingData={reportingData} />
+        <RubricContainer
+          rubric={rubric}
+          studentLevelInfo={studentLevelInfo}
+          reportingData={reportingData}
+          currentLevelName={currentLevelName}
+          teacherHasEnabledAi
+        />
       )}
     </div>
   );
@@ -35,5 +52,7 @@ export default function RubricFloatingActionButton({rubric, reportingData}) {
 
 RubricFloatingActionButton.propTypes = {
   rubric: rubricShape,
+  studentLevelInfo: studentLevelInfoShape,
+  currentLevelName: PropTypes.string,
   reportingData: reportingDataShape,
 };

@@ -184,7 +184,7 @@ sq:
         jigsaw_4: Rregullo blloqet për të formuar imazhin
         jigsaw_5: Rregullo blloqet për të formuar imazhin
         jigsaw_6: Rregullo blloqet për të formuar imazhin
-        jigsaw_7: Rregulloni blloqet për të formuar imazhin
+        jigsaw_7: Rregullo blloqet për të formuar imazhin
         jigsaw_8: Rregullo blloqet për të formuar imazhin
         jigsaw_9: Rregullo blloqet për të formuar imazhin
         maze_2_1: Ky derrkuci po më bezdis. Më ndihmo t'a gjej!
@@ -730,9 +730,11 @@ sq:
         CSF_SpriteLab_Intro_v2: Prezantimi i Sprite Lab
         CSF_SpriteLab_SpritesInAction_CDEF: Sprites në veprim
         CSF_SpriteLab_SpritesInAction_v2: Sprites në veprim
-        CSF_debugging_k1_blocks: Rregullimi
-        CSF_debugging_text_blocks: Rregullimi
+        CSF_debugging_k1_blocks: Debugging
+        CSF_debugging_text_blocks: Debugging
         CSF_loops_AB: cikle
+        CSF_maze_intro_k1_blocks: Hyrje Code Studio
+        CSF_maze_intro_text_blocks: Hyrje Code Studio
         CSF_my_robotic_friends: Shokët e mi robotik
         Unplug1: Çfarë është CS?
         Unplug10: Internet
@@ -747,7 +749,7 @@ sq:
         Unplug9: Programim i Besueshëm
         artist_intro: Hyrja e Artistit
         csd_applab_parameters: Funksionet me parametra
-        csd_debugging: Rregullimi
+        csd_debugging: Debugging
         csd_pair_programming: Programim në çift
         csp_applab_functions: Hyrja në Funksione
         csp_applab_functions_parameters: Funksionet me parametra
