@@ -386,7 +386,10 @@ class CourseOffering < ApplicationRecord
   # seed_all
   def self.seed_record(file_path)
     properties = properties_from_file(File.read(file_path))
-    properties["self_paced_pl_course_offering_id"] = CourseOffering.find_by_key(properties["self_paced_pl_course_offering_key"])&.id
+    if properties[:self_paced_pl_course_offering_id].present? && properties[:self_paced_pl_course_offering_key].nil?
+      warn "self_paced_pl_course_offering_key not found. Please seed again to fix."
+    end
+    properties[:self_paced_pl_course_offering_id] = CourseOffering.find_by_key(properties[:self_paced_pl_course_offering_key])&.id
     properties.delete(:self_paced_pl_course_offering_key)
     course_offering = CourseOffering.find_or_initialize_by(key: properties[:key])
     course_offering.update! properties
