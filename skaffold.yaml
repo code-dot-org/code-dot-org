@@ -58,7 +58,8 @@ deploy:
             ]
 manifests:
   rawYaml:
-  - ./k8s/code.org/*.yaml
+  - ./k8s/code.org/raw/*.yaml
+
 
 portForward:
 - resourceType: Deployment
