@@ -1,3 +1,4 @@
+require File.expand_path('../../../dashboard/config/environment', __FILE__)
 require 'cdo/aws/metrics'
 require 'aws-sdk-ec2'
 require 'net/http'
@@ -43,7 +44,7 @@ module I18n
     # @param sync_step [String] Step of the sync where the method is used. Options: in, up, down, out.
     # @option sync_component [String] Specific sync component being logged.
     # @option message [String] Exception message causing the step to fail.
-    def self.report_success(status, sync_step, sync_component = nil, message = nil)
+    def self.report_success(status, sync_step, sync_component = '', message = '')
       status_value = status ? 1 : 0
       log_metric(
         :StatusTest,
