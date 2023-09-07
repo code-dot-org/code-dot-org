@@ -79,7 +79,11 @@
       "regularPolygon": null,
       "shape": null,
       "draw": null,
-      "World.frameRate": null
+      "World.frameRate": null,
+      "addOperator": null,
+      "subtractOperator": null,
+      "multiplyOperator": null,
+      "divideOperator": null
     },
     "encrypted_examples": "anMQPIUd+WRm37Dyx7COPPHROWqZ58g9d0j7QKZevdphBmrQjmJhFG3Ouyil\nTlEhpfhOnD4C39C8gkjF8UyxGg==\n",
     "disable_procedure_autopopulate": "false",
@@ -115,7 +119,7 @@
     "preload_asset_list": null
   },
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-19T22:56:21.553+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Movement Fish_2022\\\"\"],\"cloned_from\":\"CSD U3 Movement Fish_2022\"},{\"changed_at\":\"2022-09-22 22:47:38 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-01-11 20:06:23 +0000\",\"changed\":[\"long_instructions\",\"code_functions\",\"encrypted_examples\",\"start_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-12 23:18:41 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"project_template_level_name\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-08-07 16:19:46 +0000\",\"changed\":[\"long_instructions\",\"code_functions\",\"encrypted_examples\",\"start_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-19T22:56:21.553+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Movement Fish_2022\\\"\"],\"cloned_from\":\"CSD U3 Movement Fish_2022\"},{\"changed_at\":\"2022-09-22 22:47:38 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-01-11 20:06:23 +0000\",\"changed\":[\"long_instructions\",\"code_functions\",\"encrypted_examples\",\"start_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-05-12 23:18:41 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"project_template_level_name\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-08-07 16:19:46 +0000\",\"changed\":[\"long_instructions\",\"code_functions\",\"encrypted_examples\",\"start_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-09-06 17:51:31 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>
