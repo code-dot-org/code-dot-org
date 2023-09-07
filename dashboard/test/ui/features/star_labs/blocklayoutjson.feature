@@ -1,4 +1,3 @@
-@chrome
 Feature: Block auto-layout after JSON conversion
 
 Background:
