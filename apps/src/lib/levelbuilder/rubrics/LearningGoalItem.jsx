@@ -1,15 +1,30 @@
-import React, {useState} from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import color from '@cdo/apps/util/color';
 import {borderRadius} from '@cdo/apps/lib/levelbuilder/constants';
 import EvidenceDescriptions from './EvidenceDescriptions';
 import Button from '../../../templates/Button';
 
-export default function LearningGoalItem({deleteItem}) {
-  const [aiEnabled, setAiEnabled] = useState(false);
-
+export default function LearningGoalItem({
+  deleteItem,
+  exisitingLearningGoalData,
+  updateLearningGoal,
+}) {
   const handleCheckboxChange = () => {
-    setAiEnabled(!aiEnabled);
+    const newAiEnabledValue = !exisitingLearningGoalData.aiEnabled;
+    updateLearningGoal(
+      exisitingLearningGoalData.id,
+      'aiEnabled',
+      newAiEnabledValue
+    );
+  };
+
+  const handleKeyConceptChange = event => {
+    updateLearningGoal(
+      exisitingLearningGoalData.id,
+      'learningGoal',
+      event.target.value
+    );
   };
 
   return (
@@ -25,8 +40,10 @@ export default function LearningGoalItem({deleteItem}) {
               <label style={styles.labelAndInput}>
                 <span style={styles.label}>{`Key Concept:`}</span>
                 <input
+                  value={exisitingLearningGoalData.learningGoal}
                   style={{width: 600}}
                   className="uitest-rubric-key-concept-input"
+                  onChange={handleKeyConceptChange}
                 />
               </label>
             </div>
@@ -34,7 +51,7 @@ export default function LearningGoalItem({deleteItem}) {
               Use AI to assess
               <input
                 type="checkbox"
-                checked={aiEnabled}
+                checked={exisitingLearningGoalData.aiEnabled}
                 onChange={handleCheckboxChange}
                 style={styles.checkbox}
               />
@@ -42,7 +59,9 @@ export default function LearningGoalItem({deleteItem}) {
               It is hidden from AT devices */}
               <span
                 style={
-                  aiEnabled ? styles.checkboxChecked : styles.checkboxBlank
+                  exisitingLearningGoalData.aiEnabled
+                    ? styles.checkboxChecked
+                    : styles.checkboxBlank
                 }
                 aria-hidden="true"
               >
@@ -53,7 +72,9 @@ export default function LearningGoalItem({deleteItem}) {
         </div>
       </div>
       <div style={styles.activityBody}>
-        <EvidenceDescriptions isAiEnabled={aiEnabled} />
+        <EvidenceDescriptions
+          isAiEnabled={exisitingLearningGoalData.aiEnabled}
+        />
         <Button
           text="Delete key concept"
           color={Button.ButtonColor.red}
@@ -69,6 +90,8 @@ export default function LearningGoalItem({deleteItem}) {
 
 LearningGoalItem.propTypes = {
   deleteItem: PropTypes.func,
+  exisitingLearningGoalData: PropTypes.object,
+  updateLearningGoal: PropTypes.func,
 };
 
 const styles = {

@@ -89,7 +89,9 @@ class ActiveSupport::TestCase
     CDO.stubs(:optimize_webpack_assets).returns(false)
     CDO.stubs(:use_my_apps).returns(true)
 
+    # Don't attempt to make actual AWS API calls, either, for the same reason
     AWS::S3.stubs(:cached_exists_in_bucket?).returns(true)
+    AWS::S3.stubs(:exists_in_bucket).returns(true)
   end
 
   teardown do
@@ -354,7 +356,7 @@ class ActiveSupport::TestCase
   #   class MyTest < ActiveSupport::TestCase
   #     freeze_time
   #     #...
-  def self.freeze_time(time=nil)
+  def self.freeze_time(time = nil)
     time ||= Time.now.utc.to_date + 9.hours
     setup do
       Timecop.freeze time
@@ -531,7 +533,7 @@ class ActionController::TestCase
     end
   end
 
-  def assert_sharing_meta_tags(opts={})
+  def assert_sharing_meta_tags(opts = {})
     # example:
     # <meta content="500177453358606" property="fb:app_id" />
     # <meta content="article" property="og:type" />

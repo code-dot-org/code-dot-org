@@ -335,7 +335,7 @@ Dashboard::Application.routes.draw do
       end
     end
 
-    resources :rubrics, only: [:edit, :new]
+    resources :rubrics, only: [:edit, :new, :create, :update]
 
     resources :course_offerings, only: [:edit, :update], param: 'key' do
       collection do
