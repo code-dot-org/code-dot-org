@@ -17,8 +17,8 @@ class Languages
     table.select(:locale_s).to_a
   end
 
-  cached def self.get_hoc_languages
-    table.select(:locale_s, :unique_language_s, :crowdin_code_s, :crowdin_name_s).where("crowdin_code_s != 'en'").to_a
+  cached def self.hoc_languages
+    table.select(:locale_s, :unique_language_s, :crowdin_code_s, :crowdin_name_s).to_a
   end
 
   cached def self.get_hoc_locale_by_unique_language(unique_language)
