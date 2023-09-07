@@ -760,15 +760,15 @@ class CourseOfferingTest < ActiveSupport::TestCase
   end
 
   test "can seed correct self paced pl id based on self paced pl key" do
-    course_offering = create :course_offering, key: 'course-offering-1', self_paced_pl_course_offering_id: 390
+    course_offering = create :course_offering, key: 'course-offering-1'
     self_paced_pl_course = create :course_offering, key: 'self-paced-test-course'
     serialization = course_offering.serialize
     serialization[:self_paced_pl_course_offering_key] = "self-paced-test-course"
 
     File.stubs(:read).returns(serialization.to_json)
 
-    new_course_offering_key = CourseOffering.seed_record("config/course_offerings/course-offering-1.json")
-    new_course_offering = CourseOffering.find_by(key: new_course_offering_key)
+    CourseOffering.seed_record("config/course_offerings/course-offering-1.json")
+    new_course_offering = CourseOffering.find_by(key: course_offering.key)
     assert_equal new_course_offering.self_paced_pl_course_offering_id,
       self_paced_pl_course.id
   end
