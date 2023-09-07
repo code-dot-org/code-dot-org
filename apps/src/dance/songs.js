@@ -51,14 +51,16 @@ export function fetchSignedCookies() {
 /**
  * Decide which song to select based on the song list and appOptions config.
  * @param songManifest
- * @param config {Object} appOptions config object
+ * @param options {Object} set of options that determine which song to select
  * @returns {String} song id to select
  */
-export function getSelectedSong(songManifest, config) {
+export function getSelectedSong(
+  songManifest,
+  {selectedSong, defaultSong, isProjectLevel, freePlay}
+) {
   // The selectedSong and defaultSong might not be present in the songManifest
   // in development mode, so just select the first song in the list instead.
   const songs = songManifest.map(song => song.id);
-  const {selectedSong, defaultSong, isProjectLevel, freePlay} = config.level;
   if (
     (isProjectLevel || freePlay) &&
     selectedSong &&
