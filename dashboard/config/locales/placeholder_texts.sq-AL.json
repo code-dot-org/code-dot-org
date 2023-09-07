@@ -157,6 +157,13 @@
         "courseE_Dogger_2": {
           "e8a10c04d72b2f135dabe360c4bdd534": "Ju fituar!"
         },
+        "courseE_aboutme_1_2021": {
+          "31ba97bb501bb1f5b448221be09bad32": "Kjo është Corgi im, Lollipop! Unë duhet t'i mësoj asaj se si të kodojë!",
+          "6f97975a0bda0c9219915161149cbb26": "Ky është kompjuteri im! Unë kodoj mbi të gjatë GJITHË kohës!",
+          "810896b14fc6615f0c76628b9b6a727e": "Kjo është mikja ime më e mirë Thuy! Ajo është vërtetë e mirë në sporte!",
+          "8e985f60f328934accd78e7649584840": "Akullorja është e preferuara ime!",
+          "b63151482630edd1589a9ac24d107c49": "Kjo jam unë! Rikki! Më pëlqen të kodoj, të rri me Thuy dhe të ha akullore!"
+        },
         "courseE_aboutme_3": {
           "ed076287532e86365e841e92bfc50d8c": "Përshëndetje Botë!"
         },
@@ -191,6 +198,7 @@
           "ed076287532e86365e841e92bfc50d8c": "Përshëndetje Botë!"
         },
         "courseE_aboutme_5_2021": {
+          "6ae99d4d2de5e3cbd29fec87ae7d76eb": "Hey!",
           "ed076287532e86365e841e92bfc50d8c": "Përshëndetje Botë!"
         },
         "courseE_playLab_scaffold1": {
@@ -210,22 +218,179 @@
           "30fcc1693fa8402931d13ac3a5f396fd": "shkruaj titullin këtu"
         },
         "courseF_apps_aquarium": {
-          "8a52e7a8d3b4c955d6f7927c6ba3fe72": "krijesë"
+          "0d3e73168beb875063ea0f0302fe32bd": "Cili peshk?",
+          "78574118d153534fd0925a2f5ca25e79": "Cila gjë?",
+          "795f3202b17cb6bc3d4b771d8c6c9eaf": "tjetër",
+          "83e4a96aed96436c621b9809e258b309": "peshk",
+          "8a52e7a8d3b4c955d6f7927c6ba3fe72": "krijesë",
+          "a1a2a07348784279a1e7a6f46dc7e353": "Çfarë do të shtonit?",
+          "caaf8264ca397dba2d35ef902bbbd953": "Cila krijesë?",
+          "f655df68ec33643278de7e69794e8d76": "Akuariumi Virtual"
         },
         "courseF_apps_aquarium2022": {
-          "8a52e7a8d3b4c955d6f7927c6ba3fe72": "krijesë"
+          "0d3e73168beb875063ea0f0302fe32bd": "Cili peshk?",
+          "78574118d153534fd0925a2f5ca25e79": "Cila gjë?",
+          "795f3202b17cb6bc3d4b771d8c6c9eaf": "tjetër",
+          "8a52e7a8d3b4c955d6f7927c6ba3fe72": "krijesë",
+          "a1a2a07348784279a1e7a6f46dc7e353": "Çfarë do të shtonit?",
+          "caaf8264ca397dba2d35ef902bbbd953": "Cila krijesë?",
+          "f655df68ec33643278de7e69794e8d76": "Akuariumi Virtual"
         },
         "courseF_apps_aquarium_-2022-2": {
-          "8a52e7a8d3b4c955d6f7927c6ba3fe72": "krijesë"
+          "0d3e73168beb875063ea0f0302fe32bd": "Cili peshk?",
+          "78574118d153534fd0925a2f5ca25e79": "Cila gjë?",
+          "795f3202b17cb6bc3d4b771d8c6c9eaf": "tjetër",
+          "8a52e7a8d3b4c955d6f7927c6ba3fe72": "krijesë",
+          "a1a2a07348784279a1e7a6f46dc7e353": "Çfarë do të shtonit?",
+          "caaf8264ca397dba2d35ef902bbbd953": "Cila krijesë?",
+          "f655df68ec33643278de7e69794e8d76": "Akuariumi Virtual"
+        },
+        "courseF_apps_card": {
+          "d1210f945885351b13feb9bbb868aeef": "Sa vjeç po bëhet?",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "pyetja ime",
+          "ff4d94eeb46da1dbec33fa9cfc2749ee": "Kush e ka ditëlindjen?"
+        },
+        "courseF_apps_card2022": {
+          "d1210f945885351b13feb9bbb868aeef": "Sa vjeç po bëhet?",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "pyetja ime",
+          "ff4d94eeb46da1dbec33fa9cfc2749ee": "Kush e ka ditëlindjen?"
+        },
+        "courseF_apps_card_-2022-2": {
+          "d1210f945885351b13feb9bbb868aeef": "Sa vjeç po bëhet?",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "pyetja ime",
+          "ff4d94eeb46da1dbec33fa9cfc2749ee": "Kush e ka ditëlindjen?"
+        },
+        "courseF_apps_chatbot": {
+          "05584ab56b744b51cd8c4a6e8b3a08ee": "Shkruani moshën tuaj:",
+          "13e575be866ecf5ac3dcbf61ab2048d7": "Sa vjeç jeni?",
+          "1f258d88a70309efc1435ef5daa277a0": "Faleminderit që biseduat me mua sot!",
+          "605f302ebc9f7fbacba60b15f551a633": "Cila është ngjyra juaj e preferuar?",
+          "6dfcc5e477ebd3e2c893b3fc86b2eb93": "Sa vjeç jeni gjithashtu!",
+          "91c4549fe2a5e9325c8f8d51afbb751b": "Shkruani ngjyrën tuaj të preferuar:",
+          "a72e7c5c68af0546e963e510297f5233": "Përshëndetje, unë jam X-9! Si e ke emrin?",
+          "ae096fbf24d913754b01a1601672bf62": " gjithashtu!",
+          "f0e5da70d264f312a1658d51c130b101": "Shkruaj emrin tënd."
+        },
+        "courseF_apps_chatbot2022": {
+          "05584ab56b744b51cd8c4a6e8b3a08ee": "Shkruani moshën tuaj:",
+          "1f258d88a70309efc1435ef5daa277a0": "Faleminderit që biseduat me mua sot!",
+          "605f302ebc9f7fbacba60b15f551a633": "Cila është ngjyra juaj e preferuar?",
+          "6dfcc5e477ebd3e2c893b3fc86b2eb93": "Sa vjeç jeni gjithashtu!",
+          "91c4549fe2a5e9325c8f8d51afbb751b": "Shkruani ngjyrën tuaj të preferuar:",
+          "a72e7c5c68af0546e963e510297f5233": "Përshëndetje, unë jam X-9! Si e ke emrin?",
+          "f0e5da70d264f312a1658d51c130b101": "Shkruaj emrin tënd."
+        },
+        "courseF_apps_chatbot_-2022-2": {
+          "05584ab56b744b51cd8c4a6e8b3a08ee": "Shkruani moshën tuaj:",
+          "1f258d88a70309efc1435ef5daa277a0": "Faleminderit që biseduat me mua sot!",
+          "605f302ebc9f7fbacba60b15f551a633": "Cila është ngjyra juaj e preferuar?",
+          "6dfcc5e477ebd3e2c893b3fc86b2eb93": "Sa vjeç jeni gjithashtu!",
+          "91c4549fe2a5e9325c8f8d51afbb751b": "Shkruani ngjyrën tuaj të preferuar:",
+          "a72e7c5c68af0546e963e510297f5233": "Përshëndetje, unë jam X-9! Si e ke emrin?",
+          "f0e5da70d264f312a1658d51c130b101": "Shkruaj emrin tënd."
         },
         "courseF_apps_collector": {
+          "077449fb290b51b9d70c9f2f3d3213bc": " sekondat",
+          "41f2b2212de0105c2a942ebb4a44e449": "Loja e madhe e koleksionistes!",
+          "490082498449bd20ff0199737dfa4916": "Zgjedhni llojin e lojës:",
           "e8a10c04d72b2f135dabe360c4bdd534": "Ju fituar!"
         },
         "courseF_apps_collector2022": {
+          "077449fb290b51b9d70c9f2f3d3213bc": " sekondat",
+          "41f2b2212de0105c2a942ebb4a44e449": "Loja e madhe e koleksionistes!",
+          "490082498449bd20ff0199737dfa4916": "Zgjedhni llojin e lojës:",
           "e8a10c04d72b2f135dabe360c4bdd534": "Ju fituar!"
         },
         "courseF_apps_collector_-2022-2": {
+          "077449fb290b51b9d70c9f2f3d3213bc": " sekondat",
+          "41f2b2212de0105c2a942ebb4a44e449": "Loja e madhe e koleksionistes!",
+          "490082498449bd20ff0199737dfa4916": "Zgjedhni llojin e lojës:",
           "e8a10c04d72b2f135dabe360c4bdd534": "Ju fituar!"
+        },
+        "courseF_apps_madlib": {
+          "2f6e9ffcbb531b9f8983aef3ae4242ac": "Shkruani një pjesë të trupit:",
+          "514b8d5320196898a9ced3efe0d4c802": "Futni një mbiemër:",
+          "5306eed2fd2c43fe033efd6016c0c38b": "-Gara këmbësh!",
+          "7c9fbd20ed3a7bcfad08351050ffe0ff": " lojëra.",
+          "88794317e8c695bbc7bc7d2f35792c7f": "Shkruani një objekt:",
+          "bf08dd3d1961874f13e77c936aad27e5": "Blank Space Stories",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "pyetja ime",
+          "e522ee28f39133b45497637539ff429b": "Shkruani një numër:",
+          "f6175c6f0b0bcfff0256286315f0eb7b": "Lojra festash"
+        },
+        "courseF_apps_madlib2022": {
+          "2f6e9ffcbb531b9f8983aef3ae4242ac": "Shkruani një pjesë të trupit:",
+          "514b8d5320196898a9ced3efe0d4c802": "Futni një mbiemër:",
+          "5306eed2fd2c43fe033efd6016c0c38b": "-Gara këmbësh!",
+          "7c9fbd20ed3a7bcfad08351050ffe0ff": " lojëra.",
+          "88794317e8c695bbc7bc7d2f35792c7f": "Shkruani një objekt:",
+          "bf08dd3d1961874f13e77c936aad27e5": "Blank Space Stories",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "pyetja ime",
+          "e522ee28f39133b45497637539ff429b": "Shkruani një numër:",
+          "f6175c6f0b0bcfff0256286315f0eb7b": "Lojra festash"
+        },
+        "courseF_apps_madlib_-2022-2": {
+          "2f6e9ffcbb531b9f8983aef3ae4242ac": "Shkruani një pjesë të trupit:",
+          "514b8d5320196898a9ced3efe0d4c802": "Futni një mbiemër:",
+          "5306eed2fd2c43fe033efd6016c0c38b": "-Gara këmbësh!",
+          "7c9fbd20ed3a7bcfad08351050ffe0ff": " lojëra.",
+          "88794317e8c695bbc7bc7d2f35792c7f": "Shkruani një objekt:",
+          "bf08dd3d1961874f13e77c936aad27e5": "Blank Space Stories",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "pyetja ime",
+          "e522ee28f39133b45497637539ff429b": "Shkruani një numër:",
+          "f6175c6f0b0bcfff0256286315f0eb7b": "Lojra festash"
+        },
+        "courseF_editable_card": {
+          "d1210f945885351b13feb9bbb868aeef": "Sa vjeç po bëhet?",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "pyetja ime",
+          "ff4d94eeb46da1dbec33fa9cfc2749ee": "Kush e ka ditëlindjen?"
+        },
+        "courseF_editable_card_-2022-2": {
+          "d1210f945885351b13feb9bbb868aeef": "Sa vjeç po bëhet?",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "pyetja ime",
+          "ff4d94eeb46da1dbec33fa9cfc2749ee": "Kush e ka ditëlindjen?"
+        },
+        "courseF_editable_chatbot": {
+          "05584ab56b744b51cd8c4a6e8b3a08ee": "Shkruani moshën tuaj:",
+          "1f258d88a70309efc1435ef5daa277a0": "Faleminderit që biseduat me mua sot!",
+          "605f302ebc9f7fbacba60b15f551a633": "Cila është ngjyra juaj e preferuar?",
+          "6dfcc5e477ebd3e2c893b3fc86b2eb93": "Sa vjeç jeni gjithashtu!",
+          "91c4549fe2a5e9325c8f8d51afbb751b": "Shkruani ngjyrën tuaj të preferuar:",
+          "a72e7c5c68af0546e963e510297f5233": "Përshëndetje, unë jam X-9! Si e ke emrin?",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "pyetja ime",
+          "f0e5da70d264f312a1658d51c130b101": "Shkruaj emrin tënd."
+        },
+        "courseF_editable_chatbot_-2022-2": {
+          "05584ab56b744b51cd8c4a6e8b3a08ee": "Shkruani moshën tuaj:",
+          "1f258d88a70309efc1435ef5daa277a0": "Faleminderit që biseduat me mua sot!",
+          "605f302ebc9f7fbacba60b15f551a633": "Cila është ngjyra juaj e preferuar?",
+          "6dfcc5e477ebd3e2c893b3fc86b2eb93": "Sa vjeç jeni gjithashtu!",
+          "91c4549fe2a5e9325c8f8d51afbb751b": "Shkruani ngjyrën tuaj të preferuar:",
+          "a72e7c5c68af0546e963e510297f5233": "Përshëndetje, unë jam X-9! Si e ke emrin?",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "pyetja ime",
+          "f0e5da70d264f312a1658d51c130b101": "Shkruaj emrin tënd."
+        },
+        "courseF_editable_madlib": {
+          "2f6e9ffcbb531b9f8983aef3ae4242ac": "Shkruani një pjesë të trupit:",
+          "514b8d5320196898a9ced3efe0d4c802": "Futni një mbiemër:",
+          "5306eed2fd2c43fe033efd6016c0c38b": "-Gara këmbësh!",
+          "7c9fbd20ed3a7bcfad08351050ffe0ff": " lojëra.",
+          "88794317e8c695bbc7bc7d2f35792c7f": "Shkruani një objekt:",
+          "bf08dd3d1961874f13e77c936aad27e5": "Blank Space Stories",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "pyetja ime",
+          "e522ee28f39133b45497637539ff429b": "Shkruani një numër:",
+          "f6175c6f0b0bcfff0256286315f0eb7b": "Lojra festash"
+        },
+        "courseF_editable_madlib_-2022-2": {
+          "2f6e9ffcbb531b9f8983aef3ae4242ac": "Shkruani një pjesë të trupit:",
+          "514b8d5320196898a9ced3efe0d4c802": "Futni një mbiemër:",
+          "5306eed2fd2c43fe033efd6016c0c38b": "-Gara këmbësh!",
+          "7c9fbd20ed3a7bcfad08351050ffe0ff": " lojëra.",
+          "88794317e8c695bbc7bc7d2f35792c7f": "Shkruani një objekt:",
+          "bf08dd3d1961874f13e77c936aad27e5": "Blank Space Stories",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "pyetja ime",
+          "e522ee28f39133b45497637539ff429b": "Shkruani një numër:",
+          "f6175c6f0b0bcfff0256286315f0eb7b": "Lojra festash"
         },
         "courseF_playlab_variables1a": {
           "0ab65920c84bec05a22e09feea7fe4ea": "shtyp tekstin këtu",
@@ -276,6 +441,98 @@
         "courseF_project_1": {
           "498cd895eb5a102c5aeb977e2b928dee": "Faleminderit!",
           "e8a10c04d72b2f135dabe360c4bdd534": "Ju fituar!"
+        },
+        "courseF_text_answer": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "pyetja ime"
+        },
+        "courseF_text_answer_-2022-2": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "pyetja ime"
+        },
+        "courseF_text_choice_color": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "pyetja ime"
+        },
+        "courseF_text_choice_color_-2022-2": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "pyetja ime"
+        },
+        "courseF_text_choice_conversation": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "pyetja ime"
+        },
+        "courseF_text_choice_conversation_-2022-2": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "pyetja ime"
+        },
+        "courseF_text_choice_events": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "pyetja ime"
+        },
+        "courseF_text_choice_events_-2022-2": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "pyetja ime"
+        },
+        "courseF_text_choice_freeplay": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "pyetja ime"
+        },
+        "courseF_text_choice_freeplay_-2022-2": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "pyetja ime"
+        },
+        "courseF_text_choice_multiprompt": {
+          "d1210f945885351b13feb9bbb868aeef": "Sa vjeç po bëhet?",
+          "ff4d94eeb46da1dbec33fa9cfc2749ee": "Kush e ka ditëlindjen?"
+        },
+        "courseF_text_choice_multiprompt_-2022-2": {
+          "d1210f945885351b13feb9bbb868aeef": "Sa vjeç po bëhet?",
+          "ff4d94eeb46da1dbec33fa9cfc2749ee": "Kush e ka ditëlindjen?"
+        },
+        "courseF_text_choice_title": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "pyetja ime"
+        },
+        "courseF_text_choice_title_-2022-2": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "pyetja ime"
+        },
+        "courseF_text_concat": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "pyetja ime"
+        },
+        "courseF_text_concat_-2022-2": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "pyetja ime"
+        },
+        "courseF_text_prompts": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "pyetja ime"
+        },
+        "courseF_text_prompts_-2022-2": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "pyetja ime"
+        },
+        "courseF_variables_card": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "pyetja ime"
+        },
+        "courseF_variables_card_-2022-2": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "pyetja ime"
+        },
+        "courseF_variables_card_finish": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "pyetja ime"
+        },
+        "courseF_variables_card_finish_-2022-2": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "pyetja ime"
+        },
+        "courseF_variables_chatbot": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "pyetja ime"
+        },
+        "courseF_variables_chatbot_-2022-2": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "pyetja ime"
+        },
+        "courseF_variables_chatbot_finish": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "pyetja ime"
+        },
+        "courseF_variables_chatbot_finish_-2022-2": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "pyetja ime"
+        },
+        "courseF_variables_madlib": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "pyetja ime"
+        },
+        "courseF_variables_madlib_-2022-2": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "pyetja ime"
+        },
+        "courseF_variables_madlib_finish": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "pyetja ime"
+        },
+        "courseF_variables_madlib_finish_-2022-2": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "pyetja ime"
         },
         "coursee_helloworld_freeplay": {
           "6cd3556deb0da54bca060b4c39479839": "Përshëndetje Botë!"

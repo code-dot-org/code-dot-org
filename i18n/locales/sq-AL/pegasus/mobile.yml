@@ -655,6 +655,8 @@
   dashboard_puzzle: "Enigmë"
   dashboard_question: "Pyetje"
   dashboard_correctness_correct: "E saktë"
+  dashboard_submission_submitted: "Dorëzuar"
+  dashboard_submission_in_progress: "Në proces"
   stats_hoc_2013_heading: 'Statistika mahnitëse nga Ora e Kodimit e vitit të kaluar. Në vetëm një javë:'
   stats_hoc_2013_image_alt: "Statistikat nga Ora e Kodimit 2013"
   dashboard_teacher: "Mësues"
@@ -756,6 +758,11 @@
   course2_name: "Kursi 2"
   course3_name: "Kursi 3"
   course4_name: "Kursi 4"
+  coursea-draft_name: Kursi A
+  coursea_name: "Kursi A"
+  coursea-2019_name: Kursi A (2019)
+  coursea-2020_name: Kursi A (2020)
+  coursea-2021_name: Kursi A (2021)
   courseb-2021_name: Kursi B (2021)
   coursec-2021_name: Kursi C (2021)
   coursef-2021_name: Kursi F (2021)
@@ -962,6 +969,12 @@
   playlab_shortdescription: "Krijo një histori ose bëj një lojë me Play Lab!"
   infinity_shortdescription: "Perdorni laboratorin e lojrave per te krijuar nje histori ose pafundesi personazhesh Disney."
   artist_shortdescription: "Vizato figura të hatashme dhe dizenjo me Artistin!"
+  coursea-2020_shortdescription_congrats: Mësoni bazat e shkencave kompjuterike dhe sigurisë në internet. Në fund të kursit, krijoni lojën ose historinë tuaj që mund të ndani.
+  courseb-2020_shortdescription_congrats: Mësoni bazat e shkencave kompjuterike dhe sigurisë në internet. Në fund të kursit, krijoni lojën ose historinë tuaj që mund të ndani.
+  coursea-2021_shortdescription_congrats: Mësoni bazat e shkencave kompjuterike dhe sigurisë në internet. Në fund të kursit, krijoni lojën ose historinë tuaj që mund të ndani.
+  courseb-2021_shortdescription_congrats: Mësoni bazat e shkencave kompjuterike dhe sigurisë në internet. Në fund të kursit, krijoni lojën ose historinë tuaj që mund të ndani.
+  coursea-2022_shortdescription_congrats: Mësoni bazat e shkencave kompjuterike dhe sigurisë në internet. Në fund të kursit, krijoni lojën ose historinë tuaj që mund të ndani.
+  courseb-2022_shortdescription_congrats: Mësoni bazat e shkencave kompjuterike dhe sigurisë në internet. Në fund të kursit, krijoni lojën ose historinë tuaj që mund të ndani.
   codeorg_longdescription: "Mëso konceptet bazë të Shkencës Kompjuterike me programimin drag dhe drop. Kjo është një lojë, tutorial i vetë drejtuar që paraqet leksione në video nga Bill Gates, Mark Zuckerberg, Angry Birds dhe Plants vs. Zombies. Mëso ciklet e përsëritur, kushtet dhe algoritmet bazë. E mundësuar ne 34 gjuhë."
   codeintl_longdescription: "Mëso konceptet bazë të Shkencës Kompjuterike me programimin drag dhe drop. Kjo është një lojë, tutorial i vetë drejtuar që paraqet leksione në video nga Bill Gates, Mark Zuckerberg, Angry Birds dhe Plants vs. Zombies. Mëso ciklet e përsëritur, kushtet dhe algoritmet bazë. E mundësuar ne 34 gjuhë."
   thinkersmithspanish_longdescription: "Mediante el uso de un \"Vocabulario Robot\" predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute; como la valiosa habilidad de depuraci&oacute;n."
