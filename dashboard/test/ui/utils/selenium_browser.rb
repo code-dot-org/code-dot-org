@@ -2,7 +2,7 @@ require 'selenium/webdriver'
 require 'webdrivers'
 
 module SeleniumBrowser
-  def self.local(headless=true, browser=:chrome)
+  def self.local(headless = true, browser = :chrome)
     browser = browser.to_sym
     options = {}
     case browser

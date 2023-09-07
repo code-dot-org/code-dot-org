@@ -48,13 +48,6 @@ Layout/MultilineMethodCallIndentation:
 Layout/MultilineOperationIndentation:
   Enabled: false
 
-# Offense count: 292
-# This cop supports safe auto-correction (--auto-correct).
-# Configuration parameters: EnforcedStyle.
-# SupportedStyles: space, no_space
-Layout/SpaceAroundEqualsInParameterDefault:
-  Enabled: false
-
 # Offense count: 858
 # This cop supports safe auto-correction (--auto-correct).
 Lint/AmbiguousRegexpLiteral:
