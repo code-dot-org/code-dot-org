@@ -12,7 +12,6 @@ FROM $CODE_ORG_DB_SEED as code.org-db-seed
 FROM ubuntu:22.04 as code.org-base
 ################################################################################
 
-
 ARG \
   USERNAME=code.org \
   UID=1000 \
@@ -25,10 +24,12 @@ ENV \
   AWS_PROFILE=cdo \
   SRC=${SRC}
 
-RUN \
+SHELL [ "/bin/sh", "-euxc" ]
+
+RUN <<EOF
   # Ideally install all apt packages here
-  apt-get -qq update && \
-  DEBIAN_FRONTEND=noninteractive \
+  apt-get -qq update
+  export DEBIAN_FRONTEND=noninteractive
   apt-get -qq -y install --no-install-recommends \
     autoconf \
     bison \
@@ -64,19 +65,19 @@ RUN \
     zlib1g-dev \
     zsh \
     # surpress noisy dpkg install/setup lines (errors & warnings still show)
-    > /dev/null && \
+    > /dev/null
   # 
   # Setup 'code.org' user and group
-  echo "${USERNAME} ALL=NOPASSWD: ALL" >> /etc/sudoers && \
-  groupadd -g ${UID} ${USERNAME} && \
-  useradd --system --create-home --no-log-init -s /bin/zsh -u ${UID} -g ${UID} ${USERNAME} && \
+  echo "${USERNAME} ALL=NOPASSWD: ALL" >> /etc/sudoers
+  groupadd -g ${UID} ${USERNAME}
+  useradd --system --create-home --no-log-init -s /bin/zsh -u ${UID} -g ${UID} ${USERNAME}
   # FIXME: why did I do this?
-  chown -R ${USERNAME} /usr/local && \
+  chown -R ${USERNAME} /usr/local
   #
   # Create ${SRC} directory
-  mkdir -p ${SRC} && \
-  chown ${UID}:${GID} ${SRC} && \
-  true
+  mkdir -p ${SRC}
+  chown ${UID}:${GID} ${SRC}
+EOF
 
 USER ${USERNAME}
 ENV HOME=/home/${USERNAME}
@@ -90,37 +91,36 @@ COPY --chown=${UID} \
   .ruby-version \
   ./
 
-RUN \
-  mkdir -p "$(rbenv root)"/plugins && \
-  git clone https://github.com/rbenv/ruby-build.git "$(rbenv root)"/plugins/ruby-build && \
-  rbenv install && \
-  true
+RUN <<EOF
+  mkdir -p "$(rbenv root)"/plugins
+  git clone https://github.com/rbenv/ruby-build.git "$(rbenv root)"/plugins/ruby-build
+  rbenv install
+EOF
 
 COPY --chown=${UID} \
   Gemfile \
   Gemfile.lock \
   ./
 
-RUN \
-  eval "$(rbenv init -)" && \
-  gem install bundler -v 2.3.22 && \
-  rbenv rehash && \
+RUN <<EOF
+  eval "$(rbenv init -)"
+  gem install bundler -v 2.3.22
+  rbenv rehash
   #
   # SETUP SOME HACK WORKAROUNDS FOR APPLE SILICON
   #
   # Running this lets us build on arm64 until staging is updated to use newer mini_racer gem
-  bundle config --local without staging test production levelbuilder && \
+  bundle config --local without staging test production levelbuilder
   # Linux+arm64 has a problem with 0.0.7.2 that MacOS+arm64 doesn't, hack an update in here for now
-  sed -i "s/gem 'unf_ext', '0.0.7.2'/gem 'unf_ext', '0.0.8.2'/g" Gemfile  && \
+  sed -i "s/gem 'unf_ext', '0.0.7.2'/gem 'unf_ext', '0.0.8.2'/g" Gemfile
   #
   # DONE HACK WORKAROUNDS FOR APPLE SILICON
-  true
+EOF
 
-RUN \
-#   --mount=type=cache,sharing=locked,uid=1000,gid=1000,target=${SRC}/vendor/cache \
-  eval "$(rbenv init -)" && \
-  bundle install --quiet && \
-  true
+RUN --mount=type=cache,sharing=locked,uid=1000,gid=1000,target=${SRC}/vendor/cache <<EOF
+  eval "$(rbenv init -)"
+  bundle install --quiet
+EOF
 
 ################################################################################
 FROM code.org-base as code.org-user-utils
@@ -131,42 +131,35 @@ ENV RAILS_ENV=${RAILS_ENV}
 
 WORKDIR ${HOME}
 
-RUN \
+RUN <<EOF
   #
   # Install Node
-  npm install -g n && \
-  n ${NODE_VERSION} && \
-  hash -r && \
+  npm install -g n
+  n ${NODE_VERSION}
+  hash -r
   #
   # Install yarn
-  npm install -g yarn@${YARN_VERSION} && \
+  npm install -g yarn@${YARN_VERSION}
   #
   # Install oh-my-zsh
-  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" && \
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
   #
   # Install AWSCLI
-  if [ $(uname -m) = "aarch64" ]; then \
-    curl -s "https://awscli.amazonaws.com/awscli-exe-linux-aarch64.zip" -o "awscliv2.zip"; \
-  else \
-    curl -s "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"; \
-  fi && \
-  unzip -qq awscliv2.zip && \
-  ./aws/install && \
-  rm awscliv2.zip && \
+  if [ $(uname -m) = "aarch64" ]; then
+    curl -s "https://awscli.amazonaws.com/awscli-exe-linux-aarch64.zip" -o "awscliv2.zip";
+  else
+    curl -s "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip";
+  fi
+  unzip -qq awscliv2.zip
+  ./aws/install
+  rm awscliv2.zip
   #
   # Add CHROME_BIN env var to bashrc
-  echo '# Chromium Binary\nexport CHROME_BIN=/usr/bin/chromium-browser' | tee -a ${HOME}/.bashrc ${HOME}/.zshrc && \
+  echo '# Chromium Binary\nexport CHROME_BIN=/usr/bin/chromium-browser' | tee -a ${HOME}/.bashrc ${HOME}/.zshrc
   #
   # Setup rbenv & ruby-build
-  echo 'eval "$(rbenv init -)"' | tee -a ${HOME}/.bashrc ${HOME}/.zshrc && \
-  true
-
-
-# # Install gcloud (line copied from https://cloud.google.com/sdk/docs/install#deb, search for "Docker Tip")
-# USER root
-# RUN apt-get install -y gnupg
-# RUN echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] http://packages.cloud.google.com/apt cloud-sdk main" | tee -a /etc/apt/sources.list.d/google-cloud-sdk.list && curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key --keyring /usr/share/keyrings/cloud.google.gpg  add - && apt-get update -y && apt-get install google-cloud-cli -y
-# USER ${USERNAME}
+  echo 'eval "$(rbenv init -)"' | tee -a ${HOME}/.bashrc ${HOME}/.zshrc
+EOF
 
 WORKDIR ${SRC}
 
@@ -188,12 +181,13 @@ RUN \
   # Instuct Docker to maintain a build cache for yarn package downloads
   # so we don't have to re-download npms whenever package.json changes
   --mount=type=cache,sharing=locked,uid=1000,gid=1000,target=${HOME}/.cache/yarn \
+<<EOF
   #
   # Install apps/node_modules using yarn
-  cd apps && \
-  yarn install --frozen-lockfile --ignore-scripts && \
-  ls -lA | grep node && \
-  true
+  cd apps
+  yarn install --frozen-lockfile --ignore-scripts
+  ls -lA | grep node
+EOF
 
 ################################################################################
 FROM code.org-user-utils
@@ -265,4 +259,13 @@ COPY --chown=${UID} --from=code.org-rbenv ${SRC}/Gemfile ${SRC}/Gemfile
 # accomplish `eval $(rbenv init -)` that works for kubectl exec.
 ENV PATH=${HOME}/.rbenv/shims:${PATH}
 
-CMD [ "./bin/dashboard-server" ]
+# COPY <<EOF ./docker-cmd.sh
+# #!/bin/zsh
+
+# echo "Starting dashboard-server..."
+
+# exec ./bin/dashboard-server
+# EOF
+
+# CMD [ "./bin/dashboard-server" ]
+CMD [ "./docker-cmd.sh" ]
