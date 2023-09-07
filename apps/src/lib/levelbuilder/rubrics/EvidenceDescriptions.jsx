@@ -24,7 +24,6 @@ export default function EvidenceDescriptions({
         evidenceLevelData={
           learningGoalData.learningGoalEvidenceLevelsAttributes[3]
         }
-        understanding={3}
         updateLearningGoal={updateLearningGoal}
       />
       <EvidenceDescriptionsRow
@@ -33,7 +32,6 @@ export default function EvidenceDescriptions({
         evidenceLevelData={
           learningGoalData.learningGoalEvidenceLevelsAttributes[2]
         }
-        understanding={2}
         updateLearningGoal={updateLearningGoal}
       />
       <EvidenceDescriptionsRow
@@ -42,7 +40,6 @@ export default function EvidenceDescriptions({
         evidenceLevelData={
           learningGoalData.learningGoalEvidenceLevelsAttributes[1]
         }
-        understanding={1}
         updateLearningGoal={updateLearningGoal}
       />
       <EvidenceDescriptionsRow
@@ -51,7 +48,6 @@ export default function EvidenceDescriptions({
         evidenceLevelData={
           learningGoalData.learningGoalEvidenceLevelsAttributes[0]
         }
-        understanding={0}
         updateLearningGoal={updateLearningGoal}
       />
     </div>
