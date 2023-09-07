@@ -42,6 +42,7 @@ npm-debug.log
 /apps/storybook-deploy
 /apps/test/entry-tests.js
 /apps/test/interpreter/test-results-new*.json
+/apps/.yarn/
 /apps/yarn-error.log
 /aws/.code-studio-built
 /aws/.code-studio-commit-built
