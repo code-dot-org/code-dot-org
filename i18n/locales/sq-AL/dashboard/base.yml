@@ -510,7 +510,7 @@ sq:
     notes: 'Asnjë video? Shfaq shënimet.'
     notes_coming_soon: 'Shënimet për këtë video vijnë së shpejti.'
     autoplay_option: 'Luaj videot automatikisht'
-    download: 'Shkarko Videon'
+    download: 'Shkarko videon'
     label: 'Video'
   compatibility:
     upgrade:
@@ -800,6 +800,7 @@ sq:
   no_script_access_student: "Ju nuk keni qasje në këtë njësi. Ju lutemi pyesni mësimdhënësin tuaj se në cilën njësi duhet të jeni."
   return_unit_overview: 'Shko në njësinë e rishikimit'
   return_course_overview: 'Shko në njësinë e rishikimit'
+  view_all_units: 'Shiko të gjitha njësitë'
   pd:
     form_labels:
       email: 'Email'

@@ -5,7 +5,7 @@ require 'yaml'
 
 module TextRender
   class Locals
-    def initialize(locals={})
+    def initialize(locals = {})
       @locals = locals
       @base = OpenStruct.new(@locals)
     end
@@ -29,7 +29,7 @@ module TextRender
       "/images/fit-320/avatars/#{File.basename(path)}"
     end
 
-    def partial(uri, locals={})
+    def partial(uri, locals = {})
       locals = @locals.merge(locals)
 
       search_bases = []
@@ -46,11 +46,11 @@ module TextRender
     end
   end
 
-  def self.r(engine, template, locals={})
+  def self.r(engine, template, locals = {})
     engine.new(template).result(Locals.new(locals).instance_eval {binding})
   end
 
-  def self.f(engine, path, locals={})
+  def self.f(engine, path, locals = {})
     r(engine, File.read(path), locals)
   end
 
@@ -62,16 +62,16 @@ module TextRender
       @engine = ERB.new(template)
     end
 
-    def result(binding=nil)
+    def result(binding = nil)
       @engine.result(binding)
     end
   end
 
-  def self.erb(s, locals={})
+  def self.erb(s, locals = {})
     r(ErbEngine, s, locals)
   end
 
-  def self.erb_file(path, locals={})
+  def self.erb_file(path, locals = {})
     f(ErbEngine, path, locals)
   end
 
@@ -96,16 +96,16 @@ module TextRender
       @engine = Haml::Engine.new(template)
     end
 
-    def result(binding=nil)
+    def result(binding = nil)
       @engine.render(binding)
     end
   end
 
-  def self.haml(s, locals={})
+  def self.haml(s, locals = {})
     r(HamlEngine, s, locals)
   end
 
-  def self.haml_file(path, locals={})
+  def self.haml_file(path, locals = {})
     f(HamlEngine, path, locals)
   end
 
@@ -159,16 +159,16 @@ module TextRender
       )
     end
 
-    def result(binding=nil)
+    def result(binding = nil)
       @engine.render(@template.result(binding))
     end
   end
 
-  def self.markdown(s, locals={})
+  def self.markdown(s, locals = {})
     r(MarkdownEngine, s, locals)
   end
 
-  def self.markdown_file(path, locals={})
+  def self.markdown_file(path, locals = {})
     f(MarkdownEngine, path, locals)
   end
 
@@ -186,12 +186,12 @@ module TextRender
       )
     end
 
-    def result(binding=nil)
+    def result(binding = nil)
       @engine.render(@template.result(binding))
     end
   end
 
-  def self.safe_markdown(s, locals={})
+  def self.safe_markdown(s, locals = {})
     r(SafeMarkdownEngine, s, locals)
   end
 
@@ -203,19 +203,19 @@ module TextRender
       @template = ErbEngine.new(template)
     end
 
-    def result(binding=nil)
+    def result(binding = nil)
       YAML.safe_load(@template.result(binding))
     end
   end
 
-  def self.yaml(s, locals={})
+  def self.yaml(s, locals = {})
     r(YamlEngine, s, locals)
   end
 
   #
   # General
   #
-  def self.file(path, locals={})
+  def self.file(path, locals = {})
     engine = {
       '.haml' => HamlEngine,
       '.html' => ErbEngine,

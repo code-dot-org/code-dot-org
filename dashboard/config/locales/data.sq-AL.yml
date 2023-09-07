@@ -175,18 +175,18 @@ sq:
           nivelin që dëshiron të krijosh. Shtyp "Run" kur të jesh gati.
         applab_ec_simple: Krijo aplikacionin tënd duke përdorur blloqet në toolbox.
         jigsaw_1: Kliko bllokun
-        jigsaw_10: Rregullo blloqet për të formuar imazhin
-        jigsaw_11: Vendos këto blloqe sipas numrit
-        jigsaw_12: Vendos këto blloqe sipas numrit
+        jigsaw_10: Bashkoni blloqet për të formuar imazhin
+        jigsaw_11: Vendosni këto blloqe në rend sipas numrit
+        jigsaw_12: Vendosni këto blloqe në rend sipas numrit
         jigsaw_13: Rregullo puzzle-in!
         jigsaw_2: Tërhiqeni bllokun te objektivi
-        jigsaw_3: Rregullo blloqet për të formuar imazhin
-        jigsaw_4: Rregullo blloqet për të formuar imazhin
-        jigsaw_5: Rregullo blloqet për të formuar imazhin
-        jigsaw_6: Rregullo blloqet për të formuar imazhin
-        jigsaw_7: Rregullo blloqet për të formuar imazhin
-        jigsaw_8: Rregullo blloqet për të formuar imazhin
-        jigsaw_9: Rregullo blloqet për të formuar imazhin
+        jigsaw_3: Bashkoni blloqet për të formuar imazhin
+        jigsaw_4: Bashkoni blloqet për të formuar imazhin
+        jigsaw_5: Bashkoni blloqet për të formuar imazhin
+        jigsaw_6: Bashkoni blloqet për të formuar imazhin
+        jigsaw_7: Bashkoni blloqet për të formuar imazhin
+        jigsaw_8: Bashkoni blloqet për të formuar imazhin
+        jigsaw_9: Bashkoni blloqet për të formuar imazhin
         maze_2_1: Ky derrkuci po më bezdis. Më ndihmo t'a gjej!
         maze_2_10: Në rregull, edhe një herë të fundit për tu praktikuar - a mund
           ta zgidhësh këtë duke përdorur vetëm 4 blloqe?
@@ -727,13 +727,14 @@ sq:
         C4_variables_artist: Variablat - Artist
         C4_variables_playlab: Variablat - Play Lab
         CDEF_Video_SpritesInAction: Sprites në veprim
+        CSF_Going_Places_Safely: Lagja ime në Internet
         CSF_SpriteLab_Intro_v2: Prezantimi i Sprite Lab
         CSF_SpriteLab_SpritesInAction_CDEF: Sprites në veprim
         CSF_SpriteLab_SpritesInAction_v2: Sprites në veprim
         CSF_debugging_k1_blocks: Debugging
         CSF_debugging_text_blocks: Debugging
         CSF_loops_AB: cikle
-        CSF_maze_intro_k1_blocks: Hyrje Code Studio
+        CSF_maze_intro_k1_blocks: Hyrje në Code Studio
         CSF_maze_intro_text_blocks: Hyrje Code Studio
         CSF_my_robotic_friends: Shokët e mi robotik
         Unplug1: Çfarë është CS?
@@ -751,6 +752,8 @@ sq:
         csd_applab_parameters: Funksionet me parametra
         csd_debugging: Debugging
         csd_pair_programming: Programim në çift
+        csd_u6_input_output: Inputet dhe Outputet
+        csf_my_online_neighborhood_2020: Lagja ime në Internet
         csp_applab_functions: Hyrja në Funksione
         csp_applab_functions_parameters: Funksionet me parametra
         csp_applab_loops: cikle

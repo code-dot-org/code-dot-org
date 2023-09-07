@@ -110,7 +110,7 @@ module Pd::Foorm
       questions_to_summarize,
       split_by_facilitator,
       facilitators,
-      facilitator_id=nil
+      facilitator_id = nil
     )
       ws_submissions, form_submissions, forms = get_raw_data_for_workshop(workshop_ids, facilitator_id)
       parsed_forms, summarized_answers = parse_and_summarize_forms(ws_submissions, form_submissions, forms)
@@ -140,7 +140,7 @@ module Pd::Foorm
     # @param workshop id, the workshop to get data from
     # @return array of [WorkshopSurveyFoormSubmissions, FoormSubmissions, FoormForms]
     #   for the given workshop id.
-    def self.get_raw_data_for_workshop(workshop_id, facilitator_id=nil)
+    def self.get_raw_data_for_workshop(workshop_id, facilitator_id = nil)
       ws_submissions = Pd::WorkshopSurveyFoormSubmission.
         where(pd_workshop_id: workshop_id).
         joins(:foorm_submission).
@@ -165,7 +165,7 @@ module Pd::Foorm
     #   with this id
     # @return {facilitator_id: facilitator_name,...} object with data
     # for each facilitator for the workshop specified
-    def self.get_formatted_facilitators_for_workshop(workshop_id, facilitator_id_filter=nil)
+    def self.get_formatted_facilitators_for_workshop(workshop_id, facilitator_id_filter = nil)
       facilitators_formatted = {}
       if facilitator_id_filter
         facilitators_formatted[facilitator_id_filter] = User.find(facilitator_id_filter).name

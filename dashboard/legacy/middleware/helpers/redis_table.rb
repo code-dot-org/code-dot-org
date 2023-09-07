@@ -46,7 +46,7 @@ class RedisTable
   # @param [Hash] value The hash for the new row.
   # @param [String] ignored_ip Unused, for compatability with other table apis.
   # @return [Hash] The inserted value, including the new :id field.
-  def insert(value, ignored_ip=nil)
+  def insert(value, ignored_ip = nil)
     new_id = next_id
     value = merge_ids(value, new_id, SecureRandom.uuid)
     @props.set(row_key(new_id), value.to_json)
@@ -128,7 +128,7 @@ class RedisTable
   # @param [Integer] id The id of the row to update.
   # @param [Hash] hash The updated hash.
   # @param [String] ignored_ip Unused, for compatability with other table apis.
-  def update(id, hash, ignored_ip=nil)
+  def update(id, hash, ignored_ip = nil)
     original_hash = @props.to_hash[row_key(id)]
     raise NotFound, "row `#{id}` not found in `#{@table_name}` table" unless original_hash
     hash = merge_ids(hash, id, JSON.parse(original_hash)['uuid'])

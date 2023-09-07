@@ -1014,7 +1014,7 @@ module LevelsHelper
   #   is higher resolution
   # @returns [LevelSourceImage] A level source image, or nil if one was not
   # created or found.
-  def find_or_create_level_source_image(level_image, level_source, upgrade=false)
+  def find_or_create_level_source_image(level_image, level_source, upgrade = false)
     level_source_image = nil
     # Store the image only if the image is set, and either the image has not been
     # saved or the saved image is smaller than the provided image
