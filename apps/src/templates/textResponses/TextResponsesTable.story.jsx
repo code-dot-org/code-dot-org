@@ -1,5 +1,5 @@
 import React from 'react';
-import TextResponsesTable from './TextResponsesTable';
+import {UnconnectedTextResponsesTable as TextResponsesTable} from './TextResponsesTable';
 
 export default {
   title: 'TextResponsesTable',
