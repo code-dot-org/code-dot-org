@@ -143,7 +143,7 @@ class SectionProgress extends Component {
     const lessons = scriptData ? scriptData.lessons : [];
     const scriptWithStandardsSelected =
       levelDataInitialized && scriptData.hasStandards;
-    const progressTableViewEnabled =
+    const showProgressTable =
       levelDataInitialized &&
       (currentView === ViewType.SUMMARY || currentView === ViewType.DETAIL);
     const standardsStyle =
@@ -174,15 +174,14 @@ class SectionProgress extends Component {
           )}
         </div>
         <div style={styles.topRowContainer}>
-          {progressTableViewEnabled &&
-            !!DCDO.get('family-name-features', false) && (
-              <SortByNameDropdown
-                selectStyles={styles.sortOrderSelect}
-                sectionId={sectionId}
-                unitName={scriptData?.title}
-                source={SECTION_PROGRESS}
-              />
-            )}
+          {showProgressTable && !!DCDO.get('family-name-features', false) && (
+            <SortByNameDropdown
+              selectStyles={styles.sortOrderSelect}
+              sectionId={sectionId}
+              unitName={scriptData?.title}
+              source={SECTION_PROGRESS}
+            />
+          )}
           {levelDataInitialized && <ProgressViewHeader />}
         </div>
 
@@ -194,9 +193,7 @@ class SectionProgress extends Component {
               className="fa-pulse fa-3x"
             />
           )}
-          {progressTableViewEnabled && (
-            <ProgressTableView currentView={currentView} />
-          )}
+          {showProgressTable && <ProgressTableView currentView={currentView} />}
           {levelDataInitialized && currentView === ViewType.STANDARDS && (
             <div id="uitest-standards-view" style={standardsStyle}>
               <StandardsView
@@ -209,6 +206,8 @@ class SectionProgress extends Component {
     );
   }
 }
+
+const sortOrderMargin = 10;
 
 const styles = {
   heading: {
@@ -241,8 +240,8 @@ const styles = {
     textAlign: 'center',
   },
   sortOrderSelect: {
-    marginRight: 10,
-    width: parseInt(styleConstants.STUDENT_LIST_WIDTH) - 10,
+    marginRight: sortOrderMargin,
+    width: parseInt(styleConstants.STUDENT_LIST_WIDTH) - sortOrderMargin,
   },
 };
 
