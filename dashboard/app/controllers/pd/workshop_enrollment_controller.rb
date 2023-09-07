@@ -174,7 +174,7 @@ class Pd::WorkshopEnrollmentController < ApplicationController
   end
 
   # Gets the workshop enrollment associated with the current user id or email used for
-  # enrollments. Otherwise returns a new enrollment for that user.
+  # enrollments if one exists. Otherwise returns a new enrollment for that user.
   private def get_workshop_user_enrollment
     @workshop.enrollments.where(
       'user_id = ? OR email = ?', current_user.id, current_user.email_for_enrollments
