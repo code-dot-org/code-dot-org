@@ -4,7 +4,6 @@ import {Heading6} from '@cdo/apps/componentLibrary/typography';
 import EvidenceDescriptionsRow from './EvidenceDescriptionsRow';
 
 export default function EvidenceDescriptions({
-  isAiEnabled,
   learningGoalData,
   updateLearningGoal,
 }) {
@@ -20,7 +19,7 @@ export default function EvidenceDescriptions({
         </Heading6>
       </div>
       <EvidenceDescriptionsRow
-        isAiEnabled={isAiEnabled}
+        isAiEnabled={learningGoalData.aiEnabled}
         evidenceLabel={'Extensive Evidence'}
         evidenceLevelData={
           learningGoalData.learningGoalEvidenceLevelsAttributes[3]
@@ -29,7 +28,7 @@ export default function EvidenceDescriptions({
         updateLearningGoal={updateLearningGoal}
       />
       <EvidenceDescriptionsRow
-        isAiEnabled={isAiEnabled}
+        isAiEnabled={learningGoalData.aiEnabled}
         evidenceLabel={'Convincing Evidence'}
         evidenceLevelData={
           learningGoalData.learningGoalEvidenceLevelsAttributes[2]
@@ -38,7 +37,7 @@ export default function EvidenceDescriptions({
         updateLearningGoal={updateLearningGoal}
       />
       <EvidenceDescriptionsRow
-        isAiEnabled={isAiEnabled}
+        isAiEnabled={learningGoalData.aiEnabled}
         evidenceLabel={'Limited Evidence'}
         evidenceLevelData={
           learningGoalData.learningGoalEvidenceLevelsAttributes[1]
@@ -47,7 +46,7 @@ export default function EvidenceDescriptions({
         updateLearningGoal={updateLearningGoal}
       />
       <EvidenceDescriptionsRow
-        isAiEnabled={isAiEnabled}
+        isAiEnabled={learningGoalData.aiEnabled}
         evidenceLabel={'No Evidence'}
         evidenceLevelData={
           learningGoalData.learningGoalEvidenceLevelsAttributes[0]
@@ -60,7 +59,6 @@ export default function EvidenceDescriptions({
 }
 
 EvidenceDescriptions.propTypes = {
-  isAiEnabled: PropTypes.bool,
   learningGoalData: PropTypes.object,
   updateLearningGoal: PropTypes.func,
 };

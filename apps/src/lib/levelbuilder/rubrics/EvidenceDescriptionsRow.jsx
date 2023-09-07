@@ -5,7 +5,6 @@ export default function EvidenceDescriptionsRow({
   isAiEnabled,
   evidenceLabel,
   evidenceLevelData,
-  understanding,
   updateLearningGoal,
 }) {
   const handleTeacherDescriptionChange = event => {
@@ -13,7 +12,7 @@ export default function EvidenceDescriptionsRow({
       evidenceLevelData.learningGoalId,
       'learningGoalEvidenceLevelsAttributes',
       event.target.value,
-      understanding,
+      evidenceLevelData.understanding,
       'teacherDescription'
     );
   };
@@ -23,7 +22,7 @@ export default function EvidenceDescriptionsRow({
       evidenceLevelData.learningGoalId,
       'learningGoalEvidenceLevelsAttributes',
       event.target.value,
-      understanding,
+      evidenceLevelData.understanding,
       'aiPrompt'
     );
   };
@@ -52,7 +51,6 @@ EvidenceDescriptionsRow.propTypes = {
   isAiEnabled: PropTypes.bool,
   evidenceLabel: PropTypes.string,
   evidenceLevelData: PropTypes.object,
-  understanding: PropTypes.number,
   updateLearningGoal: PropTypes.func,
 };
 

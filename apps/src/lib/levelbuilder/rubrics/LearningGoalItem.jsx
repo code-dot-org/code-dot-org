@@ -73,8 +73,6 @@ export default function LearningGoalItem({
       </div>
       <div style={styles.activityBody}>
         <EvidenceDescriptions
-          // TODO: Refactor so you just pass in existing LEarningGoalData
-          isAiEnabled={exisitingLearningGoalData.aiEnabled}
           learningGoalData={exisitingLearningGoalData}
           updateLearningGoal={updateLearningGoal}
         />
