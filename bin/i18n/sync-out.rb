@@ -16,7 +16,6 @@ require 'tempfile'
 require 'yaml'
 require 'active_support/core_ext/object/blank'
 
-require_relative 'hoc_sync_utils'
 require_relative 'i18n_script_utils'
 require_relative 'redact_restore_utils'
 require_relative 'utils/malformed_i18n_reporter'
@@ -29,12 +28,12 @@ module I18n
     def self.perform
       puts "Sync out starting"
       I18n::Resources::Apps.sync_out
+      I18n::Resources::Pegasus.sync_out
       rename_from_crowdin_name_to_locale
       restore_redacted_files
       distribute_translations
       restore_markdown_headers
       Services::I18n::CurriculumSyncUtils.sync_out
-      HocSyncUtils.sync_out
       puts "updating TTS I18n (should usually take 2-3 minutes, may take up to 15 if there are a whole lot of translation updates)"
       I18nScriptUtils.with_synchronous_stdout do
         I18nScriptUtils.run_standalone_script "dashboard/scripts/update_tts_i18n.rb"
@@ -461,8 +460,10 @@ module I18n
           puts "Error parsing yaml header path=#{path}"
           raise exception
         end
-        I18nScriptUtils.sanitize_header!(header)
-        restored_header = source_header.merge(header)
+
+        sanitized_header = I18nScriptUtils.sanitize_markdown_header(header)
+        restored_header = source_header.merge(sanitized_header)
+
         I18nScriptUtils.write_markdown_with_header(content, restored_header, path)
       end
     end
