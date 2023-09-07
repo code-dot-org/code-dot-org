@@ -64,7 +64,7 @@ class StatsTable extends Component {
   getColumns = sortable => {
     const columns = [this.nameColumn(sortable)];
 
-    if (!!DCDO.get('family-name-features-p3', false)) {
+    if (!!DCDO.get('family-name-stats-tab', false)) {
       if (this.props.participantType === 'student') {
         // Only in non-PL sections.
         columns.push(this.familyNameColumn(sortable));
