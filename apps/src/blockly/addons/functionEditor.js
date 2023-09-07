@@ -2,11 +2,14 @@ import {
   ObservableProcedureModel,
   ProcedureBase,
 } from '@blockly/block-shareable-procedures';
+import {flyoutCategory as functionsFlyoutCategory} from '../customBlocks/googleBlockly/proceduresBlocks';
+import {flyoutCategory as behaviorsFlyoutCategory} from '../customBlocks/googleBlockly/behaviorBlocks';
 import {
   MODAL_EDITOR_ID,
   MODAL_EDITOR_CLOSE_ID,
   MODAL_EDITOR_DELETE_ID,
   MODAL_EDITOR_NAME_INPUT_ID,
+  MODAL_EDITOR_DESCRIPTION_INPUT_ID,
 } from './functionEditorConstants';
 
 // This class is a work in progress. It is used for the modal function editor,
@@ -58,10 +61,11 @@ export default class FunctionEditor {
 
     // Description handler
     this.functionDescriptionInput = document.getElementById(
-      'functionDescriptionText'
+      MODAL_EDITOR_DESCRIPTION_INPUT_ID
     );
-    this.functionDescriptionInput.addEventListener('input', () => {
-      // TODO: Save the description to the procedure model
+    this.functionDescriptionInput.addEventListener('input', e => {
+      this.block.description = e.target.value;
+      this.updateHiddenDefinitionDescription();
     });
 
     // Delete handler
@@ -69,16 +73,14 @@ export default class FunctionEditor {
       .getElementById(MODAL_EDITOR_DELETE_ID)
       .addEventListener('click', this.handleDelete.bind(this));
 
-    // Main workspace toolbox procedure category callback
-    Blockly.mainBlockSpace.registerToolboxCategoryCallback('PROCEDURE', () =>
-      this.flyoutCategory(Blockly.mainBlockSpace, true)
-    );
-
     // Editor workspace toolbox procedure category callback
     // we have to pass the main ws so that the correct procedures are populated
     // false to not show the new function button inside the modal editor
     this.editorWorkspace.registerToolboxCategoryCallback('PROCEDURE', () =>
-      this.flyoutCategory(Blockly.mainBlockSpace, false)
+      functionsFlyoutCategory(Blockly.mainBlockSpace, true)
+    );
+    this.editorWorkspace.registerToolboxCategoryCallback('Behavior', () =>
+      behaviorsFlyoutCategory(Blockly.mainBlockSpace, true)
     );
 
     // Set up the "new procedure" button in the toolbox
@@ -127,7 +129,6 @@ export default class FunctionEditor {
     Blockly.Events.enable();
 
     this.nameInput.value = procedure.getName();
-    // TODO: populate description
 
     this.dom.style.display = 'block';
     Blockly.common.svgResize(this.editorWorkspace);
@@ -169,6 +170,7 @@ export default class FunctionEditor {
         this.editorWorkspace
       );
     }
+    this.functionDescriptionInput.value = this.block.description || '';
   }
 
   /**
@@ -196,7 +198,7 @@ export default class FunctionEditor {
     return name;
   }
 
-  newProcedureCallback() {
+  newProcedureCallback = () => {
     const name = this.getNameForNewFunction();
     const hiddenProcedure = new ObservableProcedureModel(
       Blockly.getHiddenDefinitionWorkspace(),
@@ -233,7 +235,7 @@ export default class FunctionEditor {
     Blockly.Events.enable();
 
     this.showForFunction(hiddenProcedure);
-  }
+  };
 
   handleDelete() {
     // delete all caller blocks from the procedure workspace
@@ -321,45 +323,6 @@ export default class FunctionEditor {
     return returnValue;
   }
 
-  /**
-   * Constructs the blocks required by the flyout for the procedure category.
-   * Modeled after core Blockly procedures flyout category, but excludes unwanted blocks.
-   * Derived from core Google Blockly:
-   * https://github.com/google/blockly/blob/5a23c84e6ef9c0b2bbd503ad9f58fa86db1232a8/core/procedures.ts#L202-L287
-   * @param {WorkspaceSvg} workspace The workspace containing procedures.
-   * @returns an array of XML block elements
-   */
-  // Equivalent to blockly-samples registerToolboxCategoryCallback->modalProceduresToolboxCallback
-  flyoutCategory(workspace, includeNewButton = true) {
-    const blockList = [];
-    if (includeNewButton) {
-      blockList.push({
-        kind: 'button',
-        text: 'Create a Function',
-        callbackKey: 'newProcedureCallback',
-      });
-    }
-
-    // Get all the procedures from the workspace and create call blocks for them
-    workspace
-      .getProcedureMap()
-      .getProcedures()
-      .forEach(procedure => blockList.push(this.createCallBlock(procedure)));
-    return blockList;
-  }
-
-  createCallBlock(procedure) {
-    const name = procedure.getName();
-    return {
-      kind: 'block',
-      type: 'procedures_callnoreturn',
-      extraState: {
-        name: name,
-        id: procedure.getId(),
-      },
-    };
-  }
-
   // Copy all procedure models from the hidden definition workspace to the editor workspace,
   // if they are not already present in the editor workspace.
   // This is needed when the hidden definition workspace is initialized with at least one
@@ -389,5 +352,17 @@ export default class FunctionEditor {
       procedure.getName(),
       procedure.getId()
     );
+  }
+
+  updateHiddenDefinitionDescription() {
+    const topBlocks = Blockly.getHiddenDefinitionWorkspace().getTopBlocks();
+    const blockToUpdate = topBlocks.find(
+      topBlock =>
+        topBlock.getProcedureModel().getId() ===
+        this.block.getProcedureModel().getId()
+    );
+    if (blockToUpdate) {
+      blockToUpdate.description = this.block.description;
+    }
   }
 }

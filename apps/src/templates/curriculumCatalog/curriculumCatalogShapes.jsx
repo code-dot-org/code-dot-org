@@ -10,4 +10,5 @@ export const curriculumDataShape = PropTypes.shape({
   school_subject: PropTypes.string,
   device_compatibility: PropTypes.string,
   course_version_path: PropTypes.string,
+  marketing_initiative: PropTypes.string,
 });

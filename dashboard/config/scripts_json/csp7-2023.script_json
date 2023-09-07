@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-08-16 12:49:41 UTC",
+    "serialized_at": "2023-08-30 22:06:08 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -3593,11 +3593,9 @@
     },
     {
       "name": "Code.org CSP Topic Coverage",
-      "url": "https://docs.google.com/document/d/1RniAGymLBBpIpDaNNR5Ea8CgiiUKv0tMvaDixSj6m_Q/view",
+      "url": "https://docs.google.com/document/d/1l9VDL92DCIbTNhTiLGIr-enBOTM4wEDTTQOBlJ7bBhM/edit?usp=sharing",
       "key": "code_org_csp_topic_coverage",
       "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "code_org_csp_topic_coverage"

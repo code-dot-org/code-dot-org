@@ -10,7 +10,7 @@ require_relative '../deployment'
 # See also: fanout, fanout-partial
 #
 
-def fanout(command, num_batches=1, delay_per_group=0)
+def fanout(command, num_batches = 1, delay_per_group = 0)
   app_servers = [CDO.app_servers["console"]]
   size = app_servers.length
   group_size = (size / num_batches.to_f).ceil

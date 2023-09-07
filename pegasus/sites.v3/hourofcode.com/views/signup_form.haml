@@ -117,7 +117,7 @@
         %div
           %select#email-preference.form-control{name: "email_preference_opt_in_s", type: "select"}
             %option{value: nil, selected: true}
-            -['yes', 'no'].each do |email_preference|
+            -['yes_elementary', 'yes_middle', 'yes_high', 'yes_general', 'no'].each do |email_preference|
               %option{value: email_preference}= hoc_s('signup_email_preference_' + email_preference)
         #email-preference-error.error-message{style: "display:none;"}
           = hoc_s(:signup_email_preference_error)
