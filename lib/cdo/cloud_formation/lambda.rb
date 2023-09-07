@@ -53,7 +53,7 @@ module Cdo::CloudFormation
             map(&Digest::MD5.method(:file)).
             join
         )
-        code_zip = `zip -qr - #{absolute_directory}`
+        code_zip = `zip -qr - .`
         key = "#{key_prefix}-#{hash}.zip"
         s3_client = Aws::S3::Client.new(http_read_timeout: 30)
         object_exists = s3_client.head_object(bucket: S3_LAMBDA_BUCKET, key: key) rescue nil
