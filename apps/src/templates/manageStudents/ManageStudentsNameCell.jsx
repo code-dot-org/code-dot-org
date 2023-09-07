@@ -1,7 +1,10 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import {tableLayoutStyles} from '../tables/tableConstants';
+import {
+  tableLayoutStyles,
+  NAME_CELL_INPUT_WIDTH,
+} from '../tables/tableConstants';
 import i18n from '@cdo/locale';
 import {editStudent} from './manageStudentsRedux';
 import {getSelectedScriptName} from '@cdo/apps/redux/unitSelectionRedux';
@@ -74,7 +77,7 @@ class ManageStudentNameCell extends Component {
 
 const styles = {
   inputBox: {
-    width: 210,
+    width: NAME_CELL_INPUT_WIDTH,
   },
   details: {
     fontSize: 12,
