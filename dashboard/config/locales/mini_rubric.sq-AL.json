@@ -1,2 +1,29 @@
 {
+  "sq-AL": {
+    "data": {
+      "mini_rubric": {
+        "CSD U3 debug_2019": {
+          "rubric_key_concept": "Përdorni një sistem koordinativ për të vendosur elementët në ekran, duke llogaritur madhësinë e objektit dhe mbivendosjen."
+        },
+        "CSD U3 debug_2021": {
+          "rubric_key_concept": "Përdorni një sistem koordinativ për të vendosur elementët në ekran, duke llogaritur madhësinë e objektit dhe mbivendosjen."
+        },
+        "CSD U3 debug_2022": {
+          "rubric_key_concept": "Përdorni një sistem koordinativ për të vendosur elementët në ekran, duke llogaritur madhësinë e objektit dhe mbivendosjen."
+        },
+        "CSD U6 for loop led color_2019": {
+          "rubric_key_concept": "Përdorin një for loop për të iteruar mbi një varg"
+        },
+        "CSD U6 for loop led color_2021": {
+          "rubric_key_concept": "Përdorin një for loop për të iteruar mbi një varg"
+        },
+        "CSD U6 for loop led personalize_2019": {
+          "rubric_key_concept": "Përdorin një for loop për të iteruar mbi një varg"
+        },
+        "CSD U6 for loop led personalize_2021": {
+          "rubric_key_concept": "Përdorin një for loop për të iteruar mbi një varg"
+        }
+      }
+    }
+  }
 }
