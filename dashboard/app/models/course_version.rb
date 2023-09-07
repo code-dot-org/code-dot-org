@@ -180,7 +180,7 @@ class CourseVersion < ApplicationRecord
         type: content_root_type,
         is_stable: stable?,
         is_recommended: recommended?(locale_code),
-        locales: content_root.supported_locale_names,
+        locales: content_root_type == 'UnitGroup' ? ['English'] : content_root.supported_locale_names,
         units: units.select {|u| u.course_assignable?(user)}.map(&:summarize_for_assignment_dropdown).to_h
       }
     ]
