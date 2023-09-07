@@ -261,11 +261,8 @@ COPY --chown=${UID} --from=code.org-rbenv ${SRC}/Gemfile ${SRC}/Gemfile
 #
 # DONE HACK WORKAROUNDS FOR APPLE SILICON
 
-# SHELL [ "zsh", "-lc" ]
+# `kubectl exec` skips entrypoint (!), so this is the easiest way to
+# accomplish `eval $(rbenv init -)` that works for kubectl exec.
+ENV PATH=${HOME}/.rbenv/shims:${PATH}
 
-RUN echo 'eval "$(rbenv init -)"' > ${HOME}/.zprofile
-
-ENTRYPOINT [ "zsh", "-lc" ]
-# CMD tail -f /dev/null
-# CMD [ "./bin/dashboard-server" ]
-CMD [ "zsh" ]
+CMD [ "./bin/dashboard-server" ]
