@@ -36,7 +36,7 @@ class RubricsController < ApplicationController
 
     if @rubric.update(rubric_params)
       render json: @rubric
-      # tried redirect, couldn't get it to work.  Need to add notice. redirect_to edit_rubric_path(@rubric.id), notice: 'Rubric was successfully updated.'
+      # KT NOTE FOR FUTURE WORK: tried redirect, couldn't get it to work.  Need to add notice. redirect_to edit_rubric_path(@rubric.id), notice: 'Rubric was successfully updated.'
     else
       render action: 'edit'
     end
@@ -45,6 +45,21 @@ class RubricsController < ApplicationController
   private
 
   def rubric_params
-    params.transform_keys(&:underscore).permit(:level_id, :lesson_id, learning_goals_attributes: [:learning_goal, :ai_enabled, :position])
+    params.transform_keys(&:underscore).permit(
+      :level_id,
+      :lesson_id,
+      learning_goals_attributes: [
+        :learning_goal,
+        :ai_enabled,
+        :position,
+        {
+          learning_goal_evidence_levels_attributes: [
+            :understanding,
+            :teacher_description,
+            :ai_prompt
+          ]
+        }
+      ],
+    )
   end
 end

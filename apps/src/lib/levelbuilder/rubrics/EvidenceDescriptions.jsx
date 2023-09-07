@@ -22,28 +22,36 @@ export default function EvidenceDescriptions({
       <EvidenceDescriptionsRow
         isAiEnabled={isAiEnabled}
         evidenceLabel={'Extensive Evidence'}
-        evidenceLevelData={learningGoalData.evidenceLevels[3]}
+        evidenceLevelData={
+          learningGoalData.learningGoalEvidenceLevelsAttributes[3]
+        }
         understanding={3}
         updateLearningGoal={updateLearningGoal}
       />
       <EvidenceDescriptionsRow
         isAiEnabled={isAiEnabled}
         evidenceLabel={'Convincing Evidence'}
-        evidenceLevelData={learningGoalData.evidenceLevels[2]}
+        evidenceLevelData={
+          learningGoalData.learningGoalEvidenceLevelsAttributes[2]
+        }
         understanding={2}
         updateLearningGoal={updateLearningGoal}
       />
       <EvidenceDescriptionsRow
         isAiEnabled={isAiEnabled}
         evidenceLabel={'Limited Evidence'}
-        evidenceLevelData={learningGoalData.evidenceLevels[1]}
+        evidenceLevelData={
+          learningGoalData.learningGoalEvidenceLevelsAttributes[1]
+        }
         understanding={1}
         updateLearningGoal={updateLearningGoal}
       />
       <EvidenceDescriptionsRow
         isAiEnabled={isAiEnabled}
         evidenceLabel={'No Evidence'}
-        evidenceLevelData={learningGoalData.evidenceLevels[0]}
+        evidenceLevelData={
+          learningGoalData.learningGoalEvidenceLevelsAttributes[0]
+        }
         understanding={0}
         updateLearningGoal={updateLearningGoal}
       />

@@ -25,7 +25,7 @@ export default function RubricsContainer({
             learningGoal: '',
             aiEnabled: false,
             position: 1,
-            evidenceLevels: [
+            learningGoalEvidenceLevelsAttributes: [
               {
                 learningGoalId: 'learningGoal-1',
                 teacherDescription: '',
@@ -81,7 +81,7 @@ export default function RubricsContainer({
       learningGoal: '',
       aiEnabled: false,
       position: nextPosition,
-      evidenceLevels: [
+      learningGoalEvidenceLevelsAttributes: [
         {
           learningGoalId: newId,
           teacherDescription: '',
@@ -137,27 +137,16 @@ export default function RubricsContainer({
   ) => {
     const newLearningGoalData = learningGoalList.map(learningGoal => {
       if (idToUpdate === learningGoal.id) {
-        if (keyToUpdate === 'evidenceLevels') {
-          if (descriptionType === 'teacherDescription') {
-            const newEvidenceLevels = learningGoal.evidenceLevels;
-            newEvidenceLevels.find(
-              level => level.understanding === evidenceLevel
-            ).teacherDescription = newValue;
-            return {
-              ...learningGoal,
-              [keyToUpdate]: newEvidenceLevels,
-            };
-          }
-          if (descriptionType === 'aiPrompt') {
-            const newEvidenceLevels = learningGoal.evidenceLevels;
-            newEvidenceLevels.find(
-              level => level.understanding === evidenceLevel
-            ).aiPrompt = newValue;
-            return {
-              ...learningGoal,
-              [keyToUpdate]: newEvidenceLevels,
-            };
-          }
+        if (keyToUpdate === 'learningGoalEvidenceLevelsAttributes') {
+          const newEvidenceLevels =
+            learningGoal.learningGoalEvidenceLevelsAttributes;
+          newEvidenceLevels.find(
+            level => level.understanding === evidenceLevel
+          )[descriptionType] = newValue;
+          return {
+            ...learningGoal,
+            [keyToUpdate]: newEvidenceLevels,
+          };
         } else {
           return {
             ...learningGoal,
@@ -215,21 +204,33 @@ export default function RubricsContainer({
       });
   };
 
-  // transforms keys from camelCase to snake_case for rails
-  // specifically created to do this for an array of objects
-  // with keys in camelCase
-  function transformKeys(startingList) {
-    const newList = [];
+  /**
+   * Transforms the keys of an object from camelCase to snake_case.
+   * @param {object} obj - The object with keys in camelCase format.
+   * @returns {object} - The object with keys in snake_case format.
+   */
+  function transformObjectKeys(obj) {
+    const newObj = {};
 
-    startingList.forEach(item => {
-      const newItem = {};
-      for (const [key, value] of Object.entries(item)) {
-        newItem[snakeCase(key)] = value;
+    for (const [key, value] of Object.entries(obj)) {
+      if (Array.isArray(value)) {
+        newObj[snakeCase(key)] = value.map(item => transformObjectKeys(item));
+      } else {
+        newObj[snakeCase(key)] = value;
       }
-      newList.push(newItem);
-    });
+    }
 
-    return newList;
+    return newObj;
+  }
+
+  /**
+   * Transforms the keys of objects inside an array from camelCase to snake_case.
+   * Designed specifically for an array of objects with keys in camelCase.
+   * @param {array} startingList - The list containing objects with camelCase keys.
+   * @returns {array} - The list containing objects with snake_case keys.
+   */
+  function transformKeys(startingList) {
+    return startingList.map(item => transformObjectKeys(item));
   }
 
   const handleDropdownChange = event => {

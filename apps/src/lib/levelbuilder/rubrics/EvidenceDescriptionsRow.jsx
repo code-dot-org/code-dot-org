@@ -11,7 +11,7 @@ export default function EvidenceDescriptionsRow({
   const handleTeacherDescriptionChange = event => {
     updateLearningGoal(
       evidenceLevelData.learningGoalId,
-      'evidenceLevels',
+      'learningGoalEvidenceLevelsAttributes',
       event.target.value,
       understanding,
       'teacherDescription'
@@ -21,7 +21,7 @@ export default function EvidenceDescriptionsRow({
   const handleAiPromptChange = event => {
     updateLearningGoal(
       evidenceLevelData.learningGoalId,
-      'evidenceLevels',
+      'learningGoalEvidenceLevelsAttributes',
       event.target.value,
       understanding,
       'aiPrompt'
