@@ -54,8 +54,8 @@ module I18n
 
             header, content, _line = Documents.new.helpers.parse_yaml_header(source_path)
 
-            I18nScriptUtils.sanitize_header!(header)
-            I18nScriptUtils.write_markdown_with_header(content, header, source_path)
+            sanitized_header = I18nScriptUtils.sanitize_markdown_header(header)
+            I18nScriptUtils.write_markdown_with_header(content, sanitized_header, source_path)
           end
         end
       end
