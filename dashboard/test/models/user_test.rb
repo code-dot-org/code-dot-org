@@ -3924,7 +3924,7 @@ class UserTest < ActiveSupport::TestCase
       @pl_script.reload
     end
 
-    def put_participant_in_section(participant, instructor, script, unit_group=nil, participant_type='student')
+    def put_participant_in_section(participant, instructor, script, unit_group = nil, participant_type = 'student')
       section = create :section, user_id: instructor.id, script_id: script.try(:id), course_id: unit_group.try(:id), participant_type: participant_type, grades: participant_type == 'student' ? ['9'] : ['pl']
       Follower.create!(section_id: section.id, student_user_id: participant.id, user: instructor)
       section

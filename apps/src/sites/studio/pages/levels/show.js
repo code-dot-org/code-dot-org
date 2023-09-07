@@ -9,6 +9,7 @@ import {setIsMiniView} from '@cdo/apps/code-studio/progressRedux';
 import instructions, {
   setTtsAutoplayEnabledForLevel,
   setCodeReviewEnabledForLevel,
+  setTaRubric,
 } from '@cdo/apps/redux/instructions';
 import experiments from '@cdo/apps/util/experiments';
 import RubricFloatingActionButton from '@cdo/apps/templates/rubrics/RubricFloatingActionButton';
@@ -63,11 +64,13 @@ function initPage() {
       courseName: config.course_name,
       levelName: config.level_name,
     };
+    getStore().dispatch(setTaRubric(rubric));
     ReactDOM.render(
       <RubricFloatingActionButton
         rubric={rubric}
         studentLevelInfo={studentLevelInfo}
         reportingData={reportingData}
+        currentLevelName={config.level_name}
       />,
       rubricFabMountPoint
     );
