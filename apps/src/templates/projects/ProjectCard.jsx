@@ -49,6 +49,7 @@ export default class ProjectCard extends React.Component {
     this.onCaptchaExpiration = this.onCaptchaExpiration.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.abuseUrl = '';
+    this.handleCheckboxChange = this.handleCheckboxChange.bind(this);
   }
 
   showReportAbusePopUp() {
@@ -219,10 +220,6 @@ export default class ProjectCard extends React.Component {
                   <button
                     type="reset"
                     onClick={this.cancel}
-                    // style={{
-                    //   ...styles.transparentButton,
-                    //   ...styles.xButton,
-                    // }}
                     className={style.xButton}
                   >
                     <FontAwesome icon="x" style={{color: '#D4D5D7'}} />
@@ -235,11 +232,11 @@ export default class ProjectCard extends React.Component {
                 <div>
                   {checkboxes.map(checkbox => (
                     <CheckBox
+                      key={checkbox.name}
                       label={checkbox.name.replace(/-/g, ' ')}
                       checked={checkbox.checked}
                       onChange={() => this.handleCheckboxChange(checkbox.name)}
                       size="s"
-                      style={{outline: 'none'}}
                     />
                   ))}
                 </div>
