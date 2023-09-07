@@ -461,7 +461,7 @@
   "legacy": "(Legacy)",
   "makeMyOwnApp": "Make my own app",
   "makerCheckPluggedIn": "Make sure your board is plugged in.",
-  "makerChromeBrowser": "the Chrome browser.",
+  "makerSupportedBrowsers": "the Chrome or Edge browser.",
   "makerLevelRequires": "This level requires that you use",
   "makerRunWithoutBoard": "Run Without Board",
   "makerSetupAcceptPrompt": "If a prompt asking for permission for Code Studio to connect to the Chrome App pops up, click Accept.",

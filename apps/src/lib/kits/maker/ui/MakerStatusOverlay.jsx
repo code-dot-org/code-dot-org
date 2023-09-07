@@ -151,7 +151,7 @@ class WaitingToConnect extends Component {
     return (
       <Overlay {...this.props}>
         <Icon icon="cog" spin />
-        <Text>{applabI18n.waitingForConnect()}</Text>
+        <Text>{applabI18n.makerWaitingForConnect()}</Text>
       </Overlay>
     );
   }
@@ -169,7 +169,7 @@ class UnsupportedBrowser extends Component {
         <Text>
           {applabI18n.makerLevelRequires()}
           <br />
-          {applabI18n.makerChromeBrowser()}
+          {applabI18n.makerSupportedBrowsers()}
         </Text>
       </Overlay>
     );
