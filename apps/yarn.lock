@@ -2265,13 +2265,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@code-dot-org/js-interpreter-tyrant@code-dot-org/js-interpreter-tyrant#use-valid-commit-hash":
-  version: 0.0.1
-  resolution: "@code-dot-org/js-interpreter-tyrant@https://github.com/code-dot-org/js-interpreter-tyrant.git#commit=b00f2bf10fd855c30cd8c57c5fa063531b01ba5e"
-  checksum: f0fa6eeeec5db7995b8877f7c6f56298bc62ca2bc24bf829d5a61f5451b86b661ff59959ed9ba911d6cd13beee65d6349882c14255967cde1d81a3262879d67a
-  languageName: node
-  linkType: hard
-
 "@code-dot-org/js-interpreter@npm:1.3.13":
   version: 1.3.13
   resolution: "@code-dot-org/js-interpreter@npm:1.3.13"
@@ -7615,7 +7608,6 @@ __metadata:
     "@code-dot-org/dance-party": 1.0.5
     "@code-dot-org/johnny-five": 2.1.0-cdo.3
     "@code-dot-org/js-interpreter": 1.3.13
-    "@code-dot-org/js-interpreter-tyrant": "code-dot-org/js-interpreter-tyrant#use-valid-commit-hash"
     "@code-dot-org/js-numbers": 0.1.0-cdo.0
     "@code-dot-org/maze": 2.16.0
     "@code-dot-org/ml-activities": 0.0.26

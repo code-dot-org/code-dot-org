@@ -41,7 +41,7 @@ npm-debug.log
 /apps/src/styleConstants.js
 /apps/storybook-deploy
 /apps/test/entry-tests.js
-/apps/test/interpreter/test-results-new*.json
+
 # Yarn ignores based on documentation at https://yarnpkg.com/getting-started/qa#which-files-should-be-gitignored
 /apps/.pnp.*
 /apps/.yarn/*
@@ -50,6 +50,8 @@ npm-debug.log
 !/apps/.yarn/releases
 !/apps/.yarn/sdks
 !/apps/.yarn/versions
+# end yarn ignores
+
 /apps/yarn-error.log
 /aws/.code-studio-built
 /aws/.code-studio-commit-built
