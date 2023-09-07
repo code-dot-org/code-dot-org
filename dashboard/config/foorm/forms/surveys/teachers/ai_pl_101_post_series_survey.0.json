@@ -201,6 +201,7 @@
           "type": "matrix",
           "name": "ai_pl_101",
           "title": "Are you planning to use what you learned in your role as {teacher_role}?",
+          "description": "Choose a response for each of the videos Listed. If you did not watch a video, please select that option.",
           "columns": [
             {
               "value": "yes_already_did",
@@ -465,7 +466,7 @@
         {
           "type": "radiogroup",
           "name": "how_ai_works_pl_interest",
-          "title": "Would you be interested in a professional learning experience to teach the ‘How AI Works’ video series? ",
+          "title": "Would you be interested in engaging with further professional learning to teach the 'How AI Works' video series?",
           "choices": [
             {
               "value": "yes",

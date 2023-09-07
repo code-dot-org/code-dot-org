@@ -18,14 +18,14 @@ module Seeded
     end
 
     # Load and parse a CSV file
-    def load_csv(file, col_sep=',', column_to_key={}, &block)
+    def load_csv(file, col_sep = ',', column_to_key = {}, &block)
       parse_csv(File.read(file), col_sep, column_to_key, &block)
     end
 
     # Convert CSV string into hash, with column headers as keys
     # Removes entries with nil values
     # Optional argument maps column headers to hash keys
-    def parse_csv(csv, col_sep=',', column_to_key={}, &block)
+    def parse_csv(csv, col_sep = ',', column_to_key = {}, &block)
       CSV.parse(csv, col_sep: col_sep, headers: true).map do |row|
         hash = row.to_hash
         hash.keys.each {|key| hash[column_to_key[key]] = hash.delete(key) if column_to_key[key]}
@@ -37,7 +37,7 @@ module Seeded
 
     # Load a YAML script containing options and data
     # Parses 'TSV'/'CSV' keys as spreadsheets
-    def load_yaml(file, column_to_key={})
+    def load_yaml(file, column_to_key = {})
       data = YAML.load_file(file)
 
       # Set Options and remove element from hash
