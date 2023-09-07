@@ -43,7 +43,7 @@ describe('StatsTable', () => {
 
   it('sorts students by the correct name upon clicking the name header cells', () => {
     DCDO.reset();
-    DCDO.set('family-name-features', true);
+    DCDO.set('family-name-features-p3', true);
 
     const wrapper = mount(
       <StatsTable
@@ -87,7 +87,7 @@ describe('StatsTable', () => {
 
   it('does not render a family name field in PL sections', async () => {
     DCDO.reset();
-    DCDO.set('family-name-features', true);
+    DCDO.set('family-name-features-p3', true);
 
     const wrapper = mount(
       <StatsTable
