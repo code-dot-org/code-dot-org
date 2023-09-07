@@ -162,7 +162,7 @@ RUN service mysql start && \
 RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - && \
     echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list && \
     apt-get update && \
-    apt-get install -y yarn=1.22.19-1
+    apt-get install -y yarn=3.6.3
 
 # we need git >= 2.15 to use git rev-parse --is-shallow-clone feature
 RUN add-apt-repository ppa:git-core/ppa && \

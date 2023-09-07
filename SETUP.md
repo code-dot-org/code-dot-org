@@ -16,7 +16,7 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
      ```sh
      ruby --version  # --> ruby 3.0.5
      node --version  # --> v18.16.0
-     yarn --version  # --> 1.22.5
+     yarn --version  # --> 3.6.3
      ```
 
 1. If using SSH (recommended): `git clone git@github.com:code-dot-org/code-dot-org.git` , if using HTTPS: `git clone https://github.com/code-dot-org/code-dot-org.git`
@@ -181,7 +181,7 @@ Setup steps for macOS:
 
     3. Running `nvm alias default $(cat ./.nvmrc)` will set your default node version for future shells.
 
-1. Install **yarn** via `npm install -g yarn@1.22.19`
+1. Install **yarn** via `npm install -g yarn@3.6.3`
 
 1. Install **OpenSSL**
     1. Run `brew install openssl`
@@ -233,7 +233,7 @@ Note: Virtual Machine Users should check the [Alternative note](#alternative-use
        `export PATH="$HOME/.rbenv/bin:~/.rbenv/shims:$PATH"`, then run `source .bashrc` for the change to take effect (as seen in [this github issue](https://github.com/rbenv/rbenv/issues/877)).
     1. `rbenv rehash`
 1. Install yarn
-    1. `npm install -g yarn@1.22.5`.
+    1. `npm install -g yarn@3.6.3`.
     1. `yarn --version` Double check the version of yarn is correct.
 1. Make it so that you can run apps tests locally
     1. Add the following to `~/.bashrc` or your desired shell configuration file:
