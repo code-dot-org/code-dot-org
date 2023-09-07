@@ -4,7 +4,29 @@ import {expect} from '../../../../../util/deprecatedChai';
 import {mount} from 'enzyme';
 import sinon from 'sinon';
 import {UnconnectedMakerStatusOverlay} from '@cdo/apps/lib/kits/maker/ui/MakerStatusOverlay';
+import applabI18n from '@cdo/applab/locale';
+
 describe('MakerStatusOverlay', () => {
+  beforeEach(() => {
+    // Stub i18n function before translation tests.
+    const i18n = {
+      makerCheckPluggedIn: 'i18n-check-plugged-in',
+      makerSupportedBrowsers: 'i18n-supported-browsers',
+      makerLevelRequires: 'i18n-level-requires',
+      makerRunWithoutBoard: 'i18n-run-without-board',
+      makerSetupInstructions: 'i18n-setup-instructions',
+      makerTryAgain: 'i18n-try-again',
+      makerWaitingForConnect: 'i18n-waiting-for-connect',
+    };
+
+    for (const key in i18n) {
+      sinon.stub(applabI18n, key).returns(i18n[key]);
+    }
+  });
+
+  afterEach(() => {
+    sinon.restore();
+  });
   const testProps = {
     width: 10,
     height: 15,
@@ -92,7 +114,7 @@ describe('MakerStatusOverlay', () => {
     });
 
     it('and waiting text', () => {
-      expect(wrapper.text()).to.include('Waiting for board to connect...');
+      expect(wrapper.text()).to.include('i18n-waiting-for-connect');
     });
 
     it('and no button', () => {
@@ -101,18 +123,11 @@ describe('MakerStatusOverlay', () => {
   });
 
   describe('on unsupported browser', () => {
-    let wrapper, handleDisableMaker, handleOpenSetupPage;
+    let wrapper;
 
     beforeEach(() => {
-      handleDisableMaker = sinon.spy();
-      handleOpenSetupPage = sinon.spy();
       wrapper = mount(
-        <UnconnectedMakerStatusOverlay
-          {...testProps}
-          isWrongBrowser
-          handleDisableMaker={handleDisableMaker}
-          handleOpenSetupPage={handleOpenSetupPage}
-        />
+        <UnconnectedMakerStatusOverlay {...testProps} isWrongBrowser />
       );
     });
 
@@ -125,8 +140,8 @@ describe('MakerStatusOverlay', () => {
     });
 
     it('and error text', () => {
-      expect(wrapper.text()).to.include('This level requires the');
-      expect(wrapper.text()).to.include('Code.org Maker App');
+      expect(wrapper.text()).to.include('i18n-level-requires');
+      expect(wrapper.text()).to.include('i18n-supported-browsers');
     });
   });
 
@@ -157,13 +172,13 @@ describe('MakerStatusOverlay', () => {
     });
 
     it('and error text', () => {
-      expect(wrapper.text()).to.include('Make sure your board is plugged in.');
+      expect(wrapper.text()).to.include('i18n-check-plugged-in');
     });
 
     it('and a "Try Again" button', () => {
       const selector = 'button.try-again';
       expect(wrapper).to.have.descendants(selector);
-      expect(wrapper.find(selector).text()).to.include('Try Again');
+      expect(wrapper.find(selector).text()).to.include('i18n-try-again');
     });
 
     it('that calls the provided try again handler', () => {
@@ -176,7 +191,9 @@ describe('MakerStatusOverlay', () => {
     it('and a "Run Without Board" button', () => {
       const selector = 'button.run-without-board';
       expect(wrapper).to.have.descendants(selector);
-      expect(wrapper.find(selector).text()).to.include('Run Without Board');
+      expect(wrapper.find(selector).text()).to.include(
+        'i18n-run-without-board'
+      );
     });
 
     it('that calls the try again handler and useVirtualBoardOnNextRun handler', () => {
@@ -191,7 +208,9 @@ describe('MakerStatusOverlay', () => {
     it('and a "Setup Instructions" button', () => {
       const selector = 'button.setup-instructions';
       expect(wrapper).to.have.descendants(selector);
-      expect(wrapper.find(selector).text()).to.include('Setup Instructions');
+      expect(wrapper.find(selector).text()).to.include(
+        'i18n-setup-instructions'
+      );
     });
 
     it('that navigates to the Maker Setup page', () => {
