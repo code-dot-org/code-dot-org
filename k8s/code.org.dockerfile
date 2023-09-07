@@ -87,6 +87,8 @@ WORKDIR ${SRC}
 FROM code.org-base as code.org-rbenv
 ################################################################################
 
+SHELL [ "/bin/sh", "-euxc" ]
+
 COPY --chown=${UID} \
   .ruby-version \
   ./
@@ -142,7 +144,7 @@ RUN <<EOF
   npm install -g yarn@${YARN_VERSION}
   #
   # Install oh-my-zsh
-  sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+  sh +x -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
   #
   # Install AWSCLI
   if [ $(uname -m) = "aarch64" ]; then
@@ -259,13 +261,13 @@ COPY --chown=${UID} --from=code.org-rbenv ${SRC}/Gemfile ${SRC}/Gemfile
 # accomplish `eval $(rbenv init -)` that works for kubectl exec.
 ENV PATH=${HOME}/.rbenv/shims:${PATH}
 
-# COPY <<EOF ./docker-cmd.sh
+# COPY <<-EOF ./docker-cmd.sh
 # #!/bin/zsh
 
 # echo "Starting dashboard-server..."
 
 # exec ./bin/dashboard-server
 # EOF
+# CMD [ "./docker-cmd.sh" ]
 
-# CMD [ "./bin/dashboard-server" ]
-CMD [ "./docker-cmd.sh" ]
+CMD [ "./bin/dashboard-server" ]
