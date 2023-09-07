@@ -135,7 +135,7 @@ const ExpandedCurriculumCatalogCard = ({
                           height="100%"
                           style={{border: 'none'}}
                           src={video}
-                          title=""
+                          title="Youtube embed"
                           allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                           allowFullScreen
                         />
@@ -153,27 +153,28 @@ const ExpandedCurriculumCatalogCard = ({
                 </div>
                 <div className={style.linksContainer}>
                   <div className={style.resourcesContainer}>
-                    {Object.keys(availableResources).length > 0 && (
-                      <div>
-                        <Heading4 visualAppearance="heading-xs">
-                          {i18n.availableResources()}
-                        </Heading4>
-                        <hr className={style.thickDivider} />
-                        {resoucesOrder.map(
-                          resource =>
-                            availableResources[resource] && (
-                              <div key={resource}>
-                                <BodyTwoText>
-                                  {translatedAvailableResources[resource]}{' '}
-                                </BodyTwoText>
-                                {displayDivider() && (
-                                  <hr className={style.horizontalDivider} />
-                                )}
-                              </div>
-                            )
-                        )}
-                      </div>
-                    )}
+                    {availableResources &&
+                      Object.keys(availableResources).length > 0 && (
+                        <div>
+                          <Heading4 visualAppearance="heading-xs">
+                            {i18n.availableResources()}
+                          </Heading4>
+                          <hr className={style.thickDivider} />
+                          {resoucesOrder.map(
+                            resource =>
+                              availableResources[resource] && (
+                                <div key={resource}>
+                                  <BodyTwoText>
+                                    {translatedAvailableResources[resource]}{' '}
+                                  </BodyTwoText>
+                                  {displayDivider() && (
+                                    <hr className={style.horizontalDivider} />
+                                  )}
+                                </div>
+                              )
+                          )}
+                        </div>
+                      )}
                   </div>
                   {isInUS &&
                     (professionalLearningProgram ||
