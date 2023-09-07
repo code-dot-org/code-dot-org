@@ -5,7 +5,7 @@ This package contains all ComponentLibrary (DSCO) common design constants, token
 **Notes:**
 
 - The [`@use`](https://sass-lang.com/documentation/at-rules/use) Sass feature is only available for Dart Sass. If you are using a different Sass implementation, replace `@use` with [`@import`](https://sass-lang.com/documentation/at-rules/import). Internally, this package uses `@import` to maintain compatibility with all Sass implementations.
-- The import paths below use the "exports" field in `package.json`, which is a feature only available to Webpack 5+ consumers. If you use Webpack 4 or below, you should import this package as `@dsco_/common` (which corresponds to the "main" field in `package.json`), or point to a specific file in the package (e.g., `@dsco_/common/styles/_tokens.scss`).
+- The import paths below use the "exports" field in `package.json`, which is a feature only available to Webpack 5+ consumers. If you use Webpack 4 or below, you should import this package as `@cdo/apps/componentLibrary/common` (which corresponds to the "main" field in `package.json`), or point to a specific file in the package (e.g., `@cdo/apps/componentLibrary/common/styles/mixins`).
 
 
 
@@ -18,7 +18,8 @@ Common mixins.
 Example usage:
 
 ```scss
-@use '@dsco_/common/mixins';
+@import "@cdo/apps/componentLibrary/common/mixins";
+
 
 .custom-link-text {
   @include link-body-three; // (include mixin styles)
