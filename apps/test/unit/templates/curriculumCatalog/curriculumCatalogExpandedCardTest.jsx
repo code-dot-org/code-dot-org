@@ -1,5 +1,5 @@
 import React from 'react';
-import {fireEvent, render, screen} from '@testing-library/react';
+import {fireEvent, render, screen, within} from '@testing-library/react';
 import {pull} from 'lodash';
 import {expect} from '../../../util/reconfiguredChai';
 import ExpandedCurriculumCatalogCard from '@cdo/apps/templates/curriculumCatalog/ExpandedCurriculumCatalogCard';
@@ -7,6 +7,7 @@ import {
   subjectsAndTopicsOrder,
   translatedCourseOfferingCsTopics,
   translatedLabels,
+  translatedAvailableResources,
 } from '@cdo/apps/templates/teacherDashboard/CourseOfferingHelpers';
 import {sections} from '../studioHomepages/fakeSectionUtils';
 import {Provider} from 'react-redux';
@@ -20,25 +21,6 @@ import teacherSections, {
   setSections,
 } from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 describe('CurriculumCatalogExpandedCard', () => {
-  const translationIconTitle = 'Curriculum is available in your language';
-
-  const firstSubjectIndexInList = 0;
-  const firstSubjectIndexUsed = firstSubjectIndexInList + 1;
-  const subjects = [
-    // mix up the order to check consistent order prioritization
-    subjectsAndTopicsOrder[firstSubjectIndexUsed + 1],
-    subjectsAndTopicsOrder[firstSubjectIndexUsed],
-  ];
-
-  const firstTopicIndexInList = 4;
-  const firstTopicIndexUsed = firstTopicIndexInList + 4;
-  const topics = [
-    // mix up the order to check consistent order prioritization
-    subjectsAndTopicsOrder[firstTopicIndexUsed + 3],
-    subjectsAndTopicsOrder[firstTopicIndexUsed],
-    subjectsAndTopicsOrder[firstTopicIndexUsed + 4],
-  ];
-
   let defaultProps;
   let store;
 
@@ -161,10 +143,18 @@ describe('CurriculumCatalogExpandedCard', () => {
       availableResources: availableResources,
     });
 
-    screen.getByText('Available Resources');
+    const availableResourcesContainer = screen.getByText(
+      'Available Resources'
+    ).parentElement;
 
-    screen.getByText('Lesson Plans');
-    screen.getByText('Slide Decks');
+    //Checks for each available resource in availableResources
+    Object.keys(availableResources).forEach(resource => {
+      screen.getByText(translatedAvailableResources[resource]);
+    });
+    //Checks for correct amount of Horizontal dividers
+    expect(availableResourcesContainer.querySelectorAll('hr')).to.have.length(
+      Object.keys(availableResources).length
+    );
   });
 
   it('does not render available resources section when no available resources', () => {
@@ -189,6 +179,19 @@ describe('CurriculumCatalogExpandedCard', () => {
 
   it('does not render professional learning section when no professional learning available', () => {
     renderCurriculumExpandedCard();
+
+    expect(screen.queryByText('Profession Learning')).to.be.null;
+  });
+
+  it('does not render professional learning section when not in US', () => {
+    const professional_learning_program = 'https://code.org/apply';
+    const self_paced_pl_course_offering_path = '/courses/vpl-csa-2023';
+    renderCurriculumExpandedCard({
+      ...defaultProps,
+      professionalLearningProgram: professional_learning_program,
+      selfPacedPlCourseOfferingPath: self_paced_pl_course_offering_path,
+      isInUS: false,
+    });
 
     expect(screen.queryByText('Profession Learning')).to.be.null;
   });

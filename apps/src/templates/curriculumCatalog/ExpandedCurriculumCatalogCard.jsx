@@ -88,9 +88,6 @@ const ExpandedCurriculumCatalogCard = ({
     availableResources,
   };
 
-  // Log the props object
-  console.log('All Props:', propsObject);
-
   return (
     <div>
       <div
