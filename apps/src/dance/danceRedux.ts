@@ -1,13 +1,5 @@
 import {createSlice, PayloadAction} from '@reduxjs/toolkit';
-import {registerReducers} from '@cdo/apps/redux';
-
-type SongData = {
-  [key: string]: {
-    title: string;
-    url: string;
-    pg13: boolean;
-  };
-};
+import {SongData} from './types';
 
 export interface DanceState {
   selectedSong: string;
