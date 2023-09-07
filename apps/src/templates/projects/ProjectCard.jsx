@@ -5,23 +5,24 @@ import color from '../../util/color';
 import i18n from '@cdo/locale';
 import {studio} from '@cdo/apps/lib/util/urlHelpers';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import getScriptData from '@cdo/apps/util/getScriptData';
 import AccessibleDialog from '@cdo/apps/templates/AccessibleDialog';
 import RailsAuthenticityToken from '../../lib/util/RailsAuthenticityToken';
 import style from './project-card.module.scss';
 import Button from '@cdo/apps/templates/Button';
 import CheckBox from '@cdo/apps/componentLibrary/checkbox/Checkbox.tsx';
+import {connect} from 'react-redux';
 
 const PROJECT_DEFAULT_IMAGE = '/blockly/media/projects/project_default.png';
 
 import {UnlocalizedTimeAgo} from '../TimeAgo';
 
-export default class ProjectCard extends React.Component {
+class UnconnectedProjectCard extends React.Component {
   static propTypes = {
     projectData: PropTypes.object.isRequired,
     currentGallery: PropTypes.oneOf(['personal', 'public']).isRequired,
     showFullThumbnail: PropTypes.bool,
     isDetailView: PropTypes.bool,
+    recaptchaSiteKey: PropTypes.string,
   };
 
   constructor(props) {
@@ -184,7 +185,8 @@ export default class ProjectCard extends React.Component {
       showSubmitConfirmation,
     } = this.state;
 
-    const captchaSiteKey = getScriptData('projects').recaptchaSiteKey;
+    //const captchaSiteKey = getScriptData('projects').recaptchaSiteKey;
+    const captchaSiteKey = this.props.recaptchaSiteKey;
 
     const script = document.createElement('script');
     script.src = 'https://www.google.com/recaptcha/api.js';
@@ -370,6 +372,10 @@ export default class ProjectCard extends React.Component {
     );
   }
 }
+
+export default connect(state => ({
+  recaptchaSiteKey: state.projects.captcha.captchaSiteKey,
+}))(UnconnectedProjectCard);
 
 const styles = {
   title: {
