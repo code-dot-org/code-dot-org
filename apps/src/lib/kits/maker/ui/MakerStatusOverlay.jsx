@@ -14,6 +14,7 @@ import {
 } from '../redux';
 import {UnsupportedBrowserError} from '../MakerError';
 import OverlayButton from './OverlayButton';
+import applabI18n from '@cdo/applab/locale';
 
 const overlayDimensionsPropTypes = {
   width: PropTypes.number.isRequired,
@@ -32,7 +33,6 @@ export class UnconnectedMakerStatusOverlay extends Component {
     isWrongBrowser: PropTypes.bool.isRequired,
     hasConnectionError: PropTypes.bool.isRequired,
     handleTryAgain: PropTypes.func.isRequired,
-    handleDisableMaker: PropTypes.func.isRequired,
     useVirtualBoardOnNextRun: PropTypes.func.isRequired,
     handleOpenSetupPage: PropTypes.func.isRequired,
   };
@@ -46,7 +46,6 @@ export class UnconnectedMakerStatusOverlay extends Component {
       isWrongBrowser,
       hasConnectionError,
       handleTryAgain,
-      handleDisableMaker,
       handleOpenSetupPage,
     } = this.props;
     const dimensions = {width, height, scale};
@@ -56,7 +55,6 @@ export class UnconnectedMakerStatusOverlay extends Component {
       return (
         <UnsupportedBrowser
           {...dimensions}
-          handleDisableMaker={handleDisableMaker}
           handleOpenSetupPage={handleOpenSetupPage}
         />
       );
@@ -158,7 +156,7 @@ class WaitingToConnect extends Component {
     return (
       <Overlay {...this.props}>
         <Icon icon="cog" spin />
-        <Text>Waiting for board to connect...</Text>
+        <Text>{applabI18n.makerWaitingForConnect()}</Text>
       </Overlay>
     );
   }
@@ -174,9 +172,9 @@ class UnsupportedBrowser extends Component {
       <Overlay {...this.props}>
         <Icon icon="exclamation-triangle" />
         <Text>
-          This level requires that you use
+          {applabI18n.makerLevelRequires()}
           <br />
-          the Chrome or Edge browser.
+          {applabI18n.makerSupportedBrowsers()}
         </Text>
       </Overlay>
     );
@@ -200,21 +198,21 @@ class BoardNotFound extends Component {
     return (
       <Overlay {...this.props}>
         <Icon icon="exclamation-triangle" />
-        <Text>Make sure your board is plugged in.</Text>
+        <Text>{applabI18n.makerCheckPluggedIn()}</Text>
         <UniformWidth>
           <OverlayButton
             primary
-            text="Try Again"
+            text={applabI18n.makerTryAgain()}
             className="try-again"
             onClick={this.props.handleTryAgain}
           />
           <OverlayButton
-            text="Run Without Board"
+            text={applabI18n.makerRunWithoutBoard()}
             className="run-without-board"
             onClick={this.handleRunWithoutBoard}
           />
           <OverlayButton
-            text="Setup Instructions"
+            text={applabI18n.makerSetupInstructions()}
             className="setup-instructions"
             onClick={this.props.handleOpenSetupPage}
           />
