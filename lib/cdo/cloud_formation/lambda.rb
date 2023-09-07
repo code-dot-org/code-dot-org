@@ -40,7 +40,7 @@ module Cdo::CloudFormation
     # @param key_prefix [String] String to prefix on zip package filename (object key) before uploading to S3.
     # @return [String] JSON Deployment package https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-code.html
     def zip_directory(relative_directory, key_prefix: 'lambda')
-      absolute_directory = aws_dir('cloudformation/lambdas' + relative_directory)
+      absolute_directory = aws_dir('cloudformation/lambdas' + '//' + relative_directory)
       raise "#{absolute_directory} is not a file system directory." unless File.directory?(absolute_directory)
 
       Dir.chdir(absolute_directory) do
