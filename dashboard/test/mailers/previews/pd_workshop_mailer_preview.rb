@@ -207,7 +207,7 @@ class PdWorkshopMailerPreview < ActionMailer::Preview
       }
   end
 
-  def facilitator_post_workshop_no_rp_csf_intro
+  def facilitator_post_workshop_csf_intro
     # TODO: figure out correct params?
     # the way we set up workshops for mailers means they won't have an id.
     # We want to test that this mailer can extract the workshop id correctly--find
@@ -223,7 +223,7 @@ class PdWorkshopMailerPreview < ActionMailer::Preview
       }
   end
 
-  def facilitator_post_workshop_no_rp_csf_deepdive
+  def facilitator_post_workshop_csf_deepdive
     # TODO: figure out correct params?
     # the way we set up workshops for mailers means they won't have an id.
     # We want to test that this mailer can extract the workshop id correctly--find
