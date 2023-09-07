@@ -34,6 +34,40 @@ module Cdo::CloudFormation
       end
     end
 
+    # Zip a directory containing a Lambda's source code and dependencies, upload to S3, and return the S3 location
+    # to assist in populating the `Code` Property of a CloudFormation template `AWS::Lambda::Function` Resource.
+    # @param relative_directory [String] Name of Lambda directory relative to `/aws/cloudformation/lambdas`.
+    # @param key_prefix [String] String to prefix on zip package filename (object key) before uploading to S3.
+    # @return [String] JSON Deployment package https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-code.html
+    def zip_directory(relative_directory, key_prefix: 'lambda')
+      absolute_directory = aws_dir('cloudformation/lambdas' + relative_directory)
+      raise "#{absolute_directory} is not a file system directory." unless File.directory?(absolute_directory)
+
+      Dir.chdir(absolute_directory) do
+        # Zip files contain non-deterministic timestamps, so calculate a deterministic hash based on file contents.
+        globs = absolute_directory + '/**/*'
+        hash = Digest::MD5.hexdigest(
+          Dir[*globs].
+            select(&File.method(:file?)).
+            sort.
+            map(&Digest::MD5.method(:file)).
+            join
+        )
+        code_zip = `zip -qr - #{absolute_directory}`
+        key = "#{key_prefix}-#{hash}.zip"
+        s3_client = Aws::S3::Client.new(http_read_timeout: 30)
+        object_exists = s3_client.head_object(bucket: S3_LAMBDA_BUCKET, key: key) rescue nil
+        unless object_exists
+          CDO.log.info("Uploading Lambda zip package to S3 (#{code_zip.length} bytes)...")
+          s3_client.put_object({bucket: S3_LAMBDA_BUCKET, key: key, body: code_zip})
+        end
+        {
+          S3Bucket: S3_LAMBDA_BUCKET,
+          S3Key: key
+        }.to_json
+      end
+    end
+
     # Zip a Lambda package of files and upload to S3.
     def lambda_zip(*files, key_prefix: 'lambda')
       # Zip files contain non-deterministic timestamps, so calculate a deterministic hash based on file contents.
