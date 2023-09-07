@@ -2,6 +2,9 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.3.2](https://github.com/code-dot-org/code-dot-org/pull/)
+* focus-styles update - display focus outline only on keyboard (not mouse) navigation
+
 ## [0.3.1](https://github.com/code-dot-org/code-dot-org/pull/53526)
 * added tests for Checkbox component
 

@@ -1402,7 +1402,7 @@ module Services
       end
     end
 
-    def assert_attributes_equal(a, b, additional_excludes=[])
+    def assert_attributes_equal(a, b, additional_excludes = [])
       excludes = ['id', 'created_at', 'updated_at'] + additional_excludes
       assert_equal a.attributes.except(*excludes), b.attributes.except(*excludes)
     end

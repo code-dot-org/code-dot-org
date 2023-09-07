@@ -4,7 +4,7 @@ require 'cdo/yaml'
 require 'json'
 require_relative './text_render'
 
-def http_content_type(type, params={})
+def http_content_type(type, params = {})
   params = params.map {|k, v| "#{k}=#{v}"}.join('; ')
   params.empty? ? type : [type, params].join('; ')
 end
@@ -17,12 +17,12 @@ def http_expires_in(seconds)
   http_expires_at(Time.now + seconds)
 end
 
-def http_host_and_port(host, port=80)
+def http_host_and_port(host, port = 80)
   return host if port == 80
   "#{host}:#{port}"
 end
 
-def social_metadata(request, header=nil)
+def social_metadata(request, header = nil)
   metadata = {}
 
   # Metatags common to all sites.
@@ -49,7 +49,7 @@ end
 class HttpDocument
   attr_accessor :status, :headers, :body
 
-  def initialize(body, headers={}, status=200)
+  def initialize(body, headers = {}, status = 200)
     @body = body
 
     @headers = {}
@@ -59,7 +59,7 @@ class HttpDocument
     @status = status
   end
 
-  def self.from_file(path, headers={}, status=200)
+  def self.from_file(path, headers = {}, status = 200)
     content_type = content_type_from_path(path)
     new(File.read(path), {'Content-Type' => content_type, 'X-Pegasus-File' => path}.merge(headers))
   end
@@ -80,7 +80,7 @@ class HttpDocument
     @headers['Content-Type'].to_s.include?('text/markdown')
   end
 
-  def to_html!(locals, options={})
+  def to_html!(locals, options = {})
     to_html_from_haml!(locals, options) if haml?
     to_html_from_markdown!(locals, options) if markdown?
 
@@ -272,7 +272,7 @@ module Pegasus
       body([document.body])
     end
 
-    def deliver_manipulated_image(path, format, mode, width, height=nil)
+    def deliver_manipulated_image(path, format, mode, width, height = nil)
       content_type format.to_sym
       cache_control :public, :must_revalidate, max_age: settings.image_max_age
 
@@ -291,7 +291,7 @@ module Pegasus
       types.push(type).join(',')
     end
 
-    def render(document, locals={})
+    def render(document, locals = {})
       document.to_html!(
         locals.merge(
           {
@@ -306,7 +306,7 @@ module Pegasus
       deliver(document)
     end
 
-    def resolve_document(root, uri, headers={})
+    def resolve_document(root, uri, headers = {})
       base = File.join(root, uri)
 
       extnames = settings.template_extnames

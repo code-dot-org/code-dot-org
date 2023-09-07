@@ -1068,7 +1068,7 @@ en:
             '3': baking soda
             '5': both
       DansBlocks_setForegroundEffect2:
-        text: do {EFFECT} effect
+        text: "[Don't Use] do {EFFECT} effect"
         options:
           EFFECT:
             '"bubbles"': bubbles
