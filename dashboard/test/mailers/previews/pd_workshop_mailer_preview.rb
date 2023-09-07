@@ -172,7 +172,7 @@ class PdWorkshopMailerPreview < ActionMailer::Preview
       target: :facilitator
   end
 
-  def facilitator_pre_workshop_csf_deppdive
+  def facilitator_pre_workshop_csf_deepdive
     mail :facilitator_pre_workshop,
       Pd::Workshop::COURSE_CSF,
       Pd::Workshop::SUBJECT_CSF_201,
