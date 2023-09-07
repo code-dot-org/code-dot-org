@@ -167,33 +167,17 @@ class WaitingToConnect extends Component {
 class UnsupportedBrowser extends Component {
   static propTypes = {
     ...overlayDimensionsPropTypes,
-    handleDisableMaker: PropTypes.func.isRequired,
-    handleOpenSetupPage: PropTypes.func.isRequired,
   };
 
   render() {
-    const {handleDisableMaker, handleOpenSetupPage} = this.props;
     return (
       <Overlay {...this.props}>
         <Icon icon="exclamation-triangle" />
         <Text>
-          This level requires the
+          This level requires that you use
           <br />
-          Code.org Maker App
+          the Chrome or Edge browser.
         </Text>
-        <UniformWidth>
-          <OverlayButton
-            primary
-            text="Get Code.org Maker App"
-            className="setup-instructions"
-            onClick={handleOpenSetupPage}
-          />
-          <OverlayButton
-            text="Disable Maker Toolkit"
-            className="disable-maker-toolkit"
-            onClick={handleDisableMaker}
-          />
-        </UniformWidth>
       </Overlay>
     );
   }
