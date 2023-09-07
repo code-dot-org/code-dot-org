@@ -82,7 +82,13 @@ export function fixPath(filename) {
   if (SOUND_PREFIX_REGEX.test(filename)) {
     return filename.replace(SOUND_PREFIX, soundPathPrefix);
   }
+
   const state = getStore().getState();
+
+  // If a curriculum level is remixed, any images that were copied from a starter asset
+  // image contains 'image://' in its filenmae.
+  // We want to strip this starter asset prefix from the filename so that the correct
+  // image file path is returned.
   if (!state.pageConstants.isCurriculumLevel) {
     filename = filename.replace(STARTER_ASSET_PREFIX, '');
   }
