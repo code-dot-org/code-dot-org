@@ -12,12 +12,12 @@ const envConstants = require('./envConstants');
 
 const {
   addPollyfillsToEntryPoints,
-  codeStudioEntries,
-  internalEntries,
-  pegasusEntries,
-  professionalDevelopmentEntries,
-  sharedEntries,
-  otherEntries,
+  CODE_STUDIO_ENTRIES,
+  INTERNAL_ENTRIES,
+  PEGASUS_ENTRIES,
+  PROFESSIONAL_DEVELOPMENT_ENTRIES,
+  SHARED_ENTRIES,
+  OTHER_ENTRIES,
 } = require('./webpackEntryPoints');
 
 // Create a config for each of our bundles
@@ -25,12 +25,12 @@ function createConfig({ appsEntries, minify, watch, watchNotify, piskelDevMode }
 
   const entryPoints = {
     ...appsEntries,
-    ...codeStudioEntries,
-    ...internalEntries,
-    ...pegasusEntries,
-    ...professionalDevelopmentEntries,
-    ...sharedEntries,
-    ...otherEntries
+    ...CODE_STUDIO_ENTRIES,
+    ...INTERNAL_ENTRIES,
+    ...PEGASUS_ENTRIES,
+    ...PROFESSIONAL_DEVELOPMENT_ENTRIES,
+    ...SHARED_ENTRIES,
+    ...OTHER_ENTRIES,
   };
 
   return webpackConfig.create({
@@ -110,13 +110,13 @@ function createConfig({ appsEntries, minify, watch, watchNotify, piskelDevMode }
               return Object.keys(appsEntries).includes(chunk.name);
             },
           },
-          // Pull any module shared by 2+ codeStudioEntries into the
+          // Pull any module shared by 2+ CODE_STUDIO_ENTRIES into the
           // "code-studio-common" chunk.
           'code-studio-common': {
             name: 'code-studio-common',
             minChunks: 2,
             chunks: chunk => {
-              const chunkNames = Object.keys(codeStudioEntries);
+              const chunkNames = Object.keys(CODE_STUDIO_ENTRIES);
               return chunkNames.includes(chunk.name);
             },
             priority: 10,
@@ -147,7 +147,7 @@ function createConfig({ appsEntries, minify, watch, watchNotify, piskelDevMode }
             name: 'code-studio-common',
             minChunks: Object.keys(appsEntries).length + 1,
             chunks: chunk => {
-              const chunkNames = Object.keys(codeStudioEntries).concat(
+              const chunkNames = Object.keys(CODE_STUDIO_ENTRIES).concat(
                 Object.keys(appsEntries)
               );
               return chunkNames.includes(chunk.name);
@@ -158,14 +158,14 @@ function createConfig({ appsEntries, minify, watch, watchNotify, piskelDevMode }
             name: 'vendors',
             priority: 30,
             chunks: chunk => {
-              // all 'initial' chunks except otherEntries
+              // all 'initial' chunks except OTHER_ENTRIES
               const chunkNames = Object.keys({
-                ...appsEntries,            
-                ...codeStudioEntries,
-                ...internalEntries,
-                ...pegasusEntries,
-                ...professionalDevelopmentEntries,
-                ...sharedEntries,
+                ...APPS_ENTRIES,           
+                ...CODE_STUDIO_ENTRIES,
+                ...INTERNAL_ENTRIES,
+                ...PEGASUS_ENTRIES,
+                ...PROFESSIONAL_DEVELOPMENT_ENTRIES,
+                ...SHARED_ENTRIES,
               })
 
               return chunkNames.includes(chunk.name);
@@ -204,7 +204,7 @@ function createConfig({ appsEntries, minify, watch, watchNotify, piskelDevMode }
         ? [
             new BundleAnalyzerPlugin({
               analyzerMode: 'static',
-              excludeAssets: [...Object.keys(internalEntries)],
+              excludeAssets: [...Object.keys(INTERNAL_ENTRIES)],
             }),
           ]
         : []),
