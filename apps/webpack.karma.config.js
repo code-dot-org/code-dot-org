@@ -2,7 +2,7 @@ const webpack = require('webpack');
 const path = require('path');
 
 const envConstants = require('./envConstants');
-const { baseConfig, devtool } = require('./webpack');
+const {baseConfig} = require('./webpack.base.config');
 
 // config for our test runner
 const karmaConfig = { ...baseConfig, ...{

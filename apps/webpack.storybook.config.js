@@ -1,6 +1,9 @@
 const webpack = require('webpack');
 const path = require('path');
 
+const {baseConfig} = require('./webpack.base.config');
+const envConstants = require('./envConstants');
+
 // Customize webpack config for storybook.
 // @param {Object} sbConfig - Webpack configuration from storybook library.
 function storybookConfig(sbConfig) {
