@@ -563,7 +563,7 @@ describe('entry tests', () => {
   var appsEntries = getAppsEntries(appsToBuild);
 
   // Create a config for each of our bundles
-  function createConfig({ minify, watch, watchNotify }) {
+  function createConfig({ minify, watch, watchNotify, piskelDevMode }) {
 
     return webpackConfig.create({
       outputDir: path.resolve(__dirname, 'build/package/js/'),
@@ -810,17 +810,20 @@ describe('entry tests', () => {
           },
         }),
       ],
-      minify: minify,
-      watch: watch,
-      watchNotify: watchNotify,
-      piskelDevMode: PISKEL_DEVELOPMENT_MODE,
+      minify,
+      watch,
+      watchNotify,
+      piskelDevMode,
     });
   }
+
+  const piskelDevMode = PISKEL_DEVELOPMENT_MODE;
 
   config.webpack = {
     build: createConfig({
       minify: false,
       watch: false,
+      piskelDevMode,
     }),
 
     buildOffline: offlineWebpackConfig,
@@ -828,12 +831,14 @@ describe('entry tests', () => {
     uglify: createConfig({
       minify: true,
       watch: false,
+      piskelDevMode,
     }),
 
     watch: createConfig({
       minify: false,
       watch: true,
       watchNotify: grunt.option('watch-notify'),
+      piskelDevMode,
     }),
   };
 
