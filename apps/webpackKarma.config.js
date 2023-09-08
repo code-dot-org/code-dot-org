@@ -2,7 +2,13 @@ const webpack = require('webpack');
 const path = require('path');
 
 const envConstants = require('./envConstants');
-const {baseConfig, devtool} = require('./webpack.base.config');
+const {
+  baseConfig,
+  devtool,
+  localeDoNotImport,
+} = require('./webpack.base.config');
+
+const localeDoNotImportTest = cdo => localeDoNotImport(cdo, 'test/util');
 
 // config for our test runner
 const karmaConfig = {
@@ -14,68 +20,18 @@ const karmaConfig = {
       ...{
         alias: {
           ...baseConfig.resolve.alias,
+          ...Object.fromEntries([
+            localeDoNotImportTest('@cdo/applab/locale'),
+            localeDoNotImportTest('@cdo/gamelab/locale'),
+            localeDoNotImportTest('@cdo/javalab/locale'),
+            localeDoNotImportTest('@cdo/locale'),
+            localeDoNotImportTest('@cdo/music/locale'),
+            localeDoNotImportTest('@cdo/netsim/locale'),
+            localeDoNotImportTest('@cdo/tutorialExplorer/locale'),
+            localeDoNotImportTest('@cdo/weblab/locale'),
+          ]),
           ...{
-            '@cdo/locale': path.resolve(
-              __dirname,
-              'test',
-              'util',
-              'locale-do-not-import.js'
-            ),
-            '@cdo/netsim/locale': path.resolve(
-              __dirname,
-              'test',
-              'util',
-              'netsim',
-              'locale-do-not-import.js'
-            ),
-            '@cdo/applab/locale': path.resolve(
-              __dirname,
-              'test',
-              'util',
-              'applab',
-              'locale-do-not-import.js'
-            ),
-            '@cdo/gamelab/locale': path.resolve(
-              __dirname,
-              'test',
-              'util',
-              'gamelab',
-              'locale-do-not-import.js'
-            ),
-            '@cdo/music/locale': path.resolve(
-              __dirname,
-              'test',
-              'util',
-              'music',
-              'locale-do-not-import.js'
-            ),
-            '@cdo/javalab/locale': path.resolve(
-              __dirname,
-              'test',
-              'util',
-              'javalab',
-              'locale-do-not-import.js'
-            ),
-            '@cdo/weblab/locale': path.resolve(
-              __dirname,
-              'test',
-              'util',
-              'weblab',
-              'locale-do-not-import.js'
-            ),
-            '@cdo/tutorialExplorer/locale': path.resolve(
-              __dirname,
-              'test',
-              'util',
-              'tutorialExplorer',
-              'locale-do-not-import.js'
-            ),
-            firebase: path.resolve(
-              __dirname,
-              'test',
-              'util',
-              'MockFirebase.js'
-            ),
+            firebase: path.resolve(__dirname, 'test/util/MockFirebase.js'),
             // Use mock-firmata to unit test playground-io maker components
             firmata: 'mock-firmata/mock-firmata',
           },

@@ -83,13 +83,13 @@ function devtool({minify} = {}) {
 }
 
 const p = _ => path.resolve(__dirname, _);
-const localeDoNotImport = cdo => [
+const localeDoNotImport = (cdo, dir = 'src') => [
   cdo,
-  p(cdo.replace(/^@cdo/, 'src').replace(/locale$/, 'locale-do-not-import.js')),
+  p(cdo.replace(/^@cdo/, dir).replace(/locale$/, 'locale-do-not-import.js')),
 ];
-const localeDoNotImportP5Lab = cdo => [
+const localeDoNotImportP5Lab = (cdo, dir = 'src') => [
   cdo,
-  localeDoNotImport(cdo.replace(/^@cdo/, 'src/p5lab')),
+  localeDoNotImport(cdo.replace(/^@cdo/, `${dir}/p5lab`)),
 ];
 
 // Our base webpack config, from which our other configs are derived
@@ -108,19 +108,19 @@ const baseConfig = {
         'src/util/locale-do-not-import.js'
       ),
       ...Object.fromEntries([
-        localeDoNotImportP5Lab('@cdo/gamelab/locale'),
-        localeDoNotImportP5Lab('@cdo/poetry/locale'),
-        localeDoNotImportP5Lab('@cdo/spritelab/locale'),
-        localeDoNotImport('@cdo/netsim/locale'),
+        localeDoNotImport('@cdo/aichat/locale'),
         localeDoNotImport('@cdo/applab/locale'),
         localeDoNotImport('@cdo/javalab/locale'),
         localeDoNotImport('@cdo/music/locale'),
-        localeDoNotImport('@cdo/standaloneVideo/locale'),
-        localeDoNotImport('@cdo/aichat/locale'),
-        localeDoNotImport('@cdo/weblab/locale'),
-        localeDoNotImport('@cdo/tutorialExplorer/locale'),
-        localeDoNotImport('@cdo/regionalPartnerSearch/locale'),
+        localeDoNotImport('@cdo/netsim/locale'),
         localeDoNotImport('@cdo/regionalPartnerMiniContact/locale'),
+        localeDoNotImport('@cdo/regionalPartnerSearch/locale'),
+        localeDoNotImport('@cdo/standaloneVideo/locale'),
+        localeDoNotImport('@cdo/tutorialExplorer/locale'),
+        localeDoNotImport('@cdo/weblab/locale'),
+        localeDoNotImportP5Lab('@cdo/gamelab/locale'),
+        localeDoNotImportP5Lab('@cdo/poetry/locale'),
+        localeDoNotImportP5Lab('@cdo/spritelab/locale'),
       ]),
       '@cdo/apps': path.resolve(__dirname, 'src'),
       '@cdo/static': path.resolve(__dirname, 'static'),
@@ -251,4 +251,5 @@ if (envConstants.COVERAGE) {
 module.exports = {
   baseConfig,
   devtool,
+  localeDoNotImport,
 };
