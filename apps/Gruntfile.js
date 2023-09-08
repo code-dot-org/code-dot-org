@@ -564,9 +564,7 @@ describe('entry tests', () => {
   var appsEntries = getAppsEntries(appsToBuild);
 
   // Create a config for each of our bundles
-  function createConfig(options) {
-    var minify = options.minify;
-    var watch = options.watch;
+  function createConfig({ minify, watch, watchNotify }) {
 
     return webpackConfig.create({
       outputDir: path.resolve(__dirname, OUTPUT_DIR),
@@ -815,7 +813,7 @@ describe('entry tests', () => {
       ],
       minify: minify,
       watch: watch,
-      watchNotify: grunt.option('watch-notify'),
+      watchNotify: watchNotify,
       piskelDevMode: PISKEL_DEVELOPMENT_MODE,
     });
   }
@@ -836,6 +834,7 @@ describe('entry tests', () => {
     watch: createConfig({
       minify: false,
       watch: true,
+      watchNotify: grunt.option('watch-notify'),
     }),
   };
 
