@@ -1,5 +1,8 @@
-const webpack = require('webpack');
 const _ = require('lodash');
+
+const webpack = require('webpack');
+const LiveReloadPlugin = require('webpack-livereload-plugin');
+const WebpackNotifierPlugin = require('webpack-notifier');
 
 const envConstants = require('./envConstants');
 const { baseConfig, devtool } = require('./webpack.base.config');
