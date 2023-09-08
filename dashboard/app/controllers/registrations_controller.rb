@@ -1,6 +1,7 @@
 require 'cdo/firehose'
 require 'cdo/honeybadger'
 require 'cpa'
+require_relative '../../../shared/middleware/helpers/experiments'
 
 class RegistrationsController < Devise::RegistrationsController
   respond_to :json
@@ -357,6 +358,8 @@ class RegistrationsController < Devise::RegistrationsController
       @request_date = permission_request&.updated_at || Date.new
       @personal_account_linking_enabled = false unless Policies::ChildAccount.compliant?(current_user)
     end
+
+    @personal_account_linking_enabled = true unless experiment_value('cpa-partial-lockout', request)
   end
 
   private def update_user_email

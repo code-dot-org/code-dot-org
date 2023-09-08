@@ -117,7 +117,7 @@
       )
     %p= t('user.only_one_parent_email_supported_warning')
 
-- if current_user.student? && Cpa.cpa_experience(request) && Policies::ChildAccount.user_predates_policy?(current_user)
+- if current_user.student? && experiment_value('cpa-partial-lockout', request) && Cpa.cpa_experience(request) && Policies::ChildAccount.user_predates_policy?(current_user)
   %div#lockout-linked-accounts{
     data: {
       request_date: @request_date&.iso8601,
