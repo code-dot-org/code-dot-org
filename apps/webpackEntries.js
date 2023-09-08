@@ -21,24 +21,6 @@ var ALL_APPS = [
   'weblab',
 ];
 
-function assertAppsAreValid(appsToBuild) {
-  for (const app of appsToBuild) {
-    if (!ALL_APPS.includes(app)) {
-      throw new Error(`Invalid app name: ${app}`);
-    }
-  }
-}
-
-function getAppsEntries(appsToBuild=ALL_APPS) {
-  assertAppsAreValid(appsToBuild);
-
-  return Object.fromEntries(
-    appsToBuild.map(
-      app => [app, './src/sites/studio/pages/levels-' + app + '-main.js']
-    )
-  );
-}
-
 var codeStudioEntries = {
   'certificates/batch': './src/sites/studio/pages/certificates/batch.js',
   'certificates/show': './src/sites/studio/pages/certificates/show.js',
@@ -372,6 +354,24 @@ var otherEntries = {
   regionalPartnerMiniContact:
     './src/regionalPartnerMiniContact/regionalPartnerMiniContact',
 };
+
+function assertAppsAreValid(appsToBuild) {
+  for (const app of appsToBuild) {
+    if (!ALL_APPS.includes(app)) {
+      throw new Error(`Invalid app name: ${app}`);
+    }
+  }
+}
+
+function getAppsEntries(appsToBuild=ALL_APPS) {
+  assertAppsAreValid(appsToBuild);
+
+  return Object.fromEntries(
+    appsToBuild.map(
+      app => [app, './src/sites/studio/pages/levels-' + app + '-main.js']
+    )
+  );
+}
 
 module.exports = {
   ALL_APPS,
