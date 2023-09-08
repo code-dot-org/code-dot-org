@@ -1,4 +1,4 @@
-var webpackConfig = require('./webpack').karmaConfig;
+var webpackConfig = require('./webpack.karma.config');
 var envConstants = require('./envConstants');
 var tty = require('tty');
 
