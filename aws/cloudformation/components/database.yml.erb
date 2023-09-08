@@ -121,6 +121,9 @@
       MemorySize: 1024
       Timeout: 30
       Role: !GetAtt SQLUserRole.Arn
+      VpcConfig:
+        SecurityGroupIds: [!ImportValue VPC-DBSecurityGroup]
+        SubnetIds: <%=subnets.to_json%>
   SQLUserRole:
     Type: AWS::IAM::Role
     Properties:
