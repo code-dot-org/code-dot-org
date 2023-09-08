@@ -1,0 +1,11 @@
+name 'CSA-SE-CV-SC1L2-02'
+
+question 'The lesson provided valuable insights into how AI technologies are evolving the role of a software engineer.'
+
+right 'Strongly Agree'
+right 'Agree'
+right 'Neutral'
+right 'Disagree'
+right 'Strongly Disagree'
+
+allow_multiple_attempts true
