@@ -18,3 +18,74 @@ theme: responsive_full_width
     %figure
       %img{src: "/images/banners/banner-csa-student-code-paint.png", alt: ""}
 
+%section
+  .wrapper
+    %div.col-50{style: "margin: .5rem 0 1rem;"}
+      = view :display_video_thumbnail, id: "intro_csa", video_code: "lFkFi2jGs70", play_button: 'center', letterbox: 'false', download_path: "//videos.code.org/curriculum_videos/curriculum_video_csa.mp4"
+    .text-wrapper.col-45{style: "float: right;"}
+      %h2=hoc_s(:csa_page_intro_heading)
+      %ul
+        %li=hoc_s(:csa_page_intro_list_01)
+        %li=hoc_s(:csa_page_intro_list_02)
+        %li=hoc_s(:csa_page_intro_list_03)
+        %li=hoc_s(:csa_page_intro_list_04)
+        %li=hoc_s(:csa_page_intro_list_05)
+      %a.link-button{href: CDO.studio_url("/courses/csa-2023?viewAs=Instructor")}
+        =hoc_s(:call_to_action_explore_course)
+    .clear
+
+%section.bg-neutral-light
+  .wrapper
+    = view :curriculum_glance_section, heading: hoc_s(:heading_curriculum_at_a_glance), grades: hoc_s(:module_grade_9_12), duration: hoc_s(:module_duration_school_year), level: hoc_s(:module_level_intermediate), tools: hoc_s(:csa_page_curriculum_glance_tools), devices: hoc_s(:csa_page_curriculum_glance_devices), professional_learning: hoc_s(:csa_page_curriculum_glance_professional_learning), topics: hoc_s(:csa_page_curriculum_glance_topics), accessibility_features: hoc_s(:csa_page_curriculum_glance_accessibility_features), languages: hoc_s(:csa_page_curriculum_glance_languages)
+
+%section.quote.bg-neutral-dark
+  .wrapper
+    %div.quotes-wrapper
+      %p.quote-text
+        =hoc_s(:csa_page_quote)
+      %p.no-margin-bottom
+        -# %span •
+        =hoc_s(:teacher_label_csa)
+
+%section
+  .wrapper
+    %h2=hoc_s(:heading_engaging_projects)
+    = view :projects_csa_page
+
+%section.bg-neutral-light
+  .wrapper
+    = view :resources_tabs
+
+%section
+  .wrapper
+    %h2=hoc_s(:heading_professional_learning)
+    .action-block.action-block--two-col
+      %img{src: "/images/action-block-self-paced-pl.png", alt: "", class: "col-50"}
+      .text-wrapper.col-50
+        %h3.heading-sm
+          =hoc_s(:professional_learning_section_desc_short)
+        %p=hoc_s(:professional_learning_section_block_csa)
+        %p=hoc_s(:professional_learning_section_workshops_starting)
+        %a.link-button{href: "/apply"}
+          =hoc_s(:call_to_action_apply_for_pl)
+
+= view :section_divider_line
+
+%section.no-padding-bottom
+  .wrapper
+    %h2=hoc_s(:heading_faq)
+    = view :faq_csa
+
+%section
+  .wrapper
+    = view :support_and_questions_section
+
+= view :section_divider_line
+
+%section
+  .wrapper
+    = view :afe_partnership_block
+
+= view :analytics_event_log_helper, event_name: AnalyticsConstants::CSA_CURRICULUM_PAGE_VISITED_EVENT
+
+
