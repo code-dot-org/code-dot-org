@@ -8,6 +8,7 @@ const {
   localeDoNotImport,
 } = require('./webpack.base.config');
 
+// alias '@cdo/applab/locale' => 'test/util/applab/locale-do-not-import.js'
 const localeDoNotImportTest = cdo => localeDoNotImport(cdo, 'test/util');
 
 // config for our test runner

@@ -3,43 +3,41 @@ const path = require('path');
 const envConstants = require('./envConstants');
 const sass = require('sass');
 
+const p = (...paths) => path.resolve(__dirname, ...paths);
+
 // Certain packages ship in ES6 and need to be transpiled for our purposes.
-const toTranspileWithinNodeModules = [
+const nodeModulesToTranspile = [
   // All of our @cdo- and @dsco_-aliased files should get transpiled as they are our own
   // source files.
-  path.resolve(__dirname, 'node_modules', '@cdo'),
-  path.resolve(__dirname, 'node_modules', '@dsco_'),
+  '@cdo',
+  '@dsco_',
   // playground-io ships in ES6 as of 0.3.0
-  path.resolve(__dirname, 'node_modules', 'playground-io'),
-  path.resolve(__dirname, 'node_modules', 'json-parse-better-errors'),
-  path.resolve(__dirname, 'node_modules', '@blockly', 'field-grid-dropdown'),
-  path.resolve(__dirname, 'node_modules', '@blockly', 'keyboard-navigation'),
-  path.resolve(__dirname, 'node_modules', '@blockly', 'plugin-scroll-options'),
-  path.resolve(__dirname, 'node_modules', 'blockly'),
-  path.resolve(__dirname, 'node_modules', '@code-dot-org', 'dance-party'),
-  path.resolve(__dirname, 'node_modules', '@code-dot-org', 'johnny-five'),
-  path.resolve(__dirname, 'node_modules', '@code-dot-org', 'remark-plugins'),
-  path.resolve(__dirname, 'node_modules', 'firmata'),
+  'playground-io',
+  'json-parse-better-errors',
+  '@blockly/field-grid-dropdown',
+  '@blockly/keyboard-navigation',
+  '@blockly/plugin-scroll-options',
+  'blockly',
+  '@code-dot-org/dance-party',
+  '@code-dot-org/johnny-five',
+  '@code-dot-org/remark-plugins',
+  'firmata',
   // parse5 ships in ES6: https://github.com/inikulin/parse5/issues/263#issuecomment-410745073
-  path.resolve(__dirname, 'node_modules', 'parse5'),
-  path.resolve(__dirname, 'node_modules', 'vmsg'),
-  path.resolve(__dirname, 'node_modules', 'ml-knn'),
-  path.resolve(__dirname, 'node_modules', 'ml-array-max'),
-  path.resolve(__dirname, 'node_modules', 'ml-array-min'),
-  path.resolve(__dirname, 'node_modules', 'ml-array-rescale'),
-  path.resolve(__dirname, 'node_modules', 'ml-distance-euclidean'),
-  path.resolve(__dirname, 'node_modules', '@codemirror'),
-  path.resolve(__dirname, 'node_modules', 'style-mod'),
-  path.resolve(__dirname, 'node_modules', '@lezer'),
-  path.resolve(
-    __dirname,
-    'node_modules',
-    'microsoft-cognitiveservices-speech-sdk'
-  ),
-  path.resolve(__dirname, 'node_modules', 'slate'),
-  path.resolve(__dirname, 'node_modules', 'react-loading-skeleton'),
-  path.resolve(__dirname, 'node_modules', 'unified'),
-];
+  'parse5',
+  'vmsg',
+  'ml-knn',
+  'ml-array-max',
+  'ml-array-min',
+  'ml-array-rescale',
+  'ml-distance-euclidean',
+  '@codemirror',
+  'style-mod',
+  '@lezer',
+  'microsoft-cognitiveservices-speech-sdk',
+  'slate',
+  'react-loading-skeleton',
+  'unified',
+].map(path => p('node_modules', path));
 
 // As of Webpack 5, Node APIs are no longer automatically polyfilled.
 // resolve.fallback resolves the API to its NPM package, and the plugin
@@ -82,11 +80,12 @@ function devtool({minify} = {}) {
   }
 }
 
-const p = _ => path.resolve(__dirname, _);
+// alias '@cdo/aichat/locale' => 'src/aichat/locale-do-not-import.js'
 const localeDoNotImport = (cdo, dir = 'src') => [
   cdo,
   p(cdo.replace(/^@cdo/, dir).replace(/locale$/, 'locale-do-not-import.js')),
 ];
+// alias '@cdo/gamelab/locale' => 'src/p5lab/locale-do-not-import.js'
 const localeDoNotImportP5Lab = (cdo, dir = 'src') => [
   cdo,
   localeDoNotImport(cdo.replace(/^@cdo/, `${dir}/p5lab`)),
@@ -122,10 +121,10 @@ const baseConfig = {
         localeDoNotImportP5Lab('@cdo/poetry/locale'),
         localeDoNotImportP5Lab('@cdo/spritelab/locale'),
       ]),
-      '@cdo/apps': path.resolve(__dirname, 'src'),
-      '@cdo/static': path.resolve(__dirname, 'static'),
-      repl: path.resolve(__dirname, 'src/noop'),
-      '@cdo/storybook': path.resolve(__dirname, '.storybook'),
+      '@cdo/apps': p('src'),
+      '@cdo/static': p('static'),
+      repl: p('src/noop'),
+      '@cdo/storybook': p('.storybook'),
       serialport: false,
     },
   },
@@ -133,10 +132,7 @@ const baseConfig = {
     rules: [
       {
         test: /\.ejs$/,
-        include: [
-          path.resolve(__dirname, 'src'),
-          path.resolve(__dirname, 'test'),
-        ],
+        include: [p('src'), p('test')],
         loader: 'ejs-webpack-loader',
       },
       {test: /\.css$/, use: [{loader: 'style-loader'}, {loader: 'css-loader'}]},
@@ -161,7 +157,7 @@ const baseConfig = {
             options: {
               implementation: sass,
               sassOptions: {
-                includePaths: [path.resolve(__dirname, '../shared/css')],
+                includePaths: [p('../shared/css')],
                 outputStyle: 'compressed',
               },
             },
@@ -173,10 +169,10 @@ const baseConfig = {
       {
         test: /\.(png|jpg|jpeg|gif|svg)$/,
         include: [
-          path.resolve(__dirname, 'static'),
-          path.resolve(__dirname, 'src'),
-          path.resolve(__dirname, 'test'),
-          path.resolve(__dirname, '../dashboard/app/assets/images'),
+          p('static'),
+          p('src'),
+          p('test'),
+          p('../dashboard/app/assets/images'),
         ],
         // note that in the name template given below, a dash prefixing
         // the hash is explicitly avoided. If rails tries to serve
@@ -198,14 +194,11 @@ const baseConfig = {
       {
         test: /\.jsx?$/,
         enforce: 'pre',
-        include: [
-          path.resolve(__dirname, 'src'),
-          path.resolve(__dirname, 'test'),
-        ].concat(toTranspileWithinNodeModules),
-        exclude: [path.resolve(__dirname, 'src/lodash.js')],
+        include: [...nodeModulesToTranspile, p('src'), p('test')],
+        exclude: [p('src/lodash.js')],
         loader: 'babel-loader',
         options: {
-          cacheDirectory: path.resolve(__dirname, '.babel-cache'),
+          cacheDirectory: p('.babel-cache'),
           compact: false,
         },
       },
@@ -223,7 +216,7 @@ if (envConstants.HOT) {
   baseConfig.module.loaders.push({
     test: /\.jsx?$/,
     loader: 'react-hot-loader',
-    include: [path.resolve(__dirname, 'src')],
+    include: [p('src')],
   });
 }
 
@@ -233,12 +226,12 @@ if (envConstants.COVERAGE) {
     test: /\.jsx?$/,
     enforce: 'post',
     loader: 'istanbul-instrumenter-loader',
-    include: path.resolve(__dirname, 'src'),
+    include: p('src'),
     exclude: [
       // we need to turn off instrumentation for this file
       // because we have tests that actually make assertions
       // about the contents of the compiled version of this file :(
-      path.resolve(__dirname, 'src/flappy/levels.js'),
+      p('src/flappy/levels.js'),
     ],
     options: {
       cacheDirectory: true,
