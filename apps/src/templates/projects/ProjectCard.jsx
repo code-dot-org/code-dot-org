@@ -29,6 +29,7 @@ export default class ProjectCard extends React.Component {
     };
     this.showReportAbusePopUp = this.showReportAbusePopUp.bind(this);
     this.closeReportAbusePopUp = this.closeReportAbusePopUp.bind(this);
+    this.showReportedHeader = this.showReportedHeader.bind(this);
   }
 
   showReportAbusePopUp() {
@@ -40,6 +41,12 @@ export default class ProjectCard extends React.Component {
   closeReportAbusePopUp() {
     this.setState({
       showReportAbuse: false,
+    });
+  }
+
+  showReportedHeader() {
+    this.setState({
+      showSubmittedHeader: true,
     });
   }
 
@@ -70,6 +77,7 @@ export default class ProjectCard extends React.Component {
             abuseUrl={url}
             projectData={this.props.projectData}
             onClose={this.closeReportAbusePopUp}
+            onReport={this.showReportedHeader}
           />
         ) : null}
 
@@ -101,7 +109,7 @@ export default class ProjectCard extends React.Component {
                 justifyContent: 'center',
               }}
             >
-              <p className={style.reported}>Reported</p>
+              <p className={style.reported}>{i18n.reported()}</p>
             </div>
           )}
 
@@ -174,10 +182,6 @@ export default class ProjectCard extends React.Component {
     );
   }
 }
-
-// export default connect(state => ({
-//   recaptchaSiteKey: state.projects.captcha.captchaSiteKey,
-// }))(UnconnectedProjectCard);
 
 const styles = {
   title: {
