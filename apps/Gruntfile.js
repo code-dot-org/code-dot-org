@@ -11,8 +11,7 @@ var sass = require('sass');
 
 const {
   ALL_APPS,
-  assertAppsAreValid,
-  getAppsEntries,
+  appsEntriesFor,
 } = require('./webpackEntryPoints');
 
 const { createConfig } = require('./webpackCreateConfig')
@@ -73,7 +72,6 @@ describe('entry tests', () => {
   /** @const {string} */
   var SINGLE_APP = grunt.option('app') || envConstants.APP;
   var appsToBuild = SINGLE_APP ? [SINGLE_APP] : ALL_APPS;
-  assertAppsAreValid(appsToBuild);
 
   var ace_suffix = envConstants.DEV ? '' : '-min';
   var piskelRootStdout = child_process.execSync('npx piskel-root');
@@ -548,7 +546,7 @@ describe('entry tests', () => {
 
   const piskelDevMode = PISKEL_DEVELOPMENT_MODE;
 
-  var appsEntries = getAppsEntries(appsToBuild);
+  var appsEntries = appsEntriesFor(appsToBuild);
 
   config.webpack = {
     build: createConfig({

@@ -1,3 +1,9 @@
+// FIXME: this is a copy-paste from Gruntfile.js, in order to
+// make updating it easier and less error prone prior to merge.
+// Once we're ready to merge, we should change
+// case: codeStudioEntries=>CODE_STUDIO_ENTRIES
+// and change the vars to consts
+
 var ALL_APPS = [
   'ailab',
   'applab',
@@ -355,7 +361,7 @@ var otherEntries = {
     './src/regionalPartnerMiniContact/regionalPartnerMiniContact',
 };
 
-function getAppsEntries(appsToBuild=ALL_APPS) {
+function appsEntriesFor(appsToBuild=ALL_APPS) {
   assertAppsAreValid(appsToBuild);
 
   return Object.fromEntries(
@@ -384,13 +390,12 @@ function addPollyfillsToEntryPoints(entries, polyfills) {
 
 module.exports = {
   ALL_APPS,
-  assertAppsAreValid,
-  getAppsEntries,
+  appsEntriesFor,
   addPollyfillsToEntryPoints,
-  codeStudioEntries,
-  internalEntries,
-  pegasusEntries,
-  professionalDevelopmentEntries,
-  sharedEntries,
-  otherEntries,
+  CODE_STUDIO_ENTRIES: codeStudioEntries,
+  INTERNAL_ENTRIES: internalEntries,
+  PEGASUS_ENTRIES: pegasusEntries,
+  PROFESSIONAL_DEVELOPMENT_ENTRIES: professionalDevelopmentEntries,
+  SHARED_ENTRIES: sharedEntries,
+  OTHER_ENTRIES: otherEntries,
 };
