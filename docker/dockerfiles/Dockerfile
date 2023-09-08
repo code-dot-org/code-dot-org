@@ -74,6 +74,8 @@ RUN curl -sSLOJ https://nodejs.org/dist/v18.16.0/node-v18.16.0.tar.gz && \
     cd .. && \
     rm -r node-v18.16.0
 
+# Enable Corepack, for Yarn support
+RUN PATH=/build/bin corepack enable
 
 #########################################################
 FROM base as rbenv
