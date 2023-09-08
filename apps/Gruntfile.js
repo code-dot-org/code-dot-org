@@ -19,6 +19,9 @@ var {WebpackManifestPlugin} = require('webpack-manifest-plugin');
 console.log(`DEV is ${envConstants.DEV}`);
 
 const {
+  ALL_APPS,
+  assertAppsAreValid,
+  getAppsEntries,
   codeStudioEntries,
   internalEntries,
   pegasusEntries,
@@ -82,36 +85,8 @@ describe('entry tests', () => {
 
   /** @const {string} */
   var SINGLE_APP = grunt.option('app') || envConstants.APP;
-
-  /** @const {string[]} */
-  var ALL_APPS = [
-    'ailab',
-    'applab',
-    'bounce',
-    'calc',
-    'craft',
-    'dance',
-    'eval',
-    'fish',
-    'flappy',
-    'javalab',
-    'gamelab',
-    'jigsaw',
-    'lab2',
-    'maze',
-    'netsim',
-    'poetry',
-    'spritelab',
-    'studio',
-    'turtle',
-    'weblab',
-  ];
-
-  if (SINGLE_APP && ALL_APPS.indexOf(SINGLE_APP) === -1) {
-    throw new Error('Unknown app: ' + SINGLE_APP);
-  }
-
   var appsToBuild = SINGLE_APP ? [SINGLE_APP] : ALL_APPS;
+  assertAppsAreValid(appsToBuild);
 
   var ace_suffix = envConstants.DEV ? '' : '-min';
   var piskelRootStdout = child_process.execSync('npx piskel-root');
@@ -585,11 +560,7 @@ describe('entry tests', () => {
     },
   };
 
-  var appsEntries = _.fromPairs(
-    appsToBuild.map(function (app) {
-      return [app, './src/sites/studio/pages/levels-' + app + '-main.js'];
-    })
-  );
+  var appsEntries = getAppsEntries(appsToBuild);
 
   // Create a config for each of our bundles
   function createConfig(options) {
