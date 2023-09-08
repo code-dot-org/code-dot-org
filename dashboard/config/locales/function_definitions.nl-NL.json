@@ -7,13 +7,28 @@
             "name": "x"
           }
         },
+        "2-3 Artist 12": {
+          "details": {
+            "name": "details"
+          },
+          "draw eyebrow": {
+            "name": "teken wenkbrauw"
+          },
+          "draw pupil": {
+            "name": "teken pupil"
+          }
+        },
         "2-3 Artist 3.4": {
+          "draw a car": {
+            "name": "teken een auto"
+          },
           "draw a circle": {
             "name": "teken een cirkel"
           }
         },
         "2-3 Artist 7": {
           "draw_rect": {
+            "name": "draw_rect",
             "parameters": {
               "height": "hoogte",
               "width": "breedte"
@@ -21,14 +36,75 @@
           }
         },
         "2-3 Artist Debugging 10": {
+          "draw R pad": {
+            "name": "teken R pad"
+          },
+          "draw a button": {
+            "name": "teken een knop"
+          },
           "draw a circle": {
             "name": "teken een cirkel"
           },
+          "draw cord": {
+            "name": "teken kabel"
+          },
           "draw square": {
+            "name": "teken vierkant",
             "parameters": {
               "height": "hoogte",
               "width": "breedte"
             }
+          },
+          "jump to controller top left": {
+            "name": "spring naar controller linksboven"
+          },
+          "jump to middle": {
+            "name": "spring naar midden"
+          }
+        },
+        "2-3 Artist Debugging 5": {
+          "draw a head": {
+            "name": "teken een hoofd"
+          },
+          "draw body and arms": {
+            "name": "teken lichaam en armen"
+          },
+          "draw left leg": {
+            "name": "teken linkerbeen"
+          },
+          "draw right leg": {
+            "name": "teken rechterbeen"
+          }
+        },
+        "2-3 Artist Debugging 6": {
+          "draw arms": {
+            "name": "teken armen"
+          },
+          "draw head": {
+            "name": "teken hoofd"
+          },
+          "draw left leg": {
+            "name": "teken linkerbeen"
+          },
+          "draw right leg": {
+            "name": "teken rechterbeen"
+          },
+          "draw sitting stick figure": {
+            "name": "teken een zittend stok figuur"
+          },
+          "jump to neck": {
+            "name": "spring naar nek"
+          }
+        },
+        "2-3 Artist Debugging 7": {
+          "draw D": {
+            "name": "teken D"
+          },
+          "draw E": {
+            "name": "teken E"
+          },
+          "draw O": {
+            "name": "teken O"
           }
         },
         "2-3 Artist Functions 11": {
@@ -77,6 +153,9 @@
           }
         },
         "4-5 Artist 7": {
+          "draw a car": {
+            "name": "teken een auto"
+          },
           "draw a circle": {
             "name": "teken een cirkel"
           }
@@ -1284,6 +1363,16 @@
             }
           }
         },
+        "Robot Doodle": {
+          "draw head": {
+            "name": "teken hoofd"
+          }
+        },
+        "Robot Doodle_2018": {
+          "draw head": {
+            "name": "teken hoofd"
+          }
+        },
         "Standalone_Artist_7": {
           "draw a flower": {
             "name": "teken een bloem"
@@ -1990,31 +2079,49 @@
         "courseE_artist_functions8": {
           "do something": {
             "name": "do iets"
+          },
+          "draw square": {
+            "name": "teken vierkant"
           }
         },
         "courseE_artist_functions82022": {
           "do something": {
             "name": "do iets"
+          },
+          "draw square": {
+            "name": "teken vierkant"
           }
         },
         "courseE_artist_functions8_2018": {
           "do something": {
             "name": "do iets"
+          },
+          "draw square": {
+            "name": "teken vierkant"
           }
         },
         "courseE_artist_functions8_2019": {
           "do something": {
             "name": "do iets"
+          },
+          "draw square": {
+            "name": "teken vierkant"
           }
         },
         "courseE_artist_functions8_2020": {
           "do something": {
             "name": "do iets"
+          },
+          "draw square": {
+            "name": "teken vierkant"
           }
         },
         "courseE_artist_functions8_2021": {
           "do something": {
             "name": "do iets"
+          },
+          "draw square": {
+            "name": "teken vierkant"
           }
         },
         "courseE_artist_functions8a2022": {
@@ -2060,51 +2167,81 @@
         "courseE_artist_functions8b2022": {
           "do something": {
             "name": "do iets"
+          },
+          "draw square": {
+            "name": "teken vierkant"
           }
         },
         "courseE_artist_functions8b_2018": {
           "do something": {
             "name": "do iets"
+          },
+          "draw square": {
+            "name": "teken vierkant"
           }
         },
         "courseE_artist_functions8b_2019": {
           "do something": {
             "name": "do iets"
+          },
+          "draw square": {
+            "name": "teken vierkant"
           }
         },
         "courseE_artist_functions8b_2020": {
           "do something": {
             "name": "do iets"
+          },
+          "draw square": {
+            "name": "teken vierkant"
           }
         },
         "courseE_artist_functions8b_2021": {
           "do something": {
             "name": "do iets"
+          },
+          "draw square": {
+            "name": "teken vierkant"
           }
         },
         "courseE_artist_functions8c2022": {
           "do something": {
             "name": "do iets"
+          },
+          "draw square": {
+            "name": "teken vierkant"
           }
         },
         "courseE_artist_functions8c_2018": {
           "do something": {
             "name": "do iets"
+          },
+          "draw square": {
+            "name": "teken vierkant"
           }
         },
         "courseE_artist_functions8c_2019": {
           "do something": {
             "name": "do iets"
+          },
+          "draw square": {
+            "name": "teken vierkant"
           }
         },
         "courseE_artist_functions8c_2020": {
           "do something": {
             "name": "do iets"
+          },
+          "draw square": {
+            "name": "teken vierkant"
           }
         },
         "courseE_artist_functions8c_2021": {
           "do something": {
             "name": "do iets"
+          },
+          "draw square": {
+            "name": "teken vierkant"
           }
         },
         "courseE_artist_functions9": {
@@ -2135,6 +2272,31 @@
         "courseE_artist_functions9_2021": {
           "do something": {
             "name": "do iets"
+          }
+        },
+        "courseE_artist_functionsProj2022": {
+          "draw square": {
+            "name": "teken vierkant"
+          }
+        },
+        "courseE_artist_functionsProj_2018": {
+          "draw square": {
+            "name": "teken vierkant"
+          }
+        },
+        "courseE_artist_functionsProj_2019": {
+          "draw square": {
+            "name": "teken vierkant"
+          }
+        },
+        "courseE_artist_functionsProj_2020": {
+          "draw square": {
+            "name": "teken vierkant"
+          }
+        },
+        "courseE_artist_functionsProj_2021": {
+          "draw square": {
+            "name": "teken vierkant"
           }
         },
         "courseE_artist_functions_challenge1": {

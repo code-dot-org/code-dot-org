@@ -369,6 +369,7 @@
   "makerSetupChromebookPage": "Hapni këtë faqe ([{makerSetupPage}]({makerSetupPage})) në Chromebook tuaj.",
   "makerSetupCircuitPlaygroundDescription": "Adafruit [Circuit Playground Express](https://www.adafruit.com/product/3399) (dhe më e vjetër [Circuit Playground Classic](https://www.adafruit.com/product/3000)) është një bord qark i programueshëm me sensorë dhe komponentë të ndryshëm dhe përfshin 10 LED me ngjyra së bashku me një mini-altoparlant.",
   "makerSetupCircuitPlaygroundImageAltText": "Bordi Circuit Playground është një bord qark rrethor me një lidhës USB në buzën e sipërme, 14 kunjat e lidhjes përgjatë buzës, 10 drita LED, dy butona dhe sensorë të shumtë.",
+  "makerSetupCircuitPlaygroundTitle": "The Circuit Playground (Qark lojërash)",
   "makerSetupConnectWithWebSerial": "Shesh lojërash Circuit dhe micro:bit mund të lidhen direkt me kompjuterët duke përdorur shfletuesit Google Chrome ose Microsoft Edge. WebSerial është mënyra e rekomanduar për t'u lidhur me bordin tuaj.",
   "makerSetupDownloadAndInstall": "Shkarkoni dhe instaloni Aplikacionin Code.org Maker duke përdorur butonin e shkarkimit më sipër.",
   "makerSetupDownloadProblem": "Kishte një problem në marrjen e lidhjes tuaj të shkarkimit.",
@@ -428,6 +429,7 @@
   "shareApplabTwitterDonor": "Shikoni aplikacionin që kam bërë. (Faleminderit {donor} për mbështetjen @codeorg)",
   "shareGame": "Ndani aplikacionin tuaj:",
   "tableDoesNotExistError": "Ju u përpoqët të lexoni regjistrime nga një tabelë e quajtur \"{tableName}\" por ajo tabelë nuk ekziston në këtë aplikacion",
+  "tryAgainText": "Vazhdoni të punoni",
   "viewData": "Shiko të dhënat",
   "yes": "Po"
 }

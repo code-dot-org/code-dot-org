@@ -19,7 +19,7 @@ it:
             Il corso è pensato per l'uso nelle scuole a partire dai 10 anni, ma è
             divertente per imparare un po' di informatica a qualunque età. Fai i corsi
             2, 3, 4 se vuoi imparare in modo più graduale ed approfondito.
-          title: Corso rapido in 20 ore
+          title: Fondamenti di informatica - Corso rapido da 20 ore
         2021drafting:
           lesson_groups:
             debugging:
@@ -137,8 +137,11 @@ it:
           description_audience: Da 7 a 13 anni
         ai-classroom-test:
           title: Laboratorio IA - Test in aula
+        ai-ethics:
+          title: Il nostro codice etico sulla IA
         ai-ethics-2021:
           description_audience: Da 11 a 17 anni
+          title: Il nostro codice etico sulla IA
         ai-lab:
           title: Laboratorio IA
         ai-temp:
@@ -572,7 +575,7 @@ it:
         coursea-draft:
           description_short: Un'introduzione all'informatica per bambini che stanno
             imparando a leggere.
-          title: 'Fondamenti CS: Corso A'
+          title: Fondamenti di informatica - Corso A
         courseb-2017:
           assignment_family_title: Corso B
           description: 'Impara le basi dell''informatica e della sicurezza su Internet.
@@ -744,7 +747,7 @@ it:
         courseb-draft:
           description_short: Un'introduzione all'informatica per bambini che stanno
             imparando a leggere.
-          title: 'Fondamenti CS: Corso B'
+          title: Fondamenti di informatica - Corso B
         coursec-2017:
           assignment_family_title: Corso C
           description: 'Crea programmi con sequenze di istruzioni, cicli ed eventi.
@@ -940,7 +943,7 @@ it:
         coursec-draft:
           description_short: Impara le basi dell'informatica e crea disegni, storie
             animate o giochi interattivi.
-          title: 'Fondamenti CS: Corso C'
+          title: Fondamenti di informatica - Corso C
         coursed-2017:
           assignment_family_title: Corso D
           description: 'In questo corso vengono insegnati nuovi concetti di informatica
@@ -1104,9 +1107,9 @@ it:
         coursed-draft:
           description_short: Impara le basi dell'informatica e crea disegni, storie
             animate o giochi interattivi.
-          title: 'Fondamenti CS: Corso D'
+          title: Fondamenti di informatica - Corso D
         coursed-ramp:
-          title: 'Fondamenti CS: Corso D'
+          title: Fondamenti di informatica - Corso D
         coursee-2017:
           assignment_family_title: Corso E
           description: 'Si inizia con algoritmi, cicli, istruzioni condizionali ed
@@ -1324,7 +1327,7 @@ it:
               display_name: Progetto di fine corso
             extra_course_content:
               display_name: Contenuti supplementari
-          title: 'Fondamenti CS: Corso E'
+          title: Fondamenti di informatica - Corso E
         coursef-2017:
           assignment_family_title: Corso F
           description: 'Impara ad usare diversi tipi di cicli, eventi, funzioni e
@@ -1537,7 +1540,7 @@ it:
               display_name: Contenuto
             end_of_course_project:
               display_name: Progetto di fine corso
-          title: 'Fondamenti CS: Corso F'
+          title: Fondamenti di informatica - Corso F
         cs4all-invasive-species:
           lessons:
             lesson-21:
@@ -1973,10 +1976,12 @@ it:
           lesson_groups:
             csd_survey:
               display_name: Sondaggio Post-corso
+          title: Sondaggio post-corso per studenti ('18-'19)
         csd-post-survey-2018:
           lesson_groups:
             cspSurvey:
               display_name: Sondaggio
+          title: Sondaggio post-corso per studenti ('18-'19)
         csd-post-survey-2021:
           description: Questa unità contiene il sondaggio post-corso Alla scoperta
             dell'informatica. Questa unità può essere assegnata dopo che gli studenti
@@ -1999,6 +2004,8 @@ it:
         csd-tests:
           title: Test finali CSD
         csd1-2017:
+          description_short: "  Scopri come le persone operano con i computer per
+            risolvere i problemi."
           lesson_groups:
             csd1_1:
               display_name: 'Capitolo 1: il processo di risoluzione dei problemi'
@@ -2006,7 +2013,10 @@ it:
               display_name: 'Capitolo 2: computer e risoluzione dei problemi'
             cspSurvey:
               display_name: Sondaggio
+          title: Unità 1 - Risoluzione dei problemi ('17-'18)
         csd1-2018:
+          description_short: "  Scopri come le persone operano con i computer per
+            risolvere i problemi."
           lesson_groups:
             csd1_1:
               display_name: 'Capitolo 1: il processo di risoluzione dei problemi'
@@ -2014,16 +2024,19 @@ it:
               display_name: 'Capitolo 2: computer e risoluzione dei problemi'
             cspSurvey:
               display_name: Sondaggio
+          title: Unità 1 - Risoluzione dei problemi ('18-'19)
         csd1-2019:
           description: Risoluzione dei problemi e informatica è un'introduzione all'informatica
             con un'elevata componente interattiva e collaborativa e inquadrata nella
             più ampia ricerca della risoluzione dei problemi. Ti eserciterai a utilizzare
             un processo di risoluzione dei problemi per affrontare una serie di problemi,
             sfide e scenari del mondo reale. Successivamente, imparerai come i computer
-            inseriscono, emettono, archiviano ed elaborano i dati per aiutare gli
-            esseri umani a risolvere i problemi. L'unità si conclude con un progetto
-            in cui si progetta un'applicazione che aiuta a risolvere un problema a
-            scelta.
+            gestscono dati in ingresso e in uscita, memorizzano ed elaborano i dati
+            per aiutare gli esseri umani a risolvere i problemi. L'unità si conclude
+            con un progetto in cui si progetta un'applicazione che aiuta a risolvere
+            un problema a scelta.
+          description_short: "  Scopri come le persone operano con i computer per
+            risolvere i problemi."
           lesson_groups:
             csd1_1:
               display_name: 'Capitolo 1: il processo di risoluzione dei problemi'
@@ -2036,20 +2049,23 @@ it:
             e inquadrata nella più ampia ricerca della risoluzione dei problemi. Ti
             eserciterai a utilizzare un processo di risoluzione dei problemi per affrontare
             una serie di problemi, sfide e scenari del mondo reale. Successivamente,
-            imparerai come i computer inseriscono, emettono, archiviano ed elaborano
-            i dati per aiutare gli esseri umani a risolvere i problemi. L'unità si
-            conclude con un progetto in cui si progetta un'applicazione che aiuta
-            a risolvere un problema a scelta.
+            imparerai come i computer gestscono dati in ingresso e in uscita, memorizzano
+            ed elaborano i dati per aiutare gli esseri umani a risolvere i problemi.
+            L'unità si conclude con un progetto in cui si progetta un'applicazione
+            che aiuta a risolvere un problema a scelta.
+          title: Unità 1 - Risoluzione dei problemi e informatica ('19-'20)
         csd1-2020:
           description: Risoluzione dei problemi e informatica è un'introduzione all'informatica
             con un'elevata componente interattiva e collaborativa e inquadrata nella
             più ampia ricerca della risoluzione dei problemi. Ti eserciterai a utilizzare
             un processo di risoluzione dei problemi per affrontare una serie di problemi,
             sfide e scenari del mondo reale. Successivamente, imparerai come i computer
-            inseriscono, emettono, archiviano ed elaborano i dati per aiutare gli
-            esseri umani a risolvere i problemi. L'unità si conclude con un progetto
-            in cui si progetta un'applicazione che aiuta a risolvere un problema a
-            scelta.
+            gestscono dati in ingresso e in uscita, memorizzano ed elaborano i dati
+            per aiutare gli esseri umani a risolvere i problemi. L'unità si conclude
+            con un progetto in cui si progetta un'applicazione che aiuta a risolvere
+            un problema a scelta.
+          description_short: "  Scopri come le persone operano con i computer per
+            risolvere i problemi."
           lesson_groups:
             csd1_1:
               display_name: 'Capitolo 1: il processo di risoluzione dei problemi'
@@ -2064,10 +2080,11 @@ it:
             e inquadrata nella più ampia ricerca della risoluzione dei problemi. Ti
             eserciterai a utilizzare un processo di risoluzione dei problemi per affrontare
             una serie di problemi, sfide e scenari del mondo reale. Successivamente,
-            imparerai come i computer inseriscono, emettono, archiviano ed elaborano
-            i dati per aiutare gli esseri umani a risolvere i problemi. L'unità si
-            conclude con un progetto in cui si progetta un'applicazione che aiuta
-            a risolvere un problema a scelta.
+            imparerai come i computer gestscono dati in ingresso e in uscita, memorizzano
+            ed elaborano i dati per aiutare gli esseri umani a risolvere i problemi.
+            L'unità si conclude con un progetto in cui si progetta un'applicazione
+            che aiuta a risolvere un problema a scelta.
+          title: Unità 1 - Risoluzione dei problemi e informatica ('20-'21)
         csd1-2021:
           description: "Risoluzione dei problemi e informatica è un'introduzione all'informatica
             con un'elevata componente interattiva e collaborativa e inquadrata nella
@@ -2085,6 +2102,8 @@ it:
             studi](https://docs.google.com/document/d/1myJwrDyRlAjwVNDS3gs-3JaJNhogsGMt9Swo-bpySgE/preview)
             e la [Guida all'organizzazione del corso](https://docs.google.com/document/d/1u-eIlB2cAwMuSckzbMWkteQIcsXgez7FTrbjP8PBB4o/preview)
             completa per ulteriori informazioni su questa unità"
+          description_short: "  Scopri come le persone operano con i computer per
+            risolvere i problemi."
           lesson_groups:
             csd1_1:
               big_questions: "-   Quali strategie e processi posso utilizzare per
@@ -2122,12 +2141,30 @@ it:
             e inquadrata nella più ampia ricerca della risoluzione dei problemi. Ti
             eserciterai a utilizzare un processo di risoluzione dei problemi per affrontare
             una serie di problemi, sfide e scenari del mondo reale. Successivamente,
-            imparerai come i computer inseriscono, emettono, archiviano ed elaborano
-            i dati per aiutare gli esseri umani a risolvere i problemi. L'unità si
-            conclude con un progetto in cui si progetta un'applicazione che aiuta
-            a risolvere un problema a scelta.
+            imparerai come i computer gestscono dati in ingresso e in uscita, memorizzano
+            ed elaborano i dati per aiutare gli esseri umani a risolvere i problemi.
+            L'unità si conclude con un progetto in cui si progetta un'applicazione
+            che aiuta a risolvere un problema a scelta.
           title: Risoluzione dei problemi e informatica ('21-'22)
         csd1-2022:
+          description: "Risoluzione dei problemi e informatica è un'introduzione altamente
+            interattiva e collaborativa sul tema campo dell'informatica, inquadrata
+            nella più ampia ricerca della risoluzione dei problemi. Ti eserciterai
+            a utilizzare un processo di risoluzione dei problemi per risolvere una
+            serie di problemi, sfide e scenari del mondo reale. Successivamente, imparerai
+            come i computer gestscono dati in ingresso e in uscita, memorizzano ed
+            elaborano i dati per aiutare gli esseri umani a risolvere i problemi.
+            L'unità si conclude con un progetto in cui si progetta un'applicazione
+            che aiuta a risolvere un problema di propria scelta. \n\n**Guida all'implementazione
+            per la risoluzione dei problemi e l'informatica**\n\n-   Il primo capitolo
+            di questa unità deve essere completato prima di qualsiasi altra unità
+            di \"Alla scoperta dell'informatica\"\n-   Per alcune lezioni di questa
+            unità sono previste lezioni alternative, a seconda del contesto della
+            classe\n-   È possibile visualizzare la [Guida al piano di studi](https://docs.google.com/document/d/1VUbXHxXqHj5QCb4eSb756KKc7NDzbOLZUE5bPPQmJR8/preview)
+            e la [Guida all'implementazione](https://docs.google.com/document/d/112OA3_KbicOotqopqUyvXoWPWszz3_LHeMlg0ikCabk/preview)
+            per ulteriori informazioni al riguardo l'unità"
+          description_short: "  Scopri come le persone operano con i computer per
+            risolvere i problemi."
           lesson_groups:
             csd1_1:
               display_name: 'Capitolo 1: il processo di risoluzione dei problemi'
@@ -2142,10 +2179,10 @@ it:
             e inquadrata nella più ampia ricerca della risoluzione dei problemi. Ti
             eserciterai a utilizzare un processo di risoluzione dei problemi per affrontare
             una serie di problemi, sfide e scenari del mondo reale. Successivamente,
-            imparerai come i computer inseriscono, emettono, archiviano ed elaborano
-            i dati per aiutare gli esseri umani a risolvere i problemi. L'unità si
-            conclude con un progetto in cui si progetta un'applicazione che aiuta
-            a risolvere un problema a scelta.
+            imparerai come i computer gestscono dati in ingresso e in uscita, memorizzano
+            ed elaborano i dati per aiutare gli esseri umani a risolvere i problemi.
+            L'unità si conclude con un progetto in cui si progetta un'applicazione
+            che aiuta a risolvere un problema a scelta.
           title: Risoluzione dei problemi e informatica ('22-'23)
         csd1-2023:
           lesson_groups:
@@ -2160,10 +2197,10 @@ it:
             e inquadrata nella più ampia ricerca della risoluzione dei problemi. Ti
             eserciterai a utilizzare un processo di risoluzione dei problemi per affrontare
             una serie di problemi, sfide e scenari del mondo reale. Successivamente,
-            imparerai come i computer inseriscono, emettono, archiviano ed elaborano
-            i dati per aiutare gli esseri umani a risolvere i problemi. L'unità si
-            conclude con un progetto in cui si progetta un'applicazione che aiuta
-            a risolvere un problema a scelta.
+            imparerai come i computer gestscono dati in ingresso e in uscita, memorizzano
+            ed elaborano i dati per aiutare gli esseri umani a risolvere i problemi.
+            L'unità si conclude con un progetto in cui si progetta un'applicazione
+            che aiuta a risolvere un problema a scelta.
         csd1-dlp:
           lesson_groups:
             content:
@@ -2182,10 +2219,12 @@ it:
             più ampia ricerca della risoluzione dei problemi. Ti eserciterai a utilizzare
             un processo di risoluzione dei problemi per affrontare una serie di problemi,
             sfide e scenari del mondo reale. Successivamente, imparerai come i computer
-            inseriscono, emettono, archiviano ed elaborano i dati per aiutare gli
-            esseri umani a risolvere i problemi. L'unità si conclude con un progetto
-            in cui si progetta un'applicazione che aiuta a risolvere un problema a
-            scelta.
+            gestscono dati in ingresso e in uscita, memorizzano ed elaborano i dati
+            per aiutare gli esseri umani a risolvere i problemi. L'unità si conclude
+            con un progetto in cui si progetta un'applicazione che aiuta a risolvere
+            un problema a scelta.
+          description_short: "  Scopri come le persone operano con i computer per
+            risolvere i problemi."
           lesson_groups:
             csd1_1:
               display_name: 'Capitolo 1: il processo di risoluzione dei problemi'
@@ -2198,13 +2237,12 @@ it:
             e inquadrata nella più ampia ricerca della risoluzione dei problemi. Ti
             eserciterai a utilizzare un processo di risoluzione dei problemi per affrontare
             una serie di problemi, sfide e scenari del mondo reale. Successivamente,
-            imparerai come i computer inseriscono, emettono, archiviano ed elaborano
-            i dati per aiutare gli esseri umani a risolvere i problemi. L'unità si
-            conclude con un progetto in cui si progetta un'applicazione che aiuta
-            a risolvere un problema a scelta.
+            imparerai come i computer gestscono dati in ingresso e in uscita, memorizzano
+            ed elaborano i dati per aiutare gli esseri umani a risolvere i problemi.
+            L'unità si conclude con un progetto in cui si progetta un'applicazione
+            che aiuta a risolvere un problema a scelta.
         csd2-2017:
-          description_short: "  Imparare a costruire il tuo sito web con Sviluppo
-            Web."
+          description_short: "  Impara a creare il tuo sito web in Sviluppo Web."
           lesson_groups:
             csd2_1:
               display_name: 'Capitolo 1: Contenuti Web e HTML'
@@ -2212,9 +2250,9 @@ it:
               display_name: 'Capitolo 2: Styling e CSS'
             csd_survey:
               display_name: Sondaggio Post-corso
+          title: Unità 2 - Sviluppo Web ('17-'18)
         csd2-2018:
-          description_short: "  Imparare a costruire il tuo sito web con Sviluppo
-            Web."
+          description_short: "  Impara a creare il tuo sito web in Sviluppo Web."
           lesson_groups:
             csd2_1:
               display_name: 'Capitolo 1: Contenuti Web e HTML'
@@ -2222,9 +2260,9 @@ it:
               display_name: 'Capitolo 2: Styling e CSS'
             cspSurvey:
               display_name: Sondaggio
+          title: Unità 2 - Sviluppo Web ('18-'19)
         csd2-2019:
-          description_short: "  Imparare a costruire il tuo sito web con Sviluppo
-            Web."
+          description_short: "  Impara a creare il tuo sito web in Sviluppo Web."
           lesson_groups:
             csd2_1:
               display_name: 'Capitolo 1: Contenuti Web e HTML'
@@ -2232,14 +2270,14 @@ it:
               display_name: 'Capitolo 2: Styling e CSS'
             cspSurvey:
               display_name: Sondaggio
+          title: Unità 2 - Sviluppo Web ('19-'20)
         csd2-2020:
           description: " Nell'Unità 2, imparerai come creare e condividere i contenuti
             sulle tue pagine web. Dopo aver deciso quali contenuti condividere con
             il mondo, imparerai come strutturare e modellare le tue pagine usando
             HTML e CSS. Potrai anche mettere in pratica preziose competenze di programmazione
             come il debugging, l'utilizzo delle risorse e il lavoro di squadra.  "
-          description_short: "  Imparare a costruire il tuo sito web con Sviluppo
-            Web."
+          description_short: "  Impara a creare il tuo sito web in Sviluppo Web."
           lesson_groups:
             csd2_1:
               display_name: 'Capitolo 1: Contenuti Web e HTML'
@@ -2272,8 +2310,7 @@ it:
             \  È possibile visualizzare la [Guida al programma dl corso](https://docs.google.com/document/d/1myJwrDyRlAjwVNDS3gs-3JaJNhogsGMt9Swo-bpySgE/preview)
             e la [Implementation Guide] completa[3] per ulteriori informazioni su
             questa unità"
-          description_short: "  Imparare a costruire il tuo sito web con Sviluppo
-            Web."
+          description_short: "  Impara a creare il tuo sito web in Sviluppo Web."
           lesson_groups:
             csd2_1v2:
               big_questions: |-
@@ -2308,8 +2345,19 @@ it:
             come il debugging, l'utilizzo delle risorse e il lavoro di squadra.  "
           title: Sviluppo Web ('21-'22)
         csd2-2022:
-          description_short: "  Imparare a costruire il tuo sito web con Sviluppo
-            Web."
+          description: |-
+            Nello sviluppo web, gli studenti hanno la possibilità di creare e condividere contenuti sulle proprie pagine web. Iniziano pensando al ruolo del web e a come può essere usato come mezzo di espressione creativa. Man mano che gli studenti sviluppano le loro pagine e iniziano a vedersi come programmatori, vengono incoraggiati a riflettere in modo critico sull'impatto della condivisione di dati online e su come essere fruitori più critici dei contenuti. Vengono inoltre introdotti alla risoluzione dei problemi relativi alla programmazione, mentre apprendono competenze preziose come il debugging, l'utilizzo delle risorse e il lavoro di squadra. Al termine dell'unità, gli studenti avranno creato un sito web personale che potranno pubblicare e condividere.
+
+            **Guida all'implementazione per lo sviluppo web**
+
+            -   Completa le prime tre lezioni dell'unità Risoluzione dei problemi e informatica prima di iniziare
+            -   Le linee guida su come supportare gli studenti negli esercizi di programmazione e differenziare le attività sono disponibili nella [Guida agli esercizi di programmazione](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview) e nella [Guida alla differenziazione](https://docs.google.com/document/d/15Y6Mo3fMUtHq16SSskABgcYE-5xfk-Ewv0z_o4uaLdI/preview)
+            -   È possibile visualizzare tutta la [Guida ai piani di studio](https://docs.google.com/document/d/1VUbXHxXqHj5QCb4eSb756KKc7NDzbOLZUE5bPPQmJR8/preview) e la [Guida all'implementazione](https://docs.google.com/document/d/112OA3_KbicOotqopqUyvXoWPWszz3_LHeMlg0ikCabk/preview) per ulteriori informazioni su questa unità
+
+            ## Hai finito di insegnare questa unità?
+
+            Rispondi a questo [\*\*breve sondaggio\*\*](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=2) per far sapere al team del piano di studi di Code.org com'è andata l'unità.
+          description_short: "  Impara a creare il tuo sito web in Sviluppo Web."
           lesson_groups:
             csd2_1v2:
               display_name: 'Capitolo 1: Creazione di pagine Web'
@@ -2317,12 +2365,23 @@ it:
               display_name: 'Capitolo 2: Siti web multipagina'
             cspSurvey:
               display_name: Sondaggio
+          student_description: " Nell'Unità 2, imparerai come creare e condividere
+            i contenuti sulle tue pagine web. Dopo aver deciso quali contenuti condividere
+            con il mondo, imparerai come strutturare e modellare le tue pagine usando
+            HTML e CSS. Potrai anche mettere in pratica preziose competenze di programmazione
+            come il debugging, l'utilizzo delle risorse e il lavoro di squadra.  "
+          title: Sviluppo Web ('22-'23)
         csd2-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Capitolo 1: Creazione di pagine Web'
             lessonGroup-3:
               display_name: 'Capitolo 2: Siti web multipagina'
+          student_description: " Nell'Unità 2, imparerai come creare e condividere
+            i contenuti sulle tue pagine web. Dopo aver deciso quali contenuti condividere
+            con il mondo, imparerai come strutturare e modellare le tue pagine usando
+            HTML e CSS. Potrai anche mettere in pratica preziose competenze di programmazione
+            come il debugging, l'utilizzo delle risorse e il lavoro di squadra.  "
         csd2-dlp:
           lesson_groups:
             content:
@@ -2338,8 +2397,7 @@ it:
         csd2-old:
           description_short: Sviluppo Web
         csd2-pilot:
-          description_short: "  Imparare a costruire il tuo sito web con Sviluppo
-            Web."
+          description_short: "  Impara a creare il tuo sito web in Sviluppo Web."
           lesson_groups:
             csd2_1:
               display_name: 'Capitolo 1: Contenuti Web e HTML'
@@ -2367,7 +2425,7 @@ it:
             csd3_1:
               display_name: 'Capitolo 1: Immagini e animazioni'
             csd3_2:
-              display_name: 'Capitolo 2: Costruzione di Giochi'
+              display_name: 'Capitolo 2: Realizzazione di giochi'
             cspSurvey:
               display_name: Sondaggio
           student_description: " Nell'Unità 3, svilupperai la tua esperienza di programmazione
@@ -2388,7 +2446,7 @@ it:
             csd3_1:
               display_name: 'Capitolo 1: Immagini e animazioni'
             csd3_2:
-              display_name: 'Capitolo 2: Costruzione di Giochi'
+              display_name: 'Capitolo 2: Realizzazione di giochi'
             csd_survey:
               display_name: Sondaggio Post-corso
             cspSurvey:
@@ -2399,6 +2457,7 @@ it:
             basati su personaggi, utilizzando gli stessi concetti di programmazione
             e il processo di progettazione utilizzati quotidianamente dagli informatici.
             Nel progetto finale, svilupperai un programma personalizzato e interattivo."
+          title: Unità 3 - Animazioni e giochi ('17-'18)
         csd3-2018:
           description: " Nell'Unità 3, svilupperai la tua esperienza di programmazione
             programmando animazioni, grafica interattiva e giochi in Sviluppo Giochi.
@@ -2412,7 +2471,7 @@ it:
             csd3_1:
               display_name: 'Capitolo 1: Immagini e animazioni'
             csd3_2:
-              display_name: 'Capitolo 2: Costruzione di Giochi'
+              display_name: 'Capitolo 2: Realizzazione di giochi'
             cspSurvey:
               display_name: Sondaggio
           student_description: " Nell'Unità 3, svilupperai la tua esperienza di programmazione
@@ -2421,6 +2480,7 @@ it:
             basati su personaggi, utilizzando gli stessi concetti di programmazione
             e il processo di progettazione utilizzati quotidianamente dagli informatici.
             Nel progetto finale, svilupperai un programma personalizzato e interattivo."
+          title: Unità 3 - Animazioni e giochi ('18-'19)
         csd3-2019:
           description: " Nell'Unità 3, svilupperai la tua esperienza di programmazione
             programmando animazioni, grafica interattiva e giochi in Sviluppo Giochi.
@@ -2434,7 +2494,7 @@ it:
             csd3_1:
               display_name: 'Capitolo 1: Immagini e animazioni'
             csd3_2:
-              display_name: 'Capitolo 2: Costruzione di Giochi'
+              display_name: 'Capitolo 2: Realizzazione di giochi'
             cspSurvey:
               display_name: Sondaggio
           student_description: " Nell'Unità 3, svilupperai la tua esperienza di programmazione
@@ -2443,6 +2503,7 @@ it:
             basati su personaggi, utilizzando gli stessi concetti di programmazione
             e il processo di progettazione utilizzati quotidianamente dagli informatici.
             Nel progetto finale, svilupperai un programma personalizzato e interattivo."
+          title: Unità 3 - Animazioni e giochi ('19-'20)
         csd3-2020:
           description: " Nell'Unità 3, svilupperai la tua esperienza di programmazione
             programmando animazioni, grafica interattiva e giochi in Sviluppo Giochi.
@@ -2456,7 +2517,7 @@ it:
             csd3_1:
               display_name: 'Capitolo 1: Immagini e animazioni'
             csd3_2:
-              display_name: 'Capitolo 2: Costruzione di Giochi'
+              display_name: 'Capitolo 2: Realizzazione di giochi'
             cspSurvey:
               display_name: Sondaggio
           student_description: " Nell'Unità 3, svilupperai la tua esperienza di programmazione
@@ -2465,6 +2526,7 @@ it:
             basati su personaggi, utilizzando gli stessi concetti di programmazione
             e il processo di progettazione utilizzati quotidianamente dagli informatici.
             Nel progetto finale, svilupperai un programma personalizzato e interattivo."
+          title: Unità 3 - Animazioni e giochi interattivi ('20-'21)
         csd3-2021:
           description: |2-
              Nell'Unità 3, svilupperai la tua esperienza di programmazione programmando animazioni, grafica interattiva e giochi in Sviluppo Giochi. L'unità ha inizio con forme semplici e si sviluppa fino a giochi basati su personaggi più sofisticati, utilizzando gli stessi concetti di programmazione e il processo di progettazione che gli informatici utilizzano quotidianamente. Nel progetto finale, svilupperai un programma interattivo personalizzato.
@@ -2503,7 +2565,7 @@ it:
                 iniziano a utilizzare le funzioni per organizzare il codice. Alla
                 fine, gli studenti utilizzano un processo di progettazione per creare
                 un gioco originale.
-              display_name: 'Capitolo 2: Costruzione di Giochi'
+              display_name: 'Capitolo 2: Realizzazione di giochi'
             cspSurvey:
               display_name: Sondaggio
           student_description: " Nell'Unità 3, svilupperai la tua esperienza di programmazione
@@ -2514,21 +2576,46 @@ it:
             Nel progetto finale, svilupperai un programma personalizzato e interattivo."
           title: Animazioni e giochi interattivi ('21-'22)
         csd3-2022:
+          description: |-
+            Nell'unità Animazioni e giochi interattivi, gli studenti creano immagini create con la programmazione, animazioni, arte interattiva e giochi. Partendo da forme semplici e basilari e passando a giochi più sofisticati basati sui personaggi ("sprite"), gli studenti acquisiscono familiarità con i concetti di programmazione e il processo di progettazione che gli informatici utilizzano quotidianamente. Imparano quindi come questi costrutti più semplici possono essere combinati per creare programmi più complessi. Nel progetto finale, gli studenti sviluppano un programma personalizzato e interattivo.
+
+            **Guida all'implementazione di animazioni e giochi interattivi**
+
+            -   Completa le prime tre lezioni dell'unità Risoluzione dei problemi e informatica prima di iniziare
+            -   Le indicazioni su come supportare gli studenti negli esercizi di programmazione e differenziare le attività sono disponibili nella [Guida agli esercizi di programmazione] 3 e nella [Guida alla differenziazione] 4 5 -   È possibile visualizzare la [Guida agli esercizi di programmazione](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview) e [Guida alla differenziazione](https://docs.google.com/document/d/15Y6Mo3fMUtHq16SSskABgcYE-5xfk-Ewv0z_o4uaLdI/preview)
+            -   È possibile visualizzare tutta la [Guida al piano di studi](https://docs.google.com/document/d/1VUbXHxXqHj5QCb4eSb756KKc7NDzbOLZUE5bPPQmJR8/preview) e la [Guida all'implementazione](https://docs.google.com/document/d/112OA3_KbicOotqopqUyvXoWPWszz3_LHeMlg0ikCabk/preview) per ulteriori informazioni su questa unità
+
+            ## Hai finito di insegnare questa unità?
+
+            Rispondi a questo [\*\*breve sondaggio\*\*](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=3) per far sapere al team del programma di Code.org com'è andata l'unità.
           description_short: Impara a programmare animazioni, arte interattiva e giochi
             in Sviluppo Giochi.
           lesson_groups:
             csd3_1:
               display_name: 'Capitolo 1: Immagini e animazioni'
             csd3_2:
-              display_name: 'Capitolo 2: Costruzione di Giochi'
+              display_name: 'Capitolo 2: Realizzazione di giochi'
             cspSurvey:
               display_name: Sondaggio
+          student_description: " Nell'Unità 3, svilupperai la tua esperienza di programmazione
+            elaborando animazioni, grafica interattiva e giochi in Sviluppo Giochi.
+            L'unità inizia con forme semplici e si sviluppa fino a giochi più sofisticati
+            basati su personaggi, utilizzando gli stessi concetti di programmazione
+            e il processo di progettazione utilizzati quotidianamente dagli informatici.
+            Nel progetto finale, svilupperai un programma personalizzato e interattivo."
+          title: Animazioni e giochi interattivi ('22-'23)
         csd3-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Capitolo 1: Immagini e animazioni'
             lessonGroup-3:
-              display_name: 'Capitolo 2: Costruzione di Giochi'
+              display_name: 'Capitolo 2: Realizzazione di giochi'
+          student_description: " Nell'Unità 3, svilupperai la tua esperienza di programmazione
+            elaborando animazioni, grafica interattiva e giochi in Sviluppo Giochi.
+            L'unità inizia con forme semplici e si sviluppa fino a giochi più sofisticati
+            basati su personaggi, utilizzando gli stessi concetti di programmazione
+            e il processo di progettazione utilizzati quotidianamente dagli informatici.
+            Nel progetto finale, svilupperai un programma personalizzato e interattivo."
         csd3-dlp:
           lesson_groups:
             content:
@@ -2556,7 +2643,7 @@ it:
             csd3_1:
               display_name: 'Capitolo 1: Immagini e animazioni'
             csd3_2:
-              display_name: 'Capitolo 2: Costruzione di Giochi'
+              display_name: 'Capitolo 2: Realizzazione di giochi'
             cspSurvey:
               display_name: Sondaggio
           student_description: " Nell'Unità 3, svilupperai la tua esperienza di programmazione
@@ -2577,6 +2664,8 @@ it:
               display_name: Contenuto
           title: Introduzione autodidattica a Game Lab
         csd4-2017:
+          description_short: "  Scopri come progettare un programma che soddisfi le
+            esigenze dei tuoi utenti."
           lesson_groups:
             csd4_1:
               display_name: 'Capitolo 1: progettazione focalizzata sull''utente'
@@ -2584,7 +2673,10 @@ it:
               display_name: 'Capitolo 2: prototipazione di app'
             csd_survey:
               display_name: Sondaggio Post-corso
+          title: Unità 4 - Il processo di progettazione ('17-'18)
         csd4-2018:
+          description_short: "  Scopri come progettare un programma che soddisfi le
+            esigenze dei tuoi utenti."
           lesson_groups:
             csd4_1:
               display_name: 'Capitolo 1: progettazione focalizzata sull''utente'
@@ -2592,7 +2684,10 @@ it:
               display_name: 'Capitolo 2: prototipazione di app'
             cspSurvey:
               display_name: Sondaggio
+          title: Unità 4 - Il processo di progettazione ('18-'19)
         csd4-2019:
+          description_short: "  Scopri come progettare un programma che soddisfi le
+            esigenze dei tuoi utenti."
           lesson_groups:
             csd4_1:
               display_name: 'Capitolo 1: progettazione focalizzata sull''utente'
@@ -2602,7 +2697,10 @@ it:
               display_name: 'Capitolo 2: Risoluzione dei problemi relativi ai dati'
             cspSurvey:
               display_name: Sondaggio
+          title: Unità 4 - Il processo di progettazione ('19-'20)
         csd4-2020:
+          description_short: "  Scopri come progettare un programma che soddisfi le
+            esigenze dei tuoi utenti."
           lesson_groups:
             csd4_1:
               display_name: 'Capitolo 1: progettazione focalizzata sull''utente'
@@ -2612,6 +2710,7 @@ it:
               display_name: 'Capitolo 2: Risoluzione dei problemi relativi ai dati'
             cspSurvey:
               display_name: Sondaggio
+          title: Unità 4 - Il processo di progettazione ('20-'21)
         csd4-2021:
           description: |-
             L'Unità 4 introduce l'ampio impatto sociale che può avere l'informatica. Attraverso una serie di sfide di progettazione, imparerai a comprendere meglio le esigenze degli altri mentre sviluppi una soluzione a un problema. La seconda metà dell'unità consiste in un progetto iterativo di squadra, durante il quale i gruppi di lavoro hanno l'opportunità di identificare un'esigenza a cui tengono, prototipare soluzioni sia su carta che su Sviluppo App e verificare soluzioni con utenti reali per ottenere commenti di riscontro e promuovere ulteriori iterazioni.
@@ -2621,6 +2720,8 @@ it:
             -   Completa il Capitolo 1 dell'Unità 1 prima di iniziare questa unità
             -   Questa unità è un prerequisito per passare all'Unità 6 e all'Unità 7
             -   Per ulteriori informazioni su questa unità è possibile visualizzare la [Guida al piano di studi](https://docs.google.com/document/d/1myJwrDyRlAjwVNDS3gs-3JaJNhogsGMt9Swo-bpySgE/preview) e la [Guida all'organizzazione del corso](https://docs.google.com/document/d/1u-eIlB2cAwMuSckzbMWkteQIcsXgez7FTrbjP8PBB4o/preview)
+          description_short: "  Scopri come progettare un programma che soddisfi le
+            esigenze dei tuoi utenti."
           lesson_groups:
             csd4_1:
               big_questions: |-
@@ -2657,6 +2758,19 @@ it:
               display_name: Sondaggio
           title: Il processo di progettazione ('21-'22)
         csd4-2022:
+          description: |-
+            L'unità "Il processo di progettazione" consente agli studenti di passare dalla concezione dell'informatica come strumento per risolvere i propri problemi alla considerazione degli impatti sociali più ampi dell'informatica. Attraverso una serie di sfide di progettazione, agli studenti viene chiesto di considerare e comprendere le esigenze degli altri mentre sviluppano una soluzione a un problema. La seconda parte dell'unità consiste in un progetto iterativo di gruppo, durante il quale gli studenti hanno l'opportunità di identificare un'esigenza che gli sta a cuore, prototipare soluzioni sia su carta che in Sviluppo App e metterle alla prova con utenti reali per ottenere riscontri e favorire ulteriori iterazioni.
+
+            **Guida all'implementazione per il processo di progettazione**
+
+            -   Completare le prime tre lezioni dell'unità Risoluzione dei problemi e informatica prima di iniziare
+            -   È possibile visualizzare la [Guida al piano di studi](https://docs.google.com/document/d/1VUbXHxXqHj5QCb4eSb756KKc7NDzbOLZUE5bPPQmJR8/preview) e la [Guida all'implementazione](https://docs.google.com/document/d/112OA3_KbicOotqopqUyvXoWPWszz3_LHeMlg0ikCabk/preview) per ulteriori informazioni su questa unità
+
+            ## Hai finito di insegnare questa unità?
+
+            Rispondi a questo [\*\*breve sondaggio\*\*](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=4) per far sapere al team del curriculum di Code.org com'è andata l'unità.
+          description_short: "  Scopri come progettare un programma che soddisfi le
+            esigenze dei tuoi utenti."
           lesson_groups:
             csd4_1:
               display_name: 'Capitolo 1: progettazione focalizzata sull''utente'
@@ -2664,12 +2778,29 @@ it:
               display_name: 'Capitolo 2: prototipazione di app'
             cspSurvey:
               display_name: Sondaggio
+          student_description: Questa unità introduce gli impatti sociali più ampi
+            dell'informatica. Attraverso una serie di esercizi di progettazione, imparerai
+            come comprendere meglio le esigenze degli altri sviluppando una soluzione
+            a un problema. La seconda parte dell'unità consiste in un progetto iterativo
+            di gruppo, durante il quale i gruppi di lavoro hanno l'opportunità di
+            identificare un'esigenza che gli sta a cuore, prototipare soluzioni sia
+            su carta che in "Sviluppo App" e testare soluzioni con utenti reali per
+            ottenere riscontri e favorire ulteriori iterazioni.
+          title: Il processo di progettazione ('22-'23)
         csd4-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Capitolo 1: progettazione focalizzata sull''utente'
             lessonGroup-3:
               display_name: 'Capitolo 2: prototipazione di app'
+          student_description: Questa unità introduce gli impatti sociali più ampi
+            dell'informatica. Attraverso una serie di esercizi di progettazione, imparerai
+            come comprendere meglio le esigenze degli altri sviluppando una soluzione
+            a un problema. La seconda parte dell'unità consiste in un progetto iterativo
+            di gruppo, durante il quale i gruppi di lavoro hanno l'opportunità di
+            identificare un'esigenza che gli sta a cuore, prototipare soluzioni sia
+            su carta che in "Sviluppo App" e testare soluzioni con utenti reali per
+            ottenere riscontri e favorire ulteriori iterazioni.
         csd4-dlp:
           lesson_groups:
             content:
@@ -2700,6 +2831,8 @@ it:
             csd1_2:
               display_name: 'Capitolo 2: computer e risoluzione dei problemi'
         csd4-preview-2021:
+          description_short: "  Scopri come progettare un programma che soddisfi le
+            esigenze dei tuoi utenti."
           lesson_groups:
             csd4_1:
               display_name: 'Capitolo 1: progettazione focalizzata sull''utente'
@@ -2721,6 +2854,8 @@ it:
             fasi di questo processo. Il capitolo si conclude tenendo conto che il
             processo di risoluzione dei problemi relativi ai dati può essere applicato
             a un qualsiasi ambito a tua scelta.
+          description_short: Scopri come le persone utilizzano i computer per risolvere
+            problemi relativi ai dati.
           lesson_groups:
             csd5_1:
               display_name: 'Capitolo 1: Rappresentazione dei dati'
@@ -2737,6 +2872,7 @@ it:
             fasi di questo processo. Il capitolo si conclude tenendo conto che il
             processo di risoluzione dei problemi relativi ai dati può essere applicato
             a un qualsiasi ambito a tua scelta.
+          title: Unità 5 - Dati e società ('17-'18)
         csd5-2018:
           description: L'Unità 5 tratta dell'importanza dei dati nella risoluzione
             dei problemi ed evidenzia come i computer possono aiutare in questo processo.
@@ -2747,6 +2883,8 @@ it:
             fasi di questo processo. Il capitolo si conclude tenendo conto che il
             processo di risoluzione dei problemi relativi ai dati può essere applicato
             a un qualsiasi ambito a tua scelta.
+          description_short: Scopri come le persone utilizzano i computer per risolvere
+            problemi relativi ai dati.
           lesson_groups:
             csd5_1:
               display_name: 'Capitolo 1: Rappresentazione dei dati'
@@ -2763,6 +2901,7 @@ it:
             fasi di questo processo. Il capitolo si conclude tenendo conto che il
             processo di risoluzione dei problemi relativi ai dati può essere applicato
             a un qualsiasi ambito a tua scelta.
+          title: Unità 5 - Dati e società ('18-'19)
         csd5-2019:
           description: L'Unità 5 tratta dell'importanza dei dati nella risoluzione
             dei problemi ed evidenzia come i computer possono aiutare in questo processo.
@@ -2773,6 +2912,8 @@ it:
             fasi di questo processo. Il capitolo si conclude tenendo conto che il
             processo di risoluzione dei problemi relativi ai dati può essere applicato
             a un qualsiasi ambito a tua scelta.
+          description_short: Scopri come le persone utilizzano i computer per risolvere
+            problemi relativi ai dati.
           lesson_groups:
             csd5_1:
               display_name: 'Capitolo 1: Rappresentazione dei dati'
@@ -2789,6 +2930,7 @@ it:
             fasi di questo processo. Il capitolo si conclude tenendo conto che il
             processo di risoluzione dei problemi relativi ai dati può essere applicato
             a un qualsiasi ambito a tua scelta.
+          title: Unità 5 - Dati e società ('19-'20)
         csd5-2020:
           description: L'Unità 5 tratta dell'importanza dei dati nella risoluzione
             dei problemi ed evidenzia come i computer possono aiutare in questo processo.
@@ -2799,6 +2941,8 @@ it:
             fasi di questo processo. Il capitolo si conclude tenendo conto che il
             processo di risoluzione dei problemi relativi ai dati può essere applicato
             a un qualsiasi ambito a tua scelta.
+          description_short: Scopri come le persone utilizzano i computer per risolvere
+            problemi relativi ai dati.
           lesson_groups:
             csd5_1:
               display_name: 'Capitolo 1: Rappresentazione dei dati'
@@ -2815,6 +2959,7 @@ it:
             fasi di questo processo. Il capitolo si conclude tenendo conto che il
             processo di risoluzione dei problemi relativi ai dati può essere applicato
             a un qualsiasi ambito a tua scelta.
+          title: Unità 5 - Dati e società ('20-'21)
         csd5-2021:
           description: |-
             L'Unità 5 tratta dell'importanza dei dati nella risoluzione dei problemi ed evidenzia come i computer possono aiutare in questo processo. Il primo capitolo esplora i diversi sistemi utilizzati per rappresentare le informazioni in un computer e le sfide e i compromessi posti dal loro utilizzo. Nel secondo capitolo scoprirai come le raccolte di dati vengono utilizzate per risolvere i problemi e come i computer aiutano ad automatizzare le fasi di questo processo. Il capitolo si conclude considerando come il processo di risoluzione dei problemi relativi ai dati può essere applicato a un ambito a tua scelta.
@@ -2824,6 +2969,8 @@ it:
             -   Completa il capitolo 1 dell'Unità 1 prima di iniziare questa unità
             -   Questa unità potrebbe essere sostituita con l'Unità 7 - consulta la [Guida all'organizzazione del corso](https://docs.google.com/document/d/1u-eIlB2cAwMuSckzbMWkteQIcsXgez7FTrbjP8PBB4o/preview) per ulteriori informazioni su questa opzione
             -   Per ulteriori informazioni su questa unità, puoi visualizzare la [Guida al piano di studi](https://docs.google.com/document/d/1myJwrDyRlAjwVNDS3gs-3JaJNhogsGMt9Swo-bpySgE/preview) completa
+          description_short: Scopri come le persone utilizzano i computer per risolvere
+            problemi relativi ai dati.
           lesson_groups:
             csd5_1:
               big_questions: |-
@@ -2868,6 +3015,19 @@ it:
             a un qualsiasi ambito a tua scelta.
           title: Dati e Società ('21-'22)
         csd5-2022:
+          description: |-
+            L'unità Dati e società si occupa dell'importanza dell'uso dei dati per risolvere i problemi ed evidenzia come i computer possono aiutare in questo processo. Il primo capitolo esplora i diversi sistemi utilizzati per rappresentare i dati in un computer e le sfide e i compromessi posti dal loro utilizzo. Nel secondo capitolo, gli studenti imparano come le raccolte di dati vengono utilizzate per risolvere problemi e come i computer aiutano ad automatizzare le fasi di questo processo. Nel progetto finale, gli studenti raccolgono i propri dati e li utilizzano per sviluppare una soluzione automatizzata a un problema.
+
+            **Guida all'implementazione per i dati e la società**
+
+            -   Completa le prime tre lezioni dell'unità Risoluzione dei problemi e informatica prima di iniziare
+            -   Puoi visualizzare la [Guida al piano di studi](https://docs.google.com/document/d/1VUbXHxXqHj5QCb4eSb756KKc7NDzbOLZUE5bPPQmJR8/preview) e la [Guida all'implementazione](https://docs.google.com/document/d/112OA3_KbicOotqopqUyvXoWPWszz3_LHeMlg0ikCabk/preview) per ulteriori informazioni su questa unità
+
+            ## Hai finito di insegnare questa unità?
+
+            Rispondi a questo [\*\*breve sondaggio\*\*](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=5) per far sapere al team del curriculum di Code.org com'è andata l'unità.
+          description_short: Scopri come le persone utilizzano i computer per risolvere
+            problemi relativi ai dati.
           lesson_groups:
             csd5_1:
               display_name: 'Capitolo 1: Rappresentazione dei dati'
@@ -2875,13 +3035,33 @@ it:
               display_name: 'Capitolo 2: Risoluzione dei problemi relativi ai dati'
             cspSurvey:
               display_name: Sondaggio
-          title: Dati e Società ('22-'23)
+          student_description: Questa unità tratta dell'importanza dei dati nella
+            risoluzione dei problemi ed evidenzia come i computer possono aiutare
+            in questo processo. Il primo capitolo esplora i diversi sistemi utilizzati
+            per rappresentare i dati in un computer e le sfide e i compromessi posti
+            dal loro utilizzo. Nel secondo capitolo imparerai come le raccolte di
+            dati vengono utilizzate per risolvere problemi e come i computer aiutano
+            ad automatizzare le fasi di questo processo. Il capitolo si conclude esaminando
+            come applicare il processo di risoluzione dei problemi relativi ai dati
+            a un'area di vostra scelta.
+          title: Dati e società ('22-'23)
         csd5-2023:
+          description_short: Scopri come le persone utilizzano i computer per risolvere
+            problemi relativi ai dati.
           lesson_groups:
             lessonGroup-2:
               display_name: 'Capitolo 1: Rappresentazione dei dati'
             lessonGroup-3:
               display_name: 'Capitolo 2: Risoluzione dei problemi relativi ai dati'
+          student_description: Questa unità tratta dell'importanza dei dati nella
+            risoluzione dei problemi ed evidenzia come i computer possono aiutare
+            in questo processo. Il primo capitolo esplora i diversi sistemi utilizzati
+            per rappresentare i dati in un computer e le sfide e i compromessi posti
+            dal loro utilizzo. Nel secondo capitolo imparerai come le raccolte di
+            dati vengono utilizzate per risolvere problemi e come i computer aiutano
+            ad automatizzare le fasi di questo processo. Il capitolo si conclude esaminando
+            come applicare il processo di risoluzione dei problemi relativi ai dati
+            a un'area di vostra scelta.
         csd5-dlp:
           lesson_groups:
             content:
@@ -2901,6 +3081,8 @@ it:
             csd5_2:
               display_name: 'Capitolo 2: Risoluzione dei problemi relativi ai dati'
         csd5-old:
+          description_short: Scopri come le persone utilizzano i computer per risolvere
+            problemi relativi ai dati.
           lesson_groups:
             csd5_1:
               display_name: 'Capitolo 1: Rappresentazione dei dati'
@@ -2916,6 +3098,8 @@ it:
             fasi di questo processo. Il capitolo si conclude tenendo conto che il
             processo di risoluzione dei problemi relativi ai dati può essere applicato
             a un qualsiasi ambito a tua scelta.
+          description_short: Scopri come le persone utilizzano i computer per risolvere
+            problemi relativi ai dati.
           lesson_groups:
             csd5_1:
               display_name: 'Capitolo 1: Rappresentazione dei dati'
@@ -2933,6 +3117,7 @@ it:
             processo di risoluzione dei problemi relativi ai dati può essere applicato
             a un qualsiasi ambito a tua scelta.
         csd6-2017:
+          description_short: Impara a programmare con dispositivi fisici.
           lesson_groups:
             csd6_1:
               display_name: 'Capitolo 1: programmare con l''hardware'
@@ -2940,7 +3125,9 @@ it:
               display_name: 'Capitolo 2: costruire prototipi fisici'
             csd_survey:
               display_name: Sondaggio Post-corso
+          title: Unità 6 - Informatica e dispositivi fisici ('17-'18)
         csd6-2018:
+          description_short: Impara a programmare con dispositivi fisici.
           lesson_groups:
             csd6_1:
               display_name: 'Capitolo 1: programmare con l''hardware'
@@ -2950,6 +3137,7 @@ it:
               display_name: Sondaggio
           title: Unità 6 - Informatica e dispositivi fisici ('18-'19)
         csd6-2019:
+          description_short: Impara a programmare con dispositivi fisici.
           lesson_groups:
             csd6_1:
               display_name: 'Capitolo 1: programmare con l''hardware'
@@ -2957,7 +3145,9 @@ it:
               display_name: 'Capitolo 2: costruire prototipi fisici'
             cspSurvey:
               display_name: Sondaggio
+          title: Unità 6 - Informatica e dispositivi fisici ('19-'20)
         csd6-2020:
+          description_short: Impara a programmare con dispositivi fisici.
           lesson_groups:
             csd6_1:
               display_name: 'Capitolo 1: programmare con l''hardware'
@@ -2965,6 +3155,7 @@ it:
               display_name: 'Capitolo 2: costruire prototipi fisici'
             cspSurvey:
               display_name: Sondaggio
+          title: Unità 6 - Informatica e dispositivi fisici ('20-'21)
         csd6-2021:
           description: "L'Unità 6 esplora il ruolo delle piattaforme hardware nell'informatica
             e come diversi sensori possono fornire elaborare flussi di dati in ingresso
@@ -2990,6 +3181,7 @@ it:
             e [Guida alla differenziazione](https://docs.google.com/document/d/15Y6Mo3fMUtHq16SSskABgcYE-5xfk-Ewv0z_o4uaLdI/preview)\n-
             \  È possibile visualizzare la [Guida al Piano di studi](https://docs.google.com/document/d/1myJwrDyRlAjwVNDS3gs-3JaJNhogsGMt9Swo-bpySgE/preview)
             completa per ulteriori informazioni su questa unità"
+          description_short: Impara a programmare con dispositivi fisici.
           lesson_groups:
             csd6_1:
               big_questions: |-
@@ -3046,6 +3238,7 @@ it:
             ## Hai finito di insegnare questa unità?
 
             Rispondi a questo [\*\*breve sondaggio\*\*](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=6) per far sapere al team didattico di Code.org come si è svolta l'unità.
+          description_short: Impara a programmare con dispositivi fisici.
           lesson_groups:
             lessonGroup-2:
               display_name: 'Capitolo 1: Ingressi e uscite'
@@ -3064,6 +3257,7 @@ it:
             progettazione.
           title: Informatica e dispositivi fisici ('22-'23)
         csd6-2023:
+          description_short: Impara a programmare con dispositivi fisici.
           lesson_groups:
             lessonGroup-2:
               display_name: 'Capitolo 1: Ingressi e uscite'
@@ -3100,6 +3294,7 @@ it:
             lessonGroup-3:
               display_name: Capitolo 2
         csd6a-2023:
+          description_short: Impara a programmare con dispositivi fisici.
           lesson_groups:
             lessonGroup-2:
               display_name: 'Capitolo 1: Ingressi e uscite'
@@ -3191,6 +3386,13 @@ it:
                 automatico
             lessonGroup-4:
               display_name: Sondaggio
+          student_description: Questa unità è un'introduzione pratica allo sviluppo
+            di un modello di apprendimento automatico ("machine learning") con dati
+            tabulari. Esplorerai come i computer imparano dai dati per prendere decisioni,
+            quindi svilupperai i tuoi progetti di apprendimento automatico basati
+            su dati del mondo reale. L'unità si conclude con la progettazione della
+            propria app di apprendimento automatico per risolvere un rilevante problema
+            personale.
           title: IA e apprendimento automatico ('22-'23)
         csd7-2023:
           lesson_groups:
@@ -3200,6 +3402,13 @@ it:
               display_name: Capitolo 2
             lessonGroup-4:
               display_name: Introduzione a Sviluppo App
+          student_description: Questa unità è un'introduzione pratica allo sviluppo
+            di un modello di apprendimento automatico ("machine learning") con dati
+            tabulari. Esplorerai come i computer imparano dai dati per prendere decisioni,
+            quindi svilupperai i tuoi progetti di apprendimento automatico basati
+            su dati del mondo reale. L'unità si conclude con la progettazione della
+            propria app di apprendimento automatico per risolvere un rilevante problema
+            personale.
         csdu6-playground:
           description_short: Alla Scoperta dell'informatica U6 Parco giochi. Consulta
             Dan Schneider se hai domande
@@ -4112,6 +4321,8 @@ it:
             cspSurvey:
               display_name: Sondaggio
         data-society-2023:
+          description_short: Scopri come le persone utilizzano i computer per risolvere
+            problemi relativi ai dati.
           lesson_groups:
             lessonGroup-2:
               display_name: 'Capitolo 1: Rappresentazione dei dati'
@@ -4119,6 +4330,15 @@ it:
               display_name: 'Capitolo 2: Risoluzione dei problemi relativi ai dati'
             lessonGroup-4:
               display_name: Sondaggio
+          student_description: Questa unità tratta dell'importanza dei dati nella
+            risoluzione dei problemi ed evidenzia come i computer possono aiutare
+            in questo processo. Il primo capitolo esplora i diversi sistemi utilizzati
+            per rappresentare i dati in un computer e le sfide e i compromessi posti
+            dal loro utilizzo. Nel secondo capitolo imparerai come le raccolte di
+            dati vengono utilizzate per risolvere problemi e come i computer aiutano
+            ad automatizzare le fasi di questo processo. Il capitolo si conclude esaminando
+            come applicare il processo di risoluzione dei problemi relativi ai dati
+            a un'area di vostra scelta.
         design-process-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4127,6 +4347,14 @@ it:
               display_name: 'Capitolo 2: prototipazione di app'
             lessonGroup-4:
               display_name: Sondaggio
+          student_description: Questa unità introduce gli impatti sociali più ampi
+            dell'informatica. Attraverso una serie di esercizi di progettazione, imparerai
+            come comprendere meglio le esigenze degli altri sviluppando una soluzione
+            a un problema. La seconda parte dell'unità consiste in un progetto iterativo
+            di gruppo, durante il quale i gruppi di lavoro hanno l'opportunità di
+            identificare un'esigenza che gli sta a cuore, prototipare soluzioni sia
+            su carta che in "Sviluppo App" e testare soluzioni con utenti reali per
+            ottenere riscontri e favorire ulteriori iterazioni.
         devices-2022:
           lesson_groups:
             lessonGroup-3:
@@ -4530,23 +4758,35 @@ it:
             e inquadrata nella più ampia ricerca della risoluzione dei problemi. Ti
             eserciterai a utilizzare un processo di risoluzione dei problemi per affrontare
             una serie di problemi, sfide e scenari del mondo reale. Successivamente,
-            imparerai come i computer inseriscono, emettono, archiviano ed elaborano
-            i dati per aiutare gli esseri umani a risolvere i problemi. L'unità si
-            conclude con un progetto in cui si progetta un'applicazione che aiuta
-            a risolvere un problema a scelta.
+            imparerai come i computer gestscono dati in ingresso e in uscita, memorizzano
+            ed elaborano i dati per aiutare gli esseri umani a risolvere i problemi.
+            L'unità si conclude con un progetto in cui si progetta un'applicazione
+            che aiuta a risolvere un problema a scelta.
         focus-on-coding2-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Capitolo 1: Creazione di pagine Web'
             lessonGroup-3:
               display_name: 'Capitolo 2: Siti web multipagina'
+          student_description: " Nell'Unità 2, imparerai come creare e condividere
+            i contenuti sulle tue pagine web. Dopo aver deciso quali contenuti condividere
+            con il mondo, imparerai come strutturare e modellare le tue pagine usando
+            HTML e CSS. Potrai anche mettere in pratica preziose competenze di programmazione
+            come il debugging, l'utilizzo delle risorse e il lavoro di squadra.  "
         focus-on-coding3-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Capitolo 1: Immagini e animazioni'
             lessonGroup-3:
-              display_name: 'Capitolo 2: Costruzione di Giochi'
+              display_name: 'Capitolo 2: Realizzazione di giochi'
+          student_description: " Nell'Unità 3, svilupperai la tua esperienza di programmazione
+            elaborando animazioni, grafica interattiva e giochi in Sviluppo Giochi.
+            L'unità inizia con forme semplici e si sviluppa fino a giochi più sofisticati
+            basati su personaggi, utilizzando gli stessi concetti di programmazione
+            e il processo di progettazione utilizzati quotidianamente dagli informatici.
+            Nel progetto finale, svilupperai un programma personalizzato e interattivo."
         focus-on-coding4a-2023:
+          description_short: Impara a programmare con dispositivi fisici.
           lesson_groups:
             lessonGroup-3:
               display_name: 'Capitolo 1: Ingressi e uscite'
@@ -4578,23 +4818,35 @@ it:
             e inquadrata nella più ampia ricerca della risoluzione dei problemi. Ti
             eserciterai a utilizzare un processo di risoluzione dei problemi per affrontare
             una serie di problemi, sfide e scenari del mondo reale. Successivamente,
-            imparerai come i computer inseriscono, emettono, archiviano ed elaborano
-            i dati per aiutare gli esseri umani a risolvere i problemi. L'unità si
-            conclude con un progetto in cui si progetta un'applicazione che aiuta
-            a risolvere un problema a scelta.
+            imparerai come i computer gestscono dati in ingresso e in uscita, memorizzano
+            ed elaborano i dati per aiutare gli esseri umani a risolvere i problemi.
+            L'unità si conclude con un progetto in cui si progetta un'applicazione
+            che aiuta a risolvere un problema a scelta.
         focus-on-creativity2-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Capitolo 1: Creazione di pagine Web'
             lessonGroup-3:
               display_name: 'Capitolo 2: Siti web multipagina'
+          student_description: " Nell'Unità 2, imparerai come creare e condividere
+            i contenuti sulle tue pagine web. Dopo aver deciso quali contenuti condividere
+            con il mondo, imparerai come strutturare e modellare le tue pagine usando
+            HTML e CSS. Potrai anche mettere in pratica preziose competenze di programmazione
+            come il debugging, l'utilizzo delle risorse e il lavoro di squadra.  "
         focus-on-creativity3-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Capitolo 1: Immagini e animazioni'
             lessonGroup-3:
-              display_name: 'Capitolo 2: Costruzione di Giochi'
+              display_name: 'Capitolo 2: Realizzazione di giochi'
+          student_description: " Nell'Unità 3, svilupperai la tua esperienza di programmazione
+            elaborando animazioni, grafica interattiva e giochi in Sviluppo Giochi.
+            L'unità inizia con forme semplici e si sviluppa fino a giochi più sofisticati
+            basati su personaggi, utilizzando gli stessi concetti di programmazione
+            e il processo di progettazione utilizzati quotidianamente dagli informatici.
+            Nel progetto finale, svilupperai un programma personalizzato e interattivo."
         focus-on-creativity4a-2023:
+          description_short: Impara a programmare con dispositivi fisici.
           lesson_groups:
             lessonGroup-3:
               display_name: 'Capitolo 1: Ingressi e uscite'
@@ -4626,20 +4878,42 @@ it:
             e inquadrata nella più ampia ricerca della risoluzione dei problemi. Ti
             eserciterai a utilizzare un processo di risoluzione dei problemi per affrontare
             una serie di problemi, sfide e scenari del mondo reale. Successivamente,
-            imparerai come i computer inseriscono, emettono, archiviano ed elaborano
-            i dati per aiutare gli esseri umani a risolvere i problemi. L'unità si
-            conclude con un progetto in cui si progetta un'applicazione che aiuta
-            a risolvere un problema a scelta.
+            imparerai come i computer gestscono dati in ingresso e in uscita, memorizzano
+            ed elaborano i dati per aiutare gli esseri umani a risolvere i problemi.
+            L'unità si conclude con un progetto in cui si progetta un'applicazione
+            che aiuta a risolvere un problema a scelta.
         focus-on-data2:
+          description_short: Scopri come le persone utilizzano i computer per risolvere
+            problemi relativi ai dati.
           lesson_groups:
             lessonGroup-2:
               display_name: 'Capitolo 1: Rappresentazione dei dati'
+          student_description: Questa unità tratta dell'importanza dei dati nella
+            risoluzione dei problemi ed evidenzia come i computer possono aiutare
+            in questo processo. Il primo capitolo esplora i diversi sistemi utilizzati
+            per rappresentare i dati in un computer e le sfide e i compromessi posti
+            dal loro utilizzo. Nel secondo capitolo imparerai come le raccolte di
+            dati vengono utilizzate per risolvere problemi e come i computer aiutano
+            ad automatizzare le fasi di questo processo. Il capitolo si conclude esaminando
+            come applicare il processo di risoluzione dei problemi relativi ai dati
+            a un'area di vostra scelta.
         focus-on-data2-2023:
+          description_short: Scopri come le persone utilizzano i computer per risolvere
+            problemi relativi ai dati.
           lesson_groups:
             lessonGroup-2:
               display_name: 'Capitolo 1: Rappresentazione dei dati'
             lessonGroup-3:
               display_name: 'Capitolo 2: Risoluzione dei problemi relativi ai dati'
+          student_description: Questa unità tratta dell'importanza dei dati nella
+            risoluzione dei problemi ed evidenzia come i computer possono aiutare
+            in questo processo. Il primo capitolo esplora i diversi sistemi utilizzati
+            per rappresentare i dati in un computer e le sfide e i compromessi posti
+            dal loro utilizzo. Nel secondo capitolo imparerai come le raccolte di
+            dati vengono utilizzate per risolvere problemi e come i computer aiutano
+            ad automatizzare le fasi di questo processo. Il capitolo si conclude esaminando
+            come applicare il processo di risoluzione dei problemi relativi ai dati
+            a un'area di vostra scelta.
         focus-on-data3-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4648,6 +4922,13 @@ it:
               display_name: Capitolo 1
             lessonGroup-4:
               display_name: Capitolo 2
+          student_description: Questa unità è un'introduzione pratica allo sviluppo
+            di un modello di apprendimento automatico ("machine learning") con dati
+            tabulari. Esplorerai come i computer imparano dai dati per prendere decisioni,
+            quindi svilupperai i tuoi progetti di apprendimento automatico basati
+            su dati del mondo reale. L'unità si conclude con la progettazione della
+            propria app di apprendimento automatico per risolvere un rilevante problema
+            personale.
         focus-on-design-with-purpose-post-survey-2023:
           title: Sondaggio Post-corso
         focus-on-design-with-purpose1-2023:
@@ -4661,23 +4942,37 @@ it:
             e inquadrata nella più ampia ricerca della risoluzione dei problemi. Ti
             eserciterai a utilizzare un processo di risoluzione dei problemi per affrontare
             una serie di problemi, sfide e scenari del mondo reale. Successivamente,
-            imparerai come i computer inseriscono, emettono, archiviano ed elaborano
-            i dati per aiutare gli esseri umani a risolvere i problemi. L'unità si
-            conclude con un progetto in cui si progetta un'applicazione che aiuta
-            a risolvere un problema a scelta.
+            imparerai come i computer gestscono dati in ingresso e in uscita, memorizzano
+            ed elaborano i dati per aiutare gli esseri umani a risolvere i problemi.
+            L'unità si conclude con un progetto in cui si progetta un'applicazione
+            che aiuta a risolvere un problema a scelta.
         focus-on-design-with-purpose2-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Capitolo 1: Creazione di pagine Web'
             lessonGroup-3:
               display_name: 'Capitolo 2: Siti web multipagina'
+          student_description: " Nell'Unità 2, imparerai come creare e condividere
+            i contenuti sulle tue pagine web. Dopo aver deciso quali contenuti condividere
+            con il mondo, imparerai come strutturare e modellare le tue pagine usando
+            HTML e CSS. Potrai anche mettere in pratica preziose competenze di programmazione
+            come il debugging, l'utilizzo delle risorse e il lavoro di squadra.  "
         focus-on-design-with-purpose3-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Capitolo 1: progettazione focalizzata sull''utente'
             lessonGroup-3:
               display_name: 'Capitolo 2: prototipazione di app'
+          student_description: Questa unità introduce gli impatti sociali più ampi
+            dell'informatica. Attraverso una serie di esercizi di progettazione, imparerai
+            come comprendere meglio le esigenze degli altri sviluppando una soluzione
+            a un problema. La seconda parte dell'unità consiste in un progetto iterativo
+            di gruppo, durante il quale i gruppi di lavoro hanno l'opportunità di
+            identificare un'esigenza che gli sta a cuore, prototipare soluzioni sia
+            su carta che in "Sviluppo App" e testare soluzioni con utenti reali per
+            ottenere riscontri e favorire ulteriori iterazioni.
         focus-on-design-with-purpose4a-2023:
+          description_short: Impara a programmare con dispositivi fisici.
           lesson_groups:
             lessonGroup-3:
               display_name: 'Capitolo 1: Ingressi e uscite'
@@ -4711,17 +5006,29 @@ it:
             e inquadrata nella più ampia ricerca della risoluzione dei problemi. Ti
             eserciterai a utilizzare un processo di risoluzione dei problemi per affrontare
             una serie di problemi, sfide e scenari del mondo reale. Successivamente,
-            imparerai come i computer inseriscono, emettono, archiviano ed elaborano
-            i dati per aiutare gli esseri umani a risolvere i problemi. L'unità si
-            conclude con un progetto in cui si progetta un'applicazione che aiuta
-            a risolvere un problema a scelta.
+            imparerai come i computer gestscono dati in ingresso e in uscita, memorizzano
+            ed elaborano i dati per aiutare gli esseri umani a risolvere i problemi.
+            L'unità si conclude con un progetto in cui si progetta un'applicazione
+            che aiuta a risolvere un problema a scelta.
         focus-on-hardware2-2023:
+          description_short: Scopri come le persone utilizzano i computer per risolvere
+            problemi relativi ai dati.
           lesson_groups:
             lessonGroup-2:
               display_name: 'Capitolo 1: Rappresentazione dei dati'
             lessonGroup-3:
               display_name: 'Capitolo 2: Risoluzione dei problemi relativi ai dati'
+          student_description: Questa unità tratta dell'importanza dei dati nella
+            risoluzione dei problemi ed evidenzia come i computer possono aiutare
+            in questo processo. Il primo capitolo esplora i diversi sistemi utilizzati
+            per rappresentare i dati in un computer e le sfide e i compromessi posti
+            dal loro utilizzo. Nel secondo capitolo imparerai come le raccolte di
+            dati vengono utilizzate per risolvere problemi e come i computer aiutano
+            ad automatizzare le fasi di questo processo. Il capitolo si conclude esaminando
+            come applicare il processo di risoluzione dei problemi relativi ai dati
+            a un'area di vostra scelta.
         focus-on-hardware3a-2023:
+          description_short: Impara a programmare con dispositivi fisici.
           lesson_groups:
             lessonGroup-3:
               display_name: 'Capitolo 1: Ingressi e uscite'
@@ -4753,22 +5060,41 @@ it:
             e inquadrata nella più ampia ricerca della risoluzione dei problemi. Ti
             eserciterai a utilizzare un processo di risoluzione dei problemi per affrontare
             una serie di problemi, sfide e scenari del mondo reale. Successivamente,
-            imparerai come i computer inseriscono, emettono, archiviano ed elaborano
-            i dati per aiutare gli esseri umani a risolvere i problemi. L'unità si
-            conclude con un progetto in cui si progetta un'applicazione che aiuta
-            a risolvere un problema a scelta.
+            imparerai come i computer gestscono dati in ingresso e in uscita, memorizzano
+            ed elaborano i dati per aiutare gli esseri umani a risolvere i problemi.
+            L'unità si conclude con un progetto in cui si progetta un'applicazione
+            che aiuta a risolvere un problema a scelta.
         focus-on-impact-in-society2-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: 'Capitolo 1: progettazione focalizzata sull''utente'
             lessonGroup-3:
               display_name: 'Capitolo 2: prototipazione di app'
+          student_description: Questa unità introduce gli impatti sociali più ampi
+            dell'informatica. Attraverso una serie di esercizi di progettazione, imparerai
+            come comprendere meglio le esigenze degli altri sviluppando una soluzione
+            a un problema. La seconda parte dell'unità consiste in un progetto iterativo
+            di gruppo, durante il quale i gruppi di lavoro hanno l'opportunità di
+            identificare un'esigenza che gli sta a cuore, prototipare soluzioni sia
+            su carta che in "Sviluppo App" e testare soluzioni con utenti reali per
+            ottenere riscontri e favorire ulteriori iterazioni.
         focus-on-impact-in-society3-2023:
+          description_short: Scopri come le persone utilizzano i computer per risolvere
+            problemi relativi ai dati.
           lesson_groups:
             lessonGroup-2:
               display_name: 'Capitolo 1: Rappresentazione dei dati'
             lessonGroup-3:
               display_name: 'Capitolo 2: Risoluzione dei problemi di dati'
+          student_description: Questa unità tratta dell'importanza dei dati nella
+            risoluzione dei problemi ed evidenzia come i computer possono aiutare
+            in questo processo. Il primo capitolo esplora i diversi sistemi utilizzati
+            per rappresentare i dati in un computer e le sfide e i compromessi posti
+            dal loro utilizzo. Nel secondo capitolo imparerai come le raccolte di
+            dati vengono utilizzate per risolvere problemi e come i computer aiutano
+            ad automatizzare le fasi di questo processo. Il capitolo si conclude esaminando
+            come applicare il processo di risoluzione dei problemi relativi ai dati
+            a un'area di vostra scelta.
         focus-on-impact-in-society4-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4777,6 +5103,13 @@ it:
               display_name: Introduzione a Sviluppo App
             lessonGroup-4:
               display_name: Capitolo 2
+          student_description: Questa unità è un'introduzione pratica allo sviluppo
+            di un modello di apprendimento automatico ("machine learning") con dati
+            tabulari. Esplorerai come i computer imparano dai dati per prendere decisioni,
+            quindi svilupperai i tuoi progetti di apprendimento automatico basati
+            su dati del mondo reale. L'unità si conclude con la progettazione della
+            propria app di apprendimento automatico per risolvere un rilevante problema
+            personale.
         frozen:
           description: Usa la programmazione per unirti ad Anna ed Elsa mentre esplorano
             la magia e la bellezza del ghiaccio. Farai fiocchi di neve, pattinerai
@@ -4900,9 +5233,15 @@ it:
             lessonGroup-2:
               display_name: 'Capitolo 1: Immagini e animazioni'
             lessonGroup-3:
-              display_name: 'Capitolo 2: Costruzione di Giochi'
+              display_name: 'Capitolo 2: Realizzazione di giochi'
             lessonGroup-4:
               display_name: Sondaggio
+          student_description: " Nell'Unità 3, svilupperai la tua esperienza di programmazione
+            elaborando animazioni, grafica interattiva e giochi in Sviluppo Giochi.
+            L'unità inizia con forme semplici e si sviluppa fino a giochi più sofisticati
+            basati su personaggi, utilizzando gli stessi concetti di programmazione
+            e il processo di progettazione utilizzati quotidianamente dagli informatici.
+            Nel progetto finale, svilupperai un programma personalizzato e interattivo."
         jigsaw:
           description: Esercitazione introduttiva per imparare come "trascinare e
             rilasciare" (drag and drop)
@@ -5447,10 +5786,10 @@ it:
             e inquadrata nella più ampia ricerca della risoluzione dei problemi. Ti
             eserciterai a utilizzare un processo di risoluzione dei problemi per affrontare
             una serie di problemi, sfide e scenari del mondo reale. Successivamente,
-            imparerai come i computer inseriscono, emettono, archiviano ed elaborano
-            i dati per aiutare gli esseri umani a risolvere i problemi. L'unità si
-            conclude con un progetto in cui si progetta un'applicazione che aiuta
-            a risolvere un problema a scelta.
+            imparerai come i computer gestscono dati in ingresso e in uscita, memorizzano
+            ed elaborano i dati per aiutare gli esseri umani a risolvere i problemi.
+            L'unità si conclude con un progetto in cui si progetta un'applicazione
+            che aiuta a risolvere un problema a scelta.
         science-PD2:
           title: Informatica nello Sviluppo Professionale scientifico fase 2b
         sciencePD2b:
@@ -5649,7 +5988,7 @@ it:
             content:
               display_name: Contenuto
             csd3_2:
-              display_name: 'Capitolo 2: Costruzione di Giochi'
+              display_name: 'Capitolo 2: Realizzazione di giochi'
         virtual-pl-csd-summer-day1:
           lessons:
             lesson-1:
@@ -5930,3 +6269,8 @@ it:
               display_name: 'Capitolo 2: Siti web multipagina'
             lessonGroup-4:
               display_name: Sondaggio
+          student_description: " Nell'Unità 2, imparerai come creare e condividere
+            i contenuti sulle tue pagine web. Dopo aver deciso quali contenuti condividere
+            con il mondo, imparerai come strutturare e modellare le tue pagine usando
+            HTML e CSS. Potrai anche mettere in pratica preziose competenze di programmazione
+            come il debugging, l'utilizzo delle risorse e il lavoro di squadra.  "
