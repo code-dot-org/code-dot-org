@@ -240,13 +240,9 @@ describe('CurriculumCatalogExpandedCard', () => {
     expect(onClose).not.to.have.been.called;
 
     const [closeIcon] = container.querySelectorAll('i[class*=fa-xmark]');
-
     const onCloseButton = closeIcon.parentElement.parentElement;
 
-    console.log(onCloseButton);
-
     fireEvent.click(onCloseButton);
-
     expect(onClose).to.have.been.calledOnce;
   });
 
