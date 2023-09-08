@@ -170,7 +170,7 @@ class ScriptLevelsController < ApplicationController
       if @script_level.lesson.rubric && view_as_other
         viewing_user_level = @view_as_user.user_levels.find_by(script: @script_level.script, level: @level)
         @rubric_data[:studentLevelInfo] = {
-          id: @view_as_user.id,
+          user_id: @view_as_user.id,
           name: @view_as_user.name,
           attempts: viewing_user_level&.attempts,
           timeSpent: viewing_user_level&.time_spent,

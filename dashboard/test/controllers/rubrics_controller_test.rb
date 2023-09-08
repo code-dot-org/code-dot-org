@@ -41,13 +41,9 @@ class RubricsControllerTest < ActionController::TestCase
   end
 
   test 'submits rubric evaluations of a student' do
-    rubric = create :rubric, lesson: @lesson, level: @level
-    learning_goal1 = create :learning_goal, rubric: rubric
-    learning_goal2 = create :learning_goal, rubric: rubric
     student = create :student
     teacher = create :teacher
-    create :learning_goal_evaluation, user: student, learning_goal: learning_goal1, teacher: teacher
-    create :learning_goal_evaluation, user: student, learning_goal: learning_goal2, teacher: teacher
+    rubric = create :rubric, :with_teacher_evaluations, lesson: @lesson, level: @level, num_evaluations_per_goal: 2, teacher: teacher, student: student
 
     sign_in teacher
     post :submit_evaluations, params: {id: rubric.id, student_id: student.id}
@@ -57,13 +53,11 @@ class RubricsControllerTest < ActionController::TestCase
 
   test 'can only submit evaluations with same teacher_id as current_user' do
     rubric = create :rubric, lesson: @lesson, level: @level
-    learning_goal1 = create :learning_goal, rubric: rubric
-    learning_goal2 = create :learning_goal, rubric: rubric
     student = create :student
     teacher = create :teacher
     another_teacher = create :teacher
-    create :learning_goal_evaluation, user: student, learning_goal: learning_goal1, teacher: teacher
-    create :learning_goal_evaluation, user: student, learning_goal: learning_goal2, teacher: another_teacher
+    create :learning_goal, :with_teacher_evaluations, rubric: rubric, teacher: teacher, student: student
+    create :learning_goal, :with_teacher_evaluations, rubric: rubric, teacher: another_teacher, student: student
 
     sign_in teacher
     post :submit_evaluations, params: {id: rubric.id, student_id: student.id}

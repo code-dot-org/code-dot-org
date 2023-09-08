@@ -51,7 +51,7 @@ export default function RubricContainer({
     setIsSubmittingToStudent(true);
     setErrorSubmitting(false);
     const body = JSON.stringify({
-      student_id: studentLevelInfo.id,
+      student_id: studentLevelInfo.user_id,
     });
     const endPoint = `/rubrics/${rubric.id}/submit_evaluations`;
     HttpClient.post(endPoint, body, true, {'Content-Type': 'application/json'})
