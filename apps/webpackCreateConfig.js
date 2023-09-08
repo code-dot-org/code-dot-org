@@ -7,8 +7,8 @@ const {StatsWriterPlugin} = require('webpack-stats-plugin');
 const UnminifiedWebpackPlugin = require('unminified-webpack-plugin');
 const {WebpackManifestPlugin} = require('webpack-manifest-plugin');
 
-const webpackConfig = require('./webpack')
 const envConstants = require('./envConstants');
+const innerCreateWebpackConfig = require('./webpack.create.config');
 
 const {
   addPollyfillsToEntryPoints,
@@ -33,7 +33,7 @@ function createWebpackConfig({ appsEntries, minify, watch, watchNotify, piskelDe
     ...OTHER_ENTRIES,
   };
 
-  return webpackConfig.create({
+  return innerCreateWebpackConfig({
     outputDir: path.resolve(__dirname, 'build/package/js/'),
     entries: addPollyfillsToEntryPoints(entryPoints, [
       '@babel/polyfill/noConflict',
