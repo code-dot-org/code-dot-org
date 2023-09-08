@@ -1,10 +1,4 @@
-// FIXME: this is a copy-paste from Gruntfile.js, in order to
-// make updating it easier and less error prone prior to merge.
-// Once we're ready to merge, we should change
-// case: codeStudioEntries=>CODE_STUDIO_ENTRIES
-// and change the vars to consts
-
-var ALL_APPS = [
+const ALL_APPS = [
   'ailab',
   'applab',
   'bounce',
@@ -27,7 +21,7 @@ var ALL_APPS = [
   'weblab',
 ];
 
-var codeStudioEntries = {
+const CODE_STUDIO_ENTRIES = {
   'certificates/batch': './src/sites/studio/pages/certificates/batch.js',
   'certificates/show': './src/sites/studio/pages/certificates/show.js',
   'code-studio': './src/sites/studio/pages/code-studio.js',
@@ -146,7 +140,7 @@ var codeStudioEntries = {
     './src/sites/studio/pages/weblab_host/network_check.js',
 };
 
-var internalEntries = {
+const INTERNAL_ENTRIES = {
   'blocks/edit': './src/sites/studio/pages/blocks/edit.js',
   'blocks/index': './src/sites/studio/pages/blocks/index.js',
   'course_offerings/edit':
@@ -240,7 +234,7 @@ var internalEntries = {
     './src/sites/studio/pages/sprite_management/select_start_animations.js',
 };
 
-var pegasusEntries = {
+const PEGASUS_ENTRIES = {
   // code.org
   'code.org/public/dance': './src/sites/code.org/pages/public/dance.js',
   'code.org/public/student/middle-high':
@@ -285,7 +279,7 @@ var pegasusEntries = {
   tutorialExplorer: './src/tutorialExplorer/tutorialExplorer.js',
 };
 
-var professionalDevelopmentEntries = {
+const PROFESSIONAL_DEVELOPMENT_ENTRIES = {
   'code.org/public/learn/local':
     './src/sites/code.org/pages/public/learn/local.js',
 
@@ -335,11 +329,11 @@ var professionalDevelopmentEntries = {
 
 // Entries which are shared between dashboard and pegasus, which are included
 // by haml partials in the shared/haml/ directory.
-const sharedEntries = {
+const SHARED_ENTRIES = {
   cookieBanner: './src/cookieBanner/cookieBanner.js',
 };
 
-var otherEntries = {
+const OTHER_ENTRIES = {
   // The blockly dependency is huge, so we currently control when it is
   // loaded explicitly via script tags rather than via normal imports.
   blockly: './src/sites/studio/pages/blockly.js',
@@ -361,7 +355,22 @@ var otherEntries = {
     './src/regionalPartnerMiniContact/regionalPartnerMiniContact',
 };
 
+/**
+ * Generate webpack entry points for all our apps, or just a subset
+ * 
+ * @param {String[]} appsToBuild - which apps to build, a list of Strings, subset or all of ALL_APPS
+ * @returns {Object} - webpack config entry points map ({ appName: [entryPath] ]})
+ */
 function appsEntriesFor(appsToBuild=ALL_APPS) {
+  
+  const assertAppsAreValid = appsToBuild => {
+    for (const app of appsToBuild) {
+      if (!ALL_APPS.includes(app)) {
+        throw new Error(`Invalid app name: ${app}`);
+      }
+    }
+  };
+
   assertAppsAreValid(appsToBuild);
 
   return Object.fromEntries(
@@ -371,21 +380,13 @@ function appsEntriesFor(appsToBuild=ALL_APPS) {
   );
 }
 
-function assertAppsAreValid(appsToBuild) {
-  for (const app of appsToBuild) {
-    if (!ALL_APPS.includes(app)) {
-      throw new Error(`Invalid app name: ${app}`);
-    }
-  }
-}
-
 module.exports = {
   ALL_APPS,
   appsEntriesFor,
-  CODE_STUDIO_ENTRIES: codeStudioEntries,
-  INTERNAL_ENTRIES: internalEntries,
-  PEGASUS_ENTRIES: pegasusEntries,
-  PROFESSIONAL_DEVELOPMENT_ENTRIES: professionalDevelopmentEntries,
-  SHARED_ENTRIES: sharedEntries,
-  OTHER_ENTRIES: otherEntries,
+  CODE_STUDIO_ENTRIES,
+  INTERNAL_ENTRIES,
+  PEGASUS_ENTRIES,
+  PROFESSIONAL_DEVELOPMENT_ENTRIES,
+  SHARED_ENTRIES,
+  OTHER_ENTRIES,
 };
