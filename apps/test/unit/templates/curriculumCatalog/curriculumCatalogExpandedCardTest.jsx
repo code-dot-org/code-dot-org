@@ -1,15 +1,8 @@
 import React from 'react';
-import {fireEvent, render, screen, within} from '@testing-library/react';
-import {pull} from 'lodash';
+import {fireEvent, render, screen} from '@testing-library/react';
 import {expect} from '../../../util/reconfiguredChai';
 import ExpandedCurriculumCatalogCard from '@cdo/apps/templates/curriculumCatalog/ExpandedCurriculumCatalogCard';
-import {
-  subjectsAndTopicsOrder,
-  translatedCourseOfferingCsTopics,
-  translatedLabels,
-  translatedAvailableResources,
-} from '@cdo/apps/templates/teacherDashboard/CourseOfferingHelpers';
-import {sections} from '../studioHomepages/fakeSectionUtils';
+import {translatedAvailableResources} from '@cdo/apps/templates/teacherDashboard/CourseOfferingHelpers';
 import {Provider} from 'react-redux';
 import {
   getStore,
@@ -17,9 +10,8 @@ import {
   restoreRedux,
   stubRedux,
 } from '@cdo/apps/redux';
-import teacherSections, {
-  setSections,
-} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import sinon from 'sinon';
 describe('CurriculumCatalogExpandedCard', () => {
   let defaultProps;
   let store;
@@ -97,7 +89,6 @@ describe('CurriculumCatalogExpandedCard', () => {
   });
 
   it('renders topics with icon', () => {
-    const topics = 'quarter';
     const {container} = renderCurriculumExpandedCard();
 
     screen.getByText(
@@ -113,7 +104,7 @@ describe('CurriculumCatalogExpandedCard', () => {
   });
 
   it('renders image if no video available', () => {
-    const {container} = renderCurriculumExpandedCard({
+    renderCurriculumExpandedCard({
       ...defaultProps,
       video: null,
     });
@@ -217,5 +208,53 @@ describe('CurriculumCatalogExpandedCard', () => {
         )
       ).to.have.length(1);
     });
+  });
+
+  it('clicking assign button triggers onAssign function', () => {
+    const onAssign = sinon.spy();
+    renderCurriculumExpandedCard({
+      ...defaultProps,
+      assignButtonOnClick: onAssign,
+    });
+
+    expect(onAssign).not.to.have.been.called;
+
+    const assignButton = screen.getByRole('button', {
+      name: new RegExp(
+        `Assign ${defaultProps.courseDisplayName} to your classroom`
+      ),
+    });
+
+    fireEvent.click(assignButton);
+
+    expect(onAssign).to.have.been.calledOnce;
+  });
+
+  it('clicking close button triggers onClose function', () => {
+    const onClose = sinon.spy();
+    const {container} = renderCurriculumExpandedCard({
+      ...defaultProps,
+      onClose: onClose,
+    });
+
+    expect(onClose).not.to.have.been.called;
+
+    const [closeIcon] = container.querySelectorAll('i[class*=fa-xmark]');
+
+    const onCloseButton = closeIcon.parentElement.parentElement;
+
+    console.log(onCloseButton);
+
+    fireEvent.click(onCloseButton);
+
+    expect(onClose).to.have.been.calledOnce;
+  });
+
+  it('renders curriculum details button with descriptive label', () => {
+    renderCurriculumExpandedCard();
+
+    screen.getByLabelText(
+      new RegExp(`View details about ${defaultProps.courseDisplayName}`)
+    );
   });
 });
