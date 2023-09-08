@@ -5,24 +5,19 @@ import color from '../../util/color';
 import i18n from '@cdo/locale';
 import {studio} from '@cdo/apps/lib/util/urlHelpers';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import AccessibleDialog from '@cdo/apps/templates/AccessibleDialog';
-import RailsAuthenticityToken from '../../lib/util/RailsAuthenticityToken';
 import style from './project-card.module.scss';
-import Button from '@cdo/apps/templates/Button';
-import CheckBox from '@cdo/apps/componentLibrary/checkbox/Checkbox.tsx';
-import {connect} from 'react-redux';
+import GalleryReportAbusePopUp from './GalleryReportAbusePopUp.jsx';
 
 const PROJECT_DEFAULT_IMAGE = '/blockly/media/projects/project_default.png';
 
 import {UnlocalizedTimeAgo} from '../TimeAgo';
 
-class UnconnectedProjectCard extends React.Component {
+export default class ProjectCard extends React.Component {
   static propTypes = {
     projectData: PropTypes.object.isRequired,
     currentGallery: PropTypes.oneOf(['personal', 'public']).isRequired,
     showFullThumbnail: PropTypes.bool,
     isDetailView: PropTypes.bool,
-    recaptchaSiteKey: PropTypes.string,
   };
 
   constructor(props) {
@@ -31,26 +26,9 @@ class UnconnectedProjectCard extends React.Component {
     this.state = {
       showReportAbuse: false,
       showSubmittedHeader: false, // may need to change this state in the future to utilize report cookies - if gallery ever keeps an immediate report
-      showSubmitConfirmation: false,
-      captchaCompleted: false,
-      checkboxes: [
-        {name: 'Cyberbullying', checked: false},
-        {name: 'Offensive-Content', checked: false},
-        {name: 'Copyright-Infringement', checked: false},
-        {name: 'Other', checked: false},
-      ],
-      isAnyCheckboxSelected: false,
-      submitButtonEnabled: false,
-      loadedCaptcha: false,
     };
     this.showReportAbusePopUp = this.showReportAbusePopUp.bind(this);
-    this.cancel = this.cancel.bind(this);
-    this.onCaptchaVerification = this.onCaptchaVerification.bind(this);
-    this.token = ''; // captcha token
-    this.onCaptchaExpiration = this.onCaptchaExpiration.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
-    this.abuseUrl = '';
-    this.handleCheckboxChange = this.handleCheckboxChange.bind(this);
+    this.closeReportAbusePopUp = this.closeReportAbusePopUp.bind(this);
   }
 
   showReportAbusePopUp() {
@@ -59,103 +37,11 @@ class UnconnectedProjectCard extends React.Component {
     });
   }
 
-  componentWillUnmount() {
-    const captchaScript = document.getElementById('captcha');
-    if (captchaScript) {
-      captchaScript.remove();
-    }
-  }
-
-  cancel() {
+  closeReportAbusePopUp() {
     this.setState({
       showReportAbuse: false,
-      captchaCompleted: false, // reset captcha completion
-      isAnyCheckboxSelected: false, // reset checkboxes
-      checkboxes: [
-        {name: 'Cyberbullying', checked: false},
-        {name: 'Offensive-Content', checked: false},
-        {name: 'Copyright-Infringement', checked: false},
-        {name: 'Other', checked: false},
-      ],
     });
   }
-
-  onCaptchaVerification(token) {
-    this.setState({
-      submitButtonEnabled: true,
-      captchaCompleted: true,
-    });
-    this.token = token;
-  }
-
-  handleSubmit() {
-    this.sendReportAbuse();
-  }
-
-  sendReportAbuse() {
-    const formData = new FormData();
-
-    // name, email, age set in controller through current_user
-    formData.append(
-      'authenticity_token',
-      RailsAuthenticityToken.getRailsCSRFMetaTags().token
-    );
-    formData.append('channel_id', this.props.projectData.channel);
-    formData.append('abuse_url', this.abuseUrl);
-    formData.append('g-recaptcha-response', this.token);
-
-    const checkedCheckboxNames = this.state.checkboxes
-      .filter(checkbox => checkbox.checked)
-      .map(checkbox => checkbox.name);
-    formData.append('abuse_type', checkedCheckboxNames);
-
-    fetch('/report_abuse_pop_up', {
-      method: 'POST',
-      body: formData,
-    })
-      .then(response => {
-        if (response.ok) {
-          this.setState({
-            showSubmittedHeader: true,
-            showSubmitConfirmation: true,
-          });
-        } else if (response.status === 403) {
-          this.onCaptchaExpiration();
-        }
-      })
-      .catch(error => {
-        this.setState({
-          submitButtonEnabled: false,
-        });
-        console.error('Error sending report data:', error);
-      });
-  }
-
-  onCaptchaExpiration() {
-    this.setState({
-      submitButtonEnabled: false,
-      captchaCompleted: false,
-    });
-  }
-
-  handleCheckboxChange = checkboxName => {
-    this.setState(prevState => {
-      const updatedCheckboxes = prevState.checkboxes.map(checkbox =>
-        checkbox.name === checkboxName
-          ? {...checkbox, checked: !checkbox.checked}
-          : checkbox
-      );
-
-      const isAnyCheckboxSelected = updatedCheckboxes.some(
-        checkbox => checkbox.checked
-      );
-
-      return {
-        checkboxes: updatedCheckboxes,
-        isAnyCheckboxSelected: isAnyCheckboxSelected,
-      };
-    });
-  };
 
   render() {
     const {projectData, currentGallery, isDetailView} = this.props;
@@ -165,7 +51,6 @@ class UnconnectedProjectCard extends React.Component {
     const url = isPersonalGallery
       ? `/projects/${type}/${channel}/edit`
       : `/projects/${type}/${channel}`;
-    this.abuseUrl = url;
 
     const thumbnailStyle = styles.thumbnail;
     if (this.props.showFullThumbnail) {
@@ -176,99 +61,16 @@ class UnconnectedProjectCard extends React.Component {
       isPublicGallery && isDetailView && projectData.publishedAt;
     const noTimeOnCardStyle = shouldShowPublicDetails ? {} : styles.noTime;
 
-    const {
-      showReportAbuse,
-      isAnyCheckboxSelected,
-      checkboxes,
-      showSubmittedHeader,
-      submitButtonEnabled,
-      showSubmitConfirmation,
-    } = this.state;
-
-    //const captchaSiteKey = getScriptData('projects').recaptchaSiteKey;
-    const captchaSiteKey = this.props.recaptchaSiteKey;
-
-    const script = document.createElement('script');
-    script.src = 'https://www.google.com/recaptcha/api.js';
-    script.id = 'captcha';
-    script.async = true;
-    script.defer = true;
-    window.onCaptchaSubmit = token => this.onCaptchaVerification(token);
-    window.onCaptchaExpired = () => this.onCaptchaExpiration();
-    script.onload = () => this.setState({loadedCaptcha: true});
-    document.body.appendChild(script);
+    const {showReportAbuse, showSubmittedHeader} = this.state;
 
     return (
       <div className="project_card">
         {showReportAbuse ? (
-          <AccessibleDialog
-            onClose={this.cancel}
-            className={style.reportAbusePopUp}
-          >
-            {showSubmitConfirmation ? (
-              <div className={style.submitConfirmation}>
-                <h3>Thank you!</h3>
-                <p>Thanks for helping us to keep Code.org safe!</p>
-                <Button
-                  onClick={this.cancel}
-                  text={'Continue'}
-                  color={Button.ButtonColor.brandSecondaryDefault}
-                />
-              </div>
-            ) : (
-              <div>
-                <div className={style.popUpTitle}>
-                  <h3 style={{margin: 0}}>Report Abuse</h3>
-                  <button
-                    type="reset"
-                    onClick={this.cancel}
-                    className={style.xButton}
-                  >
-                    <FontAwesome icon="x" style={{color: '#D4D5D7'}} />
-                  </button>
-                </div>
-                <hr className={style.popUpLines} />
-                <p className={style.popUpBody}>
-                  Why are you reporting this content?
-                </p>
-                <div>
-                  {checkboxes.map(checkbox => (
-                    <CheckBox
-                      key={checkbox.name}
-                      label={checkbox.name.replace(/-/g, ' ')}
-                      checked={checkbox.checked}
-                      onChange={() => this.handleCheckboxChange(checkbox.name)}
-                      size="s"
-                    />
-                  ))}
-                </div>
-                {isAnyCheckboxSelected ? (
-                  <div
-                    style={{padding: 5}}
-                    className="g-recaptcha"
-                    data-sitekey={captchaSiteKey}
-                    data-callback="onCaptchaSubmit"
-                    data-expired-callback="onCaptchaExpired"
-                  />
-                ) : null}
-                <hr className={style.popUpLines} />
-                <div className={style.popUpButtonHolder}>
-                  <Button
-                    onClick={this.cancel}
-                    text={'Cancel'}
-                    color={Button.ButtonColor.neutralDark}
-                  />
-                  <Button
-                    onClick={this.handleSubmit}
-                    disabled={!submitButtonEnabled}
-                    text={'Submit'}
-                    style={{outline: 'none'}}
-                    color={Button.ButtonColor.brandSecondaryDefault}
-                  />
-                </div>
-              </div>
-            )}
-          </AccessibleDialog>
+          <GalleryReportAbusePopUp
+            abuseUrl={url}
+            projectData={this.props.projectData}
+            onClose={this.closeReportAbusePopUp}
+          />
         ) : null}
 
         <div className={style.card}>
@@ -373,9 +175,9 @@ class UnconnectedProjectCard extends React.Component {
   }
 }
 
-export default connect(state => ({
-  recaptchaSiteKey: state.projects.captcha.captchaSiteKey,
-}))(UnconnectedProjectCard);
+// export default connect(state => ({
+//   recaptchaSiteKey: state.projects.captcha.captchaSiteKey,
+// }))(UnconnectedProjectCard);
 
 const styles = {
   title: {
