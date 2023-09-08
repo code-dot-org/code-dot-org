@@ -137,6 +137,18 @@ class I18n::Resources::Dashboard::CurriculumContent::SyncInTest < Minitest::Test
     assert_equal 'expected_course_version_key/csf', I18n::Resources::Dashboard::CurriculumContent::SyncIn.get_script_subdirectory(script)
   end
 
+  def test_getting_subdirectory_of_csc_script
+    exec_seq = sequence('execution')
+    script = FactoryBot.build_stubbed(:script, name: 'expected_script_name')
+
+    Unit.expects(:unit_in_category?).with('hoc', 'expected_script_name').in_sequence(exec_seq).returns(false)
+    script.stubs(:get_course_version).returns(stub(key: 'expected_course_version_key'))
+    script.expects(:csf?).in_sequence(exec_seq).returns(false)
+    script.expects(:csc?).in_sequence(exec_seq).returns(true)
+
+    assert_equal 'expected_course_version_key/csf', I18n::Resources::Dashboard::CurriculumContent::SyncIn.get_script_subdirectory(script)
+  end
+
   def test_getting_subdirectory_of_not_csf_script
     exec_seq = sequence('execution')
     script = FactoryBot.build_stubbed(:script, name: 'expected_script_name')
@@ -144,6 +156,7 @@ class I18n::Resources::Dashboard::CurriculumContent::SyncInTest < Minitest::Test
     Unit.expects(:unit_in_category?).with('hoc', 'expected_script_name').in_sequence(exec_seq).returns(false)
     script.stubs(:get_course_version).returns(stub(key: 'expected_course_version_key', course_offering: stub(key: 'expected_course_offering_key')))
     script.expects(:csf?).in_sequence(exec_seq).returns(false)
+    script.expects(:csc?).in_sequence(exec_seq).returns(false)
 
     assert_equal 'expected_course_version_key/expected_course_offering_key', I18n::Resources::Dashboard::CurriculumContent::SyncIn.get_script_subdirectory(script)
   end
