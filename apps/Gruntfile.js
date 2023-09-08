@@ -14,7 +14,7 @@ const {
   appsEntriesFor,
 } = require('./webpackEntryPoints');
 
-const { createConfig } = require('./webpackCreateConfig')
+const { createWebpackConfig } = require('./webpackCreateConfig')
 
 module.exports = function (grunt) {
   process.env.mocha_entry = grunt.option('entry') || '';
@@ -549,7 +549,7 @@ describe('entry tests', () => {
   var appsEntries = appsEntriesFor(appsToBuild);
 
   config.webpack = {
-    build: createConfig({
+    build: createWebpackConfig({
       appsEntries,
       minify: false,
       watch: false,
@@ -558,14 +558,14 @@ describe('entry tests', () => {
 
     buildOffline: offlineWebpackConfig,
 
-    uglify: createConfig({
+    uglify: createWebpackConfig({
       appsEntries,
       minify: true,
       watch: false,
       piskelDevMode,
     }),
 
-    watch: createConfig({
+    watch: createWebpackConfig({
       appsEntries,
       minify: false,
       watch: true,
@@ -576,7 +576,7 @@ describe('entry tests', () => {
 
   config['webpack-dev-server'] = {
     watch: {
-      webpack: createConfig({
+      webpack: createWebpackConfig({
         appsEntries,
         minify: false,
         watch: false,
