@@ -76,14 +76,12 @@ const CODE_STUDIO_ENTRIES = {
     './src/sites/studio/pages/layouts/_school_info_confirmation_dialog.js',
   'layouts/_school_info_interstitial':
     './src/sites/studio/pages/layouts/_school_info_interstitial.js',
-  'layouts/_small_footer':
-    './src/sites/studio/pages/layouts/_small_footer.js',
+  'layouts/_small_footer': './src/sites/studio/pages/layouts/_small_footer.js',
   'layouts/_terms_interstitial':
     './src/sites/studio/pages/layouts/_terms_interstitial.js',
   'layouts/_initial_section_creation_interstitial':
     './src/sites/studio/pages/layouts/_initial_section_creation_interstitial.js',
-  'levels/_bubble_choice':
-    './src/sites/studio/pages/levels/_bubble_choice.js',
+  'levels/_bubble_choice': './src/sites/studio/pages/levels/_bubble_choice.js',
   'levels/_content': './src/sites/studio/pages/levels/_content.js',
   'levels/_contract_match':
     './src/sites/studio/pages/levels/_contract_match.js',
@@ -93,10 +91,8 @@ const CODE_STUDIO_ENTRIES = {
   'levels/_evaluation_multi':
     './src/sites/studio/pages/levels/_evaluation_multi.js',
   'levels/_external': './src/sites/studio/pages/levels/_external.js',
-  'levels/_external_link':
-    './src/sites/studio/pages/levels/_external_link.js',
-  'levels/_free_response':
-    './src/sites/studio/pages/levels/_free_response.js',
+  'levels/_external_link': './src/sites/studio/pages/levels/_external_link.js',
+  'levels/_free_response': './src/sites/studio/pages/levels/_free_response.js',
   'levels/_level_group': './src/sites/studio/pages/levels/_level_group.js',
   'levels/_match': './src/sites/studio/pages/levels/_match.js',
   'levels/_multi': './src/sites/studio/pages/levels/_multi.js',
@@ -107,8 +103,7 @@ const CODE_STUDIO_ENTRIES = {
   'levels/_summary': './src/sites/studio/pages/levels/_summary.js',
   'levels/_teacher_markdown':
     './src/sites/studio/pages/levels/_teacher_markdown.js',
-  'levels/_teacher_panel':
-    './src/sites/studio/pages/levels/_teacher_panel.js',
+  'levels/_teacher_panel': './src/sites/studio/pages/levels/_teacher_panel.js',
   'levels/_text_match': './src/sites/studio/pages/levels/_text_match.js',
   'levels/_widget': './src/sites/studio/pages/levels/_widget.js',
   'levels/show': './src/sites/studio/pages/levels/show.js',
@@ -118,15 +113,13 @@ const CODE_STUDIO_ENTRIES = {
   'projects/index': './src/sites/studio/pages/projects/index.js',
   'report_abuse/report_abuse_form':
     './src/sites/studio/pages/report_abuse/report_abuse_form.js',
-  'reference_guides/show':
-    './src/sites/studio/pages/reference_guides/show.js',
+  'reference_guides/show': './src/sites/studio/pages/reference_guides/show.js',
   'scripts/show': './src/sites/studio/pages/scripts/show.js',
   'scripts/vocab': './src/sites/studio/pages/scripts/vocab.js',
   'scripts/resources': './src/sites/studio/pages/scripts/resources.js',
   'scripts/code': './src/sites/studio/pages/scripts/code.js',
   'scripts/standards': './src/sites/studio/pages/scripts/standards.js',
-  'scripts/lesson_extras':
-    './src/sites/studio/pages/scripts/lesson_extras.js',
+  'scripts/lesson_extras': './src/sites/studio/pages/scripts/lesson_extras.js',
   'sections/show': './src/sites/studio/pages/sections/show.js',
   'shared/_school_info': './src/sites/studio/pages/shared/_school_info.js',
   'teacher_dashboard/show':
@@ -143,8 +136,7 @@ const CODE_STUDIO_ENTRIES = {
 const INTERNAL_ENTRIES = {
   'blocks/edit': './src/sites/studio/pages/blocks/edit.js',
   'blocks/index': './src/sites/studio/pages/blocks/index.js',
-  'course_offerings/edit':
-    './src/sites/studio/pages/course_offerings/edit.js',
+  'course_offerings/edit': './src/sites/studio/pages/course_offerings/edit.js',
   'courses/edit': './src/sites/studio/pages/courses/edit.js',
   'courses/new': './src/sites/studio/pages/courses/new.js',
   'data_docs/new': './src/sites/studio/pages/data_docs/new.js',
@@ -158,8 +150,7 @@ const INTERNAL_ENTRIES = {
   levelbuilder: './src/sites/studio/pages/levelbuilder.js',
   'levels/editors/_applab':
     './src/sites/studio/pages/levels/editors/_applab.js',
-  'levels/editors/_craft':
-    './src/sites/studio/pages/levels/editors/_craft.js',
+  'levels/editors/_craft': './src/sites/studio/pages/levels/editors/_craft.js',
   'levels/editors/_dsl': './src/sites/studio/pages/levels/editors/_dsl.js',
   'levels/editors/fields/_animation':
     './src/sites/studio/pages/levels/editors/fields/_animation.js',
@@ -207,8 +198,7 @@ const INTERNAL_ENTRIES = {
   'programming_methods/edit':
     './src/sites/studio/pages/programming_methods/edit.js',
   'reference_guides/new': './src/sites/studio/pages/reference_guides/new.js',
-  'reference_guides/edit':
-    './src/sites/studio/pages/reference_guides/edit.js',
+  'reference_guides/edit': './src/sites/studio/pages/reference_guides/edit.js',
   'reference_guides/edit_all':
     './src/sites/studio/pages/reference_guides/edit_all.js',
   'programming_expressions/index':
@@ -326,7 +316,6 @@ const PROFESSIONAL_DEVELOPMENT_ENTRIES = {
     './src/sites/studio/pages/foorm/simple_survey_forms/show.js',
 };
 
-
 // Entries which are shared between dashboard and pegasus, which are included
 // by haml partials in the shared/haml/ directory.
 const SHARED_ENTRIES = {
@@ -357,12 +346,11 @@ const OTHER_ENTRIES = {
 
 /**
  * Generate webpack entry points for all our apps, or just a subset
- * 
+ *
  * @param {String[]} appsToBuild - which apps to build, a list of Strings, subset or all of ALL_APPS
  * @returns {Object} - webpack config entry points map ({ appName: [entryPath] ]})
  */
-function appsEntriesFor(appsToBuild=ALL_APPS) {
-  
+function appsEntriesFor(appsToBuild = ALL_APPS) {
   const assertAppsAreValid = appsToBuild => {
     for (const app of appsToBuild) {
       if (!ALL_APPS.includes(app)) {
@@ -374,9 +362,10 @@ function appsEntriesFor(appsToBuild=ALL_APPS) {
   assertAppsAreValid(appsToBuild);
 
   return Object.fromEntries(
-    appsToBuild.map(
-      app => [app, './src/sites/studio/pages/levels-' + app + '-main.js']
-    )
+    appsToBuild.map(app => [
+      app,
+      './src/sites/studio/pages/levels-' + app + '-main.js',
+    ])
   );
 }
 
