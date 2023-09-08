@@ -39,8 +39,8 @@ export default function LearningGoal({
   };
 
   return (
-    <details className={style.learningGoalRow} onClick={handleClick}>
-      <summary className={style.learningGoalHeader}>
+    <details className={style.learningGoalRow}>
+      <summary className={style.learningGoalHeader} onClick={handleClick}>
         <div className={style.learningGoalHeaderLeftSide}>
           {isOpen && (
             <FontAwesome

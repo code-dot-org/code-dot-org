@@ -315,6 +315,7 @@ class CourseOffering < ApplicationRecord
       key: key,
       display_name: localized_display_name,
       display_name_with_latest_year: display_name_with_latest_year(locale_code),
+      marketing_initiative: marketing_initiative,
       grade_levels: grade_levels,
       duration: duration,
       image: image,
@@ -367,7 +368,7 @@ class CourseOffering < ApplicationRecord
     File.write(file_path, JSON.pretty_generate(object_to_serialize) + "\n")
   end
 
-  def self.seed_all(glob="config/course_offerings/*.json")
+  def self.seed_all(glob = "config/course_offerings/*.json")
     removed_records = all.pluck(:key)
     Dir.glob(Rails.root.join(glob)).each do |path|
       removed_records -= [CourseOffering.seed_record(path)]
@@ -468,7 +469,7 @@ class CourseOffering < ApplicationRecord
     true
   end
 
-  def get_available_resources(locale_code='en-us')
+  def get_available_resources(locale_code = 'en-us')
     latest_version = latest_published_version(locale_code)
     units = latest_version&.units
     lessons = units&.first&.lessons

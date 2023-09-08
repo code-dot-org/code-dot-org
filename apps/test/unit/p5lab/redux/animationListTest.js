@@ -21,13 +21,33 @@ import {createStore} from '../../../util/redux';
 import {expect} from '../../../util/reconfiguredChai';
 import {setExternalGlobals} from '../../../util/testUtils';
 import commonReducers from '@cdo/apps/redux/commonReducers';
-import {setPageConstants} from '@cdo/apps/redux/pageConstants';
+import pageConstantsReducer, {
+  setPageConstants,
+} from '@cdo/apps/redux/pageConstants';
 const project = require('@cdo/apps/code-studio/initApp/project');
 import * as assetPrefix from '@cdo/apps/assetManagement/assetPrefix';
 import _ from 'lodash';
+import {
+  getStore,
+  registerReducers,
+  stubRedux,
+  restoreRedux,
+} from '@cdo/apps/redux';
 
 describe('animationList', function () {
   setExternalGlobals(beforeEach, afterEach);
+  beforeEach(() => {
+    stubRedux();
+    registerReducers({pageConstants: pageConstantsReducer});
+    getStore().dispatch(
+      setPageConstants({
+        isCurriculumLevel: true,
+      })
+    );
+  });
+  afterEach(() => {
+    restoreRedux();
+  });
   describe('animationSourceUrl', function () {
     const key = 'foo';
 

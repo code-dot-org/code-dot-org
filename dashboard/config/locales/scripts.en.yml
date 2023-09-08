@@ -386,6 +386,8 @@ en:
               name: AI Chat
             lesson-51:
               name: AI Rubrics
+            lesson-52:
+              name: Dance Lab2
         algebraPD2b:
           title: Computer Science in Algebra PD
           description: 'Phase 2 Online: Blended Summer Study'
@@ -4570,6 +4572,8 @@ en:
             cspSurvey:
               display_name: Content
           student_description: You’ll program animations, interactive art, and games in Game Lab. Start off with simple shapes and build up to more sophisticated sprite-based animations and games, using the same programming concepts and the design process computer scientists use daily. In the final project, you’ll develop a personalized, interactive program.
+          lessons: {}
+          name: csd3-virtual
         ui-test-script-in-course-2017:
           lesson_groups:
             lg_1:
@@ -6734,6 +6738,7 @@ en:
           description_short: ''
           description: This unit contains the CS Discoveries Post-Course Survey. This unit can be assigned after students complete their final unit in CS Discoveries.
           student_description: This unit contains a survey for when your class is finished with the units in CS Discoveries. Your teacher will tell you when it's time to take this survey.
+          lessons: {}
         csa-pl-test:
           lesson_groups: {}
           name: csa-pl-test
@@ -8217,6 +8222,7 @@ en:
           description_short: ''
           description: This unit contains the CS Discoveries Post-Course Survey. This unit can be assigned after students complete their final unit in CS Discoveries.
           student_description: This unit contains a survey for when your class is finished with the units in CS Discoveries. Your teacher will tell you when it's time to take this survey.
+          lessons: {}
         testtess2:
           lesson_groups: {}
           name: testtess2
@@ -12926,7 +12932,7 @@ en:
 
             **Implementation Options:** Click one of the options below to expand and view more details.
 
-            ::: details [<span style="font-size: 1em; font-weight: bold;">"I want to teach them all!"</spa>]
+            ::: details [<span style="font-size: 1em; font-weight: bold;">"I want to teach them all!"</span>]
             Lessons 1-7 can be taught as a 7-day sequence, where each day focuses on an individual video from the video series and dives deeper into the concepts introduced. Classrooms that go this direction should hide Lesson 8, which does not fit in this sequence. [Click here to learn more about hiding lesson](https://support.code.org/hc/en-us/articles/115001479372-How-can-I-hide-certain-units-or-lessons-from-my-students-)
             :::
 

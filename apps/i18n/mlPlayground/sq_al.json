@@ -292,6 +292,13 @@
           "id": "Internet"
         }
       }
+    },
+    "zoo": {
+      "fields": {
+        "Aquatic": {
+          "id": "Ujor"
+        }
+      }
     }
   },
   "modelCardPossibleValuesMaximum": "Maksimum",
