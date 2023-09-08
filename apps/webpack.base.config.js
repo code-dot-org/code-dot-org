@@ -1,11 +1,10 @@
-var _ = require('lodash');
-var webpack = require('webpack');
-var path = require('path');
-var envConstants = require('./envConstants');
-var sass = require('sass');
+const webpack = require('webpack');
+const path = require('path');
+const envConstants = require('./envConstants');
+const sass = require('sass');
 
 // Certain packages ship in ES6 and need to be transpiled for our purposes.
-var toTranspileWithinNodeModules = [
+const toTranspileWithinNodeModules = [
   // All of our @cdo- and @dsco_-aliased files should get transpiled as they are our own
   // source files.
   path.resolve(__dirname, 'node_modules', '@cdo'),
@@ -71,8 +70,26 @@ const nodePolyfillConfig = {
   },
 };
 
-// Our base config, on which other configs are derived
-var baseConfig = {
+function devtool({minify} = {}) {
+  if (process.env.CI) {
+    return 'eval';
+  } else if (minify) {
+    return 'source-map';
+  } else if (process.env.DEBUG_MINIFIED) {
+    return 'eval-source-map';
+  } else if (process.env.DEV) {
+    return 'inline-cheap-source-map';
+  } else {
+    return 'inline-source-map';
+  }
+}
+
+// Our base webpack config, from which our other configs are derived
+//
+// To find our main webpack config (that runs on e.g. `npm run build`),
+// see `createWepbackConfig()` in `webpack.config.js`. That function
+// extends this config with many more plugins etc.
+const baseConfig = {
   plugins: [...nodePolyfillConfig.plugins],
   resolve: {
     extensions: ['.js', '.jsx', '.ts', '.tsx'],
@@ -289,20 +306,6 @@ if (envConstants.COVERAGE) {
       esModules: true,
     },
   });
-}
-
-function devtool({ minify }={}) {
-  if (process.env.CI) {
-    return 'eval';
-  } else if (minify) {
-    return 'source-map';
-  } else if (process.env.DEBUG_MINIFIED) {
-    return 'eval-source-map';
-  } else if (process.env.DEV) {
-    return 'inline-cheap-source-map';
-  } else {
-    return 'inline-source-map';
-  }
 }
 
 module.exports = {
