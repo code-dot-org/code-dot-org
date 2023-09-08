@@ -146,7 +146,7 @@ class I18n::Resources::Dashboard::CurriculumContent::SyncInTest < Minitest::Test
     script.expects(:csf?).in_sequence(exec_seq).returns(false)
     script.expects(:csc?).in_sequence(exec_seq).returns(true)
 
-    assert_equal 'expected_course_version_key/csf', I18n::Resources::Dashboard::CurriculumContent::SyncIn.get_script_subdirectory(script)
+    assert_equal 'expected_course_version_key/csc', I18n::Resources::Dashboard::CurriculumContent::SyncIn.get_script_subdirectory(script)
   end
 
   def test_getting_subdirectory_of_not_csf_script
