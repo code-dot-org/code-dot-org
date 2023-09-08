@@ -288,7 +288,7 @@ const CustomizableCurriculumCatalogCard = ({
               <Button
                 color={Button.ButtonColor.brandSecondaryDefault}
                 type="button"
-                onClick={() => handleClickAssign('top card')}
+                onClick={() => handleClickAssign('top-card')}
                 aria-label={assignButtonDescription}
                 text={assignButtonText}
               />
