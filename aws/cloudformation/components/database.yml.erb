@@ -129,7 +129,9 @@
     Properties:
       <%=service_role 'lambda'%>
       Path: /
-      ManagedPolicyArns: ['arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole']
+      ManagedPolicyArns:
+        - 'arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole'
+        - 'arn:aws:iam::aws:policy/service-role/AWSLambdaVPCAccessExecutionRole'
       Policies:
         # TODO: Provision a Policy and use it in both the SQL User and DBProxy Roles.
         - PolicyName: GetDBCredentials
