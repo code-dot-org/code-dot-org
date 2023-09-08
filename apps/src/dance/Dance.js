@@ -19,7 +19,7 @@ import {
   setSelectedSong,
   setSongData,
   setRunIsStarting,
-} from './redux';
+} from './danceRedux';
 import trackEvent from '../util/trackEvent';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import logToCloud from '../logToCloud';
@@ -225,8 +225,8 @@ Dance.prototype.initSongs = async function (config) {
 };
 
 Dance.prototype.setSongCallback = function (songId) {
-  const lastSongId = getStore().getState().songs.selectedSong;
-  const songData = getStore().getState().songs.songData;
+  const lastSongId = getStore().getState().dance.selectedSong;
+  const songData = getStore().getState().dance.songData;
 
   if (lastSongId === songId) {
     return;
@@ -521,7 +521,7 @@ Dance.prototype.runButtonClick = async function () {
   // Block re-entrancy since starting a run is async
   // (not strictly needed since we disable the run button,
   // but better to be safe)
-  if (getStore().getState().songs.runIsStarting) {
+  if (getStore().getState().dance.runIsStarting) {
     return;
   }
 
@@ -540,7 +540,7 @@ Dance.prototype.runButtonClick = async function () {
   await this.danceReadyPromise;
 
   //Log song count in Dance Lab
-  trackEvent('HoC_Song', 'Play-2019', getStore().getState().songs.selectedSong);
+  trackEvent('HoC_Song', 'Play-2019', getStore().getState().dance.selectedSong);
 
   Blockly.mainBlockSpace.traceOn(true);
   this.studioApp_.attempts++;
