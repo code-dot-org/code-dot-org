@@ -44,7 +44,7 @@ var toTranspileWithinNodeModules = [
   path.resolve(__dirname, 'node_modules', 'unified'),
 ];
 
-const scssIncludePath = path.resolve(__dirname, '..', 'shared', 'css');
+const sharedCSSPath = path.resolve(__dirname, '..', 'shared', 'css');
 
 // As of Webpack 5, Node APIs are no longer automatically polyfilled.
 // resolve.fallback resolves the API to its NPM package, and the plugin
@@ -206,7 +206,7 @@ var baseConfig = {
             options: {
               implementation: sass,
               sassOptions: {
-                includePaths: [scssIncludePath],
+                includePaths: [sharedCSSPath],
                 outputStyle: 'compressed',
               },
             },
