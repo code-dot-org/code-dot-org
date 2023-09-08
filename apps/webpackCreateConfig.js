@@ -160,7 +160,7 @@ function createConfig({ appsEntries, minify, watch, watchNotify, piskelDevMode }
             chunks: chunk => {
               // all 'initial' chunks except OTHER_ENTRIES
               const chunkNames = Object.keys({
-                ...APPS_ENTRIES,           
+                ...appsEntries,           
                 ...CODE_STUDIO_ENTRIES,
                 ...INTERNAL_ENTRIES,
                 ...PEGASUS_ENTRIES,
