@@ -21,7 +21,7 @@ const {
 } = require('./webpackEntryPoints');
 
 // Create a config for each of our bundles
-function createConfig({ appsEntries, minify, watch, watchNotify, piskelDevMode }) {
+function createWebpackConfig({ appsEntries, minify, watch, watchNotify, piskelDevMode }) {
 
   const entryPoints = {
     ...appsEntries,
@@ -278,5 +278,5 @@ function createConfig({ appsEntries, minify, watch, watchNotify, piskelDevMode }
 }
 
 module.exports = {
-  createConfig,
+  createWebpackConfig,
 }
