@@ -1049,7 +1049,7 @@
   "fallbackVideoClosedCaptioningDialogBodyLink": "See IT requirements",
   "fallbackVideoClosedCaptioningDialogClose": "Close",
   "familyName": "Family name",
-  "familyNameHelpTip": "Optional. If provided, allows you to sort by this name instead of the display name on the teacher panel.",
+  "familyNameHelpTip": "Optional. If provided, allows you to sort by this name instead of the display name when viewing student work.",
   "familyNameToolTip": "Family names can be edited on the Manage Students tab of this section's teacher dashboard.",
   "featureAgain": "Feature again",
   "featured": "Featured",
