@@ -21,6 +21,7 @@ const ALL_APPS = [
   'weblab',
 ];
 
+// prettier-ignore
 const CODE_STUDIO_ENTRIES = {
   'certificates/batch': './src/sites/studio/pages/certificates/batch.js',
   'certificates/show': './src/sites/studio/pages/certificates/show.js',
@@ -32,14 +33,12 @@ const CODE_STUDIO_ENTRIES = {
   'courses/resources': './src/sites/studio/pages/courses/resources.js',
   'courses/code': './src/sites/studio/pages/courses/code.js',
   'courses/standards': './src/sites/studio/pages/courses/standards.js',
-  'curriculum_catalog/index':
-    './src/sites/studio/pages/curriculum_catalog/index.js',
+  'curriculum_catalog/index': './src/sites/studio/pages/curriculum_catalog/index.js',
   'data_docs/index': './src/sites/studio/pages/data_docs/index.js',
   'data_docs/show': './src/sites/studio/pages/data_docs/show.js',
   'incubator/index': './src/sites/studio/pages/incubator/index.js',
   'lessons/show': './src/sites/studio/pages/lessons/show.js',
-  'lessons/student_lesson_plan':
-    './src/sites/studio/pages/lessons/student_lesson_plan.js',
+  'lessons/student_lesson_plan': './src/sites/studio/pages/lessons/student_lesson_plan.js',
   'musiclab/index': './src/sites/studio/pages/musiclab/index.js',
   'musiclab/menu': './src/sites/studio/pages/musiclab/menu.js',
   'policy_compliance/child_account_consent':
