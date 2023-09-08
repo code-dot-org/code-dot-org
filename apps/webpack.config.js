@@ -7,11 +7,11 @@ const { createWebpackConfig } = require('./webpackCreateConfig');
 
 // From Gruntfile, this is defined as: grunt.option('watch-notify');
 const watchNotify = false;
-console.warn("grunt.option('watch-notify') equivalent not supported yet")
+console.warn("grunt.option('watch-notify') equivalent not supported yet");
 
 // From Gruntfile this is defined as: grunt.option('piskel-dev');
 const piskelDevMode = false;
-console.warn("grunt.option('piskel-dev') equivalent not supported yet")
+console.warn("grunt.option('piskel-dev') equivalent not supported yet");
 
 module.exports = createWebpackConfig({
   appsEntries: appsEntriesFor(ALL_APPS),
