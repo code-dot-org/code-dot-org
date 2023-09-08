@@ -41,8 +41,6 @@ const toTranspileWithinNodeModules = [
   path.resolve(__dirname, 'node_modules', 'unified'),
 ];
 
-const sharedCSSPath = path.resolve(__dirname, '..', 'shared', 'css');
-
 // As of Webpack 5, Node APIs are no longer automatically polyfilled.
 // resolve.fallback resolves the API to its NPM package, and the plugin
 // makes the API available as a global.
@@ -84,6 +82,16 @@ function devtool({minify} = {}) {
   }
 }
 
+const p = _ => path.resolve(__dirname, _);
+const localeDoNotImport = cdo => [
+  cdo,
+  p(cdo.replace(/^@cdo/, 'src').replace(/locale$/, 'locale-do-not-import.js')),
+];
+const localeDoNotImportP5Lab = cdo => [
+  cdo,
+  localeDoNotImport(cdo.replace(/^@cdo/, 'src/p5lab')),
+];
+
 // Our base webpack config, from which our other configs are derived
 //
 // To find our main webpack config (that runs on e.g. `npm run build`),
@@ -97,91 +105,23 @@ const baseConfig = {
     alias: {
       '@cdo/locale': path.resolve(
         __dirname,
-        'src',
-        'util',
-        'locale-do-not-import.js'
+        'src/util/locale-do-not-import.js'
       ),
-      '@cdo/netsim/locale': path.resolve(
-        __dirname,
-        'src',
-        'netsim',
-        'locale-do-not-import.js'
-      ),
-      '@cdo/applab/locale': path.resolve(
-        __dirname,
-        'src',
-        'applab',
-        'locale-do-not-import.js'
-      ),
-      '@cdo/gamelab/locale': path.resolve(
-        __dirname,
-        'src',
-        'p5lab',
-        'gamelab',
-        'locale-do-not-import.js'
-      ),
-      '@cdo/javalab/locale': path.resolve(
-        __dirname,
-        'src',
-        'javalab',
-        'locale-do-not-import.js'
-      ),
-      '@cdo/music/locale': path.resolve(
-        __dirname,
-        'src',
-        'music',
-        'locale-do-not-import.js'
-      ),
-      '@cdo/standaloneVideo/locale': path.resolve(
-        __dirname,
-        'src',
-        'standaloneVideo',
-        'locale-do-not-import.js'
-      ),
-      '@cdo/aichat/locale': path.resolve(
-        __dirname,
-        'src',
-        'aichat',
-        'locale-do-not-import.js'
-      ),
-      '@cdo/poetry/locale': path.resolve(
-        __dirname,
-        'src',
-        'p5lab',
-        'poetry',
-        'locale-do-not-import.js'
-      ),
-      '@cdo/spritelab/locale': path.resolve(
-        __dirname,
-        'src',
-        'p5lab',
-        'spritelab',
-        'locale-do-not-import.js'
-      ),
-      '@cdo/weblab/locale': path.resolve(
-        __dirname,
-        'src',
-        'weblab',
-        'locale-do-not-import.js'
-      ),
-      '@cdo/tutorialExplorer/locale': path.resolve(
-        __dirname,
-        'src',
-        'tutorialExplorer',
-        'locale-do-not-import.js'
-      ),
-      '@cdo/regionalPartnerSearch/locale': path.resolve(
-        __dirname,
-        'src',
-        'regionalPartnerSearch',
-        'locale-do-not-import.js'
-      ),
-      '@cdo/regionalPartnerMiniContact/locale': path.resolve(
-        __dirname,
-        'src',
-        'regionalPartnerMiniContact',
-        'locale-do-not-import.js'
-      ),
+      ...Object.fromEntries([
+        localeDoNotImportP5Lab('@cdo/gamelab/locale'),
+        localeDoNotImportP5Lab('@cdo/poetry/locale'),
+        localeDoNotImportP5Lab('@cdo/spritelab/locale'),
+        localeDoNotImport('@cdo/netsim/locale'),
+        localeDoNotImport('@cdo/applab/locale'),
+        localeDoNotImport('@cdo/javalab/locale'),
+        localeDoNotImport('@cdo/music/locale'),
+        localeDoNotImport('@cdo/standaloneVideo/locale'),
+        localeDoNotImport('@cdo/aichat/locale'),
+        localeDoNotImport('@cdo/weblab/locale'),
+        localeDoNotImport('@cdo/tutorialExplorer/locale'),
+        localeDoNotImport('@cdo/regionalPartnerSearch/locale'),
+        localeDoNotImport('@cdo/regionalPartnerMiniContact/locale'),
+      ]),
       '@cdo/apps': path.resolve(__dirname, 'src'),
       '@cdo/static': path.resolve(__dirname, 'static'),
       repl: path.resolve(__dirname, 'src/noop'),
@@ -221,7 +161,7 @@ const baseConfig = {
             options: {
               implementation: sass,
               sassOptions: {
-                includePaths: [sharedCSSPath],
+                includePaths: [path.resolve(__dirname, '../shared/css')],
                 outputStyle: 'compressed',
               },
             },
@@ -236,7 +176,7 @@ const baseConfig = {
           path.resolve(__dirname, 'static'),
           path.resolve(__dirname, 'src'),
           path.resolve(__dirname, 'test'),
-          path.resolve(`${__dirname}/../dashboard/app/assets/`, 'images'),
+          path.resolve(__dirname, '../dashboard/app/assets/images'),
         ],
         // note that in the name template given below, a dash prefixing
         // the hash is explicitly avoided. If rails tries to serve
@@ -262,7 +202,7 @@ const baseConfig = {
           path.resolve(__dirname, 'src'),
           path.resolve(__dirname, 'test'),
         ].concat(toTranspileWithinNodeModules),
-        exclude: [path.resolve(__dirname, 'src', 'lodash.js')],
+        exclude: [path.resolve(__dirname, 'src/lodash.js')],
         loader: 'babel-loader',
         options: {
           cacheDirectory: path.resolve(__dirname, '.babel-cache'),
@@ -298,7 +238,7 @@ if (envConstants.COVERAGE) {
       // we need to turn off instrumentation for this file
       // because we have tests that actually make assertions
       // about the contents of the compiled version of this file :(
-      path.resolve(__dirname, 'src', 'flappy', 'levels.js'),
+      path.resolve(__dirname, 'src/flappy/levels.js'),
     ],
     options: {
       cacheDirectory: true,
