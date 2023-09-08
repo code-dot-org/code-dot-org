@@ -105,6 +105,7 @@ export default function LockoutLinkedAccounts(props) {
       body: params,
     });
     setLoading(false);
+    window.location.reload();
   };
 
   return (
