@@ -355,14 +355,6 @@ var otherEntries = {
     './src/regionalPartnerMiniContact/regionalPartnerMiniContact',
 };
 
-function assertAppsAreValid(appsToBuild) {
-  for (const app of appsToBuild) {
-    if (!ALL_APPS.includes(app)) {
-      throw new Error(`Invalid app name: ${app}`);
-    }
-  }
-}
-
 function getAppsEntries(appsToBuild=ALL_APPS) {
   assertAppsAreValid(appsToBuild);
 
@@ -373,10 +365,28 @@ function getAppsEntries(appsToBuild=ALL_APPS) {
   );
 }
 
+function assertAppsAreValid(appsToBuild) {
+  for (const app of appsToBuild) {
+    if (!ALL_APPS.includes(app)) {
+      throw new Error(`Invalid app name: ${app}`);
+    }
+  }
+}
+
+function addPollyfillsToEntryPoints(entries, polyfills) {
+  return Object.fromEntries(
+    Object.entries(entries).map(
+      ([entryName, paths]) => 
+      [entryName, [].concat(polyfills).concat(paths)]
+    )
+  )
+}
+
 module.exports = {
   ALL_APPS,
   assertAppsAreValid,
   getAppsEntries,
+  addPollyfillsToEntryPoints,
   codeStudioEntries,
   internalEntries,
   pegasusEntries,

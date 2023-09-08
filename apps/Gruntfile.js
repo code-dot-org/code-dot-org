@@ -20,6 +20,7 @@ console.log(`DEV is ${envConstants.DEV}`);
 
 const {
   ALL_APPS,
+  addPollyfillsToEntryPoints,
   assertAppsAreValid,
   getAppsEntries,
   codeStudioEntries,
@@ -569,20 +570,18 @@ describe('entry tests', () => {
 
     return webpackConfig.create({
       outputDir: path.resolve(__dirname, OUTPUT_DIR),
-      entries: _.mapValues(
-        _.extend(
-          {},
-          appsEntries,
-          codeStudioEntries,
-          internalEntries,
-          pegasusEntries,
-          professionalDevelopmentEntries,
-          sharedEntries,
-          otherEntries
-        ),
-        function (val) {
-          return ['@babel/polyfill/noConflict', 'whatwg-fetch'].concat(val);
-        }
+      entries: addPollyfillsToEntryPoints({
+          ...appsEntries,
+          ...codeStudioEntries,
+          ...internalEntries,
+          ...pegasusEntries,
+          ...professionalDevelopmentEntries,
+          ...sharedEntries,
+          ...otherEntries
+        }, [
+          '@babel/polyfill/noConflict',
+          'whatwg-fetch'
+        ]
       ),
       externals: [
         {
