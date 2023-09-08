@@ -412,7 +412,6 @@ describe('entry tests', () => {
     },
   };
 
-  var OUTPUT_DIR = 'build/package/js/';
   config.exec = {
     convertScssVars: './script/convert-scss-variables.js',
     generateSharedConstants: 'bundle exec ./script/generateSharedConstants.rb',
@@ -567,7 +566,7 @@ describe('entry tests', () => {
   function createConfig({ minify, watch, watchNotify }) {
 
     return webpackConfig.create({
-      outputDir: path.resolve(__dirname, OUTPUT_DIR),
+      outputDir: path.resolve(__dirname, 'build/package/js/'),
       entries: addPollyfillsToEntryPoints({
           ...appsEntries,
           ...codeStudioEntries,
