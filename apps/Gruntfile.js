@@ -29,7 +29,7 @@ const {
   professionalDevelopmentEntries,
   sharedEntries,
   otherEntries,
-} = require('./webpackEntries');
+} = require('./webpackEntryPoints');
 
 module.exports = function (grunt) {
   process.env.mocha_entry = grunt.option('entry') || '';
