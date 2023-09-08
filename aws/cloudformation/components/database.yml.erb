@@ -227,11 +227,10 @@
     Properties:
       ServiceToken: !GetAtt SQLUserLambda.Arn
       DBServerHost: !GetAtt AuroraCluster.Endpoint.Address
-      DBAdminUsername: !Sub "{{resolve:secretsmanager:${DatabaseSecretAdmin}:SecretString:username}}"
-      DBAdminPassword: !Sub "{{resolve:secretsmanager:${DatabaseSecretAdmin}:SecretString:password}}"
-      Name: !Sub "{{resolve:secretsmanager:${DatabaseSecretWriter}:SecretString:username}}"
-      ClientHost: '%'
-      Password: !Sub "{{resolve:secretsmanager:${DatabaseSecretWriter}:SecretString:password}}"
+      # Credentials for SQL admin user that will create/update/delete this SQL user resource.
+      DBCredentialAdminSecret: !Ref DatabaseSecretAdmin
+      # Credentials (username and password) for the SQL User this Resource is provisioning.
+      DBCredentialSecret: !Ref DatabaseSecretWriter
       Privileges:
         - SELECT
         - INSERT
