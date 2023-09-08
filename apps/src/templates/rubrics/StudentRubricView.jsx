@@ -17,7 +17,8 @@ export default function StudentRubricView({rubric}) {
           key={lg.key}
           learningGoal={lg}
           canProvideFeedback={false}
-          reportingData={{isTeacher: false}}
+          /* TODO: [AITT-161] add reporting data for the student case */
+          reportingData={{}}
         />
       ))}
     </div>
