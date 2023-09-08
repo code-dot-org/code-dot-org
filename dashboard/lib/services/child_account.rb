@@ -39,7 +39,7 @@ class Services::ChildAccount
   # The US state field was added in July 2023. Accounts created prior to that
   # do not have state location data, so we can try to infer it from their teacher's
   # state, if that teacher is associated with a school.
-  def self.teacher_us_state!(user)
+  def self.update_us_state_from_teacher!(user)
     return unless user
     teacher_us_state = Queries::ChildAccount.teacher_us_state(user)
     user.update(us_state: teacher_us_state) if teacher_us_state

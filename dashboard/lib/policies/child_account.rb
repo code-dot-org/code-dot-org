@@ -1,4 +1,6 @@
 require 'cdo/shared_constants'
+require 'cpa'
+require 'date'
 
 class Policies::ChildAccount
   # Values for the `child_account_compliance_state` attribute
@@ -19,7 +21,7 @@ class Policies::ChildAccount
   STATE_POLICY = {
     'CO' => {
       max_age: 12,
-      start_date: Date.new(2023, 7, 1)
+      start_date: DateTime.parse(DCDO.get('cpa_schedule', {Cpa::NEW_USER_LOCKOUT => '2023-07-01T00:00:00Z'})[Cpa::NEW_USER_LOCKOUT])
     }
   }.freeze
 
@@ -33,7 +35,7 @@ class Policies::ChildAccount
 
   # Checks if a user is affected by a state policy but was created prior to the
   # policy going into effect.
-  def self.grandfathered_user?(user)
+  def self.user_predates_policy?(user)
     parent_permission_required?(user) && user.created_at < STATE_POLICY[user.us_state][:start_date]
   end
 
@@ -43,6 +45,7 @@ class Policies::ChildAccount
     return false unless user.us_state
     policy = STATE_POLICY[user.us_state]
     return false unless policy
+    return false unless policy[:start_date] < DateTime.now
     return false unless user.age.to_i <= policy[:max_age].to_i
     personal_account?(user)
   end

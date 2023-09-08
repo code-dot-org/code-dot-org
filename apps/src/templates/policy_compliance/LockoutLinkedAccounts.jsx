@@ -8,6 +8,7 @@ import cookies from 'js-cookie';
 import * as color from '../../util/color';
 import {hashString} from '../../utils';
 import {ChildAccountComplianceStates} from '@cdo/apps/util/sharedConstants';
+import Spinner from '../../code-studio/pd/components/spinner';
 
 /**
  * This component allows students whose personal account linking has been
@@ -25,6 +26,9 @@ export default function LockoutLinkedAccounts(props) {
   const [disabled, setDisabled] = useState(
     () => !validateEmail(props.pendingEmail)
   );
+
+  // Maintain a loading state for the submit button.
+  const [loading, setLoading] = useState(false);
 
   // When the email field is updated, also update the disability state of the
   // submit button.
@@ -90,6 +94,7 @@ export default function LockoutLinkedAccounts(props) {
   // policy_compliance_controller to redirect back to the correct page.
   const submitPermissionRequest = async e => {
     e.preventDefault();
+    setLoading(true);
     const params = new URLSearchParams({
       'parent-email': e.target['parent-email'].value,
       authenticity_token: csrfToken,
@@ -99,7 +104,7 @@ export default function LockoutLinkedAccounts(props) {
       method: 'POST',
       body: params,
     });
-    window.location.reload();
+    setLoading(false);
   };
 
   return (
@@ -200,25 +205,27 @@ export default function LockoutLinkedAccounts(props) {
           </div>
         )}
 
-        {!(
-          props.permissionStatus ===
-          ChildAccountComplianceStates.PERMISSION_GRANTED
-        ) && (
+        {props.permissionStatus !==
+          ChildAccountComplianceStates.PERMISSION_GRANTED && (
           <div style={styles.buttons}>
             {/* The submit button. */}
             {/* An empty onClick will still submit the form. */}
-            <Button
-              id="lockout-submit"
-              type="submit"
-              style={styles.button}
-              text={
-                props.pendingEmail
-                  ? i18n.sessionLockoutUpdateSubmit()
-                  : i18n.sessionLockoutSubmit()
-              }
-              disabled={disabled}
-              onClick={() => {}}
-            />
+            {loading ? (
+              <Spinner />
+            ) : (
+              <Button
+                id="lockout-submit"
+                type="submit"
+                style={styles.button}
+                text={
+                  props.pendingEmail
+                    ? i18n.sessionLockoutUpdateSubmit()
+                    : i18n.sessionLockoutSubmit()
+                }
+                disabled={disabled}
+                onClick={() => {}}
+              />
+            )}
           </div>
         )}
       </form>

@@ -145,7 +145,7 @@ class Services::ChildAccountTest < ActiveSupport::TestCase
       section = create :section, user: teacher
       student = create(:follower, section: section).student_user
 
-      Services::ChildAccount.teacher_us_state!(student)
+      Services::ChildAccount.update_us_state_from_teacher!(student)
 
       assert_equal 'WA', student.reload.us_state
     end
