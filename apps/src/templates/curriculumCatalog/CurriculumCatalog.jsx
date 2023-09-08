@@ -52,6 +52,12 @@ const CurriculumCatalog = ({
 
   const handleExpandedCardChange = key => {
     setExpandedCardKey(expandedCardKey === key ? null : key);
+    analyticsReporter.sendEvent(
+      EVENTS.CURRICULUM_CATALOG_QUICK_VIEW_CLICKED_EVENT,
+      {
+        curriculum_offering: key,
+      }
+    );
   };
 
   // Renders search results based on the applied filters (or shows the No matching curriculums

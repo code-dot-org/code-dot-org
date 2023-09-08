@@ -172,7 +172,7 @@ const CustomizableCurriculumCatalogCard = ({
 }) => {
   const [isAssignDialogOpen, setIsAssignDialogOpen] = useState(false);
 
-  const handleClickAssign = () => {
+  const handleClickAssign = cardType => {
     setIsAssignDialogOpen(true);
     analyticsReporter.sendEvent(
       EVENTS.CURRICULUM_CATALOG_ASSIGN_CLICKED_EVENT,
@@ -180,6 +180,7 @@ const CustomizableCurriculumCatalogCard = ({
         curriculum_offering: courseKey,
         has_sections: sectionsForDropdown.length > 0,
         is_signed_in: !isSignedOut,
+        card_type: cardType,
       }
     );
   };
@@ -287,7 +288,7 @@ const CustomizableCurriculumCatalogCard = ({
               <Button
                 color={Button.ButtonColor.brandSecondaryDefault}
                 type="button"
-                onClick={handleClickAssign}
+                onClick={() => handleClickAssign('top card')}
                 aria-label={assignButtonDescription}
                 text={assignButtonText}
               />

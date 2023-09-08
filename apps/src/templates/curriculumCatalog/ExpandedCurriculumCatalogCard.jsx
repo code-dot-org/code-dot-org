@@ -226,7 +226,7 @@ const ExpandedCurriculumCatalogCard = ({
                 <Button
                   color={Button.ButtonColor.brandSecondaryDefault}
                   type="button"
-                  onClick={assignButtonOnClick}
+                  onClick={() => assignButtonOnClick('expanded card')}
                   aria-label={assignButtonDescription}
                   text={i18n.assignToClassSections()}
                   style={{flex: 1}}
