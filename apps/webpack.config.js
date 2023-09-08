@@ -2,6 +2,7 @@ const webpack = require('webpack');
 const path = require('path');
 
 // Webpack Plugins:
+const {BundleAnalyzerPlugin} = require('webpack-bundle-analyzer');
 const CopyPlugin = require('copy-webpack-plugin');
 const LiveReloadPlugin = require('webpack-livereload-plugin');
 const {StatsWriterPlugin} = require('webpack-stats-plugin');
@@ -11,7 +12,7 @@ const {WebpackManifestPlugin} = require('webpack-manifest-plugin');
 const WebpackNotifierPlugin = require('webpack-notifier');
 
 const envConstants = require('./envConstants');
-const { baseConfig, devtool } = require('./webpack.base.config');
+const {baseConfig, devtool} = require('./webpack.base.config');
 
 const {
   ALL_APPS,
@@ -32,20 +33,20 @@ const {
  */
 function addPollyfillsToEntryPoints(entries, polyfills) {
   return Object.fromEntries(
-    Object.entries(entries).map(
-      ([entryName, paths]) => 
-      [entryName, [].concat(polyfills).concat(paths)]
-    )
-  )
+    Object.entries(entries).map(([entryName, paths]) => [
+      entryName,
+      [].concat(polyfills).concat(paths),
+    ])
+  );
 }
 
-const suffix = minify => minify ? 'wp[contenthash].min.js' : '.js';
+const suffix = minify => (minify ? 'wp[contenthash].min.js' : '.js');
 
 /**
  * Generate the primary webpack config for building `apps/`.
- * 
+ *
  * Invoked by `Gruntfile.js` for `yarn start`, `npm run build`, etc
- * 
+ *
  * @param {Object} appEntries - defaults to building all apps, to build only one app pass in e.g. `appEntriesFor('maze')`
  * @param {boolean} minify - whether to minify the output
  * @param {boolean} piskelDevMode - whether to use the piskel dev mode
@@ -53,14 +54,13 @@ const suffix = minify => minify ? 'wp[contenthash].min.js' : '.js';
  * @param {boolean} watchNotify - if watch is enabled, whether to use watch-notify
  * @returns {Object} A webpack config object for building `apps/`
  */
-function createWebpackConfig({ 
-  appsEntries=appsEntriesFor(ALL_APPS),
+function createWebpackConfig({
+  appsEntries = appsEntriesFor(ALL_APPS),
   minify,
   piskelDevMode,
-  watch, 
+  watch,
   watchNotify,
-}={}) {
-
+} = {}) {
   //////////////////////////////////////////////
   ///////// WEBPACK CONFIG BEGINS HERE /////////
   //////////////////////////////////////////////
@@ -72,20 +72,20 @@ function createWebpackConfig({
       // When minifying, this generates a 20-hex-character hash.
       filename: `[name]${suffix(minify)}`,
     },
-    devtool: devtool({ minify }),
+    devtool: devtool({minify}),
     watch,
-    entry: addPollyfillsToEntryPoints({
-      ...appsEntries,
-      ...CODE_STUDIO_ENTRIES,
-      ...INTERNAL_ENTRIES,
-      ...PEGASUS_ENTRIES,
-      ...PROFESSIONAL_DEVELOPMENT_ENTRIES,
-      ...SHARED_ENTRIES,
-      ...OTHER_ENTRIES,
-    }, [
-      '@babel/polyfill/noConflict',
-      'whatwg-fetch'
-    ]),
+    entry: addPollyfillsToEntryPoints(
+      {
+        ...appsEntries,
+        ...CODE_STUDIO_ENTRIES,
+        ...INTERNAL_ENTRIES,
+        ...PEGASUS_ENTRIES,
+        ...PROFESSIONAL_DEVELOPMENT_ENTRIES,
+        ...SHARED_ENTRIES,
+        ...OTHER_ENTRIES,
+      },
+      ['@babel/polyfill/noConflict', 'whatwg-fetch']
+    ),
     externals: [
       {
         jquery: 'var $',
@@ -104,7 +104,7 @@ function createWebpackConfig({
     ],
     optimization: {
       chunkIds: 'total-size',
-      moduleIds: 'size', 
+      moduleIds: 'size',
       minimize: minify,
       minimizer: [
         new TerserPlugin({
@@ -208,13 +208,13 @@ function createWebpackConfig({
             chunks: chunk => {
               // all 'initial' chunks except OTHER_ENTRIES
               const chunkNames = Object.keys({
-                ...appsEntries,           
+                ...appsEntries,
                 ...CODE_STUDIO_ENTRIES,
                 ...INTERNAL_ENTRIES,
                 ...PEGASUS_ENTRIES,
                 ...PROFESSIONAL_DEVELOPMENT_ENTRIES,
                 ...SHARED_ENTRIES,
-              })
+              });
 
               return chunkNames.includes(chunk.name);
             },
@@ -266,8 +266,7 @@ function createWebpackConfig({
               excludeAssets: [...Object.keys(INTERNAL_ENTRIES)],
             }),
           ]
-        : []
-      ),
+        : []),
       new StatsWriterPlugin({
         fields: ['assetsByChunkName', 'assets'],
       }),
@@ -333,16 +332,12 @@ function createWebpackConfig({
         ? [
             new LiveReloadPlugin({
               appendScriptTag: envConstants.AUTO_RELOAD,
-            })
+            }),
           ]
-        : []
-      ),
+        : []),
       ...(watch && watchNotify
-        ? [
-            new WebpackNotifierPlugin({alwaysNotify: true})
-          ]
-        : []
-      ),
+        ? [new WebpackNotifierPlugin({alwaysNotify: true})]
+        : []),
     ],
   };
 
@@ -353,7 +348,7 @@ function createWebpackConfig({
   return {
     ...baseConfig,
     ...webpackConfig,
-  }
+  };
 }
 
 module.exports = {
