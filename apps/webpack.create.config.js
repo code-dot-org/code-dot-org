@@ -2,7 +2,7 @@ const webpack = require('webpack');
 const _ = require('lodash');
 
 const envConstants = require('./envConstants');
-const { baseConfig, devtool } = require('./webpack');
+const { baseConfig, devtool } = require('./webpack.base.config');
 
 /**
  * Generate the appropriate webpack config based off of our base config and
