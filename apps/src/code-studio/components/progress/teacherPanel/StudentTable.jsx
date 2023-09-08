@@ -8,6 +8,7 @@ import DCDO from '@cdo/apps/dcdo';
 import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {levelWithProgress, studentShape} from './types';
+import letterCompare from '@cdo/apps/util/letterCompare';
 
 class StudentTable extends React.Component {
   static propTypes = {
@@ -51,9 +52,6 @@ class StudentTable extends React.Component {
       isSortedByFamilyName,
     } = this.props;
 
-    // Sort using system default locale.
-    const collator = new Intl.Collator();
-
     // Returns a comparator function that sorts objects a and b by the given
     // keys, in order of priority.
     // Example: comparator(['familyName', 'name']) will sort by familyName
@@ -63,27 +61,6 @@ class StudentTable extends React.Component {
         (result, key) => result || letterCompare(a[key] || '', b[key] || ''),
         0
       );
-
-    const letterCompare = (a, b) => {
-      // Strip out any non-alphabetic characters from the strings before sorting
-      // (https://unicode.org/reports/tr44/#Alphabetic)
-      const aLetters = a.replace(/[^\p{Alphabetic}]/gu, '');
-      const bLetters = b.replace(/[^\p{Alphabetic}]/gu, '');
-
-      const initialCompare = collator.compare(aLetters, bLetters);
-
-      // Sort strings with letters before strings without
-      if (initialCompare > 0 && !!aLetters && !bLetters) {
-        return -1;
-      }
-      if (initialCompare < 0 && !aLetters && !!bLetters) {
-        return 1;
-      }
-
-      // Use original strings as a fallback if the special-character-stripped
-      // version compares as equal.
-      return initialCompare || collator.compare(a, b);
-    };
 
     // Sort students, in-place.
     isSortedByFamilyName

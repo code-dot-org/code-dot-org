@@ -22,6 +22,7 @@
         "es-MX",
         "fr-FR",
         "hi-IN",
+        "it-IT",
         "mr-IN",
         "ms-MY",
         "pl-PL",
@@ -40,7 +41,7 @@
     },
     "new_name": null,
     "family_name": "coursea",
-    "serialized_at": "2022-05-05 22:45:09 UTC",
+    "serialized_at": "2023-08-31 17:21:36 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -8532,6 +8533,15 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

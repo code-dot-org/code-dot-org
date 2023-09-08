@@ -3,6 +3,7 @@
 require 'fileutils'
 require 'json'
 
+require_relative '../../../../../pegasus/helpers/pegasus_languages'
 require_relative '../../../../animation_assets/manifest_builder'
 require_relative '../../../i18n_script_utils'
 require_relative '../animations'

@@ -15,7 +15,7 @@
     },
     "new_name": null,
     "family_name": "csa-software-engineering",
-    "serialized_at": "2023-08-22 18:08:29 UTC",
+    "serialized_at": "2023-09-07 22:15:46 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -289,21 +289,8 @@
       }
     },
     {
-      "key": "550d737e-3a95-481b-9475-c7981e1168b3",
-      "position": 1,
-      "properties": {
-        "name": "Setup"
-      },
-      "seeding_key": {
-        "lesson_activity.key": "550d737e-3a95-481b-9475-c7981e1168b3",
-        "lesson.key": "lesson-1",
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "csa-software-engineering"
-      }
-    },
-    {
       "key": "15ce0799-2146-4615-a3d0-ce879504e629",
-      "position": 2,
+      "position": 1,
       "properties": {
         "duration": 10,
         "name": "Warm Up"
@@ -317,7 +304,7 @@
     },
     {
       "key": "9999f882-addb-427c-9c4b-f0bedee16249",
-      "position": 3,
+      "position": 2,
       "properties": {
         "duration": 30,
         "name": "Activity"
@@ -331,13 +318,26 @@
     },
     {
       "key": "a912b9ea-ac38-45d0-a692-07d597ba708f",
-      "position": 4,
+      "position": 3,
       "properties": {
         "duration": 5,
         "name": "Wrap Up"
       },
       "seeding_key": {
         "lesson_activity.key": "a912b9ea-ac38-45d0-a692-07d597ba708f",
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-software-engineering"
+      }
+    },
+    {
+      "key": "c9afa571-643d-48cd-97f8-1ae7ef83d543",
+      "position": 4,
+      "properties": {
+        "name": "Extension Activities"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "c9afa571-643d-48cd-97f8-1ae7ef83d543",
         "lesson.key": "lesson-1",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa-software-engineering"
@@ -386,6 +386,19 @@
       }
     },
     {
+      "key": "cbc12eba-7cb8-41cc-86c3-a3bb7c1c2024",
+      "position": 4,
+      "properties": {
+        "name": "Extension Activities"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "cbc12eba-7cb8-41cc-86c3-a3bb7c1c2024",
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-software-engineering"
+      }
+    },
+    {
       "key": "85a5b876-01b8-4852-a180-cb51a00592b3",
       "position": 1,
       "properties": {
@@ -422,6 +435,19 @@
       },
       "seeding_key": {
         "lesson_activity.key": "de529ace-1001-4ac5-9d65-ba63a32883f0",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "lessonGroup-2",
+        "script.name": "csa-software-engineering"
+      }
+    },
+    {
+      "key": "e826c73a-6c8b-481c-bf69-6102d0709eff",
+      "position": 4,
+      "properties": {
+        "name": "Extension Activities"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "e826c73a-6c8b-481c-bf69-6102d0709eff",
         "lesson.key": "lesson-3",
         "lesson_group.key": "lessonGroup-2",
         "script.name": "csa-software-engineering"
@@ -470,6 +496,19 @@
       }
     },
     {
+      "key": "48c4e6a5-cc5e-4978-924d-856d36f3d32f",
+      "position": 4,
+      "properties": {
+        "name": "Extension Activities"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "48c4e6a5-cc5e-4978-924d-856d36f3d32f",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa-software-engineering"
+      }
+    },
+    {
       "key": "fb174f8c-025b-40f9-90fd-5e5dca5f5292",
       "position": 1,
       "properties": {
@@ -512,6 +551,19 @@
       }
     },
     {
+      "key": "23f42606-e04e-4b91-b0f7-067f5fd7e649",
+      "position": 4,
+      "properties": {
+        "name": "Extension Activities"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "23f42606-e04e-4b91-b0f7-067f5fd7e649",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa-software-engineering"
+      }
+    },
+    {
       "key": "593f43ef-d35a-432a-99c5-c508a012f0ce",
       "position": 1,
       "properties": {
@@ -548,6 +600,19 @@
       },
       "seeding_key": {
         "lesson_activity.key": "95719263-6508-423b-b80b-37faf9391bca",
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "lessonGroup-3",
+        "script.name": "csa-software-engineering"
+      }
+    },
+    {
+      "key": "54dc3606-6476-4bd5-a770-b1e81417625c",
+      "position": 4,
+      "properties": {
+        "name": "Extension Activities"
+      },
+      "seeding_key": {
+        "lesson_activity.key": "54dc3606-6476-4bd5-a770-b1e81417625c",
         "lesson.key": "lesson-6",
         "lesson_group.key": "lessonGroup-3",
         "script.name": "csa-software-engineering"
@@ -625,31 +690,6 @@
       "seeding_key": {
         "activity_section.key": "ab8e0630-2901-43f6-b6f7-df1ffda02b3a",
         "lesson_activity.key": "b3cb7347-1972-4257-ad8c-15614c9827fa"
-      }
-    },
-    {
-      "key": "08793d33-c868-4dbf-8f33-a9db2f6ca60d",
-      "position": 1,
-      "properties": {
-        "description": "Follow the instructions on the [**Getting Started on GitHub (Teachers)**](https://docs.google.com/document/d/16qrRG9ez9Yn\\_ZL44vM54dQb4EzKMtHSWvtKllFNRa6Y/edit?usp=sharing) resource to create your GitHub account and obtain verified teacher access to GitHub Classroom.\n\nHave students following the instructions on the [**Getting Started on GitHub (Students)**](https://docs.google.com/document/d/1cE-x93hhE1xLfxy8qnJlkwe1-hSyKhpO01Uo03aqnhU/edit?usp=sharing) resource to create their GitHub account. They should also complete the steps on the [**GitHub Student Developer Pack**](https://docs.google.com/document/d/1ZeT9iXkmxAxTbtmFWfrLMsFneicKOzvx4cYogntwfOE/edit?usp=sharing) resource so they can obtain access to the free resources and tools GitHub offers to students, including Copilot.",
-        "name": "Step 1: GitHub Classroom",
-        "progression_name": "GitHub Scavenger Hunt"
-      },
-      "seeding_key": {
-        "activity_section.key": "08793d33-c868-4dbf-8f33-a9db2f6ca60d",
-        "lesson_activity.key": "550d737e-3a95-481b-9475-c7981e1168b3"
-      }
-    },
-    {
-      "key": "27fa4cbd-6fc1-4fa1-99f3-228e4f7d6613",
-      "position": 2,
-      "properties": {
-        "description": "You will need to install Visual Studio Code (VS Code) and set it up for Java development. The easiest way to do this is to install the **Coding Pack for Java** from [**https://code.visualstudio.com/docs/java/java-tutorial**](https://code.visualstudio.com/docs/java/java-tutorial), which includes VS Code, the Java Development Kit (JDK), and essential Java extensions. You should install this on each student's computer or on your computers in your lab if you have one.",
-        "name": "Step 2: Set Up Visual Studio Code"
-      },
-      "seeding_key": {
-        "activity_section.key": "27fa4cbd-6fc1-4fa1-99f3-228e4f7d6613",
-        "lesson_activity.key": "550d737e-3a95-481b-9475-c7981e1168b3"
       }
     },
     {
@@ -921,6 +961,53 @@
       }
     },
     {
+      "key": "77471200-c429-4dce-927f-e3d1da2f3400",
+      "position": 1,
+      "properties": {
+        "description": "Want to go deeper? Here's some ways you can extend this lesson if you wanted to spend a little more time on these topics."
+      },
+      "seeding_key": {
+        "activity_section.key": "77471200-c429-4dce-927f-e3d1da2f3400",
+        "lesson_activity.key": "c9afa571-643d-48cd-97f8-1ae7ef83d543"
+      }
+    },
+    {
+      "key": "393665d5-450a-4025-bce2-353a2e7785e4",
+      "position": 2,
+      "properties": {
+        "description": "Have students create their own GitHub repositories and practice collaborating with their peers.\n* Each student creates a GitHub repository for a simple project.\n* Students then invite a classmate to collaborate on their repository.\n* Collaborators make changes, create branches, and submit pull requests.\n* The original repository owner reviews and merges the pull requests.\n* Reflect on the experience: What challenges did they face? How did GitHub facilitate collaboration?",
+        "name": "GitHub Repository Creation and Collaboration"
+      },
+      "seeding_key": {
+        "activity_section.key": "393665d5-450a-4025-bce2-353a2e7785e4",
+        "lesson_activity.key": "c9afa571-643d-48cd-97f8-1ae7ef83d543"
+      }
+    },
+    {
+      "key": "de13ff9c-f78f-43ef-b075-ea0de2d28f0e",
+      "position": 3,
+      "properties": {
+        "description": "Have students explore GitHub's project management features.\n* Students create a repository for a hypothetical project.\n* They then use the **Issues** feature to list tasks, bugs, and enhancements.\n* Students organize these issues using GitHub's **Projects** feature, creating boards for **To Do**, **In Progress**, and **Done**.\n* Reflect on how these features can help in managing larger projects and teams.",
+        "name": "GitHub Issues and Project Management"
+      },
+      "seeding_key": {
+        "activity_section.key": "de13ff9c-f78f-43ef-b075-ea0de2d28f0e",
+        "lesson_activity.key": "c9afa571-643d-48cd-97f8-1ae7ef83d543"
+      }
+    },
+    {
+      "key": "b8430194-0dfe-42d8-823d-5e5a1b3a7dd4",
+      "position": 4,
+      "properties": {
+        "description": "Have students explore an open source project on GitHub.\n* Students find an open source project on GitHub.\n* They examine the number of contributors, pull requests, issues, and the project's overall structure.\n* Students then pick an open issue and discuss how they'd approach solving it (without actually coding).\n* Reflect on the challenges and benefits of open source collaboration.",
+        "name": "Exploring Open Source Projects"
+      },
+      "seeding_key": {
+        "activity_section.key": "b8430194-0dfe-42d8-823d-5e5a1b3a7dd4",
+        "lesson_activity.key": "c9afa571-643d-48cd-97f8-1ae7ef83d543"
+      }
+    },
+    {
       "key": "65657eda-1150-4c3b-ba56-6dbcffd6ddc0",
       "position": 1,
       "properties": {
@@ -1165,6 +1252,53 @@
       }
     },
     {
+      "key": "abd09c02-4ead-48b9-890b-a6a46c85d341",
+      "position": 1,
+      "properties": {
+        "description": "Want to go deeper? Here's some ways you can extend this lesson if you wanted to spend a little more time on these topics."
+      },
+      "seeding_key": {
+        "activity_section.key": "abd09c02-4ead-48b9-890b-a6a46c85d341",
+        "lesson_activity.key": "cbc12eba-7cb8-41cc-86c3-a3bb7c1c2024"
+      }
+    },
+    {
+      "key": "dd719984-f5af-4bcc-a950-b6d6d096b417",
+      "position": 2,
+      "properties": {
+        "description": "Use [**this lesson**](https://studio.code.org/s/how-ai-works-2023/lessons/4) from the [**How AI Works**](https://code.org/ai/how-ai-works) series to go more in depth about Chatbots and large language models (LLMS).",
+        "name": "How AI Works: Chatbots and Large Language Models (LLMs)"
+      },
+      "seeding_key": {
+        "activity_section.key": "dd719984-f5af-4bcc-a950-b6d6d096b417",
+        "lesson_activity.key": "cbc12eba-7cb8-41cc-86c3-a3bb7c1c2024"
+      }
+    },
+    {
+      "key": "d5db6b0e-b34f-4515-a807-1d6330c968f1",
+      "position": 3,
+      "properties": {
+        "description": "Use [**this lesson**](https://studio.code.org/s/how-ai-works-2023/lessons/7) from the [**How AI Works**](https://code.org/ai/how-ai-works) series to learn more about the ethical pitfalls of AI.",
+        "name": "How AI Works: Our AI Code of Ethics"
+      },
+      "seeding_key": {
+        "activity_section.key": "d5db6b0e-b34f-4515-a807-1d6330c968f1",
+        "lesson_activity.key": "cbc12eba-7cb8-41cc-86c3-a3bb7c1c2024"
+      }
+    },
+    {
+      "key": "db2e7899-76a1-49f1-8311-df3269040dcc",
+      "position": 4,
+      "properties": {
+        "description": "Have students research and present on how AI is being used in other professions (e.g., medicine, finance, art). Discuss the potential benefits and challenges AI brings to these fields, drawing parallels to its use in software development.",
+        "name": "AI in Other Professions"
+      },
+      "seeding_key": {
+        "activity_section.key": "db2e7899-76a1-49f1-8311-df3269040dcc",
+        "lesson_activity.key": "cbc12eba-7cb8-41cc-86c3-a3bb7c1c2024"
+      }
+    },
+    {
       "key": "6e848181-cb92-42c7-ab04-a86704ec76e6",
       "position": 1,
       "properties": {
@@ -1338,6 +1472,53 @@
       "seeding_key": {
         "activity_section.key": "c0ae7433-1d5f-4437-b237-180ba3644467",
         "lesson_activity.key": "de529ace-1001-4ac5-9d65-ba63a32883f0"
+      }
+    },
+    {
+      "key": "310532b0-c066-4452-8d96-9c91a5b5d272",
+      "position": 1,
+      "properties": {
+        "description": "Want to go deeper? Here's some ways you can extend this lesson if you wanted to spend a little more time on these topics."
+      },
+      "seeding_key": {
+        "activity_section.key": "310532b0-c066-4452-8d96-9c91a5b5d272",
+        "lesson_activity.key": "e826c73a-6c8b-481c-bf69-6102d0709eff"
+      }
+    },
+    {
+      "key": "48abc9eb-5d38-4d70-a105-6f38a7690925",
+      "position": 2,
+      "properties": {
+        "description": "Have students conduct a traditional peer code review, then have students use Copilot to review the same code. Reflect on the differences, advantages, and limitations of reach approach.",
+        "name": "AI in Code Reviews"
+      },
+      "seeding_key": {
+        "activity_section.key": "48abc9eb-5d38-4d70-a105-6f38a7690925",
+        "lesson_activity.key": "e826c73a-6c8b-481c-bf69-6102d0709eff"
+      }
+    },
+    {
+      "key": "78ca4880-bbd1-4448-8449-cf21fe1ab01a",
+      "position": 3,
+      "properties": {
+        "description": "Have students try to build a simple project or complete a coding challenge relying on Copilot for at least 70% of their code suggestions. Reflect on the experience, discussing the strengths and weaknesses of such an approach and the quality of the final product.",
+        "name": "Building a Project Entirely with Copilot"
+      },
+      "seeding_key": {
+        "activity_section.key": "78ca4880-bbd1-4448-8449-cf21fe1ab01a",
+        "lesson_activity.key": "e826c73a-6c8b-481c-bf69-6102d0709eff"
+      }
+    },
+    {
+      "key": "d839b815-4805-4edb-aa9b-8d80a7fdc277",
+      "position": 4,
+      "properties": {
+        "description": "Have students explore the potential impact of AI tools on the job market and the future of the software development profession.\n* Initiate a research and discussion session on questions like \"How might AI tools like Copilot influence the demand for software developers?\" or \"What new roles might emerge in the tech industry due to the rise of AI?\"\n* Students can present their findings and engage in a debate on the potential positive and negative implications of AI on the tech job market.",
+        "name": "AI and Job Market Implications"
+      },
+      "seeding_key": {
+        "activity_section.key": "d839b815-4805-4edb-aa9b-8d80a7fdc277",
+        "lesson_activity.key": "e826c73a-6c8b-481c-bf69-6102d0709eff"
       }
     },
     {
@@ -1552,7 +1733,13 @@
         "description": "It's crucial to recognize that the foundation of any AI model's decision-making capabilities lies in its training data. But what happens when that data isn't all-encompassing or is skewed in a certain direction? Let's take a look at some real datasets and consider their impacts on models so we can uncover the relationship between training data and potential biases in AI outcomes.",
         "duration": "30",
         "name": "Training Data and Bias",
-        "remarks": true
+        "remarks": true,
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Optional Video: Training Data and Bias** -  if you're students seem to be struggling to understand how bias in the data can lead to models that perform in unfair ways, you can show the Training Data and Bias video that walks through this concept in more detail."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "1e29621d-dc08-4bf1-8050-2897f51c6f0d",
@@ -1563,7 +1750,7 @@
       "key": "4141de4a-bbf2-4b06-88fd-757765b703b3",
       "position": 12,
       "properties": {
-        "description": "<i class=\"fa fa-video-camera\" aria-hidden=\"true\"></i> **Video:** Show the video – _Training Data and Bias_.\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students navigate to the COCO dataset via the link on the MediaPipe model and look around on the site, focusing specifically on the **Explore** section under the **Dataset** menu.",
+        "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** COCO Datatset - Activity Guide\n\n<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students navigate to the COCO dataset via the link on the MediaPipe model and explore the dataset following the directions in the activity guide.",
         "progression_name": "COCO - Common Objects in Context Dataset"
       },
       "seeding_key": {
@@ -1699,6 +1886,41 @@
       "seeding_key": {
         "activity_section.key": "a83c43e8-3d0b-436d-be49-c00337ee0c26",
         "lesson_activity.key": "ae5a7a59-d5da-4793-a152-e2bfa9b31448"
+      }
+    },
+    {
+      "key": "c30d17c2-a62c-470e-9995-53fd0ad1e859",
+      "position": 1,
+      "properties": {
+        "description": "Want to go deeper? Here's some ways you can extend this lesson if you wanted to spend a little more time on these topics."
+      },
+      "seeding_key": {
+        "activity_section.key": "c30d17c2-a62c-470e-9995-53fd0ad1e859",
+        "lesson_activity.key": "48c4e6a5-cc5e-4978-924d-856d36f3d32f"
+      }
+    },
+    {
+      "key": "165af28f-4818-4fcf-9149-7465bff1e60e",
+      "position": 2,
+      "properties": {
+        "description": "Use [**this lesson**](https://studio.code.org/s/how-ai-works-2023/lessons/2) from the [**How AI Works**](https://code.org/ai/how-ai-works) series to go more in depth about computer vision.",
+        "name": "How AI Works: Computer Vision"
+      },
+      "seeding_key": {
+        "activity_section.key": "165af28f-4818-4fcf-9149-7465bff1e60e",
+        "lesson_activity.key": "48c4e6a5-cc5e-4978-924d-856d36f3d32f"
+      }
+    },
+    {
+      "key": "f48565fc-924d-40f8-8006-85e607e328cb",
+      "position": 3,
+      "properties": {
+        "description": "Have students research and present case studies of real-world scenarios where AI models made incorrect decisions (e.g., biased facial recognition results, autonomous car accidents).\n\nDiscuss the causes of these failures and potential strategies to prevent them in the future.",
+        "name": "Real-World AI Failures"
+      },
+      "seeding_key": {
+        "activity_section.key": "f48565fc-924d-40f8-8006-85e607e328cb",
+        "lesson_activity.key": "48c4e6a5-cc5e-4978-924d-856d36f3d32f"
       }
     },
     {
@@ -1844,6 +2066,53 @@
       "seeding_key": {
         "activity_section.key": "a2a9ae68-6bad-4ea7-8826-1b1bebba2410",
         "lesson_activity.key": "930c3299-c1ec-4f74-ba35-ae637ed67e6d"
+      }
+    },
+    {
+      "key": "5ac0c1c1-b1c0-470a-b207-378a0e477d29",
+      "position": 1,
+      "properties": {
+        "description": "Want to go deeper? Here's some ways you can extend this lesson if you wanted to spend a little more time on these topics."
+      },
+      "seeding_key": {
+        "activity_section.key": "5ac0c1c1-b1c0-470a-b207-378a0e477d29",
+        "lesson_activity.key": "23f42606-e04e-4b91-b0f7-067f5fd7e649"
+      }
+    },
+    {
+      "key": "5c8dc44e-f1f7-42c1-a5bc-4a787fc484c4",
+      "position": 2,
+      "properties": {
+        "description": "Introduce students to other platforms like IBM Watson, Google Cloud AutoML, or Microsoft Azure Custom Vision. Have students train simple models on these platforms and compare the experience with Teachable Machine.",
+        "name": "Exploring Other AI Training Platforms"
+      },
+      "seeding_key": {
+        "activity_section.key": "5c8dc44e-f1f7-42c1-a5bc-4a787fc484c4",
+        "lesson_activity.key": "23f42606-e04e-4b91-b0f7-067f5fd7e649"
+      }
+    },
+    {
+      "key": "9552615e-c26f-4590-9388-af60f927972c",
+      "position": 3,
+      "properties": {
+        "description": "Discuss real-world examples where AI models showed bias due to their training data. Have students analyze their own training data for potential biases and discuss the implications.",
+        "name": "Bias in AI Training Data"
+      },
+      "seeding_key": {
+        "activity_section.key": "9552615e-c26f-4590-9388-af60f927972c",
+        "lesson_activity.key": "23f42606-e04e-4b91-b0f7-067f5fd7e649"
+      }
+    },
+    {
+      "key": "777b33a0-ff23-47eb-8f75-ac453f5408c6",
+      "position": 4,
+      "properties": {
+        "description": "Encourage students to brainstorm other applications or programs where their trained model could be integrated. Discuss the potential benefits, challenges, and ethical considerations of such integrations.",
+        "name": "Integration of AI into Other Applications"
+      },
+      "seeding_key": {
+        "activity_section.key": "777b33a0-ff23-47eb-8f75-ac453f5408c6",
+        "lesson_activity.key": "23f42606-e04e-4b91-b0f7-067f5fd7e649"
       }
     },
     {
@@ -2057,6 +2326,53 @@
       "seeding_key": {
         "activity_section.key": "4740f9e6-a3b7-407b-a28f-625ab45aea89",
         "lesson_activity.key": "95719263-6508-423b-b80b-37faf9391bca"
+      }
+    },
+    {
+      "key": "0a547847-0b1b-449f-a156-17ad08ad2821",
+      "position": 1,
+      "properties": {
+        "description": "Want to go deeper? Here's some ways you can extend this lesson if you wanted to spend a little more time on these topics."
+      },
+      "seeding_key": {
+        "activity_section.key": "0a547847-0b1b-449f-a156-17ad08ad2821",
+        "lesson_activity.key": "54dc3606-6476-4bd5-a770-b1e81417625c"
+      }
+    },
+    {
+      "key": "3dcfd299-9c6b-49df-9662-ce835934400b",
+      "position": 2,
+      "properties": {
+        "description": "Discuss real-world scenarios where computer vision has been used, both positively and negatively. Have students debate the ethical implications, considering privacy, bias, and potential misuse.",
+        "name": "Ethical Implications of Computer Vision"
+      },
+      "seeding_key": {
+        "activity_section.key": "3dcfd299-9c6b-49df-9662-ce835934400b",
+        "lesson_activity.key": "54dc3606-6476-4bd5-a770-b1e81417625c"
+      }
+    },
+    {
+      "key": "492bc296-afda-4eb4-8e27-2393e441b379",
+      "position": 3,
+      "properties": {
+        "description": "Discuss scenarios where computer vision is combined with other technologies, such as augmented reality (AR), virtual reality (VR), or Internet of Things (IoT). Have students brainstorm or prototype a simple application that combines computer vision with another technology.",
+        "name": "Integration with Other Technologies"
+      },
+      "seeding_key": {
+        "activity_section.key": "492bc296-afda-4eb4-8e27-2393e441b379",
+        "lesson_activity.key": "54dc3606-6476-4bd5-a770-b1e81417625c"
+      }
+    },
+    {
+      "key": "c50d5a98-6b8e-40f7-98cf-2e005cc3c220",
+      "position": 4,
+      "properties": {
+        "description": "Introduce students to other types of models, such as natural language processing (NLP) or audio recognition. Discuss potential applications and have students brainstorm how these models could be integrated into their chosen Java app.",
+        "name": "Exploring Different AI Models"
+      },
+      "seeding_key": {
+        "activity_section.key": "c50d5a98-6b8e-40f7-98cf-2e005cc3c220",
+        "lesson_activity.key": "54dc3606-6476-4bd5-a770-b1e81417625c"
       }
     },
     {
@@ -3345,6 +3661,18 @@
       }
     },
     {
+      "name": "COCO Dataset Exploration",
+      "url": "https://docs.google.com/document/d/1ozYwGdZiQNZD87efW9AmVsjAuUICqdYAEggRMknxIeo/edit?usp=sharing",
+      "key": "coco_dataset_exploration",
+      "properties": {
+        "audience": "Student",
+        "type": "Activity Guide"
+      },
+      "seeding_key": {
+        "resource.key": "coco_dataset_exploration"
+      }
+    },
+    {
       "name": "Datasheets for Datasets",
       "url": "https://vimeo.com/639588440",
       "key": "datasheets_for_datasets",
@@ -4064,6 +4392,12 @@
       "seeding_key": {
         "lesson.key": "lesson-4",
         "resource.key": "coco_-_common_objects_in_context_dataset"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "lesson-4",
+        "resource.key": "coco_dataset_exploration"
       }
     },
     {

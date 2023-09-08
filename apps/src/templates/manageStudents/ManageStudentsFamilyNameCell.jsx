@@ -5,6 +5,10 @@ import ReactTooltip from 'react-tooltip';
 import _ from 'lodash';
 import i18n from '@cdo/locale';
 import {editStudent} from './manageStudentsRedux';
+import {
+  tableLayoutStyles,
+  NAME_CELL_INPUT_WIDTH,
+} from '../tables/tableConstants';
 
 class ManageStudentFamilyNameCell extends Component {
   static propTypes = {
@@ -31,7 +35,7 @@ class ManageStudentFamilyNameCell extends Component {
     const tooltipId = inputDisabled ? _.uniqueId() : '';
 
     return (
-      <div>
+      <div style={tableLayoutStyles.tableText}>
         {!this.props.isEditing && <div>{familyName}</div>}
         {this.props.isEditing && (
           <div>
@@ -59,7 +63,7 @@ class ManageStudentFamilyNameCell extends Component {
 
 const styles = {
   inputBox: {
-    width: 225,
+    width: NAME_CELL_INPUT_WIDTH,
   },
 };
 
