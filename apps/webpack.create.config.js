@@ -1,6 +1,5 @@
-const _ = require('lodash');
-const path = require('path');
 const webpack = require('webpack');
+const path = require('path');
 
 // Webpack Plugins:
 const CopyPlugin = require('copy-webpack-plugin');
@@ -26,18 +25,11 @@ const {
   OTHER_ENTRIES,
 } = require('./webpackEntryPoints');
 
+const suffix = minify => minify ? 'wp[contenthash].min.js' : '.js';
+
 /**
- * Generate the appropriate webpack config based off of our base config and
- * some input options
- * @param {object} options
- * @param {string} options.output
- * @param {string[]} options.entries - list of input source files
- * @param {bool} options.minify
- * @param {bool} options.watch
- * @param {bool} options.watchNotify
- * @param {string} options.piskelDevMode
- * @param {Array} options.plugins - list of additional plugins to use
- * @param {Array} options.externals - list of webpack externals
+ * Generate our primary webpack config based off of our base config and
+ * some input options.
  */
 function createWebpackConfig({ 
   appsEntries=appsEntriesFor(ALL_APPS),
@@ -45,18 +37,21 @@ function createWebpackConfig({
   piskelDevMode,
   watch, 
   watchNotify,
-  outputDir=path.resolve(__dirname, 'build/package/js/'),
 }) {
-  // When minifying, this generates a 20-hex-character hash.
-  const suffix = minify ? 'wp[contenthash].min.js' : '.js';
 
-  var config = { ...baseConfig, ...{
+  //////////////////////////////////////////////
+  ///////// WEBPACK CONFIG BEGINS HERE /////////
+  //////////////////////////////////////////////
+
+  const webpackConfig = {
     output: {
-      path: outputDir,
+      path: path.resolve(__dirname, 'build/package/js/'),
       publicPath: '/assets/js/',
-      filename: `[name]${suffix}`,
+      // When minifying, this generates a 20-hex-character hash.
+      filename: `[name]${suffix(minify)}`,
     },
     devtool: devtool({ minify }),
+    watch,
     entry: addPollyfillsToEntryPoints({
       ...appsEntries,
       ...CODE_STUDIO_ENTRIES,
@@ -249,7 +244,8 @@ function createWebpackConfig({
               excludeAssets: [...Object.keys(INTERNAL_ENTRIES)],
             }),
           ]
-        : []),
+        : []
+      ),
       new StatsWriterPlugin({
         fields: ['assetsByChunkName', 'assets'],
       }),
@@ -311,25 +307,31 @@ function createWebpackConfig({
           return file;
         },
       }),
+      ...(watch
+        ? [
+            new LiveReloadPlugin({
+              appendScriptTag: envConstants.AUTO_RELOAD,
+            })
+          ]
+        : []
+      ),
+      ...(watch && watchNotify
+        ? [
+            new WebpackNotifierPlugin({alwaysNotify: true})
+          ]
+        : []
+      ),
     ],
-    watch
-  }};
+  };
 
-  if (watch) {
-    config.plugins = config.plugins.concat(
-      new LiveReloadPlugin({
-        appendScriptTag: envConstants.AUTO_RELOAD,
-      })
-    );
+  //////////////////////////////////////////////
+  ////////// WEBPACK CONFIG ENDS HERE //////////
+  //////////////////////////////////////////////
 
-    if (watchNotify) {
-      config.plugins = config.plugins.concat(
-        new WebpackNotifierPlugin({alwaysNotify: true})
-      );
-    }
+  return {
+    ...baseConfig,
+    ...webpackConfig,
   }
-
-  return config;
 }
 
 module.exports = {
