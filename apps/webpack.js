@@ -494,9 +494,7 @@ function create(options) {
       }),
       ...plugins,
     ],
-    watch: watch,
-    keepalive: watch,
-    failOnError: !watch,
+    watch
   });
 
   if (watch) {
