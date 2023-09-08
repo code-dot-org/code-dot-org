@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 // import color from '../../util/color';
-// import i18n from '@cdo/locale';
+import i18n from '@cdo/locale';
 // import {studio} from '@cdo/apps/lib/util/urlHelpers';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import AccessibleDialog from '@cdo/apps/templates/AccessibleDialog';
@@ -17,14 +17,13 @@ class UnconnectedReportAbusePopUp extends React.Component {
     recaptchaSiteKey: PropTypes.string,
     onClose: PropTypes.func,
     abuseUrl: PropTypes.string,
+    onReport: PropTypes.func,
   };
 
   constructor(props) {
     super(props);
 
     this.state = {
-      showReportAbuse: false,
-      showSubmittedHeader: false, // may need to change this state in the future to utilize report cookies - if gallery ever keeps an immediate report
       showSubmitConfirmation: false,
       captchaCompleted: false,
       checkboxes: [
@@ -51,8 +50,13 @@ class UnconnectedReportAbusePopUp extends React.Component {
       captchaScript.remove();
     }
   }
+  // warning pops up when used Can't perform a React state update on an unmounted component.
+  //react-dom.development.js:88 Warning: Can't perform a React state update on an unmounted component.
+  // This is a no-op, but it indicates a memory leak in your application.
+  // To fix, cancel all subscriptions and asynchronous tasks in the componentWillUnmount method.
 
   cancel() {
+    this.props.onClose();
     this.setState({
       captchaCompleted: false, // reset captcha completion
       isAnyCheckboxSelected: false, // reset checkboxes
@@ -88,7 +92,6 @@ class UnconnectedReportAbusePopUp extends React.Component {
     formData.append('channel_id', this.props.projectData.channel);
     formData.append('abuse_url', this.props.abuseUrl);
     formData.append('g-recaptcha-response', this.token);
-    console.log(formData); // CHECK THAT DATA IS SENDING PROPERLY
 
     const checkedCheckboxNames = this.state.checkboxes
       .filter(checkbox => checkbox.checked)
@@ -102,9 +105,9 @@ class UnconnectedReportAbusePopUp extends React.Component {
       .then(response => {
         if (response.ok) {
           this.setState({
-            showSubmittedHeader: true,
             showSubmitConfirmation: true,
           });
+          this.props.onReport();
         } else if (response.status === 403) {
           this.onCaptchaExpiration();
         }
@@ -144,17 +147,6 @@ class UnconnectedReportAbusePopUp extends React.Component {
   };
 
   render() {
-    // const {projectData, currentGallery, isDetailView} = this.props;
-    // const {type, channel} = this.props.projectData;
-    // //const isPersonalGallery = currentGallery === 'personal';
-    // //const isPublicGallery = currentGallery === 'public';
-    // // const url = isPersonalGallery
-    // //   ? `/projects/${type}/${channel}/edit`
-    // //   : `/projects/${type}/${channel}`;
-
-    // // const shouldShowPublicDetails =
-    // //   isPublicGallery && isDetailView && projectData.publishedAt;
-
     const {
       isAnyCheckboxSelected,
       checkboxes,
@@ -176,15 +168,15 @@ class UnconnectedReportAbusePopUp extends React.Component {
 
     return (
       <AccessibleDialog
-        onClose={this.props.onClose}
         className={style.reportAbusePopUp}
+        onClose={this.cancel}
       >
         {showSubmitConfirmation ? (
           <div className={style.submitConfirmation}>
-            <h3>Thank you!</h3>
-            <p>Thanks for helping us to keep Code.org safe!</p>
+            <h3>{i18n.thankyou()}!</h3>
+            <p>{i18n.thankYouForReport()}</p>
             <Button
-              onClick={this.props.onClose}
+              onClick={this.cancel}
               text={'Continue'}
               color={Button.ButtonColor.brandSecondaryDefault}
             />
@@ -192,19 +184,17 @@ class UnconnectedReportAbusePopUp extends React.Component {
         ) : (
           <div>
             <div className={style.popUpTitle}>
-              <h3 style={{margin: 0}}>Report Abuse</h3>
+              <h3 style={{margin: 0}}>{i18n.reportAbuse()}</h3>
               <button
                 type="reset"
-                onClick={this.props.onClose} // and also somehow do cancel?
+                onClick={this.cancel}
                 className={style.xButton}
               >
                 <FontAwesome icon="x" style={{color: '#D4D5D7'}} />
               </button>
             </div>
             <hr className={style.popUpLines} />
-            <p className={style.popUpBody}>
-              Why are you reporting this content?
-            </p>
+            <p className={style.popUpBody}>{i18n.whyReport()}</p>
             <div>
               {checkboxes.map(checkbox => (
                 <CheckBox
@@ -228,14 +218,14 @@ class UnconnectedReportAbusePopUp extends React.Component {
             <hr className={style.popUpLines} />
             <div className={style.popUpButtonHolder}>
               <Button
-                onClick={this.props.onClose}
-                text={'Cancel'}
+                onClick={this.cancel}
+                text={i18n.cancel()}
                 color={Button.ButtonColor.neutralDark}
               />
               <Button
                 onClick={this.handleSubmit}
                 disabled={!submitButtonEnabled}
-                text={'Submit'}
+                text={i18n.submit()}
                 style={{outline: 'none'}}
                 color={Button.ButtonColor.brandSecondaryDefault}
               />
