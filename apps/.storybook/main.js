@@ -1,5 +1,5 @@
 const envConstants = require('../envConstants');
-const storybookWebpackConfig = require('../webpack').storybookConfig;
+const storybookWebpackConfig = require('../webpack.storybook.config');
 
 const staticDirs = envConstants.STORYBOOK_STATIC_ASSETS ? [
     '../build/package/',
