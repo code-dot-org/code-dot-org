@@ -1,8 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-// import color from '../../util/color';
 import i18n from '@cdo/locale';
-// import {studio} from '@cdo/apps/lib/util/urlHelpers';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import AccessibleDialog from '@cdo/apps/templates/AccessibleDialog';
 import RailsAuthenticityToken from '../../lib/util/RailsAuthenticityToken';
