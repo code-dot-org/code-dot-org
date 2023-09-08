@@ -1,3 +1,5 @@
+/*jshint esversion: 6 */
+const AWS = require("aws-sdk");
 const mysql = require("mysql");
 const { sendCfnResponse } = require("cfn-response");
 
@@ -11,29 +13,37 @@ const queryPromise = (connection, query) => {
 };
 
 exports.handler = async (event, context) => {
-  // TODO: Mask password fields.
   console.log("REQUEST RECEIVED:\n", JSON.stringify(event));
+
   const props = event.ResourceProperties;
-
-  let physicalResourceId = event.PhysicalResourceId || props.Name;
-
-  var results;
+  let secretsManager = new AWS.SecretsManager();
+  let dbCredentialAdminSecretValue = await secretsManager
+    .getSecretValue({ SecretId: props.DBCredentialAdminSecret })
+    .promise();
+  let dbCredentialSQLUserSecretValue = await secretsManager
+    .getSecretValue({ SecretId: props.DBCredentialSecret })
+    .promise();
+  let physicalResourceId =
+    event.PhysicalResourceId || dbCredentialSQLUserSecretValue.username;
 
   const connection = mysql.createConnection({
     host: props.DBServerHost,
-    user: props.DBAdminUsername,
-    password: props.DBAdminPassword,
+    user: dbCredentialAdminSecretValue.username,
+    password: dbCredentialAdminSecretValue.password,
     timeout: 10000,
   });
 
   try {
+    let results;
+    const clientHost = "%"; // Default to configuring all MySQL users to be able to connect from any (`%`) client.
+
     switch (event.RequestType) {
       case "Create":
       case "Update":
         results = await createOrUpdateSQLUser(connection, {
-          name: props.Name,
-          clientHost: props.ClientHost,
-          password: props.Password,
+          name: dbCredentialSQLUserSecretValue.username,
+          clientHost: clientHost,
+          password: dbCredentialSQLUserSecretValue.password,
           databases: props.Databases,
           privileges: props.Privileges,
         });
@@ -44,7 +54,7 @@ exports.handler = async (event, context) => {
       case "Delete":
         results = await deleteSQLUser(connection, {
           name: props.Name,
-          clientHost: props.ClientHost,
+          clientHost: clientHost,
         });
         console.log(results);
         break;
