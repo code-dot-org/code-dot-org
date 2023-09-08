@@ -55,3 +55,7 @@ else
     action :upgrade
   end
 end
+
+execute 'enable corepack for yarn support' do
+  command 'corepack enable'
+end
