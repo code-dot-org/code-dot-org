@@ -44,6 +44,7 @@ const suffix = minify => (minify ? 'wp[contenthash].min.js' : '.js');
 
 /**
  * Generate the primary webpack config for building `apps/`.
+ * Extends `baseConfig` from `webpack.base.config.js` (see also!)
  *
  * Invoked by `Gruntfile.js` for `yarn start`, `npm run build`, etc
  *

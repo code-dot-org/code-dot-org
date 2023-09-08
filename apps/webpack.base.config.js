@@ -207,39 +207,40 @@ const baseConfig = {
         use: 'ts-loader',
         exclude: /node_modules/,
       },
+      // modify baseConfig's preLoaders if looking for code coverage info
+      ...(envConstants.COVERAGE
+        ? [
+            {
+              test: /\.jsx?$/,
+              enforce: 'post',
+              loader: 'istanbul-instrumenter-loader',
+              include: p('src'),
+              exclude: [
+                // we need to turn off instrumentation for this file
+                // because we have tests that actually make assertions
+                // about the contents of the compiled version of this file :(
+                p('src/flappy/levels.js'),
+              ],
+              options: {
+                cacheDirectory: true,
+                compact: false,
+                esModules: true,
+              },
+            },
+          ]
+        : []),
     ],
     noParse: [/html2canvas/],
   },
 };
 
-if (envConstants.HOT) {
-  baseConfig.module.loaders.push({
-    test: /\.jsx?$/,
-    loader: 'react-hot-loader',
-    include: [p('src')],
-  });
-}
-
-// modify baseConfig's preLoaders if looking for code coverage info
-if (envConstants.COVERAGE) {
-  baseConfig.module.rules.push({
-    test: /\.jsx?$/,
-    enforce: 'post',
-    loader: 'istanbul-instrumenter-loader',
-    include: p('src'),
-    exclude: [
-      // we need to turn off instrumentation for this file
-      // because we have tests that actually make assertions
-      // about the contents of the compiled version of this file :(
-      p('src/flappy/levels.js'),
-    ],
-    options: {
-      cacheDirectory: true,
-      compact: false,
-      esModules: true,
-    },
-  });
-}
+// if (envConstants.HOT) {
+//   baseConfig.module.loaders.push({
+//     test: /\.jsx?$/,
+//     loader: 'react-hot-loader',
+//     include: [p('src')],
+//   });
+// }
 
 module.exports = {
   baseConfig,
