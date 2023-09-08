@@ -261,14 +261,17 @@ COPY --chown=${UID} --from=code.org-rbenv ${SRC}/Gemfile ${SRC}/Gemfile
 # accomplish `eval $(rbenv init -)` that works for kubectl exec.
 ENV PATH=${HOME}/.rbenv/shims:${PATH}
 
-COPY <<-EOT ./docker-cmd.sh
-#!/bin/zsh
+RUN <<EOF
+  ls -l
+EOF
+# COPY <<-EOT ./docker-cmd.sh
+# #!/bin/zsh
 
-echo "Starting dashboard-server..."
+# echo "Starting dashboard-server..."
 
-exec ./bin/dashboard-server
-EOT
+# exec ./bin/dashboard-server
+# EOT
 
-CMD [ "./docker-cmd.sh" ]
+# CMD [ "./docker-cmd.sh" ]
 
-# CMD [ "./bin/dashboard-server" ]
+CMD [ "./bin/dashboard-server" ]
