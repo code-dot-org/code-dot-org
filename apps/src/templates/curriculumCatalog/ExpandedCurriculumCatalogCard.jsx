@@ -129,28 +129,27 @@ const ExpandedCurriculumCatalogCard = ({
                 </div>
                 <div className={style.linksContainer}>
                   <div className={style.resourcesContainer}>
-                    {availableResources &&
-                      Object.keys(availableResources).length > 0 && (
-                        <div>
-                          <Heading4 visualAppearance="heading-xs">
-                            {i18n.availableResources()}
-                          </Heading4>
-                          <hr className={style.thickDivider} />
-                          {resoucesOrder.map(
-                            resource =>
-                              availableResources[resource] && (
-                                <div key={resource}>
-                                  <BodyTwoText>
-                                    {translatedAvailableResources[resource]}{' '}
-                                  </BodyTwoText>
-                                  {displayDivider() && (
-                                    <hr className={style.horizontalDivider} />
-                                  )}
-                                </div>
-                              )
-                          )}
-                        </div>
-                      )}
+                    {availableResources && (
+                      <div>
+                        <Heading4 visualAppearance="heading-xs">
+                          {i18n.availableResources()}
+                        </Heading4>
+                        <hr className={style.thickDivider} />
+                        {resoucesOrder.map(
+                          resource =>
+                            availableResources[resource] && (
+                              <div key={resource}>
+                                <BodyTwoText>
+                                  {translatedAvailableResources[resource]}{' '}
+                                </BodyTwoText>
+                                {displayDivider() && (
+                                  <hr className={style.horizontalDivider} />
+                                )}
+                              </div>
+                            )
+                        )}
+                      </div>
+                    )}
                   </div>
                   {isInUS &&
                     (professionalLearningProgram ||
@@ -240,6 +239,7 @@ const ExpandedCurriculumCatalogCard = ({
                   onClick={onClose}
                   icon="xmark"
                   iconClassName="fa-solid"
+                  text="Close Button"
                 />
               </div>
               <div className={style.relatedContainer} style={{display: 'none'}}>

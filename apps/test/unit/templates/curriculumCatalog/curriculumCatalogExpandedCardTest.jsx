@@ -33,7 +33,7 @@ describe('CurriculumCatalogExpandedCard', () => {
       gradeRange: 'Grades: 3-12',
       subjectsAndTopics: ['Artificial Intelligence', 'Data'],
       deviceCompatibility:
-        '{"computer":"ideal","chromebook":"ideal","tablet":"ideal","mobile":"ideal","no_device":"incompatible"}',
+        '{"computer":"ideal","chromebook":"ideal","tablet":"ideal","mobile":"not_recommended","no_device":"incompatible"}',
       description:
         'In this fun introduction to artificial intelligence, you train a real machine learning model to identify sea creatures and trash in the ocean. ',
       video:
@@ -142,6 +142,7 @@ describe('CurriculumCatalogExpandedCard', () => {
     Object.keys(availableResources).forEach(resource => {
       screen.getByText(translatedAvailableResources[resource]);
     });
+
     //Checks for correct amount of Horizontal dividers
     expect(availableResourcesContainer.querySelectorAll('hr')).to.have.length(
       Object.keys(availableResources).length
@@ -232,15 +233,16 @@ describe('CurriculumCatalogExpandedCard', () => {
 
   it('clicking close button triggers onClose function', () => {
     const onClose = sinon.spy();
-    const {container} = renderCurriculumExpandedCard({
+    renderCurriculumExpandedCard({
       ...defaultProps,
       onClose: onClose,
     });
 
     expect(onClose).not.to.have.been.called;
 
-    const [closeIcon] = container.querySelectorAll('i[class*=fa-xmark]');
-    const onCloseButton = closeIcon.parentElement.parentElement;
+    const onCloseButton = screen.getByRole('button', {
+      name: 'Close Button',
+    });
 
     fireEvent.click(onCloseButton);
     expect(onClose).to.have.been.calledOnce;
