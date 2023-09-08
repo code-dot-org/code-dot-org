@@ -239,7 +239,7 @@ const ExpandedCurriculumCatalogCard = ({
                   onClick={onClose}
                   icon="xmark"
                   iconClassName="fa-solid"
-                  text="Close Button"
+                  aria-label="Close Button"
                 />
               </div>
               <div className={style.relatedContainer} style={{display: 'none'}}>
