@@ -14,7 +14,7 @@ const {
   appsEntriesFor,
 } = require('./webpackEntryPoints');
 
-const { createWebpackConfig } = require('./webpackCreateConfig')
+const { createWebpackConfig } = require('./webpack.create.config')
 
 module.exports = function (grunt) {
   process.env.mocha_entry = grunt.option('entry') || '';

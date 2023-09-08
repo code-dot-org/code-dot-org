@@ -291,10 +291,10 @@ if (envConstants.COVERAGE) {
   });
 }
 
-function devtool(options) {
+function devtool({ minify }={}) {
   if (process.env.CI) {
     return 'eval';
-  } else if (options && options.minify) {
+  } else if (minify) {
     return 'source-map';
   } else if (process.env.DEBUG_MINIFIED) {
     return 'eval-source-map';

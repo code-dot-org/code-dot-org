@@ -3,7 +3,7 @@ const {
   appsEntriesFor,
 } = require('./webpackEntryPoints');
 
-const { createWebpackConfig } = require('./webpackCreateConfig');
+const { createWebpackConfig } = require('./webpack.create.config');
 
 // From Gruntfile, this is defined as: grunt.option('watch-notify');
 const watchNotify = false;
