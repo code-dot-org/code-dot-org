@@ -4,17 +4,14 @@ var path = require('path');
 var fs = require('fs');
 var os = require('os');
 var _ = require('lodash');
-var offlineWebpackConfig = require('./webpackOffline.config');
-var envConstants = require('./envConstants');
-var checkEntryPoints = require('./script/checkEntryPoints');
 var sass = require('sass');
 
-const {
-  ALL_APPS,
-  appsEntriesFor,
-} = require('./webpackEntryPoints');
+var envConstants = require('./envConstants');
+var checkEntryPoints = require('./script/checkEntryPoints');
 
-const { createWebpackConfig } = require('./webpack.create.config')
+const { ALL_APPS, appsEntriesFor } = require('./webpackEntryPoints');
+const { createWebpackConfig } = require('./webpack.config')
+const offlineWebpackConfig = require('./webpackOffline.config');
 
 module.exports = function (grunt) {
   process.env.mocha_entry = grunt.option('entry') || '';
@@ -580,6 +577,7 @@ describe('entry tests', () => {
         appsEntries,
         minify: false,
         watch: false,
+        piskelDevMode,
       }),
       keepAlive: true,
       proxy: {
