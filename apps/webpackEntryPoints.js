@@ -379,19 +379,9 @@ function assertAppsAreValid(appsToBuild) {
   }
 }
 
-function addPollyfillsToEntryPoints(entries, polyfills) {
-  return Object.fromEntries(
-    Object.entries(entries).map(
-      ([entryName, paths]) => 
-      [entryName, [].concat(polyfills).concat(paths)]
-    )
-  )
-}
-
 module.exports = {
   ALL_APPS,
   appsEntriesFor,
-  addPollyfillsToEntryPoints,
   CODE_STUDIO_ENTRIES: codeStudioEntries,
   INTERNAL_ENTRIES: internalEntries,
   PEGASUS_ENTRIES: pegasusEntries,
