@@ -27,3 +27,9 @@ export const setKeyValue = function (key, value, onSuccess, onError) {
     onError,
   });
 };
+
+export default {
+  getUserId,
+  getKeyValue,
+  setKeyValue,
+};

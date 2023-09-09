@@ -7,17 +7,17 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import StudioApp from '../StudioApp';
+import {singleton as studioApp} from '../StudioApp';
 import commonMsg from '@cdo/locale';
 import flappyMsg from './locale';
 import CustomMarshalingInterpreter from '../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 import api from './api';
-import reactRedux from 'react-redux';
+import {Provider} from 'react-redux';
 import AppView from '../templates/AppView';
 import FlappyVisualizationColumn from './FlappyVisualizationColumn';
 import dom from '../dom';
 import constants from './constants';
-import utils from '../utils';
+import {valueOr} from '../utils';
 import {getRandomDonorTwitter} from '../util/twitterHelper';
 import {getStore} from '../redux';
 
@@ -26,8 +26,6 @@ import placeholder from '../../static/flappy/placeholder.jpg';
 import {dataURIFromURI} from '../imageUtils';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 
-var studioApp = StudioApp.singleton;
-var Provider = reactRedux.Provider;
 /**
  * Create a namespace for the application.
  */
@@ -85,7 +83,7 @@ var AVATAR_WIDTH = constants.AVATAR_WIDTH;
 
 var loadLevel = function () {
   // Load maps.
-  infoText = utils.valueOr(level.infoText, true);
+  infoText = valueOr(level.infoText, true);
   if (!infoText) {
     Flappy.gameState = Flappy.GameStates.ACTIVE;
   }

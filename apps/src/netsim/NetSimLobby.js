@@ -6,7 +6,7 @@
  *      lobby table.
  */
 import $ from 'jquery';
-import utils from '../utils';
+import {createUuid} from '../utils';
 import _ from 'lodash';
 import i18n from '@cdo/netsim/locale';
 import NetSimNodeFactory from './NetSimNodeFactory';
@@ -421,7 +421,7 @@ NetSimLobby.prototype.isEverythingDisabled = function () {
  * @returns {function} Callback for re-enabling the lobby.
  */
 NetSimLobby.prototype.disableEverything = function () {
-  var requestKey = utils.createUuid();
+  var requestKey = createUuid();
   this.disableEverythingKeys_[requestKey] = true;
 
   if (this.nodeSelectionPanel_) {
@@ -571,7 +571,7 @@ NetSimLobby.prototype.buildShardChoiceList_ = function (
 
   // If there still aren't any options, generate a random shard
   if (this.shardChoices_.length === 0) {
-    var seed = utils.createUuid();
+    var seed = createUuid();
     var randomShardID = this.makeShardIDFromSeed_(seed);
     this.shardChoices_.push({
       shardSeed: seed,

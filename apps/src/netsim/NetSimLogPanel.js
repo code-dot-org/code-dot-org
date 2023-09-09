@@ -7,7 +7,7 @@
  * @see NetSimBitLogPanel for the component used in bit-sending mode.
  */
 import $ from 'jquery';
-import utils from '../utils'; // Provides Function.prototype.inherits
+import {valueOr} from '../utils'; // Provides Function.prototype.inherits
 import i18n from '@cdo/netsim/locale';
 import markup from './NetSimLogPanel.html.ejs';
 import Packet from './Packet';
@@ -134,7 +134,7 @@ export default function NetSimLogPanel(rootDiv, options) {
    * @type {number}
    * @private,,
    */
-  this.maximumLogPackets_ = utils.valueOr(
+  this.maximumLogPackets_ = valueOr(
     options.maximumLogPackets,
     DEFAULT_MAXIMUM_LOG_PACKETS
   );

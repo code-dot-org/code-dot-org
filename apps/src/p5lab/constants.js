@@ -1,18 +1,14 @@
 /** @file P5 Lab constants */
-import utils from '@cdo/apps/utils';
+import {makeEnum} from '@cdo/apps/utils';
 
 /** @enum {string} */
-export const P5LabInterfaceMode = utils.makeEnum(
-  'CODE',
-  'ANIMATION',
-  'BACKGROUND'
-);
+export const P5LabInterfaceMode = makeEnum('CODE', 'ANIMATION', 'BACKGROUND');
 
 /** @enum {string} */
-export const P5LabType = utils.makeEnum('GAMELAB', 'SPRITELAB', 'POETRY');
+export const P5LabType = makeEnum('GAMELAB', 'SPRITELAB', 'POETRY');
 
 /** @enum {string} */
-export const CURRENT_ANIMATION_TYPE = utils.makeEnum('default', 'background');
+export const CURRENT_ANIMATION_TYPE = makeEnum('default', 'background');
 
 /** @const {number} */
 export const APP_WIDTH = 400;
@@ -27,4 +23,4 @@ export const APP_HEIGHT = 400;
 export const EMPTY_IMAGE =
   'data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==';
 
-export const PlayBehavior = utils.makeEnum('ALWAYS_PLAY', 'NEVER_PLAY');
+export const PlayBehavior = makeEnum('ALWAYS_PLAY', 'NEVER_PLAY');

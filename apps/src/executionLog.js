@@ -1,5 +1,5 @@
 import {TestResults} from './constants';
-import utils from './utils';
+import {valueOr} from './utils';
 
 /**
  * Get a testResult and message value based on an examination of the
@@ -31,7 +31,7 @@ function getResultsFromLog(logConditions, executionLog) {
      */
 
     condition.minTimes = condition.minTimes || 0;
-    condition.maxTimes = utils.valueOr(condition.maxTimes, Infinity);
+    condition.maxTimes = valueOr(condition.maxTimes, Infinity);
 
     switch (condition.matchType) {
       case 'exact':

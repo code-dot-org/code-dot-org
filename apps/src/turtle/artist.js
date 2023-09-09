@@ -33,10 +33,10 @@ import turtleMsg from './locale';
 import CustomMarshalingInterpreter from '../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 import ArtistAPI from './api';
 import apiJavascript from './apiJavascript';
-import reactRedux from 'react-redux';
+import {Provider} from 'react-redux';
 import AppView from '../templates/AppView';
 import ArtistVisualizationColumn from './ArtistVisualizationColumn';
-import utils from '../utils';
+import {xFromPosition, yFromPosition, createEvent} from '../utils';
 import Slider from '../slider';
 import _ from 'lodash';
 import dropletConfig from './dropletConfig';
@@ -57,8 +57,6 @@ import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import Visualization from '@code-dot-org/artist';
 import experiments from '../util/experiments';
 import {DEFAULT_EXECUTION_INFO} from '@cdo/apps/lib/tools/jsinterpreter/CustomMarshalingInterpreter';
-
-var Provider = reactRedux.Provider;
 
 const CANVAS_HEIGHT = 400;
 const CANVAS_WIDTH = 400;
@@ -1019,7 +1017,7 @@ Artist.prototype.finishExecution_ = function () {
   captureThumbnailFromCanvas(this.getThumbnailCanvas_());
 
   if (this.level.freePlay) {
-    window.dispatchEvent(utils.createEvent('artistDrawingComplete'));
+    window.dispatchEvent(createEvent('artistDrawingComplete'));
   } else {
     if (this.shouldAnimate_ || this.instant_) {
       this.checkAnswer();
@@ -1169,8 +1167,8 @@ Artist.prototype.step = function (command, values, options) {
         this.visualization.jumpTo(values[0]);
       } else {
         this.visualization.jumpTo([
-          utils.xFromPosition(values[0], CANVAS_WIDTH),
-          utils.yFromPosition(values[0], CANVAS_HEIGHT),
+          xFromPosition(values[0], CANVAS_WIDTH),
+          yFromPosition(values[0], CANVAS_HEIGHT),
         ]);
       }
       break;

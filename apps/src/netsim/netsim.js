@@ -3,7 +3,7 @@
  *           This file is the main entry point for the Internet Simulator.
  */
 
-import utils from '../utils';
+import {valueOr} from '../utils';
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -14,7 +14,7 @@ import _ from 'lodash';
 import i18n from '@cdo/netsim/locale';
 import ObservableEventDEPRECATED from '../ObservableEventDEPRECATED';
 import RunLoop from '../RunLoop';
-import reactRedux from 'react-redux';
+import {Provider} from 'react-redux';
 import NetSimView from './NetSimView';
 import page from './page.html.ejs';
 import NetSimAlert from './NetSimAlert';
@@ -39,8 +39,6 @@ var DnsMode = NetSimConstants.DnsMode;
 var MessageGranularity = NetSimConstants.MessageGranularity;
 
 var logger = NetSimLogger.getSingleton();
-
-var Provider = reactRedux.Provider;
 
 /**
  * The top-level Internet Simulator controller.
@@ -698,7 +696,7 @@ NetSim.prototype.connectToRouter = function (routerID, onComplete) {
  *        disconnect is complete
  */
 NetSim.prototype.disconnectFromRemote = function (onComplete) {
-  onComplete = utils.valueOr(onComplete, function () {});
+  onComplete = valueOr(onComplete, function () {});
   this.myNode.disconnectRemote(onComplete);
 };
 
