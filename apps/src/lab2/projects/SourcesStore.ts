@@ -7,7 +7,7 @@ import MetricsReporter from '@cdo/apps/lib/metrics/MetricsReporter';
 import Lab2MetricsReporter from '../Lab2MetricsReporter';
 import {ProjectSources} from '../types';
 import * as sourcesApi from './sourcesApi';
-const {getTabId} = require('@cdo/apps/utils');
+import {getTabId} from '@cdo/apps/utils';
 
 export interface SourcesStore {
   load: (key: string) => Promise<ProjectSources>;

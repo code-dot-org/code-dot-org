@@ -1,8 +1,8 @@
 import React, {useCallback} from 'react';
 import classNames from 'classnames';
 
-const FontAwesome = require('../../templates/FontAwesome');
-const moduleStyles = require('./preview-controls.module.scss').default;
+import FontAwesome from '../../templates/FontAwesome';
+import moduleStyles from './preview-controls.module.scss';
 
 /**
  * Set of controls for previewing sounds in various custom Music Lab block fields
@@ -35,7 +35,11 @@ const ClearButton: React.FunctionComponent<ClearButtonProps> = ({
       onClick={onClick}
       type="button"
     >
-      <FontAwesome icon={'trash-o'} className={moduleStyles.previewButton} />
+      <FontAwesome
+        icon={'trash-o'}
+        className={moduleStyles.previewButton}
+        title={undefined}
+      />
     </button>
   );
 };
@@ -61,6 +65,7 @@ const PreviewButton: React.FunctionComponent<PreviewButtonProps> = ({
           moduleStyles.previewButton,
           !enabled && moduleStyles.previewButtonDisabled
         )}
+        title={undefined}
       />
     </button>
   );

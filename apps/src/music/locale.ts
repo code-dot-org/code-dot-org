@@ -3,6 +3,6 @@
  * it to the {@link MusicLocale} type.
  */
 import {MusicLocale} from './types';
-const musicI18n = require('@cdo/music/locale');
+import musicI18n from '@cdo/music/locale';
 
 export default musicI18n as MusicLocale;

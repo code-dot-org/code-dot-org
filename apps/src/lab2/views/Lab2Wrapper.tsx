@@ -14,7 +14,7 @@ import ErrorBoundary from '../ErrorBoundary';
 import {LabState, isLabLoading, hasPageError} from '../lab2Redux';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import Lab2MetricsReporter from '../Lab2MetricsReporter';
-const i18n = require('@cdo/locale');
+import i18n from '@cdo/locale';
 
 export interface Lab2WrapperProps {
   children: React.ReactNode;

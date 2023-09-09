@@ -23,7 +23,7 @@
     "jsx": "react",
     "target": "es5",
     "lib": ["ES2019", "DOM"],
-    "module": "es6",
+    "module": "es2020",
     "rootDir": "./",
     "moduleResolution": "node",
     "outDir": "build",
@@ -36,7 +36,11 @@
     "allowJs": true,
     "baseUrl": "./",
     "paths": {
-      "@cdo/apps/*": ["./src/*"]
+      "@cdo/apps/*": ["./src/*"],
+      "@cdo/music/locale": ["./src/music/locale-do-not-import.js"],
+      "@cdo/aichat/locale": ["./src/aichat/locale-do-not-import.js"],
+      "@cdo/standaloneVideo/locale": ["./src/standaloneVideo/locale-do-not-import.js"],
+      "@cdo/locale": ["./src/util/locale-do-not-import.js"],
     }
   }
 }

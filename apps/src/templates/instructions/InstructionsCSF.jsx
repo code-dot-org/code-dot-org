@@ -11,7 +11,7 @@ import InstructionsCsfLeftCol from './InstructionsCsfLeftCol';
 import InstructionsCsfRightCol from './InstructionsCsfRightCol';
 import InstructionsCsfMiddleCol from './InstructionsCsfMiddleCol';
 
-var instructions = require('../../redux/instructions');
+import instructions from '../../redux/instructions';
 
 const HEADER_HEIGHT = styleConstants['workspace-headers-height'];
 const RESIZER_HEIGHT = styleConstants['resize-bar-width'];

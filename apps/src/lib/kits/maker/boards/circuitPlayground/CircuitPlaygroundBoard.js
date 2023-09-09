@@ -23,8 +23,10 @@ import PlaygroundButton from './Button';
 import {detectBoardTypeFromPort, BOARD_TYPE} from '../../util/boardUtils';
 import {isChromeOS} from '../../util/browserChecks';
 
+import browserProcessHrtime from 'browser-process-hrtime';
+
 // Polyfill node's process.hrtime for the browser, gets used by johnny-five.
-process.hrtime = require('browser-process-hrtime');
+process.hrtime = browserProcessHrtime;
 
 /** Maps the Circuit Playground Express pins to Circuit Playground Classic. */
 const pinMapping = {

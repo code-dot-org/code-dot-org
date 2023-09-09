@@ -1,5 +1,5 @@
 /** @file Sprite Lab constants */
-var utils = require('@cdo/apps/utils');
+import utils from '@cdo/apps/utils';
 
 export const LocationPickerMode = utils.makeEnum('IDLE', 'SELECTING');
 

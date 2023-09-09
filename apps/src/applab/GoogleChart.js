@@ -4,7 +4,8 @@
  * @see https://developers.google.com/chart/
  */
 
-require('../utils'); // Provides Function.prototype.inherits
+import {setupFunctionPrototypeInherits} from '../utils';
+setupFunctionPrototypeInherits(Function);
 
 /**
  * Abstract base type for Google Charts API charts.

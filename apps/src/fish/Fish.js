@@ -6,6 +6,7 @@ import {getStore} from '../redux';
 import {setAssetPath} from '@code-dot-org/ml-activities/dist/assetPath';
 import {TestResults} from '@cdo/apps/constants';
 import fishMsg from './locale';
+import {initAll} from '@code-dot-org/ml-activities';
 
 /**
  * On small mobile devices, when in portrait orientation, we show an overlay
@@ -121,8 +122,6 @@ Fish.prototype.initMLActivities = function () {
   const backgroundCanvas = document.getElementById('background-canvas');
 
   setAssetPath('/blockly/media/skins/fish/');
-
-  const {initAll} = require('@code-dot-org/ml-activities');
 
   // Set initial state for UI elements.
   initAll({
