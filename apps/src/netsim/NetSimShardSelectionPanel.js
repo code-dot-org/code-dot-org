@@ -5,7 +5,7 @@
  */
 
 import $ from 'jquery';
-import utils from '../utils'; // Provides Function.prototype.inherits
+import {valueOr} from '../utils'; // Provides Function.prototype.inherits
 import i18n from '@cdo/netsim/locale';
 import markup from './NetSimShardSelectionPanel.html.ejs';
 import NetSimPanel from './NetSimPanel';
@@ -46,17 +46,14 @@ function NetSimShardSelectionPanel(rootDiv, options, callbacks) {
    * @type {ShardChoice[]}
    * @private
    */
-  this.shardChoices_ = utils.valueOr(options.shardChoices, []);
+  this.shardChoices_ = valueOr(options.shardChoices, []);
 
   /**
    * Which shard ID is currently selected
    * @type {string}
    * @private
    */
-  this.selectedShardID_ = utils.valueOr(
-    options.selectedShardID,
-    SELECTOR_NONE_VALUE
-  );
+  this.selectedShardID_ = valueOr(options.selectedShardID, SELECTOR_NONE_VALUE);
 
   /**
    * @type {function}

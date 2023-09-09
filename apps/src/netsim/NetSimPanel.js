@@ -4,7 +4,7 @@
  */
 
 import $ from 'jquery';
-import utils from '../utils';
+import {valueOr} from '../utils';
 import markup from './NetSimPanel.html.ejs';
 import ArgumentUtils from './ArgumentUtils';
 
@@ -49,21 +49,21 @@ export default function NetSimPanel(rootDiv, options) {
    * @type {string}
    * @private
    */
-  this.className_ = utils.valueOr(options.className, '');
+  this.className_ = valueOr(options.className, '');
 
   /**
    * Panel title, displayed in header.
    * @type {string}
    * @private
    */
-  this.panelTitle_ = utils.valueOr(options.panelTitle, '');
+  this.panelTitle_ = valueOr(options.panelTitle, '');
 
   /**
    * Whether this panel can be minimized (closed) by clicking on the title.
    * @type {boolean}
    * @private
    */
-  this.userToggleable_ = utils.valueOr(options.userToggleable, true);
+  this.userToggleable_ = valueOr(options.userToggleable, true);
 
   /**
    * Whether the component is minimized, for consistent
@@ -71,7 +71,7 @@ export default function NetSimPanel(rootDiv, options) {
    * @type {boolean}
    * @private
    */
-  this.isMinimized_ = utils.valueOr(options.beginMinimized, false);
+  this.isMinimized_ = valueOr(options.beginMinimized, false);
 
   // Initial render
   this.render();

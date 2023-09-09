@@ -1,17 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import reactRedux from 'react-redux';
+import {Provider} from 'react-redux';
 
-import timeoutList from '../lib/util/timeoutList';
+import {clearTimeouts, setTimeout} from '../lib/util/timeoutList';
 import AppView from '../templates/AppView';
 import CustomMarshalingInterpreter from '../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 import dom from '../dom';
-import utils from '../utils';
+import {randomValue, rotate} from '../utils';
 import {TestResults, ResultType} from '../constants';
-import dropletUtils from '../dropletUtils';
+import {generateCodeAliases} from '../dropletUtils';
 
-import StudioApp from '../StudioApp';
-import containedLevels from '../containedLevels';
+import {singleton as studioApp} from '../StudioApp';
+import {
+  getContainedLevelResultInfo,
+  postContainedLevelAttempt,
+  runAfterPostContainedLevel,
+} from '../containedLevels';
 
 import ExecutionInfo from './executionInfo';
 import MazeVisualizationColumn from './MazeVisualizationColumn';
@@ -21,22 +25,13 @@ import mazeReducer from './redux';
 
 import maze from '@code-dot-org/maze';
 
-import resultsUtils from './results/utils';
+import {createResultsHandlerForSubtype} from './results/utils';
 
-const Provider = mazeReducer.Provider;
-const generateCodeAliases = dropletUtils.generateCodeAliases;
-const getStore = reactRedux.getStore;
-const studioApp = StudioApp.singleton;
-
-const getContainedLevelResultInfo = containedLevels.getContainedLevelResultInfo;
-const postContainedLevelAttempt = containedLevels.postContainedLevelAttempt;
-const runAfterPostContainedLevel = containedLevels.runAfterPostContainedLevel;
+// TODO @snickell ESM - is this the correct getStore? 'react-redux' module doesn't have a {getStore}.
+import {getStore} from '../redux';
 
 const MazeController = maze.MazeController;
 const tiles = maze.tiles;
-
-const createResultsHandlerForSubtype =
-  resultsUtils.createResultsHandlerForSubtype;
 
 export default class Maze {
   constructor() {
@@ -84,7 +79,8 @@ export default class Maze {
 
     if (level.map && level.shapeShift) {
       for (let i = 1, max = Math.random() * 4; i < max; i++) {
-        level.map = utils.rotate(level.map);
+        // TODO @snickell ESM - rotate doesn't appear to be present in `../utils`... or anywhere else. This may have already been a broken reference, but improved import syntax discovered it?
+        level.map = rotate(level.map);
         level.startDirection = (level.startDirection + 3) % 4;
       }
     }
@@ -272,14 +268,14 @@ export default class Maze {
    * on a pass-but-not-perfect solution, but still finish whenever they want.
    */
   finishButtonClick_ = () => {
-    timeoutList.clearTimeouts();
+    clearTimeouts();
     this.animating_ = false;
     this.displayFeedback_(true);
   };
 
   reset_ = () => {
     this.animating_ = false;
-    timeoutList.clearTimeouts();
+    clearTimeouts();
     this.controller.reset();
   };
 
@@ -401,8 +397,8 @@ export default class Maze {
           // randomly select any one of them.
           var i =
             failures.length > 0
-              ? utils.randomValue(failures)
-              : utils.randomValue(successes);
+              ? randomValue(failures)
+              : randomValue(successes);
 
           this.controller.map.useGridWithId(i);
           this.controller.subtype.reset();
@@ -525,13 +521,13 @@ export default class Maze {
       this.stepSpeed *
       this.scale.stepSpeed *
       this.controller.skin.movePegmanAnimationSpeedScale;
-    timeoutList.setTimeout(() => {
+    setTimeout(() => {
       this.scheduleAnimations_(stepMode);
     }, scaledStepSpeed);
   }
 
   scheduleAnimations_(singleStep) {
-    timeoutList.clearTimeouts();
+    clearTimeouts();
 
     var timePerAction =
       this.stepSpeed *
@@ -724,7 +720,7 @@ export default class Maze {
       studioApp().playAudioOnWin();
       this.controller.animatedFinish(timePerStep);
     } else {
-      timeoutList.setTimeout(function () {
+      setTimeout(function () {
         studioApp().playAudioOnFailure();
       }, this.stepSpeed);
     }
@@ -751,7 +747,7 @@ export default class Maze {
       1;
     var timeForThisAction = Math.round(timePerAction * timeModifier);
 
-    timeoutList.setTimeout(() => {
+    setTimeout(() => {
       this.scheduleSingleAnimation_(
         index + 1,
         actions,
@@ -773,7 +769,7 @@ export default class Maze {
     var waitTime = stepsRemaining ? 0 : 1000;
 
     // run after all animations
-    timeoutList.setTimeout(() => {
+    setTimeout(() => {
       if (stepsRemaining) {
         stepButton.removeAttribute('disabled');
       } else {

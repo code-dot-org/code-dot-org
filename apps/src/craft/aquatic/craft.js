@@ -14,7 +14,7 @@ import {handlePlayerSelection} from '@cdo/apps/craft/utils';
 import dom from '@cdo/apps/dom';
 import {trySetLocalStorage} from '@cdo/apps/utils';
 import MusicController from '@cdo/apps/MusicController';
-import reactRedux from 'react-redux';
+import {Provider} from 'react-redux';
 import AppView from '../../templates/AppView';
 import CraftVisualizationColumn from '../simple/CraftVisualizationColumn';
 import {getStore} from '@cdo/apps/redux';
@@ -27,7 +27,6 @@ import PlayerSelectionDialog from '@cdo/apps/craft/PlayerSelectionDialog';
 import reducers from '@cdo/apps/craft/redux';
 import {muteCookieWithLevel} from '../../util/muteCookieHelpers';
 
-var Provider = reactRedux.Provider;
 var MEDIA_URL = '/blockly/media/craft/';
 
 /**

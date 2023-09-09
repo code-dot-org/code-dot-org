@@ -14,7 +14,7 @@ import {initializeSubmitHelper, onSubmitComplete} from '../submitHelper';
 import dom from '../dom';
 import reducers from './reducers';
 import * as actions from './actions';
-import clientApi from '@cdo/apps/clientApi';
+import {files as filesApi} from '@cdo/apps/clientApi';
 import assetListStore from '../code-studio/assets/assetListStore';
 import project from '@cdo/apps/code-studio/initApp/project';
 import {getStore} from '../redux';
@@ -25,8 +25,6 @@ import {reload} from '../utils';
 import firehoseClient from '../lib/util/firehose';
 import {getCurrentId} from '../code-studio/initApp/project';
 import logToCloud from '../logToCloud';
-
-var filesApi = clientApi.files;
 
 export const WEBLAB_FOOTER_HEIGHT = 30;
 

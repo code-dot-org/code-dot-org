@@ -8,10 +8,9 @@
 // look: Colour of sonar-like look icon.
 
 import skinsBase from '../skins';
-import utils from '../utils';
+import {randomValue} from '../utils';
 import neighborhoodSprites from './neighborhoodSprites.json';
 
-const randomValue = utils.randomValue;
 const exports = {};
 
 var CONFIGS = {

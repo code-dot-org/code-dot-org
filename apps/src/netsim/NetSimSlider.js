@@ -3,7 +3,7 @@
  */
 
 import $ from 'jquery';
-import utils from '../utils'; // Provides Function.prototype.inherits
+import {valueOr} from '../utils'; // Provides Function.prototype.inherits
 import markup from './NetSimSlider.html.ejs';
 import i18n from '@cdo/netsim/locale';
 
@@ -70,7 +70,7 @@ function NetSimSlider(rootDiv, options) {
    * @type {function}
    * @private
    */
-  this.changeCallback_ = utils.valueOr(options.onChange, function () {});
+  this.changeCallback_ = valueOr(options.onChange, function () {});
 
   /**
    * A function invoked only when the slider-handle is released by the student.
@@ -78,46 +78,46 @@ function NetSimSlider(rootDiv, options) {
    * @type {function}
    * @private
    */
-  this.stopCallback_ = utils.valueOr(options.onStop, function () {});
+  this.stopCallback_ = valueOr(options.onStop, function () {});
 
   /**
    * @type {number}
    * @private
    */
-  this.minValue_ = utils.valueOr(options.min, SLIDER_DEFAULT_MIN_VALUE);
+  this.minValue_ = valueOr(options.min, SLIDER_DEFAULT_MIN_VALUE);
 
   /**
    * @type {number}
    * @private
    */
-  this.maxValue_ = utils.valueOr(options.max, SLIDER_DEFAULT_MAX_VALUE);
+  this.maxValue_ = valueOr(options.max, SLIDER_DEFAULT_MAX_VALUE);
 
   /**
    * The current (outward-facing) value of the slider.
    * @type {number}
    * @private
    */
-  this.value_ = utils.valueOr(options.value, this.minValue_);
+  this.value_ = valueOr(options.value, this.minValue_);
 
   /**
    * Whether the slider maximum value should be Infinity.
    * @type {boolean}
    * @private
    */
-  this.isUpperBoundInfinite_ = utils.valueOr(options.upperBoundInfinite, false);
+  this.isUpperBoundInfinite_ = valueOr(options.upperBoundInfinite, false);
 
   /**
    * Whether the slider minimimum value should be -Infinity.
    * @type {boolean}
    * @private
    */
-  this.isLowerBoundInfinite_ = utils.valueOr(options.lowerBoundInfinite, false);
+  this.isLowerBoundInfinite_ = valueOr(options.lowerBoundInfinite, false);
 
   /**
    * @type {number}
    * @private
    */
-  this.step_ = utils.valueOr(options.step, 1);
+  this.step_ = valueOr(options.step, 1);
   if (this.step_ === 0) {
     throw new Error('NetSimSlider does not support zero step values.');
   } else if (this.step_ % 1 !== 0) {
@@ -132,7 +132,7 @@ function NetSimSlider(rootDiv, options) {
    * @type {boolean}
    * @private
    */
-  this.isDisabled_ = utils.valueOr(options.isDisabled, false);
+  this.isDisabled_ = valueOr(options.isDisabled, false);
 }
 
 /**
@@ -332,7 +332,7 @@ NetSimSlider.DecimalPrecisionSlider = function (rootDiv, options) {
    * @type {number}
    * @private
    */
-  this.precision_ = utils.valueOr(options.precision, 2);
+  this.precision_ = valueOr(options.precision, 2);
 
   // We convert the given step value by the requested precision before passing
   // it on to NetSimSlider, so that we give NetSimSlider an integer step value.
@@ -397,7 +397,7 @@ var LOGARITHMIC_DEFAULT_BASE = 2;
  * @augments NetSimSlider
  */
 NetSimSlider.LogarithmicSlider = function (rootDiv, options) {
-  options.min = utils.valueOr(options.min, LOGARITHMIC_DEFAULT_MIN_VALUE);
+  options.min = valueOr(options.min, LOGARITHMIC_DEFAULT_MIN_VALUE);
   NetSimSlider.call(this, rootDiv, options);
 
   /**
@@ -405,7 +405,7 @@ NetSimSlider.LogarithmicSlider = function (rootDiv, options) {
    * @type {number}
    * @private
    */
-  this.logBase_ = utils.valueOr(options.logBase, LOGARITHMIC_DEFAULT_BASE);
+  this.logBase_ = valueOr(options.logBase, LOGARITHMIC_DEFAULT_BASE);
 
   /**
    * Precalculate natural log of our base value, because we'll use it a lot.
