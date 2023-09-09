@@ -28,6 +28,8 @@ var commonMsg = require('@cdo/locale');
 var customLevelBlocks = require('./customLevelBlocks');
 import {Position} from '../constants';
 
+let exports = {};
+
 const RANDOM_VALUE = 'RAND';
 
 const TURN_BY_DIRECTION_VALUES = [
@@ -1656,3 +1658,5 @@ exports.install = function (blockly, blockInstallOptions) {
 
   customLevelBlocks.install(blockly, generator, gensym);
 };
+
+export default exports;

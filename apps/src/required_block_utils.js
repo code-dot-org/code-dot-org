@@ -1,6 +1,8 @@
-var xml = require('./xml');
-var msg = require('@cdo/locale');
-var _ = require('lodash');
+import xml from './xml';
+import msg from '@cdo/locale';
+import _ from 'lodash';
+
+const exports = {};
 
 /**
  * Create the textual XML for a math_number block.
@@ -374,3 +376,6 @@ exports.blockFieldsMatch = function (blockA, blockB) {
 var fieldsMatch = function (fieldA, fieldB) {
   return fieldB.name === fieldA.name && fieldB.getValue() === fieldA.getValue();
 };
+
+export default exports;
+export const {makeTestsFromBuilderRequiredBlocks} = exports;

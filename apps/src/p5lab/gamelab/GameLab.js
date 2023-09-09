@@ -3,7 +3,7 @@ import {getStore} from '@cdo/apps/redux';
 import P5Lab from '../P5Lab';
 import {P5LabType} from '../constants';
 import project from '@cdo/apps/code-studio/initApp/project';
-import {showLevelBuilderSaveButton} from '../../code-studio/header';
+import header from '../../code-studio/header';
 import color from '@cdo/apps/util/color';
 
 export default class GameLab extends P5Lab {
@@ -25,7 +25,7 @@ export default class GameLab extends P5Lab {
     }
     if (config.level.editBlocks) {
       config.level.lastAttempt = '';
-      showLevelBuilderSaveButton(() => ({
+      header.showLevelBuilderSaveButton(() => ({
         start_blocks: this.studioApp_.getCode(),
         start_libraries: JSON.stringify(project.getProjectLibraries()),
       }));

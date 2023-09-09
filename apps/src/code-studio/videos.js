@@ -12,7 +12,7 @@ import _ from 'lodash';
 const TAB_NAV_CLASS = '.ui-tabs-nav';
 const MODAL_CLASS_NAME = 'video-modal';
 const MODAL_CLASS = '.' + MODAL_CLASS_NAME;
-var videos = (module.exports = {});
+var videos = {};
 
 videos.createVideoWithFallback = function (
   parentElement,
@@ -543,3 +543,7 @@ function showFallbackPlayerCaptionLink(inDialog) {
     );
   }
 }
+
+export default videos;
+
+export const {createVideoWithFallback, showVideoDialog} = videos;

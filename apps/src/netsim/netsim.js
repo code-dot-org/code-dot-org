@@ -44,7 +44,7 @@ var NetSimGlobals = require('./NetSimGlobals');
  * The top-level Internet Simulator controller.
  * @param {StudioApp} studioApp The studioApp instance to build upon.
  */
-var NetSim = (module.exports = function () {
+var NetSim = function () {
   /**
    * @type {Object}
    */
@@ -148,7 +148,7 @@ var NetSim = (module.exports = function () {
    * @type {Object}
    */
   this.eventKeys = {};
-});
+};
 
 NetSim.prototype.injectStudioApp = function (studioApp) {
   this.studioApp_ = studioApp;
@@ -1403,3 +1403,5 @@ NetSim.prototype.resetShard = function () {
 NetSim.prototype.showInstructionsDialog = function () {
   getStore().dispatch(openInstructionsDialog({imgOnly: false}));
 };
+
+export default NetSim;

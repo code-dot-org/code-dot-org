@@ -81,8 +81,6 @@ var Dance = function () {
   };
 };
 
-module.exports = Dance;
-
 /**
  * Inject the studioApp singleton.
  */
@@ -727,3 +725,5 @@ Dance.prototype.captureThumbnailImage = function () {
     setThumbnailBlobFromCanvas(canvas);
   }
 };
+
+export default Dance;

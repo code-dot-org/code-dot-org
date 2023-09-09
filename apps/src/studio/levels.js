@@ -181,7 +181,7 @@ function whenArrowBlocks(yOffset, yDelta) {
 /*
  * Configuration for all levels.
  */
-var levels = (module.exports = {});
+var levels = {};
 
 // Base config for levels created via levelbuilder
 levels.custom = {
@@ -4015,3 +4015,5 @@ levels.hoc2015_blockly_15 = extend(levels.js_hoc2015_event_free, {
     },
   ],
 });
+
+export default levels;

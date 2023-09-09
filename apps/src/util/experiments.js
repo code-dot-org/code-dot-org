@@ -192,3 +192,5 @@ experiments.isEnabled = function (key) {
 
   return enabled;
 };
+
+export default experiments;

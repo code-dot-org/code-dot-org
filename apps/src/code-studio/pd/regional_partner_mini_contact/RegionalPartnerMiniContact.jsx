@@ -312,3 +312,5 @@ const styles = {
     maxWidth: 500,
   },
 };
+
+export default RegionalPartnerMiniContact;

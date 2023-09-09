@@ -275,4 +275,4 @@ BigGameLogic.prototype.collide = function (px, py, cx, cy) {
   return this.getFunc_('collide?')(px, py, cx, cy);
 };
 
-module.exports = BigGameLogic;
+export default BigGameLogic;

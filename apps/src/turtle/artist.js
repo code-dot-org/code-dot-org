@@ -164,7 +164,7 @@ const PUBLISHABLE_SKINS = ['artist', 'artist_zombie', 'anna', 'elsa'];
  * An instantiable Artist class
  * @param {StudioApp} studioApp The studioApp instance to build upon.
  */
-var Artist = function () {
+function Artist() {
   this.skin = null;
   this.level = null;
 
@@ -192,10 +192,7 @@ var Artist = function () {
 
   // these get set by init based on skin.
   this.speedSlider = null;
-};
-
-module.exports = Artist;
-module.exports.Visualization = Visualization;
+}
 
 /**
  * todo
@@ -1748,3 +1745,6 @@ Artist.prototype.resetStepInfo_ = function () {
   this.visualization.stepStartY = this.visualization.y;
   this.visualization.stepDistanceCovered = 0;
 };
+
+Artist.Visualization = Visualization;
+export default Artist;

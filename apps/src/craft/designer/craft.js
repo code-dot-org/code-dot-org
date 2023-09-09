@@ -54,7 +54,7 @@ const ArrowIds = {
 /**
  * Create a namespace for the application.
  */
-var Craft = module.exports;
+var Craft = {};
 
 window.Craft = Craft;
 window.Blockly = Blockly;
@@ -1030,3 +1030,5 @@ Craft.shouldDefaultToContinue = function (testResultType) {
   var isSuccess = testResultType > TestResults.APP_SPECIFIC_ACCEPTABLE_FAIL;
   return isSuccess && !isFreePlay;
 };
+
+export default Craft;

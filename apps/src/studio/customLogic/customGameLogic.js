@@ -70,4 +70,4 @@ CustomGameLogic.prototype.getFunc_ = function (key) {
   return this.resolveCachedBlock_(key) || function () {};
 };
 
-module.exports = CustomGameLogic;
+export default CustomGameLogic;

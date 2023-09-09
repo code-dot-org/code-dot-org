@@ -8,7 +8,7 @@ import * as utils from '../../utils';
  * is 200px for the container, and 198 for the actual menu (to accommodate 2px for the border).
  * React-Select has props for overriding these default css styles. Increase the max height here:
  */
-exports.SelectStyleProps = {
+export const SelectStyleProps = {
   menuContainerStyle: {
     maxHeight: 400,
   },

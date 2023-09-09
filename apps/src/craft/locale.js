@@ -3,4 +3,5 @@ import localeWithI18nStringTracker from '@cdo/apps/util/i18nStringTracker';
 
 let locale = safeLoadLocale('craft_locale');
 locale = localeWithI18nStringTracker(locale, 'craft');
-module.exports = locale;
+
+export default locale;

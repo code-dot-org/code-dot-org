@@ -215,3 +215,4 @@ Button.ButtonSize = ButtonSize;
 Button.ButtonHeight = ButtonHeight;
 
 export default Button;
+export {ButtonColor, ButtonSize, ButtonHeight};

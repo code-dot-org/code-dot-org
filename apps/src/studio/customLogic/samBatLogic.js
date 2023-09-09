@@ -1,4 +1,5 @@
-import {Direction, KeyCodes} from '../constants';
+import {Direction} from '../constants';
+import {KeyCodes} from '@cdo/apps/constants';
 import CustomGameLogic from './customGameLogic';
 import '@cdo/apps/utils'; // Provides Function.prototype.inherits
 
@@ -117,4 +118,4 @@ SamBatLogic.prototype.onscreen = function (x, y) {
   return this.resolveCachedBlock_('VALUE')(x, y);
 };
 
-module.exports = SamBatLogic;
+export default SamBatLogic;

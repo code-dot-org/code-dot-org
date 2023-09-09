@@ -13,7 +13,7 @@ import ExternalButton from './ExternalButton';
 import CapacitiveTouchSensor from './CapacitiveTouchSensor';
 import LedScreen from './LedScreen';
 import {
-  MICROBIT,
+  MB_API,
   MICROBIT_FIRMWARE_VERSION,
   FIRMWARE_VERSION_TIMEOUT,
   SQUARE_LEDS,
@@ -94,7 +94,7 @@ export default class MicroBitBoard extends EventEmitter {
             // Log if we were not able to determine the firmware version in time.
             firehoseClient.putRecord({
               study: MAKER_TOOLKIT,
-              study_group: MICROBIT,
+              study_group: MB_API,
               event: FIRMWARE_VERSION_TIMEOUT,
             });
             console.warn(

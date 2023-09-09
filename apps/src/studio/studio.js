@@ -7148,3 +7148,5 @@ if (IN_UNIT_TEST) {
     level = newLevel;
   };
 }
+
+export default Studio;

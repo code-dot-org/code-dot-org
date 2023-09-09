@@ -30,7 +30,7 @@ const tiles = maze.tiles;
 const createResultsHandlerForSubtype =
   require('./results/utils').createResultsHandlerForSubtype;
 
-module.exports = class Maze {
+export default class Maze {
   constructor() {
     this.scale = {
       snapRadius: 1,
@@ -807,4 +807,4 @@ module.exports = class Maze {
 
     return succeeded;
   }
-};
+}

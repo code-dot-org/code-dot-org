@@ -16,7 +16,7 @@
  * Eval is DEPRECATED
  */
 
-var Eval = module.exports;
+var Eval = {};
 
 /**
  * Create a namespace for the application.
@@ -672,3 +672,5 @@ function onReportComplete(response) {
     displayFeedback(response);
   }, 2000);
 }
+
+export default Eval;
