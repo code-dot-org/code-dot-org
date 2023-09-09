@@ -3,7 +3,7 @@
  * @see net_sim_api.rb
  */
 import $ from 'jquery';
-var NetSimApiError = require('./NetSimApiError');
+import NetSimApiError from './NetSimApiError';
 
 /**
  * @type {string}

@@ -4,7 +4,7 @@
  */
 
 import $ from 'jquery';
-var NetSimTable = require('./NetSimTable');
+import NetSimTable from './NetSimTable';
 import createPubSub from '../lib/util/PubSubService';
 
 /**

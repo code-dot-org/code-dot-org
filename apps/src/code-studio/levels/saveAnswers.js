@@ -21,7 +21,7 @@ const UNSUBMITTED_ATTEMPT = -50;
  * @param {function} completeFn - Function to call after sending report to
  *   save answers.
  */
-function saveAnswers(completeFn) {
+export function saveAnswers(completeFn) {
   var results = getResult();
   var response = results.response;
   var result = results.result;
@@ -41,7 +41,7 @@ function saveAnswers(completeFn) {
   });
 }
 
-module.exports = {
-  saveAnswersAndNavigate: saveAnswersAndNavigate,
-  saveAnswers: saveAnswers,
+export default {
+  saveAnswersAndNavigate,
+  saveAnswers,
 };

@@ -1,4 +1,4 @@
-var i18n = require('../locale');
+import i18n from '../locale';
 import {blockTypesToDropdownOptions} from '../utils';
 
 var allBlocks = [

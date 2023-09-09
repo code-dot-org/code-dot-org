@@ -2,8 +2,8 @@
  * @overview UI controller for set of radio buttons used to select display encodings.
  */
 import $ from 'jquery';
-var markup = require('./NetSimEncodingControl.html.ejs');
-var EncodingType = require('./NetSimConstants').EncodingType;
+import markup from './NetSimEncodingControl.html.ejs';
+import {EncodingType} from './NetSimConstants';
 
 /**
  * Generator and controller for message encoding selector: A dropdown that

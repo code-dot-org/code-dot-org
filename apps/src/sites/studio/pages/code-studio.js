@@ -9,49 +9,60 @@
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
+
 import {getStore} from '@cdo/apps/code-studio/redux';
 import {setRtlFromDOM} from '@cdo/apps/code-studio/isRtlRedux';
 import initSigninState from '@cdo/apps/code-studio/initSigninState';
 import initResponsive from '@cdo/apps/code-studio/responsive';
-import hashEmail from '@cdo/apps/code-studio/hashEmail';
 import GDPRDialog from '@cdo/apps/templates/GDPRDialog';
 import getScriptData from '@cdo/apps/util/getScriptData';
 import Cookie from 'js-cookie';
 
-const store = getStore();
-store.dispatch(setRtlFromDOM());
-
-// Shim window.console to be safe in IE
-require('@cdo/apps/code-studio/consoleShim')(window);
-
-var Sounds = require('@cdo/apps/Sounds');
-var activateReferenceAreaOnLoad = require('@cdo/apps/code-studio/reference_area');
+import Sounds from '@cdo/apps/Sounds';
+import activateReferenceAreaOnLoad from '@cdo/apps/code-studio/reference_area';
 import {checkForUnsupportedBrowsersOnLoad} from '@cdo/apps/util/unsupportedBrowserWarning';
 import {initHamburger} from '@cdo/apps/hamburger/hamburger.js';
 
-window.React = require('react');
-window.ReactDOM = require('react-dom');
-window.Radium = require('radium');
+import clientState from '@cdo/apps/code-studio/clientState';
+import createCallouts from '@cdo/apps/code-studio/callouts';
+import hashEmail from '@cdo/apps/code-studio/hashEmail';
+import levelCompletions from '@cdo/apps/code-studio/levelCompletions';
+import popupWindow from '@cdo/apps/code-studio/popup-window';
+import reporting from '@cdo/apps/code-studio/reporting';
+import header from '@cdo/apps/code-studio/header';
+import videos from '@cdo/apps/code-studio/videos';
+import assets from '@cdo/apps/code-studio/assets';
+import pairing from '@cdo/apps/code-studio/pairing';
+import project from '@cdo/apps/code-studio/initApp/project';
+
+window.dashboard = window.dashboard || {};
+window.dashboard.clientState = clientState;
+window.dashboard.createCallouts = createCallouts;
+window.dashboard.hashEmail = hashEmail;
+window.dashboard.levelCompletions = levelCompletions;
+window.dashboard.popupWindow = popupWindow;
+window.dashboard.reporting = reporting;
+window.dashboard.header = header;
+window.dashboard.videos = videos;
+window.dashboard.assets = assets;
+window.dashboard.pairing = pairing;
+window.dashboard.project = project;
+
+// Shim window.console to be safe in IE
+import consoleShim from '@cdo/apps/code-studio/consoleShim';
+consoleShim(window);
+
+window.React = React;
+window.ReactDOM = ReactDOM;
+
+const store = getStore();
+store.dispatch(setRtlFromDOM());
 
 // Prevent callstack exceptions when opening multiple dialogs
 // http://stackoverflow.com/a/15856139/2506748
 if ($.fn.modal) {
   $.fn.modal.Constructor.prototype.enforceFocus = function () {};
 }
-
-window.dashboard = window.dashboard || {};
-window.dashboard.clientState = require('@cdo/apps/code-studio/clientState');
-window.dashboard.createCallouts =
-  require('@cdo/apps/code-studio/callouts').default;
-window.dashboard.hashEmail = hashEmail;
-window.dashboard.levelCompletions = require('@cdo/apps/code-studio/levelCompletions');
-window.dashboard.popupWindow = require('@cdo/apps/code-studio/popup-window');
-window.dashboard.reporting = require('@cdo/apps/code-studio/reporting');
-window.dashboard.header = require('@cdo/apps/code-studio/header');
-window.dashboard.videos = require('@cdo/apps/code-studio/videos');
-window.dashboard.assets = require('@cdo/apps/code-studio/assets');
-window.dashboard.pairing = require('@cdo/apps/code-studio/pairing');
-window.dashboard.project = require('@cdo/apps/code-studio/initApp/project');
 
 // only stick the necessary methods onto dashboard.codeStudioLevels
 import {
@@ -67,15 +78,19 @@ window.dashboard.codeStudioLevels = {
 
 // usages: _dialogHelper.js, frequency.js, text-compression.js, levelGroup.js, multi.js
 // arguably each of the above files belongs in code-studio
-window.Dialog = require('@cdo/apps/code-studio/LegacyDialog');
+import Dialog from '@cdo/apps/code-studio/LegacyDialog';
+window.Dialog = Dialog;
 
 // When we were in browserify world, all modules in a bundle (i.e. code-studio-common)
 // would get preloaded. In webpack, they're only loaded as needed. We were
 // depending on these two modules being loaded when code-studio-common was
 // included, so force that load here.
-window.FreeResponse = require('@cdo/apps/code-studio/levels/freeResponse');
-window.Multi = require('@cdo/apps/code-studio/levels/multi');
-window.TextMatch = require('@cdo/apps/code-studio/levels/textMatch');
+import FreeResponse from '@cdo/apps/code-studio/levels/freeResponse';
+import Multi from '@cdo/apps/code-studio/levels/multi';
+import TextMatch from '@cdo/apps/code-studio/levels/textMatch';
+window.FreeResponse = FreeResponse;
+window.Multi = Multi;
+window.TextMatch = TextMatch;
 
 // Wrap existing window onerror caller with a script error check.  If we have a
 // script error and a url, throw that so that we have the info in New Relic.

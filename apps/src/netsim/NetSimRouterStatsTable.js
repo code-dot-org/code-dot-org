@@ -3,9 +3,9 @@
  */
 
 import $ from 'jquery';
-var markup = require('./NetSimRouterStatsTable.html.ejs');
-var NetSimUtils = require('./NetSimUtils');
-var NetSimLogEntry = require('./NetSimLogEntry');
+import markup from './NetSimRouterStatsTable.html.ejs';
+import NetSimUtils from './NetSimUtils';
+import NetSimLogEntry from './NetSimLogEntry';
 
 /**
  * Render every half-second, minimum.

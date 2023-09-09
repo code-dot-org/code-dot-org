@@ -5,10 +5,10 @@
  */
 
 import $ from 'jquery';
-var utils = require('../utils'); // Provides Function.prototype.inherits
-var i18n = require('@cdo/netsim/locale');
-var markup = require('./NetSimShardSelectionPanel.html.ejs');
-var NetSimPanel = require('./NetSimPanel');
+import utils from '../utils'; // Provides Function.prototype.inherits
+import i18n from '@cdo/netsim/locale';
+import markup from './NetSimShardSelectionPanel.html.ejs';
+import NetSimPanel from './NetSimPanel';
 import {KeyCodes} from '../constants';
 
 /**

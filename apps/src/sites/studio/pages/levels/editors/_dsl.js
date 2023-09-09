@@ -4,7 +4,7 @@ import $ from 'jquery';
  * @file Main entry point for scripts used only in levelbuilder when editing
  *       DSL-defined levels.
  */
-var initializeEmbeddedMarkdownEditor = require('@cdo/apps/code-studio/initializeEmbeddedMarkdownEditor');
+import initializeEmbeddedMarkdownEditor from '@cdo/apps/code-studio/initializeEmbeddedMarkdownEditor';
 
 // Initialize markdown editors on page load
 $(document).ready(function () {
