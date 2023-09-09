@@ -14,7 +14,7 @@ import {EncodingType} from './NetSimConstants';
  * @param {function} changeEncodingCallback
  * @constructor
  */
-var NetSimEncodingControl = (module.exports = function (
+export default function NetSimEncodingControl(
   rootDiv,
   levelConfig,
   changeEncodingCallback
@@ -46,7 +46,7 @@ var NetSimEncodingControl = (module.exports = function (
 
   // Initial render
   this.render();
-});
+}
 
 /**
  * Fill the root div with new elements reflecting the current state

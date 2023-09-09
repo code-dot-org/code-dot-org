@@ -30,4 +30,4 @@ FlappyVisualizationColumn.propTypes = {
   showFinishButton: PropTypes.bool.isRequired,
 };
 
-module.exports = FlappyVisualizationColumn;
+export default FlappyVisualizationColumn;

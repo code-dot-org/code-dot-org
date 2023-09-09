@@ -47,7 +47,7 @@ import NetSimGlobals from './NetSimGlobals';
  * @constructor
  * @augments NetSimPanel
  */
-var NetSimLobby = (module.exports = function (rootDiv, netsim, options) {
+export default function NetSimLobby(rootDiv, netsim, options) {
   /**
    * @type {jQuery}
    * @private
@@ -176,7 +176,7 @@ var NetSimLobby = (module.exports = function (rootDiv, netsim, options) {
 
   // Register for events
   this.netsim_.shardChange.register(this.onShardChange_.bind(this));
-});
+}
 
 /**
  * Recreate markup within panel body.

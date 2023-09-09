@@ -16,7 +16,7 @@ import NetSimGlobals from './NetSimGlobals';
  * @param {function} becomeDnsCallback
  * @constructor
  */
-var NetSimDnsTab = (module.exports = function (
+export default function NetSimDnsTab(
   rootDiv,
   dnsModeChangeCallback,
   becomeDnsCallback
@@ -59,7 +59,7 @@ var NetSimDnsTab = (module.exports = function (
   this.dnsTable_ = null;
 
   this.render();
-});
+}
 
 /**
  * Fill the root div with new elements reflecting the current state

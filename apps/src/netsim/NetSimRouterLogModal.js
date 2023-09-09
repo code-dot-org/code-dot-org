@@ -22,7 +22,7 @@ var MAXIMUM_ROWS_IN_FULL_RENDER = 500;
  * @param {!DashboardUser} options.user
  * @constructor
  */
-var NetSimRouterLogModal = (module.exports = function (rootDiv, options) {
+export default function NetSimRouterLogModal(rootDiv, options) {
   /**
    * Component root, which we fill whenever we call render()
    * @private {jQuery}
@@ -122,7 +122,7 @@ var NetSimRouterLogModal = (module.exports = function (rootDiv, options) {
   this.setTrafficFilterMode_ = this.setTrafficFilterMode_.bind(this);
 
   this.render();
-});
+}
 
 /**
  * Create a comparator function that can be used to sort log entries, configured

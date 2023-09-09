@@ -12,7 +12,7 @@ import markup from './NetSimMetronome.html.ejs';
  * @param {RunLoop} runLoop
  * @constructor
  */
-var NetSimMetronome = (module.exports = function (rootDiv, runLoop) {
+export default function NetSimMetronome(rootDiv, runLoop) {
   /**
    * Component root, which we fill whenever we call render()
    * @type {jQuery}
@@ -50,7 +50,7 @@ var NetSimMetronome = (module.exports = function (rootDiv, runLoop) {
 
   // Register with run loop
   runLoop.render.register(this.render.bind(this));
-});
+}
 
 /**
  * Fill the root div with new elements reflecting the current state

@@ -11,10 +11,7 @@ import {DnsMode} from './NetSimConstants';
  * @param {function} dnsModeChangeCallback
  * @constructor
  */
-var NetSimDnsModeControl = (module.exports = function (
-  rootDiv,
-  dnsModeChangeCallback
-) {
+function NetSimDnsModeControl(rootDiv, dnsModeChangeCallback) {
   /**
    * Component root, which we fill whenever we call render()
    * @type {jQuery}
@@ -43,7 +40,7 @@ var NetSimDnsModeControl = (module.exports = function (
   this.currentDnsMode_ = DnsMode.NONE;
 
   this.render();
-});
+}
 
 /**
  * Fill the root div with new elements reflecting the current state
@@ -77,3 +74,5 @@ NetSimDnsModeControl.prototype.setDnsMode = function (newDnsMode) {
     .filter('[value="' + newDnsMode + '"]')
     .prop('checked', true);
 };
+
+export default NetSimDnsModeControl;

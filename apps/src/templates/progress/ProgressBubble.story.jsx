@@ -114,7 +114,7 @@ HiddenTooltipsBubble.args = {
 };
 stories[`HiddenTooltipsBubble`] = HiddenTooltipsBubble;
 
-module.exports = {
+export default {
   ...stories,
   default: defaultExport,
 };

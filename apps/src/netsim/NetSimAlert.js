@@ -9,7 +9,7 @@ import NetSimLogger from './NetSimLogger';
 
 var logger = NetSimLogger.getSingleton();
 
-var NetSimAlert = (module.exports = {});
+var NetSimAlert = {};
 
 /**
  * Returns the alert container, or creates and inserts one if it does
@@ -108,3 +108,5 @@ NetSimAlert.error = function (body, options) {
 NetSimAlert.success = function (body, options) {
   return NetSimAlert.create_(body, 'alert-success', options);
 };
+
+export default NetSimAlert;

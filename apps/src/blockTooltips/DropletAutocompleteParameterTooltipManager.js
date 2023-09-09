@@ -596,4 +596,4 @@ DropletAutocompleteParameterTooltipManager.prototype.setTooltipsEnabled =
     this.tooltipConfig.tooltipsEnabled = !!enabled;
   };
 
-module.exports = DropletAutocompleteParameterTooltipManager;
+export default DropletAutocompleteParameterTooltipManager;

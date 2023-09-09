@@ -247,7 +247,7 @@ var tableApi = {
   },
 };
 
-module.exports = {
+export default {
   /**
    * Create a NetSim Shard API instance for the given shard.
    * @param {string} shardID

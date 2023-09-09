@@ -51,7 +51,7 @@ var BUTTON_DEBOUNCE_DURATION_MS = 100;
  * @constructor
  * @augments NetSimPanel
  */
-var NetSimRemoteNodeSelectionPanel = (module.exports = function (
+export default function NetSimRemoteNodeSelectionPanel(
   rootDiv,
   options,
   callbacks
@@ -159,7 +159,7 @@ var NetSimRemoteNodeSelectionPanel = (module.exports = function (
   if (options.disableControls) {
     this.disableEverything();
   }
-});
+}
 NetSimRemoteNodeSelectionPanel.inherits(NetSimPanel);
 
 /**

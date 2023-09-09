@@ -170,7 +170,7 @@ if (INCLUDE_LARGE_STORIES) {
   };
 }
 
-module.exports = {
+export default {
   ...stories,
   default: defaultExport,
 };

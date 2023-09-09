@@ -14,7 +14,7 @@ var addClickTouchEvent = function (element, handler) {
   });
 };
 
-module.exports = function activateReferenceAreaOnLoad() {
+export default function activateReferenceAreaOnLoad() {
   $(window).load(function () {
     // Do nothing if we don't  have a reference area
     if ($('#reference_area').length === 0) {
@@ -49,4 +49,4 @@ module.exports = function activateReferenceAreaOnLoad() {
       $('#reference_area .video_thumbnail').hide();
     }
   });
-};
+}

@@ -88,7 +88,7 @@ export function stringToChunks(str, maxLength, delimiter = ' ') {
  * NOTE: For new code, use Object.assign({}, defaults, options) instead
  */
 export function extend(defaults, options) {
-  var finalOptions = exports.shallowCopy(defaults);
+  var finalOptions = shallowCopy(defaults);
   for (var prop in options) {
     finalOptions[prop] = options[prop];
   }
