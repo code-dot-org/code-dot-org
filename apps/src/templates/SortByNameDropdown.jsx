@@ -1,8 +1,9 @@
-import {useDispatch} from 'react-redux';
+import {useDispatch, useSelector} from 'react-redux';
 import PropTypes from 'prop-types';
 import React from 'react';
 import i18n from '@cdo/locale';
 import {setSortByFamilyName} from '@cdo/apps/templates/currentUserRedux';
+import UserPreferences from '@cdo/apps/lib/util/UserPreferences';
 
 function SortByNameDropdown({
   sortByStyles,
@@ -12,6 +13,10 @@ function SortByNameDropdown({
   source,
 }) {
   const dispatch = useDispatch();
+  const sortByFamilyName = useSelector(
+    state => state.currentUser.isSortedByFamilyName
+  );
+
   return (
     <div>
       <div style={sortByStyles}>{i18n.sortBy()}</div>
@@ -19,7 +24,7 @@ function SortByNameDropdown({
         name="familyNameSort"
         aria-label={i18n.sortBy()}
         style={selectStyles}
-        defaultValue={i18n.displayName}
+        value={sortByFamilyName}
         onChange={e => {
           dispatch(
             setSortByFamilyName(
@@ -29,6 +34,7 @@ function SortByNameDropdown({
               source
             )
           );
+          new UserPreferences().setSortByFamilyName(e.target.value === 'true');
         }}
       >
         <option value={false}>{i18n.displayName()}</option>
