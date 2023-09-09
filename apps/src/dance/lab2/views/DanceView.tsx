@@ -2,7 +2,7 @@ import Instructions from '@cdo/apps/lab2/views/components/Instructions';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
 import React from 'react';
 import moduleStyles from './dance-view.module.scss';
-const commonI18n = require('@cdo/locale');
+import commonI18n from '@cdo/locale';
 
 const DANCE_VISUALIZATION_ID = 'dance-visualization';
 const BLOCKLY_DIV_ID = 'dance-blockly-div';

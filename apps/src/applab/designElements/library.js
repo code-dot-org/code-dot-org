@@ -4,6 +4,20 @@ import * as elementUtils from './elementUtils';
 import designMode from '../designMode';
 import {themeOptions, DEFAULT_THEME_INDEX} from '../constants';
 
+import button from './button';
+import label from './label';
+import textInput from './textInput';
+import checkbox from './checkbox';
+import dropdown from './dropdown';
+import radioButton from './radioButton';
+import textarea from './textarea';
+import image from './image';
+import canvas from './canvas';
+import screen from './screen';
+import chart from './chart';
+import slider from './slider';
+import photoSelect from './photoSelect';
+
 /**
  * A map from prefix to the next numerical suffix to try to
  * use as an id in the applab app's DOM.
@@ -32,19 +46,19 @@ const ElementType = utils.makeEnum(
 );
 
 let elements = {};
-elements[ElementType.BUTTON] = require('./button');
-elements[ElementType.LABEL] = require('./label');
-elements[ElementType.TEXT_INPUT] = require('./textInput');
-elements[ElementType.CHECKBOX] = require('./checkbox');
-elements[ElementType.DROPDOWN] = require('./dropdown');
-elements[ElementType.RADIO_BUTTON] = require('./radioButton');
-elements[ElementType.TEXT_AREA] = require('./textarea');
-elements[ElementType.IMAGE] = require('./image');
-elements[ElementType.CANVAS] = require('./canvas');
-elements[ElementType.SCREEN] = require('./screen');
-elements[ElementType.CHART] = require('./chart');
-elements[ElementType.SLIDER] = require('./slider');
-elements[ElementType.PHOTO_SELECT] = require('./photoSelect');
+elements[ElementType.BUTTON] = button;
+elements[ElementType.LABEL] = label;
+elements[ElementType.TEXT_INPUT] = textInput;
+elements[ElementType.CHECKBOX] = checkbox;
+elements[ElementType.DROPDOWN] = dropdown;
+elements[ElementType.RADIO_BUTTON] = radioButton;
+elements[ElementType.TEXT_AREA] = textarea;
+elements[ElementType.IMAGE] = image;
+elements[ElementType.CANVAS] = canvas;
+elements[ElementType.SCREEN] = screen;
+elements[ElementType.CHART] = chart;
+elements[ElementType.SLIDER] = slider;
+elements[ElementType.PHOTO_SELECT] = photoSelect;
 
 export default {
   ElementType,

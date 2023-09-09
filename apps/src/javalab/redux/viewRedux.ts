@@ -13,14 +13,14 @@ import {
   createSlice,
 } from '@reduxjs/toolkit';
 
-const {DisplayTheme} = require('@cdo/apps/javalab/DisplayTheme');
-const UserPreferences = require('@cdo/apps/lib/util/UserPreferences');
-const {
+import {DisplayTheme} from '@cdo/apps/javalab/DisplayTheme';
+import UserPreferences from '@cdo/apps/lib/util/UserPreferences';
+import {
   DEFAULT_FONT_SIZE_PX,
   FONT_SIZE_INCREMENT_PX,
   MAX_FONT_SIZE_PX,
   MIN_FONT_SIZE_PX,
-} = require('@cdo/apps/javalab/editorThemes');
+} from '@cdo/apps/javalab/editorThemes';
 
 type DisplayThemeValue = 'light' | 'dark';
 
@@ -40,7 +40,7 @@ interface JavalabViewState {
 }
 
 const initialState: JavalabViewState = {
-  displayTheme: DisplayTheme.LIGHT,
+  displayTheme: DisplayTheme.LIGHT as DisplayThemeValue,
   renderedEditorHeight: 400,
   leftWidth: 400,
   rightWidth: 400,

@@ -16,8 +16,8 @@ class ImageResourceCard extends Component {
     isRtl: PropTypes.bool.isRequired,
   };
 
-  getImage() {
-    return require(`@cdo/static/resource_cards/${this.props.image}`);
+  async getImage() {
+    return import(`@cdo/static/resource_cards/${this.props.image}`);
   }
 
   render() {

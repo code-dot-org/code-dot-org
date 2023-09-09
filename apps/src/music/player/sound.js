@@ -117,8 +117,8 @@ export function PlaySound(
   when = 0,
   onStop = () => {},
   loop = false,
-  effects = false,
-  duration = undefined
+  effects,
+  duration
 ) {
   for (var i = 0; i < soundList.length; i++) {
     if (soundList[i].path === name) {

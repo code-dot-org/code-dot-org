@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import style from './rubrics.module.scss';
-const icon = require('@cdo/static/AI-FAB.png');
+import icon from '@cdo/static/AI-FAB.png';
 import RubricContainer from './RubricContainer';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';

@@ -12,7 +12,7 @@ import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {LabState} from '../../lab2Redux';
 import {ProjectLevelData} from '../../types';
 import {ThemeContext} from '../ThemeWrapper';
-const commonI18n = require('@cdo/locale');
+import commonI18n from '@cdo/locale';
 
 interface InstructionsProps {
   /** Additional callback to fire before navigating to the next level. */

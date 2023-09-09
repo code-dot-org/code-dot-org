@@ -6,8 +6,7 @@ import {
   Role,
 } from '../types';
 import {initialChatMessages} from '../constants';
-
-const registerReducers = require('@cdo/apps/redux').registerReducers;
+import {registerReducers} from '@cdo/apps/redux';
 import {LabState} from '@cdo/apps/lab2/lab2Redux';
 import {getChatCompletionMessage} from '../chatApi';
 

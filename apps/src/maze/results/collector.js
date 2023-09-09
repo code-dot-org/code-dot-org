@@ -1,8 +1,10 @@
-const studioApp = require('../../StudioApp').singleton;
+import StudioApp from '../../StudioApp';
+const studioApp = StudioApp.singleton;
 
 import ResultsHandler from './resultsHandler';
 import {TestResults} from '../../constants.js';
-const getStore = require('../../redux').getStore;
+import redux from '../../redux';
+const getStore = redux.getStore;
 
 import experiments from '@cdo/apps/util/experiments';
 import mazeMsg from '../locale';

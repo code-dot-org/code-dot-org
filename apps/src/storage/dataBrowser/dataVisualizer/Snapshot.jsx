@@ -12,7 +12,7 @@ import dataStyles from '../data-styles.module.scss';
 import classNames from 'classnames';
 import {CROSS_TAB_CHART_AREA, GOOGLE_CHART_AREA} from './constants';
 
-const PLACEHOLDER_IMAGE = require('./placeholder.png');
+import PLACEHOLDER_IMAGE from './placeholder.png';
 
 const INITIAL_STATE = {
   isSnapshotOpen: false,

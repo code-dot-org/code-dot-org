@@ -13,7 +13,7 @@ import {scrollTo, shouldDisplayChatTips} from './utils';
 import color from '../../util/color';
 import Instructions from './Instructions';
 
-var instructions = require('../../redux/instructions');
+import instructions from '../../redux/instructions';
 
 class InstructionsCsfMiddleCol extends React.Component {
   static propTypes = {

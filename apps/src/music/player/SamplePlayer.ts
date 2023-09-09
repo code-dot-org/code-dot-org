@@ -2,8 +2,14 @@ import Lab2MetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
 import {Effects} from './interfaces/Effects';
 import MusicLibrary from './MusicLibrary';
 
-// Using require() to import JS in TS files
-const soundApi = require('./sound');
+import {
+  GetCurrentAudioTime,
+  InitSound,
+  PlaySound,
+  StartPlayback,
+  StopSound,
+  StopSoundByUniqueId,
+} from './sound';
 
 // Multiplied by the duration of a single beat to determine the length of
 // time to fade out a sound, if trimming to a specific duration. This results
@@ -71,7 +77,7 @@ export default class SamplePlayer {
       .flat(2);
 
     const secondsPerBeat = 60 / bpm;
-    soundApi.InitSound(soundList, {
+    InitSound(soundList, {
       // Calculate release time using release duration factor
       releaseTimeSeconds: secondsPerBeat * RELEASE_DURATION_FACTOR,
       // Use a delay value of a half of a beat
@@ -109,12 +115,12 @@ export default class SamplePlayer {
 
     this.stopPlayback();
     this.startPlayingAudioTime =
-      soundApi.GetCurrentAudioTime() - (playTimeOffsetSeconds || 0);
+      GetCurrentAudioTime() - (playTimeOffsetSeconds || 0);
     this.isPlaying = true;
 
     this.playSamples(sampleEventList);
 
-    soundApi.StartPlayback();
+    StartPlayback();
   }
 
   previewSample(sampleId: string, onStop?: () => void) {
@@ -125,12 +131,7 @@ export default class SamplePlayer {
 
     this.cancelPreviews();
 
-    soundApi.PlaySound(
-      this.groupPath + '/' + sampleId,
-      PREVIEW_GROUP,
-      0,
-      onStop
-    );
+    PlaySound(this.groupPath + '/' + sampleId, PREVIEW_GROUP, 0, onStop);
   }
 
   previewSamples(events: SampleEvent[], onStop?: () => void) {
@@ -152,10 +153,10 @@ export default class SamplePlayer {
       : undefined;
 
     events.forEach(event => {
-      soundApi.PlaySound(
+      PlaySound(
         this.groupPath + '/' + event.sampleId,
         PREVIEW_GROUP,
-        soundApi.GetCurrentAudioTime() + event.offsetSeconds,
+        GetCurrentAudioTime() + event.offsetSeconds,
         onStopWrapper
       );
     });
@@ -166,7 +167,7 @@ export default class SamplePlayer {
   }
 
   getElapsedPlaybackTimeSeconds(): number {
-    const currentAudioTime = soundApi.GetCurrentAudioTime();
+    const currentAudioTime = GetCurrentAudioTime();
     if (!this.isPlaying || currentAudioTime === null) {
       return -1;
     }
@@ -185,7 +186,7 @@ export default class SamplePlayer {
     }
 
     for (const sampleEvent of sampleEvents) {
-      const currentAudioTime = soundApi.GetCurrentAudioTime();
+      const currentAudioTime = GetCurrentAudioTime();
       const eventStart = this.startPlayingAudioTime + sampleEvent.offsetSeconds;
 
       // Triggered sounds might have a target play time that is very slightly in
@@ -202,15 +203,15 @@ export default class SamplePlayer {
       const delayCompensation = sampleEvent.triggered ? 0.1 : 0.05;
 
       if (eventStart >= currentAudioTime - delayCompensation) {
-        const uniqueId = soundApi.PlaySound(
+        const uniqueId = PlaySound(
           this.groupPath + '/' + sampleEvent.sampleId,
           MAIN_AUDIO_GROUP,
           eventStart,
-          null,
+          undefined,
           false,
-          sampleEvent.effects,
-          sampleEvent.lengthSeconds
-        );
+          sampleEvent.effects as number | undefined,
+          sampleEvent.lengthSeconds as number | undefined
+        ) as number;
 
         this.playingSamples.push({
           eventStart,
@@ -221,15 +222,15 @@ export default class SamplePlayer {
   }
 
   stopPlayback() {
-    soundApi.StopSound(MAIN_AUDIO_GROUP);
-    soundApi.StopSound(PREVIEW_GROUP);
+    StopSound(MAIN_AUDIO_GROUP);
+    StopSound(PREVIEW_GROUP);
     this.playingSamples = [];
     this.isPlaying = false;
     this.startPlayingAudioTime = -1;
   }
 
   cancelPreviews() {
-    soundApi.StopSound(PREVIEW_GROUP);
+    StopSound(PREVIEW_GROUP);
   }
 
   /**
@@ -241,8 +242,8 @@ export default class SamplePlayer {
     }
 
     for (const sample of this.playingSamples) {
-      if (sample.eventStart > soundApi.GetCurrentAudioTime()) {
-        soundApi.StopSoundByUniqueId(MAIN_AUDIO_GROUP, sample.uniqueId);
+      if (sample.eventStart > GetCurrentAudioTime()) {
+        StopSoundByUniqueId(MAIN_AUDIO_GROUP, sample.uniqueId);
       }
     }
   }

@@ -10,8 +10,8 @@ import Lab2MetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
 import {isDevelopmentEnvironment} from '@cdo/apps/utils';
 import {Block} from 'blockly';
 
-const BlockTypes = require('../blockly/blockTypes').BlockTypes;
-const FIELD_SOUNDS_NAME = require('../blockly/constants').FIELD_SOUNDS_NAME;
+import {BlockTypes} from '../blockly/blockTypes';
+import {FIELD_SOUNDS_NAME} from '../blockly/constants';
 
 const API_KEY_ENDPOINT = '/musiclab/analytics_key';
 
@@ -202,7 +202,7 @@ export default class AnalyticsReporter {
     let triggerBlocksCount = 0;
     let triggerBlocksWithCode = 0;
     blocks.forEach(block => {
-      if (triggerBlocks.includes(block.type)) {
+      if (triggerBlocks.includes(block.type as BlockTypes)) {
         triggerBlocksCount++;
         if (block.getChildren(false).length > 0) {
           triggerBlocksWithCode++;

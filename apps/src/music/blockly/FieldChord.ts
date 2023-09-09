@@ -6,8 +6,8 @@ import {ChordEventValue} from '../player/interfaces/ChordEvent';
 import MusicLibrary from '../player/MusicLibrary';
 import {getNoteName} from '../utils/Notes';
 import {generateGraphDataFromChord, ChordGraphNote} from '../utils/Chords';
-const experiments = require('@cdo/apps/util/experiments');
-const color = require('@cdo/apps/util/color');
+import experiments from '@cdo/apps/util/experiments';
+import color from '@cdo/apps/util/color';
 
 const MAX_DISPLAY_NOTES = 3;
 const FIELD_WIDTH = 51;

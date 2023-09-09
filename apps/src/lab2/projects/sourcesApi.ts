@@ -7,7 +7,7 @@ import {ProjectSources, SourceUpdateOptions} from '../types';
 import {SOURCE_FILE} from '../constants';
 import HttpClient, {GetResponse} from '@cdo/apps/util/HttpClient';
 import {SourceResponseValidator} from '../responseValidators';
-const {stringifyQueryParams} = require('@cdo/apps/utils');
+import {stringifyQueryParams} from '@cdo/apps/utils';
 
 const rootUrl = (channelId: string) =>
   `/v3/sources/${channelId}/${SOURCE_FILE}`;
@@ -27,7 +27,7 @@ export async function update(
   sources: ProjectSources,
   options?: SourceUpdateOptions
 ): Promise<Response> {
-  const url = rootUrl(channelId) + stringifyQueryParams(options);
+  const url = rootUrl(channelId) + stringifyQueryParams(options as object);
   return fetch(url, {
     method: 'PUT',
     body: JSON.stringify(sources),

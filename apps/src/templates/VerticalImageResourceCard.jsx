@@ -4,6 +4,26 @@ import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
 import color from '../util/color';
 import Button from './Button';
 
+import anotherhocPng from '@cdo/static/resource_cards/anotherhoc.png';
+import applabmarketingPng from '@cdo/static/resource_cards/applabmarketing.png';
+import applabcreateprojectPng from '@cdo/static/resource_cards/applabcreateproject.png';
+import applabtutorialPng from '@cdo/static/resource_cards/applabtutorial.png';
+import createaccountPng from '@cdo/static/resource_cards/createaccount.png';
+import csfexpressPng from '@cdo/static/resource_cards/csfexpress.png';
+import coursecatalogPng from '@cdo/static/resource_cards/coursecatalog.png';
+import herominecraftPng from '@cdo/static/resource_cards/herominecraft.png';
+import oldminecraftPng from '@cdo/static/resource_cards/oldminecraft.png';
+import minecraftmarketingPng from '@cdo/static/resource_cards/minecraftmarketing.png';
+import aquaticminecraftPng from '@cdo/static/resource_cards/aquaticminecraft.png';
+import codeorgteacherPng from '@cdo/static/resource_cards/codeorgteacher.png';
+import thirdpartyteacherPng from '@cdo/static/resource_cards/thirdpartyteacher.png';
+import thirdpartyteachersmallPng from '@cdo/static/resource_cards/thirdpartyteachersmall.png';
+import makerPng from '@cdo/static/resource_cards/maker.png';
+import dancepartyPng from '@cdo/static/resource_cards/danceparty.png';
+import danceparty2Png from '@cdo/static/resource_cards/danceparty2.png';
+import danceparty2_2019Png from '@cdo/static/resource_cards/danceparty2-2019.png';
+import danceparty_sloth_2019Png from '@cdo/static/resource_cards/danceparty-sloth-2019.png';
+
 /**
  * A card used on /congrats to display information about a particular course or
  * HoC follow-up activity. Not to be confused with CourseCard, the larger
@@ -51,26 +71,47 @@ class VerticalImageResourceCard extends Component {
       ? styles.description
       : {...styles.description, ...styles.descriptionHeight};
 
+    /*
+      import anotherhocPng,
+import applabmarketingPng,
+import applabcreateprojectPng,
+import applabtutorialPng,
+import createaccountPng,
+import csfexpressPng,
+import coursecatalogPng,
+import herominecraftPng,
+import oldminecraftPng,
+import minecraftmarketingPng,
+import aquaticminecraftPng,
+import codeorgteacherPng,
+import thirdpartyteacherPng,
+import thirdpartyteachersmallPng,
+import makerPng,
+import dancepartyPng,
+import danceparty2Png,
+import danceparty2_2019Png,
+import danceparty_sloth_2019Png,*/
+
     const filenameToImgUrl = {
-      'another-hoc': require('@cdo/static/resource_cards/anotherhoc.png'),
-      'applab-marketing': require('@cdo/static/resource_cards/applabmarketing.png'),
-      'applab-project': require('@cdo/static/resource_cards/applabcreateproject.png'),
-      'applab-tutorial': require('@cdo/static/resource_cards/applabtutorial.png'),
-      'create-account': require('@cdo/static/resource_cards/createaccount.png'),
-      'csf-express': require('@cdo/static/resource_cards/csfexpress.png'),
-      'course-catalog': require('@cdo/static/resource_cards/coursecatalog.png'),
-      'hero-minecraft': require('@cdo/static/resource_cards/herominecraft.png'),
-      'old-minecraft': require('@cdo/static/resource_cards/oldminecraft.png'),
-      'minecraft-marketing': require('@cdo/static/resource_cards/minecraftmarketing.png'),
-      'aquatic-minecraft': require('@cdo/static/resource_cards/aquaticminecraft.png'),
-      'codeorg-teacher': require('@cdo/static/resource_cards/codeorgteacher.png'),
-      'third-party-teacher': require('@cdo/static/resource_cards/thirdpartyteacher.png'),
-      'third-party-teacher-small': require('@cdo/static/resource_cards/thirdpartyteachersmall.png'),
-      maker: require('@cdo/static/resource_cards/maker.png'),
-      'dance-party': require('@cdo/static/resource_cards/danceparty.png'),
-      'dance-party-2': require('@cdo/static/resource_cards/danceparty2.png'),
-      'dance-party-2-2019': require('@cdo/static/resource_cards/danceparty2-2019.png'),
-      'dance-party-sloth-2019': require('@cdo/static/resource_cards/danceparty-sloth-2019.png'),
+      'another-hoc': anotherhocPng,
+      'applab-marketing': applabmarketingPng,
+      'applab-project': applabcreateprojectPng,
+      'applab-tutorial': applabtutorialPng,
+      'create-account': createaccountPng,
+      'csf-express': csfexpressPng,
+      'course-catalog': coursecatalogPng,
+      'hero-minecraft': herominecraftPng,
+      'old-minecraft': oldminecraftPng,
+      'minecraft-marketing': minecraftmarketingPng,
+      'aquatic-minecraft': aquaticminecraftPng,
+      'codeorg-teacher': codeorgteacherPng,
+      'third-party-teacher': thirdpartyteacherPng,
+      'third-party-teacher-small': thirdpartyteachersmallPng,
+      maker: makerPng,
+      'dance-party': dancepartyPng,
+      'dance-party-2': danceparty2Png,
+      'dance-party-2-2019': danceparty2_2019Png,
+      'dance-party-sloth-2019': danceparty_sloth_2019Png,
       course2: pegasus('/shared/images/courses/logo_tall_course2.jpg'),
       course3: pegasus('/shared/images/courses/logo_tall_course3.jpg'),
       course4: pegasus('/shared/images/courses/logo_tall_course4.jpg'),
