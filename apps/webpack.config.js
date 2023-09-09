@@ -268,9 +268,9 @@ function createWebpackConfig({
             }),
           ]
         : []),
-      new StatsWriterPlugin({
-        fields: ['assetsByChunkName', 'assets'],
-      }),
+      ...(!envConstants.DEV
+        ? [ new StatsWriterPlugin({ fields: ['assetsByChunkName', 'assets'] } ) ]
+        : []),
       // The [contenthash] placeholder generates a 32-character hash when
       // used within the copy plugin.
       new CopyPlugin({
