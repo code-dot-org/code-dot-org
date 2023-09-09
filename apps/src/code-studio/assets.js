@@ -6,3 +6,4 @@ const showAssetManager = (...args) =>
 const hideAssetManager = (...args) =>
   unwrappedShowAssetManager.hideAssetManager(...args);
 export {showAssetManager, listStore, hideAssetManager};
+export default {showAssetManager, listStore, hideAssetManager};

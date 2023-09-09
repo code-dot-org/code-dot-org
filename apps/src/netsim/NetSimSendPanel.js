@@ -5,7 +5,7 @@
  */
 
 import $ from 'jquery';
-import utils from '../utils'; // Provides Function.prototype.inherits
+import {valueOr} from '../utils'; // Provides Function.prototype.inherits
 import i18n from '@cdo/netsim/locale';
 import markup from './NetSimSendPanel.html.ejs';
 import NetSimPanel from './NetSimPanel';
@@ -383,7 +383,7 @@ NetSimSendPanel.prototype.isEncodingEnabled_ = function (queryEncoding) {
 NetSimSendPanel.prototype.setFromAddress = function (fromAddress) {
   // fromAddress can be undefined for other parts of the sim, but within
   // the send panel we just set it to zero.
-  this.fromAddress_ = utils.valueOr(fromAddress, 0);
+  this.fromAddress_ = valueOr(fromAddress, 0);
 
   this.packets_.forEach(
     function (packetEditor) {

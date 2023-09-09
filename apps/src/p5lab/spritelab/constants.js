@@ -1,7 +1,7 @@
 /** @file Sprite Lab constants */
-import utils from '@cdo/apps/utils';
+import {makeEnum} from '@cdo/apps/utils';
 
-export const LocationPickerMode = utils.makeEnum('IDLE', 'SELECTING');
+export const LocationPickerMode = makeEnum('IDLE', 'SELECTING');
 
 export const SpritelabReservedWords = [
   // p5 globals

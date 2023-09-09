@@ -478,6 +478,8 @@ exports.selectCurrentCode = function (
   return userCodeRow;
 };
 
+export default exports;
+
 export const {
   aceFindRow,
   calculateCumulativeLength,

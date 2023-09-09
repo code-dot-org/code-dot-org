@@ -23,19 +23,19 @@ var Eval = {};
  */
 import React from 'react';
 import ReactDOM from 'react-dom';
-import StudioApp from '../StudioApp';
+import {singleton as studioApp} from '../StudioApp';
 import commonMsg from '@cdo/locale';
 import evalMsg from './locale';
 import CustomMarshalingInterpreter from '../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 import api from './api';
-import reactRedux from 'react-redux';
+import {Provider} from 'react-redux';
 import AppView from '../templates/AppView';
 import EvalVisualizationColumn from './EvalVisualizationColumn';
 import dom from '../dom';
 import blockUtils from '../block_utils';
 import CustomEvalError from './evalError';
 import EvalText from './evalText';
-import utils from '../utils';
+import {isInfiniteRecursionError} from '../utils';
 import {getStore} from '../redux';
 
 import {TestResults, ResultType} from '../constants';
@@ -44,9 +44,6 @@ import canvg from 'canvg';
 // tests don't have svgelement
 import '../util/svgelement-polyfill';
 import {showDeprecatedAlgebraLabWarning} from '../util/deprecatedLabWarning';
-
-var studioApp = StudioApp.singleton;
-var Provider = reactRedux.Provider;
 
 var level;
 var skin;
@@ -295,7 +292,7 @@ function evalCode(code) {
     if (e instanceof CustomEvalError) {
       return e;
     }
-    if (utils.isInfiniteRecursionError(e)) {
+    if (isInfiniteRecursionError(e)) {
       return new CustomEvalError(CustomEvalError.Type.InfiniteRecursion, null);
     }
 

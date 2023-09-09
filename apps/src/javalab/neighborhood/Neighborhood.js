@@ -2,7 +2,7 @@ import {tiles, MazeController} from '@code-dot-org/maze';
 import Slider from '@cdo/apps/slider';
 const Direction = tiles.Direction;
 import {NeighborhoodSignalType, STATUS_MESSAGE_PREFIX} from '../constants';
-import timeoutList from '@cdo/apps/lib/util/timeoutList';
+import {setTimeout, clearTimeouts} from '@cdo/apps/lib/util/timeoutList';
 import javalabMsg from '@cdo/javalab/locale';
 
 const PAUSE_BETWEEN_SIGNALS = 200;
@@ -87,13 +87,10 @@ export default class Neighborhood {
       const remainingTime = totalSignalTime - (Date.now() - beginTime);
 
       // check for another signal after the remaining time to wait between signals
-      timeoutList.setTimeout(
-        () => this.processSignals(),
-        Math.max(remainingTime, 0)
-      );
+      setTimeout(() => this.processSignals(), Math.max(remainingTime, 0));
     } else {
       // check again for a signal after the specified wait time
-      timeoutList.setTimeout(() => this.processSignals(), SIGNAL_CHECK_TIME);
+      setTimeout(() => this.processSignals(), SIGNAL_CHECK_TIME);
     }
   }
 
@@ -169,18 +166,18 @@ export default class Neighborhood {
   onCompile() {
     this.controller.hideDefaultPegman();
     // start checking for signals after the specified wait time
-    timeoutList.setTimeout(() => this.processSignals(), SIGNAL_CHECK_TIME);
+    setTimeout(() => this.processSignals(), SIGNAL_CHECK_TIME);
   }
 
   reset() {
     // this will clear all remaining processSignals() commands
-    timeoutList.clearTimeouts();
+    clearTimeouts();
     this.resetSignalQueue();
     this.controller.reset(false, false);
   }
 
   onStop() {
-    timeoutList.clearTimeouts();
+    clearTimeouts();
     this.resetSignalQueue();
   }
 

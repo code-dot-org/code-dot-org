@@ -11,7 +11,7 @@ import bounceMsg from './locale';
 import tiles from './tiles';
 import CustomMarshalingInterpreter from '../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 import api from './api';
-import reactRedux from 'react-redux';
+import {Provider} from 'react-redux';
 import AppView from '../templates/AppView';
 import BounceVisualizationColumn from './BounceVisualizationColumn';
 import dom from '../dom';
@@ -28,7 +28,6 @@ import '../util/svgelement-polyfill';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 
 var studioApp = StudioApp.singleton;
-var Provider = reactRedux.Provider;
 var SquareType = tiles.SquareType;
 
 /**

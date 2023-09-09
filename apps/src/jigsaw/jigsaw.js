@@ -7,15 +7,12 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import StudioApp from '../StudioApp';
-import reactRedux from 'react-redux';
+import {singleton as studioApp} from '../StudioApp';
+import {Provider} from 'react-redux';
 import AppView from '../templates/AppView';
 import JigsawVisualizationColumn from './JigsawVisualizationColumn';
 import dom from '../dom';
 import {getStore} from '../redux';
-
-var studioApp = StudioApp.singleton;
-var Provider = reactRedux.Provider;
 
 /**
  * Create a namespace for the application.

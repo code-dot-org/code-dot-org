@@ -26,12 +26,12 @@ import StudioApp from '../StudioApp';
 import jsnums from '@code-dot-org/js-numbers';
 import commonMsg from '@cdo/locale';
 import calcMsg from './locale';
-import reactRedux from 'react-redux';
+import {Provider} from 'react-redux';
 import AppView from '../templates/AppView';
 import CalcVisualizationColumn from './CalcVisualizationColumn';
 import dom from '../dom';
 import blockUtils from '../block_utils';
-import utils from '../utils';
+import {isInfiniteRecursionError, valueOr} from '../utils';
 import _ from 'lodash';
 import * as timeoutList from '../lib/util/timeoutList';
 import {getStore} from '../redux';
@@ -46,7 +46,6 @@ import {TestResults, ResultType} from '../constants';
 import {showDeprecatedAlgebraLabWarning} from '../util/deprecatedLabWarning';
 
 var studioApp = StudioApp.singleton;
-var Provider = reactRedux.Provider;
 var level;
 var skin;
 
@@ -87,7 +86,7 @@ function constructTokenList(one, two, markDeepest) {
   one = asExpressionNode(one);
   two = asExpressionNode(two);
 
-  markDeepest = utils.valueOr(markDeepest, false);
+  markDeepest = valueOr(markDeepest, false);
 
   var tokenList;
 
@@ -487,7 +486,7 @@ function appSpecificFailureOutcome(message, failedInput) {
     result: ResultType.FAILURE,
     testResults: TestResults.APP_SPECIFIC_FAIL,
     message: message,
-    failedInput: utils.valueOr(failedInput, null),
+    failedInput: valueOr(failedInput, null),
   };
 }
 
@@ -506,7 +505,7 @@ function divZeroOrFailure(err) {
 
   // One way we know we can fail is with infinite recursion. Log if we fail
   // for some other reason
-  if (!utils.isInfiniteRecursionError(err)) {
+  if (!isInfiniteRecursionError(err)) {
     console.log('Unexpected error: ' + err);
   }
 
@@ -1001,7 +1000,7 @@ function tokenListForEvaluation_(userSet, targetSet) {
     if (
       evaluation.err instanceof ExpressionNode.DivideByZeroError ||
       evaluation.err instanceof ExpressionNode.ImaginaryNumberError ||
-      utils.isInfiniteRecursionError(evaluation.err)
+      isInfiniteRecursionError(evaluation.err)
     ) {
       // Expected type of error, do nothing.
     } else {

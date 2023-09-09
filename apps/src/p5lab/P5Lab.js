@@ -20,7 +20,7 @@ import BlocklyModeErrorHandler from '@cdo/apps/BlocklyModeErrorHandler';
 import CustomMarshalingInterpreter from '@cdo/apps/lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 import apiJavascript from './gamelab/apiJavascript';
 import consoleApi from '@cdo/apps/consoleApi';
-import utils from '@cdo/apps/utils';
+import {quote} from '@cdo/apps/utils';
 import dropletConfig from './gamelab/dropletConfig';
 import JSInterpreter from '@cdo/apps/lib/tools/jsinterpreter/JSInterpreter';
 import * as apiTimeoutList from '@cdo/apps/lib/util/timeoutList';
@@ -43,7 +43,7 @@ import {getSerializedAnimationList} from './shapes';
 import {add as addWatcher} from '@cdo/apps/redux/watchedExpressions';
 import reducers from './reducers';
 import P5LabView from './P5LabView';
-import reactRedux from 'react-redux';
+import {Provider} from 'react-redux';
 import {shouldOverlaysBeVisible} from '@cdo/apps/templates/VisualizationOverlay';
 import {
   getContainedLevelResultInfo,
@@ -72,8 +72,6 @@ import project from '@cdo/apps/code-studio/initApp/project';
 import {hasInstructions} from '@cdo/apps/templates/instructions/utils';
 import {setLocaleCode} from '@cdo/apps/redux/localesRedux';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
-
-const Provider = reactRedux.Provider;
 
 const defaultMobileControlsConfig = {
   spaceButtonVisible: true,
@@ -1621,8 +1619,8 @@ export default class P5Lab {
     return animationList.orderedKeys.map(key => {
       const name = animationList.propsByKey[key].name;
       return {
-        text: utils.quote(name),
-        display: utils.quote(name),
+        text: quote(name),
+        display: quote(name),
       };
     });
   }

@@ -3,7 +3,7 @@
  */
 
 import $ from 'jquery';
-import utils from '../utils'; // Provides String.prototype.repeat
+import {valueOr} from '../utils'; // Provides String.prototype.repeat
 import _ from 'lodash';
 import i18n from '@cdo/netsim/locale';
 import NetSimConstants from './NetSimConstants';
@@ -96,10 +96,7 @@ exports.jQuerySvgElement = function (type) {
    */
   newElement.toggleClass = function (className, shouldHaveClass) {
     // Default second argument - if not provided, we flip the current state
-    shouldHaveClass = utils.valueOr(
-      shouldHaveClass,
-      !newElement.hasClass(className)
-    );
+    shouldHaveClass = valueOr(shouldHaveClass, !newElement.hasClass(className));
 
     if (shouldHaveClass) {
       newElement.addClass(className);
@@ -446,4 +443,4 @@ exports.getUniqueLevelKeyFromLocation = function (loc) {
 };
 
 export default exports;
-export const {doesUserOwnShard} = exports;
+export const {doesUserOwnShard, shouldShowTab} = exports;
