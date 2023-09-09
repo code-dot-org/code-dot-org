@@ -14,6 +14,8 @@ import AgeDialog, {
 } from '../templates/AgeDialog';
 import {getFilteredSongKeys} from '@cdo/apps/dance/songs';
 
+import clickToRunPNG from '@cdo/static/dance/click-to-run.png';
+
 const SongSelector = Radium(
   class extends React.Component {
     static propTypes = {
@@ -110,7 +112,7 @@ class DanceVisualizationColumn extends React.Component {
 
   render() {
     const filenameToImgUrl = {
-      'click-to-run': require('@cdo/static/dance/click-to-run.png'),
+      'click-to-run': clickToRunPNG,
     };
 
     const imgSrc = filenameToImgUrl['click-to-run'];

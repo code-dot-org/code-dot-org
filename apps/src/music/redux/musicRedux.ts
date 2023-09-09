@@ -3,7 +3,7 @@ import {MIN_NUM_MEASURES} from '../constants';
 import {PlaybackEvent} from '../player/interfaces/PlaybackEvent';
 import {FunctionEvents} from '../player/interfaces/FunctionEvents';
 
-const registerReducers = require('@cdo/apps/redux').registerReducers;
+import {registerReducers} from '@cdo/apps/redux';
 
 /**
  * State, reducer, and actions for Music Lab.

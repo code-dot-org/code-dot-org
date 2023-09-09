@@ -9,9 +9,9 @@ import {getTranposedNote, Key} from '../utils/Notes';
 import {Effects} from './interfaces/Effects';
 import Lab2MetricsReporter from '@cdo/apps/lab2/Lab2MetricsReporter';
 
-// Using require() to import JS in TS files
-const soundApi = require('./sound');
-const constants = require('../constants');
+import {LoadSoundFromBuffer} from './sound';
+
+import {DEFAULT_CHORD_LENGTH, DEFAULT_PATTERN_LENGTH} from '../constants';
 
 // Default to 4/4 time, 120 BPM, C Major
 const BEATS_PER_MEASURE = 4;
@@ -66,7 +66,7 @@ export default class MusicPlayer {
    * @param buffer
    */
   loadSoundFromBuffer(id: number, buffer: ArrayBuffer) {
-    soundApi.LoadSoundFromBuffer(id, buffer);
+    LoadSoundFromBuffer(id, buffer);
   }
 
   getBPM(): number {
@@ -89,7 +89,7 @@ export default class MusicPlayer {
       when: 1,
       value: chordValue,
       triggered: false,
-      length: constants.DEFAULT_CHORD_LENGTH,
+      length: DEFAULT_CHORD_LENGTH,
       id: 'preview',
       blockId: 'preview',
     };
@@ -114,7 +114,7 @@ export default class MusicPlayer {
       when: 1,
       value: patternValue,
       triggered: false,
-      length: constants.DEFAULT_PATTERN_LENGTH,
+      length: DEFAULT_PATTERN_LENGTH,
       id: 'preview',
       blockId: 'preview',
     };

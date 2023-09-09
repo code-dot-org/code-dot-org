@@ -12,7 +12,7 @@ import * as aceMode from './acemode/mode-javascript_codeorg';
 import * as assetPrefix from './assetManagement/assetPrefix';
 import * as assets from './code-studio/assets';
 import * as blockUtils from './block_utils';
-var codegen = require('./lib/tools/jsinterpreter/codegen');
+import codegen from './lib/tools/jsinterpreter/codegen';
 import * as dom from './dom';
 import * as dropletUtils from './dropletUtils';
 import * as shareWarnings from './shareWarnings';
@@ -87,6 +87,9 @@ import {setArrowButtonDisabled} from '@cdo/apps/templates/arrowDisplayRedux';
 import {workspace_running_background, white} from '@cdo/apps/util/color';
 import WorkspaceAlert from '@cdo/apps/code-studio/components/WorkspaceAlert';
 import {closeWorkspaceAlert} from './code-studio/projectRedux';
+
+import makeYourOwnHTMLEJS from './templates/makeYourOwn.html.ejs';
+import learnHTMLEJS from './templates/learn.html.ejs';
 
 var copyrightStrings;
 
@@ -903,7 +906,7 @@ StudioApp.prototype.handleSharing_ = function (options) {
   // Show flappy upsale on desktop and mobile.  Show learn upsale only on desktop
   var upSale = document.createElement('div');
   if (options.makeYourOwn) {
-    upSale.innerHTML = require('./templates/makeYourOwn.html.ejs')({
+    upSale.innerHTML = makeYourOwnHTMLEJS({
       data: {
         makeUrl: options.makeUrl,
         makeString: options.makeString,
@@ -915,7 +918,7 @@ StudioApp.prototype.handleSharing_ = function (options) {
     }
     belowVisualization.appendChild(upSale);
   } else if (typeof options.makeYourOwn === 'undefined') {
-    upSale.innerHTML = require('./templates/learn.html.ejs')({
+    upSale.innerHTML = learnHTMLEJS({
       assetUrl: this.assetUrl,
     });
     belowVisualization.appendChild(upSale);

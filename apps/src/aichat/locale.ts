@@ -3,6 +3,6 @@
  * it to the {@link AichatLocale} type.
  */
 import {AichatLocale} from './types';
-const aichatLocale = require('@cdo/aichat/locale');
+import aichatLocale from '@cdo/aichat/locale';
 
 export default aichatLocale as AichatLocale;

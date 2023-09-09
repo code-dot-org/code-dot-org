@@ -5,6 +5,7 @@ import RGBColor from 'rgbcolor';
 import {Position} from './constants';
 import {dataURIFromURI} from './imageUtils';
 import './polyfills';
+import msg from '@cdo/locale';
 
 /**
  * Checks whether the given subsequence is truly a subsequence of the given sequence,
@@ -174,6 +175,10 @@ Function.prototype.inherits = function (parent) {
   this.prototype.constructor = this;
   this.superPrototype = parent.prototype;
 };
+
+export function setupFunctionPrototypeInherits(_Function) {
+  return (_Function.prototype.inherits = Function.prototype.inherits);
+}
 
 /**
  * Wrap a couple of our Blockly number validators to allow for ???.  This is
@@ -392,7 +397,6 @@ export function showGenericQtip(targetElement, title, message, position) {
 }
 
 export function showUnusedBlockQtip(targetElement) {
-  const msg = require('@cdo/locale');
   const title = msg.unattachedBlockTipTitle();
   const message = msg.unattachedBlockTipBody();
   const position = {

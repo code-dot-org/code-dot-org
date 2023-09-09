@@ -12,4 +12,4 @@ import localeWithI18nStringTracker from '@cdo/apps/util/i18nStringTracker';
 
 let locale = safeLoadLocale('standaloneVideo_locale');
 locale = localeWithI18nStringTracker(locale, 'standaloneVideo');
-module.exports = locale;
+export default locale;

@@ -3,7 +3,7 @@ import React from 'react';
 import {createUuid, makeEnum} from '@cdo/apps/utils';
 import {connect} from 'react-redux';
 import BaseDialog from '@cdo/apps/templates/BaseDialog.jsx';
-var msg = require('@cdo/locale');
+import msg from '@cdo/locale';
 import styles from './styles';
 import {
   hide,

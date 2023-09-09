@@ -13,10 +13,9 @@
 import {SourcesStore} from './SourcesStore';
 import {ChannelsStore} from './ChannelsStore';
 import {Channel, Project, ProjectSources} from '../types';
-import {currentLocation} from '@cdo/apps/utils';
+import {currentLocation, reload} from '@cdo/apps/utils';
 import Lab2MetricsReporter from '../Lab2MetricsReporter';
 import {ValidationError} from '../responseValidators';
-const {reload} = require('@cdo/apps/utils');
 
 export default class ProjectManager {
   private readonly channelId: string;

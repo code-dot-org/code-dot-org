@@ -10,7 +10,7 @@ import {
 } from './animationList';
 import {makeEnum} from '@cdo/apps/utils';
 import {animations as animationsApi} from '@cdo/apps/clientApi';
-var msg = require('@cdo/locale');
+import msg from '@cdo/locale';
 import {changeInterfaceMode} from '../actions';
 import {P5LabInterfaceMode} from '../constants';
 import firehoseClient from '@cdo/apps/lib/util/firehose';

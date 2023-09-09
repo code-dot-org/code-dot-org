@@ -5,7 +5,7 @@ import {NavLink} from 'react-router-dom';
 import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
-var userAgentParser = require('../../code-studio/initApp/userAgentParser');
+import userAgentParser from '../../code-studio/initApp/userAgentParser';
 
 export const TeacherDashboardPath = {
   progress: '/progress',

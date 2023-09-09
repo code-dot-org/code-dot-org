@@ -16,6 +16,7 @@ import {
 } from '@cdo/apps/lib/ui/LegacyDialogContents';
 import {reportTeacherReviewingStudentNonLabLevel} from '@cdo/apps/lib/util/analyticsUtils';
 import i18n from '@cdo/locale';
+import codemirror from 'codemirror';
 
 export function showInstructionsDialog() {
   showDialog(
@@ -40,7 +41,7 @@ function setupWidgetLevel() {
 }
 
 // Add globals
-window.CodeMirror = require('codemirror');
+window.CodeMirror = codemirror;
 window.dashboard = window.dashboard || {};
 window.dashboard.widget = {
   setupWidgetLevel: setupWidgetLevel,
