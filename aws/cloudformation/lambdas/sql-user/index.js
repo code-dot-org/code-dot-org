@@ -53,7 +53,7 @@ exports.handler = async (event, context) => {
         break;
       case "Delete":
         results = await deleteSQLUser(connection, {
-          name: props.Name,
+          name: dbCredentialSQLUserSecretValue.username,
           clientHost: clientHost,
         });
         console.log(results);
