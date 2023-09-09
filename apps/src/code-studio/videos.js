@@ -4,8 +4,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import FallbackPlayerCaptionDialogLink from '../templates/FallbackPlayerCaptionDialogLink';
 import videojs from 'video.js';
-var testImageAccess = require('./url_test');
-var clientState = require('./clientState');
+import testImageAccess from './url_test';
+import clientState from './clientState';
 import i18n from '@cdo/locale';
 import _ from 'lodash';
 

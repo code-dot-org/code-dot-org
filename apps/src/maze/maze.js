@@ -1,34 +1,42 @@
-const React = require('react');
-const ReactDOM = require('react-dom');
-const Provider = require('react-redux').Provider;
+import React from 'react';
+import ReactDOM from 'react-dom';
+import reactRedux from 'react-redux';
 
-const timeoutList = require('../lib/util/timeoutList');
+import timeoutList from '../lib/util/timeoutList';
 import AppView from '../templates/AppView';
-const CustomMarshalingInterpreter =
-  require('../lib/tools/jsinterpreter/CustomMarshalingInterpreter').default;
-const dom = require('../dom');
-const utils = require('../utils');
+import CustomMarshalingInterpreter from '../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
+import dom from '../dom';
+import utils from '../utils';
 import {TestResults, ResultType} from '../constants';
-const generateCodeAliases = require('../dropletUtils').generateCodeAliases;
-const getStore = require('../redux').getStore;
-const studioApp = require('../StudioApp').singleton;
-const containedLevels = require('../containedLevels');
+import dropletUtils from '../dropletUtils';
+
+import StudioApp from '../StudioApp';
+import containedLevels from '../containedLevels';
+
+import ExecutionInfo from './executionInfo';
+import MazeVisualizationColumn from './MazeVisualizationColumn';
+import api from './api';
+import dropletConfig from './dropletConfig';
+import mazeReducer from './redux';
+
+import maze from '@code-dot-org/maze';
+
+import resultsUtils from './results/utils';
+
+const Provider = mazeReducer.Provider;
+const generateCodeAliases = dropletUtils.generateCodeAliases;
+const getStore = reactRedux.getStore;
+const studioApp = StudioApp.singleton;
+
 const getContainedLevelResultInfo = containedLevels.getContainedLevelResultInfo;
 const postContainedLevelAttempt = containedLevels.postContainedLevelAttempt;
 const runAfterPostContainedLevel = containedLevels.runAfterPostContainedLevel;
 
-const ExecutionInfo = require('./executionInfo');
-const MazeVisualizationColumn = require('./MazeVisualizationColumn');
-const api = require('./api');
-const dropletConfig = require('./dropletConfig');
-const mazeReducer = require('./redux');
-
-const maze = require('@code-dot-org/maze');
 const MazeController = maze.MazeController;
 const tiles = maze.tiles;
 
 const createResultsHandlerForSubtype =
-  require('./results/utils').createResultsHandlerForSubtype;
+  resultsUtils.createResultsHandlerForSubtype;
 
 export default class Maze {
   constructor() {

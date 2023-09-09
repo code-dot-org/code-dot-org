@@ -5,14 +5,17 @@
  *
  */
 
-var React = require('react');
-var ReactDOM = require('react-dom');
-var studioApp = require('../StudioApp').singleton;
-var Provider = require('react-redux').Provider;
+import React from 'react';
+import ReactDOM from 'react-dom';
+import StudioApp from '../StudioApp';
+import reactRedux from 'react-redux';
 import AppView from '../templates/AppView';
-var JigsawVisualizationColumn = require('./JigsawVisualizationColumn');
-var dom = require('../dom');
+import JigsawVisualizationColumn from './JigsawVisualizationColumn';
+import dom from '../dom';
 import {getStore} from '../redux';
+
+var studioApp = StudioApp.singleton;
+var Provider = reactRedux.Provider;
 
 /**
  * Create a namespace for the application.

@@ -1,8 +1,8 @@
 import $ from 'jquery';
-var DropletFunctionTooltip = require('./DropletFunctionTooltip');
-var DropletBlockTooltipManager = require('./DropletBlockTooltipManager');
-var DropletAutocompletePopupTooltipManager = require('./DropletAutocompletePopupTooltipManager');
-var DropletAutocompleteParameterTooltipManager = require('./DropletAutocompleteParameterTooltipManager');
+import DropletFunctionTooltip from './DropletFunctionTooltip';
+import DropletBlockTooltipManager from './DropletBlockTooltipManager';
+import DropletAutocompletePopupTooltipManager from './DropletAutocompletePopupTooltipManager';
+import DropletAutocompleteParameterTooltipManager from './DropletAutocompleteParameterTooltipManager';
 import {getAllAvailableDropletBlocks} from '../dropletUtils';
 import LegacyDialog from '../code-studio/LegacyDialog';
 

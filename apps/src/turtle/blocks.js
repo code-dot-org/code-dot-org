@@ -22,10 +22,10 @@
  * @author fraser@google.com (Neil Fraser)
  */
 
-var Colours = require('./colours');
-var msg = require('./locale');
-var commonMsg = require('@cdo/locale');
-var customLevelBlocks = require('./customLevelBlocks');
+import Colours from './colours';
+import msg from './locale';
+import commonMsg from '@cdo/locale';
+import customLevelBlocks from './customLevelBlocks';
 import {Position} from '../constants';
 
 let exports = {};
