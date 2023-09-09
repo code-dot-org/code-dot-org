@@ -5,7 +5,7 @@ import {PostMilestoneMode} from '@cdo/apps/util/sharedConstants';
 import {getContainedLevelId} from '@cdo/apps/code-studio/levels/codeStudioLevels';
 import {getStore} from '@cdo/apps/redux';
 import {mergeResults} from '@cdo/apps/code-studio/progressRedux';
-var clientState = require('./clientState');
+import clientState from './clientState';
 
 var lastAjaxRequest;
 var lastServerResponse = {};

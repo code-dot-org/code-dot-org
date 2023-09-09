@@ -4,18 +4,18 @@
  * Copyright 2013 Code.org
  *
  */
-var React = require('react');
-var ReactDOM = require('react-dom');
-var studioApp = require('../StudioApp').singleton;
-var bounceMsg = require('./locale');
-var tiles = require('./tiles');
+import React from 'react';
+import ReactDOM from 'react-dom';
+import StudioApp from '../StudioApp';
+import bounceMsg from './locale';
+import tiles from './tiles';
 import CustomMarshalingInterpreter from '../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
-var api = require('./api');
-var Provider = require('react-redux').Provider;
+import api from './api';
+import reactRedux from 'react-redux';
 import AppView from '../templates/AppView';
-var BounceVisualizationColumn = require('./BounceVisualizationColumn');
-var dom = require('../dom');
-var Hammer = require('../third-party/hammer');
+import BounceVisualizationColumn from './BounceVisualizationColumn';
+import dom from '../dom';
+import Hammer from '../third-party/hammer';
 import {getStore} from '../redux';
 import {getRandomDonorTwitter} from '../util/twitterHelper';
 import {KeyCodes, TestResults, ResultType} from '../constants';
@@ -24,10 +24,12 @@ import {
   dismissSwipeOverlay,
 } from '@cdo/apps/templates/arrowDisplayRedux';
 
-var SquareType = tiles.SquareType;
-
 import '../util/svgelement-polyfill';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
+
+var studioApp = StudioApp.singleton;
+var Provider = reactRedux.Provider;
+var SquareType = tiles.SquareType;
 
 /**
  * Create a namespace for the application.

@@ -3,8 +3,8 @@ import FeedbackBlocks from './feedbackBlocks';
 
 import {trySetLocalStorage} from './utils';
 
-var parseXmlElement = require('./xml').parseElement;
-var msg = require('@cdo/locale');
+import xml from './xml';
+import msg from '@cdo/locale';
 
 /**
  * @overview A helper class for all actions associated with the Authored
@@ -264,7 +264,7 @@ authoredHintUtils.submitHints = function (url) {
  */
 authoredHintUtils.createContextualHintsFromBlocks = function (blocks) {
   var hints = blocks.map(function (block) {
-    var xmlBlock = parseXmlElement(
+    var xmlBlock = xml.parseXmlElement(
       FeedbackBlocks.generateXMLForBlocks([block])
     );
     var blockType = xmlBlock.firstChild.getAttribute('type');

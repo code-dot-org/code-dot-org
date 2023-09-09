@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-var msg = require('./locale');
-var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv');
+import msg from './locale';
+import ProtectedStatefulDiv from '../templates/ProtectedStatefulDiv';
 
 var SpellingControls = function (props) {
   return (

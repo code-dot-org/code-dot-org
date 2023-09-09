@@ -20,31 +20,33 @@ var Calc = {};
 /**
  * Create a namespace for the application.
  */
-var React = require('react');
-var ReactDOM = require('react-dom');
-var studioApp = require('../StudioApp').singleton;
-var jsnums = require('@code-dot-org/js-numbers');
-var commonMsg = require('@cdo/locale');
-var calcMsg = require('./locale');
-var Provider = require('react-redux').Provider;
+import React from 'react';
+import ReactDOM from 'react-dom';
+import StudioApp from '../StudioApp';
+import jsnums from '@code-dot-org/js-numbers';
+import commonMsg from '@cdo/locale';
+import calcMsg from './locale';
+import reactRedux from 'react-redux';
 import AppView from '../templates/AppView';
-var CalcVisualizationColumn = require('./CalcVisualizationColumn');
-var dom = require('../dom');
-var blockUtils = require('../block_utils');
-var utils = require('../utils');
-var _ = require('lodash');
+import CalcVisualizationColumn from './CalcVisualizationColumn';
+import dom from '../dom';
+import blockUtils from '../block_utils';
+import utils from '../utils';
+import _ from 'lodash';
 import * as timeoutList from '../lib/util/timeoutList';
 import {getStore} from '../redux';
 
-var ExpressionNode = require('./expressionNode');
-var EquationSet = require('./equationSet');
-var Equation = require('./equation');
-var Token = require('./token');
-var InputIterator = require('./inputIterator');
+import ExpressionNode from './expressionNode';
+import EquationSet from './equationSet';
+import Equation from './equation';
+import Token from './token';
+import InputIterator from './inputIterator';
 
 import {TestResults, ResultType} from '../constants';
 import {showDeprecatedAlgebraLabWarning} from '../util/deprecatedLabWarning';
 
+var studioApp = StudioApp.singleton;
+var Provider = reactRedux.Provider;
 var level;
 var skin;
 

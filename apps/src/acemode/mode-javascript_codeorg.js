@@ -1,5 +1,5 @@
 import {getAllAvailableDropletBlocks} from '../dropletUtils';
-var annotationList = require('./annotationList');
+import annotationList from './annotationList';
 
 /**
  * @param {dropletConfig} Required

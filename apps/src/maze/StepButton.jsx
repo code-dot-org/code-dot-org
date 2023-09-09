@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-var msg = require('./locale');
+import msg from './locale';
 
 var StepButton = function (props) {
   var classes = 'launch float-right';

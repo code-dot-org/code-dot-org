@@ -1,5 +1,5 @@
 import {TestResults} from './constants';
-var parseXmlElement = require('./xml').parseElement;
+import xml from './xml';
 
 /**
  * @typedef {Object} DisplayBlocks
@@ -62,7 +62,7 @@ FeedbackBlocks.prototype.render = function () {
     return;
   }
 
-  var parsedXml = parseXmlElement(this.xml);
+  var parsedXml = xml.parseXmlElement(this.xml);
   var blockSpace = Blockly.BlockSpace.createReadOnlyBlockSpace(
     this.div,
     parsedXml
