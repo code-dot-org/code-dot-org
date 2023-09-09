@@ -1,6 +1,5 @@
-var utils = require('@cdo/apps/utils');
-var blockUtils = require('@cdo/apps/block_utils');
-var tb = blockUtils.createToolbox;
+import {extend} from '@cdo/apps/utils';
+import {createToolbox as tb} from '@cdo/apps/block_utils';
 import {GamelabBlocks} from '@cdo/apps/p5lab/gamelab/sharedGamelabBlocks';
 
 /**
@@ -30,7 +29,7 @@ import {GamelabBlocks} from '@cdo/apps/p5lab/gamelab/sharedGamelabBlocks';
 /*
  * Configuration for all levels.
  */
-var levels = (module.exports = {});
+var levels = {};
 
 levels.sandbox = {
   ideal: Infinity,
@@ -45,10 +44,12 @@ levels.sandbox = {
 };
 
 // Base config for levels created via levelbuilder
-levels.custom = utils.extend(levels.sandbox, {
+levels.custom = extend(levels.sandbox, {
   editCode: true,
   codeFunctions: GamelabBlocks,
   startBlocks: null,
 });
 
-levels.ec_sandbox = utils.extend(levels.custom, {});
+levels.ec_sandbox = extend(levels.custom, {});
+
+export default levels;

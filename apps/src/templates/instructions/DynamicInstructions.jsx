@@ -128,4 +128,4 @@ const styles = {
   },
 };
 
-module.exports = DynamicInstructions;
+export default DynamicInstructions;

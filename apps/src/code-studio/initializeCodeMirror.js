@@ -144,4 +144,4 @@ function initializeCodeMirror(target, mode, options = {}) {
   }
   return editor;
 }
-module.exports = initializeCodeMirror;
+export default initializeCodeMirror;

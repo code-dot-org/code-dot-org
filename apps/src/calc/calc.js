@@ -15,7 +15,7 @@
  *
  * Calc is DEPRECATED
  */
-var Calc = module.exports;
+var Calc = {};
 
 /**
  * Create a namespace for the application.
@@ -1303,3 +1303,5 @@ Calc.__testonly__ = IN_UNIT_TEST
       appState: appState,
     }
   : {};
+
+export default Calc;

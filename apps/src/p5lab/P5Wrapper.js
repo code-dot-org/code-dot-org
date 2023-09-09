@@ -5,8 +5,10 @@ window.p5 = p5;
 import '@code-dot-org/p5.play/lib/p5.play';
 import p5SpriteWrapper from './P5SpriteWrapper';
 import p5GroupWrapper from './P5GroupWrapper';
-import {backgrounds} from './spritelab/backgrounds.json';
+import backgroundsJSON from './spritelab/backgrounds.json';
 import * as assetPrefix from '@cdo/apps/assetManagement/assetPrefix';
+
+const backgrounds = backgroundsJSON.backgrounds;
 
 const defaultFrameRate = 30;
 

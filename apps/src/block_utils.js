@@ -5,6 +5,8 @@ import xml from './xml';
 const ATTRIBUTES_TO_CLEAN = ['uservisible', 'deletable', 'movable'];
 const DEFAULT_COLOR = [184, 1.0, 0.74];
 
+const exports = {};
+
 /**
  * Create the xml for a level's toolbox
  * @param {string} blocks The xml of the blocks to go in the toolbox
@@ -1258,3 +1260,15 @@ const sanitizeOptions = function (dropdownOptions) {
     option.length === 1 ? [option[0], option[0]] : option
   );
 };
+
+export default exports;
+export const {
+  appendBlocksByCategory,
+  appendNewFunctions,
+  blockAsXmlNode,
+  cleanBlocks,
+  createToolbox,
+  forceInsertTopBlock,
+  installCustomBlocks,
+  makeTestsFromBuilderRequiredBlocks,
+} = exports;

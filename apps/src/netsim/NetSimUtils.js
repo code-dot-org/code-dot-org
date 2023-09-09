@@ -13,6 +13,8 @@ var logger = require('./NetSimLogger').getSingleton();
 
 var EncodingType = NetSimConstants.EncodingType;
 
+let exports = {};
+
 /**
  * Make a new SVG element, appropriately namespaced, wrapped in a jQuery
  * object for (semi-)easy manipulation.
@@ -441,3 +443,6 @@ exports.getUniqueLevelKeyFromLocation = function (loc) {
     .replace(/\/$/, '') // Strip trailing slash (if it exists)
     .replace(/\W/g, '-'); // Replace non-word characters with dashes
 };
+
+export default exports;
+export const {doesUserOwnShard} = exports;

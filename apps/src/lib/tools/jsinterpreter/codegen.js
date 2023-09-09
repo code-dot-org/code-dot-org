@@ -6,6 +6,8 @@ import * as utils from '../../../utils';
  * values must stay in sync with interpreter.js
  */
 
+var exports = {};
+
 exports.ForStatementMode = {
   INIT: 0,
   TEST: 1,
@@ -475,3 +477,15 @@ exports.selectCurrentCode = function (
   }
   return userCodeRow;
 };
+
+export const {
+  aceFindRow,
+  calculateCumulativeLength,
+  clearDropletAceHighlighting,
+  ForStatementMode,
+  initJSInterpreter,
+  isAceBreakpointRow,
+  isNextStepSafeWhileUnwinding,
+  selectCurrentCode,
+  selectEditorRowColError,
+} = exports;

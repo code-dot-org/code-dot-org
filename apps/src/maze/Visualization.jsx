@@ -1,7 +1,7 @@
 import React from 'react';
 import ProtectedVisualizationDiv from '../templates/ProtectedVisualizationDiv';
 
-var Visualization = function () {
+export default function Visualization() {
   return (
     <ProtectedVisualizationDiv>
       <svg version="1.1" id="svgMaze">
@@ -13,5 +13,4 @@ var Visualization = function () {
       </svg>
     </ProtectedVisualizationDiv>
   );
-};
-module.exports = Visualization;
+}

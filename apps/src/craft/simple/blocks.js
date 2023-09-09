@@ -39,6 +39,8 @@ var allBlocks = [
   'wool',
 ];
 
+var exports = {};
+
 // Install extensions to Blockly's language and JavaScript generator.
 exports.install = function (blockly, blockInstallOptions) {
   var dropdownBlocks = (blockInstallOptions.level.availableBlocks || []).concat(
@@ -284,3 +286,5 @@ exports.install = function (blockly, blockInstallOptions) {
     );
   };
 };
+
+export default exports;

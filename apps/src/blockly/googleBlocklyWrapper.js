@@ -754,4 +754,4 @@ function initializeBlocklyWrapper(blocklyInstance) {
   return blocklyWrapper;
 }
 
-module.exports = initializeBlocklyWrapper;
+export default initializeBlocklyWrapper;

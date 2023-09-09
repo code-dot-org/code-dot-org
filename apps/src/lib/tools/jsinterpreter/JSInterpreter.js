@@ -1395,3 +1395,5 @@ export default class JSInterpreter {
     getStore().dispatch(setIsDebuggerPaused(this.paused, this.nextStep));
   }
 }
+
+export const {getFunctionsAndMetadata} = JSInterpreter;

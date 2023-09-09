@@ -1,6 +1,8 @@
 import {SpriteSize, SpriteSpeed} from './constants';
 import {randomValue} from '../utils';
 
+const exports = {};
+
 exports.SpriteSpeed = SpriteSpeed;
 exports.SpriteSize = SpriteSize;
 
@@ -361,3 +363,5 @@ exports.askForInput = function (id, question, callback) {
 exports.isKeyDown = function (keyCode) {
   return Studio.keyState[keyCode] === 'keydown';
 };
+
+export default exports;

@@ -56,8 +56,6 @@ var FeedbackBlocks = function (
   this.blockSpaceEditor = undefined;
 };
 
-module.exports = FeedbackBlocks;
-
 FeedbackBlocks.prototype.render = function () {
   // Only render if this.div exists in the DOM
   if (!document.body.contains(this.div)) {
@@ -154,3 +152,5 @@ FeedbackBlocks.generateXMLForBlocks = function (blocks) {
   blockXMLStrings.push('</xml>');
   return blockXMLStrings.join('');
 };
+
+export default FeedbackBlocks;

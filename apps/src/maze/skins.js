@@ -11,6 +11,8 @@ var skinsBase = require('../skins');
 var randomValue = require('../utils').randomValue;
 import neighborhoodSprites from './neighborhoodSprites.json';
 
+const exports = {};
+
 var CONFIGS = {
   letters: {
     nonDisappearingPegmanHittingObstacle: true,
@@ -286,3 +288,5 @@ exports.load = function (assetUrl, id) {
 
   return skin;
 };
+
+export default exports;

@@ -7,11 +7,6 @@ const SoundPicker = loadable(() => import('../components/SoundPicker'));
 import Dialog from '../LegacyDialog';
 import {RecordingFileType} from '../components/recorders';
 
-module.exports = {
-  showAssetManager,
-  hideAssetManager,
-};
-
 let dialog;
 
 /**
@@ -84,3 +79,8 @@ function showAssetManager(assetChosen, typeFilter, onClose, options) {
 
   dialog.show();
 }
+
+export default {
+  showAssetManager,
+  hideAssetManager,
+};
