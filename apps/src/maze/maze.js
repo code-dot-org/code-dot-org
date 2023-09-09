@@ -22,13 +22,11 @@ import MazeVisualizationColumn from './MazeVisualizationColumn';
 import api from './api';
 import dropletConfig from './dropletConfig';
 import mazeReducer from './redux';
+import {getStore} from '../redux';
 
 import maze from '@code-dot-org/maze';
 
 import {createResultsHandlerForSubtype} from './results/utils';
-
-// TODO @snickell ESM - is this the correct getStore? 'react-redux' module doesn't have a {getStore}.
-import {getStore} from '../redux';
 
 const MazeController = maze.MazeController;
 const tiles = maze.tiles;
@@ -60,7 +58,7 @@ export default class Maze {
    */
   getAppReducers() {
     return {
-      maze: mazeReducer.default,
+      maze: mazeReducer,
     };
   }
 
