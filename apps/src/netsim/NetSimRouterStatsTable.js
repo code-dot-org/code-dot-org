@@ -51,7 +51,7 @@ var MILLIS_PER_HOUR = MILLIS_PER_MINUTE * MINUTES_PER_HOUR;
  * @param {jQuery} rootDiv
  * @constructor
  */
-var NetSimRouterStatsTable = (module.exports = function (rootDiv) {
+export default function NetSimRouterStatsTable(rootDiv) {
   /**
    * Component root, which we fill whenever we call render()
    * @type {jQuery}
@@ -138,7 +138,7 @@ var NetSimRouterStatsTable = (module.exports = function (rootDiv) {
   this.usedMemory_ = 0;
 
   this.render({});
-});
+}
 
 /**
  * @param {RunLoop} runLoop

@@ -39,7 +39,9 @@ function chooseAsset(typeFilter, callback) {
   });
 }
 
-module.exports.blocks = [
+let exports = {};
+
+exports.blocks = [
   // Game Lab
   {
     func: 'draw',
@@ -1944,7 +1946,7 @@ draw() - USEFUL?
   // Advanced
 ];
 
-module.exports.categories = {
+exports.categories = {
   World: {
     id: 'world',
     color: 'yellow',
@@ -1989,7 +1991,7 @@ module.exports.categories = {
   },
 };
 
-module.exports.additionalPredefValues = [
+exports.additionalPredefValues = [
   'World',
   'P2D',
   'WEBGL',
@@ -2084,10 +2086,12 @@ module.exports.additionalPredefValues = [
   '_DEFAULT_STROKE',
   '_DEFAULT_FILL',
 ];
-module.exports.showParamDropdowns = true;
+exports.showParamDropdowns = true;
 
 /*
  * Set the showExamplesLink config value so that the droplet tooltips will show
  * an 'Examples' link that opens documentation in a lightbox:
  */
-module.exports.showExamplesLink = true;
+exports.showExamplesLink = true;
+
+export default exports;

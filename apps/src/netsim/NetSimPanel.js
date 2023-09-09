@@ -26,7 +26,7 @@ import ArgumentUtils from './ArgumentUtils';
  *        minimized (closed) when it is initially created.  Defaults to FALSE.
  * @constructor
  */
-var NetSimPanel = (module.exports = function (rootDiv, options) {
+export default function NetSimPanel(rootDiv, options) {
   /**
    * Unique instance ID for this panel, in case we have several
    * of them on a page.
@@ -75,7 +75,7 @@ var NetSimPanel = (module.exports = function (rootDiv, options) {
 
   // Initial render
   this.render();
-});
+}
 
 /**
  * Static counter used to generate/uniquely identify different instances

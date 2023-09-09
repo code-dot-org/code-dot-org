@@ -48,7 +48,7 @@ var SLIDER_DEFAULT_MAX_VALUE = 100;
  * @param {boolean} [options.isDisabled] - if TRUE the slider value is locked
  *        and cannot be changed.
  */
-var NetSimSlider = (module.exports = function (rootDiv, options) {
+function NetSimSlider(rootDiv, options) {
   /**
    * Unique instance ID for this panel, in case we have several
    * of them on a page.
@@ -133,7 +133,7 @@ var NetSimSlider = (module.exports = function (rootDiv, options) {
    * @private
    */
   this.isDisabled_ = utils.valueOr(options.isDisabled, false);
-});
+}
 
 /**
  * Static counter used to generate/uniquely identify different instances
@@ -510,3 +510,5 @@ NetSimSlider.LogarithmicSlider.prototype.sliderPositionToValue = function (
   }
   return Math.pow(this.logBase_, pos);
 };
+
+export default NetSimSlider;

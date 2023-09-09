@@ -13,7 +13,7 @@ import DCDO from '@cdo/apps/dcdo';
 
 import queryString from 'query-string';
 
-const experiments = module.exports;
+const experiments = {};
 const STORAGE_KEY = 'experimentsList';
 const GA_EVENT = 'experiments';
 const EXPERIMENT_LIFESPAN_HOURS = 12;

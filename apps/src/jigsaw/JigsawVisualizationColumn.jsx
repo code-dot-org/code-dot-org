@@ -17,4 +17,4 @@ var JigsawVisualizationColumn = function () {
   );
 };
 
-module.exports = JigsawVisualizationColumn;
+export default JigsawVisualizationColumn;

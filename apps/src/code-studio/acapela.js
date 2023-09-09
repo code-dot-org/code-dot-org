@@ -1,6 +1,6 @@
 import $ from 'jquery';
 
-module.exports = {
+export default {
   listenForGetAudio(config) {
     $('button.tts').click(function () {
       var sourceText;

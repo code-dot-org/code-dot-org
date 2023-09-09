@@ -20,7 +20,7 @@ import NetSimGlobals from './NetSimGlobals';
  * @param {function} callbacks.showRouterLogCallback
  * @constructor
  */
-var NetSimRouterTab = (module.exports = function (rootDiv, callbacks) {
+export default function NetSimRouterTab(rootDiv, callbacks) {
   /**
    * Component root, which we fill whenever we call render()
    * @type {jQuery}
@@ -78,7 +78,7 @@ var NetSimRouterTab = (module.exports = function (rootDiv, callbacks) {
 
   // Initial render
   this.render();
-});
+}
 
 /**
  * @param {RunLoop} runLoop

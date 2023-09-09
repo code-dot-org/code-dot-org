@@ -31,6 +31,8 @@ import * as redux from 'redux';
 import reduxThunk from 'redux-thunk';
 import {configureStore} from '@reduxjs/toolkit';
 
+let exports = {};
+
 let createLogger;
 if (process.env.NODE_ENV !== 'production') {
   import('redux-logger').then(reduxLoggerModule => {
@@ -45,7 +47,7 @@ if (IN_UNIT_TEST) {
   let __oldReduxStore;
   let __oldGlobalReducers;
 
-  module.exports.stubRedux = function () {
+  exports.stubRedux = function () {
     if (__oldReduxStore) {
       throw new Error(
         'Redux store has already been stubbed. Did you forget to call restore?'
@@ -57,7 +59,7 @@ if (IN_UNIT_TEST) {
     globalReducers = {};
   };
 
-  module.exports.restoreRedux = function () {
+  exports.restoreRedux = function () {
     reduxStore = __oldReduxStore;
     globalReducers = __oldGlobalReducers;
     __oldReduxStore = null;
@@ -68,7 +70,7 @@ if (IN_UNIT_TEST) {
 if (IN_STORYBOOK || IN_UNIT_TEST) {
   // Storybooks need the ability to create multiple distinct stores instead of
   // using a singleton
-  module.exports.createStoreWithReducers = createStoreWithReducers;
+  exports.createStoreWithReducers = createStoreWithReducers;
 }
 
 /**
@@ -214,3 +216,5 @@ function createStore(reducer, initialState) {
     devTools: process.env.NODE_ENV === 'development', // only enable devTools in development
   });
 }
+
+export default exports;

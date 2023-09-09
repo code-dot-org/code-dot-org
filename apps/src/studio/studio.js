@@ -81,7 +81,7 @@ var showDebugInfo = false;
 /**
  * Create a namespace for the application.
  */
-let Studio = module.exports;
+let Studio = {};
 
 Studio.keyState = {};
 Studio.gesturesObserved = {};
@@ -7144,7 +7144,7 @@ var checkFinished = function () {
 };
 
 if (IN_UNIT_TEST) {
-  module.exports.setLevel = newLevel => {
+  Studio.setLevel = newLevel => {
     level = newLevel;
   };
 }

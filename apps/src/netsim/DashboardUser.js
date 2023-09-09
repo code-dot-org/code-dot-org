@@ -12,7 +12,7 @@ import $ from 'jquery';
  * Represents a Dashboard user account - could be a teacher, a student, etc.
  * @constructor
  */
-var DashboardUser = (module.exports = function () {
+function DashboardUser() {
   /**
    * Indicates whether the async call has completed yet.
    * @type {boolean}
@@ -52,7 +52,7 @@ var DashboardUser = (module.exports = function () {
    * @type {Section[]}
    */
   this.ownedSections = [];
-});
+}
 
 /**
  * @type {DashboardUser}
@@ -132,3 +132,5 @@ DashboardUser.prototype.ownsSection = function (sectionID) {
     return section.id === sectionID;
   });
 };
+
+export default DashboardUser;

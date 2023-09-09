@@ -163,7 +163,7 @@ const PROJECT_URL_PATTERN = /^(.*\/projects\/\w+\/[\w\d-]+)\/.*/;
  */
 const THUMBNAIL_PATH = '.metadata/thumbnail.png';
 
-var projects = (module.exports = {
+let projects = {
   /**
    * @returns {string} id of the current project, or undefined if we don't have
    *   a current project.
@@ -1933,7 +1933,7 @@ var projects = (module.exports = {
     }
     return sourcesApi;
   },
-});
+};
 
 function fetchAbuseScore(resolve) {
   channels.fetch(current.id + '/abuse', function (err, data) {

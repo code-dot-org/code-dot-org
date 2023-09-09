@@ -11,8 +11,6 @@ var ArtistAPI = function () {
   this.log = [];
 };
 
-module.exports = ArtistAPI;
-
 ArtistAPI.prototype.random = function (values) {
   return randomValue(values);
 };
@@ -256,3 +254,5 @@ ArtistAPI.prototype.drawSticker = function (sticker, size, id) {
 ArtistAPI.prototype.setArtist = function (artist, id) {
   this.log.push(['setArtist', artist, id]);
 };
+
+export default ArtistAPI;
