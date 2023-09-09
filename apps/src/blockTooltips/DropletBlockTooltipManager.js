@@ -2,8 +2,8 @@ import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import LibraryViewCode from '@cdo/apps/code-studio/components/libraries/LibraryViewCode';
-var DropletFunctionTooltipMarkup = require('./DropletFunctionTooltip.html.ejs');
-var dom = require('../dom');
+import DropletFunctionTooltipMarkup from './DropletFunctionTooltip.html.ejs';
+import dom from '../dom';
 
 /**
  * @fileoverview Displays tooltips for Droplet blocks

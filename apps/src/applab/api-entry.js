@@ -1,11 +1,14 @@
 // entry point for api that gets exposed.
 
-window.$ = require('jquery');
+import $ from 'jquery';
+window.$ = $;
 import '@cdo/apps/sites/studio/pages/code-studio';
 // third party dependencies that are provided as globals in code-studio but
 // which need to be explicitly required here.
-window.React = require('react');
-window.Applab = require('./applab');
+import React from 'react';
+window.React = React;
+import Applab from './applab';
+window.Applab = Applab;
 import {injectErrorHandler} from '../lib/util/javascriptMode';
 import JavaScriptModeErrorHandler from '../JavaScriptModeErrorHandler';
 import Sounds from '../Sounds';

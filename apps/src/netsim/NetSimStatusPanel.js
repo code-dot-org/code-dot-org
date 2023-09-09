@@ -2,13 +2,14 @@
  * @overview UI component: The small expandable box above the visualization,
  *           used to show debug and diagnostic information.
  */
+import {setupFunctionPrototypeInherits} from '../utils';
+setupFunctionPrototypeInherits(Function);
 
-require('../utils'); // For Function.prototype.inherits()
 import $ from 'jquery';
-var i18n = require('@cdo/netsim/locale');
-var markup = require('./NetSimStatusPanel.html.ejs');
-var NetSimPanel = require('./NetSimPanel.js');
-var NetSimUtils = require('./NetSimUtils');
+import i18n from '@cdo/netsim/locale';
+import markup from './NetSimStatusPanel.html.ejs';
+import NetSimPanel from './NetSimPanel.js';
+import NetSimUtils from './NetSimUtils';
 
 /**
  * Generator and controller for connection status panel

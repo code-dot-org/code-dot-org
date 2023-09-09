@@ -5,24 +5,25 @@
  */
 
 import $ from 'jquery';
-var utils = require('../utils'); // Provides Function.prototype.inherits
-var i18n = require('@cdo/netsim/locale');
-var markup = require('./NetSimSendPanel.html.ejs');
-var NetSimPanel = require('./NetSimPanel');
-var NetSimPacketEditor = require('./NetSimPacketEditor');
-var NetSimPacketSizeControl = require('./NetSimPacketSizeControl');
-var Packet = require('./Packet');
-var DataConverters = require('./DataConverters');
-var NetSimConstants = require('./NetSimConstants');
-var NetSimGlobals = require('./NetSimGlobals');
+import utils from '../utils'; // Provides Function.prototype.inherits
+import i18n from '@cdo/netsim/locale';
+import markup from './NetSimSendPanel.html.ejs';
+import NetSimPanel from './NetSimPanel';
+import NetSimPacketEditor from './NetSimPacketEditor';
+import NetSimPacketSizeControl from './NetSimPacketSizeControl';
+import Packet from './Packet';
+import DataConverters from './DataConverters';
+import NetSimConstants from './NetSimConstants';
+import NetSimGlobals from './NetSimGlobals';
+import NetSimLogger from './NetSimLogger';
+
+var logger = NetSimLogger.getSingleton();
 
 var EncodingType = NetSimConstants.EncodingType;
 var MessageGranularity = NetSimConstants.MessageGranularity;
 var BITS_PER_BYTE = NetSimConstants.BITS_PER_BYTE;
 
 var binaryToAB = DataConverters.binaryToAB;
-
-var logger = require('./NetSimLogger').getSingleton();
 
 /**
  * Generator and controller for message sending view.

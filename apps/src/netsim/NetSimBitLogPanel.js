@@ -5,15 +5,18 @@
  * @see INetSimLogPanel for the interface implemented here.
  * @see NetSimLogPanel for the component used in packet-sending mode.
  */
-require('../utils'); // For Function.prototype.inherits()
-import $ from 'jquery';
-var i18n = require('@cdo/netsim/locale');
-var markup = require('./NetSimBitLogPanel.html.ejs');
-var NetSimPanel = require('./NetSimPanel');
-var NetSimEncodingControl = require('./NetSimEncodingControl');
-var NetSimGlobals = require('./NetSimGlobals');
+import {setupFunctionPrototypeInherits} from '../utils';
+setupFunctionPrototypeInherits(Function);
 
-var logger = require('./NetSimLogger').getSingleton();
+import $ from 'jquery';
+import i18n from '@cdo/netsim/locale';
+import markup from './NetSimBitLogPanel.html.ejs';
+import NetSimPanel from './NetSimPanel';
+import NetSimEncodingControl from './NetSimEncodingControl';
+import NetSimGlobals from './NetSimGlobals';
+
+import NetSimLogger from './NetSimLogger';
+var logger = NetSimLogger.getSingleton();
 
 /**
  * Generator and controller for bit-log, which receives bits one at a time.

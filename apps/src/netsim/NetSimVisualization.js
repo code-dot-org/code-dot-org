@@ -3,18 +3,18 @@
  */
 
 import $ from 'jquery';
-var _ = require('lodash');
-var visualizationMarkup = require('./NetSimVisualization.html.ejs');
-var NetSimNodeFactory = require('./NetSimNodeFactory');
-var NetSimWire = require('./NetSimWire');
-var NetSimVizAutoDnsNode = require('./NetSimVizAutoDnsNode');
-var NetSimVizNode = require('./NetSimVizNode');
-var NetSimVizSimulationNode = require('./NetSimVizSimulationNode');
-var NetSimVizSimulationWire = require('./NetSimVizSimulationWire');
-var NetSimVizWire = require('./NetSimVizWire');
-var NetSimGlobals = require('./NetSimGlobals');
-var tweens = require('./tweens');
-var NetSimConstants = require('./NetSimConstants');
+import _ from 'lodash';
+import visualizationMarkup from './NetSimVisualization.html.ejs';
+import NetSimNodeFactory from './NetSimNodeFactory';
+import NetSimWire from './NetSimWire';
+import NetSimVizAutoDnsNode from './NetSimVizAutoDnsNode';
+import NetSimVizNode from './NetSimVizNode';
+import NetSimVizSimulationNode from './NetSimVizSimulationNode';
+import NetSimVizSimulationWire from './NetSimVizSimulationWire';
+import NetSimVizWire from './NetSimVizWire';
+import NetSimGlobals from './NetSimGlobals';
+import tweens from './tweens';
+import NetSimConstants from './NetSimConstants';
 var DnsMode = NetSimConstants.DnsMode;
 var NodeType = NetSimConstants.NodeType;
 

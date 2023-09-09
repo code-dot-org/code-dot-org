@@ -13,6 +13,7 @@ if (Blockly && !data.uses_droplet) {
   if (data.app === 'spritelab' || data.app === 'poetry') {
     blocksLocation = 'p5lab/spritelab';
   }
+  // TODO @snickell ESM - what do we do here? a dynamic ESM import() would be async...
   const appBlocks = require('@cdo/apps/' + blocksLocation + '/blocks');
   let skinsLocation = '';
   const customSkins = [

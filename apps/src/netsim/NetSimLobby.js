@@ -6,20 +6,21 @@
  *      lobby table.
  */
 import $ from 'jquery';
-var utils = require('../utils');
-var _ = require('lodash');
-var i18n = require('@cdo/netsim/locale');
-var NetSimNodeFactory = require('./NetSimNodeFactory');
-var NetSimClientNode = require('./NetSimClientNode');
-var NetSimAlert = require('./NetSimAlert');
-var NetSimApiError = require('./NetSimApiError');
-var NetSimRouterNode = require('./NetSimRouterNode');
-var NetSimShardSelectionPanel = require('./NetSimShardSelectionPanel');
-var NetSimRemoteNodeSelectionPanel = require('./NetSimRemoteNodeSelectionPanel');
+import utils from '../utils';
+import _ from 'lodash';
+import i18n from '@cdo/netsim/locale';
+import NetSimNodeFactory from './NetSimNodeFactory';
+import NetSimClientNode from './NetSimClientNode';
+import NetSimAlert from './NetSimAlert';
+import NetSimApiError from './NetSimApiError';
+import NetSimRouterNode from './NetSimRouterNode';
+import NetSimShardSelectionPanel from './NetSimShardSelectionPanel';
+import NetSimRemoteNodeSelectionPanel from './NetSimRemoteNodeSelectionPanel';
 import {getUserSections} from '@cdo/apps/util/userSectionClient';
 
-var logger = require('./NetSimLogger').getSingleton();
-var NetSimGlobals = require('./NetSimGlobals');
+import NetSimLogger from './NetSimLogger';
+const logger = NetSimLogger.getSingleton();
+import NetSimGlobals from './NetSimGlobals';
 
 /**
  * @typedef {Object} ShardChoice

@@ -7,13 +7,13 @@
  */
 
 import $ from 'jquery';
-var buildMarkup = require('./NetSimTabsComponent.html.ejs');
-var NetSimRouterTab = require('./NetSimRouterTab');
-var NetSimMyDeviceTab = require('./NetSimMyDeviceTab');
-var NetSimDnsTab = require('./NetSimDnsTab');
-var NetSimTabType = require('./NetSimConstants').NetSimTabType;
-var shouldShowTab = require('./NetSimUtils').shouldShowTab;
-var NetSimGlobals = require('./NetSimGlobals');
+import buildMarkup from './NetSimTabsComponent.html.ejs';
+import NetSimRouterTab from './NetSimRouterTab';
+import NetSimMyDeviceTab from './NetSimMyDeviceTab';
+import NetSimDnsTab from './NetSimDnsTab';
+import {NetSimTabType} from './NetSimConstants';
+import {shouldShowTab} from './NetSimUtils';
+import NetSimGlobals from './NetSimGlobals';
 
 /**
  * Wrapper component for tabs panel on the right side of the page.

@@ -4,9 +4,9 @@
  */
 
 import $ from 'jquery';
-var utils = require('../utils');
-var markup = require('./NetSimPanel.html.ejs');
-var ArgumentUtils = require('./ArgumentUtils');
+import utils from '../utils';
+import markup from './NetSimPanel.html.ejs';
+import ArgumentUtils from './ArgumentUtils';
 
 /**
  * Generator and controller for a NetSim Panel, a single section on the

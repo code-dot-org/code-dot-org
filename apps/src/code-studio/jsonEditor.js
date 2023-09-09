@@ -1,5 +1,5 @@
 import $ from 'jquery';
-var CodeMirror = require('codemirror');
+import CodeMirror from 'codemirror';
 
 /**
  * "Factory" function to transform a container into an interface for
