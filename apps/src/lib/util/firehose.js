@@ -351,13 +351,13 @@ function getSingleton() {
   return promise;
 }
 
-function putRecord(data, options) {
+export function putRecord(data, options) {
   return getSingleton().then(firehoseClient =>
     firehoseClient.putRecord(data, options)
   );
 }
 
-function putRecordBatch(data, options) {
+export function putRecordBatch(data, options) {
   return getSingleton().then(firehoseClient =>
     firehoseClient.putRecordBatch(data, options)
   );

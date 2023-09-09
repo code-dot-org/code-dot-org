@@ -28,7 +28,7 @@ import {
   CourseRoles,
 } from '@cdo/apps/templates/currentUserRedux';
 
-var progress = module.exports;
+var progress = {};
 
 function showDisabledBubblesModal() {
   const div = $('<div>');
@@ -373,3 +373,7 @@ function initializeStoreWithProgress(
 
   store.dispatch(setIsAge13Required(scriptData.age_13_required));
 }
+
+export default progress;
+
+export const {retrieveProgress} = progress;

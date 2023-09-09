@@ -61,6 +61,6 @@ $.ajaxTransport('+binary', function (options, originalOptions, jqXHR) {
   }
 });
 
-module.exports = function (url, dataType) {
+export default function (url, dataType) {
   return $.ajax(url, {dataType});
-};
+}

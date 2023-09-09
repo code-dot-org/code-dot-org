@@ -1498,3 +1498,5 @@ var checkFinished = function () {
 
   return false;
 };
+
+export default Bounce;

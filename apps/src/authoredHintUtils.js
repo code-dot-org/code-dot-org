@@ -79,8 +79,6 @@ var msg = require('@cdo/locale');
 
 var authoredHintUtils = {};
 
-module.exports = authoredHintUtils;
-
 authoredHintUtils.getFromLocalStorage_ = function (key, defaultValue) {
   var result = localStorage.getItem(key);
   try {
@@ -329,3 +327,6 @@ authoredHintUtils.currentOpenedHintCount = function (levelId) {
     return hint.levelId === levelId;
   }).length;
 };
+
+export default authoredHintUtils;
+export const {generateAuthoredHints} = authoredHintUtils;

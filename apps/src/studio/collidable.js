@@ -6,7 +6,7 @@
  */
 import {singleton as studioApp} from '../StudioApp';
 
-import {BEHAVIOR_STOP} from '../constants';
+import {BEHAVIOR_STOP} from './constants';
 
 export default class Collidable {
   /**

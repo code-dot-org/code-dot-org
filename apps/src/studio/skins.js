@@ -11,6 +11,8 @@ import commonMsg from '@cdo/locale';
 import skinsBase from '../skins';
 import {loadStarWarsGrid, loadStarWarsEvents} from './starwars/skins.js';
 
+var exports = {};
+
 // Standard Twitter options matching defaults in FeedbackUtils.createSharingDiv
 // Use to avoid "story" reference in share text for a given skin.
 var plainTwitterOptions = {
@@ -1058,3 +1060,5 @@ exports.load = function (assetUrl, id) {
 
   return skin;
 };
+
+export default exports;

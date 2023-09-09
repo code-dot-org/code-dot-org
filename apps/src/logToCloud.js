@@ -33,7 +33,7 @@ const REPORT_PAGE_SIZE =
  * Wraps and adds functionality to window.newrelic, which is only included in
  * production. This causes us to no-op in other environments.
  */
-module.exports = {
+export default {
   PageAction: PageAction,
 
   /**
