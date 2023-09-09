@@ -10,7 +10,6 @@ import {trySetLocalStorage} from './utils';
 var dom = require('./dom');
 
 var puzzleRatingUtils = {};
-module.exports = puzzleRatingUtils;
 
 /**
  * Construct the puzzle rating buttons themselves
@@ -123,3 +122,5 @@ puzzleRatingUtils.submitCachedPuzzleRatings = function (url) {
     });
   });
 };
+
+export default puzzleRatingUtils;

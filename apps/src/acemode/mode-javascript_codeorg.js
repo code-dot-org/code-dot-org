@@ -7,7 +7,7 @@ var annotationList = require('./annotationList');
  * @param {dropletEditor} Required
  * @param {appType} string, either 'Applab' or 'Gamelab'. Optional.
  */
-exports.defineForAce = function (
+export function defineForAce(
   dropletConfig,
   unusedConfig,
   dropletEditor,
@@ -136,4 +136,4 @@ exports.defineForAce = function (
       exports.Mode = Mode;
     }
   );
-};
+}

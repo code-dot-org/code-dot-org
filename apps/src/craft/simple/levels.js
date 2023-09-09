@@ -12,7 +12,7 @@ const turnRightBlock = `
     <title name="DIR">right</title>
   </block>`;
 
-module.exports = {
+export default {
   custom: {
     requiredBlocks: [],
     freePlay: false,

@@ -1,6 +1,8 @@
 import skinsBase from '../../skins';
 import Craft from './craft.js';
 
+var exports = {};
+
 exports.load = function (assetUrl, id) {
   const skin = skinsBase.load(assetUrl, id);
 
@@ -42,3 +44,5 @@ exports.load = function (assetUrl, id) {
 
   return skin;
 };
+
+export default exports;

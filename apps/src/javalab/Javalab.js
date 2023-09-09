@@ -33,7 +33,7 @@ import javalabView, {setDisplayTheme} from './redux/viewRedux';
 import {TestResults} from '@cdo/apps/constants';
 import project from '@cdo/apps/code-studio/initApp/project';
 import JavabuilderConnection from './JavabuilderConnection';
-import {showLevelBuilderSaveButton} from '@cdo/apps/code-studio/header';
+import header from '@cdo/apps/code-studio/header';
 import Neighborhood from './neighborhood/Neighborhood';
 import NeighborhoodVisualizationColumn from './neighborhood/NeighborhoodVisualizationColumn';
 import TheaterVisualizationColumn from './theater/TheaterVisualizationColumn';
@@ -201,13 +201,13 @@ Javalab.prototype.init = function (config) {
   // the project file information into start_sources on the level.
   if (this.isStartMode) {
     config.level.lastAttempt = '';
-    showLevelBuilderSaveButton(() => ({
+    header.showLevelBuilderSaveButton(() => ({
       start_sources: getSources(getStore().getState()),
       validation: getValidation(getStore().getState()),
     }));
   }
   if (this.isEditingExemplar) {
-    showLevelBuilderSaveButton(
+    header.showLevelBuilderSaveButton(
       () => ({
         exemplar_sources: getSources(getStore().getState()),
       }),

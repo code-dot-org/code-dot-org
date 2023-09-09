@@ -20,7 +20,7 @@ const limitedColours = [
   '#00ff88', // LIME
 ];
 
-const customInputTypes = {
+export const customInputTypes = {
   spritePicker: {
     addInput(blockly, block, inputConfig, currentInputRow) {
       block.getVars = function () {

@@ -1,9 +1,9 @@
-var blockUtils = require('../block_utils');
+import blockUtils from '../block_utils';
 
 /**
  * Information about level-specific requirements.
  */
-module.exports = {
+export default {
   example1: {
     solutionBlocks: blockUtils.calcBlockXml('functional_times', [
       blockUtils.calcBlockXml('functional_plus', [1, 2]),

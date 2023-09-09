@@ -7,7 +7,7 @@ let toolShowingIndex = -1;
 
 let courseShowingIndex = -1;
 
-module.exports.initCourseExplorer = function () {
+export function initCourseExplorer() {
   $('.tool').click(function () {
     const row = $(this).data('row');
     const index = $(this).data('index');
@@ -101,4 +101,8 @@ module.exports.initCourseExplorer = function () {
     $('.course-' + courseIndex + ' .arrow-up').hide();
     courseShowingIndex = -1;
   });
+}
+
+export default {
+  initCourseExplorer,
 };

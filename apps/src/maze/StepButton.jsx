@@ -19,4 +19,4 @@ StepButton.propTypes = {
   showStepButton: PropTypes.bool.isRequired,
 };
 
-module.exports = StepButton;
+export default StepButton;

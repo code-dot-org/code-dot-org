@@ -21,7 +21,6 @@ var GlowFilter = function (svg) {
   this.curve_ = ImageFilter.makeBellCurveOscillation(3000, 3, 0.1, 1.0);
 };
 GlowFilter.inherits(ImageFilter);
-module.exports = GlowFilter;
 
 /**
  * Build an ordered set of filter operations that define the behavior of this
@@ -100,3 +99,5 @@ GlowFilter.prototype.update = function (timeMs) {
     this.feCompositeLayers_.setAttribute('k3', this.curve_(timeMs));
   }
 };
+
+export default GlowFilter;

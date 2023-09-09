@@ -263,3 +263,5 @@ LegacyDialog.prototype.processHideOptions = function (options) {
       $(this).modal('hide');
     });
 };
+
+export default LegacyDialog;

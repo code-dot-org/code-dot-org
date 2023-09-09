@@ -8,7 +8,7 @@ import {mergeActivityResult} from './activityUtils';
 // Note: sessionStorage is not shared between tabs.
 var sessionStorage = window.sessionStorage;
 
-var clientState = (module.exports = {});
+var clientState = {};
 
 clientState.queryParams = require('./utils').queryParams;
 
@@ -232,3 +232,6 @@ function removeItemsWithPrefix(sessionStorage, prefix) {
     .filter(key => key.startsWith(prefix))
     .forEach(key => sessionStorage.removeItem(key));
 }
+
+export default clientState;
+export const {sourceForLevel} = clientState;

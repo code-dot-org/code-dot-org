@@ -5,4 +5,5 @@ import localeWithI18nStringTracker from '@cdo/apps/util/i18nStringTracker';
 
 let locale = safeLoadLocale('studio_locale');
 locale = localeWithI18nStringTracker(locale, 'studio');
-module.exports = locale;
+
+export default locale;

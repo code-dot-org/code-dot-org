@@ -60,4 +60,4 @@ RocketHeightLogic.prototype.rocket_height = function (seconds) {
   }
 };
 
-module.exports = RocketHeightLogic;
+export default RocketHeightLogic;

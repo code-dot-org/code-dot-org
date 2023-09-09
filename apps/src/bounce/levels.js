@@ -609,4 +609,4 @@ levels['custom'] = {
     <block type="bounce_whenBallMissesPaddle" deletable="false" x="20" y="630"></block>',
 };
 
-module.exports = levels;
+export default levels;

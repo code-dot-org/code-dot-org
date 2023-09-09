@@ -508,11 +508,11 @@ class StarterAssetsApi {
   }
 }
 
-module.exports = {
-  animations: new CollectionsApi('animations'),
-  assets: new AssetsApi('assets'),
-  starterAssets: new StarterAssetsApi(),
-  files: new FilesApi('files'),
-  sources: new CollectionsApi('sources'),
-  channels: new CollectionsApi('channels'),
-};
+const animations = new CollectionsApi('animations');
+const assets = new AssetsApi('assets');
+const starterAssets = new StarterAssetsApi();
+const files = new FilesApi('files');
+const sources = new CollectionsApi('sources');
+const channels = new CollectionsApi('channels');
+
+export {animations, assets, starterAssets, files, sources, channels};

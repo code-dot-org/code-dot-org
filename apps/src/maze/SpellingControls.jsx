@@ -46,4 +46,4 @@ SpellingControls.propTypes = {
   searchWord: PropTypes.string.isRequired,
 };
 
-module.exports = SpellingControls;
+export default SpellingControls;

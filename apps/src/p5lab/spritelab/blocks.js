@@ -101,7 +101,7 @@ const limitedColours = [
   '#00ff88', // LIME
 ];
 
-const customInputTypes = {
+export const customInputTypes = {
   locationPicker: {
     addInput(blockly, block, inputConfig, currentInputRow) {
       currentInputRow.appendField(
@@ -468,111 +468,115 @@ const customInputTypes = {
   },
 };
 
+function install(blockly, blockInstallOptions) {
+  Blockly.cdoUtils.registerCustomProcedureBlocks();
+  // Legacy style block definitions :(
+  const generator = blockly.getGenerator();
+
+  const behaviorEditor = (Blockly.behaviorEditor = new Blockly.FunctionEditor(
+    {
+      FUNCTION_HEADER: i18n.behaviorEditorHeader(),
+      FUNCTION_NAME_LABEL: i18n.behaviorEditorLabel(),
+      FUNCTION_DESCRIPTION_LABEL: i18n.behaviorEditorDescription(),
+    },
+    'behavior_definition',
+    {
+      [Blockly.BlockValueType.SPRITE]: 'sprite_parameter_get',
+    },
+    false /* disableParamEditing */,
+    [
+      Blockly.BlockValueType.NUMBER,
+      Blockly.BlockValueType.STRING,
+      Blockly.BlockValueType.COLOUR,
+      Blockly.BlockValueType.BOOLEAN,
+      Blockly.BlockValueType.SPRITE,
+      Blockly.BlockValueType.LOCATION,
+    ]
+  ));
+
+  Blockly.customBlocks.installBehaviorBlocks(behaviorEditor);
+  Blockly.Blocks.sprite_variables_get = {
+    // Variable getter.
+    init: function () {
+      var fieldLabel = new Blockly.FieldLabel(Blockly.Msg.VARIABLES_GET_ITEM);
+      // Must be marked EDITABLE so that cloned blocks share the same var name
+      fieldLabel.EDITABLE = true;
+      this.setHelpUrl(Blockly.Msg.VARIABLES_GET_HELPURL);
+      this.appendDummyInput()
+        .appendField(Blockly.Msg.VARIABLES_GET_TITLE)
+        .appendField(
+          Blockly.disableVariableEditing
+            ? fieldLabel
+            : new Blockly.FieldVariable(
+                Blockly.Msg.VARIABLES_SET_ITEM,
+                null,
+                null,
+                Blockly.BlockValueType.SPRITE,
+                i18n.sprite()
+              ),
+          'VAR'
+        )
+        .appendField(Blockly.Msg.VARIABLES_GET_TAIL);
+      this.setStrictOutput(true, Blockly.BlockValueType.SPRITE);
+      this.setTooltip(Blockly.Msg.VARIABLES_GET_TOOLTIP);
+      // setStyle is undefined for CDO Blockly
+      if (typeof this.setStyle === 'function') {
+        this.setStyle('sprite_blocks');
+      }
+    },
+    getVars: function () {
+      return Blockly.Variables.getVars.bind(this)(
+        Blockly.BlockValueType.SPRITE
+      );
+    },
+    renameVar: function (oldName, newName) {
+      if (Blockly.Names.equals(oldName, this.getFieldValue('VAR'))) {
+        this.setTitleValue(newName, 'VAR');
+      }
+    },
+    removeVar: Blockly.Blocks.variables_get.removeVar,
+  };
+  generator.sprite_variables_get = function () {
+    return [
+      `{name: '${Blockly.JavaScript.translateVarName(
+        this.getFieldValue('VAR')
+      )}'}`,
+      Blockly.JavaScript.ORDER_ATOMIC,
+    ];
+  };
+  Blockly.Variables.registerGetter(
+    Blockly.BlockValueType.SPRITE,
+    'sprite_variables_get'
+  );
+
+  // NOTE: On the page where behaviors are created (the functions/#/edit page)
+  // blockInstallOptions is undefined.
+  if (
+    !blockInstallOptions ||
+    !blockInstallOptions.level ||
+    blockInstallOptions.level.editBlocks !== TOOLBOX_EDIT_MODE
+  ) {
+    Blockly.Flyout.configure(Blockly.BlockValueType.BEHAVIOR, {
+      initialize(flyout, cursor) {
+        if (behaviorEditor && !behaviorEditor.isOpen()) {
+          flyout.addButtonToFlyout_(
+            cursor,
+            i18n.createBlocklyBehavior(),
+            behaviorEditor.openWithNewFunction.bind(behaviorEditor)
+          );
+        }
+      },
+      addDefaultVar: false,
+    });
+  }
+  delete blockly.Blocks.procedures_defreturn;
+  delete blockly.Blocks.procedures_ifreturn;
+}
+
 export default {
   costumeList,
   customInputTypes,
-  install(blockly, blockInstallOptions) {
-    Blockly.cdoUtils.registerCustomProcedureBlocks();
-    // Legacy style block definitions :(
-    const generator = blockly.getGenerator();
-
-    const behaviorEditor = (Blockly.behaviorEditor = new Blockly.FunctionEditor(
-      {
-        FUNCTION_HEADER: i18n.behaviorEditorHeader(),
-        FUNCTION_NAME_LABEL: i18n.behaviorEditorLabel(),
-        FUNCTION_DESCRIPTION_LABEL: i18n.behaviorEditorDescription(),
-      },
-      'behavior_definition',
-      {
-        [Blockly.BlockValueType.SPRITE]: 'sprite_parameter_get',
-      },
-      false /* disableParamEditing */,
-      [
-        Blockly.BlockValueType.NUMBER,
-        Blockly.BlockValueType.STRING,
-        Blockly.BlockValueType.COLOUR,
-        Blockly.BlockValueType.BOOLEAN,
-        Blockly.BlockValueType.SPRITE,
-        Blockly.BlockValueType.LOCATION,
-      ]
-    ));
-
-    Blockly.customBlocks.installBehaviorBlocks(behaviorEditor);
-    Blockly.Blocks.sprite_variables_get = {
-      // Variable getter.
-      init: function () {
-        var fieldLabel = new Blockly.FieldLabel(Blockly.Msg.VARIABLES_GET_ITEM);
-        // Must be marked EDITABLE so that cloned blocks share the same var name
-        fieldLabel.EDITABLE = true;
-        this.setHelpUrl(Blockly.Msg.VARIABLES_GET_HELPURL);
-        this.appendDummyInput()
-          .appendField(Blockly.Msg.VARIABLES_GET_TITLE)
-          .appendField(
-            Blockly.disableVariableEditing
-              ? fieldLabel
-              : new Blockly.FieldVariable(
-                  Blockly.Msg.VARIABLES_SET_ITEM,
-                  null,
-                  null,
-                  Blockly.BlockValueType.SPRITE,
-                  i18n.sprite()
-                ),
-            'VAR'
-          )
-          .appendField(Blockly.Msg.VARIABLES_GET_TAIL);
-        this.setStrictOutput(true, Blockly.BlockValueType.SPRITE);
-        this.setTooltip(Blockly.Msg.VARIABLES_GET_TOOLTIP);
-        // setStyle is undefined for CDO Blockly
-        if (typeof this.setStyle === 'function') {
-          this.setStyle('sprite_blocks');
-        }
-      },
-      getVars: function () {
-        return Blockly.Variables.getVars.bind(this)(
-          Blockly.BlockValueType.SPRITE
-        );
-      },
-      renameVar: function (oldName, newName) {
-        if (Blockly.Names.equals(oldName, this.getFieldValue('VAR'))) {
-          this.setTitleValue(newName, 'VAR');
-        }
-      },
-      removeVar: Blockly.Blocks.variables_get.removeVar,
-    };
-    generator.sprite_variables_get = function () {
-      return [
-        `{name: '${Blockly.JavaScript.translateVarName(
-          this.getFieldValue('VAR')
-        )}'}`,
-        Blockly.JavaScript.ORDER_ATOMIC,
-      ];
-    };
-    Blockly.Variables.registerGetter(
-      Blockly.BlockValueType.SPRITE,
-      'sprite_variables_get'
-    );
-
-    // NOTE: On the page where behaviors are created (the functions/#/edit page)
-    // blockInstallOptions is undefined.
-    if (
-      !blockInstallOptions ||
-      !blockInstallOptions.level ||
-      blockInstallOptions.level.editBlocks !== TOOLBOX_EDIT_MODE
-    ) {
-      Blockly.Flyout.configure(Blockly.BlockValueType.BEHAVIOR, {
-        initialize(flyout, cursor) {
-          if (behaviorEditor && !behaviorEditor.isOpen()) {
-            flyout.addButtonToFlyout_(
-              cursor,
-              i18n.createBlocklyBehavior(),
-              behaviorEditor.openWithNewFunction.bind(behaviorEditor)
-            );
-          }
-        },
-        addDefaultVar: false,
-      });
-    }
-    delete blockly.Blocks.procedures_defreturn;
-    delete blockly.Blocks.procedures_ifreturn;
-  },
+  install,
 };
+
+export {install};

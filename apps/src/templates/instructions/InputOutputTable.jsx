@@ -30,4 +30,4 @@ InputOutputTable.propTypes = {
   data: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.number)).isRequired,
 };
 
-module.exports = InputOutputTable;
+export default InputOutputTable;

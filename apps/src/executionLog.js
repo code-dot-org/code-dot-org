@@ -9,7 +9,7 @@ var utils = require('./utils');
  * @param {string[]} executionLog an array of function or statement names
  * @returns {!Object}
  */
-module.exports.getResultsFromLog = function (logConditions, executionLog) {
+function getResultsFromLog(logConditions, executionLog) {
   executionLog = executionLog || [];
   var results = {
     testResult: TestResults.ALL_PASS,
@@ -81,7 +81,7 @@ module.exports.getResultsFromLog = function (logConditions, executionLog) {
   });
 
   return results;
-};
+}
 
 /**
  * Match an executionLog entry (in the form 'function:2' or '[forInit]') with
@@ -108,3 +108,7 @@ function matchLogEntry(logEntry, conditionEntry) {
   }
   return logItems[0] === conditionItems[0] && logItems[1] >= conditionMinArgs;
 }
+
+export default {
+  getResultsFromLog,
+};
