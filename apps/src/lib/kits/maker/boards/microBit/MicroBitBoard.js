@@ -94,6 +94,11 @@ export default class MicroBitBoard extends EventEmitter {
             // Log if we were not able to determine the firmware version in time.
             firehoseClient.putRecord({
               study: MAKER_TOOLKIT,
+              // TODO @snickell ESM: @fisher-alice this is in `staging` as `study_group: MICROBIT`, but
+              // that value isn't found in MicroBitConstants.js, even in history. I think this was
+              // probably a dangling already invalid reference that our old import checker couldn't catch.
+              // I've set it to `MB_API`, which has the value `microbit` and occurs close
+              // to FIRMWARE_VERSION_TIMEOUT in the same file. This was my best guess... please confirm! 🙏
               study_group: MB_API,
               event: FIRMWARE_VERSION_TIMEOUT,
             });
