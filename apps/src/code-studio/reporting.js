@@ -10,7 +10,7 @@ var clientState = require('./clientState');
 var lastAjaxRequest;
 var lastServerResponse = {};
 
-var reporting = module.exports;
+var reporting = {};
 
 reporting.getLastServerResponse = function () {
   return lastServerResponse;
@@ -420,3 +420,7 @@ function reportComplete(report, response) {
     report.onComplete(response);
   }
 }
+
+export default reporting;
+
+export const {getLastServerResponse, sendReport} = reporting;

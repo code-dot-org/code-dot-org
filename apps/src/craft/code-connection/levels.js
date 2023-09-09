@@ -21,7 +21,7 @@ function vecThree(x, y, z) {
   );
 }
 
-module.exports = {
+export default {
   custom: {
     requiredBlocks: [],
     freePlay: false,

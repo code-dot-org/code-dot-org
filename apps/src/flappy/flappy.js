@@ -29,7 +29,7 @@ import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 /**
  * Create a namespace for the application.
  */
-var Flappy = module.exports;
+var Flappy = {};
 
 Flappy.GameStates = {
   WAITING: 0,
@@ -1059,3 +1059,5 @@ var checkFinished = function () {
 
   return false;
 };
+
+export default Flappy;

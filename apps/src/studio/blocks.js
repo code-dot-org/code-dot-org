@@ -3858,3 +3858,5 @@ function installConditionals(
     }
   );
 }
+
+export default exports;

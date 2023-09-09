@@ -242,7 +242,7 @@ function registerThemes(themes) {
   });
 }
 
-const registerAllContextMenuItems = function () {
+export const registerAllContextMenuItems = function () {
   unregisterDefaultOptions();
   registerDeletable();
   registerMovable();

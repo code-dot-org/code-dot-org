@@ -2165,3 +2165,7 @@ function parsePath() {
     action: tokens[PathPart.ACTION],
   };
 }
+
+export default projects;
+
+export const {getCurrentId, isOwner, projectChanged} = projects;

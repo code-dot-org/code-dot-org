@@ -53,7 +53,6 @@ let dialog_type = 'default';
 var FeedbackUtils = function (studioApp) {
   this.studioApp_ = studioApp;
 };
-module.exports = FeedbackUtils;
 
 /**
  * @typedef {Object} FeedbackOptions
@@ -1960,3 +1959,5 @@ FeedbackUtils.prototype.hasExceededLimitedBlocks_ = function () {
 FeedbackUtils.prototype.isFreePlay = function (result) {
   return result === TestResults.FREE_PLAY;
 };
+
+export default FeedbackUtils;

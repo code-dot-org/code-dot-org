@@ -17,7 +17,7 @@ import {getStore} from '../redux';
 /**
  * Create a namespace for the application.
  */
-var Jigsaw = module.exports;
+var Jigsaw = {};
 
 var level;
 var skin;
@@ -278,3 +278,5 @@ Jigsaw.onPuzzleComplete = function () {
     onComplete: Jigsaw.onReportComplete,
   });
 };
+
+export default Jigsaw;

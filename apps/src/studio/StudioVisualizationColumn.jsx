@@ -46,4 +46,4 @@ StudioVisualizationColumn.propTypes = {
   isRtl: PropTypes.bool,
 };
 
-module.exports = StudioVisualizationColumn;
+export default StudioVisualizationColumn;

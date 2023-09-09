@@ -36,7 +36,6 @@ var ImageFilter = function (svg) {
   /** @private {?} setInterval key */
   this.intervalId_ = null;
 };
-module.exports = ImageFilter;
 
 /**
  * Set the passed element to use this filter (replaces other filters it may
@@ -218,3 +217,5 @@ ImageFilter.makeBellCurveOscillation = function (period, exponent, min, max) {
     );
   };
 };
+
+export default ImageFilter;

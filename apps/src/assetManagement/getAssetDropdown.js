@@ -1,5 +1,5 @@
-var commonMsg = require('@cdo/locale');
-var utils = require('../utils');
+import commonMsg from '@cdo/locale';
+import {quote} from '../utils';
 import {getStore} from '../redux';
 import Sounds from '../Sounds';
 
@@ -7,19 +7,19 @@ import Sounds from '../Sounds';
  * Returns a list of options (optionally filtered by type) for code-mode
  * asset dropdowns.
  */
-module.exports = function (typeFilter) {
+export default function (typeFilter) {
   var options = dashboard.assets.listStore
     .list(typeFilter)
     .map(function (asset) {
       return {
-        text: utils.quote(asset.filename),
-        display: utils.quote(asset.filename),
+        text: quote(asset.filename),
+        display: quote(asset.filename),
       };
     });
   var handleChooseClick = function (callback) {
     dashboard.assets.showAssetManager(
       function (filename) {
-        callback(utils.quote(filename));
+        callback(quote(filename));
       },
       typeFilter,
       () => {
@@ -39,4 +39,4 @@ module.exports = function (typeFilter) {
     click: handleChooseClick,
   });
   return options;
-};
+}
