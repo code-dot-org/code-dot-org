@@ -25,23 +25,23 @@
  * @author fraser@google.com (Neil Fraser)
  */
 
-var React = require('react');
-var ReactDOM = require('react-dom');
-var color = require('../util/color');
-var commonMsg = require('@cdo/locale');
-var turtleMsg = require('./locale');
+import React from 'react';
+import ReactDOM from 'react-dom';
+import color from '../util/color';
+import commonMsg from '@cdo/locale';
+import turtleMsg from './locale';
 import CustomMarshalingInterpreter from '../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
-var ArtistAPI = require('./api');
-var apiJavascript = require('./apiJavascript');
-var Provider = require('react-redux').Provider;
+import ArtistAPI from './api';
+import apiJavascript from './apiJavascript';
+import reactRedux from 'react-redux';
 import AppView from '../templates/AppView';
-var ArtistVisualizationColumn = require('./ArtistVisualizationColumn');
-var utils = require('../utils');
-var Slider = require('../slider');
-var _ = require('lodash');
-var dropletConfig = require('./dropletConfig');
-var JSInterpreter = require('../lib/tools/jsinterpreter/JSInterpreter');
-var JsInterpreterLogger = require('../JsInterpreterLogger');
+import ArtistVisualizationColumn from './ArtistVisualizationColumn';
+import utils from '../utils';
+import Slider from '../slider';
+import _ from 'lodash';
+import dropletConfig from './dropletConfig';
+import JSInterpreter from '../lib/tools/jsinterpreter/JSInterpreter';
+import JsInterpreterLogger from '../JsInterpreterLogger';
 import {
   getContainedLevelResultInfo,
   postContainedLevelAttempt,
@@ -57,6 +57,8 @@ import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import Visualization from '@code-dot-org/artist';
 import experiments from '../util/experiments';
 import {DEFAULT_EXECUTION_INFO} from '@cdo/apps/lib/tools/jsinterpreter/CustomMarshalingInterpreter';
+
+var Provider = reactRedux.Provider;
 
 const CANVAS_HEIGHT = 400;
 const CANVAS_WIDTH = 400;

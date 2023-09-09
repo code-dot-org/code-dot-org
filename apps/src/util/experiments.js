@@ -11,7 +11,7 @@ import Cookie from 'js-cookie';
 import trackEvent from './trackEvent';
 import DCDO from '@cdo/apps/dcdo';
 
-const queryString = require('query-string');
+import queryString from 'query-string';
 
 const experiments = module.exports;
 const STORAGE_KEY = 'experimentsList';

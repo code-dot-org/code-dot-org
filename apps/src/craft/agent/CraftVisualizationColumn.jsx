@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-var msg = require('@cdo/locale');
+import msg from '@cdo/locale';
 
-var GameButtons = require('../../templates/GameButtons').default;
+import GameButtons from '../../templates/GameButtons';
 import ArrowButtons from '../../templates/ArrowButtons';
-var BelowVisualization = require('../../templates/BelowVisualization');
+import BelowVisualization from '../../templates/BelowVisualization';
 import ProtectedVisualizationDiv from '../../templates/ProtectedVisualizationDiv';
 import SwipePrompt from '@cdo/apps/templates/SwipePrompt';
 

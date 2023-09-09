@@ -3,42 +3,44 @@
  *           This file is the main entry point for the Internet Simulator.
  */
 
-var utils = require('../utils');
+import utils from '../utils';
 import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {openDialog as openInstructionsDialog} from '../redux/instructionsDialog';
 import {getStore} from '../redux';
-var _ = require('lodash');
+import _ from 'lodash';
 /** @type {Object<string, function>} */
-var i18n = require('@cdo/netsim/locale');
-var ObservableEventDEPRECATED = require('../ObservableEventDEPRECATED');
-var RunLoop = require('../RunLoop');
-var Provider = require('react-redux').Provider;
-var NetSimView = require('./NetSimView');
-var page = require('./page.html.ejs');
-var NetSimAlert = require('./NetSimAlert');
-var NetSimConstants = require('./NetSimConstants');
-var NetSimUtils = require('./NetSimUtils');
-var DashboardUser = require('./DashboardUser');
-var NetSimBitLogPanel = require('./NetSimBitLogPanel');
-var NetSimLobby = require('./NetSimLobby');
-var NetSimLocalClientNode = require('./NetSimLocalClientNode');
-var NetSimLogger = require('./NetSimLogger');
-var NetSimLogPanel = require('./NetSimLogPanel');
-var NetSimRouterLogModal = require('./NetSimRouterLogModal');
-var NetSimRouterNode = require('./NetSimRouterNode');
-var NetSimSendPanel = require('./NetSimSendPanel');
-var NetSimShard = require('./NetSimShard');
-var NetSimStatusPanel = require('./NetSimStatusPanel');
-var NetSimTabsComponent = require('./NetSimTabsComponent');
-var NetSimVisualization = require('./NetSimVisualization');
+import i18n from '@cdo/netsim/locale';
+import ObservableEventDEPRECATED from '../ObservableEventDEPRECATED';
+import RunLoop from '../RunLoop';
+import reactRedux from 'react-redux';
+import NetSimView from './NetSimView';
+import page from './page.html.ejs';
+import NetSimAlert from './NetSimAlert';
+import NetSimConstants from './NetSimConstants';
+import NetSimUtils from './NetSimUtils';
+import DashboardUser from './DashboardUser';
+import NetSimBitLogPanel from './NetSimBitLogPanel';
+import NetSimLobby from './NetSimLobby';
+import NetSimLocalClientNode from './NetSimLocalClientNode';
+import NetSimLogger from './NetSimLogger';
+import NetSimLogPanel from './NetSimLogPanel';
+import NetSimRouterLogModal from './NetSimRouterLogModal';
+import NetSimRouterNode from './NetSimRouterNode';
+import NetSimSendPanel from './NetSimSendPanel';
+import NetSimShard from './NetSimShard';
+import NetSimStatusPanel from './NetSimStatusPanel';
+import NetSimTabsComponent from './NetSimTabsComponent';
+import NetSimVisualization from './NetSimVisualization';
+import NetSimGlobals from './NetSimGlobals';
 
 var DnsMode = NetSimConstants.DnsMode;
 var MessageGranularity = NetSimConstants.MessageGranularity;
 
 var logger = NetSimLogger.getSingleton();
-var NetSimGlobals = require('./NetSimGlobals');
+
+var Provider = reactRedux.Provider;
 
 /**
  * The top-level Internet Simulator controller.

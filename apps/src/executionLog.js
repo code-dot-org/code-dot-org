@@ -1,5 +1,5 @@
 import {TestResults} from './constants';
-var utils = require('./utils');
+import utils from './utils';
 
 /**
  * Get a testResult and message value based on an examination of the

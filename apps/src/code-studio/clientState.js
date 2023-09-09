@@ -4,13 +4,14 @@
  */
 import {trySetSessionStorage} from '../utils';
 import {mergeActivityResult} from './activityUtils';
+import utils from './utils';
 
 // Note: sessionStorage is not shared between tabs.
 var sessionStorage = window.sessionStorage;
 
 var clientState = {};
 
-clientState.queryParams = require('./utils').queryParams;
+clientState.queryParams = utils.queryParams;
 
 /**
  * Number of days before client state cookie expires.

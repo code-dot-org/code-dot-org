@@ -5,19 +5,19 @@
  *
  */
 
-var React = require('react');
-var ReactDOM = require('react-dom');
-var studioApp = require('../StudioApp').singleton;
-var commonMsg = require('@cdo/locale');
-var flappyMsg = require('./locale');
+import React from 'react';
+import ReactDOM from 'react-dom';
+import StudioApp from '../StudioApp';
+import commonMsg from '@cdo/locale';
+import flappyMsg from './locale';
 import CustomMarshalingInterpreter from '../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
-var api = require('./api');
-var Provider = require('react-redux').Provider;
+import api from './api';
+import reactRedux from 'react-redux';
 import AppView from '../templates/AppView';
-var FlappyVisualizationColumn = require('./FlappyVisualizationColumn');
-var dom = require('../dom');
-var constants = require('./constants');
-var utils = require('../utils');
+import FlappyVisualizationColumn from './FlappyVisualizationColumn';
+import dom from '../dom';
+import constants from './constants';
+import utils from '../utils';
 import {getRandomDonorTwitter} from '../util/twitterHelper';
 import {getStore} from '../redux';
 
@@ -26,6 +26,8 @@ import placeholder from '../../static/flappy/placeholder.jpg';
 import {dataURIFromURI} from '../imageUtils';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 
+var studioApp = StudioApp.singleton;
+var Provider = reactRedux.Provider;
 /**
  * Create a namespace for the application.
  */

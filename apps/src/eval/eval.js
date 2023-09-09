@@ -21,21 +21,21 @@ var Eval = {};
 /**
  * Create a namespace for the application.
  */
-var React = require('react');
-var ReactDOM = require('react-dom');
-var studioApp = require('../StudioApp').singleton;
-var commonMsg = require('@cdo/locale');
-var evalMsg = require('./locale');
+import React from 'react';
+import ReactDOM from 'react-dom';
+import StudioApp from '../StudioApp';
+import commonMsg from '@cdo/locale';
+import evalMsg from './locale';
 import CustomMarshalingInterpreter from '../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
-var api = require('./api');
-var Provider = require('react-redux').Provider;
+import api from './api';
+import reactRedux from 'react-redux';
 import AppView from '../templates/AppView';
-var EvalVisualizationColumn = require('./EvalVisualizationColumn');
-var dom = require('../dom');
-var blockUtils = require('../block_utils');
-var CustomEvalError = require('./evalError');
-var EvalText = require('./evalText');
-var utils = require('../utils');
+import EvalVisualizationColumn from './EvalVisualizationColumn';
+import dom from '../dom';
+import blockUtils from '../block_utils';
+import CustomEvalError from './evalError';
+import EvalText from './evalText';
+import utils from '../utils';
 import {getStore} from '../redux';
 
 import {TestResults, ResultType} from '../constants';
@@ -44,6 +44,9 @@ import canvg from 'canvg';
 // tests don't have svgelement
 import '../util/svgelement-polyfill';
 import {showDeprecatedAlgebraLabWarning} from '../util/deprecatedLabWarning';
+
+var studioApp = StudioApp.singleton;
+var Provider = reactRedux.Provider;
 
 var level;
 var skin;

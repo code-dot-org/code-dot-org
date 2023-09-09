@@ -7,6 +7,7 @@ import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {AbuseConstants} from '@cdo/apps/util/sharedConstants';
 import NameFailureError from '../NameFailureError';
 import {CP_API} from '../../lib/kits/maker/boards/circuitPlayground/PlaygroundConstants';
+import clientApi from './clientApi';
 
 // Attempt to save projects every 30 seconds
 var AUTOSAVE_INTERVAL = 30 * 1000;
@@ -19,13 +20,7 @@ var hasProjectChanged = false;
 let projectSaveInProgress = false;
 let projectChangedWhileSaveInProgress = false;
 
-var assets = require('./clientApi').create('/v3/assets');
-var files = require('./clientApi').create('/v3/files');
-var sources = require('./clientApi').create('/v3/sources');
-var sourcesPublic = require('./clientApi').create('/v3/sources-public');
-var channels = require('./clientApi').create('/v3/channels');
-
-var showProjectAdmin = require('../showProjectAdmin');
+import showProjectAdmin from '../showProjectAdmin';
 import header from '../header';
 import {queryParams, hasQueryParam, updateQueryParam} from '../utils';
 import {getStore} from '../../redux';
@@ -35,6 +30,12 @@ import {
   refreshInRestrictedShareMode,
   refreshTeacherHasConfirmedUploadWarning,
 } from '../projectRedux';
+
+var assets = clientApi.create('/v3/assets');
+var files = clientApi.create('/v3/files');
+var sources = clientApi.create('/v3/sources');
+var sourcesPublic = clientApi.create('/v3/sources-public');
+var channels = clientApi.create('/v3/channels');
 
 // Name of the packed source file
 var SOURCE_FILE = 'main.json';
