@@ -1,5 +1,7 @@
 // API definitions for functions exposed for JavaScript (droplet/ace) levels:
 
+let exports = {};
+
 exports.endGame = function (value) {
   Studio.queueCmd(null, 'endGame', {value: value});
 };
@@ -301,3 +303,5 @@ exports.onEvent = function (eventName, func) {
     func: func,
   });
 };
+
+export default exports;

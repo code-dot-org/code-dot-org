@@ -2,7 +2,7 @@ import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import trackEvent from '../../util/trackEvent';
-import StudioApp from '../../StudioApp';
+import {singleton as studioApp} from '../../StudioApp';
 import craftMsg from '../locale';
 import CustomMarshalingInterpreter from '../../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 import {
@@ -16,7 +16,7 @@ import {trySetLocalStorage} from '@cdo/apps/utils';
 import houseLevels from './houseLevels';
 import levelbuilderOverrides from './levelbuilderOverrides';
 import MusicController from '../../MusicController';
-import Provider from 'react-redux';
+import {Provider} from 'react-redux';
 import AppView from '../../templates/AppView';
 import CraftVisualizationColumn from './CraftVisualizationColumn';
 import {getStore} from '../../redux';
@@ -31,7 +31,6 @@ import {muteCookieWithLevel} from '../../util/muteCookieHelpers';
 
 import houseSelectionHTMLEJS from './dialogs/houseSelection.html.ejs';
 
-var studioApp = StudioApp.singleton;
 var MEDIA_URL = '/blockly/media/craft/';
 
 /**
