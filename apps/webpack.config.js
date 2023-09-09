@@ -10,6 +10,7 @@ const TerserPlugin = require('terser-webpack-plugin');
 const UnminifiedWebpackPlugin = require('unminified-webpack-plugin');
 const {WebpackManifestPlugin} = require('webpack-manifest-plugin');
 const WebpackNotifierPlugin = require('webpack-notifier');
+const SpeedMeasurePlugin = require('speed-measure-webpack-plugin');
 
 const envConstants = require('./envConstants');
 const {baseConfig, devtool} = require('./webpack.base.config');
@@ -24,6 +25,10 @@ const {
   SHARED_ENTRIES,
   OTHER_ENTRIES,
 } = require('./webpackEntryPoints');
+
+// Tool for profiling webpack build times: use to debug slow webpacks.
+// If true, prints timing for each plugin and loader after each build.
+const useSpeedMeasurePlugin = false;
 
 /**
  * Adds pollyfills to each entrypoint (before the existing path(s))
@@ -346,10 +351,14 @@ function createWebpackConfig({
   ////////// WEBPACK CONFIG ENDS HERE //////////
   //////////////////////////////////////////////
 
-  return {
+  const finalWebpackConfig = {
     ...baseConfig,
     ...webpackConfig,
   };
+
+  return useSpeedMeasurePlugin
+    ? new SpeedMeasurePlugin().wrap(finalWebpackConfig)
+    : finalWebpackConfig;
 }
 
 module.exports = {
