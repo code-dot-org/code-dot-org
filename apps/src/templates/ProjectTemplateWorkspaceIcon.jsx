@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactTooltip from 'react-tooltip';
 import _ from 'lodash';
-var msg = require('@cdo/locale');
+import msg from '@cdo/locale';
 
 const IMAGE_BASE_URL = '/blockly/media/';
 

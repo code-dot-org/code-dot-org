@@ -16,6 +16,8 @@ import {
   setDynamicInstructionsOverlayDismissCallback,
 } from '../redux/instructions';
 
+import {initAll, instructionsDismissed} from '@code-dot-org/ml-playground';
+
 /**
  * This is used to set the viewport width in portrait mode, and will become
  * the viewport height in landscape mode.  On a 1024x768 screen in landscape
@@ -193,11 +195,6 @@ Ailab.prototype.initMLActivities = function () {
   };
 
   setAssetPath('/blockly/media/skins/ailab/');
-
-  const {
-    initAll,
-    instructionsDismissed,
-  } = require('@code-dot-org/ml-playground');
 
   // Set initial state for UI elements.
   initAll({

@@ -6,7 +6,7 @@ import MusicLibrary, {
   LibraryValidator,
 } from '../player/MusicLibrary';
 import {baseAssetUrl} from '../constants';
-const AppConfig = require('../appConfig').default;
+import AppConfig from '../appConfig';
 
 /**
  * Loads a sound library JSON file.
@@ -20,7 +20,9 @@ export const loadLibrary = async (
 ): Promise<MusicLibrary> => {
   if (AppConfig.getValue('local-library') === 'true') {
     const localLibraryFilename = 'music-library';
-    const localLibrary = require(`@cdo/static/music/${localLibraryFilename}.json`);
+    const localLibrary = await import(
+      `@cdo/static/music/${localLibraryFilename}.json`
+    );
     return new MusicLibrary(
       'local-' + localLibraryFilename,
       localLibrary as LibraryJson

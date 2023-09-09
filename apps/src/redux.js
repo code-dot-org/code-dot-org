@@ -31,8 +31,11 @@ import * as redux from 'redux';
 import reduxThunk from 'redux-thunk';
 import {configureStore} from '@reduxjs/toolkit';
 
+let createLogger;
 if (process.env.NODE_ENV !== 'production') {
-  var createLogger = require('redux-logger');
+  import('redux-logger').then(reduxLoggerModule => {
+    createLogger = reduxLoggerModule;
+  });
 }
 
 let reduxStore;
@@ -133,7 +136,11 @@ function createStore(reducer, initialState) {
   // to your url. This will also enable logging if there is a non-immutable or non-serializable
   // value in the redux store, with some ignores already set up (see below).
   var enableReduxDebugging = experiments.isEnabled(experiments.REDUX_LOGGING);
-  if (process.env.NODE_ENV !== 'production' && enableReduxDebugging) {
+  if (
+    process.env.NODE_ENV !== 'production' &&
+    enableReduxDebugging &&
+    createLogger
+  ) {
     var reduxLogger = createLogger({
       collapsed: true,
       // convert immutable.js objects to JS for logging (code copied from

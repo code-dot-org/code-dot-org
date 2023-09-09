@@ -18,19 +18,19 @@ import {
 import JavaScriptModeErrorHandler from '@cdo/apps/JavaScriptModeErrorHandler';
 import BlocklyModeErrorHandler from '@cdo/apps/BlocklyModeErrorHandler';
 import CustomMarshalingInterpreter from '@cdo/apps/lib/tools/jsinterpreter/CustomMarshalingInterpreter';
-var apiJavascript = require('./gamelab/apiJavascript');
-var consoleApi = require('@cdo/apps/consoleApi');
-var utils = require('@cdo/apps/utils');
-var dropletConfig = require('./gamelab/dropletConfig');
-var JSInterpreter = require('@cdo/apps/lib/tools/jsinterpreter/JSInterpreter');
+import apiJavascript from './gamelab/apiJavascript';
+import consoleApi from '@cdo/apps/consoleApi';
+import utils from '@cdo/apps/utils';
+import dropletConfig from './gamelab/dropletConfig';
+import JSInterpreter from '@cdo/apps/lib/tools/jsinterpreter/JSInterpreter';
 import * as apiTimeoutList from '@cdo/apps/lib/util/timeoutList';
-var JsInterpreterLogger = require('@cdo/apps/JsInterpreterLogger');
-var P5Wrapper = require('./P5Wrapper');
-var p5SpriteWrapper = require('./P5SpriteWrapper');
-var p5GroupWrapper = require('./P5GroupWrapper');
-var gamelabCommands = require('./gamelab/commands');
+import JsInterpreterLogger from '@cdo/apps/JsInterpreterLogger';
+import P5Wrapper from './P5Wrapper';
+import p5SpriteWrapper from './P5SpriteWrapper';
+import p5GroupWrapper from './P5GroupWrapper';
+import gamelabCommands from './gamelab/commands';
 import {initializeSubmitHelper, onSubmitComplete} from '@cdo/apps/submitHelper';
-var dom = require('@cdo/apps/dom');
+import dom from '@cdo/apps/dom';
 import {initFirebaseStorage} from '@cdo/apps/storage/firebaseStorage';
 import {getStore} from '@cdo/apps/redux';
 import {
@@ -41,9 +41,9 @@ import {
 } from './redux/animationList';
 import {getSerializedAnimationList} from './shapes';
 import {add as addWatcher} from '@cdo/apps/redux/watchedExpressions';
-var reducers = require('./reducers');
-var P5LabView = require('./P5LabView');
-var Provider = require('react-redux').Provider;
+import reducers from './reducers';
+import P5LabView from './P5LabView';
+import reactRedux from 'react-redux';
 import {shouldOverlaysBeVisible} from '@cdo/apps/templates/VisualizationOverlay';
 import {
   getContainedLevelResultInfo,
@@ -72,6 +72,8 @@ import project from '@cdo/apps/code-studio/initApp/project';
 import {hasInstructions} from '@cdo/apps/templates/instructions/utils';
 import {setLocaleCode} from '@cdo/apps/redux/localesRedux';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
+
+const Provider = reactRedux.Provider;
 
 const defaultMobileControlsConfig = {
   spaceButtonVisible: true,

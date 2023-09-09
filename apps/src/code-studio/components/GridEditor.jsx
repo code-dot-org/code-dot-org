@@ -8,16 +8,16 @@ import React from 'react';
 
 import {cells, utils as mazeUtils} from '@code-dot-org/maze';
 
-var StudioCell = require('@cdo/apps/studio/cell');
+import StudioCell from '@cdo/apps/studio/cell';
 
-var HarvesterCellEditor = require('./HarvesterCellEditor');
-var PlanterCellEditor = require('./PlanterCellEditor');
-var BeeCellEditor = require('./BeeCellEditor');
-var CellEditor = require('./CellEditor');
-var StudioCellEditor = require('./StudioCellEditor');
-var StarWarsGridCellEditor = require('./StarWarsGridCellEditor');
-var BounceCellEditor = require('./BounceCellEditor');
-var Grid = require('./Grid');
+import HarvesterCellEditor from './HarvesterCellEditor';
+import PlanterCellEditor from './PlanterCellEditor';
+import BeeCellEditor from './BeeCellEditor';
+import CellEditor from './CellEditor';
+import StudioCellEditor from './StudioCellEditor';
+import StarWarsGridCellEditor from './StarWarsGridCellEditor';
+import BounceCellEditor from './BounceCellEditor';
+import Grid from './Grid';
 
 class CellJSON extends React.Component {
   static propTypes = {

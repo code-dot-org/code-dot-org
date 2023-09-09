@@ -2,7 +2,7 @@ import Typography from '@cdo/apps/componentLibrary/typography';
 import React from 'react';
 import {BaseDialogProps} from './DialogManager';
 import moduleStyles from './start-over-dialog.module.scss';
-const commonI18n = require('@cdo/locale');
+import commonI18n from '@cdo/locale';
 
 /**
  * Start Over dialog used in Lab2 labs.

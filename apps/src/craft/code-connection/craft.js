@@ -11,6 +11,10 @@ import cc_client from './cc-client';
 import dom from '../../dom';
 import items from './items';
 
+import connectToCodeConnectionHTMLEJS from './dialogs/connectToCodeConnection.html.ejs';
+import importFromShareLinkHTMLEJS from './dialogs/importFromShareLink.html.ejs';
+import errorMessageHTMLEJS from './dialogs/errorMessage.html.ejs';
+
 const MEDIA_URL = '/blockly/media/craft/';
 
 var client = new cc_client(8080);
@@ -611,7 +615,7 @@ export default class Craft {
 
   static showConnectToCodeConnectionPopup = function () {
     var popupDiv = document.createElement('div');
-    popupDiv.innerHTML = require('./dialogs/connectToCodeConnection.html.ejs')({
+    popupDiv.innerHTML = connectToCodeConnectionHTMLEJS({
       image: studioApp().assetUrl(),
     });
     var popupDialog = studioApp().createModalDialog({
@@ -642,7 +646,7 @@ export default class Craft {
   static showImportFromShareLinkPopup = function (callback) {
     let shareLink;
     const popupDiv = document.createElement('div');
-    popupDiv.innerHTML = require('./dialogs/importFromShareLink.html.ejs')();
+    popupDiv.innerHTML = importFromShareLinkHTMLEJS();
     const popupDialog = studioApp().createModalDialog({
       contentDiv: popupDiv,
       onHidden: function () {
@@ -665,7 +669,7 @@ export default class Craft {
 
   static showErrorMessagePopup = function (title, message) {
     const popupDiv = document.createElement('div');
-    popupDiv.innerHTML = require('./dialogs/errorMessage.html.ejs')({
+    popupDiv.innerHTML = errorMessageHTMLEJS({
       title,
       message,
     });

@@ -1,5 +1,5 @@
 /** @file P5 Lab constants */
-var utils = require('@cdo/apps/utils');
+import utils from '@cdo/apps/utils';
 
 /** @enum {string} */
 export const P5LabInterfaceMode = utils.makeEnum(
