@@ -91,6 +91,8 @@ import {closeWorkspaceAlert} from './code-studio/projectRedux';
 import makeYourOwnHTMLEJS from './templates/makeYourOwn.html.ejs';
 import learnHTMLEJS from './templates/learn.html.ejs';
 
+let exports = {};
+
 var copyrightStrings;
 
 /**
@@ -3525,7 +3527,7 @@ export function singleton() {
 if (IN_UNIT_TEST) {
   let __oldInstance;
 
-  module.exports.stubStudioApp = function () {
+  exports.stubStudioApp = function () {
     if (__oldInstance) {
       throw new Error(
         'StudioApp has already been stubbed. Did you forget to call restore?'
@@ -3535,7 +3537,7 @@ if (IN_UNIT_TEST) {
     instance = null;
   };
 
-  module.exports.restoreStudioApp = function () {
+  exports.restoreStudioApp = function () {
     instance.removeAllListeners();
     instance.libraries = {};
     if (instance.changeListener) {
@@ -3545,3 +3547,5 @@ if (IN_UNIT_TEST) {
     __oldInstance = null;
   };
 }
+
+export default exports;

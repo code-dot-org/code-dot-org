@@ -181,4 +181,4 @@ DropletAutocompletePopupTooltipManager.prototype.setTooltipsEnabled = function (
   this.tooltipsEnabled = !!enabled;
 };
 
-module.exports = DropletAutocompletePopupTooltipManager;
+export default DropletAutocompletePopupTooltipManager;

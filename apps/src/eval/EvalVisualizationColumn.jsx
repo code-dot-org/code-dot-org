@@ -32,4 +32,4 @@ var EvalVisualizationColumn = function () {
   );
 };
 
-module.exports = EvalVisualizationColumn;
+export default EvalVisualizationColumn;

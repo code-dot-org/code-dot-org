@@ -41,7 +41,7 @@ loginTypes.forEach(loginType => {
   stories[`${loginType}`] = story;
 });
 
-module.exports = {
+export default {
   ...stories,
   default: defaultExport,
 };

@@ -291,4 +291,4 @@ Slider.bindEvent_ = function (element, name, func) {
   element.addEventListener(name, func, false);
 };
 
-module.exports = Slider;
+export default Slider;

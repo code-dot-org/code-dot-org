@@ -36,4 +36,4 @@ var BounceVisualizationColumn = function () {
   );
 };
 
-module.exports = BounceVisualizationColumn;
+export default BounceVisualizationColumn;

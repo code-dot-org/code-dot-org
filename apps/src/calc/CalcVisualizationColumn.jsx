@@ -34,4 +34,4 @@ var CalcVisualizationColumn = function (props) {
   );
 };
 
-module.exports = CalcVisualizationColumn;
+export default CalcVisualizationColumn;

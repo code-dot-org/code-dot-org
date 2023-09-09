@@ -16,7 +16,7 @@ import CodeMirror from 'codemirror';
  * @param {string} options.wrapper
  * @param {Object} options.model
  */
-module.exports = function (container, options) {
+export default function (container, options) {
   container = $(container);
 
   var jsonEditor = CodeMirror.fromTextArea(
@@ -134,4 +134,4 @@ module.exports = function (container, options) {
   container.on('change', options.wrapper, function () {
     updateJSON();
   });
-};
+}

@@ -1,5 +1,7 @@
 import $ from 'jquery';
 
+let exports = {};
+
 /**
  * Shows the samplingMessage and completionTable DOM elements depending on the
  * parameters.
@@ -181,3 +183,5 @@ exports.populateTable = function (headers, data) {
     },
   });
 };
+
+export default exports;

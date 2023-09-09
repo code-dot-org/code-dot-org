@@ -12,7 +12,7 @@ import watchedExpressions from './watchedExpressions';
 import feedback from './feedback';
 import studioAppActivity from './studioAppActivity';
 
-module.exports = {
+export default {
   runState,
   layout,
   authoredHints,

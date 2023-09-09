@@ -10,10 +10,7 @@ import markup from './NetSimDnsManualControl.html.ejs';
  * @param {function} becomeDnsCallback
  * @constructor
  */
-var NetSimDnsManualControl = (module.exports = function (
-  rootDiv,
-  becomeDnsCallback
-) {
+function NetSimDnsManualControl(rootDiv, becomeDnsCallback) {
   /**
    * Component root, which we fill whenever we call render()
    * @type {jQuery}
@@ -28,7 +25,7 @@ var NetSimDnsManualControl = (module.exports = function (
   this.becomeDnsCallback_ = becomeDnsCallback;
 
   this.render();
-});
+}
 
 /**
  * Fill the root div with new elements reflecting the current state
@@ -55,3 +52,5 @@ NetSimDnsManualControl.prototype.onBecomeDnsButtonClick_ = function () {
 NetSimDnsManualControl.prototype.setIsDnsNode = function (isDnsNode) {
   this.rootDiv_.find('input[type="button"]').attr('disabled', isDnsNode);
 };
+
+export default NetSimDnsManualControl;

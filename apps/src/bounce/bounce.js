@@ -34,7 +34,7 @@ var SquareType = tiles.SquareType;
 /**
  * Create a namespace for the application.
  */
-var Bounce = module.exports;
+var Bounce = {};
 
 Bounce.keyState = {};
 Bounce.gesturesObserved = {};

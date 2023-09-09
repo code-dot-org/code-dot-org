@@ -12,7 +12,7 @@ import {DnsMode} from './NetSimConstants';
  * @param {jQuery} rootDiv
  * @constructor
  */
-var NetSimDnsTable = (module.exports = function (rootDiv) {
+export default function NetSimDnsTable(rootDiv) {
   /**
    * Component root, which we fill whenever we call render()
    * @type {jQuery}
@@ -33,7 +33,7 @@ var NetSimDnsTable = (module.exports = function (rootDiv) {
   this.addressTableData_ = [];
 
   this.render();
-});
+}
 
 /**
  * Fill the root div with new elements reflecting the current state

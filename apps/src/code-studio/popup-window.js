@@ -38,6 +38,5 @@ function popupWindow(event) {
   return false;
 }
 
-module.exports = popupWindow;
 // Needed to import into a typescript file.
 export default popupWindow;
