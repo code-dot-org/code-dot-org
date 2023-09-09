@@ -4,15 +4,15 @@
  * @see NetSimSendPanel for how this is used.
  */
 import $ from 'jquery';
-var netsimMsg = require('@cdo/netsim/locale');
-var markup = require('./NetSimPacketEditor.html.ejs');
+import netsimMsg from '@cdo/netsim/locale';
+import markup from './NetSimPacketEditor.html.ejs';
 import {KeyCodes} from '../constants';
-var NetSimEncodingControl = require('./NetSimEncodingControl');
-var NetSimLogPanel = require('./NetSimLogPanel');
-var Packet = require('./Packet');
-var DataConverters = require('./DataConverters');
-var NetSimConstants = require('./NetSimConstants');
-var NetSimGlobals = require('./NetSimGlobals');
+import NetSimEncodingControl from './NetSimEncodingControl';
+import NetSimLogPanel from './NetSimLogPanel';
+import Packet from './Packet';
+import DataConverters from './DataConverters';
+import NetSimConstants from './NetSimConstants';
+import NetSimGlobals from './NetSimGlobals';
 
 var EncodingType = NetSimConstants.EncodingType;
 var BITS_PER_BYTE = NetSimConstants.BITS_PER_BYTE;

@@ -1,6 +1,6 @@
 import React from 'react';
-var GameButtons = require('../templates/GameButtons').default;
-var BelowVisualization = require('../templates/BelowVisualization');
+import GameButtons from '../templates/GameButtons';
+import BelowVisualization from '../templates/BelowVisualization';
 import ProtectedVisualizationDiv from '../templates/ProtectedVisualizationDiv';
 
 /**

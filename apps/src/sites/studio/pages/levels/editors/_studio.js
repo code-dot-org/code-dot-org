@@ -4,7 +4,7 @@ import $ from 'jquery';
  * @file Main entry point for scripts used only in levelbuilder on when editing
  *       studio-type levels.
  */
-var CodeMirror = require('codemirror');
+import CodeMirror from 'codemirror';
 
 // On page load, specifically for this editor page.
 $(document).ready(function () {

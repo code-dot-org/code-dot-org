@@ -1,5 +1,5 @@
 import $ from 'jquery';
-var showVideoDialog = require('./videos').showVideoDialog;
+import {showVideoDialog} from './videos';
 
 // It would be nice if we could share this with the addClickTouchEvent in
 // apps/src/dom.js

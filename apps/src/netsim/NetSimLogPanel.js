@@ -7,14 +7,14 @@
  * @see NetSimBitLogPanel for the component used in bit-sending mode.
  */
 import $ from 'jquery';
-var utils = require('../utils'); // Provides Function.prototype.inherits
-var i18n = require('@cdo/netsim/locale');
-var markup = require('./NetSimLogPanel.html.ejs');
-var Packet = require('./Packet');
-var packetMarkup = require('./NetSimLogPacket.html.ejs');
-var NetSimPanel = require('./NetSimPanel');
-var NetSimEncodingControl = require('./NetSimEncodingControl');
-var NetSimGlobals = require('./NetSimGlobals');
+import utils from '../utils'; // Provides Function.prototype.inherits
+import i18n from '@cdo/netsim/locale';
+import markup from './NetSimLogPanel.html.ejs';
+import Packet from './Packet';
+import packetMarkup from './NetSimLogPacket.html.ejs';
+import NetSimPanel from './NetSimPanel';
+import NetSimEncodingControl from './NetSimEncodingControl';
+import NetSimGlobals from './NetSimGlobals';
 
 /**
  * How long the "entrance" animation for new messages lasts, in milliseconds.

@@ -22,8 +22,8 @@
  * @author fraser@google.com (Neil Fraser)
  */
 import {SVG_NS} from './constants';
-var dom = require('./dom');
-var trySetSessionStorage = require('./utils').trySetSessionStorage;
+import dom from './dom';
+import {trySetSessionStorage} from './utils';
 
 var OVERRIDE_STORAGE_KEY = 'slider_value_override';
 
