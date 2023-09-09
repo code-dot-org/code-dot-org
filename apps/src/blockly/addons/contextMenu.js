@@ -309,4 +309,6 @@ function unregisterDefaultOptions() {
   } catch (error) {}
 }
 
-exports.registerAllContextMenuItems = registerAllContextMenuItems;
+export default {
+  registerAllContextMenuItems,
+};

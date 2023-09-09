@@ -65,8 +65,6 @@ var P5Wrapper = function () {
   };
 };
 
-module.exports = P5Wrapper;
-
 P5Wrapper.baseP5loadImage = null;
 
 /**
@@ -685,3 +683,5 @@ P5Wrapper.prototype.preloadAnimations = function (
     })
   );
 };
+
+export default P5Wrapper;

@@ -36,4 +36,4 @@ CraftVisualizationColumn.propTypes = {
   showFinishButton: PropTypes.bool.isRequired,
 };
 
-module.exports = CraftVisualizationColumn;
+export default CraftVisualizationColumn;

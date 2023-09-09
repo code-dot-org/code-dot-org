@@ -33,11 +33,7 @@ var binaryToAB = DataConverters.binaryToAB;
  * @constructor
  * @augments NetSimPanel
  */
-var NetSimSendPanel = (module.exports = function (
-  rootDiv,
-  levelConfig,
-  netsim
-) {
+export default function NetSimSendPanel(rootDiv, levelConfig, netsim) {
   /**
    * @type {NetSimLevelConfiguration}
    * @private
@@ -136,7 +132,7 @@ var NetSimSendPanel = (module.exports = function (
     className: 'netsim-send-panel',
     panelTitle: panelTitle,
   });
-});
+}
 NetSimSendPanel.inherits(NetSimPanel);
 
 /**

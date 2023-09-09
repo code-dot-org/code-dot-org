@@ -21,7 +21,7 @@ import NetSimUtils from './NetSimUtils';
  * @constructor
  * @augments NetSimPanel
  */
-var NetSimStatusPanel = (module.exports = function (rootDiv, callbacks) {
+function NetSimStatusPanel(rootDiv, callbacks) {
   /**
    * @type {function}
    * @private
@@ -35,7 +35,7 @@ var NetSimStatusPanel = (module.exports = function (rootDiv, callbacks) {
     userToggleable: false,
     beginMinimized: true,
   });
-});
+}
 NetSimStatusPanel.inherits(NetSimPanel);
 
 /**
@@ -73,3 +73,5 @@ NetSimStatusPanel.prototype.render = function (data) {
   // Button that takes you to the next level.
   NetSimUtils.makeContinueButton(this);
 };
+
+export default NetSimStatusPanel;

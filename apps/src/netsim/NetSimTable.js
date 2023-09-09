@@ -67,12 +67,7 @@ var DEFAULT_MINIMUM_DELAY_BETWEEN_REFRESHES_MS = 2500;
  * @throws {Error} if wrong number of arguments are provided.
  * @throws {TypeError} if invalid types are passed in the options object.
  */
-var NetSimTable = (module.exports = function (
-  channel,
-  shardID,
-  tableName,
-  options
-) {
+function NetSimTable(channel, shardID, tableName, options) {
   ArgumentUtils.validateRequired(channel, 'channel');
   ArgumentUtils.validateRequired(shardID, 'shardID', ArgumentUtils.isString);
   ArgumentUtils.validateRequired(
@@ -187,7 +182,7 @@ var NetSimTable = (module.exports = function (
    * @private {function}
    */
   this.refreshTable_ = this.makeThrottledRefresh_();
-});
+}
 
 /**
  * @returns {string} the configured table name.
@@ -609,3 +604,5 @@ NetSimTable.prototype.tick = function () {
 NetSimTable.prototype.onPubSubEvent_ = function () {
   this.refreshTable_();
 };
+
+export default NetSimTable;

@@ -24,7 +24,7 @@ var WHOLE_SHARD_EVENT = 'all_tables';
  * @param {!PubSubConfig} pubSubConfig
  * @constructor
  */
-var NetSimShard = (module.exports = function (shardID, pubSubConfig) {
+export default function NetSimShard(shardID, pubSubConfig) {
   /** @type {string} */
   this.id = shardID;
 
@@ -115,7 +115,7 @@ var NetSimShard = (module.exports = function (shardID, pubSubConfig) {
     useIncrementalRefresh: true,
   });
   this.logTable.unsubscribe();
-});
+}
 
 /**
  * Necessary tear-down for shard.  In particular, disconnecting

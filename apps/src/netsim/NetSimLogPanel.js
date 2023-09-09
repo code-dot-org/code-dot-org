@@ -86,7 +86,7 @@ var DEFAULT_MAXIMUM_LOG_PACKETS = 50;
  * @augments NetSimPanel
  * @implements INetSimLogPanel
  */
-var NetSimLogPanel = (module.exports = function (rootDiv, options) {
+export default function NetSimLogPanel(rootDiv, options) {
   /**
    * @type {Packet.HeaderType[]}
    * @private
@@ -145,7 +145,7 @@ var NetSimLogPanel = (module.exports = function (rootDiv, options) {
     panelTitle: options.logTitle,
     beginMinimized: options.isMinimized,
   });
-});
+}
 NetSimLogPanel.inherits(NetSimPanel);
 
 NetSimLogPanel.prototype.render = function () {

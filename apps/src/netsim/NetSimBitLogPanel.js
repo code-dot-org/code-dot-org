@@ -30,7 +30,7 @@ var logger = NetSimLogger.getSingleton();
  * @augments NetSimPanel
  * @implements INetSimLogPanel
  */
-var NetSimBitLogPanel = (module.exports = function (rootDiv, options) {
+function NetSimBitLogPanel(rootDiv, options) {
   /**
    * The current binary contents of the log panel
    * @type {string}
@@ -88,7 +88,7 @@ var NetSimBitLogPanel = (module.exports = function (rootDiv, options) {
     panelTitle: options.logTitle,
     beginMinimized: options.isMinimized,
   });
-});
+}
 NetSimBitLogPanel.inherits(NetSimPanel);
 
 NetSimBitLogPanel.prototype.render = function () {
@@ -245,3 +245,5 @@ NetSimBitLogPanel.prototype.onMinimizerClick_ = function () {
   NetSimBitLogPanel.superPrototype.onMinimizerClick_.call(this);
   NetSimGlobals.updateLayout();
 };
+
+export default NetSimBitLogPanel;

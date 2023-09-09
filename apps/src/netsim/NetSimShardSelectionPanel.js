@@ -34,11 +34,7 @@ var SELECTOR_NONE_VALUE = '';
  * @constructor
  * @augments NetSimPanel
  */
-var NetSimShardSelectionPanel = (module.exports = function (
-  rootDiv,
-  options,
-  callbacks
-) {
+function NetSimShardSelectionPanel(rootDiv, options, callbacks) {
   /**
    * @type {string}
    * @private
@@ -80,7 +76,7 @@ var NetSimShardSelectionPanel = (module.exports = function (
     panelTitle: i18n.pickASection(),
     userToggleable: false,
   });
-});
+}
 NetSimShardSelectionPanel.inherits(NetSimPanel);
 
 /**
@@ -177,3 +173,5 @@ NetSimShardSelectionPanel.prototype.onShardSelectKeyUp_ = function (
 NetSimShardSelectionPanel.prototype.setShardButtonClick_ = function () {
   this.setShardCallback_(this.getBody().find('#netsim-shard-select').val());
 };
+
+export default NetSimShardSelectionPanel;

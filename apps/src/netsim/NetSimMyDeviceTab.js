@@ -20,11 +20,7 @@ import NetSimGlobals from './NetSimGlobals';
  * @param {function} callbacks.encodingChangeCallback
  * @constructor
  */
-var NetSimMyDeviceTab = (module.exports = function (
-  rootDiv,
-  runLoop,
-  callbacks
-) {
+export default function NetSimMyDeviceTab(rootDiv, runLoop, callbacks) {
   /**
    * Component root, which we fill whenever we call render()
    * @type {jQuery}
@@ -94,7 +90,7 @@ var NetSimMyDeviceTab = (module.exports = function (
   this.encodingControl_ = null;
 
   this.render();
-});
+}
 
 /**
  * Fill the root div with new elements reflecting the current state

@@ -1,4 +1,4 @@
-// This file exports customized blocks for Google Blockly labs.
+// export customized blocks for Google Blockly labs.
 
 import {blocks as spritelabBlocks} from './spritelabBlocks';
 

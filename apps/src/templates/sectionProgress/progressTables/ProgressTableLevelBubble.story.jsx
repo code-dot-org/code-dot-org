@@ -175,7 +175,7 @@ const DotBubbles = () => (
 );
 stories['DotBubbles'] = DotBubbles;
 
-module.exports = {
+export default {
   ...stories,
   default: defaultExport,
 };

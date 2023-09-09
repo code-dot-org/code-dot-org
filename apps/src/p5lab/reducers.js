@@ -53,7 +53,7 @@ function gridOverlay(state, action) {
   }
 }
 
-module.exports = {
+export default {
   ...jsDebuggerReducers,
   animationPicker,
   animationTab,

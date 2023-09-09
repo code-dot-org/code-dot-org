@@ -87,7 +87,7 @@ var asciiToBinary = DataConverters.asciiToBinary;
  * @param {function} initialConfig.enterKeyPressedCallback
  * @constructor
  */
-var NetSimPacketEditor = (module.exports = function (initialConfig) {
+export default function NetSimPacketEditor(initialConfig) {
   var level = NetSimGlobals.getLevelConfig();
 
   /**
@@ -334,7 +334,7 @@ var NetSimPacketEditor = (module.exports = function (initialConfig) {
   this.ui_ = {};
 
   this.render();
-});
+}
 
 /**
  * Return root div, for hooking up to a parent element.

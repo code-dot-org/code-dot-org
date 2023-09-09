@@ -208,4 +208,4 @@ DropletBlockTooltipManager.prototype.setTooltipsEnabled = function (enabled) {
   this.tooltipsEnabled = !!enabled;
 };
 
-module.exports = DropletBlockTooltipManager;
+export default DropletBlockTooltipManager;

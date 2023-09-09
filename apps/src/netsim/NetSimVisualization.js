@@ -38,7 +38,7 @@ var SHOW_BACKGROUND = false;
  *        visualization can hook up to and respond to.
  * @constructor
  */
-var NetSimVisualization = (module.exports = function (rootDiv, runLoop) {
+function NetSimVisualization(rootDiv, runLoop) {
   /**
    * @private {jQuery}
    */
@@ -143,7 +143,7 @@ var NetSimVisualization = (module.exports = function (rootDiv, runLoop) {
   // Hook up tick and render methods
   runLoop.tick.register(this.tick.bind(this));
   runLoop.render.register(this.render.bind(this));
-});
+}
 
 /**
  * Tick: Update all vizentities, giving them an opportunity to recalculate
@@ -1057,3 +1057,5 @@ NetSimVisualization.prototype.getVizWireFromRemote = function () {
 
   return incomingWires[0];
 };
+
+export default NetSimVisualization;
