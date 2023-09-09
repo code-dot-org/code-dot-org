@@ -1,7 +1,7 @@
 import $ from 'jquery';
-var DropletFunctionTooltipMarkup = require('./DropletParameterTooltip.html.ejs');
-var tooltipUtils = require('./tooltipUtils.js');
-var dom = require('../dom');
+import DropletFunctionTooltipMarkup from './DropletParameterTooltip.html.ejs';
+import tooltipUtils from './tooltipUtils.js';
+import dom from '../dom';
 import {getAllAvailableDropletBlocks} from '../dropletUtils';
 
 /**

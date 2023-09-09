@@ -1,9 +1,9 @@
 import React from 'react';
-var msg = require('@cdo/locale');
+import msg from '@cdo/locale';
 
-var GameButtons = require('../templates/GameButtons').default;
-var BelowVisualization = require('../templates/BelowVisualization');
-var ProtectedStatefulDiv = require('../templates/ProtectedStatefulDiv');
+import GameButtons from '../templates/GameButtons';
+import BelowVisualization from '../templates/BelowVisualization';
+import ProtectedStatefulDiv from '../templates/ProtectedStatefulDiv';
 import ArrowButtons from '../templates/ArrowButtons';
 import ProtectedVisualizationDiv from '../templates/ProtectedVisualizationDiv';
 import SwipePrompt from '@cdo/apps/templates/SwipePrompt';

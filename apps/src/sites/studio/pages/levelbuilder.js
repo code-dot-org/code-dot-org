@@ -7,6 +7,14 @@ import copyToClipboard from '@cdo/apps/util/copyToClipboard';
 import {convertXmlToBlockly} from '@cdo/apps/templates/instructions/utils';
 import $ from 'jquery';
 
+import initializeCodeMirror from '@cdo/apps/code-studio/initializeCodeMirror';
+import initializeBlockPreview from '@cdo/apps/code-studio/initializeBlockPreview';
+import jsonEditor from '@cdo/apps/code-studio/jsonEditor';
+import acapela from '@cdo/apps/code-studio/acapela';
+import ajaxSubmit from '@cdo/apps/code-studio/ajaxSubmit';
+
+import commonBlocks from '@cdo/apps/blocksCommon';
+
 $(document).ready(initPage);
 
 function initPage() {
@@ -24,16 +32,16 @@ function initPage() {
 
 window.levelbuilder = window.levelbuilder || {};
 _.extend(window.levelbuilder, {
-  initializeCodeMirror: require('@cdo/apps/code-studio/initializeCodeMirror'),
-  initializeBlockPreview: require('@cdo/apps/code-studio/initializeBlockPreview'),
-  jsonEditor: require('@cdo/apps/code-studio/jsonEditor'),
-  acapela: require('@cdo/apps/code-studio/acapela'),
-  ajaxSubmit: require('@cdo/apps/code-studio/ajaxSubmit'),
+  initializeCodeMirror,
+  initializeBlockPreview,
+  jsonEditor,
+  acapela,
+  ajaxSubmit,
 });
 
 window.levelbuilder.installBlocks = function (app, blockly, options) {
+  // TODO @snickell ESM - what do we do with this? dynamic import() would be async...
   var appBlocks = require('@cdo/apps/' + app + '/blocks');
-  var commonBlocks = require('@cdo/apps/blocksCommon');
 
   commonBlocks.install(blockly, options);
   appBlocks.install(blockly, options);

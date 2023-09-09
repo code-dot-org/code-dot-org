@@ -1,8 +1,8 @@
 import React from 'react';
-var msg = require('@cdo/locale');
+import msg from '@cdo/locale';
 
-var GameButtons = require('../templates/GameButtons').default;
-var BelowVisualization = require('../templates/BelowVisualization');
+import GameButtons from '../templates/GameButtons';
+import BelowVisualization from '../templates/BelowVisualization';
 import ProtectedVisualizationDiv from '../templates/ProtectedVisualizationDiv';
 
 var EvalVisualizationColumn = function () {

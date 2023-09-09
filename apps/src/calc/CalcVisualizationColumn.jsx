@@ -1,6 +1,6 @@
-var React = require('react');
-var GameButtons = require('../templates/GameButtons').default;
-var BelowVisualization = require('../templates/BelowVisualization');
+import React from 'react';
+import GameButtons from '../templates/GameButtons';
+import BelowVisualization from '../templates/BelowVisualization';
 import ProtectedVisualizationDiv from '../templates/ProtectedVisualizationDiv';
 
 var CalcVisualizationColumn = function (props) {

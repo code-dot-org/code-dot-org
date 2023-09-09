@@ -15,8 +15,8 @@ import textConsole from './redux/textConsole';
 import spritelabInputList from './redux/spritelabInput';
 import poetry from './redux/poetry';
 import locales from '@cdo/apps/redux/localesRedux';
-var errorDialogStack = require('./redux/errorDialogStack').default;
-var P5LabInterfaceMode = require('./constants').P5LabInterfaceMode;
+import errorDialogStack from './redux/errorDialogStack';
+import {P5LabInterfaceMode} from './constants';
 
 function interfaceMode(state, action) {
   state = state || P5LabInterfaceMode.CODE;
