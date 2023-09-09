@@ -7,7 +7,8 @@ import locale from '@cdo/locale';
 
 import $ from 'jquery';
 import {trySetLocalStorage} from './utils';
-var dom = require('./dom');
+import dom from './dom';
+import puzzleRatingHTMLEJS from './templates/puzzleRating.html.ejs';
 
 var puzzleRatingUtils = {};
 
@@ -20,7 +21,7 @@ var puzzleRatingUtils = {};
 puzzleRatingUtils.buildPuzzleRatingButtons = function () {
   var buttonContainer = document.createElement('div');
   buttonContainer.id = 'puzzleRatingButtons';
-  buttonContainer.innerHTML = require('./templates/puzzleRating.html.ejs')({
+  buttonContainer.innerHTML = puzzleRatingHTMLEJS({
     label: locale.puzzleRatingQuestion(),
   });
 

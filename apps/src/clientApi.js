@@ -1,9 +1,12 @@
-// TODO: The client API should be instantiated with the channel ID, instead of grabbing it from the `dashboard.project` global.
 import queryString from 'query-string';
 import firehoseClient from './lib/util/firehose';
 
+import projectGlobal from './code-studio/initApp/project';
+
 function project() {
-  return require('./code-studio/initApp/project');
+  // TODO: The client API should be instantiated with the channel ID, instead
+  // of grabbing it from the `dashboard.project` global.
+  return projectGlobal;
 }
 
 function apiPath(endpoint, channelId, path) {

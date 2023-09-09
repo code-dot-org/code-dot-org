@@ -3,13 +3,14 @@
  */
 
 import $ from 'jquery';
-var utils = require('../utils'); // Provides String.prototype.repeat
-var _ = require('lodash');
-var i18n = require('@cdo/netsim/locale');
-var NetSimConstants = require('./NetSimConstants');
-var NetSimGlobals = require('./NetSimGlobals');
+import utils from '../utils'; // Provides String.prototype.repeat
+import _ from 'lodash';
+import i18n from '@cdo/netsim/locale';
+import NetSimConstants from './NetSimConstants';
+import NetSimGlobals from './NetSimGlobals';
+import NetSimLogger from './NetSimLogger';
 
-var logger = require('./NetSimLogger').getSingleton();
+var logger = NetSimLogger.getSingleton();
 
 var EncodingType = NetSimConstants.EncodingType;
 

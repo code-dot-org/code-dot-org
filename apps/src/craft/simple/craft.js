@@ -2,8 +2,8 @@ import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import trackEvent from '../../util/trackEvent';
-var studioApp = require('../../StudioApp').singleton;
-var craftMsg = require('../locale');
+import StudioApp from '../../StudioApp';
+import craftMsg from '../locale';
 import CustomMarshalingInterpreter from '../../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 import {
   GameController,
@@ -11,14 +11,14 @@ import {
   utils as CraftUtils,
 } from '@code-dot-org/craft';
 import {handlePlayerSelection} from '@cdo/apps/craft/utils';
-var dom = require('../../dom');
+import dom from '../../dom';
 import {trySetLocalStorage} from '@cdo/apps/utils';
-var houseLevels = require('./houseLevels');
-var levelbuilderOverrides = require('./levelbuilderOverrides');
-var MusicController = require('../../MusicController');
-var Provider = require('react-redux').Provider;
+import houseLevels from './houseLevels';
+import levelbuilderOverrides from './levelbuilderOverrides';
+import MusicController from '../../MusicController';
+import Provider from 'react-redux';
 import AppView from '../../templates/AppView';
-var CraftVisualizationColumn = require('./CraftVisualizationColumn');
+import CraftVisualizationColumn from './CraftVisualizationColumn';
 import {getStore} from '../../redux';
 import Sounds from '../../Sounds';
 
@@ -29,6 +29,9 @@ import PlayerSelectionDialog from '@cdo/apps/craft/PlayerSelectionDialog';
 import reducers from '@cdo/apps/craft/redux';
 import {muteCookieWithLevel} from '../../util/muteCookieHelpers';
 
+import houseSelectionHTMLEJS from './dialogs/houseSelection.html.ejs';
+
+var studioApp = StudioApp.singleton;
 var MEDIA_URL = '/blockly/media/craft/';
 
 /**
@@ -504,7 +507,7 @@ Craft.updateUIForCharacter = function (character) {
 
 Craft.showHouseSelectionPopup = function (onSelectedCallback) {
   var popupDiv = document.createElement('div');
-  popupDiv.innerHTML = require('./dialogs/houseSelection.html.ejs')({
+  popupDiv.innerHTML = houseSelectionHTMLEJS({
     image: studioApp().assetUrl(),
   });
   var selectedHouse = 'houseA';

@@ -5,7 +5,7 @@ import AppView from '../templates/AppView';
 import {getStore} from '../redux';
 import CustomMarshalingInterpreter from '../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 import {commands as audioCommands} from '../lib/util/audioApi';
-var dom = require('../dom');
+import dom from '../dom';
 import DanceVisualizationColumn from './DanceVisualizationColumn';
 import Sounds from '../Sounds';
 import {TestResults} from '../constants';

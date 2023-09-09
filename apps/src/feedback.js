@@ -36,6 +36,9 @@ import experiments from '@cdo/apps/util/experiments';
 import copyToClipboard from '@cdo/apps/util/copyToClipboard';
 import color from '@cdo/apps/util/color';
 
+import shareFailureHTMLEJS from './templates/shareFailure.html.ejs';
+import sharingHTMLEJS from './templates/sharing.html.ejs';
+
 // Types of blocks that do not count toward displayed block count. Used
 // by FeedbackUtils.blockShouldBeCounted_
 const UNCOUNTED_BLOCK_TYPES = ['draw_colour', 'alpha', 'comment'];
@@ -677,7 +680,7 @@ FeedbackUtils.prototype.getFeedbackButtons_ = function (options) {
 FeedbackUtils.prototype.getShareFailure_ = function (options) {
   var shareFailure = options.response.share_failure;
   var shareFailureDiv = document.createElement('div');
-  shareFailureDiv.innerHTML = require('./templates/shareFailure.html.ejs')({
+  shareFailureDiv.innerHTML = shareFailureHTMLEJS({
     shareFailure: shareFailure,
   });
   return shareFailureDiv;
@@ -961,7 +964,7 @@ FeedbackUtils.prototype.createSharingDiv = function (options) {
 
   var sharingDiv = document.createElement('div');
   sharingDiv.setAttribute('id', 'sharing');
-  sharingDiv.innerHTML = require('./templates/sharing.html.ejs')({
+  sharingDiv.innerHTML = sharingHTMLEJS({
     options: options,
   });
 
