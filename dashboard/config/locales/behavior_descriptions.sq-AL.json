@@ -222,38 +222,46 @@
           "rotate a sprite to its right": "rrotullo sprite ne te djathte "
         },
         "CourseF_outbreak1": {
-          "move a sprite, changing its direction randomly": "lëvizin një sprite, duke ia ndryshuar drejtimin "
+          "gradually recover from sickness": "gradualisht shërohen nga sëmundja",
+          "move a sprite, changing its direction randomly": "lëvizni një sprite, duke ndryshuar drejtimin e tij në mënyrë rastësore"
         },
         "CourseF_outbreak1_-2022-2": {
+          "gradually recover from sickness": "gradualisht shërohen nga sëmundja",
           "move a sprite, changing its direction randomly": "lëvizin një sprite, duke ia ndryshuar drejtimin "
         },
         "CourseF_outbreak2": {
-          "move a sprite, changing its direction randomly": "lëvizin një sprite, duke ia ndryshuar drejtimin "
+          "gradually recover from sickness": "gradualisht shërohen nga sëmundja",
+          "move a sprite, changing its direction randomly": "lëvizni një sprite, duke ndryshuar drejtimin e tij në mënyrë rastësore"
         },
         "CourseF_outbreak2_-2022-2": {
+          "gradually recover from sickness": "gradualisht shërohen nga sëmundja",
           "move a sprite, changing its direction randomly": "lëvizin një sprite, duke ia ndryshuar drejtimin "
         },
         "CourseF_outbreak3": {
-          "move a sprite, changing its direction randomly": "lëvizin një sprite, duke ia ndryshuar drejtimin "
+          "gradually recover from sickness": "gradualisht shërohen nga sëmundja",
+          "move a sprite, changing its direction randomly": "lëvizni një sprite, duke ndryshuar drejtimin e tij në mënyrë rastësore"
         },
         "CourseF_outbreak3_-2022-2": {
+          "gradually recover from sickness": "gradualisht shërohen nga sëmundja",
           "move a sprite, changing its direction randomly": "lëvizin një sprite, duke ia ndryshuar drejtimin "
         },
         "CourseF_outbreak4": {
           "change the size of a sprite": "ndryshoni madhësinë e një sprite",
-          "move a sprite across the screen, reversing direction if it touches the edges": "levizni nje sprite permes ekranit, duke ndrruar drejtimin e tij nese i prek qoshet e ekranit ",
-          "move a sprite downwards across the screen": "levizni nje sprite poshte ekranit ",
-          "move a sprite horizontally, reversing direction if it touches the edges of the screen": "lëvizin një sprite horizontalisht, drejtimin e kundërt në qoftë se ajo prek skajet e ekranit",
-          "move a sprite to the left across the screen": "lëvizin një sprite në të majtë te ekranit",
-          "move a sprite to the right across the screen": "levizni nje sprite ne te djathte te ekranit ",
+          "gradually recover from sickness": "gradualisht shërohen nga sëmundja",
+          "move a sprite across the screen, reversing direction if it touches the edges": "lëvizni një sprite nëpër ekran, duke ndërruar drejtimin e tij nëse i prek qoshet e ekranit ",
+          "move a sprite downwards across the screen": "levizni një sprite poshtë ekranit ",
+          "move a sprite horizontally, reversing direction if it touches the edges of the screen": "lëvizni një sprite horizontalisht, duke ndërruar drejtimin në anën e kundërt në qoftë se prek skajet e ekranit",
+          "move a sprite to the left across the screen": "lëvizni një sprite në të majtë të ekranit",
+          "move a sprite to the right across the screen": "lëvizni një sprite në të djathtë të ekranit",
           "move a sprite upwards across the screen": "lëvizni një sprite lart nëpër ekran",
-          "move a sprite, changing its direction randomly": "lëvizin një sprite, duke ia ndryshuar drejtimin ",
-          "randomly change the size of a sprite": "ndryshoni madhësinë e një sprite",
-          "rotate a sprite to its left": "rrotullo sprite ne te majte",
-          "rotate a sprite to its right": "rrotullo sprite ne te djathte "
+          "move a sprite, changing its direction randomly": "lëvizni një sprite, duke ndryshuar drejtimin e tij në mënyrë rastësore",
+          "randomly change the size of a sprite": "ndryshoni në mënyrë rastësore madhësinë e një sprite",
+          "rotate a sprite to its left": "rrotullo sprite-n në të majtë",
+          "rotate a sprite to its right": "rrotullo sprite-n në të djathtë "
         },
         "CourseF_outbreak4_-2022-2": {
           "change the size of a sprite": "ndryshoni madhësinë e një sprite",
+          "gradually recover from sickness": "gradualisht shërohen nga sëmundja",
           "move a sprite across the screen, reversing direction if it touches the edges": "levizni nje sprite permes ekranit, duke ndrruar drejtimin e tij nese i prek qoshet e ekranit ",
           "move a sprite downwards across the screen": "levizni nje sprite poshte ekranit ",
           "move a sprite horizontally, reversing direction if it touches the edges of the screen": "lëvizin një sprite horizontalisht, drejtimin e kundërt në qoftë se ajo prek skajet e ekranit",
@@ -266,32 +274,38 @@
           "rotate a sprite to its right": "rrotullo sprite ne te djathte "
         },
         "CourseF_outbreak5": {
-          "move a sprite, changing its direction randomly": "lëvizin një sprite, duke ia ndryshuar drejtimin "
+          "gradually recover from sickness": "gradualisht shërohen nga sëmundja",
+          "move a sprite, changing its direction randomly": "lëvizni një sprite, duke ndryshuar drejtimin e tij në mënyrë rastësore"
         },
         "CourseF_outbreak5_-2022-2": {
+          "gradually recover from sickness": "gradualisht shërohen nga sëmundja",
           "move a sprite, changing its direction randomly": "lëvizin një sprite, duke ia ndryshuar drejtimin "
         },
         "CourseF_outbreak6": {
-          "move a sprite, changing its direction randomly": "lëvizin një sprite, duke ia ndryshuar drejtimin "
+          "gradually recover from sickness": "gradualisht shërohen nga sëmundja",
+          "move a sprite, changing its direction randomly": "lëvizni një sprite, duke ndryshuar drejtimin e tij në mënyrë rastësore"
         },
         "CourseF_outbreak6_-2022-2": {
+          "gradually recover from sickness": "gradualisht shërohen nga sëmundja",
           "move a sprite, changing its direction randomly": "lëvizin një sprite, duke ia ndryshuar drejtimin "
         },
         "CourseF_outbreak7": {
           "change the size of a sprite": "ndryshoni madhësinë e një sprite",
-          "move a sprite across the screen, reversing direction if it touches the edges": "levizni nje sprite permes ekranit, duke ndrruar drejtimin e tij nese i prek qoshet e ekranit ",
+          "gradually recover from sickness": "gradualisht shërohen nga sëmundja",
+          "move a sprite across the screen, reversing direction if it touches the edges": "lëvizni një sprite nëpër ekran, duke ndërruar drejtimin e tij nëse i prek qoshet e ekranit ",
           "move a sprite downwards across the screen": "levizni nje sprite poshte ekranit ",
-          "move a sprite horizontally, reversing direction if it touches the edges of the screen": "lëvizin një sprite horizontalisht, drejtimin e kundërt në qoftë se ajo prek skajet e ekranit",
-          "move a sprite to the left across the screen": "lëvizin një sprite në të majtë te ekranit",
-          "move a sprite to the right across the screen": "levizni nje sprite ne te djathte te ekranit ",
+          "move a sprite horizontally, reversing direction if it touches the edges of the screen": "lëvizni një sprite horizontalisht, duke ndërruar drejtimin në anën e kundërt në qoftë se prek skajet e ekranit",
+          "move a sprite to the left across the screen": "lëvizni një sprite në të majtë të ekranit",
+          "move a sprite to the right across the screen": "lëvizni një sprite në të djathtë të ekranit",
           "move a sprite upwards across the screen": "lëvizni një sprite lart nëpër ekran",
-          "move a sprite, changing its direction randomly": "lëvizin një sprite, duke ia ndryshuar drejtimin ",
-          "randomly change the size of a sprite": "ndryshoni madhësinë e një sprite",
-          "rotate a sprite to its left": "rrotullo sprite ne te majte",
-          "rotate a sprite to its right": "rrotullo sprite ne te djathte "
+          "move a sprite, changing its direction randomly": "lëvizni një sprite, duke ndryshuar drejtimin e tij në mënyrë rastësore",
+          "randomly change the size of a sprite": "ndryshoni në mënyrë rastësore madhësinë e një sprite",
+          "rotate a sprite to its left": "rrotullo sprite-n në të majtë",
+          "rotate a sprite to its right": "rrotullo sprite-n në të djathtë "
         },
         "CourseF_outbreak7_-2022-2": {
           "change the size of a sprite": "ndryshoni madhësinë e një sprite",
+          "gradually recover from sickness": "gradualisht shërohen nga sëmundja",
           "move a sprite across the screen, reversing direction if it touches the edges": "levizni nje sprite permes ekranit, duke ndrruar drejtimin e tij nese i prek qoshet e ekranit ",
           "move a sprite downwards across the screen": "levizni nje sprite poshte ekranit ",
           "move a sprite horizontally, reversing direction if it touches the edges of the screen": "lëvizin një sprite horizontalisht, drejtimin e kundërt në qoftë se ajo prek skajet e ekranit",
@@ -305,6 +319,7 @@
         },
         "CourseF_outbreak8": {
           "change the size of a sprite": "ndryshoni madhësinë e një sprite",
+          "gradually recover from sickness": "gradualisht shërohen nga sëmundja",
           "move a sprite across the screen, reversing direction if it touches the edges": "levizni nje sprite permes ekranit, duke ndrruar drejtimin e tij nese i prek qoshet e ekranit ",
           "move a sprite downwards across the screen": "levizni nje sprite poshte ekranit ",
           "move a sprite horizontally, reversing direction if it touches the edges of the screen": "lëvizin një sprite horizontalisht, drejtimin e kundërt në qoftë se ajo prek skajet e ekranit",
@@ -318,6 +333,7 @@
         },
         "CourseF_outbreak8_-2022-2": {
           "change the size of a sprite": "ndryshoni madhësinë e një sprite",
+          "gradually recover from sickness": "gradualisht shërohen nga sëmundja",
           "move a sprite across the screen, reversing direction if it touches the edges": "levizni nje sprite permes ekranit, duke ndrruar drejtimin e tij nese i prek qoshet e ekranit ",
           "move a sprite downwards across the screen": "levizni nje sprite poshte ekranit ",
           "move a sprite horizontally, reversing direction if it touches the edges of the screen": "lëvizin një sprite horizontalisht, drejtimin e kundërt në qoftë se ajo prek skajet e ekranit",
@@ -1334,33 +1350,36 @@
           "rotate a sprite to its right": "rrotullo sprite ne te djathte "
         },
         "courseF_editable_card": {
-          "rotate a sprite to its left": "rrotullo sprite ne te majte"
+          "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "Lëviz përpara dhe mbrapa në një drejtim. Për të ndryshuar drejtimin që një sprite është duke patrulluar, ndryshoni \"drejtimin e lëvizjes\" së tij",
+          "rotate a sprite to its left": "rrotullo sprite-n në të majtë"
         },
         "courseF_editable_card_-2022-2": {
           "rotate a sprite to its left": "rrotullo sprite ne te majte"
         },
         "courseF_editable_chatbot": {
-          "rotate a sprite to its left": "rrotullo sprite ne te majte"
+          "Moves back and forth in one direction. To change the direction a sprite is patrolling, change its \"movement direction\"": "Lëviz përpara dhe mbrapa në një drejtim. Për të ndryshuar drejtimin që një sprite është duke patrulluar, ndryshoni \"drejtimin e lëvizjes\" së tij",
+          "rotate a sprite to its left": "rrotullo sprite-n në të majtë"
         },
         "courseF_editable_chatbot_-2022-2": {
           "rotate a sprite to its left": "rrotullo sprite ne te majte"
         },
         "courseF_editable_madlib": {
-          "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Leviz një sprite në të majtë nëpër ekran. Kur ajo shkon jashtë anën e majtë të ekranit, lëvizni atë përsëri në anën e djathtë të ekranit.",
-          "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Leviz një sprite në të djathte nëpër ekran. Kur ajo shkon jashtë anën e majtë të ekranit, lëvizin atë përsëri në anën e majte të ekranit.",
+          "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Zhvendosni një sprite në të majtë të ekranit. Kur largohet nga ana e majtë e ekranit, zhvendoseni përsëri në anën e djathtë të ekranit.",
+          "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Lëvizni një sprite në të djathtë të ekranit. Kur largohet nga ana e djathtë e ekranit, zhvendoseni përsëri në anën e majtë të ekranit.",
           "change the size of a sprite": "ndryshoni madhësinë e një sprite",
-          "move a sprite across the screen, reversing direction if it touches the edges": "levizni nje sprite permes ekranit, duke ndrruar drejtimin e tij nese i prek qoshet e ekranit ",
-          "move a sprite downwards across the screen": "levizni nje sprite poshte ekranit ",
-          "move a sprite horizontally, reversing direction if it touches the edges of the screen": "lëvizin një sprite horizontalisht, drejtimin e kundërt në qoftë se ajo prek skajet e ekranit",
+          "move a sprite across the screen, reversing direction if it touches the edges": "lëvizni një sprite nëpër ekran, duke ndërruar drejtimin e tij nëse i prek qoshet e ekranit ",
+          "move a sprite downwards across the screen": "levizni një sprite poshtë ekranit ",
+          "move a sprite horizontally, reversing direction if it touches the edges of the screen": "lëvizni një sprite horizontalisht, duke ndërruar drejtimin në anën e kundërt në qoftë se prek skajet e ekranit",
           "move a sprite if the user is pressing the arrow keys": "lëvizni një sprite nëse përdoruesi është duke shtypur tastet e shigjetave",
-          "move a sprite to the left across the screen": "lëvizin një sprite në të majtë te ekranit",
-          "move a sprite to the right across the screen": "levizni nje sprite ne te djathte te ekranit ",
+          "move a sprite to the left across the screen": "lëvizni një sprite në të majtë të ekranit",
+          "move a sprite to the right across the screen": "lëvizni një sprite në të djathtë të ekranit",
           "move a sprite upwards across the screen": "lëvizni një sprite lart nëpër ekran",
-          "move a sprite, changing its direction randomly": "lëvizin një sprite, duke ia ndryshuar drejtimin ",
-          "randomly change the size of a sprite": "ndryshoni madhësinë e një sprite",
-          "randomly change the vertical position of a sprite": "ndrysho pozicionin vertikal te nje sprite ",
-          "rotate a sprite to its left": "rrotullo sprite ne te majte",
-          "rotate a sprite to its right": "rrotullo sprite ne te djathte "
+          "move a sprite, changing its direction randomly": "lëvizni një sprite, duke ndryshuar drejtimin e tij në mënyrë rastësore",
+          "randomly change the size of a sprite": "ndryshoni në mënyrë rastësore madhësinë e një sprite",
+          "randomly change the vertical position of a sprite": "në mënyrë rastësore ndrysho pozicionin vertikal të një sprite ",
+          "randomly set the rotation of a sprite": "caktoni në mënyrë rastësore rrotullimin e një sprite",
+          "rotate a sprite to its left": "rrotullo sprite-n në të majtë",
+          "rotate a sprite to its right": "rrotullo sprite në të djathtë"
         },
         "courseF_editable_madlib_-2022-2": {
           "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Leviz një sprite në të majtë nëpër ekran. Kur ajo shkon jashtë anën e majtë të ekranit, lëvizni atë përsëri në anën e djathtë të ekranit.",
@@ -1538,18 +1557,19 @@
           "rotate a sprite to its right": "rrotullo sprite ne te djathte "
         },
         "courseF_events_freeplay_air": {
-          "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Leviz një sprite në të majtë nëpër ekran. Kur ajo shkon jashtë anën e majtë të ekranit, lëvizni atë përsëri në anën e djathtë të ekranit.",
-          "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Leviz një sprite në të djathte nëpër ekran. Kur ajo shkon jashtë anën e majtë të ekranit, lëvizin atë përsëri në anën e majte të ekranit.",
+          "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Zhvendosni një sprite në të majtë të ekranit. Kur largohet nga ana e majtë e ekranit, zhvendoseni përsëri në anën e djathtë të ekranit.",
+          "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Lëvizni një sprite në të djathtë të ekranit. Kur largohet nga ana e djathtë e ekranit, zhvendoseni përsëri në anën e majtë të ekranit.",
           "change the size of a sprite": "ndryshoni madhësinë e një sprite",
           "move a sprite downwards across the screen": "levizni nje sprite poshte ekranit ",
-          "move a sprite to the left across the screen": "lëvizin një sprite në të majtë te ekranit",
-          "move a sprite to the right across the screen": "levizni nje sprite ne te djathte te ekranit ",
+          "move a sprite to the left across the screen": "lëvizni një sprite në të majtë të ekranit",
+          "move a sprite to the right across the screen": "lëvizni një sprite në të djathtë të ekranit",
           "move a sprite upwards across the screen": "lëvizni një sprite lart nëpër ekran",
-          "move a sprite, changing its direction randomly": "lëvizin një sprite, duke ia ndryshuar drejtimin ",
-          "randomly change the size of a sprite": "ndryshoni madhësinë e një sprite",
-          "randomly change the vertical position of a sprite": "ndrysho pozicionin vertikal te nje sprite ",
-          "rotate a sprite to its left": "rrotullo sprite ne te majte",
-          "rotate a sprite to its right": "rrotullo sprite ne te djathte "
+          "move a sprite, changing its direction randomly": "lëvizni një sprite, duke ndryshuar drejtimin e tij në mënyrë rastësore",
+          "randomly change the size of a sprite": "ndryshoni në mënyrë rastësore madhësinë e një sprite",
+          "randomly change the vertical position of a sprite": "në mënyrë rastësore ndrysho pozicionin vertikal të një sprite ",
+          "randomly set the rotation of a sprite": "caktoni në mënyrë rastësore rrotullimin e një sprite",
+          "rotate a sprite to its left": "rrotullo sprite-n në të majtë",
+          "rotate a sprite to its right": "rrotullo sprite-n në të djathtë "
         },
         "courseF_events_freeplay_air_-2022-2": {
           "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Leviz një sprite në të majtë nëpër ekran. Kur ajo shkon jashtë anën e majtë të ekranit, lëvizni atë përsëri në anën e djathtë të ekranit.",
@@ -1566,18 +1586,19 @@
           "rotate a sprite to its right": "rrotullo sprite ne te djathte "
         },
         "courseF_events_freeplay_animals": {
-          "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Leviz një sprite në të majtë nëpër ekran. Kur ajo shkon jashtë anën e majtë të ekranit, lëvizni atë përsëri në anën e djathtë të ekranit.",
-          "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Leviz një sprite në të djathte nëpër ekran. Kur ajo shkon jashtë anën e majtë të ekranit, lëvizin atë përsëri në anën e majte të ekranit.",
+          "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Zhvendosni një sprite në të majtë të ekranit. Kur largohet nga ana e majtë e ekranit, zhvendoseni përsëri në anën e djathtë të ekranit.",
+          "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Lëvizni një sprite në të djathtë të ekranit. Kur largohet nga ana e djathtë e ekranit, zhvendoseni përsëri në anën e majtë të ekranit.",
           "change the size of a sprite": "ndryshoni madhësinë e një sprite",
-          "move a sprite downwards across the screen": "levizni nje sprite poshte ekranit ",
-          "move a sprite to the left across the screen": "lëvizin një sprite në të majtë te ekranit",
-          "move a sprite to the right across the screen": "levizni nje sprite ne te djathte te ekranit ",
+          "move a sprite downwards across the screen": "levizni një sprite poshtë ekranit ",
+          "move a sprite to the left across the screen": "lëvizni një sprite në të majtë të ekranit",
+          "move a sprite to the right across the screen": "lëvizni një sprite në të djathtë të ekranit",
           "move a sprite upwards across the screen": "lëvizni një sprite lart nëpër ekran",
-          "move a sprite, changing its direction randomly": "lëvizin një sprite, duke ia ndryshuar drejtimin ",
-          "randomly change the size of a sprite": "ndryshoni madhësinë e një sprite",
-          "randomly change the vertical position of a sprite": "ndrysho pozicionin vertikal te nje sprite ",
-          "rotate a sprite to its left": "rrotullo sprite ne te majte",
-          "rotate a sprite to its right": "rrotullo sprite ne te djathte "
+          "move a sprite, changing its direction randomly": "lëvizni një sprite, duke ndryshuar drejtimin e tij në mënyrë rastësore",
+          "randomly change the size of a sprite": "ndryshoni në mënyrë rastësore madhësinë e një sprite",
+          "randomly change the vertical position of a sprite": "në mënyrë rastësore ndrysho pozicionin vertikal të një sprite ",
+          "randomly set the rotation of a sprite": "caktoni në mënyrë rastësore rrotullimin e një sprite",
+          "rotate a sprite to its left": "rrotullo sprite-n në të majtë",
+          "rotate a sprite to its right": "rrotullo sprite-n në të djathtë "
         },
         "courseF_events_freeplay_animals_-2022-2": {
           "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Leviz një sprite në të majtë nëpër ekran. Kur ajo shkon jashtë anën e majtë të ekranit, lëvizni atë përsëri në anën e djathtë të ekranit.",
@@ -1594,18 +1615,19 @@
           "rotate a sprite to its right": "rrotullo sprite ne te djathte "
         },
         "courseF_events_freeplay_aquatic": {
-          "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Leviz një sprite në të majtë nëpër ekran. Kur ajo shkon jashtë anën e majtë të ekranit, lëvizni atë përsëri në anën e djathtë të ekranit.",
-          "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Leviz një sprite në të djathte nëpër ekran. Kur ajo shkon jashtë anën e majtë të ekranit, lëvizin atë përsëri në anën e majte të ekranit.",
+          "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Lëviz një sprite në të majtë nëpër ekran. Kur ajo shkon jashtë anës së majtë të ekranit, lëvizni atë përsëri në anën e djathtë të ekranit.",
+          "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Lëvizni një sprite në të djathtë përgjatë ekranit. Kur largohet nga ana e djathtë e ekranit, zhvendoseni përsëri në anën e majtë të ekranit.",
           "change the size of a sprite": "ndryshoni madhësinë e një sprite",
-          "move a sprite downwards across the screen": "levizni nje sprite poshte ekranit ",
-          "move a sprite to the left across the screen": "lëvizin një sprite në të majtë te ekranit",
-          "move a sprite to the right across the screen": "levizni nje sprite ne te djathte te ekranit ",
+          "move a sprite downwards across the screen": "levizni një sprite poshtë ekranit ",
+          "move a sprite to the left across the screen": "lëvizni një sprite në të majtë të ekranit",
+          "move a sprite to the right across the screen": "lëvizni një sprite në të djathtë të ekranit",
           "move a sprite upwards across the screen": "lëvizni një sprite lart nëpër ekran",
-          "move a sprite, changing its direction randomly": "lëvizin një sprite, duke ia ndryshuar drejtimin ",
-          "randomly change the size of a sprite": "ndryshoni madhësinë e një sprite",
-          "randomly change the vertical position of a sprite": "ndrysho pozicionin vertikal te nje sprite ",
-          "rotate a sprite to its left": "rrotullo sprite ne te majte",
-          "rotate a sprite to its right": "rrotullo sprite ne te djathte "
+          "move a sprite, changing its direction randomly": "lëvizni një sprite, duke ndryshuar drejtimin e tij në mënyrë rastësore",
+          "randomly change the size of a sprite": "ndryshoni në mënyrë rastësore madhësinë e një sprite",
+          "randomly change the vertical position of a sprite": "në mënyrë rastësore ndrysho pozicionin vertikal të një sprite ",
+          "randomly set the rotation of a sprite": "caktoni në mënyrë rastësore rrotullimin e një sprite",
+          "rotate a sprite to its left": "rrotullo sprite-n në të majtë",
+          "rotate a sprite to its right": "rrotullo sprite-n në të djathtë "
         },
         "courseF_events_freeplay_aquatic_-2022-2": {
           "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Leviz një sprite në të majtë nëpër ekran. Kur ajo shkon jashtë anën e majtë të ekranit, lëvizni atë përsëri në anën e djathtë të ekranit.",
@@ -1650,18 +1672,19 @@
           "rotate a sprite to its right": "rrotullo sprite ne te djathte "
         },
         "courseF_events_freeplay_food": {
-          "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Leviz një sprite në të majtë nëpër ekran. Kur ajo shkon jashtë anën e majtë të ekranit, lëvizni atë përsëri në anën e djathtë të ekranit.",
-          "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Leviz një sprite në të djathte nëpër ekran. Kur ajo shkon jashtë anën e majtë të ekranit, lëvizin atë përsëri në anën e majte të ekranit.",
+          "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Lëviz një sprite në të majtë nëpër ekran. Kur ajo shkon jashtë anës së majtë të ekranit, lëvizni atë përsëri në anën e djathtë të ekranit.",
+          "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Lëvizni një sprite në të djathtë përgjatë ekranit. Kur largohet nga ana e djathtë e ekranit, zhvendoseni përsëri në anën e majtë të ekranit.",
           "change the size of a sprite": "ndryshoni madhësinë e një sprite",
-          "move a sprite downwards across the screen": "levizni nje sprite poshte ekranit ",
-          "move a sprite to the left across the screen": "lëvizin një sprite në të majtë te ekranit",
-          "move a sprite to the right across the screen": "levizni nje sprite ne te djathte te ekranit ",
+          "move a sprite downwards across the screen": "levizni një sprite poshtë ekranit ",
+          "move a sprite to the left across the screen": "lëvizni një sprite në të majtë të ekranit",
+          "move a sprite to the right across the screen": "lëvizni një sprite në të djathtë të ekranit",
           "move a sprite upwards across the screen": "lëvizni një sprite lart nëpër ekran",
-          "move a sprite, changing its direction randomly": "lëvizin një sprite, duke ia ndryshuar drejtimin ",
-          "randomly change the size of a sprite": "ndryshoni madhësinë e një sprite",
-          "randomly change the vertical position of a sprite": "ndrysho pozicionin vertikal te nje sprite ",
-          "rotate a sprite to its left": "rrotullo sprite ne te majte",
-          "rotate a sprite to its right": "rrotullo sprite ne te djathte "
+          "move a sprite, changing its direction randomly": "lëvizni një sprite, duke ndryshuar drejtimin e tij në mënyrë rastësore",
+          "randomly change the size of a sprite": "ndryshoni në mënyrë rastësore madhësinë e një sprite",
+          "randomly change the vertical position of a sprite": "në mënyrë rastësore ndrysho pozicionin vertikal të një sprite ",
+          "randomly set the rotation of a sprite": "caktoni në mënyrë rastësore rrotullimin e një sprite",
+          "rotate a sprite to its left": "rrotullo sprite-n në të majtë",
+          "rotate a sprite to its right": "rrotullo sprite-n në të djathtë "
         },
         "courseF_events_freeplay_food_-2022-2": {
           "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Leviz një sprite në të majtë nëpër ekran. Kur ajo shkon jashtë anën e majtë të ekranit, lëvizni atë përsëri në anën e djathtë të ekranit.",
@@ -1678,18 +1701,19 @@
           "rotate a sprite to its right": "rrotullo sprite ne te djathte "
         },
         "courseF_events_freeplay_space": {
-          "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Leviz një sprite në të majtë nëpër ekran. Kur ajo shkon jashtë anën e majtë të ekranit, lëvizni atë përsëri në anën e djathtë të ekranit.",
-          "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Leviz një sprite në të djathte nëpër ekran. Kur ajo shkon jashtë anën e majtë të ekranit, lëvizin atë përsëri në anën e majte të ekranit.",
+          "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Zhvendosni një sprite në të majtë të ekranit. Kur largohet nga ana e majtë e ekranit, zhvendoseni përsëri në anën e djathtë të ekranit.",
+          "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Lëvizni një sprite në të djathtë të ekranit. Kur largohet nga ana e djathtë e ekranit, zhvendoseni përsëri në anën e majtë të ekranit.",
           "change the size of a sprite": "ndryshoni madhësinë e një sprite",
-          "move a sprite downwards across the screen": "levizni nje sprite poshte ekranit ",
-          "move a sprite to the left across the screen": "lëvizin një sprite në të majtë te ekranit",
-          "move a sprite to the right across the screen": "levizni nje sprite ne te djathte te ekranit ",
+          "move a sprite downwards across the screen": "levizni një sprite poshtë ekranit ",
+          "move a sprite to the left across the screen": "lëvizni një sprite në të majtë të ekranit",
+          "move a sprite to the right across the screen": "lëvizni një sprite në të djathtë të ekranit",
           "move a sprite upwards across the screen": "lëvizni një sprite lart nëpër ekran",
-          "move a sprite, changing its direction randomly": "lëvizin një sprite, duke ia ndryshuar drejtimin ",
-          "randomly change the size of a sprite": "ndryshoni madhësinë e një sprite",
-          "randomly change the vertical position of a sprite": "ndrysho pozicionin vertikal te nje sprite ",
-          "rotate a sprite to its left": "rrotullo sprite ne te majte",
-          "rotate a sprite to its right": "rrotullo sprite ne te djathte "
+          "move a sprite, changing its direction randomly": "lëvizni një sprite, duke ndryshuar drejtimin e tij në mënyrë rastësore",
+          "randomly change the size of a sprite": "ndryshoni në mënyrë rastësore madhësinë e një sprite",
+          "randomly change the vertical position of a sprite": "në mënyrë rastësore ndrysho pozicionin vertikal të një sprite ",
+          "randomly set the rotation of a sprite": "caktoni në mënyrë rastësore rrotullimin e një sprite",
+          "rotate a sprite to its left": "rrotullo sprite-n në të majtë",
+          "rotate a sprite to its right": "rrotullo sprite në të djathtë"
         },
         "courseF_events_freeplay_space_-2022-2": {
           "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Leviz një sprite në të majtë nëpër ekran. Kur ajo shkon jashtë anën e majtë të ekranit, lëvizni atë përsëri në anën e djathtë të ekranit.",
@@ -2017,16 +2041,16 @@
         },
         "courseF_label_predict": {
           "change the size of a sprite": "ndryshoni madhësinë e një sprite",
-          "move a sprite across the screen, reversing direction if it touches the edges": "levizni nje sprite permes ekranit, duke ndrruar drejtimin e tij nese i prek qoshet e ekranit ",
-          "move a sprite downwards across the screen": "levizni nje sprite poshte ekranit ",
-          "move a sprite horizontally, reversing direction if it touches the edges of the screen": "lëvizin një sprite horizontalisht, drejtimin e kundërt në qoftë se ajo prek skajet e ekranit",
-          "move a sprite to the left across the screen": "lëvizin një sprite në të majtë te ekranit",
-          "move a sprite to the right across the screen": "levizni nje sprite ne te djathte te ekranit ",
+          "move a sprite across the screen, reversing direction if it touches the edges": "lëvizni një sprite nëpër ekran, duke ndërruar drejtimin e tij nëse i prek qoshet e ekranit ",
+          "move a sprite downwards across the screen": "levizni një sprite poshtë ekranit ",
+          "move a sprite horizontally, reversing direction if it touches the edges of the screen": "lëvizni një sprite horizontalisht, duke ndërruar drejtimin në anën e kundërt në qoftë se prek skajet e ekranit",
+          "move a sprite to the left across the screen": "lëvizni një sprite në të majtë të ekranit",
+          "move a sprite to the right across the screen": "lëvizni një sprite në të djathtë të ekranit",
           "move a sprite upwards across the screen": "lëvizni një sprite lart nëpër ekran",
-          "move a sprite, changing its direction randomly": "lëvizin një sprite, duke ia ndryshuar drejtimin ",
-          "randomly change the size of a sprite": "ndryshoni madhësinë e një sprite",
-          "rotate a sprite to its left": "rrotullo sprite ne te majte",
-          "rotate a sprite to its right": "rrotullo sprite ne te djathte "
+          "move a sprite, changing its direction randomly": "lëvizni një sprite, duke ndryshuar drejtimin e tij në mënyrë rastësore",
+          "randomly change the size of a sprite": "ndryshoni në mënyrë rastësore madhësinë e një sprite",
+          "rotate a sprite to its left": "rrotullo sprite-n në të majtë",
+          "rotate a sprite to its right": "rrotullo sprite-n në të djathtë "
         },
         "courseF_label_predict_-2022-2": {
           "change the size of a sprite": "ndryshoni madhësinë e një sprite",
@@ -2182,18 +2206,19 @@
           "rotate a sprite to its right": "rrotullo sprite ne te djathte "
         },
         "courseF_sprites_freeplay_animals": {
-          "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Leviz një sprite në të majtë nëpër ekran. Kur ajo shkon jashtë anën e majtë të ekranit, lëvizni atë përsëri në anën e djathtë të ekranit.",
-          "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Leviz një sprite në të djathte nëpër ekran. Kur ajo shkon jashtë anën e majtë të ekranit, lëvizin atë përsëri në anën e majte të ekranit.",
+          "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Leviz një sprite në të majtë nëpër ekran. Kur ajo shkon jashtë anës së majtë të ekranit, lëvizni atë përsëri në anën e djathtë të ekranit.",
+          "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Lëvizni një sprite në të djathtë përgjatë ekranit. Kur largohet nga ana e djathtë e ekranit, zhvendoseni përsëri në anën e majtë të ekranit.",
           "change the size of a sprite": "ndryshoni madhësinë e një sprite",
-          "move a sprite downwards across the screen": "levizni nje sprite poshte ekranit ",
-          "move a sprite to the left across the screen": "lëvizin një sprite në të majtë te ekranit",
-          "move a sprite to the right across the screen": "levizni nje sprite ne te djathte te ekranit ",
+          "move a sprite downwards across the screen": "levizni një sprite poshtë ekranit ",
+          "move a sprite to the left across the screen": "lëvizni një sprite në të majtë të ekranit",
+          "move a sprite to the right across the screen": "lëvizni një sprite në të djathtë të ekranit",
           "move a sprite upwards across the screen": "lëvizni një sprite lart nëpër ekran",
-          "move a sprite, changing its direction randomly": "lëvizin një sprite, duke ia ndryshuar drejtimin ",
-          "randomly change the size of a sprite": "ndryshoni madhësinë e një sprite",
-          "randomly change the vertical position of a sprite": "ndrysho pozicionin vertikal te nje sprite ",
-          "rotate a sprite to its left": "rrotullo sprite ne te majte",
-          "rotate a sprite to its right": "rrotullo sprite ne te djathte "
+          "move a sprite, changing its direction randomly": "lëvizni një sprite, duke ndryshuar drejtimin e tij në mënyrë rastësore",
+          "randomly change the size of a sprite": "ndryshoni në mënyrë rastësore madhësinë e një sprite",
+          "randomly change the vertical position of a sprite": "në mënyrë rastësore ndrysho pozicionin vertikal të një sprite ",
+          "randomly set the rotation of a sprite": "caktoni në mënyrë rastësore rrotullimin e një sprite",
+          "rotate a sprite to its left": "rrotullo sprite-n në të majtë",
+          "rotate a sprite to its right": "rrotullo sprite-n në të djathtë "
         },
         "courseF_sprites_freeplay_animals_-2022-2": {
           "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Leviz një sprite në të majtë nëpër ekran. Kur ajo shkon jashtë anën e majtë të ekranit, lëvizni atë përsëri në anën e djathtë të ekranit.",
@@ -2299,15 +2324,16 @@
           "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Leviz një sprite në të majtë nëpër ekran. Kur ajo shkon jashtë anës së majtë të ekranit, lëvizni atë përsëri në anën e djathtë të ekranit.",
           "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Lëvizni një sprite në të djathtë përgjatë ekranit. Kur largohet nga ana e djathtë e ekranit, zhvendoseni përsëri në anën e majtë të ekranit.",
           "change the size of a sprite": "ndryshoni madhësinë e një sprite",
-          "move a sprite downwards across the screen": "levizni nje sprite poshte ekranit ",
+          "move a sprite downwards across the screen": "levizni një sprite poshtë ekranit ",
           "move a sprite to the left across the screen": "lëvizni një sprite në të majtë të ekranit",
           "move a sprite to the right across the screen": "lëvizni një sprite në të djathtë të ekranit",
           "move a sprite upwards across the screen": "lëvizni një sprite lart nëpër ekran",
-          "move a sprite, changing its direction randomly": "lëvizin një sprite, duke ia ndryshuar drejtimin ",
-          "randomly change the size of a sprite": "ndryshoni madhësinë e një sprite",
-          "randomly change the vertical position of a sprite": "ndrysho pozicionin vertikal te nje sprite ",
-          "rotate a sprite to its left": "rrotullo sprite ne te majte",
-          "rotate a sprite to its right": "rrotullo sprite ne te djathte "
+          "move a sprite, changing its direction randomly": "lëvizni një sprite, duke ndryshuar drejtimin e tij në mënyrë rastësore",
+          "randomly change the size of a sprite": "ndryshoni në mënyrë rastësore madhësinë e një sprite",
+          "randomly change the vertical position of a sprite": "në mënyrë rastësore ndrysho pozicionin vertikal të një sprite ",
+          "randomly set the rotation of a sprite": "caktoni në mënyrë rastësore rrotullimin e një sprite",
+          "rotate a sprite to its left": "rrotullo sprite-n në të majtë",
+          "rotate a sprite to its right": "rrotullo sprite-n në të djathtë "
         },
         "courseF_sprites_freeplay_space_-2022-2": {
           "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Leviz një sprite në të majtë nëpër ekran. Kur ajo shkon jashtë anën e majtë të ekranit, lëvizni atë përsëri në anën e djathtë të ekranit.",
@@ -2960,21 +2986,22 @@
           "rotate a sprite to its right": "rrotullo sprite ne te djathte "
         },
         "courseF_variables_card": {
-          "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Leviz një sprite në të majtë nëpër ekran. Kur ajo shkon jashtë anën e majtë të ekranit, lëvizni atë përsëri në anën e djathtë të ekranit.",
-          "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Leviz një sprite në të djathte nëpër ekran. Kur ajo shkon jashtë anën e majtë të ekranit, lëvizin atë përsëri në anën e majte të ekranit.",
+          "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Zhvendosni një sprite në të majtë të ekranit. Kur largohet nga ana e majtë e ekranit, zhvendoseni përsëri në anën e djathtë të ekranit.",
+          "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Lëvizni një sprite në të djathtë të ekranit. Kur largohet nga ana e djathtë e ekranit, zhvendoseni përsëri në anën e majtë të ekranit.",
           "change the size of a sprite": "ndryshoni madhësinë e një sprite",
-          "move a sprite across the screen, reversing direction if it touches the edges": "levizni nje sprite permes ekranit, duke ndrruar drejtimin e tij nese i prek qoshet e ekranit ",
-          "move a sprite downwards across the screen": "levizni nje sprite poshte ekranit ",
-          "move a sprite horizontally, reversing direction if it touches the edges of the screen": "lëvizin një sprite horizontalisht, drejtimin e kundërt në qoftë se ajo prek skajet e ekranit",
+          "move a sprite across the screen, reversing direction if it touches the edges": "lëvizni një sprite nëpër ekran, duke ndërruar drejtimin e tij nëse i prek qoshet e ekranit ",
+          "move a sprite downwards across the screen": "levizni një sprite poshtë ekranit ",
+          "move a sprite horizontally, reversing direction if it touches the edges of the screen": "lëvizni një sprite horizontalisht, duke ndërruar drejtimin në anën e kundërt në qoftë se prek skajet e ekranit",
           "move a sprite if the user is pressing the arrow keys": "lëvizni një sprite nëse përdoruesi është duke shtypur tastet e shigjetave",
-          "move a sprite to the left across the screen": "lëvizin një sprite në të majtë te ekranit",
-          "move a sprite to the right across the screen": "levizni nje sprite ne te djathte te ekranit ",
+          "move a sprite to the left across the screen": "lëvizni një sprite në të majtë të ekranit",
+          "move a sprite to the right across the screen": "lëvizni një sprite në të djathtë të ekranit",
           "move a sprite upwards across the screen": "lëvizni një sprite lart nëpër ekran",
-          "move a sprite, changing its direction randomly": "lëvizin një sprite, duke ia ndryshuar drejtimin ",
-          "randomly change the size of a sprite": "ndryshoni madhësinë e një sprite",
-          "randomly change the vertical position of a sprite": "ndrysho pozicionin vertikal te nje sprite ",
-          "rotate a sprite to its left": "rrotullo sprite ne te majte",
-          "rotate a sprite to its right": "rrotullo sprite ne te djathte "
+          "move a sprite, changing its direction randomly": "lëvizni një sprite, duke ndryshuar drejtimin e tij në mënyrë rastësore",
+          "randomly change the size of a sprite": "ndryshoni në mënyrë rastësore madhësinë e një sprite",
+          "randomly change the vertical position of a sprite": "në mënyrë rastësore ndrysho pozicionin vertikal të një sprite ",
+          "randomly set the rotation of a sprite": "caktoni në mënyrë rastësore rrotullimin e një sprite",
+          "rotate a sprite to its left": "rrotullo sprite-n në të majtë",
+          "rotate a sprite to its right": "rrotullo sprite-n në të djathtë "
         },
         "courseF_variables_card_-2022-2": {
           "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Leviz një sprite në të majtë nëpër ekran. Kur ajo shkon jashtë anën e majtë të ekranit, lëvizni atë përsëri në anën e djathtë të ekranit.",
@@ -2994,21 +3021,22 @@
           "rotate a sprite to its right": "rrotullo sprite ne te djathte "
         },
         "courseF_variables_card_finish": {
-          "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Leviz një sprite në të majtë nëpër ekran. Kur ajo shkon jashtë anën e majtë të ekranit, lëvizni atë përsëri në anën e djathtë të ekranit.",
-          "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Leviz një sprite në të djathte nëpër ekran. Kur ajo shkon jashtë anën e majtë të ekranit, lëvizin atë përsëri në anën e majte të ekranit.",
+          "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Zhvendosni një sprite në të majtë të ekranit. Kur largohet nga ana e majtë e ekranit, zhvendoseni përsëri në anën e djathtë të ekranit.",
+          "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Lëvizni një sprite në të djathtë të ekranit. Kur largohet nga ana e djathtë e ekranit, zhvendoseni përsëri në anën e majtë të ekranit.",
           "change the size of a sprite": "ndryshoni madhësinë e një sprite",
-          "move a sprite across the screen, reversing direction if it touches the edges": "levizni nje sprite permes ekranit, duke ndrruar drejtimin e tij nese i prek qoshet e ekranit ",
-          "move a sprite downwards across the screen": "levizni nje sprite poshte ekranit ",
-          "move a sprite horizontally, reversing direction if it touches the edges of the screen": "lëvizin një sprite horizontalisht, drejtimin e kundërt në qoftë se ajo prek skajet e ekranit",
+          "move a sprite across the screen, reversing direction if it touches the edges": "lëvizni një sprite nëpër ekran, duke ndërruar drejtimin e tij nëse i prek qoshet e ekranit ",
+          "move a sprite downwards across the screen": "levizni një sprite poshtë ekranit ",
+          "move a sprite horizontally, reversing direction if it touches the edges of the screen": "lëvizni një sprite horizontalisht, duke ndërruar drejtimin në anën e kundërt në qoftë se prek skajet e ekranit",
           "move a sprite if the user is pressing the arrow keys": "lëvizni një sprite nëse përdoruesi është duke shtypur tastet e shigjetave",
-          "move a sprite to the left across the screen": "lëvizin një sprite në të majtë te ekranit",
-          "move a sprite to the right across the screen": "levizni nje sprite ne te djathte te ekranit ",
+          "move a sprite to the left across the screen": "lëvizni një sprite në të majtë të ekranit",
+          "move a sprite to the right across the screen": "lëvizni një sprite në të djathtë të ekranit",
           "move a sprite upwards across the screen": "lëvizni një sprite lart nëpër ekran",
-          "move a sprite, changing its direction randomly": "lëvizin një sprite, duke ia ndryshuar drejtimin ",
-          "randomly change the size of a sprite": "ndryshoni madhësinë e një sprite",
-          "randomly change the vertical position of a sprite": "ndrysho pozicionin vertikal te nje sprite ",
-          "rotate a sprite to its left": "rrotullo sprite ne te majte",
-          "rotate a sprite to its right": "rrotullo sprite ne te djathte "
+          "move a sprite, changing its direction randomly": "lëvizni një sprite, duke ndryshuar drejtimin e tij në mënyrë rastësore",
+          "randomly change the size of a sprite": "ndryshoni në mënyrë rastësore madhësinë e një sprite",
+          "randomly change the vertical position of a sprite": "në mënyrë rastësore ndrysho pozicionin vertikal të një sprite ",
+          "randomly set the rotation of a sprite": "caktoni në mënyrë rastësore rrotullimin e një sprite",
+          "rotate a sprite to its left": "rrotullo sprite-n në të majtë",
+          "rotate a sprite to its right": "rrotullo sprite-n në të djathtë "
         },
         "courseF_variables_card_finish_-2022-2": {
           "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Leviz një sprite në të majtë nëpër ekran. Kur ajo shkon jashtë anën e majtë të ekranit, lëvizni atë përsëri në anën e djathtë të ekranit.",
@@ -3028,21 +3056,22 @@
           "rotate a sprite to its right": "rrotullo sprite ne te djathte "
         },
         "courseF_variables_chatbot": {
-          "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Leviz një sprite në të majtë nëpër ekran. Kur ajo shkon jashtë anën e majtë të ekranit, lëvizni atë përsëri në anën e djathtë të ekranit.",
-          "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Leviz një sprite në të djathte nëpër ekran. Kur ajo shkon jashtë anën e majtë të ekranit, lëvizin atë përsëri në anën e majte të ekranit.",
+          "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Zhvendosni një sprite në të majtë të ekranit. Kur largohet nga ana e majtë e ekranit, zhvendoseni përsëri në anën e djathtë të ekranit.",
+          "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Lëvizni një sprite në të djathtë të ekranit. Kur largohet nga ana e djathtë e ekranit, zhvendoseni përsëri në anën e majtë të ekranit.",
           "change the size of a sprite": "ndryshoni madhësinë e një sprite",
-          "move a sprite across the screen, reversing direction if it touches the edges": "levizni nje sprite permes ekranit, duke ndrruar drejtimin e tij nese i prek qoshet e ekranit ",
-          "move a sprite downwards across the screen": "levizni nje sprite poshte ekranit ",
-          "move a sprite horizontally, reversing direction if it touches the edges of the screen": "lëvizin një sprite horizontalisht, drejtimin e kundërt në qoftë se ajo prek skajet e ekranit",
+          "move a sprite across the screen, reversing direction if it touches the edges": "lëvizni një sprite nëpër ekran, duke ndërruar drejtimin e tij nëse i prek qoshet e ekranit ",
+          "move a sprite downwards across the screen": "levizni një sprite poshtë ekranit ",
+          "move a sprite horizontally, reversing direction if it touches the edges of the screen": "lëvizni një sprite horizontalisht, duke ndërruar drejtimin në anën e kundërt në qoftë se prek skajet e ekranit",
           "move a sprite if the user is pressing the arrow keys": "lëvizni një sprite nëse përdoruesi është duke shtypur tastet e shigjetave",
-          "move a sprite to the left across the screen": "lëvizin një sprite në të majtë te ekranit",
-          "move a sprite to the right across the screen": "levizni nje sprite ne te djathte te ekranit ",
+          "move a sprite to the left across the screen": "lëvizni një sprite në të majtë të ekranit",
+          "move a sprite to the right across the screen": "lëvizni një sprite në të djathtë të ekranit",
           "move a sprite upwards across the screen": "lëvizni një sprite lart nëpër ekran",
-          "move a sprite, changing its direction randomly": "lëvizin një sprite, duke ia ndryshuar drejtimin ",
-          "randomly change the size of a sprite": "ndryshoni madhësinë e një sprite",
-          "randomly change the vertical position of a sprite": "ndrysho pozicionin vertikal te nje sprite ",
-          "rotate a sprite to its left": "rrotullo sprite ne te majte",
-          "rotate a sprite to its right": "rrotullo sprite ne te djathte "
+          "move a sprite, changing its direction randomly": "lëvizni një sprite, duke ndryshuar drejtimin e tij në mënyrë rastësore",
+          "randomly change the size of a sprite": "ndryshoni në mënyrë rastësore madhësinë e një sprite",
+          "randomly change the vertical position of a sprite": "në mënyrë rastësore ndrysho pozicionin vertikal të një sprite ",
+          "randomly set the rotation of a sprite": "caktoni në mënyrë rastësore rrotullimin e një sprite",
+          "rotate a sprite to its left": "rrotullo sprite-n në të majtë",
+          "rotate a sprite to its right": "rrotullo sprite në të djathtë"
         },
         "courseF_variables_chatbot_-2022-2": {
           "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Leviz një sprite në të majtë nëpër ekran. Kur ajo shkon jashtë anën e majtë të ekranit, lëvizni atë përsëri në anën e djathtë të ekranit.",
@@ -3062,21 +3091,22 @@
           "rotate a sprite to its right": "rrotullo sprite ne te djathte "
         },
         "courseF_variables_chatbot_finish": {
-          "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Leviz një sprite në të majtë nëpër ekran. Kur ajo shkon jashtë anën e majtë të ekranit, lëvizni atë përsëri në anën e djathtë të ekranit.",
-          "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Leviz një sprite në të djathte nëpër ekran. Kur ajo shkon jashtë anën e majtë të ekranit, lëvizin atë përsëri në anën e majte të ekranit.",
+          "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Zhvendosni një sprite në të majtë të ekranit. Kur largohet nga ana e majtë e ekranit, zhvendoseni përsëri në anën e djathtë të ekranit.",
+          "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Lëvizni një sprite në të djathtë të ekranit. Kur largohet nga ana e djathtë e ekranit, zhvendoseni përsëri në anën e majtë të ekranit.",
           "change the size of a sprite": "ndryshoni madhësinë e një sprite",
-          "move a sprite across the screen, reversing direction if it touches the edges": "levizni nje sprite permes ekranit, duke ndrruar drejtimin e tij nese i prek qoshet e ekranit ",
-          "move a sprite downwards across the screen": "levizni nje sprite poshte ekranit ",
-          "move a sprite horizontally, reversing direction if it touches the edges of the screen": "lëvizin një sprite horizontalisht, drejtimin e kundërt në qoftë se ajo prek skajet e ekranit",
+          "move a sprite across the screen, reversing direction if it touches the edges": "lëvizni një sprite nëpër ekran, duke ndërruar drejtimin e tij nëse i prek qoshet e ekranit ",
+          "move a sprite downwards across the screen": "levizni një sprite poshtë ekranit ",
+          "move a sprite horizontally, reversing direction if it touches the edges of the screen": "lëvizni një sprite horizontalisht, duke ndërruar drejtimin në anën e kundërt në qoftë se prek skajet e ekranit",
           "move a sprite if the user is pressing the arrow keys": "lëvizni një sprite nëse përdoruesi është duke shtypur tastet e shigjetave",
-          "move a sprite to the left across the screen": "lëvizin një sprite në të majtë te ekranit",
-          "move a sprite to the right across the screen": "levizni nje sprite ne te djathte te ekranit ",
+          "move a sprite to the left across the screen": "lëvizni një sprite në të majtë të ekranit",
+          "move a sprite to the right across the screen": "lëvizni një sprite në të djathtë të ekranit",
           "move a sprite upwards across the screen": "lëvizni një sprite lart nëpër ekran",
-          "move a sprite, changing its direction randomly": "lëvizin një sprite, duke ia ndryshuar drejtimin ",
-          "randomly change the size of a sprite": "ndryshoni madhësinë e një sprite",
-          "randomly change the vertical position of a sprite": "ndrysho pozicionin vertikal te nje sprite ",
-          "rotate a sprite to its left": "rrotullo sprite ne te majte",
-          "rotate a sprite to its right": "rrotullo sprite ne te djathte "
+          "move a sprite, changing its direction randomly": "lëvizni një sprite, duke ndryshuar drejtimin e tij në mënyrë rastësore",
+          "randomly change the size of a sprite": "ndryshoni në mënyrë rastësore madhësinë e një sprite",
+          "randomly change the vertical position of a sprite": "në mënyrë rastësore ndrysho pozicionin vertikal të një sprite ",
+          "randomly set the rotation of a sprite": "caktoni në mënyrë rastësore rrotullimin e një sprite",
+          "rotate a sprite to its left": "rrotullo sprite-n në të majtë",
+          "rotate a sprite to its right": "rrotullo sprite-n në të djathtë "
         },
         "courseF_variables_chatbot_finish_-2022-2": {
           "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Leviz një sprite në të majtë nëpër ekran. Kur ajo shkon jashtë anën e majtë të ekranit, lëvizni atë përsëri në anën e djathtë të ekranit.",
@@ -3096,21 +3126,22 @@
           "rotate a sprite to its right": "rrotullo sprite ne te djathte "
         },
         "courseF_variables_madlib": {
-          "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Leviz një sprite në të majtë nëpër ekran. Kur ajo shkon jashtë anën e majtë të ekranit, lëvizni atë përsëri në anën e djathtë të ekranit.",
-          "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Leviz një sprite në të djathte nëpër ekran. Kur ajo shkon jashtë anën e majtë të ekranit, lëvizin atë përsëri në anën e majte të ekranit.",
+          "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Zhvendosni një sprite në të majtë të ekranit. Kur largohet nga ana e majtë e ekranit, zhvendoseni përsëri në anën e djathtë të ekranit.",
+          "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Lëvizni një sprite në të djathtë të ekranit. Kur largohet nga ana e djathtë e ekranit, zhvendoseni përsëri në anën e majtë të ekranit.",
           "change the size of a sprite": "ndryshoni madhësinë e një sprite",
-          "move a sprite across the screen, reversing direction if it touches the edges": "levizni nje sprite permes ekranit, duke ndrruar drejtimin e tij nese i prek qoshet e ekranit ",
-          "move a sprite downwards across the screen": "levizni nje sprite poshte ekranit ",
-          "move a sprite horizontally, reversing direction if it touches the edges of the screen": "lëvizin një sprite horizontalisht, drejtimin e kundërt në qoftë se ajo prek skajet e ekranit",
+          "move a sprite across the screen, reversing direction if it touches the edges": "lëvizni një sprite nëpër ekran, duke ndërruar drejtimin e tij nëse i prek qoshet e ekranit ",
+          "move a sprite downwards across the screen": "levizni një sprite poshtë ekranit ",
+          "move a sprite horizontally, reversing direction if it touches the edges of the screen": "lëvizni një sprite horizontalisht, duke ndërruar drejtimin në anën e kundërt në qoftë se prek skajet e ekranit",
           "move a sprite if the user is pressing the arrow keys": "lëvizni një sprite nëse përdoruesi është duke shtypur tastet e shigjetave",
-          "move a sprite to the left across the screen": "lëvizin një sprite në të majtë te ekranit",
-          "move a sprite to the right across the screen": "levizni nje sprite ne te djathte te ekranit ",
+          "move a sprite to the left across the screen": "lëvizni një sprite në të majtë të ekranit",
+          "move a sprite to the right across the screen": "lëvizni një sprite në të djathtë të ekranit",
           "move a sprite upwards across the screen": "lëvizni një sprite lart nëpër ekran",
-          "move a sprite, changing its direction randomly": "lëvizin një sprite, duke ia ndryshuar drejtimin ",
-          "randomly change the size of a sprite": "ndryshoni madhësinë e një sprite",
-          "randomly change the vertical position of a sprite": "ndrysho pozicionin vertikal te nje sprite ",
-          "rotate a sprite to its left": "rrotullo sprite ne te majte",
-          "rotate a sprite to its right": "rrotullo sprite ne te djathte "
+          "move a sprite, changing its direction randomly": "lëvizni një sprite, duke ndryshuar drejtimin e tij në mënyrë rastësore",
+          "randomly change the size of a sprite": "ndryshoni në mënyrë rastësore madhësinë e një sprite",
+          "randomly change the vertical position of a sprite": "në mënyrë rastësore ndrysho pozicionin vertikal të një sprite ",
+          "randomly set the rotation of a sprite": "caktoni në mënyrë rastësore rrotullimin e një sprite",
+          "rotate a sprite to its left": "rrotullo sprite-n në të majtë",
+          "rotate a sprite to its right": "rrotullo sprite-n në të djathtë "
         },
         "courseF_variables_madlib_-2022-2": {
           "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Leviz një sprite në të majtë nëpër ekran. Kur ajo shkon jashtë anën e majtë të ekranit, lëvizni atë përsëri në anën e djathtë të ekranit.",
@@ -3130,21 +3161,22 @@
           "rotate a sprite to its right": "rrotullo sprite ne te djathte "
         },
         "courseF_variables_madlib_finish": {
-          "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Leviz një sprite në të majtë nëpër ekran. Kur ajo shkon jashtë anën e majtë të ekranit, lëvizni atë përsëri në anën e djathtë të ekranit.",
-          "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Leviz një sprite në të djathte nëpër ekran. Kur ajo shkon jashtë anën e majtë të ekranit, lëvizin atë përsëri në anën e majte të ekranit.",
+          "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Zhvendosni një sprite në të majtë të ekranit. Kur largohet nga ana e majtë e ekranit, zhvendoseni përsëri në anën e djathtë të ekranit.",
+          "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Lëvizni një sprite në të djathtë të ekranit. Kur largohet nga ana e djathtë e ekranit, zhvendoseni përsëri në anën e majtë të ekranit.",
           "change the size of a sprite": "ndryshoni madhësinë e një sprite",
-          "move a sprite across the screen, reversing direction if it touches the edges": "levizni nje sprite permes ekranit, duke ndrruar drejtimin e tij nese i prek qoshet e ekranit ",
-          "move a sprite downwards across the screen": "levizni nje sprite poshte ekranit ",
-          "move a sprite horizontally, reversing direction if it touches the edges of the screen": "lëvizin një sprite horizontalisht, drejtimin e kundërt në qoftë se ajo prek skajet e ekranit",
+          "move a sprite across the screen, reversing direction if it touches the edges": "lëvizni një sprite nëpër ekran, duke ndërruar drejtimin e tij nëse i prek qoshet e ekranit ",
+          "move a sprite downwards across the screen": "levizni një sprite poshtë ekranit ",
+          "move a sprite horizontally, reversing direction if it touches the edges of the screen": "lëvizni një sprite horizontalisht, duke ndërruar drejtimin në anën e kundërt në qoftë se prek skajet e ekranit",
           "move a sprite if the user is pressing the arrow keys": "lëvizni një sprite nëse përdoruesi është duke shtypur tastet e shigjetave",
-          "move a sprite to the left across the screen": "lëvizin një sprite në të majtë te ekranit",
-          "move a sprite to the right across the screen": "levizni nje sprite ne te djathte te ekranit ",
+          "move a sprite to the left across the screen": "lëvizni një sprite në të majtë të ekranit",
+          "move a sprite to the right across the screen": "lëvizni një sprite në të djathtë të ekranit",
           "move a sprite upwards across the screen": "lëvizni një sprite lart nëpër ekran",
-          "move a sprite, changing its direction randomly": "lëvizin një sprite, duke ia ndryshuar drejtimin ",
-          "randomly change the size of a sprite": "ndryshoni madhësinë e një sprite",
-          "randomly change the vertical position of a sprite": "ndrysho pozicionin vertikal te nje sprite ",
-          "rotate a sprite to its left": "rrotullo sprite ne te majte",
-          "rotate a sprite to its right": "rrotullo sprite ne te djathte "
+          "move a sprite, changing its direction randomly": "lëvizni një sprite, duke ndryshuar drejtimin e tij në mënyrë rastësore",
+          "randomly change the size of a sprite": "ndryshoni në mënyrë rastësore madhësinë e një sprite",
+          "randomly change the vertical position of a sprite": "në mënyrë rastësore ndrysho pozicionin vertikal të një sprite ",
+          "randomly set the rotation of a sprite": "caktoni në mënyrë rastësore rrotullimin e një sprite",
+          "rotate a sprite to its left": "rrotullo sprite-n në të majtë",
+          "rotate a sprite to its right": "rrotullo sprite në të djathtë"
         },
         "courseF_variables_madlib_finish_-2022-2": {
           "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Leviz një sprite në të majtë nëpër ekran. Kur ajo shkon jashtë anën e majtë të ekranit, lëvizni atë përsëri në anën e djathtë të ekranit.",
@@ -3722,21 +3754,22 @@
           "rotate a sprite to its right": "rrotullo sprite ne te djathte "
         },
         "simcustom_2021": {
-          "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Leviz një sprite në të majtë nëpër ekran. Kur ajo shkon jashtë anën e majtë të ekranit, lëvizni atë përsëri në anën e djathtë të ekranit.",
-          "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Leviz një sprite në të djathte nëpër ekran. Kur ajo shkon jashtë anën e majtë të ekranit, lëvizin atë përsëri në anën e majte të ekranit.",
+          "Move a sprite to the left across the screen. When it goes off the left side of the screen, move it back to the right side of the screen.": "Zhvendosni një sprite në të majtë të ekranit. Kur largohet nga ana e majtë e ekranit, zhvendoseni përsëri në anën e djathtë të ekranit.",
+          "Move a sprite to the right across the screen. When it goes off the right side of the screen, move it back to the left side of the screen.": "Lëvizni një sprite në të djathtë të ekranit. Kur largohet nga ana e djathtë e ekranit, zhvendoseni përsëri në anën e majtë të ekranit.",
           "change the size of a sprite": "ndryshoni madhësinë e një sprite",
-          "move a sprite across the screen, reversing direction if it touches the edges": "levizni nje sprite permes ekranit, duke ndrruar drejtimin e tij nese i prek qoshet e ekranit ",
-          "move a sprite downwards across the screen": "levizni nje sprite poshte ekranit ",
-          "move a sprite horizontally, reversing direction if it touches the edges of the screen": "lëvizin një sprite horizontalisht, drejtimin e kundërt në qoftë se ajo prek skajet e ekranit",
+          "move a sprite across the screen, reversing direction if it touches the edges": "lëvizni një sprite nëpër ekran, duke ndërruar drejtimin e tij nëse i prek qoshet e ekranit ",
+          "move a sprite downwards across the screen": "levizni një sprite poshtë ekranit ",
+          "move a sprite horizontally, reversing direction if it touches the edges of the screen": "lëvizni një sprite horizontalisht, duke ndërruar drejtimin në anën e kundërt në qoftë se prek skajet e ekranit",
           "move a sprite if the user is pressing the arrow keys": "lëvizni një sprite nëse përdoruesi është duke shtypur tastet e shigjetave",
-          "move a sprite to the left across the screen": "lëvizin një sprite në të majtë te ekranit",
-          "move a sprite to the right across the screen": "levizni nje sprite ne te djathte te ekranit ",
+          "move a sprite to the left across the screen": "lëvizni një sprite në të majtë të ekranit",
+          "move a sprite to the right across the screen": "lëvizni një sprite në të djathtë të ekranit",
           "move a sprite upwards across the screen": "lëvizni një sprite lart nëpër ekran",
-          "move a sprite, changing its direction randomly": "lëvizin një sprite, duke ia ndryshuar drejtimin ",
-          "randomly change the size of a sprite": "ndryshoni madhësinë e një sprite",
-          "randomly change the vertical position of a sprite": "ndrysho pozicionin vertikal te nje sprite ",
-          "rotate a sprite to its left": "rrotullo sprite ne te majte",
-          "rotate a sprite to its right": "rrotullo sprite ne te djathte "
+          "move a sprite, changing its direction randomly": "lëvizni një sprite, duke ndryshuar drejtimin e tij në mënyrë rastësore",
+          "randomly change the size of a sprite": "ndryshoni në mënyrë rastësore madhësinë e një sprite",
+          "randomly change the vertical position of a sprite": "në mënyrë rastësore ndrysho pozicionin vertikal të një sprite ",
+          "randomly set the rotation of a sprite": "caktoni në mënyrë rastësore rrotullimin e një sprite",
+          "rotate a sprite to its left": "rrotullo sprite-n në të majtë",
+          "rotate a sprite to its right": "rrotullo sprite në të djathtë"
         }
       }
     }

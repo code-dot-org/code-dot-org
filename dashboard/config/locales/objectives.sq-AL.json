@@ -246,7 +246,7 @@
           "description": "Krijoni dhe përdorni një sprite"
         },
         "99befbcc-2654-44cc-a2f9-fe0cde1ab146": {
-          "description": "Përdorni pikë shënimin për të përditësuar parametrat e një sprite"
+          "description": "Përdorni pikë shënimin për të përditësuar atributet e një sprite"
         },
         "c61f1e5d-d728-499d-9729-a1ff2db8de64": {
           "description": "Vendosni tekstin në ekran duke përdorur rrafshin koordinativ."
@@ -256,6 +256,93 @@
         },
         "d6709c2c-76b3-495d-bb07-af8a4c772363": {
           "description": "Përdorni një proces të strukturuar për të planifikuar dhe zhvilluar një program."
+        },
+        "6828e8c6-bde7-4e8f-842d-04bd41a46eb4": {
+          "description": "Shpjegoni se si draw loop lejon krijimin e animacioneve në Game Lab"
+        },
+        "9ed14237-271b-4890-b05c-04bde1c706fc": {
+          "description": "Përdorni draw loop në kombinim me komandën RandomNumber (), format dhe spritet për të bërë animacione të thjeshta"
+        },
+        "ef9e41ae-04ee-4b48-a59e-06f87ff5c9d9": {
+          "description": "Përdorni modelin kundërpëgjigjës për të rritur ose zvogëluar atributet e sprite"
+        },
+        "32725306-4405-48d1-871c-ce44cd180b0c": {
+          "description": "Identifikoni cilat atribute të sprite duhet të ndryshohen, dhe në çfarë mënyre, për të arritur një lëvizje specifike"
+        },
+        "ac9b5e0b-ce84-48f1-8d9e-3957b6d3ac16": {
+          "description": "Përdorni conditionals për të reaguar ndaj ndryshimeve në variablat dhe atributet e sprite"
+        },
+        "1bd55841-3a6b-45b8-9a2c-7ad9b9df5102": {
+          "description": "Përdorni conditionals për të reaguar ndaj input-eve nga tastiera"
+        },
+        "aee02da5-9e5d-4c9b-b43d-7576a405fd5d": {
+          "description": "Lëvizni spritet në bazë të input-eve nga tastiera"
+        },
+        "6c2364e6-a17c-4b0c-856e-71ba8ec2b4c7": {
+          "description": "Përdorni një deklaratë if-else për të kontrolluar rrjedhën e programit."
+        },
+        "317b8134-0316-46e4-b56c-4adba284eab6": {
+          "description": "Përgjigjuni për një llojet e ndryshme të input-eve të përdoruesit. "
+        },
+        "58e13b51-2fb9-4de3-a547-dfe7bb9e71b0": {
+          "description": "Përdorni conditionals për të reaguar ndaj input-eve të tastierës ose ndryshimeve në variabla/atribute"
+        },
+        "286ec7b0-0776-4049-9174-3deeb1d80c14": {
+          "description": "Komandat e sekuestruara të vizatuara në mënyrën e duhur"
+        },
+        "899e51b2-2cb8-4948-9987-aaada64c6a85": {
+          "description": "Aplikoni një model iterator në variablat ose atributat në një loop"
+        },
+        "ebf0954f-2190-4e20-8420-f0275aceee0a": {
+          "description": "Përdorni blloqet e drejtimit dhe shpejtësis së rrotullimit për të krijuar dhe ndryshuar lëvizjet sprite"
+        },
+        "01426fc9-55b3-41ec-92ec-fb871a4739b1": {
+          "description": "Përshkruani avantazhet e thjeshtimit të kodit duke përdorur blloqe të nivelit më të lartë"
+        },
+        "bb7bce08-c20e-4a8b-8b3e-def24447e33f": {
+          "description": "Zbuloni kur spritet prekin ose mbivendosen dhe ndryshoni programin në përgjigje. "
+        },
+        "d3aa02b0-9340-47ab-b258-5446686c77b4": {
+          "description": "Përshkruani si abstraksionet ndihmojnë për të menaxhuar kompleksitetin e kodit"
+        },
+        "63135326-7d2f-4974-af73-f8d7a801cd04": {
+          "description": "Përdorni drejtimin e sprite me modelin e kundërtpërgjigjës për të krijuar lloje të ndryshme të lëvizjeve sprite"
+        },
+        "6ed44bf4-19c7-4fd2-b72d-527e7c1ed3f3": {
+          "description": "Shpjegoni se si mund të kombinohen konstruktet individuale të programimit për të krijuar sjellje më kompleke"
+        },
+        "2a7e04b6-f408-4915-a8df-10a590d5b45a": {
+          "description": "Modelo llojeve të ndryshme të ndërveprimeve midis sprites."
+        },
+        "ba90afe9-19b4-4a19-b7e7-9cc6dcc94b86": {
+          "description": "Përshkruani se si abstraksionet mund të ndërtohen për të zhvilluar abstraksione të mëtejshme"
+        },
+        "3572828f-fdf1-4708-bfd1-1a021799e8fd": {
+          "description": "Krijoni dhe përdorni funksione për blloqet e kodit që kryejnë një detyrë të vetme të nivelit të lartë brenda një programi"
+        },
+        "9d1d61de-4fa4-458f-b11f-aee208854019": {
+          "description": "Shpjegoni avantazhet e përdorimit të funksioneve në një program"
+        },
+        "dd877754-8fc0-4026-9205-385c6a3a2e4e": {
+          "description": "Shpjegoni se si funksionet lejojnë programuesit të arsyetojnë për një program në një nivel më të lartë"
+        },
+        "1cfd94eb-3bdf-4628-b8c5-2caeaa3dc189": {
+          "description": "Zbatoni veçori të ndryshme të një programi duke ndjekur një udhëzues të strukturuar të projektit"
+        },
+        "87b37b88-d7c7-4ad7-a5bc-f4be00ef3016": {
+          "description": "Identifikoni konstruktet kryesore të programimit të nevojshme për të ndërtuar komponentë të ndryshëm të një loje"
+        },
+        "cb1a4260-ee88-49c1-abf7-92dfc8d1dc16": {
+          "description": " Zbatoni veçori të ndryshme të një programi duke ndjekur një udhëzues të strukturuar të projektit"
+        },
+        "0b62d335-144f-495a-971c-fb1ee82f154a": {
+          "description": "Në mënyrë të pavarur shkruani tiparet e një pjese softuerike"
+        },
+        "ea476a5f-3a8d-4c7a-bb2c-c6e58d216ef3": {
+          "description": "Krijoni një plan për ndërtimin e një pjese të softuerit duke përshkruar komponentët kryesorë të tij"
+        },
+        "7f488fda-a480-4f40-814d-6a2810780b38": {
+          "description": "Zbatoni një plan për krijimin e një pjese të softuerit"
         },
         "3b95dc76-39ee-44e7-a5b0-b1aa20d51094": {
           "description": "Trajnoni dhe testoni një model të mësimit të makinës."
@@ -314,6 +401,9 @@
         "5b183dd0-2691-4e31-81d2-74139e335e46": {
           "description": "Përfaqësojnë një vlerë të sensorit në mënyra të ndryshme"
         },
+        "52c81204-19e3-433f-a6f2-9c7342c37b72": {
+          "description": "Zbatoni veçori të ndryshme të një programi duke ndjekur një udhëzues të strukturuar të projektit"
+        },
         "828e50ab-ef2c-41af-987d-6a2c97c0eeda": {
           "description": "Zhvillojnë një program që i përgjigjet ngjarjeve nga një hyrje harduerike"
         },
@@ -355,6 +445,51 @@
         },
         "cbd66e36-6a02-4227-8674-70636d61b455": {
           "description": "Përdorin ngjarjen e të dhënave për të përditësuar vazhdimisht tiparet e një elementi."
+        },
+        "6db0b0d2-7aa7-4da1-aa47-33581d3b7c8f": {
+          "description": "Përdorin parametrat për të përgjithësuar qëllimin e një funksioni."
+        },
+        "14b8c405-027c-4aa5-8a31-235dfc98dcc3": {
+          "description": "Krijojnë dhe korrigjojnë qarqet e thjeshta"
+        },
+        "f81a856f-07a6-49f0-aab0-f3c6da5d125b": {
+          "description": "Zhvillojnë një protip fizik interaktiv që kombinon softuerin dhe harduerin"
+        },
+        "cb58f0fd-2266-48fa-80b7-f584aabbd19a": {
+          "description": "Konsiderojnë nevojat e përdoruesve të ndryshëm kur dizajnoni një produkt"
+        },
+        "f574312e-c0f6-4d4c-a52a-10e2874d55ba": {
+          "description": "Në mënyrë të pavarur shkruani tiparet e një pjese softuerike"
+        },
+        "46a593f4-3334-477c-9bac-f1fa12e83979": {
+          "description": "Bëjnë prototip të një pajisje informatike fizike"
+        },
+        "5ae2739b-3776-43ba-973f-50fa22302e32": {
+          "description": "Zbatojnë një plan për zhvillimin e një pjese të softuerit që integron inputet dhe rezultatet e harduerit"
+        },
+        "56d03b70-1f5b-408c-a3d4-bd8439cc372e": {
+          "description": "Aplikojnë procesin e zgjidhjes së problemeve për të trajnuar një kompjuter për të zgjidhur një problem"
+        },
+        "3160fb3d-404e-41b2-b8dc-ad2f4baf630c": {
+          "description": "Përshkruajnë ndryshimet midis të mësuarit të mbikëqyrur dhe të pambikëqyrur."
+        },
+        "5e9ca97a-3af9-4a06-bab7-09e6831a6070": {
+          "description": "Përshkruajnë se si Inteligjenca Artificiale po ndikon në shoqëri"
+        },
+        "83f51427-8851-4311-b7d6-bc2dc72898f0": {
+          "description": "Përshkruajnë se si një model merr një vendim (për shembull: me rastësi, ose një pemë vendimi, ose duke përdorur të dhëna)"
+        },
+        "554a2d22-308b-4e01-be9d-b8bd9287a065": {
+          "description": "Kërkojnë modele në të dhëna për të ndihmuar në marrjen e një vendimi"
+        },
+        "8870551e-1d9f-4c03-b78e-e1ac184cba86": {
+          "description": "Shpjegojnë se si kompjuteri mund të ndajë të dhënat për të marrë një vendim"
+        },
+        "aa76cd8b-eb6b-48ee-92f9-e48af49997c0": {
+          "description": "Përdorin AI Lab për të zgjedhur veçoritë për të trajnuar një model"
+        },
+        "7d06da51-46a7-4210-9366-091598d8f8cf": {
+          "description": "Përdorin mjetet e vizualizimit të të dhënave për të vendosur se cilat veçori duhet të përfshihen kur trajnoni një model"
         },
         "a725215f-d267-47c0-b5ee-8eb6dc25e995": {
           "description": "Zbulo se interneti mund të përdoret për të vizituar vende të largëta dhe për të mësuar gjëra të reja"
@@ -675,10 +810,16 @@
           "description": "Kapërcejnë pengesat të tilla si kufizimet kohore ose bugs."
         },
         "e546a87d-131a-4d75-b2c6-d5942ee4a0c0": {
-          "description": "Përcakto termin “fjalëkalim” dhe përshkruaj qëllimin e një fjalëkalimi."
+          "description": "Përcaktojnë termin “fjalëkalim” dhe përshkruajnë qëllimin e një fjalëkalimi."
         },
         "ea9adc1d-dc64-4a08-a97f-19eec1e448e6": {
           "description": "Praktiko krijimin e një fjalëkalimi të fortë dhe që mbahet lehtë në mend."
+        },
+        "3c4b51d5-b72f-42df-a55a-86c146214424": {
+          "description": "Riformulojnë një sekuencë hapash si një program i koduar"
+        },
+        "16d1e174-7b4d-4b5e-a7be-9d4399743d19": {
+          "description": "Shpjegojnë kufizimet e problemeve të përkthimit nga gjuha njerëzore në gjuhën e makinës"
         },
         "69023643-6dd6-4d71-b31a-d2dff7952ea7": {
           "description": "Vendosin komandat e lëvizjes si hapa të njëpasnjëshëm në një program."
@@ -698,11 +839,23 @@
         "8dba466d-d809-49c6-8f60-218c27964411": {
           "description": "Identifikoni shenjat e zhgënjimit "
         },
+        "2d84b5eb-70d6-4f6d-88c5-7838a4983a78": {
+          "description": "Lexoni dhe kuptoni kodin e dhënë."
+        },
+        "71cede4e-3e93-41d6-a422-f2443f756a61": {
+          "description": "Identifikoni një bug dhe problemet që shkakton në një program."
+        },
+        "2f25fa99-cf66-4ed5-b41d-aaab9b796d5e": {
+          "description": "Përshkruani dhe zbatoni një plan për të korrigjuar një program."
+        },
         "3b4a2468-e182-4060-861f-2a922730445b": {
           "description": "Identifikoni veprimet që lidhen me eventet hyrëse."
         },
         "aadd56d2-f62b-43b9-861e-a59eb6c364b1": {
           "description": "Ndani një objekt krijues me studentët e tjerë."
+        },
+        "bafea2a8-7a23-4046-9360-77d760c54c2b": {
+          "description": "Krijojnë një lojë të animuar dhe interaktive duke përdorur sekuenca dhe evente."
         },
         "e3dce354-a602-47d1-99d1-dc729d0f4ff4": {
           "description": "Identifikoni veprimet që lidhen me eventet hyrëse."
@@ -737,8 +890,17 @@
         "673ddc56-5217-45a9-919c-b42024f7de2b": {
           "description": "Identifikojnë përfitimet e përdorimit të një strukture loop në vend të përsëritjes manuale."
         },
+        "fd3464fd-5921-4873-a850-c0799c55eecd": {
+          "description": "Përcaktojnë rrethanat kur pjesë të caktuara të një programi duhet të ekzekutohen dhe kur jo."
+        },
         "494526f8-7392-4788-9126-b2e2dd53b241": {
           "description": "Përcakto nëse një kusht përputhet me kriteret."
+        },
+        "3f9795a0-e52c-4fcd-ade0-d436facf382c": {
+          "description": "Përshkojnë një program dhe parashikojnë rezultatin duke pasur parasysh një sërë hyrjesh."
+        },
+        "f3746860-8db9-414b-bd6e-5d2503fc81b4": {
+          "description": "Përcaktojnë rrethanat kur pjesë të caktuara të një programi duhet të ekzekutohen dhe kur jo."
         },
         "83b6020a-2273-4966-abd6-0049afa1eb4e": {
           "description": "Përcakto nëse një kusht përputhet me kriteret."
@@ -845,8 +1007,14 @@
         "75ef4b25-6f64-4795-9a13-f0d27662040e": {
           "description": "Njohin kur një funksion mund të ndihmojë në thjeshtimin e një programi."
         },
+        "e23e9b8a-cb10-4ec2-ac46-516d6a538d91": {
+          "description": "Përcaktojnë rrethanat kur pjesë të caktuara të një programi duhet të ekzekutohen dhe kur jo."
+        },
         "fa7e3e31-19dd-47cb-b3f3-fdf47765b870": {
           "description": "Përcakto nëse një kusht përputhet me kriteret."
+        },
+        "9c7ff713-c208-4acf-9691-da7a4a152565": {
+          "description": "Përcaktojnë rrethanat kur pjesë të caktuara të një programi duhet të ekzekutohen dhe kur jo."
         },
         "3f2ab1f9-4d27-49f5-a370-e9e4f9cf5bfc": {
           "description": "Përcakto nëse një kusht përputhet me kriteret."
@@ -1124,6 +1292,9 @@
         "d1ca506b-d694-4c2b-bcc5-38af2ce425dd": {
           "description": "Përshkruani kur nevojitet një loop , nested loop ose nuk nevojitet asnjë loop."
         },
+        "d10e3ab4-a6ef-4f07-8a30-3ef1f9c181f6": {
+          "description": "Përcaktojnë rrethanat kur pjesë të caktuara të një programi duhet të ekzekutohen dhe kur jo."
+        },
         "feac1e8e-b6f7-466e-9727-d62bdfaf4f09": {
           "description": "Përcakto nëse një kusht përputhet me kriteret."
         },
@@ -1138,6 +1309,9 @@
         },
         "8bee7277-31d3-4032-a8ea-2d2c820425ec": {
           "description": "Përdorni një while loop për të krijuar programe që mund të zgjidhin probleme me vlera të panjohura."
+        },
+        "e6f6f67a-369a-4a9d-8197-e3abf61af68e": {
+          "description": "Përcaktojnë rrethanat kur pjesë të caktuara të një programi duhet të ekzekutohen dhe kur jo."
         },
         "b932c234-ce5d-429e-9c70-cf6d0b28570c": {
           "description": "Përcakto nëse një kusht përputhet me kriteret."
@@ -1536,7 +1710,7 @@
           "description": "Krijoni dhe përdorni një sprite"
         },
         "9d865e75-6b5a-43d4-a145-17de9aee4ad3": {
-          "description": "Përdorni pikë shënimin për të përditësuar parametrat e një sprite"
+          "description": "Përdorni pikë shënimin për të përditësuar atributet e një sprite"
         },
         "411f894a-c802-41df-822e-41c4b8dd9a9d": {
           "description": "Vendosni tekstin në ekran duke përdorur rrafshin koordinativ."
@@ -1547,14 +1721,107 @@
         "36566c25-03d9-4b33-9269-bf4155649445": {
           "description": "Përdorni një proces të strukturuar për të planifikuar dhe zhvilluar një program."
         },
+        "b18a4c06-e791-4aed-8ce9-8373bdfb8352": {
+          "description": "Shpjegoni se si draw loop lejon krijimin e animacioneve në Game Lab"
+        },
+        "f792a4b7-46e7-4887-871b-bf2f921bc44d": {
+          "description": "Përdorni draw loop në kombinim me komandën RandomNumber (), format dhe spritet për të bërë animacione të thjeshta"
+        },
+        "12844473-89b5-4157-82c2-801b4aca52fb": {
+          "description": "Identifikoni cilat atribute të sprite duhet të ndryshohen, dhe në çfarë mënyre, për të arritur një lëvizje specifike"
+        },
+        "2ad3c9f2-28d0-461b-8a75-15b8a69d2f53": {
+          "description": "Përdorni modelin kundërpëgjigjës për të rritur ose zvogëluar atributet e sprite"
+        },
+        "522df320-9b1b-42e5-b997-09f45759d2d3": {
+          "description": "Përdorni conditionals për të reaguar ndaj ndryshimeve në variablat dhe atributet e sprite"
+        },
+        "b96eecbc-f152-4b13-87bb-5c2bd71bafcf": {
+          "description": "Lëvizni spritet në bazë të input-eve nga tastiera"
+        },
+        "e1012bc2-2e9b-4066-9ec8-b1c2a10c72e0": {
+          "description": "Përdorni conditionals për të reaguar ndaj input-eve nga tastiera"
+        },
+        "154510cf-774c-49e2-ac44-97f8b358f987": {
+          "description": "Përgjigjuni për një llojet e ndryshme të input-eve të përdoruesit. "
+        },
+        "d104dffd-48d0-491e-813e-6d2867de294f": {
+          "description": "Përdorni një deklaratë if-else për të kontrolluar rrjedhën e programit."
+        },
+        "98ef15a4-cec5-4410-941f-e493978cbdb2": {
+          "description": "Përdorni conditionals për të reaguar ndaj input-eve të tastierës ose ndryshimeve në variabla/atribute"
+        },
+        "a92a3ce6-e432-4a5e-a484-5f4ca110b2b5": {
+          "description": "Aplikoni një model iterator në variablat ose atributat në një loop"
+        },
+        "ecd2dd66-5ac2-4cba-a3db-e86eeb93644f": {
+          "description": "Komandat e sekuestruara të vizatuara në mënyrën e duhur"
+        },
+        "0a362b6b-eb99-4648-abaf-609f15ac0948": {
+          "description": "Përdorni blloqet e drejtimit dhe shpejtësis së rrotullimit për të krijuar dhe ndryshuar lëvizjet sprite"
+        },
+        "561329f0-2d51-44e0-a761-89467f39b783": {
+          "description": "Përshkruani avantazhet e thjeshtimit të kodit duke përdorur blloqe të nivelit më të lartë"
+        },
+        "111ced6d-7a03-4f25-bc84-e9ea52a15f4f": {
+          "description": "Zbuloni kur spritet prekin ose mbivendosen dhe ndryshoni programin në përgjigje. "
+        },
+        "7b9ca082-7b03-4e09-b0bf-d33a70502d6a": {
+          "description": "Përshkruani si abstraksionet ndihmojnë për të menaxhuar kompleksitetin e kodit"
+        },
+        "4ab9fb5b-e4f9-402c-87fd-f8c67e95f854": {
+          "description": "Shpjegoni se si mund të kombinohen konstruktet individuale të programimit për të krijuar sjellje më kompleke"
+        },
+        "8291b013-88a0-4bcf-8815-dcd127b899f8": {
+          "description": "Përdorni drejtimin e sprite me modelin e kundërtpërgjigjës për të krijuar lloje të ndryshme të lëvizjeve sprite"
+        },
+        "3655a84f-baf8-4feb-8296-a45434158ef4": {
+          "description": "Modelo llojeve të ndryshme të ndërveprimeve midis sprites."
+        },
+        "8a256d5f-e9c0-4f08-96be-6ce4acffadfc": {
+          "description": "Përshkruani se si abstraksionet mund të ndërtohen për të zhvilluar abstraksione të mëtejshme"
+        },
+        "6937cac3-eee0-4c3c-9fdc-49a7378013c2": {
+          "description": "Krijoni dhe përdorni funksione për blloqet e kodit që kryejnë një detyrë të vetme të nivelit të lartë brenda një programi"
+        },
+        "c5133459-f185-40c2-ab71-fae84e1044ad": {
+          "description": "Shpjegoni avantazhet e përdorimit të funksioneve në një program"
+        },
+        "ce0887ae-3904-4475-9d03-923199a851b1": {
+          "description": "Shpjegoni se si funksionet lejojnë programuesit të arsyetojnë për një program në një nivel më të lartë"
+        },
+        "13503201-2764-45e3-b644-2f5fd993f710": {
+          "description": "Zbatoni veçori të ndryshme të një programi duke ndjekur një udhëzues të strukturuar të projektit"
+        },
+        "149a90c7-273f-4c73-8273-2799340bf90d": {
+          "description": " Zbatoni veçori të ndryshme të një programi duke ndjekur një udhëzues të strukturuar të projektit"
+        },
+        "be3ca496-7d99-4db9-8ca3-2844688ce210": {
+          "description": "Identifikoni konstruktet kryesore të programimit të nevojshme për të ndërtuar komponentë të ndryshëm të një loje"
+        },
+        "15bd7a23-5d71-46fc-9534-112241fcb7c4": {
+          "description": "Zbatoni një plan për krijimin e një pjese të softuerit"
+        },
+        "1a615e1a-3506-461f-ae16-433abddd2fa4": {
+          "description": "Në mënyrë të pavarur shkruani tiparet e një pjese softuerike"
+        },
+        "24b3d2c9-3a7b-4232-80fa-8272f0bfd7fb": {
+          "description": "Krijoni një plan për ndërtimin e një pjese të softuerit duke përshkruar komponentët kryesorë të tij"
+        },
         "214e78cd-feb0-4235-a076-0fe81d14d95a": {
           "description": "Trajnoni dhe testoni një model të mësimit të makinës."
         },
         "db7f5c46-7cbc-477f-a325-dac7168fd719": {
           "description": "Arsyeja se si paragjykimi njerëzor luan një rol në mësimin e makinerive."
         },
+        "1f78c6a5-ed31-43ec-b895-c6a8e229ffaa": {
+          "description": "Përshkruajnë ndikimet e pajisjes në shoqëri"
+        },
         "3f866c04-e2cf-4699-9575-cce49347325a": {
           "description": "Identifikojnë inovacionet informatike brenda një fushe të caktuar"
+        },
+        "4f3e3425-fbaf-46ed-a48b-1a3c14c5e784": {
+          "description": "Përshkruajnë hyrjet dhe daljet e një pajisjeje"
         },
         "0f02698b-9d9b-490c-8823-ee026fad162d": {
           "description": "Aktivizojnë dhe fikin një LED me kod"
@@ -1562,14 +1829,140 @@
         "2ec25831-a76d-4ea0-903c-3083f9308f66": {
           "description": "Lidhin dhe zgjidhin problemet e pajisjeve të jashtme"
         },
+        "9947690d-e911-421e-aa62-8121dc0fd1a9": {
+          "description": "Kontrollojnë sirenën me kod"
+        },
+        "3962774f-cd16-47f7-9420-a055b3719c0f": {
+          "description": "Reagojnë ndaj inputit të përdoruesit duke përdorur një trajtues të ngjarjeve"
+        },
+        "730b8299-5c8e-416d-8d6f-e1aaadd69907": {
+          "description": "Ndryshojnë tekstin në ekran duke përdorur kodin"
+        },
         "ce118709-28f6-4348-9a5e-a7376dc85e5c": {
           "description": "Vendosin vetitë e elementeve të UI duke përdorur kodin"
+        },
+        "10fe1c8a-7919-47df-af4c-41263be5cb17": {
+          "description": "Përdorin një mbajtës ngjarje të pllakës për të kontrolluar butonat në circuit playground"
+        },
+        "a1bcaaff-4c0b-4c36-9760-21b7fa57dd62": {
+          "description": "Përdorin një mbajtës ngjarje të pllakës për të kontrolluar ndërprerësit në circuit playground"
+        },
+        "4bb96cf0-81a4-4e02-a2cd-0bc3580dd98c": {
+          "description": "Përdorin variabla për të ruajtur informacionin kur krijoni aplikacione"
+        },
+        "76a6fe19-0c71-476a-96f9-700c0d6cfb97": {
+          "description": "Përdorin modelin e kundërt për të përditësuar variablat kur krijoni aplikacione"
+        },
+        "bbbcb76a-3382-4462-af4e-22626e23fd47": {
+          "description": "Përdorin deklaratat nëse për të marrë vendime kur krijoni aplikacione"
+        },
+        "49e90a99-f9de-46ef-99a7-2eaf55f2d453": {
+          "description": "Krijojnë një projekt që përfshin rezultatet nga ekrani i aplikacionit"
+        },
+        "64bb39dd-fe82-4f01-ba0e-12e572301189": {
+          "description": "Krijojnë një projekt që përfshin variabla dhe nëse-deklarata"
+        },
+        "da9fca62-351d-4ba4-bf3e-a65bb33aeda6": {
+          "description": "Krijojnë një projekt që përfshin inputet nga circuit playground"
+        },
+        "c708b942-1da9-4d34-ad8e-e1dfed292704": {
+          "description": "Përdorin bllokun LED me ngjyra për të kontrolluar individualisht secilën LED me ngjyra"
+        },
+        "59aee898-09e3-47ae-a2bc-30e5ab7a0e4d": {
+          "description": "Përdorin hyrjen e përdoruesit për të përditësuar elementet në ekran duke përdorur kodin"
+        },
+        "dc0488da-8121-47f5-b94d-daa73fdb1d0e": {
+          "description": "Dizajnojnë aplikacione duke përdorur elementet e hyrjes së tekstit, zbritjes dhe rrëshqitësit"
+        },
+        "dddc6f9a-d84a-4217-ae7f-86dd244ac4d7": {
+          "description": "Përdorin getProperty dhe getText për të hyrë në hyrjen e përdoruesit në ekran"
+        },
+        "7dd4e20b-3a70-4cab-8a36-494560bfbfe3": {
+          "description": "Përdorin inputet nga qarku për të përditësuar elementet e ekranit ose për të prodhuar dalje në qark"
+        },
+        "d6a096c7-7f32-4787-b0dd-8dd3ce85ab65": {
+          "description": "Përdorin variabla dhe nëse-deklarata për ndërveprim kompleks të përdoruesit"
+        },
+        "ecea80e7-e990-44d4-96e2-7523c983847a": {
+          "description": "Përdorin inputet nga elementet e dizajnit të aplikacioneve për të përditësuar elementet e ekranit ose për të prodhuar dalje në qark"
+        },
+        "56bd593f-cd49-4672-8df1-be90f5f1588b": {
+          "description": "Krijojnë një projekt që përdor një shumëllojshmëri të inputeve dhe outputeve nga qarku dhe ekrani i aplikacionit"
+        },
+        "cf2e7187-6bfd-4eda-9f6b-fafcb5d86ffa": {
+          "description": "Krijojnë një projekt që përfshin materiale fizike në dizajnin e tij"
         },
         "78d91696-530a-4830-bbdc-3a45ff7bb276": {
           "description": "Shkallëzojnë një sërë numrash për të përmbushur një nevojë specifike"
         },
+        "eac70362-73a3-4386-91c0-9a3d8fd62040": {
+          "description": "Zhvillojnë programe që i përgjigjen hyrjeve të sensorit"
+        },
         "063186ca-fd1a-4987-8e3a-1591d644f5f1": {
           "description": "Përdorin ngjarjen e të dhënave për të përditësuar vazhdimisht tiparet e një elementi."
+        },
+        "a1f79a13-5ac2-46a9-a53d-b1aeb0435285": {
+          "description": "Përdorin orientimin e akselerometrit kur krijoni aplikacione"
+        },
+        "abf9d62a-36a1-4892-8d2d-09737c823da4": {
+          "description": "Përdorin zhurmën për të prodhuar shënime individuale ose sekuenca shënimesh"
+        },
+        "21ae580a-2932-4baa-946f-1ad4cdf1dc88": {
+          "description": "Përdorin parametrat për të përgjithësuar qëllimin e një funksioni"
+        },
+        "663803b7-72f9-4533-a0ed-9d096ae3d17b": {
+          "description": "Përdorin funksione për të organizuar blloqe të përsëritura të kodit"
+        },
+        "26ad9b1f-943e-4dea-bc32-f5cbbcbb52c6": {
+          "description": "Krijojnë një projekt që pavërejtshëm integron qarkun me materiale fizike"
+        },
+        "67f2dba7-e2dd-4941-970d-c8abeea0105e": {
+          "description": "Krijojnë një projekt që kombinon prodhimin nga circuit playground me materiale fizike"
+        },
+        "0fe7da07-6561-4184-b4a0-fb201cf28032": {
+          "description": "Krijojnë pajisje prototip që kontrollojnë një LED me kod"
+        },
+        "ca0b849c-5eb7-44f8-a5b5-99fe88a54a65": {
+          "description": "Krijojnë dhe korrigjojnë një qark me një LED"
+        },
+        "3bb246da-89ac-4011-a4af-1468c922f719": {
+          "description": "Krijojnë pajisje prototip që përdorin një buton të jashtëm për hyrje"
+        },
+        "98c5dc79-e2c4-4901-a50b-4ca08caed038": {
+          "description": "Krijojnë dhe korrigjojnë një qark me një buton"
+        },
+        "6efb1275-2649-4451-9c98-408abe6dcba5": {
+          "description": "Në mënyrë të pavarur shkruani tiparet e një pjese softuerike"
+        },
+        "bb2ce050-aadf-4e28-a0f3-ffc7f2bd5a9f": {
+          "description": "Bëjnë prototip të një pajisje informatike fizike"
+        },
+        "bbfa6e4b-af5f-4688-95df-db2e80a875fe": {
+          "description": "Zbatojnë një plan për zhvillimin e një pjese të softuerit që integron inputet dhe rezultatet e harduerit"
+        },
+        "90a07378-8a2f-4986-9124-1b14f1f57de9": {
+          "description": "Aplikojnë procesin e zgjidhjes së problemeve për të trajnuar një kompjuter për të zgjidhur një problem"
+        },
+        "1fe31857-0c3a-4820-bf3c-6806c6386877": {
+          "description": "Përshkruajnë ndryshimet midis të mësuarit të mbikëqyrur dhe të pambikëqyrur."
+        },
+        "667acb73-56a8-49a4-a400-64531d8f9d76": {
+          "description": "Përshkruajnë se si Inteligjenca Artificiale po ndikon në shoqëri"
+        },
+        "6518e7d9-e66e-4647-94b2-3a556206c9fc": {
+          "description": "Përshkruajnë se si një model merr një vendim (për shembull: me rastësi, ose një pemë vendimi, ose duke përdorur të dhëna)"
+        },
+        "670cb443-f15a-419b-89d8-98d7a9488fb7": {
+          "description": "Kërkojnë modele në të dhëna për të ndihmuar në marrjen e një vendimi"
+        },
+        "5a443332-ed2c-423d-918b-d455e2da6904": {
+          "description": "Shpjegojnë se si kompjuteri mund të ndajë të dhënat për të marrë një vendim"
+        },
+        "79012f5d-578d-45f0-9051-5ac1f4777519": {
+          "description": "Përdorin AI Lab për të zgjedhur veçoritë për të trajnuar një model"
+        },
+        "df1cf86a-7033-4db8-b977-125da76dc0c1": {
+          "description": "Përdorin mjetet e vizualizimit të të dhënave për të vendosur se cilat veçori duhet të përfshihen kur trajnoni një model"
         },
         "086d6899-da60-486b-a9f7-89715397d81c": {
           "description": "Shpjegojnë rregullat për të udhëtuar në mënyrë të sigurt në internet."
@@ -1898,6 +2291,12 @@
         "c14cd5a0-312f-491c-aa00-73b82dd8e628": {
           "description": "Praktikojnë krijimin e një fjalëkalimi të fortë dhe që mbahet lehtë në mend."
         },
+        "2d16e09e-308f-4fe5-b53a-bfd2a50ec736": {
+          "description": "Riformulojnë një sekuencë hapash si një program i koduar"
+        },
+        "e2eb4dfd-1b5b-4a01-aceb-1b96c49cd254": {
+          "description": "Shpjegojnë kufizimet e problemeve të përkthimit nga gjuha njerëzore në gjuhën e makinës"
+        },
         "86d6703f-6086-48c6-820f-d9d972471655": {
           "description": "Vendosin komandat e lëvizjes si hapa të njëpasnjëshëm në një program."
         },
@@ -1916,6 +2315,15 @@
         "d5c5bdd3-6ca6-48b2-ae3b-5aaf0c8dbb70": {
           "description": "Verifiko punën e bërë nga shokët e grupit."
         },
+        "0d2e39ca-970f-40e0-b26a-84bcecf9315d": {
+          "description": "Përshkruani dhe zbatoni një plan për të korrigjuar një program."
+        },
+        "59c4efee-e0c3-4293-9609-a82db6698755": {
+          "description": "Lexoni dhe kuptoni kodin e dhënë."
+        },
+        "66a6e0e0-c56c-4148-9d57-ce509afa4fc6": {
+          "description": "Identifikoni një bug dhe problemet që shkakton në një program."
+        },
         "a7fe08e4-1943-4bbc-a18a-e10bd0942173": {
           "description": "Ndani një objekt krijues me studentët e tjerë."
         },
@@ -1924,6 +2332,9 @@
         },
         "04cbf3cd-2cb7-451b-b4ed-1ccd70594cc5": {
           "description": "Identifikoni veprimet që lidhen me eventet hyrëse."
+        },
+        "f47c401e-4a61-4f0e-a4d3-75f3bd9d8908": {
+          "description": "Krijojnë një lojë të animuar dhe interaktive duke përdorur sekuenca dhe evente."
         },
         "4ed9cede-cc9a-409d-b433-781185b454b6": {
           "description": "Krijo animacione valle me kodin"
@@ -1958,8 +2369,17 @@
         "1368d16e-4e0d-4b76-8473-2765f5379362": {
           "description": "Përcakto nëse një kusht përputhet me kriteret."
         },
+        "744e09fe-1aaa-4253-95e2-7f1c8fc4e5dc": {
+          "description": "Përcaktojnë rrethanat kur pjesë të caktuara të një programi duhet të ekzekutohen dhe kur jo."
+        },
+        "ec9adec1-48c1-458e-bae1-37f2be6a863b": {
+          "description": "Përshkojnë një program dhe parashikojnë rezultatin duke pasur parasysh një sërë hyrjesh."
+        },
         "3ca80839-1859-48e0-a010-de7ef526512d": {
           "description": "Përcakto nëse një kusht përputhet me kriteret."
+        },
+        "c6a481f9-8493-4b50-876c-c16309ec4e50": {
+          "description": "Përcaktojnë rrethanat kur pjesë të caktuara të një programi duhet të ekzekutohen dhe kur jo."
         },
         "37326a7f-29b6-4ea6-9ed5-a08c2aa2dfd4": {
           "description": "Zgjidh enigmat duke përdorur një kombinim të sekuencave loop dhe kushtëzimeve."
@@ -2312,6 +2732,9 @@
         "5abe1116-ce82-4bce-8454-7537bdce12d4": {
           "description": "Përcakto nëse një kusht përputhet me kriteret."
         },
+        "b75b5c74-2020-4cba-abb7-9c1d2432c93f": {
+          "description": "Përcaktojnë rrethanat kur pjesë të caktuara të një programi duhet të ekzekutohen dhe kur jo."
+        },
         "94a0640b-eaf9-4797-b448-601edefe53f7": {
           "description": "Përkthe deklaratat e kushtëzuara të gjuhës së folur në një program."
         },
@@ -2323,6 +2746,9 @@
         },
         "ef9064e8-a2fc-43a5-a847-0e504ffd7043": {
           "description": "Përdorni një while loop për të krijuar programe që mund të zgjidhin probleme me vlera të panjohura."
+        },
+        "11cc6b71-35eb-4651-87ef-17cb48e8e93a": {
+          "description": "Përcaktojnë rrethanat kur pjesë të caktuara të një programi duhet të ekzekutohen dhe kur jo."
         },
         "979a7e2a-759e-4ffc-96b2-552fe5888fb9": {
           "description": "Përcakto nëse një kusht përputhet me kriteret."

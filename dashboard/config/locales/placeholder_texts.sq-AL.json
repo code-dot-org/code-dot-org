@@ -352,11 +352,13 @@
         },
         "courseF_editable_chatbot": {
           "05584ab56b744b51cd8c4a6e8b3a08ee": "Shkruani moshën tuaj:",
+          "13e575be866ecf5ac3dcbf61ab2048d7": "Sa vjeç jeni?",
           "1f258d88a70309efc1435ef5daa277a0": "Faleminderit që biseduat me mua sot!",
           "605f302ebc9f7fbacba60b15f551a633": "Cila është ngjyra juaj e preferuar?",
           "6dfcc5e477ebd3e2c893b3fc86b2eb93": "Sa vjeç jeni gjithashtu!",
           "91c4549fe2a5e9325c8f8d51afbb751b": "Shkruani ngjyrën tuaj të preferuar:",
           "a72e7c5c68af0546e963e510297f5233": "Përshëndetje, unë jam X-9! Si e ke emrin?",
+          "ae096fbf24d913754b01a1601672bf62": " gjithashtu!",
           "e243ac4e74cc5a76adbecf3b4daa1906": "pyetja ime",
           "f0e5da70d264f312a1658d51c130b101": "Shkruaj emrin tënd."
         },
@@ -391,6 +393,14 @@
           "e243ac4e74cc5a76adbecf3b4daa1906": "pyetja ime",
           "e522ee28f39133b45497637539ff429b": "Shkruani një numër:",
           "f6175c6f0b0bcfff0256286315f0eb7b": "Lojra festash"
+        },
+        "courseF_label_predict": {
+          "937dc37c06cc5d89a7096eb048b73590": "vjen menjëherë!",
+          "f15045cb7e57652546d4a0b2c695356f": "Çfarë do të hani?"
+        },
+        "courseF_label_predict_-2022-2": {
+          "937dc37c06cc5d89a7096eb048b73590": "vjen menjëherë!",
+          "f15045cb7e57652546d4a0b2c695356f": "Çfarë do të hani?"
         },
         "courseF_playlab_variables1a": {
           "0ab65920c84bec05a22e09feea7fe4ea": "shtyp tekstin këtu",
@@ -461,9 +471,13 @@
           "e243ac4e74cc5a76adbecf3b4daa1906": "pyetja ime"
         },
         "courseF_text_choice_events": {
+          "44506356d48394cd903b579df9de9117": ", tokësore!",
+          "c529a06c3f8518b63ff6dfac482b335c": "Emëroni këtë planet:",
           "e243ac4e74cc5a76adbecf3b4daa1906": "pyetja ime"
         },
         "courseF_text_choice_events_-2022-2": {
+          "44506356d48394cd903b579df9de9117": ", tokësore!",
+          "c529a06c3f8518b63ff6dfac482b335c": "Emëroni këtë planet:",
           "e243ac4e74cc5a76adbecf3b4daa1906": "pyetja ime"
         },
         "courseF_text_choice_freeplay": {
@@ -471,6 +485,14 @@
         },
         "courseF_text_choice_freeplay_-2022-2": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "pyetja ime"
+        },
+        "courseF_text_choice_interview": {
+          "34088af1fb721900963462375b3bbe23": "Roboti!",
+          "5bd698afd23bccde289bb0b4aa72a518": "Emëroni robotin."
+        },
+        "courseF_text_choice_interview_-2022-2": {
+          "34088af1fb721900963462375b3bbe23": "Roboti!",
+          "5bd698afd23bccde289bb0b4aa72a518": "Emëroni robotin."
         },
         "courseF_text_choice_multiprompt": {
           "d1210f945885351b13feb9bbb868aeef": "Sa vjeç po bëhet?",
@@ -505,9 +527,11 @@
           "e243ac4e74cc5a76adbecf3b4daa1906": "pyetja ime"
         },
         "courseF_variables_card_finish": {
+          "464a456e0747ec9b09fc9afc6fbd13ed": "Çfarë dëshironi për ditëlindjen tuaj?",
           "e243ac4e74cc5a76adbecf3b4daa1906": "pyetja ime"
         },
         "courseF_variables_card_finish_-2022-2": {
+          "464a456e0747ec9b09fc9afc6fbd13ed": "Çfarë dëshironi për ditëlindjen tuaj?",
           "e243ac4e74cc5a76adbecf3b4daa1906": "pyetja ime"
         },
         "courseF_variables_chatbot": {
@@ -517,9 +541,13 @@
           "e243ac4e74cc5a76adbecf3b4daa1906": "pyetja ime"
         },
         "courseF_variables_chatbot_finish": {
+          "46463b2e9f71f2f15b7238f56f09ba30": "Fundi",
+          "c757766b0a7e2017c79e1c94f60e44f7": "Faleminderit për votimin!",
           "e243ac4e74cc5a76adbecf3b4daa1906": "pyetja ime"
         },
         "courseF_variables_chatbot_finish_-2022-2": {
+          "46463b2e9f71f2f15b7238f56f09ba30": "Fundi",
+          "c757766b0a7e2017c79e1c94f60e44f7": "Faleminderit për votimin!",
           "e243ac4e74cc5a76adbecf3b4daa1906": "pyetja ime"
         },
         "courseF_variables_madlib": {
@@ -529,9 +557,11 @@
           "e243ac4e74cc5a76adbecf3b4daa1906": "pyetja ime"
         },
         "courseF_variables_madlib_finish": {
+          "50d489a15105b987ec6d4410900c95dd": "Shkruani një fjalë veprimi:",
           "e243ac4e74cc5a76adbecf3b4daa1906": "pyetja ime"
         },
         "courseF_variables_madlib_finish_-2022-2": {
+          "50d489a15105b987ec6d4410900c95dd": "Shkruani një fjalë veprimi:",
           "e243ac4e74cc5a76adbecf3b4daa1906": "pyetja ime"
         },
         "coursee_helloworld_freeplay": {

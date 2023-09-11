@@ -38,6 +38,8 @@ sq:
         name: Udhëzues CSD për debugging
       csd_guide_to_differentiation/csd/2021:
         name: Udhëzues CSD për diferencimin
+      csd_guide_to_using_resources/csd/2021:
+        name: Udhëzues CSD për përdorimin e burimeve
       csd_implementation_guide/csd/2021:
         name: Udhëzues për zbatimin e CSD
       all_code_5/csd/2022:
@@ -54,9 +56,13 @@ sq:
         name: Udhëzues CSD për debugging
       csd_guide_to_differentiation/csd/2022:
         name: Udhëzues CSD për diferencimin
+      csd_guide_to_using_resources/csd/2022:
+        name: Udhëzues CSD për përdorimin e burimeve
       csd_implementation_guide/csd/2022:
         name: Udhëzues për zbatimin e CSD
         url: https://docs.google.com/document/d/1vLGKcHC46jE6zZozBTmExOKdKwl544s0tbCds1LSg1Q/preview
+      csd_programming_levels_guide/csd/2022:
+        name: Udhëzues për nivelet e programimit CSD
       all_code_2/csd/2023:
         name: Të gjitha kodet
       all_resources_2/csd/2023:
@@ -67,5 +73,7 @@ sq:
         name: Fjalori
       csd_guide_to_differentiation_1/csd/2023:
         name: Udhëzues CSD për diferencimin
+      csd_guide_to_using_resources_1/csd/2023:
+        name: Udhëzues CSD për përdorimin e burimeve
       csd_implementation_guide_1/csd/2023:
         name: Udhëzues për zbatimin e CSD

@@ -176,6 +176,8 @@ sq:
           description: Përdor blloqe të kodimit t'i dërgosh Steve ose Alex në një aventurë nëpër këtë botë Minecraft.
           description_short: Eksploro  një botë Minecraft nëpërmjet kodit.
           student_description: Përdor blloqe të kodimit t'i dërgosh Steve ose Alex në një aventurë nëpër këtë botë Minecraft.
+        oceans:
+          title: IA për oqeanet
         AlgebraA:
           description: Mëso Programimin Funksional nëpërmjet Algjebrës
           description_short: Mëso Programimin Funksional nëpërmjet Algjebrës
@@ -264,6 +266,8 @@ sq:
           description: Realizo një lojë basketbolli
           student_description: Realizo një lojë basketbolli
           name: basketboll
+        hoc-encryption:
+          title: 'Ora e kodimit: Kriptimi i thjeshtë'
         csp2-support:
           lesson_groups:
             required:
@@ -277,13 +281,23 @@ sq:
           description_short: Kafshët e programit dhe krijesa të tjera Minecraft në versionin tuaj të Minecraft.
           description: Kafshët e programit dhe krijesa të tjera Minecraft në versionin tuaj të Minecraft.
           student_description: Kafshët e programit dhe krijesa të tjera Minecraft në versionin tuaj të Minecraft.
+        coursea-draft:
+          title: 'Bazat e CS: Kursi A'
+        courseb-draft:
+          title: 'Bazat e CS: Kursi B'
+        coursec-draft:
+          title: 'Bazat e CS: Kursi C'
+        coursed-draft:
+          title: 'Bazat e CS: Kursi D'
         coursee-draft:
+          title: 'Bazat e CS: Kursi E'
           lesson_groups:
             content:
               display_name: Përmbajtja
             end_of_course_project:
               display_name: Përfundimi i projektit të kursit
         coursef-draft:
+          title: 'Bazat e CS: Kursi F'
           lesson_groups:
             content:
               display_name: Përmbajtja
@@ -333,6 +347,8 @@ sq:
           lesson_groups:
             content:
               display_name: Përmbajtja
+        coursed-ramp:
+          title: 'Bazat e CS: Kursi D'
         coursea-2017:
           title: Kursi A
           assignment_family_title: Kursi A
@@ -432,6 +448,8 @@ sq:
         pre-express-2017:
           description: Mësoni bazat e shkencave kompjuterike dhe sigurisë në internet. Në fund të kursit, krijoni lojën ose historinë tuaj që mund të ndani.
           student_description: Mësoni bazat e shkencave kompjuterike dhe sigurisë në internet. Në fund të kursit, krijoni lojën ose historinë tuaj që mund të ndani.
+        applab-intro:
+          title: Hyrje në App Lab
         e-f-ramp:
           lesson_groups:
             end_of_course_project:
@@ -461,6 +479,7 @@ sq:
             end_of_course_project:
               display_name: Përfundimi i projektit të kursit
         coursea-2018:
+          title: Kursi A (2018)
           assignment_family_title: Kursi A
           description: Mësoni bazat e shkencave kompjuterike dhe sigurisë në internet. Në fund të kursit, krijoni lojën ose historinë tuaj që mund të ndani.
           student_description: Mësoni bazat e shkencave kompjuterike dhe sigurisë në internet. Në fund të kursit, krijoni lojën ose historinë tuaj që mund të ndani.
@@ -590,6 +609,7 @@ sq:
             content:
               display_name: Përmbajtja
         dance:
+          title: Festa e vallëzimit (2018)
           name: valle
         aquatic:
           title: 'Minecraft: Udhëtimi ujor'
@@ -604,6 +624,8 @@ sq:
               display_name: funksione
             csp_project:
               display_name: Projekt
+        dance-extras:
+          title: Vazhdoni të kërceni (2018)
         coursef-2019:
           lesson_groups:
             csf_variables:
@@ -627,7 +649,7 @@ sq:
             csf_events:
               display_name: Ngjarje
             csf_loops:
-              display_name: cikle
+              display_name: Cikle
             csf_conditionals:
               display_name: Kushtet
             csf_binary:
@@ -653,7 +675,7 @@ sq:
             csf_sequencing:
               display_name: Sekuencimi
             csf_loops:
-              display_name: cikle
+              display_name: Cikle
             csf_conditionals:
               display_name: Kushtet
             csf_functions:
@@ -670,6 +692,8 @@ sq:
               display_name: Përmbledhja
             content:
               display_name: Përmbajtja
+        dance-extras-gallery:
+          title: Vazhdoni të kërceni
         coursec-2019:
           lesson_groups:
             csf_digcit:
@@ -679,13 +703,15 @@ sq:
             csf_binary:
               display_name: Binare
             csf_loops:
-              display_name: cikle
+              display_name: Cikle
             csf_events:
               display_name: Ngjarje
             csf_data:
               display_name: të dhëna
             end_of_course_project:
               display_name: Përfundimi i projektit të kursit
+        gamelab:
+          title: Game Lab
         coursea-2019:
           title: Kursi A (2019)
           description: Mësoni bazat e shkencave kompjuterike dhe sigurisë në internet. Në fund të kursit, krijoni lojën ose historinë tuaj që mund të ndani.
@@ -695,7 +721,7 @@ sq:
             csf_sequencing:
               display_name: Sekuencimi
             csf_loops:
-              display_name: cikle
+              display_name: Cikle
             csf_events:
               display_name: Ngjarje
           student_description: Mësoni bazat e shkencave kompjuterike dhe sigurisë në internet. Në fund të kursit, krijoni lojën ose historinë tuaj që mund të ndani.
@@ -707,7 +733,7 @@ sq:
             csf_sequencing:
               display_name: Sekuencimi
             csf_loops:
-              display_name: cikle
+              display_name: Cikle
             csf_events:
               display_name: Ngjarje
           student_description: Mësoni bazat e shkencave kompjuterike dhe sigurisë në internet. Në fund të kursit, krijoni lojën ose historinë tuaj që mund të ndani.
@@ -716,7 +742,7 @@ sq:
             csf_sequencing:
               display_name: Sekuencimi
             csf_loops:
-              display_name: cikle
+              display_name: Cikle
             csf_events:
               display_name: Ngjarje
         csp4-pilot:
@@ -774,7 +800,7 @@ sq:
             csp_lists:
               display_name: Listat
             csp_loops:
-              display_name: cikle
+              display_name: Cikle
             csp_project:
               display_name: Projekt
         csp6-pilot-staging:
@@ -822,7 +848,7 @@ sq:
             csp_lists:
               display_name: Listat
             csp_loops:
-              display_name: cikle
+              display_name: Cikle
             csp_project:
               display_name: Projekt
             required:
@@ -850,7 +876,7 @@ sq:
             csf_sequencing:
               display_name: Sekuencimi
             csf_loops:
-              display_name: cikle
+              display_name: Cikle
             csf_events:
               display_name: Ngjarje
         dlp19-csd-mod-fit:
@@ -931,6 +957,8 @@ sq:
           lesson_groups:
             k5_next_steps:
               display_name: Hapat e ardhshme
+        dance-extras-2019:
+          title: Vazhdoni të kërceni
         csp4-preview:
           lesson_groups:
             csp_variables:
@@ -958,7 +986,7 @@ sq:
             csf_sequencing:
               display_name: Sekuencimi
             csf_loops:
-              display_name: cikle
+              display_name: Cikle
             csf_conditionals:
               display_name: Kushtet
             csf_events:
@@ -972,7 +1000,7 @@ sq:
             csf_sequencing:
               display_name: Sekuencimi
             csf_loops:
-              display_name: cikle
+              display_name: Cikle
             csf_conditionals:
               display_name: Kushtet
             csf_events:
@@ -1000,7 +1028,7 @@ sq:
             csp_lists:
               display_name: Listat
             csp_loops:
-              display_name: cikle
+              display_name: Cikle
             csp_project:
               display_name: Projekt
         coursea-2020:
@@ -1012,7 +1040,7 @@ sq:
             csf_sequencing:
               display_name: Sekuencimi
             csf_loops:
-              display_name: cikle
+              display_name: Cikle
             csf_events:
               display_name: Ngjarje
           student_description: Mësoni bazat e shkencave kompjuterike dhe sigurisë në internet. Në fund të kursit, krijoni lojën ose historinë tuaj që mund të ndani.
@@ -1024,7 +1052,7 @@ sq:
             csf_sequencing:
               display_name: Sekuencimi
             csf_loops:
-              display_name: cikle
+              display_name: Cikle
             csf_events:
               display_name: Ngjarje
           student_description: Mësoni bazat e shkencave kompjuterike dhe sigurisë në internet. Në fund të kursit, krijoni lojën ose historinë tuaj që mund të ndani.
@@ -1037,7 +1065,7 @@ sq:
             csf_binary:
               display_name: Binare
             csf_loops:
-              display_name: cikle
+              display_name: Cikle
             csf_events:
               display_name: Ngjarje
             csf_data:
@@ -1051,7 +1079,7 @@ sq:
             csf_events:
               display_name: Ngjarje
             csf_loops:
-              display_name: cikle
+              display_name: Cikle
             csf_conditionals:
               display_name: Kushtet
             csf_binary:
@@ -1091,7 +1119,7 @@ sq:
             csf_sequencing:
               display_name: Sekuencimi
             csf_loops:
-              display_name: cikle
+              display_name: Cikle
             csf_conditionals:
               display_name: Kushtet
             csf_functions:
@@ -1109,7 +1137,7 @@ sq:
             csf_sequencing:
               display_name: Sekuencimi
             csf_loops:
-              display_name: cikle
+              display_name: Cikle
             csf_events:
               display_name: Ngjarje
         virtual-holding-place:
@@ -1173,7 +1201,7 @@ sq:
             csp_lists:
               display_name: Listat
             csp_loops:
-              display_name: cikle
+              display_name: Cikle
             csp_project:
               display_name: Projekt
         csp6-2021:
@@ -1189,9 +1217,9 @@ sq:
             csf_sequencing:
               display_name: Sekuencimi
             csf_loops:
-              display_name: cikle
+              display_name: Loops
             csf_events:
-              display_name: Ngjarje
+              display_name: Eventet
             lessonGroup-5:
               display_name: Përfundimi i projektit të kursit
           student_description: Mësoni bazat e shkencave kompjuterike dhe sigurisë në internet. Në fund të kursit, krijoni lojën ose historinë tuaj që mund të ndani.
@@ -1204,7 +1232,7 @@ sq:
             csf_sequencing:
               display_name: Sekuencimi
             csf_loops:
-              display_name: cikle
+              display_name: Cikle
             csf_events:
               display_name: Ngjarje
             lessonGroup-6:
@@ -1228,13 +1256,14 @@ sq:
             end_of_course_project:
               display_name: Përfundimi i projektit të kursit
         coursed-2021:
+          title: Kursi D (2021)
           lesson_groups:
             csf_sequencing:
               display_name: Sekuencimi
             csf_events:
               display_name: Ngjarje
             csf_loops:
-              display_name: cikle
+              display_name: Cikle
             csf_conditionals:
               display_name: Kushtet
             csf_binary:
@@ -1309,7 +1338,7 @@ sq:
             csf_sequencing:
               display_name: Sekuencimi
             csf_loops:
-              display_name: cikle
+              display_name: Cikle
             csf_events:
               display_name: Ngjarje
         csf-2021-pilot:
@@ -1370,6 +1399,8 @@ sq:
               display_name: Lekcioni 4
             Lesson 5:
               display_name: Lekcioni 5
+        csd7-2021:
+          title: IA dhe Mësimi i Makinerisë
         outbreak-module:
           title: Shpërthimi
         csa1-exemplars:
@@ -1446,10 +1477,14 @@ sq:
               display_name: Përmbajtja
             lessonGroup-2:
               display_name: Përmbajtja
+        poem-art:
+          title: Arti i poezisë
         spelling-bee:
           title: Bleta Gërmëzuese
         outbreak-csc:
           title: Shpërthimi
+        counting-csc:
+          title: Numërimi me Laurelën
         csa5-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1458,6 +1493,16 @@ sq:
           lesson_groups:
             lessonGroup-2:
               display_name: Përmbajtja
+        poem-art-2021:
+          title: Arti i poezisë
+        poetry-2021:
+          title: Kodimi me poezi
+        spelling-bee-2021:
+          title: Gërmëzimi me bletë
+        explore-data-1-2021:
+          title: Vizualizimi i të dhënave
+        counting-csc-2021:
+          title: Numërimi me Laurelën
         csa6-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1514,7 +1559,7 @@ sq:
             lessonGroup-9:
               display_name: Ngjarje
             csf_loops:
-              display_name: cikle
+              display_name: Cikle
             csf_conditionals:
               display_name: Kushtet
             csf_functions:
@@ -1541,7 +1586,7 @@ sq:
             csp_lists:
               display_name: Listat
             csp_loops:
-              display_name: cikle
+              display_name: Cikle
             csp_project:
               display_name: Projekt
         courseb-2022:
@@ -1566,7 +1611,7 @@ sq:
             csf_sequencing:
               display_name: Sekuencimi
             csf_loops:
-              display_name: cikle
+              display_name: Cikle
             csf_events:
               display_name: Ngjarje
             csf_data:
@@ -1583,7 +1628,7 @@ sq:
             csf_events:
               display_name: Ngjarje
             csf_loops:
-              display_name: cikle
+              display_name: Cikle
             csf_conditionals:
               display_name: Kushtet
             end_of_course_project:
@@ -1626,7 +1671,7 @@ sq:
             csf_sequencing:
               display_name: Sekuencimi
             csf_loops:
-              display_name: cikle
+              display_name: Cikle
             csf_events:
               display_name: Ngjarje
         csa2-2022:
@@ -1697,6 +1742,12 @@ sq:
         csd7-2022:
           title: IA dhe Makinat e mësimit ('22-'23)
           student_description: Kjo njësi është një hyrje praktike për zhvillimin e një modeli të mësimit të makinave me të dhëna tabelare. Ju do të eksploroni se si kompjuterët mësojnë nga të dhënat për të marrë vendime, më pas do të zhvilloni projektet tuaja të mësimit të makinave rreth të dhënave të botës reale. Njësia arrin kulmin me dizajnimin e aplikacionit tuaj të mësimit të makinave për të zgjidhur një problem të rëndësishëm personalisht.
+        csd6-2022:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitulli 1: Hyrjet dhe daljet'
+          title: Informatikë fizike ('22-'23)
+          student_description: Kjo njësi eksploron rolin e platformave hardware në informatikë dhe se si sensorë të ndryshëm mund të sigurojnë hyrje dhe dalje më efektive sesa tastiera tradicionale, miu dhe monitori. Duke përdorur App Lab dhe Adafruit's Circuit Playground, ju do të zhvilloni programe që përdorin të njëjtat hyrje dhe dalje harduerike që shihni në pajisjet inteligjente, duke parë se si një prototip i thjeshtë i përafërt mund të çojë në një produkt të përfunduar. Njësia përfundon me një sfidë të projektimit për të përdorur Circuit Playground si bazë për një risi të dizajnit tuaj.
         soccer:
           name: futboll
         csa1-validation-pilot-2022:
@@ -1734,7 +1785,7 @@ sq:
         csa1-2023:
           lessons:
             lesson-6:
-              name: cikle
+              name: Cikle
           lesson_groups:
             lessonGroup-3:
               display_name: Përmbajtja
@@ -1777,8 +1828,20 @@ sq:
               display_name: Përmbajtja
         hello-world-soccer-2022:
           title: 'Përshëndetje Botërore: futboll'
+        csd6-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitulli 1: Hyrjet dhe daljet'
         csd7-2023:
+          lesson_groups:
+            lessonGroup-4:
+              display_name: Hyrje në App Lab
           student_description: Kjo njësi është një hyrje praktike për zhvillimin e një modeli të mësimit të makinave me të dhëna tabelare. Ju do të eksploroni se si kompjuterët mësojnë nga të dhënat për të marrë vendime, më pas do të zhvilloni projektet tuaja të mësimit të makinave rreth të dhënave të botës reale. Njësia arrin kulmin me dizajnimin e aplikacionit tuaj të mësimit të makinave për të zgjidhur një problem të rëndësishëm personalisht.
+        physcomp-temp:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitulli 1: Hyrjet dhe daljet'
+          student_description: Kjo njësi eksploron rolin e platformave hardware në informatikë dhe se si sensorë të ndryshëm mund të sigurojnë hyrje dhe dalje më efektive sesa tastiera tradicionale, miu dhe monitori. Duke përdorur App Lab dhe Adafruit's Circuit Playground, ju do të zhvilloni programe që përdorin të njëjtat hyrje dhe dalje harduerike që shihni në pajisjet inteligjente, duke parë se si një prototip i thjeshtë i përafërt mund të çojë në një produkt të përfunduar. Njësia përfundon me një sfidë të projektimit për të përdorur Circuit Playground si bazë për një risi të dizajnit tuaj.
         csc-bookcover:
           lessons:
             lesson-1:
@@ -1800,7 +1863,7 @@ sq:
             csp_lists:
               display_name: të dhëna
             csp_loops:
-              display_name: cikle
+              display_name: Cikle
             csp_project:
               display_name: Projekt
         csp6-2023:
@@ -1808,19 +1871,26 @@ sq:
             csp_unit6_2020:
               display_name: Listat
             lessonGroup-3:
-              display_name: cikle
+              display_name: Cikle
             lessonGroup-5:
               display_name: Projekt
         angelina-playground:
           lessons:
             lesson-5:
               name: Vlerësimet
+        devices-2022:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Kapitulli 1: Hyrjet dhe daljet'
+          student_description: Kjo njësi eksploron rolin e platformave hardware në informatikë dhe se si sensorë të ndryshëm mund të sigurojnë hyrje dhe dalje më efektive sesa tastiera tradicionale, miu dhe monitori. Duke përdorur App Lab dhe Adafruit's Circuit Playground, ju do të zhvilloni programe që përdorin të njëjtat hyrje dhe dalje harduerike që shihni në pajisjet inteligjente, duke parë se si një prototip i thjeshtë i përafërt mund të çojë në një produkt të përfunduar. Njësia përfundon me një sfidë të projektimit për të përdorur Circuit Playground si bazë për një risi të dizajnit tuaj.
         microbit-2022:
           lesson_groups:
             lessonGroup-3:
               display_name: Inputet dhe Outputet
         microbit-temp:
           lesson_groups:
+            lessonGroup-2:
+              display_name: Hyrje në App Lab
             lessonGroup-3:
               display_name: Inputet dhe Outputet
         pre-express-2023:
@@ -1828,7 +1898,7 @@ sq:
             csf_sequencing:
               display_name: Sekuencimi
             csf_loops:
-              display_name: cikle
+              display_name: Cikle
             csf_events:
               display_name: Ngjarje
         express-2023:
@@ -1840,7 +1910,7 @@ sq:
             lessonGroup-9:
               display_name: Ngjarje
             csf_loops:
-              display_name: cikle
+              display_name: Cikle
             csf_conditionals:
               display_name: Kushtet
             csf_functions:
@@ -1858,7 +1928,7 @@ sq:
             csf_sequencing:
               display_name: Sekuencimi
             csf_loops:
-              display_name: cikle
+              display_name: Cikle
             csf_events:
               display_name: Ngjarje
             lessonGroup-5:
@@ -1872,7 +1942,7 @@ sq:
             csf_sequencing:
               display_name: Sekuencimi
             csf_loops:
-              display_name: cikle
+              display_name: Cikle
             csf_events:
               display_name: Ngjarje
             lessonGroup-6:
@@ -1886,7 +1956,7 @@ sq:
             csf_sequencing:
               display_name: Sekuencimi
             csf_loops:
-              display_name: cikle
+              display_name: Cikle
             csf_events:
               display_name: Ngjarje
             csf_data:
@@ -1902,7 +1972,7 @@ sq:
             csf_events:
               display_name: Ngjarje
             csf_loops:
-              display_name: cikle
+              display_name: Cikle
             csf_conditionals:
               display_name: Kushtet
             end_of_course_project:
@@ -1921,14 +1991,54 @@ sq:
               display_name: Kushtet
             end_of_course_project:
               display_name: Përfundimi i projektit të kursit
+        aiml-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Hyrje në App Lab
+        focus-on-creativity4a-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Kapitulli 1: Hyrjet dhe daljet'
+          student_description: Kjo njësi eksploron rolin e platformave hardware në informatikë dhe se si sensorë të ndryshëm mund të sigurojnë hyrje dhe dalje më efektive sesa tastiera tradicionale, miu dhe monitori. Duke përdorur App Lab dhe Adafruit's Circuit Playground, ju do të zhvilloni programe që përdorin të njëjtat hyrje dhe dalje harduerike që shihni në pajisjet inteligjente, duke parë se si një prototip i thjeshtë i përafërt mund të çojë në një produkt të përfunduar. Njësia përfundon me një sfidë të projektimit për të përdorur Circuit Playground si bazë për një risi të dizajnit tuaj.
+        focus-on-hardware3a-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Kapitulli 1: Hyrjet dhe daljet'
+          student_description: Kjo njësi eksploron rolin e platformave hardware në informatikë dhe se si sensorë të ndryshëm mund të sigurojnë hyrje dhe dalje më efektive sesa tastiera tradicionale, miu dhe monitori. Duke përdorur App Lab dhe Adafruit's Circuit Playground, ju do të zhvilloni programe që përdorin të njëjtat hyrje dhe dalje harduerike që shihni në pajisjet inteligjente, duke parë se si një prototip i thjeshtë i përafërt mund të çojë në një produkt të përfunduar. Njësia përfundon me një sfidë të projektimit për të përdorur Circuit Playground si bazë për një risi të dizajnit tuaj.
         focus-on-data3-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Hyrje në App Lab
           student_description: Kjo njësi është një hyrje praktike për zhvillimin e një modeli të mësimit të makinave me të dhëna tabelare. Ju do të eksploroni se si kompjuterët mësojnë nga të dhënat për të marrë vendime, më pas do të zhvilloni projektet tuaja të mësimit të makinave rreth të dhënave të botës reale. Njësia arrin kulmin me dizajnimin e aplikacionit tuaj të mësimit të makinave për të zgjidhur një problem të rëndësishëm personalisht.
+        focus-on-design-with-purpose4a-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Kapitulli 1: Hyrjet dhe daljet'
+          student_description: Kjo njësi eksploron rolin e platformave hardware në informatikë dhe se si sensorë të ndryshëm mund të sigurojnë hyrje dhe dalje më efektive sesa tastiera tradicionale, miu dhe monitori. Duke përdorur App Lab dhe Adafruit's Circuit Playground, ju do të zhvilloni programe që përdorin të njëjtat hyrje dhe dalje harduerike që shihni në pajisjet inteligjente, duke parë se si një prototip i thjeshtë i përafërt mund të çojë në një produkt të përfunduar. Njësia përfundon me një sfidë të projektimit për të përdorur Circuit Playground si bazë për një risi të dizajnit tuaj.
+        focus-on-coding4a-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Kapitulli 1: Hyrjet dhe daljet'
+          student_description: Kjo njësi eksploron rolin e platformave hardware në informatikë dhe se si sensorë të ndryshëm mund të sigurojnë hyrje dhe dalje më efektive sesa tastiera tradicionale, miu dhe monitori. Duke përdorur App Lab dhe Adafruit's Circuit Playground, ju do të zhvilloni programe që përdorin të njëjtat hyrje dhe dalje harduerike që shihni në pajisjet inteligjente, duke parë se si një prototip i thjeshtë i përafërt mund të çojë në një produkt të përfunduar. Njësia përfundon me një sfidë të projektimit për të përdorur Circuit Playground si bazë për një risi të dizajnit tuaj.
         focus-on-impact-in-society4-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Hyrje në App Lab
           student_description: Kjo njësi është një hyrje praktike për zhvillimin e një modeli të mësimit të makinave me të dhëna tabelare. Ju do të eksploroni se si kompjuterët mësojnë nga të dhënat për të marrë vendime, më pas do të zhvilloni projektet tuaja të mësimit të makinave rreth të dhënave të botës reale. Njësia arrin kulmin me dizajnimin e aplikacionit tuaj të mësimit të makinave për të zgjidhur një problem të rëndësishëm personalisht.
+        csd6a-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: 'Kapitulli 1: Hyrjet dhe daljet'
+          student_description: Kjo njësi eksploron rolin e platformave hardware në informatikë dhe se si sensorë të ndryshëm mund të sigurojnë hyrje dhe dalje më efektive sesa tastiera tradicionale, miu dhe monitori. Duke përdorur App Lab dhe Adafruit's Circuit Playground, ju do të zhvilloni programe që përdorin të njëjtat hyrje dhe dalje harduerike që shihni në pajisjet inteligjente, duke parë se si një prototip i thjeshtë i përafërt mund të çojë në një produkt të përfunduar. Njësia përfundon me një sfidë të projektimit për të përdorur Circuit Playground si bazë për një risi të dizajnit tuaj.
         microbit-2023:
           lesson_groups:
             lessonGroup-3:
               display_name: Inputet dhe Outputet
+        devices-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: 'Kapitulli 1: Hyrjet dhe daljet'
+          student_description: Kjo njësi eksploron rolin e platformave hardware në informatikë dhe se si sensorë të ndryshëm mund të sigurojnë hyrje dhe dalje më efektive sesa tastiera tradicionale, miu dhe monitori. Duke përdorur App Lab dhe Adafruit's Circuit Playground, ju do të zhvilloni programe që përdorin të njëjtat hyrje dhe dalje harduerike që shihni në pajisjet inteligjente, duke parë se si një prototip i thjeshtë i përafërt mund të çojë në një produkt të përfunduar. Njësia përfundon me një sfidë të projektimit për të përdorur Circuit Playground si bazë për një risi të dizajnit tuaj.
         focus-on-creativity4b-2023:
           lesson_groups:
             lessonGroup-3:
@@ -2033,7 +2143,7 @@ sq:
             lessonGroup-3:
               display_name: Sekuencimi
             lessonGroup-4:
-              display_name: cikle
+              display_name: Cikle
         nevada-standards-aligned-kindergarten-2023:
           lessons:
             lesson-1:
@@ -2044,7 +2154,7 @@ sq:
             lessonGroup-3:
               display_name: Sekuencimi
             lessonGroup-4:
-              display_name: cikle
+              display_name: Cikle
             lessonGroup-6:
               display_name: të dhëna
         nevada-standards-aligned-first-grade-2023:
@@ -2057,7 +2167,7 @@ sq:
             lessonGroup-3:
               display_name: Sekuencimi
             lessonGroup-4:
-              display_name: cikle
+              display_name: Cikle
             lessonGroup-6:
               display_name: Ngjarje
             lessonGroup-7:
@@ -2072,7 +2182,7 @@ sq:
             lessonGroup-3:
               display_name: Sekuencimi
             lessonGroup-4:
-              display_name: cikle
+              display_name: Cikle
             lessonGroup-5:
               display_name: Ngjarje
             lessonGroup-6:
@@ -2084,7 +2194,7 @@ sq:
             lessonGroup-3:
               display_name: Sekuencimi
             lessonGroup-6:
-              display_name: cikle
+              display_name: Cikle
             lessonGroup-7:
               display_name: të dhëna
             lessonGroup-8:

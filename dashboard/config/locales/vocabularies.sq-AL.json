@@ -103,23 +103,31 @@
         },
         "sprite/csd/2021": {
           "word": "Sprite",
-          "definition": "Një karakter në ekran me parametra që përshkruajnë vendndodhjen, lëvizjen dhe pamjen e tij."
+          "definition": "Një karakter në ekran me atributet që përshkruajnë vendndodhjen, lëvizjen dhe pamjen e tij."
         },
         "dot_notation/csd/2021": {
           "word": "Pikë shënimi",
-          "definition": "mënyra se si parametrat e sprites përdoren në Game Lab, duke lidhur sprite dhe parametrin me një pikë."
+          "definition": "mënyra se si atributet e sprites përdoren në Game Lab, duke lidhur sprite dhe atributin me një pikë."
         },
         "condition/csd/2021": {
-          "word": "Kusht"
+          "word": "Kusht",
+          "definition": "Diçka që kontrollon një program për të parë nëse është e vërtetë përpara se të lejojë një veprim."
         },
         "conditionals/csd/2021": {
-          "word": "Kushtet"
+          "word": "Kushtet",
+          "definition": "Deklaratat që funksionojnë vetëm nën kushte të caktuara."
+        },
+        "boolean_expression/csd/2021": {
+          "word": "Shprehja Boolean",
+          "definition": "në programim, një shprehje që vlerëson të Vërtetë ose të Pavërtetën. "
         },
         "abstraction/csd/2021": {
-          "word": "Abstraksioni"
+          "word": "Abstraksioni",
+          "definition": "një paraqitje i thjeshtuar e diçkaje më komplekse. Abstraksionet ju lejojnë të fshehni detaje për t'ju ndihmuar të menaxhoni kompleksitetin, të përqendroheni në konceptet përkatëse dhe të arsyetoni për problemet në një nivel më të lartë."
         },
         "function/csd/2021": {
-          "word": "Funksion"
+          "word": "Funksion",
+          "definition": "Një pjesë e emëruar e udhëzimeve të programimit."
         },
         "user/csd/2021": {
           "word": "Përdorues",
@@ -137,9 +145,49 @@
           "word": "Digjital",
           "definition": "Të dhëna ose sinjale të përfaqësuara nga një numër i caktuar vlerash. Sinjalet analoge (të cilat mund të kenë vlera të pafundme) duhet të konvertohen në digjital në mënyrë që të llogariten me të."
         },
+        "array/csd/2021": {
+          "word": "Varg",
+          "definition": "Një strukturë e të dhënave në JavaScript përdoret për të përfaqësuar një listë."
+        },
+        "circuit/csd/2021": {
+          "word": "Qark",
+          "definition": "Një pajisje që siguron një rrugë për rrjedhjen e një rryme elektrike, shpesh duke modifikuar atë rrymë. Në kompjuter, qarqet lejojnë operacione të thjeshta logjike dhe matematikore duke përdorur energji elektrike."
+        },
         "machine_learning/csd/2021": {
           "word": "Mësimi i Makinave",
           "definition": "Si kompjuterët njohin modelet dhe marrin vendime pa u programuar në mënyrë eksplicite"
+        },
+        "features/csd/2021": {
+          "word": "Karakteristikat",
+          "definition": "Inputet që një model përdor për të marrë vendime"
+        },
+        "label/csd/2021": {
+          "word": "Emërtimi",
+          "definition": "outputi që po përpiqeni të vendosni ose parashikoni me një model"
+        },
+        "model/csd/2021": {
+          "word": "Modeli",
+          "definition": "një program kompjuterik i dizajnuar për të marrë një vendim"
+        },
+        "supervised_learning/csd/2021": {
+          "word": "Të mësuarit me mbikëqyrje",
+          "definition": "Kur një njeri stërvit një model për të mësuar me shembuj"
+        },
+        "training/csd/2021": {
+          "word": "Trajnimi",
+          "definition": "dhënja e shembujve një modeli në mënyrë që të mund të mësojë"
+        },
+        "unsupervised_learning/csd/2021": {
+          "word": "Të mësuarit pa mbikëqyrje",
+          "definition": "Gjetja e modeleve në të dhëna që nuk kanë asnjë etiketë"
+        },
+        "categorical_data/csd/2021": {
+          "word": "Të dhëna kategorike",
+          "definition": "Të dhënat që mund të ndahen në grupe"
+        },
+        "classification/csd/2021": {
+          "word": "Klasifikimi",
+          "definition": "Parashikimi i një kategorie bazuar në karakteristika të tjera"
         },
         "algorithm/coursea/2021": {
           "word": "Algoritëm",
@@ -311,6 +359,10 @@
         },
         "code/coursed/2021": {
           "definition": "(v) për të shkruar kodin, ose për të shkruar udhëzime për një kompjuter."
+        },
+        "command/coursed/2021": {
+          "word": "Komanda",
+          "definition": "Një udhëzim për kompjuterin. Shumë komanda të bashkuara përbëjnë algoritme dhe programe kompjuterike. "
         },
         "conditionals/coursed/2021": {
           "word": "Kushtet",
@@ -538,6 +590,10 @@
           "word": "Unazë përsëritëse",
           "definition": "Veprimi i të bërit diçka pa pushim."
         },
+        "command/express/2021": {
+          "word": "Komanda",
+          "definition": "Një udhëzim për kompjuterin. Shumë komanda të bashkuara përbëjnë algoritme dhe programe kompjuterike. "
+        },
         "condition/express/2021": {
           "word": "Kusht",
           "definition": "Diçka që kontrollon një program për të parë nëse është e vërtetë përpara se të lejojë një veprim."
@@ -724,7 +780,7 @@
         },
         "dot_notation/csd/2022": {
           "word": "Pikë shënimi",
-          "definition": "mënyra se si parametrat e sprites përdoren në Game Lab, duke lidhur sprite dhe parametrin me një pikë."
+          "definition": "mënyra se si atributet e sprites përdoren në Game Lab, duke lidhur sprite dhe atributin me një pikë."
         },
         "property/csd/2022": {
           "word": "Parametrat",
@@ -732,30 +788,75 @@
         },
         "sprite/csd/2022": {
           "word": "Sprite",
-          "definition": "Një karakter në ekran me parametra që përshkruajnë vendndodhjen, lëvizjen dhe pamjen e tij."
+          "definition": "Një karakter në ekran me atributet që përshkruajnë vendndodhjen, lëvizjen dhe pamjen e tij."
+        },
+        "boolean_expression/csd/2022": {
+          "word": "Shprehja Boolean",
+          "definition": "në programim, një shprehje që vlerëson të Vërtetë ose të Pavërtetën. "
         },
         "condition/csd/2022": {
-          "word": "Kusht"
+          "word": "Kusht",
+          "definition": "Diçka që kontrollon një program për të parë nëse është e vërtetë përpara se të lejojë një veprim."
         },
         "conditionals/csd/2022": {
-          "word": "Kushtet"
+          "word": "Kushtet",
+          "definition": "Deklaratat që funksionojnë vetëm nën kushte të caktuara."
         },
         "abstraction/csd/2022": {
-          "word": "Abstraksioni"
+          "word": "Abstraksioni",
+          "definition": "një paraqitje i thjeshtuar e diçkaje më komplekse. Abstraksionet ju lejojnë të fshehni detaje për t'ju ndihmuar të menaxhoni kompleksitetin, të përqendroheni në konceptet përkatëse dhe të arsyetoni për problemet në një nivel më të lartë."
         },
         "function/csd/2022": {
-          "word": "Funksion"
+          "word": "Funksion",
+          "definition": "Një pjesë e emëruar e udhëzimeve të programimit."
         },
         "user/csd/2022": {
           "word": "Përdorues",
           "definition": "Dikush që përdor një objekt, duke përfshirë softuerin dhe harduerin."
         },
         "innovation/csd/2022": {
-          "word": "Inovacioni"
+          "word": "Inovacioni",
+          "definition": "Një ide, pajisje, produkt, etj, i ri ose i përmirësuar ose zhvillimi i tij/saj"
+        },
+        "circuit/csd/2022": {
+          "word": "Qark",
+          "definition": "Një pajisje që siguron një rrugë për rrjedhjen e një rryme elektrike, shpesh duke modifikuar atë rrymë. Në kompjuter, qarqet lejojnë operacione të thjeshta logjike dhe matematikore duke përdorur energji elektrike."
         },
         "machine_learning/csd/2022": {
           "word": "Mësimi i Makinave",
           "definition": "Si kompjuterët njohin modelet dhe marrin vendime pa u programuar në mënyrë eksplicite"
+        },
+        "features/csd/2022": {
+          "word": "Karakteristikat",
+          "definition": "Inputet që një model përdor për të marrë vendime"
+        },
+        "label/csd/2022": {
+          "word": "Emërtimi",
+          "definition": "outputi që po përpiqeni të vendosni ose parashikoni me një model"
+        },
+        "model/csd/2022": {
+          "word": "Modeli",
+          "definition": "një program kompjuterik i dizajnuar për të marrë një vendim"
+        },
+        "supervised_learning/csd/2022": {
+          "word": "Të mësuarit me mbikëqyrje",
+          "definition": "Kur një njeri stërvit një model për të mësuar me shembuj"
+        },
+        "training/csd/2022": {
+          "word": "Trajnimi",
+          "definition": "dhënja e shembujve një modeli në mënyrë që të mund të mësojë"
+        },
+        "unsupervised_learning/csd/2022": {
+          "word": "Të mësuarit pa mbikëqyrje",
+          "definition": "Gjetja e modeleve në të dhëna që nuk kanë asnjë etiketë"
+        },
+        "categorical_data/csd/2022": {
+          "word": "Të dhëna kategorike",
+          "definition": "Të dhënat që mund të ndahen në grupe"
+        },
+        "classification/csd/2022": {
+          "word": "Klasifikimi",
+          "definition": "Parashikimi i një kategorie bazuar në karakteristika të tjera"
         },
         "algorithm/coursea/2022": {
           "word": "Algoritmi",
@@ -950,6 +1051,10 @@
         },
         "code/coursed/2022": {
           "definition": "(v) për të shkruar kodin, ose për të shkruar udhëzime për një kompjuter."
+        },
+        "command/coursed/2022": {
+          "word": "Komanda",
+          "definition": "Një udhëzim për kompjuterin. Shumë komanda të bashkuara përbëjnë algoritme dhe programe kompjuterike. "
         },
         "conditionals/coursed/2022": {
           "word": "Kushtet",
@@ -1167,6 +1272,10 @@
         "loop/express/2022": {
           "word": "Unazë përsëritëse",
           "definition": "Veprimi i të bërit diçka pa pushim."
+        },
+        "command/express/2022": {
+          "word": "Komanda",
+          "definition": "Një udhëzim për kompjuterin. Shumë komanda të bashkuara përbëjnë algoritme dhe programe kompjuterike. "
         },
         "condition/express/2022": {
           "word": "Kusht",

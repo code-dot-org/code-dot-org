@@ -68,7 +68,7 @@ sq:
           - unplug11
         video: Unplug11
       UnplugHappyMaps:
-        title: Hartat e Gëzuara
+        title: Hartat e Lumtura
         desc: Studentët krijojnë algoritma të thjeshtë (grup udhëzimesh) për të lëvizur midis një tuneli duke përdorur një komandë të vetme.
       MoveIt:
         title: Lëvize, Lëvize
@@ -177,7 +177,7 @@ sq:
         title: 'Algoritmet e jetës-Reale: Mbill një Farë'
         desc: Ky mësim thërret mënyrat se si ne përdorim algoritmet në jetët tona të përditshme, duke përdorur veprimin e mbjelljes së një fare për shembull. Gjithashtu, fokusohet në figurën më të madhe të shkencës kompjuterike dhe se si algoritmat luajnë një rol esencial.
       courseA_unplugged_happyMaps:
-        title: Hartat e Gëzuara
+        title: Hartat e Lumtura
         desc: Studentët krijojnë algoritma të thjeshtë (grup udhëzimesh) për të lëvizur midis një tuneli duke përdorur një komandë të vetme.
       courseA_unplugged_goingPlacesSafely:
         title: Të shkuarit nëpër Vende në mënyrë të Sigurtë
@@ -244,7 +244,7 @@ sq:
         title: 'Algoritmet e jetës-Reale: Mbill një Farë'
         desc: Ky mësim thërret mënyrat se si ne përdorim algoritmet në jetët tona të përditshme, duke përdorur veprimin e mbjelljes së një fare për shembull. Gjithashtu, fokusohet në figurën më të madhe të shkencës kompjuterike dhe se si algoritmat luajnë një rol esencial.
       UnplugHappyMaps_2018:
-        title: Hartat e Gëzuara
+        title: Hartat e Lumtura
         desc: Studentët krijojnë algoritma të thjeshtë (grup udhëzimesh) për të lëvizur midis një tuneli duke përdorur një komandë të vetme.
       GoingPlacesSafely_2018:
         title: Të shkuarit nëpër Vende në mënyrë të Sigurtë
@@ -314,7 +314,7 @@ sq:
         title: 'Algoritmet e jetës-Reale: Mbill një Farë'
         desc: Ky mësim thërret mënyrat se si ne përdorim algoritmet në jetët tona të përditshme, duke përdorur veprimin e mbjelljes së një fare për shembull. Gjithashtu, fokusohet në figurën më të madhe të shkencës kompjuterike dhe se si algoritmat luajnë një rol esencial.
       UnplugHappyMaps_2019:
-        title: Hartat e Gëzuara
+        title: Hartat e Lumtura
         desc: Studentët krijojnë algoritma të thjeshtë (grup udhëzimesh) për të lëvizur midis një tuneli duke përdorur një komandë të vetme.
       GoingPlacesSafely_2019:
         title: Të shkuarit nëpër Vende në mënyrë të Sigurtë

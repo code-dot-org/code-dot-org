@@ -1,2 +1,12 @@
 {
+  "sq-AL": {
+    "data": {
+      "dynamic_instructions": {
+        "ml-intro ai lab-shapes v1": {
+          "results": "Në këtë ekran ju mund të shihni se sa i saktë AI Bot kur krahasoni parashikimet e tij me të dhënat e testimit për të cilat ne tashmë i dimë përgjigjet. \n\n** Bëni këtë: ** Mbani trajnimin e modelit tuaj derisa të keni të paktën 100% saktësi",
+          "selectedFeatureCategorical": "Kur zgjidhni një kolonë, informacione shtesë shfaqen në panelin e djathtë. Kjo mund t'ju ndihmojë të vendosni nëse kjo është një veçori e dobishme për parashikimin e etiketës tuaj. Ju mund të mësoni më shumë në seksionin Ndihmë dhe Këshilla të këtyre udhëzimeve.\n\n**Bëni këtë: ** Vendosni nëse dëshironi ta përdorni këtë kolonë si veçori. Nëse po, shtypni butonin “Shto veçori”. Nëse jo, zgjidhni një kolonë të re për të eksploruar. Përsëriteni këtë derisa të keni zgjedhur disa kolona për t'u përdorur si veçori."
+        }
+      }
+    }
+  }
 }

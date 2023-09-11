@@ -452,6 +452,14 @@ sq-AL:
           # Eventi i Madh
 
           Në shkencat kompjuterike, eventet janë veprime që monitorohen nga një kompjuter. Në këtë mësim do të reagoni ndryshe në varësi të butonit që shtypet.
+      CSD CSS project RGB_2021:
+        description: Shikoni se si mund të merrni edhe më shumë ngjyra duke përdorur
+          kodet RGB.
+        display_name: Ngjyrat RGB
+      CSD CSS project RGB_2022:
+        description: Shikoni se si mund të merrni edhe më shumë ngjyra duke përdorur
+          kodet RGB.
+        display_name: Ngjyrat RGB
       CSD CSS project Review_2021:
         description: Këtu janë disa atribute CSS që ju mund të keni parë në dy mësime
           të kaluara. Ju mund t'i përdorni ato për të rishikuar stilet që mund të
@@ -468,24 +476,100 @@ sq-AL:
 
           ## [Kliko këtu për anketën e mësimdhënësve]
           (https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=1)
+      CSD Games Parameters challenge_2021:
+        description: Shikoni një ose më shumë nga këto blloqe shtesë që mund të përdorni
+          për t'i bërë fotot tuaja më interesante.
+        display_name: Sfidat e Formave dhe Parametrave
+      CSD Games Parameters challenge_2022:
+        description: Shikoni një ose më shumë nga këto blloqe shtesë që mund të përdorni
+          për t'i bërë fotot tuaja më interesante.
+        display_name: Sfidat e Formave dhe Parametrave
+      CSD Games Properties challenge_2021:
+        description: Provoni këto sfida të reja me atributet e sprite
+        display_name: 'Sfidat: Atributet e Sprite'
+      CSD Games Properties challenge_2022:
+        description: Provoni këto sfida të reja me atributet e sprite
+        display_name: 'Sfidat: Atributet e Sprite'
       CSD Games Properties multi predict_2021:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: një sprite blete në mes të ekranit
+        - text: një sprite blete në këndin e poshtëm të djathtë
+        - text: dy sprites bletësh, një në mes dhe një në këndin e poshtëm të djathtë
+        - text: tre sprites bletësh, të gjitha në vende të ndryshme
+        - text: Asgjë, do të ketë një gabim
+        content1: Shikoni kodin më poshtë dhe parashikoni se ku do të shfaqet bleta
+          sprite.
         questions:
-        - {}
+        - text: Çfarë do të tregojë programi?
+        title: Pozicionimi i Sprite të Bletës
       CSD Games Properties multi predict_2022:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: një sprite blete në mes të ekranit
+        - text: një sprite blete në këndin e poshtëm të djathtë
+        - text: dy sprites bletësh, një në mes dhe një në këndin e poshtëm të djathtë
+        - text: tre sprites bletësh, të gjitha në vende të ndryshme
+        - text: Asgjë, do të ketë një gabim
+        content1: Shikoni kodin më poshtë dhe parashikoni se ku do të shfaqet bleta
+          sprite.
         questions:
-        - {}
+        - text: Çfarë do të tregojë programi?
+        title: Pozicionimi i Sprite të Bletës
+      CSD Games Properties practice_2021:
+        description: Provoni atributet e sprite që keni mësuar këtu
+      CSD Games Properties practice_2022:
+        description: Provoni atributet e sprite që keni mësuar këtu
+      CSD Games Sprites Challenges_2021:
+        description: Provoni këto sfida shtesë që do t'ju ndihmojnë t'i bëni sprites
+          tuaj edhe më të veçantë.
+        display_name: 'Sfidat: Sprites dhe Animacione'
+      CSD Games Sprites Challenges_2022:
+        description: Provoni këto sfida shtesë që do t'ju ndihmojnë t'i bëni sprites
+          tuaj edhe më të veçantë.
+        display_name: 'Sfidat: Sprites dhe Animacione'
+      CSD Games Sprites practice_2021:
+        description: Përdorni aftësitë tuaja të reja për sprite dhe për animacion
+          për të përfunduar këto nivele.
+        display_name: Krijimi i sprites dhe animacioneve
+      CSD Games Sprites practice_2022:
+        description: Përdorni aftësitë tuaja të reja për sprite dhe për animacion
+          për të përfunduar këto nivele.
+        display_name: Krijimi i sprites dhe animacioneve
+      CSD Games parameters practice_2021:
+        display_name: Praktika me parametrat
+      CSD Games parameters practice_2022:
+        display_name: Praktika me parametrat
+      CSD Games variables challenge_2021:
+        description: Zgjeroni aftësitë tuaja të variablave me këto sfida.
+        display_name: 'Sfidat e Variablave '
+      CSD Games variables challenge_2022:
+        description: Zgjeroni aftësitë tuaja të variablave me këto sfida.
+        display_name: 'Sfidat e Variablave '
+      CSD Games variables practice_2021:
+        description: Zgjidhni nga aktivitetet e mëposhtme për të praktikuar duke përdorur
+          variabla.
+        display_name: Praktika e variablave
+      CSD Games variables practice_2022:
+        description: Zgjidhni nga aktivitetet e mëposhtme për të praktikuar duke përdorur
+          variabla.
+        display_name: Praktika e variablave
+      CSD HTML project Lists_2021:
+        description: Shikoni këto etiketa të reja që do t'ju lejojnë të shtoni lista
+          në webfaqen tuaj.
+        display_name: Listat HTML
+      CSD HTML project Lists_2022:
+        description: Shikoni këto etiketa të reja që do t'ju lejojnë të shtoni lista
+          në webfaqen tuaj.
+        display_name: Listat HTML
+      CSD HTML project Review_2021:
+        description: Këtu janë disa etiketa HTML që mund t'i keni parë në dy mësime
+          të kaluara. Ju mund t'i përdorni ato për të shqyrtuar etiketat që mund të
+          dëshironi për faqen tuaj të internetit.
+        display_name: Rishikim i HTML
+      CSD HTML project Review_2022:
+        description: Këtu janë disa etiketa HTML që mund t'i keni parë në dy mësime
+          të kaluara. Ju mund t'i përdorni ato për të shqyrtuar etiketat që mund të
+          dëshironi për faqen tuaj të internetit.
+        display_name: Rishikim i HTML
       CSD Header Size MC:
         answers:
         - {}
@@ -643,12 +727,52 @@ sq-AL:
         description: Ka shumë mënyra të ndryshme për të stiluar tekstin. Përdorni
           sfidat më poshtë për të marrë ide të reja për faqen tuaj të internetit.
         display_name: Sfidat dhe kodi shtesë
+      CSD U2 CSS practice_pilot_2021:
+        description: Provoni shkathtësitë tuaja të reja në këto sfida të ndryshme!
+        display_name: Stilimi i tekstit me CSS
+      CSD U2 CSS practice_pilot_2022:
+        description: Provoni shkathtësitë tuaja të reja në këto sfida të ndryshme!
+        display_name: Stilimi i tekstit me CSS
       CSD U2 Design Project:
         content1: përshkrimi këtu
       CSD U2 Design Project_2018:
         content1: përshkrimi këtu
       CSD U2 Design Project_2018_2019:
         content1: përshkrimi këtu
+      CSD U2 Expression Exemplars_2018_2019_pilot_2021:
+        markdown: |
+          # Shembuj Personal Website
+
+          Klikoni webfaqet më poshtë për të parë webfaqet personale që nxënësit e tjerë kanë bërë.
+
+          ## Shembuj
+
+          <div style="float: left; text-align:center;"><strong>Qeni më i lezetshëm</strong><br /><a href="https://codeprojects.org/vfqqBSl9WL5EmWlRTaCuyGL523thd_RLmA6fZjoahHo/" target="_new"><img style="border-radius:10px; margin: 10px;" src="https://images.code.org/be0c20dba6319b34dc07a9f87ae615fa-image-1565304900473.png" alt="Dog Sample Page"></a></div>
+          <div style="float: left; text-align:center;"><strong>Udhëtimi im</strong><br /><a href="https://codeprojects.org/HxtpYQ-r79cNzFpnSfGyhHHDE0tb28ed-9-scxvFYE0" target="_new"><img style="border-radius:10px; margin: 10px;" src="https://images.code.org/51b787b6a25663e092b3f55e051e9a94-image-1565630570417.png" alt="Trip Sample Page"></a></div>
+          <div style="float: left; text-align:center;"><strong>Instrumente Muzikore</strong><br /><a href="https://codeprojects.org/HxtpYQ-r79cNzFpnSfGyhMuNKEOTdyH5PPeUpDimEeY" target="_new"><img style="border-radius:10px; margin: 10px;" src="https://images.code.org/82323a78b17b69101dd6e98a6a21c55c-image-1565630573896.png" alt="Instrument Sample Page"></a></div>
+          <div style="float: left; text-align:center;"><strong>Klubi i riciklimit</strong><br /><a href="https://codeprojects.org/HxtpYQ-r79cNzFpnSfGyhBiffg8HpOk2lRx1kd5sgaw" target="_new"><img style="border-radius:10px; margin: 10px;" src="https://images.code.org/5b0044bfd92d44c97cd74d82f1933daa-image-1565630578147.png" alt="Recycling Sample Page"></a></div>
+          <div style="float: left; text-align:center;"><strong>Haikus</strong><br /><a href="https://codeprojects.org/HxtpYQ-r79cNzFpnSfGyhLgd_3k2ffeKaGZZO7Ebvgs" target="_new"><img style="border-radius:10px; margin: 10px;" src="https://images.code.org/40892c338c78da445310ddfb7cf63127-image-1565630595445.png" alt="Haiku Sample Page"></a></div>
+      CSD U2 Expression Exemplars_2018_2019_pilot_2022:
+        markdown: |
+          # Shembuj Personal Website
+
+          Klikoni webfaqet më poshtë për të parë webfaqet personale që nxënësit e tjerë kanë bërë.
+
+          ## Shembuj
+
+          <div style="float: left; text-align:center;"><strong>Qeni më i lezetshëm</strong><br /><a href="https://codeprojects.org/vfqqBSl9WL5EmWlRTaCuyGL523thd_RLmA6fZjoahHo/" target="_new"><img style="border-radius:10px; margin: 10px;" src="https://images.code.org/be0c20dba6319b34dc07a9f87ae615fa-image-1565304900473.png" alt="Dog Sample Page"></a></div>
+          <div style="float: left; text-align:center;"><strong>Udhëtimi im</strong><br /><a href="https://codeprojects.org/HxtpYQ-r79cNzFpnSfGyhHHDE0tb28ed-9-scxvFYE0" target="_new"><img style="border-radius:10px; margin: 10px;" src="https://images.code.org/51b787b6a25663e092b3f55e051e9a94-image-1565630570417.png" alt="Trip Sample Page"></a></div>
+          <div style="float: left; text-align:center;"><strong>Instrumente Muzikore</strong><br /><a href="https://codeprojects.org/HxtpYQ-r79cNzFpnSfGyhMuNKEOTdyH5PPeUpDimEeY" target="_new"><img style="border-radius:10px; margin: 10px;" src="https://images.code.org/82323a78b17b69101dd6e98a6a21c55c-image-1565630573896.png" alt="Instrument Sample Page"></a></div>
+          <div style="float: left; text-align:center;"><strong>Klubi i riciklimit</strong><br /><a href="https://codeprojects.org/HxtpYQ-r79cNzFpnSfGyhBiffg8HpOk2lRx1kd5sgaw" target="_new"><img style="border-radius:10px; margin: 10px;" src="https://images.code.org/5b0044bfd92d44c97cd74d82f1933daa-image-1565630578147.png" alt="Recycling Sample Page"></a></div>
+          <div style="float: left; text-align:center;"><strong>Haikus</strong><br /><a href="https://codeprojects.org/HxtpYQ-r79cNzFpnSfGyhLgd_3k2ffeKaGZZO7Ebvgs" target="_new"><img style="border-radius:10px; margin: 10px;" src="https://images.code.org/40892c338c78da445310ddfb7cf63127-image-1565630595445.png" alt="Haiku Sample Page"></a></div>
+      CSD U2 Image challenge_pilot_2021:
+        description: Gjeni një sfidë shtesë ose një lloj të ri të kodit këtu.
+      CSD U2 Image challenge_pilot_2022:
+        description: Gjeni një sfidë shtesë ose një lloj të ri të kodit këtu.
+      CSD U2 Image practice_pilot_2021:
+        description: Praktikoni shkathtësitë tuaja të reja këtu.
+      CSD U2 Image practice_pilot_2022:
+        description: Praktikoni shkathtësitë tuaja të reja këtu.
       CSD U2 L1 Overview:
         content1: përshkrimi këtu
       CSD U2 L2 Overview:
@@ -663,6 +787,52 @@ sq-AL:
         content1: përshkrimi këtu
       CSD U2 Lesson 6 Overview:
         content1: përshkrimi këtu
+      CSD U2 Sample CSS layout_2021:
+        markdown: "# Shembuj të webfaqeve\n\nKlikoni në webfaqen më poshtë për të
+          zbuluar disa lloje të reja të stilimit për faqet tuaja.\n\n|Shembulli 1
+          | Shembulli 2 | Shembulli3| \n|-|-|-| | | \n[![] (https://images.code.org/7c31d954229b205eff20e4a131271845-image-1585070245513.png)](https://studio.code.org/projects/weblab/-lbgSOg0xktagjHqalYTlPvYzGmfV3OyQxwifLBmmWE/view)
+          | [! [] (https://images.code.org/00410044eee7dedc993ec9d6c8887444-image-1589309900750.56.13
+          PM.png)] (https://studio.code.org/projects/weblab/3ZP18hc29B_ZMG2Yh17zXJfOZ_97JAa882aj9oJScME/view)
+          | [! [] (https://images.code.org/c67c9e9b8e44094a403e3974db09e2e3-image-1589314612876.15.47
+          PM.png)] (https://studio.code.org/projects/weblab/Hdfq1QJEwNjrbpI8x7qwPO6ZHgLyywZOxGRKqIZGp8Y/view)
+          |\n\n\n"
+      CSD U2 Sample CSS layout_2022:
+        markdown: "# Shembuj të webfaqeve\n\nKlikoni në webfaqen më poshtë për të
+          zbuluar disa lloje të reja të stilimit për faqet tuaja.\n\n|Shembulli 1
+          | Shembulli 2 | Shembulli3| \n|-|-|-| | | \n[![] (https://images.code.org/7c31d954229b205eff20e4a131271845-image-1585070245513.png)](https://studio.code.org/projects/weblab/-lbgSOg0xktagjHqalYTlPvYzGmfV3OyQxwifLBmmWE/view)
+          | [! [] (https://images.code.org/00410044eee7dedc993ec9d6c8887444-image-1589309900750.56.13
+          PM.png)] (https://studio.code.org/projects/weblab/3ZP18hc29B_ZMG2Yh17zXJfOZ_97JAa882aj9oJScME/view)
+          | [! [] (https://images.code.org/c67c9e9b8e44094a403e3974db09e2e3-image-1589314612876.15.47
+          PM.png)] (https://studio.code.org/projects/weblab/Hdfq1QJEwNjrbpI8x7qwPO6ZHgLyywZOxGRKqIZGp8Y/view)
+          |\n\n\n"
+      CSD U2 Sample CSS text_2021:
+        markdown: |-
+          # Shembull i webfaqes
+
+          Klikoni webfaqen më poshtë për të zbuluar disa lloje të reja stili për faqet tuaja.
+
+          [![](https://images.code.org/4343b7c16ca18f6d2c003bf95d756f42-image-1585189253769.png)](https://codeprojects.org/g4ZEsGYTllMmDt_2LwRya
+      CSD U2 Sample CSS text_2022:
+        markdown: |-
+          # Shembull i webfaqes
+
+          Klikoni webfaqen më poshtë për të zbuluar disa lloje të reja stili për faqet tuaja.
+
+          [![](https://images.code.org/4343b7c16ca18f6d2c003bf95d756f42-image-1585189253769.png)](https://codeprojects.org/g4ZEsGYTllMmDt_2LwRya
+      CSD U2 Sample classes_2021:
+        markdown: |
+          # Shembull i webfaqes
+
+          Klikoni webfaqen më poshtë për të zbuluar disa mënyra të reja për të stiluar elementët
+
+          [! [] (https://images.code.org/71a3cb8e9708093b17b9c75eb0723d10-image-1588247512749.49.53 AM.png)] (https://codeprojects.org/zu24LsgcyFFFLdZo9Q3vpBvDu3RpEDrNHtOLnEKNhZE)
+      CSD U2 Sample classes_2022:
+        markdown: |
+          # Shembull i webfaqes
+
+          Klikoni webfaqen më poshtë për të zbuluar disa mënyra të reja për të stiluar elementët
+
+          [! [] (https://images.code.org/71a3cb8e9708093b17b9c75eb0723d10-image-1588247512749.49.53 AM.png)] (https://codeprojects.org/zu24LsgcyFFFLdZo9Q3vpBvDu3RpEDrNHtOLnEKNhZE)
       CSD U2 Test Classes:
         answers:
         - {}
@@ -758,6 +928,12 @@ sq-AL:
         - {}
         - {}
         - {}
+        markdown: |-
+          Një nxënës po përdor një style sheet për t'i bërë jeshil të gjithë paragrafët në webfaqe, por nuk po funksionon në index.html, edhe pse funksionon në webfaqet e tjera. Çfarë mund të shkaktojë problemin?
+
+          1. Nxënësi harroi të lidhë fletën e stilit me faqen index.html.
+          1. Nxënësi nuk ka ngarkuar imazhet e përdorura në faqen index.html.
+          1. Nxënësi shkruajti gabimisht "jeshile" në fletën e stilit.
       CSD U2 Test Debug_pilot_2022:
         answers:
         - {}
@@ -765,6 +941,12 @@ sq-AL:
         - {}
         - {}
         - {}
+        markdown: |-
+          Një nxënës po përdor një style sheet për t'i bërë jeshil të gjithë paragrafët në webfaqe, por nuk po funksionon në index.html, edhe pse funksionon në webfaqet e tjera. Çfarë mund të shkaktojë problemin?
+
+          1. Nxënësi harroi të lidhë fletën e stilit me faqen index.html.
+          1. Nxënësi nuk ka ngarkuar imazhet e përdorura në faqen index.html.
+          1. Nxënësi shkruajti gabimisht "jeshile" në fletën e stilit.
       CSD U2 Test HTML Usage:
         answers:
         - {}
@@ -833,6 +1015,29 @@ sq-AL:
         - {}
         - {}
         - {}
+        markdown: |-
+          Pyetjet 5 dhe 6 trajtojnë webfaqen e mëposhtme:
+
+          ![](https://images.code.org/6a8e713405756aec4992cb5c406dcc2d-image-1552346175963.15.59 PM.png)
+
+          ![](https://images.code.org/d3ba5db1bffc7deb0f22a74836b338c9-image-1552346189165.16.05 PM.png)
+
+          <div>
+          Cili kod në fletën e stilit mund ta kishte bërë tekstin jeshil?<br><br>
+          1. <pre style="display:inline-block;width:100px">.p {
+             ngjyra: jeshile;
+          }</pre>
+          2. <pre style="display:inline-block;width:100px">p {
+             ngjyra: jeshile;
+          }</pre>
+          3. <pre style="display:inline-block;width:100px">.special {
+             ngjyra: jeshile;
+          }</pre>
+          4. <pre style="display:inline-block;width:100px">special {
+             ngjyra: jeshile;
+          }
+          </pre>
+          </div>
       CSD U2 Test code stylesheet_pilot_2022:
         answers:
         - {}
@@ -840,6 +1045,55 @@ sq-AL:
         - {}
         - {}
         - {}
+        markdown: |-
+          Pyetjet 5 dhe 6 trajtojnë webfaqen e mëposhtme:
+
+          ![](https://images.code.org/6a8e713405756aec4992cb5c406dcc2d-image-1552346175963.15.59 PM.png)
+
+          ![](https://images.code.org/d3ba5db1bffc7deb0f22a74836b338c9-image-1552346189165.16.05 PM.png)
+
+          <div>
+          Cili kod në fletën e stilit mund ta kishte bërë tekstin jeshil?<br><br>
+          1. <pre style="display:inline-block;width:100px">.p {
+             ngjyra: jeshile;
+          }</pre>
+          2. <pre style="display:inline-block;width:100px">p {
+             ngjyra: jeshile;
+          }</pre>
+          3. <pre style="display:inline-block;width:100px">.special {
+             ngjyra: jeshile;
+          }</pre>
+          4. <pre style="display:inline-block;width:100px">special {
+             ngjyra: jeshile;
+          }
+          </pre>
+          </div>
+      CSD U2 Top Websites_2018_2019_pilot_2021:
+        markdown: |-
+          # Webfaqe për zgjidhjen e problemeve
+
+          Këtu janë disa webfaqe që janë krijuar për të zgjidhur një problem. Zgjedhni dy vende dhe përdorni ato për të plotësuar udhëzuesin e aktivitetit.
+
+          [<img src="https://images.code.org/752da9829923228ba71fd32499c2a5bf-image-1566856199999.png" style="float: left; margin: 10px">](https. vq4bGQx0zi_PrWM5p8Y)
+
+          [<img src="https://images.code.org/3dbd54718965bf83f0695422d5600b0c-image-1566240318585.png" style="float: left; margjina: 10px">](https.orgKlHS/Jjjjjjjjjjjjjql8500000000318585.png Rz7dO1Vxj8o70HhBSfTHU/)
+
+          [<img src="https://images.code.org/37b9660399cb69d5c0bbc2603e2c43da-image-1566240321606.png" style="float: left; margin: 10px">](https.orgkSpWTwTp tohzsZGRmBxRTtV6cA/ )
+
+          [<img src="https://images.code.org/7331e5d4b1dda825360217270212ed46-image-1566240324800.png" style="float: left; margin: 10px">](https.org-5R_5FC- LCbwW5oRUVt2h7BKe-N5OBaBr_OfTlxpk/)
+      CSD U2 Top Websites_2018_2019_pilot_2022:
+        markdown: |-
+          # Webfaqe për zgjidhjen e problemeve
+
+          Këtu janë disa webfaqe që janë krijuar për të zgjidhur një problem. Zgjedhni dy vende dhe përdorni ato për të plotësuar udhëzuesin e aktivitetit.
+
+          [<img src="https://images.code.org/752da9829923228ba71fd32499c2a5bf-image-1566856199999.png" style="float: left; margin: 10px">](https. vq4bGQx0zi_PrWM5p8Y)
+
+          [<img src="https://images.code.org/3dbd54718965bf83f0695422d5600b0c-image-1566240318585.png" style="float: left; margjina: 10px">](https.orgKlHS/Jjjjjjjjjjjjjql8500000000318585.png Rz7dO1Vxj8o70HhBSfTHU/)
+
+          [<img src="https://images.code.org/37b9660399cb69d5c0bbc2603e2c43da-image-1566240321606.png" style="float: left; margin: 10px">](https.orgkSpWTwTp tohzsZGRmBxRTtV6cA/ )
+
+          [<img src="https://images.code.org/7331e5d4b1dda825360217270212ed46-image-1566240324800.png" style="float: left; margin: 10px">](https.org-5R_5FC- LCbwW5oRUVt2h7BKe-N5OBaBr_OfTlxpk/)
       CSD U2 expand project:
         content1: përshkrimi këtu
       CSD U2 expand project_2018:
@@ -861,20 +1115,34 @@ sq-AL:
         - {}
       CSD U2 image debug match_2022:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: https://images.code.org/9e5367ff3c78372af28a4518cfb3aaa8-image-1648053867494.png
+        - text: https://images.code.org/993c973fa31b14cb6827eb7cb6d53c40-image-1648053902975.png
+        - text: https://images.code.org/41b12f31a9084638e4625fecaff916d5-image-1648054026831.png
+        - text: https://images.code.org/030d30152c42faf0891259af025b9884-image-1648054068540.png
+        - text: https://images.code.org/eb2e2f9a15688cc4b2d80f4c401223b1-image-1648054098000.png
+        markdown: |
+          # Përputhja
+
+          **Secili prej artikujve më poshtë ka një bug. Përputhni përshkrimin me gabimin e saktë**
+
+          ## A:! [] (https://images.code.org/e3b9be5444661a34eefe9bfa89e94cbc-image-1553717006899.02.47%20PM.png)
+
+          ## B:! [] (https://images.code.org/0ffde880f790f497b2aaef29f40272f4-image-1553717010350.02.40%20PM.png)
+
+          ## C:! [] (https://images.code.org/555e64ae1a9a586d902f1ed254e4e00c-image-1553717003484.03.01%20PM.png)
+
+          ## D:! [] (https://images.code.org/a86b628a71ae0415fe48dfd8a19ee69a-image-1553717016038.02.24%20PM.png)
+
+          ## E:! [] (https://images.code.org/6015fb13fa76d32072de2762d7d363ba-image-1553717013288.02.34%20PM.png)
         questions:
         - {}
         - {}
         - {}
-        - {}
+        - text: Etiketa e imazhit është e pasaktë dhe mungon një atribut `src`
         - {}
       CSD U2 image debug match_pilot_2021:
         answers:
-        - {}
+        - text: https://images.code.org/6015fb13fa76d32072de2762d7d363ba-image-1553717013288.02.34%20PM.png
         - {}
         - {}
         - {}
@@ -885,6 +1153,24 @@ sq-AL:
         - {}
         - {}
         - {}
+      CSD U2 layout style challenge_pilot_2021:
+        description: Provoni sfida shtesë ose mësoni ndonjë kod të ri.
+        display_name: Elementet e stilimit
+      CSD U2 layout style challenge_pilot_2022:
+        description: Provoni sfida shtesë ose mësoni ndonjë kod të ri.
+        display_name: Elementet e stilimit
+      CSD U2 layout style practice_pilot_2021:
+        description: Praktikoni shkathtësitë tuaja të reja këtu.
+        display_name: Elementet e stilimit
+      CSD U2 layout style practice_pilot_2022:
+        description: Praktikoni shkathtësitë tuaja të reja këtu.
+        display_name: Elementet e stilimit
+      CSD U2 links challenge_2021:
+        description: Provoni sfida shtesë ose mësoni ndonjë kod të ri.
+        display_name: Krijimi i links
+      CSD U2 links challenge_2022:
+        description: Provoni sfida shtesë ose mësoni ndonjë kod të ri.
+        display_name: Krijimi i links
       CSD U2 lists match:
         answers:
         - {}
@@ -932,8 +1218,62 @@ sq-AL:
         content1: përshkrimi këtu
       CSD U2 project guide_2018_2019_pilot_2021:
         content1: përshkrimi këtu
+        markdown: "# Webaqja juaj personale \n\nNë disa nivele të ardhshme, ju do
+          të plotësoni dhe publikoni webfaqen tuaj personale. Ky është shansi juaj
+          për të ndarë idetë tuaja me botën dhe gjithashtu për të treguar të gjitha
+          gjërat që keni mësuar.\n\nDo t'ju duhet...\n\n* Udhëzuesi juaj i përfunduar
+          i projektit\n* Imazhet që keni shkarkuar\n* Rubrika e projektit\n\nKëtu
+          janë gjërat që keni mësuar...\n\n* Si të përdorni HTML për të strukturuar
+          përmbajtjen e faqes tuaj\n* Si të përdorni CSS për të stiluar tekstin, ngjyrat
+          dhe paraqitjen e faqes tuaj\n* Si ta formatoni kodin tuaj për ta bërë më
+          të lehtë leximin\n* Si të korrigjoni kodin HTML dhe CSS\n* Si të përdorni
+          imazhet në mënyrë të përgjegjshme\n* Si të mbroni informacionin tuaj personal
+          në internet\n\n## Shembuj\n\n<div style=\"float: left; text-align:center;\"><strong>Qeni
+          më i lezetshëm</strong><br /><a href=\"https://codeprojects.org/vfqqBSl9WL5EmWlRTaCuyGL523thd_RLmA6fZjoahHo/\"
+          target=\" _new\"><img style=\"border-radius:10px; margin: 10px;\" src=\"https://images.code.org/be0c20dba6319b34dc07a9f87ae615fa-image-1565304900473.png\"
+          alt=\"Faqja e mostrës së qenit\"></a></div>\n<div style=\"float: left; text-align:center;\"><strong>Udhëtimi
+          im</strong><br /><a href=\"https://codeprojects.org/HxtpYQ-r79cNzFpnSfGyhHHDE0tb28ed-9-scxvFYE0
+          \" target=\"_new\"><img style=\"border-radius:10px; margin: 10px;\" src=\"https://images.code.org/51b787b6a25663e092b3f55e051e9a94-image-1565630570417.png\"
+          alt=\"Faqja e shembullit të udhëtimit\"></a></div>\n<div style=\"float:
+          left; text-align:center;\"><strong>Instrumente muzikore</strong><br /><a
+          href=\"https://codeprojects.org/HxtpYQ-r79cNzFpnSfGyhMuNKEOTdyH5PPeUpDimEeY\"
+          target=\" _new\"><img style=\"border-radius:10px; margin: 10px;\" src=\"https://images.code.org/82323a78b17b69101dd6e98a6a21c55c-image-1565630573896.png\"
+          alt=\"Faqja e mostrës së instrumentit\"></a></div>\n<div style=\"float:
+          left; text-align:center;\"><strong>Klubi i riciklimit</strong><br /><a href=\"https://codeprojects.org/HxtpYQ-r79cNzFpnSfGyhBiffg8HpOk2lRx1kd5sgaw\"
+          target=\" _new\"><img style=\"border-radius:10px; margin: 10px;\" src=\"https://images.code.org/5b0044bfd92d44c97cd74d82f1933daa-image-1565630578147.png\"
+          alt=\"Riciklimi i faqes së mostrës\"></a></div>\n<div style=\"float: left;
+          text-align:center;\"><strong>Haikus</strong><br /><a href=\"https://codeprojects.org/HxtpYQ-r79cNzFpnSfGyhLgd_3k2ffeKaGZZO7Ebvgs\"
+          target=\"_new \"><img style=\"border-radius:10px; margin: 10px;\" src=\"https://images.code.org/40892c338c78da445310ddfb7cf63127-image-1565630595445.png\"
+          alt=\"Faqja e mostrës Haiku\"></a></div>"
       CSD U2 project guide_2018_2019_pilot_2022:
         content1: përshkrimi këtu
+        markdown: "# Webaqja juaj personale \n\nNë disa nivele të ardhshme, ju do
+          të plotësoni dhe publikoni webfaqen tuaj personale. Ky është shansi juaj
+          për të ndarë idetë tuaja me botën dhe gjithashtu për të treguar të gjitha
+          gjërat që keni mësuar.\n\nDo t'ju duhet...\n\n* Udhëzuesi juaj i përfunduar
+          i projektit\n* Imazhet që keni shkarkuar\n* Rubrika e projektit\n\nKëtu
+          janë gjërat që keni mësuar...\n\n* Si të përdorni HTML për të strukturuar
+          përmbajtjen e faqes tuaj\n* Si të përdorni CSS për të stiluar tekstin, ngjyrat
+          dhe paraqitjen e faqes tuaj\n* Si ta formatoni kodin tuaj për ta bërë më
+          të lehtë leximin\n* Si të korrigjoni kodin HTML dhe CSS\n* Si të përdorni
+          imazhet në mënyrë të përgjegjshme\n* Si të mbroni informacionin tuaj personal
+          në internet\n\n## Shembuj\n\n<div style=\"float: left; text-align:center;\"><strong>Qeni
+          më i lezetshëm</strong><br /><a href=\"https://codeprojects.org/vfqqBSl9WL5EmWlRTaCuyGL523thd_RLmA6fZjoahHo/\"
+          target=\" _new\"><img style=\"border-radius:10px; margin: 10px;\" src=\"https://images.code.org/be0c20dba6319b34dc07a9f87ae615fa-image-1565304900473.png\"
+          alt=\"Faqja e mostrës së qenit\"></a></div>\n<div style=\"float: left; text-align:center;\"><strong>Udhëtimi
+          im</strong><br /><a href=\"https://codeprojects.org/HxtpYQ-r79cNzFpnSfGyhHHDE0tb28ed-9-scxvFYE0
+          \" target=\"_new\"><img style=\"border-radius:10px; margin: 10px;\" src=\"https://images.code.org/51b787b6a25663e092b3f55e051e9a94-image-1565630570417.png\"
+          alt=\"Faqja e shembullit të udhëtimit\"></a></div>\n<div style=\"float:
+          left; text-align:center;\"><strong>Instrumente muzikore</strong><br /><a
+          href=\"https://codeprojects.org/HxtpYQ-r79cNzFpnSfGyhMuNKEOTdyH5PPeUpDimEeY\"
+          target=\" _new\"><img style=\"border-radius:10px; margin: 10px;\" src=\"https://images.code.org/82323a78b17b69101dd6e98a6a21c55c-image-1565630573896.png\"
+          alt=\"Faqja e mostrës së instrumentit\"></a></div>\n<div style=\"float:
+          left; text-align:center;\"><strong>Klubi i riciklimit</strong><br /><a href=\"https://codeprojects.org/HxtpYQ-r79cNzFpnSfGyhBiffg8HpOk2lRx1kd5sgaw\"
+          target=\" _new\"><img style=\"border-radius:10px; margin: 10px;\" src=\"https://images.code.org/5b0044bfd92d44c97cd74d82f1933daa-image-1565630578147.png\"
+          alt=\"Riciklimi i faqes së mostrës\"></a></div>\n<div style=\"float: left;
+          text-align:center;\"><strong>Haikus</strong><br /><a href=\"https://codeprojects.org/HxtpYQ-r79cNzFpnSfGyhLgd_3k2ffeKaGZZO7Ebvgs\"
+          target=\"_new \"><img style=\"border-radius:10px; margin: 10px;\" src=\"https://images.code.org/40892c338c78da445310ddfb7cf63127-image-1565630595445.png\"
+          alt=\"Faqja e mostrës Haiku\"></a></div>"
       CSD U3 - conditionals - Matching:
         answers:
         - {}
@@ -1032,6 +1372,11 @@ sq-AL:
         - {}
         - {}
         - {}
+        markdown: "# Shprehjet Boolean\n\n**Shprehje Boolean ** - një shprehje që
+          mund të vlerësojë vetëm në `TRUE` ose `FALSE` \n\n# Parashikoni \n\nLexoni
+          kodin më poshtë. Ka disa simbole të reja në të cilat ju nuk i keni mësuar
+          ende. Mendoni pak se çfarë do të thonë dhe përpiquni t'i përgjigjeni pyetjes
+          vijuese\n"
         questions:
         - {}
         title: titull
@@ -1041,6 +1386,11 @@ sq-AL:
         - {}
         - {}
         - {}
+        markdown: "# Shprehjet Boolean\n\n**Shprehje Boolean ** - një shprehje që
+          mund të vlerësojë vetëm në `TRUE` ose `FALSE` \n\n# Parashikoni \n\nLexoni
+          kodin më poshtë. Ka disa simbole të reja në të cilat ju nuk i keni mësuar
+          ende. Mendoni pak se çfarë do të thonë dhe përpiquni t'i përgjigjeni pyetjes
+          vijuese\n"
         questions:
         - {}
         title: titull
@@ -1389,9 +1739,17 @@ sq-AL:
         - {}
         - {}
         - {}
+      CSD U3 drawing challenges_2021:
+        description: Provoni disa sfida!
+        display_name: Vizatimi i sfidave
+      CSD U3 drawing challenges_2022:
+        description: Provoni disa sfida!
+        display_name: Vizatimi i sfidave
       CSD U3 drawing practice choice_2021:
+        description: Bëni shumë praktikë!
         display_name: Ushtrime
       CSD U3 drawing practice choice_2022:
+        description: Bëni shumë praktikë!
         display_name: Ushtrime
       CSD U3 game intro:
         content1: përshkrimi këtu
@@ -1725,6 +2083,28 @@ sq-AL:
         - {}
         questions:
         - {}
+      CSD U6 - Accelerometer - Prac_2222:
+        display_name: Nivelet e praktikës
+      CSD U6 - Board Inputs - Prac_2222:
+        display_name: Nivelet e praktikës
+      CSD U6 - Board Outputs - Prac_2222:
+        display_name: Nivelet e praktikës
+      CSD U6 - Color LEDs - Prac_2222:
+        display_name: Nivelet e praktikës
+      CSD U6 - Combine Inputs - Prac_2222:
+        display_name: Nivelet e praktikës
+      CSD U6 - Functions - Prac_2222:
+        display_name: Nivelet e praktikës
+      CSD U6 - Physical Input - Prac_2222:
+        display_name: Nivelet e praktikës
+      CSD U6 - Physical Output - Prac_2222:
+        display_name: Nivelet e praktikës
+      CSD U6 - Screen Inputs - Prac_2222:
+        display_name: Nivelet e praktikës
+      CSD U6 - Screen Outputs - Prac_2222:
+        display_name: Nivelet e praktikës
+      CSD U6 - Sensors - Prac_2222:
+        display_name: Nivelet e praktikës
       CSD U6 LED create intro:
         content1: përshkrimi këtu
       CSD U6 LED create intro_2018:
@@ -1815,22 +2195,28 @@ sq-AL:
         - {}
       CSD U6 test algorithms multi2:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: trajtuesit e ngjarjeve
+        - text: for loops dhe vargjet
+        - text: funksionet me parametra
+        - text: Marrësit/getProperty
+        - text: konvertimi analog në digjital
         questions:
-        - {}
+        - text: Një klasë dëshiron të krijojë një program që do të shfaqë mirëmëngjesi
+            për të gjithë. Për shembull, programi do të shfaqë “Mirëmëngjes, Dwayne!”
+            , “Mirëmëngjes, Mari!” për secilin nxënës. Cilat dy mjete programimi do
+            të jenë më të dobishme kur shkruani këtë program?
       CSD U6 test algorithms multi2_2021:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: trajtuesit e ngjarjeve
+        - text: for loops dhe vargjet
+        - text: funksionet me parametra
+        - text: Marrësit/getProperty
+        - text: konvertimi analog në digjital
         questions:
-        - {}
+        - text: Një klasë dëshiron të krijojë një program që do të shfaqë mirëmëngjesi
+            për të gjithë. Për shembull, programi do të shfaqë “Mirëmëngjes, Dwayne!”
+            , “Mirëmëngjes, Mari!” për secilin nxënës. Cilat dy mjete programimi do
+            të jenë më të dobishme kur shkruani këtë program?
       CSD U6 test debugging multi:
         answers:
         - {}
@@ -1985,18 +2371,177 @@ sq-AL:
         display_name: Sfidat
       CSD games platform challenge choice_2022:
         display_name: Sfidat
+      CSD games random challenge_2021:
+        description: Provoni këto sfida shtesë me numra të rastësishëm.
+        display_name: 'Sfidat: Numrat e rastësishëm'
+      CSD games random challenge_2022:
+        description: Provoni këto sfida shtesë me numra të rastësishëm.
+        display_name: 'Sfidat: Numrat e rastësishëm'
+      CSD games random practice_2021:
+        description: Provoni aftësitë tuaja të reja në këto nivele.
+        display_name: Praktikoni me numra të rastësishëm
+      CSD games random practice_2022:
+        description: Provoni aftësitë tuaja të reja në këto nivele.
+        display_name: Praktikoni me numra të rastësishëm
+      CSD games velocity challenge choice_2021:
+        description: Provoni këto blloqe dhe sfida të reja me drejtimin.
+        display_name: Sfidat e drejtimit
+      CSD games velocity challenge choice_2022:
+        description: Provoni këto blloqe dhe sfida të reja me drejtimin.
+        display_name: Sfidat e drejtimit
+      CSD games velocity practice choice_2021:
+        display_name: Praktika e Drejtimit
+      CSD games velocity practice choice_2022:
+        display_name: Praktika e Drejtimit
+      CSD web classes challenge_2021:
+        description: Provoni sfida shtesë ose mësoni ndonjë kod të ri.
+        display_name: Përdorimi i klasave
+      CSD web classes challenge_2022:
+        description: Provoni sfida shtesë ose mësoni ndonjë kod të ri.
+        display_name: Përdorimi i klasave
+      CSD web classes practice_2021:
+        description: Praktikoni shkathtësitë tuaja të reja këtu.
+        display_name: Përdorimi i klasave
+      CSD web classes practice_2022:
+        description: Praktikoni shkathtësitë tuaja të reja këtu.
+        display_name: Përdorimi i klasave
+      CSD web conditionals challenge choice_2021:
+        description: Provoni këto sfida me conditionlas.
+        display_name: Sfidat e Conditionals
+      CSD web conditionals challenge choice_2022:
+        description: Provoni këto sfida me conditionlas.
+        display_name: Sfidat e Conditionals
+      CSD web conditionals practice choice_2021:
+        description: Praktikoni përdorimin e booleanëve dhe conditionals me këto aktivitete.
+        display_name: 'Praktikimi i Conditionals '
+      CSD web conditionals practice choice_2022:
+        description: Praktikoni përdorimin e booleanëve dhe conditionals me këto aktivitete.
+        display_name: 'Praktikimi i Conditionals '
+      CSD web draw loop challenge choice_2021:
+        description: Provoni këto sfida të draw loop.
+        display_name: Sfidat e Draw Loop
+      CSD web draw loop challenge choice_2022:
+        description: Provoni këto sfida të draw loop.
+        display_name: Sfidat e Draw Loop
       CSD web draw loop practice choice_2021:
+        description: Provoni të përdorni draw loop me këto aktivitete.
         display_name: Ushtrime
       CSD web draw loop practice choice_2022:
+        description: Provoni të përdorni draw loop me këto aktivitete.
         display_name: Ushtrime
+      CSD web keyboard challenge choice_2021:
+        description: Provoni këto blloqe dhe sfida të reja me input të tastierës.
+        display_name: Sfida e Input të Tastierës
+      CSD web keyboard challenge choice_2022:
+        description: Provoni këto blloqe dhe sfida të reja me input të tastierës.
+        display_name: Sfida e Input të Tastierës
+      CSD web keyboard practice choice_2021:
+        description: Praktikoni futjen e tastierës me këto aktivitete.
+        display_name: Praktika e Inputit të Tastierës
+      CSD web keyboard practice choice_2022:
+        description: Praktikoni futjen e tastierës me këto aktivitete.
+        display_name: Praktika e Inputit të Tastierës
+      CSD web mouse challenge choice_2021:
+        description: Provoni këto blloqe dhe sfida të reja me input të mausit.
+        display_name: Sfidat e Mausit
+      CSD web mouse challenge choice_2022:
+        description: Provoni këto blloqe dhe sfida të reja me input të mausit.
+        display_name: Sfidat e Mausit
+      CSD web mouse practice choice_2021:
+        description: Praktikoni input të tastierës dhe përdorimin e bllokut if/else
+          me këto aktivitete.
+        display_name: Input të mausit dhe praktika if/else
+      CSD web mouse practice choice_2022:
+        display_name: Input të mausit dhe praktika if/else
+      CSD web movement challenge choice_2021:
+        description: Shtoni më shumë në skenën tuaj të peshkut ose krijoni diçka të
+          re.
+        display_name: Sfidat e Lëvizjes Sprite
+      CSD web movement challenge choice_2022:
+        description: Shtoni më shumë në skenën tuaj të peshkut ose krijoni diçka të
+          re.
+        display_name: Sfidat e Lëvizjes Sprite
       CSD web movement practice choice_2021:
+        description: Provoni të përdorni draw loop me këto aktivitete.
         display_name: Ushtrime
       CSD web movement practice choice_2022:
+        description: Provoni të përdorni draw loop me këto aktivitete.
         display_name: Ushtrime
+      CSD web text challenge choice_2021:
+        description: Provoni këto blloqe dhe sfida të reja.
+        display_name: Sfidat e tekstit
+      CSD web text challenge choice_2022:
+        description: Provoni këto blloqe dhe sfida të reja.
+        display_name: Sfidat e tekstit
       CSD web text practice choice_2021:
+        description: Provoni aftësitë tuaja të tekstit në këto aktivitete.
         display_name: Ushtrime
       CSD web text practice choice_2022:
+        description: Provoni aftësitë tuaja të tekstit në këto aktivitete.
         display_name: Ushtrime
+      CSDU6 Innovation_2021:
+        markdown: "# Kërkimi i inovacionit\n\nZgjidhni një nga temat e mëposhtme për
+          të parë. Ju do të dëshironi të gjeni informacion në lidhje me disa nga pajisjet
+          më të fundit inovative informatike në lidhje me kategorinë tuaj.\n\n## Teknologjia
+          e veshshme\nTeknologjia e veshur përfshin çdo formë të informatikës që është
+          krijuar për t'u veshur nga përdoruesi, pavarësisht nëse është ngulitur në
+          veshje ose vishet si aksesor. Shumë pajisje të veshura, të tilla si hapësira
+          inteligjente, mbivendosen disi me shëndetin dhe sigurinë pasi pajisja është
+          e veshur _dhe_ synon të ndihmojë në përmirësimin e shëndetit tuaj personal.\n\n##
+          Shëndeti dhe Siguria \nTema e gamës së gjerë përfshin si teknologjinë e
+          konsumit (gjërat që mund të përdorni për të përmirësuar shëndetin ose sigurinë
+          tuaj) dhe teknologjinë profesionale (pajisje që mund të përdorë një mjek
+          ose profesionist tjetër).\n\n## Bujqësia\nBujqësia mund të mos jetë një
+          temë e qartë, por inovacionet teknologjike kanë pasur një ndikim të madh
+          në mënyrën se si i qasemi bujqësisë. Kjo përfshin përfshirjen e kompjuterëve
+          në pajisjet ekzistuese të fermave, përdorimin e sensorëve dhe robotikës
+          për të monitoruar kulturat dhe analizimin e të dhënave për të përmirësuar
+          efikasitetin dhe qëndrueshmërinë.\n\n## Prodhimi\nPërparimet e prodhimit
+          në prototipizimin e shpejtë, robotikën industriale dhe automatizimin kanë
+          pasur një ndikim të madh në mënyrën se si prodhohen mallrat. Pavarësisht
+          nëse është teknologji për të mundësuar prodhim të përballueshëm në shkallë
+          të vogël (si printera 3D dhe prerës lazer) ose integrimin e kompjuterëve
+          në punën e fabrikës, ka shumë fusha interesante për të hulumtuar këtu.\n\n##
+          Arti dhe Dizajni\n Kryqëzimi i shprehjes artistike dhe informatikës mund
+          të japë rezultate mbresëlënëse dhe të papritura. Ndërsa ka më pak të ngjarë
+          të gjeni produkte komerciale të disponueshme në lidhje me artin dhe dizajnin,
+          do të gjeni një larmi të gjerë krijimesh shtëpiake që përdorin të gjitha
+          mënyrat e pajisjeve informatike në mënyra krijuese dhe ekspresive.\n\n##
+          Shtëpia inteligjente\nËndrra e një shtëpie që kupton dhe madje parashikon
+          nevojat tuaja është më afër se kurrë. Pavarësisht nëse kontrollohen në mënyrë
+          eksplicite përmes komandave zanore, ose duke përdorur sensorë për të monitoruar
+          dhe për t'iu përgjigjur ndryshimit të kushteve, pajisjet inteligjente të
+          shtëpisë kujdesen për çdo numër detyrash të zakonshme ose të përsëritura
+          rreth shtëpisë.\n\n\n# Konsideratat e hulumtimit\n\nNdërsa hulumtoni pajisjet
+          në temën tuaj, mbani në mend konsideratat e mëposhtme:\n\n* Përqendrohuni
+          në zgjidhjet e bazuara në harduer mbi programet softuerike\n* Përqendrohuni
+          në risitë e fundit mbi lajmet e vjetra\n* Ndiqni atë që ju intereson\n\n#
+          Fillimi i hulumtimit\n\nKontrolloni me mësuesin tuaj për webfaqet e rekomanduara
+          për të filluar kërkimin tuaj Ju gjithashtu mund të përdorni disa nga fjalët
+          kyçe më lart për të filluar kërkimin në internet për ide specifike. Për
+          shembull, merrni parasysh të shikoni drejt faqeve të ndryshme të financimit
+          të turmës (të tilla si Kickstarter dhe Indiegogo) për të parë produktet
+          që nuk e kanë dalë ende jashtë terrenit.\n"
+        teacher_markdown: "Më poshtë janë disa webfaqe që nxënësit mund të përdorin
+          për të filluar kërkimin e tyre. Ne nuk u kemi siguruar këto drejtpërdrejt
+          nxënësve sepse ndonjëherë këto vende bllokohen nga programet e filtrimit
+          të rrethit, ose inovacioni më i fundit i denjë për lajmet mund të mos jetë
+          i përshtatshëm për shkollën e mesme. **Ne fuqimisht ju sugjerojmë të kontrolloni
+          secilën faqe për përmbajtje të papërshtatshme dhe të siguroheni që do të
+          ngarkohet në kompjuterët e klasës përpara se ta ndani atë me nxënësit**.\n\nDuke
+          përdorur listën më poshtë si pikënisje, ne rekomandojmë sigurimin e një
+          liste digjitale të webfaqeve kërkimore për nxënësit. Mund të përfshijë webfaqet
+          më poshtë dhe çdo burim shtesë që mund të gjeni në hulumtimin tuaj.\n\n###
+          Teknologjia e veshur\n\n* [Wareable.com](https://www.wareable.com/)\n\n###
+          Shëndeti dhe Siguria\n\n* [Shëndeti Modern] (http://www.modernhealthcare.com/section/medical-devices)
+          \n*  [Medstartr](http://www.medstartr.com/)\n\n### Bujqësia\n\n* [Instituti
+          Kombëtar i Ushqimit dhe Bujqësisë] (https://nifa.usda.gov/topic/agriculture-technology)\n*
+          [Lajmet e Industrisë së Fermave] (http://www.farmindustrynews.com/technology)\n\n###
+          Prodhimi\n\n* [Java e Industrisë] (https://www.industryweek.com/technology-and-iiot)\n*
+          [Printim 3D] (https://3dprinting.com/)\n\n### Arti dhe Dizajni\n\n* [ArtFab](http://artfab.art.cmu.edu/)\n*
+          [Instructables](http://www.instructables.com/tag/type-id/category-technology/)\n\n###
+          Shtëpia inteligjente\n\n* [CNet](https://www.cnet.com/smart-home/) \n* [Evolucioni
+          IoT] (http://www.iotevolutionworld.com/smart-home/)\n\n\n"
       CSP PD Example Question 1:
         answers:
         - {}
@@ -2022,6 +2567,15 @@ sq-AL:
           # Kushtëzimet me karta
 
           Luaj një lojë me letra dhe krijoni rregulla si "Nëse e vizatoj një letër të kuqe e marr një pikë" dhe "Nëse vizatoj një letër të zezë ju merrni një pikë".
+      CourseE_Artist_Practice_2022:
+        description: Punë e shkëlqyeshme deri më tani! Zgjedhni aktivitetin tuaj të
+          ardhshëm. Plotësoni sa më shumë që të mundeni. Vazhdoni të praktikoni me
+          loops dhe Artisin!
+        display_name: Praktika e Artistit
+      CourseE_Lesson_11_Artist_Practice_2022:
+        display_name: Praktika e Artistit
+      CourseE_Lesson_7_Artist_Practice_2022:
+        display_name: Praktika e Artistit
       CourseF_outbreak_story:
         content1: përshkrimi këtu
       CourseF_outbreak_story2:
@@ -2618,6 +3172,11 @@ sq-AL:
           # Fuqia e Fjalëve
 
           ## Çfarë duhet të bëni kur dikush përdor gjuhë të keqe ose lënduese në internet?
+      PowerOfWords-Unplugged_2021:
+        markdown: |-
+          # Fuqia e Fjalëve
+
+          ## Çfarë duhet të bëni kur dikush përdor gjuhë të keqe ose lënduese në internet?
       Prepare for your presentation:
         content1: përshkrimi këtu
       PrivatePersonalInformation-Unplugged_2021:
@@ -2645,6 +3204,11 @@ sq-AL:
           # Shkrimi i këngëve
 
           Përdorni konceptin e refrenit në një këngë për të mësuar rreth përcaktimit dhe thirrjes së funksioneve.
+      Student End of Unit Survey - Intro+TeacherMD_csd2-2022:
+        teacher_markdown: |-
+          **Anketat e mësimdhënësve në fund të njësisë:** Ndërsa nxënësit tuaj plotësojnë anketën, ne do t'ju vlerësonim të plotësoni një anketë të shpejtë të mësimdhënësve
+
+          ## [Kliko këtu për Anketën e Mësimdhënësve](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=2)
       Student End of Unit Survey - Q1_2022:
         answers:
         - {}
@@ -2826,6 +3390,10 @@ sq-AL:
         - {}
         questions:
         - {}
+      aiml-ch1-pulse-survey_2021:
+        title: Anketa e shpejtë e AI dhe Machine Learning!
+      aiml-ch1-pulse-survey_2022:
+        title: Anketa e shpejtë e AI dhe Machine Learning!
       aiml-intro-pulse-survey-q1_2021:
         answers:
         - {}
@@ -2920,6 +3488,12 @@ sq-AL:
         - {}
         questions:
         - {}
+      aiml-intro-pulse-survey_2021:
+        title: Anketa e shpejtë e AI dhe Machine Learning!
+      aiml-intro-pulse-survey_2022:
+        title: Anketa e shpejtë e AI dhe Machine Learning!
+      aiml-pulse-check-survey-1-levelgroup Ch2_2021:
+        title: Sondazhi i Shpejtë i Shkencave Kompjuterike!
       aiml-pulse-check-survey-1-q1 Ch2_2021:
         answers:
         - {}
@@ -3106,7 +3680,7 @@ sq-AL:
           të krijuar.
         display_name: Përfundimi i projektit të kursit
       courseAB_EOC_2021:
-        description: Ju keni arritur në mësimin e fundit! Zgjidhni një projekt për
+        description: Ju keni arritur në mësimin e fundit! Zgjedhni një projekt për
           të krijuar.
         display_name: Përfundimi i projektit të kursit
       courseB_EOC2022:
@@ -4170,6 +4744,26 @@ sq-AL:
         display_name: Përfundimi i projektit të kursit
       courseF_EOC_samples_2021:
         display_name: Përfundimi i projektit të kursit
+      courseF_artist_practice:
+        description: Punë e shkëlqyeshme deri më tani! Zgjedhni aktivitetin tuaj të
+          ardhshëm. Plotësoni sa më shumë që të mundeni. Vazhdoni të praktikoni me
+          loops dhe Artisin!
+        display_name: Praktika e Artistit
+      courseF_beeFor_practice:
+        description: Punë e shkëlqyeshme deri më tani! Zgjedhni aktivitetin tuaj të
+          ardhshëm. Plotësoni sa më shumë që të mundeni. Vazhdoni të praktikoni me
+          for loops dhe bletën!
+        display_name: Praktika me bletët
+      courseF_beeVar_practice:
+        description: Punë e shkëlqyeshme deri më tani! Zgjedhni aktivitetin tuaj të
+          ardhshëm. Plotësoni sa më shumë që të mundeni. Vazhdoni të praktikoni me
+          variabla dhe bletën!
+        display_name: Praktika me bletët
+      courseF_bee_practice:
+        description: Punë e shkëlqyeshme deri më tani! Zgjedhni aktivitetin tuaj të
+          ardhshëm. Plotësoni sa më shumë që të mundeni. Vazhdoni të praktikoni me
+          loops dhe bletën!
+        display_name: Praktika me bletët
       courseF_bee_variables_8a_2018:
         answers:
         - {}
@@ -4194,20 +4788,64 @@ sq-AL:
         - {}
         questions:
         - {}
+      courseF_collector_samples_2022_pilot_-2022-2:
+        display_name: Eksplorim- Shembuj projektesh
+      courseF_events_freeplay:
+        description: Tani mund të përdorni atë që keni mësuar për ta bërë projektin
+          tuaj edhe më të mirë! Vazhdoni të shtoni në programin tuaj ose filloni diçka
+          të re!
+        display_name: Eventet - Lojë e lirë
+      courseF_events_freeplay2022_2022_pilot_-2022-2:
+        description: Tani mund të përdorni atë që keni mësuar për ta bërë projektin
+          tuaj edhe më të mirë! Vazhdoni të shtoni në programin tuaj ose filloni diçka
+          të re!
+        display_name: Eventet - Lojë e lirë
+      courseF_events_practice:
+        description: Punë e shkëlqyeshme deri më tani! Zgjedhni aktivitetin tuaj të
+          ardhshëm. Plotësoni sa më shumë që të mundeni. Vazhdoni të praktikoni me
+          eventet!
+        display_name: Praktika me evente
+        teacher_markdown: |-
+          # Përmbledhje e nivelit të zgjedhjes
+          Nivelet e zgjedhjes ofrojnë një menu të niveleve shtesë që nxënësit të plotësojnë. Nxënëssit duhet të plotësojnë të paktën një nga nën-nivelet këtu, por mund të punojnë sa më shumë që ata (ose ju) dëshirojnë.
+
+          Ju mund të përdorni përshkrimet e mëposhtme për t'i ndihmuar studentët të zgjedhin vetë zgjedhjet, ose për të vendosur pritshmëri rreth numrit të nënniveleve që duhet të plotësojnë.
+
+          |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |Blast Off!|Mësoni të fluturoni|Bëni një rrotullim me fuçi|Tkurruni dhe Rrituni|Shfryni peshkun!|Pinguini në lëvizje|
+          |-|-|-|-|-|-|-|
+          | ***Lloji*** |**Rishiko**|**Debug**|**Debug**|**Debug**|**Përmbajtje opsionale**|**Përmbajtje opsionale**
+          | ***Koncept***|*evente, sjellje*|*evente, sjellje*|*evente, sjellje*|*evente, sjellje*|*kur/gjersa eventet*|*kur/gjersa eventet*|
+      courseF_events_practice2022_2022_pilot_-2022-2:
+        description: Punë e shkëlqyeshme deri më tani! Zgjedhni aktivitetin tuaj të
+          ardhshëm. Plotësoni sa më shumë që të mundeni. Vazhdoni të praktikoni me
+          eventet!
+        display_name: Praktika me evente
       courseF_events_predict_multi:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - feedback: E pasaktë. Sprite gjithashtu do të lëvizë kah lindja.
+          text: Sprite do të rrotullohet vetëm djathtas.
+        - feedback: E pasaktë. Sprite nuk është ndalur së rrotulluari, kështu që ajo
+            do të bëjë të dyja njëkohësisht.
+          text: Sprite do të rrotullohet vetëm djathtas.
+        - feedback: E saktë! Të dy sjelljet do të ndodhin njëkohësisht.
+          text: Sprite do të rrotullohet dhe të lëvizë në të njëjtën kohë.
+        - feedback: E pasaktë. Në Sprite Lab, blloqet e lidhura ndodhin menjëherë
+            pas secilit të fundit, kështu që të dy sjelljet do të ndodhin njëkohësisht.
+          text: Sprite do të rrotullohet së pari dhe pastaj do të lëvizë më vonë.
         questions:
         - text: Lexo kodin, pastaj bëj një parashikim.
       courseF_events_predict_multi2022_2022_pilot_-2022-2:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - feedback: E pasaktë. Sprite gjithashtu do të lëvizë kah lindja.
+          text: Sprite do të rrotullohet vetëm djathtas.
+        - feedback: E pasaktë. Sprite nuk është ndalur së rrotulluari, kështu që ajo
+            do të bëjë të dyja njëkohësisht.
+          text: Sprite do të rrotullohet vetëm djathtas.
+        - feedback: E saktë! Të dy sjelljet do të ndodhin njëkohësisht.
+          text: Sprite do të rrotullohet dhe të lëvizë në të njëjtën kohë.
+        - feedback: E pasaktë. Në Sprite Lab, blloqet e lidhura ndodhin menjëherë
+            pas secilit të fundit, kështu që të dy sjelljet do të ndodhin njëkohësisht.
+          text: Sprite do të rrotullohet së pari dhe pastaj do të lëvizë më vonë.
         questions:
         - text: Lexo kodin, pastaj bëj një parashikim.
       courseF_groups_predict_multi_2022_pilot_-2022-2:
@@ -4234,21 +4872,32 @@ sq-AL:
         display_name: Aplikacionet Sprite Lab
       courseF_labels_predict_multi:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - feedback: E pasaktë. Etiketat e variablave nuk përputhen.
+          text: Një picë vjen menjëherë!
+        - feedback: E pasaktë. Etiketa e një variabli nuk printohet kurrë.
+          text: "“Një vakt vjen menjëherë!”"
+        - feedback: E pasaktë. Etiketa e një variabli nuk printohet kurrë.
+          text: '"Ushqimi po vjen menjëherë!"'
+        - correct: true
+          feedback: E pasaktë. Etiketat e variablave nuk përputhen.
+          text: “Një po vjen menjëherë!"
+        - feedback: E pasaktë. Ngjarja dhe blloku i printimit do të vazhdojnë të funksionojnë.
+          text: Asgjë nuk do të printohet.
         questions:
         - text: Ky kod mund të ju duket i njohur, por lexojeni me kujdes. Çfarë do
             të printohet nëse përdoruesi shkruan “pica”?
       courseF_labels_predict_multi2022_2022_pilot_-2022-2:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
-        - {}
+        - feedback: E pasaktë. Etiketat e variablave nuk përputhen.
+          text: Një picë vjen menjëherë!
+        - feedback: E pasaktë. Etiketa e një variabli nuk printohet kurrë.
+          text: "“Një vakt vjen menjëherë!”"
+        - feedback: E pasaktë. Etiketa e një variabli nuk printohet kurrë.
+          text: '"Ushqimi po vjen menjëherë!"'
+        - feedback: E pasaktë. Etiketat e variablave nuk përputhen.
+          text: “Një po vjen menjëherë!"
+        - feedback: E pasaktë. Ngjarja dhe blloku i printimit do të vazhdojnë të funksionojnë.
+          text: Asgjë nuk do të printohet.
         questions:
         - text: Ky kod mund të ju duket i njohur, por lexojeni me kujdes. Çfarë do
             të printohet nëse përdoruesi shkruan “pica”?
@@ -4305,7 +4954,7 @@ sq-AL:
         - {}
         - {}
         - {}
-        - {}
+        - text: Kompjuteri do të kërkojë nga përdoruesi një numër.
         questions:
         - {}
       courseF_multi_artist_variables3a_predict1_2018:
@@ -4337,7 +4986,7 @@ sq-AL:
         - {}
         - {}
         - {}
-        - {}
+        - text: Kompjuteri do të kërkojë nga përdoruesi një numër.
         questions:
         - text: Ne kemi vendosur variablin me "gjatësi" në 50. Çfarë do të ndodhë
             kur të klikoni "Ekzekuto"?
@@ -4370,7 +5019,8 @@ sq-AL:
         - {}
         - {}
         - {}
-        - {}
+        - text: 'Bleta do të ecë përpara dhe do të mbledhë të gjithë nektarin nga
+            lulet numër 1 dhe 4. '
         questions:
         - {}
       courseF_multi_bee_for3_predict1_2018:
@@ -4402,7 +5052,8 @@ sq-AL:
         - {}
         - {}
         - {}
-        - {}
+        - text: 'Bleta do të ecë përpara dhe do të mbledhë të gjithë nektarin nga
+            lulet numër 1 dhe 4. '
         markdown: |+
           Ah! Përdorimi i `for` loops e bën këtë enigmë shumë më të lehtë!
 
@@ -4447,7 +5098,7 @@ sq-AL:
           |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |Skena e shkretëtirës|Ndryshoni përmasat e frutave.|Animojeni një anije me vela|Një ditë e freskët|
           |-|-|-|-|-|
           | ***Lloji*** |**Rishikim**|**Rishikim**|**Rishikim**|**Rishikim**|
-          | ***Koncepti***|*sprites, vendndodhjet*|*sprites, properties*|*sprites, vendndodhjet, sjelljet*|*sjelljet*|
+          | ***Koncepti***|*sprites, vendndodhjet*|*sprites, atributet*|*sprites, vendndodhjet, sjelljet*|*sjelljet*|
       courseF_sprites_practice2022_2022_pilot_-2022-2:
         description: Punë e shkëlqyeshme deri më tani! Zgjedhni aktivitetin tuaj të
           ardhshëm. Plotësoni sa më shumë që të mundeni. Vazhdoni të praktikoni me
@@ -4489,6 +5140,26 @@ sq-AL:
           text: Aeroplanët do të përplasen.
         questions:
         - text: Lexo kodin, pastaj bëni një parashikim.
+      courseF_text_practice:
+        description: Punë e shkëlqyeshme deri më tani! Zgjedhni aktivitetin tuaj të
+          ardhshëm. Plotësoni sa më shumë që të mundeni. Vazhdoni të praktikoni me
+          tekste dhe kërkesa!
+        display_name: Praktika me tekst dhe kërkesë
+        teacher_markdown: |
+          # Përmbledhje e nivelit të zgjedhjes
+          Nivelet e zgjedhjes ofrojnë një menu të niveleve shtesë që nxënësit të plotësojnë. Nxënësiit duhet të plotësojnë të paktën një nga nën-nivelet këtu, por mund të punojnë sa më shumë që ata (ose ju) të dëshironi.
+
+          Ju mund të përdorni përshkrimet e mëposhtme për t'i ndihmuar nxënësit të zgjedhin vetë zgjedhjet, ose për të vendosur pritshmëri rreth numrit të nënniveleve që duhet të plotësojnë.
+
+          |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |Përdorimi i të folurit për tekst|Teksti nga kërkesat|Emërtoni robotin!|Etiketat e ndryshueshme|Teksti i madh|Kërkesa për ngjyrat|Fillimi nga e para|
+          |-|-|-|-|-|-|-|-|
+          | ***Lloji*** |**Rishikim**|**Debug**|**Debug**|**Debug**|**Përmbajtje opsionale**|**Përmbajtje opsionale**|**Lojë e lirë **
+          | ***Koncept***|*blloku i printimit, event*|*kërkesat, event*|*shtimi i hapësirave*|*përputhja e etiketave të variablave*|*blloqet e ekranit të titullit*|*ruajtja e ngjyrave*|*nuk ka përmbajtje të re*
+      courseF_text_practice2022_2022_pilot_-2022-2:
+        description: Punë e shkëlqyeshme deri më tani! Zgjedhni aktivitetin tuaj të
+          ardhshëm. Plotësoni sa më shumë që të mundeni. Vazhdoni të praktikoni me
+          tekste dhe kërkesa!
+        display_name: Praktika me tekst dhe kërkesë
       courseF_variables2_predict2_multi2022_-2022-2:
         answers:
         - {}
@@ -4508,26 +5179,85 @@ sq-AL:
             në kërkesë?'
       courseF_variables_predict_multi:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - feedback: E pasaktë. Blloku i emrit do të zëvendësohet me çfarëdo që shkruani.
+          text: Programi do të shtypë “Përshëndetje emër!”
+        - feedback: E saktë! Ajo që shkruani përdoret në vend të bllokut të emrit.
+          text: Programi do t'ju përshëndesë me emrin që shkruani.
+        - feedback: E pasaktë. Teksti shtypet në ekran.
+          text: Sprite do të ndryshojë madhësinë.
+        - feedback: E pasaktë. Kërkohet vetëm një pyetje, pikërisht kur fillon programi.
+          text: Kompjuteri do të bëjë një pyetje tjetër.
         questions:
         - text: 'Ky program ju lejon t''i përgjigjeni një pyetjeje duke shkruar përmes
             tastierës tuaj. Blloku "printo" shfaq tekstin në ekran. Bëni një parashikim:
             Çfarë do të ndodhë pasi t''i përgjigjeni pyetjes?'
       courseF_variables_predict_multi2022_2022_pilot_-2022-2:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - feedback: E pasaktë. Blloku i emrit do të zëvendësohet me çfarëdo që shkruani.
+          text: Programi do të shtypë “Përshëndetje emër!”
+        - feedback: E saktë! Ajo që shkruani përdoret në vend të bllokut të emrit.
+          text: Programi do t'ju përshëndesë me emrin që shkruani.
+        - feedback: E pasaktë. Teksti shtypet në ekran.
+          text: Sprite do të ndryshojë madhësinë.
+        - feedback: E pasaktë. Kërkohet vetëm një pyetje, pikërisht kur fillon programi.
+          text: Kompjuteri do të bëjë një pyetje tjetër.
         questions:
         - text: 'Ky program ju lejon t''i përgjigjeni një pyetjeje duke shkruar përmes
             tastierës tuaj. Blloku "print" shfaq tekstin në ekran. Bëni një parashikim:
             Çfarë do të ndodhë pasi t''i përgjigjeni pyetjes?'
+      courseF_variables_projects:
+        description: Ju do të krijoni ose një kartolinë përshëndetëse, një chatbot
+          ose një blank space story. Nëse e keni përfunduar tashmë \"Pjesën 1\" të
+          projektit tuaj, shkoni te \"Pjesa 2\".
+        display_name: Zgjedhni një projekt
+        teacher_markdown: |-
+          # Përmbledhje e nivelit të zgjedhjes
+          Nivelet e zgjedhjes ofrojnë një menu të niveleve shtesë që nxënësit të plotësojnë. Nxënësit duhet të plotësojnë të paktën një nga nënnivelet këtu, por duhet të inkurajohen të plotësojnë **dy** nivele për të njëjtin projekt.
+
+          Nxënësve mund t'u duhen udhëzime vërtet të qarta për të kuptuar se si të lundrojnë në zgjedhjet këtu. Për secilën nga zgjedhjet e projektit, ekzistojnë dy nën-nivele. Për të filluar, nxënësit duhet të zgjedhin një nga nivelet e shënuar "Pjesa 1". Pasi të përfundojnë atë nivel, ata duhet të kthehen këtu dhe të zgjedhin "Pjesa 2" e të njëjtit projekt *. Niveli i parë për çdo zgjedhje do t'u sigurojë nxënësve reagime ndërsa ata bashkojnë komponentët bazë të projektit të tyre. Niveli i dytë është një "lojë e lirë" e cila synon të lejojë nxënësit të bëjnë çdo ndryshim që dëshirojnë në kodin e tyre.
+      courseF_variables_projects2022_2022_pilot_-2022-2:
+        description: Ju do të krijoni ose një kartolinë përshëndetëse, një chatbot
+          ose një blank space story. Nëse e keni përfunduar tashmë \"Pjesën 1\" të
+          projektit tuaj, shkoni te \"Pjesa 2\".
+        display_name: Zgjedhni një projekt
+      courseF_variables_samples:
+        description: Do të krijoni ose një kartolinë përshëndetëse, një chatbot ose
+          një blank space story. Përpara se të filloni, eksploroni shembujt e projekteve
+          më poshtë për të parë se çfarë jeni të interesuar të krijoni. Shtypni \"Përfundo\"
+          kur të jeni gati të filloni të planifikoni programin tuaj.
+        display_name: Eksplorim- Shembuj projektesh
+        teacher_markdown: "# Përmbledhje e nivelit të zgjedhjes \nNivelet e zgjedhjes
+          ofrojnë një menu të niveleve shtesë për nxënësit për të përfunduar. Nxënësit
+          duhet të plotësojnë të paktën një nga nën-nivelet këtu, por mund të punojnë
+          me aq sa dëshirojnë ata (ose ju).\n\nNxënësit duhet t'i shikojnë këto projekte
+          me kujdes para se të vendosin se çfarë duan të krijojnë. Ju mund t'i shikoni
+          ato së bashku si një klasë ose tlërini nxënësit të eksplorojnë vetë.\n"
+      courseF_variables_samples2022_2022_pilot_-2022-2:
+        description: Do të krijoni ose një kartolinë përshëndetëse, një chatbot ose
+          një blank space story. Përpara se të filloni, eksploroni shembujt e projekteve
+          më poshtë për të parë se çfarë jeni të interesuar të krijoni. Shtypni \"Përfundo\"
+          kur të jeni gati të filloni të planifikoni programin tuaj.
+        display_name: Eksplorim- Shembuj projektesh
       courseF_variables_stop:
         content1: përshkrimi këtu
+        markdown: |-
+          #Stop!
+
+          ## Jeni i sigurt që jeni gati të vazhdoni përpara?
+
+
+          Në nivelin tjetër, do të filloni të shkruani kodin për projektin tuaj. Kjo funksionon më së miri nëse tashmë keni një plan.
+
+          Plani juaj i përfunduar duhet të përfshijë:
+
+          <img src="https://images.code.org/b476ac330f2b66e44e02208fee386a56-image-1614802439867.png" style="float:left; height:70px; padding:10px"/>
+
+          * Llojin e projektit që po ndërtoni. Për shembull, një kartolinë përshëndetëse, chatbot ose blank space story.
+          * Një listë të pyetjeve që do t'i bëni përdoruesit.
+          * Tekstin tjetër që do të shfaqni në ekran.
+          * Një përshkrim ose vizatim të spriteve që ju nevojiten (dhe sjelljet e tyre).
+
+          Nëse nuk jeni të sigurt nëse jeni gati për të vazhduar, kontrolloni me mësimdhënësin tuaj!
       courseF_variables_stop2022_2022_pilot_-2022-2:
         content1: përshkrimi këtu
         markdown: |-
@@ -9549,12 +10279,154 @@ sq-AL:
         - {}
         questions:
         - {}
+      ml-customize apps-practice choice-2021:
+        display_name: Praktikoni personalizimin e aplikacioneve tuaja
+      ml-customize apps-practice choice_2022:
+        display_name: Praktikoni personalizimin e aplikacioneve tuaja
+      ml-good data-isaac data:
+        markdown: |
+          ! [] (https://images.code.org/4f85627c74a140b1b09599a5095622ff-image-1624988925067.png)
+
+          ## [Kliko këtu] (https://docs.google.com/spreadsheets/d/1XKPrY1ABlrSx3pdKqK7y4dx5OYdSAJkpYdefKrFyqEI/copy) për të krijuar një kopje të të dhënave të Isakut
+      ml-good data-isaac data_2022:
+        markdown: |
+          ! [] (https://images.code.org/4f85627c74a140b1b09599a5095622ff-image-1624988925067.png)
+
+          ## [Kliko këtu] (https://docs.google.com/spreadsheets/d/1XKPrY1ABlrSx3pdKqK7y4dx5OYdSAJkpYdefKrFyqEI/copy) për të krijuar një kopje të të dhënave të Isakut
+      ml-good data-kim data:
+        markdown: |
+          ! [] (https://images.code.org/af7558eeafd15ef5e9f2fad0a6446c6a-image-1624987665106.png)
+
+          ## [Kliko këtu] (https://docs.google.com/spreadsheets/d/1bVtUc5KrHaBZ4rx6trdYVqjGHIq9J8jBG0Mx2d9nxDM/copy) për të krijuar një kopje të të dhënave të Kimit
+      ml-good data-kim data_2022:
+        markdown: |
+          ! [] (https://images.code.org/af7558eeafd15ef5e9f2fad0a6446c6a-image-1624987665106.png)
+
+          ## [Kliko këtu] (https://docs.google.com/spreadsheets/d/1bVtUc5KrHaBZ4rx6trdYVqjGHIq9J8jBG0Mx2d9nxDM/copy) për të krijuar një kopje të të dhënave të Kimit
+      ml-good data-kim survey:
+        markdown: |
+          ! [] (https://images.code.org/47cb3494b3c90dcc443e373d58b54c6b-image-1624987469212.png)
+
+          ## [Kliko këtu] (https://docs.google.com/forms/d/e/1FAIpQLSftxAAvDCXCoPMfzOgYTVYIrVESYYhNfVP-I83eVu9CXFKr-g/viewform) për të marrë sondazhin e Kimit
+      ml-good data-kim survey_2022:
+        markdown: |
+          ! [] (https://images.code.org/47cb3494b3c90dcc443e373d58b54c6b-image-1624987469212.png)
+
+          ## [Kliko këtu] (https://docs.google.com/forms/d/e/1FAIpQLSftxAAvDCXCoPMfzOgYTVYIrVESYYhNfVP-I83eVu9CXFKr-g/viewform) për të marrë sondazhin e Kimit
+      ml-model card-medical-1-2021:
+        markdown: |
+          # Rekomanduesi ER V1
+
+          Klikoni në kartën e modelit për të zmadhuar dhe parë një version më të madh
+
+          <a href="https://images.code.org/d3e85af576ec6e92232292140fe9dbcf-image-1625084534081.png" target="_blank"><img src="https://images.code.org/d3e85af576ec6e92232292140fe9dbcf-image-1625084534081.png" width="45%" style="float:left; margin: 2px;"></a>
+
+          <a href="https://images.code.org/7e56e5f140aca3f49589e5d2670617ad-image-1625084608419.png" target="_blank"><img src="https://images.code.org/7e56e5f140aca3f49589e5d2670617ad-image-1625084608419.png" width="45%" style="float:right; margin: 2px"></a>
+      ml-model card-medical-1_2022:
+        markdown: |
+          # Rekomanduesi ER V1
+
+          Klikoni në kartën e modelit për të zmadhuar dhe parë një version më të madh
+
+          <a href="https://images.code.org/d3e85af576ec6e92232292140fe9dbcf-image-1625084534081.png" target="_blank"><img src="https://images.code.org/d3e85af576ec6e92232292140fe9dbcf-image-1625084534081.png" width="45%" style="float:left; margin: 2px;"></a>
+
+          <a href="https://images.code.org/7e56e5f140aca3f49589e5d2670617ad-image-1625084608419.png" target="_blank"><img src="https://images.code.org/7e56e5f140aca3f49589e5d2670617ad-image-1625084608419.png" width="45%" style="float:right; margin: 2px"></a>
+      ml-model card-medical-2-2021:
+        markdown: |
+          # Northern Lights ER Priority
+
+          Klikoni në kartën e modelit për të zmadhuar dhe parë një version më të madh
+
+          <a href="https://images.code.org/69fbca920c052d6623787af0f4da7dfd-image-1625084706519.png" target="_blank">
+          <img src="https://images.code.org/69fbca920c052d6623787af0f4da7dfd-image-1625084706519.png" width="45%" style="float:left; margin: 2px;"></a>
+
+          <a href="https://images.code.org/53e71ad9c3b29438ea84de5d67b4bf96-image-1625084729402.png" target="_blank">
+          <img src="https://images.code.org/53e71ad9c3b29438ea84de5d67b4bf96-image-1625084729402.png" width="45%" style="float:right; margin: 2px"></a>
+
+          ! [] ()
+      ml-model card-medical-2_2022:
+        markdown: |
+          # Northern Lights ER Priority
+
+          Klikoni në kartën e modelit për të zmadhuar dhe parë një version më të madh
+
+          <a href="https://images.code.org/69fbca920c052d6623787af0f4da7dfd-image-1625084706519.png" target="_blank">
+          <img src="https://images.code.org/69fbca920c052d6623787af0f4da7dfd-image-1625084706519.png" width="45%" style="float:left; margin: 2px;"></a>
+
+          <a href="https://images.code.org/53e71ad9c3b29438ea84de5d67b4bf96-image-1625084729402.png" target="_blank">
+          <img src="https://images.code.org/53e71ad9c3b29438ea84de5d67b4bf96-image-1625084729402.png" width="45%" style="float:right; margin: 2px"></a>
+
+          ! [] ()
+      ml-model card-medical-3-2021:
+        markdown: |
+          # Al rekomanduesi mjeksor
+
+          Klikoni në kartën e modelit për të zmadhuar dhe parë një version më të madh
+
+          <a href="https://images.code.org/d3e85af576ec6e92232292140fe9dbcf-image-1625084534081.png" target="_blank"><img src="https://images.code.org/d3e85af576ec6e92232292140fe9dbcf-image-1625084534081.png" width="45%" style="float:left; margin: 2px;"></a>
+
+          <a href="https://images.code.org/7e56e5f140aca3f49589e5d2670617ad-image-1625084608419.png" target="_blank"><img src="https://images.code.org/7e56e5f140aca3f49589e5d2670617ad-image-1625084608419.png" width="45%" style="float:right; margin: 2px"></a>
+      ml-model card-medical-3_2022:
+        markdown: |
+          # Al rekomanduesi mjeksor
+
+          Klikoni në kartën e modelit për të zmadhuar dhe parë një version më të madh
+
+          <a href="https://images.code.org/d3e85af576ec6e92232292140fe9dbcf-image-1625084534081.png" target="_blank"><img src="https://images.code.org/d3e85af576ec6e92232292140fe9dbcf-image-1625084534081.png" width="45%" style="float:left; margin: 2px;"></a>
+
+          <a href="https://images.code.org/7e56e5f140aca3f49589e5d2670617ad-image-1625084608419.png" target="_blank"><img src="https://images.code.org/7e56e5f140aca3f49589e5d2670617ad-image-1625084608419.png" width="45%" style="float:right; margin: 2px"></a>
       ml-models in applab-choice parent:
         description: Provoni atë që keni mësuar në një ose më shumë nga aktivitetet
           e mëposhtme.
+        display_name: Praktika e kartës model
       ml-models in applab-choice parent_2022:
         description: Provoni atë që keni mësuar në një ose më shumë nga aktivitetet
           e mëposhtme.
+        display_name: Praktika e kartës model
+      ml-models-shoe survey:
+        markdown: |-
+          ![](https://images.code.org/8f69603c91afe4e7beb15a6c4e3db945-image-1625589493100.png)
+
+          ## [Click Here](https://docs.google.com/forms/d/e/1FAIpQLSdFxPdsfbgqF2ZpAjILjCeLX-GlFCrMdLbGHlk_0-klSf9YcQ/viewform) to take the Shoe Recommendation Survey
+      ml-models-shoe survey_2022:
+        markdown: |-
+          ![](https://images.code.org/8f69603c91afe4e7beb15a6c4e3db945-image-1625589493100.png)
+
+          ## [Click Here](https://docs.google.com/forms/d/e/1FAIpQLSdFxPdsfbgqF2ZpAjILjCeLX-GlFCrMdLbGHlk_0-klSf9YcQ/viewform) to take the Shoe Recommendation Survey
+      ml-plan survey-copy form:
+        markdown: |
+          # Kopjoni një Formular të Google
+
+          ## [Kliko këtu] (https://docs.google.com/forms/d/1Yzoug2iW-_GUWrQJo4jIlfuKNtelVNrer1PvT4rXF7w/copy) për të krijuar një kopje të një modeli të sondazhit që do të përdorim sot
+      ml-plan survey-copy form_2022:
+        markdown: |
+          # Kopjoni një Formular të Google
+
+          ## [Kliko këtu] (https://docs.google.com/forms/d/1Yzoug2iW-_GUWrQJo4jIlfuKNtelVNrer1PvT4rXF7w/copy) për të krijuar një kopje të një modeli të sondazhit që do të përdorim sot
+      ml-use model card-pet model card-2021:
+        markdown: |+
+          # Karta e modelit të rekomanduesit të kafshëve shtëpiake
+
+          **Me një partner: ** Si mund të dalloni ndryshimin midis veçorive kategorike dhe veçorive numerike në kartën e modelit?
+
+          <a href="https://images.code.org/e38768393e3033e60dc9dc2696e3df7d-image-1625085031146.png" target="_blank"><img src="https://images.code.org/e38768393e3033e60dc9dc2696e3df7d-image-1625085031146.png" width="45%" style="float:left; margin: 2px;"></a>
+
+          <a href="https://images.code.org/1fb88a3553f16cd9a576d54afe8757b9-image-1625509299810.png" target="_blank"><img src="https://images.code.org/1fb88a3553f16cd9a576d54afe8757b9-image-1625509299810.png" width="45%" style="float:right; margin: 2px"></a>
+
+      ml-use model card-pet model card_2022:
+        markdown: |+
+          # Karta e modelit të rekomanduesit të kafshëve shtëpiake
+
+          **Me një partner: ** Si mund të dalloni ndryshimin midis veçorive kategorike dhe veçorive numerike në kartën e modelit?
+
+          <a href="https://images.code.org/e38768393e3033e60dc9dc2696e3df7d-image-1625085031146.png" target="_blank"><img src="https://images.code.org/e38768393e3033e60dc9dc2696e3df7d-image-1625085031146.png" width="45%" style="float:left; margin: 2px;"></a>
+
+          <a href="https://images.code.org/1fb88a3553f16cd9a576d54afe8757b9-image-1625509299810.png" target="_blank"><img src="https://images.code.org/1fb88a3553f16cd9a576d54afe8757b9-image-1625509299810.png" width="45%" style="float:right; margin: 2px"></a>
+
+      ml-use models applab-practice choice-2021:
+        display_name: Praktikoni me modelet në App Lab
+      ml-use models applab-practice choice_2022:
+        display_name: Praktikoni me modelet në App Lab
       naturally-better-at-cs:
         answers:
         - {}
@@ -10085,3 +10957,4 @@ sq-AL:
         questions:
         - text: Unë jam i shqetësuar se unë do të shihem nga të tjerët si më pak i
             aftë në këtë klasë.
+...

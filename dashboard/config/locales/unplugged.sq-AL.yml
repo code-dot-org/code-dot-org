@@ -401,15 +401,15 @@ sq:
       UnplugHappyMaps:
         desc: Studentët krijojnë algoritma të thjeshtë (grup udhëzimesh) për të lëvizur
           midis një tuneli duke përdorur një komandë të vetme.
-        title: Hartat e Gëzuara
+        title: Hartat e Lumtura
       UnplugHappyMaps_2018:
         desc: Studentët krijojnë algoritma të thjeshtë (grup udhëzimesh) për të lëvizur
           midis një tuneli duke përdorur një komandë të vetme.
-        title: Hartat e Gëzuara
+        title: Hartat e Lumtura
       UnplugHappyMaps_2019:
         desc: Studentët krijojnë algoritma të thjeshtë (grup udhëzimesh) për të lëvizur
           midis një tuneli duke përdorur një komandë të vetme.
-        title: Hartat e Gëzuara
+        title: Hartat e Lumtura
       VideoGamesCoordinatePlanes:
         desc: Mëso sesi lojrat që të pelqejnë janë faktikisht të drejtuara nga algjebra!
           Eksploro se si shprehjet algjebrike dhe plani koordinativ mund të n'a ndihmojnë
@@ -435,7 +435,7 @@ sq:
       courseA_unplugged_happyMaps:
         desc: Studentët krijojnë algoritma të thjeshtë (grup udhëzimesh) për të lëvizur
           midis një tuneli duke përdorur një komandë të vetme.
-        title: Hartat e Gëzuara
+        title: Hartat e Lumtura
       courseB_unplugged_MRF:
         title: Aktiviteti Unplugged
       courseB_unplugged_MRF_2018:

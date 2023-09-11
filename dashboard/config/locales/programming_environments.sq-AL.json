@@ -189,6 +189,9 @@
                 }
               }
             },
+            "circuit": {
+              "name": "Qark"
+            },
             "control": {
               "expressions": {
                 "clearTimeout": {
@@ -374,6 +377,11 @@
                   "short_description": "Krijon një buton në ekran që shfaq tekstin e dhënë dhe referuar nga id dhënë në vendndodhjen e paracaktuar (0,0)."
                 },
                 "onEvent": {
+                  "examples": {
+                    "Shrink and Grow": {
+                      "name": "Tkurru dhe rritu"
+                    }
+                  },
                   "palette_params": {
                     "callback": {
                       "type": "Funksion"
@@ -457,6 +465,17 @@
                 }
               }
             },
+            "drawing": {
+              "expressions": {
+                "background": {
+                  "examples": {
+                    "RGB Colors": {
+                      "name": "Ngjyrat RGB"
+                    }
+                  }
+                }
+              }
+            },
             "functions": {
               "name": "funksione"
             },
@@ -480,7 +499,8 @@
                   "content": "Ndryshon kontrollet celular të dukshme nën hapësirën e luajtjes.",
                   "short_description": "Ndryshon kontrollet celular të dukshme nën hapësirën e luajtjes."
                 }
-              }
+              },
+              "name": "Game Lab"
             },
             "groups": {
               "expressions": {
@@ -588,7 +608,8 @@
               },
               "name": "variabla"
             }
-          }
+          },
+          "name": "Game Lab"
         },
         "spritelab": {
           "categories": {

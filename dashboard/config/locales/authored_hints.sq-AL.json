@@ -199,6 +199,28 @@
         "CourseE_HOC 2018 Level_9b_2021": {
           "voyage_aquatic_9a": "A i sheh blloqet e koraleve blu dhe të kuqe? Përdori si tabela udhëzuese për t'u kthyer majtas e djathtas në murin koralor."
         },
+        "CourseF_outbreak4": {
+          "challenge": "## Apo kërkoni për një sfidë shtesë?\n\nJu gjithashtu mund t'i bëni përbindëshat të lëvizin më shpejt ose më ngadalë.\n\n1.  Kliko \\`Edito' në këtë bllok  [blockly block][0] \n    Rritni ose zvogëloni numrin në këtë bllok: \n\n[blockly block][1]\n\nPër t'i bërë monstrat të lëvizin më ngadalë, zgjidhni një numër dhjetor si `0.5` ose `0.25`. Për t'i bërë ata të lëvizin më shpejt, zgjidhni ndonjë numër më të madh se 1."
+        },
+        "CourseF_outbreak4_-2022-2": {
+          "challenge": "## Apo kërkoni për një sfidë shtesë?\n\nJu gjithashtu mund t'i bëni përbindëshat të lëvizin më shpejt ose më ngadalë.\n\n1.  Kliko \\`Edito' në këtë bllok  <xml><block type=\"gamelab_behavior_get\"><mutation></mutation><title name=\"VAR\">wandering</title></block></xml> \n    Rritni ose zvogëloni numrin në këtë bllok: \n\n<xml><block type=\"gamelab_moveForward\"><value name=\"SPRITE\"><block type=\"sprite_parameter_get\"><title name=\"VAR\">this sprite</title></block></value><value name=\"DISTANCE\"><block type=\"math_number\"><title name=\"NUM\">1</title></block></value></block>\n</xml>\n\nPër t'i bërë monstrat të lëvizin më ngadalë, zgjidhni një numër dhjetor si `0.5` ose `0.25`. Për t'i bërë ata të lëvizin më shpejt, zgjidhni ndonjë numër më të madh se 1."
+        },
+        "CourseF_outbreak6": {
+          "hint1": "Do të ju duhet të shtoni 3 ngjarje të tjera “kur preket” për të kontrolluar të gjitha kombinimet e mundshme të “prekjeve” midis spriteve të shëndetshme dhe të infektuara.\n\n[blockly block][0]",
+          "hint2": "Sigurohuni që të zhvendosni blloqet e tjera të “veprimit” në brendësi të bllokut “nëse ka mundësi”:\n\n[blockly block][0]"
+        },
+        "CourseF_outbreak6_-2022-2": {
+          "hint1": "Do të ju duhet të shtoni 3 ngjarje të tjera “kur preket” për të kontrolluar të gjitha kombinimet e mundshme të “prekjeve” midis spriteve të shëndetshme dhe të infektuara.\n\n<xml><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick\"</title>\n        </block>\n      </value><next>\n      <block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">75</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick_mask\"</title>\n        </block>\n      </value><next>\n      <block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">25</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick_mask\"</title>\n        </block>\n      </value><next>\n      <block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">10</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block></xml>",
+          "hint2": "Sigurohuni që të zhvendosni blloqet e tjera të “veprimit” në brendësi të bllokut “nëse ka mundësi”:\n\n<xml><block type=\"gamelab_checkTouching\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE1\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"healthy\"</title>\n      </block>\n    </value>\n    <value name=\"SPRITE2\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"sick\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">90</title>\n        <statement name=\"STATEMENT\">\n          <block type=\"gamelab_setAnimation\">\n            <title name=\"ANIMATION\">\"sick\"</title>\n            <value name=\"THIS\">\n              <block type=\"gamelab_subjectSpritePointer\"></block>\n            </value>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "CourseF_outbreak7": {
+          "verionhistory": "Ndjeheni të ngecur? Ju gjithëmonë mund ta resetoni kodin duke klikuar \"Versioni i historisë\" më poshtë dhe më pas duke zgjedhur \"Fillo nga e para\".",
+          "whenclicked": "## Vaksina\n\nJu mund të simuloni duke i dhënë përbindëshave një vaksinë kur ju klikoni mbi to. Për ta bërë këtë, përdorni bllokun “ndrysho kostumin” me këtë event:\n\n[blockly block][0]"
+        },
+        "CourseF_outbreak7_-2022-2": {
+          "verionhistory": "Ndjeheni të ngecur? Ju gjithëmonë mund ta resetoni kodin duke klikuar \"Versioni i historisë\" më poshtë dhe më pas duke zgjedhur \"Fillo nga e para\".",
+          "whenclicked": "## Vaksina\n\nJu mund të simuloni duke i dhënë përbindëshave një vaksinë kur ju klikoni mbi to. Për ta bërë këtë, përdorni bllokun “ndrysho kostumin” me këtë event:\n\n<xml><block type=\"gamelab_spriteClicked\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n    </block></xml>"
+        },
         "Dance_2019_01": {
           "challenges": "**Sfidat opsionale**\n\n-   Zgjidhni një këngë tjetër për të luajtur.\n-   Leviz valltarin tuaj në një vend të ri.\n-   Bëni më shumë se një vallezues.",
           "validation": "\\*\\*Si mund ta kaloj këtë nivel? \\*\\*\n\n-   Sigurohuni që një balerin shfaqet në ekran.\n\n\\_Ky nivel përfundon pas 4 masave. \\_"
@@ -855,6 +877,96 @@
           "mc_9_b": "Pikat e zeza në mur janë qymyr! Përdorimi `shkatërrojë blloko` në këto të minave qymyr.",
           "mc_9_c": "Përdorni bllokun `bimore kulturë` për të mbjellë një kulture në hapësirën ku jeni duke qëndruar."
         },
+        "course1_playlab_events_challenge1": {
+          "courseA_playlab_events_challenge1_a": "Bëni që të shfaqet Robini kur klikoni pinguinin Waddles!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n      </block>\n    </next>\n  </block></xml>"
+        },
+        "courseA_collector_loops1_2021": {
+          "courseA_collector_loops1_a": "Pasi të keni lëvizur në një katror me thesar, përdorni këtë bllok për ta marrë atë.\n\n<xml>  <block type=\"collector_collect\"/></xml>",
+          "courseA_collector_loops1_b": "Një zgjidhje e thjeshtë do të ishte të lëvizni Lindjen 2 herë, pastaj të merrni thesarin."
+        },
+        "courseA_collector_loops2_2021": {
+          "courseA_collector_loops2_a": "Ju do të duhet të lëvizni përpara se të grumbulloni ndonjë thesar.",
+          "courseA_collector_loops2_b": "Pasi të keni lëvizur në një katror me thesar, përdorni këtë bllok për ta marrë atë.\n\n<xml>  <block type=\"collector_collect\"/></xml>"
+        },
+        "courseA_collector_loops3_2021": {
+          "courseA_collector_loops3_a": "Provoni të përdorni një\n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>\n\n loop!",
+          "courseA_collector_loops3_b": "Mos harroni, ju mund të vendosni më shumë se 1 bllok brenda <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> loop."
+        },
+        "courseA_collector_loops4_2021": {
+          "courseA_collector_loops4_a": "Për të ndryshuar se sa larg shkon Laurela, ndryshoni numrin e herave që ekzekutohet loop-i.",
+          "courseA_collector_loops4_b": "Mos harroni se Laurela duhet të ecë poshtë dhe të mbledhë thesarin pasi ajo të përfundojë loop <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>!"
+        },
+        "courseA_collector_loops5_2021": {
+          "courseA_collector_loops5_a": "Nëse nuk mund ta kuptoni përgjigjen menjëherë, provoni të përdorni një copë letër për të kuptuar se cilat shigjeta do t'ju nevojiten dhe kërkoni një model.",
+          "courseA_collector_loops5_b": "Provoni ta ndani problemin në 2 pjesë, duke lëvizur anash dhe pastaj poshtë.",
+          "courseA_collector_loops5_c": "Ju do të dëshironi të filloni me një loop <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>] që e lëviz Laurelën në perëndim dhe e bën që të mbledh thesarin."
+        },
+        "courseA_collector_loops6_2021": {
+          "courseA_collector_loops6_a": "Nuk mund ta kuptoni se çfarë nuk shkon? Provoni të ekzekutoni kodin disa herë për të parë se çfarë ndodh.",
+          "courseA_collector_loops6_b": "Zgjidhja më e shkurtër ka 2 loops <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>, njëra pas tjetrës."
+        },
+        "courseA_collector_loops7_2021": {
+          "courseA_collector_loops7_a": "Nëse nuk mund ta kuptoni se çfarë vjen më pas, provoni të ekzekutoni kodin për të parë se ku përfundon Laurela."
+        },
+        "courseA_collector_loops8": {
+          "courseA_collector_loops8_a": "Nëse e keni të vështirë ta kuptoni këtë enigmë, provoni t'i shkruani lëvizjet në një copë letër dhe të kërkoni një model.",
+          "courseA_collector_loops8_b": "Provoni të ndani këtë enigmë në 3 probleme të ndryshme dhe të shkruani loops për secilin problem.",
+          "courseA_collector_loops8_c": "Mos harroni se mund të shkruani një pjesë të kodit në të njëjtën kohë, pastaj shtypni “Ekzekuto” për të kuptuar se ku duhet të shkoni nga atje."
+        },
+        "courseA_collector_loops82022": {
+          "courseA_collector_loops8_a": "Nëse e keni të vështirë ta kuptoni këtë enigmë, provoni t'i shkruani lëvizjet në një copë letër dhe të kërkoni një model.",
+          "courseA_collector_loops8_b": "Provoni të ndani këtë enigmë në 3 probleme të ndryshme dhe të shkruani loops për secilin problem.",
+          "courseA_collector_loops8_c": "Mos harroni se mund të shkruani një pjesë të kodit në të njëjtën kohë, pastaj shtypni “Ekzekuto” për të kuptuar se ku duhet të shkoni nga atje."
+        },
+        "courseA_collector_loops8_2018": {
+          "courseA_collector_loops8_a": "Nëse e keni të vështirë ta kuptoni këtë enigmë, provoni t'i shkruani lëvizjet në një copë letër dhe të kërkoni një model.",
+          "courseA_collector_loops8_b": "Provoni të ndani këtë enigmë në 3 probleme të ndryshme dhe të shkruani loops për secilin problem.",
+          "courseA_collector_loops8_c": "Mos harroni se mund të shkruani një pjesë të kodit në të njëjtën kohë, pastaj shtypni “Ekzekuto” për të kuptuar se ku duhet të shkoni nga atje."
+        },
+        "courseA_collector_loops8_2019": {
+          "courseA_collector_loops8_a": "Nëse e keni të vështirë ta kuptoni këtë enigmë, provoni t'i shkruani lëvizjet në një copë letër dhe të kërkoni një model.",
+          "courseA_collector_loops8_b": "Provoni të ndani këtë enigmë në 3 probleme të ndryshme dhe të shkruani loops për secilin problem.",
+          "courseA_collector_loops8_c": "Mos harroni se mund të shkruani një pjesë të kodit në të njëjtën kohë, pastaj shtypni “Ekzekuto” për të kuptuar se ku duhet të shkoni nga atje."
+        },
+        "courseA_collector_loops8_2020": {
+          "courseA_collector_loops8_a": "Nëse e keni të vështirë ta kuptoni këtë enigmë, provoni t'i shkruani lëvizjet në një copë letër dhe të kërkoni një model.",
+          "courseA_collector_loops8_b": "Provoni të ndani këtë enigmë në 3 probleme të ndryshme dhe të shkruani loops për secilin problem.",
+          "courseA_collector_loops8_c": "Mos harroni se mund të shkruani një pjesë të kodit në të njëjtën kohë, pastaj shtypni “Ekzekuto” për të kuptuar se ku duhet të shkoni nga atje."
+        },
+        "courseA_collector_loops8_2021": {
+          "courseA_collector_loops8_a": "Nëse e keni të vështirë ta kuptoni këtë enigmë, provoni t'i shkruani lëvizjet në një copë letër dhe të kërkoni një model.",
+          "courseA_collector_loops8_b": "Provoni të ndani këtë enigmë në 3 probleme të ndryshme dhe të shkruani loops për secilin problem.",
+          "courseA_collector_loops8_c": "Mos harroni se mund të shkruani një pjesë të kodit në të njëjtën kohë, pastaj shtypni “Ekzekuto” për të kuptuar se ku duhet të shkoni nga atje."
+        },
+        "courseA_collector_loops9": {
+          "courseA_collector_loops9_b": "Provoni të vendosni 2 nga loops <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> brenda një loop-i tjetër për të bërë kodin tuaj më të shkurtër!"
+        },
+        "courseA_collector_loops92022": {
+          "courseA_collector_loops9_b": "Provoni të vendosni 2 nga loops <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> brenda një loop-i tjetër për të bërë kodin tuaj më të shkurtër!"
+        },
+        "courseA_collector_loops9_2018": {
+          "courseA_collector_loops9_b": "Provoni të vendosni 2 nga loops <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> brenda një loop-i tjetër për të bërë kodin tuaj më të shkurtër!"
+        },
+        "courseA_collector_loops9_2019": {
+          "courseA_collector_loops9_b": "Provoni të vendosni 2 nga loops <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> brenda një loop-i tjetër për të bërë kodin tuaj më të shkurtër!"
+        },
+        "courseA_collector_loops9_2020": {
+          "courseA_collector_loops9_b": "Provoni të vendosni 2 nga loops <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> brenda një loop-i tjetër për të bërë kodin tuaj më të shkurtër!"
+        },
+        "courseA_collector_loops9_2021": {
+          "courseA_collector_loops9_a": "Nëse nuk mund të dalloni vendet më të mira për të përdorur loops, provoni ta kodoni hap pas hapi dhe kërkoni një model. ",
+          "courseA_collector_loops9_b": "Provoni të vendosni 2 nga loops <xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml> brenda një loop-i tjetër për të bërë kodin tuaj më të shkurtër!"
+        },
+        "courseA_collector_loops_challenge1_2021": {
+          "courseA_collector_loops_challenge1_a": "Provoni të ndryshoni numrat në çdo loop nëse diçka duket e gabuar.",
+          "courseA_collector_loops_challenge1_b": "Ju nuk keni nevojë të përdorni një loop nëse jeni duke bërë diçka vetëm një herë.",
+          "courseA_collector_loops_challenge1_c": "Ka 6 diamanta në anën e djathtë të shpellës kur filloni, por ju duhet vetëm të merrni thesarin 5 herë duke lëvizur në Jug. A e dini pse?",
+          "courseA_collector_loops_challenge1_d": "Programi fillestar nuk mbledh 2 diamantat e fundit. Provoni të shtoni këtë kod në fund:\n\n<xml><block type=\"maze_moveEast\">\n                        <next>\n                          <block type=\"collector_collect_simplified\">\n                            <next>\n                              <block type=\"maze_moveSouth\">\n                                <next>\n                                  <block type=\"collector_collect\"/>\n                                </next>\n                              </block>\n                            </next>\n                          </block>\n                        </next>\n                      </block></xml>"
+        },
+        "courseA_collector_loops_challenge2kp_2021": {
+          "courseA_collector_loops_challenge2kp_a": "A mund të përdorni loops për të zgjidhur këtë enigmë?",
+          "courseA_collector_loops_challenge2kp_b": "Provoni këtë rrugë për t'ju dërguar në një zgjidhje."
+        },
         "courseA_harvester_loops1_2021": {
           "courseA_harvester_loops1_a": "Pasi të arrini te misri, përdorni këtë bllok për ta mbledhur atë!\n\n<xml><block type=\"harvester_corn\"/></xml>"
         },
@@ -898,20 +1010,276 @@
           "courseA_harvester_loops9_b": "Mos ke frikë të ekzekutosh kodin tënd pas çdo pjese dhe shiko se çfarë ndodh!",
           "courseA_harvester_loops9_c": "Përdoreni këtë rrugë për të mbledhur të gjithë misrin."
         },
+        "courseA_maze_ramp22022": {
+          "1": "Kodi juaj duhet të duket kështu:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseA_maze_ramp2_2018": {
+          "1": "Kodi juaj duhet të duket kështu:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseA_maze_ramp2_2019": {
+          "1": "Kodi juaj duhet të duket kështu:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseA_maze_ramp2_2020": {
+          "1": "Kodi juaj duhet të duket kështu:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
         "courseA_maze_ramp2_2021": {
           "1": "Kodi juaj duhet të duket kështu:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseA_maze_ramp3a2022": {
+          "1": "Kodi juaj duhet të duket kështu:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveNorth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseA_maze_ramp3a_2018": {
+          "1": "Kodi juaj duhet të duket kështu:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveNorth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseA_maze_ramp3a_2019": {
+          "1": "Kodi juaj duhet të duket kështu:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveNorth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseA_maze_ramp3a_2020": {
+          "1": "Kodi juaj duhet të duket kështu:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveNorth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseA_maze_ramp3a_2021": {
           "1": "Kodi juaj duhet të duket kështu:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveNorth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
+        "courseA_maze_ramp3b2022": {
+          "1": "Kodi juaj duhet të duket kështu:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveSouth\">\n        <next>\n          <block type=\"maze_moveWest\">\n            <next>\n              <block type=\"maze_moveWest\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseA_maze_ramp3b_2018": {
+          "1": "Kodi juaj duhet të duket kështu:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveSouth\">\n        <next>\n          <block type=\"maze_moveWest\">\n            <next>\n              <block type=\"maze_moveWest\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseA_maze_ramp3b_2019": {
+          "1": "Kodi juaj duhet të duket kështu:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveSouth\">\n        <next>\n          <block type=\"maze_moveWest\">\n            <next>\n              <block type=\"maze_moveWest\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseA_maze_ramp3b_2020": {
+          "1": "Kodi juaj duhet të duket kështu:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveSouth\">\n        <next>\n          <block type=\"maze_moveWest\">\n            <next>\n              <block type=\"maze_moveWest\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
         "courseA_maze_ramp3b_2021": {
           "1": "Kodi juaj duhet të duket kështu:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveSouth\">\n        <next>\n          <block type=\"maze_moveWest\">\n            <next>\n              <block type=\"maze_moveWest\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseA_maze_ramp4a2022": {
+          "1": "Kodi juaj duhet të duket kështu:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveSouth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseA_maze_ramp4a_2018": {
+          "1": "Kodi juaj duhet të duket kështu:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveSouth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseA_maze_ramp4a_2019": {
+          "1": "Kodi juaj duhet të duket kështu:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveSouth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseA_maze_ramp4a_2020": {
+          "1": "Kodi juaj duhet të duket kështu:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveSouth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "courseA_maze_ramp4a_2021": {
           "1": "Kodi juaj duhet të duket kështu:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveSouth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
+        "courseA_maze_ramp5a2022": {
+          "1": "Kodi juaj duhet të duket kështu:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveWest\">\n        <next>\n          <block type=\"maze_moveWest\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseA_maze_ramp5a_2018": {
+          "1": "Kodi juaj duhet të duket kështu:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveWest\">\n        <next>\n          <block type=\"maze_moveWest\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseA_maze_ramp5a_2019": {
+          "1": "Kodi juaj duhet të duket kështu:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveWest\">\n        <next>\n          <block type=\"maze_moveWest\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseA_maze_ramp5a_2020": {
+          "1": "Kodi juaj duhet të duket kështu:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveWest\">\n        <next>\n          <block type=\"maze_moveWest\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
         "courseA_maze_ramp5a_2021": {
           "1": "Kodi juaj duhet të duket kështu:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveWest\">\n        <next>\n          <block type=\"maze_moveWest\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseA_playLab_events6": {
+          "courseA_playLab_events6_a": "Këtu është blloku i eventeve që do të përdorni për të bërë Jorge të bëjë diçka kur klikohet:\n\n<xml><block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">1</title>\n  </block></xml>"
+        },
+        "courseA_playLab_events62022": {
+          "courseA_playLab_events6_a": "Këtu është blloku i eventeve që do të përdorni për të bërë Jorge të bëjë diçka kur klikohet:\n\n<xml><block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">1</title>\n  </block></xml>"
+        },
+        "courseA_playLab_events6_2018": {
+          "courseA_playLab_events6_a": "Këtu është blloku i eventeve që do të përdorni për të bërë Jorge të bëjë diçka kur klikohet:\n\n<xml><block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">1</title>\n  </block></xml>"
+        },
+        "courseA_playLab_events6_2019": {
+          "courseA_playLab_events6_a": "Këtu është blloku i eventeve që do të përdorni për të bërë Jorge të bëjë diçka kur klikohet:\n\n<xml><block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">1</title>\n  </block></xml>"
+        },
+        "courseA_playLab_events6_2020": {
+          "courseA_playLab_events6_a": "Këtu është blloku i eventeve që do të përdorni për të bërë Jorge të bëjë diçka kur klikohet:\n\n<xml><block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">1</title>\n  </block></xml>"
+        },
+        "courseA_playLab_events6_2021": {
+          "courseA_playLab_events6_a": "Këtu është blloku i eventeve që do të përdorni për të bërë Jorge të bëjë diçka kur klikohet:\n\n<xml><block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">1</title>\n  </block></xml>"
+        },
+        "courseA_playlab_events_challenge1": {
+          "courseA_playlab_events_challenge1_a": "Bëni që të shfaqet Robini kur klikoni pinguinin Waddles!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n      </block>\n    </next>\n  </block></xml>"
+        },
+        "courseA_playlab_events_challenge12022": {
+          "courseA_playlab_events_challenge1_a": "Bëni që të shfaqet Robini kur klikoni pinguinin Waddles!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n      </block>\n    </next>\n  </block></xml>"
+        },
+        "courseA_playlab_events_challenge1_2018": {
+          "courseA_playlab_events_challenge1_a": "Bëni që të shfaqet Robini kur klikoni pinguinin Waddles!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n      </block>\n    </next>\n  </block></xml>"
+        },
+        "courseA_playlab_events_challenge1_2019": {
+          "courseA_playlab_events_challenge1_a": "Bëni që të shfaqet Robini kur klikoni pinguinin Waddles!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n      </block>\n    </next>\n  </block></xml>"
+        },
+        "courseA_playlab_events_challenge1_2020": {
+          "courseA_playlab_events_challenge1_a": "Bëni që të shfaqet Robini kur klikoni pinguinin Waddles!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n      </block>\n    </next>\n  </block></xml>"
+        },
+        "courseA_playlab_events_challenge1_2021": {
+          "courseA_playlab_events_challenge1_a": "Bëni që të shfaqet Robini kur klikoni pinguinin Waddles!\n\n<xml> \n  <block type=\"studio_whenSpriteClicked\">\n    <title name=\"SPRITE\">2</title>\n    <next>\n      <block type=\"studio_setSprite\">\n        <title name=\"VALUE\">\"visible\"</title>\n        <title name=\"SPRITE\">3</title>\n      </block>\n    </next>\n  </block></xml>"
+        },
+        "courseB_Scrat_ramp22022": {
+          "1": "Kodi juaj duhet të duket kështu:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_Scrat_ramp2_2018": {
+          "1": "Kodi juaj duhet të duket kështu:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_Scrat_ramp2_2019": {
+          "1": "Kodi juaj duhet të duket kështu:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_Scrat_ramp2_2020": {
+          "1": "Kodi juaj duhet të duket kështu:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_Scrat_ramp2_2021": {
+          "1": "Kodi juaj duhet të duket kështu:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_Scrat_ramp3a2022": {
+          "1": "Kodi juaj duhet të duket kështu:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveNorth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_Scrat_ramp3a_2018": {
+          "1": "Kodi juaj duhet të duket kështu:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveNorth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_Scrat_ramp3a_2019": {
+          "1": "Kodi juaj duhet të duket kështu:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveNorth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_Scrat_ramp3a_2020": {
+          "1": "Kodi juaj duhet të duket kështu:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveNorth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_Scrat_ramp3a_2021": {
+          "1": "Kodi juaj duhet të duket kështu:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveNorth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_Scrat_ramp3b2022": {
+          "1": "Kodi juaj duhet të duket kështu:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveSouth\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveEast\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_Scrat_ramp3b_2018": {
+          "1": "Kodi juaj duhet të duket kështu:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveSouth\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveEast\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_Scrat_ramp3b_2019": {
+          "1": "Kodi juaj duhet të duket kështu:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveSouth\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveEast\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_Scrat_ramp3b_2020": {
+          "1": "Kodi juaj duhet të duket kështu:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveSouth\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveEast\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_Scrat_ramp3b_2021": {
+          "1": "Kodi juaj duhet të duket kështu:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveSouth\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveEast\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_Scrat_ramp4a2022": {
+          "1": "Kodi juaj duhet të duket kështu:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveSouth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_Scrat_ramp4a_2018": {
+          "1": "Kodi juaj duhet të duket kështu:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveSouth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_Scrat_ramp4a_2019": {
+          "1": "Kodi juaj duhet të duket kështu:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveSouth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_Scrat_ramp4a_2020": {
+          "1": "Kodi juaj duhet të duket kështu:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveSouth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_Scrat_ramp4a_2021": {
+          "1": "Kodi juaj duhet të duket kështu:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveEast\">\n        <next>\n          <block type=\"maze_moveEast\">\n            <next>\n              <block type=\"maze_moveSouth\"/>\n            </next>\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_Scrat_ramp5a2022": {
+          "1": "Kodi juaj duhet të duket kështu:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveWest\">\n        <next>\n          <block type=\"maze_moveWest\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_Scrat_ramp5a_2018": {
+          "1": "Kodi juaj duhet të duket kështu:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveWest\">\n        <next>\n          <block type=\"maze_moveWest\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_Scrat_ramp5a_2019": {
+          "1": "Kodi juaj duhet të duket kështu:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveWest\">\n        <next>\n          <block type=\"maze_moveWest\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_Scrat_ramp5a_2020": {
+          "1": "Kodi juaj duhet të duket kështu:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveWest\">\n        <next>\n          <block type=\"maze_moveWest\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_Scrat_ramp5a_2021": {
+          "1": "Kodi juaj duhet të duket kështu:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"maze_moveWest\">\n        <next>\n          <block type=\"maze_moveWest\">\n          </block>\n        </next>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseB_iceage_loops10": {
+          "courseB_iceage_loops10_a": "Kujdes, akull i thyer! Scrat do të bjerë në ujë!",
+          "courseB_iceage_loops10_c": "Kjo është një enigmë e gjatë! Ndiqni këtë rrugë."
+        },
+        "courseB_iceage_loops102022": {
+          "courseB_iceage_loops10_a": "Kujdes, akull i thyer! Scrat do të bjerë në ujë!",
+          "courseB_iceage_loops10_c": "Kjo është një enigmë e gjatë! Ndiqni këtë rrugë."
+        },
+        "courseB_iceage_loops10_2019": {
+          "courseB_iceage_loops10_a": "Kujdes, akull i thyer! Scrat do të bjerë në ujë!",
+          "courseB_iceage_loops10_c": "Kjo është një enigmë e gjatë! Ndiqni këtë rrugë."
+        },
+        "courseB_iceage_loops10_2020": {
+          "courseB_iceage_loops10_a": "Kujdes, akull i thyer! Scrat do të bjerë në ujë!",
+          "courseB_iceage_loops10_c": "Kjo është një enigmë e gjatë! Ndiqni këtë rrugë."
+        },
+        "courseB_iceage_loops10_2021": {
+          "courseB_iceage_loops10_a": "Kujdes, akull i thyer! Scrat do të bjerë në ujë!",
+          "courseB_iceage_loops10_c": "Kjo është një enigmë e gjatë! Ndiqni këtë rrugë."
+        },
+        "courseB_iceage_loops32022": {
+          "courseB_iceage_loops3_a": "Përdorni këtë bllok të ri!\n <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"3-10\">5</title>\n    </block></xml>"
+        },
+        "courseB_iceage_loops3_2019": {
+          "courseB_iceage_loops3_a": "Përdorni këtë bllok të ri!\n <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"3-10\">5</title>\n    </block></xml>"
+        },
+        "courseB_iceage_loops3_2020": {
+          "courseB_iceage_loops3_a": "Përdorni këtë bllok të ri!\n <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"3-10\">5</title>\n    </block></xml>"
+        },
+        "courseB_iceage_loops3_2021": {
+          "courseB_iceage_loops3_a": "Përdorni këtë bllok të ri!\n <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"3-10\">5</title>\n    </block></xml>"
+        },
+        "courseB_iceage_loops4": {
+          "courseB_iceage_loops4_c": "Kjo është rruga që Scrat duhet të marrë."
+        },
+        "courseB_iceage_loops42022": {
+          "courseB_iceage_loops4_c": "Kjo është rruga që Scrat duhet të marrë."
+        },
+        "courseB_iceage_loops4_2019": {
+          "courseB_iceage_loops4_c": "Kjo është rruga që Scrat duhet të marrë."
+        },
+        "courseB_iceage_loops4_2020": {
+          "courseB_iceage_loops4_c": "Kjo është rruga që Scrat duhet të marrë."
+        },
+        "courseB_iceage_loops4_2021": {
+          "courseB_iceage_loops4_c": "Kjo është rruga që Scrat duhet të marrë."
+        },
+        "courseB_iceage_loops8": {
+          "courseB_iceage_loops8_a": "A janë blloqet e lëvizjes në rregull? Çfarë tjetër mund të ndryshoni?"
+        },
+        "courseB_iceage_loops82022": {
+          "courseB_iceage_loops8_a": "A janë blloqet e lëvizjes në rregull? Çfarë tjetër mund të ndryshoni?"
+        },
+        "courseB_iceage_loops8_2019": {
+          "courseB_iceage_loops8_a": "A janë blloqet e lëvizjes në rregull? Çfarë tjetër mund të ndryshoni?"
+        },
+        "courseB_iceage_loops8_2020": {
+          "courseB_iceage_loops8_a": "A janë blloqet e lëvizjes në rregull? Çfarë tjetër mund të ndryshoni?"
+        },
+        "courseB_iceage_loops8_2021": {
+          "courseB_iceage_loops8_a": "A janë blloqet e lëvizjes në rregull? Çfarë tjetër mund të ndryshoni?"
+        },
+        "courseB_iceage_loops9": {
+          "courseB_iceage_loops9_b": "Kodi juaj përfundimtar duhet të ketë **4** loops."
+        },
+        "courseB_iceage_loops92022": {
+          "courseB_iceage_loops9_b": "Kodi juaj përfundimtar duhet të ketë **4** loops."
+        },
+        "courseB_iceage_loops9_2019": {
+          "courseB_iceage_loops9_b": "Kodi juaj përfundimtar duhet të ketë **4** loops."
+        },
+        "courseB_iceage_loops9_2020": {
+          "courseB_iceage_loops9_b": "Kodi juaj përfundimtar duhet të ketë **4** loops."
+        },
+        "courseB_iceage_loops9_2021": {
+          "courseB_iceage_loops9_b": "Kodi juaj përfundimtar duhet të ketë **4** loops."
+        },
+        "courseB_maze_seq1_2021": {
+          "courseB_maze_seq1_a": "Lidhni blloqet me bllokun <xml><block type=\"when_run\"/></xml> për të bërë lëvizjen e Scrat!",
+          "courseB_maze_seq1_b": "Tërhiqni tre nga këto shigjeta <xml><block type=\"maze_moveSouth\"/></xml> dhe lidhini ato me bllokun <xml><block type=\"when_run\"/></xml> për ta dërguar Scrat-in te lajthia."
+        },
+        "courseB_maze_seq4_2021": {
+          "courseB_maze_seq4_a": "Provoni të shtoni një udhëzim në të njëjtën kohë derisa të arrini te lajthia.",
+          "courseB_maze_seq4_b": "Ju do të dëshironi të përdorni bllokun <xml><block type=\"maze_moveEast\"/></xml> për të zgjidhur këtë enigmë."
         },
         "courseB_maze_seq5_2021": {
           "courseB_maze_seq5_a": "Nëse ngecni, provoni të vizatoni rrugën në letër.",
@@ -923,6 +1291,98 @@
           "courseB_maze_seq5_d": "Nuk jeni i sigurt se si të arrini te lajthia? Provoni këtë rrugë!",
           "courseB_maze_seq6_a": "Kodi juaj përfundimtar duhet të ketë 3 lëvizje të blloqeve.",
           "courseB_maze_seq6_b": "Nëse ngecni, provoni ta zgjidhni enigmën në dy pjesë, një anash dhe një lart e poshtë."
+        },
+        "courseB_maze_seq72022": {
+          "courseB_maze_seq7_a": "Shtoni 1 bllok për të lëvizur Scrat-in te lajthia.",
+          "courseB_maze_seq7_c": "Nuk jeni i sigurt se si të arrini te lajthia? Provoni këtë rrugë!"
+        },
+        "courseB_maze_seq7_2018": {
+          "courseB_maze_seq7_a": "Shtoni 1 bllok për të lëvizur Scrat-in te lajthia.",
+          "courseB_maze_seq7_c": "Nuk jeni i sigurt se si të arrini te lajthia? Provoni këtë rrugë!"
+        },
+        "courseB_maze_seq7_2019": {
+          "courseB_maze_seq7_a": "Shtoni 1 bllok për të lëvizur Scrat-in te lajthia.",
+          "courseB_maze_seq7_c": "Nuk jeni i sigurt se si të arrini te lajthia? Provoni këtë rrugë!"
+        },
+        "courseB_maze_seq7_2020": {
+          "courseB_maze_seq7_a": "Shtoni 1 bllok për të lëvizur Scrat-in te lajthia.",
+          "courseB_maze_seq7_c": "Nuk jeni i sigurt se si të arrini te lajthia? Provoni këtë rrugë!"
+        },
+        "courseB_maze_seq7_2021": {
+          "courseB_maze_seq7_a": "Shtoni 1 bllok për të lëvizur Scrat-in te lajthia.",
+          "courseB_maze_seq7_b": "Provoni të ekzekutoni kodin që ju është dhënë dhe shikoni se ku përfundoni.",
+          "courseB_maze_seq7_c": "Nuk jeni i sigurt se si të arrini te lajthia? Provoni këtë rrugë!"
+        },
+        "courseB_maze_seq8": {
+          "courseB_maze_seq8_c": "Nuk e dini se në cilën rrugë të shkoni? Provoni këtë rrugë!"
+        },
+        "courseB_maze_seq82022": {
+          "courseB_maze_seq8_b": "Ka më shumë se një mënyrë për të zgjidhur këtë enigmë!",
+          "courseB_maze_seq8_c": "Nuk e dini se në cilën rrugë të shkoni? Provoni këtë rrugë!"
+        },
+        "courseB_maze_seq8_2018": {
+          "courseB_maze_seq8_b": "Ka më shumë se një mënyrë për të zgjidhur këtë enigmë!",
+          "courseB_maze_seq8_c": "Nuk e dini se në cilën rrugë të shkoni? Provoni këtë rrugë!"
+        },
+        "courseB_maze_seq8_2019": {
+          "courseB_maze_seq8_b": "Ka më shumë se një mënyrë për të zgjidhur këtë enigmë!",
+          "courseB_maze_seq8_c": "Nuk e dini se në cilën rrugë të shkoni? Provoni këtë rrugë!"
+        },
+        "courseB_maze_seq8_2020": {
+          "courseB_maze_seq8_b": "Ka më shumë se një mënyrë për të zgjidhur këtë enigmë!",
+          "courseB_maze_seq8_c": "Nuk e dini se në cilën rrugë të shkoni? Provoni këtë rrugë!"
+        },
+        "courseB_maze_seq8_2021": {
+          "courseB_maze_seq8_a": "Provoni të shtoni një bllok në të njëjtën kohë derisa të zgjidhni enigmën.",
+          "courseB_maze_seq8_b": "Ka më shumë se një mënyrë për të zgjidhur këtë enigmë!",
+          "courseB_maze_seq8_c": "Nuk e dini se në cilën rrugë të shkoni? Provoni këtë rrugë!"
+        },
+        "courseB_maze_seq9": {
+          "courseB_maze_seq9_d": "Keni ngecur? Provoni këtë rrugë!"
+        },
+        "courseB_maze_seq92022": {
+          "courseB_maze_seq9_d": "Keni ngecur? Provoni këtë rrugë!"
+        },
+        "courseB_maze_seq9_2018": {
+          "courseB_maze_seq9_d": "Keni ngecur? Provoni këtë rrugë!"
+        },
+        "courseB_maze_seq9_2019": {
+          "courseB_maze_seq9_d": "Keni ngecur? Provoni këtë rrugë!"
+        },
+        "courseB_maze_seq9_2020": {
+          "courseB_maze_seq9_d": "Keni ngecur? Provoni këtë rrugë!"
+        },
+        "courseB_maze_seq9_2021": {
+          "courseB_maze_seq9_a": "Provoni së pari të shkruani të gjitha hapat në një copë letër.",
+          "courseB_maze_seq9_b": "Ndërtoni programin tuaj një bllok në të njëjtën kohë dhe provoni ndërsa ndërtoni.",
+          "courseB_maze_seq9_c": "Ka dy mënyra për ta zgjidhur këtë enigmë.",
+          "courseB_maze_seq9_d": "Keni ngecur? Provoni këtë rrugë!"
+        },
+        "courseB_maze_seq_challenge1_2021": {
+          "courseB_maze_seq_challenge1_a": "Rruga më e shkurtër mund të mos funksionojë këtë herë.",
+          "courseB_maze_seq_challenge1_b": "Provoni të përdorni bllokun <xml><block type=\"maze_moveWest\"/></xml> për të filluar."
+        },
+        "courseB_maze_seq_challenge2_2021": {
+          "courseB_maze_seq_challenge2_a": "Ju nuk keni nevojë të shtoni ose hiqni blloqe për të zgjidhur këtë enigmë.",
+          "courseB_maze_seq_challenge2_b": "Riorganizoni blloqet dhe merrni rrugën e modelit të shkallëve."
+        },
+        "courseB_starWars_prog3": {
+          "courseB_starWars_prog3_a": "Ju do të duhet të lëvizni në 3 mënyra për të zgjidhur këtë enigmë."
+        },
+        "courseB_starWars_prog32022": {
+          "courseB_starWars_prog3_a": "Ju do të duhet të lëvizni në 3 mënyra për të zgjidhur këtë enigmë."
+        },
+        "courseB_starWars_prog3_2018": {
+          "courseB_starWars_prog3_a": "Ju do të duhet të lëvizni në 3 mënyra për të zgjidhur këtë enigmë."
+        },
+        "courseB_starWars_prog3_2019": {
+          "courseB_starWars_prog3_a": "Ju do të duhet të lëvizni në 3 mënyra për të zgjidhur këtë enigmë."
+        },
+        "courseB_starWars_prog3_2020": {
+          "courseB_starWars_prog3_a": "Ju do të duhet të lëvizni në 3 mënyra për të zgjidhur këtë enigmë."
+        },
+        "courseB_starWars_prog3_2021": {
+          "courseB_starWars_prog3_a": "Ju do të duhet të lëvizni në 3 mënyra për të zgjidhur këtë enigmë."
         },
         "courseB_starWars_prog9": {
           "courseB_starWars_prog9_a": "Mos kini frikë të bëni një gabim! Run kodin për të parë se çfarë ndodh, edhe në qoftë se ju nuk e keni zgjidhur enigmën ende."
@@ -1153,6 +1613,22 @@
           "courseD_collector_debugging6_a": "Provo të përdorni kodin duke përdorur butonin \"Hapi\". A është gjithçka mirë në hapin e parë?\n\nPo i dyti?\n\nKu shkojnë gjërat keq?",
           "courseD_collector_debugging6_b": "Duket sikur të gjitha blloqet që ju nevojiten janë në hapësirën e punës. Provo të klikoni “fillo nga e para” nëse gjërat bëhen shumë konfuze."
         },
+        "courseD_iceage_loops10": {
+          "courseB_iceage_loops10_a": "Kujdes, akull i thyer! Scrat do të bjerë në ujë!",
+          "courseB_iceage_loops10_c": "Kjo është një enigmë e gjatë! Ndiqni këtë rrugë."
+        },
+        "courseD_iceage_loops102022": {
+          "courseB_iceage_loops10_a": "Kujdes, akull i thyer! Scrat do të bjerë në ujë!",
+          "courseB_iceage_loops10_c": "Kjo është një enigmë e gjatë! Ndiqni këtë rrugë."
+        },
+        "courseD_iceage_loops10_2019": {
+          "courseB_iceage_loops10_a": "Kujdes, akull i thyer! Scrat do të bjerë në ujë!",
+          "courseB_iceage_loops10_c": "Kjo është një enigmë e gjatë! Ndiqni këtë rrugë."
+        },
+        "courseD_iceage_loops10_2020": {
+          "courseB_iceage_loops10_a": "Kujdes, akull i thyer! Scrat do të bjerë në ujë!",
+          "courseB_iceage_loops10_c": "Kjo është një enigmë e gjatë! Ndiqni këtë rrugë."
+        },
         "courseD_iceage_loops10_2021": {
           "courseB_iceage_loops10_a": "Kujdes, akulli i thyer! Scrat do të bjerë në ujë!",
           "courseB_iceage_loops10_b": "Provo të thuash hapat me zë të lartë ose t'i shkruash ato në një copë letër. A sheh ndonjë model?",
@@ -1170,6 +1646,18 @@
         "courseD_iceage_loops3_2021": {
           "courseB_iceage_loops3_a": "Përdor këtë bllok të ri!\n\n <xml><block type=\"controls_repeat_dropdown\">\n    <title name=\"TIMES\" config=\"2-10\">5</title>\n  </block></xml>",
           "courseB_iceage_loops3_b": "Për të përsëritur kodin, tërhiq një loop `përsërit`, pastaj vendos bllokun që dëshiron të përsëritet brenda."
+        },
+        "courseD_iceage_loops4": {
+          "courseD_iceage_loops4_c": "Kjo është rruga që Scrat duhet të marrë."
+        },
+        "courseD_iceage_loops42022": {
+          "courseD_iceage_loops4_c": "Kjo është rruga që Scrat duhet të marrë."
+        },
+        "courseD_iceage_loops4_2019": {
+          "courseD_iceage_loops4_c": "Kjo është rruga që Scrat duhet të marrë."
+        },
+        "courseD_iceage_loops4_2020": {
+          "courseD_iceage_loops4_c": "Kjo është rruga që Scrat duhet të marrë."
         },
         "courseD_iceage_loops4_2021": {
           "courseD_iceage_loops4_a": "Mos ke frikë të ekzekutosh kodin tënd dhe shiko se çfarë ndodh!",
@@ -1189,6 +1677,18 @@
           "courseD_iceage_loops8_a": "A janë blloqet e “kthesës” në rregull? Çfarë tjetër mund të ndryshoni?",
           "courseD_iceage_loops8_b": "Loop i parë duhet të përsëritet **3** herë, e dyta duhet të përsëritet **5** herë, loop i tretë duhet të përsëritet**4** herë dhe loop i fundit duhet të përsëritet**4** herë.",
           "courseD_iceage_loops8_c": "Përdor loops për të ndihmuar Scrat të ndjekë këtë rrugë."
+        },
+        "courseD_iceage_loops9": {
+          "courseD_iceage_loops9_b": "Kodi juaj përfundimtar duhet të ketë **4** loops."
+        },
+        "courseD_iceage_loops92022": {
+          "courseD_iceage_loops9_b": "Kodi juaj përfundimtar duhet të ketë **4** loops."
+        },
+        "courseD_iceage_loops9_2019": {
+          "courseD_iceage_loops9_b": "Kodi juaj përfundimtar duhet të ketë **4** loops."
+        },
+        "courseD_iceage_loops9_2020": {
+          "courseD_iceage_loops9_b": "Kodi juaj përfundimtar duhet të ketë **4** loops."
         },
         "courseD_iceage_loops9_2021": {
           "courseD_iceage_loops9_a": "Keni probleme? Provoni ta thyeni këtë enigmë në copa më të vogla. Mos keni frikë të ekzekutoni enigmën tuaj ndërsa kodoni!",
@@ -1244,11 +1744,91 @@
         "courseE_farmer_ramp12f_2021": {
           "courseE_farmer_ramp12f_b": "Përdorni një bllok “nëse/tjetër” për të ndihmuar fermerin të vendosë nëse ka nevojë të kthehet djathtas ose majtas."
         },
+        "courseF_artist_variables82022": {
+          "courseF_artist_variables8_a": "Provoni të vendosni bllokun \n\n<xml>\n<block type=\"math_change\">\n      <title name=\"VAR\">length</title>\n      <value name=\"DELTA\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">1</title>\n        </block>\n      </value>\n    </block>\n</xml>\n\nbrenda loop-it tuaj në fund."
+        },
+        "courseF_artist_variables8_2021": {
+          "courseF_artist_variables8_a": "Provoni të vendosni bllokun \n\n<xml>\n<block type=\"math_change\">\n      <title name=\"VAR\">length</title>\n      <value name=\"DELTA\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">1</title>\n        </block>\n      </value>\n    </block>\n</xml>\n\nbrenda loop-it tuaj në fund."
+        },
+        "courseF_artist_variables92022": {
+          "courseF_artist_variables9_b": "Sigurohuni që blloku që ndryshon “gjatësinë” të jetë brenda loop-it tuaj, kështu që linjat vazhdojnë të bëhen më të gjata."
+        },
+        "courseF_artist_variables9_2021": {
+          "courseF_artist_variables9_b": "Sigurohuni që blloku që ndryshon “gjatësinë” të jetë brenda loop-it tuaj, kështu që linjat vazhdojnë të bëhen më të gjata."
+        },
+        "courseF_artist_variablesFP2022": {
+          "polygon_table": "Dëshironi të provoni poligone të tjera? \n\nPërdorni numrin e brinjëve në “përsëritjen” tuaj dhe këndin në bllokun tuaj `kthehu`.\nProvoni këto:\n\n| Forma | Anët | Këndi\n\\| \\| :------: \\| :---: \\| :---: \\| \\|\n| trekëndësh | 3 | 120° |\n| katror | 4 | 90° | \n| pentagon | 5 | 72° |\n| gjashtëkëndësh | 6 | 60° |\n| tetëkëndësh | 8 | 45° | \n| nonagon | 9| 40° | \n| dekagon | 10 | 36° |"
+        },
+        "courseF_artist_variablesFP_2021": {
+          "polygon_table": "Dëshironi të provoni poligone të tjera? \n\nPërdorni numrin e brinjëve në “përsëritjen” tuaj dhe këndin në bllokun tuaj `kthehu`.\nProvoni këto:\n\n| Forma | Anët | Këndi\n\\| \\| :------: \\| :---: \\| :---: \\| \\|\n| trekëndësh | 3 | 120° |\n| katror | 4 | 90° | \n| pentagon | 5 | 72° |\n| gjashtëkëndësh | 6 | 60° |\n| tetëkëndësh | 8 | 45° | \n| nonagon | 9| 40° | \n| dekagon | 10 | 36° |"
+        },
+        "courseF_bee_variables_3a2022": {
+          "courseF_bee_variables_3_2021_1": "Për të vazhduar modelin, rrisni numrin e përsëritjeve:\n<xml><block type=\"controls_repeat_ext\">\n      <value name=\"TIMES\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">4</title>\n        </block>\n      </value>\n    </block></xml>"
+        },
+        "courseF_bee_variables_3a_2021": {
+          "courseF_bee_variables_3_2021_1": "Për të vazhduar modelin, rrisni numrin e përsëritjeve:\n<xml><block type=\"controls_repeat_ext\">\n      <value name=\"TIMES\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">4</title>\n        </block>\n      </value>\n    </block></xml>"
+        },
+        "courseF_bee_variables_3aa2022": {
+          "courseF_bee_variables_3_2021_1": "Për të shtuar një në variabël, mund të përdorni këtë kod në programin tuaj:\n<xml><block type=\"math_change\">\n      <title name=\"VAR\">counter</title>\n      <value name=\"DELTA\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">1</title>\n        </block>\n      </value>\n    </block></xml>"
+        },
+        "courseF_bee_variables_3aa_2021": {
+          "courseF_bee_variables_3_2021_1": "Për të shtuar një në variabël, mund të përdorni këtë kod në programin tuaj:\n<xml><block type=\"math_change\">\n      <title name=\"VAR\">counter</title>\n      <value name=\"DELTA\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">1</title>\n        </block>\n      </value>\n    </block></xml>"
+        },
+        "courseF_bee_variables_4a2022": {
+          "courseF_bee_variables_4_2021_1": "Në vend që të shtoni 1 në variabël, shtoni 2 çdo herë."
+        },
+        "courseF_bee_variables_4a_2021": {
+          "courseF_bee_variables_4_2021_1": "Në vend që të shtoni 1 në variabël, shtoni 2 çdo herë."
+        },
+        "courseF_events_choice_pufferfish": {
+          "changeProp": "Ky bllok do të ju duhet gjithashtu:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"creature_18_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">5</title>\n        </block>\n      </value>\n    </block></xml>"
+        },
+        "courseF_events_choice_pufferfish_-2022-2": {
+          "changeProp": "Ky bllok do të ju duhet gjithashtu:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"creature_18_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">5</title>\n        </block>\n      </value>\n    </block></xml>"
+        },
+        "courseF_events_key": {
+          "changePropBlock": "Ky bllok do të ju duhet gjithashtu:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"creature_10_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">???</title>\n        </block>\n      </value>\n    </block>\n    </xml>"
+        },
+        "courseF_events_key_-2022-2": {
+          "changePropBlock": "Ky bllok do të ju duhet gjithashtu:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"creature_10_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">???</title>\n        </block>\n      </value>\n    </block>\n    </xml>"
+        },
         "courseF_sprites_clouds": {
           "behavior_list": "Provoni të përdorni sjellje të tilla si “lëvizja në lindje dhe looping”, “rotullim në të djathtë” dhe “bredhje”."
         },
         "courseF_sprites_clouds_-2022-2": {
           "behavior_list": "Provoni të përdorni sjellje të tilla si “lëvizja në lindje dhe looping”, “rotullim në të djathtë” dhe “bredhje”."
+        },
+        "courseF_variables_card_finish": {
+          "card_idea1": "Ju mund të shtoni një kërkesë të dytë (ose të tretë ose të katërt) duke lidhur një bllok të ri kërkesash me një variabël të ndryshëm me eventin tuaj të parë \"kur përgjigjet\".\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n     <value name=\"VAR\">\n       <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n         <title name=\"VAR\">emri</title>\n       </block>\n     </value>\n     <next>\n       <block type=\"gamelab_setPrompt\">\n         <value name=\"QUESTION\">\n           <block type=\"text\" can_disconnect_from_parent=\"false\">\n             <title name=\"TEXT\">çfarë dëshironi për ditëlindjen tuaj?</title>\n           </block>\n         </value>\n         <value name=\"VAR\">\n           <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n             <title name=\"VAR\">dhuratë</title>\n           </block>\n         </value>\n       </block>\n     </next>\n   </block></xml>",
+          "card_idea2": "Ju mund të keni një ndryshim nga një sjellje në tjetrën duke përdorur një bllok \"sprite ndalon\" me një bllok \"sprite fillon\" nën një event.\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n     <value name=\"VAR\">\n       <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n         <title name=\"VAR\">emri</title>\n       </block>\n     </value>\n     <next>\n       <block type=\"gamelab_removeBehaviorSimple\">\n         <value name=\"SPRITE\">\n           <block type=\"gamelab_allSpritesWithAnimation\">\n             <title name=\"ANIMATION\">\"robot_02_1\"</title>\n           </block>\n         </value>\n         <value name=\"BEHAVIOR\">\n           <block type=\"gamelab_behavior_get\">\n             <mutation></mutation>\n             <title name=\"VAR\" id=\"spinning left\">rotullimi majtas</title>\n           </block>\n         </value>\n         <next>\n           <block type=\"gamelab_addBehaviorSimple\">\n             <value name=\"SPRITE\">\n               <block type=\"gamelab_allSpritesWithAnimation\">\n                 <title name=\"ANIMATION\">\"robot_02_1\"</title>\n               </block>\n             </value>\n             <value name=\"BEHAVIOR\">\n               <block type=\"gamelab_behavior_get\">\n                 <mutation></mutation>\n                 <title name=\"VAR\" id=\"spinning right\">rrotullimi djathtas</title>\n               </block>\n             </value>\n           </block>\n         </next>\n       </block>\n     </next>\n   </block>\n</xml>",
+          "card_idea3": "Ju mund ta bëni programin tuaj interaktiv duke bërë gjëra të tjera të ndodhin kur përdoruesi shtyp një tast ose pasi të ketë kaluar një kohë e caktuar.\n\n<xml><block type=\"gamelab_keyPressed\">\n    <title name=\"CONDITION\">“Kur”</title>\n    <title name=\"KEY\">“lart”</title>\n    <next>\n      <block type=\"gamelab_changePropBy\">\n        <title name=\"PROPERTY\">“shkallë”</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">“robot_02_1\"</title>\n          </block>\n        </value>\n        <value name=\"VAL\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">10</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
+        },
+        "courseF_variables_card_finish_-2022-2": {
+          "card_idea1": "Ju mund të shtoni një kërkesë të dytë (ose të tretë ose të katërt) duke lidhur një bllok të ri kërkesash me një variabël të ndryshëm me eventin tuaj të parë \"kur përgjigjet\".\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n     <value name=\"VAR\">\n       <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n         <title name=\"VAR\">emri</title>\n       </block>\n     </value>\n     <next>\n       <block type=\"gamelab_setPrompt\">\n         <value name=\"QUESTION\">\n           <block type=\"text\" can_disconnect_from_parent=\"false\">\n             <title name=\"TEXT\">çfarë dëshironi për ditëlindjen tuaj?</title>\n           </block>\n         </value>\n         <value name=\"VAR\">\n           <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n             <title name=\"VAR\">dhuratë</title>\n           </block>\n         </value>\n       </block>\n     </next>\n   </block></xml>",
+          "card_idea2": "Ju mund të keni një ndryshim nga një sjellje në tjetrën duke përdorur një bllok \"sprite ndalon\" me një bllok \"sprite fillon\" nën një event.\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n     <value name=\"VAR\">\n       <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n         <title name=\"VAR\">emri</title>\n       </block>\n     </value>\n     <next>\n       <block type=\"gamelab_removeBehaviorSimple\">\n         <value name=\"SPRITE\">\n           <block type=\"gamelab_allSpritesWithAnimation\">\n             <title name=\"ANIMATION\">\"robot_02_1\"</title>\n           </block>\n         </value>\n         <value name=\"BEHAVIOR\">\n           <block type=\"gamelab_behavior_get\">\n             <mutation></mutation>\n             <title name=\"VAR\" id=\"spinning left\">rotullimi majtas</title>\n           </block>\n         </value>\n         <next>\n           <block type=\"gamelab_addBehaviorSimple\">\n             <value name=\"SPRITE\">\n               <block type=\"gamelab_allSpritesWithAnimation\">\n                 <title name=\"ANIMATION\">\"robot_02_1\"</title>\n               </block>\n             </value>\n             <value name=\"BEHAVIOR\">\n               <block type=\"gamelab_behavior_get\">\n                 <mutation></mutation>\n                 <title name=\"VAR\" id=\"spinning right\">rrotullimi djathtas</title>\n               </block>\n             </value>\n           </block>\n         </next>\n       </block>\n     </next>\n   </block>\n</xml>",
+          "card_idea3": "Ju mund ta bëni programin tuaj interaktiv duke bërë gjëra të tjera të ndodhin kur përdoruesi shtyp një tast ose pasi të ketë kaluar një kohë e caktuar.\n\n<xml><block type=\"gamelab_keyPressed\">\n    <title name=\"CONDITION\">“Kur”</title>\n    <title name=\"KEY\">“lart”</title>\n    <next>\n      <block type=\"gamelab_changePropBy\">\n        <title name=\"PROPERTY\">“shkallë”</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">“robot_02_1\"</title>\n          </block>\n        </value>\n        <value name=\"VAL\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">10</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
+        },
+        "courseF_variables_chatbot_finish": {
+          "chatbot_idea1": "Ju mund të shtoni një kërkesë të dytë (ose të tretë ose të katërt) duke lidhur një bllok të ri kërkesash me një variabël të ndryshëm me eventin tuaj të parë \"kur përgjigjet\".\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n     <value name=\"VAR\">\n       <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n         <title name=\"VAR\">emri</title>\n       </block>\n     </value>\n     <next>\n       <block type=\"gamelab_setPrompt\">\n         <value name=\"QUESTION\">\n           <block type=\"text\" can_disconnect_from_parent=\"false\">\n             <title name=\"TEXT\">Sa vjeç jeni?</title>\n           </block>\n         </value>\n         <value name=\"VAR\">\n           <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n             <title name=\"VAR\">mosha</title>\n           </block>\n         </value>\n       </block>\n     </next>\n   </block></xml>",
+          "chatbot_idea2": "Ju mund të keni një ndryshim nga një sjellje në tjetrën duke përdorur një bllok \"sprite ndalon\" me një bllok \"sprite fillon\" nën një event.\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n     <value name=\"VAR\">\n       <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n         <title name=\"VAR\">emri</title>\n       </block>\n     </value>\n     <next>\n       <block type=\"gamelab_removeBehaviorSimple\">\n         <value name=\"SPRITE\">\n           <block type=\"gamelab_allSpritesWithAnimation\">\n             <title name=\"ANIMATION\">\"robot_02_1\"</title>\n           </block>\n         </value>\n         <value name=\"BEHAVIOR\">\n           <block type=\"gamelab_behavior_get\">\n             <mutation></mutation>\n             <title name=\"VAR\" id=\"spinning left\">rotullimi majtas</title>\n           </block>\n         </value>\n         <next>\n           <block type=\"gamelab_addBehaviorSimple\">\n             <value name=\"SPRITE\">\n               <block type=\"gamelab_allSpritesWithAnimation\">\n                 <title name=\"ANIMATION\">\"robot_02_1\"</title>\n               </block>\n             </value>\n             <value name=\"BEHAVIOR\">\n               <block type=\"gamelab_behavior_get\">\n                 <mutation></mutation>\n                 <title name=\"VAR\" id=\"spinning right\">rrotullimi djathtas</title>\n               </block>\n             </value>\n           </block>\n         </next>\n       </block>\n     </next>\n   </block>\n</xml>",
+          "chatbot_idea3": "Ju mund ta bëni programin tuaj interaktiv duke bërë gjëra të tjera të ndodhin kur përdoruesi shtyp një tast ose pasi të ketë kaluar një kohë e caktuar.\n\n<xml><block type=\"gamelab_keyPressed\">\n    <title name=\"CONDITION\">“Kur”</title>\n    <title name=\"KEY\">“lart”</title>\n    <next>\n      <block type=\"gamelab_changePropBy\">\n        <title name=\"PROPERTY\">“shkallë”</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">“robot_02_1\"</title>\n          </block>\n        </value>\n        <value name=\"VAL\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">10</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>",
+          "chatbot_idea4": "Ju mund të sinjalizoni fundin e programit tuaj me një bllok të ekranit të titullit.\n\n<xml><block type=\"gamelab_showTitleScreen\">\n       <value name=\"TITLE\">\n         <block type=\"text\">\n         <title name=\"TEXT\">Fundi</title>\n         </block>\n       </value>\n       <value name=\"SUBTITLE\">\n         <block type=\"text\">\n         <title name=\"TEXT\">Faleminderit për bisedën!</title>\n         </block>\n       </value>\n       </block></xml>"
+        },
+        "courseF_variables_chatbot_finish_-2022-2": {
+          "chatbot_idea1": "Ju mund të shtoni një kërkesë të dytë (ose të tretë ose të katërt) duke lidhur një bllok të ri kërkesash me një variabël të ndryshëm me eventin tuaj të parë \"kur përgjigjet\".\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n     <value name=\"VAR\">\n       <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n         <title name=\"VAR\">emri</title>\n       </block>\n     </value>\n     <next>\n       <block type=\"gamelab_setPrompt\">\n         <value name=\"QUESTION\">\n           <block type=\"text\" can_disconnect_from_parent=\"false\">\n             <title name=\"TEXT\">Sa vjeç jeni?</title>\n           </block>\n         </value>\n         <value name=\"VAR\">\n           <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n             <title name=\"VAR\">mosha</title>\n           </block>\n         </value>\n       </block>\n     </next>\n   </block></xml>",
+          "chatbot_idea2": "Ju mund të keni një ndryshim nga një sjellje në tjetrën duke përdorur një bllok \"sprite ndalon\" me një bllok \"sprite fillon\" nën një event.\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n     <value name=\"VAR\">\n       <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n         <title name=\"VAR\">emri</title>\n       </block>\n     </value>\n     <next>\n       <block type=\"gamelab_removeBehaviorSimple\">\n         <value name=\"SPRITE\">\n           <block type=\"gamelab_allSpritesWithAnimation\">\n             <title name=\"ANIMATION\">\"robot_02_1\"</title>\n           </block>\n         </value>\n         <value name=\"BEHAVIOR\">\n           <block type=\"gamelab_behavior_get\">\n             <mutation></mutation>\n             <title name=\"VAR\" id=\"spinning left\">rotullimi majtas</title>\n           </block>\n         </value>\n         <next>\n           <block type=\"gamelab_addBehaviorSimple\">\n             <value name=\"SPRITE\">\n               <block type=\"gamelab_allSpritesWithAnimation\">\n                 <title name=\"ANIMATION\">\"robot_02_1\"</title>\n               </block>\n             </value>\n             <value name=\"BEHAVIOR\">\n               <block type=\"gamelab_behavior_get\">\n                 <mutation></mutation>\n                 <title name=\"VAR\" id=\"spinning right\">rrotullimi djathtas</title>\n               </block>\n             </value>\n           </block>\n         </next>\n       </block>\n     </next>\n   </block>\n</xml>",
+          "chatbot_idea3": "Ju mund ta bëni programin tuaj interaktiv duke bërë gjëra të tjera të ndodhin kur përdoruesi shtyp një tast ose pasi të ketë kaluar një kohë e caktuar.\n\n<xml><block type=\"gamelab_keyPressed\">\n    <title name=\"CONDITION\">“Kur”</title>\n    <title name=\"KEY\">“lart”</title>\n    <next>\n      <block type=\"gamelab_changePropBy\">\n        <title name=\"PROPERTY\">“shkallë”</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">“robot_02_1\"</title>\n          </block>\n        </value>\n        <value name=\"VAL\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">10</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>",
+          "chatbot_idea4": "Ju mund të sinjalizoni fundin e programit tuaj me një bllok të ekranit të titullit.\n\n<xml><block type=\"gamelab_showTitleScreen\">\n       <value name=\"TITLE\">\n         <block type=\"text\">\n         <title name=\"TEXT\">Fundi</title>\n         </block>\n       </value>\n       <value name=\"SUBTITLE\">\n         <block type=\"text\">\n         <title name=\"TEXT\">Faleminderit për bisedën!</title>\n         </block>\n       </value>\n       </block></xml>"
+        },
+        "courseF_variables_madlib_finish": {
+          "card_idea1": "Ju mund të shtoni një kërkesë të dytë (ose të tretë ose të katërt) duke përdorur një kërkesë bllok të ri me një variabël ndryshe.\n\n<xml>\n       <block type=\"gamelab_setPrompt\">\n         <value name=\"QUESTION\">\n           <block type=\"text\" can_disconnect_from_parent=\"false\">\n             <title name=\"TEXT\">Fut një fjalë veprimi:</title>\n           </block>\n         </value>\n         <value name=\"VAR\">\n           <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n             <title name=\"VAR\">folje</title>\n           </block>\n         </value>\n       </block>\n     </xml>",
+          "card_idea2": "Ju mund të keni një ndryshim nga një sjellje në tjetrën duke përdorur një bllok \"sprite ndalon\" me një bllok \"sprite fillon\" nën një event.\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n     <value name=\"VAR\">\n       <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n         <title name=\"VAR\">emri</title>\n       </block>\n     </value>\n     <next>\n       <block type=\"gamelab_removeBehaviorSimple\">\n         <value name=\"SPRITE\">\n           <block type=\"gamelab_allSpritesWithAnimation\">\n             <title name=\"ANIMATION\">\"robot_02_1\"</title>\n           </block>\n         </value>\n         <value name=\"BEHAVIOR\">\n           <block type=\"gamelab_behavior_get\">\n             <mutation></mutation>\n             <title name=\"VAR\" id=\"spinning left\">rotullimi majtas</title>\n           </block>\n         </value>\n         <next>\n           <block type=\"gamelab_addBehaviorSimple\">\n             <value name=\"SPRITE\">\n               <block type=\"gamelab_allSpritesWithAnimation\">\n                 <title name=\"ANIMATION\">\"robot_02_1\"</title>\n               </block>\n             </value>\n             <value name=\"BEHAVIOR\">\n               <block type=\"gamelab_behavior_get\">\n                 <mutation></mutation>\n                 <title name=\"VAR\" id=\"spinning right\">rrotullimi djathtas</title>\n               </block>\n             </value>\n           </block>\n         </next>\n       </block>\n     </next>\n   </block>\n</xml>",
+          "card_idea3": "Ju mund ta bëni programin tuaj interaktiv duke bërë gjëra të tjera të ndodhin kur përdoruesi shtyp një tast ose pasi të ketë kaluar një kohë e caktuar.\n\n<xml><block type=\"gamelab_keyPressed\">\n    <title name=\"CONDITION\">“Kur”</title>\n    <title name=\"KEY\">“lart”</title>\n    <next>\n      <block type=\"gamelab_changePropBy\">\n        <title name=\"PROPERTY\">“shkallë”</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">“robot_02_1\"</title>\n          </block>\n        </value>\n        <value name=\"VAL\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">10</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
+        },
+        "courseF_variables_madlib_finish_-2022-2": {
+          "card_idea1": "Ju mund të shtoni një kërkesë të dytë (ose të tretë ose të katërt) duke përdorur një kërkesë bllok të ri me një variabël ndryshe.\n\n<xml>\n       <block type=\"gamelab_setPrompt\">\n         <value name=\"QUESTION\">\n           <block type=\"text\" can_disconnect_from_parent=\"false\">\n             <title name=\"TEXT\">Fut një fjalë veprimi:</title>\n           </block>\n         </value>\n         <value name=\"VAR\">\n           <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n             <title name=\"VAR\">folje</title>\n           </block>\n         </value>\n       </block>\n     </xml>",
+          "card_idea2": "Ju mund të keni një ndryshim nga një sjellje në tjetrën duke përdorur një bllok \"sprite ndalon\" me një bllok \"sprite fillon\" nën një event.\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n     <value name=\"VAR\">\n       <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n         <title name=\"VAR\">emri</title>\n       </block>\n     </value>\n     <next>\n       <block type=\"gamelab_removeBehaviorSimple\">\n         <value name=\"SPRITE\">\n           <block type=\"gamelab_allSpritesWithAnimation\">\n             <title name=\"ANIMATION\">\"robot_02_1\"</title>\n           </block>\n         </value>\n         <value name=\"BEHAVIOR\">\n           <block type=\"gamelab_behavior_get\">\n             <mutation></mutation>\n             <title name=\"VAR\" id=\"spinning left\">rotullimi majtas</title>\n           </block>\n         </value>\n         <next>\n           <block type=\"gamelab_addBehaviorSimple\">\n             <value name=\"SPRITE\">\n               <block type=\"gamelab_allSpritesWithAnimation\">\n                 <title name=\"ANIMATION\">\"robot_02_1\"</title>\n               </block>\n             </value>\n             <value name=\"BEHAVIOR\">\n               <block type=\"gamelab_behavior_get\">\n                 <mutation></mutation>\n                 <title name=\"VAR\" id=\"spinning right\">rrotullimi djathtas</title>\n               </block>\n             </value>\n           </block>\n         </next>\n       </block>\n     </next>\n   </block>\n</xml>",
+          "card_idea3": "Ju mund ta bëni programin tuaj interaktiv duke bërë gjëra të tjera të ndodhin kur përdoruesi shtyp një tast ose pasi të ketë kaluar një kohë e caktuar.\n\n<xml><block type=\"gamelab_keyPressed\">\n    <title name=\"CONDITION\">“Kur”</title>\n    <title name=\"KEY\">“lart”</title>\n    <next>\n      <block type=\"gamelab_changePropBy\">\n        <title name=\"PROPERTY\">“shkallë”</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">“robot_02_1\"</title>\n          </block>\n        </value>\n        <value name=\"VAL\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">10</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
         },
         "coursea_maze_ramp1_2021": {
           "courseC_maze_programming1_a": "Nëse zogu nuk po arrin te derri, sigurohuni që të dy blloqet të jenë klikuar plotësisht së bashku, pastaj klikoni \"Ekzekuto\" përsëri.",
