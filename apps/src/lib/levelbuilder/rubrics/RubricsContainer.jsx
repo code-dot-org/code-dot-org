@@ -217,6 +217,8 @@ export default function RubricsContainer({
 
   /**
    * Transforms the keys of an object from camelCase to snake_case.
+   * Intended to transform the keys of objects in an array of an object.
+   * In this case, it is only intended into the first nested layer.
    * @param {object} obj - The object with keys in camelCase format.
    * @returns {object} - The object with keys in snake_case format.
    */
