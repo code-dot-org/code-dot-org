@@ -160,7 +160,7 @@ function TopInstructionsHeader(props) {
               onClick={handleTaRubricTabClick}
               selected={tabSelected === TabType.TA_RUBRIC}
               isLegacyTextColor={isOldPurpleColor}
-              text="Rubric"
+              text={i18n.rubric()}
               teacherOnly={false}
               isMinecraft={isMinecraft}
               isRtl={isRtl}

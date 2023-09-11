@@ -69,7 +69,6 @@ function initPage() {
       'rubric-fab-mount-point'
     );
     if (rubricFabMountPoint) {
-      reportingData['isTeacher'] = true;
       ReactDOM.render(
         <RubricFloatingActionButton
           rubric={rubric}
