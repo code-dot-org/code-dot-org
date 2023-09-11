@@ -622,7 +622,7 @@
         },
         "what-is-a-computer-1-2-3/csd/2021": {
           "name": "Що таке комп’ютер",
-          "url": "https://youtu.be/rRSD128KWIM",
+          "url": "https://youtu.be/ZP1YC7xeYZ8",
           "type": "Відео"
         },
         "what-is-a-computer-version-b/csd/2021": {
@@ -657,7 +657,7 @@
         },
         "what-do-computers-do/csd/2021": {
           "name": "Що роблять комп’ютери",
-          "url": "https://www.youtube.com/watch?v=92TaQRBwPSs",
+          "url": "https://www.youtube.com/watch?v=sxjqgVgD-64",
           "type": "Відео"
         },
         "storage-1/csd/2021": {
@@ -2885,7 +2885,7 @@
         },
         "safety-in-my-online-neighborhood-pause-and-think-moment/coursea/2021": {
           "name": "Безпека у моєму інтернет-районі: Зупинись і поміркуй",
-          "url": "https://docs.google.com/document/d/1o95Q7OD2oF5e-lWxj31kKopfhQVYWDUmw6uDdm1RIIU/",
+          "url": "https://docs.google.com/document/d/1-0hiaMNrtj4yTLZO3zVhZkYUU0832O81LtCfZQQfsic/",
           "type": "Роздатковий матеріал"
         },
         "safety-in-my-online-neighborhood-safety-it-rules/coursea/2021": {
@@ -2899,7 +2899,7 @@
           "type": "Ресурс"
         },
         "how_to_make_a_class_section_on_code_org/coursea/2021": {
-          "name": "Початок роботи - Створення груп та класів",
+          "name": "Початок роботи - Створення груп та класів <https://docs.google.com/document/d/1fQ9WcoAacoVFANI5JM3gXCE-6AMjl947fLaVr4gqZ4Y/edit?usp=sharing>",
           "url": "https://www.youtube.com/watch?v=4Wugxc80fNU",
           "type": "Відео"
         },
@@ -3277,7 +3277,7 @@
         },
         "unplugged-video-big-event/courseb/2021": {
           "name": "Велика подія",
-          "url": "https://www.youtube.com/watch?v=XoApWo-IrI4",
+          "url": "https://www.youtube.com/watch?v=SUH-sB4u-oo",
           "type": "Відео"
         },
         "play_lab_project_planning_guide/courseb/2021": {
@@ -3411,6 +3411,7 @@
         },
         "csf-artist-intro-video/coursec/2021": {
           "name": "Знайомство з Художником",
+          "url": "https://www.youtube.com/watch?v=3wk1cbL79yU",
           "type": "Відео для учнів"
         },
         "csf-turns-angles-doc/coursec/2021": {
@@ -4237,6 +4238,7 @@
         },
         "artist_introduction/express/2021": {
           "name": "Знайомство з Художником",
+          "url": "https://www.youtube.com/watch?v=3wk1cbL79yU",
           "type": "Відео"
         },
         "turns_angles/express/2021": {
@@ -4458,7 +4460,7 @@
         },
         "what_is_a_computer/csd/2022": {
           "name": "Що таке комп’ютер",
-          "url": "https://youtu.be/rRSD128KWIM",
+          "url": "https://youtu.be/ZP1YC7xeYZ8",
           "type": "Відео"
         },
         "what_is_a_computer_/csd/2022": {
@@ -4520,7 +4522,7 @@
         },
         "what_do_computers_do/csd/2022": {
           "name": "Що роблять комп’ютери",
-          "url": "https://www.youtube.com/watch?v=92TaQRBwPSs",
+          "url": "https://www.youtube.com/watch?v=sxjqgVgD-64",
           "type": "Відео"
         },
         "apps_with_storage_2/csd/2022": {
@@ -7428,7 +7430,7 @@
         },
         "the_big_event/courseb/2022": {
           "name": "Велика подія",
-          "url": "https://www.youtube.com/watch?v=XoApWo-IrI4"
+          "url": "https://www.youtube.com/watch?v=SUH-sB4u-oo"
         },
         "the_big_event_1/courseb/2022": {
           "name": "Велика подія",
@@ -7573,6 +7575,7 @@
         },
         "artist_introduction/coursec/2022": {
           "name": "Знайомство з Художником",
+          "url": "https://www.youtube.com/watch?v=3wk1cbL79yU",
           "type": "Відео для учнів"
         },
         "turns_angles/coursec/2022": {
@@ -8283,6 +8286,7 @@
         },
         "artist_introduction/express/2022": {
           "name": "Знайомство з Художником",
+          "url": "https://www.youtube.com/watch?v=3wk1cbL79yU",
           "type": "Відео"
         },
         "turns_angles/express/2022": {
@@ -8405,6 +8409,7 @@
         },
         "csf-artist-intro-video/artist/unversioned": {
           "name": "Знайомство з Художником",
+          "url": "https://www.youtube.com/watch?v=3wk1cbL79yU",
           "type": "Відео для учнів"
         },
         "csf-turns-angles-doc/artist/unversioned": {
