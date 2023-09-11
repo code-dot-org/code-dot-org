@@ -42,16 +42,24 @@ class UnconnectedReportAbusePopUp extends React.Component {
     this.handleCheckboxChange = this.handleCheckboxChange.bind(this);
   }
 
+  componentDidMount() {
+    const script = document.createElement('script');
+    script.src = 'https://www.google.com/recaptcha/api.js';
+    script.id = 'captcha';
+    script.async = true;
+    script.defer = true;
+    window.onCaptchaSubmit = token => this.onCaptchaVerification(token);
+    window.onCaptchaExpired = () => this.onCaptchaExpiration();
+    script.onload = () => this.setState({loadedCaptcha: true});
+    document.body.appendChild(script);
+  }
+
   componentWillUnmount() {
     const captchaScript = document.getElementById('captcha');
     if (captchaScript) {
       captchaScript.remove();
     }
   }
-  // warning pops up when used Can't perform a React state update on an unmounted component.
-  //react-dom.development.js:88 Warning: Can't perform a React state update on an unmounted component.
-  // This is a no-op, but it indicates a memory leak in your application.
-  // To fix, cancel all subscriptions and asynchronous tasks in the componentWillUnmount method.
 
   cancel() {
     this.props.onClose();
@@ -153,16 +161,6 @@ class UnconnectedReportAbusePopUp extends React.Component {
     } = this.state;
 
     const captchaSiteKey = this.props.recaptchaSiteKey;
-
-    const script = document.createElement('script');
-    script.src = 'https://www.google.com/recaptcha/api.js';
-    script.id = 'captcha';
-    script.async = true;
-    script.defer = true;
-    window.onCaptchaSubmit = token => this.onCaptchaVerification(token);
-    window.onCaptchaExpired = () => this.onCaptchaExpiration();
-    script.onload = () => this.setState({loadedCaptcha: true});
-    document.body.appendChild(script);
 
     return (
       <AccessibleDialog
