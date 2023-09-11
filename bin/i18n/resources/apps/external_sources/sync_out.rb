@@ -24,8 +24,8 @@ module I18n
               locale = pegasus_lang[:locale_s]
               js_locale = I18nScriptUtils.to_js_locale(locale)
 
-              crowdin_locale_dir = CDO.dir(File.join(I18N_LOCALES_DIR, crowdin_locale))
-              i18n_locale_dir = CDO.dir(File.join(I18N_LOCALES_DIR, locale))
+              crowdin_locale_dir = I18nScriptUtils.locale_dir(crowdin_locale)
+              i18n_locale_dir = I18nScriptUtils.locale_dir(locale)
 
               crowdin_locale_resource_dir = File.join(crowdin_locale_dir, DIR_NAME)
               if File.directory?(crowdin_locale_resource_dir)
@@ -40,12 +40,10 @@ module I18n
 
                 I18nScriptUtils.rename_dir(crowdin_locale_blockly_core_dir, File.join(i18n_locale_dir, BLOCKLY_CORE_DIR_NAME))
               end
-            ensure
-              mutex.synchronize do
-                I18nScriptUtils.delete_empty_crowdin_locale_dir(crowdin_locale)
 
-                progress_bar.increment
-              end
+              I18nScriptUtils.remove_empty_dir(I18nScriptUtils.locale_dir(crowdin_locale))
+            ensure
+              mutex.synchronize {progress_bar.increment}
             end
 
             progress_bar.finish
