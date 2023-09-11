@@ -42,9 +42,10 @@ export async function getSongManifest(useRestrictedSongs, manifestFilename) {
 }
 
 /**
- * Decide which song to select based on the song list and appOptions config.
+ * Decide which song to select based on the song list and provided options.
  * @param songManifest
- * @param options {Object} set of options that determine which song to select
+ * @param options {Object} set of options that determine which song to select.
+ *    These are typically derived from the level and/or project sources.
  * @returns {String} song id to select
  */
 export function getSelectedSong(
