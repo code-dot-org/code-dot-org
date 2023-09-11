@@ -27,25 +27,21 @@ export default function RubricsContainer({
             position: 1,
             learningGoalEvidenceLevelsAttributes: [
               {
-                // learningGoalId: 'learningGoal-1',
                 teacherDescription: '',
                 understanding: 0,
                 aiPrompt: '',
               },
               {
-                // learningGoalId: 'learningGoal-1',
                 teacherDescription: '',
                 understanding: 1,
                 aiPrompt: '',
               },
               {
-                // learningGoalId: 'learningGoal-1',
                 teacherDescription: '',
                 understanding: 2,
                 aiPrompt: '',
               },
               {
-                // learningGoalId: 'learningGoal-1',
                 teacherDescription: '',
                 understanding: 3,
                 aiPrompt: '',
@@ -83,25 +79,21 @@ export default function RubricsContainer({
       position: nextPosition,
       learningGoalEvidenceLevelsAttributes: [
         {
-          // learningGoalId: newId,
           teacherDescription: '',
           understanding: 0,
           aiPrompt: '',
         },
         {
-          // learningGoalId: newId,
           teacherDescription: '',
           understanding: 1,
           aiPrompt: '',
         },
         {
-          // learningGoalId: newId,
           teacherDescription: '',
           understanding: 2,
           aiPrompt: '',
         },
         {
-          // learningGoalId: newId,
           teacherDescription: '',
           understanding: 3,
           aiPrompt: '',
@@ -133,7 +125,7 @@ export default function RubricsContainer({
     keyToUpdate,
     newValue,
     evidenceLevel,
-    evidenceLevelDescriptionField
+    evidenceLevelKeyToUpdate
   ) => {
     const newLearningGoalData = learningGoalList.map(learningGoal => {
       if (idToUpdate === learningGoal.id) {
@@ -142,7 +134,7 @@ export default function RubricsContainer({
             learningGoal.learningGoalEvidenceLevelsAttributes;
           newEvidenceLevels.find(
             level => level.understanding === evidenceLevel
-          )[evidenceLevelDescriptionField] = newValue;
+          )[evidenceLevelKeyToUpdate] = newValue;
           return {
             ...learningGoal,
             [keyToUpdate]: newEvidenceLevels,
@@ -160,12 +152,14 @@ export default function RubricsContainer({
     setLearningGoalList(newLearningGoalData);
   };
 
-  // TODO: Check that there is at least one programming level here
+  // TODO-AITT-168: Check that there is at least one submittable programming level here
   const initialLevelForAssessment = !!rubric ? rubric.levelId : levels[0].id;
   const [selectedLevelForAssessment, setSelectedLevelForAssessment] = useState(
     initialLevelForAssessment
   );
 
+  // TODO-AITT-169: Create notification for when a rubric has been saved
+  // TODO-AITT-171: Enable deleting LearningGoals when saveRubric is called
   const saveRubric = event => {
     event.preventDefault();
     const dataUrl = !!rubric ? `/rubrics/${rubric.id}` : RUBRIC_PATH;
@@ -176,8 +170,9 @@ export default function RubricsContainer({
       ? document.querySelector('meta[name="csrf-token"]').attributes['content']
           .value
       : null;
-    let learningGoalListAsData = transformKeys(learningGoalList);
-    learningGoalListAsData = removeNewIds(learningGoalListAsData);
+    const learningGoalListAsData = removeNewIds(
+      transformKeys(learningGoalList)
+    );
 
     const rubric_data = {
       levelId: selectedLevelForAssessment,
@@ -204,14 +199,20 @@ export default function RubricsContainer({
       });
   };
 
-  function removeNewIds(keyConceptArr) {
-    console.log(keyConceptArr);
-    keyConceptArr.forEach(keyConceptArr => {
-      if (!isNumber(keyConceptArr.id)) {
-        delete keyConceptArr.id;
+  /**
+   * Removes the Ids from the newly added LearningGoals.
+   * Context: We use ids of LearningGoals in the front end to connect data.
+   * However, when a new LearningGoal is added in the front end, we want to
+   * have an id to modify the components, but then delete that id before saving
+   * the new LearningGoals to the back end so that new ids can be assigned by Rails.
+   */
+  function removeNewIds(keyConceptList) {
+    keyConceptList.forEach(keyConceptList => {
+      if (!isNumber(keyConceptList.id)) {
+        delete keyConceptList.id;
       }
     });
-    return keyConceptArr;
+    return keyConceptList;
   }
 
   /**
@@ -247,8 +248,6 @@ export default function RubricsContainer({
     setSelectedLevelForAssessment(event.target.value);
   };
 
-  // TODO: In the future we might want to filter the levels in the dropdown for "submittable" levels
-  //  "submittable" is in the properties of each level in the list.
   return (
     <div>
       <Heading1>Create or modify your rubric</Heading1>

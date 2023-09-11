@@ -53,7 +53,7 @@ EvidenceDescriptionsRow.propTypes = {
   evidenceLabel: PropTypes.string,
   evidenceLevelData: PropTypes.object,
   updateLearningGoal: PropTypes.func,
-  learningGoalId: PropTypes.any, // TODO: decide if this is an int
+  learningGoalId: PropTypes.any, // This will be number for exisiting LearningGoals but a string for new LearningGoals
 };
 
 const styles = {
