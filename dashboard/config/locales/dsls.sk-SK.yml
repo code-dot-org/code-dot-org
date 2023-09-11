@@ -3199,7 +3199,9 @@ sk-SK:
         - {}
         - {}
         questions:
-        - {}
+        - text: Trieda absolvovala prieskum, aby sa rozhodla, kam ísť na triedny výlet,
+            a chce vytvoriť graf, aby zistil, aká populárna bola každá voľba. Budú
+            musieť vykonať nejaké zmeny v údajoch pred vytvorením grafu?
       CSD U5 test crosstab multi:
         answers:
         - text: pes
