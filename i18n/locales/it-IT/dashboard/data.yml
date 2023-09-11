@@ -591,7 +591,7 @@ it:
         csd_ml_model_cards_july2021: Schede modello in Laboratorio IA
         csd_ml_numerical_ai_lab: Dati numerici in Laboratorio IA
         Gettting_Started_Progress: Progresso, feedback e valutazione
-        Gettting_Started_ClassSection: Creazione di una sezione di classe
+        Gettting_Started_ClassSection: Creazione di una classe
         Gettting_Started_StudentExperience: L'esperienza degli studenti
         Getting_Started_BasicFeatures: Caratteristiche di base di Code.org
         PL_overview_CSD: Cos'è Alla scoperta dell'informatica?
@@ -751,6 +751,8 @@ it:
         how-ai-works-creativity-full: Le Intelligenze artificiali hanno creatività o immaginazione?
         how-ai-works-llms-part1: Chatbot e Modelli Linguistici parte 1
         how-ai-works-llms-part2: Chatbot e Modelli Linguistici parte 2
+        what-is-creativity: Cos'è la creatività?
+        code-break: Prenditi una Pausa Codice
     callout:
       text:
         drag_blocks: Prendi qui a sinistra il blocco "vai avanti" ed attaccalo sotto l'altro blocco qua sopra

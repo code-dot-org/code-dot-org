@@ -2123,6 +2123,8 @@ tr:
               display_name: Bildiklerini Göster
             lessonGroup-5:
               display_name: Alternatif Dersler
+            lessonGroup-7:
+              display_name: Sandbox'lar
           lessons:
             lesson-2:
               name: Java Laboratuvarı
@@ -2213,6 +2215,8 @@ tr:
               display_name: Bildiklerini Göster
             lessonGroup-4:
               display_name: Alternatif Dersler
+            lessonGroup-6:
+              display_name: Sandbox'lar
           lessons:
             lesson-4:
               name: Değişkenler
@@ -2325,6 +2329,8 @@ tr:
               display_name: Bildiklerini Göster
             lessonGroup-4:
               display_name: Alternatif Dersler
+            lessonGroup-6:
+              display_name: Sandbox'lar
           lessons:
             lesson-1:
               name: Bir Boyutlu (1D) Diziler
@@ -2421,6 +2427,8 @@ tr:
               display_name: Bildiklerini Göster
             lessonGroup-4:
               display_name: Alternatif Dersler
+            lessonGroup-6:
+              display_name: Sandbox'lar
           lessons:
             lesson-9:
               name: Rastgele
@@ -2536,6 +2544,8 @@ tr:
               display_name: Bildiklerini Göster
             lessonGroup-4:
               display_name: Alternatif Dersler
+            lessonGroup-6:
+              display_name: Sandbox'lar
         csa5-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -2652,6 +2662,8 @@ tr:
               display_name: Bildiklerini Göster
             lessonGroup-4:
               display_name: Alternatif Dersler
+            lessonGroup-6:
+              display_name: Sandbox'lar
           student_description: Bu ünite, sizi 'ArrayList' sınıfını kullanarak listeler
             oluşturmaya alıştırmak için veri yapılarını genişletmeye devam ediyor.
             Bu süreçte, "Tamsayı" ve "Duble" sınıflarını öğrenir ve metin dosyalarından
@@ -2800,6 +2812,8 @@ tr:
               display_name: Bildiklerini Göster
             lessonGroup-5:
               display_name: Alternatif Dersler
+            lessonGroup-6:
+              display_name: Sandbox'lar
           lessons:
             lesson-6:
               name: Fikri Mülkiyet
@@ -2955,6 +2969,8 @@ tr:
               display_name: Anket
             lessonGroup-5:
               display_name: Alternatif Dersler
+            lessonGroup-6:
+              display_name: Sandbox'lar
           student_description: Bu ünitede, 1D ve 2D dizileri ve `ArrayList`leri aramaya
             ve sıralamaya yönelik yaygın yaklaşımları keşfetmek için öğrendiğiniz
             algoritmaları genişleteceksiniz. Bu süreçte, ifade yürütme sayılarını
@@ -3054,6 +3070,8 @@ tr:
               display_name: İnceleme ve Uygulama
             lessonGroup-3:
               display_name: Deneme Sınavları
+            lessonGroup-4:
+              display_name: Sandbox'lar
         csa9-pilot:
           lesson_groups:
             lessonGroup-2:

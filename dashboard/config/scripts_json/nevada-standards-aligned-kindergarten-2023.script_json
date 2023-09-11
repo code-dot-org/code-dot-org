@@ -4,6 +4,7 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "curriculum_umbrella": "CSF",
       "hideable_lessons": true,
       "is_course": true,
       "is_migrated": true,
@@ -18,7 +19,7 @@
     },
     "new_name": null,
     "family_name": "nevada-standards-aligned-kindergarten",
-    "serialized_at": "2023-08-18 19:09:44 UTC",
+    "serialized_at": "2023-08-29 19:57:18 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",

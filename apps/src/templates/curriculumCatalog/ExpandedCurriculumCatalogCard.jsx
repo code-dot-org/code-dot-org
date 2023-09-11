@@ -11,7 +11,10 @@ import {
 import {TextLink} from '@dsco_/link';
 import Button from '@cdo/apps/templates/Button';
 import i18n from '@cdo/locale';
-import {translatedCourseOfferingDeviceTypes} from '../teacherDashboard/CourseOfferingHelpers';
+import {
+  translatedCourseOfferingDeviceTypes,
+  translatedAvailableResources,
+} from '../teacherDashboard/CourseOfferingHelpers';
 
 const ExpandedCurriculumCatalogCard = ({
   courseDisplayName,
@@ -29,6 +32,9 @@ const ExpandedCurriculumCatalogCard = ({
   assignButtonDescription,
   onClose,
   isInUS,
+  imageSrc,
+  imageAltText,
+  availableResources,
 }) => {
   const iconData = {
     ideal: {
@@ -46,6 +52,20 @@ const ExpandedCurriculumCatalogCard = ({
   };
 
   const devices = JSON.parse(deviceCompatibility);
+
+  const resoucesOrder = [
+    'Lesson Plan',
+    'Slide Deck',
+    'Activity Guide',
+    'Answer Key',
+    'Rubric',
+  ];
+
+  let availableResourceCounter = 0;
+
+  const displayDivider = () => {
+    return ++availableResourceCounter < Object.keys(availableResources).length;
+  };
 
   return (
     <div>
@@ -83,33 +103,53 @@ const ExpandedCurriculumCatalogCard = ({
                       {description}
                     </BodyTwoText>
                   </div>
-                  <div className={style.videoContainer}>
-                    <iframe
-                      width="100%"
-                      height="100%"
-                      style={{border: 'none'}}
-                      src={video}
-                      title=""
-                      allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                      allowFullScreen
-                    />
+                  <div className={style.mediaContainer}>
+                    {video ? (
+                      <div className={style.videoContainer}>
+                        <iframe
+                          width="100%"
+                          height="100%"
+                          style={{border: 'none'}}
+                          src={video}
+                          title="Youtube embed"
+                          allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                          allowFullScreen
+                        />
+                      </div>
+                    ) : (
+                      <div className={style.imageContainer}>
+                        <img
+                          src={imageSrc}
+                          alt={imageAltText}
+                          style={{height: '100%'}}
+                        />
+                      </div>
+                    )}
                   </div>
                 </div>
                 <div className={style.linksContainer}>
                   <div className={style.resourcesContainer}>
-                    <Heading4 visualAppearance="heading-xs">
-                      {i18n.availableResources()}
-                    </Heading4>
-                    <hr className={style.thickDivider} />
-                    <TextLink text={i18n.lessonPlans()} href="#" />
-                    <hr className={style.horizontalDivider} />
-                    <TextLink text={i18n.slideDecks()} href="#" />
-                    <hr className={style.horizontalDivider} />
-                    <TextLink text={i18n.activityGuides()} href="#" />
-                    <hr className={style.horizontalDivider} />
-                    <TextLink text={i18n.answerKeysExemplars()} href="#" />
-                    <hr className={style.horizontalDivider} />
-                    <TextLink text={i18n.projectRubrics()} href="#" />
+                    {availableResources && (
+                      <div>
+                        <Heading4 visualAppearance="heading-xs">
+                          {i18n.availableResources()}
+                        </Heading4>
+                        <hr className={style.thickDivider} />
+                        {resoucesOrder.map(
+                          resource =>
+                            availableResources[resource] && (
+                              <div key={resource}>
+                                <BodyTwoText>
+                                  {translatedAvailableResources[resource]}{' '}
+                                </BodyTwoText>
+                                {displayDivider() && (
+                                  <hr className={style.horizontalDivider} />
+                                )}
+                              </div>
+                            )
+                        )}
+                      </div>
+                    )}
                   </div>
                   {isInUS &&
                     (professionalLearningProgram ||
@@ -154,7 +194,7 @@ const ExpandedCurriculumCatalogCard = ({
               <hr className={style.horizontalDivider} />
               <div className={style.compatibilityContainer}>
                 {Object.keys(devices).map(device => (
-                  <div className={style.iconWithDescription}>
+                  <div key={device} className={style.iconWithDescription}>
                     <FontAwesome
                       icon={iconData[devices[device]].icon}
                       className={`fa-solid ${iconData[devices[device]].color}`}
@@ -199,9 +239,10 @@ const ExpandedCurriculumCatalogCard = ({
                   onClick={onClose}
                   icon="xmark"
                   iconClassName="fa-solid"
+                  aria-label="Close Button"
                 />
               </div>
-              <div className={style.relatedContainer}>
+              <div className={style.relatedContainer} style={{display: 'none'}}>
                 <Heading4 visualAppearance="heading-xs">
                   {i18n.relatedCurricula()}
                 </Heading4>
@@ -221,14 +262,17 @@ ExpandedCurriculumCatalogCard.propTypes = {
   subjectsAndTopics: PropTypes.arrayOf(PropTypes.string).isRequired,
   deviceCompatibility: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
-  professionalLearningProgram: PropTypes.string.isRequired,
-  video: PropTypes.string.isRequired,
+  professionalLearningProgram: PropTypes.string,
+  video: PropTypes.string,
   publishedDate: PropTypes.string.isRequired,
-  selfPacedPlCourseOfferingPath: PropTypes.string.isRequired,
+  selfPacedPlCourseOfferingPath: PropTypes.string,
   pathToCourse: PropTypes.string,
   assignButtonOnClick: PropTypes.func,
   assignButtonDescription: PropTypes.string,
   onClose: PropTypes.func,
   isInUS: PropTypes.bool,
+  imageSrc: PropTypes.string,
+  imageAltText: PropTypes.string,
+  availableResources: PropTypes.object,
 };
 export default ExpandedCurriculumCatalogCard;

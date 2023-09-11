@@ -34,7 +34,10 @@ As a reminder, there are a number of ways for you to get support between worksho
   %li
     Engage with other facilitators in the
     = link_to('Facilitator Forum', 'https://forum.code.org/c/facilitators') + ' and'
-    = link_to('Facilitator Slack channel', 'https://codefacilitators6-12.slack.com/messages')
+    - if @workshop.course == 'CS Fundamentals'
+      = link_to('Facilitator Slack channel', 'https://csffacilitators.slack.com/messages')
+    - else
+      = link_to('Facilitator Slack channel', 'https://codefacilitators6-12.slack.com/messages')
   %li
     Email
     = mail_to('facilitators@code.org')

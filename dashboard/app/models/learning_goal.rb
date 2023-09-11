@@ -17,10 +17,20 @@
 #  index_learning_goals_on_rubric_id_and_key  (rubric_id,key) UNIQUE
 #
 class LearningGoal < ApplicationRecord
-  belongs_to :rubric
+  belongs_to :rubric, inverse_of: :learning_goals
   has_many :learning_goal_evidence_levels, dependent: :destroy
 
   before_create :generate_key
+
+  def summarize
+    {
+      key: key,
+      learningGoal: learning_goal,
+      aiEnabled: ai_enabled,
+      tips: tips,
+      evidenceLevels: learning_goal_evidence_levels.map(&:summarize)
+    }
+  end
 
   def seeding_key(seed_context)
     my_rubric = seed_context.rubrics.find {|r| r.id == rubric_id}
@@ -34,5 +44,16 @@ class LearningGoal < ApplicationRecord
   def generate_key
     return if key.present?
     self.key = SecureRandom.uuid
+  end
+
+  def summarize_for_rubric_edit
+    {
+      id: id,
+      rubricId: rubric_id,
+      position: position,
+      learningGoal: learning_goal,
+      aiEnabled: ai_enabled,
+      learning_goal_evidence_levels: learning_goal_evidence_levels.map(&:summarize_for_rubric_edit)
+    }
   end
 end

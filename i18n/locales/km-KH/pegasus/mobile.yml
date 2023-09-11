@@ -473,6 +473,7 @@
   sports_page_title: "Hour of Code Sports"
   sports_og_title: "ជំរុញខ្លួនអ្នក។ នរណាៗក៏អាចរៀនបានដែរ។"
   sports_og_description: "ជើងឯក និងម្ចាស់មេដាយមាស លើកទឹកចិត្តអ្នកឲ្យសាកល្បងកម្មវិធី Hour of Code។ សរសេរកូដសម្រាប់ហ្គេមប្រភេទកីឡាដោយខ្លួនអ្នកផ្ទាល់។"
+  sports_title: "សរសេរកូដបង្កើតហ្គេមកីឡាផ្ទាល់ខ្លួន"
   sports_watch_video: "មេីលវីដេអូ"
   sports_video_title: "ជំរុញខ្លួនអ្នក។ នរណាៗក៏អាចរៀនបានដែរ។"
   sports_select_theme: "ជ្រើសរើសទម្រង់នៃការបង្រៀនរបស់អ្នក"
@@ -688,6 +689,7 @@
   dashboard_sections_table_secret: "ប្រភេទ ចូលគណនី"
   dashboard_sections_table_grade: "ថ្នាក់"
   dashboard_sections_table_course: "វគ្គសិក្សា"
+  dashboard_sections_table_pairing_allowed: "ការសរសេរកម្មវិធីជាគូ"
   dashboard_sections_table_stage_extras: "ដំណាក់កាលផ្សេងទៀត"
   dashboard_sections_table_students: "សិស្ស"
   dashboard_sections_table_code: "លេខកូដផ្នែក"
@@ -903,7 +905,7 @@
   appinventor_name: "AppInventor Hour of Code"
   blockly_name: "Blockly"
   projguts_name: "ក្តាប់ លាត កន្ត្រៃ"
-  artist_name: "សិល្បករ"
+  artist_name: "វិចិត្រករ"
   monstercoding_name: "ដំណើរផ្សងព្រេងសរសេរកូដនៅលើកោះអាថ៌កំបាំង "
   allcancode_name: "រត់ Marco រត់! "
   csfirst_name: "CS First"
@@ -932,7 +934,7 @@
   pre-express-2018_name: វគ្គសម្រាប់ក្មេងៗដែលមិនទាន់ចេះអាន ឬ ទេីបរៀនអាន (២០១៨)
   pre-express-2019_name: វគ្គសម្រាប់ក្មេងៗដែលមិនទាន់ចេះអាន ឬ ទេីបរៀនអាន (២០១៩)
   pre-express-2020_name: វគ្គសម្រាប់ក្មេងៗដែលមិនទាន់ចេះអាន ឬ ទេីបរៀនអាន (២០២០)
-  express-2022_name: វគ្គសិក្សារហ័ស (2022)
+  express-2022_name: Express Course (2022)
   csd2_name: 'មេរៀនទី២៖ ការអភិវឌ្ឍគេហទំព័រ'
   csd3_name: 'មេរៀនទី៣៖ ស្វែងយល់អំពីចលនានិងល្បែង'
   pre-express_name: វគ្គសម្រាប់ក្មេងៗដែលមិនទាន់ចេះអាន ឬ ទេីបរៀនអាន
@@ -947,6 +949,7 @@
   applab_name: "មន្ទីរពិសោធន៍កម្មវិធី​"
   gamelab_name: "មន្ទីរពិសោធន៍ហ្គេម"
   basketball_name: "បង្កើតហ្គេមបោះបាល់"
+  sports_name: "សរសេរកូដបង្កើតហ្គេមកីឡាផ្ទាល់ខ្លួន"
   applab_shortdescription_congrats: "App Lab ជាកន្លែងសសរសេរប្រូក្រាម ដែលអាចឲ្យយើងបង្កើតកម្មវិធីសាមញ្ញបាន។ រចនាកម្មវីធី សរសេរកូដបង្កើតកម្មវិធីដោយប្រើប្លុក ឬ ភាសា JavaScript និងអាចចែករំលែកកម្មវិធីអ្នកភ្លាមៗ។ "
   codeorg_gradelevel: "អាយុពី ៤ ទៅ ១០៤ ឆ្នាំ"
   codeintl_gradelevel: "អាយុពី ៤ ទៅ ១០៤ ឆ្នាំ"
@@ -1427,7 +1430,7 @@
   user_header_view_all: "មើលគម្រោងទាំងអស់"
   user_header_view_project_gallery: "មើលបណ្តុំនៃគម្រោង"
   user_header_view_my_projects: "មើលគម្រោងរបស់ខ្ញុំ"
-  view_all_sections: "មើលផ្នែកទាំងអស់"
+  view_all_sections: "មើលថ្នាក់ទាំងអស់"
   view_section: "មើលផ្នែក"
   view_named_section: "មើល %{section_name}"
   privacy_doc_explanation: "សូមចុចនៅទីនេះសម្រាប់ឯកសារឯកជនភាពរបស់យើង ដែលអាចចែករំលែក ឬបោះពុម្ពសម្រាប់សិស្សរបស់អ្នកបាន។"
@@ -1546,7 +1549,7 @@
   hoc2018_dance_party_box_description: "សរសេរកូដ Dance Party ដើម្បីចែករំលែកជាមួយមិត្ដភក្កិ"
   hoc2018_dance_party_specs: "ភាសា | ទម្រង់ | អាយុ ៦-១០៦"
   hoc2018_dance_party_button: "ចាប់​ផ្ដើម"
-  hoc2018_dance_keep_on_dancing_box_title: "Keep On Dancing"
+  hoc2018_dance_keep_on_dancing_box_title: "បន្តបង្កើតក្បាច់រាំ"
   hoc2018_dance_keep_on_dancing_description: "បន្តលើសពីមួយម៉ោងដំបូង ជាមួយនឹងគំនិតគម្រោងបន្ថែមទៀត។"
   hoc2018_dance_keep_on_dancing_specs: "ភាសា | ទម្រង់ | អាយុ ១៣ ឆ្នាំឡើង"
   hoc2018_dance_keep_on_dancing_button: "ចាប់ផ្តើមវគ្គ ២"

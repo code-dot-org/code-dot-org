@@ -24,6 +24,7 @@ class Ability
       ProgrammingEnvironment, # see override below
       ProgrammingExpression, # see override below
       ReferenceGuide, # see override below
+      Rubric,
       :reports,
       User,
       UserPermission,
@@ -62,7 +63,8 @@ class Ability
       Foorm::Library,
       Foorm::LibraryQuestion,
       :javabuilder_session,
-      CodeReview
+      CodeReview,
+      LearningGoalEvaluation
     ]
     cannot :index, Level
 
@@ -210,6 +212,7 @@ class Ability
         can :manage, :maker_discount
         can :update_last_confirmation_date, UserSchoolInfo, user_id: user.id
         can [:score_lessons_for_section, :get_teacher_scores_for_script], TeacherScore, user_id: user.id
+        can :manage, LearningGoalEvaluation, teacher_id: user.id
       end
 
       if user.facilitator?
@@ -388,6 +391,7 @@ class Ability
         ProgrammingExpression,
         ProgrammingMethod,
         ReferenceGuide,
+        Rubric,
         DataDoc,
         CourseOffering,
         UnitGroup,

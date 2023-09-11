@@ -36,7 +36,7 @@ html {
 // identical classes for potential use on other elements if needed.
 
 // ----------------------------------------
-// v 2.0.0
+// v 2.0.1
 // ----------------------------------------
 
 // Sizes
@@ -196,12 +196,20 @@ html {
   font-family: $gotham-bold, sans-serif;
 }
 
+@mixin extra-strong {
+  font-family: $gotham-extra-bold, sans-serif;
+}
+
 @mixin em {
   font-family: $gotham-italics, sans-serif;
 }
 
 @mixin strong-em {
   font-family: $gotham-bold-italics, sans-serif;
+}
+
+@mixin extra-strong-em {
+  font-family: $gotham-extra-bold-italics, sans-serif;
 }
 
 // Caption styles
@@ -246,6 +254,11 @@ html {
 strong,
 .strong { @include strong; }
 // Use in paragraphs to italicize text
+
+.extra-strong {
+  @include extra-strong;
+}
+
 em,
 .em { @include em; }
 
@@ -254,6 +267,13 @@ em strong,
 .em .strong,
 .strong .em {
   @include strong-em;
+}
+
+.em .extra-strong,
+.extra-strong .em,
+em .extra-strong,
+.extra-strong em {
+  @include extra-strong-em;
 }
 
 // Captions

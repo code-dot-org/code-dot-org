@@ -1,12 +1,14 @@
 import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
+import classnames from 'classnames';
 import style from './rubrics.module.scss';
 import {learningGoalShape, reportingDataShape} from './rubricShapes';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {
   BodyThreeText,
   BodyFourText,
+  ExtraStrongText,
   Heading6,
 } from '@cdo/apps/componentLibrary/typography';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
@@ -37,8 +39,8 @@ export default function LearningGoal({
   };
 
   return (
-    <details className={style.learningGoalRow} onClick={handleClick}>
-      <summary className={style.learningGoalHeader}>
+    <details className={style.learningGoalRow}>
+      <summary className={style.learningGoalHeader} onClick={handleClick}>
         <div className={style.learningGoalHeaderLeftSide}>
           {isOpen && (
             <FontAwesome
@@ -91,9 +93,15 @@ LearningGoal.propTypes = {
 
 const AiToken = () => {
   return (
-    <BodyFourText className={style.aiToken}>
-      {i18n.artificialIntelligenceAbbreviation()}
-      <FontAwesome icon="check" title={i18n.aiAssessmentEnabled()} />
-    </BodyFourText>
+    <div>
+      {' '}
+      <BodyFourText className={classnames(style.aiToken, style.aiTokenText)}>
+        <ExtraStrongText>
+          {i18n.artificialIntelligenceAbbreviation()}
+        </ExtraStrongText>
+
+        <FontAwesome icon="check" title={i18n.aiAssessmentEnabled()} />
+      </BodyFourText>
+    </div>
   );
 };

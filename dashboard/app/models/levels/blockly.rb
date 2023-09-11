@@ -102,7 +102,7 @@ class Blockly < Level
     %w(initialization_blocks start_blocks toolbox_blocks required_blocks recommended_blocks solution_blocks)
   end
 
-  def to_xml(options={})
+  def to_xml(options = {})
     xml_node = Nokogiri::XML(super(options))
     Nokogiri::XML::Builder.with(xml_node.at(type)) do |xml|
       xml.blocks do

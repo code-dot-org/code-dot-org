@@ -808,6 +808,7 @@ class User < ApplicationRecord
     user.provider = auth.provider
     user.uid = auth.uid
     user.name = name_from_omniauth auth.info.name
+    user.family_name = auth.info.family_name if auth.info.family_name.present?
     user.user_type = params['user_type'] || auth.info.user_type
     user.user_type = 'teacher' if user.user_type == 'staff' # Powerschool sends through 'staff' instead of 'teacher'
 
@@ -1576,7 +1577,7 @@ class User < ApplicationRecord
   # stored hashed (and not in plaintext), we can still allow them to
   # reset their password with their email (by looking up the hash)
 
-  def self.send_reset_password_instructions(attributes={})
+  def self.send_reset_password_instructions(attributes = {})
     # override of Devise method
     if attributes[:email].blank?
       user = User.new
@@ -2363,7 +2364,7 @@ class User < ApplicationRecord
   # course, we will create a UserScript entry so that they get a course card
   # In addition, we want to have green bubbles for the levels associated with these
   # channels, so we create level progress.
-  def generate_progress_from_storage_id(storage_id, script_name='applab-intro')
+  def generate_progress_from_storage_id(storage_id, script_name = 'applab-intro')
     # applab-intro is not seeded in our minimal test env used on test/circle. We
     # should be able to handle this gracefully
     script = begin

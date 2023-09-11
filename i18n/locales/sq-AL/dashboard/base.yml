@@ -32,13 +32,13 @@ sq:
               invalid: "është i pavlefshëm. Vini re se çdo link mund të përdoret vetëm një herë për të rivendosur fjalëkalimin tuaj dhe vetëm linku i dërguar më së fundmi do të funksionojë."
       messages:
         blank: "E domosdoshme"
-        blank_plural: "kërkohen"
+        blank_plural: "janë të nevojshme"
         invalid: "është e pavlefshme"
-        invalid_plural: "janë pa vlerë"
+        invalid_plural: "janë të pavlefshme"
     attributes:
       user:
         name: 'Shfaq Emrin'
-        name_example: 'Shfaq Emrin (Psh. Cool Coder or Jane S.)'
+        name_example: 'Shfaq Emrin (Psh. Cool Coder ose Jane S.)'
         email: 'Email'
         parent_email: 'Prindi/ kujdestari email'
         personal_email: "Adresa vetjake e email-it <a href=\"%{url}\">(kliko këtu nëse nuk ke një adresë email-i)</a>"
@@ -88,7 +88,7 @@ sq:
     submit: 'Shto udhëzim'
   appname: "Code.org"
   stage: "Fazë"
-  stage_number: "Faza %{number}"
+  stage_number: "Mësimi %{number}"
   puzzle: "Enigmë"
   trophies: "Trofetë"
   courses: 'Kurset'
@@ -320,7 +320,7 @@ sq:
       educate_hoc: "Ora e Kodimit"
       learn: "Mëso"
       stats: "statistikat"
-      help_us: "Na Ndihmo"
+      help_us: "Na ndihmoni"
       about: "Rreth"
       legal: "Privatësia & Ligjore"
       legal_privacy: "Rregullat e Privatësisë"
@@ -337,6 +337,7 @@ sq:
       signin: 'Futu'
       signup: 'Krijo një llogari'
       already_registered: 'Jeni i rregistruar?'
+      pair_programming: 'Programimi në ekip'
       team: 'Skuadra'
       driver: 'Përdorues'
       navigator: 'Lundrues'
@@ -509,7 +510,7 @@ sq:
     notes: 'Asnjë video? Shfaq shënimet.'
     notes_coming_soon: 'Shënimet për këtë video vijnë së shpejti.'
     autoplay_option: 'Luaj videot automatikisht'
-    download: 'Shkarko Videon'
+    download: 'Shkarko videon'
     label: 'Video'
   compatibility:
     upgrade:
@@ -799,6 +800,7 @@ sq:
   no_script_access_student: "Ju nuk keni qasje në këtë njësi. Ju lutemi pyesni mësimdhënësin tuaj se në cilën njësi duhet të jeni."
   return_unit_overview: 'Shko në njësinë e rishikimit'
   return_course_overview: 'Shko në njësinë e rishikimit'
+  view_all_units: 'Shiko të gjitha njësitë'
   pd:
     form_labels:
       email: 'Email'
@@ -836,6 +838,7 @@ sq:
     accept: 'Pranoj'
   copy: 'Kopjo'
   confirm: 'Konfirmo'
+  unit_prefix: "Njësia %{n}"
   code_org_logo_alt: "Code.org Faqja kryesore"
   pixelation:
     binary: "Binare"

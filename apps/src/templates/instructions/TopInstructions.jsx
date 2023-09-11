@@ -38,6 +38,7 @@ import Button from '../Button';
 import i18n from '@cdo/locale';
 import ContainedLevelResetButton from './ContainedLevelResetButton';
 import {queryParams} from '@cdo/apps/code-studio/utils';
+import {rubricShape} from '@cdo/apps/templates/rubrics/rubricShapes';
 
 const HEADER_HEIGHT = styleConstants['workspace-headers-height'];
 const RESIZER_HEIGHT = styleConstants['resize-bar-width'];
@@ -119,6 +120,7 @@ class TopInstructions extends Component {
     // than allowing this component to manage its own height.
     explicitHeight: PropTypes.number,
     inLessonPlan: PropTypes.bool,
+    taRubric: rubricShape,
   };
 
   static defaultProps = {
@@ -146,11 +148,13 @@ class TopInstructions extends Component {
       // We don't want to start in the comments tab for CSF since its hidden
       tabSelected:
         this.props.initialSelectedTab ||
-        (teacherViewingStudentWork && this.props.noInstructionsWhenCollapsed
+        (teacherViewingStudentWork &&
+        this.props.noInstructionsWhenCollapsed &&
+        !this.props.taRubric
           ? TabType.COMMENTS
           : TabType.INSTRUCTIONS),
       latestFeedback: null,
-      rubric: null,
+      miniRubric: null,
       studentId: studentId,
       teacherViewingStudentWork: teacherViewingStudentWork,
       fetchingData: true,
@@ -169,7 +173,7 @@ class TopInstructions extends Component {
    * Calculate our initial height (based off of rendered height of instructions)
    */
   componentDidMount() {
-    const {user, serverLevelId, serverScriptId, dynamicInstructions} =
+    const {user, serverLevelId, serverScriptId, dynamicInstructions, taRubric} =
       this.props;
     const {studentId} = this.state;
 
@@ -188,7 +192,13 @@ class TopInstructions extends Component {
 
     const promises = [];
 
-    if (this.isViewingAsStudent && user && serverLevelId && serverScriptId) {
+    if (
+      this.isViewingAsStudent &&
+      user &&
+      serverLevelId &&
+      serverScriptId &&
+      !taRubric
+    ) {
       promises.push(
         topInstructionsDataApi
           .getTeacherFeedbackForStudent(user, serverLevelId, serverScriptId)
@@ -209,10 +219,10 @@ class TopInstructions extends Component {
       );
     }
 
-    if (serverLevelId) {
+    if (serverLevelId && !taRubric) {
       promises.push(
         topInstructionsDataApi.getRubric(serverLevelId).done(data => {
-          this.setState({rubric: data});
+          this.setState({miniRubric: data});
         })
       );
     }
@@ -589,12 +599,13 @@ class TopInstructions extends Component {
       displayDocumentationTab,
       displayReviewTab,
       explicitHeight,
+      taRubric,
     } = this.props;
 
     const {
       latestFeedback,
       teacherViewingStudentWork,
-      rubric,
+      miniRubric,
       tabSelected,
       fetchingData,
       token,
@@ -635,9 +646,10 @@ class TopInstructions extends Component {
       (levelVideos && levelVideos.length > 0) || levelResourcesAvailable;
 
     const displayFeedbackTab =
-      !!rubric ||
-      teacherViewingStudentWork ||
-      (this.isViewingAsStudent && !!latestFeedback);
+      !taRubric &&
+      (!!miniRubric ||
+        teacherViewingStudentWork ||
+        (this.isViewingAsStudent && !!latestFeedback));
 
     // Teacher is viewing students work and in the Feedback Tab
     const teacherOnly =
@@ -683,7 +695,7 @@ class TopInstructions extends Component {
           isCSDorCSP={isCSDorCSP}
           displayHelpTab={displayHelpTab}
           displayFeedback={displayFeedbackTab}
-          levelHasRubric={!!rubric}
+          levelHasMiniRubric={!!miniRubric}
           displayDocumentationTab={displayDocumentationTab}
           displayReviewTab={displayReviewTab}
           isViewingAsTeacher={this.isViewingAsTeacher}
@@ -722,7 +734,7 @@ class TopInstructions extends Component {
               <TeacherFeedbackTab
                 teacherViewingStudentWork={teacherViewingStudentWork}
                 visible={tabSelected === TabType.COMMENTS}
-                rubric={rubric}
+                rubric={miniRubric}
                 innerRef={ref => (this.commentTab = ref)}
                 latestFeedback={latestFeedback}
                 token={token}
@@ -902,6 +914,7 @@ export default connect(
       (state.pageConstants &&
         state.pageConstants.isViewingAsInstructorInTraining) ||
       false,
+    taRubric: state.instructions.taRubric,
   }),
   dispatch => ({
     toggleInstructionsCollapsed() {

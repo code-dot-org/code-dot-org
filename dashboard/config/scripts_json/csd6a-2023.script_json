@@ -4,6 +4,7 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "curriculum_umbrella": "CSD",
       "has_verified_resources": true,
       "hideable_lessons": true,
       "include_student_lesson_plans": true,
@@ -17,7 +18,7 @@
     },
     "new_name": null,
     "family_name": "csd6",
-    "serialized_at": "2023-08-09 16:45:32 UTC",
+    "serialized_at": "2023-09-05 16:42:23 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1883,13 +1884,7 @@
       "position": 1,
       "properties": {
         "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Transition:** Ask students to plug their boards in and head to [the Maker Toolkit setup page](//studio.code.org/maker/setup) to confirm that the software has been correctly configured.",
-        "name": "Connecting The Board",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "**Troubleshooting Board Issues:** Ensure that all students are able to set up their boards correctly.  If they have trouble, encourage them to work with peers to solve the problem with the help of the setup page.  Students should be able to read through the page and follow the instructions on their own.  If not, walk them through the process, but encourage them to troubleshoot their own boards in subsequent lessons."
-          }
-        ]
+        "name": "Connecting The Board"
       },
       "seeding_key": {
         "activity_section.key": "b1276075-54de-476e-8eef-208e81c063f1",
@@ -1928,6 +1923,7 @@
       "key": "c53c203f-65b6-4d13-9dee-1e3798a1389c",
       "position": 4,
       "properties": {
+        "description": "<div style=\"float: right; margin-left: 10px;\">\n\n![expandable](https://images.code.org/c74f7a652cc4392241f224e58d1309d8-maker-setup.gif)\n\n</div>\n\n**Troubleshooting Devices:** If student devices aren't able to connect, they can click the Help and Tips tab and then access the Maker Setup page (click the image to see more). This will let them re-reconnect their board to App Lab.\n\nIf students continue to have issues, refer to the Troubleshooting section of our [Maker Support Article](https://support.code.org/hc/en-us/articles/115003407851-Maker-Toolkit-Support-for-Circuit-Playground-and-micro-bit)",
         "progression_name": "Predict",
         "tips": [
           {
@@ -2289,6 +2285,7 @@
       "key": "ddda90ab-95ef-449d-b4eb-9be0cdb2069f",
       "position": 2,
       "properties": {
+        "description": "<div style=\"float: right; margin-left: 10px;\">\n\n![expandable](https://images.code.org/c74f7a652cc4392241f224e58d1309d8-maker-setup.gif)\n\n</div>\n\n**Troubleshooting Devices:** If student devices aren't able to connect, they can click the Help and Tips tab and then access the Maker Setup page (click the image to see more). This will let them re-reconnect their board to App Lab.\n\nIf students continue to have issues, refer to the Troubleshooting section of our [Maker Support Article](https://support.code.org/hc/en-us/articles/115003407851-Maker-Toolkit-Support-for-Circuit-Playground-and-micro-bit)",
         "progression_name": "Predict"
       },
       "seeding_key": {
@@ -2300,7 +2297,7 @@
       "key": "01167681-59a8-47fb-9f68-80feac3d6726",
       "position": 3,
       "properties": {
-        "description": "**Discussion Goal:** This code uses an event to detect user input, but it waits for an event on the circuit playground instead of the screen. When students run the code, nothing will happen until they press the left button on their circuit playground. Once they do, the red LED will light up. If student’s boards aren’t working, have them [press the Setup button](https://images.code.org/48fc6b4a015ff8c2505e6dee20b46782-setup-button.PNG) in the maker app or visit [https://studio.code.org/maker/setup](https://studio.code.org/maker/setup) on a Chromebook.",
+        "description": "**Discussion Goal:** This code uses an event to detect user input, but it waits for an event on the circuit playground instead of the screen. When students run the code, nothing will happen until they press the left button on their circuit playground. Once they do, the red LED will light up.",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -2419,6 +2416,7 @@
       "key": "21320043-c56a-4d42-b785-52ca7235977d",
       "position": 2,
       "properties": {
+        "description": "<div style=\"float: right; margin-left: 10px;\">\n\n![expandable](https://images.code.org/c74f7a652cc4392241f224e58d1309d8-maker-setup.gif)\n\n</div>\n\n**Troubleshooting Devices:** If student devices aren't able to connect, they can click the Help and Tips tab and then access the Maker Setup page (click the image to see more). This will let them re-reconnect their board to App Lab.\n\nIf students continue to have issues, refer to the Troubleshooting section of our [Maker Support Article](https://support.code.org/hc/en-us/articles/115003407851-Maker-Toolkit-Support-for-Circuit-Playground-and-micro-bit)",
         "progression_name": "Predict"
       },
       "seeding_key": {
@@ -2756,7 +2754,7 @@
       "key": "b3213800-c5dc-4922-b421-0953322736cd",
       "position": 6,
       "properties": {
-        "description": "**Debugging Strategies:** As students design and implement their own project ideas, they may find themselves with new bugs that they need to untangle and you may find yourself looking at completely unfamiliar code as students look for help troubleshooting their errors. To help smooth out the debugging experience, consider the following strategies:\n\n- Review the [Teacher Guide to Debugging](https://docs.google.com/document/d/145lvpomqz0tUuzXLbkAFgP9zMDpECMwFYiEIG1_hQFg/view) for some common questions and strategies to help support students in debugging their code\n- Have students follow the steps in the [Student Guide to Debugging](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#) and use the [Bug Report Quarter-Sheets](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) as an initial step in the debugging process. This helps students prepare and communicate their issue before asking for help.\n- If students haven't seen it yet, consider showing the [Debugging Video](https://www.youtube.com/watch?v=auv10y-dN4s) to the class to reinforce debugging best practices."
+        "description": "<div style=\"float: right; margin-left: 10px;\">\n\n![expandable](https://images.code.org/c74f7a652cc4392241f224e58d1309d8-maker-setup.gif)\n\n</div>\n\n**Troubleshooting Devices:** If student devices aren't able to connect, they can click the Help and Tips tab and then access the Maker Setup page (click the image to see more). This will let them re-reconnect their board to App Lab.\n\nIf students continue to have issues, refer to the Troubleshooting section of our [Maker Support Article](https://support.code.org/hc/en-us/articles/115003407851-Maker-Toolkit-Support-for-Circuit-Playground-and-micro-bit)\n\n**Debugging Strategies:** As students design and implement their own project ideas, they may find themselves with new bugs that they need to untangle and you may find yourself looking at completely unfamiliar code as students look for help troubleshooting their errors. To help smooth out the debugging experience, consider the following strategies:\n\n- Review the [Teacher Guide to Debugging](https://docs.google.com/document/d/145lvpomqz0tUuzXLbkAFgP9zMDpECMwFYiEIG1_hQFg/view) for some common questions and strategies to help support students in debugging their code\n- Have students follow the steps in the [Student Guide to Debugging](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#) and use the [Bug Report Quarter-Sheets](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) as an initial step in the debugging process. This helps students prepare and communicate their issue before asking for help.\n- If students haven't seen it yet, consider showing the [Debugging Video](https://www.youtube.com/watch?v=auv10y-dN4s) to the class to reinforce debugging best practices."
       },
       "seeding_key": {
         "activity_section.key": "b3213800-c5dc-4922-b421-0953322736cd",
@@ -2871,17 +2869,8 @@
       "key": "c6afc6a6-b46c-44ce-814c-cda922d36255",
       "position": 2,
       "properties": {
-        "progression_name": "Predict",
-        "tips": [
-          {
-            "type": "contentCorner",
-            "markdown": "**List Terminology:** A list in javascript is formally called an **array**. The `colorLEDs[x]` block uses an array to access each LED.  The number inside the [square brackets] is called the **index**. We might say `colorLEDs[0]` represents the LED at index 0, or `colorLEDs[5]` represents the LED at index 5. \n\nArrays are discussed in more depth in a later lesson and students do not need to have a strong understanding of arrays by the end of this lesson. At a bare minimum, students should understand that the “first” LED starts at index 0, and the “last” LED is at index 9."
-          },
-          {
-            "type": "discussionGoal",
-            "markdown": "Students may be able to guess the behavior of the code, but they may be slightly off in predicting which lights will light up. There isn't a clear orientation on the circuit playground, but students should be able to \"work backwards\" to determine which lights are which. Students may also notice that the lights start with 0, which is the \"first\" light on the board."
-          }
-        ]
+        "description": "<div style=\"float: right; margin-left: 10px;\">\n\n![expandable](https://images.code.org/c74f7a652cc4392241f224e58d1309d8-maker-setup.gif)\n\n</div>\n\n**Troubleshooting Devices:** If student devices aren't able to connect, they can click the Help and Tips tab and then access the Maker Setup page (click the image to see more). This will let them re-reconnect their board to App Lab.\n\nIf students continue to have issues, refer to the Troubleshooting section of our [Maker Support Article](https://support.code.org/hc/en-us/articles/115003407851-Maker-Toolkit-Support-for-Circuit-Playground-and-micro-bit)",
+        "progression_name": "Predict"
       },
       "seeding_key": {
         "activity_section.key": "c6afc6a6-b46c-44ce-814c-cda922d36255",
@@ -2889,8 +2878,25 @@
       }
     },
     {
-      "key": "9c0eea84-c2b5-45f2-a52e-d1b27021230e",
+      "key": "6faa027f-ba29-44b7-b1e2-32b17dfabadd",
       "position": 3,
+      "properties": {
+        "description": "**Discussion Goal:** Students may be able to guess the behavior of the code, but they may be slightly off in predicting which lights will light up. There isn't a clear orientation on the circuit playground, but students should be able to \"work backwards\" to determine which lights are which. Students may also notice that the lights start with 0, which is the \"first\" light on the board.",
+        "tips": [
+          {
+            "type": "contentCorner",
+            "markdown": "**List Terminology:** A list in javascript is formally called an **array**. The `colorLEDs[x]` block uses an array to access each LED.  The number inside the [square brackets] is called the **index**. We might say `colorLEDs[0]` represents the LED at index 0, or `colorLEDs[5]` represents the LED at index 5. \n\nArrays are discussed in more depth in a later lesson and students do not need to have a strong understanding of arrays by the end of this lesson. At a bare minimum, students should understand that the “first” LED starts at index 0, and the “last” LED is at index 9."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "6faa027f-ba29-44b7-b1e2-32b17dfabadd",
+        "lesson_activity.key": "280a9d14-9435-4300-8fa9-4ef31f5bed3d"
+      }
+    },
+    {
+      "key": "9c0eea84-c2b5-45f2-a52e-d1b27021230e",
+      "position": 4,
       "properties": {
         "progression_name": "Skill Building"
       },
@@ -2901,7 +2907,7 @@
     },
     {
       "key": "b7d66099-4dfe-4b78-ade8-9e0974178382",
-      "position": 4,
+      "position": 5,
       "properties": {
         "progression_name": "Practice"
       },
@@ -2912,7 +2918,7 @@
     },
     {
       "key": "0686ac7a-80d9-4ee2-9000-737298763ed2",
-      "position": 5,
+      "position": 6,
       "properties": {
         "progression_name": "Assessment",
         "tips": [
@@ -2929,7 +2935,7 @@
     },
     {
       "key": "3fea9586-9d56-4291-9e18-fdf1bf88f45a",
-      "position": 6,
+      "position": 7,
       "properties": {
         "progression_name": "Challenge"
       },
@@ -3235,13 +3241,8 @@
       "key": "09e77ffa-330c-4f13-bb4e-3c9cc3190685",
       "position": 2,
       "properties": {
-        "progression_name": "Predict",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "Student responses may include:\n- The screen is using a dropdown menu and a `getProperty` block for input to see whether the LED should blink or pulse\n- The screen is using a label and a `setText` block for output to display whether the light is on or off\n- The circuit playground is using the buttons and an `onBoardEvent` block for input to turn on or off the lights\n- The circuit playground is using the `colorLEDs` blocks as output to turn on the lights\n\nStudents will also need their circuit playgrounds for this level. If student’s boards aren’t working, have them [press the Setup button](https://images.code.org/48fc6b4a015ff8c2505e6dee20b46782-setup-button.PNG) in the maker app or visit [https://studio.code.org/maker/setup](https://studio.code.org/maker/setup) on a Chromebook."
-          }
-        ]
+        "description": "<div style=\"float: right; margin-left: 10px;\">\n\n![expandable](https://images.code.org/c74f7a652cc4392241f224e58d1309d8-maker-setup.gif)\n\n</div>\n\n**Troubleshooting Devices:** If student devices aren't able to connect, they can click the Help and Tips tab and then access the Maker Setup page (click the image to see more). This will let them re-reconnect their board to App Lab.\n\nIf students continue to have issues, refer to the Troubleshooting section of our [Maker Support Article](https://support.code.org/hc/en-us/articles/115003407851-Maker-Toolkit-Support-for-Circuit-Playground-and-micro-bit)",
+        "progression_name": "Predict"
       },
       "seeding_key": {
         "activity_section.key": "09e77ffa-330c-4f13-bb4e-3c9cc3190685",
@@ -3249,8 +3250,25 @@
       }
     },
     {
-      "key": "549e684d-7de3-4603-8111-dbcadb67e828",
+      "key": "78294285-1aec-4e73-8fee-c4be3db328f6",
       "position": 3,
+      "properties": {
+        "description": "**Discussion Goal:** Student responses may include:\n- The screen is using a dropdown menu and a `getProperty` block for input to see whether the LED should blink or pulse\n- The screen is using a label and a `setText` block for output to display whether the light is on or off\n- The circuit playground is using the buttons and an `onBoardEvent` block for input to turn on or off the lights\n- The circuit playground is using the `colorLEDs` blocks as output to turn on the lights",
+        "tips": [
+          {
+            "type": "contentCorner",
+            "markdown": "**List Terminology:** A list in javascript is formally called an **array**. The `colorLEDs[x]` block uses an array to access each LED.  The number inside the [square brackets] is called the **index**. We might say `colorLEDs[0]` represents the LED at index 0, or `colorLEDs[5]` represents the LED at index 5. \n\nArrays are discussed in more depth in a later lesson and students do not need to have a strong understanding of arrays by the end of this lesson. At a bare minimum, students should understand that the “first” LED starts at index 0, and the “last” LED is at index 9."
+          }
+        ]
+      },
+      "seeding_key": {
+        "activity_section.key": "78294285-1aec-4e73-8fee-c4be3db328f6",
+        "lesson_activity.key": "00875b3d-285d-472d-9c36-96349d545b4e"
+      }
+    },
+    {
+      "key": "549e684d-7de3-4603-8111-dbcadb67e828",
+      "position": 4,
       "properties": {
         "progression_name": "Skill Building"
       },
@@ -3261,7 +3279,7 @@
     },
     {
       "key": "56cfae6d-548c-422a-b631-2089ad8a8508",
-      "position": 4,
+      "position": 5,
       "properties": {
         "progression_name": "Practice"
       },
@@ -3272,7 +3290,7 @@
     },
     {
       "key": "425ce40f-aca0-4997-8228-9b09843c5621",
-      "position": 5,
+      "position": 6,
       "properties": {
         "progression_name": "Assessment",
         "tips": [
@@ -3289,7 +3307,7 @@
     },
     {
       "key": "b0d66e1a-3d75-46df-ab54-c96e16af18ae",
-      "position": 6,
+      "position": 7,
       "properties": {
         "progression_name": "Challenge"
       },
@@ -3514,7 +3532,7 @@
       "key": "1873d366-6923-48ae-b1f3-7a570c195d62",
       "position": 4,
       "properties": {
-        "description": "**Debugging Strategies:** As students design and implement their own project ideas, they may find themselves with new bugs that they need to untangle and you may find yourself looking at completely unfamiliar code as students look for help troubleshooting their errors. To help smooth out the debugging experience, consider the following strategies:\n\n- Review the [Teacher Guide to Debugging](https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/edit) for some common questions and strategies to help support students in debugging their code\n- Have students follow the steps in the [Student Guide to Debugging](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#) and use the [Bug Report Quarter-Sheets](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) as an initial step in the debugging process. This helps students prepare and communicate their issue before asking for help.\n- If students haven't seen it yet, consider showing the [Debugging Video](https://www.youtube.com/watch?v=auv10y-dN4s) to the class to reinforce debugging best practices.\n\n**Digging Deeper:** Consider supplying students with an object to talk to as part of the debugging process. This is sometimes known as Rubber Duck Debugging - you can learn more on the website https://rubberduckdebugging.com/"
+        "description": "<div style=\"float: right; margin-left: 10px;\">\n\n![expandable](https://images.code.org/c74f7a652cc4392241f224e58d1309d8-maker-setup.gif)\n\n</div>\n\n**Troubleshooting Devices:** If student devices aren't able to connect, they can click the Help and Tips tab and then access the Maker Setup page (click the image to see more). This will let them re-reconnect their board to App Lab.\n\nIf students continue to have issues, refer to the Troubleshooting section of our [Maker Support Article](https://support.code.org/hc/en-us/articles/115003407851-Maker-Toolkit-Support-for-Circuit-Playground-and-micro-bit)\n\n**Debugging Strategies:** As students design and implement their own project ideas, they may find themselves with new bugs that they need to untangle and you may find yourself looking at completely unfamiliar code as students look for help troubleshooting their errors. To help smooth out the debugging experience, consider the following strategies:\n\n- Review the [Teacher Guide to Debugging](https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/edit) for some common questions and strategies to help support students in debugging their code\n- Have students follow the steps in the [Student Guide to Debugging](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#) and use the [Bug Report Quarter-Sheets](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) as an initial step in the debugging process. This helps students prepare and communicate their issue before asking for help.\n- If students haven't seen it yet, consider showing the [Debugging Video](https://www.youtube.com/watch?v=auv10y-dN4s) to the class to reinforce debugging best practices.\n\n**Digging Deeper:** Consider supplying students with an object to talk to as part of the debugging process. This is sometimes known as Rubber Duck Debugging - you can learn more on the website https://rubberduckdebugging.com/"
       },
       "seeding_key": {
         "activity_section.key": "1873d366-6923-48ae-b1f3-7a570c195d62",
@@ -3720,13 +3738,8 @@
       "key": "6e3090c4-c51a-4958-bbd2-d1d36453a36d",
       "position": 2,
       "properties": {
-        "progression_name": "Predict",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "There are three sensors on the circuit playground: a light sensor, a sound sensor, and a temperature sensor. Encourage students to relate the sensors to their own senses and interact with the circuit playground that way - for example, what happens when we show or hide things from the circuit playground? What happens when the volume changes near the circuit playground?\n\nThrough experimentation, students should notice that the minimum value is 0 and the maximum value is 1023. Students may also notice that one sensor (temperature) doesn't seem to change very much."
-          }
-        ]
+        "description": "<div style=\"float: right; margin-left: 10px;\">\n\n![expandable](https://images.code.org/c74f7a652cc4392241f224e58d1309d8-maker-setup.gif)\n\n</div>\n\n**Troubleshooting Devices:** If student devices aren't able to connect, they can click the Help and Tips tab and then access the Maker Setup page (click the image to see more). This will let them re-reconnect their board to App Lab.\n\nIf students continue to have issues, refer to the Troubleshooting section of our [Maker Support Article](https://support.code.org/hc/en-us/articles/115003407851-Maker-Toolkit-Support-for-Circuit-Playground-and-micro-bit)",
+        "progression_name": "Predict"
       },
       "seeding_key": {
         "activity_section.key": "6e3090c4-c51a-4958-bbd2-d1d36453a36d",
@@ -3737,6 +3750,7 @@
       "key": "fcc87c3c-4793-4696-9625-145a841ec310",
       "position": 3,
       "properties": {
+        "description": "**Discussion Goal:** There are three sensors on the circuit playground: a light sensor, a sound sensor, and a temperature sensor. Encourage students to relate the sensors to their own senses and interact with the circuit playground that way - for example, what happens when we show or hide things from the circuit playground? What happens when the volume changes near the circuit playground?\n\nThrough experimentation, students should notice that the minimum value is 0 and the maximum value is 1023. Students may also notice that one sensor (temperature) doesn't seem to change very much.",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -3894,13 +3908,8 @@
       "key": "533c04c0-704d-4dce-ad2b-a014363c0ea1",
       "position": 2,
       "properties": {
-        "progression_name": "Predict",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "The accelerometer has two properties: the `roll` and `pitch`. The `roll` corresponds to tilting left and right, and `pitch` corresponds to tilting forwards and backwards. Students should notice this if they're holding their circuit playground level to the ground with the USB cable pointing away from them so all the lettering appears correctly. Students may also experiment with moving their circuit playground in the physical space - moving it up and down or left and right - but this doesn't affect the accelerometer. Only rotating and tilting the circuit playground will change the roll and pitch."
-          }
-        ]
+        "description": "<div style=\"float: right; margin-left: 10px;\">\n\n![expandable](https://images.code.org/c74f7a652cc4392241f224e58d1309d8-maker-setup.gif)\n\n</div>\n\n**Troubleshooting Devices:** If student devices aren't able to connect, they can click the Help and Tips tab and then access the Maker Setup page (click the image to see more). This will let them re-reconnect their board to App Lab.\n\nIf students continue to have issues, refer to the Troubleshooting section of our [Maker Support Article](https://support.code.org/hc/en-us/articles/115003407851-Maker-Toolkit-Support-for-Circuit-Playground-and-micro-bit)",
+        "progression_name": "Predict"
       },
       "seeding_key": {
         "activity_section.key": "533c04c0-704d-4dce-ad2b-a014363c0ea1",
@@ -3911,6 +3920,7 @@
       "key": "42173d40-2af0-4471-bf0b-d02449b8fde7",
       "position": 3,
       "properties": {
+        "description": "**Discussion Goal:** The accelerometer has two properties: the `roll` and `pitch`. The `roll` corresponds to tilting left and right, and `pitch` corresponds to tilting forwards and backwards. Students should notice this if they're holding their circuit playground level to the ground with the USB cable pointing away from them so all the lettering appears correctly. Students may also experiment with moving their circuit playground in the physical space - moving it up and down or left and right - but this doesn't affect the accelerometer. Only rotating and tilting the circuit playground will change the roll and pitch.",
         "progression_name": "Skill Building"
       },
       "seeding_key": {
@@ -4024,6 +4034,7 @@
       "key": "c4a45be3-1cb3-4d34-aa7f-92ba6ac34e22",
       "position": 2,
       "properties": {
+        "description": "<div style=\"float: right; margin-left: 10px;\">\n\n![expandable](https://images.code.org/c74f7a652cc4392241f224e58d1309d8-maker-setup.gif)\n\n</div>\n\n**Troubleshooting Devices:** If student devices aren't able to connect, they can click the Help and Tips tab and then access the Maker Setup page (click the image to see more). This will let them re-reconnect their board to App Lab.\n\nIf students continue to have issues, refer to the Troubleshooting section of our [Maker Support Article](https://support.code.org/hc/en-us/articles/115003407851-Maker-Toolkit-Support-for-Circuit-Playground-and-micro-bit)",
         "progression_name": "Predict"
       },
       "seeding_key": {
@@ -4205,13 +4216,8 @@
       "key": "ceb3aacd-3f87-4a03-86a8-88ec1088a2a2",
       "position": 2,
       "properties": {
-        "progression_name": "Predict",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "Students might predict that the screen will update with button presses and the emoji and background colors will change. They may notice that `updateScreen()` appears in three places: within the two button events, and as a larger green block at the bottom of the code. It's okay if they're not completely sure how the green block is working, and they may try to describe what's happening by relating to variables - that a variable can be used in place of a value, and maybe `updateScreen()` is being used as a placeholder for the code at the bottom of the screen. Guide students to notice this is useful because the same code can be used in two different places (the left button and the right button).\n\nIt's okay to not come to a firm conclusion, since students will watch a video in the next level that explains Functions and how to use them in code."
-          }
-        ]
+        "description": "<div style=\"float: right; margin-left: 10px;\">\n\n![expandable](https://images.code.org/c74f7a652cc4392241f224e58d1309d8-maker-setup.gif)\n\n</div>\n\n**Troubleshooting Devices:** If student devices aren't able to connect, they can click the Help and Tips tab and then access the Maker Setup page (click the image to see more). This will let them re-reconnect their board to App Lab.\n\nIf students continue to have issues, refer to the Troubleshooting section of our [Maker Support Article](https://support.code.org/hc/en-us/articles/115003407851-Maker-Toolkit-Support-for-Circuit-Playground-and-micro-bit)",
+        "progression_name": "Predict"
       },
       "seeding_key": {
         "activity_section.key": "ceb3aacd-3f87-4a03-86a8-88ec1088a2a2",
@@ -4222,6 +4228,7 @@
       "key": "c64b506a-ab25-42d8-a3bc-f58cd5272d18",
       "position": 3,
       "properties": {
+        "description": "**Discussion Goal:** Students might predict that the screen will update with button presses and the emoji and background colors will change. They may notice that `updateScreen()` appears in three places: within the two button events, and as a larger green block at the bottom of the code. It's okay if they're not completely sure how the green block is working, and they may try to describe what's happening by relating to variables - that a variable can be used in place of a value, and maybe `updateScreen()` is being used as a placeholder for the code at the bottom of the screen. Guide students to notice this is useful because the same code can be used in two different places (the left button and the right button).\n\nIt's okay to not come to a firm conclusion, since students will watch a video in the next level that explains Functions and how to use them in code.",
         "progression_name": "Video - Functions",
         "tips": [
           {
@@ -4250,13 +4257,7 @@
       "key": "e1cb1fc6-44b9-493d-8aac-0d6287291b98",
       "position": 5,
       "properties": {
-        "progression_name": "Predict",
-        "tips": [
-          {
-            "type": "discussionGoal",
-            "markdown": "Students should notice that the left and right buttons are used, and that the function at the bottom is using the accelerometer to move something on the screen. Students may predict that the function changes depending on which button is pressed - the left button moves the purple bug, and the right button moves the orange bug. Students may also notice that the function has a variable, `bug`, that is included at the top of the function and used throughout. \n\nIn the next level, students will watch a video describing how these functions work and how `bug` is a **parameter** that can be used to change the behavior of a function when the function is called, like moving the orange bug or purple bug."
-          }
-        ]
+        "progression_name": "Predict"
       },
       "seeding_key": {
         "activity_section.key": "e1cb1fc6-44b9-493d-8aac-0d6287291b98",
@@ -4267,6 +4268,7 @@
       "key": "2f8f91ca-ec5f-4fa1-999d-0ae29af0666f",
       "position": 6,
       "properties": {
+        "description": "**Discussion Goal:** Students should notice that the left and right buttons are used, and that the function at the bottom is using the accelerometer to move something on the screen. Students may predict that the function changes depending on which button is pressed - the left button moves the purple bug, and the right button moves the orange bug. Students may also notice that the function has a variable, `bug`, that is included at the top of the function and used throughout. \n\nIn the next level, students will watch a video describing how these functions work and how `bug` is a **parameter** that can be used to change the behavior of a function when the function is called, like moving the orange bug or purple bug.",
         "progression_name": "Video - Parameters",
         "tips": [
           {
@@ -4465,13 +4467,7 @@
       "key": "0af7c620-2c12-4ff3-a596-180a274713d4",
       "position": 5,
       "properties": {
-        "progression_name": "Interactive Art",
-        "tips": [
-          {
-            "type": "teachingTip",
-            "markdown": "**Debugging Strategies:** As students design and implement their own project ideas, they may find themselves with new bugs that they need to untangle and you may find yourself looking at completely unfamiliar code as students look for help troubleshooting their errors. To help smooth out the debugging experience, consider the following strategies:\n\n- Review the [Teacher Guide to Debugging](https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/edit) for some common questions and strategies to help support students in debugging their code\n- Have students follow the steps in the [Student Guide to Debugging](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#) and use the [Bug Report Quarter-Sheets](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) as an initial step in the debugging process. This helps students prepare and communicate their issue before asking for help.\n- If students haven't seen it yet, consider showing the [Debugging Video](https://www.youtube.com/watch?v=auv10y-dN4s) to the class to reinforce debugging best practices.\n\n**Digging Deeper:** Consider supplying students with an object to talk to as part of the debugging process. This is sometimes known as Rubber Duck Debugging - you can learn more on the website https://rubberduckdebugging.com/"
-          }
-        ]
+        "progression_name": "Interactive Art"
       },
       "seeding_key": {
         "activity_section.key": "0af7c620-2c12-4ff3-a596-180a274713d4",
@@ -4479,8 +4475,19 @@
       }
     },
     {
-      "key": "3e9f7b0b-c392-465d-8acb-e5256b88f0e7",
+      "key": "ae504ae0-8fdd-44c7-aa4e-ebe5e58cba33",
       "position": 6,
+      "properties": {
+        "description": "<div style=\"float: right; margin-left: 10px;\">\n\n![expandable](https://images.code.org/c74f7a652cc4392241f224e58d1309d8-maker-setup.gif)\n\n</div>\n\n**Troubleshooting Devices:** If student devices aren't able to connect, they can click the Help and Tips tab and then access the Maker Setup page (click the image to see more). This will let them re-reconnect their board to App Lab.\n\nIf students continue to have issues, refer to the Troubleshooting section of our [Maker Support Article](https://support.code.org/hc/en-us/articles/115003407851-Maker-Toolkit-Support-for-Circuit-Playground-and-micro-bit)\n\n**Debugging Strategies:** As students design and implement their own project ideas, they may find themselves with new bugs that they need to untangle and you may find yourself looking at completely unfamiliar code as students look for help troubleshooting their errors. To help smooth out the debugging experience, consider the following strategies:\n\n- Review the [Teacher Guide to Debugging](https://docs.google.com/document/d/1-mXz53CAQ1dy3-RVGkoUnR0hfAwdWeza4kch6NAvLb8/edit) for some common questions and strategies to help support students in debugging their code\n- Have students follow the steps in the [Student Guide to Debugging](https://docs.google.com/document/d/1wNwoKDyoUas5GGkhqGmNN1u0XGQEdeOMWhSziyYIf8o/edit#) and use the [Bug Report Quarter-Sheets](https://docs.google.com/document/d/1M6mnq73DfyvzasucVAwfL-gjl2JqVPzjy_fRx5j4j7c/preview) as an initial step in the debugging process. This helps students prepare and communicate their issue before asking for help.\n- If students haven't seen it yet, consider showing the [Debugging Video](https://www.youtube.com/watch?v=auv10y-dN4s) to the class to reinforce debugging best practices.\n\n**Digging Deeper:** Consider supplying students with an object to talk to as part of the debugging process. This is sometimes known as Rubber Duck Debugging - you can learn more on the website https://rubberduckdebugging.com/"
+      },
+      "seeding_key": {
+        "activity_section.key": "ae504ae0-8fdd-44c7-aa4e-ebe5e58cba33",
+        "lesson_activity.key": "acab988c-2cde-4683-853d-dee4e69d1fd7"
+      }
+    },
+    {
+      "key": "3e9f7b0b-c392-465d-8acb-e5256b88f0e7",
+      "position": 7,
       "properties": {
         "description": "Allow students to walk around the room and interact with each other's devices. Celebrate all of the different ideas that students were able to implement with the same basic code.",
         "name": "(Optional) Gallery Walk"
@@ -4579,6 +4586,7 @@
       "key": "3f4b86dc-7b0e-46a3-876d-ac20bc28bab8",
       "position": 2,
       "properties": {
+        "description": "<div style=\"float: right; margin-left: 10px;\">\n\n![expandable](https://images.code.org/c74f7a652cc4392241f224e58d1309d8-maker-setup.gif)\n\n</div>\n\n**Troubleshooting Devices:** If student devices aren't able to connect, they can click the Help and Tips tab and then access the Maker Setup page (click the image to see more). This will let them re-reconnect their board to App Lab.\n\nIf students continue to have issues, refer to the Troubleshooting section of our [Maker Support Article](https://support.code.org/hc/en-us/articles/115003407851-Maker-Toolkit-Support-for-Circuit-Playground-and-micro-bit)",
         "progression_name": "Setup"
       },
       "seeding_key": {
@@ -4729,6 +4737,7 @@
       "key": "77a66b10-3538-4335-9e9c-cd685f37b4b5",
       "position": 2,
       "properties": {
+        "description": "<div style=\"float: right; margin-left: 10px;\">\n\n![expandable](https://images.code.org/c74f7a652cc4392241f224e58d1309d8-maker-setup.gif)\n\n</div>\n\n**Troubleshooting Devices:** If student devices aren't able to connect, they can click the Help and Tips tab and then access the Maker Setup page (click the image to see more). This will let them re-reconnect their board to App Lab.\n\nIf students continue to have issues, refer to the Troubleshooting section of our [Maker Support Article](https://support.code.org/hc/en-us/articles/115003407851-Maker-Toolkit-Support-for-Circuit-Playground-and-micro-bit)",
         "progression_name": "Setup"
       },
       "seeding_key": {
@@ -10914,7 +10923,7 @@
     },
     {
       "name": "(Warm Up) Word Search",
-      "url": "https://docs.google.com/document/d/1ebaf_cmMsIxI0j_WGQL2xry4URBOMWzp-7KwqayMFFU/edit?usp=sharing",
+      "url": "https://docs.google.com/document/d/1Mk9elfN5zVH2LLaY6Z5-c-97wt1k9qDCyMfxRBlB8qM/edit?usp=sharing",
       "key": "_warm_up_word_search",
       "properties": {
         "audience": "Student",
@@ -11384,7 +11393,7 @@
     },
     {
       "name": "Functions",
-      "url": "https://docs.google.com/presentation/d/1HX7a6aQXxnjvS99K0FDO0W7Kp23fnMNSHiHCYtcuD-s/template/preview",
+      "url": "https://docs.google.com/presentation/d/1HX7a6aQXxnjvS99K0FDO0W7Kp23fnMNSHiHCYtcuD-s/view",
       "key": "functions_2",
       "properties": {
         "audience": "Teacher",

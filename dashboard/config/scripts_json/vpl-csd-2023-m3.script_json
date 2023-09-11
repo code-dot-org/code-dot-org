@@ -4,6 +4,7 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "curriculum_umbrella": "CSD Virtual PL",
       "hideable_lessons": true,
       "is_migrated": true,
       "student_detail_progress_view": true,
@@ -11,7 +12,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-08-18 03:56:06 UTC",
+    "serialized_at": "2023-08-29 17:31:43 UTC",
     "published_state": "in_development",
     "instruction_type": null,
     "instructor_audience": null,

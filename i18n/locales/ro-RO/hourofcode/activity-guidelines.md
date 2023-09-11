@@ -103,6 +103,7 @@ De ce aveţi nevoie:
 * Numele și adresa de e-mail a contactului principal care reprezintă activitatea depusă
 * Numele activității (nu poate include „Ora de Cod” în nume)
 * Link URL către activitate
+* Această activitate include AI: Da sau Nu
 * O descriere a activității (numărul maxim de caractere: 400) 
     * Vă rugăm să includeţi în descriere dacă activitatea este în principal intuitivă pentru elevi sau trebuie facilitată de profesor. În plus, unele şcoli sunt interesate să ştie dacă activităţile Hour of Code adresează standarde si tehnologii noi, inovative. Dacă activitatea abordează standarde specifice, considerați să includeți și această informaţie.
 * Nivel (e) de clasă recomandat (e) pentru utilizatorii vizați. Puteți consulta \[Standardele K-12 ale Asociației Profesorilor de Informatică\] (https://k12cs.org/framework-statements-by-grade-band/) pentru concepte de informatică adecvate gradelor. Exemplele de niveluri de clasă includ: 
@@ -110,9 +111,9 @@ De ce aveţi nevoie:
     * Clasele 2-5 (7-10 ani)
     * Clasele 6-8 (11-13 ani)
     * Clasele 9+ (vârsta 14+)
-* O listă a domeniilor pe care le acoperă activitatea dvs. (pe lângă informatică). De exemplu, dacă un profesor de matematică vă poate folosi activitatea pentru a preda despre unghiuri sau parabole, listați ca matematică. Dacă aveți o activitate de libs nebun care învață verbe/substantive etc. alege artele lingvistice.
-* O listă de limbaje de programare pe care le predă activitatea dvs. Adică C/C ++, Java, JavaScript etc. sau independent de limbă (pentru planuri de lecție care pot fi predate în mai multe limbi)
-* O listă de limbi naturale acceptate. Notă: Detectarea limbii este responsabilitatea furnizorului de activitate; vom redirecționa toți utilizatorii către adresa URL unică furnizată.
+* O listă de limbaje de programare pe care le predă activitatea dvs. Adică C/C ++, Java, JavaScript etc. sau independent de limbă (pentru planuri de lecție care pot fi predate în mai multe limbi) alege artele lingvistice.
+* O listă de limbi naturale acceptate. Notă: Detectarea limbii este responsabilitatea furnizorului de activitate; vom redirecționa toți utilizatorii către adresa URL unică furnizată. sau independent de limbă (pentru planuri de lecție care pot fi predate în mai multe limbi)
+* Ce nivel de experiență ar trebui să aibă un educator pentru a vă folosi activitatea? (de exemplu, începător sau confortabil.) Și, ce nivel de experiență ar trebui să aibă studenții?
 * Ce nivel de experiență ar trebui să aibă un educator pentru a vă folosi activitatea? (de exemplu, începător sau confortabil.) Și, ce nivel de experiență ar trebui să aibă studenții? Dacă doriți să pregătiți activități Hour of Code™ mai avansate, vă rugăm să includeți cunoștințele anterioare necesare în descrierea activității dvs.
 * Durata activității dvs. 
     * Doar 1 oră
@@ -166,9 +167,11 @@ De ce aveţi nevoie:
 
 ## Cum vor fi evaluate activitățile
 
-Un comitet divers de educatori în informatică va clasifica trimiterile pe baza unor criterii calitative și cantitative. Toate activitățile care corespund criteriilor de bază vor fi listate. Profesorii vor putea filtra și sorta pentru a găsi cele mai bune activități pentru clasa lor.
+Un comitet divers de educatori în informatică va clasifica trimiterile pe baza unor criterii calitative și cantitative. Toate activitățile care corespund criteriilor de bază vor fi listate.
 
-Rubrica pentru evaluarea activităților și a planurilor de lecție va căuta următoarele criterii pentru toate activitățile și le va clasifica în consecință:
+Pentru activitățile tradiționale de codificare, un comitet divers de educatori în informatică va clasifica trimiterile pe baza unor criterii calitative și cantitative. Toate activitățile care corespund criteriilor de bază vor fi listate. Profesorii vor putea filtra și sorta pentru a găsi cele mai bune activități pentru clasa lor.
+
+Dacă comisia de revizuire evaluează activitatea la zero în calitatea producției (din cauza erorilor proaste sau a instrucțiunilor care o fac foarte greu de utilizat), în promovarea învățării în grupuri subreprezentate (datorită materialului rasist/sexist), în valoare educațională (nu predă concepte CS) sau distracție/antrenantă (datorită faptului că este dificilă/descurajantă pentru studenți să lucreze), activitatea nu va fi listată.
 
 - Calitate ridicată a producției
 - Promovarea învățării de către toate grupurile demografice (în esp. studenți subreprezentați în CS, cum ar fi femeile tinere, studenții din grupuri rasiale și etnice marginalizate și studenții cu dizabilități)
@@ -176,9 +179,9 @@ Rubrica pentru evaluarea activităților și a planurilor de lecție va căuta u
 - Distractiv și antrenant
 - Încurajează elevii să creeze ceva unic pe care îl pot împărtăși (Pentru elevii mai tineri: cu părinții și colegii de clasă. Pentru studenții mai în vârstă: pe Internet)
 
-Dacă comisia de revizuire evaluează activitatea la zero în calitatea producției (din cauza erorilor proaste sau a instrucțiunilor care o fac foarte greu de utilizat), în promovarea învățării în grupuri subreprezentate (datorită materialului rasist/sexist), în valoare educațională (nu predă concepte CS) sau distracție/antrenantă (datorită faptului că este dificilă/descurajantă pentru studenți să lucreze), activitatea nu va fi listată.
-
 În plus, pentru a fi enumerate, toate activitățile trebuie:
+
+Pentru activitățile autodirijate pentru noii profesori și studenți, comitetul de revizuire va căuta dacă:
 
 - Să fie potrivit pentru o clasă de școală publică (fără arme, fără conținut explicit/matur, fără conținut religios etc.)
 - Nu necesită înscriere
@@ -204,11 +207,13 @@ Profesorii și studenții vor putea căuta și filtra lista noastră de activit�
 
 ## Sugestii pentru proiectarea de tutoriale auto-ghidate de o oră
 
-Puteți include logo-ul [Hour of Code](https://hourofcode.com/us/promote/resources#logo) în tutorialul dvs., dar acest lucru nu este necesar. Dacă folosiţi logo-ul Hour Of Code, consultaţi orientările de marcă de mai jos. <u>În niciun caz nu pot fi utilizate sigla și numele Code.org.</u> Ambele sunt mărci comerciale și nu pot fi amestecate cu un nume de marcă terță parte fără permisiunea scrisă expresă.
-
-**Asiguraţi-vă că un elev cu cunostinte medii poate termina confortabil într-o oră.** Luaţi în considerare adăugarea unei activități cu final deschis, pentru elevii care trec mai repede prin lecţie. Amintiţi-vă că majoritatea copiilor vor fi incepatori pentru Informatică şi codificare.
+Activitățile nu trebuie să includă AI, deși căutăm să oferim mai multe activități legate de AI.
 
 **Includeți note pentru profesori.** Cele mai multe activităţi ar trebui să fie orientate către elevi, dar dacă o activitate este facilitată sau administrată de un profesor, vă rugăm să includeţi clar şi simplu direcţii pentru profesor în formă de note-profesor la un URL separat transmis cu activitatea dvs. Nu numai că elevii sunt începători, și unii dintre profesori sunt de asemenea. Includeți informaţii cum ar fi:
+
+**Incorporează feedback la sfârșitul activității.** (De exemplu, „Ai terminat 10 niveluri și ai învățat despre bucle! O treabă grozavă!”)
+
+**Încurajati studenţii să posteze pe Social Media (după caz), atunci când le-au terminat.** De exemplu "Am realizat o Ora de Programare cu________ Tu ai participat? #HourOfCode” sau „Am făcut un #HourOfCode ca parte din #CSEdWeek. Tu?
 
 - Pe ce platforme și browsere funcționează cel mai bine tutorialul?
 - Funcționează pe smartphone-uri? Tablete?
@@ -247,7 +252,7 @@ Hour of Code® și Hora del Código® sunt mărci comerciale înregistrate ale C
 
 ## Pixel pentru tracking
 
-Pentru a urmări mai precis participarea, solicităm fiecărui partener tutorial să includă o imagine de urmărire de 1 pixel pe prima pagină a tutorialelor lor Hour of Code. Imaginea pixelilor trebuie să fie doar pe pagina de start. Nu includeți pe nicio pagină intermediară a tutorialului dvs.
+Dacă tutorialul dvs. este aprobat și inclus pe pagina finală a tutorialului, Code.org vă va oferi un pixel unic de urmărire pe care să îl integrați în tutorialul dvs. Vezi exemplul de mai jos. Nu includeți pe nicio pagină intermediară a tutorialului dvs.
 
 Acest lucru ne va permite să numărăm utilizatorii care fac tutorialul dvs. Hour of Code. Aceasta va duce la un număr mai precis de participare pentru tutorialul dvs.
 

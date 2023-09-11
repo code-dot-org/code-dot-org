@@ -2,12 +2,14 @@ import $ from 'jquery';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {getStore, registerReducers} from '@cdo/apps/redux';
+import getScriptData from '@cdo/apps/util/getScriptData';
 import ScriptLevelRedirectDialog from '@cdo/apps/code-studio/components/ScriptLevelRedirectDialog';
 import UnversionedScriptRedirectDialog from '@cdo/apps/code-studio/components/UnversionedScriptRedirectDialog';
 import {setIsMiniView} from '@cdo/apps/code-studio/progressRedux';
 import instructions, {
   setTtsAutoplayEnabledForLevel,
   setCodeReviewEnabledForLevel,
+  setTaRubric,
 } from '@cdo/apps/redux/instructions';
 import experiments from '@cdo/apps/util/experiments';
 import RubricFloatingActionButton from '@cdo/apps/templates/rubrics/RubricFloatingActionButton';
@@ -55,6 +57,22 @@ function initPage() {
 
   const rubricFabMountPoint = document.getElementById('rubric-fab-mount-point');
   if (rubricFabMountPoint && experiments.isEnabled('ai-rubrics')) {
-    ReactDOM.render(<RubricFloatingActionButton />, rubricFabMountPoint);
+    const rubricData = getScriptData('rubricdata');
+    const {rubric, studentLevelInfo} = rubricData;
+    const reportingData = {
+      unitName: config.script_name,
+      courseName: config.course_name,
+      levelName: config.level_name,
+    };
+    getStore().dispatch(setTaRubric(rubric));
+    ReactDOM.render(
+      <RubricFloatingActionButton
+        rubric={rubric}
+        studentLevelInfo={studentLevelInfo}
+        reportingData={reportingData}
+        currentLevelName={config.level_name}
+      />,
+      rubricFabMountPoint
+    );
   }
 }

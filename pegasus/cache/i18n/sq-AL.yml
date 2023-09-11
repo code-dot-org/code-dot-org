@@ -346,25 +346,49 @@ sq-AL:
   coursea-2017_gradelevel: Moshat 4-7
   coursea-2018_gradelevel: Moshat 4-7
   coursea-2019_gradelevel: Moshat 4-7
+  coursea-2019_name: Kursi A (2019)
   coursea-2020_gradelevel: Moshat 4-7
+  coursea-2020_name: Kursi A (2020)
+  coursea-2020_shortdescription_congrats: Mësoni bazat e shkencave kompjuterike dhe
+    sigurisë në internet. Në fund të kursit, krijoni lojën ose historinë tuaj që mund
+    të ndani.
   coursea-2021_gradelevel: Moshat 4-7
+  coursea-2021_name: Kursi A (2021)
+  coursea-2021_shortdescription_congrats: Mësoni bazat e shkencave kompjuterike dhe
+    sigurisë në internet. Në fund të kursit, krijoni lojën ose historinë tuaj që mund
+    të ndani.
   coursea-2022_gradelevel: Moshat 4-7
   coursea-2022_name: Kursi A (2022)
+  coursea-2022_shortdescription_congrats: Mësoni bazat e shkencave kompjuterike dhe
+    sigurisë në internet. Në fund të kursit, krijoni lojën ose historinë tuaj që mund
+    të ndani.
+  coursea-draft_name: Kursi A
   coursea_gradelevel: Moshat 4-7
+  coursea_name: Kursi A
   courseb-2017_gradelevel: Moshat 5-8
   courseb-2018_gradelevel: Moshat 5-8
   courseb-2019_gradelevel: Moshat 5-8
   courseb-2020_gradelevel: Moshat 5-8
+  courseb-2020_shortdescription_congrats: Mësoni bazat e shkencave kompjuterike dhe
+    sigurisë në internet. Në fund të kursit, krijoni lojën ose historinë tuaj që mund
+    të ndani.
   courseb-2021_gradelevel: Moshat 5-8
   courseb-2021_name: Kursi B (2021)
+  courseb-2021_shortdescription_congrats: Mësoni bazat e shkencave kompjuterike dhe
+    sigurisë në internet. Në fund të kursit, krijoni lojën ose historinë tuaj që mund
+    të ndani.
   courseb-2022_gradelevel: Moshat 5-8
   courseb-2022_name: Kursi B (2022)
+  courseb-2022_shortdescription_congrats: Mësoni bazat e shkencave kompjuterike dhe
+    sigurisë në internet. Në fund të kursit, krijoni lojën ose historinë tuaj që mund
+    të ndani.
   courseb_gradelevel: Moshat 5-8
   coursec-2017_gradelevel: Moshat 6-10
   coursec-2018_gradelevel: Moshat 6-10
   coursec-2019_gradelevel: Moshat 6-10
   coursec-2020_gradelevel: Moshat 6-10
   coursec-2021_gradelevel: Moshat 6-10
+  coursec-2021_name: Kursi C (2021)
   coursec-2022_gradelevel: Moshat 6-10
   coursec-2022_name: Kursi C (2022)
   coursec_gradelevel: Moshat 6-10
@@ -389,6 +413,7 @@ sq-AL:
   coursef-2019_gradelevel: Moshat 9-13
   coursef-2020_gradelevel: Moshat 9-13
   coursef-2021_gradelevel: Moshat 9-13
+  coursef-2021_name: Kursi F (2021)
   coursef-2022_gradelevel: Moshat 9-13
   coursef-2022_name: Kursi F (2022)
   coursef_gradelevel: Moshat 9-13
@@ -657,6 +682,8 @@ sq-AL:
     studentet tuaj:'
   dashboard_students_total_lines: Rreshta Kodi
   dashboard_students_url: URL
+  dashboard_submission_in_progress: Në proces
+  dashboard_submission_submitted: Dorëzuar
   dashboard_teacher: Mësues
   dashboard_teacher_worksheet: puna mësuesit
   dashboard_view_all_lesson_plans: Shkarko planin mësimor për kurset 1-3
@@ -677,6 +704,7 @@ sq-AL:
   enter_country: Vendos shtetin nëse jeni nga jashtë Shteteve të Bashkuara
   enter_valid_age: Të lutem zgjidh një moshë të vlefshme
   enter_valid_email: Ju lutem shkruani një adresë email-i të vlefshme
+  express-2021_name: Kursi Express (2021)
   express-2022_name: Kursi Express (2022)
   finch_beyond_gradelevel: Moshat 8+
   finch_beyond_longdescription: Finchi është një robot i ri për edukimin në shkencën
@@ -766,7 +794,7 @@ sq-AL:
   header_course_catalog: Katalogu i kursit
   header_courses: Kurset
   header_educate_hoc: Ora e Kodimit
-  header_help_us: Na Ndihmo
+  header_help_us: Na ndihmoni
   header_learn: Mëso
   header_legal: Privatësia & Ligjore
   header_legal_privacy: Rregullat e Privatësisë
@@ -1366,7 +1394,7 @@ sq-AL:
   starwars_blocks_description: Përdor blloqet me tërheqje-lëshim.
   starwars_blocks_specs: Shumë gjuhë | Browserët modern, telefonat e mençur, tableta
     | Moshat 6-106
-  starwars_blocks_title: Blloqet
+  starwars_blocks_title: Kutia e blloqeve
   starwars_gradelevel: Moshat 4-104
   starwars_javascript_description: Përdor blloqe me tërheqje-lëshim dhe JavaScript.
   starwars_javascript_specs: Vetëm në gjuhën Angleze | Browserët modern | Moshat 11+

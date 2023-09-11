@@ -52,6 +52,7 @@ const CurriculumCatalogCard = ({
   isExpanded,
   onQuickViewClick,
   isInUS,
+  availableResources,
   ...props
 }) => (
   <CustomizableCurriculumCatalogCard
@@ -92,6 +93,7 @@ const CurriculumCatalogCard = ({
     isExpanded={isExpanded}
     onQuickViewClick={onQuickViewClick}
     isInUS={isInUS}
+    availableResources={availableResources}
     {...props}
   />
 );
@@ -130,6 +132,7 @@ CurriculumCatalogCard.propTypes = {
   isExpanded: PropTypes.bool,
   onQuickViewClick: PropTypes.func,
   isInUS: PropTypes.bool,
+  availableResources: PropTypes.object,
 };
 
 const CustomizableCurriculumCatalogCard = ({
@@ -164,6 +167,7 @@ const CustomizableCurriculumCatalogCard = ({
   isExpanded,
   onQuickViewClick,
   isInUS,
+  availableResources,
   ...props
 }) => {
   const [isAssignDialogOpen, setIsAssignDialogOpen] = useState(false);
@@ -223,6 +227,7 @@ const CustomizableCurriculumCatalogCard = ({
         <div
           className={classNames(
             style.curriculumCatalogCardContainer,
+            isExpanded ? style.expandedCard : '',
             isEnglish
               ? style.curriculumCatalogCardContainer_english
               : style.curriculumCatalogCardContainer_notEnglish
@@ -308,6 +313,9 @@ const CustomizableCurriculumCatalogCard = ({
           assignButtonDescription={assignButtonDescription}
           onClose={onQuickViewClick}
           isInUS={isInUS}
+          imageSrc={imageSrc}
+          imageAltText={imageAltText}
+          availableResources={availableResources}
         />
       )}
     </div>
@@ -352,6 +360,7 @@ CustomizableCurriculumCatalogCard.propTypes = {
   isExpanded: PropTypes.bool,
   onQuickViewClick: PropTypes.func,
   isInUS: PropTypes.bool,
+  availableResources: PropTypes.object,
 };
 
 export default connect(

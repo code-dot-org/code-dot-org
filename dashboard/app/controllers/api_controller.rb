@@ -627,7 +627,7 @@ class ApiController < ApplicationController
     section
   end
 
-  private def load_script(section=nil)
+  private def load_script(section = nil)
     script_id = params[:script_id] if params[:script_id].present?
     script_id ||= section.default_script.try(:id)
     script = Unit.get_from_cache(script_id) if script_id

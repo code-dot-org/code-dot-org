@@ -4749,6 +4749,7 @@ en:
               description: 'This chapter provides alternate lessons for this unit.  '
           name: csd1-2021
           student_description: Problem Solving and Computing is a highly interactive and collaborative introduction to the field of computer science, as framed within the broader pursuit of solving problems. You’ll practice using a problem solving process to address a series of puzzles, challenges, and real world scenarios. Next, you’ll learn how computers input, output, store, and process information to help humans solve problems.  The unit concludes with a project in which you design an application that helps solve a problem of your choosing.
+          lessons: {}
         csd2-2021:
           title: Web Development ('21-'22)
           description: " In Unit 2, you’ll learn how to create and share the content on your own web pages. After deciding what content you want to share with the world, you’ll learn how to structure and style your pages using HTML and CSS. You’ll also practice valuable programming skills such as debugging, using resources, and teamwork.   \n\n**Implementation Guidance for Unit 2**\n\n-   Complete Unit 1 Chapter 1 before starting this unit\n-   Guidance for how to support students in programming levels and differentiate tasks are available in the [Debugging Guide][0] and [Differentiation Guide][1]\n-   You can view the full [Curriculum Guide][2] and [Implementation Guide][3] for more information about this unit"
@@ -4774,6 +4775,7 @@ en:
               display_name: Survey
           name: csd2-2021
           student_description: " In Unit 2, you’ll learn how to create and share the content on your own web pages. After deciding what content you want to share with the world, you’ll learn how to structure and style your pages using HTML and CSS. You’ll also practice valuable programming skills such as debugging, using resources, and teamwork.  "
+          lessons: {}
         csd3-2021:
           title: Interactive Animations and Games ('21-'22)
           description: |2-
@@ -4807,6 +4809,7 @@ en:
               display_name: Survey
           name: csd3-2021
           student_description: " In Unit 3, you’ll build on your coding experience as you program animations, interactive art, and games in Game Lab. The unit starts off with simple shapes and builds up to more sophisticated sprite-based games, using the same programming concepts and the design process computer scientists use daily. In the final project, you’ll develop a personalized, interactive program."
+          lessons: {}
         csd4-2021:
           title: The Design Process ('21-'22)
           description: |-
@@ -4840,6 +4843,7 @@ en:
               display_name: Survey
           name: csd4-2021
           student_description: Unit 4 introduces the broader social impacts of computing. Through a series of design challenges, you will learn how to better understand the needs of others while developing a solution to a problem. The second half of the unit consists of an iterative team project, during which teams have the opportunity to identify a need that they care about, prototype solutions both on paper and in App Lab, and test solutions with real users to get feedback and drive further iteration.
+          lessons: {}
         csd5-2021:
           title: Data and Society ('21-'22)
           description: |-
@@ -4873,6 +4877,7 @@ en:
               display_name: Survey
           name: csd5-2021
           student_description: Unit 5 is about the importance of data in solving problems and highlights how computers can help in this process. The first chapter explores different systems used to represent information in a computer and the challenges and tradeoffs posed by using them. In the second chapter you’ll learn how collections of data are used to solve problems, and how computers help to automate the steps of this process. The chapter concludes by considering how the data problem solving process can be applied to an area of your choosing.
+          lessons: {}
         csd6-2021:
           title: Physical Computing ('21-'22)
           description: |-
@@ -4907,6 +4912,7 @@ en:
               display_name: Survey
           name: csd6-2021
           student_description: Unit 6 explores the role of hardware platforms in computing and how different sensors can provide more effective input and output than the traditional keyboard, mouse, and monitor. Using App Lab and Adafruit’s Circuit Playground, you’ll develop programs that utilize the same hardware inputs and outputs that you see in the smart devices, looking at how a simple rough prototype can lead to a finished product. The unit concludes with a design challenge to use the Circuit Playground as the basis for an innovation of your own design.
+          lessons: {}
         csp1-2021:
           title: Digital Information ('21-'22)
           description: This unit explores the technical challenges and questions that arise from the need to represent digital information in computers. Learn how complex information like numbers, text, images, and sound are represented in text, how compression works, and the broader social impacts of digitizing the world's information.
@@ -5066,6 +5072,7 @@ en:
               display_name: End of Course Project
           name: coursea-2021
           student_description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
+          lessons: {}
         courseb-2021:
           title: Course B (2021)
           description: We developed Course B with first graders in mind. While the concepts in Course B parallel those in Course A, students learn more sophisticated unplugged activities and work through a greater variety of puzzles. Students will learn the basics of programming, collaboration techniques, investigation and critical thinking skills, persistence in the face of difficulty, and internet safety. At the end of this course, students create games in the Play Lab programming environment.
@@ -5090,6 +5097,7 @@ en:
                 ![](https://images.code.org/0c33f6c158290834562bf8a6a39769b5-flower.png)
           name: courseb-2021
           student_description: Learn the basics of computer science and internet safety. At the end of the course, create your very own game or story you can share.
+          lessons: {}
         coursec-2021:
           title: Course C (2021)
           description: We developed Course C for students in second grade. Students will create programs with sequencing, loops, and events. They will investigate problem-solving techniques and develop strategies for building positive communities both online and offline. By the end of the course, students will create interactive games that they can share.
@@ -5112,6 +5120,7 @@ en:
               display_name: End of Course Project
           name: coursec-2021
           student_description: Create programs with sequencing, loops, and events. Translate your initials into binary, investigate different problem-solving techniques, and learn how to respond to cyberbullying. At the end of the course, create your very own game or story you can share!
+          lessons: {}
         coursed-2021:
           title: Course D (2021)
           description: 'We created course D for students in third grade.  The course begins with a review of the concepts found in earlier courses, including loops and events. Afterward, students will develop their understanding of algorithms, nested loops, while loops, conditionals, and more. '
@@ -5136,6 +5145,7 @@ en:
               display_name: Digital Citizenship
           name: coursed-2021
           student_description: Learn about loops, conditionals, and events. Beyond coding, learn about digital citizenship.
+          lessons: {}
         coursee-2021:
           title: Course E (2021)
           description: We created Course E for students in fourth grade. The course begins with an introduction to the Sprite Lab programming tool. Students will learn to make fun, interactive projects that reinforce what they’ll learn about online safety. Following these lessons, students will engage in more complex coding. Students will learn about nested loops, functions, and conditionals. By the end of the course, students will combine these concepts to solve challenging puzzles. The course ends with an open-ended project where students create a game or drawing.
@@ -5162,6 +5172,7 @@ en:
               display_name: Impacts of Computing
           name: coursee-2021
           student_description: Start coding with algorithms, events, loops, conditionals, and functions! By the end of this course, design and create a game or drawing that you can share with your friends and family.
+          lessons: {}
         coursef-2021:
           title: Course F (2021)
           description: We created Course F for students in the fifth grade. The course begins by looking at how users make choices in the apps they use. Students then learn to make a variety of Sprite Lab apps that also offer choices for the user. In the later lessons in the course, students will learn more advanced concepts, including variables and “for” loops. Students are given greater autonomy and more choices throughout this course. By the end of the course, students will have created interactive projects and artwork to share with their friends and family.
@@ -5190,6 +5201,7 @@ en:
               display_name: Digital Citizenship
           name: coursef-2021
           student_description: Learn to code with sprites, variables, and loops and discuss societal impacts of computing and the internet. By the end of this course, design and create a project you can share with friends and family.
+          lessons: {}
         express-2021:
           title: Express Course (2021)
           description: Learn computer science by trying the lessons below at your own pace! Learn to create computer programs, develop problem-solving skills, and work through fun challenges! Make games and creative projects to share with friends, family, and teachers.
@@ -5218,6 +5230,7 @@ en:
               display_name: Events
           name: express-2021
           student_description: Learn computer science by trying the lessons below at your own pace! Learn to create computer programs, develop problem-solving skills, and work through fun challenges! Make games and creative projects to share with friends, family, and teachers.
+          lessons: {}
         pre-express-2021:
           title: Pre-reader Express (2021)
           description: Learn computer science by trying the lessons below at your own pace! Learn to create computer programs, develop problem-solving skills, and work through fun challenges! Make games and creative projects to share with friends, family, and teachers.
@@ -5232,6 +5245,7 @@ en:
               display_name: Events
           name: pre-express-2021
           student_description: Learn computer science by trying the lessons below at your own pace! Learn to create computer programs, develop problem-solving skills, and work through fun challenges! Make games and creative projects to share with friends, family, and teachers.
+          lessons: {}
         csf-2021-pilot:
           lesson_groups:
             ramp_up:
@@ -5665,6 +5679,7 @@ en:
 
             **Professional Development:** If you are interested in teaching this course, we recommend completing the free [AI/ML Self-Paced Professional Development Module][3]. The module is designed to take 2 hours to complete. No previous experience with coding or AI is assumed.
           student_description: Unit 7 is a hands-on introduction to developing a machine learning model with tabular data. You will explore how computers learn from data to make decisions, then develop your own machine learning projects around real-world data. The unit culminates with designing your own machine learning app to solve a personally relevant problem.
+          lessons: {}
         kodea-pd-2021:
           title: Enseñando Fundamentos de la Computación
           description: Learn how to teach computer science using Code.org's Computer Science Fundamentals with this free, self-paced online course.
@@ -8067,6 +8082,13 @@ en:
           lesson_groups: {}
         csc-ecosystems:
           lesson_groups: {}
+          lessons: {}
+          name: csc-ecosystems
+          title: ''
+          description_audience: ''
+          description_short: ''
+          description: ''
+          student_description: ''
         dlp-csd-overview-2022:
           title: 2022 CS Discoveries Deeper Learning Overview
           description: Welcome to the 2022 Deeper Learning program for onboarding CS Discoveries facilitators.
@@ -9372,7 +9394,7 @@ en:
             csp_unit1_2020:
               display_name: 'Unit 1: Digital Information'
           title: Digital Information ('23-'24)
-          description: "This unit explores the technical challenges and questions that arise from the need to represent digital information in computers. Learn how complex information like numbers, text, images, and sound are represented in text, how compression works, and the broader social impacts of digitizing the world's information.\n\n_(Click the arrows below to expand)_\n\n::: details [**\U0001F9D0 Unit Philosophy and Pedagogy**]\n\n#### Establishing a Strong Classroom Culture\n\n This unit is designed to be hands-on, collaborative, and exploratory. A major focus of the unit is building a positive classroom culture in which students work together, explore problems, and communicate about their thinking. Most lessons either feature physical manipulatives or a digital widget, and the bulk of lesson time should be spent with students exploring these tools together to develop an understanding of the concepts they highlight. The course intentionally does not start with programming since, in many classrooms, some students have experience with programming and others do not. Choosing to begin with digital information and the internet lets you build community in the room while exploring a topic that is likely to be accessible to all students. The supportive and inclusive classroom environment built in this unit should help set a positive tone that can be carried through the school year.\n\n#### Empowering \"Deciders\"\n\n An important goal of the course is not merely to teach students technical knowledge, but to put those skills to work in meaningful ways. This unit builds towards the unit project, which provides an opportunity for students to be \"deciders\" about the impacts of computing on modern life. Other units will emphasize empowering units as \"creators.\"\n:::\n\n::: details [**⭐️ Major Assessment and Projects**]\n\n \n\nThe unit project asks students to consider and debate issues that arise in modern society due to the digitizing of information. Students will analyze an article that addresses the intersection of digitizing information and current events. They will evaluate what data is being digitized and evaluate the benefits and harms caused by making this information digital. Students will also complete an end-of-unit assessment aligned with CS Principles framework objectives covered in this unit.\n\n:::\n\n::: details [**✅ AP Connections**]\n \n\nThis unit and its associated project help build towards the enduring understandings listed below. For a detailed mapping of units to Learning Objectives and EKs, please see the \"Standards\" page for this unit.\n\n-   DAT-1: The way a computer represents data internally is different from the way the data is interpreted and displayed for the user. Programs are used to translate data into a representation more easily understood by people.\n-   IOC-1: while computing innovations are typically designed to achieve a specific purpose, they may have unintended consequences\n\nThis unit includes content from the following topics from the AP CS Principles Framework. For more detailed information on topic coverage in the course review [Code.org CSP Topic Coverage][0].\n\n-   2.1 Binary Numbers\n-   2.2 Data Compression\n-   5.5 Legal and Ethical Concerns.\n    :::\n\n## Finished Teaching This Unit?\n\nAnswer this [**short survey**][1] to let the Code.org curriculum team know how the unit went."
+          description: "This unit explores the technical challenges and questions that arise from the need to represent digital information in computers. Learn how complex information like numbers, text, images, and sound are represented in bits, how compression works, and the broader social impacts of digitizing the world's information.\n\n_(Click the arrows below to expand)_\n\n::: details [**\U0001F9D0 Unit Philosophy and Pedagogy**]\n\n#### Establishing a Strong Classroom Culture\n\n This unit is designed to be hands-on, collaborative, and exploratory. A major focus of the unit is building a positive classroom culture in which students work together, explore problems, and communicate about their thinking. Most lessons either feature physical manipulatives or a digital widget, and the bulk of lesson time should be spent with students exploring these tools together to develop an understanding of the concepts they highlight. The course intentionally does not start with programming since, in many classrooms, some students have experience with programming and others do not. Choosing to begin with digital information and the internet lets you build community in the room while exploring a topic that is likely to be accessible to all students. The supportive and inclusive classroom environment built in this unit should help set a positive tone that can be carried through the school year.\n\n#### Empowering \"Deciders\"\n\n An important goal of the course is not merely to teach students technical knowledge, but to put those skills to work in meaningful ways. This unit builds towards the unit project, which provides an opportunity for students to be \"deciders\" about the impacts of computing on modern life. Other units will emphasize empowering units as \"creators.\"\n:::\n\n::: details [**⭐️ Major Assessment and Projects**]\n\n \n\nThe unit project asks students to consider and debate issues that arise in modern society due to the digitizing of information. Students will analyze an article that addresses the intersection of digitizing information and current events. They will evaluate what data is being digitized and evaluate the benefits and harms caused by making this information digital. Students will also complete an end-of-unit assessment aligned with CS Principles framework objectives covered in this unit.\n\n:::\n\n::: details [**✅ AP Connections**]\n \n\nThis unit and its associated project help build towards the enduring understandings listed below. For a detailed mapping of units to Learning Objectives and EKs, please see the \"Standards\" page for this unit.\n\n-   DAT-1: The way a computer represents data internally is different from the way the data is interpreted and displayed for the user. Programs are used to translate data into a representation more easily understood by people.\n-   IOC-1: while computing innovations are typically designed to achieve a specific purpose, they may have unintended consequences\n\nThis unit includes content from the following topics from the AP CS Principles Framework. For more detailed information on topic coverage in the course review [Code.org CSP Topic Coverage][0].\n\n-   2.1 Binary Numbers\n-   2.2 Data Compression\n-   5.5 Legal and Ethical Concerns.\n    :::\n\n## Finished Teaching This Unit?\n\nAnswer this [**short survey**][1] to let the Code.org curriculum team know how the unit went."
           student_description: This unit explores the technical challenges and questions that arise from the need to represent digital information in computers. Learn how complex information like numbers, text, images, and sound are represented in text, how compression works, and the broader social impacts of digitizing the world's information.
           description_short: Explore the challenges and impacts of representing information about the world around you in bits.
           description_audience: ''
