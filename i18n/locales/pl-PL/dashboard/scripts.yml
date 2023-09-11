@@ -4883,6 +4883,8 @@ pl:
           name: csa-pl-standalone-code-2022
           title: Projekty CSA Profesjonalnego kodowania edukacyjnego
           description: Uczestnicy warsztatów będą mogli zobaczyć przykładowe projekty i kod podczas PL z sąsiedztwa, konsoli i teatru.
+        csc-ecosystems:
+          name: csc-ecosystems
         dlp-csd-overview-2022:
           title: Odkrycia informatyki Omówienie głębszego uczenia się
           description: Witamy w programie Głębsze uczenie 2021 dla zaczynających moderatorów Odkryć informatyki.

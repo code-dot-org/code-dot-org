@@ -2823,6 +2823,8 @@ pl:
             lesson-4:
               name: Zaprojektuj okładkę swojej interaktywnej książki
           name: csc-bookcovers-2023
+        csc-ecosystems:
+          name: csc-ecosystems
         csc-ecosystems-2022:
           name: csc-ecosystems-2022
         csc-ecosystems-2023:
