@@ -11,8 +11,8 @@ import {Provider} from 'react-redux';
 import {
   getStore,
   registerReducers,
-  stubRedux,
-  restoreRedux,
+  __testing_stubRedux,
+  __testing_restoreRedux,
 } from '@cdo/apps/redux';
 import microBitReducer, {
   setMicroBitFirmataUpdatePercent,
@@ -51,7 +51,7 @@ describe('SetupChecklist', () => {
     sinon
       .stub(SetupChecker.prototype, 'celebrate')
       .callsFake(() => Promise.resolve());
-    stubRedux();
+    __testing_stubRedux();
     registerReducers({microBit: microBitReducer});
     getStore().dispatch(setMicroBitFirmataUpdatePercent(0));
   });
@@ -65,7 +65,7 @@ describe('SetupChecklist', () => {
     SetupChecker.prototype.detectBoardType.restore();
     SetupChecker.prototype.detectComponentsInitialize.restore();
     SetupChecker.prototype.celebrate.restore();
-    restoreRedux();
+    __testing_restoreRedux();
   });
   describe('Should use WebSerial', () => {
     before(() => {

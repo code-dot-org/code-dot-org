@@ -4,8 +4,8 @@ var Goal = animationPicker.Goal;
 import {
   getStore,
   registerReducers,
-  stubRedux,
-  restoreRedux,
+  __testing_stubRedux,
+  __testing_restoreRedux,
 } from '@cdo/apps/redux';
 import commonReducers from '@cdo/apps/redux/commonReducers';
 import animationListReducer from '@cdo/apps/p5lab/redux/animationList';
@@ -190,7 +190,7 @@ describe('animationPicker', function () {
     let show = animationPicker.show;
 
     beforeEach(() => {
-      stubRedux();
+      __testing_stubRedux();
       registerReducers({
         ...commonReducers,
         animationPicker: reducer,
@@ -200,7 +200,7 @@ describe('animationPicker', function () {
     });
 
     afterEach(() => {
-      restoreRedux();
+      __testing_restoreRedux();
     });
 
     it('adds to the selectedAnimations object', function () {
@@ -227,7 +227,7 @@ describe('animationPicker', function () {
     let saveSelectedAnimations = animationPicker.saveSelectedAnimations;
 
     before(() => {
-      stubRedux();
+      __testing_stubRedux();
       registerReducers(commonReducers);
       registerReducers({animationPicker: reducer});
       registerReducers({animationList: animationListReducer});
@@ -235,7 +235,7 @@ describe('animationPicker', function () {
     });
 
     after(() => {
-      restoreRedux();
+      __testing_restoreRedux();
     });
 
     it('hides the animation picker dialog and removes selected animations', function () {

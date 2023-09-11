@@ -5,14 +5,14 @@ import Javalab from '@cdo/apps/javalab/Javalab';
 import project from '@cdo/apps/code-studio/initApp/project';
 import {
   singleton as studioApp,
-  stubStudioApp,
-  restoreStudioApp,
+  __testing_stubStudioApp,
+  __testing_restoreStudioApp,
 } from '@cdo/apps/StudioApp';
 import {
   getStore,
   registerReducers,
-  stubRedux,
-  restoreRedux,
+  __testing_stubRedux,
+  __testing_restoreRedux,
 } from '@cdo/apps/redux';
 import commonReducers from '@cdo/apps/redux/commonReducers';
 import {setAllSourcesAndFileMetadata} from '@cdo/apps/javalab/redux/editorRedux';
@@ -23,12 +23,12 @@ describe('Javalab', () => {
 
   beforeEach(() => {
     javalab = new Javalab();
-    stubRedux();
+    __testing_stubRedux();
     registerReducers(commonReducers);
     sinon.stub(project, 'autosave');
     sinon.stub(ReactDOM, 'render');
     sinon.stub(getStore(), 'dispatch');
-    stubStudioApp();
+    __testing_stubStudioApp();
     javalab.studioApp_ = studioApp();
     config = {
       level: {},
@@ -38,8 +38,8 @@ describe('Javalab', () => {
 
   afterEach(() => {
     sinon.restore();
-    restoreRedux();
-    restoreStudioApp();
+    __testing_restoreRedux();
+    __testing_restoreStudioApp();
   });
 
   describe('beforeUnload', () => {

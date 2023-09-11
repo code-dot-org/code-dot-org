@@ -4,8 +4,8 @@ import {expect} from '../../util/reconfiguredChai';
 import {
   getStore,
   registerReducers,
-  stubRedux,
-  restoreRedux,
+  __testing_stubRedux,
+  __testing_restoreRedux,
 } from '@cdo/apps/redux';
 import reducers from '@cdo/apps/weblab/reducers';
 import {
@@ -14,8 +14,8 @@ import {
 } from '@cdo/apps/weblab/actions';
 import {
   singleton as studioApp,
-  stubStudioApp,
-  restoreStudioApp,
+  __testing_stubStudioApp,
+  __testing_restoreStudioApp,
 } from '@cdo/apps/StudioApp';
 import commonReducers from '@cdo/apps/redux/commonReducers';
 import WebLab from '@cdo/apps/weblab/WebLab';
@@ -33,8 +33,8 @@ describe('WebLab', () => {
 
   beforeEach(() => {
     weblab = new WebLab();
-    stubRedux();
-    stubStudioApp();
+    __testing_stubRedux();
+    __testing_stubStudioApp();
     weblab.studioApp_ = studioApp();
     registerReducers(commonReducers);
     registerReducers(reducers);
@@ -47,8 +47,8 @@ describe('WebLab', () => {
   });
 
   afterEach(() => {
-    restoreRedux();
-    restoreStudioApp();
+    __testing_restoreRedux();
+    __testing_restoreStudioApp();
     ReactDOM.render.restore();
   });
 

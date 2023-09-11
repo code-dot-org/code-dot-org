@@ -6,8 +6,8 @@ import pageConstantsReducer, {
 import {
   getStore,
   registerReducers,
-  stubRedux,
-  restoreRedux,
+  __testing_stubRedux,
+  __testing_restoreRedux,
 } from '@cdo/apps/redux';
 
 var testUtils = require('../../util/testUtils');
@@ -248,7 +248,7 @@ describe('Applab Exporter,', function () {
 
     stashedCookieKey = window.userNameCookieKey;
     window.userNameCookieKey = 'CoolUser';
-    stubRedux();
+    __testing_stubRedux();
     registerReducers({pageConstants: pageConstantsReducer});
     getStore().dispatch(
       setPageConstants({
@@ -262,7 +262,7 @@ describe('Applab Exporter,', function () {
     window.fetch.restore();
     assetPrefix.init({});
     window.userNameCookieKey = stashedCookieKey;
-    restoreRedux();
+    __testing_restoreRedux();
   });
 
   describe("when assets can't be fetched,", function () {

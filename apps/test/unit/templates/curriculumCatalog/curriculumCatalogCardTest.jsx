@@ -13,8 +13,8 @@ import {Provider} from 'react-redux';
 import {
   getStore,
   registerReducers,
-  restoreRedux,
-  stubRedux,
+  __testing_restoreRedux,
+  __testing_stubRedux,
 } from '@cdo/apps/redux';
 import teacherSections, {
   setSections,
@@ -50,7 +50,7 @@ describe('CurriculumCatalogCard', () => {
     );
 
   beforeEach(() => {
-    stubRedux();
+    __testing_stubRedux();
     registerReducers({teacherSections});
     store = getStore();
     defaultProps = {
@@ -66,7 +66,7 @@ describe('CurriculumCatalogCard', () => {
   });
 
   afterEach(() => {
-    restoreRedux();
+    __testing_restoreRedux();
   });
 
   it('renders course name', () => {

@@ -3,8 +3,8 @@ import {Provider} from 'react-redux';
 import {
   getStore,
   registerReducers,
-  stubRedux,
-  restoreRedux,
+  __testing_stubRedux,
+  __testing_restoreRedux,
 } from '@cdo/apps/redux';
 import workshopDashboard, {
   setPermission,
@@ -15,7 +15,7 @@ import {mount} from 'enzyme';
 
 describe('Foorm Daily Survey Results', () => {
   beforeEach(() => {
-    stubRedux();
+    __testing_stubRedux();
     registerReducers({
       workshopDashboard,
     });
@@ -24,7 +24,7 @@ describe('Foorm Daily Survey Results', () => {
   });
 
   afterEach(() => {
-    restoreRedux();
+    __testing_restoreRedux();
   });
 
   it('Renders expected number of sessions, questions, and free responses', () => {

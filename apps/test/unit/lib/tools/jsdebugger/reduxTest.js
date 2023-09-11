@@ -3,8 +3,8 @@ import {expect} from '../../../../util/reconfiguredChai';
 import {
   getStore,
   registerReducers,
-  stubRedux,
-  restoreRedux,
+  __testing_stubRedux,
+  __testing_restoreRedux,
 } from '@cdo/apps/redux';
 import {
   reducers,
@@ -18,7 +18,7 @@ import JSInterpreter from '@cdo/apps/lib/tools/jsinterpreter/JSInterpreter';
 describe('The JSDebugger redux duck', () => {
   let store, state, studioApp, interpreter;
   beforeEach(() => {
-    stubRedux();
+    __testing_stubRedux();
     registerReducers(reducers);
     store = getStore();
     state = store.getState();
@@ -39,7 +39,7 @@ describe('The JSDebugger redux duck', () => {
       .callsFake(input => eval(input));
   });
   afterEach(() => {
-    restoreRedux();
+    __testing_restoreRedux();
   });
 
   function runToBreakpoint() {

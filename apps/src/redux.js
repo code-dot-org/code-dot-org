@@ -31,8 +31,6 @@ import * as redux from 'redux';
 import reduxThunk from 'redux-thunk';
 import {configureStore} from '@reduxjs/toolkit';
 
-let exports = {};
-
 let createLogger;
 if (process.env.NODE_ENV !== 'production') {
   import('redux-logger').then(reduxLoggerModule => {
@@ -42,36 +40,6 @@ if (process.env.NODE_ENV !== 'production') {
 
 let reduxStore;
 let globalReducers = {};
-
-if (IN_UNIT_TEST) {
-  let __oldReduxStore;
-  let __oldGlobalReducers;
-
-  exports.stubRedux = function () {
-    if (__oldReduxStore) {
-      throw new Error(
-        'Redux store has already been stubbed. Did you forget to call restore?'
-      );
-    }
-    __oldReduxStore = reduxStore;
-    __oldGlobalReducers = globalReducers;
-    reduxStore = null;
-    globalReducers = {};
-  };
-
-  exports.restoreRedux = function () {
-    reduxStore = __oldReduxStore;
-    globalReducers = __oldGlobalReducers;
-    __oldReduxStore = null;
-    __oldGlobalReducers = null;
-  };
-}
-
-if (IN_STORYBOOK || IN_UNIT_TEST) {
-  // Storybooks need the ability to create multiple distinct stores instead of
-  // using a singleton
-  exports.createStoreWithReducers = createStoreWithReducers;
-}
 
 /**
  * Get a reference to our redux store. If it doesn't exist yet, create it.
@@ -91,7 +59,7 @@ export function getStore() {
 /**
  * Create our store
  */
-function createStoreWithReducers() {
+export function createStoreWithReducers() {
   return createStore(
     Object.keys(globalReducers).length > 0 ? globalReducers : s => s
   );
@@ -217,4 +185,30 @@ function createStore(reducer, initialState) {
   });
 }
 
-export default exports;
+// BEGIN EXPORTS FOR TESTING ONLY
+let __testing_oldReduxStore;
+let __testing_oldGlobalReducers;
+
+export function __testing_stubRedux() {
+  if (!IN_UNIT_TEST) {
+    throw new Error('__testing_stubRedux() should only be called in tests');
+  } else if (__testing_oldReduxStore) {
+    throw new Error(
+      'Redux store has already been stubbed. Did you forget to call __testing_restoreRedux()?'
+    );
+  }
+  __testing_oldReduxStore = reduxStore;
+  __testing_oldGlobalReducers = globalReducers;
+  reduxStore = null;
+  globalReducers = {};
+}
+
+export function __testing_restoreRedux() {
+  if (!IN_UNIT_TEST)
+    throw new Error('__testing_stubRedux() should only be called in tests');
+  reduxStore = __testing_oldReduxStore;
+  globalReducers = __testing_oldGlobalReducers;
+  __testing_oldReduxStore = null;
+  __testing_oldGlobalReducers = null;
+}
+// END EXPORTS FOR TESTING ONLY

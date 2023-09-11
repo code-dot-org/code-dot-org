@@ -8,8 +8,8 @@ import sinon from 'sinon';
 import {
   getStore,
   registerReducers,
-  stubRedux,
-  restoreRedux,
+  __testing_stubRedux,
+  __testing_restoreRedux,
 } from '@cdo/apps/redux';
 import projectsReducer, {
   appendProjects,
@@ -58,7 +58,7 @@ describe('ProjectAppTypeArea', () => {
   let stubAjax, ajaxDeferred, stubNavigate;
 
   beforeEach(() => {
-    stubRedux();
+    __testing_stubRedux();
     registerReducers({projects: projectsReducer});
     ajaxDeferred = new $.Deferred();
     stubAjax = sinon.stub($, 'ajax');
@@ -68,7 +68,7 @@ describe('ProjectAppTypeArea', () => {
 
   afterEach(() => {
     stubAjax.restore();
-    restoreRedux();
+    __testing_restoreRedux();
   });
 
   describe('detail view', () => {

@@ -1,8 +1,8 @@
 /** @file Tests for toolkit.js - Maker's main export */
 import {expect} from '../../../../util/reconfiguredChai';
 import {
-  stubRedux,
-  restoreRedux,
+  __testing_stubRedux,
+  __testing_restoreRedux,
   registerReducers,
   getStore,
 } from '@cdo/apps/redux';
@@ -32,8 +32,8 @@ describe('maker/toolkit.js', () => {
   });
 
   describe('isAvailable()', () => {
-    beforeEach(stubRedux);
-    afterEach(restoreRedux);
+    beforeEach(__testing_stubRedux);
+    afterEach(__testing_restoreRedux);
 
     it('is false if no maker reducer was registered', () => {
       expect(isAvailable(getStore().getState())).to.be.false;
@@ -46,8 +46,8 @@ describe('maker/toolkit.js', () => {
   });
 
   describe('isEnabled()', () => {
-    beforeEach(stubRedux);
-    afterEach(restoreRedux);
+    beforeEach(__testing_stubRedux);
+    afterEach(__testing_restoreRedux);
 
     it('is false if maker is not available', () => {
       expect(isEnabled(getStore().getState())).to.be.false;
@@ -66,8 +66,8 @@ describe('maker/toolkit.js', () => {
   });
 
   describe('enable()', () => {
-    beforeEach(stubRedux);
-    afterEach(restoreRedux);
+    beforeEach(__testing_stubRedux);
+    afterEach(__testing_restoreRedux);
 
     it('throws if maker is not available', () => {
       expect(isAvailable(getStore().getState())).to.be.false;

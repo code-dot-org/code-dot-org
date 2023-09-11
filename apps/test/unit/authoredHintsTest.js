@@ -5,18 +5,22 @@ import * as utils from '@cdo/apps/utils';
 import AuthoredHints from '@cdo/apps/authoredHints';
 import authoredHintsReducer from '@cdo/apps/redux/authoredHints';
 import {TestResults} from '@cdo/apps/constants';
-import {registerReducers, stubRedux, restoreRedux} from '@cdo/apps/redux';
+import {
+  registerReducers,
+  __testing_stubRedux,
+  __testing_restoreRedux,
+} from '@cdo/apps/redux';
 
 describe('Authored Hints', () => {
   // stub (and restore) redux and a utils method
   beforeEach(() => {
     sinon.stub(utils, 'showGenericQtip').callsFake(() => {});
-    stubRedux();
+    __testing_stubRedux();
     registerReducers({authoredHints: authoredHintsReducer});
   });
 
   afterEach(() => {
-    restoreRedux();
+    __testing_restoreRedux();
     utils.showGenericQtip.restore();
   });
 

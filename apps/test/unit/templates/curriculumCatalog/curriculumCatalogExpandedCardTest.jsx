@@ -7,8 +7,8 @@ import {Provider} from 'react-redux';
 import {
   getStore,
   registerReducers,
-  restoreRedux,
-  stubRedux,
+  __testing_restoreRedux,
+  __testing_stubRedux,
 } from '@cdo/apps/redux';
 import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import sinon from 'sinon';
@@ -24,7 +24,7 @@ describe('CurriculumCatalogExpandedCard', () => {
     );
 
   beforeEach(() => {
-    stubRedux();
+    __testing_stubRedux();
     registerReducers({teacherSections});
     store = getStore();
     defaultProps = {
@@ -50,7 +50,7 @@ describe('CurriculumCatalogExpandedCard', () => {
   });
 
   afterEach(() => {
-    restoreRedux();
+    __testing_restoreRedux();
   });
 
   it('renders course name', () => {

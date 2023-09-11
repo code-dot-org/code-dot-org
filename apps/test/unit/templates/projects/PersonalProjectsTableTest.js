@@ -3,8 +3,8 @@ import {mount} from 'enzyme';
 import {expect} from '../../../util/reconfiguredChai';
 import {Provider} from 'react-redux';
 import {
-  stubRedux,
-  restoreRedux,
+  __testing_stubRedux,
+  __testing_restoreRedux,
   registerReducers,
   getStore,
 } from '@cdo/apps/redux';
@@ -19,12 +19,12 @@ describe('PersonalProjectsTable', () => {
   allowConsoleWarnings();
 
   beforeEach(() => {
-    stubRedux();
+    __testing_stubRedux();
     registerReducers({publishDialog, deleteDialog});
   });
 
   afterEach(() => {
-    restoreRedux();
+    __testing_restoreRedux();
   });
 
   describe('personal project data has loaded', () => {

@@ -3,8 +3,8 @@ import React from 'react';
 import {mount, shallow} from 'enzyme';
 import {UnconnectedCourseEditor as CourseEditor} from '@cdo/apps/lib/levelbuilder/course-editor/CourseEditor';
 import {
-  stubRedux,
-  restoreRedux,
+  __testing_stubRedux,
+  __testing_restoreRedux,
   getStore,
   registerReducers,
 } from '@cdo/apps/redux';
@@ -55,7 +55,7 @@ describe('CourseEditor', () => {
 
   beforeEach(() => {
     sinon.stub(utils, 'navigateToHref');
-    stubRedux();
+    __testing_stubRedux();
     registerReducers({
       teacherSections,
       resources: createResourcesReducer('teacherResource'),
@@ -64,7 +64,7 @@ describe('CourseEditor', () => {
   });
 
   afterEach(() => {
-    restoreRedux();
+    __testing_restoreRedux();
     utils.navigateToHref.restore();
   });
 

@@ -13,8 +13,8 @@ import reducer, {
   STUDENT_SECTION_ID,
 } from '@cdo/apps/code-studio/hiddenLessonRedux';
 import {
-  stubRedux,
-  restoreRedux,
+  __testing_stubRedux,
+  __testing_restoreRedux,
   registerReducers,
   getStore,
 } from '@cdo/apps/redux';
@@ -41,7 +41,7 @@ describe('hiddenLessonRedux', () => {
         lastRequest = req;
       };
       reducerSpy = sinon.spy(reducer);
-      stubRedux();
+      __testing_stubRedux();
       registerReducers({
         hiddenLesson: reducerSpy,
         lessonLock: fakeLessonLockReducer,
@@ -52,7 +52,7 @@ describe('hiddenLessonRedux', () => {
     afterEach(() => {
       lastRequest = null;
       xhr.restore();
-      restoreRedux();
+      __testing_restoreRedux();
     });
 
     it('initializes with server results for student after calling getHiddenLessons', () => {

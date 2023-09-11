@@ -2,8 +2,8 @@ import {expect} from '../../../util/reconfiguredChai';
 import {costumeList} from '@cdo/apps/p5lab/spritelab/blocks';
 import {
   registerReducers,
-  stubRedux,
-  restoreRedux,
+  __testing_stubRedux,
+  __testing_restoreRedux,
   getStore,
 } from '@cdo/apps/redux';
 import reducer, {
@@ -38,7 +38,7 @@ describe('Gamelab blocks', () => {
     };
 
     beforeEach(() => {
-      stubRedux();
+      __testing_stubRedux();
       registerReducers({animationList: reducer});
       registerReducers(commonReducers);
       getStore().dispatch(
@@ -50,7 +50,7 @@ describe('Gamelab blocks', () => {
     });
 
     afterEach(() => {
-      restoreRedux();
+      __testing_restoreRedux();
     });
 
     it('returns sourceUrl array for both library and drawn costumes', () => {

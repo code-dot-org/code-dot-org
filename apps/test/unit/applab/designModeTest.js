@@ -7,8 +7,8 @@ import pageConstantsReducer, {
 import {
   getStore,
   registerReducers,
-  stubRedux,
-  restoreRedux,
+  __testing_stubRedux,
+  __testing_restoreRedux,
 } from '@cdo/apps/redux';
 
 describe('appendPx', () => {
@@ -123,7 +123,7 @@ describe('onDuplicate screen', () => {
 
     originalScreen = elementLibrary.createElement('SCREEN', 0, 0);
     designModeElement.appendChild(originalScreen);
-    stubRedux();
+    __testing_stubRedux();
     registerReducers({pageConstants: pageConstantsReducer});
     getStore().dispatch(
       setPageConstants({
@@ -134,7 +134,7 @@ describe('onDuplicate screen', () => {
 
   afterEach(() => {
     document.body.removeChild(designModeElement);
-    restoreRedux();
+    __testing_restoreRedux();
   });
 
   it('duplicates the background color of the screen', () => {
@@ -197,7 +197,7 @@ describe('setProperty and read Property', () => {
       expect(dropdown.value).to.equal('Eta Theta');
     });
     it('Uses the asset timestamp in the source path for pictures', () => {
-      stubRedux();
+      __testing_stubRedux();
       registerReducers({pageConstants: pageConstantsReducer});
       getStore().dispatch(
         setPageConstants({
@@ -206,7 +206,7 @@ describe('setProperty and read Property', () => {
       );
       designMode.updateProperty(picture, 'picture', 'picture.jpg', 123456);
       expect(picture.src).to.contain('picture.jpg?t=123456');
-      restoreRedux();
+      __testing_restoreRedux();
     });
   });
 

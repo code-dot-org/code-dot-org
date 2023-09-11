@@ -7,8 +7,8 @@ import {Provider} from 'react-redux';
 import {
   getStore,
   registerReducers,
-  stubRedux,
-  restoreRedux,
+  __testing_stubRedux,
+  __testing_restoreRedux,
 } from '@cdo/apps/redux';
 import {EditorView} from '@codemirror/view';
 import {EditorState} from '@codemirror/state';
@@ -50,7 +50,7 @@ describe('Java Lab Editor Test', () => {
   let defaultProps, store, appOptions, backpackApiStub;
 
   beforeEach(() => {
-    stubRedux();
+    __testing_stubRedux();
     registerReducers(commonReducers);
     registerReducers({javalab, javalabEditor, javalabView});
     store = getStore();
@@ -78,7 +78,7 @@ describe('Java Lab Editor Test', () => {
   });
 
   afterEach(() => {
-    restoreRedux();
+    __testing_restoreRedux();
     window.appOptions = appOptions;
   });
 

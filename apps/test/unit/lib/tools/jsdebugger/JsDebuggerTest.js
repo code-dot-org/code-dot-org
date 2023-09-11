@@ -13,8 +13,8 @@ import * as utils from '@cdo/apps/utils';
 import {
   getStore,
   registerReducers,
-  stubRedux,
-  restoreRedux,
+  __testing_stubRedux,
+  __testing_restoreRedux,
 } from '@cdo/apps/redux';
 import commonReducers from '@cdo/apps/redux/commonReducers';
 import {setPageConstants} from '@cdo/apps/redux/pageConstants';
@@ -31,7 +31,7 @@ describe('The JSDebugger component', () => {
   sandboxDocumentBody();
 
   beforeEach(() => {
-    stubRedux();
+    __testing_stubRedux();
     registerReducers(commonReducers);
     registerReducers(reducers);
 
@@ -83,7 +83,7 @@ describe('The JSDebugger component', () => {
     root.unmount();
     dom.getTouchEventName.restore();
     utils.fireResizeEvent.restore();
-    restoreRedux();
+    __testing_restoreRedux();
   });
 
   const debugAreaEl = () => root.find('#debug-area');

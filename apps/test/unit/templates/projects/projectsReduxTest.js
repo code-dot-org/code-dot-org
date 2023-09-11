@@ -1,8 +1,8 @@
 import {assert} from '../../../util/reconfiguredChai';
 import sinon from 'sinon';
 import {
-  stubRedux,
-  restoreRedux,
+  __testing_stubRedux,
+  __testing_restoreRedux,
   registerReducers,
   getStore,
 } from '@cdo/apps/redux';
@@ -295,7 +295,7 @@ describe('projectsRedux', () => {
 
     beforeEach(() => {
       server = sinon.fakeServer.create();
-      stubRedux();
+      __testing_stubRedux();
       registerReducers({projects});
       store = getStore();
       libraryApiStub = sinon.createStubInstance(LibraryClientApi, {
@@ -305,7 +305,7 @@ describe('projectsRedux', () => {
 
     afterEach(() => {
       server.restore();
-      restoreRedux();
+      __testing_restoreRedux();
     });
 
     const setFetchPersonalProjectsResponse = status => {
