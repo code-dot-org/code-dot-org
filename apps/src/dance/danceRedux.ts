@@ -26,7 +26,7 @@ const initialState: DanceState = {
 
 /** Loads the song manifest and initial song. */
 export const initSongs = createAsyncThunk(
-  'songs/initSongs',
+  'dance/initSongs',
   async (
     payload: {
       useRestrictedSongs: boolean;
@@ -72,7 +72,7 @@ export const initSongs = createAsyncThunk(
 
 /** Called when a new song is selected. Unloads the previous song and loads the new song. */
 export const setSong = createAsyncThunk(
-  'songs/setSong',
+  'dance/setSong',
   async (
     payload: {
       songId: string;

@@ -1,4 +1,5 @@
 import Sounds from '../Sounds';
+import {fetchSignedCookies} from '../utils';
 
 /**
  * Requests the song manifest in parallel with signed cloudfront cookies. These cookies
@@ -38,14 +39,6 @@ export async function getSongManifest(useRestrictedSongs, manifestFilename) {
     ...song,
     url: `${songPathPrefix}${song.url}.mp3`,
   }));
-}
-
-/**
- * Fetch cookies signed by cloudfront which grant access to restricted songs.
- * @returns {Promise<Response>}
- */
-export function fetchSignedCookies() {
-  return fetch('/dashboardapi/sign_cookies', {credentials: 'same-origin'});
 }
 
 /**
