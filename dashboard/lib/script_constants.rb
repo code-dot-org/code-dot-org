@@ -92,6 +92,16 @@ module ScriptConstants
       EXPRESS_2022_NAME = 'express-2022'.freeze,
       PRE_READER_EXPRESS_2022_NAME = 'pre-express-2022'.freeze,
     ],
+    csf_2023: [
+      COURSEA_2023_NAME = 'coursea-2023'.freeze,
+      COURSEB_2023_NAME = 'courseb-2023'.freeze,
+      COURSEC_2023_NAME = 'coursec-2023'.freeze,
+      COURSED_2023_NAME = 'coursed-2023'.freeze,
+      COURSEE_2023_NAME = 'coursee-2023'.freeze,
+      COURSEF_2023_NAME = 'coursef-2023'.freeze,
+      EXPRESS_2023_NAME = 'express-2023'.freeze,
+      PRE_READER_EXPRESS_2023_NAME = 'pre-express-2023'.freeze,
+    ],
     csc_2021: [
       POETRY_2021_NAME = 'poetry-2021'.freeze,
       AI_ETHICS_2021_NAME = 'ai-ethics-2021'.freeze,
@@ -139,6 +149,7 @@ module ScriptConstants
       HOC_NAME = 'hourofcode'.freeze, # 2014 hour of code
       DANCE_PARTY_NAME = 'dance'.freeze, # 2018 hour of code
       DANCE_PARTY_EXTRAS_NAME = 'dance-extras'.freeze, # 2018 hour of code
+      HOW_AI_WORKS_2023_NAME = 'how-ai-works-2023'.freeze,
     ],
     csf_international: [
       COURSE1_NAME = 'course1'.freeze,
@@ -208,6 +219,16 @@ module ScriptConstants
       MINECRAFT_AQUATIC_NAME
     ],
   }.freeze
+
+  TRANSLATEABLE_CSC_UNITS = [
+    POETRY_2023_NAME = 'poetry-2023'.freeze,
+    CSC_BOOKCOVERS_2023_NAME = 'csc-bookcovers-2023'.freeze,
+    CSC_STARQUILTS_2023_NAME = 'csc-starquilts-2023'.freeze,
+    CSC_ECOSYSTEMS_2023_NAME = 'csc-ecosystems-2023'.freeze,
+    CSC_ADAPTATIONS_2023_NAME = 'csc-adaptations-2023'.freeze,
+    CSC_TIMECAPSULE_2023_NAME = 'csc-timecapsule-2023'.freeze,
+    CSC_MAPPINGLANDMARKS_2023_NAME = 'csc-mappinglandmarks-2023'.freeze,
+  ].freeze
 
   ADDITIONAL_I18N_UNITS = [
     APPLAB_1HOUR = 'applab-1hour'.freeze,
@@ -318,6 +339,7 @@ module ScriptConstants
       ScriptConstants.unit_in_category?(:csf_2020, script) ||
       ScriptConstants.unit_in_category?(:csf_2021, script) ||
       ScriptConstants.unit_in_category?(:csf_2022, script) ||
+      ScriptConstants.unit_in_category?(:csf_2023, script) ||
       ScriptConstants.unit_in_category?(:csd, script) ||
       ScriptConstants.unit_in_category?(:csd_2018, script) ||
       ScriptConstants.unit_in_category?(:csd_2019, script) ||
@@ -326,6 +348,7 @@ module ScriptConstants
       ScriptConstants.unit_in_category?(:twenty_hour, script) ||
       ScriptConstants.unit_in_category?(:hoc, script) ||
       script == JIGSAW_NAME ||
+      TRANSLATEABLE_CSC_UNITS.include?(script) ||
       ADDITIONAL_I18N_UNITS.include?(script)
   end
 end
