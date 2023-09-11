@@ -36,8 +36,10 @@ describe('LearningGoalItem', () => {
   it('disables editing of AI textboxes when unchecked', () => {
     const wrapper = shallow(<LearningGoalItem {...defaultProps} />);
     expect(wrapper.find('input[type="checkbox"]').prop('checked')).to.be.false;
-    expect(wrapper.find('EvidenceDescriptions').at(0).props().isAiEnabled).to.be
-      .false;
+    expect(
+      wrapper.find('EvidenceDescriptions').at(0).props().learningGoalData
+        .aiEnabled
+    ).to.be.false;
   });
 
   it('enables editing of AI textboxes when checked', () => {
@@ -54,8 +56,10 @@ describe('LearningGoalItem', () => {
       />
     );
     expect(wrapper.find('input[type="checkbox"]').prop('checked')).to.be.true;
-    expect(wrapper.find('EvidenceDescriptions').at(0).props().isAiEnabled).to.be
-      .true;
+    expect(
+      wrapper.find('EvidenceDescriptions').at(0).props().learningGoalData
+        .aiEnabled
+    ).to.be.true;
   });
 
   it('calls deleteItem when delete button is clicked', () => {

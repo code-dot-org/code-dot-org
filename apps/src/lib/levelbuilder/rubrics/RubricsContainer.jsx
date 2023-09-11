@@ -4,7 +4,7 @@ import {BodyTwoText, Heading1} from '@cdo/apps/componentLibrary/typography';
 import Button from '@cdo/apps/templates/Button';
 import {navigateToHref} from '@cdo/apps/utils';
 import RubricEditor from './RubricEditor';
-import {snakeCase} from 'lodash';
+import {snakeCase, isNumber} from 'lodash';
 
 const RUBRIC_PATH = '/rubrics';
 
@@ -20,11 +20,33 @@ export default function RubricsContainer({
       ? rubric.learningGoals
       : [
           {
-            key: 'learningGoal-1',
-            id: 'learningGoal-1',
+            key: 'ui-1',
+            id: 'ui-1',
             learningGoal: '',
             aiEnabled: false,
             position: 1,
+            learningGoalEvidenceLevelsAttributes: [
+              {
+                teacherDescription: '',
+                understanding: 0,
+                aiPrompt: '',
+              },
+              {
+                teacherDescription: '',
+                understanding: 1,
+                aiPrompt: '',
+              },
+              {
+                teacherDescription: '',
+                understanding: 2,
+                aiPrompt: '',
+              },
+              {
+                teacherDescription: '',
+                understanding: 3,
+                aiPrompt: '',
+              },
+            ],
           },
         ]
   );
@@ -40,7 +62,7 @@ export default function RubricsContainer({
       learningGoalNumber++;
     }
 
-    return `learningGoal-${learningGoalNumber}`;
+    return `ui-${learningGoalNumber}`;
   };
 
   const emptyKeyConcept = () => {
@@ -55,6 +77,28 @@ export default function RubricsContainer({
       learningGoal: '',
       aiEnabled: false,
       position: nextPosition,
+      learningGoalEvidenceLevelsAttributes: [
+        {
+          teacherDescription: '',
+          understanding: 0,
+          aiPrompt: '',
+        },
+        {
+          teacherDescription: '',
+          understanding: 1,
+          aiPrompt: '',
+        },
+        {
+          teacherDescription: '',
+          understanding: 2,
+          aiPrompt: '',
+        },
+        {
+          teacherDescription: '',
+          understanding: 3,
+          aiPrompt: '',
+        },
+      ],
     };
   };
 
@@ -76,13 +120,31 @@ export default function RubricsContainer({
     setLearningGoalList(updatedLearningGoalList);
   };
 
-  const updateLearningGoal = (idToUpdate, keyToUpdate, newValue) => {
+  const updateLearningGoal = (
+    idToUpdate,
+    keyToUpdate,
+    newValue,
+    evidenceLevel,
+    evidenceLevelKeyToUpdate
+  ) => {
     const newLearningGoalData = learningGoalList.map(learningGoal => {
       if (idToUpdate === learningGoal.id) {
-        return {
-          ...learningGoal,
-          [keyToUpdate]: newValue,
-        };
+        if (keyToUpdate === 'learningGoalEvidenceLevelsAttributes') {
+          const newEvidenceLevels =
+            learningGoal.learningGoalEvidenceLevelsAttributes;
+          newEvidenceLevels.find(
+            level => level.understanding === evidenceLevel
+          )[evidenceLevelKeyToUpdate] = newValue;
+          return {
+            ...learningGoal,
+            [keyToUpdate]: newEvidenceLevels,
+          };
+        } else {
+          return {
+            ...learningGoal,
+            [keyToUpdate]: newValue,
+          };
+        }
       } else {
         return learningGoal;
       }
@@ -90,12 +152,14 @@ export default function RubricsContainer({
     setLearningGoalList(newLearningGoalData);
   };
 
-  // TODO: Check that there is at least one programming level here
+  // TODO-AITT-168: Check that there is at least one submittable programming level here
   const initialLevelForAssessment = !!rubric ? rubric.levelId : levels[0].id;
   const [selectedLevelForAssessment, setSelectedLevelForAssessment] = useState(
     initialLevelForAssessment
   );
 
+  // TODO-AITT-169: Create notification for when a rubric has been saved
+  // TODO-AITT-171: Enable deleting LearningGoals when saveRubric is called
   const saveRubric = event => {
     event.preventDefault();
     const dataUrl = !!rubric ? `/rubrics/${rubric.id}` : RUBRIC_PATH;
@@ -106,8 +170,9 @@ export default function RubricsContainer({
       ? document.querySelector('meta[name="csrf-token"]').attributes['content']
           .value
       : null;
-
-    const learningGoalListAsData = transformKeys(learningGoalList);
+    const learningGoalListAsData = removeNewIds(
+      transformKeys(learningGoalList)
+    );
 
     const rubric_data = {
       levelId: selectedLevelForAssessment,
@@ -125,36 +190,66 @@ export default function RubricsContainer({
     })
       .then(response => response.json())
       .then(data => {
-        navigateToHref(data.redirectUrl);
+        if (!rubric) {
+          navigateToHref(data.redirectUrl);
+        }
       })
       .catch(err => {
         console.error('Error saving rubric:' + err);
       });
   };
 
-  // transforms keys from camelCase to snake_case for rails
-  // specifically created to do this for an array of objects
-  // with keys in camelCase
-  function transformKeys(startingList) {
-    const newList = [];
-
-    startingList.forEach(item => {
-      const newItem = {};
-      for (const [key, value] of Object.entries(item)) {
-        newItem[snakeCase(key)] = value;
+  /**
+   * Removes the Ids from the newly added LearningGoals.
+   * Context: We use ids of LearningGoals in the front end to connect data.
+   * However, when a new LearningGoal is added in the front end, we want to
+   * have an id to modify the components, but then delete that id before saving
+   * the new LearningGoals to the back end so that new ids can be assigned by Rails.
+   */
+  function removeNewIds(keyConceptList) {
+    keyConceptList.forEach(keyConceptList => {
+      if (!isNumber(keyConceptList.id)) {
+        delete keyConceptList.id;
       }
-      newList.push(newItem);
     });
+    return keyConceptList;
+  }
 
-    return newList;
+  /**
+   * Transforms the keys of an object from camelCase to snake_case.
+   * Intended to transform the keys of objects in an array of an object.
+   * In this case, it is only intended into the first nested layer.
+   * @param {object} obj - The object with keys in camelCase format.
+   * @returns {object} - The object with keys in snake_case format.
+   */
+  function transformObjectKeys(obj) {
+    const newObj = {};
+
+    for (const [key, value] of Object.entries(obj)) {
+      if (Array.isArray(value)) {
+        newObj[snakeCase(key)] = value.map(item => transformObjectKeys(item));
+      } else {
+        newObj[snakeCase(key)] = value;
+      }
+    }
+
+    return newObj;
+  }
+
+  /**
+   * Transforms the keys of objects inside an array from camelCase to snake_case.
+   * Designed specifically for an array of objects with keys in camelCase.
+   * @param {array} startingList - The list containing objects with camelCase keys.
+   * @returns {array} - The list containing objects with snake_case keys.
+   */
+  function transformKeys(startingList) {
+    return startingList.map(item => transformObjectKeys(item));
   }
 
   const handleDropdownChange = event => {
     setSelectedLevelForAssessment(event.target.value);
   };
 
-  // TODO: In the future we might want to filter the levels in the dropdown for "submittable" levels
-  //  "submittable" is in the properties of each level in the list.
   return (
     <div>
       <Heading1>Create or modify your rubric</Heading1>
