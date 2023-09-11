@@ -42,18 +42,6 @@ class UnconnectedReportAbusePopUp extends React.Component {
     this.handleCheckboxChange = this.handleCheckboxChange.bind(this);
   }
 
-  componentDidMount() {
-    const script = document.createElement('script');
-    script.src = 'https://www.google.com/recaptcha/api.js';
-    script.id = 'captcha';
-    script.async = true;
-    script.defer = true;
-    window.onCaptchaSubmit = token => this.onCaptchaVerification(token);
-    window.onCaptchaExpired = () => this.onCaptchaExpiration();
-    script.onload = () => this.setState({loadedCaptcha: true});
-    document.body.appendChild(script);
-  }
-
   componentWillUnmount() {
     const captchaScript = document.getElementById('captcha');
     if (captchaScript) {
@@ -161,6 +149,16 @@ class UnconnectedReportAbusePopUp extends React.Component {
     } = this.state;
 
     const captchaSiteKey = this.props.recaptchaSiteKey;
+
+    const script = document.createElement('script');
+    script.src = 'https://www.google.com/recaptcha/api.js';
+    script.id = 'captcha';
+    script.async = true;
+    script.defer = true;
+    window.onCaptchaSubmit = token => this.onCaptchaVerification(token);
+    window.onCaptchaExpired = () => this.onCaptchaExpiration();
+    script.onload = () => this.setState({loadedCaptcha: true});
+    document.body.appendChild(script);
 
     return (
       <AccessibleDialog
