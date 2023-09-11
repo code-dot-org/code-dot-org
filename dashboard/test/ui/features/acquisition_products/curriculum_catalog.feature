@@ -141,3 +141,10 @@ Feature: Curriculum Catalog Page
     Then I am on "http://studio.code.org"
     And I see that "Section 1" is not assigned to "AI for Oceans" in the section table
     And I see that "Section 2" is not assigned to "Computer Science Principles" in the section table
+
+  Scenario: Signed-out user sees the curriculum catalog with offerings and can filter
+    Given I am on "http://studio.code.org/catalog?quick_view=true"
+    And I wait until element "h4:contains(AI for Oceans)" is visible
+
+    And I click selector "[aria-label='View details about AI for Oceans']"
+
