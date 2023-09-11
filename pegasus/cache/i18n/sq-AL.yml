@@ -10,6 +10,7 @@ sq-AL:
     në muaj)
   ai_activity: Aktiviteti
   ai_description: Përshkrimi
+  ai_for_oceans: IA për oqeanet
   ai_for_oceans_lesson_plan: plani mësimor
   alice_beyond_gradelevel: Shkolla tetë vjeçare +
   alice_beyond_longdescription: Duke përdorur një mjedis programimi inovativ që suporton
@@ -345,6 +346,7 @@ sq-AL:
   course4_name: Kursi 4
   coursea-2017_gradelevel: Moshat 4-7
   coursea-2018_gradelevel: Moshat 4-7
+  coursea-2018_name: Kursi A (2018)
   coursea-2019_gradelevel: Moshat 4-7
   coursea-2019_name: Kursi A (2019)
   coursea-2020_gradelevel: Moshat 4-7
@@ -397,6 +399,7 @@ sq-AL:
   coursed-2019_gradelevel: Klasat 8+
   coursed-2020_gradelevel: Klasat 8+
   coursed-2021_gradelevel: Klasat 8+
+  coursed-2021_name: Kursi D (2021)
   coursed-2022_gradelevel: Klasat 8+
   coursed-2022_name: Kursi D (2022)
   coursed_gradelevel: Klasat 8+
@@ -633,7 +636,7 @@ sq-AL:
   dashboard_sections_table_code: Pjesë Kodi
   dashboard_sections_table_course: Kurs
   dashboard_sections_table_grade: Notë
-  dashboard_sections_table_pairing_allowed: Programim në çift
+  dashboard_sections_table_pairing_allowed: Programimi në ekip
   dashboard_sections_table_secret: Mënyra e logimit
   dashboard_sections_table_section: Pjesë
   dashboard_sections_table_students: Studentët
@@ -746,6 +749,7 @@ sq-AL:
   frozen_platformtext: Shfletuesit modernë + tabletat
   frozen_shortdescription: Le të përodrim kod për të bashkuar Anën dhe Elsën ndërkohë
     që ato eksplorojnë magjinë dhe bukurinë e akullit.
+  gamelab_name: Game Lab
   gender: Gjini
   get_a_certificate_message: Ne do tu dergojmë një certifikate dhe informacione se
     si mund të mesoni <a href='/learn/beyond'>përtej Ores së Kodimit</a>
@@ -801,6 +805,7 @@ sq-AL:
   header_legal_tos: Kushtet e shërbimit
   header_my_dashboard: Paneli im
   header_project_gallery: Projekte
+  header_report_abuse: Raporto abuzim
   header_report_bug: Raporto një problem
   header_sections: Seksionet
   header_stats: statistikat
@@ -824,6 +829,7 @@ sq-AL:
   hoc2018_creativity_create: Krijo
   hoc2018_creativity_hoc_coming: Ora e kodimit po vjen…
   hoc2018_dance_amazon_about_future_engineer_button: Mëso më shumë
+  hoc2018_dance_keep_on_dancing_box_title: Vazhdoni të kërceni
   hoc2018_dance_party_box_title: Festë vallëzimi
   hoc2018_dance_party_button: Fillo
   hoc2018_dance_party_main_heading: Festë vallëzimi
@@ -1670,6 +1676,7 @@ sq-AL:
   user_header_create: 'Krijo '
   user_header_dance: Festë vallëzimi
   user_header_flappy: Flappy
+  user_header_gamelab: Game Lab
   user_header_label: Përshëndetje %{username}
   user_header_logout: Dil
   user_header_minecraft: Minecraft
