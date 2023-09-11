@@ -2469,6 +2469,12 @@
         "courseF_bee_variables_1a_2021": {
           "courseF_bee_functions_1_2018_1": "Deine Variablen findest du hier drunter!"
         },
+        "courseF_collector_items_-2022-2": {
+          "costumes_tab_callout": "Registerkarte „Kostüme“"
+        },
+        "courseF_collector_player_move_-2022-2": {
+          "costumes_tab_callout": "Registerkarte „Kostüme“"
+        },
         "courseF_editable_card": {
           "visualizationResizeBar": "Ziehe die 3 Punkte, um die Größe des Spielbereichs zu verändern."
         },
@@ -2522,6 +2528,9 @@
         },
         "courseF_events_time_-2022-2": {
           "events_category": "Klicke hier, um die Kategorie Ereignisse zu öffnen."
+        },
+        "courseF_groups_size_-2022-2": {
+          "mini-toolbox-blue-button": "Klicke auf die blaue Schaltfläche, um sie zu öffnen oder zu schließen."
         },
         "courseF_label_predict": {
           "variablesPredict": "Untersuche den nachfolgenden Code unter diesem Punkt."

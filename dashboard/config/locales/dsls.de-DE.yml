@@ -1037,6 +1037,9 @@ de-DE:
           ## Resourcen
 
           * [Kartensortierungsalgorithm - Aktivitätsleitfaden](https://docs.google.com/document/d/1o4kVRnXnigufkS9WsjHjeD38f8MQrX6qCEFpka-F9Oo/export?format=pdf)
+        teacher_markdown: "* [Algorithmus zur Kartensortierung] (https://docs.google.com/document/d/1AYEKnN1uYMfmv1eJrck5tniOJDM4Ib2eEdRPkFzeEZk/edit?usp=sharing)
+          - Beispiel ([PDF](https://docs.google.com/document/d/1AYEKnN1uYMfmv1eJrck5tniOJDM4Ib2eEdRPkFzeEZk/export?format=pdf)
+          | [DOCX](https://docs.google.com/document/d/1AYEKnN1uYMfmv1eJrck5tniOJDM4Ib2eEdRPkFzeEZk/export?format=doc))\n"
       CSD U1 Lesson 7 Overview:
         markdown: |
           # Übersicht
@@ -1046,6 +1049,9 @@ de-DE:
           ## Resourcen
 
           * [Speicherung und Verarbeitung - Aktivitätsleitfaden](https://docs.google.com/document/d/1I-OzbJizf7m5DK5jfRxDtSYtc_SoSk6vGtSM9tqlGw0/export?format=pdf)
+        teacher_markdown: "* [Lagerung und Verarbeitung — Beispiel] (https://docs.google.com/a/code.org/document/d/1cuFrtoxPSBjr04-Js73CC4IYOZ6AQDetGAdxCtnknFY/edit?usp=sharing)
+          — Aktivitätsleitfaden ([PDF](https://docs.google.com/document/d/1cuFrtoxPSBjr04-Js73CC4IYOZ6AQDetGAdxCtnknFY/export?format=pdf)
+          | [DOCX](https://docs.google.com/a/code.org/document/d/1cuFrtoxPSBjr04-Js73CC4IYOZ6AQDetGAdxCtnknFY/edit?usp=sharing))\n"
       CSD U1 Lesson 8 Overview:
         markdown: |
           # Übersicht
@@ -1055,6 +1061,9 @@ de-DE:
           ## Resourcen
 
           * [App Erkundung - Aktivitätsleitfaden](https://docs.google.com/document/d/1OW-fkwA7xeNZWiduWescL-6a6zFigtJVP7hfL1oNgVA/export?format=pdf)
+        teacher_markdown: "* [Schlüssel zur App Entdeckung] (https://docs.google.com/document/d/126VyRZ5PdNnycmdSs_Us7tNRJyAiQvM8R1aeB8USUzA/edit)
+          — Leitfaden für Aktivitäten[PDF](https://docs.google.com/document/d/126VyRZ5PdNnycmdSs_Us7tNRJyAiQvM8R1aeB8USUzA/export?format=pdf)
+          | [DOCX](https://docs.google.com/document/d/126VyRZ5PdNnycmdSs_Us7tNRJyAiQvM8R1aeB8USUzA/export?format=doc)\n"
       CSD U1 Lesson 9 Overview:
         markdown: |
           # Übersicht
@@ -1066,6 +1075,11 @@ de-DE:
           * [Apps und Problemlösungen - Projektleitfaden](https://docs.google.com/document/d/1S7X-B2V1-WuT7ZLk1LAZRO1O5f4u7pgth4F7G00tGak/export?format=pdf)
           * [Apps und Problemlösungen - Peer Review](https://docs.google.com/document/d/13ekhJvtz1vovS6FhGBeDf1mcYFRyJe65bQdi8S8T9lU/export?format=pdf)
           * [Apps und Problemlösungen - Rubric](https://docs.google.com/document/d/1ix0LfgiVglwyC5Bb6PBlfBrnbeCOz2wPIPTgXu-qMZE/export?format=pdf)
+        teacher_markdown: |+
+          * [Apps und Problemlösung] (https://docs.google.com/document/d/1m8a9nnCGCriSvzWUr5Bh7Siod2iu2FdFQtMEz4TONuc/edit) — Beispiel eines Projekthandbuchs ([PDF](https://docs.google.com/document/d/1m8a9nnCGCriSvzWUr5Bh7Siod2iu2FdFQtMEz4TONuc/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1m8a9nnCGCriSvzWUr5Bh7Siod2iu2FdFQtMEz4TONuc/export?format=doc))
+          * [Apps und Problemlösung] ( https://docs.google.com/document/d/1hm5wWoVqDhFHbs4MfN0gcAnskZ5a6a5KdO7N3Y0GLoA/edit) — Beispiel eines Peer-Reviews ([PDF](https://docs.google.com/document/d/1hm5wWoVqDhFHbs4MfN0gcAnskZ5a6a5KdO7N3Y0GLoA/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1hm5wWoVqDhFHbs4MfN0gcAnskZ5a6a5KdO7N3Y0GLoA/export?format=doc))
+
+
       CSD U1 Test:
         title: Projektbezogener Test zum Thema Computer und Problemlösung
       CSD U1 Test PSP match:
@@ -1203,21 +1217,164 @@ de-DE:
         display_name: Hinzufügen von Bildern
       CSD U2 L1 Overview:
         content1: hier die Beschreibung
+        markdown: |
+          # Überblick
+
+          Diese Lektion behandelt die Zwecke, denen eine Website dienen kann, sowohl für die Benutzer als auch für die Ersteller. Der Kurs untersucht einige der am häufigsten genutzten Websites in den Vereinigten Staaten und erörtert, wie jede dieser Websites für Benutzer nützlich ist und wie sie auch ihren Erstellern dienen kann.
+          ## Wortschatz
+
+          * **Webseite** — Ein mit dem Internet verbundener Ort, der eine oder mehrere Seiten im World Wide Web verwaltet.
+
+
+          ## Ressourcen
+
+          * [Der Zweck von Webseiten — Leitfaden für Aktivitäten] (https://docs.google.com/document/d/16M-x8qNr0tdpfoHqyKo4sdbTzFOy5rKp8IBYmTQ7xkU/export?format=pdf)
+        teacher_markdown: "* [Der Zweck von Webseitens — Beispiel] (https://docs.google.com/document/d/1wgsW8XNLrXeelcoMLLjp0kVgiJ-pnBivrvfcyL06b-A/edit)
+          ([PDF](https://docs.google.com/document/d/1wgsW8XNLrXeelcoMLLjp0kVgiJ-pnBivrvfcyL06b-A/export?format=pdf)
+          | [DOCX](https://docs.google.com/document/d/1wgsW8XNLrXeelcoMLLjp0kVgiJ-pnBivrvfcyL06b-A/export?format=doc))\n"
       CSD U2 L2 Overview:
         content1: hier die Beschreibung
+        markdown: "# Überblick\n\nIn dieser Lektion werden Webseiten als persönliches
+          Ausdrucksmittel vorgestellt. In der Klasse werden zunächst verschiedene
+          Arten erörtert, wie Menschen ihre Interessen und Ideen zum Ausdruck bringen
+          und teilen. Anschließend werden einige Beispielwebseiten von Teilnehmern
+          aus einem früheren Kurs vorgestellt. Schließlich erstellt jeder ein Brainstorming
+          und teilt eine Liste mit Themen und Interessen, die aufgenommen werden sollen,
+          und erstellt so eine Quelle für die Entwicklung einer persönlichen Webseite
+          für den Rest der Lehreinheit. \n## Wortschatz\n\n* **Webseiteninhalt** —
+          Rohtext, Bilder und andere Elemente, die auf einer Webseite enthalten sind\n\n\n##
+          Ressourcen\n\n* [Persönlicher Webseiten Entwurf — Leitfaden für Aktivitäten]
+          (https://docs.google.com/document/d/1wnK0ntxFWvUyuEB6SksiTtUDqrEhZZn3VPLWynz-fV4/export?format=pdf)\n"
+        teacher_markdown: "* [Persönliche Webseitenskizze] (https://docs.google.com/document/d/10zHN3SErzKQLNEvr8e0j2UVjPCR5oSQdrfoFpbZbJiU/edit?usp=sharing)
+          - Beispiel ([PDF](https://docs.google.com/document/d/10zHN3SErzKQLNEvr8e0j2UVjPCR5oSQdrfoFpbZbJiU/export?format=pdf)
+          | [DOCX](https://docs.google.com/document/d/10zHN3SErzKQLNEvr8e0j2UVjPCR5oSQdrfoFpbZbJiU/export?format=doc))\n"
       CSD U2 L3 Overview:
         content1: hier die Beschreibung
+        markdown: |
+          # Überblick
+
+          In dieser Lektion wird HTML als Lösung für das Problem vorgestellt, wie sowohl der Inhalt als auch die Struktur einer Webseite an einen Computer übermittelt werden können. Die Lektion beginnt mit einer kurzen offline Übung, in der die Herausforderungen einer effektiven Vermittlung der Struktur einer Webseite veranschaulicht werden. Die Klasse betrachtet eine HTML-Seite in Web Lab und erörtert, wie HTML-Tags zur Lösung dieses Problems beitragen. Anschließend werden mithilfe von HTML die ersten Webseiten der Lerneinheit geschrieben.
+          ## Wortschatz
+
+          * **HTML** - Hypertext Markup Language, eine Sprache, die zur Erstellung von Webseiten verwendet wird
+          * **HTML-Element** - Ein Teil einer Website, der durch ein Start-Tag gekennzeichnet und manchmal mit einem Endtag abgeschlossen wird
+          * **HTML-Tag** - Der spezielle Zeichensatz, der den Anfang und das Ende eines HTML-Elements und den Typ dieses Elements angibt
+          * **Webseiteninhalt* * - Der Rohtext, die Bilder und andere Elemente, die in einer Webseite enthalten sind
+          * **Webseitenstruktur** - Der Zweck verschiedener Inhalte auf einer Webseite, der dem Computer hilft, zu bestimmen, wie dieser Inhalt angezeigt werden soll
+
+          ## Eingeführter Code
+
+          * **[HTML](//studio.code.org/docs/weblab/html/) ** - `<html></html>`
+          * **[Doctype](//studio.code.org/docs/weblab/doctype/) ** -` <!DOCTYPE>`
+          * **[Paragraph](//studio.code.org/docs/WebLab/P/) ** -`<p></p>`
+          * **[Body](// studio.code.org/docs/weblab/body/** -`<body></body>)`
+          ** -[Head]`` ** (//studio.code.org/docs/weblab/head/) ** - `<head></head>`
       CSD U2 L4 Overview:
         content1: hier die Beschreibung
+        markdown: |+
+          # Überblick
+
+          Diese Lektion setzt die Einführung in HTML-Tags fort, diesmal mit Überschriften. Die Klasse übt die Verwendung von Überschriften-Tags zur Erstellung von Seiten- und Abschnittstiteln und lernt, wie die verschiedenen Überschriftenelemente standardmäßig angezeigt werden. Als Nächstes plant die Klasse, wie die Inhalte auf den persönlichen Webseiten, die in der gesamten Einheit aufgebaut werden, organisiert werden sollen, und beginnt mit der ersten Seite des Projekts.
+          ## Wortschatz
+
+          * **Überschrift** — Ein Titel oder eine Zusammenfassung für ein Dokument oder einen Abschnitt eines Dokuments.
+
+          ## Code eingeführt
+
+          * **[Heading](//studio.code.org/docs/weblab/h/) ** - ``<h1></h1>
+
       CSD U2 L5 Overview:
         content1: hier die Beschreibung
+        markdown: |
+          # Überblick
+
+          In dieser Lektion geht es einen Schritt zurück von der Erstellung der persönlichen Website, um über persönliche Informationen zu sprechen, die Menschen gerne digital teilen. Der Kurs beginnt damit, zu besprechen, welche Arten von Informationen sich gut mit anderen teilen lassen. Anschließend werden einige Beispielseiten in sozialen Netzwerken untersucht, um herauszufinden, welche Arten von persönlichen Informationen absichtlich oder unbeabsichtigt weitergegeben werden könnten. Schließlich erarbeitet der Kurs eine Reihe von Richtlinien, die bei der Online-Bereitstellung von Informationen zu beachten sind.
+          ## Wortschatz
+
+          * **Digitaler Fußabdruck** — Die gesammelten Informationen über eine Person auf mehreren Websites im Internet.
+
+
+          ## Ressourcen
+
+          * [Wann ist deine Privatsphäre wichtig? - Leitfaden für Aktivitäten] (https://docs.google.com/document/d/1SmCceDGntI-rJI40dTR7rA0Tfa0cH1OQoRNNxPEmXG0/export?format=pdf)
+          * [Social Media Ermittler — Leitfaden für Aktivitäten] (https://docs.google.com/document/d/1A9q31rwrBA7tZZcZ3KZqjMb30UncM-eycwMvYgj9os4/export?format=pdf)
+        teacher_markdown: |+
+          * [Wann ist deine Privatsphäre wichtig?] (https://docs.google.com/document/d/1Lv8C4QK9HhPXguPoD6ygaaTs4a7YxMefaKojb_W5rLg/edit) — Beispiel für einen Aktivitätsleitfaden ([PDF](https://docs.google.com/document/d/1Lv8C4QK9HhPXguPoD6ygaaTs4a7YxMefaKojb_W5rLg/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1Lv8C4QK9HhPXguPoD6ygaaTs4a7YxMefaKojb_W5rLg/export?format=doc))
+          * [Social Media Ermittler] (https://docs.google.com/document/d/1wbHlcYanBasUsIYjyCX6NytORAZxac-R0xSSOVU-DNA/) — Aktivität Leitfaden ([PDF](https://docs.google.com/document/d/1wbHlcYanBasUsIYjyCX6NytORAZxac-R0xSSOVU-DNA/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1wbHlcYanBasUsIYjyCX6NytORAZxac-R0xSSOVU-DNA/export?format=doc))
+
       CSD U2 L6 Overview:
         content1: hier die Beschreibung
+        markdown: |+
+          # Überblick
+
+          In dieser Lektion werden geordnete und ungeordnete Listen und die zugehörigen  &lt;ul&gt;, &lt;ol&gt;, und &lt;li&gt; HTML-Tags vorgestellt. Die Klasse übt die Verwendung der Tags und kehrt dann zum Projekt der persönlichen Webseite zurück, um eine neue HTML-Seite hinzuzufügen, die die neuen Tags enthält.
+
+          ## Code eingeführt
+
+
+          * ** [Ungeordnete Liste] (//studio.code.org/docs/weblab/ul/) ** - `<ul></ul>`
+          * ** [Listenelement] (//studio.code.org/docs/weblab/li/) ** - `<li></li>`
+          * ** [Bestellte Liste] (//studio.code.org/docs/weblab/ol/) ** - `<ol></ol>`
+
       CSD U2 L7 Overview:
+        markdown: |
+          # Überblick
+
+          In dieser Lektion erfährst du, wie du von anderen erstellte Inhalte auf einer Website verwendest und dabei die Rechte des ursprünglichen Erstellers dieser Inhalte respektierst. Nach dem ersten Studium der Creative Commons-Lizenzierung lernt die Klasse, wie man Bilder zu Webseiten hinzufügt und dabei die richtige Quellenangabe angibt.
+
+          ## Wortschatz
+
+          * **Zitieren** — Ein Zitat aus oder ein Verweis auf ein Buch, eine Arbeit oder einen Autor, insbesondere in einer wissenschaftlichen Arbeit.
+          * **Urheberrecht** — das ausschließliche Recht, das einem Urheber oder einem Rechtsnachfolger eingeräumt wird, literarisches, künstlerisches oder musikalisches Material zu drucken, zu veröffentlichen, aufzuführen, zu verfilmen oder aufzunehmen und andere zu ermächtigen, dasselbe zu tun.
+          * **Creative Commons** — Eine öffentliche Urheberrechtslizenz, die die kostenlose Verbreitung eines ansonsten urheberrechtlich geschützten Werks ermöglicht. Eine CC-Lizenz wird verwendet, wenn ein Autor Personen das Recht geben möchte, ein von ihnen geschaffenes Werk zu teilen, zu verwenden und darauf aufzubauen.
+          * **Geistiges Eigentum** — Ein Werk oder eine Erfindung, die das Ergebnis von Kreativität ist, z. B. ein Manuskript oder ein Design, an dem man Rechte hat und für die man ein Patent, ein Urheberrecht, eine Marke usw. beantragen kann.
+
+          ## Eingeführter Code
+
+          * **[Image](//studio.code.org/docs/weblab/img/) ** -<img />`
+
+          # # Ressourcen
+
+          * [Überblick über Creative Commons] (https://www.youtube.com/watch?v=HKfqoPYJdVc) — Video
+          * [Deine Arbeit lizenzieren — Leitfaden für Aktivitäten] (https://docs.google.com/document/d/1twenNK2xrjc4bhIXuKfMXFA2yocLsR7MK8ZPvi-HckI/export?format=pdf)
         teacher_markdown: "* [Lizenzierung Deiner Arbeit - Aktivitätenleitfadenbeispiel]
           (https://docs.google.com/document/d/1NaoTAfCTdaMZ-CPlK3ii7gqvK674d320tPvQyz-2t9o/export?format=pdf)\n"
       CSD U2 Lesson 6 Overview:
         content1: hier die Beschreibung
+        markdown: |
+          # Überblick
+
+          In dieser Lektion werden häufig auftretende Probleme behandelt, die beim Entwerfen von Webseiten in HTML auftreten. In diesem Kurs werden Fehler in einer Folge immer komplexer werdender Webseiten in Code Studio korrigiert und die Bedeutung von Kommentaren, Leerzeichen und Einrückungen als Hilfsmittel zur besseren Lesbarkeit von Webseiten vermittelt.
+          ## Wortschatz
+
+          * **Bug** — Teil eines Programms, das nicht richtig funktioniert.
+          * **Kommentar** — Ein Kommentar ist eine vom Programmierer lesbare Notiz im Quellcode eines Computerprogramms.
+          * **Debugging** — Finden und Beheben von Problemen in Ihrem Algorithmus oder Programm.
+          * **Einrückung** — Die Platzierung von Text weiter rechts oder links, um ihn vom umgebenden Text zu trennen und so die Struktur des Programms besser zu vermitteln.
+          * **Leerraum** — Leerraum bezieht sich auf jedes Zeichen, das als Leerzeichen auf dem Bildschirm angezeigt wird, z. B. ein Leerzeichen, ein Tabulator oder eine neue Zeile. Leerzeichen helfen dabei, verschiedene Teile des Dokuments voneinander zu trennen, um das Lesen zu erleichtern.
+
+          ## Code eingeführt
+
+          * **[Comment](//studio.code.org/docs/weblab/comment/)** - `<!-- -->`
+      CSD U2 Lesson 9 Overview:
+        markdown: "# Überblick\n\nIn dieser Lektion werden Hyperlinks behandelt, die
+          es Webentwicklern ermöglichen, Seiten zu einer Website zu verbinden. In
+          der Klasse werden alle vorherigen Seiten zu einem Projekt verknüpft und
+          für jede Seite Navigationsleisten erstellt, bevor die gesamte Website im
+          Web veröffentlicht wird.  \n## Wortschatz\n\n* **Hyperlink** — Ein Link
+          von einer HTML-Datei zu einer anderen Stelle oder Datei, der normalerweise
+          durch Klicken auf ein markiertes Wort oder Bild auf dem Bildschirm aktiviert
+          wird.\n\n## Code eingeführt\n\n* **[Hyperlink](//studio.code.org/docs/WebLab/A/)
+          ** — `` ## Ressourcen * [Persönliche Webseite — Projekthandbuch] (https://docs.google.com/document/d/1sPdFBq1nrwG9742tu3sXQ93xWbCWmNdCgo0dv3eYfXY/export?format=pdf)**
+          - `<a></a>`\n\n\n\n\n* [Persönliche Website — Bewertung durch Fachkollegen]
+          (https://docs.google.com/document/d/1B5QXF0ASAy3vHcFQilQo3Q3J3GiiuQxBxnZFg8WDYaw/export?format=pdf)
+          * [Persönliche Website — Rubrik] (https://docs.google.com/document/d/16ddR5r96qvv_Ti5gWN-AcjvCx0-SP6B7shSp-caKuDI/export?format=pdf)\n\n"
+        teacher_markdown: |+
+          * [Persönliche Webseite] (https://docs.google.com/document/d/1mPwjeBMewyblcHU1fGLQD-og5f2U-cBwYduBG55TgIY/edit) - Beispiel eines Projekthandbuchs ([PDF](https://docs.google.com/document/d/1mPwjeBMewyblcHU1fGLQD-og5f2U-cBwYduBG55TgIY/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1mPwjeBMewyblcHU1fGLQD-og5f2U-cBwYduBG55TgIY/export?format=doc))
+          * [Persönliche Webseite] ( https://docs.google.com/document/d/1OXAJvxuygTJyfvSUnrajhEbC34O_J26VQswwPsfnLZw/edit) — Beispiel eines Peer-Reviews ([PDF](https://docs.google.com/document/d/1OXAJvxuygTJyfvSUnrajhEbC34O_J26VQswwPsfnLZw/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1OXAJvxuygTJyfvSUnrajhEbC34O_J26VQswwPsfnLZw/export?format=doc)
+
+
+
       CSD U2 Test Classes:
         answers:
         - correct: true
@@ -3522,8 +3679,13 @@ de-DE:
           so viele ab, wie du kannst. Übe weiter mit Loops und dem Künstelr!
         display_name: Übung mit dem Künstler
       CourseE_Lesson_11_Artist_Practice_2022:
+        description: Bisher tolle Arbeit! Wähle deine nächste Aktivität. Schließe
+          so viele wie möglich ab. Übe weiter mit Funktionen und dem Künstler!
         display_name: Übung mit dem Künstler
       CourseE_Lesson_7_Artist_Practice_2022:
+        description: Bisher tolle Arbeit! Wähle deine nächste Aktivität. Schließe
+          so viele wie möglich ab. Übe weiter mit verschachtelten Schleifen und dem
+          Künstler!
         display_name: Übung mit dem Künstler
       CourseF_outbreak_story:
         content1: hier die Beschreibung
@@ -8233,12 +8395,12 @@ de-DE:
         markdown: |
           # Übersicht
 
-          Die Klasse arbeitet in Gruppen, um Aluminiumfolienboote zu entwerfen, die so viele Pennys wie möglich tragen.  Am Ende des Unterrichts reflektieren die Gruppen ihre Erfahrungen mit der Aktivität und stellen Verbindungen zu den Arten der Problemlösung her, die sie für den Rest des Kurses durchführen werden.
+          Die Klasse arbeitet in Gruppen, um Aluminiumfolienboote zu entwerfen, die so viele Cent-Stücke wie möglich tragen.  Am Ende des Unterrichts reflektieren die Gruppen ihre Erfahrungen mit der Aktivität und stellen Verbindungen zu den Arten der Problemlösung her, die sie für den Rest des Kurses durchführen werden.
 
 
-          ## Resourcen
+          ## Ressourcen
 
-          * [Aluminumfolienboote](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=pdf) - Activity Guide (copy as [MS Word](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=doc), [Google Doc](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/copy))
+          * [Aluminiumfolienboote](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=pdf) - Activity Guide (kopiere als [MS Word](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=doc), [Google Doc](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/copy))
         teacher_markdown: |-
           [key]
 
@@ -8265,6 +8427,9 @@ de-DE:
 
           ## Resourcen
           * [Problemlösung - Aktivitätsleitfaden](https://docs.google.com/document/d/1cym5lMuy41CbvXYe7F57N2XfI6Afp0hJsHovhR0GD2M/export?format=pdf)
+        teacher_markdown: "[Schlüssel zur Problemlösung] (https://docs.google.com/document/d/1hmbWujY2ii04XJRvoafIEtGyK-ZNBkJEtdSMFcXS5Uw/)
+          — Aktivitätsleitfaden[PDF]((https://docs.google.com/document/d/1hmbWujY2ii04XJRvoafIEtGyK-ZNBkJEtdSMFcXS5Uw/export?format=pdf)
+          | [DOCX](https://docs.google.com/document/d/1hmbWujY2ii04XJRvoafIEtGyK-ZNBkJEtdSMFcXS5Uw/export?format=doc))\n"
       Unit 1 Lesson 4 Overview:
         markdown: |
           # Übersicht
@@ -8290,6 +8455,41 @@ de-DE:
           * [Pixel Filtering](https://docs.google.com/document/d/1R92qKHBC8Bz3P3YXVSziyfpijJ0gMYob2j5RncWdWsA/edit?usp=sharing) - Activity Guide ([PDF](https://docs.google.com/document/d/1R92qKHBC8Bz3P3YXVSziyfpijJ0gMYob2j5RncWdWsA/export?format=pdf) | [DOCX](https://docs.google.com/document/d/1R92qKHBC8Bz3P3YXVSziyfpijJ0gMYob2j5RncWdWsA/export?format=doc))
         teacher_markdown: "* [Pixel Filterung](https://drive.google.com/open?id=1D3VELqNLAyrPeDl3o-PWxOPV8VD9bwdhoMIH0E9fLM8)
           - Answer Key"
+      Unit 2 Lesson 7 Overview:
+        markdown: |+
+          # Überblick
+
+          In dieser Lektion wird CSS als Möglichkeit vorgestellt, Elemente auf der Seite zu gestalten. Die Klasse lernt die grundlegende Syntax für CSS-Regelsätze und untersucht dann Eigenschaften, die sich auf HTML-Textelemente auswirken. Schließlich wendet jeder Textstile auf seine persönlichen Websites an.
+          ## Wortschatz
+
+          * **CSS** - CSS steht für Cascading Style Sheets. CSS ermöglicht es, jedes HTML-Element nach bestimmten Regeln zu stylen.
+          * **CSS-Selektor** — Gibt den Teil des Codes an, auf den der Stil angewendet werden soll.
+
+          ##eingeführter Code
+
+          *  **[Color](//studio.code.org/docs/weblab/color/)** - `color: value;`
+          *  **[Text Align](//studio.code.org/docs/weblab/text-align/)** - `text-align: value;`
+          *  **[Text Decoration](//studio.code.org/docs/weblab/Text-Dec/)** - `text-decoration: value;`
+          *  **[Font Family](//studio.code.org/docs/weblab/font-family/)** - `font-family:value;`
+          *  **[Font Size](//studio.code.org/docs/weblab/font-size/)** - `font-size:value;`
+
+      Unit 2 Lesson 8 Overview:
+        markdown: |+
+          # Überblick
+
+          Diese Lektion setzt die Einführung in CSS-Stileigenschaften fort und konzentriert sich diesmal mehr auf Nicht-Text-Elemente. Der Kurs beginnt mit der Untersuchung und Änderung der neuen CSS-Stile auf einer Desserts of the World-Seite. Anschließend wendet jeder dieses neue Wissen auf seine persönlichen Websites an.
+
+          ## Eingeführter Code
+
+          *  **[Background Color](//studio.code.org/docs/weblab/background-color/)** - `background-color: value;`
+          *  **[Float](//studio.code.org/docs/weblab/float/)** - `float: value;`
+          *  **[Margin](//studio.code.org/docs/weblab/margin/)** - `margin: value;`
+          *  **[Width](//studio.code.org/docs/weblab/width/)** - `width: value;`
+          *  **[Height](//studio.code.org/docs/weblab/height/)** - `height: value;`
+          *  **[Border Style](//studio.code.org/docs/weblab/border-style/)** - `border-style: value;`
+          *  **[Border Width](//studio.code.org/docs/weblab/border-width/)** - `border-width: value;`
+          *  **[Border Color](//studio.code.org/docs/weblab/border-color/)** - `border-color: value;`
+
       aiml-ch1-pulse-survey-q1_2021:
         answers:
         - correct: true
@@ -8984,15 +9184,17 @@ de-DE:
       courseC_multi_maze_debugging8_predict12022:
         answers:
         - correct: true
-          feedback: Nein. Scrat wird die Eichel nicht erreichen, da er sich in die
-            falsche Richtung dreht.
+          feedback: Falsch. Scrat wird die Eichel nicht erreichen, weil er in die
+            falsche Richtung abbiegt.
           text: Scrat wird die Eichel erreichen. Es gibt keine Fehler in diesem Code.
         - correct: true
+          feedback: Korrekt! Scrat biegt in die falsche Richtung ab und erreicht die
+            Eichel nicht.
           text: Scrat wird die Eichel nicht erreichen, da er sich in die falsche Richtung
             dreht.
         - correct: true
-          feedback: Nein. Scrat wird die Eichel nicht erreichen, da er sich in die
-            falsche Richtung dreht.
+          feedback: Falsch. Scrat wird die Eichel nicht erreichen, weil er in die
+            falsche Richtung abbiegt.
           text: Scrat wird die Eichel nicht erreichen, da es nicht genug 'vorwärts
             bewegen' Blöcke gibt.
         - correct: true
@@ -11657,6 +11859,8 @@ de-DE:
           aus.
         display_name: Projekt am Ende des Kurses
       courseF_EOC_examples2022_2022_pilot_-2022-2:
+        description: Du hast das Ende von Kurs F erreicht! Wähle ein Projekt aus,
+          das du erkunden möchtest.
         display_name: Projekt am Ende des Kurses
       courseF_EOC_examples_2021:
         description: Du hast das Ende von Kurs F erreicht! Wähle ein Projekt zum Weiterarbeiten
@@ -11762,6 +11966,9 @@ de-DE:
 
           '
       courseF_collector_samples_2022_pilot_-2022-2:
+        description: Du wirst ein Sammlerspiel erstellen. Bevor du beginnst, schaue
+          dir die folgenden Beispielprojekte an. Klicke auf\ "Fertig stellen\“, wenn
+          du bereit bist, mit der Planung deines eigenen Programms zu beginnen.
         display_name: Erkundung - Beispielprogramme
       courseF_events_freeplay:
         description: Jetzt kannst du das, was du gelernt hast, nutzen, um dein Projekt
@@ -11867,14 +12074,31 @@ de-DE:
           Variablen schreiben, die sich innerhalb des Programms *verändern*.</h3>
 
           '
+      courseF_groups_freeplay_2022_pilot_-2022-2:
+        description: Jetzt kannst du das, was du gelernt hast, anwenden, um zu machen,
+          was du willst! Erstelle ein interaktives Programm mit vielen Sprites!
+        display_name: Viele Sprites - Kostenloses Spiel
+      courseF_groups_practice_2022_pilot_-2022-2:
+        description: Bisher tolle Arbeit! Wähle deine nächste Aktivität. Schließe
+          so viele wie möglich ab. Übe weiter mit Events und Sprites-Gruppen!
+        display_name: Viele Sprites Übung
       courseF_groups_predict_multi_2022_pilot_-2022-2:
         answers:
         - correct: true
+          feedback: Korrekt! Das Sprite, auf das du klickst, wird größer.
+          text: Das Sprite, auf das du klickst, wird größer.
         - correct: true
+          feedback: Falsch. Das Sprite, auf das du klickst, wird größer.
+          text: Das Sprite, auf das du klickst, wird kleiner.
         - correct: true
+          feedback: Falsch. Das Sprite, auf das du klickst, wird größer.
+          text: Alle Sprites werden größer.
         - correct: true
+          feedback: Falsch. Das Sprite, auf das du klickst, wird größer.
+          text: Alle Sprites werden kleiner.
         questions:
-        - {}
+        - text: 'Mache eine Vorhersage: Was passiert, wenn du auf eines der Sprites
+            klickst, nachdem du auf Ausführen geklickt hast?'
       courseF_intro_apps:
         description: Willkommen bei den Grundlagen der Informatik! Diese Projekte
           wurden alle mit Sprite Lab erstellt. Probiere sie jetzt aus, um zu sehen,
@@ -11889,6 +12113,10 @@ de-DE:
           Diese Aktivität soll mit dem Arbeitsblatt \"Apps erforschen\" koordiniert
           werden, das im [Unterrichtsplan](.././) zu finden ist."
       courseF_intro_apps2022_2022_pilot_-2022-2:
+        description: Diese Projekte wurden alle mit Sprite Lab erstellt. Probiere
+          sie jetzt aus, um zu sehen, was möglich ist. Am Ende dieses Kurses wirst
+          du in der Lage sein, deine eigenen Projekte wie diese zu erstellen... und
+          mehr!
         display_name: Sprite Lab-Apps
       courseF_labels_predict_multi:
         answers:
@@ -16475,9 +16703,9 @@ de-DE:
       csf_be_a_super_digital_citizen2022:
         content1: hier die Beschreibung
         markdown: |-
-          # SUPERINTERNETNUTZER sind aufmerksam
+          # Super Internet Nutzer sind aufmerksam
 
-          ## Was kann man tun, wenn man im Internet auf Gemeinheiten trifft?
+          ## Was kann man tun, wenn man im Internet auf Cybermobbing trifft?
       csf_be_a_super_digital_citizen_2021:
         content1: hier die Beschreibung
         markdown: |-

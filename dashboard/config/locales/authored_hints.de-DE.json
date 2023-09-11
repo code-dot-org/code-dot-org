@@ -5439,7 +5439,7 @@
           "courseC_artist_loops7a_a": "Ein Kreis hat 360 Grad. Multipliziere die Gradzahl in deiner Drehung mit der Anzahl deiner Wiederholungen! Ergibt das 360? Prüfe die Drehbewegung, um zu sehen, ob es passt!"
         },
         "courseC_artist_loops7a2022": {
-          "courseC_artist_loops7a_a": "Ein Vollwinkel hat die Größe von 360 Grad. Multipliziere die Gradzahl in der Runde mit der Anzahl der Wiederholungen. Ist das Ergebnis 360? Überprüfe die vorgeschlagenen Rotationen, um zu sehen, ob diese funktionieren!\n\nHier sind einige Beispiele, um dir den Einstieg zu erleichtern:\n\n— Versuche es mit einer 60-Grad-Drehung, die sechsmal ausgeführt wird.\n— Versuche es mit einer 45-Grad-Drehung, die achtmal ausgeführt wird.\n— Versuche es mit einer 30-Grad-Drehung, die 12-mal ausgeführt wird."
+          "courseC_artist_loops7a_a": "Ein Kreis hat 360 Grad. Multipliziere die Grade in deinem Zug mit der Anzahl der Wiederholungen. Entspricht das 360?\nÜberprüfe die vorgeschlagenen Rotationen, um zu sehen, ob das funktioniert!\n\nHier sind einige Beispiele, um Ihnen den Einstieg zu erleichtern:\n\n-   Versuchen Sie es 6 Mal mit einer 60-Grad-Drehung.\n-   Versuchen Sie es mit einer 45-Grad-Drehung 8 Mal.\n-   Versuchen Sie es 12 Mal mit einer 30-Grad-Drehung"
         },
         "courseC_artist_loops7a_2018": {
           "courseC_artist_loops7a_a": "Ein Kreis hat 360 Grad. Multipliziere die Gradzahl in deiner Drehung mit der Anzahl deiner Wiederholungen! Ergibt das 360? Prüfe die Drehbewegung, um zu sehen, ob es passt!"
@@ -7571,6 +7571,7 @@
           "courseD_artist_nestedLoops5_b": "Um einen Kreis zu zeichnen, musst du eine Wiederholen-Schleife mit 360 Wiederholungen programmieren. Bewege dich innerhalb der Schleife um 1 Pixel vorwärts und drehe dich um 1 Grad."
         },
         "courseD_artist_nestedLoops52022": {
+          "courseD_artist_nestedLoops5_a": "Um das ganz einfach zu machen:\n\n- Wiederhole 4 Mal\n  - einen Kreis bilden\n  - 50 Pixel vorwärts springen\n  - um 90 Grad nach rechts drehen",
           "courseD_artist_nestedLoops5_b": "Um einen Kreis zu zeichnen, musst du eine Wiederholen-Schleife mit 360 Wiederholungen programmieren. Bewege dich innerhalb der Schleife um 1 Pixel vorwärts und drehe dich um 1 Grad."
         },
         "courseD_artist_nestedLoops5_2018": {
@@ -7594,7 +7595,8 @@
           "courseD_artist_nestedLoops7_b": "Verwende eine geschachtelte Schleife, wobei die innere Schleife der Code für ein Quadrat ist.\n\n-   6 Mal wiederholen\n    -   Quadrat zeichnen\n    -   um **50 Pixel** vorwärts springen\n    -   um **60 Grad** drehen"
         },
         "courseD_artist_nestedLoops72022": {
-          "courseD_artist_nestedLoops7_a": "Hier musst du geschachtelte Schleifen verwenden. Verwende zunächst eine Schleife, um ein Quadrat zu zeichnen. Was wird die äußere Schleife bewirken, wenn die innere Schleife ein Quadrat zeichnet?"
+          "courseD_artist_nestedLoops7_a": "Hier musst du geschachtelte Schleifen verwenden. Verwende zunächst eine Schleife, um ein Quadrat zu zeichnen. Was wird die äußere Schleife bewirken, wenn die innere Schleife ein Quadrat zeichnet?",
+          "courseD_artist_nestedLoops7_b": "Verwende eine verschachtelte Schleife, wobei die innere Schleife der Code für ein Quadrat ist.\n\n- Wiederhole 6 Mal \n  - ein Quadrat bilden\n  - um **50 Pixel** vorwärts springen\n  - **60 Grad** drehen\n"
         },
         "courseD_artist_nestedLoops7_2018": {
           "courseD_artist_nestedLoops7_a": "Hier musst du geschachtelte Schleifen verwenden. Verwende zunächst eine Schleife, um ein Quadrat zu zeichnen. Was wird die äußere Schleife bewirken, wenn die innere Schleife ein Quadrat zeichnet?",
@@ -7619,7 +7621,8 @@
         },
         "courseD_artist_nestedLoops82022": {
           "courseD_artist_nestedLoops8_a": "Um 8 Sechsecke in deiner Zeichnung zu haben, musst du zwischen jedem von ihnen eine Drehung um **45 Grad** einprogrammieren. Warum ist das so? Weil 360 Grad (eine volle Umdrehung) geteilt durch 8 (die Anzahl der Sechsecke) 45 Grad ergibt.\n",
-          "courseD_artist_nestedLoops8_b": "Wenn du nicht weiterkommst, schau dir noch einmal die letzte Aufgabe an und ändere dann die Dinge, die anders sind."
+          "courseD_artist_nestedLoops8_b": "Wenn du nicht weiterkommst, schau dir noch einmal die letzte Aufgabe an und ändere dann die Dinge, die anders sind.",
+          "courseD_artist_nestedLoops8_c": "Verwende eine verschachtelte Schleife:\n\n  - Wiederhole 8 Mal\n    - ein Sechseck zeichnen\n    - 50 Pixel vorwärts springen\n    - 45 Grad nach rechts drehen"
         },
         "courseD_artist_nestedLoops8_2018": {
           "courseD_artist_nestedLoops8_a": "Um 8 Sechsecke in deiner Zeichnung zu haben, musst du zwischen jedem von ihnen eine Drehung um **45 Grad** einprogrammieren. Warum ist das so? Weil 360 Grad (eine volle Umdrehung) geteilt durch 8 (die Anzahl der Sechsecke) 45 Grad ergibt.",
@@ -7648,7 +7651,8 @@
         },
         "courseD_artist_nestedLoops92022": {
           "courseD_artist_nestedLoops9_a": "Beginne wie zuvor mit einer geschachtelten Schleife. Programmiere es dieses Mal jedoch mit Quadraten.",
-          "courseD_artist_nestedLoops9_b": "Füge einen zweiten Satz geschachtelter Schleifen am Ende der ersten Ausführung hinzu. Verwende diesmal aber Dreiecke."
+          "courseD_artist_nestedLoops9_b": "Füge einen zweiten Satz geschachtelter Schleifen am Ende der ersten Ausführung hinzu. Verwende diesmal aber Dreiecke.",
+          "courseD_artist_nestedLoops9_c": "Verwende zwei verschachtelte Schleifen:\n  - Wiederhole 8 Mal\n    - ein Quadrat zeichnen\n    - 50 Pixel vorwärts springen\n    - 45 Grad nach rechts drehen\n  - Wiederhole 8 Mal\n    - ein Dreieck zeichnen\n    - 50 Pixel vorwärts springen\n    - um 45 Grad nach rechts abbiegen"
         },
         "courseD_artist_nestedLoops9_2018": {
           "courseD_artist_nestedLoops9_a": "Beginne wie zuvor mit einer geschachtelten Schleife. Programmiere es dieses Mal jedoch mit Quadraten.",
@@ -10225,7 +10229,7 @@
         "courseE_artist_functions2": {
           "courseD_artist_functions2_a": "Dein Programm sollte: \n\n-   die Funktion verwenden \n-   um 100 + 75 Pixel vorwärts bewegen\n-   die Funktion verwenden",
           "courseD_artist_functions2_b": "Die Funktion, die du schreibst, sollte nicht dein ganzes Programm enthalten, sondern nur den Teil, der ein Quadrat mit 100 Pixel langen Seiten zeichnet.",
-          "courseD_artist_functions2_c": "Verwende den grünen Baustein `ein Quadrat zeichnen`, um deine Funktion unter dem Baustein `wenn ausgeführt wird` aufzurufen. Sonst wird der Code in deiner Funktion nicht ausgeführt. \n\n[blockly block][0]"
+          "courseD_artist_functions2_c": "Verwende den grünen Baustein `ein Quadrat zeichnen`, um deine Funktion unter dem Baustein `wenn ausgeführt wird` aufzurufen. Sonst wird der Code in deiner Funktion nicht ausgeführt. \n\n<xml><block type=\"procedures_callnoreturn\" limit=\"2\"><mutation name=\"draw a square\"/></block></xml>"
         },
         "courseE_artist_functions22022": {
           "courseD_artist_functions2_a": "Dein Programm sollte:\n\n-   Deine Funktion benutzen\n-   Sich um 100 + 75 Pixels vorwärts bewegen\n-   Deine Funktionen nochmals benutzen",
@@ -12221,6 +12225,14 @@
           "print_score_challenge_hint": "Du kannst anderen Text wie folgt mit deiner Variablen kombinieren:\n\n<xml><block type=\"gamelab_printText\">\n  <value name=\"TEXT\">\n    <block type=\"gamelab_textJoin\">\n      <field name=\"TEXT1\">You got </field>\n      <value name=\"TEXT2\">\n        <block type=\"gamelab_textVariableJoin\">\n          <field name=\"VAR\">score</field>\n          <value name=\"TEXT2\">\n            <block type=\"text\">\n              <field name=\"TEXT\"> points!</field>\n            </block>\n          </value>\n        </block>\n      </value>\n    </block>\n  </value>\n</block></xml>",
           "print_variable_hint": "Du kannst eine Variable wie folgt setzen:\n\n<xml><block type=\"gamelab_printText\">\n  <value name=\"TEXT\">\n    <block type=\"variables_get\">\n      <field name=\"VAR\">score</field>\n    </block>\n  </value>\n</block></xml>"
         },
+        "courseF_collector_freeplay_-2022-2": {
+          "collector_background_block_hint": "Gib deinem Spiel eine Einstellung, indem du einen `Wähle Hintergrund`-Block hinzufügst.\n\n<xml>\n<block type=\"when_run\" deletable=\"false\">\n  <next>\n    <block type=\"gamelab_setBackgroundImageAs\">\n      <field name=\"IMG\">\"rainbow_1\"</field>\n    </block>\n  </next>\n</block>\n</xml>",
+          "collector_score_block_hint": "Möchtest du, dass sich dein Punktestand nach jedem Punkt ändert? Jedes Mal, wenn dein Sprite ein Objekt sammelt, lass es den Punktestand aktualisieren und es dann sagen, indem du unter dem Ereignis einen „Sag“ -Block anfügst.\n\n<xml>\n<block type=\"gamelab_checkTouching\">\n  <field name=\"CONDITION\">\"when\"</field>\n  <value name=\"SPRITE1\">\n    <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n      <field name=\"ANIMATION\">\"bunny2_1\"</field>\n    </block>\n  </value>\n  <value name=\"SPRITE2\">\n    <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n      <field name=\"ANIMATION\">\"carrot_1\"</field>\n    </block>\n  </value>\n  <next>\n    <block type=\"gamelab_destroy\">\n      <value name=\"THIS\">\n        <block type=\"gamelab_objectSpritePointer\"></block>\n      </value>\n      <next>\n        <block type=\"math_change\">\n          <field name=\"VAR\">score</field>\n          <value name=\"DELTA\">\n            <block type=\"math_number\">\n              <field name=\"NUM\">1</field>\n            </block>\n          </value>\n          <next>\n            <block type=\"gamelab_spriteSayTime\">\n              <value name=\"SPRITE\">\n                <block type=\"gamelab_subjectSpritePointer\"></block>\n              </value>\n              <value name=\"TEXT1\">\n                <block type=\"variables_get\">\n                  <field name=\"VAR\">score</field>\n                </block>\n              </value>\n              <value name=\"NUM\">\n                <block type=\"math_number\">\n                  <field name=\"NUM\">1</field>\n                </block>\n              </value>\n            </block>\n          </next>\n        </block>\n      </next>\n    </block>\n  </next>\n</block>\n</xml>",
+          "collector_sound_block_hint": "Füge jedes Mal, wenn du einen Gegenstand sammelst, einen Sound hinzu, indem du einen `Sound abspielen`-Block unter einem `Wenn Sprites kollidieren`-Event verbindest. \n\n<xml>\n<block type=\"gamelab_checkTouching\">\n  <field name=\"CONDITION\">\"when\"</field>\n  <value name=\"SPRITE1\">\n    <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n      <field name=\"ANIMATION\">\"bunny2_1\"</field>\n    </block>\n  </value>\n  <value name=\"SPRITE2\">\n    <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n      <field name=\"ANIMATION\">\"carrot_1\"</field>\n    </block>\n  </value>\n  <next>\n    <block type=\"gamelab_playSound\">\n      <field name=\"SOUND\">Choose</field>\n    </block>\n  </next>\n</block>\n</xml>"
+        },
+        "courseF_collector_score_-2022-2": {
+          "collector_time_events": "Jetzt sollte dein Programm zwei `at seconds`-Ereignisblöcke haben. Das erste Event wird verwendet, um mehr Sprites zu erstellen und das zweite Event beendet das Spiel.\n\n<xml><block type=\"gamelab_atTime\">\n  <field name=\"UNIT\">\"seconds\"</field>\n  <value name=\"N\">\n    <block type=\"math_number\">\n      <field name=\"NUM\">3</field>\n    </block>\n  </value>\n</block><block type=\"gamelab_atTime\">\n  <field name=\"UNIT\">\"seconds\"</field>\n  <value name=\"N\">\n    <block type=\"math_number\">\n      <field name=\"NUM\">10</field>\n    </block>\n  </value>\n</block></xml>"
+        },
         "courseF_events_choice_pufferfish": {
           "changeProp": "Du benötigst dafür auch diesen Block: \n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"creature_18_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">5</title>\n        </block>\n      </value>\n    </block></xml>"
         },
@@ -12232,6 +12244,24 @@
         },
         "courseF_events_key_-2022-2": {
           "changePropBlock": "Du benötigst dafür auch diesen Block: \n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"creature_10_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">???</title>\n        </block>\n      </value>\n    </block>\n    </xml>"
+        },
+        "courseF_groups_behaviors_-2022-2": {
+          "groups_behavior_hint": "Fügt einen `geklickt`-Block zu einem `Sprite startet`-Block hinzu. Vergiss nicht, ein Verhalten hinzuzufügen!\n\n<xml>\n\n</xml>",
+          "groups_click_hint": "Du benötigst einen Eventblock. Achte darauf, dass du deine Sprites anklickst, nachdem du auf „Ausführen!“ geklickt hast\n\n<xml>\n  <block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n        <title name=\"ANIMATION\">\"face_croissant_1\"</title>\n      </block>\n    </value>\n  </block>\n</xml>"
+        },
+        "courseF_groups_costume_-2022-2": {
+          "groups_click_hint": "Du benötigst einen Eventblock. Achte darauf, dass du deine Sprites anklickst, nachdem du auf „Ausführen!“ geklickt hast\n\n<xml>\n  <block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n        <title name=\"ANIMATION\">\"face_cupcake_1\"</title>\n      </block>\n    </value>\n  </block>\n</xml>",
+          "groups_costume_hint": "Fügt einem `Kostüm`-Block einen `angeklickt`-Block hinzu. Du findest ihn im Event-Block!\n\n<xml>\n  <block type=\"gamelab_setAnimation\">\n      <title name=\"ANIMATION\">\"face_birthdaycake_1\"</title>\n    </block>\n</xml>"
+        },
+        "courseF_groups_say_-2022-2": {
+          "groups_click_hint": "Du benötigst einen Eventblock. Achte darauf, dass du deine Sprites anklickst, nachdem du auf „Ausführen!“ geklickt hast\n\n<xml>\n  <block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n        <title name=\"ANIMATION\">\"face_avocado_1\"</title>\n      </block>\n    </value>\n  </block>\n</xml>",
+          "groups_say_hint": "Fügt einen `geklickt`-Block zu einem `sag`-Block hinzu. Du findest ihn im Event-Block!\n\n<xml>\n  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Wow!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_clickedSpritePointer\"></block>\n    </value>\n  </block>\n</xml>"
+        },
+        "courseF_groups_size_-2022-2": {
+          "expand_click_event": "Klicke im Event-Block auf die Schaltfläche `+`. Verwende den Block im Inneren, um das Programm zu beenden.\n\n<xml>\n  <block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_strawberry_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_changePropBy\">\n        <title name=\"PROPERTY\">\"scale\"</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_clickedSpritePointer\"></block>\n        </value>\n        <value name=\"VAL\">\n          <block type=\"math_number\">\n            <title name=\"NUM\">10</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseF_groups_touch_-2022-2": {
+          "groups_touch_hint": "Du benötigst einen Eventblock. Warte, bis sich deine Sprites berühren, nachdem du auf „Ausführen!“ geklickt hast\n\n<xml><block type=\"gamelab_checkTouching\" miniflyout=\"open\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE1\">\n      <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n        <title name=\"ANIMATION\">\"face_salad_1\"</title>\n      </block>\n    </value>\n    <value name=\"SPRITE2\">\n      <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n        <title name=\"ANIMATION\">\"face_ramen_1\"</title>\n      </block>\n    </value>\n  </block></xml>"
         },
         "courseF_playlab_variables1a": {
           "courseF_playlab_variables1a_a": "Du musst dafür die Worte \"Was soll ich rufen?\" im grünen Block durch \"Tor!\" ersetzen."

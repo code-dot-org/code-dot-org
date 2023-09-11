@@ -3827,7 +3827,7 @@
             "name": "hole alle Kürbisse"
           },
           "pick along path": {
-            "name": "am Weg sammeln"
+            "name": "am Weg sammeln\n"
           },
           "pumpkin square": {
             "name": "Kürbis-Quadrat"
@@ -3928,7 +3928,7 @@
             "name": "Landwirtschaftliche Erzeugnisse holen"
           },
           "pick along path": {
-            "name": "am Weg sammeln"
+            "name": "am Weg sammeln\n"
           },
           "pumpkin square": {
             "name": "Kürbis-Quadrat"
@@ -4001,7 +4001,7 @@
             "name": "Salat-Treppe"
           },
           "pick along path": {
-            "name": "am Weg sammeln"
+            "name": "am Weg sammeln\n"
           }
         },
         "courseE_farmer_functions1a2022": {
@@ -4156,7 +4156,7 @@
             "name": "hole alle Kürbisse"
           },
           "pick along path": {
-            "name": "am Weg sammeln"
+            "name": "am Weg sammeln\n"
           }
         },
         "courseE_farmer_functions3c2022": {
