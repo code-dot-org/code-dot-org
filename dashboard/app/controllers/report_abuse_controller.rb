@@ -60,9 +60,8 @@ class ReportAbuseController < ApplicationController
 
       send_abuse_report(params[:name], params[:email], params[:age], params[:abuse_url])
       update_abuse_score
-
-      redirect_to "https://support.code.org"
     end
+    redirect_to "https://support.code.org"
   end
 
   def report_abuse_form
