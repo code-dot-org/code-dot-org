@@ -102,7 +102,7 @@ class Level < ApplicationRecord
 
   # https://github.com/rails/rails/issues/3508#issuecomment-29858772
   # Include type in serialization.
-  def serializable_hash(options=nil)
+  def serializable_hash(options = nil)
     super.merge 'type' => type
   end
 
@@ -428,7 +428,7 @@ class Level < ApplicationRecord
     end
   end
 
-  def log_changes(user=nil)
+  def log_changes(user = nil)
     return unless changed?
 
     log = JSON.parse(audit_log || "[]")

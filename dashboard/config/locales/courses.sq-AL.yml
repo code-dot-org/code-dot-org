@@ -8,8 +8,51 @@ sq:
         csp-2018:
           assignment_family_title: Ap® Parimet e Shkencave Kompjuterike
     resources:
+      all_code/csd/2021:
+        name: Të gjitha kodet
+      all_code_2/csd/2023:
+        name: Të gjitha kodet
+      all_code_5/csd/2022:
+        name: Të gjitha kodet
+      all_resources_1/csd/2021:
+        name: Të gjitha burimet
+      all_resources_2/csd/2023:
+        name: Të gjitha burimet
+      all_resources_7/csd/2022:
+        name: Të gjitha burimet
+      all_standards_1/csd/2021:
+        name: Të gjitha standardet
+      all_standards_2/csd/2023:
+        name: Të gjitha standardet
+      all_standards_7/csd/2022:
+        name: Të gjitha standardet
+      all_vocabulary_1/csd/2021:
+        name: Fjalori
+      all_vocabulary_2/csd/2023:
+        name: Fjalori
+      all_vocabulary_7/csd/2022:
+        name: Fjalori
+      csd_curriculum_guide/csd/2021:
+        name: Udhëzues për kurrikulën CSD
+      csd_curriculum_guide/csd/2022:
+        name: Udhëzues për kurrikulën CSD
+      csd_guide_to_debugging/csd/2021:
+        name: Udhëzues CSD për debugging
+      csd_guide_to_debugging/csd/2022:
+        name: Udhëzues CSD për debugging
+      csd_guide_to_differentiation/csd/2021:
+        name: Udhëzues CSD për diferencimin
+      csd_guide_to_differentiation/csd/2022:
+        name: Udhëzues CSD për diferencimin
+      csd_guide_to_differentiation_1/csd/2023:
+        name: Udhëzues CSD për diferencimin
+      csd_implementation_guide/csd/2021:
+        name: Udhëzues për zbatimin e CSD
       csd_implementation_guide/csd/2022:
+        name: Udhëzues për zbatimin e CSD
         url: https://docs.google.com/document/d/1vLGKcHC46jE6zZozBTmExOKdKwl544s0tbCds1LSg1Q/preview
+      csd_implementation_guide_1/csd/2023:
+        name: Udhëzues për zbatimin e CSD
       curriculum/csd/2017:
         name: Plani mësimor
       curriculum/csd/2018:
@@ -18,3 +61,11 @@ sq:
         name: Plani mësimor
       curriculum/csd/2020:
         name: Plani mësimor
+      teacher_forum/csd/2019:
+        name: Forumi i mësimdhënësve
+      teacher_forum/csd/2020:
+        name: Forumi i mësimdhënësve
+      teacher_forum_6/csd/2017:
+        name: Forumi i mësimdhënësve
+      teacher_forum_6/csd/2018:
+        name: Forumi i mësimdhënësve

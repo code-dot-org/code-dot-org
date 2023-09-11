@@ -3186,16 +3186,16 @@
           "description": "Usar variables junto con sugerencias."
         },
         "fc312ef1-6ea0-41a5-b112-b4e478cef7d3": {
-          "description": "Crea programas en el Laboratorio Sprite en los que los sprites se creen en grupos y se controlen individualmente mediante eventos."
+          "description": "Cree programas de Sprite Lab donde los sprites se creen en grupos y se controlen individualmente mediante eventos."
         },
         "29d1cbbf-aba5-45c8-ab1f-fc1ed266bb1b": {
-          "description": "Crea un juego de clicker en el Laboratorio de Sprite en el que los sprites pueden ser eliminados para obtener puntos"
+          "description": "Crea un juego de clicker en Sprite Lab donde los sprites se pueden eliminar para sumar puntos"
         },
         "9da7b378-c4e9-4184-b58a-61dfdad47357": {
-          "description": "Crea una variable que almacene información y cambie con el tiempo"
+          "description": "Crear una variable que almacene información y cambie a lo largo del tiempo"
         },
         "ac5f0f5b-6aa9-4732-930d-08d96a451b99": {
-          "description": "Crear su propio juego de coleccionista en el Laboratorio Sprite utilizando múltiples sprites que se controlan individualmente y variables para seguir la puntuación del jugador."
+          "description": "Crea su propio juego de coleccionista en Sprite Lab usando múltiples sprites que se controlan individualmente y variables para rastrear la puntuación del jugador"
         },
         "3606812b-a55f-4eb9-8a40-a9ca52df3726": {
           "description": "Hacer y probar una predicción modificando las variables de simulación."
@@ -3396,10 +3396,10 @@
           "description": "Acciones Usar variables para contener palabras y frases."
         },
         "4d6b0001-0d41-45ae-8061-1c493e6976ee": {
-          "description": "Crea un juego de clicker en el Laboratorio de Sprite en el que los sprites pueden ser eliminados para obtener puntos"
+          "description": "Crea un juego de clicker en Sprite Lab donde los sprites se pueden eliminar para sumar puntos"
         },
         "54f59612-1695-4ba2-bbf4-c03862b02924": {
-          "description": "Crea una variable que almacene información y cambie con el tiempo"
+          "description": "Crear una variable que almacene información y cambie a lo largo del tiempo"
         },
         "75953ae5-c4fa-40d3-85e1-deb508c32847": {
           "description": "Asignar valores a variables existentes."
