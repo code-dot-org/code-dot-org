@@ -29,14 +29,13 @@ class RubricsController < ApplicationController
   end
 
   # TODO (Kaitie): Update the update action
+  # TODO(KT) [AITT-163]: add notice that rubric was successfully updated
   # PATCH /rubrics/:rubric_id
   def update
     @rubric = Rubric.find(params[:id])
     @lesson = @rubric.lesson
-
     if @rubric.update(rubric_params)
       render json: @rubric
-      # KT NOTE FOR FUTURE WORK: tried redirect, couldn't get it to work.  Need to add notice. redirect_to edit_rubric_path(@rubric.id), notice: 'Rubric was successfully updated.'
     else
       render action: 'edit'
     end
@@ -49,11 +48,14 @@ class RubricsController < ApplicationController
       :level_id,
       :lesson_id,
       learning_goals_attributes: [
+        :id,
         :learning_goal,
         :ai_enabled,
         :position,
         {
           learning_goal_evidence_levels_attributes: [
+            :id,
+            :learning_goal_id,
             :understanding,
             :teacher_description,
             :ai_prompt

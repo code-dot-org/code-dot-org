@@ -6,10 +6,11 @@ export default function EvidenceDescriptionsRow({
   evidenceLabel,
   evidenceLevelData,
   updateLearningGoal,
+  learningGoalId,
 }) {
   const handleTeacherDescriptionChange = event => {
     updateLearningGoal(
-      evidenceLevelData.learningGoalId,
+      learningGoalId,
       'learningGoalEvidenceLevelsAttributes',
       event.target.value,
       evidenceLevelData.understanding,
@@ -19,7 +20,7 @@ export default function EvidenceDescriptionsRow({
 
   const handleAiPromptChange = event => {
     updateLearningGoal(
-      evidenceLevelData.learningGoalId,
+      learningGoalId,
       'learningGoalEvidenceLevelsAttributes',
       event.target.value,
       evidenceLevelData.understanding,
@@ -52,6 +53,7 @@ EvidenceDescriptionsRow.propTypes = {
   evidenceLabel: PropTypes.string,
   evidenceLevelData: PropTypes.object,
   updateLearningGoal: PropTypes.func,
+  learningGoalId: PropTypes.any, // TODO: decide if this is an int
 };
 
 const styles = {

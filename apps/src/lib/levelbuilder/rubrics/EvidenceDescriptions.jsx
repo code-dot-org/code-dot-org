@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {Heading6} from '@cdo/apps/componentLibrary/typography';
 import EvidenceDescriptionsRow from './EvidenceDescriptionsRow';
+import {UNDERSTANDING_LEVEL_STRINGS} from '@cdo/apps/templates/rubrics/rubricHelpers';
 
 export default function EvidenceDescriptions({
   learningGoalData,
@@ -20,35 +21,39 @@ export default function EvidenceDescriptions({
       </div>
       <EvidenceDescriptionsRow
         isAiEnabled={learningGoalData.aiEnabled}
-        evidenceLabel={'Extensive Evidence'}
+        evidenceLabel={UNDERSTANDING_LEVEL_STRINGS[3]}
         evidenceLevelData={
           learningGoalData.learningGoalEvidenceLevelsAttributes[3]
         }
         updateLearningGoal={updateLearningGoal}
+        learningGoalId={learningGoalData.id}
       />
       <EvidenceDescriptionsRow
         isAiEnabled={learningGoalData.aiEnabled}
-        evidenceLabel={'Convincing Evidence'}
+        evidenceLabel={UNDERSTANDING_LEVEL_STRINGS[2]}
         evidenceLevelData={
           learningGoalData.learningGoalEvidenceLevelsAttributes[2]
         }
         updateLearningGoal={updateLearningGoal}
+        learningGoalId={learningGoalData.id}
       />
       <EvidenceDescriptionsRow
         isAiEnabled={learningGoalData.aiEnabled}
-        evidenceLabel={'Limited Evidence'}
+        evidenceLabel={UNDERSTANDING_LEVEL_STRINGS[1]}
         evidenceLevelData={
           learningGoalData.learningGoalEvidenceLevelsAttributes[1]
         }
         updateLearningGoal={updateLearningGoal}
+        learningGoalId={learningGoalData.id}
       />
       <EvidenceDescriptionsRow
         isAiEnabled={learningGoalData.aiEnabled}
-        evidenceLabel={'No Evidence'}
+        evidenceLabel={UNDERSTANDING_LEVEL_STRINGS[0]}
         evidenceLevelData={
           learningGoalData.learningGoalEvidenceLevelsAttributes[0]
         }
         updateLearningGoal={updateLearningGoal}
+        learningGoalId={learningGoalData.id}
       />
     </div>
   );

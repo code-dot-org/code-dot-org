@@ -32,7 +32,7 @@ class Rubric < ApplicationRecord
     }
   end
 
-  accepts_nested_attributes_for :learning_goals
+  accepts_nested_attributes_for :learning_goals, allow_destroy: true
 
   def seeding_key(seed_context)
     my_lesson = seed_context.lessons.find {|l| l.id == lesson_id}

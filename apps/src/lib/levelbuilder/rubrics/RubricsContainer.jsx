@@ -4,7 +4,7 @@ import {BodyTwoText, Heading1} from '@cdo/apps/componentLibrary/typography';
 import Button from '@cdo/apps/templates/Button';
 import {navigateToHref} from '@cdo/apps/utils';
 import RubricEditor from './RubricEditor';
-import {snakeCase} from 'lodash';
+import {snakeCase, isNumber} from 'lodash';
 
 const RUBRIC_PATH = '/rubrics';
 
@@ -20,32 +20,32 @@ export default function RubricsContainer({
       ? rubric.learningGoals
       : [
           {
-            key: 'learningGoal-1',
-            id: 'learningGoal-1',
+            key: 'ui-1',
+            id: 'ui-1',
             learningGoal: '',
             aiEnabled: false,
             position: 1,
             learningGoalEvidenceLevelsAttributes: [
               {
-                learningGoalId: 'learningGoal-1',
+                // learningGoalId: 'learningGoal-1',
                 teacherDescription: '',
                 understanding: 0,
                 aiPrompt: '',
               },
               {
-                learningGoalId: 'learningGoal-1',
+                // learningGoalId: 'learningGoal-1',
                 teacherDescription: '',
                 understanding: 1,
                 aiPrompt: '',
               },
               {
-                learningGoalId: 'learningGoal-1',
+                // learningGoalId: 'learningGoal-1',
                 teacherDescription: '',
                 understanding: 2,
                 aiPrompt: '',
               },
               {
-                learningGoalId: 'learningGoal-1',
+                // learningGoalId: 'learningGoal-1',
                 teacherDescription: '',
                 understanding: 3,
                 aiPrompt: '',
@@ -66,7 +66,7 @@ export default function RubricsContainer({
       learningGoalNumber++;
     }
 
-    return `learningGoal-${learningGoalNumber}`;
+    return `ui-${learningGoalNumber}`;
   };
 
   const emptyKeyConcept = () => {
@@ -83,25 +83,25 @@ export default function RubricsContainer({
       position: nextPosition,
       learningGoalEvidenceLevelsAttributes: [
         {
-          learningGoalId: newId,
+          // learningGoalId: newId,
           teacherDescription: '',
           understanding: 0,
           aiPrompt: '',
         },
         {
-          learningGoalId: newId,
+          // learningGoalId: newId,
           teacherDescription: '',
           understanding: 1,
           aiPrompt: '',
         },
         {
-          learningGoalId: newId,
+          // learningGoalId: newId,
           teacherDescription: '',
           understanding: 2,
           aiPrompt: '',
         },
         {
-          learningGoalId: newId,
+          // learningGoalId: newId,
           teacherDescription: '',
           understanding: 3,
           aiPrompt: '',
@@ -133,7 +133,7 @@ export default function RubricsContainer({
     keyToUpdate,
     newValue,
     evidenceLevel,
-    descriptionType
+    evidenceLevelDescriptionField
   ) => {
     const newLearningGoalData = learningGoalList.map(learningGoal => {
       if (idToUpdate === learningGoal.id) {
@@ -142,7 +142,7 @@ export default function RubricsContainer({
             learningGoal.learningGoalEvidenceLevelsAttributes;
           newEvidenceLevels.find(
             level => level.understanding === evidenceLevel
-          )[descriptionType] = newValue;
+          )[evidenceLevelDescriptionField] = newValue;
           return {
             ...learningGoal,
             [keyToUpdate]: newEvidenceLevels,
@@ -176,8 +176,8 @@ export default function RubricsContainer({
       ? document.querySelector('meta[name="csrf-token"]').attributes['content']
           .value
       : null;
-
-    const learningGoalListAsData = transformKeys(learningGoalList);
+    let learningGoalListAsData = transformKeys(learningGoalList);
+    learningGoalListAsData = removeNewIds(learningGoalListAsData);
 
     const rubric_data = {
       levelId: selectedLevelForAssessment,
@@ -203,6 +203,16 @@ export default function RubricsContainer({
         console.error('Error saving rubric:' + err);
       });
   };
+
+  function removeNewIds(keyConceptArr) {
+    console.log(keyConceptArr);
+    keyConceptArr.forEach(keyConceptArr => {
+      if (!isNumber(keyConceptArr.id)) {
+        delete keyConceptArr.id;
+      }
+    });
+    return keyConceptArr;
+  }
 
   /**
    * Transforms the keys of an object from camelCase to snake_case.
