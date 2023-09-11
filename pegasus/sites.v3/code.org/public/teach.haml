@@ -99,10 +99,7 @@ theme: responsive_full_width
       =hoc_s(:teach_page_curriculum_heading)
     %p.centered
       =hoc_s(:teach_page_curriculum_desc)
-    - if request.language == "en"
-      = view :teach_page_curriculum_english
-    - else
-      = view :teach_page_curriculum_intl
+    = view :teach_page_curriculum_carousel
     %div.centered{style: "margin-top: 2rem"}
       %a.link-button.secondary{href: CDO.studio_url("/catalog")}
         =hoc_s(:call_to_action_see_full_curriculum_catalog)
