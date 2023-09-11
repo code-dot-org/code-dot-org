@@ -38,8 +38,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>Dance Party</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Codi una festa de ball per compartir amb amics i familiars. Amb Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez, música d'“Encanto” de Disney i molt més!</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px">Dance Party</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Code a Dance Party per compartir amb amics i familiars. Amb Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez, música d'“Encanto” de Disney i molt més!</div>
         <a class="linktag" id="danceparty" href="/dance" target="_blank"><button>Prova activitat</button></a>
     </span>
   </div>
@@ -53,7 +53,7 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Minecraft Hora del Codi</strong></h3>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px">Minecraft Hour of Code</h3>
         <div class="smalltext" style="text-align: left; margin-bottom: 10px">Minecraft està de tornada per l'Hora del Codi amb una nova activitat! Viatge a través de Minecraft amb codi.</div>
         <br>
         <a class="linktag" id="minecraft" href="/minecraft" target="_blank"><button>Prova activitat</button></a>
@@ -69,7 +69,7 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>AI per a Oceans</strong></h3>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px">AI for Oceans</h3>
         <div class="smalltext" style="text-align: left; margin-bottom: 10px">Ajuda A.I. a netejar els oceans entrenant per detectar escombraries! Obteniu informació sobre les dades d'entrenament i el biaix i com la IA pot abordar els problemes mundials. Visualitza el pla de la lliçó <a class="linktag" id="oceans-lesson" href="https://curriculum.code.org/hoc/plugged/9/" target="_blank"></a>.</div>
         <a class="linktag" id="aiforoceans" href="https://studio.code.org/s/oceans/lessons/1/levels/1" target="_blank"><button>Prova activitat</button></a>
     </span>
@@ -96,7 +96,7 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>Com funcionen els ordinadors</strong></h3>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px">Com funcionen els ordinadors</h3>
         <div class="smalltext" style="text-align: left; margin-bottom: 10px">Amb una introducció de Bill Gates, aquesta sèrie de sis vídeos curts explica què fa que un ordinador sigui un ordinador i com funcionen els circuits informàtics.</div>
         <a class="linktag" id="howcomputers" href="https://www.youtube.com/watch?v=OAx_6-wdslM&list=PLzdnOPI1iJNcsRwJhvksEo1tJqjIqWbN-" target="_blank"><button>Veure la sèrie de vídeos</button></a>
     </span>
@@ -111,8 +111,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Com funciona Internet</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">En aquesta sèrie de vuit vídeos curts, aprendràs com es va inventar Internet, què és l'HTML i com funcionen els motors de cerca com Google.</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px">Com funciona Internet</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">En aquesta sèrie de vuit vídeos curts, aprendràs com es va inventar Internet, què és HTML i com funcionen els motors de cerca com Google.</div>
         <a class="linktag" id="howinternet" href="https://www.youtube.com/watch?v=Dxcc6ycZ73M&list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7-" target="_blank"><button>Veure la sèrie de vídeos</button></a>
     </span>
   </div>
@@ -126,7 +126,7 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Com funciona la IA</strong></h3>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px">Com funciona AI</h3>
         <div class="smalltext" style="text-align: left; margin-bottom: 10px">Obteniu informació sobre com funciona la IA i per què importa amb aquesta sèrie de vídeos curts. Amb el CEO de Microsoft, Satya Nadella, i un divers elenc d'experts.</div>
         <a class="linktag" id="ai-videos" href="/ai#ai-videos" target="_blank"><button>Veure la sèrie de vídeos</button></a>
     </span>
@@ -136,7 +136,7 @@ theme: responsive
 
 <div style="clear: both"></div>
 
-<p>View more videos, including short inspirational videos featuring celebrities like Steph Curry and Shakira, <a class="linktag" id="all-videos" href="https://code.org/educate/resources/videos" target="_blank">here</a>.</p>
+<p>Vegeu més vídeos, inclosos vídeos curts d'inspiració amb celebritats com Steph Curry i Shakira, aquí. <a class="linktag" id="all-videos" href="https://code.org/educate/resources/videos" target="_blank"></a></p>
 <br>
 <p><a href="#top">[Tornar a dalt]</a></p>
 
@@ -147,7 +147,7 @@ theme: responsive
 <a id="express"></a>
 <h2>Aprèn els fonaments amb els nostres cursos auto-ritme</h2>
 <h3>Cursos d'iniciació a ritme propi</h3>
-<p>Una opció fantàstica per als estudiants que comencen pel seu compte. Aprendràs els fonaments de la informàtica amb arrossegar i deixar anar blocs. Crea els teus propis dibuixos i jocs. Nota: Els cursos exprés estan disponibles actualment en anglès, hindi, italià i espanyol. For other languages, we recommend our 20-hour <a class="linktag" id="accelerated" href="https://studio.code.org/s/20-hour" target="_blank">Accelerated Course</a>. Per veure què hi ha disponible en el vostre idioma, visiteu el nostre catàleg de cursos <a class="linktag" id="course-catalog" href="https://studio.code.org/courses" target="_blank"></a>.</p>
+<p>Una opció fantàstica per als estudiants que comencen pel seu compte. Aprendràs els fonaments de la informàtica amb arrossegar i deixar anar blocs. Crea els teus propis dibuixos i jocs. Nota: Els cursos exprés estan disponibles actualment en anglès, hindi, italià i espanyol. Per a altres idiomes, et recomanem el nostre Curs <a class="linktag" id="accelerated" href="https://studio.code.org/s/20-hour" target="_blank">Accelerat de 20 hores.</a> Per veure què hi ha disponible en el vostre idioma, visiteu el nostre catàleg de cursos <a class="linktag" id="course-catalog" href="https://studio.code.org/courses" target="_blank"></a>.</p>
 
 <br>
 
@@ -159,13 +159,13 @@ theme: responsive
 
 <div class="col-50" style="padding-right: 20px; padding-bottom:10px">
 
-<a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express-2019" target="_blank"><img src="/images/curriculum/course-tile-pre-reader-express.png" style="width: 100%" alt="Curs Pre-lector Express"></a><br><a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express-2019" target="_blank">Express Course for pre-readers</a>
+<a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express-2019" target="_blank"><img src="/images/curriculum/course-tile-pre-reader-express.png" style="width: 100%" alt="Curs Pre-lector Express"></a><br><a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express-2019" target="_blank">Curs Express per a prelectors</a>
 
 </div>
-<div style="clear: both"></div>
+<div style="clear: both; margin-bottom: 2rem"></div>
 
 <h3>Introduccions auto-ritme a Game Lab i App Lab</h3>
-<p>Adaptats dels nostres cursos CS Discoveries i CS Principis, aquests mòduls curts i auto-ritme són una gran manera d'aprendre conceptes que abasten tots els llenguatges i eines de programació. <i>Requires Code.org account to access</i>.</p>
+<p>Adaptats dels nostres cursos CS Discoveries i CS Principis, aquests mòduls curts i auto-ritme són una gran manera d'aprendre conceptes que abasten tots els llenguatges i eines de programació. <i>Requereix el compte de Code.org per accedir</i>.</p>
 
 <br>
 
@@ -176,8 +176,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>Introducció al Laboratori de Joc</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Programa d'animacions, art interactiu i jocs al Laboratori de Joc. Comenceu amb formes simples i acumuleu animacions i jocs basats en sprites més sofisticats.</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px">Iniciació a les animacions</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">del programa Game Lab, art interactiu i jocs en Game Lab. Comenceu amb formes simples i acumuleu animacions i jocs basats en sprites més sofisticats.</div>
         <a class="linktag" id="gamelab-intro" href="https://studio.code.org/s/csd3-virtual" target="_blank"><button>Proveu el mòdul</button></a>
     </span>
   </div>
@@ -191,8 +191,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Programació de tortugues al laboratori d'aplicacions</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Utilitza ordres simples de JavaScript per dibuixar formes i imatges utilitzant una “tortuga” virtual. Dissenya i programa la teva pròpia escena digital!</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px">Programació de tortugues al laboratori d'aplicacions</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Utilitzeu ordres senzilles de JavaScript per dibuixar formes i imatges mitjançant una “tortuga” virtual. Dissenya i programa la teva pròpia escena digital!</div>
         <a class="linktag" id="turtle-applab" href="https://studio.code.org/s/csp3-virtual" target="_blank"><button>Prova el mòdul</button></a>
     </span>
   </div>
@@ -206,7 +206,7 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Programació impulsada per esdeveniments en App Lab</strong></h3>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px">Programació impulsada per esdeveniments en App Lab</h3>
         <div class="smalltext" style="text-align: left; margin-bottom: 10px">Aprèn a dissenyar apps que responguin a clics i pulsacions de tecles. Crea una sèrie d'aplicacions senzilles (apps) que viuen a la web!</div>
         <a class="linktag" id="events-applab" href="https://studio.code.org/s/csp5-virtual" target="_blank"><button>Proveu el mòdul</button></a>
     </span>
@@ -230,7 +230,7 @@ theme: responsive
 
 <div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
   <div style="width: 87%; float: left">
-    <a class="linktag" id="applab" href="https://code.org/educate/applab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none"><strong>App Lab</strong></h3></a>
+    <a class="linktag" id="applab" href="https://code.org/educate/applab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none">App Lab</h3></a>
     <p style="color:#ffffff">App Lab és un entorn de programació on podeu fer aplicacions senzilles. Dissenya una app, codi amb blocs o JavaScript perquè funcioni i, a continuació, comparteix la teva aplicació en qüestió de segons.</p>
     <a class="linktag" id="applab" href="https://code.org/educate/applab" target="_blank"><button style="background-color:#e7e8ea; border-color:#e7e8ea; color:#696969">Construir una app</button></a>
   </div>
@@ -239,7 +239,7 @@ theme: responsive
 
 <div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
   <div style="width: 87%; float: left">
-    <a class="linktag" id="gamelab" href="https://code.org/educate/gamelab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none"><strong>Laboratori de jocs</strong></h3></a>
+    <a class="linktag" id="gamelab" href="https://code.org/educate/gamelab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none">Laboratori de jocs</h3></a>
     <p style="color:#ffffff">Game Lab és un entorn de programació on es poden realitzar animacions senzilles i jocs amb objectes i personatges que interactuen entre ells.</p>
     <br>
     <a class="linktag" id="gamelab" href="https://code.org/educate/gamelab" target="_blank"><button style="background-color:#e7e8ea; border-color:#e7e8ea; color:#696969">Crear un joc</button></a>
@@ -249,7 +249,7 @@ theme: responsive
 
 <div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
   <div style="width: 87%; float: left">
-    <a class="linktag" id="weblab" href="https://code.org/educate/weblab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none"><strong>Web Lab</strong></h3></a>
+    <a class="linktag" id="weblab" href="https://code.org/educate/weblab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none">Web Lab</h3></a>
     <p style="color:#ffffff">Web Lab és un entorn de programació on es poden fer pàgines web senzilles utilitzant HTML i CSS. Dissenya les teves pàgines web i comparteix el teu lloc en qüestió de segons.</p>
     <br>
     <a class="linktag" id="weblab" href="https://code.org/educate/weblab" target="_blank"><button style="background-color:#e7e8ea; border-color:#e7e8ea; color:#696969">Fer una pàgina web</button></a>
@@ -286,16 +286,12 @@ theme: responsive
 
 <h2>No hi ha ordinador a casa? Proveu CS al vostre telèfon amb aquestes aplicacions dels nostres socis</h2>
 
-<div class="col-33" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><img src="images/tutorials/new/boxisland.jpg" style="width: 100%" alt="Box Island"></a><br><a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><h3 style="color:#7665a0"><strong>Box Island</strong></h3></a>Un encantador joc de codificació mòbil que porta els aprenents en una aventura emocionant, alhora que ensenya els fonaments de la codificació, com algoritmes, reconeixement de patrons, seqüències, bucles i condicionals. <i>(per a tots els públics)</i>
+<div class="col-50" style="padding-right: 30px; padding-bottom:40px">
+  <a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><img src="images/tutorials/new/boxisland.jpg" style="width: 100%" alt="Box Island"></a><br><a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><h3 style="margin-top: 1rem;">Box Island</h3></a>Un encantador joc de codificació mòbil que porta els estudiants en una aventura emocionant, mentre ensenya els fonaments de la codificació, com algoritmes, reconeixement de patrons, seqüències, bucles i condicionals. <i>(per a tots els públics)</i>
 </div>
 
-<div class="col-33" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><img src="/images/tutorials/hoc2018/codespark_create.jpg" style="width: 100%" alt="CodesPark"></a><br><a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><h3 style="color:#7665a0"><strong>CodeSpark</strong></h3></a>Premiada plataforma d'aprenentatge a codi per a nens de 5-9 anys. Resol puzles i crea jocs amb The Foos mentre aprens a codificar. <strong>Nota: CodesPark ofereix una prova gratuïta de 3 mesos. Parent's email address and credit card information are required at signup.</strong> <i>(for pre-readers through Grade 5)</i>
-</div>
-
-<div class="col-33" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="grasshopper" href="https://grasshopper.app/" target="_blank"><img src="/images/athome/grasshopper.png" style="width: 100%" alt="saltamartí"></a><br><a class="linktag" id="grasshopper" href="https://grasshopper.app/" target="_blank"><h3 style="color:#7665a0"><strong>Grasshopper</strong></h3></a>Aprèn codificació amb lliçons divertides i ràpides al telèfon que t'ensenyin a escriure JavaScript real. Un codi amb el programa de Google. <i>(per a l'escola mitjana i fins)</i>
+<div class="col-50" style="padding-right: 30px; padding-bottom:40px">
+  <a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><img src="/images/tutorials/hoc2018/codespark_create.jpg" style="width: 100%" alt="CodesPark"></a><br><a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><h3 style="margin-top: 1rem;">Plataforma d'aprenentatge a codi</h3></a>premiada CodesPark per a nens entre 5 i 9 anys. Resol puzles i crea jocs amb The Foos mentre aprens a codificar. <strong>Nota: CodesPark ofereix una prova gratuïta de 3 mesos. L'adreça de correu electrònic dels pares i la informació de la targeta de crèdit són necessàries al registre.</strong> <i>(per a pre-lectors a través del grau 5)</i>
 </div>
 
 <div style="clear: both; margin-bottom: 15px"></div>
@@ -312,7 +308,7 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="margin-top:10px"><strong>CodeBytes</strong></h3>
+        <h3 class="tutorial-info-h" style="margin-top:10px">CodeBytes</h3>
         <div class="smalltext" style="color: dimgray;">CodeBytes són lliçons interactives de 20 minuts fàcils de digerir que barregen ciències de la computació amb temes del món real. Entrena una IA per llegir llenguatge de signes, dissenya una aplicació per a bé, explora el món de Minecraft, i molt més!</div>
         <br>
         <br>
@@ -329,8 +325,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="margin-top:10px"><strong>Code Break</strong></h3>
-        <div class="smalltext" style="">Mantingueu la informàtica divertida prenent un Code Break! Podeu crear un cypher amb Ashton Kutcher, aprendre sobre variables amb Yara Shahidi i fins i tot explorar com funciona Internet amb l'inventor real d'Internet, Vint Cerf!</div>
+        <h3 class="tutorial-info-h" style="margin-top:10px">Code Break</h3>
+        <div class="smalltext" style="">Mantenir la informàtica divertida prenent un Code Break! Podeu crear un cypher amb Ashton Kutcher, aprendre sobre variables amb Yara Shahidi i fins i tot explorar com funciona Internet amb l'inventor real d'Internet, Vint Cerf!</div>
         <br>
         <a class="linktag" id="codebreak" href="https://code.org/break" target="_blank"><button>Connecta't</button></a>
     </span>

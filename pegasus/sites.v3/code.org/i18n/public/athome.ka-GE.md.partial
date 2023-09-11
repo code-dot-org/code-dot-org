@@ -38,8 +38,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>საცეკვაო წვეულება</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">კოდექსი საცეკვაო წვეულება მეგობრებთან და ოჯახის წევრებთან გასაზიარებლად. წარმოდგენილია Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez, მუსიკა დისნეის "Encanto"-დან და სხვები!</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px">Dance Party</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Code საცეკვაო წვეულება მეგობრებთან და ოჯახის წევრებთან გასაზიარებლად. წარმოდგენილია Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez, მუსიკა დისნეის "Encanto"-დან და სხვები!</div>
         <a class="linktag" id="danceparty" href="/dance" target="_blank"><button>სცადეთ აქტივობა</button></a>
     </span>
   </div>
@@ -53,8 +53,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Minecraft კოდის საათი</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Minecraft დაბრუნდა კოდის საათში ახალი აქტივობით! მოგზაურობა Minecraft-ში კოდით.</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px">Minecraft კოდის საათი</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Minecraft დაბრუნდა კოდის საათში სრულიად ახალი აქტივობით! მოგზაურობა Minecraft-ში კოდით.</div>
         <br>
         <a class="linktag" id="minecraft" href="/minecraft" target="_blank"><button>სცადეთ აქტივობა</button></a>
     </span>
@@ -69,8 +69,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>AI ოკეანეებისთვის</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">დაეხმარეთ AI. გაასუფთავეთ ოკეანეები ნაგვის აღმოსაჩენად გაწვრთნით! შეიტყვეთ ტრენინგის მონაცემებისა და მიკერძოების შესახებ და როგორ შეუძლია AI- ს მსოფლიო პრობლემების მოგვარება. იხილეთ <a class="linktag" id="oceans-lesson" href="https://curriculum.code.org/hoc/plugged/9/" target="_blank">გაკვეთილის გეგმა</a>.</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px">AI for Oceans</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Help A.I. გაასუფთავეთ ოკეანეები ნაგვის აღმოსაჩენად გაწვრთნით! შეიტყვეთ ტრენინგის მონაცემებისა და მიკერძოების შესახებ და როგორ შეუძლია AI- ს მსოფლიო პრობლემების მოგვარება. იხილეთ <a class="linktag" id="oceans-lesson" href="https://curriculum.code.org/hoc/plugged/9/" target="_blank">გაკვეთილის გეგმა</a>.</div>
         <a class="linktag" id="aiforoceans" href="https://studio.code.org/s/oceans/lessons/1/levels/1" target="_blank"><button>სცადეთ აქტივობა</button></a>
     </span>
   </div>
@@ -96,9 +96,9 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>როგორ მუშაობს კომპიუტერები</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">ბილ გეითსის შესავალით, ექვსი მოკლე ვიდეოს ეს სერია განმარტავს, თუ რა ხდის კომპიუტერს კომპიუტერს და როგორ მუშაობს კომპიუტერული სქემები.</div>
-        <a class="linktag" id="howcomputers" href="https://www.youtube.com/watch?v=OAx_6-wdslM&list=PLzdnOPI1iJNcsRwJhvksEo1tJqjIqWbN-" target="_blank"><button>უყურეთ ვიდეო სერიას</button></a>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px">როგორ მუშაობს კომპიუტერები ბილ გეითსის</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">შესავალით, ექვსი მოკლე ვიდეოს ეს სერია განმარტავს, თუ რა ხდის კომპიუტერს კომპიუტერს და როგორ მუშაობს კომპიუტერული სქემები.</div>
+        <a class="linktag" id="howcomputers" href="https://www.youtube.com/watch?v=OAx_6-wdslM&list=PLzdnOPI1iJNcsRwJhvksEo1tJqjIqWbN-" target="_blank"><button>ნახეთ ვიდეო სერიები</button></a>
     </span>
   </div>
 </div>
@@ -111,9 +111,9 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>როგორ მუშაობს ინტერნეტი</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">რვა მოკლე ვიდეოს ამ სერიაში თქვენ შეიტყობთ, თუ როგორ გამოიგონეს ინტერნეტი, რა არის HTML და როგორ მუშაობს საძიებო სისტემები, როგორიცაა Google.</div>
-        <a class="linktag" id="howinternet" href="https://www.youtube.com/watch?v=Dxcc6ycZ73M&list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7-" target="_blank"><button>უყურეთ ვიდეო სერიას</button></a>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px">როგორ მუშაობს ინტერნეტი რვა მოკლე ვიდეოს ამ</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">სერიაში, თქვენ შეიტყობთ, თუ როგორ გამოიგონეს ინტერნეტი, რა არის HTML და როგორ მუშაობს საძიებო სისტემები, როგორიცაა Google.</div>
+        <a class="linktag" id="howinternet" href="https://www.youtube.com/watch?v=Dxcc6ycZ73M&list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7-" target="_blank"><button>ნახეთ ვიდეო სერიები</button></a>
     </span>
   </div>
 </div>
@@ -126,7 +126,7 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>როგორ მუშაობს AI</strong></h3>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px">როგორ მუშაობს AI</h3>
         <div class="smalltext" style="text-align: left; margin-bottom: 10px">შეიტყვეთ, თუ როგორ მუშაობს AI და რატომ აქვს მნიშვნელობა ამ მოკლე ვიდეოების სერიას. Microsoft-ის აღმასრულებელი დირექტორი სატია ნადელა და ექსპერტთა მრავალფეროვანი მსახიობი.</div>
         <a class="linktag" id="ai-videos" href="/ai#ai-videos" target="_blank"><button>ნახეთ ვიდეო სერია</button></a>
     </span>
@@ -136,7 +136,7 @@ theme: responsive
 
 <div style="clear: both"></div>
 
-<p>View more videos, including short inspirational videos featuring celebrities like Steph Curry and Shakira, <a class="linktag" id="all-videos" href="https://code.org/educate/resources/videos" target="_blank">here</a>.</p>
+<p>იხილეთ მეტი ვიდეო, მათ შორის მოკლე ინსპირაციული ვიდეოები, სადაც წარმოდგენილია ცნობილი სახეები, როგორიცაა სტეფ კარი და შაკირა, აქ. <a class="linktag" id="all-videos" href="https://code.org/educate/resources/videos" target="_blank"></a></p>
 <br>
 <p><a href="#top">[თავში დაბრუნება]</a></p>
 
@@ -147,7 +147,7 @@ theme: responsive
 <a id="express"></a>
 <h2>ისწავლეთ საფუძვლები ჩვენი თვითნაკეთი კურსებით</h2>
 <h3>თვითმმართველობის paced გაცნობითი კურსები</h3>
-<p>შესანიშნავი ვარიანტია სტუდენტებისთვის, რომლებიც საკუთარ თავზე იწყებენ. თქვენ შეისწავლით კომპიუტერული მეცნიერების საფუძვლებს drag & drop ბლოკებით. შექმენით საკუთარი ნახატები და თამაშები. შენიშვნა: ექსპრეს კურსები ამჟამად ხელმისაწვდომია ინგლისურ, ჰინდი, იტალიურ და ესპანურ ენებზე. For other languages, we recommend our 20-hour <a class="linktag" id="accelerated" href="https://studio.code.org/s/20-hour" target="_blank">Accelerated Course</a>. იმისათვის, რომ ნახოთ რა არის ხელმისაწვდომი თქვენს ენაზე, ეწვიეთ ჩვენს <a class="linktag" id="course-catalog" href="https://studio.code.org/courses" target="_blank">კურსის კატალოგს</a>.</p>
+<p>შესანიშნავი ვარიანტია სტუდენტებისთვის, რომლებიც საკუთარ თავზე იწყებენ. თქვენ შეისწავლით კომპიუტერული მეცნიერების საფუძვლებს drag & drop ბლოკებით. შექმენით საკუთარი ნახატები და თამაშები. შენიშვნა: ექსპრეს კურსები ამჟამად ხელმისაწვდომია ინგლისურ, ჰინდი, იტალიურ და ესპანურ ენებზე. სხვა ენებისთვის, ჩვენ გირჩევთ ჩვენს 20-საათიან <a class="linktag" id="accelerated" href="https://studio.code.org/s/20-hour" target="_blank">დაჩქარებულ კურსს.</a> იმისათვის, რომ ნახოთ რა არის ხელმისაწვდომი თქვენს ენაზე, ეწვიეთ ჩვენს <a class="linktag" id="course-catalog" href="https://studio.code.org/courses" target="_blank">კურსის კატალოგს</a>.</p>
 
 <br>
 
@@ -159,13 +159,13 @@ theme: responsive
 
 <div class="col-50" style="padding-right: 20px; padding-bottom:10px">
 
-<a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express-2019" target="_blank"><img src="/images/curriculum/course-tile-pre-reader-express.png" style="width: 100%" alt="წინასწარი მკითხველის ექსპრეს კურსი"></a><br><a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express-2019" target="_blank">Express Course for pre-readers</a>
+<a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express-2019" target="_blank"><img src="/images/curriculum/course-tile-pre-reader-express.png" style="width: 100%" alt="წინასწარი მკითხველის ექსპრეს კურსი"></a><br><a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express-2019" target="_blank">ექსპრეს კურსი წინასწარი მკითხველებისთვის</a>
 
 </div>
-<div style="clear: both"></div>
+<div style="clear: both; margin-bottom: 2rem"></div>
 
 <h3>თვითმმართველობის paced გაცნობა თამაშის ლაბორატორია და App Lab</h3>
-<p>ადაპტირებული ჩვენი CS აღმოჩენებისა და CS პრინციპების კურსებიდან, ეს მოკლე, თვითნაკეთი მოდულები შესანიშნავი გზაა კონცეფციების შესასწავლად, რომლებიც მოიცავს პროგრამირების ყველა ენას და ინსტრუმენტს. <i>Requires Code.org account to access</i>.</p>
+<p>ადაპტირებული ჩვენი CS აღმოჩენებისა და CS პრინციპების კურსებიდან, ეს მოკლე, თვითნაკეთი მოდულები შესანიშნავი გზაა კონცეფციების შესასწავლად, რომლებიც მოიცავს პროგრამირების ყველა ენას და ინსტრუმენტს. <i>წვდომისთვის</i>საჭიროა Code.org ანგარიში.</p>
 
 <br>
 
@@ -176,8 +176,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>შესავალი თამაშის ლაბორატორიაში</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">პროგრამის ანიმაციები, ინტერაქტიული ხელოვნება და თამაშები თამაშის ლაბორატორიაში. დაიწყეთ მარტივი ფორმებით და შექმენით უფრო დახვეწილი sprite დაფუძნებული ანიმაციები და თამაშები.</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px">თამაშის ლაბორატორიის</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">პროგრამის ანიმაციების, ინტერაქტიული ხელოვნებისა და თამაშების შესავალი Game Lab-ში. დაიწყეთ მარტივი ფორმებით და შექმენით უფრო დახვეწილი sprite დაფუძნებული ანიმაციები და თამაშები.</div>
         <a class="linktag" id="gamelab-intro" href="https://studio.code.org/s/csd3-virtual" target="_blank"><button>სცადეთ მოდული</button></a>
     </span>
   </div>
@@ -191,8 +191,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>კუს პროგრამირება აპლიკაციის ლაბორატორიაში</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">გამოიყენეთ მარტივი JavaScript ბრძანებები ვირტუალური „კუს“ გამოყენებით ფორმებისა და სურათების დასახატად. შეიმუშავეთ და დაპროგრამეთ თქვენი საკუთარი ციფრული სცენა!</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px">კუს პროგრამირება აპლიკაციის ლაბორატორიაში</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">გამოიყენეთ მარტივი JavaScript ბრძანებები ფორმებისა და სურათების დასახატად ვირტუალური „კუს“ გამოყენებით. შეიმუშავეთ და დაპროგრამეთ თქვენი საკუთარი ციფრული სცენა!</div>
         <a class="linktag" id="turtle-applab" href="https://studio.code.org/s/csp3-virtual" target="_blank"><button>სცადეთ მოდული</button></a>
     </span>
   </div>
@@ -206,8 +206,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>მოვლენებზე ორიენტირებული პროგრამირება აპლიკაციის ლაბორატორიაში</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">ისწავლეთ აპების შემუშავება, რომლებიც პასუხობენ დაწკაპუნებებსა და კლავიშებზე დაჭერას. შექმენით მარტივი პროგრამების (აპების) სერია, რომლებიც ცხოვრობენ ინტერნეტში!</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px">ღონისძიებაზე ორიენტირებული პროგრამირება App Lab-ში</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">ისწავლეთ აპლიკაციების შემუშავება, რომლებიც პასუხობენ დაწკაპუნებებსა და კლავიშებზე დაჭერას. შექმენით მარტივი პროგრამების (აპების) სერია, რომლებიც ცხოვრობენ ინტერნეტში!</div>
         <a class="linktag" id="events-applab" href="https://studio.code.org/s/csp5-virtual" target="_blank"><button>სცადეთ მოდული</button></a>
     </span>
   </div>
@@ -230,7 +230,7 @@ theme: responsive
 
 <div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
   <div style="width: 87%; float: left">
-    <a class="linktag" id="applab" href="https://code.org/educate/applab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none"><strong>აპლიკაციის ლაბორატორია</strong></h3></a>
+    <a class="linktag" id="applab" href="https://code.org/educate/applab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none">აპლიკაციის ლაბორატორია</h3></a>
     <p style="color:#ffffff">App Lab არის პროგრამირების გარემო, სადაც შეგიძლიათ გააკეთოთ მარტივი აპები. შეიმუშავეთ აპი, კოდი ბლოკებით ან JavaScript, რომ ის იმუშაოს, შემდეგ გააზიარეთ თქვენი აპი წამებში.</p>
     <a class="linktag" id="applab" href="https://code.org/educate/applab" target="_blank"><button style="background-color:#e7e8ea; border-color:#e7e8ea; color:#696969">ააშენეთ აპლიკაცია</button></a>
   </div>
@@ -239,7 +239,7 @@ theme: responsive
 
 <div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
   <div style="width: 87%; float: left">
-    <a class="linktag" id="gamelab" href="https://code.org/educate/gamelab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none"><strong>თამაშის ლაბორატორია</strong></h3></a>
+    <a class="linktag" id="gamelab" href="https://code.org/educate/gamelab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none">თამაშის ლაბორატორია</h3></a>
     <p style="color:#ffffff">Game Lab არის პროგრამირების გარემო, სადაც შეგიძლიათ გააკეთოთ მარტივი ანიმაციები და თამაშები ობიექტებითა და პერსონაჟებით, რომლებიც ურთიერთქმედებენ ერთმანეთთან.</p>
     <br>
     <a class="linktag" id="gamelab" href="https://code.org/educate/gamelab" target="_blank"><button style="background-color:#e7e8ea; border-color:#e7e8ea; color:#696969">შექმენით თამაში</button></a>
@@ -249,7 +249,7 @@ theme: responsive
 
 <div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
   <div style="width: 87%; float: left">
-    <a class="linktag" id="weblab" href="https://code.org/educate/weblab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none"><strong>ვებ ლაბორატორია</strong></h3></a>
+    <a class="linktag" id="weblab" href="https://code.org/educate/weblab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none">ვებ ლაბორატორია</h3></a>
     <p style="color:#ffffff">Web Lab არის პროგრამირების გარემო, სადაც შეგიძლიათ შექმნათ მარტივი ვებ გვერდები HTML და CSS გამოყენებით. შეიმუშავეთ თქვენი ვებ — გვერდები და გააზიარეთ თქვენი საიტი წამებში.</p>
     <br>
     <a class="linktag" id="weblab" href="https://code.org/educate/weblab" target="_blank"><button style="background-color:#e7e8ea; border-color:#e7e8ea; color:#696969">შექმენით ვებ გვერდი</button></a>
@@ -286,16 +286,12 @@ theme: responsive
 
 <h2>კომპიუტერი არ არის სახლში? სცადეთ CS თქვენს ტელეფონზე ჩვენი პარტნიორების ამ აპებით</h2>
 
-<div class="col-33" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><img src="images/tutorials/new/boxisland.jpg" style="width: 100%" alt="ყუთების კუნძული"></a><br><a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><h3 style="color:#7665a0"><strong>Box Island</strong></h3></a>მომხიბლავი მობილური კოდირების თამაში, რომელიც მოსწავლეებს საინტერესო თავგადასავალში მიჰყავს, ხოლო კოდირების საფუძვლებს ასწავლის, როგორიცაა ალგორითმები, ნიმუშების ამოცნობა, თანმიმდევრობა, მარყუჟები და პირობები. <i>(ყველა ასაკისთვის)</i>
+<div class="col-50" style="padding-right: 30px; padding-bottom:40px">
+  <a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><img src="images/tutorials/new/boxisland.jpg" style="width: 100%" alt="ყუთების კუნძული"></a><br><a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><h3 style="margin-top: 1rem;">Box Island</h3></a>მომხიბლავი მობილური კოდირების თამაში, რომელიც მოსწავლეებს საინტერესო თავგადასავალში მიჰყავს, ხოლო კოდირების საფუძვლებს ასწავლის, როგორიცაა ალგორითმები, ნიმუშების ამოცნობა, თანმიმდევრობა, მარყუჟები და პირობები. <i>(ყველა ასაკისთვის)</i>
 </div>
 
-<div class="col-33" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><img src="/images/tutorials/hoc2018/codespark_create.jpg" style="width: 100%" alt="კოდებიპარკი"></a><br><a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><h3 style="color:#7665a0"><strong>კოდიპარკი</strong></h3></a>ჯილდოს მფლობელი სწავლის კოდის პლატფორმა 5-9 წლის ბავშვებისთვის. ამოხსენით თავსატეხები და შექმენით თამაშები The Foos-ით კოდის სწავლისას. <strong>შენიშვნა: CodesPark გთავაზობთ უფასო 3 თვიან საცდელ პერიოდს. Parent's email address and credit card information are required at signup.</strong> <i>(for pre-readers through Grade 5)</i>
-</div>
-
-<div class="col-33" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="grasshopper" href="https://grasshopper.app/" target="_blank"><img src="/images/athome/grasshopper.png" style="width: 100%" alt="Grasshopper"></a><br><a class="linktag" id="grasshopper" href="https://grasshopper.app/" target="_blank"><h3 style="color:#7665a0"><strong>Grasshopper</strong></h3></a>ისწავლეთ კოდირება მხიარული, სწრაფი გაკვეთილებით თქვენს ტელეფონში, რომელიც გასწავლით ნამდვილი JavaScript- ის დაწერას. კოდი Google პროგრამით. <i>(საშუალო სკოლისთვის და ზემოთ)</i>
+<div class="col-50" style="padding-right: 30px; padding-bottom:40px">
+  <a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><img src="/images/tutorials/hoc2018/codespark_create.jpg" style="width: 100%" alt="კოდებიპარკი"></a><br><a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><h3 style="margin-top: 1rem;">CodeSpark</h3></a>ჯილდოს მფლობელი სწავლა-კოდის პლატფორმა 5-9 წლის ბავშვებისთვის. ამოხსენით თავსატეხები და შექმენით თამაშები The Foos-ით კოდის სწავლისას. <strong>შენიშვნა: CodesPark გთავაზობთ უფასო 3 თვიან საცდელ პერიოდს. რეგისტრაციისას საჭიროა მშობლის ელ. ფოსტის მისამართი და საკრედიტო ბარათის ინფორმაცია.</strong> <i>(წინასწარი მკითხველებისთვის მე —5 კლასის ჩათვლით)</i>
 </div>
 
 <div style="clear: both; margin-bottom: 15px"></div>
@@ -312,11 +308,11 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="margin-top:10px"><strong>CodeBytes</strong></h3>
-        <div class="smalltext" style="color: dimgray;">CodeBytes ადვილად ასათვისებელია, 20 წუთიანი ინტერაქტიული გაკვეთილები, რომლებიც აერთიანებს კომპიუტერულ მეცნიერებას რეალურ სამყაროში არსებულ თემებთან. Train an AI to read sign language, design an app for good, explore the world of Minecraft, and more!</div>
+        <h3 class="tutorial-info-h" style="margin-top:10px">CodeBytes</h3>
+        <div class="smalltext" style="color: dimgray;">CodeBytes არის ადვილად ასათვისებელი, 20 წუთიანი ინტერაქტიული გაკვეთილები, რომლებიც აერთიანებს კომპიუტერულ მეცნიერებას რეალურ სამყაროში არსებულ თემებთან. მოამზადეთ ხელოვნური ინტელექტი ჟესტების ენის წასაკითხად, აპლიკაციის სამუდამოდ შესაქმნელად, Minecraft-ის სამყაროს შესასწავლად და სხვა!</div>
         <br>
         <br>
-        <a class="linktag" id="codebytes" href="https://code.org/codebytes" target="_blank"><button>View episodes</button></a>
+        <a class="linktag" id="codebytes" href="https://code.org/codebytes" target="_blank"><button>ეპიზოდების ნახვა</button></a>
     </span>
   </div>
 </div>
@@ -329,8 +325,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="margin-top:10px"><strong>Code Break</strong></h3>
-        <div class="smalltext" style="">შეინახეთ კომპიუტერული მეცნიერების fun აღების Code Break! თქვენ შეგიძლიათ შექმნათ cypher ერთად Ashton Kutcher, გაეცნონ ცვლადები Yara Shahidi, და კიდევ შეისწავლონ, თუ როგორ მუშაობს ინტერნეტი ფაქტობრივი გამომგონებელი ინტერნეტი, Vint Cerf!</div>
+        <h3 class="tutorial-info-h" style="margin-top:10px">Code Break</h3>
+        <div class="smalltext" style="">შეინახეთ კომპიუტერული მეცნიერება გართობა Code Break— ის მიღებით! თქვენ შეგიძლიათ შექმნათ cypher ერთად Ashton Kutcher, გაეცნონ ცვლადები Yara Shahidi, და კიდევ შეისწავლონ, თუ როგორ მუშაობს ინტერნეტი ფაქტობრივი გამომგონებელი ინტერნეტი, Vint Cerf!</div>
         <br>
         <a class="linktag" id="codebreak" href="https://code.org/break" target="_blank"><button>დაუკავშირდით</button></a>
     </span>
