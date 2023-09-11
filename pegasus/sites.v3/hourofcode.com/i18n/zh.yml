@@ -7,7 +7,7 @@ zh:
   coming_soon: 即將推出
   campaign_date_start_short: 12月5日
   campaign_date_start_long: 12月5日
-  campaign_date_short: 12月5日-11日
+  campaign_date_short: 12月5日11日
   campaign_date_full: 12 月 5 日 - 11 日
   campaign_date_year: '2022'
   campaign_date_full_year: 2022年12月5-11日
@@ -128,6 +128,12 @@ zh:
   grade_level_label_elementary: 小学
   grade_level_label_middle: 中學
   grade_level_label_high: 高中
+  curricula_title_elementary: 小學課程
+  curricula_desc_elementary: 瀏覽有趣的免費課程和活動，邀請您與小學生一起探索計算機科學。
+  curricula_title_middle: 中學課程
+  curricula_desc_middle: 瀏覽引人入勝的產品，讓您和您的初中學生一起探索電腦科學。
+  curricula_title_high: 高中課程
+  curricula_desc_high: 瀏覽引人注目的課程和活動，邀請您和您的高中生更深入地了解計算機科學。
   students_label: 學生
   teachers_label: 教師
   teacher_label_csf: 計算機科學基礎教師
@@ -154,6 +160,13 @@ zh:
   call_to_action_explore_choice_level: 探索範例選擇級別
   call_to_action_explore_collection: 探索系列
   call_to_action_explore_unplugged_lesson: 探索線下課程
+  call_to_action_explore_csf: 探索 CS 基本原理
+  call_to_action_explore_csd: 探索 CS 發現
+  call_to_action_explore_csp: 探索 CS 原則
+  call_to_action_explore_csc: 探索 CS 連線
+  call_to_action_explore_csa: 探索 AP® 電腦科學 A
+  call_to_action_explore_maker: 探索創客課程
+  call_to_action_explore_hoc: 探索一小時玩程式教學課
   call_to_action_try_app_lab: 嘗試應用實驗室
   call_to_action_view_lesson_plan: 查看課程計劃
   call_to_action_self_paced_pl: 開始自主進度的專業學習
@@ -198,6 +211,7 @@ zh:
   call_to_action_notify_available: 有貨時通知我
   call_to_action_register_early_access: 註冊以取得早期存取
   call_to_action_open_positions: 查看未平倉職位
+  call_to_action_get_guide: 取得指南
   aria_label_call_to_action_afe: 進一步了解亞馬遜未來工程師
   aria_label_call_to_action_teaching_csf: 開始教學計算機科學基礎知識專業學習計劃
   aria_label_call_to_action_teaching_csd: 啟動計算機科學發現教學專業學習計劃
@@ -272,6 +286,8 @@ zh:
   curriculum_name_csa: 計算機科學A
   curriculum_name_csc_02: 任何計算機科學聯繫模組
   curriculum_name_ai: "  AI 和機器學習  "
+  curriculum_name_artificial_intelligence: 人工智慧 (AI)
+  curriculum_name_maker: 製作者
   curriculum_name_maker_cp: 使用設備創建應用程序（電路遊樂場）
   curriculum_name_maker_microbit: '使用裝置建立應用程式 (micro: bit)'
   curriculum_name_creating_apps_with_devices: 使用裝置建立應用程式
@@ -296,6 +312,8 @@ zh:
   curriculum_desc_design_process: 聚焦考慮計算對社會的影響。通過設計挑戰，學生同情他人的需要並制定解決方案。
   curriculum_desc_data_society: 強調數據在解決問題中的作用以及計算機在此過程中的幫助。涵蓋表徵系統和相關挑戰。探索數據收集如何協助解決問題。
   curriculum_desc_creating_apps_with_devices: 探索實體裝置在計算中的角色。開發利用硬體輸入和輸出的程序。這個單元有一個針對micro:bit和電路遊樂場的版本。
+  curriculum_desc_csa: 在 AP® 計算機科學 A（AP® CSA）的免費課程中學習 Java 編程語言的同時，向學生介紹軟件工程和面向對象的設計。
+  curriculum_desc_maker: 創客教育通過邀請實踐經驗和協作進入課堂，以幫助教授解決問題和批判性思維，從而進一步使 STEM（科學，技術，工程，數學）更進一步。
   collection_hardware: 聚焦硬體
   collection_hardware_desc: 讓學生能夠使用數據和實體裝置來解決問題。
   collection_design_purpose: 聚焦有目標的設計
@@ -328,6 +346,7 @@ zh:
   module_label_student_content_resources: 內容和資源
   module_label_new: 新
   module_label_coming_soon: 快來了
+  module_label_available_now: 現在可用
   module_label_video_series: 影片系列
   module_label_self_paced: 自定進度模塊
   module_ages_5_10: 5-10
@@ -338,6 +357,8 @@ zh:
   module_grade_2_5: 2-5
   module_grade_3_5: 3-5
   module_grade_3_8: 3-8
+  module_grade_k_12: K-12
+  module_grade_3_12: 3-12
   module_grade_6_12: 6-12
   module_grade_6_10: 6-10
   module_grade_9_12: 9-12
@@ -420,6 +441,7 @@ zh:
   heading_java_lab: Java實驗室
   heading_objects_first: 對象優先
   heading_these_lessons_will: 這些課程將：
+  heading_explore_curriculum_catalog: 在課程目錄中探索我們所有的課程
   professional_learning_section_desc: 在準備教學時獲得所需的支援。老師喜歡它，超過90％的老師將其評為有史以來最好的職業發展！
   professional_learning_section_desc_short: 在準備教學時獲得所需的支援。
   professional_learning_section_desc_self_paced: 及時的支持，讓你可以根據自己的日程安排充滿信心地準備教學。
@@ -573,6 +595,8 @@ zh:
     AI 環境並增強學生的學習體驗。
   ai_pl_101_video_desc_6: 深入瞭解推動人工智慧重大變革的新技術，其中包含兩個有關大型語言模型 (如 ChatGPT) 和生成 AI 的新影片。聽聽這些新技術如何直接從專家那裡工作：OpenAI
     的首席技術官 Mira Murati 和 RunwayML 首席執行官克里斯托瓦爾·瓦倫蘇埃拉。
+  ai_pl_101_llm_slides_title: 教育工作者的大語言模型提示
+  ai_pl_101_llm_slides_desc: 從 ChatGPT 等 LMS 獲得最佳輸出的工具，從初學者到高級。包括那些只是浸入腳趾的人的入門提示，以及為那些希望最大限度地發揮潛力的人提供高級工具。
   how_ai_works_hero_heading: AI 如何運作
   how_ai_works_hero_desc: 通過我們的視頻系列視頻和隨附的課程「AI 如何工作」深入人工智能世界！
   how_ai_works_intro_desc: 這一系列的短片和隨附的課堂內課程將向您和您的學生介紹人工智慧的運作方式以及其重要性。您可以根據主題選擇個別課程，在一個班級中探索整個系列主題，或教授所有
@@ -1146,8 +1170,8 @@ zh:
   ai_activity_experiments_desc: 開始透過圖片、繪圖、語言、音樂等探索機器學習。
   ai_activity_zooniverse: 動物園-快照山斑馬
   ai_activity_zooniverse_desc: 通過識別圖像中的不同動物來幫助保護瀕臨絕種的開普山斑馬。
-  codeorg_homepage_hoc2018_curriculum: Go further with <a href="%{studio_url}/courses"
-    class="hoc2018-curriculum-link">Code.org courses</a>
+  codeorg_homepage_hoc2018_curriculum: 使用 <a href="%{studio_url}/courses" class="hoc2018-curriculum-link">Code.org
+    課程更進一步</a>
   codeorg_homepage_hoc2018_dance_heading: 創建自己的 <span class="highlight-word">舞蹈&nbsp;派對</span>
   codeorg_homepage_hoc2018_header_line1: 一小時玩程式即將到來...
   codeorg_homepage_hoc2018_header_line2_desktop: 你 <span class="hoc2018-highlight-word">會創造什麼？</span>
@@ -1439,6 +1463,10 @@ zh:
   signup_email_preference_opt_in: 我們可以通過電子郵件向您發送有關 Code.org 課程更新，當地機會或其他計算機科學新聞的信息
   signup_email_preference_privacy: "（參見我們的隱私聲明）"
   signup_email_preference_yes: 是
+  signup_email_preference_yes_elementary: 是-向我發送有關小學資源的最新消息
+  signup_email_preference_yes_middle: 是-向我發送有關初中資源的最新消息
+  signup_email_preference_yes_high: 是-向我發送有關高中資源的最新消息
+  signup_email_preference_yes_general: 是-向我發送一般更新
   signup_email_preference_no: 否
   signup_email_preference_error: 電子郵件偏好為必填
   signup_multiple_event_warning: 如果你同時舉辦多場活動，請每場活動提供一個不重複的姓名或電子郵件信箱。我們一個活動只會算入一個姓名和電子郵件信箱。
@@ -1480,7 +1508,7 @@ zh:
   social_hoc2018_global_movement: 一小時玩程式是一個全球性的運動，接觸了數千萬學生。一小時的教程提供 45 多種語言，適合所有年齡段的人。
   map_title: 一小時玩程式的地圖
   map_header: "# 個一小時玩程式活動遍佈世界各地"
-  map_header_count_year: "%{event_count} events registered in %{year}"
+  map_header_count_year: "%{event_count} 註冊的事件 %{year}"
   see_all_events: 查看所有活動
   map_header_company: "# 由公司主辦"
   map_header_country: '在 %{country} 有 # 場'
@@ -8436,12 +8464,9 @@ zh:
   tutorial_googlesuperhero_longdescription: 通過編程將日常英雄從您的生活或社區變成超級英雄，以飛越建築物，旋轉，與夥伴一起工作，並通過觸摸遊戲中的物體來獲得積分。在「編碼你的英雄」中，用
     CS First 和 Scratch 炫耀英雄的特殊能力和自己的創造力。
   tutorial_googlename _longdescription: 選擇一個名字，並使用代碼使單詞的字母栩栩如生。選擇暱稱，寵物的名字，動物，運動，地點或愛好。
-  tutorial_carnegiezillah_longdescription: Zillah City is thriving, and music is in
-    the air. Rumor has it, the famed Gargantua bot is online and sending the last
-    Toxibots to trash the city block by block…. Grab your cobot hoverboard and get
-    ready to groove, move, and finish off what you started! Players program their
-    cobot hoverbots to change lanes, avoid obstacles, and take out many Toxibots in
-    this rhythm-styled game.
+  tutorial_carnegiezillah_longdescription: 齊拉市正在蓬勃發展，音樂在空氣中。有傳言說，著名的 Gargantua 機器人正在上線，並發送最後一個
+    Toxibots 來逐個城市街區垃圾。…抓住您的協作機器人懸浮滑板，準備好凹槽，移動並完成您開始的工作！在這個節奏風格的遊戲中，玩家編程他們的合作機器人懸浮機器人以改變車道，避開障礙物並取出許多
+    Toxibot。
   tutorial_nasachspacejam_longdescription: 創建一個真正岩石的太陽系！在這個自助活動中了解音樂，天文學和編碼（無需編碼經驗）。對行星進行編程以製作音樂，創建自己的音樂太陽系，並帶有太空旋律。
   tutorial_hatchxrsolar_longdescription: '使用基於塊的編程概念探索星星並構建自己的太陽系。了解 3D 空間的基礎知識，並潛入您的想像力，在不到一個小時的時間內構建您夢想中的宇宙。猜猜是什麼，您可以使用
     HatchXr 應用程序在任何 iOS 設備上以 AR 運行項目。別忘了使用 #hatchxr #HourOfCode 與我們分享您的作品'

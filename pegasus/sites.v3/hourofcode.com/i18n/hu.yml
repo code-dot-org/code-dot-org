@@ -13,14 +13,14 @@ hu:
   campaign_date_full_year: 2022. december 5-11.
   nonus_campaign_date_start_short: Okt. 1.
   nonus_campaign_date_start_long: Október 1.
-  nonus_campaign_date_short: Okt. 1. - dec. 18.
-  nonus_campaign_date_full: Október 1. - december 18.
+  nonus_campaign_date_short: Okt. 1. - dec. 12.
+  nonus_campaign_date_full: Október 1. - december 12.
   nonus_campaign_date_year: '2022.'
   nonus_campaign_date_full_year: 2022. október 1. - 2022. december 18.
   latam_campaign_date_start_short: Okt. 1.
   latam_campaign_date_start_long: Október 1.
-  latam_campaign_date_short: Okt. 1. - dec. 18.
-  latam_campaign_date_full: Október 1. - december 18.
+  latam_campaign_date_short: Okt. 1. - dec. 12.
+  latam_campaign_date_full: Október 1. - december 12.
   latam_campaign_date_year: '2022.'
   latam_campaign_date_full_year: 2022. október 1. - 2022. december 18.
   europe_campaign_date_start_short: 'Okt. 10.
@@ -198,6 +198,16 @@ hu:
   grade_level_label_elementary: Általános Iskola
   grade_level_label_middle: Középiskola
   grade_level_label_high: Gimnázium
+  curricula_title_elementary: Általános iskolai tantervek
+  curricula_desc_elementary: Böngésszen a szórakozás között, ingyenes tanfolyamok
+    és tevékenységek, amelyek meghívják Önt, hogy fedezze fel a számítástechnikát
+    általános iskolásokkal.
+  curricula_title_middle: Középiskolai tantervek
+  curricula_desc_middle: Böngésszen a vonzó ajánlatok között, amelyek lehetővé teszik
+    Ön és középiskolás diákjai számára, hogy együtt fedezzék fel a számítástechnikát.
+  curricula_title_high: Középiskolai tantervek
+  curricula_desc_high: Böngésszen a lenyűgöző kurzusok és tevékenységek között, amelyek
+    meghívják Önt és középiskolás diákjait, hogy mélyebbre ássanak a számítástechnikában.
   students_label: Diákok
   teachers_label: Tanárok
   teacher_label_csf: CS Fundamentals tanár
@@ -224,6 +234,13 @@ hu:
   call_to_action_explore_choice_level: Fedezze fel a választási szintet
   call_to_action_explore_collection: Fedezze fel a gyűjteményt
   call_to_action_explore_unplugged_lesson: Fedezze fel az unplugged leckéket
+  call_to_action_explore_csf: Fedezze fel a CS alapjait
+  call_to_action_explore_csd: Fedezze fel a CS felfedezéseket
+  call_to_action_explore_csp: Fedezze fel a CS alapelveket
+  call_to_action_explore_csc: Fedezze fel a CS kapcsolatokat
+  call_to_action_explore_csa: Fedezze fel az AP® Computer Science A-t
+  call_to_action_explore_maker: Fedezze fel a Maker tanterveit
+  call_to_action_explore_hoc: Fedezze fel a Kódolás órája oktatóanyagokat
   call_to_action_try_app_lab: Próbálja ki az App Lab-ot
   call_to_action_view_lesson_plan: Óraterv megtekintése
   call_to_action_self_paced_pl: Indítsa el az önálló tempójú szakmai tanulást
@@ -268,6 +285,7 @@ hu:
   call_to_action_notify_available: Értesítsen, ha elérhető
   call_to_action_register_early_access: Regisztráljon a korai hozzáféréshez
   call_to_action_open_positions: Nyitott pozíciók megtekintése
+  call_to_action_get_guide: Szerezd meg az útmutatót
   aria_label_call_to_action_afe: Tudjon meg többet az Amazon Future Engineer-ről
   aria_label_call_to_action_teaching_csf: Indítsa el a Számítástudomány alapjainak
     oktatása szakmai tanulási programot
@@ -375,6 +393,8 @@ hu:
   curriculum_name_csa: AP® Számítástechnika A
   curriculum_name_csc_02: Bármely CS csatlakozási modul
   curriculum_name_ai: MI és gépi tanulás
+  curriculum_name_artificial_intelligence: Mesterséges intelligencia (AI)
+  curriculum_name_maker: Készítő
   curriculum_name_maker_cp: Alkalmazások létrehozása eszközökkel (Circuit Playground)
   curriculum_name_maker_microbit: Alkalmazások létrehozása eszközökkel (micro:bit)
   curriculum_name_creating_apps_with_devices: Alkalmazások létrehozása eszközökkel
@@ -435,6 +455,13 @@ hu:
     a számítástechnikában. Olyan programok kifejlesztése, amelyek hardveres bemeneteket
     és kimeneteket használnak. Ennek az egységnek van egy változata mind a micro:bit,
     mind a Circuit Playground számára.
+  curriculum_desc_csa: Mutassa be a hallgatókat a szoftverfejlesztésnek és az objektumorientált
+    tervezésnek, miközben megtanulják a Java programozási nyelvet ebben az ingyenes
+    tantervben az AP® Computer Science A (AP® CSA) számára.
+  curriculum_desc_maker: A készítői oktatás egy lépéssel tovább viszi a STEM (Science,
+    Technology, Engineering, Matematika) azáltal, hogy gyakorlati tapasztalatokat
+    és együttműködést hív fel az osztályterembe, hogy segítsen tanítani a problémamegoldást
+    és a kritikus gondolkodást.
   collection_hardware: Fókuszban a hardver
   collection_hardware_desc: Felhatalmazza a tanulókat arra, hogy adatokat és fizikai
     eszközöket használjanak a problémák megoldására.
@@ -475,6 +502,7 @@ hu:
   module_label_student_content_resources: Tartalom és források
   module_label_new: Új
   module_label_coming_soon: Hamarosan
+  module_label_available_now: Most elérhető
   module_label_video_series: Videó sorozat
   module_label_self_paced: Saját tempójú modul
   module_ages_5_10: 5-10
@@ -485,6 +513,8 @@ hu:
   module_grade_2_5: 2-5
   module_grade_3_5: 3-5
   module_grade_3_8: 3-8
+  module_grade_k_12: K-12
+  module_grade_3_12: 3-12
   module_grade_6_12: 6-12
   module_grade_6_10: 6-10
   module_grade_9_12: 9-12
@@ -583,6 +613,8 @@ hu:
   heading_java_lab: Java Lab
   heading_objects_first: Objektumok először
   heading_these_lessons_will: 'Ezek a leckék:'
+  heading_explore_curriculum_catalog: Fedezze fel az összes tanfolyamunkat a tantervi
+    katalógusban
   professional_learning_section_desc: Szerezd meg a szükséges támogatást, amikor felkészülsz
     a tanításra. A tanárok imádják, több mint 90% -uk rangsorolja a valaha volt legjobb
     szakmai fejlődést!
@@ -845,6 +877,11 @@ hu:
     a Generative AI. Hallgassa meg, hogyan működnek ezek az új technológiák közvetlenül
     a szakértőktől: Mira Murati, az OpenAI műszaki igazgatója és Cristóbal Valenzuela,
     a RunwayML vezérigazgatója.'
+  ai_pl_101_llm_slides_title: Nagyméretű nyelvi modellkérések oktatók számára
+  ai_pl_101_llm_slides_desc: Eszközök a lehető legjobb kimenet megszerzéséhez olyan
+    LLM-ekből, mint a ChatGPT, kezdőtől haladóig. Tartalmazza az indító utasításokat
+    azok számára, akik csak belemerítik a lábujjaikat, valamint fejlett eszközöket
+    azok számára, akik maximalizálni akarják potenciáljukat.
   how_ai_works_hero_heading: Hogyan működik az AI
   how_ai_works_hero_desc: Merüljön el az AI világában a „Hogyan működik az AI” című
     videósorozatunkkal és a kísérő leckékkel!
@@ -2091,6 +2128,11 @@ hu:
     helyi lehetőségekkel és egyéb számítástechnikai hírekkel kapcsolatban?
   signup_email_preference_privacy: "(Tekintsd át adatvédelmi irányelveinket)"
   signup_email_preference_yes: Igen
+  signup_email_preference_yes_elementary: Igen - Küldj frissítéseket a Elementary
+    School Resources
+  signup_email_preference_yes_middle: Igen - Küldj frissítéseket a Middle School Resources
+  signup_email_preference_yes_high: Igen - Küldjön frissítéseket a High School Resources
+  signup_email_preference_yes_general: Igen - Küldjön általános frissítéseket
   signup_email_preference_no: Nem
   signup_email_preference_error: Kérlek adj meg email preferenciát
   signup_multiple_event_warning: Ha több eseményt szervezel, akkor adj egyedi nevet

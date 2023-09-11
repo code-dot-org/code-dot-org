@@ -9,7 +9,7 @@ sv:
   campaign_date_start_short: 5:e December
   campaign_date_start_long: 5 december
   campaign_date_short: 5-11 December
-  campaign_date_full: 5-11 december
+  campaign_date_full: 6-12 december
   campaign_date_year: '2022'
   campaign_date_full_year: 5-11 december 2022
   nonus_campaign_date_start_short: 1 oktober
@@ -172,6 +172,15 @@ sv:
   grade_level_label_elementary: Grundskola
   grade_level_label_middle: Gymnasiet
   grade_level_label_high: Gymnasiet
+  curricula_title_elementary: Grundskolans läroplaner
+  curricula_desc_elementary: Bläddra bland det roliga, gratis kurser och aktiviteter
+    som inbjuder dig att utforska datavetenskap med dina grundskoleelever.
+  curricula_title_middle: Läroplaner för gymnasiet
+  curricula_desc_middle: Bläddra bland de engagerande erbjudanden som gör det möjligt
+    för dig och dina gymnasieelever att utforska datavetenskap tillsammans.
+  curricula_title_high: Läroplaner för gymnasiet
+  curricula_desc_high: Bläddra bland de övertygande kurserna och aktiviteterna som
+    inbjuder dig och dina gymnasieelever att gräva djupare i datavetenskap.
   students_label: Elever
   teachers_label: Lärare
   teacher_label_csf: CS Fundamentals Lärare
@@ -198,6 +207,13 @@ sv:
   call_to_action_explore_choice_level: Utforska exempel på valnivå
   call_to_action_explore_collection: Utforska kollektionen
   call_to_action_explore_unplugged_lesson: Utforska unplugged lektioner
+  call_to_action_explore_csf: Utforska CS Fundamentals
+  call_to_action_explore_csd: Utforska CS Discoveries
+  call_to_action_explore_csp: Utforska CS-principer
+  call_to_action_explore_csc: Utforska CS Connections
+  call_to_action_explore_csa: Utforska AP® Datavetenskap A
+  call_to_action_explore_maker: Utforska Maker läroplaner
+  call_to_action_explore_hoc: Utforska Hour of Code-tutorials
   call_to_action_try_app_lab: Prova App Lab
   call_to_action_view_lesson_plan: Visa lektionsplan
   call_to_action_self_paced_pl: Starta professionellt lärande i egen takt
@@ -242,6 +258,7 @@ sv:
   call_to_action_notify_available: Meddela mig när det är tillgängligt
   call_to_action_register_early_access: Registrera dig för tidig åtkomst
   call_to_action_open_positions: Visa öppna positioner
+  call_to_action_get_guide: Skaffa guiden
   aria_label_call_to_action_afe: Läs mer om Amazon Future Engineer
   aria_label_call_to_action_teaching_csf: Starta programmet Undervisning Datavetenskap
     Fundamentals professionellt lärande
@@ -346,6 +363,8 @@ sv:
   curriculum_name_csa: AP® Datavetenskap A
   curriculum_name_csc_02: Alla CS-anslutningsmodul
   curriculum_name_ai: "  AI och maskininlärning  "
+  curriculum_name_artificial_intelligence: Artificiell intelligens (AI)
+  curriculum_name_maker: Tillverkare
   curriculum_name_maker_cp: Skapa appar med enheter (Circuit Playground)
   curriculum_name_maker_microbit: Skapa appar med enheter (micro:bit)
   curriculum_name_creating_apps_with_devices: Skapa appar med enheter
@@ -397,6 +416,12 @@ sv:
   curriculum_desc_creating_apps_with_devices: Utforska fysiska enheters roll i datoranvändning.
     Utveckla program som använder hårdvaruingångar och utgångar. Det finns en version
     av denna enhet för både micro:bit och Circuit Playground.
+  curriculum_desc_csa: Introducera eleverna till programvaruteknik och objektorienterad
+    design medan de lär sig Java-programmeringsspråket i denna kostnadsfria läroplan
+    för AP® Computer Science A (AP® CSA).
+  curriculum_desc_maker: Makerutbildning tar STEM (Science, Technology, Engineering,
+    Mathematics) ett steg längre genom att bjuda in praktisk erfarenhet och samarbete
+    i klassrummet för att lära ut problemlösning och kritiskt tänkande.
   collection_hardware: Fokusera på hårdvara
   collection_hardware_desc: Ge eleverna möjlighet att använda data och fysiska enheter
     för att lösa problem.
@@ -435,6 +460,7 @@ sv:
   module_label_student_content_resources: Innehåll & resurser
   module_label_new: Ny
   module_label_coming_soon: Kommer snart
+  module_label_available_now: Tillgängligt nu
   module_label_video_series: Video-serien
   module_label_self_paced: Modulen i egen takt
   module_ages_5_10: 5-10
@@ -445,6 +471,8 @@ sv:
   module_grade_2_5: 2-5
   module_grade_3_5: 3-5
   module_grade_3_8: 3-8
+  module_grade_k_12: K-12
+  module_grade_3_12: 3-12
   module_grade_6_12: 6-12
   module_grade_6_10: 6-10
   module_grade_9_12: 9-12
@@ -538,6 +566,7 @@ sv:
   heading_java_lab: Java Lab
   heading_objects_first: Objekt först
   heading_these_lessons_will: 'Dessa lektioner kommer att:'
+  heading_explore_curriculum_catalog: Utforska alla våra kurser i läroplanskatalogen
   professional_learning_section_desc: Få det stöd du behöver när du förbereder dig
     för att undervisa. Lärare älskar det, med över 90% rankar det som den bästa professionella
     utvecklingen någonsin!
@@ -789,6 +818,10 @@ sv:
     inom AI, med två nya videor om stora språkmodeller (som ChatGPT) och generativ
     AI. Hör hur dessa nya tekniker fungerar direkt från experterna: Mira Murati, CTO
     för OpenAI och Cristóbal Valenzuela, VD för RunWayML.'
+  ai_pl_101_llm_slides_title: Stora språkmodelluppmaningar för lärare
+  ai_pl_101_llm_slides_desc: Verktyg för att få bästa möjliga resultat från LLM som
+    ChatGPT, från nybörjare till avancerad. Inkluderar startmeddelanden för dem som
+    bara doppar tårna i, samt avancerade verktyg för dem som vill maximera sin potential.
   how_ai_works_hero_heading: Så här fungerar AI
   how_ai_works_hero_desc: Dyk in i AI-världen med ”Hur AI fungerar”, vår videoserie
     och tillhörande lektioner!
@@ -1376,10 +1409,10 @@ sv:
     aktiviteter är tillgängliga om du inte har tillgång till dessa leveranser.
   csd_page_faq_answer_04_06: Skapa appar med enheter (alternativ A och alternativ
     B)
-  csd_page_faq_answer_04_07: 'Option A: Classroom set of Circuit Playgrounds. Check
-    out [code.org/maker/circuitplayground](%{url}) for more details.'
-  csd_page_faq_answer_04_08: 'Option B: Classroom set of micro:bit devices. Check
-    out [code.org/maker/microbit](%{url}) for more details.'
+  csd_page_faq_answer_04_07: 'Alternativ A: Klassrumsuppsättning av Circuit Playgrounds.
+    Kolla in [code.org/maker/circuitplayground] () för mer information.%{url}'
+  csd_page_faq_answer_04_08: 'Alternativ B: Klassrumsuppsättning av mikro:bit-enheter.
+    Kolla in [code.org/maker/microbit] () för mer information.%{url}'
   csd_page_faq_answer_04_09: Tillverkarens tillbehör, till exempel tomma mjukpapper
     eller kartongrullar eller reppapper
   csd_page_faq_answer_04_10: "*Obs! Enheten Skapa appar med enheter har två implementeringsalternativ
@@ -1506,10 +1539,10 @@ sv:
     i ditt klassrum. Våra regionala partners erbjuder högkvalitativa, en-dags Code.org-workshops
     för enskilda lärare eller för skolomfattande PD. [Anmäl dig till en professionell
     utvecklingsworkshop nära dig] (%{sign_up_url})!
-  csf_page_faq_answer_04_02: Join over 100,000 teachers who have participated in our
-    workshops. The majority of our workshop attendees say, 'It's the best professional
-    development I've ever attended.' In fact, [90% of attendees would recommend our
-    program to other teachers](%{rec_url})!
+  csf_page_faq_answer_04_02: 'Gå med över 100 000 lärare som har deltagit i våra workshops.
+    Majoriteten av våra workshopdeltagare säger: ”Det är den bästa professionella
+    utvecklingen jag någonsin har deltagit i.” Faktiskt, [90% av deltagarna skulle
+    rekommendera vårt program till andra lärare] ()!%{rec_url}'
   csf_page_faq_question_05: Vad är den rekommenderade tidpunkten för undervisning
     i CS Fundamentals?
   csf_page_faq_answer_05: Varje CSF-kurs innehåller 13-17 lektioner utformade för
@@ -1518,9 +1551,10 @@ sv:
     för att upplevas i samklang medan de kompetensbyggande lektionerna kan slutföras
     av eleverna i sin egen takt.
   csf_page_faq_question_06: Vilka material behöver jag för CS Fundamentals?
-  csf_page_faq_answer_06: Many lessons have handouts that guide students through activities.
-    These resources can be printed or assigned digitally. Some lessons call for typical
-    classroom supplies and manipulatives. [Visit the CSF Syllabus to learn more](%{syllabus_url}).
+  csf_page_faq_answer_06: Många lektioner har utdelningar som guidar eleverna genom
+    aktiviteter. Dessa resurser kan skrivas ut eller tilldelas digitalt. Vissa lektioner
+    kräver typiska klassrumsmateriel och manipulationer. [Besök CSF-kursplanen för
+    att lära dig mer] ().%{syllabus_url}
   csa_page_top_desc: Introduce students to software engineering and object-oriented
     design while they learn the Java programming language in this free curriculum
     for [AP® Computer Science A (AP® CSA)](%{csa_url}).
@@ -2006,6 +2040,12 @@ sv:
     lokala möjligheter eller andra datavetenskaps-nyheter?
   signup_email_preference_privacy: "(Se vår sekretesspolicy)"
   signup_email_preference_yes: Ja
+  signup_email_preference_yes_elementary: Ja - Skicka mig uppdateringar om Elementary
+    School Resources
+  signup_email_preference_yes_middle: Ja - Skicka mig uppdateringar om Middle School
+    Resources
+  signup_email_preference_yes_high: Ja - Skicka mig uppdateringar om High School Resources
+  signup_email_preference_yes_general: Ja - Skicka mig allmänna uppdateringar
   signup_email_preference_no: Nej
   signup_email_preference_error: Mail-preferenser måste anges
   signup_multiple_event_warning: Om du är värd för flera evenemang, skicka in ett
@@ -4830,11 +4870,11 @@ sv:
   tutorial_robob_longdescription: "RoboBlockly är utformad för nybörjare att lära
     sig robotik med kodning i Blockly. Robotikaktiviteterna är självstyrda med handledningsvideor.
     \nRoboBlockly förbereder eleverna för att vara redo att programmera i C/C ++.\n"
-  tutorial_coders_longdescription: "This step-by-step puzzle game provides an easy
-    introduction to bot programming. \n\nThe aim is to win a starship race against
-    other players.\n\nThe game is simple to start and only requires a few lines of
-    code to have a ship move around, but there are near-infinite possibilities of
-    improvement to create more sophisticated bots. "
+  tutorial_coders_longdescription: "Detta steg-för-steg-pusselspel ger en enkel introduktion
+    till botprogrammering. \n\nMålet är att vinna ett rymdskeppslopp mot andra spelare.\n\nSpelet
+    är enkelt att starta och kräver bara några rader kod för att få ett fartyg att
+    röra sig, men det finns nästan oändliga förbättringsmöjligheter för att skapa
+    mer sofistikerade bots. "
   tutorial_tynkerhw_longdescription: Lär dig att programmera med Hot Wheels i detta
     högoktaniga racingspel! Välj bland ett brett urval av bilar och lär dig sedan
     programmera när du navigerar genom komplexa tävlingsbanor. Hoppa över hinder,
@@ -5351,11 +5391,11 @@ sv:
     ett äventyr genom denna Minecraft värld.
   tutorial_minecraft-2016_longdescription: Bygg ett Minecraft-spel. Skapa dina egna
     versioner av kyckling, får, Creepers, zombies och mer.
-  tutorial_thinkersmith-es_longdescription: Mediante el uso de un "Vocabulario Robot"
+  tutorial_thinkersmith-es_longdescription: Mediante el uso de un ”Vocabulario Robot”
     predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar
-    a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento
-    ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones
-    as&iacute; como la valiosa habilidad de depuraci&oacute;n.
+    a cabo tareas espec ficas sin ser estas discutidas previamente.&iacute;Este segmento
+    ense&ntilde;a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones
+    as como la valiosa habilidad de depuraci n.&iacute;&oacute;
   tutorial_pixie_longdescription: Hour of Code handledning med Pixie
   tutorial_play_longdescription: Skapa en berättelse eller ett spel med Leklabbet!
     Väck djur, pirater, zombier, ninjor och många andra figurer till liv genom att
@@ -12347,12 +12387,12 @@ sv:
   tutorial_googlename _longdescription: Välj ett namn och väck bokstäverna i ordet
     till liv med kod. Välj ett smeknamn, ett husdjurs namn, ett djur, en sport, en
     plats eller en hobby.
-  tutorial_carnegiezillah_longdescription: Zillah City is thriving, and music is in
-    the air. Rumor has it, the famed Gargantua bot is online and sending the last
-    Toxibots to trash the city block by block…. Grab your cobot hoverboard and get
-    ready to groove, move, and finish off what you started! Players program their
-    cobot hoverbots to change lanes, avoid obstacles, and take out many Toxibots in
-    this rhythm-styled game.
+  tutorial_carnegiezillah_longdescription: Zillah City blomstrar, och musik är i luften.
+    Ryktet säger det, den berömda Gargantua-boten är online och skickar de sista Toxibots
+    för att skräpa staden kvarter för kvarter.…Ta tag i din cobot hoverboard och gör
+    dig redo att spåra, flytta, och avsluta det du började! Spelare programmerar sina
+    cobot-hoverbots för att byta körfält, undvika hinder, och ta ut många Toxibots
+    i detta rytmformade spel.
   tutorial_nasachspacejam_longdescription: Skapa ett solsystem som verkligen rockar!
     Lär dig mer om musik, astronomi och kodning i denna självstyrda aktivitet (ingen
     kodningserfarenhet krävs). Programmera planeter för att skapa musik, skapa ditt

@@ -176,6 +176,15 @@ mr:
   grade_level_label_elementary: Elementary School
   grade_level_label_middle: Middle School
   grade_level_label_high: High School
+  curricula_title_elementary: Elementary School Curricula
+  curricula_desc_elementary: Browse the fun, free courses and activities that invite
+    you to explore computer science with your elementary school students.
+  curricula_title_middle: Middle School Curricula
+  curricula_desc_middle: Browse the engaging offerings that enable you and your middle
+    school students to explore computer science together.
+  curricula_title_high: High School Curricula
+  curricula_desc_high: Browse the compelling courses and activities that invite you
+    and your high school students to dig deeper into computer science.
   students_label: विद्यार्थी
   teachers_label: शिक्षक
   teacher_label_csf: 'CS फंडामेंटल्स शिक्षक '
@@ -202,6 +211,13 @@ mr:
   call_to_action_explore_choice_level: उदाहरण निवड पातळी एक्सप्लोर करा
   call_to_action_explore_collection: संग्रह एक्सप्लोर करा
   call_to_action_explore_unplugged_lesson: अनप्लग्ड धडे एक्सप्लोर करा
+  call_to_action_explore_csf: Explore CS Fundamentals
+  call_to_action_explore_csd: Explore CS Discoveries
+  call_to_action_explore_csp: Explore CS Principles
+  call_to_action_explore_csc: Explore CS Connections
+  call_to_action_explore_csa: Explore AP® Computer Science A
+  call_to_action_explore_maker: Explore Maker curricula
+  call_to_action_explore_hoc: Explore Hour of Code tutorials
   call_to_action_try_app_lab: अॅप लॅब वापरून पहा
   call_to_action_view_lesson_plan: View lesson plan
   call_to_action_self_paced_pl: Start self-paced professional learning
@@ -246,6 +262,7 @@ mr:
   call_to_action_notify_available: Notify me when available
   call_to_action_register_early_access: Register for early access
   call_to_action_open_positions: View open positions
+  call_to_action_get_guide: Get the guide
   aria_label_call_to_action_afe: Learn more about Amazon Future Engineer
   aria_label_call_to_action_teaching_csf: Start the Teaching Computer Science Fundamentals
     professional learning program
@@ -356,6 +373,8 @@ mr:
   curriculum_name_csa: कॉम्प्युटर सायन्स A
   curriculum_name_csc_02: कोणतेही CS कनेक्शन मॉड्यूल
   curriculum_name_ai: AI & Machine Learning
+  curriculum_name_artificial_intelligence: Artificial Intelligence (AI)
+  curriculum_name_maker: Maker
   curriculum_name_maker_cp: Creating Apps with Devices (Circuit Playground)
   curriculum_name_maker_microbit: Creating Apps with Devices (micro:bit)
   curriculum_name_creating_apps_with_devices: डिव्हाइसेससह अॅप्स तयार करणे
@@ -408,6 +427,12 @@ mr:
   curriculum_desc_creating_apps_with_devices: कॉम्प्युटिंगमध्ये भौतिक उपकरणांची भूमिका
     एक्सप्लोर करा. हार्डवेअर इनपुट आणि आउटपुट वापरणारे प्रोग्राम विकसित करा. मायक्रो:बिट
     आणि सर्किट प्लेग्राउंड्स या दोन्हीसाठी या युनिटची आवृत्ती आहे.
+  curriculum_desc_csa: Introduce students to software engineering and object-oriented
+    design while they learn the Java programming language in this free curriculum
+    for AP® Computer Science A (AP® CSA).
+  curriculum_desc_maker: Maker education takes STEM (Science, Technology, Engineering,
+    Mathematics) a step further by inviting hands-on experience and collaboration
+    into the classroom to help teach problem solving and critical thinking.
   collection_hardware: हार्डवेअरवर लक्ष केंद्रित करा
   collection_hardware_desc: विद्यार्थ्यांना समस्यांचे निराकरण करण्यासाठी डेटा आणि
     भौतिक उपकरणे वापरण्याचे सामर्थ्य देते.
@@ -447,6 +472,7 @@ mr:
   module_label_student_content_resources: सामग्री आणि संसाधने
   module_label_new: New
   module_label_coming_soon: Coming soon
+  module_label_available_now: Available Now
   module_label_video_series: Video series
   module_label_self_paced: Self-paced module
   module_ages_5_10: 5-10
@@ -457,6 +483,8 @@ mr:
   module_grade_2_5: 2-5
   module_grade_3_5: 3-5
   module_grade_3_8: 3-8
+  module_grade_k_12: K-12
+  module_grade_3_12: 3-12
   module_grade_6_12: 6-12
   module_grade_6_10: 6-10
   module_grade_9_12: 9-12
@@ -550,6 +578,8 @@ mr:
   heading_java_lab: जावा लॅब
   heading_objects_first: प्रथम ऑब्जेक्ट्स
   heading_these_lessons_will: 'These lessons will:'
+  heading_explore_curriculum_catalog: Explore all of our courses in the Curriculum
+    Catalog
   professional_learning_section_desc: तुम्ही शिकवण्याची तयारी करत असताना तुम्हाला
     आवश्यक असलेली मदत मिळवा. शिक्षकांना ते आवडते, 90% पेक्षा जास्त लोकांनी याला आतापर्यंतचा
     सर्वोत्तम व्यावसायिक विकास म्हणून रेट केले आहे!
@@ -800,6 +830,11 @@ mr:
     in AI, featuring two new videos on Large Language Models (like ChatGPT) and Generative
     AI. Hear how these new technologies work directly from the experts: Mira Murati,
     CTO of OpenAI, and Cristóbal Valenzuela, CEO of RunwayML.'
+  ai_pl_101_llm_slides_title: Large Language Model Prompts for Educators
+  ai_pl_101_llm_slides_desc: Tools for getting the best possible output from LLMs
+    like ChatGPT, from beginner to advanced. Includes starter prompts for those just
+    dipping their toes in, as well as advanced tools for those looking to maximize
+    their potential.
   how_ai_works_hero_heading: AI कसे काम करते
   how_ai_works_hero_desc: Dive into the world of AI with "How AI Works," our video
     series and accompanying lessons!
@@ -2028,6 +2063,11 @@ mr:
     संधींबद्दल किंवा कॉम्प्युटर सायंस संबंधी इतर बातम्यांबद्दल ईमेल पाठवू शकतो का?
   signup_email_preference_privacy: "(आमचे गोपनीयता धोरण पारा)"
   signup_email_preference_yes: होय
+  signup_email_preference_yes_elementary: Yes - Send me updates on Elementary School
+    Resources
+  signup_email_preference_yes_middle: Yes - Send me updates on Middle School Resources
+  signup_email_preference_yes_high: Yes - Send me updates on High School Resources
+  signup_email_preference_yes_general: Yes - Send me general updates
   signup_email_preference_no: नाही
   signup_email_preference_error: ईमेल प्राधान्य आवश्यक आहे
   signup_multiple_event_warning: तुम्ही नोंदणी कराल तेव्हा आम्ही तुमच्या शाळेचे नाव

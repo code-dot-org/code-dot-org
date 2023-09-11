@@ -160,6 +160,12 @@ th:
   grade_level_label_elementary: โรงเรียนประถมศึกษา
   grade_level_label_middle: ระดับมัธยมศึกษาตอนต้น
   grade_level_label_high: โรงเรียนมัธยม
+  curricula_title_elementary: หลักสูตรประถมศึกษา
+  curricula_desc_elementary: เรียกดูหลักสูตรสนุก ๆ และกิจกรรมฟรีที่เชิญชวนให้คุณสำรวจวิทยาการคอมพิวเตอร์กับนักเรียนระดับประถมศึกษาของคุณ
+  curricula_title_middle: หลักสูตรระดับมัธยมศึกษาตอนต้น
+  curricula_desc_middle: เรียกดูข้อเสนอที่น่าสนใจที่ทำให้คุณและนักเรียนระดับมัธยมศึกษาตอนต้นของคุณสำรวจวิทยาการคอมพิวเตอร์ร่วมกัน
+  curricula_title_high: หลักสูตรระดับมัธยมศึกษาตอนปลาย
+  curricula_desc_high: เรียกดูหลักสูตรและกิจกรรมที่น่าสนใจที่เชิญคุณและนักเรียนมัธยมปลายของคุณให้เจาะลึกเข้าไปในวิทยาการคอมพิวเตอร์
   students_label: นักเรียน
   teachers_label: ครู
   teacher_label_csf: ผู้สอนพื้นฐานด้านวิทยาการคอมพิวเตอร์
@@ -186,6 +192,13 @@ th:
   call_to_action_explore_choice_level: สำรวจตัวอย่างระดับการเลือก
   call_to_action_explore_collection: สำรวจคอลเลกชัน
   call_to_action_explore_unplugged_lesson: สำรวจบทเรียนที่ถอดปลั๊ก
+  call_to_action_explore_csf: สำรวจข้อมูลพื้นฐานด้านบริการลูกค้า
+  call_to_action_explore_csd: สำรวจการค้นพบด้าน CS
+  call_to_action_explore_csp: สำรวจหลักการบริการลูกค้า
+  call_to_action_explore_csc: สำรวจการเชื่อมต่อ CS
+  call_to_action_explore_csa: สำรวจวิทยาการคอมพิวเตอร์ AP® A
+  call_to_action_explore_maker: สำรวจหลักสูตรของผู้ผลิต
+  call_to_action_explore_hoc: สำรวจบทเรียนชั่วโมงของโค้ด
   call_to_action_try_app_lab: ทดลองใช้ App Lab
   call_to_action_view_lesson_plan: ดูแผนการเรียน
   call_to_action_self_paced_pl: เริ่มต้นการเรียนรู้แบบมืออาชีพด้วยตนเอง
@@ -230,6 +243,7 @@ th:
   call_to_action_notify_available: แจ้งให้ฉันทราบเมื่อพร้อมใช้งาน
   call_to_action_register_early_access: ลงทะเบียนเพื่อเข้าใช้งานก่อนเวลา
   call_to_action_open_positions: ดูตำแหน่งที่เปิดอยู่
+  call_to_action_get_guide: รับคู่มือ
   aria_label_call_to_action_afe: เรียนรู้เพิ่มเติมเกี่ยวกับวิศวกรในอนาคตของ Amazon
   aria_label_call_to_action_teaching_csf: เริ่มการสอนหลักสูตรวิชาชีพความรู้พื้นฐานวิทยาการคอมพิวเตอร์
   aria_label_call_to_action_teaching_csd: เริ่มการเรียนการสอนโปรแกรมการเรียนรู้วิชาชีพวิทยาการคอมพิวเตอร์
@@ -306,6 +320,8 @@ th:
   curriculum_name_csa: วิทยาการคอมพิวเตอร์ A
   curriculum_name_csc_02: โมดูลการเชื่อมต่อวิทยาการคอมพิวเตอร์ใดๆ
   curriculum_name_ai: "  AI และการเรียนรู้ของระบบขั้นสูง  "
+  curriculum_name_artificial_intelligence: ปัญญาประดิษฐ์ (AI)
+  curriculum_name_maker: ผู้ผลิต
   curriculum_name_maker_cp: การสร้างแอปด้วยอุปกรณ์ (สนามเด็กเล่น)
   curriculum_name_maker_microbit: 'การสร้างแอปด้วยอุปกรณ์ (ไมโคร: บิต)'
   curriculum_name_creating_apps_with_devices: การสร้างแอปด้วยอุปกรณ์
@@ -349,6 +365,10 @@ th:
   curriculum_desc_creating_apps_with_devices: สำรวจบทบาทของอุปกรณ์ทางกายภาพในการคำนวณ
     พัฒนาโปรแกรมที่ใช้อินพุตและเอาต์พุตของฮาร์ดแวร์ มีเวอร์ชั่นของยูนิตนี้สำหรับทั้งแบบ
     micro:bit และ Circuit Playground
+  curriculum_desc_csa: แนะนำนักเรียนให้รู้จักกับวิศวกรรมซอฟต์แวร์และการออกแบบเชิงวัตถุในขณะที่พวกเขาเรียนรู้ภาษาการเขียนโปรแกรมภาษาจาวาในหลักสูตรฟรีสำหรับ
+    AP® Computer Science A (AP® CSA) นี้
+  curriculum_desc_maker: Maker education ยกระดับเทคโนโลยี STEM (Science, Technology,
+    Engineering, Mathematics) ด้วยการเชิญชวนประสบการณ์จริงและการทำงานร่วมกันเข้ามาในห้องเรียนเพื่อช่วยสอนการแก้ปัญหาและการคิดเชิงวิพากษ์
   collection_hardware: มุ่งเน้นไปที่ฮาร์ดแวร์
   collection_hardware_desc: ช่วยให้นักเรียนใช้ข้อมูลและอุปกรณ์ทางกายภาพในการแก้ปัญหา
   collection_design_purpose: มุ่งเน้นไปที่การออกแบบที่มีวัตถุประสงค์
@@ -383,6 +403,7 @@ th:
   module_label_student_content_resources: เนื้อหาและแหล่งข้อมูล
   module_label_new: ใหม่
   module_label_coming_soon: เร็ว ๆ นี้
+  module_label_available_now: พร้อมให้บริการแล้ว
   module_label_video_series: วีดีโอชุด
   module_label_self_paced: โมดูลที่ปรับได้เอง
   module_ages_5_10: 5-10
@@ -393,6 +414,8 @@ th:
   module_grade_2_5: 2-5
   module_grade_3_5: 3-5
   module_grade_3_8: 3-8
+  module_grade_k_12: เค-12
+  module_grade_3_12: 3-12
   module_grade_6_12: 6-12
   module_grade_6_10: 6-10
   module_grade_9_12: 9-12
@@ -482,6 +505,7 @@ th:
   heading_java_lab: จาวาแลป
   heading_objects_first: วัตถุก่อน
   heading_these_lessons_will: 'บทเรียนเหล่านี้จะ:'
+  heading_explore_curriculum_catalog: สำรวจหลักสูตรทั้งหมดของเราในแคตตาล็อกหลักสูตร
   professional_learning_section_desc: รับการสนับสนุนที่คุณต้องการในขณะที่คุณเตรียมการสอน
     ผู้สอนชอบมัน โดยกว่า 90% ให้คะแนนว่าเป็นการพัฒนาทางวิชาชีพที่ดีที่สุด!
   professional_learning_section_desc_short: รับการสนับสนุนที่คุณต้องการในขณะที่คุณเตรียมการสอน
@@ -680,6 +704,10 @@ th:
     AI โดยมีวิดีโอใหม่สองเรื่องเกี่ยวกับโมเดลภาษาขนาดใหญ่ (เช่น ChatGPT) และ Generative
     AIรับฟังวิธีที่เทคโนโลยีใหม่เหล่านี้ทำงานโดยตรงจากผู้เชี่ยวชาญ: Mira Murati, CTO
     ของ OpenAI และ Cristóbal Valenzuela CEO ของ RunwayML'
+  ai_pl_101_llm_slides_title: รูปแบบภาษาขนาดใหญ่พร้อมท์สำหรับนักการศึกษา
+  ai_pl_101_llm_slides_desc: เครื่องมือสำหรับการแสดงผลที่ดีที่สุดจาก LLM เช่น ChatGPT
+    ตั้งแต่เริ่มต้นจนถึงขั้นสูงรวมถึงคำแนะนำเริ่มต้นสำหรับผู้ที่เพียงแค่จุ่มนิ้วเท้าของพวกเขาใน
+    เช่นเดียวกับเครื่องมือขั้นสูงสำหรับผู้ที่ต้องการเพิ่มศักยภาพของพวกเขา
   how_ai_works_hero_heading: AI ทำงานอย่างไร
   how_ai_works_hero_desc: ดำดิ่งสู่โลกของ AI ด้วย “วิธีการทำงานของ AI” วิดีโอซีรี่ส์และบทเรียนประกอบของเรา!
   how_ai_works_intro_desc: ชุดวิดีโอสั้นและบทเรียนในชั้นเรียนนี้จะแนะนำคุณและนักเรียนของคุณถึงวิธีการทำงานของปัญญาประดิษฐ์
@@ -1418,8 +1446,8 @@ th:
   ai_activity_zooniverse: Zooniverse - สแน็ปช็อตม้าลายภูเขา
   ai_activity_zooniverse_desc: ช่วยปกป้องม้าลายภูเขาเคปที่ใกล้สูญพันธุ์ได้ด้วยการระบุถึงสัตว์ชนิดต่าง
     ๆ ที่อยู่ในภาพ
-  codeorg_homepage_hoc2018_curriculum: Go further with <a href="%{studio_url}/courses"
-    class="hoc2018-curriculum-link">Code.org courses</a>
+  codeorg_homepage_hoc2018_curriculum: ไปต่อกับหลักสูตร <a href="%{studio_url}/courses"
+    class="hoc2018-curriculum-link">Code.org</a>
   codeorg_homepage_hoc2018_dance_heading: สร้างของคุณเอง <span class="highlight-word">เต้นรำ&nbsp;ปาร์ตี้</span>
   codeorg_homepage_hoc2018_header_line1: ชั่วโมงแห่งประมวลกฎหมายกำลังจะมาถึง...
   codeorg_homepage_hoc2018_header_line2_desktop: สิ่งที่คุณจะ <span class="hoc2018-highlight-word">สร้าง?</span>
@@ -1735,6 +1763,10 @@ th:
     Code.org โอกาสในท้องถิ่นหรือข่าววิทยาศาสตร์คอมพิวเตอร์อื่น ๆ ได้หรือไม่
   signup_email_preference_privacy: "(ดูนโยบายความเป็นส่วนตัวของเรา)"
   signup_email_preference_yes: ใช่
+  signup_email_preference_yes_elementary: ใช่ - ส่งข้อมูลอัปเดตเกี่ยวกับแหล่งข้อมูลระดับประถมศึกษาให้ฉัน
+  signup_email_preference_yes_middle: ใช่ - ส่งข้อมูลอัปเดตเกี่ยวกับแหล่งข้อมูลของโรงเรียนมัธยมศึกษาตอนต้นให้ฉัน
+  signup_email_preference_yes_high: ใช่ - ส่งข้อมูลอัปเดตเกี่ยวกับแหล่งข้อมูลของโรงเรียนมัธยม
+  signup_email_preference_yes_general: ใช่ - ส่งการอัปเดตทั่วไปมาให้ฉัน
   signup_email_preference_no: ไม่ใช่
   signup_email_preference_error: ต้องมีการกำหนดลักษณะอีเมล
   signup_multiple_event_warning: เราจะใส่ชื่อโรงเรียนและเมืองของคุณบนแผนที่เมื่อคุณลงทะเบียนหากคุณกำลังโฮสต์หลายกิจกรรม
@@ -2025,8 +2057,8 @@ th:
     ครู"
   stats_student: "“ฉันรู้ว่านี่เป็นโอกาส</b> ครั้งในชีวิต <b>” - มาเรียนา Alzate,
     เกรด 5"
-  stats_michael: '"I have <b>never, ever</b> seen my students so excited about learning."
-    - Michael Clark, Teacher'
+  stats_michael: "“ฉันไม่ <b>เคย</b> เห็นนักเรียนของฉันตื่นเต้นกับการเรียนรู้” - Michael
+    Clark ครู"
   resources_how_to: คู่มือแนะนำสำหรับครู
   resources_how_to_events: คู่มือแนะนำกิจกรรมต่างๆ
   resources_how_to_districts: คู่มือแนะนำอำเภอ
@@ -2148,8 +2180,8 @@ th:
   learn_banner_beyond: ต้องการเรียนรู้ต่อไปหรือไม่?  <a id='learn_banner_beyond'>ไปไกลกว่าหนึ่งชั่วโมง</a>
   learn_banner_beyond_markdown: "  อยากเรียนไปเรื่อยๆ รึเปล่า [เกินชั่วโมง](%{url})
     \ "
-  learn_banner_teachers: 'Teachers: <a id=''teacher_banner_host''>Host an hour</a>
-    or <a id=''teacher_banner_howto''>read the How-To Guide</a>'
+  learn_banner_teachers: 'ครู: <a id=''teacher_banner_host''>โฮสต์หนึ่งชั่วโมง</a>
+    หรือ <a id=''teacher_banner_howto''>อ่านคู่มือวิธีการ</a>'
   learn_banner_teachers_markdown: "  ผู้สอน: [จัดกิจกรรมหนึ่งชั่วโมง](%{host_url})
     หรือ[อ่านวิธีดำเนินการ](%{howto_url})  "
   tutorial_dance2019_name: Dance Party 2019
@@ -4224,11 +4256,11 @@ th:
     Minecraft นี้
   tutorial_minecraft-2016_longdescription: สร้างเกม Minecraftสร้างรุ่นของคุณเองของไก่,
     แกะ, ไม้เลื้อย, ซอมบี้และอื่น ๆ
-  tutorial_thinkersmith-es_longdescription: Mediante el uso de un "Vocabulario Robot"
-    predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar
-    a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento
-    ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones
-    as&iacute; como la valiosa habilidad de depuraci&oacute;n.
+  tutorial_thinkersmith-es_longdescription: Mediante el USO เดอยกเลิก “คำศัพท์หุ่นยนต์”
+    predefinido, ลอส estudiantes descubrir&aacute;n como guiarse de Modo ตาลเดอ llevar
+    Cabo tareas espec Ficas บาป ser estas discutidas previamente.&iacute;Este segmento
+    ense&ntilde;ลอ estudiantes ลา conexi&oacute;n entre s&iacute;mbolos Y acciones
+    เป็น como ลา valiosa habilidad เด depuraci n.&iacute;&oacute;
   tutorial_pixie_longdescription: ชั่วโมงของการกวดวิชารหัสกับ Pixie
   tutorial_play_longdescription: สร้างเรื่องราวหรือสร้างเกมด้วย Play Lab!ทำให้สัตว์โจรสลัดซอมบี้นินจาและตัวละครอื่น
     ๆ อีกมากมายย้ายให้เสียงจุดคะแนนและแม้กระทั่งโยนบั้งไฟ!
@@ -9998,12 +10030,10 @@ th:
     หมุน ทำงานกับเพื่อนสนิท และทำคะแนนโดยการแตะวัตถุในเกมในโค้ดฮีโร่ของคุณ อวดพลังพิเศษของฮีโร่และความคิดสร้างสรรค์ของคุณเองด้วย
     CS First และ Scratch
   tutorial_googlename _longdescription: เลือกชื่อและนำตัวอักษรของคำที่จะมีชีวิตโดยใช้รหัสเลือกชื่อเล่นชื่อสัตว์เลี้ยงสัตว์กีฬาสถานที่หรืองานอดิเรก
-  tutorial_carnegiezillah_longdescription: Zillah City is thriving, and music is in
-    the air. Rumor has it, the famed Gargantua bot is online and sending the last
-    Toxibots to trash the city block by block…. Grab your cobot hoverboard and get
-    ready to groove, move, and finish off what you started! Players program their
-    cobot hoverbots to change lanes, avoid obstacles, and take out many Toxibots in
-    this rhythm-styled game.
+  tutorial_carnegiezillah_longdescription: Zillah City เป็นที่เจริญรุ่งเรือง, และเพลงอยู่ในอากาศ.มีข่าวลือว่า
+    บอทขนาดมหึมาอันโด่งดังกำลังออนไลน์ และส่งท็อกซิบอทตัวสุดท้ายไปทำลายเมืองทีละบล็อก…คว้า
+    hoverboard cobot ของคุณและเตรียมพร้อมที่จะร่อง ย้าย และจบสิ่งที่คุณเริ่มต้น!ผู้เล่นโปรแกรม
+    hoverbots cobot ของพวกเขาเพื่อเปลี่ยนเลนหลีกเลี่ยงอุปสรรคและนำออก Toxibots จำนวนมากในเกมจังหวะสไตล์นี้
   tutorial_nasachspacejam_longdescription: สร้างระบบสุริยะที่หินจริงๆ!เรียนรู้เกี่ยวกับดนตรี
     ดาราศาสตร์ และการเขียนโค้ดในกิจกรรมที่แนะนำด้วยตนเอง (ไม่จำเป็นต้องมีประสบการณ์การเขียนโค้ด)ดาวเคราะห์
     โปรแกรม ที่จะทำให้ เพลง, การสร้าง ระบบสุริยะ ดนตรี ของคุณเอง สมบูรณ์ด้วย ท่วงทำนอง

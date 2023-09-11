@@ -111,32 +111,32 @@ mt:
     li x-xjenza tal-kompjuter jista' jkollha fil-ħolqien ta' dinja aktar ekwa.
   oceans_landing_videos: Vidjows dwar l-AI u t-Tagħlim tal-Magni
   oceans_behind_the_scenes: 'AI għall-Oċeani: Wara l-kwinti'
-  oceans_behind_the_scenes_1: Levels 2-4 use a pretrained model provided by the <a
-    href="https://www.tensorflow.org/" >TensorFlow</a> <a href="https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md">
-    MobileNet </a> project. A MobileNet model is a <a href="https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks">convolutional
-    neural network</a> that has been trained on <a href="http://www.image-net.org/">ImageNet</a>,
-    a dataset of over 14 million images hand-annotated with words such as "balloon"
-    or "strawberry". In order to customize this model with the labeled training data
-    the student generates in this activity, we use a technique called <a href="https://en.wikipedia.org/wiki/Transfer_learning">Transfer
-    Learning</a>. Each image in the training dataset is fed to MobileNet, as pixels,
-    to obtain a list of annotations that are most likely to apply to it. Then, for
-    a new image, we feed it to MobileNet and compare its resulting list of annotations
-    to those from the training dataset. We classify the new image with the same label
-    (such as "fish" or "not fish") as the images from the training set with the most
-    similar results.
-  oceans_behind_the_scenes_1_markdown: Levels 2-4 use a pretrained model provided
-    by the [TensorFlow](https://www.tensorflow.org/) [MobileNet](https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md)
-    project. A MobileNet model is a [convolutional neural network](https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks)
-    that has been trained on [ImageNet](http://www.image-net.org/), a dataset of over
-    14 million images hand-annotated with words such as "balloon" or "strawberry".
-    In order to customize this model with the labeled training data the student generates
-    in this activity, we use a technique called [Transfer Learning](https://en.wikipedia.org/wiki/Transfer_learning).
-    Each image in the training dataset is fed to MobileNet, as pixels, to obtain a
-    list of annotations that are most likely to apply to it. Then, for a new image,
-    we feed it to MobileNet and compare its resulting list of annotations to those
-    from the training dataset. We classify the new image with the same label (such
-    as "fish" or "not fish") as the images from the training set with the most similar
-    results.
+  oceans_behind_the_scenes_1: Livelli 2-4 jużaw mudell imħarreġ minn qabel ipprovdut
+    mill-proġett <a href="https://www.tensorflow.org/" ></a> <a href="https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md">
+    TensorFlow MobileNet. </a> Mudell MobileNet huwa netwerk newrali <a href="https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks">konvoluzzjonali</a>
+    li ġie mħarreġ fuq <a href="http://www.image-net.org/">ImageNet</a>, sett ta 'dejta
+    ta' aktar minn 14 miljun immaġini annotati bl-idejn bi kliem bħal “bużżieqa” jew
+    “frawli”. Sabiex tippersonalizza dan il-mudell bid-dejta tat-taħriġ ittikkettjata
+    li l-istudent jiġġenera f'din l-attività, nużaw teknika msejħa <a href="https://en.wikipedia.org/wiki/Transfer_learning">Trasferiment
+    ta 'Tagħlim.</a>Kull immaġni fid-dataset tat-taħriġ tiġi mitmugħa lil MobileNet,
+    bħala pixels, biex tinkiseb lista ta 'annotazzjonijiet li x'aktarx japplikaw għaliha.
+    Imbagħad, għal immaġni ġdida, aħna nitimgħuha lil MobileNet u nqabblu l-lista
+    riżultanti tagħha ta 'annotazzjonijiet ma' dawk mid-dataset tat-taħriġ. Aħna nikklassifikaw
+    l-immaġni l-ġdida bl-istess tikketta (bħal “ħut” jew “mhux ħut”) bħall-immaġini
+    mis-sett tat-taħriġ bl-iktar riżultati simili.
+  oceans_behind_the_scenes_1_markdown: Livelli 2-4 jużaw mudell imħarreġ minn qabel
+    ipprovdut mill-proġett [TensorFlow](https://www.tensorflow.org/) [MobileNet](https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md).
+    Mudell MobileNet huwa [netwerk newrali konvoluzzjonali] (https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks)
+    li ġie mħarreġ fuq [ImageNet](http://www.image-net.org/), sett tad-dejta ta 'aktar
+    minn 14-il miljun immaġini annotati bl-idejn bi kliem bħal “bużżieqa” jew “frawli”.
+    Sabiex tippersonalizza dan il-mudell bid-dejta tat-taħriġ ittikkettjata li l-istudent
+    jiġġenera f'din l-attività, nużaw teknika msejħa [Tagħlim tat-Trasferiment] (https://en.wikipedia.org/wiki/Transfer_learning).
+    Kull immaġni fid-dataset tat-taħriġ tiġi mitmugħa lil MobileNet, bħala pixels,
+    biex tinkiseb lista ta 'annotazzjonijiet li x'aktarx japplikaw għaliha. Imbagħad,
+    għal immaġni ġdida, aħna nitimgħuha lil MobileNet u nqabblu l-lista riżultanti
+    tagħha ta 'annotazzjonijiet ma' dawk mid-dataset tat-taħriġ. Aħna nikklassifikaw
+    l-immaġni l-ġdida bl-istess tikketta (bħal “ħut” jew “mhux ħut”) bħall-immaġini
+    mis-sett tat-taħriġ bl-iktar riżultati simili.
   oceans_behind_the_scenes_2: Il-livelli 6-8 jużaw <a href="https://en.wikipedia.org/wiki/Support-vector_machine">Support-Vector
     Machine</a> (SVM). Aħna nħarsu lejn kull komponent tal-ħut (bħall-għajnejn, il-ħalq,
     il-ġisem) u niġbru l-metadata kollha għall-komponenti (bħal numru ta 'snien, forma
@@ -189,6 +189,17 @@ mt:
   grade_level_label_elementary: Iskola Elementari
   grade_level_label_middle: Iskola Nofsani
   grade_level_label_high: Iskola Għolja
+  curricula_title_elementary: Kurrikuli tal-Iskola Elementari
+  curricula_desc_elementary: Ibbrawżja l-gost, korsijiet u attivitajiet b'xejn li
+    jistiednuk tesplora x-xjenza tal-kompjuter mal-istudenti tal-iskola elementari
+    tiegħek.
+  curricula_title_middle: Kurrikuli tal-Iskola Medja
+  curricula_desc_middle: Ibbrawżja l-offerti ta 'involviment li jippermettulek u l-istudenti
+    tal-iskola tan-nofs tiegħek jesploraw ix-xjenza tal-kompjuter flimkien.
+  curricula_title_high: Kurrikuli tal-Iskola Sekondarja
+  curricula_desc_high: Ibbrawżja l-korsijiet u l-attivitajiet konvinċenti li jistiednu
+    lilek u lill-istudenti tal-iskola sekondarja tiegħek biex iħaffru aktar fil-fond
+    fix-xjenza tal-kompjuter.
   students_label: Studenti
   teachers_label: L-għalliema
   teacher_label_csf: CS Fundamentals Għalliema
@@ -215,6 +226,13 @@ mt:
   call_to_action_explore_choice_level: Esplora livell ta 'għażla ta' eżempju
   call_to_action_explore_collection: Esplora l-ġbir
   call_to_action_explore_unplugged_lesson: Esplora lezzjonijiet mhux imqabbda
+  call_to_action_explore_csf: Esplora Fundamenti CS
+  call_to_action_explore_csd: Esplora Skoperti CS
+  call_to_action_explore_csp: Esplora Prinċipji CS
+  call_to_action_explore_csc: Esplora Konnessjonijiet CS
+  call_to_action_explore_csa: Esplora AP® Xjenza tal-Kompjuter A
+  call_to_action_explore_maker: Esplora kurrikuli Maker
+  call_to_action_explore_hoc: Esplora t-tutorials tas-Siegħa tal-Kodiċi
   call_to_action_try_app_lab: Ipprova App Lab
   call_to_action_view_lesson_plan: Ara l-pjan tal-lezzjoni
   call_to_action_self_paced_pl: Ibda tagħlim professjonali b'ritmu personali
@@ -259,6 +277,7 @@ mt:
   call_to_action_notify_available: Jinnotifikaw me meta disponibbli
   call_to_action_register_early_access: Reġistru għal aċċess bikri
   call_to_action_open_positions: Ara l-pożizzjonijiet miftuħa
+  call_to_action_get_guide: Ikseb il-gwida
   aria_label_call_to_action_afe: Tgħallem aktar dwar Amazon Future Engineer
   aria_label_call_to_action_teaching_csf: Ibda l-programm ta 'tagħlim professjonali
     tal-Fundamentali tax-Xjenza tal-Kompjuter tat-Tagħlim
@@ -369,6 +388,8 @@ mt:
   curriculum_name_csa: AP® Xjenza tal-Kompjuter A
   curriculum_name_csc_02: Kwalunkwe Modulu tal-Konnessjonijiet CS
   curriculum_name_ai: AI & Tagħlim bil-Magni
+  curriculum_name_artificial_intelligence: Intelliġenza Artifiċjali (AI)
+  curriculum_name_maker: Perkolatur
   curriculum_name_maker_cp: Ħolqien ta 'Applikazzjonijiet b'Mezzi (Circuit Playground)
   curriculum_name_maker_microbit: 'Ħolqien ta ''Apps b''Mezzi (mikro: bit)'
   curriculum_name_creating_apps_with_devices: Ħolqien ta 'Applikazzjonijiet b'Mezzi
@@ -425,6 +446,12 @@ mt:
   curriculum_desc_creating_apps_with_devices: Esplora r-rwol tal-apparat fiżiku fl-informatika.
     Tiżviluppa programmi li jużaw inputs u outputs ta 'hardware. Hemm verżjoni ta
     'din l-unità kemm għall-mikro:bit u Circuit Playground.
+  curriculum_desc_csa: Introduċi lill-istudenti għall-inġinerija tas-softwer u d-disinn
+    orjentat lejn l-oġġett waqt li jitgħallmu l-lingwa ta 'programmazzjoni Java f'dan
+    il-kurrikulu b'xejn għal AP® Computer Science A (AP® CSA).
+  curriculum_desc_maker: L-edukazzjoni tal-Maker tieħu STEM (Xjenza, Teknoloġija,
+    Inġinerija, Matematika) pass ieħor billi tistieden esperjenza prattika u kollaborazzjoni
+    fil-klassi biex tgħin fit-tagħlim tas-soluzzjoni tal-problemi u l-ħsieb kritiku.
   collection_hardware: Iffoka fuq il-Ħardwer
   collection_hardware_desc: Jagħti s-setgħa lill-istudenti biex jużaw dejta u apparat
     fiżiku biex isolvu l-problemi.
@@ -464,6 +491,7 @@ mt:
   module_label_student_content_resources: Kontenut u riżorsi
   module_label_new: Ġdid
   module_label_coming_soon: Dalwaqt
+  module_label_available_now: Disponibbli Issa
   module_label_video_series: Serje tal-vidjo
   module_label_self_paced: Modulu b'ritmu awtonomu
   module_ages_5_10: 5-10
@@ -474,6 +502,8 @@ mt:
   module_grade_2_5: 2-5
   module_grade_3_5: 3-5
   module_grade_3_8: 3-8
+  module_grade_k_12: K-12
+  module_grade_3_12: 3-12
   module_grade_6_12: 6-12
   module_grade_6_10: 6-10
   module_grade_9_12: 9-12
@@ -570,6 +600,8 @@ mt:
   heading_java_lab: Java Lab
   heading_objects_first: Oġġetti l-ewwel
   heading_these_lessons_will: 'Dawn il-lezzjonijiet se:'
+  heading_explore_curriculum_catalog: Esplora l-korsijiet kollha tagħna fil-Katalgu
+    tal-Kurrikulu
   professional_learning_section_desc: Ikseb l-appoġġ li għandek bżonn hekk kif tipprepara
     biex tgħallem. L-għalliema jħobbuha, b'aktar minn 90% jikklassifikawha l-aħjar
     żvilupp professjonali li qatt kien hemm!
@@ -837,6 +869,11 @@ mt:
     kbar fl-AI, li fiha żewġ vidjows ġodda fuq Mudelli ta ''Lingwa Kbar (bħal ChatGPT)
     u l-AI Ġenerattiva. Isma ''kif dawn it-teknoloġiji l-ġodda jaħdmu direttament
     mill-esperti: Mira Murati, CTO ta'' OpenAI, u Cristóal Valenzuela, CEO ta ''RunwayML.'
+  ai_pl_101_llm_slides_title: Mudell tal-Lingwa Kbira Iqajjem għall-Edukaturi
+  ai_pl_101_llm_slides_desc: Għodda biex tikseb l-aħjar produzzjoni possibbli minn
+    LLMs bħal ChatGPT, minn Bidu għal avvanzat. Jinkludi l-istarter iqajjem għal dawk
+    li għadhom qed jgħaddsu s-sieq tagħhom, kif ukoll għodod avvanzati għal dawk li
+    qed ifittxu li jimmassimizzaw il-potenzjal tagħhom.
   how_ai_works_hero_heading: Kif Taħdem AI
   how_ai_works_hero_desc: Għaddas fid-dinja tal-AI b '"Kif Taħdem l-AI,” is-serje
     tal-vidjow tagħna u l-lezzjonijiet li jakkumpanjawhom!
@@ -1453,10 +1490,10 @@ mt:
     alternattivi huma disponibbli jekk ma jkollokx aċċess għal dawn il-provvisti.
   csd_page_faq_answer_04_06: Ħolqien ta 'Applikazzjonijiet b'Mezzi (Għażla A u Għażla
     B)
-  csd_page_faq_answer_04_07: 'Option A: Classroom set of Circuit Playgrounds. Check
-    out [code.org/maker/circuitplayground](%{url}) for more details.'
-  csd_page_faq_answer_04_08: 'Option B: Classroom set of micro:bit devices. Check
-    out [code.org/maker/microbit](%{url}) for more details.'
+  csd_page_faq_answer_04_07: 'Għażla A: Sett tal-klassi ta ''Circuit Playgrounds.
+    Iċċekkja [code.org/maker/circuitplayground] () għal aktar dettalji.%{url}'
+  csd_page_faq_answer_04_08: 'Għażla B: Sett tal-klassi ta ''apparati mikro: bit.
+    Iċċekkja [code.org/maker/microbit] () għal aktar dettalji.%{url}'
   csd_page_faq_answer_04_09: Provvisti maker, bħal kaxxi tessut vojta jew rollijiet
     tal-kartun jew karta scratch
   csd_page_faq_answer_04_10: "* Nota: L-unità tal-Ħolqien ta 'Applikazzjonijiet b'Mezzi
@@ -1593,10 +1630,10 @@ mt:
     workshops ta 'kwalità għolja u ta' ġurnata Code.org għal għalliema individwali
     jew għal PD madwar l-iskola kollha. [Irreġistra għal workshop ta 'żvilupp professjonali
     ħdejk] (%{sign_up_url})!
-  csf_page_faq_answer_04_02: Join over 100,000 teachers who have participated in our
-    workshops. The majority of our workshop attendees say, 'It's the best professional
-    development I've ever attended.' In fact, [90% of attendees would recommend our
-    program to other teachers](%{rec_url})!
+  csf_page_faq_answer_04_02: Ingħaqad ma 'aktar minn 100,000 għalliem li pparteċipaw
+    fil-workshops tagħna. Il-maġġoranza ta 'dawk li attendew il-workshop tagħna jgħidu,
+    “Huwa l-aħjar żvilupp professjonali li qatt attendejt.” Fil-fatt, [90% ta 'dawk
+    li attendew jirrakkomandaw il-programm tagħna lil għalliema oħra] ()!%{rec_url}
   csf_page_faq_question_05: X'inhu ż-żmien rakkomandat għat-tagħlim tal-Fundamentali
     CS?
   csf_page_faq_answer_05: Kull kors tas-CSF jinkludi 13-17-il lezzjoni mfassla għal
@@ -1605,9 +1642,10 @@ mt:
     mmexxija mill-għalliema mfassla biex jiġu esperjenzati flimkien filwaqt li l-lezzjonijiet
     tal-bini tal-ħiliet jistgħu jitlestew mill-istudenti bil-pass tagħhom.
   csf_page_faq_question_06: Liema materjali għandi bżonn għall-Fundamentali CS?
-  csf_page_faq_answer_06: Many lessons have handouts that guide students through activities.
-    These resources can be printed or assigned digitally. Some lessons call for typical
-    classroom supplies and manipulatives. [Visit the CSF Syllabus to learn more](%{syllabus_url}).
+  csf_page_faq_answer_06: Ħafna lezzjonijiet għandhom għotjiet li jiggwidaw lill-istudenti
+    permezz ta 'attivitajiet. Dawn ir-riżorsi jistgħu jiġu stampati jew assenjati
+    b'mod diġitali. Xi lezzjonijiet jitolbu provvisti u manipulattivi tipiċi tal-klassi.
+    [Żur is-Sillabu tas-CSF biex titgħallem aktar] ().%{syllabus_url}
   csa_page_top_desc: Introduce students to software engineering and object-oriented
     design while they learn the Java programming language in this free curriculum
     for [AP® Computer Science A (AP® CSA)](%{csa_url}).
@@ -1756,8 +1794,8 @@ mt:
   ai_activity_zooniverse: Zooniverse - Snapshot Muntanji Zebra
   ai_activity_zooniverse_desc: Jgħinu jipproteġu l-Zebra Cape Mountain fil-periklu
     billi tidentifika l-annimali differenti fil-immaġini.
-  codeorg_homepage_hoc2018_curriculum: Go further with <a href="%{studio_url}/courses"
-    class="hoc2018-curriculum-link">Code.org courses</a>
+  codeorg_homepage_hoc2018_curriculum: Mur aktar ma <a href="%{studio_url}/courses"
+    class="hoc2018-curriculum-link">Code.org korsijiet</a>
   codeorg_homepage_hoc2018_dance_heading: Oħloq tiegħek stess <span class="highlight-word">Dance&nbsp;Parti</span>
   codeorg_homepage_hoc2018_header_line1: Is-Siegħa tal-Kodiċi ġejja...
   codeorg_homepage_hoc2018_header_line2_desktop: X'se inti <span class="hoc2018-highlight-word">toħloq?</span>
@@ -1781,7 +1819,7 @@ mt:
   codeorg_homepage_csc_title: Konnessjonijiet CS
   hoc2018_tutorial_mchoc_description: Minecraft huwa lura għas-Siegħa tal-Kodiċi b'attività
     ġdida fjamanta! Vjaġġ permezz Minecraft bil-kodiċi.
-  codeorg_homepage_hoc2019_dance_heading: Code a <span class="highlight-word">Dance&nbsp;Party!</span>
+  codeorg_homepage_hoc2019_dance_heading: Kodiċi ta&nbsp;'Party <span class="highlight-word">taż-Żfin!</span>
   codeorg_homepage_hoc2019_dance_heading_markdown: Kodiċi fil-** Dance&nbsp;Parti!
     **
   codeorg_homepage_special2020_body1: Appoġġ għall-ġenituri u l-għalliema li qed jiffaċċjaw
@@ -1969,7 +2007,7 @@ mt:
   whats_next_how_to_promote: "<a href='/promote/resources'>Kif tippromwovi l-Hour
     tal-Kodiċi</a>"
   whats_next_how_to_promote_link: "<a href='/promote'>Kif tippromwovi l-Hour tal-Kodiċi</a>"
-  whats_next_try: "<a href='%{learn_url}'>Try tutorials</a>"
+  whats_next_try: "<a href='%{learn_url}'>Ipprova tutorials</a>"
   whats_next_try_button: Ipprova tutorials
   n_have_learned_an_hoc: "<h1>Ipprova</h1><h2>Siegħa tal-Kodiċi</h2><h3># serva</h3>"
   anybody_can_learn: Kulħadd jista 'jitgħallem.
@@ -1992,9 +2030,9 @@ mt:
     jagħmel dan!
   front_join_us_volunteer_header: Voluntiera għas-Siegħa tal-Kodiċi
   front_join_us_tutorials: Agħżel is-Siegħa tal-Kodiċi tat-tutorja tiegħek!
-  front_join_us_tutorials_link: Filter and browse <i>over 200 tutorials and lesson
-    plans</i>! Find activities for different subject areas, multiple hardware needs,
-    and students at any experience level.
+  front_join_us_tutorials_link: Iffiltra u bbrawżja <i>aktar minn 200 tutorials u
+    pjanijiet tal-lezzjonijiet!</i>Sib attivitajiet għal oqsma ta 'suġġetti differenti,
+    ħtiġijiet ta' ħardwer multipli, u studenti fi kwalunkwe livell ta 'esperjenza.
   front_join_us_robotics: Irbaħ robots jew ċirkwiti!
   front_join_us_robotics_link: Trid sett ta 'robots jew kits tal-informatika fiżika
     biex tuża mal-istudenti tiegħek? L-imsieħba ġenerużi tagħna qed jagħtu settijiet
@@ -2105,6 +2143,13 @@ mt:
     korsijiet, opportunitajiet lokali, jew aħbarijiet oħra xjenza tal-kompjuter?
   signup_email_preference_privacy: "(Ara l-politika tal-privatezza tagħna)"
   signup_email_preference_yes: Iva
+  signup_email_preference_yes_elementary: Iva - Ibgħatli aġġornamenti dwar ir-Riżorsi
+    tal-Iskejjel Elementari
+  signup_email_preference_yes_middle: Iva - Ibgħatli aġġornamenti dwar ir-Riżorsi
+    tal-Iskola Medja
+  signup_email_preference_yes_high: Iva - Ibgħatli aġġornamenti dwar ir-Riżorsi tal-Iskola
+    Sekondarja
+  signup_email_preference_yes_general: Iva - Ibgħatli aġġornamenti ġenerali
   signup_email_preference_no: Le
   signup_email_preference_error: Preferenza bl-email hija meħtieġa
   signup_multiple_event_warning: Aħna npoġġu l-isem tal-iskola u l-belt tiegħek fuq
@@ -2162,10 +2207,10 @@ mt:
     lingwa għall-etajiet kollha.
   map_title: Siegħa ta 'mappa Kodiċi
   map_header: "# avvenimenti reġistrati għall Hour tal-Kodiċi 2017"
-  map_header_count_year: "%{event_count} events registered in %{year}"
+  map_header_count_year: "%{event_count} avvenimenti rreġistrati %{year}"
   see_all_events: Ara l-avvenimenti kollha
   map_header_company: "# mill-organizzaturi tal-kumpanija"
-  map_header_country: "# in %{country}"
+  map_header_country: "# fil %{country}"
   map_search_placeholder: Fittex għal Siegħa ta 'avvenimenti Kodiċi
   map_search_search: Fittex
   map_search_reset: Irrisettja
@@ -2215,18 +2260,20 @@ mt:
     minn aktar minn [400 imsieħeb] (%{partners}) u minn 200,000 edukatur madwar id-dinja.
   hoc_faq_last_year: Ipprova t-tutorials
   hoc_faq_when_is_hoc_q: Meta hija s-Siegħa tal-Kodiċi?
-  hoc_faq_when_is_hoc_a: The Hour of Code takes place each year during <a href='%{csedweek_url}'>Computer
-    Science Education Week</a>. The %{campaign_date_year} Computer Science Education
-    Week will be %{campaign_date_full}, but you can host an Hour of Code all year-round.
-    Computer Science Education Week is held annually in recognition of the birthday
-    of computing pioneer <a href='%{grace_hopper}'>Admiral Grace Murray Hopper</a>
-    (December 9, 1906).
-  hoc_faq_when_is_hoc_a_markdown: The Hour of Code takes place each year during [Computer
-    Science Education Week](%{csedweek_url}). The %{campaign_date_year} Computer Science
-    Education Week will be %{campaign_date_full}, but you can host an Hour of Code
-    all year-round. Computer Science Education Week is held annually in recognition
-    of the birthday of computing pioneer [Admiral Grace Murray Hopper](%{grace_hopper})
-    (December 9, 1906).
+  hoc_faq_when_is_hoc_a: Is-Siegħa tal-Kodiċi sseħħ kull sena matul il-Ġimgħa tal-Edukazzjoni
+    tax-Xjenza <a href='%{csedweek_url}'>tal-Kompjuter</a>. Il-Ġimgħa tal-Edukazzjoni
+    tax-Xjenza %{campaign_date_year} tal-Kompjuter se tkun %{campaign_date_full},
+    imma tista 'tospita Siegħa ta' Kodiċi s-sena kollha. Il-Ġimgħa tal-Edukazzjoni
+    tax-Xjenza tal-Kompjuter issir kull sena bħala rikonoxximent tal-għeluq tal-pijunier
+    tal-kompjuters <a href='%{grace_hopper}'>Ammirall Grace Murray Hopper</a> (9 ta
+    'Diċembru, 1906).
+  hoc_faq_when_is_hoc_a_markdown: Is-Siegħa tal-Kodiċi sseħħ kull sena matul [Ġimgħa
+    tal-Edukazzjoni tax-Xjenza tal-Kompjuter] (%{csedweek_url}). Il-Ġimgħa tal-Edukazzjoni
+    tax-Xjenza %{campaign_date_year} tal-Kompjuter se tkun %{campaign_date_full},
+    imma tista 'tospita Siegħa ta' Kodiċi s-sena kollha. Il-Ġimgħa tal-Edukazzjoni
+    tax-Xjenza tal-Kompjuter issir kull sena bħala rikonoxximent tal-għeluq tal-pijunier
+    tal-kompjuters [Ammirall Grace Murray Hopper] (%{grace_hopper}) (9 ta 'Diċembru,
+    1906).
   hoc_faq_why_cs_q: Għaliex ix-xjenza tal-kompjuter?
   hoc_faq_why_cs_a: "<i>Kull student</i> għandu jkollu l-opportunità li jitgħallem
     ix-xjenza tal-kompjuter. Jgħin biex jitrawwem il-ħiliet, il-loġika u l-kreattività
@@ -2259,47 +2306,49 @@ mt:
     is-Siegħa tal-Kodiċi - inklużi Microsoft, Apple, Amazon, Boys and Girls Clubs
     of America u l-Bord tal-Kulleġġ.
   hoc_faq_host_q: Ma naf xejn dwar il-kodifikazzjoni. Xorta nista' nospita avveniment?
-  hoc_faq_host_a: Of course. Hour of Code activities are self-guided. All you have
-    to do is <a href='%{codeorg_url}/learn'>try our current tutorials</a>, pick the
-    tutorial you want, and pick an hour &mdash; we take care of the rest. We also
-    have options for every age and experience-level, from kindergarten and up. Start
-    planning your event by reading our <a href='/how-to'>how to guide</a>.
-  hoc_faq_host_a_markdown: Of course. Hour of Code activities are self-guided. All
-    you have to do is [try our current tutorials](%{codeorg_url}/learn), pick the
-    tutorial you want, and pick an hour — we take care of the rest. We also have options
-    for every age and experience-level, from kindergarten and up. Start planning your
-    event by reading our [how to guide](%{howto}).
+  hoc_faq_host_a: Dażgur. Siegħa ta 'attivitajiet tal-Kodiċi huma awtogwidati. Kulma
+    għandek tagħmel hu li <a href='%{codeorg_url}/learn'>tipprova tutorials attwali
+    tagħna</a>, pick-tutorja trid, u pick siegħa &mdash; nieħdu ħsieb il-bqija. Għandna
+    wkoll għażliet għal kull età u livell ta 'esperjenza, mill-kindergarten u' l fuq.
+    Ibda tippjana l-avveniment tiegħek billi taqra <a href='/how-to'>kif niggwidaw</a>.
+  hoc_faq_host_a_markdown: Dażgur. Siegħa ta 'attivitajiet tal-Kodiċi huma awtogwidati.
+    Kull ma trid tagħmel hu [ipprova t-tutorials attwali tagħna] (%{codeorg_url}/titgħallem),
+    aqbad it-tutorja li trid, u aqbad siegħa - nieħdu ħsieb il-bqija. Għandna wkoll
+    għażliet għal kull età u livell ta 'esperjenza, mill-kindergarten u' l fuq. Ibda
+    tippjana l-avveniment tiegħek billi taqra tagħna [kif tiggwida] (%{howto}).
   hoc_faq_devices_q: Liema apparat għandi nuża għall-istudenti tiegħi?
-  hoc_faq_devices_a: Code.org tutorials work on all devices and browsers. You can
-    see more information about Code.org's tutorial tech needs <a href='%{codeorg_url}/educate/it'>here</a>.
-    Tech needs for non-Code.org tutorials can be found on <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a>
-    in the tutorial specific description. Don't forget we also offer <a href='%{unplugged_url}'>unplugged
-    activities</a> if your school can't accommodate the tutorials!
-  hoc_faq_devices_a_markdown: Code.org tutorials work on all devices and browsers.
-    You can see more information about Code.org's tutorial tech needs [here](%{codeorg_url}/educate/it).
-    Tech needs for non-Code.org tutorials can be found on [%{partner_url}/learn](%{codeorg_url}/learn)
-    in the tutorial specific description. Don't forget we also offer [unplugged activities](%{unplugged_url})
-    if your school can't accommodate the tutorials!
+  hoc_faq_devices_a: Code.org tutorials jaħdmu fuq l-apparati u l-browsers kollha.
+    Tista 'tara aktar informazzjoni dwar il-ħtiġijiet <a href='%{codeorg_url}/educate/it'>ta'
+    teknoloġija tutorja ta 'Code.org hawn.</a>Bżonnijiet Tech għal tutorials mhux
+    code.org jistgħu jinstabu <a href='%{codeorg_url}/learn'>%{partner_url}fuq/jitgħallmu</a>
+    fid-deskrizzjoni speċifika tutorja. Tinsiex noffru wkoll attivitajiet <a href='%{unplugged_url}'>mhux
+    imqabbda</a> jekk l-iskola tiegħek ma tistax takkomoda t-tutorials!
+  hoc_faq_devices_a_markdown: Code.org tutorials jaħdmu fuq l-apparati u l-browsers
+    kollha. Tista 'tara aktar informazzjoni dwar il-ħtiġijiet ta' teknoloġija tutorja
+    ta 'Code.org (/%{codeorg_url}teduka/it [here]). Bżonnijiet Tech għal tutorials
+    mhux code.org jistgħu jinstabu fuq [%{partner_url}/jitgħallmu] (%{codeorg_url}/jitgħallmu)
+    fid-deskrizzjoni speċifika tutorja. Tinsiex noffru wkoll [attivitajiet mhux imqabbda]
+    (%{unplugged_url}) jekk l-iskola tiegħek ma tistax takkomoda t-tutorials!
   hoc_faq_need_computers_q: Għandi bżonn kompjuters għal kull parteċipant?
-  hoc_faq_need_computers_a: No. We have Hour of Code tutorials that work on PCs, smartphones,
-    tablets, and some that require no computer at all! You can join wherever you are,
-    with whatever you have. <p><i>Here are a few options:</i> <br> <ul> <li><b>Work
-    in pairs.</b> <a href='%{pair_programming_research}'>Research shows</a> students
-    learn best with <a href='%{pair_programming_video}'>pair programming</a>, sharing
-    a computer and working together. Encourage your students to double up. <li><b>Use
-    a projected screen.</b> If you have a projector and screen for a Web-connected
-    computer, your entire group can do an Hour of Code together. Watch video portions
-    together and take turns solving puzzles or answering questions. <li><b>Go unplugged.</b>
-    We offer <a href='%{unplugged_url}'>tutorials that require no computer</a> at
-    all. </ul>
+  hoc_faq_need_computers_a: Le. Għandna tutorials ta 'Siegħa ta' Kodiċi li jaħdmu
+    fuq kompjuters, smartphones, pilloli, u xi wħud li ma jeħtieġu l-ebda kompjuter!
+    Tista 'tingħaqad fejn int, b'kull ma għandek. <p><i>Hawn huma ftit għażliet:</i>
+    <br> <ul> <li><b>Xogħol f'pari.</b> <a href='%{pair_programming_research}'>Ir-riċerka
+    turi li</a> l-istudenti jitgħallmu l-aħjar bl-ipprogrammar <a href='%{pair_programming_video}'>tal-par</a>,
+    jaqsmu kompjuter u jaħdmu flimkien. Ħeġġeġ lill-istudenti tiegħek biex jirdoppjaw.
+    <li><b>Uża skrin ipproġettat.</b> Jekk għandek projettur u skrin għal kompjuter
+    konness mal-Web, il-grupp kollu tiegħek jista 'jagħmel Siegħa ta' Kodiċi flimkien.
+    Ara porzjonijiet tal-vidjow flimkien u ħu dawra biex issolvi puzzles jew twieġeb
+    mistoqsijiet. <li><b>Mur splaggjat.</b> Noffru <a href='%{unplugged_url}'>tutorials
+    li jeħtieġu l-ebda kompjuter</a> fil-livelli kollha. </ul>
   hoc_faq_need_computers_a_markdown: |-
-    No. We have Hour of Code tutorials that work on PCs, smartphones, tablets, and some that require no computer at all! You can join wherever you are, with whatever you have.
+    Le. Għandna tutorials ta 'Siegħa ta' Kodiċi li jaħdmu fuq kompjuters, smartphones, pilloli, u xi wħud li ma jeħtieġu l-ebda kompjuter! Tista 'tingħaqad fejn int, b'kull ma għandek.
 
-    _Here are a few options:_
+    _Hawn huma ftit għażliet:_
 
-    - **Work in pairs.** [Research shows](%{pair_programming_research}) students learn best with [pair programming](%{pair_programming_video}), sharing a computer and working together. Encourage your students to double up.
-    - **Use a projected screen.** If you have a projector and screen for a Web-connected computer, your entire group can do an Hour of Code together. Watch video portions together and take turns solving puzzles or answering questions.
-    - **Go unplugged.** We offer [tutorials that require no computer](%{unplugged_url}) at all.
+    - ** Xogħol f'pari.** [Riċerka turi] (%{pair_programming_research}) l-istudenti jitgħallmu l-aħjar ma '[ipprogrammar par] (), qsim ta' kompjuter u jaħdmu flimkien.%{pair_programming_video}Ħeġġeġ lill-istudenti tiegħek biex jirdoppjaw.
+    - ** Uża skrin proġettat.** Jekk għandek projettur u skrin għal kompjuter konness mal-Web, il-grupp kollu tiegħek jista 'jagħmel Siegħa ta' Kodiċi flimkien. Ara porzjonijiet tal-vidjow flimkien u ħu dawra biex issolvi puzzles jew twieġeb mistoqsijiet.
+    - ** Mur unplugged.** Noffru [tutorials li jeħtieġu l-ebda kompjuter] () fil-livelli kollha.%{unplugged_url}
   hoc_faq_international_q: Jiena <country>. Kif nista' nipparteċipa internazzjonalment?
   hoc_faq_international_a: Kulħadd jista 'jorganizza avveniment ta' Hour of Code,
     kullimkien fid-dinja. Is-sena l-oħra, l-istudenti madwar id-dinja ngħaqdu flimkien
@@ -2323,36 +2372,39 @@ mt:
     il-progress tal-istudenti. Ukoll, l-iffirmar għas-Siegħa tal-Kodiċi MHUX awtomatikament
     joħloq kont Code Studio. Jekk trid toħloq kontijiet għall-istudenti tiegħek, jekk
     jogħġbok segwi dawn l-istruzzjonijiet <a href='https://youtu.be/_smelV_KISE'></a>.
-  hoc_faq_account_a_markdown: No. Absolutely no signup or login is required for students
-    to try the Hour of Code. Most of the [follow-on courses](%{codeorg_url}/learn/beyond)
-    require account creation to save student progress. Also, signing up for the Hour
-    of Code does NOT automatically create a Code Studio account. If you do want to
-    create accounts for your students, please follow these [instructions](%{section_instructions_url}).
+  hoc_faq_account_a_markdown: Le. Assolutament l-ebda reġistrazzjoni jew login mhu
+    meħtieġ għall-istudenti biex jippruvaw is-Siegħa tal-Kodiċi. Ħafna mill- [korsijiet
+    ta 'segwitu] (%{codeorg_url}/jitgħallmu/lil hinn) jeħtieġu ħolqien ta' kont biex
+    jiffrankaw il-progress tal-istudenti. Ukoll, l-iffirmar għas-Siegħa tal-Kodiċi
+    MHUX awtomatikament joħloq kont Code Studio. Jekk trid toħloq kontijiet għall-istudenti
+    tiegħek, jekk jogħġbok segwi dawn [instructions](%{section_instructions_url}).
   hoc_faq_high_school_q: Liema attività għandi nagħmel ma 'studenti tal-iskola sekondarja?
-  hoc_faq_high_school_a: Our Star Wars and Minecraft tutorials are great for high
-    schoolers, especially the Star Wars JavaScript version and the free play level
-    on both tutorials. Alternately, we recommend trying one of the beginner tutorials
-    on <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a> to start, such as the
-    tutorial with Angry Birds or with Anna and Elsa. A high school student should
-    be able to finish one of these in 30 minutes and can then try a more advanced
-    tutorial in JavaScript, such as Khan Academy or CodeHS.
-  hoc_faq_high_school_a_markdown: Our Star Wars and Minecraft tutorials are great
-    for high schoolers, especially the Star Wars JavaScript version and the free play
-    level on both tutorials. Alternately, we recommend trying one of the beginner
-    tutorials on [%{partner_url}/learn](%{codeorg_url}/learn) to start, such as the
-    tutorial with Angry Birds or with Anna and Elsa. A high school student should
-    be able to finish one of these in 30 minutes and can then try a more advanced
-    tutorial in JavaScript, such as Khan Academy or CodeHS.
+  hoc_faq_high_school_a: It-tutorials tagħna ta 'Star Wars u Minecraft huma tajbin
+    għal studenti tal-iskola għolja, speċjalment il-verżjoni Star Wars JavaScript
+    u l-livell ta' logħob liberu fuq iż-żewġ tutorials. Alternattivament, nirrakkomandaw
+    li tipprova wieħed mit-tutorials tal-Bidu <a href='%{codeorg_url}/learn'>%{partner_url}fuq/titgħallem
+    tibda, bħat-tutorja</a> ma 'Angry Birds jew ma' Anna u Elsa. Student tal-iskola
+    għolja għandu jkun jista 'jtemm wieħed minn dawn fi 30 minuta u jista' mbagħad
+    jipprova tutorja aktar avvanzata f'JavaScript, bħal Khan Academy jew CodeHS.
+  hoc_faq_high_school_a_markdown: It-tutorials tagħna ta 'Star Wars u Minecraft huma
+    tajbin għal studenti tal-iskola għolja, speċjalment il-verżjoni Star Wars JavaScript
+    u l-livell ta' logħob liberu fuq iż-żewġ tutorials. Alternattivament, nirrakkomandaw
+    li tipprova wieħed mit-tutorials tal-Bidu fuq [%{partner_url}/titgħallem] (%{codeorg_url}/titgħallem)
+    biex tibda, bħat-tutorja ma 'Angry Birds jew ma' Anna u Elsa. Student tal-iskola
+    għolja għandu jkun jista 'jtemm wieħed minn dawn fi 30 minuta u jista' mbagħad
+    jipprova tutorja aktar avvanzata f'JavaScript, bħal Khan Academy jew CodeHS.
   hoc_faq_scratch_q: I am doing Scratch għall Hour of Code, imma x'jiġri jekk l-istudenti
     tiegħi jkollhom iPads aktar milli laptops?
-  hoc_faq_scratch_a: Scratch doesn't run on tablets. If your students are young, they
-    can use the ScratchJR iPad app (for early-readers). If you look at the tutorials
-    on <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a>, you can find other
-    tutorials that work on iPads - from Code.org, Tynker, Lightbot, or CodeSpark.
-  hoc_faq_scratch_a_markdown: Scratch doesn't run on tablets. If your students are
-    young, they can use the ScratchJR iPad app (for early-readers). If you look at
-    the tutorials on [%{partner_url}/learn](%{codeorg_url}/learn), you can find other
-    tutorials that work on iPads - from Code.org, Tynker, Lightbot, or CodeSpark.
+  hoc_faq_scratch_a: Scratch ma jaħdimx fuq il-pilloli. Jekk l-istudenti tiegħek huma
+    żgħar, jistgħu jużaw l-app ScratchJR iPad (għal qarrejja bikrija). Jekk tħares
+    lejn it-tutorials <a href='%{codeorg_url}/learn'>%{partner_url}fuq/titgħallem</a>,
+    tista 'ssib tutorials oħra li jaħdmu fuq iPads - minn Code.org, Tynker, Lightbot,
+    jew CodesPark.
+  hoc_faq_scratch_a_markdown: Scratch ma jaħdimx fuq il-pilloli. Jekk l-istudenti
+    tiegħek huma żgħar, jistgħu jużaw l-app ScratchJR iPad (għal qarrejja bikrija).
+    Jekk tħares lejn it-tutorials fuq [%{partner_url}/titgħallem] (%{codeorg_url}/titgħallem),
+    tista 'ssib tutorials oħra li jaħdmu fuq iPads - minn Code.org, Tynker, Lightbot,
+    jew CodesPark.
   hoc_faq_count_hoc_q: Kif tgħodd Sigħat ta 'Kodiċi?
   hoc_faq_map_q: Għaliex ma narax it-tikka tiegħi fuq il-mappa?
   hoc_faq_map_a: Aħna hekk sorry inti ma tara avveniment tiegħek fuq il-Hour ta 'Kodiċi
@@ -2437,10 +2489,10 @@ mt:
     fejn tista 'tipprintja ċertifikati għall-klassi kollha tiegħek qabel iż-żmien.
     Tista 'wkoll tipprintja <a href='%{codeorg_url}/certificates?course=mc'>ċertifikati
     speċjali</a> għal studenti li jagħmlu t-tutorja Minecraft.
-  hoc_faq_certificates_a_markdown: Go to our [certificates page](%{codeorg_url}/certificates)
-    where you can print certificates for your entire class ahead of time. You can
-    also print out [special certificates](%{codeorg_url}/certificates?course=mc) for
-    students doing the Minecraft tutorial.
+  hoc_faq_certificates_a_markdown: Mur fil- [paġna taċ-ċertifikati] (%{codeorg_url}/ċertifikati)
+    tagħna fejn tista 'tipprintja ċertifikati għall-klassi kollha tiegħek qabel iż-żmien.
+    Tista 'wkoll tipprintja [ċertifikati speċjali] (%{codeorg_url}/ċertifikati? course=mc)
+    għall-istudenti li jagħmlu t-tutorja tal-Minecraft.
   hoc_faq_logo_q: Hemm limitazzjonijiet għal kif nista 'nuża l-logo jew l-isem tas-Siegħa
     tal-Kodiċi?
   hoc_faq_logo_a: Siegħa ta 'Kodiċi huwa trademarked. Ma rridux nipprevjenu l-użu
@@ -2606,10 +2658,10 @@ mt:
     hinn minn siegħa</a>
   learn_banner_beyond_markdown: Trid tibqa 'titgħallem? [Mur lil hinn minn siegħa]
     (%{url})
-  learn_banner_teachers: 'Teachers: <a id=''teacher_banner_host''>Host an hour</a>
-    or <a id=''teacher_banner_howto''>read the How-To Guide</a>'
-  learn_banner_teachers_markdown: 'Teachers: [Host an hour](%{host_url}) or [read
-    the How-To Guide](%{howto_url})'
+  learn_banner_teachers: 'Għalliema: <a id=''teacher_banner_host''>Ilqa'' s-siegħa</a>
+    jew <a id=''teacher_banner_howto''>aqra l-Gwida dwar il-Kif-To</a>'
+  learn_banner_teachers_markdown: 'Għalliema: [Ospitanti siegħa] (%{host_url}) jew
+    [aqra l-Gwida Kif-To] ()%{howto_url}'
   tutorial_dance2019_name: Partit Taż-żfin
   tutorial_danceparty_name: Partit Taż-żfin
   tutorial_chibitronics_name: 'Chibitronics: Storja mdawwla'
@@ -5565,11 +5617,11 @@ mt:
     avventura permezz ta 'din id-dinja Minecraft.
   tutorial_minecraft-2016_longdescription: Ibni logħba Minecraft. Oħloq verżjonijiet
     tiegħek stess ta 'tiġieġ, nagħaġ, Creepers, zombies u aktar.
-  tutorial_thinkersmith-es_longdescription: Mediante el uso de un "Vocabulario Robot"
+  tutorial_thinkersmith-es_longdescription: Mediante el uso de un “Vocabulario Robot”
     predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar
-    a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento
-    ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones
-    as&iacute; como la valiosa habilidad de depuraci&oacute;n.
+    a cabo tareas espec ficas sin ser estas discutidas previamente.&iacute;Este segmento
+    ense&ntilde;a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones
+    as como la valiosa habilidad de depuraci n.&iacute;&oacute;
   tutorial_pixie_longdescription: Siegħa tal-Kodiċi tutorja ma 'Pixie
   tutorial_play_longdescription: Oħloq storja jew tagħmel logħba ma Play Lab! Għamla
     annimali, pirati, zombies, ninjas, u karattri ħafna aktar jiċċaqalqu, jagħmlu
@@ -12772,12 +12824,12 @@ mt:
   tutorial_googlename _longdescription: Agħżel isem u ġġib l-ittri tal-kelma għall-ħajja
     billi tuża kodiċi. Agħżel laqam, isem ta 'annimal domestiku, annimal, sport, post
     jew passatemp.
-  tutorial_carnegiezillah_longdescription: Zillah City is thriving, and music is in
-    the air. Rumor has it, the famed Gargantua bot is online and sending the last
-    Toxibots to trash the city block by block…. Grab your cobot hoverboard and get
-    ready to groove, move, and finish off what you started! Players program their
-    cobot hoverbots to change lanes, avoid obstacles, and take out many Toxibots in
-    this rhythm-styled game.
+  tutorial_carnegiezillah_longdescription: Zillah City qed tiffjorixxi, u l-mużika
+    tinsab fl-arja. Rumor jgħid dan, il-bot famuż Gargantua huwa online u jibgħat
+    l-aħħar Toxibots biex Trash il-blokka tal-belt bi blokka.…Grab hoverboard cobot
+    tiegħek u mħejija biex groove, jiċċaqalqu, u finitura off dak li bdejt! Il-plejers
+    jipprogrammaw il-hoverbots tal-cobot tagħhom biex ibiddlu l-karreġġjati, jevitaw
+    l-ostakli, u jieħdu ħafna Toxibots f'din il-logħba bi styled bir-ritmu.
   tutorial_nasachspacejam_longdescription: Oħloq sistema solari li verament blat!
     Tgħallem dwar il-mużika, l-astronomija, u l-kodifikazzjoni f'din l-attività awtogwidata
     (l-ebda esperjenza ta 'kodifikazzjoni meħtieġa). Ipprogramma l-pjaneti biex tagħmel

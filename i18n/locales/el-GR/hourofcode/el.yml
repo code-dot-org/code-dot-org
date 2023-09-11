@@ -202,6 +202,18 @@ el:
   grade_level_label_elementary: Δημοτικό Σχολείο
   grade_level_label_middle: Γυμνάσιο
   grade_level_label_high: Γυμνάσιο
+  curricula_title_elementary: Αναλυτικά Προγράμματα Δημοτικού
+  curricula_desc_elementary: Περιηγηθείτε στη διασκέδαση, δωρεάν μαθήματα και δραστηριότητες
+    που σας προσκαλούν να εξερευνήσετε την επιστήμη των υπολογιστών με τους μαθητές
+    του δημοτικού σχολείου σας.
+  curricula_title_middle: Προγράμματα Σπουδών Γυμνασίου
+  curricula_desc_middle: Περιηγηθείτε στις ελκυστικές προσφορές που επιτρέπουν σε
+    εσάς και τους μαθητές του γυμνασίου σας να εξερευνήσετε μαζί την επιστήμη των
+    υπολογιστών.
+  curricula_title_high: Προγράμματα Σπουδών Λυκείου
+  curricula_desc_high: Περιηγηθείτε στα συναρπαστικά μαθήματα και δραστηριότητες που
+    προσκαλούν εσάς και τους μαθητές γυμνασίου σας να εμβαθύνετε στην επιστήμη των
+    υπολογιστών.
   students_label: Μαθητές
   teachers_label: Δάσκαλοι
   teacher_label_csf: Δάσκαλος βασικών αρχών CS
@@ -229,6 +241,13 @@ el:
   call_to_action_explore_choice_level: Εξερευνήστε ένα δείγμα επιπέδου
   call_to_action_explore_collection: Εξερευνήστε τη συλλογή
   call_to_action_explore_unplugged_lesson: Εξερευνήστε μαθήματα χωρίς σύνδεση
+  call_to_action_explore_csf: Εξερευνήστε τις βασικές αρχές CS
+  call_to_action_explore_csd: Εξερευνήστε τις ανακαλύψεις CS
+  call_to_action_explore_csp: Εξερευνήστε τις αρχές CS
+  call_to_action_explore_csc: Εξερευνήστε τις συνδέσεις CS
+  call_to_action_explore_csa: Εξερευνήστε την Επιστήμη Υπολογιστών AP® A
+  call_to_action_explore_maker: Εξερευνήστε τα προγράμματα σπουδών του Maker
+  call_to_action_explore_hoc: Εξερευνήστε τα σεμινάρια της Ώρας του Κώδικα
   call_to_action_try_app_lab: Δοκιμάστε το App Lab
   call_to_action_view_lesson_plan: Προβολή σχεδίου μαθήματος
   call_to_action_self_paced_pl: Ξεκινήστε την αυτο-ρυθμισμένη επαγγελματική μάθηση
@@ -276,6 +295,7 @@ el:
   call_to_action_notify_available: Ειδοποιήστε με όταν είναι διαθέσιμο
   call_to_action_register_early_access: Εγγραφείτε για έγκαιρη πρόσβαση
   call_to_action_open_positions: Προβολή ανοιχτών θέσεων
+  call_to_action_get_guide: Πάρτε τον οδηγό
   aria_label_call_to_action_afe: Μάθετε περισσότερα για τον Μηχανικό Μελλοντικού της
     Amazon
   aria_label_call_to_action_teaching_csf: Ξεκινήστε το πρόγραμμα επαγγελματικής μάθησης
@@ -389,6 +409,8 @@ el:
   curriculum_name_csa: AP® Επιστήμη Υπολογιστών A
   curriculum_name_csc_02: Οποιαδήποτε ενότητα συνδέσεων CS
   curriculum_name_ai: Al και η Μηχανική Μάθηση
+  curriculum_name_artificial_intelligence: Τεχνητή Νοημοσύνη (AI)
+  curriculum_name_maker: Κατασκευαστής
   curriculum_name_maker_cp: Δημιουργία εφαρμογών με συσκευές (Circuit Playground)
   curriculum_name_maker_microbit: Δημιουργία εφαρμογών με συσκευές (micro:bit)
   curriculum_name_creating_apps_with_devices: Δημιουργία εφαρμογών με συσκευές
@@ -450,6 +472,13 @@ el:
     στην πληροφορική. Αναπτύξτε προγράμματα που χρησιμοποιούν εισόδους και εξόδους
     υλικού. Υπάρχει μια έκδοση αυτής της ενότητας τόσο για το micro:bit όσο και για
     το Circuit Playground.
+  curriculum_desc_csa: Εισαγάγετε τους μαθητές στη μηχανική λογισμικού και τον αντικειμενοστρεφή
+    σχεδιασμό ενώ μαθαίνουν τη γλώσσα προγραμματισμού Java σε αυτό το δωρεάν πρόγραμμα
+    σπουδών για AP® Computer Science A (AP® CSA).
+  curriculum_desc_maker: Η εκπαίδευση των δημιουργών παίρνει το STEM (Επιστήμη, Τεχνολογία,
+    Μηχανική, Μαθηματικά) ένα βήμα παραπέρα προσκαλώντας πρακτική εμπειρία και συνεργασία
+    στην τάξη για να βοηθήσει στη διδασκαλία της επίλυσης προβλημάτων και της κριτικής
+    σκέψης.
   collection_hardware: Εστίαση στο υλικό
   collection_hardware_desc: Δίνει τη δυνατότητα στους μαθητές να χρησιμοποιούν δεδομένα
     και φυσικές συσκευές για την επίλυση προβλημάτων.
@@ -491,6 +520,7 @@ el:
   module_label_student_content_resources: Περιεχόμενο & πόροι
   module_label_new: Νέα
   module_label_coming_soon: Ερχομαι συντομα
+  module_label_available_now: Διαθέσιμο τώρα
   module_label_video_series: Σειρά βίντεο
   module_label_self_paced: Αυτορυθμιζόμενη μονάδα
   module_ages_5_10: 5-10
@@ -501,6 +531,8 @@ el:
   module_grade_2_5: 2-5
   module_grade_3_5: 3-5
   module_grade_3_8: 3-8
+  module_grade_k_12: K-12
+  module_grade_3_12: 3-12
   module_grade_6_12: 6-12
   module_grade_6_10: 6-10
   module_grade_9_12: 9-12
@@ -602,6 +634,8 @@ el:
   heading_java_lab: Εργαστήριο Java
   heading_objects_first: Αντικείμενα πρώτα
   heading_these_lessons_will: 'Αυτά τα μαθήματα θα:'
+  heading_explore_curriculum_catalog: Εξερευνήστε όλα τα μαθήματά μας στον Κατάλογο
+    Προγραμμάτων Σπουδών
   professional_learning_section_desc: Λάβετε την υποστήριξη που χρειάζεστε καθώς προετοιμάζεστε
     να διδάξετε. Οι εκπαιδευτικοί το λατρεύουν, με πάνω από 90% να το κατατάσσουν
     ως την καλύτερη επαγγελματική εξέλιξη όλων των εποχών!
@@ -886,6 +920,11 @@ el:
     γλωσσών (όπως το ChatGPT) και Generative AI. Ακούστε πώς αυτές οι νέες τεχνολογίες
     λειτουργούν απευθείας από τους ειδικούς: Mira Murati, CTO του OpenAI και Cristóbal
     Valenzuela, Διευθύνων Σύμβουλος της RunWayML.'
+  ai_pl_101_llm_slides_title: Προτροπές μεγάλων γλωσσικών μοντέλων για εκπαιδευτικούς
+  ai_pl_101_llm_slides_desc: Εργαλεία για την καλύτερη δυνατή έξοδο από LLM όπως το
+    ChatGPT, από αρχάριους έως προχωρημένους. Περιλαμβάνει προτροπές εκκίνησης για
+    όσους απλώς βυθίζουν τα δάχτυλα των ποδιών τους, καθώς και προηγμένα εργαλεία
+    για όσους θέλουν να μεγιστοποιήσουν τις δυνατότητές τους.
   how_ai_works_hero_heading: Πώς λειτουργεί το AI
   how_ai_works_hero_desc: Βουτήξτε στον κόσμο της τεχνητής νοημοσύνης με το «How AI
     Works», τη σειρά βίντεο και τα συνοδευτικά μαθήματα!
@@ -2199,6 +2238,12 @@ el:
     την επιστήμη των υπολογιστών;
   signup_email_preference_privacy: "(Δείτε την πολιτική απορρήτου μας)"
   signup_email_preference_yes: Ναι
+  signup_email_preference_yes_elementary: Ναι - Στείλτε μου ενημερώσεις για το Δημοτικό
+    Σχολείο
+  signup_email_preference_yes_middle: Ναι - Στείλτε μου ενημερώσεις σχετικά με τους
+    πόρους του Γυμνασίου
+  signup_email_preference_yes_high: Ναι - Στείλτε μου ενημερώσεις για το Λύκειο
+  signup_email_preference_yes_general: Ναι - Στείλτε μου γενικές ενημερώσεις
   signup_email_preference_no: Όχι
   signup_email_preference_error: Απαιτείται μία προτίμηση ηλεκτρονικού ταχυδρομείου
   signup_multiple_event_warning: Εάν φιλοξενείτε πολλές εκδηλώσεις, παρακαλούμε να
@@ -5948,11 +5993,11 @@ el:
   tutorial_minecraft-2016_longdescription: Δημιουργήστε ένα παιχνίδι Minecraft. Δημιουργήστε
     τις δικές σας εκδόσεις κοτόπουλου, προβάτων, αναρριχητικά φυτά, ζόμπι και πολλά
     άλλα.
-  tutorial_thinkersmith-es_longdescription: Mediante el uso de un "Vocabulario Robot"
-    predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar
-    a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento
-    ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones
-    as&iacute; como la valiosa habilidad de depuraci&oacute;n.
+  tutorial_thinkersmith-es_longdescription: Ο μέσος όρος του «Ρομπότ Λεξιλίου» προκαθορισμένος,
+    οι μελέτες που αποτιμήθηκαν από το modo tal de llevar a cabo tareas espec ficas
+    ser stas stas stas stas stas stas&aacute;precutiamente.&iacute;Αυτό είναι&ntilde;ένα
+    από τα καλύτερα μαθητούντα στο conexi και τα&iacute;bolos y acciones όπως το valiosa
+    habilidad de depuraci&oacute;n.&iacute;&oacute;
   tutorial_pixie_longdescription: Εκμάθηση για την ώρα του κώδικα με την Pixie
   tutorial_play_longdescription: Δημιουργήστε μία ιστορία ή φτιάξτε ένα παιχνίδι στο
     εργαστήριο παιχνιδιού! Δώστε κίνηση, φωνή και ήχο σε ζώα, πειρατές, ζόμπι, νίντζα
@@ -13442,12 +13487,13 @@ el:
   tutorial_googlename _longdescription: Διαλέξτε ένα όνομα και ζωντανέψτε τα γράμματα
     της λέξης χρησιμοποιώντας κώδικα. Επιλέξτε ένα ψευδώνυμο, ένα όνομα κατοικίδιου
     ζώου, ένα ζώο, ένα άθλημα, ένα μέρος ή ένα χόμπι.
-  tutorial_carnegiezillah_longdescription: Zillah City is thriving, and music is in
-    the air. Rumor has it, the famed Gargantua bot is online and sending the last
-    Toxibots to trash the city block by block…. Grab your cobot hoverboard and get
-    ready to groove, move, and finish off what you started! Players program their
-    cobot hoverbots to change lanes, avoid obstacles, and take out many Toxibots in
-    this rhythm-styled game.
+  tutorial_carnegiezillah_longdescription: Η πόλη Zillah ευδοκιμεί, και η μουσική
+    είναι στον αέρα. Φήμες λένε, το φημισμένο ρομπότ Gargantua είναι συνδεδεμένο και
+    στέλνει τα τελευταία Toxibots να σκουπίζουν την πόλη μπλοκ προς μπλοκ.…Πιάστε
+    το cobot hoverboard σας και ετοιμαστείτε να ξεκινήσετε, να μετακινηθείτε και να
+    ολοκληρώσετε αυτό που ξεκινήσατε! Οι παίκτες προγραμματίζουν τα cobot hoverbots
+    τους για να αλλάξουν λωρίδες, να αποφύγουν εμπόδια και να βγάλουν πολλά Toxibots
+    σε αυτό το παιχνίδι με στυλ ρυθμού.
   tutorial_nasachspacejam_longdescription: Δημιουργήστε ένα ηλιακό σύστημα που πραγματικά
     λικνίζει! Μάθετε για τη μουσική, την αστρονομία και την κωδικοποίηση σε αυτήν
     την αυτο-καθοδηγούμενη δραστηριότητα (δεν απαιτείται εμπειρία κωδικοποίησης).

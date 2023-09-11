@@ -113,19 +113,22 @@ hy:
     համակարգչային գիտության դերը, որը կարող է խաղալ ավելի արդար աշխարհ ստեղծելու գործում:'
   oceans_landing_videos: Տեսանյութեր AI- ի և մեքենայական ուսուցման մասին
   oceans_behind_the_scenes: AI օվկիանոսների համար. Կուլիսների հետևում
-  oceans_behind_the_scenes_1: Levels 2-4 use a pretrained model provided by the <a
-    href="https://www.tensorflow.org/" >TensorFlow</a> <a href="https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md">
-    MobileNet </a> project. A MobileNet model is a <a href="https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks">convolutional
-    neural network</a> that has been trained on <a href="http://www.image-net.org/">ImageNet</a>,
-    a dataset of over 14 million images hand-annotated with words such as "balloon"
-    or "strawberry". In order to customize this model with the labeled training data
-    the student generates in this activity, we use a technique called <a href="https://en.wikipedia.org/wiki/Transfer_learning">Transfer
-    Learning</a>. Each image in the training dataset is fed to MobileNet, as pixels,
-    to obtain a list of annotations that are most likely to apply to it. Then, for
-    a new image, we feed it to MobileNet and compare its resulting list of annotations
-    to those from the training dataset. We classify the new image with the same label
-    (such as "fish" or "not fish") as the images from the training set with the most
-    similar results.
+  oceans_behind_the_scenes_1: '2-4 մակարդակները օգտագործում են <a href="https://www.tensorflow.org/"
+    ></a> <a href="https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md">
+    TensorFlow MobileNet նախագծի կողմից տրամադրված նախնական վերապատրաստված մոդելը:
+    </a> A MobileNet մոդելը մի <a href="https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks">խճճված
+    նեյրոնային ցանց է,</a> որը վերապատրաստվել է <a href="http://www.image-net.org/">iMaGenet</a>,
+    մի dataset ավելի քան 14 միլիոն պատկերների ձեռքի ծանոթագրված բառերով, ինչպիսիք
+    են “փուչիկ” կամ “ելակ”. Որպեսզի հարմարեցնել այս մոդելը պիտակավորված վերապատրաստման
+    տվյալների հետ ուսանողը առաջացնում է այս գործունեության մեջ, մենք օգտագործում ենք
+    մի տեխնիկա, որը կոչվում <a href="https://en.wikipedia.org/wiki/Transfer_learning">է
+    Փոխանցման ուսուցում.</a>Յուրաքանչյուր պատկեր է վերապատրաստման dataset սնվում է
+    MobileNet, քանի որ փիքսել, ձեռք բերել ցուցակը ծանոթագրություններ, որոնք, ամենայն
+    հավանականությամբ, պետք է դիմել դրան: Այնուհետեւ, նոր պատկերով, մենք կերակրում
+    ենք այն MobileNet- ին եւ համեմատում ենք դրա արդյունքում ստացվող անոտացիաների ցանկը
+    վերապատրաստման տվյալների շտեմարանից: Մենք դասակարգում ենք նոր պատկերը նույն պիտակով
+    (օրինակ ՝ “ձուկ” կամ “ոչ ձուկ”), քանի որ դասընթացների հավաքածուի պատկերները առավել
+    նման արդյունքներով:'
   oceans_behind_the_scenes_1_markdown: '2-4 մակարդակներում օգտագործվում է [TensorFlow](https://www.tensorflow.org/)
     [MobileNet](https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md)
     նախագծի կողմից տրամադրված նախապես պատրաստված մոդել: A MobileNet մոդելը [խճճված
@@ -141,13 +144,14 @@ hy:
     դրա արդյունքում ստացվող անոտացիաների ցանկը վերապատրաստման տվյալների շտեմարանից:
     Մենք դասակարգում ենք նոր պատկերը նույն պիտակով (օրինակ ՝ “ձուկ” կամ “ոչ ձուկ”),
     քանի որ դասընթացների հավաքածուի պատկերները առավել նման արդյունքներով:'
-  oceans_behind_the_scenes_2: Levels 6-8 use a <a href="https://en.wikipedia.org/wiki/Support-vector_machine">Support-Vector
-    Machine</a> (SVM). We look at each component of the fish (such as eyes, mouth,
-    body) and assemble all of the metadata for the components (such as number of teeth,
-    body shape) into a vector of numbers for each fish. We use these vectors to train
-    the SVM. Based on the training data, the SVM separates the "space" of all possible
-    fish into two parts, which correspond to the classes we are trying to learn (such
-    as "blue" or "not blue").
+  oceans_behind_the_scenes_2: '6-8 մակարդակները օգտագործում են <a href="https://en.wikipedia.org/wiki/Support-vector_machine">աջակցության
+    վեկտորը մեքենա (SVM):</a> Մենք նայում ենք ձկների յուրաքանչյուր բաղադրիչին (օրինակ
+    ՝ աչքերը, բերանը, մարմինը) և հավաքում ենք բաղադրիչների համար նախատեսված բոլոր
+    մետատվյալները (օրինակ ՝ ատամների քանակը, մարմնի ձևը) յուրաքանչյուր ձկան համար
+    թվերի վեկտորի մեջ: Մենք օգտագործում ենք այդ վեկտորները է վերապատրաստել SVM. Դասընթացի
+    տվյալների հիման վրա SVM- ն առանձնացնում է բոլոր հնարավոր ձկների “տարածքը” երկու
+    մասի, որոնք համապատասխանում են այն դասերին, որոնք մենք փորձում ենք սովորել (օրինակ
+    ՝ “կապույտ” կամ “ոչ կապույտ”):'
   oceans_behind_the_scenes_2_markdown: '6-8 մակարդակները օգտագործում են [Աջակցություն-վեկտոր
     մեքենա] (https://en.wikipedia.org/wiki/Support-vector_machine) (SVM): Մենք նայում
     ենք ձկների յուրաքանչյուր բաղադրիչին (օրինակ ՝ աչքերը, բերանը, մարմինը) և հավաքում
@@ -194,6 +198,17 @@ hy:
   grade_level_label_elementary: Տարրական դպրոց
   grade_level_label_middle: Միջին դպրոց
   grade_level_label_high: Ավագ դպրոց
+  curricula_title_elementary: Տարրական դպրոցի ուսումնական ծրագրեր
+  curricula_desc_elementary: 'Փնտրեք զվարճալի, անվճար դասընթացներ և գործողություններ,
+    որոնք հրավիրում են ձեզ ուսումնասիրել համակարգչային գիտություն ձեր տարրական դպրոցի
+    աշակերտների հետ:'
+  curricula_title_middle: Միջին դպրոցի ուսումնական ծրագրեր
+  curricula_desc_middle: 'Փնտրեք գրավիչ առաջարկները, որոնք ձեզ և ձեր միջին դպրոցի
+    աշակերտներին հնարավորություն են տալիս միասին ուսումնասիրել համակարգչային գիտությունը:'
+  curricula_title_high: Ավագ դպրոցի ուսումնական ծրագրեր
+  curricula_desc_high: 'Փնտրեք այն համոզիչ դասընթացներն ու գործողությունները, որոնք
+    հրավիրում են ձեզ և ձեր ավագ դպրոցի աշակերտներին ավելի խորը փորել համակարգչային
+    գիտության մեջ:'
   students_label: Ուսանողներ
   teachers_label: Ուսուցիչները
   teacher_label_csf: CS հիմունքների ուսուցիչ
@@ -220,6 +235,13 @@ hy:
   call_to_action_explore_choice_level: Ուսումնասիրեք օրինակի ընտրության մակարդակը
   call_to_action_explore_collection: Ուսումնասիրեք հավաքածուն
   call_to_action_explore_unplugged_lesson: Ուսումնասիրեք անջատված դասերը
+  call_to_action_explore_csf: Ուսումնասիրեք CS հիմունքները
+  call_to_action_explore_csd: Ուսումնասիրեք CS հայտնագործությունները
+  call_to_action_explore_csp: Ուսումնասիրեք CS սկզբունքները
+  call_to_action_explore_csc: Ուսումնասիրեք CS կապերը
+  call_to_action_explore_csa: Ուսումնասիրեք AP® Համակարգչային գիտություն Ա
+  call_to_action_explore_maker: Ուսումնասիրել Maker ուսումնական ծրագրերը
+  call_to_action_explore_hoc: Ուսումնասիրեք օրենսգրքի ձեռնարկների ժամը
   call_to_action_try_app_lab: Փորձեք App Lab
   call_to_action_view_lesson_plan: Դիտեք դասի պլանը
   call_to_action_self_paced_pl: Սկսեք ինքնուրույն մասնագիտական ուսուցում
@@ -265,6 +287,7 @@ hy:
   call_to_action_notify_available: Ծանուցել ինձ, երբ առկա
   call_to_action_register_early_access: Գրանցվել վաղ մուտք գործելու համար
   call_to_action_open_positions: Դիտել բաց դիրքերը
+  call_to_action_get_guide: Ստացեք ուղեցույցը
   aria_label_call_to_action_afe: Իմացեք ավելին Amazon- ի ապագա ինժեների մասին
   aria_label_call_to_action_teaching_csf: Սկսեք դասավանդման համակարգչային գիտության
     հիմունքներ մասնագիտական ուսուցման ծրագիր
@@ -378,6 +401,8 @@ hy:
   curriculum_name_csa: AP® Համակարգչային գիտություն A
   curriculum_name_csc_02: CS- ի միացումների ցանկացած մոդուլ
   curriculum_name_ai: AI և մեքենայական ուսուցում
+  curriculum_name_artificial_intelligence: Արհեստական բանականություն (AI)
+  curriculum_name_maker: Maker
   curriculum_name_maker_cp: Ստեղծվում Apps հետ սարքերի (Circuit խաղահրապարակ)
   curriculum_name_maker_microbit: 'Սարքերի հետ հավելվածների ստեղծում (միկրո: բիթ)'
   curriculum_name_creating_apps_with_devices: Սարքերի հետ հավելվածների ստեղծում
@@ -436,6 +461,12 @@ hy:
   curriculum_desc_creating_apps_with_devices: 'Ուսումնասիրել դերը ֆիզիկական սարքերի
     computing. Մշակել ծրագրեր, որոնք օգտագործում են ապարատային մուտքերն ու արդյունքները:
     Կա մի տարբերակ այս միավորի համար, այնպես էլ միկրո: bit եւ Circuit Խաղահրապարակ.'
+  curriculum_desc_csa: Ներկայացնել ուսանողներին ծրագրային ապահովման ճարտարագիտության
+    եւ օբյեկտ կողմնորոշված դիզայնի, իսկ նրանք սովորում են Java ծրագրավորման լեզուն
+    այս անվճար ուսումնական ծրագրի համար AP® Computer Science A (AP® CSA).
+  curriculum_desc_maker: Maker կրթությունը տեւում STEM (Գիտություն, Տեխնոլոգիա, Ճարտարագիտություն,
+    Մաթեմատիկա) մի քայլ հետագա հրավիրելով ձեռքերը- on փորձը եւ համագործակցություն
+    մեջ դասարանում է օգնել սովորեցնել խնդիրների լուծման եւ քննադատական մտածողության.
   collection_hardware: Կենտրոնանալ ապարատային
   collection_hardware_desc: 'Հզորացնում է ուսանողներին օգտագործել տվյալների և ֆիզիկական
     սարքերի խնդիրները լուծելու համար:'
@@ -476,6 +507,7 @@ hy:
   module_label_student_content_resources: Բովանդակություն և ռեսուրսներ
   module_label_new: Նոր
   module_label_coming_soon: Շուտով
+  module_label_available_now: Հասանելի է հիմա
   module_label_video_series: Վիդեո շարք
   module_label_self_paced: Ինքնակառավարման ուսման տեմպը որոշող մոդուլ
   module_ages_5_10: 5-10
@@ -486,6 +518,8 @@ hy:
   module_grade_2_5: 2-5
   module_grade_3_5: 3-5
   module_grade_3_8: 3-8
+  module_grade_k_12: Կ-12
+  module_grade_3_12: 3-12
   module_grade_6_12: 6-12
   module_grade_6_10: 6-10
   module_grade_9_12: 9-12
@@ -585,6 +619,8 @@ hy:
   heading_java_lab: Java Lab
   heading_objects_first: Օբյեկտներ առաջին
   heading_these_lessons_will: 'Այս դասերը:'
+  heading_explore_curriculum_catalog: Ուսումնասիրեք մեր բոլոր դասընթացները ուսումնական
+    կատալոգում
   professional_learning_section_desc: 'Ստացեք այն աջակցությունը, որը ձեզ հարկավոր
     է, երբ պատրաստվում եք սովորեցնել: Ուսուցիչները սիրում են այն, ավելի քան 90% դասակարգելով
     այն լավագույն մասնագիտական զարգացումը երբեւէ!'
@@ -854,6 +890,11 @@ hy:
     ChatGPT) և Generative AI- ի վերաբերյալ: Լսեք, թե ինչպես են այս նոր տեխնոլոգիաները
     աշխատում անմիջապես փորձագետներից. Միրա Մուրատի, OpenAI- ի CTO- ն և RunWayML- ի
     գործադիր տնօրեն Կրիստոբալ Վալենզուելա:'
+  ai_pl_101_llm_slides_title: Մեծ լեզվական մոդելի հուշումներ մանկավարժների համար
+  ai_pl_101_llm_slides_desc: 'ChatGpt- ի նման LLMs- ից հնարավոր լավագույն արդյունքը
+    ստանալու գործիքներ ՝ սկսնակից մինչև առաջադեմ: Ներառում է մեկնարկային հուշումներ
+    նրանց համար, ովքեր պարզապես լող իրենց ոտք ունեցող մարդիկ, ինչպես նաեւ առաջադեմ
+    գործիքներ նրանց համար, ովքեր փնտրում են առավելագույնի հասցնել իրենց ներուժը.'
   how_ai_works_hero_heading: Ինչպես է աշխատում AI- ն
   how_ai_works_hero_desc: 'Սուզվել AI- ի աշխարհում ՝ “Ինչպես է գործում AI- ն”, մեր
     տեսանյութերի շարքը և ուղեկցող դասերը:'
@@ -1436,11 +1477,12 @@ hy:
   csd_page_courses_collections_desc: 'Ավելի խորը սուզվել մեկ տարածքում, մի շարք միավորներով,
     որոնք կենտրոնացած են կոնկրետ թեմայի վրա:'
   csd_page_faq_question_01: 'Արդյո՞ք CS հայտնագործությունները քարտեզագրված են ստանդարտներին:'
-  csd_page_faq_answer_01: CS Discoveries was written using both the K-12 Framework
-    for Computer Science and the 2017 CSTA standards as guidance. Currently, every
-    lesson in CS Discoveries contains mappings to the relevant 2017 CSTA standards.
-    [A summary of standards mappings can be found here](%{mappings_url}). A Google
-    Sheets version of the standards can be found at [CSD Standards](%{csd_standards_url}).
+  csd_page_faq_answer_01: 'CS Հայտնագործությունները գրվել է օգտագործելով ինչպես K-12
+    Framework for Computer Science, այնպես էլ 2017 CSTA ստանդարտները որպես առաջնորդության.
+    Ներկայումս CS հայտնագործությունների յուրաքանչյուր դաս պարունակում է քարտեզագրումներ
+    համապատասխան 2017 CSTA ստանդարտներին: [A ամփոփ ստանդարտների քարտեզագրումներ կարելի
+    է գտնել այստեղ] ().%{mappings_url}A Google Sheets տարբերակը ստանդարտների կարելի
+    է գտնել [CSD ստանդարտների] ()%{csd_standards_url}.'
   csd_page_faq_question_02: 'Ինչպե՞ս և որտե՞ղ կարող եմ մասնագիտական զարգացում ստանալ
     այս դասընթացի համար:'
   csd_page_faq_answer_02: 'Մեր մասնագիտական ուսուցման ծրագիրը առաջարկում է ամբողջ
@@ -1488,10 +1530,10 @@ hy:
     կարող են փոխարինվել նույն չափի այլ տեսակի քաշով): Այլընտրանքային գործողությունները
     հասանելի են, եթե դուք չունեք մուտք դեպի այդ մատակարարումները.'
   csd_page_faq_answer_04_06: Ծրագրերի ստեղծում սարքերով (տարբերակ A և տարբերակ B)
-  csd_page_faq_answer_04_07: 'Option A: Classroom set of Circuit Playgrounds. Check
-    out [code.org/maker/circuitplayground](%{url}) for more details.'
-  csd_page_faq_answer_04_08: 'Option B: Classroom set of micro:bit devices. Check
-    out [code.org/maker/microbit](%{url}) for more details.'
+  csd_page_faq_answer_04_07: 'Տարբերակ A: Դասասենյակային շարք Circuit խաղահրապարակների.
+    Լրացուցիչ մանրամասների համար ստուգեք [code.org/maker/circuitplayground] ():%{url}'
+  csd_page_faq_answer_04_08: 'Տարբերակ B: Միկրո: bit սարքերի դասասենյակային հավաքածու:
+    Լրացուցիչ մանրամասների համար ստուգեք [code.org/maker/microbit] ()%{url}'
   csd_page_faq_answer_04_09: Maker պարագաներ, ինչպիսիք են դատարկ հյուսվածքային տուփեր
     կամ ստվարաթղթե գլանափաթեթներ կամ քերծվածքային թուղթ
   csd_page_faq_answer_04_10: "* Նշում. Սարքերի հետ ծրագրեր ստեղծելը ունի իրականացման
@@ -1501,12 +1543,12 @@ hy:
     են և ծածկում են նույն բովանդակությունը:"
   csd_page_faq_question_06: 'Ինչպե՞ս է CS հայտնագործությունները տեղավորվում Code.org-
     ի մյուս դասընթացների հետ:'
-  csd_page_faq_answer_06_01: CS Discoveries is designed to fit naturally between our
-    [CS Fundamentals](%{csf_url}) courses and our [CS Principles](%{csp_url}) course.
-    While each of these courses is designed to be an age-appropriate entry point to
-    computer science, students with previous experience will find many new topics
-    to explore, and they will revisit familiar topics in novel and more challenging
-    contexts.
+  csd_page_faq_answer_06_01: 'CS հայտնագործություններ, որը նախատեսված է տեղավորել,
+    բնականաբար, միջեւ մեր [CS հիմունքներ] (%{csf_url}) դասընթացներ եւ մեր [CS սկզբունքները]
+    () Իհարկե.%{csp_url}Չնայած այս դասընթացներից յուրաքանչյուրը նախատեսված է համակարգչային
+    գիտության տարիքին համապատասխան մուտքի կետ, նախորդ փորձ ունեցող ուսանողները կգտնեն
+    բազմաթիվ նոր թեմաներ ուսումնասիրելու համար, և նրանք կվերանայեն ծանոթ թեմաները
+    վեպի և ավելի դժվար համատեքստերում:'
   csc_page_top_desc: 'Կապեր ստեղծեք համակարգչային գիտության (CS) և այլ առարկաների
     միջև, ինչպիսիք են մաթեմատիկան, լեզվական արվեստը, գիտությունը և սոցիալական ուսումնասիրությունները:'
   csc_page_intro_heading: Սովորեցրեք CS- ին `հիմնական առարկայական ստանդարտները լուսաբանելիս
@@ -1642,9 +1684,10 @@ hy:
     փորձառու լինելու համար, մինչդեռ հմտությունների կառուցման դասերը կարող են ավարտվել
     ուսանողների կողմից իրենց տեմպերով:'
   csf_page_faq_question_06: 'Ի՞նչ նյութեր են պետք CS- ի հիմունքների համար:'
-  csf_page_faq_answer_06: Many lessons have handouts that guide students through activities.
-    These resources can be printed or assigned digitally. Some lessons call for typical
-    classroom supplies and manipulatives. [Visit the CSF Syllabus to learn more](%{syllabus_url}).
+  csf_page_faq_answer_06: Շատ դասեր ունեն ձեռքեր, որոնք առաջնորդում են ուսանողներին
+    գործունեության միջոցով. Այդ ռեսուրսները կարող են տպագրվել կամ նշանակվել թվային.
+    Որոշ դասեր կոչ են անում տիպիկ լսարանային պարագաներ եւ մանիպուլյացիաների. [Այցելեք
+    ՔՀՖ Syllabus ավելին իմանալու համար] ().%{syllabus_url}
   csa_page_top_desc: Introduce students to software engineering and object-oriented
     design while they learn the Java programming language in this free curriculum
     for [AP® Computer Science A (AP® CSA)](%{csa_url}).
@@ -1796,8 +1839,8 @@ hy:
   ai_activity_zooniverse: Zooniverse - Պատկերը լեռնային զեբրա
   ai_activity_zooniverse_desc: Օգնություն պաշտպանել վտանգված Cape Mountain Zebra բացահայտելով
     տարբեր կենդանիների պատկերների.
-  codeorg_homepage_hoc2018_curriculum: Go further with <a href="%{studio_url}/courses"
-    class="hoc2018-curriculum-link">Code.org courses</a>
+  codeorg_homepage_hoc2018_curriculum: Գնալ հետագա հետ <a href="%{studio_url}/courses"
+    class="hoc2018-curriculum-link">Code.org դասընթացների</a>
   codeorg_homepage_hoc2018_dance_heading: Ստեղծել ձեր սեփական <span class="highlight-word">Dance&nbsp;կուսակցություն</span>
   codeorg_homepage_hoc2018_header_line1: "“Կոդի ժամը” գալիս է..."
   codeorg_homepage_hoc2018_header_line2_desktop: Ի՞նչ եք ստեղծելու <span class="hoc2018-highlight-word">:</span>
@@ -1841,10 +1884,10 @@ hy:
   cookie_banner_accept: Ես համաձայն եմ
   front_header_banner: Միացեք պատմության մեջ ամենամեծ ուսումնական իրադարձությանը,
     %{campaign_date}
-  front_intro_default: The Hour of Code is a global movement reaching tens of millions
-    of students in 180+ countries. Anyone, anywhere can organize an Hour of Code event.
-    One-hour tutorials are available in over 45 languages. No experience needed. <strong>Ages
-    4 to 104.</strong>
+  front_intro_default: "“Կոդի ժամը” համաշխարհային շարժում է, որը հասնում է տասնյակ
+    միլիոնավոր ուսանողների 180+ երկրներում: Յուրաքանչյուր ոք, ցանկացած վայրում կարող
+    է կազմակերպել “Hour Code” միջոցառումը: Մեկ ժամ տևողությամբ ձեռնարկները հասանելի
+    են ավելի քան 45 լեզուներով: Ոչ մի փորձ անհրաժեշտ չէ: <strong>4-ից 104 տարեկան:</strong>"
   front_intro_default_2: 'Համաշխարհային շարժում 180+ երկրներում:'
   front_watch_video: Դիտեք նոր տեսանյութը
   front_watch_regular_video: Դիտեք տեսանյութը
@@ -2011,7 +2054,7 @@ hy:
     ժամը օրենսգրքի</a>"
   whats_next_how_to_promote_link: "<a href='/promote'>Թե ինչպես կարելի է խթանել ժամը
     օրենսգրքի</a>"
-  whats_next_try: "<a href='%{learn_url}'>Try tutorials</a>"
+  whats_next_try: "<a href='%{learn_url}'>Փորձեք ճանապարհները</a>"
   whats_next_try_button: Փորձեք ճանապարհները
   n_have_learned_an_hoc: "<h1>Փորձեք</h1><h2>ժամ օրենսգրքի</h2><h3># ծառայել</h3>"
   anybody_can_learn: 'Յուրաքանչյուրը կարող է սովորել:'
@@ -2034,9 +2077,9 @@ hy:
     անում:'
   front_join_us_volunteer_header: Կամավորներ օրենսգրքի ժամի համար
   front_join_us_tutorials: Ընտրեք ձեր Hour օրենսգրքի ձեռնարկը!
-  front_join_us_tutorials_link: Filter and browse <i>over 200 tutorials and lesson
-    plans</i>! Find activities for different subject areas, multiple hardware needs,
-    and students at any experience level.
+  front_join_us_tutorials_link: Զտեք և թերթեք <i>ավելի քան 200 ձեռնարկներ և դասերի
+    պլաններ:</i>Գտնել գործունեությունը տարբեր առարկայական ոլորտներում, բազմակի ապարատային
+    կարիքների, եւ ուսանողների ցանկացած փորձի մակարդակով.
   front_join_us_robotics: 'Հաղթեք ռոբոտներ կամ սխեմաներ:'
   front_join_us_robotics_link: 'Ցանկանում եք մի շարք ռոբոտների կամ ֆիզիկական հաշվողական
     հավաքածուներ օգտագործել ձեր աշակերտների հետ: Մեր առատաձեռն գործընկերները նվիրաբերում
@@ -2070,7 +2113,7 @@ hy:
   front_join_us_sign_up: Գրանցվել
   front_join_us_host: Հյուրընկալեք այն
   front_join_us_support: Աջակցեք դրան
-  front_join_us_more_info: For more information, please visit <a href='https://code.org'>code.org</a>.
+  front_join_us_more_info: Լրացուցիչ տեղեկությունների համար կարող եք այցելել <a href='https://code.org'>code.org</a>.
   front_join_us_code_info: Լրացուցիչ տեղեկությունների համար այցելեք code.org
   front_join_us_n_students_served: "# ծառայել."
   front_join_us_challenge: 'Հաղթեք վիդեո զրույց ձեր դասարանի համար ՝ հայտնիությամբ:'
@@ -2093,7 +2136,7 @@ hy:
   hoc_homepage_what_is_hoc_cta_how_to_guide: "[Կարդացեք մեր ինչպես ուղեցույցը] (%{howto_guide_url})
     ձեր դասի համար միջոցառում պլանավորելու համար:"
   hoc_homepage_highlights_heading: Code- ի ժամը կարեւորում է
-  hoc_homepage_organized_by: The Hour of Code is organized by [Code.org](%{codeorg_url}).
+  hoc_homepage_organized_by: "“Կոդի ժամը” կազմակերպում է [Code.org](%{codeorg_url})."
   signup_closed: 'Գրանցումը համար ժամ օրենսգրքի այժմ փակ է. Խնդրում ենք կրկին ստուգել
     հոկտեմբերին ՝ հաջորդ օրենսգրքի ժամին գրանցվելու համար:'
   signup_registration_not_required: 'Դուք չունեք հաղորդագրություն փակցնելու համար
@@ -2114,8 +2157,8 @@ hy:
     (%{hoc_activities_url}) եւ միանալ տոնակատարությանը սոցիալական լրատվամիջոցներում:
     Տեղադրեք ձեր միջոցառման զվարճալի նկարներ կամ տեսանյութ ՝ օգտագործելով #HourOfCode
     հեշթեգը:'
-  signup_header: Organize an Hour of Code during %{campaign_date}, and register it
-    here.
+  signup_header: Կազմակերպել ժամ օրենսգրքի ընթացքում %{campaign_date}, եւ գրանցել
+    այն այստեղ.
   signup_name_label: Ձեր անունը
   signup_name_error: 'Անունը պարտադիր է:'
   signup_email_label: Ձեր էլ.փոստը
@@ -2144,6 +2187,13 @@ hy:
     մասին:'
   signup_email_preference_privacy: "(Տես մեր գաղտնիության քաղաքականությունը)"
   signup_email_preference_yes: Այո
+  signup_email_preference_yes_elementary: Այո - Ուղարկեք ինձ թարմացումներ տարրական
+    դպրոցի ռեսուրսների վերաբերյալ
+  signup_email_preference_yes_middle: Այո - Ուղարկեք ինձ թարմացումներ միջին դպրոցի
+    ռեսուրսների վերաբերյալ
+  signup_email_preference_yes_high: Այո - Ուղարկեք ինձ թարմացումներ ավագ դպրոցի ռեսուրսների
+    վերաբերյալ
+  signup_email_preference_yes_general: Այո - Ուղարկեք ինձ ընդհանուր թարմացումներ
   signup_email_preference_no: Ոչ
   signup_email_preference_error: Էլ.փոստի նախապատվությունը պարտադիր է
   signup_multiple_event_warning: 'Մենք կտեղադրենք ձեր դպրոցի անունը և քաղաքը քարտեզի
@@ -2233,20 +2283,22 @@ hy:
     %{random_donor} աջակցելու համար @codeorg)'
   hoc_faq_title: ՀՏՀ
   hoc_faq_what_is_hoc_q: 'Ո՞րն է օրենսգրքի ժամը:'
-  hoc_faq_what_is_hoc_a: The Hour of Code started as a one-hour introduction to computer
-    science, designed to demystify "code", to show that anybody can learn the basics,
-    and to broaden participation in the field of computer science. It has since become
-    a worldwide effort to celebrate computer science, starting with 1-hour coding
-    activities but expanding to all sorts of community efforts. Check out the <a href='%{tutorials}'>tutorials
-    and activities</a>. This grassroots campaign is supported by over <a href='%{partners}'>400
-    partners</a> and 200,000 educators worldwide.
-  hoc_faq_what_is_hoc_a_markdown: The Hour of Code started as a one-hour introduction
-    to computer science, designed to demystify "code", to show that anybody can learn
-    the basics, and to broaden participation in the field of computer science. It
-    has since become a worldwide effort to celebrate computer science, starting with
-    1-hour coding activities but expanding to all sorts of community efforts. Check
-    out the [tutorials and activities](%{tutorials}). This grassroots campaign is
-    supported by over [400 partners](%{partners}) and 200,000 educators worldwide.
+  hoc_faq_what_is_hoc_a: "“Կոդի ժամը” սկսվեց որպես համակարգչային գիտության մեկ ժամանոց
+    ներածություն, որը նախատեսված էր “կոդը” դեմիստիֆիկացնելու, ցույց տալու, որ ցանկացած
+    ոք կարող է սովորել հիմունքները և ընդլայնել մասնակցությունը համակարգչային գիտության
+    ոլորտում։ Այն ժամանակից ի վեր դարձել է համակարգչային գիտություն նշելու համաշխարհային
+    ջանք ՝ սկսած 1-ժամյա կոդավորման գործողություններով, բայց ընդլայնվելով բոլոր տեսակի
+    համայնքային ջանքերին: Ստուգել <a href='%{tutorials}'>ճանապարհները եւ գործունեությունը.</a>Այս
+    արշավը աջակցում է ավելի քան <a href='%{partners}'>400 գործընկերների</a> եւ 200,000
+    մանկավարժների ամբողջ աշխարհում."
+  hoc_faq_what_is_hoc_a_markdown: "“Կոդի ժամը” սկսվեց որպես համակարգչային գիտության
+    մեկ ժամանոց ներածություն, որը նախատեսված էր “կոդը” դեմիստիֆիկացնելու, ցույց տալու,
+    որ ցանկացած ոք կարող է սովորել հիմունքները և ընդլայնել մասնակցությունը համակարգչային
+    գիտության ոլորտում։ Այն ժամանակից ի վեր դարձել է համակարգչային գիտություն նշելու
+    համաշխարհային ջանք ՝ սկսած 1-ժամյա կոդավորման գործողություններով, բայց ընդլայնվելով
+    բոլոր տեսակի համայնքային ջանքերին: Ստուգել [Ձեռնարկներ եւ գործունեությունը] ().%{tutorials}Այս
+    հիմնային արշավին աջակցում են ավելի քան [400 գործընկերներ] (%{partners}) և 200,000
+    մանկավարժներ ամբողջ աշխարհում։"
   hoc_faq_last_year: Փորձեք ճանապարհները
   hoc_faq_when_is_hoc_q: 'Ե՞րբ է օրենսգրքի ժամը:'
   hoc_faq_when_is_hoc_a: The Hour of Code տեղի է ունենում յուրաքանչյուր տարի ընթացքում
@@ -2255,17 +2307,17 @@ hy:
     կարող եք հյուրընկալել Hour Code ամբողջ տարվա ընթացքում. Համակարգչային գիտություն
     Կրթություն շաբաթ անցկացվում է ամեն տարի ճանաչման ծննդյան հաշվողական ռահվիրա <a
     href='%{grace_hopper}'>ծովակալ Grace Murray Hopper</a> (դեկտեմբերի 9, 1906).
-  hoc_faq_when_is_hoc_a_markdown: The Hour of Code takes place each year during [Computer
-    Science Education Week](%{csedweek_url}). The %{campaign_date_year} Computer Science
-    Education Week will be %{campaign_date_full}, but you can host an Hour of Code
-    all year-round. Computer Science Education Week is held annually in recognition
-    of the birthday of computing pioneer [Admiral Grace Murray Hopper](%{grace_hopper})
-    (December 9, 1906).
+  hoc_faq_when_is_hoc_a_markdown: 'The Hour of Code տեղի է ունենում ամեն տարի ընթացքում
+    [Համակարգչային գիտության կրթության շաբաթ] (%{csedweek_url}). %{campaign_date_year}
+    Համակարգչային գիտության կրթության շաբաթը կլինի %{campaign_date_full}, բայց ամբողջ
+    տարվա ընթացքում կարող եք հյուրընկալել “Կոդի ժամ”: Համակարգչային գիտության կրթության
+    շաբաթն ամեն տարի անցկացվում է հաշվողական ռահվիրա [ծովակալ Գրեյս Մյուրեյ Հոփերի]
+    (%{grace_hopper}) ծննդյան օրը (1906 թվականի դեկտեմբերի 9) ։'
   hoc_faq_why_cs_q: Ինչու՞ համակարգչային գիտություն
-  hoc_faq_why_cs_a: "<i>Every</i> student should have the opportunity to learn computer
-    science. It helps nurture problem-solving skills, logic and creativity. By starting
-    early, students will have a foundation for success in any 21st-century career
-    path. See more stats <a href='%{stats_url}'>here</a>."
+  hoc_faq_why_cs_a: "<i>Յուրաքանչյուր</i> ուսանող պետք է հնարավորություն ունենա սովորելու
+    համակարգչային գիտություն։ Այն օգնում է դաստիարակել խնդիրների լուծման հմտությունները,
+    տրամաբանությունը եւ ստեղծագործական. Սկսելով վաղ, ուսանողները պետք է հիմք հաջողության
+    ցանկացած 21-րդ դարի կարիերայի ճանապարհին. Տես ավելի շատ վիճակագրություն <a href='%{stats_url}'>այստեղ</a>."
   hoc_faq_why_cs_a_markdown: '_Every_ ուսանողը պետք է հնարավորություն ունենա սովորելու
     համակարգչային գիտություն: Այն օգնում է դաստիարակել խնդիրների լուծման հմտությունները,
     տրամաբանությունը եւ ստեղծագործական. Սկսելով վաղ, ուսանողները պետք է հիմք հաջողության
@@ -2275,10 +2327,10 @@ hy:
     մեր ուղեցույցը: Դուք կարող եք կազմակերպել Hour OF Code միջոցառումը ձեր դպրոցում
     կամ ձեր համայնքում &mdash; , ինչպես արտադպրոցական ակումբում, շահույթ չհետապնդող
     կամ աշխատավայրում: Կամ, պարզապես փորձեք այն ինքներդ, երբ %{campaign_date} ժամանում."
-  hoc_faq_how_participate_a_markdown: "[Start planning here](%{howto}) by reviewing
-    our how-to guide. You can organize an Hour of Code event at your school or in
-    your community — like in an extracurricular club, non-profit or at work. Or, just
-    try it yourself when %{campaign_date} arrives."
+  hoc_faq_how_participate_a_markdown: "[Սկսեք պլանավորել այստեղ] (%{howto}) վերանայելով
+    մեր ինչպես ուղեցույցը: Դուք կարող եք կազմակերպել Hour Oh Code միջոցառումը ձեր
+    դպրոցում կամ ձեր համայնքում, ինչպես արտադպրոցական ակումբում, շահույթ չհետապնդող
+    կամ աշխատավայրում: Կամ, պարզապես փորձեք այն ինքներդ, երբ %{campaign_date} գալիս."
   hoc_faq_behind_hoc_q: 'Ո՞վ է կանգնած օրենսգրքի ժամի ետևում:'
   hoc_faq_behind_hoc_a: The Hour of Code կազմակերպվում է Code.org եւ պայմանավորված
     է ժամ օրենսգրքի վերանայման հանձնաժողովի, ինչպես նաեւ աննախադեպ կոալիցիա <a href='%{partner_url}'>գործընկերների</a>
@@ -2289,11 +2341,11 @@ hy:
     որոնք հավաքվել են աջակցել Hour of Code, այդ թվում Microsoft, Apple, Amazon, տղաների
     եւ աղջիկների ակումբները Ամերիկայի եւ Քոլեջի խորհրդի.
   hoc_faq_host_q: 'Կոդավորման մասին ոչինչ չգիտեմ: Կարո՞ղ եմ դեռ միջոցառում անցկացնել:'
-  hoc_faq_host_a: Of course. Hour of Code activities are self-guided. All you have
-    to do is <a href='%{codeorg_url}/learn'>try our current tutorials</a>, pick the
-    tutorial you want, and pick an hour &mdash; we take care of the rest. We also
-    have options for every age and experience-level, from kindergarten and up. Start
-    planning your event by reading our <a href='/how-to'>how to guide</a>.
+  hoc_faq_host_a: 'Իհարկե. Ժամը օրենսգրքի գործունեության են ինքնուրույն առաջնորդվում.
+    Բոլոր դուք պետք է անեք է <a href=''%{codeorg_url}/learn''>փորձել մեր ընթացիկ ճանապարհները</a>,
+    ընտրել ձեռնարկը ցանկանում եք, եւ վերցնել մի ժամ &mdash; մենք հոգ տանել մնացած.
+    Մենք ունենք նաեւ տարբերակներ յուրաքանչյուր տարիքի եւ փորձի մակարդակի, սկսած մանկապարտեզի
+    եւ մինչեւ. Սկսեք պլանավորել ձեր միջոցառումը `կարդալով մեր <a href=''/how-to''>ուղեցույցը</a>:'
   hoc_faq_host_a_markdown: 'Իհարկե. Ժամը օրենսգրքի գործունեության են ինքնուրույն առաջնորդվում.
     Դուք պետք է անեք այն է, [փորձեք մեր ընթացիկ ձեռնարկները] (%{codeorg_url}/սովորել),
     ընտրել ձեր ուզած ձեռնարկը և ընտրել մեկ ժամ, մենք հոգ ենք տանում մնացածի մասին:
@@ -2301,16 +2353,18 @@ hy:
     եւ մինչեւ. Սկսեք պլանավորել ձեր միջոցառումը `կարդալով մեր [ինչպես առաջնորդել]
     (%{howto}):'
   hoc_faq_devices_q: 'Ինչ սարքեր պետք է օգտագործեմ իմ ուսանողների համար:'
-  hoc_faq_devices_a: Code.org tutorials work on all devices and browsers. You can
-    see more information about Code.org's tutorial tech needs <a href='%{codeorg_url}/educate/it'>here</a>.
-    Tech needs for non-Code.org tutorials can be found on <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a>
-    in the tutorial specific description. Don't forget we also offer <a href='%{unplugged_url}'>unplugged
-    activities</a> if your school can't accommodate the tutorials!
-  hoc_faq_devices_a_markdown: Code.org tutorials work on all devices and browsers.
-    You can see more information about Code.org's tutorial tech needs [here](%{codeorg_url}/educate/it).
-    Tech needs for non-Code.org tutorials can be found on [%{partner_url}/learn](%{codeorg_url}/learn)
-    in the tutorial specific description. Don't forget we also offer [unplugged activities](%{unplugged_url})
-    if your school can't accommodate the tutorials!
+  hoc_faq_devices_a: 'Code.org ճանապարհները աշխատում է բոլոր սարքերի եւ բրաուզերների.
+    Code.org- ի ձեռնարկի տեխնոլոգիական կարիքների մասին ավելի շատ տեղեկություններ կարող
+    եք տեսնել այստեղ: <a href=''%{codeorg_url}/educate/it''></a>Tech կարիքները ոչ-code.org
+    ճանապարհները կարելի <a href=''%{codeorg_url}/learn''>%{partner_url}է/սովորել</a>
+    ձեռնարկը կոնկրետ նկարագրության. Մի մոռացեք, որ մենք նաեւ առաջարկում ենք <a href=''%{unplugged_url}''>unplugged
+    գործունեությունը,</a> եթե ձեր դպրոցը չի կարող տեղավորել ճանապարհները!'
+  hoc_faq_devices_a_markdown: Code.org ճանապարհները աշխատում է բոլոր սարքերի եւ բրաուզերների.
+    Դուք կարող եք տեսնել ավելի շատ տեղեկություններ Code.org ի ձեռնարկը տեխնոլոգիական
+    կարիքների [here](/դաստիարակել/այն).%{codeorg_url}Tech կարիքները ոչ-code.org ճանապարհները
+    կարելի է [%{partner_url}/սովորել] (%{codeorg_url}/սովորել) է ձեռնարկը հատուկ նկարագրության.
+    Մի մոռացեք, որ մենք նաեւ առաջարկում ենք [unplugged գործունեությունը] (%{unplugged_url}),
+    եթե ձեր դպրոցը չի կարող տեղավորել ճանապարհները!
   hoc_faq_need_computers_q: 'Յուրաքանչյուր մասնակցի համար համակարգիչների կարիք ունե՞մ:'
   hoc_faq_need_computers_a: 'Ոչ. Մենք ունենք Hour Of Code ճանապարհները, որոնք աշխատում
     են հատ, սմարթֆոններ, հաբեր, եւ ոմանք, որոնք պահանջում են ոչ մի համակարգիչ բնավ!
@@ -2324,14 +2378,14 @@ hy:
     <li><b>Գնացեք անջատված:</b> Մենք առաջարկում ենք <a href=''%{unplugged_url}''>ճանապարհները,
     որոնք պահանջում են ոչ համակարգիչ</a> բոլորը. </ul>'
   hoc_faq_need_computers_a_markdown: |-
-    No. We have Hour of Code tutorials that work on PCs, smartphones, tablets, and some that require no computer at all! You can join wherever you are, with whatever you have.
+    Ոչ. Մենք ունենք Hour Of Code ճանապարհները, որոնք աշխատում են հատ, սմարթֆոններ, հաբեր, եւ ոմանք, որոնք պահանջում են ոչ մի համակարգիչ բնավ! Դուք կարող եք միանալ, որտեղ էլ որ լինեք, ինչ ունեք.
 
-    _Here are a few options:_
+    _Ահա մի քանի տարբերակ:_
 
-    - **Work in pairs.** [Research shows](%{pair_programming_research}) students learn best with [pair programming](%{pair_programming_video}), sharing a computer and working together. Encourage your students to double up.
-    - **Use a projected screen.** If you have a projector and screen for a Web-connected computer, your entire group can do an Hour of Code together. Watch video portions together and take turns solving puzzles or answering questions.
-    - **Go unplugged.** We offer [tutorials that require no computer](%{unplugged_url}) at all.
-  hoc_faq_international_q: I am in <country>. How do I participate internationally?
+    - **Աշխատել զույգերով: ** [Հետազոտությունները ցույց են տալիս] (%{pair_programming_research}) ուսանողները լավագույնս սովորում են [զույգ ծրագրավորում] (%{pair_programming_video}), համակարգիչ փոխանակելու և միասին աշխատելու միջոցով: Խրախուսեք ձեր ուսանողներին կրկնապատկել:
+    - **Օգտագործեք կանխատեսված էկրան: ** Եթե ունեք պրոյեկտոր և էկրան Վեբ միացված համակարգչի համար, ձեր ամբողջ խումբը կարող է միասին կատարել “Կոդի ժամ”: Դիտեք վիդեո մասերը միասին և հերթով լուծեք հանելուկներ կամ պատասխանելով հարցերին:
+    - **Գնալ unplugged.** Մենք առաջարկում ենք [ճանապարհները, որոնք պահանջում են ոչ մի համակարգիչ] () բնավ.%{unplugged_url}
+  hoc_faq_international_q: 'Ես գտնվում եմ <country>: Ինչպե՞ս կարող եմ մասնակցել միջազգայնորեն:'
   hoc_faq_international_a: Յուրաքանչյուր ոք կարող է կազմակերպել Hour of Code միջոցառումը,
     աշխարհի ցանկացած կետում։ Անցյալ տարի, ուսանողները ամբողջ աշխարհում միացել են “Hour
     of Code”. Իմացեք ավելին <a href='/promote'>այստեղ</a>.
@@ -2339,14 +2393,14 @@ hy:
     Code միջոցառումը, աշխարհի ցանկացած կետում։ Անցյալ տարի, ուսանողները ամբողջ աշխարհում
     միացել են “Hour of Code”. Իմացեք ավելին [here](%{promote}):'
   hoc_faq_tutorial_q: 'Ինչպե՞ս կարող եմ պատրաստել “օրենսգրքի ժամ” ձեռնարկը:'
-  hoc_faq_tutorial_a: If you're interested in becoming a tutorial partner, <a href='/tutorial-guidelines'>see
-    our guidelines and instructions</a>. We'd like to host a variety of engaging options,
-    but the primary goal is to optimize the experience for students and teachers who
-    are new to computer science.
-  hoc_faq_tutorial_a_markdown: If you're interested in becoming a tutorial partner,
-    [see our guidelines and instructions](%{tutorial_guidelines}). We'd like to host
-    a variety of engaging options, but the primary goal is to optimize the experience
-    for students and teachers who are new to computer science.
+  hoc_faq_tutorial_a: 'Եթե դուք հետաքրքրված է դառնալ ձեռնարկը գործընկեր, <a href=''/tutorial-guidelines''>տես
+    մեր ուղեցույցներ եւ հրահանգներ.</a>Մենք կցանկանայինք հյուրընկալել մի շարք գրավիչ
+    տարբերակներ, բայց հիմնական նպատակն է օպտիմալացնել փորձը ուսանողների և ուսուցիչների
+    համար, ովքեր նոր են համակարգչային գիտության մեջ:'
+  hoc_faq_tutorial_a_markdown: 'Եթե դուք հետաքրքրված եք դառնալ ձեռնարկի գործընկեր,
+    [տես մեր ուղեցույցներն ու հրահանգները] ().%{tutorial_guidelines}Մենք կցանկանայինք
+    հյուրընկալել մի շարք գրավիչ տարբերակներ, բայց հիմնական նպատակն է օպտիմալացնել
+    փորձը ուսանողների և ուսուցիչների համար, ովքեր նոր են համակարգչային գիտության մեջ:'
   hoc_faq_account_q: Արդյոք ուսանողները պետք է մուտք գործել, օգտագործելով հաշիվ?
   hoc_faq_account_a: Ոչ. Բացարձակապես ոչ մի գրանցում կամ մուտք չի պահանջվում, որպեսզի
     ուսանողները փորձեն օրենսգրքի ժամը. Մեծ մասը <a href='%{codeorg_url}/learn/beyond'>հետեւել-
@@ -2354,27 +2408,28 @@ hy:
     այդ, գրանցվելու համար ժամը օրենսգրքի չի ինքնաբերաբար ստեղծել Code Studio հաշիվ.
     Եթե ցանկանում եք հաշիվներ ստեղծել ձեր ուսանողների համար, խնդրում ենք հետևել այս
     <a href='https://youtu.be/_smelV_KISE'>հրահանգներին</a>.
-  hoc_faq_account_a_markdown: No. Absolutely no signup or login is required for students
-    to try the Hour of Code. Most of the [follow-on courses](%{codeorg_url}/learn/beyond)
-    require account creation to save student progress. Also, signing up for the Hour
-    of Code does NOT automatically create a Code Studio account. If you do want to
-    create accounts for your students, please follow these [instructions](%{section_instructions_url}).
+  hoc_faq_account_a_markdown: Ոչ. Բացարձակապես ոչ մի գրանցում կամ մուտք չի պահանջվում,
+    որպեսզի ուսանողները փորձեն օրենսգրքի ժամը. Մեծ մասը [հետեւել- on դասընթացներ]
+    (%{codeorg_url}/սովորել/դուրս) պահանջում հաշվի ստեղծումը փրկել ուսանողական առաջընթացը.
+    Բացի այդ, գրանցվելու համար ժամը օրենսգրքի չի ինքնաբերաբար ստեղծել Code Studio
+    հաշիվ. Եթե դուք ցանկանում եք ստեղծել հաշիվներ ձեր ուսանողների համար, խնդրում ենք
+    հետեւել այս [instructions](%{section_instructions_url}).
   hoc_faq_high_school_q: 'Որ գործունեությունը պետք է անեմ ավագ դպրոցի աշակերտների
     հետ:'
-  hoc_faq_high_school_a: Our Star Wars and Minecraft tutorials are great for high
-    schoolers, especially the Star Wars JavaScript version and the free play level
-    on both tutorials. Alternately, we recommend trying one of the beginner tutorials
-    on <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a> to start, such as the
-    tutorial with Angry Birds or with Anna and Elsa. A high school student should
-    be able to finish one of these in 30 minutes and can then try a more advanced
-    tutorial in JavaScript, such as Khan Academy or CodeHS.
-  hoc_faq_high_school_a_markdown: Our Star Wars and Minecraft tutorials are great
-    for high schoolers, especially the Star Wars JavaScript version and the free play
-    level on both tutorials. Alternately, we recommend trying one of the beginner
-    tutorials on [%{partner_url}/learn](%{codeorg_url}/learn) to start, such as the
-    tutorial with Angry Birds or with Anna and Elsa. A high school student should
-    be able to finish one of these in 30 minutes and can then try a more advanced
-    tutorial in JavaScript, such as Khan Academy or CodeHS.
+  hoc_faq_high_school_a: 'Մեր Star Wars- ի և Minecraft- ի ձեռնարկները հիանալի են ավագ
+    դպրոցների համար, հատկապես Star Wars JavaScript- ի տարբերակը և երկու ձեռնարկների
+    անվճար խաղային մակարդակը: Alternately, խորհուրդ ենք տալիս փորձել սկսնակ ձեռնարկներից
+    <a href=''%{codeorg_url}/learn''>%{partner_url}մեկը/սովորել սկսել, ինչպիսիք են
+    ձեռնարկը Angry</a> Birds- ի կամ Աննայի և Էլզայի հետ: Ավագ դպրոցի աշակերտը պետք
+    է կարողանա ավարտել դրանցից մեկը 30 րոպեում և այնուհետև կարող է փորձել ավելի առաջադեմ
+    ձեռնարկ JavaScript- ում, ինչպիսիք են “Քան” ակադեմիան կամ CodeHS- ը:'
+  hoc_faq_high_school_a_markdown: 'Մեր Star Wars- ի և Minecraft- ի ձեռնարկները հիանալի
+    են ավագ դպրոցների համար, հատկապես Star Wars JavaScript- ի տարբերակը և երկու ձեռնարկների
+    անվճար խաղային մակարդակը: Alternately, խորհուրդ ենք տալիս փորձել սկսնակ ձեռնարկներից
+    մեկը [%{partner_url}/սովորել] (%{codeorg_url}/սովորել) սկսել, ինչպիսիք են ձեռնարկը
+    Angry Birds- ի կամ Աննայի և Էլզայի հետ: Ավագ դպրոցի աշակերտը պետք է կարողանա ավարտել
+    դրանցից մեկը 30 րոպեում և այնուհետև կարող է փորձել ավելի առաջադեմ ձեռնարկ JavaScript-
+    ում, ինչպիսիք են “Քան” ակադեմիան կամ CodeHS- ը:'
   hoc_faq_scratch_q: 'Ես անում եմ Scratch for Hour Of Code, բայց ի՞նչ կլինի, եթե իմ
     ուսանողներն ունենան iPad, այլ ոչ թե նոութբուքեր:'
   hoc_faq_scratch_a: 'Քերծվածքներից չի վազում հաբեր. Եթե ձեր ուսանողները երիտասարդ
@@ -2382,10 +2437,11 @@ hy:
     Եթե դուք նայում ճանապարհները <a href=''%{codeorg_url}/learn''>%{partner_url}/սովորել</a>,
     դուք կարող եք գտնել այլ ձեռնարկներ, որոնք աշխատում են iPads - ից Code.org, Tynker,
     Lightbot, կամ CodesPark.'
-  hoc_faq_scratch_a_markdown: Scratch doesn't run on tablets. If your students are
-    young, they can use the ScratchJR iPad app (for early-readers). If you look at
-    the tutorials on [%{partner_url}/learn](%{codeorg_url}/learn), you can find other
-    tutorials that work on iPads - from Code.org, Tynker, Lightbot, or CodeSpark.
+  hoc_faq_scratch_a_markdown: 'Քերծվածքներից չի վազում հաբեր. Եթե ձեր ուսանողները
+    երիտասարդ են, նրանք կարող են օգտագործել ScratchJR iPad հավելվածը (վաղ ընթերցողների
+    համար): Եթե դուք նայում ճանապարհները [%{partner_url}/սովորել] (%{codeorg_url}/սովորել),
+    դուք կարող եք գտնել այլ ձեռնարկներ, որոնք աշխատում են iPads - ից Code.org, Tynker,
+    Lightbot, կամ CodesPark.'
   hoc_faq_count_hoc_q: 'Ինչպե՞ս եք հաշվում օրենսգրքի ժամերը:'
   hoc_faq_map_q: 'Ինչու քարտեզի վրա չեմ տեսնում իմ կետը:'
   hoc_faq_map_a: 'Մենք այնքան ցավում ենք, որ դուք չեք տեսնում ձեր միջոցառումը Hour
@@ -2473,15 +2529,15 @@ hy:
     էջ</a> , որտեղ դուք կարող եք տպել վկայագրեր ձեր ամբողջ դասի համար ժամանակից շուտ:
     Դուք կարող եք նաեւ տպել դուրս <a href=''%{codeorg_url}/certificates?course=mc''>հատուկ
     վկայականներ</a> ուսանողների անում Minecraft ձեռնարկը.'
-  hoc_faq_certificates_a_markdown: Go to our [certificates page](%{codeorg_url}/certificates)
-    where you can print certificates for your entire class ahead of time. You can
-    also print out [special certificates](%{codeorg_url}/certificates?course=mc) for
-    students doing the Minecraft tutorial.
+  hoc_faq_certificates_a_markdown: 'Գնացեք մեր [սերտիֆիկատների էջ] (%{codeorg_url}/վկայագրեր),
+    որտեղ դուք կարող եք ժամանակից շուտ տպել վկայագրեր ձեր ամբողջ դասի համար: Դուք
+    կարող եք նաեւ տպել դուրս [հատուկ վկայականներ] (%{codeorg_url}/վկայականներ? course=mc)
+    ուսանողների համար անում Minecraft ձեռնարկը.'
   hoc_faq_logo_q: 'Կա՞ն սահմանափակումներ, թե ինչպես կարող եմ օգտագործել “Կոդի ժամ”
     լոգոն կամ անվանումը:'
-  hoc_faq_logo_a: Hour of Code is trademarked. We don't want to prevent its usage,
-    but we want to make sure its usage fits within a few limits. Please see <a href='%{logo_url}'>these
-    guidelines for usage</a>.
+  hoc_faq_logo_a: 'Code- ի ժամը ապրանքային նշանն է: Մենք չենք ուզում կանխել դրա օգտագործումը,
+    բայց ուզում ենք համոզվել, որ դրա օգտագործումը տեղավորվում է մի քանի սահմաններում:
+    Խնդրում ենք տեսնել <a href=''%{logo_url}''>այս ուղեցույցները օգտագործման համար:</a>'
   hoc_faq_logo_a_markdown: 'Code- ի ժամը ապրանքային նշանն է: Մենք չենք ուզում կանխել
     դրա օգտագործումը, բայց ուզում ենք համոզվել, որ դրա օգտագործումը տեղավորվում է
     մի քանի սահմաններում: Խնդրում ենք տեսնել [այս ուղեցույցները օգտագործման համար]
@@ -2506,8 +2562,8 @@ hy:
     են** 50% բոլոր մասնակիցների**!
   stats_nina: "“Ամեն օր տվել է նույն արդյունքները&mdash; 100% ներգրավվածությունը”:
     - Նինա Nichols Peery, ուսուցիչ"
-  stats_student: '"I knew this was a <b>once-in-a-lifetime</b> chance." - Mariana
-    Alzate, 5th grader'
+  stats_student: "“Ես գիտեի, որ սա մեկ <b>անգամ կյանքի</b> հնարավորություն էր”: -
+    Մարիանա Ալզատե, 5-րդ դասարանցի"
   stats_michael: "“Ես երբեք <b>չեմ ունեցել, երբեւէ</b> - ը տեսել է իմ ուսանողներին
     այնքան ոգեւորված սովորելու համար”: - Մայքլ Քլարկ, ուսուցիչ"
   resources_how_to: Ինչպես ուղեցույցը ուսուցիչների համար
@@ -2639,10 +2695,10 @@ hy:
     դուրս մեկ ժամ</a>'
   learn_banner_beyond_markdown: 'Wantանկանու՞մ եք շարունակել սովորել: [Գնալ դուրս
     մեկ ժամ] (%{url})'
-  learn_banner_teachers: 'Teachers: <a id=''teacher_banner_host''>Host an hour</a>
-    or <a id=''teacher_banner_howto''>read the How-To Guide</a>'
-  learn_banner_teachers_markdown: 'Teachers: [Host an hour](%{host_url}) or [read
-    the How-To Guide](%{howto_url})'
+  learn_banner_teachers: Ուսուցիչներ. <a id='teacher_banner_host'>Հյուրընկալեք մեկ
+    ժամ</a> կամ <a id='teacher_banner_howto'>կարդացեք ինչպես ուղեցույցը</a>
+  learn_banner_teachers_markdown: Ուսուցիչներ. [Հյուրընկալեք մեկ ժամ] (%{host_url})
+    կամ [կարդացեք ինչպես ուղեցույցը] ()%{howto_url}
   tutorial_dance2019_name: Պարի երեկույթ
   tutorial_danceparty_name: Պարի երեկույթ
   tutorial_chibitronics_name: Չիբիտրոնիկա. Լուսավորված պատմություն
@@ -5627,11 +5683,11 @@ hy:
     է արկածային միջոցով այս Minecraft աշխարհում.
   tutorial_minecraft-2016_longdescription: 'Կառուցեք Minecraft խաղ: Ստեղծել ձեր սեփական
     տարբերակները հավի, ոչխարների, Creepers, zombies եւ ավելի.'
-  tutorial_thinkersmith-es_longdescription: Mediante el uso de un "Vocabulario Robot"
-    predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar
-    a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento
-    ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones
-    as&iacute; como la valiosa habilidad de depuraci&oacute;n.
+  tutorial_thinkersmith-es_longdescription: Օգտագործելով “Ռոբոտների բառապաշար” նախաբանում,
+    մենք կարող ենք ասել, թե ինչպես կարելի է ասել, որ “Ռոբոտների բառապաշար” նախադիտում
+    է, թե ինչպես կարելի է ասել,&aacute;թե ինչպես կարելի է ձեռք բերել այն:&iacute;Այս
+    սեգմենտներն են ա ա լոս էստադիանտներ&ntilde;ա կոնեքսիի n Entre s&iacute;mbolos
+    y acciones ինչպես նաեւ como la valiosa habilidad de depuraci&oacute;n.&iacute;&oacute;
   tutorial_pixie_longdescription: Ժամ օրենսգրքի ձեռնարկը հետ Pixie
   tutorial_play_longdescription: 'Ստեղծեք պատմություն կամ խաղ պատրաստեք Play Lab-
     ի հետ: Դարձնել կենդանիներ, պիրատս, zombies, ninjas, եւ շատ ավելի կերպարները տեղափոխել,
@@ -12895,12 +12951,12 @@ hy:
   tutorial_googlename _longdescription: 'Ընտրեք անուն եւ բերեք բառի տառերը կյանքի,
     օգտագործելով կոդը: Ընտրեք մականուն, ընտանի կենդանու անուն, կենդանի, սպորտ, տեղ
     կամ հոբբի:'
-  tutorial_carnegiezillah_longdescription: Zillah City is thriving, and music is in
-    the air. Rumor has it, the famed Gargantua bot is online and sending the last
-    Toxibots to trash the city block by block…. Grab your cobot hoverboard and get
-    ready to groove, move, and finish off what you started! Players program their
-    cobot hoverbots to change lanes, avoid obstacles, and take out many Toxibots in
-    this rhythm-styled game.
+  tutorial_carnegiezillah_longdescription: 'Զիլլահ քաղաքը ծաղկում է, և երաժշտությունը
+    օդում է: Լուր կա այն, հայտնի Gargantua բոտը առցանց է և վերջին Toxibots- ը ուղարկում
+    է աղբարկղ քաղաքի բլոկ առ բլոկ:…Գռփում ձեր cobot hoverboard եւ ստանալ պատրաստ է
+    ակոս, տեղափոխել, եւ ավարտել դուրս, թե ինչ եք սկսել! Խաղացողները ծրագրավորում են
+    իրենց cobot hoverbots- ը ՝ գոտիները փոխելու, խոչընդոտներից խուսափելու և այս ռիթմի
+    ոճավորված խաղում շատ Toxibots հանելու համար:'
   tutorial_nasachspacejam_longdescription: 'Ստեղծել արեգակնային համակարգ, որը, իրոք,
     ժայռերի! Իմացեք երաժշտության, աստղագիտության և կոդավորման մասին այս ինքնուրույն
     առաջնորդվող գործունեության մեջ (կոդավորման փորձ չի պահանջվում): Ծրագրային մոլորակները,
@@ -13548,9 +13604,9 @@ hy:
   accessibility_efforts_card_desc_1: 'Մեր արտադրանքի և ինժեներական թիմերը կավարտեն
     համապարփակ մատչելիության դասընթացը մինչև 2023 թվականի դեկտեմբեր:'
   accessibility_efforts_card_title_2: VPAT վերլուծություն
-  accessibility_efforts_card_desc_2: Completing [Voluntary Product Accessibility Template](%{voluntary_url})
-    to establish a baseline and measure progress annually. Results available on this
-    page by September 2023.
+  accessibility_efforts_card_desc_2: 'Լրացնելով [Կամավոր արտադրանքի մատչելիության
+    ձևանմուշ] (%{voluntary_url}) ՝ ելակետային հիմնելու և տարեկան առաջընթացը չափելու
+    համար: Արդյունքները հասանելի են այս էջում կողմից Սեպտեմբեր 2023.'
   accessibility_efforts_card_title_3: Գործիքներ, որոնք աջակցում են մատչելի դիզայնին
   accessibility_efforts_card_desc_3: 'Թիմի անդամները կունենան մուտք դեպի գործիքներ,
     որոնք ապահովում են բոլոր նոր հնարավորությունները, որոնք նախագծված և կառուցված

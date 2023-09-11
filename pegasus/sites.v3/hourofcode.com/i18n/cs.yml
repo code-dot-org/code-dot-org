@@ -191,6 +191,15 @@ cs:
   grade_level_label_elementary: Základní škola
   grade_level_label_middle: Střední škola
   grade_level_label_high: Střední škola
+  curricula_title_elementary: Učební osnovy základní školy
+  curricula_desc_elementary: Prohlédněte si zábavu, bezplatné kurzy a aktivity, které
+    vás zvou k prozkoumání informatiky se studenty základních škol.
+  curricula_title_middle: Učební osnovy pro střední školy
+  curricula_desc_middle: Projděte si poutavé nabídky, které vám a vašim studentům
+    středních škol umožní společně prozkoumat informatiku.
+  curricula_title_high: Středoškolské osnovy
+  curricula_desc_high: Prohlédněte si přesvědčivé kurzy a aktivity, které vás a vaše
+    studenty středních škol zvou, abyste se hlouběji ponořili do informatiky.
   students_label: Studenti, žáci
   teachers_label: Učitelé
   teacher_label_csf: 'Základy informatiky: učitel'
@@ -217,6 +226,13 @@ cs:
   call_to_action_explore_choice_level: Prozkoumat vzorovou úroveň s výběrem možností
   call_to_action_explore_collection: Prozkoumat sbírku
   call_to_action_explore_unplugged_lesson: Prozkoumat lekce bez počítače
+  call_to_action_explore_csf: Prozkoumejte základy CS
+  call_to_action_explore_csd: Prozkoumejte CS Discoveries
+  call_to_action_explore_csp: Prozkoumejte principy CS
+  call_to_action_explore_csc: Prozkoumejte CS Connections
+  call_to_action_explore_csa: Prozkoumejte AP® Computer Science A
+  call_to_action_explore_maker: Prozkoumejte kurikula Maker
+  call_to_action_explore_hoc: Prozkoumejte výukové programy Hodina kódu
   call_to_action_try_app_lab: Vyzkoušet App Lab
   call_to_action_view_lesson_plan: Zobrazit plán lekce
   call_to_action_self_paced_pl: Začněte profesionální učení s vlastním tempem
@@ -261,6 +277,7 @@ cs:
   call_to_action_notify_available: Informujte mě, až bude k dispozici
   call_to_action_register_early_access: Zaregistrujte se pro předběžný přístup
   call_to_action_open_positions: Zobrazení otevřených pozic
+  call_to_action_get_guide: Získejte průvodce
   aria_label_call_to_action_afe: Další informace o Amazon Future Engineer
   aria_label_call_to_action_teaching_csf: Začněte odborný vzdělávací program Teaching
     Computer Science Fundamentals
@@ -368,6 +385,8 @@ cs:
   curriculum_name_csa: AP® Počítačová věda A
   curriculum_name_csc_02: Jakýkoli modul CS Connections
   curriculum_name_ai: Umělá inteligence a strojové učení
+  curriculum_name_artificial_intelligence: Umělá inteligence (AI)
+  curriculum_name_maker: Tvůrce
   curriculum_name_maker_cp: Vytváření aplikací pomocí zařízení (Circuit Playground)
   curriculum_name_maker_microbit: Vytváření aplikací pomocí zařízení (micro:bit)
   curriculum_name_creating_apps_with_devices: Tvorba aplikací pomocí nástrojů
@@ -422,6 +441,12 @@ cs:
     technice fyzická zařízení. Vytvářejte programy, které využívají hardwarové vstupy
     a výstupy. Tento tematický celek existuje i jako verze pro micro:bit a Circuit
     Playground.
+  curriculum_desc_csa: Seznámit studenty se softwarovým inženýrstvím a objektově orientovaným
+    designem, zatímco se učí programovací jazyk Java v tomto bezplatném kurikulu pro
+    AP® Computer Science A (AP® CSA).
+  curriculum_desc_maker: Vzdělávání tvůrce posouvá STEM (věda, technologie, inženýrství,
+    matematika) o krok dále tím, že pozve praktické zkušenosti a spolupráci do učebny,
+    aby pomohly učit řešení problémů a kritické myšlení.
   collection_hardware: Zaměření na Hardware
   collection_hardware_desc: Motivuje studenty k tomu, aby k řešení problémů využívali
     data a fyzická zařízení.
@@ -460,6 +485,7 @@ cs:
   module_label_student_content_resources: Obsah a zdroje
   module_label_new: Nový
   module_label_coming_soon: Již brzy
+  module_label_available_now: Nyní k dispozici
   module_label_video_series: Video série
   module_label_self_paced: Modul s vlastním tempem
   module_ages_5_10: 5-10
@@ -470,6 +496,8 @@ cs:
   module_grade_2_5: 2-5
   module_grade_3_5: 3-5
   module_grade_3_8: 3-8
+  module_grade_k_12: K-12
+  module_grade_3_12: 3-12
   module_grade_6_12: 6-12
   module_grade_6_10: 6-10
   module_grade_9_12: 9-12
@@ -565,6 +593,8 @@ cs:
   heading_java_lab: Java Lab
   heading_objects_first: Nejprve objekty
   heading_these_lessons_will: 'Tyto lekce budou:'
+  heading_explore_curriculum_catalog: Prozkoumejte všechny naše kurzy v katalogu učebních
+    osnov
   professional_learning_section_desc: Získejte podporu potřebnou k přípravě na učení,
     kterou doporučují samotní učitelé. Až 90 % z nich kurz považuje za ten nejlepší
     program pro profesní rozvoj.
@@ -820,6 +850,11 @@ cs:
     (například ChatGPT) a Generative AI. Poslechněte si, jak tyto nové technologie
     fungují přímo od odborníků: Mira Murati, CTO OpenAI, a Cristóbal Valenzuela, generální
     ředitel RunwayML.'
+  ai_pl_101_llm_slides_title: Výzvy k velkému jazykovému modelu pro pedagogy
+  ai_pl_101_llm_slides_desc: Nástroje pro získání nejlepšího možného výstupu z LLM,
+    jako je ChatGPT, od začátečníků po pokročilé. Zahrnuje startovací výzvy pro ty,
+    kteří si jen ponoří prsty na nohou, stejně jako pokročilé nástroje pro ty, kteří
+    chtějí maximalizovat svůj potenciál.
   how_ai_works_hero_heading: Jak funguje umělá inteligence
   how_ai_works_hero_desc: Ponořte se do světa AI pomocí „Jak AI funguje“, naší video
     série a doprovodných lekcí!
@@ -1706,8 +1741,8 @@ cs:
   ai_activity_zooniverse: Zooniverse - Pořiďte snímek horské zebry
   ai_activity_zooniverse_desc: Pomáhejte chránit ohroženou kapskou horskou zebru určením
     různých zvířat na obrázcích.
-  codeorg_homepage_hoc2018_curriculum: Go further with <a href="%{studio_url}/courses"
-    class="hoc2018-curriculum-link">Code.org courses</a>
+  codeorg_homepage_hoc2018_curriculum: Jděte dále s kurzy <a href="%{studio_url}/courses"
+    class="hoc2018-curriculum-link">Code.org</a>
   codeorg_homepage_hoc2018_dance_heading: Vytvořte si vlastní <span class="highlight-word">Dance&nbsp;Party</span>
   codeorg_homepage_hoc2018_header_line1: Hodina programování se blíží…
   codeorg_homepage_hoc2018_header_line2_desktop: Co vytvoříte <span class="hoc2018-highlight-word">?</span>
@@ -2041,6 +2076,13 @@ cs:
     místních příležitostech nebo jiných novinkách v oblasti informatiky?
   signup_email_preference_privacy: "(Viz naše zásady ochrany osobních údajů)"
   signup_email_preference_yes: Ano
+  signup_email_preference_yes_elementary: Ano - Pošlete mi aktuální informace o Zdroji
+    základní školy
+  signup_email_preference_yes_middle: Ano - Pošlete mi aktuální informace o zdrojích
+    pro střední školy
+  signup_email_preference_yes_high: Ano - Pošlete mi aktuální informace o High School
+    Resources
+  signup_email_preference_yes_general: Ano - Pošlete mi obecné aktualizace
   signup_email_preference_no: Ne
   signup_email_preference_error: Je vyžadována předvolba e-mailu
   signup_multiple_event_warning: Pokud pořádáte více událostí, zvolte prosím jiné
@@ -4836,11 +4878,11 @@ cs:
     učí robotiku s kódováním v Blockly. Robotické činnosti jsou vedeny samostatně
     pomocí výukových videí. \nRoboBlockly připravuje studenty, aby byli připraveni
     programovat v C/C ++.\n"
-  tutorial_coders_longdescription: "This step-by-step puzzle game provides an easy
-    introduction to bot programming. \n\nThe aim is to win a starship race against
-    other players.\n\nThe game is simple to start and only requires a few lines of
-    code to have a ship move around, but there are near-infinite possibilities of
-    improvement to create more sophisticated bots. "
+  tutorial_coders_longdescription: "Tato logická hra krok za krokem poskytuje snadný
+    úvod do programování bot. \n\nCílem je vyhrát závod hvězdné lodi proti ostatním
+    hráčům.\n\nHra se snadno spouští a vyžaduje pouze několik řádků kódu, aby se loď
+    pohybovala, ale existují téměř nekonečné možnosti vylepšení pro vytvoření sofistikovanějších
+    robotů. "
   tutorial_tynkerhw_longdescription: Naučte se programovat s Hot Wheels v této vysoce
     oktanové závodní hře! Vyberte si ze široké nabídky automobilů a poté se naučte
     programovat při procházení složitých závodních tratí. Skákejte přes překážky,
@@ -5334,11 +5376,11 @@ cs:
     v tomto světě Minecraftu.
   tutorial_minecraft-2016_longdescription: Sestavte hru Minecraft. Vytvořte si vlastní
     verze kuřete, ovcí, popínavých rostlin, zombie a dalších.
-  tutorial_thinkersmith-es_longdescription: Mediante el uso de un "Vocabulario Robot"
-    predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar
-    a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento
+  tutorial_thinkersmith-es_longdescription: Mediante el uso de un „Vocabulario Robot“
+    předdefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar
+    a cabo tareas espec ficas sin ser estas discutidas previamente.&iacute;Este segmento
     ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones
-    as&iacute; como la valiosa habilidad de depuraci&oacute;n.
+    jako como la valiosa habilidad de depuraci n.&iacute;&oacute;
   tutorial_pixie_longdescription: Výukový program Hodina kódu s Pixie
   tutorial_play_longdescription: Vytvoř příběh nebo hru s Herní laboratoří! Rozhýbej
     zvířata, piráty, zombie, ninjy a mnoho dalších postav, vytvářej zvuky, sbírej
@@ -12282,12 +12324,12 @@ cs:
   tutorial_googlename _longdescription: Vyberte jméno a oživte písmena slova pomocí
     kódu. Vyberte si přezdívku, jméno domácího mazlíčka, zvíře, sport, místo nebo
     koníček.
-  tutorial_carnegiezillah_longdescription: Zillah City is thriving, and music is in
-    the air. Rumor has it, the famed Gargantua bot is online and sending the last
-    Toxibots to trash the city block by block…. Grab your cobot hoverboard and get
-    ready to groove, move, and finish off what you started! Players program their
-    cobot hoverbots to change lanes, avoid obstacles, and take out many Toxibots in
-    this rhythm-styled game.
+  tutorial_carnegiezillah_longdescription: Zillah City se daří, a hudba je ve vzduchu.
+    Říká se, že slavný robot Gargantua je online a posílá poslední Toxiboty, aby zabili
+    město blok po bloku.…Popadněte svůj cobot hoverboard a připravte se na drážkování,
+    pohyb, a dokončete to, co jste začali! Hráči programují své kobotové hoverboty,
+    aby změnili jízdní pruhy, vyhýbali se překážkám a odstranili mnoho Toxibotů v
+    této hře ve stylu rytmu.
   tutorial_nasachspacejam_longdescription: Vytvořte sluneční soustavu, která opravdu
     skáče! Dozvíte se více o hudbě, astronomii a kódování v této samostatně vedené
     činnosti (nejsou vyžadovány žádné zkušenosti s kódováním). Naprogramujte planety

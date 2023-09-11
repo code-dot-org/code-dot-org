@@ -5,10 +5,10 @@ es:
   language: Español (España)
   front_title: Únete al mayor evento educativo de la historia, %{campaign_date}
   coming_soon: Próximamente
-  campaign_date_start_short: 5 de diciembre
+  campaign_date_start_short: Dic. 7
   campaign_date_start_long: 7 de diciembre
-  campaign_date_short: Del 5 al 11 de diciembre
-  campaign_date_full: Del 5 al 11 de diciembre
+  campaign_date_short: Dic. 7-13
+  campaign_date_full: Del 7 al 13 de diciembre
   campaign_date_year: '2022'
   campaign_date_full_year: Del 5 al 11 de diciembre de 2022
   nonus_campaign_date_start_short: '1 oct. '
@@ -197,6 +197,16 @@ es:
   grade_level_label_elementary: Escuela primaria
   grade_level_label_middle: Escuela secundaria
   grade_level_label_high: Escuela secundaria
+  curricula_title_elementary: Currículos de la escuela primaria
+  curricula_desc_elementary: Explore los divertidos cursos y actividades gratuitos
+    que lo invitan a explorar las ciencias de la computación con sus alumnos de primaria.
+  curricula_title_middle: Currículos de la escuela secundaria
+  curricula_desc_middle: Explore las atractivas ofertas que le permiten a usted y
+    a sus estudiantes de secundaria explorar la informática juntos.
+  curricula_title_high: Currículos de la escuela secundaria
+  curricula_desc_high: Explore los atractivos cursos y actividades que lo invitan
+    a usted y a sus estudiantes de secundaria a profundizar en las ciencias de la
+    computación.
   students_label: Estudiantes
   teachers_label: Profesores
   teacher_label_csf: Profesor de fundamentos de la informática
@@ -223,6 +233,13 @@ es:
   call_to_action_explore_choice_level: Explora el nivel de elección del ejemplo
   call_to_action_explore_collection: Explora la colección
   call_to_action_explore_unplugged_lesson: Explora las lecciones desconectadas
+  call_to_action_explore_csf: Explore los fundamentos de CS
+  call_to_action_explore_csd: Explore CS Discoveries
+  call_to_action_explore_csp: Explore los principios de CS
+  call_to_action_explore_csc: Explore CS Connections
+  call_to_action_explore_csa: Explore AP® Computer Science A
+  call_to_action_explore_maker: Explore los planes de estudio de Maker
+  call_to_action_explore_hoc: Explora los tutoriales de La Hora del Código
   call_to_action_try_app_lab: Prueba el laboratorio de aplicaciones
   call_to_action_view_lesson_plan: Ver plan de lección
   call_to_action_self_paced_pl: Comience el aprendizaje profesional a su propio ritmo
@@ -267,6 +284,7 @@ es:
   call_to_action_notify_available: Notificarme cuando esté disponible
   call_to_action_register_early_access: Regístrese para obtener acceso anticipado
   call_to_action_open_positions: Ver puestos vacantes
+  call_to_action_get_guide: Obtenga la guía
   aria_label_call_to_action_afe: Más información sobre Amazon Future Engineer
   aria_label_call_to_action_teaching_csf: Comience el programa de aprendizaje profesional
     para la enseñanza de los fundamentos de la informática
@@ -378,6 +396,8 @@ es:
   curriculum_name_csa: AP® Ciencias de la Computación A
   curriculum_name_csc_02: Cualquier módulo de conexiones CS
   curriculum_name_ai: IA y aprendizaje automático
+  curriculum_name_artificial_intelligence: Inteligencia artificial (IA)
+  curriculum_name_maker: Creador
   curriculum_name_maker_cp: Creación de aplicaciones con dispositivos (Circuit Playground)
   curriculum_name_maker_microbit: Creación de aplicaciones con dispositivos (micro:bit)
   curriculum_name_creating_apps_with_devices: Creación de aplicaciones con dispositivos
@@ -438,6 +458,12 @@ es:
     dispositivos físicos en la informática. Desarrolla programas que utilicen entradas
     y salidas de hardware. Hay una versión de esta unidad tanto para el micro:bit
     como para el Circuit Playground.
+  curriculum_desc_csa: Introduzca a los estudiantes en la ingeniería de software y
+    el diseño orientado a objetos mientras aprenden el lenguaje de programación Java
+    en este plan de estudios gratuito de AP® Computer Science A (AP® CSA).
+  curriculum_desc_maker: Maker Education lleva las STEM (Ciencia, Tecnología, Ingeniería,
+    Matemáticas) un paso más allá al fomentar la experiencia práctica y la colaboración
+    en el aula para ayudar a enseñar la resolución de problemas y el pensamiento crítico.
   collection_hardware: Enfoque en Hardware
   collection_hardware_desc: Capacita a los estudiantes para usar datos y dispositivos
     físicos para resolver problemas.
@@ -478,6 +504,7 @@ es:
   module_label_student_content_resources: Contenido y recursos
   module_label_new: Nuevo
   module_label_coming_soon: Próximamente
+  module_label_available_now: Disponible ahora
   module_label_video_series: Serie de vídeos
   module_label_self_paced: Módulo autoguiado
   module_ages_5_10: 5-10
@@ -488,6 +515,8 @@ es:
   module_grade_2_5: 2-5
   module_grade_3_5: 3-5
   module_grade_3_8: 3-8
+  module_grade_k_12: K-12
+  module_grade_3_12: 3-12
   module_grade_6_12: 6-12
   module_grade_6_10: 6-10
   module_grade_9_12: 9-12
@@ -587,6 +616,8 @@ es:
   heading_java_lab: Java Lab
   heading_objects_first: Los objetos primero
   heading_these_lessons_will: 'Estas lecciones permitirán:'
+  heading_explore_curriculum_catalog: Explore todos nuestros cursos en el catálogo
+    de planes de estudio
   professional_learning_section_desc: Recibe el apoyo que necesitas mientras te preparas
     para enseñar. A los profesores les encanta, ¡y más del 90% lo califica como el
     mejor desarrollo profesional de la historia!
@@ -864,6 +895,12 @@ es:
     grandes (como ChatGPT) y la IA generativa. Descubra cómo funcionan estas nuevas
     tecnologías directamente de la mano de los expertos: Mira Murati, directora de
     tecnología de OpenAI, y Cristóbal Valenzuela, director ejecutivo de RunwayML.'
+  ai_pl_101_llm_slides_title: Indicaciones de modelos lingüísticos de gran tamaño
+    para educadores
+  ai_pl_101_llm_slides_desc: Herramientas para obtener el mejor resultado posible
+    de LLM como ChatGPT, desde principiantes hasta avanzados. Incluye consejos de
+    inicio para aquellos que recién están empezando, así como herramientas avanzadas
+    para aquellos que buscan maximizar su potencial.
   how_ai_works_hero_heading: Cómo funciona la IA
   how_ai_works_hero_desc: "¡Sumérjase en el mundo de la IA con «Cómo funciona la IA»,
     nuestra serie de vídeos y las lecciones que la acompañan!"
@@ -2167,6 +2204,13 @@ es:
     por correo electrónico?"
   signup_email_preference_privacy: "(consulta nuestra política de privacidad)"
   signup_email_preference_yes: Sí
+  signup_email_preference_yes_elementary: Sí, envíenme actualizaciones sobre los recursos
+    de la escuela primaria
+  signup_email_preference_yes_middle: Sí, envíenme actualizaciones sobre los recursos
+    de la escuela secundaria
+  signup_email_preference_yes_high: Sí, envíenme actualizaciones sobre los recursos
+    de la escuela secundaria
+  signup_email_preference_yes_general: Sí, envíame actualizaciones generales
   signup_email_preference_no: 'No'
   signup_email_preference_error: Debes elegir el correo electrónico como preferencia
   signup_multiple_event_warning: Pondremos el nombre de tu escuela y ciudad en el
@@ -13104,12 +13148,12 @@ es:
   tutorial_googlename _longdescription: Elige un nombre y usa código para darles vida
     a las letras que lo componen. Puedes elegir un sobrenombre, el nombre de una mascota,
     un animal, un deporte, un lugar o un pasatiempo.
-  tutorial_carnegiezillah_longdescription: Zillah City is thriving, and music is in
-    the air. Rumor has it, the famed Gargantua bot is online and sending the last
-    Toxibots to trash the city block by block…. Grab your cobot hoverboard and get
-    ready to groove, move, and finish off what you started! Players program their
-    cobot hoverbots to change lanes, avoid obstacles, and take out many Toxibots in
-    this rhythm-styled game.
+  tutorial_carnegiezillah_longdescription: La ciudad de Zillah está prosperando y
+    la música está en el aire. Se rumorea que el famoso robot Gargantua está en línea
+    y envía a los últimos Toxibots a destruir la ciudad cuadra por cuadra.…¡Coge tu
+    aerodeslizador tipo cobot y prepárate para surcar, moverte y acabar con lo que
+    has empezado! Los jugadores programan sus cobots hoverbots para cambiar de carril,
+    evitar obstáculos y acabar con muchos Toxibots en este juego de estilo rítmico.
   tutorial_nasachspacejam_longdescription: "¡Crea un sistema solar que realmente sea
     genial! Aprende sobre música, astronomía y programación en esta actividad autoguiada
     (no se requiere experiencia en programación). Programa planetas para hacer música

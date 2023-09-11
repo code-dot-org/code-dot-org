@@ -109,19 +109,20 @@ lv:
     varētu būt, veidojot taisnīgāku pasauli.
   oceans_landing_videos: Videoklipi par mākslīgā intelekta un mašīnmācīšanos
   oceans_behind_the_scenes: 'AI okeāniem: aizkulisēs'
-  oceans_behind_the_scenes_1: Levels 2-4 use a pretrained model provided by the <a
-    href="https://www.tensorflow.org/" >TensorFlow</a> <a href="https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md">
-    MobileNet </a> project. A MobileNet model is a <a href="https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks">convolutional
-    neural network</a> that has been trained on <a href="http://www.image-net.org/">ImageNet</a>,
-    a dataset of over 14 million images hand-annotated with words such as "balloon"
-    or "strawberry". In order to customize this model with the labeled training data
-    the student generates in this activity, we use a technique called <a href="https://en.wikipedia.org/wiki/Transfer_learning">Transfer
-    Learning</a>. Each image in the training dataset is fed to MobileNet, as pixels,
-    to obtain a list of annotations that are most likely to apply to it. Then, for
-    a new image, we feed it to MobileNet and compare its resulting list of annotations
-    to those from the training dataset. We classify the new image with the same label
-    (such as "fish" or "not fish") as the images from the training set with the most
-    similar results.
+  oceans_behind_the_scenes_1: 2.—4. līmenis izmanto iepriekš sagatavotu modeli, ko
+    nodrošina <a href="https://www.tensorflow.org/" >TensorFlow</a> <a href="https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md">
+    MobileNet projekts. </a> MobileNet modelis ir <a href="https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks">konvolucionāls
+    neironu tīkls,</a> kas ir apmācīts uz <a href="http://www.image-net.org/">ImageNet,
+    datu kopa</a>, kurā ir vairāk nekā 14 miljoni attēlu ar roku anotēti ar tādiem
+    vārdiem kā “balons” vai “zemene”. Lai pielāgotu šo modeli ar marķētajiem mācību
+    datiem, ko students ģenerē šajā darbībā, mēs izmantojam tehniku, ko sauc par <a
+    href="https://en.wikipedia.org/wiki/Transfer_learning">Transfer Learning.</a>Katrs
+    mācību datu kopā esošais attēls tiek ievadīts MobileNet kā pikseļi, lai iegūtu
+    anotāciju sarakstu, kas, visticamāk, attiecas uz to. Tad, lai iegūtu jaunu attēlu,
+    mēs barojam to MobileNet un salīdzināt iegūto anotāciju sarakstu ar tiem, kas
+    iegūti no mācību datu kopas. Mēs klasificējam jauno attēlu ar tādu pašu etiķeti
+    (piemēram, “zivis” vai “ne zivis”) kā attēlus no treniņu komplekta ar vislīdzīgākajiem
+    rezultātiem.
   oceans_behind_the_scenes_1_markdown: 2.—4. līmenis izmanto iepriekš sagatavotu modeli,
     ko nodrošina [TensorFlow](https://www.tensorflow.org/) [MobileNet](https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md)
     projekts. MobileNet modelis ir [konvolutional neironu tīkls] (https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks),
@@ -186,6 +187,15 @@ lv:
   grade_level_label_elementary: Pamatskola
   grade_level_label_middle: Vidusskola
   grade_level_label_high: Vidusskola
+  curricula_title_elementary: Pamatskolas mācību programma
+  curricula_desc_elementary: Pārlūkojiet jautrus, bezmaksas kursus un aktivitātes,
+    kas aicina jūs izpētīt datorzinātnes ar saviem pamatskolas skolēniem.
+  curricula_title_middle: Vidusskolas mācību programma
+  curricula_desc_middle: Pārlūkojiet saistošus piedāvājumus, kas ļauj jums un jūsu
+    vidusskolas skolēniem kopā izpētīt datorzinātnes.
+  curricula_title_high: Vidusskolas mācību programma
+  curricula_desc_high: Pārlūkojiet saistošus kursus un aktivitātes, kas aicina jūs
+    un jūsu vidusskolas skolēnus iedziļināties datorzinātnēs.
   students_label: Skolēni
   teachers_label: Skolotāji
   teacher_label_csf: CS pamati skolotājs
@@ -212,6 +222,13 @@ lv:
   call_to_action_explore_choice_level: Izpētīt piemēru izvēles līmeni
   call_to_action_explore_collection: Izpētiet kolekciju
   call_to_action_explore_unplugged_lesson: Izpētiet atvienotās nodarbības
+  call_to_action_explore_csf: Izpētīt CS pamatus
+  call_to_action_explore_csd: Izpētiet CS atklājumus
+  call_to_action_explore_csp: Izpētīt CS principus
+  call_to_action_explore_csc: Izpētīt CS savienojumus
+  call_to_action_explore_csa: Izpētiet AP® datorzinātnes A
+  call_to_action_explore_maker: Izpētiet Maker mācību plānu
+  call_to_action_explore_hoc: Izpētiet Programēšanas stundas pamācības
   call_to_action_try_app_lab: Izmēģināt App Lab
   call_to_action_view_lesson_plan: Skatīt nodarbību plānu
   call_to_action_self_paced_pl: Sākt pašregulētu profesionālo mācīšanos
@@ -256,6 +273,7 @@ lv:
   call_to_action_notify_available: Informēt mani, kad pieejams
   call_to_action_register_early_access: Reģistrējieties agrīnai piekļuvei
   call_to_action_open_positions: Skatīt atvērtās pozīcijas
+  call_to_action_get_guide: Iegūt ceļvedi
   aria_label_call_to_action_afe: Uzziniet vairāk par Amazon Future Engineer
   aria_label_call_to_action_teaching_csf: Sākt mācību datorzinātnes pamati profesionālās
     apmācības programmu
@@ -366,6 +384,8 @@ lv:
   curriculum_name_csa: AP® datorzinātnes A
   curriculum_name_csc_02: Jebkurš CS savienojumu modulis
   curriculum_name_ai: AI un mašīnmācīšanās
+  curriculum_name_artificial_intelligence: Mākslīgais intelekts (AI)
+  curriculum_name_maker: izgatavotājs
   curriculum_name_maker_cp: Lietotņu izveide ar ierīcēm (Circuit Playground)
   curriculum_name_maker_microbit: Programmu izveide ar ierīcēm (micro:bit)
   curriculum_name_creating_apps_with_devices: Programmu izveide ar ierīcēm
@@ -420,6 +440,12 @@ lv:
   curriculum_desc_creating_apps_with_devices: Izpētiet fizisko ierīču lomu skaitļošanā.
     Izstrādāt programmas, kas izmanto aparatūras ieejas un izejas. Ir šīs vienības
     versija gan micro:bit un Circuit Playground.
+  curriculum_desc_csa: Iepazīstiniet studentus ar programmatūras inženieriju un objektorientēto
+    dizainu, kamēr viņi apgūst Java programmēšanas valodu šajā bezmaksas mācību programmā
+    AP® Computer Science A (AP® CSA).
+  curriculum_desc_maker: Maker izglītība paņem STEM (Zinātne, Tehnoloģija, Inženierzinātne,
+    Matemātika) soli tālāk, aicinot praktisku pieredzi un sadarbību klasē, lai palīdzētu
+    mācīt problēmu risināšanu un kritisko domāšanu.
   collection_hardware: Koncentrēties uz aparatūru
   collection_hardware_desc: Dot iespēju skolēniem izmantot datus un fiziskās ierīces
     problēmu risināšanai.
@@ -457,6 +483,7 @@ lv:
   module_label_student_content_resources: Saturs un resursi
   module_label_new: Jauns
   module_label_coming_soon: Drīzumā
+  module_label_available_now: Pieejams tagad
   module_label_video_series: Video sērija
   module_label_self_paced: Pašregulējošs modulis
   module_ages_5_10: 5-10
@@ -467,6 +494,8 @@ lv:
   module_grade_2_5: 2-5
   module_grade_3_5: 3-5
   module_grade_3_8: 3-8
+  module_grade_k_12: K-12
+  module_grade_3_12: 3-12
   module_grade_6_12: 6-12
   module_grade_6_10: 6-10
   module_grade_9_12: 9-12
@@ -561,6 +590,7 @@ lv:
   heading_java_lab: Java laboratorija
   heading_objects_first: Objekti vispirms
   heading_these_lessons_will: 'Šīs nodarbības:'
+  heading_explore_curriculum_catalog: Izpētiet visus mūsu kursus Curriculum Catalog
   professional_learning_section_desc: Saņemiet nepieciešamo atbalstu, kad sagatavojat
     mācīt. Skolotāji to mīl, vairāk nekā 90% ierindojot to par labāko profesionālo
     attīstību jebkad!
@@ -814,6 +844,11 @@ lv:
     AI izmaiņas, tostarp divi jauni videoklipi par Large Language Modeļu (piemēram,
     ChatGPT) un Generative AI. Uzklausiet, kā šīs jaunās tehnoloģijas darbojas tieši
     no ekspertiem: Mira Murati, OpenAI CTO, un Cristóbal Valenzuela, Runwayml izpilddirektors.'
+  ai_pl_101_llm_slides_title: Liela valodas modeļa uzvedne pedagogiem
+  ai_pl_101_llm_slides_desc: Instrumenti, lai iegūtu vislabāko iespējamo produkciju
+    no LLM, piemēram, ChatGPT, no iesācēja līdz progresīvām. Ietver startera uzvednes
+    tiem, kas vienkārši iegremdē pirkstus, kā arī uzlabotus rīkus tiem, kas vēlas
+    palielināt savu potenciālu.
   how_ai_works_hero_heading: Kā darbojas mākslīgā intelekta darbība
   how_ai_works_hero_desc: Ieduriet AI pasaulē ar “Kā AI darbojas”, mūsu video sēriju
     un pavadošās nodarbības!
@@ -1400,10 +1435,10 @@ lv:
     ka pennies var aizstāt ar kādu citu tāda paša izmēra svaru). Alternatīvas darbības
     ir pieejamas, ja jums nav piekļuves šīm piegādēm.
   csd_page_faq_answer_04_06: Programmu izveide ar ierīcēm (A un B opcija)
-  csd_page_faq_answer_04_07: 'Option A: Classroom set of Circuit Playgrounds. Check
-    out [code.org/maker/circuitplayground](%{url}) for more details.'
-  csd_page_faq_answer_04_08: 'Option B: Classroom set of micro:bit devices. Check
-    out [code.org/maker/microbit](%{url}) for more details.'
+  csd_page_faq_answer_04_07: 'A variants: Circuit Rotaļu laukumu klases komplekts.
+    Pārbaudiet [code.org/veidotājs/circuit playground] () lai iegūtu sīkāku informāciju.%{url}'
+  csd_page_faq_answer_04_08: 'B variants: Micro:bitu ierīču klases komplekts. Pārbaudiet
+    [code.org/maker/microbit] () lai iegūtu sīkāku informāciju.%{url}'
   csd_page_faq_answer_04_09: Ražotāju piederumi, piemēram, tukšas audu kastes vai
     kartona ruļļi vai skrāpējumu papīrs
   csd_page_faq_answer_04_10: "* Piezīme: Izveidot lietojumprogrammas ar ierīcēm ir
@@ -1411,12 +1446,11 @@ lv:
     tiem, kas izmanto micro:bit. Skolotājiem nevajadzētu pirkt abas ierīces vai mācīt
     abas vienības opcijas, jo tās ir līdzvērtīgas un aptver vienu un to pašu saturu."
   csd_page_faq_question_06: Kā CS atklājumi atbilst citiem Code.org kursiem?
-  csd_page_faq_answer_06_01: CS Discoveries is designed to fit naturally between our
-    [CS Fundamentals](%{csf_url}) courses and our [CS Principles](%{csp_url}) course.
-    While each of these courses is designed to be an age-appropriate entry point to
-    computer science, students with previous experience will find many new topics
-    to explore, and they will revisit familiar topics in novel and more challenging
-    contexts.
+  csd_page_faq_answer_06_01: CS atklājumi ir izstrādāti tā, lai tie dabiski atbilstu
+    mūsu [CS pamati] (%{csf_url}) kursiem un mūsu [CS principiem] () kursiem.%{csp_url}Lai
+    gan katrs no šiem kursiem ir izstrādāts tā, lai tas būtu vecumam atbilstošs datorzinātņu
+    ieejas punkts, studenti ar iepriekšējo pieredzi atradīs daudzas jaunas tēmas,
+    ko izpētīt, un viņi pārskatīs pazīstamas tēmas jaunos un sarežģītākos kontekstos.
   csc_page_top_desc: Veidot savienojumus starp datorzinātnēm (CS) un citiem priekšmetiem,
     piemēram, matemātiku, valodu mākslu, zinātni un sociālajiem pētījumiem.
   csc_page_intro_heading: Mācīt CS, vienlaikus aptverot galvenos priekšmetu standartus
@@ -1524,10 +1558,10 @@ lv:
     savā klasē. Mūsu reģionālie partneri piedāvā augstas kvalitātes vienas dienas
     Code.org seminārus individuāliem skolotājiem vai skolas mēroga PD. [Pierakstīties
     uz profesionālās pilnveides darbnīcu pie jums] (%{sign_up_url})!
-  csf_page_faq_answer_04_02: Join over 100,000 teachers who have participated in our
-    workshops. The majority of our workshop attendees say, 'It's the best professional
-    development I've ever attended.' In fact, [90% of attendees would recommend our
-    program to other teachers](%{rec_url})!
+  csf_page_faq_answer_04_02: 'Pievienojies vairāk nekā 100 000 skolotāju, kuri ir
+    piedalījušies mūsu darbnīcās. Lielākā daļa mūsu semināru dalībnieku saka: “Tā
+    ir labākā profesionālā attīstība, kādu jebkad esmu apmeklējis.” Faktiski [90%
+    dalībnieku ieteiktu mūsu programmu citiem skolotājiem] ()!%{rec_url}'
   csf_page_faq_question_05: Kāds ir ieteiktais laiks, lai mācītu CS pamatus?
   csf_page_faq_answer_05: Katrs CSF kurss ietver 13-17 stundas, kas paredzētas 45
     minūšu periodiem. Mēs iesakām visiem skolēniem pāriet no stundas uz stundu skolotāja
@@ -1535,9 +1569,10 @@ lv:
     gūtu pieredzi unisonā, bet prasmju veidošanas nodarbības var pabeigt studenti
     savā tempā.
   csf_page_faq_question_06: Kādi materiāli man ir nepieciešami CS pamatiem?
-  csf_page_faq_answer_06: Many lessons have handouts that guide students through activities.
-    These resources can be printed or assigned digitally. Some lessons call for typical
-    classroom supplies and manipulatives. [Visit the CSF Syllabus to learn more](%{syllabus_url}).
+  csf_page_faq_answer_06: Daudzās nodarbībās ir izdales materiāli, kas vada skolēnus
+    ar aktivitātēm. Šos resursus var izdrukāt vai piešķirt ciparu formātā. Dažās nodarbībās
+    ir nepieciešami tipiski klases piederumi un manipulācijas. [Apmeklējiet CSF mācību
+    programmu, lai uzzinātu vairāk] ().%{syllabus_url}
   csa_page_top_desc: Introduce students to software engineering and object-oriented
     design while they learn the Java programming language in this free curriculum
     for [AP® Computer Science A (AP® CSA)](%{csa_url}).
@@ -1686,8 +1721,8 @@ lv:
   ai_activity_zooniverse: Zooniverse - Momentuzņēmums Kalnu Zebra
   ai_activity_zooniverse_desc: Palīdzēt aizsargāt apdraudēto Cape Mountain Zebra,
     identificējot dažādus dzīvniekus attēliem.
-  codeorg_homepage_hoc2018_curriculum: Go further with <a href="%{studio_url}/courses"
-    class="hoc2018-curriculum-link">Code.org courses</a>
+  codeorg_homepage_hoc2018_curriculum: Iet tālāk ar <a href="%{studio_url}/courses"
+    class="hoc2018-curriculum-link">Code.org kursiem</a>
   codeorg_homepage_hoc2018_dance_heading: Izveidojiet savu <span class="highlight-word">Dance&nbsp;Party</span>
   codeorg_homepage_hoc2018_header_line1: Programēšanas stunda tuvojas...
   codeorg_homepage_hoc2018_header_line2_desktop: Ko jūs <span class="hoc2018-highlight-word">izveidot?</span>
@@ -1954,7 +1989,7 @@ lv:
   front_join_us_sign_up: Pievienoties
   front_join_us_host: Noorganizēt to
   front_join_us_support: Atbalsti to
-  front_join_us_more_info: For more information, please visit <a href='https://code.org'>code.org</a>.
+  front_join_us_more_info: Lai iegūtu vairāk informācijas, lūdzu, apmeklējiet <a href='https://code.org'>code.org</a>.
   front_join_us_code_info: Lai iegūtu vairāk informācijas, lūdzu, apmeklējiet code.org
   front_join_us_n_students_served: "# kalpoja."
   front_join_us_challenge: Win video tērzēšana jūsu klasē ar slavenību!
@@ -1980,10 +2015,10 @@ lv:
   hoc_homepage_organized_by: Programmēšanas stundu organizē [Code.org](%{codeorg_url}).
   signup_closed: Reģistrācija Programmēšanas stundai tagad ir slēgta. Lūdzu, pārbaudiet
     vēlreiz oktobrī, lai pierakstītos uz nākamo Programēšanas stundu.
-  signup_registration_not_required: You don't need to register to participate! The
-    Hour of Code activities are available year-round. <a href='%{hoc_activities_url}'>Try
-    an activity</a> or read our <a href='%{howto_guide_url}'>How-to guide</a> to plan
-    an event for your class.
+  signup_registration_not_required: Lai piedalītos, jums nav jāreģistrējas! Programmēšanas
+    stundas aktivitātes ir pieejamas visu gadu. <a href='%{hoc_activities_url}'>Izmēģiniet
+    darbību</a> vai izlasiet mūsu <a href='%{howto_guide_url}'>norādījumus,</a> lai
+    plānotu notikumu savai klasei.
   signup_registration_not_required_markdown: Lai piedalītos, jums nav jāreģistrējas!
     Programmēšanas stundas aktivitātes ir pieejamas visu gadu. [Izmēģiniet darbību]
     (%{hoc_activities_url}) vai izlasiet mūsu [Kā ceļvedis] (%{howto_guide_url}),
@@ -2023,6 +2058,13 @@ lv:
     kursu, vietējo iespēju vai citu datorzinātņu ziņu atjauninājumiem?
   signup_email_preference_privacy: "(Skatiet mūsu konfidencialitātes politiku)"
   signup_email_preference_yes: Jā
+  signup_email_preference_yes_elementary: Jā - sūtiet man atjauninājumus par pamatskolas
+    resursiem
+  signup_email_preference_yes_middle: Jā - sūtiet man atjauninājumus par vidusskolas
+    resursiem
+  signup_email_preference_yes_high: Jā - sūtiet man atjauninājumus par vidusskolas
+    resursiem
+  signup_email_preference_yes_general: Jā - Nosūtīt man vispārīgus atjauninājumus
   signup_email_preference_no: Nē
   signup_email_preference_error: E-pasta izvēle ir obligāta
   signup_multiple_event_warning: Kad jūs reģistrējaties, mēs ievietosim jūsu skolas
@@ -2133,12 +2175,12 @@ lv:
     gadu. Datorzinātnes izglītības nedēļa notiek katru gadu, atzīstot skaitļošanas
     pioniera dzimšanas dienu <a href='%{grace_hopper}'>Admiral Grace Murray Hopper</a>
     (1906. gada 9. decembris).
-  hoc_faq_when_is_hoc_a_markdown: The Hour of Code takes place each year during [Computer
-    Science Education Week](%{csedweek_url}). The %{campaign_date_year} Computer Science
-    Education Week will be %{campaign_date_full}, but you can host an Hour of Code
-    all year-round. Computer Science Education Week is held annually in recognition
-    of the birthday of computing pioneer [Admiral Grace Murray Hopper](%{grace_hopper})
-    (December 9, 1906).
+  hoc_faq_when_is_hoc_a_markdown: Programēšanas stunda notiek katru gadu [Datorzinātnes
+    izglītības nedēļas] (%{csedweek_url}) laikā. %{campaign_date_year} Datorzinātnes
+    izglītības nedēļa būs %{campaign_date_full}, bet jūs varat uzņemt Kodēšanas stundu
+    visu gadu. Computer Science Education Week notiek katru gadu atzīstot dzimšanas
+    dienas skaitļošanas pionieris [Admiral Grace Murray Hopper] (%{grace_hopper})
+    (9 decembris 1906).
   hoc_faq_why_cs_q: Kas ir datorzinātnes?
   hoc_faq_why_cs_a: "<i>Katram</i>skolniekam vajadzētu būt iespējai mācīties datorzinātnes.
     Tas palīdz attīstīt problēmu risināšans spējas, loģiku un kreativitāti. Sākot
@@ -2181,11 +2223,12 @@ lv:
     Mums ir arī iespējas katram vecumam un pieredzes līmenim, sākot no bērnudārza
     un uz augšu. Sāciet plānot savu pasākumu, izlasot mūsu [kā vadīt] (%{howto}).
   hoc_faq_devices_q: Kādas ierīces man vajadzētu izmantot saviem skolēniem?
-  hoc_faq_devices_a: Code.org tutorials work on all devices and browsers. You can
-    see more information about Code.org's tutorial tech needs <a href='%{codeorg_url}/educate/it'>here</a>.
-    Tech needs for non-Code.org tutorials can be found on <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a>
-    in the tutorial specific description. Don't forget we also offer <a href='%{unplugged_url}'>unplugged
-    activities</a> if your school can't accommodate the tutorials!
+  hoc_faq_devices_a: Code.org konsultācijas strādā visās ierīcēs un pārlūkprogrammās.
+    Jūs varat redzēt vairāk informācijas par Code.org apmācība tehnoloģiju vajadzībām
+    <a href='%{codeorg_url}/educate/it'>šeit</a>. Tehnoloģijas vajadzības, kas nav
+    Code.org konsultācijas var atrast <a href='%{codeorg_url}/learn'>%{partner_url}uz/mācīties</a>
+    apmācībā konkrētā aprakstā. Neaizmirstiet, ka mēs piedāvājam arī <a href='%{unplugged_url}'>atvienotas
+    darbības,</a> ja jūsu skola nevar uzņemt konsultācijas!
   hoc_faq_devices_a_markdown: Code.org konsultācijas strādā visās ierīcēs un pārlūkprogrammās.
     Jūs varat redzēt vairāk informācijas par Code.org apmācība tehnoloģiju vajadzībām
     [here](%{codeorg_url}/educate/it). Tehnoloģijas vajadzības, kas nav Code.org konsultācijas
@@ -2204,13 +2247,13 @@ lv:
     situācijas vai atbildat uz jautājumiem pa kārtai. <li><b>Atslēdzaties.</b>Mēs
     piedāvājam apmācības, kurām dators nav nepieciešams. </ul>
   hoc_faq_need_computers_a_markdown: |-
-    No. We have Hour of Code tutorials that work on PCs, smartphones, tablets, and some that require no computer at all! You can join wherever you are, with whatever you have.
+    Nr. Mums ir kodēšanas stunda konsultācijas, kas strādā uz datoriem, viedtālruņiem, planšetdatoriem un dažiem, kuriem nav nepieciešams dators vispār! Jūs varat pievienoties, kur jūs esat, ar visu, kas jums ir.
 
-    _Here are a few options:_
+    _Šeit ir dažas iespējas: _
 
-    - **Work in pairs.** [Research shows](%{pair_programming_research}) students learn best with [pair programming](%{pair_programming_video}), sharing a computer and working together. Encourage your students to double up.
-    - **Use a projected screen.** If you have a projector and screen for a Web-connected computer, your entire group can do an Hour of Code together. Watch video portions together and take turns solving puzzles or answering questions.
-    - **Go unplugged.** We offer [tutorials that require no computer](%{unplugged_url}) at all.
+    - **Darbs pāros.** [Pētījumi rāda] (%{pair_programming_research}) studenti vislabāk mācās ar [pāris programmēšana] (%{pair_programming_video}), daloties ar datoru un strādājot kopā. Iedrošiniet savus skolēnus dubultot.
+    - **Izmantojiet projicēto ekrānu.** Ja jums ir projektors un ekrāns datoram, kas savienots ar internetu, visa grupa var veikt Kodēšanas stundu kopā. Noskatieties video porcijas kopā un pēc kārtas risinot mīklas vai atbildot uz jautājumiem.
+    - **Iet atvienots.** Mēs piedāvājam [konsultācijas, kas prasa ne dators] () vispār.%{unplugged_url}
   hoc_faq_international_q: Esmu <country>. Kā es varu iesaistīties citās valstīs?
   hoc_faq_international_a: Ikviens var organizēt Programēšanas stundas pasākumu jebkur
     pasaulē. Pagājušajā gadā studenti visā pasaulē apvienojās programmēšanas stundā.
@@ -2507,8 +2550,8 @@ lv:
     (%{url})
   learn_banner_teachers: 'Pasniedzējiem: <a id=''teacher_banner_host''>Host an hour</a>
     vai <a id=''teacher_banner_howto''>read the How-To Guide</a>'
-  learn_banner_teachers_markdown: 'Teachers: [Host an hour](%{host_url}) or [read
-    the How-To Guide](%{howto_url})'
+  learn_banner_teachers_markdown: 'Skolotāji: [Uzņem stundu] (%{host_url}) vai [lasīt
+    rokasgrāmatu] ()%{howto_url}'
   tutorial_dance2019_name: Deju ballīte
   tutorial_danceparty_name: Deju ballīte
   tutorial_chibitronics_name: 'Chibitronics: izgaismots stāsts'
@@ -5360,11 +5403,11 @@ lv:
     piedzīvojumu caur šo Minecraft pasaulē.
   tutorial_minecraft-2016_longdescription: Veidot Minecraft spēli. Izveidojiet savas
     versijas vistas, aitas, vīteņi, zombijiem un vairāk.
-  tutorial_thinkersmith-es_longdescription: Mediante el uso de un "Vocabulario Robot"
+  tutorial_thinkersmith-es_longdescription: Mediante el uso de un “Vārdnīca Robot”
     predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar
-    a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento
-    ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones
-    as&iacute; como la valiosa habilidad de depuraci&oacute;n.
+    a cabo tareas espec ficas sin ser estas discutidas previamente.&iacute;Este segmento
+    ense&ntilde;a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones
+    kā como la valiosa habilidad de depuraci n.&iacute;&oacute;
   tutorial_pixie_longdescription: Kodēšanas stunda apmācība ar Pixie
   tutorial_play_longdescription: Izveidot stāstu vai spēli ar Spēles laboratoriju!
     Liec dzīvniekiem, pirātiem, zombijiem, nindzjām un citiem tēliem kustēties, izdot
@@ -12374,12 +12417,12 @@ lv:
   tutorial_googlename _longdescription: Izvēlieties vārdu un atdzīviniet vārda burtus,
     izmantojot kodu. Izvēlieties segvārdu, mājdzīvnieka vārdu, dzīvnieku, sportu,
     vietu vai hobiju.
-  tutorial_carnegiezillah_longdescription: Zillah City is thriving, and music is in
-    the air. Rumor has it, the famed Gargantua bot is online and sending the last
-    Toxibots to trash the city block by block…. Grab your cobot hoverboard and get
-    ready to groove, move, and finish off what you started! Players program their
-    cobot hoverbots to change lanes, avoid obstacles, and take out many Toxibots in
-    this rhythm-styled game.
+  tutorial_carnegiezillah_longdescription: Zillah City ir plaukstoša, un mūzika ir
+    gaisā. Baumas ir tas, slavenais Gargantua bot ir tiešsaistē un nosūtot pēdējos
+    Toxibots trash pilsētas bloku ar bloku.…Grab jūsu cobot hoverboard un saņemt gatavs
+    rieva, pārvietot, un pabeigt off to, ko jūs sākāt! Spēlētāji ieprogrammē savus
+    cobot hoverbots, lai mainītu joslas, izvairītos no šķēršļiem, un izņemt daudzus
+    Toxibots šajā ritma stila spēlē.
   tutorial_nasachspacejam_longdescription: Izveidojiet Saules sistēmu, kas patiešām
     ieži! Uzziniet par mūziku, astronomiju un kodēšanu šajā pašvadītajā darbībā (nav
     nepieciešama kodēšanas pieredze). Programma planētas, lai padarītu mūziku, radot

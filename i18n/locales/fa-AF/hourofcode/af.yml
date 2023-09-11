@@ -107,19 +107,19 @@ af:
     می تواند در ایجاد یک جهان عادلانه تر بازی.
   oceans_landing_videos: ویدئوهایی درباره هوش مصنوعی و یادگیری ماشین
   oceans_behind_the_scenes: 'هوش مصنوعی برای اقیانوسها: پشت صحنه'
-  oceans_behind_the_scenes_1: Levels 2-4 use a pretrained model provided by the <a
-    href="https://www.tensorflow.org/" >TensorFlow</a> <a href="https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md">
-    MobileNet </a> project. A MobileNet model is a <a href="https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks">convolutional
-    neural network</a> that has been trained on <a href="http://www.image-net.org/">ImageNet</a>,
-    a dataset of over 14 million images hand-annotated with words such as "balloon"
-    or "strawberry". In order to customize this model with the labeled training data
-    the student generates in this activity, we use a technique called <a href="https://en.wikipedia.org/wiki/Transfer_learning">Transfer
-    Learning</a>. Each image in the training dataset is fed to MobileNet, as pixels,
-    to obtain a list of annotations that are most likely to apply to it. Then, for
-    a new image, we feed it to MobileNet and compare its resulting list of annotations
-    to those from the training dataset. We classify the new image with the same label
-    (such as "fish" or "not fish") as the images from the training set with the most
-    similar results.
+  oceans_behind_the_scenes_1: سطوح 2-4 از یک مدل پیش آموزش دیده ارائه شده توسط پروژه
+    <a href="https://www.tensorflow.org/" >TensorFlow</a> <a href="https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md">
+    MobileNet استفاده می کنند. </a> مدل MobileNet یک شبکه عصبی <a href="https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks">کانولوشنی
+    است</a> که بر روی <a href="http://www.image-net.org/">ImageNet آموزش داده شده
+    است</a>، مجموعه داده ای از بیش از 14 میلیون تصویر دست با کلماتی مانند «بالون»
+    یا «توت فرنگی». برای سفارشی کردن این مدل با داده های آموزشی برچسب شده ای که دانش
+    آموز در این فعالیت تولید می کند، از تکنیکی به نام آموزش <a href="https://en.wikipedia.org/wiki/Transfer_learning">انتقال
+    استفاده می کنیم</a>. هر تصویر در مجموعه داده های آموزشی به MobileNet، به عنوان
+    پیکسل، برای به دست آوردن لیستی از حاشیه نویسی که به احتمال زیاد به آن اعمال می
+    شود، تغذیه می شود. سپس، برای یک تصویر جدید، ما آن را به MobileNet تغذیه می کنیم
+    و لیست حاصل از حاشیه نویسی آن را با کسانی که از مجموعه داده های آموزشی مقایسه
+    می کنند. ما تصویر جدید را با همان برچسب (مانند «ماهی» یا «نه ماهی») به عنوان تصاویر
+    از مجموعه آموزش با نتایج مشابه طبقه بندی می کنیم.
   oceans_behind_the_scenes_1_markdown: سطوح 2-4 از یک مدل پیش آموزش دیده استفاده می
     کنند که توسط پروژه [TensorFlow](https://www.tensorflow.org/) [MobileNet](https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md)
     ارائه شده است. مدل MobileNet یک [شبکه عصبی کانولوشن] (https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks)
@@ -184,6 +184,15 @@ af:
   grade_level_label_elementary: مدرسه ابتدایی
   grade_level_label_middle: مدرسه راهنمایی
   grade_level_label_high: دبیرستان
+  curricula_title_elementary: برنامه درسی مدرسه ابتدایی
+  curricula_desc_elementary: مرور سرگرم کننده، دوره ها و فعالیت های رایگان است که
+    شما را دعوت به کشف علوم کامپیوتر با دانش آموزان مدرسه ابتدایی خود را.
+  curricula_title_middle: برنامه های درسی مدرسه راهنمایی
+  curricula_desc_middle: مرور ارائه جذاب است که شما و دانش آموزان دبیرستان خود را
+    قادر به کشف علوم کامپیوتر با هم.
+  curricula_title_high: برنامه های درسی دبیرستان
+  curricula_desc_high: فهرست دوره های فوتی و فوری و فعالیت های است که شما و دانش آموزان
+    دبیرستان خود را دعوت به حفاری عمیق تر به علوم کامپیوتر.
   students_label: دانش آموزان
   teachers_label: معلمان
   teacher_label_csf: CS اصول معلم
@@ -210,6 +219,13 @@ af:
   call_to_action_explore_choice_level: کاوش سطح انتخاب به عنوان مثال
   call_to_action_explore_collection: کاوش مجموعه
   call_to_action_explore_unplugged_lesson: کاوش درسهای جدا شده
+  call_to_action_explore_csf: کاوش اصول CS
+  call_to_action_explore_csd: کاوش اکتشافات CS
+  call_to_action_explore_csp: کاوش اصول CS
+  call_to_action_explore_csc: کاوش اتصالات CS
+  call_to_action_explore_csa: کاوش AP® علوم کامپیوتر
+  call_to_action_explore_maker: کاوش ساز برنامه های آموزشی
+  call_to_action_explore_hoc: کاوش ساعت از آموزش کد
   call_to_action_try_app_lab: آزمایشگاه برنامه را امتحان کنید
   call_to_action_view_lesson_plan: مشاهده طرح درس
   call_to_action_self_paced_pl: شروع یادگیری حرفه ای خود گام
@@ -254,6 +270,7 @@ af:
   call_to_action_notify_available: در صورت موجود بودن به من اطلاع دهید
   call_to_action_register_early_access: ثبت نام برای دسترسی سریع
   call_to_action_open_positions: مشاهده پوزیشن های باز
+  call_to_action_get_guide: راهنمای را دریافت کنید
   aria_label_call_to_action_afe: درباره مهندس آینده آمازون بیشتر بدانید
   aria_label_call_to_action_teaching_csf: شروع آموزش علوم کامپیوتر اصول برنامه یادگیری
     حرفه ای
@@ -353,6 +370,8 @@ af:
   curriculum_name_csa: AP® علوم کامپیوتر
   curriculum_name_csc_02: هر CS اتصالات ماژول
   curriculum_name_ai: هوش مصنوعی و یادگیری ماشین
+  curriculum_name_artificial_intelligence: هوش مصنوعی (AI)
+  curriculum_name_maker: سازنده
   curriculum_name_maker_cp: ایجاد برنامه با دستگاه (زمین بازی مدار)
   curriculum_name_maker_microbit: ایجاد برنامه با دستگاه (micro:bit)
   curriculum_name_creating_apps_with_devices: ایجاد برنامه با دستگاه
@@ -405,6 +424,12 @@ af:
   curriculum_desc_creating_apps_with_devices: 'بررسی نقش دستگاه های فیزیکی در محاسبات.
     برنامه هایی را توسعه دهید که از ورودی ها و خروجی های سخت افزاری استفاده می کنند.
     یک نسخه از این واحد برای هر دو میکرو وجود دارد: بیت و مدار زمین بازی.'
+  curriculum_desc_csa: معرفی دانش آموزان به مهندسی نرم افزار و طراحی شی گرا در حالی
+    که آنها یادگیری زبان برنامه نویسی جاوا در این برنامه درسی رایگان برای AP® علوم
+    کامپیوتر A (AP® CSA).
+  curriculum_desc_maker: آموزش سازندگان STEM (علم، فناوری، مهندسی، ریاضیات) را با
+    دعوت از تجربه عملی و همکاری در کلاس درس برای کمک به آموزش حل مسئله و تفکر انتقادی،
+    گامی جلوتر می برد.
   collection_hardware: تمرکز بر روی سخت افزار
   collection_hardware_desc: دانش آموزان را قادر می سازد تا از داده ها و دستگاه های
     فیزیکی برای حل مشکلات استفاده کنند.
@@ -444,6 +469,7 @@ af:
   module_label_student_content_resources: محتوا و منابع
   module_label_new: جدید
   module_label_coming_soon: به زودی
+  module_label_available_now: در حال حاضر در دسترس
   module_label_video_series: سری فیلم
   module_label_self_paced: ماژول خود گام
   module_ages_5_10: 5-10
@@ -454,6 +480,8 @@ af:
   module_grade_2_5: 2-5
   module_grade_3_5: 3-5
   module_grade_3_8: 3-8
+  module_grade_k_12: K-12
+  module_grade_3_12: 3-12
   module_grade_6_12: 6-12
   module_grade_6_10: 6-10
   module_grade_9_12: 9-12
@@ -545,6 +573,8 @@ af:
   heading_java_lab: آزمایشگاه جاوا
   heading_objects_first: اشیاء برای اولین بار
   heading_these_lessons_will: 'این درس خواهد شد:'
+  heading_explore_curriculum_catalog: همه دوره های ما را در کاتالوگ برنامه درسی جستجو
+    کنید
   professional_learning_section_desc: هنگام آماده شدن برای تدریس، پشتیبانی مورد نیاز
     خود را دریافت کنید. معلمان آن را دوست دارم، با بیش از 90٪ رتبه بندی آن را بهترین
     توسعه حرفه ای تا کنون!
@@ -794,6 +824,11 @@ af:
     می شود، بیشتر بدانید، که شامل دو فیلم جدید در مدل های زبان بزرگ (مانند ChatGPT)
     و AI Generative است. بشنوید که چگونه این فن آوری های جدید به طور مستقیم از کارشناسان
     کار می کنند: میرا موراتی، CTO از OpenAi و کریستوبال والنزولا، مدیر عامل شرکت RunWayML.'
+  ai_pl_101_llm_slides_title: مدل زبان بزرگ برای مربیان
+  ai_pl_101_llm_slides_desc: ابزاری برای به دست آوردن بهترین خروجی ممکن از LLMs مانند
+    ChatGPT، از مبتدی تا پیشرفته. شامل استارت دهید برای کسانی که فقط فرو بردن انگشتان
+    پا خود را در, و همچنین به عنوان ابزار پیشرفته برای کسانی که به دنبال به حداکثر
+    رساندن پتانسیل خود را.
   how_ai_works_hero_heading: چگونه هوش مصنوعی کار می کند
   how_ai_works_hero_desc: شیرجه رفتن به دنیای هوش مصنوعی با «چگونه هوش مصنوعی کار
     می کند»، سری فیلم های ما و درس های همراه!
@@ -1375,10 +1410,10 @@ af:
     سکه ها را می توان با نوع دیگری از وزن همان اندازه جایگزین کرد). فعالیت های جایگزین
     در دسترس هستند اگر شما دسترسی به این منابع ندارد.
   csd_page_faq_answer_04_06: ایجاد برنامه با دستگاه (گزینه A و گزینه B)
-  csd_page_faq_answer_04_07: 'Option A: Classroom set of Circuit Playgrounds. Check
-    out [code.org/maker/circuitplayground](%{url}) for more details.'
-  csd_page_faq_answer_04_08: 'Option B: Classroom set of micro:bit devices. Check
-    out [code.org/maker/microbit](%{url}) for more details.'
+  csd_page_faq_answer_04_07: 'گزینه A: مجموعه کلاس درس از زمین های بازی مدار. برای
+    جزئیات بیشتر، [code.org/maker/circuitground] () را بررسی کنید.%{url}'
+  csd_page_faq_answer_04_08: 'گزینه B: مجموعه کلاس درس میکرو: دستگاه های بیتی. برای
+    جزئیات بیشتر، [code.org/maker/microbit] () را بررسی کنید.%{url}'
   csd_page_faq_answer_04_09: لوازم ساز، مانند جعبه بافت خالی یا رول مقوا یا کاغذ خراش
   csd_page_faq_answer_04_10: "* توجه: ایجاد برنامه با واحد دستگاه دارای دو گزینه پیاده
     سازی - یکی برای کسانی که با استفاده از زمین های بازی مدار و یکی برای کسانی که
@@ -1509,9 +1544,10 @@ af:
     در حالی که درس مهارت سازی می تواند توسط دانش آموزان در سرعت خود را تکمیل وجود
     دارد.
   csf_page_faq_question_06: چه موادی برای اصول CS نیاز دارم؟
-  csf_page_faq_answer_06: Many lessons have handouts that guide students through activities.
-    These resources can be printed or assigned digitally. Some lessons call for typical
-    classroom supplies and manipulatives. [Visit the CSF Syllabus to learn more](%{syllabus_url}).
+  csf_page_faq_answer_06: بسیاری از درس ها جزوات است که دانش آموزان را از طریق فعالیت
+    های هدایت می کند. این منابع را می توان چاپ کرد یا به صورت دیجیتالی اختصاص داد.
+    برخی از درس برای لوازم کلاس درس معمولی و manipulatives پاسخ. [مشاهده برنامه درسی
+    CSF برای کسب اطلاعات بیشتر] ().%{syllabus_url}
   csa_page_top_desc: Introduce students to software engineering and object-oriented
     design while they learn the Java programming language in this free curriculum
     for [AP® Computer Science A (AP® CSA)](%{csa_url}).
@@ -1657,11 +1693,12 @@ af:
   ai_activity_zooniverse: Zooniverse - عکس فوری کوه گورخر
   ai_activity_zooniverse_desc: کمک به حفاظت از در معرض خطر کیپ کوه گورخر با شناسایی
     حیوانات مختلف در تصاویر.
-  codeorg_homepage_hoc2018_curriculum: Go further with <a href="%{studio_url}/courses"
-    class="hoc2018-curriculum-link">Code.org courses</a>
+  codeorg_homepage_hoc2018_curriculum: با دوره های <a href="%{studio_url}/courses"
+    class="hoc2018-curriculum-link">Code.org بیشتر بروید</a>
   codeorg_homepage_hoc2018_dance_heading: خود را ایجاد کنید <span class="highlight-word">رقص&nbsp;مهمانی</span>
   codeorg_homepage_hoc2018_header_line1: ساعت از کد در حال آمدن است...
-  codeorg_homepage_hoc2018_header_line2_desktop: What will you <span class="hoc2018-highlight-word">create?</span>
+  codeorg_homepage_hoc2018_header_line2_desktop: چه چیزی <span class="hoc2018-highlight-word">ایجاد
+    می کنید؟</span>
   codeorg_homepage_hoc2018_header_line2_mobile: چه چیزی ایجاد می کنید؟
   codeorg_homepage_hoc2018_header_line3: به تخیل و تولد نوآوری پرواز کنید. شروع با
     یک ساعت از کد و نام تجاری خود را از خلاقیت، هر آنچه که ممکن است.
@@ -1681,7 +1718,7 @@ af:
   codeorg_homepage_csc_title: اتصالات CS
   hoc2018_tutorial_mchoc_description: کمیته مبارزه با سانسور بازگشته است برای ساعت
     از کد با یک فعالیت با نام تجاری جدید! سفر از طریق کمیته مبارزه با سانسور با کد.
-  codeorg_homepage_hoc2019_dance_heading: Code a <span class="highlight-word">Dance&nbsp;Party!</span>
+  codeorg_homepage_hoc2019_dance_heading: کد یک&nbsp;حزب <span class="highlight-word">رقص!</span>
   codeorg_homepage_hoc2019_dance_heading_markdown: کد یک ** رقص&nbsp;مهمانی - جشن!
     **
   codeorg_homepage_special2020_body1: حمایت از والدین و معلمانی که با تعطیلی مدرسه
@@ -1700,10 +1737,10 @@ af:
   cookie_banner_more_information: به سیاست حفظ حریم خصوصی Code.org مراجعه کنید.
   cookie_banner_accept: موافقم
   front_header_banner: پیوستن به بزرگترین رویداد یادگیری در تاریخ، %{campaign_date}
-  front_intro_default: The Hour of Code is a global movement reaching tens of millions
-    of students in 180+ countries. Anyone, anywhere can organize an Hour of Code event.
-    One-hour tutorials are available in over 45 languages. No experience needed. <strong>Ages
-    4 to 104.</strong>
+  front_intro_default: ساعت از کد یک جنبش جهانی رسیدن به ده ها میلیون نفر از دانش
+    آموزان در 180+ کشور است. هر کس، در هر نقطه می تواند یک ساعت از رویداد کد را سازماندهی
+    کند. آموزش های یک ساعته در بیش از 45 زبان در دسترس هستند. هیچ تجربه ای لازم نیست
+    <strong>سنین 4 تا 104.</strong>
   front_intro_default_2: یک جنبش جهانی در کشورهای 180+.
   front_watch_video: ويدیوي جديد را ببينيد
   front_watch_regular_video: ویدیو را تماشا کنید
@@ -1996,6 +2033,11 @@ af:
     دوره های Code.org، فرصت های محلی، و یا دیگر اخبار علوم کامپیوتر ایمیل؟
   signup_email_preference_privacy: "(سیاست حفظ حریم خصوصی ما را ببینید)"
   signup_email_preference_yes: بله
+  signup_email_preference_yes_elementary: بله - به من ارسال به روز رسانی در منابع
+    مدرسه ابتدایی
+  signup_email_preference_yes_middle: بله - به من ارسال به روز رسانی در منابع مدرسه
+  signup_email_preference_yes_high: بله - من به روز رسانی در منابع دبیرستان ارسال
+  signup_email_preference_yes_general: بله - ارسال به روز رسانی عمومی
   signup_email_preference_no: نه
   signup_email_preference_error: اولویت ایمیل مورد نیاز است
   signup_multiple_event_warning: ما نام مدرسه و شهرستان خود را بر روی نقشه قرار داده
@@ -2063,8 +2105,8 @@ af:
   map_legend_title: افسانه
   map_legend_hoc_events: ساعت رویداد کد
   map_legend_cs_tech_jam: رویداد ویژه
-  map_warning: A full list of the events can be viewed on the <a href='%{events_url}'>events
-    page.</a>
+  map_warning: لیست کامل رویدادها را می توان در صفحه <a href='%{events_url}'>رویدادها
+    مشاهده کرد.</a>
   map_warning_markdown: لیست کامل رویدادها را می توان در [صفحه رویدادها] مشاهده کرد
     (%{events_url})
   meta_tag_og_title: ساعت كد نويسي مي آيد
@@ -2149,22 +2191,24 @@ af:
     آموزش شما می خواهید, و انتخاب یک ساعت &mdash; ما مراقبت از بقیه. ما همچنین گزینه
     هایی برای هر سن و سطح تجربه، از مهد کودک و بالاتر داریم. شروع به برنامه ریزی رویداد
     خود را با خواندن ما <a href='/how-to'>چگونه برای هدایت</a>.
-  hoc_faq_host_a_markdown: Of course. Hour of Code activities are self-guided. All
-    you have to do is [try our current tutorials](%{codeorg_url}/learn), pick the
-    tutorial you want, and pick an hour — we take care of the rest. We also have options
-    for every age and experience-level, from kindergarten and up. Start planning your
-    event by reading our [how to guide](%{howto}).
+  hoc_faq_host_a_markdown: البته. ساعت فعالیت های کد خود هدایت می شوند. همه شما باید
+    انجام دهید این است [آموزش فعلی ما را امتحان کنید] (%{codeorg_url}/یادگیری), انتخاب
+    آموزش شما می خواهید, و انتخاب یک ساعت — ما مراقبت از بقیه. ما همچنین گزینه هایی
+    برای هر سن و سطح تجربه، از مهد کودک و بالاتر داریم. شروع به برنامه ریزی رویداد
+    خود را با خواندن ما [چگونه به راهنمای] (%{howto}).
   hoc_faq_devices_q: چه دستگاه هایی باید برای دانش آموزانم استفاده کنم؟
-  hoc_faq_devices_a: Code.org tutorials work on all devices and browsers. You can
-    see more information about Code.org's tutorial tech needs <a href='%{codeorg_url}/educate/it'>here</a>.
-    Tech needs for non-Code.org tutorials can be found on <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a>
-    in the tutorial specific description. Don't forget we also offer <a href='%{unplugged_url}'>unplugged
-    activities</a> if your school can't accommodate the tutorials!
-  hoc_faq_devices_a_markdown: Code.org tutorials work on all devices and browsers.
-    You can see more information about Code.org's tutorial tech needs [here](%{codeorg_url}/educate/it).
-    Tech needs for non-Code.org tutorials can be found on [%{partner_url}/learn](%{codeorg_url}/learn)
-    in the tutorial specific description. Don't forget we also offer [unplugged activities](%{unplugged_url})
-    if your school can't accommodate the tutorials!
+  hoc_faq_devices_a: آموزش Code.org بر روی تمام دستگاه ها و مرورگرها کار می کنند.
+    شما می توانید اطلاعات بیشتر در مورد نیازهای تکنولوژی آموزشی Code.org را <a href='%{codeorg_url}/educate/it'>در
+    اینجا</a>مشاهده کنید. نیازهای فنی برای آموزش غیر Code.org را می توان در یافت <a
+    href='%{codeorg_url}/learn'>%{partner_url}/یادگیری</a> در شرح خاص آموزش. فراموش
+    نکنید که ما نیز ارائه فعالیت های <a href='%{unplugged_url}'>unplugged</a> اگر
+    مدرسه خود را می توانید آموزش جای نیست!
+  hoc_faq_devices_a_markdown: آموزش Code.org بر روی تمام دستگاه ها و مرورگرها کار
+    می کنند. شما می توانید اطلاعات بیشتری در مورد نیازهای تکنولوژی آموزشی Code.org
+    [here](%{codeorg_url}/educate/it) مشاهده کنید. نیازهای فنی برای آموزش غیر Code.org
+    را می توان در یافت [%{partner_url}/learn] (%{codeorg_url}/یادگیری) در شرح خاص
+    آموزش. فراموش نکنید که ما نیز ارائه [فعالیت های unplugged] (%{unplugged_url})
+    اگر مدرسه خود را می توانید آموزش جای نیست!
   hoc_faq_need_computers_q: آيا هر شركت‌كننده يك کمپیوتر نياز دارد؟
   hoc_faq_need_computers_a: خير. آموزش‌هاي ساعت کدنويسي روی کمپیوتر های شخصی، تلفن‌هاي
     هوشمند، تبلت‌ها قابل استفاده‌اند و بعضي از آن‌ها به هيچ کمپیوتری نیاز ندارند!
@@ -2177,13 +2221,13 @@ af:
     را حل كنيد و به سوالات پاسخ دهيد.<li><b>بدون کمپیوتر.</b> ما آموزش‌هايي را ارائه
     مي‌دهيم كه هيچ نيازي به رايانه ندارند. </ul>
   hoc_faq_need_computers_a_markdown: |-
-    No. We have Hour of Code tutorials that work on PCs, smartphones, tablets, and some that require no computer at all! You can join wherever you are, with whatever you have.
+    نه. ما یک ساعت از آموزش کد که بر روی رایانه های شخصی کار, گوشی های هوشمند, قرص, و برخی که نیاز به هیچ کامپیوتر در همه! شما می توانید هر جا که هستید، با هر آنچه که دارید بپیوندید.
 
-    _Here are a few options:_
+    _در اینجا چند گزینه وجود دارد:_
 
-    - **Work in pairs.** [Research shows](%{pair_programming_research}) students learn best with [pair programming](%{pair_programming_video}), sharing a computer and working together. Encourage your students to double up.
-    - **Use a projected screen.** If you have a projector and screen for a Web-connected computer, your entire group can do an Hour of Code together. Watch video portions together and take turns solving puzzles or answering questions.
-    - **Go unplugged.** We offer [tutorials that require no computer](%{unplugged_url}) at all.
+    - ** کار در جفت ها** [تحقیقات نشان می دهد] (%{pair_programming_research}) دانش آموزان با [برنامه نویسی جفت] (%{pair_programming_video})، به اشتراک گذاری یک کامپیوتر و کار با یکدیگر بهتر می آموزند. دانش آموزان خود را تشویق کنید تا دو برابر شوند.
+    - ** از یک صفحه نمایش پیش بینی شده استفاده کنید** اگر شما یک پروژکتور و صفحه نمایش برای یک کامپیوتر متصل به وب دارید، کل گروه شما می تواند یک ساعت از کد را با هم انجام دهد. بخش های ویدیویی را با هم تماشا کنید و به نوبت حل پازل یا پاسخ دادن به سوالات را انجام دهید.
+    - ** برو جدا شده** ما ارائه می دهیم [آموزش که نیاز به هیچ کامپیوتر] () در همه.%{unplugged_url}
   hoc_faq_international_q: من در هستم <country>. چگونه می توانم در سطح بین المللی
     شرکت کنم؟
   hoc_faq_international_a: هر کس می تواند یک ساعت از رویداد کد سازماندهی, در هر نقطه
@@ -2208,24 +2252,24 @@ af:
     ثبت نام برای ساعت کد به طور خودکار یک حساب Code Studio ایجاد نمی کند. اگر شما
     نمی خواهید برای ایجاد حساب برای دانش آموزان خود را، لطفا این <a href='https://youtu.be/_smelV_KISE'>دستورالعمل</a>را
     دنبال کنید.
-  hoc_faq_account_a_markdown: No. Absolutely no signup or login is required for students
-    to try the Hour of Code. Most of the [follow-on courses](%{codeorg_url}/learn/beyond)
-    require account creation to save student progress. Also, signing up for the Hour
-    of Code does NOT automatically create a Code Studio account. If you do want to
-    create accounts for your students, please follow these [instructions](%{section_instructions_url}).
+  hoc_faq_account_a_markdown: نه. مطلقا هیچ ثبت نام و یا ورود به سیستم مورد نیاز است
+    برای دانش آموزان را امتحان کنید ساعت از کد. بسیاری از [دوره های پیگیری] (%{codeorg_url}/یادگیری/فراتر
+    از آن) نیاز به ایجاد حساب برای صرفه جویی در پیشرفت دانش آموز. همچنین، ثبت نام
+    برای ساعت کد به طور خودکار یک حساب Code Studio ایجاد نمی کند. اگر شما نمی خواهید
+    برای ایجاد حساب برای دانش آموزان خود را, لطفا به دنبال این [instructions](%{section_instructions_url}).
   hoc_faq_high_school_q: چه فعالیتی باید با دانش آموزان دبیرستانی انجام دهم؟
   hoc_faq_high_school_a: برای تمام سنین، ما امتحان کردن یکی از آموزش های مبتدی روی
     <a href='http://code.org/learn'>Code.org/learn</a> را برای شروع توصیه می کنیم،
     مثل آموزش های انگری برد یا آنا و السا. یک دانش آموز دبیرستانی باید بتواند یکی
     از این ها را در 30 دقیقه تمام کند و سپس بتواند یک آموزش پیشرفته تر در جاوا اسکریپت،
     مانند Khan Academy یا CodeHR را امتحان کند.
-  hoc_faq_high_school_a_markdown: Our Star Wars and Minecraft tutorials are great
-    for high schoolers, especially the Star Wars JavaScript version and the free play
-    level on both tutorials. Alternately, we recommend trying one of the beginner
-    tutorials on [%{partner_url}/learn](%{codeorg_url}/learn) to start, such as the
-    tutorial with Angry Birds or with Anna and Elsa. A high school student should
-    be able to finish one of these in 30 minutes and can then try a more advanced
-    tutorial in JavaScript, such as Khan Academy or CodeHS.
+  hoc_faq_high_school_a_markdown: آموزش جنگ ستارگان و کمیته مبارزه با سانسور ما برای
+    دانش آموزان دبیرستان، به ویژه نسخه جنگ ستارگان جاوا اسکریپت و سطح بازی رایگان
+    در هر دو آموزش عالی است. متناوبا، توصیه می کنیم تلاش یکی از آموزش مبتدی در [%{partner_url}/یادگیری]
+    (%{codeorg_url}/یادگیری) برای شروع، مانند آموزش با پرندگان عصبانی و یا با آنا
+    و السا. یک دانش آموز دبیرستانی باید بتواند یکی از این موارد را در 30 دقیقه تمام
+    کند و سپس می تواند یک آموزش پیشرفته تر در جاوا اسکریپت مانند آکادمی خان یا CODEHS
+    را امتحان کند.
   hoc_faq_scratch_q: من انجام خراش برای یک ساعت از کد، اما اگر دانش آموزان من iPads
     به جای لپ تاپ؟
   hoc_faq_scratch_a: خراش بر روی قرص اجرا نمی شود. اگر دانش آموزان خود را جوان هستند,
@@ -2233,10 +2277,11 @@ af:
     های <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a>نگاه کنید، می توانید
     آموزش های دیگری را که در iPads ها کار می کنند پیدا کنید - از Code.org، Tynker،
     Lightbot یا CodePark.
-  hoc_faq_scratch_a_markdown: Scratch doesn't run on tablets. If your students are
-    young, they can use the ScratchJR iPad app (for early-readers). If you look at
-    the tutorials on [%{partner_url}/learn](%{codeorg_url}/learn), you can find other
-    tutorials that work on iPads - from Code.org, Tynker, Lightbot, or CodeSpark.
+  hoc_faq_scratch_a_markdown: خراش بر روی قرص اجرا نمی شود. اگر دانش آموزان خود را
+    جوان هستند, آنها می توانند برنامه ScratchJR اپل استفاده (برای اوایل خوانندگان).
+    اگر به آموزش های [%{partner_url}/learn] (%{codeorg_url}/learn) نگاه کنید، می توانید
+    سایر آموزش هایی را که روی iPads ها کار می کنند پیدا کنید - از Code.org، Tynker،
+    Lightbot یا CodePark.
   hoc_faq_count_hoc_q: چگونه ساعت از کد شما به حساب?
   hoc_faq_map_q: چرا من نقطه ام رو روي نقشه نمي بينم؟
   hoc_faq_map_a: ما خیلی متاسفیم که شما رویداد خود را در ساعت از نقشه کد را نمی بینید.
@@ -2318,10 +2363,10 @@ af:
     که در آن شما می توانید گواهینامه برای کل کلاس خود را جلوتر از زمان چاپ. شما همچنین
     می توانید گواهینامه های ویژه <a href='%{codeorg_url}/certificates?course=mc'></a>
     را برای دانش آموزانی که آموزش Minecraft را انجام می دهند، چاپ کنید.
-  hoc_faq_certificates_a_markdown: Go to our [certificates page](%{codeorg_url}/certificates)
-    where you can print certificates for your entire class ahead of time. You can
-    also print out [special certificates](%{codeorg_url}/certificates?course=mc) for
-    students doing the Minecraft tutorial.
+  hoc_faq_certificates_a_markdown: برو به [صفحه گواهی] ما (%{codeorg_url}/گواهی) که
+    در آن شما می توانید گواهی برای کل کلاس خود را جلوتر از زمان چاپ. شما همچنین می
+    توانید نسخه قابل چاپ کردن [گواهی های ویژه] (%{codeorg_url}/گواهی? البته = MC)
+    برای دانش آموزان انجام آموزش کمیته مبارزه با سانسور.
   hoc_faq_logo_q: آیا محدودیت هایی برای چگونگی استفاده از آرم ساعت کد یا نام وجود
     دارد؟
   hoc_faq_logo_a: ساعت کد علامت تجاريه ما نمی خواهیم برای جلوگیری از استفاده از آن,
@@ -2477,8 +2522,8 @@ af:
     از یک ساعت برو</a>
   learn_banner_beyond_markdown: آیا می خواهید به یادگیری ادامه دهید؟ [فراتر از یک
     ساعت بروید] (%{url})
-  learn_banner_teachers: 'Teachers: <a id=''teacher_banner_host''>Host an hour</a>
-    or <a id=''teacher_banner_howto''>read the How-To Guide</a>'
+  learn_banner_teachers: 'معلمان: <a id=''teacher_banner_host''>میزبان یک ساعت</a>
+    و یا <a id=''teacher_banner_howto''>خواندن چگونه به راهنمای</a>'
   learn_banner_teachers_markdown: 'معلمان: [میزبان یک ساعت] (%{host_url}) یا [خواندن
     چگونه به راهنمای] (%{howto_url})'
   tutorial_dance2019_name: حزب رقص
@@ -4485,12 +4530,12 @@ af:
   tutorial_flap_longdescription: استفاده از کشیدن و رها کردن برنامه نویسی را به بازی
     شل و ول پرنده خود را، و سفارشی کردن آن را به نگاه های مختلف (شل و ول کوسه، شل
     و ول سانتا، هر چیز دیگری). اضافه کردن بازی به گوشی خود را در یک کلیک.
-  tutorial_galaxy_longdescription: "Grab your Android smartphone and explore distant
-    galaxies! At the #GalaxyGameJam you can create your very own Android app. Design
-    it with our free Pocket Code app and become part of our mission to outer space.
-    With Pocket Code we aim to inspire kids, teenagers, and young adults to create
-    their very own games, animations, and interactive stories directly on their smartphones.
-    \n"
+  tutorial_galaxy_longdescription: "چنگ زدن به گوشی های هوشمند آندروید خود را و کشف
+    کهکشان های دور! در #GalaxyGameJam شما می توانید برنامه آندروید خود را بسیار خود
+    را ایجاد کنید. طراحی آن را با برنامه رایگان Pocket Code ما و تبدیل شدن به بخشی
+    از ماموریت ما به فضای بیرونی. با کد پاکت پی سی هدف ما الهام بخشیدن به بچه ها,
+    نوجوانان, و بزرگسالان جوان برای ایجاد بازی های بسیار خود را, انیمیشن, و داستان
+    های تعاملی به طور مستقیم بر روی گوشی های هوشمند خود. \n"
   tutorial_inf_longdescription: استفاده از آزمایشگاه بازی برای ایجاد یک داستان یا
     بازی با بازی شخصیت های دیزنی بی نهایت.
   tutorial_tynkersol_longdescription: یک مدل تعاملی از منظومه شمسی ما را برنامه ریزی
@@ -4697,13 +4742,12 @@ af:
     موانع، برنامه ریزی کنید. سپس شما آماده برای ایجاد برنامه هایی برای کنترل هواپیماهای
     بدون سرنشین و روبات های واقعی هستید. نیاز به یک تبلت iPad یا Android و یک اسباب
     بازی پشتیبانی شده دارد.
-  tutorial_carla_longdescription: '"Programming with Carla" is a series of short activities
-    that guide students through building a simple chatbot, whilst learning about core
-    concepts like variables and conditionals. The activities have been carefully designed
-    to address common misconceptions that new programmers have about these topics
-    by offering many opportunities for practice, as well as targeted hints and feedback.
-
-    '
+  tutorial_carla_longdescription: "«برنامه نویسی با کارلا» مجموعه ای از فعالیت های
+    کوتاه است که دانش آموزان را از طریق ساخت یک chatbot ساده هدایت می کند، در حالی
+    که یادگیری در مورد مفاهیم اصلی مانند متغیرها و شرایط. این فعالیت ها با دقت طراحی
+    شده اند تا به تصورات غلط رایج که برنامه نویسان جدید در مورد این موضوعات با ارائه
+    فرصت های زیادی برای تمرین، و همچنین نکات و بازخورد های هدفمند ارائه می دهند، طراحی
+    شده اند.\n"
   tutorial_zulama_longdescription: در این فعالیت شما یاد خواهید گرفت که کد جاوا اسکریپت
     را از طریق یک بازی اکشن بازیگوش ویرایش کنید و مفاهیم علوم رایانه ای مانند متغیرها
     و توابع را مدیریت کنید. ایجاد بازی خود را در گودال ماسهبازی با remixing و گسترش
@@ -4740,9 +4784,9 @@ af:
     در حالی که ساخت یک دنیای کوچک بر روی صفحه نمایش خود را برای روبات های شبیه سازی
     شده و موجودات سفارشی. هیچ تجربه برنامه نویسی قبلی لازم نیست. موضوعات تحت پوشش
     شامل اشیاء، روش ها، پارامترها و گرافیک ساده است.
-  tutorial_roboba_longdescription: "RoboBlockly is designed for beginners to learn
-    math with robots in Blockly. The Algebra 1 activities are self-guided. \nRoboBlockly
-    prepares students to be ready to program in C/C++.\n"
+  tutorial_roboba_longdescription: "RoboBlockly برای مبتدیان طراحی شده است تا ریاضی
+    را با روبات ها در Blockly یاد بگیرند. فعالیت های جبر 1 خود هدایت می شوند. \nRoboBlockly
+    آماده دانش آموزان به آماده به برنامه در C/C++ می شود.\n"
   tutorial_knodsnake_longdescription: 'یاد بگیرید برای ایجاد یک بازی مار در جاوا اسکریپت! '
   tutorial_soccharater_longdescription: کد شخصیت پیکسل بسیار خود را! استفاده از HTML
     برای ساخت شخصیت خود را، CSS به آن سبک، و جاوا اسکریپت به تحریک و تشجیع فرد پیکسل
@@ -4788,18 +4832,20 @@ af:
     اند. این کمک می کند تا آنها را انجام پروژه برنامه نویسی که در آن دانش آموز ایجاد
     یک وب سایت اساسی در تنها چند مرحله. پس از دانش آموزان انجام فعالیت Codemoji دانش
     آموزان راه رفتن دور با مهارت های برنامه نویسی واقعی است.
-  tutorial_robobii_longdescription: "RoboBlockly is designed for beginners to learn
-    coding with robots in Blockly. The coding activities are self-guided with tutorial
-    videos. \nRoboBlockly prepares students to be ready to program in C/C++.\n"
-  tutorial_robobm_longdescription: "RoboBlockly is designed for beginners to learn
-    math with robots in Blockly. The math activities are self-guided. \nRoboBlockly
-    prepares students to be ready to program in C/C++.\n"
-  tutorial_codingrobots_longdescription: "RoboBlockly is designed for beginners to
-    learn coding and math with robots. The activities are student-guided with tutorial
-    videos. \nRoboBlockly prepares students to be ready to program in C/C++.\n"
-  tutorial_robob_longdescription: "RoboBlockly is designed for beginners to learn
-    robotics with coding in Blockly. The robotics activities are self-guided with
-    tutorial videos. \nRoboBlockly prepares students to be ready to program in C/C++.\n"
+  tutorial_robobii_longdescription: "RoboBlockly برای مبتدیان طراحی شده است تا کد
+    نویسی با روبات ها را در Blockly یاد بگیرند. فعالیت های برنامه نویسی با فیلم های
+    آموزشی خود هدایت می شوند. \nRoboBlockly آماده دانش آموزان به آماده به برنامه در
+    C/C++ می شود.\n"
+  tutorial_robobm_longdescription: "RoboBlockly برای مبتدیان طراحی شده است تا ریاضی
+    را با روبات ها در Blockly یاد بگیرند. فعالیت های ریاضی خود هدایت هستند. \nRoboBlockly
+    آماده دانش آموزان به آماده به برنامه در C/C++ می شود.\n"
+  tutorial_codingrobots_longdescription: "RoboBlockly برای مبتدیان طراحی شده است تا
+    برنامه نویسی و ریاضی را با روبات ها یاد بگیرند. فعالیت های دانش آموز هدایت با
+    فیلم آموزش. \nRoboBlockly آماده دانش آموزان به آماده به برنامه در C/C++ می شود.\n"
+  tutorial_robob_longdescription: "RoboBlockly برای مبتدیان طراحی شده است تا رباتیک
+    را با کد نویسی در Blockly یاد بگیرند. فعالیت های رباتیک با ویدیوهای آموزشی خود
+    هدایت می شوند. \nRoboBlockly آماده دانش آموزان به آماده به برنامه در C/C++ می
+    شود.\n"
   tutorial_coders_longdescription: "این بازی پازل گام به گام مقدمه ای آسان برای برنامه
     نویسی ربات فراهم می کند. \n\nهدف این است که برنده یک مسابقه کشتی فضایی در برابر
     بازیکنان دیگر.\n\nشروع بازی ساده است و فقط به چند خط کد نیاز دارد تا یک کشتی در
@@ -4990,12 +5036,12 @@ af:
   tutorial_bbcphys_longdescription: طرح درس مبتنی بر استاندارد برای نمرات K-5. بچه
     های خود را به آزمایشگاه کامپیوتر با برگه های کار در دست بگیرید و برنامه های مربوط
     به فیزیک را بسازید.
-  tutorial_bitsbox_longdescription: 'Follow the prompts to code five fun mini-apps
-    using real, typed Javascript. From blowing up pie in ''Food Fight'' to flushing
-    a notebook down a black hole in ''So Long, Homework!'', each app is designed to
-    delight kids while illustrating variables, methods, and more. These apps are also
-    completely open-ended; kids can use them as a starting point for their own app
-    creations. Beginners welcome!
+  tutorial_bitsbox_longdescription: 'دنبال دهید به کد پنج سرگرم کننده مینی برنامه
+    با استفاده از واقعی, تایپ جاوا اسکریپت. از منفجر کردن پای در «مبارزه غذایی» به
+    گرگرفتگی یک نوت بوک پایین یک سیاه چاله در ''خیلی طولانی, مشق شب! '' ، هر برنامه
+    طراحی شده است برای لذت بچه ها در حالی که نشان دادن متغیرها، روش ها، و بیشتر. این
+    برنامه ها نیز کاملا باز هستند. بچه ها می توانند از آنها به عنوان نقطه شروع برای
+    خلاقیت برنامه خود استفاده کنند. مبتدی ها خوش آمدید!
 
     '
   tutorial_tlcemo_longdescription: دانش آموزان یک ربات 2D ساخته شده از کارت را برای
@@ -5014,13 +5060,12 @@ af:
   tutorial_grok_longdescription: 'استفاده از بلوک های کشیدن و رها کردن یا زبان مبتنی
     بر متن پایتون برای رسم پرچم از سراسر جهان، ایجاد دانه های برف فوق العاده، و یا
     ساخت یک chatbot به نام «الیزا». '
-  tutorial_ijournalist_longdescription: "This teacher facilitated lesson teaches Computer
-    Science and Language Arts.  Pupils begin to develop a journalistic style that
-    considers the interest of the reader and presentation of information for an online
-    news story.  Pupils use basic HTML and CSS to create and present an online news
-    story about a fictional school robbery.\n\nIt sets computer science within a meaningful
-    context enabling children to understand the value of computer science in other
-    subject areas. \n\n"
+  tutorial_ijournalist_longdescription: "این معلم تسهیل درس علوم کامپیوتر و زبان هنر
+    می آموزد. دانش آموزان شروع به توسعه یک سبک روزنامه نگاری می کنند که علاقه خواننده
+    و ارائه اطلاعات را برای یک داستان خبری آنلاین در نظر می گیرد. دانش آموزان از HTML
+    و CSS پایه برای ایجاد و ارائه یک خبر آنلاین در مورد سرقت مدرسه داستانی استفاده
+    می کنند.\n\nاین مجموعه علوم کامپیوتر در یک زمینه معنی دار قادر می سازد کودکان
+    به درک ارزش علوم کامپیوتر در زمینه های دیگر موضوع. \n\n"
   tutorial_bbcmusic_longdescription: طرح درس مبتنی بر استاندارد برای نمرات K-5. بچه
     های خود را به آزمایشگاه کامپیوتر با برگه های کار در دست بگیرید و برنامه های مربوط
     به موسیقی را بسازید.
@@ -5162,11 +5207,10 @@ af:
     تعامل با کامپیوتر انسان (HCI) و به ویژه به همین دلیل بسیاری از ابزارهای arehearer
     به استفاده از نیاز می شود استفاده می شود. طراحی تفاوت ایجاد می کند و مهم است که
     رابط ها برای بررسی آنها آسان برای استفاده مورد ارزیابی قرار گیرند.
-  tutorial_imathematician_longdescription: "This teacher led activity provides the
-    opportunity for pupils to use a cross curricular approach to computer science
-    and mathematics.  \n\nPupils will create a computer program to solve a variation
-    of a famous problem in a branch of Mathematics (Game Theory), called The Prisoner's
-    Dilemma.\n"
+  tutorial_imathematician_longdescription: "این معلم منجر فعالیت فرصتی برای دانش آموزان
+    به استفاده از یک رویکرد متقابل برنامه درسی به علوم کامپیوتر و ریاضیات فراهم می
+    کند.  \n\nدانش آموزان یک برنامه کامپیوتری برای حل یک تنوع از یک مشکل معروف در
+    شاخه ای از ریاضیات (نظریه بازی)، به نام معضل زندانی ایجاد کنید.\n"
   tutorial_tlcmagic_longdescription: 'در بررسی چگونگی کار سحر و جادو، شما در مورد
     تفکر محاسباتی یاد می گیرید: به ویژه اهمیت ارزیابی به تفکر الگوریتمی. شما هر دو
     آزمایش و تجزیه و تحلیل خطر را کشف می کنید. ترفند سحر و جادو نشان می دهد که چگونه
@@ -5305,11 +5349,11 @@ af:
     از طریق این جهان کمیته مبارزه با سانسور.
   tutorial_minecraft-2016_longdescription: ساخت یک بازی کمیته مبارزه با سانسور. ایجاد
     نسخه های خود را از مرغ، گوسفند، Creepers، زامبی ها و بیشتر.
-  tutorial_thinkersmith-es_longdescription: Mediante el uso de un "Vocabulario Robot"
-    predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar
-    a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento
-    ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones
-    as&iacute; como la valiosa habilidad de depuraci&oacute;n.
+  tutorial_thinkersmith-es_longdescription: استفاده از یک «واژگان ربات» به طور پیش
+    فرض, دانش آموزان از&aacute;N به عنوان یک راهنمای از مد از Llevar از cabo tareas
+    spec ficas است که در آن بحث قبلی است.&iacute;این بخش&ntilde;یک لس استودیانتس لا
+    conexi N انتر بازدید کنندگان&iacute;mbolos y acciones به عنوان به عنوان به عنوان
+    لا ولیسا محل د depuraci&oacute;N.&iacute;&oacute;
   tutorial_pixie_longdescription: ساعت آموزش کد با Pixie
   tutorial_play_longdescription: ایجاد یک داستان و یا ایجاد یک بازی با آزمایشگاه بازی!
     حیوانات، دزدان دریایی، زامبی، نینجاها، و بسیاری از شخصیت های بیشتر حرکت می کند،
@@ -12207,12 +12251,12 @@ af:
   tutorial_googlename _longdescription: انتخاب یک نام و آوردن حروف کلمه به زندگی با
     استفاده از کد. یک نام مستعار، نام حیوان خانگی، یک حیوان، یک ورزش، یک مکان یا یک
     سرگرمی را انتخاب کنید.
-  tutorial_carnegiezillah_longdescription: Zillah City is thriving, and music is in
-    the air. Rumor has it, the famed Gargantua bot is online and sending the last
-    Toxibots to trash the city block by block…. Grab your cobot hoverboard and get
-    ready to groove, move, and finish off what you started! Players program their
-    cobot hoverbots to change lanes, avoid obstacles, and take out many Toxibots in
-    this rhythm-styled game.
+  tutorial_carnegiezillah_longdescription: شهر زیلا در حال رونق است و موسیقی در هوا
+    است. شايعه شده که ربات معروف گارگانتوا آنلاين شده و آخرين «توکسيبات «رو ميفرسته
+    که شهر رو به بلوک به هم بريزن…چنگ زدن به هاوربرد cobot خود را و آماده به شیار،
+    حرکت، و پایان کردن آنچه شما آغاز شده! بازیکنان برنامه hoverbots cobot خود را به
+    تغییر خطوط، اجتناب از موانع، و از بین بردن بسیاری از Toxibots در این بازی ریتم
+    مدل دهید.
   tutorial_nasachspacejam_longdescription: ایجاد یک منظومه شمسی است که واقعا سنگ!
     یادگیری در مورد موسیقی، نجوم، و برنامه نویسی در این فعالیت خود هدایت (بدون نیاز
     به تجربه برنامه نویسی). سیارات برنامه را به موسیقی، ایجاد سیستم خورشیدی موسیقی
