@@ -50,7 +50,7 @@ describe I18n::Resources::Apps::Animations::SyncOut do
 
         it 'sync-out the file' do
           spritelab_manifest_builder.expects(:initial_animation_metadata).once
-          I18nScriptUtils.expects(:delete_empty_crowdin_locale_dir).with(crowdin_locale).once
+          I18nScriptUtils.expects(:remove_empty_dir).with(CDO.dir('i18n/locales', crowdin_locale)).once
           I18nScriptUtils.expects(:to_js_locale).with(i18n_locale).once.returns('expected_js_locale')
           spritelab_manifest_builder.expects(:upload_localized_manifest).with('expected_js_locale', spritelab_file_content).once
 
@@ -70,7 +70,7 @@ describe I18n::Resources::Apps::Animations::SyncOut do
 
         it 'does not sync-out the file' do
           spritelab_manifest_builder.expects(:initial_animation_metadata).once
-          I18nScriptUtils.expects(:delete_empty_crowdin_locale_dir).with(crowdin_locale).once
+          I18nScriptUtils.expects(:remove_empty_dir).with(CDO.dir('i18n/locales', crowdin_locale)).once
           I18nScriptUtils.expects(:to_js_locale).with(i18n_locale).never.returns('expected_js_locale')
           spritelab_manifest_builder.expects(:upload_localized_manifest).with('expected_js_locale', spritelab_file_content).never
 
@@ -88,7 +88,7 @@ describe I18n::Resources::Apps::Animations::SyncOut do
     context 'when Crowdin locale file does not exist' do
       it 'skips the locale sync-out' do
         spritelab_manifest_builder.expects(:initial_animation_metadata).never
-        I18nScriptUtils.expects(:delete_empty_crowdin_locale_dir).with(crowdin_locale).never
+        I18nScriptUtils.expects(:remove_empty_dir).with(CDO.dir('i18n/locales', crowdin_locale)).never
         I18nScriptUtils.expects(:to_js_locale).with(i18n_locale).never.returns('expected_js_locale')
         spritelab_manifest_builder.expects(:upload_localized_manifest).with('expected_js_locale', spritelab_file_content).never
 
