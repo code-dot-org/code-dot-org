@@ -1,3 +1,6 @@
+@import "color.scss";
+@import "font.scss";
+
 .reportAbusePopUp {
   width: 410px !important;
 }
@@ -13,17 +16,17 @@
 }
 
 .cautionButton:hover {
-  background-color: #fbe0dd;
+  background-color: $product_negative_light;
   box-shadow: none;
 }
 
 .cautionIcon {
-  color: #7f8286;
-  font-size: 16;
+  color: $neutral_dark60;
+  font-size: 1rem;
 }
 
 .cautionButton:hover .cautionIcon {
-  color: #e5311a;
+  color: $product_negative_default;
 }
 
 .xButton {
@@ -34,48 +37,46 @@
   background: none;
   width: 24px;
   height: 24px;
-  font-size: 16px;
+  font-size: 1rem;
   padding: 5px;
 }
 
 .xButton:hover {
   box-shadow: none;
+  outline: none;
 }
 
-$color-neutral-light: #f7f8fa;
-$color-neutral-dark: #292f36;
-
 .card {
-  border: 1px solid #bbb;
+  border: 1px solid $border_gray;
   border-radius: 2px;
   width: 214px;
-  background-color: $color-neutral-light;
+  background-color: $neutral-light;
 }
 
 .lastEdit {
   padding-left: 15px;
   padding-right: 10px;
   padding-bottom: 10px;
-  font-size: 11px;
-  font-family: Gotham, sans-serif;
-  color: $color-neutral-dark;
+  font-size: 0.6875rem;
+  font-family: $gotham-regular;
+  color: $neutral-dark;
 }
 
 .ageRange {
   padding-left: 10px;
   padding-top: 5px;
-  font-size: 11px;
-  font-family: Gotham, sans-serif;
-  color: $color-neutral-dark;
+  font-size: 0.6875rem;
+  font-family: $gotham-regular;
+  color: $neutral-dark;
 }
 
 .firstInitial {
   padding-top: 5px;
-  font-size: 11px;
+  font-size: 0.6875rem;
   padding-left: 15px;
   padding-right: 15px;
-  font-family: Gotham, sans-serif;
-  color: $color-neutral-dark;
+  font-family: $gotham-regular;
+  color: $neutral-dark;
 }
 
 .image {
@@ -85,11 +86,11 @@ $color-neutral-dark: #292f36;
 }
 
 .bold {
-  font-family: 'Gotham 5r', sans-serif;
+  font-family: $gotham-bold;
 }
 
 .popUpLines {
-  border-color: #d4d5d7;
+  border-color: $neutral_dark20;
   width: 400px;
   height: 1px;
   margin-top: 10px;
@@ -99,9 +100,9 @@ $color-neutral-dark: #292f36;
 }
 
 .popUpBody {
-  font-family: 'Gotham 4r', sans-serif;
-  color: #292f36;
-  font-size: 14px;
+  font-family: $gotham-regular;
+  color: $darkest_gray;
+  font-size: 0.875rem;
 }
 
 .submitConfirmation {
@@ -121,19 +122,6 @@ $color-neutral-dark: #292f36;
   align-items: center;
 }
 
-.checkboxLabel {
-  display: flex;
-  align-items: center;
-  margin-top: 5px;
-  margin-bottom: 5px;
-}
-
-.checkboxInput {
-  margin-right: 10px;
-  margin-top: 0;
-  accent-color: #0093A4;
-}
-
 .popUpButtonHolder {
   display: flex;
   justify-content: flex-end;
@@ -141,7 +129,7 @@ $color-neutral-dark: #292f36;
 
 .reported {
   margin: auto;
-  color: #e5311a;
-  font-family: 'Gotham 5r', sans-serif;
-  font-size: 12;
+  color: $product_negative_default;
+  font-family: $gotham-bold;
+  font-size: 0.75rem;
 }
