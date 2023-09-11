@@ -1,8 +1,8 @@
 class RubricsController < ApplicationController
   include Rails.application.routes.url_helpers
 
-  before_action :require_levelbuilder_mode_or_test_env
-  load_and_authorize_resource
+  before_action :require_levelbuilder_mode_or_test_env, except: [:submit_evaluations]
+  load_and_authorize_resource except: [:submit_evaluations]
 
   # GET /rubrics/:rubric_id/edit
   def edit
@@ -38,6 +38,20 @@ class RubricsController < ApplicationController
       redirect_to edit_rubric_path(@rubric.id), notice: 'Rubric was successfully updated.'
     else
       render :edit
+    end
+  end
+
+  # POST /rubrics/:id/submit_evaluations
+  def submit_evaluations
+    return head :forbidden unless current_user&.teacher?
+    permitted_params = params.permit(:id, :student_id)
+    learning_goal_ids = LearningGoal.where(rubric_id: permitted_params[:id]).pluck(:id)
+    learning_goal_evaluations = LearningGoalEvaluation.where(user_id: permitted_params[:student_id], learning_goal_id: learning_goal_ids, teacher_id: current_user.id)
+    submitted_at = Time.now
+    if learning_goal_evaluations.update_all(submitted_at: submitted_at)
+      render json: {submittedAt: submitted_at}
+    else
+      return head :bad_request
     end
   end
 
