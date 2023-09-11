@@ -38,7 +38,7 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>ড্যান্স পার্টি</strong></h3>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px">ড্যান্স পার্টি</h3>
         <div class="smalltext" style="text-align: left; margin-bottom: 10px">কোড একটি ড্যান্স পার্টি বন্ধু এবং পরিবারের সাথে ভাগ করার জন্য। বেয়ন্স, হ্যারি স্টাইলস, লিজো, লিল নাস এক্স, সেলিনা গোমেজ, ডিজনির “এনক্যান্টো” এবং আরও অনেক কিছু থেকে সঙ্গীত সমন্বিত!</div>
         <a class="linktag" id="danceparty" href="/dance" target="_blank"><button>কার্যকলাপ চেষ্টা করুন</button></a>
     </span>
@@ -53,7 +53,7 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>কোড এর Minecraft ঘন্টা</strong></h3>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px">কোড Minecraft ঘন্টা</h3>
         <div class="smalltext" style="text-align: left; margin-bottom: 10px">Minecraft একটি ব্র্যান্ড নতুন কার্যকলাপ সঙ্গে কোড ঘন্টা জন্য ফিরে! কোড সঙ্গে Minecraft মাধ্যমে যাত্রা।</div>
         <br>
         <a class="linktag" id="minecraft" href="/minecraft" target="_blank"><button>কার্যকলাপ চেষ্টা করুন</button></a>
@@ -69,8 +69,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        মহাসাগরের জন্য <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>এআই</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">এআই সহায়তা এআই। ট্র্যাশ সনাক্ত করার জন্য এটি প্রশিক্ষণ দ্বারা মহাসাগরকে পরিষ্কার করুন! প্রশিক্ষণ তথ্য এবং পক্ষপাত সম্পর্কে জানুন, এবং কিভাবে এআই বিশ্বের সমস্যার সমাধান করতে পারেন। দেখুন <a class="linktag" id="oceans-lesson" href="https://curriculum.code.org/hoc/plugged/9/" target="_blank">পাঠ পরিকল্পনা</a>।</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px">মহাসাগরের জন্য এআই এআই</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">সাহায্য করুন। ট্র্যাশ সনাক্ত করার জন্য এটি প্রশিক্ষণ দিয়ে মহাসাগরকে পরিষ্কার করুন! প্রশিক্ষণ তথ্য এবং পক্ষপাত সম্পর্কে জানুন, এবং কিভাবে এআই বিশ্বের সমস্যার সমাধান করতে পারেন। দেখুন <a class="linktag" id="oceans-lesson" href="https://curriculum.code.org/hoc/plugged/9/" target="_blank">পাঠ পরিকল্পনা</a>।</div>
         <a class="linktag" id="aiforoceans" href="https://studio.code.org/s/oceans/lessons/1/levels/1" target="_blank"><button>কার্যকলাপ চেষ্টা করুন</button></a>
     </span>
   </div>
@@ -96,9 +96,9 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>How Computers Work</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">With an introduction by Bill Gates, this series of six short videos explains what makes a computer a computer and how computer circuits work.</div>
-        <a class="linktag" id="howcomputers" href="https://www.youtube.com/watch?v=OAx_6-wdslM&list=PLzdnOPI1iJNcsRwJhvksEo1tJqjIqWbN-" target="_blank"><button>Watch the video series</button></a>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px">কম্পিউটার কিভাবে কাজ করে বিল</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">গেটসের একটি প্রবর্তনের মাধ্যমে ছয়টি ছোট ভিডিওর এই সিরিজটি ব্যাখ্যা করে যে কম্পিউটারকে কম্পিউটার কি করে এবং কিভাবে কম্পিউটার সার্কিট কাজ করে।</div>
+        <a class="linktag" id="howcomputers" href="https://www.youtube.com/watch?v=OAx_6-wdslM&list=PLzdnOPI1iJNcsRwJhvksEo1tJqjIqWbN-" target="_blank"><button>ভিডিও সিরিজ দেখুন</button></a>
     </span>
   </div>
 </div>
@@ -111,7 +111,7 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>কিভাবে ইন্টারনেট কাজ করে</strong></h3>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px">কিভাবে ইন্টারনেট কাজ করে</h3>
         <div class="smalltext" style="text-align: left; margin-bottom: 10px">আটটি ছোট ভিডিওর এই সিরিজে, আপনি শিখবেন কিভাবে ইন্টারনেট উদ্ভাবিত হয়েছিল, এইচটিএমএল কী এবং কীভাবে Google এর মতো সার্চ ইঞ্জিন কাজ করে।</div>
         <a class="linktag" id="howinternet" href="https://www.youtube.com/watch?v=Dxcc6ycZ73M&list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7-" target="_blank"><button>ভিডিও সিরিজ দেখুন</button></a>
     </span>
@@ -126,8 +126,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>এআই কিভাবে কাজ করে</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">এআই কিভাবে কাজ করে এবং কেন এটি ছোট ভিডিওগুলির এই সিরিজের সাথে গুরুত্বপূর্ণ তা জানুন। মাইক্রোসফট প্রধান নির্বাহী কর্মকর্তা সত্য Nadella এবং বিশেষজ্ঞদের একটি বিভিন্ন কাস্ট সমন্বিত।</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px">কিভাবে এআই কাজ করে এআই কিভাবে কাজ করে এবং কেন এটি সংক্ষিপ্ত ভিডিওগুলির এই সিরিজের সাথে গুরুত্বপূর্ণ তা সম্পর্কে</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">জানুন। মাইক্রোসফট প্রধান নির্বাহী কর্মকর্তা সত্য Nadella এবং বিশেষজ্ঞদের একটি বিভিন্ন কাস্ট সমন্বিত।</div>
         <a class="linktag" id="ai-videos" href="/ai#ai-videos" target="_blank"><button>ভিডিও সিরিজ দেখুন</button></a>
     </span>
   </div>
@@ -136,7 +136,7 @@ theme: responsive
 
 <div style="clear: both"></div>
 
-<p>View more videos, including short inspirational videos featuring celebrities like Steph Curry and Shakira, <a class="linktag" id="all-videos" href="https://code.org/educate/resources/videos" target="_blank">here</a>.</p>
+<p>স্টেফ কুরি এবং শাকিরার মতো সেলিব্রিটিদের সমন্বিত স্বল্প অনুপ্রেরণামূলক ভিডিও সহ আরও ভিডিও দেখুন। <a class="linktag" id="all-videos" href="https://code.org/educate/resources/videos" target="_blank"></a></p>
 <br>
 <p><a href="#top">[উপরে ফিরে যাও]</a></p>
 
@@ -159,13 +159,13 @@ theme: responsive
 
 <div class="col-50" style="padding-right: 20px; padding-bottom:10px">
 
-<a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express-2019" target="_blank"><img src="/images/curriculum/course-tile-pre-reader-express.png" style="width: 100%" alt="প্রি-রিডার এক্সপ্রেস কোর্স"></a><br><a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express-2019" target="_blank">Express Course for pre-readers</a>
+<a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express-2019" target="_blank"><img src="/images/curriculum/course-tile-pre-reader-express.png" style="width: 100%" alt="প্রি-রিডার এক্সপ্রেস কোর্স"></a><br><a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express-2019" target="_blank">প্রাক পাঠকদের জন্য এক্সপ্রেস কোর্স</a>
 
 </div>
-<div style="clear: both"></div>
+<div style="clear: both; margin-bottom: 2rem"></div>
 
 <h3>গেম ল্যাব এবং অ্যাপ ল্যাবের স্ব-গতিসম্পন্ন ভূমিকা</h3>
-<p>আমাদের সিএস আবিষ্কার এবং সিএস নীতিমালা কোর্স থেকে অভিযোজিত, এই সংক্ষিপ্ত, স্ব-বিন্যস্ত মডিউল সমস্ত প্রোগ্রামিং ভাষা এবং সরঞ্জাম স্প্যান যে ধারণা শিখতে একটি দুর্দান্ত উপায়। <i>Requires Code.org account to access</i>.</p>
+<p>আমাদের সিএস আবিষ্কার এবং সিএস নীতিমালা কোর্স থেকে অভিযোজিত, এই সংক্ষিপ্ত, স্ব-বিন্যস্ত মডিউল সমস্ত প্রোগ্রামিং ভাষা এবং সরঞ্জাম স্প্যান যে ধারণা শিখতে একটি দুর্দান্ত উপায়। <i>অ্যাক্সেস</i>করতে Code.org অ্যাকাউন্ট প্রয়োজন।</p>
 
 <br>
 
@@ -176,8 +176,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>গেম ল্যাবের ভূমিকা</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">গেম ল্যাবের প্রোগ্রাম অ্যানিমেশন, ইন্টারেক্টিভ আর্ট এবং গেমস। সহজ আকার দিয়ে শুরু করুন এবং আরো অত্যাধুনিক স্প্রিট-ভিত্তিক অ্যানিমেশন এবং গেমগুলি তৈরি করুন।</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px">গেম ল্যাব</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">প্রোগ্রাম অ্যানিমেশন, ইন্টারেক্টিভ শিল্প, এবং গেম ল্যাব গেম ভূমিকা। সহজ আকার দিয়ে শুরু করুন এবং আরো অত্যাধুনিক স্প্রিট-ভিত্তিক অ্যানিমেশন এবং গেমগুলি তৈরি করুন।</div>
         <a class="linktag" id="gamelab-intro" href="https://studio.code.org/s/csd3-virtual" target="_blank"><button>মডিউল চেষ্টা করুন</button></a>
     </span>
   </div>
@@ -191,8 +191,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>অ্যাপ ল্যাবে কচ্ছপ প্রোগ্রামিং</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">ভার্চুয়াল “কচ্ছপ” ব্যবহার করে আকার এবং ছবি আঁকতে সহজ জাভাস্ক্রিপ্ট কমান্ড ব্যবহার করুন। ডিজাইন এবং প্রোগ্রাম আপনার নিজস্ব ডিজিটাল দৃশ্য!</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px">অ্যাপ ল্যাবে কচ্ছপ প্রোগ্রামিং ভার্চুয়াল “কচ্ছপ”</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">ব্যবহার করে আকার এবং ছবি আঁকতে সহজ জাভাস্ক্রিপ্ট কমান্ড ব্যবহার করুন। ডিজাইন এবং প্রোগ্রাম আপনার নিজস্ব ডিজিটাল দৃশ্য!</div>
         <a class="linktag" id="turtle-applab" href="https://studio.code.org/s/csp3-virtual" target="_blank"><button>মডিউল চেষ্টা করুন</button></a>
     </span>
   </div>
@@ -206,8 +206,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>অ্যাপ ল্যাবের ইভেন্ট-ড্রাইভেন প্রোগ্রামিং</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">ক্লিক এবং কী প্রেসে সাড়া দেয় এমন অ্যাপ্লিকেশনগুলি ডিজাইন করা শিখুন। ওয়েবে বাস যে সহজ অ্যাপ্লিকেশন (অ্যাপ্লিকেশন) একটি সিরিজ তৈরি করুন!</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px">অ্যাপ ল্যাবে ইভেন্ট-চালিত প্রোগ্রামিং ক্লিক এবং কী প্রেসে সাড়া দেয় এমন অ্যাপ্লিকেশনগুলি ডিজাইন করতে</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">শিখুন। ওয়েবে বাস যে সহজ অ্যাপ্লিকেশন (অ্যাপ্লিকেশন) একটি সিরিজ তৈরি করুন!</div>
         <a class="linktag" id="events-applab" href="https://studio.code.org/s/csp5-virtual" target="_blank"><button>মডিউল চেষ্টা করুন</button></a>
     </span>
   </div>
@@ -224,13 +224,13 @@ theme: responsive
 
 <a id="labs"></a>
 <h2>কিছু তৈরি করো!</h2>
-<p>প্রথম, অনুপ্রাণিত হন! View our <a href="https://studio.code.org/projects" target="_blank">project gallery</a> — play some of the games or try out some of the apps that students have created. আপনি প্রকল্পটি আপনার নিজের তৈরি করতে “রিমিক্স” করতে পারেন, অথবা অ্যাপ ল্যাব, গেম ল্যাব বা ওয়েব ল্যাবে নতুন কিছু তৈরি করতে পারেন।</p>
+<p>প্রথম, অনুপ্রাণিত হন! আমাদের <a href="https://studio.code.org/projects" target="_blank">প্রকল্প গ্যালারী দেখুন</a> - কিছু গেম খেলুন বা শিক্ষার্থীদের তৈরি করা কিছু অ্যাপ চেষ্টা করুন। আপনি প্রকল্পটি আপনার নিজের তৈরি করতে “রিমিক্স” করতে পারেন, অথবা অ্যাপ ল্যাব, গেম ল্যাব বা ওয়েব ল্যাবে নতুন কিছু তৈরি করতে পারেন।</p>
 
 <br>
 
 <div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
   <div style="width: 87%; float: left">
-    <a class="linktag" id="applab" href="https://code.org/educate/applab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none"><strong>অ্যাপ ল্যাব</strong></h3></a>
+    <a class="linktag" id="applab" href="https://code.org/educate/applab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none">অ্যাপ ল্যাব</h3></a>
     <p style="color:#ffffff">অ্যাপ ল্যাব একটি প্রোগ্রামিং পরিবেশ যেখানে আপনি সহজ অ্যাপ তৈরি করতে পারেন। একটি অ্যাপ ডিজাইন করুন, ব্লক সহ কোড বা জাভাস্ক্রিপ্ট এটি কাজ করতে, তারপরে সেকেন্ডের মধ্যে আপনার অ্যাপ্লিকেশন শেয়ার করুন।</p>
     <a class="linktag" id="applab" href="https://code.org/educate/applab" target="_blank"><button style="background-color:#e7e8ea; border-color:#e7e8ea; color:#696969">একটি অ্যাপ তৈরি করুন</button></a>
   </div>
@@ -239,7 +239,7 @@ theme: responsive
 
 <div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
   <div style="width: 87%; float: left">
-    <a class="linktag" id="gamelab" href="https://code.org/educate/gamelab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none"><strong>গেম ল্যাব</strong></h3></a>
+    <a class="linktag" id="gamelab" href="https://code.org/educate/gamelab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none">খেলা ল্যাব</h3></a>
     <p style="color:#ffffff">গেম ল্যাব একটি প্রোগ্রামিং পরিবেশ যেখানে আপনি সহজ অ্যানিমেশন এবং গেম তৈরি করতে পারেন বস্তু এবং অক্ষর যা একে অপরের সাথে ইন্টারঅ্যাক্ট করে।</p>
     <br>
     <a class="linktag" id="gamelab" href="https://code.org/educate/gamelab" target="_blank"><button style="background-color:#e7e8ea; border-color:#e7e8ea; color:#696969">একটি খেলা তৈরি করুন</button></a>
@@ -249,7 +249,7 @@ theme: responsive
 
 <div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
   <div style="width: 87%; float: left">
-    <a class="linktag" id="weblab" href="https://code.org/educate/weblab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none"><strong>ওয়েব ল্যাব</strong></h3></a>
+    <a class="linktag" id="weblab" href="https://code.org/educate/weblab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none">ওয়েব ল্যাব</h3></a>
     <p style="color:#ffffff">ওয়েব ল্যাব একটি প্রোগ্রামিং পরিবেশ যেখানে আপনি এইচটিএমএল এবং সিএসএস ব্যবহার করে সহজ ওয়েব পেজ তৈরি করতে পারেন। আপনার ওয়েব পেজ ডিজাইন করুন এবং কয়েক সেকেন্ডের মধ্যে আপনার সাইট শেয়ার করুন।</p>
     <br>
     <a class="linktag" id="weblab" href="https://code.org/educate/weblab" target="_blank"><button style="background-color:#e7e8ea; border-color:#e7e8ea; color:#696969">একটি ওয়েব পেজ তৈরি করুন</button></a>
@@ -286,16 +286,12 @@ theme: responsive
 
 <h2>বাসায় কোন কম্পিউটার নেই? আমাদের অংশীদারদের কাছ থেকে এই অ্যাপ ব্যবহার করে আপনার ফোনে CS চেষ্টা করুন</h2>
 
-<div class="col-33" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><img src="images/tutorials/new/boxisland.jpg" style="width: 100%" alt="বক্স দ্বীপ"></a><br><a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><h3 style="color:#7665a0"><strong>বক্স দ্বীপ</strong></h3></a>একটি কমনীয় মোবাইল কোডিং গেম যা শিক্ষার্থীদের একটি উত্তেজনাপূর্ণ সাহসিক কাজ করে, কোডিংয়ের মৌলিক বিষয়গুলি শেখার সময়, অ্যালগরিদম, প্যাটার্ন স্বীকৃতি, সিকোয়েন্স, লুপ এবং শর্তাবলী। <i>(for all ages)</i>
+<div class="col-50" style="padding-right: 30px; padding-bottom:40px">
+  <a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><img src="images/tutorials/new/boxisland.jpg" style="width: 100%" alt="বক্স দ্বীপ"></a><br><a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><h3 style="margin-top: 1rem;">বক্স দ্বীপ</h3></a>একটি কমনীয় মোবাইল কোডিং গেম যা শিক্ষার্থীদের একটি উত্তেজনাপূর্ণ সাহসিক কাজ করে, যখন কোডিংয়ের মৌলিক বিষয়গুলি শেখায়, যেমন অ্যালগরিদম, প্যাটার্ন স্বীকৃতি, সিকোয়েন্স, লুপ এবং শর্তাবলী। <i>(সব বয়সের জন্য)</i>
 </div>
 
-<div class="col-33" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><img src="/images/tutorials/hoc2018/codespark_create.jpg" style="width: 100%" alt="কোডস্পার্ক"></a><br><a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><h3 style="color:#7665a0"><strong>codeSpark</strong></h3></a>Award-winning learn-to-code platform for kids ages 5-9. কোড শেখার সময় পাজল সমাধান করুন এবং Foos সঙ্গে গেম তৈরি করুন। <strong>দ্রষ্টব্য: CodesPark বিনামূল্যে 3 মাসের ট্রায়াল অফার করছে। Parent's email address and credit card information are required at signup.</strong> <i>(for pre-readers through Grade 5)</i>
-</div>
-
-<div class="col-33" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="grasshopper" href="https://grasshopper.app/" target="_blank"><img src="/images/athome/grasshopper.png" style="width: 100%" alt="ফড়িং"></a><br><a class="linktag" id="grasshopper" href="https://grasshopper.app/" target="_blank"><h3 style="color:#7665a0"><strong>ঘাসফড়িং</strong></h3></a>মজার সাথে কোডিং শিখুন, আপনার ফোনে দ্রুত পাঠ যা আপনাকে প্রকৃত জাভাস্ক্রিপ্ট লিখতে শেখায়। গুগল প্রোগ্রামের সাথে একটি কোড। <i>(মিডিল স্কুল এবং ঊর্ধমুখী জন্য)</i>
+<div class="col-50" style="padding-right: 30px; padding-bottom:40px">
+  <a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><img src="/images/tutorials/hoc2018/codespark_create.jpg" style="width: 100%" alt="কোডস্পার্ক"></a><br><a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><h3 style="margin-top: 1rem;">CodesPark</h3></a>পুরস্কার-বিজয়ী শিশুদের জন্য শেখার টু কোড প্ল্যাটফর্ম 5-9 বছর বয়সী। কোড শেখার সময় পাজল সমাধান করুন এবং Foos সঙ্গে গেম তৈরি করুন। <strong>দ্রষ্টব্য: CodesPark বিনামূল্যে 3 মাসের ট্রায়াল অফার করছে। সাইনআপে প্যারেন্টের ইমেল ঠিকানা এবং ক্রেডিট কার্ডের তথ্য প্রয়োজন।</strong> <i>(৫ম শ্রেনীর মাধ্যমে প্রাক-পাঠকদের জন্য)</i>
 </div>
 
 <div style="clear: both; margin-bottom: 15px"></div>
@@ -312,8 +308,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="margin-top:10px"><strong>CodeBYTES</strong></h3>
-        <div class="smalltext" style="color: dimgray;">CodeBYTES সহজ-হজম হয়, 20 মিনিট ইন্টারেক্টিভ পাঠ বাস্তব বিশ্বের বিষয় সঙ্গে কম্পিউটার বিজ্ঞান মিশ্রন। সাইন ভাষা পড়তে একটি এআই ট্রেন, ভাল জন্য একটি অ্যাপ্লিকেশন ডিজাইন, Minecraft বিশ্বের অন্বেষণ, এবং আরো!</div>
+        <h3 class="tutorial-info-h" style="margin-top:10px">CodeBYTES</h3>
+        <div class="smalltext" style="color: dimgray;">CodeBYTES সহজে হজম হয়, 20 মিনিট ইন্টারেক্টিভ পাঠ বাস্তব বিশ্বের বিষয় সঙ্গে কম্পিউটার বিজ্ঞান মিশ্রন। সাইন ভাষা পড়তে একটি এআই ট্রেন, ভাল জন্য একটি অ্যাপ্লিকেশন ডিজাইন, Minecraft বিশ্বের অন্বেষণ, এবং আরো!</div>
         <br>
         <br>
         <a class="linktag" id="codebytes" href="https://code.org/codebytes" target="_blank"><button>পর্ব দেখুন</button></a>
@@ -329,8 +325,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="margin-top:10px"><strong>কোড বিরতি</strong></h3>
-        <div class="smalltext" style="">একটি কোড বিরতি গ্রহণ করে কম্পিউটার বিজ্ঞান মজা রাখুন! আপনি অ্যাস্টন কুচার দিয়ে একটি সাইফার তৈরি করতে পারেন, ইয়ারা শাহিদির সাথে ভেরিয়েবল সম্পর্কে জানতে পারেন, এমনকি ইন্টারনেটের প্রকৃত উদ্ভাবক ভিন্ট সার্ফের সাথে ইন্টারনেট কিভাবে কাজ করে তা অন্বেষণ করতে পারেন!</div>
+        <h3 class="tutorial-info-h" style="margin-top:10px">কোড বিরতি একটি কোড বিরতি গ্রহণ করে কম্পিউটার বিজ্ঞান মজা</h3>
+        <div class="smalltext" style="">রাখুন! আপনি অ্যাস্টন কুচার দিয়ে একটি সাইফার তৈরি করতে পারেন, ইয়ারা শাহিদির সাথে ভেরিয়েবল সম্পর্কে জানতে পারেন, এমনকি ইন্টারনেটের প্রকৃত উদ্ভাবক ভিন্ট সার্ফের সাথে ইন্টারনেট কিভাবে কাজ করে তা অন্বেষণ করতে পারেন!</div>
         <br>
         <a class="linktag" id="codebreak" href="https://code.org/break" target="_blank"><button>সংযুক্ত হন</button></a>
     </span>
@@ -340,5 +336,5 @@ theme: responsive
 
 <div style="clear: both; margin-bottom: 20px"></div>
 
-<a href="#top">[Back to top]</a>
+<a href="#top">[উপরে ফিরে যাও]</a>
 <br>

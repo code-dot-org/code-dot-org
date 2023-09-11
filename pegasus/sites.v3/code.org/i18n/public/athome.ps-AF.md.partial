@@ -38,8 +38,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>نڅا ګوند</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">د ملګرو او کورنۍ سره شریکولو لپاره د نڅا ګوند کوډ کړئ. د بیونسي، هیري سټایلز، لیزو، لیل ناس ایکس، سیلینا ګومز، د ډیزني «اینکانټو» څخه میوزیک او نور ډیر څه وړاندې کول!</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px">د نڅا ګوند</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">کوډ د نڅا ګوند د ملګرو او کورنۍ سره شریکولو لپاره. د بیونسي، هیري سټایلز، لیزو، لیل ناس ایکس، سیلینا ګومز، د ډیزني «اینکانټو» څخه میوزیک او نور ډیر څه وړاندې کول!</div>
         <a class="linktag" id="danceparty" href="/dance" target="_blank"><button>فعالیت هڅه وکړئ</button></a>
     </span>
   </div>
@@ -53,8 +53,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>د ماین کرافټ ساعت د کوډ</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">ماین کرافټ د نوي فعالیت سره د کوډ ساعت لپاره بیرته راغلی! د کوډ سره د ماین کرافټ له لارې سفر.</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px">د ماین کرافټ ساعت کوډ</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Minecraft د نوي فعالیت سره د کوډ ساعت لپاره بیرته راغلی! د کوډ سره د ماین کرافټ له لارې سفر.</div>
         <br>
         <a class="linktag" id="minecraft" href="/minecraft" target="_blank"><button>فعالیت هڅه وکړئ</button></a>
     </span>
@@ -69,8 +69,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>AI د سمندرونو لپاره</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">د AI سره مرسته وکړئ چې د کثافاتو کشف کولو لپاره یې روزنه ترلاسه کړئ سمندرونه پاک کړئ! د روزنې ډیټا او تعصب په اړه زده کړئ، او څنګه AI کولی شي د نړۍ ستونزې حل کړي. د <a class="linktag" id="oceans-lesson" href="https://curriculum.code.org/hoc/plugged/9/" target="_blank">درس پلان وګورئ</a>.</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px">د سمندرونو لپاره AI د AI</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">سره مرسته کوي چې د کثافاتو کشف کولو لپاره د روزنې په واسطه سمندرونه پاک کړي! د روزنې ډیټا او تعصب په اړه زده کړئ، او څنګه AI کولی شي د نړۍ ستونزې حل کړي. د <a class="linktag" id="oceans-lesson" href="https://curriculum.code.org/hoc/plugged/9/" target="_blank">درس پلان وګورئ</a>.</div>
         <a class="linktag" id="aiforoceans" href="https://studio.code.org/s/oceans/lessons/1/levels/1" target="_blank"><button>فعالیت هڅه وکړئ</button></a>
     </span>
   </div>
@@ -96,9 +96,9 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>کمپیوټر څنګه کار کوي</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">د بل ګیټس لخوا معرفي کولو سره، د شپږو لنډو ویډیوګانو دا لړۍ تشریح کوي چې کمپیوټر څه شی کمپیوټر جوړوي او د کمپیوټر سرکټونه څنګه کار کوي.</div>
-        <a class="linktag" id="howcomputers" href="https://www.youtube.com/watch?v=OAx_6-wdslM&list=PLzdnOPI1iJNcsRwJhvksEo1tJqjIqWbN-" target="_blank"><button>د ویډیو لړۍ</button></a>وګورئ
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px">کمپیوټر څنګه کار کوي د بل ګیټس لخوا معرفي کولو</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">سره، د شپږ لنډ ویډیوګانو دا لړۍ تشریح کوي چې کمپیوټر څه شی کمپیوټر رامینځته کوي او د کمپیوټر سرکټونه څنګه کار کوي.</div>
+        <a class="linktag" id="howcomputers" href="https://www.youtube.com/watch?v=OAx_6-wdslM&list=PLzdnOPI1iJNcsRwJhvksEo1tJqjIqWbN-" target="_blank"><button>د ویډیو لړۍ وګورئ</button></a>
     </span>
   </div>
 </div>
@@ -111,9 +111,9 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>انټرنیټ څنګه کار کوي</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">د اتو لنډو ویډیوګانو پدې لړۍ کې، تاسو به زده کړئ چې انټرنیټ څنګه ایجاد شوی، HTML څه شی دی، او د ګوګل په څیر د لټون انجنونه څنګه کار کوي.</div>
-        <a class="linktag" id="howinternet" href="https://www.youtube.com/watch?v=Dxcc6ycZ73M&list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7-" target="_blank"><button>د ویډیو لړۍ</button></a>وګورئ
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px">انټرنیټ څنګه کار کوي د اتو لنډو ویډیوګانو پدې لړۍ</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">کې، تاسو به زده کړئ چې انټرنیټ څنګه ایجاد شوی، HTML څه شی دی، او د ګوګل په څیر د لټون انجنونه څنګه کار کوي.</div>
+        <a class="linktag" id="howinternet" href="https://www.youtube.com/watch?v=Dxcc6ycZ73M&list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7-" target="_blank"><button>د ویډیو لړۍ وګورئ</button></a>
     </span>
   </div>
 </div>
@@ -126,8 +126,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>AI څنګه کار کوي</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">پدې اړه زده کړئ چې AI څنګه کار کوي او ولې دا د لنډو ویډیوګانو دې لړۍ سره مهم دی. د مایکروسافټ سی ای او ستیا ناډیلا او د متخصصینو مختلف کاسټ بuringه کول.</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px">AI څنګه کار کوي پدې اړه</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">زده کړئ چې AI څنګه کار کوي او ولې دا د لنډو ویډیوګانو لړۍ سره مهم دی. د مایکروسافټ سی ای او ستیا ناډیلا او د متخصصینو مختلف کاسټ بuringه کول.</div>
         <a class="linktag" id="ai-videos" href="/ai#ai-videos" target="_blank"><button>د ویډیو لړۍ</button></a>وګورئ
     </span>
   </div>
@@ -136,7 +136,7 @@ theme: responsive
 
 <div style="clear: both"></div>
 
-<p>View more videos, including short inspirational videos featuring celebrities like Steph Curry and Shakira, <a class="linktag" id="all-videos" href="https://code.org/educate/resources/videos" target="_blank">here</a>.</p>
+<p>نورې ویډیوګانې وګورئ، پشمول لنډ الهامي ویډیوګانې چې د سټیف کری او شکیرا په څیر مشهور شخصیتونه پکې شامل دي، دلته. <a class="linktag" id="all-videos" href="https://code.org/educate/resources/videos" target="_blank"></a></p>
 <br>
 <p><a href="#top">[بېرته سر ته]</a></p>
 
@@ -159,10 +159,10 @@ theme: responsive
 
 <div class="col-50" style="padding-right: 20px; padding-bottom:10px">
 
-<a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express-2019" target="_blank"><img src="/images/curriculum/course-tile-pre-reader-express.png" style="width: 100%" alt="د مخکې لوستونکي ایکسپریس کورس"></a><br><a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express-2019" target="_blank">Express Course for pre-readers</a>
+<a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express-2019" target="_blank"><img src="/images/curriculum/course-tile-pre-reader-express.png" style="width: 100%" alt="د مخکې لوستونکي ایکسپریس کورس"></a><br><a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express-2019" target="_blank">د مخکې لوستونکو لپاره د ایکسپریس کورس</a>
 
 </div>
-<div style="clear: both"></div>
+<div style="clear: both; margin-bottom: 2rem"></div>
 
 <h3>د لوبې لابراتوار او ایپ لیب ته د ځان سرعت معرفي کول</h3>
 <p>زموږ د CS کشفونو او CS اصولو کورسونو څخه تطبیق شوی، دا لنډ، ځان ګړندی ماډلونه د مفاهیمو زده کولو عالي لاره ده چې د برنامې ټولې ژبې او اوزار پکې برخه اخلي. <i>د لاسرسي لپاره Code.org حساب ته اړتیا لري</i>.</p>
@@ -176,8 +176,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>د لوبې لابراتوار پیژندنه</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">د لوبې لابراتوار کې د برنامې متحرکات، متقابل هنر، او لوبې. د ساده شکلونو سره پیل وکړئ او ډیر پیچلي سپیټ پراساس متحرکات او لوبې رامینځته کړئ.</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px">د لوبې لابراتوار کې د لوبې لیب</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">برنامې متحرکاتو، متقابل هنر، او لوبو معرفي کول. د ساده شکلونو سره پیل وکړئ او ډیر پیچلي سپیټ پراساس متحرکات او لوبې رامینځته کړئ.</div>
         <a class="linktag" id="gamelab-intro" href="https://studio.code.org/s/csd3-virtual" target="_blank"><button>د ماډل</button></a>هڅه وکړئ
     </span>
   </div>
@@ -191,9 +191,9 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>په اپلیکیشن لیب کې د شمشتی برنامه کول</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">د مجازی «شمشتی» په کارولو سره د شکلونو او عکسونو رسم کولو لپاره ساده جاواسکریپټ کمانډونه وکاروئ. خپل ډیجیټل صحنه ډیزاین او برنامه کړئ!</div>
-        <a class="linktag" id="turtle-applab" href="https://studio.code.org/s/csp3-virtual" target="_blank"><button>د ماډل</button></a>هڅه وکړئ
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px">په اپلیکیشن لیب کې د شمشتی برنامه کول د مجازی «شمشتی» په کارولو سره د شکلونو او عکسونو رسم کولو لپاره ساده جاواسکریپټ کمانډونه</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">وکاروئ. خپل ډیجیټل صحنه ډیزاین او برنامه کړئ!</div>
+        <a class="linktag" id="turtle-applab" href="https://studio.code.org/s/csp3-virtual" target="_blank"><button>ماډل هڅه وکړئ</button></a>
     </span>
   </div>
 </div>
@@ -206,8 +206,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>په اپلیکیشن لیب کې د پیښې پرمخ وړونکي برنامه کول</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">د ایپسونو ډیزاین کول زده کړئ چې کلیکونو او کلیدي فشارونو ته ځواب ووایی. د ساده غوښتنلیکونو (ایپسونو) لړۍ جوړه کړئ چې په ویب کې ژوند کوي!</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px">په اپلیکیشن لابراتوار کې د پیښې پرمخ وړونکي برنامه کول د ایپسونو ډیزاین کول</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">زده کړئ چې کلیکونو او کلیدي فشارونو ته ځواب ووایی. د ساده غوښتنلیکونو (ایپسونو) لړۍ جوړه کړئ چې په ویب کې ژوند کوي!</div>
         <a class="linktag" id="events-applab" href="https://studio.code.org/s/csp5-virtual" target="_blank"><button>د ماډل</button></a>هڅه وکړئ
     </span>
   </div>
@@ -230,7 +230,7 @@ theme: responsive
 
 <div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
   <div style="width: 87%; float: left">
-    <a class="linktag" id="applab" href="https://code.org/educate/applab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none"><strong>لابراتوار ایپ</strong></h3></a>
+    <a class="linktag" id="applab" href="https://code.org/educate/applab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none">ددفتروسایل لابراتوار</h3></a>
     <p style="color:#ffffff">د ایپ لیب د برنامې چاپیریال دی چیرې چې تاسو کولی شئ ساده اطلاقات رامینځته کړئ. یو اپلیکیشن ډیزاین کړئ، د بلاکونو یا جاواسکریپټ سره کوډ کړئ ترڅو دا کار وکړي، بیا خپل اپلیکیشن په ثانیو کې شریک کړئ.</p>
     <a class="linktag" id="applab" href="https://code.org/educate/applab" target="_blank"><button style="background-color:#e7e8ea; border-color:#e7e8ea; color:#696969">یو اپلیکیشن جوړ کړئ</button></a>
   </div>
@@ -239,7 +239,7 @@ theme: responsive
 
 <div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
   <div style="width: 87%; float: left">
-    <a class="linktag" id="gamelab" href="https://code.org/educate/gamelab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none"><strong>د لوبې لابراتوار</strong></h3></a>
+    <a class="linktag" id="gamelab" href="https://code.org/educate/gamelab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none">د لوبې لابراتوار</h3></a>
     <p style="color:#ffffff">د لوبې لابراتوار د برنامې چاپیریال دی چیرې چې تاسو کولی شئ ساده متحرکات او لوبې د شیانو او کرکټرونو سره رامینځته کړئ چې له یو بل سره متقابل عمل کوي.</p>
     <br>
     <a class="linktag" id="gamelab" href="https://code.org/educate/gamelab" target="_blank"><button style="background-color:#e7e8ea; border-color:#e7e8ea; color:#696969">یوه لوبه جوړه کړئ</button></a>
@@ -249,7 +249,7 @@ theme: responsive
 
 <div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
   <div style="width: 87%; float: left">
-    <a class="linktag" id="weblab" href="https://code.org/educate/weblab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none"><strong>ویب لیب</strong></h3></a>
+    <a class="linktag" id="weblab" href="https://code.org/educate/weblab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none">ویب لیب</h3></a>
     <p style="color:#ffffff">ویب لیب د برنامې چاپیریال دی چیرې چې تاسو کولی شئ د HTML او CSS په کارولو سره ساده ویب پا pagesې رامینځته کړئ. خپل ویب پا pagesې ډیزاین کړئ او خپل سایټ په ثانیو کې شریک کړئ.</p>
     <br>
     <a class="linktag" id="weblab" href="https://code.org/educate/weblab" target="_blank"><button style="background-color:#e7e8ea; border-color:#e7e8ea; color:#696969">ویب پاڼه جوړه کړئ</button></a>
@@ -286,16 +286,12 @@ theme: responsive
 
 <h2>په کور کې کمپیوټر نشته؟ زموږ د ملګرو څخه د دې غوښتنلیکونو سره په خپل تلیفون کې CS هڅه وکړئ</h2>
 
-<div class="col-33" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><img src="images/tutorials/new/boxisland.jpg" style="width: 100%" alt="بکس ټاپو"></a><br><a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><h3 style="color:#7665a0"><strong>بکس ټاپو</strong></h3></a>د زړه پورې ګرځنده کوډینګ لوبه چې زده کونکي په زړه پورې ساہسک کې اخلي، پداسې حال کې چې د کوډ کولو اساسات درس ورکوي، لکه الګوریتمونه، د نمونې پیژندنه، ترتیبونه، لوپونه او شرایط. <i>(د ټولو عمرونو لپاره)</i>
+<div class="col-50" style="padding-right: 30px; padding-bottom:40px">
+  <a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><img src="images/tutorials/new/boxisland.jpg" style="width: 100%" alt="بکس ټاپو"></a><br><a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><h3 style="margin-top: 1rem;">د بکس ټاپو</h3></a>یوه زړه راښکونکې ګرځنده کوډینګ لوبه چې زده کونکي په زړه پورې ساہسک کې اخلي، پداسې حال کې چې د کوډ کولو اساسات درس ورکوي، لکه الګوریتمونه، د نمونې پیژندنه، ترتیبونه، لوپونه او شرایط. <i>(د ټولو عمرونو لپاره)</i>
 </div>
 
-<div class="col-33" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><img src="/images/tutorials/hoc2018/codespark_create.jpg" style="width: 100%" alt="کوډپارک"></a><br><a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><h3 style="color:#7665a0"><strong>codeSpark</strong></h3></a>Award-winning learn-to-code platform for kids ages 5-9. پزلونه حل کړئ او د Foos سره لوبې رامینځته کړئ پداسې حال کې چې کوډ کول زده کوي. <strong>یادونه: کوډپارک د 3 میاشتو وړیا آزموینه وړاندیز کوي. Parent's email address and credit card information are required at signup.</strong> <i>(for pre-readers through Grade 5)</i>
-</div>
-
-<div class="col-33" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="grasshopper" href="https://grasshopper.app/" target="_blank"><img src="/images/athome/grasshopper.png" style="width: 100%" alt="ملخ"></a><br><a class="linktag" id="grasshopper" href="https://grasshopper.app/" target="_blank"><h3 style="color:#7665a0"><strong>Grashopper</strong></h3></a>په خپل تلیفون کې د ساتیرۍ، ګړندي درسونو سره کوډینګ زده کړئ چې تاسو ته د ریښتیني جاواسکریپټ لیکلو درس درکوي. د ګوګل برنامې سره کوډ. <i>(د منځني ښوونځي او پورته لپاره)</i>
+<div class="col-50" style="padding-right: 30px; padding-bottom:40px">
+  <a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><img src="/images/tutorials/hoc2018/codespark_create.jpg" style="width: 100%" alt="کوډپارک"></a><br><a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><h3 style="margin-top: 1rem;">د کوډسپارک</h3></a>جایزه ګټونکي زده کړې تر کوډ پلیټ فارم د 5-9 کلونو ماشومانو لپاره. پزلونه حل کړئ او د Foos سره لوبې رامینځته کړئ پداسې حال کې چې کوډ کول زده کوي. <strong>یادونه: کوډپارک د 3 میاشتو وړیا آزموینه وړاندیز کوي. د والدین بریښنالیک آدرس او د کریډیټ کارت معلومات په لاسلیک کې اړین دي.</strong> <i>(د 5 درجې له لارې دمخه لوستونکو لپاره)</i>
 </div>
 
 <div style="clear: both; margin-bottom: 15px"></div>
@@ -312,8 +308,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="margin-top:10px"><strong>CodeBytes</strong></h3>
-        <div class="smalltext" style="color: dimgray;">CodeBytes د هضم لپاره اسانه دي، د 20 دقیقې متقابل درسونه د کمپیوټر ساینس د ریښتیني نړۍ موضوعاتو سره ترکیب کوي. د اشارې ژبې لوستلو لپاره AI روزنه ورکړئ، د ښه لپاره اپلیکیشن ډیزاین کړئ، د ماین کرافټ نړۍ وپلټئ، او نور ډیر څه!</div>
+        <h3 class="tutorial-info-h" style="margin-top:10px">CodeBytes</h3>
+        <div class="smalltext" style="color: dimgray;">CodeBytes د هضم لپاره اسانه دي، 20 دقیقې متقابل درسونه د کمپیوټر ساینس د ریښتیني نړۍ موضوعاتو سره ترکیب کوي. د اشارې ژبې لوستلو لپاره AI روزنه ورکړئ، د ښه لپاره اپلیکیشن ډیزاین کړئ، د ماین کرافټ نړۍ وپلټئ، او نور ډیر څه!</div>
         <br>
         <br>
         <a class="linktag" id="codebytes" href="https://code.org/codebytes" target="_blank"><button>قسطونه وګورئ</button></a>
@@ -329,8 +325,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="margin-top:10px"><strong>کوډ بریک</strong></h3>
-        <div class="smalltext" style="">د کوډ بریک کولو سره د کمپیوټر ساینس ساتیري وساتئ! تاسو کولی شئ د اشټن کوچر سره سایفر رامینځته کړئ، د یارا شهیدي سره د متغیرونو په اړه زده کړئ، او حتی وپلټئ چې انټرنیټ د انټرنیټ اصلي اختراع کونکي، وینټ سرف سره څنګه کار کوي!</div>
+        <h3 class="tutorial-info-h" style="margin-top:10px">د کوډ بریک د کوډ بریک په نیولو سره د کمپیوټر ساینس ساتیري</h3>
+        <div class="smalltext" style="">وساتئ! تاسو کولی شئ د اشټن کوچر سره سایفر رامینځته کړئ، د یارا شهیدي سره د متغیرونو په اړه زده کړئ، او حتی وپلټئ چې انټرنیټ د انټرنیټ اصلي اختراع کونکي، وینټ سرف سره څنګه کار کوي!</div>
         <br>
         <a class="linktag" id="codebreak" href="https://code.org/break" target="_blank"><button>وصل شئ</button></a>
     </span>

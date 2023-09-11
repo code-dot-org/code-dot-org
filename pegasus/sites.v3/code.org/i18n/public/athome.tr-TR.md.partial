@@ -13,7 +13,7 @@ theme: responsive
   <img src="/images/marketing/fit-318x212/mother-helping-her-daughter-use-a-laptop-4260325.jpg" style="width:100%" alt="Anne kızının dizüstü bilgisayar kullanmasına yardım ediyor">
 </div>
 
-<p>İster bir ebeveyn/veli, ister bağımsız öğrenen bir öğrenci olun, aşağıdaki seçenekler bilgisayar bilimlerini keşfetmeye başlamanın ilgi çekici ve denemesi kolay yollarıdır.</p>
+<p>İster ebeveyn/vasi olun, ister bağımsız olarak öğrenen bir öğrenci olun, aşağıdaki seçenekler bilgisayar bilimi keşfetmeye başlamak için ilgi çekici, denenmesi kolay yollardır.</p>
 <ul>
     <li><a class="linktag" id="hoc-nav" href="#hoc">Bir Hour of Code  Deneyin</a></li>
     <li><a class="linktag" id="videos-nav" href="#videos">BB'nin temelleri hakkında kısa bir video serisini izleyin</a></li>
@@ -38,8 +38,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>Dans Partisi</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Arkadaşlarınız ve ailenizle paylaşmak için bir Dans Partisi kodlayın. Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez, Disney'in "Encanto"sundan müzikler ve daha fazlası!</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px">Dans Partisi Arkadaşlarınız ve ailenizle paylaşmak için bir Dans Partisi</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Kodu. Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez, Disney'in "Encanto"sundan müzikler ve daha fazlası!</div>
         <a class="linktag" id="danceparty" href="/dance" target="_blank"><button>Aktiviteyi dene</button></a>
     </span>
   </div>
@@ -53,7 +53,7 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Minecraft Hour of Code</strong></h3>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px">Minecraft Hour of Code</h3>
         <div class="smalltext" style="text-align: left; margin-bottom: 10px">Minecraft, yepyeni bir etkinlikle Kod Saati için geri döndü! Minecraft'ta kodla yolculuk.</div>
         <br>
         <a class="linktag" id="minecraft" href="/minecraft" target="_blank"><button>etkinliği dene </button></a>
@@ -69,8 +69,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>Okyanuslar için AI</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Yapay Zeka Yardım E.I. çöpleri tespit etmek için eğiterek okyanusları temizleyin! Eğitim verileri ve önyargı ile AI'nın dünya sorunlarını nasıl çözebileceği hakkında bilgi edinin. Gör<a class="linktag" id="oceans-lesson" href="https://curriculum.code.org/hoc/plugged/9/" target="_blank">ders planı</a>.</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px">Okyanuslar için AI, yapay zekanın çöpleri tespit etmesi için eğiterek okyanusları temizlemesine</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">yardımcı olun! Eğitim verileri ve önyargı ile AI'nın dünya sorunlarını nasıl çözebileceği hakkında bilgi edinin. Gör<a class="linktag" id="oceans-lesson" href="https://curriculum.code.org/hoc/plugged/9/" target="_blank">ders planı</a>.</div>
         <a class="linktag" id="aiforoceans" href="https://studio.code.org/s/oceans/lessons/1/levels/1" target="_blank"><button>Etkinliği dene </button></a>
     </span>
   </div>
@@ -96,8 +96,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>Bilgisayarlar Nasıl Çalışır?</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Bill Gates"in tanıtımıyla, bu altı kısa video dizisi, bir bilgisayarı neyin bilgisayar yaptığını ve bilgisayar devrelerinin nasıl çalıştığını açıklıyor.</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px">Bilgisayarlar Nasıl Çalışır Bill Gates"in</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">tanıtımıyla, bu altı kısa video dizisi, bir bilgisayarı neyin bilgisayar yaptığını ve bilgisayar devrelerinin nasıl çalıştığını açıklıyor.</div>
         <a class="linktag" id="howcomputers" href="https://www.youtube.com/watch?v=OAx_6-wdslM&list=PLzdnOPI1iJNcsRwJhvksEo1tJqjIqWbN-" target="_blank"><button>Video serisini izleyin</button></a>
     </span>
   </div>
@@ -111,8 +111,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>İnternet Nasıl Çalışır?</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Bu sekiz kısa video serisinde, internetin nasıl icat edildiğini öğreneceksiniz, HTML nedir, ve Google gibi arama motorlarının nasıl çalıştığı.</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px">İnternet Nasıl Çalışır</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Bu sekiz kısa video dizisinde, internetin nasıl icat edildiğini öğreneceksiniz, HTML nedir, ve Google gibi arama motorlarının nasıl çalıştığı.</div>
         <a class="linktag" id="howinternet" href="https://www.youtube.com/watch?v=Dxcc6ycZ73M&list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7-" target="_blank"><button>Video serisini izleyin</button></a>
     </span>
   </div>
@@ -126,8 +126,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>AI Nasıl Çalışır?</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Bu kısa video serisiyle AI"nın nasıl çalıştığını ve neden önemli olduğunu öğrenin. Microsoft CEO'su Satya Nadella ve çeşitli uzmanlardan oluşan bir kadroya sahip.</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px">Yapay Zeka Nasıl Çalışır Yapay zekanın nasıl çalıştığını ve bu kısa video serisiyle neden önemli olduğunu</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">öğrenin. Microsoft CEO'su Satya Nadella ve çeşitli uzmanlardan oluşan bir kadroya sahip.</div>
         <a class="linktag" id="ai-videos" href="/ai#ai-videos" target="_blank"><button>Video serisini izle</button></a>
     </span>
   </div>
@@ -162,7 +162,7 @@ theme: responsive
 <a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express-2019" target="_blank"><img src="/images/curriculum/course-tile-pre-reader-express.png" style="width: 100%" alt="Ön Okuyucu Ekspres Kurs"></a><br><a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express-2019" target="_blank">Ön okuyucular için Ekspres Kurs</a>
 
 </div>
-<div style="clear: both"></div>
+<div style="clear: both; margin-bottom: 2rem"></div>
 
 <h3>Game Lab ve App Lab'e kendi hızınızda girişler</h3>
 <p>CS Discoveries ve CS Principles kurslarımızdan uyarlanan bu kısa, kendi hızınızda modüller, tüm programlama dillerini ve araçlarını kapsayan kavramları öğrenmenin harika bir yoludur. <i>Erişmek için Code.org hesabı gerektirir</i>.</p>
@@ -176,8 +176,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>Oyun Laboratuvarına Giriş</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Program animasyonları, etkileşimli sanat, ve Oyun Laboratuvarında oyunlar. Basit şekillerle başlayın ve daha karmaşık hareketli grafik tabanlı animasyonlar ve oyunlar oluşturun.</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px">Oyun Laboratuvarı</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Programı animasyonlarına giriş, interaktif sanat, ve Oyun Laboratuvarında oyunlar. Basit şekillerle başlayın ve daha karmaşık hareketli grafik tabanlı animasyonlar ve oyunlar oluşturun.</div>
         <a class="linktag" id="gamelab-intro" href="https://studio.code.org/s/csd3-virtual" target="_blank"><button>Modülü dene</button></a>
     </span>
   </div>
@@ -191,8 +191,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Uygulama Laboratuvarında Kaplumbağa Programlama</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Sanal bir “kaplumbağa” kullanarak şekiller ve görüntüler çizmek için basit JavaScript komutlarını kullanın. Kendi dijital sahnenizi tasarlayın ve programlayın!</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px">Uygulama Laboratuvarında Kaplumbağa Programlama Sanal bir “kaplumbağa” kullanarak şekiller ve görüntüler çizmek için basit JavaScript komutlarını</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">kullanın. Kendi dijital sahnenizi tasarlayın ve programlayın!</div>
         <a class="linktag" id="turtle-applab" href="https://studio.code.org/s/csp3-virtual" target="_blank"><button>Modülü deneyin</button></a>
     </span>
   </div>
@@ -206,8 +206,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Uygulama Laboratuvarında Olay Odaklı Programlama</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Tıklamalara ve tuşlara basmaya yanıt veren uygulamalar tasarlamayı öğrenin. Web'de yaşayan bir dizi basit uygulama (uygulamalar) oluşturun!</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px">Uygulama Laboratuvarında Olay Odaklı Programlama Tıklamalara ve tuşlara basmaya yanıt veren uygulamalar tasarlamayı</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">öğrenin. Web'de yaşayan bir dizi basit uygulama (uygulamalar) oluşturun!</div>
         <a class="linktag" id="events-applab" href="https://studio.code.org/s/csp5-virtual" target="_blank"><button>Modülü dene</button></a>
     </span>
   </div>
@@ -230,7 +230,7 @@ theme: responsive
 
 <div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
   <div style="width: 87%; float: left">
-    <a class="linktag" id="applab" href="https://code.org/educate/applab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none"><strong>App Lab</strong></h3></a>
+    <a class="linktag" id="applab" href="https://code.org/educate/applab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none">Uygulama Laboratuvarı</h3></a>
     <p style="color:#ffffff">App Lab, basit uygulamalar yapabileceğiniz bir programlama ortamıdır. Bir uygulama tasarlayın, çalışmasını sağlamak için bloklar veya JavaScript ile kodlayın, ardından uygulamanızı saniyeler içinde paylaşın.</p>
     <a class="linktag" id="applab" href="https://code.org/educate/applab" target="_blank"><button style="background-color:#e7e8ea; border-color:#e7e8ea; color:#696969">Bir uygulama oluşturun</button></a>
   </div>
@@ -239,7 +239,7 @@ theme: responsive
 
 <div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
   <div style="width: 87%; float: left">
-    <a class="linktag" id="gamelab" href="https://code.org/educate/gamelab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none"><strong>Game Lab</strong></h3></a>
+    <a class="linktag" id="gamelab" href="https://code.org/educate/gamelab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none">Oyun Laboratuvarı</h3></a>
     <p style="color:#ffffff">Game Lab, birbirleriyle etkileşime giren nesneler ve karakterlerle basit animasyonlar ve oyunlar yapabileceğiniz bir programlama ortamıdır.</p>
     <br>
     <a class="linktag" id="gamelab" href="https://code.org/educate/gamelab" target="_blank"><button style="background-color:#e7e8ea; border-color:#e7e8ea; color:#696969">Bir oyun oluşturun</button></a>
@@ -249,7 +249,7 @@ theme: responsive
 
 <div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
   <div style="width: 87%; float: left">
-    <a class="linktag" id="weblab" href="https://code.org/educate/weblab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none"><strong>Web Lab</strong></h3></a>
+    <a class="linktag" id="weblab" href="https://code.org/educate/weblab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none">Web Laboratuvarı</h3></a>
     <p style="color:#ffffff">Web Lab, HTML ve CSS kullanarak basit web sayfaları oluşturabileceğiniz bir programlama ortamıdır. Web sayfalarınızı tasarlayın ve sitenizi saniyeler içinde paylaşın.</p>
     <br>
     <a class="linktag" id="weblab" href="https://code.org/educate/weblab" target="_blank"><button style="background-color:#e7e8ea; border-color:#e7e8ea; color:#696969">Bir web sayfası yapın</button></a>
@@ -286,16 +286,12 @@ theme: responsive
 
 <h2>Evde bilgisayar yok mu? İş ortaklarımızın sunduğu bu uygulamalarla telefonunuzda BB'yi deneyin</h2>
 
-<div class="col-33" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><img src="images/tutorials/new/boxisland.jpg" style="width: 100%" alt="Box Island"></a><br><a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><h3 style="color:#7665a0"><strong>Box Island</strong></h3></a>Algoritmalar, örüntü tanıma, diziler, döngüler ve koşullar gibi kodlamanın temellerini öğretirken öğrencileri heyecan verici bir maceraya çıkaran büyüleyici bir mobil kodlama oyunu. <i>(tüm yaşlar için)</i>
+<div class="col-50" style="padding-right: 30px; padding-bottom:40px">
+  <a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><img src="images/tutorials/new/boxisland.jpg" style="width: 100%" alt="Box Island"></a><br><a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><h3 style="margin-top: 1rem;">Box Island Öğrencileri heyecan verici</h3></a>bir maceraya götüren büyüleyici bir mobil kodlama oyunu, kodlamanın temellerini öğretirken, algoritmalar gibi, örüntü tanıma, diziler, döngüler ve koşullu. <i>(tüm yaşlar için)</i>
 </div>
 
-<div class="col-33" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><img src="/images/tutorials/hoc2018/codespark_create.jpg" style="width: 100%" alt="codeSpark"></a><br><a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><h3 style="color:#7665a0"><strong>codeSpark</strong></h3></a>5-9 yaş arası çocuklar için ödüllü kodlamayı öğrenme platformu. The Foos ile kodlamayı öğrenirken bulmacaları çözün ve oyunlar oluşturun. <strong>Not: codeSpark 3 aylık ücretsiz deneme sunuyor. Kaydolurken ebeveynin e-posta adresi ve kredi kartı bilgileri gereklidir.</strong> <i>(5. Sınıftan itibaren ön okuyucular için)</i>
-</div>
-
-<div class="col-33" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="grasshopper" href="https://grasshopper.app/" target="_blank"><img src="/images/athome/grasshopper.png" style="width: 100%" alt="Çekirge"></a><br><a class="linktag" id="grasshopper" href="https://grasshopper.app/" target="_blank"><h3 style="color:#7665a0"><strong>Çekirge</strong></h3></a>Telefonunuzda size gerçek JavaScript yazmayı öğreten eğlenceli, hızlı derslerle kodlamayı öğrenin. Google Programı ile Bir Kodlama. <i>(ortaokul ve üstü için)</i>
+<div class="col-50" style="padding-right: 30px; padding-bottom:40px">
+  <a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><img src="/images/tutorials/hoc2018/codespark_create.jpg" style="width: 100%" alt="codeSpark"></a><br><a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><h3 style="margin-top: 1rem;">CodeSpark 5-9</h3></a>yaş arası çocuklar için ödüllü kod öğrenme platformu. The Foos ile kodlamayı öğrenirken bulmacaları çözün ve oyunlar oluşturun. <strong>Not: codeSpark 3 aylık ücretsiz deneme sunuyor. Kaydolurken ebeveynin e-posta adresi ve kredi kartı bilgileri gereklidir.</strong> <i>(5. Sınıftan itibaren ön okuyucular için)</i>
 </div>
 
 <div style="clear: both; margin-bottom: 15px"></div>
@@ -312,8 +308,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="margin-top:10px"><strong>CodeBytes</strong></h3>
-        <div class="smalltext" style="color: dimgray;">CodeBytes sindirimi kolay, 20 bilgisayar bilimini gerçek dünya konularıyla harmanlayan dakikalık etkileşimli derslerdir. İşaret dilini okumak, iyi bir uygulama tasarlamak, Minecraft dünyasını keşfetmek ve daha fazlası için bir AI'yı eğitin!</div>
+        <h3 class="tutorial-info-h" style="margin-top:10px">CodeBytes</h3>
+        <div class="smalltext" style="color: dimgray;">CodeBytes, bilgisayar bilimini gerçek dünya konularıyla harmanlayan sindirimi kolay, 20 dakikalık etkileşimli derslerdir. İşaret dilini okumak, iyi bir uygulama tasarlamak, Minecraft dünyasını keşfetmek ve daha fazlası için bir AI'yı eğitin!</div>
         <br>
         <br>
         <a class="linktag" id="codebytes" href="https://code.org/codebytes" target="_blank"><button>View episodes</button></a>
@@ -329,8 +325,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="margin-top:10px"><strong>Kod Arası</strong></h3>
-        <div class="smalltext" style="">Kod Arası alarak bilgisayar bilimini eğlenceli tutun! Ashton Kutcher ile bir şifre oluşturabilir, Yara Shahidi ile değişkenler hakkında bilgi edinebilir ve hatta İnternet'in gerçek mucidi Vint Cerf ile İnternet'in nasıl çalıştığını keşfedebilirsiniz!</div>
+        <h3 class="tutorial-info-h" style="margin-top:10px">Code Break Code Break alarak bilgisayar bilimini eğlenceli</h3>
+        <div class="smalltext" style="">tutun! Ashton Kutcher ile bir şifre oluşturabilir, Yara Shahidi ile değişkenler hakkında bilgi edinebilir ve hatta İnternet'in gerçek mucidi Vint Cerf ile İnternet'in nasıl çalıştığını keşfedebilirsiniz!</div>
         <br>
         <a class="linktag" id="codebreak" href="https://code.org/break" target="_blank"><button>Bağlan</button></a>
     </span>
