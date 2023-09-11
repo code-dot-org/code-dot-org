@@ -9,7 +9,7 @@ module I18n
         DIR_NAME = 'blockly-mooc'.freeze
         I18N_SOURCE_DIR_PATH = CDO.dir(I18N_SOURCE_DIR, DIR_NAME).freeze
         UNTRANSLATABLE_LABS = %w[calc eval netsim].freeze
-        REDACTABLE = %w[applab gamelab weblab].freeze
+        REDACTABLE_LABS = %w[applab gamelab weblab].freeze
         REDACT_PLUGINS = %w[link].freeze
 
         def self.sync_in

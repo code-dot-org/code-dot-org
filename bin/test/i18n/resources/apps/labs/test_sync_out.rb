@@ -97,7 +97,7 @@ describe I18n::Resources::Apps::Labs::SyncOut do
         end
       end
 
-      I18n::Resources::Apps::Labs::REDACTABLE.each do |redactable_lab|
+      I18n::Resources::Apps::Labs::REDACTABLE_LABS.each do |redactable_lab|
         context "and the lab is `#{redactable_lab}` (redacted)" do
           let(:lab) {redactable_lab}
 
@@ -145,7 +145,7 @@ describe I18n::Resources::Apps::Labs::SyncOut do
       let(:i18n_locale) {'en-US'}
       let(:i18n_js_locale) {'en_us'}
 
-      I18n::Resources::Apps::Labs::REDACTABLE.each do |redactable_lab|
+      I18n::Resources::Apps::Labs::REDACTABLE_LABS.each do |redactable_lab|
         context "and the lab is `#{redactable_lab}` (redacted)" do
           let(:lab) {redactable_lab}
 

@@ -51,7 +51,7 @@ module I18n
           def redact_i18n_source_files
             # Only CSD labs are redacted, since other labs were already part of the i18n pipeline and redaction would edit
             # strings existing in crowdin already
-            REDACTABLE.each do |lab_name|
+            REDACTABLE_LABS.each do |lab_name|
               file_name = "#{lab_name}.json"
               source_path = File.join(I18N_SOURCE_DIR_PATH, file_name)
               next unless File.exist?(source_path)
