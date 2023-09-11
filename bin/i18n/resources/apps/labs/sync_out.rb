@@ -60,7 +60,7 @@ module I18n
           def restore_crawding_locale_files(locale, crowdin_locale_resource_dir)
             malformed_i18n_reporter = I18n::Utils::MalformedI18nReporter.new(locale)
 
-            REDACTABLE.each do |lab_name|
+            REDACTABLE_LABS.each do |lab_name|
               i18n_original_file_path = CDO.dir(I18N_ORIGINAL_DIR, DIR_NAME, "#{lab_name}.json")
               next unless File.exist?(i18n_original_file_path)
 

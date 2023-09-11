@@ -68,7 +68,7 @@ describe I18n::Resources::Apps::Labs::SyncIn do
         FileUtils.touch(i18n_source_file_path)
       end
 
-      I18n::Resources::Apps::Labs::REDACTABLE.each do |redact_lab|
+      I18n::Resources::Apps::Labs::REDACTABLE_LABS.each do |redact_lab|
         context "when the lab is `#{redact_lab}`" do
           let(:lab) {redact_lab}
 

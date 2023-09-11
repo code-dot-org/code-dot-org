@@ -151,7 +151,7 @@ module I18n
               plugins << 'visualCodeBlock'
               plugins << 'link'
               plugins << 'resourceLink'
-            elsif I18n::Resources::Apps::Labs::REDACTABLE.include?(File.basename(original_path, '.json'))
+            elsif I18n::Resources::Apps::Labs::REDACTABLE_LABS.include?(File.basename(original_path, '.json'))
               next # moved to I18n::Resources::Apps::Labs::SyncOut#restore_crawding_locale_files
             end
             RedactRestoreUtils.restore(original_path, translated_path, translated_path, plugins)
