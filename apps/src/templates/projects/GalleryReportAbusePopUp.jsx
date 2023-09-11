@@ -22,7 +22,7 @@ class UnconnectedReportAbusePopUp extends React.Component {
     super(props);
 
     this.state = {
-      showSubmitConfirmation: false,
+      showReportConfirmation: false,
       captchaCompleted: false,
       checkboxes: [
         {name: 'Cyberbullying', checked: false},
@@ -99,7 +99,7 @@ class UnconnectedReportAbusePopUp extends React.Component {
       .then(response => {
         if (response.ok) {
           this.setState({
-            showSubmitConfirmation: true,
+            showReportConfirmation: true,
           });
           this.props.onReport();
         } else if (response.status === 403) {
@@ -145,7 +145,7 @@ class UnconnectedReportAbusePopUp extends React.Component {
       isAnyCheckboxSelected,
       checkboxes,
       submitButtonEnabled,
-      showSubmitConfirmation,
+      showReportConfirmation,
     } = this.state;
 
     const captchaSiteKey = this.props.recaptchaSiteKey;
@@ -157,7 +157,6 @@ class UnconnectedReportAbusePopUp extends React.Component {
     script.defer = true;
     window.onCaptchaSubmit = token => this.onCaptchaVerification(token);
     window.onCaptchaExpired = () => this.onCaptchaExpiration();
-    script.onload = () => this.setState({loadedCaptcha: true});
     document.body.appendChild(script);
 
     return (
@@ -165,7 +164,7 @@ class UnconnectedReportAbusePopUp extends React.Component {
         className={style.reportAbusePopUp}
         onClose={this.cancel}
       >
-        {showSubmitConfirmation ? (
+        {showReportConfirmation ? (
           <div className={style.submitConfirmation}>
             <h3>{i18n.thankyou()}!</h3>
             <p>{i18n.thankYouForReport()}</p>

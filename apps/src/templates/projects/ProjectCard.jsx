@@ -25,7 +25,7 @@ export default class ProjectCard extends React.Component {
 
     this.state = {
       showReportAbuse: false,
-      showSubmittedHeader: false, // may need to change this state in the future to utilize report cookies - if gallery ever keeps an immediate report
+      showReportHeader: false, // may need to change this state in the future to utilize report cookies - if gallery ever keeps an immediate report
     };
     this.showReportAbusePopUp = this.showReportAbusePopUp.bind(this);
     this.closeReportAbusePopUp = this.closeReportAbusePopUp.bind(this);
@@ -46,7 +46,7 @@ export default class ProjectCard extends React.Component {
 
   showReportedHeader() {
     this.setState({
-      showSubmittedHeader: true,
+      showReportHeader: true,
     });
   }
 
@@ -68,7 +68,7 @@ export default class ProjectCard extends React.Component {
       isPublicGallery && isDetailView && projectData.publishedAt;
     const noTimeOnCardStyle = shouldShowPublicDetails ? {} : styles.noTime;
 
-    const {showReportAbuse, showSubmittedHeader} = this.state;
+    const {showReportAbuse, showReportHeader} = this.state;
 
     return (
       <div className="project_card">
@@ -82,7 +82,7 @@ export default class ProjectCard extends React.Component {
         ) : null}
 
         <div className={style.card}>
-          {!showSubmittedHeader ? (
+          {!showReportHeader ? (
             <div
               style={{
                 ...thumbnailStyle,
