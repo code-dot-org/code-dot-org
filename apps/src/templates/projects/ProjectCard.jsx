@@ -6,7 +6,7 @@ import i18n from '@cdo/locale';
 import {studio} from '@cdo/apps/lib/util/urlHelpers';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import style from './project-card.module.scss';
-import GalleryReportAbusePopUp from './GalleryReportAbusePopUp.jsx';
+import ReportAbusePopUp from './ReportAbusePopUp.jsx';
 
 const PROJECT_DEFAULT_IMAGE = '/blockly/media/projects/project_default.png';
 
@@ -50,6 +50,45 @@ export default class ProjectCard extends React.Component {
     });
   }
 
+  renderHeader() {
+    const {showReportHeader} = this.state;
+
+    if (!showReportHeader) {
+      return (
+        <div
+          style={{
+            ...styles.thumbnail,
+            ...styles.header,
+            justifyContent: 'flex-end',
+          }}
+        >
+          <button
+            type="button"
+            onClick={this.showReportAbusePopUp}
+            className={style.cautionButton}
+          >
+            <FontAwesome
+              icon="circle-exclamation"
+              className={style.cautionIcon}
+            />
+          </button>
+        </div>
+      );
+    } else {
+      return (
+        <div
+          style={{
+            ...styles.thumbnail,
+            ...styles.header,
+            justifyContent: 'center',
+          }}
+        >
+          <p className={style.reported}>{i18n.reported()}</p>
+        </div>
+      );
+    }
+  }
+
   render() {
     const {projectData, currentGallery, isDetailView} = this.props;
     const {type, channel} = this.props.projectData;
@@ -68,12 +107,12 @@ export default class ProjectCard extends React.Component {
       isPublicGallery && isDetailView && projectData.publishedAt;
     const noTimeOnCardStyle = shouldShowPublicDetails ? {} : styles.noTime;
 
-    const {showReportAbuse, showReportHeader} = this.state;
+    const {showReportAbuse} = this.state;
 
     return (
       <div className="project_card">
         {showReportAbuse ? (
-          <GalleryReportAbusePopUp
+          <ReportAbusePopUp
             abuseUrl={url}
             projectData={this.props.projectData}
             onClose={this.closeReportAbusePopUp}
@@ -82,36 +121,7 @@ export default class ProjectCard extends React.Component {
         ) : null}
 
         <div className={style.card}>
-          {!showReportHeader ? (
-            <div
-              style={{
-                ...thumbnailStyle,
-                ...styles.header,
-                justifyContent: 'flex-end',
-              }}
-            >
-              <button
-                type="button"
-                onClick={this.showReportAbusePopUp}
-                className={style.cautionButton}
-              >
-                <FontAwesome
-                  icon="circle-exclamation"
-                  className={style.cautionIcon}
-                />
-              </button>
-            </div>
-          ) : (
-            <div
-              style={{
-                ...thumbnailStyle,
-                ...styles.header,
-                justifyContent: 'center',
-              }}
-            >
-              <p className={style.reported}>{i18n.reported()}</p>
-            </div>
-          )}
+          {this.renderHeader()}
 
           <div style={thumbnailStyle}>
             <a
