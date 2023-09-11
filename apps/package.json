@@ -9,8 +9,11 @@
   },
   "scripts": {
     "lint": "yarn lint:scss && yarn lint:js",
+    "lint:fix": "yarn lint:scss -- --fix && yarn lint:js -- --fix",
     "lint:js": "eslint --format ./.eslintCustomMessagesFormatter.js --ext .js,.jsx,.ts,.tsx src test --resolve-plugins-relative-to .",
     "lint:scss": "npx stylelint '**/*.scss'",
+    "lint:js:fix": "yarn lint:js -- --fix",
+    "lint:scss:fix": "yarn lint:scss -- --fix",
     "test": "TZ=UTC ./test-low-memory.sh",
     "test-low-memory": "TZ=UTC ./test-low-memory.sh",
     "test:unit": "TZ=UTC node --max_old_space_size=4096 ./node_modules/.bin/grunt unitTest",
