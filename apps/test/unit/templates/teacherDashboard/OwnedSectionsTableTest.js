@@ -7,8 +7,8 @@ import {Provider} from 'react-redux';
 import {
   getStore,
   registerReducers,
-  stubRedux,
-  restoreRedux,
+  __testing_stubRedux,
+  __testing_restoreRedux,
 } from '@cdo/apps/redux';
 import {
   UnconnectedOwnedSectionsTable as OwnedSectionsTable,
@@ -232,14 +232,14 @@ const sections = [
 describe('OwnedSectionsTable Sorting', () => {
   let store;
   beforeEach(() => {
-    stubRedux();
+    __testing_stubRedux();
     registerReducers({teacherSections});
     store = getStore();
     store.dispatch(setSections(sections));
   });
 
   afterEach(() => {
-    restoreRedux();
+    __testing_restoreRedux();
   });
 
   it('can be sorted correctly by grade', () => {

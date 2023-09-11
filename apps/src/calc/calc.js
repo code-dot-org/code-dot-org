@@ -22,7 +22,7 @@ var Calc = {};
  */
 import React from 'react';
 import ReactDOM from 'react-dom';
-import StudioApp from '../StudioApp';
+import {singleton as studioApp} from '../StudioApp';
 import jsnums from '@code-dot-org/js-numbers';
 import commonMsg from '@cdo/locale';
 import calcMsg from './locale';
@@ -45,7 +45,6 @@ import InputIterator from './inputIterator';
 import {TestResults, ResultType} from '../constants';
 import {showDeprecatedAlgebraLabWarning} from '../util/deprecatedLabWarning';
 
-var studioApp = StudioApp.singleton;
 var level;
 var skin;
 

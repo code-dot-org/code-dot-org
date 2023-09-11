@@ -7,12 +7,16 @@ import ShowCodeToggle from '@cdo/apps/templates/ShowCodeToggle';
 import {PaneButton} from '@cdo/apps/templates/PaneHeader';
 import {
   singleton as studioApp,
-  stubStudioApp,
-  restoreStudioApp,
+  __testing_stubStudioApp,
+  __testing_restoreStudioApp,
 } from '@cdo/apps/StudioApp';
 import LegacyDialog from '@cdo/apps/code-studio/LegacyDialog';
 import * as utils from '@cdo/apps/utils';
-import {registerReducers, stubRedux, restoreRedux} from '@cdo/apps/redux';
+import {
+  registerReducers,
+  __testing_stubRedux,
+  __testing_restoreRedux,
+} from '@cdo/apps/redux';
 import * as commonReducers from '@cdo/apps/redux/commonReducers';
 import project from '@cdo/apps/code-studio/initApp/project';
 
@@ -34,15 +38,15 @@ describe('The ShowCodeToggle component', () => {
     utils.fireResizeEvent.restore();
   });
 
-  beforeEach(stubStudioApp);
-  afterEach(restoreStudioApp);
+  beforeEach(__testing_stubStudioApp);
+  afterEach(__testing_restoreStudioApp);
   beforeEach(() => sinon.stub(LegacyDialog.prototype, 'show'));
   afterEach(() => LegacyDialog.prototype.show.restore());
   beforeEach(() => {
-    stubRedux();
+    __testing_stubRedux();
     registerReducers(commonReducers);
   });
-  afterEach(restoreRedux);
+  afterEach(__testing_restoreRedux);
 
   beforeEach(() => {
     editor = {

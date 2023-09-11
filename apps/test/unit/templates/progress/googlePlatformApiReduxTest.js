@@ -2,8 +2,8 @@ import {expect} from '../../../util/reconfiguredChai';
 import {
   registerReducers,
   getStore,
-  stubRedux,
-  restoreRedux,
+  __testing_stubRedux,
+  __testing_restoreRedux,
 } from '@cdo/apps/redux';
 import reducer, {
   GOOGLE_PLATFORM_API_ID,
@@ -22,13 +22,13 @@ describe('Google Platoform API redux module', () => {
   const state = () => store.getState().googlePlatformApi;
 
   beforeEach(() => {
-    stubRedux();
+    __testing_stubRedux();
     registerReducers({googlePlatformApi: reducer});
     store = getStore();
   });
 
   afterEach(() => {
-    restoreRedux();
+    __testing_restoreRedux();
     const gapi = document.getElementById(GOOGLE_PLATFORM_API_ID);
     if (gapi) {
       gapi.parentNode.removeChild(gapi);

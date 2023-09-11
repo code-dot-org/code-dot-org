@@ -3,8 +3,8 @@ import {Provider} from 'react-redux';
 import {
   getStore,
   registerReducers,
-  stubRedux,
-  restoreRedux,
+  __testing_stubRedux,
+  __testing_restoreRedux,
 } from '@cdo/apps/redux';
 import i18n from '@cdo/locale';
 import DCDO from '@cdo/apps/dcdo';
@@ -150,7 +150,7 @@ describe('ManageStudentsTable', () => {
     };
 
     beforeEach(() => {
-      stubRedux();
+      __testing_stubRedux();
       registerReducers({
         teacherSections,
         manageStudents,
@@ -165,7 +165,7 @@ describe('ManageStudentsTable', () => {
     });
 
     afterEach(() => {
-      restoreRedux();
+      __testing_restoreRedux();
     });
 
     it('renders an action cell for each student', () => {

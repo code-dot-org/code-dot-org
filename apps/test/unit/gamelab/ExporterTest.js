@@ -10,8 +10,8 @@ import pageConstantsReducer, {
 import {
   getStore,
   registerReducers,
-  stubRedux,
-  restoreRedux,
+  __testing_stubRedux,
+  __testing_restoreRedux,
 } from '@cdo/apps/redux';
 
 const emptyAnimationOpts = {
@@ -104,7 +104,7 @@ describe('The Gamelab Exporter,', function () {
 
     stashedCookieKey = window.userNameCookieKey;
     window.userNameCookieKey = 'CoolUser';
-    stubRedux();
+    __testing_stubRedux();
     registerReducers({pageConstants: pageConstantsReducer});
     getStore().dispatch(
       setPageConstants({
@@ -117,7 +117,7 @@ describe('The Gamelab Exporter,', function () {
     server.restore();
     assetPrefix.init({});
     window.userNameCookieKey = stashedCookieKey;
-    restoreRedux();
+    __testing_restoreRedux();
   });
 
   describe("when assets can't be fetched,", function () {

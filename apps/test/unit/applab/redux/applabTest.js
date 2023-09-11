@@ -3,8 +3,8 @@ import {expect, assert} from '../../../util/reconfiguredChai';
 import {
   getStore,
   registerReducers,
-  stubRedux,
-  restoreRedux,
+  __testing_stubRedux,
+  __testing_restoreRedux,
 } from '@cdo/apps/redux';
 import {ApplabInterfaceMode} from '@cdo/apps/applab/constants';
 import {reducers, actions} from '@cdo/apps/applab/redux/applab';
@@ -14,13 +14,13 @@ describe('App Lab redux module', () => {
   let store;
 
   beforeEach(() => {
-    stubRedux();
+    __testing_stubRedux();
     registerReducers(reducers);
     store = getStore();
   });
 
   afterEach(() => {
-    restoreRedux();
+    __testing_restoreRedux();
   });
 
   describe('redirectNotice', () => {

@@ -378,4 +378,4 @@ var fieldsMatch = function (fieldA, fieldB) {
 };
 
 export default exports;
-export const {makeTestsFromBuilderRequiredBlocks} = exports;
+export const {makeTestsFromBuilderRequiredBlocks, simpleBlock} = exports;

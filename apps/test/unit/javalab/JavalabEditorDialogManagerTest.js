@@ -6,8 +6,8 @@ import {Provider} from 'react-redux';
 import {
   getStore,
   registerReducers,
-  stubRedux,
-  restoreRedux,
+  __testing_stubRedux,
+  __testing_restoreRedux,
 } from '@cdo/apps/redux';
 import javalabMsg from '@cdo/javalab/locale';
 import {DisplayTheme} from '@cdo/apps/javalab/DisplayTheme';
@@ -153,12 +153,12 @@ describe('JavalabEditorDialogManager', () => {
 
   describe('Commit Dialog', () => {
     beforeEach(() => {
-      stubRedux();
+      __testing_stubRedux();
       registerReducers({javalab, javalabEditor, javalabView});
     });
 
     afterEach(() => {
-      restoreRedux();
+      __testing_restoreRedux();
     });
 
     it('Displays Commit Dialog if selected', () => {

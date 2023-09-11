@@ -8,6 +8,8 @@ import * as timeoutApi from '@cdo/apps/lib/util/timeoutApi';
 import getAssetDropdown from '@cdo/apps/assetManagement/getAssetDropdown';
 import {getStore} from '@cdo/apps/redux';
 
+let exports = {};
+
 var spriteMethodPrefix = '[Sprite].';
 var groupMethodPrefix = '[Group].';
 var animMethodPrefix = '[Animation].';
@@ -38,8 +40,6 @@ function chooseAsset(typeFilter, callback) {
     showUnderageWarning: !getStore().getState().pageConstants.is13Plus,
   });
 }
-
-let exports = {};
 
 exports.blocks = [
   // Game Lab

@@ -1,8 +1,8 @@
 import sinon from 'sinon';
 import {assert, expect} from '../../../util/reconfiguredChai';
 import {
-  stubRedux,
-  restoreRedux,
+  __testing_stubRedux,
+  __testing_restoreRedux,
   registerReducers,
   getStore,
 } from '@cdo/apps/redux';
@@ -143,13 +143,13 @@ describe('teacherSectionsRedux', () => {
   let store;
 
   beforeEach(() => {
-    stubRedux();
+    __testing_stubRedux();
     registerReducers({teacherSections: reducer});
     store = getStore();
   });
 
   afterEach(() => {
-    restoreRedux();
+    __testing_restoreRedux();
   });
 
   const getState = () => store.getState();

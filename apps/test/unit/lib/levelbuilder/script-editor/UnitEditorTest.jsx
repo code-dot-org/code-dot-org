@@ -8,8 +8,8 @@ import reducers, {
   init,
 } from '@cdo/apps/lib/levelbuilder/unit-editor/unitEditorRedux';
 import {
-  stubRedux,
-  restoreRedux,
+  __testing_stubRedux,
+  __testing_restoreRedux,
   getStore,
   registerReducers,
 } from '@cdo/apps/redux';
@@ -30,7 +30,7 @@ describe('UnitEditor', () => {
   let defaultProps, store;
   beforeEach(() => {
     sinon.stub(utils, 'navigateToHref');
-    stubRedux();
+    __testing_stubRedux();
 
     registerReducers({
       ...reducers,
@@ -90,7 +90,7 @@ describe('UnitEditor', () => {
   });
 
   afterEach(() => {
-    restoreRedux();
+    __testing_restoreRedux();
     utils.navigateToHref.restore();
   });
 

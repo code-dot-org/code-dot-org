@@ -3,8 +3,8 @@ import sinon from 'sinon';
 import {expect} from '../util/reconfiguredChai';
 import {
   singleton as studioApp,
-  stubStudioApp,
-  restoreStudioApp,
+  __testing_stubStudioApp,
+  __testing_restoreStudioApp,
   makeFooterMenuItems,
 } from '@cdo/apps/StudioApp';
 import Sounds from '@cdo/apps/Sounds';
@@ -30,8 +30,8 @@ describe('StudioApp', () => {
     let containerDiv, codeWorkspaceDiv;
 
     beforeEach(() => {
-      stubStudioApp();
-      redux.stubRedux();
+      __testing_stubStudioApp();
+      redux.__testing_stubRedux();
       redux.registerReducers(commonReducers);
       replaceOnWindow('setTimeout', () => {});
 
@@ -50,8 +50,8 @@ describe('StudioApp', () => {
     });
 
     afterEach(() => {
-      restoreStudioApp();
-      redux.restoreRedux();
+      __testing_restoreStudioApp();
+      redux.__testing_restoreRedux();
       restoreOnWindow('setTimeout');
 
       document.body.removeChild(codeWorkspaceDiv);
@@ -500,13 +500,13 @@ describe('StudioApp', () => {
 
   describe('addChangeHandler', () => {
     beforeEach(() => {
-      stubStudioApp();
-      redux.stubRedux();
+      __testing_stubStudioApp();
+      redux.__testing_stubRedux();
       redux.registerReducers(commonReducers);
     });
     afterEach(() => {
-      redux.restoreRedux();
-      restoreStudioApp();
+      redux.__testing_restoreRedux();
+      __testing_restoreStudioApp();
     });
 
     it('calls a handler in response to a blockly change', () => {

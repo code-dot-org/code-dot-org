@@ -3,8 +3,8 @@ import {mount} from 'enzyme';
 import {expect} from '../../../../util/reconfiguredChai';
 import LessonEditor from '@cdo/apps/lib/levelbuilder/lesson-editor/LessonEditor';
 import {
-  stubRedux,
-  restoreRedux,
+  __testing_stubRedux,
+  __testing_restoreRedux,
   getStore,
   registerReducers,
 } from '@cdo/apps/redux';
@@ -40,7 +40,7 @@ describe('LessonEditor', () => {
   let defaultProps, store, clock;
   beforeEach(() => {
     sinon.stub(utils, 'navigateToHref');
-    stubRedux();
+    __testing_stubRedux();
     registerReducers({
       ...reducers,
       resources: createResourcesReducer('lessonResource'),
@@ -92,7 +92,7 @@ describe('LessonEditor', () => {
   });
 
   afterEach(() => {
-    restoreRedux();
+    __testing_restoreRedux();
     utils.navigateToHref.restore();
     if (clock) {
       clock.restore();

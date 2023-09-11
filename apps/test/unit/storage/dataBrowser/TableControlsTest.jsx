@@ -8,8 +8,8 @@ import sinon from 'sinon';
 import {
   getStore,
   registerReducers,
-  stubRedux,
-  restoreRedux,
+  __testing_stubRedux,
+  __testing_restoreRedux,
 } from '@cdo/apps/redux';
 import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 import commonReducers from '@cdo/apps/redux/commonReducers';
@@ -34,7 +34,7 @@ const DEFAULT_PROPS = {
 
 describe('TableControls', () => {
   beforeEach(() => {
-    stubRedux();
+    __testing_stubRedux();
     registerReducers({...commonReducers, ...reducers, isRtl});
     experiments.setEnabled(experiments.APPLAB_DATASETS, true);
     const store = getStore();
@@ -42,7 +42,7 @@ describe('TableControls', () => {
   });
 
   afterEach(() => {
-    restoreRedux();
+    __testing_restoreRedux();
     experiments.setEnabled(experiments.APPLAB_DATASETS, false);
   });
 

@@ -15,8 +15,8 @@ import {Provider} from 'react-redux';
 import {
   getStore,
   registerReducers,
-  stubRedux,
-  restoreRedux,
+  __testing_stubRedux,
+  __testing_restoreRedux,
 } from '@cdo/apps/redux';
 
 describe('SettingsCog', () => {
@@ -127,7 +127,7 @@ describe('SettingsCog', () => {
       beforeEach(() => {
         sinon.stub(makerRedux, 'isAvailable');
         sinon.stub(makerRedux, 'isEnabled');
-        stubRedux();
+        __testing_stubRedux();
         registerReducers({pageConstants: pageConstantsReducer});
         makerRedux.isAvailable.returns(true);
         makerRedux.isEnabled.returns(true);
@@ -136,7 +136,7 @@ describe('SettingsCog', () => {
       afterEach(() => {
         makerRedux.isEnabled.restore();
         makerRedux.isAvailable.restore();
-        restoreRedux();
+        __testing_restoreRedux();
       });
 
       it('does not display maker toggle if a curriculum level', () => {

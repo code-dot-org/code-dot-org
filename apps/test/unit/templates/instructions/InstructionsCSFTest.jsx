@@ -6,8 +6,8 @@ import {Provider} from 'react-redux';
 import {
   getStore,
   registerReducers,
-  stubRedux,
-  restoreRedux,
+  __testing_stubRedux,
+  __testing_restoreRedux,
 } from '@cdo/apps/redux';
 import instructions, {
   setFeedback,
@@ -19,7 +19,7 @@ import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 
 describe('InstructionsCSF', () => {
   beforeEach(() => {
-    stubRedux();
+    __testing_stubRedux();
     registerReducers({authoredHints, instructions, isRtl, pageConstants});
     getStore().dispatch(
       setPageConstants({
@@ -35,7 +35,7 @@ describe('InstructionsCSF', () => {
   });
 
   afterEach(() => {
-    restoreRedux();
+    __testing_restoreRedux();
   });
 
   it('can change feedback when rendering different blockly blocks', () => {

@@ -4,8 +4,8 @@ import $ from 'jquery';
 import sinon from 'sinon';
 import fakeSectionData, {scriptId} from './fakeSectionData';
 import {
-  stubRedux,
-  restoreRedux,
+  __testing_stubRedux,
+  __testing_restoreRedux,
   registerReducers,
   getStore,
 } from '@cdo/apps/redux';
@@ -214,13 +214,13 @@ describe('saveLockDialog', () => {
       lastRequest = req;
     };
     reducerSpy = sinon.spy(reducer);
-    stubRedux();
+    __testing_stubRedux();
     registerReducers({lessonLock: reducerSpy});
     store = getStore();
   });
 
   afterEach(() => {
-    restoreRedux();
+    __testing_restoreRedux();
     lastRequest = null;
     xhr.restore();
   });
@@ -433,7 +433,7 @@ describe('refetchSectionLockStatus', () => {
 
   // Intercept all XHR requests, storing the last one
   beforeEach(() => {
-    stubRedux();
+    __testing_stubRedux();
     registerReducers({lessonLock: reducer});
     store = getStore();
 
@@ -446,7 +446,7 @@ describe('refetchSectionLockStatus', () => {
   });
 
   afterEach(() => {
-    restoreRedux();
+    __testing_restoreRedux();
     $.ajax.restore();
   });
 

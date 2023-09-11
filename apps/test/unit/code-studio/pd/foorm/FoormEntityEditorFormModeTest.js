@@ -3,8 +3,8 @@ import {mount} from 'enzyme';
 import {expect} from '../../../../util/reconfiguredChai';
 import {assert} from 'chai';
 import {
-  stubRedux,
-  restoreRedux,
+  __testing_stubRedux,
+  __testing_restoreRedux,
   getStore,
   registerReducers,
 } from '@cdo/apps/redux';
@@ -28,7 +28,7 @@ describe('FoormEntityEditor in Form editing mode', () => {
     // lifecycle method.
     allowConsoleWarnings();
 
-    stubRedux();
+    __testing_stubRedux();
     registerReducers({foorm});
 
     server = sinon.fakeServer.create();
@@ -61,7 +61,7 @@ describe('FoormEntityEditor in Form editing mode', () => {
   });
 
   afterEach(() => {
-    restoreRedux();
+    __testing_restoreRedux();
     server.restore();
   });
 

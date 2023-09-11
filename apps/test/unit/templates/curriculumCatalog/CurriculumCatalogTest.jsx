@@ -13,8 +13,8 @@ import responsive, {
 import {
   getStore,
   registerReducers,
-  restoreRedux,
-  stubRedux,
+  __testing_restoreRedux,
+  __testing_stubRedux,
 } from '@cdo/apps/redux';
 import CurriculumCatalog from '@cdo/apps/templates/curriculumCatalog/CurriculumCatalog';
 import {
@@ -51,7 +51,7 @@ describe('CurriculumCatalog', () => {
   let replaceStateOrig = window.history.replaceState;
 
   beforeEach(() => {
-    stubRedux();
+    __testing_stubRedux();
     registerReducers({responsive, teacherSections});
     store = getStore();
     store.dispatch(setResponsiveSize(ResponsiveSize.lg));
@@ -64,7 +64,7 @@ describe('CurriculumCatalog', () => {
   });
 
   afterEach(() => {
-    restoreRedux();
+    __testing_restoreRedux();
     resetWindowLocation();
     window.history.replaceState = replaceStateOrig;
   });

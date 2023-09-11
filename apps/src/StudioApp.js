@@ -3524,28 +3524,32 @@ export function singleton() {
   return instance;
 }
 
-if (IN_UNIT_TEST) {
-  let __oldInstance;
+// BEGIN EXPORTS FOR TESTING ONLY
+let __testing_oldInstance;
 
-  exports.stubStudioApp = function () {
-    if (__oldInstance) {
-      throw new Error(
-        'StudioApp has already been stubbed. Did you forget to call restore?'
-      );
-    }
-    __oldInstance = instance;
-    instance = null;
-  };
+export function __testing_stubStudioApp() {
+  if (!IN_UNIT_TEST) {
+    throw new Error('__testing_stubRedux() should only be called in tests');
+  } else if (__testing_oldInstance) {
+    throw new Error(
+      'StudioApp has already been stubbed. Did you forget to call restore?'
+    );
+  }
+  __testing_oldInstance = instance;
+  instance = null;
+}
 
-  exports.restoreStudioApp = function () {
-    instance.removeAllListeners();
-    instance.libraries = {};
-    if (instance.changeListener) {
-      Blockly.removeChangeListener(instance.changeListener);
-    }
-    instance = __oldInstance;
-    __oldInstance = null;
-  };
+export function __testing_restoreStudioApp() {
+  if (!IN_UNIT_TEST) {
+    throw new Error('__testing_stubRedux() should only be called in tests');
+  }
+  instance.removeAllListeners();
+  instance.libraries = {};
+  if (instance.changeListener) {
+    Blockly.removeChangeListener(instance.changeListener);
+  }
+  instance = __testing_oldInstance;
+  __testing_oldInstance = null;
 }
 
 export default exports;

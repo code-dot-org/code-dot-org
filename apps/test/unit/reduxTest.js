@@ -1,7 +1,7 @@
 import {expect} from 'chai';
 import {
-  stubRedux,
-  restoreRedux,
+  __testing_stubRedux,
+  __testing_restoreRedux,
   registerReducers,
   hasReducer,
   getStore,
@@ -21,10 +21,10 @@ function incrementor(state, action) {
 
 describe('global redux store', () => {
   beforeEach(() => {
-    stubRedux();
+    __testing_stubRedux();
   });
   afterEach(() => {
-    restoreRedux();
+    __testing_restoreRedux();
   });
 
   describe('the registerReducers function', () => {

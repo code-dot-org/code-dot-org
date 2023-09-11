@@ -3,8 +3,8 @@ import sinon from 'sinon';
 import {
   getStore,
   registerReducers,
-  stubRedux,
-  restoreRedux,
+  __testing_stubRedux,
+  __testing_restoreRedux,
 } from '@cdo/apps/redux';
 import pageConstants from '@cdo/apps/redux/pageConstants';
 import Craft from '@cdo/apps/craft/code-connection/craft';
@@ -13,8 +13,8 @@ describe('Craft', () => {
   before(() => sinon.stub(Craft, 'render'));
   after(() => Craft.render.restore());
 
-  beforeEach(stubRedux);
-  afterEach(restoreRedux);
+  beforeEach(__testing_stubRedux);
+  afterEach(__testing_restoreRedux);
 
   it('app init', () => {
     registerReducers({pageConstants});

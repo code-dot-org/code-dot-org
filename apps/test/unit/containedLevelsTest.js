@@ -13,8 +13,8 @@ import {
 import {
   getStore,
   registerReducers,
-  stubRedux,
-  restoreRedux,
+  __testing_stubRedux,
+  __testing_restoreRedux,
 } from '@cdo/apps/redux';
 import commonReducers from '@cdo/apps/redux/commonReducers';
 import GameButtons from '@cdo/apps/templates/GameButtons';
@@ -45,7 +45,7 @@ describe('getContainedLevelResultInfo', () => {
       .stub(codeStudioLevels, 'getContainedLevelResult')
       .returns(containedLevelResult);
     sinon.stub(codeStudioLevels, 'hasValidContainedLevelResult');
-    stubRedux();
+    __testing_stubRedux();
     registerReducers(commonReducers);
 
     gameButtons = document.createElement('div');
@@ -79,7 +79,7 @@ describe('getContainedLevelResultInfo', () => {
 
     codeStudioLevels.getContainedLevelResult.restore();
     codeStudioLevels.hasValidContainedLevelResult.restore();
-    restoreRedux();
+    __testing_restoreRedux();
     document.body.removeChild(gameButtons);
   });
 

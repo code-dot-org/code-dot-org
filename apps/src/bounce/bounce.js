@@ -6,7 +6,7 @@
  */
 import React from 'react';
 import ReactDOM from 'react-dom';
-import StudioApp from '../StudioApp';
+import {singleton as studioApp} from '../StudioApp';
 import bounceMsg from './locale';
 import tiles from './tiles';
 import CustomMarshalingInterpreter from '../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
@@ -27,7 +27,6 @@ import {
 import '../util/svgelement-polyfill';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 
-var studioApp = StudioApp.singleton;
 var SquareType = tiles.SquareType;
 
 /**

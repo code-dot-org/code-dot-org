@@ -11,7 +11,11 @@
 
 import {assert} from '../util/reconfiguredChai';
 import sinon from 'sinon';
-import {stubRedux, restoreRedux, registerReducers} from '@cdo/apps/redux';
+import {
+  __testing_stubRedux,
+  __testing_restoreRedux,
+  registerReducers,
+} from '@cdo/apps/redux';
 import jQuery from 'jquery';
 var tickWrapper = require('./util/tickWrapper');
 import lessonLock from '@cdo/apps/code-studio/lessonLockRedux';
@@ -118,7 +122,7 @@ describe('Level tests', function () {
 
   beforeEach(function () {
     // Recreate our redux store so that we have a fresh copy
-    stubRedux();
+    __testing_stubRedux();
     registerReducers({
       lessonLock,
       runState,
@@ -183,7 +187,7 @@ describe('Level tests', function () {
       Blockly.mainBlockSpace.clear();
     }
 
-    restoreRedux();
+    __testing_restoreRedux();
     clock.restore();
     clearInterval(tickInterval);
     var studioApp = require('@cdo/apps/StudioApp').singleton;

@@ -14,8 +14,8 @@ import microBitReducer, {
 import {
   getStore,
   registerReducers,
-  stubRedux,
-  restoreRedux,
+  __testing_stubRedux,
+  __testing_restoreRedux,
 } from '@cdo/apps/redux';
 
 describe('MBFirmataUpdater', () => {
@@ -64,12 +64,12 @@ describe('MBFirmataUpdater', () => {
 
   describe('setPercentUpdateComplete function', () => {
     beforeEach(() => {
-      stubRedux();
+      __testing_stubRedux();
       registerReducers({microBit: microBitReducer});
     });
 
     afterEach(() => {
-      restoreRedux();
+      __testing_restoreRedux();
     });
 
     it('changes state value appropriately when rounded progress value has changed', () => {

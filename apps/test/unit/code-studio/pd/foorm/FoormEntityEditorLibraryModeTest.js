@@ -4,8 +4,8 @@ import {expect} from '../../../../util/reconfiguredChai';
 import {assert} from 'chai';
 
 import {
-  stubRedux,
-  restoreRedux,
+  __testing_stubRedux,
+  __testing_restoreRedux,
   getStore,
   registerReducers,
 } from '@cdo/apps/redux';
@@ -25,7 +25,7 @@ global.$ = require('jquery');
 describe('FoormEntityEditor in Library editing mode', () => {
   let defaultProps, store, server, wrapper;
   beforeEach(() => {
-    stubRedux();
+    __testing_stubRedux();
     registerReducers({foorm});
 
     // Default response is that the library question being edited
@@ -65,7 +65,7 @@ describe('FoormEntityEditor in Library editing mode', () => {
   });
 
   afterEach(() => {
-    restoreRedux();
+    __testing_restoreRedux();
     server.restore();
   });
 

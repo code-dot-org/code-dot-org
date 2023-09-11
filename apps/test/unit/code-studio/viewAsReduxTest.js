@@ -5,8 +5,8 @@ import reducer, {
   changeViewType,
 } from '@cdo/apps/code-studio/viewAsRedux';
 import {
-  stubRedux,
-  restoreRedux,
+  __testing_stubRedux,
+  __testing_restoreRedux,
   registerReducers,
   getStore,
 } from '@cdo/apps/redux';
@@ -18,7 +18,7 @@ describe('viewAs redux', () => {
   // Create a store so that we get the benefits of our thunk middleware
   let store;
   beforeEach(() => {
-    stubRedux();
+    __testing_stubRedux();
     registerReducers({viewAs: reducer});
     store = getStore();
 
@@ -27,7 +27,7 @@ describe('viewAs redux', () => {
 
   afterEach(() => {
     codeStudioUtils.updateQueryParam.restore();
-    restoreRedux();
+    __testing_restoreRedux();
   });
 
   it('can set as instructor', () => {

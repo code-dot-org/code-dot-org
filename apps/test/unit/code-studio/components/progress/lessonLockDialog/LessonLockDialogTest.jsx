@@ -10,8 +10,8 @@ import i18n from '@cdo/locale';
 import {
   getStore,
   registerReducers,
-  stubRedux,
-  restoreRedux,
+  __testing_stubRedux,
+  __testing_restoreRedux,
 } from '@cdo/apps/redux';
 import teacherSections from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {Provider} from 'react-redux';
@@ -34,13 +34,13 @@ const getStudentRows = wrapper => wrapper.find(StudentRow);
 describe('LessonLockDialog with stubbed section selector', () => {
   let store;
   beforeEach(() => {
-    stubRedux();
+    __testing_stubRedux();
     registerReducers({teacherSections});
     store = getStore();
   });
 
   afterEach(() => {
-    restoreRedux();
+    __testing_restoreRedux();
   });
 
   it('renders with minimal props', () => {

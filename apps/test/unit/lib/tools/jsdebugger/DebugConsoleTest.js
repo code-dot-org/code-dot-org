@@ -8,8 +8,8 @@ import {reducers, actions} from '@cdo/apps/lib/tools/jsdebugger/redux';
 import {
   getStore,
   registerReducers,
-  stubRedux,
-  restoreRedux,
+  __testing_stubRedux,
+  __testing_restoreRedux,
 } from '@cdo/apps/redux';
 import {KeyCodes} from '@cdo/apps/constants';
 import JSInterpreter from '@cdo/apps/lib/tools/jsinterpreter/JSInterpreter';
@@ -33,7 +33,7 @@ describe('The DebugConsole component when the console is enabled', () => {
   let root, jumpToBottomSpy;
 
   beforeEach(() => {
-    stubRedux();
+    __testing_stubRedux();
     registerReducers(reducers);
     getStore().dispatch(actions.initialize(sinon.spy()));
     root = mount(
@@ -46,7 +46,7 @@ describe('The DebugConsole component when the console is enabled', () => {
   });
 
   afterEach(() => {
-    restoreRedux();
+    __testing_restoreRedux();
   });
 
   const debugOutput = () => root.find('#debug-output');
@@ -363,7 +363,7 @@ describe('The DebugConsole component when the debug console is disabled', () => 
   let root;
 
   beforeEach(() => {
-    stubRedux();
+    __testing_stubRedux();
     registerReducers(reducers);
     getStore().dispatch(actions.initialize(sinon.spy()));
     root = mount(
@@ -374,7 +374,7 @@ describe('The DebugConsole component when the debug console is disabled', () => 
   });
 
   afterEach(() => {
-    restoreRedux();
+    __testing_restoreRedux();
   });
 
   const debugOutput = () => root.find('#debug-output');

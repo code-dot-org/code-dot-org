@@ -5,8 +5,8 @@ import {expect} from '../../../../util/reconfiguredChai';
 import {UnconnectedProgrammingExpressionsEditor as ProgrammingExpressionsEditor} from '@cdo/apps/lib/levelbuilder/lesson-editor/ProgrammingExpressionsEditor';
 import {Provider} from 'react-redux';
 import {
-  stubRedux,
-  restoreRedux,
+  __testing_stubRedux,
+  __testing_restoreRedux,
   getStore,
   registerReducers,
 } from '@cdo/apps/redux';
@@ -21,7 +21,7 @@ describe('ProgrammingExpressionsEditor', () => {
     removeProgrammingExpression,
     store;
   beforeEach(() => {
-    stubRedux();
+    __testing_stubRedux();
     registerReducers({
       ...reducers,
     });
@@ -58,7 +58,7 @@ describe('ProgrammingExpressionsEditor', () => {
   });
 
   afterEach(() => {
-    restoreRedux();
+    __testing_restoreRedux();
   });
 
   it('renders default props', () => {

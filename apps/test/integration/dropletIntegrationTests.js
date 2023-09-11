@@ -2,8 +2,8 @@ import {assert, expect} from '../util/reconfiguredChai';
 import * as dropletUtils from '@cdo/apps/dropletUtils';
 import {
   singleton as studioApp,
-  stubStudioApp,
-  restoreStudioApp,
+  __testing_stubStudioApp,
+  __testing_restoreStudioApp,
 } from '@cdo/apps/StudioApp';
 import loadSource from './util/loadSource';
 
@@ -27,8 +27,8 @@ describe('setParamAtIndex', () => {
       });
   });
 
-  beforeEach(stubStudioApp);
-  afterEach(restoreStudioApp);
+  beforeEach(__testing_stubStudioApp);
+  afterEach(__testing_restoreStudioApp);
 
   beforeEach(() => {
     // Mock-up an editor to access a JS parser

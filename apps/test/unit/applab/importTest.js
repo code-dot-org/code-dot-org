@@ -16,8 +16,8 @@ import pageConstantsReducer, {
 import {
   getStore,
   registerReducers,
-  stubRedux,
-  restoreRedux,
+  __testing_stubRedux,
+  __testing_restoreRedux,
 } from '@cdo/apps/redux';
 
 describe('The applab/import module', () => {
@@ -378,7 +378,7 @@ describe('The applab/import module', () => {
           [project.screens[0], project.screens[1]],
           [{filename: 'asset3.png'}, {filename: 'asset4.png'}]
         ).then(onResolve, onReject);
-        stubRedux();
+        __testing_stubRedux();
         registerReducers({pageConstants: pageConstantsReducer});
         getStore().dispatch(
           setPageConstants({
@@ -388,7 +388,7 @@ describe('The applab/import module', () => {
       });
 
       afterEach(() => {
-        restoreRedux();
+        __testing_restoreRedux();
       });
 
       it('will import the specified screens', () => {

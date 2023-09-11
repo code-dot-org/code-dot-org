@@ -1,7 +1,7 @@
 import {expect} from '../../../util/reconfiguredChai';
 import {
-  stubRedux,
-  restoreRedux,
+  __testing_stubRedux,
+  __testing_restoreRedux,
   registerReducers,
   getStore,
 } from '@cdo/apps/redux';
@@ -13,11 +13,11 @@ import javalabEditor, {
 describe('javalabRedux', () => {
   let store;
   beforeEach(() => {
-    stubRedux();
+    __testing_stubRedux();
     registerReducers({javalabEditor});
     store = getStore();
   });
-  afterEach(() => restoreRedux());
+  afterEach(() => __testing_restoreRedux());
 
   it('sourceTextUpdated updates source text and retains other properties', () => {
     const fileName = Object.keys(initialState.sources)[0];

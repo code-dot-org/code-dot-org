@@ -6,8 +6,8 @@ import {Provider} from 'react-redux';
 import {
   getStore,
   registerReducers,
-  stubRedux,
-  restoreRedux,
+  __testing_stubRedux,
+  __testing_restoreRedux,
 } from '@cdo/apps/redux';
 import javalabView, {setDisplayTheme} from '@cdo/apps/javalab/redux/viewRedux';
 import javalabConsole, {
@@ -23,13 +23,13 @@ describe('Java Lab Console Test', () => {
   let store;
 
   beforeEach(() => {
-    stubRedux();
+    __testing_stubRedux();
     registerReducers({javalab, javalabView, javalabConsole});
     store = getStore();
   });
 
   afterEach(() => {
-    restoreRedux();
+    __testing_restoreRedux();
   });
 
   const createWrapper = props => {

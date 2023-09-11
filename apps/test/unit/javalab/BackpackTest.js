@@ -1,7 +1,11 @@
 import React from 'react';
 import {expect, assert} from '../../util/reconfiguredChai';
 import {mount} from 'enzyme';
-import {registerReducers, stubRedux, restoreRedux} from '@cdo/apps/redux';
+import {
+  registerReducers,
+  __testing_stubRedux,
+  __testing_restoreRedux,
+} from '@cdo/apps/redux';
 import javalab from '@cdo/apps/javalab/redux/javalabRedux';
 import BackpackClientApi from '@cdo/apps/code-studio/components/backpack/BackpackClientApi';
 import sinon from 'sinon';
@@ -13,7 +17,7 @@ describe('Java Lab Backpack Test', () => {
   let defaultProps, backpackApiStub;
 
   beforeEach(() => {
-    stubRedux();
+    __testing_stubRedux();
     registerReducers({javalab});
     backpackApiStub = sinon.createStubInstance(BackpackClientApi);
     backpackApiStub.hasBackpack.returns(true);
@@ -28,7 +32,7 @@ describe('Java Lab Backpack Test', () => {
   });
 
   afterEach(() => {
-    restoreRedux();
+    __testing_restoreRedux();
   });
 
   const renderWithProps = props => {

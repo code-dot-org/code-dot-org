@@ -8,8 +8,8 @@ import {reducers, actions} from '@cdo/apps/lib/tools/jsdebugger/redux';
 import {
   getStore,
   registerReducers,
-  stubRedux,
-  restoreRedux,
+  __testing_stubRedux,
+  __testing_restoreRedux,
 } from '@cdo/apps/redux';
 import JSInterpreter from '@cdo/apps/lib/tools/jsinterpreter/JSInterpreter';
 
@@ -42,7 +42,7 @@ describe('The DebugConsole component', () => {
   }
 
   beforeEach(() => {
-    stubRedux();
+    __testing_stubRedux();
     registerReducers(reducers);
     getStore().dispatch(actions.initialize({runApp}));
     root = mount(
@@ -53,7 +53,7 @@ describe('The DebugConsole component', () => {
   });
 
   afterEach(() => {
-    restoreRedux();
+    __testing_restoreRedux();
   });
 
   const buttons = {

@@ -6,8 +6,8 @@ import Sounds from '@cdo/apps/Sounds';
 import {
   getStore,
   registerReducers,
-  stubRedux,
-  restoreRedux,
+  __testing_stubRedux,
+  __testing_restoreRedux,
 } from '@cdo/apps/redux';
 import commonReducers from '@cdo/apps/redux/commonReducers';
 import reducers from '@cdo/apps/p5lab/reducers';
@@ -22,8 +22,8 @@ describe('GameLab', () => {
   before(() => sinon.stub(ReactDOM, 'render'));
   after(() => ReactDOM.render.restore());
 
-  beforeEach(stubRedux);
-  afterEach(restoreRedux);
+  beforeEach(__testing_stubRedux);
+  afterEach(__testing_restoreRedux);
 
   describe('initialization flow', () => {
     let instance, container, config;

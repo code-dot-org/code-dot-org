@@ -5,8 +5,8 @@ import {UnconnectedUnitCard as UnitCard} from '@cdo/apps/lib/levelbuilder/unit-e
 import sinon from 'sinon';
 import {nonUserFacingGroup} from './LessonGroupCardTest';
 import {
-  stubRedux,
-  restoreRedux,
+  __testing_stubRedux,
+  __testing_restoreRedux,
   getStore,
   registerReducers,
 } from '@cdo/apps/redux';
@@ -74,7 +74,7 @@ describe('UnitCard', () => {
   ];
 
   beforeEach(() => {
-    stubRedux();
+    __testing_stubRedux();
     registerReducers({...reducers});
     store = getStore();
     store.dispatch(init(lessonGroups, {}));
@@ -92,7 +92,7 @@ describe('UnitCard', () => {
   });
 
   afterEach(() => {
-    restoreRedux();
+    __testing_restoreRedux();
   });
 
   const createWrapper = overrideProps => {

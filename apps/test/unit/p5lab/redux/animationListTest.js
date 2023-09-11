@@ -30,14 +30,14 @@ import _ from 'lodash';
 import {
   getStore,
   registerReducers,
-  stubRedux,
-  restoreRedux,
+  __testing_stubRedux,
+  __testing_restoreRedux,
 } from '@cdo/apps/redux';
 
 describe('animationList', function () {
   setExternalGlobals(beforeEach, afterEach);
   beforeEach(() => {
-    stubRedux();
+    __testing_stubRedux();
     registerReducers({pageConstants: pageConstantsReducer});
     getStore().dispatch(
       setPageConstants({
@@ -46,7 +46,7 @@ describe('animationList', function () {
     );
   });
   afterEach(() => {
-    restoreRedux();
+    __testing_restoreRedux();
   });
   describe('animationSourceUrl', function () {
     const key = 'foo';

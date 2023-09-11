@@ -4,8 +4,8 @@ import {expect} from '../../../../util/reconfiguredChai';
 import {UnconnectedActivitySectionCard as ActivitySectionCard} from '@cdo/apps/lib/levelbuilder/lesson-editor/ActivitySectionCard';
 import sinon from 'sinon';
 import {
-  stubRedux,
-  restoreRedux,
+  __testing_stubRedux,
+  __testing_restoreRedux,
   getStore,
   registerReducers,
 } from '@cdo/apps/redux';
@@ -42,7 +42,7 @@ describe('ActivitySectionCard', () => {
     moveLevelToActivitySection,
     addLevel;
   beforeEach(() => {
-    stubRedux();
+    __testing_stubRedux();
     registerReducers({
       ...reducers,
       resources: createResourcesReducer('lessonResource'),
@@ -95,7 +95,7 @@ describe('ActivitySectionCard', () => {
   });
 
   afterEach(() => {
-    restoreRedux();
+    __testing_restoreRedux();
   });
 
   it('renders activity section without levels', () => {

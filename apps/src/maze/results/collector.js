@@ -1,15 +1,13 @@
-import StudioApp from '../../StudioApp';
-const studioApp = StudioApp.singleton;
+import {singleton as studioApp} from '../../StudioApp';
 
 import ResultsHandler from './resultsHandler';
 import {TestResults} from '../../constants.js';
-import redux from '../../redux';
-const getStore = redux.getStore;
 
 import experiments from '@cdo/apps/util/experiments';
 import mazeMsg from '../locale';
 
 import {
+  getStore,
   setCollectorMinRequired,
   resetCollectorCurrentCollected,
   setCollectorCurrentCollected,

@@ -10,8 +10,8 @@ import {isOpen as isDebuggerOpen} from '@cdo/apps/lib/tools/jsdebugger/redux';
 import {
   getStore,
   registerReducers,
-  stubRedux,
-  restoreRedux,
+  __testing_stubRedux,
+  __testing_restoreRedux,
 } from '@cdo/apps/redux';
 import {reducers} from '@cdo/apps/applab/redux/applab';
 import pageConstantsReducer from '@cdo/apps/redux/pageConstants';
@@ -547,11 +547,11 @@ describe('Applab', () => {
     after(() => Applab.render.restore());
 
     beforeEach(() => {
-      stubRedux();
+      __testing_stubRedux();
       registerReducers({...reducers, pageConstants: pageConstantsReducer});
     });
 
-    afterEach(restoreRedux);
+    afterEach(__testing_restoreRedux);
 
     describe('configuration options', () => {
       let config;
