@@ -1,7 +1,7 @@
 {
   "addEventHeader": "Klikoni një lidhje më poshtë për të shtuar një funksion në kodin tuaj që do të thirret kur ngjarja të shkaktohet.",
   "catActions": "Veprime",
-  "catControl": "cikle ",
+  "catControl": "Cikle",
   "catEvents": "Ngjarje",
   "catLogic": "Logjikë",
   "catMath": "Matematikë",
@@ -26,6 +26,8 @@
   "designElementProperty_value": "vlerë",
   "designElementProperty_zOrder": "thellësi",
   "designElementTheme_classic": "Klasik",
+  "designElementTheme_orange": "Portokall",
+  "designElement_label": "Emërtimi",
   "designToolboxDescription": "Tërhiqni elementet në aplikacionin tuaj!",
   "designToolboxHeader": "Dizajni Toolbox",
   "designWorkspaceDescription": "Klikoni mbi një element ose zgjidhni atë nga dropdown më poshtë për të redaktuar pronat e tij. Krijoni kodin në Ngjarje.",
