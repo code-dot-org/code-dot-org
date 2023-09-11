@@ -1,5 +1,10 @@
 <Gamelab>
   <config><![CDATA[{
+  "published": true,
+  "game_id": 50,
+  "created_at": "2022-09-19T22:53:40.000Z",
+  "level_num": "custom",
+  "user_id": 324,
   "properties": {
     "skin": "gamelab",
     "code_functions": {
@@ -78,7 +83,7 @@
     "debugger_disabled": "true",
     "pause_animations_by_default": "false",
     "callout_json": "[]",
-    "long_instructions": "# Alpha\r\n\r\n[`alpha`(#f78183)](/docs/ide/gamelab/expressions/alpha) is a property that can control the transparency of a sprite. It uses decimal values to represent transparency:\r\n\r\n- [`sprite.alpha = 0.5;`(#f78183)](/docs/ide/gamelab/expressions/alpha) would be 50% transparent (partially transparent, like it's see-through)\r\n- [`sprite.alpha = 1;`(#f78183)](/docs/ide/gamelab/expressions/alpha) would be 100% transparent (completely transparent - it will look invisible!)\r\n- [`sprite.alpha = 0;`(#f78183)](/docs/ide/gamelab/expressions/alpha) would be 0% transparent (not transparent at all - it will look like a normal sprite)\r\n\r\n# Do This:\r\n\r\n1) Using either the sprite already created for you or with any other sprites of your choosing, play around with the transparency and see how it works and how it changes on different sprites!",
+    "long_instructions": "# Alpha\r\n\r\n[`alpha`(#f78183)](/docs/ide/gamelab/expressions/alpha) is a property that can control the transparency of a sprite. It uses decimal values to represent transparency:\r\n\r\n- [`sprite.alpha = 1;`(#f78183)](/docs/ide/gamelab/expressions/alpha) would be not transparent at all - it will look like a normal sprite.\r\n- [`sprite.alpha = 0;`(#f78183)](/docs/ide/gamelab/expressions/alpha) would be completely transparent - it will look invisible!\r\n- [`sprite.alpha = 0.5;`(#f78183)](/docs/ide/gamelab/expressions/alpha) would be 50% transparent (partially transparent, like it's see-through)\r\n\r\n\r\n# Do This:\r\n\r\n1) Using either the sprite already created for you or with any other sprites of your choosing, play around with the transparency and see how it works and how it changes on different sprites!",
     "parent_level_id": 19234,
     "name_suffix": "_2023",
     "map_reference": "/courses/csd-2022/guides/sprite-properties",
@@ -109,13 +114,8 @@
 
     ]
   },
-  "game_id": 50,
-  "published": true,
-  "created_at": "2022-09-19T22:53:40.000Z",
-  "level_num": "custom",
-  "user_id": 324,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-19T22:53:40.947+00:00\",\"changed\":[\"cloned from \\\"CSD U3 properties alpha_2022\\\"\"],\"cloned_from\":\"CSD U3 properties alpha_2022\"},{\"changed_at\":\"2023-01-11 00:06:12 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"start_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-02-14 18:02:51 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-19T22:53:40.947+00:00\",\"changed\":[\"cloned from \\\"CSD U3 properties alpha_2022\\\"\"],\"cloned_from\":\"CSD U3 properties alpha_2022\"},{\"changed_at\":\"2023-01-11 00:06:12 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"start_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-02-14 18:02:51 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-09-11 16:24:57 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-09-11 16:28:23 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>
