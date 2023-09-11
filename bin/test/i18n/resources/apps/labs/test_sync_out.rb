@@ -116,7 +116,7 @@ describe I18n::Resources::Apps::Labs::SyncOut do
         end
       end
 
-      I18n::Resources::Apps::Labs::UNTRANSLATABLE.each do |untranslatable_lab|
+      I18n::Resources::Apps::Labs::UNTRANSLATABLE_LABS.each do |untranslatable_lab|
         context "and the lab is `#{untranslatable_lab}`" do
           let(:lab) {untranslatable_lab}
 

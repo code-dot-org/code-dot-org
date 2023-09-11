@@ -90,13 +90,13 @@ module I18n
 
             Dir.glob(File.join(crowdin_locale_resource_dir, '*.json')) do |crowdin_locale_file_path|
               lab_name = File.basename(crowdin_locale_file_path, '.json')
-              next if UNTRANSLATABLE.include?(lab_name)
+              next if UNTRANSLATABLE_LABS.include?(lab_name)
 
               I18nScriptUtils.sanitize_file_and_write(crowdin_locale_file_path, lab_i18n_file_path(lab_name, js_locale))
             end
 
             # For untranslated apps, copy English file for all locales
-            UNTRANSLATABLE.each do |lab_name|
+            UNTRANSLATABLE_LABS.each do |lab_name|
               en_lab_i18n_file_path = lab_i18n_file_path(lab_name, 'en_us')
               next unless File.exist?(en_lab_i18n_file_path)
 
