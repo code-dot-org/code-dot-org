@@ -1,0 +1,91 @@
+@import "color", "font";
+
+// Typography - Label styles
+@mixin label-common {
+  font-family: $gotham-bold;
+  margin-bottom: 0.5rem;
+}
+
+@mixin label-one {
+  @include label-common;
+  font-size: 1rem;
+  line-height: 1.48;
+}
+
+@mixin label-two {
+  @include label-common;
+  font-size: 0.875rem;
+  line-height: 1.54;
+}
+
+@mixin label-three {
+  @include label-common;
+  font-size: 0.75rem;
+  line-height: 1.64;
+}
+
+@mixin label-four {
+  @include label-common;
+  font-size: 0.625rem;
+  line-height: 1.8;
+}
+
+// Typography - Link styles (Link Body styles)
+@mixin link-body-common {
+  font-family: $gotham-bold;
+  text-decoration: underline;
+}
+
+@mixin link-body-one {
+  @include link-body-common;
+  font-size: 1.25rem;
+  line-height: 1.4;
+}
+
+@mixin link-body-two {
+  @include link-body-common;
+  font-size: 1rem;
+  line-height: 1.48;
+}
+
+@mixin link-body-three {
+  @include link-body-common;
+  font-size: 0.875rem;
+  line-height: 1.54;
+}
+
+@mixin link-body-four {
+  @include link-body-common;
+  font-size: 0.75rem;
+  line-height: 1.64;
+}
+
+// Typography Button text styles
+@mixin button-text-common {
+  font-family: $gotham-bold;
+  margin-bottom: 0.5rem;
+}
+
+@mixin button-one-text {
+  @include button-text-common;
+  font-size: 1.25rem;
+  line-height: 1.4;
+}
+
+@mixin button-two-text {
+  @include button-text-common;
+  font-size: 1rem;
+  line-height: 1.48;
+}
+
+@mixin button-three-text {
+  @include button-text-common;
+  font-size: 0.875rem;
+  line-height: 1.54;
+}
+
+@mixin button-four-text {
+  @include button-text-common;
+  font-size: 0.75rem;
+  line-height: 1.64;
+}
