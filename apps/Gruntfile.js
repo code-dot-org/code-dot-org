@@ -9,8 +9,8 @@ var sass = require('sass');
 var envConstants = require('./envConstants');
 var checkEntryPoints = require('./script/checkEntryPoints');
 
-const { ALL_APPS, appsEntriesFor } = require('./webpackEntryPoints');
-const { createWebpackConfig } = require('./webpack.config')
+const {ALL_APPS, appsEntriesFor} = require('./webpackEntryPoints');
+const {createWebpackConfig} = require('./webpack.config');
 const offlineWebpackConfig = require('./webpackOffline.config');
 
 module.exports = function (grunt) {
@@ -543,6 +543,9 @@ describe('entry tests', () => {
 
   const piskelDevMode = PISKEL_DEVELOPMENT_MODE;
 
+  // Create a webpack entry point for each of the apps in `appsToBuild`.
+  // See `ALL_APPS` in webpackEntryPoints.js for a list of valid apps, e.g.
+  // gamelab, maze, etc.
   var appsEntries = appsEntriesFor(appsToBuild);
 
   config.webpack = {
