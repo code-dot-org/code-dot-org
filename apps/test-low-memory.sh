@@ -4,6 +4,8 @@ set -e
 # This should be reviewed every couple of years to see if an increase improves
 # test performance. Even if tests run in a given memory limit, if memory is 
 # /super/ tight GC will run frequently and test perf will nosedive.
+#
+# MEM_PER_PROCESS should match the --max_old_space_size set for `npm run test:unit`
 MEM_PER_PROCESS=4200
 
 function linuxNumProcs() {
