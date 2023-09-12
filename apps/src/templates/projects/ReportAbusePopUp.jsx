@@ -42,21 +42,22 @@ class UnconnectedReportAbusePopUp extends React.Component {
     this.handleCheckboxChange = this.handleCheckboxChange.bind(this);
   }
 
-  componentDidUpdate(prevState) {
+  componentDidUpdate() {
     const {showRecaptcha, loadedCaptcha} = this.state;
 
-    if (
-      !showRecaptcha ||
-      (loadedCaptcha && prevState.loadedCaptcha !== loadedCaptcha)
-    ) {
+    if (!showRecaptcha) {
+      console.log('removing');
       this.cleanUpCaptcha();
     }
-    if (!loadedCaptcha && showRecaptcha) {
+
+    if (!loadedCaptcha) {
+      console.log('creating');
       this.createCaptchaScript();
     }
   }
 
   componentWillUnmount() {
+    console.log('unmount');
     this.cleanUpCaptcha();
   }
 
@@ -65,6 +66,7 @@ class UnconnectedReportAbusePopUp extends React.Component {
     if (captchaScript) {
       captchaScript.remove();
     }
+    //this.setState({loadedCaptcha: false});
   }
 
   cancel() {
@@ -173,13 +175,8 @@ class UnconnectedReportAbusePopUp extends React.Component {
     window.onCaptchaExpired = () => this.onCaptchaExpiration();
     script.onload = () => this.setState({loadedCaptcha: true});
     document.body.appendChild(script);
+    console.log('script added!');
   }
-
-  // componentDidMount() {
-  //   if (!this.state.loadedCaptcha) {
-  //     this.createCaptchaScript();
-  //   }
-  // }
 
   render() {
     const {
@@ -191,6 +188,8 @@ class UnconnectedReportAbusePopUp extends React.Component {
     } = this.state;
 
     const captchaSiteKey = this.props.recaptchaSiteKey;
+
+    console.log('starting: ' + loadedCaptcha);
 
     if (!loadedCaptcha) {
       this.createCaptchaScript();
