@@ -17,7 +17,7 @@ cd apps
 
 # Machine setup (OSX with Homebrew)
 brew install node
-npm install -g grunt-cli yarn@3.6.3
+corepack enable
 
 # Perform first full build
 yarn
