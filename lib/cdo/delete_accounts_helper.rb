@@ -431,6 +431,7 @@ class DeleteAccountsHelper
     clean_pegasus_forms_for_user(user)
     delete_project_backed_progress(user)
     clean_and_destroy_pd_content(user.id, user_email)
+    clean_and_destroy_pd_content(user.id, user.email_for_enrollments) unless user_email == user.email_for_enrollments
     clean_user_sections(user.id)
     remove_user_from_sections_as_student(user)
     remove_poste_data(user_email) if user_email&.present?
