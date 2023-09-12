@@ -4,6 +4,7 @@ import {expect} from '../../../../util/reconfiguredChai';
 import RubricsContainer from '@cdo/apps/lib/levelbuilder/rubrics/RubricsContainer';
 import LearningGoalItem from '@cdo/apps/lib/levelbuilder/rubrics/LearningGoalItem';
 import Button from '@cdo/apps/templates/Button';
+import {RubricUnderstandingLevels} from '@cdo/apps/util/sharedConstants';
 
 describe('RubricsContainerTest', () => {
   const defaultProps = {
@@ -16,10 +17,83 @@ describe('RubricsContainerTest', () => {
     lessonNumber: 0,
   };
 
+  const rubricInfo = {
+    learningGoals: [
+      {
+        key: 'ui-1',
+        id: 'ui-1',
+        learningGoal: '',
+        aiEnabled: false,
+        position: 1,
+        learningGoalEvidenceLevelsAttributes: [
+          {
+            teacherDescription: '',
+            understanding: RubricUnderstandingLevels.NONE,
+            aiPrompt: '',
+          },
+          {
+            teacherDescription: '',
+            understanding: RubricUnderstandingLevels.LIMITED,
+            aiPrompt: '',
+          },
+          {
+            teacherDescription: '',
+            understanding: RubricUnderstandingLevels.CONVINCING,
+            aiPrompt: '',
+          },
+          {
+            teacherDescription: '',
+            understanding: RubricUnderstandingLevels.EXTENSIVE,
+            aiPrompt: '',
+          },
+        ],
+      },
+      {
+        key: 'ui-2',
+        id: 'ui-2',
+        learningGoal: '',
+        aiEnabled: false,
+        position: 2,
+        learningGoalEvidenceLevelsAttributes: [
+          {
+            teacherDescription: '',
+            understanding: RubricUnderstandingLevels.NONE,
+            aiPrompt: '',
+          },
+          {
+            teacherDescription: '',
+            understanding: RubricUnderstandingLevels.LIMITED,
+            aiPrompt: '',
+          },
+          {
+            teacherDescription: '',
+            understanding: RubricUnderstandingLevels.CONVINCING,
+            aiPrompt: '',
+          },
+          {
+            teacherDescription: '',
+            understanding: RubricUnderstandingLevels.EXTENSIVE,
+            aiPrompt: '',
+          },
+        ],
+      },
+    ],
+  };
+
   it('renders the components on the page correctly for a new rubric', () => {
     const wrapper = mount(<RubricsContainer {...defaultProps} />);
+    expect(wrapper.find('Heading1').text()).to.equal('Create your rubric');
     expect(wrapper.find('select#rubric_level_id option')).to.have.length(3);
     expect(wrapper.find(LearningGoalItem)).to.have.length(1);
+    expect(wrapper.find('Button[text="Save your rubric"]')).to.have.length(1);
+  });
+
+  it('renders "the components on the page correctly for an exisiting rubric"', () => {
+    const props = {...defaultProps, rubric: rubricInfo};
+    const wrapper = mount(<RubricsContainer {...props} />);
+    expect(wrapper.find('Heading1').text()).to.equal('Modify your rubric');
+    expect(wrapper.find('select#rubric_level_id option')).to.have.length(3);
+    expect(wrapper.find(LearningGoalItem)).to.have.length(2);
     expect(wrapper.find('Button[text="Save your rubric"]')).to.have.length(1);
   });
 
