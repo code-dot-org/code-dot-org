@@ -42,7 +42,25 @@ class UnconnectedReportAbusePopUp extends React.Component {
     this.handleCheckboxChange = this.handleCheckboxChange.bind(this);
   }
 
+  componentDidUpdate(prevState) {
+    const {showRecaptcha, loadedCaptcha} = this.state;
+
+    if (
+      !showRecaptcha ||
+      (loadedCaptcha && prevState.loadedCaptcha !== loadedCaptcha)
+    ) {
+      this.cleanUpCaptcha();
+    }
+    if (!loadedCaptcha && showRecaptcha) {
+      this.createCaptchaScript();
+    }
+  }
+
   componentWillUnmount() {
+    this.cleanUpCaptcha();
+  }
+
+  cleanUpCaptcha() {
     const captchaScript = document.getElementById('captcha');
     if (captchaScript) {
       captchaScript.remove();
@@ -61,6 +79,7 @@ class UnconnectedReportAbusePopUp extends React.Component {
         {name: i18n.abuseTypeOther(), checked: false},
       ],
     });
+    this.cleanUpCaptcha();
   }
 
   onCaptchaVerification(token) {
@@ -133,6 +152,10 @@ class UnconnectedReportAbusePopUp extends React.Component {
         checkbox => checkbox.checked
       );
 
+      // if (!showRecaptcha) {
+      //   this.cleanUpCaptcha();
+      // }
+
       return {
         checkboxes: updatedCheckboxes,
         showRecaptcha,
@@ -148,8 +171,15 @@ class UnconnectedReportAbusePopUp extends React.Component {
     script.defer = true;
     window.onCaptchaSubmit = token => this.onCaptchaVerification(token);
     window.onCaptchaExpired = () => this.onCaptchaExpiration();
+    script.onload = () => this.setState({loadedCaptcha: true});
     document.body.appendChild(script);
   }
+
+  // componentDidMount() {
+  //   if (!this.state.loadedCaptcha) {
+  //     this.createCaptchaScript();
+  //   }
+  // }
 
   render() {
     const {
@@ -157,10 +187,14 @@ class UnconnectedReportAbusePopUp extends React.Component {
       checkboxes,
       submitButtonEnabled,
       showReportConfirmation,
+      loadedCaptcha,
     } = this.state;
 
     const captchaSiteKey = this.props.recaptchaSiteKey;
-    this.createCaptchaScript();
+
+    if (!loadedCaptcha) {
+      this.createCaptchaScript();
+    }
 
     return (
       <AccessibleDialog
