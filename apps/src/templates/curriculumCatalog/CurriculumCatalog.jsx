@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import PropTypes from 'prop-types';
 import {curriculumDataShape} from './curriculumCatalogShapes';
 import i18n from '@cdo/locale';
@@ -28,6 +28,16 @@ const CurriculumCatalog = ({
   const [expandedCardKey, setExpandedCardKey] = useState(null);
 
   const isQuickViewDisplayed = queryParams()['quick_view'] === 'true';
+
+  useEffect(() => {
+    const expandedCardFound = filteredCurricula.some(
+      co => expandedCardKey in co
+    );
+
+    if (!expandedCardFound) {
+      setExpandedCardKey(null);
+    }
+  }, [expandedCardKey, filteredCurricula]);
 
   const handleAssignSuccess = assignmentData => {
     setAssignSuccessMessage(
