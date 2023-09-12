@@ -119,7 +119,11 @@ def do_dtp(dotd_name)
   # As GitHub's API (all of ours, Octokit's and github.com's) does not allow creating a pull
   # request from a commit hash (only a branch name), we create and push a branch.
   branch_name = "dtp_candidate_#{test_green_commit}"
-  create_branch_from_commit(branch_name, test_green_commit) unless GitHub.branch_exists?(branch_name)
+  if GitHub.branch_exists?(branch_name)
+    puts "#{bold 'Warning:'} DTP Candidate Branch #{branch_name.inspect} already exists; reusing."
+  else
+    create_branch_from_commit(branch_name, test_green_commit)
+  end
   production_pr_number = GitHub.find_or_create_pull_request(
     base: 'production',
     head: branch_name,
