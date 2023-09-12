@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-08-02 21:02:26 UTC",
+    "serialized_at": "2023-09-08 21:01:03 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1468,11 +1468,11 @@
       "key": "f05eb94e-fb29-4221-b1da-65ca37a4ef62",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Discuss:**  *Suppose our school library is moving to a new building on campus and the librarian has asked for your help.*\n\n* *What approach would you take if you just needed to clear out the space by the end of the day?*\n* *How would your approach change if you had more time and wanted to check that every book made it safely and was on the same shelf it was on before the move\n?*\n\n**Discussion Goals:** This prompt foreshadows the challenge students will see in today's lesson and also the core difference between the two protocols they'll look at, TCP, and UDP. You don't need to cover either of those at this point in the lesson. Some key points to draw out:\n\n* In the first instance you would probably just load them into boxes and carry them over. You might even be ok if some were lost or the order got messed up. What matters is speed.\n* In the second case there'd need to be some kind of record keeping to make sure that every book was recorded as well as the order it was placed in.\n* In both cases you wouldn't move the entire library at once, you would move boxes or chunks of books at a time.\n\nNote this is a tight lesson with a significant wrap up. Aim to keep this warm up short and move to the main activity quickly.\n",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Distribute:**  *One of Venn Diagrams from the Unit 2 Journal.*\n\n<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i>  **Do This:**  *Students should use the Venn Diagram to brainstorm situations / events / experiences where doing something quickly was most important (speed), determine where being correct and precise was most important (accuracy), and brainstorm situations when both speed and accuracy are needed.*\n\n**Discuss:** Have students offer some of their situations where speed / accuracy / both are needed.\n\n**Discussion Goals:** This prompt foreshadows the challenge students will see in today's lesson and also the core difference between the two protocols they'll look at, TCP, and UDP. You don't need to cover either of those at this point in the lesson. \n\nNote this is a tight lesson with a significant wrap up. Aim to keep this warm up short and move to the main activity quickly.",
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "The [Unit 2 Journal](https://docs.google.com/presentation/d/1NtMSIh3MvntilZoShxE5VhXdxS6Aqfo3SxGIdrbc_Cs/edit?usp=sharing) provides a template you could have students use to respond to this warm up and/or add to throughout the lesson."
+            "markdown": "The Unit 2 Journal provides a Venn Diagram template you could have students use to respond to this warm up and/or add to throughout the lesson. There are three versions of the Unit Journal template available: [Digital](https://docs.google.com/presentation/d/1NtMSIh3MvntilZoShxE5VhXdxS6Aqfo3SxGIdrbc_Cs/edit#slide=id.g22e1838f557_0_346) / [Interactive Journal](https://docs.google.com/presentation/d/1K-07DfJX10UdwaW07KAjLeOlJJ5VZhPjsfQ2RWTWMbw/edit#slide=id.g2379381df00_0_0) / [Handout](https://docs.google.com/document/d/1SFZlGDDuoNDUy_FIyzG05d5s2fYNQ8mtjBoHXhemalI/edit#heading=h.q13xmms02etg)\n"
           }
         ]
       },
@@ -1485,7 +1485,7 @@
       "key": "a388b762-e8a6-4838-8399-b58793cac579",
       "position": 2,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> In the last lesson we learned that messages can take different paths to get to the same place on the Internet.  Sometimes, we need to send really large messages over the internet, like movies or large pictures.  Just like moving your entire school library, there are problems that arise when we want to send large messages on the internet.  Today we're going to learn about two different protocols for sending information online, one that's used when all we care about is speed, and one that's used when accuracy is more important.",
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> In the last lesson we learned that messages can take different paths to get to the same place on the Internet.  Sometimes, we need to send really large messages over the internet, like movies or large pictures.  However, there are problems that arise when we want to send large messages on the internet.  Today we're going to learn about two different protocols for sending information online, one that's used when all we care about is speed, and one that's used when accuracy is more important.",
         "remarks": true
       },
       "seeding_key": {
@@ -1607,7 +1607,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "**Encouraging Good Protocols:** If students are unsure of how to write their protocols, try asking some of these questions:\n\n* Think back to the warm up.  How would you label the moving boxes for the library?\n* Could you use a similar labeling system for the parts of your message?\n* Since we have limited space to work with for each message, what short codes could you use to label them?  (Numbers, letters)\n* What signal can we send to let the receiver know how many messages to expect in total?\n* What signal can we send to let the sender know to resend a particular message?\n* What signal can we send to let the sender know we received all the messages?\n\n**More Than One Solution:** There's lots of ways to solve this problem! Emphasize to students that while their protocol needs to solve the problem, there's not just one right answer and their solution doesn't need to look like their classmates.\n\n**Looking Ahead:** In the future version of the Internet Simulator students will see that packets are actually typically numbered like the image below. You don't need to share this information but it is useful to know where the Internet Simulator is heading.\n\n![](https://images.code.org/270605a64bc27e971c5fb1924bf9221a-image-1611867961617.47.26-AM.png)\n"
+            "markdown": "**Encouraging Good Protocols:** If students are unsure of how to write their protocols, try asking some of these questions:\n\n* If you were moving and packing your possessions into boxes, how might you label these boxes?\n* Could you use a similar labeling system for the parts of your message?\n* Since we have limited space to work with for each message, what short codes could you use to label them?  (Numbers, letters)\n* What signal can we send to let the receiver know how many messages to expect in total?\n* What signal can we send to let the sender know to resend a particular message?\n* What signal can we send to let the sender know we received all the messages?\n\n**More Than One Solution:** There's lots of ways to solve this problem! Emphasize to students that while their protocol needs to solve the problem, there's not just one right answer and their solution doesn't need to look like their classmates.\n\n**Looking Ahead:** In the future version of the Internet Simulator students will see that packets are actually typically numbered like the image below. You don't need to share this information but it is useful to know where the Internet Simulator is heading.\n\n![](https://images.code.org/270605a64bc27e971c5fb1924bf9221a-image-1611867961617.47.26-AM.png)\n"
           }
         ]
       },

@@ -39,4 +39,31 @@ class RubricsControllerTest < ActionController::TestCase
     assert_equal @lesson.id, rubric.lesson_id
     assert_equal 2, learning_goals.length
   end
+
+  test 'submits rubric evaluations of a student' do
+    student = create :student
+    teacher = create :teacher
+    rubric = create :rubric, :with_teacher_evaluations, lesson: @lesson, level: @level, num_evaluations_per_goal: 2, teacher: teacher, student: student
+
+    sign_in teacher
+    post :submit_evaluations, params: {id: rubric.id, student_id: student.id}
+    assert_response :success
+    assert_equal 2, LearningGoalEvaluation.where(user: student, teacher: teacher).where.not(submitted_at: nil).count
+  end
+
+  test 'can only submit evaluations with same teacher_id as current_user' do
+    rubric = create :rubric, lesson: @lesson, level: @level
+    student = create :student
+    teacher = create :teacher
+    another_teacher = create :teacher
+    create :learning_goal, :with_teacher_evaluations, rubric: rubric, teacher: teacher, student: student
+    create :learning_goal, :with_teacher_evaluations, rubric: rubric, teacher: another_teacher, student: student
+
+    sign_in teacher
+    post :submit_evaluations, params: {id: rubric.id, student_id: student.id}
+
+    assert_response :success
+    refute_nil LearningGoalEvaluation.find_by(user: student, teacher: teacher).submitted_at
+    assert_nil LearningGoalEvaluation.find_by(user: student, teacher: another_teacher).submitted_at
+  end
 end

@@ -73,7 +73,8 @@ export default function LearningGoalItem({
       </div>
       <div style={styles.activityBody}>
         <EvidenceDescriptions
-          isAiEnabled={exisitingLearningGoalData.aiEnabled}
+          learningGoalData={exisitingLearningGoalData}
+          updateLearningGoal={updateLearningGoal}
         />
         <Button
           text="Delete key concept"
