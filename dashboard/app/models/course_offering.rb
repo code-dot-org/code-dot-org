@@ -358,6 +358,7 @@ class CourseOffering < ApplicationRecord
       video: video,
       published_date: published_date,
       self_paced_pl_course_offering_id: self_paced_pl_course_offering_id,
+      self_paced_pl_course_offering_key: self_paced_pl_course_offering&.key,
     }
   end
 
@@ -386,6 +387,7 @@ class CourseOffering < ApplicationRecord
   # seed_all
   def self.seed_record(file_path)
     properties = properties_from_file(File.read(file_path))
+    properties.delete(:self_paced_pl_course_offering_key)
     course_offering = CourseOffering.find_or_initialize_by(key: properties[:key])
     course_offering.update! properties
     course_offering.key
