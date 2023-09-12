@@ -20,9 +20,9 @@ theme: responsive_full_width
 
 %section
   .wrapper
-    %div.col-50{style: "margin: .5rem 0 1rem;"}
+    %div.col-45{style: "margin: .5rem 0 1rem; border: 1px solid;"}
       = view :display_video_thumbnail, id: "intro_csa", video_code: "pWZG9lXehrQ", play_button: 'center', letterbox: 'false'
-    .text-wrapper.col-45{style: "float: right;"}
+    .text-wrapper.col-50{style: "float: right;"}
       %h2=hoc_s(:csa_ai_page_video_section_title)
       %ul
         %li=hoc_s(:csa_ai_page_video_section_li_1)
@@ -35,7 +35,7 @@ theme: responsive_full_width
 
 %section.bg-neutral-light
   .wrapper
-    = view :vision_curriculum_glance, heading: hoc_s(:heading_curriculum_at_a_glance), grades: hoc_s(:module_grade_9_12), duration: hoc_s(:module_duration_2_weeks), level: hoc_s(:module_level_advanced), tools: hoc_s(:csa_ai_page_programming_tools), devices: hoc_s(:csa_page_curriculum_glance_devices), professional_learning: hoc_s(:csa_ai_page_professional_learning), topics: hoc_s(:csa_ai_page_curriculum_topics), accessibility_features: hoc_s(:csa_ai_page_curriculum_accessibility_features), languages: hoc_s(:csa_ai_page_curriculum_languages_support)
+    = view :curriculum_glance_section, heading: hoc_s(:heading_curriculum_at_a_glance), grades: hoc_s(:module_grade_9_12), duration: hoc_s(:module_duration_2_weeks), level: hoc_s(:module_level_advanced), tools: hoc_s(:csa_ai_page_programming_tools), devices: hoc_s(:csa_page_curriculum_glance_devices), professional_learning: hoc_s(:csa_ai_page_professional_learning), topics: hoc_s(:csa_ai_page_curriculum_topics), accessibility_features: hoc_s(:csa_ai_page_curriculum_accessibility_features), languages: hoc_s(:csa_ai_page_curriculum_languages_support)
 
 %section
   .wrapper
@@ -50,7 +50,7 @@ theme: responsive_full_width
   .wrapper
     %h2=hoc_s(:csa_ai_page_learn_more_section_title)
     .action-block.action-block--two-col
-      %img{src: "/images/learn-more-about-ai.png", alt: "", class: "col-50"}
+      %img{src: "/shared/images/social-media/ai-101-social.png", alt: "", class: "col-50"}
       .text-wrapper.col-50
         %h3.heading-sm
           =hoc_s(:csa_ai_page_learn_more_title)
