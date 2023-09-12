@@ -3,24 +3,24 @@ const path = require('path');
 
 const envConstants = require('./envConstants');
 const {
-  baseConfig,
   devtool,
   localeDoNotImport,
-} = require('./webpack.base.config');
+  WEBPACK_BASE_CONFIG,
+} = require('./webpack.config');
 
 // alias '@cdo/applab/locale' => 'test/util/applab/locale-do-not-import.js'
 const localeDoNotImportTest = cdo => localeDoNotImport(cdo, 'test/util');
 
 // config for our test runner
 const karmaConfig = {
-  ...baseConfig,
+  ...WEBPACK_BASE_CONFIG,
   ...{
     devtool: devtool(),
     resolve: {
-      ...baseConfig.resolve,
+      ...WEBPACK_BASE_CONFIG.resolve,
       ...{
         alias: {
-          ...baseConfig.resolve.alias,
+          ...WEBPACK_BASE_CONFIG.resolve.alias,
           ...Object.fromEntries([
             localeDoNotImportTest('@cdo/applab/locale'),
             localeDoNotImportTest('@cdo/gamelab/locale'),
