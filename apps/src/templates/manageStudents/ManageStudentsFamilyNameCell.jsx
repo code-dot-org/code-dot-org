@@ -22,6 +22,7 @@ export default function ManageStudentFamilyNameCell({
     dispatch(editStudent(id, {familyName: newValue}));
   };
 
+  // When the cell is disabled (i.e. for teacher accounts), the tooltip appears
   const tooltipId = inputDisabled ? _.uniqueId() : '';
 
   return (
