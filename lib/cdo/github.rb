@@ -43,6 +43,17 @@ module GitHub
     end
   end
 
+  # @param branch_name [String] The name of the branch to check for
+  # @return [Boolean] Whether or not a branch with the specified name already
+  #         exists in the repository.
+  def self.branch_exists?(branch_name)
+    configure_octokit
+    response = Octokit.branch(REPO, branch_name)
+    return true if response
+  rescue Octokit::NotFound
+    return false
+  end
+
   # Creates a new branch with the given name based on the base_branch branch and
   # merges the given commit into it. If all goes well, pushes the new branch to GitHub.
   # Note: assumes it is run from an environment with a git worktree called
@@ -109,6 +120,21 @@ module GitHub
     response = Octokit.create_pull_request(REPO, base, head, title, body)
 
     response['number']
+  end
+
+  # Octokit Documentation: https://octokit.github.io/octokit.rb/Octokit/Client/PullRequests.html#pull_requests-instance_method
+  # @param base [String] The base branch of the requested pull request.
+  # @param head [String] The head branch of the requested pull request.
+  # @param title [String] The title of the requested pull request.
+  # @param body [String] The body for the pull request (optional). Supports GFM.
+  # @return [nil | Integer] The PR number of the first PR found for this base
+  #         and head, or a new PR if one didn't already exist.
+  def self.find_or_create_pull_request(base:, head:, title:, body: nil)
+    configure_octokit
+    existing_pull_requests = Octokit.pull_requests(REPO, {base: base, head: head})
+    return existing_pull_requests.first['number'] unless existing_pull_requests.empty?
+
+    return create_pull_request(base: base, head: head, title: title, body: body)
   end
 
   # Octokit Documentation: http://octokit.github.io/octokit.rb/Octokit/Client/Issues.html#update_issue-instance_method

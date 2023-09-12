@@ -106,8 +106,9 @@ def mark_dtt_green
   @logger.info 'marks DTT green'
 end
 
-# Creates a DTP branch from the most recent green commit, creates a GitHub PR merging it to
-# production, and prompts the user whether the PR should be merged (merging if so).
+# Creates a branch from the most recent green commit to the test brach and a
+# GitHub PR merging that branch to production if they do not exist. Then
+# prompts the user whether the PR should be merged (merging if so).
 # @param [String] dotd_name The name of the DOTD running this script.
 def do_dtp(dotd_name)
   test_green_commit = InfraTestTopic.green_commit
@@ -118,8 +119,8 @@ def do_dtp(dotd_name)
   # As GitHub's API (all of ours, Octokit's and github.com's) does not allow creating a pull
   # request from a commit hash (only a branch name), we create and push a branch.
   branch_name = "dtp_candidate_#{test_green_commit}"
-  create_branch_from_commit branch_name, test_green_commit
-  production_pr_number = GitHub.create_pull_request(
+  create_branch_from_commit(branch_name, test_green_commit) unless GitHub.branch_exists?(branch_name)
+  production_pr_number = GitHub.find_or_create_pull_request(
     base: 'production',
     head: branch_name,
     title: "DTP (Test > Production: #{test_green_commit})"
