@@ -1,14 +1,25 @@
 :scss
+  .about-seals {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    margin-bottom: 2rem;
+
+    @media screen and (max-width: 970px) {
+      gap: 2rem;
+    }
+
+    @media screen and (max-width: 600px) {
+      gap: 3rem;
+      justify-content: center;
+    }
+  }
+
   .guidestar {
     a {
       display: inline-block;
       position: relative;
       z-index: 1;
-    }
-    span {
-      display: inline-block;
-      vertical-align: middle;
-      margin-right: 40px;
     }
     object {
       position: relative;
@@ -16,13 +27,15 @@
     }
   }
 
-%a{href:"https://www.guidestar.org/profile/46-0858543", 
-    target: "_blank", 
-    rel: "noopener noreferrer", 
-    class: "guidestar"}
-  %span
-    %object{data: "https://widgets.guidestar.org/gximage2?o=9218725&l=v4", 
-      type: "image/svg+xml"}
-      %img{src: "/images/guidestar-logo.svg"}
-%a{href: "http://studentprivacypledge.org"}
-  %img{src: "/images/fit-150/student_privacy_pledge.png"}
+%div.about-seals
+  %a{href: "https://www.bestofstemawards.com/", target: "_blank", rel: "noopener noreferrer"}
+    %img{src: "/images/about/seals/best_of_stem_2023.png", style: "width: 155px"}
+  %a{href: "https://www.commonsense.org/education/reviews/codeorg", target: "_blank", rel: "noopener noreferrer"}
+    %img{src: "/images/about/seals/common_sense_selection_seals_learning.svg", style: "height: 138px"}
+  %a{href:"https://www.guidestar.org/profile/46-0858543", target: "_blank", rel: "noopener noreferrer", class: "guidestar"}
+    %span
+      %object{data: "https://widgets.guidestar.org/gximage2?o=9218725&l=v4",
+        type: "image/svg+xml"}
+        %img{src: "/images/guidestar-logo.svg"}
+  %a{href: "http://studentprivacypledge.org", target: "_blank", rel: "noopener noreferrer"}
+    %img{src: "/images/student_privacy_pledge.png", style: "width: 115px"}
