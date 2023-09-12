@@ -7,7 +7,7 @@ import i18n from '@cdo/locale';
 import {editStudent} from './manageStudentsRedux';
 import {tableLayoutStyles} from '../tables/tableConstants';
 
-function ManageStudentFamilyNameCell({
+export default function ManageStudentFamilyNameCell({
   id,
   familyName,
   isEditing,
@@ -63,5 +63,3 @@ ManageStudentFamilyNameCell.propTypes = {
   editedValue: PropTypes.string,
   inputDisabled: PropTypes.bool,
 };
-
-export default ManageStudentFamilyNameCell;
