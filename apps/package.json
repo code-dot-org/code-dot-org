@@ -13,7 +13,7 @@
     "lint:scss": "npx stylelint '**/*.scss'",
     "test": "TZ=UTC ./test-low-memory.sh",
     "test-low-memory": "TZ=UTC ./test-low-memory.sh",
-    "test:unit": "TZ=UTC node --max_old_space_size=4096 ./node_modules/.bin/grunt unitTest",
+    "test:unit": "TZ=UTC node --max_old_space_size=4200 ./node_modules/.bin/grunt unitTest",
     "test:integration": "TZ=UTC grunt integrationTest",
     "test:entry": "TZ=UTC grunt karma:entry",
     "clean": "grunt clean",
