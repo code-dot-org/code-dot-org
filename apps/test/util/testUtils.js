@@ -1,7 +1,7 @@
 import React from 'react';
 import $ from 'jquery';
 import sinon from 'sinon';
-const project = require('@cdo/apps/code-studio/initApp/project');
+const project = require('@cdo/apps/code-studio/initApp/project').default;
 const assets = require('@cdo/apps/code-studio/assets');
 export {
   throwOnConsoleErrorsEverywhere,
