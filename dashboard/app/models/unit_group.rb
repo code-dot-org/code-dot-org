@@ -501,7 +501,7 @@ class UnitGroup < ApplicationRecord
   end
 
   def supported_locale_codes
-    locales = default_unit_group_units.first.script.supported_locales || []
+    locales = default_unit_group_units.first&.script&.supported_locales || []
     locales.filter {|locale| default_unit_group_units.all? {|unit_group_unit| unit_group_unit.script.supported_locales&.include?(locale)}}
     locales += ['en-US'] unless locales.include? 'en-US'
     locales.sort
