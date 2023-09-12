@@ -100,22 +100,22 @@ dependencies will be. Here are the different options:
 1. I'm creating a new code studio "app" like applab/gamelab/etc.
 
    Add the name of your app's directory to the `ALL_APPS` array in
-   `Gruntfile.js` and make sure the directory contains a `main.js` file. The build
+   `webpackEntryPoints.js` and make sure the directory contains a `main.js` file. The build
    system will then generate a new bundle for that app with the same name as the
    directory, using `main.js` as the entry point. Code shared with other apps will
    be factored out into `common.js`.
 
 2. I'm creating a new code studio page that isn't an app.
 
-   Add a new key/value into the `codeStudioEntries` object in `Gruntfile.js`. The
+   Add a new key/value into the `CODE_STUDIO_ENTRIES` object in `webpackEntryPoints.js`. The
    key will become the bundle's filename and the value is the file to generate the
    bundle from. Any code used by your new file which is used by other entries in
-   `codeStudioEntries` will be automatically factored out into the
+   `CODE_STUDIO_ENTRIES` will be automatically factored out into the
    `code-studio-common.js` file.
 
 3. I'm creating a new "marketing" page that doesn't have a lot of dependencies.
 
-   Add a new key/value pair to the `otherEntries` object in `Gruntfile.js`. All
+   Add a new key/value pair to the `OTHER_ENTRIES` object in `webpackEntryPoints.js`. All
    dependencies will be included in the new bundle whether or not they are also
    used by other bundles.
 
@@ -157,8 +157,7 @@ different configurations get run. Here is the approximate flow of commands/files
    `applab.js`), or (2) a minified, hashed version of the same bundle (like 
    `applabwp0123456789abcdef0123.min.js`).
 
-   The exact configuration used by webpack is defined in `apps/Gruntfile.js` and
-   `apps/webpack.js`.
+   The exact configuration used by webpack is defined in `apps/webpack*.js`.
 
 5. `rake assets:precompile` - This is a ruby on rails rake task which
    generates/compiles *all* the static assets (including images, css, js, etc.)
