@@ -16,7 +16,7 @@ if (envConstants.COVERAGE) {
 // Use the babel test env defined in .babelrc
 process.env.BABEL_ENV = 'test';
 
-module.exports = function(config) {
+module.exports = function (config) {
   var browser = envConstants.BROWSER || 'ChromeHeadless';
   config.set({
     // base path that will be used to resolve all patterns (eg. files, exclude)
@@ -43,7 +43,7 @@ module.exports = function(config) {
       'test/integration-tests.js': ['webpack', 'sourcemap'],
       'test/unit-tests.js': ['webpack'],
       'test/code-studio-tests.js': ['webpack', 'sourcemap'],
-      'test/storybook-tests.js': ['webpack', 'sourcemap']
+      'test/storybook-tests.js': ['webpack', 'sourcemap'],
     },
 
     webpack: {...webpackConfig, optimization: undefined, mode: 'development'},
@@ -53,8 +53,8 @@ module.exports = function(config) {
       captureConsole: true,
       mocha: {
         timeout: 14000,
-        bail: browser === 'PhantomJS'
-      }
+        bail: browser === 'PhantomJS',
+      },
     },
 
     // test results reporter to use
@@ -66,16 +66,16 @@ module.exports = function(config) {
       outputDir: envConstants.CIRCLECI
         ? `${envConstants.CIRCLE_TEST_REPORTS}/apps`
         : '',
-      outputFile: 'all.xml'
+      outputFile: 'all.xml',
     },
     coverageIstanbulReporter: {
       reports: ['html', 'lcovonly'],
       dir: 'coverage',
-      fixWebpackSourcePaths: true
+      fixWebpackSourcePaths: true,
     },
     mochaReporter: {
       output: envConstants.CDO_VERBOSE_TEST_OUTPUT ? 'full' : 'minimal',
-      showDiff: true
+      showDiff: true,
     },
 
     hostname: 'localhost-studio.code.org',
@@ -107,6 +107,6 @@ module.exports = function(config) {
 
     // increase timeout to wait for webpack to do its thing.
     captureTimeout: 90000,
-    browserNoActivityTimeout: 90000 // 60 seconds
+    browserNoActivityTimeout: 90000, // 60 seconds
   });
 };
