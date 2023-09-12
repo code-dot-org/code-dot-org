@@ -140,6 +140,22 @@ function selectedGallery(state = initialSelectedGalleryState, action) {
   }
 }
 
+const initialCaptchaState = {
+  captchaSiteKey: '',
+};
+
+function captcha(state = initialCaptchaState, action) {
+  switch (action.type) {
+    case SET_CAPTCHA_KEY:
+      return {
+        ...state,
+        captchaSiteKey: action.captchaSiteKey,
+      };
+    default:
+      return state;
+  }
+}
+
 // A map from project type to array of projects
 const initialProjectListState = {
   applab: [],
@@ -425,17 +441,17 @@ function personalProjectsList(state = initialPersonalProjectsList, action) {
   }
 }
 
-function captcha(state = initialPersonalProjectsList, action) {
-  switch (action.type) {
-    case SET_CAPTCHA_KEY:
-      return {
-        ...state,
-        captchaSiteKey: action.captchaSiteKey,
-      };
-    default:
-      return state;
-  }
-}
+// function captcha(state = initialPersonalProjectsList, action) {
+//   switch (action.type) {
+//     case SET_CAPTCHA_KEY:
+//       return {
+//         ...state,
+//         captchaSiteKey: action.captchaSiteKey,
+//       };
+//     default:
+//       return state;
+//   }
+// }
 
 const reducer = combineReducers({
   selectedGallery,

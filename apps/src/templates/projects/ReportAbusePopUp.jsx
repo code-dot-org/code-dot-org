@@ -4,7 +4,7 @@ import i18n from '@cdo/locale';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import AccessibleDialog from '@cdo/apps/templates/AccessibleDialog';
 import RailsAuthenticityToken from '../../lib/util/RailsAuthenticityToken';
-import style from './project-card.module.scss';
+import style from './report-abuse-pop-up.module.scss';
 import Button from '@cdo/apps/templates/Button';
 import CheckBox from '@cdo/apps/componentLibrary/checkbox';
 import {connect} from 'react-redux';
@@ -25,10 +25,22 @@ class UnconnectedReportAbusePopUp extends React.Component {
       showReportConfirmation: false,
       captchaCompleted: false,
       checkboxes: [
-        {name: i18n.abuseTypeCyberbullying(), checked: false},
-        {name: i18n.abuseTypeOffensiveHyphenated(), checked: false},
-        {name: i18n.abuseTypeInfringementHyphenated(), checked: false},
-        {name: i18n.abuseTypeOther(), checked: false},
+        {
+          key: 'Cyberbullying',
+          label: i18n.abuseTypeCyberbullying(),
+          checked: false,
+        },
+        {
+          key: 'Offensive-Content',
+          label: i18n.abuseTypeOffensive(),
+          checked: false,
+        },
+        {
+          key: 'Copyright-Infringement',
+          label: i18n.abuseTypeInfringement(),
+          checked: false,
+        },
+        {key: 'Other', label: i18n.abuseTypeOther(), checked: false},
       ],
       showRecaptcha: false,
       submitButtonEnabled: false,
@@ -74,10 +86,22 @@ class UnconnectedReportAbusePopUp extends React.Component {
       captchaCompleted: false, // reset captcha completion
       showRecaptcha: false, // reset checkboxes
       checkboxes: [
-        {name: i18n.abuseTypeCyberbullying(), checked: false},
-        {name: i18n.abuseTypeOffensiveHyphenated(), checked: false},
-        {name: i18n.abuseTypeInfringementHyphenated(), checked: false},
-        {name: i18n.abuseTypeOther(), checked: false},
+        {
+          key: 'Cyberbullying',
+          label: i18n.abuseTypeCyberbullying(),
+          checked: false,
+        },
+        {
+          key: 'Offensive-Content',
+          label: i18n.abuseTypeOffensive(),
+          checked: false,
+        },
+        {
+          key: 'Copyright-Infringement',
+          label: i18n.abuseTypeInfringement(),
+          checked: false,
+        },
+        {key: 'Other', label: i18n.abuseTypeOther(), checked: false},
       ],
     });
     this.cleanUpCaptcha();
@@ -109,7 +133,7 @@ class UnconnectedReportAbusePopUp extends React.Component {
 
     const checkedCheckboxNames = this.state.checkboxes
       .filter(checkbox => checkbox.checked)
-      .map(checkbox => checkbox.name);
+      .map(checkbox => checkbox.key.replace(/-/g, ' '));
     formData.append('abuse_type', checkedCheckboxNames);
 
     fetch('/report_abuse_pop_up', {
@@ -141,10 +165,10 @@ class UnconnectedReportAbusePopUp extends React.Component {
     });
   }
 
-  handleCheckboxChange = checkboxName => {
+  handleCheckboxChange = checkboxKey => {
     this.setState(prevState => {
       const updatedCheckboxes = prevState.checkboxes.map(checkbox =>
-        checkbox.name === checkboxName
+        checkbox.key === checkboxKey
           ? {...checkbox, checked: !checkbox.checked}
           : checkbox
       );
@@ -183,10 +207,7 @@ class UnconnectedReportAbusePopUp extends React.Component {
     const captchaSiteKey = this.props.recaptchaSiteKey;
 
     return (
-      <AccessibleDialog
-        className={style.reportAbusePopUp}
-        onClose={this.cancel}
-      >
+      <AccessibleDialog className={style.popUp} onClose={this.cancel}>
         {showReportConfirmation ? (
           <div className={style.submitConfirmation}>
             <h3>{i18n.thankyou()}!</h3>
@@ -199,25 +220,25 @@ class UnconnectedReportAbusePopUp extends React.Component {
           </div>
         ) : (
           <div>
-            <div className={style.popUpTitle}>
+            <div className={style.title}>
               <h3 style={{margin: 0}}>{i18n.reportAbuse()}</h3>
               <button
                 type="reset"
                 onClick={this.cancel}
                 className={style.xButton}
               >
-                <FontAwesome icon="x" style={{color: '#D4D5D7'}} />
+                <FontAwesome icon="x" className={style.xIcon} />
               </button>
             </div>
-            <hr className={style.popUpLines} />
-            <p className={style.popUpBody}>{i18n.whyReport()}</p>
+            <hr className={style.lines} />
+            <p className={style.body}>{i18n.whyReport()}</p>
             <div>
               {checkboxes.map(checkbox => (
                 <CheckBox
-                  key={checkbox.name}
-                  label={checkbox.name.replace(/-/g, ' ')}
+                  key={checkbox.key}
+                  label={checkbox.label}
                   checked={checkbox.checked}
-                  onChange={() => this.handleCheckboxChange(checkbox.name)}
+                  onChange={() => this.handleCheckboxChange(checkbox.key)}
                   size="s"
                 />
               ))}
@@ -231,8 +252,8 @@ class UnconnectedReportAbusePopUp extends React.Component {
                 data-expired-callback="onCaptchaExpired"
               />
             ) : null}
-            <hr className={style.popUpLines} />
-            <div className={style.popUpButtonHolder}>
+            <hr className={style.lines} />
+            <div className={style.buttonHolder}>
               <Button
                 onClick={this.cancel}
                 text={i18n.cancel()}
@@ -242,7 +263,7 @@ class UnconnectedReportAbusePopUp extends React.Component {
                 onClick={this.handleSubmit}
                 disabled={!submitButtonEnabled}
                 text={i18n.submit()}
-                style={{outline: 'none'}}
+                className={style.submitButton}
                 color={Button.ButtonColor.brandSecondaryDefault}
               />
             </div>
