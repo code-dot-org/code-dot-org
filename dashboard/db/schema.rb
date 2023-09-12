@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_08_31_145020) do
+ActiveRecord::Schema.define(version: 2023_09_11_173341) do
 
   create_table "activities", id: :integer, charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -622,6 +622,18 @@ ActiveRecord::Schema.define(version: 2023_08_31_145020) do
     t.index ["user_id"], name: "index_hint_view_requests_on_user_id"
   end
 
+  create_table "learning_goal_ai_evaluatons", charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "learning_goal_id"
+    t.datetime "prompt_version"
+    t.integer "userstanding"
+    t.text "context"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["learning_goal_id"], name: "index_learning_goal_ai_evaluatons_on_learning_goal_id"
+    t.index ["user_id"], name: "index_learning_goal_ai_evaluatons_on_user_id"
+  end
+
   create_table "learning_goal_evaluations", charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
     t.integer "teacher_id"
@@ -646,6 +658,19 @@ ActiveRecord::Schema.define(version: 2023_08_31_145020) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["learning_goal_id", "understanding"], name: "index_learning_goal_evidence_levels_on_lg_id_and_understanding", unique: true
+  end
+
+  create_table "learning_goal_teacher_evaluations", charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "teacher_id", null: false
+    t.integer "learning_goal_id", null: false
+    t.integer "understanding", null: false
+    t.text "feedback"
+    t.datetime "submitted_at"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["learning_goal_id"], name: "index_learning_goal_teacher_evaluations_on_learning_goal_id"
+    t.index ["user_id", "teacher_id"], name: "index_learning_goal_teacher_evaluations_on_user_and_teacher_id"
   end
 
   create_table "learning_goals", charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
