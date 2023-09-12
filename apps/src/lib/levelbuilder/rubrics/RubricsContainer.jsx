@@ -1,10 +1,15 @@
 import React, {useState} from 'react';
 import PropTypes from 'prop-types';
-import {BodyTwoText, Heading1} from '@cdo/apps/componentLibrary/typography';
+import {
+  BodyThreeText,
+  BodyTwoText,
+  Heading1,
+} from '@cdo/apps/componentLibrary/typography';
 import Button from '@cdo/apps/templates/Button';
 import {navigateToHref} from '@cdo/apps/utils';
 import RubricEditor from './RubricEditor';
 import {snakeCase, isNumber} from 'lodash';
+import {RubricUnderstandingLevels} from '@cdo/apps/util/sharedConstants';
 
 const RUBRIC_PATH = '/rubrics';
 
@@ -28,28 +33,30 @@ export default function RubricsContainer({
             learningGoalEvidenceLevelsAttributes: [
               {
                 teacherDescription: '',
-                understanding: 0,
+                understanding: RubricUnderstandingLevels.NONE,
                 aiPrompt: '',
               },
               {
                 teacherDescription: '',
-                understanding: 1,
+                understanding: RubricUnderstandingLevels.LIMITED,
                 aiPrompt: '',
               },
               {
                 teacherDescription: '',
-                understanding: 2,
+                understanding: RubricUnderstandingLevels.CONVINCING,
                 aiPrompt: '',
               },
               {
                 teacherDescription: '',
-                understanding: 3,
+                understanding: RubricUnderstandingLevels.EXTENSIVE,
                 aiPrompt: '',
               },
             ],
           },
         ]
   );
+
+  const [saveNotificationText, setSaveNotificationText] = useState('');
 
   const generateLearningGoalKey = () => {
     let learningGoalNumber = learningGoalList.length + 1;
@@ -80,22 +87,22 @@ export default function RubricsContainer({
       learningGoalEvidenceLevelsAttributes: [
         {
           teacherDescription: '',
-          understanding: 0,
+          understanding: RubricUnderstandingLevels.NONE,
           aiPrompt: '',
         },
         {
           teacherDescription: '',
-          understanding: 1,
+          understanding: RubricUnderstandingLevels.LIMITED,
           aiPrompt: '',
         },
         {
           teacherDescription: '',
-          understanding: 2,
+          understanding: RubricUnderstandingLevels.CONVINCING,
           aiPrompt: '',
         },
         {
           teacherDescription: '',
-          understanding: 3,
+          understanding: RubricUnderstandingLevels.EXTENSIVE,
           aiPrompt: '',
         },
       ],
@@ -158,10 +165,10 @@ export default function RubricsContainer({
     initialLevelForAssessment
   );
 
-  // TODO-AITT-169: Create notification for when a rubric has been saved
   // TODO-AITT-171: Enable deleting LearningGoals when saveRubric is called
   const saveRubric = event => {
     event.preventDefault();
+    setSaveNotificationText('Saving...');
     const dataUrl = !!rubric ? `/rubrics/${rubric.id}` : RUBRIC_PATH;
     const method = !!rubric ? 'PATCH' : 'POST';
 
@@ -192,6 +199,11 @@ export default function RubricsContainer({
       .then(data => {
         if (!rubric) {
           navigateToHref(data.redirectUrl);
+        } else {
+          setSaveNotificationText('Save complete!');
+          setTimeout(() => {
+            setSaveNotificationText('');
+          }, 8500);
         }
       })
       .catch(err => {
@@ -218,7 +230,9 @@ export default function RubricsContainer({
   /**
    * Transforms the keys of an object from camelCase to snake_case.
    * Intended to transform the keys of objects in an array of an object.
-   * In this case, it is only intended into the first nested layer.
+   * from camelCase to snake_case. This is recursive so that both the
+   * keys in learningGoalList and the keys in learningGoalEvidenceLevelsAttributes
+   * (which is nested in learningGoalList) get transformed to snake_case.
    * @param {object} obj - The object with keys in camelCase format.
    * @returns {object} - The object with keys in snake_case format.
    */
@@ -250,9 +264,11 @@ export default function RubricsContainer({
     setSelectedLevelForAssessment(event.target.value);
   };
 
+  const pageHeader = !!rubric ? 'Modify your rubric' : 'Create your rubric';
+
   return (
     <div>
-      <Heading1>Create or modify your rubric</Heading1>
+      <Heading1>{pageHeader}</Heading1>
       <BodyTwoText>
         This rubric will be used for {unitName}, lesson {lessonNumber}.
       </BodyTwoText>
@@ -287,6 +303,9 @@ export default function RubricsContainer({
           size={Button.ButtonSize.narrow}
         />
       </div>
+      <div style={styles.bottomRow}>
+        <BodyThreeText>{saveNotificationText}</BodyThreeText>
+      </div>
     </div>
   );
 }
@@ -309,6 +328,6 @@ const styles = {
   },
   bottomRow: {
     display: 'flex',
-    justifyContent: 'space-between',
+    justifyContent: 'end',
   },
 };
