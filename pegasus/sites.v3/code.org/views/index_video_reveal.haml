@@ -3,18 +3,18 @@
     outline: 0;
   }
 
-%div{style: "text-align:right; overflow:hidden"}
+%div{style: "text-align:right;"}
   =view :video_with_fallback, video_code: video_code, download_path: download_path
 
   %div{style: "float:left"}
     =view :share_buttons, facebook: facebook, twitter: twitter
 
   - unless download_filename.nil_or_empty?
-    %div{style: "float:right"}
+    %div
       %a{href: "http://s3.amazonaws.com/cdo-videos/#{download_filename}"}
         %img{width: 34, height: 34, style: "margin-top: 10px;", src: "/images/download_cropped.png", alt: "Download video"}
 
   - unless download_path.nil_or_empty?
-    %div{style: "float:right"}
+    %div
       %a{href: download_path}
         %img{width: 34, height: 34, style: "margin-top: 10px;", src: "/images/download_cropped.png", alt: "Download video"}

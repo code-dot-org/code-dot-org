@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-09-05 16:42:30 UTC",
+    "serialized_at": "2023-09-11 22:21:50 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1473,7 +1473,7 @@
       "key": "77916118-5dbb-4594-9875-2039a4f9e2f4",
       "position": 4,
       "properties": {
-        "description": "**Circulate & Distribute:** Have students share their thoughts with a neighbor. Listen for examples that may be worth using as examples throughout the lesson. \n\nAs students share, distribute a copy of the [r _warm_up_word_search/csd/2023] to each student, face down. Make sure students don't start the word search ahead of time.\n"
+        "description": "**Circulate & Distribute:** Have students share their thoughts with a neighbor. Listen for examples that may be worth using as examples throughout the lesson. \n\nAs students share, distribute a copy of the [r _warm_up_word_search_1/csd/2023] to each student, face down. Make sure students don't start the word search ahead of time.\n\n\n\n"
       },
       "seeding_key": {
         "activity_section.key": "77916118-5dbb-4594-9875-2039a4f9e2f4",
@@ -9300,15 +9300,15 @@
     },
     {
       "name": "(Warm Up) Word Search",
-      "url": "https://docs.google.com/document/d/1Mk9elfN5zVH2LLaY6Z5-c-97wt1k9qDCyMfxRBlB8qM/edit?usp=sharing",
-      "key": "_warm_up_word_search",
+      "url": "https://docs.google.com/document/d/1Mk9elfN5zVH2LLaY6Z5-c-97wt1k9qDCyMfxRBlB8qM/edit",
+      "key": "_warm_up_word_search_1",
       "properties": {
         "audience": "Student",
         "include_in_pdf": true,
         "type": "Activity Guide"
       },
       "seeding_key": {
-        "resource.key": "_warm_up_word_search"
+        "resource.key": "_warm_up_word_search_1"
       }
     },
     {
@@ -10700,7 +10700,7 @@
     {
       "seeding_key": {
         "lesson.key": "Exploring Web Pages",
-        "resource.key": "_warm_up_word_search"
+        "resource.key": "_warm_up_word_search_1"
       }
     },
     {
