@@ -10,39 +10,6 @@ class I18nScriptUtilsTest < Minitest::Test
     assert_equal "---\n:en:\n  test: \"#example\"\n  'yes': 'y'\n", I18nScriptUtils.to_crowdin_yaml({en: {'test' => '#example', 'yes' => 'y'}})
   end
 
-  def test_markdown_with_header_writing
-    exec_seq = sequence('execution')
-
-    expected_markdown = 'expected_markdown'
-    expected_header   = {'expected' => 'header'}
-    expected_filepath = 'expected_filepath'
-    expected_file     = stub('expected_file')
-
-    File.expects(:open).with(expected_filepath, 'w').yields(expected_file).in_sequence(exec_seq)
-    I18nScriptUtils.expects(:to_crowdin_yaml).with(expected_header).returns('expected_header_crowdin_yaml').in_sequence(exec_seq)
-    expected_file.expects(:write).with('expected_header_crowdin_yaml').in_sequence(exec_seq)
-    expected_file.expects(:write).with("---\n\n").in_sequence(exec_seq)
-    expected_file.expects(:write).with(expected_markdown).in_sequence(exec_seq)
-
-    I18nScriptUtils.write_markdown_with_header(expected_markdown, expected_header, expected_filepath)
-  end
-
-  def test_markdown_with_header_writing_when_header_is_empty
-    exec_seq = sequence('execution')
-
-    expected_markdown = 'expected_markdown'
-    expected_header   = {}
-    expected_filepath = 'expected_filepath'
-    expected_file     = stub('expected_file')
-
-    File.expects(:open).with(expected_filepath, 'w').yields(expected_file).in_sequence(exec_seq)
-    I18nScriptUtils.expects(:to_crowdin_yaml).with(expected_header).never
-    expected_file.expects(:write).with("---\n\n").never
-    expected_file.expects(:write).with(expected_markdown).in_sequence(exec_seq)
-
-    I18nScriptUtils.write_markdown_with_header(expected_markdown, expected_header, expected_filepath)
-  end
-
   def test_error_logging
     expected_error_class = 'expected_error_class'
     expected_error_message = 'expected_error_message'
@@ -96,16 +63,6 @@ end
 describe I18nScriptUtils do
   def around
     FakeFS.with_fresh {yield}
-  end
-
-  describe '.sanitize_markdown_header' do
-    subject {I18nScriptUtils.sanitize_markdown_header(markdown_header)}
-
-    let(:markdown_header) {{'title' => 'Expects only title', 'invalid' => 'Unexpected header'}}
-
-    it 'returns hash with only the `title` key' do
-      assert_equal({'title' => 'Expects only title'}, subject)
-    end
   end
 
   describe '.file_changed?' do

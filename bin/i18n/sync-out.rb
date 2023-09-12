@@ -32,7 +32,6 @@ module I18n
       rename_from_crowdin_name_to_locale
       restore_redacted_files
       distribute_translations
-      restore_markdown_headers
       Services::I18n::CurriculumSyncUtils.sync_out
       puts "updating TTS I18n (should usually take 2-3 minutes, may take up to 15 if there are a whole lot of translation updates)"
       I18nScriptUtils.with_synchronous_stdout do
@@ -335,24 +334,6 @@ module I18n
         ### Course Content
         distribute_course_content(locale)
 
-        ### Pegasus markdown
-        Dir.glob("#{locale_dir}/codeorg-markdown/**/*.*") do |loc_file|
-          relative_path = loc_file.delete_prefix("#{locale_dir}/codeorg-markdown")
-          next unless I18nScriptUtils.file_changed?(locale, relative_path)
-
-          destination_dir = "pegasus/sites.v3/code.org/i18n/public"
-          # The `views` path is actually outside of the `public` path, so when we
-          # see such files, we make sure we restore the `/..` to the destination.
-          destination_dir << "/.." if relative_path.start_with? "/views"
-          relative_dir = File.dirname(relative_path)
-          name = File.basename(loc_file, ".*")
-          # TODO: Remove the ai.md exception when ai.md files are deleted from crowdin
-          next if name == "ai" # ai.md file has been substituted by ai.haml
-          destination = File.join(destination_dir, relative_dir, "#{name}.#{locale}.md.partial")
-          FileUtils.mkdir_p(File.dirname(destination))
-          FileUtils.mv(loc_file, destination)
-        end
-
         ### Docs
         Dir.glob("i18n/locales/#{locale}/docs/*.json") do |loc_file|
           # Each programming environment file gets merged into programming_environments.{locale}.json
@@ -430,42 +411,6 @@ module I18n
       end
 
       puts "Distribution finished!"
-    end
-
-    # In the sync in, we slice the YAML headers of the files we upload to crowdin
-    # down to just the part we want to translate (ie, the title). Here, we
-    # reinflate the header with all the values from the source file.
-    def self.restore_markdown_headers
-      Dir.glob("pegasus/sites.v3/code.org/i18n/public/**/*.md.partial").each do |path|
-        # Find the source version of this file
-        source_path = path.sub(/\/i18n\/public\//, "/public/").sub(/[a-z]+-[A-Z]+.md.partial/, "md.partial")
-        unless File.exist? source_path
-          # Because we give _all_ files coming from crowdin the partial
-          # extension, we can't know for sure whether or not the source also uses
-          # that extension unless we check both with and without.
-          source_path = File.join(File.dirname(source_path), File.basename(source_path, ".partial"))
-        end
-        begin
-          # TODO: Remove the ai.md exception when ai.md files are deleted from crowdin
-          # ai.md file has been substituted by ai.haml therefore source_path for ai.md translations does not exist
-          next unless File.exist? source_path # if source path does not exist, the markdown heaader can not be restored
-          source_header, _source_content, _source_line = Documents.new.helpers.parse_yaml_header(source_path)
-        rescue Exception => exception
-          puts "Error parsing yaml header in source_path=#{source_path} for path=#{path}"
-          raise exception
-        end
-        begin
-          header, content, _line = Documents.new.helpers.parse_yaml_header(path)
-        rescue Exception => exception
-          puts "Error parsing yaml header path=#{path}"
-          raise exception
-        end
-
-        sanitized_header = I18nScriptUtils.sanitize_markdown_header(header)
-        restored_header = source_header.merge(sanitized_header)
-
-        I18nScriptUtils.write_markdown_with_header(content, restored_header, path)
-      end
     end
   end
 end
