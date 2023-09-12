@@ -9,7 +9,7 @@ import {
   setSongData,
 } from '@cdo/apps/dance/danceRedux';
 import {setExternalGlobals} from '../../util/testUtils';
-import * as commonReducers from '@cdo/apps/redux/commonReducers';
+import commonReducers from '@cdo/apps/redux/commonReducers';
 import {combineReducers, Store} from 'redux';
 import * as songs from '@cdo/apps/dance/songs';
 import * as codeStudioUtils from '@cdo/apps/code-studio/utils';
