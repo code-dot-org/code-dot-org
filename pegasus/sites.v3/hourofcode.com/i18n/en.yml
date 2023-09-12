@@ -135,6 +135,7 @@
   required_materials: "Required Materials:"
   optional_materials: "Optional Materials:"
 
+  call_to_action_explore_roles: "Explore open roles"
   call_to_action_learn_more: 'Learn more'
   call_to_action_watch_now: 'Watch now'
   call_to_action_try_activity: 'Try activity'
@@ -8236,7 +8237,6 @@
   careers_hero_title: "Careers"
   careers_hero_description: "Code.org is a nonprofit organization dedicated to expanding access to computer science in schools. We are especially focused on increasing participation among young women and underrepresented students."
   careers_hero_description_under: "Help us change the world, one student at a time!"
-  careers_hero_cta: "Explore open roles"
   careers_vision_title: "Our vision"
   careers_vision_decsription: "Our vision is that every student in every school should have the opportunity to learn computer science as part of their core K-12 education."
   careers_vision_description_under: "Come join our team to help make this vision a reality!"
@@ -8274,10 +8274,10 @@
   careers_balance_second_column_text_2: "Growth and professional learning opportunities"
   careers_openroles_section_title: "Open roles"
   careers_openroles_section_description: "Code.org is based in Seattle, but many of our team members are remote. Remote candidates are welcome and encouraged to apply."
-  careers_more_info_text: "For more information about Code.org, check out our [Frequently Asked Questions](%{support_url}) or learn about [other ways to get involved with our mission] (%{help_url})."
+  careers_more_info_text: "For more information about Code.org, check out our [Frequently Asked Questions](%{support_url}) or learn about [other ways to get involved with our mission](%{help_url})."
   careers_approach_section_title2: "Our approach to diversity"
   careers_approach_section_description_1: "We embrace diverse perspectives, ideas, and backgrounds at Code.org. We are committed to providing an equal opportunity to all employees and applicants. We do not discriminate on the basis of race, religion, color, national origin, gender, sexual orientation, age, marital status, veteran status, or disability (mental and physical) status."
-  careers_approach_section_description_2: "We will ensure that individuals with disabilities are provided reasonable accommodation to participate in the job application or interview process, to perform essential job functions, and to receive other benefits and privileges of employment. If you have individual needs related to a disability, please reach out to [accommodations@code.org.](%{mail_url}) "
+  careers_approach_section_description_2: "We will ensure that individuals with disabilities are provided reasonable accommodation to participate in the job application or interview process, to perform essential job functions, and to receive other benefits and privileges of employment. If you have individual needs related to a disability, please reach out to accommodations@code.org."
 
   language_code:
     ar: "Arabic"

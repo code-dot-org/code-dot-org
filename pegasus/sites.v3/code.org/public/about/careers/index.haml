@@ -15,9 +15,10 @@ theme: responsive
     %p.body-two
       =hoc_s(:careers_hero_description_under)
     %a.link-button.career__hero__button{href: "#openRoles"}
-      =hoc_s(:careers_hero_cta)
+      =hoc_s(:call_to_action_explore_roles)
   %figure.video.col-50
-    =view :career__team_video
+    =view :display_video_thumbnail, id: "our__team", video_code: "mTGSiB4kB18", play_button: 'center', letterbox: 'false'
+
 %hr
 
 %section.career__vision
