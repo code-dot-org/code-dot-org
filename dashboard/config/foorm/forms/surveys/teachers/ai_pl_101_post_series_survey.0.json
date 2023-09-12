@@ -223,23 +223,23 @@
           "rows": [
             {
               "value": "video1",
-              "text": "Video 1 - Fireside Chat"
+              "text": "Video 1: Fireside chat with Hadi Partovi and Sal Khan"
             },
             {
               "value": "video2",
-              "text": "Video 2"
+              "text": "Video 2: Demystifying AI for Educators"
             },
             {
               "value": "video3",
-              "text": "Video 3"
+              "text": "Video 3: Transforming Learning with AI"
             },
             {
               "value": "video4",
-              "text": "Video 4"
+              "text": "Video 4: Ensuring a Responsible Approach to AI"
             },
             {
               "value": "video5",
-              "text": "Video 5"
+              "text": "Video 5: Bringing AI to the Classroom"
             }
           ]
         },
@@ -306,27 +306,27 @@
           "rows": [
             {
               "value": "video1",
-              "text": "Video 1 - Fireside Chat",
+              "text": "Video 1: Fireside chat with Hadi Partovi and Sal Khan",
               "visibleIf": "{ai_pl_101.video1} <> 'didnt_watch'"
             },
             {
               "value": "video2",
-              "text": "Video 2",
+              "text": "Video 2: Demystifying AI for Educators",
               "visibleIf": "{ai_pl_101.video2} <> 'didnt_watch'"
             },
             {
               "value": "video3",
-              "text": "Video 3",
+              "text": "Video 3: Transforming Learning with AI",
               "visibleIf": "{ai_pl_101.video3} <> 'didnt_watch'"
             },
             {
               "value": "video4",
-              "text": "Video 4",
+              "text": "Video 4: Ensuring a Responsible Approach to AI",
               "visibleIf": "{ai_pl_101.video4} <> 'didnt_watch'"
             },
             {
               "value": "video5",
-              "text": "Video 5",
+              "text": "Video 5: Bringing AI to the Classroom",
               "visibleIf": "{ai_pl_101.video5} <> 'didnt_watch'"
             }
           ]
@@ -353,27 +353,27 @@
           "rows": [
             {
               "value": "video1",
-              "text": "Video 1 - Fireside Chat",
+              "text": "Video 1: Fireside chat with Hadi Partovi and Sal Khan",
               "visibleIf": "{ai_pl_101.video1} = 'didnt_watch'"
             },
             {
               "value": "video2",
-              "text": "Video 2",
+              "text": "Video 2: Demystifying AI for Educators",
               "visibleIf": "{ai_pl_101.video2} = 'didnt_watch'"
             },
             {
               "value": "video3",
-              "text": "Video 3",
+              "text": "Video 3: Transforming Learning with AI",
               "visibleIf": "{ai_pl_101.video3} = 'didnt_watch'"
             },
             {
               "value": "video4",
-              "text": "Video 4",
+              "text": "Video 4: Ensuring a Responsible Approach to AI",
               "visibleIf": "{ai_pl_101.video4} = 'didnt_watch'"
             },
             {
               "value": "video5",
-              "text": "Video 5",
+              "text": "Video 5: Bringing AI to the Classroom",
               "visibleIf": "{ai_pl_101.video5} = 'didnt_watch'"
             }
           ]
