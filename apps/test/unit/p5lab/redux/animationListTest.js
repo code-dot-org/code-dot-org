@@ -24,7 +24,7 @@ import commonReducers from '@cdo/apps/redux/commonReducers';
 import pageConstantsReducer, {
   setPageConstants,
 } from '@cdo/apps/redux/pageConstants';
-const project = require('@cdo/apps/code-studio/initApp/project');
+const project = require('@cdo/apps/code-studio/initApp/project').default;
 import * as assetPrefix from '@cdo/apps/assetManagement/assetPrefix';
 import _ from 'lodash';
 import {

@@ -57,7 +57,6 @@ const ArrowIds = {
 var Craft = {};
 
 window.Craft = Craft;
-window.Blockly = Blockly;
 
 const eventsCharacters = {
   Steve: {

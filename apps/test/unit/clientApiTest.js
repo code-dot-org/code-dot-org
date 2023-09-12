@@ -1,6 +1,6 @@
 import sinon from 'sinon';
 import {expect, assert} from '../util/reconfiguredChai';
-const project = require('@cdo/apps/code-studio/initApp/project');
+const project = require('@cdo/apps/code-studio/initApp/project').default;
 var clientApi = require('@cdo/apps/clientApi');
 
 describe('clientApi module', () => {
