@@ -425,7 +425,9 @@ class DeleteAccountsHelper
     purge_teacher_feedbacks(user.id)
     clean_and_destroy_code_reviews(user.id)
     remove_census_submissions(user_email) if user_email&.present?
+    remove_census_submissions(user.email_for_enrollments) unless user_email == user.email_for_enrollments
     remove_email_preferences(user_email) if user_email&.present?
+    remove_email_preferences(user.email_for_enrollments) unless user_email == user.email_for_enrollments
     anonymize_circuit_playground_discount_application(user)
     clean_level_source_backed_progress(user.id)
     clean_pegasus_forms_for_user(user)
@@ -435,7 +437,9 @@ class DeleteAccountsHelper
     clean_user_sections(user.id)
     remove_user_from_sections_as_student(user)
     remove_poste_data(user_email) if user_email&.present?
+    remove_poste_data(user.email_for_enrollments) unless user_email == user.email_for_enrollments
     purge_contact_rollups(user_email)
+    purge_contact_rollups(user.email_for_enrollments) unless user_email == user.email_for_enrollments
     purge_unshared_studio_person(user)
     anonymize_user(user)
 

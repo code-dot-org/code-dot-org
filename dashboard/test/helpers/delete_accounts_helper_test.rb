@@ -1408,9 +1408,22 @@ class DeleteAccountsHelperTest < ActionView::TestCase
 
     refute_nil enrollment.user_id
 
+    puts 'BEFORE PURGE'
+    puts enrollment.to_json
+    puts enrollment.user.to_json
+
     purge_user enrollment.user
 
+    puts 'AFTER PURGE BEFORE RELOAD'
+    puts enrollment.to_json
+    puts enrollment.user.to_json
+
     enrollment.reload
+
+    puts 'AFTER RELOAD'
+    puts enrollment.to_json
+    puts enrollment.user.to_json
+
     assert_nil enrollment.user_id
   end
 

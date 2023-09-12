@@ -611,9 +611,21 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
 
   test 'enrollment is valid after clear_data for deleted owner' do
     enrollment = create :pd_enrollment, :from_user
+
+    puts 'BEFORE USER DESTROY'
+    puts enrollment.to_json
+    puts enrollment.user.to_json
+
     enrollment.user.destroy!
 
+    puts 'AFTER USER DESTROY'
+    puts enrollment.to_json
+    puts enrollment.user
+
     enrollment.clear_data
+
+    puts 'AFTER CLEAR DATA'
+    puts enrollment.to_json
 
     assert_nil enrollment.read_attribute :name
     assert_equal '', enrollment.name
