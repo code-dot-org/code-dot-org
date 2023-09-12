@@ -220,20 +220,27 @@ const WEBPACK_BASE_CONFIG = {
         ],
       },
       {
-        test: /\.jsx?$/,
+        test: /\.[j]sx?$/,
         enforce: 'pre',
         include: [...nodeModulesToTranspile, p('src'), p('test')],
         exclude: [p('src/lodash.js')],
-        loader: 'babel-loader',
+        loader: 'esbuild-loader',
         options: {
-          cacheDirectory: p('.babel-cache'),
-          compact: false,
+          loader: 'jsx',
+          // cacheDirectory: p('.babel-cache'),
+          // compact: false,
+          target: 'es2015',
         },
       },
       {
-        test: /\.tsx?$/,
-        use: 'ts-loader',
-        exclude: /node_modules/,
+        test: /\.[t]sx?$/,
+        enforce: 'pre',
+        loader: 'esbuild-loader',
+        options: {
+          // cacheDirectory: p('.babel-cache'),
+          // compact: false,
+          target: 'es2015',
+        },
       },
       // modify WEBPACK_BASE_CONFIG's preLoaders for code coverage info
       ...(envConstants.COVERAGE
