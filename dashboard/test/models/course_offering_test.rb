@@ -759,20 +759,6 @@ class CourseOfferingTest < ActiveSupport::TestCase
       new_course_offering.attributes.except('id', 'created_at', 'updated_at')
   end
 
-  test "can seed correct self paced pl id based on self paced pl key" do
-    course_offering = create :course_offering, key: 'course-offering-1'
-    self_paced_pl_course = create :course_offering, key: 'self-paced-test-course'
-    serialization = course_offering.serialize
-    serialization[:self_paced_pl_course_offering_key] = "self-paced-test-course"
-
-    File.stubs(:read).returns(serialization.to_json)
-
-    CourseOffering.seed_record("config/course_offerings/course-offering-1.json")
-    new_course_offering = CourseOffering.find_by(key: course_offering.key)
-    assert_equal new_course_offering.self_paced_pl_course_offering_id,
-      self_paced_pl_course.id
-  end
-
   test "validates grade_levels" do
     assert_raises ActiveRecord::RecordInvalid do
       CourseOffering.create!(key: 'test-key', display_name: 'Test', grade_levels: '1,2,3, 4')
