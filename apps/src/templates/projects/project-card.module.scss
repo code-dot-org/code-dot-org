@@ -1,10 +1,6 @@
 @import "color.scss";
 @import "font.scss";
 
-.reportAbusePopUp {
-  width: 410px !important;
-}
-
 .cautionButton {
   background-color: transparent;
   box-shadow: none;
@@ -27,23 +23,6 @@
 
 .cautionButton:hover .cautionIcon {
   color: $product_negative_default;
-}
-
-.xButton {
-  box-shadow: none;
-  outline: none;
-  border: none;
-  cursor: pointer;
-  background: none;
-  width: 24px;
-  height: 24px;
-  font-size: 1rem;
-  padding: 5px;
-}
-
-.xButton:hover {
-  box-shadow: none;
-  outline: none;
 }
 
 .card {
@@ -87,44 +66,6 @@
 
 .bold {
   font-family: $gotham-bold;
-}
-
-.popUpLines {
-  border-color: $neutral_dark20;
-  width: 400px;
-  height: 1px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  margin-right: 5px;
-  margin-left: 5px;
-}
-
-.popUpBody {
-  font-family: $gotham-regular;
-  color: $darkest_gray;
-  font-size: 0.875rem;
-}
-
-.submitConfirmation {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.submitConfirmation > * {
-  margin: 10px;
-}
-
-.popUpTitle {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.popUpButtonHolder {
-  display: flex;
-  justify-content: flex-end;
 }
 
 .reported {
