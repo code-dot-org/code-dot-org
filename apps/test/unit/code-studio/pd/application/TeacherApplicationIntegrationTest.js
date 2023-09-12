@@ -4,7 +4,6 @@ import {mount} from 'enzyme';
 import sinon from 'sinon';
 import {PageLabels} from '@cdo/apps/generated/pd/teacherApplicationConstants';
 import TeacherApplication from '@cdo/apps/code-studio/pd/application/teacher/TeacherApplication';
-import firehoseClient from '@cdo/apps/lib/util/firehose';
 import * as utils from '@cdo/apps/utils';
 import $ from 'jquery';
 import FindYourRegion from '../../../../../src/code-studio/pd/application/teacher/FindYourRegion';
@@ -22,7 +21,6 @@ describe('TeacherApplication', () => {
     apiEndpoint: '/path/to/endpoint',
     options: fakeOptions,
     accountEmail: 'user@email.com',
-    userId: 1,
     errors: [],
     data: {},
     onChange: () => {},
@@ -32,7 +30,6 @@ describe('TeacherApplication', () => {
     sinon.stub($, 'ajax').returns(new $.Deferred());
     sinon.stub($, 'param').returns(new $.Deferred());
     sinon.stub(window, 'fetch').returns(Promise.resolve({ok: true}));
-    sinon.stub(firehoseClient, 'putRecord');
     sinon.stub(utils, 'reload');
     sinon
       .stub(window.sessionStorage, 'getItem')
@@ -45,18 +42,6 @@ describe('TeacherApplication', () => {
   afterEach(() => {
     sinon.restore();
     window.ga = undefined;
-  });
-
-  it('Sends firehose event on initialization, save, and submit', () => {
-    const teacherApp = mount(<TeacherApplication {...defaultProps} />);
-    const formControllerProps = teacherApp.find('FormController').props();
-    sinon.assert.calledOnce(firehoseClient.putRecord);
-
-    formControllerProps.onSuccessfulSave();
-    sinon.assert.calledTwice(firehoseClient.putRecord);
-
-    formControllerProps.onSuccessfulSubmit();
-    sinon.assert.calledThrice(firehoseClient.putRecord);
   });
 
   it('Does not set schoolId if not provided', () => {

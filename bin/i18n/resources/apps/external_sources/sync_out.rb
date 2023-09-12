@@ -12,6 +12,8 @@ module I18n
     module Apps
       module ExternalSources
         class SyncOut
+          DATASETS_I18N_KEY = 'datasets'.freeze
+
           def self.perform
             new.execute
           end
@@ -24,8 +26,8 @@ module I18n
               locale = pegasus_lang[:locale_s]
               js_locale = I18nScriptUtils.to_js_locale(locale)
 
-              crowdin_locale_dir = CDO.dir(File.join(I18N_LOCALES_DIR, crowdin_locale))
-              i18n_locale_dir = CDO.dir(File.join(I18N_LOCALES_DIR, locale))
+              crowdin_locale_dir = I18nScriptUtils.locale_dir(crowdin_locale)
+              i18n_locale_dir = I18nScriptUtils.locale_dir(locale)
 
               crowdin_locale_resource_dir = File.join(crowdin_locale_dir, DIR_NAME)
               if File.directory?(crowdin_locale_resource_dir)
@@ -40,12 +42,10 @@ module I18n
 
                 I18nScriptUtils.rename_dir(crowdin_locale_blockly_core_dir, File.join(i18n_locale_dir, BLOCKLY_CORE_DIR_NAME))
               end
-            ensure
-              mutex.synchronize do
-                I18nScriptUtils.delete_empty_crowdin_locale_dir(crowdin_locale)
 
-                progress_bar.increment
-              end
+              I18nScriptUtils.remove_empty_dir(I18nScriptUtils.locale_dir(crowdin_locale))
+            ensure
+              mutex.synchronize {progress_bar.increment}
             end
 
             progress_bar.finish
@@ -76,24 +76,36 @@ module I18n
           end
 
           def distribute_ml_playground(js_locale, crowdin_locale_resource_dir)
+            apps_i18n_file_path = CDO.dir(File.join('apps/i18n/mlPlayground', "#{js_locale}.json"))
+
             ### ml-playground strings to Apps directory
-            crowdin_locale_ml_playground_file_path = File.join(crowdin_locale_resource_dir, 'ml-playground/mlPlayground.json')
-            apps_i18n_ml_playground_file_path = CDO.dir(File.join('apps/i18n/mlPlayground', "#{js_locale}.json"))
-            if File.exist?(crowdin_locale_ml_playground_file_path)
-              I18nScriptUtils.sanitize_file_and_write(crowdin_locale_ml_playground_file_path, apps_i18n_ml_playground_file_path)
+            crowdin_ml_playground_file_path = File.join(crowdin_locale_resource_dir, 'ml-playground/mlPlayground.json')
+            if File.exist?(crowdin_ml_playground_file_path)
+              translations = JSON.load_file(crowdin_ml_playground_file_path)
+
+              # Since `ml-playground/mlPlayground.json` doesn't contain `datasets` translations,
+              # the existing `datasets` translations need to be put back into the apps i18n file
+              if File.exist?(apps_i18n_file_path)
+                datasets_translations = JSON.load_file(apps_i18n_file_path)&.dig(DATASETS_I18N_KEY)
+                translations[DATASETS_I18N_KEY] ||= datasets_translations if datasets_translations
+              end
+
+              I18nScriptUtils.sanitize_data_and_write(translations, apps_i18n_file_path)
             end
 
             ### Merge ml-playground datasets into apps' mlPlayground JSON
-            Dir.glob(File.join(crowdin_locale_resource_dir, 'ml-playground/datasets/*.json')) do |crowdin_locale_dataset_file_path|
-              dataset_translations = JSON.load_file(crowdin_locale_dataset_file_path)
+            Dir.glob(File.join(crowdin_locale_resource_dir, 'ml-playground/datasets/*.json')) do |crowdin_dataset_file_path|
+              dataset_translations = JSON.load_file(crowdin_dataset_file_path) || {}
               next if dataset_translations.empty?
 
-              # Merge new translations
-              dataset_id = File.basename(crowdin_locale_dataset_file_path, '.json')
-              translations = File.exist?(apps_i18n_ml_playground_file_path) ? JSON.load_file(apps_i18n_ml_playground_file_path) || {} : {}
-              translations['datasets'] ||= {}
-              translations['datasets'][dataset_id] = dataset_translations
-              I18nScriptUtils.sanitize_data_and_write(translations, apps_i18n_ml_playground_file_path)
+              # Merge new `dataset` translations
+              dataset_id = File.basename(crowdin_dataset_file_path, '.json')
+              translations = {}
+              translations = JSON.load_file(apps_i18n_file_path) || translations if File.exist?(apps_i18n_file_path)
+              translations[DATASETS_I18N_KEY] ||= {}
+              translations[DATASETS_I18N_KEY][dataset_id] = dataset_translations
+
+              I18nScriptUtils.sanitize_data_and_write(translations, apps_i18n_file_path)
             end
           end
 
