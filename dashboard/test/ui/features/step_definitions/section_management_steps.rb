@@ -95,23 +95,6 @@ And /^I create a new "([^"]*)" student section with course "([^"]*)", version "(
   GHERKIN
 end
 
-And /^I create a new word student section/ do
-  individual_steps <<~GHERKIN
-    When I see the section set up box
-    When I press the new section button
-    Then I should see the new section dialog
-
-    When I select word login
-
-    And I wait until element "#uitest-section-name-setup" is visible
-    And I press keys "WordSection" for element "#uitest-section-name-setup"
-    And I press the first "input[name='grades[]']" element
-    And I press the first "#uitest-save-section-changes" element
-    And I click selector "button:contains('Go to dashboard')" if I see it
-    And I wait until element "#classroom-sections" is visible
-  GHERKIN
-end
-
 And(/^I create a(n authorized)? teacher-associated( under-13)? student named "([^"]*)"$/) do |authorized, under_13, name|
   steps "Given I create a teacher named \"Teacher_#{name}\""
   # enroll in a plc course as a way of becoming an authorized teacher
