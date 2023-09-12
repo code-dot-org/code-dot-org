@@ -99,7 +99,7 @@ theme: responsive_full_width
       =hoc_s(:teach_page_curriculum_heading)
     %p.centered
       =hoc_s(:teach_page_curriculum_desc)
-    = view :teach_page_curriculum_carousel
+    = view :carousel_teach_page
     %div.centered{style: "margin-top: 2rem"}
       %a.link-button.secondary{href: CDO.studio_url("/catalog")}
         =hoc_s(:call_to_action_see_full_curriculum_catalog)
@@ -152,3 +152,7 @@ theme: responsive_full_width
             =hoc_s(:call_to_action_download_posters)
 
 = view :analytics_event_log_helper, event_name: AnalyticsConstants::TEACH_PAGE_VISITED_EVENT
+
+%script{:src=>'/js/jquery.carouFredSel-6.2.1-packed.js'}
+%script{:src=>'/js/jquery.touchSwipe.min.js'}
+%script{:src=>'/js/page/educate_csd.js'}
