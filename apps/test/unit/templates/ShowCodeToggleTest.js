@@ -17,7 +17,7 @@ import {
   __testing_stubRedux,
   __testing_restoreRedux,
 } from '@cdo/apps/redux';
-import * as commonReducers from '@cdo/apps/redux/commonReducers';
+import commonReducers from '@cdo/apps/redux/commonReducers';
 import project from '@cdo/apps/code-studio/initApp/project';
 
 describe('The ShowCodeToggle component', () => {

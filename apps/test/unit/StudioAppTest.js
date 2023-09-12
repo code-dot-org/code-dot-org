@@ -10,7 +10,7 @@ import {
 import Sounds from '@cdo/apps/Sounds';
 import {assets as assetsApi} from '@cdo/apps/clientApi';
 import {listStore} from '@cdo/apps/code-studio/assets';
-import * as commonReducers from '@cdo/apps/redux/commonReducers';
+import commonReducers from '@cdo/apps/redux/commonReducers';
 import * as redux from '@cdo/apps/redux';
 import project from '@cdo/apps/code-studio/initApp/project';
 import {

@@ -1,7 +1,7 @@
 import React from 'react';
 import {Provider} from 'react-redux';
 import {createStore, combineReducers} from 'redux';
-import * as commonReducers from '@cdo/apps/redux/commonReducers';
+import commonReducers from '@cdo/apps/redux/commonReducers';
 import {
   setHasAuthoredHints,
   setInstructionsConstants,
