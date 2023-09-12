@@ -11,17 +11,6 @@
     width: 100%;
     height: 100%;
 
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: radial-gradient(2770.02% 113.53% at 69.54% 44.17%, #025EB2 0%, #000 100%), #5FAAFF;
-      z-index: 1;
-    }
-
     &::after {
       content: "";
       position: absolute;
@@ -29,7 +18,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background-image: url('/images/banners/software-computer-vision-bg.svg');
+      background-image: url('/images/banners/software-computer-vision-bg.png');
       background-repeat: repeat;
       background-size: cover;
       z-index: 2;
