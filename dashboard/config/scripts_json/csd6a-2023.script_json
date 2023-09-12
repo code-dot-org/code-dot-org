@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": "csd6",
-    "serialized_at": "2023-09-11 16:39:10 UTC",
+    "serialized_at": "2023-09-11 22:27:57 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1527,7 +1527,7 @@
       "key": "720907cd-4c9f-4fd3-9139-6824f7ed206d",
       "position": 3,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** What's an example of a problem you've had to solve recently?\n\n**Circulate & Distribute:** Have students share their thoughts with a neighbor. Listen for examples that may be worth using as examples throughout the lesson.\n\nAs students share, distribute a copy of the [r _warm_up_word_search/csd/2023] to each student, face down. Make sure students don't start the word search ahead of time."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Prompt:** What's an example of a problem you've had to solve recently?\n\n**Circulate & Distribute:** Have students share their thoughts with a neighbor. Listen for examples that may be worth using as examples throughout the lesson.\n\nAs students share, distribute a copy of the [r _warm_up_word_search_unit_6/csd/2023] to each student, face down. Make sure students don't start the word search ahead of time."
       },
       "seeding_key": {
         "activity_section.key": "720907cd-4c9f-4fd3-9139-6824f7ed206d",
@@ -10923,15 +10923,15 @@
     },
     {
       "name": "(Warm Up) Word Search",
-      "url": "https://docs.google.com/document/d/1ebaf_cmMsIxI0j_WGQL2xry4URBOMWzp-7KwqayMFFU/view",
-      "key": "_warm_up_word_search",
+      "url": "https://docs.google.com/document/d/14hKTZSrP7tnghpJhTLYJNEPeb1CinUaa0KtzRPADji4/edit",
+      "key": "_warm_up_word_search_unit_6",
       "properties": {
         "audience": "Student",
         "include_in_pdf": true,
         "type": "Activity Guide"
       },
       "seeding_key": {
-        "resource.key": "_warm_up_word_search"
+        "resource.key": "_warm_up_word_search_unit_6"
       }
     },
     {
@@ -12296,7 +12296,7 @@
     {
       "seeding_key": {
         "lesson.key": "Physical Designs",
-        "resource.key": "_warm_up_word_search"
+        "resource.key": "_warm_up_word_search_unit_6"
       }
     },
     {
