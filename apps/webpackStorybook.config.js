@@ -1,7 +1,7 @@
 const webpack = require('webpack');
 const path = require('path');
 
-const {baseConfig} = require('./webpack.base.config');
+const {WEBPACK_BASE_CONFIG} = require('./webpack.config');
 const envConstants = require('./envConstants');
 
 // Customize webpack config for storybook.
@@ -12,17 +12,17 @@ function storybookConfig(sbConfig) {
     // Overwrite aliases
     resolve: {
       ...sbConfig.resolve,
-      ...baseConfig.resolve,
+      ...WEBPACK_BASE_CONFIG.resolve,
       alias: {
-        ...baseConfig.resolve.alias,
+        ...WEBPACK_BASE_CONFIG.resolve.alias,
         '@cdo/apps/lib/util/firehose': path.resolve(__dirname, 'test', 'util'),
       },
     },
     // Overwrite rules
     module: {
       ...sbConfig.module,
-      ...baseConfig.module,
-      rules: baseConfig.module.rules,
+      ...WEBPACK_BASE_CONFIG.module,
+      rules: WEBPACK_BASE_CONFIG.module.rules,
     },
     // Overwrite externals
     externals: {
