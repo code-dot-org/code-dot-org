@@ -1,5 +1,8 @@
 /*jshint esversion: 6 */
-const AWS = require("aws-sdk");
+const {
+  SecretsManagerClient,
+  GetSecretValueCommand,
+} = require("@aws-sdk/client-secrets-manager");
 const mysql = require("mysql");
 const { sendCfnResponse } = require("cfn-response");
 
@@ -16,22 +19,31 @@ exports.handler = async (event, context) => {
   console.log("REQUEST RECEIVED:\n", JSON.stringify(event));
 
   const props = event.ResourceProperties;
-  let secretsManager = new AWS.SecretsManager();
-  let dbCredentialAdminSecretValue = await secretsManager
-    .getSecretValue({ SecretId: props.DBCredentialAdminSecret })
-    .promise();
-  let dbCredentialSQLUserSecretValue = await secretsManager
-    .getSecretValue({ SecretId: props.DBCredentialSecret })
-    .promise();
+  const secretsClient = new SecretsManagerClient();
+  const getAdminSecretCommand = new GetSecretValueCommand({
+    SecretId: props.DBCredentialAdminSecret,
+  });
+  const adminSecretResponse = await secretsClient.send(getAdminSecretCommand);
+  const getSQLUserSecretCommand = new GetSecretValueCommand({
+    SecretId: props.DBCredentialSecret,
+  });
+  const sqlUserSecretResponse = await secretsClient.send(
+    getSQLUserSecretCommand
+  );
+  const dbCredentialAdmin = JSON.parse(adminSecretResponse.SecretString);
+  const dbCredentialSQLUser = JSON.parse(sqlUserSecretResponse.SecretString);
+
   let physicalResourceId =
-    event.PhysicalResourceId || dbCredentialSQLUserSecretValue.username;
+    event.PhysicalResourceId || dbCredentialSQLUser.username;
 
   const connection = mysql.createConnection({
     host: props.DBServerHost,
-    user: dbCredentialAdminSecretValue.username,
-    password: dbCredentialAdminSecretValue.password,
-    timeout: 10000,
+    user: dbCredentialAdmin.username,
+    password: dbCredentialAdmin.password,
+    connectTimeout: 10000,
   });
+
+  console.log("Created database connection.");
 
   try {
     let results;
@@ -41,9 +53,9 @@ exports.handler = async (event, context) => {
       case "Create":
       case "Update":
         results = await createOrUpdateSQLUser(connection, {
-          name: dbCredentialSQLUserSecretValue.username,
+          name: dbCredentialSQLUser.username,
           clientHost: clientHost,
-          password: dbCredentialSQLUserSecretValue.password,
+          password: dbCredentialSQLUser.password,
           databases: props.Databases,
           privileges: props.Privileges,
         });
@@ -53,7 +65,7 @@ exports.handler = async (event, context) => {
         break;
       case "Delete":
         results = await deleteSQLUser(connection, {
-          name: dbCredentialSQLUserSecretValue.username,
+          name: dbCredentialSQLUser.username,
           clientHost: clientHost,
         });
         console.log(results);
