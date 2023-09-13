@@ -2,11 +2,7 @@ const webpack = require('webpack');
 const path = require('path');
 
 const envConstants = require('./envConstants');
-const {
-  devtool,
-  localeDoNotImport,
-  WEBPACK_BASE_CONFIG,
-} = require('./webpack.config');
+const {localeDoNotImport, WEBPACK_BASE_CONFIG} = require('./webpack.config');
 
 // alias '@cdo/applab/locale' => 'test/util/applab/locale-do-not-import.js'
 const localeDoNotImportTest = cdo => localeDoNotImport(cdo, 'test/util');
@@ -15,7 +11,8 @@ const localeDoNotImportTest = cdo => localeDoNotImport(cdo, 'test/util');
 const karmaConfig = {
   ...WEBPACK_BASE_CONFIG,
   ...{
-    devtool: devtool(),
+    // karma-sourcemap-loader only supports inline-source-map and source-map
+    devtool: 'source-map',
     resolve: {
       ...WEBPACK_BASE_CONFIG.resolve,
       ...{
