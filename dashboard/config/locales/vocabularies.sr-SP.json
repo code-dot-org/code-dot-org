@@ -212,6 +212,117 @@
         "programming/pre-express/2022": {
           "word": "Programming"
         },
+        "code/csc-adaptations/2023": {
+          "word": "Kod"
+        },
+        "behavior/csc-adaptations/2023": {
+          "word": "Понашање"
+        },
+        "code/csc-ecosystems/2023": {
+          "word": "Kod"
+        },
+        "conditionals/csc-ecosystems/2023": {
+          "word": "Кондиционали"
+        },
+        "variable/csc-ecosystems/2023": {
+          "word": "Променљива"
+        },
+        "code/csc-mappinglandmarks/2023": {
+          "word": "Kod"
+        },
+        "artist/csc-starquilts/2023": {
+          "word": "Уметник"
+        },
+        "comments/csc-starquilts/2023": {
+          "word": "Коментари"
+        },
+        "code/poetry/2023": {
+          "word": "Kod"
+        },
+        "debugging/coursea/2023": {
+          "word": "Отклањање грешака"
+        },
+        "programming/coursea/2023": {
+          "word": "Programming"
+        },
+        "debugging/courseb/2023": {
+          "word": "Отклањање грешака"
+        },
+        "programming/courseb/2023": {
+          "word": "Programming"
+        },
+        "debugging/coursec/2023": {
+          "word": "Отклањање грешака"
+        },
+        "programming/coursec/2023": {
+          "word": "Programming"
+        },
+        "debugging/coursed/2023": {
+          "word": "Отклањање грешака"
+        },
+        "programming/coursed/2023": {
+          "word": "Programming"
+        },
+        "conditionals/coursed/2023": {
+          "word": "Кондиционали"
+        },
+        "behavior/coursee/2023": {
+          "word": "Понашање"
+        },
+        "function/coursee/2023": {
+          "word": "Функција"
+        },
+        "conditionals/coursee/2023": {
+          "word": "Кондиционали"
+        },
+        "copyright/coursee/2023": {
+          "word": "Ауторска права"
+        },
+        "define/coursee/2023": {
+          "word": "Дефинисати"
+        },
+        "behavior/coursef/2023": {
+          "word": "Понашање"
+        },
+        "variable/coursef/2023": {
+          "word": "Променљива"
+        },
+        "input/coursef/2023": {
+          "word": "Унос"
+        },
+        "internet/coursef/2023": {
+          "word": "Интернет"
+        },
+        "define/coursef/2023": {
+          "word": "Дефинисати"
+        },
+        "debugging/express/2023": {
+          "word": "Отклањање грешака"
+        },
+        "programming/express/2023": {
+          "word": "Programming"
+        },
+        "behavior/express/2023": {
+          "word": "Понашање"
+        },
+        "conditionals/express/2023": {
+          "word": "Кондиционали"
+        },
+        "function/express/2023": {
+          "word": "Функција"
+        },
+        "variable/express/2023": {
+          "word": "Променљива"
+        },
+        "define/express/2023": {
+          "word": "Дефинисати"
+        },
+        "debugging/pre-express/2023": {
+          "word": "Отклањање грешака"
+        },
+        "programming/pre-express/2023": {
+          "word": "Programming"
+        },
         "conditionals/aquatic/unversioned": {
           "word": "Кондиционали"
         },
