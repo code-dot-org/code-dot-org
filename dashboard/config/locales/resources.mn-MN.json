@@ -2353,6 +2353,458 @@
         "pause_and_think_online/pre-express/2022": {
           "type": "Видео"
         },
+        "book_cover_rubric/csc-bookcovers/2023": {
+          "type": "Rubric"
+        },
+        "book_cover_1/csc-bookcovers/2023": {
+          "type": "Rubric"
+        },
+        "interactive_map_rubric/csc-mappinglandmarks/2023": {
+          "type": "Rubric"
+        },
+        "star_quilts_1/csc-starquilts/2023": {
+          "type": "Видео"
+        },
+        "poem_art_1_-_introduction/csc-timecapsule/2023": {
+          "type": "Видео"
+        },
+        "poem_art_2_-_events/csc-timecapsule/2023": {
+          "type": "Видео"
+        },
+        "poem_art_3_-_imagery/csc-timecapsule/2023": {
+          "type": "Видео"
+        },
+        "poem_art_4_-_celebration/csc-timecapsule/2023": {
+          "type": "Видео"
+        },
+        "time_capsule_rubric/csc-timecapsule/2023": {
+          "type": "Rubric"
+        },
+        "poem_art_celebration_video_optional_/csc-timecapsule/2023": {
+          "type": "Видео"
+        },
+        "poem_art_events_video_optional_/csc-timecapsule/2023": {
+          "type": "Видео"
+        },
+        "poem_art_video_optional_/csc-timecapsule/2023": {
+          "type": "Видео"
+        },
+        "enter_your_own_poem/csc-timecapsule/2023": {
+          "name": "Өөрийн шүлэг оруулна уу",
+          "type": "Видео"
+        },
+        "poem_art_1_-_introduction/poetry/2023": {
+          "type": "Видео"
+        },
+        "poem_art_2_-_events/poetry/2023": {
+          "type": "Видео"
+        },
+        "poem_art_3_-_imagery/poetry/2023": {
+          "type": "Видео"
+        },
+        "poem_art_4_-_celebration/poetry/2023": {
+          "type": "Видео"
+        },
+        "coding_with_poetry_rubric/poetry/2023": {
+          "type": "Rubric"
+        },
+        "enter_your_own_poem/poetry/2023": {
+          "name": "Өөрийн шүлэг оруулна уу",
+          "type": "Видео"
+        },
+        "poem_art_celebration_video_optional_/poetry/2023": {
+          "type": "Видео"
+        },
+        "poem_art_events_video_optional_/poetry/2023": {
+          "type": "Видео"
+        },
+        "poem_art_video_optional_/poetry/2023": {
+          "type": "Видео"
+        },
+        "implementation_guide/coursea/2023": {
+          "name": "Хэрэгжүүлэх заавар"
+        },
+        "teacher_forum/coursea/2023": {
+          "name": "Багш нарын форум"
+        },
+        "getting_started_-_creating_a_class_section/coursea/2023": {
+          "type": "Видео"
+        },
+        "pair_programming/coursea/2023": {
+          "name": "Хос програмчлал"
+        },
+        "wiggles-go_noodle/coursea/2023": {
+          "type": "Видео"
+        },
+        "happy_maps/coursea/2023": {
+          "name": "Аз жаргалтай газрын зургууд"
+        },
+        "wiggles_-_gonoodle/coursea/2023": {
+          "type": "Видео"
+        },
+        "debugging_with_the_step_button/coursea/2023": {
+          "type": "Видео"
+        },
+        "pair-programming/coursea/2023": {
+          "type": "Видео"
+        },
+        "pause_and_think_online/coursea/2023": {
+          "type": "Видео"
+        },
+        "the_big_event/coursea/2023": {
+          "name": "Том үйл явдал"
+        },
+        "the_big_event_1/coursea/2023": {
+          "name": "Том үйл явдал",
+          "type": "Үнэлгээ"
+        },
+        "the_big_event_2/coursea/2023": {
+          "name": "Том үйл явдал"
+        },
+        "implementation_guide/courseb/2023": {
+          "name": "Хэрэгжүүлэх заавар"
+        },
+        "teacher_forum/courseb/2023": {
+          "name": "Багш нарын форум"
+        },
+        "move_it_move_it/courseb/2023": {
+          "name": "Хөдөлгөөрэй, хөдөлгөөрэй"
+        },
+        "move_it_move_it_1/courseb/2023": {
+          "name": "Хөдөлгөөрэй, хөдөлгөөрэй"
+        },
+        "move_it_move_it_2/courseb/2023": {
+          "name": "Хөдөлгөөрэй, хөдөлгөөрэй"
+        },
+        "move_it_move_it_3/courseb/2023": {
+          "name": "Хөдөлгөөрэй, хөдөлгөөрэй"
+        },
+        "pair_programming/courseb/2023": {
+          "name": "Хос програмчлал"
+        },
+        "wiggles_-_gonoodle/courseb/2023": {
+          "type": "Видео"
+        },
+        "stevie_and_the_big_project/courseb/2023": {
+          "name": "Стиви ба том төсөл"
+        },
+        "unspotted_bugs/courseb/2023": {
+          "name": "Үл анзаарагдсан алдаанууд",
+          "type": "Видео"
+        },
+        "getting_loopy/courseb/2023": {
+          "name": "Гогцоорох"
+        },
+        "getting_loopy_1/courseb/2023": {
+          "name": "Гогцоорох"
+        },
+        "getting_loopy_2/courseb/2023": {
+          "name": "Гогцоорох",
+          "type": "Үнэлгээ"
+        },
+        "getting_loopy_3/courseb/2023": {
+          "name": "Гогцоорох"
+        },
+        "pause_and_think_online/courseb/2023": {
+          "type": "Видео"
+        },
+        "the_big_event/courseb/2023": {
+          "name": "Том үйл явдал"
+        },
+        "the_big_event_1/courseb/2023": {
+          "name": "Том үйл явдал",
+          "type": "Үнэлгээ"
+        },
+        "the_big_event_2/courseb/2023": {
+          "name": "Том үйл явдал"
+        },
+        "implementation_guide/coursec/2023": {
+          "name": "Хэрэгжүүлэх заавар"
+        },
+        "teacher_forum/coursec/2023": {
+          "name": "Багш нарын форум"
+        },
+        "my_robotic_friends/coursec/2023": {
+          "name": "Миний робот найзууд"
+        },
+        "my_robotic_friends_1/coursec/2023": {
+          "name": "Миний робот найзууд"
+        },
+        "my_robotic_friends_2/coursec/2023": {
+          "name": "Миний робот найзууд"
+        },
+        "my_robotic_friends_3/coursec/2023": {
+          "name": "Миний робот найзууд"
+        },
+        "my_robotic_friends_4/coursec/2023": {
+          "name": "Миний робот найзууд"
+        },
+        "pair_programming/coursec/2023": {
+          "name": "Хос програмчлал",
+          "type": "Видео"
+        },
+        "the_big_event/coursec/2023": {
+          "name": "Том үйл явдал"
+        },
+        "the_big_event_1/coursec/2023": {
+          "name": "Том үйл явдал",
+          "type": "Үнэлгээ"
+        },
+        "the_big_event_2/coursec/2023": {
+          "name": "Том үйл явдал"
+        },
+        "pause_and_think_online/coursec/2023": {
+          "type": "Видео"
+        },
+        "binary_bracelets/coursec/2023": {
+          "name": "Хоёртын бугуйвч"
+        },
+        "binary_bracelets_1/coursec/2023": {
+          "name": "Хоёртын бугуйвч"
+        },
+        "binary_bracelets_2/coursec/2023": {
+          "name": "Хоёртын бугуйвч"
+        },
+        "binary_bracelets_3/coursec/2023": {
+          "name": "Хоёртын бугуйвч",
+          "type": "Үнэлгээ"
+        },
+        "binary_bracelets_4/coursec/2023": {
+          "name": "Хоёртын бугуйвч"
+        },
+        "implementation_guide/coursed/2023": {
+          "name": "Хэрэгжүүлэх заавар"
+        },
+        "teacher_forum/coursed/2023": {
+          "name": "Багш нарын форум"
+        },
+        "graph_paper_programming/coursed/2023": {
+          "name": "График цаасны программчлал"
+        },
+        "graph_paper_programming_1/coursed/2023": {
+          "name": "График цаасны программчлал"
+        },
+        "graph_paper_programming_2/coursed/2023": {
+          "name": "График цаасны программчлал"
+        },
+        "graph_paper_programming_3/coursed/2023": {
+          "name": "График цаасны программчлал"
+        },
+        "graph_paper_programming_4/coursed/2023": {
+          "name": "График цаасны программчлал",
+          "type": "Үнэлгээ"
+        },
+        "graph_paper_programming_5/coursed/2023": {
+          "name": "График цаасны программчлал"
+        },
+        "pair_programming/coursed/2023": {
+          "name": "Хос програмчлал"
+        },
+        "relay_programming/coursed/2023": {
+          "name": "Буухиа программчлал"
+        },
+        "relay_programming_1/coursed/2023": {
+          "name": "Буухиа программчлал"
+        },
+        "relay_programming_2/coursed/2023": {
+          "name": "Буухиа программчлал"
+        },
+        "relay_programming_3/coursed/2023": {
+          "name": "Буухиа программчлал"
+        },
+        "relay_programming_4/coursed/2023": {
+          "name": "Буухиа программчлал"
+        },
+        "relay_programming_5/coursed/2023": {
+          "name": "Буухиа программчлал"
+        },
+        "pause_and_think_online/coursed/2023": {
+          "type": "Видео"
+        },
+        "conditionals_with_cards/coursed/2023": {
+          "name": "Карт бүхий нөхцлүүд"
+        },
+        "conditionals_with_cards_1/coursed/2023": {
+          "name": "Карт бүхий нөхцлүүд"
+        },
+        "conditionals_with_cards_2/coursed/2023": {
+          "name": "Карт бүхий нөхцлүүд",
+          "type": "Үнэлгээ"
+        },
+        "conditionals_with_cards_3/coursed/2023": {
+          "name": "Карт бүхий нөхцлүүд"
+        },
+        "conditionals_with_cards_4/coursed/2023": {
+          "name": "Карт бүхий нөхцлүүд"
+        },
+        "implementation_guide/coursee/2023": {
+          "name": "Хэрэгжүүлэх заавар"
+        },
+        "sprite_lab_documentation/coursee/2023": {
+          "name": "Шидтэний лабын баримт бичиг"
+        },
+        "teacher_forum/coursee/2023": {
+          "name": "Багш нарын форум"
+        },
+        "pause_and_think_online/coursee/2023": {
+          "type": "Видео"
+        },
+        "functions_unplugged_songwriting_2/coursee/2023": {
+          "type": "Үнэлгээ"
+        },
+        "digital_sharing_ethics_video_/coursee/2023": {
+          "type": "Видео"
+        },
+        "cs_fundamentals_final_project/coursee/2023": {
+          "type": "Rubric"
+        },
+        "implementation_guide/coursef/2023": {
+          "name": "Хэрэгжүүлэх заавар"
+        },
+        "sprite_lab_documentation_1/coursef/2023": {
+          "name": "Шидтэний лабын баримт бичиг"
+        },
+        "teacher_forum/coursef/2023": {
+          "name": "Багш нарын форум"
+        },
+        "the_power_of_words_the_power_of_words/coursef/2023": {
+          "type": "Видео"
+        },
+        "exploring_apps/coursef/2023": {
+          "name": "Апп судлах"
+        },
+        "exploring_apps_1/coursef/2023": {
+          "name": "Апп судлах"
+        },
+        "introducing_sprite_lab/coursef/2023": {
+          "name": "Шидтэний лабораторийг танилцуулах",
+          "type": "Видео"
+        },
+        "sprite_lab_documentation/coursef/2023": {
+          "name": "Шидтэний лабын баримт бичиг"
+        },
+        "running_simulations/coursef/2023": {
+          "name": "Симуляцийг ажиллуулах"
+        },
+        "ai_impact_on_society/coursef/2023": {
+          "type": "Видео"
+        },
+        "ai_machine_learning/coursef/2023": {
+          "type": "Видео"
+        },
+        "ai_training_data_bias/coursef/2023": {
+          "type": "Видео"
+        },
+        "internet/coursef/2023": {
+          "name": "Интернэт",
+          "type": "Үнэлгээ"
+        },
+        "internet_1/coursef/2023": {
+          "name": "Интернэт"
+        },
+        "the_internet/coursef/2023": {
+          "name": "Интернэт"
+        },
+        "cs_fundamentals_final_project/coursef/2023": {
+          "type": "Rubric"
+        },
+        "teacher_forum/express/2023": {
+          "name": "Багш нарын форум"
+        },
+        "pair_programming/express/2023": {
+          "name": "Хос програмчлал",
+          "type": "Видео"
+        },
+        "artist_introduction/express/2023": {
+          "type": "Видео"
+        },
+        "turns_angles/express/2023": {
+          "type": "Видео"
+        },
+        "sprite_lab_documentation/express/2023": {
+          "name": "Шидтэний лабын баримт бичиг"
+        },
+        "sprites_in_action/express/2023": {
+          "name": "Шидтэн ажиллаж байна"
+        },
+        "pause_and_think_online/express/2023": {
+          "type": "Видео"
+        },
+        "pair_programming_video/express/2023": {
+          "type": "Видео"
+        },
+        "variables/express/2023": {
+          "name": "Хувьсагчууд"
+        },
+        "cs_fundamentals_final_project/express/2023": {
+          "type": "Rubric"
+        },
+        "teacher_forum/pre-express/2023": {
+          "name": "Багш нарын форум"
+        },
+        "20_20_20_rule/pre-express/2023": {
+          "type": "Видео"
+        },
+        "pair_programming/pre-express/2023": {
+          "name": "Хос програмчлал"
+        },
+        "wiggles_-_go_noodle/pre-express/2023": {
+          "type": "Видео"
+        },
+        "pause_and_think_online/pre-express/2023": {
+          "type": "Видео"
+        },
+        "how_ai_works_-_training_data_and_bias/how-ai-works/2023": {
+          "type": "Видео"
+        },
+        "how_ai_works_-_what_is_machine_learning_/how-ai-works/2023": {
+          "type": "Видео"
+        },
+        "how_ai_works_how_computer_vision_works/how-ai-works/2023": {
+          "type": "Видео"
+        },
+        "what_a_neural_network_sees/how-ai-works/2023": {
+          "type": "Видео"
+        },
+        "how_ai_works_how_neural_networks_work/how-ai-works/2023": {
+          "type": "Видео"
+        },
+        "how_ai_works_chatbots_and_large_language_models_part_1_/how-ai-works/2023": {
+          "type": "Видео"
+        },
+        "how_ai_works_chatbots_and_large_language_models_part_2_/how-ai-works/2023": {
+          "type": "Видео"
+        },
+        "how_ai_works_creativity_and_imagination/how-ai-works/2023": {
+          "type": "Видео"
+        },
+        "how_ai_works_-_societal_impact/how-ai-works/2023": {
+          "type": "Видео"
+        },
+        "how_ai_works_-_privacy_and_future_of_work/how-ai-works/2023": {
+          "type": "Видео"
+        },
+        "does_ai_have_creativity_and_imagination_/how-ai-works/2023": {
+          "type": "Видео"
+        },
+        "how_ai_works_ethics_ai_equal_access_and_algorithmic_bias/how-ai-works/2023": {
+          "type": "Видео"
+        },
+        "how_ai_works_ethics_ai_privacy_the_future_of_work/how-ai-works/2023": {
+          "type": "Видео"
+        },
+        "how_ai_works_introduction/how-ai-works/2023": {
+          "type": "Видео"
+        },
+        "how_ai_works_training_data_and_bias/how-ai-works/2023": {
+          "type": "Видео"
+        },
+        "how_ai_works_what_is_machine_learning_/how-ai-works/2023": {
+          "type": "Видео"
+        },
+        "how_chatbots_and_large_language_models_work/how-ai-works/2023": {
+          "type": "Видео"
+        },
         "encryption-and-public-keys-optional-1/hoc-encryption/unversioned": {
           "type": "Видео"
         },

@@ -245,6 +245,141 @@
         "debugging/pre-express/2022": {
           "word": "Алдааг засах"
         },
+        "code/csc-adaptations/2023": {
+          "word": "Код"
+        },
+        "behavior/csc-adaptations/2023": {
+          "word": "Зан төлөв"
+        },
+        "code/csc-ecosystems/2023": {
+          "word": "Код"
+        },
+        "conditionals/csc-ecosystems/2023": {
+          "word": "Нөхцлүүд"
+        },
+        "variable/csc-ecosystems/2023": {
+          "word": "Хувьсагч"
+        },
+        "energy/csc-ecosystems/2023": {
+          "word": "Эрчим хүч"
+        },
+        "code/csc-mappinglandmarks/2023": {
+          "word": "Код"
+        },
+        "map/csc-mappinglandmarks/2023": {
+          "word": "Газрын зураг"
+        },
+        "artist/csc-starquilts/2023": {
+          "word": "Зураач"
+        },
+        "comments/csc-starquilts/2023": {
+          "word": "Тайлбарууд"
+        },
+        "code/poetry/2023": {
+          "word": "Код"
+        },
+        "debugging/coursea/2023": {
+          "word": "Алдааг засах"
+        },
+        "drop/coursea/2023": {
+          "word": "Унах"
+        },
+        "debugging/courseb/2023": {
+          "word": "Алдааг засах"
+        },
+        "drop/courseb/2023": {
+          "word": "Унах"
+        },
+        "debugging/coursec/2023": {
+          "word": "Алдааг засах"
+        },
+        "sequencing/coursec/2023": {
+          "word": "Дараалуулах"
+        },
+        "data/coursec/2023": {
+          "word": "Өгөгдөл"
+        },
+        "binary/coursec/2023": {
+          "word": "Хоёрт"
+        },
+        "debugging/coursed/2023": {
+          "word": "Алдааг засах"
+        },
+        "conditionals/coursed/2023": {
+          "word": "Нөхцлүүд"
+        },
+        "behavior/coursee/2023": {
+          "word": "Зан төлөв"
+        },
+        "function/coursee/2023": {
+          "word": "Функц"
+        },
+        "conditionals/coursee/2023": {
+          "word": "Нөхцлүүд"
+        },
+        "copyright/coursee/2023": {
+          "word": "Зохиогчийн эрх"
+        },
+        "define/coursee/2023": {
+          "word": "Тодорхойлох"
+        },
+        "behavior/coursef/2023": {
+          "word": "Зан төлөв"
+        },
+        "variable/coursef/2023": {
+          "word": "Хувьсагч"
+        },
+        "input/coursef/2023": {
+          "word": "Оролт"
+        },
+        "machine_learning/coursef/2023": {
+          "word": "Машины сургалт"
+        },
+        "internet/coursef/2023": {
+          "word": "Интернэт"
+        },
+        "packets/coursef/2023": {
+          "word": "Пакетууд"
+        },
+        "define/coursef/2023": {
+          "word": "Тодорхойлох"
+        },
+        "debugging/express/2023": {
+          "word": "Алдааг засах"
+        },
+        "sequencing/express/2023": {
+          "word": "Дараалуулах"
+        },
+        "behavior/express/2023": {
+          "word": "Зан төлөв"
+        },
+        "conditionals/express/2023": {
+          "word": "Нөхцлүүд"
+        },
+        "function/express/2023": {
+          "word": "Функц"
+        },
+        "variable/express/2023": {
+          "word": "Хувьсагч"
+        },
+        "define/express/2023": {
+          "word": "Тодорхойлох"
+        },
+        "drop/pre-express/2023": {
+          "word": "Унах"
+        },
+        "debugging/pre-express/2023": {
+          "word": "Алдааг засах"
+        },
+        "machine_learning/how-ai-works/2023": {
+          "word": "Машины сургалт"
+        },
+        "network/how-ai-works/2023": {
+          "word": "Сүлжээ"
+        },
+        "artificial_intelligence/how-ai-works/2023": {
+          "word": "Хиймэл оюун ухаан"
+        },
         "conditionals/aquatic/unversioned": {
           "word": "Нөхцлүүд"
         },
