@@ -356,6 +356,201 @@
         "loop/pre-express/2022": {
           "word": "ციკლი"
         },
+        "code/csc-adaptations/2023": {
+          "word": "კოდი"
+        },
+        "behavior/csc-adaptations/2023": {
+          "word": "ქცევა"
+        },
+        "sprite/csc-bookcovers/2023": {
+          "word": "სპრაიტი"
+        },
+        "code/csc-ecosystems/2023": {
+          "word": "კოდი"
+        },
+        "condition/csc-ecosystems/2023": {
+          "word": "პირობა"
+        },
+        "conditionals/csc-ecosystems/2023": {
+          "word": "პირობითი ბრძანებები"
+        },
+        "variable/csc-ecosystems/2023": {
+          "word": "ცვლადი"
+        },
+        "energy/csc-ecosystems/2023": {
+          "word": "ენერგია"
+        },
+        "code/csc-mappinglandmarks/2023": {
+          "word": "კოდი"
+        },
+        "sprite/csc-mappinglandmarks/2023": {
+          "word": "სპრაიტი"
+        },
+        "map/csc-mappinglandmarks/2023": {
+          "word": "რუკა"
+        },
+        "artist/csc-starquilts/2023": {
+          "word": "მხატვარი"
+        },
+        "loop/csc-starquilts/2023": {
+          "word": "ციკლი"
+        },
+        "comments/csc-starquilts/2023": {
+          "word": "კომენტარები"
+        },
+        "sprite/csc-timecapsule/2023": {
+          "word": "სპრაიტი"
+        },
+        "code/poetry/2023": {
+          "word": "კოდი"
+        },
+        "debugging/coursea/2023": {
+          "word": "გამართვა"
+        },
+        "programming/coursea/2023": {
+          "word": "პროგრამირება"
+        },
+        "loop/coursea/2023": {
+          "word": "ციკლი"
+        },
+        "debugging/courseb/2023": {
+          "word": "გამართვა"
+        },
+        "programming/courseb/2023": {
+          "word": "პროგრამირება"
+        },
+        "loop/courseb/2023": {
+          "word": "ციკლი"
+        },
+        "debugging/coursec/2023": {
+          "word": "გამართვა"
+        },
+        "sequencing/coursec/2023": {
+          "word": "თანმიმდევრობა"
+        },
+        "programming/coursec/2023": {
+          "word": "პროგრამირება"
+        },
+        "loop/coursec/2023": {
+          "word": "ციკლი"
+        },
+        "data/coursec/2023": {
+          "word": "მონაცემები"
+        },
+        "binary/coursec/2023": {
+          "word": "ორობითი"
+        },
+        "debugging/coursed/2023": {
+          "word": "გამართვა"
+        },
+        "loop/coursed/2023": {
+          "word": "ციკლი"
+        },
+        "programming/coursed/2023": {
+          "word": "პროგრამირება"
+        },
+        "conditionals/coursed/2023": {
+          "word": "პირობითი ბრძანებები"
+        },
+        "condition/coursed/2023": {
+          "word": "პირობა"
+        },
+        "behavior/coursee/2023": {
+          "word": "ქცევა"
+        },
+        "sprite/coursee/2023": {
+          "word": "სპრაიტი"
+        },
+        "loop/coursee/2023": {
+          "word": "ციკლი"
+        },
+        "function/coursee/2023": {
+          "word": "ფუნქცია"
+        },
+        "condition/coursee/2023": {
+          "word": "პირობა"
+        },
+        "conditionals/coursee/2023": {
+          "word": "პირობითი ბრძანებები"
+        },
+        "copyright/coursee/2023": {
+          "word": "საავტორო უფლება"
+        },
+        "define/coursee/2023": {
+          "word": "განსაზღვრეთ"
+        },
+        "sprite/coursef/2023": {
+          "word": "სპრაიტი"
+        },
+        "behavior/coursef/2023": {
+          "word": "ქცევა"
+        },
+        "variable/coursef/2023": {
+          "word": "ცვლადი"
+        },
+        "input/coursef/2023": {
+          "word": "შემომავალი ინფორმაცია"
+        },
+        "machine_learning/coursef/2023": {
+          "word": "მანქანათმცოდნეობა"
+        },
+        "internet/coursef/2023": {
+          "word": "ინტერნეტი"
+        },
+        "url/coursef/2023": {
+          "word": "ბმული"
+        },
+        "define/coursef/2023": {
+          "word": "განსაზღვრეთ"
+        },
+        "debugging/express/2023": {
+          "word": "გამართვა"
+        },
+        "sequencing/express/2023": {
+          "word": "თანმიმდევრობა"
+        },
+        "programming/express/2023": {
+          "word": "პროგრამირება"
+        },
+        "behavior/express/2023": {
+          "word": "ქცევა"
+        },
+        "sprite/express/2023": {
+          "word": "სპრაიტი"
+        },
+        "loop/express/2023": {
+          "word": "ციკლი"
+        },
+        "condition/express/2023": {
+          "word": "პირობა"
+        },
+        "conditionals/express/2023": {
+          "word": "პირობითი ბრძანებები"
+        },
+        "function/express/2023": {
+          "word": "ფუნქცია"
+        },
+        "variable/express/2023": {
+          "word": "ცვლადი"
+        },
+        "define/express/2023": {
+          "word": "განსაზღვრეთ"
+        },
+        "debugging/pre-express/2023": {
+          "word": "გამართვა"
+        },
+        "programming/pre-express/2023": {
+          "word": "პროგრამირება"
+        },
+        "loop/pre-express/2023": {
+          "word": "ციკლი"
+        },
+        "machine_learning/how-ai-works/2023": {
+          "word": "მანქანათმცოდნეობა"
+        },
+        "artificial_intelligence/how-ai-works/2023": {
+          "word": "ხელოვნური ინტელექტი"
+        },
         "condition/aquatic/unversioned": {
           "word": "პირობა"
         },
