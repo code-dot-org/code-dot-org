@@ -88,6 +88,9 @@
         "Overworld Chop Trees_2021": {
           "craft_callout_preplaced": "Weve put some blocks here to get you started"
         },
+        "Overworld Chop Trees_2023": {
+          "craft_callout_preplaced": "Weve put some blocks here to get you started"
+        },
         "Overworld House Frame Chosen": {
           "craft_callout_preplaced_house": "Այս կոդը պետք է սկսել կառուցել ձեր տունը. Կարող եք ավարտել այն."
         },
@@ -101,6 +104,9 @@
           "craft_callout_preplaced_house": "Այս կոդը պետք է սկսել կառուցել ձեր տունը. Կարող եք ավարտել այն."
         },
         "Overworld House Frame Chosen_2021": {
+          "craft_callout_preplaced_house": "Այս կոդը պետք է սկսել կառուցել ձեր տունը. Կարող եք ավարտել այն."
+        },
+        "Overworld House Frame Chosen_2023": {
           "craft_callout_preplaced_house": "Այս կոդը պետք է սկսել կառուցել ձեր տունը. Կարող եք ավարտել այն."
         },
         "Overworld Move to Sheep": {
@@ -118,6 +124,9 @@
         "Overworld Move to Sheep_2021": {
           "craft_run_button_callout": "Մանրամասն «Run» է փորձեք ձեր ծրագիրը"
         },
+        "Overworld Move to Sheep_2023": {
+          "craft_run_button_callout": "Մանրամասն «Run» է փորձեք ձեր ծրագիրը"
+        },
         "Overworld Place Wall": {
           "craft_inside_repeat": "Կրկնել գործողությունները դնելով արգելափակում այստեղ"
         },
@@ -131,6 +140,9 @@
           "craft_inside_repeat": "Կրկնել գործողությունները դնելով արգելափակում այստեղ"
         },
         "Overworld Place Wall_2021": {
+          "craft_inside_repeat": "Կրկնել գործողությունները դնելով արգելափակում այստեղ"
+        },
+        "Overworld Place Wall_2023": {
           "craft_inside_repeat": "Կրկնել գործողությունները դնելով արգելափակում այստեղ"
         },
         "Underground Avoiding Lava": {
@@ -148,6 +160,9 @@
         "Underground Avoiding Lava_2021": {
           "craft_callout_moveforward": "Այս կոդը պետք է ստուգելու համար լավա, կարող եք ավելացնել հրաման է առաջ շարժվել:"
         },
+        "Underground Avoiding Lava_2023": {
+          "craft_callout_moveforward": "Այս կոդը պետք է ստուգելու համար լավա, կարող եք ավելացնել հրաման է առաջ շարժվել:"
+        },
         "Underground Iron": {
           "craft_what_is_iron": "Mine այս երկաթ."
         },
@@ -161,6 +176,9 @@
           "craft_what_is_iron": "Mine այս երկաթ."
         },
         "Underground Iron_2021": {
+          "craft_what_is_iron": "Mine այս երկաթ."
+        },
+        "Underground Iron_2023": {
           "craft_what_is_iron": "Mine այս երկաթ."
         },
         "frozen circle function with parameter": {
