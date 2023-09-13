@@ -681,6 +681,11 @@
             "name": "fallið mitt"
           }
         },
+        "Course E: Artist Project_examples_2023": {
+          "my function": {
+            "name": "fallið mitt"
+          }
+        },
         "Course E: Frozen Project_examples2022": {
           "draw a circle": {
             "description": "teikna hring með tiltekinn radíus",
@@ -733,6 +738,57 @@
           }
         },
         "Course E: Frozen Project_examples_2021": {
+          "draw a circle": {
+            "description": "teikna hring með tiltekinn radíus",
+            "name": "teikna hring",
+            "parameters": {
+              "radius": "radius"
+            }
+          },
+          "draw a house": {
+            "name": "teikna hús",
+            "parameters": {
+              "length": "lengd"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "teikna rellu",
+            "parameters": {
+              "length": "lengd",
+              "repeat": "endurtaka",
+              "sides": "hliðar"
+            }
+          },
+          "draw a shape": {
+            "name": "teikna form",
+            "parameters": {
+              "length": "lengd",
+              "sides": "hliðar"
+            }
+          },
+          "draw a square": {
+            "name": "teikna ferning",
+            "parameters": {
+              "length": "lengd",
+              "sides": "hliðar"
+            }
+          },
+          "draw a star": {
+            "description": "teikna stjörnu með tiltekinn fjölda geisla og hliðar af tiltekinni lengd",
+            "name": "teikna stjörnu",
+            "parameters": {
+              "length": "lengd",
+              "points": "stig"
+            }
+          },
+          "draw a triangle": {
+            "name": "teikna þríhyrning",
+            "parameters": {
+              "length": "lengd"
+            }
+          }
+        },
+        "Course E: Frozen Project_examples_2023": {
           "draw a circle": {
             "description": "teikna hring með tiltekinn radíus",
             "name": "teikna hring",
@@ -988,6 +1044,56 @@
             }
           }
         },
+        "CourseD_EOC_artist_2023": {
+          "draw a circle": {
+            "description": "teikna hring með tiltekinn radíus",
+            "name": "teikna hring",
+            "parameters": {
+              "radius": "radius"
+            }
+          },
+          "draw a house": {
+            "name": "teikna hús",
+            "parameters": {
+              "length": "lengd"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "teikna rellu",
+            "parameters": {
+              "length": "lengd",
+              "repeat": "endurtaka",
+              "sides": "hliðar"
+            }
+          },
+          "draw a shape": {
+            "name": "teikna form",
+            "parameters": {
+              "length": "lengd",
+              "sides": "hliðar"
+            }
+          },
+          "draw a square": {
+            "name": "teikna ferning",
+            "parameters": {
+              "length": "lengd"
+            }
+          },
+          "draw a star": {
+            "description": "teikna stjörnu með tiltekinn fjölda geisla og hliðar af tiltekinni lengd",
+            "name": "teikna stjörnu",
+            "parameters": {
+              "length": "lengd",
+              "points": "stig"
+            }
+          },
+          "draw a triangle": {
+            "name": "teikna þríhyrning",
+            "parameters": {
+              "length": "lengd"
+            }
+          }
+        },
         "CourseD_EOC_artist_example2021": {
           "draw a circle": {
             "description": "teikna hring með tiltekinn radíus",
@@ -1088,6 +1194,56 @@
             }
           }
         },
+        "CourseD_EOC_artist_example2021_2023": {
+          "draw a circle": {
+            "description": "teikna hring með tiltekinn radíus",
+            "name": "teikna hring",
+            "parameters": {
+              "radius": "radius"
+            }
+          },
+          "draw a house": {
+            "name": "teikna hús",
+            "parameters": {
+              "length": "lengd"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "teikna rellu",
+            "parameters": {
+              "length": "lengd",
+              "repeat": "endurtaka",
+              "sides": "hliðar"
+            }
+          },
+          "draw a shape": {
+            "name": "teikna form",
+            "parameters": {
+              "length": "lengd",
+              "sides": "hliðar"
+            }
+          },
+          "draw a square": {
+            "name": "teikna ferning",
+            "parameters": {
+              "length": "lengd"
+            }
+          },
+          "draw a star": {
+            "description": "teikna stjörnu með tiltekinn fjölda geisla og hliðar af tiltekinni lengd",
+            "name": "teikna stjörnu",
+            "parameters": {
+              "length": "lengd",
+              "points": "stig"
+            }
+          },
+          "draw a triangle": {
+            "name": "teikna þríhyrning",
+            "parameters": {
+              "length": "lengd"
+            }
+          }
+        },
         "Find the Wizard": {
           "check guess": {
             "name": "athuga ágiskun"
@@ -1130,6 +1286,11 @@
           }
         },
         "Function intro Ryan_2021": {
+          "build bridge": {
+            "name": "byggja brú"
+          }
+        },
+        "Function intro Ryan_2023": {
           "build bridge": {
             "name": "byggja brú"
           }
@@ -1291,6 +1452,11 @@
             "name": "hreinsa slóð"
           }
         },
+        "MC_HOC_2017_07_Cole_2023": {
+          "clear path": {
+            "name": "hreinsa slóð"
+          }
+        },
         "MC_HOC_2017_10_RETRY": {
           "fix long path": {
             "name": "laga langa slóð"
@@ -1324,6 +1490,14 @@
           }
         },
         "MC_HOC_2017_10_RETRY_2021": {
+          "fix long path": {
+            "name": "laga langa slóð"
+          },
+          "fix short path": {
+            "name": "laga stutta slóð"
+          }
+        },
+        "MC_HOC_2017_10_RETRY_2023": {
           "fix long path": {
             "name": "laga langa slóð"
           },
@@ -1371,6 +1545,14 @@
             "name": "byggja stutta brú"
           }
         },
+        "MC_HOC_2017_Ali_2023": {
+          "build long bridge": {
+            "name": "byggja langa brú"
+          },
+          "build short bridge": {
+            "name": "byggja stutta brú"
+          }
+        },
         "MC_HOC_2017_FP20x20": {
           "function 1": {
             "name": "fall 1"
@@ -1404,6 +1586,14 @@
           }
         },
         "MC_HOC_2017_FP20x20_2021": {
+          "function 1": {
+            "name": "fall 1"
+          },
+          "function 2": {
+            "name": "fall 2"
+          }
+        },
+        "MC_HOC_2017_FP20x20_2023": {
           "function 1": {
             "name": "fall 1"
           },
@@ -2032,6 +2222,11 @@
             "name": "möguleg lausn"
           }
         },
+        "courseB_artist_loops_challenge2_2023": {
+          "potential solution": {
+            "name": "möguleg lausn"
+          }
+        },
         "courseC_artist_prog3": {
           "draw fire": {
             "name": "teikna eld"
@@ -2128,6 +2323,11 @@
             "name": "magnari"
           }
         },
+        "courseC_artist_prog4_2023": {
+          "booster": {
+            "name": "magnari"
+          }
+        },
         "courseC_data wizard": {
           "do something": {
             "name": "gera eitthvað"
@@ -2144,6 +2344,11 @@
           }
         },
         "courseC_data wizard_2021": {
+          "do something": {
+            "name": "gera eitthvað"
+          }
+        },
+        "courseC_data wizard_2023": {
           "do something": {
             "name": "gera eitthvað"
           }
@@ -2841,6 +3046,17 @@
             "name": "teikna röð sexhyrninga"
           }
         },
+        "courseE_artist_functions10_2023": {
+          "do something": {
+            "name": "gera eitthvað"
+          },
+          "draw hexagon": {
+            "name": "teikna sexhyrning"
+          },
+          "draw line of hexagons": {
+            "name": "teikna röð sexhyrninga"
+          }
+        },
         "courseE_artist_functions1_copy": {
           "draw ear stems": {
             "name": "teikna spangir"
@@ -2899,6 +3115,14 @@
             "name": "teikna spangir"
           }
         },
+        "courseE_artist_functions2_2023": {
+          "draw a square": {
+            "name": "teikna ferning"
+          },
+          "draw ear stems": {
+            "name": "teikna spangir"
+          }
+        },
         "courseE_artist_functions2_copy": {
           "draw a square": {
             "name": "teikna ferning"
@@ -2936,6 +3160,11 @@
           }
         },
         "courseE_artist_functions3_2021": {
+          "draw a star": {
+            "name": "teikna stjörnu"
+          }
+        },
+        "courseE_artist_functions3_2023": {
           "draw a star": {
             "name": "teikna stjörnu"
           }
@@ -2985,6 +3214,11 @@
             "name": "teikna stjörnu"
           }
         },
+        "courseE_artist_functions5_2023": {
+          "draw a star": {
+            "name": "teikna stjörnu"
+          }
+        },
         "courseE_artist_functions5_copy": {
           "draw a star": {
             "name": "teikna stjörnu"
@@ -3030,6 +3264,11 @@
           }
         },
         "courseE_artist_functions7_2021": {
+          "draw a window": {
+            "name": "teikna glugga"
+          }
+        },
+        "courseE_artist_functions7_2023": {
           "draw a window": {
             "name": "teikna glugga"
           }
@@ -3115,6 +3354,20 @@
             "name": "víxlaðir ferningar"
           }
         },
+        "courseE_artist_functions8_2023": {
+          "do something": {
+            "name": "gera eitthvað"
+          },
+          "draw a line of squares": {
+            "name": "teikna röð ferninga"
+          },
+          "draw square": {
+            "name": "teikna ferning"
+          },
+          "staggered squares": {
+            "name": "víxlaðir ferningar"
+          }
+        },
         "courseE_artist_functions8a2022": {
           "do something": {
             "name": "gera eitthvað"
@@ -3148,6 +3401,14 @@
           }
         },
         "courseE_artist_functions8a_2021": {
+          "do something": {
+            "name": "gera eitthvað"
+          },
+          "draw a square": {
+            "name": "teikna ferning"
+          }
+        },
+        "courseE_artist_functions8a_2023": {
           "do something": {
             "name": "gera eitthvað"
           },
@@ -3200,6 +3461,17 @@
           }
         },
         "courseE_artist_functions8b_2021": {
+          "do something": {
+            "name": "gera eitthvað"
+          },
+          "draw a line of squares": {
+            "name": "teikna röð ferninga"
+          },
+          "draw square": {
+            "name": "teikna ferning"
+          }
+        },
+        "courseE_artist_functions8b_2023": {
           "do something": {
             "name": "gera eitthvað"
           },
@@ -3280,6 +3552,20 @@
             "name": "víxlaðir ferningar"
           }
         },
+        "courseE_artist_functions8c_2023": {
+          "do something": {
+            "name": "gera eitthvað"
+          },
+          "draw a line of squares": {
+            "name": "teikna röð ferninga"
+          },
+          "draw square": {
+            "name": "teikna ferning"
+          },
+          "staggered squares": {
+            "name": "víxlaðir ferningar"
+          }
+        },
         "courseE_artist_functions9": {
           "do something": {
             "name": "gera eitthvað"
@@ -3336,6 +3622,17 @@
           }
         },
         "courseE_artist_functions9_2021": {
+          "do something": {
+            "name": "gera eitthvað"
+          },
+          "draw line of triangles": {
+            "name": "teikna röð þríhyrninga"
+          },
+          "draw triangle": {
+            "name": "teikna þríhyrning"
+          }
+        },
+        "courseE_artist_functions9_2023": {
           "do something": {
             "name": "gera eitthvað"
           },
@@ -3431,6 +3728,23 @@
             "name": "víxlaðir ferningar"
           }
         },
+        "courseE_artist_functionsProj_2023": {
+          "draw a line of squares": {
+            "name": "teikna röð ferninga"
+          },
+          "draw hexagon": {
+            "name": "teikna sexhyrning"
+          },
+          "draw line of hexagons": {
+            "name": "teikna röð sexhyrninga"
+          },
+          "draw square": {
+            "name": "teikna ferning"
+          },
+          "staggered squares": {
+            "name": "víxlaðir ferningar"
+          }
+        },
         "courseE_artist_functions_challenge1": {
           "do something": {
             "name": "gera eitthvað"
@@ -3472,6 +3786,14 @@
           }
         },
         "courseE_artist_functions_challenge1_2021": {
+          "do something": {
+            "name": "gera eitthvað"
+          },
+          "my design": {
+            "name": "hönnun mín"
+          }
+        },
+        "courseE_artist_functions_challenge1_2023": {
           "do something": {
             "name": "gera eitthvað"
           },
@@ -3527,6 +3849,14 @@
             "name": "hönnun mín"
           }
         },
+        "courseE_artist_functions_challenge2_2023": {
+          "do something": {
+            "name": "gera eitthvað"
+          },
+          "my design": {
+            "name": "hönnun mín"
+          }
+        },
         "courseE_artist_functions_predict1": {
           "draw a square": {
             "name": "teikna ferning"
@@ -3568,6 +3898,14 @@
           }
         },
         "courseE_artist_functions_predict1_2021": {
+          "draw a square": {
+            "name": "teikna ferning"
+          },
+          "draw ear stems": {
+            "name": "teikna spangir"
+          }
+        },
+        "courseE_artist_functions_predict1_2023": {
           "draw a square": {
             "name": "teikna ferning"
           },
@@ -3647,6 +3985,17 @@
           }
         },
         "courseE_artist_functions_predict2_2021": {
+          "do something": {
+            "name": "gera eitthvað"
+          },
+          "draw line of polygons": {
+            "name": "teikna röð marghyrninga"
+          },
+          "draw polygon": {
+            "name": "teikna marghyrning"
+          }
+        },
+        "courseE_artist_functions_predict2_2023": {
           "do something": {
             "name": "gera eitthvað"
           },
@@ -3826,6 +4175,20 @@
             "name": "graskersferningur"
           }
         },
+        "courseE_farmer_functions10a1_2023": {
+          "check square for corn": {
+            "name": "athuga maís á reit"
+          },
+          "get all pumpkins": {
+            "name": "safna graskerum"
+          },
+          "pick along path": {
+            "name": "tína á slóð"
+          },
+          "pumpkin square": {
+            "name": "graskersferningur"
+          }
+        },
         "courseE_farmer_functions10b": {
           "navigate": {
             "name": "ferðast"
@@ -3927,6 +4290,23 @@
             "name": "graskersferningur"
           }
         },
+        "courseE_farmer_functions11_predict_2023": {
+          "check square for corn": {
+            "name": "athuga maís á reit"
+          },
+          "get all pumpkins": {
+            "name": "safna graskerum"
+          },
+          "get produce": {
+            "name": "sækja afurð"
+          },
+          "pick along path": {
+            "name": "tína á slóð"
+          },
+          "pumpkin square": {
+            "name": "graskersferningur"
+          }
+        },
         "courseE_farmer_functions132022": {
           "check for corn": {
             "name": "athuga með maís"
@@ -3997,6 +4377,20 @@
             "name": "tína á slóð"
           }
         },
+        "courseE_farmer_functions13_2023": {
+          "check for corn": {
+            "name": "athuga með maís"
+          },
+          "corn rectangle": {
+            "name": "maísrétthyrningur"
+          },
+          "lettuce stairs": {
+            "name": "káltröppur"
+          },
+          "pick along path": {
+            "name": "tína á slóð"
+          }
+        },
         "courseE_farmer_functions1a2022": {
           "check square for corn": {
             "name": "athuga maís á reit"
@@ -4022,6 +4416,11 @@
             "name": "athuga maís á reit"
           }
         },
+        "courseE_farmer_functions1a_2023": {
+          "check square for corn": {
+            "name": "athuga maís á reit"
+          }
+        },
         "courseE_farmer_functions2b2022": {
           "check square for corn": {
             "name": "athuga maís á reit"
@@ -4043,6 +4442,11 @@
           }
         },
         "courseE_farmer_functions2b_2021": {
+          "check square for corn": {
+            "name": "athuga maís á reit"
+          }
+        },
+        "courseE_farmer_functions2b_2023": {
           "check square for corn": {
             "name": "athuga maís á reit"
           }
@@ -4085,6 +4489,14 @@
           }
         },
         "courseE_farmer_functions2ba_2021": {
+          "check square for corn": {
+            "name": "athuga maís á reit"
+          },
+          "get all pumpkins": {
+            "name": "safna graskerum"
+          }
+        },
+        "courseE_farmer_functions2ba_2023": {
           "check square for corn": {
             "name": "athuga maís á reit"
           },
@@ -4152,6 +4564,17 @@
             "name": "tína á slóð"
           }
         },
+        "courseE_farmer_functions3c1_2023": {
+          "check square for corn": {
+            "name": "athuga maís á reit"
+          },
+          "get all pumpkins": {
+            "name": "safna graskerum"
+          },
+          "pick along path": {
+            "name": "tína á slóð"
+          }
+        },
         "courseE_farmer_functions3c2022": {
           "check square for corn": {
             "name": "athuga maís á reit"
@@ -4185,6 +4608,14 @@
           }
         },
         "courseE_farmer_functions3c_2021": {
+          "check square for corn": {
+            "name": "athuga maís á reit"
+          },
+          "get all pumpkins": {
+            "name": "safna graskerum"
+          }
+        },
+        "courseE_farmer_functions3c_2023": {
           "check square for corn": {
             "name": "athuga maís á reit"
           },
@@ -4232,6 +4663,11 @@
             "name": "garðferningur"
           }
         },
+        "courseE_farmer_functions7a1_2023": {
+          "garden square": {
+            "name": "garðferningur"
+          }
+        },
         "courseE_farmer_functions8a12022": {
           "garden square": {
             "name": "garðferningur"
@@ -4253,6 +4689,11 @@
           }
         },
         "courseE_farmer_functions8a1_2021": {
+          "garden square": {
+            "name": "garðferningur"
+          }
+        },
+        "courseE_farmer_functions8a1_2023": {
           "garden square": {
             "name": "garðferningur"
           }
@@ -4283,6 +4724,11 @@
           }
         },
         "courseE_farmer_functions9a1_2021": {
+          "garden square": {
+            "name": "garðferningur"
+          }
+        },
+        "courseE_farmer_functions9a1_2023": {
           "garden square": {
             "name": "garðferningur"
           }
@@ -4334,6 +4780,11 @@
           }
         },
         "courseF_apps_collector_-2022-2": {
+          "end game": {
+            "name": "ljúka leik"
+          }
+        },
+        "courseF_apps_collector_2023": {
           "end game": {
             "name": "ljúka leik"
           }
@@ -4606,6 +5057,11 @@
           }
         },
         "courseF_bee_for_challenge1_2021": {
+          "move and get nectar with counter": {
+            "name": "færa og ná blómasafa með teljara"
+          }
+        },
+        "courseF_bee_for_challenge1_2023": {
           "move and get nectar with counter": {
             "name": "færa og ná blómasafa með teljara"
           }
