@@ -567,6 +567,11 @@ id-ID:
           # The Big Event
 
           Dalam ilmu komputer, events adalah tindakan yang dipantau oleh komputer. Dalam pelajaran ini, Anda akan bereaksi secara berbeda bergantung pada tombol yang ditekan.
+      BigEvent-Unplugged2022_2023:
+        markdown: |
+          # The Big Event
+
+          Dalam ilmu komputer, events adalah tindakan yang dipantau oleh komputer. Dalam pelajaran ini, Anda akan bereaksi secara berbeda bergantung pada tombol yang ditekan.
       BigEvent-Unplugged_2020:
         markdown: |
           # The Big Event
@@ -585,6 +590,13 @@ id-ID:
 
           ![](https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)
       BinaryBracelets-Unplugged2022:
+        markdown: |
+          # Gelang Binary
+
+          Buat gelang yang mewakili nama Anda dalam sistem yang dipahami komputer!
+
+          ![](https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)
+      BinaryBracelets-Unplugged2022_2023:
         markdown: |
           # Gelang Binary
 
@@ -2264,6 +2276,11 @@ id-ID:
           # Kondisional Dengan Kartu
 
           Mainkan permainan kartu dan buat aturan seperti "Jika saya menggambar kartu merah, saya mendapat poin" dan "Jika saya menggambar kartu hitam, Anda mendapat poin."
+      ConditionalsWithCards-Unplugged2022_2023:
+        markdown: |
+          # Kondisional Dengan Kartu
+
+          Mainkan permainan kartu dan buat aturan seperti "Jika saya menggambar kartu merah, saya mendapat poin" dan "Jika saya menggambar kartu hitam, Anda mendapat poin."
       ConditionalsWithCards-Unplugged_2020:
         markdown: |
           # Kondisional Dengan Kartu
@@ -2278,9 +2295,17 @@ id-ID:
         description: Sejauh ini, kerja bagus! Pilih aktivitas Anda berikutnya. Selesaikan
           sebanyak-banyaknya. Teruslah berlatih dengan loop dan Artis!
         display_name: Praktik Artis
+      CourseE_Artist_Practice_2023:
+        description: Sejauh ini, kerja bagus! Pilih aktivitas Anda berikutnya. Selesaikan
+          sebanyak-banyaknya. Teruslah berlatih dengan loop dan Artis!
+        display_name: Praktik Artis
       CourseE_Lesson_11_Artist_Practice_2022:
         display_name: Praktik Artis
+      CourseE_Lesson_11_Artist_Practice_2023:
+        display_name: Praktik Artis
       CourseE_Lesson_7_Artist_Practice_2022:
+        display_name: Praktik Artis
+      CourseE_Lesson_7_Artist_Practice_2023:
         display_name: Praktik Artis
       CourseF_outbreak_story:
         content1: deskripsi di sini
@@ -2471,7 +2496,119 @@ id-ID:
           selesai, bagikan simulasi kalian dengan orang lain. Bagikan pesan kalian
           tentang apa yang menurut kalian dapat kita lakukan untuk membantu menjaga
           orang lain tetap sehat saat virus sampai ke kota.\n"
+      CourseF_outbreak_story2022_2022_pilot_-2022-2_2023:
+        content1: deskripsi di sini
+        markdown: "# Wabah: Buat Kode Simulasi Kalian Sendiri\n\n## Selamat Datang
+          di Monster Town!\nMonster Town dulunya adalah tempat yang bahagia dan sehat.
+          Para monster di Monster Town senang berkeliling untuk mengunjungi teman-temannya.
+          \n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\nSuatu hari, salah satu monster mulai merasa sakit.
+          Monster itu telah terjangkit **virus**! Virus adalah kuman kecil yang dapat
+          membuat kalian sakit. Monster lain tidak terlalu khawatir. Mereka tetap
+          mengunjungi teman-temannya.\n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\nTak lama kemudian, dua monster lagi jatuh sakit.
+          Virus yang sama! Sepertinya mereka tertular virus dari teman mereka.\n\n<img
+          src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\nVirus itu perlahan menyebar ke monster lain di sekitar.
+          Monster yang sehat mulai khawatir mereka semua akan sakit. Monster yang
+          sakit mulai khawatir bahwa mereka akan menularkan virus ke semua temannya.\n\n<img
+          src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\n\n<div style=\"display: inline-block\">\n<img src=\"https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png\"
+          style=\"float:right; width:30%\">\n\n## Menghentikan penyebarannya\nUntungnya,
+          setelah mempelajari virus itu, tetangga Monster Town membuat penemuan penting.
+          Mereka menyadari bahwa mereka cenderung tidak menyebarkan virus jika mereka
+          memakai masker di mulut mereka. Dengan menggunakan masker wajah, monster
+          yang sakit cenderung tidak menularkan virus ke monster yang sehat.\n\n<img
+          src=\"https://images.code.org/c98f28f9bf6a027143592109d59ee484-image-1603134766360.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/bac9dbfaf1815c6627fc24e8e6db396d-image-1603134760456.png\"
+          style=\"width:8%\">\n\n</div>\n\n<img src=\"https://images.code.org/ef7499758496b39bcccc24aabd2af5d7-image-1603137920037.2020-10-19
+          16_04_58.gif\" style=\"float:left; width:25%; padding-right:25px\">\n\n##
+          Lalu apa yang kemudian akan terjadi?\n\nHari ini, kalian akan menulis kode
+          untuk membuat dan menjalankan **simulasi** kalian sendiri tentang wabah
+          virus di Monster Town. Simulasi adalah model komputer dari suatu proses
+          atau sistem. Belajarlah membuat kode dan membuat prediksi tentang apa yang
+          akan terjadi pada tetangga Monster Town.\n<img src=\"https://images.code.org/fcbfd250d58652bdfd6393ec4f2fe2dd-image-1603134705074.png\"
+          style=\"float:right; width:15%\">\n\n* *Seberapa cepat virusnya akan menyebar?*\n\n*
+          *Apakah semua monster akan sakit?*\n\n* *Bagaimana masker wajah bisa membantu?*\n\n\nSetelah
+          selesai, bagikan simulasi kalian dengan orang lain. Bagikan pesan kalian
+          tentang apa yang menurut kalian dapat kita lakukan untuk membantu menjaga
+          orang lain tetap sehat saat virus sampai ke kota.\n"
       CourseF_outbreak_story22022_2022_pilot_-2022-2:
+        content1: deskripsi di sini
+        markdown: "# Wabah: Berpikir Seperti Ilmuwan\n\n<img src=\"https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png\"
+          style=\"float:right; width:30%\">\n\nSimulasi adalah cara yang pas untuk
+          mempelajari hal-hal yang mungkin sulit diamati di dunia nyata. Simulasi
+          membantu ilmuwan untuk mengatasi masalah dan menguji ide-ide baru dengan
+          aman dan efisien. Simulasi Anda adalah cara untuk menunjukkan bagaimana
+          wabah virus di Monster Town terlihat.\n\n## Reset dan Putar Ulang!\nBahkan
+          saat Anda menulis kodenya sendiri, sangat tidak mungkin mengetahui dengan
+          pasti apa yang akan terjadi saat Anda menekan jalankan. Monster itu berkeliling
+          secara acak, jadi Anda tidak akan tahu apakah virusnya menyebar dengan cepat
+          atau lambat. Setiap kali mengubah kode, pastikan untuk menjalankan simulasi
+          Anda lebih dari satu kali. Sesuatu tidak akan terjadi dengan cara yang sama
+          dua kali!\n\n## Mengumpulkan Data\nCoba tuliskan pengamatan Anda saat menjalankan
+          simulasinya. Anda dapat menghitung jumlah monster yang sakit atau gunakan
+          timer untuk melihat seberapa cepat sesuatu terjadi. Misalnya, berapa lama
+          umumnya semua monster sakit jika tidak ada yang memakai masker? \n\n## Membuat
+          Prediksi\nJika Anda memahami model Anda, Anda dapat menggunakannya untuk
+          membuat prediksi. Anda bahkan dapat mengubah cara menjalankan simulasi Anda
+          dan menebak apa yang akan terjadi secara berbeda. Misalnya:\n* Apa yang
+          akan terjadi jika monsternya dua kali lebih banyak?\n* Apa yang akan terjadi
+          jika monsternya bergerak dengan setengah kecepatan?\n\n<img src=\"https://images.code.org/2e83373ffd346ce3f42917a0624d441c-image-1603749526420.png\"
+          style=\"float:right\">\n\n## Apakah Monster Town seperti dunia nyata?\nAda
+          batasan terkait seberapa realistis model akan terlihat. \n* Apa kesamaan
+          simulasi wabah Anda dengan wabah virus di dunia nyata?\n* Apa perbedaannya?\nSetelah
+          menyelesaikan kegiatan ini, diskusikan pertanyaan-pertanyaan ini dengan
+          guru atau keluarga Anda!\n\n## Apa lagi yang dapat kita buatkan model?\nAnda
+          telah membuat model kerja wabah di Monster Town. Hal-hal apa saja yang tidak
+          dapat dilakukan atau ditunjukkan oleh simulasi Anda yang Anda harap dapat
+          diwujudkan? Tekan lanjutkan untuk terus belajar membuat model lebih banyak
+          lagi:\n* Menambah jumlah monster dalam simulasi\n* Membantu monster sembuh
+          dari virus\n* Probabilitas, kekebalan, vaksin, dan lainnya!\n\nAnda juga
+          dapat membagikan model simulasi Anda dengan orang lain, atau berbagi pesan
+          tentang apa yang menurut Anda dapat kita lakukan untuk membantu orang lain
+          tetap sehat saat virus masuk ke kota."
+      CourseF_outbreak_story22022_2022_pilot_-2022-2_2023:
         content1: deskripsi di sini
         markdown: "# Wabah: Berpikir Seperti Ilmuwan\n\n<img src=\"https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png\"
           style=\"float:right; width:30%\">\n\nSimulasi adalah cara yang pas untuk
@@ -2687,6 +2824,16 @@ id-ID:
           * Merancang aplikasi yang dapat diakses penyandang disabilitas membuat aplikasi tersebut lebih baik untuk semua orang juga!
 
           ![](https://images.code.org/0c670d0d9078657a870df0ca799492cb-image-1557166420066.png)
+      DesigningForAccessibilityMarkdownLevel2022_2023:
+        markdown: |
+          # Merancang untuk Aksesibilitas
+
+          * Di dunia ilmu komputer, **aksesibilitas** adalah tentang menciptakan teknologi untuk para penyandang disabilitas.
+          * Disabilitas meliputi fisik, pendengaran, visual, dan banyak lainnya.
+          * Disabilitas itu banyak macamnya dan memengaruhi orang dengan berbagai cara, termasuk cara mereka menggunakan teknologi seperti **aplikasi telepon seluler pintar**.
+          * Merancang aplikasi yang dapat diakses penyandang disabilitas membuat aplikasi tersebut lebih baik untuk semua orang juga!
+
+          ![](https://images.code.org/0c670d0d9078657a870df0ca799492cb-image-1557166420066.png)
       DesigningForAccessibilityMarkdownLevel_2019:
         markdown: |
           # Merancang untuk Aksesibilitas
@@ -2737,6 +2884,11 @@ id-ID:
           #Berbagi Digital
 
           Dalam pelajaran ini, Anda akan mempertimbangkan tantangan dan keuntungan menghargai kepemilikan dan hak cipta, khususnya dalam lingkungan digital.
+      DigitalSharing-Unplugged2022_2023:
+        markdown: |
+          #Berbagi Digital
+
+          Dalam pelajaran ini, Anda akan mempertimbangkan tantangan dan keuntungan menghargai kepemilikan dan hak cipta, khususnya dalam lingkungan digital.
       DigitalSharing-Unplugged_2020:
         markdown: |
           #Berbagi Digital
@@ -2762,6 +2914,10 @@ id-ID:
           dan menulis cerita spasi kosong. Tonton video ini untuk mempelajari hubungan
           materi ini dengan ilmu komputer."
       EnvelopeVariables-Unplugged_2021_22022_2022_pilot_-2022-2:
+        markdown: "# Cerita Spasi KosongDalam pelajaran ini, Anda akan belajar menggunakan
+          dan menulis cerita spasi kosong. Tonton video ini untuk mempelajari hubungan
+          materi ini dengan ilmu komputer."
+      EnvelopeVariables-Unplugged_2021_22022_2022_pilot_-2022-2_2023:
         markdown: "# Cerita Spasi KosongDalam pelajaran ini, Anda akan belajar menggunakan
           dan menulis cerita spasi kosong. Tonton video ini untuk mempelajari hubungan
           materi ini dengan ilmu komputer."
@@ -2793,6 +2949,11 @@ id-ID:
           # Getting Loopy
 
           Pelajaran ini memperkenalkan konsep pemrograman loops melalui aktivitas menari.
+      GettingLoopy-Unplugged2022_2023:
+        markdown: |
+          # Getting Loopy
+
+          Pelajaran ini memperkenalkan konsep pemrograman loops melalui aktivitas menari.
       GettingLoopy-Unplugged_2020:
         markdown: |
           # Getting Loopy
@@ -2816,6 +2977,11 @@ id-ID:
 
           Tulis algorithm yang dapat digunakan teman sekelas Anda untuk menggambar.
       GraphPaperProgramming-Unplugged2022:
+        markdown: |-
+          # Pemrograman Kertas Grafik
+
+          Tulis algorithm yang dapat digunakan teman sekelas Anda untuk menggambar.
+      GraphPaperProgramming-Unplugged2022_2023:
         markdown: |-
           # Pemrograman Kertas Grafik
 
@@ -2850,6 +3016,11 @@ id-ID:
 
           Buat algoritma untuk memindahkan karakter melalui sebuah labirin.
       HappyMaps-Unplugged2022:
+        markdown: |
+          # Happy Maps
+
+          Buat algoritma untuk memindahkan karakter melalui sebuah labirin.
+      HappyMaps-Unplugged2022_2023:
         markdown: |
           # Happy Maps
 
@@ -2969,6 +3140,11 @@ id-ID:
 
           Bangun internet Anda sendiri di kelas hanya dengan menggunakan lembaran kertas.
       Internet-Unplugged2022_2022_pilot_-2022-2:
+        markdown: |-
+          # Internet
+
+          Bangun internet Anda sendiri di kelas hanya dengan menggunakan lembaran kertas.
+      Internet-Unplugged2022_2022_pilot_-2022-2_2023:
         markdown: |-
           # Internet
 
@@ -3189,6 +3365,11 @@ id-ID:
           # Move It, Move It
 
           Gunakan peta dan berikan perintah untuk mencapai tujuan.
+      MoveItMoveIt-Unplugged2022_2023:
+        markdown: |
+          # Move It, Move It
+
+          Gunakan peta dan berikan perintah untuk mencapai tujuan.
       MoveItMoveIt-Unplugged_2020:
         markdown: |
           # Move It, Move It
@@ -3221,6 +3402,11 @@ id-ID:
           #Teman Robot Cerdik Saya
 
           Jadikan program Anda lebih singkat menggunakan loop!
+      MyLoopyRoboticFriends-Unplugged2022_2023:
+        markdown: |
+          #Teman Robot Cerdik Saya
+
+          Jadikan program Anda lebih singkat menggunakan loop!
       MyLoopyRoboticFriends-Unplugged_2020:
         markdown: |
           #Teman Robot Cerdik Saya
@@ -3237,6 +3423,11 @@ id-ID:
 
           Belajar memprogram dengan menulis kode untuk teman Anda!
       MyRoboticFriends-Unplugged2022:
+        markdown: |
+          #Teman Robot Saya
+
+          Belajar memprogram dengan menulis kode untuk teman Anda!
+      MyRoboticFriends-Unplugged2022_2023:
         markdown: |
           #Teman Robot Saya
 
@@ -3681,6 +3872,9 @@ id-ID:
       PowerOfWords-Unplugged2022_2022_pilot_-2022-2:
         markdown: "# Kekuatan Kata-Kata## Apa yang harus Anda lakukan ketika seseorang
           menggunakan kata-kata kasar atau menyakitkan di internet?"
+      PowerOfWords-Unplugged2022_2022_pilot_-2022-2_2023:
+        markdown: "# Kekuatan Kata-Kata## Apa yang harus Anda lakukan ketika seseorang
+          menggunakan kata-kata kasar atau menyakitkan di internet?"
       PowerOfWords-Unplugged_2020:
         markdown: "# Kekuatan Kata-Kata## Apa yang harus Anda lakukan ketika seseorang
           menggunakan kata-kata kasar atau menyakitkan di internet?"
@@ -3715,6 +3909,9 @@ id-ID:
       PrivatePersonalInformation-Unplugged2022:
         markdown: "# Informasi Privat dan Pribadi## Apa saja informasi tentang diri
           Anda yang AMAN untuk dibagikan secara online?"
+      PrivatePersonalInformation-Unplugged2022_2023:
+        markdown: "# Informasi Privat dan Pribadi## Apa saja informasi tentang diri
+          Anda yang AMAN untuk dibagikan secara online?"
       PrivatePersonalInformation-Unplugged_2020:
         markdown: "# Informasi Privat dan Pribadi## Apa saja informasi tentang diri
           Anda yang AMAN untuk dibagikan secara online?"
@@ -3727,6 +3924,11 @@ id-ID:
 
           Bentuk tim-tim dan bekerja sama untuk menulis program yang membuat gambar.
       RelayProgramming-Unplugged2022:
+        markdown: |-
+          "#Pemrograman Relay
+
+          Bentuk tim-tim dan bekerja sama untuk menulis program yang membuat gambar.
+      RelayProgramming-Unplugged2022_2023:
         markdown: |-
           "#Pemrograman Relay
 
@@ -3765,6 +3967,11 @@ id-ID:
 
           Gunakan konsep paduan suara dalam lagu untuk mempelajari cara menetapkan dan memanggil function.
       Songwriting-Unplugged2022:
+        markdown: |-
+          # Menulis lagu
+
+          Gunakan konsep paduan suara dalam lagu untuk mempelajari cara menetapkan dan memanggil function.
+      Songwriting-Unplugged2022_2023:
         markdown: |-
           # Menulis lagu
 
@@ -3847,6 +4054,15 @@ id-ID:
         questions:
         - {}
       TheRightAppMarkdownLevel2022:
+        markdown: |
+          # The Right App
+
+          * Setiap orang menggunakan komputer akhir-akhir ini, terutama telepon pintar.
+          * Aplikasi telepon pintar membantu orang melakukan hal-hal seperti berbicara dengan teman, mendengar musik, berbelanja, atau hanya menjelajahi web.
+          * Penting bagi pemrogram untuk memahami kebutuhan orang lain dan merancang aplikasi dengan mempertimbangkannya!
+
+          ![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)
+      TheRightAppMarkdownLevel2022_2023:
         markdown: |
           # The Right App
 
@@ -4301,10 +4517,16 @@ id-ID:
       courseAB_EOC2022:
         description: Anda sudah sampai di pelajaran terakhir! Pilih proyek untuk dibuat.
         display_name: Proyek Akhir Kursus
+      courseAB_EOC2022_2023:
+        description: Anda sudah sampai di pelajaran terakhir! Pilih proyek untuk dibuat.
+        display_name: Proyek Akhir Kursus
       courseAB_EOC_2021:
         description: Anda sudah sampai di pelajaran terakhir! Pilih proyek untuk dibuat.
         display_name: Proyek Akhir Kursus
       courseB_EOC2022:
+        description: Anda sudah sampai di pelajaran terakhir! Pilih proyek untuk dibuat.
+        display_name: Proyek Akhir Kursus
+      courseB_EOC2022_2023:
         description: Anda sudah sampai di pelajaran terakhir! Pilih proyek untuk dibuat.
         display_name: Proyek Akhir Kursus
       courseB_EOC_2021:
@@ -4325,6 +4547,20 @@ id-ID:
         - text: Cermati kode di bawah ini dengan jeli. Apa yang akan terjadi saat
             anda mengklik "Jalankan"?
       courseC_multi_artist_prog6_predict12022:
+        answers:
+        - feedback: Salah.  Si artis menggambar persegi empat.
+          text: Si artis akan menggambar setiga sama sisi.
+        - feedback: Salah.  Si artis menggambar persegi empat.
+          text: Si artis akan mengambar sebuah garis.
+        - correct: true
+          feedback: Benar!
+          text: Si artis akan mengambar sebuah kotak.
+        - feedback: Salah. Artis menggambar persegi.
+          text: Artis akan menggambar pentagon
+        questions:
+        - text: Cermati kode di bawah ini dengan jeli. Apa yang akan terjadi saat
+            anda mengklik "Jalankan"?
+      courseC_multi_artist_prog6_predict12022_2023:
         answers:
         - feedback: Salah.  Si artis menggambar persegi empat.
           text: Si artis akan menggambar setiga sama sisi.
@@ -4412,6 +4648,23 @@ id-ID:
         - text: Cermati kode di bawah ini. Berapa banyak labu yang akan dikumpulkan
             petani setelah Anda mengklik "Jalankan"?
       courseC_multi_harvester_loops11_predict12022:
+        answers:
+        - feedback: Salah. Petani akan mengumpulkan 4 labu di setiap 3 loop.  4 kali
+            3 sama dengan 12!
+          text: '4'
+        - correct: true
+          feedback: Benar!
+          text: '12'
+        - feedback: Salah. Petani akan mengumpulkan 4 labu di setiap 3 loop.  4 kali
+            3 sama dengan 12!
+          text: '15'
+        - feedback: Salah. Petani akan mengumpulkan 4 labu di setiap 3 loop.  4 kali
+            3 sama dengan 12!
+          text: '20'
+        questions:
+        - text: Cermati kode di bawah ini. Berapa banyak labu yang akan dikumpulkan
+            petani setelah Anda mengklik "Jalankan"?
+      courseC_multi_harvester_loops11_predict12022_2023:
         answers:
         - feedback: Salah. Petani akan mengumpulkan 4 labu di setiap 3 loop.  4 kali
             3 sama dengan 12!
@@ -4523,6 +4776,18 @@ id-ID:
         questions:
         - text: Cari bug dalam code ini. Akankah Scrat mencapai akorn atau apakah
             ada masalah?
+      courseC_multi_maze_debugging8_predict12022_2023:
+        answers:
+        - text: Scrat akan sampai di akorn. Tidak ada bug dalam code.
+        - correct: true
+          text: Scrat tidak akan mencapai akorn karena dia salah belok.
+        - text: Scrat tidak akan mencapai akorn karena tidak cukup ada blok `move
+            forward`.
+        - feedback: Scrat tidak akan mencapai akorn karena dia salah belok.
+          text: Scrat tidak akan bergerak dari blok pertama.
+        questions:
+        - text: Cari bug dalam code ini. Akankah Scrat mencapai akorn atau apakah
+            ada masalah?
       courseC_multi_maze_debugging8_predict1_2018:
         answers:
         - feedback: Salah. Scrat salah jalan setelah belokan terakhirnya.
@@ -4621,6 +4886,20 @@ id-ID:
         questions:
         - text: Baca kode berikut dengan teliti. Apa yang akan terjadi saat Anda mengklik
             "Jalankan"?
+      courseC_multi_maze_programming8_predict12022_2023:
+        answers:
+        - feedback: Salah. Kode ini membawa burungnya pas ke babi.
+          text: Burung akhirnya akan kurang satu langkah dari babi.
+        - correct: true
+          feedback: Benar!
+          text: Burung pasti akan sampai ke babi.
+        - feedback: Salah. Kode ini membawa burungnya pas ke babi.
+          text: Burung akan menabrak TNT.
+        - feedback: Salah. Kode ini membawa burungnya pas ke babi.
+          text: Burung akan terbang menabrak dinding.
+        questions:
+        - text: Baca kode berikut dengan teliti. Apa yang akan terjadi saat Anda mengklik
+            "Jalankan"?
       courseC_multi_maze_programming8_predict1_2018:
         answers:
         - feedback: Salah. Kode ini membawa burungnya pas ke babi.
@@ -4693,6 +4972,22 @@ id-ID:
         questions:
         - text: Menurut anda, apa yang akan terjadi ketika anda mengklik "Jalankan"?
       courseC_multi_starWars_predict12022:
+        answers:
+        - feedback: Salah. Blok repeat akan membuat BB-8 bergerak maju sebanyak 5
+            kali.
+          text: BB-8 tidak akan bergerak.
+        - feedback: Salah. Blok repeat akan membuat BB-8 bergerak maju sebanyak 5
+            kali.
+          text: BB-8 hanya akan bergerak satu kotak
+        - correct: true
+          feedback: Benar!
+          text: BB-8 akan bergerak 5 kali dan mengambil semua logam rongsokan
+        - feedback: Salah. Blok repeat akan membuat BB-8 bergerak maju sebanyak 5
+            kali.
+          text: BB-8 hanya akan bergerak 3 kotak.
+        questions:
+        - text: Menurut anda, apa yang akan terjadi ketika anda mengklik "Jalankan"?
+      courseC_multi_starWars_predict12022_2023:
         answers:
         - feedback: Salah. Blok repeat akan membuat BB-8 bergerak maju sebanyak 5
             kali.
@@ -4805,6 +5100,24 @@ id-ID:
         questions:
         - text: Cermati code di bawah ini. Apa yang akan terjadi saat anda mengklik
             "Jalankan"?
+      courseC_multi_starWars_predict22022_2023:
+        answers:
+        - feedback: Salah. Loop pertama hanya membolehkan BB-8 bergerak maju 2 kotak,
+            padahal perlu bergerak maju sebanyak 3 kotak.
+          text: BB-8 akan berjalan terlalu jauh dalam loop pertama.
+        - correct: true
+          feedback: Benar!
+          text: BB-8 tidak akan berjalan cukup jauh dalam loop pertama agar dapat
+            mengambil semua logam rongsokan.
+        - feedback: Salah. Loop pertama hanya membolehkan BB-8 bergerak maju 2 kotak,
+            padahal perlu bergerak maju sebanyak 3 kotak.
+          text: BB-8 akan mengumpulkan semua logam rongsokan tanpa kesulitan.
+        - feedback: Salah. Loop pertama hanya membolehkan BB-8 bergerak maju 2 kotak,
+            padahal perlu bergerak maju sebanyak 3 kotak.
+          text: BB-8 akan salah belok setelah loop pertama.
+        questions:
+        - text: Cermati code di bawah ini. Apa yang akan terjadi saat anda mengklik
+            "Jalankan"?
       courseC_multi_starWars_predict2_2018:
         answers:
         - feedback: Salah. Loop pertama hanya membolehkan BB-8 bergerak maju 2 kotak,
@@ -4881,6 +5194,10 @@ id-ID:
         description: Anda sudah sampai di pelajaran terakhir Kursus D! Pilih proyek
           untuk dibuat.
         display_name: Proyek Akhir Kursus
+      courseD_EOC2022_2023:
+        description: Anda sudah sampai di pelajaran terakhir Kursus D! Pilih proyek
+          untuk dibuat.
+        display_name: Proyek Akhir Kursus
       courseD_EOC_2020:
         description: Anda sudah sampai di pelajaran terakhir Kursus D! Pilih proyek
           untuk dibuat.
@@ -4890,6 +5207,10 @@ id-ID:
           untuk dibuat.
         display_name: Proyek Akhir Kursus
       courseD_EOC_examples2022:
+        description: Anda akan segera memulai proyek terakhir. Sebelum memulai, luangkan
+          waktu untuk mencermati proyek-proyek contoh.
+        display_name: Contoh-Contoh Proyek
+      courseD_EOC_examples2022_2023:
         description: Anda akan segera memulai proyek terakhir. Sebelum memulai, luangkan
           waktu untuk mencermati proyek-proyek contoh.
         display_name: Contoh-Contoh Proyek
@@ -4978,6 +5299,30 @@ id-ID:
         - text: Cermati kode di bawah ini. Gambar manakah yang akan dihasilkan program
             ini saat Anda mengklik "Jalankan"?
       courseD_multi_artist_nestedLoops9_predict12022:
+        answers:
+        - correct: true
+          feedback: Benar!
+          text: A
+        - feedback: Salah.  Loop-dalam menghasilkan pentagon, dan loop-luar mengulangnya
+            4 kali dalam sebuah loop.
+          text: B
+        - feedback: Salah.  Loop-dalam menghasilkan pentagon, dan loop-luar mengulangnya
+            4 kali dalam sebuah loop.
+          text: C
+        - feedback: Salah.  Loop-dalam menghasilkan pentagon, dan loop-luar mengulangnya
+            4 kali dalam sebuah loop.
+          text: Tidak satu pun dari yang di atas
+        markdown: |+
+          <table>
+          <tr><td>A</td><td><img src="https://images.code.org/cfc3f8206438a60afe3be9afe7fc0a22-image-1489118742610.10.15.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>B</td><td><img src="https://images.code.org/975b027684d2f5411b960bf82987663e-image-1489119999013.11.13.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>C</td><td><img src="https://images.code.org/635ac54ed7cb2e2d24eb341b3ec4eecb-image-1489120024059.12.00.png" width="80px" style="mix-blend-mode: multiply; clip: rect(0px,0px,0px,40px);"/></td></tr>
+          </table>
+
+          <br/><br/>
+
+        questions:
+        - text: Cermati kode di bawah ini. Gambar manakah yang akan dihasilkan program
+            ini saat Anda mengklik "Jalankan"?
+      courseD_multi_artist_nestedLoops9_predict12022_2023:
         answers:
         - correct: true
           feedback: Benar!
@@ -5137,6 +5482,23 @@ id-ID:
             Jika ada bunga, lebah harus mengumpulkan nektar satu kali. Jika tidak
             ada bunga, lebah tidak perlu melakukan apa-apa. Cermati code di bawah
             ini. Menurut Anda apa yang akan terjadi setelah Anda mengklik "Jalankan"?
+      courseD_multi_bee_conditionals1_predict12022_2023:
+        answers:
+        - feedback: Salah. Blok `if at flower` memastikan lebahnya hanya akan mencoba
+            mengisap nektar jika ada bunga di bawah awan.
+          text: Lebah akan bergerak ke awan dan mencoba mengisap nektar, apa pun risikonya.
+        - correct: true
+          feedback: Benar!
+          text: Lebah akan bergerak ke awan dan hanya mencoba mengisap nektar jika
+            ada bunga di bawahnya.
+        - feedback: Salah. Blok `if at flower` memastikan lebahnya akan mencoba mengisap
+            nektar jika ada bunga di bawah awan.
+          text: Lebah akan bergerak ke awan lalu diam saja, apa pun yang terjadi.
+        - feedback: Salah. Blok `if at flower` memastikan lebahnya hanya akan mencoba
+            mengisap nektar jika ada bunga di bawah awan.
+          text: Lebah tidak akan sampai ke awan.
+        questions:
+        - {}
       courseD_multi_bee_conditionals1_predict1_2018:
         answers:
         - feedback: Salah. Blok `if at flower` memastikan lebahnya hanya akan mencoba
@@ -5299,6 +5661,30 @@ id-ID:
         - text: 'Perhatikan baik-baik kode di bawah. Menurut Anda, apa yang akan terjadi
             setelah Anda mengklik "Run"? Ingat: hanya akan ada *satu* sarang lebah
             atau *satu* bunga di balik setiap awan.'
+      courseD_multi_bee_conditionals7_predict22022_2023:
+        answers:
+        - correct: true
+          feedback: Benar!
+          text: 'Lebah akan mendapat madu bunga di setiap bunga dan membuat madu di
+            setiap sarang madu.
+
+            '
+        - feedback: 'Salah. Blok `if at flower` membiarkan lebah mendapat madu bunga
+            di setiap bunga dan membuat madu di setiap sarang lebah.
+
+            '
+          text: Lebah akan mencoba mengisap nektar dari bunga dan sarang madu.
+        - feedback: Salah. Salah. Blok `if at flower` membiarkan lebah mendapat madu
+            bunga di setiap bunga dan membuat madu di setiap sarang lebah..
+          text: Lebah akan mencoba mengambil madu dari bunga dan sarang.
+        - feedback: Salah. Salah. Blok `if at flower` membiarkan lebah mendapat madu
+            bunga di setiap bunga dan membuat madu di setiap sarang lebah..
+          text: Lebah tidak mengambil madu dan tidak membuat madu dari bunga dan di
+            sarang lebah.
+        questions:
+        - text: 'Perhatikan baik-baik kode di bawah. Menurut Anda, apa yang akan terjadi
+            setelah Anda mengklik "Run"? Ingat: hanya akan ada *satu* sarang lebah
+            atau *satu* bunga di balik setiap awan.'
       courseD_multi_bee_conditionals7_predict2_2018:
         answers:
         - correct: true
@@ -5421,6 +5807,23 @@ id-ID:
         questions:
         - text: Cermati loop berlapis di bawah ini. Apa yang akan terjadi saat Anda
             mengklik "Jalankan"?
+      courseD_multi_bee_nestedLoops2_predict12022_2023:
+        answers:
+        - feedback: Salah.  Lebah mengulang tindakan berulang-ulang maju ke depan
+            dan mengisap nektar, sehingga memungkinkannya memecahkan puzzle.
+          text: Lebah akan bergerak maju dan hanya mengisap nektar satu kali.
+        - feedback: Salah.  Lebah mengulang tindakan berulang-ulang maju ke depan
+            dan mengisap nektar, sehingga memungkinkannya memecahkan puzzle.
+          text: Lebah hanya akan mendapat 2 unit nektar.
+        - correct: true
+          feedback: Benar!
+          text: Lebah akan mendapatkan semua nektar.
+        - feedback: Salah.  Lebah mengulang tindakan berulang-ulang maju ke depan
+            dan mengisap nektar, sehingga memungkinkannya memecahkan puzzle.
+          text: Lebah akan salah belok.
+        questions:
+        - text: Cermati loop berlapis di bawah ini. Apa yang akan terjadi saat Anda
+            mengklik "Jalankan"?
       courseD_multi_bee_nestedLoops2_predict1_2018:
         answers:
         - feedback: Salah.  Lebah mengulang tindakan berulang-ulang maju ke depan
@@ -5510,6 +5913,26 @@ id-ID:
         - text: Cermati kode di bawah ini. Berapa banyak madu yang akan dihasilkan
             lebah saat Anda mengklik "Jalankan"?
       courseD_multi_bee_nestedLoops9_predict22022:
+        answers:
+        - feedback: Salah. Lebah mengumpulkan 2 nektar dalam loop gerak maju, lalu
+            2 nektar di dalam loop turun.  Semua ini berlangsung di dalam loop lain
+            yang terjadi dua kali. 4 kali 2 sama dengan 8!
+          text: '4'
+        - correct: true
+          feedback: Benar!
+          text: '8'
+        - feedback: Salah. Lebah mengumpulkan 2 nektar dalam loop gerak maju, lalu
+            2 nektar di dalam loop turun.  Semua ini berlangsung di dalam loop lain
+            yang terjadi dua kali. 4 kali 2 sama dengan 8!
+          text: '10'
+        - feedback: Salah. Lebah mengumpulkan 2 nektar dalam loop gerak maju, lalu
+            2 nektar di dalam loop turun.  Semua ini berlangsung di dalam loop lain
+            yang terjadi dua kali. 4 kali 2 sama dengan 8!
+          text: '12'
+        questions:
+        - text: Cermati kode di bawah ini. Berapa banyak madu yang akan dihasilkan
+            lebah saat Anda mengklik "Jalankan"?
+      courseD_multi_bee_nestedLoops9_predict22022_2023:
         answers:
         - feedback: Salah. Lebah mengumpulkan 2 nektar dalam loop gerak maju, lalu
             2 nektar di dalam loop turun.  Semua ini berlangsung di dalam loop lain
@@ -5672,6 +6095,27 @@ id-ID:
         questions:
         - text: Cermati kode di bawah ini. Apa yang akan terjadi setelah Anda mengklik
             "Jalankan"?
+      courseD_multi_farmer_condLoops9_predict12022_2023:
+        answers:
+        - feedback: Salah. Tidak ada kode di sini untuk memilih labu.
+          text: Pemanen akan mengumpulkan semua hasil panen.
+        - feedback: Salah. Kode akan membuat pemanen berulang kali membuat pola anak
+            tangga dan mengambil jagung atau selada sebanyak-banyaknya. Ia tidak akan
+            memilih labu.
+          text: Pemanen tidak akan memetik salah satu tanaman pada jalan yang diambilnya.
+        - correct: true
+          feedback: Benar!
+          text: Pemanen akan memilih semua tanaman, kecuali labu.
+        - feedback: Salah. Kode akan membuat pemanen berulang kali membuat pola anak
+            tangga dan mengambil jagung atau selada sebanyak-banyaknya. Ia tidak akan
+            memilih labu.
+          text: Pemanen hanya akan memetik labu.
+        markdown: |
+          Tunas dalam puzzle ini adalah jagung atau selada.
+          <br/>
+        questions:
+        - text: Cermati kode di bawah ini. Apa yang akan terjadi setelah Anda mengklik
+            "Jalankan"?
       courseD_multi_farmer_condLoops9_predict1_2018:
         answers:
         - feedback: Salah. Tidak ada kode di sini untuk memilih labu.
@@ -5807,6 +6251,21 @@ id-ID:
         questions:
         - text: Cermati code di bawah ini. Apa yang akan tersisa pada akhir puzzle
             ini?
+      courseD_multi_farmer_while10_predict22022_2023:
+        answers:
+        - feedback: Salah. Tidak ada code untuk menghilangkan kotoran dari tumpukan.
+          text: Tidak ada. code ini hanya akan membiarkan tanah yang rata.
+        - correct: true
+          feedback: Benar!
+          text: Code ini akan membiarkan tumpukan tak terjamah sama sekali.
+        - feedback: Salah. Loop `while` akan menangani loop segala ukuran, tetapi
+            tidak ada code untuk menghilangkan kotoran dari tumpukan.
+          text: Code ini akan membiarkan lubang tak terjamah sama sekali.
+        - feedback: Salah. Tidak ada code untuk menghilangkan kotoran dari tumpukan.
+          text: Code ini akan membiarkan lubang terakhir tidak tersentuh.
+        questions:
+        - text: Cermati code di bawah ini. Apa yang akan tersisa pada akhir puzzle
+            ini?
       courseD_multi_farmer_while10_predict2_2018:
         answers:
         - feedback: Salah. Tidak ada code untuk menghilangkan kotoran dari tumpukan.
@@ -5889,6 +6348,24 @@ id-ID:
         - text: Cermati code di bawah ini. Apa yang akan terjadi setelah Anda mengklik
             "Jalankan"?
       courseD_multi_farmer_while4_predict12022:
+        answers:
+        - feedback: Salah. Petani akan menghilangkan kotoran sepanjang ada tumpukan,
+            lalu berhenti ketika tumpukan hilang.
+          text: Tidak akan terjadi apa-apa.
+        - feedback: Salah. Petani akan menghilangkan kotoran sepanjang ada tumpukan,
+            lalu berhenti ketika tumpukan hilang.
+          text: Petani tidak akan pernah berhenti menghilangkan kotoran.
+        - correct: true
+          feedback: Benar!
+          text: Petani akan menghilangkan kotoran sepanjang ada tumpukan, lalu berhenti
+            ketika tumpukan hilang.
+        - feedback: Salah. Petani akan menghilangkan kotoran sepanjang ada tumpukan,
+            lalu berhenti ketika tumpukan hilang.
+          text: Petani hanya akan menghilangkan kotoran satu kali.
+        questions:
+        - text: Cermati code di bawah ini. Apa yang akan terjadi setelah Anda mengklik
+            "Jalankan"?
+      courseD_multi_farmer_while4_predict12022_2023:
         answers:
         - feedback: Salah. Petani akan menghilangkan kotoran sepanjang ada tumpukan,
             lalu berhenti ketika tumpukan hilang.
@@ -6005,6 +6482,16 @@ id-ID:
         questions:
         - text: Cermati code di bawah ini. Apa yang akan terjadi setelah Anda mengklik
             "Jalankan"?
+      courseD_multi_maze_until10_predict22022_2023:
+        answers:
+        - correct: true
+          feedback: Benar!
+        - text: Zombi akan berhasil sampai ke bunga matahari.
+        - text: Zombi akan belok kanan di jalur pertama dan berputar-putar selamanya.
+        - text: Zombi akan terpaku di akhir jalan lurus.
+        questions:
+        - text: Cermati code di bawah ini. Apa yang akan terjadi setelah Anda mengklik
+            "Jalankan"?
       courseD_multi_maze_until10_predict2_2018:
         answers:
         - correct: true
@@ -6091,6 +6578,23 @@ id-ID:
         - text: Cermati kode di bawah ini. Menurut Anda apa yang akan terjadi ketika
             Anda mengklik "Jalankan"?
       courseD_multi_maze_until2_predict12022:
+        answers:
+        - feedback: Salah. Kode membuat burung bergerak maju selagi ada jalur, lalu
+            belok kiri. Burung akan terus begitu hingga menjangkau babi!
+          text: Burung tidak akan bergerak sama sekali.
+        - correct: true
+          feedback: Benar!
+          text: Burung pasti akan sampai ke babi.
+        - feedback: Salah. Kode membuat burung bergerak maju selagi ada jalur aman,
+            lalu belok kiri. Burung akan terus begitu sampai menjangkau babi!
+          text: Burung akan bergerak maju dan menabrak TNT.
+        - feedback: Kode membuat burung bergerak maju selagi ada jalur, lalu belok
+            kiri. Burung akan terus begitu hingga menjangkau babi!
+          text: Burung salah belok.
+        questions:
+        - text: Cermati kode di bawah ini. Menurut Anda apa yang akan terjadi ketika
+            Anda mengklik "Jalankan"?
+      courseD_multi_maze_until2_predict12022_2023:
         answers:
         - feedback: Salah. Kode membuat burung bergerak maju selagi ada jalur, lalu
             belok kiri. Burung akan terus begitu hingga menjangkau babi!
@@ -6199,6 +6703,9 @@ id-ID:
       courseE_EOC2022:
         description: Anda sudah sampai di akhir Kursus E! Pilih proyek untuk dibuat.
         display_name: Proyek Akhir Kursus
+      courseE_EOC2022_2023:
+        description: Anda sudah sampai di akhir Kursus E! Pilih proyek untuk dibuat.
+        display_name: Proyek Akhir Kursus
       courseE_EOC_2020:
         description: Anda sudah sampai di akhir Kursus E! Pilih proyek untuk dibuat.
         display_name: Proyek Akhir Kursus
@@ -6206,6 +6713,9 @@ id-ID:
         description: Anda sudah sampai di akhir Kursus E! Pilih proyek untuk dibuat.
         display_name: Proyek Akhir Kursus
       courseE_EOC_examples2022:
+        description: Anda sudah sampai di akhir Kursus E! Pilih proyek untuk dibuat.
+        display_name: Proyek Akhir Kursus
+      courseE_EOC_examples2022_2023:
         description: Anda sudah sampai di akhir Kursus E! Pilih proyek untuk dibuat.
         display_name: Proyek Akhir Kursus
       courseE_EOC_examples_2021:
@@ -6259,6 +6769,23 @@ id-ID:
         - text: Perhatikan definisi fungsi di bawah ini. Apakah yang akan diambil
             oleh pemanen?
       courseE_multi_farmer_functions11_predict2022:
+        answers:
+        - feedback: Salah. Pemanen bergerak maju sampai ujung jalan, lalu berbalik
+            dan bergerak mundur sampai mengambil selada.
+          text: Pemanen akan mengambil dua labu.
+        - feedback: Salah. Pemanen bergerak maju sampai ujung jalan, lalu berbalik
+            dan bergerak mundur sampai mengambil selada.
+          text: Pemanen akan mengambil semua labu.
+        - correct: true
+          feedback: Benar!
+          text: Pemanen akan mengambil selada.
+        - feedback: Salah. Pemanen bergerak maju sampai ujung jalan, lalu berbalik
+            dan bergerak mundur sampai mengambil selada.
+          text: Pemanen akan mengambil jagung.
+        questions:
+        - text: Perhatikan definisi fungsi di bawah ini. Apakah yang akan diambil
+            oleh pemanen?
+      courseE_multi_farmer_functions11_predict2022_2023:
         answers:
         - feedback: Salah. Pemanen bergerak maju sampai ujung jalan, lalu berbalik
             dan bergerak mundur sampai mengambil selada.
@@ -6359,6 +6886,21 @@ id-ID:
         questions:
         - text: Apa yang akan terjadi ketika Anda menekan "Jalankan"?
       courseE_prediction_artistFunction12022:
+        answers:
+        - feedback: Salah. Function sebenarnya dipanggil dua kali di dalam program.
+          text: Tidak ada. Function tidak dipanggil dalam program.
+        - feedback: Salah. Function sebenarnya dipanggil dua kali di dalam program.
+          text: Si artis akan mengambar sebuah persegi empat.
+        - feedback: Salah. Panjang setiap sisi persegi empat hanya 100 piksel, tetapi
+            si artis melompat sebanyak 175 piksel di antara function.
+          text: Artis akan menggambar dua persegi empat yang tumpang-tindih.
+        - correct: true
+          feedback: Benar! Function dipanggil dua kali di dalam program, dengan lompatan
+            di antaranya.
+          text: Artis akan menggambar dua persegi empat dengan celah kecil di antaranya.
+        questions:
+        - text: Apa yang akan terjadi ketika Anda menekan "Jalankan"?
+      courseE_prediction_artistFunction12022_2023:
         answers:
         - feedback: Salah. Function sebenarnya dipanggil dua kali di dalam program.
           text: Tidak ada. Function tidak dipanggil dalam program.
@@ -6499,6 +7041,20 @@ id-ID:
         questions:
         - text: Cermati code di bawah ini. Apa yang akan terjadi setelah Anda mengklik
             "Jalankan"?
+      courseE_swim_fish_behavior_predict12022_2023:
+        answers:
+        - feedback: Salah. Gulma raksasa akan mulai berguling-guling
+          text: Tidak akan terjadi apa-apa.
+        - feedback: Salah. Gulma raksasa akan mulai berguling-guling
+          text: Gulma raksasa akan mengambang ke bagian atas layar
+        - correct: true
+          feedback: Benar!
+          text: Gulma raksasa akan mulai berguling-guling
+        - feedback: Salah. Gulma raksasa akan mulai berguling-guling
+          text: Gulma raksasa akan berkedip-kedip.
+        questions:
+        - text: Cermati code di bawah ini. Apa yang akan terjadi setelah Anda mengklik
+            "Jalankan"?
       courseE_swim_fish_behavior_predict1_2021:
         answers:
         - feedback: Salah. Gulma raksasa akan mulai berguling-guling
@@ -6526,10 +7082,16 @@ id-ID:
         display_name: Proyek Akhir Kursus
       courseF_EOC_examples2022_2022_pilot_-2022-2:
         display_name: Proyek Akhir Kursus
+      courseF_EOC_examples2022_2022_pilot_-2022-2_2023:
+        display_name: Proyek Akhir Kursus
       courseF_EOC_examples_2021:
         description: Anda sudah sampai di akhir Kursus F! Pilih proyek untuk dibuat.
         display_name: Proyek Akhir Kursus
       courseF_EOC_samples2022:
+        description: Anda akan segera memulai proyek terakhir. Sebelum memulai, luangkan
+          waktu untuk mencermati proyek-proyek contoh.
+        display_name: Proyek Akhir Kursus
+      courseF_EOC_samples2022_2023:
         description: Anda akan segera memulai proyek terakhir. Sebelum memulai, luangkan
           waktu untuk mencermati proyek-proyek contoh.
         display_name: Proyek Akhir Kursus
@@ -6612,12 +7174,19 @@ id-ID:
         title: Banyak Variabel Lebah
       courseF_collector_samples_2022_pilot_-2022-2:
         display_name: Eksplorasi - Contoh Program
+      courseF_collector_samples_2022_pilot_-2022-2_2023:
+        display_name: Eksplorasi - Contoh Program
       courseF_events_freeplay:
         description: Sekarang Anda dapat menggunakan materi yang sudah dipelajari
           untuk membuat proyek Anda lebih baik lagi! Terus tambahkan ke program Anda
           atau mulai buat sesuatu yang baru!
         display_name: Event - Bermain Bebas
       courseF_events_freeplay2022_2022_pilot_-2022-2:
+        description: Sekarang Anda dapat menggunakan materi yang sudah dipelajari
+          untuk membuat proyek Anda lebih baik lagi! Terus tambahkan ke program Anda
+          atau mulai buat sesuatu yang baru!
+        display_name: Event - Bermain Bebas
+      courseF_events_freeplay2022_2022_pilot_-2022-2_2023:
         description: Sekarang Anda dapat menggunakan materi yang sudah dipelajari
           untuk membuat proyek Anda lebih baik lagi! Terus tambahkan ke program Anda
           atau mulai buat sesuatu yang baru!
@@ -6641,6 +7210,10 @@ id-ID:
         description: Sejauh ini, kerja bagus! Pilih aktivitas Anda berikutnya. Selesaikan
           sebanyak-banyaknya. Teruslah berlatih dengan event!
         display_name: Berlatih Event
+      courseF_events_practice2022_2022_pilot_-2022-2_2023:
+        description: Sejauh ini, kerja bagus! Pilih aktivitas Anda berikutnya. Selesaikan
+          sebanyak-banyaknya. Teruslah berlatih dengan event!
+        display_name: Berlatih Event
       courseF_events_predict_multi:
         answers:
         - feedback: Salah. Sprite juga akan bergerak ke timur.
@@ -6657,6 +7230,21 @@ id-ID:
         questions:
         - text: Baca code, lalu buat prediksi.
       courseF_events_predict_multi2022_2022_pilot_-2022-2:
+        answers:
+        - feedback: Salah. Sprite juga akan bergerak ke timur.
+          text: Sprite hanya akan memutar ke kanan.
+        - feedback: Salah. Sprite belum berhenti berputar, jadi dia akan melakukan
+            keduanya serentak.
+          text: Sprite hanya akan bergerak ke timur.
+        - correct: true
+          feedback: Benar! Kedua perilaku akan berlangsung serentak.
+          text: Sprite akan berputar dan bergerak bersamaan.
+        - feedback: Salah. Di Sprite Lab, blok yang terhubung segera muncul setiap
+            selesai blok terakhir, jadi kedua perilaku akan berlangsung serentak.
+          text: Sprite terlebih dahulu akan berputar lalu bergerak kemudian.
+        questions:
+        - text: Baca code, lalu buat prediksi.
+      courseF_events_predict_multi2022_2022_pilot_-2022-2_2023:
         answers:
         - feedback: Salah. Sprite juga akan bergerak ke timur.
           text: Sprite hanya akan memutar ke kanan.
@@ -6715,6 +7303,14 @@ id-ID:
         - {}
         questions:
         - {}
+      courseF_groups_predict_multi_2022_pilot_-2022-2_2023:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseF_intro_apps:
         description: Selamat datang di CS Fundamental! Proyek ini semuanya di buat
           dengan Sprite Lab. Cobalah sekarang untuk mengetahui apa yang memungkinkan.
@@ -6729,6 +7325,8 @@ id-ID:
           dikerjakan bersama dengan lembar kerja Exploring Apps, yang ada di [paket
           pelajaran](.././)."
       courseF_intro_apps2022_2022_pilot_-2022-2:
+        display_name: Sprite Lab app
+      courseF_intro_apps2022_2022_pilot_-2022-2_2023:
         display_name: Sprite Lab app
       courseF_labels_predict_multi:
         answers:
@@ -6747,6 +7345,22 @@ id-ID:
         - text: Code ini mungkin terlihat akrab, tetapi bacalah dengan cermat. Apa
             yang akan ditampilkan jika pengguna mengetik "piza"?
       courseF_labels_predict_multi2022_2022_pilot_-2022-2:
+        answers:
+        - feedback: Salah. Label variable tidak cocok.
+          text: '"Satu piza siap saji!"'
+        - feedback: Salah. Label variable tidak pernah ditampilkan.
+          text: '"Satu menu siap saji!"'
+        - feedback: Salah. Label variable tidak pernah ditampilkan.
+          text: '"Satu menu makanan siap saji!"'
+        - correct: true
+          feedback: Benar! Label variable tidak cocok.
+          text: '"Satu menu siap saji!"'
+        - feedback: Salah. Event dan blok print tetap akan bekerja.
+          text: Tidak ada yang akan ditampilkan.
+        questions:
+        - text: Code ini mungkin terlihat akrab, tetapi bacalah dengan cermat. Apa
+            yang akan ditampilkan jika pengguna mengetik "piza"?
+      courseF_labels_predict_multi2022_2022_pilot_-2022-2_2023:
         answers:
         - feedback: Salah. Label variable tidak cocok.
           text: '"Satu piza siap saji!"'
@@ -7141,6 +7755,23 @@ id-ID:
         questions:
         - text: Kami telah menyetel variabel "length" ke 50. Apa yang akan terjadi
             ketika Anda mengklik "Jalankan"?
+      courseF_multi_artist_variables3a_predict12022_2023:
+        answers:
+        - correct: true
+          feedback: Benar!
+          text: Si artis akan menggambar segitiga dengan sisi 50 piksel.
+        - feedback: Salah. Variabel `length` perlu berada di dalam loop `repeat` agar
+            bisa terjadi.
+          text: Si artis akan menggambar poligon bersisi 50 dengan sisi 3 piksel.
+        - feedback: Salah.  Variabel `length` perlu digunakan di dalam blok `turn`
+            agar bisa terjadi.
+          text: Si artis akan menggambar tiga sisi terbuka dengan belokan 50 derajat.
+        - feedback: Variabel `length` disetel ke 50 dan digunakan di blok `move forward
+            by` sehingga artis akan menggambar segitiga dengan sisi 50 piksel.
+          text: Komputer akan meminta angka kepada pengguna.
+        questions:
+        - text: Kami telah menyetel variabel "length" ke 50. Apa yang akan terjadi
+            ketika Anda mengklik "Jalankan"?
       courseF_multi_artist_variables3a_predict1_2018:
         answers:
         - correct: true
@@ -7278,6 +7909,30 @@ id-ID:
         questions:
         - text: Baca kode di bawah ini. Apa yang akan terjadi saat Anda mengklik "Jalankan"?
       courseF_multi_bee_for3_predict12022:
+        answers:
+        - feedback: Salah. Loop `for` akan mengizinkan lebah mengumpulkan nektar dalam
+            jumlah yang tepat, tetapi hanya disetel untuk mencapai 4 bunga.
+          text: 'Lebah akan bergerak maju dan mengumpulkan semua nektar dari setiap
+            bunga. '
+        - correct: true
+          feedback: Benar!
+          text: 'Lebah akan bergerak maju dan mengumpulkan semua nektar dari setiap
+            bunga, kecuali satu. '
+        - feedback: Salah. Loop `for` akan mengizinkan lebah mengumpulkan nektar dalam
+            jumlah yang tepat, tetapi hanya disetel untuk mencapai 4 bunga.
+          text: 'Lebah akan bergerak maju dan mengumpulkan satu nektar dari setiap
+            bunga. '
+        - feedback: Salah. Loop `for` akan mengizinkan lebah mengumpulkan nektar dalam
+            jumlah yang tepat, tetapi hanya disetel untuk mencapai 4 bunga.
+          text: 'Lebah akan bergerak maju dan mengumpulkan satu nektar dari bunga
+            nomor 1 dan 4. '
+        markdown: |+
+          Ah!  Penggunaan loop `for` menjadikan puzzle ini jauh lebih mudah!
+
+
+        questions:
+        - text: Baca kode di bawah ini. Apa yang akan terjadi saat Anda mengklik "Jalankan"?
+      courseF_multi_bee_for3_predict12022_2023:
         answers:
         - feedback: Salah. Loop `for` akan mengizinkan lebah mengumpulkan nektar dalam
             jumlah yang tepat, tetapi hanya disetel untuk mencapai 4 bunga.
@@ -7471,6 +8126,10 @@ id-ID:
         description: Giliran Anda membuat apa pun yang Anda mau! Apa jenis proyek
           yang akan Anda buat?
         display_name: Sprite - Bermain Bebas
+      courseF_sprites_freeplay2022_2022_pilot_-2022-2_2023:
+        description: Giliran Anda membuat apa pun yang Anda mau! Apa jenis proyek
+          yang akan Anda buat?
+        display_name: Sprite - Bermain Bebas
       courseF_sprites_practice:
         description: Sejauh ini, kerja bagus! Pilih aktivitas Anda berikutnya. Selesaikan
           sebanyak-banyaknya. Teruslah berlatih dengan sprite dan perilaku!
@@ -7486,6 +8145,10 @@ id-ID:
           |**Tinjau Kembali**|**Tinjau Kembali**|**Tinjau Kembali**|**Tinjau Kembali**||
           ***Konsep***|*sprite, lokasi*|*sprite, properti*|*sprite, lokasi, perilaku*|*perilaku*|"
       courseF_sprites_practice2022_2022_pilot_-2022-2:
+        description: Sejauh ini, kerja bagus! Pilih aktivitas Anda berikutnya. Selesaikan
+          sebanyak-banyaknya. Teruslah berlatih dengan sprite dan perilaku!
+        display_name: Praktik Sprite
+      courseF_sprites_practice2022_2022_pilot_-2022-2_2023:
         description: Sejauh ini, kerja bagus! Pilih aktivitas Anda berikutnya. Selesaikan
           sebanyak-banyaknya. Teruslah berlatih dengan sprite dan perilaku!
         display_name: Praktik Sprite
@@ -7527,6 +8190,25 @@ id-ID:
           text: Pesawat akan bertabrakan.
         questions:
         - text: Baca code, lalu buat prediksi.
+      courseF_sprites_predict_multi2022_2022_pilot_-2022-2_2023:
+        answers:
+        - feedback: Salah. Sprite ini memiliki "perilaku" yang membuatnya terus berlari
+            sampai disuruh berhenti.
+          text: Kedua pesawat akan bergerak satu kotak di sepanjang kisi-kisi, lalu
+            berhenti.
+        - correct: true
+          feedback: Benar! Perilaku ini menyuruh pesawat untuk mulai bergerak dan
+            terus bergerak.
+          text: Kedua pesawat akan mulai bergerak dan tidak berhenti.
+        - feedback: Salah. Setiap blok code di Sprite Lab berlari seketika setelah
+            berikutnya.
+          text: Satu pesawat akan bergerak yang pertama, dan pesawat lainnya akan
+            bergerak kemudian.
+        - feedback: Salah. Posisi pesawat begitu rupa sehingga tidak akan membuatnya
+            akan bersentuhan.
+          text: Pesawat akan bertabrakan.
+        questions:
+        - text: Baca code, lalu buat prediksi.
       courseF_text_practice:
         description: Sejauh ini, kerja bagus! Pilih aktivitas Anda berikutnya. Selesaikan
           sebanyak-banyaknya. Teruslah berlatih dengan teks dan prompt!
@@ -7547,6 +8229,10 @@ id-ID:
         description: Sejauh ini, kerja bagus! Pilih aktivitas Anda berikutnya. Selesaikan
           sebanyak-banyaknya. Teruslah berlatih dengan teks dan prompt!
         display_name: Berlatih Teks dan Prompt
+      courseF_text_practice2022_2022_pilot_-2022-2_2023:
+        description: Sejauh ini, kerja bagus! Pilih aktivitas Anda berikutnya. Selesaikan
+          sebanyak-banyaknya. Teruslah berlatih dengan teks dan prompt!
+        display_name: Berlatih Teks dan Prompt
       courseF_variables2_predict2_multi2022_-2022-2:
         answers:
         - correct: true
@@ -7555,7 +8241,23 @@ id-ID:
         - {}
         questions:
         - {}
+      courseF_variables2_predict2_multi2022_-2022-2_2023:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseF_variables2_predict_multi2022_2022_pilot_-2022-2:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseF_variables2_predict_multi2022_2022_pilot_-2022-2_2023:
         answers:
         - {}
         - {}
@@ -7595,6 +8297,22 @@ id-ID:
         - text: 'Program ini mempersilakan Anda menjawab pertanyaan dengan mengetik
             di keyboard. Blok `print` menampilkan teks di layar. Buat prediksi: Apa
             yang akan terjadi setelah menjawab pertanyaan?'
+      courseF_variables_predict_multi2022_2022_pilot_-2022-2_2023:
+        answers:
+        - feedback: Salah. Blok nama akan diganti dengan apa pun yang Anda ketik.
+          text: Program akan mencetak "Halo, nama!"
+        - correct: true
+          feedback: Benar! Apa yang Anda ketik digunakan untuk mengganti blok nama.
+          text: Program akan menyambut Anda dengan nama yang Anda ketik.
+        - feedback: Salah. Teks ditampilkan ke layar.
+          text: Sprite akan berubah ukuran.
+        - feedback: Salah. Hanya satu pertanyaan yang diajukan, tepat ketika program
+            dimulai.
+          text: Komputer akan mengajukan pertanyaan lain.
+        questions:
+        - text: 'Program ini mempersilakan Anda menjawab pertanyaan dengan mengetik
+            di keyboard. Blok `print` menampilkan teks di layar. Buat prediksi: Apa
+            yang akan terjadi setelah menjawab pertanyaan?'
       courseF_variables_projects:
         description: Anda akan membuat kartu ucapan, bot obrolan, atau cerita spasi
           kosong. Jika Anda sudah menyelesaikan \"Bagian 1\" proyek, buka \"Bagian
@@ -7617,6 +8335,11 @@ id-ID:
           kosong. Jika Anda sudah menyelesaikan \"Bagian 1\" proyek, buka \"Bagian
           2\".
         display_name: Pilih Proyek
+      courseF_variables_projects2022_2022_pilot_-2022-2_2023:
+        description: Anda akan membuat kartu ucapan, bot obrolan, atau cerita spasi
+          kosong. Jika Anda sudah menyelesaikan \"Bagian 1\" proyek, buka \"Bagian
+          2\".
+        display_name: Pilih Proyek
       courseF_variables_samples:
         description: Anda akan membuat kartu ucapan, bot obrolan, atau cerita spasi
           kosong. Sebelum mulai, eksplorasi proyek-proyek contoh berikut untuk melihat
@@ -7630,6 +8353,12 @@ id-ID:
           ini dengan cermat sebelum memutuskan ingin membuat apa. Anda dapat mengawasi
           mereka bersama-sama di kelas atau menyuruh murid mengeksplorasi sendiri."
       courseF_variables_samples2022_2022_pilot_-2022-2:
+        description: Anda akan membuat kartu ucapan, bot obrolan, atau cerita spasi
+          kosong. Sebelum mulai, eksplorasi proyek-proyek contoh berikut untuk melihat
+          proyek mana yang Anda berminat membuatnya. Tekan \"Finish\" ketika sudah
+          siap memulai perencanaan program Anda sendiri.
+        display_name: Eksplorasi - Contoh Program
+      courseF_variables_samples2022_2022_pilot_-2022-2_2023:
         description: Anda akan membuat kartu ucapan, bot obrolan, atau cerita spasi
           kosong. Sebelum mulai, eksplorasi proyek-proyek contoh berikut untuk melihat
           proyek mana yang Anda berminat membuatnya. Tekan \"Finish\" ketika sudah
@@ -7657,6 +8386,17 @@ id-ID:
           pertanyaan yang akan Anda ajukan kepada pengguna.* Teks lain yang akan ditampilkan
           di layar.* Deskripsi atau gambar sprite yang akan Anda butuhkan (dan perilakunya).Jika
           belum tahu pasti apakah sudah siap lanjut, tanyakan kepada guru Anda!'
+      courseF_variables_stop2022_2022_pilot_-2022-2_2023:
+        content1: deskripsi di sini
+        markdown: '# Setop!## Anda yakin sudah siap lanjut?Di level berikutnya, Anda
+          akan mulai menulis code untuk proyek Anda. Level ini sangat cocok jika Anda
+          sudah punya rencana.Rencana Anda yang sudah jadi ini harus meliputi:<img
+          src="https://images.code.org/b476ac330f2b66e44e02208fee386a56-image-1614802439867.png"
+          style="float:left; height:70px; padding:10px"/>* Jenis proyek yang Anda
+          buat. Misalnya, kartu ucapan, bot obrolan, atau cerita spasi kosong.* Daftar
+          pertanyaan yang akan Anda ajukan kepada pengguna.* Teks lain yang akan ditampilkan
+          di layar.* Deskripsi atau gambar sprite yang akan Anda butuhkan (dan perilakunya).Jika
+          belum tahu pasti apakah sudah siap lanjut, tanyakan kepada guru Anda!'
       coursee_prediction_artistfunction2:
         answers:
         - feedback: Salah. Loop menggunakan "gambar poligon" bukannya "gambar garis
@@ -7673,6 +8413,21 @@ id-ID:
         questions:
         - text: Apa yang akan terjadi ketika Anda menekan tombol "Jalankan"?
       coursee_prediction_artistfunction22022:
+        answers:
+        - feedback: Salah. Loop menggunakan "gambar poligon" bukannya "gambar garis
+            poligon".
+          text: Si artis akan memecahkan puzzle dengan benar.
+        - correct: true
+          feedback: Benar!
+          text: Artis akan menggambar empat persegi empat dengan pola jendela.
+        - feedback: Salah. Program tidak memanggil "gambar garis poligon".
+          text: Artis hanya akan menggambar satu garis persegi empat.
+        - feedback: Salah. Loop belok 90 derajat di antara panggilan untuk "menggambar
+            poligon".
+          text: Artis akan menggambar empat persegi empat saling bertumpuk.
+        questions:
+        - text: Apa yang akan terjadi ketika Anda menekan tombol "Jalankan"?
+      coursee_prediction_artistfunction22022_2023:
         answers:
         - feedback: Salah. Loop menggunakan "gambar poligon" bukannya "gambar garis
             poligon".
@@ -7747,6 +8502,43 @@ id-ID:
           text: Artis akan menggambar empat persegi empat saling bertumpuk.
         questions:
         - text: Apa yang akan terjadi ketika Anda menekan tombol "Jalankan"?
+      csc_animal_adaptations_predict:
+        answers:
+        - {}
+        - correct: true
+          feedback: Benar!
+        - text: Sprite akan bergerak.
+        - text: Sprite akan berubah warna.
+        questions:
+        - text: Klik tombol "edit" untuk melihat cara kerja `mystery behavior`. Pelajari
+            kode di dalamnya, lalu buat prediksi.
+      csc_ecosystems_matching_cfu:
+        answers:
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+      csc_ecosystems_matching_conditionals:
+        answers:
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+      csc_ecosystems_matching_events:
+        answers:
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+      csc_timecapsule_info_2023:
+        content1: deskripsi di sini
       csd-post-survey-2017-q11_2018:
         answers:
         - correct: true
@@ -10911,6 +11703,10 @@ id-ID:
         content1: deskripsi di sini
         markdown: "# Warga Digital Super## Bagaimana kita bisa menjadi pembela kebenaran
           ketika menyaksikan cyberbullying?"
+      csf_be_a_super_digital_citizen2022_2023:
+        content1: deskripsi di sini
+        markdown: "# Warga Digital Super## Bagaimana kita bisa menjadi pembela kebenaran
+          ketika menyaksikan cyberbullying?"
       csf_be_a_super_digital_citizen_2021:
         content1: deskripsi di sini
         markdown: "# Warga Digital Super## Bagaimana kita bisa menjadi pembela kebenaran
@@ -10919,6 +11715,9 @@ id-ID:
         markdown: "# Mengikuti Jejak Digital## Apa informasi yang AMAN untuk disimpan
           sebagai jejak digital Anda?"
       csf_digital_trails2022:
+        markdown: "# Mengikuti Jejak Digital## Apa informasi yang AMAN untuk disimpan
+          sebagai jejak digital Anda?"
+      csf_digital_trails2022_2023:
         markdown: "# Mengikuti Jejak Digital## Apa informasi yang AMAN untuk disimpan
           sebagai jejak digital Anda?"
       csf_digital_trails_2021:
@@ -10932,6 +11731,13 @@ id-ID:
           **privat** dalam kata sandi Anda.* Buat kata sandi dengan minimal **delapan**
           karakter.* Gunakan huruf, angka, dan **simbol** dalam kata sandi Anda.![](https://images.code.org/bfa69295fbf33c77ecdeb79b5498d8f7-image-1584751340896.png)"
       csf_password_power-up2022:
+        content1: deskripsi di sini
+        markdown: "#  Perkuat Kata Sandi Anda## Tips Kata Sandi yang Harus Diingat*
+          Awali dengan **frasa** yang mudah diingat.* Hanya **orang tua** Anda yang
+          boleh tahu kata sandi Anda.* Jangan sekali-kali menggunakan informasi identitas
+          **privat** dalam kata sandi Anda.* Buat kata sandi dengan minimal **delapan**
+          karakter.* Gunakan huruf, angka, dan **simbol** dalam kata sandi Anda.![](https://images.code.org/bfa69295fbf33c77ecdeb79b5498d8f7-image-1584751340896.png)"
+      csf_password_power-up2022_2023:
         content1: deskripsi di sini
         markdown: "#  Perkuat Kata Sandi Anda## Tips Kata Sandi yang Harus Diingat*
           Awali dengan **frasa** yang mudah diingat.* Hanya **orang tua** Anda yang
@@ -10959,6 +11765,13 @@ id-ID:
           a trusted adult (Beri tahu orang dewasa tepercaya).* **O**K sites first
           (Cari situs yang aman).* **P**ause and think online (Jeda sejenak dan berpikir
           matang secara online).![](https://images.code.org/f3e4987a130b27f7b589d7829b753aac-image-1584750971069.png)"
+      csf_putting_a_stop_to_online_meanness2022_2023:
+        content1: deskripsi di sini
+        markdown: "# STOP Tindakan Kasar## Apa yang sebaiknya dilakukan jika ada orang
+          bersikap kasar kepada Anda secara online?* **S**tep away (Menjauh).* **T**ell
+          a trusted adult (Beri tahu orang dewasa tepercaya).* **O**K sites first
+          (Cari situs yang aman).* **P**ause and think online (Jeda sejenak dan berpikir
+          matang secara online).![](https://images.code.org/f3e4987a130b27f7b589d7829b753aac-image-1584750971069.png)"
       csf_putting_a_stop_to_online_meanness_2021:
         content1: deskripsi di sini
         markdown: "# STOP Tindakan Kasar## Apa yang sebaiknya dilakukan jika ada orang
@@ -10970,6 +11783,9 @@ id-ID:
         markdown: "# Lingkungan Tetangga Online Saya## Bagaimana Anda pergi mengunjungi
           tempat-tempat online secara aman?"
       csf_safety_in_my_online_neighborhood2022:
+        markdown: "# Lingkungan Tetangga Online Saya## Bagaimana Anda pergi mengunjungi
+          tempat-tempat online secara aman?"
+      csf_safety_in_my_online_neighborhood2022_2023:
         markdown: "# Lingkungan Tetangga Online Saya## Bagaimana Anda pergi mengunjungi
           tempat-tempat online secara aman?"
       csf_safety_in_my_online_neighborhood_2021:
@@ -12537,10 +13353,17 @@ id-ID:
       express_EOC2022:
         description: Anda sudah sampai di akhir Kursus E! Pilih proyek untuk dibuat.
         display_name: Proyek Akhir Kursus
+      express_EOC2022_2023:
+        description: Anda sudah sampai di akhir Kursus E! Pilih proyek untuk dibuat.
+        display_name: Proyek Akhir Kursus
       express_EOC_2021:
         description: Anda sudah sampai di akhir Kursus E! Pilih proyek untuk dibuat.
         display_name: Proyek Akhir Kursus
       express_EOC_examples2022:
+        description: Anda akan segera memulai proyek terakhir. Sebelum memulai, luangkan
+          waktu untuk mencermati proyek-proyek contoh.
+        display_name: Contoh-Contoh Proyek
+      express_EOC_examples2022_2023:
         description: Anda akan segera memulai proyek terakhir. Sebelum memulai, luangkan
           waktu untuk mencermati proyek-proyek contoh.
         display_name: Contoh-Contoh Proyek
@@ -12583,6 +13406,24 @@ id-ID:
         - text: Cermati code di bawah ini. Jika code dijalankan sampai akhir (dengan
             mengabaikan kesalahan) berapa buah harta karun yang akan dikumpulkan Laurel?
       grade2_multi_collector_A_predict12022:
+        answers:
+        - feedback: Salah.  Laurel mencoba mengumpulkan harta karun di tempat yang
+            tidak ada sehingga muncul kesalahan.
+          text: Laurel akan mengumpulkan 4 buah harta karun menggunakan code ini.
+        - correct: true
+          feedback: Benar!
+          text: Laurel akan mencoba mengumpulkan harta karun di tempat yang tidak
+            ada satu pun sehingga muncul kesalahan.
+        - feedback: Salah.  Laurel mencoba mengumpulkan harta karun di tempat yang
+            tidak ada sehingga muncul kesalahan.
+          text: Laurel akan mengumpulkan semua harta karun.
+        - feedback: Salah.  Laurel mencoba mengumpulkan harta karun di tempat yang
+            tidak ada sehingga muncul kesalahan.
+          text: Laurel akan mengumpulkan 1 buah harta karun menggunakan code ini.
+        questions:
+        - text: Perhatikan kode berikut ini. Menurutmu apa yang akan terjadi saat
+            programnya dijalankan?
+      grade2_multi_collector_A_predict12022_2023:
         answers:
         - feedback: Salah.  Laurel mencoba mengumpulkan harta karun di tempat yang
             tidak ada sehingga muncul kesalahan.
