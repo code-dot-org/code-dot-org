@@ -1,23 +1,28 @@
+import _ from 'lodash';
 import {assert} from '../../util/reconfiguredChai';
 import {assertOwnProperty} from '../../util/assertions';
-var NetSimTestUtils = require('../../util/netsimTestUtils');
-var _ = require('lodash');
-var utils = require('@cdo/apps/utils'); // Provides String.prototype.repeat
-var DataConverters = require('@cdo/apps/netsim/DataConverters');
-var NetSimConstants = require('@cdo/apps/netsim/NetSimConstants');
-var NetSimGlobals = require('@cdo/apps/netsim/NetSimGlobals');
-var NetSimLocalClientNode = require('@cdo/apps/netsim/NetSimLocalClientNode');
-var NetSimLogEntry = require('@cdo/apps/netsim/NetSimLogEntry');
-var NetSimLogger = require('@cdo/apps/netsim/NetSimLogger');
-var NetSimMessage = require('@cdo/apps/netsim/NetSimMessage');
-var NetSimRouterNode = require('@cdo/apps/netsim/NetSimRouterNode');
-var NetSimWire = require('@cdo/apps/netsim/NetSimWire');
-var Packet = require('@cdo/apps/netsim/Packet');
+import {asciiToBinary} from '@cdo/apps/netsim/DataConverters';
+import * as NetSimTestUtils from '../../util/netsimTestUtils';
+import {valueOr, setupFunctionPrototypeInherits} from '../../../src/utils';
 
-var asciiToBinary = DataConverters.asciiToBinary;
+import NetSimGlobals from '@cdo/apps/netsim/NetSimGlobals';
+import NetSimLocalClientNode from '@cdo/apps/netsim/NetSimLocalClientNode';
+import NetSimLogEntry from '@cdo/apps/netsim/NetSimLogEntry';
+import NetSimLogger from '@cdo/apps/netsim/NetSimLogger';
+import NetSimMessage from '@cdo/apps/netsim/NetSimMessage';
+import NetSimRouterNode from '@cdo/apps/netsim/NetSimRouterNode';
+import NetSimWire from '@cdo/apps/netsim/NetSimWire';
+import Packet from '@cdo/apps/netsim/Packet';
+
+import {
+  BITS_PER_BYTE,
+  DnsMode,
+  MessageGranularity,
+} from '@cdo/apps/netsim/NetSimConstants';
+
+setupFunctionPrototypeInherits(Function);
 var assertTableSize = NetSimTestUtils.assertTableSize;
-var BITS_PER_BYTE = NetSimConstants.BITS_PER_BYTE;
-var DnsMode = NetSimConstants.DnsMode;
+
 var fakeShard = NetSimTestUtils.fakeShard;
 
 describe('NetSimRouterNode', function () {
@@ -201,8 +206,8 @@ describe('NetSimRouterNode', function () {
    * @returns {number} Next tick time after stabilized
    */
   var tickUntilLogsStabilize = function (tickable, startTime, timeStep) {
-    var t = utils.valueOr(startTime, 1);
-    timeStep = utils.valueOr(timeStep, 1);
+    var t = valueOr(startTime, 1);
+    timeStep = valueOr(timeStep, 1);
     var lastLogCount;
     do {
       lastLogCount = countRows('logTable');
@@ -865,7 +870,7 @@ describe('NetSimRouterNode', function () {
 
     NetSimGlobals.getLevelConfig().automaticReceive = true;
     NetSimGlobals.getLevelConfig().messageGranularity =
-      NetSimConstants.MessageGranularity.PACKETS;
+      MessageGranularity.PACKETS;
     var time = 1;
     var fakeReceivedLog = makeFakeMessageLog();
 
@@ -1832,7 +1837,7 @@ describe('NetSimRouterNode', function () {
           toAddress: clientB.getAddress(),
           fromAddress: clientA.getAddress(),
         }),
-        DataConverters.asciiToBinary('wop')
+        asciiToBinary('wop')
       );
       clientA.sendMessage(packetBinary, function () {});
 
@@ -1870,7 +1875,7 @@ describe('NetSimRouterNode', function () {
           toAddress: routerB.getAddress(),
           fromAddress: clientA.getAddress(),
         }),
-        DataConverters.asciiToBinary('flop')
+        asciiToBinary('flop')
       );
       clientA.sendMessage(packetBinary, function () {});
 
@@ -1919,7 +1924,7 @@ describe('NetSimRouterNode', function () {
           toAddress: clientB.getAddress(),
           fromAddress: clientA.getAddress(),
         }),
-        DataConverters.asciiToBinary('wop')
+        asciiToBinary('wop')
       );
       clientA.sendMessage(packetBinary, function () {});
 
@@ -1969,7 +1974,7 @@ describe('NetSimRouterNode', function () {
           toAddress: clientB.getAddress(),
           fromAddress: clientA.getAddress(),
         }),
-        DataConverters.asciiToBinary('wop')
+        asciiToBinary('wop')
       );
       clientA.sendMessage(packetBinary, function () {});
 
@@ -2032,7 +2037,7 @@ describe('NetSimRouterNode', function () {
           toAddress: clientB.getAddress(),
           fromAddress: clientA.getAddress(),
         }),
-        DataConverters.asciiToBinary('wop')
+        asciiToBinary('wop')
       );
       clientA.sendMessage(packetBinary, function () {});
 
@@ -2104,7 +2109,7 @@ describe('NetSimRouterNode', function () {
             toAddress: clientB.getAddress(),
             fromAddress: clientA.getAddress(),
           }),
-          DataConverters.asciiToBinary('wop')
+          asciiToBinary('wop')
         );
         clientA.sendMessage(packetBinary, function () {});
         tickUntilLogsStabilize(clientA);
@@ -2179,7 +2184,7 @@ describe('NetSimRouterNode', function () {
           toAddress: clientB.getAddress(),
           fromAddress: clientA.getAddress(),
         }),
-        DataConverters.asciiToBinary('wop')
+        asciiToBinary('wop')
       );
       clientA.sendMessage(packetBinary, function () {});
 

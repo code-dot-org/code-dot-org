@@ -14,9 +14,7 @@ import NetSimVizSimulationWire from './NetSimVizSimulationWire';
 import NetSimVizWire from './NetSimVizWire';
 import NetSimGlobals from './NetSimGlobals';
 import tweens from './tweens';
-import NetSimConstants from './NetSimConstants';
-var DnsMode = NetSimConstants.DnsMode;
-var NodeType = NetSimConstants.NodeType;
+import {DnsMode, NodeType} from './NetSimConstants';
 
 /**
  * Whether the blurred visualization background should be shown.
@@ -1058,4 +1056,4 @@ NetSimVisualization.prototype.getVizWireFromRemote = function () {
   return incomingWires[0];
 };
 
-export default NetSimVisualization;
+export {NetSimVisualization as default};

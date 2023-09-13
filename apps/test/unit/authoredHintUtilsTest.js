@@ -1,7 +1,7 @@
 import $ from 'jquery';
 import {assert} from '../util/reconfiguredChai';
 
-var authoredHintUtils = require('@cdo/apps/authoredHintUtils');
+import authoredHintUtils from '@cdo/apps/authoredHintUtils';
 
 describe('Authored Hint Utils', function () {
   var hintOne, hintTwo, record, recordTwo;

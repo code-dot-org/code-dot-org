@@ -1,5 +1,5 @@
 import msg from '@cdo/locale';
-import authoredHintUtils from './authoredHintUtils';
+import {currentOpenedHintCount} from './authoredHintUtils';
 
 export default function getAchievements(state) {
   return POSSIBLE_ACHIEVEMENTS.map(possibleAchievement =>
@@ -28,9 +28,7 @@ export function puzzleComplete(state) {
 }
 
 export function usingHints(state) {
-  const hintsUsed = authoredHintUtils.currentOpenedHintCount(
-    state.pageConstants.serverLevelId
-  );
+  const hintsUsed = currentOpenedHintCount(state.pageConstants.serverLevelId);
   let message, isAchieved;
   if (hintsUsed === 0) {
     message = msg.withoutHints();

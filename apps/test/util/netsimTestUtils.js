@@ -1,11 +1,11 @@
 import {assert} from './deprecatedChai';
 
-var utils = require('@cdo/apps/utils');
-var _ = require('lodash');
-var NetSimLogger = require('@cdo/apps/netsim/NetSimLogger');
-var NetSimTable = require('@cdo/apps/netsim/NetSimTable');
-var NetSimGlobals = require('@cdo/apps/netsim/NetSimGlobals');
-var levels = require('@cdo/apps/netsim/levels');
+import {createUuid} from '@cdo/apps/utils';
+import _ from 'lodash';
+import NetSimLogger from '@cdo/apps/netsim/NetSimLogger';
+import NetSimTable from '@cdo/apps/netsim/NetSimTable';
+import NetSimGlobals from '@cdo/apps/netsim/NetSimGlobals';
+import levels from '@cdo/apps/netsim/levels';
 
 /**
  * Checks whether the given table has the specified number of rows.
@@ -15,7 +15,7 @@ var levels = require('@cdo/apps/netsim/levels');
  *        message readability.  Should be name of a member of the shard.
  * @param {!number} size - Expected number of rows.
  */
-exports.assertTableSize = function (shard, tableName, size) {
+export const assertTableSize = function (shard, tableName, size) {
   var rowCount;
   shard[tableName].refresh(function () {
     rowCount = shard[tableName].readAll().length;
@@ -37,7 +37,7 @@ exports.assertTableSize = function (shard, tableName, size) {
  * accessing the server API.
  * @param {NetSimTable} netsimTable
  */
-exports.overrideNetSimTableApi = function (netsimTable) {
+export const overrideNetSimTableApi = function (netsimTable) {
   var table = fakeStorageTable();
 
   // send client api calls through our fake storage table
@@ -135,7 +135,7 @@ var fakeStorageTable = function () {
       log_ += 'create[' + JSON.stringify(value) + ']';
 
       value.id = rowIndex_;
-      value.uuid = utils.createUuid();
+      value.uuid = createUuid();
       rowIndex_++;
       tableData_.push(value);
 
@@ -228,7 +228,7 @@ var fakeStorageTable = function () {
 /**
  * Fake set of storage tables for use in tests.
  */
-exports.fakeShard = function () {
+export const fakeShard = function () {
   /** @implements {PubSubChannel} */
   var fakeChannel = {
     subscribe: function (eventName, callback) {},
@@ -245,13 +245,13 @@ exports.fakeShard = function () {
   };
 
   return {
-    nodeTable: exports.overrideNetSimTableApi(
+    nodeTable: overrideNetSimTableApi(
       new NetSimTable(fakeChannel, 'fakeShard', 'node', defaultTestTableConfig)
     ),
-    wireTable: exports.overrideNetSimTableApi(
+    wireTable: overrideNetSimTableApi(
       new NetSimTable(fakeChannel, 'fakeShard', 'wire', defaultTestTableConfig)
     ),
-    messageTable: exports.overrideNetSimTableApi(
+    messageTable: overrideNetSimTableApi(
       new NetSimTable(
         fakeChannel,
         'fakeShard',
@@ -259,7 +259,7 @@ exports.fakeShard = function () {
         defaultTestTableConfig
       )
     ),
-    logTable: exports.overrideNetSimTableApi(
+    logTable: overrideNetSimTableApi(
       new NetSimTable(
         fakeChannel,
         'fakeShard',
@@ -275,7 +275,7 @@ exports.fakeShard = function () {
 /**
  * Set up global singleton with default level configuration
  */
-exports.initializeGlobalsToDefaultValues = function () {
+export const initializeGlobalsToDefaultValues = function () {
   NetSimLogger.getSingleton().setVerbosity(NetSimLogger.LogLevel.NONE);
   // Deep clone level so that changes we make to it for testing don't bleed
   // into other tests.

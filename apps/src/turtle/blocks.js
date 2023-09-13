@@ -28,7 +28,7 @@ import commonMsg from '@cdo/locale';
 import customLevelBlocks from './customLevelBlocks';
 import {Position} from '../constants';
 
-let exports = {};
+const toExport = {};
 
 const RANDOM_VALUE = 'RAND';
 
@@ -76,7 +76,7 @@ const DIRECTION_VALUES = [
 ];
 
 // Install extensions to Blockly's language and JavaScript generator.
-exports.install = function (blockly, blockInstallOptions) {
+toExport.install = function (blockly, blockInstallOptions) {
   var skin = blockInstallOptions.skin;
 
   var generator = blockly.getGenerator();
@@ -1659,4 +1659,4 @@ exports.install = function (blockly, blockInstallOptions) {
   customLevelBlocks.install(blockly, generator, gensym);
 };
 
-export default exports;
+export {toExport as default};

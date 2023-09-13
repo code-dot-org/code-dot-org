@@ -2,17 +2,15 @@
  * @overview Wires in the visualization.
  */
 
-require('../utils'); // Provides Function.prototype.inherits
-var jQuerySvgElement = require('./NetSimUtils').jQuerySvgElement;
-var NetSimVizElement = require('./NetSimVizElement');
-var tweens = require('./tweens');
-var DataConverters = require('./DataConverters');
-var NetSimConstants = require('./NetSimConstants');
-var NetSimGlobals = require('./NetSimGlobals');
+import {setupFunctionPrototypeInherits} from '../utils';
+import {jQuerySvgElement} from './NetSimUtils';
+import NetSimVizElement from './NetSimVizElement';
+import tweens from './tweens';
+import {binaryToAB} from './DataConverters';
+import {EncodingType} from './NetSimConstants';
+import NetSimGlobals from './NetSimGlobals';
 
-var EncodingType = NetSimConstants.EncodingType;
-
-var binaryToAB = DataConverters.binaryToAB;
+setupFunctionPrototypeInherits(Function);
 
 /**
  * How far the flying label should rest above the wire.
@@ -27,7 +25,7 @@ var TEXT_FINAL_VERTICAL_OFFSET = -10;
  * @constructor
  * @augments NetSimVizElement
  */
-var NetSimVizWire = (module.exports = function (localNode, remoteNode) {
+export default function NetSimVizWire(localNode, remoteNode) {
   NetSimVizElement.call(this);
 
   this.alwaysShowWireState = NetSimGlobals.getLevelConfig().automaticReceive;
@@ -105,7 +103,7 @@ var NetSimVizWire = (module.exports = function (localNode, remoteNode) {
   this.remoteVizNode = remoteNode;
 
   this.render();
-});
+}
 NetSimVizWire.inherits(NetSimVizElement);
 
 /**

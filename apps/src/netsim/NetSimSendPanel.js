@@ -12,18 +12,17 @@ import NetSimPanel from './NetSimPanel';
 import NetSimPacketEditor from './NetSimPacketEditor';
 import NetSimPacketSizeControl from './NetSimPacketSizeControl';
 import Packet from './Packet';
-import DataConverters from './DataConverters';
-import NetSimConstants from './NetSimConstants';
+import {binaryToAB} from './DataConverters';
 import NetSimGlobals from './NetSimGlobals';
 import NetSimLogger from './NetSimLogger';
 
+import {
+  EncodingType,
+  MessageGranularity,
+  BITS_PER_BYTE,
+} from './NetSimConstants';
+
 var logger = NetSimLogger.getSingleton();
-
-var EncodingType = NetSimConstants.EncodingType;
-var MessageGranularity = NetSimConstants.MessageGranularity;
-var BITS_PER_BYTE = NetSimConstants.BITS_PER_BYTE;
-
-var binaryToAB = DataConverters.binaryToAB;
 
 /**
  * Generator and controller for message sending view.

@@ -1,21 +1,24 @@
 /** @file Tests for NetSimPacketEditor */
 import {assert} from '../../util/reconfiguredChai';
-var NetSimTestUtils = require('../../util/netsimTestUtils');
-var NetSimPacketEditor = require('@cdo/apps/netsim/NetSimPacketEditor');
-var DataConverters = require('@cdo/apps/netsim/DataConverters');
-var NetSimGlobals = require('@cdo/apps/netsim/NetSimGlobals');
-var EncodingType = require('@cdo/apps/netsim/NetSimConstants').EncodingType;
+
+import NetSimTestUtils from '../../util/netsimTestUtils';
+import NetSimPacketEditor from '@cdo/apps/netsim/NetSimPacketEditor';
+import NetSimGlobals from '@cdo/apps/netsim/NetSimGlobals';
+import {EncodingType} from '@cdo/apps/netsim/NetSimConstants';
+
+import {
+  asciiToBinary,
+  alignDecimal,
+  binaryToAB,
+  binaryToDecimal,
+  binaryToHex,
+  formatAB,
+  formatBinary,
+  formatHex,
+} from './DataConverters';
 
 describe('NetSimPacketEditor', function () {
   var editor, rootDiv;
-
-  var alignDecimal = DataConverters.alignDecimal;
-  var binaryToAB = DataConverters.binaryToAB;
-  var binaryToDecimal = DataConverters.binaryToDecimal;
-  var binaryToHex = DataConverters.binaryToHex;
-  var formatAB = DataConverters.formatAB;
-  var formatBinary = DataConverters.formatBinary;
-  var formatHex = DataConverters.formatHex;
 
   beforeEach(function () {
     NetSimTestUtils.initializeGlobalsToDefaultValues();
@@ -28,7 +31,7 @@ describe('NetSimPacketEditor', function () {
 
   it('only renders enabled encodings', function () {
     var message = 'test message';
-    var binaryMessage = DataConverters.asciiToBinary(message, 8);
+    var binaryMessage = asciiToBinary(message, 8);
     editor.message = binaryMessage;
 
     editor.setEncodings([EncodingType.ASCII]);

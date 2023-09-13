@@ -91,7 +91,7 @@ import {closeWorkspaceAlert} from './code-studio/projectRedux';
 import makeYourOwnHTMLEJS from './templates/makeYourOwn.html.ejs';
 import learnHTMLEJS from './templates/learn.html.ejs';
 
-let exports = {};
+const toExport = {};
 
 var copyrightStrings;
 
@@ -3552,4 +3552,4 @@ export function __testing_restoreStudioApp() {
   __testing_oldInstance = null;
 }
 
-export default exports;
+export {toExport as default};

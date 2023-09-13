@@ -39,10 +39,10 @@ var allBlocks = [
   'wool',
 ];
 
-var exports = {};
+const toExport = {};
 
 // Install extensions to Blockly's language and JavaScript generator.
-exports.install = function (blockly, blockInstallOptions) {
+toExport.install = function (blockly, blockInstallOptions) {
   var dropdownBlocks = (blockInstallOptions.level.availableBlocks || []).concat(
     JSON.parse(window.localStorage.getItem('craftPlayerInventory')) || []
   );
@@ -287,4 +287,4 @@ exports.install = function (blockly, blockInstallOptions) {
   };
 };
 
-export default exports;
+export {toExport as default};

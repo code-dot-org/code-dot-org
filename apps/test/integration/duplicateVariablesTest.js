@@ -1,5 +1,6 @@
 import {assert} from '../util/reconfiguredChai';
 import {setupTestBlockly, getStudioAppSingleton} from './util/testBlockly';
+import turtleBlocks from '@cdo/apps/turtle/blocks';
 
 describe('hasDuplicateVariablesInForLoops', function () {
   var studioApp;
@@ -9,8 +10,7 @@ describe('hasDuplicateVariablesInForLoops', function () {
     setupTestBlockly();
     studioApp = getStudioAppSingleton();
 
-    var artistBlocks = require('@cdo/apps/turtle/blocks');
-    artistBlocks.install(Blockly, {skin: 'turtle'});
+    turtleBlocks.install(Blockly, {skin: 'turtle'});
   });
 
   afterEach(function () {

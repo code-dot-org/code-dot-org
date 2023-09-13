@@ -28,7 +28,7 @@ import {
   CourseRoles,
 } from '@cdo/apps/templates/currentUserRedux';
 
-var progress = {};
+const progress = {};
 
 function showDisabledBubblesModal() {
   const div = $('<div>');
@@ -376,4 +376,4 @@ function initializeStoreWithProgress(
 
 export default progress;
 
-export const {retrieveProgress} = progress;
+export const {initViewAs, retrieveProgress} = progress;

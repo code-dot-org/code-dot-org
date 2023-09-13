@@ -1,13 +1,15 @@
 /**
  * @overview Simulated client node.
  */
-var _ = require('lodash');
-var i18n = require('@cdo/netsim/locale');
-var NodeType = require('./NetSimConstants').NodeType;
-var NetSimEntity = require('./NetSimEntity');
-var NetSimNode = require('./NetSimNode');
-var NetSimWire = require('./NetSimWire');
-require('../utils'); // Provides Function.prototype.inherits
+import _ from 'lodash';
+import i18n from '@cdo/netsim/locale';
+import {NodeType} from './NetSimConstants';
+import NetSimEntity from './NetSimEntity';
+import NetSimNode from './NetSimNode';
+import NetSimWire from './NetSimWire';
+import {setupFunctionPrototypeInherits} from '../utils';
+
+setupFunctionPrototypeInherits(Function);
 
 /**
  * Client model of simulated node
@@ -24,9 +26,9 @@ require('../utils'); // Provides Function.prototype.inherits
  * @constructor
  * @augments NetSimNode
  */
-var NetSimClientNode = (module.exports = function (shard, clientRow) {
+export default function NetSimClientNode(shard, clientRow) {
   NetSimNode.call(this, shard, clientRow);
-});
+}
 NetSimClientNode.inherits(NetSimNode);
 
 /** @inheritdoc */

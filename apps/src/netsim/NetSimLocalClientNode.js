@@ -4,23 +4,21 @@
  * @see NetSimClientNode for the controller used for other client nodes
  *      in the simulation.
  */
-require('../utils'); // Provides Function.prototype.inherits
-var _ = require('lodash');
-var i18n = require('@cdo/netsim/locale');
-var NetSimClientNode = require('./NetSimClientNode');
-var NetSimEntity = require('./NetSimEntity');
-var NetSimAlert = require('./NetSimAlert');
-var NetSimMessage = require('./NetSimMessage');
-var NetSimLogger = require('./NetSimLogger');
-var NetSimRouterNode = require('./NetSimRouterNode');
-var ObservableEventDEPRECATED = require('../ObservableEventDEPRECATED');
+import {setupFunctionPrototypeInherits} from '../utils';
+import _ from 'lodash';
+import i18n from '@cdo/netsim/locale';
+import NetSimClientNode from './NetSimClientNode';
+import NetSimEntity from './NetSimEntity';
+import NetSimAlert from './NetSimAlert';
+import NetSimMessage from './NetSimMessage';
+import NetSimLogger from './NetSimLogger';
+import NetSimRouterNode from './NetSimRouterNode';
+import ObservableEventDEPRECATED from '../ObservableEventDEPRECATED';
+import NetSimGlobals from './NetSimGlobals';
+import {MessageGranularity, NodeType} from './NetSimConstants';
 
+setupFunctionPrototypeInherits(Function);
 var logger = NetSimLogger.getSingleton();
-var NetSimConstants = require('./NetSimConstants');
-var NetSimGlobals = require('./NetSimGlobals');
-require('../utils'); // Provides Function.prototype.inherits
-
-var MessageGranularity = NetSimConstants.MessageGranularity;
 
 /**
  * Client model of node being simulated on the local client.
@@ -33,7 +31,7 @@ var MessageGranularity = NetSimConstants.MessageGranularity;
  * @constructor
  * @augments NetSimClientNode
  */
-var NetSimLocalClientNode = (module.exports = function (shard, clientRow) {
+export default function NetSimLocalClientNode(shard, clientRow) {
   NetSimClientNode.call(this, shard, clientRow);
 
   /**
@@ -97,7 +95,7 @@ var NetSimLocalClientNode = (module.exports = function (shard, clientRow) {
    * @type {Object}
    */
   this.eventKeys = {};
-});
+}
 NetSimLocalClientNode.inherits(NetSimClientNode);
 
 /**
@@ -519,7 +517,7 @@ NetSimLocalClientNode.prototype.onNodeTableChange_ = function () {
   // Create and simulate new routers
   nodeRows
     .filter(function (row) {
-      return row.type === NetSimConstants.NodeType.ROUTER;
+      return row.type === NodeType.ROUTER;
     })
     .forEach(function (row) {
       var alreadySimulating = this.routers_.some(function (simulatingRouter) {

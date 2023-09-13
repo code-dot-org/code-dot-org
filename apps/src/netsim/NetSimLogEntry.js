@@ -1,21 +1,21 @@
 /**
  * @overview Simulation entity for router log entries.
  */
-var moment = require('moment');
-var utils = require('../utils'); // Provides Function.prototype.inherits
-var _ = require('lodash');
-var i18n = require('@cdo/netsim/locale');
-var NetSimEntity = require('./NetSimEntity');
-var Packet = require('./Packet');
-var NetSimNodeFactory = require('./NetSimNodeFactory');
-var DataConverters = require('./DataConverters');
-var formatBinary = DataConverters.formatBinary;
-var base64ToBinary = DataConverters.base64ToBinary;
-var binaryToBase64 = DataConverters.binaryToBase64;
+import moment from 'moment';
+import _ from 'lodash';
+import i18n from '@cdo/netsim/locale';
+import NetSimEntity from './NetSimEntity';
+import Packet from './Packet';
+import NetSimNodeFactory from './NetSimNodeFactory';
 var NetSimLogger = require('./NetSimLogger');
+import {valueOr, setupFunctionPrototypeInherits} from '../utils';
+import {BITS_PER_BYTE} from './NetSimConstants';
 
-var BITS_PER_BYTE = require('./NetSimConstants').BITS_PER_BYTE;
+import {formatBinary, base64ToBinary, binaryToBase64} from './DataConverters';
+
 var logger = NetSimLogger.getSingleton();
+
+setupFunctionPrototypeInherits(Function);
 
 /**
  * @typedef {Object} LogEntryRow
@@ -43,7 +43,7 @@ var logger = NetSimLogger.getSingleton();
  * @constructor
  * @augments NetSimEntity
  */
-var NetSimLogEntry = (module.exports = function (shard, row, packetSpec) {
+export default function NetSimLogEntry(shard, row, packetSpec) {
   row = row !== undefined ? row : {};
   NetSimEntity.call(this, shard, row);
 
@@ -74,13 +74,13 @@ var NetSimLogEntry = (module.exports = function (shard, row, packetSpec) {
    * of routing or DROPPED if routing failed.
    * @type {NetSimLogEntry.LogStatus}
    */
-  this.status = utils.valueOr(row.status, NetSimLogEntry.LogStatus.SUCCESS);
+  this.status = valueOr(row.status, NetSimLogEntry.LogStatus.SUCCESS);
 
   /**
    * @type {Packet}
    * @private
    */
-  this.packet_ = new Packet(utils.valueOr(packetSpec, []), this.binary);
+  this.packet_ = new Packet(valueOr(packetSpec, []), this.binary);
 
   /**
    * Unix timestamp (local) of log creation time.
@@ -92,8 +92,8 @@ var NetSimLogEntry = (module.exports = function (shard, row, packetSpec) {
    * Display name of the sender (for the teacher view)
    * @type {string}
    */
-  this.sentBy = utils.valueOr(row.sentBy, '');
-});
+  this.sentBy = valueOr(row.sentBy, '');
+}
 NetSimLogEntry.inherits(NetSimEntity);
 
 /**

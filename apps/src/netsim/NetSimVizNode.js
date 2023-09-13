@@ -2,16 +2,14 @@
  * @overview Nodes in the visualization.
  */
 
-require('../utils'); // Provides Function.prototype.inherits
-var NetSimConstants = require('./NetSimConstants');
-var jQuerySvgElement = require('./NetSimUtils').jQuerySvgElement;
-var NetSimVizElement = require('./NetSimVizElement');
-var tweens = require('./tweens');
+import {setupFunctionPrototypeInherits} from '../utils';
+import {DnsMode} from './NetSimConstants';
+import {jQuerySvgElement} from './NetSimUtils';
+import NetSimVizElement from './NetSimVizElement';
+import tweens from './tweens';
+import NetSimGlobals from './NetSimGlobals';
 
-var DnsMode = NetSimConstants.DnsMode;
-
-var NetSimGlobals = require('./NetSimGlobals');
-
+setupFunctionPrototypeInherits(Function);
 /**
  * The narrowest that a text bubble is allowed to be.
  * @type {number}
@@ -39,7 +37,7 @@ var TEXT_PADDING_Y = 10;
  * @constructor
  * @augments NetSimVizElement
  */
-var NetSimVizNode = (module.exports = function (useBackgroundAnimation) {
+export default function NetSimVizNode(useBackgroundAnimation) {
   NetSimVizElement.call(this);
 
   /**
@@ -128,7 +126,7 @@ var NetSimVizNode = (module.exports = function (useBackgroundAnimation) {
   } else {
     this.snapToScale(0.5);
   }
-});
+}
 NetSimVizNode.inherits(NetSimVizElement);
 
 /**

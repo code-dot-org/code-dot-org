@@ -4,14 +4,14 @@
  * In the future, some of these may be moved to common.js.
  */
 
-var requiredBlockUtils = require('../required_block_utils');
+import {makeMathNumber, repeat, simpleBlock} from '../required_block_utils';
 
 // This tests for and creates a draw_a_square block on page 2.
 function drawASquare(number) {
   return {
     test: 'draw_a_square',
     type: 'draw_a_square',
-    values: {VALUE: requiredBlockUtils.makeMathNumber(number)},
+    values: {VALUE: makeMathNumber(number)},
   };
 }
 
@@ -20,7 +20,7 @@ function drawASnowman(number) {
   return {
     test: 'draw_a_snowman',
     type: 'draw_a_snowman',
-    values: {VALUE: requiredBlockUtils.makeMathNumber(number)},
+    values: {VALUE: makeMathNumber(number)},
   };
 }
 
@@ -110,7 +110,7 @@ var turnRight = function (degrees) {
     },
     type: 'draw_turn',
     titles: {DIR: 'turnRight'},
-    values: {VALUE: requiredBlockUtils.makeMathNumber(degrees)},
+    values: {VALUE: makeMathNumber(degrees)},
   };
 };
 
@@ -126,7 +126,7 @@ var turnLeft = function (degrees) {
     },
     type: 'draw_turn',
     titles: {DIR: 'turnLeft'},
-    values: {VALUE: requiredBlockUtils.makeMathNumber(degrees)},
+    values: {VALUE: makeMathNumber(degrees)},
   };
 };
 
@@ -138,7 +138,7 @@ var move = function (distance) {
       return block.type === 'draw_move';
     },
     type: 'draw_move',
-    values: {VALUE: requiredBlockUtils.makeMathNumber(distance)},
+    values: {VALUE: makeMathNumber(distance)},
   };
 };
 
@@ -160,7 +160,7 @@ var drawTurn = function () {
       return block.type === 'draw_turn';
     },
     type: 'draw_turn',
-    values: {VALUE: requiredBlockUtils.makeMathNumber('???')},
+    values: {VALUE: makeMathNumber('???')},
   };
 };
 
@@ -208,25 +208,25 @@ var defineWithArg = function (func_name, arg_name) {
   };
 };
 
-module.exports = {
-  makeMathNumber: requiredBlockUtils.makeMathNumber,
-  simpleBlock: requiredBlockUtils.simpleBlock,
-  repeat: requiredBlockUtils.repeat,
-  drawASquare: drawASquare,
-  drawASnowman: drawASnowman,
-  MOVE_FORWARD_INLINE: MOVE_FORWARD_INLINE,
-  MOVE_FORWARD_OR_BACKWARD_INLINE: MOVE_FORWARD_OR_BACKWARD_INLINE,
-  moveForwardInline: moveForwardInline,
-  MOVE_BACKWARD_INLINE: MOVE_BACKWARD_INLINE,
-  turnLeftRestricted: turnLeftRestricted,
-  turnRightRestricted: turnRightRestricted,
-  turnRightByConstant: turnRightByConstant,
-  turnRight: turnRight,
-  turnLeft: turnLeft,
-  move: move,
-  drawTurnRestricted: drawTurnRestricted,
-  drawTurn: drawTurn,
-  SET_COLOUR_PICKER: SET_COLOUR_PICKER,
-  SET_COLOUR_RANDOM: SET_COLOUR_RANDOM,
-  defineWithArg: defineWithArg,
+export {
+  makeMathNumber,
+  simpleBlock,
+  repeat,
+  drawASquare,
+  drawASnowman,
+  MOVE_FORWARD_INLINE,
+  MOVE_FORWARD_OR_BACKWARD_INLINE,
+  moveForwardInline,
+  MOVE_BACKWARD_INLINE,
+  turnLeftRestricted,
+  turnRightRestricted,
+  turnRightByConstant,
+  turnRight,
+  turnLeft,
+  move,
+  drawTurnRestricted,
+  drawTurn,
+  SET_COLOUR_PICKER,
+  SET_COLOUR_RANDOM,
+  defineWithArg,
 };

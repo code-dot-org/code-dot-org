@@ -1,9 +1,11 @@
 /**
  * @overview UI slider used to change maximum packet length.
  */
-var i18n = require('@cdo/netsim/locale');
-var NetSimSlider = require('./NetSimSlider');
-require('../utils'); // Provides Function.prototype.inherits
+import i18n from '@cdo/netsim/locale';
+import NetSimSlider from './NetSimSlider';
+import {setupFunctionPrototypeInherits} from '../utils';
+
+setupFunctionPrototypeInherits(Function);
 
 /**
  * Generator and controller for packet size slider/selector
@@ -14,7 +16,7 @@ require('../utils'); // Provides Function.prototype.inherits
  * @constructor
  * @augments NetSimSlider
  */
-var NetSimPacketSizeControl = (module.exports = function (
+export default function NetSimPacketSizeControl(
   rootDiv,
   packetSizeChangeCallback,
   options
@@ -28,7 +30,7 @@ var NetSimPacketSizeControl = (module.exports = function (
 
   // Auto-render, unlike our base class
   this.render();
-});
+}
 NetSimPacketSizeControl.inherits(NetSimSlider);
 
 /**

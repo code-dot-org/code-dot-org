@@ -6,8 +6,9 @@ import {TestResults} from '../../constants.js';
 import experiments from '@cdo/apps/util/experiments';
 import mazeMsg from '../locale';
 
+import {getStore} from '../../redux';
+
 import {
-  getStore,
   setCollectorMinRequired,
   resetCollectorCurrentCollected,
   setCollectorCurrentCollected,

@@ -2,11 +2,9 @@
  * @overview Utility methods for generating the right kinds of node controllers
  *           from raw node table rows.
  */
-var NetSimConstants = require('./NetSimConstants');
+import {NodeType} from './NetSimConstants';
 
-var NodeType = NetSimConstants.NodeType;
-
-var NetSimNodeFactory = module.exports;
+const NetSimNodeFactory = {};
 
 /**
  * Given a set of rows from the node table on a shard, gives back a set of node
@@ -40,3 +38,5 @@ NetSimNodeFactory.nodeFromRow = function (shard, nodeRow) {
   // Oops!  We probably shouldn't ever get here.
   throw new Error('Unable to map row to node.');
 };
+
+export {NetSimNodeFactory as default};

@@ -128,6 +128,7 @@ var normalizeModule = function(parentId, moduleName) {
  * definition function if needed.
  */
 var lookup = function(parentId, moduleName) {
+    let toExport;
 
     moduleName = normalizeModule(parentId, moduleName);
 
@@ -135,11 +136,13 @@ var lookup = function(parentId, moduleName) {
     if (!module) {
         module = _define.payloads[moduleName];
         if (typeof module === 'function') {
-            var exports = {};
+            // FIXME @snickell ESM: consider renaming exports to something else
+            // if we have problems with it aliasing webpack generated code
+            toExport = {};
             var mod = {
                 id: moduleName,
                 uri: '',
-                exports: exports,
+                exports: toExport,
                 packaged: true
             };
 
@@ -147,12 +150,12 @@ var lookup = function(parentId, moduleName) {
                 return _require(moduleName, module, callback);
             };
 
-            var returnValue = module(req, exports, mod);
-            exports = returnValue || mod.exports;
-            _define.modules[moduleName] = exports;
+            var returnValue = module(req, toExport, mod);
+            toExport = returnValue || mod.exports;
+            _define.modules[moduleName] = toExport;
             delete _define.payloads[moduleName];
         }
-        module = _define.modules[moduleName] = exports || module;
+        module = _define.modules[moduleName] = toExport || module;
     }
     return module;
 };

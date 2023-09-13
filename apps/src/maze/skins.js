@@ -11,7 +11,7 @@ import skinsBase from '../skins';
 import {randomValue} from '../utils';
 import neighborhoodSprites from './neighborhoodSprites.json';
 
-const exports = {};
+const toExport = {};
 
 var CONFIGS = {
   letters: {
@@ -226,7 +226,7 @@ function soundAssetUrls(skin, mp3Sound) {
   return [skin.assetUrl(mp3Sound), skin.assetUrl(base + '.ogg')];
 }
 
-exports.load = function (assetUrl, id) {
+toExport.load = function (assetUrl, id) {
   // The skin has properties from three locations
   // (1) skinBase - properties common across Blockly apps
   // (2) here - properties common across all maze skins
@@ -289,4 +289,4 @@ exports.load = function (assetUrl, id) {
   return skin;
 };
 
-export default exports;
+export {toExport as default};

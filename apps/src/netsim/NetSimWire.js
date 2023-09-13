@@ -3,9 +3,11 @@
  *           metadata.
  */
 
-require('../utils'); // Provides Function.prototype.inherits
-var NetSimEntity = require('./NetSimEntity');
-var ArgumentUtils = require('./ArgumentUtils');
+import {setupFunctionPrototypeInherits} from '../utils';
+import NetSimEntity from './NetSimEntity';
+import ArgumentUtils from './ArgumentUtils';
+
+setupFunctionPrototypeInherits(Function);
 
 /**
  * @typedef {Object} WireRow
@@ -30,7 +32,7 @@ var ArgumentUtils = require('./ArgumentUtils');
  * @constructor
  * @augments NetSimEntity
  */
-var NetSimWire = (module.exports = function (shard, wireRow) {
+export default function NetSimWire(shard, wireRow) {
   wireRow = wireRow !== undefined ? wireRow : {};
   NetSimEntity.call(this, shard, wireRow);
 
@@ -58,7 +60,7 @@ var NetSimWire = (module.exports = function (shard, wireRow) {
   this.localHostname = wireRow.localHostname;
   /** @type {string} */
   this.remoteHostname = wireRow.remoteHostname;
-});
+}
 NetSimWire.inherits(NetSimEntity);
 
 /**

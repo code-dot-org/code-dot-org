@@ -17,10 +17,10 @@ import NetSimRouterNode from './NetSimRouterNode';
 import NetSimShardSelectionPanel from './NetSimShardSelectionPanel';
 import NetSimRemoteNodeSelectionPanel from './NetSimRemoteNodeSelectionPanel';
 import {getUserSections} from '@cdo/apps/util/userSectionClient';
-
 import NetSimLogger from './NetSimLogger';
-const logger = NetSimLogger.getSingleton();
 import NetSimGlobals from './NetSimGlobals';
+
+const logger = NetSimLogger.getSingleton();
 
 /**
  * @typedef {Object} ShardChoice

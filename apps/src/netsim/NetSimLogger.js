@@ -10,10 +10,7 @@
  * @param {Console} window console API
  * @param {LogLevel} verbosity
  */
-var NetSimLogger = (module.exports = function (
-  outputConsole,
-  verbosity /*=VERBOSE*/
-) {
+export default function NetSimLogger(outputConsole, verbosity /*=VERBOSE*/) {
   /**
    * @type {Console}
    * @private
@@ -49,7 +46,7 @@ var NetSimLogger = (module.exports = function (
   this.error = function () {};
 
   this.setVerbosity(undefined === verbosity ? LogLevel.VERBOSE : verbosity);
-});
+}
 
 /**
  * Log verbosity levels enum.
