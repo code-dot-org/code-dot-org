@@ -8,7 +8,7 @@
     .slides
       - video_inspirational_index.times do |index|
         .slide
-          .action-block.action-block--one-col.flex-space-between
+          .video-wrapper.video-wrapper--one-col.flex-space-between
             .dinspirational
               = view :display_video_thumbnail, id: video_inspirational_id[index], video_code: video_inspirational[index], play_button: 'center', letterbox: 'false', caption: inspirational_video_caption[index]
         
@@ -21,6 +21,4 @@
 
     %button.carousel__next#next_8
       %img{src: "/images/carousel/next.svg", alt: "next"}
-
-
-
+      

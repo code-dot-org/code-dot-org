@@ -9,7 +9,7 @@
     .slides
       - video_not_hacked_index.times do |index|
         .slide
-          .action-block.action-block--one-col.flex-space-between
+          .video-wrapper.video-wrapper--one-col.flex-space-between
             .video__container__without__caption
               = view :display_video_thumbnail, id: video_not_hacked_id[index], video_code: video_not_hacked[index], play_button: 'center', letterbox: 'false'
   

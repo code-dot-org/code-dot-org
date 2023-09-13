@@ -10,7 +10,7 @@
     .slides
       - video_computer_index.times do |index|
         .slide
-          .action-block.action-block--one-col.flex-space-between
+          .video-wrapper.video-wrapper--one-col.flex-space-between
             .video__container
               = view :display_video_thumbnail, id: video_computer_id[index], video_code: video_computer[index], play_button: 'center', letterbox: 'false', caption: video_computer_caption[index]
 

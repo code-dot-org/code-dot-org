@@ -10,7 +10,7 @@ hoc_s(:video_library_page_internet_work_video_title_6) , hoc_s(:video_library_pa
     .slides
       - video_internet_index.times do |index|
         .slide
-          .action-block.action-block--one-col.flex-space-between
+          .video-wrapper.video-wrapper--one-col.flex-space-between
             .video__container
               = view :display_video_thumbnail, id: video_internet_id[index], video_code: video_internet[index], play_button: 'center', letterbox: 'false', caption: internet_video_caption[index]
 
@@ -23,3 +23,4 @@ hoc_s(:video_library_page_internet_work_video_title_6) , hoc_s(:video_library_pa
 
     %button.carousel__next#next_4
       %img{src: "/images/carousel/next.svg", alt: "next"}
+      

@@ -17,7 +17,7 @@ function reorganizeAndWrapSlides(carouselId, cardsList) {
 
   const actionBlocks = Array.from(
     carouselContainer.querySelectorAll(
-      ".action-block.action-block--one-col.flex-space-between"
+      ".video-wrapper.video-wrapper--one-col.flex-space-between"
     )
   );
   actionBlocks.forEach((block) => block.remove());

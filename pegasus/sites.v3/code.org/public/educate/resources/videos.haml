@@ -1,5 +1,5 @@
 ---
-title: Tools and videos
+title: Educational Short Videos
 theme: responsive_full_width
 video_player: true
 ---
@@ -31,6 +31,7 @@ video_player: true
         %p{style: "text-align: center"}
           =hoc_s("video_library_page_description_#{index + 1}")
         = view :carousel_not_hacked_video
+    = view :section_divider_line
   -if index < 5 || index > 5
     %section
       .wrapper
@@ -52,8 +53,8 @@ video_player: true
           = view :carousel_cs_video
         -if index === 7 
           = view :carousel_inspirational_video
+    = view :section_divider_line
 
-%hr.footer__line
 %section.footer
   %p{style: "text-align: center"}
     =hoc_s(:video_library_page_footer_description)

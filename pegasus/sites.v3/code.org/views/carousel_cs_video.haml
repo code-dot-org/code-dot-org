@@ -10,7 +10,7 @@ hoc_s(:video_library_page_cs_video_title_4), hoc_s(:video_library_page_cs_video_
     .slides
       - video_cs_index.times do |index|
         .slide
-          .action-block.action-block--one-col.flex-space-between
+          .video-wrapper.video-wrapper--one-col.flex-space-between
             .video__container
               = view :display_video_thumbnail, id: video_cs_id[index], video_code: video_cs[index], play_button: 'center', letterbox: 'false', caption: video_cs_caption[index]
             

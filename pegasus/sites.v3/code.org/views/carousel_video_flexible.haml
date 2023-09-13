@@ -8,7 +8,7 @@
     .slides
       - video_ai_index.times do |index|
         .slide
-          .action-block.action-block--one-col.flex-space-between
+          %figure.flex-space-between.video-wrapper.video-wrapper--one-col
             .video__container
               = view :display_video_thumbnail, id: video_id_second[index], video_code: video_ai_first[index], play_button: 'center', letterbox: 'false', caption: video_ai_caption[index]
             
@@ -20,6 +20,4 @@
 
     %button.carousel__next#next_1
       %img{src: "/images/carousel/next.svg", alt: "next"}
-
-
-
+      
