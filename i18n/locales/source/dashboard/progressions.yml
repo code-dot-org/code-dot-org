@@ -3,6 +3,8 @@ en:
   data:
     progressions:
       '"If/Else" with the Bee': '"If/Else" with the Bee'
+      "(Optional) Eliza Widget": "(Optional) Eliza Widget"
+      "(Optional) GAN Guess Widget": "(Optional) GAN Guess Widget"
       8-Bit Binary Number Widget: 8-Bit Binary Number Widget
       AI Lab and Isaac's Data: AI Lab and Isaac's Data
       AI Lab and Kim's Data: AI Lab and Kim's Data
@@ -56,6 +58,7 @@ en:
       Assessment: Assessment
       Attribution: Attribution
       Back and Forth: Back and Forth
+      Balance an Ecosystem: Balance an Ecosystem
       Basic Conditionals: Basic Conditionals
       Bass, Mid, and Treble: Bass, Mid, and Treble
       Be a Super Digital Citizen: Be a Super Digital Citizen
@@ -69,6 +72,7 @@ en:
       Board Input and Output: Board Input and Output
       Book Recommender App: Book Recommender App
       Book Recommender Model Card: Book Recommender Model Card
+      Book Summary: Book Summary
       Boolean Comparison: Boolean Comparison
       Booleans and Comparison Operators: Booleans and Comparison Operators
       Build a Platform Jumper: Build a Platform Jumper
@@ -104,9 +108,11 @@ en:
       Change: Change
       Changing Screens: Changing Screens
       Changing Sensor Scale: Changing Sensor Scale
+      Check For Understanding: Check For Understanding
       Check Your Work: Check Your Work
       Check-In Survey: Check-In Survey
       Checking for a Winner: Checking for a Winner
+      Choice: Choice
       'Choice Levels: Customize Your App': 'Choice Levels: Customize Your App'
       Choose Your Own Adventure: Choose Your Own Adventure
       Choosing Good IDs: Choosing Good IDs
@@ -116,6 +122,7 @@ en:
       'Circuit Playground: LEDs': 'Circuit Playground: LEDs'
       Circuits and Logic: Circuits and Logic
       Club Datasets: Club Datasets
+      Code My Poem: Code My Poem
       Code Prediction: Code Prediction
       Code Your Own Flappy Game: Code Your Own Flappy Game
       Code Your Page: Code Your Page
@@ -151,6 +158,7 @@ en:
       Create your project: Create your project
       Creating Sprites: Creating Sprites
       Creative Commons Search: Creative Commons Search
+      Cropping Widget: Cropping Widget
       Customize: Customize
       Customize Your App: Customize Your App
       Customizing Your App: Customizing Your App
@@ -179,6 +187,8 @@ en:
       Drawing: Drawing
       Drawing Shapes: Drawing Shapes
       Driver Alert System: Driver Alert System
+      Ecosystems Simulation: Ecosystems Simulation
+      Ecosystems Video: Ecosystems Video
       Editing Images: Editing Images
       Emotion Machine Example: Emotion Machine Example
       End of Course Projects: End of Course Projects
@@ -209,13 +219,17 @@ en:
       'Exploration: Sample Programs': 'Exploration: Sample Programs'
       'Exploration: Sample Project': 'Exploration: Sample Project'
       Explore HTML: Explore HTML
+      Explore a Digital Book Cover Example: Explore a Digital Book Cover Example
+      Explore!: Explore!
       Exploring CS in Entertainment: Exploring CS in Entertainment
       Exploring more CSS: Exploring more CSS
+      Extension choices: Extension choices
       Extra: Extra
       Extra Challenge: Extra Challenge
       'Extra Challenge: Sound Board': 'Extra Challenge: Sound Board'
       Field Collector App: Field Collector App
       Final Personal Website: Final Personal Website
+      Final Project: Final Project
       Final Room Escape App: Final Room Escape App
       Find the Wizard: Find the Wizard
       Finish a Screen: Finish a Screen
@@ -226,6 +240,7 @@ en:
       Follow the Algorithm - Unplugged Activity: Follow the Algorithm - Unplugged Activity
       Follow the Mouse: Follow the Mouse
       Fonts and Style: Fonts and Style
+      Food Chain Setup: Food Chain Setup
       FoodFight: FoodFight
       For Loop Fun - Unplugged Activity: For Loop Fun - Unplugged Activity
       For Loops: For Loops
@@ -233,6 +248,7 @@ en:
       For Loops and Repeat Blocks: For Loops and Repeat Blocks
       Formatting HTML: Formatting HTML
       Free Play: Free Play
+      Free Play - Landmarks: Free Play - Landmarks
       'Free Play: Make a Scene': 'Free Play: Make a Scene'
       'Free Play: Make an Interactive Scene': 'Free Play: Make an Interactive Scene'
       Fruit and Veggie Explorer: Fruit and Veggie Explorer
@@ -258,6 +274,7 @@ en:
       Ice Age Loops: Ice Age Loops
       If Statements: If Statements
       If-Else Statements: If-Else Statements
+      If... then... Conditional Statements: If... then... Conditional Statements
       Images and Sounds: Images and Sounds
       Images in HTML: Images in HTML
       Import Your Model: Import Your Model
@@ -274,6 +291,8 @@ en:
       InspirationalArtwork: InspirationalArtwork
       Interactive Art: Interactive Art
       Interactive Card: Interactive Card
+      Interactive Characters: Interactive Characters
+      Interactive Maps Intro Video: Interactive Maps Intro Video
       Intro to Design Mode: Intro to Design Mode
       Intro to Flyer Game: Intro to Flyer Game
       Intro to For Loops: Intro to For Loops
@@ -281,6 +300,7 @@ en:
       Intro to Sprites: Intro to Sprites
       Intro to Variables: Intro to Variables
       Introducing Sprite Lab: Introducing Sprite Lab
+      Introduction: Introduction
       Introduction to Arrays: Introduction to Arrays
       Introduction to Game Lab: Introduction to Game Lab
       Introduction to Variables: Introduction to Variables
@@ -361,10 +381,12 @@ en:
       My Loopy Robotic Friends - Unplugged Activity: My Loopy Robotic Friends - Unplugged Activity
       My Online Neighborhood: My Online Neighborhood
       My Robotic Friends - Unplugged Activity: My Robotic Friends - Unplugged Activity
+      My Time Capsule: My Time Capsule
       Naming Variables: Naming Variables
       Nested Loops with the Bee: Nested Loops with the Bee
       New Challenge Introduction: New Challenge Introduction
       New Shapes: New Shapes
+      Noisy Image Widget: Noisy Image Widget
       Orientation: Orientation
       Overview: Overview
       'Overview: Design Mode': 'Overview: Design Mode'
@@ -381,6 +403,7 @@ en:
       Plan Your Scene: Plan Your Scene
       Plane Jumper: Plane Jumper
       Planning: Planning
+      Planning Your Book Cover: Planning Your Book Cover
       Platform Jumper - Background and Variables: Platform Jumper - Background and Variables
       Platform Jumper - Items: Platform Jumper - Items
       Platform Jumper - Platforms: Platform Jumper - Platforms
@@ -432,6 +455,7 @@ en:
       Responding to Board Events: Responding to Board Events
       Responding to User Input: Responding to User Input
       Review: Review
+      Review - Choice Level: Review - Choice Level
       Review Your Animated Scene: Review Your Animated Scene
       Review Your App: Review Your App
       Review Your Game: Review Your Game
@@ -468,18 +492,26 @@ en:
       Setup: Setup
       Shapes and Parameters: Shapes and Parameters
       Shapes and the Draw Loop: Shapes and the Draw Loop
+      Share Out: Share Out
       Share Your App: Share Your App
       Share Your Pages: Share Your Pages
+      Share Your Simulation: Share Your Simulation
       Share Your Stylesheets: Share Your Stylesheets
+      Sharing Your Book Cover: Sharing Your Book Cover
+      Sharing Your Poem: Sharing Your Poem
       Shoe Recommendation Survey: Shoe Recommendation Survey
       Shoe Recommender: Shoe Recommender
       Side Scroller: Side Scroller
       Simple Circuits: Simple Circuits
       Skill Building: Skill Building
+      Skill Building - Map Setup: Skill Building - Map Setup
       Skill-Building: Skill-Building
       Sliders: Sliders
       Smart Bike - Blinkers: Smart Bike - Blinkers
       Social Sleuth: Social Sleuth
+      Solution 1 - Fishing Zone: Solution 1 - Fishing Zone
+      Solution 2 - Fishing Season: Solution 2 - Fishing Season
+      Solution 3 - Fishing Limits: Solution 3 - Fishing Limits
       Songwriting - Functions Unplugged Activity: Songwriting - Functions Unplugged Activity
       Speed it Up, Slow it Down: Speed it Up, Slow it Down
       Sprite Interactions: Sprite Interactions
@@ -492,6 +524,7 @@ en:
       Sprite Velocity: Sprite Velocity
       Sprites and the Draw Loop: Sprites and the Draw Loop
       Star Chaser: Star Chaser
+      Star Quilts Video: Star Quilts Video
       Styling Text: Styling Text
       Styling with Classes: Styling with Classes
       Styling your Website: Styling your Website
@@ -509,10 +542,12 @@ en:
       The Collector: The Collector
       The Counter Pattern: The Counter Pattern
       The Draw Loop: The Draw Loop
+      The Food Chain: The Food Chain
       The Harvester: The Harvester
       The Internet - Unplugged Activity: The Internet - Unplugged Activity
       The Power of Words - Unplugged Activity: The Power of Words - Unplugged Activity
       The Right App - Unplugged Activity: The Right App - Unplugged Activity
+      Title, Author, Background: Title, Author, Background
       Top Websites: Top Websites
       Tour of Design Mode: Tour of Design Mode
       Train AI to Clean the Ocean: Train AI to Clean the Ocean
@@ -521,6 +556,7 @@ en:
       UI Element Properties: UI Element Properties
       Ultimate Shoe Recommender: Ultimate Shoe Recommender
       Unit 5 Lesson 1 Overview: Unit 5 Lesson 1 Overview
+      Unplugged Activity: Unplugged Activity
       Updating Your Prototype: Updating Your Prototype
       Upload Your Images: Upload Your Images
       User Interface: User Interface
@@ -540,13 +576,16 @@ en:
       Velocity and the Counter Pattern Review: Velocity and the Counter Pattern Review
       Video: Video
       Video - Encryption and Public Keys: Video - Encryption and Public Keys
+      Video - Events: Video - Events
       Video - Functions: Video - Functions
       Video - If Statements: Video - If Statements
       Video - Introduction to Arrays: Video - Introduction to Arrays
       'Video - Maze Intro: Programming with Blocks': 'Video - Maze Intro: Programming with Blocks'
       Video - Parameters: Video - Parameters
+      Video - Repeat Blocks: Video - Repeat Blocks
       Video - The Counter Pattern: Video - The Counter Pattern
       Video - Variables: Video - Variables
+      Video Introduction: Video Introduction
       'Video:  Debugging with the Step Button': 'Video:  Debugging with the Step Button'
       'Video:  Minecraft - The Agent': 'Video:  Minecraft - The Agent'
       'Video:  Text  and Prompts': 'Video:  Text  and Prompts'
@@ -554,6 +593,7 @@ en:
       'Video: "If/Else" Statements': 'Video: "If/Else" Statements'
       'Video: AI: What is Machine Learning?': 'Video: AI: What is Machine Learning?'
       'Video: Amazon and Data': 'Video: Amazon and Data'
+      'Video: Animal Adaptations Introduction': 'Video: Animal Adaptations Introduction'
       'Video: Artist Intro with JR Hildebrand': 'Video: Artist Intro with JR Hildebrand'
       'Video: Artist Intro with JR Hildebrande': 'Video: Artist Intro with JR Hildebrande'
       'Video: Booleans': 'Video: Booleans'
@@ -665,12 +705,16 @@ en:
       'Video: While Loops with the Farmer': 'Video: While Loops with the Farmer'
       'Video: Wrap-up': 'Video: Wrap-up'
       Warm Up: Warm Up
+      WeTube Video Recommendations (2.0): WeTube Video Recommendations (2.0)
+      WeTube Video Recommendations (Beta): WeTube Video Recommendations (Beta)
       Website Project: Website Project
       Welcome to Monster Town: Welcome to Monster Town
+      What Is a Time Capsule?: What Is a Time Capsule?
       Where'd They Go?: Where'd They Go?
       While Loops with the Farmer: While Loops with the Farmer
       'Widget: Text Compression': 'Widget: Text Compression'
       Wrap-up: Wrap-up
+      Written Voice Simulator Widget: Written Voice Simulator Widget
       'You Choose: Improve Your App': 'You Choose: Improve Your App'
       'You Choose: Restaurant Recommendations': 'You Choose: Restaurant Recommendations'
       Your Personal Website: Your Personal Website
