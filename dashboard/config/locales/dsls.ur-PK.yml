@@ -2224,11 +2224,24 @@ ur-PK:
         description: اب تک بہت اچھا کام! اپنی اگلی سرگرمی کا انتخاب کریں۔ آپ کر سکتے
           ہیں کے طور پر کئی کے طور پر مکمل کریں. loops اور آرٹسٹ کے ساتھ مشق رکھیں!
         display_name: آرٹسٹ پریکٹس
+      CourseE_Artist_Practice_2023:
+        description: اب تک بہت اچھا کام! اپنی اگلی سرگرمی کا انتخاب کریں۔ آپ کر سکتے
+          ہیں کے طور پر کئی کے طور پر مکمل کریں. loops اور آرٹسٹ کے ساتھ مشق رکھیں!
+        display_name: آرٹسٹ پریکٹس
       CourseE_Lesson_11_Artist_Practice_2022:
         description: اب تک بہت اچھا کام! اپنی اگلی سرگرمی کا انتخاب کریں۔ آپ کر سکتے
           ہیں کے طور پر کئی کے طور پر مکمل کریں. افعال اور آرٹسٹ کے ساتھ مشق رکھیں!
         display_name: آرٹسٹ پریکٹس
+      CourseE_Lesson_11_Artist_Practice_2023:
+        description: اب تک بہت اچھا کام! اپنی اگلی سرگرمی کا انتخاب کریں۔ آپ کر سکتے
+          ہیں کے طور پر کئی کے طور پر مکمل کریں. افعال اور آرٹسٹ کے ساتھ مشق رکھیں!
+        display_name: آرٹسٹ پریکٹس
       CourseE_Lesson_7_Artist_Practice_2022:
+        description: اب تک بہت اچھا کام! اپنی اگلی سرگرمی کا انتخاب کریں۔ آپ کر سکتے
+          ہیں کے طور پر کئی کے طور پر مکمل کریں. گھوںسلا loops اور آرٹسٹ کے ساتھ مشق
+          رکھیں!
+        display_name: آرٹسٹ پریکٹس
+      CourseE_Lesson_7_Artist_Practice_2023:
         description: اب تک بہت اچھا کام! اپنی اگلی سرگرمی کا انتخاب کریں۔ آپ کر سکتے
           ہیں کے طور پر کئی کے طور پر مکمل کریں. گھوںسلا loops اور آرٹسٹ کے ساتھ مشق
           رکھیں!
@@ -2418,7 +2431,117 @@ ur-PK:
           گے؟*\n\n\nجب اپ آپنا کام ختم کر لیں تو اپنے سیمولیشن کو دوسروں کے ساتھ شریک
           کر لیں. دوسری کے ساتھ اپنا یہ پیغام شریک کریں کہ اگر شہر میں وائرس آ جائے
           تو آپ لوگوں کو کیسے محفوظ رکھیں گے. \n"
+      CourseF_outbreak_story2022_2022_pilot_-2022-2_2023:
+        content1: تفصیل یہاں
+        markdown: "# وباء: اپنا سیمولیشن کوڈ کر لیں\n\n## بھوت شہر مانسٹر ٹاؤن میں
+          خوش آمدید!\nمانسٹر ٹاؤن عمومی طور پر ایک خوشحال اور صحتمند جگہ تھی. اس بھوت
+          شہر میں رہنے والے بھوتوں کو دوستوں کے ساتھ گھومنا پھرنا بہت پسند تھا \n\n<img
+          src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\nایک دن ایک بھوت بیمار محسوس کرنے لگا. اس بھوت کو
+          **وائرس** لگ گیا تھا! وائرس ایک بہت چھوٹا جرثومہ ہوتا ہے. دیگر بھوت اس بارے
+          \ میں کچھ خاص پریشان نہیں تھے. وہ اپنے دوستوں کے پاس آتے جاتے رہے.\n\n<img
+          src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\nاس کے بعد جلد ہی دو مزید بھوت بیمار پڑ گئے۔ ان کو
+          بھی وہی وائرس لگ گیا تھا! ایسے لگ رہا تھا ان کو یہ وائرس اپنے بیمار دوست
+          سے لگ گیا تھا.\n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\nوہ وائرس بتدریج نزدیک میں دوسرے بھوتوں کی جانب پھیلنے
+          لگا. صحتمند بھوت سارے پریشان ہونے لگے کہ وہ خود بھی بیمار ہو جائیں گے. مریض
+          بھوتوں کو یہ پریشانی لاحق ہو گئی کہ ان سے یہ وائرس باقی سب کی جانب پھیل
+          جائے گا.\n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\n\n<div style=\"display: inline-block\">\n<img src=\"https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png\"
+          style=\"float:right; width:30%\">\n\n## وائرس کے پھیلاؤ کی روک تھام\nخوش
+          بختانہ، جب وائرس کا مطالعہ کیا گیا تو مانسٹر ٹاؤن کو ایک اہم بات پتہ چلی.
+          انہوں نے دریافت کیا کہ اگر وہ اپنے منہ کے اوپر ماسک پہنیں تو وائرس کے پھیلنے
+          کا امکان کم ہو جاتا ہے. ماسک پہنے رکھنے سے مریض بھوتوں سے صحتمند بھوتوں
+          تک وائرس کے پھیلنے کا امکان کم ہو جاتا تھا.\n\n<img src=\"https://images.code.org/c98f28f9bf6a027143592109d59ee484-image-1603134766360.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/bac9dbfaf1815c6627fc24e8e6db396d-image-1603134760456.png\"
+          style=\"width:8%\">\n\n</div>\n\n<img src=\"https://images.code.org/ef7499758496b39bcccc24aabd2af5d7-image-1603137920037.2020-10-19
+          16_04_58.gif\" style=\"float:left; width:25%; padding-right:25px\">\n\n##
+          آگے کیا ہو گا؟\n\nآج کوڈ لکھ کر اپنا **simulation** چلائیں گے کہ مانسٹر
+          ٹاؤن میں پھیلتی وبا کی روک تھام کر سکیں. ایک سیمولیشن کسی پراسس یا سسسٹم
+          کا کمپیوٹر ماڈل ہوتا ہے. کوڈ لکھنا سیکھ لیں اور پیشنگوئی کریں کہ مانسٹر
+          ٹاؤن میں مریضوں        \n       کے پڑوسیوں کے ساتھ کیا ہو گا.\n\n<img src=\"https://images.code.org/fcbfd250d58652bdfd6393ec4f2fe2dd-image-1603134705074.png\"
+          style=\"float:right; width:15%\">\n\n* *وائرس کتنی تیزی سے پھیلے گا؟*\n\n*
+          *کیا ہر کوئی بیمار ہو جائے گا؟*\n\n* *چہرے کے ماسک کیسے مددگار ثابت ہوں
+          گے؟*\n\n\nجب اپ آپنا کام ختم کر لیں تو اپنے سیمولیشن کو دوسروں کے ساتھ شریک
+          کر لیں. دوسری کے ساتھ اپنا یہ پیغام شریک کریں کہ اگر شہر میں وائرس آ جائے
+          تو آپ لوگوں کو کیسے محفوظ رکھیں گے. \n"
       CourseF_outbreak_story22022_2022_pilot_-2022-2:
+        content1: تفصیل یہاں
+        markdown: |-
+          # وباء: ایک سائنسدان کی طرح سوچنا
+
+          <img src="https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png" style="float:right; width:30%">
+
+          سیمولیشن ایسی چیزوں کے بارے سیکھنے کا بہترین ذریعہ ہیں جن کا حقیقی دنیا میں مشاہدہ کرنا مشکل ہوتا ہے. یہ سائنسدانوں کے ساتھ مسائل حل کرنے اور نئے خیالات کا محفوظ اور اچھے طریقے سے آزمانے میں مدد کرتے ہیں۔ آپ کا سیمولیشن ایک ذریعہ ہے کہ جس سے مانسٹر ٹاؤن میں وائرس کی وباء کے فرضی پھیلاؤ کا مشاہدہ کیا جا سکتا ہے۔
+
+          ## ری سٹ اور ری پلے!
+          جب آپ نے کوڈ خود بھی لکھا ہو لیکن یہ جاننا ناممکن ہے کہ Run کا بٹن دبانے کے بعد کیا ہوگا. یہ مانسٹر بے ترتیب انداز میں ادھر ادھر گھومتے ہیں، یوں آپ کو پتہ نہیں چلتا کہ وائرس تیز یا سست سرایت کرے گا. آپ جب اپنا کوڈ تبدیل کر لیتے ہیں، اپنا سیمولیشن کئی بار ضرور چلائیں. ہر بار چیزیں ایک ہی جیسی نہیں ہوں گی!
+
+          ## ڈاٹا جمع کرنا
+          سیمولیشن چلاتے ہوئے اپنے مشاہدات کو لکھ کر نوٹ کر لیا کریں. آپ بیمار ہونے والے بھوتوں کا شمار کر سکتے ہیں یا ایک ٹائمر کے ذریعے وقت گن سکتے ہیں کہ حال کس تیزی سے تبدیل ہو رہا ہے. مثلا، اگر کسی بھی مانسٹر نے ماسک نہ پہنا ہو تو سب کے بیمار ہونے میں عموما کتنا عرصہ لگتا ہے؟
+
+          ## پیشنگوئیاں کرنا
+          اگر آپ کو اپنے ماڈل کی سمجھ ہے تو آپ اسے پیشنگوئیاں کرنے کے لئے استعمال کر سکتے ہیں. آپ اپنے سیمولیشن کے run ہونے کا طریقہ کار بھی تبدیل کر سکتے ہیں اور اندازہ لگا سکتے ہیں کہ نتیجہ کیسے مختلف ہو گا. مثلا:
+          * اگر بھوتوں کی تعداد موجودہ شمار سے دوگنی ہوتی تو کیا ہوتا؟
+          * اگر یہ سب بھوت یعنی مانسٹر اپنی موجودہ سے ادھی کم رفتار سے چلتے تو کیا ہوتا؟
+
+          <img src="https://images.code.org/2e83373ffd346ce3f42917a0624d441c-image-1603749526420.png" style="float:right">
+
+          ## کیا مانسٹر ٹاؤن حقیقی دنیا جیسا ہے؟
+          یہ کہ آپ کا ماڈل صرف محدود حد تک حقیقت کے نزدیک ہو سکتا ہے.
+          * وباء کے لئے آپ کا کمپیوٹر سیمولیشن حقیقی دنیا میں وائرس کے وباء سے کتنا مشابہ ہے؟
+          * ان دونوں میں فرق کے نقاط کیا ہیں؟
+          جب آپ اس سرگرمی کو مکمل کر لیں، اپنے استاد یا اپنے فیملی سے ان سوالات کے بارے میں بات چیت کر لیں!
+
+          ## اپنے ماڈل میں آپ اور کیا شامل کر سکتے ہیں؟
+          آپ نے پہلے ہی مانسٹر ٹاؤن میں وباء کے پھیلاؤ کا ماڈل تیار کر لیا ہے. وہ کونسی چیزیں ہیں جو آپ کا ماڈل نہیں کر سکتا یا دکھا سکتا لیکن آپ کی خواہش ہے کہ وہ ویسا کرے یا دکھائے؟ آگے پڑھنے کے لئےcontinue کا بٹن دبائیں اور ماڈل بنانے کے حوالے سے مزید سیکھتے چلے جائیں:
+          * اپنے سیمولیشن میں بھوتوں کی تعداد بڑھا کر
+          * بھوتوں سے وائرس سے ٹھیک ہونے میں مدد کرنے سے
+          * وائرس سے دوچار ہونے کے امکانات، اس سے حفاطت، ویکسین، اور دیگر!
+
+          آپ دیگر لوگوں کے ساتھ اپنا سیمولیشن ماڈل شریک کر سکتے ہیں، یا یہ اپنا یہ پیغام شریک کر سکتے ہیں کہ اگر ہمارے شہر میں وائرس آ جائے تو ہم دوسروں کو صحتمند رکھنے واسطے کیا کر سکتے ہیں۔
+      CourseF_outbreak_story22022_2022_pilot_-2022-2_2023:
         content1: تفصیل یہاں
         markdown: |-
           # وباء: ایک سائنسدان کی طرح سوچنا
@@ -2587,6 +2710,11 @@ ur-PK:
 
           اس سبق میں، آپ خالی جگہ کہانیاں استعمال کرنے اور لکھنے کے لئے سیکھیں گے. یہ کمپیوٹر سائنس سے جوڑتا ہے کہ کس طرح جاننے کے لئے یہ ویڈیو دیکھیں.
       EnvelopeVariables-Unplugged_2021_22022_2022_pilot_-2022-2:
+        markdown: |
+          # خالی خلائی کہانیاں
+
+          اس سبق میں، آپ خالی جگہ کہانیاں استعمال کرنے اور لکھنے کے لئے سیکھیں گے. یہ کمپیوٹر سائنس سے جوڑتا ہے کہ کس طرح جاننے کے لئے یہ ویڈیو دیکھیں.
+      EnvelopeVariables-Unplugged_2021_22022_2022_pilot_-2022-2_2023:
         markdown: |
           # خالی خلائی کہانیاں
 
@@ -4084,11 +4212,17 @@ ur-PK:
       courseAB_EOC2022:
         description: آپ آخری سبق تک پہنچ گئے ہیں! تخلیق کرنے کے لئے ایک منصوبے کا
           انتخاب کریں.
+      courseAB_EOC2022_2023:
+        description: آپ آخری سبق تک پہنچ گئے ہیں! تخلیق کرنے کے لئے ایک منصوبے کا
+          انتخاب کریں.
       courseAB_EOC_2021:
         description: آپ آخری سبق تک پہنچ گئے ہیں! تخلیق کرنے کے لئے ایک منصوبے کا
           انتخاب کریں.
         display_name: کورس پروجیکٹ کا اختتام
       courseB_EOC2022:
+        description: آپ آخری سبق تک پہنچ گئے ہیں! تخلیق کرنے کے لئے ایک منصوبے کا
+          انتخاب کریں.
+      courseB_EOC2022_2023:
         description: آپ آخری سبق تک پہنچ گئے ہیں! تخلیق کرنے کے لئے ایک منصوبے کا
           انتخاب کریں.
       courseB_EOC_2021:
@@ -4105,6 +4239,16 @@ ur-PK:
         questions:
         - {}
       courseC_multi_artist_prog6_predict12022:
+        answers:
+        - {}
+        - {}
+        - correct: true
+          feedback: درست!
+        - feedback: غلط. آرٹسٹ ایک مربع کھینچتا ہے.
+          text: آرٹسٹ ایک پینٹاگون اپنی طرف متوجہ کرے گا
+        questions:
+        - {}
+      courseC_multi_artist_prog6_predict12022_2023:
         answers:
         - {}
         - {}
@@ -4166,6 +4310,16 @@ ur-PK:
         questions:
         - {}
       courseC_multi_harvester_loops11_predict12022:
+        answers:
+        - text: '4'
+        - correct: true
+          feedback: درست!
+          text: '12'
+        - text: '15'
+        - text: '20'
+        questions:
+        - {}
+      courseC_multi_harvester_loops11_predict12022_2023:
         answers:
         - text: '4'
         - correct: true
@@ -4242,6 +4396,17 @@ ur-PK:
         - text: Scrat پہلے بلاک سے منتقل نہیں کرے گا.
         questions:
         - {}
+      courseC_multi_maze_debugging8_predict12022_2023:
+        answers:
+        - feedback: غلط. Scrat acorn تک نہیں پہنچ جائے گا کیونکہ وہ غلط راستہ بدل
+            جاتا ہے.
+        - correct: true
+          feedback: درست! Scrat غلط سمت بدل جاتا ہے اور acorn تک نہیں پہنچ جائے گا.
+        - feedback: غلط. Scrat acorn تک نہیں پہنچ جائے گا کیونکہ وہ غلط راستہ بدل
+            جاتا ہے.
+        - text: Scrat پہلے بلاک سے منتقل نہیں کرے گا.
+        questions:
+        - {}
       courseC_multi_maze_debugging8_predict1_2018:
         answers:
         - {}
@@ -4298,6 +4463,15 @@ ur-PK:
         questions:
         - {}
       courseC_multi_maze_programming8_predict12022:
+        answers:
+        - {}
+        - correct: true
+          feedback: درست!
+        - {}
+        - text: پرندہ دیوار میں چلا جائے گا.
+        questions:
+        - {}
+      courseC_multi_maze_programming8_predict12022_2023:
         answers:
         - {}
         - correct: true
@@ -4365,6 +4539,15 @@ ur-PK:
         - text: بی بی -8 صرف 3 خالی جگہوں کو منتقل کرے گا.
         questions:
         - {}
+      courseC_multi_starWars_predict12022_2023:
+        answers:
+        - {}
+        - {}
+        - correct: true
+          feedback: درست!
+        - text: بی بی -8 صرف 3 خالی جگہوں کو منتقل کرے گا.
+        questions:
+        - {}
       courseC_multi_starWars_predict1_2018:
         answers:
         - {}
@@ -4415,6 +4598,15 @@ ur-PK:
         questions:
         - {}
       courseC_multi_starWars_predict22022:
+        answers:
+        - {}
+        - correct: true
+          feedback: درست!
+        - {}
+        - text: بی بی -8 پہلی لوپ کے بعد غلط سمت بدل جائے گا.
+        questions:
+        - {}
+      courseC_multi_starWars_predict22022_2023:
         answers:
         - {}
         - correct: true
@@ -4476,6 +4668,10 @@ ur-PK:
         description: آپ اپنا حتمی پروجیکٹ شروع کرنے والے ہیں۔ آپ شروع کرنے سے پہلے،
           مثال کے منصوبوں پر دیکھنے میں کچھ وقت دیں۔
         display_name: پروجیکٹ مثالیں
+      courseD_EOC_examples2022_2023:
+        description: آپ اپنا حتمی پروجیکٹ شروع کرنے والے ہیں۔ آپ شروع کرنے سے پہلے،
+          مثال کے منصوبوں پر دیکھنے میں کچھ وقت دیں۔
+        display_name: پروجیکٹ مثالیں
       courseD_EOC_examples_2021:
         description: آپ اپنا حتمی پروجیکٹ شروع کرنے والے ہیں۔ آپ شروع کرنے سے پہلے،
           مثال کے منصوبوں پر دیکھنے میں کچھ وقت دیں۔
@@ -4531,6 +4727,16 @@ ur-PK:
         questions:
         - {}
       courseD_multi_artist_nestedLoops9_predict12022:
+        answers:
+        - correct: true
+          feedback: درست!
+          text: ایے
+        - text: بی
+        - text: سی
+        - text: مندرجہ بالا میں سے کوئی نہیں
+        questions:
+        - {}
+      courseD_multi_artist_nestedLoops9_predict12022_2023:
         answers:
         - correct: true
           feedback: درست!
@@ -4604,6 +4810,15 @@ ur-PK:
         questions:
         - {}
       courseD_multi_bee_conditionals1_predict12022:
+        answers:
+        - {}
+        - correct: true
+          feedback: درست!
+        - {}
+        - text: 'شہد کی مکھی بادل تک نہیں پہنچ سکے گی۔ '
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict12022_2023:
         answers:
         - {}
         - correct: true
@@ -4698,6 +4913,16 @@ ur-PK:
             کرے گی.
         questions:
         - {}
+      courseD_multi_bee_conditionals7_predict22022_2023:
+        answers:
+        - correct: true
+          feedback: درست!
+        - {}
+        - {}
+        - text: شہد کی مکھی پھولوں اور شہد دونوں سے شہد اور امرت حاصل کرنے کی کوشش
+            کرے گی.
+        questions:
+        - {}
       courseD_multi_bee_conditionals7_predict2_2018:
         answers:
         - correct: true
@@ -4762,6 +4987,15 @@ ur-PK:
         - text: مکھی غلط سمت بدل جائے گی.
         questions:
         - {}
+      courseD_multi_bee_nestedLoops2_predict12022_2023:
+        answers:
+        - {}
+        - {}
+        - correct: true
+          feedback: درست!
+        - text: مکھی غلط سمت بدل جائے گی.
+        questions:
+        - {}
       courseD_multi_bee_nestedLoops2_predict1_2018:
         answers:
         - {}
@@ -4817,6 +5051,16 @@ ur-PK:
         questions:
         - {}
       courseD_multi_bee_nestedLoops9_predict22022:
+        answers:
+        - text: '4'
+        - correct: true
+          feedback: درست!
+          text: '8'
+        - text: '10'
+        - text: '12'
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops9_predict22022_2023:
         answers:
         - text: '4'
         - correct: true
@@ -4903,6 +5147,15 @@ ur-PK:
         - text: کاٹنے کی مشین صرف قددو منتخب کریں گے.
         questions:
         - {}
+      courseD_multi_farmer_condLoops9_predict12022_2023:
+        answers:
+        - {}
+        - {}
+        - correct: true
+          feedback: درست!
+        - text: کاٹنے کی مشین صرف قددو منتخب کریں گے.
+        questions:
+        - {}
       courseD_multi_farmer_condLoops9_predict1_2018:
         answers:
         - {}
@@ -4979,6 +5232,15 @@ ur-PK:
         - text: یہ کوڈ آخری سوراخ اچھوتا چھوڑ دے گا.
         questions:
         - {}
+      courseD_multi_farmer_while10_predict22022_2023:
+        answers:
+        - {}
+        - correct: true
+          feedback: درست!
+        - {}
+        - text: یہ کوڈ آخری سوراخ اچھوتا چھوڑ دے گا.
+        questions:
+        - {}
       courseD_multi_farmer_while10_predict2_2018:
         answers:
         - {}
@@ -5031,6 +5293,15 @@ ur-PK:
         questions:
         - {}
       courseD_multi_farmer_while4_predict12022:
+        answers:
+        - {}
+        - {}
+        - correct: true
+          feedback: درست!
+        - text: کسان صرف ایک بار گندگی نکال دے گا۔
+        questions:
+        - {}
+      courseD_multi_farmer_while4_predict12022_2023:
         answers:
         - {}
         - {}
@@ -5107,6 +5378,21 @@ ur-PK:
           text: زومبی آگے کے راستے کے اختتام پر پھنس جائے گا.
         questions:
         - {}
+      courseD_multi_maze_until10_predict22022_2023:
+        answers:
+        - correct: true
+          feedback: درست!
+          text: زومبی صحیح راستے کی طرف سے گزر اور ہمیشہ کے لئے آگے پیچھے جا ختم ہو
+            جائے گا.
+        - feedback: غلط. زومبی صحیح راستے کی طرف سے گزر اور ہمیشہ کے لئے آگے پیچھے
+            جا ختم ہو جائے گا.
+        - feedback: غلط. زومبی صحیح راستے کی طرف سے گزر اور ہمیشہ کے لئے آگے پیچھے
+            جا ختم ہو جائے گا.
+        - feedback: اس کوڈ میں، زومبی صحیح راستے کی طرف سے گزر جائے گا اور ہمیشہ کے
+            لئے آگے پیچھے جا ختم ہو جائے گا.
+          text: زومبی آگے کے راستے کے اختتام پر پھنس جائے گا.
+        questions:
+        - {}
       courseD_multi_maze_until10_predict2_2018:
         answers:
         - correct: true
@@ -5163,6 +5449,15 @@ ur-PK:
         questions:
         - {}
       courseD_multi_maze_until2_predict12022:
+        answers:
+        - {}
+        - correct: true
+          feedback: درست!
+        - {}
+        - text: پرندہ غلط طریقے سے بدل جاتا ہے۔
+        questions:
+        - {}
+      courseD_multi_maze_until2_predict12022_2023:
         answers:
         - {}
         - correct: true
@@ -5289,6 +5584,15 @@ ur-PK:
         - {}
         questions:
         - {}
+      courseE_multi_farmer_functions11_predict2022_2023:
+        answers:
+        - {}
+        - {}
+        - correct: true
+          feedback: درست!
+        - {}
+        questions:
+        - {}
       courseE_multi_farmer_functions11_predict_2018:
         answers:
         - {}
@@ -5342,6 +5646,14 @@ ur-PK:
         questions:
         - {}
       courseE_prediction_artistFunction12022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      courseE_prediction_artistFunction12022_2023:
         answers:
         - {}
         - {}
@@ -5417,6 +5729,18 @@ ur-PK:
           text: tumbleweed پر اور بند جھپکنے گا.
         questions:
         - {}
+      courseE_swim_fish_behavior_predict12022_2023:
+        answers:
+        - feedback: غلط. ٹیمبل ویڈ ٹکرانا شروع ہو جائے گا.
+        - feedback: غلط. ٹیمبل ویڈ ٹکرانا شروع ہو جائے گا.
+          text: tumbleweed سکرین کے سب سے اوپر پر تیرنے گا.
+        - correct: true
+          feedback: درست!
+          text: ٹیمبل ویڈ ٹکرانا شروع ہو جائے گا.
+        - feedback: غلط. ٹیمبل ویڈ ٹکرانا شروع ہو جائے گا.
+          text: tumbleweed پر اور بند جھپکنے گا.
+        questions:
+        - {}
       courseE_swim_fish_behavior_predict1_2021:
         answers:
         - feedback: غلط. ٹیمبل ویڈ ٹکرانا شروع ہو جائے گا.
@@ -5438,11 +5762,17 @@ ur-PK:
       courseF_EOC_examples2022_2022_pilot_-2022-2:
         description: آپ کورس F کے آخر تک پہنچ گئے ہیں! تلاش کرنے کے لئے ایک منصوبے
           کا انتخاب کریں.
+      courseF_EOC_examples2022_2022_pilot_-2022-2_2023:
+        description: آپ کورس F کے آخر تک پہنچ گئے ہیں! تلاش کرنے کے لئے ایک منصوبے
+          کا انتخاب کریں.
       courseF_EOC_examples_2021:
         description: آپ کورس F کے آخر تک پہنچ گئے ہیں! تخلیق کرنے کے لئے ایک منصوبے
           کا انتخاب کریں.
         display_name: کورس پروجیکٹ کا اختتام
       courseF_EOC_samples2022:
+        description: آپ اپنا حتمی پروجیکٹ شروع کرنے والے ہیں۔ آپ شروع کرنے سے پہلے،
+          مثال کے منصوبوں پر دیکھنے میں کچھ وقت دیں۔
+      courseF_EOC_samples2022_2023:
         description: آپ اپنا حتمی پروجیکٹ شروع کرنے والے ہیں۔ آپ شروع کرنے سے پہلے،
           مثال کے منصوبوں پر دیکھنے میں کچھ وقت دیں۔
       courseF_EOC_samples_2021:
@@ -5499,11 +5829,20 @@ ur-PK:
           میں مثال کے منصوبوں کو تلاش کریں. دبائیں\ "ختم\” جب آپ اپنے پروگرام کی منصوبہ
           بندی شروع کرنے کے لئے تیار ہوں.
         display_name: ریسرچ - نمونہ پروگرام
+      courseF_collector_samples_2022_pilot_-2022-2_2023:
+        description: آپ کو ایک کلیکٹر کھیل پیدا کیا جائے گا. شروع کرنے سے پہلے، ذیل
+          میں مثال کے منصوبوں کو تلاش کریں. دبائیں\ "ختم\” جب آپ اپنے پروگرام کی منصوبہ
+          بندی شروع کرنے کے لئے تیار ہوں.
+        display_name: ریسرچ - نمونہ پروگرام
       courseF_events_freeplay:
         description: اب آپ اپنے منصوبے کو بہتر بنانے کے لئے جو کچھ سیکھا ہے وہ استعمال
           کرسکتے ہیں! اپنے پروگرام میں شامل کریں یا کچھ نیا شروع کریں!
         display_name: واقعات - مفت کھیل
       courseF_events_freeplay2022_2022_pilot_-2022-2:
+        description: اب آپ اپنے منصوبے کو بہتر بنانے کے لئے جو کچھ سیکھا ہے وہ استعمال
+          کرسکتے ہیں! اپنے پروگرام میں شامل کریں یا کچھ نیا شروع کریں!
+        display_name: واقعات - مفت کھیل
+      courseF_events_freeplay2022_2022_pilot_-2022-2_2023:
         description: اب آپ اپنے منصوبے کو بہتر بنانے کے لئے جو کچھ سیکھا ہے وہ استعمال
           کرسکتے ہیں! اپنے پروگرام میں شامل کریں یا کچھ نیا شروع کریں!
         display_name: واقعات - مفت کھیل
@@ -5524,6 +5863,10 @@ ur-PK:
 
 
       courseF_events_practice2022_2022_pilot_-2022-2:
+        description: اب تک بہت اچھا کام! اپنی اگلی سرگرمی کا انتخاب کریں۔ آپ کر سکتے
+          ہیں کے طور پر کئی کے طور پر مکمل کریں. واقعات کے ساتھ مشق کرتے رہو!
+        display_name: واقعات پریکٹس
+      courseF_events_practice2022_2022_pilot_-2022-2_2023:
         description: اب تک بہت اچھا کام! اپنی اگلی سرگرمی کا انتخاب کریں۔ آپ کر سکتے
           ہیں کے طور پر کئی کے طور پر مکمل کریں. واقعات کے ساتھ مشق کرتے رہو!
         display_name: واقعات پریکٹس
@@ -5557,7 +5900,26 @@ ur-PK:
           text: سپرائٹ سب سے پہلے گھماؤ اور پھر بعد میں منتقل کرے گا.
         questions:
         - text: کوڈ پڑھیں، پھر پیشن گوئی کریں.
+      courseF_events_predict_multi2022_2022_pilot_-2022-2_2023:
+        answers:
+        - feedback: غلط. سپرائٹ بھی مشرق منتقل ہو جائے گا.
+          text: سپرائٹ صرف حق گھماؤ گا.
+        - feedback: غلط. سپرائٹ کتائی بند نہیں کیا ہے، لہذا یہ دونوں بیک وقت کریں
+            گے.
+          text: سپرائٹ صرف مشرق منتقل ہو جائے گا.
+        - correct: true
+          feedback: درست! دونوں رویوں کو بیک وقت ہو جائے گا.
+          text: سپرائٹ گھماؤ اور ایک ہی وقت میں منتقل ہو جائے گا.
+        - feedback: غلط. سپرائٹ لیب میں، منسلک بلاکس ہر ایک کے بعد فوری طور پر ہو
+            گزشتہ ایک، تو دونوں رویے بیک وقت ہو جائے گا.
+          text: سپرائٹ سب سے پہلے گھماؤ اور پھر بعد میں منتقل کرے گا.
+        questions:
+        - text: کوڈ پڑھیں، پھر پیشن گوئی کریں.
       courseF_groups_freeplay_2022_pilot_-2022-2:
+        description: اب آپ جو کچھ بھی چاہتے ہیں اسے بنانے کے لئے سیکھا ہے استعمال
+          کر سکتے ہیں! بہت سے sprites کے ساتھ ایک انٹرایکٹو پروگرام بنائیں!
+        display_name: بہت سارے سپرائٹس - مفت کھیل
+      courseF_groups_freeplay_2022_pilot_-2022-2_2023:
         description: اب آپ جو کچھ بھی چاہتے ہیں اسے بنانے کے لئے سیکھا ہے استعمال
           کر سکتے ہیں! بہت سے sprites کے ساتھ ایک انٹرایکٹو پروگرام بنائیں!
         display_name: بہت سارے سپرائٹس - مفت کھیل
@@ -5566,7 +5928,26 @@ ur-PK:
           ہیں کے طور پر کئی کے طور پر مکمل کریں. واقعات اور sprites کے گروپوں کے ساتھ
           مشق رکھیں!
         display_name: سپرائٹس پریکٹس کے بہت سے
+      courseF_groups_practice_2022_pilot_-2022-2_2023:
+        description: اب تک بہت اچھا کام! اپنی اگلی سرگرمی کا انتخاب کریں۔ آپ کر سکتے
+          ہیں کے طور پر کئی کے طور پر مکمل کریں. واقعات اور sprites کے گروپوں کے ساتھ
+          مشق رکھیں!
+        display_name: سپرائٹس پریکٹس کے بہت سے
       courseF_groups_predict_multi_2022_pilot_-2022-2:
+        answers:
+        - correct: true
+          feedback: درست! سپرائٹ آپ پر کلک کریں بڑا ہو جائے گا.
+          text: سپرائٹ آپ پر کلک کریں بڑا ہو جائے گا.
+        - feedback: غلط. سپرائٹ آپ پر کلک کریں بڑا ہو جائے گا.
+          text: سپرائٹ آپ پر کلک کریں چھوٹے ہو جائے گا.
+        - feedback: غلط. سپرائٹ آپ پر کلک کریں بڑا ہو جائے گا.
+          text: sprites کے تمام بڑا ہو جائے گا.
+        - feedback: غلط. سپرائٹ آپ پر کلک کریں بڑا ہو جائے گا.
+          text: تمام sprites کے چھوٹے ہو جائے گا.
+        questions:
+        - text: 'ایک پیشن گوئی بنائیں: رن دبانے کے بعد، جب آپ sprites میں سے ایک پر
+            کلک کریں گے تو کیا ہوگا؟'
+      courseF_groups_predict_multi_2022_pilot_-2022-2_2023:
         answers:
         - correct: true
           feedback: درست! سپرائٹ آپ پر کلک کریں بڑا ہو جائے گا.
@@ -5596,6 +5977,11 @@ ur-PK:
           دیکھنے کے لئے اب ان کو باہر کرنے کی کوشش کریں. اس کورس کے اختتام تک، آپ
           ان کی طرح اپنے منصوبوں کو بنانے کے قابل ہو جائیں گے... اور زیادہ!
         display_name: سپرائٹ لیب اطلاقات
+      courseF_intro_apps2022_2022_pilot_-2022-2_2023:
+        description: یہ منصوبے تمام سپرائٹ لیب کے ساتھ بنائے گئے تھے. ممکن ہے کیا
+          دیکھنے کے لئے اب ان کو باہر کرنے کی کوشش کریں. اس کورس کے اختتام تک، آپ
+          ان کی طرح اپنے منصوبوں کو بنانے کے قابل ہو جائیں گے... اور زیادہ!
+        display_name: سپرائٹ لیب اطلاقات
       courseF_labels_predict_multi:
         answers:
         - feedback: غلط. متغیر لیبل مماثل نہیں ہیں.
@@ -5613,6 +5999,22 @@ ur-PK:
         - text: یہ کوڈ واقف نظر آتے ہیں لیکن احتیاط سے اسے پڑھ سکتے ہیں. اگر صارف
             “پیزا” میں ٹائپ کرتا ہے تو کیا پرنٹ کیا جائے گا؟
       courseF_labels_predict_multi2022_2022_pilot_-2022-2:
+        answers:
+        - feedback: غلط. متغیر لیبل مماثل نہیں ہیں.
+          text: "“ایک پیزا صحیح اپ آ رہا ہے!”"
+        - feedback: غلط. ایک متغیر کا لیبل کبھی چھپی ہوئی نہیں ہے.
+          text: "” ایک کھانا بالکل اوپر آ رہا ہے!”"
+        - feedback: غلط. ایک متغیر کا لیبل کبھی چھپی ہوئی نہیں ہے.
+          text: "” ایک کھانا صحیح اوپر آ رہا ہے!”"
+        - correct: true
+          feedback: درست! متغیر لیبل مماثل نہیں ہیں.
+          text: "” ایک بالکل اوپر آ رہا ہے!”"
+        - feedback: غلط. ایونٹ اور پرنٹ بلاک اب بھی کام کرے گا.
+          text: کچھ بھی چھاپا نہیں جائے گا.
+        questions:
+        - text: یہ کوڈ واقف نظر آتے ہیں لیکن احتیاط سے اسے پڑھ سکتے ہیں. اگر صارف
+            “پیزا” میں ٹائپ کرتا ہے تو کیا پرنٹ کیا جائے گا؟
+      courseF_labels_predict_multi2022_2022_pilot_-2022-2_2023:
         answers:
         - feedback: غلط. متغیر لیبل مماثل نہیں ہیں.
           text: "“ایک پیزا صحیح اپ آ رہا ہے!”"
@@ -5683,6 +6085,15 @@ ur-PK:
         questions:
         - {}
       courseF_multi_artist_variables3a_predict12022:
+        answers:
+        - correct: true
+          feedback: درست!
+        - {}
+        - {}
+        - text: کمپیوٹر صارف کو ایک نمبر کے لئے فوری طور پر کرے گا.
+        questions:
+        - {}
+      courseF_multi_artist_variables3a_predict12022_2023:
         answers:
         - correct: true
           feedback: درست!
@@ -5775,6 +6186,16 @@ ur-PK:
             گی۔ '
         questions:
         - {}
+      courseF_multi_bee_for3_predict12022_2023:
+        answers:
+        - {}
+        - correct: true
+          feedback: درست!
+        - {}
+        - text: 'شہد کی مکھی آگے بڑھے گی اور پھول نمبر 1 اور 4 سے ایک امرت جمع کرے
+            گی۔ '
+        questions:
+        - {}
       courseF_multi_bee_for3_predict1_2018:
         answers:
         - {}
@@ -5848,11 +6269,19 @@ ur-PK:
         description: جو کچھ بھی آپ چاہتے ہیں پیدا کرنے کے لئے آپ کی باری ہے! آپ کس
           قسم کا منصوبہ بنا دیں گے؟
         display_name: سپرائٹس - مفت کھیل
+      courseF_sprites_freeplay2022_2022_pilot_-2022-2_2023:
+        description: جو کچھ بھی آپ چاہتے ہیں پیدا کرنے کے لئے آپ کی باری ہے! آپ کس
+          قسم کا منصوبہ بنا دیں گے؟
+        display_name: سپرائٹس - مفت کھیل
       courseF_sprites_practice:
         description: اب تک بہت اچھا کام! اپنی اگلی سرگرمی کا انتخاب کریں۔ آپ کر سکتے
           ہیں کے طور پر کئی کے طور پر مکمل کریں. sprites اور رویے کے ساتھ مشق رکھیں!
         display_name: سپرائٹس پریکٹس
       courseF_sprites_practice2022_2022_pilot_-2022-2:
+        description: اب تک بہت اچھا کام! اپنی اگلی سرگرمی کا انتخاب کریں۔ آپ کر سکتے
+          ہیں کے طور پر کئی کے طور پر مکمل کریں. sprites اور رویے کے ساتھ مشق رکھیں!
+        display_name: سپرائٹس پریکٹس
+      courseF_sprites_practice2022_2022_pilot_-2022-2_2023:
         description: اب تک بہت اچھا کام! اپنی اگلی سرگرمی کا انتخاب کریں۔ آپ کر سکتے
           ہیں کے طور پر کئی کے طور پر مکمل کریں. sprites اور رویے کے ساتھ مشق رکھیں!
         display_name: سپرائٹس پریکٹس
@@ -5890,11 +6319,32 @@ ur-PK:
           text: طیاروں حادثے کرے گا.
         questions:
         - text: کوڈ پڑھیں، پھر پیشن گوئی کریں.
+      courseF_sprites_predict_multi2022_2022_pilot_-2022-2_2023:
+        answers:
+        - feedback: غلط. ان sprites ہے “رویے” جو چلتے رہتے ہیں جب تک کہ وہ روکنے کے
+            لئے کہا جاتا ہے.
+          text: دونوں طیارے گرڈ کے ساتھ ساتھ ایک جگہ منتقل کریں گے، پھر روکیں گے.
+        - correct: true
+          feedback: درست! یہ طرز عمل طیاروں کو بتاتے ہیں کہ چلنا شروع کر دیں اور چلتے
+            رہیں۔
+          text: دونوں طیارے چلنا شروع ہو جائیں گے اور رک نہیں جائیں گے۔
+        - feedback: غلط. سپرائٹ لیب میں کوڈ کے ہر بلاک اگلے کے بعد فوری طور پر چلتا
+            ہے.
+          text: ایک طیارہ پہلے حرکت کرے گا اور دوسرا طیارہ بعد میں حرکت کرے گا۔
+        - feedback: غلط. طیاروں کو اس طرح سے پوزیشن میں نہیں رکھا جاتا ہے جس سے انہیں
+            چھو جائے گا.
+          text: طیاروں حادثے کرے گا.
+        questions:
+        - text: کوڈ پڑھیں، پھر پیشن گوئی کریں.
       courseF_text_practice:
         description: اب تک بہت اچھا کام! اپنی اگلی سرگرمی کا انتخاب کریں۔ آپ کر سکتے
           ہیں کے طور پر کئی کے طور پر مکمل کریں. متن اور اشارے کے ساتھ مشق کرتے رہیں!
         display_name: متن اور اشارے کی مشق
       courseF_text_practice2022_2022_pilot_-2022-2:
+        description: اب تک بہت اچھا کام! اپنی اگلی سرگرمی کا انتخاب کریں۔ آپ کر سکتے
+          ہیں کے طور پر کئی کے طور پر مکمل کریں. متن اور اشارے کے ساتھ مشق کرتے رہیں!
+        display_name: متن اور اشارے کی مشق
+      courseF_text_practice2022_2022_pilot_-2022-2_2023:
         description: اب تک بہت اچھا کام! اپنی اگلی سرگرمی کا انتخاب کریں۔ آپ کر سکتے
           ہیں کے طور پر کئی کے طور پر مکمل کریں. متن اور اشارے کے ساتھ مشق کرتے رہیں!
         display_name: متن اور اشارے کی مشق
@@ -5915,7 +6365,40 @@ ur-PK:
           text: کچھ بھی نہیں ہو گا کیونکہ `گنتی ایک عدد نہیں ہے۔
         questions:
         - text: 'ایک پیشن گوئی کریں: خرگوش کیا کہیں گے؟'
+      courseF_variables2_predict2_multi2022_-2022-2_2023:
+        answers:
+        - correct: true
+          feedback: درست! نمبر 5 متغیر میں محفوظ کیا جاتا ہے اور پھر دوبارہ استعمال
+            کیا جاتا ہے جب سپرائٹ بولتا ہے.
+          text: خرگوش “5" کہیں گے.
+        - feedback: غلط. اس پروگرام میں کوئی فوری طور پر نہیں ہے. نمبر براہ راست کوڈ
+            میں مقرر کیا جاتا ہے.
+          text: خرگوش سپرائٹ جو بھی تعداد ٹائپ کیا جاتا ہے کہیں گے.
+        - feedback: غلط. `گنتی ایک متغیر ہے۔ جب اس بلاک چلتا ہے، یہ ہو جاتا ہے جو
+            کچھ بھی تعداد محفوظ کیا جاتا ہے. خرگوش “5" کہیں گے.
+          text: خرگوش “شمار” کہیں گے.
+        - feedback: غلط. نمبر 5 متغیر میں محفوظ اور استعمال کیا جاتا ہے جب سپرائٹ
+            بولتا ہے.
+          text: کچھ بھی نہیں ہو گا کیونکہ `گنتی ایک عدد نہیں ہے۔
+        questions:
+        - text: 'ایک پیشن گوئی کریں: خرگوش کیا کہیں گے؟'
       courseF_variables2_predict_multi2022_2022_pilot_-2022-2:
+        answers:
+        - feedback: غلط. اس عدد کو متغیر میں محفوظ کیا جاتا ہے اور گاجر سپرائٹ بنانے
+            کے لیے استعمال کیا جاتا ہے۔
+          text: پروگرام جو بھی نمبر ٹائپ کیا جاتا ہے پرنٹ کرے گا.
+        - feedback: غلط. اس عدد کو متغیر میں محفوظ کیا جاتا ہے اور گاجر سپرائٹ بنانے
+            کے لیے استعمال کیا جاتا ہے۔
+          text: خرگوش سپرائٹ جو بھی تعداد ٹائپ کیا جاتا ہے کہیں گے.
+        - correct: true
+          feedback: درست! بنایا sprites کی تعداد متغیر میں محفوظ تعداد ہے.
+          text: پروگرام ہے کہ بہت سے نئے گاجر sprites بنا دے گا.
+        - feedback: غلط. ایک عدد متغیر میں ذخیرہ کیا جاتا ہے اور گاجر سپرائٹ بنانے
+            کے لیے استعمال ہوتا ہے۔
+          text: کچھ بھی نہیں ہو گا کیونکہ `گنتی ایک عدد نہیں ہے۔
+        questions:
+        - text: 'ایک پیشن گوئی کریں: فوری طور پر ایک نمبر ٹائپ کرنے کے بعد کیا ہوگا؟'
+      courseF_variables2_predict_multi2022_2022_pilot_-2022-2_2023:
         answers:
         - feedback: غلط. اس عدد کو متغیر میں محفوظ کیا جاتا ہے اور گاجر سپرائٹ بنانے
             کے لیے استعمال کیا جاتا ہے۔
@@ -5965,6 +6448,23 @@ ur-PK:
         - text: 'یہ پروگرام آپ کو آپ کی بورڈ کے ساتھ ٹائپ کرکے ایک سوال کا جواب دینے
             دیتا ہے. `print` بلاک سکرین پر متن دکھاتا ہے. ایک پیشن گوئی کریں: سوال
             کا جواب دینے کے بعد کیا ہوگا؟'
+      courseF_variables_predict_multi2022_2022_pilot_-2022-2_2023:
+        answers:
+        - feedback: غلط. نام بلاک کو جو کچھ بھی آپ ٹائپ کرتے ہیں اس کے ساتھ تبدیل
+            کیا جائے گا.
+          text: پروگرام پرنٹ کرے گا “ہیلو نام!”
+        - correct: true
+          feedback: درست! آپ جو ٹائپ کرتے ہیں وہ نام کے بلاک کی جگہ استعمال کیا جاتا
+            ہے.
+          text: پروگرام آپ کو اس نام کے ساتھ سلام کرے گا جس میں آپ ٹائپ کرتے ہیں.
+        - feedback: غلط. سکرین پر متن چھاپا جاتا ہے.
+          text: سپرائٹ سائز تبدیل ہو جائے گا.
+        - feedback: غلط. صرف ایک سوال پوچھا جاتا ہے، جب پروگرام شروع ہوتا ہے.
+          text: کمپیوٹر ایک اور سوال پوچھے گا.
+        questions:
+        - text: 'یہ پروگرام آپ کو آپ کی بورڈ کے ساتھ ٹائپ کرکے ایک سوال کا جواب دینے
+            دیتا ہے. `print` بلاک سکرین پر متن دکھاتا ہے. ایک پیشن گوئی کریں: سوال
+            کا جواب دینے کے بعد کیا ہوگا؟'
       courseF_variables_projects:
         description: آپ یا تو ایک تہنیتی کارڈ، چیٹ بٹ، یا خالی جگہ کی کہانی بنائیں
           گے. اگر آپ پہلے ہی اپنے منصوبے کا\ "حصہ 1\” ختم کر چکے ہیں، تو\ "حصہ 2\”
@@ -5976,6 +6476,11 @@ ur-PK:
 
           طالب علموں کو یہ سمجھنے کے لئے واقعی واضح ہدایات کی ضرورت ہوسکتی ہے کہ یہاں انتخاب کیسے کریں. ہر منصوبے کے انتخاب کے لئے، یہاں دو ذیلی سطحیں موجود ہیں. شروع کرنے کے لئے، طالب علموں کو “حصہ 1" کے نشان لگا دیا گیا سطحوں میں سے ایک کو منتخب کرنا چاہئے. ایک بار جب وہ اس سطح کو ختم کرتے ہیں تو انہیں یہاں واپس آنا چاہئے اور* یک* منصوبے کے “حصہ 2" کو منتخب کرنا چاہئے. ہر انتخاب کے لئے پہلی سطح طلباء کو رائے فراہم کرے گی کیونکہ وہ اپنے منصوبے کے بنیادی اجزاء کو ایک دوسرے کے ساتھ رکھتے ہیں. دوسری سطح ایک “مفت کھیل” ہے جس کا مقصد طالب علموں کو ان کے کوڈ میں کوئی تبدیلی کرنے کی اجازت دینا ہے جو وہ پسند کرتے ہیں.
       courseF_variables_projects2022_2022_pilot_-2022-2:
+        description: آپ یا تو ایک تہنیتی کارڈ، چیٹ بٹ، یا خالی جگہ کی کہانی بنائیں
+          گے. اگر آپ پہلے ہی اپنے منصوبے کا\ "حصہ 1\” ختم کر چکے ہیں، تو\ "حصہ 2\”
+          پر جائیں.
+        display_name: ایک پروجیکٹ منتخب کریں
+      courseF_variables_projects2022_2022_pilot_-2022-2_2023:
         description: آپ یا تو ایک تہنیتی کارڈ، چیٹ بٹ، یا خالی جگہ کی کہانی بنائیں
           گے. اگر آپ پہلے ہی اپنے منصوبے کا\ "حصہ 1\” ختم کر چکے ہیں، تو\ "حصہ 2\”
           پر جائیں.
@@ -5997,9 +6502,17 @@ ur-PK:
           کرنے میں دلچسپی رکھتے ہیں. دبائیں\ "ختم\” جب آپ اپنے پروگرام کی منصوبہ بندی
           شروع کرنے کے لئے تیار ہوں.
         display_name: ریسرچ - نمونہ پروگرام
+      courseF_variables_samples2022_2022_pilot_-2022-2_2023:
+        description: آپ یا تو ایک تہنیتی کارڈ، چیٹ بٹ، یا خالی جگہ کی کہانی بنائیں
+          گے. شروع کرنے سے پہلے، ذیل میں مثال کے منصوبوں کو تلاش کریں تاکہ آپ تخلیق
+          کرنے میں دلچسپی رکھتے ہیں. دبائیں\ "ختم\” جب آپ اپنے پروگرام کی منصوبہ بندی
+          شروع کرنے کے لئے تیار ہوں.
+        display_name: ریسرچ - نمونہ پروگرام
       courseF_variables_stop:
         content1: تفصیل یہاں
       courseF_variables_stop2022_2022_pilot_-2022-2:
+        content1: تفصیل یہاں
+      courseF_variables_stop2022_2022_pilot_-2022-2_2023:
         content1: تفصیل یہاں
       coursee_prediction_artistfunction2:
         answers:
@@ -6011,6 +6524,15 @@ ur-PK:
         questions:
         - {}
       coursee_prediction_artistfunction22022:
+        answers:
+        - {}
+        - correct: true
+          feedback: درست!
+        - {}
+        - {}
+        questions:
+        - {}
+      coursee_prediction_artistfunction22022_2023:
         answers:
         - {}
         - correct: true
@@ -6061,6 +6583,42 @@ ur-PK:
           text: آرٹسٹ ایک دوسرے کے اوپر چار چوکوں کو اپنی طرف متوجہ کرے گا.
         questions:
         - text: جب آپ “چلائیں” بٹن دبائیں گے تو کیا ہوگا؟
+      csc_animal_adaptations_predict:
+        answers:
+        - {}
+        - correct: true
+          feedback: درست!
+        - {}
+        - {}
+        questions:
+        - {}
+      csc_ecosystems_matching_cfu:
+        answers:
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+      csc_ecosystems_matching_conditionals:
+        answers:
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+      csc_ecosystems_matching_events:
+        answers:
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+      csc_timecapsule_info_2023:
+        content1: تفصیل یہاں
       csd-post-survey-2017-q11_2018:
         answers:
         - correct: true
@@ -9221,6 +9779,8 @@ ur-PK:
         content1: تفصیل یہاں
       csf_be_a_super_digital_citizen2022:
         content1: تفصیل یہاں
+      csf_be_a_super_digital_citizen2022_2023:
+        content1: تفصیل یہاں
       csf_be_a_super_digital_citizen_2021:
         content1: تفصیل یہاں
         markdown: |
@@ -9236,11 +9796,15 @@ ur-PK:
         content1: تفصیل یہاں
       csf_password_power-up2022:
         content1: تفصیل یہاں
+      csf_password_power-up2022_2023:
+        content1: تفصیل یہاں
       csf_password_power-up_2021:
         content1: تفصیل یہاں
       csf_putting_a_stop_to_online_meanness:
         content1: تفصیل یہاں
       csf_putting_a_stop_to_online_meanness2022:
+        content1: تفصیل یہاں
+      csf_putting_a_stop_to_online_meanness2022_2023:
         content1: تفصیل یہاں
       csf_putting_a_stop_to_online_meanness_2021:
         content1: تفصیل یہاں
@@ -10819,6 +11383,10 @@ ur-PK:
         description: آپ اپنا حتمی پروجیکٹ شروع کرنے والے ہیں۔ آپ شروع کرنے سے پہلے،
           مثال کے منصوبوں پر دیکھنے میں کچھ وقت دیں۔
         display_name: پروجیکٹ مثالیں
+      express_EOC_examples2022_2023:
+        description: آپ اپنا حتمی پروجیکٹ شروع کرنے والے ہیں۔ آپ شروع کرنے سے پہلے،
+          مثال کے منصوبوں پر دیکھنے میں کچھ وقت دیں۔
+        display_name: پروجیکٹ مثالیں
       express_EOC_examples_2021:
         description: آپ اپنا حتمی پروجیکٹ شروع کرنے والے ہیں۔ آپ شروع کرنے سے پہلے،
           مثال کے منصوبوں پر دیکھنے میں کچھ وقت دیں۔
@@ -10849,6 +11417,15 @@ ur-PK:
         questions:
         - {}
       grade2_multi_collector_A_predict12022:
+        answers:
+        - {}
+        - correct: true
+          feedback: درست!
+        - {}
+        - text: لورل اس کوڈ کا استعمال کرتے ہوئے خزانہ کا 1 ٹکڑا جمع کرے گا.
+        questions:
+        - {}
+      grade2_multi_collector_A_predict12022_2023:
         answers:
         - {}
         - correct: true
