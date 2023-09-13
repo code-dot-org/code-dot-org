@@ -260,6 +260,144 @@
         "programming/pre-express/2022": {
           "word": "Códáil"
         },
+        "code/csc-adaptations/2023": {
+          "word": "Cód"
+        },
+        "behavior/csc-adaptations/2023": {
+          "word": "Iompar"
+        },
+        "code/csc-ecosystems/2023": {
+          "word": "Cód"
+        },
+        "conditionals/csc-ecosystems/2023": {
+          "word": "Coinníollacha"
+        },
+        "variable/csc-ecosystems/2023": {
+          "word": "Athróg"
+        },
+        "code/csc-mappinglandmarks/2023": {
+          "word": "Cód"
+        },
+        "artist/csc-starquilts/2023": {
+          "word": "Ealaíontóir"
+        },
+        "comments/csc-starquilts/2023": {
+          "word": "Nótaí"
+        },
+        "code/poetry/2023": {
+          "word": "Cód"
+        },
+        "debugging/coursea/2023": {
+          "word": "Dífhabhtú"
+        },
+        "drop/coursea/2023": {
+          "word": "Titim"
+        },
+        "programming/coursea/2023": {
+          "word": "Códáil"
+        },
+        "debugging/courseb/2023": {
+          "word": "Dífhabhtú"
+        },
+        "drop/courseb/2023": {
+          "word": "Titim"
+        },
+        "programming/courseb/2023": {
+          "word": "Códáil"
+        },
+        "debugging/coursec/2023": {
+          "word": "Dífhabhtú"
+        },
+        "sequencing/coursec/2023": {
+          "word": "Seicheamhú"
+        },
+        "programming/coursec/2023": {
+          "word": "Códáil"
+        },
+        "binary/coursec/2023": {
+          "word": "Dénártha"
+        },
+        "debugging/coursed/2023": {
+          "word": "Dífhabhtú"
+        },
+        "programming/coursed/2023": {
+          "word": "Códáil"
+        },
+        "conditionals/coursed/2023": {
+          "word": "Coinníollacha"
+        },
+        "behavior/coursee/2023": {
+          "word": "Iompar"
+        },
+        "function/coursee/2023": {
+          "word": "Feidhm"
+        },
+        "conditionals/coursee/2023": {
+          "word": "Coinníollacha"
+        },
+        "copyright/coursee/2023": {
+          "word": "Cóipcheart"
+        },
+        "define/coursee/2023": {
+          "word": "Sainmhínigh"
+        },
+        "behavior/coursef/2023": {
+          "word": "Iompar"
+        },
+        "variable/coursef/2023": {
+          "word": "Athróg"
+        },
+        "input/coursef/2023": {
+          "word": "Ionchur"
+        },
+        "machine_learning/coursef/2023": {
+          "word": "Meaisínfhoghlaim"
+        },
+        "internet/coursef/2023": {
+          "word": "An tIdirlíon"
+        },
+        "define/coursef/2023": {
+          "word": "Sainmhínigh"
+        },
+        "debugging/express/2023": {
+          "word": "Dífhabhtú"
+        },
+        "sequencing/express/2023": {
+          "word": "Seicheamhú"
+        },
+        "programming/express/2023": {
+          "word": "Códáil"
+        },
+        "behavior/express/2023": {
+          "word": "Iompar"
+        },
+        "conditionals/express/2023": {
+          "word": "Coinníollacha"
+        },
+        "function/express/2023": {
+          "word": "Feidhm"
+        },
+        "variable/express/2023": {
+          "word": "Athróg"
+        },
+        "define/express/2023": {
+          "word": "Sainmhínigh"
+        },
+        "drop/pre-express/2023": {
+          "word": "Titim"
+        },
+        "debugging/pre-express/2023": {
+          "word": "Dífhabhtú"
+        },
+        "programming/pre-express/2023": {
+          "word": "Códáil"
+        },
+        "machine_learning/how-ai-works/2023": {
+          "word": "Meaisínfhoghlaim"
+        },
+        "network/how-ai-works/2023": {
+          "word": "Líonra"
+        },
         "conditionals/aquatic/unversioned": {
           "word": "Coinníollacha"
         },
