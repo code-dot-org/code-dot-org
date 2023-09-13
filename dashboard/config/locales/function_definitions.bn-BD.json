@@ -324,6 +324,46 @@
             }
           }
         },
+        "Course E: Frozen Project_examples_2023": {
+          "draw a circle": {
+            "name": "একটি বৃত্ত আঁকুন।"
+          },
+          "draw a house": {
+            "name": "একটি ঘর আঁকুন।",
+            "parameters": {
+              "length": "দৈর্ঘ্য"
+            }
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "দৈর্ঘ্য",
+              "repeat": "পুনরাই"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "দৈর্ঘ্য"
+            }
+          },
+          "draw a square": {
+            "name": "একটি বর্গ আঁকুন।",
+            "parameters": {
+              "length": "দৈর্ঘ্য"
+            }
+          },
+          "draw a star": {
+            "name": "একটি বর্গ আঁকুন",
+            "parameters": {
+              "length": "দৈর্ঘ্য"
+            }
+          },
+          "draw a triangle": {
+            "name": "একটি ত্রিভুজ আঁকুন।",
+            "parameters": {
+              "length": "দৈর্ঘ্য"
+            }
+          }
+        },
         "Course E: Play Lab Project": {
           "do something": {
             "name": "কিছু কর"
@@ -489,6 +529,46 @@
             }
           }
         },
+        "CourseD_EOC_artist_2023": {
+          "draw a circle": {
+            "name": "একটি বৃত্ত আঁকুন।"
+          },
+          "draw a house": {
+            "name": "একটি ঘর আঁকুন।",
+            "parameters": {
+              "length": "দৈর্ঘ্য"
+            }
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "দৈর্ঘ্য",
+              "repeat": "পুনরাই"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "দৈর্ঘ্য"
+            }
+          },
+          "draw a square": {
+            "name": "একটি বর্গ আঁকুন।",
+            "parameters": {
+              "length": "দৈর্ঘ্য"
+            }
+          },
+          "draw a star": {
+            "name": "একটি বর্গ আঁকুন",
+            "parameters": {
+              "length": "দৈর্ঘ্য"
+            }
+          },
+          "draw a triangle": {
+            "name": "একটি ত্রিভুজ আঁকুন।",
+            "parameters": {
+              "length": "দৈর্ঘ্য"
+            }
+          }
+        },
         "CourseD_EOC_artist_example2021": {
           "draw a circle": {
             "name": "একটি বৃত্ত আঁকুন।"
@@ -530,6 +610,46 @@
           }
         },
         "CourseD_EOC_artist_example20212022": {
+          "draw a circle": {
+            "name": "একটি বৃত্ত আঁকুন।"
+          },
+          "draw a house": {
+            "name": "একটি ঘর আঁকুন।",
+            "parameters": {
+              "length": "দৈর্ঘ্য"
+            }
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "দৈর্ঘ্য",
+              "repeat": "পুনরাই"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "দৈর্ঘ্য"
+            }
+          },
+          "draw a square": {
+            "name": "একটি বর্গ আঁকুন।",
+            "parameters": {
+              "length": "দৈর্ঘ্য"
+            }
+          },
+          "draw a star": {
+            "name": "একটি বর্গ আঁকুন",
+            "parameters": {
+              "length": "দৈর্ঘ্য"
+            }
+          },
+          "draw a triangle": {
+            "name": "একটি ত্রিভুজ আঁকুন।",
+            "parameters": {
+              "length": "দৈর্ঘ্য"
+            }
+          }
+        },
+        "CourseD_EOC_artist_example2021_2023": {
           "draw a circle": {
             "name": "একটি বৃত্ত আঁকুন।"
           },
@@ -1022,6 +1142,11 @@
             "name": "কিছু কর"
           }
         },
+        "courseC_data wizard_2023": {
+          "do something": {
+            "name": "কিছু কর"
+          }
+        },
         "courseD_artist_binary1": {
           "draw": {
             "parameters": {
@@ -1392,6 +1517,11 @@
             "name": "কিছু কর"
           }
         },
+        "courseE_artist_functions10_2023": {
+          "do something": {
+            "name": "কিছু কর"
+          }
+        },
         "courseE_artist_functions2": {
           "draw a square": {
             "name": "একটি বর্গ আঁকুন।"
@@ -1418,6 +1548,11 @@
           }
         },
         "courseE_artist_functions2_2021": {
+          "draw a square": {
+            "name": "একটি বর্গ আঁকুন।"
+          }
+        },
+        "courseE_artist_functions2_2023": {
           "draw a square": {
             "name": "একটি বর্গ আঁকুন।"
           }
@@ -1453,6 +1588,11 @@
           }
         },
         "courseE_artist_functions3_2021": {
+          "draw a star": {
+            "name": "একটি বর্গ আঁকুন"
+          }
+        },
+        "courseE_artist_functions3_2023": {
           "draw a star": {
             "name": "একটি বর্গ আঁকুন"
           }
@@ -1498,6 +1638,11 @@
           }
         },
         "courseE_artist_functions5_2021": {
+          "draw a star": {
+            "name": "একটি বর্গ আঁকুন"
+          }
+        },
+        "courseE_artist_functions5_2023": {
           "draw a star": {
             "name": "একটি বর্গ আঁকুন"
           }
@@ -1557,6 +1702,11 @@
             "name": "কিছু কর"
           }
         },
+        "courseE_artist_functions8_2023": {
+          "do something": {
+            "name": "কিছু কর"
+          }
+        },
         "courseE_artist_functions8a2022": {
           "do something": {
             "name": "কিছু কর"
@@ -1597,6 +1747,14 @@
             "name": "একটি বর্গ আঁকুন।"
           }
         },
+        "courseE_artist_functions8a_2023": {
+          "do something": {
+            "name": "কিছু কর"
+          },
+          "draw a square": {
+            "name": "একটি বর্গ আঁকুন।"
+          }
+        },
         "courseE_artist_functions8b2022": {
           "do something": {
             "name": "কিছু কর"
@@ -1622,6 +1780,11 @@
             "name": "কিছু কর"
           }
         },
+        "courseE_artist_functions8b_2023": {
+          "do something": {
+            "name": "কিছু কর"
+          }
+        },
         "courseE_artist_functions8c2022": {
           "do something": {
             "name": "কিছু কর"
@@ -1643,6 +1806,11 @@
           }
         },
         "courseE_artist_functions8c_2021": {
+          "do something": {
+            "name": "কিছু কর"
+          }
+        },
+        "courseE_artist_functions8c_2023": {
           "do something": {
             "name": "কিছু কর"
           }
@@ -1677,6 +1845,11 @@
             "name": "কিছু কর"
           }
         },
+        "courseE_artist_functions9_2023": {
+          "do something": {
+            "name": "কিছু কর"
+          }
+        },
         "courseE_artist_functions_challenge1": {
           "do something": {
             "name": "কিছু কর"
@@ -1703,6 +1876,11 @@
           }
         },
         "courseE_artist_functions_challenge1_2021": {
+          "do something": {
+            "name": "কিছু কর"
+          }
+        },
+        "courseE_artist_functions_challenge1_2023": {
           "do something": {
             "name": "কিছু কর"
           }
@@ -1737,6 +1915,11 @@
             "name": "কিছু কর"
           }
         },
+        "courseE_artist_functions_challenge2_2023": {
+          "do something": {
+            "name": "কিছু কর"
+          }
+        },
         "courseE_artist_functions_predict1": {
           "draw a square": {
             "name": "একটি বর্গ আঁকুন।"
@@ -1763,6 +1946,11 @@
           }
         },
         "courseE_artist_functions_predict1_2021": {
+          "draw a square": {
+            "name": "একটি বর্গ আঁকুন।"
+          }
+        },
+        "courseE_artist_functions_predict1_2023": {
           "draw a square": {
             "name": "একটি বর্গ আঁকুন।"
           }
@@ -1803,6 +1991,11 @@
           }
         },
         "courseE_artist_functions_predict2_2021": {
+          "do something": {
+            "name": "কিছু কর"
+          }
+        },
+        "courseE_artist_functions_predict2_2023": {
           "do something": {
             "name": "কিছু কর"
           }
@@ -1868,6 +2061,11 @@
           }
         },
         "courseF_apps_collector_-2022-2": {
+          "end game": {
+            "name": "খেলা শেষ করুন"
+          }
+        },
+        "courseF_apps_collector_2023": {
           "end game": {
             "name": "খেলা শেষ করুন"
           }
