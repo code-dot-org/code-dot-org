@@ -586,6 +586,10 @@ tr:
             -   Adil CS eğitimi anlayışınızı geliştirin.
             -   Öğrenci deneyimi için empati geliştirin.
             -   Benzer işler yapan öğretmenlerden oluşan bir ağın parçası olun.
+        vpl-csa-2023:
+          version_title: '2023'
+        vpl-csd-2023:
+          version_title: '2023'
         vpl-csd-ayw-pilot-2022:
           title: BB Keşifleri Sanal Akademik Yıl Atölyeleri
         vpl-csd-summer-ci-2023:
@@ -612,6 +616,8 @@ tr:
         vpl-csd-summer-pilot-ci-2022:
           title: BB Keşifleri Müfredatı İncelemesi
           version_title: "'21-'22"
+        vpl-csp-2023:
+          version_title: '2023'
     resources:
       csd_changelog_22-_23/csd/2022:
         name: CSD Değişiklik günlüğü '22-'23
