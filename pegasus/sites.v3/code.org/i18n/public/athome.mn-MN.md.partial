@@ -27,7 +27,7 @@ theme: responsive
 
 <a id="hoc"></a>
 <h2>Эдгээр хөгжилтэй танилцуулах заавар бүхий цагийн кодын цагийг туршиж үзээрэй</h2>
-<p>Try a <a class="linktag" id="hoc-overview" href="/hourofcode/overview" target="_blank">one-hour tutorial</a> featuring popular games and movies like Minecraft, Frozen, and Star Wars. Олон хичээлүүд нь тоглоом шиг бүтэцтэй бөгөөд компьютерийн шинжлэх ухааны үндсэн ойлголтуудыг хөгжилтэй, сонирхолтой байдлаар заах зорилготой юм.</p>
+<p>Minecraft, Frozen, Star Wars гэх мэт алдартай тоглоом, кинонуудыг</a> багтаасан <a class="linktag" id="hoc-overview" href="/hourofcode/overview" target="_blank">нэг цагийн хичээлийг үзээрэй. Олон хичээлүүд нь тоглоом шиг бүтэцтэй бөгөөд компьютерийн шинжлэх ухааны үндсэн ойлголтуудыг хөгжилтэй, сонирхолтой байдлаар заах зорилготой юм.</p>
 
 <br>
 
@@ -38,8 +38,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>Бүжгийн үдэшлэг</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Найз нөхөд, гэр бүлийнхэнтэйгээ хуваалцах бүжгийн үдэшлэгийг кодчилно. Бейонсе, Харри Стиль, Лиззо, Лил Нас X, Селена Гомез, Диснейн “Encanto” киноны хөгжим, бусад!</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px">Бүжгийн намын</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">код нь бүжгийн намын найз нөхөд, гэр бүлийнхэнтэйгээ хуваалцах. Бейонсе, Харри Стиль, Лиззо, Лил Нас X, Селена Гомез, Диснейн “Encanto” киноны хөгжим, бусад!</div>
         <a class="linktag" id="danceparty" href="/dance" target="_blank"><button>Үйл ажиллагааг үзээрэй</button></a>
     </span>
   </div>
@@ -53,8 +53,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Minecraft Кодын цаг</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Minecraft нь цоо шинэ үйл ажиллагаагаар Кодын цагт буцаж ирлээ! кодтой Minecraft дамжуулан Аялал.</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px">Код Minecraft</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Minecraft цаг цоо шинэ үйл ажиллагаа нь Кодын цаг буцаж байна! кодтой Minecraft дамжуулан Аялал.</div>
         <br>
         <a class="linktag" id="minecraft" href="/minecraft" target="_blank"><button>Үйл ажиллагааг үзээрэй</button></a>
     </span>
@@ -69,8 +69,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>Далайн орнуудад зориулсан AI</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">AI нь хогийг илрүүлэхэд сургах замаар далай тэнгисийг цэвэрлэхэд тусална уу! Сургалтын өгөгдөл, хэвийсэн байдал, хиймэл оюун ухааны дэлхийн асуудлуудыг хэрхэн шийдвэрлэх талаар олж мэдээрэй. Үзэх <a class="linktag" id="oceans-lesson" href="https://curriculum.code.org/hoc/plugged/9/" target="_blank">хичээлийн төлөвлөгөө</a>.</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px">AI for Oceans AI нь хогийг илрүүлэхэд сургах замаар далай тэнгисийг цэвэрлэхэд</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">тусалдаг! Сургалтын өгөгдөл, хэвийсэн байдал, хиймэл оюун ухааны дэлхийн асуудлуудыг хэрхэн шийдвэрлэх талаар олж мэдээрэй. Үзэх <a class="linktag" id="oceans-lesson" href="https://curriculum.code.org/hoc/plugged/9/" target="_blank">хичээлийн төлөвлөгөө</a>.</div>
         <a class="linktag" id="aiforoceans" href="https://studio.code.org/s/oceans/lessons/1/levels/1" target="_blank"><button>Үйл ажиллагааг үзээрэй</button></a>
     </span>
   </div>
@@ -96,9 +96,9 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>Компьютер хэрхэн ажилладаг вэ</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Билл Гейтсийн танилцуулснаар зургаан богино хэмжээний видео цуврал нь компьютерийг компьютер болгодог, компьютерийн хэлхээ хэрхэн ажилладаг талаар тайлбарлажээ.</div>
-        <a class="linktag" id="howcomputers" href="https://www.youtube.com/watch?v=OAx_6-wdslM&list=PLzdnOPI1iJNcsRwJhvksEo1tJqjIqWbN-" target="_blank"><button></button></a>цуврал видео үзэх
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px">Компьютер хэрхэн</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">ажилладаг вэ Билл Гейтсийн танилцуулснаар зургаан богино хэмжээний видео цуврал нь компьютерийг компьютер болгодог, компьютерийн хэлхээ хэрхэн ажилладаг талаар тайлбарласан болно.</div>
+        <a class="linktag" id="howcomputers" href="https://www.youtube.com/watch?v=OAx_6-wdslM&list=PLzdnOPI1iJNcsRwJhvksEo1tJqjIqWbN-" target="_blank"><button>Видео цувралыг үзээрэй</button></a>
     </span>
   </div>
 </div>
@@ -111,9 +111,9 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Интернет хэрхэн ажилладаг вэ</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Богино хэмжээний найман видеоны цувралаас та интернет хэрхэн зохион бүтээсэн, HTML гэж юу болох, Google гэх мэт хайлтын системүүд хэрхэн ажилладаг талаар мэдэх болно.</div>
-        <a class="linktag" id="howinternet" href="https://www.youtube.com/watch?v=Dxcc6ycZ73M&list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7-" target="_blank"><button></button></a>цуврал видео үзэх
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px">Интернет хэрхэн ажилладаг</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">вэ найман богино хэмжээний видеоны энэ цувралд та интернет хэрхэн зохион бүтээсэн, HTML гэж юу болох, Google гэх мэт хайлтын системүүд хэрхэн ажилладаг талаар мэдэх болно.</div>
+        <a class="linktag" id="howinternet" href="https://www.youtube.com/watch?v=Dxcc6ycZ73M&list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7-" target="_blank"><button>Видео цувралыг үзээрэй</button></a>
     </span>
   </div>
 </div>
@@ -126,8 +126,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>AI хэрхэн ажилладаг вэ</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">AI хэрхэн ажилладаг, яагаад энэ цуврал богино хэмжээний видеонуудад чухал болохыг олж мэдээрэй. Майкрософт компанийн гүйцэтгэх захирал Сатья Наделла болон олон төрлийн мэргэжилтнүүдтэй.</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px">AI</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">хэрхэн ажилладаг вэ AI хэрхэн ажилладаг, яагаад энэ цуврал богино хэмжээний видеонуудад чухал болохыг олж мэдээрэй. Майкрософт компанийн гүйцэтгэх захирал Сатья Наделла болон олон төрлийн мэргэжилтнүүдтэй.</div>
         <a class="linktag" id="ai-videos" href="/ai#ai-videos" target="_blank"><button>Цуврал видео үзэх</button></a>
     </span>
   </div>
@@ -136,7 +136,7 @@ theme: responsive
 
 <div style="clear: both"></div>
 
-<p>View more videos, including short inspirational videos featuring celebrities like Steph Curry and Shakira, <a class="linktag" id="all-videos" href="https://code.org/educate/resources/videos" target="_blank">here</a>.</p>
+<p>Стеф Карри, Шакира зэрэг алдартнуудыг багтаасан богино хэмжээний урам зориг өгсөн видеонуудыг эндээс үзнэ үү. <a class="linktag" id="all-videos" href="https://code.org/educate/resources/videos" target="_blank"></a></p>
 <br>
 <p><a href="#top">[Дээш буцах]</a></p>
 
@@ -147,7 +147,7 @@ theme: responsive
 <a id="express"></a>
 <h2>Суурь ойлголтуудыг манай бие дааж хийсэн курсуудаар сур</h2>
 <h3>Өөрийгөө танилцуулах курс</h3>
-<p>Оюутнууд өөрсдөө эхлэхэд тохиромжтой сонголт. Та чирэх & дусал блок компьютерийн шинжлэх ухааны үндсийг сурах болно. Өөрийн зураг, тоглоом үүсгэх. Тэмдэглэл: Экспресс курс нь одоогоор англи, хинди, итали, испани хэл дээр байдаг. For other languages, we recommend our 20-hour <a class="linktag" id="accelerated" href="https://studio.code.org/s/20-hour" target="_blank">Accelerated Course</a>. Таны хэл дээр юу байгааг харахын тулд манай зочилно уу <a class="linktag" id="course-catalog" href="https://studio.code.org/courses" target="_blank">курс каталог</a>.</p>
+<p>Оюутнууд өөрсдөө эхлэхэд тохиромжтой сонголт. Та чирэх & дусал блок компьютерийн шинжлэх ухааны үндсийг сурах болно. Өөрийн зураг, тоглоом үүсгэх. Тэмдэглэл: Экспресс курс нь одоогоор англи, хинди, итали, испани хэл дээр байдаг. Бусад хэлний хувьд бид 20 цагийн <a class="linktag" id="accelerated" href="https://studio.code.org/s/20-hour" target="_blank">Хурдасгасан курсээ санал болгож байна.</a> Таны хэл дээр юу байгааг харахын тулд манай зочилно уу <a class="linktag" id="course-catalog" href="https://studio.code.org/courses" target="_blank">курс каталог</a>.</p>
 
 <br>
 
@@ -159,13 +159,13 @@ theme: responsive
 
 <div class="col-50" style="padding-right: 20px; padding-bottom:10px">
 
-<a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express-2019" target="_blank"><img src="/images/curriculum/course-tile-pre-reader-express.png" style="width: 100%" alt="Уншигчийн өмнөх экспресс курс"></a><br><a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express-2019" target="_blank">Express Course for pre-readers</a>
+<a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express-2019" target="_blank"><img src="/images/curriculum/course-tile-pre-reader-express.png" style="width: 100%" alt="Уншигчийн өмнөх экспресс курс"></a><br><a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express-2019" target="_blank">Урьдчилан уншигчдад зориулсан экспресс курс</a>
 
 </div>
-<div style="clear: both"></div>
+<div style="clear: both; margin-bottom: 2rem"></div>
 
 <h3>Тоглоомын Lab болон App Lab нь өөрөө хурдацтай танилцуулга</h3>
-<p>Манай CS Discoveries болон CS зарчмуудын курсуудаас дасан зохицсон эдгээр богино, өөрөө хурдтай модулиуд нь програмчлалын бүх хэл, хэрэгслийг багтаасан ойлголтуудыг сурах гайхалтай арга юм. <i>Requires Code.org account to access</i>.</p>
+<p>Манай CS Discoveries болон CS зарчмуудын курсуудаас дасан зохицсон эдгээр богино, өөрөө хурдтай модулиуд нь програмчлалын бүх хэл, хэрэгслийг багтаасан ойлголтуудыг сурах гайхалтай арга юм. <i>Нэвтрэхийн тулд Code.org данс шаарддаг.</i></p>
 
 <br>
 
@@ -176,8 +176,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>Тоглоомын лабораторийн танилцуулга</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Хөтөлбөрийн анимаци, интерактив урлаг, Тоглоомын лаборатори дахь тоглоомууд. энгийн хэлбэр нь унтраах эхлэх, илүү нарийн сприт суурилсан анимаци, тоглоом хүртэл барих.</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px">Game Lab</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Хөтөлбөрийн анимаци, интерактив урлаг, тоглоомын Lab дахь тоглоомуудын танилцуулга. энгийн хэлбэр нь унтраах эхлэх, илүү нарийн сприт суурилсан анимаци, тоглоом хүртэл барих.</div>
         <a class="linktag" id="gamelab-intro" href="https://studio.code.org/s/csd3-virtual" target="_blank"><button>Модулийг туршиж үзээрэй</button></a>
     </span>
   </div>
@@ -191,9 +191,9 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>App Lab дахь яст мэлхийн програмчлал</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Энгийн JavaScript командуудыг ашиглан виртуал “яст мэлхий” ашиглан хэлбэр, дүрс зурах. Дизайн болон өөрийн дижитал дүр зураг програмчлах!</div>
-        <a class="linktag" id="turtle-applab" href="https://studio.code.org/s/csp3-virtual" target="_blank"><button>Модулийг үзээрэй</button></a>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px">App Lab дахь яст мэлхий програмчлал виртуал ашиглан хэлбэр, дүрс зурах энгийн JavaScript тушаалуудыг</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">ашиглах “яст мэлхий”. Дизайн болон өөрийн дижитал дүр зураг програмчлах!</div>
+        <a class="linktag" id="turtle-applab" href="https://studio.code.org/s/csp3-virtual" target="_blank"><button>Модулийг туршаад үзээрэй</button></a>
     </span>
   </div>
 </div>
@@ -206,8 +206,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>App Lab дахь үйл явдалд тулгуурласан програмчлал</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Товшилт болон түлхүүр дарахад хариу үйлдэл үзүүлэх апп-уудыг зохион бүтээж сурна. Вэб дээр амьдардаг энгийн програмууд (апп-ууд) цуврал үүсгэх!</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px">App Lab-д үйл явдал тулгуурласан програмчлалын товшилт болон гол дарахад хариу програм боловсруулах</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">сур. Вэб дээр амьдардаг энгийн програмууд (апп-ууд) цуврал үүсгэх!</div>
         <a class="linktag" id="events-applab" href="https://studio.code.org/s/csp5-virtual" target="_blank"><button>Модулийг туршиж үзээрэй</button></a>
     </span>
   </div>
@@ -224,13 +224,13 @@ theme: responsive
 
 <a id="labs"></a>
 <h2>ямар нэг зүйл бий болгох!</h2>
-<p>Нэгдүгээрт, урам зориг аваарай! View our <a href="https://studio.code.org/projects" target="_blank">project gallery</a> — play some of the games or try out some of the apps that students have created. Та “ремикслэх” төслийг өөрийн болгох, эсвэл App Lab, Тоглоомын Lab, эсвэл Вэб Lab шинэ зүйл бий болгох болно.</p>
+<p>Нэгдүгээрт, урам зориг аваарай! Манай <a href="https://studio.code.org/projects" target="_blank">төслийн галерейг үзэх</a> - зарим тоглоомыг тоглуулах эсвэл оюутнуудын үүсгэсэн зарим програмыг туршиж үзээрэй. Та “ремикслэх” төслийг өөрийн болгох, эсвэл App Lab, Тоглоомын Lab, эсвэл Вэб Lab шинэ зүйл бий болгох болно.</p>
 
 <br>
 
 <div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
   <div style="width: 87%; float: left">
-    <a class="linktag" id="applab" href="https://code.org/educate/applab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none"><strong>Лаб Апп</strong></h3></a>
+    <a class="linktag" id="applab" href="https://code.org/educate/applab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none">Апп Лаб</h3></a>
     <p style="color:#ffffff">App Lab бол энгийн програм хийх боломжтой програмчлалын орчин юм. Үүнийг хийхийн тулд апп, блок эсвэл JavaScript бүхий кодыг боловсруулж, дараа нь програмаа секундын дотор хуваалцаарай.</p>
     <a class="linktag" id="applab" href="https://code.org/educate/applab" target="_blank"><button style="background-color:#e7e8ea; border-color:#e7e8ea; color:#696969">Апп бүтээх</button></a>
   </div>
@@ -239,7 +239,7 @@ theme: responsive
 
 <div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
   <div style="width: 87%; float: left">
-    <a class="linktag" id="gamelab" href="https://code.org/educate/gamelab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none"><strong>Тоглоомын лаборатори</strong></h3></a>
+    <a class="linktag" id="gamelab" href="https://code.org/educate/gamelab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none">Тоглоомын лаборатори</h3></a>
     <p style="color:#ffffff">Game Lab та өөр хоорондоо харилцан объект, тэмдэгтүүд нь энгийн хөдөлгөөнт дүрс, тоглоом хийх боломжтой програмчлалын орчин юм.</p>
     <br>
     <a class="linktag" id="gamelab" href="https://code.org/educate/gamelab" target="_blank"><button style="background-color:#e7e8ea; border-color:#e7e8ea; color:#696969">тоглоом бий болгох</button></a>
@@ -249,7 +249,7 @@ theme: responsive
 
 <div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
   <div style="width: 87%; float: left">
-    <a class="linktag" id="weblab" href="https://code.org/educate/weblab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none"><strong>Вэб Лаб</strong></h3></a>
+    <a class="linktag" id="weblab" href="https://code.org/educate/weblab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none">Вэб Лаб</h3></a>
     <p style="color:#ffffff">Вэб Лаб нь HTML болон CSS ашиглан энгийн вэб хуудас хийх боломжтой програмчлалын орчин юм. Дизайн таны вэб хуудас болон секундын дотор таны сайтыг хуваалцах.</p>
     <br>
     <a class="linktag" id="weblab" href="https://code.org/educate/weblab" target="_blank"><button style="background-color:#e7e8ea; border-color:#e7e8ea; color:#696969">Вэб хуудас хийх</button></a>
@@ -286,16 +286,12 @@ theme: responsive
 
 <h2>Гэртээ компьютер байхгүй байна уу? Манай түншүүдийн эдгээр апп-ууд нь таны утсан дээр CS үзээрэй</h2>
 
-<div class="col-33" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><img src="images/tutorials/new/boxisland.jpg" style="width: 100%" alt="Хайрцаг арал"></a><br><a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><h3 style="color:#7665a0"><strong>Box Island</strong></h3></a>Алгоритм, хэв маягийг таних, дараалал, гогцоо, нөхцөлт гэх мэт кодчиллын үндсийг заахын зэрэгцээ сонирхолтой адал явдалд суралцагчдыг авч явдаг дур булаам хөдөлгөөнт кодчилолын тоглоом. <i>(бүх насныханд)</i>
+<div class="col-50" style="padding-right: 30px; padding-bottom:40px">
+  <a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><img src="images/tutorials/new/boxisland.jpg" style="width: 100%" alt="Хайрцаг арал"></a><br><a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><h3 style="margin-top: 1rem;">Box Island</h3></a>Алгоритм, хэв маягийг таних, дараалал, гогцоо, нөхцөл гэх мэт кодчиллын үндсийг заахын зэрэгцээ суралцагчдыг сонирхолтой адал явдлаар аялдаг дур булаам хөдөлгөөнт кодчилолын тоглоом. <i>(бүх насныханд)</i>
 </div>
 
-<div class="col-33" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><img src="/images/tutorials/hoc2018/codespark_create.jpg" style="width: 100%" alt="КодеПарк"></a><br><a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><h3 style="color:#7665a0"><strong>codeSpark</strong></h3></a>Award-winning learn-to-code platform for kids ages 5-9. Код сурч байхдаа таавар тааж, The Foos ашиглан тоглоом бий болгох. <strong>Тэмдэглэл: CodeSpark нь 3 сарын үнэгүй туршилтыг санал болгож байна. Parent's email address and credit card information are required at signup.</strong> <i>(for pre-readers through Grade 5)</i>
-</div>
-
-<div class="col-33" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="grasshopper" href="https://grasshopper.app/" target="_blank"><img src="/images/athome/grasshopper.png" style="width: 100%" alt="Царцаа"></a><br><a class="linktag" id="grasshopper" href="https://grasshopper.app/" target="_blank"><h3 style="color:#7665a0"><strong>Царцаа</strong></h3></a>Бодит JavaScript бичихийг заадаг утсан дээрээ хөгжилтэй, хурдан хичээлүүдээр кодлож сур. Google-ийн хөтөлбөр бүхий код. <i>(дунд болон дээш сургуулийн хувьд)</i>
+<div class="col-50" style="padding-right: 30px; padding-bottom:40px">
+  <a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><img src="/images/tutorials/hoc2018/codespark_create.jpg" style="width: 100%" alt="КодеПарк"></a><br><a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><h3 style="margin-top: 1rem;">насны хүүхдүүдэд</h3></a>зориулсан CodesPark Шагнал авсан сурах-тулд-код тавцан 5-9. Код сурч байхдаа таавар тааж, The Foos ашиглан тоглоом бий болгох. <strong>Тэмдэглэл: CodeSpark нь 3 сарын үнэгүй туршилтыг санал болгож байна. Бүртгүүлэхэд эцэг эхийн имэйл хаяг, зээлийн картын мэдээлэл шаардлагатай.</strong> <i>(5-р ангиар дамжуулан урьдчилан уншигчдад зориулсан)</i>
 </div>
 
 <div style="clear: both; margin-bottom: 15px"></div>
@@ -312,11 +308,11 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="margin-top:10px"><strong>CoDeBytes</strong></h3>
-        <div class="smalltext" style="color: dimgray;">Codebytes нь шингэхэд хялбар, 20 минутын интерактив хичээлүүд нь компьютерийн шинжлэх ухааныг бодит ертөнцийн сэдвүүдтэй хольж өгдөг. Train an AI to read sign language, design an app for good, explore the world of Minecraft, and more!</div>
+        <h3 class="tutorial-info-h" style="margin-top:10px">Codebytes</h3>
+        <div class="smalltext" style="color: dimgray;">Codebytes нь шингэхэд хялбар, 20 минутын интерактив хичээлүүд нь компьютерийн шинжлэх ухааныг бодит ертөнцийн сэдвүүдтэй хольж өгдөг. Дохионы хэлийг унших, сайн сайхны төлөө програм зохиох, Minecraft-ийн ертөнцийг судлах, бусад зүйлийг судлахын тулд хиймэл оюун ухаанд сургах!</div>
         <br>
         <br>
-        <a class="linktag" id="codebytes" href="https://code.org/codebytes" target="_blank"><button>View episodes</button></a>
+        <a class="linktag" id="codebytes" href="https://code.org/codebytes" target="_blank"><button>ангиудыг үзэх</button></a>
     </span>
   </div>
 </div>
@@ -329,8 +325,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="margin-top:10px"><strong>Code Break</strong></h3>
-        <div class="smalltext" style="">Код завсарлага авч компьютерийн шинжлэх ухааныг хөгжилтэй байлга! Та Эштон Кутчертай кифр үүсгэж, Yara Shahidi-тай хувьсагчдын талаар суралцаж, интернетийн жинхэнэ зохион бүтээгч Винт Серфтэй хэрхэн ажилладаг талаар судлах боломжтой!</div>
+        <h3 class="tutorial-info-h" style="margin-top:10px">Код завсарлага Код завсарлага авч компьютерийн шинжлэх ухааны хөгжилтэй</h3>
+        <div class="smalltext" style="">байлга! Та Эштон Кутчертай кифр үүсгэж, Yara Shahidi-тай хувьсагчдын талаар суралцаж, интернетийн жинхэнэ зохион бүтээгч Винт Серфтэй хэрхэн ажилладаг талаар судлах боломжтой!</div>
         <br>
         <a class="linktag" id="codebreak" href="https://code.org/break" target="_blank"><button>Холбогдсон авах</button></a>
     </span>

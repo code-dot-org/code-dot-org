@@ -38,8 +38,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>Би кеші</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Достарыңызбен және отбасыңызбен бөлісу үшін би кешін кодаңыз. Бейонсе, Гарри Стайлс, Лиззо, Лил Нас Х, Селена Гомес, Диснейдің “Энканто” музыкасы және басқалары!</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px">Би кеші Достарыңызбен және отбасыңызбен бөлісу үшін би кешін</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">кодтайды. Бейонсе, Гарри Стайлс, Лиззо, Лил Нас Х, Селена Гомес, Диснейдің “Энканто” музыкасы және басқалары!</div>
         <a class="linktag" id="danceparty" href="/dance" target="_blank"><button></button></a>әрекетті қолданып көріңіз
     </span>
   </div>
@@ -53,8 +53,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Minecraft Код сағаты</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Minecraft жаңа әрекетпен Код сағатына оралды! Кодпен Minecraft арқылы саяхат.</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Minecraft код сағаты Minecraft жаңа әрекетпен код сағатына оралды! Кодпен Minecraft арқылы саяхат.</div>
         <br>
         <a class="linktag" id="minecraft" href="/minecraft" target="_blank"><button></button></a>әрекетін қолданып көріңіз
     </span>
@@ -69,8 +69,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>Мұхиттарға арналған AI</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">A.I. қоқысты анықтауға үйрету арқылы мұхиттарды тазалауға көмектесіңіз! Оқыту деректері мен бейтараптық туралы және AI әлемдік мәселелерді қалай шеше алатыны туралы біліңіз. Көру <a class="linktag" id="oceans-lesson" href="https://curriculum.code.org/hoc/plugged/9/" target="_blank">сабақ жоспары</a>.</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px">Мұхиттарға арналған AI A.I. қоқысты</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">анықтауға үйрету арқылы мұхиттарды тазалаңыз! Оқыту деректері мен бейтараптық туралы және AI әлемдік мәселелерді қалай шеше алатыны туралы біліңіз. Көру <a class="linktag" id="oceans-lesson" href="https://curriculum.code.org/hoc/plugged/9/" target="_blank">сабақ жоспары</a>.</div>
         <a class="linktag" id="aiforoceans" href="https://studio.code.org/s/oceans/lessons/1/levels/1" target="_blank"><button></button></a>әрекетін қолданып көріңіз
     </span>
   </div>
@@ -96,9 +96,9 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>Компьютерлер қалай жұмыс істейді</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Билл Гейтстің кіріспесімен алты қысқа бейнелер сериясы компьютерді компьютерге айналдыратын нәрсені және компьютерлік схемалардың қалай жұмыс істейтінін түсіндіреді.</div>
-        <a class="linktag" id="howcomputers" href="https://www.youtube.com/watch?v=OAx_6-wdslM&list=PLzdnOPI1iJNcsRwJhvksEo1tJqjIqWbN-" target="_blank"><button>Бейнелер сериясын қараңыз</button></a>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px">Компьютерлер қалай жұмыс істейді Билл Гейтстің</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">кіріспесімен алты қысқа бейненің бұл сериясы компьютерді компьютерге айналдыратын және компьютерлік схемалардың қалай жұмыс істейтінін түсіндіреді.</div>
+        <a class="linktag" id="howcomputers" href="https://www.youtube.com/watch?v=OAx_6-wdslM&list=PLzdnOPI1iJNcsRwJhvksEo1tJqjIqWbN-" target="_blank"><button>Бейне сериясын қараңыз</button></a>
     </span>
   </div>
 </div>
@@ -111,9 +111,9 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Интернет қалай жұмыс істейді</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Бұл сегіз қысқа бейнелер сериясында сіз интернеттің қалай ойлап табылғанын, HTML деген не екенін және Google сияқты іздеу жүйелерінің қалай жұмыс істейтінін білесіз.</div>
-        <a class="linktag" id="howinternet" href="https://www.youtube.com/watch?v=Dxcc6ycZ73M&list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7-" target="_blank"><button>Бейнелер сериясын қараңыз</button></a>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px">Интернет қалай жұмыс істейді</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Сегіз қысқа бейненің осы сериясында сіз интернеттің қалай ойлап табылғанын, HTML деген не екенін және Google сияқты іздеу жүйелерінің қалай жұмыс істейтінін білесіз.</div>
+        <a class="linktag" id="howinternet" href="https://www.youtube.com/watch?v=Dxcc6ycZ73M&list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7-" target="_blank"><button>Бейне сериясын қараңыз</button></a>
     </span>
   </div>
 </div>
@@ -126,8 +126,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>AI қалай жұмыс істейді</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Осы қысқа бейнелер сериясымен AI қалай жұмыс істейтіні және оның неліктен маңызды екендігі туралы біліңіз. Microsoft корпорациясының бас директоры Сатя Наделла және әртүрлі сарапшылар тобы.</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px">AI қалай жұмыс істейді AI қалай жұмыс істейтіні және осы қысқа бейнелер сериясымен не үшін маңызды екендігі туралы</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">біліңіз. Microsoft корпорациясының бас директоры Сатя Наделла және әртүрлі сарапшылар тобы.</div>
         <a class="linktag" id="ai-videos" href="/ai#ai-videos" target="_blank"><button>Бейнелер сериясын қараңыз</button></a>
     </span>
   </div>
@@ -136,7 +136,7 @@ theme: responsive
 
 <div style="clear: both"></div>
 
-<p>View more videos, including short inspirational videos featuring celebrities like Steph Curry and Shakira, <a class="linktag" id="all-videos" href="https://code.org/educate/resources/videos" target="_blank">here</a>.</p>
+<p>Қосымша бейнелерді, соның ішінде Стеф Карри мен Шакира сияқты атақты адамдар қатысатын қысқа шабыттандыратын бейнелерді мына жерден қараңыз. <a class="linktag" id="all-videos" href="https://code.org/educate/resources/videos" target="_blank"></a></p>
 <br>
 <p><a href="#top">[Жоғарыға оралу]</a></p>
 
@@ -159,13 +159,13 @@ theme: responsive
 
 <div class="col-50" style="padding-right: 20px; padding-bottom:10px">
 
-<a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express-2019" target="_blank"><img src="/images/curriculum/course-tile-pre-reader-express.png" style="width: 100%" alt="Оқырманға дейінгі экспресс-курс"></a><br><a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express-2019" target="_blank">Express Course for pre-readers</a>
+<a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express-2019" target="_blank"><img src="/images/curriculum/course-tile-pre-reader-express.png" style="width: 100%" alt="Оқырманға дейінгі экспресс-курс"></a><br><a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express-2019" target="_blank">Алдын ала оқырмандарға арналған экспресс-курс</a>
 
 </div>
-<div style="clear: both"></div>
+<div style="clear: both; margin-bottom: 2rem"></div>
 
 <h3>Ойын зертханасы мен App Lab зертханасына өздігінен кіріспе</h3>
-<p>Біздің CS Discoveries және CS Princts курстарынан бейімделген бұл қысқа, өздігінен жүретін модульдер барлық бағдарламалау тілдері мен құралдарын қамтыған ұғымдарды үйренудің тамаша тәсілі болып табылады. <i>Requires Code.org account to access</i>.</p>
+<p>Біздің CS Discoveries және CS Princts курстарынан бейімделген бұл қысқа, өздігінен жүретін модульдер барлық бағдарламалау тілдері мен құралдарын қамтыған ұғымдарды үйренудің тамаша тәсілі болып табылады. <i>Кіру үшін Code.org тіркелгісін қажет етеді.</i></p>
 
 <br>
 
@@ -176,8 +176,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>Game Lab бағдарламасына кіріспе</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Game Lab бағдарламасындағы анимациялар, интерактивті өнер және ойындар. Қарапайым пішіндерден бастаңыз және спрайтқа негізделген күрделі анимациялар мен ойындарға дейін жасаңыз.</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px">Game Lab</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">бағдарламасына кіріспе анимациялар, интерактивті өнер және Game Lab ойынындағы ойындар. Қарапайым пішіндерден бастаңыз және спрайтқа негізделген күрделі анимациялар мен ойындарға дейін жасаңыз.</div>
         <a class="linktag" id="gamelab-intro" href="https://studio.code.org/s/csd3-virtual" target="_blank"><button>Модульді қолданып көріңіз</button></a>
     </span>
   </div>
@@ -191,8 +191,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>App Lab бағдарламасында тасбақаны бағдарламалау</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Виртуалды “тасбақа” көмегімен пішіндер мен кескіндерді салу үшін қарапайым JavaScript пәрмендерін пайдаланыңыз. Өзіңіздің сандық сахнаңызды жобалаңыз және бағдарламалаңыз!</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px">App Lab бағдарламасында тасбақа бағдарламалау Виртуалды “тасбақа” көмегімен пішіндер мен кескіндерді салу үшін қарапайым JavaScript пәрмендерін</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">пайдаланыңыз. Өзіңіздің сандық сахнаңызды жобалаңыз және бағдарламалаңыз!</div>
         <a class="linktag" id="turtle-applab" href="https://studio.code.org/s/csp3-virtual" target="_blank"><button>Модульді қолданып көріңіз</button></a>
     </span>
   </div>
@@ -206,8 +206,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>App Lab бағдарламасындағы оқиғаларға негізделген бағдарламалау</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Клик пен пернелерді басуға жауап беретін қолданбаларды құрастыруды үйреніңіз. Интернетте өмір сүретін қарапайым қосымшалар (қолданбалар) сериясын жасаңыз!</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px">App Lab бағдарламасындағы оқиғаларға негізделген бағдарламалау Клик пен пернелерді басуға жауап беретін қолданбаларды жобалауды</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">үйреніңіз. Интернетте өмір сүретін қарапайым қосымшалар (қолданбалар) сериясын жасаңыз!</div>
         <a class="linktag" id="events-applab" href="https://studio.code.org/s/csp5-virtual" target="_blank"><button>Модульді қолданып көріңіз</button></a>
     </span>
   </div>
@@ -230,7 +230,7 @@ theme: responsive
 
 <div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
   <div style="width: 87%; float: left">
-    <a class="linktag" id="applab" href="https://code.org/educate/applab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none"><strong>Қолданба зертханасы</strong></h3></a>
+    <a class="linktag" id="applab" href="https://code.org/educate/applab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none">Қолданба зертханасы</h3></a>
     <p style="color:#ffffff">App Lab - бұл қарапайым қолданбаларды жасауға болатын бағдарламалау ортасы. Қолданбаны, кодты блоктармен немесе JavaScript көмегімен жасаңыз, оны жұмыс істеу үшін жасаңыз, содан кейін қолданбаңызды бірнеше секунд ішінде бөлісіңіз.</p>
     <a class="linktag" id="applab" href="https://code.org/educate/applab" target="_blank"><button style="background-color:#e7e8ea; border-color:#e7e8ea; color:#696969">Қолданбаны құрыңыз</button></a>
   </div>
@@ -239,7 +239,7 @@ theme: responsive
 
 <div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
   <div style="width: 87%; float: left">
-    <a class="linktag" id="gamelab" href="https://code.org/educate/gamelab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none"><strong>Ойын зертханасы</strong></h3></a>
+    <a class="linktag" id="gamelab" href="https://code.org/educate/gamelab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none">Ойын зертханасы</h3></a>
     <p style="color:#ffffff">Game Lab - бұл бір-бірімен әрекеттесетін нысандар мен кейіпкерлермен қарапайым анимациялар мен ойындар жасауға болатын бағдарламалау ортасы.</p>
     <br>
     <a class="linktag" id="gamelab" href="https://code.org/educate/gamelab" target="_blank"><button style="background-color:#e7e8ea; border-color:#e7e8ea; color:#696969">Ойын жасаңыз</button></a>
@@ -249,7 +249,7 @@ theme: responsive
 
 <div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
   <div style="width: 87%; float: left">
-    <a class="linktag" id="weblab" href="https://code.org/educate/weblab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none"><strong>Веб-зертхана</strong></h3></a>
+    <a class="linktag" id="weblab" href="https://code.org/educate/weblab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none">Веб-зертхана</h3></a>
     <p style="color:#ffffff">Web Lab - HTML және CSS көмегімен қарапайым веб-беттерді жасауға болатын бағдарламалау ортасы. Веб-беттеріңізді жасаңыз және бірнеше секунд ішінде сайтыңызды бөлісіңіз.</p>
     <br>
     <a class="linktag" id="weblab" href="https://code.org/educate/weblab" target="_blank"><button style="background-color:#e7e8ea; border-color:#e7e8ea; color:#696969">Веб-парақты жасаңыз</button></a>
@@ -286,16 +286,12 @@ theme: responsive
 
 <h2>Үйде компьютер жоқ па? Серіктестеріміздің осы қосымшаларымен телефоныңызда CS қолданып көріңіз</h2>
 
-<div class="col-33" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><img src="images/tutorials/new/boxisland.jpg" style="width: 100%" alt="Қорап аралы"></a><br><a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><h3 style="color:#7665a0"><strong>Box Island</strong></h3></a>Алгоритмдер, үлгіні тану, реттіліктер, ілмектер және шарттар сияқты кодтау негіздерін үйрете отырып, оқушыларды қызықты приключенияға апаратын сүйкімді мобильді кодтау ойыны. <i>(барлық жастағы адамдар үшін)</i>
+<div class="col-50" style="padding-right: 30px; padding-bottom:40px">
+  <a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><img src="images/tutorials/new/boxisland.jpg" style="width: 100%" alt="Қорап аралы"></a><br><a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><h3 style="margin-top: 1rem;">Box Island</h3></a>Алгоритмдер, үлгіні тану, реттіліктер, ілмектер және шарттар сияқты кодтау негіздерін үйрете отырып, оқушыларды қызықты приключенияға апаратын сүйкімді мобильді кодтау ойыны. <i>(барлық жастағы адамдар үшін)</i>
 </div>
 
-<div class="col-33" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><img src="/images/tutorials/hoc2018/codespark_create.jpg" style="width: 100%" alt="Кодеспарк"></a><br><a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><h3 style="color:#7665a0"><strong>codeSpark</strong></h3></a>Award-winning learn-to-code platform for kids ages 5-9. Кодты үйрену кезінде жұмбақтарды шешіңіз және Foos көмегімен ойындар жасаңыз. <strong>Ескерту: CodesPark 3 айлық тегін сынақ нұсқасын ұсынады. Parent's email address and credit card information are required at signup.</strong> <i>(for pre-readers through Grade 5)</i>
-</div>
-
-<div class="col-33" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="grasshopper" href="https://grasshopper.app/" target="_blank"><img src="/images/athome/grasshopper.png" style="width: 100%" alt="Шегіртке"></a><br><a class="linktag" id="grasshopper" href="https://grasshopper.app/" target="_blank"><h3 style="color:#7665a0"><strong>Шегіртке</strong></h3></a>Телефоныңызда нақты JavaScript жазуды үйрететін көңілді, жылдам сабақтармен кодтауды үйреніңіз. Google бағдарламасы бар код. <i>(орта және жоғары мектеп үшін)</i>
+<div class="col-50" style="padding-right: 30px; padding-bottom:40px">
+  <a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><img src="/images/tutorials/hoc2018/codespark_create.jpg" style="width: 100%" alt="Кодеспарк"></a><br><a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><h3 style="margin-top: 1rem;">CodesPark</h3></a>сыйлығының иегері 5-9 жас аралығындағы балаларға арналған кодты үйрену платформасы. Кодты үйрену кезінде жұмбақтарды шешіңіз және Foos көмегімен ойындар жасаңыз. <strong>Ескерту: CodesPark 3 айлық тегін сынақ нұсқасын ұсынады. Тіркелу кезінде ата-ананың электрондық пошта мекенжайы және несие картасы туралы ақпарат қажет.</strong> <i>(5-сыныпқа дейінгі оқырмандар үшін)</i>
 </div>
 
 <div style="clear: both; margin-bottom: 15px"></div>
@@ -312,11 +308,11 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="margin-top:10px"><strong>CodeBytes</strong></h3>
-        <div class="smalltext" style="color: dimgray;">CodeBytes оңай қорытылады, информатиканы нақты тақырыптармен араластыратын 20 минуттық интерактивті сабақтар. Train an AI to read sign language, design an app for good, explore the world of Minecraft, and more!</div>
+        <h3 class="tutorial-info-h" style="margin-top:10px">CodeBytes</h3>
+        <div class="smalltext" style="color: dimgray;">CodeBytes - бұл оңай қорытылатын, информатиканы нақты тақырыптармен араластыратын 20 минуттық интерактивті сабақтар. АИ-ні ымдау тілін оқуға үйретіңіз, қосымшаны біржола жасаңыз, Minecraft әлемін зерттеңіз және т.б.!</div>
         <br>
         <br>
-        <a class="linktag" id="codebytes" href="https://code.org/codebytes" target="_blank"><button>View episodes</button></a>
+        <a class="linktag" id="codebytes" href="https://code.org/codebytes" target="_blank"><button>Эпизодтарды қарау</button></a>
     </span>
   </div>
 </div>
@@ -329,8 +325,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="margin-top:10px"><strong>Code Break</strong></h3>
-        <div class="smalltext" style="">Код үзілісі арқылы информатиканы көңілді ұстаңыз! Сіз Эштон Катчермен шифрды жасай аласыз, Яра Шахиди бар айнымалылар туралы біле аласыз, тіпті Интернеттің Интернеттің нақты өнертапқышы Vint Cerf-пен қалай жұмыс істейтінін зерттей аласыз!</div>
+        <h3 class="tutorial-info-h" style="margin-top:10px">Code Break Code Break арқылы информатиканы көңілді</h3>
+        <div class="smalltext" style="">ұстаңыз! Сіз Эштон Катчермен шифрды жасай аласыз, Яра Шахиди бар айнымалылар туралы біле аласыз, тіпті Интернеттің Интернеттің нақты өнертапқышы Vint Cerf-пен қалай жұмыс істейтінін зерттей аласыз!</div>
         <br>
         <a class="linktag" id="codebreak" href="https://code.org/break" target="_blank"><button>Қосылған</button></a>
     </span>
