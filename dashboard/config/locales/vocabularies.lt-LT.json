@@ -110,6 +110,66 @@
         "define/express/2022": {
           "word": "Apibrėžti"
         },
+        "code/csc-adaptations/2023": {
+          "word": "Kodavimas"
+        },
+        "code/csc-ecosystems/2023": {
+          "word": "Kodavimas"
+        },
+        "conditionals/csc-ecosystems/2023": {
+          "word": "Sąlyginiai sakiniai"
+        },
+        "variable/csc-ecosystems/2023": {
+          "word": "Kintamasis"
+        },
+        "code/csc-mappinglandmarks/2023": {
+          "word": "Kodavimas"
+        },
+        "artist/csc-starquilts/2023": {
+          "word": "Menininkas"
+        },
+        "code/poetry/2023": {
+          "word": "Kodavimas"
+        },
+        "binary/coursec/2023": {
+          "word": "Dvejetainis"
+        },
+        "conditionals/coursed/2023": {
+          "word": "Sąlyginiai sakiniai"
+        },
+        "function/coursee/2023": {
+          "word": "Komanda"
+        },
+        "conditionals/coursee/2023": {
+          "word": "Sąlyginiai sakiniai"
+        },
+        "copyright/coursee/2023": {
+          "word": "Autorinės teisės"
+        },
+        "define/coursee/2023": {
+          "word": "Apibrėžti"
+        },
+        "variable/coursef/2023": {
+          "word": "Kintamasis"
+        },
+        "internet/coursef/2023": {
+          "word": "Internetas"
+        },
+        "define/coursef/2023": {
+          "word": "Apibrėžti"
+        },
+        "conditionals/express/2023": {
+          "word": "Sąlyginiai sakiniai"
+        },
+        "function/express/2023": {
+          "word": "Komanda"
+        },
+        "variable/express/2023": {
+          "word": "Kintamasis"
+        },
+        "define/express/2023": {
+          "word": "Apibrėžti"
+        },
         "conditionals/aquatic/unversioned": {
           "word": "Sąlyginiai sakiniai"
         },
