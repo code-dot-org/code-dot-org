@@ -2,7 +2,6 @@ var chalk = require('chalk');
 var child_process = require('child_process');
 var path = require('path');
 var fs = require('fs');
-var os = require('os');
 var _ = require('lodash');
 var sass = require('sass');
 
@@ -404,17 +403,6 @@ describe('entry tests', () => {
       : '',
   };
 
-  // Workaround for https://github.com/ryanclark/karma-webpack/issues/498.
-  // This is the default karma-webpack output directory, but we define it here
-  // so we can configure webpack's output.publicPath and karma's options.files
-  // so that bundled files will be properly served.
-  // this is the source of the following warning, which can be ignored:
-  // "All files matched by "/tmp/_karma_webpack_425424/**/*" were excluded or matched by prior matchers."
-  const webpackOutputBasePath = path.join(os.tmpdir(), '_karma_webpack_');
-  const webpackOutputPath =
-    webpackOutputBasePath + Math.floor(Math.random() * 1000000);
-  const webpackOutputPublicPath = '/webpack_output/';
-
   config.karma = {
     options: {
       configFile: 'karma.conf.js',
@@ -459,12 +447,21 @@ describe('entry tests', () => {
           nocache: true,
         },
         {
-          pattern: `${webpackOutputPath}/**/*`,
+          pattern: `build/karma/*`,
           watched: false,
           included: false,
           nocache: true,
         },
       ],
+      preprocessors: {
+        'build/karma/*.js': ['sourcemap'],
+      },
+      sourceMapLoader: {
+        remapPrefixes: {
+          'webpack://blockly-mooc/': './',
+        },
+        useSourceRoot: '../../',
+      },
       proxies: {
         // configure karma server to serve files from the source tree for
         // various paths (the '/base' prefix points to the apps directory where
@@ -476,13 +473,13 @@ describe('entry tests', () => {
 
         // requests to the webpack output public path should be served from the
         // webpack output path where bundled assets are written
-        [webpackOutputPublicPath]: '/absolute/' + webpackOutputPath + '/',
+        '/webpack_output/': '/absolute/webpack_output/',
       },
 
       webpack: {
         output: {
-          path: webpackOutputPath,
-          publicPath: webpackOutputPublicPath,
+          path: path.resolve(__dirname, 'build/karma/'),
+          publicPath: '/webpack_output/',
         },
       },
       client: {
@@ -532,12 +529,9 @@ describe('entry tests', () => {
 
   config.clean = {
     build: ['build'],
-    // The karma-webpack-backed unit tests generate several hundred megabytes
-    // worth of assets in /tmp/ on each run which will accumulate indefinitely
-    // on our persistent test server unless we clean them up.
     unitTest: {
       options: {force: true},
-      src: [webpackOutputBasePath + '*'],
+      src: ['build/karma'],
     },
   };
 
