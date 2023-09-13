@@ -401,6 +401,36 @@
         "coursef-2022/The Internet": {
           "name": "Internet"
         },
+        "coursea-2023/Happy Maps": {
+          "name": "Vesele karte"
+        },
+        "courseb-2023/Move It, Move It": {
+          "name": "Pomakni, pomakni"
+        },
+        "courseb-2023/Getting Loopy": {
+          "name": "Zapetljancije"
+        },
+        "coursec-2023/The Big Event": {
+          "name": "Veliki događaj"
+        },
+        "coursec-2023/Binary Bracelets": {
+          "name": "Binarne narukvice"
+        },
+        "coursed-2023/Graph Paper Programming": {
+          "name": "Grafičko programiranje"
+        },
+        "coursed-2023/Relay Programming": {
+          "name": "Odnosno programiranje"
+        },
+        "coursed-2023/Conditionals with Cards": {
+          "name": "Uvjeti s kartama"
+        },
+        "coursee-2023/Songwriting": {
+          "name": "Pisanje pjesama"
+        },
+        "coursef-2023/The Internet": {
+          "name": "Internet"
+        },
         "Hour of Code/Hour of Code 2013": {
           "name": "Sat programiranja 2013"
         },
