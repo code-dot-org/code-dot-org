@@ -5063,6 +5063,863 @@
           "purpose": "In dieser Online-Aktivität lernen die SchülerInnen, wie man Ereignisse in Play Lab verwendet. Sie beginnen damit, dass sie dem Ritter beibringen, sich zu bewegen, wenn eine Pfeiltaste gedrückt wird, und haben dann die Möglichkeit, die restlichen Fähigkeiten, die sie in diesem Kurs gelernt haben, einschließlich Sequenz und Schleifenbildung, als Teil des abschließenden Freeplay-Puzzles zu präsentieren.",
           "student_overview": "Verwenden Sie Ereignisse, um eine Geschichte oder ein interaktives Spiel zu erstellen."
         },
+        "coursea-2023/Safety in My Online Neighborhood": {
+          "name": "Sicherheit in meiner Online-Nachbarschaft",
+          "overview": "[![Common Sense Education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nDiese Lektion wurde ursprünglich von Common Sense Education erstellt. [Mehr erfahren](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nDie Macht des Internets ermöglicht es SchülerInneninnen und SchülerInnenn, Orte zu erleben und zu besuchen, die sie vielleicht nicht persönlich sehen können. Aber genau wie beim Reisen in der realen Welt ist es wichtig, auch online sicher zu sein. Auf dieser virtuellen Exkursion können Kinder üben, wie man bei Online-Abenteuern sicher bleibt.",
+          "preparation": "-   Gehen Sie das Unterrichtsmaterial durch.\n-   Drucken Sie das/die Handout(s) für alle SchülerInnen aus.\n-   (Optional) Drucken Sie ein Gedichtposter für den Klassenraum aus.",
+          "purpose": "Der Lehrplan für digitale Bürgerschaft von Common Sense behandelt sechs Kernthemen, die auf den neuesten Forschungsergebnissen zu Kindern, Medien und Technologie basieren. Diese Lektion konzentriert sich auf Datenschutz und Sicherheit. Die SchülerInnen lernen, wie sie persönliche Daten schützen können, und erwerben ein tieferes Verständnis für ihre Datenschutzrechte, damit sie sich für sich selbst und andere einsetzen können.",
+          "student_overview": "Lerne, wie du sicher online gehen kannst."
+        },
+        "coursea-2023/Learn to Drag and Drop": {
+          "name": "Erlerne Drag und Drop",
+          "overview": "Diese Lektion gibt den SchülerInnen eine Vorstellung davon, was sie erwartet, wenn sie ins Computerlabor gehen. Sie beginnt mit einer kurzen Diskussion, in der sie in das richtige Verhalten im Computer-Labors eingeführt werden, dann werden sie einen Computer benutzen, um Aufgaben im Internet zu lösen.",
+          "preparation": "-   Sehen Sie sich das Lehrervideo **\\*Wie man einen Klassenbereich** auf Code.org einrichtet\\*\\* an. Erstellen Sie Ihren eigenen Klassenbereich auf Code.org und stellen Sie sicher, dass jeder SchülerInnen eine Karte mit seinem Passcode hat.\n-   Stellen Sie sicher, dass die SchülerInnen von ihren Geräten aus auf Lektion 2 zugreifen können. Überlegen Sie, ob Sie zukünftige Lektionen ausblenden möchten, um zu verhindern, dass die SchülerInnen zu schnell vorankommen.\n-   Bitten Sie die IT-Abteilung der Schule, auf dem Computer-Desktop einen Quick-Link für Ihren Klassenbereich einzurichten.\n-   Auf der Website von Common Sense Education finden Sie weitere Informationen zum Thema Online-Sicherheit.",
+          "purpose": "Das Hauptziel dieser Lektion ist es, die Erfahrung der SchülerInnen mit Computern zu erweitern. Indem wir die grundlegendsten Computerfunktionen wie Klicken, Ziehen und Ablegen behandeln, schaffen wir in der Klasse ein gleichberechtigtes Spielfeld für zukünftige Rätsel. Diese Lektion bietet auch eine gute Gelegenheit, grundlegende Begriffe aus dem Bereich der Computerhardware einzuführen, z. B. \"Maus\", \"Trackpad\" oder \"Touchscreen\", je nach Gerät.",
+          "student_overview": "Klicken und ziehen Sie, um die Aufgaben fertigzustellen."
+        },
+        "coursea-2023/Happy Maps": {
+          "name": "Glücklich Karten",
+          "overview": "Diese Lektion „ohne Computer“ bringt Teams mit einer einfachen Aufgabe zusammen: sie sollen den \"Flurb\" zur Frucht bringen. Die SchülerInnen üben das Schreiben präziser Anweisungen, während sie daran arbeiten, die Anweisungen in die bereitgestellten Symbole zu übersetzen. Wenn Probleme im Code auftauchen, sollen die SchülerInnen auch zusammenarbeiten, um gemeinsam Fehler zu erkennen und Lösungen zu erarbeiten.",
+          "preparation": "-   Drucken Sie ein **Arbeitsblatt** und einen Satz **Manipulatoren** pro Gruppe von 2-3 SchülerInnenn aus. - Stellen Sie sicher, dass jeder SchülerInnen ein Reflexionsjournal hat.",
+          "purpose": "Der Übergang von Algorithmen zur Programmierung kann kurz sein, wenn die SchülerInnen den Unterschied zwischen der Planung einer Sequenz und der Kodierung dieser Sequenz in die entsprechende Sprache verstehen. Diese Aktivität hilft den SchülerInnen, Erfahrung im Lesen und Schreiben von Steno-Code zu sammeln.",
+          "student_overview": "Schreiben Sie Anweisungen, um den Flurb zur Frucht zu bringen."
+        },
+        "coursea-2023/Sequencing with Scrat": {
+          "name": "Sequenzen mit Scrat",
+          "overview": "Diese Lektion gibt den SchülerInnen eine Vorstellung davon, was sie erwartet, wenn sie ins Computerlabor gehen. Sie beginnt mit einer kurzen Diskussion, in der sie in das richtige Verhalten im Computer-Labors eingeführt werden, dann werden sie einen Computer benutzen, um Aufgaben im Internet zu lösen.",
+          "preparation": "-   Schneiden Sie Richtungsblöcke aus **\\*Manipulatives** aus, um sie mit der Happy-Maps-Überbrückungsaktivität zu verwenden. - Stellen Sie sicher, dass jeder SchülerInnen ein Reflexionsjournal hat.",
+          "purpose": "In dieser Stunde erlernen die SchülerInnen Fähigkeiten im Programmieren und der Fehlersuche auf einer Computerplattform. Das blockbasierte Format dieser Aufgaben hilft den SchülerInnen, die Reihenfolge und Konzepte zu lernen, ohne sich um die Perfektionierung der Syntax kümmern zu müssen.",
+          "student_overview": "Programmieren Sie Scrat, dass er die Eichel erreicht."
+        },
+        "coursea-2023/Programming with Scrat": {
+          "name": "Programmieren mit Scrat",
+          "overview": "Unter Verwendung von Charakteren aus Ice Age entwickeln die Schüler sequentielle Algorithmen, um Scrat von einer Seite eines Labyrinths zur Eichel auf der anderen Seite zu bewegen. Dazu ordne sie Codebausteinen in einer linearen Abfolge an, so dass sie sich gerade bewegen, nach links oder rechts drehen.",
+          "preparation": "-   Spielen Sie die Rätsel durch, um mögliche Problembereiche für Ihre Klasse zu finden. - (Optional) Wählen Sie ein paar Rätsel aus, die Sie in der Gruppe mit Ihrer Klasse bearbeiten. - Stellen Sie sicher, dass jeder SchülerInnen ein Reflexionsjournal hat.",
+          "purpose": "In dieser Stunde erlernen die SchülerInnen Fähigkeiten im Programmieren und der Fehlersuche auf einer Computerplattform. Das blockbasierte Format dieser Aufgaben hilft den SchülerInnen, die Reihenfolge und Konzepte zu lernen, ohne sich um die Perfektionierung der Syntax kümmern zu müssen.",
+          "student_overview": "Schreiben Sie Programme, die Scrat helfen, die Eichel zu erreichen."
+        },
+        "coursea-2023/Programming with Rey and BB-8": {
+          "name": "Programmieren mit Rey und BB-8",
+          "overview": "In dieser Lektion werden die SchülerInnen ihre neu gewonnenen Programmierkenntnisse auf kompliziertere Weise einsetzen, um einen kniffligen Kurs mit BB-8 zu navigieren.",
+          "preparation": "-   Spielen Sie die zu dieser Lektion gehörenden Rätsel durch, um mögliche Problembereiche für Ihre Klasse zu finden. - Gehen Sie die **\\*CS Fundamentals Main Activity Tips - Lesson Recommendations** durch. - Stellen Sie sicher, dass jeder SchülerInnen ein Reflexionsjournal hat.",
+          "purpose": "Mit Blick auf den Wissenstransfer bietet diese Lektion den SchülerInneninnen und SchülerInnenn eine neue Umgebung, in der sie ihre Fähigkeiten, die sie bereits kultiviert haben, üben können. fans von _Star Wars_ werden vor Freude springen, wenn sie diese Puzzles sehen. Jedes Rätsel in dieser Reihe wurde hinzugefügt, um ein tieferes Verständnis der grundlegenden Konzepte zu vermitteln, die sie im weiteren Verlauf des Kurses verwenden werden.",
+          "student_overview": "Hilf BB-8 dabei, den Schrott einzusammeln"
+        },
+        "coursea-2023/Happy Loops": {
+          "name": "Fröhliche Schleifen",
+          "overview": "Im Rahmen dieser Aktivität wird wieder mit Happy Maps gearbeitet. Dieses Mal werden die SchülerInnen größere, längere Aufgaben mit ihrem Code lösen und dabei den Nutzen von Strukturen erkennen, die es ihnen ermöglichen, längeren Code einfacher zu schreiben.",
+          "preparation": "-   Drucken Sie ein **Arbeitsblatt** aus, das Sie der Klasse vorlegen - drucken Sie für jede Gruppe von 2-3 Personen jeweils ein Blatt aus: **\\*Spielfiguren, Arbeitsblatt \\*XL und Manipulativ-Bonuspaket**. - Stellen Sie sicher, dass jeder SchülerInnen ein Reflexionsjournal hat.",
+          "purpose": "Diese Lektion dient als Einführung in Schleifen. Schleifen ermöglichen es den SchülerInnenn, ihren Code zu vereinfachen, indem sie Befehle, die wiederholt werden müssen, gruppieren. Die SchülerInneninnen und SchülerInnen entwickeln kritisches Denken, indem sie Wiederholungen in den Bewegungen ihrer Mitschülerinnen und Mitschüler bemerken und bestimmen, wie oft sie Befehle wiederholen müssen. Durch die Wiederholung von \"Happy Maps\" erhalten die SchülerInnen die Möglichkeit, alte Konzepte wie die Sequenzierung mit dem neuen Konzept der Wiederholungsschleifen zu verknüpfen.",
+          "student_overview": "Helfen Sie dem Flurb, größere Probleme mit Hilfe von Schleifen zu lösen."
+        },
+        "coursea-2023/Loops with Scrat": {
+          "name": "Schleifen mit Scrat",
+          "overview": "Auf Grundlage des Konzepts der Wiederholung von Anweisungen aus \"Happy Loops\" werden die SchülerInnen in dieser Phase Schleifen verwenden, um auf Code.org effizienter zur Eichel zu kommen.",
+          "preparation": "-   Wiederholen Sie die vorangegangene unplugged Lektion und entwickeln Sie Fragen, um die SchülerInnen daran zu erinnern, warum Schleifen verwendet werden. - (Optional) Wählen Sie ein paar Rätsel aus, die Sie mit Ihrer Klasse in der Gruppe lösen können. - Sammeln Sie die Materialien der vorherigen Happy Loops, um sie zum Aufwärmen wiederzuverwenden.",
+          "purpose": "In dieser Lektion lernen die SchülerInnen mehr über Schleifen und wie man sie in Blockly-Code implementiert. Die Verwendung von Schleifen ist eine wichtige Fähigkeit beim Programmieren, da die manuelle Wiederholung von Befehlen mühsam und ineffizient ist. Mit diesen Code.org-Rätseln lernen die SchülerInnen, Anweisungen zu bestehenden Schleifen hinzuzufügen, wiederholten Code in Schleifen zu sammeln und Muster zu erkennen, die wiederholt werden müssen.",
+          "student_overview": "Helfen Sie Scrat, mehr Boden mit Hilfe von Schleifen abzuarbeiten."
+        },
+        "coursea-2023/Loops with Laurel": {
+          "name": "Schleifen mit Laurel",
+          "overview": "In dieser Lektion lernen die SchülerInnen mehr über das Konzept der Schleifen. In der vorhergehenden Lektion wurden den SchülerInnen Schleifen vorgestellt, indem sie sich durch ein Labyrinth bewegten und Mais pflückten. Hier werden die Schleifen zum Sammeln von Schätzen in offenen Höhlenräumen verwendet.",
+          "preparation": "-   Spielen Sie die Rätsel durch, um mögliche Problembereiche für Ihre Klasse zu finden. - (Optional) Wählen Sie ein paar Rätsel aus, die Sie in der Gruppe mit Ihrer Klasse bearbeiten. - Überprüfen Sie die **CSF-Lektionsempfehlungen** - Stellen Sie sicher, dass jeder SchülerInnen ein Reflexionstagebuch hat",
+          "purpose": "In dieser Lektion üben die SchülerInnen den Umgang mit Schleifen und lernen einen neuen Block kennen: \"Schatz holen\". Der Block funktioniert genauso wie \"Mais pflücken\" in Harvester. Diese Rätsel sind offener und geben den SchülerInnenn mehr Flexibilität für ihre endgültigen Lösungen.",
+          "student_overview": "Helfen Sie Laurel, der Abenteurerin, verborgene Schätze zu sammeln."
+        },
+        "coursea-2023/Ocean Scene with Loops": {
+          "name": "Meeresszene mit Schleifen",
+          "overview": "Bei der Wiederaufnahme des Schleifen-Konzepts lernen die SchülerInnen, Bilder zu zeichnen, indem sie einfache Sequenzen von Anweisungen mithilfe von Schleifen wiederholen. In der vorhergehenden Lektion ohne Computer wurden Schleifen verwendet, um ein Labyrinth zu durchqueren und Schätze zu sammeln. Hier erzeugen die Schleifen Muster. Am Ende dieses Levels haben die SchülerInnen die Möglichkeit, ihre eigenen Bilder mit Hilfe von Schleifen zu erstellen.",
+          "preparation": "-   Spielen Sie die Rätsel durch, um mögliche Problembereiche für Ihre Klasse zu finden. - Gehen Sie die **CSF-Unterrichtsempfehlungen** durch. - Stellen Sie sicher, dass jeder SchülerInnen ein Reflexionstagebuch hat.",
+          "purpose": "Diese Lektion bietet eine andere Perspektive darauf, wie Schleifen beim Programmieren etwas bewirken können. Die SchülerInnen können hier auch über die Ineffizienz der Programmierung ohne Schleifen nachdenken, da das Programm ohne die Hilfe von \"Wiederholungsschleifen\" viele Blöcke benötigen würde.",
+          "student_overview": "Verwenden Sie Schleifen und Muster, um die Bilder fertigzustellen."
+        },
+        "coursea-2023/The Big Event Jr": {
+          "name": "Das große Ereignis",
+          "overview": "In dieser Lektion, die den Kontext einstellt, erlebt die Klasse das Konzept von Ereignissen anhand eines Spiels, in dem sie sich bewegen oder schreien, wenn Sie Tasten auf einer riesigen Fernbedienung drücken.",
+          "preparation": "-   Bereiten Sie die Projektion von **Das Bild des Kontrolleurs** vor. - Drucken Sie eine **Bewertung** pro SchülerInnen aus. - Stellen Sie sicher, dass jeder SchülerInnen ein Reflexionsjournal hat.",
+          "purpose": "Heute werden die SchülerInnen lernen, Ereignisse von Handlungen zu unterscheiden. Die SchülerInnen werden sehen, wie Aktivitäten unterbrochen werden, indem ein \"Knopf\" auf einer Papierfernbedienung gedrückt wird. Auf dieses Ereignis wird die Klasse mit einer bestimmten Aktion reagieren. Ereignisse werden in der Programmierung häufig verwendet und sollten nach dieser Lektion leicht zu erkennen sein.",
+          "student_overview": "Bewegen Sie sich und schreien Sie, wenn Ihre LehrerInnen Knöpfe auf einer riesigen Fernbedienung drücken."
+        },
+        "coursea-2023/Mini-Project: On the Move with Play Lab": {
+          "name": "Mini-Projekt: Unterwegs mit Play Lab",
+          "overview": "In dieser Online-Aktivität haben die SchülerInnen die Möglichkeit, die Verwendung von Ereignissen im Play Lab zu erlernen und alle bisher gelernten Programmierkenntnissen anzuwenden, um ein animiertes Spiel zu erstellen. Es ist die richtige Gelegenheit, kreativ zu werden und in Play Lab eine Geschichte zu erstellen!",
+          "preparation": "-   Spielen Sie die Rätsel durch, um mögliche Problembereiche für Ihre Klasse zu finden. - (Optional) Wählen Sie ein paar Rätsel aus, die Sie in der Gruppe mit Ihrer Klasse bearbeiten. - Gehen Sie die **CSF-Unterrichtsempfehlungen** durch. - Stellen Sie sicher, dass jeder SchülerInnen ein Reflexionstagebuch hat.",
+          "purpose": "Die SchülerInnen werden heute im Play Lab ihr Verständnis von Ereignissen weiter ausbauen. Ereignisse sind in den meisten Computerprogrammen sehr häufig. In dieser Aktivität verwenden die SchülerInnen Ereignisse, um eine Figur auf dem Bildschirm zu bewegen, Geräusche zu machen und Hintergründe auf der Grundlage von benutzergesteuerten Ereignissen zu ändern.",
+          "student_overview": "Zeit, dein eigenes Spiel oder deine eigene Geschichte zu erstellen!"
+        },
+        "coursea-2023/End of Course Project": {
+          "name": "Projekt am Ende des Kurses",
+          "overview": "In dieser **Projektstunde** wenden die SchülerInnen an, was sie über Sequenzierung und Schleifen mit dem Artist gelernt haben.",
+          "preparation": "-   Schreiben und codieren Sie Ihre eigene Geschichte für den Künstler, um die SchülerInnen zu inspirieren!",
+          "purpose": "Diese Lektion bietet den SchülerInnenn eine letzte Gelegenheit, ihre neuen Informatikkenntnisse kreativ einzusetzen.",
+          "student_overview": "Erzähle eine Geschichte mit dem Künstler!"
+        },
+        "courseb-2023/Digital Trails": {
+          "name": "Digitale Spuren",
+          "overview": "[![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nDiese Lektion wurde ursprünglich von Common Sense Education erstellt. [Erfahren Sie mehr.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n![](https://curriculum.code.org/static/img/common_sense_education.png)\n\nDiese Lektion wurde ursprünglich von Common Sense Education erstellt. [Erfahren Sie mehr.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nBleibt das, was Sie online tun, immer online? SchülerInnen lernen, dass die Informationen, die sie online teilen, einen digitalen Fußabdruck oder eine \"Spur\" hinterlassen. Je nachdem, wie sie damit umgehen, kann diese Spur groß oder klein, schädlich oder hilfreich sein. Die SchülerInnen vergleichen verschiedene Spuren und diskutieren kritisch, welche Art von Informationen sie hinterlassen möchten.",
+          "preparation": "-   Gehen Sie das Unterrichtsmaterial durch.\n-   Drucken Sie das/die Handout(s) für jeden SchülerInnen aus.",
+          "purpose": "Der Lehrplan für digitale Bürgerschaft von Common Sense behandelt sechs Kernthemen, die auf den neuesten Forschungsergebnissen zu Kindern, Medien und Technologie basieren. Diese Stunde konzentriert sich auf den digitalen Fußabdruck und die Identität. Die SchülerInnen denken über die Vorteile und Risiken des Online-Austauschs nach und erforschen, wie eine digitale Persona das eigene Selbstverständnis, den Ruf und die Beziehungen beeinflussen kann.",
+          "student_overview": "Erfahren Sie mehr über Ihren digitalen Fußabdruck und wie Sie Websites sicher besuchen können."
+        },
+        "courseb-2023/Move It, Move It": {
+          "name": "Bewegung, Bewegung",
+          "overview": "In dieser Stunde zum **Kontext** programmieren die SchülerInnen ihre Mitschüler, vorsichtig um ein großes Gitter auf dem Boden herum zu gehen.",
+          "preparation": "– Sehen Sie sich das **Lehrervideo** an\n– Drucken Sie einen Antwortschlüssel für das **Arbeitsblatt** aus (oder bereiten Sie es vor) \n– Drucken Sie eine **Kartenaktivität** und ein **Arbeitsblatt** für eine Gruppe von 2 bis 3 SchülerInnenn aus \n– Bereiten Sie leere Papiere vor, um den Rest des Wanderrasters auszufüllen (4 bis 7 pro Gruppe)",
+          "purpose": "Bei der Programmierung ihrer Klassenkameraden durch körperliche Bewegung erleben die SchülerInnen ähnliche Probleme und Emotionen, wie sie sie empfinden werden, wenn sie mit dem Programmieren am Computer beginnen. Die Begegnung mit diesen Problemen in einer spielerischen und offenen Umgebung trägt dazu bei, die Intensität zu mindern und die SchülerInnenn haben die Möglichkeit, die notwendigen Fähigkeiten zu üben, bevor sie selbst auf Probleme stoßen.",
+          "student_overview": "Programmieren Sie Ihre Klassenkameraden, sich vorsichtig von Ort zu Ort zu bewegen."
+        },
+        "courseb-2023/Sequencing with Angry Birds": {
+          "name": "Sequenzieren mit Angry Birds",
+          "overview": "In dieser Stunde zum **Aufbau von Fähigkeiten** entwickeln die SchülerInnen sequenzielle Algorithmen, um einen Vogel von einer Seite eines Labyrinths zu einem Schwein auf der anderen Seite zu bringen. Dazu fügen sie Codeblöcke in einer linearen Abfolge aneinander.",
+          "preparation": "Wenn Ihre SchülerInnen noch keine Erfahrung mit dem Ziehen und Ablegen von Dateien haben, sollten Sie mit ihnen vor Beginn dieser Stunde eine **\\*Übung zum Ziehen und Ablegen** machen.\n– Schauen Sie sich das Lehrervideo **Wie man einen Klassenbereich auf Code.org einrichtet** an, erstellen Sie Ihren eigenen Klassenbereich auf Code.org und geben Sie allen SchülerInnen eine Karte mit ihrem Passcode.\n– Lassen Sie den IT-Mitarbeiter der Schule einen Quicklink für Ihren Klassenbereich auf dem Computer-Desktop einrichten. \n–Stellen Sie sicher, dass alle SchülerInnen ein Tagebuch haben.",
+          "purpose": "In dieser Stunde erlernen die SchülerInnen Fähigkeiten im Programmieren und der Fehlersuche auf einer Computerplattform. Das blockbasierte Format dieser Aufgaben hilft den SchülerInnen, die Reihenfolge und Konzepte zu lernen, ohne sich um die Perfektionierung der Syntax kümmern zu müssen.",
+          "student_overview": "Hilf Red, dem Angry Bird, den Weg zu dem bösen Schwein zu folgen."
+        },
+        "courseb-2023/Programming with Angry Birds": {
+          "name": "Programmieren mit Angry Birds",
+          "overview": "Unter Verwendung von Charakteren aus Ice Age entwickeln die Schüler sequentielle Algorithmen, um Scrat von einer Seite eines Labyrinths zur Eichel auf der anderen Seite zu bewegen. Dazu ordne sie Codebausteinen in einer linearen Abfolge an, so dass sie sich gerade bewegen, nach links oder rechts drehen.",
+          "preparation": "– Spielen Sie die Aufgaben durch, um mögliche Problembereiche für Ihre Klasse zu finden.\n– Suchen Sie das Material für **\\*Fröhliche Karten** oder drucken Sie es nach.\n– Stellen Sie sicher, dass allen SchülerInnen ein Reflexionsjournal haben\n– Schneiden Sie für jede Richtung (N, S, E, W) genügend **Manipulatoren** aus, um jedem Paar zwei Sätze zu geben (wenn Sie sich für die Überbrückungsoption 1 entscheiden).",
+          "purpose": "In dieser Lektion entwickeln die SchülerInnen Programmierkenntnisse auf einer Computerplattform. Das blockbasierte Format dieser Aufgaben hilft den SchülerInnenn, Abläufe und Konzepte kennen zu lernen, ohne sich um die Perfektionierung der Syntax kümmern zu müssen.",
+          "student_overview": "Erstellen Sie Programme, die dem Angry Bird helfen, sich durch das Labyrinth zu bewegen."
+        },
+        "courseb-2023/Programming with Harvester": {
+          "name": "Programmieren mit der Erntearbeiterin",
+          "overview": "Die SchülerInnen wenden die in der Stunde zum Aufbau von Fähigkeiten erlernten Programmierkonzepte auf die Erntehelfer-Umgebung an. Die SchülerInnen werden weiterhin Fähigkeiten im Umgang mit sequentiellen Algorithmen entwickeln und mit dem Debugging-Verfahren beginnen.",
+          "preparation": "– Spielen Sie die Aufgaben durch, um mögliche Problembereiche für Ihre Klasse zu finden.\n– Achten Sie darauf, dass alle SchülerInnen ein Reflexionstagebuch haben.",
+          "purpose": "In dieser Stunde entwickeln die SchülerInnen ihre Fehlerbehebungsfähigkeiten und entwickeln ihre Programmierfähigkeiten weiter.",
+          "student_overview": "Hilf der Erntearbeiterin, Gemüse entlang eines Weges zu ernten."
+        },
+        "courseb-2023/Getting Loopy": {
+          "name": "Schöne Schleifen",
+          "overview": "Wenn wir anfangen, längere und interessantere Programme zu schreiben, enthält unser Code oft viele Wiederholungen. In dieser Lektion lernen die SchülerInnen, wie Schleifen verwendet werden können, um Anweisungen mit vielen Wiederholungen leichter zu vermitteln, indem sie sich die Wiederholungen von Bewegungsmustern in einem Tanz ansehen.",
+          "preparation": "-   Bereiten Sie das **\\*Arbeitsblatt** für die SchülerInnen vor. - Drucken Sie eine **Bewertung** pro SchülerInnen aus. - Stellen Sie sicher, dass jeder SchülerInnen ein Reflexionsjournal hat.",
+          "purpose": "An diesem Punkt des Kurses sollten die Studierenden mit der Programmierung einer Reihe von linearen Anweisungen vertraut sein. Häufig enthält der lineare Anweisungssatz Muster, die sich mehrfach wiederholen. Wenn die Studierenden komplexere und interessantere Programme schreiben wollen, wird das manuelle Duplizieren dieses Codes mühsam und ineffizient. Um den SchülerInneninnen und SchülerInnenn das Schreiben leistungsfähigerer Programme zu ermöglichen, müssen wir uns auf Strukturen stützen, die aus der einfachen linearen Liste ausbrechen. Schleifen ermöglichen es den SchülerInnenn, ihren Code so zu strukturieren, dass er sich wiederholt. In dieser Lektion werden wir uns darauf konzentrieren, Muster in physischen Bewegungen zu erkennen, bevor wir uns wieder dem Computer zuwenden, um nach Mustern in unserem Code zu suchen.",
+          "student_overview": "In dieser Lektion werden wir eine Tanzparty mit Wiederholungsschleifen veranstalten!"
+        },
+        "courseb-2023/Loops with Harvester": {
+          "name": "Schleifen mit der Erntearbeiterin",
+          "overview": "In dieser Lektion zum Aufbau von Fähigkeiten helfen die Schüler der Erntemaschine mithilfe von Schleifen beim Sammeln von Feldfrüchten.",
+          "preparation": "-   Spielen Sie die Rätsel durch, um mögliche Problembereiche für Ihre Klasse zu finden.\n-   Gehen Sie die \\*_\\\\_CS Fundamentals Main Activity Tips\n-   Lesson Recommendations\\*\\* durch.\n-   Stellen Sie sicher, dass jeder SchülerInnen ein Reflexionstagebuch hat.\n-   (Optional) Wählen Sie ein paar Rätsel aus, die Sie mit Ihrer Klasse in der Gruppe bearbeiten.\n-   (Optional) Falls noch nicht geschehen, drucken Sie Blöcke aus **\\*Manipulatives** aus und schneiden Sie sie aus, um sich auf eine der Überbrückungsaktivitäten in dieser Lektion vorzubereiten.",
+          "purpose": "In dieser Lektion lernen die SchülerInnen mehr über Schleifen und wie man sie in Blockly-Code implementiert. Die Verwendung von Schleifen ist eine wichtige Fähigkeit beim Programmieren, da die manuelle Wiederholung von Befehlen mühsam und ineffizient ist. Mit den Code.org-Puzzles lernen die SchülerInnen, Anweisungen zu bestehenden Schleifen hinzuzufügen, wiederholten Code in Schleifen zu sammeln und Muster zu erkennen, die in Schleifen ausgeführt werden müssen.",
+          "student_overview": "Hilf der Erntearbeiterin, mit Hilfe von Schleifen noch mehr einzusammeln!"
+        },
+        "courseb-2023/Loops with Laurel": {
+          "name": "Schleifen mit Laurel",
+          "overview": "In dieser Lektion zum Aufbau von Fähigkeiten lernen die Schüler weiter das Konzept von Loops. Hier nutzt Laurel die Abenteurerin Schleifen, um Schätze in offenen Höhlenräumen zu sammeln. ",
+          "preparation": "-   Spielen Sie die Rätsel durch, um mögliche Problembereiche für Ihre Klasse zu finden.\n-   (Optional) Wählen Sie ein paar Rätsel aus, die Sie mit Ihrer Klasse in der Gruppe bearbeiten.\n-   Überprüfen Sie die **\\*CS Fundamentals Main Activity Tips - Lesson Recommendations**\n-   Stellen Sie sicher, dass jeder SchülerInnen ein Reflexionstagebuch hat.",
+          "purpose": "In dieser Lektion können die SchülerInnen den Umgang mit Schleifen üben und werden ermutigt, mehrere Blöcke in eine \"Wiederholung\" zu setzen, um so viele Schätze wie möglich zu sammeln.",
+          "student_overview": "Programmiere Laurel der Abenteurerin, in einer offenen Höhle Schätze zu sammeln."
+        },
+        "courseb-2023/Drawing Gardens with Loops": {
+          "name": "Gärten mit Schleifen zeichnen",
+          "overview": "In dieser Lektion zum Aufbau von Fähigkeiten lernen die Schüler, Bilder zu zeichnen, indem sie einfache Sequenzen von Anweisungen wiederholen. Hier verwenden die Schüler Schleifen, um Muster zu erstellen. ",
+          "preparation": "-   Spielen Sie die Rätsel vor der Stunde durch, um mögliche Problembereiche für Ihre Klasse zu finden.\n-   Gehen Sie die **\\*CS Fundamentals Main Activity Tips - Lesson Recommendations** durch.\n-   Stellen Sie sicher, dass jeder SchülerInnen ein Reflexionstagebuch hat.",
+          "purpose": "Diese Lektion bietet eine andere Perspektive darauf, wie Schleifen in der Programmierung Dinge erzeugen können. Die SchülerInnen testen ihre Fähigkeiten zum kritischen Denken, indem sie den gegebenen Code auswerten und bestimmen, was hinzugefügt werden muss, um das Rätsel zu lösen. Die SchülerInnen können hier auch über die Ineffizienz des Programmierens ohne Schleifen nachdenken, da das Programm ohne die Hilfe von \"Wiederholungsschleifen\" viele Blöcke benötigen würde.",
+          "student_overview": "Verwenden Sie Muster und Schleifen, um die Bilder fertigzustellen."
+        },
+        "courseb-2023/The Right App": {
+          "name": "Die richtige App",
+          "overview": "In dieser Lektion erkennen die SchülerInnen, dass die Informatik Menschen im wirklichen Leben helfen kann. Zuerst entwickeln die SchülerInnen ein Verständnis für mehrere fiktive Sekundärmarkt-Benutzer ein, um ihnen zu helfen, die \"richtige App\" zu finden, die ihren Bedürfnissen entspricht. Dann üben die SchülerInnen Empathie und Kreativität, um ihre eigene Sekundärmarkt-App zu entwerfen, die die Bedürfnisse eines weiteren Benutzers erfüllt.",
+          "preparation": "-   Lesen Sie sich die Anmerkungen des Referenten auf dem **\\*Diaplan** durch. - Legen Sie genügend Skizzen-/Zeichenmaterial für alle SchülerInnen bereit. - Stellen Sie sicher, dass jeder SchülerInnen ein Reflexionstagebuch hat.",
+          "purpose": "Die Computerwelt ist heute so zugänglich wie nie zuvor. Menschen aus allen Gesellschaftsschichten nutzen Software auf vielen verschiedenen Geräten, insbesondere Smartphones, für Information, Kommunikation und Unterhaltung. Da die Menschen so unterschiedliche Erfahrungen und Bedürfnisse haben, ist es für angehende Informatiker wichtig, sich in die Menschen hineinzuversetzen und Lösungen für sie zu finden.",
+          "student_overview": "Skizzieren Sie Ihre eigene Sekundärmarkt-App."
+        },
+        "courseb-2023/The Big Event Jr": {
+          "name": "Das große Ereignis",
+          "overview": "In dieser Lektion, die den Kontext einstellt, erlebt die Klasse das Konzept von Ereignissen anhand eines Spiels, in dem sie sich bewegen oder schreien, wenn Sie Tasten auf einer riesigen Fernbedienung drücken.",
+          "preparation": "-   Bereiten Sie das Projekt **\\*Controller Image** vor.\n-   Drucken Sie eine **\\*Bewertung** pro SchülerInnen aus.\n-   Stellen Sie sicher, dass jeder SchülerInnen ein Reflexionstagebuch hat.",
+          "purpose": "Heute werden die SchülerInnen lernen, Ereignisse von Handlungen zu unterscheiden. Die SchülerInnen werden sehen, wie Aktivitäten unterbrochen werden, indem ein \"Knopf\" auf einer Papierfernbedienung gedrückt wird. Auf dieses Ereignis wird die Klasse mit einer bestimmten Aktion reagieren. Ereignisse werden in der Programmierung häufig verwendet und sollten nach dieser Lektion leicht zu erkennen sein.",
+          "student_overview": "Bewege dich oder schreie, wenn dein Lehrer die Tasten auf einer riesigen Fernbedienung drückt."
+        },
+        "courseb-2023/Mini-Project: A Royal Battle with Events": {
+          "name": "Mini-Projekt: Eine königliche Schlacht mit Ereignissen",
+          "overview": "In diesem **Mini-Projekt** haben die Schüler die Möglichkeit, die Events im Play Lab zu nutzen und all ihre erlernten Programmierkenntnisse anzuwenden, um ein animiertes Spiel zu erstellen. ",
+          "preparation": "-   Spielen Sie die Rätsel durch, um mögliche Problembereiche für Ihre Klasse zu finden.\n-   (Optional) Wählen Sie ein paar Rätsel aus, die Sie in der Gruppe mit Ihrer Klasse bearbeiten.\n-   Gehen Sie die **\\*CS-Grundlagen Hauptaktivitätstipps - Lektionsempfehlungen** durch.\n-   Stellen Sie sicher, dass jeder SchülerInnen ein Reflexionstagebuch hat.",
+          "purpose": "In dieser Online-Aktivität lernen die SchülerInnen, wie man Ereignisse in Play Lab verwendet. Sie beginnen damit, dass sie dem Ritter beibringen, sich zu bewegen, wenn eine Pfeiltaste gedrückt wird, und haben dann die Möglichkeit, die restlichen Fähigkeiten, die sie in diesem Kurs gelernt haben, einschließlich Sequenz und Schleifenbildung, als Teil des abschließenden Freeplay-Puzzles zu präsentieren.",
+          "student_overview": "Verwenden Sie Ereignisse, um eine Geschichte oder ein interaktives Spiel zu erstellen."
+        },
+        "courseb-2023/End of Course Project": {
+          "name": "Projekt am Ende des Kurses",
+          "overview": "In dieser **Projektstunde** wenden die SchülerInnen an, was sie über Sequenzierung und Ereignisse in freie Projekten mit Play Lab gelernt haben.",
+          "preparation": "-   Programmieren Sie Ihre eigenen Play Lab-Projekte im Voraus, um Ihre SchülerInnen zu inspirieren!",
+          "purpose": "Diese Lektion bietet den SchülerInnenn eine letzte Gelegenheit, ihre neuen Informatikkenntnisse kreativ einzusetzen.",
+          "student_overview": "Programmiere deine eigene Story oder dein Spiel."
+        },
+        "coursec-2023/Putting a STOP to Online Meanness": {
+          "name": "Gemeinheiten im Internet STOPPEN",
+          "overview": "[![Common Sense Education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org) Diese Lektion wurde ursprünglich von Common Sense Education erstellt. [Mehr erfahren](https://www.commonsense.org/education/digital-citizenship/curriculum) Das Internet ist voller interessanter Menschen, aber manchmal können einige von ihnen gemein zueinander sein. Helfen Sie Ihren SchülerInnen mit diesem Rollenspiel zu verstehen, warum es oft einfacher ist, online gemein zu sein als persönlich, und wie sie mit Online-Gemeinheiten umgehen können, wenn sie sie sehen.",
+          "preparation": "-   Gehen Sie das Unterrichtsmaterial durch. - Drucken Sie das/die Handout(s) für jeden SchülerInnen aus. - Bringen Sie ein Kuscheltier oder Spielzeug mit in den Unterricht.",
+          "purpose": "Der Lehrplan für digitale Bürgerschaft von Common Sense behandelt sechs Kernthemen, die auf dem neuesten Forschungsstand zu Kindern, Medien und Technologie basieren. Diese Unterrichtsstunde konzentriert sich auf Cybermobbing, digitales Drama und Hassrede. Die SchülerInnen setzen sich mit diesen schwierigen Themen auseinander und übernehmen die aktive Rolle von Vorreitern, die positive, unterstützende Online-Communitys aufbauen und Grausamkeiten im Internet bekämpfen.",
+          "student_overview": "In dieser Stunde lernen ihr etwas über Gemeinheit und was ihr tun können, wenn sie euch im Internet begegnet."
+        },
+        "coursec-2023/My Robotic Friends Jr": {
+          "name": "Meine Roboterfreunde Jr.",
+          "purpose": "In dieser \"unplugged\"-Lektion arbeitet die Klasse im Team an einer einfachen Aufgabe: Ein \"Roboter\" soll Becher nach einem bestimmten Muster stapeln. Diese Aktivität legt den Grundstein für die Programmierung, die die SchülerInnen im Laufe des Kurses durchführen werden, da sie lernen, wie wichtig es ist, einen klar kommunizierten Algorithmus zu definieren.",
+          "student_overview": "In dieser Lektion tun Sie so, als seien Ihre Klassenkameraden Roboter und programmieren sie, dass sie Muster aus gestapelten Bechern erstellen."
+        },
+        "coursec-2023/Programming with Angry Birds": {
+          "name": "Programmieren mit Angry Birds",
+          "overview": "Unter Verwendung von Figuren aus Angry Birds entwickeln die SchülerInnen sequentielle Algorithmen, um einen Vogel von einer Seite eines Labyrinths zu einem Schwein auf der anderen Seite zu bringen. Dazu ordnen sie Codebausteine in einer linearen Abfolge an, so dass sie sich gerade bewegen, nach links oder rechts drehen.",
+          "purpose": "In dieser Stunde erlernen die SchülerInnen Fähigkeiten im Programmieren und der Fehlersuche auf einer Computerplattform. Das blockbasierte Format dieser Aufgaben hilft den SchülerInnen, die Reihenfolge und Konzepte zu lernen, ohne sich um die Perfektionierung der Syntax kümmern zu müssen.",
+          "student_overview": "Erfahren Sie mit Angry Birds mehr über Sequenzen und Algorithmen."
+        },
+        "coursec-2023/Debugging in Maze": {
+          "name": "Fehlersuche im Labyrinth",
+          "overview": "Die Fehlerbehebung/das Debugging ist ein wesentliches Element beim Erlernen des Programmierens. Die SchülerInnen werden einige Aufgaben finden, die falsch gelöst wurden. Sie müssen sich schrittweise durch den vorhandenen Code arbeiten, um Fehler zu identifizieren, einschließlich falscher Schleifen, fehlender Bausteine, überschüssiger Bausteine und Bausteine, die nicht funktionieren.",
+          "purpose": "Die SchülerInneninnen und SchülerInnen in Ihrer Klasse könnten bei dieser Lektion frustriert sein, weil es um die Fehlersuche geht. Die Fehlersuche ist ein Konzept, das für die Computerprogrammierung sehr wichtig ist. Informatiker müssen wirklich gut darin werden, die Fehler in ihren eigenen Programmen zu erkennen. Das Debugging zwingt die SchülerInnen dazu, Probleme zu erkennen und zu überwinden, während sie gleichzeitig ihr kritisches Denken und ihre Problemlösungsfähigkeiten ausbauen.",
+          "student_overview": "Finden Sie Probleme in Aufgaben und üben Sie Ihre Fähigkeiten bei der Fehlersuche/beim Debugging."
+        },
+        "coursec-2023/Collecting Treasure with Laurel": {
+          "name": "Den Schatz mit Laurel sammeln",
+          "overview": "In dieser Reihe von Rätseln werden die SchülerInnen ihr Verständnis von Algorithmen und der Fehlersuche/Debugging weiterentwickeln. Mit einer neuen Figur, Laurel der Abenteurerin, entwickeln die SchülerInnen sequentielle Algorithmen, um Laurel dabei zu helfen, Schätze zu sammeln, während sie einen Weg entlang geht.",
+          "purpose": "In dieser Lektion üben die SchülerInneninnen und SchülerInnen ihre Programmierkenntnisse anhand einer neuen Figur, Laurel dem Abenteurer. Wenn jemand mit dem Programmieren beginnt, setzt er Anweisungen in einer bestimmten Reihenfolge zusammen und verwendet etwas, das eine Maschine lesen kann. Durch das Programmieren entwickeln die SchülerInneninnen und SchülerInnen ein Verständnis dafür, wie ein Computer mit Anweisungen und einer bestimmten Reihenfolge umgeht. Die Verwendung einer neuen Figur mit einem anderen Rätselziel hilft den SchülerInneninnen und SchülerInnenn, ihre Erfahrungen mit Sequenzen und Algorithmen in der Programmierung zu erweitern.",
+          "student_overview": "Schreiben Sie Algorithmen, um Laurel, der Abenteurerin, zu helfen, viele Edelsteine zu sammeln!"
+        },
+        "coursec-2023/Creating Art with Code": {
+          "name": "Kunst erschaffen mit Code",
+          "overview": "In dieser Lektion übernehmen die SchülerInnen die Kontrolle über den Künstler, um Zeichnungen auf dem Bildschirm fertigzustellen. In dieser Phase mit dem Künstler können die SchülerInnen Bilder von zunehmender Komplexität erstellen, indem sie neue Bausteine wie \"100 Pixel vorwärts\" und \"90 Grad nach rechts drehen\" verwenden.",
+          "preparation": "-   Spielen Sie die Rätsel durch, um mögliche Problembereiche für Ihre Klasse zu finden. - (Optional) Besorgen Sie Ihrer Klasse Winkelmesser, um die Winkel zu veranschaulichen, die sie zur Lösung der Rätsel verwenden müssen. - Drucken Sie ein **SchülerInnenhandbuch** für jeden SchülerInnen aus.",
+          "purpose": "Diese Lektion baut auf den bisherigen Erfahrungen der SchülerInnen mit der Sequenzierung auf und soll sie zu mehr Kreativität bei der Programmierung anregen. Der Zweck dieser Lektion ist es, das Wissen über Sequenzierung durch die Einführung neuer Blöcke und Ziele zu festigen. In diesem Fall lernen die SchülerInneninnen und SchülerInnen mit den neuen Blöcken mehr über Pixel und Winkel, während sie gleichzeitig ihre Sequenzierungsfähigkeiten üben. Außerdem können die SchülerInnen neue Ziele visualisieren, z. B. die Codierung des Künstlers, um ein Quadrat zu zeichnen.",
+          "student_overview": "Erstelle schöne Bilder durch die Programmierung des Zeichners."
+        },
+        "coursec-2023/My Loopy Robotic Friends Jr": {
+          "name": "Meine schleifenden Freunde von Loopy Robotic Jr.",
+          "overview": "Auf der Grundlage der anfänglichen Aktivität \"Meine Roboterfreunde\" beschäftigen sich die SchülerInnen mit umfassenderen und komplizierteren Entwürfen. Um ihre \"Roboter\" so zu programmieren, dass sie diese größeren Entwürfe fertigstellen, müssen die SchülerInnen sich wiederholende Muster in ihren Anweisungen identifizieren, die durch eine Schleife ersetzt werden könnten.",
+          "purpose": "Diese Lektion dient als Wiedereinführung in das Thema Schleifen unter Verwendung der inzwischen bekannten \"Roboter\"-Programmieranweisungen. Die SchülerInnen entwickeln kritische Denkfähigkeiten, indem sie nach Wiederholungsmustern in den Bewegungen ihrer Klassenkameraden suchen und herausfinden, wie man diese wiederholten Muster mithilfe von Schleifen vereinfachen kann.",
+          "student_overview": "In dieser Lektion werden Sie Ihre Klassenkameraden erneut programmieren, können aber mit Hilfe von Schleifen umfassendere und kompliziertere Probleme lösen."
+        },
+        "coursec-2023/Loops with Rey and BB-8": {
+          "name": "Schleifen mit Rey und BB-8",
+          "overview": "Auf Grundlage des Konzepts der Wiederholung von Anweisungen aus \"Schöne Schleifen\" werden die SchülerInnen in dieser Phase Schleifen verwenden, damit BB-8 den Weg durch ein Labyrinth effizienter findet.",
+          "purpose": "In dieser Lektion lernen die SchülerInnen mehr über Schleifen und wie man sie in Blockly-Code implementiert. Die Verwendung von Schleifen ist eine wichtige Fähigkeit beim Programmieren, da die manuelle Wiederholung von Befehlen mühsam und ineffizient ist. Mit den Code.org-Rätseln lernen die SchülerInnen, Anweisungen zu bestehenden Schleifen hinzuzufügen, wiederholten Code in Schleifen zusammenzufassen und Muster zu erkennen, die in Schleifen ausgeführt werden müssen. Es ist zu beachten, dass die SchülerInnen mit Rätseln konfrontiert werden, die viele verschiedene Lösungen haben. Dies eröffnet Diskussionen über die verschiedenen Möglichkeiten, Rätsel zu lösen, sowie über die Vor- und Nachteile der einzelnen Ansätze.",
+          "student_overview": "Hilf BB-8 durch Labyrinthe mit Schleifen! "
+        },
+        "coursec-2023/Harvesting Crops with Loops": {
+          "name": "Ernten mit Schleifen",
+          "overview": "In dieser Stunde zum **Aufbau von Fähigkeiten** bilden die SchülerInnen Aktionsschleifen, damit der Erntehelfer mehrere Gemüsesorten zu ernten, die in großen Mengen wachsen.",
+          "purpose": "In dieser Lektion verwenden die SchülerInnen Schleifen, um Aktionen wie das Ernten von Kürbissen zu wiederholen. Es werden neue Muster entstehen und die SchülerInnen werden Kreativität und logisches Denken einsetzen, um zu bestimmen, welcher Code wie oft wiederholt werden muss.",
+          "student_overview": "Lasst uns Schleifen verwenden, um der Erntearbeiterin beim Einsammeln des Gemüses zu helfen!"
+        },
+        "coursec-2023/Mini-Project: Sticker Art": {
+          "name": "Mini-Projekt: Sticker Art",
+          "overview": "Diese **Miniprojekt**-Lektion baut auf dem Verständnis von Schleifen aus den vorherigen Lektionen auf. Die SchülerInnen werden mit dem Künstler einzigartige Kunstwerke schaffen.",
+          "purpose": "In dieser Reihe wird die Kraft von Schleifen mit kreativen und persönlichen Designs hervorgehoben. In dieser projektbasierten Sequenz können die Teilnehmer auf ihrer eigenen Arbeit aufbauen und erstaunliche Artefakte schaffen.",
+          "student_overview": "In dieser Lektion machen es Schleifen einfach, mit Artist noch coolere Bilder zu machen!"
+        },
+        "coursec-2023/The Big Event": {
+          "name": "Der große Event",
+          "overview": "Die SchülerInnen werden schnell erkennen, dass Ereignisse eine großartige Möglichkeit sind, einen bereits formulierten Algorithmus flexibler zu gestalten. Manchmal möchte man, dass ein Programm in der Lage ist, auf den Benutzer genau dann zu reagieren, wenn der Benutzer dies wünscht. Mit Ereignissen können Sie Ihr Programm interessanter und interaktiver gestalten.",
+          "purpose": "Heute werden die SchülerInnen lernen, Ereignisse und Handlungen zu unterscheiden. Die SchülerInnen werden sehen, wie Aktivitäten unterbrochen werden, indem ein \"Knopf\" auf einer Papierfernbedienung gedrückt wird. Wenn sie dieses Ereignis sehen, reagiert die Klasse mit einer bestimmten Aktion. Ereignisse werden in der Programmierung häufig verwendet und sollten nach dieser Lektion leicht zu erkennen sein.",
+          "student_overview": "Spielen Sie ein lustiges Spiel, um mehr über Ereignisse zu erfahren."
+        },
+        "coursec-2023/Build a Flappy Game": {
+          "name": "Erstelle ein Flappy-Spiel",
+          "overview": "In dieser speziellen Phase können die SchülerInnen ihr eigenes Flappy Bird-Spiel erstellen, indem sie mit Hilfe von Eventhandlern Mausklicks und Kollisionen von Objekten erkennen. Am Ende dieses Levels können die SchülerInnen ihr Spiel anpassen, indem sie die Grafik oder die Regeln ändern.",
+          "purpose": "Ereignisse sind in Computerprogrammen sehr häufig. In dieser Lektion werden die SchülerInnen ihr Verständnis von Ereignissen vertiefen, indem sie ein _Flappy Bird_ Spiel erstellen. Die SchülerInnen lernen, ihre Figur über den Bildschirm zu bewegen, Geräusche zu machen und auf Hindernisse zu reagieren, die auf vom Benutzer ausgelösten Ereignissen basieren.",
+          "student_overview": "Erstellen Sie Ihr eigenes Flappy Bird-Spiel ganz nach Belieben und teilen Sie es dann mit Ihren Freunden!"
+        },
+        "coursec-2023/Mini-Project: Chase Game": {
+          "name": "Mini-Projekt: Chase Game",
+          "overview": "In dieser Online-Aktivität haben die SchülerInnen die Möglichkeit, die Verwendung von Ereignissen im Play Lab zu erlernen und alle gelernten Codierkenntnisse anzuwenden, um ein animiertes Spiel zu erstellen. Es ist an der Zeit, kreativ zu werden und im Play Lab ein Spiel zu erstellen!",
+          "purpose": "Hier werden die SchülerInnen ihr Verständnis von Ereignissen mithilfe von Play Lab weiter ausbauen. Die SchülerInnen verwenden Ereignisse, um Figuren auf dem Bildschirm zu bewegen, Geräusche zu machen und Hintergründe auf der Grundlage von Benutzereingaben zu ändern. Am Ende der Rätselsequenz haben die SchülerInnen die Möglichkeit, ihre Projekte vorzustellen.",
+          "student_overview": "Es ist an der Zeit, kreativ zu werden und ein Spiel in Play Lab zu entwickeln!"
+        },
+        "coursec-2023/Picturing Data": {
+          "name": "Dartsellung von Daten",
+          "overview": "Die Daten können verwendet werden, um den SchülerInnen zu helfen, ihre Welt zu verstehen und interessante Fragen zu beantworten. In dieser Lektion sammeln die SchülerInnen Daten aus einem Play Lab-Projekt und visualisieren sie mit verschiedenen Arten von Diagrammen.",
+          "purpose": "Computer wurden geschaffen, um die Verarbeitung von Daten zu unterstützen. Es gibt immer mehr Daten auf der Welt, daher ist es wichtig, sie lesen und analysieren zu können. Diese Lektion soll sicherstellen, dass die SchülerInneninnen und SchülerInnen grundlegende Erfahrungen mit dem Sammeln, Visualisieren und Analysieren eines einfachen Datensatzes machen.",
+          "student_overview": "Die Daten können verwendet werden, um den SchülerInnen zu helfen, ihre Welt zu verstehen und interessante Fragen zu beantworten. In dieser Lektion sammeln die SchülerInnen Daten aus einem Play Lab-Projekt und visualisieren sie mit verschiedenen Arten von Diagrammen."
+        },
+        "coursec-2023/Binary Bracelets": {
+          "name": "Binäre Armbänder",
+          "overview": "Das binäre Zahlensystem ist in der Welt der Computer extrem wichtig. Die meisten Computer speichern heute alle möglichen Informationen in binärer Form. Diese Lektion zeigt, wie es möglich ist, etwas aus dem täglichen Leben zu nehmen und es in eine Reihe von „Ein“- und „Aus“-Schaltvorgänge zu übersetzen.",
+          "purpose": "In dieser Lektion lernen die SchülerInnen, wie Informationen so dargestellt werden, dass ein Computer sie interpretieren und speichern kann. Beim Erlernen der Binärsprache haben die SchülerInnen die Möglichkeit, Codes zu schreiben und sie mit Gleichaltrigen als geheime Nachrichten auszutauschen. Dies kann dann mit der Art und Weise in Verbindung gebracht werden, wie Computer ein Programm lesen, es in eine Binärdatei übersetzen, die Informationen auf irgendeine Weise verwenden und dann in einer für Menschen verständlichen Weise zurückmelden. Wenn wir beispielsweise einen Satz in ein Dokument eintippen und dann auf \"Speichern\" drücken, übersetzt ein Computer den Satz in Binärdaten, speichert die Informationen und sendet dann eine Nachricht, dass das Dokument gespeichert wurde.",
+          "student_overview": "Erstellen Sie Ihr eigenes binäres Armband und erfahren Sie, wie Computer sich Informationen merken!"
+        },
+        "coursec-2023/End of Course Project": {
+          "name": "Projekt am Ende des Kurses",
+          "overview": "Diese grundlegende Lektion führt die SchülerInnen durch den Prozess des Entwerfens, Entwickelns und Präsentierens ihrer eigenen Play Lab-Projekte! Um sicherzustellen, dass dieser Prozess reibungslos abläuft, haben wir eine schrittweise Struktur bereitgestellt, der die SchülerInnen folgen können: von der Planung auf Papier bis zur Kodierung auf unserer Website. Darüber hinaus bieten wir Ideen an, die den Lehrkräften helfen sollen, ein Finale für die Vorstellung der Projekte zu ermöglichen!",
+          "preparation": "-   Spielen Sie die Rätsel durch, um mögliche Problembereiche für Ihre Klasse zu finden. - Drucken Sie eine **\\*Projektplanungshilfe** für jeden SchülerInnen (oder jedes Paar) aus. - Sehen Sie sich das Dokument **\\*Projektplanungshilfe (Beispiel)** an. - (Optional) Füllen Sie Ihre eigene Planungshilfe aus und programmieren Sie Ihr eigenes Projekt, um es den SchülerInnenn zu zeigen!",
+          "purpose": "Diese Lektion bietet den SchülerInnenn Raum, ein Projekt nach eigenem Entwurf zu erstellen. Dabei wird ein schrittweiser Prozess angewandt, der Planung erfordert, aber auch viel Raum für Kreativität lässt.",
+          "student_overview": "Freuen Sie sich auf eine ganze Menge Programmierung! Es ist an der Zeit, mit der Erstellung Ihres Projekts zu beginnen."
+        },
+        "coursed-2023/Password Power-Up": {
+          "name": "Passwort-Power",
+          "overview": "[![Common Sense Education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org) Diese Lektion wurde ursprünglich von [Common Sense Education](https://www.commonsense.org/education/digital-citizenship/curriculum) erstellt. Stärkere und sicherere Online-Passwörter sind eine gute Idee für alle. Aber wie können wir Kindern helfen, bessere Passwörter zu erstellen und sich diese auch zu merken? Mit den Tipps in dieser Lektion können Kinder Passwörter erstellen, die sowohl sicher als auch einprägsam sind.",
+          "preparation": "-   Gehen Sie das Unterrichtsmaterial durch. - Drucken Sie das/die Handout(s) für jeden SchülerInnen aus. - Bereiten Sie Schreibpapier oder Notizbücher für die SchülerInnen vor.",
+          "purpose": "Der Lehrplan für digitale Bürgerschaft von Common Sense behandelt sechs Kernthemen, die auf den neuesten Forschungsergebnissen zu Kindern, Medien und Technologie basieren. Diese Lektion konzentriert sich auf Datenschutz und Sicherheit. Die SchülerInnen lernen, wie sie persönliche Daten schützen können, und erwerben ein tieferes Verständnis für ihre Datenschutzrechte, damit sie sich für sich selbst und andere einsetzen können.",
+          "student_overview": "In dieser Lektion erfahren Sie, wie Passwörter Ihre Informationen schützen und wie man ein gutes Passwort erstellt."
+        },
+        "coursed-2023/Graph Paper Programming": {
+          "name": "Programmieren auf Millimeterpapier",
+          "overview": "Indem sich die SchülerInnen gegenseitig \"programmieren\", um Bilder zu zeichnen, haben die SchülerInnen die Möglichkeit, einige der Kernkonzepte des Programmierens auf unterhaltsame und zugängliche Weise zu erleben. Die Klasse beginnt damit, dass sich die SchülerInnen gegenseitig anweisen, Quadrate auf Millimeterpapier auszumalen, um ein bereits vorhandenes Bild zu reproduzieren. Wenn es zeitlich möglich ist, kann die Lektion mit Bildern abschließen, die die SchülerInnen selbst erstellen.",
+          "purpose": "Ziel dieser Aktivität ist es, das kritische Denken und die Begeisterung für den Kurs zu fördern und gleichzeitig einige der grundlegenden Programmierkonzepte einzuführen, die im Kurs verwendet werden. Durch die Einführung grundlegender Konzepte wie Sequenzierung und Algorithmen in einer \"unplugged\"-Aktivität können auch SchülerInnen, die von Computern eingeschüchtert sind, eine Grundlage für das Verständnis dieser Themen schaffen. In dieser Lektion lernen die SchülerInneninnen und SchülerInnen, wie man einen Algorithmus entwickelt und ihn in einem Programm kodiert.",
+          "student_overview": "In dieser Lektion wirst du deinen Freund programmieren, Bilder zu zeichnen!"
+        },
+        "coursed-2023/Introduction to Online Puzzles": {
+          "name": "Einführung in Online-Aufgaben",
+          "overview": "Bei dieser Aufgabengruppe beginnen die SchülerInnen mit einer Einführung (oder einem Überblick, je nach dem Erfahrungsstand Ihrer Klasse) in den Online-Arbeitsbereich von Code.org. Es gibt dort Videos, welche die grundlegende Funktionalität des Arbeitsbereichs erklären, einschließlich der Schaltflächen `Ausführen`, `Zurücksetzen` und `Schritt`. In diesen Videos wird auch das Ziehen von Blockly-Bausteinen, das Löschen von Blockly-Bausteinen und das Verbinden von Blockly-Bausteinen besprochen. Als nächstes üben die SchülerInnen ihre _Sequenzierungs-_ und \\_Debugging-Kenntnisse im Labyrinth. Dort begegnen die SchülerInnen neuen Arten von Aufgaben wie Collector, Artist und Harvester, wenn sie die elementaren Grundlagen von Schleifen kennenlernen.",
+          "purpose": "Wir wissen, dass es in jeder Klasse ein breites Spektrum an Kenntnissen zu jedem Thema gibt. Einige SchülerInneninnen und SchülerInnen in Ihrer Klasse sind vielleicht Computerassistenten, während andere noch nicht viel Erfahrung haben. Um gleiche Spiel- (und Lern-) Bedingungen zu schaffen, haben wir diese \"Aufbauphase\" für Kurs D entwickelt. Sie kann entweder als Einführung oder als Wiederholung der Nutzung von Code.org und der grundlegenden Konzepte der Informatik verwendet werden. Diese Phase deckt alle Voraussetzungen ab, die für den Beginn von Kurs D erforderlich sind.",
+          "student_overview": "In dieser Lektion üben Sie die Kenntnisse, e Sie für diesen Kurs benötigen."
+        },
+        "coursed-2023/Relay Programming": {
+          "name": "Relais-Programmierung",
+          "overview": "Diese Stunde zum **Kontext** mit einer kurzen Lektion über Debugging und Beharrlichkeit. Anschließend kommt es zu einem Wettlauf mit der Zeit, wenn sich die SchülerInnen zu Teams zusammenfinden und zusammenarbeiten, um ein Programm zu schreiben. Eine Anweisung nach der anderen.",
+          "purpose": "Teamarbeit ist in der Informatik sehr wichtig. Teams schreiben und debuggen gemeinsam Code, anstatt als Einzelpersonen zu arbeiten. In dieser Lektion lernen die SchülerInnen, zusammenzuarbeiten und dabei so effizient wie möglich zu sein. Diese Aktivität vermittelt auch ein Gefühl der Dringlichkeit, so dass die SchülerInneninnen und SchülerInnen lernen, ihre Zeit sorgfältig einzuteilen und Fehler zu vermeiden, ohne zu weit zurückzufallen. Diese Erfahrung kann stressig sein (was auch zu erwarten ist!). Stellen Sie sicher, dass Sie den SchülerInnenn die Mittel an die Hand geben, um mit möglicher Frustration umzugehen.",
+          "student_overview": "Erinnern Sie sich an den Beginn des Kurses, als Sie Zeichnungen mit Code erstellt haben? In dieser Lektion werden Sie mit einem Team zusammenarbeiten, um etwas sehr Ähnliches zu tun!"
+        },
+        "coursed-2023/Debugging with Laurel": {
+          "name": "Debuggen mit Laurel",
+          "overview": "In dieser Online-Aktivität üben die SchülerInnen die Fehlersuche/das Debuggen in der \"Sammler\"-Umgebung. Die SchülerInnen werden das Lesen und Bearbeiten von Code üben, um Aufgaben mit einfachen Algorithmen, Schleifen und gerschachtelten Schleifen zu lösen.",
+          "purpose": "Ziel dieser Lektion ist es, den SchülerInnenn beizubringen, dass es normal ist, beim Erlernen einer neuen Fähigkeit zu versagen. Die SchülerInnen erhalten vorgefertigte Programme, die NICHT funktionieren. Sie werden gebeten, diese Programme zu korrigieren. Dieser Prozess, Debugging genannt, vermittelt den SchülerInnenn wichtige Fähigkeiten zur Problemlösung und zum kritischen Denken. Diese Fähigkeiten werden übertragen, wenn die SchülerInnen mit immer schwierigeren Programmierprojekten fortfahren.",
+          "student_overview": "Sind Sie beim Kodieren schon einmal auf Probleme gestoßen? In dieser Lektion werden Sie in die Geheimnisse des Debuggens eingeweiht. Debugging ist der Prozess des Identifizierens und Behebens von Problemen in Ihrem Code."
+        },
+        "coursed-2023/Events in Bounce": {
+          "name": "Ereignisse in Bounce",
+          "overview": "In dieser Online-Aktivität lernen die SchülerInnen, was Ereignisse sind und wie Computer sie in Programmen wie Videospielen verwenden. Die SchülerInnen arbeiten Aufgaben durch, bei denen das Programm auf Ereignisse reagiert (z. B. das Drücken von Pfeiltasten). Am Ende des Aufgaben haben die SchülerInnen die Möglichkeit, ihr Spiel mit verschiedenen Geschwindigkeiten und Geräuschen anzupassen.",
+          "purpose": "Ereignisse sind in Computerprogrammen, insbesondere in Videospielen, sehr häufig. In dieser Lektion werden die SchülerInnen ihr Verständnis von Ereignissen durch die Entwicklung eines Sportspiels vertiefen. Die SchülerInnen lernen, ihr Paddel mit Hilfe der Pfeiltasten zu bewegen und Geräusche zu machen, wenn Objekte zusammenstoßen. Ganz zum Schluss können sie ihr Spiel anpassen, um es noch einzigartiger zu machen!",
+          "student_overview": "Hast du dir jemals gewünscht, in der Schule Videospiele zu spielen? In dieser Lektion kannst du deine eigenen Spiele entwickeln!"
+        },
+        "coursed-2023/Build a Star Wars Game": {
+          "name": "Programmiere ein Star Wars Spiel!",
+          "overview": "In dieser Lektion üben die SchülerInnen die Verwendung von Ereignissen, um ein Spiel zu erstellen, das sie online mit anderen teilen können. Mit R2-D2 und anderen Star Wars-Charakteren werden die SchülerInnen durch die Ereignisse geführt und erhalten dann Raum, um ihr eigenes Spiel zu erstellen.",
+          "purpose": "Bei CS Fundamentals geht es nicht nur darum, Informatik zu lehren, sondern auch darum, dass Informatik Spaß macht und spannend ist. In dieser Reihe lernen die SchülerInneninnen und SchülerInnen anhand beliebter Figuren aus _Star Wars_ etwas über Ereignisse. Diese Rätsel lassen die Grenzen zwischen \"Lernen\" und \"Spaß\" verschwimmen. Außerdem lernen die SchülerInnen, reguläre Programmierpraktiken in Spielen zu erkennen, so dass sie, wenn sie zu Hause Spiele spielen, sehen können, dass allgemeine Informatikprinzipien verwendet werden.",
+          "student_overview": "Spüren Sie die Kraft, wenn Sie in dieser Lektion Ihr eigenes Star Wars-Spiel entwickeln."
+        },
+        "coursed-2023/Dance Party": {
+          "name": "Tanzparty",
+          "overview": "In dieser Lektion bauen SchülerInnen ihr Können aus und programmieren ihre eigene interaktive Tanzparty.",
+          "purpose": "In dieser Stunde werden die grundlegenden Informatikkonzepte für Codierung und Ereignis-Programmierung (unter Einsatz von Blöcken) vorgestellt.",
+          "student_overview": "Zeit zum Feiern! In dieser Lektion programmierst Du Deine eigene interaktive Tanzparty."
+        },
+        "coursed-2023/Loops in Ice Age": {
+          "name": "Schleifen in Ice Age",
+          "overview": "Als schnelles Update (oder Einführung) in die Verwendung von Schleifen werden die SchülerInnen in dieser Phase den Baustein `wiederholen` verwenden, um Scrat effizienter an die Eichel zu bringen.",
+          "purpose": "In dieser Lektion lernen die SchülerInnen mehr über Schleifen und wie man sie in Blockly-Code implementiert. Die Verwendung von Schleifen ist eine wichtige Fähigkeit beim Programmieren, da die manuelle Wiederholung von Befehlen mühsam und ineffizient ist. Mit diesen Code.org-Rätseln lernen die SchülerInnen, Anweisungen zu bestehenden Schleifen hinzuzufügen, wiederholten Code in Schleifen zu sammeln und Muster zu erkennen, die wiederholt werden müssen.",
+          "student_overview": "In dieser Lektion wirst du den Wiederholungsbaustein verwenden, um Scrat dabei zu helfen, die Eichel so effizient wie möglich zu erreichen."
+        },
+        "coursed-2023/Drawing Shapes with Loops": {
+          "name": "Formen mit Schleifen zeichnen",
+          "overview": "Diese Lektion baut auf dem Verständnis von Schleifen aus früheren Lektionen auf und gibt den SchülerInnen die Gelegenheit, wirklich kreativ zu sein. Diese Aktivität dient auch als Debugging-Übung für zusätzliche Problemlösungsübungen.",
+          "purpose": "Diese Serie hebt die Leistungsfähigkeit von Schleifen mit einer Reihe von Rätseln hervor, die die SchülerInnen zum Nachdenken darüber anregen sollen, warum \"Wiederholungsschleifen\" der Langschrift überlegen sind.",
+          "student_overview": "In dieser Lektion machen es Schleifen einfach, mit Artist noch coolere Bilder zu machen!"
+        },
+        "coursed-2023/Nested Loops in Maze": {
+          "name": "Eingebettete Schleifen im Labyrinth",
+          "overview": "In dieser Online-Aktivität haben die SchülerInnen die Möglichkeit, ihr Verständnis von Schleifen auf ein ganz neues Level zu bringen. Beim Spiel mit der Biene und bei Pflanzen gegen Zombies lernen die SchülerInnen, wie man eine Schleife so programmiert, dass sie in eine andere Schleife eingebettet ist. Sie werden auch dazu ermutigt, herauszufinden, wie kleine Änderungen an beiden Schleifen ihr Programm beeinflussen, wenn sie auf \"Ausführen\" klicken.",
+          "purpose": "In dieser Einführung in verschachtelte Schleifen verlassen die SchülerInnen ihre gewohnte Umgebung, um effizientere Lösungen für Rätsel zu finden. In früheren Rätseln wurden die SchülerInnen durch Schleifen dazu gebracht, Wiederholungen zu erkennen. Hier lernen die SchülerInnen, Muster _innerhalb_ wiederholter Muster zu erkennen, um diese verschachtelten Schleifen zu entwickeln. Diese Phase beginnt damit, dass die SchülerInneninnen und SchülerInnen aufgefordert werden, ein Rätsel zu lösen, bei dem der Code irritierend und zu komplex ist, um ihn auf dem langen Weg auszuschreiben. Nachdem ein Video in verschachtelte Schleifen einführt, wird den SchülerInnenn ein Beispiel gezeigt und sie werden aufgefordert, vorherzusagen, was passiert, wenn eine Schleife in eine andere Schleife eingefügt wird. Auf diese Weise können die SchülerInnen ihr Verständnis von Schleifen in der Programmierung festigen und ausbauen.",
+          "student_overview": "Schleifen in Schleifen in Schleifen. Was bedeutet das? In dieser Lektion erfährst du, was passiert, wenn du geschachtelte Schleife erstellst"
+        },
+        "coursed-2023/Conditionals with Cards": {
+          "name": "Bedingungen mit Karten",
+          "overview": "In dieser **Kontext-einstellenden** Lektion schreiben die SchülerInnen _bedingte (if/else) Aussagen_, um die Regeln von einfachen Kartenspielen zu erklären.",
+          "purpose": "Einer der besten Aspekte beim Unterrichten von Konditionalen ist, dass die SchülerInnen das Konzept bereits aus ihrem Alltag kennen. Diese Lektion verbindet die Informatik mit der realen Welt, indem sie auf der Fähigkeit der SchülerInnen aufbaut, zu erkennen, ob eine Bedingung wahr oder falsch ist. Die SchülerInneninnen und SchülerInnen lernen, if-Anweisungen zu verwenden, um anzugeben, wann ein bestimmter Befehl ausgeführt werden soll, sowie if/ else-Anweisungen, um anzugeben, wann ein Befehl ausgeführt werden soll und was sonst ausgeführt werden soll. Die SchülerInneninnen und SchülerInnen kennen das Wort \"Bedingung\" vielleicht nicht, aber die meisten verstehen die Idee, \"if\" zu verwenden, um sicherzustellen, dass eine Aktion nur dann ausgeführt wird, wenn sie es soll.",
+          "student_overview": "Jetzt ist es Zeit, ein Spiel zu spielen, bei dem man nur unter bestimmten Bedingungen Punkte erhält!"
+        },
+        "coursed-2023/Looking Ahead with Minecraft": {
+          "name": "Ausblick auf Minecraft",
+          "overview": "Diese Lektion wurde ursprünglich für die Hour of Code gemeinsam mit dem Team von Minecraft erstellt. Die SchülerInnen erhalten die Gelegenheit, Ideen, die sie bis zu diesem Zeitpunkt gelernt haben, in die Praxis umzusetzen und einen kleinen Einblick in Bedingungen zu bekommen!",
+          "purpose": "Mit dieser Reihe von Rätseln wird das Wissen über Schleifen gefestigt und ausgebaut und es werden Konditionale eingeführt. Durch die Verknüpfung dieser beiden Konzepte können die SchülerInnen das Potenzial für die Erstellung von lustigen und innovativen Programmen in einer neuen und aufregenden Umgebung erkunden.",
+          "student_overview": "Vermeiden Sie die Lava! Hier beginnen Sie, etwas über Bedingungen in der Welt von Minecraft zu erfahren."
+        },
+        "coursed-2023/If/Else with Bee": {
+          "name": "Wenn/Sonst mit der Biene",
+          "overview": "Bis zu diesem Zeitpunkt haben die SchülerInnen Code geschrieben, der bei jeder Ausführung exakt gleich ausgeführt wird - zuverlässig, aber nicht sehr flexibel. In dieser Lektion beginnt Ihre Klasse mit der Programmierung mit Bedingungen, dies es ihnen ermöglichen, Code zu schreiben, der je nach den spezifischen Bedingungen, auf die das Programm trifft, unterschiedlich funktioniert.",
+          "purpose": "Nach der Einführung in die Konditionale in \"Konditionale mit Karten\" werden die SchülerInnen nun üben, sie in ihren Programmen zu verwenden. Die \"if / else\"-Blöcke ermöglichen ein flexibleres Programm. Die Biene wird nur Nektar sammeln, _wenn_ es eine Blume gibt, oder Honig machen, _wenn_ es eine Wabe gibt.",
+          "student_overview": "Sie haben die Bedingungen verstanden - jetzt ist es an der Zeit, Bee so zu programmieren, dass sie diese Bedingungen beim Sammeln von Honig und Nektar verwendet. "
+        },
+        "coursed-2023/While Loops in Farmer": {
+          "name": "Während-Schleifen in Farmer",
+          "overview": "In dieser Stunde zum \\*\\*Aufbau von Fähigkeiten\" füllen die SchülerInnen Löcher und graben Erdhügel auf einem Bauernhof. Sie kennen weder die Größe der Löcher noch die Höhe der Erdhügel. Um diese Rätsel zu lösen, werden die Schüler eine neue Art von Schleife verwenden.",
+          "purpose": "Wenn Ihre SchülerInnen ihre Kenntnisse über Schleifen vertiefen, werden sie auf Probleme stoßen, bei denen ein Befehl wiederholt werden muss, aber nicht bekannt ist, wie oft er wiederholt werden muss. Hier kommen while-Schleifen ins Spiel. In der heutigen Lektion werden die SchülerInnen ein grundlegendes Verständnis für bedingungsbasierte Schleifen entwickeln und ihr Wissen über Schleifen im Allgemeinen erweitern.",
+          "student_overview": "Schleifen sind beim Codieren extrem nützlich. In dieser Lektion lernen Sie eine neue Art von Schleifen kennen:die `während`-Schleifen!"
+        },
+        "coursed-2023/Until Loops in Maze": {
+          "name": "‚Bis‘-Schleifen im Labyrinth",
+          "overview": "In dieser Lektion lernen die SchülerInnen `bis`-Schleifen kennen. Die SchülerInnen entwickeln Programme, bei denen die Hauptfigur Aktionen wiederholt, bis sie den gewünschten Haltepunkt erreicht haben.",
+          "purpose": "In dieser Reihe von Rätseln wird das Wissen über Schleifen durch die Hinzufügung der `until`-Bedingung gefestigt und ausgebaut. Durch die Verknüpfung dieser Konzepte können die SchülerInnen das Potenzial für die Erstellung komplexer und innovativer Programme erkunden.",
+          "student_overview": "Man kann einige erstaunliche Dinge tun, wenn man `bis`-Schleifen verwendet!"
+        },
+        "coursed-2023/End of Course Project": {
+          "name": "Projekt am Ende des Kurses",
+          "overview": "Diese **Projekt**-Stunde führt die SchülerInnen durch den Prozess des Entwurfs, der Entwicklung und der Präsentation neuer Projekte!",
+          "preparation": "-   Spielen Sie die Rätsel durch, um mögliche Problembereiche für Ihre Klasse zu finden. - Drucken Sie eine **Projektplanungshilfe** für jeden SchülerInnen (oder jedes Paar) aus. - (Optional) Füllen Sie Ihre eigene Planungshilfe aus und programmieren Sie Ihr eigenes Projekt, um es den SchülerInnenn zu zeigen!",
+          "purpose": "Diese Lektion bietet den SchülerInnenn Raum, ein Projekt nach eigenem Entwurf zu erstellen. Dabei wird ein schrittweiser Prozess angewandt, der Planung erfordert, aber auch viel Raum für Kreativität lässt.",
+          "student_overview": "Freuen Sie sich auf eine ganze Menge Programmierung! Es ist an der Zeit, mit der Erstellung Ihres Projekts zu beginnen."
+        },
+        "coursee-2023/Be A Super Digital Citizen": {
+          "name": "Ein überragender digitaler Bürger sein",
+          "overview": "[![Common Sense Education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org) Diese Lektion wurde ursprünglich von Common Sense Education erstellt. [Mehr erfahren](https://www.commonsense.org/education/digital-citizenship/curriculum) Online-Tools geben Kindern viele Möglichkeiten, aber sie bringen auch große Verantwortung mit sich. Aber wissen Kinder immer, was zu tun ist, wenn sie mit Cybermobbing konfrontiert werden? Zeigen Sie Ihren SchülerInneninnen und SchülerInnenn, wie sie handeln und Konflikte lösen können - von der Aufmüpfigkeit bis zur Hilfe für andere in Not.",
+          "preparation": "-   Gehen Sie das Unterrichtsmaterial durch. - Drucken Sie das/die Handout(s) für jeden SchülerInnen aus. - Bereiten Sie Buntstifte oder Marker für die SchülerInnen vor.",
+          "purpose": "Der Lehrplan für digitale Bürgerschaft von Common Sense behandelt sechs Kernthemen, die auf dem neuesten Forschungsstand zu Kindern, Medien und Technologie basieren. Diese Unterrichtsstunde konzentriert sich auf Cybermobbing, digitales Drama und Hassrede. Die SchülerInnen setzen sich mit diesen schwierigen Themen auseinander und übernehmen die aktive Rolle von Vorreitern, die positive, unterstützende Online-Communitys aufbauen und Grausamkeiten im Internet bekämpfen.",
+          "student_overview": "Hier erfahrt ihr, wie ihr euch gegen Cybermobbing wehren könnt.."
+        },
+        "coursee-2023/Private and Personal Information": {
+          "name": "Private und persönliche Informationen",
+          "overview": "[![Common Sense Education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org) Diese Lektion wurde ursprünglich von Common Sense Education erstellt. [Erfahren Sie mehr.](https://www.commonsense.org/education/digital-citizenship/curriculum) Es liegt in der Natur unserer SchülerInnen, sich mit anderen auszutauschen und in Verbindung zu treten. Doch der Online-Austausch birgt einige Risiken. Wie können wir Kindern helfen, starke, positive und sichere Online-Beziehungen aufzubauen? Helfen Sie Ihren SchülerInneninnen und SchülerInnenn, den Unterschied zwischen dem, was persönlich ist, und dem, was man besser für sich behält, zu erkennen.",
+          "preparation": "-   Gehen Sie das Unterrichtsmaterial durch.\n-   Drucken Sie das/die Handout(s) für jeden SchülerInnen aus.",
+          "purpose": "Der Lehrplan für digitale Bürgerschaft von Common Sense behandelt sechs Kernthemen, die auf den neuesten Forschungsergebnissen zu Kindern, Medien und Technologie basieren. Diese Lektion konzentriert sich auf Datenschutz und Sicherheit. Die SchülerInnen lernen, wie sie persönliche Daten schützen können, und erwerben ein tieferes Verständnis für ihre Datenschutzrechte, damit sie sich für sich selbst und andere einsetzen können.",
+          "student_overview": "Das Internet macht Spaß und ist aufregend, aber es ist auch wichtig, auf die eigene Sicherheit zu achten. In dieser Lektion lernen Sie den Unterschied zwischen Informationen, die sicher ausgetauscht werden können, und Informationen, die privater Natur sind."
+        },
+        "coursee-2023/Swimming Fish with Sprite Lab": {
+          "name": "Schwimmende Fische mit Sprite Lab.",
+          "overview": "In dieser Lektion lernen die SchülerInnen die beiden wesentlichen Konzepte von Sprite Lab kennen: Sprites und Behaviors. Sprites sind Zeichen oder Objekte auf dem Bildschirm, die von den SchülerInnen bewegt, geändert und manipuliert werden können. Behaviors oder Verhaltensweisen sind Aktionen, die Sprites kontinuierlich ausführen, bis sie angehalten werden.",
+          "preparation": "-   Spielen Sie die Rätselh, um mögliche Problembereiche für Ihre Klasse zu finden. - Stellen Sie sicher, dass alle SchülerInnen ein Reflexionstagebuch haben.",
+          "purpose": "Diese Lektion soll die SchülerInnen mit dem Kernvokabular von Sprite Lab vertraut machen und ihnen die Möglichkeit geben, Konzepte, die sie in anderen Umgebungen gelernt haben, auf dieses Tool anzuwenden. Durch die Erstellung eines Aquariums beginnen die SchülerInnen, das Programmiermodell dieses Tools zu verstehen und Wege zu erkunden, wie sie es nutzen können, um sich auszudrücken.",
+          "student_overview": "Lernen Sie, wie man Sprites erstellt und bearbeitet."
+        },
+        "coursee-2023/Hello World": {
+          "name": "Hallo Welt"
+        },
+        "coursee-2023/Mini-Project: About Me": {
+          "name": "Miniprojekt: Über mich",
+          "overview": "Die SchülerInnen wenden ihr Wissen über die Weitergabe persönlicher und privater Informationen im Internet an, indem sie in diesem **Miniprojekt** ein interaktives Poster erstellen.",
+          "purpose": "Diese Lektion soll die vorherige Lektion über persönliche und private Informationen für die SchülerInnen persönlich relevant machen. Anhand von SAFE (persönlich) und UNSAFE (privat) Beispielen üben die SchülerInnen die sichere Selbstdarstellung im Internet, indem sie mit SpriteLab ihre eigenen Sprite-Kostüme entwerfen und Text generieren.",
+          "student_overview": "Bei der Erstellung eines interaktiven Posters mit Sprite Lab können die SchülerInnen ihr Verständnis für den Austausch persönlicher und privater Informationen im Web einfließen lassen."
+        },
+        "coursee-2023/Drawing with Loops": {
+          "name": "Zeichen mit Schleifen",
+          "overview": "Beobachten Sie, wie sich die SchülerInnen sichtlich freuen, wenn sie mit einer kleinen Anzahl von Bausteinen und digitalen Stickern ihre eigenen wunderschönen Designs entwerfen! Diese Lektion baut auf dem Verständnis von Schleifen aus früheren Lektionen auf und gibt den SchülerInnen die Chance, wirklich kreativ zu sein. Diese Aktivität ist fantastisch, um Artefakte für Portfolios oder Eltern-/Lehrerabende herzustellen.",
+          "preparation": "-   Spielen Sie die Rätselh, um mögliche Problembereiche für Ihre Klasse zu finden. - Stellen Sie sicher, dass alle SchülerInnen ein Reflexionstagebuch haben.",
+          "purpose": "Die SchülerInnen üben die Verwendung von Schleifen, ein Konzept, das in den kommenden Stunden immer wieder aufgegriffen wird.",
+          "student_overview": "In dieser Stunde machen es Schleifen einfach, mit Artist noch coolere Bilder zu machen!"
+        },
+        "coursee-2023/Fancy Shapes using Nested Loops": {
+          "name": "Interessante Formen mit geschachtelten Schleifen",
+          "overview": "In dieser Stunde zum **Aufbau von Fähigkeiten** entwickeln die SchülerInnen raffinierte Designs mithilfe von Artist. Am Schluss der Stunde haben die SchülerInnen die Möglichkeit, ihre eigenen Designs zu entwickeln.",
+          "preparation": "-   Spielen Sie die Rätsel durch, um mögliche Problembereiche für Ihre Klasse zu finden. - Achten Sie darauf, dass jeder SchülerInnen ein Reflexionstagebuch hat. - Überlegen Sie, welche Unterstützung Ihre SchülerInnen bei Drehungen und Winkeln benötigen könnten.",
+          "purpose": "In dieser Online-Aktivität erstellen die SchülerInnen Designs in Artist, die sie stolz mit ihren Liebsten teilen können. Der Zweck dieser Aktivität ist es, verschachtelte Schleifen als eine Möglichkeit zu nutzen, um künstlerisch veranlagte SchülerInnen zu inspirieren, das Programmieren als eine weitere kreative Möglichkeit zu sehen. Diese Rätsel wurden entwickelt, um das kritische Denken, das Verständnis für elementare Geometrie und die Kreativität zu fördern - alles im Rahmen von verschachtelten Schleifen!",
+          "student_overview": "Mehr geschachtelte Schleifen! Dieses Mal können Sie mit geschachtelten Schleifen eine atemberaubende Zeichnung erstellen."
+        },
+        "coursee-2023/Mini-Project: Design a Snowflake": {
+          "name": "Mini-Projekt: Entwerfe eine Schneeflocke",
+          "overview": "Mit dem Wissen, wie man Schleifen aufschichten kann, können die SchülerInnen so viele schöne Dinge kreieren. Diese Lektion führt sie durch eine Reihe von Übungen, um ihnen zu helfen, ihre eigenen professionelle Bilder mit Annas und Elsas ausgezeichneten Eislaufkünsten zu erstellen!",
+          "preparation": "-   Spielen Sie die Rätsel durch, um mögliche Problembereiche für Ihre Klasse zu finden. - Stellen Sie sicher, dass jeder SchülerInnen ein Reflexionstagebuch hat.",
+          "purpose": "In dieser Lektion wenden die SchülerInnen ihre Kenntnisse über verschachtelte Schleifen an, um Bilder zu erstellen, die sie gerne weitergeben möchten.",
+          "student_overview": "Anna und Elsa sind ausgezeichnete Eisläuferinnen, brauchen aber Ihre Hilfe, um Muster auf das Eis zu zeichnen. Verwenden Sie geschachtelte Schlaufen, um etwas super COOLes zu schaffen."
+        },
+        "coursee-2023/Songwriting": {
+          "name": "Songschreiben",
+          "overview": "Eine der großartigsten Strukturen in der Welt der Informatik ist die Funktion. Funktionen (die manchmal auch als Prozesse bezeichnet werden) sind Miniprogramme, die Sie immer und immer wieder innerhalb Ihres größeren Programms verwenden können. Diese Lektion hilft den SchülerInnen dabei, intuitiv zu verstehen, warum das Kombinieren von Code-Bausteinen mit Funktionen besonders nützlich sein kann.",
+          "preparation": "-   (Optional) Schauen Sie sich das Video **\\*Lektion in Aktion** an. - Drucken Sie mehrere **Arbeitsblätter** für jede Gruppe aus. - Drucken Sie eine **Bewertung** für jeden SchülerInnen aus. - Sichern Sie sich Zugang zu den Liedern und Texten für die Aktivität. - Stellen Sie sicher, dass jeder SchülerInnen ein Tagebuch hat.",
+          "purpose": "Die Verwendung von Funktionen hilft, den Code zu vereinfachen und die Fähigkeit der SchülerInnen zu entwickeln, ihr Programm zu organisieren. Die SchülerInnen werden schnell erkennen, dass das Schreiben von Funktionen ihre langen Programme leichter lesbar und einfacher zu debuggen macht, wenn etwas schief geht.",
+          "student_overview": "Auch Rockstars brauchen Programmierkenntnisse. In dieser Lektion lernen Sie Funktionen mithilfe von Songtexten kennen."
+        },
+        "coursee-2023/Functions in Minecraft": {
+          "name": "Funktionen in Minecraft",
+          "overview": "Die SchülerInnen verstehen in diesem unterhaltsamen und interaktiven Minecraft-Abenteuer allmählich, wie nützlich Funktionen sein können!",
+          "preparation": "-   Spielen Sie die Rätselh, um mögliche Problembereiche für Ihre Klasse zu finden. - Stellen Sie sicher, dass alle SchülerInnen ein Reflexionstagebuch haben.",
+          "purpose": "Die SchülerInnen entdecken die Vielseitigkeit der Programmierung, indem sie Funktionen in verschiedenen Umgebungen üben. Dabei erkennen sie wiederverwendbare Muster und sind in der Lage, benannte Blöcke einzubinden, um vordefinierte Funktionen aufzurufen.",
+          "student_overview": "Verstehen Sie, wie Sie Funktionen für den effizientesten Code nutzen können?"
+        },
+        "coursee-2023/Functions with Artist": {
+          "name": "Funktionen mit dem Künstler",
+          "overview": "Die SchülerInnen lernen die Verwendung von Funktionen mit Artist kennen. Sie erstellen und verändern tolle Bilder. Bei komplizierteren Mustern lernen die SchülerInnen die geschachtelten Funktionen kennen, indem sie eine Funktion in einer anderen Funktion aufrufen.",
+          "preparation": "-   Spielen Sie die Rätselh, um mögliche Problembereiche für Ihre Klasse zu finden. - Stellen Sie sicher, dass alle SchülerInnen ein Reflexionstagebuch haben.",
+          "purpose": "Eine der wichtigsten Komponenten dieser Lektion ist es, den SchülerInneninnen und SchülerInnenn einen Raum zu geben, in dem sie etwas schaffen können, auf das sie stolz sind. Die Rätsel werden immer komplexer, aber jedes neue Rätsel baut auf dem vorherigen Rätsel auf. Am Ende dieser Lektion werden die SchülerInnen selbstbewusst und stolz auf ihre harte Arbeit sein.",
+          "student_overview": "Mit Funktionen komplexe Zeichnungen leichter erstellen!"
+        },
+        "coursee-2023/Conditionals in Minecraft: Voyage Aquatic": {
+          "name": "Bedingungen in Minecraft: Voyage Aquatic",
+          "preparation": "-   Spielen Sie die Rätsel zu dieser Lektion durch, um mögliche Problembereiche für Ihre Klasse zu finden. - Stellen Sie sicher, dass jeder SchülerInnen ein Reflexionsjournal hat.",
+          "purpose": "Mit dieser Reihe von Rätseln wird das Wissen über Schleifen gefestigt und ausgebaut und es werden Konditionale eingeführt. Durch die Verknüpfung dieser beiden Konzepte können die SchülerInnen das Potenzial für die Erstellung von lustigen und innovativen Programmen in einer neuen und aufregenden Umgebung erkunden.",
+          "student_overview": "Hier erfahren Sie in der Welt von Minecraft mehr über Bedingungen."
+        },
+        "coursee-2023/Conditionals with the Farmer": {
+          "name": "Bedingungen mit dem Farmer",
+          "overview": "Diese Lektion führt die SchülerInnen in `Während`-Schleifen und `wenn/andere` Aussagen ein. _Während-Schleifen_ sind Schleifen, die Befehle so lange wiederholen, wie eine Bedingung zutrifft. Während-Schleifen werden verwendet, wenn der Programmierer nicht genau weiß, wie oft die Befehle wiederholt werden müssen, aber der Programmierer weiß, welche Bedingung erfüllt sein muss, damit die Schleife weiterläuft. \\`Wenn / Sonst'-Anweisungen bieten Flexibilität bei der Programmierung, indem ganze Codeabschnitte nur dann ausgeführt werden, wenn etwas zutrifft andernfalls wird etwas anderes ausgeführt.",
+          "preparation": "-   Spielen Sie die Rätselh, um mögliche Problembereiche für Ihre Klasse zu finden. - Stellen Sie sicher, dass alle SchülerInnen ein Reflexionstagebuch haben.",
+          "purpose": "In dieser Lektion lernen die SchülerInnen while-Schleifen und \"if / else\"-Anweisungen kennen.",
+          "student_overview": "In dieser unterhaltsamen und herausfordernden Serie können Sie dem Computer sagen, was er unter bestimmten Bedingungen tun soll."
+        },
+        "coursee-2023/Functions with Harvester": {
+          "name": "Funktionen mit der Erntearbeiterin",
+          "overview": "Die SchülerInnen haben gelernt, wie man in Artist eindrucksvolle Zeichnungen erstellt und in Bee, wie man durch Labyrinthe zu navigiert. Heute werden sie Funktionen für das Einbringen von Erntegut in Farmer verwenden. In dieser Lektion wird den SchülerInnen gezeigt, dass es vorteilhaft ist, Funktionen auf die neue Art und Weise zu verwenden, indem sie sie mit `während`-Schleifen und `wenn/sonst`-Anweisungen kombinieren.",
+          "preparation": "-   Spielen Sie die Rätselh, um mögliche Problembereiche für Ihre Klasse zu finden. - Stellen Sie sicher, dass alle SchülerInnen ein Reflexionstagebuch haben.",
+          "purpose": "Diese Lektion soll die SchülerInnen dazu anregen, Konditionale mit Funktionen zu verwenden. Diese Rätsel sollen die Problemlösungskompetenz und das kritische Denken fördern.",
+          "student_overview": "Funktionen werden Ihnen viel Arbeit ersparen, wenn Sie dem Farmer bei der Ernte helfen!"
+        },
+        "coursee-2023/Designing for Accessibility": {
+          "name": "Design für Barrierefreiheit",
+          "overview": "In dieser Lektion erfahren die SchülerInnen mehr über Barrierefreiheit und die Bedeutung von Empathie im Rahmen eines Brainstorming und die Entwicklung barrierefreier Lösungen für hypothetische Apps.",
+          "preparation": "-   Lesen Sie zum Kontext die **\\*Arten von Behinderungen**. - Lesen Sie sich die Anmerkungen des Referenten auf dem **\\*Diaplan** durch. - Bereiten Sie genügend Skizzen-/Zeichenmaterial für alle SchülerInnen vor.",
+          "purpose": "Durch das Erlernen der Barrierefreiheit erkennen die SchülerInnen die Auswirkungen der Computertechnik über ihr eigenes Leben hinaus. Barrierefreiheit scheint vielleicht kein relevantes CS-Thema zu sein, aber die Entwicklung von Technologien, die für unterversorgte Nutzer zugänglich sind, trägt dazu bei, dass die Technik auch für alle anderen besser wird.",
+          "student_overview": "Erfahren Sie mehr über die Zugänglichkeit und den Wert von Empathie durch Brainstorming und die Entwicklung zugänglicher Lösungen für mögliche Apps. "
+        },
+        "coursee-2023/Digital Sharing": {
+          "name": "Digitale Teilhabe",
+          "overview": "In dieser **Erkundungsstunde** hilft den SchülerInnen, die Herausforderungen und Vorteile der Achtung von Eigentumsrechten und Urheberrechten zu verstehen, insbesondere in digitalen Umgebungen. ",
+          "preparation": "-   Suchen Sie das Video **\\*Copyright Sharing** unter \"Links\" unten - Laden Sie den vollständigen Unterrichtsplan **\\*Digital Sharing Lesson Plan** von Copyright and Creativity herunter und lesen Sie ihn durch - Erstellen Sie als Lehrkraft ein Kunstwerk für die Lektion (Bild, Lied, Diashow usw.) - Stellen Sie sicher, dass jede/r SchülerInnen/in ein Reflexionstagebuch hat. - Sie benötigen ein Tablet oder ein Smartphone, um die gemeinsame Nutzung dieses Gegenstandes nachzustellen",
+          "purpose": "Die meisten dieser Projekte werden entweder Code oder Bildmaterial enthalten, das die SchülerInnen nicht selbst erstellt haben. Diese Lektion soll den SchülerInnenn zeigen, wie sie mit der Verwendung von Inhalten, die nicht von ihnen stammen, richtig umgehen.",
+          "student_overview": "In dieser Lektion lernen Sie mehr über die Probleme und Vorteile von geistigem Eigentum und Urheberrecht."
+        },
+        "coursee-2023/End of Course Project": {
+          "name": "Projekt am Ende des Kurses",
+          "overview": "Die nächsten vier Lektionen ermöglichen es den SchülerInnen, ihre Programmierkenntnisse in einem Abschlussprojekt einzusetzen. Dieses Projekt wird den Einzelnen dabei helfen, Erfahrungen beim Programmieren zu sammeln und etwas zu erstellen, das sie mit ihren SchulkollegInnen und der Familie teilen können. Es ist als mehrstündige oder mehrwöchige Erfahrung gedacht und die SchülerInnen werden Zeit damit verbringen, Brainstorming zu betreiben, etwas über den Designprozess zu lernen, etwas zu entwickeln und ihre Abschlussarbeit zu präsentieren. \\\\r\n\\\\r \nIn der Phase des Entdeckens beschäftigen sich die SchülerInnen mit vorgefertigten Artist- und Sprite-Lab-Programmen, um sich inspirieren zu lassen. Als nächstes lernen sie den Designprozess kennen und erfahren, wie sie ihn in ihren eigenen Projekten einsetzen können. Sie erhalten dann den Raum, um ihr eigenes Projekt in Artist, Sprite Lab oder einer anderen Schnittstellenanwendung, die sie kennen, zu erstellen. Zum Schluss können die SchülerInnen ihre fertige Arbeit ihren KlassenkameradInnen präsentieren.",
+          "preparation": "-   Verbringen Sie Zeit damit, Ihr eigenes Projekt mit dem Artist und dem Sprite Lab zu erstellen. Machen Sie sich mit den Möglichkeiten und Grenzen der einzelnen Werkzeuge vertraut. - Passen Sie die **Schrift** an die Ziele Ihrer Klasse an und drucken Sie eine Kopie für jeden SchülerInnen aus. - Passen Sie das Arbeitsblatt **Projektentwurf** an Ihre Klasse an und drucken Sie ein Paket für jeden SchülerInnen aus.",
+          "purpose": "Die SchülerInnen möchten sich vielleicht sofort an die Umsetzung ihrer Projekte machen, diese Stunde dient jedoch dazu, aus ihren Ideen Pläne werden zu lassen. Diese Struktur gibt den Träumern Halt und denjenigen, die im Dunkeln tappen, einen Weg vor. Geben Sie den SchülerInnenn ausreichend Zeit, um ihre Projekte zu entwickeln und zu überarbeiten. Das Ausprobieren, das in dieser Stunde unvermeidlich ist, lehrt Problemlösung und Ausdauer.",
+          "student_overview": "Projekte dieser Größenordnung erfordern Zeit und viel Planung. Lasen Sie sich inspirieren, machen Sie einen Plan und lassen Sie Ihrer Kreativität freien Lauf!"
+        },
+        "coursef-2023/The Power of Words": {
+          "name": "Die Macht der Worte",
+          "overview": "[![Common Sense Education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nDiese Unterrichtsstunde wurde ursprünglich von Common Sense Education erstellt. [Weitere Informationen.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nWenn Kinder größer werden, kommunizieren sie natürlich mehr online. Aber einiges von dem, was sie sehen, könnte sie verletzen, traurig oder wütend machen oder sogar verängstigen. Helfen Sie Ihren SchülerInneninnen, Empathie für andere zu entwickeln und Strategien für den Umgang mit Cybermobbing zu erlernen.",
+          "preparation": "-   Wiederholen Sie das Unterrichtsmaterial.\n-   Drucken Sie das/die Handout(s) für jeden SchülerInnen aus\n-   Halten Sie eine lange Schnur (oder ein Seil) und Papier für den Unterricht bereit.",
+          "purpose": "Der Lehrplan für digitale Bürgerschaft von Common Sense behandelt sechs Kernthemen, die auf dem neuesten Forschungsstand zu Kindern, Medien und Technologie basieren. Diese Unterrichtsstunde konzentriert sich auf Cybermobbing, digitales Drama und Hassrede. Die SchülerInnen setzen sich mit diesen schwierigen Themen auseinander und übernehmen die aktive Rolle von Vorreitern, die positive, unterstützende Online-Communitys aufbauen und Grausamkeiten im Internet bekämpfen.",
+          "student_overview": "Bullying ist niemals erlaubt. In dieser Stunde lernst du, was du im Internet sagen darfst und was nicht."
+        },
+        "coursef-2023/Introducing Sprite Lab": {
+          "name": "Einführung Sprite Lab",
+          "overview": "In dieser **Kontext-Setting**-Lektion diskutieren die SchülerInnen die Rolle von Computern und Technologie in ihrem Leben und konzentrieren sich darauf, wie Apps und Tools den NutzerInnen die Wahl lassen, wie sie sie nutzen. Die SchülerInnen werden auch Apps erforschen, die denen ähneln, die sie später selbst erstellen werden.",
+          "preparation": "-   Legen Sie fest, wie sich die SchülerInnen bei Code.org anmelden.\n-   Erstellen Sie ggf. Code.org-Konten für die SchülerInnen.\n-   Weisen Sie den SchülerInnen Einführung in das Sprite Lab zu.\n-   Drucken Sie Exmplare des Arbeitsblatts **\\*Apps erforschen** aus (oder veröffentlichen Sie die digitale Version in Ihrem LMS).",
+          "purpose": "In der ersten Lektion geht es darum, die SchülerInnen für den Kurs zu begeistern und ihre persönlichen Interessen mit der Informatik zu verbinden.",
+          "student_overview": "Sie werden die Rolle von Computern und Technologie in Ihrem Leben diskutieren, wobei der Schwerpunkt darauf liegt, wie Apps und Tools den Nutzern die Wahl lassen, wie sie sie verwenden."
+        },
+        "coursef-2023/Making Sprites": {
+          "name": "Sprites rogrammieren",
+          "overview": "In dieser Stunde zum **Aufbau von Fähigkeiten** bearbeiten die SchülerInnen eine Reihe von Programmierlevels am Computer. Am Schluss der Levels können die SchülerInnen in einer freien Spielaufgabe bauen, was sie wollen. Die SchülerInnen schreiben Programme und lernen die beiden Konzepte kennen, die im Mittelpunkt von Sprite Lab stehen: Sprites und Verhaltensweisen. ",
+          "preparation": "Spielen Sie die Levels und sehen Sie sich die **\\*Unterrichtsfolien** an.",
+          "purpose": "Diese Lektion soll die SchülerInnen in die Programmierung mit Sprite Lab einführen. Die SchülerInneninnen und SchülerInnen beginnen, das Programmiermodell dieses Tools zu verstehen und erkunden, wie sie es nutzen können, um sich auszudrücken.",
+          "student_overview": "In dieser Stunde lernt ihr, wie man Programme schreibt und macht euch mit Sprites und Verhaltensweisen vertraut."
+        },
+        "coursef-2023/Sprites in Action": {
+          "name": "Sprites in Aktion",
+          "overview": "In dieser Stunde zum **Aufbau von Fähigkeiten** bearbeiten die SchülerInnen eine Reihe von Programmierlevels am Computer und lösen zum Schluss der Levels freie Spielaufgaben, wo sie bauen können, was sie wollen. Die SchülerInnen schreiben Programme, die auf zeitgesteuerte Ereignisse und Benutzereingaben reagieren. ",
+          "preparation": "Spielen Sie die Levels und sehen Sie sich die Unterrichtsfolien an.",
+          "purpose": "In dieser Unterrichtsstunde werden die Kenntnisse aus der vorangegangenen Unterrichtsstunde vertieft und die SchülerInnen in die Programmierung mit Ereignissen eingeführt. Während des gesamten Kurses werden Ereignisse die primäre Methode sein, mit der die SchülerInnen den Ablauf ihrer Programme im Laufe der Zeit oder als Reaktion auf den Benutzer verändern.",
+          "student_overview": "Ihr werdet die Programmier-Levels abschließen und zum Schluss eine Aufgabe im freien Spiel lösen, bei der ihr bauen könnt, was ihr wollt."
+        },
+        "coursef-2023/Mini-Project: Virtual Pet": {
+          "name": "Miniprojekt: Virtuelles Haustier",
+          "overview": "In dieser Lektion entwickeln die SchülerInnen ein interaktives virtuelles Haustier, das so aussieht und sich so verhält, wie sie es sich wünschen. Die SchülerInnen verwenden das \"Costume\"-Werkzeug von Sprite Lab, um das Aussehen ihres Haustiers ihren Wünschen anzupassen. Anschließend verwenden sie Ereignisse, Behaviors und andere Konzepte, die sie gelernt haben, um ihrem Haustier sein eigenes Leben zu geben!",
+          "preparation": "-   Spielen Sie die Rätselh, um mögliche Problembereiche für Ihre Klasse zu finden. - Stellen Sie sicher, dass alle SchülerInnen ein Reflexionstagebuch haben.",
+          "purpose": "Diese Stunde ermöglicht es den SchülerInnenn, Programmierkonzepte aus vorherigen Stunden in einem anderen kreativen Kontext anzuwenden.",
+          "student_overview": "Erstelle ein interaktives virtuelles Haustier, das so aussieht und sich so verhält, wie du es möchtest! Erwecke dein Haustier zum Leben!"
+        },
+        "coursef-2023/Blank Space Stories": {
+          "name": "Geschichten aus dem leeren Weltraum",
+          "overview": "In dieser Stunde zum **Kontext** lernen die SchülerInnen anhand von Lückentexten (ähnlich wie bei Mad Libs®), wie Computer die Eingaben eines Benutzers aufnehmen und speichern, um sie dann später bei der Ausführung eines Programms zu verwenden. ",
+          "preparation": "Halten Sie 6 Umschläge (auch geeignet: Papier oder Karteikarten, in der Hälfte gefaltet) bereit. \n\n-   Beschriften Sie die Vorderseite jedes Umschlags mit Großbuchstaben: Gegenstand, Flüssigkeit, Zahl, Adjektiv, Körperteil, Zahl\n\n-   Drucken Sie Kopien des **\\*Arbeitsblatts** der SchülerInnen aus (oder stellen Sie die digitale Version in Ihr LMS).",
+          "purpose": "Diese Stunde bietet einen allgemeinen Kontext, der für das Verständnis der Funktionsweise von Variablen hilfreich ist, wenn die SchülerInnen zum Programmieren zurückkehren.",
+          "student_overview": "Bei dieser Aktivität arbeitet ihr mit Lückentext-Stories (ähnlich wie bei Mad Libs®), um zu verstehen, wie Computer die Eingaben eines Benutzers aufnehmen und speichern, um sie dann später bei der Ausführung eines Programms zu verwenden. "
+        },
+        "coursef-2023/Text and Prompts": {
+          "name": "Text und Eingabeaufforderungen",
+          "overview": "In dieser Stunde zum **Aufbau von Fähigkeiten** üben die SchülerInnen mit Variablen in Sprite Lab. ",
+          "preparation": "Spielen Sie die Levels und sehen Sie sich die Unterrichtsfolien an.",
+          "purpose": "Variablen werden in diesem Kurs zum Speichern und Ändern von Daten verwendet. Zu diesem Zeitpunkt werden die SchülerInnen lediglich Werte speichern und abrufen, ohne sie zu verändern. In späteren Unterrichtsstunden werden die SchülerInnen numerische Werte speichern und sie im Laufe der Zeit verändern, um z. B. den Punktestand eines Spielers in einem Spiel nachzuverfolgen.",
+          "student_overview": "In dieser Stunde übt ihr die Verwendung von Variablen in Sprite Lab."
+        },
+        "coursef-2023/Mini-Project: User Input Programs": {
+          "name": "Miniprojekt: Programme zur Benutzereingabe",
+          "overview": "Die SchülerInnen wenden ihre neuen Fähigkeiten im Umgang mit Variablen in einem von drei freien **Mini-Projekten** an. Die SchülerInnen erkunden Beispielprogramme, erstellen einen Plan für ihre eigenes Projekt und programmiere es von null.",
+          "preparation": "-   Drucken Sie die Planungshilfe aus oder verteilen Sie eine digitale Kopie an die SchülerInnen. Prüfen Sie sie im Voraus, falls Sie Änderungen vornehmen möchten, um sie an Ihre Klasse anzupassen.\n\n-   Gehen Sie die Optionen in Level 3 durch, um sich mit dem Ablauf vertraut zu machen, dem die SchülerInnen folgen müssen.\n\n-   Diese Unterrichtsstunde kann sich über mehrere Stunden erstrecken. Berücksichtigen Sie die Auswirkungen auf die Zeitplanung im Voraus.",
+          "purpose": "In dieser Stunde werden keine neuen Fähigkeiten oder Konzepte eingeführt, sondern die SchülerInnen haben die Möglichkeit, das Gelernte auf kreative Weise anzuwenden.",
+          "student_overview": "Wendet eure neue Fähigkeiten im Umgang mit Variablen in einem der drei freien Projekte an."
+        },
+        "coursef-2023/Simulating Experiments": {
+          "name": "Experimente simulieren",
+          "overview": "In dieser Stunde zum **Kontext** Lektion führen die SchülerInnen eine einfache Simulation in Sprite Lab durch und sammeln Daten. Nachdem sie die Simulation mehrmals durchgeführt haben, können die SchüleInnen vorhersagen, wie sich die Änderung einer Variable in der Simulation auf das Ergebnis auswirken könnte, und diese Hypothese testen.",
+          "preparation": "-   Legen Sie fest, ob die SchülerInnen die Simulationen auf ihren eigenen Computern durchführen oder ob Sie sie mit der ganzen Klasse durchführen \n-   Bereiten Sie gegebenenfalls die beiden Simulationen dieser Stunde vor.",
+          "purpose": "In vielen wissenschaftlichen Disziplinen werden in der Informatik Modelle und Simulationen eingesetzt, um Experimente durchzuführen, Daten zu sammeln und diese Daten zu analysieren, um Erkenntnisse zu gewinnen. Obwohl die in dieser Stunde vorgestellte Simulation recht simpel ist, kann sie den SchülerInnen als Ausgangspunkt dienen, um zu überlegen, wie anspruchsvollere Computermodelle zum Testen von Hypothesen verwendet werden könnten.",
+          "student_overview": "Führen Sie Simulationen auf dem Computer durch und experimentieren Sie durch die Veränderung von Variablen."
+        },
+        "coursef-2023/Outbreak": {
+          "name": "Ausbruch",
+          "preparation": "-   Spielen Sie die Rätselh, um mögliche Problembereiche für Ihre Klasse zu finden. - Stellen Sie sicher, dass alle SchülerInnen ein Reflexionstagebuch haben.",
+          "purpose": "In der letzten Lektion haben die Schüler Daten einer einfachen Simulation gesammelt und interpretiert. In dieser Lektion befolgen die Schüler die Programmieranleitung für ihr eigenes Simulationsmodell. Das Wissen der Schüler über Virenausbrüche in der realen Welt werden in einem fiktiven Szenario angewandt. "
+        },
+        "coursef-2023/AI For Oceans": {
+          "name": "KI für Meere",
+          "overview": "In dieser **Erkundungsstunde** trainieren die SchülerInnen ein Maschinenlernmodell durch Klassifizierung von Fischen und anderen Objekten.",
+          "purpose": "Diese Stunde soll für die SchülerInnenn ein schneller Einstieg in die künstliche Intelligenz und das maschinelle Lernen sein. Die SchülerInnen lernen wie ein maschinelles Lernmodell anhand der trainierten Daten neue Daten klassifiziert. Die SchülerInneninnen und SchülerInnen sollen während des Tutoriums eine positive Erfahrung machen und, was noch wichtiger ist, motiviert werden, sich weiter mit Informatik zu befassen.",
+          "student_overview": "Klassifiziert Objekte als \"Fisch\" oder \"nicht Fisch\", um zu versuchen, Müll aus dem Meer zu entfernen. Erweitert euren Trainingsdatensatz mit anderen Meeresbewohnern, die ins Wasser gehören. Im zweiten Teil der Übung wählt ihr eigene Beschriftungen aus, die auf Bilder zufällig generierter Fischen anwandt werden. Diese Trainingsdaten nutzt ein maschinelles Lernmodell, das dann in der Lage sein sollte, neue Bilder selbständig zu beschriften."
+        },
+        "coursef-2023/The Internet": {
+          "name": "das Internet",
+          "overview": "Die SchülerInnen tun so, als würden sie durch das Internet fließen und lernen in dieser **Erkundungsstunde** etwas über Verbindungen, URL, IP-Adressen und DNS.",
+          "preparation": "-   Schauen Sie sich das Lehrervideo **\\*Internet**.\n-   Drucken Sie genügend **\\*IP-Adresskarten und Zustellungskarten**- Manipulative für jede Gruppe aus.\n-   Drucken Sie eine **\\*Internet**-Bewertung für alle SchülerInnen aus.\n-   Greifen Sie auf das Internet zu (z. B. **\\*get-site-ip.com**.\n-   Stellen Sie sicher, dass alle SchülerInnen ein Reflexionstagebuch haben.",
+          "purpose": "Wenn Sie alle Lektionen in diesem Kurs durchgeführt haben, dann haben alle SchülerInnen in Ihrer Klasse das Internet genutzt... aber wie viele wissen, wie es funktioniert? Mehr über das Internet zu erfahren, wird den SchülerInnenn helfen, ein besseres Verständnis für die endlosen Möglichkeiten des Internets zu entwickeln.",
+          "student_overview": "Haben Sie sich jemals gefragt, wie sich Informationen im Internet verbreiten? Es ist keine Hexerei! In dieser Stunde lernen Sie die Grundlagen der Funktionsweise des Internets kennen."
+        },
+        "coursef-2023/End of Course Project": {
+          "name": "Projekt am Ende des Kurses",
+          "overview": "Diese **Projekt**-Stunde führt die SchülerInnen durch den Prozess des Entwurfs, der Entwicklung und der Präsentation neuer Projekte!",
+          "preparation": "-   Erstellen Sie Ihr eigenes Projekt mit Artist und dem Sprite Lab zu erstellen. Machen Sie sich mit den Möglichkeiten und Grenzen der einzelnen tOOLS vertraut\n-   Passen Sie die Rubrik an die Ziele Ihrer Klasse an und drucken Sie eine Kopie für jeden SchülerInnen aus.\n-   Passen Sie das Arbeitsblatt für die Projektgestaltung an Ihre Klasse an und drucken Sie ein Paket für jeden SchülerInnen aus.",
+          "purpose": "Die SchülerInnen möchten sich vielleicht sofort an die Umsetzung ihrer Projekte machen, diese Stunde dient jedoch dazu, aus ihren Ideen Pläne werden zu lassen. Diese Struktur gibt den Träumern Halt und denjenigen, die im Dunkeln tappen, einen Weg vor. Geben Sie den SchülerInnenn ausreichend Zeit, um ihre Projekte zu entwickeln und zu überarbeiten. Das Ausprobieren, das in dieser Stunde unvermeidlich ist, lehrt Problemlösung und Ausdauer.",
+          "student_overview": "Projekte dieser Größenordnung erfordern Zeit und viel Planung. Lasen Sie sich inspirieren, machen Sie einen Plan und lassen Sie Ihrer Kreativität freien Lauf!"
+        },
+        "express-2023/Programming with Angry Birds": {
+          "name": "Programmieren mit Angry Birds",
+          "overview": "Unter Verwendung von Figuren aus Angry Birds entwickeln die SchülerInnen sequentielle Algorithmen, um einen Vogel von einer Seite eines Labyrinths zu einem Schwein auf der anderen Seite zu bringen. Dazu ordnen sie Codebausteine in einer linearen Abfolge an, so dass sie sich gerade bewegen, nach links oder rechts drehen.",
+          "preparation": "-   Spielen Sie die Rätsel durch, um mögliche Problembereiche für Ihre Klasse zu finden. - (Optional) Wählen Sie ein paar Rätsel aus, die Sie in der Gruppe mit Ihrer Klasse bearbeiten. - Stellen Sie sicher, dass jeder SchülerInnen ein Reflexionsjournal hat.",
+          "purpose": "In dieser Lektion entwickeln die SchülerInnen Programmierkenntnisse auf einer Computerplattform. Das blockbasierte Format dieser Aufgaben hilft den SchülerInnenn, Abläufe und Konzepte kennen zu lernen, ohne sich um die Perfektionierung der Syntax kümmern zu müssen.",
+          "student_overview": "Erfahren Sie mit Angry Birds mehr über Sequenzen und Algorithmen."
+        },
+        "express-2023/Debugging in Maze": {
+          "name": "Fehlersuche im Labyrinth",
+          "overview": "Die Fehlerbehebung/das Debugging ist ein wesentliches Element beim Erlernen des Programmierens. Die SchülerInnen werden einige Aufgaben finden, die falsch gelöst wurden. Sie müssen sich schrittweise durch den vorhandenen Code arbeiten, um Fehler zu identifizieren, einschließlich falscher Schleifen, fehlender Bausteine, überschüssiger Bausteine und Bausteine, die nicht funktionieren.",
+          "preparation": "-   Spielen Sie die Lektion durch, um mögliche Problembereiche für Ihre Klasse zu finden. - (Optional) Wählen Sie ein paar Rätsel aus, die Sie in der Gruppe mit Ihrer Klasse bearbeiten. - Stellen Sie sicher, dass jeder SchülerInnen ein Reflexionsjournal hat.",
+          "purpose": "Die SchülerInneninnen und SchülerInnen in Ihrer Klasse könnten bei dieser Lektion frustriert sein, weil es um die Fehlersuche geht. Die Fehlersuche ist ein Konzept, das für die Computerprogrammierung sehr wichtig ist. Informatiker müssen wirklich gut darin werden, die Fehler in ihren eigenen Programmen zu finden. Das Debugging zwingt die SchülerInnen dazu, Probleme zu erkennen und zu überwinden, während sie gleichzeitig ihr kritisches Denken und ihre Problemlösungsfähigkeiten ausbauen.",
+          "student_overview": "Finden Sie Probleme in Aufgaben und üben Sie Ihre Fähigkeiten bei der Fehlersuche/beim Debugging."
+        },
+        "express-2023/Collecting Treasure with Laurel": {
+          "name": "Den Schatz mit Laurel sammeln",
+          "overview": "In dieser Reihe von Rätseln werden die SchülerInnen ihr Verständnis von Algorithmen und der Fehlersuche/Debugging weiterentwickeln. Mit einer neuen Figur, Laurel der Abenteurerin, entwickeln die SchülerInnen sequentielle Algorithmen, um Laurel dabei zu helfen, Schätze zu sammeln, während sie einen Weg entlang geht.",
+          "preparation": "-   Spielen Sie die Rätsel durch, um mögliche Problembereiche für Ihre Klasse zu finden. - Stellen Sie sicher, dass jeder SchülerInnen ein Reflexionsjournal hat.",
+          "purpose": "In dieser Lektion üben die SchülerInneninnen und SchülerInnen ihre Programmierkenntnisse anhand einer neuen Figur, _Laurel der Abenteurer_. Wenn jemand mit dem Programmieren beginnt, setzt er Anweisungen in einer bestimmten Reihenfolge zusammen, die eine Maschine lesen kann. Durch das Programmieren entwickeln die SchülerInneninnen und SchülerInnen ein Verständnis dafür, wie ein Computer mit Anweisungen und einer bestimmten Reihenfolge umgeht. Die Verwendung eines neuen Charakters mit einem anderen Rätselziel hilft den SchülerInnenn, ihre Erfahrungen mit Sequenzen und Algorithmen in der Programmierung zu erweitern.",
+          "student_overview": "Schreibe Algorithmen, die _Laurel dem Abenteurer_ helfen, viele Edelsteine zu sammeln!"
+        },
+        "express-2023/Creating Art with Code": {
+          "name": "Kunst erschaffen mit Code",
+          "overview": "In dieser Lektion übernehmen die SchülerInnen die Kontrolle über den Künstler, um Zeichnungen auf dem Bildschirm fertigzustellen. In dieser Phase mit dem Künstler können die SchülerInnen Bilder von zunehmender Komplexität erstellen, indem sie neue Bausteine wie \"100 Pixel vorwärts\" und \"90 Grad nach rechts drehen\" verwenden.",
+          "preparation": "-   Spielen Sie die Rätsel durch, um mögliche Problembereiche für Ihre Klasse zu finden. - (Optional) Besorgen Sie Ihrer Klasse Winkelmesser, um die Winkel zu veranschaulichen, die sie zur Lösung der Rätsel verwenden müssen. - Drucken Sie ein **SchülerInnenhandbuch** für jeden SchülerInnen aus.",
+          "purpose": "Diese Lektion baut auf den bisherigen Erfahrungen der SchülerInnen mit der Sequenzierung auf und soll sie zu mehr Kreativität bei der Programmierung anregen. Der Zweck dieser Lektion ist es, das Wissen über Sequenzierung durch die Einführung neuer Blöcke und Ziele zu festigen. In diesem Fall lernen die SchülerInneninnen und SchülerInnen mit den neuen Blöcken mehr über Pixel und Winkel, während sie gleichzeitig ihre Sequenzierungsfähigkeiten üben. Außerdem können die SchülerInnen neue Ziele visualisieren, z. B. die Codierung des Künstlers, um ein Quadrat zu zeichnen.",
+          "student_overview": "Erstelle schöne Bilder durch die Programmierung des Zeichners."
+        },
+        "express-2023/Swimming Fish in Sprite Lab": {
+          "name": "Schwimmende Fische in Sprite Lab",
+          "overview": "In dieser Lektion lernen die SchülerInnen die beiden wesentlichen Konzepte von Sprite Lab kennen: Sprites und Behaviors. Sprites sind Zeichen oder Objekte auf dem Bildschirm, die von den SchülerInnen bewegt, geändert und manipuliert werden können. Behaviors oder Verhaltensweisen sind Aktionen, die Sprites kontinuierlich ausführen, bis sie angehalten werden.",
+          "preparation": "-   Spielen Sie die Rätsel durch, um mögliche Problembereiche für Ihre Klasse zu finden. - Stellen Sie sicher, dass jeder SchülerInnen ein Reflexionsjournal hat.",
+          "purpose": "Diese Lektion soll die SchülerInnen mit dem Kernvokabular von Sprite Lab vertraut machen und ihnen die Möglichkeit geben, Konzepte, die sie in anderen Umgebungen gelernt haben, auf dieses Tool anzuwenden. Durch die Erstellung eines Aquariums beginnen die SchülerInnen, das Programmiermodell dieses Tools zu verstehen und Wege zu erkunden, wie sie es nutzen können, um sich auszudrücken.",
+          "student_overview": "Lernen Sie, wie man Sprites erstellt und bearbeitet."
+        },
+        "express-2023/Making Sprites": {
+          "name": "Sprites rogrammieren",
+          "overview": "In dieser Stunde zum **Aufbau von Fähigkeiten** bearbeiten die SchülerInnen eine Reihe von Programmierlevels am Computer. Am Schluss der Levels können die SchülerInnen in einer freien Spielaufgabe bauen, was sie wollen. Die SchülerInnen schreiben Programme und lernen die beiden Konzepte kennen, die im Mittelpunkt von Sprite Lab stehen: Sprites und Verhaltensweisen. ",
+          "preparation": "Spielen Sie die Levels und sehen Sie sich die **\\*Unterrichtsfolien** an.",
+          "purpose": "Diese Lektion soll die SchülerInnen in die Programmierung mit Sprite Lab einführen. Die SchülerInneninnen und SchülerInnen beginnen, das Programmiermodell dieses Tools zu verstehen und erkunden, wie sie es nutzen können, um sich auszudrücken.",
+          "student_overview": "In dieser Stunde lernt ihr, wie man Programme schreibt und macht euch mit Sprites und Verhaltensweisen vertraut."
+        },
+        "express-2023/Sprites in Action": {
+          "name": "Sprites in Aktion",
+          "overview": "In dieser Stunde zum **Aufbau von Fähigkeiten** bearbeiten die SchülerInnen eine Reihe von Programmierlevels am Computer und lösen zum Schluss der Levels freie Spielaufgaben, wo sie bauen können, was sie wollen. Die SchülerInnen schreiben Programme, die auf zeitgesteuerte Ereignisse und Benutzereingaben reagieren. ",
+          "preparation": "Spielen Sie die Levels und sehen Sie sich die Unterrichtsfolien an.",
+          "purpose": "Diese Lektion soll die SchülerInnen in die Programmierung mit Ereignissen einführen. Während des gesamten Kurses werden Ereignisse die primäre Methode sein, mit der die Teilnehmer die Art und Weise ändern, wie ihre Programme im Laufe der Zeit oder in Reaktion auf den Benutzer ablaufen.",
+          "student_overview": "Ihr werdet die Programmier-Levels abschließen und zum Schluss eine Aufgabe im freien Spiel lösen, bei der ihr bauen könnt, was ihr wollt."
+        },
+        "express-2023/Virtual Pet with Sprite Lab": {
+          "name": "Virtuelles Haustier mit Sprite-Labor",
+          "overview": "In dieser Lektion entwickeln die SchülerInnen ein interaktives virtuelles Haustier, das so aussieht und sich so verhält, wie sie es sich wünschen. Die SchülerInnen verwenden das \"Costume\"-Werkzeug von Sprite Lab, um das Aussehen ihres Haustiers ihren Wünschen anzupassen. Anschließend verwenden sie Ereignisse, Behaviors und andere Konzepte, die sie gelernt haben, um ihrem Haustier sein eigenes Leben zu geben!",
+          "preparation": "-   Spielen Sie die Rätsel durch, um mögliche Problembereiche für Ihre Klasse zu finden. - Stellen Sie sicher, dass jeder SchülerInnen ein Reflexionsjournal hat.",
+          "purpose": "Diese Stunde ermöglicht es den SchülerInnenn, Programmierkonzepte aus vorherigen Stunden in einem anderen kreativen Kontext anzuwenden.",
+          "student_overview": "Erstelle ein interaktives virtuelles Haustier, das so aussieht und sich so verhält, wie du es möchtest! Erwecke dein Haustier zum Leben!"
+        },
+        "express-2023/Dance Party": {
+          "name": "Tanzparty",
+          "overview": "In dieser Lektion bauen SchülerInnen ihr Können aus und programmieren ihre eigene interaktive Tanzparty.",
+          "preparation": "-   Spielen Sie die Rätsel durch, um mögliche Problembereiche für Ihre Klasse zu finden. - Stellen Sie sicher, dass jeder SchülerInnen ein Reflexionsjournal hat. - Überlegen Sie, ob Sie Kopfhörer benötigen. Bei dieser Aktivität kommt es auf den Ton an.",
+          "purpose": "In dieser Stunde werden die grundlegenden Informatikkonzepte für Codierung und Ereignis-Programmierung (unter Einsatz von Blöcken) vorgestellt.",
+          "student_overview": "Zeit zum Feiern! In dieser Lektion programmierst Du Deine eigene interaktive Tanzparty."
+        },
+        "express-2023/Loops with Rey and BB-8": {
+          "name": "Schleifen mit Rey und BB-8",
+          "overview": "In dieser Lektion zum Aufbau von **Fähigkeiten** verwenden die SchülerInnen Schleifen, um der _Star Wars_ Figur _BB-8_ zu helfen, ein Labyrinth effizient zu durchqueren.",
+          "preparation": "-   Spielen Sie die Rätsel durch, um festzustellen, ob es Problembereiche für Ihre Klasse gibt. - Stellen Sie sicher, dass jeder SchülerInnen ein Reflexionsjournal hat.",
+          "purpose": "In dieser Lektion lernen die SchülerInnen etwas über Schleifen und wie man sie in Blockly-Code implementiert. Die Verwendung von Schleifen ist eine wichtige Fähigkeit beim Programmieren, da die manuelle Wiederholung von Befehlen mühsam und ineffizient ist. Mit den Code.org-Rätseln lernen die SchülerInnen, Anweisungen zu bestehenden Schleifen hinzuzufügen, wiederholten Code in Schleifen zusammenzufassen und Muster zu erkennen, die in Schleifen ausgeführt werden müssen. Es ist zu beachten, dass die SchülerInnen mit Rätseln konfrontiert werden, die viele verschiedene Lösungen haben. Dies eröffnet Diskussionen über die verschiedenen Möglichkeiten, Rätsel zu lösen, sowie über die Vor- und Nachteile der einzelnen Ansätze.",
+          "student_overview": "Hilf BB-8 durch Labyrinthe mit Schleifen! "
+        },
+        "express-2023/Mini-Project: Sticker Art": {
+          "name": "Mini-Projekt: Sticker Art",
+          "overview": "Beobachten Sie, wie sich die SchülerInnen sichtlich freuen, wenn sie mit einer kleinen Anzahl von Bausteinen und digitalen Stickern ihre eigenen wunderschönen Designs entwerfen! Diese Lektion baut auf dem Verständnis von Schleifen aus früheren Lektionen auf und gibt den SchülerInnen die Chance, wirklich kreativ zu sein. Diese Aktivität ist fantastisch, um Artefakte für Portfolios oder Eltern-/Lehrerabende herzustellen.",
+          "preparation": "-   Üben Sie, Ihr eigenes Design zu entwerfen. Notieren Sie sich, inwiefern sich diese Stufen von allen vorherigen unterscheiden. - Stellen Sie sicher, dass jeder SchülerInnen ein Reflexionsjournal hat.",
+          "purpose": "In dieser Reihe wird die Kraft von Schleifen mit kreativen und persönlichen Designs hervorgehoben. In dieser projektbasierten Sequenz können die Teilnehmer auf ihrer eigenen Arbeit aufbauen und erstaunliche Artefakte schaffen.",
+          "student_overview": "In dieser Lektion machen es Schleifen einfach, mit Artist noch coolere Bilder zu machen!"
+        },
+        "express-2023/Nested Loops in Maze": {
+          "name": "Eingebettete Schleifen im Labyrinth",
+          "overview": "In dieser Online-Aktivität haben die SchülerInnen die Möglichkeit, ihr Verständnis von Schleifen auf ein ganz neues Level zu bringen. Beim Spiel mit der Biene und bei Pflanzen gegen Zombies lernen die SchülerInnen, wie man eine Schleife so programmiert, dass sie in eine andere Schleife eingebettet ist. Sie werden auch dazu ermutigt, herauszufinden, wie kleine Änderungen an beiden Schleifen ihr Programm beeinflussen, wenn sie auf \"Ausführen\" klicken.",
+          "preparation": "-   Spielen Sie die Rätsel durch, um mögliche Problembereiche für Ihre Klasse zu finden. - Stellen Sie sicher, dass jeder SchülerInnen ein Reflexionsjournal hat.",
+          "purpose": "In dieser Einführung in verschachtelte Schleifen verlassen die SchülerInnen ihre gewohnte Umgebung, um effizientere Lösungen für Rätsel zu finden. In früheren Rätseln wurden die SchülerInnen durch Schleifen dazu gebracht, Wiederholungen zu erkennen. Hier lernen die SchülerInnen, Muster _innerhalb_ wiederholter Muster zu erkennen, um diese verschachtelten Schleifen zu entwickeln. Diese Phase beginnt damit, dass die SchülerInneninnen und SchülerInnen aufgefordert werden, ein Rätsel zu lösen, bei dem der Code irritierend und kompliziert ist, um ihn auf die lange Bank zu schieben. Nachdem ein Video in verschachtelte Schleifen einführt, wird den SchülerInnenn ein Beispiel gezeigt und sie werden aufgefordert, vorherzusagen, was passiert, wenn eine Schleife in eine andere Schleife eingefügt wird. Auf diese Weise können die SchülerInnen ihr Verständnis von Schleifen in der Programmierung festigen und ausbauen.",
+          "student_overview": "Schleifen in Schleifen in Schleifen. Was bedeutet das? In dieser Lektion erfährst du, was passiert, wenn du geschachtelte Schleife erstellst"
+        },
+        "express-2023/Snowflakes with Anna and Elsa": {
+          "name": "Schneeflocken mit Anna und Elsa",
+          "overview": "Mit dem Wissen, wie man Schleifen aufschichten kann, können die SchülerInnen so viele schöne Dinge kreieren. Diese Lektion führt sie durch eine Reihe von Übungen, um ihnen zu helfen, ihre eigenen professionelle Bilder mit Annas und Elsas ausgezeichneten Eislaufkünsten zu erstellen!",
+          "preparation": "-   Spielen Sie die Lektion durch, um mögliche Problembereiche für Ihre Klasse zu finden. - Stellen Sie sicher, dass jeder SchülerInnen ein Reflexionsjournal hat.",
+          "student_overview": "Anna und Elsa sind ausgezeichnete Eisläuferinnen, brauchen aber Ihre Hilfe, um Muster auf das Eis zu zeichnen. Verwenden Sie geschachtelte Schlaufen, um etwas super COOLes zu schaffen."
+        },
+        "express-2023/Looking Ahead with Minecraft": {
+          "name": "Ausblick auf Minecraft",
+          "overview": "Diese Lektion wurde ursprünglich für die Hour of Code gemeinsam mit dem Team von Minecraft erstellt. Die SchülerInnen erhalten die Gelegenheit, Ideen, die sie bis zu diesem Zeitpunkt gelernt haben, in die Praxis umzusetzen und einen kleinen Einblick in Bedingungen zu bekommen!",
+          "preparation": "-   Spielen Sie die Rätsel zu dieser Lektion durch, um mögliche Problembereiche für Ihre Klasse zu finden. - Stellen Sie sicher, dass jeder SchülerInnen ein Reflexionsjournal hat.",
+          "purpose": "Mit dieser Reihe von Rätseln wird das Wissen über Schleifen gefestigt und ausgebaut und es werden Konditionale eingeführt. Durch die Verknüpfung dieser beiden Konzepte können die SchülerInnen das Potenzial für die Erstellung von lustigen und innovativen Programmen in einer neuen und aufregenden Umgebung erkunden.",
+          "student_overview": "Vermeiden Sie die Lava! Hier beginnen Sie, etwas über Bedingungen in der Welt von Minecraft zu erfahren."
+        },
+        "express-2023/If/Else with Bee": {
+          "name": "Wenn/Sonst mit der Biene",
+          "overview": "Bis zu diesem Zeitpunkt haben die SchülerInnen Code geschrieben, der bei jeder Ausführung exakt gleich ausgeführt wird - zuverlässig, aber nicht sehr flexibel. In dieser Lektion beginnt Ihre Klasse mit der Programmierung mit Bedingungen, dies es ihnen ermöglichen, Code zu schreiben, der je nach den spezifischen Bedingungen, auf die das Programm trifft, unterschiedlich funktioniert.",
+          "preparation": "-   Spielen Sie die Rätsel durch, um mögliche Problembereiche für Ihre Klasse zu finden. - Stellen Sie sicher, dass jeder SchülerInnen ein Reflexionsjournal hat.",
+          "purpose": "Die SchülerInnen üben die Verwendung von Konditionalen in ihren Programmen. Die if/ else-Blöcke ermöglichen ein flexibleres Programm. Die Biene wird nur Nektar sammeln, _wenn_ es eine Blume gibt, oder Honig machen, _wenn_ es eine Wabe gibt.",
+          "student_overview": "Sie haben die Bedingungen verstanden - jetzt ist es an der Zeit, Bee so zu programmieren, dass sie diese Bedingungen beim Sammeln von Honig und Nektar verwendet. "
+        },
+        "express-2023/While Loops in Farmer": {
+          "name": "Während-Schleifen in Farmer",
+          "overview": "In dieser Stunde zum \\*\\*Aufbau von Fähigkeiten\" füllen die SchülerInnen Löcher und graben Erdhügel auf einem Bauernhof. Sie kennen weder die Größe der Löcher noch die Höhe der Erdhügel. Um diese Rätsel zu lösen, werden die Schüler eine neue Art von Schleife verwenden.",
+          "preparation": "-   Spielen Sie die Rätsel durch, um mögliche Problembereiche für Ihre Klasse zu finden. - Stellen Sie sicher, dass jeder SchülerInnen ein Reflexionsjournal hat.",
+          "purpose": "Wenn Ihre SchülerInnen ihre Kenntnisse über Schleifen vertiefen, werden sie auf Probleme stoßen, bei denen ein Befehl wiederholt werden muss, aber nicht bekannt ist, wie oft er wiederholt werden muss. Hier kommen while-Schleifen ins Spiel. In der heutigen Lektion werden die SchülerInnen ein grundlegendes Verständnis für bedingungsbasierte Schleifen entwickeln und ihr Wissen über Schleifen im Allgemeinen erweitern.",
+          "student_overview": "Schleifen sind beim Codieren extrem nützlich. In dieser Lektion lernen Sie eine neue Art von Schleifen kennen:die `während`-Schleifen!"
+        },
+        "express-2023/Conditionals in Minecraft: Voyage Aquatic": {
+          "name": "Bedingungen in Minecraft: Voyage Aquatic",
+          "overview": "Diese Lektion wurde ursprünglich für die Hour of Code gemeinsam mit dem Team von Minecraft erstellt. Die SchülerInnen erhalten die Gelegenheit, Ideen, die sie bis zu diesem Zeitpunkt gelernt haben, in die Praxis umzusetzen und einen kleinen Einblick in Bedingungen zu bekommen!",
+          "preparation": "-   Spielen Sie die Rätsel zu dieser Lektion durch, um mögliche Problembereiche für Ihre Klasse zu finden. - Stellen Sie sicher, dass jeder SchülerInnen ein Reflexionsjournal hat.",
+          "purpose": "Mit dieser Reihe von Rätseln wird das Wissen über Schleifen und Konditionierungen gefestigt und vertieft. Durch die Verknüpfung dieser beiden Konzepte können die SchülerInnen das Potenzial für die Erstellung von lustigen und innovativen Programmen in einer neuen und aufregenden Umgebung erkunden.",
+          "student_overview": "Hier erfahren Sie in der Welt von Minecraft mehr über Bedingungen."
+        },
+        "express-2023/Until Loops in Maze": {
+          "name": "‚Bis‘-Schleifen im Labyrinth",
+          "overview": "In dieser Lektion lernen die SchülerInnen `bis`-Schleifen kennen. Die SchülerInnen entwickeln Programme, bei denen die Hauptfigur Aktionen wiederholt, bis sie den gewünschten Haltepunkt erreicht haben.",
+          "preparation": "-   Spielen Sie die Rätsel durch, um mögliche Problembereiche für Ihre Klasse zu finden. - Stellen Sie sicher, dass jeder SchülerInnen ein Reflexionsjournal hat.",
+          "purpose": "In dieser Reihe von Rätseln wird das Wissen über Schleifen durch das Hinzufügen der until-Bedingung gefestigt und ausgebaut. Durch die Verknüpfung dieser Konzepte können die SchülerInnen das Potenzial für die Erstellung komplexer und innovativer Programme erkunden.",
+          "student_overview": "Man kann einige erstaunliche Dinge tun, wenn man `bis`-Schleifen verwendet!"
+        },
+        "express-2023/Harvesting with Conditionals": {
+          "name": "Ernten mit Bedingungen",
+          "overview": "Die SchülerInnen üben `während`-Schleifen, `bis`-Schleifen und `wenn/sonst`-Aussagen. Alle diese Bausteine verwenden Bedingungen. Durch das Üben der drei Bausteine lernen die SchülerInnen, komplexen und flexiblen Code zu schreiben.",
+          "preparation": "-   Spielen Sie die Lektion durch, um mögliche Problembereiche für Ihre Klasse zu finden. - Stellen Sie sicher, dass jeder SchülerInnen ein Reflexionsjournal hat.",
+          "purpose": "Das Üben der Verwendung von Konditionalen in verschiedenen Szenarien trägt dazu bei, das Verständnis der SchülerInnen für die Möglichkeiten von Konditionalen zu entwickeln. In der vorherigen Lektion haben die SchülerInnen nur Konditionale verwendet, um sich durch ein Labyrinth zu bewegen. In dieser Lektion werden die SchülerInnen Konditionale verwenden, um dem Landwirt zu helfen, herauszufinden, wann er ernten muss. Es werden neue Muster entstehen und die SchülerInnen werden Kreativität und logisches Denken einsetzen, um die Bedingungen zu bestimmen, unter denen der Code ausgeführt und wiederholt werden sollte.",
+          "student_overview": "Es ist nicht immer klar, wann jede einzelne Bedingung anzuwenden ist.  Diese Lektion wird Dir helfen, die Entscheidung zu üben, was zu tun ist."
+        },
+        "express-2023/Functions in Minecraft": {
+          "name": "Funktionen in Minecraft",
+          "overview": "Die SchülerInnen verstehen in diesem unterhaltsamen und interaktiven Minecraft-Abenteuer allmählich, wie nützlich Funktionen sein können!",
+          "preparation": "-   Spielen Sie die Rätsel durch, um mögliche Problembereiche für Ihre Klasse zu finden. - Stellen Sie sicher, dass jeder SchülerInnen ein Reflexionsjournal hat.",
+          "purpose": "Die SchülerInnen entdecken die Vielseitigkeit der Programmierung, indem sie Funktionen in verschiedenen Umgebungen üben. Dabei erkennen sie wiederverwendbare Muster und sind in der Lage, benannte Blöcke einzubinden, um vordefinierte Funktionen aufzurufen.",
+          "student_overview": "Verstehen Sie, wie Sie Funktionen für den effizientesten Code nutzen können?"
+        },
+        "express-2023/Functions with Harvester": {
+          "name": "Funktionen mit der Erntearbeiterin",
+          "overview": "Die SchülerInnen haben gelernt, wie man in Artist eindrucksvolle Zeichnungen erstellt und in Bee, wie man durch Labyrinthe zu navigiert. Heute werden sie Funktionen für das Einbringen von Erntegut in Farmer verwenden. In dieser Lektion wird den SchülerInnen gezeigt, dass es vorteilhaft ist, Funktionen auf die neue Art und Weise zu verwenden, indem sie sie mit `während`-Schleifen und `wenn/sonst`-Anweisungen kombinieren.",
+          "preparation": "-   Spielen Sie die Rätsel durch, um mögliche Problembereiche für Ihre Klasse zu finden. - Stellen Sie sicher, dass jeder SchülerInnen ein Reflexionsjournal hat.",
+          "purpose": "Diese Lektion soll die SchülerInnen dazu anregen, Funktionen auf kreativere Weise zu nutzen. Die SchülerInnen lernen, dass es viele Möglichkeiten gibt, ein Problem anzugehen, dass aber einige effizienter sind als andere. Diese Rätsel sollen die Fähigkeiten zur Problemlösung und zum kritischen Denken fördern.",
+          "student_overview": "Funktionen werden Ihnen viel Arbeit ersparen, wenn Sie dem Farmer bei der Ernte helfen!"
+        },
+        "express-2023/Functions with Artist": {
+          "name": "Funktionen mit dem Künstler",
+          "overview": "Die SchülerInnen lernen die Verwendung von Funktionen mit Artist kennen. Sie erstellen und verändern tolle Bilder. Bei komplizierteren Mustern lernen die SchülerInnen die geschachtelten Funktionen kennen, indem sie eine Funktion in einer anderen Funktion aufrufen.",
+          "preparation": "-   Spielen Sie die Rätsel durch, um mögliche Problembereiche für Ihre Klasse zu finden. - Stellen Sie sicher, dass jeder SchülerInnen ein Reflexionsjournal hat.",
+          "purpose": "Eine der wichtigsten Komponenten dieser Lektion ist es, den SchülerInneninnen und SchülerInnenn einen Raum zu geben, in dem sie etwas schaffen können, auf das sie stolz sind. Die Rätsel werden immer komplexer, aber jedes neue Rätsel baut auf dem vorherigen Rätsel auf. Am Ende dieser Lektion werden die SchülerInnen selbstbewusst und stolz auf ihre harte Arbeit sein.",
+          "student_overview": "Mit Funktionen komplexe Zeichnungen leichter erstellen!"
+        },
+        "express-2023/Text and Prompts": {
+          "name": "Text und Eingabeaufforderungen",
+          "overview": "In dieser Stunde zum **Aufbau von Fähigkeiten** üben die SchülerInnen mit Variablen in Sprite Lab. ",
+          "preparation": "Spielen Sie die Levels und sehen Sie sich die Unterrichtsfolien an.",
+          "purpose": "Variablen werden in diesem Kurs zum Speichern und Ändern von Daten verwendet. Zu diesem Zeitpunkt werden die SchülerInnen lediglich Werte speichern und abrufen, ohne sie zu verändern. In späteren Unterrichtsstunden werden die SchülerInnen numerische Werte speichern und sie im Laufe der Zeit verändern, um z. B. den Punktestand eines Spielers in einem Spiel nachzuverfolgen.",
+          "student_overview": "In dieser Stunde übt ihr die Verwendung von Variablen in Sprite Lab."
+        },
+        "express-2023/Using Variables with the Artist": {
+          "name": "Variablen mit dem Künstler verwenden",
+          "overview": "In dieser Stunde beschäftigen sich die SchülerInnen mit der Erstellung sich wiederholender Designs unter Verwendung von Variablen in der Artist-Umgebung. Die SchülerInnen lernen, wie Variablen verwendet werden können, um Code leichter zu schreiben und leichter zu lesen. Nach den Aufgaben unter Anleitung erreichen die SchülerInnen ein Level der freie Gestaltung, wo sie zeigen können, was sie gelernt haben, und ihre eigenen Designs erstellen.",
+          "preparation": "-   Spielen Sie die Rätsel durch, um mögliche Problembereiche für Ihre Klasse zu finden. - Stellen Sie sicher, dass jeder SchülerInnen ein Reflexionsjournal hat.",
+          "purpose": "Variablen sind im Wesentlichen Platzhalter für Werte, die zum Zeitpunkt der Ausführung Ihres Programms noch unbekannt sind, oder für Werte, die sich während der Ausführung eines Programms ändern können. Sie sind für die Erstellung von dynamischem Code von entscheidender Bedeutung, da sie es ermöglichen, dass sich Ihr Programm auf der Grundlage einer beliebigen Anzahl von potenziellen Änderungen ändert und wächst. In dieser Phase wird die Verwendung von Variablen vertieft, wobei die grundlegendsten Möglichkeiten zum Festlegen und Verwenden von Variablen genutzt werden.",
+          "student_overview": "In dieser Stunde erstellen Sie Zeichnungen mit Variablen, die sich während der Ausführung des Programms ändern."
+        },
+        "express-2023/Variables with the Bee": {
+          "name": "Verändern von Variablen mit der Biene",
+          "overview": "In dieser Stunde wird veranschaulicht, wie Variablen Programme leistungsfähiger machen können, indem sie es ermöglichen, Werte zu ändern, während der Code ausgeführt wird.",
+          "preparation": "-   Spielen Sie die Rätsel durch, um mögliche Problembereiche für Ihre Klasse zu finden. - Stellen Sie sicher, dass jeder SchülerInnen ein Reflexionsjournal hat.",
+          "purpose": "In dieser Lektion wird veranschaulicht, wie Code mit sich ändernden Werten hilfreich sein kann, und die SchülerInnen werden darauf vorbereitet, wie \"for-Schleifen\" in den kommenden Lektionen funktionieren.",
+          "student_overview": "Diese Biene liebt Variablen!"
+        },
+        "express-2023/For Loops with Bee": {
+          "name": "\\`Für´-Schleifen mit der Biene",
+          "overview": "In dieser Stunde geht es um for-Schleifen und die Verwendung einer inkrementellen Variable für die Lösung komplizierter Aufgaben.",
+          "preparation": "-   Spielen Sie die Rätsel durch, um mögliche Problembereiche für Ihre Klasse zu finden. - Stellen Sie sicher, dass jeder SchülerInnen ein Reflexionsjournal hat.",
+          "purpose": "Das heutige Konzept, for-Schleifen, ist ein sehr wichtiges Thema in der Informatik. Sie werden nicht nur häufig verwendet, sondern das Erlernen von for-Schleifen fördert auch das Erlernen anderer wichtiger Konzepte (z. B. Variablen und Parameter). Die SchülerInnen werden viel Übung darin haben, Probleme kritisch zu durchdenken, indem sie die Anfangs-, End- und Schrittwerte für jede for-Schleife bestimmen. Da dieses Konzept auch viel Mathematik beinhaltet, können Sie es mit einer Mathematikstunde verbinden, um eine noch tiefere Lernerfahrung zu machen.",
+          "student_overview": "Summ-Summ. Bei diesen Aufgabenführen Sie eine Biene mit `für`-Schleifen zu Nektar und Honig!"
+        },
+        "express-2023/For Loops with Artist": {
+          "name": "\\`Für´-Schleifen mit dem Künstler",
+          "overview": "In dieser Stunde zum **Aufbau von Fertigkeiten** üben die Schüler \"for\"-Schleifen mit Artist. Die Schüler lösen Aufgaben mit komplexen Designs und erstellen einzigartige Kunstwerke.",
+          "preparation": "-   Spielen Sie die Lektion durch, um mögliche Problembereiche für Ihre Klasse zu finden. - Stellen Sie sicher, dass jeder SchülerInnen ein Reflexionsjournal hat.",
+          "purpose": "Kreativität und kritisches Denkvermögen arbeiten herrlich zusammen in dieser Lektion. Die Studenten werden ihre Übungen mit 'for'-Schleifen und Variablen weiterführen, während sie unglaubliche Bilder erzeugen. Diese Lektion inspiriert einen kreativen Kopf und lehrt gleichzeitig die Kernkonzepte der Informatik.",
+          "student_overview": "Machen Sie sich bereit für Ihr nächstes Meisterwerk. Hier werden Sie mit for-Schleifen tolle Bilder erstellen."
+        },
+        "express-2023/End of Course Project": {
+          "name": "Projekt am Ende des Kurses",
+          "overview": "Diese **Projekt**-Stunde führt die SchülerInnen durch den Prozess des Entwurfs, der Entwicklung und der Präsentation neuer Projekte!",
+          "preparation": "-   Verbringen Sie Zeit damit, Ihr eigenes Projekt mit den beiden Projektwerkzeugen zu erstellen, die den SchülerInnenn zur Verfügung stehen. Machen Sie sich mit den Möglichkeiten und Grenzen der einzelnen Werkzeuge vertraut. - Passen Sie den **\\*Schreibzettel** an die Ziele Ihrer Klasse an und drucken Sie eine Kopie für jeden SchülerInnen oder jede Gruppe aus. - Passen Sie den **Projektplanungsleitfaden** an Ihre Klasse an und drucken Sie ein Exemplar für jeden SchülerInnen oder jede Gruppe aus.",
+          "purpose": "Diese Lektion bietet den SchülerInnenn Raum, ein Projekt nach eigenem Entwurf zu erstellen. Dabei wird ein schrittweiser Prozess angewandt, der Planung erfordert, aber auch viel Raum für Kreativität lässt.",
+          "student_overview": "Freuen Sie sich auf eine ganze Menge Programmierung! Es ist an der Zeit, mit der Erstellung Ihres Projekts zu beginnen."
+        },
+        "pre-express-2023/Learn to Drag and Drop": {
+          "name": "Erlerne Drag und Drop",
+          "overview": "Diese Lektion gibt den SchülerInnen eine Vorstellung davon, was sie erwartet, wenn sie ins Computerlabor gehen. Sie beginnt mit einer kurzen Diskussion, in der sie in das richtige Verhalten im Computer-Labors eingeführt werden, dann werden sie einen Computer benutzen, um Aufgaben im Internet zu lösen.",
+          "preparation": "-   Sehen Sie sich das Lehrervideo **Wie man einen Klassenbereich auf Code.org einrichtet** an. Erstellen Sie Ihren eigenen Klassenbereich auf Code.org und stellen Sie sicher, dass jeder SchülerInnen eine Karte mit seinem **Passcode** darauf hat. - Stellen Sie sicher, dass die SchülerInnen von ihren Geräten aus auf Lektion 2 zugreifen können. Überlegen Sie, ob Sie zukünftige Lektionen ausblenden möchten, um zu verhindern, dass die SchülerInnen zu schnell vorankommen. - Bitten Sie die IT-Abteilung der Schule, auf dem Computer-Desktop einen Quick-Link für Ihren Klassenbereich einzurichten. - Auf der Website von Common Sense Education finden Sie weitere Informationen zum Thema Online-Sicherheit.",
+          "purpose": "Das Hauptziel dieser Lektion ist es, die Erfahrung der SchülerInnen mit Computern zu erweitern. Indem wir die grundlegendsten Computerfunktionen wie Klicken, Ziehen und Ablegen behandeln, schaffen wir in der Klasse ein gleichberechtigtes Spielfeld für zukünftige Rätsel. Diese Lektion bietet auch eine gute Gelegenheit, grundlegende Begriffe aus dem Bereich der Computerhardware einzuführen, z. B. \"Maus\", \"Trackpad\" oder \"Touchscreen\", je nach Gerät.",
+          "student_overview": "Klicken und ziehen Sie, um die Aufgaben fertigzustellen."
+        },
+        "pre-express-2023/Sequencing with Scrat": {
+          "name": "Sequenzen mit Scrat",
+          "overview": "Diese Lektion gibt den SchülerInnen eine Vorstellung davon, was sie erwartet, wenn sie ins Computerlabor gehen. Sie beginnt mit einer kurzen Diskussion, in der sie in das richtige Verhalten im Computer-Labors eingeführt werden, dann werden sie einen Computer benutzen, um Aufgaben im Internet zu lösen.",
+          "preparation": "-   Stellen Sie sicher, dass jeder SchülerInnen ein Reflexionsjournal hat.",
+          "purpose": "In dieser Stunde erlernen die SchülerInnen Fähigkeiten im Programmieren und der Fehlersuche auf einer Computerplattform. Das blockbasierte Format dieser Aufgaben hilft den SchülerInnen, die Reihenfolge und Konzepte zu lernen, ohne sich um die Perfektionierung der Syntax kümmern zu müssen.",
+          "student_overview": "Programmieren Sie Scrat, dass er die Eichel erreicht."
+        },
+        "pre-express-2023/Programming with Angry Birds": {
+          "name": "Programmieren mit Angry Birds",
+          "overview": "Unter Verwendung von Charakteren aus Ice Age entwickeln die Schüler sequentielle Algorithmen, um Scrat von einer Seite eines Labyrinths zur Eichel auf der anderen Seite zu bewegen. Dazu ordne sie Codebausteinen in einer linearen Abfolge an, so dass sie sich gerade bewegen, nach links oder rechts drehen.",
+          "preparation": "-   Spielen Sie die Lektion durch, um mögliche Problembereiche für Ihre Klasse zu finden. - (Optional) Wählen Sie ein paar Rätsel aus, die Sie in der Gruppe mit Ihrer Klasse bearbeiten. - Stellen Sie sicher, dass jeder SchülerInnen ein Reflexionsjournal hat.",
+          "purpose": "In dieser Stunde erlernen die SchülerInnen Fähigkeiten im Programmieren und der Fehlersuche auf einer Computerplattform. Das blockbasierte Format dieser Aufgaben hilft den SchülerInnen, die Reihenfolge und Konzepte zu lernen, ohne sich um die Perfektionierung der Syntax kümmern zu müssen."
+        },
+        "pre-express-2023/Programming with Rey and BB-8": {
+          "name": "Programmieren mit Rey und BB-8",
+          "overview": "In dieser Lektion werden die SchülerInnen ihre neu gewonnenen Programmierkenntnisse auf kompliziertere Weise einsetzen, um einen kniffligen Kurs mit BB-8 zu navigieren.",
+          "preparation": "-   Spielen Sie die Lektion durch, um mögliche Problembereiche für Ihre Klasse zu finden. - Stellen Sie sicher, dass jeder SchülerInnen ein Reflexionsjournal hat.",
+          "purpose": "Mit Blick auf den Wissenstransfer bietet diese Lektion den SchülerInneninnen und SchülerInnenn eine neue Umgebung, in der sie ihre Fähigkeiten, die sie bereits kultiviert haben, üben können. Star-Wars-Fans werden vor Freude springen, wenn sie diese Puzzles sehen. Jedes Rätsel in dieser Reihe wurde hinzugefügt, um ein tieferes Verständnis der grundlegenden Konzepte zu vermitteln, die sie im weiteren Verlauf des Kurses verwenden werden."
+        },
+        "pre-express-2023/Programming with Harvester": {
+          "name": "Programmieren mit der Erntearbeiterin",
+          "overview": "Die SchülerInnen wenden die erlernten Programmierkonzepte auf die Harvester-Umgebung an. Anstatt die Figur nur an ein Ziel zu bringen, sollen die SchülerInnen nun mit einem neuen Baustein Mais sammeln. Die SchülerInnen werden weiterhin Kenntnisse für die Verwendung mit sequentiellen Algorithmen entwickeln und mit dem Debugging-Verfahren beginnen.",
+          "preparation": "-   Spielen Sie die Rätsel durch, um mögliche Problembereiche für Ihre Klasse zu finden - Stellen Sie sicher, dass jeder SchülerInnen ein Reflexionsjournal hat.",
+          "purpose": "In dieser Stunde entwickeln die SchülerInnen ihre Fehlerbehebungsfähigkeiten und entwickeln ihre Programmierfähigkeiten weiter.",
+          "student_overview": "Hilf der Erntearbeiterin, Gemüse entlang eines Weges zu ernten."
+        },
+        "pre-express-2023/Loops with Scrat": {
+          "name": "Schleifen mit Scrat",
+          "overview": "In dieser Stunde zum **Aufbau von Fähigkeiten** lernen die SchülerInnen das Schleifenkonzept in Programmieraufgaben kennen, und helfen dem Eichhörnchen, die Eichel zu erreichen.",
+          "preparation": "-   (Optional) Wählen Sie ein paar Rätsel aus, die Sie in der Gruppe bearbeiten. - Stellen Sie sicher, dass jeder SchülerInnen ein Reflexionsjournal hat.",
+          "purpose": "In dieser Lektion lernen die SchülerInnen mehr über Schleifen und wie man sie in Blockly-Code implementiert. Die Verwendung von _Schleifen_ ist eine wichtige Fähigkeit beim Programmieren, da die manuelle Wiederholung von Befehlen mühsam und ineffizient ist. Mit diesen Code.org-Rätseln lernen die SchülerInnen, Anweisungen zu bestehenden Schleifen hinzuzufügen, wiederholten Code in Schleifen zu sammeln und Muster zu erkennen, die wiederholt werden müssen.",
+          "student_overview": "Helfen Sie Scrat, mehr Boden mit Hilfe von Schleifen abzuarbeiten."
+        },
+        "pre-express-2023/Loops with Laurel": {
+          "name": "Schleifen mit Laurel",
+          "overview": "In dieser Lektion vertiefen die Schüler das Konzept der Schleifen. Hier sammelt Laurel die Abenteurerin mit Schleifen Schätze in offenen Höhlen. Dann wird ein neuer Block `sammele Schätze` vorgestellt, der Laurel auf ihrer Reise helfen soll.",
+          "preparation": "-   Spielen Sie die Rätsel durch, um mögliche Problembereiche für Ihre Klasse zu finden. - (Optional) Wählen Sie ein paar Rätsel aus, die Sie in der Gruppe mit Ihrer Klasse bearbeiten. - Stellen Sie sicher, dass jeder SchülerInnen ein Reflexionsjournal hat.",
+          "purpose": "In dieser Lektion können die SchülerInnen den Umgang mit Schleifen üben und werden ermutigt, mehrere Blöcke in eine \"Wiederholung\" zu setzen, um so viele Schätze wie möglich zu sammeln."
+        },
+        "pre-express-2023/Ocean Scene with Loops": {
+          "name": "Meeresszene mit Schleifen",
+          "overview": "Bei der Wiederaufnahme des Schleifen-Konzepts lernen die SchülerInnen, Bilder zu zeichnen, indem sie einfache Sequenzen von Anweisungen mithilfe von Schleifen wiederholen. In der vorhergehenden Lektion ohne Computer wurden Schleifen verwendet, um ein Labyrinth zu durchqueren und Schätze zu sammeln. Hier erzeugen die Schleifen Muster. Am Ende dieses Levels haben die SchülerInnen die Möglichkeit, ihre eigenen Bilder mit Hilfe von Schleifen zu erstellen.",
+          "preparation": "-   Spielen Sie die Rätsel durch, um mögliche Problembereiche für Ihre Klasse zu finden. - Stellen Sie sicher, dass jeder SchülerInnen ein Reflexionsjournal hat.",
+          "purpose": "Diese Lektion bietet eine andere Perspektive darauf, wie Schleifen beim Programmieren etwas bewirken können. Die SchülerInnen können hier auch über die Ineffizienz der Programmierung ohne Schleifen nachdenken, da das Programm ohne die Hilfe von \"Wiederholungsschleifen\" viele Blöcke benötigen würde.",
+          "student_overview": "Verwenden Sie Schleifen und Muster, um die Bilder fertigzustellen."
+        },
+        "pre-express-2023/Drawing Gardens with Loops": {
+          "name": "Gärten mit Schleifen zeichnen",
+          "overview": "Bei der Wiederaufnahme des Schleifen-Konzepts lernen die SchülerInnen, Bilder zu zeichnen, indem sie einfache Sequenzen von Anweisungen mithilfe von Schleifen wiederholen. In der vorhergehenden Lektion am Computer wurden Schleifen verwendet, um ein Labyrinth zu durchqueren und Schätze zu sammeln. Hier verwenden die SchülerInnen Schleifen, um Muster zu erzeugen. Am Ende dieses Levels haben Sie die Möglichkeit, eigene Bilder mit Hilfe von Schleifen zu erstellen.",
+          "preparation": "-   Spielen Sie die Lektion durch, um mögliche Problembereiche für Ihre Klasse zu finden. - Vergewissern Sie sich, dass jeder SchülerInnen ein Reflexionstagebuch hat.",
+          "purpose": "Diese Lektion bietet eine andere Perspektive darauf, wie Schleifen in der Programmierung Dinge erzeugen können. Die SchülerInnen testen ihre Fähigkeiten zum kritischen Denken, indem sie den gegebenen Code auswerten und bestimmen, was hinzugefügt werden muss, um das Rätsel zu lösen. Die SchülerInnen können hier auch über die Ineffizienz des Programmierens ohne Schleifen nachdenken, da das Programm ohne die Hilfe von \"Wiederholungsschleifen\" viele Blöcke benötigen würde.",
+          "student_overview": "Verwenden Sie Muster und Schleifen, um die Bilder fertigzustellen."
+        },
+        "pre-express-2023/On the Move with Events": {
+          "name": "Aktionen mit Ereignissen",
+          "overview": "In dieser Online-Aktivität haben die SchülerInnen die Möglichkeit, die Verwendung von Ereignissen im Play Lab zu erlernen und alle bisher gelernten Programmierkenntnissen anzuwenden, um ein animiertes Spiel zu erstellen. Es ist die richtige Gelegenheit, kreativ zu werden und in Play Lab eine Geschichte zu erstellen!",
+          "preparation": "-   Spielen Sie die Rätsel durch, um mögliche Problembereiche für Ihre Klasse zu finden. - (Optional) Wählen Sie ein paar Rätsel aus, die Sie in der Gruppe mit Ihrer Klasse bearbeiten. - Stellen Sie sicher, dass jeder SchülerInnen ein Reflexionsjournal hat",
+          "purpose": "Die SchülerInnen werden heute im Play Lab ihr Verständnis von Ereignissen weiter ausbauen. Ereignisse sind in den meisten Computerprogrammen sehr häufig. In dieser Aktivität verwenden die SchülerInnen Ereignisse, um eine Figur auf dem Bildschirm zu bewegen, Geräusche zu machen und Hintergründe auf der Grundlage von benutzergesteuerten Ereignissen zu ändern.",
+          "student_overview": "Zeit, dein eigenes Spiel oder deine eigene Geschichte zu erstellen!"
+        },
+        "pre-express-2023/A Royal Battle with Events": {
+          "name": "Royal Battle mit Ereignissen",
+          "overview": "In diesem **Mini-Projekt** haben die Schüler die Möglichkeit, die Events im Play Lab zu nutzen und all ihre erlernten Programmierkenntnisse anzuwenden, um ein animiertes Spiel zu erstellen. ",
+          "preparation": "-   Spielen Sie die Rätsel durch, um mögliche Problembereiche für Ihre Klasse zu finden. - (Optional) Wählen Sie ein paar Rätsel aus, die Sie in der Gruppe mit Ihrer Klasse bearbeiten. - Stellen Sie sicher, dass jeder SchülerInnen ein Reflexionsjournal hat.",
+          "purpose": "In dieser Online-Aktivität lernen die SchülerInnen, wie man Ereignisse in Play Lab verwendet. Sie beginnen damit, dass sie dem Ritter beibringen, sich zu bewegen, wenn eine Pfeiltaste gedrückt wird, und haben dann die Möglichkeit, die restlichen Fähigkeiten, die sie in diesem Kurs gelernt haben, einschließlich Sequenz und Schleifenbildung, als Teil des abschließenden Freeplay-Puzzles zu präsentieren.",
+          "student_overview": "Verwenden Sie Ereignisse, um eine Geschichte oder ein interaktives Spiel zu erstellen."
+        },
+        "how-ai-works-2023/Our AI Code of Ethics": {
+          "name": "Unser KI-Ethikkodex"
+        },
         "Hour of Code/Hour of Code 2013": {
           "name": "Hour of Code 2013"
         },
