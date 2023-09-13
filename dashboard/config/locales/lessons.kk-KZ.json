@@ -389,6 +389,36 @@
         "coursef-2022/The Internet": {
           "name": "Ғаламтор"
         },
+        "coursea-2023/Happy Maps": {
+          "name": "Көңілді Карталар"
+        },
+        "courseb-2023/Move It, Move It": {
+          "name": "Қозғал, Қозғал"
+        },
+        "courseb-2023/Getting Loopy": {
+          "name": "Ілмектерді үйрену"
+        },
+        "coursec-2023/The Big Event": {
+          "name": "Үлкен Оқиға"
+        },
+        "coursec-2023/Binary Bracelets": {
+          "name": "Екілік Білезіктер"
+        },
+        "coursed-2023/Graph Paper Programming": {
+          "name": "Миллиметрлік Бағдарламалау"
+        },
+        "coursed-2023/Relay Programming": {
+          "name": "Релелік Бағдарламалау"
+        },
+        "coursed-2023/Conditionals with Cards": {
+          "name": "Картаға қатысты шартты белгілер"
+        },
+        "coursee-2023/Songwriting": {
+          "name": "Ән Жазу"
+        },
+        "coursef-2023/The Internet": {
+          "name": "Ғаламтор"
+        },
         "Hour of Code/Hour of Code 2013": {
           "name": "Код Жазу Сағаты 2013"
         },
