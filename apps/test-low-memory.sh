@@ -6,7 +6,7 @@ set -e
 # /super/ tight GC will run frequently and test perf will nosedive.
 #
 # MEM_PER_PROCESS should match the --max_old_space_size set for `npm run test:unit`
-MEM_PER_PROCESS=4200
+MEM_PER_PROCESS=4300
 
 function linuxNumProcs() {
   local nprocs=$(nproc)
