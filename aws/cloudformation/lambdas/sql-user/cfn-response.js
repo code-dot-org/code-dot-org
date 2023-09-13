@@ -1,61 +1,62 @@
-/*jshint esversion: 6 */
-const https = require("https");
+exports.SUCCESS = "SUCCESS";
+exports.FAILED = "FAILED";
 
-exports.sendCfnResponse = (
+exports.send = function (
   event,
   context,
   responseStatus,
   responseData,
   physicalResourceId,
   message
-) => {
-  return new Promise((resolve, reject) => {
-    const responseBody = {
-      Status: responseStatus,
-      Reason:
-        message ||
-        `See the details in CloudWatch Log Stream: ${context.logStreamName}`,
-      PhysicalResourceId: physicalResourceId || context.logStreamName,
-      StackId: event.StackId,
-      RequestId: event.RequestId,
-      LogicalResourceId: event.LogicalResourceId,
-      Data: responseData,
-    };
+) {
+  physicalResourceId = physicalResourceId || context.logStreamName;
 
-    console.log(responseBody);
+  // If this lambda function does not have permissions to CloudWatch Logs
+  // a PhysicalResourceId is still needed to send to CloudFormation.
+  if (event.RequestType === "Create" && responseStatus === exports.FAILED) {
+    physicalResourceId = physicalResourceId || exports.FAILED;
+  }
 
-    const { hostname, path } = new URL(event.ResponseURL);
-    const options = {
-      hostname: hostname,
-      port: 443,
-      path: path,
-      method: "PUT",
-      headers: {
-        "Content-Type": "",
-        "Content-Length": Buffer.byteLength(JSON.stringify(responseBody)),
-      },
-    };
-
-    const req = https.request(options, (res) => {
-      // TODO: Remove this debug logic.
-      console.log("statusCode:", res.statusCode);
-      console.log("headers:", res.headers);
-      res.on("data", (d) => {
-        console.log(res.body);
-      });
-      resolve();
-    });
-
-    // TODO: Remove this debug logic.
-    console.log(req);
-
-    req.on("error", (err) => {
-      // TODO: Remove this debug logic.
-      console.log(err);
-      reject(err);
-    });
-
-    req.write(JSON.stringify(responseBody));
-    req.end();
+  var responseBody = JSON.stringify({
+    Status: responseStatus,
+    Reason:
+      message ||
+      "See the details in CloudWatch Log Stream: " + context.logStreamName,
+    PhysicalResourceId: physicalResourceId,
+    StackId: event.StackId,
+    RequestId: event.RequestId,
+    LogicalResourceId: event.LogicalResourceId,
+    Data: responseData,
   });
+
+  console.log("Response body:\n", responseBody);
+
+  var https = require("https");
+  var url = require("url");
+
+  var parsedUrl = url.parse(event.ResponseURL);
+  var options = {
+    hostname: parsedUrl.hostname,
+    port: 443,
+    path: parsedUrl.path,
+    method: "PUT",
+    headers: {
+      "content-type": "",
+      "content-length": responseBody.length,
+    },
+  };
+
+  var request = https.request(options, function (response) {
+    console.log("Status code: " + response.statusCode);
+    console.log("Status message: " + response.statusMessage);
+    context.done();
+  });
+
+  request.on("error", function (error) {
+    console.log("send(..) failed executing https.request(..): " + error);
+    context.done();
+  });
+
+  request.write(responseBody);
+  request.end();
 };
