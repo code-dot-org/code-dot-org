@@ -267,8 +267,13 @@ es:
           title: autodidáctico-pl-csp-2021
           description_student: "## Bienvenido\n\n##### ¡Bienvenido a los módulos gratuitos en línea de Code.org dirigidos a educadores que deseen empezar a enseñar Principios de Informática! Después de completar estos módulos en línea, estarás listo para empezar a enseñar el curso Principios de Informática de Code.org con tus alumnos.\n\n### Encuentra el aprendizaje que funciona para ti\n\n##### **Ve a tu propio ritmo**: Estos módulos de autoaprendizaje están diseñados para ponerte al mando y darte el control sobre tu propio aprendizaje. Se sugieren tiempos para cada módulo y lección. No obstante, te animamos a que sigas el contenido a tu propio ritmo.\n\n### Elige tu contenido\n\n##### El contenido de estos módulos de aprendizaje profesional está organizado en la progresión sugerida para educadores nuevos tanto en Code.org como en Principios de Informática. Sin embargo, puedes utilizar el contenido en el orden que mejor se adapte a tus necesidades. Recomendamos a todos los educadores que empiecen con la breve unidad de bienvenida para aprender más sobre estos módulos de aprendizaje profesional antes de empezar."
           description_teacher: "## Bienvenido\n\n##### ¡Bienvenido a los módulos gratuitos en línea de Code.org dirigidos a educadores que deseen empezar a enseñar Principios de Informática! Después de completar estos módulos en línea, estarás listo para empezar a enseñar el curso Principios de Informática de Code.org con tus alumnos.\n\n### Encuentra el aprendizaje que funciona para ti\n\n##### **Ve a tu propio ritmo**: Estos módulos de autoaprendizaje están diseñados para ponerte al mando y darte el control sobre tu propio aprendizaje. Se sugieren tiempos para cada módulo y lección. No obstante, te animamos a que sigas el contenido a tu propio ritmo.\n\n### Elige tu contenido\n\n##### El contenido de estos módulos de aprendizaje profesional está organizado en la progresión sugerida para educadores nuevos tanto en Code.org como en Principios de Informática. Sin embargo, puedes utilizar el contenido en el orden que mejor se adapte a tus necesidades. Recomendamos a todos los educadores que empiecen con la breve unidad de bienvenida para aprender más sobre estos módulos de aprendizaje profesional antes de empezar."
+        vpl-csp-2023:
+          version_title: '2023'
         vpl-csa-2023:
           title: Aprendizaje Profesional Virtual de CSA
+          version_title: '2023'
+        vpl-csd-2023:
+          version_title: '2023'
     resources:
       curriculum/csd/2017:
         name: Currículum
