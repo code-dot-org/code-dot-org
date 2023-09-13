@@ -62,7 +62,7 @@ class Follower < ApplicationRecord
     student_user.assign_script(section.script) if section.script
   end
 
-  after_destroy :remove_family_name, if: proc {DCDO.get('family-name-features', false)}
+  after_destroy :remove_family_name, if: proc {DCDO.get('family-name-features', CDO.default_family_name_mode)}
   def remove_family_name
     # If the student is in zero sections, and has a family name set,
     # remove the family name.
