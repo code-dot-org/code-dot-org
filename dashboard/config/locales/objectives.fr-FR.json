@@ -1925,6 +1925,939 @@
         "d2669646-8580-4bb3-a6e0-54961b42a029": {
           "description": "Créer une histoire animée et interactive en utilisant les séquences et les gestionnaires d'événements."
         },
+        "33f3d6db-54e2-4c96-b11a-511672ae3be9": {
+          "description": "Créez une animation interactive en utilisant des sprites et des événements."
+        },
+        "1bd88170-e38e-4c5b-bd62-8107acd68567": {
+          "description": "Représenter le langage figuré et littéral dans un texte."
+        },
+        "08121200-84b5-4a5a-bba6-4b562022d2dd": {
+          "description": "Expliquez les règles pour voyager en toute sécurité sur Internet. "
+        },
+        "2c26b049-30e8-427f-bd1e-227322388384": {
+          "description": "Comparez le fait qu'être en sécurité en ligne, c'est comme l'être dans le monde réel. "
+        },
+        "4a183608-259a-4e03-96d5-84c2ce44ecde": {
+          "description": "Découvrez que l'Internet peut être utilisé pour visiter des endroits lointains et apprendre de nouvelles choses. "
+        },
+        "9135f13e-3644-4b46-8afc-7ed7979867b6": {
+          "description": "Reconnaître ce qu'on attend d'eux lorsqu'ils passent au labo informatique."
+        },
+        "cced4f5f-b5e7-44c2-883d-0693a6c4d57b": {
+          "description": "Utilisez la bonne terminologie quand vous faites référence à une souris d'ordinateur, un trackpad ou un écran tactile. "
+        },
+        "4c1740dc-3b8f-4efd-bd67-9747ea192b0e": {
+          "description": "Traduire un algorithme en un programme"
+        },
+        "8792657e-57ee-4898-a30e-f715b621bf2c": {
+          "description": "Décoder et exécuter un programme créé par quelqu'un d'autre"
+        },
+        "ad6f8f7b-d1dd-40e7-9591-0ab9737bd492": {
+          "description": "Identifier et corriger les bugs ou les erreurs dans les instructions séquencées"
+        },
+        "410fa6be-9c10-4a0b-aa54-d9352a22806d": {
+          "description": "Montrez les bons comportements en salle informatique "
+        },
+        "845acba3-a6c0-4e21-824c-f76a97df1cf3": {
+          "description": "Testez des actions de programmation normales basées sur les blocs, telles que : cliquer, glisser-déposer, etc. "
+        },
+        "3a4dd2f8-5564-4957-ad2a-c0202a6cd256": {
+          "description": "Construire un programme en réorganisant les mouvements séquentiels"
+        },
+        "5ab2b6fd-3e20-4420-879c-26f9a7dad398": {
+          "description": "Construire un programme d'ordinateur à partir d'une série d'instructions écrites"
+        },
+        "9a786a2b-5088-4006-a726-ae2aa7cfccf9": {
+          "description": "Choisir les processus de débogage adaptés lors de la résolution de problèmes"
+        },
+        "a0837de2-0b9b-42f8-b700-5f90891b3272": {
+          "description": "Séquencez les commandes dans un ordre logique."
+        },
+        "da5db99d-15b9-41c2-9542-ea9ed3aea616": {
+          "description": "Identifiez des problèmes ou « bugs » dans un programme et élaborez un plan pour résoudre ces problèmes."
+        },
+        "60df971c-013e-43f6-8f58-59fd01f7b62b": {
+          "description": "Interpréter un programme avec des boucles comme une série de plusieurs actions."
+        },
+        "b141adf4-aa11-463a-bc2d-5d0cd985c932": {
+          "description": "Identifier un code répétitif et réduire plusieurs actions en une seule boucle."
+        },
+        "5cfa4ba6-2df6-4801-871b-beae2f9408e1": {
+          "description": "Construire un programme en utilisant des structures qui répètent des zones de code"
+        },
+        "9d899829-68e8-4b6a-8d0d-dffc16f8f347": {
+          "description": "Améliorer le code existant en trouvant des zones de répétition et en les déplaçant vers des structures mise en boucle"
+        },
+        "26e467c8-fd1c-4e8a-a5fe-c8e8ba533350": {
+          "description": "Décomposer une longue séquence d'instructions en la plus petite séquence répétable possible."
+        },
+        "75181906-2b7e-42bb-a102-c8f0e455d867": {
+          "description": "Identifier les avantages de l'utilisation d'une structure en boucle au lieu de la répétition manuelle."
+        },
+        "19ce2bed-a8be-4bbe-98bd-f59877edaa89": {
+          "description": "Décomposer une forme en sa plus grande séquence reproductible."
+        },
+        "7a1f9e4e-632a-4b14-9bf1-0c9cbb84370a": {
+          "description": "Compter le nombre de fois qu'une action doit être répétée et représenter cela sous forme de boucle."
+        },
+        "808d8643-8bfe-4790-9c7b-e3b6ff47094d": {
+          "description": "Créer un programme qui dessine des formes complexes en répétant des séquences simples."
+        },
+        "2ed8599e-93ae-40d0-bfe4-afc32a531562": {
+          "description": "Répéter les commandes données par un enseignant."
+        },
+        "454c407c-5b0b-441f-82ee-e37b448a8c43": {
+          "description": "Reconnaître les actions de l'enseignant comme des signaux pour lancer des commandes."
+        },
+        "5d17f261-7325-43b2-b8fd-978eba1e3c45": {
+          "description": "S'entraîner à différencier entre les actions prédéfinies et les actions axées sur des événements."
+        },
+        "055bb50f-7acd-4c39-835d-1dc0dbf643bf": {
+          "description": "Partager un artefact créatif avec d'autres élèves."
+        },
+        "b557f9b3-361a-4c65-a2fb-18ca17927694": {
+          "description": "Créer une histoire animée et interactive en utilisant des séquences et des gestionnaires d'événements."
+        },
+        "c85e3900-b2a8-4255-851b-4d1cd31c508b": {
+          "description": "Identifier les actions qui aux événements d'entrée."
+        },
+        "27c5d1ff-3e92-4d6b-95db-2c7d845ab0cb": {
+          "description": "Surmonter les obstacles tels que les contraintes de temps ou les bugs."
+        },
+        "536bdbcb-c39c-40d5-979b-21faebb4c98c": {
+          "description": "Mettre en pratique des notions d'informatique dans un projet libre. "
+        },
+        "5bdc95ad-f428-4996-a790-bd3e8e202e7a": {
+          "description": "Découvrez quelles informations peuvent être partagées en ligne. "
+        },
+        "980fa7c9-c3f3-4ec7-8c64-6eac2545728d": {
+          "description": "Faites-les apprendre que les informations qu'ils partagent en ligne laissent une empreinte numérique ou une « trace ». "
+        },
+        "52b206c3-8f53-4e77-9417-a7c9edcee705": {
+          "description": "Identifier et corriger les erreurs dans l'exécution d'un algorithme "
+        },
+        "7ab6d3e4-fd00-47c7-9d96-cc1e3844fd39": {
+          "description": "Traduire une liste d'étapes en une série d'actions physiques "
+        },
+        "ff751540-1042-420b-9d8f-fd3034b313a2": {
+          "description": "Définir une liste d'étapes (algorithme) pour amener un ami de son point de départ à son but"
+        },
+        "8a529843-8998-4713-ad40-b157514bff66": {
+          "description": "Testez des actions de programmation normales basées sur les blocs, telles que : cliquer, glisser-déposer, etc. "
+        },
+        "9e786548-19e2-45d3-99e3-4734dabc36af": {
+          "description": "Montrez les bons comportements en salle informatique "
+        },
+        "67d693d7-7cf6-4005-9952-e04190933bee": {
+          "description": "Traduire les mouvements en une série de commandes."
+        },
+        "9286e247-6f4a-4f9f-ad44-84d73770d5ca": {
+          "description": "Construire un programme informatique à partir d'un ensemble d'instructions écrites."
+        },
+        "b542be3d-fd73-4e76-88ea-0d07d604c356": {
+          "description": "Construire un programme en réorganisant des mouvements séquentiels."
+        },
+        "cdfa4113-5f0b-4bb5-aa6b-c0350e6c73ae": {
+          "description": "Identifier et localiser les bugs dans un programme."
+        },
+        "ee3439ef-52c7-44fa-80b4-66f0c60efe8d": {
+          "description": "Traduire les mouvements en une série de commandes."
+        },
+        "3324d203-a3f2-401a-8600-c233ab2574b3": {
+          "description": "Répéter les actions initiées par l'instructeur."
+        },
+        "756b0feb-a03b-4943-95e7-b942def7c479": {
+          "description": "Convertir une série d'actions multiples en une seule boucle."
+        },
+        "f89be89b-dbfe-47d8-80ac-a751216ac651": {
+          "description": "Traduire un programme d'images en une danse dans la vraie vie. "
+        },
+        "0c32ef49-bdfc-44e6-b3cc-4de6ad91b350": {
+          "description": "Créer un programme pour une tâche donnée qui boucle une séquence de commandes."
+        },
+        "133ddc88-adec-4f3f-b7c0-4989f5d19314": {
+          "description": "Identifier les avantages de l'utilisation d'une structure en boucle au lieu de la répétition manuelle."
+        },
+        "7c9e729a-746d-445f-92d4-cedf8834c8c3": {
+          "description": "Décomposer une longue séquence d'instructions en la plus petite séquence répétable possible."
+        },
+        "eef72866-061c-405b-a93f-28440500d358": {
+          "description": "Employer un mélange de commandes séquentielles et en boucle pour parvenir à la fin d'un labyrinthe."
+        },
+        "06f170f1-441d-425b-8b3e-7b698224bec8": {
+          "description": "Décomposer une longue séquence d'instructions en la plus petite séquence répétable possible."
+        },
+        "ab2b5999-c81b-44dd-aa73-22e150e905d5": {
+          "description": "Identifier les avantages de l'utilisation d'une structure en boucle au lieu de la répétition manuelle."
+        },
+        "0db98543-004c-484f-8c10-48877fdbc12f": {
+          "description": "Compter le nombre de fois qu'une action doit être répétée et représenter cela sous forme de boucle."
+        },
+        "67525026-7c34-4612-8c23-9e23a6bc3db0": {
+          "description": "Créer un programme qui dessine des formes complexes en répétant des séquences simples."
+        },
+        "e58b52e7-277d-43ec-aed1-558ecd47e354": {
+          "description": "Décomposer une forme en sa plus grande séquence reproductible."
+        },
+        "3e732d8f-6b08-43b8-a7c9-b3d09f782b37": {
+          "description": "Recommander des technologies à autrui, en fonction de leurs besoins spécifiques."
+        },
+        "54226aac-0811-4011-ab16-7153f412ed16": {
+          "description": "Faire preuve d'empathie et de créativité lors de la conception de technologies pour les autres. "
+        },
+        "d88740c6-3bed-4917-95a6-0bd541273af0": {
+          "description": "Énumérer plusieurs exemples différents d'applications pour smartphone. "
+        },
+        "6cd47594-c70e-42e4-8052-f627b3fc3282": {
+          "description": "Répéter les commandes données par un enseignant."
+        },
+        "79b6b10a-0662-4d50-9c9c-ae4e8171d21e": {
+          "description": "S'entraîner à différencier entre les actions prédéfinies et les actions axées sur des événements."
+        },
+        "c23d5735-a656-4626-8f7a-94615312d289": {
+          "description": "Reconnaître les actions de l'enseignant comme des signaux pour lancer des commandes."
+        },
+        "1f4e2653-1ca8-4eaa-b9d6-e38dc31cbfce": {
+          "description": "Créer une histoire animée et interactive en utilisant les séquences et les gestionnaires d'événements."
+        },
+        "637a8add-f38c-4223-a1e3-5b5afce7fd40": {
+          "description": "Identifier les actions qui aux événements d'entrée."
+        },
+        "6fc2eb20-8727-4674-b974-e1532031c3c5": {
+          "description": "Partager un artefact créatif avec d'autres élèves."
+        },
+        "4972490c-b955-4b4b-982c-48477221896b": {
+          "description": "Mettre en pratique des notions d'informatique dans un projet libre. "
+        },
+        "ec142981-67db-481f-9ad9-345e63b7b323": {
+          "description": "Surmonter les obstacles tels que les contraintes de temps ou les bugs."
+        },
+        "55a09477-cb28-4661-a2fc-725977e32af1": {
+          "description": "Identifier comment réagir aux paroles méchantes en ligne, en utilisant S-T-O-P. "
+        },
+        "7f4ce12c-e224-4dbb-89c4-7a535cdf7b82": {
+          "description": "Comprendre à quoi peut ressembler la méchanceté en ligne et ce qu'elle peut faire aux gens. "
+        },
+        "4dd208db-3fb3-4253-8560-ebbc3ccab8a3": {
+          "description": "Identifier et corriger les bugs ou les erreurs dans les instructions séquencées"
+        },
+        "ebe7a043-dbde-44ad-ac29-019e53f81513": {
+          "description": "Soyez attentifs à la précision en créant des instructions"
+        },
+        "14fee8be-0a09-45f9-9f7d-876385f9e555": {
+          "description": "Identifier et localiser les bugs dans un programme."
+        },
+        "59efd82b-31ca-476c-a21c-9eccb856cf82": {
+          "description": "Traduire les mouvements en une série de commandes."
+        },
+        "856114c0-8a29-4d75-ac7e-f1ca8eb476e7": {
+          "description": "Modifier un programme existant pour résoudre les erreurs."
+        },
+        "85d8fe3b-6b97-460a-9d31-68af3e9fa37d": {
+          "description": "Prévoir où un programme va échouer. "
+        },
+        "bc5a36ce-5d15-4e87-a2b1-3434a3639a5d": {
+          "description": "Réfléchir au processus de débogage d'une manière adaptée à l'âge."
+        },
+        "2ff64d38-c52d-4cd6-ba79-2b3a5100b7fe": {
+          "description": "Ordonner des commandes de déplacement sous forme d'étapes séquentielles dans un programme."
+        },
+        "48ee4f9a-585f-4cb2-a89a-b0daecde6f87": {
+          "description": "Représenter un algorithme sous forme de programme informatique."
+        },
+        "ed26adef-4f54-4fac-954f-f21373f04e21": {
+          "description": "Développer des compétences de résolution de problèmes et l'esprit critique en étudiant des pratiques de débogage."
+        },
+        "229ebc69-f4c9-4996-aa54-8a85ff20b62d": {
+          "description": "Crée un programme pour compléter une image en utilisant des étapes séquentielles."
+        },
+        "2f8217e2-eb6a-470d-b459-9e8e7427a5c6": {
+          "description": "Casse des formes complexes en parties simples."
+        },
+        "70b6434a-184b-43d1-893a-ad471f4c432e": {
+          "description": "Identifier des motifs récurrents dans le code qui pourraient être remplacés par une boucle"
+        },
+        "c07f525c-f1f8-43fd-a300-812dfcc7b721": {
+          "description": "Écrire des instructions qui utilisent des boucles pour répéter les motifs"
+        },
+        "1d8cb6e9-96c2-4f76-8821-9712f7eb7679": {
+          "description": "Employer un mélange de commandes séquentielles et en boucle pour parvenir à la fin d'un labyrinthe."
+        },
+        "27a33580-ad30-413f-a534-fda554807d85": {
+          "description": "Identifier les avantages de l'utilisation d'une structure en boucle au lieu de la répétition manuelle."
+        },
+        "9dda3d5a-3eb7-406e-bc6b-46faeebd5c3e": {
+          "description": "Décomposer une longue séquence d'instructions en la plus grosse séquence répétable."
+        },
+        "1eff1485-7e01-4b90-a563-c20dba6ad15c": {
+          "description": "Identifier quand une boucle peut être utilisée pour simplifier une action répétitive."
+        },
+        "5539afc7-7adb-45f6-aa9b-0dfefa06f020": {
+          "description": "Écrire un programme pour une tâche donnée qui met en boucle une seule commande."
+        },
+        "fb49b7eb-67bc-4cad-a644-710007c9a805": {
+          "description": "Utiliser un mélange de commandes séquentielles et mises en boucle pour se déplacer et effectuer des actions."
+        },
+        "066a899e-a5f0-403e-9269-977d85c2147b": {
+          "description": "Faire la différence entre les commandes qui doivent être répétées en boucles et les commandes qui doivent être utilisées seules."
+        },
+        "fc46f94d-3f0f-481b-ad28-e937199a6d13": {
+          "description": "Identifier les avantages de l'utilisation d'une structure en boucle au lieu de la répétition manuelle."
+        },
+        "421fdb33-b57e-4323-a607-d4be7a63dc58": {
+          "description": "S'entraîner à différencier entre les actions prédéfinies et les actions axées sur des événements."
+        },
+        "57a91022-682c-4b14-8fe1-d59e917dfe5b": {
+          "description": "Reconnaître les mouvements de l'enseignant comme des signaux pour lancer des commandes."
+        },
+        "c7b579bb-ac4c-4c83-acbc-e3be38f22201": {
+          "description": "Répéter les commandes données par un enseignant."
+        },
+        "7409434e-498e-4a38-871d-d3e07e5513ea": {
+          "description": "Partager un artefact créatif avec d'autres élèves."
+        },
+        "8a26dd8d-73a5-4b4e-aff5-96555755dffa": {
+          "description": "Créer un jeu à l'aide de gestionnaires d'événements."
+        },
+        "ef358d1d-f0da-47d2-94cc-a235422adcd1": {
+          "description": "Faire correspondre les blocs avec le gestionnaire d'événements approprié."
+        },
+        "40eca7d9-43be-49f8-98bd-e5e1b0f9ce76": {
+          "description": "Créer un jeu animé et interactif à l'aide de séquences et de gestionnaires d'événements."
+        },
+        "f3250339-3797-4706-a20a-52a9d41fc452": {
+          "description": "Identifier les actions qui aux événements d'entrée."
+        },
+        "45c7489d-b2b5-4773-8ca4-706ebfb4b7c1": {
+          "description": "Faire des comparaisons entre les visualisations de données faites par d'autres et les utiliser pour faire une prévision. "
+        },
+        "d3ff4345-57a2-4fb6-b60b-90f9d259894d": {
+          "description": "Recueillir et enregistrer des données sur des quantités d'objets réels ou de personnages sur un écran"
+        },
+        "eb342a3b-6b44-4788-94b5-370406763c79": {
+          "description": "Créer un histogramme et un camembert pour représenter des données simples."
+        },
+        "3623af29-f5f4-4abb-b6c1-9971c501707c": {
+          "description": "Faire le lien entre l'idée de stocker des lettres sur papier et l'idée de stocker des informations sur un ordinateur."
+        },
+        "c96d6ebe-9029-4dbb-9fcd-a992db084bea": {
+          "description": "Encoder des lettres en code binaire."
+        },
+        "cc4a347d-4d19-40b3-beee-65525c111419": {
+          "description": "Re-décoder du binaire en lettres."
+        },
+        "7870e60f-8cde-48f8-8dee-a49ce46eba61": {
+          "description": "Utiliser une conception planifiée comme plan de création."
+        },
+        "801c4df1-5112-4d84-abe6-210838902845": {
+          "description": "Surmonter les obstacles tels que les contraintes de temps ou les bugs."
+        },
+        "37124f0b-631a-41a6-806c-cec9ebcf80b6": {
+          "description": "S'entraîner à créer un mot de passe fort et mémorisable."
+        },
+        "ebac082d-a94e-474e-812c-b9f5e792a13e": {
+          "description": "Définir le terme « mot de passe » et décrire le but d'un mot de passe."
+        },
+        "58ac2483-d00b-4167-b610-d2868c5a094f": {
+          "description": "Réorganiser une série d'étapes en un programme encodé"
+        },
+        "8b260be7-f18d-4406-a4e9-173dd50a29e4": {
+          "description": "Expliquer les contraintes de traduire des problèmes du langage humain vers le langage machine"
+        },
+        "2da917c0-f586-4089-b85e-8f0a12e54762": {
+          "description": "Décomposer une longue séquence d'instructions en la plus grosse séquence répétable."
+        },
+        "b43a1de3-d365-4313-b3f0-c9d628cf372a": {
+          "description": "Ordonner des commandes de déplacement sous forme d'étapes séquentielles dans un programme."
+        },
+        "ba720b1e-b6a5-4b9b-9f57-5226fc1ab2ca": {
+          "description": "Modifier un programme existant pour résoudre les erreurs."
+        },
+        "993470c2-9c57-4fe4-82c3-e9188caf386f": {
+          "description": "Identifier les signes de frustration"
+        },
+        "a56b7718-fda6-4c5d-8da9-b9309707654c": {
+          "description": "Définir des idées en utilisant du code et des symboles."
+        },
+        "e25d0146-f001-44ff-8e04-0443d1fe08cc": {
+          "description": "Vérifier le travail effectué par ses coéquipiers."
+        },
+        "3ae40879-3b0f-4d7f-96c3-d228cde35253": {
+          "description": "Lire et comprendre un code donné."
+        },
+        "c82f260a-e0ca-4a4a-be3d-e72d581758e1": {
+          "description": "Décrire et mettre en œuvre un plan pour déboguer un programme."
+        },
+        "c8bc26ae-fb6b-4154-8ac3-09f9c7236cc9": {
+          "description": "Identifier un bug et les problèmes qu'il génère dans un programme."
+        },
+        "975eb131-ed08-46f3-99e3-5673fc1a7cba": {
+          "description": "Créer un jeu interactif en utilisant des séquences et des gestionnaires d'événements."
+        },
+        "bd96f83d-bb11-45d7-8f9d-318dfe4780ea": {
+          "description": "Identifier les actions qui aux événements d'entrée."
+        },
+        "e77643d4-be8a-4168-b1e9-8db021a61e2c": {
+          "description": "Partager un artefact créatif avec d'autres élèves."
+        },
+        "4accef26-495e-4979-8567-3d23178769b5": {
+          "description": "Identifier les actions qui aux événements d'entrée."
+        },
+        "98e5b36d-9439-4748-bf6f-e619018f92fe": {
+          "description": "Créer un jeu animé et interactif à l'aide de séquences et de d'événements."
+        },
+        "65e4c7cc-3e04-46f6-a879-8439d75a1a87": {
+          "description": "Développer des programmes qui répondent aux événements chronométrés"
+        },
+        "7b61c64a-1235-4bb8-a660-ae9f09c57606": {
+          "description": "Créer des animations de danse avec du code"
+        },
+        "bc6ede73-31d3-4995-9c16-90f09151e937": {
+          "description": "Développer des programmes qui répondent aux commentaires des utilisateurs"
+        },
+        "2c0d2675-5ba9-468e-8126-856c439ce5e7": {
+          "description": "Construire un programme en utilisant des structures qui répètent des zones de code"
+        },
+        "8fe71e7b-e38e-4dbc-b4de-032d68b61b3e": {
+          "description": "Améliorer le code existant en trouvant des zones de répétition et en les déplaçant vers des structures mise en boucle"
+        },
+        "91741d56-477d-459c-bbc4-98afb1902312": {
+          "description": "Identifier les avantages de l'utilisation d'une structure en boucle au lieu de la répétition manuelle."
+        },
+        "d932a994-85f8-4b1f-8c12-2b6696c4f333": {
+          "description": "Faire la différence entre les commandes qui doivent être répétées en boucles et les commandes qui doivent être utilisées seules."
+        },
+        "6d4f6860-ea45-4a37-ac56-f147c7f9f93b": {
+          "description": "Reconnaître les gros motifs récurrents comme étant composés de motifs récurrents plus petits."
+        },
+        "a77951f8-0b27-4891-80fd-0826d9f6d5d2": {
+          "description": "Identifier les avantages de l'utilisation d'une structure en boucle au lieu de la répétition manuelle."
+        },
+        "b9a291a3-8054-4aa9-85e5-37e4a6354ebf": {
+          "description": "Diviser les tâches complexes en de plus petites sections reproductibles."
+        },
+        "2517dfd3-fab0-4a56-9ed3-ebaf7a3c2584": {
+          "description": "Parcourir un programme et prédire le résultat, en fonction d'un ensemble d'entrées."
+        },
+        "6f2a37fe-15c1-4827-8448-dfd5a85fdc0c": {
+          "description": "Déterminer si une condition est remplie, en fonction de critères."
+        },
+        "fb9d1712-200c-431b-a3f0-4aeb225fd04e": {
+          "description": "Définir les circonstances dans lesquelles certaines parties d'un programme devraient s'exécuter et dans lesquelles elles ne le devraient pas."
+        },
+        "787817f5-ae6a-423c-80d7-5ffc390c32ec": {
+          "description": "Déterminer si une condition est remplie, en fonction de critères."
+        },
+        "e4da391a-eff1-4386-9057-07218dc0a68f": {
+          "description": "Définir les circonstances dans lesquelles certaines parties d'un programme devraient s'exécuter et dans lesquelles elles ne le devraient pas."
+        },
+        "dffba375-7b6c-43ff-9c10-1e3a6197c492": {
+          "description": "Traduire des déclarations conditionnelles de langage parlé vers un programme."
+        },
+        "e99389ab-59a8-4af6-94bb-1f2c8eb0b13a": {
+          "description": "Résoudre des casse-têtes à l'aide d'un mélange de séquences en boucle et d'instructions conditionnelles."
+        },
+        "c4590e08-60e6-4005-9fed-7b6376f25054": {
+          "description": "Faire la distinction entre les boucles qui se répètent un nombre prédéfini de fois et les boucles qui se répètent tant qu'une condition est vraie."
+        },
+        "fd02b811-3ce4-4f0c-bdb8-7c49bc2c7c03": {
+          "description": "Utiliser une boucle tant que pour créer des programmes capables de résoudre des problèmes avec des valeurs inconnues."
+        },
+        "a566fcba-9df2-40ef-babc-fffa9634043f": {
+          "description": "Traduire des déclarations conditionnelles et des boucles du langage parlé vers un programme."
+        },
+        "d6927279-4ff5-45f5-82b1-db71cbadccc6": {
+          "description": "Construire des programmes en comprenant de multiples stratégies pour mettre en œuvre des instructions conditionnelles."
+        },
+        "946e341c-e9f3-44a9-8a59-5b4be0adf4a7": {
+          "description": "Surmonter les obstacles tels que les contraintes de temps ou les bugs."
+        },
+        "a3a0f820-0f93-4525-99d6-25578f7c2c48": {
+          "description": "Expliquer pourquoi cela est risqué de partager des informations privées en ligne."
+        },
+        "a4e0e4d9-0eb7-41fb-a1f2-bbee2d27c690": {
+          "description": "Expliquer la différence entre les informations privées et personnelles."
+        },
+        "b3c10f40-3fba-4247-b680-bea68b00c62d": {
+          "description": "Identifier les raisons pour lesquelles les gens partagent des informations les concernant en ligne."
+        },
+        "19a06e30-46f9-4ccd-8484-c01dcd915981": {
+          "description": "Créer de nouveaux sprites et leur attribuer des costumes et des comportements. "
+        },
+        "4d6e99ae-325d-49f8-8e38-2ee2ac4f81dc": {
+          "description": "Définir un « sprite » comme étant un personnage ou un objet à l'écran qui peut être déplacé et modifié. "
+        },
+        "23d3203d-fd55-4994-a5ea-db01f6e5ea8f": {
+          "description": "Créez de nouveaux sprites et attribuez-leur des costumes et des emplacements."
+        },
+        "d943af7f-1329-432c-95fe-99a27ef065a7": {
+          "description": "Créez une animation interactive en utilisant des sprites et des événements."
+        },
+        "0eeaa187-0d40-40e5-b3e6-abfcb346d0b8": {
+          "description": "Créer un programme informatique interactif qui leur permet d'exprimer leur identité un utilisant des textes et des images personnalisées. "
+        },
+        "b4c86cd9-548e-4fd1-8083-3c4b4d108052": {
+          "description": "Choisir quelles informations les concernant peuvent être partagées en ligne en toute sécurité."
+        },
+        "c8e9b54c-7931-40e0-8a87-391a930b8a7a": {
+          "description": "Identifier les avantages de l'utilisation d'une structure en boucle au lieu de la répétition manuelle."
+        },
+        "fe9dbb80-e70b-474b-a1fa-dbff4990264a": {
+          "description": "Faire la différence entre les commandes qui doivent être répétées en boucles et les commandes qui doivent être utilisées seules."
+        },
+        "35d77767-4731-48c7-968a-0d1d7eda55a3": {
+          "description": "Diviser les tâches complexes en de plus petites sections reproductibles."
+        },
+        "7a557413-e74e-4841-a76f-ae9f901c553d": {
+          "description": "Associer des formes simples pour en faire des designs complexes en utilisant les boucles imbriquées."
+        },
+        "b53e2e1c-30de-4843-946c-cd7df12b38c3": {
+          "description": "Compter le nombre de fois qu'une action doit être répétée et représenter cela sous forme de boucle."
+        },
+        "322e98a8-9e00-447a-98f6-30fd8a5193b4": {
+          "description": "Diviser le code en les plus larges séquences reproductibles possibles en se servant à la fois des boucles et des boucles imbriquées."
+        },
+        "77e00b69-871a-4df7-9bed-daaa6607b442": {
+          "description": "Reconnaître la différence entre utiliser une boucle et utiliser une boucle imbriquée."
+        },
+        "8b5adab8-8d05-430d-bda7-b875f837684b": {
+          "description": "Décrire quand une boucle, une boucle imbriquée, ou aucune boucle est nécessaire."
+        },
+        "baa24db8-77c1-4be4-9c40-8b62c79074ea": {
+          "description": "Localiser les phrases récurrentes dans les paroles d'une chanson."
+        },
+        "c5ab6014-fad2-407f-a940-5df6ae9e1c6f": {
+          "description": "Identifier les sections d'une chanson à intégrer dans une fonction."
+        },
+        "d5bb7b38-81d4-4dda-aa66-ef9925a2cdfb": {
+          "description": "Décrire comment les fonctions peuvent faciliter l'écriture de programmes."
+        },
+        "7152c50b-409e-4ef2-bffc-9407d1e600d1": {
+          "description": "Utiliser des fonctions prédéterminées pour compléter des tâches qui se répètent fréquemment."
+        },
+        "adce7990-5f04-43b7-a3f9-f8d2fb82c003": {
+          "description": "Utiliser des fonctions pour simplifier des programmes complexes."
+        },
+        "1336725c-ca2c-41f2-91a3-79bae642bb53": {
+          "description": "Reconnaître quand une fonction pourrait aider à simplifier un programme."
+        },
+        "4649d804-1cea-4748-a164-48c0826a19c6": {
+          "description": "Classer et généraliser le code en fonctions utiles."
+        },
+        "95c787fe-e3f4-4e0d-9321-755e1f2138ff": {
+          "description": "Définir les circonstances dans lesquelles certaines parties d'un programme devraient s'exécuter et dans lesquelles elles ne le devraient pas."
+        },
+        "c358a3cc-bdda-4899-8b93-24a8f41cc139": {
+          "description": "Déterminer si une condition est remplie, en fonction de critères."
+        },
+        "0d758b6c-1f60-4c36-ac88-10c83525abfd": {
+          "description": "Définir les circonstances dans lesquelles certaines parties d'un programme devraient s'exécuter et dans lesquelles elles ne le devraient pas."
+        },
+        "c1cdb005-bf70-499f-b6ef-c5375755af5e": {
+          "description": "Déterminer si une condition est remplie, en fonction de critères."
+        },
+        "588729d9-c86f-4ce4-ad0e-d195b9d488bd": {
+          "description": "Utiliser des fonctions prédéterminées pour compléter des tâches qui se répètent fréquemment."
+        },
+        "d9f53a95-0fcf-496b-8d62-c19e63285b9b": {
+          "description": "Reconnaître quand une fonction pourrait aider à simplifier un programme."
+        },
+        "07318d43-27a2-4f67-ab68-bec43f8aeb06": {
+          "description": "Améliorer le design d'une appli existante en répondant aux besoins d'accessibilité des utilisateurs."
+        },
+        "2415d19b-be4d-45f0-9997-297955855224": {
+          "description": "Décrire l'impact des applis mobiles sur le monde moderne."
+        },
+        "bcb9bb81-0424-4ee8-8e61-25fb2038f410": {
+          "description": "Expliquer pourquoi l'accessibilité est un aspect important de la conception d'applications pour les utilisateurs."
+        },
+        "0c04b242-36af-4438-b1e6-957abc26e810": {
+          "description": "Comprendre la différence entre le partage éthique d'œuvres protégées par les droits d'auteur et le partage non-éthique de celles-ci."
+        },
+        "28abc392-9310-402f-ab2a-4d17fb785e88": {
+          "description": "Comprendre leurs propres droits vis-à-vis d'œuvres qu'ils ont créées eux-mêmes"
+        },
+        "1292695d-d411-4b86-a5e7-97fe3a9c0bd8": {
+          "description": "Articuler le processus de conception et comment cela a influé sur la forme du projet final abouti. "
+        },
+        "45ca0645-0bf7-4e81-90a8-a39dff0fd2db": {
+          "description": "Décrire comment un compromis peut aider à maintenir un projet sur la bonne voie et inspirer la créativité."
+        },
+        "5f2f1c81-a3aa-435c-93fe-6d01ac37ec05": {
+          "description": "Apprendre à planifier à l'avance pour une tâche qui se fait de façon continue. "
+        },
+        "d293d6fa-721b-45eb-9397-f772421119ad": {
+          "description": "Expliquer comment les limites de système peuvent impacter la conception d'un projet."
+        },
+        "f11b65b8-8c9b-4b92-a3cb-1b10a2be0c37": {
+          "description": "Rédiger et mettre en œuvre des plans pour résoudre tous problèmes dans leur code."
+        },
+        "3bb4f045-c53e-4625-b7ad-bdba2adab86d": {
+          "description": "Décider quel genre de choses on peut dire en ligne et quel genre de choses on ne doit pas dire."
+        },
+        "6eb496de-c49a-4ef1-89b2-07422b8fd940": {
+          "description": "Décrire l'importance de l'utilisateur dans le processus de conception. "
+        },
+        "9d91c903-599b-4f39-8794-b60e5b82a728": {
+          "description": "Identifier les sprites dans un programme informatique en cours d'exécution. "
+        },
+        "54bdf34a-22bd-4455-8572-4e2da88b3ae4": {
+          "description": "Créer une animation à l'aide de sprites et de comportements."
+        },
+        "b1f66a40-0fc0-4682-85a5-ad2f20016ebd": {
+          "description": "Créer de nouveaux sprites et leur attribuer des costumes et des comportements. "
+        },
+        "7bd9f479-f0e7-40e2-a1c1-d40567877f1e": {
+          "description": "Développer des programmes qui répondent aux remarques d'utilisateurs."
+        },
+        "996e32df-b9f6-4a50-b810-86f90710e962": {
+          "description": "Développer des programmes qui répondent à des événements planifiés."
+        },
+        "d385d281-f206-4e46-89d5-8a2b7ddf4fbb": {
+          "description": "Créer une animation interactive à l'aide d'événements. "
+        },
+        "1a32a452-b987-41b6-9a46-cf0d0c4ad28e": {
+          "description": "Créer un animal de compagnie virtuel interactif en utilisant des événements, des comportements et des illustrations personnalisées. "
+        },
+        "6d53d2da-482f-4f7f-aeba-4724d7cd94fd": {
+          "description": "Programmer des solutions aux problèmes qui surviennent lors de la conception d'un animal de compagnie virtuel, comme le nourrir. "
+        },
+        "10c60f4a-ddfe-4828-8f53-36292496b61b": {
+          "description": "Déclarer une variable"
+        },
+        "21a5fada-187b-4d8c-bdac-e9eff5b2079b": {
+          "description": "Appeler une variable à plusieurs reprises au sein d'un programme. "
+        },
+        "29eba41b-038a-44a1-aedb-20ea77a84d73": {
+          "description": "Déterminer la relation entre comment une variable est définie, stockée et récupérée lorsqu'on appuie sur « Démarrer » dans un programme."
+        },
+        "c79bc65d-866c-42c7-a4ca-cb55bce36ae8": {
+          "description": "Attribuer une valeur à une variable "
+        },
+        "19a247ec-7d77-4a99-bf3b-6976a59e1eae": {
+          "description": "Utiliser des variables en les associant à des invites."
+        },
+        "9ccb61df-fd60-45b4-bfea-fda92842dcda": {
+          "description": "Utiliser des variables pour contenir des mots et des phrases."
+        },
+        "b495a1ea-5c79-43d5-b1a3-f0b60c2f28fe": {
+          "description": "Utiliser des variables en les associant à des invites."
+        },
+        "e319eebd-91ad-4a83-b8bb-c3f7ad8dbce0": {
+          "description": "Créer un programme informatique interactif qui réponde aux saisies de l'utilisateur."
+        },
+        "e6e61481-5798-4cc1-b392-974c1a0f9b6d": {
+          "description": "Utiliser des variables pour contenir des mots et des phrases."
+        },
+        "93d9a679-eca0-4ec5-bc30-3473b8e0ba86": {
+          "description": "Créer un graphique à double courbe pour comparer les données de deux sources différentes "
+        },
+        "bd16b6b1-5021-4575-a85f-50fbcfa88eb2": {
+          "description": "Utiliser une simulation informatique pour recueillir des données sur un modèle "
+        },
+        "e5027ee5-ef3b-4550-b333-b861127c3964": {
+          "description": "Faire et tester une prévision en modifiant les variables de la simulation "
+        },
+        "0a79d647-d90e-447e-a60a-79ad3ff34580": {
+          "description": "Raisonner sur la façon dont le biais humain joue un rôle dans l'apprentissage automatique."
+        },
+        "362fda44-20c3-4bfe-a942-090257c7055e": {
+          "description": "Se former et tester un modèle d'apprentissage automatique."
+        },
+        "964af2d3-37b9-4763-a215-dc99af94e7f1": {
+          "description": "Discutez du rôle que joue l'intelligence artificielle dans leur vie."
+        },
+        "69923930-b963-4971-9fd2-4797aff683eb": {
+          "description": "Traduire les URL en adresses IP."
+        },
+        "e19d8fce-b2de-4320-9614-b0b7a7fac5f4": {
+          "description": "Découvrir la complexité de l'envoi de messages sur Internet."
+        },
+        "16fde203-5274-44eb-9953-0230356ecadb": {
+          "description": "Être capable d'expliquer comment les limites du système peuvent impacter la conception du projet."
+        },
+        "64262bc9-71e0-479a-aed8-9edf6febcfb2": {
+          "description": "Rédiger et mettre en œuvre des plans pour résoudre tous problèmes dans leur code."
+        },
+        "7596f6ef-a0cf-4161-99ab-47e503282aff": {
+          "description": "Articuler le processus de conception et comment cela a influé sur la forme du projet final abouti. "
+        },
+        "cbc2d137-5084-4683-9953-5b84607d3b5e": {
+          "description": "Apprendre à planifier à l'avance pour une tâche qui se fait de façon continue. "
+        },
+        "da122480-d822-40ed-b900-9f85e5f9a219": {
+          "description": "Décrire comment un compromis peut aider à maintenir un projet sur la bonne voie et inspirer la créativité."
+        },
+        "0d6f6de7-7f64-44f9-b145-04e20abb5f06": {
+          "description": "Identifier et localiser les bugs dans un programme."
+        },
+        "6d0272f5-1839-4362-9d24-d01e3c22878a": {
+          "description": "Traduire les mouvements en une série de commandes."
+        },
+        "17661603-f5a5-48a8-af4e-d890693958b8": {
+          "description": "Réfléchir au processus de débogage d'une manière adaptée à l'âge."
+        },
+        "30417d34-6df7-499f-a3d2-f2211f6c25c6": {
+          "description": "Prévoir où un programme va échouer. "
+        },
+        "51a885af-378f-40b8-b732-5847e3029ca6": {
+          "description": "Modifier un programme existant pour résoudre les erreurs."
+        },
+        "81cbe598-0faf-485a-929d-37d84a9b2ae0": {
+          "description": "Développer des compétences de résolution de problèmes et l'esprit critique en étudiant des pratiques de débogage."
+        },
+        "cff6d24c-027b-4868-833b-39f8455969c5": {
+          "description": "Représenter un algorithme sous forme de programme informatique."
+        },
+        "fae63d1e-d4c3-4476-b83e-be2fed01d593": {
+          "description": "Ordonner des commandes de déplacement sous forme d'étapes séquentielles dans un programme."
+        },
+        "2278fe47-674a-452b-a110-c2d084168b78": {
+          "description": "Crée un programme pour compléter une image en utilisant des étapes séquentielles."
+        },
+        "b3943442-56a4-4b41-8bd3-4a24fdca57bb": {
+          "description": "Casse des formes complexes en parties simples."
+        },
+        "038af8d5-eb34-4704-8182-3544b59bfa5f": {
+          "description": "Définir un « sprite » comme étant un personnage ou un objet à l'écran qui peut être déplacé et modifié. "
+        },
+        "aa1e23b5-2513-4fcf-a928-f155a76de514": {
+          "description": "Créer de nouveaux sprites et leur attribuer des costumes et des comportements. "
+        },
+        "71bba805-f69d-4c22-b17c-78445660e467": {
+          "description": "Créer de nouveaux sprites et leur attribuer des costumes et des comportements. "
+        },
+        "ba09c181-b13a-4893-bed3-0e7be200e924": {
+          "description": "Créer une animation à l'aide de sprites et de comportements."
+        },
+        "1c35af10-00d4-4f62-8210-f47021abc4c7": {
+          "description": "Développer des programmes qui répondent à des événements planifiés."
+        },
+        "823b89dd-e152-4a4a-9247-35048f1da7a7": {
+          "description": "Créer une animation interactive à l'aide d'événements. "
+        },
+        "ed78bcaf-fb55-420e-8461-2b584d29557c": {
+          "description": "Développer des programmes qui répondent aux remarques d'utilisateurs."
+        },
+        "2ac10d94-c775-4a35-a2f8-110644f349fb": {
+          "description": "Programmer des solutions aux problèmes qui surviennent lors de la conception d'un animal de compagnie virtuel, comme le nourrir ou surveiller son bonheur. "
+        },
+        "f02c6a10-0ba5-4005-a17b-565775ae6505": {
+          "description": "Créer un animal de compagnie virtuel interactif en utilisant des événements, des variables, des comportements et des illustrations personnalisées. "
+        },
+        "0815895c-2118-4dbc-8580-b95ce2e4a86b": {
+          "description": "Développer des programmes qui répondent aux événements chronométrés"
+        },
+        "56af8491-b4f2-477c-bb4d-433e82aacd4d": {
+          "description": "Développer des programmes qui répondent aux commentaires des utilisateurs"
+        },
+        "66a6368e-7191-4008-96a3-5df2dd519487": {
+          "description": "Créer des animations de danse avec du code"
+        },
+        "dd233cc9-8725-40f5-9d7e-0800669cdb9c": {
+          "description": "Décomposer une longue séquence d'instructions en la plus grosse séquence répétable."
+        },
+        "eb44ae33-d96d-452c-ba0f-c69873c73c7d": {
+          "description": "Identifier les avantages de l'utilisation d'une structure en boucle au lieu de la répétition manuelle."
+        },
+        "ff1dc7da-d700-4b8b-9d38-cb42c327d722": {
+          "description": "Employer un mélange de commandes séquentielles et en boucle pour parvenir à la fin d'un labyrinthe."
+        },
+        "5f045788-30d6-4959-917e-fb90f29076df": {
+          "description": "Faire la différence entre les commandes qui doivent être répétées en boucles et les commandes qui doivent être utilisées seules."
+        },
+        "cc04bc6b-d50f-4af3-b1ba-46e9da93a2ad": {
+          "description": "Identifier les avantages de l'utilisation d'une structure en boucle au lieu de la répétition manuelle."
+        },
+        "184cbf16-7035-47ce-b330-a38633c938d4": {
+          "description": "Identifier les avantages de l'utilisation d'une structure en boucle au lieu de la répétition manuelle."
+        },
+        "5193b13c-1c18-41da-bd39-4b97bc341615": {
+          "description": "Diviser les tâches complexes en de plus petites sections reproductibles."
+        },
+        "a2f5c2c9-1db5-4bec-bb03-82f5c9ab32c9": {
+          "description": "Reconnaître les gros motifs récurrents comme étant composés de motifs récurrents plus petits."
+        },
+        "44e65bc2-f4e8-4500-9664-444ec7f3c08a": {
+          "description": "Décrire quand une boucle, une boucle imbriquée, ou aucune boucle est nécessaire."
+        },
+        "71473df7-9841-40f0-8369-4085a1a6e042": {
+          "description": "Diviser le code en les plus larges séquences reproductibles possibles en se servant à la fois des boucles et des boucles imbriquées."
+        },
+        "accd1c6c-e5b2-4a88-8aa9-efbd5f797260": {
+          "description": "Reconnaître la différence entre utiliser une boucle et utiliser une boucle imbriquée."
+        },
+        "71538175-c679-49e4-a654-cee3a772b57a": {
+          "description": "Déterminer si une condition est remplie, en fonction de critères."
+        },
+        "a1f58b86-3103-4620-a599-db8cf682ad4a": {
+          "description": "Définir les circonstances dans lesquelles certaines parties d'un programme devraient s'exécuter et dans lesquelles elles ne le devraient pas."
+        },
+        "26b5197f-9e6b-4fd5-adc6-f14fd7dfc91b": {
+          "description": "Résoudre des casse-têtes à l'aide d'un mélange de séquences en boucle et d'instructions conditionnelles."
+        },
+        "a93d4e66-ccc1-4a4b-accf-a18147f3b3c6": {
+          "description": "Traduire des déclarations conditionnelles de langage parlé vers un programme."
+        },
+        "3900f9e2-399d-4635-82d5-4306b7742894": {
+          "description": "Faire la distinction entre les boucles qui se répètent un nombre prédéfini de fois et les boucles qui se répètent tant qu'une condition est vraie."
+        },
+        "d2e3fbb2-b562-470f-92f9-ea8af784acd6": {
+          "description": "Utiliser une boucle tant que pour créer des programmes capables de résoudre des problèmes avec des valeurs inconnues."
+        },
+        "39f3e57a-db39-4c23-b597-c8cde4a16d2c": {
+          "description": "Déterminer si une condition est remplie, en fonction de critères."
+        },
+        "abf0753e-31d1-4329-aeb3-86589deee06a": {
+          "description": "Définir les circonstances dans lesquelles certaines parties d'un programme devraient s'exécuter et dans lesquelles elles ne le devraient pas."
+        },
+        "10d155dc-e043-40b0-b6fa-40571cf271c3": {
+          "description": "Construire des programmes en comprenant de multiples stratégies pour mettre en œuvre des instructions conditionnelles."
+        },
+        "2b52c2b7-4177-4170-9ad4-375c17194e36": {
+          "description": "Traduire des déclarations conditionnelles et des boucles du langage parlé vers un programme."
+        },
+        "1c8eba0c-224f-4803-a8f1-a10b8d1cae14": {
+          "description": "Imbriquer des instructions conditionnelles pour analyser des conditions aux valeurs multiples en utilisant une logique si, sinon si, sinon."
+        },
+        "50f29024-74df-48e0-95eb-93e6ebe60a2d": {
+          "description": "Associer une boucle et une instruction conditionnelle ensemble."
+        },
+        "201b5bbb-a506-4158-aa05-e4dd5e1b84ae": {
+          "description": "Utiliser des fonctions prédéterminées pour compléter des tâches qui se répètent fréquemment."
+        },
+        "eded0214-c39e-4a3e-9033-c490c9869bd9": {
+          "description": "Utiliser des fonctions pour simplifier des programmes complexes."
+        },
+        "69bcb3ef-5a10-4e53-b5c3-0180653a7bd3": {
+          "description": "Utiliser des fonctions prédéterminées pour compléter des tâches qui se répètent fréquemment."
+        },
+        "ee1b66a0-2f61-46b9-bdda-a43005bc666d": {
+          "description": "Reconnaître quand une fonction pourrait aider à simplifier un programme."
+        },
+        "17634871-f4ef-417f-a6bc-e9c0e76da60c": {
+          "description": "Reconnaître quand une fonction pourrait aider à simplifier un programme."
+        },
+        "18286e91-a106-48ee-93f4-1f782daea3fc": {
+          "description": "Classer et généraliser le code en fonctions utiles."
+        },
+        "65f062bb-b2ca-4b6a-9703-3829dc861277": {
+          "description": "Utiliser des variables en les associant à des invites."
+        },
+        "964c8b4f-f4be-440d-87ec-49d846ee1f49": {
+          "description": "Utiliser des variables pour contenir des mots et des phrases."
+        },
+        "20c60f52-328b-4b76-bded-a5a4f6cfaf46": {
+          "description": "Utiliser des variables au lieu de valeurs répétitives au sein d'un programme."
+        },
+        "c9fe2240-53cd-457b-844e-d651dda2981b": {
+          "description": "Utiliser des variables pour modifier les valeurs à l'intérieur d'une boucle."
+        },
+        "d1d6c23b-fcc7-4ddf-90a2-ebbf0369ca4d": {
+          "description": "Attribuer des valeurs à des variables existantes."
+        },
+        "b9bacce3-773c-4481-9888-2ac638b2e0dd": {
+          "description": "Examiner le code pour trouver des endroits où les variables peuvent remplacer certaines valeurs."
+        },
+        "f122ba8c-e478-40fd-baac-c7c1d491de47": {
+          "description": "Identifier les domaines dans lesquels ils peuvent utiliser des variables pour modifier les quantités pendant l'exécution. "
+        },
+        "749bff30-281b-4fb5-bd44-c59f4147c12f": {
+          "description": "Reconnaître quand utiliser une boucle « pour » et quand utiliser d'autres boucles telles que les boucles « répéter » et « tant que »."
+        },
+        "c9dc4c8b-3766-4431-a645-dcdd01004729": {
+          "description": "Déterminer la valeur de départ, la valeur d'arrêt et la valeur de progression pour une boucle `« pour »`."
+        },
+        "4ae94b61-edec-422a-a972-faf2aba5ca34": {
+          "description": "Utilise des boucles `« pour »` pour changer de boucle plusieurs fois avec des valeurs différentes."
+        },
+        "70a4854a-3d08-488e-9b7e-829bb19378e0": {
+          "description": "Reconnaître quand utiliser une boucle « pour » et quand utiliser d'autres boucles telles que les boucles « répéter » et « tant que »."
+        },
+        "0e1063a5-74f3-4b77-9ecd-b65f1793d5c6": {
+          "description": "Surmonter les obstacles tels que les contraintes de temps ou les bugs."
+        },
+        "35caa451-b503-4105-9a03-19a2b5ba7efe": {
+          "description": "Reconnaître ce qu'on attend d'eux lorsqu'ils passent au labo informatique."
+        },
+        "8ed06bac-d128-4388-8b82-63bed501bc87": {
+          "description": "Utilisez la bonne terminologie quand vous faites référence à une souris d'ordinateur, un trackpad ou un écran tactile. "
+        },
+        "beb030b9-f0f3-499c-bd5a-6da9e8266ca4": {
+          "description": "Testez des actions de programmation normales basées sur les blocs, telles que : cliquer, glisser-déposer, etc. "
+        },
+        "f50e44ae-ba81-475d-a780-06f7ccb2784b": {
+          "description": "Montrez les bons comportements en salle informatique "
+        },
+        "0bc300ad-be51-42e1-a5ab-c11b50e5aa2e": {
+          "description": "Construire un programme en réorganisant les mouvements séquentiels"
+        },
+        "e0ea7881-94a3-4e3f-8330-c6c3835be958": {
+          "description": "Traduire les mouvements en une série de commandes."
+        },
+        "fbf4a1c8-c405-456d-968b-731bacd63b5d": {
+          "description": "Construire un programme d'ordinateur à partir d'une série d'instructions écrites"
+        },
+        "3ca3fd88-d543-4394-b290-3077dd49c7d0": {
+          "description": "Séquencez les commandes dans un ordre logique."
+        },
+        "5abe7a0d-96f9-4c2e-98ba-1edc37bcbb9c": {
+          "description": "Identifiez des problèmes ou « bugs » dans un programme et élaborez un plan pour résoudre ces problèmes."
+        },
+        "4ab1cc74-c357-473f-b860-023590257b8e": {
+          "description": "Traduire les mouvements en une série de commandes."
+        },
+        "cdd28404-7d5a-4081-af55-be88baa52e1c": {
+          "description": "Identifier et localiser les bugs dans un programme."
+        },
+        "722433cb-a98d-4830-a581-dc08bbdb2522": {
+          "description": "Construire un programme en utilisant des structures qui répètent des zones de code"
+        },
+        "7858cda1-ca5d-4367-9ac4-123a0e57e2b5": {
+          "description": "Améliorer le code existant en trouvant des zones de répétition et en les déplaçant vers des structures mise en boucle"
+        },
+        "76d1ff89-59cc-4f0a-a92c-ae0469b6a880": {
+          "description": "Décomposer une longue séquence d'instructions en la plus petite séquence répétable possible."
+        },
+        "8866b921-a2c8-43a1-850c-3f6d840d20e4": {
+          "description": "Identifier les avantages de l'utilisation d'une structure en boucle au lieu de la répétition manuelle."
+        },
+        "302a6528-ac67-4591-99be-6ec6ed20e45f": {
+          "description": "Créer un programme qui dessine des formes complexes en répétant des séquences simples."
+        },
+        "537dca43-d083-411c-936c-0b91d75d8936": {
+          "description": "Compter le nombre de fois qu'une action doit être répétée et représenter cela sous forme de boucle."
+        },
+        "cf8ca80c-59da-42ec-bd62-4dfd897d0caf": {
+          "description": "Décomposer une forme en sa plus grande séquence reproductible."
+        },
+        "163df6a6-3169-4139-b7ed-e4f29d30d945": {
+          "description": "Compter le nombre de fois qu'une action doit être répétée et représenter cela sous forme de boucle."
+        },
+        "4bb35630-2996-4bb0-8049-152a7dee5add": {
+          "description": "Créer un programme qui dessine des formes complexes en répétant des séquences simples."
+        },
+        "7afcb83c-4dfd-4206-8f62-224be6ccbada": {
+          "description": "Décomposer une forme en sa plus grande séquence reproductible."
+        },
+        "33f7a55b-b35c-45d5-b3d1-eae65ca53d46": {
+          "description": "Identifier les actions qui aux événements d'entrée."
+        },
+        "3dc76a76-2336-4100-9dce-340ecb36335c": {
+          "description": "Créer une histoire animée et interactive en utilisant des séquences et des gestionnaires d'événements."
+        },
+        "bd8c007c-692a-4433-a3fa-6645aefb73ce": {
+          "description": "Partager un artefact créatif avec d'autres élèves."
+        },
+        "6fa60c6b-18bb-4031-96c8-f30da36fe9ef": {
+          "description": "Identifier les actions qui aux événements d'entrée."
+        },
+        "77cbc6fc-2092-4d48-9228-dc83813fda4c": {
+          "description": "Créer une histoire animée et interactive en utilisant les séquences et les gestionnaires d'événements."
+        },
+        "86f2847b-df75-4023-a828-61521c7bd71d": {
+          "description": "Partager un artefact créatif avec d'autres élèves."
+        },
         "e9b9d92d-83a3-4b3e-a6b9-e93a325e0acc": {
           "description": "Crée un programme pour compléter une image en utilisant des étapes séquentielles."
         },
