@@ -13,6 +13,7 @@ import CurriculumCatalogCard from '@cdo/apps/templates/curriculumCatalog/Curricu
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import {queryParams} from '../../code-studio/utils';
+import {filter} from 'lodash';
 
 const CurriculumCatalog = ({
   curriculaData,
@@ -31,7 +32,7 @@ const CurriculumCatalog = ({
 
   useEffect(() => {
     const expandedCardFound = filteredCurricula.some(
-      co => expandedCardKey in co
+      co => expandedCardKey === co['key']
     );
 
     if (!expandedCardFound) {
@@ -68,6 +69,7 @@ const CurriculumCatalog = ({
   // message if no results).
   const renderSearchResults = () => {
     if (filteredCurricula.length > 0) {
+      console.log();
       return (
         <div className={style.catalogContentCards}>
           {filteredCurricula
