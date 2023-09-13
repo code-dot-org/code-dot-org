@@ -29,16 +29,17 @@
       background-image: url('/images/banners/banner-bg-mesh-dots-light.png');
       background-repeat: repeat;
       background-size: 70%;
+      background-position-y: 87%;
       z-index: 2;
     }
   }
 
   @media screen and (max-width: $width-lg) {
-    padding: 0 1.5em;
+    padding: 0 2rem;
   }
 
   @media screen and (max-width: $width-sm) {
-    padding: 2em 1.5em;
+    padding: 2rem 1.5rem;
     height: unset;
   }
 
@@ -56,13 +57,14 @@
     flex-wrap: wrap;
     max-width: 960px;
     margin: 0 auto;
-    padding: 1rem 0;
+    padding: 1rem 0 1.5rem;
     gap: 1.5rem 1rem;
     position: relative;
     z-index: 10;
 
     @media screen and (max-width: $width-sm) {
       justify-content: center;
+      padding: 0;
     }
   }
 
@@ -75,17 +77,18 @@
   }
 
   .text-wrapper {
-    width: 60%;
+    width: 80%;
 
     h1, p {
       color: $neutral-white;
     }
 
     @media screen and (max-width: $width-md) {
-      width: 52%;
+      width: 70%;
     }
 
     @media screen and (max-width: $width-sm) {
+      text-align: center;
       width: 100%;
     }
   }
