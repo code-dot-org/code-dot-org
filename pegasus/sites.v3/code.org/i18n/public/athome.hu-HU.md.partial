@@ -13,7 +13,7 @@ theme: responsive
   <img src="/images/marketing/fit-318x212/mother-helping-her-daughter-use-a-laptop-4260325.jpg" style="width:100%" alt="Anya segít a lányának laptopot használni">
 </div>
 
-<p>Akár szülő/gondviselő, akár önállóan tanuló diák, az alábbi lehetőségek vonzó, könnyen kipróbálható módjai az informatikával való ismerkedésnek.</p>
+<p>Függetlenül attól, hogy szülő/gondviselő vagy önállóan tanuló hallgató, az alábbi lehetőségek vonzó, könnyen kipróbálható módszerek a számítástechnika felfedezésének megkezdésére.</p>
 <ul>
     <li><a class="linktag" id="hoc-nav" href="#hoc">Próbáld ki a Kódolás óráját</a></li>
     <li><a class="linktag" id="videos-nav" href="#videos">Egy rövid videósorozat az informatika alapjairól</a></li>
@@ -38,8 +38,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>Dance Party</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Code a Dance Party to share with friends and family. Fellépnek Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez, zene a Disney "Encanto" című filmjéből, és még sok minden más!</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px">Dance Party</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Code egy táncparti, amelyet megoszthat barátaival és családjával. Fellépnek Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez, zene a Disney "Encanto" című filmjéből, és még sok minden más!</div>
         <a class="linktag" id="danceparty" href="/dance" target="_blank"><button>Tevékenység kipróbálása</button></a>
     </span>
   </div>
@@ -53,8 +53,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Minecraft Kódolás Órája</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">A Minecraft vadonatúj tevékenységgel tér vissza a Kódolás Órájára! Utazás a Minecrafton keresztül kóddal.</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px">Minecraft Kódolás Órája A</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Minecraft vadonatúj tevékenységgel tér vissza a Kódolás Órájára! Utazás a Minecrafton keresztül kóddal.</div>
         <br>
         <a class="linktag" id="minecraft" href="/minecraft" target="_blank"><button>Tevékenység kipróbálása</button></a>
     </span>
@@ -69,7 +69,7 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>AI az óceánok számára</strong></h3>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px">AI for Oceans</h3>
         <div class="smalltext" style="text-align: left; margin-bottom: 10px">Segítsen az AI-nek megtisztítani az óceánokat azáltal, hogy kiképzi a szemét észlelésére! Ismerje meg a tanítási adatokat és az elfogultságot, valamint azt, hogy a mesterséges intelligencia hogyan képes kezelni a világ problémáit. Tekintse meg: <a class="linktag" id="oceans-lesson" href="https://curriculum.code.org/hoc/plugged/9/" target="_blank">lesson plan</a>.</div>
         <a class="linktag" id="aiforoceans" href="https://studio.code.org/s/oceans/lessons/1/levels/1" target="_blank"><button>Tevékenység kipróbálása</button></a>
     </span>
@@ -96,8 +96,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>Hogyan működnek a számítógépek</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Bill Gates bevezetésével, ez a hat rövid videóból álló sorozat elmagyarázza, mi teszi a számítógépet számítógéppé, és hogyan működnek a számítógépes áramkörök.</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px">Hogyan működnek</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">a számítógépek Bill Gates bevezetésével, ez a hat rövid videóból álló sorozat elmagyarázza, mi teszi a számítógépet számítógéppé, és hogyan működnek a számítógépes áramkörök.</div>
         <a class="linktag" id="howcomputers" href="https://www.youtube.com/watch?v=OAx_6-wdslM&list=PLzdnOPI1iJNcsRwJhvksEo1tJqjIqWbN-" target="_blank"><button>Nézze meg a videósorozatot</button></a>
     </span>
   </div>
@@ -111,8 +111,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Hogyan működik az internet</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Ebben a nyolc rövid videóból álló sorozatban megtudhatja, hogyan találták ki az internetet, mi a HTML, és hogyan működnek a keresőmotorok, mint a Google.</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px">Hogyan működik az internet</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Ebben a nyolc rövid videóból álló sorozatban, megtudhatja, hogyan találták ki az internetet, mi a HTML, és hogyan működnek a keresőmotorok, mint a Google.</div>
         <a class="linktag" id="howinternet" href="https://www.youtube.com/watch?v=Dxcc6ycZ73M&list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7-" target="_blank"><button>Nézze meg a videósorozatot</button></a>
     </span>
   </div>
@@ -126,8 +126,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Hogyan működik az AI</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Tudjon meg többet arról, hogyan működik az AI és miért számít ez a rövid videósorozat. Satya Nadella, a Microsoft vezérigazgatója és számos szakértő részvételével.</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px">Hogyan működik az AI?</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Tudjon meg többet arról, hogyan működik az AI, és miért számít ez a rövid videó sorozat. Satya Nadella, a Microsoft vezérigazgatója és számos szakértő részvételével.</div>
         <a class="linktag" id="ai-videos" href="/ai#ai-videos" target="_blank"><button>A videósorozat megtekintése</button></a>
     </span>
   </div>
@@ -162,7 +162,7 @@ theme: responsive
 <a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express-2019" target="_blank"><img src="/images/curriculum/course-tile-pre-reader-express.png" style="width: 100%" alt="Iskola előtt állók expressz kurzusa"></a><br><a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express-2019" target="_blank">Expressz kurzus</a>
 
 </div>
-<div style="clear: both"></div>
+<div style="clear: both; margin-bottom: 2rem"></div>
 
 <h3>Saját tempójú bevezetés a Game Lab és az App Lab modulokba</h3>
 <p>CS Discoveries és CS Principles tanfolyamainkból adaptálva, ezek a rövid, önálló tempójú modulok remek lehetőséget nyújtanak a programozási nyelveken és eszközökön átívelő fogalmak elsajátítására. <i>Eléréséhez Code.org fiók szükséges</i>.</p>
@@ -176,8 +176,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>Introduction to Game Lab</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Program animations, interactive art, and games in Game Lab. Kezdd egyszerű alakzatokkal, és fejlessz kifinomultabb sprite-alapú animációkat és játékokat.</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px">Bevezetés a Game Lab</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Program animációibe, interaktív művészet, és játékok a Game Lab-ban. Kezdd egyszerű alakzatokkal, és fejlessz kifinomultabb sprite-alapú animációkat és játékokat.</div>
         <a class="linktag" id="gamelab-intro" href="https://studio.code.org/s/csd3-virtual" target="_blank"><button>Modul kipróbálása</button></a>
     </span>
   </div>
@@ -191,8 +191,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Teknős programozás az App Lab alkalmazásban</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Egyszerű JavaScript parancsokkal rajzolhat alakzatokat és képeket virtuális „teknős” segítségével. Tervezze meg és programozza saját digitális jelenetét!</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px">Teknős programozás az App Lab</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">alkalmazásban Egyszerű JavaScript parancsokkal rajzolhat alakzatokat és képeket virtuális „teknős” segítségével. Tervezze meg és programozza saját digitális jelenetét!</div>
         <a class="linktag" id="turtle-applab" href="https://studio.code.org/s/csp3-virtual" target="_blank"><button>Próbálja ki a modult</button></a>
     </span>
   </div>
@@ -206,8 +206,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Eseményvezérelt programozás az App Lab-ban</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Tanuljon meg olyan alkalmazásokat tervezni, amelyek reagálnak a kattintásokra és a gombnyomásokra. Hozz létre egy sor egyszerű alkalmazást (app), amelyek a weben élnek!</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px">Eseményvezérelt programozás az App Lab alkalmazásban</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Tanuljon meg olyan alkalmazásokat tervezni, amelyek reagálnak a kattintásokra és a billentyűlenyomásokra. Hozz létre egy sor egyszerű alkalmazást (app), amelyek a weben élnek!</div>
         <a class="linktag" id="events-applab" href="https://studio.code.org/s/csp5-virtual" target="_blank"><button>Próbáld ki a modult</button></a>
     </span>
   </div>
@@ -230,7 +230,7 @@ theme: responsive
 
 <div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
   <div style="width: 87%; float: left">
-    <a class="linktag" id="applab" href="https://code.org/educate/applab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none"><strong>App Lab</strong></h3></a>
+    <a class="linktag" id="applab" href="https://code.org/educate/applab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none">App Lab</h3></a>
     <p style="color:#ffffff">Az App Lab egy programozási környezet, ahol egyszerű alkalmazásokat készíthetsz. Tervezz meg egy alkalmazást, kódold blokkokkal vagy JavaScript segítségével, hogy működjön, majd oszd meg az alkalmazásodat másodpercek alatt.</p>
     <a class="linktag" id="applab" href="https://code.org/educate/applab" target="_blank"><button style="background-color:#e7e8ea; border-color:#e7e8ea; color:#696969">Alkalmazás építése</button></a>
   </div>
@@ -239,7 +239,7 @@ theme: responsive
 
 <div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
   <div style="width: 87%; float: left">
-    <a class="linktag" id="gamelab" href="https://code.org/educate/gamelab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none"><strong>App Lab</strong></h3></a>
+    <a class="linktag" id="gamelab" href="https://code.org/educate/gamelab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none">Játék Lab</h3></a>
     <p style="color:#ffffff">A Game Lab egy olyan programozási környezet, amelyben egyszerű animációkat és játékokat készíthetsz egymással kölcsönhatásban lévő objektumokkal és karakterekkel.</p>
     <br>
     <a class="linktag" id="gamelab" href="https://code.org/educate/gamelab" target="_blank"><button style="background-color:#e7e8ea; border-color:#e7e8ea; color:#696969">Játék létrehozása</button></a>
@@ -249,7 +249,7 @@ theme: responsive
 
 <div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
   <div style="width: 87%; float: left">
-    <a class="linktag" id="weblab" href="https://code.org/educate/weblab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none"><strong>App Lab</strong></h3></a>
+    <a class="linktag" id="weblab" href="https://code.org/educate/weblab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none">Web Lab</h3></a>
     <p style="color:#ffffff">A Web Lab egy programozási környezet, ahol egyszerű weboldalakat készíthetsz HTML és CSS segítségével. Tervezd meg weboldalaidat, és oszd meg webhelyedet másodpercek alatt.</p>
     <br>
     <a class="linktag" id="weblab" href="https://code.org/educate/weblab" target="_blank"><button style="background-color:#e7e8ea; border-color:#e7e8ea; color:#696969">Weboldal készítése</button></a>
@@ -286,16 +286,12 @@ theme: responsive
 
 <h2>Nincs otthon számítógép? Próbáld az informatikát saját telefonon partnereink alábbi alkalmazásaival</h2>
 
-<div class="col-33" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><img src="images/tutorials/new/boxisland.jpg" style="width: 100%" alt="Box Island"></a><br><a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><h3 style="color:#7665a0"><strong>Box Island</strong></h3></a>Bájos mobil kódoló játék, amely izgalmas kalandba viszi a tanulókat, miközben megtanítja a kódolás alapjait, például az algoritmusokat, a mintafelismerést, a szekvenciákat, a ciklusokat és a kondicionálisokat. <i>(minden korosztály számára)</i>
+<div class="col-50" style="padding-right: 30px; padding-bottom:40px">
+  <a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><img src="images/tutorials/new/boxisland.jpg" style="width: 100%" alt="Box Island"></a><br><a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><h3 style="margin-top: 1rem;">Box Island</h3></a>Bájos mobil kódoló játék, amely izgalmas kalandra viszi a tanulókat, miközben megtanítja a kódolás alapjait, mint az algoritmusok, mintafelismerés, szekvenciák, hurkok és feltételes feltételek. <i>(minden korosztály számára)</i>
 </div>
 
-<div class="col-33" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><img src="/images/tutorials/hoc2018/codespark_create.jpg" style="width: 100%" alt="codeSpark"></a><br><a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><h3 style="color:#7665a0"><strong>codeSpark</strong></h3></a>Díjnyertes kódolás-tanulási platform 5-9 éves gyerekeknek. Oldj meg rejtvényeket és készíts játékokat a The Foos-szal, miközben megtanulsz kódolni. <strong>Megjegyzés: a codeSpark 3 hónapos ingyenes próbaverziót kínál. Regisztrációkor meg kell adni a szülő e-mail címét és hitelkártyaadatait.</strong> <i>(iskola előtt állóktól 5. osztályig)</i>
-</div>
-
-<div class="col-33" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="grasshopper" href="https://grasshopper.app/" target="_blank"><img src="/images/athome/grasshopper.png" style="width: 100%" alt="Grasshopper"></a><br><a class="linktag" id="grasshopper" href="https://grasshopper.app/" target="_blank"><h3 style="color:#7665a0"><strong>Grasshopper</strong></h3></a>Tanulj kódolást szórakoztató, gyors leckékkel a telefonodon, amelyek megtanítanak valódi JavaScriptet írni. Kód Google programmal <i>(középiskolások és nagyobbak számára)</i>
+<div class="col-50" style="padding-right: 30px; padding-bottom:40px">
+  <a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><img src="/images/tutorials/hoc2018/codespark_create.jpg" style="width: 100%" alt="codeSpark"></a><br><a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><h3 style="margin-top: 1rem;">CodeSpark</h3></a>díjnyertes tanulás-kódolási platform 5-9 éves gyermekek számára. Oldj meg rejtvényeket és készíts játékokat a The Foos-szal, miközben megtanulsz kódolni. <strong>Megjegyzés: a codeSpark 3 hónapos ingyenes próbaverziót kínál. Regisztrációkor meg kell adni a szülő e-mail címét és hitelkártyaadatait.</strong> <i>(iskola előtt állóktól 5. osztályig)</i>
 </div>
 
 <div style="clear: both; margin-bottom: 15px"></div>
@@ -312,8 +308,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="margin-top:10px"><strong>CodeBytes</strong></h3>
-        <div class="smalltext" style="color: dimgray;">A CodeBytes könnyen emészthető, 20 perces interaktív leckék, amelyek ötvözik a számítástechnikát a valós témákkal. Taníts meg egy mesterséges intelligenciát jelnyelvi olvasásra, tervezz egy alkalmazást a jó cél érdekében, fedezd fel a Minecraft világát, és még sok minden mást!</div>
+        <h3 class="tutorial-info-h" style="margin-top:10px">CodeBytes A</h3>
+        <div class="smalltext" style="color: dimgray;">CodeBytes könnyen emészthető, 20 perces interaktív leckék, amelyek ötvözik a számítástechnikát a valós témákkal. Taníts meg egy mesterséges intelligenciát jelnyelvi olvasásra, tervezz egy alkalmazást a jó cél érdekében, fedezd fel a Minecraft világát, és még sok minden mást!</div>
         <br>
         <br>
         <a class="linktag" id="codebytes" href="https://code.org/codebytes" target="_blank"><button>Epizódok megtekintése</button></a>
@@ -329,8 +325,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="margin-top:10px"><strong>Code Break</strong></h3>
-        <div class="smalltext" style="">Tartsa szórakoztatóan a számítástechnikát egy kódszünet elvégzésével! Ashton Kutcherrel titkosírást készíthetsz, Yara Shahidival megismerkedhetsz a változókkal, sőt, az internet valódi feltalálójával, Vint Cerffel még azt is felfedezheted, hogyan működik az internet!</div>
+        <h3 class="tutorial-info-h" style="margin-top:10px">Kódszünet</h3>
+        <div class="smalltext" style="">Tartsa szórakoztatóan a számítástechnikát azáltal, hogy Code Break-et vesz igénybe! Ashton Kutcherrel titkosírást készíthetsz, Yara Shahidival megismerkedhetsz a változókkal, sőt, az internet valódi feltalálójával, Vint Cerffel még azt is felfedezheted, hogyan működik az internet!</div>
         <br>
         <a class="linktag" id="codebreak" href="https://code.org/break" target="_blank"><button>Csatlakozz</button></a>
     </span>

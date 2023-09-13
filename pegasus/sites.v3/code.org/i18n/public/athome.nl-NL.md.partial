@@ -13,7 +13,7 @@ theme: responsive
   <img src="/images/marketing/fit-318x212/mother-helping-her-daughter-use-a-laptop-4260325.jpg" style="width:100%" alt="Moeder helpt haar dochter met de laptop">
 </div>
 
-<p>Of je nu een ouder/voogd bent of een student die zelfstandig leert, de onderstaande aanwijzingen helpen je om op boeiende, makkelijk uit te proberen manieren, je informatica verkenning te beginnen.</p>
+<p>Of je nu een ouder/verzorger bent of een student die zelfstandig leert, de onderstaande opties zijn boeiende, eenvoudig uit te proberen manieren om je verkenning van de informatica te beginnen.</p>
 <ul>
     <li><a class="linktag" id="hoc-nav" href="#hoc">Probeer het Hour of Code</a></li>
     <li><a class="linktag" id="videos-nav" href="#videos">Bekijk een korte videoreeks over de basics van de CS</a></li>
@@ -38,8 +38,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>Dansfeest</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Codeer een dansfeest om te delen met vrienden en familie. Met Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez, muziek van "Encanto" van Disney en meer!</div>                <a class="linktag" id="danceparty" href="/dance" target="_blank"><button>Probeer de activiteit</button></a>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px">Dance Party</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Code a Dance Party om te delen met vrienden en familie. Met Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez, muziek van "Encanto" van Disney en meer!</div>                <a class="linktag" id="danceparty" href="/dance" target="_blank"><button>Probeer de activiteit</button></a>
     </span>
   </div>
 </div>
@@ -52,7 +52,7 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Minecraft Hour of Code</strong></h3>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px">Minecraft Hour of Code</h3>
         <div class="smalltext" style="text-align: left; margin-bottom: 10px">Minecraft is terug voor The Hour of Code met een gloednieuwe activiteit! Reis door Minecraft met code.</div>
         <br>
         <a class="linktag" id="minecraft" href="/minecraft" target="_blank"><button>Probeer het uit</button></a>
@@ -68,7 +68,7 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>AI for Oceans</strong></h3>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px">AI for Oceans</h3>
         <div class="smalltext" style="text-align: left; margin-bottom: 10px">Help AI de oceanen schoon te maken door ze te trainen om afval te detecteren! Leer meer over de trainingsdata en bias, en ook hoe AI wereldproblemen kan aanpakken. Bekijk  <a class="linktag" id="oceans-lesson" href="https://curriculum.code.org/hoc/plugged/9/" target="_blank">de lesplan</a>.</div>
         <a class="linktag" id="aiforoceans" href="https://studio.code.org/s/oceans/lessons/1/levels/1" target="_blank"><button>Probeer het uit</button></a>
     </span>
@@ -95,7 +95,7 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>Hoe computers werken</strong></h3>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px">Hoe computers werken</h3>
         <div class="smalltext" style="text-align: left; margin-bottom: 10px">Met een introductie van Bill Gates wordt in deze serie van zes korte video's uitgelegd wat een computer tot een computer maakt en hoe computercircuits werken.</div>
         <a class="linktag" id="howcomputers" href="https://www.youtube.com/watch?v=OAx_6-wdslM&list=PLzdnOPI1iJNcsRwJhvksEo1tJqjIqWbN-" target="_blank"><button>Bekijk de videoserie</button></a>
     </span>
@@ -110,7 +110,7 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Hoe het internet werkt</strong></h3>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px">Hoe het internet werkt</h3>
         <div class="smalltext" style="text-align: left; margin-bottom: 10px">In deze serie van acht korte video's leer je hoe het internet is uitgevonden, wat HTML is en hoe zoekmachines zoals Google werken.</div>
         <a class="linktag" id="howinternet" href="https://www.youtube.com/watch?v=Dxcc6ycZ73M&list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7-" target="_blank"><button>Bekijk de videoserie</button></a>
     </span>
@@ -125,8 +125,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Hoe AI werkt</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Ontdek hoe AI werkt en waarom het belangrijk is met deze serie korte video's. Met de Microsoft CEO Satya Nadella als gastheer en diverse expertencast.</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px">Hoe AI werkt</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Ontdek hoe AI werkt en waarom het belangrijk is met deze reeks korte video's. Met de Microsoft CEO Satya Nadella als gastheer en diverse expertencast.</div>
         <a class="linktag" id="ai-videos" href="/ai#ai-videos" target="_blank"><button>Bekijk de video's</button></a>
     </span>
   </div>
@@ -161,7 +161,7 @@ theme: responsive
 <a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express-2019" target="_blank"><img src="/images/curriculum/course-tile-pre-reader-express.png" style="width: 100%" alt="Expres cursus voor kleuters"></a><br><a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express-2019" target="_blank">De Expres cursus voor kleuters</a>
 
 </div>
-<div style="clear: both"></div>
+<div style="clear: both; margin-bottom: 2rem"></div>
 
 <h3>De Game Lab en App Lab introductie in eigen tempo</h3>
 <p>Deze korte modules die in je eigen tempo doet zijn aangepast op onze cursussen CS Discoveries en CS Principles en er zijn een geweldige manier om de concepten te leren die alle programmeertalen en tools omvatten. <i>Voor toegang wordt een Code.org account gevraagd</i>.</p>
@@ -175,8 +175,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>Inleiding tot Game Lab</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Programma-animaties, interactieve kunst en games in Game Lab. <div>Begin met het bouw van eenvoudige vormen tot meer geavanceerde, op sprite gebaseerde animaties en games</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px">Inleiding tot animaties, interactieve kunst en games van het Game</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Lab-programma in Game Lab. <div>Begin met het bouw van eenvoudige vormen tot meer geavanceerde, op sprite gebaseerde animaties en games</div>
         <a class="linktag" id="gamelab-intro" href="https://studio.code.org/s/csd3-virtual" target="_blank"><button>Probeer de module</button></a>
     </span>
   </div>
@@ -190,7 +190,7 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Turtle Programming in App Lab</strong></h3>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px">Turtle Programming in App Lab</h3>
         <div class="smalltext" style="text-align: left; margin-bottom: 10px">Gebruik eenvoudige JavaScript-opdrachten om vormen en afbeeldingen te tekenen met behulp van een virtuele „schildpad”. Ontwerp en programmeer je eigen digitale scene!</div>
         <a class="linktag" id="turtle-applab" href="https://studio.code.org/s/csp3-virtual" target="_blank"><button>Probeer de module</button></a>
     </span>
@@ -205,7 +205,7 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Gebeurtenisgestuurd programmeren in App Lab</strong></h3>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px">Gebeurtenisgestuurd programmeren in App Lab</h3>
         <div class="smalltext" style="text-align: left; margin-bottom: 10px">Leer apps te ontwerpen die reageren op klikken en toetsaanslagen. Maak series van simpele applicaties (apps) dat komen tot leven op het web!</div>
         <a class="linktag" id="events-applab" href="https://studio.code.org/s/csp5-virtual" target="_blank"><button>Probeer de module</button></a>
     </span>
@@ -229,7 +229,7 @@ theme: responsive
 
 <div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
   <div style="width: 87%; float: left">
-    <a class="linktag" id="applab" href="https://code.org/educate/applab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none"><strong>App Lab</strong></h3></a>
+    <a class="linktag" id="applab" href="https://code.org/educate/applab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none">App Lab</h3></a>
     <p style="color:#ffffff">App Lab is een programmeeromgeving waarin je simpele apps kunt bouwen. Ontwikkel een app met blokken of JavaScript totdat die goed werkt, dan deel je het binnen een paar ogenblikken.</p>
     <a class="linktag" id="applab" href="https://code.org/educate/applab" target="_blank"><button style="background-color:#e7e8ea; border-color:#e7e8ea; color:#696969">Bouw een app</button></a>
   </div>
@@ -238,7 +238,7 @@ theme: responsive
 
 <div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
   <div style="width: 87%; float: left">
-    <a class="linktag" id="gamelab" href="https://code.org/educate/gamelab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none"><strong>Game Lab</strong></h3></a>
+    <a class="linktag" id="gamelab" href="https://code.org/educate/gamelab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none">Gamelab</h3></a>
     <p style="color:#ffffff">Game Lab is een programmeeromgeving waarin je eenvoudige animaties en games kan maken met objecten en personages die met elkaar interageren.</p>
     <br>
     <a class="linktag" id="gamelab" href="https://code.org/educate/gamelab" target="_blank"><button style="background-color:#e7e8ea; border-color:#e7e8ea; color:#696969">Creëer een game</button></a>
@@ -248,7 +248,7 @@ theme: responsive
 
 <div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
   <div style="width: 87%; float: left">
-    <a class="linktag" id="weblab" href="https://code.org/educate/weblab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none"><strong>Web Lab</strong></h3></a>
+    <a class="linktag" id="weblab" href="https://code.org/educate/weblab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none">Weblab</h3></a>
     <p style="color:#ffffff">Web Lab is een programmeeromgeving waarin je eenvoudige webpagina's kunt maken op basis van HTML en CSS. Ontwikkel je webpagina's en deel je website in een paar seconden tijd.</p>
     <br>
     <a class="linktag" id="weblab" href="https://code.org/educate/weblab" target="_blank"><button style="background-color:#e7e8ea; border-color:#e7e8ea; color:#696969">Maak een webpagina</button></a>
@@ -285,16 +285,12 @@ theme: responsive
 
 <h2>Geen computer thuis? Probeer de CS op je smartphone met deze apps van onze partners</h2>
 
-<div class="col-33" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><img src="images/tutorials/new/boxisland.jpg" style="width: 100%" alt="Box Island"></a><br><a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><h3 style="color:#7665a0"><strong>Box Island</strong></h3></a>Een charmant mobiel codeerspel dat studenten meeneemt op een spannend avontuur, terwijl ze de basisprincipes van coderen leert, zoals algoritmen, patroonherkenning, sequencen, lussen en conditionals. <i>(alle leeftijdsgroepen)</i>
+<div class="col-50" style="padding-right: 30px; padding-bottom:40px">
+  <a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><img src="images/tutorials/new/boxisland.jpg" style="width: 100%" alt="Box Island"></a><br><a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><h3 style="margin-top: 1rem;">Box Island</h3></a>Een charmant mobiel coderingsspel dat leerlingen meeneemt op een spannend avontuur en tegelijkertijd de basisprincipes van coderen leert, zoals algoritmen, patroonherkenning, sequenties, loops en conditionals. <i>(alle leeftijdsgroepen)</i>
 </div>
 
-<div class="col-33" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><img src="/images/tutorials/hoc2018/codespark_create.jpg" style="width: 100%" alt="codeSpark"></a><br><a href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed"><h3 style="color:#7665a0"><strong>codeSpark</strong></h3></a>Een bekroond leren-coderingsplatform voor kinderen van 5-9 jaar. Los puzzels op en maak games met De Foos terwijl je leert te coderen. <strong>Opmerking: codeSpark biedt een gratis proefperiode van 3 maanden aan. Bij het inschrijven wordt gevraagd naar het e-mailadres en creditcardgegevens van de ouders </strong> <i>(voor kinderen tot groep 6)</i>
-</div>
-
-<div class="col-33" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="grasshopper" href="https://grasshopper.app/" target="_blank"><img src="/images/athome/grasshopper.png" style="width: 100%" alt="Grasshopper"></a><br><a class="linktag" id="grasshopper" href="https://grasshopper.app/" target="_blank"><h3 style="color:#7665a0"><strong>Grasshopper</strong></h3></a>Leer coderen met fun, korte lessen op je smartphone dat leren je om JavaScript te schrijven. Het is een Googleprogramma. <i>(voor middelbare school of hoger)</i>
+<div class="col-50" style="padding-right: 30px; padding-bottom:40px">
+  <a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><img src="/images/tutorials/hoc2018/codespark_create.jpg" style="width: 100%" alt="codeSpark"></a><br><a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><h3 style="margin-top: 1rem;">CodeSpark</h3></a>Award-winnende platform om te leren coderen voor kinderen van 5-9 jaar. Los puzzels op en maak games met De Foos terwijl je leert te coderen. <strong>Opmerking: codeSpark biedt een gratis proefperiode van 3 maanden aan. Bij het inschrijven wordt gevraagd naar het e-mailadres en creditcardgegevens van de ouders </strong> <i>(voor kinderen tot groep 6)</i>
 </div>
 
 <div style="clear: both; margin-bottom: 15px"></div>
@@ -311,7 +307,7 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="margin-top:10px"><strong>CodeBytes</strong></h3>
+        <h3 class="tutorial-info-h" style="margin-top:10px">CodeBytes</h3>
         <div class="smalltext" style="color: dimgray;">CodeBytes zijn eenvoudig te verwerken interactieve lessen van 20 minuten waarin informatica wordt gecombineerd met onderwerpen uit de praktijk. Train een AI om de symbolentaal te lezen, design een app voor altijd, ontdek het wereld van Minecraft en meer!</div>
        <br>
        <br>
@@ -328,7 +324,7 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="margin-top:10px"><strong>Codebreak</strong></h3>
+        <h3 class="tutorial-info-h" style="margin-top:10px">Code Break</h3>
         <div class="smalltext" style="">Houd informatica leuk door een codebreak te nemen! Je kunt een code maken met Ashton Kutcher, meer te weten komen over variabelen met Yara Shahidi en zelfs ontdekken hoe internet werkt met de eigenlijke uitvinder
 van het internet, Vint Cerf!</div>
  
