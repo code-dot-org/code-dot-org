@@ -404,6 +404,36 @@
         "coursef-2022/The Internet": {
           "name": "Internets"
         },
+        "coursea-2023/Happy Maps": {
+          "name": "Laimīgās kartes"
+        },
+        "courseb-2023/Move It, Move It": {
+          "name": "Ej, ej"
+        },
+        "courseb-2023/Getting Loopy": {
+          "name": "Kļūst ciklisks"
+        },
+        "coursec-2023/The Big Event": {
+          "name": "Lielais notikums"
+        },
+        "coursec-2023/Binary Bracelets": {
+          "name": "Binārās aproces"
+        },
+        "coursed-2023/Graph Paper Programming": {
+          "name": "Rūtiņpapīra programmēšana"
+        },
+        "coursed-2023/Relay Programming": {
+          "name": "Releju programmēšana"
+        },
+        "coursed-2023/Conditionals with Cards": {
+          "name": "nosacījumi ar kārtēm"
+        },
+        "coursee-2023/Songwriting": {
+          "name": "Dziesmu rakstīšana"
+        },
+        "coursef-2023/The Internet": {
+          "name": "Internets"
+        },
         "artist/Artist": {
           "name": "Mākslinieks"
         },
