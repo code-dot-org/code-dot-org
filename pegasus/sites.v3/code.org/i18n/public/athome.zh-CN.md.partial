@@ -13,7 +13,7 @@ theme: responsive
   <img src="/images/marketing/fit-318x212/mother-helping-her-daughter-use-a-laptop-4260325.jpg" style="width:100%" alt="一位妈妈帮助她的女儿使用笔记本电脑">
 </div>
 
-<p>无论你是一位家长/监护人还是独立学习的学生，你都可以考虑以下选项，以趣味性和易于尝试的方式开启计算机科学的探索之旅。</p>
+<p>无论您是家长/监护人还是独立学习的学生，以下选项都是引人入胜且易于尝试的方式，可以开始探索计算机科学。</p>
 <ul>
     <li><a class="linktag" id="hoc-nav" href="#hoc">试听《编程一小时》</a></li>
     <li><a class="linktag" id="videos-nav" href="#videos">观看有关计算机科学基础知识的简短视频系列</a></li>
@@ -38,8 +38,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>Dance Party</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Code a Dance Party 可以与朋友和家人分享。 精选碧昂斯、哈里·斯泰尔斯、丽佐、利尔·纳斯、赛琳娜·戈麦斯、迪士尼《魔法满屋》中的音乐等等！</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px">Dance Party</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Code 与朋友和家人分享的舞会。 精选碧昂斯、哈里·斯泰尔斯、丽佐、利尔·纳斯、赛琳娜·戈麦斯、迪士尼《魔法满屋》中的音乐等等！</div>
         <a class="linktag" id="danceparty" href="/dance" target="_blank"><button>尝试活动</button></a>
     </span>
   </div>
@@ -53,7 +53,7 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>我的世界编程一小时</strong></h3>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px">我的世界编程一小时</h3>
         <div class="smalltext" style="text-align: left; margin-bottom: 10px">我的世界带着全新的活动回来了 “编程一小时”！ 在《我的世界》体验编程乐趣。</div>        <br>        <a class="linktag" id="minecraft" href="/minecraft" target="_blank"><button>尝试活动</button></a>
     </span>
   </div>
@@ -67,8 +67,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>AI for Oceans</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">通过训练人工智能检测垃圾来帮助它清洁海洋！ 了解训练数据和偏差，以及人工智能如何解决世界难题。 查看<a class="linktag" id="oceans-lesson" href="https://curriculum.code.org/hoc/plugged/9/" target="_blank">教案</a>。</div>        <a class="linktag" id="aiforoceans" href="https://studio.code.org/s/oceans/lessons/1/levels/1" target="_blank"><button>尝试活动</button></a>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px">AI for Oceans 通过训练人工智能检测垃圾来</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">帮助它清洁海洋！ 了解训练数据和偏差，以及人工智能如何解决世界难题。 查看<a class="linktag" id="oceans-lesson" href="https://curriculum.code.org/hoc/plugged/9/" target="_blank">教案</a>。</div>        <a class="linktag" id="aiforoceans" href="https://studio.code.org/s/oceans/lessons/1/levels/1" target="_blank"><button>尝试活动</button></a>
     </span>
   </div>
 </div>
@@ -93,8 +93,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>计算机的工作原理</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">在比尔·盖茨的介绍下，这个由六个短视频组成的系列解释了什么使计算机成为计算机以及计算机电路是如何工作的。</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px">计算机的工作</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">原理在比尔·盖茨的介绍中，这个由六个短视频组成的系列解释了计算机是什么使计算机成为计算机以及计算机电路是如何工作的。</div>
         <a class="linktag" id="howcomputers" href="https://www.youtube.com/watch?v=OAx_6-wdslM&list=PLzdnOPI1iJNcsRwJhvksEo1tJqjIqWbN-" target="_blank"><button>观看视频系列</button></a>
     </span>
   </div>
@@ -108,8 +108,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>互联网是如何运作的</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">在这个由八个短片组成的系列中，你将了解互联网是如何发明的，HTML 是什么，以及像谷歌这样的搜索引擎是如何工作的。</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px">互联网的工作原理</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">在这个由八个短视频组成的系列中，你将了解互联网是如何发明的，什么是HTML，以及像谷歌这样的搜索引擎是如何工作的。</div>
         <a class="linktag" id="howinternet" href="https://www.youtube.com/watch?v=Dxcc6ycZ73M&list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7-" target="_blank"><button>观看视频系列</button></a>
     </span>
   </div>
@@ -123,8 +123,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>人工智能的工作原理</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">通过这一系列短片了解人工智能的工作原理以及它为何重要。 微软首席执行官萨提亚·纳德拉及不同专家大咖现身传授。</div>        <a class="linktag" id="ai-videos" href="/ai#ai-videos" target="_blank"><button>观看系列视频</button></a>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px">人工智能的工作原理</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">通过这一系列短视频了解人工智能的工作原理以及它为何重要。 微软首席执行官萨提亚·纳德拉及不同专家大咖现身传授。</div>        <a class="linktag" id="ai-videos" href="/ai#ai-videos" target="_blank"><button>观看系列视频</button></a>
     </span>
   </div>
 </div>
@@ -158,7 +158,7 @@ theme: responsive
 <a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express-2019" target="_blank"><img src="/images/curriculum/course-tile-pre-reader-express.png" style="width: 100%" alt="学前速学课程"></a><br><a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express-2019" target="_blank">适合学前儿童的速学课程</a>
 
 </div>
-<div style="clear: both"></div>
+<div style="clear: both; margin-bottom: 2rem"></div>
 
 <h3>游戏实验室和应用实验室入门自学课程</h3>
 <p>这些简短的自学模块均根据我们的计算机科学探索和计算机科学原理课程改编设计，对于学习涵盖所有编程语言和工具的概念而言，实属一个绝佳方法。 <i>需要使用Code.org账户登录</i>。</p>
@@ -172,8 +172,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>游戏实验室简介</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">在 Game Lab 中编程动画、互动艺术和游戏。 从简单的图形入手，设计更为复杂的精灵图动画和游戏。</div>        <a class="linktag" id="gamelab-intro" href="https://studio.code.org/s/csd3-virtual" target="_blank"><button>试听模块</button></a>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px">游戏实验室</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">程序动画、互动艺术和游戏实验室游戏简介。 从简单的图形入手，设计更为复杂的精灵图动画和游戏。</div>        <a class="linktag" id="gamelab-intro" href="https://studio.code.org/s/csd3-virtual" target="_blank"><button>试听模块</button></a>
     </span>
   </div>
 </div>
@@ -186,9 +186,9 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>App Lab 中的海龟编程</strong></h3>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px">App Lab 中的海龟编程</h3>
         <div class="smalltext" style="text-align: left; margin-bottom: 10px">使用简单的 JavaScript 命令使用虚拟 “海龟” 绘制形状和图像。设计和编程你自己的数字场景！</div>
-        <a class="linktag" id="turtle-applab" href="https://studio.code.org/s/csp3-virtual" target="_blank"><button>试试模块</button></a>
+        <a class="linktag" id="turtle-applab" href="https://studio.code.org/s/csp3-virtual" target="_blank"><button>试试这个模块</button></a>
     </span>
   </div>
 </div>
@@ -201,8 +201,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>App Lab 中的事件驱动编程</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">学习设计能够响应点击和按键的应用程序。 创建一系列简单的应用，并在网络上运行！</div>        <a class="linktag" id="events-applab" href="https://studio.code.org/s/csp5-virtual" target="_blank"><button>试听模块</button></a>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px">App Lab 中的事件驱动编程</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">学习设计能够响应点击和按键操作的应用程序。 创建一系列简单的应用，并在网络上运行！</div>        <a class="linktag" id="events-applab" href="https://studio.code.org/s/csp5-virtual" target="_blank"><button>试听模块</button></a>
     </span>
   </div>
 </div>
@@ -224,7 +224,7 @@ theme: responsive
 
 <div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
   <div style="width: 87%; float: left">
-    <a class="linktag" id="applab" href="https://code.org/educate/applab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none"><strong>应用实验室</strong></h3></a>
+    <a class="linktag" id="applab" href="https://code.org/educate/applab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none">应用程序实验室</h3></a>
     <p style="color:#ffffff">应用实验室是一个编程环境，你可以在其中编写简单的应用程序。 设计一款应用，使用代码块或JavaScript编写代码并使其运行，然后在几秒钟内分享你的设计。</p>
     <a class="linktag" id="applab" href="https://code.org/educate/applab" target="_blank"><button style="background-color:#e7e8ea; border-color:#e7e8ea; color:#696969">制作一款应用</button></a>
   </div>
@@ -233,7 +233,7 @@ theme: responsive
 
 <div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
   <div style="width: 87%; float: left">
-    <a class="linktag" id="gamelab" href="https://code.org/educate/gamelab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none"><strong>游戏实验室</strong></h3></a>
+    <a class="linktag" id="gamelab" href="https://code.org/educate/gamelab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none">游戏实验室</h3></a>
     <p style="color:#ffffff">游戏实验室是一个编程环境，你可以在其中使用相互交互的对象和角色制作简单的动画和游戏。</p>
     <br>
     <a class="linktag" id="gamelab" href="https://code.org/educate/gamelab" target="_blank"><button style="background-color:#e7e8ea; border-color:#e7e8ea; color:#696969">创作一款游戏</button></a>
@@ -243,7 +243,7 @@ theme: responsive
 
 <div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
   <div style="width: 87%; float: left">
-    <a class="linktag" id="weblab" href="https://code.org/educate/weblab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none"><strong>网络实验室</strong></h3></a>
+    <a class="linktag" id="weblab" href="https://code.org/educate/weblab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none">网络实验室</h3></a>
     <p style="color:#ffffff">网络实验室是一个编程环境，你可以在其中使用HTML和CSS制作简单的网页。 设计自己的网页并在几秒钟内分享网站。</p>
     <br>
     <a class="linktag" id="weblab" href="https://code.org/educate/weblab" target="_blank"><button style="background-color:#e7e8ea; border-color:#e7e8ea; color:#696969">设计一个网页</button></a>
@@ -280,16 +280,12 @@ theme: responsive
 
 <h2>家里没有计算机？ 使用我们的合作伙伴提供的这些应用，在手机上尝试计算机科学</h2>
 
-<div class="col-33" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><img src="images/tutorials/new/boxisland.jpg" style="width: 100%" alt="《盒子岛》"></a><br><a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><h3 style="color:#7665a0"><strong>《盒子岛》</strong></h3></a>一款引人入胜的移动编程游戏，带给学生刺激的冒险，同时教授编程的基础知识，例如：算法、模式识别、序列、循环和条件语句。 <i>（适合所有年龄）</i>
+<div class="col-50" style="padding-right: 30px; padding-bottom:40px">
+  <a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><img src="images/tutorials/new/boxisland.jpg" style="width: 100%" alt="《盒子岛》"></a><br><a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><h3 style="margin-top: 1rem;">Box Island</h3></a>一款迷人的手机编程游戏，它带领学习者踏上激动人心的冒险，同时教授编程基础知识，例如算法、模式识别、序列、循环和条件。 <i>（适合所有年龄）</i>
 </div>
 
-<div class="col-33" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><img src="/images/tutorials/hoc2018/codespark_create.jpg" style="width: 100%" alt="codeSpark"></a><br><a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><h3 style="color:#7665a0"><strong>codeSpark</strong></h3></a>备受赞誉的5-9岁儿童编程学习平台。 在学习编程的同时，与小兔子富富一起解决谜题并创建游戏。 <strong>注意：codeSpark目前提供3个月的免费试听期。 注册时需要家长的电子邮箱地址和信用卡信息。</strong> <i>（适合5年级以前的学前儿童）</i>
-</div>
-
-<div class="col-33" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="grasshopper" href="https://grasshopper.app/" target="_blank"><img src="/images/athome/grasshopper.png" style="width: 100%" alt="Grasshopper"></a><br><a class="linktag" id="grasshopper" href="https://grasshopper.app/" target="_blank"><h3 style="color:#7665a0"><strong>Grasshopper</strong></h3></a>通过手机上有趣快速的课程来学习编程，教你编写真正的JavaScript。 《与谷歌一起编程》项目。 <i>（适合初中及以上）</i>
+<div class="col-50" style="padding-right: 30px; padding-bottom:40px">
+  <a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><img src="/images/tutorials/hoc2018/codespark_create.jpg" style="width: 100%" alt="codeSpark"></a><br><a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><h3 style="margin-top: 1rem;">获得 CodePark</h3></a>奖项的 “学习编程” 平台，适合 5-9 岁的孩子。 在学习编程的同时，与小兔子富富一起解决谜题并创建游戏。 <strong>注意：codeSpark目前提供3个月的免费试听期。 注册时需要家长的电子邮箱地址和信用卡信息。</strong> <i>（适合5年级以前的学前儿童）</i>
 </div>
 
 <div style="clear: both; margin-bottom: 15px"></div>
@@ -306,8 +302,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="margin-top:10px"><strong>CodeBytes</strong></h3>
-        <div class="smalltext" style="color: dimgray;">CodeBytes 是一门易于理解的 20 分钟交互式课程，将计算机科学与现实世界的主题融为一体。 训练人工智能阅读手语、设计应用、探索《我的世界》等等！</div>        <br>        <br>        <a class="linktag" id="codebytes" href="https://code.org/codebytes" target="_blank"><button>查看视频</button></a>
+        <h3 class="tutorial-info-h" style="margin-top:10px">CodeByt</h3>
+        <div class="smalltext" style="color: dimgray;">es CodeBytes 是一门易于理解的 20 分钟交互式课程，将计算机科学与现实世界的主题融为一体。 训练人工智能阅读手语、设计应用、探索《我的世界》等等！</div>        <br>        <br>        <a class="linktag" id="codebytes" href="https://code.org/codebytes" target="_blank"><button>查看视频</button></a>
     </span>
   </div>
 </div>
@@ -320,8 +316,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="margin-top:10px"><strong>Code Break</strong></h3>
-        <div class="smalltext" style="">通过密码中断来保持计算机科学的乐趣！ 你可以与阿什顿·库彻一起创建密码，与亚拉·沙希迪一起了解变量，甚至可以与互联网的实际发明者温特·瑟夫一起探索互联网的运行原理！</div>        <br>        <a class="linktag" id="codebreak" href="https://code.org/break" target="_blank"><button>立即加入</button></a>
+        <h3 class="tutorial-info-h" style="margin-top:10px">Code Break 通过密码中断来</h3>
+        <div class="smalltext" style="">保持计算机科学的乐趣！ 你可以与阿什顿·库彻一起创建密码，与亚拉·沙希迪一起了解变量，甚至可以与互联网的实际发明者温特·瑟夫一起探索互联网的运行原理！</div>        <br>        <a class="linktag" id="codebreak" href="https://code.org/break" target="_blank"><button>立即加入</button></a>
     </span>
   </div>
 </div>
