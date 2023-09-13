@@ -1250,6 +1250,635 @@
           "word": "이벤트 ",
           "definition": " 무언가를 일으키는 행위."
         },
+        "code/csc-adaptations/2023": {
+          "word": "코드"
+        },
+        "event/csc-adaptations/2023": {
+          "word": "이벤트 "
+        },
+        "behavior/csc-adaptations/2023": {
+          "word": "행동"
+        },
+        "event/csc-bookcovers/2023": {
+          "word": "이벤트 ",
+          "definition": " 무언가를 일으키는 행위."
+        },
+        "program/csc-bookcovers/2023": {
+          "word": "프로그램 ",
+          "definition": "기계가 실행할 수 있는 것으로 코딩된 일련의 단계입니다."
+        },
+        "prompt/csc-bookcovers/2023": {
+          "word": "프롬프트",
+          "definition": "사용자의 입력을 기다리는 컴퓨터 화면 상의 메시지."
+        },
+        "sprite/csc-bookcovers/2023": {
+          "word": "스프라이트",
+          "definition": "위치와 크기, 외형을 가진 화면 위 그래픽"
+        },
+        "code/csc-ecosystems/2023": {
+          "word": "코드"
+        },
+        "condition/csc-ecosystems/2023": {
+          "word": "조건"
+        },
+        "conditionals/csc-ecosystems/2023": {
+          "word": "조건"
+        },
+        "event/csc-ecosystems/2023": {
+          "word": "이벤트 "
+        },
+        "variable/csc-ecosystems/2023": {
+          "word": "변수"
+        },
+        "energy/csc-ecosystems/2023": {
+          "word": "에너지"
+        },
+        "code/csc-mappinglandmarks/2023": {
+          "word": "코드",
+          "definition": "(동사) 컴퓨터용 명령문을 작성합니다."
+        },
+        "event/csc-mappinglandmarks/2023": {
+          "word": "이벤트 ",
+          "definition": " 무언가를 일으키는 행위."
+        },
+        "sprite/csc-mappinglandmarks/2023": {
+          "word": "스프라이트"
+        },
+        "map/csc-mappinglandmarks/2023": {
+          "word": "지도"
+        },
+        "artist/csc-starquilts/2023": {
+          "word": "예술가"
+        },
+        "loop/csc-starquilts/2023": {
+          "word": "루프"
+        },
+        "comments/csc-starquilts/2023": {
+          "word": "의견"
+        },
+        "event/csc-timecapsule/2023": {
+          "word": "이벤트 ",
+          "definition": " 무언가를 일으키는 행위."
+        },
+        "mood/csc-timecapsule/2023": {
+          "word": "분위기"
+        },
+        "sprite/csc-timecapsule/2023": {
+          "word": "스프라이트"
+        },
+        "code/poetry/2023": {
+          "word": "코드",
+          "definition": "(동사) 컴퓨터용 명령문을 작성합니다."
+        },
+        "event/poetry/2023": {
+          "word": "이벤트 ",
+          "definition": " 무언가를 일으키는 행위."
+        },
+        "line/poetry/2023": {
+          "word": "구절"
+        },
+        "mood/poetry/2023": {
+          "word": "분위기"
+        },
+        "program/poetry/2023": {
+          "word": "프로그램 ",
+          "definition": "기계가 실행할 수 있는 것으로 코딩된 일련의 단계입니다."
+        },
+        "algorithm/coursea/2023": {
+          "word": "알고리즘",
+          "definition": "과제를 끝내기 위한 단계 목록. "
+        },
+        "debugging/coursea/2023": {
+          "word": "디버깅",
+          "definition": "알고리즘이나 프로그램에서 문제를 찾아 고치기"
+        },
+        "program/coursea/2023": {
+          "word": "프로그램 ",
+          "definition": "머신이 실행할 수 있는 무언가로 코딩된 알고리즘."
+        },
+        "click/coursea/2023": {
+          "word": "클릭",
+          "definition": "마우스 버튼을 누룸."
+        },
+        "double_click/coursea/2023": {
+          "word": "더블 클릭",
+          "definition": "마우스 버튼을 매우 빠르게 누룸."
+        },
+        "drag/coursea/2023": {
+          "word": "드래그",
+          "definition": "마우스 버튼을 클릭한 후 계속 누른 상태에서 마우스 포인터를 새 위치로 이동."
+        },
+        "drop/coursea/2023": {
+          "word": "드롭",
+          "definition": "드래그하고 있던 항목을 \"가게\"하기 위해 마우스 버튼을 놓음."
+        },
+        "bug/coursea/2023": {
+          "word": "버그",
+          "definition": "정상 작동하지 않는 프로그램 부분."
+        },
+        "programming/coursea/2023": {
+          "word": "프로그래밍",
+          "definition": "프로그램을 만드는 능력."
+        },
+        "loop/coursea/2023": {
+          "word": "루프",
+          "definition": "계속해서 무언가를 반복하도록 하는 작업"
+        },
+        "repeat/coursea/2023": {
+          "word": "반복",
+          "definition": "뭔가를 다시 하기 위해."
+        },
+        "event/coursea/2023": {
+          "word": "이벤트 ",
+          "definition": " 무언가를 일으키는 행위."
+        },
+        "algorithm/courseb/2023": {
+          "word": "알고리즘",
+          "definition": "과제를 끝내기 위한 단계 목록. "
+        },
+        "bug/courseb/2023": {
+          "word": "버그",
+          "definition": "정상 작동하지 않는 프로그램 부분."
+        },
+        "debugging/courseb/2023": {
+          "word": "디버깅",
+          "definition": "알고리즘이나 프로그램에서 문제를 찾아 고치기"
+        },
+        "click/courseb/2023": {
+          "word": "클릭",
+          "definition": "마우스 버튼을 누룸."
+        },
+        "double_click/courseb/2023": {
+          "word": "더블 클릭",
+          "definition": "마우스 버튼을 매우 빠르게 누룸."
+        },
+        "drag/courseb/2023": {
+          "word": "드래그",
+          "definition": "마우스 버튼을 클릭한 후 계속 누른 상태에서 마우스 포인터를 새 위치로 이동."
+        },
+        "drop/courseb/2023": {
+          "word": "드롭",
+          "definition": "드래그하고 있던 항목을 \"가게\"하기 위해 마우스 버튼을 놓음."
+        },
+        "program/courseb/2023": {
+          "word": "프로그램 ",
+          "definition": "머신이 실행할 수 있는 무언가로 코딩된 알고리즘."
+        },
+        "programming/courseb/2023": {
+          "word": "프로그래밍",
+          "definition": "프로그램을 만드는 능력."
+        },
+        "persistence/courseb/2023": {
+          "word": "끈기",
+          "definition": "매우 어렵더라도 계속 다시 시도."
+        },
+        "loop/courseb/2023": {
+          "word": "루프",
+          "definition": "계속해서 무언가를 반복하도록 하는 작업"
+        },
+        "repeat/courseb/2023": {
+          "word": "반복",
+          "definition": "뭔가를 다시 하기 위해."
+        },
+        "event/courseb/2023": {
+          "word": "이벤트 ",
+          "definition": " 무언가를 일으키는 행위."
+        },
+        "algorithm/coursec/2023": {
+          "word": "알고리즘",
+          "definition": "과제를 끝내기 위한 단계 목록. "
+        },
+        "bug/coursec/2023": {
+          "word": "버그",
+          "definition": "정상 작동하지 않는 프로그램 부분."
+        },
+        "debugging/coursec/2023": {
+          "word": "디버깅",
+          "definition": "알고리즘이나 프로그램에서 문제를 찾아 고치기"
+        },
+        "program/coursec/2023": {
+          "word": "프로그램 ",
+          "definition": "머신이 실행할 수 있는 무언가로 코딩된 알고리즘."
+        },
+        "sequencing/coursec/2023": {
+          "word": "시퀸싱",
+          "definition": "컴퓨터가 명령어를 읽을 수 있도록 명령어를 바른 순서대로 놓음."
+        },
+        "persistence/coursec/2023": {
+          "word": "끈기",
+          "definition": "포기하지 마세요."
+        },
+        "programming/coursec/2023": {
+          "word": "프로그래밍",
+          "definition": "프로그램을 만드는 능력."
+        },
+        "angle/coursec/2023": {
+          "word": "각도",
+          "definition": "도형의 두 변이 만나는 지점을 도 단위로 측정합니다."
+        },
+        "loop/coursec/2023": {
+          "word": "루프",
+          "definition": "계속해서 무언가를 반복하도록 하는 작업"
+        },
+        "repeat/coursec/2023": {
+          "word": "반복",
+          "definition": "뭔가를 다시 하기 위해."
+        },
+        "event/coursec/2023": {
+          "word": "이벤트 ",
+          "definition": " 무언가를 일으키는 행위."
+        },
+        "data/coursec/2023": {
+          "word": "데이터"
+        },
+        "binary/coursec/2023": {
+          "word": "2진",
+          "definition": "단지 두 가지 옵션만을 사용하여 정보를 나타내는 방식."
+        },
+        "algorithm/coursed/2023": {
+          "word": "알고리즘",
+          "definition": "과제를 끝내기 위한 단계 목록. "
+        },
+        "program/coursed/2023": {
+          "word": "프로그램 ",
+          "definition": "머신이 실행할 수 있는 무언가로 코딩된 알고리즘."
+        },
+        "bug/coursed/2023": {
+          "word": "버그",
+          "definition": "정상 작동하지 않는 프로그램 부분."
+        },
+        "debugging/coursed/2023": {
+          "word": "디버깅",
+          "definition": "알고리즘이나 프로그램에서 문제를 찾아 고치기"
+        },
+        "loop/coursed/2023": {
+          "word": "루프",
+          "definition": "계속해서 무언가를 반복하도록 하는 작업"
+        },
+        "programming/coursed/2023": {
+          "word": "프로그래밍",
+          "definition": "프로그램을 만드는 능력."
+        },
+        "frustrated/coursed/2023": {
+          "word": "좌절",
+          "definition": "뭔가가 원하는 대로 되지 않아 답답하거나 또는 화나는 기분."
+        },
+        "persistence/coursed/2023": {
+          "word": "끈기",
+          "definition": "매우 어렵더라도 계속 다시 시도."
+        },
+        "event/coursed/2023": {
+          "word": "이벤트 ",
+          "definition": " 무언가를 일으키는 행위."
+        },
+        "code/coursed/2023": {
+          "definition": "(동사) 코드 작성, 컴퓨터에게 내릴 지시사항 작성."
+        },
+        "repeat/coursed/2023": {
+          "word": "반복",
+          "definition": "뭔가를 다시 하기 위해."
+        },
+        "command/coursed/2023": {
+          "word": "명령어",
+          "definition": "컴퓨터에게 내릴 지시사항. 많은 명령어가 조합되어 알고리즘과 컴퓨터 프로그램을 이룹니다."
+        },
+        "conditionals/coursed/2023": {
+          "word": "조건",
+          "definition": "특정 조건이 참일 때만 실행되는 구문"
+        },
+        "pseudocode/coursed/2023": {
+          "word": "유사 부호",
+          "definition": "알고리즘 내 단계에 대한 간단한 설명"
+        },
+        "condition/coursed/2023": {
+          "word": "조건",
+          "definition": "작업 실행 전 그것이 참인지 프로그램이 확인하는 것"
+        },
+        "while_loop/coursed/2023": {
+          "word": "While 루프",
+          "definition": "조건이 참인 동안(while) 계속 반복하는 루프."
+        },
+        "until/coursed/2023": {
+          "word": "Until (까지)",
+          "definition": "뭔가가 참이 되는 시점까지만 뭔가를 하게 하는 명령어. "
+        },
+        "behavior/coursee/2023": {
+          "word": "행동",
+          "definition": "스프라이트가 중단하라는 말을 들을 때까지 계속해서 수행하는 동작"
+        },
+        "sprite/coursee/2023": {
+          "word": "스프라이트",
+          "definition": "위치와 크기, 외형을 가진 화면 위 그래픽"
+        },
+        "loop/coursee/2023": {
+          "word": "루프",
+          "definition": "계속해서 무언가를 반복하도록 하는 작업"
+        },
+        "repeat/coursee/2023": {
+          "word": "반복",
+          "definition": "뭔가를 다시 하기 위해."
+        },
+        "function/coursee/2023": {
+          "word": "함수"
+        },
+        "condition/coursee/2023": {
+          "word": "조건"
+        },
+        "conditionals/coursee/2023": {
+          "word": "조건",
+          "definition": "특정 조건이 참일 때만 실행되는 구문"
+        },
+        "while_loop/coursee/2023": {
+          "word": "While 루프",
+          "definition": "조건이 참인 동안(while) 계속 반복하는 루프."
+        },
+        "copyright/coursee/2023": {
+          "word": "저작권",
+          "definition": "문학적, 예술적, 음악적 소재를 인쇄 또는 출판, 공연, 촬영, 기록하고 또한 다른 이에게 그렇게 하도록 허가할 배타적 법적 권리."
+        },
+        "define/coursee/2023": {
+          "word": "함수 정의",
+          "definition": "풀려고 하는 문제의 세부내용을 알아냄."
+        },
+        "prepare/coursee/2023": {
+          "word": "준비",
+          "definition": "지금 막 하려고 하는 활동에 관한 자료를 조사 및 계획, 획득"
+        },
+        "reflect/coursee/2023": {
+          "word": "점검",
+          "definition": "미래 결과물을 개선할 의도로 뭔가를 주의 깊게 되돌아 봄."
+        },
+        "try/coursee/2023": {
+          "word": "시도",
+          "definition": "뭔가를 하려고 시도"
+        },
+        "sprite/coursef/2023": {
+          "word": "스프라이트",
+          "definition": "위치와 크기, 외형을 가진 화면 위 그래픽"
+        },
+        "user/coursef/2023": {
+          "word": "사용자",
+          "definition": "소프트웨어 및 하드웨어를 포함하여, 객체를 사용하는 이"
+        },
+        "algorithm/coursef/2023": {
+          "word": "알고리즘",
+          "definition": "과제를 끝내기 위한 단계 목록."
+        },
+        "behavior/coursef/2023": {
+          "word": "행동"
+        },
+        "program/coursef/2023": {
+          "word": "프로그램 ",
+          "definition": "머신이 실행할 수 있는 무언가로 코딩된 알고리즘."
+        },
+        "event/coursef/2023": {
+          "word": "이벤트 ",
+          "definition": " 무언가를 일으키는 행위."
+        },
+        "variable/coursef/2023": {
+          "word": "변수",
+          "definition": "프로그램에서 사용되는 정보 조각을 위한 라벨."
+        },
+        "prompt/coursef/2023": {
+          "word": "프롬프트",
+          "definition": "사용자의 입력을 기다리는 컴퓨터 화면 상의 메시지."
+        },
+        "input/coursef/2023": {
+          "word": "입력",
+          "definition": "컴퓨터가 사용자에게서 얻는 정보."
+        },
+        "models_and_simulations/coursef/2023": {
+          "word": "모델 및 시뮬레이션",
+          "definition": "비용과 시간 또는 실제 세계에서 실험할 때의 위험 없이 행동을 조사하기 위해 실제 세계 이벤트의 주요 특징을 복제 또는 흉내내는 프로그램"
+        },
+        "machine_learning/coursef/2023": {
+          "word": "머신 러닝",
+          "definition": "명확하게 프로그래밍되지 않아도 컴퓨터가 패턴을 인식하고 결정을 내림."
+        },
+        "dns/coursef/2023": {
+          "word": "DNS",
+          "definition": "도메인 네임 시스템의 약어, 이 시스템은 도메인 이름 (example.com 등)을 IP 주소 (93.184.216.34 등)로 바꿉니다."
+        },
+        "dsl_cable/coursef/2023": {
+          "word": "DSL/케이블",
+          "definition": "전화 또는 텔레비전 선을 사용하여 정보를 전송하는 방식."
+        },
+        "fiber_optic_cable/coursef/2023": {
+          "word": "광 케이블",
+          "definition": "빛을 사용해 정보를 전송하는 연결 "
+        },
+        "internet/coursef/2023": {
+          "word": "인터넷",
+          "definition": "서로 연결된 컴퓨터와 서버 그룹"
+        },
+        "ip_address/coursef/2023": {
+          "word": "IP 주소",
+          "definition": "인터넷에 연결된 항목에 배정된 번호."
+        },
+        "packets/coursef/2023": {
+          "word": "패킷",
+          "definition": "큰 정보 덩어리에서 나와 조심스럽게 형성된 작은 정보 덩어리."
+        },
+        "servers/coursef/2023": {
+          "word": "서버",
+          "definition": "다른 이에게 뭔가를 제공하기 위한 용도로만 존재하는 컴퓨터 "
+        },
+        "url/coursef/2023": {
+          "word": "URL",
+          "definition": "웹페이지를 부르기 위해 쉽게 기억되는 주소 (www.code.org 등)."
+        },
+        "wi_fi/coursef/2023": {
+          "word": "Wi-Fi",
+          "definition": "무선 전파를 이용하여 정보를 전송하는 무선 방식."
+        },
+        "define/coursef/2023": {
+          "word": "함수 정의",
+          "definition": "풀려고 하는 문제의 세부내용을 알아냄."
+        },
+        "prepare/coursef/2023": {
+          "word": "준비",
+          "definition": "지금 막 하려고 하는 활동에 관한 자료를 조사 및 계획, 획득"
+        },
+        "reflect/coursef/2023": {
+          "word": "점검",
+          "definition": "미래 결과물을 개선할 의도로 뭔가를 주의 깊게 되돌아 봄."
+        },
+        "try/coursef/2023": {
+          "word": "시도",
+          "definition": "뭔가를 하려고 시도"
+        },
+        "algorithm/express/2023": {
+          "word": "알고리즘",
+          "definition": "과제를 끝내기 위한 단계 목록. "
+        },
+        "bug/express/2023": {
+          "word": "버그",
+          "definition": "정상 작동하지 않는 프로그램 부분."
+        },
+        "debugging/express/2023": {
+          "word": "디버깅",
+          "definition": "알고리즘이나 프로그램에서 문제를 찾아 고치기"
+        },
+        "sequencing/express/2023": {
+          "word": "시퀸싱",
+          "definition": "컴퓨터가 명령어를 읽을 수 있도록 명령어를 바른 순서대로 놓음."
+        },
+        "program/express/2023": {
+          "word": "프로그램 ",
+          "definition": "머신이 실행할 수 있는 무언가로 코딩된 알고리즘."
+        },
+        "programming/express/2023": {
+          "word": "프로그래밍",
+          "definition": "프로그램을 만드는 능력."
+        },
+        "behavior/express/2023": {
+          "word": "행동",
+          "definition": "스프라이트가 중단하라는 말을 들을 때까지 계속해서 수행하는 동작"
+        },
+        "sprite/express/2023": {
+          "word": "스프라이트",
+          "definition": "위치와 크기, 외형을 가진 화면 위 그래픽"
+        },
+        "event/express/2023": {
+          "word": "이벤트 ",
+          "definition": " 무언가를 일으키는 행위."
+        },
+        "code/express/2023": {
+          "definition": "코드 작성, 또는 컴퓨터에게 내릴 지시사항 작성."
+        },
+        "loop/express/2023": {
+          "word": "루프",
+          "definition": "계속해서 무언가를 반복하도록 하는 작업"
+        },
+        "repeat/express/2023": {
+          "word": "반복",
+          "definition": "뭔가를 다시 하기 위해."
+        },
+        "command/express/2023": {
+          "word": "명령어",
+          "definition": "컴퓨터에게 내릴 지시사항. 많은 명령어가 조합되어 알고리즘과 컴퓨터 프로그램을 이룹니다."
+        },
+        "condition/express/2023": {
+          "word": "조건",
+          "definition": "작업 실행 전 그것이 참인지 프로그램이 확인하는 것"
+        },
+        "conditionals/express/2023": {
+          "word": "조건",
+          "definition": "특정 조건이 참일 때만 실행되는 구문"
+        },
+        "while_loop/express/2023": {
+          "word": "While 루프",
+          "definition": "조건이 참인 동안(while) 계속 반복하는 루프."
+        },
+        "until/express/2023": {
+          "word": "Until (까지)",
+          "definition": "뭔가가 참이 되는 시점까지만 뭔가를 하게 하는 명령어. "
+        },
+        "function/express/2023": {
+          "word": "함수",
+          "definition": "손쉽게 계속해서 다시 호출할 수 있는 코드 조각"
+        },
+        "prompt/express/2023": {
+          "word": "프롬프트",
+          "definition": "사용자의 입력을 기다리는 컴퓨터 화면 상의 메시지."
+        },
+        "variable/express/2023": {
+          "word": "변수",
+          "definition": "프로그램에서 사용되는 정보 조각을 위한 라벨."
+        },
+        "for_loop/express/2023": {
+          "word": "For 루프",
+          "definition": "사전에 결정된 시작 및 종류, 증분 (단계 간격)이 있는 루프."
+        },
+        "define/express/2023": {
+          "word": "함수 정의",
+          "definition": "풀려고 하는 문제의 세부내용을 알아냄."
+        },
+        "prepare/express/2023": {
+          "word": "준비",
+          "definition": "지금 막 하려고 하는 활동에 관한 자료를 조사 및 계획, 획득"
+        },
+        "reflect/express/2023": {
+          "word": "점검",
+          "definition": "미래 결과물을 개선할 의도로 뭔가를 주의 깊게 되돌아 봄."
+        },
+        "try/express/2023": {
+          "word": "시도",
+          "definition": "뭔가를 하려고 시도"
+        },
+        "click/pre-express/2023": {
+          "word": "클릭",
+          "definition": "마우스 버튼을 누룸."
+        },
+        "double_click/pre-express/2023": {
+          "word": "더블 클릭",
+          "definition": "마우스 버튼을 매우 빠르게 누룸."
+        },
+        "drag/pre-express/2023": {
+          "word": "드래그",
+          "definition": "마우스 버튼을 클릭한 후 계속 누른 상태에서 마우스 포인터를 새 위치로 이동."
+        },
+        "drop/pre-express/2023": {
+          "word": "드롭",
+          "definition": "드래그하고 있던 항목을 \"가게\"하기 위해 마우스 버튼을 놓음."
+        },
+        "algorithm/pre-express/2023": {
+          "word": "알고리즘",
+          "definition": "과제를 끝내기 위한 단계 목록. "
+        },
+        "bug/pre-express/2023": {
+          "word": "버그",
+          "definition": "정상 작동하지 않는 프로그램 부분."
+        },
+        "debugging/pre-express/2023": {
+          "word": "디버깅",
+          "definition": "알고리즘이나 프로그램에서 문제를 찾아 고치기"
+        },
+        "program/pre-express/2023": {
+          "word": "프로그램 ",
+          "definition": "머신이 실행할 수 있는 무언가로 코딩된 알고리즘."
+        },
+        "programming/pre-express/2023": {
+          "word": "프로그래밍",
+          "definition": "프로그램을 만드는 능력."
+        },
+        "persistence/pre-express/2023": {
+          "word": "끈기",
+          "definition": "매우 어렵더라도 계속 다시 시도."
+        },
+        "loop/pre-express/2023": {
+          "word": "루프",
+          "definition": "계속해서 무언가를 반복하도록 하는 작업"
+        },
+        "repeat/pre-express/2023": {
+          "word": "반복",
+          "definition": "뭔가를 다시 하기 위해."
+        },
+        "event/pre-express/2023": {
+          "word": "이벤트 ",
+          "definition": " 무언가를 일으키는 행위."
+        },
+        "machine_learning/how-ai-works/2023": {
+          "word": "머신 러닝",
+          "definition": "명확하게 프로그래밍되지 않아도 컴퓨터가 패턴을 인식하고 결정을 내림."
+        },
+        "algorithm/how-ai-works/2023": {
+          "word": "알고리즘"
+        },
+        "network/how-ai-works/2023": {
+          "word": "네트워크"
+        },
+        "model/how-ai-works/2023": {
+          "word": "모델",
+          "definition": "의사결정을 내리도록 설계된 컴퓨터 프로그램"
+        },
+        "artificial_intelligence/how-ai-works/2023": {
+          "word": "인공지능"
+        },
+        "ethics/how-ai-works/2023": {
+          "word": "윤리",
+          "definition": "좋은 행동을 위한 지침."
+        },
         "code/aquatic/unversioned": {
           "word": "코드",
           "definition": "(동사) 코드를 짜다, 컴퓨터에게 내릴 명령어를 만들다"
