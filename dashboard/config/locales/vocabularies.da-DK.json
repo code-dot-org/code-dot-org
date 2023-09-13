@@ -218,6 +218,123 @@
         "programming/pre-express/2022": {
           "word": "Programmering"
         },
+        "code/csc-adaptations/2023": {
+          "word": "Kode"
+        },
+        "code/csc-ecosystems/2023": {
+          "word": "Kode"
+        },
+        "conditionals/csc-ecosystems/2023": {
+          "word": "Betingelser"
+        },
+        "variable/csc-ecosystems/2023": {
+          "word": "Variabel"
+        },
+        "code/csc-mappinglandmarks/2023": {
+          "word": "Kode"
+        },
+        "map/csc-mappinglandmarks/2023": {
+          "word": "Kort"
+        },
+        "artist/csc-starquilts/2023": {
+          "word": "Kunstner"
+        },
+        "comments/csc-starquilts/2023": {
+          "word": "Kommentarer"
+        },
+        "code/poetry/2023": {
+          "word": "Kode"
+        },
+        "debugging/coursea/2023": {
+          "word": "Fejlfinding"
+        },
+        "drop/coursea/2023": {
+          "word": "Slip"
+        },
+        "programming/coursea/2023": {
+          "word": "Programmering"
+        },
+        "debugging/courseb/2023": {
+          "word": "Fejlfinding"
+        },
+        "drop/courseb/2023": {
+          "word": "Slip"
+        },
+        "programming/courseb/2023": {
+          "word": "Programmering"
+        },
+        "debugging/coursec/2023": {
+          "word": "Fejlfinding"
+        },
+        "programming/coursec/2023": {
+          "word": "Programmering"
+        },
+        "binary/coursec/2023": {
+          "word": "Binære"
+        },
+        "debugging/coursed/2023": {
+          "word": "Fejlfinding"
+        },
+        "programming/coursed/2023": {
+          "word": "Programmering"
+        },
+        "conditionals/coursed/2023": {
+          "word": "Betingelser"
+        },
+        "function/coursee/2023": {
+          "word": "Funktion"
+        },
+        "conditionals/coursee/2023": {
+          "word": "Betingelser"
+        },
+        "copyright/coursee/2023": {
+          "word": "Copyright"
+        },
+        "define/coursee/2023": {
+          "word": "Definer"
+        },
+        "variable/coursef/2023": {
+          "word": "Variabel"
+        },
+        "input/coursef/2023": {
+          "word": "input"
+        },
+        "internet/coursef/2023": {
+          "word": "Internet"
+        },
+        "define/coursef/2023": {
+          "word": "Definer"
+        },
+        "debugging/express/2023": {
+          "word": "Fejlfinding"
+        },
+        "programming/express/2023": {
+          "word": "Programmering"
+        },
+        "conditionals/express/2023": {
+          "word": "Betingelser"
+        },
+        "function/express/2023": {
+          "word": "Funktion"
+        },
+        "variable/express/2023": {
+          "word": "Variabel"
+        },
+        "define/express/2023": {
+          "word": "Definer"
+        },
+        "drop/pre-express/2023": {
+          "word": "Slip"
+        },
+        "debugging/pre-express/2023": {
+          "word": "Fejlfinding"
+        },
+        "programming/pre-express/2023": {
+          "word": "Programmering"
+        },
+        "network/how-ai-works/2023": {
+          "word": "Netværk"
+        },
         "conditionals/aquatic/unversioned": {
           "word": "Betingelser"
         },

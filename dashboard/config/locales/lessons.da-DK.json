@@ -434,6 +434,45 @@
         "express-2022/Dance Party": {
           "name": "Dance Party"
         },
+        "coursea-2023/Happy Maps": {
+          "name": "Glade Kort"
+        },
+        "courseb-2023/Move It, Move It": {
+          "name": "Flyt det, flyt det"
+        },
+        "courseb-2023/Getting Loopy": {
+          "name": "Blive Svimmel"
+        },
+        "coursec-2023/The Big Event": {
+          "name": "Den store begivenhed"
+        },
+        "coursec-2023/Binary Bracelets": {
+          "name": "Binære armbånd"
+        },
+        "coursed-2023/Graph Paper Programming": {
+          "name": "Programmering på millimeterpapir"
+        },
+        "coursed-2023/Relay Programming": {
+          "name": "Stafet-programmering"
+        },
+        "coursed-2023/Dance Party": {
+          "name": "Dance Party"
+        },
+        "coursed-2023/Conditionals with Cards": {
+          "name": "Betingelser med kortspil"
+        },
+        "coursee-2023/Songwriting": {
+          "name": "Sangskrivning"
+        },
+        "coursef-2023/Outbreak": {
+          "name": "Udbrud"
+        },
+        "coursef-2023/The Internet": {
+          "name": "Internettet"
+        },
+        "express-2023/Dance Party": {
+          "name": "Dance Party"
+        },
         "Hour of Code/Hour of Code 2013": {
           "name": "Hour of Code 2013"
         },
