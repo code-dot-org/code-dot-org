@@ -1,0 +1,20 @@
+{
+  "category": "World",
+  "config": {
+    "style": "world_blocks",
+    "func": "ai",
+    "blockText": "use AI to {VALUE}",
+    "color": [
+      0,
+      0.9,
+      0.9
+    ],
+    "args": [
+      {
+        "name": "VALUE",
+        "type": "String",
+        "field": true
+      }
+    ]
+  }
+}

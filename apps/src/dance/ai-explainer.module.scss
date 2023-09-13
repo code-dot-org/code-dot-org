@@ -1,0 +1,86 @@
+@import 'color.scss';
+
+// Fade in for 1 second after a 1 second delay.
+@keyframes appear1 {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+// Fade in for 1 second after a 3 second delay
+@keyframes appear2 {
+  0% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+// Fade in for 1 second after a 5 second delay
+@keyframes appear3 {
+  0% {
+    opacity: 0;
+  }
+  83% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.appear1 {
+  animation: appear1 2s;
+}
+
+.appear2 {
+  animation: appear2 4s;
+}
+
+.appear3 {
+  animation: appear3 6s;
+}
+
+.dialog {
+  max-width: initial !important;
+  width: 800px !important;
+
+  .heading {
+    font-size: 16px;
+    margin-top: 10px;
+    font-family: 'Gotham 5r';
+  }
+
+  .content {
+    font-family: monospace;
+    margin: 20px;
+    background-color: #eaeaea;
+    padding: 15px;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+
+  .botContainer {
+    float: left;
+
+    .bot {
+      width: 60px;
+    }
+  }
+
+  .output {
+    float: left;
+    margin-left: 20px;
+    margin-top: 15px;
+  }
+}
