@@ -1157,6 +1157,622 @@
           "word": "イベント",
           "definition": "何かを引き起こすアクション。"
         },
+        "code/csc-adaptations/2023": {
+          "word": "コード"
+        },
+        "event/csc-adaptations/2023": {
+          "word": "イベント"
+        },
+        "behavior/csc-adaptations/2023": {
+          "word": "行動"
+        },
+        "event/csc-bookcovers/2023": {
+          "word": "イベント",
+          "definition": "何かを引き起こすアクション。"
+        },
+        "program/csc-bookcovers/2023": {
+          "word": "プログラム",
+          "definition": "コンピューターで実行できる形のプログラムにした一連のステップ。"
+        },
+        "prompt/csc-bookcovers/2023": {
+          "word": "プロンプト",
+          "definition": "ユーザーからの入力を待つコンピュータ画面上のメッセージ。"
+        },
+        "sprite/csc-bookcovers/2023": {
+          "word": "スプライト",
+          "definition": "場所、大きさ、見た目がわかる画面上のグラフィック。"
+        },
+        "code/csc-ecosystems/2023": {
+          "word": "コード"
+        },
+        "condition/csc-ecosystems/2023": {
+          "word": "条件"
+        },
+        "conditionals/csc-ecosystems/2023": {
+          "word": "条件"
+        },
+        "event/csc-ecosystems/2023": {
+          "word": "イベント"
+        },
+        "variable/csc-ecosystems/2023": {
+          "word": "変数"
+        },
+        "energy/csc-ecosystems/2023": {
+          "word": "エネルギー"
+        },
+        "code/csc-mappinglandmarks/2023": {
+          "word": "コード",
+          "definition": "（v）コンピューター用の指示を書くこと。"
+        },
+        "event/csc-mappinglandmarks/2023": {
+          "word": "イベント",
+          "definition": "何かを引き起こすアクション。"
+        },
+        "sprite/csc-mappinglandmarks/2023": {
+          "word": "スプライト"
+        },
+        "map/csc-mappinglandmarks/2023": {
+          "word": "マップ"
+        },
+        "artist/csc-starquilts/2023": {
+          "word": "アーティスト"
+        },
+        "loop/csc-starquilts/2023": {
+          "word": "ループ"
+        },
+        "comments/csc-starquilts/2023": {
+          "word": "コメント"
+        },
+        "event/csc-timecapsule/2023": {
+          "word": "イベント",
+          "definition": "何かを引き起こすアクション。"
+        },
+        "mood/csc-timecapsule/2023": {
+          "word": "ムード"
+        },
+        "sprite/csc-timecapsule/2023": {
+          "word": "スプライト"
+        },
+        "code/poetry/2023": {
+          "word": "コード",
+          "definition": "（v）コンピューター用の指示を書くこと。"
+        },
+        "event/poetry/2023": {
+          "word": "イベント",
+          "definition": "何かを引き起こすアクション。"
+        },
+        "line/poetry/2023": {
+          "word": "行"
+        },
+        "mood/poetry/2023": {
+          "word": "ムード"
+        },
+        "program/poetry/2023": {
+          "word": "プログラム",
+          "definition": "コンピューターで実行できる形のプログラムにした一連のステップ。"
+        },
+        "algorithm/coursea/2023": {
+          "word": "アルゴリズム",
+          "definition": "タスクを終わらせるためのステップリスト。"
+        },
+        "debugging/coursea/2023": {
+          "word": "デバッギング",
+          "definition": "アルゴリズムやプログラムの問題点を見つけて修正すること。"
+        },
+        "program/coursea/2023": {
+          "word": "プログラム",
+          "definition": "マシンで実行できるものにコード化されたアルゴリズム。"
+        },
+        "click/coursea/2023": {
+          "word": "クリック",
+          "definition": "マウスボタンを押す"
+        },
+        "double_click/coursea/2023": {
+          "word": "ダブルクリック",
+          "definition": "マウスのボタンを素早く押す"
+        },
+        "drag/coursea/2023": {
+          "word": "ドラッグ",
+          "definition": "新しい場所にマウスポインタを移動しながら、マウスボタンをクリックしたままにします。"
+        },
+        "drop/coursea/2023": {
+          "word": "ドロップ",
+          "definition": "マウスボタンを離すと、ドラッグしているアイテムを「手放す」ことができます。"
+        },
+        "bug/coursea/2023": {
+          "word": "バグ",
+          "definition": "正常に動作しないプログラムの一部。"
+        },
+        "programming/coursea/2023": {
+          "word": "プログラミング",
+          "definition": "プログラム作成の技能。"
+        },
+        "loop/coursea/2023": {
+          "word": "ループ",
+          "definition": "何度も何度も何かをするという行為。"
+        },
+        "repeat/coursea/2023": {
+          "word": "繰り返し",
+          "definition": "何かを再びすること。"
+        },
+        "event/coursea/2023": {
+          "word": "イベント",
+          "definition": "何かを引き起こすアクション。"
+        },
+        "algorithm/courseb/2023": {
+          "word": "アルゴリズム",
+          "definition": "タスクを終わらせるためのステップリスト。"
+        },
+        "bug/courseb/2023": {
+          "word": "バグ",
+          "definition": "正常に動作しないプログラムの一部。"
+        },
+        "debugging/courseb/2023": {
+          "word": "デバッギング",
+          "definition": "アルゴリズムやプログラムの問題点を見つけて修正すること。"
+        },
+        "click/courseb/2023": {
+          "word": "クリック",
+          "definition": "マウスボタンを押す"
+        },
+        "double_click/courseb/2023": {
+          "word": "ダブルクリック",
+          "definition": "マウスのボタンを素早く押す"
+        },
+        "drag/courseb/2023": {
+          "word": "ドラッグ",
+          "definition": "新しい場所にマウスポインタを移動しながら、マウスボタンをクリックしたままにします。"
+        },
+        "drop/courseb/2023": {
+          "word": "ドロップ",
+          "definition": "マウスボタンを離すと、ドラッグしているアイテムを「手放す」ことができます。"
+        },
+        "program/courseb/2023": {
+          "word": "プログラム",
+          "definition": "マシンで実行できるものにコード化されたアルゴリズム。"
+        },
+        "programming/courseb/2023": {
+          "word": "プログラミング",
+          "definition": "プログラム作成の技能。"
+        },
+        "persistence/courseb/2023": {
+          "word": "粘り強さ",
+          "definition": "何かがとても難しい時でも、何度も何度もトライすること。"
+        },
+        "loop/courseb/2023": {
+          "word": "ループ",
+          "definition": "何度も何度も何かをするという行為。"
+        },
+        "repeat/courseb/2023": {
+          "word": "繰り返し",
+          "definition": "何かを再びすること。"
+        },
+        "event/courseb/2023": {
+          "word": "イベント",
+          "definition": "何かを引き起こすアクション。"
+        },
+        "algorithm/coursec/2023": {
+          "word": "アルゴリズム",
+          "definition": "タスクを終わらせるためのステップリスト。"
+        },
+        "bug/coursec/2023": {
+          "word": "バグ",
+          "definition": "正常に動作しないプログラムの一部。"
+        },
+        "debugging/coursec/2023": {
+          "word": "デバッギング",
+          "definition": "アルゴリズムやプログラムの問題点を見つけて修正すること。"
+        },
+        "program/coursec/2023": {
+          "word": "プログラム",
+          "definition": "マシンで実行できるものにコード化されたアルゴリズム。"
+        },
+        "sequencing/coursec/2023": {
+          "word": "シークエンス",
+          "definition": "コンピュータがコマンドを読めるように、コマンドを正しい順番に並べること。"
+        },
+        "persistence/coursec/2023": {
+          "word": "粘り強さ"
+        },
+        "programming/coursec/2023": {
+          "word": "プログラミング",
+          "definition": "プログラム作成の技能。"
+        },
+        "loop/coursec/2023": {
+          "word": "ループ",
+          "definition": "何度も何度も何かをするという行為。"
+        },
+        "repeat/coursec/2023": {
+          "word": "繰り返し",
+          "definition": "何かを再びすること。"
+        },
+        "event/coursec/2023": {
+          "word": "イベント",
+          "definition": "何かを引き起こすアクション。"
+        },
+        "data/coursec/2023": {
+          "word": "データ"
+        },
+        "binary/coursec/2023": {
+          "word": "２しんすう",
+          "definition": "2つの選択肢だけを使って情報を表現する方法。"
+        },
+        "algorithm/coursed/2023": {
+          "word": "アルゴリズム",
+          "definition": "タスクを終わらせるためのステップリスト。"
+        },
+        "program/coursed/2023": {
+          "word": "プログラム",
+          "definition": "マシンで実行できるものにコード化されたアルゴリズム。"
+        },
+        "bug/coursed/2023": {
+          "word": "バグ",
+          "definition": "正常に動作しないプログラムの一部。"
+        },
+        "debugging/coursed/2023": {
+          "word": "デバッギング",
+          "definition": "アルゴリズムやプログラムの問題点を見つけて修正すること。"
+        },
+        "loop/coursed/2023": {
+          "word": "ループ",
+          "definition": "何度も何度も何かをするという行為。"
+        },
+        "programming/coursed/2023": {
+          "word": "プログラミング",
+          "definition": "プログラム作成の技能。"
+        },
+        "frustrated/coursed/2023": {
+          "word": " 欲求不満",
+          "definition": "何かが自分の思い通りにならないので、イライラしたり怒ったりすること。"
+        },
+        "persistence/coursed/2023": {
+          "word": "粘り強さ",
+          "definition": "何かがとても難しい時でも、何度も何度もトライすること。"
+        },
+        "event/coursed/2023": {
+          "word": "イベント",
+          "definition": "何かを引き起こすアクション。"
+        },
+        "code/coursed/2023": {
+          "definition": "（v）は、コードを記述したり、コンピュータの命令を記述したりします。"
+        },
+        "repeat/coursed/2023": {
+          "word": "繰り返し",
+          "definition": "何かを再びすること。"
+        },
+        "command/coursed/2023": {
+          "word": "コマンド",
+          "definition": "コンピュータへの命令。多くの命令を組み合わせてアルゴリズムやコンピュータプログラムを構成しています。"
+        },
+        "conditionals/coursed/2023": {
+          "word": "条件",
+          "definition": "特定の条件でしか実行されないステートメント。"
+        },
+        "pseudocode/coursed/2023": {
+          "word": "疑似コード",
+          "definition": "アルゴリズムのステップに関するわかりやすい言語による説明"
+        },
+        "condition/coursed/2023": {
+          "word": "条件",
+          "definition": "アクションを許可する前に、プログラムが真かどうかをチェックするもの。"
+        },
+        "while_loop/coursed/2023": {
+          "word": "「while」ループ",
+          "definition": "条件が真である間、繰り返し続けるループ。"
+        },
+        "until/coursed/2023": {
+          "word": "Until（まで）",
+          "definition": "何かが真実になるまでの間だけ、何かをするように指示する命令。"
+        },
+        "behavior/coursee/2023": {
+          "word": "行動",
+          "definition": "スプライトが停止を指示されるまで継続して行う動作。"
+        },
+        "sprite/coursee/2023": {
+          "word": "スプライト",
+          "definition": "場所、大きさ、見た目がわかる画面上のグラフィック。"
+        },
+        "loop/coursee/2023": {
+          "word": "ループ",
+          "definition": "何度も何度も何かをするという行為。"
+        },
+        "repeat/coursee/2023": {
+          "word": "繰り返し",
+          "definition": "何かを再びすること。"
+        },
+        "function/coursee/2023": {
+          "word": "関数（かんすう）"
+        },
+        "condition/coursee/2023": {
+          "word": "条件"
+        },
+        "conditionals/coursee/2023": {
+          "word": "条件",
+          "definition": "特定の条件でしか実行されないステートメント。"
+        },
+        "while_loop/coursee/2023": {
+          "word": "「while」ループ",
+          "definition": "条件が真である間、繰り返し続けるループ。"
+        },
+        "copyright/coursee/2023": {
+          "word": "著作権",
+          "definition": "文学的、芸術的、または音楽的な素材を印刷、出版、上演、映画化、または録音する独占的な法的権利、および他の人に同じことをすることを許可する権利。"
+        },
+        "define/coursee/2023": {
+          "word": "定義",
+          "definition": "解決しようとしている問題の詳細を把握すること"
+        },
+        "prepare/coursee/2023": {
+          "word": "準備",
+          "definition": "これからやろうとしている活動のための調査・計画・資料取得"
+        },
+        "reflect/coursee/2023": {
+          "word": "リフレクト",
+          "definition": "将来的により良い結果を出そうと、何かを慎重に考え直すこと"
+        },
+        "try/coursee/2023": {
+          "word": "試してみる",
+          "definition": "何かをしようとすること"
+        },
+        "sprite/coursef/2023": {
+          "word": "スプライト",
+          "definition": "場所、大きさ、見た目がわかる画面上のグラフィック。"
+        },
+        "user/coursef/2023": {
+          "word": "ユーザー",
+          "definition": "ソフトウェアやハードウェアなどのオブジェクトを使う人。"
+        },
+        "algorithm/coursef/2023": {
+          "word": "アルゴリズム",
+          "definition": "タスクを終わらせるためのステップリスト。"
+        },
+        "behavior/coursef/2023": {
+          "word": "行動"
+        },
+        "program/coursef/2023": {
+          "word": "プログラム",
+          "definition": "マシンで実行できるものにコード化されたアルゴリズム。"
+        },
+        "event/coursef/2023": {
+          "word": "イベント",
+          "definition": "何かを引き起こすアクション。"
+        },
+        "variable/coursef/2023": {
+          "word": "変数",
+          "definition": "プログラムで使用される情報の一部のラベル。"
+        },
+        "prompt/coursef/2023": {
+          "word": "プロンプト",
+          "definition": "ユーザーからの入力を待つコンピュータ画面上のメッセージ。"
+        },
+        "input/coursef/2023": {
+          "word": "入力",
+          "definition": "コンピュータがユーザーから取得する情報。"
+        },
+        "models_and_simulations/coursef/2023": {
+          "word": "モデルとシミュレーション",
+          "definition": "実生活で実験を行うコスト、時間、またはリスクを気にせず、現実世界のイベントの主要な機能を複製または模倣して、その行動を調査するプログラム。"
+        },
+        "machine_learning/coursef/2023": {
+          "word": "機械学習",
+          "definition": "コンピュータがどのようにパターンを認識し、明示的にプログラムされずに意思決定を行う方法"
+        },
+        "dns/coursef/2023": {
+          "word": "DNS",
+          "definition": "ドメインネームシステムの略で、このシステムはドメイン名（example.comなど）をIPアドレス（93.184.216.34など）に変換します。"
+        },
+        "dsl_cable/coursef/2023": {
+          "word": "DSL/ケーブル",
+          "definition": "電話やテレビのケーブルを利用して情報を送信する方法。"
+        },
+        "fiber_optic_cable/coursef/2023": {
+          "word": "光ファイバーケーブル",
+          "definition": "光を利用して情報を伝達する接続"
+        },
+        "internet/coursef/2023": {
+          "word": "インターネット",
+          "definition": "互いに接続されたコンピュータとサーバのグループ。"
+        },
+        "ip_address/coursef/2023": {
+          "word": "IP アドレス",
+          "definition": "インターネットに接続されている任意の項目に割り当てられた番号。"
+        },
+        "packets/coursef/2023": {
+          "word": "パケット",
+          "definition": "大きな情報の塊から注意深く形成された小さな塊。"
+        },
+        "servers/coursef/2023": {
+          "word": "サーバー",
+          "definition": "他人に物を提供するためだけに存在するコンピュータ。"
+        },
+        "url/coursef/2023": {
+          "word": "URL",
+          "definition": "Webページを呼び出すための覚えやすいアドレス（www.code.org など）。"
+        },
+        "wi_fi/coursef/2023": {
+          "word": "Wi-Fi",
+          "definition": "電波を用いて情報を送信する無線方式。"
+        },
+        "define/coursef/2023": {
+          "word": "定義",
+          "definition": "解決しようとしている問題の詳細を把握すること"
+        },
+        "prepare/coursef/2023": {
+          "word": "準備",
+          "definition": "これからやろうとしている活動のための調査・計画・資料取得"
+        },
+        "reflect/coursef/2023": {
+          "word": "リフレクト",
+          "definition": "将来的により良い結果を出そうと、何かを慎重に考え直すこと"
+        },
+        "try/coursef/2023": {
+          "word": "試してみる",
+          "definition": "何かをしようとすること"
+        },
+        "algorithm/express/2023": {
+          "word": "アルゴリズム",
+          "definition": "タスクを終わらせるためのステップリスト。"
+        },
+        "bug/express/2023": {
+          "word": "バグ",
+          "definition": "正常に動作しないプログラムの一部。"
+        },
+        "debugging/express/2023": {
+          "word": "デバッギング",
+          "definition": "アルゴリズムやプログラムの問題点を見つけて修正すること。"
+        },
+        "sequencing/express/2023": {
+          "word": "シークエンス",
+          "definition": "コンピュータがコマンドを読めるように、コマンドを正しい順番に並べること。"
+        },
+        "program/express/2023": {
+          "word": "プログラム",
+          "definition": "マシンで実行できるものにコード化されたアルゴリズム。"
+        },
+        "programming/express/2023": {
+          "word": "プログラミング",
+          "definition": "プログラム作成の技能。"
+        },
+        "behavior/express/2023": {
+          "word": "行動",
+          "definition": "スプライトが停止を指示されるまで継続して行う動作。"
+        },
+        "sprite/express/2023": {
+          "word": "スプライト",
+          "definition": "場所、大きさ、見た目がわかる画面上のグラフィック。"
+        },
+        "event/express/2023": {
+          "word": "イベント",
+          "definition": "何かを引き起こすアクション。"
+        },
+        "code/express/2023": {
+          "definition": "コードを記述したり、コンピューターの命令を記述したりします。"
+        },
+        "loop/express/2023": {
+          "word": "ループ",
+          "definition": "何度も何度も何かをするという行為。"
+        },
+        "repeat/express/2023": {
+          "word": "繰り返し",
+          "definition": "何かを再びすること。"
+        },
+        "command/express/2023": {
+          "word": "コマンド",
+          "definition": "コンピュータへの命令。多くの命令を組み合わせてアルゴリズムやコンピュータプログラムを構成しています。"
+        },
+        "condition/express/2023": {
+          "word": "条件",
+          "definition": "アクションを許可する前に、プログラムが真かどうかをチェックするもの。"
+        },
+        "conditionals/express/2023": {
+          "word": "条件",
+          "definition": "特定の条件でしか実行されないステートメント。"
+        },
+        "while_loop/express/2023": {
+          "word": "「while」ループ",
+          "definition": "条件が真である間、繰り返し続けるループ。"
+        },
+        "until/express/2023": {
+          "word": "Until（まで）",
+          "definition": "何かが真実になるまでの間だけ、何かをするように指示する命令。"
+        },
+        "function/express/2023": {
+          "word": "関数（かんすう）",
+          "definition": "簡単に何度も何度も呼び出すことができるコードの一部。"
+        },
+        "prompt/express/2023": {
+          "word": "プロンプト",
+          "definition": "ユーザーからの入力を待つコンピュータ画面上のメッセージ。"
+        },
+        "variable/express/2023": {
+          "word": "変数",
+          "definition": "プログラムで使用される情報の一部のラベル。"
+        },
+        "for_loop/express/2023": {
+          "word": "Forループ",
+          "definition": "あらかじめ開始、終了、増分（増分間隔）のあるループ。"
+        },
+        "define/express/2023": {
+          "word": "定義",
+          "definition": "解決しようとしている問題の詳細を把握すること"
+        },
+        "prepare/express/2023": {
+          "word": "準備",
+          "definition": "これからやろうとしている活動のための調査・計画・資料取得"
+        },
+        "reflect/express/2023": {
+          "word": "リフレクト",
+          "definition": "将来的により良い結果を出そうと、何かを慎重に考え直すこと"
+        },
+        "try/express/2023": {
+          "word": "試してみる",
+          "definition": "何かをしようとすること"
+        },
+        "click/pre-express/2023": {
+          "word": "クリック",
+          "definition": "マウスボタンを押す"
+        },
+        "double_click/pre-express/2023": {
+          "word": "ダブルクリック",
+          "definition": "マウスのボタンを素早く押す"
+        },
+        "drag/pre-express/2023": {
+          "word": "ドラッグ",
+          "definition": "新しい場所にマウスポインタを移動しながら、マウスボタンをクリックしたままにします。"
+        },
+        "drop/pre-express/2023": {
+          "word": "ドロップ",
+          "definition": "マウスボタンを離すと、ドラッグしているアイテムを「手放す」ことができます。"
+        },
+        "algorithm/pre-express/2023": {
+          "word": "アルゴリズム",
+          "definition": "タスクを終わらせるためのステップリスト。"
+        },
+        "bug/pre-express/2023": {
+          "word": "バグ",
+          "definition": "正常に動作しないプログラムの一部。"
+        },
+        "debugging/pre-express/2023": {
+          "word": "デバッギング",
+          "definition": "アルゴリズムやプログラムの問題点を見つけて修正すること。"
+        },
+        "program/pre-express/2023": {
+          "word": "プログラム",
+          "definition": "マシンで実行できるものにコード化されたアルゴリズム。"
+        },
+        "programming/pre-express/2023": {
+          "word": "プログラミング",
+          "definition": "プログラム作成の技能。"
+        },
+        "persistence/pre-express/2023": {
+          "word": "粘り強さ",
+          "definition": "何かがとても難しい時でも、何度も何度もトライすること。"
+        },
+        "loop/pre-express/2023": {
+          "word": "ループ",
+          "definition": "何度も何度も何かをするという行為。"
+        },
+        "repeat/pre-express/2023": {
+          "word": "繰り返し",
+          "definition": "何かを再びすること。"
+        },
+        "event/pre-express/2023": {
+          "word": "イベント",
+          "definition": "何かを引き起こすアクション。"
+        },
+        "machine_learning/how-ai-works/2023": {
+          "word": "機械学習",
+          "definition": "コンピュータがどのようにパターンを認識し、明示的にプログラムされずに意思決定を行う方法"
+        },
+        "algorithm/how-ai-works/2023": {
+          "word": "アルゴリズム"
+        },
+        "network/how-ai-works/2023": {
+          "word": "ネットワーク"
+        },
+        "artificial_intelligence/how-ai-works/2023": {
+          "word": "人工知能"
+        },
         "code/aquatic/unversioned": {
           "definition": "（v）は、コードを記述したり、コンピュータの命令を記述したりします。"
         },
