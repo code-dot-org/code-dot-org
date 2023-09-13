@@ -279,6 +279,12 @@ tr:
           title: kendi-temposunda-pl-csp-2021
           description_student: "## Hoş geldiniz\n\n##### Eğitimcilerin CS İlkelerini öğretmeye başlamaları için Code.org'un kendi hızına göre ayarlayabileceğiniz ücretsiz çevrimiçi modüllerine hoş geldiniz! Bu çevrimiçi modülleri tamamladıktan sonra, öğrencilerinizle Code.org'un Bilgisayar Bilimi İlkeleri kursunu öğretmeye başlamak için hazır olacaksınız.\n\n### Size uygun öğrenmeyi bulun\n\n##### **Kendi hızınızda ilerleyin**: Kendi hızınızda ilerleyen bu modüller, sizi sürücü koltuğuna oturtmak ve kendi öğreniminizin kontrolünü size vermek için tasarlanmıştır. Önerilen zamanlar her modül ve ders için verilmiştir. Ancak, içerikle kendi hızınızda etkileşim kurmanızı öneririz.\n\n### İçeriğinizi seçin\n\n##### Bu profesyonel öğrenim modüllerinin içeriği, hem Code.org hem de CS İlkelerinde yeni olan öğretmenler için önerilen ilerleme biçiminde düzenlenmiştir. Ancak, içerikle ihtiyaçlarınızı en iyi karşılayan sırayla etkileşim kurabilirsiniz. Başlamadan önce tüm öğretmenlerin bu profesyonel öğrenim modülleri hakkında daha fazla bilgi edinmeleri için kısa hoş geldiniz ünitesiyle başlamalarını öneririz."
           description_teacher: "## Hoş geldiniz\n\n##### Eğitimcilerin CS İlkelerini öğretmeye başlamaları için Code.org'un kendi hızına göre ayarlayabileceğiniz ücretsiz çevrimiçi modüllerine hoş geldiniz! Bu çevrimiçi modülleri tamamladıktan sonra, öğrencilerinizle Code.org'un Bilgisayar Bilimi İlkeleri kursunu öğretmeye başlamak için hazır olacaksınız.\n\n### Size uygun öğrenmeyi bulun\n\n##### **Kendi hızınızda ilerleyin**: Kendi hızınızda ilerleyen bu modüller, sizi sürücü koltuğuna oturtmak ve kendi öğreniminizin kontrolünü size vermek için tasarlanmıştır. Önerilen zamanlar her modül ve ders için verilmiştir. Ancak, içerikle kendi hızınızda etkileşim kurmanızı öneririz.\n\n### İçeriğinizi seçin\n\n##### Bu profesyonel öğrenim modüllerinin içeriği, hem Code.org hem de CS İlkelerinde yeni olan öğretmenler için önerilen ilerleme biçiminde düzenlenmiştir. Ancak, içerikle ihtiyaçlarınızı en iyi karşılayan sırayla etkileşim kurabilirsiniz. Başlamadan önce tüm öğretmenlerin bu profesyonel öğrenim modülleri hakkında daha fazla bilgi edinmeleri için kısa hoş geldiniz ünitesiyle başlamalarını öneririz."
+        vpl-csp-2023:
+          version_title: '2023'
+        vpl-csa-2023:
+          version_title: '2023'
+        vpl-csd-2023:
+          version_title: '2023'
     resources:
       curriculum/csd/2017:
         name: Müfredat
