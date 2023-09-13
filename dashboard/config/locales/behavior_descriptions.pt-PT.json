@@ -8,10 +8,16 @@
         "CourseF_outbreak1_-2022-2": {
           "gradually recover from sickness": "recuperar-se gradualmente da doença"
         },
+        "CourseF_outbreak1_2023": {
+          "gradually recover from sickness": "recuperar-se gradualmente da doença"
+        },
         "CourseF_outbreak2": {
           "gradually recover from sickness": "recuperar-se gradualmente da doença"
         },
         "CourseF_outbreak2_-2022-2": {
+          "gradually recover from sickness": "recuperar-se gradualmente da doença"
+        },
+        "CourseF_outbreak2_2023": {
           "gradually recover from sickness": "recuperar-se gradualmente da doença"
         },
         "CourseF_outbreak3": {
@@ -20,10 +26,16 @@
         "CourseF_outbreak3_-2022-2": {
           "gradually recover from sickness": "recuperar-se gradualmente da doença"
         },
+        "CourseF_outbreak3_2023": {
+          "gradually recover from sickness": "recuperar-se gradualmente da doença"
+        },
         "CourseF_outbreak4": {
           "gradually recover from sickness": "recuperar-se gradualmente da doença"
         },
         "CourseF_outbreak4_-2022-2": {
+          "gradually recover from sickness": "recuperar-se gradualmente da doença"
+        },
+        "CourseF_outbreak4_2023": {
           "gradually recover from sickness": "recuperar-se gradualmente da doença"
         },
         "CourseF_outbreak5": {
@@ -32,10 +44,16 @@
         "CourseF_outbreak5_-2022-2": {
           "gradually recover from sickness": "recuperar-se gradualmente da doença"
         },
+        "CourseF_outbreak5_2023": {
+          "gradually recover from sickness": "recuperar-se gradualmente da doença"
+        },
         "CourseF_outbreak6": {
           "gradually recover from sickness": "recuperar-se gradualmente da doença"
         },
         "CourseF_outbreak6_-2022-2": {
+          "gradually recover from sickness": "recuperar-se gradualmente da doença"
+        },
+        "CourseF_outbreak6_2023": {
           "gradually recover from sickness": "recuperar-se gradualmente da doença"
         },
         "CourseF_outbreak7": {
@@ -44,10 +62,16 @@
         "CourseF_outbreak7_-2022-2": {
           "gradually recover from sickness": "recuperar-se gradualmente da doença"
         },
+        "CourseF_outbreak7_2023": {
+          "gradually recover from sickness": "recuperar-se gradualmente da doença"
+        },
         "CourseF_outbreak8": {
           "gradually recover from sickness": "recuperar-se gradualmente da doença"
         },
         "CourseF_outbreak8_-2022-2": {
+          "gradually recover from sickness": "recuperar-se gradualmente da doença"
+        },
+        "CourseF_outbreak8_2023": {
           "gradually recover from sickness": "recuperar-se gradualmente da doença"
         },
         "courseF_apps_collector": {
@@ -59,6 +83,10 @@
           "randomly move the sprite up or down": "mova aleatoriamente o sprite para cima ou para baixo"
         },
         "courseF_apps_collector_-2022-2": {
+          "Move a sprite to the left across the screen. If it goes off the left side of the screen it moves to the right side of the screen.": "Mova um sprite para a esquerda na tela. Se sair do lado esquerdo da tela, ele se move para o lado direito da tela.",
+          "randomly move the sprite up or down": "mova aleatoriamente o sprite para cima ou para baixo"
+        },
+        "courseF_apps_collector_2023": {
           "Move a sprite to the left across the screen. If it goes off the left side of the screen it moves to the right side of the screen.": "Mova um sprite para a esquerda na tela. Se sair do lado esquerdo da tela, ele se move para o lado direito da tela.",
           "randomly move the sprite up or down": "mova aleatoriamente o sprite para cima ou para baixo"
         }
