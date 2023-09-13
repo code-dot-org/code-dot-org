@@ -148,7 +148,7 @@ Feature: Curriculum Catalog Page
     And I wait until element "h4:contains(AI for Oceans)" is visible
 
     And I click selector "[aria-label='View details about AI for Oceans']"
-    When I wait until element "a:contains(What is Machine Learning?)" is visible within element "iframe"
+    And I wait until element "a:contains(See curriculum details)" is visible
 
   Scenario: Signed-out user sees course offering page when clicking on see curriculum details on expanded card
     Given I am on "http://studio.code.org/catalog?quick_view=true"
@@ -158,6 +158,14 @@ Feature: Curriculum Catalog Page
 
     And I click selector "a:contains(See curriculum details)"
     And I wait until element "h1:contains(AI for Oceans)" is visible
+
+  Scenario: Signed-out user can navigate to facilitator led workshop through expanded card
+    Given I am on "http://studio.code.org/catalog?quick_view=true"
+    And I wait until element "h4:contains(CS Fundamentals: Course A)" is visible
+
+    And I click selector "[aria-label='View details about CS Fundamentals: Course A']"
+    And I click selector "a:contains(Facilitator led workshops)"
+    And I wait until element "h1:contains(Professional development for elementary teachers)" is visible
     
 
 
