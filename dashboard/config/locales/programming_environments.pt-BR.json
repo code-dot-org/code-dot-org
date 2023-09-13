@@ -775,6 +775,22 @@
         "weblab": {
           "categories": {
             "html_tags": {
+              "expressions": {
+                "style": {
+                  "examples": {
+                    "Style": {
+                      "name": "Estilo"
+                    }
+                  }
+                },
+                "title": {
+                  "examples": {
+                    "Title": {
+                      "name": "Título"
+                    }
+                  }
+                }
+              },
               "name": "Tags HTML"
             }
           },

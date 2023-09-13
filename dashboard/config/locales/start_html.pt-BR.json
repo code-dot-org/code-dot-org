@@ -309,12 +309,18 @@
           "Friend Finder": "Localizador de Amigos"
         },
         "CSD U1 storage movies_2021": {
+          "Action": "Ação",
+          "Comedy": "Comédia",
+          "Musical": "Musical",
           "No": "Não",
           "Star Wars": "Star Wars",
           "Yes": "Sim",
           "text": "texto"
         },
         "CSD U1 storage movies_2022": {
+          "Action": "Ação",
+          "Comedy": "Comédia",
+          "Musical": "Musical",
           "No": "Não",
           "Star Wars": "Star Wars",
           "Yes": "Sim",
@@ -1514,6 +1520,12 @@
           "F": "F",
           "G": "G"
         },
+        "LLM - Written Voice Simulator_ai23": {
+          "Back": "Voltar"
+        },
+        "U9L5 Cropping Widget_ai2023": {
+          "Reset": "Recomeçar"
+        },
         "allthethings design mode elements": {
           "text": "texto"
         },
@@ -1902,12 +1914,14 @@
           "Predict": "Previsão",
           "Raspado Recommender": "Recomendador Raspado",
           "no": "não",
+          "preference": "preferência",
           "yes": "sim"
         },
         "ml-customize-raspado_2022": {
           "Predict": "Previsão",
           "Raspado Recommender": "Recomendador Raspado",
           "no": "não",
+          "preference": "preferência",
           "yes": "sim"
         },
         "ml-intro ai lab- fruit veggie widget": {
