@@ -353,6 +353,7 @@ sk:
       professional_learning: "Vzdelávanie pre profesionálov"
       documentation: "Dokumentácia"
       tutorials: "Návody"
+      app_lab_documentation: "Dokumentácia aplikácie Lab"
       app_lab_tutorials: "App Lab Návody"
       game_lab_documentation: "Dokumentácia Game Lab"
       game_lab_tutorials: "Návody na herné laboratórium"
@@ -369,6 +370,7 @@ sk:
       educate_beyond: "Nad rámec Code.org"
       educate_inspire: "Inšpiruj študenta"
       educate_community: "Online komunita"
+      educate_requirements: "Technické požiadavky"
       educate_tools: "Nástroje a videá"
       about_us: "O nás"
       about_leadership: "Vedenie"
@@ -1144,6 +1146,7 @@ sk:
         israel: 'Izrael'
         jamaica: 'Jamajka'
         kenya: 'Keňa'
+        kosovo: 'Kosovo'
         malaysia: 'Malajzia'
         maldives: 'Maledivy'
         mexico: 'Mexiko'
