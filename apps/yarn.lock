@@ -2099,13 +2099,13 @@ __metadata:
   linkType: hard
 
 "@babel/types@npm:^7.8.3":
-  version: 7.22.15
-  resolution: "@babel/types@npm:7.22.15"
+  version: 7.22.17
+  resolution: "@babel/types@npm:7.22.17"
   dependencies:
     "@babel/helper-string-parser": ^7.22.5
     "@babel/helper-validator-identifier": ^7.22.15
     to-fast-properties: ^2.0.0
-  checksum: a2aa59746dc8500c358a3a9afca2adff49dbade009d616aa8308714485064f2218da04e1823f1243a4992f1424ec6d6719e76a7af9a0ac3647227dca3015eea4
+  checksum: 7382220f6eb2548f2c867a98916c3aa8a6063498d5372e5d21d8d184ba354033defb72aeba5858c1b2b42177058b896a34a7dcbae5eccd47fb0104721efa909d
   languageName: node
   linkType: hard
 

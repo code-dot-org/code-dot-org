@@ -271,6 +271,7 @@ It is worthwhile to make sure that you are using WSL 2. Attempting to use WSL 1 
     * Before updating the root password to empty in SQL (step 10), restart MySQL using `sudo /etc/init.d/mysql restart`
 1. Followed by the [overview instructions](#overview), _with the following observations_:
     * Before running `bundle exec rake install`, restart the mysql service: `sudo service mysql start`
+    * If localhost responds slowly and you have exhausted conventional options (e.g. turning off Firewall during testing), try moving the code-dot-org repo outside of the /mnt/ directory (e.g. ~) to improve responsiveness
 
 ### Alternative: Use an Ubuntu VM
 

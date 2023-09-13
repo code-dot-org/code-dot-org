@@ -1,5 +1,9 @@
 # Documentation at https://git-scm.com/docs/gitignore.
 
+#
+# Misc Ignores
+#
+
 \#*#
 *.pid
 *.pid.oldbin
@@ -16,11 +20,25 @@ dashboard/brakeman_security_report.htm
 .idea/
 .irb_history
 jsconfig.json
-/bin/i18n/*_credentials.yml
-/bin/i18n/crowdin/*files_to_sync_out.json
 npm-debug.log
 /.dropbox.cache
 /.gdrive_session
+/build-started
+/coverage
+/crontab
+/globals.yml
+/levelbuilder_ci_last_run
+/locals.yml
+/log
+/rebuild
+/rebuild-apps
+/rebuild-shared
+/rebuild-code-studio
+
+#
+# JS Ignores
+#
+
 /apps/.babel-cache
 /apps/build
 /apps/build-times.log
@@ -41,6 +59,7 @@ npm-debug.log
 /apps/src/styleConstants.js
 /apps/storybook-deploy
 /apps/test/entry-tests.js
+/apps/yarn-error.log
 
 # Yarn ignores based on documentation at https://yarnpkg.com/getting-started/qa#which-files-should-be-gitignored
 /apps/.pnp.*
@@ -50,9 +69,11 @@ npm-debug.log
 !/apps/.yarn/releases
 !/apps/.yarn/sdks
 !/apps/.yarn/versions
-# end yarn ignores
 
-/apps/yarn-error.log
+#
+# Other Subdirectory-Specific Ignores
+#
+
 /aws/.code-studio-built
 /aws/.code-studio-commit-built
 /aws/.shared-built
@@ -61,26 +82,17 @@ npm-debug.log
 /aws/offsite/lambda/*.zip
 /bin/cron/.dts
 /bin/cron/log
-/build-started
-/coverage
-/crontab
+/bin/i18n/*_credentials.yml
+/bin/i18n/crowdin/*files_to_sync_out.json
 /dashboard/config/newrelic.yml
 /dashboard/db/ui_test_data.*
 /dashboard/public/blockly
 /dashboard/public/code-studio
 /dashboard/public/shared
 /dashboard/public/styleguide
-/globals.yml
-/levelbuilder_ci_last_run
-/locals.yml
-/log
 /pegasus/config/newrelic.yml
 /pegasus/.sass-cache
 /pegasus/sites.v3/*/public/css/generated
-/rebuild
-/rebuild-apps
-/rebuild-shared
-/rebuild-code-studio
 /tools/scripts/brokenLinkChecker/node_modules/
 /i18n/locales/*/codeorg-markdown/
 /i18n/locales/*/curriculum_content/
