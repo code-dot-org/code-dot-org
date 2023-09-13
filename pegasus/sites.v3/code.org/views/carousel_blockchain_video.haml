@@ -11,7 +11,7 @@
           .video-wrapper.video-wrapper--one-col.flex-space-between
             .video__container
               = view :display_video_thumbnail, id: video_blockchain_id[index], video_code: video_blockchain[index], play_button: 'center', letterbox: 'false', caption: video_blockchain_caption[index]
-            
+
   .pagination
     #blockchain_works_collection_pagination
   .dd__buttons
@@ -20,6 +20,3 @@
 
     %button.carousel__next#next_5
       %img{src: "/images/carousel/next.svg", alt: "next"}
-
-
-
