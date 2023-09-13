@@ -58,6 +58,9 @@ export default function RubricsContainer({
 
   const [saveNotificationText, setSaveNotificationText] = useState('');
 
+  const SAVING_TEXT = 'Saving...';
+  const SAVE_COMPLETED_TEXT = 'Save complete!';
+
   const generateLearningGoalKey = () => {
     let learningGoalNumber = learningGoalList.length + 1;
     while (
@@ -168,7 +171,7 @@ export default function RubricsContainer({
   // TODO-AITT-171: Enable deleting LearningGoals when saveRubric is called
   const saveRubric = event => {
     event.preventDefault();
-    setSaveNotificationText('Saving...');
+    setSaveNotificationText(SAVING_TEXT);
     const dataUrl = !!rubric ? `/rubrics/${rubric.id}` : RUBRIC_PATH;
     const method = !!rubric ? 'PATCH' : 'POST';
 
@@ -200,7 +203,7 @@ export default function RubricsContainer({
         if (!rubric) {
           navigateToHref(data.redirectUrl);
         } else {
-          setSaveNotificationText('Save complete!');
+          setSaveNotificationText(SAVE_COMPLETED_TEXT);
           setTimeout(() => {
             setSaveNotificationText('');
           }, 8500);
@@ -301,7 +304,7 @@ export default function RubricsContainer({
           text="Save your rubric"
           onClick={saveRubric}
           size={Button.ButtonSize.narrow}
-          disabled={saveNotificationText === 'Saving...'}
+          disabled={saveNotificationText === SAVING_TEXT}
         />
       </div>
       <div style={styles.bottomRow}>
