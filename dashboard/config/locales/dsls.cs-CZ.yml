@@ -544,6 +544,11 @@ cs-CZ:
           # Velká událost
 
           V informatice jsou události akce, které počítač sleduje. V této lekci budeš reagovat různě podle toho, které tlačítko se zmáčkne.
+      BigEvent-Unplugged2022_2023:
+        markdown: |
+          # Velká událost
+
+          V informatice jsou události akce, které počítač sleduje. V této lekci budeš reagovat různě podle toho, které tlačítko se zmáčkne.
       BigEvent-Unplugged_2020:
         markdown: |
           # Velká událost
@@ -562,6 +567,13 @@ cs-CZ:
 
           ![](https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)
       BinaryBracelets-Unplugged2022:
+        markdown: |
+          # Binární náramky
+
+          Vytvořte náramek, který představuje Vaše jméno v systému, kterému počítače rozumí!
+
+          ![](https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)
+      BinaryBracelets-Unplugged2022_2023:
         markdown: |
           # Binární náramky
 
@@ -2261,6 +2273,11 @@ cs-CZ:
           # Podmínky s kartami
 
           Zahraj si karetní hru a vytvoř pravidla jako "Když si vytáhnu červenou kartu, získám bod" nebo "Když si vytáhnu černou kartu, ty získáš bod."
+      ConditionalsWithCards-Unplugged2022_2023:
+        markdown: |
+          # Podmínky s kartami
+
+          Zahraj si karetní hru a vytvoř pravidla jako "Když si vytáhnu červenou kartu, získám bod" nebo "Když si vytáhnu černou kartu, ty získáš bod."
       ConditionalsWithCards-Unplugged_2020:
         markdown: |
           # Podmínky s kartami
@@ -2275,9 +2292,17 @@ cs-CZ:
         description: Prozatím vynikající práce! Vyberte si svou další aktivitu. Dokončete
           tolik, kolik jen budete moci. Nadále procvičujte cykly a Umělce!
         display_name: Praxe umělce
+      CourseE_Artist_Practice_2023:
+        description: Prozatím vynikající práce! Vyberte si svou další aktivitu. Dokončete
+          tolik, kolik jen budete moci. Nadále procvičujte cykly a Umělce!
+        display_name: Praxe umělce
       CourseE_Lesson_11_Artist_Practice_2022:
         display_name: Praxe umělce
+      CourseE_Lesson_11_Artist_Practice_2023:
+        display_name: Praxe umělce
       CourseE_Lesson_7_Artist_Practice_2022:
+        display_name: Praxe umělce
+      CourseE_Lesson_7_Artist_Practice_2023:
         display_name: Praxe umělce
       CourseF_outbreak_story:
         content1: sem vložte popis
@@ -2453,7 +2478,110 @@ cs-CZ:
           se o svou simulaci s ostatními. A šiřte zprávu o tom, co podle vás můžeme
           udělat, abychom ochránili zdraví ostatních obyvatel, až virus dorazí k nám
           do města. \n"
+      CourseF_outbreak_story2022_2022_pilot_-2022-2_2023:
+        content1: sem uveďte popis
+        markdown: "# Šíření: napsání vlastního simulátoru\n\n## Vítejte ve Městě příšerek!\nMěsto
+          příšerek bývalo šťastným místem a příšerky, které ho obývají, se těšily
+          dobrému zdraví. Rády se procházely a setkávaly s kamarády. \n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\nJednoho dne se jedna z příšerek přestala cítit dobře.
+          Nakazila se virem. Ostatní příšerky to nijak zvlášť neznepokojilo. Dál navštěvovaly
+          svoje kamarády.\n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\nBrzy nato se nakazily další dvě příšerky. Byl to
+          ten samý virus! Zdálo se, že ho chytly od svého kamaráda.\n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\nVirus se pomalu šířil mezi ostatní příšerky v okolí.
+          Zdravé příšerky se začaly obávat, že se nákaze nikdo nevyhne. A ty nakažené
+          měly strach, že virem nakazí všechny ostatní.\n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\n\n<div style=\"display: inline-block\">\n<img src=\"https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png\"
+          style=\"float:right; width:30%\">\n\n## Zastavení šíření\nNaštěstí po prostudování
+          viru učinili obyvatelé Města příšerek důležitý objev. Uvědomili si, že pravděpodobnost
+          šíření viru se sníží, když budou přes ústa nosit roušku. S nasazenými rouškami
+          bylo méně pravděpodobné, že by nakažené příšerky předaly virus těm zdravým.\n\n<img
+          src=\"https://images.code.org/c98f28f9bf6a027143592109d59ee484-image-1603134766360.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/bac9dbfaf1815c6627fc24e8e6db396d-image-1603134760456.png\"
+          style=\"width:8%\">\n\n</div>\n\n<img src=\"https://images.code.org/ef7499758496b39bcccc24aabd2af5d7-image-1603137920037.2020-10-19
+          16_04_58.gif\" style=\"float:left; width:25%; padding-right:25px\">\n\n##
+          Co bude dál?\n\nDnes napíšete kód na vytvoření a spuštění vlastní **simulace**
+          šíření viru ve Městě příšerek. Simulace je počítačový model procesu nebo
+          systému. Naučte se kód a předpovězte, co bude dál s obyvateli Města příšerek.\n\n<img
+          src=\"https://images.code.org/fcbfd250d58652bdfd6393ec4f2fe2dd-image-1603134705074.png\"
+          style=\"float:right; width:15%\">\n\n* *Jak rychle se virus rozšíří?*\n\n*
+          *Nakazí se všichni?*\n\n* *Jak pomůžou roušky?*\n\n\nAž to budete mít, podělte
+          se o svou simulaci s ostatními. A šiřte zprávu o tom, co podle vás můžeme
+          udělat, abychom ochránili zdraví ostatních obyvatel, až virus dorazí k nám
+          do města. \n"
       CourseF_outbreak_story22022_2022_pilot_-2022-2:
+        content1: sem uveďte popis
+        markdown: "# Šíření: uvažujte jako vědec\n\n<img src=\"https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png\"
+          style=\"float:right; width:30%\">\n\nSimulace jsou výborné na pochopení
+          jevů, jejichž pozorování může být v reálném světě obtížné. Pomáhají vědcům
+          bezpečně a účinně řešit problémy a testovat nové nápady. Vaše simulace představuje
+          způsob, jak znázornit možný scénář šíření viru ve Městě příšerek.\n\n##
+          Resetujte a spusťte znovu!\nI když jste sami autorem svého kódu, je nemožné
+          vědět přesně, co se stane, až stisknete tlačítko Spustit. Pohyb příšerek
+          je náhodný, takže nemůžete tušit, jestli se virus rozšíří rychle, nebo pomalu.
+          Kdykoli kód upravíte, spusťte simulaci více než jednou. Každé spuštění má
+          unikátní průběh!\n\n## Shromáždění dat\nDoporučujeme zapisovat si během
+          spuštěné simulace svá pozorování. Můžete počítat, kolik příšerek se nakazí,
+          nebo pomocí časovače zjistit, jak rychle se nákaza šíří. Zkusíte třeba zjistit,
+          jak dlouho obvykle trvá, než se nakazí všechny příšerky, pokud žádná z nich
+          nemá roušku? \n\n## Předvídání\nPokud svůj model dobře znáte, může vám pomoct
+          dělat předpovědi. Můžete dokonce měnit průběh simulace a odhadovat, jak
+          se průběh změní. Například:\n* Co by se stalo, kdyby bylo ve městě dvakrát
+          tolik příšerek?\n* Co by se stalo, kdyby se příšerky pohybovaly poloviční
+          rychlostí?\n\n<img src=\"https://images.code.org/2e83373ffd346ce3f42917a0624d441c-image-1603749526420.png\"
+          style=\"float:right\">\n\n## Podobá se Město příšerek reálnému světu?\nKaždý
+          model může být realistický jen do určité míry. \n* Co má simulace šíření
+          společného s šířením viru v reálném světě?\n* Jaké jsou rozdíly?\nAž tuhle
+          aktivitu dokončíte, proberte tyto otázky doma nebo s učitelem ve škole!\n\n##
+          Co dalšího by se dalo modelovat?\nVytvořili jste pracovní model šíření viru
+          ve Městě příšerek. Co vaše simulace nedokáže namodelovat nebo zobrazit,
+          ale vy byste chtěli, aby to uměla? Stiskněte Pokračovat a naučte se vytvářet
+          složitější model, například:\n* zvyšovat počet příšerek v simulaci,\n* pomoct
+          příšerkám, aby se z nákazy vyléčily,\n* řešit pravděpodobnost, imunitu,
+          očkování a další.\n\nO svůj simulační model se můžete podělit s ostatními
+          nebo můžete sdílet své návrhy, co můžeme dělat, abychom pomohli ochránit
+          zdravé obyvatele našeho města, až k nám virus dorazí. \n"
+      CourseF_outbreak_story22022_2022_pilot_-2022-2_2023:
         content1: sem uveďte popis
         markdown: "# Šíření: uvažujte jako vědec\n\n<img src=\"https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png\"
           style=\"float:right; width:30%\">\n\nSimulace jsou výborné na pochopení
@@ -2610,6 +2738,16 @@ cs-CZ:
           * Aplikace navržené tak, aby byly přístupné pro lidi s postiženími, jsou lepší i pro všechny ostatní.
 
           ![](https://images.code.org/0c670d0d9078657a870df0ca799492cb-image-1557166420066.png)
+      DesigningForAccessibilityMarkdownLevel2022_2023:
+        markdown: |
+          # Navrhování pro zpřístupnění
+
+          * Ve světě počítačových věd se jako **zpřístupnění** označuje vytváření technologií pro lidi s postižením.
+          * Postižení může být fyzické, sluchové, zrakové nebo jiné.
+          * Existují různá postižení, která ovlivňují životy lidí v nejrůznějších oblastech – včetně používání technologií, jako jsou **smartphonové aplikace**.
+          * Aplikace navržené tak, aby byly přístupné pro lidi s postiženími, jsou lepší i pro všechny ostatní.
+
+          ![](https://images.code.org/0c670d0d9078657a870df0ca799492cb-image-1557166420066.png)
       DesigningForAccessibilityMarkdownLevel_2019:
         markdown: |
           # Navrhování pro zpřístupnění
@@ -2655,6 +2793,11 @@ cs-CZ:
           # Sdílení digitálního obsahu
 
           V téhle lekci se zaměříme na výzvy a přínosy respektování vlastnictví a autorských práv, zejména v digitálním prostředí.
+      DigitalSharing-Unplugged2022_2023:
+        markdown: |
+          # Sdílení digitálního obsahu
+
+          V téhle lekci se zaměříme na výzvy a přínosy respektování vlastnictví a autorských práv, zejména v digitálním prostředí.
       DigitalSharing-Unplugged_2020:
         markdown: |
           # Sdílení digitálního obsahu
@@ -2681,6 +2824,11 @@ cs-CZ:
 
           V této lekci se budete učit používat a psát příběhy prázdného prostoru. Sledujte toto video, kde se dozvíte, jak to souvisí s počítačovou vědou.
       EnvelopeVariables-Unplugged_2021_22022_2022_pilot_-2022-2:
+        markdown: |
+          # Příběhy prázdného prostoru
+
+          V této lekci se budete učit používat a psát příběhy prázdného prostoru. Sledujte toto video, kde se dozvíte, jak to souvisí s počítačovou vědou.
+      EnvelopeVariables-Unplugged_2021_22022_2022_pilot_-2022-2_2023:
         markdown: |
           # Příběhy prázdného prostoru
 
@@ -2713,6 +2861,11 @@ cs-CZ:
           # Zacyklení
 
           Tato lekce je úvodem do programátorské koncepce cyklů formou taneční aktivity.
+      GettingLoopy-Unplugged2022_2023:
+        markdown: |
+          # Zacyklení
+
+          Tato lekce je úvodem do programátorské koncepce cyklů formou taneční aktivity.
       GettingLoopy-Unplugged_2020:
         markdown: |
           # Zacyklení
@@ -2736,6 +2889,11 @@ cs-CZ:
 
           Napiš algoritmy, které mohou tvoji spolužáci využít na kreslení obrázků.
       GraphPaperProgramming-Unplugged2022:
+        markdown: |
+          # Programování na papíře
+
+          Napiš algoritmy, které mohou tvoji spolužáci využít na kreslení obrázků.
+      GraphPaperProgramming-Unplugged2022_2023:
         markdown: |
           # Programování na papíře
 
@@ -2770,6 +2928,11 @@ cs-CZ:
 
           Vytvoř algoritmus, který dostane postavu přes bludiště.
       HappyMaps-Unplugged2022:
+        markdown: |-
+          # Šťastné mapy
+
+          Vytvoř algoritmus, který dostane postavu přes bludiště.
+      HappyMaps-Unplugged2022_2023:
         markdown: |-
           # Šťastné mapy
 
@@ -2891,6 +3054,11 @@ cs-CZ:
 
           Postav si ve třídě vlastní internet jen pomocí ústřižků papíru.
       Internet-Unplugged2022_2022_pilot_-2022-2:
+        markdown: |
+          # Internet
+
+          Postav si ve třídě vlastní internet jen pomocí ústřižků papíru.
+      Internet-Unplugged2022_2022_pilot_-2022-2_2023:
         markdown: |
           # Internet
 
@@ -3144,6 +3312,11 @@ cs-CZ:
           # Pohybujte tím, pohybujte tím
 
           Používejte mapu a vydávejte příkazy k dosažení cíle.
+      MoveItMoveIt-Unplugged2022_2023:
+        markdown: |
+          # Pohybujte tím, pohybujte tím
+
+          Používejte mapu a vydávejte příkazy k dosažení cíle.
       MoveItMoveIt-Unplugged_2020:
         markdown: |
           # Pohybujte tím, pohybujte tím
@@ -3176,6 +3349,11 @@ cs-CZ:
           # Mí robotičtí přátelé
 
           Zkrať své programy pomocí smyček!
+      MyLoopyRoboticFriends-Unplugged2022_2023:
+        markdown: |-
+          # Mí robotičtí přátelé
+
+          Zkrať své programy pomocí smyček!
       MyLoopyRoboticFriends-Unplugged_2020:
         markdown: |-
           # Mí robotičtí přátelé
@@ -3192,6 +3370,11 @@ cs-CZ:
 
           Nauč se programovat psaním kódu pro své přátele!
       MyRoboticFriends-Unplugged2022:
+        markdown: |-
+          # Mí robotičtí přátelé
+
+          Nauč se programovat psaním kódu pro své přátele!
+      MyRoboticFriends-Unplugged2022_2023:
         markdown: |-
           # Mí robotičtí přátelé
 
@@ -3776,6 +3959,11 @@ cs-CZ:
           # Moc slova
 
           ## Co máte dělat, když někdo použije zlý nebo urážlivý jazyk na internetu?
+      PowerOfWords-Unplugged2022_2022_pilot_-2022-2_2023:
+        markdown: |
+          # Moc slova
+
+          ## Co máte dělat, když někdo použije zlý nebo urážlivý jazyk na internetu?
       PowerOfWords-Unplugged_2020:
         markdown: |
           # Moc slova
@@ -3800,6 +3988,11 @@ cs-CZ:
           # Soukromé a osobní údaje
 
           ## Jaké informace je v pořádku o sobě na internetu šířit?
+      PrivatePersonalInformation-Unplugged2022_2023:
+        markdown: |
+          # Soukromé a osobní údaje
+
+          ## Jaké informace je v pořádku o sobě na internetu šířit?
       PrivatePersonalInformation-Unplugged_2020:
         markdown: |
           # Soukromé a osobní údaje
@@ -3816,6 +4009,11 @@ cs-CZ:
 
           Rozdělte se do týmů a spolupracujte, abyste napsali programy, které malují obrázky.
       RelayProgramming-Unplugged2022:
+        markdown: |
+          # Štafetové programování
+
+          Rozdělte se do týmů a spolupracujte, abyste napsali programy, které malují obrázky.
+      RelayProgramming-Unplugged2022_2023:
         markdown: |
           # Štafetové programování
 
@@ -3841,6 +4039,11 @@ cs-CZ:
 
           Na příkladu refrénu písničky se nauč definovat a volat funkci.
       Songwriting-Unplugged2022:
+        markdown: |-
+          # Skládání písniček
+
+          Na příkladu refrénu písničky se nauč definovat a volat funkci.
+      Songwriting-Unplugged2022_2023:
         markdown: |-
           # Skládání písniček
 
@@ -3949,6 +4152,12 @@ cs-CZ:
         questions:
         - {}
       TheRightAppMarkdownLevel2022:
+        markdown: "# Správná aplikace\n\n* Dnes každý používá počítače, zejména chytré
+          telefony. \n* Aplikace pro chytré telefony lidem umožňují například hovořit
+          s přáteli, poslouchat hudbu nebo třeba jen si prohlížet web.\n* Je důležité,
+          aby programátoři chápali potřeby jiných a navrhovali aplikace tak, aby na
+          ně pamatovali!\n\n![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)\n"
+      TheRightAppMarkdownLevel2022_2023:
         markdown: "# Správná aplikace\n\n* Dnes každý používá počítače, zejména chytré
           telefony. \n* Aplikace pro chytré telefony lidem umožňují například hovořit
           s přáteli, poslouchat hudbu nebo třeba jen si prohlížet web.\n* Je důležité,
@@ -4375,11 +4584,19 @@ cs-CZ:
         description: Dospěli jste k poslední lekci! Vyberte si projekt, který chcete
           vytvořit.
         display_name: Projekt na zakončení kurzu
+      courseAB_EOC2022_2023:
+        description: Dospěli jste k poslední lekci! Vyberte si projekt, který chcete
+          vytvořit.
+        display_name: Projekt na zakončení kurzu
       courseAB_EOC_2021:
         description: Dospěli jste k poslední lekci! Vyberte si projekt, který chcete
           vytvořit.
         display_name: Projekt na zakončení kurzu
       courseB_EOC2022:
+        description: Dospěli jste k poslední lekci! Vyberte si projekt, který chcete
+          vytvořit.
+        display_name: Projekt na zakončení kurzu
+      courseB_EOC2022_2023:
         description: Dospěli jste k poslední lekci! Vyberte si projekt, který chcete
           vytvořit.
         display_name: Projekt na zakončení kurzu
@@ -4400,6 +4617,20 @@ cs-CZ:
         - text: Podívej se pozorně na níže uvedený kód. Co se stane, když klikneš
             na "Spustit"?
       courseC_multi_artist_prog6_predict12022:
+        answers:
+        - feedback: Špatně. Umělec nakreslí čtverec.
+          text: Umělec nakreslí trojúhelník se třemi stejnými stranami.
+        - feedback: Špatně. Umělec nakreslí čtverec.
+          text: Umělec nakreslí jednu čáru.
+        - correct: true
+          feedback: Správně!
+          text: Umělec nakreslí čtverec.
+        - feedback: Nesprávně. Umělec nakreslí čtverec.
+          text: Umělec nakreslí pětiúhelník.
+        questions:
+        - text: Podívej se pozorně na níže uvedený kód. Co se stane, když klikneš
+            na "Spustit"?
+      courseC_multi_artist_prog6_predict12022_2023:
         answers:
         - feedback: Špatně. Umělec nakreslí čtverec.
           text: Umělec nakreslí trojúhelník se třemi stejnými stranami.
@@ -4482,6 +4713,23 @@ cs-CZ:
         - text: Podívej se pozorně na následující kód. Kolik dýní farmář sklidí, když
             klikneš na "Spustit"?
       courseC_multi_harvester_loops11_predict12022:
+        answers:
+        - feedback: Nesprávně. Farmářka posbírá v každém ze 3 cyklů  4 tykve. 4 krát
+            3 je 12!
+          text: '4'
+        - correct: true
+          feedback: Správně!
+          text: '12'
+        - feedback: Nesprávně. Farmářka posbírá v každém ze 3 cyklů  4 tykve. 4 krát
+            3 je 12!
+          text: '15'
+        - feedback: Nesprávně. Farmářka posbírá v každém ze 3 cyklů  4 tykve. 4 krát
+            3 je 12!
+          text: '20'
+        questions:
+        - text: Podívej se pozorně na následující kód. Kolik dýní farmář sklidí, když
+            klikneš na "Spustit"?
+      courseC_multi_harvester_loops11_predict12022_2023:
         answers:
         - feedback: Nesprávně. Farmářka posbírá v každém ze 3 cyklů  4 tykve. 4 krát
             3 je 12!
@@ -4582,6 +4830,17 @@ cs-CZ:
         questions:
         - text: Najdi v tomhle kódu chyby. Dojde Scrat až k žaludu, nebo je v kódu
             nějaký problém?
+      courseC_multi_maze_debugging8_predict12022_2023:
+        answers:
+        - text: Scrat se dostane k žaludu. V kódu nejsou žádné chyby.
+        - correct: true
+          text: Scrat nedosáhne na žalud, protože se otočí nesprávným směrem.
+        - text: Scrat nedosáhne na žalud, protože není dostatek bloků `posuv dopředu`.
+        - feedback: Scrat nedosáhne na žalud, protože se otočí nesprávným směrem.
+          text: Scrat se nepohne z prvního bloku.
+        questions:
+        - text: Najdi v tomhle kódu chyby. Dojde Scrat až k žaludu, nebo je v kódu
+            nějaký problém?
       courseC_multi_maze_debugging8_predict1_2018:
         answers:
         - text: Program neselže. Veverka se dostane k žaludu.
@@ -4669,6 +4928,20 @@ cs-CZ:
         questions:
         - text: Přečti si níže uvedený kód velmi pozorně. Co se stane, když klikneš
             na "Spustit"?
+      courseC_multi_maze_programming8_predict12022_2023:
+        answers:
+        - feedback: Špatně. Tento kód perfektně dostane ptáčka k prasátku.
+          text: Ptáček skončí jeden krok od prasátka.
+        - correct: true
+          feedback: Správně!
+          text: Ptáček se dostane k prasátku.
+        - feedback: Špatně. Tento kód perfektně dostane ptáčka k prasátku.
+          text: Ptáček narazí do TNT.
+        - feedback: Špatně. Tento kód perfektně dostane ptáčka k prasátku.
+          text: Ptáček narazí do stěny.
+        questions:
+        - text: Přečti si níže uvedený kód velmi pozorně. Co se stane, když klikneš
+            na "Spustit"?
       courseC_multi_maze_programming8_predict1_2018:
         answers:
         - feedback: Špatně. Tento kód perfektně dostane ptáčka k prasátku.
@@ -4735,6 +5008,19 @@ cs-CZ:
         questions:
         - text: Co se stane, když klikneš spustit?
       courseC_multi_starWars_predict12022:
+        answers:
+        - feedback: Špatně. Blok „repeat“ způsobí, že se BB-8 posune 5krát dopředu.
+          text: BB-8 se nepohne.
+        - feedback: Špatně. Blok „repeat“ způsobí, že se BB-8 posune 5krát dopředu.
+          text: BB-8 se pohne o jedno políčko.
+        - correct: true
+          feedback: Správně!
+          text: BB-8 se posune pět krát za sebou a sebere všechen šrot.
+        - feedback: Špatně. Blok „repeat“ způsobí, že se BB-8 posune 5krát dopředu.
+          text: BB-8 se pohne jen o tři políčka.
+        questions:
+        - text: Co se stane, když klikneš spustit?
+      courseC_multi_starWars_predict12022_2023:
         answers:
         - feedback: Špatně. Blok „repeat“ způsobí, že se BB-8 posune 5krát dopředu.
           text: BB-8 se nepohne.
@@ -4828,6 +5114,22 @@ cs-CZ:
           text: BB-8 se po prvním cyklu přesune v nesprávném směru.
         questions:
         - text: Podívej se pořádně na tenhle kód. Co se stane, když dáš "Spustit"?
+      courseC_multi_starWars_predict22022_2023:
+        answers:
+        - feedback: Ne, to není správně. V prvním cyklu se BB-8 posune jen o dvě políčka,
+            ale potřebuje se posunout o tři.
+          text: BB-8 se v prvním cyklu dokutálí moc daleko.
+        - correct: true
+          feedback: Správně!
+          text: BB-8 se nedokutálí dost daleko, aby posbíral všechen šrot.
+        - feedback: Ne, to není správně. V prvním cyklu se BB-8 posune jen o dvě políčka,
+            ale potřebuje se posunout o tři.
+          text: BB-8 sesbírá všechen kovový šrot bez problémů.
+        - feedback: Ne, to není správně. V prvním cyklu se BB-8 posune jen o dvě políčka,
+            ale potřebuje se posunout o tři.
+          text: BB-8 se po prvním cyklu přesune v nesprávném směru.
+        questions:
+        - text: Podívej se pořádně na tenhle kód. Co se stane, když dáš "Spustit"?
       courseC_multi_starWars_predict2_2018:
         answers:
         - feedback: Ne, to není správně. V prvním cyklu se BB-8 posune jen o dvě políčka,
@@ -4896,6 +5198,10 @@ cs-CZ:
         description: Dospěl(a) jsi k poslední lekci kurzu D. Vyber si projekt, který
           chceš vytvořit.
         display_name: Projekt na zakončení kurzu
+      courseD_EOC2022_2023:
+        description: Dospěl(a) jsi k poslední lekci kurzu D. Vyber si projekt, který
+          chceš vytvořit.
+        display_name: Projekt na zakončení kurzu
       courseD_EOC_2020:
         description: Dospěl(a) jsi k poslední lekci kurzu D. Vyber si projekt, který
           chceš vytvořit.
@@ -4905,6 +5211,10 @@ cs-CZ:
           chceš vytvořit.
         display_name: Projekt na zakončení kurzu
       courseD_EOC_examples2022:
+        description: Právě se chystáte zahájit svůj závěrečný projekt. Než začnete,
+          věnujte nějaký čas studiu těchto příkladů projektů.
+        display_name: Příklady projektů
+      courseD_EOC_examples2022_2023:
         description: Právě se chystáte zahájit svůj závěrečný projekt. Než začnete,
           věnujte nějaký čas studiu těchto příkladů projektů.
         display_name: Příklady projektů
@@ -5058,6 +5368,30 @@ cs-CZ:
         questions:
         - text: Dobře se podívej na kód dole. Který z obrazců se vytvoří poté, co
             stiskneš "Spustit"?
+      courseD_multi_artist_nestedLoops9_predict12022_2023:
+        answers:
+        - correct: true
+          feedback: Správně!
+          text: A
+        - feedback: Špatně. Vnitřní cyklus vytvoří pětiúhelník a vnější to 4krát zopakuje
+            v kruhu.
+          text: B
+        - feedback: Špatně. Vnitřní cyklus vytvoří pětiúhelník a vnější to 4krát zopakuje
+            v kruhu.
+          text: C
+        - feedback: Špatně. Vnitřní cyklus vytvoří pětiúhelník a vnější to 4krát zopakuje
+            v kruhu.
+          text: Žádná z uvedených možností.
+        markdown: |+
+          <table>
+          <tr><td>A</td><td><img src="https://images.code.org/cfc3f8206438a60afe3be9afe7fc0a22-image-1489118742610.10.15.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>B</td><td><img src="https://images.code.org/975b027684d2f5411b960bf82987663e-image-1489119999013.11.13.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>C</td><td><img src="https://images.code.org/635ac54ed7cb2e2d24eb341b3ec4eecb-image-1489120024059.12.00.png" width="80px" style="mix-blend-mode: multiply; clip: rect(0px,0px,0px,40px);"/></td></tr>
+          </table>
+
+          <br/><br/>
+
+        questions:
+        - text: Dobře se podívej na kód dole. Který z obrazců se vytvoří poté, co
+            stiskneš "Spustit"?
       courseD_multi_artist_nestedLoops9_predict1_2018:
         answers:
         - correct: true
@@ -5186,6 +5520,23 @@ cs-CZ:
             je tam květina, pak včela musí sebrat nektar **jednou**. Pokud tam květina
             není, včela by neměla dělat nic. Dobře se podívej na kód dole. Co si myslíš,
             že se stane, když klikneš na tlačítko "Spustit"?
+      courseD_multi_bee_conditionals1_predict12022_2023:
+        answers:
+        - feedback: Špatně. Blok „pokud na květině“ zajistí, že se včela pokusí získat
+            nektar, jen když je pod mrakem květ.
+          text: Včela se posune k mraku, ať se děje, co se děje.
+        - correct: true
+          feedback: Správně!
+          text: Včela se posune k mraku a zkusí získat nektar, jen pokud je pod ním
+            květina.
+        - feedback: Špatně. Blok „pokud na květině“ zajistí, že se včela pokusí získat
+            nektar, pokud je pod mrakem květ.
+          text: Včela se posune k mraku a neudělá nic, ať se dějě, co se děje.
+        - feedback: Špatně. Blok „pokud na květině“ zajistí, že se včela pokusí získat
+            nektar, jen když je pod mrakem květ.
+          text: 'Včela nedosáhne na oblak. '
+        questions:
+        - {}
       courseD_multi_bee_conditionals1_predict1_2018:
         answers:
         - feedback: Špatně. Blok „pokud na květině“ zajistí, že se včela pokusí získat
@@ -5326,6 +5677,24 @@ cs-CZ:
         - text: Podívej se pozorně na kód dole. Co si myslíš, že se stane poté, co
             zmáčkneš "Spustit"? Pamatuj si, že za každým mráčkem je vždy pouze *jedna*
             plástev nebo *jedna* květina.
+      courseD_multi_bee_conditionals7_predict22022_2023:
+        answers:
+        - correct: true
+          feedback: Správně!
+          text: Včela získá nektar z každé květiny a med z každé včelí plástve.
+        - feedback: 'Nesprávně. Blok `pokud na květině` umožní včele získat nektar
+            na každé květině a med z každé plástve. '
+          text: Včela se pokusí získat nektar jak z květin, tak i ze včelích pláství.
+        - feedback: 'Nesprávně. Nesprávně. Blok `pokud na květině` umožní včele získat
+            nektar na každé květině a med z každé plástve. '
+          text: Včela se pokusí získat med z květin i ze včelích pláství.
+        - feedback: 'Nesprávně. Nesprávně. Blok `pokud na květině` umožní včele získat
+            nektar na každé květině a med z každé plástve. '
+          text: Včela se bude snažit získávat med a nektar z květin i z pláství.
+        questions:
+        - text: Podívej se pozorně na kód dole. Co si myslíš, že se stane poté, co
+            zmáčkneš "Spustit"? Pamatuj si, že za každým mráčkem je vždy pouze *jedna*
+            plástev nebo *jedna* květina.
       courseD_multi_bee_conditionals7_predict2_2018:
         answers:
         - correct: true
@@ -5422,6 +5791,22 @@ cs-CZ:
           text: Včela se otočí nesprávným směrem.
         questions:
         - text: Zaměř se na vnořené cykly v kódu. Co se stane, když stiskneš "Spustit"?
+      courseD_multi_bee_nestedLoops2_predict12022_2023:
+        answers:
+        - feedback: Špatně. Úlohu vyřešíš, když včela bude opakovat akce nastavené
+            v cyklu, tedy posun dopředu a sběr nektaru.
+          text: Včela se posune vpřed a získá nektar pouze jednou.
+        - feedback: Špatně. Úlohu vyřešíš, když včela bude opakovat akce nastavené
+            v cyklu, tedy posun dopředu a sběr nektaru.
+          text: Včela získá nektar jen ze dvou květů.
+        - correct: true
+          feedback: Správně!
+          text: Včela získá nektar ze všech květů.
+        - feedback: Špatně. Úlohu vyřešíš, když včela bude opakovat akce nastavené
+            v cyklu, tedy posun dopředu a sběr nektaru.
+          text: Včela se otočí nesprávným směrem.
+        questions:
+        - text: Zaměř se na vnořené cykly v kódu. Co se stane, když stiskneš "Spustit"?
       courseD_multi_bee_nestedLoops2_predict1_2018:
         answers:
         - feedback: Špatně. Úlohu vyřešíš, když včela bude opakovat akce nastavené
@@ -5498,6 +5883,26 @@ cs-CZ:
         - text: Zaměř se na následující kód. Kolik medu včela vyrobí, když klikneš
             na "Spustit"?
       courseD_multi_bee_nestedLoops9_predict22022:
+        answers:
+        - feedback: Špatně. Včela dvakrát sebere nektar v cyklu, když se posouvá vpřed,
+            k tomu sebere dvakrát nektar, když se posouvá dolů. Toto celé se stane
+            dvakrát v dalším cyklu. 4 krát 2 je 8!
+          text: '4'
+        - correct: true
+          feedback: Správně!
+          text: '8'
+        - feedback: Špatně. Včela dvakrát sebere nektar v cyklu, když se posouvá vpřed,
+            k tomu sebere dvakrát nektar, když se posouvá dolů. Toto celé se stane
+            dvakrát v dalším cyklu. 4 krát 2 je 8!
+          text: '10'
+        - feedback: Špatně. Včela dvakrát sebere nektar v cyklu, když se posouvá vpřed,
+            k tomu sebere dvakrát nektar, když se posouvá dolů. Toto celé se stane
+            dvakrát v dalším cyklu. 4 krát 2 je 8!
+          text: '12'
+        questions:
+        - text: Zaměř se na následující kód. Kolik medu včela vyrobí, když klikneš
+            na "Spustit"?
+      courseD_multi_bee_nestedLoops9_predict22022_2023:
         answers:
         - feedback: Špatně. Včela dvakrát sebere nektar v cyklu, když se posouvá vpřed,
             k tomu sebere dvakrát nektar, když se posouvá dolů. Toto celé se stane
@@ -5631,6 +6036,26 @@ cs-CZ:
           <br/>
         questions:
         - text: Podívej se pozorně na kód dole. Co se stane, když zmáčkneš "Spustit"?
+      courseD_multi_farmer_condLoops9_predict12022_2023:
+        answers:
+        - feedback: Nesprávně. Není tam žádný kód pro sesbírání dýně.
+          text: Zahradnice sesbírá všechnu úrodu.
+        - feedback: Nesprávně. Kód přiměje zahradnici opakovaně jít po schodovitém
+            vzoru a sesbírat tolik kukuřice nebo salátu, na kolik po cestě narazí.
+            Nesebere dýni.
+          text: Zahradnice nesesbírá na cestě, po které půjde, žádné plodiny.
+        - correct: true
+          feedback: Správně!
+          text: Zahradnice sesbírá všechny plodiny kromě dýně.
+        - feedback: Nesprávně. Kód přiměje zahradnici opakovaně jít po schodovitém
+            vzoru a sesbírat tolik kukuřice nebo salátu, na kolik po cestě narazí.
+            Nesebere dýni.
+          text: Sklízečka bude sbírat jen dýně.
+        markdown: |
+          Výhonky v této úloze budou buď kukuřice, nebo salát.
+          <br/>
+        questions:
+        - text: Podívej se pozorně na kód dole. Co se stane, když zmáčkneš "Spustit"?
       courseD_multi_farmer_condLoops9_predict1_2018:
         answers:
         - feedback: Nesprávně. Není tam žádný kód pro sesbírání dýně.
@@ -5744,6 +6169,20 @@ cs-CZ:
           text: Tento kód ponechá poslední díru nedotčenou.
         questions:
         - text: Dobře se podívej na kód níže. Co zůstane na konci této úlohy?
+      courseD_multi_farmer_while10_predict22022_2023:
+        answers:
+        - feedback: Nesprávně. Není tam žádný kód, který by odstranil hlínu z hromádky.
+          text: Nic. Kód zanechá srovnanou zem.
+        - correct: true
+          feedback: Správně!
+          text: Kód nechá hromádky úplně nedotčené.
+        - feedback: Nepsrávně. Cyklus `dokud` zvládne cyklus jakékoli velikosti, ale
+            není tam žádný kód, který by odstranil hlínu z hromady.
+          text: Kód nechá díry úplně nedotčené.
+        - feedback: Nesprávně. Není tam žádný kód, který by odstranil hlínu z hromádky.
+          text: Tento kód ponechá poslední díru nedotčenou.
+        questions:
+        - text: Dobře se podívej na kód níže. Co zůstane na konci této úlohy?
       courseD_multi_farmer_while10_predict2_2018:
         answers:
         - feedback: Nesprávně. Není tam žádný kód, který by odstranil hlínu z hromádky.
@@ -5815,6 +6254,23 @@ cs-CZ:
         questions:
         - text: Podívej se pozorně na kód níže. Co se stane poté, co zmáčkneš "Spustit"?
       courseD_multi_farmer_while4_predict12022:
+        answers:
+        - feedback: Špatně. Farmářka bude odstraňovat hlínu tak dlouho, dokud tam
+            bude hromada, jakmile hromada zmizí, tak přestane.
+          text: Nic se nestane.
+        - feedback: Špatně. Farmářka bude odstraňovat hlínu tak dlouho, dokud tam
+            bude hromada, jakmile hromada zmizí, tak přestane.
+          text: Farmářka nikdy nepřestane odstraňovat hlínu.
+        - correct: true
+          feedback: Správně!
+          text: Farmářka bude odstraňovat hlínu tak dlouho, dokud tam bude hromada,
+            jakmile hromada zmizí, tak přestane.
+        - feedback: Špatně. Farmářka bude odstraňovat hlínu tak dlouho, dokud tam
+            bude hromada, jakmile hromada zmizí, tak přestane.
+          text: Farmář odstraní hlínu jen jednou.
+        questions:
+        - text: Podívej se pozorně na kód níže. Co se stane poté, co zmáčkneš "Spustit"?
+      courseD_multi_farmer_while4_predict12022_2023:
         answers:
         - feedback: Špatně. Farmářka bude odstraňovat hlínu tak dlouho, dokud tam
             bude hromada, jakmile hromada zmizí, tak přestane.
@@ -5919,6 +6375,16 @@ cs-CZ:
         - text: Zombie se zarazí na konci cesty vpřed.
         questions:
         - text: Podívej se pozorně na kód dole. Co se stane, když zmáčkneš "Spustit"?
+      courseD_multi_maze_until10_predict22022_2023:
+        answers:
+        - correct: true
+          feedback: Správně!
+        - text: Zombie se dostane ke slunečnici.
+        - text: Zombie hned na první cestě odbočí doprava a bude donekonečna bloudit
+            v kruhu.
+        - text: Zombie se zarazí na konci cesty vpřed.
+        questions:
+        - text: Podívej se pozorně na kód dole. Co se stane, když zmáčkneš "Spustit"?
       courseD_multi_maze_until10_predict2_2018:
         answers:
         - correct: true
@@ -6006,6 +6472,24 @@ cs-CZ:
         - text: Podívej se pozorně na kód níže. Co si myslíš, že se stane, když zmáčkneš
             "Spustit"?
       courseD_multi_maze_until2_predict12022:
+        answers:
+        - feedback: Nesprávně. Kód posune ptáka dopředu, pokud je tam cesta, pak se
+            otočí doleva. Bude to dělat tak dlouho, dokud se nedostane k praseti!
+          text: Pták se nebude vůbec hýbat.
+        - correct: true
+          feedback: Správně!
+          text: Ptáček se dostane k prasátku.
+        - feedback: Nesprávně. Kód posune ptáka dopředu, pokud je tam bezpečná cesta,
+            pak se otočí doleva. Bude to dělat tak dlouho, dokud se nedostane k praseti!
+          text: 'Pták se posune vpřed a narazí do TNT. '
+        - feedback: Kód zajistí, že se pták bude posouvat dopředu, dokud je před ním
+            cesta, a pak se otočí doleva. To bude opakovat tak dlouho, až se dostane
+            k praseti.
+          text: Pták se otáčí nesprávným směrem.
+        questions:
+        - text: Podívej se pozorně na kód níže. Co si myslíš, že se stane, když zmáčkneš
+            "Spustit"?
+      courseD_multi_maze_until2_predict12022_2023:
         answers:
         - feedback: Nesprávně. Kód posune ptáka dopředu, pokud je tam cesta, pak se
             otočí doleva. Bude to dělat tak dlouho, dokud se nedostane k praseti!
@@ -6126,6 +6610,10 @@ cs-CZ:
         description: Dospěl(a) jsi na konec kurzu E. Vyber si projekt, který chceš
           vytvořit.
         display_name: Projekt na zakončení kurzu
+      courseE_EOC2022_2023:
+        description: Dospěl(a) jsi na konec kurzu E. Vyber si projekt, který chceš
+          vytvořit.
+        display_name: Projekt na zakončení kurzu
       courseE_EOC_2020:
         description: Dospěl(a) jsi na konec kurzu E. Vyber si projekt, který chceš
           vytvořit.
@@ -6135,6 +6623,10 @@ cs-CZ:
           vytvořit.
         display_name: Projekt na zakončení kurzu
       courseE_EOC_examples2022:
+        description: Dospěl(a) jsi na konec kurzu E. Vyber si projekt, který chceš
+          vytvořit.
+        display_name: Projekt na zakončení kurzu
+      courseE_EOC_examples2022_2023:
         description: Dospěl(a) jsi na konec kurzu E. Vyber si projekt, který chceš
           vytvořit.
         display_name: Projekt na zakončení kurzu
@@ -6176,6 +6668,22 @@ cs-CZ:
         questions:
         - text: Podívej se na níže definované funkce. Co farmářka sesbírá?
       courseE_multi_farmer_functions11_predict2022:
+        answers:
+        - feedback: Špatně. Zahradnice jde dopředu, až dojde na konec cesty. Pak se
+            otočí a vrací se zpět, dokud nesebere salát.
+          text: Zahradnice posbírá dvě dýně.
+        - feedback: Špatně. Zahradnice jde dopředu, až dojde na konec cesty. Pak se
+            otočí a vrací se zpět, dokud nesebere salát.
+          text: Farmářka sesbírá všechny dýně.
+        - correct: true
+          feedback: Správně!
+          text: Farmářka sklidí salát.
+        - feedback: Špatně. Zahradnice jde dopředu, až dojde na konec cesty. Pak se
+            otočí a vrací se zpět, dokud nesebere salát.
+          text: Farmářka sklidí kukuřici.
+        questions:
+        - text: Podívej se na níže definované funkce. Co farmářka sesbírá?
+      courseE_multi_farmer_functions11_predict2022_2023:
         answers:
         - feedback: Špatně. Zahradnice jde dopředu, až dojde na konec cesty. Pak se
             otočí a vrací se zpět, dokud nesebere salát.
@@ -6271,6 +6779,21 @@ cs-CZ:
         questions:
         - text: Co se stane, až stiskneš „Spustit“?
       courseE_prediction_artistFunction12022:
+        answers:
+        - feedback: Špatně. Program funkci volá hned dvakrát.
+          text: Nic. Funkce se v programu nevolá.
+        - feedback: Špatně. Program funkci volá hned dvakrát.
+          text: Umělec nakreslí jeden čtverec.
+        - feedback: Špatně. Délka stran čtverce je 100 pixelů, ale umělec skočí do
+            vzdálenosti 175 pixelů.
+          text: Umělec nakreslí dva čtverce, které se překrývají.
+        - correct: true
+          feedback: Správně. Program funkci zavolá dvakrát a mezi oběma voláními proběhne
+            skok.
+          text: Umělec nakreslí dva čtverce, mezi kterými je malá mezera.
+        questions:
+        - text: Co se stane, až stiskneš „Spustit“?
+      courseE_prediction_artistFunction12022_2023:
         answers:
         - feedback: Špatně. Program funkci volá hned dvakrát.
           text: Nic. Funkce se v programu nevolá.
@@ -6388,6 +6911,19 @@ cs-CZ:
           text: 'Stepní běžec bude blikat: zapnutý, vypnutý.'
         questions:
         - text: Podívej se pozorně na kód níže. Co se stane poté, co zmáčkneš "Spustit"?
+      courseE_swim_fish_behavior_predict12022_2023:
+        answers:
+        - feedback: Nesprávně. Stepní běžec se začne převalovat
+          text: Nic se nestane.
+        - feedback: Nesprávně. Stepní běžec se začne převalovat
+          text: Stepní běžec se přesune nahoru na obrazovku
+        - correct: true
+          feedback: Správně!
+          text: Stepní běžec se začne převalovat
+        - feedback: Nesprávně. Stepní běžec se začne převalovat
+          text: 'Stepní běžec bude blikat: zapnutý, vypnutý.'
+        questions:
+        - text: Podívej se pozorně na kód níže. Co se stane poté, co zmáčkneš "Spustit"?
       courseE_swim_fish_behavior_predict1_2021:
         answers:
         - feedback: Nesprávně. Stepní běžec se začne převalovat
@@ -6413,11 +6949,17 @@ cs-CZ:
         display_name: Projekt na zakončení kurzu
       courseF_EOC_examples2022_2022_pilot_-2022-2:
         display_name: Projekt na zakončení kurzu
+      courseF_EOC_examples2022_2022_pilot_-2022-2_2023:
+        display_name: Projekt na zakončení kurzu
       courseF_EOC_examples_2021:
         description: Dospěl(a) jsi na konec kurzu F. Vyber si projekt, který chceš
           vytvořit.
         display_name: Projekt na zakončení kurzu
       courseF_EOC_samples2022:
+        description: Právě se chystáte zahájit svůj závěrečný projekt. Než začnete,
+          věnujte nějaký čas studiu těchto příkladů projektů.
+        display_name: Projekt na zakončení kurzu
+      courseF_EOC_samples2022_2023:
         description: Právě se chystáte zahájit svůj závěrečný projekt. Než začnete,
           věnujte nějaký čas studiu těchto příkladů projektů.
         display_name: Projekt na zakončení kurzu
@@ -6470,11 +7012,17 @@ cs-CZ:
         - {}
       courseF_collector_samples_2022_pilot_-2022-2:
         display_name: Bádání - vzorové programy
+      courseF_collector_samples_2022_pilot_-2022-2_2023:
+        display_name: Bádání - vzorové programy
       courseF_events_freeplay:
         description: Teď můžete použít, co jste se naučili, aby byl Váš projekt ještě
           lepší! Nadále přidávejte ke svému programu nebo začněte něco nového!
         display_name: Události - volné hraní
       courseF_events_freeplay2022_2022_pilot_-2022-2:
+        description: Teď můžete použít, co jste se naučili, aby byl Váš projekt ještě
+          lepší! Nadále přidávejte ke svému programu nebo začněte něco nového!
+        display_name: Události - volné hraní
+      courseF_events_freeplay2022_2022_pilot_-2022-2_2023:
         description: Teď můžete použít, co jste se naučili, aby byl Váš projekt ještě
           lepší! Nadále přidávejte ke svému programu nebo začněte něco nového!
         display_name: Události - volné hraní
@@ -6493,6 +7041,10 @@ cs-CZ:
           | ***Pište*** |**Revidujte**|**Laďte**|**Laďte**|**Laďte**|**Volitelný obsah**|**Volitelný obsah**
           | ***Koncepce***|*události, chování*|*události, chování*|*události, chování*|*události, chování*|*události když/zatímco*|*události když/zatímco*|
       courseF_events_practice2022_2022_pilot_-2022-2:
+        description: Prozatím vynikající práce! Vyberte si svou další aktivitu. Vyhotovte,
+          kolik budete moci. Nadále procvičujte události!
+        display_name: Procvičování událostí
+      courseF_events_practice2022_2022_pilot_-2022-2_2023:
         description: Prozatím vynikající práce! Vyberte si svou další aktivitu. Vyhotovte,
           kolik budete moci. Nadále procvičujte události!
         display_name: Procvičování událostí
@@ -6526,7 +7078,30 @@ cs-CZ:
           text: Sprajt se nejprve roztočí a pak se bude posouvat.
         questions:
         - text: Přečtěte si kód a pak udělejte předpověď.
+      courseF_events_predict_multi2022_2022_pilot_-2022-2_2023:
+        answers:
+        - feedback: Nesprávně. Sprajt se bude také pohybovat na východ.
+          text: Sprajt se bude prostě otáčet doprava.
+        - feedback: Nesprávně. Sprajt se nepřestal otáčet, takže bude dělat obojí
+            současně.
+          text: Sprajt se bude prostě pohybovat na východ.
+        - correct: true
+          feedback: Správně! Obě chování budou probíhat současně.
+          text: Sprajt se roztočí a bude se pohybovat současně.
+        - feedback: Nesprávně. V Laboratoři sprajtů propojené bloky nastávají ihned
+            po posledním bloku, takže k oběma chováním dochází současně.
+          text: Sprajt se nejprve roztočí a pak se bude posouvat.
+        questions:
+        - text: Přečtěte si kód a pak udělejte předpověď.
       courseF_groups_predict_multi_2022_pilot_-2022-2:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_groups_predict_multi_2022_pilot_-2022-2_2023:
         answers:
         - correct: true
         - {}
@@ -6547,6 +7122,8 @@ cs-CZ:
           Zde uvedené volby zavedou studenty ke vzorovým aplikacím, které mohou prozkoumávat. Tato aktivita je určena ke koordinaci s pracovním listem „Zkoumání aplikací“, nacházejícím se v [plánu lekcí](.././).
       courseF_intro_apps2022_2022_pilot_-2022-2:
         display_name: Aplikace Laboratoře sprajtů
+      courseF_intro_apps2022_2022_pilot_-2022-2_2023:
+        display_name: Aplikace Laboratoře sprajtů
       courseF_labels_predict_multi:
         answers:
         - feedback: Nesprávně! Štítky proměnných neodpovídají.
@@ -6564,6 +7141,22 @@ cs-CZ:
         - text: Tento kód vám možná připadá povědomý, avšak přečtěte si ho pozorně.
             Co bude napsáno, když uživatel napíše „pizza“?
       courseF_labels_predict_multi2022_2022_pilot_-2022-2:
+        answers:
+        - feedback: Nesprávně! Štítky proměnných neodpovídají.
+          text: "„Jedna pizza vycházející přímo nahoru!“"
+        - feedback: Nesprávně. Štítek proměnné není nikdy tištěn.
+          text: "„Jedno jídlo vycházející přímo nahoru!“"
+        - feedback: Nesprávně. Štítek proměnné není nikdy tištěn.
+          text: "„Jedno žrádlo vycházející přímo nahoru!“"
+        - correct: true
+          feedback: Správně! Štítky proměnných neodpovídají.
+          text: "„Jedno vycházející přímo nahoru!“"
+        - feedback: Nesprávně. Událost a tiskový blok budou i tak fungovat.
+          text: Nic nebude vytištěno.
+        questions:
+        - text: Tento kód vám možná připadá povědomý, avšak přečtěte si ho pozorně.
+            Co bude napsáno, když uživatel napíše „pizza“?
+      courseF_labels_predict_multi2022_2022_pilot_-2022-2_2023:
         answers:
         - feedback: Nesprávně! Štítky proměnných neodpovídají.
           text: "„Jedna pizza vycházející přímo nahoru!“"
@@ -6642,6 +7235,23 @@ cs-CZ:
         - text: Proměnnou „length“ jsme nastavili na 50. Co se stane, když klikneš
             na Spustit?
       courseF_multi_artist_variables3a_predict12022:
+        answers:
+        - correct: true
+          feedback: Správně!
+          text: Umělec nakreslí trojúhelník se stranami dlouhými 50 pixelů.
+        - feedback: Špatně. Aby to fungovalo, proměnná „length“ by musela být v cyklu
+            „repeat“.
+          text: Umělec nakreslí mnohoúhelník s 50 stranami dlouhými 3 pixely.
+        - feedback: Špatně. Aby to fungovalo, proměnná „length“ by musela být použitá
+            v bloku „turn“.
+          text: Umělec nakreslí tři otevřené strany, které svírají úhel 50 stupňů.
+        - feedback: Proměnná „length“ je nastavená na 50 a používá se v bloku „move
+            forward by“, takže umělec nakreslí trojúhelník se stranami o délce 50 pixelů.
+          text: Počítač vyzve uživatele k zadání čísla.
+        questions:
+        - text: Proměnnou „length“ jsme nastavili na 50. Co se stane, když klikneš
+            na Spustit?
+      courseF_multi_artist_variables3a_predict12022_2023:
         answers:
         - correct: true
           feedback: Správně!
@@ -6794,6 +7404,27 @@ cs-CZ:
 
         questions:
         - text: Přečti si tenhle kód. Co se stane, když dáš "Spustit"?
+      courseF_multi_bee_for3_predict12022_2023:
+        answers:
+        - feedback: Špatně. Cyklus „for“ umožní včele sebrat správné množství nektaru,
+            ale je nastavený jen na dosažení 4 květů.
+          text: 'Včela se posune dopředu a nasbírá všechen nektar ze všech květů. '
+        - correct: true
+          feedback: Správně!
+          text: Včela se posune dopředu a nasbírá všechen nektar ze všech květů kromě
+            jednoho.
+        - feedback: Špatně. Cyklus „for“ umožní včele sebrat správné množství nektaru,
+            ale je nastavený jen na dosažení 4 květů.
+          text: 'Včela se posune dopředu a nasbírá jeden nektar z každého květu. '
+        - feedback: Špatně. Cyklus „for“ umožní včele sebrat správné množství nektaru,
+            ale je nastavený jen na dosažení 4 květů.
+          text: 'Včela se pohne vpřed a nasbírá jeden nektar z květin číslo 1 a 4. '
+        markdown: |+
+          Ovšem použití cyklů „for“ tuhle úlohu hodně usnadní.
+
+
+        questions:
+        - text: Přečti si tenhle kód. Co se stane, když dáš "Spustit"?
       courseF_multi_bee_for3_predict1_2018:
         answers:
         - feedback: Špatně. Cyklus „for“ umožní včele sebrat správné množství nektaru,
@@ -6897,6 +7528,10 @@ cs-CZ:
         description: Je na vás, abyste vytvořili cokoli, co budete chtít! Jaký projekt
           uděláte?
         display_name: Sprajty - volné hraní
+      courseF_sprites_freeplay2022_2022_pilot_-2022-2_2023:
+        description: Je na vás, abyste vytvořili cokoli, co budete chtít! Jaký projekt
+          uděláte?
+        display_name: Sprajty - volné hraní
       courseF_sprites_practice:
         description: Prozatím vynikající! Vyberte si svou další aktivitu. Vyhotovte,
           kolik budete moci. Procvičujte se sprajty a chováními!
@@ -6914,6 +7549,10 @@ cs-CZ:
 
 
       courseF_sprites_practice2022_2022_pilot_-2022-2:
+        description: Prozatím vynikající! Vyberte si svou další aktivitu. Vyhotovte,
+          kolik budete moci. Procvičujte se sprajty a chováními!
+        display_name: Procvičování sprajtů
+      courseF_sprites_practice2022_2022_pilot_-2022-2_2023:
         description: Prozatím vynikající! Vyberte si svou další aktivitu. Vyhotovte,
           kolik budete moci. Procvičujte se sprajty a chováními!
         display_name: Procvičování sprajtů
@@ -6951,6 +7590,23 @@ cs-CZ:
           text: Letadla havarují.
         questions:
         - text: Přečtěte si kód a pak udělejte předpověď.
+      courseF_sprites_predict_multi2022_2022_pilot_-2022-2_2023:
+        answers:
+        - feedback: Nesprávně. Tyto sprajty mají „chování“, které bude pokračovat,
+            dokud jim nebude řečeno, aby se zastavily.
+          text: Obě letadla se pohnou o jedno pole podél mřížky a poté se zastaví.
+        - correct: true
+          feedback: Správně! Tato chování letadlům řeknou, aby se začala pohybovat
+            a pokračovala.
+          text: Obě letadla se začnou pohybovat a nezastaví se.
+        - feedback: Nesprávně. Každý blok kódu v Laboratoři sprajtů bude spuštěn okamžitě
+            po dalším.
+          text: Jedno letadlo se pohne jako první a to druhé se pohne později.
+        - feedback: Nesprávně. Letadla nejsou umístěna způsobem, při kterém by se
+            dotýkala.
+          text: Letadla havarují.
+        questions:
+        - text: Přečtěte si kód a pak udělejte předpověď.
       courseF_text_practice:
         description: Prozatím vynikající práce! Vyberte si svou další aktivitu. Dokončete
           tolik, kolik dovedete. Nadále procvičujte text a výzvy!
@@ -6969,6 +7625,10 @@ cs-CZ:
         description: Prozatím vynikající práce! Vyberte si svou další aktivitu. Dokončete
           tolik, kolik dovedete. Nadále procvičujte text a výzvy!
         display_name: Procvičování textu a výzev
+      courseF_text_practice2022_2022_pilot_-2022-2_2023:
+        description: Prozatím vynikající práce! Vyberte si svou další aktivitu. Dokončete
+          tolik, kolik dovedete. Nadále procvičujte text a výzvy!
+        display_name: Procvičování textu a výzev
       courseF_variables2_predict2_multi2022_-2022-2:
         answers:
         - correct: true
@@ -6977,7 +7637,23 @@ cs-CZ:
         - {}
         questions:
         - {}
+      courseF_variables2_predict2_multi2022_-2022-2_2023:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseF_variables2_predict_multi2022_2022_pilot_-2022-2:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseF_variables2_predict_multi2022_2022_pilot_-2022-2_2023:
         answers:
         - {}
         - {}
@@ -7017,6 +7693,22 @@ cs-CZ:
         - text: 'Tento program vám umožní odpovědět na otázku psaním na klávesnici.
             Blok `print` (`tisk`) zobrazuje text na obrazovce. Udělejte předpověď:
             Co se stane po zodpovězení otázky?'
+      courseF_variables_predict_multi2022_2022_pilot_-2022-2_2023:
+        answers:
+        - feedback: Nesprávně. Název bloku bude nahrazen tím, co napíšete.
+          text: Program vytiskne „Ahoj, jméno!“
+        - correct: true
+          feedback: Správně! To, co napíšete, bude použito namísto názvu bloku.
+          text: Program Vás přivítá jménem, které napíšete.
+        - feedback: Nesprávně. Text je vytištěn na obrazovku.
+          text: Sprajt bude měnit velikosti.
+        - feedback: Nesprávně. Pokládána je jen jedna otázka, a to ihned jak program
+            začne.
+          text: Počítač položí další otázku.
+        questions:
+        - text: 'Tento program vám umožní odpovědět na otázku psaním na klávesnici.
+            Blok `print` (`tisk`) zobrazuje text na obrazovce. Udělejte předpověď:
+            Co se stane po zodpovězení otázky?'
       courseF_variables_projects:
         description: Budete vytvářet buďto blahopřání, chatovacího robota nebo příběh
           prázdného prostoru. Jestliže jste už dokončili \"Část 1\" svého projektu,
@@ -7028,6 +7720,11 @@ cs-CZ:
 
           Studenti budou možná potřebovat opravdu jasné instrukce, aby pochopili, jak procházet zde uvedené možnosti. Pro každou z projektových možností jsou tu dvě podúrovně. Aby začali, měli by si studenti vybrat jednu z úrovní označenou „Část 1“. Až tuto úroveň dokončí, musejí se sem vrátit a vybrat „Část 2“ *stejného* projektu. První úroveň pro každou volbu poskytne studentům zpětnou vazbu tím, jak budou dávat dohromady základní součásti svého projektu. Druhá úroveň je „volné hraní“, které je určeno k tomu, aby studenti mohli provést jakékoli změny svého kódu, jaké budou chtít provést.
       courseF_variables_projects2022_2022_pilot_-2022-2:
+        description: Budete vytvářet buďto blahopřání, chatovacího robota nebo příběh
+          prázdného prostoru. Jestliže jste už dokončili \"Část 1\" svého projektu,
+          přejděte k \"Části 2\".
+        display_name: Vyberte si projekt
+      courseF_variables_projects2022_2022_pilot_-2022-2_2023:
         description: Budete vytvářet buďto blahopřání, chatovacího robota nebo příběh
           prázdného prostoru. Jestliže jste už dokončili \"Část 1\" svého projektu,
           přejděte k \"Části 2\".
@@ -7044,6 +7741,12 @@ cs-CZ:
 
           Než se studenti rozhodnou, co chtějí vytvářet, musejí se na tyto projekty důkladně podívat. Můžete se na ně podívat společně jako třída nebo nechat studenty probádat je sami za sebe.
       courseF_variables_samples2022_2022_pilot_-2022-2:
+        description: Budete vytvářet buďto blahopřání, chatovacího robota nebo příběh
+          prázdného prostoru.  Než začnete, prozkoumejte níže uvedené příklady projektů,
+          abyste viděli, co budete chtít vytvářet. až budete připraveni začít plánovat
+          svůj vlastní program, stiskněte \"Dokončit\".
+        display_name: Bádání - vzorové programy
+      courseF_variables_samples2022_2022_pilot_-2022-2_2023:
         description: Budete vytvářet buďto blahopřání, chatovacího robota nebo příběh
           prázdného prostoru.  Než začnete, prozkoumejte níže uvedené příklady projektů,
           abyste viděli, co budete chtít vytvářet. až budete připraveni začít plánovat
@@ -7071,6 +7774,17 @@ cs-CZ:
           text, který budete zobrazovat na obrazovce.\n* Popis nebo výkres sprajtů,
           které budete potřebovat (a jejich chování).\n\nJestliže si nejste jisti,
           zda jste připraveni pokračovat dále, zeptejte se svého učitele!"
+      courseF_variables_stop2022_2022_pilot_-2022-2_2023:
+        content1: sem uveďte popis
+        markdown: "# Zastavte!\n\n## Opravdu jste připraveni pokračovat dále? \n\n\nNa
+          další úrovni začnete psát kód pro svůj projekt. To funguje nejlépe tehdy,
+          jestliže máte plán.\n\nVáš vyhotovený plán musí obsahovat:\n\n<img src=\"https://images.code.org/b476ac330f2b66e44e02208fee386a56-image-1614802439867.png\"
+          style=\"float:left; height:70px; padding:10px\"/>\n\n* Typ projektu, který
+          budujete. Například zda jde o blahopřání, chatovacího robota nebo příběh
+          prázdného prostoru.\n* Seznam otázek, které položíte uživateli.\n* Ostatní
+          text, který budete zobrazovat na obrazovce.\n* Popis nebo výkres sprajtů,
+          které budete potřebovat (a jejich chování).\n\nJestliže si nejste jisti,
+          zda jste připraveni pokračovat dále, zeptejte se svého učitele!"
       coursee_prediction_artistfunction2:
         answers:
         - feedback: Špatně. Cyklus nepoužije funkci "nakresli řadu mnohoúhelníků",
@@ -7087,6 +7801,21 @@ cs-CZ:
         questions:
         - text: Co se stane, až stiskneš tlačítko „Spustit“?
       coursee_prediction_artistfunction22022:
+        answers:
+        - feedback: Špatně. Cyklus nepoužije funkci "nakresli řadu mnohoúhelníků",
+            ale funkci „nakresli mnohoúhelník“.
+          text: Umělec úlohu vyřeší správně.
+        - correct: true
+          feedback: Správně!
+          text: Umělec nakreslí čtyři čtverce uspořádané do tvaru okna.
+        - feedback: Špatně. Program nevolá funkci „nakresli řadu mnohoúhelníků“.
+          text: Umělec nakreslí jen jednu řadu čtverců.
+        - feedback: Špatně. Cyklus zahrnuje otočení o 90 stupňů mezi jednotlivými
+            voláními funkce „nakresli mnohoúhelník“.
+          text: Umělec nakreslí čtyři čtverce nad sebou.
+        questions:
+        - text: Co se stane, až stiskneš tlačítko „Spustit“?
+      coursee_prediction_artistfunction22022_2023:
         answers:
         - feedback: Špatně. Cyklus nepoužije funkci "nakresli řadu mnohoúhelníků",
             ale funkci „nakresli mnohoúhelník“.
@@ -7161,6 +7890,42 @@ cs-CZ:
           text: Umělec nakreslí čtyři čtverce nad sebou.
         questions:
         - text: Co se stane, až stiskneš tlačítko „Spustit“?
+      csc_animal_adaptations_predict:
+        answers:
+        - {}
+        - correct: true
+          feedback: Správně!
+        - {}
+        - {}
+        questions:
+        - {}
+      csc_ecosystems_matching_cfu:
+        answers:
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+      csc_ecosystems_matching_conditionals:
+        answers:
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+      csc_ecosystems_matching_events:
+        answers:
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+      csc_timecapsule_info_2023:
+        content1: sem uveďte popis
       csd-post-survey-2017-levelgroup-2018-2nd-semester:
         title: Dotazník pro studenty ke konci kurzu Objevujeme informatiku
       csd-post-survey-2017-q11_2018:
@@ -10333,6 +11098,12 @@ cs-CZ:
           # Digitální superobčan
 
           ## Jak můžeme zakročit, když se setkáme s kyberšikanou?
+      csf_be_a_super_digital_citizen2022_2023:
+        content1: sem uveďte popis
+        markdown: |
+          # Digitální superobčan
+
+          ## Jak můžeme zakročit, když se setkáme s kyberšikanou?
       csf_be_a_super_digital_citizen_2021:
         content1: sem uveď popis
         markdown: |
@@ -10345,6 +11116,11 @@ cs-CZ:
 
           ## Jaké informace můžeš zanechávat ve své digitální stopě?
       csf_digital_trails2022:
+        markdown: |
+          # Sleduj digitální stopu
+
+          ## Jaké informace můžeš zanechávat ve své digitální stopě?
+      csf_digital_trails2022_2023:
         markdown: |
           # Sleduj digitální stopu
 
@@ -10369,6 +11145,20 @@ cs-CZ:
 
           ![](https://images.code.org/bfa69295fbf33c77ecdeb79b5498d8f7-image-1584751340896.png)
       csf_password_power-up2022:
+        content1: sem uveďte popis
+        markdown: |
+          #  Posil své heslo
+
+          ## Důležité tipy k heslům
+
+          * Začni zapamatovatelnou **frází**.
+          * Tvoje heslo by měli znát jenom tví **rodiče**.
+          * Nikdy do hesla nedávej žádné **soukromé** informace o své identitě.
+          * Každé heslo by mělo mít aspoň **osm** znaků.
+          * Heslo by mělo zahrnovat písmena, čísla a **symboly**.
+
+          ![](https://images.code.org/bfa69295fbf33c77ecdeb79b5498d8f7-image-1584751340896.png)
+      csf_password_power-up2022_2023:
         content1: sem uveďte popis
         markdown: |
           #  Posil své heslo
@@ -10422,6 +11212,19 @@ cs-CZ:
           * Pozastavit se a zamyslet se online.
 
           ![](https://images.code.org/f3e4987a130b27f7b589d7829b753aac-image-1584750971069.png)
+      csf_putting_a_stop_to_online_meanness2022_2023:
+        content1: sem uveďte popis
+        markdown: |
+          # STOP zlovolnosti
+
+          ## Co byste měli dělat, když je na Vás někdo zlý online?
+
+          * Udělat krok pryč.
+          * Říci to důvěryhodnému dospělému.
+          * Nejprve si každý web prověřit.
+          * Pozastavit se a zamyslet se online.
+
+          ![](https://images.code.org/f3e4987a130b27f7b589d7829b753aac-image-1584750971069.png)
       csf_putting_a_stop_to_online_meanness_2021:
         content1: sem uveďte popis
         markdown: |
@@ -10441,6 +11244,11 @@ cs-CZ:
 
           ## Jak se bezpečně pohybovat online?
       csf_safety_in_my_online_neighborhood2022:
+        markdown: |
+          # Mé online sousedství
+
+          ## Jak se bezpečně pohybovat online?
+      csf_safety_in_my_online_neighborhood2022_2023:
         markdown: |
           # Mé online sousedství
 
@@ -12003,11 +12811,19 @@ cs-CZ:
         description: Dospěl(a) jsi na konec kurzu E. Vyber si projekt, který chceš
           vytvořit.
         display_name: Projekt na zakončení kurzu
+      express_EOC2022_2023:
+        description: Dospěl(a) jsi na konec kurzu E. Vyber si projekt, který chceš
+          vytvořit.
+        display_name: Projekt na zakončení kurzu
       express_EOC_2021:
         description: Dospěl(a) jsi na konec kurzu E. Vyber si projekt, který chceš
           vytvořit.
         display_name: Projekt na zakončení kurzu
       express_EOC_examples2022:
+        description: Právě se chystáte zahájit svůj závěrečný projekt. Než začnete,
+          věnujte nějaký čas studiu těchto příkladů projektů.
+        display_name: Příklady projektů
+      express_EOC_examples2022_2023:
         description: Právě se chystáte zahájit svůj závěrečný projekt. Než začnete,
           věnujte nějaký čas studiu těchto příkladů projektů.
         display_name: Příklady projektů
@@ -12048,6 +12864,23 @@ cs-CZ:
         questions:
         - {}
       grade2_multi_collector_A_predict12022:
+        answers:
+        - feedback: Špatně. Laurel se snaží sbírat poklad tam, kde žádný není, a to
+            způsobí chybu.
+          text: Laurel pomocí tohoto kódu posbírá 4 kousky pokladu.
+        - correct: true
+          feedback: Správně!
+          text: Laurel se pokusí posbírat poklad tam, kde není, a to způsobí chybu.
+        - feedback: Špatně. Laurel se snaží sbírat poklad tam, kde žádný není, a to
+            způsobí chybu.
+          text: Laurel posbírá všechen poklad.
+        - feedback: Špatně. Laurel se snaží sbírat poklad tam, kde žádný není, a to
+            způsobí chybu.
+          text: Laurel pomocí tohoto kódu posbírá 1 kousek pokladu.
+        questions:
+        - text: Podívej se pečlivě na tento kód. Co se podle tebe stane, když se program
+            spustí?
+      grade2_multi_collector_A_predict12022_2023:
         answers:
         - feedback: Špatně. Laurel se snaží sbírat poklad tam, kde žádný není, a to
             způsobí chybu.
