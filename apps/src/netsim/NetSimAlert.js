@@ -9,7 +9,7 @@ import NetSimLogger from './NetSimLogger';
 
 var logger = NetSimLogger.getSingleton();
 
-var NetSimAlert = {};
+const NetSimAlert = {};
 
 /**
  * Returns the alert container, or creates and inserts one if it does
@@ -109,4 +109,4 @@ NetSimAlert.success = function (body, options) {
   return NetSimAlert.create_(body, 'alert-success', options);
 };
 
-export default NetSimAlert;
+export {NetSimAlert as default};

@@ -9,7 +9,7 @@ import {queryParams} from './utils';
 // Note: sessionStorage is not shared between tabs.
 var sessionStorage = window.sessionStorage;
 
-var clientState = {};
+const clientState = {};
 
 clientState.queryParams = queryParams;
 
@@ -235,4 +235,4 @@ function removeItemsWithPrefix(sessionStorage, prefix) {
 }
 
 export default clientState;
-export const {sourceForLevel} = clientState;
+export const {sourceForLevel, writeSourceForLevel} = clientState;

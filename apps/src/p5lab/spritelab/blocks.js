@@ -49,7 +49,7 @@ function animations(includeBackgrounds) {
   }
   return results;
 }
-function costumeList() {
+export function costumeList() {
   return animations(false);
 }
 function backgroundList() {

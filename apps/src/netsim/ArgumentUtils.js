@@ -2,6 +2,8 @@
  * @overview Utilities for validating and retrieving arguments to a method.
  */
 
+const toExport = {};
+
 /**
  * Makes sure the given argument is provided and passes the validation check.
  * @param {?} arg - the argument to validate
@@ -11,7 +13,7 @@
  * @returns {?} the original argument.
  * @throws {TypeError} if the argument is missing or invalid.
  */
-exports.validateRequired = function (arg, argName, validator) {
+toExport.validateRequired = function (arg, argName, validator) {
   if (undefined === arg) {
     throw new TypeError(argName + ' is required.');
   } else if (typeof validator === 'function' && !validator(arg)) {
@@ -31,7 +33,7 @@ exports.validateRequired = function (arg, argName, validator) {
  * @throws {TypeError} if a non-object is passed to the constructor.
  * @throws {Error} if extending the object would overwrite an existing property.
  */
-exports.extendOptionsObject = function (optionsObject) {
+toExport.extendOptionsObject = function (optionsObject) {
   // Allow `undefined` and all objects except for `null`
   var isUndefined = optionsObject === undefined;
   var isRealObject =
@@ -91,7 +93,7 @@ exports.extendOptionsObject = function (optionsObject) {
  * @returns {boolean} TRUE if provided argument is valid.
  * @static
  */
-exports.isPositiveNoninfiniteNumber = function (arg) {
+toExport.isPositiveNoninfiniteNumber = function (arg) {
   return typeof arg === 'number' && !isNaN(arg) && arg >= 0 && arg !== Infinity;
 };
 
@@ -102,7 +104,7 @@ exports.isPositiveNoninfiniteNumber = function (arg) {
  * @returns {boolean} TRUE if provided argument is valid.
  * @static
  */
-exports.isBoolean = function (arg) {
+toExport.isBoolean = function (arg) {
   return typeof arg === 'boolean';
 };
 
@@ -112,7 +114,7 @@ exports.isBoolean = function (arg) {
  * @returns {boolean} TRUE if provided argument is valid.
  * @static
  */
-exports.isString = function (arg) {
+toExport.isString = function (arg) {
   return typeof arg === 'string';
 };
 
@@ -122,7 +124,7 @@ exports.isString = function (arg) {
  * @param {?} arg
  * @returns {boolean} TRUE if the provided argument is an array.
  */
-exports.isArray = function (arg) {
+toExport.isArray = function (arg) {
   return Array.isArray(arg);
 };
 
@@ -133,6 +135,8 @@ exports.isArray = function (arg) {
  *          in the array is a string.
  * @static
  */
-exports.isArrayOfStrings = function (arg) {
-  return Array.isArray(arg) && arg.every(exports.isString);
+toExport.isArrayOfStrings = function (arg) {
+  return Array.isArray(arg) && arg.every(toExport.isString);
 };
+
+export {toExport as default};

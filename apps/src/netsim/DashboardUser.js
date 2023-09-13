@@ -133,4 +133,4 @@ DashboardUser.prototype.ownsSection = function (sectionID) {
   });
 };
 
-export default DashboardUser;
+export {DashboardUser as default};

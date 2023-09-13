@@ -8,7 +8,7 @@ import * as timeoutApi from '@cdo/apps/lib/util/timeoutApi';
 import getAssetDropdown from '@cdo/apps/assetManagement/getAssetDropdown';
 import {getStore} from '@cdo/apps/redux';
 
-let exports = {};
+const toExport = {};
 
 var spriteMethodPrefix = '[Sprite].';
 var groupMethodPrefix = '[Group].';
@@ -26,7 +26,7 @@ const colliderTypeDropdown = ['rectangle', 'circle'].map(s => ({
 var gameLab;
 var getAnimationDropdown;
 
-exports.injectGameLab = function (gamelab) {
+toExport.injectGameLab = function (gamelab) {
   gameLab = gamelab;
   getAnimationDropdown = gameLab.getAnimationDropdown.bind(gameLab);
   const executeCmd = gameLab.executeCmd.bind(gameLab);
@@ -41,7 +41,7 @@ function chooseAsset(typeFilter, callback) {
   });
 }
 
-exports.blocks = [
+toExport.blocks = [
   // Game Lab
   {
     func: 'draw',
@@ -1946,7 +1946,7 @@ draw() - USEFUL?
   // Advanced
 ];
 
-exports.categories = {
+toExport.categories = {
   World: {
     id: 'world',
     color: 'yellow',
@@ -1991,7 +1991,7 @@ exports.categories = {
   },
 };
 
-exports.additionalPredefValues = [
+toExport.additionalPredefValues = [
   'World',
   'P2D',
   'WEBGL',
@@ -2086,12 +2086,12 @@ exports.additionalPredefValues = [
   '_DEFAULT_STROKE',
   '_DEFAULT_FILL',
 ];
-exports.showParamDropdowns = true;
+toExport.showParamDropdowns = true;
 
 /*
  * Set the showExamplesLink config value so that the droplet tooltips will show
  * an 'Examples' link that opens documentation in a lightbox:
  */
-exports.showExamplesLink = true;
+toExport.showExamplesLink = true;
 
-export default exports;
+export {toExport as default};

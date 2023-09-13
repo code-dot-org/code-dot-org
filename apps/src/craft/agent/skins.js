@@ -1,9 +1,9 @@
 import skinsBase from '../../skins';
 import Craft from './craft.js';
 
-var exports = {};
+const toExport = {};
 
-exports.load = function (assetUrl, id) {
+toExport.load = function (assetUrl, id) {
   const skin = skinsBase.load(assetUrl, id);
 
   skin.replaceInstructions = function (instructions) {
@@ -45,4 +45,4 @@ exports.load = function (assetUrl, id) {
   return skin;
 };
 
-export default exports;
+export {toExport as default};

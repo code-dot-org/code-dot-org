@@ -5,17 +5,16 @@
  * @see INetSimLogPanel for the interface implemented here.
  * @see NetSimLogPanel for the component used in packet-sending mode.
  */
-import {setupFunctionPrototypeInherits} from '../utils';
-setupFunctionPrototypeInherits(Function);
-
 import $ from 'jquery';
 import i18n from '@cdo/netsim/locale';
 import markup from './NetSimBitLogPanel.html.ejs';
+import {setupFunctionPrototypeInherits} from '../utils';
 import NetSimPanel from './NetSimPanel';
 import NetSimEncodingControl from './NetSimEncodingControl';
 import NetSimGlobals from './NetSimGlobals';
-
 import NetSimLogger from './NetSimLogger';
+
+setupFunctionPrototypeInherits(Function);
 var logger = NetSimLogger.getSingleton();
 
 /**

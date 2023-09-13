@@ -6,15 +6,14 @@ import $ from 'jquery';
 import {valueOr} from '../utils'; // Provides String.prototype.repeat
 import _ from 'lodash';
 import i18n from '@cdo/netsim/locale';
-import NetSimConstants from './NetSimConstants';
+import * as NetSimConstants from './NetSimConstants';
+import {EncodingType} from './NetSimConstants';
 import NetSimGlobals from './NetSimGlobals';
 import NetSimLogger from './NetSimLogger';
 
 var logger = NetSimLogger.getSingleton();
 
-var EncodingType = NetSimConstants.EncodingType;
-
-let exports = {};
+const toExport = {};
 
 /**
  * Make a new SVG element, appropriately namespaced, wrapped in a jQuery
@@ -22,7 +21,7 @@ let exports = {};
  * @param {string} type - the tagname for the svg element.
  * @returns {jQuery} for chaining
  */
-exports.jQuerySvgElement = function (type) {
+toExport.jQuerySvgElement = function (type) {
   var newElement = $(
     document.createElementNS('http://www.w3.org/2000/svg', type)
   );
@@ -115,7 +114,7 @@ exports.jQuerySvgElement = function (type) {
  * @param {NetSimLevelConfiguration} levelConfig
  * @param {NetSimTabType} tabType
  */
-exports.shouldShowTab = function (levelConfig, tabType) {
+toExport.shouldShowTab = function (levelConfig, tabType) {
   return levelConfig.showTabs.indexOf(tabType) > -1;
 };
 
@@ -124,7 +123,7 @@ exports.shouldShowTab = function (levelConfig, tabType) {
  * @param {EncodingType} encodingType
  * @returns {string} localized encoding name
  */
-exports.getEncodingLabel = function (encodingType) {
+toExport.getEncodingLabel = function (encodingType) {
   if (encodingType === EncodingType.ASCII) {
     return i18n.ascii();
   } else if (encodingType === EncodingType.DECIMAL) {
@@ -145,7 +144,7 @@ exports.getEncodingLabel = function (encodingType) {
  * @param {function} func - A function to call for each value in the enum,
  *        which gets passed the enum value.
  */
-exports.forEachEnumValue = function (enumObj, func) {
+toExport.forEachEnumValue = function (enumObj, func) {
   for (var enumKey in enumObj) {
     if (Object.prototype.hasOwnProperty.call(enumObj, enumKey)) {
       func(enumObj[enumKey]);
@@ -184,7 +183,7 @@ var isExactlyNaN = function (val) {
  * @param {number|NaN} num
  * @returns {number|string}
  */
-exports.serializeNumber = function (num) {
+toExport.serializeNumber = function (num) {
   var applicableRule = _.find(NUMBER_SERIALIZATION_RULES, function (rule) {
     return (
       rule.jsVal === num || (isExactlyNaN(rule.jsVal) && isExactlyNaN(num))
@@ -200,7 +199,7 @@ exports.serializeNumber = function (num) {
  * @param {number|string} storedNum
  * @returns {number|NaN}
  */
-exports.deserializeNumber = function (storedNum) {
+toExport.deserializeNumber = function (storedNum) {
   var applicableRule = _.find(NUMBER_SERIALIZATION_RULES, function (rule) {
     return rule.jsonVal === storedNum;
   });
@@ -215,7 +214,7 @@ exports.deserializeNumber = function (storedNum) {
  * @param {Array} spec
  * @returns {Array}
  */
-exports.scrubHeaderSpecForBackwardsCompatibility = function (spec) {
+toExport.scrubHeaderSpecForBackwardsCompatibility = function (spec) {
   var foundOldFormat = false;
   var scrubbedSpec = [];
   spec.forEach(function (specEntry) {
@@ -247,16 +246,16 @@ exports.scrubHeaderSpecForBackwardsCompatibility = function (spec) {
  *          converted or cleaned.
  * @private
  */
-exports.scrubLevelConfiguration_ = function (levelConfig) {
+toExport.scrubLevelConfiguration_ = function (levelConfig) {
   var scrubbedLevel = _.cloneDeep(levelConfig);
 
   // Convert old header spec format to new header spec format
   scrubbedLevel.routerExpectsPacketHeader =
-    exports.scrubHeaderSpecForBackwardsCompatibility(
+    toExport.scrubHeaderSpecForBackwardsCompatibility(
       scrubbedLevel.routerExpectsPacketHeader
     );
   scrubbedLevel.clientInitialPacketHeader =
-    exports.scrubHeaderSpecForBackwardsCompatibility(
+    toExport.scrubHeaderSpecForBackwardsCompatibility(
       scrubbedLevel.clientInitialPacketHeader
     );
 
@@ -265,7 +264,7 @@ exports.scrubLevelConfiguration_ = function (levelConfig) {
 
   // Explicitly list fields that we suspect may have a string value that
   // needs to be converted to a number, like "Infinity"
-  scrubbedLevel.defaultPacketSizeLimit = exports.deserializeNumber(
+  scrubbedLevel.defaultPacketSizeLimit = toExport.deserializeNumber(
     scrubbedLevel.defaultPacketSizeLimit
   );
 
@@ -274,16 +273,16 @@ exports.scrubLevelConfiguration_ = function (levelConfig) {
     scrubbedLevel.defaultPacketSizeLimit = 8192;
   }
 
-  scrubbedLevel.defaultBitRateBitsPerSecond = exports.deserializeNumber(
+  scrubbedLevel.defaultBitRateBitsPerSecond = toExport.deserializeNumber(
     scrubbedLevel.defaultBitRateBitsPerSecond
   );
-  scrubbedLevel.defaultChunkSizeBits = exports.deserializeNumber(
+  scrubbedLevel.defaultChunkSizeBits = toExport.deserializeNumber(
     scrubbedLevel.defaultChunkSizeBits
   );
-  scrubbedLevel.defaultRouterBandwidth = exports.deserializeNumber(
+  scrubbedLevel.defaultRouterBandwidth = toExport.deserializeNumber(
     scrubbedLevel.defaultRouterBandwidth
   );
-  scrubbedLevel.defaultRouterMemory = exports.deserializeNumber(
+  scrubbedLevel.defaultRouterMemory = toExport.deserializeNumber(
     scrubbedLevel.defaultRouterMemory
   );
 
@@ -318,7 +317,7 @@ exports.scrubLevelConfiguration_ = function (levelConfig) {
  * @param {number} bits
  * @returns {string} - localized string representation of size in bytes
  */
-exports.bitsToLocalizedRoundedBytesize = function (bits) {
+toExport.bitsToLocalizedRoundedBytesize = function (bits) {
   if (bits === Infinity) {
     return i18n.unlimited();
   }
@@ -352,7 +351,7 @@ exports.bitsToLocalizedRoundedBytesize = function (bits) {
  * @param {number} bitsPerSecond
  * @returns {string} - localized string representation of speed in bits
  */
-exports.bitrateToLocalizedRoundedBitrate = function (bitsPerSecond) {
+toExport.bitrateToLocalizedRoundedBitrate = function (bitsPerSecond) {
   if (bitsPerSecond === Infinity) {
     return i18n.unlimited();
   }
@@ -376,12 +375,12 @@ exports.bitrateToLocalizedRoundedBitrate = function (bitsPerSecond) {
   return i18n.x_bps({x: bps});
 };
 
-exports.zeroPadLeft = function (string, desiredWidth) {
+toExport.zeroPadLeft = function (string, desiredWidth) {
   var padding = '0'.repeat(desiredWidth);
   return (padding + string).slice(-desiredWidth);
 };
 
-exports.zeroPadRight = function (string, desiredWidth) {
+toExport.zeroPadRight = function (string, desiredWidth) {
   var padding = '0'.repeat(desiredWidth);
   return (string + padding).substr(0, desiredWidth);
 };
@@ -391,7 +390,7 @@ exports.zeroPadRight = function (string, desiredWidth) {
  * @param {NetSimPanel} onPanel
  * @static
  */
-exports.makeContinueButton = function (onPanel) {
+toExport.makeContinueButton = function (onPanel) {
   onPanel.addButton(
     i18n.continueButton({caret: '<i class="fa fa-caret-right"></i>'}),
     function (jQueryEvent) {
@@ -411,7 +410,7 @@ exports.makeContinueButton = function (onPanel) {
  * @param {string} shardID
  * @returns {boolean}
  */
-exports.doesUserOwnShard = function (user, shardID) {
+toExport.doesUserOwnShard = function (user, shardID) {
   if (!user) {
     return false;
   } else if (user.isAdmin) {
@@ -435,12 +434,22 @@ exports.doesUserOwnShard = function (user, shardID) {
  * @param {!Location|HTMLHyperlinkElementUtils} loc
  * @return {string} a level 'slug' like 's-csp1-lessons-3-levels-2'
  */
-exports.getUniqueLevelKeyFromLocation = function (loc) {
+toExport.getUniqueLevelKeyFromLocation = function (loc) {
   return loc.pathname // something like '/s/csp1-2019/lessons/3/levels/2'
     .replace(/^\//, '') // Strip leading slash from pathname
     .replace(/\/$/, '') // Strip trailing slash (if it exists)
     .replace(/\W/g, '-'); // Replace non-word characters with dashes
 };
 
-export default exports;
-export const {doesUserOwnShard, shouldShowTab} = exports;
+export {toExport as default};
+export const {
+  deserializeNumber,
+  doesUserOwnShard,
+  jQuerySvgElement,
+  forEachEnumValue,
+  getEncodingLabel,
+  serializeNumber,
+  shouldShowTab,
+  zeroPadLeft,
+  zeroPadRight,
+} = toExport;

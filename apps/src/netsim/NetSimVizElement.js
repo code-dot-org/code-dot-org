@@ -2,8 +2,8 @@
  * @overview Base type for visible elements in the visualization.
  */
 
-var jQuerySvgElement = require('./NetSimUtils').jQuerySvgElement;
-var tweens = require('./tweens');
+import {jQuerySvgElement} from './NetSimUtils';
+import tweens from './tweens';
 
 /**
  * A VizElement is an object that  has a representation in the network
@@ -14,7 +14,7 @@ var tweens = require('./tweens');
  *
  * @constructor
  */
-var NetSimVizElement = (module.exports = function () {
+export default function NetSimVizElement() {
   /**
    * @type {number}
    */
@@ -45,7 +45,7 @@ var NetSimVizElement = (module.exports = function () {
   /**
    * Set of tweens we should currently be running on this node.
    * Processed by tick()
-   * @type {Array.<exports.TweenValueTo>}
+   * @type {Array.<tweens.TweenValueTo>}
    * @private
    */
   this.tweens_ = [];
@@ -55,7 +55,7 @@ var NetSimVizElement = (module.exports = function () {
    * @private
    */
   this.isDead_ = false;
-});
+}
 
 /**
  * @returns {jQuery} wrapper around root <g> element

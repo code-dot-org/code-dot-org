@@ -11,7 +11,7 @@ import commonMsg from '@cdo/locale';
 import skinsBase from '../skins';
 import {loadStarWarsGrid, loadStarWarsEvents} from './starwars/skins.js';
 
-var exports = {};
+const toExport = {};
 
 // Standard Twitter options matching defaults in FeedbackUtils.createSharingDiv
 // Use to avoid "story" reference in share text for a given skin.
@@ -867,7 +867,7 @@ function loadStudio(skin) {
   ];
 }
 
-exports.load = function (assetUrl, id) {
+toExport.load = function (assetUrl, id) {
   var skin = skinsBase.load(assetUrl, id);
 
   // NOTE: all class names should be unique.  eventhandler naming won't work
@@ -1061,4 +1061,4 @@ exports.load = function (assetUrl, id) {
   return skin;
 };
 
-export default exports;
+export {toExport as default};

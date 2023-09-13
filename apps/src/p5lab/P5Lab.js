@@ -18,7 +18,7 @@ import {
 import JavaScriptModeErrorHandler from '@cdo/apps/JavaScriptModeErrorHandler';
 import BlocklyModeErrorHandler from '@cdo/apps/BlocklyModeErrorHandler';
 import CustomMarshalingInterpreter from '@cdo/apps/lib/tools/jsinterpreter/CustomMarshalingInterpreter';
-import apiJavascript from './gamelab/apiJavascript';
+import * as apiJavascript from './gamelab/apiJavascript';
 import consoleApi from '@cdo/apps/consoleApi';
 import {quote} from '@cdo/apps/utils';
 import dropletConfig from './gamelab/dropletConfig';

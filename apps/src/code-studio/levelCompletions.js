@@ -1,6 +1,6 @@
 import $ from 'jquery';
 
-let exports = {};
+const toExport = {};
 
 /**
  * Shows the samplingMessage and completionTable DOM elements depending on the
@@ -9,7 +9,7 @@ let exports = {};
  * @param {boolean} isSampled - whether Google Analytics sampled.
  * @param {boolean} startDatePresent - whether a start_date parameter was given.
  */
-exports.hideAndShowDomElements = function (isSampled, startDatePresent) {
+toExport.hideAndShowDomElements = function (isSampled, startDatePresent) {
   if (isSampled) {
     $('#samplingMessage').show();
   }
@@ -118,7 +118,7 @@ function timeOnSiteRenderer(
 /**
  * Populates the completionTable DOM element.
  */
-exports.populateTable = function (headers, data) {
+toExport.populateTable = function (headers, data) {
   $('#completionTable').handsontable({
     data: data,
     startRows: 10,
@@ -184,4 +184,4 @@ exports.populateTable = function (headers, data) {
   });
 };
 
-export default exports;
+export {toExport as default};

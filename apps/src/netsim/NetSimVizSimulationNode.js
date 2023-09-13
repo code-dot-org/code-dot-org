@@ -2,13 +2,12 @@
  * @overview Nodes in the visualization that map to simulation entities.
  */
 
-require('../utils'); // Provides Function.prototype.inherits
-var NetSimConstants = require('./NetSimConstants');
-var NetSimVizNode = require('./NetSimVizNode');
+import {setupFunctionPrototypeInherits} from '../utils';
+import {NodeType} from './NetSimConstants';
+import NetSimVizNode from './NetSimVizNode';
+import NetSimGlobals from './NetSimGlobals';
 
-var NodeType = NetSimConstants.NodeType;
-
-var NetSimGlobals = require('./NetSimGlobals');
+setupFunctionPrototypeInherits(Function);
 
 /**
  * @param {NetSimNode} sourceNode
@@ -17,7 +16,7 @@ var NetSimGlobals = require('./NetSimGlobals');
  * @constructor
  * @augments NetSimVizNode
  */
-var NetSimVizSimulationNode = (module.exports = function (
+export default function NetSimVizSimulationNode(
   sourceNode,
   useBackgroundAnimation
 ) {
@@ -44,7 +43,7 @@ var NetSimVizSimulationNode = (module.exports = function (
 
   this.configureFrom(sourceNode);
   this.render();
-});
+}
 NetSimVizSimulationNode.inherits(NetSimVizNode);
 
 /**

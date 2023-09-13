@@ -3,9 +3,7 @@
  *           and default values for that object.
  */
 
-var NetSimConstants = require('./NetSimConstants');
-var MessageGranularity = NetSimConstants.MessageGranularity;
-var DnsMode = NetSimConstants.DnsMode;
+import {DnsMode, MessageGranularity} from './NetSimConstants';
 
 /**
  * A level configuration that can be used by NetSim
@@ -167,7 +165,6 @@ var DnsMode = NetSimConstants.DnsMode;
 /*
  * Configuration for all levels.
  */
-var levels = (module.exports = {});
 
 /**
  * A default level configuration so that we can define the others by delta.
@@ -175,7 +172,7 @@ var levels = (module.exports = {});
  * should start with this one and disable features.
  * @type {NetSimLevelConfiguration}
  */
-levels.custom = {
+export const custom = {
   // Lobby configuration
   showClientsInLobby: false,
   showRoutersInLobby: false,
@@ -243,7 +240,7 @@ levels.custom = {
  * Never used when serving NetSim levels through dashboard.
  * @type {NetSimLevelConfiguration}
  */
-levels.playground = {
+export const playground = {
   // Lobby configuration
   showClientsInLobby: false,
   showRoutersInLobby: true,
@@ -316,4 +313,9 @@ levels.playground = {
   // DNS tab and its controls
   showDnsModeControl: true,
   defaultDnsMode: DnsMode.NONE,
+};
+
+export default {
+  custom,
+  playground,
 };

@@ -1,13 +1,12 @@
 /**
  * @overview Simulation entity for a message between two nodes.
  */
-var utils = require('../utils'); // Provides Function.prototype.inherits
-var NetSimEntity = require('./NetSimEntity');
-var DataConverters = require('./DataConverters');
-var base64ToBinary = DataConverters.base64ToBinary;
-var binaryToBase64 = DataConverters.binaryToBase64;
-var NetSimLogger = require('./NetSimLogger');
+import {setupFunctionPrototypeInherits, valueOr} from '../utils';
+import NetSimEntity from './NetSimEntity';
+import {base64ToBinary, binaryToBase64} from './DataConverters';
+import NetSimLogger from './NetSimLogger';
 
+setupFunctionPrototypeInherits(Function);
 var logger = NetSimLogger.getSingleton();
 
 /**
@@ -51,7 +50,7 @@ var logger = NetSimLogger.getSingleton();
  * @augments NetSimEntity
  * @implements MessageData
  */
-var NetSimMessage = (module.exports = function (shard, messageRow) {
+export default function NetSimMessage(shard, messageRow) {
   messageRow = messageRow !== undefined ? messageRow : {};
   NetSimEntity.call(this, shard, messageRow);
 
@@ -95,14 +94,14 @@ var NetSimMessage = (module.exports = function (shard, messageRow) {
    * will actually lead to its destination.
    * @type {number}
    */
-  this.extraHopsRemaining = utils.valueOr(messageRow.extraHopsRemaining, 0);
+  this.extraHopsRemaining = valueOr(messageRow.extraHopsRemaining, 0);
 
   /**
    * A history of router node IDs this message has visited.
    * @type {number[]}
    */
-  this.visitedNodeIDs = utils.valueOr(messageRow.visitedNodeIDs, []);
-});
+  this.visitedNodeIDs = valueOr(messageRow.visitedNodeIDs, []);
+}
 NetSimMessage.inherits(NetSimEntity);
 
 /**
@@ -119,8 +118,8 @@ NetSimMessage.buildRowFromData = function (messageData) {
     toNodeID: messageData.toNodeID,
     simulatedBy: messageData.simulatedBy,
     base64Payload: binaryToBase64(messageData.payload),
-    extraHopsRemaining: utils.valueOr(messageData.extraHopsRemaining, 0),
-    visitedNodeIDs: utils.valueOr(messageData.visitedNodeIDs, []),
+    extraHopsRemaining: valueOr(messageData.extraHopsRemaining, 0),
+    visitedNodeIDs: valueOr(messageData.visitedNodeIDs, []),
   };
 };
 

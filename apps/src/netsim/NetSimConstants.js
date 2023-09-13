@@ -6,55 +6,55 @@
  * @type {number}
  * @const
  */
-exports.BITS_PER_NIBBLE = 4;
+export const BITS_PER_NIBBLE = 4;
 
 /**
  * @type {number}
  * @const
  */
-exports.BITS_PER_BYTE = 8;
+export const BITS_PER_BYTE = 8;
 
 /**
  * @type {number}
  * @const
  */
-exports.BITS_PER_KILOBYTE = 1024 * exports.BITS_PER_BYTE;
+export const BITS_PER_KILOBYTE = 1024 * BITS_PER_BYTE;
 
 /**
  * @type {number}
  * @const
  */
-exports.BITS_PER_MEGABYTE = 1024 * exports.BITS_PER_KILOBYTE;
+export const BITS_PER_MEGABYTE = 1024 * BITS_PER_KILOBYTE;
 
 /**
  * @type {number}
  * @const
  */
-exports.BITS_PER_GIGABYTE = 1024 * exports.BITS_PER_MEGABYTE;
+export const BITS_PER_GIGABYTE = 1024 * BITS_PER_MEGABYTE;
 
 /**
  * @type {number}
  * @const
  */
-exports.BITS_PER_KILOBIT = 1024;
+export const BITS_PER_KILOBIT = 1024;
 
 /**
  * @type {number}
  * @const
  */
-exports.BITS_PER_MEGABIT = 1024 * exports.BITS_PER_KILOBIT;
+export const BITS_PER_MEGABIT = 1024 * BITS_PER_KILOBIT;
 
 /**
  * @type {number}
  * @const
  */
-exports.BITS_PER_GIGABIT = 1024 * exports.BITS_PER_MEGABIT;
+export const BITS_PER_GIGABIT = 1024 * BITS_PER_MEGABIT;
 
 /**
  * Types of nodes that can show up in the simulation.
  * @enum {string}
  */
-exports.NodeType = {
+export const NodeType = {
   CLIENT: 'client',
   ROUTER: 'router',
 };
@@ -65,7 +65,7 @@ exports.NodeType = {
  * 2 and up)
  * @enum {string}
  */
-exports.MessageGranularity = {
+export const MessageGranularity = {
   PACKETS: 'packets',
   BITS: 'bits',
 };
@@ -75,7 +75,7 @@ exports.MessageGranularity = {
  * to a router.
  * @enum {string}
  */
-exports.DnsMode = {
+export const DnsMode = {
   /** There is no DNS node.  Everyone can see every other node's address. */
   NONE: 'none',
 
@@ -94,7 +94,7 @@ exports.DnsMode = {
  * Map to class-names that can be applied to related table rows.
  * @enum {string}
  */
-exports.EncodingType = {
+export const EncodingType = {
   /** Renders each chunk of bits (using variable chunksize) in ascii */
   ASCII: 'ascii',
 
@@ -117,7 +117,7 @@ exports.EncodingType = {
  * Enumeration of tabs for level configuration
  * @enum {string}
  */
-exports.NetSimTabType = {
+export const NetSimTabType = {
   INSTRUCTIONS: 'instructions',
   MY_DEVICE: 'my_device',
   ROUTER: 'router',
@@ -131,7 +131,7 @@ exports.NetSimTabType = {
  * Map to class-names that can be applied to related table cells.
  * @enum {string}
  */
-exports.PacketUIColumnType = {
+export const PacketUIColumnType = {
   ENCODING_LABEL: 'encodingLabel',
   TO_ADDRESS: 'toAddress',
   FROM_ADDRESS: 'fromAddress',

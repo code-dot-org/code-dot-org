@@ -1,10 +1,12 @@
 /**
  * @overview A base class for all simulation node entities.
  */
-require('../utils'); // Provides Function.prototype.inherits
-var i18n = require('@cdo/netsim/locale');
-var NetSimEntity = require('./NetSimEntity');
-var NetSimWire = require('./NetSimWire');
+import {setupFunctionPrototypeInherits} from '../utils';
+import i18n from '@cdo/netsim/locale';
+import NetSimEntity from './NetSimEntity';
+import NetSimWire from './NetSimWire';
+
+setupFunctionPrototypeInherits(Function);
 
 /**
  * Client model of simulated network entity, which lives
@@ -18,7 +20,7 @@ var NetSimWire = require('./NetSimWire');
  * @constructor
  * @augments NetSimEntity
  */
-var NetSimNode = (module.exports = function (shard, nodeRow) {
+export default function NetSimNode(shard, nodeRow) {
   nodeRow = nodeRow !== undefined ? nodeRow : {};
   NetSimEntity.call(this, shard, nodeRow);
 
@@ -27,7 +29,7 @@ var NetSimNode = (module.exports = function (shard, nodeRow) {
    * @private
    */
   this.displayName_ = nodeRow.name;
-});
+}
 NetSimNode.inherits(NetSimEntity);
 
 /**

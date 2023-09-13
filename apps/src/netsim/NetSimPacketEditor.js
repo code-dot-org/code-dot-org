@@ -10,38 +10,39 @@ import {KeyCodes} from '../constants';
 import NetSimEncodingControl from './NetSimEncodingControl';
 import NetSimLogPanel from './NetSimLogPanel';
 import Packet from './Packet';
-import DataConverters from './DataConverters';
-import NetSimConstants from './NetSimConstants';
+import {BITS_PER_BYTE, EncodingType} from './NetSimConstants';
 import NetSimGlobals from './NetSimGlobals';
 
-var EncodingType = NetSimConstants.EncodingType;
-var BITS_PER_BYTE = NetSimConstants.BITS_PER_BYTE;
-
-var minifyBinary = DataConverters.minifyBinary;
-var formatAB = DataConverters.formatAB;
-var formatBinary = DataConverters.formatBinary;
-var formatHex = DataConverters.formatHex;
-var alignDecimal = DataConverters.alignDecimal;
-var abToBinary = DataConverters.abToBinary;
-var abToInt = DataConverters.abToInt;
-var binaryToAB = DataConverters.binaryToAB;
-var binaryToHex = DataConverters.binaryToHex;
-var binaryToInt = DataConverters.binaryToInt;
-var binaryToDecimal = DataConverters.binaryToDecimal;
-var binaryToAscii = DataConverters.binaryToAscii;
-var hexToBinary = DataConverters.hexToBinary;
-var intToAB = DataConverters.intToAB;
-var intToBinary = DataConverters.intToBinary;
-var intToHex = DataConverters.intToHex;
-var decimalToBinary = DataConverters.decimalToBinary;
-var asciiToBinary = DataConverters.asciiToBinary;
+import {
+  abToBinary,
+  abToInt,
+  addressStringToBinary,
+  alignDecimal,
+  asciiToBinary,
+  binaryToAB,
+  binaryToAddressString,
+  binaryToAscii,
+  binaryToDecimal,
+  binaryToHex,
+  binaryToInt,
+  decimalToBinary,
+  formatAB,
+  formatBinary,
+  formatBinaryForAddressHeader,
+  formatHex,
+  hexToBinary,
+  intToAB,
+  intToBinary,
+  intToHex,
+  minifyBinary,
+} from './DataConverters';
 
 /**
  * Type for tructured access to jQuery-wrapped DOM elements.  Two layers deep;
  * can be used for quick access to one of the fields in the packet editor grid
  * by referencing via row and column.
  *
- * Map keys at the first layer correspond to NetSimConstants.EncodingType.
+ * Map keys at the first layer correspond to EncodingType.
  * Map keys at the second layer correspond to Packet.HeaderType, plus the
  *   'message' field.
  *
@@ -99,10 +100,7 @@ export default function NetSimPacketEditor(initialConfig) {
       typeName: EncodingType.A_AND_B,
       addressFieldAllowedCharacters: /[AB\s]/i,
       addressFieldConversion: function (abString) {
-        return DataConverters.binaryToAddressString(
-          DataConverters.abToBinary(abString),
-          level.addressFormat
-        );
+        return binaryToAddressString(abToBinary(abString), level.addressFormat);
       },
       shortNumberAllowedCharacters: /[AB]/i,
       shortNumberConversion: truncatedABToInt,
@@ -113,10 +111,7 @@ export default function NetSimPacketEditor(initialConfig) {
       typeName: EncodingType.BINARY,
       addressFieldAllowedCharacters: /[01\s]/i,
       addressFieldConversion: function (binaryString) {
-        return DataConverters.binaryToAddressString(
-          binaryString,
-          level.addressFormat
-        );
+        return binaryToAddressString(binaryString, level.addressFormat);
       },
       shortNumberAllowedCharacters: /[01]/,
       shortNumberConversion: truncatedBinaryToInt,
@@ -127,8 +122,8 @@ export default function NetSimPacketEditor(initialConfig) {
       typeName: EncodingType.HEXADECIMAL,
       addressFieldAllowedCharacters: /[0-9a-f\s]/i,
       addressFieldConversion: function (hexString) {
-        return DataConverters.binaryToAddressString(
-          DataConverters.hexToBinary(hexString),
+        return binaryToAddressString(
+          hexToBinary(hexString),
           level.addressFormat
         );
       },
@@ -181,13 +176,12 @@ export default function NetSimPacketEditor(initialConfig) {
 
   /** @type {string} */
   this.toAddress =
-    initialConfig.toAddress ||
-    DataConverters.binaryToAddressString('0', level.addressFormat);
+    initialConfig.toAddress || binaryToAddressString('0', level.addressFormat);
 
   /** @type {string} */
   this.fromAddress =
     initialConfig.fromAddress ||
-    DataConverters.binaryToAddressString('0', level.addressFormat);
+    binaryToAddressString('0', level.addressFormat);
 
   /** @type {number} */
   this.packetIndex =
@@ -666,11 +660,8 @@ var truncatedDecimalToInt = function (decimalString, maxWidth) {
  */
 var cleanAddressString = function (originalString) {
   var level = NetSimGlobals.getLevelConfig();
-  var binaryForm = DataConverters.addressStringToBinary(
-    originalString,
-    level.addressFormat
-  );
-  return DataConverters.binaryToAddressString(binaryForm, level.addressFormat);
+  var binaryForm = addressStringToBinary(originalString, level.addressFormat);
+  return binaryToAddressString(binaryForm, level.addressFormat);
 };
 
 /**
@@ -979,28 +970,19 @@ NetSimPacketEditor.prototype.updateFields_ = function (skipElement) {
       asciiConverter;
     if (Packet.isAddressField(fieldName)) {
       abConverter = function (addressString) {
-        return DataConverters.binaryToAB(
-          DataConverters.addressStringToBinary(
-            addressString,
-            level.addressFormat
-          )
+        return binaryToAB(
+          addressStringToBinary(addressString, level.addressFormat)
         );
       };
       binaryConverter = function (addressString) {
-        return DataConverters.formatBinaryForAddressHeader(
-          DataConverters.addressStringToBinary(
-            addressString,
-            level.addressFormat
-          ),
+        return formatBinaryForAddressHeader(
+          addressStringToBinary(addressString, level.addressFormat),
           level.addressFormat
         );
       };
       hexConverter = function (addressString) {
-        return DataConverters.binaryToHex(
-          DataConverters.addressStringToBinary(
-            addressString,
-            level.addressFormat
-          )
+        return binaryToHex(
+          addressStringToBinary(addressString, level.addressFormat)
         );
       };
       decimalConverter = cleanAddressString;

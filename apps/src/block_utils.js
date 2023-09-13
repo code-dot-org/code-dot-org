@@ -5,13 +5,13 @@ import xml from './xml';
 const ATTRIBUTES_TO_CLEAN = ['uservisible', 'deletable', 'movable'];
 const DEFAULT_COLOR = [184, 1.0, 0.74];
 
-const exports = {};
+const toExport = {};
 
 /**
  * Create the xml for a level's toolbox
  * @param {string} blocks The xml of the blocks to go in the toolbox
  */
-exports.createToolbox = function (blocks) {
+toExport.createToolbox = function (blocks) {
   return '<xml id="toolbox" style="display: none;">' + blocks + '</xml>';
 };
 
@@ -24,9 +24,9 @@ const appendBlocks = function (toolboxDom, blockTypes) {
   });
   return xml.serialize(toolboxDom);
 };
-exports.appendBlocks = appendBlocks;
+toExport.appendBlocks = appendBlocks;
 
-exports.appendBlocksByCategory = function (toolboxXml, blocksByCategory) {
+toExport.appendBlocksByCategory = function (toolboxXml, blocksByCategory) {
   const parser = new DOMParser();
   const toolboxDom = parser.parseFromString(toolboxXml, 'text/xml');
   if (!toolboxDom.querySelector('category')) {
@@ -66,7 +66,7 @@ exports.appendBlocksByCategory = function (toolboxXml, blocksByCategory) {
  * @param {string} values.titleName Name of the title block
  * @param {string} values.titleValue Input value
  */
-exports.blockOfType = function (type, titles, values) {
+toExport.blockOfType = function (type, titles, values) {
   let inputText = '';
   if (titles) {
     for (let key in titles) {
@@ -88,9 +88,9 @@ exports.blockOfType = function (type, titles, values) {
 /*
  * Creates an XML node for an individual block. See blockOfType for params
  */
-exports.blockAsXmlNode = function (type, inputs = {}) {
+toExport.blockAsXmlNode = function (type, inputs = {}) {
   return xml.parseElement(
-    exports.blockOfType(type, inputs.titles, inputs.values)
+    toExport.blockOfType(type, inputs.titles, inputs.values)
   ).firstChild;
 };
 
@@ -101,7 +101,7 @@ exports.blockAsXmlNode = function (type, inputs = {}) {
  * @param {Object.<string,string>} [titles] Dictionary of titles mapping name to value
  * @param {string} child Xml for the child block
  */
-exports.blockWithNext = function (type, titles, child) {
+toExport.blockWithNext = function (type, titles, child) {
   var titleText = '';
   if (titles) {
     for (var key in titles) {
@@ -123,7 +123,7 @@ exports.blockWithNext = function (type, titles, child) {
  * Give a list of types, returns the xml assuming each block is a child of
  * the previous block.
  */
-exports.blocksFromList = function (types) {
+toExport.blocksFromList = function (types) {
   if (types.length === 1) {
     return this.blockOfType(types[0]);
   }
@@ -134,7 +134,7 @@ exports.blocksFromList = function (types) {
 /**
  * Create the xml for a category in a toolbox
  */
-exports.createCategory = function (name, blocks, custom) {
+toExport.createCategory = function (name, blocks, custom) {
   return (
     '<category name="' +
     name +
@@ -149,7 +149,7 @@ exports.createCategory = function (name, blocks, custom) {
 /**
  * Generate a simple block with a plain title and next/previous connectors.
  */
-exports.generateSimpleBlock = function (blockly, generator, options) {
+toExport.generateSimpleBlock = function (blockly, generator, options) {
   ['name', 'title', 'tooltip', 'functionName'].forEach(function (param) {
     if (!options[param]) {
       throw new Error('generateSimpleBlock requires param "' + param + '"');
@@ -192,7 +192,7 @@ exports.generateSimpleBlock = function (blockly, generator, options) {
  * @param blockDOM {Element}
  * @returns {*}
  */
-exports.domToBlock = function (blockDOM) {
+toExport.domToBlock = function (blockDOM) {
   return Blockly.Xml.domToBlock(Blockly.mainBlockSpace, blockDOM);
 };
 
@@ -202,8 +202,8 @@ exports.domToBlock = function (blockDOM) {
  * @param blockDOMString
  * @returns {*}
  */
-exports.domStringToBlock = function (blockDOMString) {
-  return exports.domToBlock(xml.parseElement(blockDOMString).firstChild);
+toExport.domStringToBlock = function (blockDOMString) {
+  return toExport.domToBlock(xml.parseElement(blockDOMString).firstChild);
 };
 
 /**
@@ -211,7 +211,7 @@ exports.domStringToBlock = function (blockDOMString) {
  * block inserted in front of the first non-function block.  If we already have
  * this block, does nothing.
  */
-exports.forceInsertTopBlock = function (input, blockType) {
+toExport.forceInsertTopBlock = function (input, blockType) {
   input = input || '';
 
   if (blockType === null || input.indexOf(blockType) !== -1) {
@@ -277,7 +277,7 @@ exports.forceInsertTopBlock = function (input, blockType) {
  * @param {number[]|string[]} args List of args, where each arg is either the
  *   xml for a child block, a number, or the name of a variable.
  */
-exports.calcBlockXml = function (type, args) {
+toExport.calcBlockXml = function (type, args) {
   var str = '<block type="' + type + '" inline="false">';
   for (var i = 1; i <= args.length; i++) {
     str += '<functional_input name="ARG' + i + '">';
@@ -291,7 +291,7 @@ exports.calcBlockXml = function (type, args) {
       // we have xml, dont make any changes
     } else {
       // we think we have a variable
-      arg = exports.calcBlockGetVar(arg);
+      arg = toExport.calcBlockGetVar(arg);
     }
     str += arg;
     str += '</functional_input>';
@@ -305,7 +305,7 @@ exports.calcBlockXml = function (type, args) {
  * @returns the xml for a functional_parameters_get block with the given
  *   variableName
  */
-exports.calcBlockGetVar = function (variableName) {
+toExport.calcBlockGetVar = function (variableName) {
   return (
     '' +
     '<block type="functional_parameters_get" uservisible="false">' +
@@ -326,7 +326,7 @@ exports.calcBlockGetVar = function (variableName) {
      xml for that input
  * @param {Object.<string.string>} [titles] Dictionary of titles mapping name to value
  */
-exports.mathBlockXml = function (type, inputs, titles) {
+toExport.mathBlockXml = function (type, inputs, titles) {
   var str = '<block type="' + type + '" inline="false">';
   for (var title in titles) {
     str += '<title name="' + title + '">' + titles[title] + '</title>';
@@ -353,7 +353,7 @@ exports.mathBlockXml = function (type, inputs, titles) {
  * @param {Object<string, string>[]} argList Name and type for each arg
  * @param {string} blockXml Xml for the blocks that actually define the function
  */
-exports.functionalDefinitionXml = function (
+toExport.functionalDefinitionXml = function (
   name,
   outputType,
   argList,
@@ -384,7 +384,7 @@ exports.functionalDefinitionXml = function (
  * @param {string} name The name of the function
  * @param {Object<string, string>[]} argList Name and type for each arg
  */
-exports.functionalCallXml = function (name, argList, inputContents) {
+toExport.functionalCallXml = function (name, argList, inputContents) {
   if (argList.length !== inputContents.length) {
     throw new Error('must define contents for each arg');
   }
@@ -413,7 +413,7 @@ exports.functionalCallXml = function (name, argList, inputContents) {
  * Removes all the deletable, movable, and uservisible attributes from the
  * blocks in blocksDom.
  */
-exports.cleanBlocks = function (blocksDom) {
+toExport.cleanBlocks = function (blocksDom) {
   xml.visitAll(blocksDom, block => {
     if (!block.getAttribute) {
       return;
@@ -426,7 +426,7 @@ exports.cleanBlocks = function (blocksDom) {
  * Adds any functions from functionsXml to blocksXml. If a function with the
  * same id is already present in blocksXml, it won't be added again.
  */
-exports.appendNewFunctions = function (blocksXml, functionsXml) {
+toExport.appendNewFunctions = function (blocksXml, functionsXml) {
   const startBlocksDom = xml.parseElement(blocksXml);
   const sharedFunctionsDom = xml.parseElement(functionsXml);
   const functions = [...sharedFunctionsDom.ownerDocument.firstChild.childNodes];
@@ -569,7 +569,7 @@ const findAndRemoveInputConfig = (args, inputName) => {
  *
  * @returns {LabeledInputConfig[]} a list of labeled inputs
  */
-const determineInputs = function (text, args, strictTypes = []) {
+export const determineInputs = function (text, args, strictTypes = []) {
   const tokens = text.match(LABELED_INPUTS_REGEX);
   if (tokens.length && tokens[tokens.length - 1] === '') {
     tokens.pop();
@@ -636,7 +636,7 @@ const determineInputs = function (text, args, strictTypes = []) {
   }
   return inputs;
 };
-exports.determineInputs = determineInputs;
+toExport.determineInputs = determineInputs;
 
 /**
  * @type {Object.<string, InputType>}
@@ -782,7 +782,10 @@ const STANDARD_INPUT_TYPES = {
   },
 };
 
-const groupInputsByRow = function (inputs, inputTypes = STANDARD_INPUT_TYPES) {
+export const groupInputsByRow = function (
+  inputs,
+  inputTypes = STANDARD_INPUT_TYPES
+) {
   const inputRows = [];
   let lastGroup = [];
   inputRows.push(lastGroup);
@@ -801,7 +804,7 @@ const groupInputsByRow = function (inputs, inputTypes = STANDARD_INPUT_TYPES) {
   }
   return inputRows;
 };
-exports.groupInputsByRow = groupInputsByRow;
+toExport.groupInputsByRow = groupInputsByRow;
 
 /**
  * Adds the specified inputs to the block
@@ -813,7 +816,7 @@ exports.groupInputsByRow = groupInputsByRow;
  *   their definitions,
  * @param {boolean} inline Whether inputs are being rendered inline
  */
-const interpolateInputs = function (
+export const interpolateInputs = function (
   blockly,
   block,
   inputRows,
@@ -843,7 +846,7 @@ const interpolateInputs = function (
     lastInput.appendField(lastInputConfig.label);
   });
 };
-exports.interpolateInputs = interpolateInputs;
+toExport.interpolateInputs = interpolateInputs;
 
 /**
  * Create a block generator that creates blocks that directly map to a javascript
@@ -859,7 +862,7 @@ exports.interpolateInputs = interpolateInputs;
  * @returns {function} A function that takes a bunch of block properties and
  *   adds a block to the blockly.Blocks object. See param documentation below.
  */
-exports.createJsWrapperBlockCreator = function (
+toExport.createJsWrapperBlockCreator = function (
   blockly,
   strictTypes,
   defaultObjectType,
@@ -1198,12 +1201,12 @@ exports.createJsWrapperBlockCreator = function (
   };
 };
 
-exports.installCustomBlocks = function ({
+toExport.installCustomBlocks = function ({
   blockly,
   blockDefinitions,
   customInputTypes,
 }) {
-  const createJsWrapperBlock = exports.createJsWrapperBlockCreator(
+  const createJsWrapperBlock = toExport.createJsWrapperBlockCreator(
     blockly,
     [
       // Strict Types
@@ -1261,7 +1264,7 @@ const sanitizeOptions = function (dropdownOptions) {
   );
 };
 
-export default exports;
+export {toExport as default};
 export const {
   appendBlocksByCategory,
   appendNewFunctions,
@@ -1284,4 +1287,4 @@ export const {
   installCustomBlocks,
   mathBlockXml,
   simpleBlock,
-} = exports;
+} = toExport;

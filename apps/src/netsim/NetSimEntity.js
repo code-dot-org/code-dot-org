@@ -12,7 +12,7 @@
  * @param {Object} [entityRow] JSON row from table.
  * @constructor
  */
-var NetSimEntity = (module.exports = function (shard, entityRow) {
+export default function NetSimEntity(shard, entityRow) {
   if (entityRow === undefined) {
     entityRow = {};
   }
@@ -34,7 +34,7 @@ var NetSimEntity = (module.exports = function (shard, entityRow) {
    * @type {string}
    */
   this.uuid = entityRow.uuid;
-});
+}
 
 /**
  * Static async creation method.  Creates a new entity on the given shard,
@@ -134,7 +134,7 @@ NetSimEntity.destroyEntities = function (entities, onComplete) {
   var entityIDs = entities.map(function (entity) {
     if (entity.getTable() !== table) {
       throw new Error(
-        'destroyEntities requires all entities to be in the same table'
+        'destroyEntities needs all entities to be in the same table'
       );
     }
     return entity.entityID;

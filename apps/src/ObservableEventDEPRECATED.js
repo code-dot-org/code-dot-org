@@ -5,14 +5,14 @@
  * @deprecated Use EventEmitter instead, which you can import from the events module.
  *             See https://nodejs.org/api/events.html
  */
-var ObservableEventDEPRECATED = (module.exports = function () {
+function ObservableEventDEPRECATED() {
   /**
    * Objects observing this.
    * @type {Array}
    * @private
    */
   this.observerList_ = [];
-});
+}
 
 /**
  * Subscribe a method to be called when notifyObservers is called.
@@ -54,3 +54,5 @@ ObservableEventDEPRECATED.prototype.notifyObservers = function () {
     observer.toCall.apply(undefined, args);
   });
 };
+
+export {ObservableEventDEPRECATED as default};

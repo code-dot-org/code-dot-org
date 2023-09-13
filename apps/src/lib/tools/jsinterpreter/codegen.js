@@ -6,9 +6,9 @@ import * as utils from '../../../utils';
  * values must stay in sync with interpreter.js
  */
 
-var exports = {};
+const toExport = {};
 
-exports.ForStatementMode = {
+toExport.ForStatementMode = {
   INIT: 0,
   TEST: 1,
   BODY: 2,
@@ -115,7 +115,7 @@ function populateJSFunctions(interpreter) {
  * globalObjects (optional): objects containing functions to placed in a new scope
  *  created beneath the supplied scope.
  */
-exports.initJSInterpreter = function (
+toExport.initJSInterpreter = function (
   interpreter,
   blocks,
   blockFilter,
@@ -157,7 +157,7 @@ exports.initJSInterpreter = function (
  * Check to see if it is safe to step the interpreter while we are unwinding.
  * (Called repeatedly after completing a step where the node was marked 'done')
  */
-exports.isNextStepSafeWhileUnwinding = function (interpreter) {
+toExport.isNextStepSafeWhileUnwinding = function (interpreter) {
   var state = interpreter.peekStackFrame();
   var type = state.node.type;
   if (state.done_) {
@@ -211,7 +211,7 @@ exports.isNextStepSafeWhileUnwinding = function (interpreter) {
 // Usage
 // var lengthArray = calculateCumulativeLength(editor.getSession());
 // Need to call this only if the document is updated after the last call.
-exports.calculateCumulativeLength = function (code) {
+toExport.calculateCumulativeLength = function (code) {
   var regex = /\n/g,
     result = [];
   do {
@@ -228,7 +228,7 @@ exports.calculateCumulativeLength = function (code) {
 // Usage
 // var row = aceFindRow(lengthArray, 0, lengthArray.length, 2512);
 // tries to find 2512th character lies in which row.
-exports.aceFindRow = function (cumulativeLength, rows, rowe, pos) {
+toExport.aceFindRow = function (cumulativeLength, rows, rowe, pos) {
   if (rows > rowe) {
     return null;
   }
@@ -239,14 +239,14 @@ exports.aceFindRow = function (cumulativeLength, rows, rowe, pos) {
   var mid = Math.floor((rows + rowe) / 2);
 
   if (pos < cumulativeLength[mid]) {
-    return exports.aceFindRow(cumulativeLength, rows, mid, pos);
+    return toExport.aceFindRow(cumulativeLength, rows, mid, pos);
   } else if (pos > cumulativeLength[mid]) {
-    return exports.aceFindRow(cumulativeLength, mid, rowe, pos);
+    return toExport.aceFindRow(cumulativeLength, mid, rowe, pos);
   }
   return mid;
 };
 
-exports.isAceBreakpointRow = function (session, userCodeRow) {
+toExport.isAceBreakpointRow = function (session, userCodeRow) {
   if (!session) {
     return false;
   }
@@ -310,7 +310,7 @@ function highlightAceLines(
  * This function simply highlights one spot, not a range. It is typically used
  * to highlight where an error has occurred.
  */
-exports.selectEditorRowColError = function (editor, row, col) {
+toExport.selectEditorRowColError = function (editor, row, col) {
   if (!editor) {
     return;
   }
@@ -343,7 +343,7 @@ exports.selectEditorRowColError = function (editor, row, col) {
  * @param {boolean} allClasses When set to true, remove all classes of
  * highlights (including ace_step, ace_error, and anything else)
  */
-exports.clearDropletAceHighlighting = function (editor, allClasses) {
+toExport.clearDropletAceHighlighting = function (editor, allClasses) {
   if (editor.session && editor.session.currentlyUsingBlocks) {
     editor.clearLineMarks();
   }
@@ -366,14 +366,14 @@ function highlightCode(
   var selection = aceEditor.getSelection();
   var range = selection.getRange();
 
-  range.start.row = exports.aceFindRow(
+  range.start.row = toExport.aceFindRow(
     cumulativeLength,
     0,
     cumulativeLength.length,
     start
   );
   range.start.column = start - cumulativeLength[range.start.row];
-  range.end.row = exports.aceFindRow(
+  range.end.row = toExport.aceFindRow(
     cumulativeLength,
     0,
     cumulativeLength.length,
@@ -399,7 +399,7 @@ function highlightCode(
  *
  * @param {string} highlightClass CSS class to use when highlighting in ACE
  */
-exports.selectCurrentCode = function (
+toExport.selectCurrentCode = function (
   interpreter,
   cumulativeLength,
   userCodeStartOffset,
@@ -415,16 +415,16 @@ exports.selectCurrentCode = function (
       var mode = interpreter.peekStackFrame().mode_ || 0,
         subNode;
       switch (mode) {
-        case exports.ForStatementMode.INIT:
+        case toExport.ForStatementMode.INIT:
           subNode = node.init;
           break;
-        case exports.ForStatementMode.TEST:
+        case toExport.ForStatementMode.TEST:
           subNode = node.test;
           break;
-        case exports.ForStatementMode.BODY:
+        case toExport.ForStatementMode.BODY:
           subNode = node.body;
           break;
-        case exports.ForStatementMode.UPDATE:
+        case toExport.ForStatementMode.UPDATE:
           subNode = node.update;
           break;
         default:
@@ -442,7 +442,7 @@ exports.selectCurrentCode = function (
     // code (not inside code we inserted before or after their code that is
     // not visible in the editor):
     if (start >= 0 && start < userCodeLength && end <= userCodeLength) {
-      userCodeRow = exports.aceFindRow(
+      userCodeRow = toExport.aceFindRow(
         cumulativeLength,
         0,
         cumulativeLength.length,
@@ -470,15 +470,15 @@ exports.selectCurrentCode = function (
         );
       }
     } else {
-      exports.clearDropletAceHighlighting(editor);
+      toExport.clearDropletAceHighlighting(editor);
     }
   } else {
-    exports.clearDropletAceHighlighting(editor);
+    toExport.clearDropletAceHighlighting(editor);
   }
   return userCodeRow;
 };
 
-export default exports;
+export {toExport as default};
 
 export const {
   aceFindRow,
@@ -490,4 +490,4 @@ export const {
   isNextStepSafeWhileUnwinding,
   selectCurrentCode,
   selectEditorRowColError,
-} = exports;
+} = toExport;

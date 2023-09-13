@@ -77,7 +77,7 @@ import msg from '@cdo/locale';
  * @property {number} levelSourceId
  */
 
-var authoredHintUtils = {};
+const authoredHintUtils = {};
 
 authoredHintUtils.getFromLocalStorage_ = function (key, defaultValue) {
   var result = localStorage.getItem(key);
@@ -328,5 +328,6 @@ authoredHintUtils.currentOpenedHintCount = function (levelId) {
   }).length;
 };
 
-export default authoredHintUtils;
-export const {generateAuthoredHints} = authoredHintUtils;
+export {authoredHintUtils as default};
+export const {currentOpenedHintCount, generateAuthoredHints} =
+  authoredHintUtils;

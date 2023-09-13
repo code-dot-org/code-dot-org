@@ -13,7 +13,7 @@ var NetSimGlobals = require('./NetSimGlobals');
  * @param {string} binary
  * @constructor
  */
-var Packet = (module.exports = function (formatSpec, binary) {
+export default function Packet(formatSpec, binary) {
   var level = NetSimGlobals.getLevelConfig();
 
   /** @type {Packet.Encoder} */
@@ -25,7 +25,7 @@ var Packet = (module.exports = function (formatSpec, binary) {
 
   /** @type {string} of binary content */
   this.binary = binary;
-});
+}
 
 /**
  * Possible packet header fields.  Values to this enum become keys

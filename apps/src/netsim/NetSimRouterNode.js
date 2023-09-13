@@ -3,31 +3,24 @@
  *           auto-DNS system.
  */
 
-var utils = require('../utils'); // Provides Function.prototype.inherits
-var i18n = require('@cdo/netsim/locale');
-var NetSimConstants = require('./NetSimConstants');
-var NetSimUtils = require('./NetSimUtils');
-var NetSimNode = require('./NetSimNode');
-var NetSimEntity = require('./NetSimEntity');
-var NetSimLogEntry = require('./NetSimLogEntry');
-var NetSimLogger = require('./NetSimLogger');
-var NetSimWire = require('./NetSimWire');
-var NetSimMessage = require('./NetSimMessage');
-var ObservableEventDEPRECATED = require('../ObservableEventDEPRECATED');
-var Packet = require('./Packet');
-var DataConverters = require('./DataConverters');
-var NetSimNodeFactory = require('./NetSimNodeFactory');
+import _ from 'lodash';
+import {valueOr, setupFunctionPrototypeInherits} from '../utils';
+import * as utils from '../utils';
+import i18n from '@cdo/netsim/locale';
+import {deserializeNumber, serializeNumber} from './NetSimUtils';
+import NetSimNode from './NetSimNode';
+import NetSimEntity from './NetSimEntity';
+import NetSimLogEntry from './NetSimLogEntry';
+import NetSimLogger from './NetSimLogger';
+import NetSimWire from './NetSimWire';
+import NetSimMessage from './NetSimMessage';
+import ObservableEventDEPRECATED from '../ObservableEventDEPRECATED';
+import Packet from './Packet';
+import {asciiToBinary} from './DataConverters';
+import NetSimNodeFactory from './NetSimNodeFactory';
+import {DnsMode, NodeType, BITS_PER_BYTE} from './NetSimConstants';
 
-var _ = require('lodash');
-
-var serializeNumber = NetSimUtils.serializeNumber;
-var deserializeNumber = NetSimUtils.deserializeNumber;
-
-var asciiToBinary = DataConverters.asciiToBinary;
-
-var DnsMode = NetSimConstants.DnsMode;
-var NodeType = NetSimConstants.NodeType;
-var BITS_PER_BYTE = NetSimConstants.BITS_PER_BYTE;
+setupFunctionPrototypeInherits(Function);
 
 var logger = NetSimLogger.getSingleton();
 var NetSimGlobals = require('./NetSimGlobals');
@@ -105,7 +98,7 @@ var ADDRESS_OPTION_LIMIT = 4096;
  * @constructor
  * @augments NetSimNode
  */
-var NetSimRouterNode = (module.exports = function (shard, row) {
+export default function NetSimRouterNode(shard, row) {
   row = row !== undefined ? row : {};
   NetSimNode.call(this, shard, row);
 
@@ -122,7 +115,7 @@ var NetSimRouterNode = (module.exports = function (shard, row) {
    * Unix timestamp (local) of router creation time.
    * @type {number}
    */
-  this.creationTime = utils.valueOr(row.creationTime, Date.now());
+  this.creationTime = valueOr(row.creationTime, Date.now());
 
   /**
    * Sets current DNS mode for the router's local network.
@@ -130,7 +123,7 @@ var NetSimRouterNode = (module.exports = function (shard, row) {
    * @type {DnsMode}
    * @private
    */
-  this.dnsMode = utils.valueOr(row.dnsMode, levelConfig.defaultDnsMode);
+  this.dnsMode = valueOr(row.dnsMode, levelConfig.defaultDnsMode);
 
   /**
    * Sets current DNS node ID for the router's local network.
@@ -144,7 +137,7 @@ var NetSimRouterNode = (module.exports = function (shard, row) {
    * Speed (in bits per second) at which messages are processed.
    * @type {number}
    */
-  this.bandwidth = utils.valueOr(
+  this.bandwidth = valueOr(
     deserializeNumber(row.bandwidth),
     levelConfig.defaultRouterBandwidth
   );
@@ -154,7 +147,7 @@ var NetSimRouterNode = (module.exports = function (shard, row) {
    * dropping packets.
    * @type {number}
    */
-  this.memory = utils.valueOr(
+  this.memory = valueOr(
     deserializeNumber(row.memory),
     levelConfig.defaultRouterMemory
   );
@@ -164,7 +157,7 @@ var NetSimRouterNode = (module.exports = function (shard, row) {
    * reason.
    * @type {number}
    */
-  this.randomDropChance = utils.valueOr(
+  this.randomDropChance = valueOr(
     row.randomDropChance,
     levelConfig.defaultRandomDropChance
   );
@@ -307,7 +300,7 @@ var NetSimRouterNode = (module.exports = function (shard, row) {
    * @private
    */
   this.maxClientConnections_ = MAX_CLIENT_CONNECTIONS;
-});
+}
 NetSimRouterNode.inherits(NetSimNode);
 
 /**
@@ -1358,7 +1351,7 @@ NetSimRouterNode.prototype.getNextNodeTowardAddress_ = function (
   } else {
     var destinationWire = destinationNode.getOutgoingWire();
     if (destinationWire) {
-      destinationRouter = utils.valueOr(
+      destinationRouter = valueOr(
         _.find(nodes, function (node) {
           return node.entityID === destinationWire.remoteNodeID;
         }),
@@ -2019,7 +2012,7 @@ NetSimRouterNode.prototype.generateDnsResponse_ = function (
     var responses = requestMatch[1].split(/\s+/).map(
       function (queryHostname) {
         var address = this.getAddressForHostname_(queryHostname);
-        return queryHostname + ':' + utils.valueOr(address, AUTO_DNS_NOT_FOUND);
+        return queryHostname + ':' + valueOr(address, AUTO_DNS_NOT_FOUND);
       }.bind(this)
     );
     responseBody = responses.join(' ');

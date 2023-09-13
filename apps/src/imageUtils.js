@@ -153,7 +153,7 @@ export async function toCanvas(input) {
     context.drawImage(image, 0, 0);
     return canvas;
   } catch (err) {
-    throw new Error('Unable to convert input to canvas: ' + err);
+    throw new Error(`Unable to convert input to canvas: ${err.toString()}`);
   }
 }
 
@@ -174,7 +174,7 @@ export async function toImageData(input) {
       .getContext('2d')
       .getImageData(0, 0, canvas.width, canvas.height);
   } catch (err) {
-    throw new Error('Unable to convert input to ImageData: ' + err);
+    throw new Error(`Unable to convert input to ImageData: ${err.toString()}`);
   }
 }
 

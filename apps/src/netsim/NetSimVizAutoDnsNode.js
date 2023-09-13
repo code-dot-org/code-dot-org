@@ -2,9 +2,11 @@
  * @overview Visualization auto-dns node.
  */
 
-require('../utils'); // Provides Function.prototype.inherits
-var NetSimGlobals = require('./NetSimGlobals');
-var NetSimVizNode = require('./NetSimVizNode');
+import {setupFunctionPrototypeInherits} from '../utils';
+import NetSimGlobals from './NetSimGlobals';
+import NetSimVizNode from './NetSimVizNode';
+
+setupFunctionPrototypeInherits(Function);
 
 /**
  * @param {boolean} useBackgroundAnimation - changes the behavior of this node
@@ -12,7 +14,7 @@ var NetSimVizNode = require('./NetSimVizNode');
  * @constructor
  * @augments NetSimVizNode
  */
-var NetSimVizAutoDnsNode = (module.exports = function (useBackgroundAnimation) {
+export default function NetSimVizAutoDnsNode(useBackgroundAnimation) {
   NetSimVizNode.call(this, useBackgroundAnimation);
 
   this.getRoot().addClass('auto-dns-node');
@@ -26,5 +28,5 @@ var NetSimVizAutoDnsNode = (module.exports = function (useBackgroundAnimation) {
 
   this.setIsDnsNode(true);
   this.render();
-});
+}
 NetSimVizAutoDnsNode.inherits(NetSimVizNode);

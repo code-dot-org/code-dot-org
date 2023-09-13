@@ -1,10 +1,10 @@
 import {assert, expect} from '../../util/reconfiguredChai';
-var NetSimTestUtils = require('../../util/netsimTestUtils');
-var NetSimUtils = require('@cdo/apps/netsim/NetSimUtils');
+import {initializeGlobalsToDefaultValues} from '../../util/netsimTestUtils';
+import NetSimUtils from '@cdo/apps/netsim/NetSimUtils';
 
 describe('NetSimUtils', function () {
   beforeEach(function () {
-    NetSimTestUtils.initializeGlobalsToDefaultValues();
+    initializeGlobalsToDefaultValues();
   });
 
   describe('serializeNumber', function () {

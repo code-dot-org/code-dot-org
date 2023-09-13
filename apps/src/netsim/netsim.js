@@ -18,7 +18,6 @@ import {Provider} from 'react-redux';
 import NetSimView from './NetSimView';
 import page from './page.html.ejs';
 import NetSimAlert from './NetSimAlert';
-import NetSimConstants from './NetSimConstants';
 import NetSimUtils from './NetSimUtils';
 import DashboardUser from './DashboardUser';
 import NetSimBitLogPanel from './NetSimBitLogPanel';
@@ -34,9 +33,7 @@ import NetSimStatusPanel from './NetSimStatusPanel';
 import NetSimTabsComponent from './NetSimTabsComponent';
 import NetSimVisualization from './NetSimVisualization';
 import NetSimGlobals from './NetSimGlobals';
-
-var DnsMode = NetSimConstants.DnsMode;
-var MessageGranularity = NetSimConstants.MessageGranularity;
+import {DnsMode, MessageGranularity} from './NetSimConstants';
 
 var logger = NetSimLogger.getSingleton();
 
@@ -1404,4 +1401,4 @@ NetSim.prototype.showInstructionsDialog = function () {
   getStore().dispatch(openInstructionsDialog({imgOnly: false}));
 };
 
-export default NetSim;
+export {NetSim as default};

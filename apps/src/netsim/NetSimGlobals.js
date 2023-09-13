@@ -6,7 +6,7 @@
  *           Access to environment-specific asset URLs.
  *           Reproducible random number functions for easy testing.
  */
-var seedrandom = require('seedrandom');
+import seedrandom from 'seedrandom';
 
 /**
  * Reference to root StudioApp controller
@@ -43,7 +43,7 @@ var randomIntInRange = function (low, high) {
 /**
  * Provide singleton access to global simulation settings
  */
-module.exports = {
+export default {
   /**
    * Set the root controllers that can be used for global operations.
    * @param {StudioApp} studioApp

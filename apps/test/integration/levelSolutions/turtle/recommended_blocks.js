@@ -1,4 +1,4 @@
-var requiredBlockUtils = require('@cdo/apps//required_block_utils');
+import {makeTestsFromBuilderRequiredBlocks} from '@cdo/apps//required_block_utils';
 import {TestResults} from '@cdo/apps/constants';
 
 var levelDef = {
@@ -6,16 +6,16 @@ var levelDef = {
     '<xml><block type="when_run" deletable="false" movable="false"><next><block type="controls_repeat"><title name="TIMES">6</title><statement name="DO"><block type="draw_move_by_constant"><title name="DIR">moveForward</title><title name="VALUE">100</title><next><block type="draw_turn_by_constant"><title name="DIR">turnRight</title><title name="VALUE">60</title></block></next></block></statement></block></next></block></xml>',
   ideal: Infinity,
   toolbox: null,
-  requiredBlocks: requiredBlockUtils.makeTestsFromBuilderRequiredBlocks(
+  requiredBlocks: makeTestsFromBuilderRequiredBlocks(
     '<xml><block type="draw_move_by_constant"><title name="DIR">moveForward</title><title name="VALUE">100</title></block><block type="draw_turn_by_constant"><title name="DIR">turnRight</title><title name="VALUE">60</title></block></xml>'
   ),
-  recommendedBlocks: requiredBlockUtils.makeTestsFromBuilderRequiredBlocks(
+  recommendedBlocks: makeTestsFromBuilderRequiredBlocks(
     '<xml><block type="controls_repeat"><title name="TIMES">6</title></block></xml>'
   ),
   freePlay: false,
 };
 
-module.exports = {
+export default {
   app: 'turtle',
   levelDefinition: levelDef,
   tests: [

@@ -171,6 +171,18 @@ export const stripEncapsulatingDoubleQuotes = inputString =>
  * Defines an inheritance relationship between parent class and this class.
  */
 Function.prototype.inherits = function (parent) {
+  if (!parent) {
+    var stackTrace = Error().stack;
+    console.log(
+      'Stack trace for Function.prototype.inherits(parent) called without a parent',
+      stackTrace
+    );
+    throw new Error(
+      'Function.prototype.inherits(parent) called without a parent. parent=',
+      parent
+    );
+  }
+
   this.prototype = Object.create(parent.prototype);
   this.prototype.constructor = this;
   this.superPrototype = parent.prototype;
