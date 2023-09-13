@@ -44,12 +44,16 @@ module GitHub
   end
 
   # @param branch_name [String] The name of the branch to check for
+  # @param at_commit [String] Optional: A commit hash which we expect to match
+  #   the latest commit to the specified branch
   # @return [Boolean] Whether or not a branch with the specified name already
-  #         exists in the repository.
-  def self.branch_exists?(branch_name)
+  #   exists in the repository.
+  def self.branch_exists?(branch_name, at_commit: nil)
     configure_octokit
     response = Octokit.branch(REPO, branch_name)
-    return true if response
+    return false unless response
+    return response.commit.sha.start_with?(at_commit) if at_commit.present?
+    return true
   rescue Octokit::NotFound
     return false
   end
