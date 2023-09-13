@@ -3233,11 +3233,11 @@ it:
             -   Questa unità presuppone che gli studenti abbiano familiarità con Sviluppo App, in particolare l'utilizzo della Modalità Interfaccia per creare un'interfaccia utente e l'uso di Eventi per cambiare lo schermo quando si fa clic su un pulsante. Ciò può essere ottenuto chiedendo agli studenti di completare [Sviluppo - App Ora del codice](https://studio.code.org/s/applab-intro/reset) prima di iniziare questa unità.
             -   Questa unità richiede che gli studenti abbiano accesso a Circuit Playground - [clicca qui](https://code.org/circuitplayground) per ulteriori informazioni sull'uso di Circuit Playground in classe
             -   Le linee guida su come supportare gli studenti negli esercizi di programmazione e differenziare le attività sono disponibili nella [Guida agli esercizi di programmazione](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview) e [Guida alla differenziazione](https://docs.google.com/document/d/15Y6Mo3fMUtHq16SSskABgcYE-5xfk-Ewv0z_o4uaLdI/preview)
-            -   È possibile visualizzare la [Guida al piano di studi] completa[4] e [Guida all'implementazione](https://docs.google.com/document/d/112OA3_KbicOotqopqUyvXoWPWszz3_LHeMlg0ikCabk/preview) per ulteriori informazioni su questa unità
+            -   È possibile visualizzare la [Guida al piano di studi](https://docs.google.com/document/d/1VUbXHxXqHj5QCb4eSb756KKc7NDzbOLZUE5bPPQmJR8/preview) completa e la [Guida all'implementazione](https://docs.google.com/document/d/112OA3_KbicOotqopqUyvXoWPWszz3_LHeMlg0ikCabk/preview) per ulteriori informazioni su questa unità
 
             ## Hai finito di insegnare questa unità?
 
-            Rispondi a questo [\*\*breve sondaggio\*\*](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=6) per far sapere al team didattico di Code.org come si è svolta l'unità.
+            Rispondi a questo [breve sondaggio](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=6) per far sapere al team didattico di Code.org come si è svolta l'unità.
           description_short: Impara a programmare con dispositivi fisici.
           lesson_groups:
             lessonGroup-2:
@@ -3377,7 +3377,7 @@ it:
 
             ## Hai finito di svolgere le lezioni questa unità?
 
-            Rispondi a questo [\*\*breve sondaggio\*\*](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=7) per far sapere al gruppo del piano di studi di Code.org come si sono svolte le lezioni di questa unità.
+            Rispondi a questo [breve sondaggio](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=7) per far sapere al gruppo del piano di studi di Code.org come si sono svolte le lezioni di questa unità.
           lesson_groups:
             lessonGroup-2:
               display_name: Capitolo 1 - Comprendere l'apprendimento automatico
