@@ -1,0 +1,13 @@
+# Run this command to always ignore formatting commits in `git blame`
+# git config blame.ignoreRevsFile .git-blame-ignore-revs
+
+#
+# Autocorrected Rubocop Fixes
+#
+
+# Layout/SpaceAroundEqualsInParameterDefault
+92995f30fc74d83e0df68983dca5d1e27fd6a432
+# Lint/AmbiguousBlockAssociation
+90a33ae57af75050531880b813c50579aaf38678
+# Performance/Detect
+f59f8a54785737920fee5a875e5059b126ae48fc
