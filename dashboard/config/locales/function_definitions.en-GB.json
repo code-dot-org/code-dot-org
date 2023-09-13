@@ -207,6 +207,28 @@
             "name": "dibuja un triangulo"
           }
         },
+        "Course E: Frozen Project_examples_2023": {
+          "draw a circle": {
+            "name": "dibujar un circulo"
+          },
+          "draw a house": {
+            "name": "dibuja una casa"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "repeat": "repeat"
+            }
+          },
+          "draw a square": {
+            "name": "dibuja un cuadrado"
+          },
+          "draw a star": {
+            "name": "dibuja una estrella"
+          },
+          "draw a triangle": {
+            "name": "dibuja un triangulo"
+          }
+        },
         "Course E: Play Lab Project": {
           "do something": {
             "name": "do something"
@@ -300,6 +322,28 @@
             "name": "dibuja un triangulo"
           }
         },
+        "CourseD_EOC_artist_2023": {
+          "draw a circle": {
+            "name": "dibujar un circulo"
+          },
+          "draw a house": {
+            "name": "dibuja una casa"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "repeat": "repeat"
+            }
+          },
+          "draw a square": {
+            "name": "dibuja un cuadrado"
+          },
+          "draw a star": {
+            "name": "dibuja una estrella"
+          },
+          "draw a triangle": {
+            "name": "dibuja un triangulo"
+          }
+        },
         "CourseD_EOC_artist_example2021": {
           "draw a circle": {
             "name": "dibujar un circulo"
@@ -323,6 +367,28 @@
           }
         },
         "CourseD_EOC_artist_example20212022": {
+          "draw a circle": {
+            "name": "dibujar un circulo"
+          },
+          "draw a house": {
+            "name": "dibuja una casa"
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "repeat": "repeat"
+            }
+          },
+          "draw a square": {
+            "name": "dibuja un cuadrado"
+          },
+          "draw a star": {
+            "name": "dibuja una estrella"
+          },
+          "draw a triangle": {
+            "name": "dibuja un triangulo"
+          }
+        },
+        "CourseD_EOC_artist_example2021_2023": {
           "draw a circle": {
             "name": "dibujar un circulo"
           },
@@ -617,6 +683,11 @@
             "name": "do something"
           }
         },
+        "courseC_data wizard_2023": {
+          "do something": {
+            "name": "do something"
+          }
+        },
         "courseE_artist_concept1": {
           "do something": {
             "name": "do something"
@@ -680,6 +751,11 @@
             "name": "do something"
           }
         },
+        "courseE_artist_functions10_2023": {
+          "do something": {
+            "name": "do something"
+          }
+        },
         "courseE_artist_functions2": {
           "draw a square": {
             "name": "dibuja un cuadrado"
@@ -706,6 +782,11 @@
           }
         },
         "courseE_artist_functions2_2021": {
+          "draw a square": {
+            "name": "dibuja un cuadrado"
+          }
+        },
+        "courseE_artist_functions2_2023": {
           "draw a square": {
             "name": "dibuja un cuadrado"
           }
@@ -741,6 +822,11 @@
           }
         },
         "courseE_artist_functions3_2021": {
+          "draw a star": {
+            "name": "dibuja una estrella"
+          }
+        },
+        "courseE_artist_functions3_2023": {
           "draw a star": {
             "name": "dibuja una estrella"
           }
@@ -786,6 +872,11 @@
           }
         },
         "courseE_artist_functions5_2021": {
+          "draw a star": {
+            "name": "dibuja una estrella"
+          }
+        },
+        "courseE_artist_functions5_2023": {
           "draw a star": {
             "name": "dibuja una estrella"
           }
@@ -845,6 +936,11 @@
             "name": "do something"
           }
         },
+        "courseE_artist_functions8_2023": {
+          "do something": {
+            "name": "do something"
+          }
+        },
         "courseE_artist_functions8a2022": {
           "do something": {
             "name": "do something"
@@ -885,6 +981,14 @@
             "name": "dibuja un cuadrado"
           }
         },
+        "courseE_artist_functions8a_2023": {
+          "do something": {
+            "name": "do something"
+          },
+          "draw a square": {
+            "name": "dibuja un cuadrado"
+          }
+        },
         "courseE_artist_functions8b2022": {
           "do something": {
             "name": "do something"
@@ -910,6 +1014,11 @@
             "name": "do something"
           }
         },
+        "courseE_artist_functions8b_2023": {
+          "do something": {
+            "name": "do something"
+          }
+        },
         "courseE_artist_functions8c2022": {
           "do something": {
             "name": "do something"
@@ -931,6 +1040,11 @@
           }
         },
         "courseE_artist_functions8c_2021": {
+          "do something": {
+            "name": "do something"
+          }
+        },
+        "courseE_artist_functions8c_2023": {
           "do something": {
             "name": "do something"
           }
@@ -965,6 +1079,11 @@
             "name": "do something"
           }
         },
+        "courseE_artist_functions9_2023": {
+          "do something": {
+            "name": "do something"
+          }
+        },
         "courseE_artist_functions_challenge1": {
           "do something": {
             "name": "do something"
@@ -991,6 +1110,11 @@
           }
         },
         "courseE_artist_functions_challenge1_2021": {
+          "do something": {
+            "name": "do something"
+          }
+        },
+        "courseE_artist_functions_challenge1_2023": {
           "do something": {
             "name": "do something"
           }
@@ -1025,6 +1149,11 @@
             "name": "do something"
           }
         },
+        "courseE_artist_functions_challenge2_2023": {
+          "do something": {
+            "name": "do something"
+          }
+        },
         "courseE_artist_functions_predict1": {
           "draw a square": {
             "name": "dibuja un cuadrado"
@@ -1051,6 +1180,11 @@
           }
         },
         "courseE_artist_functions_predict1_2021": {
+          "draw a square": {
+            "name": "dibuja un cuadrado"
+          }
+        },
+        "courseE_artist_functions_predict1_2023": {
           "draw a square": {
             "name": "dibuja un cuadrado"
           }
@@ -1091,6 +1225,11 @@
           }
         },
         "courseE_artist_functions_predict2_2021": {
+          "do something": {
+            "name": "do something"
+          }
+        },
+        "courseE_artist_functions_predict2_2023": {
           "do something": {
             "name": "do something"
           }
@@ -1156,6 +1295,11 @@
           }
         },
         "courseF_apps_collector_-2022-2": {
+          "end game": {
+            "name": "end game"
+          }
+        },
+        "courseF_apps_collector_2023": {
           "end game": {
             "name": "end game"
           }
