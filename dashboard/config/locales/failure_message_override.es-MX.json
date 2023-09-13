@@ -3,7 +3,13 @@
     "data": {
       "failure_message_override": {
         "MC HOC 2016 Level 2-2": "Usa los comandos `avanzar` y `girar` para mover al pollo.",
-        "MC HOC 2016 Level 3": "Usa el bloque `siempre haz` y los comandos `avanzar` y `girar` para que tu pollo deambule."
+        "MC HOC 2016 Level 3": "Usa el bloque `siempre haz` y los comandos `avanzar` y `girar` para que tu pollo deambule.",
+        "courseC19_playLab_EOC3": "Debes añadir dos o más actores nuevos a tu juego y programarlos para que se muevan.",
+        "courseC19_playLab_EOC32022": "Debes añadir dos o más actores nuevos a tu juego y programarlos para que se muevan.",
+        "courseC19_playLab_EOC3_2020": "Debes añadir dos o más actores nuevos a tu juego y programarlos para que se muevan.",
+        "courseC19_playLab_EOC3_2021": "Debes añadir dos o más actores nuevos a tu juego y programarlos para que se muevan.",
+        "courseC19_playLab_EOC3_2023": "Debes añadir dos o más actores nuevos a tu juego y programarlos para que se muevan.",
+        "courseE_playLab_scaffold3": "Debes añadir dos o más actores nuevos a tu juego y programarlos para que se muevan."
       }
     }
   }
