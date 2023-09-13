@@ -188,6 +188,15 @@ ca:
   grade_level_label_elementary: Escola primària
   grade_level_label_middle: ESO
   grade_level_label_high: Institut
+  curricula_title_elementary: Escola primària Curricula
+  curricula_desc_elementary: Navegueu pels cursos i activitats divertides i gratuïtes
+    que us conviden a explorar la informàtica amb els vostres estudiants de primària.
+  curricula_title_middle: Curricula de l'escola mitjana
+  curricula_desc_middle: Navegueu per les ofertes atractives que us permeten a vosaltres
+    i als vostres estudiants de secundària explorar la informàtica junts.
+  curricula_title_high: Curricula de secundària
+  curricula_desc_high: Navegueu pels cursos i activitats convincents que us conviden
+    a vosaltres i als vostres estudiants de secundària a aprofundir en la informàtica.
   students_label: Estudiants
   teachers_label: Professors
   teacher_label_csf: CS Fonaments Professor
@@ -214,6 +223,13 @@ ca:
   call_to_action_explore_choice_level: Explora el nivell d'elecció d'exemple
   call_to_action_explore_collection: Explora la col·lecció
   call_to_action_explore_unplugged_lesson: Explora lliçons desconnectades
+  call_to_action_explore_csf: Explora Fonaments CS
+  call_to_action_explore_csd: Explora CS Descobriments
+  call_to_action_explore_csp: Explora els principis CS
+  call_to_action_explore_csc: Explora Connexions CS
+  call_to_action_explore_csa: Explorar AP® Computer Science A
+  call_to_action_explore_maker: Explora els currículums del fabricant
+  call_to_action_explore_hoc: Explora els tutorials de l'Hora del Codi
   call_to_action_try_app_lab: Prova App Lab
   call_to_action_view_lesson_plan: Veure unitat didàctica
   call_to_action_self_paced_pl: Començar aprenentatge professional al teu ritme
@@ -259,6 +275,7 @@ ca:
   call_to_action_notify_available: Aviseu-me quan estigui disponible
   call_to_action_register_early_access: Registrar-se per a l'accés anticipat
   call_to_action_open_positions: Veure posicions obertes
+  call_to_action_get_guide: Aconsegueix la guia
   aria_label_call_to_action_afe: Sabeu més sobre Amazon Future Engineer
   aria_label_call_to_action_teaching_csf: 'Comença el programa d''aprenentatge professional
     d''''Ensenyament de Fonaments de Ciències Informàtiques '
@@ -370,6 +387,8 @@ ca:
   curriculum_name_csa: Ciències Informàtiques A
   curriculum_name_csc_02: Qualsevol Mòdul de Connexió CS
   curriculum_name_ai: AI i aprenentatge automàtic
+  curriculum_name_artificial_intelligence: Intel·ligència Artificial (IA)
+  curriculum_name_maker: Fabricant
   curriculum_name_maker_cp: Creació d'Apps amb Dispositius (Circuit Playground)
   curriculum_name_maker_microbit: Crear Apps amb Devices (micro:bit)
   curriculum_name_creating_apps_with_devices: Creació d'Apps amb Dispositius
@@ -430,6 +449,12 @@ ca:
     en la informàtica. Desenvolupar programes que utilitzin entrades i sortides de
     maquinari. Hi ha una versió d'aquesta unitat tant per al micro:bit com per al
     Circuit Playground.
+  curriculum_desc_csa: Introduir els estudiants en l'enginyeria del programari i el
+    disseny orientat a objectes mentre aprenen el llenguatge de programació Java en
+    aquest pla d'estudis gratuït per a AP® Computer Science A (AP® CSA).
+  curriculum_desc_maker: L'educació Maker porta STEM (Science, Technology, Engineering,
+    Mathematics) un pas més enllà convidant l'experiència pràctica i la col·laboració
+    a l'aula per ajudar a ensenyar la resolució de problemes i el pensament crític.
   collection_hardware: Centrar-se en el maquinari
   collection_hardware_desc: Capta els estudiants a utilitzar dades i dispositius físics
     per resoldre problemes.
@@ -469,6 +494,7 @@ ca:
   module_label_student_content_resources: Contingut i recursos
   module_label_new: Nou
   module_label_coming_soon: Properament
+  module_label_available_now: Disponible ara
   module_label_video_series: Sèrie de vídeos
   module_label_self_paced: Mòdul auto-ritme
   module_ages_5_10: 5-10
@@ -479,6 +505,8 @@ ca:
   module_grade_2_5: 2-5
   module_grade_3_5: 3-5
   module_grade_3_8: 3-8
+  module_grade_k_12: K-12
+  module_grade_3_12: 3-12
   module_grade_6_12: 6-12
   module_grade_6_10: 6-10
   module_grade_9_12: 9-12
@@ -578,6 +606,7 @@ ca:
   heading_java_lab: Java Lab
   heading_objects_first: Objectes primer
   heading_these_lessons_will: 'Aquestes lliçons seran:'
+  heading_explore_curriculum_catalog: Explora tots els nostres cursos al Catàleg Curricular
   professional_learning_section_desc: Obteniu el suport que necessiteu mentre us prepareu
     per ensenyar. Als professors els encanta, amb més del 90% que el classifica el
     millor desenvolupament professional de la història!
@@ -846,6 +875,11 @@ ca:
     els grans canvis en la IA, amb dos nous vídeos sobre Models de Llengua Gran (com
     ChatGPT) i Generative AI. Escolta com funcionen aquestes noves tecnologies directament
     dels experts: Mira Murati, CTO d''OpenAI, i Cristóbal Valenzuela, CEO de RunwayML.'
+  ai_pl_101_llm_slides_title: Sol·licitud de models de llengua gran per a educadors
+  ai_pl_101_llm_slides_desc: Eines per obtenir la millor sortida possible des de LLM
+    com ChatGPT, des de principiant fins avançat. Inclou indicacions d'arrencada per
+    a aquells que acaben de submergir els dits dels peus, així com eines avançades
+    per a aquells que busquen maximitzar el seu potencial.
   how_ai_works_hero_heading: Com funciona la IA
   how_ai_works_hero_desc: Submergeix-te en el món de la IA amb “How AI Works”, la
     nostra sèrie de vídeos i lliçons d'acompanyament!
@@ -1467,10 +1501,10 @@ ca:
     la mateixa mida). Les activitats alternatives estan disponibles si no teniu accés
     a aquests subministraments.
   csd_page_faq_answer_04_06: Creació d'Apps amb Dispositius (Opció A i Opció B)
-  csd_page_faq_answer_04_07: 'Option A: Classroom set of Circuit Playgrounds. Check
-    out [code.org/maker/circuitplayground](%{url}) for more details.'
-  csd_page_faq_answer_04_08: 'Option B: Classroom set of micro:bit devices. Check
-    out [code.org/maker/microbit](%{url}) for more details.'
+  csd_page_faq_answer_04_07: 'Opció A: Aula de joc de Parcs Infantils. Fes una ullada
+    a [code.org/maker/circuitplayground] () per a més detalls.%{url}'
+  csd_page_faq_answer_04_08: 'Opció B: Conjunt d''aula de dispositius micro:bits.
+    Fes una ullada a [code.org/maker/microbit] () per a més detalls.%{url}'
   csd_page_faq_answer_04_09: Subministraments de fabricant, com ara caixes de teixit
     buides o rotllos de cartró o paper ratllat
   csd_page_faq_answer_04_10: "* Nota: La unitat Creació d'aplicacions amb dispositius
@@ -1616,9 +1650,10 @@ ca:
     de construcció d'habilitats poden ser completades pels estudiants al seu propi
     ritme.
   csf_page_faq_question_06: Quins materials necessito per CS Fonaments?
-  csf_page_faq_answer_06: Many lessons have handouts that guide students through activities.
-    These resources can be printed or assigned digitally. Some lessons call for typical
-    classroom supplies and manipulatives. [Visit the CSF Syllabus to learn more](%{syllabus_url}).
+  csf_page_faq_answer_06: Moltes lliçons tenen manuals que guien els estudiants a
+    través de les activitats. Aquests recursos es poden imprimir o assignar digitalment.
+    Algunes lliçons demanen subministraments i manipuladors típics de l'aula. [Visiteu
+    el pla d'estudis CSF per obtenir més informació] ().%{syllabus_url}
   csa_page_top_desc: Introduce students to software engineering and object-oriented
     design while they learn the Java programming language in this free curriculum
     for [AP® Computer Science A (AP® CSA)](%{csa_url}).
@@ -1768,8 +1803,8 @@ ca:
   ai_activity_zooniverse: Zooniverse - Instantània Zebra Muntanya
   ai_activity_zooniverse_desc: Ajudeu a protegir la Zebra del Cap Muntanya en perill
     d'extinció identificant els diferents animals de les imatges.
-  codeorg_homepage_hoc2018_curriculum: Go further with <a href="%{studio_url}/courses"
-    class="hoc2018-curriculum-link">Code.org courses</a>
+  codeorg_homepage_hoc2018_curriculum: Aneu més enllà amb els cursos <a href="%{studio_url}/courses"
+    class="hoc2018-curriculum-link">de Code.org</a>
   codeorg_homepage_hoc2018_dance_heading: Crea el teu propi <span class="highlight-word">Dance&nbsp;Party</span>
   codeorg_homepage_hoc2018_header_line1: L'Hora del Codi s'acosta...
   codeorg_homepage_hoc2018_header_line2_desktop: Què crearàs <span class="hoc2018-highlight-word">?</span>
@@ -1985,9 +2020,9 @@ ca:
   whats_next_how_to_promote: "<a href='/promote/resources'>Com promoure l'Hora del
     Codi</a>"
   whats_next_how_to_promote_link: "<a href='/promote'>Com promoure l'Hora del Codi</a>"
-  whats_next_try: "<a href='%{learn_url}'>Try tutorials</a>"
+  whats_next_try: "<a href='%{learn_url}'>Proveu els tutorials</a>"
   whats_next_try_button: Proveu els tutorials
-  n_have_learned_an_hoc: "<h1>Try an</h1><h2>Hour of Code</h2><h3># served</h3>"
+  n_have_learned_an_hoc: "<h1>Proveu una</h1><h2>hora de codi</h2><h3># servit</h3>"
   anybody_can_learn: Qualsevol pot aprendre.
   get_started: Començar
   beyond_an_hour: Més enllà d'una hora de codi
@@ -2007,9 +2042,9 @@ ca:
     fent-ho!
   front_join_us_volunteer_header: Voluntaris per a l'Hora del Codi
   front_join_us_tutorials: Tria el teu tutorial de l'Hora del Codi!
-  front_join_us_tutorials_link: Filter and browse <i>over 200 tutorials and lesson
-    plans</i>! Find activities for different subject areas, multiple hardware needs,
-    and students at any experience level.
+  front_join_us_tutorials_link: Filtra i navega per <i>més de 200 tutorials i plans
+    de lliçons!</i>Trobar activitats per a diferents àrees temàtiques, múltiples necessitats
+    de maquinari i estudiants a qualsevol nivell d'experiència.
   front_join_us_robotics: Guanya robots o circuits!
   front_join_us_robotics_link: Vols un conjunt de robots o kits de computació física
     per utilitzar amb els teus alumnes? Els nostres generosos socis donen jocs a 75
@@ -2044,7 +2079,7 @@ ca:
   front_join_us_sign_up: Registra't
   front_join_us_host: Acolleix-ho
   front_join_us_support: Donar-li suport
-  front_join_us_more_info: For more information, please visit <a href='https://code.org'>code.org</a>.
+  front_join_us_more_info: Per obtenir més informació, visiteu <a href='https://code.org'>code.org</a>.
   front_join_us_code_info: Per a més informació, visiteu code.org
   front_join_us_n_students_served: "# servit."
   front_join_us_challenge: Guanya un xat de vídeo per a la teva aula amb una celebritat!
@@ -2116,6 +2151,13 @@ ca:
     de cursos de Code.org, oportunitats locals o altres notícies d'informàtica?
   signup_email_preference_privacy: "(Consulteu la nostra política de privacitat)"
   signup_email_preference_yes: Sí
+  signup_email_preference_yes_elementary: Sí - Envia'm actualitzacions sobre Recursos
+    de primària
+  signup_email_preference_yes_middle: Sí - Envia'm actualitzacions sobre Recursos
+    de l'Escola Mitjana
+  signup_email_preference_yes_high: Sí - Envia'm actualitzacions sobre Recursos de
+    Secundària
+  signup_email_preference_yes_general: Sí - Envia'm actualitzacions generals
   signup_email_preference_no: 'No'
   signup_email_preference_error: Es requereix preferència de correu electrònic
   signup_multiple_event_warning: Posarem el nom de l'escola i la ciutat al mapa quan
@@ -2637,10 +2679,10 @@ ca:
     enllà d'una hora</a>
   learn_banner_beyond_markdown: Vols seguir aprenent? [Anar més enllà d'una hora]
     (%{url})
-  learn_banner_teachers: 'Teachers: <a id=''teacher_banner_host''>Host an hour</a>
-    or <a id=''teacher_banner_howto''>read the How-To Guide</a>'
-  learn_banner_teachers_markdown: 'Teachers: [Host an hour](%{host_url}) or [read
-    the How-To Guide](%{howto_url})'
+  learn_banner_teachers: 'Professors: <a id=''teacher_banner_host''>Acolliu una hora</a>
+    o <a id=''teacher_banner_howto''>llegiu la Guia How-To</a>'
+  learn_banner_teachers_markdown: 'Professors: [Acull una hora] (%{host_url}) o [llegiu
+    la Guia How-To] ()%{howto_url}'
   tutorial_dance2019_name: Festa de ball
   tutorial_danceparty_name: Festa de ball
   tutorial_chibitronics_name: 'Chibitronics: Història il·luminada'
@@ -5634,11 +5676,11 @@ ca:
     una aventura a través d'aquest món Minecraft.
   tutorial_minecraft-2016_longdescription: Construir un joc de Minecraft. Crea les
     teves pròpies versions de pollastre, ovelles, enfiladisses, zombies i molt més.
-  tutorial_thinkersmith-es_longdescription: Mediante el uso de un "Vocabulario Robot"
+  tutorial_thinkersmith-es_longdescription: Mediante el uso de un “Vocabulario Robot”
     predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar
-    a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento
-    ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones
-    as&iacute; como la valiosa habilidad de depuraci&oacute;n.
+    a cabo tareas espec ficas sin ser estas discutidas previamente.&iacute;Este segmento
+    ense&ntilde;a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones
+    como&iacute; la valiosa habilidad de depuraci n.&oacute;
   tutorial_pixie_longdescription: Tutorial de l'Hora del Codi amb Pixie
   tutorial_play_longdescription: Crea una història o fes un joc amb Play Lab! Fer
     animals, pirates, zombies, ninjes, i molts més personatges es mouen, fer sons,
@@ -12900,12 +12942,12 @@ ca:
   tutorial_googlename _longdescription: Tria un nom i porta les lletres de la paraula
     a la vida utilitzant el codi. Trieu un sobrenom, un nom de mascota, un animal,
     un esport, un lloc o un hobby.
-  tutorial_carnegiezillah_longdescription: Zillah City is thriving, and music is in
-    the air. Rumor has it, the famed Gargantua bot is online and sending the last
-    Toxibots to trash the city block by block…. Grab your cobot hoverboard and get
-    ready to groove, move, and finish off what you started! Players program their
-    cobot hoverbots to change lanes, avoid obstacles, and take out many Toxibots in
-    this rhythm-styled game.
+  tutorial_carnegiezillah_longdescription: Zillah City està prosperant i la música
+    està en l'aire. El rumor ho té, el famós bot de Gargantua està en línia i enviant
+    els últims Toxibots a escombrar la ciutat bloc per bloc.…Agafa el teu aerotabla
+    cobot i prepara't per solcar, moure, i acabar amb el que vas començar! Els jugadors
+    programen els seus hoverbots cobot per canviar de carril, evitar obstacles i treure
+    molts toxibots en aquest joc d'estil ritme.
   tutorial_nasachspacejam_longdescription: Crear un sistema solar que realment s'enroca!
     Apreneu sobre música, astronomia i codificació en aquesta activitat autoguiada
     (no cal experiència de codificació). Programa planetes per fer música, creant
@@ -13688,17 +13730,19 @@ ca:
     Microsoft, Amazon, Google i molts altres.
   engineering_faq_question_2: Què és l'experiència i l'utillatge per a desenvolupadors
     de Code.org?
-  engineering_faq_answer_2: Our developer experience may be different to what you’ve
-    seen in your past roles. Working closely with our product team, we ship to production
-    every weekday and we have a variety of cadences - sometimes you are writing code
-    that goes live that day; other times you are on longer term projects - and while
-    we do follow 2-weekly sprints, we do so in a lightweight way. We index towards
-    getting the right things done the right way vs. taking a purist view of any particular
-    methodology. [All our code](%{code_url}) is open source and we use JIRA and GitHub
-    pull requests to track all of our work items. We also care a lot about quality
-    and testing and are fortunate to have incredible support from [SauceLabs](%{saucelabs_url}),
-    who help us run our suite of UI tests on various student devices (e.g., iPads)
-    in their cloud device farm.
+  engineering_faq_answer_2: La nostra experiència de desenvolupador pot ser diferent
+    a la que heu vist en els vostres rols passats. Treballant estretament amb el nostre
+    equip de productes, enviem a la producció cada dia laborable i tenim una varietat
+    de cadències, de vegades escriviu un codi que viu aquell dia; altres vegades esteu
+    en projectes a més llarg termini i, mentre seguim sprints setmanals 2, ho fem
+    d'una manera lleugera. Indexem cap a aconseguir les coses correctes de la manera
+    correcta vs. prendre una visió purista de qualsevol metodologia en particular.
+    [Tot el nostre codi] (%{code_url}) és de codi obert i fem servir JIRA i GitHub
+    pull requests per fer un seguiment de tots els nostres elements de treball. També
+    ens preocupem molt per la qualitat i les proves i tenim la sort de tenir un suport
+    increïble de [SauceLabs](%{saucelabs_url}), que ens ajuden a executar la nostra
+    suite de proves d'interfície d'usuari en diversos dispositius d'estudiants (per
+    exemple, iPads) a la seva granja de dispositius en el núvol.
   engineering_faq_question_3: Què és l'enginyer de rotació de trucades a Code.org?
   engineering_faq_answer_3: 'El nostre equip d''enginyeria més de 30 anys comparteix
     responsabilitats a la trucada. Cada enginyer cobreix un torn de 24 hores i utilitza

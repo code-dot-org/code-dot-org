@@ -193,6 +193,17 @@ hi:
   grade_level_label_elementary: एलीमेंट्री स्कूल
   grade_level_label_middle: मिडिल स्कूल
   grade_level_label_high: हाई स्कूल
+  curricula_title_elementary: एलीमेंट्री स्कूल करिकुला
+  curricula_desc_elementary: मजेदार, मुफ्त पाठ्यक्रम और गतिविधियाँ ब्राउज़ करें, जो
+    आपको अपने प्राथमिक विद्यालय के छात्रों के साथ कंप्यूटर विज्ञान का पता लगाने के
+    लिए आमंत्रित करती हैं।
+  curricula_title_middle: मिडिल स्कूल करिकुला
+  curricula_desc_middle: आकर्षक पेशकशों को ब्राउज़ करें, जो आपको और आपके मिडिल स्कूल
+    के छात्रों को एक साथ कंप्यूटर विज्ञान का पता लगाने में सक्षम बनाती हैं।
+  curricula_title_high: हाई स्कूल करिकुला
+  curricula_desc_high: आकर्षक पाठ्यक्रमों और गतिविधियों को ब्राउज़ करें जो आपको और
+    आपके हाई स्कूल के छात्रों को कंप्यूटर विज्ञान में गहराई से जाने के लिए आमंत्रित
+    करते हैं।
   students_label: छात्र
   teachers_label: शिक्षक
   teacher_label_csf: सीएस फंडामेंटल्स टीचर
@@ -219,6 +230,13 @@ hi:
   call_to_action_explore_choice_level: उदाहरण पसंद के स्तर का अन्वेषण करें
   call_to_action_explore_collection: कलेक्शन एक्सप्लोर करें
   call_to_action_explore_unplugged_lesson: अनप्लग्ड पाठ खोजें
+  call_to_action_explore_csf: सीएस फंडामेंटल्स का अन्वेषण करें
+  call_to_action_explore_csd: CS खोजों को एक्सप्लोर करें
+  call_to_action_explore_csp: CS सिद्धांतों का अन्वेषण करें
+  call_to_action_explore_csc: CS कनेक्शन एक्सप्लोर करें
+  call_to_action_explore_csa: AP® कंप्यूटर साइंस A का अन्वेषण करें
+  call_to_action_explore_maker: मेकर करिकुला एक्सप्लोर करें
+  call_to_action_explore_hoc: ऑवर ऑफ़ कोड ट्यूटोरियल एक्सप्लोर करें
   call_to_action_try_app_lab: App Lab आज़माएं
   call_to_action_view_lesson_plan: पाठ योजना देखें
   call_to_action_self_paced_pl: सेल्फ-पेस्ड प्रोफेशनल लर्निंग शुरू करें
@@ -263,6 +281,7 @@ hi:
   call_to_action_notify_available: उपलब्ध होने पर मुझे सूचित करें
   call_to_action_register_early_access: जल्दी पहुंचने के लिए रजिस्टर करें
   call_to_action_open_positions: ओपन पोजीशन देखें
+  call_to_action_get_guide: गाइड प्राप्त करें
   aria_label_call_to_action_afe: Amazon फ्यूचर इंजीनियर के बारे में और जानें
   aria_label_call_to_action_teaching_csf: टीचिंग कंप्यूटर साइंस फंडामेंटल्स प्रोफेशनल
     लर्निंग प्रोग्राम शुरू करें
@@ -372,6 +391,8 @@ hi:
   curriculum_name_csa: कंप्यूटर विज्ञान A
   curriculum_name_csc_02: कोई भी CS कनेक्शन मॉड्यूल
   curriculum_name_ai: "  कृत्रिम बुद्धि और मशीन प्रशिक्षण  "
+  curriculum_name_artificial_intelligence: आर्टिफिशियल इंटेलिजेंस (AI)
+  curriculum_name_maker: निर्माता
   curriculum_name_maker_cp: डिवाइस के साथ ऐप्स बनाना (सर्किट प्लेग्राउंड)
   curriculum_name_maker_microbit: डिवाइस के साथ ऐप्स बनाना (micro:bit)
   curriculum_name_creating_apps_with_devices: डिवाइस के साथ ऐप्स बनाना
@@ -427,6 +448,12 @@ hi:
     का अन्वेषण करें। ऐसे प्रोग्राम विकसित करें जो हार्डवेयर इनपुट और आउटपुट का उपयोग
     करते हैं। माइक्रो:बिट और सर्किट प्लेग्राउंड दोनों के लिए इस यूनिट का एक संस्करण
     है।
+  curriculum_desc_csa: AP® Computer Science A (AP® CSA) के लिए इस निःशुल्क पाठ्यक्रम
+    में जावा प्रोग्रामिंग भाषा सीखने के दौरान छात्रों को सॉफ़्टवेयर इंजीनियरिंग और
+    ऑब्जेक्ट-ओरिएंटेड डिज़ाइन से परिचित कराएं।
+  curriculum_desc_maker: निर्माता शिक्षा समस्या समाधान और आलोचनात्मक सोच सिखाने में
+    मदद करने के लिए कक्षा में व्यावहारिक अनुभव और सहयोग को आमंत्रित करके एसटीईएम (विज्ञान,
+    प्रौद्योगिकी, इंजीनियरिंग, गणित) को एक कदम आगे ले जाती है।
   collection_hardware: हार्डवेयर पर ध्यान दें
   collection_hardware_desc: समस्याओं को हल करने के लिए छात्रों को डेटा और भौतिक उपकरणों
     का उपयोग करने का अधिकार देता है।
@@ -466,6 +493,7 @@ hi:
   module_label_student_content_resources: सामग्री और संसाधन
   module_label_new: नया
   module_label_coming_soon: जल्द आ रहा है
+  module_label_available_now: अभी उपलब्ध
   module_label_video_series: वीडियो श्रृंखला
   module_label_self_paced: सेल्फ-पेस्ड मॉड्यूल
   module_ages_5_10: 5-10
@@ -476,6 +504,8 @@ hi:
   module_grade_2_5: 2-5
   module_grade_3_5: 3-5
   module_grade_3_8: 3-8
+  module_grade_k_12: K-12
+  module_grade_3_12: 3-12
   module_grade_6_12: 6-12
   module_grade_6_10: 6-10
   module_grade_9_12: 9-12
@@ -571,6 +601,8 @@ hi:
   heading_java_lab: जावा लैब
   heading_objects_first: ऑब्जेक्ट्स पहले
   heading_these_lessons_will: 'ये सबक होंगे:'
+  heading_explore_curriculum_catalog: पाठ्यचर्या सूची में हमारे सभी पाठ्यक्रमों का
+    अन्वेषण करें
   professional_learning_section_desc: पढ़ाने की तैयारी के दौरान आपको जो सहायता चाहिए
     वह प्राप्त करें। शिक्षक इसे पसंद करते हैं, 90% से अधिक इसे अब तक का सबसे अच्छा
     व्यावसायिक विकास मानते हैं!
@@ -828,6 +860,11 @@ hi:
     और जानें, जिसमें लार्ज लैंग्वेज मॉडल (जैसे ChatGPT) और Generative AI पर दो नए
     वीडियो शामिल हैं। सुनें कि ये नई तकनीकें सीधे विशेषज्ञों से कैसे काम करती हैं:
     मीरा मुराती, ओपनएआई की सीटीओ, और रनवेएमएल के सीईओ क्रिस्टोबल वालेंज़ुएला।'
+  ai_pl_101_llm_slides_title: शिक्षकों के लिए लार्ज लैंग्वेज मॉडल प्रॉम्प्ट
+  ai_pl_101_llm_slides_desc: शुरुआत से लेकर एडवांस तक, ChatGPT जैसे LLM से सर्वोत्तम
+    संभव आउटपुट प्राप्त करने के लिए टूल। इसमें उन लोगों के लिए स्टार्टर प्रॉम्प्ट
+    शामिल हैं जो बस अपने पैर की उंगलियों को डुबो रहे हैं, साथ ही उन लोगों के लिए एडवांस
+    टूल भी शामिल हैं जो अपनी क्षमता को अधिकतम करना चाहते हैं।
   how_ai_works_hero_heading: AI कैसे काम करता है
   how_ai_works_hero_desc: "“How AI Works”, हमारी वीडियो श्रृंखला और उससे जुड़े पाठों
     के साथ AI की दुनिया में गोता लगाएँ!"
@@ -1381,11 +1418,11 @@ hi:
   csd_page_courses_collections_desc: किसी विशिष्ट विषय पर केंद्रित इकाइयों के एक समूह
     के साथ एक क्षेत्र में गहराई से गोता लगाएँ।
   csd_page_faq_question_01: क्या सीएस डिस्कवरीज को मानकों के अनुसार मैप किया गया है?
-  csd_page_faq_answer_01: CS Discoveries was written using both the K-12 Framework
-    for Computer Science and the 2017 CSTA standards as guidance. Currently, every
-    lesson in CS Discoveries contains mappings to the relevant 2017 CSTA standards.
-    [A summary of standards mappings can be found here](%{mappings_url}). A Google
-    Sheets version of the standards can be found at [CSD Standards](%{csd_standards_url}).
+  csd_page_faq_answer_01: CS डिस्कवरीज को कंप्यूटर विज्ञान के लिए K-12 फ्रेमवर्क और
+    मार्गदर्शन के रूप में 2017 CSTA मानकों दोनों का उपयोग करके लिखा गया था। वर्तमान
+    में, CS डिस्कवरीज के प्रत्येक पाठ में प्रासंगिक 2017 CSTA मानकों के लिए मैपिंग
+    शामिल है। [मानक मैपिंग का सारांश यहां पाया जा सकता है] ().%{mappings_url}मानकों
+    का Google Sheets संस्करण [CSD मानक] () पर पाया जा सकता है.%{csd_standards_url}
   csd_page_faq_question_02: इस कोर्स के लिए मुझे व्यावसायिक विकास कैसे/कहां मिल सकता
     है?
   csd_page_faq_answer_02: हमारा प्रोफेशनल लर्निंग प्रोग्राम साल भर सहायता प्रदान करता
@@ -1429,10 +1466,10 @@ hi:
     दें कि पेनीज़ को उसी आकार के किसी अन्य प्रकार के वजन से बदला जा सकता है)। यदि
     आपके पास इन आपूर्ति तक पहुंच नहीं है, तो वैकल्पिक गतिविधियाँ उपलब्ध हैं।
   csd_page_faq_answer_04_06: डिवाइस के साथ ऐप्स बनाना (विकल्प A और विकल्प B)
-  csd_page_faq_answer_04_07: 'Option A: Classroom set of Circuit Playgrounds. Check
-    out [code.org/maker/circuitplayground](%{url}) for more details.'
-  csd_page_faq_answer_04_08: 'Option B: Classroom set of micro:bit devices. Check
-    out [code.org/maker/microbit](%{url}) for more details.'
+  csd_page_faq_answer_04_07: 'विकल्प A: सर्किट प्लेग्राउंड का क्लासरूम सेट। अधिक जानकारी
+    के लिए [code.org/maker/circuitplayground] () देखें.%{url}'
+  csd_page_faq_answer_04_08: 'विकल्प B: माइक्रो:बिट डिवाइस का क्लासरूम सेट। अधिक जानकारी
+    के लिए [code.org/maker/microbit] () देखें.%{url}'
   csd_page_faq_answer_04_09: निर्माता की आपूर्ति, जैसे खाली टिशू बॉक्स या कार्डबोर्ड
     रोल या स्क्रैच पेपर
   csd_page_faq_answer_04_10: "*नोट: क्रिएटिंग एप्स विद डिवाइसेस यूनिट में दो कार्यान्वयन
@@ -1567,10 +1604,10 @@ hi:
     लिए स्थानीय शिक्षकों से जुड़ें। हमारे क्षेत्रीय साझेदार व्यक्तिगत शिक्षकों के
     लिए या स्कूल भर में पीडी के लिए उच्च गुणवत्ता वाली, एक दिवसीय Code.org कार्यशालाएं
     प्रदान करते हैं। [अपने आस-पास एक पेशेवर विकास कार्यशाला के लिए साइन अप करें] (%{sign_up_url})!
-  csf_page_faq_answer_04_02: Join over 100,000 teachers who have participated in our
-    workshops. The majority of our workshop attendees say, 'It's the best professional
-    development I've ever attended.' In fact, [90% of attendees would recommend our
-    program to other teachers](%{rec_url})!
+  csf_page_faq_answer_04_02: हमारी कार्यशालाओं में भाग लेने वाले 100,000 से अधिक शिक्षकों
+    से जुड़ें। हमारी कार्यशाला में उपस्थित अधिकांश लोग कहते हैं, 'यह अब तक का सबसे
+    अच्छा व्यावसायिक विकास है जिसमें मैंने भाग लिया है. ' असल में, [90% उपस्थित लोग
+    अन्य शिक्षकों को हमारे कार्यक्रम की सिफारिश करेंगे] ()!%{rec_url}
   csf_page_faq_question_05: सीएस फंडामेंटल्स को पढ़ाने के लिए अनुशंसित समय क्या है?
   csf_page_faq_answer_05: प्रत्येक CSF कोर्स में 45-मिनट की अवधि के लिए डिज़ाइन किए
     गए 13-17 पाठ शामिल हैं। हम सभी छात्रों को शिक्षक द्वारा निर्धारित गति से पाठ से
@@ -1579,9 +1616,10 @@ hi:
     द्वारा अपनी गति से पूरे किए जा सकते हैं।
   csf_page_faq_question_06: सीएस फंडामेंटल्स के लिए मुझे किन सामग्रियों की आवश्यकता
     होगी?
-  csf_page_faq_answer_06: Many lessons have handouts that guide students through activities.
-    These resources can be printed or assigned digitally. Some lessons call for typical
-    classroom supplies and manipulatives. [Visit the CSF Syllabus to learn more](%{syllabus_url}).
+  csf_page_faq_answer_06: कई पाठों में ऐसे हैंडआउट्स होते हैं जो गतिविधियों के माध्यम
+    से छात्रों का मार्गदर्शन करते हैं। इन संसाधनों को डिजिटल रूप से प्रिंट या असाइन
+    किया जा सकता है। कुछ पाठों में कक्षा की विशिष्ट आपूर्ति और जोड़-तोड़ की आवश्यकता
+    होती है। [अधिक जानने के लिए CSF सिलेबस पर जाएं] ().%{syllabus_url}
   csa_page_top_desc: Introduce students to software engineering and object-oriented
     design while they learn the Java programming language in this free curriculum
     for [AP® Computer Science A (AP® CSA)](%{csa_url}).
@@ -2077,6 +2115,11 @@ hi:
     कंप्यूटर विज्ञान समाचारों के अपडेट के बारे में ईमेल कर सकते हैं?
   signup_email_preference_privacy: "(हमारी गोपनीयता नीति देखें)"
   signup_email_preference_yes: हाँ
+  signup_email_preference_yes_elementary: हां - मुझे प्राथमिक स्कूल संसाधनों पर अपडेट
+    भेजें
+  signup_email_preference_yes_middle: हां - मुझे मिडिल स्कूल संसाधनों पर अपडेट भेजें
+  signup_email_preference_yes_high: हां - मुझे हाई स्कूल संसाधनों पर अपडेट भेजें
+  signup_email_preference_yes_general: हां - मुझे सामान्य अपडेट भेजें
   signup_email_preference_no: नहीं
   signup_email_preference_error: ईमेल वरीयता आवश्यक है।
   signup_multiple_event_warning: जब आप रजिस्टर करेंगे तो हम आपके स्कूल का नाम और शहर
@@ -5540,11 +5583,11 @@ hi:
     से एक साहसिक कार्य पर ले जाने के लिए कोड के ब्लॉक का उपयोग करें।
   tutorial_minecraft-2016_longdescription: एक माइनक्राफ्ट गेम बनाएं। चिकन, भेड़, क्रीपर्स,
     ज़ॉम्बी और बहुत कुछ के अपने संस्करण बनाएं।
-  tutorial_thinkersmith-es_longdescription: Mediante el uso de un "Vocabulario Robot"
+  tutorial_thinkersmith-es_longdescription: Mediante el uso de un “Vocabulario Robot”
     predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar
-    a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento
-    ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones
-    as&iacute; como la valiosa habilidad de depuraci&oacute;n.
+    a cabo tareas espec ficas sin ser estas discutidas previamente.&iacute;एस्टे सेगमेंटो
+    एसेंस&ntilde;ए लॉस एस्टुडिएंटेस ला कोनेक्सी&oacute;एन एंट्रे एस&iacute;म्बोलोस
+    वाई एक्सियोनेस अस&iacute; कोमो ला वालिओसा हैबिलिडाड डे डेपुरासी&oacute;एन।
   tutorial_pixie_longdescription: पिक्सी के साथ ऑवर ऑफ़ कोड ट्यूटोरियल
   tutorial_play_longdescription: Play Lab के साथ एक कहानी बनाएं या गेम बनाएं! जानवरों,
     समुद्री लुटेरों, ज़ॉम्बीज़, निन्जा और कई अन्य पात्रों को हिलाने, आवाज़ें बनाने,
@@ -12669,12 +12712,12 @@ hi:
   tutorial_googlename _longdescription: एक नाम चुनें और कोड का उपयोग करके शब्द के
     अक्षरों को जीवंत करें। एक उपनाम, एक पालतू जानवर का नाम, एक जानवर, एक खेल, एक जगह
     या एक शौक चुनें।
-  tutorial_carnegiezillah_longdescription: Zillah City is thriving, and music is in
-    the air. Rumor has it, the famed Gargantua bot is online and sending the last
-    Toxibots to trash the city block by block…. Grab your cobot hoverboard and get
-    ready to groove, move, and finish off what you started! Players program their
-    cobot hoverbots to change lanes, avoid obstacles, and take out many Toxibots in
-    this rhythm-styled game.
+  tutorial_carnegiezillah_longdescription: ज़िला शहर फल-फूल रहा है, और संगीत हवा में
+    है। अफवाह यह है कि, प्रसिद्ध गार्गेंटुआ बॉट ऑनलाइन है और ब्लॉक दर ब्लॉक शहर को
+    कूड़ेदान करने के लिए आखिरी टॉक्सिबॉट्स भेज रहा है।…अपने कोबोट होवरबोर्ड को पकड़ें
+    और जो आपने शुरू किया था उसे पूरा करने के लिए तैयार हो जाएं! खिलाड़ी अपने कोबोट
+    होवरबॉट्स को लेन बदलने, बाधाओं से बचने और इस रिदम-स्टाइल गेम में कई टॉक्सिबॉट्स
+    को बाहर निकालने के लिए प्रोग्राम करते हैं।
   tutorial_nasachspacejam_longdescription: एक ऐसा सौर मंडल बनाएं जो वास्तव में हिलता
     हो! इस स्व-निर्देशित गतिविधि में संगीत, खगोल विज्ञान और कोडिंग के बारे में जानें
     (कोई कोडिंग अनुभव आवश्यक नहीं है)। संगीत बनाने के लिए ग्रहों को प्रोग्राम करें,

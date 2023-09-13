@@ -16,8 +16,8 @@ Počas kampane Hodina kódu môže vaša firma pomôcť zvyšovať povedomie o 
 
 Ak chcete začať, prečítajte si kroky uvedené nižšie a pozrite si našu [príručku pre firemných partnerov](/files/hoc-corporate-toolkit.pdf), kde nájdete viac informácií o tom, ako nadchnúť vašu spoločnosť pre Hodinu kódu.
 
-- [Connect with a local school](#connect-with-a-school)
-- [Encourage employees to volunteer with a classroom](#encourage-employees)
+- [Spojte sa s miestnou školou](#connect-with-a-school)
+- [Podporte zamestnancov v tom, aby pomáhali triedam ako dobrovoľníci](#encourage-employees)
 - [Usporiadajte v ránci Hodiny kódu vlastné podujatie](#usporiadať-hodinu-kódu)
 - [Spropagujte Hodinu kódu](#podporovať-hodinu-kódu)
 - [Ďalšie spôsoby, ako podporiť Hodinu kódu](#podporovať-hodinu-kódu)
@@ -26,7 +26,7 @@ Ak chcete začať, prečítajte si kroky uvedené nižšie a pozrite si našu [p
 
 <a id="connect-with-a-school"></a>
 
-## Connect with a local school
+## Spojte sa s miestnou školou
 
 It's always best to start locally, with schools that you or your employees have a strong connection to, like an alma mater, a child’s school, or a local organization or school that is focused on serving a population that has been historically underrepresented in computer science.
 
@@ -40,7 +40,7 @@ If you are unable to connect with a school, please [contact us](https://support.
 
 <a id="encourage-employees"></a>
 
-## Encourage employees to volunteer with a classroom
+## Podporte zamestnancov v tom, aby pomáhali triedam ako dobrovoľníci
 
 [![](/images/fit-600/Marketing/pexels-andrea-piacquadio-3762940.jpg)]({{ urls/learn }})
 

@@ -113,19 +113,19 @@ po:
     que a ciência da computação pode desempenhar na criação de um mundo mais justo.
   oceans_landing_videos: Vídeos sobre IA e aprendizado de máquina
   oceans_behind_the_scenes: 'IA para oceanos: nos bastidores'
-  oceans_behind_the_scenes_1: Levels 2-4 use a pretrained model provided by the <a
-    href="https://www.tensorflow.org/" >TensorFlow</a> <a href="https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md">
-    MobileNet </a> project. A MobileNet model is a <a href="https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks">convolutional
-    neural network</a> that has been trained on <a href="http://www.image-net.org/">ImageNet</a>,
-    a dataset of over 14 million images hand-annotated with words such as "balloon"
-    or "strawberry". In order to customize this model with the labeled training data
-    the student generates in this activity, we use a technique called <a href="https://en.wikipedia.org/wiki/Transfer_learning">Transfer
-    Learning</a>. Each image in the training dataset is fed to MobileNet, as pixels,
-    to obtain a list of annotations that are most likely to apply to it. Then, for
-    a new image, we feed it to MobileNet and compare its resulting list of annotations
-    to those from the training dataset. We classify the new image with the same label
-    (such as "fish" or "not fish") as the images from the training set with the most
-    similar results.
+  oceans_behind_the_scenes_1: Os níveis 2 a 4 usam um modelo pré-treinado fornecido
+    pelo projeto <a href="https://www.tensorflow.org/" ></a> <a href="https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md">
+    TensorFlow MobileNet. </a> Um modelo MobileNet é uma rede neural <a href="https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks">convolucional</a>
+    que foi treinada no <a href="http://www.image-net.org/">ImageNet</a>, um conjunto
+    de dados de mais de 14 milhões de imagens anotadas à mão com palavras como “balão”
+    ou “morango”. Para personalizar esse modelo com os dados de treinamento rotulados
+    que o aluno gera nessa atividade, usamos uma técnica chamada <a href="https://en.wikipedia.org/wiki/Transfer_learning">Transfer
+    Learning</a>. Cada imagem no conjunto de dados de treinamento é enviada ao MobileNet,
+    como pixels, para obter uma lista das anotações com maior probabilidade de serem
+    aplicadas a ela. Em seguida, para uma nova imagem, nós a enviamos para a MobileNet
+    e comparamos a lista resultante de anotações com as do conjunto de dados de treinamento.
+    Classificamos a nova imagem com o mesmo rótulo (como “peixe” ou “não peixe”) das
+    imagens do conjunto de treinamento com os resultados mais semelhantes.
   oceans_behind_the_scenes_1_markdown: Os níveis 2-4 usam um modelo pré-treinado fornecido
     pelo projeto [TensorFlow](https://www.tensorflow.org/) [MobileNet](https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md).
     Um modelo MobileNet é uma [rede neural convolucional] (https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks)
@@ -192,6 +192,16 @@ po:
   grade_level_label_elementary: Escola Primária
   grade_level_label_middle: Ensino médio
   grade_level_label_high: Ensino médio
+  curricula_title_elementary: Currículos do ensino fundamental
+  curricula_desc_elementary: Explore os cursos e atividades divertidos e gratuitos
+    que convidam você a explorar a ciência da computação com seus alunos do ensino
+    fundamental.
+  curricula_title_middle: Currículos do ensino médio
+  curricula_desc_middle: Explore as ofertas envolventes que permitem que você e seus
+    alunos do ensino médio explorem a ciência da computação juntos.
+  curricula_title_high: Currículos do ensino médio
+  curricula_desc_high: Explore os cursos e atividades interessantes que convidam você
+    e seus alunos do ensino médio a se aprofundarem na ciência da computação.
   students_label: Alunos
   teachers_label: Professores
   teacher_label_csf: Professor de Fundamentos de Ciências Informáticas
@@ -218,6 +228,13 @@ po:
   call_to_action_explore_choice_level: Explore o exemplo de nível de escolha
   call_to_action_explore_collection: Explore a coleção
   call_to_action_explore_unplugged_lesson: Explore aulas desconectadas
+  call_to_action_explore_csf: Explore os fundamentos do CS
+  call_to_action_explore_csd: Explore CS Discoveries
+  call_to_action_explore_csp: Explore os princípios de CS
+  call_to_action_explore_csc: Explore as conexões CS
+  call_to_action_explore_csa: Conheça a AP® Computer Science A
+  call_to_action_explore_maker: Explore os currículos do Maker
+  call_to_action_explore_hoc: Explore os tutoriais da Hora do Código
   call_to_action_try_app_lab: Experimente o App Lab
   call_to_action_view_lesson_plan: Veja o plano de aula
   call_to_action_self_paced_pl: Comece o aprendizado profissional individualizado
@@ -262,6 +279,7 @@ po:
   call_to_action_notify_available: Notifique-me quando disponível
   call_to_action_register_early_access: Registre-se para acesso antecipado
   call_to_action_open_positions: Exibir vagas abertas
+  call_to_action_get_guide: Obtenha o guia
   aria_label_call_to_action_afe: Saiba mais sobre o Amazon Future Engineer
   aria_label_call_to_action_teaching_csf: Inicie o programa de aprendizagem profissional
     Teaching Computer Science Fundamentals
@@ -374,6 +392,8 @@ po:
   curriculum_name_csa: AP® Ciência da Computação A
   curriculum_name_csc_02: Qualquer módulo de conexões CS
   curriculum_name_ai: IA e aprendizado de máquina
+  curriculum_name_artificial_intelligence: Inteligência artificial (IA)
+  curriculum_name_maker: Criador
   curriculum_name_maker_cp: Criação de aplicativos com dispositivos (Circuit Playground)
   curriculum_name_maker_microbit: Criação de aplicativos com dispositivos (micro:bit)
   curriculum_name_creating_apps_with_devices: Criação de Aplicações com Dispositivos
@@ -432,6 +452,12 @@ po:
   curriculum_desc_creating_apps_with_devices: Explore o papel dos dispositivos físicos
     na computação. Desenvolva programas que utilizem entradas e saídas de hardware.
     Há uma versão desta unidade tanto para o micro:bit quanto para o Circuit Playground.
+  curriculum_desc_csa: Apresente aos alunos a engenharia de software e o design orientado
+    a objetos enquanto eles aprendem a linguagem de programação Java neste currículo
+    gratuito para AP® Computer Science A (AP® CSA).
+  curriculum_desc_maker: A educação Maker leva STEM (Ciência, Tecnologia, Engenharia,
+    Matemática) um passo adiante, convidando experiência prática e colaboração para
+    a sala de aula para ajudar a ensinar a resolução de problemas e o pensamento crítico.
   collection_hardware: Foco no Hardware
   collection_hardware_desc: Capacita os alunos para utilizarem dados e dispositivos
     físicos para resolver problemas.
@@ -471,6 +497,7 @@ po:
   module_label_student_content_resources: Conteúdo e recursos
   module_label_new: Novo
   module_label_coming_soon: Em breve
+  module_label_available_now: Disponível agora
   module_label_video_series: Série de vídeos
   module_label_self_paced: Módulo individualizado
   module_ages_5_10: 5-10
@@ -481,6 +508,8 @@ po:
   module_grade_2_5: 2-5
   module_grade_3_5: 3-5
   module_grade_3_8: 3-8
+  module_grade_k_12: ENSINO FUNDAMENTAL E MÉDIO
+  module_grade_3_12: 3-12
   module_grade_6_12: 6-12
   module_grade_6_10: 6-10
   module_grade_9_12: 9-12
@@ -580,6 +609,8 @@ po:
   heading_java_lab: Java Lab
   heading_objects_first: Objetos em primeiro lugar
   heading_these_lessons_will: 'Essas aulas irão:'
+  heading_explore_curriculum_catalog: Explore todos os nossos cursos no Catálogo de
+    Currículos
   professional_learning_section_desc: Obtenha o apoio que precisa para se preparar
     para o ensino. Os professores adoram, com mais de 90% classificando-o como o melhor
     desenvolvimento profissional de todos os tempos!
@@ -848,6 +879,11 @@ po:
     (como o ChatGPT) e a IA generativa. Ouça como essas novas tecnologias funcionam
     diretamente com os especialistas: Mira Murati, CTO da OpenAI, e Cristóbal Valenzuela,
     CEO da RunwayML.'
+  ai_pl_101_llm_slides_title: Grandes instruções de modelo de linguagem para educadores
+  ai_pl_101_llm_slides_desc: Ferramentas para obter o melhor resultado possível de
+    LLMs como o ChatGPT, do iniciante ao avançado. Inclui instruções iniciais para
+    quem está começando, bem como ferramentas avançadas para quem quer maximizar seu
+    potencial.
   how_ai_works_hero_heading: Como a IA funciona
   how_ai_works_hero_desc: Mergulhe no mundo da IA com “Como a IA funciona”, nossa
     série de vídeos e as aulas que a acompanham!
@@ -1785,8 +1821,8 @@ po:
   ai_activity_zooniverse: Zooniverse - Snapshot Mountain Zebra
   ai_activity_zooniverse_desc: Ajude a proteger a zebra da Montanha do Cabo, ameaçada
     de extinção, identificando os diferentes animais nas imagens.
-  codeorg_homepage_hoc2018_curriculum: Go further with <a href="%{studio_url}/courses"
-    class="hoc2018-curriculum-link">Code.org courses</a>
+  codeorg_homepage_hoc2018_curriculum: Vá mais longe com os cursos <a href="%{studio_url}/courses"
+    class="hoc2018-curriculum-link">da Code.org</a>
   codeorg_homepage_hoc2018_dance_heading: Crie seu próprio <span class="highlight-word">Dance&nbsp;Party</span>
   codeorg_homepage_hoc2018_header_line1: A Hora do Código está chegando...
   codeorg_homepage_hoc2018_header_line2_desktop: O que você <span class="hoc2018-highlight-word">criará?</span>
@@ -2132,6 +2168,13 @@ po:
     da computação?
   signup_email_preference_privacy: "(Veja nossa política de privacidade)"
   signup_email_preference_yes: sim
+  signup_email_preference_yes_elementary: Sim - Envie-me atualizações sobre os recursos
+    do ensino fundamental
+  signup_email_preference_yes_middle: Sim - Envie-me atualizações sobre recursos do
+    ensino médio
+  signup_email_preference_yes_high: Sim - Envie-me atualizações sobre recursos do
+    ensino médio
+  signup_email_preference_yes_general: Sim - Envie-me atualizações gerais
   signup_email_preference_no: Não
   signup_email_preference_error: A preferência de e-mail é obrigatória
   signup_multiple_event_warning: Se estiver a organizar vários eventos, forneça um
@@ -2247,18 +2290,20 @@ po:
     parceiros] (%{partners}) e 200.000 educadores em todo o mundo.
   hoc_faq_last_year: Experimente os tutoriais
   hoc_faq_when_is_hoc_q: Quando é a Hora de Código?
-  hoc_faq_when_is_hoc_a: The Hour of Code takes place each year during <a href='%{csedweek_url}'>Computer
-    Science Education Week</a>. The %{campaign_date_year} Computer Science Education
-    Week will be %{campaign_date_full}, but you can host an Hour of Code all year-round.
-    Computer Science Education Week is held annually in recognition of the birthday
-    of computing pioneer <a href='%{grace_hopper}'>Admiral Grace Murray Hopper</a>
-    (December 9, 1906).
-  hoc_faq_when_is_hoc_a_markdown: The Hour of Code takes place each year during [Computer
-    Science Education Week](%{csedweek_url}). The %{campaign_date_year} Computer Science
-    Education Week will be %{campaign_date_full}, but you can host an Hour of Code
-    all year-round. Computer Science Education Week is held annually in recognition
-    of the birthday of computing pioneer [Admiral Grace Murray Hopper](%{grace_hopper})
-    (December 9, 1906).
+  hoc_faq_when_is_hoc_a: A Hora do Código acontece todos os anos durante a Semana
+    da Educação em Ciência da <a href='%{csedweek_url}'>Computação</a>. A Semana da
+    Educação em Ciência da %{campaign_date_year} Computação será %{campaign_date_full},
+    mas você pode organizar uma Hora do Código durante todo o ano. A Semana da Educação
+    em Ciência da Computação é realizada anualmente em reconhecimento ao aniversário
+    da pioneira da computação, a <a href='%{grace_hopper}'>almirante Grace Murray
+    Hopper</a> (9 de dezembro de 1906).
+  hoc_faq_when_is_hoc_a_markdown: A Hora do Código acontece todos os anos durante
+    a [Semana da Educação em Ciência da Computação] (%{csedweek_url}). A Semana da
+    Educação em Ciência da %{campaign_date_year} Computação será %{campaign_date_full},
+    mas você pode organizar uma Hora do Código durante todo o ano. A Semana da Educação
+    em Ciência da Computação é realizada anualmente em reconhecimento ao aniversário
+    da pioneira da computação [Almirante Grace Murray Hopper] (%{grace_hopper}) (9
+    de dezembro de 1906).
   hoc_faq_why_cs_q: Porquê ciências da computação?
   hoc_faq_why_cs_a: "<i>Cada</i> estudante deve ter a oportunidade de apreender Ciências
     da Computação. Ajuda a nutrir as habilidades de resolver problemas, lógica e creatividade.
@@ -2304,28 +2349,32 @@ po:
     de infância até o final. Comece a planejar seu evento lendo nosso [guia prático]
     (%{howto}).
   hoc_faq_devices_q: Quais dispositivos devo usar para meus alunos?
-  hoc_faq_devices_a: Code.org tutorials work on all devices and browsers. You can
-    see more information about Code.org's tutorial tech needs <a href='%{codeorg_url}/educate/it'>here</a>.
-    Tech needs for non-Code.org tutorials can be found on <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a>
-    in the tutorial specific description. Don't forget we also offer <a href='%{unplugged_url}'>unplugged
-    activities</a> if your school can't accommodate the tutorials!
-  hoc_faq_devices_a_markdown: Code.org tutorials work on all devices and browsers.
-    You can see more information about Code.org's tutorial tech needs [here](%{codeorg_url}/educate/it).
-    Tech needs for non-Code.org tutorials can be found on [%{partner_url}/learn](%{codeorg_url}/learn)
-    in the tutorial specific description. Don't forget we also offer [unplugged activities](%{unplugged_url})
-    if your school can't accommodate the tutorials!
+  hoc_faq_devices_a: Os tutoriais da Code.org funcionam em todos os dispositivos e
+    navegadores. Você pode ver mais informações sobre as necessidades <a href='%{codeorg_url}/educate/it'>técnicas
+    dos tutoriais da Code.org aqui.</a>As necessidades técnicas de tutoriais que não
+    são da Code.org podem ser encontradas em <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a>
+    na descrição específica do tutorial. Não se esqueça de que também oferecemos atividades
+    <a href='%{unplugged_url}'>desconectadas</a> se sua escola não puder acomodar
+    os tutoriais!
+  hoc_faq_devices_a_markdown: Os tutoriais da Code.org funcionam em todos os dispositivos
+    e navegadores. Você pode ver mais informações sobre as necessidades técnicas dos
+    tutoriais da Code.org [here](%{codeorg_url}/educate/it). As necessidades técnicas
+    de tutoriais que não sejam da Code.org podem ser encontradas em [%{partner_url}/learn]
+    (%{codeorg_url}/learn) na descrição específica do tutorial. Não se esqueça de
+    que também oferecemos [atividades desconectadas] (%{unplugged_url}) se sua escola
+    não puder acomodar os tutoriais!
   hoc_faq_need_computers_q: Preciso de computadores para todos os inscritos?
   hoc_faq_need_computers_a: |-
     Não. Temos tutoriais da Hora de Código que funcionam em PC, smartphones, tablets, e até alguns que nem sequer requerem computador! Poderás ligar-te onde quer que estejas, com o que quer que tenhas.  <p><i>Aqui vão algumas opções:</i>
     <br> <ul> <li><b>Trabalhar em pares.</b> Estudos mostram que os alunos aprendem melhor quando <a href='http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning'>programam em pares</a>, partilhando um computador e trabalhando em conjunto. Encoraja os teus alunos juntarem-se em grupo. <li><b>Usa um ecrã de projecção.</b> Se houver um projector à disposição bem como um computador com ligação à internet, todo o grupo poderá fazer a Hora de Código em conjunto, vendo os vídeos, e resolvendo os quebra-cabeças ou respondendo às questões por turnos. <li><b>Sem ligação à internet.</b> Oferecemos tutoriais que não requerem computador. </ul>
   hoc_faq_need_computers_a_markdown: |-
-    No. We have Hour of Code tutorials that work on PCs, smartphones, tablets, and some that require no computer at all! You can join wherever you are, with whatever you have.
+    Não. Temos tutoriais da Hora do Código que funcionam em PCs, smartphones, tablets e alguns que não precisam de nenhum computador! Você pode participar onde quer que esteja, com o que tiver.
 
-    _Here are a few options:_
+    _Aqui estão algumas opções:_
 
-    - **Work in pairs.** [Research shows](%{pair_programming_research}) students learn best with [pair programming](%{pair_programming_video}), sharing a computer and working together. Encourage your students to double up.
-    - **Use a projected screen.** If you have a projector and screen for a Web-connected computer, your entire group can do an Hour of Code together. Watch video portions together and take turns solving puzzles or answering questions.
-    - **Go unplugged.** We offer [tutorials that require no computer](%{unplugged_url}) at all.
+    - **Trabalhe em pares.** [Pesquisas mostram que] (%{pair_programming_research}) os alunos aprendem melhor com [programação em pares] (%{pair_programming_video}), compartilhando um computador e trabalhando juntos. Incentive seus alunos a se juntarem.
+    - **Use uma tela projetada.** Se você tiver um projetor e uma tela para um computador conectado à Web, todo o grupo poderá fazer uma Hora do Código juntos. Assista a trechos de vídeo juntos e se revezem resolvendo quebra-cabeças ou respondendo perguntas.
+    - **Vá desconectado.** Oferecemos [tutoriais que não requerem nenhum computador] ().%{unplugged_url}
   hoc_faq_international_q: Estou em <country>. Como participo internacionalmente?
   hoc_faq_international_a: Qualquer pessoa pode organizar um evento da Hora do Código,
     em qualquer lugar do mundo. No ano passado, estudantes de todo o mundo se uniram
@@ -2350,11 +2399,12 @@ po:
     complementares</a> exige a criação de uma conta para salvar o progresso do aluno.
     Além disso, inscrever-se no Hour of Code NÃO cria automaticamente uma conta do
     Code Studio. Se você quiser criar contas para seus alunos, siga estas <a href='https://youtu.be/_smelV_KISE'>instruções</a>.
-  hoc_faq_account_a_markdown: No. Absolutely no signup or login is required for students
-    to try the Hour of Code. Most of the [follow-on courses](%{codeorg_url}/learn/beyond)
-    require account creation to save student progress. Also, signing up for the Hour
-    of Code does NOT automatically create a Code Studio account. If you do want to
-    create accounts for your students, please follow these [instructions](%{section_instructions_url}).
+  hoc_faq_account_a_markdown: Não. Absolutamente nenhuma inscrição ou login é necessária
+    para que os alunos experimentem a Hora do Código. A maioria dos [cursos complementares]
+    (%{codeorg_url}/learn/beyond) exige a criação de uma conta para salvar o progresso
+    do aluno. Além disso, inscrever-se na Hora do Código NÃO cria automaticamente
+    uma conta do Code Studio. Se você quiser criar contas para seus alunos, siga estas
+    [instructions](%{section_instructions_url}).
   hoc_faq_high_school_q: Qual atividade devo fazer com estudantes do ensino médio?
   hoc_faq_high_school_a: Nossos tutoriais de Star Wars e Minecraft são ótimos para
     estudantes do ensino médio, especialmente a versão JavaScript de Star Wars e o
@@ -2469,10 +2519,10 @@ po:
     onde você pode imprimir certificados para toda a turma com antecedência. Você
     também pode imprimir <a href='%{codeorg_url}/certificates?course=mc'>certificados
     especiais</a> para estudantes que estão fazendo o tutorial do Minecraft.
-  hoc_faq_certificates_a_markdown: Go to our [certificates page](%{codeorg_url}/certificates)
-    where you can print certificates for your entire class ahead of time. You can
-    also print out [special certificates](%{codeorg_url}/certificates?course=mc) for
-    students doing the Minecraft tutorial.
+  hoc_faq_certificates_a_markdown: Acesse nossa [página de certificados] (%{codeorg_url}/certificados),
+    onde você pode imprimir certificados para toda a turma com antecedência. Você
+    também pode imprimir [certificados especiais] (%{codeorg_url}/certificados? course=mc)
+    para estudantes que estão fazendo o tutorial do Minecraft.
   hoc_faq_logo_q: Há limitações sobre como eu posso usar o logotipo ou o nome da Hora
     do Código?
   hoc_faq_logo_a: Hour of Code é uma marca registrada. Não queremos impedir seu uso,
@@ -2635,10 +2685,10 @@ po:
   learn_banner_beyond: Quer continuar aprendendo?  <a id='learn_banner_beyond'>Vá
     além de uma hora</a>
   learn_banner_beyond_markdown: Quer continuar aprendendo? [Vá além de uma hora] (%{url})
-  learn_banner_teachers: 'Teachers: <a id=''teacher_banner_host''>Host an hour</a>
-    or <a id=''teacher_banner_howto''>read the How-To Guide</a>'
-  learn_banner_teachers_markdown: 'Teachers: [Host an hour](%{host_url}) or [read
-    the How-To Guide](%{howto_url})'
+  learn_banner_teachers: 'Professores: <a id=''teacher_banner_host''>hospede uma hora</a>
+    ou <a id=''teacher_banner_howto''>leia o guia prático</a>'
+  learn_banner_teachers_markdown: 'Professores: [Organize uma hora] (%{host_url})
+    ou [leia o guia prático] ()%{howto_url}'
   tutorial_dance2019_name: Festa de dança
   tutorial_danceparty_name: Festa de dança
   tutorial_chibitronics_name: 'Chibitronics: história iluminada'
@@ -5613,11 +5663,11 @@ po:
     aventura pelo mundo do Minecraft.
   tutorial_minecraft-2016_longdescription: Crie um jogo de Minecraft. Crie suas próprias
     versões de galinhas, ovelhas, creepers, zumbis e muito mais.
-  tutorial_thinkersmith-es_longdescription: Mediante el uso de un "Vocabulario Robot"
-    predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar
-    a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento
-    ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones
-    as&iacute; como la valiosa habilidad de depuraci&oacute;n.
+  tutorial_thinkersmith-es_longdescription: Usando um “Robô de Vocabulário” predefinido,
+    os alunos descubram&aacute;n como guiar-se de modo tal de ler as tarefas específicas
+    sem serem discutidas anteriormente.&iacute;Este segmento inclui&ntilde;aos estudantes
+    a conexão entre os&iacute;símbolos e ações&iacute; como a valiosa habilidade de
+    depuração&oacute;n.&oacute;
   tutorial_pixie_longdescription: Tutorial da Hora do Código com Pixie
   tutorial_play_longdescription: Crie uma história ou faça um jogo com o Play Lab!
     Faça animais, piratas, zumbis, ninjas e muitos outros personagens se moverem,
@@ -12833,12 +12883,12 @@ po:
   tutorial_googlename _longdescription: Escolha um nome e dê vida às letras da palavra
     usando o código. Escolha um apelido, o nome de um animal de estimação, um animal,
     um esporte, um lugar ou um hobby.
-  tutorial_carnegiezillah_longdescription: Zillah City is thriving, and music is in
-    the air. Rumor has it, the famed Gargantua bot is online and sending the last
-    Toxibots to trash the city block by block…. Grab your cobot hoverboard and get
-    ready to groove, move, and finish off what you started! Players program their
-    cobot hoverbots to change lanes, avoid obstacles, and take out many Toxibots in
-    this rhythm-styled game.
+  tutorial_carnegiezillah_longdescription: A cidade de Zillah está prosperando e a
+    música está no ar. Há rumores de que o famoso bot Gargantua está online e está
+    enviando os últimos Toxibots para destruir a cidade quarteirão por quarteirão.…Pegue
+    sua prancha de cobot e prepare-se para dançar, se mover e terminar o que você
+    começou! Os jogadores programam seus hoverbots cobots para mudar de faixa, evitar
+    obstáculos e eliminar muitos Toxibots neste jogo de estilo rítmico.
   tutorial_nasachspacejam_longdescription: Crie um sistema solar que realmente arrasa!
     Aprenda sobre música, astronomia e programação nesta atividade autoguiada (sem
     necessidade de experiência em programação). Programe planetas para fazer música,

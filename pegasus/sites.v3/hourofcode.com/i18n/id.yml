@@ -195,6 +195,16 @@ id:
   grade_level_label_elementary: Sekolah Dasar
   grade_level_label_middle: Sekolah Menengah
   grade_level_label_high: SMA
+  curricula_title_elementary: Kurikulum Sekolah Dasar
+  curricula_desc_elementary: Jelajahi kursus dan kegiatan gratis yang menyenangkan
+    yang mengundang Anda untuk menjelajahi ilmu komputer bersama siswa sekolah dasar
+    Anda.
+  curricula_title_middle: Kurikulum Sekolah Menengah
+  curricula_desc_middle: Jelajahi penawaran menarik yang memungkinkan Anda dan siswa
+    sekolah menengah Anda untuk menjelajahi ilmu komputer bersama.
+  curricula_title_high: Kurikulum SMA
+  curricula_desc_high: Jelajahi kursus dan kegiatan menarik yang mengundang Anda dan
+    siswa sekolah menengah Anda untuk menggali lebih dalam ilmu komputer.
   students_label: Murid-murid
   teachers_label: Guru-guru
   teacher_label_csf: Guru CS Fundamentals
@@ -221,6 +231,13 @@ id:
   call_to_action_explore_choice_level: Telusuri contoh level pilihan
   call_to_action_explore_collection: Telusuri koleksi
   call_to_action_explore_unplugged_lesson: Telusuri pelajaran tanpa komputer
+  call_to_action_explore_csf: Jelajahi Dasar-dasar CS
+  call_to_action_explore_csd: Jelajahi CS Discoveries
+  call_to_action_explore_csp: Jelajahi Prinsip CS
+  call_to_action_explore_csc: Jelajahi Koneksi CS
+  call_to_action_explore_csa: Jelajahi AP® Ilmu Komputer A
+  call_to_action_explore_maker: Jelajahi kurikulum Maker
+  call_to_action_explore_hoc: Jelajahi tutorial Hour of Code
   call_to_action_try_app_lab: Coba App Lab
   call_to_action_view_lesson_plan: Lihat rencana pelajaran
   call_to_action_self_paced_pl: Mulai pembelajaran profesional mandiri
@@ -265,6 +282,7 @@ id:
   call_to_action_notify_available: Beri tahu saya bila tersedia
   call_to_action_register_early_access: Daftar untuk akses awal
   call_to_action_open_positions: Lihat posisi terbuka
+  call_to_action_get_guide: Dapatkan panduannya
   aria_label_call_to_action_afe: Pelajari selengkapnya tentang Amazon Future Engineer
   aria_label_call_to_action_teaching_csf: Mulai program pembelajaran profesional Pengajaran
     Ilmu Komputer Dasar-dasar
@@ -369,6 +387,8 @@ id:
   curriculum_name_csa: Ilmu Komputer A
   curriculum_name_csc_02: Modul CS Connections apa saja
   curriculum_name_ai: AI dan Machine Learning
+  curriculum_name_artificial_intelligence: Kecerdasan Buatan (AI)
+  curriculum_name_maker: Pembuat
   curriculum_name_maker_cp: Membuat Aplikasi dengan Perangkat (Circuit Playground)
   curriculum_name_maker_microbit: 'Membuat Aplikasi dengan Perangkat (mikro: bit)'
   curriculum_name_creating_apps_with_devices: Membuat Aplikasi dengan Perangkat
@@ -424,6 +444,12 @@ id:
   curriculum_desc_creating_apps_with_devices: Menelusuri peran perangkat fisik dalam
     komputasi. Mengembangkan program yang memanfaatkan input dan output perangkat
     keras. Ada versi unit ini untuk micro:bit dan Circuit Playground.
+  curriculum_desc_csa: Perkenalkan siswa pada rekayasa perangkat lunak dan desain
+    berorientasi objek saat mereka belajar bahasa pemrograman Java dalam kurikulum
+    gratis ini untuk AP® Computer Science A (AP® CSA).
+  curriculum_desc_maker: Pendidikan Maker membawa STEM (Sains, Teknologi, Teknik,
+    Matematika) selangkah lebih maju dengan mengundang pengalaman langsung dan kolaborasi
+    ke dalam kelas untuk membantu mengajarkan pemecahan masalah dan pemikiran kritis.
   collection_hardware: Fokus pada Perangkat Keras
   collection_hardware_desc: Memberdayakan siswa untuk menggunakan data dan perangkat
     fisik untuk memecahkan masalah.
@@ -463,6 +489,7 @@ id:
   module_label_student_content_resources: Konten & sumber daya
   module_label_new: Baru
   module_label_coming_soon: Segera hadir
+  module_label_available_now: Tersedia Sekarang
   module_label_video_series: Seri video
   module_label_self_paced: Modul mandiri
   module_ages_5_10: 5-10
@@ -473,6 +500,8 @@ id:
   module_grade_2_5: 2-5
   module_grade_3_5: 3-5
   module_grade_3_8: 3-8
+  module_grade_k_12: K-12
+  module_grade_3_12: 3-12
   module_grade_6_12: 6-12
   module_grade_6_10: 6-10
   module_grade_9_12: 9-12
@@ -569,6 +598,7 @@ id:
   heading_java_lab: Java Lab
   heading_objects_first: Utamakan objek
   heading_these_lessons_will: 'Pelajaran ini akan:'
+  heading_explore_curriculum_catalog: Jelajahi semua kursus kami di Katalog Kurikulum
   professional_learning_section_desc: Dapatkan dukungan yang Anda butuhkan saat Anda
     bersiap untuk mengajar. Para guru menyukainya, dan lebih dari 90% memberinya peringkat
     sebagai pengembangan profesi terbaik yang pernah ada!
@@ -829,6 +859,11 @@ id:
     perubahan besar dalam AI, menampilkan dua video baru pada Model Bahasa Besar (seperti
     ChatGPT) dan Generative AI. Dengarkan bagaimana teknologi baru ini bekerja langsung
     dari para ahli: Mira Murati, CTO OpenAI, dan Cristóbal Valenzuela, CEO RunwayMLL.'
+  ai_pl_101_llm_slides_title: Prompt Model Bahasa Besar untuk Pendidik
+  ai_pl_101_llm_slides_desc: Alat untuk mendapatkan hasil terbaik dari LLM seperti
+    ChatGPT, dari pemula hingga mahir. Termasuk petunjuk pemula bagi mereka yang baru
+    saja mencelupkan jari kaki mereka, serta alat canggih bagi mereka yang ingin memaksimalkan
+    potensi mereka.
   how_ai_works_hero_heading: Bagaimana AI Bekerja
   how_ai_works_hero_desc: Selami dunia AI dengan “How AI Works,” serial video kami
     dan pelajaran yang menyertainya!
@@ -1743,8 +1778,8 @@ id:
   ai_activity_zooniverse: Zooniverse - Foto Gunung Zebra
   ai_activity_zooniverse_desc: Membantu melindungi Cape Mountain Zebra yang terancam
     punah dengan mengidentifikasi hewan yang berbeda dalam gambar.
-  codeorg_homepage_hoc2018_curriculum: Go further with <a href="%{studio_url}/courses"
-    class="hoc2018-curriculum-link">Code.org courses</a>
+  codeorg_homepage_hoc2018_curriculum: Pergi lebih jauh dengan kursus <a href="%{studio_url}/courses"
+    class="hoc2018-curriculum-link">Code.org</a>
   codeorg_homepage_hoc2018_dance_heading: Buat sendiri <span class="highlight-word">Dance&nbsp;Party</span>
   codeorg_homepage_hoc2018_header_line1: The Hour of Code akan datang...
   codeorg_homepage_hoc2018_header_line2_desktop: Apa yang akan Anda buat <span class="hoc2018-highlight-word">?</span>
@@ -2093,6 +2128,13 @@ id:
     pembaruan kursus Code.org, peluang lokal, atau berita ilmu komputer lainnya?
   signup_email_preference_privacy: "(Lihat kebijakan privasi kami)"
   signup_email_preference_yes: ya
+  signup_email_preference_yes_elementary: Ya - Kirimi saya pembaruan tentang Sumber
+    Daya Sekolah Dasar
+  signup_email_preference_yes_middle: Ya - Kirimi saya pembaruan tentang Sumber Daya
+    Sekolah Menengah
+  signup_email_preference_yes_high: Ya - Kirimi saya pembaruan tentang Sumber Daya
+    Sekolah Menengah
+  signup_email_preference_yes_general: Ya - Kirimi saya pembaruan umum
   signup_email_preference_no: Tidak
   signup_email_preference_error: Preferensi email diperlukan
   signup_multiple_event_warning: Jika Anda menyelenggarakan beberapa acara, kirimkan
@@ -12769,12 +12811,12 @@ id:
   tutorial_googlename _longdescription: Pilih nama dan hidupkan huruf-huruf kata tersebut
     menggunakan kode. Pilih nama panggilan, nama hewan peliharaan, binatang, olahraga,
     tempat atau hobi.
-  tutorial_carnegiezillah_longdescription: Zillah City is thriving, and music is in
-    the air. Rumor has it, the famed Gargantua bot is online and sending the last
-    Toxibots to trash the city block by block…. Grab your cobot hoverboard and get
-    ready to groove, move, and finish off what you started! Players program their
-    cobot hoverbots to change lanes, avoid obstacles, and take out many Toxibots in
-    this rhythm-styled game.
+  tutorial_carnegiezillah_longdescription: Kota Zillah berkembang pesat, dan musik
+    ada di udara. Rumor mengatakan, bot Gargantua yang terkenal sedang online dan
+    mengirim Toxibots terakhir untuk membuang kota blok demi blok.…Ambil hoverboard
+    cobot Anda dan bersiaplah untuk alur, bergerak, dan selesaikan apa yang Anda mulai!
+    Pemain memprogram hoverbot cobot mereka untuk mengubah jalur, menghindari rintangan,
+    dan mengeluarkan banyak Toxibots dalam game bergaya ritme ini.
   tutorial_nasachspacejam_longdescription: Buat tata surya yang benar-benar bebatuan!
     Pelajari tentang musik, astronomi, dan pengkodean dalam aktivitas yang dipandu
     sendiri ini (tidak diperlukan pengalaman pengkodean). Program planet untuk membuat

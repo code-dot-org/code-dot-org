@@ -184,6 +184,15 @@ da:
   grade_level_label_elementary: Folkeskolen
   grade_level_label_middle: Middle School
   grade_level_label_high: Gymnasium
+  curricula_title_elementary: Folkeskolens læseplaner
+  curricula_desc_elementary: Gennemse det sjove, gratis kurser og aktiviteter, der
+    inviterer dig til at udforske datalogi med dine grundskoleelever.
+  curricula_title_middle: Mellemskolens læseplaner
+  curricula_desc_middle: Gennemse de engagerende tilbud, der gør det muligt for dig
+    og dine mellemskoleelever at udforske datalogi sammen.
+  curricula_title_high: High School læseplaner
+  curricula_desc_high: Gennemse de overbevisende kurser og aktiviteter, der inviterer
+    dig og dine gymnasieelever til at grave dybere ned i datalogi.
   students_label: Elever
   teachers_label: Lærere
   teacher_label_csf: CS Fundamentals Lærer
@@ -210,6 +219,13 @@ da:
   call_to_action_explore_choice_level: Udforsk eksempel på valgniveau
   call_to_action_explore_collection: Udforsk kollektionen
   call_to_action_explore_unplugged_lesson: Udforsk unplugged lektioner
+  call_to_action_explore_csf: Udforsk CS Fundamentals
+  call_to_action_explore_csd: Udforsk CS-opdagelser
+  call_to_action_explore_csp: Udforsk CS-principper
+  call_to_action_explore_csc: Udforsk CS-forbindelser
+  call_to_action_explore_csa: Udforsk AP® Computer Science A
+  call_to_action_explore_maker: Udforsk Maker-læseplaner
+  call_to_action_explore_hoc: Udforsk Hour of Code-vejledninger
   call_to_action_try_app_lab: Prøv App Lab
   call_to_action_view_lesson_plan: Se lektionsplan
   call_to_action_self_paced_pl: Start selvstændig professionel læring
@@ -254,6 +270,7 @@ da:
   call_to_action_notify_available: Giv mig besked, når det er tilgængeligt
   call_to_action_register_early_access: Tilmeld dig for tidlig adgang
   call_to_action_open_positions: Se åbne positioner
+  call_to_action_get_guide: Få guiden
   aria_label_call_to_action_afe: Læs mere om Amazon Future Engineer
   aria_label_call_to_action_teaching_csf: Start Teaching Computer Science Fundamentals
     professionelle læringsprogram
@@ -358,6 +375,8 @@ da:
   curriculum_name_csa: AP® Datalogi A
   curriculum_name_csc_02: Enhver CS-forbindelsesmodul
   curriculum_name_ai: AI og maskinlæring
+  curriculum_name_artificial_intelligence: Kunstig intelligens (AI)
+  curriculum_name_maker: skaber
   curriculum_name_maker_cp: Oprettelse af apps med enheder (Circuit Playground)
   curriculum_name_maker_microbit: Oprettelse af apps med enheder (micro:bit)
   curriculum_name_creating_apps_with_devices: Oprettelse af apps med enheder
@@ -409,6 +428,13 @@ da:
   curriculum_desc_creating_apps_with_devices: Udforsk fysiske enheders rolle i computing.
     Udvikle programmer, der bruger hardware input og output. Der er en version af
     denne enhed til både micro:bit og Circuit Playground.
+  curriculum_desc_csa: Introducer eleverne til software engineering og objektorienteret
+    design, mens de lærer Java programmeringssprog i denne gratis læseplan for AP®
+    Computer Science A (AP® CSA).
+  curriculum_desc_maker: Maker-uddannelse tager STEM (Science, Technology, Engineering,
+    Mathematics) et skridt videre ved at invitere praktisk erfaring og samarbejde
+    ind i klasseværelset for at hjælpe med at undervise i problemløsning og kritisk
+    tænkning.
   collection_hardware: Fokus på hardware
   collection_hardware_desc: Giv eleverne mulighed for at bruge data og fysiske enheder
     til at løse problemer.
@@ -446,6 +472,7 @@ da:
   module_label_student_content_resources: Indhold & ressourcer
   module_label_new: Ny
   module_label_coming_soon: Kommer snart
+  module_label_available_now: Tilgængelig nu
   module_label_video_series: Video serie
   module_label_self_paced: Modul i eget tempo
   module_ages_5_10: 5-10
@@ -456,6 +483,8 @@ da:
   module_grade_2_5: 2-5
   module_grade_3_5: 3-5
   module_grade_3_8: 3-8
+  module_grade_k_12: K-12
+  module_grade_3_12: 3-12
   module_grade_6_12: 6-12
   module_grade_6_10: 6-10
   module_grade_9_12: 9-12
@@ -551,6 +580,7 @@ da:
   heading_java_lab: Java Lab
   heading_objects_first: Objekter først
   heading_these_lessons_will: 'Disse lektioner vil:'
+  heading_explore_curriculum_catalog: Udforsk alle vores kurser i Curriculum Catalog
   professional_learning_section_desc: Få den støtte, du har brug for, når du forbereder
     dig på at undervise. Lærere elsker det, med over 90%, der placerer det som den
     bedste faglige udvikling nogensinde!
@@ -807,6 +837,11 @@ da:
     AI. Hør, hvordan disse nye teknologier fungerer direkte fra eksperterne: Mira
     Murati, CTO for OpenAI, og Cristóbal Valenzuela, administrerende direktør for
     RunwayML.'
+  ai_pl_101_llm_slides_title: Store sprogmodel opfordringer til undervisere
+  ai_pl_101_llm_slides_desc: Værktøjer til at få det bedst mulige output fra LLM'er
+    som ChatGPT, fra begynder til avanceret. Inkluderer startmeddelelser til dem,
+    der bare dypper tæerne i, samt avancerede værktøjer til dem, der ønsker at maksimere
+    deres potentiale.
   how_ai_works_hero_heading: Sådan fungerer AI
   how_ai_works_hero_desc: Dyk ned i AI-verdenen med „Sådan fungerer AI“, vores videoserie
     og ledsagende lektioner!
@@ -1397,10 +1432,10 @@ da:
     er tilgængelige, hvis du ikke har adgang til disse forsyninger.
   csd_page_faq_answer_04_06: Oprettelse af apps med enheder (mulighed A og mulighed
     B)
-  csd_page_faq_answer_04_07: 'Option A: Classroom set of Circuit Playgrounds. Check
-    out [code.org/maker/circuitplayground](%{url}) for more details.'
-  csd_page_faq_answer_04_08: 'Option B: Classroom set of micro:bit devices. Check
-    out [code.org/maker/microbit](%{url}) for more details.'
+  csd_page_faq_answer_04_07: 'Mulighed A: Klasseværelse sæt af Circuit Playgrounds.
+    Tjek [code.org/maker/circuitplayground] () for flere detaljer.%{url}'
+  csd_page_faq_answer_04_08: 'Mulighed B: Klasseværelse sæt af micro:bit enheder.
+    Tjek [code.org/maker/microbit] () for flere detaljer.%{url}'
   csd_page_faq_answer_04_09: Producentforsyninger, såsom tomme vævskasser eller papruller
     eller ridsepapir
   csd_page_faq_answer_04_10: "*Bemærk: Enheden Oprettelse af apps med enheder har
@@ -1527,10 +1562,10 @@ da:
     klasseværelse. Vores regionale partnere tilbyder højkvalitets, en-dags Code.org-workshops
     for individuelle lærere eller til skoledækkende PD. [Tilmeld dig en professionel
     udviklingsworkshop i nærheden af dig] (%{sign_up_url})!
-  csf_page_faq_answer_04_02: Join over 100,000 teachers who have participated in our
-    workshops. The majority of our workshop attendees say, 'It's the best professional
-    development I've ever attended.' In fact, [90% of attendees would recommend our
-    program to other teachers](%{rec_url})!
+  csf_page_faq_answer_04_02: 'Deltag i over 100.000 lærere, der har deltaget i vores
+    workshops. De fleste af vores workshopdeltagere siger: ''Det er den bedste faglige
+    udvikling, jeg nogensinde har deltaget i. '' Faktisk, [90% af deltagerne vil anbefale
+    vores program til andre lærere] ()!%{rec_url}'
   csf_page_faq_question_05: Hvad er den anbefalede timing for undervisning i CS Fundamentals?
   csf_page_faq_answer_05: Hvert CSF-kursus omfatter 13-17 lektioner designet til 45-minutters
     perioder. Vi anbefaler, at alle elever går fra lektion til lektion i et tempo,
@@ -1538,9 +1573,10 @@ da:
     at blive oplevet i fællesskab, mens færdighedsopbyggende lektioner kan afsluttes
     af studerende i deres eget tempo.
   csf_page_faq_question_06: Hvilke materialer har jeg brug for til CS Fundamentals?
-  csf_page_faq_answer_06: Many lessons have handouts that guide students through activities.
-    These resources can be printed or assigned digitally. Some lessons call for typical
-    classroom supplies and manipulatives. [Visit the CSF Syllabus to learn more](%{syllabus_url}).
+  csf_page_faq_answer_06: Mange lektioner har uddelingskopier, der guider eleverne
+    gennem aktiviteter. Disse ressourcer kan udskrives eller tildeles digitalt. Nogle
+    lektioner kræver typiske klasseværelsesforsyninger og manipulativer. [Besøg CSF-pensum
+    for at lære mere] ().%{syllabus_url}
   csa_page_top_desc: Introduce students to software engineering and object-oriented
     design while they learn the Java programming language in this free curriculum
     for [AP® Computer Science A (AP® CSA)](%{csa_url}).
@@ -1689,8 +1725,8 @@ da:
   ai_activity_zooniverse: Zooniverse - Snapshot Bjergzebra
   ai_activity_zooniverse_desc: Hjælp med at beskytte den truede Cape Mountain Zebra
     ved at identificere de forskellige dyr på billederne.
-  codeorg_homepage_hoc2018_curriculum: Go further with <a href="%{studio_url}/courses"
-    class="hoc2018-curriculum-link">Code.org courses</a>
+  codeorg_homepage_hoc2018_curriculum: Gå videre med <a href="%{studio_url}/courses"
+    class="hoc2018-curriculum-link">Code.org kurser</a>
   codeorg_homepage_hoc2018_dance_heading: Lav din egen <span class="highlight-word">Danse&nbsp;fest</span>
   codeorg_homepage_hoc2018_header_line1: Hour of Code nærmer sig...
   codeorg_homepage_hoc2018_header_line2_desktop: Hvad vil du <span class="hoc2018-highlight-word">skabe?</span>
@@ -2024,6 +2060,12 @@ da:
     kurser, lokale muligheder eller andre datalogi nyheder?
   signup_email_preference_privacy: "(Se vores privatlivspolitik)"
   signup_email_preference_yes: Ja
+  signup_email_preference_yes_elementary: Ja - Send mig opdateringer om grundskolens
+    ressourcer
+  signup_email_preference_yes_middle: Ja - Send mig opdateringer om Middle School
+    Resources
+  signup_email_preference_yes_high: Ja - Send mig opdateringer om High School Resources
+  signup_email_preference_yes_general: Ja - Send mig generelle opdateringer
   signup_email_preference_no: Nej
   signup_email_preference_error: E-mail-præference er påkrævet
   signup_multiple_event_warning: Hvis du er vært for flere begivenheder, bedes du
@@ -2257,10 +2299,10 @@ da:
     de bruge ScratchJR iPad appen. Hvis du ser på øvelserne på <a href='http://code.org/learn'>
     Code.org/learn</a>, kan du finde andre øvelser, som virker på iPads - fra Code.org,
     Tynker, Lightbot eller CodeSpark.
-  hoc_faq_scratch_a_markdown: Scratch doesn't run on tablets. If your students are
-    young, they can use the ScratchJR iPad app (for early-readers). If you look at
-    the tutorials on [%{partner_url}/learn](%{codeorg_url}/learn), you can find other
-    tutorials that work on iPads - from Code.org, Tynker, Lightbot, or CodeSpark.
+  hoc_faq_scratch_a_markdown: Scratch kører ikke på tabletter. Hvis dine elever er
+    unge, kan de bruge ScratchJR iPad-appen (til tidlige læsere). Hvis du ser på vejledningerne
+    på [%{partner_url}/learn] (%{codeorg_url}/learn), kan du finde andre tutorials,
+    der fungerer på iPads - fra Code.org, Tynker, Lightbot eller CodePark.
   hoc_faq_count_hoc_q: Hvordan tælles antallet af Hours of Code?
   hoc_faq_map_q: Hvorfor kan jeg ikke se min prik på kortet?
   hoc_faq_map_a: Vi er så kede af at du ikke ser dit arrangement på Hour of Code-kortet.
@@ -5052,18 +5094,17 @@ da:
   tutorial_tickles_longdescription: Hold dig sammen med din Sphero for et godt løb!
     Flyt, drej og giv det et par runder med gode sving. Bare sæt nogle kodeblokke
     sammen på Tickle-appen for at køre din Sphero, som du vil have den til.
-  tutorial_ozogame_longdescription: "This teacher-led tutorial introduces students
-    to the concept of coding with the help of Ozobot, a small programmable robot.
-    Students will be learning how to code by playing Ozobot games, called Shape Tracer
-    Games. They can still play the simulated version of the games even if they don't
-    have an Ozobot Bit or Evo robot.The Ozobot games will teach students how to code
-    with OzoBlockly, a visual programming language based on Blockly. \n\nOnce students
-    have solved all ten levels of the Shape Tracer Games, they are challenged to take
-    everything they learned and design and program their own game level 11.\n\nNo
-    programming experience or knowledge of Ozobot is required for this tutorial. However,
-    even students with some programming experience will be engaged by the Ozobot games.
-    The tutorial is designed for grades 2-12 and can be customized to your students'
-    abilities."
+  tutorial_ozogame_longdescription: "Denne lærerledede tutorial introducerer eleverne
+    til begrebet kodning ved hjælp af Ozobot, en lille programmerbar robot. Studerende
+    lærer at kode ved at spille Ozobot-spil, kaldet Shape Tracer Games. De kan stadig
+    spille den simulerede version af spillene, selvom de ikke har en Ozobot Bit eller
+    Evo robot. Ozobot-spilene lærer eleverne at kode med OzoBlockly, et visuelt programmeringssprog
+    baseret på Blockly. \n\nNår eleverne har løst alle ti niveauer i Shape Tracer
+    Games, bliver de udfordret til at tage alt, hvad de lærte, og designe og programmere
+    deres eget spilniveau 11.\n\nDer kræves ingen programmeringserfaring eller viden
+    om Ozobot til denne tutorial. Men selv studerende med en vis programmeringserfaring
+    vil blive engageret af Ozobot-spil. Vejledningen er designet til klasse 2-12 og
+    kan tilpasses dine elevers evner."
   tutorial_vidcodeio_longdescription: I denne øvelse vil du gennemgå med dine elever,
     hvordan dette relaterer sig til det, de allerede ved om matematik ved at løse
     en matematisk ligning med programmering.
@@ -5327,11 +5368,11 @@ da:
     eventyr gennem denne Minecraft verden.
   tutorial_minecraft-2016_longdescription: Byg et Minecraftspil. Lav din egen version
     af høns, får, creepers, zombier og en masse andet.
-  tutorial_thinkersmith-es_longdescription: Mediante el uso de un "Vocabulario Robot"
+  tutorial_thinkersmith-es_longdescription: Mediante el uso de un „Vocabulario Robot“
     predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar
-    a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento
-    ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones
-    as&iacute; como la valiosa habilidad de depuraci&oacute;n.
+    a cabo tareas espec ficas sin ser estas discutidas previamente.&iacute;Este segmento
+    ense&ntilde;a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones
+    som como la valiosa habilidad de depuraci n.&iacute;&oacute;
   tutorial_pixie_longdescription: Hour of Code tutorial med Pixie
   tutorial_play_longdescription: 'Opret en historie eller lav et spil med Play Lab!
     Få dyr, pirater, zombier, ninjaer og mange andre karakterer til at bevæge sig,
@@ -12341,12 +12382,12 @@ da:
   tutorial_googlename _longdescription: Vælg et navn og bring bogstaverne i ordet
     til live ved hjælp af kode. Vælg et kaldenavn, et kæledyrs navn, et dyr, en sport,
     et sted eller en hobby.
-  tutorial_carnegiezillah_longdescription: Zillah City is thriving, and music is in
-    the air. Rumor has it, the famed Gargantua bot is online and sending the last
-    Toxibots to trash the city block by block…. Grab your cobot hoverboard and get
-    ready to groove, move, and finish off what you started! Players program their
-    cobot hoverbots to change lanes, avoid obstacles, and take out many Toxibots in
-    this rhythm-styled game.
+  tutorial_carnegiezillah_longdescription: Zillah City trives, og musik er i luften.
+    Rygtet siger det, den berømte Gargantua-bot er online og sender de sidste Toxibots
+    til at ødelægge byen blok for blok.…Grib dit cobot-hoverboard, og gør dig klar
+    til at rille, flytte og afslutte det, du startede! Spillere programmerer deres
+    cobot-hoverbots til at skifte bane, undgå forhindringer og tage mange Toxibots
+    ud i dette rytme-stylede spil.
   tutorial_nasachspacejam_longdescription: Opret et solsystem, der virkelig klipper!
     Lær om musik, astronomi og kodning i denne selvstyrede aktivitet (ingen kodningserfaring
     krævet). Programmer planeter til at lave musik, skabe dit eget musikalske solsystem,

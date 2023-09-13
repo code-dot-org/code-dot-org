@@ -110,32 +110,34 @@ ka:
     როლი კომპიუტერულ მეცნიერებას უფრო სამართლიანი სამყაროს შექმნაში.
   oceans_landing_videos: ვიდეოები AI და მანქანური სწავლების შესახებ
   oceans_behind_the_scenes: 'AI ოკეანეებისთვის: კულისებში'
-  oceans_behind_the_scenes_1: Levels 2-4 use a pretrained model provided by the <a
-    href="https://www.tensorflow.org/" >TensorFlow</a> <a href="https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md">
-    MobileNet </a> project. A MobileNet model is a <a href="https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks">convolutional
-    neural network</a> that has been trained on <a href="http://www.image-net.org/">ImageNet</a>,
-    a dataset of over 14 million images hand-annotated with words such as "balloon"
-    or "strawberry". In order to customize this model with the labeled training data
-    the student generates in this activity, we use a technique called <a href="https://en.wikipedia.org/wiki/Transfer_learning">Transfer
-    Learning</a>. Each image in the training dataset is fed to MobileNet, as pixels,
-    to obtain a list of annotations that are most likely to apply to it. Then, for
-    a new image, we feed it to MobileNet and compare its resulting list of annotations
-    to those from the training dataset. We classify the new image with the same label
-    (such as "fish" or "not fish") as the images from the training set with the most
-    similar results.
-  oceans_behind_the_scenes_1_markdown: Levels 2-4 use a pretrained model provided
-    by the [TensorFlow](https://www.tensorflow.org/) [MobileNet](https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md)
-    project. A MobileNet model is a [convolutional neural network](https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks)
-    that has been trained on [ImageNet](http://www.image-net.org/), a dataset of over
-    14 million images hand-annotated with words such as "balloon" or "strawberry".
-    In order to customize this model with the labeled training data the student generates
-    in this activity, we use a technique called [Transfer Learning](https://en.wikipedia.org/wiki/Transfer_learning).
-    Each image in the training dataset is fed to MobileNet, as pixels, to obtain a
-    list of annotations that are most likely to apply to it. Then, for a new image,
-    we feed it to MobileNet and compare its resulting list of annotations to those
-    from the training dataset. We classify the new image with the same label (such
-    as "fish" or "not fish") as the images from the training set with the most similar
-    results.
+  oceans_behind_the_scenes_1: 2-4 დონეზე იყენებენ <a href="https://www.tensorflow.org/"
+    >TensorFlow</a> <a href="https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md">
+    MobileNet პროექტის მიერ მოწოდებულ წინასწარ მომზადებულ მოდელს. </a> MobileNet მოდელი
+    არის <a href="https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks">კონვოლუციური
+    ნერვული ქსელი,</a> რომელიც გაწვრთნილია <a href="http://www.image-net.org/">ImageNet-ზე</a>,
+    14 მილიონზე მეტი სურათის მონაცემთა ნაკრები ხელით ანოტირებული სიტყვებით, როგორიცაა
+    „ბუშტი“ ან „მარწყვი“. იმისათვის, რომ ამ მოდელის მორგება ეტიკეტირებული ტრენინგის
+    მონაცემებით, რომელსაც მოსწავლე გამოიმუშავებს ამ აქტივობაში, ჩვენ ვიყენებთ ტექნიკას
+    სახელწოდებით <a href="https://en.wikipedia.org/wiki/Transfer_learning">Transfer
+    Learning.</a>ტრენინგის მონაცემთა ნაკრების თითოეული სურათი მიეწოდება MobileNet-ს,
+    როგორც პიქსელებს, რათა მიიღოთ ანოტაციების სია, რომლებიც, სავარაუდოდ, ვრცელდება
+    მასზე. შემდეგ, ახალი სურათისთვის, ჩვენ ვაწვდით მას MobileNet- ს და შევადარებთ
+    ანოტაციების ჩამონათვალს ტრენინგის მონაცემთა ნაკრებიდან. ჩვენ ახალ სურათს ვახარისხებთ
+    იმავე ეტიკეტით (მაგალითად, „თევზი“ ან „არა თევზი“), როგორც სურათები სასწავლო ნაკრებიდან
+    ყველაზე მსგავსი შედეგებით.
+  oceans_behind_the_scenes_1_markdown: 2-4 საფეხურები იყენებენ წინასწარ მომზადებულ
+    მოდელს, რომელიც მოწოდებულია [TensorFlow](https://www.tensorflow.org/) [MobileNet](https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md)
+    პროექტით. MobileNet მოდელი არის [კონვოლუციური ნერვული ქსელი] (https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks),
+    რომელიც გაწვრთნილია [ImageNet](http://www.image-net.org/), 14 მილიონზე მეტი სურათის
+    მონაცემთა ნაკრები ხელით ანოტირებული სიტყვებით, როგორიცაა „ბუშტი“ ან „მარწყვი“.
+    იმისათვის, რომ ამ მოდელის მორგება მონიშნული სასწავლო მონაცემებით, რომელსაც მოსწავლე
+    გამოიმუშავებს ამ აქტივობაში, ჩვენ ვიყენებთ ტექნიკას სახელწოდებით [გადაცემის სწავლა]
+    (https://en.wikipedia.org/wiki/Transfer_learning). ტრენინგის მონაცემთა ნაკრების
+    თითოეული სურათი მიეწოდება MobileNet-ს, როგორც პიქსელებს, რათა მიიღოთ ანოტაციების
+    სია, რომლებიც, სავარაუდოდ, ვრცელდება მასზე. შემდეგ, ახალი სურათისთვის, ჩვენ ვაწვდით
+    მას MobileNet- ს და შევადარებთ ანოტაციების ჩამონათვალს ტრენინგის მონაცემთა ნაკრებიდან.
+    ჩვენ ახალ სურათს ვახარისხებთ იმავე ეტიკეტით (მაგალითად, „თევზი“ ან „არა თევზი“),
+    როგორც სურათები სასწავლო ნაკრებიდან ყველაზე მსგავსი შედეგებით.
   oceans_behind_the_scenes_2: 6-8 დონეზე გამოიყენეთ <a href="https://en.wikipedia.org/wiki/Support-vector_machine">მხარდაჭერა-ვექტორული
     მანქანა</a> (SVM). ჩვენ ვუყურებთ თევზის თითოეულ კომპონენტს (როგორიცაა თვალები,
     პირი, სხეული) და ვაგროვებთ კომპონენტების ყველა მეტამონაცემს (როგორიცაა კბილების
@@ -189,6 +191,17 @@ ka:
   grade_level_label_elementary: დაწყებითი სკოლა
   grade_level_label_middle: საშუალო სკოლა
   grade_level_label_high: საშუალო სკოლა
+  curricula_title_elementary: დაწყებითი სკოლის სასწავლო გეგმები
+  curricula_desc_elementary: დაათვალიერეთ სახალისო, უფასო კურსები და აქტივობები, რომლებიც
+    გიწვევთ კომპიუტერული მეცნიერების შესასწავლად დაწყებითი სკოლის მოსწავლეებთან ერთად.
+  curricula_title_middle: საშუალო სკოლის სასწავლო გეგმები
+  curricula_desc_middle: დაათვალიერეთ საინტერესო შეთავაზებები, რომლებიც საშუალებას
+    გაძლევთ თქვენ და თქვენს საშუალო სკოლის მოსწავლეებს ერთად შეისწავლონ კომპიუტერული
+    მეცნიერება.
+  curricula_title_high: საშუალო სკოლის სასწავლო გეგმები
+  curricula_desc_high: დაათვალიერეთ დამაჯერებელი კურსები და აქტივობები, რომლებიც გიწვევთ
+    თქვენ და თქვენი საშუალო სკოლის მოსწავლეებს კომპიუტერულ მეცნიერებაში უფრო ღრმად
+    ჩაღრმავებაში.
   students_label: მოსწავლეები
   teachers_label: მასწავლებლები
   teacher_label_csf: CS საფუძვლების მასწავლებელი
@@ -215,6 +228,13 @@ ka:
   call_to_action_explore_choice_level: გამოიკვლიეთ მაგალითის არჩევანის დონე
   call_to_action_explore_collection: გამოიკვლიეთ კოლექცია
   call_to_action_explore_unplugged_lesson: გამოიკვლიეთ გამორთული გაკვეთილები
+  call_to_action_explore_csf: გამოიკვლიეთ CS საფუძვლები
+  call_to_action_explore_csd: გამოიკვლიეთ CS აღმოჩენები
+  call_to_action_explore_csp: გამოიკვლიეთ CS პრინციპები
+  call_to_action_explore_csc: გამოიკვლიეთ CS კავშირები
+  call_to_action_explore_csa: გამოიკვლიეთ AP® კომპიუტერული მეცნიერება A
+  call_to_action_explore_maker: გამოიკვლიეთ შემქმნელის სასწავლო გეგმები
+  call_to_action_explore_hoc: გამოიკვლიეთ კოდის საათის გაკვეთილები
   call_to_action_try_app_lab: სცადეთ აპლიკაციის ლაბორატორია
   call_to_action_view_lesson_plan: გაკვეთილის გეგმის ნახვა
   call_to_action_self_paced_pl: დაიწყეთ თვითნაკეთი პროფესიული სწავლება
@@ -259,6 +279,7 @@ ka:
   call_to_action_notify_available: შემატყობინე, როდესაც ეს შესაძლებელია
   call_to_action_register_early_access: დარეგისტრირდით ადრეული წვდომისთვის
   call_to_action_open_positions: ღია პოზიციების ნახვა
+  call_to_action_get_guide: მიიღეთ სახელმძღვანელო
   aria_label_call_to_action_afe: შეიტყვეთ მეტი ამაზონის მომავალი ინჟინრის შესახებ
   aria_label_call_to_action_teaching_csf: დაიწყეთ კომპიუტერული მეცნიერების საფუძვლების
     სწავლების პროფესიული სასწავლო პროგრამა
@@ -370,6 +391,8 @@ ka:
   curriculum_name_csa: AP® კომპიუტერული მეცნიერება A
   curriculum_name_csc_02: ნებისმიერი CS კავშირის მოდული
   curriculum_name_ai: AI & მანქანური სწავლება
+  curriculum_name_artificial_intelligence: ხელოვნური ინტელექტი (AI)
+  curriculum_name_maker: Maker
   curriculum_name_maker_cp: პროგრამების შექმნა მოწყობილობებით (წრიული მოედანი)
   curriculum_name_maker_microbit: 'პროგრამების შექმნა მოწყობილობებით (მიკრო: ბიტი)'
   curriculum_name_creating_apps_with_devices: პროგრამების შექმნა მოწყობილობებით
@@ -428,6 +451,12 @@ ka:
     როლი გამოთვლებში. პროგრამების შემუშავება, რომლებიც იყენებენ აპარატურულ საშუალებებსა
     და შედეგებს. ამ ერთეულის ვერსია არსებობს როგორც მიკრო: ბიტისთვის, ასევე წრიული
     სათამაშო მოედნისთვის.'
+  curriculum_desc_csa: გააცანით სტუდენტებს პროგრამული უზრუნველყოფის ინჟინერია და ობიექტზე
+    ორიენტირებული დიზაინი, სანამ ისინი სწავლობენ Java პროგრამირების ენას ამ უფასო
+    სასწავლო გეგმაში AP® კომპიუტერული მეცნიერებისთვის A (AP® CSA).
+  curriculum_desc_maker: შემქმნელთა განათლება STEM- ს (მეცნიერება, ტექნოლოგია, ინჟინერია,
+    მათემატიკა) ნაბიჯს გადადგამს პრაქტიკული გამოცდილებისა და თანამშრომლობით კლასში,
+    რათა დაეხმაროს პრობლემის გადაჭრისა და კრიტიკული აზროვნების სწავლებას.
   collection_hardware: ფოკუსირება აპარატურაზე
   collection_hardware_desc: აძლევს სტუდენტებს უფლებას გამოიყენონ მონაცემები და ფიზიკური
     მოწყობილობები პრობლემების გადასაჭრელად.
@@ -466,6 +495,7 @@ ka:
   module_label_student_content_resources: შინაარსი და რესურსები
   module_label_new: ახალი
   module_label_coming_soon: მალე
+  module_label_available_now: ხელმისაწვდომია ახლა
   module_label_video_series: ვიდეო სერიები
   module_label_self_paced: თვითმმართველობის paced მოდული
   module_ages_5_10: 5-10
@@ -476,6 +506,8 @@ ka:
   module_grade_2_5: 2-5
   module_grade_3_5: 3-5
   module_grade_3_8: 3-8
+  module_grade_k_12: კ-12
+  module_grade_3_12: 3-12
   module_grade_6_12: 6-12
   module_grade_6_10: 6-10
   module_grade_9_12: 9-12
@@ -575,6 +607,8 @@ ka:
   heading_java_lab: ჯავის ლაბორატორია
   heading_objects_first: ობიექტები პირველი
   heading_these_lessons_will: 'ეს გაკვეთილები იქნება:'
+  heading_explore_curriculum_catalog: გამოიკვლიეთ ჩვენი ყველა კურსი სასწავლო გეგმების
+    კატალოგში
   professional_learning_section_desc: მიიღეთ საჭირო მხარდაჭერა, როდესაც სწავლებისთვის
     ემზადებით. მასწავლებლებს უყვართ ის, 90% -ზე მეტი კი მას საუკეთესო პროფესიულ განვითარებად
     აფასებს ოდესმე!
@@ -839,6 +873,11 @@ ka:
     (როგორიცაა ChatGPT) და Generative AI. მოუსმინეთ, თუ როგორ მუშაობს ეს ახალი ტექნოლოგიები
     უშუალოდ ექსპერტებისგან: მირა მურატი, OpenAI— ს CTO და RunwayML— ის აღმასრულებელი
     დირექტორი კრისტობალ ვალენზუელა.'
+  ai_pl_101_llm_slides_title: დიდი ენის მოდელის მოთხოვნები პედაგოგებისთვის
+  ai_pl_101_llm_slides_desc: ინსტრუმენტები LLMS— დან საუკეთესო გამოსავლის მისაღებად,
+    როგორიცაა ChatGPT, დამწყებიდან მოწინავემდე. მოიცავს დამწყებ მოთხოვნებს მათთვის,
+    ვინც უბრალოდ თითების თითებს იჭერს, ასევე მოწინავე ინსტრუმენტებს მათთვის, ვინც
+    ცდილობს მაქსიმალურად გაზარდოს თავისი პოტენციალი.
   how_ai_works_hero_heading: როგორ მუშაობს AI
   how_ai_works_hero_desc: ჩაყვინთეთ ხელოვნური ინტელექტის სამყაროში „როგორ მუშაობს
     AI“, ჩვენი ვიდეო სერიებით და თანმხლები გაკვეთილებით!
@@ -1452,10 +1491,10 @@ ka:
     ხელმისაწვდომია, თუ ამ მარაგებზე წვდომა არ გაქვთ.
   csd_page_faq_answer_04_06: პროგრამების შექმნა მოწყობილობებით (ვარიანტი A და ვარიანტი
     B)
-  csd_page_faq_answer_04_07: 'Option A: Classroom set of Circuit Playgrounds. Check
-    out [code.org/maker/circuitplayground](%{url}) for more details.'
-  csd_page_faq_answer_04_08: 'Option B: Classroom set of micro:bit devices. Check
-    out [code.org/maker/microbit](%{url}) for more details.'
+  csd_page_faq_answer_04_07: 'ვარიანტი A: წრიული სათამაშო მოედნების საკლასო კომპლექტი.
+    დამატებითი ინფორმაციისთვის იხილეთ [code.org/maker/circuit მოედანი] ().%{url}'
+  csd_page_faq_answer_04_08: 'ვარიანტი B: საკლასო კომპლექტი მიკრო: bit მოწყობილობები.
+    შეამოწმეთ [code.org/maker/microbit] () დამატებითი ინფორმაციისთვის.%{url}'
   csd_page_faq_answer_04_09: Maker წყაროები, როგორიცაა ცარიელი ქსოვილის ყუთები ან
     მუყაოს რულონები ან ნულიდან ქაღალდი
   csd_page_faq_answer_04_10: "* შენიშვნა: პროგრამების შექმნა მოწყობილობებით ერთეულს
@@ -1598,9 +1637,10 @@ ka:
     პროექტის დონე, რომელიც შექმნილია უნისონში გამოცდილებისთვის, ხოლო უნარების განვითარების
     გაკვეთილები შეიძლება დაასრულონ სტუდენტებმა საკუთარი ტემპით.
   csf_page_faq_question_06: რა მასალები მჭირდება CS საფუძვლებისთვის?
-  csf_page_faq_answer_06: Many lessons have handouts that guide students through activities.
-    These resources can be printed or assigned digitally. Some lessons call for typical
-    classroom supplies and manipulatives. [Visit the CSF Syllabus to learn more](%{syllabus_url}).
+  csf_page_faq_answer_06: ბევრ გაკვეთილს აქვს სახელმძღვანელოები, რომლებიც მოსწავლეებს
+    უხელმძღვანელებენ აქტივობებში. ამ რესურსების დაბეჭდვა ან მინიჭება შესაძლებელია
+    ციფრულად. ზოგიერთი გაკვეთილი მოითხოვს საკლასო ოთახის ტიპურ მარაგს და მანიპულატორებს.
+    [ეწვიეთ CSF სილაბუსს მეტის გასაგებად] ().%{syllabus_url}
   csa_page_top_desc: Introduce students to software engineering and object-oriented
     design while they learn the Java programming language in this free curriculum
     for [AP® Computer Science A (AP® CSA)](%{csa_url}).
@@ -1749,8 +1789,8 @@ ka:
   ai_activity_zooniverse: ზოონივერსი - სნაფშოტი მთის ზებრა
   ai_activity_zooniverse_desc: დაეხმარეთ გადაშენების პირას მყოფი კეიპის მთის ზებრას
     დაცვაში სურათებში სხვადასხვა ცხოველების იდენტიფიცირებით.
-  codeorg_homepage_hoc2018_curriculum: Go further with <a href="%{studio_url}/courses"
-    class="hoc2018-curriculum-link">Code.org courses</a>
+  codeorg_homepage_hoc2018_curriculum: წავიდეთ შემდგომი ერთად <a href="%{studio_url}/courses"
+    class="hoc2018-curriculum-link">Code.org კურსები</a>
   codeorg_homepage_hoc2018_dance_heading: შექმენით თქვენი საკუთარი <span class="highlight-word">Dance&nbsp;პარტია</span>
   codeorg_homepage_hoc2018_header_line1: კოდის საათი მოდის...
   codeorg_homepage_hoc2018_header_line2_desktop: რას შექმნით <span class="hoc2018-highlight-word">?</span>
@@ -2092,6 +2132,13 @@ ka:
     კურსების, ადგილობრივი შესაძლებლობების ან კომპიუტერული მეცნიერების სამყაროს შესახებ?
   signup_email_preference_privacy: "(ნახეთ ჩვენი კონფიდენციალურობის პოლიტიკა)"
   signup_email_preference_yes: დიახ
+  signup_email_preference_yes_elementary: დიახ - გამომიგზავნე განახლებები დაწყებითი
+    სკოლის რესურსების შესახებ
+  signup_email_preference_yes_middle: დიახ - გამომიგზავნე განახლებები საშუალო სკოლის
+    რესურსებზე
+  signup_email_preference_yes_high: დიახ - გამომიგზავნე განახლებები საშუალო სკოლის
+    რესურსების შესახებ
+  signup_email_preference_yes_general: დიახ - გამომიგზავნე ზოგადი განახლებები
   signup_email_preference_no: არა
   signup_email_preference_error: ელ. ფოსტის უპირატესობაა საჭირო
   signup_multiple_event_warning: თუ რამდნიმე ღონისძიებას ატარებთ, ყოველისთვის უნიკალური
@@ -5606,11 +5653,11 @@ ka:
     სტივი Minecraft-ის სამყაროში.
   tutorial_minecraft-2016_longdescription: შექმენით Minecraft-ის თამაში. შექმენით
     ქათმების, ცხვრების, ქრიფერების, ზომბების და სხვა არსებების საკუთარი ვერსიები.
-  tutorial_thinkersmith-es_longdescription: Mediante el uso de un "Vocabulario Robot"
-    predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar
-    a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento
-    ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones
-    as&iacute; como la valiosa habilidad de depuraci&oacute;n.
+  tutorial_thinkersmith-es_longdescription: საშუალო გამოყენება „ლექსიკა Robot“ წინასწარ
+    განსაზღვრული, სტუდენტები, რომლებიც აღწერილია n როგორც guiarse de llevar მოდის
+    cabo tareas espec ficas ცოდვა, რომ ეს არის წინასწარ&aacute;განკარგულება.&iacute;ეს
+    სეგმენტი ense&ntilde;a los estudiantes la conexi&oacute;n entre s&iacute;mbolos
+    y შემთხვევები, როგორც როგორც como la valiosa დეპურაციური შესაძლებლობები n.&iacute;&oacute;
   tutorial_pixie_longdescription: კოდის ერთი საათის ტუტორიალი პიქსისთან ერთად
   tutorial_play_longdescription: შექმენით ამბავი ან თამაში სათამაშო ლაბორატორიის საშუალებით!
     შექმენით ცხოველები, მეკობრეები, ზომბები, ნინძები და მრავალი სხვა პერსონაჟი. ამოძრავეთ
@@ -11650,11 +11697,12 @@ ka:
     ცხოვრება პროგრამა.
   tutorial_itchtenacity_longdescription: ეს პროექტირება პროგრამა და Scratch სიმულატორი
     რობოტი, რომელიც limpia las aguas marinas.
-  tutorial_kcjskiing_longdescription: 'It''s all fun and games until someone crashes
-    into a tree… or IS that the fun part? Strap on those skis and bend at the knees
-    as you guide your character down a hill of frozen obstacles using code in this
-    Scratch activity. Design the course, add movement and sensing, plus a bit of collision-interaction
-    and boom - you''ve got yourself a mountain of fun. '
+  tutorial_kcjskiing_longdescription: 'ეს ყველაფერი სახალისო და თამაშია მანამ, სანამ
+    ვინმე ხეს არ დაეჯახება… თუ ეს სახალისო ნაწილია? Strap იმ თხილამურები და წარმართონ
+    იმ მუხლებზე, როგორც თქვენ გაუძღვება თქვენი ხასიათი ქვემოთ გორაზე გაყინული დაბრკოლებები
+    გამოყენებით კოდი ამ Scratch საქმიანობაში. შეიმუშავეთ კურსი, დაამატეთ მოძრაობა
+    და ზონდირება, პლუს ცოტა შეჯახება-ურთიერთქმედება და ბუმი - თქვენ თვითონ მოხვდით
+    გართობის მთაში. '
   tutorial_groksecurity_longdescription: განათავსეთ თქვენი კიბერ-დამცავი ქუდი ამ მოკლე
     შესავალში, რომ იყოთ უსაფრთხო ინტერნეტში. თქვენ გაეცნობით უსაფრთხო პაროლებს, ფიშინგს,
     უსაფრთხოების პარამეტრებს, სოციალურ მედიას და სხვას!
@@ -12769,12 +12817,12 @@ ka:
   tutorial_googlename _longdescription: შეარჩიეთ სახელი და გააცოცხლეთ სიტყვის ასოები
     კოდის გამოყენებით. შეარჩიეთ მეტსახელი, შინაური ცხოველის სახელი, ცხოველი, სპორტი,
     ადგილი ან ჰობი.
-  tutorial_carnegiezillah_longdescription: Zillah City is thriving, and music is in
-    the air. Rumor has it, the famed Gargantua bot is online and sending the last
-    Toxibots to trash the city block by block…. Grab your cobot hoverboard and get
-    ready to groove, move, and finish off what you started! Players program their
-    cobot hoverbots to change lanes, avoid obstacles, and take out many Toxibots in
-    this rhythm-styled game.
+  tutorial_carnegiezillah_longdescription: Zillah City აყვავდება და მუსიკა ჰაერშია.
+    ჭორები ამბობენ, რომ ცნობილი Gargantua ბოტი არის ონლაინ რეჟიმში და აგზავნის ბოლო
+    Toxibots- ს ქალაქის ბლოკის ბლოკად გადასაყრელად.…აიღეთ თქვენი კობოტის ჰოვერბორდი
+    და მოემზადეთ გროვისთვის, გადაადგილებისთვის და დაასრულეთ ის, რაც დაიწყეთ! მოთამაშეები
+    პროგრამირებენ თავიანთ კობოტ ჰოვერბოტებს, რათა შეცვალონ ზოლები, თავიდან აიცილონ
+    დაბრკოლებები და აიღონ ბევრი ტოქსიბოტი ამ რიტმის სტილის თამაშში.
   tutorial_nasachspacejam_longdescription: შექმენით მზის სისტემა, რომელიც ნამდვილად
     ქანდება! გაეცანით მუსიკას, ასტრონომიას და კოდირებას ამ თვითმართვადი საქმიანობაში
     (კოდირების გამოცდილება არ არის საჭირო). პროგრამა პლანეტები, რათა მუსიკა, შექმნა

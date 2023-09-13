@@ -193,6 +193,15 @@ la:
   grade_level_label_elementary: Primaria
   grade_level_label_middle: Secundaria
   grade_level_label_high: Preparatoria
+  curricula_title_elementary: Currículos de la Escuela Primaria
+  curricula_desc_elementary: Navega por los cursos y actividades divertidos y gratuitos
+    que te invitan a explorar ciencias de la computación con tus alumnos de primaria.
+  curricula_title_middle: Currículos de la Escuela Media
+  curricula_desc_middle: Explore las atractivas ofertas que le permiten a usted y
+    a sus estudiantes de secundaria explorar la informática juntos.
+  curricula_title_high: Currículos de Preparatoria
+  curricula_desc_high: Explore los cursos y actividades convincentes que lo invitan
+    a usted y a sus estudiantes de secundaria a profundizar en la informática.
   students_label: Estudiantes
   teachers_label: Docentes
   teacher_label_csf: Profesor de CS Fundamentals
@@ -219,6 +228,13 @@ la:
   call_to_action_explore_choice_level: Explora los níveles de ejemplo
   call_to_action_explore_collection: Explore la colección
   call_to_action_explore_unplugged_lesson: Explora las actividades sin conexión
+  call_to_action_explore_csf: Explore los fundamentos de CS
+  call_to_action_explore_csd: Explora CS Discoveries
+  call_to_action_explore_csp: Explore los principios de CS
+  call_to_action_explore_csc: Explore las conexiones CS
+  call_to_action_explore_csa: Explore AP® Computer Science A
+  call_to_action_explore_maker: Explora los planes de estudio de Maker
+  call_to_action_explore_hoc: Explore los tutoriales de la Hora del Código
   call_to_action_try_app_lab: Prueba el Laboratorio de Apps
   call_to_action_view_lesson_plan: Ver el plan de lección
   call_to_action_self_paced_pl: Comenzar el aprendizaje profesional autodidáctico
@@ -263,6 +279,7 @@ la:
   call_to_action_notify_available: Notificarme cuando esté disponible
   call_to_action_register_early_access: Inscríbase para acceso anticipado
   call_to_action_open_positions: Ver posiciones abiertas
+  call_to_action_get_guide: Obtener la guía
   aria_label_call_to_action_afe: Aprenda más sobre Amazon Future Engineer
   aria_label_call_to_action_teaching_csf: Iniciar el programa de aprendizaje profesional
     de Enseñanza de Fundamentos de Ciencias de la Computación
@@ -375,6 +392,8 @@ la:
   curriculum_name_csa: AP® Informática A
   curriculum_name_csc_02: Cualquier módulo de conexiones CS
   curriculum_name_ai: IA y aprendizaje automático
+  curriculum_name_artificial_intelligence: Inteligencia Artificial (IA)
+  curriculum_name_maker: Maker
   curriculum_name_maker_cp: Creación de aplicaciones con dispositivos (Circuit Playground)
   curriculum_name_maker_microbit: Creación de aplicaciones con dispositivos (micro:bit)
   curriculum_name_creating_apps_with_devices: Crear Apps con Dispositivos
@@ -433,6 +452,13 @@ la:
     físicos en la computación. Desarrolla programas que utilicen entradas y salidas
     de hardware. Existe una versión de esta unidad tanto para micro:bit como para
     Circuit Playground.
+  curriculum_desc_csa: Introducir a los estudiantes a la ingeniería de software y
+    el diseño orientado a objetos mientras aprenden el lenguaje de programación Java
+    en este plan de estudios gratuito para AP® Computer Science A (AP® CSA).
+  curriculum_desc_maker: La educación de los maestros lleva STEM (Ciencia, Tecnología,
+    Ingeniería, Matemáticas) un paso más allá al invitar a la experiencia práctica
+    y la colaboración en el aula para ayudar a enseñar la resolución de problemas
+    y el pensamiento crítico.
   collection_hardware: Enfoque en hardware
   collection_hardware_desc: Permite a los estudiantes utilizar datos y dispositivos
     físicos para resolver problemas.
@@ -473,6 +499,7 @@ la:
   module_label_student_content_resources: Contenido y recursos
   module_label_new: Nuevo
   module_label_coming_soon: Próximamente
+  module_label_available_now: Disponible ahora
   module_label_video_series: Serie de videos
   module_label_self_paced: Módulo autodidacta
   module_ages_5_10: de 5 a 10
@@ -483,6 +510,8 @@ la:
   module_grade_2_5: 2-5
   module_grade_3_5: 3-5
   module_grade_3_8: 3-8
+  module_grade_k_12: K-12
+  module_grade_3_12: 3-12
   module_grade_6_12: 6-12
   module_grade_6_10: 6-10
   module_grade_9_12: 9-12
@@ -581,6 +610,8 @@ la:
   heading_java_lab: Laboratorio Java
   heading_objects_first: Los objetos primero
   heading_these_lessons_will: 'Estas lecciones:'
+  heading_explore_curriculum_catalog: Explora todos nuestros cursos en el Catálogo
+    Curricular
   professional_learning_section_desc: 'Obtén el apoyo que necesitas mientras te preparas
     para enseñar. A los docentes les encanta: ¡más del 90 % lo considera el mejor
     desarrollo profesional!'
@@ -860,6 +891,11 @@ la:
     (como ChatGPT) e IA Generativa. Escuche cómo funcionan estas nuevas tecnologías
     directamente de los expertos: Mira Murati, CTO de OpenAI, y Cristóbal Valenzuela,
     CEO de RunwayML.'
+  ai_pl_101_llm_slides_title: Prompts de Modelo de Lenguaje Grande para Educadores
+  ai_pl_101_llm_slides_desc: Herramientas para obtener la mejor salida posible de
+    LLM como ChatGPT, desde principiantes hasta avanzados. Incluye indicaciones de
+    inicio para quienes solo sumerjan sus dedos de los pies, así como herramientas
+    avanzadas para aquellos que buscan maximizar su potencial.
   how_ai_works_hero_heading: Cómo funciona la Inteligencia Artificial
   how_ai_works_hero_desc: "¡Sumérgete en el mundo de la IA con “Cómo funciona la IA”,
     nuestra serie de videos y lecciones acompañantes!"
@@ -2146,6 +2182,12 @@ la:
     por correo electrónico?"
   signup_email_preference_privacy: "(consulta nuestra política de privacidad)"
   signup_email_preference_yes: Sí
+  signup_email_preference_yes_elementary: Sí - Envíame actualizaciones sobre los recursos
+    de la escuela primaria
+  signup_email_preference_yes_middle: Sí - Envíame actualizaciones sobre Recursos
+    de la Escuela Media
+  signup_email_preference_yes_high: Sí - Envíame actualizaciones de Recursos de Preparatoria
+  signup_email_preference_yes_general: Sí - Envíame actualizaciones generales
   signup_email_preference_no: 'No'
   signup_email_preference_error: Debes elegir el correo electrónico como preferencia
   signup_multiple_event_warning: Pondremos el nombre de tu escuela y ciudad en el
@@ -13038,12 +13080,12 @@ la:
   tutorial_googlename _longdescription: Elige un nombre y da vida a las letras de
     la palabra mediante el código. Elige un apodo, el nombre de una mascota, un animal,
     un deporte, un lugar o un pasatiempo.
-  tutorial_carnegiezillah_longdescription: Zillah City is thriving, and music is in
-    the air. Rumor has it, the famed Gargantua bot is online and sending the last
-    Toxibots to trash the city block by block…. Grab your cobot hoverboard and get
-    ready to groove, move, and finish off what you started! Players program their
-    cobot hoverbots to change lanes, avoid obstacles, and take out many Toxibots in
-    this rhythm-styled game.
+  tutorial_carnegiezillah_longdescription: La ciudad de Zillah está prosperando y
+    la música está en el aire. Se rumorea que el famoso bot de Gargantua está en línea
+    y envía a los últimos Toxibots a la basura de la ciudad cuadra por cuadra.…¡Agarra
+    tu hoverboard cobot y prepárate para acanalar, mover y terminar lo que empezaste!
+    Los jugadores programan sus hoverbots cobot para cambiar de carril, evitar obstáculos
+    y sacar muchos Toxibots en este juego de estilo rítmico.
   tutorial_nasachspacejam_longdescription: "¡Crea un sistema solar que realmente se
     mece! Aprende sobre música, astronomía y codificación en esta actividad autoguiada
     (no se requiere experiencia en codificación). Programa planetas para hacer música,

@@ -197,6 +197,15 @@ vi:
   grade_level_label_elementary: Trường tiểu học
   grade_level_label_middle: Trường trung học cơ sở
   grade_level_label_high: Trường trung học
+  curricula_title_elementary: Chương trình giảng dạy của trường tiểu học
+  curricula_desc_elementary: Duyệt qua các khóa học và hoạt động vui nhộn, miễn phí
+    mời bạn khám phá khoa học máy tính với học sinh tiểu học của mình.
+  curricula_title_middle: Chương trình giảng dạy trung học cơ sở
+  curricula_desc_middle: Duyệt qua các dịch vụ hấp dẫn cho phép bạn và học sinh trung
+    học cơ sở của bạn khám phá khoa học máy tính cùng nhau.
+  curricula_title_high: Chương trình giảng dạy trung học
+  curricula_desc_high: Duyệt qua các khóa học và hoạt động hấp dẫn mời bạn và học
+    sinh trung học của bạn tìm hiểu sâu hơn về khoa học máy tính.
   students_label: Học sinh, sinh viên
   teachers_label: Giáo viên
   teacher_label_csf: Nguyên tắc cơ bản của KHMT cho Giáo viên
@@ -224,6 +233,13 @@ vi:
   call_to_action_explore_collection: Khám phá cụm bài học
   call_to_action_explore_unplugged_lesson: Khám phá bài học không dùng thiết bị điện
     tử
+  call_to_action_explore_csf: Khám phá CS Fundamentals
+  call_to_action_explore_csd: Khám phá CS Discoveries
+  call_to_action_explore_csp: Khám phá các nguyên tắc CS
+  call_to_action_explore_csc: Khám phá CS Connections
+  call_to_action_explore_csa: Khám phá AP® Computer Science A
+  call_to_action_explore_maker: Khám phá chương trình giảng dạy Maker
+  call_to_action_explore_hoc: Khám phá các hướng dẫn Hour of Code
   call_to_action_try_app_lab: Dùng thử App Lab
   call_to_action_view_lesson_plan: Xem kế hoạch bài học
   call_to_action_self_paced_pl: Bắt đầu học chuyên nghiệp theo nhịp độ tự
@@ -269,6 +285,7 @@ vi:
   call_to_action_notify_available: Thông báo cho tôi khi có sẵn
   call_to_action_register_early_access: Đăng ký để truy cập sớm
   call_to_action_open_positions: Xem các vị trí đang mở
+  call_to_action_get_guide: Nhận hướng dẫn
   aria_label_call_to_action_afe: Tìm hiểu thêm về Amazon Future Engineer
   aria_label_call_to_action_teaching_csf: Bắt đầu chương trình Teaching Computer Science
     Fundamentals Professional learning
@@ -379,6 +396,8 @@ vi:
   curriculum_name_csa: Khoa học máy tính A
   curriculum_name_csc_02: Học phần Kết nối KHMT bất kỳ
   curriculum_name_ai: AI và Học Máy
+  curriculum_name_artificial_intelligence: Trí tuệ nhân tạo (AI)
+  curriculum_name_maker: Nhà sản xuất
   curriculum_name_maker_cp: Tạo ứng dụng với thiết bị (Circuit Playground)
   curriculum_name_maker_microbit: Tạo ứng dụng với thiết bị (micro:bit)
   curriculum_name_creating_apps_with_devices: Tạo ứng dụng bằng thiết bị
@@ -437,6 +456,12 @@ vi:
   curriculum_desc_creating_apps_with_devices: Khám phá vai trò của các thiết bị thực
     tế trong điện toán. Phát triển các chương trình sử dụng dữ liệu đầu vào và đầu
     ra phần cứng. Có một phiên bản của bài học này cho cả micro:bit và Circuit Playground.
+  curriculum_desc_csa: Giới thiệu sinh viên về kỹ thuật phần mềm và thiết kế hướng
+    đối tượng trong khi họ học ngôn ngữ lập trình Java trong chương trình giảng dạy
+    miễn phí này cho AP® Computer Science A (AP® CSA).
+  curriculum_desc_maker: Giáo dục Maker đưa STEM (Khoa học, Công nghệ, Kỹ thuật, Toán
+    học) tiến thêm một bước bằng cách mời kinh nghiệm thực hành và cộng tác vào lớp
+    học để giúp dạy cách giải quyết vấn đề và tư duy phản biện.
   collection_hardware: Chuyên đề Phần cứng
   collection_hardware_desc: Tạo điều kiện cho học viên sử dụng dữ liệu và các thiết
     bị thực tế để giải quyết vấn đề.
@@ -477,6 +502,7 @@ vi:
   module_label_student_content_resources: Nội dung & tài nguyên
   module_label_new: Mới
   module_label_coming_soon: Sắp ra mắt
+  module_label_available_now: Có sẵn ngay bây giờ
   module_label_video_series: Loạt video
   module_label_self_paced: Mô-đun tự theo nhịp độ
   module_ages_5_10: 5-10
@@ -487,6 +513,8 @@ vi:
   module_grade_2_5: 2-5
   module_grade_3_5: 3-5
   module_grade_3_8: 3-8
+  module_grade_k_12: K-12
+  module_grade_3_12: 3-12
   module_grade_6_12: 6-12
   module_grade_6_10: 6-10
   module_grade_9_12: 9-12
@@ -584,6 +612,8 @@ vi:
   heading_java_lab: Java Lab
   heading_objects_first: Đối tượng đầu tiên
   heading_these_lessons_will: 'Những bài học này sẽ:'
+  heading_explore_curriculum_catalog: Khám phá tất cả các khóa học của chúng tôi trong
+    Danh mục chương trình giảng dạy
   professional_learning_section_desc: Nhận được sự hỗ trợ mà bạn cần trong quá trình
     chuẩn bị giảng dạy. Các thầy cô giáo rất yêu thích chương trình này, trong đó
     hơn 90% giáo viên xếp hạng chương trình này là bước bồi dưỡng chuyên môn tuyệt
@@ -850,6 +880,11 @@ vi:
     lớn trong AI, bao gồm hai video mới về Mô hình ngôn ngữ lớn (như ChatGPT) và AI
     thế hệ. Nghe cách các công nghệ mới này hoạt động trực tiếp từ các chuyên gia:
     Mira Murati, CTO của OpenAI và Cristóbal Valenzuela, Giám đốc điều hành của RunwayML.'
+  ai_pl_101_llm_slides_title: Lời nhắc về mô hình ngôn ngữ lớn cho các nhà giáo dục
+  ai_pl_101_llm_slides_desc: Các công cụ để có được đầu ra tốt nhất có thể từ LLM
+    như ChatGPT, từ người mới bắt đầu đến nâng cao. Bao gồm lời nhắc khởi động cho
+    những người chỉ cần nhúng ngón chân vào, cũng như các công cụ tiên tiến cho những
+    người muốn tối đa hóa tiềm năng của họ.
   how_ai_works_hero_heading: Cách thức hoạt động của AI
   how_ai_works_hero_desc: Đi sâu vào thế giới AI với “Cách thức hoạt động của AI”,
     loạt video của chúng tôi và các bài học kèm theo!
@@ -2142,6 +2177,13 @@ vi:
     học máy tính khác không?
   signup_email_preference_privacy: "(Xem chính sách bảo mật của chúng tôi)"
   signup_email_preference_yes: Có
+  signup_email_preference_yes_elementary: Có - Gửi cho tôi thông tin cập nhật về Tài
+    nguyên của Trường Tiểu học
+  signup_email_preference_yes_middle: Có - Gửi cho tôi thông tin cập nhật về Tài nguyên
+    của Trường Trung học Cơ sở
+  signup_email_preference_yes_high: Có - Gửi cho tôi thông tin cập nhật về Tài nguyên
+    Trung học
+  signup_email_preference_yes_general: Có - Gửi cho tôi thông tin cập nhật chung
   signup_email_preference_no: Không
   signup_email_preference_error: Tùy chọn email là bắt buộc
   signup_multiple_event_warning: Chúng tôi sẽ hiển thị tên trường và thành phố bạn
@@ -5627,11 +5669,11 @@ vi:
     cuộc phiêu lưu thông qua thế giới Minecraft này.
   tutorial_minecraft-2016_longdescription: Xây dựng một trò chơi Minecraft. Tạo phiên
     bản gà, cừu, dây leo, thây ma của riêng bạn và hơn thế nữa.
-  tutorial_thinkersmith-es_longdescription: Mediante el uso de un "Vocabulario Robot"
+  tutorial_thinkersmith-es_longdescription: Mediante el uso de un “Vocabulario Robot”
     predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar
-    a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento
-    ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones
-    as&iacute; como la valiosa habilidad de depuraci&oacute;n.
+    a cabo tareas espec ficas sin ser estas discutidas previamente.&iacute;Este segmento
+    ense&ntilde;a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones
+    as como la valiosa habilidad de depuraci n.&iacute;&oacute;
   tutorial_pixie_longdescription: Hướng dẫn Hour of Code với Pixie
   tutorial_play_longdescription: Tạo câu chuyện hoặc làm một trò chơi với Play Lab!
     Làm cho động vật, cướp biển, zombie, ninja, và nhiều hơn nữa nhân vật di chuyển,
@@ -12912,12 +12954,13 @@ vi:
   tutorial_googlename _longdescription: Chọn một tên và đưa các chữ cái của từ đó
     vào cuộc sống bằng cách sử dụng mã. Chọn một biệt danh, tên của thú cưng, một
     con vật, một môn thể thao, một địa điểm hoặc một sở thích.
-  tutorial_carnegiezillah_longdescription: Zillah City is thriving, and music is in
-    the air. Rumor has it, the famed Gargantua bot is online and sending the last
-    Toxibots to trash the city block by block…. Grab your cobot hoverboard and get
-    ready to groove, move, and finish off what you started! Players program their
-    cobot hoverbots to change lanes, avoid obstacles, and take out many Toxibots in
-    this rhythm-styled game.
+  tutorial_carnegiezillah_longdescription: Thành phố Zillah đang phát triển mạnh,
+    và âm nhạc đang ở trong không khí. Có tin đồn rằng, bot Gargantua nổi tiếng đang
+    trực tuyến và gửi những Toxibots cuối cùng để dọn rác thành phố từng khối.…Lấy
+    hoverboard cobot của bạn và sẵn sàng để tạo rãnh, di chuyển và hoàn thành những
+    gì bạn đã bắt đầu! Người chơi lập trình cobot hoverbots của họ để thay đổi làn
+    đường, tránh chướng ngại vật và loại bỏ nhiều Toxibots trong trò chơi theo phong
+    cách nhịp nhàng này.
   tutorial_nasachspacejam_longdescription: Tạo ra một hệ mặt trời thực sự đá! Tìm
     hiểu về âm nhạc, thiên văn học và mã hóa trong hoạt động tự hướng dẫn này (không
     cần kinh nghiệm mã hóa). Lập trình các hành tinh để tạo ra âm nhạc, tạo ra hệ

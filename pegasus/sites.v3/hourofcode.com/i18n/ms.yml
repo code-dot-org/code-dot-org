@@ -5,10 +5,10 @@ ms:
   language: Bahasa Inggeris
   front_title: Sertai acara pembelajaran yang terbesar dalam sejarah, %{campaign_date}
   coming_soon: Akan Datang
-  campaign_date_start_short: 5 Disember
-  campaign_date_start_long: 5 Disember
-  campaign_date_short: 5-11 Disember
-  campaign_date_full: 5-11 Disember
+  campaign_date_start_short: 7 Dis.
+  campaign_date_start_long: 7 Disember
+  campaign_date_short: 7-13 Dis.
+  campaign_date_full: 7-13 Disember
   campaign_date_year: '2020'
   campaign_date_full_year: 5-11 Disember 2022
   nonus_campaign_date_start_short: 1 Okt.
@@ -195,6 +195,17 @@ ms:
   grade_level_label_elementary: Sekolah Rendah
   grade_level_label_middle: Sekolah Menengah
   grade_level_label_high: Sekolah Menengah
+  curricula_title_elementary: Kurikulum Sekolah Rendah
+  curricula_desc_elementary: Semak imbas kursus dan aktiviti percuma yang menyeronokkan
+    yang menjemput anda untuk meneroka sains komputer dengan pelajar sekolah rendah
+    anda.
+  curricula_title_middle: Kurikulum Sekolah Menengah
+  curricula_desc_middle: Semak imbas tawaran menarik yang membolehkan anda dan pelajar
+    sekolah menengah anda meneroka sains komputer bersama-sama.
+  curricula_title_high: Kurikulum Sekolah Menengah
+  curricula_desc_high: Semak imbas kursus dan aktiviti menarik yang menjemput anda
+    dan pelajar sekolah menengah anda untuk menggali lebih mendalam ke dalam sains
+    komputer.
   students_label: Pelajar
   teachers_label: Guru
   teacher_label_csf: Guru Asas CS
@@ -221,6 +232,13 @@ ms:
   call_to_action_explore_choice_level: Terokai contoh tahap pilihan
   call_to_action_explore_collection: Terokai koleksi
   call_to_action_explore_unplugged_lesson: Terokai pelajaran secara tradisional
+  call_to_action_explore_csf: Terokai Asas CS
+  call_to_action_explore_csd: Terokai CS Discoveries
+  call_to_action_explore_csp: Terokai Prinsip CS
+  call_to_action_explore_csc: Terokai CS Connections
+  call_to_action_explore_csa: Terokai AP® Sains Komputer A
+  call_to_action_explore_maker: Terokai kurikulum Maker
+  call_to_action_explore_hoc: Terokai tutorial Hour of Code
   call_to_action_try_app_lab: Cuba App Lab
   call_to_action_view_lesson_plan: Lihat rancangan pelajaran
   call_to_action_self_paced_pl: Mulakan pembelajaran profesional kendiri
@@ -265,6 +283,7 @@ ms:
   call_to_action_notify_available: Beritahu saya apabila tersedia
   call_to_action_register_early_access: Daftar untuk akses awal
   call_to_action_open_positions: Lihat kedudukan terbuka
+  call_to_action_get_guide: Dapatkan panduan
   aria_label_call_to_action_afe: Ketahui lebih lanjut mengenai Jurutera Masa Depan
     Amazon
   aria_label_call_to_action_teaching_csf: Mulakan program pembelajaran profesional
@@ -367,6 +386,8 @@ ms:
   curriculum_name_csa: Sains Komputer A
   curriculum_name_csc_02: Mana-mana Modul Rangkaian CS
   curriculum_name_ai: "  AI dan Pembelajaran Mesin  "
+  curriculum_name_artificial_intelligence: Kecerdasan Buatan (AI)
+  curriculum_name_maker: Pembuat
   curriculum_name_maker_cp: Mewujudkan Apl dengan Peranti (Taman Permainan Litar)
   curriculum_name_maker_microbit: 'Mewujudkan Apl dengan Peranti (mikro: bit)'
   curriculum_name_creating_apps_with_devices: Mewujudkan Apl dengan Peranti
@@ -424,6 +445,13 @@ ms:
   curriculum_desc_creating_apps_with_devices: Terokai peranan peranti fizikal dalam
     pengkomputeran. Membangunkan program yang menggunakan input dan output perkakasan.
     Terdapat versi unit ini untuk kedua-dua micro:bit dan Circuit Playground.
+  curriculum_desc_csa: Memperkenalkan pelajar kepada kejuruteraan perisian dan reka
+    bentuk berorientasikan objek semasa mereka mempelajari bahasa pengaturcaraan Java
+    dalam kurikulum percuma ini untuk AP® Sains Komputer A (AP® CSA).
+  curriculum_desc_maker: Pendidikan Maker mengambil STEM (Sains, Teknologi, Kejuruteraan,
+    Matematik) selangkah lebih maju dengan menjemput pengalaman langsung dan kerjasama
+    ke dalam bilik darjah untuk membantu mengajar penyelesaian masalah dan pemikiran
+    kritis.
   collection_hardware: Fokus pada Perkakasan
   collection_hardware_desc: Memberi kuasa kepada pelajar untuk menggunakan data dan
     peranti fizikal untuk menyelesaikan masalah.
@@ -464,6 +492,7 @@ ms:
   module_label_student_content_resources: Kandungan & sumber
   module_label_new: Baru
   module_label_coming_soon: Akan datang tidak lama lagi
+  module_label_available_now: Tersedia Sekarang
   module_label_video_series: Siri video
   module_label_self_paced: Modul kendiri
   module_ages_5_10: 5-10
@@ -474,6 +503,8 @@ ms:
   module_grade_2_5: 2-5
   module_grade_3_5: 3-5
   module_grade_3_8: 3-8
+  module_grade_k_12: K-12
+  module_grade_3_12: 3-12
   module_grade_6_12: 6-12
   module_grade_6_10: 6-10
   module_grade_9_12: 9-12
@@ -571,6 +602,7 @@ ms:
   heading_java_lab: Makmal Java
   heading_objects_first: Objek pertama
   heading_these_lessons_will: 'Pelajaran ini akan:'
+  heading_explore_curriculum_catalog: Terokai semua kursus kami dalam Katalog Kurikulum
   professional_learning_section_desc: Dapatkan sokongan yang anda perlukan semasa
     anda bersedia untuk mengajar. Guru menyukainya, dengan lebih daripada 90% kedudukannya
     sebagai pembangunan profesional terbaik yang pernah ada!
@@ -832,6 +864,11 @@ ms:
     (seperti ChatGPT) dan Generative AI. Dengar bagaimana teknologi baru ini berfungsi
     secara langsung dari pakar: Mira Murati, CTO OpenAI, dan Cristóbal Valenzuela,
     Ketua Pegawai Eksekutif RunwayML.'
+  ai_pl_101_llm_slides_title: Model Bahasa Besar Prompts untuk Pendidik
+  ai_pl_101_llm_slides_desc: Alat untuk mendapatkan output terbaik dari LLM seperti
+    ChatGPT, dari pemula hingga maju. Termasuk arahan permulaan bagi mereka yang hanya
+    mencelupkan jari kaki mereka, serta alat canggih bagi mereka yang ingin memaksimumkan
+    potensi mereka.
   how_ai_works_hero_heading: Bagaimana AI Berfungsi
   how_ai_works_hero_desc: Selami dunia AI dengan “How AI Works,” siri video kami dan
     pelajaran yang menyertainya!
@@ -1586,10 +1623,10 @@ ms:
     di dalam bilik darjah anda. Rakan Serantau kami menawarkan bengkel Code.org berkualiti
     tinggi satu hari untuk guru individu atau untuk PD di seluruh sekolah. [Daftar
     untuk bengkel pembangunan profesional berhampiran anda] (%{sign_up_url})!
-  csf_page_faq_answer_04_02: Join over 100,000 teachers who have participated in our
-    workshops. The majority of our workshop attendees say, 'It's the best professional
-    development I've ever attended.' In fact, [90% of attendees would recommend our
-    program to other teachers](%{rec_url})!
+  csf_page_faq_answer_04_02: Sertai lebih 100,000 guru yang telah mengambil bahagian
+    dalam bengkel kami. Majoriti peserta bengkel kami berkata, 'Ia adalah pembangunan
+    profesional terbaik yang pernah saya hadiri. ' Malah, [90% peserta akan mengesyorkan
+    program kami kepada guru lain] ()!%{rec_url}
   csf_page_faq_question_05: Apakah masa yang disyorkan untuk mengajar CS Fundamentals?
   csf_page_faq_answer_05: Setiap kursus CSF termasuk 13-17 pelajaran yang direka untuk
     tempoh 45 minit. Kami mengesyorkan semua pelajar berpindah dari pelajaran ke pelajaran
@@ -1597,9 +1634,10 @@ ms:
     oleh guru yang dirancang untuk dialami secara serentak sementara pelajaran membina
     kemahiran dapat diselesaikan oleh pelajar mengikut kadar mereka sendiri.
   csf_page_faq_question_06: Apakah bahan yang saya perlukan untuk CS Fundamentals?
-  csf_page_faq_answer_06: Many lessons have handouts that guide students through activities.
-    These resources can be printed or assigned digitally. Some lessons call for typical
-    classroom supplies and manipulatives. [Visit the CSF Syllabus to learn more](%{syllabus_url}).
+  csf_page_faq_answer_06: Banyak pelajaran mempunyai pemberian yang membimbing pelajar
+    melalui aktiviti. Sumber-sumber ini boleh dicetak atau diberikan secara digital.
+    Beberapa pelajaran memerlukan bekalan dan manipulatif bilik darjah yang biasa.
+    [Lawati Sukatan Pelajaran CSF untuk mengetahui lebih lanjut] ().%{syllabus_url}
   csa_page_top_desc: Introduce students to software engineering and object-oriented
     design while they learn the Java programming language in this free curriculum
     for [AP® Computer Science A (AP® CSA)](%{csa_url}).
@@ -2103,6 +2141,13 @@ ms:
     lain?
   signup_email_preference_privacy: "(Lihat dasar privasi kami)"
   signup_email_preference_yes: Ya
+  signup_email_preference_yes_elementary: Ya - Hantarkan saya kemas kini mengenai
+    Sumber Sekolah Rendah
+  signup_email_preference_yes_middle: Ya - Hantarkan saya kemas kini mengenai Sumber
+    Sekolah Menengah
+  signup_email_preference_yes_high: Ya - Hantarkan saya kemas kini mengenai Sumber
+    Sekolah Menengah
+  signup_email_preference_yes_general: Ya - Hantarkan saya kemas kini umum
   signup_email_preference_no: Tidak
   signup_email_preference_error: Keutamaan e-mel diperlukan
   signup_multiple_event_warning: Kami akan meletakkan nama sekolah dan bandar anda
@@ -12959,12 +13004,13 @@ ms:
   tutorial_googlename _longdescription: Pilih nama dan hidupkan huruf perkataan dengan
     menggunakan kod. Pilih nama samaran, nama haiwan peliharaan, haiwan, sukan, tempat
     atau hobi.
-  tutorial_carnegiezillah_longdescription: Zillah City is thriving, and music is in
-    the air. Rumor has it, the famed Gargantua bot is online and sending the last
-    Toxibots to trash the city block by block…. Grab your cobot hoverboard and get
-    ready to groove, move, and finish off what you started! Players program their
-    cobot hoverbots to change lanes, avoid obstacles, and take out many Toxibots in
-    this rhythm-styled game.
+  tutorial_carnegiezillah_longdescription: Bandar Zillah berkembang maju, dan muzik
+    ada di udara. Khabar angin mengatakan, bot Gargantua yang terkenal sedang dalam
+    talian dan menghantar Toxibots terakhir untuk membuang blok bandar demi blok.…Dapatkan
+    hoverboard cobot anda dan bersiaplah untuk alur, bergerak, dan selesaikan apa
+    yang anda mulakan! Pemain memprogramkan hoverbots cobot mereka untuk menukar lorong,
+    mengelakkan halangan, dan mengeluarkan banyak Toxibots dalam permainan gaya irama
+    ini.
   tutorial_nasachspacejam_longdescription: Buat sistem suria yang benar-benar batu!
     Ketahui mengenai muzik, astronomi, dan pengekodan dalam aktiviti berpandukan diri
     ini (tidak diperlukan pengalaman pengekodan). Planet program untuk membuat muzik,

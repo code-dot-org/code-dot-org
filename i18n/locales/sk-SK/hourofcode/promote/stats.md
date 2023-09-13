@@ -16,7 +16,7 @@ title: Upútavky a užitočné štatistiky
 
 #### Chcete na svoju školu priniesť kvalitnú výučbu informatiky? Vyskúšajte si Hodinu kódu!
 
-S nástupom technológií, ktoré menia každé odvetvie na svete, sa znalosť informačných technológií dnes už považuje za dôležitú zručnosť pre každého. Na väčšine škôl sa však informatika nevyučuje v dostatočnom rozsahu a kvalite. Dobrou správou je, že sme na ceste tento stav zmeniť. If you've heard about the Hour of Code, you might know that it has made history. More than 100 million students have now discovered how accessible and fun computer science can be by doing just one Hour of Code.
+S nástupom technológií, ktoré menia každé odvetvie na svete, sa znalosť informačných technológií dnes už považuje za dôležitú zručnosť pre každého. Na väčšine škôl sa však informatika nevyučuje v dostatočnom rozsahu a kvalite. Dobrou správou je, že sme na ceste tento stav zmeniť. Ak ste už počuli o Hodine Kódu, možno už viete, že má históriu. More than 100 million students have now discovered how accessible and fun computer science can be by doing just one Hour of Code.
 
 Hodina kódu je jednohodinový úvod do informatiky, navrhnutý s cieľom demystifikovať programovanie a ukázať, že základy sa môže naučiť každý. Viac informácií nájdete na webe [http://HourOfCode.com](http://HourofCode.com), kde si takúto hodinu môžete vyskúšať sami alebo si pozrieť návod, ako v rámci Hodiny kódu zorganizovať podujatie, na ktorom predstavíte svet informatiky ostatným.
 
