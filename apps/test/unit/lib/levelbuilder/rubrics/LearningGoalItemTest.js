@@ -6,7 +6,7 @@ import sinon from 'sinon';
 
 describe('LearningGoalItem', () => {
   let defaultProps;
-  const deleteItemSpy = sinon.spy();
+  const deleteLearningGoalSpy = sinon.spy();
   const exisitingLearningGoalData = {
     key: 'learningGoal-1',
     id: 'learningGoal-1',
@@ -16,7 +16,7 @@ describe('LearningGoalItem', () => {
 
   beforeEach(() => {
     defaultProps = {
-      deleteItem: deleteItemSpy,
+      deleteLearningGoal: deleteLearningGoalSpy,
       exisitingLearningGoalData: exisitingLearningGoalData,
     };
   });
@@ -62,9 +62,9 @@ describe('LearningGoalItem', () => {
     ).to.be.true;
   });
 
-  it('calls deleteItem when delete button is clicked', () => {
+  it('calls deleteLearningGoal when delete button is clicked', () => {
     const wrapper = shallow(<LearningGoalItem {...defaultProps} />);
     wrapper.find('Button').simulate('click');
-    expect(deleteItemSpy.calledOnce).to.be.true;
+    expect(deleteLearningGoalSpy.calledOnce).to.be.true;
   });
 });

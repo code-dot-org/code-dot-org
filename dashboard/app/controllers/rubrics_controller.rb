@@ -66,6 +66,7 @@ class RubricsController < ApplicationController
         :learning_goal,
         :ai_enabled,
         :position,
+        :_destroy,
         {
           learning_goal_evidence_levels_attributes: [
             :id,

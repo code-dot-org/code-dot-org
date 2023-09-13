@@ -112,14 +112,6 @@ export default function RubricsContainer({
     setLearningGoalList([...oldLearningGoalList, startingData]);
   };
 
-  const deleteKeyConcept = id => {
-    event.preventDefault();
-    var updatedLearningGoalList = learningGoalList.filter(
-      item => item.id !== id
-    );
-    setLearningGoalList(updatedLearningGoalList);
-  };
-
   const updateLearningGoal = (
     idToUpdate,
     keyToUpdate,
@@ -145,6 +137,20 @@ export default function RubricsContainer({
             [keyToUpdate]: newValue,
           };
         }
+      } else {
+        return learningGoal;
+      }
+    });
+    setLearningGoalList(newLearningGoalData);
+  };
+
+  const deleteLearningGoal = idToDelete => {
+    const newLearningGoalData = learningGoalList.map(learningGoal => {
+      if (idToDelete === learningGoal.id) {
+        return {
+          ...learningGoal,
+          _destroy: true,
+        };
       } else {
         return learningGoal;
       }
@@ -229,7 +235,11 @@ export default function RubricsContainer({
       if (Array.isArray(value)) {
         newObj[snakeCase(key)] = value.map(item => transformObjectKeys(item));
       } else {
-        newObj[snakeCase(key)] = value;
+        if (key === '_destroy') {
+          newObj[key] = value;
+        } else {
+          newObj[snakeCase(key)] = value;
+        }
       }
     }
 
@@ -276,7 +286,7 @@ export default function RubricsContainer({
       <RubricEditor
         learningGoalList={learningGoalList}
         addNewConcept={addNewConceptHandler}
-        deleteItem={id => deleteKeyConcept(id)}
+        deleteLearningGoal={deleteLearningGoal}
         updateLearningGoal={updateLearningGoal}
       />
       <div style={styles.bottomRow}>

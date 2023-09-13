@@ -5,19 +5,21 @@ import Button from '@cdo/apps/templates/Button';
 
 export default function RubricEditor({
   addNewConcept,
-  deleteItem,
+  deleteLearningGoal,
   learningGoalList,
   updateLearningGoal,
 }) {
   const renderLearningGoalItems = learningGoalList.map(goal => {
-    return (
-      <LearningGoalItem
-        deleteItem={() => deleteItem(goal.id)}
-        key={goal.id}
-        exisitingLearningGoalData={goal}
-        updateLearningGoal={updateLearningGoal}
-      />
-    );
+    if (!goal._destroy) {
+      return (
+        <LearningGoalItem
+          deleteLearningGoal={deleteLearningGoal}
+          key={goal.id}
+          exisitingLearningGoalData={goal}
+          updateLearningGoal={updateLearningGoal}
+        />
+      );
+    }
   });
 
   return (
@@ -38,7 +40,7 @@ export default function RubricEditor({
 
 RubricEditor.propTypes = {
   learningGoalList: PropTypes.array,
-  deleteItem: PropTypes.func,
+  deleteLearningGoal: PropTypes.func,
   addNewConcept: PropTypes.func,
   updateLearningGoal: PropTypes.func,
 };
