@@ -237,6 +237,9 @@
         "CourseD_Dance_2020_01_2021": {
           "dance_callout_01": "Lisää tämä blokki ohjelmaasi!"
         },
+        "CourseD_Dance_2020_01_2023": {
+          "dance_callout_01": "Lisää tämä blokki ohjelmaasi!"
+        },
         "CourseD_Dance_2020_02": {
           "arrow_buttons": "Paina nuolinäppäimiä, jotta voit hallita tanssijaasi.",
           "dance_callout_11_a": "Lisää tämä blokki ohjelmaasi."
@@ -249,6 +252,10 @@
           "arrow_buttons": "Paina nuolinäppäimiä, jotta voit hallita tanssijaasi.",
           "dance_callout_11_a": "Lisää tämä blokki ohjelmaasi."
         },
+        "CourseD_Dance_2020_02_2023": {
+          "arrow_buttons": "Paina nuolinäppäimiä, jotta voit hallita tanssijaasi.",
+          "dance_callout_11_a": "Lisää tämä blokki ohjelmaasi."
+        },
         "CourseD_Dance_2020_04": {
           "dance_callout_02": "Lisää tämä blokki ohjelmaasi!"
         },
@@ -256,6 +263,9 @@
           "dance_callout_02": "Lisää tämä blokki ohjelmaasi!"
         },
         "CourseD_Dance_2020_04_2021": {
+          "dance_callout_02": "Lisää tämä blokki ohjelmaasi!"
+        },
+        "CourseD_Dance_2020_04_2023": {
           "dance_callout_02": "Lisää tämä blokki ohjelmaasi!"
         },
         "CourseD_Dance_2020_05": {
@@ -267,6 +277,9 @@
         "CourseD_Dance_2020_05_2021": {
           "dance_callout_05": "Lisää uusi tapahtuma ohjelmaan."
         },
+        "CourseD_Dance_2020_05_2023": {
+          "dance_callout_05": "Lisää uusi tapahtuma ohjelmaan."
+        },
         "CourseD_Dance_2020_06": {
           "dance_party_11_5_groups": "Uusi blokki!"
         },
@@ -274,6 +287,9 @@
           "dance_party_11_5_groups": "Uusi blokki!"
         },
         "CourseD_Dance_2020_06_2021": {
+          "dance_party_11_5_groups": "Uusi blokki!"
+        },
+        "CourseD_Dance_2020_06_2023": {
           "dance_party_11_5_groups": "Uusi blokki!"
         },
         "CourseD_Dance_2020_07": {
@@ -285,6 +301,9 @@
         "CourseD_Dance_2020_07_2021": {
           "setprop_hint": "Uusi blokki!"
         },
+        "CourseD_Dance_2020_07_2023": {
+          "setprop_hint": "Uusi blokki!"
+        },
         "CourseD_Dance_2020_09": {
           "new_block_3": "Uusi blokki!",
           "new_block_4": "Uusi blokki!"
@@ -294,6 +313,10 @@
           "new_block_4": "Uusi blokki!"
         },
         "CourseD_Dance_2020_09_2021": {
+          "new_block_3": "Uusi blokki!",
+          "new_block_4": "Uusi blokki!"
+        },
+        "CourseD_Dance_2020_09_2023": {
           "new_block_3": "Uusi blokki!",
           "new_block_4": "Uusi blokki!"
         },
@@ -373,6 +396,9 @@
         "Function intro Ryan_2021": {
           "Function_intro_Ryan_1": "Tämä pieni ohje saa tietokoneen suorittamaan ISON möhkäleen samannimistä koodia työtilassa."
         },
+        "Function intro Ryan_2023": {
+          "Function_intro_Ryan_1": "Tämä pieni ohje saa tietokoneen suorittamaan ISON möhkäleen samannimistä koodia työtilassa."
+        },
         "Infinity_move_collide": {
           "Infinity_move_collide_callout": "Anna äänimerkki, kun tämä tapahtuma toteutuu."
         },
@@ -407,6 +433,9 @@
         "MC_HOC_2017_03_Cole_2021": {
           "MC_HOC_2017_03_Cole_1": "Tämä on toisto-silmukka!  Napsauta sitä työtilassa ja lisää koodia, jota haluat toistaa yhä uudelleen."
         },
+        "MC_HOC_2017_03_Cole_2023": {
+          "MC_HOC_2017_03_Cole_1": "Tämä on toisto-silmukka!  Napsauta sitä työtilassa ja lisää koodia, jota haluat toistaa yhä uudelleen."
+        },
         "MC_HOC_2017_04_Cole": {
           "MC_HOC_2017_04_Cole_a": "Agent voi leijua veden päällä, mutta pelaaja ei!"
         },
@@ -420,6 +449,9 @@
           "MC_HOC_2017_04_Cole_a": "Agent voi leijua veden päällä, mutta pelaaja ei!"
         },
         "MC_HOC_2017_04_Cole_2021": {
+          "MC_HOC_2017_04_Cole_a": "Agent voi leijua veden päällä, mutta pelaaja ei!"
+        },
+        "MC_HOC_2017_04_Cole_2023": {
           "MC_HOC_2017_04_Cole_a": "Agent voi leijua veden päällä, mutta pelaaja ei!"
         },
         "MC_HOC_2017_06_Cole": {
@@ -437,6 +469,9 @@
         "MC_HOC_2017_06_Cole_2021": {
           "MC_HOC_2017_06_Cole_1": "Et voi heittää näitä kuutioita pois, mutta voit muokata niitä!"
         },
+        "MC_HOC_2017_06_Cole_2023": {
+          "MC_HOC_2017_06_Cole_1": "Et voi heittää näitä kuutioita pois, mutta voit muokata niitä!"
+        },
         "MC_HOC_2017_Ali": {
           "MC_HOC_2017_08_RY_1": "Agent voi leijua laavan päällä, mutta pelaaja ei!  "
         },
@@ -450,6 +485,9 @@
           "MC_HOC_2017_08_RY_1": "Agent voi leijua laavan päällä, mutta pelaaja ei!  "
         },
         "MC_HOC_2017_Ali_2021": {
+          "MC_HOC_2017_08_RY_1": "Agent voi leijua laavan päällä, mutta pelaaja ei!  "
+        },
+        "MC_HOC_2017_Ali_2023": {
           "MC_HOC_2017_08_RY_1": "Agent voi leijua laavan päällä, mutta pelaaja ei!  "
         },
         "NEW Course 4 Artist Functions 7": {
@@ -495,6 +533,9 @@
         "Overworld Chop Trees_2021": {
           "craft_callout_preplaced": "Olemme koonneet sinulle muutamia palikoita"
         },
+        "Overworld Chop Trees_2023": {
+          "craft_callout_preplaced": "Olemme koonneet sinulle muutamia palikoita"
+        },
         "Overworld House Frame Chosen": {
           "craft_callout_preplaced_house": "Tämä koodi aloittaa talosi rakentamisen. Saatko sen viimeisteltyä?"
         },
@@ -508,6 +549,9 @@
           "craft_callout_preplaced_house": "Tämä koodi aloittaa talosi rakentamisen. Saatko sen viimeisteltyä?"
         },
         "Overworld House Frame Chosen_2021": {
+          "craft_callout_preplaced_house": "Tämä koodi aloittaa talosi rakentamisen. Saatko sen viimeisteltyä?"
+        },
+        "Overworld House Frame Chosen_2023": {
           "craft_callout_preplaced_house": "Tämä koodi aloittaa talosi rakentamisen. Saatko sen viimeisteltyä?"
         },
         "Overworld Move to Sheep": {
@@ -530,6 +574,10 @@
           "craft_drag_block_callout": "Raahaa \"siirry eteenpäin\" -komentoa ja napsauta se toisen komennon alle.",
           "craft_run_button_callout": "Kokeile ohjelmaa painamalla \"Run\" [\"Suorita\"]"
         },
+        "Overworld Move to Sheep_2023": {
+          "craft_drag_block_callout": "Raahaa \"siirry eteenpäin\" -komentoa ja napsauta se toisen komennon alle.",
+          "craft_run_button_callout": "Kokeile ohjelmaa painamalla \"Run\" [\"Suorita\"]"
+        },
         "Overworld Place Wall": {
           "craft_inside_repeat": "Toista toimintoja asettamalla palikoita tänne"
         },
@@ -543,6 +591,9 @@
           "craft_inside_repeat": "Toista toimintoja asettamalla palikoita tänne"
         },
         "Overworld Place Wall_2021": {
+          "craft_inside_repeat": "Toista toimintoja asettamalla palikoita tänne"
+        },
+        "Overworld Place Wall_2023": {
           "craft_inside_repeat": "Toista toimintoja asettamalla palikoita tänne"
         },
         "Underground Avoiding Lava": {
@@ -560,6 +611,9 @@
         "Underground Avoiding Lava_2021": {
           "craft_callout_moveforward": "Tämä koodi tarkistaa, onko edessä laavaa. Lisäisitkö etenemiskomennon?"
         },
+        "Underground Avoiding Lava_2023": {
+          "craft_callout_moveforward": "Tämä koodi tarkistaa, onko edessä laavaa. Lisäisitkö etenemiskomennon?"
+        },
         "Underground Iron": {
           "craft_what_is_iron": "Louhi tämä rauta!"
         },
@@ -574,6 +628,36 @@
         },
         "Underground Iron_2021": {
           "craft_what_is_iron": "Louhi tämä rauta!"
+        },
+        "Underground Iron_2023": {
+          "craft_what_is_iron": "Louhi tämä rauta!"
+        },
+        "csc-starquilts-comment_2023": {
+          "New Artist Project_callout1": "Klikkaa kategorioita nähdäksesi lohkot työkalupalkissasi. Siirrä lohkoja työtilaan lisätäksesi ne ohjelmaasi."
+        },
+        "csc-starquilts-repeat_2023": {
+          "New Artist Project_callout1": "Klikkaa kategorioita nähdäksesi lohkot työkalupalkissasi. Siirrä lohkoja työtilaan lisätäksesi ne ohjelmaasi."
+        },
+        "csc-starquilts-rhombus-freeplay_2023": {
+          "New Artist Project_callout1": "Klikkaa kategorioita nähdäksesi lohkot työkalupalkissasi. Siirrä lohkoja työtilaan lisätäksesi ne ohjelmaasi."
+        },
+        "csc-starquilts-row1_2023": {
+          "New Artist Project_callout1": "Klikkaa kategorioita nähdäksesi lohkot työkalupalkissasi. Siirrä lohkoja työtilaan lisätäksesi ne ohjelmaasi."
+        },
+        "csc-starquilts-row2_2023": {
+          "New Artist Project_callout1": "Klikkaa kategorioita nähdäksesi lohkot työkalupalkissasi. Siirrä lohkoja työtilaan lisätäksesi ne ohjelmaasi."
+        },
+        "csc-starquilts-row3_2023": {
+          "New Artist Project_callout1": "Klikkaa kategorioita nähdäksesi lohkot työkalupalkissasi. Siirrä lohkoja työtilaan lisätäksesi ne ohjelmaasi."
+        },
+        "csc-starquilts-row4_2023": {
+          "New Artist Project_callout1": "Klikkaa kategorioita nähdäksesi lohkot työkalupalkissasi. Siirrä lohkoja työtilaan lisätäksesi ne ohjelmaasi."
+        },
+        "csc-starquilts-row5_2023": {
+          "New Artist Project_callout1": "Klikkaa kategorioita nähdäksesi lohkot työkalupalkissasi. Siirrä lohkoja työtilaan lisätäksesi ne ohjelmaasi."
+        },
+        "csc_starquilts_freeplay_2023": {
+          "New Artist Project_callout1": "Klikkaa kategorioita nähdäksesi lohkot työkalupalkissasi. Siirrä lohkoja työtilaan lisätäksesi ne ohjelmaasi."
         },
         "frozen circle function with parameter": {
           "frozen_circle_function_with_parameter_circle": "Käytä \"Luo ympyrä\"-lohkoa ja muuta kokoa."
@@ -638,6 +722,9 @@
         "helloworld_food_costumes": {
           "hello_world_new": "Uusi blokki!"
         },
+        "helloworld_food_costumes_2023": {
+          "hello_world_new": "Uusi blokki!"
+        },
         "helloworld_food_costumes_soccer-2022": {
           "hello_world_new": "Uusi blokki!"
         },
@@ -645,6 +732,10 @@
           "hello_world_new": "Uusi blokki!"
         },
         "helloworld_food_sizes": {
+          "hello_world_new": "Uusi blokki!",
+          "hello_world_new_block": "Uusi blokki!"
+        },
+        "helloworld_food_sizes_2023": {
           "hello_world_new": "Uusi blokki!",
           "hello_world_new_block": "Uusi blokki!"
         },
@@ -657,6 +748,9 @@
           "hello_world_new_block": "Uusi blokki!"
         },
         "helloworld_food_sounds": {
+          "hello_world_new": "Uusi blokki!"
+        },
+        "helloworld_food_sounds_2023": {
           "hello_world_new": "Uusi blokki!"
         },
         "helloworld_food_sounds_soccer-2022": {
@@ -678,7 +772,14 @@
         "poetry_hoc_addSprites": {
           "poetry_sprite": "Uusi blokki!"
         },
+        "poetry_hoc_addSprites_2023": {
+          "poetry_sprite": "Uusi blokki!"
+        },
         "poetry_hoc_events1": {
+          "poetry_event": "Uusi blokki!",
+          "poetry_foreground": "Uusi blokki!"
+        },
+        "poetry_hoc_events1_2023": {
           "poetry_event": "Uusi blokki!",
           "poetry_foreground": "Uusi blokki!"
         },
@@ -687,7 +788,14 @@
           "poetry_multiple_sprites": "Uusi blokki!",
           "poetry_new_block": "Uusi blokki!"
         },
+        "poetry_hoc_freeplay_2023": {
+          "poetry_new_block": "Uusi blokki!"
+        },
         "poetry_hoc_sounds": {
+          "poetry_music": "Uusi blokki!",
+          "poetry_sound": "Uusi blokki!"
+        },
+        "poetry_hoc_sounds_2023": {
           "poetry_music": "Uusi blokki!",
           "poetry_sound": "Uusi blokki!"
         },
@@ -695,7 +803,15 @@
           "poetry_sprite_begins": "Uusi blokki!",
           "poetry_sprite_stops": "Uusi blokki!"
         },
+        "poetry_hoc_spriteBehaviors_2023": {
+          "poetry_sprite_begins": "Uusi blokki!",
+          "poetry_sprite_stops": "Uusi blokki!"
+        },
         "poetry_hoc_spriteSizes": {
+          "poetry_remove_sprite": "Uusi blokki!",
+          "poetry_set_sprite": "Uusi blokki!"
+        },
+        "poetry_hoc_spriteSizes_2023": {
           "poetry_remove_sprite": "Uusi blokki!",
           "poetry_set_sprite": "Uusi blokki!"
         }

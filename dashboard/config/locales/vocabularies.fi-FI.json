@@ -206,6 +206,114 @@
         "debugging/pre-express/2022": {
           "word": "Virheen etsintä"
         },
+        "code/csc-adaptations/2023": {
+          "word": "Koodi"
+        },
+        "code/csc-ecosystems/2023": {
+          "word": "Koodi"
+        },
+        "condition/csc-ecosystems/2023": {
+          "word": "Ehtolause"
+        },
+        "conditionals/csc-ecosystems/2023": {
+          "word": "Ehtolausekkeet"
+        },
+        "variable/csc-ecosystems/2023": {
+          "word": "Muuttuja"
+        },
+        "code/csc-mappinglandmarks/2023": {
+          "word": "Koodi"
+        },
+        "artist/csc-starquilts/2023": {
+          "word": "Taiteilija"
+        },
+        "comments/csc-starquilts/2023": {
+          "word": "Kommentit"
+        },
+        "code/poetry/2023": {
+          "word": "Koodi"
+        },
+        "debugging/coursea/2023": {
+          "word": "Virheen etsintä"
+        },
+        "drop/coursea/2023": {
+          "word": "Pudota"
+        },
+        "debugging/courseb/2023": {
+          "word": "Virheen etsintä"
+        },
+        "drop/courseb/2023": {
+          "word": "Pudota"
+        },
+        "debugging/coursec/2023": {
+          "word": "Virheen etsintä"
+        },
+        "binary/coursec/2023": {
+          "word": "Binääri"
+        },
+        "debugging/coursed/2023": {
+          "word": "Virheen etsintä"
+        },
+        "conditionals/coursed/2023": {
+          "word": "Ehtolausekkeet"
+        },
+        "condition/coursed/2023": {
+          "word": "Ehtolause"
+        },
+        "function/coursee/2023": {
+          "word": "Funktio"
+        },
+        "condition/coursee/2023": {
+          "word": "Ehtolause"
+        },
+        "conditionals/coursee/2023": {
+          "word": "Ehtolausekkeet"
+        },
+        "copyright/coursee/2023": {
+          "word": "Copyright"
+        },
+        "define/coursee/2023": {
+          "word": "Määritä"
+        },
+        "variable/coursef/2023": {
+          "word": "Muuttuja"
+        },
+        "input/coursef/2023": {
+          "word": "Syöte"
+        },
+        "internet/coursef/2023": {
+          "word": "Internet"
+        },
+        "define/coursef/2023": {
+          "word": "Määritä"
+        },
+        "debugging/express/2023": {
+          "word": "Virheen etsintä"
+        },
+        "condition/express/2023": {
+          "word": "Ehtolause"
+        },
+        "conditionals/express/2023": {
+          "word": "Ehtolausekkeet"
+        },
+        "function/express/2023": {
+          "word": "Funktio"
+        },
+        "variable/express/2023": {
+          "word": "Muuttuja"
+        },
+        "define/express/2023": {
+          "word": "Määritä"
+        },
+        "drop/pre-express/2023": {
+          "word": "Pudota"
+        },
+        "debugging/pre-express/2023": {
+          "word": "Virheen etsintä"
+        },
+        "network/how-ai-works/2023": {
+          "word": "Verkko"
+        },
         "condition/aquatic/unversioned": {
           "word": "Ehtolause"
         },
