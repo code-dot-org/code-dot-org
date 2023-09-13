@@ -188,6 +188,105 @@
         "debugging/pre-express/2022": {
           "word": "Debugging"
         },
+        "code/csc-adaptations/2023": {
+          "word": "Code"
+        },
+        "behavior/csc-adaptations/2023": {
+          "word": "व्यवहार"
+        },
+        "code/csc-ecosystems/2023": {
+          "word": "Code"
+        },
+        "conditionals/csc-ecosystems/2023": {
+          "word": "Conditionals"
+        },
+        "variable/csc-ecosystems/2023": {
+          "word": "Variable"
+        },
+        "code/csc-mappinglandmarks/2023": {
+          "word": "Code"
+        },
+        "artist/csc-starquilts/2023": {
+          "word": "Artist"
+        },
+        "code/poetry/2023": {
+          "word": "Code"
+        },
+        "debugging/coursea/2023": {
+          "word": "Debugging"
+        },
+        "drop/coursea/2023": {
+          "word": "खसाल्नु"
+        },
+        "debugging/courseb/2023": {
+          "word": "Debugging"
+        },
+        "drop/courseb/2023": {
+          "word": "खसाल्नु"
+        },
+        "debugging/coursec/2023": {
+          "word": "Debugging"
+        },
+        "binary/coursec/2023": {
+          "word": "Binary"
+        },
+        "debugging/coursed/2023": {
+          "word": "Debugging"
+        },
+        "conditionals/coursed/2023": {
+          "word": "Conditionals"
+        },
+        "behavior/coursee/2023": {
+          "word": "व्यवहार"
+        },
+        "function/coursee/2023": {
+          "word": "Function"
+        },
+        "conditionals/coursee/2023": {
+          "word": "Conditionals"
+        },
+        "copyright/coursee/2023": {
+          "word": "प्रतिलिपि अधिकार"
+        },
+        "define/coursee/2023": {
+          "word": "परिभाषित गर्नुहोस्"
+        },
+        "behavior/coursef/2023": {
+          "word": "व्यवहार"
+        },
+        "variable/coursef/2023": {
+          "word": "Variable"
+        },
+        "internet/coursef/2023": {
+          "word": "Internet"
+        },
+        "define/coursef/2023": {
+          "word": "परिभाषित गर्नुहोस्"
+        },
+        "debugging/express/2023": {
+          "word": "Debugging"
+        },
+        "behavior/express/2023": {
+          "word": "व्यवहार"
+        },
+        "conditionals/express/2023": {
+          "word": "Conditionals"
+        },
+        "function/express/2023": {
+          "word": "Function"
+        },
+        "variable/express/2023": {
+          "word": "Variable"
+        },
+        "define/express/2023": {
+          "word": "परिभाषित गर्नुहोस्"
+        },
+        "drop/pre-express/2023": {
+          "word": "खसाल्नु"
+        },
+        "debugging/pre-express/2023": {
+          "word": "Debugging"
+        },
         "conditionals/aquatic/unversioned": {
           "word": "Conditionals"
         },
