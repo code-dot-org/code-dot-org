@@ -122,7 +122,7 @@
       Timeout: 30
       Role: !GetAtt SQLUserRole.Arn
       VpcConfig:
-        SecurityGroupIds: [!ImportValue VPC-DBSecurityGroup]
+        SecurityGroupIds: [!ImportValue VPC-FrontendSecurityGroup]
         SubnetIds: <%=subnets.to_json%>
   SQLUserRole:
     Type: AWS::IAM::Role
