@@ -286,6 +286,7 @@
   curriculum_name_csp: "Computer Science Principles"
   curriculum_name_csc: "Computer Science Connections"
   curriculum_name_csa: "AP® Computer Science A"
+  curriculum_name_csa_ai: "Software Engineering & Computer Vision"
   curriculum_name_csc_02: "Any CS Connections Module"
   curriculum_name_ai: "AI & Machine Learning"
   curriculum_name_artificial_intelligence: "Artificial Intelligence (AI)"
@@ -316,6 +317,7 @@
   curriculum_desc_creating_apps_with_devices: "Explore the role of physical devices in computing. Develop programs that utilize hardware inputs and outputs. There is a version of this unit for both the micro:bit and Circuit Playground."
   curriculum_desc_csa: "Introduce students to software engineering and object-oriented design while they learn the Java programming language in this free curriculum for AP® Computer Science A (AP® CSA)."
   curriculum_desc_maker: "Maker education takes STEM (Science, Technology, Engineering, Mathematics) a step further by inviting hands-on experience and collaboration into the classroom to help teach problem solving and critical thinking."
+  curriculum_desc_csa_ai_long: "This two-chapter post-AP® CSA module offers high school students hands-on experience with professional software development tools, including GitHub and GitHub Copilot, and imparts them with the real-world skills to develop a computer vision program."
 
   collection_hardware: "Focus on Hardware"
   collection_hardware_desc: "Empowers students to use data and physical devices to solve problems."
@@ -386,6 +388,7 @@
   module_duration_2_hrs: "2 hours"
   module_duration_3_hrs: "3 hours"
   module_duration_5_hrs: "5 hours"
+  module_duration_5_hrs_plus: "5+ hours"
   module_duration_8_hrs: "8 hours"
   module_duration_20_hrs: "20 hours"
   module_duration_35_hrs: "35 hours"
@@ -452,6 +455,7 @@
   heading_objects_first: "Objects first"
   heading_these_lessons_will: "These lessons will:"
   heading_explore_curriculum_catalog: "Explore all of our courses in the Curriculum Catalog"
+  heading_csa_ai: "Looking for things to do after the AP® exam?"
 
   professional_learning_section_desc: "Get the support you need as you prepare to teach. Teachers love it, with over 90% ranking it the best professional development ever!"
   professional_learning_section_desc_short: "Get the support you need as you prepare to teach."
@@ -8308,7 +8312,7 @@
   careers_approach_section_description_2: "We will ensure that individuals with disabilities are provided reasonable accommodation to participate in the job application or interview process, to perform essential job functions, and to receive other benefits and privileges of employment. If you have individual needs related to a disability, please reach out to accommodations@code.org."
 
   csa_ai_page_hero_title: "Software Engineering & Computer Vision"
-  csa_ai_page_hero_description: "This two-chapter post-AP CSA module offers high school students hands-on experience with professional software development tools, including GitHub and GitHub Copilot, and imparts them with the real-world skills to develop a computer vision program. "
+  csa_ai_page_hero_description: "This two-chapter post-AP® CSA module offers high school students hands-on experience with professional software development tools, including GitHub and GitHub Copilot, and imparts them with the real-world skills to develop a computer vision program."
   csa_ai_page_video_section_title: "Step beyond the world of Code.org programming environments"
   csa_ai_page_video_section_li_1: "Learn about AI and its applications"
   csa_ai_page_video_section_li_2: "Hands-on experience with professional software development tools"
@@ -8365,6 +8369,7 @@
   csa_ai_page_faq_answer_11_list_02: "**Goal 2:** Transition from Java Lab to real-world tools."
   csa_ai_page_faq_answer_11_list_03: "**Goal 3:** Deepen understanding of how AI models are trained and integrated into programs."
   csa_ai_page_faq_answer_11_02: "For more information about the values that guided our work, please see our [curriculum values](%{curriculum_values_url})."
+  csa_ai_skinny_banner_desc: "This post-AP® Computer Science A module offers high school students hands-on experience with professional software development tools."
 
   video_library_page_hero_description: "Code.org's growing library of educational videos is available for re-use by educators worldwide, online or in classrooms. Our goal is to amplify our efforts beyond our own curriculum's reach."
   video_library_page_title_ai_works: "How AI Works"
@@ -8425,8 +8430,6 @@
   video_library_page_not_hacked_video_title_5: "How Not To Get Hacked: Websites and Wifi"
   video_library_page_not_hacked_video_title_6: "How Not To Get Hacked: Messaging and Downloads"
   video_library_page_not_hacked_video_title_7: "How Not To Get Hacked: Install Updates"
-
-  csa_ai_skinny_banner_desc: "This post-AP® Computer Science A module offers high school students hands-on experience with professional software development tools."
 
   language_code:
     ar: "Arabic"
