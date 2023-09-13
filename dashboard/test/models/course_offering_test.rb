@@ -746,7 +746,7 @@ class CourseOfferingTest < ActiveSupport::TestCase
   end
 
   test "can serialize and seed course offerings" do
-    course_offering = create :course_offering, key: 'course-offering-1', grade_levels: 'K,1,2', curriculum_type: 'Course', marketing_initiative: 'HOC', header: 'Popular Media', image: 'https://images.code.org/spritelab.JPG', cs_topic: 'Artificial Intelligence,Cybersecurity', school_subject: 'Math,Science', device_compatibility: "{'computer':'ideal','chromebook':'not_recommended','tablet':'incompatible','mobile':'incompatible','no_device':'incompatible'}", description: "An introductory course that empowers students to engage with computer science as a medium for creativity, communication, an problem solving.", professional_learning_program: "https://code.org/apply", video: "https://youtu.be/T45kEEBzrT8", published_date: DateTime.new(2023, 7, 5, 4, 30), self_paced_pl_course_offering_id: nil
+    course_offering = create :course_offering, key: 'course-offering-1', grade_levels: 'K,1,2', curriculum_type: 'Course', marketing_initiative: 'HOC', header: 'Popular Media', image: 'https://images.code.org/spritelab.JPG', cs_topic: 'Artificial Intelligence,Cybersecurity', school_subject: 'Math,Science', device_compatibility: "{'computer':'ideal','chromebook':'not_recommended','tablet':'incompatible','mobile':'incompatible','no_device':'incompatible'}", description: "An introductory course that empowers students to engage with computer science as a medium for creativity, communication, an problem solving.", professional_learning_program: "https://code.org/apply", video: "https://youtu.be/T45kEEBzrT8", published_date: DateTime.new(2023, 7, 5, 4, 30), self_paced_pl_course_offering_id: 165
     serialization = course_offering.serialize
     previous_course_offering = course_offering.freeze
     course_offering.destroy!
@@ -757,20 +757,6 @@ class CourseOfferingTest < ActiveSupport::TestCase
     new_course_offering = CourseOffering.find_by(key: new_course_offering_key)
     assert_equal previous_course_offering.attributes.except('id', 'created_at', 'updated_at'),
       new_course_offering.attributes.except('id', 'created_at', 'updated_at')
-  end
-
-  test "can seed correct self paced pl id based on self paced pl key" do
-    course_offering = create :course_offering, key: 'course-offering-1'
-    self_paced_pl_course = create :course_offering, key: 'self-paced-test-course'
-    serialization = course_offering.serialize
-    serialization[:self_paced_pl_course_offering_key] = "self-paced-test-course"
-
-    File.stubs(:read).returns(serialization.to_json)
-
-    CourseOffering.seed_record("config/course_offerings/course-offering-1.json")
-    new_course_offering = CourseOffering.find_by(key: course_offering.key)
-    assert_equal new_course_offering.self_paced_pl_course_offering_id,
-      self_paced_pl_course.id
   end
 
   test "validates grade_levels" do

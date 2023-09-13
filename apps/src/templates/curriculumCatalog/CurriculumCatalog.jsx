@@ -51,6 +51,14 @@ const CurriculumCatalog = ({
   };
 
   const handleExpandedCardChange = key => {
+    if (expandedCardKey !== key) {
+      analyticsReporter.sendEvent(
+        EVENTS.CURRICULUM_CATALOG_QUICK_VIEW_CLICKED_EVENT,
+        {
+          curriculum_offering: key,
+        }
+      );
+    }
     setExpandedCardKey(expandedCardKey === key ? null : key);
   };
 
