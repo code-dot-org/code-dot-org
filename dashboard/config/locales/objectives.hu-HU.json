@@ -116,6 +116,336 @@
         "21d90a6a-f1ea-4d0b-ba17-f2e6a53cf78c": {
           "description": "Azonosítsd és keresd meg a hibákat egy programban."
         },
+        "181321ab-df5f-438c-952d-10f818586439": {
+          "description": "A biológiai alkalmazkodás és evolúció kódmodelljei. "
+        },
+        "24aecd42-56d2-46ee-a935-a25970ea4e3a": {
+          "description": "Beszélje meg az állatok alkalmazkodását a helyi környezetben."
+        },
+        "33f3d6db-54e2-4c96-b11a-511672ae3be9": {
+          "description": "Készítsetek interaktív animációt sprite-ok és események felhasználásával."
+        },
+        "c470f27d-c0c0-40e4-85bc-8453a3500f80": {
+          "description": "Hozzon létre új spriteket, és rendeljen hozzá jelmezeket és helyeket."
+        },
+        "cd4283af-9ccd-4a83-bc9d-16acfc47937a": {
+          "description": "Mutassa meg, hogyan fejlődnek és változnak az állatok a környezetükben bekövetkező változások eredményeként."
+        },
+        "36e2c3bf-e310-4aba-bdda-019164e55231": {
+          "description": "Hozzon létre egy interaktív animációt a számítástechnika viselkedésével."
+        },
+        "8128f862-0d3e-4a07-b488-1fb2f03752fe": {
+          "description": "Beszélje meg az állatok mozgásának és viselkedésének hasonlóságait és különbségeit."
+        },
+        "846b7d3c-56e3-44b4-80dd-47431ae2a040": {
+          "description": "Mutasson példákat a megnövekedett túlélésre csoportokban."
+        },
+        "e89ead7e-816f-4133-b72e-09f37281c69c": {
+          "description": "Fejlessze ki a viselkedési adaptációk modelljeit kóddal."
+        },
+        "ecd731ff-0e81-46d4-bf79-407f4be474d7": {
+          "description": "Magyarázza el a migrációt túlélési mechanizmusként tudományos nyelv segítségével."
+        },
+        "a29abd98-2d1c-4385-adeb-209e6cbb0eaa": {
+          "description": "Hozzon létre egy interaktív animációt a számítástechnika viselkedésével"
+        },
+        "48ed70e5-f9cb-4c65-9d5e-64240219fcd0": {
+          "description": "Kódolj új, képzeletbeli vagy hipotetikus adaptációkat a kitalált környezeti változások miatt"
+        },
+        "317eb9d8-664f-496f-80eb-0029f2a0dafc": {
+          "description": "Fejlessze ki a viselkedési adaptációk modelljeit kóddal."
+        },
+        "d0c5f886-4268-4eb7-b499-fa86868fda17": {
+          "description": "Mutassa meg, hogyan fejlődnek és változnak az állatok a környezetükben bekövetkező változások eredményeként."
+        },
+        "46367e69-aa28-4aa2-b644-370d4720cb63": {
+          "description": "Ismerje meg a digitális könyvborító létrehozásához szükséges kódolási fogalmakat és eszközöket."
+        },
+        "f816d140-2662-4b07-838a-356b1341298f": {
+          "description": "Osztálybeszélgetések vagy írásbeli válaszok útján fogalmazza meg megfigyeléseiket és a grafikai tervezési döntések értelmezését."
+        },
+        "be255442-649e-4cc4-849d-293d6e934e84": {
+          "description": "Értelmezze a könyv karakterei és a program spritei közötti kapcsolatot, valamint a könyv beállításait és a program hátterét."
+        },
+        "2779cb4f-6ca1-4a7f-ae2d-df66a9873fad": {
+          "description": "Mutassa be a konstruktív visszajelzés nyújtásának és fogadásának képességét azáltal, hogy meleg és hűvös visszajelzést ad a partnernek, és alkalmazza a kapott visszajelzést saját munkájuk felülvizsgálatára."
+        },
+        "28a41551-e8f3-4421-8671-cc69e6cf6f05": {
+          "description": "Fejlessze az összefoglaló készségeket egy történet hatékony összefoglalásával, beleértve két kulcsszereplő és szerepük bemutatását a cselekményben."
+        },
+        "62b336d6-02ad-446f-a4f9-54dc7bdfae1f": {
+          "description": "Értelmezze a könyv karakterei és a program spritei közötti kapcsolatot, valamint a könyv beállításait és a program hátterét."
+        },
+        "0849e0ca-6bc7-486b-b9e4-0ef588648f2b": {
+          "description": "Használja a könyv karaktereinek, beállításainak és eseményeinek megértését, hogy tájékoztassa a digitális könyvborító kódolási döntéseit."
+        },
+        "59dc58ad-cbc8-4d27-928f-a06fa46e705a": {
+          "description": "Beszélje meg, hogy a konkrét tervezési döntések hogyan járulnak hozzá a könyvborítók általános hatásához és üzenetéhez."
+        },
+        "ce3130a2-728b-4b6f-bd20-c7048c833388": {
+          "description": "Határozza meg a könyvborító projekthez szükséges kódoló blokkokat és fogalmakat."
+        },
+        "8fbf7b5a-fbc1-42a1-b652-c99bd44dca4f": {
+          "description": "Gondolkodjon el saját digitális könyvborító projektjein, és azonosítsa azokat a tervezési elemeket, amelyeket úgy döntöttek, hogy belefoglalják, és a döntések mögött meghúzódó okokat."
+        },
+        "d1945b16-3b38-443e-890a-dab7d81ec812": {
+          "description": "Adjon konstruktív visszajelzést és reflexiókat az általuk tapasztalt interaktív könyvborító alkalmazásokról, elősegítve az együttműködő tanulási környezetet."
+        },
+        "4094e6da-1294-4686-aefc-b5363d35070a": {
+          "description": "Szimuláció kidolgozása a túlhalászás vízi ökoszisztémára gyakorolt hatásairól"
+        },
+        "fa9ae023-cf9e-40d1-9128-e260e85bb8c8": {
+          "description": "Használjon feltételes utasításokat az ok-okozati forgatókönyv megjelenítéséhez a természetben."
+        },
+        "fc9e660e-7b37-4a84-b2a8-837fa31efbab": {
+          "description": "Elemezze a túl sok, túl kevés vagy éppen megfelelő mennyiségű alga hatását a tengeri ökoszisztémában. "
+        },
+        "2523ed88-7219-4356-a342-5077931e97df": {
+          "description": "Hivatkozzon a mellékelt tudományos cikkre, hogy útmutatást nyújtson a túlhalászás szimulációjához."
+        },
+        "8123b6d5-695d-49e4-8880-0d1f532656df": {
+          "description": "Hozzon létre és használjon változót a program változó értékének nyomon követéséhez."
+        },
+        "025c46ee-bcd9-47e3-afa6-10d849dcd120": {
+          "description": "Magyarázza el, hogyan lehetnek hasznosak a számítástechnikai szimulációk a tudósok számára. "
+        },
+        "621bdd35-b3ad-4df7-af0f-e8ba6e591131": {
+          "description": "Kísérletezzen azzal, hogy az élelmiszerlánc egyik részének változásai hogyan befolyásolhatják az egész ökoszisztémát."
+        },
+        "977ebecc-d561-43b6-a4ad-33ff9807142a": {
+          "description": "Elemezze a növények és állatok közötti kapcsolatokat az élelmiszerláncban és az emberi hatás hatásait."
+        },
+        "ba2554e5-0ad2-4d70-ab12-eab4d31d57e1": {
+          "description": "Határozza meg a táplálékláncot különböző típusú ökoszisztémákban, például esőerdőkben, sivatagokban, sarkvidéken és vizes élőhelyeken."
+        },
+        "f3e0667d-0843-4d41-ae79-7ec7911d5ea4": {
+          "description": "Módosítsa a kódot egy szimulációban, hogy helyreállítsa az egyensúlyt egy olyan ökoszisztémában, amely kihívással néz szembe, például egy bizonyos faj csökkenése vagy egy másik faj túlnövekedése."
+        },
+        "80a85b7e-ae26-4786-98ed-9632de96ea24": {
+          "description": "Tekintettel a különböző összetevőket bemutató térképsorozatra, a diákok elemzik és összehasonlítják az egyes térképek különböző céljait. "
+        },
+        "84fb7001-86ee-4932-8d58-b6122037e146": {
+          "description": "Ismerje meg a Sprite Lab alapjait több sprit létrehozásával, helyük megváltoztatásával, mérettulajdonságuk beállításával, a sprite „beszédre” állításával, viselkedés hozzárendelésével, és a mikor érinti esemény segítségével programjukat interaktívvá teszi."
+        },
+        "1a27b887-2aa2-4f1b-8137-85395c9d1db8": {
+          "description": "Gondolkodjon el a térképkészítő szerepén, hogy mélyebben értékelje a térképek célját és értékét, mint eszközöket a körülöttük lévő világ megértéséhez."
+        },
+        "fdb3a900-9efd-4710-8096-6108ed735cb6": {
+          "description": "Használja a bontást úgy, hogy digitális térképészeti tereptárgyak projektjét kisebb feladatokra bontja, amikor térképprojektjüket tervezik."
+        },
+        "98520886-dfc7-4343-a7ba-c32e0a8b043f": {
+          "description": "A hallgatók írásos tervet dolgoznak ki, amely felvázolja a digitális térképezési tereptárgyak kódolásához szükséges lépéseket, beleértve a legfontosabb jellemzők azonosítását, az elrendezés megtervezését és térképük céljának leírását."
+        },
+        "2a8ffef0-4b21-4dad-99b2-2cd1e48dbcbb": {
+          "description": "Határozza meg, hogy a térképek hogyan változhatnak a térképkészítő döntései alapján."
+        },
+        "46412626-979f-4311-a180-f4e43809b4db": {
+          "description": "Mutassa be a földrajzi ismereteket, a kódolási készségeket és a kreativitást egy interaktív térkép kódolásával személyesen releváns és fontos tereptárgyakkal. "
+        },
+        "f625be86-4b66-4421-8a7c-f724fd230eb5": {
+          "description": "Használja ki a kódolási készségeket a szöveges magyarázatok beépítéséhez az interaktív térképbe, hogy közölje a tereptárgyak jelentőségét."
+        },
+        "829ee795-fac0-4509-8b25-cd11f443e52e": {
+          "description": "Mutassa be a kód használatának erejét a térkép interaktívvá tételéhez, a felhasználók bevonásához és a földrajzi megértés javításához. "
+        },
+        "ac701f5c-93be-48e3-b614-d5be26d5b11d": {
+          "description": "Vegyen részt személyes gondolkodásban a digitális térkép létrehozásának kódolási folyamatáról, kiemelve a sikereket, kihívások, és a levont tanulságok. "
+        },
+        "ade6631d-16d1-43dd-a955-09eba7039e81": {
+          "description": "Írjon átgondolt megfigyeléseket, és konstruktív értékelést adjon a kortárs projektekről, visszajelzést és fejlesztési javaslatokat kínálva. "
+        },
+        "f5a42772-0ecb-42e3-825f-81dc236b9151": {
+          "description": "Gyakoroljon hatékony prezentációs stratégiákat, amikor az interaktív térképet bemutatja társainak, beleértve a megvalósított jellemzők egyértelmű kommunikációját, a cél, és a projekt jelentősége. "
+        },
+        "9d012f97-41e4-4358-8970-f1be0bdb0254": {
+          "description": "Ismerje meg a csillagpaplan készítésének és ajándékozásának hagyományos jelentőségét"
+        },
+        "b3e48d93-ac56-49c0-ad15-6109d60a6c6b": {
+          "description": "Azonosítson több ismétlődő mintát egy csillagpaplanban"
+        },
+        "e321a445-412d-447e-a8de-c78464723196": {
+          "description": "Tervezze meg saját Star paplanját toll és papír segítségével"
+        },
+        "65af51b5-9269-4617-8e33-64e96072c136": {
+          "description": "Használja az Artist kódoló eszközt a Star Quilt dizájn replikálásához"
+        },
+        "8a81dbf7-f967-408b-acf5-81304158f196": {
+          "description": "Azonosítsa a mintákat a kódjukon belül"
+        },
+        "96b5e04f-5a82-475f-9de3-4d81fa8d9c8f": {
+          "description": "Használjon hurkokat a kód hatékonyabbá tételéhez"
+        },
+        "c0741915-7e37-4bd0-8281-c716104a5185": {
+          "description": "Vizsgálja meg a művész által elforgatott szög és a csillag hány pontja közötti kapcsolatot"
+        },
+        "1e3b8219-5cb5-4531-a0e3-4cb6cc2ddbcf": {
+          "description": "Az előre beállított funkciók segítségével gyorsabban pozícionálhatod a Művész"
+        },
+        "2686f662-8b36-49c8-bee7-1b81f1a3e328": {
+          "description": "Ossza meg projektjeit valakivel"
+        },
+        "3ca06d70-09b5-4800-b634-5a70da493a14": {
+          "description": "Tartsa kódját megjegyzésekkel rendezve"
+        },
+        "d5798a01-93fd-4e33-bbc1-fa94d5680493": {
+          "description": "Használjon hurkokat a kód hatékonyabbá tételéhez"
+        },
+        "3650e3e9-3d8b-4a16-b1ad-1435b57733c6": {
+          "description": "Ötletgyűjtés ötletek saját időkapszula-versükhöz, amelyek a mostani történelemről szólnak"
+        },
+        "4baa81af-6866-4e2b-af12-293ed1109078": {
+          "description": " Határozza meg a hangulatot és a képeket"
+        },
+        "cc4e38ec-858b-47c6-b5f7-58939e480ff5": {
+          "description": "Animáljon egy meglévő időkapszula-verset olyan blokkok segítségével, amelyek hátteret, szöveges effektusokat, hangokat, sprite-t és eseményeket állítanak be"
+        },
+        "134a35e8-69f4-447d-a45a-aeb2884c7fe4": {
+          "description": "Tervezze meg és írja meg saját időkapszula-verseit"
+        },
+        "925c11d6-1657-4f0a-b2ff-1e8749bcdc90": {
+          "description": "Magyarázza el, hogyan javítják a vizuális effektusok, hangok és képek a néző versélményét"
+        },
+        "978ca328-6255-4f50-8ea1-be477e9c668a": {
+          "description": "Határozzon meg egy időkapszulát"
+        },
+        "e0806eaa-bf53-4836-a6df-93a1078130c9": {
+          "description": "Animálja időkapszula-versüket olyan blokkok segítségével, amelyek hátteret, szöveges effektusokat, spriteket, hangokat és eseményeket állítanak be."
+        },
+        "1515d942-66bf-4bb5-9b0f-4d5505fed2ae": {
+          "description": "Válasszon megfelelő képet, hangot vagy effektust, hogy javítsa a szóválasztást verseikben."
+        },
+        "84fd2102-a911-44a1-8445-c31014a978b7": {
+          "description": " Tudja meg, hogyan írják és kurálják a történelmet"
+        },
+        "9fcac90f-a22a-4e46-be89-2fff140dfbc4": {
+          "description": "Oszd meg az alkalmazásaikat egymással"
+        },
+        "d23e7686-3b3a-4f1a-abdc-f5d8830d10c1": {
+          "description": "Értse meg annak erejét, hogy képes megírni a saját történetét"
+        },
+        "1bd88170-e38e-4c5b-bd62-8107acd68567": {
+          "description": "Átvitt és szó szerinti nyelvezet ábrázolása egy szövegben."
+        },
+        "4b7b140c-b345-48c6-b81b-eea3c37f2a0b": {
+          "description": "Használja a kódot a vers hangulatának váltásainak animálásához."
+        },
+        "a39a475f-a7c2-402f-abef-87340f6e4a45": {
+          "description": "Használja az eseményblokkokat egy művelet kiváltásához, amely a vers meghatározott soraiban történik."
+        },
+        "2dfe199c-6e82-4979-a24f-0b20d8b14f2f": {
+          "description": "Magyarázza el, hogyan javítják a vizuális effektusok, hangok és képek a néző versélményét."
+        },
+        "521bc123-9d0a-4588-9b39-a3cc94229a64": {
+          "description": "Tervezze meg és írja meg saját verseit."
+        },
+        "db6ecf8b-0374-46ea-b6cd-d59ac77879a1": {
+          "description": "Fejleszteni kell a kritikai gondolkodást és a problémamegoldó készségeket azáltal, hogy megkövetelik a hallgatóktól, hogy döntsenek arról, hogyan ábrázolják versüket kód és művészet segítségével."
+        },
+        "73f2fb47-8d56-4635-80b1-72a57c3c51d5": {
+          "description": "Válassza ki a megfelelő képeket, hangokat vagy effektusokat, hogy javítsa a szóválasztást verseikben."
+        },
+        "9524e34c-35ef-4735-9404-b7ca08d80257": {
+          "description": "Animálja versüket olyan blokkok segítségével, amelyek hátteret, szöveges effektusokat, spriteket, hangokat és eseményeket állítanak be."
+        },
+        "079c5cd4-3be3-44f1-9cf1-800dc8a2a86c": {
+          "description": "Kapcsolatokat hozhat létre a szöveg és a szöveg vizuális bemutatása között, azonosítva, hogy a vizuális ábrázolások hol tükrözik a szöveg konkrét leírásait."
+        },
+        "4903767c-89c4-4fbf-8879-93cf977803ae": {
+          "description": "Írja le, hogyan járulnak hozzá a vizuális és multimédiás elemek a szöveg jelentéséhez, hangneméhez vagy szépségéhez. "
+        },
+        "2ef99265-af55-4a2d-8719-58d4451f0610": {
+          "description": "Ismerje meg a szöveg animálására szolgáló programok írásának erejét"
+        },
+        "a4fa2434-b9c5-4e36-819b-50398d230730": {
+          "description": "Oszd meg az alkalmazásaikat egymással"
+        },
+        "9135f13e-3644-4b46-8afc-7ed7979867b6": {
+          "description": "Légy tisztában azzal, hogy mi várható, amikor a diákok átmennek a számítógépes laborba."
+        },
+        "cced4f5f-b5e7-44c2-883d-0693a6c4d57b": {
+          "description": "Használd a megfelelő terminológiát, amikor a számítógépes egérre, érintőpadra vagy érintőképernyőre utalsz."
+        },
+        "980fa7c9-c3f3-4ec7-8c64-6eac2545728d": {
+          "description": "Annak megtanulása, hogy a diákok azzal, hogy online információt osztanak meg magukról, digitális lábnyomot vagy „nyomvonalat” hagynak."
+        },
+        "52b206c3-8f53-4e77-9417-a7c9edcee705": {
+          "description": "Azonosítsd és javítsd ki az algoritmus végrehajtásának hibáit"
+        },
+        "7ab6d3e4-fd00-47c7-9d96-cc1e3844fd39": {
+          "description": "Fordítsd le a lépések listáját egy sor fizikai cselekvésre"
+        },
+        "cdfa4113-5f0b-4bb5-aa6b-c0350e6c73ae": {
+          "description": "Azonosítsd és keresd meg a hibákat egy programban."
+        },
+        "14fee8be-0a09-45f9-9f7d-876385f9e555": {
+          "description": "Azonosítsd és keresd meg a hibákat egy programban."
+        },
+        "65e4c7cc-3e04-46f6-a879-8439d75a1a87": {
+          "description": "Időzített eseményekre reagáló programok fejlesztése"
+        },
+        "7b61c64a-1235-4bb8-a660-ae9f09c57606": {
+          "description": "Táncanimációk készítése kóddal"
+        },
+        "bc6ede73-31d3-4995-9c16-90f09151e937": {
+          "description": "Felhasználói bevitelre reagáló programok fejlesztése"
+        },
+        "23d3203d-fd55-4994-a5ea-db01f6e5ea8f": {
+          "description": "Hozzatok létre új sprite-okat, és rendeljetek hozzájuk jelmezeket és helyszíneket."
+        },
+        "d943af7f-1329-432c-95fe-99a27ef065a7": {
+          "description": "Készítsetek interaktív animációt sprite-ok és események felhasználásával."
+        },
+        "0d6f6de7-7f64-44f9-b145-04e20abb5f06": {
+          "description": "Azonosítsd és keresd meg a hibákat egy programban."
+        },
+        "0815895c-2118-4dbc-8580-b95ce2e4a86b": {
+          "description": "Időzített eseményekre reagáló programok fejlesztése"
+        },
+        "56af8491-b4f2-477c-bb4d-433e82aacd4d": {
+          "description": "Felhasználói bevitelre reagáló programok fejlesztése"
+        },
+        "66a6368e-7191-4008-96a3-5df2dd519487": {
+          "description": "Táncanimációk készítése kóddal"
+        },
+        "35caa451-b503-4105-9a03-19a2b5ba7efe": {
+          "description": "Légy tisztában azzal, hogy mi várható, amikor a diákok átmennek a számítógépes laborba."
+        },
+        "8ed06bac-d128-4388-8b82-63bed501bc87": {
+          "description": "Használd a megfelelő terminológiát, amikor a számítógépes egérre, érintőpadra vagy érintőképernyőre utalsz."
+        },
+        "cdd28404-7d5a-4081-af55-be88baa52e1c": {
+          "description": "Azonosítsd és keresd meg a hibákat egy programban."
+        },
+        "13d689fe-f5b2-4e76-84d5-4fd24f91cfab": {
+          "description": "Írja le, hogyan épül fel a számítógépes látás olyan rétegekből, amelyek a kisebb összetevőket egyesítik a végső előrejelzésben"
+        },
+        "5bb33a90-28cb-40cb-9647-59a1818980b8": {
+          "description": "Magyarázza el a különféle perspektívák szükségességét az ajánlási rendszerek létrehozásakor"
+        },
+        "bb862e7c-9808-4414-b027-fc747d58b6c0": {
+          "description": "Használja a mesterséges neuron súlyát az ajánlási rendszer kimeneteinek beállításához"
+        },
+        "2b61407b-2812-4aa5-bdf0-661ae14b44d0": {
+          "description": "Beszélje meg ezeknek a modelleknek a pozitív és negatív mellékhatásait"
+        },
+        "941fa029-220b-4d04-880f-29d93c952a9d": {
+          "description": "Együttműködés az AI-vel egy kreatív szöveges dokumentum létrehozásához"
+        },
+        "f766948a-55ae-4083-9e67-cd42e929adcc": {
+          "description": "Írja le, hogy ha nagy mennyiségű szövegből tanulhat, akkor a számítógépek intelligensen jelenhetnek meg írásos formában"
+        },
+        "13fca3f5-45af-4888-8d22-71ce991caf3d": {
+          "description": "Beszélje meg, hogy ezek a modellek kreatívak-e vagy sem, és ki birtokolja ezeket a képeket"
+        },
+        "4b4fc091-b0d2-4cf4-bb61-a4b243abc4b8": {
+          "description": "Írja le, hogy az AI meglehetősen valósághű képeket képes előállítani a diffúzió néven ismert folyamat révén - ahol a modell megtanulja, hogyan kell részleteket rajzolni a részletek megfordításával"
+        },
+        "cb45ec87-ad2c-41f8-96e5-cb48a1181314": {
+          "description": "Az okot, hogy milyen típusú feladatokat nem szabad algoritmussal kitölteni"
+        },
+        "bb0c78af-3cdb-48cc-9f7a-f79c7d954752": {
+          "description": "Magyarázza el, hogyan működik az AI"
+        },
         "f9486b57-7160-4b3b-b327-b311239d5d26": {
           "description": "Időzített eseményekre reagáló programok fejlesztése"
         },
