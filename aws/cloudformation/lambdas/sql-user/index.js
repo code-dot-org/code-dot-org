@@ -43,8 +43,6 @@ exports.handler = async (event, context) => {
     connectTimeout: 10000,
   });
 
-  console.log("Created database connection.");
-
   try {
     let results;
     const clientHost = "%"; // Default to configuring all MySQL users to be able to connect from any (`%`) client.
@@ -73,10 +71,17 @@ exports.handler = async (event, context) => {
         throw new Error("Unsupported Resource Event type.");
     }
 
-    await sendCfnResponse(event, context, "SUCCESS", {}, physicalResourceId);
+    let successCfnResponse = await sendCfnResponse(
+      event,
+      context,
+      "SUCCESS",
+      {},
+      physicalResourceId
+    );
+    console.log(successCfnResponse);
   } catch (error) {
     console.error("Error:", error);
-    await sendCfnResponse(
+    let errorCfnResponse = await sendCfnResponse(
       event,
       context,
       "FAILURE",
@@ -84,6 +89,7 @@ exports.handler = async (event, context) => {
       physicalResourceId,
       error.message
     );
+    console.log(errorCfnResponse);
   } finally {
     connection.end();
   }
