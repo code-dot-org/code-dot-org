@@ -171,6 +171,33 @@ describe('TopInstructions', () => {
     expect(wrapper.find('Button')).to.have.lengthOf(0);
   });
 
+  it('displays StudentRubricView when rubrics tab is selected', () => {
+    const wrapper = shallow(
+      <TopInstructions
+        {...DEFAULT_PROPS}
+        viewAs={ViewType.Participant}
+        taRubric={{learningGoals: []}}
+      />
+    );
+    // This is an anti-pattern but one we already use in this file.
+    wrapper.setState({tabSelected: TabType.TA_RUBRIC});
+    expect(wrapper.state().tabSelected).to.equal(TabType.TA_RUBRIC);
+    expect(wrapper.find('StudentRubricView')).to.have.lengthOf(1);
+  });
+
+  it('passes displayTaRubricTab=true to TopInstructionsHeader if rubric is present', () => {
+    const wrapper = shallow(
+      <TopInstructions
+        {...DEFAULT_PROPS}
+        viewAs={ViewType.Participant}
+        taRubric={{learningGoals: []}}
+      />
+    );
+
+    expect(wrapper.find(TopInstructionsHeader).props().displayTaRubricTab).to.be
+      .true;
+  });
+
   describe('viewing the Feedback Tab', () => {
     describe('as an instructor', () => {
       it('passes displayFeedback = false to TopInstructionsHeader on a level with no miniRubric where the instructor is not viewing student work', () => {
