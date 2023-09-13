@@ -1,0 +1,126 @@
+---
+title: Careers at Code.org
+nav: about_nav
+theme: responsive
+---
+
+%link{href: "/css/generated/career/career-page.css", rel: "stylesheet"}
+
+%section.hero-banner-basic.career__hero
+  .text-wrapper.col-60
+    %h1
+      =hoc_s(:careers_hero_title)
+    %p.body-two
+      =hoc_s(:careers_hero_description)
+    %p.body-two
+      =hoc_s(:careers_hero_description_under)
+    %a.link-button.career__hero__button{href: "#openRoles"}
+      =hoc_s(:call_to_action_explore_roles)
+  %figure.video.col-50
+    =view :display_video_thumbnail, id: "our__team", video_code: "mTGSiB4kB18", play_button: 'center', letterbox: 'false'
+
+%hr
+
+%section.career__vision
+  %figure.col-45
+    %img{src: "/images/about/careers/vision-section-image.jpg", alt: ""}
+  .text-wrapper.col-50
+    %h2{style: "margin-top: 0"}
+      =hoc_s(:careers_vision_title)
+    %p.body-two
+      =hoc_s(:careers_vision_decsription)
+    %p.body-two
+      =hoc_s(:careers_vision_description_under)
+%hr
+
+%section.career__values
+  %h2{style: "margin-bottom: 2rem"}
+    =hoc_s(:careers_values_title)
+  - item_count = 3
+  - item_count.times do |index|
+    .career__values__list
+      .career__values__item
+        %img{src: "/images/about/careers/core-values-first-column-#{index + 1}.jpg", alt: "careers_values_text_1"}
+        %p.heading-xs.values__text{style: "display: flex; align-items:center"}
+          =hoc_s("careers_values_first_column_text_#{index + 1}")
+      .career__values__item
+        %img{src: "/images/about/careers/core-values-second-column-#{index + 1}.jpg", alt: "careers_values_text_2"}
+        %p.heading-xs.values__text{style: "display: flex; align-items:center"}
+          =hoc_s("careers_values_second_column_text_#{index + 1}")
+%hr
+
+%section.career__approach
+  .text-wrapper.col-66
+    %h2
+      =hoc_s(:careers_approach_section_title)
+    %p.body-two.career__approach__description
+      =hoc_s(:careers_approach_section_description)
+      %span.link
+        %a{href: "#careerDiversity"}
+          =hoc_s(:careers_aproach_section_description_link)
+    %a.link-button{href: "#openRoles"}
+      =hoc_s(:careers_approach_section_button)
+  %figure.col-33{style: "text-align: center"}
+    %img{src: "/images/about/careers/diversityJobsAward.jpg", alt: "Diversity Jobs award", style: "width: 235px; height: 205px"}
+%hr
+
+%section.career__principal{style: "margin: 4rem 0"}
+  %h2
+    =hoc_s(:careers_principle_section_title)
+  .career__principal__list{style: "margin-top: 2rem"}
+    - item_count = 7
+    - item_count.times do |index|
+      - if index % 2 === 0
+        .career__principal__item
+          %img{src: "/images/about/careers/principle-section-#{index + 1}.jpg", alt: "careers_values_text_1", style:"width: 100px; height: 100px"}
+          .career__principal__text
+            %h3.heading-xs{style: "display: flex; align-items:center; margin-top: 0"}
+              =hoc_s("careers_principle_title_#{index + 1}")
+            %p
+              =hoc_s("careers_principle_description_#{index + 1}")
+      - if index % 2 != 0
+        .career__principal__item
+          .career__principal__text
+            %h3.heading-xs{style: "display: flex; align-items:center; margin-top: 0"}
+              =hoc_s("careers_principle_title_#{index + 1}")
+            %p
+              =hoc_s("careers_principle_description_#{index + 1}")
+          %img{src: "/images/about/careers/principle-section-#{index + 1}.jpg", alt: "careers_values_text_1", style:"width: 100px; height: 100px"}
+%hr
+
+%section.career__balance{style: "margin: 4rem 0 0"}
+  %h2
+    =hoc_s(:careers_balance_section_title)
+  %p.body-two.career__balance__description
+    =hoc_s(:careers_balance_section_description)
+  - item_count = 2
+  - item_count.times do |index|
+    .career__values__list
+      .career__values__item
+        %img{src: "/images/about/careers/balance-first-column-#{index + 1}.jpg", alt: "careers_values_text_1", style:"width: 100px; height: 100px"}
+        %p.heading-xs.values__text{style: "display: flex; align-items:center"}
+          =hoc_s("careers_balance_first_column_text_#{index + 1}")
+      .career__values__item
+        %img{src: "/images/about/careers/balance-second-column-#{index + 1}.jpg", alt: "careers_values_text_2", style:"width: 100px; height: 100px"}
+        %p.heading-xs.values__text{style: "display: flex; align-items:center"}
+          =hoc_s("careers_balance_second_column_text_#{index + 1}")
+%hr
+
+%section.career__roles{style: "margin: 4rem 0", id: "openRoles"}
+  %h2
+    =hoc_s(:careers_openroles_section_title)
+  %p.body-two.career__roles__description
+    =hoc_s(:careers_openroles_section_description)
+  = view :job_board
+%hr
+
+%section.career__diversity{style: "margin: 4rem 0", id:"careerDiversity"}
+  %h2
+    =hoc_s(:careers_approach_section_title2)
+  .career__diversity__images
+    %img{src: "/images/about/careers/finall-section-team.jpg", alt: "Team"}
+    %img{src: "/images/about/careers/final-section-pride.jpg", alt: "Pride"}
+  %p.body-two
+    =hoc_s(:careers_approach_section_description_1)
+  %p.body-two
+    =hoc_s(:careers_approach_section_description_2, markdown: :inline, locals: {mail_url: "mailto:accommodations@code.org."})
