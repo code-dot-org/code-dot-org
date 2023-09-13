@@ -1520,9 +1520,9 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     assert workshop.require_application?
   end
 
-  test 'CSD academic year workshop must require teacher application' do
+  test 'CSD academic year workshop must not require teacher application' do
     workshop = create :csd_academic_year_workshop, regional_partner: @regional_partner
-    assert workshop.require_application?
+    refute workshop.require_application?
   end
 
   test 'CSA summer workshop must require teacher application' do
