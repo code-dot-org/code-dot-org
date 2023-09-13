@@ -47,6 +47,9 @@
         "CourseD_Dance_2020_04_2021": {
           "dance_callout_02": "මෙම බ්ලොක් එක ඔබේ වැඩසටහනට එක් කරන්න!"
         },
+        "CourseD_Dance_2020_04_2023": {
+          "dance_callout_02": "මෙම බ්ලොක් එක ඔබේ වැඩසටහනට එක් කරන්න!"
+        },
         "CourseD_Dance_Party_01": {
           "dance_callout_01": "මෙම බ්ලොක් එක ඔබේ වැඩසටහනට එක් කරන්න!"
         },
@@ -128,6 +131,9 @@
         "Overworld Chop Trees_2021": {
           "craft_callout_preplaced": "ඔබට ආරම්භ කිරීම සදහා අපි මෙහි බ්ලොක් කිහිපයක් දමා ඇත"
         },
+        "Overworld Chop Trees_2023": {
+          "craft_callout_preplaced": "ඔබට ආරම්භ කිරීම සදහා අපි මෙහි බ්ලොක් කිහිපයක් දමා ඇත"
+        },
         "Overworld House Frame Chosen": {
           "craft_callout_preplaced_house": "මෙම කේතය ඔබේ නිවසේ ඉදිකිරිම ආරම්භ කරනවා. ඔබට පුලුවන්ද මෙය අවසන් කරන්න?"
         },
@@ -141,6 +147,9 @@
           "craft_callout_preplaced_house": "මෙම කේතය ඔබේ නිවසේ ඉදිකිරිම ආරම්භ කරනවා. ඔබට පුලුවන්ද මෙය අවසන් කරන්න?"
         },
         "Overworld House Frame Chosen_2021": {
+          "craft_callout_preplaced_house": "මෙම කේතය ඔබේ නිවසේ ඉදිකිරිම ආරම්භ කරනවා. ඔබට පුලුවන්ද මෙය අවසන් කරන්න?"
+        },
+        "Overworld House Frame Chosen_2023": {
           "craft_callout_preplaced_house": "මෙම කේතය ඔබේ නිවසේ ඉදිකිරිම ආරම්භ කරනවා. ඔබට පුලුවන්ද මෙය අවසන් කරන්න?"
         },
         "Overworld Move to Sheep": {
@@ -158,6 +167,9 @@
         "Overworld Move to Sheep_2021": {
           "craft_run_button_callout": "ඔබේ වැඩසටහන උත්සාහ කිරීමට \"දුවන්න\" ඔබන්න"
         },
+        "Overworld Move to Sheep_2023": {
+          "craft_run_button_callout": "ඔබේ වැඩසටහන උත්සාහ කිරීමට \"දුවන්න\" ඔබන්න"
+        },
         "Overworld Place Wall": {
           "craft_inside_repeat": "මෙතන ක්‍රියාව නැවත නැවත කරන්න පුළුවන් කොටස් දැමීමෙන්"
         },
@@ -171,6 +183,9 @@
           "craft_inside_repeat": "මෙතන ක්‍රියාව නැවත නැවත කරන්න පුළුවන් කොටස් දැමීමෙන්"
         },
         "Overworld Place Wall_2021": {
+          "craft_inside_repeat": "මෙතන ක්‍රියාව නැවත නැවත කරන්න පුළුවන් කොටස් දැමීමෙන්"
+        },
+        "Overworld Place Wall_2023": {
           "craft_inside_repeat": "මෙතන ක්‍රියාව නැවත නැවත කරන්න පුළුවන් කොටස් දැමීමෙන්"
         },
         "Underground Avoiding Lava": {
@@ -188,6 +203,9 @@
         "Underground Avoiding Lava_2021": {
           "craft_callout_moveforward": "මෙම කේතය ලවා ඇතිදැයි සොයාබලයි, ඉදිරියට යාම සදහා ඔබගේ අදහසක් ඇතුලත් කල හැකිද?"
         },
+        "Underground Avoiding Lava_2023": {
+          "craft_callout_moveforward": "මෙම කේතය ලවා ඇතිදැයි සොයාබලයි, ඉදිරියට යාම සදහා ඔබගේ අදහසක් ඇතුලත් කල හැකිද?"
+        },
         "Underground Iron": {
           "craft_what_is_iron": "මෙම යකඩ මගේ කරගන්න!"
         },
@@ -202,6 +220,54 @@
         },
         "Underground Iron_2021": {
           "craft_what_is_iron": "මෙම යකඩ මගේ කරගන්න!"
+        },
+        "Underground Iron_2023": {
+          "craft_what_is_iron": "මෙම යකඩ මගේ කරගන්න!"
+        },
+        "csc-starquilts-comment_2023": {
+          "New Artist Project_callout1": "ඔබගේ මෙවලම් පෙට්ටියේ ඇති කොටස් බැලීමට කාණ්ඩ ක්ලික් කරන්න! ඔබේ වැඩසටහනට එකතු කිරීම සඳහා වැඩබිම වෙත කුට්ටි අදින්න",
+          "New Artist Project_callout2": "ඔබගේ වැඩසටහන සුරැකීමට සහ ක්‍රියාත්මක කිරීමට \"Run\" ඔබන්න ",
+          "sign_in_to_save_project": "ඔබේ ව්‍යාපෘතියට පසුව ප්‍රවේශ වීමට අවශ්‍යද? මෙම ව්‍යාපෘතිය ඔබගේ ගිණුමට සුරැකීමට පුරනය වන්න!"
+        },
+        "csc-starquilts-repeat_2023": {
+          "New Artist Project_callout1": "ඔබගේ මෙවලම් පෙට්ටියේ ඇති කොටස් බැලීමට කාණ්ඩ ක්ලික් කරන්න! ඔබේ වැඩසටහනට එකතු කිරීම සඳහා වැඩබිම වෙත කුට්ටි අදින්න",
+          "New Artist Project_callout2": "ඔබගේ වැඩසටහන සුරැකීමට සහ ක්‍රියාත්මක කිරීමට \"Run\" ඔබන්න ",
+          "sign_in_to_save_project": "ඔබේ ව්‍යාපෘතියට පසුව ප්‍රවේශ වීමට අවශ්‍යද? මෙම ව්‍යාපෘතිය ඔබගේ ගිණුමට සුරැකීමට පුරනය වන්න!"
+        },
+        "csc-starquilts-rhombus-freeplay_2023": {
+          "New Artist Project_callout1": "ඔබගේ මෙවලම් පෙට්ටියේ ඇති කොටස් බැලීමට කාණ්ඩ ක්ලික් කරන්න! ඔබේ වැඩසටහනට එකතු කිරීම සඳහා වැඩබිම වෙත කුට්ටි අදින්න",
+          "New Artist Project_callout2": "ඔබගේ වැඩසටහන සුරැකීමට සහ ක්‍රියාත්මක කිරීමට \"Run\" ඔබන්න ",
+          "sign_in_to_save_project": "ඔබේ ව්‍යාපෘතියට පසුව ප්‍රවේශ වීමට අවශ්‍යද? මෙම ව්‍යාපෘතිය ඔබගේ ගිණුමට සුරැකීමට පුරනය වන්න!"
+        },
+        "csc-starquilts-row1_2023": {
+          "New Artist Project_callout1": "ඔබගේ මෙවලම් පෙට්ටියේ ඇති කොටස් බැලීමට කාණ්ඩ ක්ලික් කරන්න! ඔබේ වැඩසටහනට එකතු කිරීම සඳහා වැඩබිම වෙත කුට්ටි අදින්න",
+          "New Artist Project_callout2": "ඔබගේ වැඩසටහන සුරැකීමට සහ ක්‍රියාත්මක කිරීමට \"Run\" ඔබන්න ",
+          "sign_in_to_save_project": "ඔබේ ව්‍යාපෘතියට පසුව ප්‍රවේශ වීමට අවශ්‍යද? මෙම ව්‍යාපෘතිය ඔබගේ ගිණුමට සුරැකීමට පුරනය වන්න!"
+        },
+        "csc-starquilts-row2_2023": {
+          "New Artist Project_callout1": "ඔබගේ මෙවලම් පෙට්ටියේ ඇති කොටස් බැලීමට කාණ්ඩ ක්ලික් කරන්න! ඔබේ වැඩසටහනට එකතු කිරීම සඳහා වැඩබිම වෙත කුට්ටි අදින්න",
+          "New Artist Project_callout2": "ඔබගේ වැඩසටහන සුරැකීමට සහ ක්‍රියාත්මක කිරීමට \"Run\" ඔබන්න ",
+          "sign_in_to_save_project": "ඔබේ ව්‍යාපෘතියට පසුව ප්‍රවේශ වීමට අවශ්‍යද? මෙම ව්‍යාපෘතිය ඔබගේ ගිණුමට සුරැකීමට පුරනය වන්න!"
+        },
+        "csc-starquilts-row3_2023": {
+          "New Artist Project_callout1": "ඔබගේ මෙවලම් පෙට්ටියේ ඇති කොටස් බැලීමට කාණ්ඩ ක්ලික් කරන්න! ඔබේ වැඩසටහනට එකතු කිරීම සඳහා වැඩබිම වෙත කුට්ටි අදින්න",
+          "New Artist Project_callout2": "ඔබගේ වැඩසටහන සුරැකීමට සහ ක්‍රියාත්මක කිරීමට \"Run\" ඔබන්න ",
+          "sign_in_to_save_project": "ඔබේ ව්‍යාපෘතියට පසුව ප්‍රවේශ වීමට අවශ්‍යද? මෙම ව්‍යාපෘතිය ඔබගේ ගිණුමට සුරැකීමට පුරනය වන්න!"
+        },
+        "csc-starquilts-row4_2023": {
+          "New Artist Project_callout1": "ඔබගේ මෙවලම් පෙට්ටියේ ඇති කොටස් බැලීමට කාණ්ඩ ක්ලික් කරන්න! ඔබේ වැඩසටහනට එකතු කිරීම සඳහා වැඩබිම වෙත කුට්ටි අදින්න",
+          "New Artist Project_callout2": "ඔබගේ වැඩසටහන සුරැකීමට සහ ක්‍රියාත්මක කිරීමට \"Run\" ඔබන්න ",
+          "sign_in_to_save_project": "ඔබේ ව්‍යාපෘතියට පසුව ප්‍රවේශ වීමට අවශ්‍යද? මෙම ව්‍යාපෘතිය ඔබගේ ගිණුමට සුරැකීමට පුරනය වන්න!"
+        },
+        "csc-starquilts-row5_2023": {
+          "New Artist Project_callout1": "ඔබගේ මෙවලම් පෙට්ටියේ ඇති කොටස් බැලීමට කාණ්ඩ ක්ලික් කරන්න! ඔබේ වැඩසටහනට එකතු කිරීම සඳහා වැඩබිම වෙත කුට්ටි අදින්න",
+          "New Artist Project_callout2": "ඔබගේ වැඩසටහන සුරැකීමට සහ ක්‍රියාත්මක කිරීමට \"Run\" ඔබන්න ",
+          "sign_in_to_save_project": "ඔබේ ව්‍යාපෘතියට පසුව ප්‍රවේශ වීමට අවශ්‍යද? මෙම ව්‍යාපෘතිය ඔබගේ ගිණුමට සුරැකීමට පුරනය වන්න!"
+        },
+        "csc_starquilts_freeplay_2023": {
+          "New Artist Project_callout1": "ඔබගේ මෙවලම් පෙට්ටියේ ඇති කොටස් බැලීමට කාණ්ඩ ක්ලික් කරන්න! ඔබේ වැඩසටහනට එකතු කිරීම සඳහා වැඩබිම වෙත කුට්ටි අදින්න",
+          "New Artist Project_callout2": "ඔබගේ වැඩසටහන සුරැකීමට සහ ක්‍රියාත්මක කිරීමට \"Run\" ඔබන්න ",
+          "sign_in_to_save_project": "ඔබේ ව්‍යාපෘතියට පසුව ප්‍රවේශ වීමට අවශ්‍යද? මෙම ව්‍යාපෘතිය ඔබගේ ගිණුමට සුරැකීමට පුරනය වන්න!"
         },
         "frozen circle function with parameter": {
           "frozen_circle_function_with_parameter_circle": "\"create a circle\" කොටස අරගෙන ප්‍රමාණය වෙනස් කරන්න."
