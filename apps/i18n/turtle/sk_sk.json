@@ -102,6 +102,7 @@
   "turnTooltip": "Otočí maliara vľavo alebo vpravo o zadaný počet stupňov.",
   "turtleVisibilityTooltip": "Zviditeľní alebo skryje maliara.",
   "widthTooltip": "Zmení hrúbku pera.",
+  "withSideLength": "s dĺžkou strany",
   "withSize": "veľkosti",
   "wrongColour": "Tvoj obrázok má nesprávnu farbu. V tejto úlohe to musí byť %1."
 }

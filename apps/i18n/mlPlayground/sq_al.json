@@ -5,57 +5,42 @@
   "correctAnswer": "E saktë",
   "datasets": {
     "abalone": {
+      "card": {
+        "context": {
+          "potentialMisuses": "[empty string]"
+        }
+      },
       "fields": {
         "Length": {
           "id": "Gjatësi"
         }
       }
     },
+    "basketball_shots": {
+      "card": {
+        "context": {
+          "potentialMisuses": "[empty string]"
+        }
+      }
+    },
     "bike_sharing": {
+      "card": {
+        "context": {
+          "potentialMisuses": "[empty string]"
+        }
+      },
       "fields": {
         "index": {
           "id": "indeks"
         }
       }
     },
-    "billionaires": {
-      "fields": {
-        "Age": {
-          "id": "Mosha"
-        },
-        "Gender": {
-          "id": "Gjinia"
-        }
-      }
-    },
-    "boba_toy": {
-      "fields": {
-        "banana": {
-          "id": "Banane"
-        }
-      }
-    },
-    "census_part": {
-      "fields": {
-        "age": {
-          "id": "mosha"
-        }
-      }
-    },
-    "club_random_toy": {
-      "fields": {
-        "color": {
-          "id": "ngjyra"
-        },
-        "food": {
-          "id": "ushqim"
-        },
-        "music": {
-          "id": "muzikë"
-        }
-      }
-    },
     "heart": {
+      "card": {
+        "context": {
+          "potentialMisuses": "[empty string]"
+        }
+      },
       "fields": {
         "Age": {
           "id": "Mosha"
@@ -63,34 +48,30 @@
       }
     },
     "insurance_cost": {
+      "card": {
+        "context": {
+          "potentialMisuses": "[empty string]"
+        }
+      },
       "fields": {
         "age": {
           "id": "mosha"
         }
       }
     },
-    "loneliness_interests": {
-      "fields": {
-        "Internet": {
-          "id": "Internet"
-        }
-      }
-    },
-    "loneliness_music": {
-      "fields": {
-        "Country": {
-          "id": "Shteti"
-        }
-      }
-    },
-    "medical_priority": {
-      "fields": {
-        "age": {
-          "id": "mosha"
+    "jeans": {
+      "card": {
+        "context": {
+          "potentialMisuses": "[empty string]"
         }
       }
     },
     "movies": {
+      "card": {
+        "context": {
+          "potentialMisuses": "[empty string]"
+        }
+      },
       "fields": {
         "Country": {
           "id": "Shteti"
@@ -103,133 +84,23 @@
         }
       }
     },
-    "naan_toy": {
-      "fields": {
-        "cheese": {
-          "id": "djathë"
-        },
-        "chicken": {
-          "id": "pulë"
-        },
-        "lamb": {
-          "id": "qengji"
-        },
-        "onion": {
-          "id": "qepë"
-        }
-      }
-    },
     "nutrition": {
+      "card": {
+        "context": {
+          "potentialMisuses": "[empty string]"
+        }
+      },
       "fields": {
         "Description": {
           "id": "Përshkrimi"
         }
       }
     },
-    "poke_toy": {
-      "fields": {
-        "avocado": {
-          "id": "avokado"
-        },
-        "ginger": {
-          "id": "xhenxhefil"
-        },
-        "onion": {
-          "id": "qepë"
-        }
-      }
-    },
-    "poutine_toy": {
-      "fields": {
-        "bacon": {
-          "id": "proshutë"
-        },
-        "cheese": {
-          "id": "djathë"
-        },
-        "lobster": {
-          "id": "karavidhe"
-        },
-        "meat": {
-          "id": "mish"
-        },
-        "mushrooms": {
-          "id": "kërpudha"
-        }
-      }
-    },
-    "raspado_toy": {
-      "fields": {
-        "lime": {
-          "id": "gëlqere"
-        },
-        "strawberry": {
-          "id": "luleshtrydhe"
-        }
-      }
-    },
-    "safari_toy": {
-      "fields": {
-        "alligator": {
-          "id": "aligator"
-        },
-        "elephant": {
-          "id": "elefant"
-        },
-        "people": {
-          "id": "njerëzit"
-        },
-        "rhino": {
-          "id": "rinoceront"
-        },
-        "trees": {
-          "id": "pemë"
-        }
-      }
-    },
-    "salad_toy": {
-      "fields": {
-        "avocado": {
-          "id": "avokado"
-        },
-        "beans": {
-          "id": "fasule"
-        },
-        "cheese": {
-          "id": "djathë"
-        },
-        "chicken": {
-          "id": "pulë"
-        },
-        "fruit": {
-          "id": "frutë"
-        },
-        "tomato": {
-          "id": "domate"
-        }
-      }
-    },
-    "salsa_toy": {
-      "fields": {
-        "avocado": {
-          "id": "avokado"
-        },
-        "beans": {
-          "id": "fasule"
-        },
-        "corn": {
-          "id": "misër"
-        },
-        "lime": {
-          "id": "gëlqere"
-        },
-        "onion": {
-          "id": "qepë"
-        }
-      }
-    },
     "shapes_v1_toy": {
       "fields": {
+        "sides": {
+          "id": "brinjtë"
+        },
         "size": {
           "id": "madhësia"
         }
@@ -237,22 +108,20 @@
     },
     "shapes_v2_toy": {
       "fields": {
+        "sides": {
+          "id": "brinjtë"
+        },
         "size": {
           "id": "madhësia"
         }
       }
     },
-    "shoe_survey_toy": {
-      "fields": {
-        "day": {
-          "id": "ditë"
-        },
-        "shoe": {
-          "id": "mbath"
-        }
-      }
-    },
     "songs": {
+      "card": {
+        "context": {
+          "potentialMisuses": "[empty string]"
+        }
+      },
       "fields": {
         "Artist": {
           "id": "Artisti"
@@ -260,6 +129,12 @@
       }
     },
     "student_alcohol_consumption": {
+      "card": {
+        "context": {
+          "potentialMisuses": "[empty string]",
+          "potentialUses": "[empty string]"
+        }
+      },
       "fields": {
         "age": {
           "id": "mosha"
@@ -271,42 +146,18 @@
           "id": "shkollë"
         }
       }
-    },
-    "student_survey": {
-      "fields": {
-        "Achievements": {
-          "id": "Arritjet"
-        },
-        "Age": {
-          "description": "Mosha",
-          "id": "Mosha"
-        },
-        "Country": {
-          "id": "Shteti"
-        },
-        "Gender": {
-          "description": "Gjinia",
-          "id": "Gjinia"
-        },
-        "Internet": {
-          "id": "Internet"
-        }
-      }
-    },
-    "zoo": {
-      "fields": {
-        "Aquatic": {
-          "id": "Ujor"
-        }
-      }
     }
   },
+  "modelCardFeatures": "Karakteristikat",
+  "modelCardLabel": "Emërtimi",
   "modelCardPossibleValuesMaximum": "Maksimum",
   "modelCardPossibleValuesMinimum": "minimum",
   "navigateBack": "Kthehu",
   "navigateDone": "Përfundo",
   "navigateForward": "Vazhdo ",
+  "resultsTableFeatureHeader": "Karakteristikat",
   "saveProgress": "Ruaj",
+  "trainModelHeading": "Trajnimi",
   "tryAgain": "Provo përsëri",
   "uniqueOptionsWarningNotice": "Shënim"
 }
