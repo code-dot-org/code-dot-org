@@ -304,6 +304,7 @@
     "react-portal": "^4.2.1",
     "react-router-dom": "^4.3.1",
     "react-transition-group": "2.9.0",
+    "react-typist": "^2.0.5",
     "reactabular-sticky": "^8.14.0",
     "reactabular-virtualized": "^8.18.0",
     "rehype-stringify": "^7.0.0",

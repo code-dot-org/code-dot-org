@@ -43,6 +43,8 @@ import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {showArrowButtons} from '@cdo/apps/templates/arrowDisplayRedux';
 import queryString from 'query-string';
 import danceCode from '@code-dot-org/dance-party/src/p5.dance.interpreted.js';
+import HttpClient from '@cdo/apps/util/HttpClient';
+import AiExplainer from './AiExplainer';
 
 const ButtonState = {
   UP: 0,
@@ -153,6 +155,7 @@ Dance.prototype.init = function (config) {
 
   ReactDOM.render(
     <Provider store={getStore()}>
+      {false && <AiExplainer systemPrompt={systemPrompt} />}
       <AppView
         visualizationColumn={
           <DanceVisualizationColumn
@@ -400,6 +403,7 @@ Dance.prototype.afterInject_ = function () {
     spriteConfig: new Function('World', this.level.customHelperLibrary),
     container: 'divDance',
     i18n: danceMsg,
+    doAi: this.doAi.bind(this),
     resourceLoader: new ResourceLoader(
       'https://curriculum.code.org/images/sprites/dance_20191106/'
     ),
@@ -645,6 +649,7 @@ Dance.prototype.computeCharactersReferenced = function (studentCode) {
     const characterName = match[2];
     charactersReferencedSet.add(characterName);
   }
+  charactersReferencedSet.add('MOOSE');
   return Array.from(charactersReferencedSet);
 };
 
@@ -725,5 +730,40 @@ Dance.prototype.captureThumbnailImage = function () {
     captureThumbnailFromCanvas(canvas);
   } else {
     setThumbnailBlobFromCanvas(canvas);
+  }
+};
+
+const systemPrompt =
+  /* 'You are a helper which accepts a request for a mood or atmosphere, and can then generate a single keyword which captures that mood.  You should always return only a single keyword.  The keyword is one of the following: "lasers", "splatter", "sparkles", "stars".',*/
+  'You are a helper which can accept a request for a mood or atmosphere, and you then generate JSON like the following format: {backgroundColor: "black", backgroundEffect: "splatter", foregroundEffect: "rain"}.  The only valid values for backgroundEffect are circles, color_cycle, diamonds, disco_ball, fireworks, swirl, kaleidoscope, lasers, splatter, rainbow, snowflakes, galaxy, sparkles, spiral, disco, stars.  The only valid values for backgroundColor are rave, cool, electronic, iceCream, neon, tropical, vintage, warm.  The only valid values for foregroundEffect are bubbles, confetti, hearts_red, music_notes, pineapples, pizzas, smiling_poop, rain, floating_rainbows, smile_face, spotlight, color_lights, raining_tacos.  Make sure you always generate all three of those values.  Also, if you receive a request to place a dancer somewhere, then add {setDancer: "true"} to the result JSON.  Also, add a field called "explanation" to the result JSON, which contains an explanation of why you chose the values that you did, at the reading level of a 5th-grade school student.';
+
+Dance.prototype.doAi = async function (input) {
+  const url = '/openai/chat_completion';
+
+  const messages = [
+    {
+      role: 'system',
+      content: systemPrompt,
+    },
+    {
+      role: 'user',
+      content: input,
+    },
+  ];
+
+  const response = await HttpClient.post(
+    url,
+    JSON.stringify({messages}),
+    true,
+    {
+      'Content-Type': 'application/json; charset=UTF-8',
+    }
+  );
+
+  if (response.status === 200) {
+    const res = await response.json();
+    this.nativeAPI.handleAi(res.content);
+  } else {
+    return null;
   }
 };
