@@ -217,8 +217,8 @@ class I18nScriptUtils
   #
   # Right now, this is just page titles but it could be expanded to include
   # any English content (description, social share stuff, etc).
-  def self.sanitize_header!(header)
-    header.slice!("title")
+  def self.sanitize_markdown_header(header)
+    header.slice('title')
   end
 
   # For resources like `course_content` and `curriculum_content`,
@@ -387,7 +387,18 @@ class I18nScriptUtils
     Parallel.each(data_array, **args, in_threads: PARALLEL_PROCESSES) {|data| yield(data)}
   end
 
+  # Copies file
+  #
+  # @param file_path [String] path to the file
+  # @param dest_path [String] destination path
+  def self.copy_file(file_path, dest_path)
+    dest_dir = File.extname(dest_path).empty? ? dest_path : File.dirname(dest_path)
+    FileUtils.mkdir_p(dest_dir)
+    FileUtils.cp(file_path, dest_path)
+  end
+
   # Renames directory
+  #
   # @param [String] from_dir, e.g. `i18n/locales/English/resource`
   # @param [String] to_dir, e.g. `i18n/locales/en-US/resource`
   def self.rename_dir(from_dir, to_dir)

@@ -1,18 +1,30 @@
 require_relative '../../test_helper'
 require_relative '../../../i18n/resources/pegasus'
 
-class I18n::Resources::PegasusTest < Minitest::Test
-  def test_sync_in
-    exec_seq = sequence('execution')
+describe I18n::Resources::Pegasus do
+  describe '.sync_in' do
+    it 'sync-in Pegasus resources' do
+      execution_sequence = sequence('execution')
 
-    I18n::Resources::Pegasus::HourOfCode.expects(:sync_in).in_sequence(exec_seq)
-    I18n::Resources::Pegasus::Markdown.expects(:sync_in).in_sequence(exec_seq)
+      I18n::Resources::Pegasus::HourOfCode.expects(:sync_in).in_sequence(execution_sequence)
+      I18n::Resources::Pegasus::Markdown.expects(:sync_in).in_sequence(execution_sequence)
 
-    # Copying Pegasus source file
-    FileUtils.expects(:mkdir_p).with(CDO.dir('i18n/locales/source/pegasus')).in_sequence(exec_seq)
-    I18nScriptUtils.expects(:fix_yml_file).with(CDO.dir('pegasus/cache/i18n/en-US.yml')).in_sequence(exec_seq)
-    FileUtils.expects(:cp).with(CDO.dir('pegasus/cache/i18n/en-US.yml'), CDO.dir('i18n/locales/source/pegasus/mobile.yml')).in_sequence(exec_seq)
+      # Copying Pegasus source file
+      FileUtils.expects(:mkdir_p).with(CDO.dir('i18n/locales/source/pegasus')).in_sequence(execution_sequence)
+      I18nScriptUtils.expects(:fix_yml_file).with(CDO.dir('pegasus/cache/i18n/en-US.yml')).in_sequence(execution_sequence)
+      FileUtils.expects(:cp).with(CDO.dir('pegasus/cache/i18n/en-US.yml'), CDO.dir('i18n/locales/source/pegasus/mobile.yml')).in_sequence(execution_sequence)
 
-    I18n::Resources::Pegasus.sync_in
+      I18n::Resources::Pegasus.sync_in
+    end
+  end
+
+  describe '.sync_out' do
+    it 'sync-out Pegasus resources' do
+      execution_sequence = sequence('execution')
+
+      I18n::Resources::Pegasus::HourOfCode.expects(:sync_out).in_sequence(execution_sequence)
+
+      I18n::Resources::Pegasus.sync_out
+    end
   end
 end

@@ -17,8 +17,8 @@ class I18n::Resources::Pegasus::MarkdownTest < Minitest::Test
 
       I18n::Resources::Pegasus::Markdown::Documents.new.helpers.expects(:parse_yaml_header).with(expected_i18n_source_path).returns(%w[expected_header expected_content expected_line]).in_sequence(exec_seq)
 
-      I18nScriptUtils.expects(:sanitize_header!).with('expected_header').in_sequence(exec_seq)
-      I18nScriptUtils.expects(:write_markdown_with_header).with('expected_content', 'expected_header', expected_i18n_source_path).in_sequence(exec_seq)
+      I18nScriptUtils.expects(:sanitize_markdown_header).with('expected_header').returns('sanitized_header').in_sequence(exec_seq)
+      I18nScriptUtils.expects(:write_markdown_with_header).with('expected_content', 'sanitized_header', expected_i18n_source_path).in_sequence(exec_seq)
     end
 
     I18n::Resources::Pegasus::Markdown.sync_in
