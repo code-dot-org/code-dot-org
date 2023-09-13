@@ -3159,13 +3159,22 @@
           "courseD_artist_nestedLoops4_c": "За допомогою вкладеного циклу намалюй кола 4 рази.",
           "courseD_artist_nestedLoops4_d": "Для правильного виконання цього завдання тобі потрібно рухатися **до** повороту, інакше твої кола змістяться на крихітну відстань!"
         },
+        "courseD_artist_nestedLoops52022": {
+          "courseD_artist_nestedLoops5_a": "Щоб зробити це легко:\n\n- повтори 4 рази\n    - зроби коло\n    - зроби стрибок вперед на 50 пікселів\n    - поверни праворуч на 90 градусів"
+        },
         "courseD_artist_nestedLoops5_2021": {
           "courseD_artist_nestedLoops5_a": "Зробити це легко:\n\n-   повтори 4 рази\n    -   зроби коло\n    -   зроби стрибок вперед на 50 пікселів\n    -   поверни праворуч на 90 градусів",
           "courseD_artist_nestedLoops5_b": "Для створення кола потрібно встановити цикл повторити, який буде повторюватися 360 разів. Всередині циклу рухайся вперед на 1 піксель та повертай на 1 градус."
         },
+        "courseD_artist_nestedLoops72022": {
+          "courseD_artist_nestedLoops7_b": "Використовуй вкладений цикл, де внутрішній цикл є кодом для створення квадрата.\n\n- повторити 6 разів\n    - зробити квадрат\n    - перестрибнути вперед на **50 пікселів**\n    - повернути на **60 градусів**"
+        },
         "courseD_artist_nestedLoops7_2021": {
           "courseD_artist_nestedLoops7_a": "Використовуй вкладені цикли. Спочатку намалюй квадрат за допомогою циклу. Що зробить зовнішній цикл, якщо внутрішній намалює квадрат?",
           "courseD_artist_nestedLoops7_b": "Використовуй вкладений цикл, де внутрішній цикл є кодом для будь-якого квадрата.\n\n-   повторити 6 разів\n    -   зробити квадрат\n    -   перестрибнути вперед на **50 пікселів**\n    -   повернути на **60 градусів**"
+        },
+        "courseD_artist_nestedLoops82022": {
+          "courseD_artist_nestedLoops8_c": "Використовуй вкладений цикл:\n\n- Повторити 8 разів\n    - намалюй шестикутник\n    - стрибай вперед на 50 пікселів\n    - поверни праворуч на 45 градусів"
         },
         "courseD_artist_nestedLoops8_2021": {
           "courseD_artist_nestedLoops8_a": "Для того, щоб на малюнку було 8 шестикутників, потрібно повернути кожен з них на **45 градусів**. Чому? Тому що 360 градусів (повний оберт навколо), поділені на 8 (кількість шестикутників), дорівнює 45 градусів.",
@@ -3176,7 +3185,8 @@
           "courseD_artist_nestedLoops9_b": "Додайте другий набір вкладеного циклу до кінця першого набору, але на цей раз використовуйте трикутники."
         },
         "courseD_artist_nestedLoops92022": {
-          "courseD_artist_nestedLoops9_b": "Додайте другий набір вкладеного циклу до кінця першого набору, але на цей раз використовуйте трикутники."
+          "courseD_artist_nestedLoops9_b": "Додайте другий набір вкладеного циклу до кінця першого набору, але на цей раз використовуйте трикутники.",
+          "courseD_artist_nestedLoops9_c": "Використовуй два вкладені цикли:\n- Повтори 8 разів\n    - намалюй квадрат\n    - стрибай вперед на 50 пікселів\n    - поверни праворуч на 45 градусів\n- Повтори 8 разів\n    - намалюй трикутник\n    - стрибай вперед на 50 пікселів \n    - поверни праворуч на 45 градусів"
         },
         "courseD_artist_nestedLoops9_2018": {
           "courseD_artist_nestedLoops9_b": "Додайте другий набір вкладеного циклу до кінця першого набору, але на цей раз використовуйте трикутники."
@@ -4647,6 +4657,10 @@
         },
         "courseF_text_concat": {
           "prompt_example": "<xml>\n  <block type=\"when_run\" deletable=\"false\">\n    <next>\n      <block type=\"gamelab_setPrompt\">\n        <value name=\"QUESTION\">\n          <block type=\"text\">\n            <title name=\"TEXT\">What is your name?</title>\n          </block>\n        </value>\n        <value name=\"VAR\">\n          <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n            <title name=\"VAR\">name</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n  <block type=\"gamelab_whenPromptAnswered\">\n    <value name=\"VAR\">\n      <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n        <title name=\"VAR\">name</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_printText\">\n        <value name=\"TEXT\">\n          <block type=\"gamelab_textJoin\">\n            <title name=\"TEXT1\">Hello, </title>\n            <value name=\"TEXT2\">\n              <block type=\"gamelab_textVariableJoin\">\n                <title name=\"VAR\">name</title>\n                <value name=\"TEXT2\">\n                  <block type=\"gamelab_textJoin\">\n                    <title name=\"TEXT1\">!</title>\n                  </block>\n                </value>\n              </block>\n            </value>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "courseF_variables2_set_-2022-2": {
+          "say_variable_hint": "Можна змусити спрайт говорити значення змінної, наприклад, таким чином:\n\n<xml><block type=\"gamelab_spriteSayTime\">\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <field name=\"ANIMATION\">\"purple bunny\"</field>\n      </block>\n    </value>\n    <value name=\"TEXT1\">\n      <block type=\"variables_get\">\n        <field name=\"VAR\">count</field>\n      </block>\n    </value>\n    <value name=\"NUM\">\n      <block type=\"math_number\">\n        <field name=\"NUM\">4</field>\n      </block>\n    </value>\n  </block></xml>",
+          "set_block_hint": "Можна надати значення змінній таким чином:\n\n<xml>\n<block type=\"variables_set\">\n    <title name=\"VAR\">counter</title>\n    <value name=\"VALUE\">\n      <block type=\"math_number\">\n        <title name=\"NUM\">3</title>\n      </block>\n    </value>\n  </block>\n  </xml>"
         },
         "courseF_variables_card_finish": {
           "card_idea1": "Ти можеш додати другу (третю або четверту) підказку, підключивши новий блок підказок з іншою змінною до першої події `коли отримано відповідь`.\n\n<xml><block type=\"gamelab_whenPromptAnswered\">\n    <value name=\"VAR\">\n      <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n        <title name=\"VAR\">ім'я</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setPrompt\">\n        <value name=\"QUESTION\">\n          <block type=\"text\" can_disconnect_from_parent=\"false\">\n            <title name=\"TEXT\">що б тобі хотілося отримати на день народження?</title>\n          </block>\n        </value>\n        <value name=\"VAR\">\n          <block type=\"variables_get\" can_disconnect_from_parent=\"false\">\n            <title name=\"VAR\">подарунок</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>",

@@ -51,6 +51,8 @@ import {UNKNOWN_BLOCK} from './addons/unknownBlock';
 import {registerAllContextMenuItems} from './addons/contextMenu';
 import BlockSvgUnused, {onBlockClickDragDelete} from './addons/blockSvgUnused';
 import {ToolboxType, Themes, Renderers} from './constants';
+import {flyoutCategory as functionsFlyoutCategory} from './customBlocks/googleBlockly/proceduresBlocks';
+import {flyoutCategory as behaviorsFlyoutCategory} from './customBlocks/googleBlockly/behaviorBlocks';
 import CdoBlockSerializer from './addons/cdoBlockSerializer.js';
 import customBlocks from './customBlocks/googleBlockly/index.js';
 import CdoFieldImage from './addons/cdoFieldImage';
@@ -233,7 +235,6 @@ function initializeBlocklyWrapper(blocklyInstance) {
   blocklyWrapper.wrapReadOnlyProperty('svgResize');
   blocklyWrapper.wrapReadOnlyProperty('tutorialExplorer_locale');
   blocklyWrapper.wrapReadOnlyProperty('useContractEditor');
-  blocklyWrapper.wrapReadOnlyProperty('useModalFunctionEditor');
   blocklyWrapper.wrapReadOnlyProperty('utils');
   blocklyWrapper.wrapReadOnlyProperty('Toolbox');
   blocklyWrapper.wrapReadOnlyProperty('Touch');
@@ -444,6 +445,17 @@ function initializeBlocklyWrapper(blocklyInstance) {
     return this.setOutput(isOutput, check);
   };
 
+  const originalSetOutput = blocklyWrapper.Block.prototype.setOutput;
+  // Replaces the original setOutput method with a custom version that will handle the case when "None" is passed appropriately
+  // See: https://github.com/code-dot-org/code-dot-org/blob/9d63cbcbfd84b8179ae2519adbb5869cbc319643/apps/src/blocklyAddons/cdoConstants.js#L9
+  blocklyWrapper.Block.prototype.setOutput = function (isOutput, check) {
+    if (check === 'None') {
+      return originalSetOutput.call(this, isOutput, null);
+    } else {
+      return originalSetOutput.call(this, isOutput, check);
+    }
+  };
+
   // Block fields are referred to as titles in CDO Blockly.
   blocklyWrapper.Block.prototype.setTitleValue = function (newValue, name) {
     return this.setFieldValue(newValue, name);
@@ -645,6 +657,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
       container.style.height = `calc(100% - ${styleConstants['workspace-headers-height']}px)`;
     }
     blocklyWrapper.isStartMode = !!opt_options.editBlocks;
+    blocklyWrapper.toolboxBlocks = options.toolbox;
     const workspace = blocklyWrapper.blockly_.inject(container, options);
 
     if (options.noFunctionBlockFrame) {
@@ -670,9 +683,21 @@ function initializeBlocklyWrapper(blocklyInstance) {
 
     blocklyWrapper.setMainWorkspace(workspace);
 
+    // Same flyout callbacks are used for both main workspace categories
+    // and categories when modal function editor is enabled.
+    workspace.registerToolboxCategoryCallback(
+      'PROCEDURE',
+      functionsFlyoutCategory
+    );
+    workspace.registerToolboxCategoryCallback(
+      'Behavior',
+      behaviorsFlyoutCategory
+    );
+
     // Hidden workspace where we can put function definitions.
     const hiddenDefinitionWorkspace = new Blockly.Workspace();
     blocklyWrapper.setHiddenDefinitionWorkspace(hiddenDefinitionWorkspace);
+    blocklyWrapper.useModalFunctionEditor = options.useModalFunctionEditor;
 
     if (
       options.useModalFunctionEditor &&

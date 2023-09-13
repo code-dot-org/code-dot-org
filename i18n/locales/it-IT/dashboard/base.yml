@@ -362,9 +362,9 @@ it:
       web_lab_documentation: "Documentazione Sviluppo Web"
       project_beats_documentation: "Documentazione Project Beats"
       educate_overview: "Panoramica dei corsi"
-      educate_elementary: "Scuola elementare"
-      educate_middle: "Scuola media"
-      educate_high: "Scuola superiore"
+      educate_elementary: "Scuola primaria"
+      educate_middle: "Scuola secondaria di primo grado"
+      educate_high: "Scuola secondaria di secondo grado"
       educate_hoc: "L'Ora del Codice"
       educate_partner: "Collabora con noi"
       educate_beyond: "Dopo Code.org"
@@ -1241,8 +1241,8 @@ it:
       hello_world: 'Ciao mondo'
       popular_media: 'Media popolari'
       sports: 'Sport'
-      express: 'Esprimi'
-      csf: 'Corsi base'
+      express: 'Corsi rapidi'
+      csf: 'Fondamenti di informatica'
       csc: 'Informatica interdisciplinare'
       year_long: 'Per tutto l''anno'
       csa_labs: 'Laboratori CSA'

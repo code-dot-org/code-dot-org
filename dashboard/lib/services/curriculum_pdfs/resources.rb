@@ -39,7 +39,7 @@ module Services
 
         # Generate a PDF containing a rollup of all Resources in the given
         # Unit, grouped by Lesson
-        def generate_script_resources_pdf(script, directory="/tmp/")
+        def generate_script_resources_pdf(script, directory = "/tmp/")
           ChatClient.log("Generating script resources PDF for #{script.name.inspect}")
           pdfs_dir = Dir.mktmpdir(__method__.to_s)
           pdfs = []
@@ -104,16 +104,14 @@ module Services
         # Check s3 to see if we've already generated a resource rollup PDF for
         # the given script
         def script_resources_pdf_exists_for?(script)
-          AWS::S3.cached_exists_in_bucket?(
-            S3_BUCKET,
-            get_script_resources_pathname(script).to_s
-          )
+          pathname = get_script_resources_pathname(script).to_s
+          return pdf_exists_at?(pathname)
         end
 
         # Generates a title page for the given lesson; this is used in the
         # final PDF rollup to group the resources by the lesson in which they
         # appear.
-        def generate_lesson_resources_title_page(lesson, directory="/tmp/")
+        def generate_lesson_resources_title_page(lesson, directory = "/tmp/")
           @lesson_resources_title_page_template ||= File.read(
             File.join(File.dirname(__FILE__), 'lesson_resources_title_page.html.haml')
           )
@@ -155,7 +153,7 @@ module Services
 
         # Given a Resource object, persist a PDF of that Resource (with a name
         # based on the key of that Resource) to the given directory.
-        def fetch_resource_pdf(resource, directory="/tmp/")
+        def fetch_resource_pdf(resource, directory = "/tmp/")
           filename = ActiveStorage::Filename.new("resource.#{resource.key.parameterize}.pdf").to_s
           path = File.join(directory, filename)
           return path if File.exist?(path)

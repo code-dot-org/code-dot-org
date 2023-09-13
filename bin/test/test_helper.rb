@@ -1,6 +1,8 @@
 require_relative '../../shared/test/test_helper'
 
-ENV['RACK_ENV'] ||= 'test'
+require 'fileutils'
+require 'json'
+require 'yaml'
 
 # Set up JUnit output for Circle
 reporters = [Minitest::Reporters::SpecReporter.new]

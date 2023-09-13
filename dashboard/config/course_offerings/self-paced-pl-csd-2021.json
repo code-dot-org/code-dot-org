@@ -1,9 +1,9 @@
 {
   "key": "self-paced-pl-csd-2021",
-  "display_name": "Teaching CS Discoveries",
+  "display_name": "Teaching CS Discoveries 22-23",
   "category": "pl_self_paced",
   "is_featured": false,
-  "assignable": true,
+  "assignable": false,
   "curriculum_type": null,
   "marketing_initiative": null,
   "grade_levels": null,
@@ -16,5 +16,6 @@
   "professional_learning_program": null,
   "video": null,
   "published_date": null,
-  "self_paced_pl_course_offering_id": null
+  "self_paced_pl_course_offering_id": null,
+  "self_paced_pl_course_offering_key": null
 }

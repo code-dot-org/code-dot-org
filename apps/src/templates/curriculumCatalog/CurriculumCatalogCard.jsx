@@ -52,6 +52,7 @@ const CurriculumCatalogCard = ({
   isExpanded,
   onQuickViewClick,
   isInUS,
+  availableResources,
   ...props
 }) => (
   <CustomizableCurriculumCatalogCard
@@ -92,6 +93,7 @@ const CurriculumCatalogCard = ({
     isExpanded={isExpanded}
     onQuickViewClick={onQuickViewClick}
     isInUS={isInUS}
+    availableResources={availableResources}
     {...props}
   />
 );
@@ -130,6 +132,7 @@ CurriculumCatalogCard.propTypes = {
   isExpanded: PropTypes.bool,
   onQuickViewClick: PropTypes.func,
   isInUS: PropTypes.bool,
+  availableResources: PropTypes.object,
 };
 
 const CustomizableCurriculumCatalogCard = ({
@@ -164,11 +167,12 @@ const CustomizableCurriculumCatalogCard = ({
   isExpanded,
   onQuickViewClick,
   isInUS,
+  availableResources,
   ...props
 }) => {
   const [isAssignDialogOpen, setIsAssignDialogOpen] = useState(false);
 
-  const handleClickAssign = () => {
+  const handleClickAssign = cardType => {
     setIsAssignDialogOpen(true);
     analyticsReporter.sendEvent(
       EVENTS.CURRICULUM_CATALOG_ASSIGN_CLICKED_EVENT,
@@ -176,6 +180,7 @@ const CustomizableCurriculumCatalogCard = ({
         curriculum_offering: courseKey,
         has_sections: sectionsForDropdown.length > 0,
         is_signed_in: !isSignedOut,
+        card_type: cardType,
       }
     );
   };
@@ -283,7 +288,7 @@ const CustomizableCurriculumCatalogCard = ({
               <Button
                 color={Button.ButtonColor.brandSecondaryDefault}
                 type="button"
-                onClick={handleClickAssign}
+                onClick={() => handleClickAssign('top-card')}
                 aria-label={assignButtonDescription}
                 text={assignButtonText}
               />
@@ -311,6 +316,7 @@ const CustomizableCurriculumCatalogCard = ({
           isInUS={isInUS}
           imageSrc={imageSrc}
           imageAltText={imageAltText}
+          availableResources={availableResources}
         />
       )}
     </div>
@@ -355,6 +361,7 @@ CustomizableCurriculumCatalogCard.propTypes = {
   isExpanded: PropTypes.bool,
   onQuickViewClick: PropTypes.func,
   isInUS: PropTypes.bool,
+  availableResources: PropTypes.object,
 };
 
 export default connect(

@@ -11,7 +11,10 @@ import {
 import {TextLink} from '@dsco_/link';
 import Button from '@cdo/apps/templates/Button';
 import i18n from '@cdo/locale';
-import {translatedCourseOfferingDeviceTypes} from '../teacherDashboard/CourseOfferingHelpers';
+import {
+  translatedCourseOfferingDeviceTypes,
+  translatedAvailableResources,
+} from '../teacherDashboard/CourseOfferingHelpers';
 
 const ExpandedCurriculumCatalogCard = ({
   courseDisplayName,
@@ -31,6 +34,7 @@ const ExpandedCurriculumCatalogCard = ({
   isInUS,
   imageSrc,
   imageAltText,
+  availableResources,
 }) => {
   const iconData = {
     ideal: {
@@ -48,6 +52,20 @@ const ExpandedCurriculumCatalogCard = ({
   };
 
   const devices = JSON.parse(deviceCompatibility);
+
+  const resoucesOrder = [
+    'Lesson Plan',
+    'Slide Deck',
+    'Activity Guide',
+    'Answer Key',
+    'Rubric',
+  ];
+
+  let availableResourceCounter = 0;
+
+  const displayDivider = () => {
+    return ++availableResourceCounter < Object.keys(availableResources).length;
+  };
 
   return (
     <div>
@@ -93,7 +111,7 @@ const ExpandedCurriculumCatalogCard = ({
                           height="100%"
                           style={{border: 'none'}}
                           src={video}
-                          title=""
+                          title="Youtube embed"
                           allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                           allowFullScreen
                         />
@@ -111,19 +129,27 @@ const ExpandedCurriculumCatalogCard = ({
                 </div>
                 <div className={style.linksContainer}>
                   <div className={style.resourcesContainer}>
-                    <Heading4 visualAppearance="heading-xs">
-                      {i18n.availableResources()}
-                    </Heading4>
-                    <hr className={style.thickDivider} />
-                    <BodyTwoText>{i18n.lessonPlans()} </BodyTwoText>
-                    <hr className={style.horizontalDivider} />
-                    <BodyTwoText>{i18n.slideDecks()} </BodyTwoText>
-                    <hr className={style.horizontalDivider} />
-                    <BodyTwoText>{i18n.activityGuides()} </BodyTwoText>
-                    <hr className={style.horizontalDivider} />
-                    <BodyTwoText>{i18n.answerKeysExemplars()} </BodyTwoText>
-                    <hr className={style.horizontalDivider} />
-                    <BodyTwoText>{i18n.projectRubrics()} </BodyTwoText>
+                    {availableResources && (
+                      <div>
+                        <Heading4 visualAppearance="heading-xs">
+                          {i18n.availableResources()}
+                        </Heading4>
+                        <hr className={style.thickDivider} />
+                        {resoucesOrder.map(
+                          resource =>
+                            availableResources[resource] && (
+                              <div key={resource}>
+                                <BodyTwoText>
+                                  {translatedAvailableResources[resource]}{' '}
+                                </BodyTwoText>
+                                {displayDivider() && (
+                                  <hr className={style.horizontalDivider} />
+                                )}
+                              </div>
+                            )
+                        )}
+                      </div>
+                    )}
                   </div>
                   {isInUS &&
                     (professionalLearningProgram ||
@@ -168,7 +194,7 @@ const ExpandedCurriculumCatalogCard = ({
               <hr className={style.horizontalDivider} />
               <div className={style.compatibilityContainer}>
                 {Object.keys(devices).map(device => (
-                  <div className={style.iconWithDescription}>
+                  <div key={device} className={style.iconWithDescription}>
                     <FontAwesome
                       icon={iconData[devices[device]].icon}
                       className={`fa-solid ${iconData[devices[device]].color}`}
@@ -200,7 +226,7 @@ const ExpandedCurriculumCatalogCard = ({
                 <Button
                   color={Button.ButtonColor.brandSecondaryDefault}
                   type="button"
-                  onClick={assignButtonOnClick}
+                  onClick={() => assignButtonOnClick('expanded-card')}
                   aria-label={assignButtonDescription}
                   text={i18n.assignToClassSections()}
                   style={{flex: 1}}
@@ -213,6 +239,7 @@ const ExpandedCurriculumCatalogCard = ({
                   onClick={onClose}
                   icon="xmark"
                   iconClassName="fa-solid"
+                  aria-label="Close Button"
                 />
               </div>
               <div className={style.relatedContainer} style={{display: 'none'}}>
@@ -235,10 +262,10 @@ ExpandedCurriculumCatalogCard.propTypes = {
   subjectsAndTopics: PropTypes.arrayOf(PropTypes.string).isRequired,
   deviceCompatibility: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
-  professionalLearningProgram: PropTypes.string.isRequired,
-  video: PropTypes.string.isRequired,
+  professionalLearningProgram: PropTypes.string,
+  video: PropTypes.string,
   publishedDate: PropTypes.string.isRequired,
-  selfPacedPlCourseOfferingPath: PropTypes.string.isRequired,
+  selfPacedPlCourseOfferingPath: PropTypes.string,
   pathToCourse: PropTypes.string,
   assignButtonOnClick: PropTypes.func,
   assignButtonDescription: PropTypes.string,
@@ -246,5 +273,6 @@ ExpandedCurriculumCatalogCard.propTypes = {
   isInUS: PropTypes.bool,
   imageSrc: PropTypes.string,
   imageAltText: PropTypes.string,
+  availableResources: PropTypes.object,
 };
 export default ExpandedCurriculumCatalogCard;

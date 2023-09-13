@@ -15,7 +15,10 @@
 #  context          :text(65535)
 #  created_at       :datetime         not null
 #  updated_at       :datetime         not null
+#  submitted_at     :datetime
 #
 class LearningGoalEvaluation < ApplicationRecord
   belongs_to :learning_goal
+  belongs_to :user
+  belongs_to :teacher, class_name: 'User'
 end

@@ -51,6 +51,14 @@ const CurriculumCatalog = ({
   };
 
   const handleExpandedCardChange = key => {
+    if (expandedCardKey !== key) {
+      analyticsReporter.sendEvent(
+        EVENTS.CURRICULUM_CATALOG_QUICK_VIEW_CLICKED_EVENT,
+        {
+          curriculum_offering: key,
+        }
+      );
+    }
     setExpandedCardKey(expandedCardKey === key ? null : key);
   };
 
@@ -89,6 +97,7 @@ const CurriculumCatalog = ({
                 video,
                 published_date,
                 self_paced_pl_course_offering_path,
+                available_resources,
               }) => (
                 <CurriculumCatalogCard
                   key={key}
@@ -123,6 +132,7 @@ const CurriculumCatalog = ({
                   isExpanded={expandedCardKey === key}
                   onQuickViewClick={() => handleExpandedCardChange(key)}
                   isInUS={isInUS}
+                  availableResources={available_resources}
                   {...props}
                 />
               )

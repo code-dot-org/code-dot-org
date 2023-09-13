@@ -121,7 +121,6 @@ $container-width: 960px;
 
 .iconWithDescription {
   display: flex;
-  align-items: center;
   column-gap: 8px;
   white-space: nowrap;
 
@@ -134,16 +133,18 @@ $container-width: 960px;
   i {
     font-size: 0.875em;
     color: $neutral_dark80;
+    align-self: flex-start;
+    padding-top: 4px;
   }
 }
 
 .infoContainer {
   display: flex;
-  align-items: center;
   column-gap: 20px;
 }
 
 .linksContainer {
+  width: 200px;
   hr {
     margin: 8px 0;
   }
@@ -186,7 +187,6 @@ $container-width: 960px;
 }
 
 .resourcesContainer {
-  width: 200px;
   margin-bottom: 40px;
 
   h4 {

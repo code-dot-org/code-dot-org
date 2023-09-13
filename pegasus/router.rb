@@ -541,14 +541,14 @@ class Documents < Sinatra::Base
       nil
     end
 
-    def render_template(path, locals={})
+    def render_template(path, locals = {})
       render_(File.read(path), path, 0, locals)
     rescue => exception
       Honeybadger.context({path: path, e: exception})
       raise "Error rendering #{path}: #{exception}"
     end
 
-    def render_(body, path=nil, line=0, locals={})
+    def render_(body, path = nil, line = 0, locals = {})
       extensions = MultipleExtnameFileUtils.all_extnames(path)
 
       # Now, apply the processing operations implied by each extension to the
@@ -632,7 +632,7 @@ class Documents < Sinatra::Base
       return path
     end
 
-    def view(uri, locals={})
+    def view(uri, locals = {})
       path = resolve_view_template(uri)
       render_template(path, locals)
     end

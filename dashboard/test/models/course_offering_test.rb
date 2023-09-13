@@ -867,7 +867,7 @@ class CourseOfferingTest < ActiveSupport::TestCase
     assert course7.high_school_level?
   end
 
-  def course_offering_with_versions(num_versions, content_root_trait=:with_unit_group)
+  def course_offering_with_versions(num_versions, content_root_trait = :with_unit_group)
     create :course_offering do |offering|
       create_list :course_version, num_versions, content_root_trait, course_offering: offering
     end
