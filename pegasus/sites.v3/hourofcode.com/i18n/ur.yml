@@ -5,7 +5,7 @@ ur:
   language: انگلش
   front_title: تاریخ میں ہونے والی تدریس کی سب سے بڑی تقریب میں شامل ہوجائیے، %{campaign_date}
   coming_soon: جلد آ رہا ہے
-  campaign_date_start_short: دسمبر 5
+  campaign_date_start_short: 5 دسمبر
   campaign_date_start_long: دسمبر 5
   campaign_date_short: دسمبر 5 - 11
   campaign_date_full: 5 تا 11 دسمبر
@@ -16,25 +16,25 @@ ur:
   nonus_campaign_date_short: 1 اکتوبر - 18 دسمبر
   nonus_campaign_date_full: 1 اکتوبر - 18 دسمبر
   nonus_campaign_date_year: '2022'
-  nonus_campaign_date_full_year: 1 اکتوبر2022 - 18 دسمبر 2022
+  nonus_campaign_date_full_year: 1 اکتوبر، 2022 - 18 دسمبر، 2022
   latam_campaign_date_start_short: اکتوبر 1
   latam_campaign_date_start_long: اکتوبر 1
   latam_campaign_date_short: 1 اکتوبر - 18 دسمبر
   latam_campaign_date_full: 1 اکتوبر - 18 دسمبر
   latam_campaign_date_year: '2022'
-  latam_campaign_date_full_year: 1 اکتوبر2022 - 18 دسمبر 2022
+  latam_campaign_date_full_year: 1 اکتوبر، 2022 - 18 دسمبر، 2022
   europe_campaign_date_start_short: اکتوبر 1
   europe_campaign_date_start_long: اکتوبر 1
   europe_campaign_date_short: 1 اکتوبر - 18 دسمبر
   europe_campaign_date_full: 1 اکتوبر - 18 دسمبر
   europe_campaign_date_year: '2022'
-  europe_campaign_date_full_year: 1 اکتوبر2022 - 18 دسمبر 2022
+  europe_campaign_date_full_year: 1 اکتوبر، 2022 - 18 دسمبر، 2022
   africa_campaign_date_start_short: اکتوبر 1
   africa_campaign_date_start_long: اکتوبر 1
   africa_campaign_date_short: 1 اکتوبر - 18 دسمبر
   africa_campaign_date_full: 1 اکتوبر - 18 دسمبر
   africa_campaign_date_year: '2022'
-  africa_campaign_date_full_year: 1 اکتوبر2022 - 18 دسمبر 2022
+  africa_campaign_date_full_year: 1 اکتوبر، 2022 - 18 دسمبر، 2022
   hoc2022_header: کھوجیں، کھیلیں، تخلیق کریں!
   social_hoc2022_explore_play_create: کمپیوٹر سائنس کا استعمال کرتے ہوئے کھوجیں، کھیلیں،
     اور تخلیق کریں۔
@@ -184,6 +184,15 @@ ur:
   grade_level_label_elementary: ایلیمنٹری اسکول
   grade_level_label_middle: مڈل اسکول
   grade_level_label_high: ہائی اسکول
+  curricula_title_elementary: ایلیمنٹری اسکول کا نصاب
+  curricula_desc_elementary: مزہ، مفت کورس اور سرگرمیوں کو براؤز کریں جو آپ کو اپنے
+    ابتدائی اسکول کے طالب علموں کے ساتھ کمپیوٹر سائنس کی تلاش کے لئے مدعو کرتے ہیں.
+  curricula_title_middle: مڈل اسکول کا نصاب
+  curricula_desc_middle: ان مشغول پیشکشوں کو براؤز کریں جو آپ کو اور آپ کے مڈل اسکول
+    کے طلباء کو مل کر کمپیوٹر سائنس کی تلاش کرنے کے قابل بناتی ہیں۔
+  curricula_title_high: ہائی اسکول کا نصاب
+  curricula_desc_high: مجبور کورسز اور سرگرمیوں کو براؤز کریں جو آپ کو اور آپ کے ہائی
+    اسکول کے طالب علموں کو کمپیوٹر سائنس میں گہری کھودنے کے لئے مدعو کرتے ہیں.
   students_label: طلباء
   teachers_label: استاد
   teacher_label_csf: CS کی بنیادی تعلمیات کے استاد
@@ -210,6 +219,13 @@ ur:
   call_to_action_explore_choice_level: انتخاب کی سطح کی کوئی مثال دریافت کریں
   call_to_action_explore_collection: کلیکشن دریافت کریں
   call_to_action_explore_unplugged_lesson: ان پلگ شدہ اسباق دریافت کریں
+  call_to_action_explore_csf: CS بنیادی اصول دریافت کریں
+  call_to_action_explore_csd: CS دریافتوں کو دریافت کریں
+  call_to_action_explore_csp: CS اصولوں کو دریافت کریں
+  call_to_action_explore_csc: CS کنکشن دریافت کریں
+  call_to_action_explore_csa: AP® کمپیوٹر سائنس A دریافت کریں
+  call_to_action_explore_maker: نصاب ساز دریافت کریں
+  call_to_action_explore_hoc: گھنٹہ کوڈ ٹیوٹوریل دریافت کریں
   call_to_action_try_app_lab: ایپ لیب آزمائیں
   call_to_action_view_lesson_plan: سبق کی منصوبہ بندی دیکھیں
   call_to_action_self_paced_pl: خود رفتار پیشہ ورانہ سیکھنے شروع کریں
@@ -254,6 +270,7 @@ ur:
   call_to_action_notify_available: دستیاب ہونے پر مجھے مطلع کریں
   call_to_action_register_early_access: ابتدائی رسائی کے لئے رجسٹر کریں
   call_to_action_open_positions: کھلی پوزیشنز دیکھیں
+  call_to_action_get_guide: گائیڈ حاصل کریں
   aria_label_call_to_action_afe: ایمیزون مستقبل انجینئر کے بارے میں مزید جانیں
   aria_label_call_to_action_teaching_csf: تدریس کمپیوٹر سائنس کے بنیادی اصول پیشہ
     ورانہ سیکھنے کا پروگرام شروع کریں
@@ -362,6 +379,8 @@ ur:
   curriculum_name_csa: کمپیوٹر سائنس A
   curriculum_name_csc_02: CS کنیکشنز کا کوئی ماڈیول
   curriculum_name_ai: مصنوعی ذہانت اور مشین لرننگ
+  curriculum_name_artificial_intelligence: مصنوعی انٹیلی جنس (AI)
+  curriculum_name_maker: بنانے والا
   curriculum_name_maker_cp: آلات کے ساتھ اطلاقات بنانا (سرکٹ کھیل کے میدان)
   curriculum_name_maker_microbit: 'آلات کے ساتھ اطلاقات بنانا (مائیکرو: بٹ)'
   curriculum_name_creating_apps_with_devices: ڈیوائسز کے ساتھ ایپس کی تخلیق کاری
@@ -420,6 +439,12 @@ ur:
   curriculum_desc_creating_apps_with_devices: کمپیوٹنگ میں مادی ڈیوائسز کی اہمیت دریافت
     کریں۔ ایسے پروگرامز تیار کریں جو ہارڈ ویئر ان پٹس اور آؤٹ پٹس کو استعمال کرتے
     ہیں۔ مائیکرو:بٹ اور سرکٹ پلے گراؤںڈ، دونوں کے لیے اس یونٹ کا ایک ورژن موجود ہے۔
+  curriculum_desc_csa: وہ AP® کمپیوٹر سائنس A (AP® CSA) کے لئے اس مفت نصاب میں جاوا
+    پروگرامنگ زبان سیکھنے جبکہ سافٹ ویئر انجینئرنگ اور اعتراض پر مبنی ڈیزائن کرنے
+    کے لئے طالب علموں کو متعارف کرانے.
+  curriculum_desc_maker: میکر تعلیم STEM (سائنس، ٹیکنالوجی، انجینئرنگ، ریاضی) کو کلاس
+    روم میں ہاتھوں پر تجربے اور تعاون کو مدعو کرکے ایک قدم آگے لے جاتی ہے تاکہ مسئلہ
+    حل کرنے اور تنقیدی سوچ کو سکھانے میں مدد ملے.
   collection_hardware: ہارڈ ویئر پر توجہ مرکوز کریں
   collection_hardware_desc: طالب علموں کو مسائل کو حل کرنے کے لئے اعداد و شمار اور
     مادی آلات استعمال کرنے کا اختیار دیتا ہے.
@@ -461,6 +486,7 @@ ur:
   module_label_student_content_resources: مواد اور وسائل
   module_label_new: نیا
   module_label_coming_soon: جلد ہی آ رہا ہے
+  module_label_available_now: اب دستیاب
   module_label_video_series: ویڈیو سیریز
   module_label_self_paced: خود رفتار ماڈیول
   module_ages_5_10: 5-10
@@ -471,6 +497,8 @@ ur:
   module_grade_2_5: 2-5
   module_grade_3_5: 3-5
   module_grade_3_8: 3-8
+  module_grade_k_12: K-12
+  module_grade_3_12: 3-12
   module_grade_6_12: 6-12
   module_grade_6_10: 6-10
   module_grade_9_12: 9-12
@@ -568,6 +596,7 @@ ur:
   heading_java_lab: Java لیب
   heading_objects_first: اشیاء ہماری اولین ترجیح
   heading_these_lessons_will: 'یہ سبق کریں گے:'
+  heading_explore_curriculum_catalog: نصاب کیٹلاگ میں ہمارے تمام کورسز کو تلاش کریں
   professional_learning_section_desc: تدریس کی تیاری کے دوران ضروری معاونت حاصل کریں۔
     اساتذہ کو یہ بے حد پسند ہے، جن میں سے 90% سے زیادہ اسے بہترین پیشہ ورانہ ترقی
     گردانتے ہیں!
@@ -829,6 +858,11 @@ ur:
     دو نئے ویڈیوز کی خاصیت ہے. سنیں کہ یہ نئی ٹیکنالوجیز ماہرین سے براہ راست کس طرح
     کام کرتی ہیں: مائیرا مرتی، اوپن اے آئی کے سی ٹی او، اور رن وے ایم ایل کے سی ای
     او کرسٹبل ویلنزیلا.'
+  ai_pl_101_llm_slides_title: اساتذہ کے لئے بڑی زبان ماڈل کے اشارے
+  ai_pl_101_llm_slides_desc: ابتدائی طور پر اعلی درجے کی طرف سے، چیٹ جی پی کی طرح
+    ایل ایل ایم سے بہترین ممکنہ پیداوار حاصل کرنے کے لئے اوزار. ان لوگوں کے لئے سٹارٹر
+    اشارے شامل ہیں جو صرف ان کی انگلیوں کو ڈوبنے کے ساتھ ساتھ ان کی صلاحیت کو زیادہ
+    سے زیادہ کرنے کے لئے اعلی درجے کے اوزار بھی شامل ہیں.
   how_ai_works_hero_heading: AI کیسے کام کرتا ہے
   how_ai_works_hero_desc: اے آئی کی دنیا میں “کس طرح اے کام کرتا ہے،” ہماری ویڈیو
     سیریز اور سبق کے ساتھ ساتھ!
@@ -2091,6 +2125,11 @@ ur:
     کورسز، مقامی مواقع، یا دیگر کمپیوٹر سائنس نیوز کو ای میل کر سکتے ہیں؟
   signup_email_preference_privacy: "(ہماری رازداری کی پالیسی دیکھیں)"
   signup_email_preference_yes: ہاں
+  signup_email_preference_yes_elementary: جی ہاں - مجھے ابتدائی اسکول وسائل پر اپ
+    ڈیٹ بھیجیں
+  signup_email_preference_yes_middle: جی ہاں - مجھے مڈل اسکول وسائل پر اپ ڈیٹ بھیجیں
+  signup_email_preference_yes_high: جی ہاں - مجھے ہائی اسکول وسائل پر اپ ڈیٹ بھیجیں
+  signup_email_preference_yes_general: جی ہاں - مجھے عام اپ ڈیٹس بھیجیں
   signup_email_preference_no: نہيں
   signup_email_preference_error: ای میل کی ترجیح مطلوب ہے ۔
   signup_multiple_event_warning: رجسٹر ہونے پر ہم آپ کے اسکول کا نام اور شہر نقشہ
@@ -12839,12 +12878,12 @@ ur:
   tutorial_googlename _longdescription: ایک کا نام لینے اور کلام کے خطوط کوڈ کا استعمال
     کرتے ہوئے زندگی کے لئے لے آئے ۔ ایک عرفی نام، ایک پالتو جانور کا نام، جانور، کھیل،
     ایک جگہ یا ایک شوق کا انتخاب کریں ۔
-  tutorial_carnegiezillah_longdescription: Zillah City is thriving, and music is in
-    the air. Rumor has it, the famed Gargantua bot is online and sending the last
-    Toxibots to trash the city block by block…. Grab your cobot hoverboard and get
-    ready to groove, move, and finish off what you started! Players program their
-    cobot hoverbots to change lanes, avoid obstacles, and take out many Toxibots in
-    this rhythm-styled game.
+  tutorial_carnegiezillah_longdescription: زلہ شہر فروغ پزیر ہے اور موسیقی ہوا میں
+    ہے۔ افواہ یہ ہے، مشہور Gargantua بوٹ آن لائن ہے اور بلاک کی طرف سے شہر کے بلاک
+    کو ردی کی ٹوکری میں آخری Toxibots بھیج رہا ہے.…اپنے cobot hoverboard پکڑو اور
+    نالی، منتقل، اور آپ کو شروع کیا ختم کرنے کے لئے تیار ہو جاؤ! کھلاڑیوں کو لین تبدیل
+    رکاوٹوں سے بچنے، اور اس تال سٹائل کھیل میں بہت سے Toxibots باہر لے جانے کے لئے
+    ان کے cobot hoverbots پروگرام.
   tutorial_nasachspacejam_longdescription: واقعی پتھروں کہ ایک شمسی نظام بنائیں! اس
     خود ہدایت کی سرگرمی میں موسیقی، فلکیات، اور کوڈنگ کے بارے میں جانیں (کوئی کوڈنگ
     تجربہ کی ضرورت نہیں ہے). پروگرام سیارے موسیقی بنانے کے لئے، آپ کے اپنے موسیقی

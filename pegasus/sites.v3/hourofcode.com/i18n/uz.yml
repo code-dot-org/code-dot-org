@@ -192,6 +192,17 @@ uz:
   grade_level_label_elementary: Boshlang'ich Maktab
   grade_level_label_middle: O‘rta Maktab
   grade_level_label_high: Yuqori Sinflar
+  curricula_title_elementary: Boshlang'ich maktab o'quv dasturlari
+  curricula_desc_elementary: Boshlang'ich sinf o'quvchilari bilan informatika fanini
+    o'rganishga taklif qiladigan qiziqarli, bepul kurslar va mashg'ulotlarni ko'rib
+    chiqing.
+  curricula_title_middle: O'rta maktab o'quv dasturlari
+  curricula_desc_middle: Sizga va o'rta maktab o'quvchilariga informatika fanini birgalikda
+    o'rganishga imkon beradigan qiziqarli takliflarni ko'rib chiqing.
+  curricula_title_high: O'rta maktab o'quv dasturlari
+  curricula_desc_high: Sizni va o'rta maktab o'quvchilaringizni informatika fanini
+    chuqurroq o'rganishga taklif qiladigan qiziqarli kurslar va tadbirlarni ko'rib
+    chiqing.
   students_label: Oʻquvchilar
   teachers_label: O‘qituvchilar
   teacher_label_csf: KF Asoslari o'qituvchisi
@@ -220,6 +231,13 @@ uz:
   call_to_action_explore_collection: 'To''plamni o''rganib chqing '
   call_to_action_explore_unplugged_lesson: 'Kompyutersiz (Oflayn) darslarni o''rganib
     chiqing '
+  call_to_action_explore_csf: CS asoslarini o'rganing
+  call_to_action_explore_csd: CS kashfiyotlarini o'rganing
+  call_to_action_explore_csp: CS tamoyillarini o'rganing
+  call_to_action_explore_csc: CS ulanishlarini o'rganing
+  call_to_action_explore_csa: AP® kompyuter fanlari A ni o'rganing
+  call_to_action_explore_maker: Maker o'quv dasturlarini o'rganing
+  call_to_action_explore_hoc: Kod soatlari bo'yicha darsliklarni o'rganing
   call_to_action_try_app_lab: App Labbni sinab ko'ring
   call_to_action_view_lesson_plan: Dars rejasini ko‘zdan kechirib chiqing
   call_to_action_self_paced_pl: Mustaqil ravishda professional O'rganishni boshlang
@@ -269,6 +287,7 @@ uz:
   call_to_action_notify_available: Mavjud bo'lganda menga xabar bering
   call_to_action_register_early_access: Erta kirish uchun ro'yxatdan o'ting
   call_to_action_open_positions: Ochiq pozitsiyalarni ko'rish
+  call_to_action_get_guide: Qo'llanmani oling
   aria_label_call_to_action_afe: Amazon Future Engineer haqida ko'proq bilib oling
   aria_label_call_to_action_teaching_csf: Kompyuter fanlari asoslarini o'qitish professional
     ta'lim dasturini boshlang
@@ -382,6 +401,8 @@ uz:
   curriculum_name_csa: Kompyuter fanlari A
   curriculum_name_csc_02: Har qanday Kompyuter aloqalari modullari
   curriculum_name_ai: Sun’iy intellekt (AI) va mashinalar o‘rganishi
+  curriculum_name_artificial_intelligence: Sun'iy intellekt (AI)
+  curriculum_name_maker: Ishlab chiqaruvchi
   curriculum_name_maker_cp: 'Vositalar (Circuit Playground) yordamida ilovalarni yaratish '
   curriculum_name_maker_microbit: Vositalar (micro:bit) yordamida ilovalarni yaratish
   curriculum_name_creating_apps_with_devices: Qurilmalar orqali Ilovalarni Yaratish
@@ -443,6 +464,12 @@ uz:
     rolini o'rganing. Uskunalarga ma'lumot kiritish va chiqarishda foydalaniladigan
     dasturlarni ishlab chiqing. Ushbu bo'limning mikro:bit va Circuit Playground (Sxema
     o'yin maydonchasi) uchun versiyasi mavjud.
+  curriculum_desc_csa: Talabalarni AP® Computer Science A (AP® CSA) uchun ushbu bepul
+    o'quv dasturida Java dasturlash tilini o'rganayotganda dasturiy injiniring va
+    ob'ektga yo'naltirilgan dizayn bilan tanishtiring.
+  curriculum_desc_maker: Maker ta'limi STEM (fan, texnologiya, muhandislik, matematika)
+    ni muammoni hal qilish va tanqidiy fikrlashni o'rgatish uchun sinfga amaliy tajriba
+    va hamkorlikni taklif qilish orqali oldinga qadam qo'yadi.
   collection_hardware: Uskunaga diqqat qarating
   collection_hardware_desc: O'quvchilarni muammolarni yechishda uchun ma'lumotlar
     va jismoniy qurilmalardan foydalanish imkoniyatini beradi.
@@ -485,6 +512,7 @@ uz:
   module_label_student_content_resources: Mundarija va manbalar
   module_label_new: Yangi
   module_label_coming_soon: Tez orada
+  module_label_available_now: Hozir mavjud
   module_label_video_series: Video seriyasi
   module_label_self_paced: O'z-o'zidan ishlaydigan modul
   module_ages_5_10: 5-10
@@ -495,6 +523,8 @@ uz:
   module_grade_2_5: 2-5
   module_grade_3_5: 3-5
   module_grade_3_8: 3-8
+  module_grade_k_12: K-12
+  module_grade_3_12: 3-12
   module_grade_6_12: 6-12
   module_grade_6_10: 6-10
   module_grade_9_12: 9-12
@@ -592,6 +622,8 @@ uz:
   heading_java_lab: Java laboratoriyasi
   heading_objects_first: Avval ob'ektlar
   heading_these_lessons_will: 'Ushbu darslar:'
+  heading_explore_curriculum_catalog: O'quv dasturlari katalogidagi barcha kurslarimizni
+    o'rganing
   professional_learning_section_desc: O'qitishga tayyorgarlik ko'rayotganda kerakli
     yordamni oling. O'qituvchilar buni yaxshi ko'radilar, 90% dan ortig'i bu eng yaxshi
     kasbiy rivojlanish reytingiga ega!
@@ -865,6 +897,11 @@ uz:
     keltirib chiqaradigan yangi texnologiya haqida ko''proq bilib oling. Ushbu yangi
     texnologiyalar qanday ishlashini to''g''ridan-to''g''ri mutaxassislardan tinglang:
     Mira Murati, OpenAI CTO va RunwayML bosh direktori Kristobal Valenzuela.'
+  ai_pl_101_llm_slides_title: O'qituvchilar uchun katta til modeli taklif qiladi
+  ai_pl_101_llm_slides_desc: ChatGpt kabi LLM-lardan eng yaxshi natijalarni olish
+    uchun vositalar, boshlang'ichdan ilg'orgacha. Oyoq barmoqlarini botirganlar uchun
+    boshlang'ich ko'rsatmalarni, shuningdek, o'z potentsialini maksimal darajada oshirishni
+    istaganlar uchun ilg'or vositalarni o'z ichiga oladi.
   how_ai_works_hero_heading: AI qanday ishlaydi
   how_ai_works_hero_desc: "“AI qanday ishlaydi”, bizning video seriyamiz va unga qo'shilgan
     darslarimiz bilan sun'iy intellekt dunyosiga sho'ng'ing!"
@@ -2175,6 +2212,13 @@ uz:
     xabar yuborishimiz mumkinmi?
   signup_email_preference_privacy: "(Maxfiylik siyosatimizga qarang)"
   signup_email_preference_yes: Ha
+  signup_email_preference_yes_elementary: Ha - Menga boshlang'ich maktab manbalari
+    haqida yangiliklarni yuboring
+  signup_email_preference_yes_middle: Ha - O'rta maktab manbalari haqida menga yangilanishlarni
+    yuboring
+  signup_email_preference_yes_high: Ha - Menga o'rta maktab manbalari haqida yangiliklarni
+    yuboring
+  signup_email_preference_yes_general: Ha - Menga umumiy yangilanishlarni yuboring
   signup_email_preference_no: Yo‘q
   signup_email_preference_error: Elektron pochta orqali parametr kerak
   signup_multiple_event_warning: Siz ro‘yxatdan o‘tganingizda maktabingiz nomi va

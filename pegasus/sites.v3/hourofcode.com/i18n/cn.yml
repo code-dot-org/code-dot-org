@@ -126,6 +126,12 @@ cn:
   grade_level_label_elementary: 小学
   grade_level_label_middle: 初中
   grade_level_label_high: 高中
+  curricula_title_elementary: 小学课程
+  curricula_desc_elementary: 浏览有趣的免费课程和活动，邀请您与小学生一起探索计算机科学。
+  curricula_title_middle: 中学课程
+  curricula_desc_middle: 浏览引人入胜的课程，使您和您的中学生能够一起探索计算机科学。
+  curricula_title_high: 高中课程
+  curricula_desc_high: 浏览引人入胜的课程和活动，邀请您和您的高中生深入研究计算机科学。
   students_label: 学生
   teachers_label: 教师
   teacher_label_csf: 计算机科学基础教师
@@ -152,6 +158,13 @@ cn:
   call_to_action_explore_choice_level: 浏览示例选择级别
   call_to_action_explore_collection: 浏览系列
   call_to_action_explore_unplugged_lesson: 浏览线下课程
+  call_to_action_explore_csf: 探索 CS 基础知识
+  call_to_action_explore_csd: 探索 CS 发现
+  call_to_action_explore_csp: 探索 CS 原则
+  call_to_action_explore_csc: 探索 CS 连接
+  call_to_action_explore_csa: 探索 AP® 计算机科学 A
+  call_to_action_explore_maker: 浏览创客课程
+  call_to_action_explore_hoc: 探索编程一小时教程
   call_to_action_try_app_lab: 尝试应用实验室
   call_to_action_view_lesson_plan: 查看教学计划
   call_to_action_self_paced_pl: 开始自定进度的专业学习
@@ -196,6 +209,7 @@ cn:
   call_to_action_notify_available: 有货时通知我
   call_to_action_register_early_access: 注册抢先体验
   call_to_action_open_positions: 查看未平仓头寸
+  call_to_action_get_guide: 获取指南
   aria_label_call_to_action_afe: 了解有关亚马逊未来工程师的更多信息
   aria_label_call_to_action_teaching_csf: 启动 “计算机科学基础知识教学” 专业学习计划
   aria_label_call_to_action_teaching_csd: 启动 “计算机科学发现” 教学专业学习计划
@@ -270,6 +284,8 @@ cn:
   curriculum_name_csa: 计算机科学A
   curriculum_name_csc_02: 任何计算机科学联系模块
   curriculum_name_ai: "  AI 和机器学习"
+  curriculum_name_artificial_intelligence: 人工智能 (AI)
+  curriculum_name_maker: 制作者
   curriculum_name_maker_cp: 使用设备创建应用程序（电路游乐场）
   curriculum_name_maker_microbit: '使用设备创建应用程序 (micro: bit)'
   curriculum_name_creating_apps_with_devices: 使用设备创建应用程序
@@ -294,6 +310,9 @@ cn:
   curriculum_desc_design_process: 重点考虑计算的社会影响。通过设计挑战，学生可以同情他人的需求并开发解决方案。
   curriculum_desc_data_society: 强调数据在解决问题中的作用以及计算机在此过程中的帮助。涵盖表征系统和相关挑战。了解数据收集如何帮助解决问题。
   curriculum_desc_creating_apps_with_devices: 探索物理设备在计算中的作用。开发利用硬件输入和输出的程序。这个单元有一个针对micro:bit和电路游乐场的版本。
+  curriculum_desc_csa: 在这个 AP® Computer Science A (AP® CSA) 的免费课程中，向学生介绍软件工程和面向对象的设计，同时学习
+    Java 编程语言。
+  curriculum_desc_maker: 创客教育将STEM（科学、技术、工程、数学）更进一步，将动手体验和协作带入课堂，帮助教授问题解决和批判性思维。
   collection_hardware: 聚焦硬件
   collection_hardware_desc: 使学生能够使用数据和物理设备来解决问题。
   collection_design_purpose: 专注于有目的的设计
@@ -326,6 +345,7 @@ cn:
   module_label_student_content_resources: 内容和资源
   module_label_new: 全新
   module_label_coming_soon: 即将上线
+  module_label_available_now: 现已上市
   module_label_video_series: 视频系列
   module_label_self_paced: 自定进度模块
   module_ages_5_10: 5-10
@@ -336,6 +356,8 @@ cn:
   module_grade_2_5: 2-5
   module_grade_3_5: 3-5
   module_grade_3_8: 3-8
+  module_grade_k_12: K-12
+  module_grade_3_12: 3-12
   module_grade_6_12: 6-12
   module_grade_6_10: 6-10
   module_grade_9_12: 9-12
@@ -418,6 +440,7 @@ cn:
   heading_java_lab: Java实验室
   heading_objects_first: 对象优先
   heading_these_lessons_will: 这些课程将：
+  heading_explore_curriculum_catalog: 在课程目录中浏览我们的所有课程
   professional_learning_section_desc: 在准备教学时获得所需的支持。老师们喜欢它，超过90％的老师将其评为有史以来最好的职业发展！
   professional_learning_section_desc_short: 在准备教学时获得所需的支持。
   professional_learning_section_desc_self_paced: 及时的支持，让你可以根据自己的日程安排自信地准备教学。
@@ -566,6 +589,8 @@ cn:
   ai_pl_101_video_title_5: 将 AI 带入课堂
   ai_pl_101_video_desc_5: 本课程侧重于人工智能教学、评估和利用 AI 教育工具，以及利用 AI 进行学生评估。它融合了理论、实践示例和资源，旨在使教育工作者能够驾驭人工智能领域并增强学生的学习体验。
   ai_pl_101_video_desc_6: 详细了解推动人工智能重大变革的新技术，包括两个关于大型语言模型（如ChatGPT）和生成式人工智能的新视频。直接从专家那里听听这些新技术的工作原理：OpenAI首席技术官米拉·穆拉蒂和RunwayML首席执行官克里斯托瓦尔·瓦伦苏埃拉。
+  ai_pl_101_llm_slides_title: 面向教育工作者的大型语言模型提示
+  ai_pl_101_llm_slides_desc: 从初学者到高级，可以从 ChatGPT 等 LLM 那里获得最佳输出的工具。包括为那些只想尽情发挥潜力的人提供的入门提示，以及为那些希望最大限度地发挥潜力的人提供的高级工具。
   how_ai_works_hero_heading: 人工智能的工作原理
   how_ai_works_hero_desc: 通过我们的视频系列和随附的课程 “人工智能如何运作”，深入了解人工智能的世界！
   how_ai_works_intro_desc: 这一系列短视频和随附的课堂课程将向您和您的学生介绍人工智能的工作原理及其重要性。您可以根据主题选择单独的课程，在一堂课中探索整个系列主题，或者教授所有
@@ -1425,6 +1450,10 @@ cn:
   signup_email_preference_opt_in: 我们能向您推送 Code.org 课程更新、本地机遇或者其他计算机科学的新闻吗？
   signup_email_preference_privacy: "（请参阅我们的隐私政策）"
   signup_email_preference_yes: 是的
+  signup_email_preference_yes_elementary: 是-向我发送有关小学资源的最新信息
+  signup_email_preference_yes_middle: 是-向我发送有关中学资源的最新信息
+  signup_email_preference_yes_high: 是-向我发送有关高中资源的最新信息
+  signup_email_preference_yes_general: 是-向我发送一般更新
   signup_email_preference_no: 不是
   signup_email_preference_error: 电子邮件首选项为必填项
   signup_multiple_event_warning: 如果你要主办多次活动，请为每个活动提交一个单独的名字或者邮件。我们按照每个名字或邮件来计算数量。
@@ -8275,12 +8304,8 @@ cn:
   tutorial_googlesuperhero_longdescription: 将生活或社区中的日常英雄编程为超级英雄，让他们飞越建筑物、旋转、与搭档合作，并通过触摸游戏中的物体来得分。在
     Code Your Hero 中，使用 CS First 和 Scratch 炫耀你的英雄的特殊力量和你自己的创造力。
   tutorial_googlename _longdescription: 选择一个名字，使用代码让单词的字母变为现实。选择昵称、宠物的名字、动物、运动、地点或爱好。
-  tutorial_carnegiezillah_longdescription: Zillah City is thriving, and music is in
-    the air. Rumor has it, the famed Gargantua bot is online and sending the last
-    Toxibots to trash the city block by block…. Grab your cobot hoverboard and get
-    ready to groove, move, and finish off what you started! Players program their
-    cobot hoverbots to change lanes, avoid obstacles, and take out many Toxibots in
-    this rhythm-styled game.
+  tutorial_carnegiezillah_longdescription: Zillah City 蓬勃发展，空气中弥漫着音乐。有传言说，著名的 Gargantua
+    机器人已上线，正在派出最后一批毒素机器人逐个街区丢掉城市。…拿起你的协作机器人悬浮滑板，准备好进行节奏、移动，完成你开始的事情！在这款节奏风格的游戏中，玩家对协作机器人悬浮机器人进行编程，以改变车道，避开障碍物并消灭许多毒性机器人。
   tutorial_nasachspacejam_longdescription: 创造一个真正摇摆不定的太阳系！在这个自学活动中学习音乐、天文学和编程（无需编程经验）。对行星进行编程以制作音乐，创建自己的音乐太阳系，并配有宽敞的旋律。
   tutorial_hatchxrsolar_longdescription: '使用基于方块的编程概念探索恒星并建造自己的太阳系。学习 3D 空间的基础知识，潜入你的想象力，在不到一个小时的时间内建造一个你梦想中的宇宙。猜猜怎么样，你可以使用
     HatchXR 应用程序在任何 iOS 设备上在 AR 中运行你的项目。别忘了使用 #hatchxr #HourOfCode 与我们分享你的作品'

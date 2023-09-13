@@ -200,6 +200,16 @@ ru:
   grade_level_label_elementary: Начальная школа
   grade_level_label_middle: Средняя школа
   grade_level_label_high: Средняя школа
+  curricula_title_elementary: Учебные программы начальной школы
+  curricula_desc_elementary: Просмотрите увлекательные бесплатные курсы и занятия,
+    которые приглашают вас изучать компьютерные науки вместе с учениками начальной
+    школы.
+  curricula_title_middle: Учебные программы средней школы
+  curricula_desc_middle: Ознакомьтесь с интересными предложениями, которые позволят
+    вам и вашим ученикам средней школы вместе изучать компьютерные науки.
+  curricula_title_high: Учебные программы средней школы
+  curricula_desc_high: Ознакомьтесь с интересными курсами и занятиями, которые приглашают
+    вас и ваших старшеклассников глубже погрузиться в компьютерные науки.
   students_label: Ученики
   teachers_label: Преподаватели
   teacher_label_csf: Преподаватель основ информатики
@@ -226,6 +236,13 @@ ru:
   call_to_action_explore_choice_level: Пример выбора уровня
   call_to_action_explore_collection: Коллекция
   call_to_action_explore_unplugged_lesson: Уроки, не требующие подключения к сети
+  call_to_action_explore_csf: Изучите основы CS
+  call_to_action_explore_csd: Откройте для себя открытия в CS
+  call_to_action_explore_csp: Изучите принципы CS
+  call_to_action_explore_csc: Изучите подключения к CS
+  call_to_action_explore_csa: Изучите компьютерные науки AP® A
+  call_to_action_explore_maker: Изучите учебные программы Maker
+  call_to_action_explore_hoc: Изучите учебные пособия «Час кода»
   call_to_action_try_app_lab: Попробовать лабораторию приложений
   call_to_action_view_lesson_plan: Смотреть план урока
   call_to_action_self_paced_pl: Начните профессиональное обучение в индивидуальном
@@ -271,6 +288,7 @@ ru:
   call_to_action_notify_available: Уведомить меня, когда будет доступно
   call_to_action_register_early_access: Зарегистрируйтесь для раннего доступа
   call_to_action_open_positions: Смотреть открытые вакансии
+  call_to_action_get_guide: Получите руководство
   aria_label_call_to_action_afe: Узнайте больше об инженере будущего Amazon
   aria_label_call_to_action_teaching_csf: Начните программу профессионального обучения
     «Преподавание основ компьютерных наук»
@@ -378,6 +396,8 @@ ru:
   curriculum_name_csa: Информатика А
   curriculum_name_csc_02: Любой модуль программы "Связь с информатикой"
   curriculum_name_ai: "  ИИ и машинное обучение  "
+  curriculum_name_artificial_intelligence: Искусственный интеллект (AI)
+  curriculum_name_maker: Создатель
   curriculum_name_maker_cp: Создание приложений с помощью устройств (Circuit Playground)
   curriculum_name_maker_microbit: Создание приложений с помощью устройств (micro:bit)
   curriculum_name_creating_apps_with_devices: Создание приложений с устройствами
@@ -435,6 +455,12 @@ ru:
   curriculum_desc_creating_apps_with_devices: Изучите роль физических устройств в
     вычислительной технике. Разрабатывайте программы, использующие аппаратные входы
     и выходы. Версия этого раздела есть как для micro:bit, так и для Circuit Playground.
+  curriculum_desc_csa: Познакомьте учащихся с разработкой программного обеспечения
+    и объектно-ориентированным дизайном, изучая язык программирования Java в рамках
+    этой бесплатной учебной программы AP® Computer Science A (AP® CSA).
+  curriculum_desc_maker: Обучение мейкеров продвигает STEM (наука, технологии, инженерия,
+    математика) на шаг вперед, привлекая в класс практический опыт и сотрудничество,
+    помогая обучать решению проблем и критическому мышлению.
   collection_hardware: Аппаратное обеспечение
   collection_hardware_desc: Помогает учащимся использовать данные и физические устройства
     для решения задач.
@@ -472,6 +498,7 @@ ru:
   module_label_student_content_resources: Контент и ресурсы
   module_label_new: Новый
   module_label_coming_soon: Скоро
+  module_label_available_now: Доступно сейчас
   module_label_video_series: Серия видеороликов
   module_label_self_paced: Модуль с самостоятельным темпом
   module_ages_5_10: 5-10
@@ -482,6 +509,8 @@ ru:
   module_grade_2_5: 2-5
   module_grade_3_5: 3-5
   module_grade_3_8: 3-8
+  module_grade_k_12: До 12 класса
+  module_grade_3_12: 3-12
   module_grade_6_12: 6-12
   module_grade_6_10: 6-10
   module_grade_9_12: 9-12
@@ -582,6 +611,8 @@ ru:
   heading_java_lab: Лаборатория Java
   heading_objects_first: Сначала объекты
   heading_these_lessons_will: 'Эти уроки позволят:'
+  heading_explore_curriculum_catalog: Ознакомьтесь со всеми нашими курсами в каталоге
+    учебных программ
   professional_learning_section_desc: 'Получайте необходимую поддержку при подготовке
     к преподаванию. Учителям это нравится: более 90% считают это лучшим профессиональным
     обучением!'
@@ -856,6 +887,11 @@ ru:
     как работают эти новые технологии, непосредственно от экспертов: Миры Мурати,
     технического директора OpenAI, и Кристобаля Валенсуэлы, генерального директора
     RunwayML.'
+  ai_pl_101_llm_slides_title: Большая языковая модель подсказывает преподавателям
+  ai_pl_101_llm_slides_desc: Инструменты для получения наилучших результатов от LLM,
+    таких как ChatGPT, от новичков до продвинутых. Включает подсказки для начинающих
+    игроков, а также продвинутые инструменты для тех, кто хочет максимально раскрыть
+    свой потенциал.
   how_ai_works_hero_heading: Как работает искусственный интеллект
   how_ai_works_hero_desc: Погрузитесь в мир искусственного интеллекта с помощью нашей
     серии видеороликов «Как работает ИИ» и сопутствующих уроков!
@@ -2025,9 +2061,9 @@ ru:
     делая это!
   front_join_us_volunteer_header: Волонтеры Часа Кода
   front_join_us_tutorials: Попробуйте новинки этого года!
-  front_join_us_tutorials_link: Filter and browse <i>over 200 tutorials and lesson
-    plans</i>! Find activities for different subject areas, multiple hardware needs,
-    and students at any experience level.
+  front_join_us_tutorials_link: Отфильтруйте и просмотрите <i>более 200 учебных пособий
+    и планов уроков</i>! Найдите задания для разных предметных областей, для разных
+    потребностей в оборудовании и для учащихся с любым уровнем опыта.
   front_join_us_robotics: Выигрывайте роботов или трассы!
   front_join_us_robotics_link: Вы хотите, чтобы ваши ученики использовали набор роботов
     или физических вычислительных наборов? Наши щедрые партнеры передают наборы 75
@@ -2133,6 +2169,13 @@ ru:
     информатики?
   signup_email_preference_privacy: "(См. нашу политику конфиденциальности)"
   signup_email_preference_yes: Да
+  signup_email_preference_yes_elementary: Да. Присылайте мне новости о ресурсах для
+    начальной школы
+  signup_email_preference_yes_middle: Да. Присылайте мне новости о ресурсах для средней
+    школы
+  signup_email_preference_yes_high: Да. Присылайте мне новости о ресурсах для средней
+    школы
+  signup_email_preference_yes_general: Да. Присылайте мне общие новости
   signup_email_preference_no: Нет
   signup_email_preference_error: Необходимо указать предпочтительный адрес электронной
     почты
@@ -4894,9 +4937,9 @@ ru:
     в зависимости от степени готовности учащихся и адаптирована к потребностям каждого
     учащегося. '
   tutorial_trinket_longdescription: |-
-    Choose from lessons, challenges, and tutorials about the Python programming language.  Make turtle-based animations and solve puzzles, all while learning the basics of this powerful language.
+    Выберите уроки, задания и учебные пособия по языку программирования Python. Создавайте анимации на основе черепах и решайте головоломки, изучая основы этого мощного языка.
 
-    Activities range from block-based programming to real Python code, with activities appropriate for most age levels.  Select lessons available in Spanish, Korean and Chinese!
+    Занятия варьируются от блочного программирования до реального кода на языке Python. Занятия подходят для большинства возрастных групп. Выберите уроки, доступные на испанском, корейском и китайском языках!
   tutorial_frogger_longdescription: Станьте мыслителем в области вычислительной техники.
     Создавайте трехмерные объекты, рисуя двухмерные изображения, которые вы превращаете
     в удивительные трехмерные фигуры. Создавайте трехмерные миры, объединяя только
@@ -5231,9 +5274,9 @@ ru:
     учащихся и преподавателей, имеющих опыт работы с последовательностями, условиями,
     циклами или другими базовыми понятиями программирования.
   tutorial_ozodance_longdescription: |-
-    This teacher-led tutorial introduces students to the concept of coding with the help of Ozobot, a small programmable robot. Students will be learning how to code by creating and programming a dance routine for Ozobot! They will use OzoBlockly, a visual programming language based on Blockly, to program the dance and then have fun see their choreography come alive when Ozobot performs their dance.
+    Это учебное пособие под руководством учителя знакомит учащихся с концепцией программирования с помощью небольшого программируемого робота Ozobot. Учащиеся научатся программировать, создав и запрограммировав танцевальную программу для Ozobot! Они будут программировать танец на языке визуального программирования OzoBlockly на основе Blockly, а затем весело проведут время, наблюдая за тем, как их хореография оживает, когда Ozobot исполнит свой танец.
 
-    No programming experience or knowledge of Ozobot is required for this tutorial. However, even students with some programming experience will be engaged by the Ozobot games. The tutorial is designed for grades 1-12 and can be customized to your students' abilities.
+    Для этого урока не требуется опыта программирования или знаний Ozobot. Однако игры Ozobot заинтересуются даже учащимися с некоторым опытом программирования. Учебное пособие предназначено для 1-12 классов и может быть адаптировано к способностям ваших учеников.
   tutorial_codingrobotics_longdescription: Студенты познакомятся с основополагающими
     концепциями программирования и применят новые знания в робототехнике. Работая
     как в Kodable, так и в Wonder Workshop, учащиеся будут использовать знания программирования
@@ -5368,9 +5411,9 @@ ru:
     и его моделирование, а затем создание более сложных конечных автоматов, представляющих
     собой головоломки, гаджеты, веб-страницы и игры.
   tutorial_procolor_longdescription: |-
-    This teacher-led tutorial introduces your students to programming and computational thinking and it also explains what kind of robot Ozobot is. This activity is "unplugged", which means that the coding is not done on a computer or tablet, but on a piece of paper with markers. Students will be giving commands to Ozobot using OzoCodes, which are special color sequences. After learning about how to program Ozobot with markers and paper, students are challenged to solve a maze and help Ozobot find the way to school.
+    Это учебное пособие под руководством учителя познакомит ваших учеников с программированием и вычислительным мышлением, а также объяснит, что такое робот Ozobot. Это упражнение «отключено», что означает, что кодирование выполняется не на компьютере или планшете, а на листе бумаги с маркерами. Учащиеся будут давать команды Ozobot, используя коды OZOcodes, которые представляют собой специальные цветовые последовательности. Узнав, как программировать Ozobot с помощью маркеров и бумаги, перед учениками стоит задача разгадать лабиринт и помочь Озоботу найти дорогу в школу.
 
-    No programming experience or knowledge of Ozobot is required for this tutorial. However, even students with some programming experience will be engaged by programming Ozobot. The tutorial is designed for grades K-12 and can be customized to your students' abilities.
+    Для этого урока не требуется опыта программирования или знаний Ozobot. Однако даже учащиеся с некоторым опытом программирования будут заниматься программированием Ozobot. Учебное пособие предназначено для классов K-12 и может быть адаптировано к способностям ваших учеников.
   tutorial_spiralsfinch_longdescription: 'Finch — это небольшой робот, призванный
     вдохновлять и радовать студентов, изучающих компьютерные науки, предоставляя им
     материальное и физическое представление своего кода. В этом упражнении вы научитесь
@@ -5379,9 +5422,9 @@ ru:
     Для этого упражнения вы можете запрограммировать зяблика с помощью Scratch или
     Snap! используя ноутбуки или Chromebook. Вам не нужен предыдущий опыт программирования. '
   tutorial_ozoi_longdescription: |-
-    This tutorial introduces students to programming and computational thinking and it also explains what kind of robot Ozobot is. This activity is "unplugged", which means that the coding is not done on a computer or tablet, but on a piece of paper with markers. Students will be learning about how the robot works and then give commands to Ozobot using OzoCodes, which are special color sequences. After learning about how to program Ozobot with markers and paper, students are challenged to solve a maze and help Ozobot find the way to the store.
+    Это учебное пособие знакомит учащихся с программированием и вычислительным мышлением, а также объясняет, что такое робот Ozobot. Это упражнение «отключено», что означает, что кодирование выполняется не на компьютере или планшете, а на листе бумаги с маркерами. Учащиеся узнают, как работает робот, а затем будут давать команды Ozobot с помощью OZOcodes — специальных цветовых последовательностей. Изучив, как программировать Ozobot с помощью маркеров и бумаги, ученикам предлагается разгадать лабиринт и помочь Ozobot найти дорогу в магазин.
 
-    No programming experience or knowledge of Ozobot is required for this tutorial. However, even students with some programming experience will be engaged by programming Ozobot. The tutorial is designed for grades K-12 and can be customized to your students' abilities.
+    Для этого урока не требуется опыта программирования или знаний Ozobot. Однако даже учащиеся с некоторым опытом программирования будут заниматься программированием Ozobot. Учебное пособие предназначено для классов K-12 и может быть адаптировано к способностям ваших учеников.
   tutorial_ticklel_longdescription: Кирпич за кирпичом развивайте свое самое смелое
     воображение LEGO. Собрав несколько кодов в приложении Tickle, вы сможете заставить
     свой LEGO WeDo делать удивительные вещи.
@@ -5590,11 +5633,11 @@ ru:
     Стива в путешествие по этому миру Minecraft.
   tutorial_minecraft-2016_longdescription: Создайте игру Minecraft. Создавайте собственные
     версии цыплят, овец, криперов, зомби и многого другого.
-  tutorial_thinkersmith-es_longdescription: Mediante el uso de un "Vocabulario Robot"
-    predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar
-    a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento
-    ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones
-    as&iacute; como la valiosa habilidad de depuraci&oacute;n.
+  tutorial_thinkersmith-es_longdescription: Используя заданный по умолчанию «Vocabulario
+    Robot», учащиеся находят, как управлять режимом, например, выполнять&aacute;конкретные
+    задачи, которые не обсуждались ранее.&iacute;Este segmento ense&ntilde;a los estudiantes
+    la conexi&oacute;n entre s&iacute;mbolos y acciones as&iacute; como la valiosa
+    abilidad de depuraci&oacute;n.
   tutorial_pixie_longdescription: Учебное пособие «Час кода» с Пикси
   tutorial_play_longdescription: Создайте историю или игру с помощью Лаборатории игр!
     Делайте животных, пиратов, зомби, ниндзя и других персонажей, чтобы они двигались,
@@ -12743,12 +12786,12 @@ ru:
     CS First и Scratch.
   tutorial_googlename _longdescription: Выберите имя и оживите буквы слова с помощью
     кода. Выберите кличку, кличку питомца, животное, вид спорта, место или хобби.
-  tutorial_carnegiezillah_longdescription: Zillah City is thriving, and music is in
-    the air. Rumor has it, the famed Gargantua bot is online and sending the last
-    Toxibots to trash the city block by block…. Grab your cobot hoverboard and get
-    ready to groove, move, and finish off what you started! Players program their
-    cobot hoverbots to change lanes, avoid obstacles, and take out many Toxibots in
-    this rhythm-styled game.
+  tutorial_carnegiezillah_longdescription: Город Зилла процветает, а музыка витает
+    в воздухе. Ходят слухи, что знаменитый бот Gargantua подключился к сети и отправляет
+    последних токсиботов разрушать город квартал за кварталом.…Возьмите в руки ховерборд
+    с коботом и приготовьтесь двигаться вперёд, двигаться и доводить начатое до конца!
+    Игроки программируют своих коботов-ховерботов на смену полосы движения, обход
+    препятствий и уничтожение множества токсиботов в этой ритмичной игре.
   tutorial_nasachspacejam_longdescription: Создайте солнечную систему, которая действительно
     потрясает! Изучите музыку, астрономию и программирование в этом самостоятельном
     задании (опыт программирования не требуется). Запрограммируйте планеты на создание

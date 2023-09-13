@@ -5,10 +5,10 @@ uk:
   language: Англійською
   front_title: Приєднуйтесь до найбільшої навчальної події в історії, %{campaign_date}
   coming_soon: Незабаром
-  campaign_date_start_short: 5 грудня
+  campaign_date_start_short: 4 грудня
   campaign_date_start_long: 4 грудня
-  campaign_date_short: 5-11 грудня
-  campaign_date_full: 5-11 грудня
+  campaign_date_short: 4-10 грудня
+  campaign_date_full: 4-10 грудня
   campaign_date_year: '2022'
   campaign_date_full_year: 5-11 грудня 2022 року
   nonus_campaign_date_start_short: Жов. 1
@@ -190,6 +190,15 @@ uk:
   grade_level_label_elementary: Початкова школа
   grade_level_label_middle: Середня школа
   grade_level_label_high: Середня школа
+  curricula_title_elementary: Навчальні програми початкової школи
+  curricula_desc_elementary: Перегляньте веселі безкоштовні курси та заходи, які запрошують
+    вас вивчити інформатику разом з учнями початкової школи.
+  curricula_title_middle: Навчальні програми середньої школи
+  curricula_desc_middle: Перегляньте цікаві пропозиції, які дозволяють вам та вашим
+    учням середньої школи разом досліджувати інформатику.
+  curricula_title_high: Навчальні програми середньої школи
+  curricula_desc_high: Перегляньте переконливі курси та заходи, які запрошують вас
+    та ваших старшокласників глибше заглибитися в інформатику.
   students_label: Учні
   teachers_label: Вчителі
   teacher_label_csf: Викладач основ інформатики
@@ -217,6 +226,13 @@ uk:
   call_to_action_explore_choice_level: Ознайомтеся з прикладами рівня вибору
   call_to_action_explore_collection: Ознайомтеся з колекцією
   call_to_action_explore_unplugged_lesson: Ознайомтеся з уроками без комп'ютера
+  call_to_action_explore_csf: Ознайомтеся з основами CS
+  call_to_action_explore_csd: Досліджуйте відкриття CS
+  call_to_action_explore_csp: Ознайомтеся з принципами CS
+  call_to_action_explore_csc: Дослідіть підключення CS
+  call_to_action_explore_csa: Дослідіть AP® Комп'ютерні науки A
+  call_to_action_explore_maker: Дослідіть навчальні програми Maker
+  call_to_action_explore_hoc: Ознайомтеся з підручниками «Година коду»
   call_to_action_try_app_lab: Спробуйте Програмну лабораторію
   call_to_action_view_lesson_plan: Переглянути план уроку
   call_to_action_self_paced_pl: Почніть самостійне професійне навчання
@@ -261,6 +277,7 @@ uk:
   call_to_action_notify_available: Повідомте мене, коли буде доступно
   call_to_action_register_early_access: Реєстрація для раннього доступу
   call_to_action_open_positions: Перегляд відкритих позицій
+  call_to_action_get_guide: Отримайте довідник
   aria_label_call_to_action_afe: Дізнайтеся більше про майбутні інженери Amazon
   aria_label_call_to_action_teaching_csf: Почніть програму професійного навчання «Основи
     інформатики»
@@ -370,6 +387,8 @@ uk:
   curriculum_name_csa: 'Інформатика A '
   curriculum_name_csc_02: Будь-який модуль "Зв'язки в інформатиці"
   curriculum_name_ai: AI та машинне навчання
+  curriculum_name_artificial_intelligence: Штучний інтелект (AI)
+  curriculum_name_maker: Виробник
   curriculum_name_maker_cp: Створення програм за допомогою пристроїв (Circuit Playground)
   curriculum_name_maker_microbit: Створення програм за допомогою пристроїв (micro:bit)
   curriculum_name_creating_apps_with_devices: Створення застосунків за допомогою пристроїв
@@ -427,6 +446,12 @@ uk:
   curriculum_desc_creating_apps_with_devices: Досліджуйте роль фізичних пристроїв
     в обчислювальних процесах. Розробляйте програми, які використовують апаратні введення
     й виведення. Існує версія цього блоку як для micro:bit, так і для Circuit Playground.
+  curriculum_desc_csa: Познайомте студентів з програмною інженерією та об'єктно-орієнтованим
+    дизайном, поки вони вивчають мову програмування Java у цій безкоштовній навчальній
+    програмі AP® Computer Science A (AP® CSA).
+  curriculum_desc_maker: Освіта Maker робить STEM (наука, технології, інженерія, математика)
+    на крок далі, запрошуючи практичний досвід та співпрацю в клас, щоб допомогти
+    навчити вирішенню проблем та критичному мисленню.
   collection_hardware: Зосередження на «Апаратному обладнанні»
   collection_hardware_desc: Дає учням можливість використовувати дані й фізичні пристрої
     для вирішення проблем.
@@ -464,6 +489,7 @@ uk:
   module_label_student_content_resources: Контент і ресурси
   module_label_new: Нові
   module_label_coming_soon: Скоро
+  module_label_available_now: Доступно зараз
   module_label_video_series: Серія відео
   module_label_self_paced: Самостійний модуль
   module_ages_5_10: 5-10
@@ -474,6 +500,8 @@ uk:
   module_grade_2_5: 2-5
   module_grade_3_5: 3-5
   module_grade_3_8: 3-8
+  module_grade_k_12: К-12
+  module_grade_3_12: 3-12
   module_grade_6_12: 6-12
   module_grade_6_10: 6-10
   module_grade_9_12: 9-12
@@ -570,6 +598,8 @@ uk:
   heading_java_lab: Лабораторія Java
   heading_objects_first: Насамперед — об'єкти
   heading_these_lessons_will: 'Ці уроки будуть:'
+  heading_explore_curriculum_catalog: Ознайомтеся з усіма нашими курсами в каталозі
+    навчальних програм
   professional_learning_section_desc: Отримайте необхідну підтримку під час підготовки
     до викладання. 90 % викладачів оцінюють це рішення як найкраще з можливих!
   professional_learning_section_desc_short: Отримайте необхідну підтримку під час
@@ -831,6 +861,11 @@ uk:
     мов (наприклад, ChatGPT) та генеративний штучний інтелект. Почуйте, як працюють
     ці нові технології безпосередньо від експертів: Міри Мураті, технічного директора
     OpenAI, та Крістобаля Валенсуели, генерального директора RunwayML.'
+  ai_pl_101_llm_slides_title: Підказки щодо великої мовної моделі для педагогів
+  ai_pl_101_llm_slides_desc: Інструменти для отримання найкращого можливого результату
+    від LLM, таких як ChatGPT, від початківця до просунутого. Включає початкові підказки
+    для тих, хто просто занурює пальці ніг, а також вдосконалені інструменти для тих,
+    хто прагне максимізувати свій потенціал.
   how_ai_works_hero_heading: Як працює AI
   how_ai_works_hero_desc: Пориньте у світ AI з нашою серією відео та супутніми уроками
     «Як працює AI»!
@@ -2025,10 +2060,10 @@ uk:
   hoc_homepage_organized_by: "«Година коду» організована [Code.org](%{codeorg_url})."
   signup_closed: Реєстрація на Годину коду зараз закрита. Будь ласка, перевірте ще
     раз у жовтні, щоб підписатися на наступну Годину коду.
-  signup_registration_not_required: You don't need to register to participate! The
-    Hour of Code activities are available year-round. <a href='%{hoc_activities_url}'>Try
-    an activity</a> or read our <a href='%{howto_guide_url}'>How-to guide</a> to plan
-    an event for your class.
+  signup_registration_not_required: Для участі не потрібно реєструватися! Заходи Години
+    коду доступні цілий рік. <a href='%{hoc_activities_url}'>Спробуйте заняття</a>
+    або прочитайте наш посібник із <a href='%{howto_guide_url}'>інструкцій, щоб</a>
+    спланувати подію для вашого класу.
   signup_registration_not_required_markdown: Для участі не потрібно реєструватися!
     Заходи Години коду доступні цілий рік. [Спробуйте заняття] (%{hoc_activities_url})
     або прочитайте наш [Інструкційний посібник] (%{howto_guide_url}), щоб спланувати
@@ -2069,6 +2104,13 @@ uk:
     локальні можливості чи інші новини інформатики?
   signup_email_preference_privacy: "(Див. нашу політику конфіденційності)"
   signup_email_preference_yes: Так
+  signup_email_preference_yes_elementary: Так - Надішліть мені оновлення про ресурси
+    початкової школи
+  signup_email_preference_yes_middle: Так - Надішліть мені оновлення про ресурси середньої
+    школи
+  signup_email_preference_yes_high: Так - Надішліть мені оновлення про ресурси середньої
+    школи
+  signup_email_preference_yes_general: Так - Надішліть мені загальні оновлення
   signup_email_preference_no: Ні
   signup_email_preference_error: Необхідні налаштування електронної пошти
   signup_multiple_event_warning: Якщо Ви проводите кілька заходів, заповніть унікальну
@@ -5428,11 +5470,10 @@ uk:
     Стіва у пригоду цим світом Майнкрафту.
   tutorial_minecraft-2016_longdescription: Створіть гру Minecraft. Створюйте власні
     версії курки, овець, ліани, зомбі тощо.
-  tutorial_thinkersmith-es_longdescription: Mediante el uso de un "Vocabulario Robot"
-    predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar
-    a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento
-    ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones
-    as&iacute; como la valiosa habilidad de depuraci&oacute;n.
+  tutorial_thinkersmith-es_longdescription: За допомогою використання «Словарний робот»
+    за визначенням студенти описують, як керувати режимами вирівнювання конкретними&aacute;задатками,
+    які раніше не обговорювалися.&iacute;Це сегмент означає, що&ntilde;студенти підключають
+    n до символів і дій, як&oacute;достовірна можливість&iacute;депурації n.&iacute;&oacute;
   tutorial_pixie_longdescription: Підручник Години коду з Pixie
   tutorial_play_longdescription: Створіть історію або гру в Ігровій лабораторії! Ви
     можете зробити так, щоб тварини, пірати, зомбі, ніндзя й багато інших персонажів
@@ -12427,12 +12468,12 @@ uk:
     за допомогою CS First та Scratch.
   tutorial_googlename _longdescription: Виберіть ім'я і оживіть букви слова за допомогою
     коду. Виберіть кличку, ім'я вихованця, тварину, спорт, місце або хобі.
-  tutorial_carnegiezillah_longdescription: Zillah City is thriving, and music is in
-    the air. Rumor has it, the famed Gargantua bot is online and sending the last
-    Toxibots to trash the city block by block…. Grab your cobot hoverboard and get
-    ready to groove, move, and finish off what you started! Players program their
-    cobot hoverbots to change lanes, avoid obstacles, and take out many Toxibots in
-    this rhythm-styled game.
+  tutorial_carnegiezillah_longdescription: Місто Зілла процвітає, а музика витає в
+    повітрі. Подейкують, знаменитий бот Gargantua онлайн і надсилає останніх Toxibots,
+    щоб смістити місто квартал за кварталом.…Візьміть свій ховерборд cobot і приготуйтеся
+    до розбіжності, переміщення та завершення того, що ви почали! Гравці програмують
+    своїх коботів-ховерботів, щоб змінювати смуги руху, уникати перешкод та вивести
+    багато токсиботів у цій грі в стилі ритму.
   tutorial_nasachspacejam_longdescription: Створіть Сонячну систему, яка справді скелиться!
     Дізнайтеся про музику, астрономію та кодування в цій самостійній діяльності (досвід
     кодування не потрібен). Програмуйте планети для створення музики, створюючи власну

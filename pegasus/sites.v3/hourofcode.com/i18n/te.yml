@@ -113,19 +113,20 @@ te:
     సైన్స్ పోషించగల పాత్రను అర్థం చేసుకోవడానికి విద్యార్థులకు సహాయపడే వనరులు.
   oceans_landing_videos: AI మరియు మెషిన్ లెర్నింగ్ గురించి వీడియోలు
   oceans_behind_the_scenes: 'మహాసముద్రాల కోసం AI: తెర వెనుక'
-  oceans_behind_the_scenes_1: Levels 2-4 use a pretrained model provided by the <a
-    href="https://www.tensorflow.org/" >TensorFlow</a> <a href="https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md">
-    MobileNet </a> project. A MobileNet model is a <a href="https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks">convolutional
-    neural network</a> that has been trained on <a href="http://www.image-net.org/">ImageNet</a>,
-    a dataset of over 14 million images hand-annotated with words such as "balloon"
-    or "strawberry". In order to customize this model with the labeled training data
-    the student generates in this activity, we use a technique called <a href="https://en.wikipedia.org/wiki/Transfer_learning">Transfer
-    Learning</a>. Each image in the training dataset is fed to MobileNet, as pixels,
-    to obtain a list of annotations that are most likely to apply to it. Then, for
-    a new image, we feed it to MobileNet and compare its resulting list of annotations
-    to those from the training dataset. We classify the new image with the same label
-    (such as "fish" or "not fish") as the images from the training set with the most
-    similar results.
+  oceans_behind_the_scenes_1: స్థాయిలు 2-4 <a href="https://www.tensorflow.org/" >టెన్సార్</a>
+    <a href="https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md">
+    ఫ్లో మొబైల్నెట్ ప్రాజెక్ట్ అందించిన ప్రీట్రైన్డ్ మోడల్ను ఉపయోగిస్తాయి. </a> మొబైల్నెట్
+    మోడల్ అనేది “బెలూన్” లేదా “స్ట్రాబెర్రీ” వంటి పదాలతో చేతితో ఉల్లేఖించిన 14 మిలియన్లకు
+    పైగా చిత్రాల <a href="http://www.image-net.org/">డేటాసెట్</a>అయిన ఇమేజ్నెట్పై
+    శిక్షణ పొందిన ఒక <a href="https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks">మెలికలు
+    తిరిగే న్యూరల్ నెట్వర్క్</a> . ఈ కార్యాచరణలో విద్యార్థి ఉత్పత్తి చేసే లేబుల్ శిక్షణ
+    డేటాతో ఈ మోడల్ను అనుకూలీకరించడానికి, మేము <a href="https://en.wikipedia.org/wiki/Transfer_learning">ట్రాన్స్ఫర్
+    లెర్నింగ్</a>అనే సాంకేతికతను ఉపయోగిస్తాము. శిక్షణ డేటాసెట్లోని ప్రతి చిత్రం మొబైల్నెట్కు
+    పిక్సెల్లగా, దానికి వర్తించే ఉల్లేఖనాల జాబితాను పొందటానికి ఇవ్వబడుతుంది. అప్పుడు,
+    క్రొత్త చిత్రం కోసం, మేము దానిని మొబైల్నెట్కు తినిపిస్తాము మరియు దాని ఫలిత ఉల్లేఖనాల
+    జాబితాను శిక్షణ డేటాసెట్ నుండి వచ్చిన వారితో పోల్చాము. మేము క్రొత్త చిత్రాన్ని
+    అదే లేబుల్తో (“చేప” లేదా “చేపలు కాదు” వంటివి) శిక్షణ సమితి నుండి చాలా సారూప్య
+    ఫలితాలతో వర్గీకరిస్తాము.
   oceans_behind_the_scenes_1_markdown: స్థాయిలు 2-4 [TensorFlow](https://www.tensorflow.org/)
     [MobileNet](https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md)
     ప్రాజెక్ట్ అందించిన ప్రీట్రైన్డ్ మోడల్ను ఉపయోగిస్తాయి. మొబైల్నెట్ మోడల్ అనేది
@@ -191,6 +192,15 @@ te:
   grade_level_label_elementary: ఎలిమెంటరీ స్కూల్
   grade_level_label_middle: మిడిల్ స్కూల్
   grade_level_label_high: ఉన్నత పాఠశాల
+  curricula_title_elementary: ఎలిమెంటరీ స్కూల్ కర్రిక్యులా
+  curricula_desc_elementary: మీ ప్రాథమిక పాఠశాల విద్యార్థులతో కంప్యూటర్ సైన్స్ను అన్వేషించడానికి
+    మిమ్మల్ని ఆహ్వానించే ఆహ్లాదకరమైన, ఉచిత కోర్సులు మరియు కార్యకలాపాలను బ్రౌజ్ చేయండి.
+  curricula_title_middle: మిడిల్ స్కూల్ కరికులం
+  curricula_desc_middle: మీరు మరియు మీ మిడిల్ స్కూల్ విద్యార్థులు కలిసి కంప్యూటర్
+    సైన్స్ను అన్వేషించడానికి వీలు కల్పించే ఆకర్షణీయమైన సమర్పణలను బ్రౌజ్ చేయండి.
+  curricula_title_high: హై స్కూల్ కరికులం
+  curricula_desc_high: కంప్యూటర్ సైన్స్లో లోతుగా త్రవ్వడానికి మిమ్మల్ని మరియు మీ హైస్కూల్
+    విద్యార్థులను ఆహ్వానించే బలవంతపు కోర్సులు మరియు కార్యకలాపాలను బ్రౌజ్ చేయండి.
   students_label: విద్యార్థులు
   teachers_label: టీచర్లు
   teacher_label_csf: CS ప్రాథమికాంశాల టీచర్
@@ -217,6 +227,13 @@ te:
   call_to_action_explore_choice_level: ఉదాహరణ ఐచ్ఛికం స్థాయిని అన్వేషించండి
   call_to_action_explore_collection: సేకరణను అన్వేషించండి
   call_to_action_explore_unplugged_lesson: ప్లగ్ చేయబడని పాఠాలను అన్వేషించండి
+  call_to_action_explore_csf: CS ఫండమెంటల్స్ అన్వేషించండి
+  call_to_action_explore_csd: CS ఆవిష్కరణలను అన్వేషించండి
+  call_to_action_explore_csp: CS సూత్రాలను అన్వేషించండి
+  call_to_action_explore_csc: CS కనెక్షన్లను అన్వేషించండి
+  call_to_action_explore_csa: AP® కంప్యూటర్ సైన్స్ A ని అన్వేషించండి
+  call_to_action_explore_maker: మేకర్ పాఠ్యాంశాలను అన్వేషించండి
+  call_to_action_explore_hoc: కోడ్ ట్యుటోరియల్స్ యొక్క అవర్ అన్వేషించండి
   call_to_action_try_app_lab: యాప్ ల్యాబ్‌ని ప్రయత్నించండి
   call_to_action_view_lesson_plan: పాఠ ప్రణాళికను చూడండి
   call_to_action_self_paced_pl: స్వీయ-వేగవంతమైన వృత్తిపరమైన అభ్యాసాన్ని ప్రారంభించండి
@@ -261,6 +278,7 @@ te:
   call_to_action_notify_available: అందుబాటులో ఉన్నప్పుడు నాకు తెలియజేయండి
   call_to_action_register_early_access: ప్రారంభ ప్రాప్యత కోసం నమోదు చేయండి
   call_to_action_open_positions: ఓపెన్ పొజిషన్లను చూడండి
+  call_to_action_get_guide: గైడ్ పొందండి
   aria_label_call_to_action_afe: అమెజాన్ ఫ్యూచర్ ఇంజనీర్ గురించి మరింత తెలుసుకోండి
   aria_label_call_to_action_teaching_csf: టీచింగ్ కంప్యూటర్ సైన్స్ ఫండమెంటల్స్ ప్రొఫెషనల్
     లెర్నింగ్ ప్రోగ్రామ్ను ప్రారంభించండి
@@ -368,6 +386,8 @@ te:
   curriculum_name_csa: కంప్యూటర్ సైన్స్ A
   curriculum_name_csc_02: ఏదైనా CS కనెక్షన్స్ మాడ్యూల్
   curriculum_name_ai: AI & మెషిన్ లెర్నింగ్
+  curriculum_name_artificial_intelligence: ఆర్టిఫిషియల్ ఇంటెలిజెన్స్ (AI)
+  curriculum_name_maker: తయారీదారు
   curriculum_name_maker_cp: పరికరాలతో అనువర్తనాలను సృష్టిస్తోంది (సర్క్యూట్ ప్లేగ్రౌండ్)
   curriculum_name_maker_microbit: 'పరికరాలతో అనువర్తనాలను సృష్టిస్తోంది (మైక్రో: బిట్)'
   curriculum_name_creating_apps_with_devices: ఉపకరణాలతో యాప్స్ సృష్టించుట
@@ -428,6 +448,12 @@ te:
     అన్వేషించండి. హార్డ్‌వేర్ ఇన్‌పుట్‌లను మరియు ఔట్‌పుట్‌లను వినియోగించుకునే ప్రోగ్రాములను
     అభివృద్ధి చేయండి. మైక్రో:బిట్ మరియు సర్క్యూట్ ప్లేగ్రౌండ్ రెండింటి కోసం ఈ యూనిట్
     యొక్క వెర్షన్ ఒకటి ఉంది.
+  curriculum_desc_csa: AP® కంప్యూటర్ సైన్స్ A (AP® CSA) కోసం ఈ ఉచిత పాఠ్యాంశాల్లో
+    జావా ప్రోగ్రామింగ్ భాషను నేర్చుకునేటప్పుడు సాఫ్ట్వేర్ ఇంజనీరింగ్ మరియు ఆబ్జెక్ట్-ఓరియెంటెడ్
+    డిజైన్కు విద్యార్థులను పరిచయం చేయండి.
+  curriculum_desc_maker: మేకర్ విద్య STEM (సైన్స్, టెక్నాలజీ, ఇంజనీరింగ్, మ్యాథమెటిక్స్)
+    ను ఒక అడుగు ముందుకు వేస్తుంది, సమస్య పరిష్కారం మరియు విమర్శనాత్మక ఆలోచనను నేర్పించడంలో
+    సహాయపడటానికి తరగతి గదిలోకి అనుభవం మరియు సహకారాన్ని ఆహ్వానించడం ద్వారా.
   collection_hardware: హార్డ్‌వేర్ పైన దృష్టి సారించండి
   collection_hardware_desc: సమస్యలను పరిష్కరించడానికి గాను డేటా మరియు భౌతిక ఉపకరణాలను
     ఉపయోగించుకోవడానికి విద్యార్థులను సాధికారపరుస్తుంది.
@@ -468,6 +494,7 @@ te:
   module_label_student_content_resources: కంటెంట్ మరియు వనరులు
   module_label_new: కొత్త
   module_label_coming_soon: త్వరలో
+  module_label_available_now: ఇప్పుడు అందుబాటులో ఉంది
   module_label_video_series: వీడియో సిరీస్
   module_label_self_paced: స్వీయ కనబరిచిన మాడ్యూల్
   module_ages_5_10: 5-10
@@ -478,6 +505,8 @@ te:
   module_grade_2_5: 2-5
   module_grade_3_5: 3-5
   module_grade_3_8: 3-8
+  module_grade_k_12: K-12
+  module_grade_3_12: 3-12
   module_grade_6_12: 6-12
   module_grade_6_10: 6-10
   module_grade_9_12: 9-12
@@ -576,6 +605,7 @@ te:
   heading_java_lab: జావా ల్యాబ్
   heading_objects_first: మొదటగా వస్తువులు
   heading_these_lessons_will: 'ఈ పాఠాలు రెడీ:'
+  heading_explore_curriculum_catalog: కరికులం కాటలాగ్లో మా కోర్సులన్నింటినీ అన్వేషించండి
   professional_learning_section_desc: మీరు బోధించడానికి సిద్ధమవుతుండగా మీకు అవసరమైన
     మద్దతు పొందండి. దానిని 90% పైగా ర్యాంకింగ్ చేస్తూ అత్యుత్తమ వృత్తిపరమైన అభివృద్ధితో
     ఉపాధ్యాయులు దీన్ని ఇష్టపడతారు!
@@ -828,6 +858,11 @@ te:
     లలో రెండు కొత్త వీడియోలను కలిగి ఉన్న AI లో పెద్ద మార్పులను నడిపించే కొత్త టెక్నాలజీ
     గురించి మరింత తెలుసుకోండి. ఈ కొత్త సాంకేతికతలు నిపుణుల నుండి నేరుగా ఎలా పనిచేస్తాయో
     వినండి: మీరా మురాటి, ఓపెన్ఏఐ యొక్క CTO మరియు రన్వేఎంఎల్ సిఇఒ క్రిస్టోబల్ వాలెన్జులా.'
+  ai_pl_101_llm_slides_title: అధ్యాపకుల కోసం పెద్ద భాషా నమూనా ప్రాంప్ట్ చేస్తుంది
+  ai_pl_101_llm_slides_desc: చాట్జిపిటి వంటి ఎల్ఎల్ఎంల నుండి, అనుభవశూన్యుడు నుండి
+    అధునాతన వరకు సాధ్యమైనంత ఉత్తమమైన అవుట్పుట్ను పొందే సాధనాలు. వారి కాలిని ముంచే
+    వారికి స్టార్టర్ ప్రాంప్ట్లు, అలాగే వారి సామర్థ్యాన్ని పెంచుకోవాలనుకునే వారికి
+    అధునాతన సాధనాలు ఉన్నాయి.
   how_ai_works_hero_heading: AI ఎలా పనిచేస్తుంది
   how_ai_works_hero_desc: "“హౌ AI వర్క్స్” తో AI ప్రపంచంలోకి ప్రవేశించండి, మా వీడియో
     సిరీస్ మరియు దానితో పాటు పాఠాలు!"
@@ -2076,6 +2111,12 @@ te:
     కంప్యూటర్ సైన్స్ న్యూస్ గురించి అప్‌డేట్స్ మీకు ఇమెయిల్ చేయవచ్చా?
   signup_email_preference_privacy: "(మా గోప్యత పాలసీ చూడండి)"
   signup_email_preference_yes: అవును
+  signup_email_preference_yes_elementary: అవును - ఎలిమెంటరీ స్కూల్ వనరులపై నాకు నవీకరణలను
+    పంపండి
+  signup_email_preference_yes_middle: అవును - మిడిల్ స్కూల్ వనరులపై నాకు నవీకరణలను
+    పంపండి
+  signup_email_preference_yes_high: అవును - హైస్కూల్ వనరులపై నాకు నవీకరణలను పంపండి
+  signup_email_preference_yes_general: అవును - నాకు సాధారణ నవీకరణలను పంపండి
   signup_email_preference_no: లేదు
   signup_email_preference_error: ఇమెయిల్ ప్రాధాన్యత అవసరం
   signup_multiple_event_warning: మీరు రిజిస్టర్ చేసుకున్నప్పుడు, మేము మీ పాఠశాల పేరు
@@ -2260,13 +2301,13 @@ te:
     వెళ్లండి.</b> కంప్యూటర్ అవసరం లేని <a href='%{unplugged_url}'> ట్యుటోరియల్స్ మేము
     అందిస్తాము. </ul>
   hoc_faq_need_computers_a_markdown: |-
-    No. We have Hour of Code tutorials that work on PCs, smartphones, tablets, and some that require no computer at all! You can join wherever you are, with whatever you have.
+    లేదు. PC లు, స్మార్ట్ఫోన్లు, టాబ్లెట్లు మరియు కంప్యూటర్ అవసరం లేని కొన్నింటిలో పనిచేసే అవర్ ఆఫ్ కోడ్ ట్యుటోరియల్స్ మాకు ఉన్నాయి! మీరు ఎక్కడ ఉన్నా, మీ వద్ద ఉన్నదానితో మీరు చేరవచ్చు.
 
-    _Here are a few options:_
+    _ఇక్కడ కొన్ని ఎంపికలు ఉన్నాయి: _
 
-    - **Work in pairs.** [Research shows](%{pair_programming_research}) students learn best with [pair programming](%{pair_programming_video}), sharing a computer and working together. Encourage your students to double up.
-    - **Use a projected screen.** If you have a projector and screen for a Web-connected computer, your entire group can do an Hour of Code together. Watch video portions together and take turns solving puzzles or answering questions.
-    - **Go unplugged.** We offer [tutorials that require no computer](%{unplugged_url}) at all.
+    - **జతలలో పని చేయండి.** [పరిశోధన ప్రదర్శనలు] (%{pair_programming_research}) విద్యార్థులు [జత ప్రోగ్రామింగ్] (%{pair_programming_video}) తో ఉత్తమంగా నేర్చుకుంటారు, కంప్యూటర్ను పంచుకోవడం మరియు కలిసి పనిచేయడం. మీ విద్యార్థులను రెట్టింపు చేయమని ప్రోత్సహించండి.
+    - ** అంచనా వేసిన స్క్రీన్ను ఉపయోగించండి.** మీకు వెబ్-కనెక్ట్ చేయబడిన కంప్యూటర్ కోసం ప్రొజెక్టర్ మరియు స్క్రీన్ ఉంటే, మీ మొత్తం సమూహం కలిసి అవర్ ఆఫ్ కోడ్ చేయవచ్చు. కలిసి వీడియో భాగాలు చూడండి మరియు పజిల్స్ పరిష్కరించడం లేదా ప్రశ్నలకు సమాధానం మలుపులు పడుతుంది.
+    - **అన్ప్లగ్ చేయబడింది.** మేము [కంప్యూటర్ అవసరమయ్యే ట్యుటోరియల్స్] () అస్సలు అందిస్తున్నాము.%{unplugged_url}
   hoc_faq_international_q: నేను <country> లో ఉన్నాను. నేను అంతర్జాతీయంగా ఎలా పాల్గొనగలను?
   hoc_faq_international_a: ఎవ్వరైనా అవర్ ఆఫ్ కోడ్ ఈవెంట్‌ను, ప్రపంచంలో ఎక్కడైనా నిర్వహించవచ్చు.
     గత సంవత్సరం, ప్రపంచవ్యాప్తంగా విద్యార్థులు అవర్ ఆఫ్ కోడ్ కోసం ఒకచోట చేరారు. మరింత
@@ -2568,8 +2609,8 @@ te:
   learn_banner_beyond_markdown: నేర్చుకోవాలనుకుంటున్నారా? [ఒక గంట దాటి] (%{url})
   learn_banner_teachers: 'ఉపాధ్యాయులు: <a id=''teacher_banner_host''>ఒక అవర్ హోస్ట్
     చేయండి</a> or <a id=''teacher_banner_howto''>హౌ-టు గైడ్ చదవండి</a>'
-  learn_banner_teachers_markdown: 'Teachers: [Host an hour](%{host_url}) or [read
-    the How-To Guide](%{howto_url})'
+  learn_banner_teachers_markdown: 'ఉపాధ్యాయులు: [ఒక గంట హోస్ట్] (%{host_url}) లేదా
+    [హౌ-టు గైడ్ చదవండి] ()%{howto_url}'
   tutorial_dance2019_name: డాన్స్ పార్టీ
   tutorial_danceparty_name: డాన్స్ పార్టీ
   tutorial_chibitronics_name: 'చిబిట్రోనిక్స్: ఇల్యూమినేటెడ్ స్టోరీ'
@@ -5497,11 +5538,11 @@ te:
     చేయడానికి కోడ్ బ్లాక్లను ఉపయోగించండి.
   tutorial_minecraft-2016_longdescription: Minecraft గేమ్ను రూపొందించండి. చికెన్,
     గొర్రెలు, క్రీపర్స్, జాంబీస్ మరియు మరిన్ని మీ స్వంత వెర్షన్లను సృష్టించండి.
-  tutorial_thinkersmith-es_longdescription: Mediante el uso de un "Vocabulario Robot"
-    predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar
-    a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento
-    ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones
-    as&iacute; como la valiosa habilidad de depuraci&oacute;n.
+  tutorial_thinkersmith-es_longdescription: "“పదజాలం రోబోట్” ముందు నిర్వచించబడింది,
+    లాస్ ఎస్టూడియంట్స్ డెకుబ్రిర్&aacute;ఎన్ మోడో టాల్ డి లెవర్ ఎ కాబో టారియాస్ ఎస్పెక్
+    ఫికాస్ సిన్ సెర్ ఎస్టాస్ ఎస్టాస్ ఎస్టాస్ ప్రివిమేంట్.&iacute;ఎస్టే సెగ్మెంటో ఎన్స్&ntilde;ఎ
+    లాస్ ఎస్టూడియంట్స్ లా కోనెక్సీ&oacute;ఎన్ ఎంట్రే స్&iacute;ఎంబోలోస్ వై యాక్సియోన్స్
+    అస్ కోమో లా వాలియోసా హబిలిడాడ్ డి డిప్యురాసి ఎన్.&iacute;&oacute;"
   tutorial_pixie_longdescription: Pixie తో కోడ్ ట్యుటోరియల్ యొక్క గంట
   tutorial_play_longdescription: ప్లే ల్యాబ్తో కథను సృష్టించండి లేదా ఆట చేయండి! జంతువులు,
     సముద్రపు దొంగలు, జాంబీస్, నిన్జాస్ మరియు మరెన్నో అక్షరాలను కదిలించండి, శబ్దాలు
@@ -12658,12 +12699,13 @@ te:
   tutorial_googlename _longdescription: ఒక పేరును ఎంచుకుని, కోడ్ ఉపయోగించి పదం యొక్క
     అక్షరాలను జీవితానికి తీసుకురండి. మారుపేరు, పెంపుడు జంతువు పేరు, జంతువు, క్రీడ,
     స్థలం లేదా అభిరుచిని ఎంచుకోండి.
-  tutorial_carnegiezillah_longdescription: Zillah City is thriving, and music is in
-    the air. Rumor has it, the famed Gargantua bot is online and sending the last
-    Toxibots to trash the city block by block…. Grab your cobot hoverboard and get
-    ready to groove, move, and finish off what you started! Players program their
-    cobot hoverbots to change lanes, avoid obstacles, and take out many Toxibots in
-    this rhythm-styled game.
+  tutorial_carnegiezillah_longdescription: జిల్లాః నగరం అభివృద్ధి చెందుతోంది, మరియు
+    సంగీతం గాలిలో ఉంది. పుకారు ఉంది, ప్రఖ్యాత గార్గంతువా బోట్ ఆన్లైన్లో ఉంది మరియు
+    సిటీ బ్లాక్ను బ్లాక్ ద్వారా చెత్త చేయడానికి చివరి టాక్సిబాట్లను పంపుతుంది.…మీ
+    cobot hoverboard పట్టుకోడానికి మరియు గాడి సిద్ధంగా పొందుటకు, తరలించడానికి, మరియు
+    మీరు ప్రారంభించారు ఏమి ఆఫ్ పూర్తి! ఈ లయ-శైలి ఆటలో దారులు మార్చడానికి, అడ్డంకులను
+    నివారించడానికి మరియు అనేక టాక్సిబాట్లను తీయడానికి ఆటగాళ్ళు తమ కోబోట్ హోవర్బోట్లను
+    ప్రోగ్రామ్ చేస్తారు.
   tutorial_nasachspacejam_longdescription: నిజంగా రాళ్ళు రాసే సౌర వ్యవస్థను సృష్టించండి!
     ఈ స్వీయ-గైడెడ్ కార్యాచరణలో సంగీతం, ఖగోళ శాస్త్రం మరియు కోడింగ్ గురించి తెలుసుకోండి
     (కోడింగ్ అనుభవం అవసరం లేదు). మీ స్వంత సంగీత సౌర వ్యవస్థ సృష్టించడం, సంగీతం చేయడానికి

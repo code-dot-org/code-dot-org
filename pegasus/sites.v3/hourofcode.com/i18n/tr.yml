@@ -5,35 +5,35 @@ tr:
   language: İngilizce
   front_title: Tarihteki en büyük eğitim etkinliğine katıl, %{campaign_date}
   coming_soon: Çok Yakında
-  campaign_date_start_short: 5 Ara.
-  campaign_date_start_long: 5 Aralık
-  campaign_date_short: 5-11 Aralık
-  campaign_date_full: 5-11 Aralık
-  campaign_date_year: '2022'
-  campaign_date_full_year: 5-11 Aralık, 2022
-  nonus_campaign_date_start_short: 1 Ekim
+  campaign_date_start_short: 7 Ara.
+  campaign_date_start_long: 7 Aralık
+  campaign_date_short: 7-13 Aralık
+  campaign_date_full: 7-13 Aralık
+  campaign_date_year: '2020'
+  campaign_date_full_year: 7-13 Aralık, 2020
+  nonus_campaign_date_start_short: 1 Eki.
   nonus_campaign_date_start_long: 1 Ekim
   nonus_campaign_date_short: 1 Eki. - 18 Ara.
   nonus_campaign_date_full: 1 Ekim - 18 Aralık
-  nonus_campaign_date_year: '2022'
-  nonus_campaign_date_full_year: 1 Ekim 2022 - 18 Aralık 2022
-  latam_campaign_date_start_short: 1 Ekim
+  nonus_campaign_date_year: '2020'
+  nonus_campaign_date_full_year: 1 Ekim 2020 - 18 Aralık 2020
+  latam_campaign_date_start_short: 1 Eki.
   latam_campaign_date_start_long: 1 Ekim
   latam_campaign_date_short: 1 Eki. - 18 Ara.
   latam_campaign_date_full: 1 Ekim - 18 Aralık
-  latam_campaign_date_year: '2022'
-  latam_campaign_date_full_year: 1 Ekim 2022 - 18 Aralık 2022
+  latam_campaign_date_year: '2020'
+  latam_campaign_date_full_year: 1 Ekim 2020 - 18 Aralık 2020
   europe_campaign_date_start_short: 10 Eki.
   europe_campaign_date_start_long: 10 Ekim
   europe_campaign_date_short: 10-25 Eki.
   europe_campaign_date_full: 10-25 Ekim
-  europe_campaign_date_year: '2022'
+  europe_campaign_date_year: '2020'
   europe_campaign_date_full_year: 10-25 Ekim 2020
-  africa_campaign_date_start_short: 1 Ekim
+  africa_campaign_date_start_short: 1 Eki.
   africa_campaign_date_start_long: 1 Ekim
   africa_campaign_date_short: 1-31 Eki.
   africa_campaign_date_full: 1-31 Ekim
-  africa_campaign_date_year: '2022'
+  africa_campaign_date_year: '2020'
   africa_campaign_date_full_year: 1-31 Ekim 2020
   hoc2022_header: Keşfet, Oyna, Yarat!
   social_hoc2022_explore_play_create: Keşfetmek, oynamak ve yaratmak için bilgisayar
@@ -194,6 +194,15 @@ tr:
   grade_level_label_elementary: İlkokul
   grade_level_label_middle: Ortaokul
   grade_level_label_high: Lise
+  curricula_title_elementary: İlkokul Müfredatı
+  curricula_desc_elementary: Sizi ilkokul öğrencilerinizle bilgisayar bilimlerini
+    keşfetmeye davet eden eğlenceye, ücretsiz kurslara ve etkinliklere göz atın.
+  curricula_title_middle: Ortaokul Müfredatı
+  curricula_desc_middle: Sizin ve ortaokul öğrencilerinizin bilgisayar bilimlerini
+    birlikte keşfetmesini sağlayan ilgi çekici tekliflere göz atın.
+  curricula_title_high: Lise Müfredatı
+  curricula_desc_high: Sizi ve lise öğrencilerinizi bilgisayar bilimlerinin derinliklerine
+    inmeye davet eden ilgi çekici kurslara ve etkinliklere göz atın.
   students_label: Öğrenciler
   teachers_label: Öğretmenler
   teacher_label_csf: CS Temelleri Öğretmeni
@@ -220,6 +229,13 @@ tr:
   call_to_action_explore_choice_level: Örnek seçim düzeyini keşfedin
   call_to_action_explore_collection: Koleksiyonu keşfedin
   call_to_action_explore_unplugged_lesson: Takılı olmayan dersleri keşfedin
+  call_to_action_explore_csf: CS Temellerini Keşfedin
+  call_to_action_explore_csd: CS Keşiflerini Keşfedin
+  call_to_action_explore_csp: CS İlkelerini Keşfedin
+  call_to_action_explore_csc: CS Bağlantılarını Keşfedin
+  call_to_action_explore_csa: AP® Computer Science A'yı Keşfedin
+  call_to_action_explore_maker: Maker müfredatını keşfedin
+  call_to_action_explore_hoc: Hour of Code eğitimlerini keşfedin
   call_to_action_try_app_lab: Uygulama Laboratuvarı'nı deneyin
   call_to_action_view_lesson_plan: Ders planını görüntüleyin
   call_to_action_self_paced_pl: Kendi hızınızda profesyonel öğrenmeye başlayın
@@ -265,6 +281,7 @@ tr:
   call_to_action_notify_available: Uygun olduğunda bana haber ver
   call_to_action_register_early_access: Erken erişim için kaydolun
   call_to_action_open_positions: Açık pozisyonları görüntüleyin
+  call_to_action_get_guide: Kılavuzu edinin
   aria_label_call_to_action_afe: Amazon Future Engineer hakkında daha fazla bilgi
     edinin
   aria_label_call_to_action_teaching_csf: Bilgisayar Bilimi Temelleri Öğretimi profesyonel
@@ -375,6 +392,8 @@ tr:
   curriculum_name_csa: Bilgisayar Bilimleri A
   curriculum_name_csc_02: Herhangi Bir Bilgisayar Bilimleri Bağlantıları Modülü
   curriculum_name_ai: Yapay Zeka ve Makine Öğrenimi
+  curriculum_name_artificial_intelligence: Yapay Zeka (AI)
+  curriculum_name_maker: İmalatçı
   curriculum_name_maker_cp: Cihazlarla Uygulama Oluşturma (Circuit Playground)
   curriculum_name_maker_microbit: Cihazlarla Uygulama Oluşturma (micro:bit)
   curriculum_name_creating_apps_with_devices: Cihazlarla Uygulama Oluşturma
@@ -430,6 +449,12 @@ tr:
   curriculum_desc_creating_apps_with_devices: Fiziksel cihazların bilgi işlemdeki
     rolünü keşfedin. Donanım giriş ve çıkışlarını kullanan programlar geliştirin.
     Bu ünitenin hem micro:bit hem de Circuit Playground için bir versiyonu vardır.
+  curriculum_desc_csa: AP® Computer Science A (AP® CSA) için bu ücretsiz müfredatta
+    Java programlama dilini öğrenirken öğrencileri yazılım mühendisliği ve nesne yönelimli
+    tasarımla tanıştırın.
+  curriculum_desc_maker: Maker eğitimi, problem çözmeyi ve eleştirel düşünmeyi öğretmeye
+    yardımcı olmak için uygulamalı deneyim ve işbirliğini sınıfa davet ederek STEM'yi
+    (Bilim, Teknoloji, Mühendislik, Matematik) bir adım daha ileri götürür.
   collection_hardware: Donanıma Odaklanın
   collection_hardware_desc: Öğrencilerin problemleri çözmek için verileri ve fiziksel
     cihazları kullanmalarını sağlar.
@@ -470,6 +495,7 @@ tr:
   module_label_student_content_resources: İçerik ve kaynaklar
   module_label_new: Yeni
   module_label_coming_soon: Yakında geliyor
+  module_label_available_now: Şimdi Kullanılabilir
   module_label_video_series: Video serisi
   module_label_self_paced: Kendinden tempolu modül
   module_ages_5_10: 5-10
@@ -480,6 +506,8 @@ tr:
   module_grade_2_5: 2-5
   module_grade_3_5: 3-5
   module_grade_3_8: 3-8
+  module_grade_k_12: K-12
+  module_grade_3_12: 3-12
   module_grade_6_12: 6-12
   module_grade_6_10: 6-10
   module_grade_9_12: 9-12
@@ -575,6 +603,7 @@ tr:
   heading_java_lab: Java Laboratuvarı
   heading_objects_first: Önce nesneler
   heading_these_lessons_will: 'Bu dersler:'
+  heading_explore_curriculum_catalog: Müfredat Kataloğu'ndaki tüm kurslarımızı keşfedin
   professional_learning_section_desc: Öğretmeye hazırlanırken ihtiyacınız olan desteği
     alın. Öğretmenler onu seviyor,% 90'dan fazlası onu şimdiye kadarki en iyi mesleki
     gelişim olarak sıralıyor!
@@ -831,6 +860,11 @@ tr:
     yeni teknoloji hakkında daha fazla bilgi edinin. Bu yeni teknolojilerin nasıl
     çalıştığını doğrudan uzmanlardan dinleyin: OpenAI CTO Mira Murati ve RunwayML
     CEO''su Cristóbal Valenzuela.'
+  ai_pl_101_llm_slides_title: Eğitimciler için Büyük Dil Modeli İstemleri
+  ai_pl_101_llm_slides_desc: Başlangıç seviyesinden ileri seviyeye kadar ChatGPT gibi
+    LLM'lerden mümkün olan en iyi çıktıyı elde etmek için araçlar. Sadece ayak parmaklarını
+    batıranlar için başlangıç istemleri içerir, potansiyellerini en üst düzeye çıkarmak
+    isteyenler için gelişmiş araçların yanı sıra.
   how_ai_works_hero_heading: Yapay Zeka Nasıl Çalışır
   how_ai_works_hero_desc: Video serimiz ve beraberindeki derslerimiz “AI Nasıl Çalışır”
     ile AI dünyasına dalın!
@@ -1429,10 +1463,10 @@ tr:
     başka bir ağırlıkla değiştirilebileceğini unutmayın). Bu sarf malzemelerine erişiminiz
     yoksa alternatif etkinlikler mevcuttur.
   csd_page_faq_answer_04_06: Cihazlarla Uygulama Oluşturma (Seçenek A ve Seçenek B)
-  csd_page_faq_answer_04_07: 'Option A: Classroom set of Circuit Playgrounds. Check
-    out [code.org/maker/circuitplayground](%{url}) for more details.'
-  csd_page_faq_answer_04_08: 'Option B: Classroom set of micro:bit devices. Check
-    out [code.org/maker/microbit](%{url}) for more details.'
+  csd_page_faq_answer_04_07: 'Seçenek A: Devre Oyun Alanlarının sınıf seti. Daha fazla
+    ayrıntı için [code.org/maker/circuitplayground] () adresine bakın.%{url}'
+  csd_page_faq_answer_04_08: 'Seçenek B: Sınıf mikro:bit aygıtları kümesi. Daha fazla
+    ayrıntı için [code.org/maker/microbit] () adresine bakın.%{url}'
   csd_page_faq_answer_04_09: Boş kağıt mendil kutuları veya karton rulolar veya kazıma
     kağıdı gibi yapımcı malzemeleri
   csd_page_faq_answer_04_10: "*Not: Cihazlarla Uygulama Oluşturma biriminin iki uygulama
@@ -1440,12 +1474,12 @@ tr:
     kullananlar için. Öğretmenler, eşdeğer oldukları ve aynı içeriği kapsadıkları
     için her iki cihaz setini de satın almamalı veya her iki birim seçeneğini de öğretmemelidir."
   csd_page_faq_question_06: CS Discoveries diğer Code.org kurslarına nasıl uyar?
-  csd_page_faq_answer_06_01: CS Discoveries is designed to fit naturally between our
-    [CS Fundamentals](%{csf_url}) courses and our [CS Principles](%{csp_url}) course.
-    While each of these courses is designed to be an age-appropriate entry point to
-    computer science, students with previous experience will find many new topics
-    to explore, and they will revisit familiar topics in novel and more challenging
-    contexts.
+  csd_page_faq_answer_06_01: CS Discoveries, [CS Temelleri] (%{csf_url}) kurslarımız
+    ve [CS İlkeleri] () kursumuz arasında doğal olarak uyacak şekilde tasarlanmıştır.%{csp_url}Bu
+    kursların her biri bilgisayar bilimlerine yaşa uygun bir giriş noktası olacak
+    şekilde tasarlanmış olsa da, daha önce deneyime sahip öğrenciler keşfedilecek
+    birçok yeni konu bulacak ve tanıdık konuları yeni ve daha zorlu bağlamlarda tekrar
+    gözden geçirirler.
   csc_page_top_desc: Bilgisayar bilimi (CS) ile matematik, dil sanatları, bilim ve
     sosyal bilgiler gibi diğer konular arasında bağlantı kurun.
   csc_page_intro_heading: Temel konu standartlarını ele alırken CS öğretin
@@ -1558,10 +1592,10 @@ tr:
     öğretmenlere katılın. Bölgesel Ortaklarımız, bireysel öğretmenler veya okul çapında
     PD için yüksek kaliteli, bir günlük Code.org atölyeleri sunmaktadır. [Yakınınızdaki
     bir profesyonel gelişim atölyesi için kaydolun] (%{sign_up_url})!
-  csf_page_faq_answer_04_02: Join over 100,000 teachers who have participated in our
-    workshops. The majority of our workshop attendees say, 'It's the best professional
-    development I've ever attended.' In fact, [90% of attendees would recommend our
-    program to other teachers](%{rec_url})!
+  csf_page_faq_answer_04_02: Atölyelerimize katılan 100.000'den fazla öğretmene katılın.
+    Atölye katılımcılarımızın çoğu, “Şimdiye kadar katıldığım en iyi mesleki gelişim”
+    diyor. Aslında, [90% Katılımcıların oranı programımızı diğer öğretmenlere tavsiye
+    eder] ()!%{rec_url}
   csf_page_faq_question_05: CS Temelleri öğretmek için önerilen zamanlama nedir?
   csf_page_faq_answer_05: Her CSF kursu 45 dakikalık dönemler için tasarlanmış 13-17
     ders içerir. Tüm öğrencilerin dersten derse öğretmen tarafından belirlenen bir
@@ -1569,9 +1603,10 @@ tr:
     hızlarında tamamlanabilirken, birlikte deneyimlenmek üzere tasarlanmış öğretmen
     liderliğindeki birçok proje seviyesi vardır..
   csf_page_faq_question_06: CS Fundamentals için hangi materyallere ihtiyacım var?
-  csf_page_faq_answer_06: Many lessons have handouts that guide students through activities.
-    These resources can be printed or assigned digitally. Some lessons call for typical
-    classroom supplies and manipulatives. [Visit the CSF Syllabus to learn more](%{syllabus_url}).
+  csf_page_faq_answer_06: Birçok derste öğrencilere etkinlikler boyunca rehberlik
+    eden bildiriler bulunur. Bu kaynaklar dijital olarak yazdırılabilir veya atanabilir.
+    Bazı dersler tipik sınıf malzemeleri ve manipülatifleri gerektir. [Daha fazla
+    bilgi edinmek için CSF Müfredatını ziyaret edin] ().%{syllabus_url}
   csa_page_top_desc: Introduce students to software engineering and object-oriented
     design while they learn the Java programming language in this free curriculum
     for [AP® Computer Science A (AP® CSA)](%{csa_url}).
@@ -2063,6 +2098,13 @@ tr:
     veya diğer bilgisayar bilimi haberleriyle ilgili e-posta gönderebilir miyiz?
   signup_email_preference_privacy: "(Gizlilik Politikamıza bakın)"
   signup_email_preference_yes: Evet
+  signup_email_preference_yes_elementary: Evet - Bana İlkokul Kaynakları ile ilgili
+    güncellemeleri gönder
+  signup_email_preference_yes_middle: Evet - Ortaokul Kaynakları ile ilgili güncellemeleri
+    gönder
+  signup_email_preference_yes_high: Evet - Bana Lise Kaynakları ile ilgili güncellemeleri
+    gönder
+  signup_email_preference_yes_general: Evet - Bana genel güncellemeleri gönder
   signup_email_preference_no: Hayır
   signup_email_preference_error: E-posta tercihi gereklidir
   signup_multiple_event_warning: Kayıt yaptığınızda, okul ismini şehrini haritaya

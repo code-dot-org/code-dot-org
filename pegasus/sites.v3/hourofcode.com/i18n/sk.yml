@@ -9,31 +9,31 @@ sk:
   campaign_date_start_long: 5. december
   campaign_date_short: 5.-11. dec
   campaign_date_full: 5. až 11. december
-  campaign_date_year: '2022'
-  campaign_date_full_year: 5.-11. December 2022
+  campaign_date_year: '2016'
+  campaign_date_full_year: 5.-11. December 2016
   nonus_campaign_date_start_short: 1. október
   nonus_campaign_date_start_long: 1. október
   nonus_campaign_date_short: 1. október - 18. december
   nonus_campaign_date_full: 1. októbra – 18. decembra
-  nonus_campaign_date_year: '2022'
+  nonus_campaign_date_year: '2016'
   nonus_campaign_date_full_year: 1. októbra 2022  – 18. decembra 2022
   latam_campaign_date_start_short: 1. október
   latam_campaign_date_start_long: 1. október
   latam_campaign_date_short: 1. október - 18. december
   latam_campaign_date_full: 1. októbra – 18. decembra
-  latam_campaign_date_year: '2022'
+  latam_campaign_date_year: '2016'
   latam_campaign_date_full_year: 1. októbra 2022  – 18. decembra 2022
   europe_campaign_date_start_short: 10. október
   europe_campaign_date_start_long: 10. október
   europe_campaign_date_short: 10. - 25. október
   europe_campaign_date_full: 10. - 25. október
-  europe_campaign_date_year: '2022'
+  europe_campaign_date_year: '2016'
   europe_campaign_date_full_year: 10. - 25. október 2020
   africa_campaign_date_start_short: 1. október
   africa_campaign_date_start_long: 1. október
   africa_campaign_date_short: 1. - 31. október
   africa_campaign_date_full: 1. - 31. október
-  africa_campaign_date_year: '2022'
+  africa_campaign_date_year: '2016'
   africa_campaign_date_full_year: 1. - 31. október 2020
   hoc2022_header: Skúmajte, hrajte sa, tvorte!
   social_hoc2022_explore_play_create: Využite informatiku na objavovanie, hranie sa
@@ -107,19 +107,19 @@ sk:
     ktorú by počítačová veda mohla zohrávať pri vytváraní spravodlivejšieho sveta.
   oceans_landing_videos: Videá o umelej inteligencii a strojovom učení
   oceans_behind_the_scenes: 'AI pomáha oceánom: ako program funguje'
-  oceans_behind_the_scenes_1: Levels 2-4 use a pretrained model provided by the <a
-    href="https://www.tensorflow.org/" >TensorFlow</a> <a href="https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md">
-    MobileNet </a> project. A MobileNet model is a <a href="https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks">convolutional
-    neural network</a> that has been trained on <a href="http://www.image-net.org/">ImageNet</a>,
-    a dataset of over 14 million images hand-annotated with words such as "balloon"
-    or "strawberry". In order to customize this model with the labeled training data
-    the student generates in this activity, we use a technique called <a href="https://en.wikipedia.org/wiki/Transfer_learning">Transfer
-    Learning</a>. Each image in the training dataset is fed to MobileNet, as pixels,
-    to obtain a list of annotations that are most likely to apply to it. Then, for
-    a new image, we feed it to MobileNet and compare its resulting list of annotations
-    to those from the training dataset. We classify the new image with the same label
-    (such as "fish" or "not fish") as the images from the training set with the most
-    similar results.
+  oceans_behind_the_scenes_1: Úrovne 2-4 používajú predtrénovaný model poskytnutý
+    projektom <a href="https://www.tensorflow.org/" ></a> <a href="https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md">
+    TensorFlow MobileNet. </a> Model MobileNet je <a href="https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks">konvolučná
+    neurónová sieť,</a> ktorá bola vyškolená na <a href="http://www.image-net.org/">ImageNet</a>,
+    súbore údajov s viac ako 14 miliónmi obrázkov ručne anotovaných slovami ako „balón“
+    alebo „jahoda“. Aby sme tento model prispôsobili označeným tréningovým údajom,
+    ktoré študent generuje v tejto aktivite, používame techniku s názvom <a href="https://en.wikipedia.org/wiki/Transfer_learning">Transfer
+    Learning.</a>Každý obrázok v tréningovom súbore údajov sa privádza do MobileNet
+    ako pixely, aby sa získal zoznam anotácií, ktoré sa naň s najväčšou pravdepodobnosťou
+    vzťahujú. Potom, pre nový obrázok, ho privedeme do MobileNet a porovnáme jeho
+    výsledný zoznam anotácií s tými z tréningového súboru údajov. Nový obrázok klasifikujeme
+    rovnakým štítkom (napríklad „ryba“ alebo „nie ryba“) ako obrázky z tréningovej
+    sady s najpodobnejšími výsledkami.
   oceans_behind_the_scenes_1_markdown: Úrovne 2-4 používajú predtrénovaný model poskytnutý
     projektom [TensorFlow](https://www.tensorflow.org/) [MobileNet](https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md).
     Model MobileNet je [konvolučná neurónová sieť] (https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks),
@@ -133,13 +133,13 @@ sk:
     anotácií s tými z tréningového súboru údajov. Nový obrázok klasifikujeme rovnakým
     štítkom (napríklad „ryba“ alebo „nie ryba“) ako obrázky z tréningovej sady s najpodobnejšími
     výsledkami.
-  oceans_behind_the_scenes_2: Levels 6-8 use a <a href="https://en.wikipedia.org/wiki/Support-vector_machine">Support-Vector
-    Machine</a> (SVM). We look at each component of the fish (such as eyes, mouth,
-    body) and assemble all of the metadata for the components (such as number of teeth,
-    body shape) into a vector of numbers for each fish. We use these vectors to train
-    the SVM. Based on the training data, the SVM separates the "space" of all possible
-    fish into two parts, which correspond to the classes we are trying to learn (such
-    as "blue" or "not blue").
+  oceans_behind_the_scenes_2: Úrovne 6-8 používajú <a href="https://en.wikipedia.org/wiki/Support-vector_machine">podporný
+    vektorový stroj</a> (SVM). Pozeráme sa na každú zložku rýb (ako sú oči, ústa,
+    telo) a zostavíme všetky metaúdaje pre komponenty (ako je počet zubov, tvar tela)
+    do vektora čísel pre každú rybu. Tieto vektory používame na trénovanie SVM. Na
+    základe tréningových údajov SVM rozdeľuje „priestor“ všetkých možných rýb na dve
+    časti, ktoré zodpovedajú triedam, ktoré sa snažíme naučiť (napríklad „modrá“ alebo
+    „nie modrá“).
   oceans_behind_the_scenes_2_markdown: Úrovne 6-8 používajú [Support-Vector Machine]
     (https://en.wikipedia.org/wiki/Support-vector_machine) (SVM). Pozeráme sa na každú
     zložku rýb (ako sú oči, ústa, telo) a zostavíme všetky metaúdaje pre komponenty
@@ -184,6 +184,15 @@ sk:
   grade_level_label_elementary: Základná škola
   grade_level_label_middle: 2. stupeň ZŠ
   grade_level_label_high: Stredná škola
+  curricula_title_elementary: Učebné osnovy základnej školy
+  curricula_desc_elementary: Prezrite si zábavné, bezplatné kurzy a aktivity, ktoré
+    vás pozývajú na objavovanie informatiky so študentmi základných škôl.
+  curricula_title_middle: Učebné osnovy strednej školy
+  curricula_desc_middle: Prezrite si pútavé ponuky, ktoré vám a vašim študentom stredných
+    škôl umožnia spoločne skúmať informatiku.
+  curricula_title_high: Učebné osnovy pre stredné školy
+  curricula_desc_high: Prezrite si presvedčivé kurzy a aktivity, ktoré vás a vašich
+    študentov stredných škôl pozývajú hlbšie sa venovať informatike.
   students_label: Študenti
   teachers_label: Učitelia
   teacher_label_csf: 'Základy informatiky: učiteľ'
@@ -210,6 +219,13 @@ sk:
   call_to_action_explore_choice_level: Preskúmajte vzorovú úroveň s výberom možností
   call_to_action_explore_collection: Preskúmajte kolekciu
   call_to_action_explore_unplugged_lesson: Preskúmajte lekcie bez počítača
+  call_to_action_explore_csf: Preskúmajte základy CS
+  call_to_action_explore_csd: Preskúmajte CS Discoveries
+  call_to_action_explore_csp: Preskúmajte princípy CS
+  call_to_action_explore_csc: Preskúmajte CS Connections
+  call_to_action_explore_csa: Preskúmajte AP® Computer Science A
+  call_to_action_explore_maker: Preskúmajte učebné osnovy Maker
+  call_to_action_explore_hoc: Preskúmajte návody Hodina kódu
   call_to_action_try_app_lab: Vyskúšajte si App Lab
   call_to_action_view_lesson_plan: Zobraziť plán lekcií
   call_to_action_self_paced_pl: Začnite profesionálne vzdelávanie s vlastným tempom
@@ -254,6 +270,7 @@ sk:
   call_to_action_notify_available: Upozorniť ma, keď je k dispozícii
   call_to_action_register_early_access: Zaregistrujte sa na včasný prístup
   call_to_action_open_positions: Zobraziť otvorené pozície
+  call_to_action_get_guide: Získajte sprievodcu
   aria_label_call_to_action_afe: Získajte viac informácií o Amazon Future Engineer
   aria_label_call_to_action_teaching_csf: Spustite program odborného vzdelávania Teaching
     Computer Science Fundamentals
@@ -362,6 +379,8 @@ sk:
   curriculum_name_csa: AP® Počítačová veda A
   curriculum_name_csc_02: Akýkoľvek modul CS Connections
   curriculum_name_ai: Umelá inteligencia a strojové učenie
+  curriculum_name_artificial_intelligence: Umelá inteligencia (AI)
+  curriculum_name_maker: výrobca
   curriculum_name_maker_cp: Vytváranie aplikácií pomocou zariadení (Circuit Playground)
   curriculum_name_maker_microbit: Vytváranie aplikácií pomocou zariadení (micro:bit)
   curriculum_name_creating_apps_with_devices: Aplikácie a hardvér
@@ -419,6 +438,12 @@ sk:
     vo výpočtovej technike. Vytvárajte programy, ktoré využívajú hardvérové vstupy
     a výstupy. Tento tematický celok existuje aj vo verzii pre zariadenia micro:bit
     a Circuit Playground.
+  curriculum_desc_csa: Predstavte študentom softvérové inžinierstvo a objektovo orientovaný
+    dizajn, zatiaľ čo sa učia programovací jazyk Java v tomto bezplatnom učebnom pláne
+    pre AP® Computer Science A (AP® CSA).
+  curriculum_desc_maker: Vzdelávanie tvorcov posúva STEM (veda, technológia, inžinierstvo,
+    matematika) o krok ďalej tým, že pozýva praktické skúsenosti a spoluprácu do triedy,
+    aby pomohlo učiť riešenie problémov a kritické myslenie.
   collection_hardware: Zamerané na hardvér
   collection_hardware_desc: Motivuje žiakov k tomu, aby riešili úlohy pomocou dát
     a fyzických zariadení.
@@ -457,6 +482,7 @@ sk:
   module_label_student_content_resources: Obsah a zdroje
   module_label_new: Nový
   module_label_coming_soon: Už čoskoro
+  module_label_available_now: Teraz k dispozícii
   module_label_video_series: Video séria
   module_label_self_paced: Modul s vlastným tempom
   module_ages_5_10: 5 – 10
@@ -467,6 +493,8 @@ sk:
   module_grade_2_5: 2. – 5. ročník
   module_grade_3_5: 3. – 5. ročník
   module_grade_3_8: 3 – 8
+  module_grade_k_12: 5-18 rokov
+  module_grade_3_12: 3-12
   module_grade_6_12: 6 – 12
   module_grade_6_10: 6. – 9. ročník
   module_grade_9_12: 9-12
@@ -563,6 +591,8 @@ sk:
   heading_java_lab: Java Lab
   heading_objects_first: Najprv objekty
   heading_these_lessons_will: 'Tieto lekcie budú:'
+  heading_explore_curriculum_catalog: Preskúmajte všetky naše kurzy v katalógu učebných
+    osnov
   professional_learning_section_desc: Získajte pri príprave na vyučovanie potrebnú
     podporu. Učitelia tento kurz obľubujú a až 90 % z nich ho hodnotí ako najlepší
     program profesijného rozvoja, aký kedy absolvovali. 
@@ -824,6 +854,11 @@ sk:
     modeloch (napríklad ChatGPT) a Generative AI. Vypočujte si, ako tieto nové technológie
     fungujú priamo od odborníkov: Mira Murati, CTO OpenAI, a Cristóbal Valenzuela,
     generálny riaditeľ spoločnosti RunwayML.'
+  ai_pl_101_llm_slides_title: Výzva k veľkému jazykovému modelu pre pedagógov
+  ai_pl_101_llm_slides_desc: Nástroje na získanie najlepšieho možného výstupu z LLM,
+    ako je ChatGPT, od začiatočníkov po pokročilých. Zahŕňa štartovacie výzvy pre
+    tých, ktorí si len namáčajú prsty na nohách, ako aj pokročilé nástroje pre tých,
+    ktorí chcú maximalizovať svoj potenciál.
   how_ai_works_hero_heading: Ako funguje umelá inteligencia
   how_ai_works_hero_desc: Ponorte sa do sveta AI pomocou našej série videí a sprievodných
     lekcií „Ako funguje AI“!
@@ -1711,8 +1746,8 @@ sk:
   ai_activity_zooniverse: Zooniverse - Snapshot Mountain Zebra
   ai_activity_zooniverse_desc: Pomôžte chrániť ohrozenú Cape Mountain Zebra identifikáciou
     rôznych zvierat na obrázkoch.
-  codeorg_homepage_hoc2018_curriculum: Go further with <a href="%{studio_url}/courses"
-    class="hoc2018-curriculum-link">Code.org courses</a>
+  codeorg_homepage_hoc2018_curriculum: Choďte ďalej s kurzami <a href="%{studio_url}/courses"
+    class="hoc2018-curriculum-link">Code.org</a>
   codeorg_homepage_hoc2018_dance_heading: Vytvorte si vlastný <span class="highlight-word">Dance&nbsp;Party</span>
   codeorg_homepage_hoc2018_header_line1: Hodina Kódu sa blíži...
   codeorg_homepage_hoc2018_header_line2_desktop: Čo vytvoríte vy <span class="hoc2018-highlight-word">?</span>
@@ -2049,6 +2084,13 @@ sk:
     Code.org, miestnych príležitostiach alebo iných novinkách v oblasti informatiky?
   signup_email_preference_privacy: "(Pozrite si naše zásady ochrany osobných údajov)"
   signup_email_preference_yes: Áno
+  signup_email_preference_yes_elementary: Áno - Pošlite mi aktuálne informácie o zdrojoch
+    pre základnú školu
+  signup_email_preference_yes_middle: Áno - Pošlite mi aktuálne informácie o zdrojoch
+    strednej školy
+  signup_email_preference_yes_high: Áno - pošlite mi aktuálne informácie o zdrojoch
+    pre stredné školy
+  signup_email_preference_yes_general: Áno - Pošlite mi všeobecné aktualizácie
   signup_email_preference_no: Nie
   signup_email_preference_error: Vyžaduje sa predvoľba e-mailu
   signup_multiple_event_warning: Meno školy a mesto zverejníme na mape po registrácií.
@@ -5395,11 +5437,11 @@ sk:
     dobrodružstvo cez tento svet Minecraftu.
   tutorial_minecraft-2016_longdescription: Zostavte hru Minecraft. Vytvorte si vlastné
     verzie kurčiat, oviec, popínavých rastlín, zombie a ďalších.
-  tutorial_thinkersmith-es_longdescription: Mediante el uso de un "Vocabulario Robot"
-    predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar
-    a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento
+  tutorial_thinkersmith-es_longdescription: Mediante el uso de un „Vocabulario Robot“
+    preddefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar
+    a cabo tareas espec ficas sin ser estas discutidas previamente.&iacute;Este segmento
     ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones
-    as&iacute; como la valiosa habilidad de depuraci&oacute;n.
+    ako como la valiosa habilidad de depuraci n.&iacute;&oacute;
   tutorial_pixie_longdescription: Výukový program Hodina kódu s Pixie
   tutorial_play_longdescription: Vytvor si v Play Labe príbeh alebo hru! Naprogramuj
     zvieratá, pirátov, zombíkov, ninjov a veľa ďalších postáv tak, aby sa hýbali,
@@ -12395,12 +12437,12 @@ sk:
   tutorial_googlename _longdescription: Vyberte meno a oživte písmená slova pomocou
     kódu. Vyberte si prezývku, meno domáceho maznáčika, zviera, šport, miesto alebo
     koníček.
-  tutorial_carnegiezillah_longdescription: Zillah City is thriving, and music is in
-    the air. Rumor has it, the famed Gargantua bot is online and sending the last
-    Toxibots to trash the city block by block…. Grab your cobot hoverboard and get
-    ready to groove, move, and finish off what you started! Players program their
-    cobot hoverbots to change lanes, avoid obstacles, and take out many Toxibots in
-    this rhythm-styled game.
+  tutorial_carnegiezillah_longdescription: Mesto Zillah prosperuje a hudba je vo vzduchu.
+    Hovorí sa, že slávny robot Gargantua je online a posiela posledných Toxibotov,
+    aby zabili mestský blok po bloku.…Chyťte svoj cobot hoverboard a pripravte sa
+    na drážkovanie, pohyb a dokončenie toho, čo ste začali! Hráči programujú svoje
+    kobotové hoverboty tak, aby zmenili jazdné pruhy, vyhýbali sa prekážkam a odstránili
+    veľa Toxibotov v tejto hre v štýle rytmu.
   tutorial_nasachspacejam_longdescription: Vytvorte slnečnú sústavu, ktorá skutočne
     skába! Dozviete sa viac o hudbe, astronómii a kódovaní v tejto činnosti s vlastným
     vedením (nie sú potrebné žiadne skúsenosti s kódovaním). Naprogramujte planéty

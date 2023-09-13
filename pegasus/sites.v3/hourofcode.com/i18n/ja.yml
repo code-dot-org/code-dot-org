@@ -126,6 +126,12 @@ ja:
   grade_level_label_elementary: 小学校
   grade_level_label_middle: ミドルスクール
   grade_level_label_high: ハイスクール
+  curricula_title_elementary: 小学校カリキュラム
+  curricula_desc_elementary: 小学生と一緒にコンピュータサイエンスを探求できる、楽しくて無料のコースやアクティビティをご覧ください。
+  curricula_title_middle: 中学校カリキュラム
+  curricula_desc_middle: あなたと中学生が一緒にコンピュータサイエンスを探求できるようにする魅力的なサービスをご覧ください。
+  curricula_title_high: 高校カリキュラム
+  curricula_desc_high: あなたと高校生がコンピュータサイエンスをより深く掘り下げることができる魅力的なコースやアクティビティをご覧ください。
   students_label: 生徒
   teachers_label: 先生方
   teacher_label_csf: CS基礎教師
@@ -152,6 +158,13 @@ ja:
   call_to_action_explore_choice_level: 選択レベルの例を探索
   call_to_action_explore_collection: コレクションを探索
   call_to_action_explore_unplugged_lesson: アンプラグド・レッスンを探索
+  call_to_action_explore_csf: CS ファンダメンタルズを見る
+  call_to_action_explore_csd: CSディスカバリーを見る
+  call_to_action_explore_csp: CS 原則の詳細を見る
+  call_to_action_explore_csc: CS 接続の詳細を見る
+  call_to_action_explore_csa: Explore AP® コンピュータサイエンス A
+  call_to_action_explore_maker: Maker カリキュラムを探す
+  call_to_action_explore_hoc: Hour of Code のチュートリアルを見る
   call_to_action_try_app_lab: アプリラボを試す
   call_to_action_view_lesson_plan: 授業計画を見る
   call_to_action_self_paced_pl: 自分のペースで進められる専門的な学習を始める
@@ -196,6 +209,7 @@ ja:
   call_to_action_notify_available: 利用可能になったら通知する
   call_to_action_register_early_access: 早期アクセスに登録する
   call_to_action_open_positions: オープンポジションを表示
+  call_to_action_get_guide: ガイドを入手
   aria_label_call_to_action_afe: Amazon フューチャーエンジニアの詳細はこちら
   aria_label_call_to_action_teaching_csf: コンピュータサイエンスの基礎を教える専門学習プログラムを開始
   aria_label_call_to_action_teaching_csd: ティーチング・コンピュータ・サイエンス・ディスカバリーズの専門学習プログラムを開始
@@ -270,6 +284,8 @@ ja:
   curriculum_name_csa: コンピュータ・サイエンスA
   curriculum_name_csc_02: 任意のCS接続モジュール
   curriculum_name_ai: "  AIと機械学習  "
+  curriculum_name_artificial_intelligence: 人工知能 (AI)
+  curriculum_name_maker: メーカー
   curriculum_name_maker_cp: デバイスを使ったアプリの作成 (サーキットプレイグラウンド)
   curriculum_name_maker_microbit: 'デバイスによるアプリの作成 (micro: bit)'
   curriculum_name_creating_apps_with_devices: デバイスを使ったアプリの作成
@@ -296,6 +312,8 @@ ja:
   curriculum_desc_data_society: 問題解決におけるデータの役割と、その過程におけるコンピュータの支援に重点をおきます。表現システムと関連する課題を扱います。データ収集がどのように問題解決を助けるかを発見します。
   curriculum_desc_creating_apps_with_devices: コンピューティングにおける物理デバイスの役割を探索します。ハードウェアの入出力を利用したプログラムを開発します。このユニットには、micro:bitとCircuit
     Playgroundの両方用のバージョンがあります。
+  curriculum_desc_csa: AP® Computer Science A (AP® CSA) 向けのこの無料カリキュラムで、学生にJavaプログラミング言語を学びながら、ソフトウェアエンジニアリングとオブジェクト指向設計を紹介してください。
+  curriculum_desc_maker: メーカー教育は、STEM（科学、技術、工学、数学）をさらに一歩進め、実践的な経験とコラボレーションを教えることで、問題解決と批判的思考を教えるのに役立ちます。
   collection_hardware: ハードウェアに焦点を当てる
   collection_hardware_desc: 生徒がデータや物理的なデバイスを使用して問題を解決できるようにします。
   collection_design_purpose: 目的を持ったデザインに焦点を当てる
@@ -328,6 +346,7 @@ ja:
   module_label_student_content_resources: コンテンツとリソース
   module_label_new: 新規
   module_label_coming_soon: 近日公開予定
+  module_label_available_now: 今すぐ利用可能
   module_label_video_series: ビデオシリーズ
   module_label_self_paced: セルフペースモジュール
   module_ages_5_10: 5-10
@@ -338,6 +357,8 @@ ja:
   module_grade_2_5: 2-5
   module_grade_3_5: 3-5
   module_grade_3_8: 3-8
+  module_grade_k_12: 幼稚園～高校3年
+  module_grade_3_12: 3-12
   module_grade_6_12: 6-12
   module_grade_6_10: 6-10
   module_grade_9_12: 9-12
@@ -420,6 +441,7 @@ ja:
   heading_java_lab: Javaラボ
   heading_objects_first: オブジェクトファースト
   heading_these_lessons_will: これらのレッスンでは次のことを行います。
+  heading_explore_curriculum_catalog: カリキュラムカタログのすべてのコースをご覧ください
   professional_learning_section_desc: 指導準備に必要なサポートを受けましょう。90％以上の教師が、これまでで最高の専門能力開発であると評価しています！
   professional_learning_section_desc_short: 指導準備に必要なサポートを受けましょう。
   professional_learning_section_desc_self_paced: ジャストインタイムのサポートで、あなたのスケジュールに合わせて自信を持って教える準備ができます。
@@ -575,6 +597,8 @@ ja:
     AI の世界をナビゲートし、学生の学習体験を向上させることができるようにすることを目的としています。
   ai_pl_101_video_desc_6: 大規模言語モデル（ChatGPTなど）とジェネレーティブAIに関する2つの新しいビデオを特集して、AIに大きな変化をもたらす新しいテクノロジーについて詳しく学んでください。これらの新しいテクノロジーがどのように機能するかを、OpenAI
     の CTO であるミラ・ムラティと RunwayML の CEO であるクリストバル・バレンズエラという専門家から直接聞くことができます。
+  ai_pl_101_llm_slides_title: 教育者向けの大規模言語モデルプロンプト
+  ai_pl_101_llm_slides_desc: 初心者から上級者まで、ChatGPTのようなLLMから可能な限り最高のアウトプットを引き出すためのツール。初心者向けのスタータープロンプトのほか、可能性を最大限に引き出したいユーザー向けの高度なツールも含まれています。
   how_ai_works_hero_heading: "「AI はどのように機能するか 」"
   how_ai_works_hero_desc: ビデオシリーズとそれに付随するレッスンである「How AI Works」で AI の世界に飛び込みましょう！
   how_ai_works_intro_desc: この一連の短いビデオとそれに付随する教室での授業では、人工知能がどのように機能し、なぜ重要なのかを教員と生徒に紹介します。トピックに基づいて個別のレッスンを選択したり、1つのクラスで一連のトピックをすべて調べたり、7つのレッスンすべてを教えてより深く掘り下げたりすることができます。
@@ -1093,10 +1117,8 @@ ja:
   hoc_live: アワー・オブ・コードライブ
   hoc_live_sign_up_title: アワー・オブ・コードライブにサインアップ
   hoc_live_learn_title: アワー・オブ・コードライブで学ぼう
-  hoc_live_sign_up_message: Learn in real time alongside special guests! Students
-    of all ages and abilities, including those without computers, are welcome. Join
-    our mailing list to receive recordings of the episodes and resources to continue
-    learning at home. See past episodes [here](%{episodes_url}).
+  hoc_live_sign_up_message: 特別ゲストと一緒にリアルタイムで学ぼう！パソコンを持っていない学生も含め、年齢や能力を問わずすべての学生を歓迎します。私たちのメーリングリストに参加して、エピソードの録画や家庭での学習を続けるためのリソースを受け取りましょう。
+    [here]過去のエピソードを見る ()%{episodes_url}
   hoc_live_learn_message: 特別ゲストと一緒にコンピュータサイエンスの基本概念を学びましょう！コンピュータを持たない学生も含め、あらゆる年齢や能力の学生が、バーチャルワークショップに参加できます。Hour
     of Code ライブのエピソードを通じて、自宅でも学習を続けてください。
   hoc_live_join_us: あなたもやってみませんか？
@@ -1153,7 +1175,7 @@ ja:
     のコース</a> を進める
   codeorg_homepage_hoc2018_dance_heading: 自分で作る <span class="highlight-word">ダンス&nbsp;パーティー</span>
   codeorg_homepage_hoc2018_header_line1: アワー・オブ・コードがやってくる...
-  codeorg_homepage_hoc2018_header_line2_desktop: What will you <span class="hoc2018-highlight-word">create?</span>
+  codeorg_homepage_hoc2018_header_line2_desktop: <span class="hoc2018-highlight-word">何を作成しますか?</span>
   codeorg_homepage_hoc2018_header_line2_mobile: 何を作りますか。
   codeorg_homepage_hoc2018_header_line3: 想像力を解き放ち、イノベーションを生み出しましょう。Hour of Codeから始めて、それが何であれ、あなた自身のクリエイティビティブランドから始めましょう。
   codeorg_homepage_hoc2018_musician_before: 特集
@@ -1169,7 +1191,7 @@ ja:
   hoc2018_tutorial_mchoc_description: コードブロックで、アレックスやスティーブをマインクラフト世界の冒険に連れ出しましょう。
   codeorg_homepage_hoc2019_dance_heading: 新しい <span class="highlight-word"> Dance&nbsp;Party!</span>
     をお試しください
-  codeorg_homepage_hoc2019_dance_heading_markdown: Code a **Dance&nbsp;Party!**
+  codeorg_homepage_hoc2019_dance_heading_markdown: "&nbsp;**ダンスパーティーをコーディングしよう！**"
   codeorg_homepage_special2020_body1: "  学校閉鎖に直面している保護者や先生への支援。  "
   codeorg_homepage_special2020_body2: おすすめの学習リソースをご覧ください。
   codeorg_homepage_special2020_body: この夏も学び続けましょう！自宅での学習に役立つリソースをご覧ください。
@@ -1445,6 +1467,10 @@ ja:
   signup_email_preference_opt_in: Code.orgコースのアップデート、地元の何かよい機会、あるいはその他コンピューターサイエンスのニュースなどメールで連絡してもよいですか？
   signup_email_preference_privacy: "（プライバシーポリシーをご覧ください）"
   signup_email_preference_yes: はい
+  signup_email_preference_yes_elementary: はい-小学校向けリソースに関する最新情報を送ってください
+  signup_email_preference_yes_middle: はい-中学校のリソースに関する最新情報を送ってください
+  signup_email_preference_yes_high: はい-高校のリソースに関する最新情報を送ってください
+  signup_email_preference_yes_general: はい-一般的な更新情報を送ってください
   signup_email_preference_no: いいえ
   signup_email_preference_error: Eメールプリファレンスは必須です
   signup_multiple_event_warning: 複数のイベントを開催する場合は、それぞれに一意の名前またはメールアドレスを提出してください。我々は、名前とメールアドレスの組み合わせごとに1
@@ -3216,9 +3242,8 @@ ja:
     the Pandaと彼のすてきなトーストフレンドが、基本的なコマンドと構造を生徒たちに教えます。Bamboo JS アクティビティは、コーディングにもう少しアニメーションとアートとデザインを加えたい学生のためのデザインです。Bamboo
     アクティビティはあらゆる年齢の学生に最適です。 '
   tutorial_robojav_longdescription: シミュレートされたロボットやカスタマイズされたクリーチャーのための小さな世界を画面上に構築しながら、Javaプログラミングの基礎を1時間で学べます。事前のプログラミング経験は必要ありません。対象トピックには、オブジェクト、メソッド、パラメーター、シンプルなグラフィックが含まれます。
-  tutorial_roboba_longdescription: "RoboBlockly is designed for beginners to learn
-    math with robots in Blockly. The Algebra 1 activities are self-guided. \nRoboBlockly
-    prepares students to be ready to program in C/C++.\n"
+  tutorial_roboba_longdescription: "RoboBlocklyは、初心者がBlocklyのロボットを使って数学を学ぶことができるように設計されています。Algebra
+    1 のアクティビティはガイド不要です。 \nRoboBlocklyは、学生がC/C++でプログラミングできるよう準備を整えます。\n"
   tutorial_knodsnake_longdescription: 'JavaScriptでスネークゲームを作成する方法を学びましょう！ '
   tutorial_soccharater_longdescription: 自分だけのピクセルキャラクターをコーディングしよう！HTML を使用してキャラクターを作成し、CSS
     を使用してスタイルを設定し、JavaScript を使用してかわいいピクセル人物をアニメーション化します。自分でコーディングすることも、友達を招待してチームコーディングゲームと一緒にコーディングすることもできます。
@@ -3239,18 +3264,14 @@ ja:
   tutorial_codemoji_longdescription: Codemojiアクティビティは、1年生から6年生までの生徒が絵文字を使用して基本的なコーディングの概念を学ぶためのWebベースのアクティビティです。アクティビティを終えた生徒たちは、基本的な
     HTML タグと概念について学びました。これは、学生がわずか数ステップで基本的なウェブサイトを構築するというコーディングプロジェクトを進めるのに役立ちます。Codemoji
     アクティビティを終えると、生徒たちは実際のコーディングスキルを身につけていきます。
-  tutorial_robobii_longdescription: "RoboBlockly is designed for beginners to learn
-    coding with robots in Blockly. The coding activities are self-guided with tutorial
-    videos. \nRoboBlockly prepares students to be ready to program in C/C++.\n"
-  tutorial_robobm_longdescription: "RoboBlockly is designed for beginners to learn
-    math with robots in Blockly. The math activities are self-guided. \nRoboBlockly
-    prepares students to be ready to program in C/C++.\n"
-  tutorial_codingrobots_longdescription: "RoboBlockly is designed for beginners to
-    learn coding and math with robots. The activities are student-guided with tutorial
-    videos. \nRoboBlockly prepares students to be ready to program in C/C++.\n"
-  tutorial_robob_longdescription: "RoboBlockly is designed for beginners to learn
-    robotics with coding in Blockly. The robotics activities are self-guided with
-    tutorial videos. \nRoboBlockly prepares students to be ready to program in C/C++.\n"
+  tutorial_robobii_longdescription: "RoboBlocklyは、初心者がBlocklyでロボットを使ったコーディングを学ぶために設計されています。コーディングアクティビティはチュートリアルビデオでガイドなしで行えます。
+    \nRoboBlocklyは、学生がC/C++でプログラミングできるよう準備を整えます。\n"
+  tutorial_robobm_longdescription: "RoboBlocklyは、初心者がBlocklyのロボットを使って数学を学ぶことができるように設計されています。数学のアクティビティは自習型です。
+    \nRoboBlocklyは、学生がC/C++でプログラミングできるよう準備を整えます。\n"
+  tutorial_codingrobots_longdescription: "RoboBlocklyは、初心者がロボットを使ってコーディングと数学を学ぶために設計されています。アクティビティは学生が指導するチュートリアルビデオで行われます。
+    \nRoboBlocklyは、学生がC/C++でプログラミングできるよう準備を整えます。\n"
+  tutorial_robob_longdescription: "RoboBlocklyは、初心者がBlocklyでコーディングしてロボット工学を学ぶことができるように設計されています。ロボット工学のアクティビティは、チュートリアルビデオでガイドなしで行えます。
+    \nRoboBlocklyは、学生がC/C++でプログラミングできるよう準備を整えます。\n"
   tutorial_coders_longdescription: "このステップバイステップのパズルゲームでは、ボットプログラミングを簡単に紹介できます。 \n\n目的は、他のプレイヤーとの宇宙船レースに勝つことです。\n\nゲームの開始は簡単で、船を動かすのに数行のコードしか必要ありませんが、より洗練されたボットを作成するための改善の可能性はほぼ無限にあります。 "
   tutorial_tynkerhw_longdescription: このハイオクなレーシングゲームでHot Wheelsを使ってプログラミングを学びましょう！幅広い車種から選んで、複雑なレーストラックをナビゲートしながらプログラミングを学びましょう。障害物を飛び越え、コーナーを滑ってレースに勝ちましょう。自分のレーストラックをプログラムして、友達にレースを挑むこともできます。
   tutorial_tynkermh_longdescription: モンスターハイはスカベンジャーハントを主催しています!ドラッグアンドドロップブロックでコーディングパズルを解き、フランキー、ドラキュラウラ、クローディーン、クレオ、グーリアを助けよう。モンスター・ハイのホールでクエストを進めながら、障害物を避けて学校の紋章をすべて見つけてください。それから、グールたちと一緒に自分だけのダンスパーティーミュージックビデオをプログラムして、友達と共有しましょう。
@@ -3291,9 +3312,9 @@ ja:
   tutorial_tlcknight_longdescription: このアクティビティでは、2 つの異なる表現を使用してパズルを解きます。最初はかなり難しいですが、ボードや動きの表現を変えるととても簡単になります。問題を表すグラフを作成しましょう。抽象化を使うことの威力と、表現の選択によって問題がいかに簡単になるかをご覧ください。このアクティビティは、ツアーガイドアクティビティに続くものです。
   tutorial_fufafit_longdescription: 学生は、授業と運動感覚活動を通じて、高度なプログラミングの概念（機能）を学びます。学生は画面上の機能に関する知識を応用してプログラムを実行します。このレッスンは、シーケンス、条件、ループ、またはその他の基本的なプログラミング概念についてある程度の経験がある学生と教師を対象としています。
   tutorial_ozodance_longdescription: |-
-    This teacher-led tutorial introduces students to the concept of coding with the help of Ozobot, a small programmable robot. Students will be learning how to code by creating and programming a dance routine for Ozobot! They will use OzoBlockly, a visual programming language based on Blockly, to program the dance and then have fun see their choreography come alive when Ozobot performs their dance.
+    この教師主導のチュートリアルでは、小さなプログラマブルロボットであるOzobotを使ったコーディングの概念を学生に紹介します。学生たちは、Ozobotのダンスルーチンを作成してプログラミングすることで、コーディングの仕方を学びます！Blocklyをベースにしたビジュアルプログラミング言語であるOzoBlocklyを使ってダンスをプログラミングし、Ozobotがダンスを披露すると振り付けが生き生きと動き出すのを楽しみます。
 
-    No programming experience or knowledge of Ozobot is required for this tutorial. However, even students with some programming experience will be engaged by the Ozobot games. The tutorial is designed for grades 1-12 and can be customized to your students' abilities.
+    このチュートリアルでは、Ozobot のプログラミング経験や Ozobot の知識は必要ありません。ただし、ある程度のプログラミング経験がある学生でも、Ozobot のゲームには夢中になります。チュートリアルは1年生から12年生を対象としており、生徒の能力に合わせてカスタマイズできます。
   tutorial_codingrobotics_longdescription: 学生は基本的なプログラミングの概念について学び、新しい知識をロボット工学に応用します。学生はKodableとWonder
     Workshopの両方と連携して、プログラミングの知識を活かしてPathアプリでロボットに「ダッシュ」を指示します。
   tutorial_box_longdescription: ボックスアイランドを旅して、ヒロが荒野に散らばっている時計をすべて集めるのを手伝ってください！このチュートリアルでは、アルゴリズム、シーケンス、ループ、条件式の基礎を学びます！
@@ -3342,15 +3363,15 @@ ja:
     は有限状態マシンを作成するための使いやすく無料のツールです。このアクティビティでは、単純な有限状態マシンを作成してシミュレーションした後、パズル、ガジェット、Web
     ページ、ゲームなどを表現するより複雑な有限状態マシンを作成します。
   tutorial_procolor_longdescription: |-
-    This teacher-led tutorial introduces your students to programming and computational thinking and it also explains what kind of robot Ozobot is. This activity is "unplugged", which means that the coding is not done on a computer or tablet, but on a piece of paper with markers. Students will be giving commands to Ozobot using OzoCodes, which are special color sequences. After learning about how to program Ozobot with markers and paper, students are challenged to solve a maze and help Ozobot find the way to school.
+    この教師主導のチュートリアルでは、生徒にプログラミングと計算的思考を紹介し、Ozobotがどのようなロボットであるかについても説明します。このアクティビティは「アンプラグド」です。つまり、コーディングはコンピューターやタブレットではなく、マーカー付きの紙の上で行われます。学生は、特別なカラーシーケンスであるOzoCodesを使ってOzobotにコマンドを渡します。マーカーと紙を使ってOzobotをプログラムする方法を学んだ後、生徒たちは迷路を解き、Ozobotが学校に行く道を見つけるのを手伝うことに挑戦します。
 
-    No programming experience or knowledge of Ozobot is required for this tutorial. However, even students with some programming experience will be engaged by programming Ozobot. The tutorial is designed for grades K-12 and can be customized to your students' abilities.
+    このチュートリアルでは、Ozobot のプログラミング経験や Ozobot の知識は必要ありません。ただし、ある程度のプログラミング経験がある学生でも、Ozobot のプログラミングには従事できます。チュートリアルは幼稚園から高校までの学年向けに設計されており、生徒の能力に合わせてカスタマイズできます。
   tutorial_spiralsfinch_longdescription: 'フィンチは、コンピュータサイエンスを学ぶ学生にコードを具体的かつ物理的に表現させることで、生徒に刺激を与え、楽しませるように設計された小型ロボットです。このアクティビティでは、フィンチを動かしたり回転させたりするプログラムの書き方を学びます。次に、変数を使用してロボットがらせん状に動くようにプログラムします。このアクティビティでは、Scratch
     か Snap! のどちらかでフィンチをプログラムできます。ラップトップまたは Chromebook のいずれかを使用します。事前のプログラミング経験は必要ありません。 '
   tutorial_ozoi_longdescription: |-
-    This tutorial introduces students to programming and computational thinking and it also explains what kind of robot Ozobot is. This activity is "unplugged", which means that the coding is not done on a computer or tablet, but on a piece of paper with markers. Students will be learning about how the robot works and then give commands to Ozobot using OzoCodes, which are special color sequences. After learning about how to program Ozobot with markers and paper, students are challenged to solve a maze and help Ozobot find the way to the store.
+    このチュートリアルでは、学生にプログラミングと計算的思考を紹介し、Ozobotがどのようなロボットであるかを説明します。このアクティビティは「アンプラグド」です。つまり、コーディングはコンピューターやタブレットではなく、マーカー付きの紙の上で行われます。学生はロボットの仕組みを学び、次に特殊なカラーシーケンスであるOzoCodesを使ってOzobotに命令を出します。マーカーと紙を使ってOzobotをプログラムする方法を学んだ後、生徒たちは迷路を解き、Ozobotが店への道を見つけるのを手伝うことに挑戦します。
 
-    No programming experience or knowledge of Ozobot is required for this tutorial. However, even students with some programming experience will be engaged by programming Ozobot. The tutorial is designed for grades K-12 and can be customized to your students' abilities.
+    このチュートリアルでは、Ozobot のプログラミング経験や Ozobot の知識は必要ありません。ただし、ある程度のプログラミング経験がある学生でも、Ozobot のプログラミングには従事できます。チュートリアルは幼稚園から高校までの学年向けに設計されており、生徒の能力に合わせてカスタマイズできます。
   tutorial_ticklel_longdescription: ブリックバイブリックで、思い思いのレゴイマジネーションを膨らませましょう。Tickleアプリにいくつかのコードをまとめることで、レゴWeDoに素晴らしいことをさせることができます。
   tutorial_spiralsdash_longdescription: ロボットを使ってアートを作りながら、プログラムで変数を使う基礎を学びましょう！Blocklyの変数を使って、Dashロボットの車輪速度を動的に制御できます。レッスンを修了すると、変数を割り当てる方法、変数にアクセスする方法、ループを使用して変数を動的に変更する方法を理解できるようになります。時間の経過とともに変数の値を変化させることで、Dash
     に素晴らしいスパイラルを描かせることができます！
@@ -3371,11 +3392,8 @@ ja:
     1 つは、インターフェースはわかりやすくシンプルで、雑然としたものではないということです。また、問題を単純化することや、人を理解することの重要性など、計算的思考の側面も示しています。
   tutorial_tlcaus_longdescription: このアクティビティでは、さまざまなコンピューティングの概念を覚えやすい方法で紹介します。手品を紹介し、抽象化、論理的推論、計算モデリングを使ってアルゴリズムの動作を確認する方法を示します。「パンチカード検索」アクティビティと組み合わせると、初期のコンピューターで使われていたディバイド・アンド・コンカー・アルゴリズムが導入されます。
   tutorial_tlcmicro_longdescription: このビデオは、ヒューマンコンピュータインタラクション (HCI) の一般的な入門編として、特に必要以上に使いにくいガジェットが多数ある理由を説明しています。デザインは確かに違いを生むので、インターフェースを評価して使いやすいかどうかを確認することが重要です。
-  tutorial_imathematician_longdescription: "This teacher led activity provides the
-    opportunity for pupils to use a cross curricular approach to computer science
-    and mathematics.  \n\nPupils will create a computer program to solve a variation
-    of a famous problem in a branch of Mathematics (Game Theory), called The Prisoner's
-    Dilemma.\n"
+  tutorial_imathematician_longdescription: "この教師主導のアクティビティは、生徒がコンピュータサイエンスと数学にカリキュラム横断的なアプローチをとる機会を提供します。
+    \ \n\n生徒たちは、「囚人のジレンマ」と呼ばれる、数学 (ゲーム理論) の一分野にある有名な問題のバリエーションを解くためのコンピュータープログラムを作成します。\n"
   tutorial_tlcmagic_longdescription: 魔法の仕組みを探る中で、計算的思考、特にアルゴリズム的思考に対する評価の重要性について学びます。テストとハザード分析の両方を学びます。このマジックトリックは、コンピューターサイエンティスト、エンジニア
     (およびマジシャン) がどのようにアルゴリズムを徹底的にチェックしなければならないかを示しています。彼らは物事がうまくいかないかを注意深く考え、それがうまくいくかを確認しなければなりません。
   tutorial_scratchmus_longdescription: Scratchを使用すると、独自のインタラクティブなゲーム、ストーリー、アニメーションを作成して、友達と共有できます。はじめに、インタラクティブな音楽プロジェクトを作ってみましょう。アクティビティカードとワークショップガイドも、scratch.mit.edu
@@ -3433,11 +3451,7 @@ ja:
   tutorial_rmc_longdescription: コードブロックを使って、アレックスやスティーブをこのマインクラフトの世界で冒険に連れて行ってください。
   tutorial_smc_longdescription: コードブロックを使って、アレックスやスティーブをこのマインクラフトの世界で冒険に連れて行ってください。
   tutorial_minecraft-2016_longdescription: マインクラフトのゲームを作ろう。チキン、シープ、クリーパー、ゾンビなどを自分だけのバージョンで作ろう。
-  tutorial_thinkersmith-es_longdescription: Mediante el uso de un "Vocabulario Robot"
-    predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar
-    a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento
-    ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones
-    as&iacute; como la valiosa habilidad de depuraci&oacute;n.
+  tutorial_thinkersmith-es_longdescription: あらかじめ定義された「ボキャブラリーロボット」を使うことで、学生は、&aacute;事前に説明しなくても特定のタスクを導き出す方法を発見できます。&iacute;このセグメントは、&oacute;学生にとって記号とアクションの間のつながりを、&ntilde;&iacute;&oacute;重要なデバッグ機能と同様に意味しています。&iacute;
   tutorial_pixie_longdescription: Pixie による「アワー・オブ・コード」チュートリアル
   tutorial_play_longdescription: プレイラボでお話やゲームを作りましょう！動物、海賊、ゾンビ、忍者、ほかにもいろんなキャラクターを動かして、音を出したり、点数を稼いだり、火の玉だって投げられます！
   tutorial_robomind-nl_longdescription: '学生は自分の仮想ロボットを制御することでプログラミングの基礎を学びます。オンラインコースは完全に自己完結型で、短いプレゼンテーション、動画、クイズ、およびプログラミング演習に役立つ自動ガイダンス/ヒントが用意されています。 '
@@ -7511,11 +7525,7 @@ ja:
   tutorial_hopsub_longdescription: 友達やクラスメートとペアプログラムする方法を学び、ホップスコッチのキャラクターを使って自分だけの地下鉄サーファーを作ろう！
   tutorial_itchmundos_longdescription: プログラミングツールであるScratchをご紹介しましょう。オブジェクトや背景を追加したり、イベントブロックや外観を使用したりして、プログラムに活気を与えます。
   tutorial_itchtenacity_longdescription: Scratchでプログラムされているこのプロジェクトでは、海水を浄化するロボットのシミュレーターが開発されています。
-  tutorial_kcjskiing_longdescription: 'It''s all fun and games until someone crashes
-    into a tree… or IS that the fun part? Strap on those skis and bend at the knees
-    as you guide your character down a hill of frozen obstacles using code in this
-    Scratch activity. Design the course, add movement and sensing, plus a bit of collision-interaction
-    and boom - you''ve got yourself a mountain of fun. '
+  tutorial_kcjskiing_longdescription: '誰かが木にぶつかるまでは、楽しいゲームばかりです。… それともそれが楽しい部分ですか？このScratchアクティビティのコードを使って、雪に覆われた障害物の丘をキャラクターに導きながら、スキー板を装着して膝を曲げましょう。コースをデザインし、動きと感知を追加し、衝突インタラクションとブームを少し加えれば、山のように楽しい時間を過ごせます。 '
   tutorial_groksecurity_longdescription: オンラインで安全を保つための短い入門書で、サイバー監視に全力を注ぎましょう。安全なパスワード、フィッシング、セキュリティ設定、ソーシャルメディアなどについて学べます！
   tutorial_creaticode_longdescription: スクラッチブロックを使って素晴らしい3Dプロジェクトを構築する方法を学びましょう！
   tutorial_kcjhockey_longdescription: シュートすれば得点し、観客は熱狂します！このゲームを作るときにスケート靴をひもでつなぐ必要はありませんが、コーディングスキルを磨く準備はできていてください！自分だけのホッケーゲームをコーディングする方法を学び、ScratchでNPCゴールキーパーと対戦してスキルをテストしましょう。デジタルプレーヤーは、動き、感知、変数を使ってパックをかわしたり滑ったりして、勝利のゴールを決めることができます。
@@ -8221,12 +8231,7 @@ ja:
   tutorial_googlesuperhero_longdescription: 建物の上を飛んだり、回転したり、相棒と一緒に作業したり、ゲーム内のオブジェクトに触れてポイントを獲得したりするようにプログラミングして、人生やコミュニティの日常のヒーローをスーパーヒーローに変えましょう。Code
     Your Heroでは、CS FirstとScratchでヒーローの特殊能力と創造性を披露しましょう。
   tutorial_googlename _longdescription: 名前を選んで、コードを使ってその単語の文字に命を吹き込みましょう。ニックネーム、ペットの名前、動物、スポーツ、場所、趣味を選択してください。
-  tutorial_carnegiezillah_longdescription: Zillah City is thriving, and music is in
-    the air. Rumor has it, the famed Gargantua bot is online and sending the last
-    Toxibots to trash the city block by block…. Grab your cobot hoverboard and get
-    ready to groove, move, and finish off what you started! Players program their
-    cobot hoverbots to change lanes, avoid obstacles, and take out many Toxibots in
-    this rhythm-styled game.
+  tutorial_carnegiezillah_longdescription: ジラー・シティは活気にあふれ、音楽も流れています。噂によると、有名なガルガンチュアのボットがオンラインで、最後のトキシボットを送って街を一区ずつゴミ箱に捨てているそうです。…コボットのホバーボードを手に取り、グルーヴやムーブをして、始めたことを終わらせる準備をしましょう！このリズムスタイルのゲームでは、プレイヤーはコボットのホバーボットをプログラムして、車線を変更したり、障害物を避けたり、多くのトキシボットを倒したりします。
   tutorial_nasachspacejam_longdescription: 本当に素晴らしい太陽系を作りましょう！このガイドなしのアクティビティで、音楽、天文学、コーディングについて学びましょう
     (コーディングの経験は必要ありません)。惑星をプログラムして音楽を作り、スペーシーなメロディーが奏でる自分だけの音楽的な太陽系を作りましょう。
   tutorial_hatchxrsolar_longdescription: 'ブロックベースのプログラミングの概念を使用して、星を探索し、独自の太陽系を構築してください。3D

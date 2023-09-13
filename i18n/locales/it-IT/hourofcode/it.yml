@@ -13,26 +13,26 @@ it:
   campaign_date_full_year: 5 - 11 dicembre 2022
   nonus_campaign_date_start_short: 1 ott.
   nonus_campaign_date_start_long: '1 ottobre '
-  nonus_campaign_date_short: 1 ott. - 18 dic.
-  nonus_campaign_date_full: 1 ottobre - 18 dicembre
+  nonus_campaign_date_short: 1 ott. - 12 dic.
+  nonus_campaign_date_full: 1 ottobre - 12 dicembre
   nonus_campaign_date_year: '2022'
   nonus_campaign_date_full_year: 1 ottobre 2022 - 18 dicembre 2022
   latam_campaign_date_start_short: 1 ott.
   latam_campaign_date_start_long: '1 ottobre '
-  latam_campaign_date_short: 1 ott. - 18 dic.
-  latam_campaign_date_full: 1 ottobre - 18 dicembre
+  latam_campaign_date_short: 1 ott. - 12 dic.
+  latam_campaign_date_full: 1 ottobre - 12 dicembre
   latam_campaign_date_year: '2022'
   latam_campaign_date_full_year: 1 ottobre 2022 - 18 dicembre 2022
   europe_campaign_date_start_short: 1 ott.
   europe_campaign_date_start_long: '1 ottobre '
-  europe_campaign_date_short: 1 ott. - 18 dic.
-  europe_campaign_date_full: 1 ottobre - 18 dicembre
+  europe_campaign_date_short: 1 ott. - 12 dic.
+  europe_campaign_date_full: 1 ottobre - 12 dicembre
   europe_campaign_date_year: '2022'
   europe_campaign_date_full_year: 1 ottobre 2022 - 18 dicembre 2022
   africa_campaign_date_start_short: 1 ott.
   africa_campaign_date_start_long: '1 ottobre '
   africa_campaign_date_short: 1-31 ott.
-  africa_campaign_date_full: 1 ottobre - 18 dicembre
+  africa_campaign_date_full: 1 ottobre - 12 dicembre
   africa_campaign_date_year: '2022'
   africa_campaign_date_full_year: 1 ottobre 2022 - 18 dicembre 2022
   hoc2022_header: Esplora, gioca, crea!
@@ -198,6 +198,16 @@ it:
   grade_level_label_elementary: Scuola Elementare
   grade_level_label_middle: Scuola Media
   grade_level_label_high: Scuola Superiore
+  curricula_title_elementary: Curricula della scuola elementare
+  curricula_desc_elementary: Dai un'occhiata ai corsi e alle attività divertenti e
+    gratuiti che ti invitano a esplorare l'informatica con i tuoi studenti delle scuole
+    elementari.
+  curricula_title_middle: Curricula della scuola media
+  curricula_desc_middle: Scopri le interessanti offerte che consentono a te e ai tuoi
+    studenti delle scuole medie di esplorare insieme l'informatica.
+  curricula_title_high: Curricula delle scuole superiori
+  curricula_desc_high: Esplora i corsi e le attività interessanti che invitano te
+    e i tuoi studenti delle scuole superiori a approfondire l'informatica.
   students_label: Studenti
   teachers_label: Insegnanti
   teacher_label_csf: Insegnante di CS Fundamentals
@@ -224,6 +234,13 @@ it:
   call_to_action_explore_choice_level: Esplora il livello di scelta degli esempi
   call_to_action_explore_collection: Esplora la collezione
   call_to_action_explore_unplugged_lesson: Esplora le lezioni scollegate
+  call_to_action_explore_csf: Esplora CS Fundamentals
+  call_to_action_explore_csd: Esplora CS Discoveries
+  call_to_action_explore_csp: Esplora i principi CS
+  call_to_action_explore_csc: Esplora CS Connections
+  call_to_action_explore_csa: Esplora AP® Computer Science A
+  call_to_action_explore_maker: Esplora i curricula di Maker
+  call_to_action_explore_hoc: Esplora i tutorial dell'Ora del Codice
   call_to_action_try_app_lab: Prova App Lab
   call_to_action_view_lesson_plan: Visualizza il piano delle lezioni
   call_to_action_self_paced_pl: Inizia l'apprendimento professionale autonomo
@@ -268,6 +285,7 @@ it:
   call_to_action_notify_available: Avvisami quando disponibile
   call_to_action_register_early_access: Registrati per l'accesso anticipato
   call_to_action_open_positions: Visualizza le posizioni aperte
+  call_to_action_get_guide: Scarica la guida
   aria_label_call_to_action_afe: Ulteriori informazioni su Amazon Future Engineer
   aria_label_call_to_action_teaching_csf: Avvia il programma di formazione professionale
     Teaching Computer Science Fundamentals
@@ -378,6 +396,8 @@ it:
   curriculum_name_csc_02: Qualsiasi modulo di connessione CS
   curriculum_name_ai: Intelligenza Artificiale e Apprendimento Automatico (Machine
     Learning)
+  curriculum_name_artificial_intelligence: Intelligenza artificiale (AI)
+  curriculum_name_maker: Creatore
   curriculum_name_maker_cp: Creazione di app con dispositivi (Circuit Playground)
   curriculum_name_maker_microbit: Creazione di app con dispositivi (micro:bit)
   curriculum_name_creating_apps_with_devices: Creazione di app con dispositivi
@@ -435,6 +455,13 @@ it:
   curriculum_desc_creating_apps_with_devices: Esplora il ruolo dei dispositivi fisici
     nell'informatica. Sviluppa programmi che utilizzano input e output hardware. Esiste
     una versione di questa unità sia per micro:bit che per Circuit Playground.
+  curriculum_desc_csa: Introduci gli studenti all'ingegneria del software e alla progettazione
+    orientata agli oggetti mentre imparano il linguaggio di programmazione Java in
+    questo curriculum gratuito per AP® Computer Science A (AP® CSA).
+  curriculum_desc_maker: La formazione dei maker porta le STEM (Scienza, Tecnologia,
+    Ingegneria, Matematica) un ulteriore passo avanti, invitando l'esperienza pratica
+    e la collaborazione in classe per aiutare a insegnare la risoluzione dei problemi
+    e il pensiero critico.
   collection_hardware: Concentrati sull'hardware
   collection_hardware_desc: Consente agli studenti di utilizzare dati e dispositivi
     fisici per risolvere i problemi.
@@ -475,6 +502,7 @@ it:
   module_label_student_content_resources: Contenuti e risorse
   module_label_new: Nuovo
   module_label_coming_soon: Presto in arrivo
+  module_label_available_now: Disponibile ora
   module_label_video_series: Serie di video
   module_label_self_paced: Modulo autogestito
   module_ages_5_10: 5-10
@@ -485,6 +513,8 @@ it:
   module_grade_2_5: 2-5
   module_grade_3_5: 3-5
   module_grade_3_8: 3-8
+  module_grade_k_12: da 4 a 18 anni
+  module_grade_3_12: 3-12
   module_grade_6_12: 6-12
   module_grade_6_10: 6-10
   module_grade_9_12: da 14 a 18 anni
@@ -580,6 +610,8 @@ it:
   heading_java_lab: Laboratorio Java
   heading_objects_first: Gli oggetti prima di tutto
   heading_these_lessons_will: 'Queste lezioni consentiranno di:'
+  heading_explore_curriculum_catalog: Esplora tutti i nostri corsi nel catalogo dei
+    curriculum
   professional_learning_section_desc: Ottieni il supporto di cui hai bisogno mentre
     ti prepari a insegnare. Gli insegnanti lo adorano, con oltre il 90% che lo classifica
     come il miglior sviluppo professionale di sempre!
@@ -851,6 +883,12 @@ it:
     cambiamenti nell''IA, con due nuovi video su Large Language Models (come ChatGPT)
     e sull''IA generativa. Scopri come funzionano queste nuove tecnologie direttamente
     dagli esperti: Mira Murati, CTO di OpenAI, e Cristóbal Valenzuela, CEO di RunwayML.'
+  ai_pl_101_llm_slides_title: Suggerimenti per modelli linguistici di grandi dimensioni
+    per gli educatori
+  ai_pl_101_llm_slides_desc: Strumenti per ottenere il miglior risultato possibile
+    da LLM come ChatGPT, dal principiante all'avanzato. Include istruzioni introduttive
+    per chi è alle prime armi, oltre a strumenti avanzati per chi cerca di massimizzare
+    il proprio potenziale.
   how_ai_works_hero_heading: Come funziona AI
   how_ai_works_hero_desc: Immergiti nel mondo dell'IA con «How AI Works», la nostra
     serie di video e le lezioni di accompagnamento!
@@ -1477,10 +1515,10 @@ it:
     a questi materiali di consumo.
   csd_page_faq_answer_04_06: Creazione di app con dispositivi (opzione A e opzione
     B)
-  csd_page_faq_answer_04_07: 'Option A: Classroom set of Circuit Playgrounds. Check
-    out [code.org/maker/circuitplayground](%{url}) for more details.'
-  csd_page_faq_answer_04_08: 'Option B: Classroom set of micro:bit devices. Check
-    out [code.org/maker/microbit](%{url}) for more details.'
+  csd_page_faq_answer_04_07: 'Opzione A: set scolastico di Circuit Playgrounds. Dai
+    un''occhiata a [code.org/maker/circuitplayground] () per maggiori dettagli.%{url}'
+  csd_page_faq_answer_04_08: 'Opzione B: set di dispositivi micro:bit per uso scolastico.
+    Dai un''occhiata a [code.org/maker/microbit] () per maggiori dettagli.%{url}'
   csd_page_faq_answer_04_09: Forniture per produttori, come scatole di fazzoletti
     vuote o rotoli di cartone o carta da graffiare
   csd_page_faq_answer_04_10: "*Nota: l'unità Creating Apps with Devices ha due opzioni
@@ -1614,10 +1652,11 @@ it:
     workshop Code.org di alta qualità della durata di un giorno per singoli insegnanti
     o per il PD a livello scolastico. [Iscriviti a un seminario di sviluppo professionale
     vicino a te] (%{sign_up_url})!
-  csf_page_faq_answer_04_02: Join over 100,000 teachers who have participated in our
-    workshops. The majority of our workshop attendees say, 'It's the best professional
-    development I've ever attended.' In fact, [90% of attendees would recommend our
-    program to other teachers](%{rec_url})!
+  csf_page_faq_answer_04_02: 'Unisciti agli oltre 100.000 insegnanti che hanno partecipato
+    ai nostri workshop. La maggior parte dei partecipanti al nostro workshop afferma:
+    «È il miglior sviluppo professionale a cui abbia mai partecipato». In effetti,
+    [il 90% dei partecipanti consiglierebbe il nostro programma ad altri insegnanti]
+    ()!%{rec_url}'
   csf_page_faq_question_05: Qual è la tempistica consigliata per insegnare CS Fundamentals?
   csf_page_faq_answer_05: Ogni corso CSF include 13-17 lezioni progettate per periodi
     di 45 minuti. Consigliamo a tutti gli studenti di passare da una lezione all'altra
@@ -1626,9 +1665,10 @@ it:
     per lo sviluppo delle competenze possono essere completate dagli studenti secondo
     i propri ritmi.
   csf_page_faq_question_06: Di quali materiali ho bisogno per CS Fundamentals?
-  csf_page_faq_answer_06: Many lessons have handouts that guide students through activities.
-    These resources can be printed or assigned digitally. Some lessons call for typical
-    classroom supplies and manipulatives. [Visit the CSF Syllabus to learn more](%{syllabus_url}).
+  csf_page_faq_answer_06: Molte lezioni contengono dispense che guidano gli studenti
+    attraverso le attività. Queste risorse possono essere stampate o assegnate digitalmente.
+    Alcune lezioni richiedono materiali e manipolazioni tipiche della classe. [Visita
+    il programma CSF per saperne di più] ().%{syllabus_url}
   csa_page_top_desc: Introduce students to software engineering and object-oriented
     design while they learn the Java programming language in this free curriculum
     for [AP® Computer Science A (AP® CSA)](%{csa_url}).
@@ -2136,6 +2176,12 @@ it:
     di Code.org e altre notizie legate al mondo dell'informatica?
   signup_email_preference_privacy: "(Vedi la nostra politica della privacy)"
   signup_email_preference_yes: Sì
+  signup_email_preference_yes_elementary: Sì, inviami aggiornamenti sulle risorse
+    della scuola elementare
+  signup_email_preference_yes_middle: Sì, inviami aggiornamenti sulle risorse per
+    le scuole medie
+  signup_email_preference_yes_high: Sì, inviami aggiornamenti su High School Resources
+  signup_email_preference_yes_general: Sì - Inviami aggiornamenti generali
   signup_email_preference_no: 'No'
   signup_email_preference_error: È richiesta la preferenza dell'email
   signup_multiple_event_warning: Se stai organizzando più eventi dell'Ora del Codice,
@@ -12917,12 +12963,12 @@ it:
   tutorial_googlename _longdescription: Scegli un nome e dai vita alle lettere della
     parola usando il codice. Scegli un nickname, il nome di un animale domestico,
     un animale, uno sport, un luogo o un hobby.
-  tutorial_carnegiezillah_longdescription: Zillah City is thriving, and music is in
-    the air. Rumor has it, the famed Gargantua bot is online and sending the last
-    Toxibots to trash the city block by block…. Grab your cobot hoverboard and get
-    ready to groove, move, and finish off what you started! Players program their
-    cobot hoverbots to change lanes, avoid obstacles, and take out many Toxibots in
-    this rhythm-styled game.
+  tutorial_carnegiezillah_longdescription: Zillah City è fiorente e la musica è nell'aria.
+    Si dice che il famoso bot Gargantua sia online e stia mandando gli ultimi Toxibots
+    a distruggere la città isolato per isolato.…Prendi il tuo hoverboard da cobot
+    e preparati a divertirti, muoverti e portare a termine ciò che hai iniziato! I
+    giocatori programmano i loro hoverbot cobot per cambiare corsia, evitare gli ostacoli
+    ed eliminare molti Toxibots in questo gioco dal ritmo ritmico.
   tutorial_nasachspacejam_longdescription: Crea un sistema solare davvero fantastico!
     Scopri musica, astronomia e programmazione in questa attività autoguidata (non
     è richiesta alcuna esperienza di programmazione). Programma i pianeti per fare

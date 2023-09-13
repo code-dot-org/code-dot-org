@@ -173,6 +173,15 @@ he:
   grade_level_label_elementary: בית ספר יסודי
   grade_level_label_middle: חטיבת ביניים
   grade_level_label_high: בית ספר תיכון
+  curricula_title_elementary: תכניות לימודים בבתי ספר יסודיים
+  curricula_desc_elementary: עיין בקורסים והפעילויות המהנים והחינמיים שמזמינים אותך
+    לחקור את מדעי המחשב עם תלמידי בית הספר היסודי שלך.
+  curricula_title_middle: תכניות לימודים בחטיבת הביניים
+  curricula_desc_middle: עיין בהיצע המרתק המאפשר לך ולתלמידי חטיבת הביניים שלך לחקור
+    יחד את מדעי המחשב.
+  curricula_title_high: תכניות לימודים בתיכון
+  curricula_desc_high: עיין בקורסים ובפעילויות המרתקות שמזמינות אותך ואת תלמידי התיכון
+    שלך להעמיק במדעי המחשב.
   students_label: סטודנטים
   teachers_label: מורים
   teacher_label_csf: מורה יסודות במדעי המחשב
@@ -199,6 +208,13 @@ he:
   call_to_action_explore_choice_level: חקור את רמת הבחירה לדוגמה
   call_to_action_explore_collection: חקור את האוסף
   call_to_action_explore_unplugged_lesson: חקור שיעורים מנותקים
+  call_to_action_explore_csf: חקור את יסודות CS
+  call_to_action_explore_csd: חקור את תגליות CS
+  call_to_action_explore_csp: חקור את עקרונות CS
+  call_to_action_explore_csc: חקור חיבורי CS
+  call_to_action_explore_csa: חקור את AP® מדעי המחשב א
+  call_to_action_explore_maker: חקור את תוכניות הלימודים של Maker
+  call_to_action_explore_hoc: חקור הדרכות של שעת הקוד
   call_to_action_try_app_lab: נסה את מעבדת האפליקציות
   call_to_action_view_lesson_plan: צפה בתכנית השיעור
   call_to_action_self_paced_pl: התחל למידה מקצועית בקצב עצמי
@@ -243,6 +259,7 @@ he:
   call_to_action_notify_available: הודע לי כאשר זמין
   call_to_action_register_early_access: הירשם לגישה מוקדמת
   call_to_action_open_positions: הצג עמדות פתוחות
+  call_to_action_get_guide: קבל את המדריך
   aria_label_call_to_action_afe: למידע נוסף על מהנדס העתיד של אמזון
   aria_label_call_to_action_teaching_csf: התחל את תוכנית הלמידה המקצועית של יסודות
     מדעי המחשב
@@ -340,6 +357,8 @@ he:
   curriculum_name_csa: AP® מדעי המחשב א
   curriculum_name_csc_02: כל מודול חיבורי CS
   curriculum_name_ai: בינה מלאכותית ולמידת מכונה
+  curriculum_name_artificial_intelligence: בינה מלאכותית (AI)
+  curriculum_name_maker: יצרנית
   curriculum_name_maker_cp: יצירת אפליקציות עם מכשירים (מגרש משחקים במעגל)
   curriculum_name_maker_microbit: יצירת אפליקציות עם מכשירים (micro:bit)
   curriculum_name_creating_apps_with_devices: יצירת אפליקציות עם מכשירים
@@ -389,6 +408,12 @@ he:
   curriculum_desc_creating_apps_with_devices: חקור את תפקידם של מכשירים פיזיים במחשוב.
     פיתוח תוכניות המשתמשות בכניסות ויציאות חומרה. קיימת גרסה של יחידה זו הן עבור micro:bit
     והן עבור מגרש המשחקים Circuit.
+  curriculum_desc_csa: הכירו את התלמידים להנדסת תוכנה ועיצוב מונחה עצמים בזמן שהם
+    לומדים את שפת התכנות Java בתכנית הלימודים החינמית הזו עבור AP® מדעי המחשב A (AP®
+    CSA).
+  curriculum_desc_maker: חינוך Maker לוקח STEM (מדע, טכנולוגיה, הנדסה, מתמטיקה) צעד
+    אחד קדימה על ידי הזמנת ניסיון מעשי ושיתוף פעולה לכיתה כדי לעזור ללמד פתרון בעיות
+    וחשיבה ביקורתית.
   collection_hardware: דגש על חומרה
   collection_hardware_desc: מאפשר לתלמידים להשתמש בנתונים ובמכשירים פיזיים כדי לפתור
     בעיות.
@@ -426,6 +451,7 @@ he:
   module_label_student_content_resources: תוכן ומשאבים
   module_label_new: חדש
   module_label_coming_soon: בקרוב
+  module_label_available_now: זמין כעת
   module_label_video_series: סדרת וידאו
   module_label_self_paced: מודול בקצב עצמי
   module_ages_5_10: 5-10
@@ -436,6 +462,8 @@ he:
   module_grade_2_5: 2-5
   module_grade_3_5: 3-5
   module_grade_3_8: 3-8
+  module_grade_k_12: K-12
+  module_grade_3_12: 3-12
   module_grade_6_12: 6-12
   module_grade_6_10: 6-10
   module_grade_9_12: 9-12
@@ -525,6 +553,7 @@ he:
   heading_java_lab: מעבדת ג'אווה
   heading_objects_first: אובייקטים ראשונים
   heading_these_lessons_will: 'שיעורים אלה יהיו:'
+  heading_explore_curriculum_catalog: חקור את כל הקורסים שלנו בקטלוג תכניות הלימודים
   professional_learning_section_desc: קבל את התמיכה שאתה צריך בזמן שאתה מתכונן ללמד.
     מורים אוהבים את זה, עם למעלה מ -90% מדרגים אותו כהתפתחות המקצועית הטובה ביותר
     אי פעם!
@@ -746,6 +775,10 @@ he:
     ב- AI, הכוללת שני סרטונים חדשים במודלים של שפה גדולה (כמו ChatGPT) ו- AI Generative.
     שמע כיצד הטכנולוגיות החדשות הללו עובדות ישירות מהמומחים: מירה מוראטי, CTO של OpenAI,
     וכריסטובל ולנצואלה, מנכ"ל RunwayML.'
+  ai_pl_101_llm_slides_title: הנחיות מודל שפה גדולות למחנכים
+  ai_pl_101_llm_slides_desc: כלים להשגת הפלט הטוב ביותר האפשרי מ- LLMs כמו ChatGPT,
+    ממתחילים למתקדמים. כולל הנחיות למתחילים למי שרק טובל את בהונותיהם פנימה, כמו גם
+    כלים מתקדמים למי שמחפש למקסם את הפוטנציאל שלהם.
   how_ai_works_hero_heading: איך AI עובד
   how_ai_works_hero_desc: לצלול לתוך העולם של AI עם "איך AI עובד", סדרת הווידאו שלנו
     ושיעורים נלווים!
@@ -1276,10 +1309,10 @@ he:
     להחליף עם סוג אחר של משקל באותו גודל). פעילויות חלופיות זמינות אם אין לך גישה
     לאספקה זו.
   csd_page_faq_answer_04_06: יצירת אפליקציות עם מכשירים (אפשרות A ואפשרות B)
-  csd_page_faq_answer_04_07: 'Option A: Classroom set of Circuit Playgrounds. Check
-    out [code.org/maker/circuitplayground](%{url}) for more details.'
-  csd_page_faq_answer_04_08: 'Option B: Classroom set of micro:bit devices. Check
-    out [code.org/maker/microbit](%{url}) for more details.'
+  csd_page_faq_answer_04_07: 'אפשרות א'': סט כיתות של מגרשי משחקים. בדוק [code.org/מייקר/מעגל
+    משחקים] () לפרטים נוספים.%{url}'
+  csd_page_faq_answer_04_08: 'אפשרות ב'': ערכת כיתה של מכשירי מיקרוביט. בדוק [code.org/maker/מיקרוביט]
+    () לפרטים נוספים.%{url}'
   csd_page_faq_answer_04_09: ציוד לייצור, כגון קופסאות טישו ריקות או גלילי קרטון או
     נייר שריטה
   csd_page_faq_answer_04_10: "*הערה: היחידה ליצירת אפליקציות עם מכשירים כוללת שתי
@@ -1398,9 +1431,9 @@ he:
     רבות בהנחיית מורים שנועדו להתנסות ביחד בעוד ששיעורי בניית המיומנויות יכולים להסתיים
     על ידי התלמידים בקצב שלהם.
   csf_page_faq_question_06: אילו חומרים אני צריך עבור יסודות CS?
-  csf_page_faq_answer_06: Many lessons have handouts that guide students through activities.
-    These resources can be printed or assigned digitally. Some lessons call for typical
-    classroom supplies and manipulatives. [Visit the CSF Syllabus to learn more](%{syllabus_url}).
+  csf_page_faq_answer_06: בשיעורים רבים יש דפי מידע המנחים את התלמידים בפעילויות.
+    ניתן להדפיס או להקצות משאבים אלה באופן דיגיטלי. חלק מהשיעורים דורשים אספקה ומניפולטיביות
+    טיפוסיות בכיתה. [בקר בסילבוס CSF למידע נוסף] ().%{syllabus_url}
   csa_page_top_desc: Introduce students to software engineering and object-oriented
     design while they learn the Java programming language in this free curriculum
     for [AP® Computer Science A (AP® CSA)](%{csa_url}).
@@ -1541,8 +1574,8 @@ he:
   ai_activity_zooniverse: זוּנִיבֶרְס - זברה הררית של סנאפצ'ט
   ai_activity_zooniverse_desc: עזרו להגן על "זברת הר־הכֵּף" באמצעות זיהוי החיות האחרות
     שבתמונות.
-  codeorg_homepage_hoc2018_curriculum: Go further with <a href="%{studio_url}/courses"
-    class="hoc2018-curriculum-link">Code.org courses</a>
+  codeorg_homepage_hoc2018_curriculum: המשך הלאה עם קורסי <a href="%{studio_url}/courses"
+    class="hoc2018-curriculum-link">Code.org</a>
   codeorg_homepage_hoc2018_dance_heading: צור משלך <span class="highlight-word">ריקוד&nbsp;מסיבה</span>
   codeorg_homepage_hoc2018_header_line1: שעת הקוד מגיעה...
   codeorg_homepage_hoc2018_header_line2_desktop: מה אתה יוצר <span class="hoc2018-highlight-word">?</span>
@@ -1863,6 +1896,10 @@ he:
     הזדמנויות מקומיות או חדשות אחרות במדעי המחשב?
   signup_email_preference_privacy: "(עיין במדיניות הפרטיות שלנו)"
   signup_email_preference_yes: הן
+  signup_email_preference_yes_elementary: כן - שלח לי עדכונים על משאבי בית ספר יסודי
+  signup_email_preference_yes_middle: כן - שלח לי עדכונים על משאבי חטיבת הביניים
+  signup_email_preference_yes_high: כן - שלח לי עדכונים על משאבי תיכון
+  signup_email_preference_yes_general: כן - שלחו לי עדכונים כלליים
   signup_email_preference_no: לא
   signup_email_preference_error: יש צורך בהעדפת דואר אלקטרוני
   signup_multiple_event_warning: אם אתם מארחים יותר מאירוע אחד, אנא הגישו אותם עם
@@ -2009,11 +2046,11 @@ he:
     אפשרויות המתאימות לכל גיל ולכל רמה, לילדים מגילאי גן ילדים ומעלה. התחילו לתכנן
     את האירוע שלכם על ידי קריאת [המדריך](%{howto}) שלנו.
   hoc_faq_devices_q: באילו מכשירים עלי להשתמש עבור התלמידים שלי?
-  hoc_faq_devices_a: Code.org tutorials work on all devices and browsers. You can
-    see more information about Code.org's tutorial tech needs <a href='%{codeorg_url}/educate/it'>here</a>.
-    Tech needs for non-Code.org tutorials can be found on <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a>
-    in the tutorial specific description. Don't forget we also offer <a href='%{unplugged_url}'>unplugged
-    activities</a> if your school can't accommodate the tutorials!
+  hoc_faq_devices_a: הדרכות Code.org פועלות בכל המכשירים והדפדפנים. תוכל לראות מידע
+    נוסף על צרכי הטכנולוגיה של Code.org <a href='%{codeorg_url}/educate/it'>כאן</a>.
+    ניתן למצוא צרכים טכניים עבור הדרכות שאינן Code.org <a href='%{codeorg_url}/learn'>%{partner_url}ב-/learn
+    בתיאור</a> הספציפי של ההדרכה. אל תשכח שאנו מציעים גם פעילויות <a href='%{unplugged_url}'>מנותקות</a>
+    אם בית הספר שלך לא יכול להכיל את ההדרכות!
   hoc_faq_devices_a_markdown: השיעורים באתר Code.or פועלים בכל המכשירים ובכל הדפדפנים.
     ניתן למצוא מידע נוסף אודות הצרכים הטכנולוגיים של השיעורים באתר Code.org [here]
     (%{codeorg_url}/educate/it). צרכים טכנולוגיים של השיעורים שלא במסגרת אתר Code.org
@@ -2075,10 +2112,10 @@ he:
     להשתמש ScratchJR iPad app (עבור מוקדם-הקוראים). אם תעיינו בההדרכות באתר <a href='http://code.org/learn'>
     Code.org/learn</a>, תוכלו למצוא הדרכות העובדות על iPads - מ-Code.org, Tynker,
     Lightbot או CodeSpark.
-  hoc_faq_scratch_a_markdown: Scratch doesn't run on tablets. If your students are
-    young, they can use the ScratchJR iPad app (for early-readers). If you look at
-    the tutorials on [%{partner_url}/learn](%{codeorg_url}/learn), you can find other
-    tutorials that work on iPads - from Code.org, Tynker, Lightbot, or CodeSpark.
+  hoc_faq_scratch_a_markdown: Scratch לא פועל על טבליות. אם התלמידים שלך צעירים, הם
+    יכולים להשתמש באפליקציית ה- iPad ScratchJR (לקוראים מוקדמים). אם אתה מסתכל על
+    הדרכות על [%{partner_url}/ללמוד] (%{codeorg_url}/ללמוד), אתה יכול למצוא הדרכות
+    אחרות שעובדות על אייפד - מ- Code.org, Tynker, Lightbot או CodesPark.
   hoc_faq_count_hoc_q: איך סופרים את שעות הקוד?
   hoc_faq_map_q: למה אני לא רואה את הנקודה שלי על המפה?
   hoc_faq_map_a: אנו מצטערים שאינך רואה את האירוע שלך במפת שעת הקוד. בגלל עשרות אלפי
@@ -4839,11 +4876,11 @@ he:
     בעולם Minecraft זה.
   tutorial_minecraft-2016_longdescription: בנה משחק מיינקראפט. צור גרסאות משלך של
     עוף, כבשים, מטפסים, זומבים ועוד.
-  tutorial_thinkersmith-es_longdescription: Mediante el uso de un "Vocabulario Robot"
-    predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar
-    a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento
-    ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones
-    as&iacute; como la valiosa habilidad de depuraci&oacute;n.
+  tutorial_thinkersmith-es_longdescription: כתוב על "רובוט Vocabulario" מוגדר מראש,
+    לוס אסטודיאנטס descubrir&aacute;n come de modo tal de llevar קאבו טאראס espec
+    ficas in Estas discutidas discutidas בעבר.&iacute;זה קטע אנס&ntilde;א לוס אסטודיאנטס
+    לה קונקסי&oacute;n entre s&iacute;mbolos y acciones כמו קומו לה ואליוסה הבילידד
+    דה דפוראצ'י n.&iacute;&oacute;
   tutorial_pixie_longdescription: הדרכה של שעת קוד עם פיקסי
   tutorial_play_longdescription: צור סיפור או משחק בעזרת מעבדת המשחקים! גרום לחיות,
     פיראטים, זומבים, נינג׳ות ודמויות רבות נוספות, לזוז, לעשות קולות, לצבור נקודות
@@ -11360,12 +11397,11 @@ he:
     הגיבור שלכם ואת היצירתיות שלכם עם CS First and Scratch.
   tutorial_googlename _longdescription: בחר שם והבא לחיים את אותיות המילה באמצעות
     קוד. בחר כינוי, שם של חיית מחמד, חיה, ספורט, מקום או תחביב.
-  tutorial_carnegiezillah_longdescription: Zillah City is thriving, and music is in
-    the air. Rumor has it, the famed Gargantua bot is online and sending the last
-    Toxibots to trash the city block by block…. Grab your cobot hoverboard and get
-    ready to groove, move, and finish off what you started! Players program their
-    cobot hoverbots to change lanes, avoid obstacles, and take out many Toxibots in
-    this rhythm-styled game.
+  tutorial_carnegiezillah_longdescription: עיר זילה משגשגת, והמוזיקה באוויר. השמועה
+    אומרת, הבוט המפורסם של גרגנטואה מקוון ושולח את הטוקסיבוטים האחרונים לזרוק את העיר
+    בלוק אחר בלוק.…תפוס את הסקייטבורד המרחף של הקובוט שלך והתכונן לחריץ, לזוז ולסיים
+    את מה שהתחלת! שחקנים מתכנתים את ה- cobot hoverbots שלהם כדי להחליף נתיבים, להימנע
+    ממכשולים ולהוציא טוקסיבוטים רבים במשחק זה בסגנון קצב.
   tutorial_nasachspacejam_longdescription: צור מערכת סולארית שבאמת מתנדנדת! למד על
     מוסיקה, אסטרונומיה וקידוד בפעילות מודרכת עצמית זו (אין צורך בניסיון קידוד). תכנת
     כוכבי לכת ליצירת מוזיקה, יצירת מערכת שמש מוזיקלית משלך, עם מנגינות מרחביות.
@@ -12079,17 +12115,16 @@ he:
   engineering_faq_answer_1_c: Code.org נתמך על ידי תורמים נדיבים כולל מיקרוסופט, אמזון,
     גוגל ורבים אחרים.
   engineering_faq_question_2: מהו הניסיון והכלים למפתחים של Code.org?
-  engineering_faq_answer_2: Our developer experience may be different to what you’ve
-    seen in your past roles. Working closely with our product team, we ship to production
-    every weekday and we have a variety of cadences - sometimes you are writing code
-    that goes live that day; other times you are on longer term projects - and while
-    we do follow 2-weekly sprints, we do so in a lightweight way. We index towards
-    getting the right things done the right way vs. taking a purist view of any particular
-    methodology. [All our code](%{code_url}) is open source and we use JIRA and GitHub
-    pull requests to track all of our work items. We also care a lot about quality
-    and testing and are fortunate to have incredible support from [SauceLabs](%{saucelabs_url}),
-    who help us run our suite of UI tests on various student devices (e.g., iPads)
-    in their cloud device farm.
+  engineering_faq_answer_2: חוויית המפתחים שלנו עשויה להיות שונה ממה שראית בתפקידי
+    העבר שלך. בשיתוף פעולה הדוק עם צוות המוצרים שלנו, אנו שולחים לייצור בכל יום חול
+    ויש לנו מגוון של קדנס - לפעמים אתה כותב קוד שעולה לאוויר באותו יום; בפעמים אחרות
+    אתה נמצא בפרויקטים לטווח ארוך יותר - ובעוד אנו עוקבים אחר ספרינטים שבועיים, אנו
+    עושים זאת בצורה קלת משקל. אנו מדדים לקראת ביצוע הדברים הנכונים בדרך הנכונה לעומת
+    התייחסות טהרנית של כל מתודולוגיה מסוימת. [כל הקוד שלנו] (%{code_url}) הוא קוד
+    פתוח ואנו משתמשים בבקשות משיכה של JIRA ו- GitHub כדי לעקוב אחר כל פריטי העבודה
+    שלנו. אכפת לנו גם מאיכות ובדיקות ומזל שיש לנו תמיכה מדהימה מ- [SauceLabs](%{saucelabs_url}),
+    שעוזרים לנו להריץ את חבילת מבחני ממשק המשתמש שלנו במכשירי סטודנטים שונים (למשל,
+    אייפד) בחוות מכשירי הענן שלהם.
   engineering_faq_question_3: מהו סיבוב המהנדס בכוננות ב- Code.org?
   engineering_faq_answer_3: צוות ההנדסה שלנו 30+ חולק אחריות תורנית. כל מהנדס מכסה
     משמרת של 24 שעות ומשתמש בנתיבי ההסלמה ובספרי המשחקים שלנו כדי להגיב להפסקות אתרים

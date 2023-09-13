@@ -7,7 +7,7 @@
   coming_soon: Kommer snart
   campaign_date_start_short: 5. desember
   campaign_date_start_long: 6. desember
-  campaign_date_short: 5.-11. des
+  campaign_date_short: 6.-12. Desember
   campaign_date_full: 6.-12. desember
   campaign_date_year: '2022'
   campaign_date_full_year: 6.-12. desember 2021
@@ -107,19 +107,19 @@
     rolle informatikk kan spille for å skape en mer rettferdig verden.
   oceans_landing_videos: Videoer om AI og maskinlæring
   oceans_behind_the_scenes: 'AI for hav: Bak kulissene'
-  oceans_behind_the_scenes_1: Levels 2-4 use a pretrained model provided by the <a
-    href="https://www.tensorflow.org/" >TensorFlow</a> <a href="https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md">
-    MobileNet </a> project. A MobileNet model is a <a href="https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks">convolutional
-    neural network</a> that has been trained on <a href="http://www.image-net.org/">ImageNet</a>,
-    a dataset of over 14 million images hand-annotated with words such as "balloon"
-    or "strawberry". In order to customize this model with the labeled training data
-    the student generates in this activity, we use a technique called <a href="https://en.wikipedia.org/wiki/Transfer_learning">Transfer
-    Learning</a>. Each image in the training dataset is fed to MobileNet, as pixels,
-    to obtain a list of annotations that are most likely to apply to it. Then, for
-    a new image, we feed it to MobileNet and compare its resulting list of annotations
-    to those from the training dataset. We classify the new image with the same label
-    (such as "fish" or "not fish") as the images from the training set with the most
-    similar results.
+  oceans_behind_the_scenes_1: Nivåene 2-4 bruker en forhåndstrent modell levert av
+    <a href="https://www.tensorflow.org/" >TensorFlow</a> <a href="https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md">
+    MobileNet-prosjektet. </a> En MobileNet-modell er et <a href="https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks">konvolusjonelt
+    nevralt nettverk</a> som har blitt trent på <a href="http://www.image-net.org/">ImageNet</a>,
+    et datasett med over 14 millioner bilder håndkommentert med ord som «ballong»
+    eller «jordbær». For å tilpasse denne modellen med de merkede treningsdataene
+    eleven genererer i denne aktiviteten, bruker vi en teknikk som heter <a href="https://en.wikipedia.org/wiki/Transfer_learning">Transfer
+    Learning</a>. Hvert bilde i treningsdatasettet blir matet til MobileNet, som piksler,
+    for å få en liste over merknader som mest sannsynlig vil gjelde for det. Deretter,
+    for et nytt bilde, mater vi det til MobileNet og sammenligner den resulterende
+    listen over merknader med de fra treningsdatasettet. Vi klassifiserer det nye
+    bildet med samme etikett (for eksempel «fisk» eller «ikke fisk») som bildene fra
+    treningssettet med de mest like resultatene.
   oceans_behind_the_scenes_1_markdown: Nivåer 2-4 bruker en forhåndstrent modell levert
     av [TensorFlow](https://www.tensorflow.org/) [MobileNet](https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md)
     prosjektet. En MobileNet-modell er et [konvolusjonelt nevralt nettverk] (https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks)
@@ -183,6 +183,15 @@
   grade_level_label_elementary: Barneskole
   grade_level_label_middle: Ungdomsskolen
   grade_level_label_high: Videregående skole
+  curricula_title_elementary: Læreplaner for barneskole
+  curricula_desc_elementary: Bla gjennom moroa, gratis kurs og aktiviteter som inviterer
+    deg til å utforske informatikk med grunnskoleelevene dine.
+  curricula_title_middle: Læreplaner for ungdomsskolen
+  curricula_desc_middle: Bla gjennom de engasjerende tilbudene som gjør det mulig
+    for deg og ungdomsskoleelevene dine å utforske informatikk sammen.
+  curricula_title_high: Læreplaner for videregående skole
+  curricula_desc_high: Bla gjennom de overbevisende kursene og aktivitetene som inviterer
+    deg og dine videregående studenter til å grave dypere inn i informatikk.
   students_label: Elever
   teachers_label: Lærere
   teacher_label_csf: CS Fundamentals Lærer
@@ -209,6 +218,13 @@
   call_to_action_explore_choice_level: Utforsk eksempel valgnivå
   call_to_action_explore_collection: Utforsk samlingen
   call_to_action_explore_unplugged_lesson: Utforsk unplugged leksjoner
+  call_to_action_explore_csf: Utforsk CS Fundamentals
+  call_to_action_explore_csd: Utforsk CS Discoveries
+  call_to_action_explore_csp: Utforsk CS Principles
+  call_to_action_explore_csc: Utforsk CS Connections
+  call_to_action_explore_csa: Utforsk AP® Computer Science A
+  call_to_action_explore_maker: Utforsk Maker læreplaner
+  call_to_action_explore_hoc: Utforsk Hour of Code tutorials
   call_to_action_try_app_lab: Prøv App Lab
   call_to_action_view_lesson_plan: Se leksjonsplan
   call_to_action_self_paced_pl: Start profesjonell læring i eget tempo
@@ -253,6 +269,7 @@
   call_to_action_notify_available: Gi meg beskjed når tilgjengelig
   call_to_action_register_early_access: Registrer deg for tidlig tilgang
   call_to_action_open_positions: Vis åpne stillinger
+  call_to_action_get_guide: Få guiden
   aria_label_call_to_action_afe: Lær mer om Amazon Future Engineer
   aria_label_call_to_action_teaching_csf: Start Teaching Computer Science Fundamentals
     profesjonelle læringsprogram
@@ -352,6 +369,8 @@
   curriculum_name_csa: AP® informatikk A
   curriculum_name_csc_02: Enhver CS-tilkoblingsmodul
   curriculum_name_ai: AI og maskinlæring
+  curriculum_name_artificial_intelligence: Kunstig intelligens (AI)
+  curriculum_name_maker: Skaper
   curriculum_name_maker_cp: Opprette apper med enheter (Circuit Playground)
   curriculum_name_maker_microbit: Opprette apper med enheter (micro:bit)
   curriculum_name_creating_apps_with_devices: Opprette apper med enheter
@@ -403,6 +422,12 @@
   curriculum_desc_creating_apps_with_devices: Utforsk rollen til fysiske enheter i
     databehandling. Utvikle programmer som bruker maskinvareinnganger og -utganger.
     Det er en versjon av denne enheten for både micro:bit og Circuit Playground.
+  curriculum_desc_csa: Introduser studentene til programvareteknikk og objektorientert
+    design mens de lærer Java-programmeringsspråket i denne gratis læreplanen for
+    AP® Computer Science A (AP® CSA).
+  curriculum_desc_maker: Makerutdanning tar STEM (Science, Technology, Engineering,
+    Mathematics) et skritt videre ved å invitere praktisk erfaring og samarbeid inn
+    i klasserommet for å hjelpe deg med å lære problemløsning og kritisk tenkning.
   collection_hardware: Fokus på maskinvare
   collection_hardware_desc: Styrker elevene til å bruke data og fysiske enheter for
     å løse problemer.
@@ -440,6 +465,7 @@
   module_label_student_content_resources: Innhold og ressurser
   module_label_new: Ny
   module_label_coming_soon: Kommer snart
+  module_label_available_now: Tilgjengelig nå
   module_label_video_series: Video-serien
   module_label_self_paced: Modul i eget tempo
   module_ages_5_10: 5-10
@@ -450,6 +476,8 @@
   module_grade_2_5: 2-5
   module_grade_3_5: 3-5
   module_grade_3_8: 3-8
+  module_grade_k_12: K-12
+  module_grade_3_12: 3-12
   module_grade_6_12: 6-12
   module_grade_6_10: 6-10
   module_grade_9_12: 9-12
@@ -544,6 +572,7 @@
   heading_java_lab: Java Lab
   heading_objects_first: Objekter først
   heading_these_lessons_will: 'Disse leksjonene vil:'
+  heading_explore_curriculum_catalog: Utforsk alle kursene våre i læreplankatalogen
   professional_learning_section_desc: Få den støtten du trenger når du forbereder
     deg på å undervise. Lærere elsker det, med over 90% som rangerer det som den beste
     profesjonelle utviklingen noensinne!
@@ -795,6 +824,10 @@
     i AI, med to nye videoer på store språkmodeller (som ChatGPT) og Generative AI.
     Hør hvordan disse nye teknologiene fungerer direkte fra ekspertene: Mira Murati,
     CTO for OpenAI, og Cristóbal Valenzuela, administrerende direktør i RunWayml.'
+  ai_pl_101_llm_slides_title: Prompts for store språkmodeller for lærere
+  ai_pl_101_llm_slides_desc: Verktøy for å få best mulig utdata fra LLMS som ChatGPT,
+    fra nybegynner til avansert. Inkluderer startmeldinger for de som bare dypper
+    tærne i, samt avanserte verktøy for de som ønsker å maksimere potensialet.
   how_ai_works_hero_heading: Hvordan AI fungerer
   how_ai_works_hero_desc: Dykk ned i AI-verdenen med «How AI Works», vår videoserie
     og tilhørende leksjoner!
@@ -1378,10 +1411,10 @@
     aktiviteter er tilgjengelige hvis du ikke har tilgang til disse forsyningene.
   csd_page_faq_answer_04_06: Opprette apper med enheter (alternativ A og alternativ
     B)
-  csd_page_faq_answer_04_07: 'Option A: Classroom set of Circuit Playgrounds. Check
-    out [code.org/maker/circuitplayground](%{url}) for more details.'
-  csd_page_faq_answer_04_08: 'Option B: Classroom set of micro:bit devices. Check
-    out [code.org/maker/microbit](%{url}) for more details.'
+  csd_page_faq_answer_04_07: 'Alternativ A: Klasseromssett med Circuit Playgrounds.
+    Sjekk ut [code.org/maker/circuitplayground] () for mer informasjon.%{url}'
+  csd_page_faq_answer_04_08: 'Alternativ B: Klasseromssett med micro:bit-enheter.
+    Sjekk ut [code.org/maker/microbit] () for mer informasjon.%{url}'
   csd_page_faq_answer_04_09: Produsentrekvisita, for eksempel tomme silkebokser eller
     pappruller eller skrapepapir
   csd_page_faq_answer_04_10: "*Merk: Enheten Opprette apper med enheter har to implementeringsalternativer
@@ -1507,19 +1540,20 @@
     ditt. Våre regionale partnere tilbyr høykvalitets en-dags Code.org-workshops for
     individuelle lærere eller for skoleomfattende PD. [Registrer deg for et faglig
     utviklingsverksted nær deg] (%{sign_up_url})!
-  csf_page_faq_answer_04_02: Join over 100,000 teachers who have participated in our
-    workshops. The majority of our workshop attendees say, 'It's the best professional
-    development I've ever attended.' In fact, [90% of attendees would recommend our
-    program to other teachers](%{rec_url})!
+  csf_page_faq_answer_04_02: 'Bli med over 100 000 lærere som har deltatt i våre workshops.
+    Flertallet av deltakerne på workshopen sier: ''Det er den beste faglige utviklingen
+    jeg noensinne har deltatt på. '' Faktisk, [90% av deltakerne vil anbefale programmet
+    vårt til andre lærere] ()!%{rec_url}'
   csf_page_faq_question_05: Hva er den anbefalte timingen for undervisning i CS Fundamentals?
   csf_page_faq_answer_05: Hvert CSF-kurs inkluderer 13-17 leksjoner designet for 45-minutters
     perioder. Vi anbefaler alle elever å gå fra leksjon til leksjon i et tempo satt
     av læreren. Det er mange lærerledede prosjektnivåer designet for å oppleves unisont
     mens ferdighetsbyggende leksjoner kan fullføres av elevene i sitt eget tempo.
   csf_page_faq_question_06: Hvilke materialer trenger jeg for CS Fundamentals?
-  csf_page_faq_answer_06: Many lessons have handouts that guide students through activities.
-    These resources can be printed or assigned digitally. Some lessons call for typical
-    classroom supplies and manipulatives. [Visit the CSF Syllabus to learn more](%{syllabus_url}).
+  csf_page_faq_answer_06: Mange leksjoner har utdelinger som veileder elevene gjennom
+    aktiviteter. Disse ressursene kan skrives ut eller tildeles digitalt. Noen leksjoner
+    krever typiske klasseromsforsyninger og manipulativer. [Besøk CSF-pensum for å
+    lære mer] ().%{syllabus_url}
   csa_page_top_desc: Introduce students to software engineering and object-oriented
     design while they learn the Java programming language in this free curriculum
     for [AP® Computer Science A (AP® CSA)](%{csa_url}).
@@ -1668,8 +1702,8 @@
   ai_activity_zooniverse: Zooniverse - Øyeblikksbilde Mountain Zebra
   ai_activity_zooniverse_desc: Bidra til å beskytte den truede Cape Mountain Zebra
     ved å identifisere de forskjellige dyrene på bildene.
-  codeorg_homepage_hoc2018_curriculum: Go further with <a href="%{studio_url}/courses"
-    class="hoc2018-curriculum-link">Code.org courses</a>
+  codeorg_homepage_hoc2018_curriculum: Gå videre med <a href="%{studio_url}/courses"
+    class="hoc2018-curriculum-link">Code.org kurs</a>
   codeorg_homepage_hoc2018_dance_heading: Lag din egen <span class="highlight-word">Dance&nbsp;Party</span>
   codeorg_homepage_hoc2018_header_line1: Kodetimen kommer...
   codeorg_homepage_hoc2018_header_line2_desktop: Hva vil du <span class="hoc2018-highlight-word">lage?</span>
@@ -2001,6 +2035,12 @@
     Code.org-kurs, lokale muligheter eller andre informatikknyheter?
   signup_email_preference_privacy: "(Se vår personvernpolicy)"
   signup_email_preference_yes: Ja
+  signup_email_preference_yes_elementary: Ja - Send meg oppdateringer om grunnskolens
+    ressurser
+  signup_email_preference_yes_middle: Ja - Send meg oppdateringer om Middle School
+    Resources
+  signup_email_preference_yes_high: Ja - Send meg oppdateringer om High School Resources
+  signup_email_preference_yes_general: Ja - Send meg generelle oppdateringer
   signup_email_preference_no: Nei
   signup_email_preference_error: E-postpreferanse er påkrevd
   signup_multiple_event_warning: Hvis du holder flere arrangementer, vær snill å registrere
@@ -2150,11 +2190,11 @@
     også valg for alle aldre og erfaring, fra barnehage og oppover. Start planlegging
     av ditt arrangement ved å lese vår <a href='target-resources-how-to'>«Hvordan»
     veiledning</a>.
-  hoc_faq_host_a_markdown: Of course. Hour of Code activities are self-guided. All
-    you have to do is [try our current tutorials](%{codeorg_url}/learn), pick the
-    tutorial you want, and pick an hour — we take care of the rest. We also have options
-    for every age and experience-level, from kindergarten and up. Start planning your
-    event by reading our [how to guide](%{howto}).
+  hoc_faq_host_a_markdown: Selvfølgelig. Hour of Code-aktiviteter er selvstyrte. Alt
+    du trenger å gjøre er [prøv våre nåværende opplæringsprogrammer] (%{codeorg_url}/lær),
+    velg opplæringen du ønsker, og velg en time - vi tar oss av resten. Vi har også
+    muligheter for alle aldre og erfaringsnivåer, fra barnehage og oppover. Begynn
+    å planlegge arrangementet ditt ved å lese vår [hvordan veilede] (%{howto}).
   hoc_faq_devices_q: Hvilke enheter burde jeg bruke for elevene mine?
   hoc_faq_devices_a: Code.org tutorials fungerer på alle enheter og nettlesere. Du
     finner mer informasjon om Code.orgs veileder teknologibehov <a href='%{codeorg_url}/educate/it'>
@@ -2162,11 +2202,12 @@
     href='%{codeorg_url}/learn'>%{partner_url}/lære</a> i den spesifikke veilederbeskrivelsen.
     Ikke glem at vi også tilbyr <a href='%{unplugged_url}'> aktiviteter som kan gjøres
     uten tilkobling til nett </a> hvis skolen ikke kan tilby veiledere!
-  hoc_faq_devices_a_markdown: Code.org tutorials work on all devices and browsers.
-    You can see more information about Code.org's tutorial tech needs [here](%{codeorg_url}/educate/it).
-    Tech needs for non-Code.org tutorials can be found on [%{partner_url}/learn](%{codeorg_url}/learn)
-    in the tutorial specific description. Don't forget we also offer [unplugged activities](%{unplugged_url})
-    if your school can't accommodate the tutorials!
+  hoc_faq_devices_a_markdown: Code.org tutorials fungerer på alle enheter og nettlesere.
+    Du kan se mer informasjon om Code.orgs opplæringstekniske behov [here](%{codeorg_url}/educate/it).
+    Tekniske behov for ikke-Code.org-opplæringsprogrammer finner du på [%{partner_url}/learn]
+    (%{codeorg_url}/learn) i den veiledningsspesifikke beskrivelsen. Ikke glem at
+    vi også tilbyr [unplugged activities] (%{unplugged_url}) hvis skolen din ikke
+    har plass til opplæringsprogrammene!
   hoc_faq_need_computers_q: Trenger jeg en datamaskin for hver elev?
   hoc_faq_need_computers_a: Nei. Vi har Kodetimen opplegg som viker på PCer, smarttelefoner,
     nettbrett og noen som ikke krever datamaskiner i det store og det hele! Du kan
@@ -2178,13 +2219,13 @@
     og løse oppgaver eller svare på spørsmål etter tur. <li><b>Gå analogt.</b> Vi
     tilbyr veiledninger som ikke krever datamaskiner i det store og det hele.</ul>
   hoc_faq_need_computers_a_markdown: |-
-    No. We have Hour of Code tutorials that work on PCs, smartphones, tablets, and some that require no computer at all! You can join wherever you are, with whatever you have.
+    Nei. Vi har Hour of Code-opplæringsprogrammer som fungerer på PC-er, smarttelefoner, nettbrett, og noen som ikke krever noen datamaskin i det hele tatt! Du kan bli med uansett hvor du er, med det du har.
 
-    _Here are a few options:_
+    _Her er noen alternativer:_
 
-    - **Work in pairs.** [Research shows](%{pair_programming_research}) students learn best with [pair programming](%{pair_programming_video}), sharing a computer and working together. Encourage your students to double up.
-    - **Use a projected screen.** If you have a projector and screen for a Web-connected computer, your entire group can do an Hour of Code together. Watch video portions together and take turns solving puzzles or answering questions.
-    - **Go unplugged.** We offer [tutorials that require no computer](%{unplugged_url}) at all.
+    - **Arbeid par.** [Forskning viser] (%{pair_programming_research}) elevene lærer best med [parprogrammering] (%{pair_programming_video}), deling av datamaskin og samarbeid. Oppfordre elevene dine til å doble opp.
+    - **Bruk en projisert skjerm.** Hvis du har en projektor og skjerm for en Internett-tilkoblet datamaskin, kan hele gruppen gjøre en Kodetime sammen. Se videodeler sammen og bytt på å løse gåter eller svare på spørsmål.
+    - **Gå frakoblet. ** Vi tilbyr [opplæringsprogrammer som ikke krever datamaskin] () i det hele tatt.%{unplugged_url}
   hoc_faq_international_q: Jeg er i <country>. Hvordan kan jeg delta internasjonalt?
   hoc_faq_international_a: Alle kan organisere en Kodetime, hvor som helst i verden.
     I fjor gikk elever over hele verden sammen om å arrangere Kodetimen. Finn ut mer
@@ -2219,23 +2260,25 @@
     eller  Anna og Elsa. En elev i videregående vil klare å fullføre en av disse på
     en halv time og kan deretter prøve en mer avansert leksjon i JavaScript, slik
     som Khan Academy eller CodeHS.
-  hoc_faq_high_school_a_markdown: Our Star Wars and Minecraft tutorials are great
-    for high schoolers, especially the Star Wars JavaScript version and the free play
-    level on both tutorials. Alternately, we recommend trying one of the beginner
-    tutorials on [%{partner_url}/learn](%{codeorg_url}/learn) to start, such as the
-    tutorial with Angry Birds or with Anna and Elsa. A high school student should
-    be able to finish one of these in 30 minutes and can then try a more advanced
-    tutorial in JavaScript, such as Khan Academy or CodeHS.
+  hoc_faq_high_school_a_markdown: Våre Star Wars- og Minecraft-opplæringsprogrammer
+    er flotte for videregående skoleelever, spesielt Star Wars JavaScript-versjonen
+    og gratisspillnivået på begge opplæringsprogrammene. Alternativt anbefaler vi
+    å prøve en av nybegynnerveiledningene på [%{partner_url}/learn] (%{codeorg_url}/learn)
+    for å starte, for eksempel opplæringen med Angry Birds eller med Anna og Elsa.
+    En videregående student skal kunne fullføre en av disse på 30 minutter og kan
+    deretter prøve en mer avansert opplæring i JavaScript, for eksempel Khan Academy
+    eller CodeHS.
   hoc_faq_scratch_q: Jeg bruker Scratch i Kodetimen, men hva gjør jeg hvis elevene
     mine har nettbrett i stedet for bærbare datamaskiner?
   hoc_faq_scratch_a: Scratch kjører på nettbrett. Hvis elevene er små, kan de bruke
     appen ScratchJR (for de som kan lese). Hvis du ser på oversikten på <a href='http://code.org/learn'>
     Code.org/learn</a>, kan du finne andre leksoner som fungerer på nettbrett - fra
     Code.org, Tynker, Lightbot eller CodeSpark.
-  hoc_faq_scratch_a_markdown: Scratch doesn't run on tablets. If your students are
-    young, they can use the ScratchJR iPad app (for early-readers). If you look at
-    the tutorials on [%{partner_url}/learn](%{codeorg_url}/learn), you can find other
-    tutorials that work on iPads - from Code.org, Tynker, Lightbot, or CodeSpark.
+  hoc_faq_scratch_a_markdown: Scratch kjører ikke på nettbrett. Hvis elevene dine
+    er unge, kan de bruke ScratchJr iPad-appen (for tidlige lesere). Hvis du ser på
+    veiledningene på [%{partner_url}/learn] (%{codeorg_url}/learn), kan du finne andre
+    opplæringsprogrammer som fungerer på iPads - fra Code.org, Tynker, Lightbot eller
+    CodeSpark.
   hoc_faq_count_hoc_q: Hvordan teller dere Kodetimer?
   hoc_faq_map_q: Hvorfor ser jeg ikke min prikk på kartet?
   hoc_faq_map_a: Vi er veldig lei oss for at du ikke ser Kodetime-arrangementet på
@@ -2313,10 +2356,10 @@
     der du kan skrive ut diplomer for hele klassen forhånd. Du kan også skrive ut
     <a href='%{codeorg_url}/certificates?course=mc'> spesielle diplomer</a> for studenter
     på Minecraft opplæringen.
-  hoc_faq_certificates_a_markdown: Go to our [certificates page](%{codeorg_url}/certificates)
-    where you can print certificates for your entire class ahead of time. You can
-    also print out [special certificates](%{codeorg_url}/certificates?course=mc) for
-    students doing the Minecraft tutorial.
+  hoc_faq_certificates_a_markdown: Gå til vår [sertifikatside] (%{codeorg_url}/sertifikater)
+    hvor du kan skrive ut sertifikater for hele klassen din på forhånd. Du kan også
+    skrive ut [spesielle sertifikater] (%{codeorg_url}/sertifikater? kurs = mc) for
+    studenter som gjør Minecraft-opplæringen.
   hoc_faq_logo_q: Er det begrensninger på hvordan jeg kan bruke Kodetime-logoen eller
     navnet?
   hoc_faq_logo_a: Kodetimen er varemerkebeskyttet. Vi ønsker ikke å hindre bruken,
@@ -2472,8 +2515,8 @@
   learn_banner_beyond_markdown: Vil du fortsette å lære? [Gå utover en time] (%{url})
   learn_banner_teachers: Lærere:<a id='teacher_banner_host'>Vær vert for en time</a>eller<a
     id='teacher_banner_howto'>les slik-gjør-du-guiden</a>
-  learn_banner_teachers_markdown: 'Teachers: [Host an hour](%{host_url}) or [read
-    the How-To Guide](%{howto_url})'
+  learn_banner_teachers_markdown: 'Lærere: [Vert en time] (%{host_url}) eller [les
+    veiledningen] ()%{howto_url}'
   tutorial_dance2019_name: Dansefest
   tutorial_danceparty_name: Dansefest
   tutorial_chibitronics_name: 'Chibitronics: Opplyst historie'
@@ -5296,11 +5339,11 @@
     et eventyr gjennom denne Minecraft-verdenen.
   tutorial_minecraft-2016_longdescription: Bygg et Minecraft-spill. Lag dine egne
     versjoner av kylling, sau, Creepers, zombier og mer.
-  tutorial_thinkersmith-es_longdescription: Mediante el uso de un "Vocabulario Robot"
-    predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar
-    a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento
-    ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones
-    as&iacute; como la valiosa habilidad de depuraci&oacute;n.
+  tutorial_thinkersmith-es_longdescription: Mediante el uso de un «Vocabulario Robot»
+    forhåndsdefinert, los estudiantes descubrir&aacute;n como guiarse de modo tal
+    de llevar a cabo tareas espec ficas sin ser estas discutidas previamente.&iacute;Este
+    segmento ense&ntilde;a los estudiantes la conexi&oacute;n entre s&iacute;mbolos
+    y acciones som como la valiosa habilidad de depuraci n.&iacute;&oacute;
   tutorial_pixie_longdescription: Hour of Code-opplæring med Pixie
   tutorial_play_longdescription: Lag en historie eller lag et spill med Play Lab!
     Få dyr, pirater, zombier, ninjaer og mange flere karakterer til å bevege seg,
@@ -12259,12 +12302,12 @@
   tutorial_googlename _longdescription: Velg et navn og få bokstavene i ordet til
     liv ved hjelp av kode. Velg et kallenavn, et kjæledyrs navn, et dyr, en sport,
     et sted eller en hobby.
-  tutorial_carnegiezillah_longdescription: Zillah City is thriving, and music is in
-    the air. Rumor has it, the famed Gargantua bot is online and sending the last
-    Toxibots to trash the city block by block…. Grab your cobot hoverboard and get
-    ready to groove, move, and finish off what you started! Players program their
-    cobot hoverbots to change lanes, avoid obstacles, and take out many Toxibots in
-    this rhythm-styled game.
+  tutorial_carnegiezillah_longdescription: Zillah City blomstrer, og musikk er i luften.
+    Ryktene sier det, den berømte Gargantua-boten er online og sender de siste Toxibots
+    for å kaste byen blokk for blokk.…Ta tak i cobot-hoverboardet ditt og gjør deg
+    klar til å spore, flytte og avslutte det du startet! Spillere programmerer cobot-svevebotene
+    sine for å bytte kjørefelt, unngå hindringer, og ta ut mange Toxibots i dette
+    rytmestilte spillet.
   tutorial_nasachspacejam_longdescription: Lag et solsystem som virkelig rocker! Lær
     om musikk, astronomi og koding i denne selvstyrte aktiviteten (ingen kodingserfaring
     kreves). Programmer planeter for å lage musikk, lage ditt eget musikalske solsystem,

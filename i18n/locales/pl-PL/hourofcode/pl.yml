@@ -5,10 +5,10 @@ pl:
   language: Polski
   front_title: Dołącz do największej inicjatywy w historii, %{campaign_date}
   coming_soon: Wkrótce dostępne
-  campaign_date_start_short: 5 grud.
-  campaign_date_start_long: 5 grudnia
-  campaign_date_short: 5-11 grud.
-  campaign_date_full: 5-11 grudnia
+  campaign_date_start_short: 7 grudnia
+  campaign_date_start_long: 7 grudnia
+  campaign_date_short: 7-13 grudnia
+  campaign_date_full: 7-13 grudnia
   campaign_date_year: '2022'
   campaign_date_full_year: 5-11 grudnia 2022
   nonus_campaign_date_start_short: 1 października
@@ -194,6 +194,15 @@ pl:
   grade_level_label_elementary: Szkoła podstawowa
   grade_level_label_middle: Gimnazjum
   grade_level_label_high: liceum
+  curricula_title_elementary: Programy nauczania w szkole podstawowej
+  curricula_desc_elementary: Przeglądaj zabawę, bezpłatne kursy i zajęcia, które zapraszają
+    do odkrywania informatyki z uczniami szkoły podstawowej.
+  curricula_title_middle: Programy nauczania w gimnazjum
+  curricula_desc_middle: Przeglądaj angażujące oferty, które umożliwiają Tobie i Twoim
+    uczniom gimnazjum wspólne odkrywanie informatyki.
+  curricula_title_high: Programy nauczania w szkole średniej
+  curricula_desc_high: Przeglądaj atrakcyjne kursy i zajęcia, które zapraszają Ciebie
+    i Twoich uczniów szkół średnich do głębszego zagłębienia się w informatykę.
   students_label: Uczniowie
   teachers_label: Nauczyciele
   teacher_label_csf: Nauczyciel CS Fundamentals
@@ -220,6 +229,13 @@ pl:
   call_to_action_explore_choice_level: Poznaj przykładowy poziom wyboru
   call_to_action_explore_collection: Przeglądaj kolekcję
   call_to_action_explore_unplugged_lesson: Przeglądaj lekcje bez wtyczki
+  call_to_action_explore_csf: Poznaj podstawy CS
+  call_to_action_explore_csd: Poznaj CS Discoveries
+  call_to_action_explore_csp: Poznaj zasady CS
+  call_to_action_explore_csc: Poznaj CS Connections
+  call_to_action_explore_csa: Poznaj AP® Computer Science A
+  call_to_action_explore_maker: Poznaj programy nauczania Maker
+  call_to_action_explore_hoc: Zapoznaj się z samouczkami „Godzina kodowania”
   call_to_action_try_app_lab: Wypróbuj App Lab
   call_to_action_view_lesson_plan: Zobacz plan lekcji
   call_to_action_self_paced_pl: Rozpocznij naukę zawodową we własnym tempie
@@ -264,6 +280,7 @@ pl:
   call_to_action_notify_available: Powiadom mnie, gdy będzie dostępny
   call_to_action_register_early_access: Zarejestruj się, aby uzyskać wczesny dostęp
   call_to_action_open_positions: Wyświetlanie otwartych pozycji
+  call_to_action_get_guide: Zdobądź przewodnik
   aria_label_call_to_action_afe: Dowiedz się więcej o Amazon Future Engineer
   aria_label_call_to_action_teaching_csf: Rozpocznij profesjonalny program nauczania
     nauczania podstaw informatyki
@@ -369,6 +386,8 @@ pl:
   curriculum_name_csa: Informatyka A
   curriculum_name_csc_02: Dowolny moduł połączeń CS
   curriculum_name_ai: AI [sztuczna inteligencja] i nauka maszynowa
+  curriculum_name_artificial_intelligence: Sztuczna inteligencja (AI)
+  curriculum_name_maker: Stwórca
   curriculum_name_maker_cp: Tworzenie aplikacji za pomocą urządzeń (Circuit Playground)
   curriculum_name_maker_microbit: Tworzenie aplikacji z urządzeniami (micro:bit)
   curriculum_name_creating_apps_with_devices: Tworzenie aplikacji za pomocą urządzeń
@@ -425,6 +444,12 @@ pl:
   curriculum_desc_creating_apps_with_devices: Poznaj rolę urządzeń fizycznych w informatyce.
     Opracuj programy wykorzystujące wejścia i wyjścia sprzętowe. Istnieje wersja tego
     urządzenia zarówno dla micro:bit, jak i Circuit Playground.
+  curriculum_desc_csa: Zapoznaj studentów z inżynierią oprogramowania i projektowaniem
+    obiektowym, ucząc się języka programowania Java w tym bezpłatnym programie nauczania
+    dla AP® Computer Science A (AP® CSA).
+  curriculum_desc_maker: Edukacja twórców przenosi STEM (Science, Technology, Engineering,
+    Mathematics) o krok dalej, zapraszając praktyczne doświadczenie i współpracę do
+    klasy, aby pomóc w nauczaniu rozwiązywania problemów i krytycznego myślenia.
   collection_hardware: Skoncentruj się na sprzęcie
   collection_hardware_desc: Uprawnia uczniów do korzystania z danych i urządzeń fizycznych
     do rozwiązywania problemów.
@@ -465,6 +490,7 @@ pl:
   module_label_student_content_resources: Treść i zasoby
   module_label_new: Nowość
   module_label_coming_soon: Już wkrótce
+  module_label_available_now: Dostępny już teraz
   module_label_video_series: Seria wideo
   module_label_self_paced: Moduł we własnym tempie
   module_ages_5_10: 5-10
@@ -475,6 +501,8 @@ pl:
   module_grade_2_5: 2-5
   module_grade_3_5: 3-5
   module_grade_3_8: 3-8
+  module_grade_k_12: K-12
+  module_grade_3_12: 3-12
   module_grade_6_12: 6-12
   module_grade_6_10: 6-10
   module_grade_9_12: 9-12
@@ -570,6 +598,8 @@ pl:
   heading_java_lab: Laboratorium Java
   heading_objects_first: Najpierw obiekty
   heading_these_lessons_will: 'Te lekcje będą:'
+  heading_explore_curriculum_catalog: Poznaj wszystkie nasze kursy w katalogu programów
+    nauczania
   professional_learning_section_desc: Uzyskaj wsparcie, którego potrzebujesz, przygotowując
     się do nauczania. Nauczyciele to uwielbiają, a ponad 90% uplasuje go za najlepszy
     rozwój zawodowy w historii!
@@ -834,6 +864,11 @@ pl:
     języków (takich jak ChatGPT) i Generative AI. Posłuchaj, jak te nowe technologie
     działają bezpośrednio od ekspertów: Miry Murati, CTO OpenAI i Cristóbal Valenzuela,
     CEO RunWayML.'
+  ai_pl_101_llm_slides_title: Monity dotyczące dużego modelu językowego dla nauczycieli
+  ai_pl_101_llm_slides_desc: Narzędzia do uzyskiwania najlepszych możliwych danych
+    wyjściowych z LLM, takich jak ChatGPT, od początkującego do zaawansowanego. Zawiera
+    podpowiedzi startowe dla tych, którzy po prostu zanurzają palce u nóg, a także
+    zaawansowane narzędzia dla tych, którzy chcą zmaksymalizować swój potencjał.
   how_ai_works_hero_heading: Jak działa sztuczna inteligencja
   how_ai_works_hero_desc: Zanurz się w świecie sztucznej inteligencji dzięki „How
     AI Works”, naszej serii filmów i towarzyszącym lekcjom!
@@ -1444,10 +1479,10 @@ pl:
     że grosze można zastąpić innym rodzajem ciężaru tego samego rozmiaru). Alternatywne
     działania są dostępne, jeśli nie masz dostępu do tych materiałów.
   csd_page_faq_answer_04_06: Tworzenie aplikacji z urządzeniami (opcja A i opcja B)
-  csd_page_faq_answer_04_07: 'Option A: Classroom set of Circuit Playgrounds. Check
-    out [code.org/maker/circuitplayground](%{url}) for more details.'
-  csd_page_faq_answer_04_08: 'Option B: Classroom set of micro:bit devices. Check
-    out [code.org/maker/microbit](%{url}) for more details.'
+  csd_page_faq_answer_04_07: 'Opcja A: Zestaw placów zabaw w klasie. Sprawdź [code.org/maker/circuitplayground]
+    () po więcej szczegółów.%{url}'
+  csd_page_faq_answer_04_08: 'Opcja B: Zestaw urządzeń micro:bit w klasie. Sprawdź
+    [code.org/maker/microbit] () po więcej szczegółów.%{url}'
   csd_page_faq_answer_04_09: Materiały eksploatacyjne producenta, takie jak puste
     pudełka na chusteczki lub tekturowe rolki lub papier do drapania
   csd_page_faq_answer_04_10: "*Uwaga: Jednostka Tworzenie aplikacji z urządzeniami
@@ -1576,10 +1611,10 @@ pl:
     klasie. Nasi Partnerzy Regionalni oferują wysokiej jakości, jednodniowe warsztaty
     Code.org dla nauczycieli indywidualnych lub dla ogólnoszkolnych PD. [Zapisz się
     na warsztaty rozwoju zawodowego w Twojej okolicy] (%{sign_up_url})!
-  csf_page_faq_answer_04_02: Join over 100,000 teachers who have participated in our
-    workshops. The majority of our workshop attendees say, 'It's the best professional
-    development I've ever attended.' In fact, [90% of attendees would recommend our
-    program to other teachers](%{rec_url})!
+  csf_page_faq_answer_04_02: 'Dołącz do ponad 100 000 nauczycieli, którzy wzięli udział
+    w naszych warsztatach. Większość uczestników naszych warsztatów mówi: „To najlepszy
+    rozwój zawodowy, w jakim kiedykolwiek uczestniczyłem”. w rzeczywistości, [90%
+    uczestników poleciłoby nasz program innym nauczycielom] ()!%{rec_url}'
   csf_page_faq_question_05: Jaki jest zalecany czas nauczania CS Fundamentals?
   csf_page_faq_answer_05: Każdy kurs CSF obejmuje 13-17 lekcji zaprojektowanych na
     45-minutowe okresy. Zalecamy wszystkim uczniom przejście z lekcji na lekcję w
@@ -1588,9 +1623,10 @@ pl:
     gdy lekcje budowania umiejętności mogą być wypełniane przez uczniów we własnym
     tempie.
   csf_page_faq_question_06: Jakich materiałów potrzebuję do CS Fundamentals?
-  csf_page_faq_answer_06: Many lessons have handouts that guide students through activities.
-    These resources can be printed or assigned digitally. Some lessons call for typical
-    classroom supplies and manipulatives. [Visit the CSF Syllabus to learn more](%{syllabus_url}).
+  csf_page_faq_answer_06: Wiele lekcji zawiera materiały informacyjne, które prowadzą
+    uczniów przez zajęcia. Zasoby te można drukować lub przypisywać cyfrowo. Niektóre
+    lekcje wymagają typowych materiałów szkolnych i manipulacji. [Odwiedź Syllabus
+    CSF, aby dowiedzieć się więcej] ().%{syllabus_url}
   csa_page_top_desc: Introduce students to software engineering and object-oriented
     design while they learn the Java programming language in this free curriculum
     for [AP® Computer Science A (AP® CSA)](%{csa_url}).
@@ -2077,6 +2113,13 @@ pl:
     kursów Code.org, lokalnych możliwości lub innych wiadomości informatycznych?
   signup_email_preference_privacy: "(Zobacz naszą politykę prywatności)"
   signup_email_preference_yes: Tak
+  signup_email_preference_yes_elementary: Tak - Wyślij mi aktualizacje na temat Zasobów
+    Szkoły Podstawowej
+  signup_email_preference_yes_middle: Tak - Wyślij mi aktualizacje na temat Zasobów
+    dla gimnazjum
+  signup_email_preference_yes_high: Tak - Wyślij mi aktualizacje na temat Zasobów
+    dla szkół średnich
+  signup_email_preference_yes_general: Tak - Wyślij mi ogólne aktualizacje
   signup_email_preference_no: Nie
   signup_email_preference_error: Preferencje e-mail są wymagane
   signup_multiple_event_warning: Jeśli jesteś gospodarzem wielu wydarzeń, prosimy
@@ -12930,12 +12973,12 @@ pl:
   tutorial_googlename _longdescription: Wybierz imię i wprowadź w życie dwie litery
     słowa używając kodu. Wymierz pseudonim, imię dla zwierzęcia, zwierzę, sport i
     miejsce albo hobby.
-  tutorial_carnegiezillah_longdescription: Zillah City is thriving, and music is in
-    the air. Rumor has it, the famed Gargantua bot is online and sending the last
-    Toxibots to trash the city block by block…. Grab your cobot hoverboard and get
-    ready to groove, move, and finish off what you started! Players program their
-    cobot hoverbots to change lanes, avoid obstacles, and take out many Toxibots in
-    this rhythm-styled game.
+  tutorial_carnegiezillah_longdescription: Zillah City kwitnie, a muzyka unosi się
+    w powietrzu. Plotka głosi, słynny bot Gargantua jest online i wysyła ostatnie
+    Toxiboty, aby zniszczyć miasto blok po bloku.…Chwyć hoverboard cobota i przygotuj
+    się do rowkowania, poruszania się i dokończenia tego, co zacząłeś! Gracze programują
+    swoje kobotowe hoverboty, aby zmieniać pasy, unikać przeszkód i eliminować wiele
+    Toxibotów w tej grze w stylu rytmu.
   tutorial_nasachspacejam_longdescription: Stwórz układ słoneczny, który naprawdę
     kołysze! Dowiedz się o muzyce, astronomii i kodowaniu w tym samodzielnym ćwiczeniu
     (nie jest wymagane doświadczenie w kodowaniu). Programuj planety, aby tworzyć

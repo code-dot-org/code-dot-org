@@ -111,19 +111,20 @@ az:
     yaratmaqda oynaya biləcəyi rolu anlamalarına kömək edəcək mənbələr.
   oceans_landing_videos: AI və Maşın Öyrənmə haqqında videolar
   oceans_behind_the_scenes: 'Okeanlar üçün süni intellekt: pərdə arxasında'
-  oceans_behind_the_scenes_1: Levels 2-4 use a pretrained model provided by the <a
-    href="https://www.tensorflow.org/" >TensorFlow</a> <a href="https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md">
-    MobileNet </a> project. A MobileNet model is a <a href="https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks">convolutional
-    neural network</a> that has been trained on <a href="http://www.image-net.org/">ImageNet</a>,
-    a dataset of over 14 million images hand-annotated with words such as "balloon"
-    or "strawberry". In order to customize this model with the labeled training data
-    the student generates in this activity, we use a technique called <a href="https://en.wikipedia.org/wiki/Transfer_learning">Transfer
-    Learning</a>. Each image in the training dataset is fed to MobileNet, as pixels,
-    to obtain a list of annotations that are most likely to apply to it. Then, for
-    a new image, we feed it to MobileNet and compare its resulting list of annotations
-    to those from the training dataset. We classify the new image with the same label
-    (such as "fish" or "not fish") as the images from the training set with the most
-    similar results.
+  oceans_behind_the_scenes_1: Səviyyə 2-4 <a href="https://www.tensorflow.org/" >TensorFlow</a>
+    <a href="https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md">
+    MobileNet layihəsi tərəfindən təmin edilmiş əvvəlcədən hazırlanmış bir modeldən
+    istifadə edir. </a> MobileNet modeli, “şar” və ya “çiyələk” kimi sözlərlə əllə
+    şərh edilmiş 14 milyondan çox şəkildən ibarət bir məlumat bazası</a> olan <a href="http://www.image-net.org/"></a>ImageNet-də
+    təlim keçmiş bir <a href="https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks">konvolyusiya
+    neyron şəbəkəsidir. Bu modeli tələbənin bu fəaliyyətdə yaratdığı etiketli təlim
+    məlumatları ilə fərdiləşdirmək üçün Transfer Öyrənmə adlı <a href="https://en.wikipedia.org/wiki/Transfer_learning">bir
+    texnikadan istifadə edirik.</a>Təlim verilənlər bazasındakı hər bir şəkil, tətbiq
+    oluna biləcək annotasiyaların siyahısını əldə etmək üçün piksel şəklində MobileNet-ə
+    verilir. Sonra, yeni bir görüntü üçün onu MobileNet-ə təqdim edirik və nəticədə
+    əldə edilən annotasiyaların siyahısını təlim verilənlər bazasından olanlarla müqayisə
+    edirik. Yeni görüntünü eyni etiketlə (məsələn, “balıq” və ya “balıq deyil”) ən
+    oxşar nəticələrlə təlim dəstindəki şəkillər kimi təsnif edirik.
   oceans_behind_the_scenes_1_markdown: Səviyyələr 2-4 [TensorFlow](https://www.tensorflow.org/)
     [MobileNet](https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md)
     layihəsi tərəfindən təmin edilmiş əvvəlcədən hazırlanmış bir modeldən istifadə
@@ -191,6 +192,15 @@ az:
   grade_level_label_elementary: İbtidai məktəb
   grade_level_label_middle: Orta məktəb
   grade_level_label_high: Lisey
+  curricula_title_elementary: İbtidai məktəb kurikulumları
+  curricula_desc_elementary: İbtidai sinif şagirdlərinizlə kompüter elmlərini araşdırmağa
+    dəvət edən əyləncəli, pulsuz kurslara və fəaliyyətlərə göz atın.
+  curricula_title_middle: Orta məktəb kurikulumları
+  curricula_desc_middle: Sizə və orta məktəb şagirdlərinizə birlikdə kompüter elmlərini
+    araşdırmağa imkan verən cəlbedici təkliflərə baxın.
+  curricula_title_high: Lisey Kurikulumları
+  curricula_desc_high: Sizi və lisey şagirdlərinizi kompüter elmlərini daha dərindən
+    araşdırmağa dəvət edən cəlbedici kurslara və fəaliyyətlərə göz atın.
   students_label: Şagirdlər
   teachers_label: Müəllimlər
   teacher_label_csf: CS Əsasları Müəllim
@@ -217,6 +227,13 @@ az:
   call_to_action_explore_choice_level: Nümunə seçim səviyyəsini araşdırın
   call_to_action_explore_collection: Kolleksiyanı araşdırın
   call_to_action_explore_unplugged_lesson: Unplugged dərsləri araşdırın
+  call_to_action_explore_csf: CS əsaslarını araşdırın
+  call_to_action_explore_csd: CS kəşflərini araşdırın
+  call_to_action_explore_csp: CS Prinsiplərini araşdırın
+  call_to_action_explore_csc: CS Əlaqələrini araşdırın
+  call_to_action_explore_csa: AP® Kompüter Elmlərini araşdırın
+  call_to_action_explore_maker: Maker kurikulumlarını araşdırın
+  call_to_action_explore_hoc: Kod Saatı dərsliklərini araşdırın
   call_to_action_try_app_lab: App Laboratoriyasını sınayın
   call_to_action_view_lesson_plan: Dərs planına baxın
   call_to_action_self_paced_pl: Öz-özünə inkişaf edən peşəkar öyrənməyə başlayın
@@ -262,6 +279,7 @@ az:
   call_to_action_notify_available: Mövcud olduqda mənə bildirin
   call_to_action_register_early_access: Erkən giriş üçün qeydiyyatdan keçin
   call_to_action_open_positions: Açıq mövqelərə baxın
+  call_to_action_get_guide: Bələdçi alın
   aria_label_call_to_action_afe: Amazon Future Engineer haqqında daha çox məlumat
     əldə edin
   aria_label_call_to_action_teaching_csf: Tədris Kompüter Elmlərinin Əsasları peşəkar
@@ -371,6 +389,8 @@ az:
   curriculum_name_csa: AP® Kompüter Elmləri A
   curriculum_name_csc_02: Hər hansı bir CS Əlaqələri Modulu
   curriculum_name_ai: AI və Maşın Öyrənmə
+  curriculum_name_artificial_intelligence: Süni intellekt (AI)
+  curriculum_name_maker: usta
   curriculum_name_maker_cp: Cihazlarla Proqramlar Yaratmaq (Circuit Playground)
   curriculum_name_maker_microbit: 'Cihazlarla Proqramlar Yaratmaq (mikro: bit)'
   curriculum_name_creating_apps_with_devices: Cihazlarla Proqramlar Yaratmaq
@@ -430,6 +450,12 @@ az:
   curriculum_desc_creating_apps_with_devices: 'Hesablamada fiziki cihazların rolunu
     araşdırın. hardware giriş və çıxış istifadə proqramları inkişaf. Həm mikro: bit,
     həm də Circuit Playground üçün bu bölmənin bir versiyası var.'
+  curriculum_desc_csa: Tələbələri AP® Computer Science A (AP® CSA) üçün bu pulsuz
+    tədris proqramında Java proqramlaşdırma dilini öyrənərkən proqram mühəndisliyi
+    və obyekt yönümlü dizaynla tanış edin.
+  curriculum_desc_maker: Maker təhsili, problemlərin həlli və tənqidi düşüncəni öyrətmək
+    üçün sinifə praktiki təcrübə və əməkdaşlığı dəvət edərək STEM (Elm, Texnologiya,
+    Mühəndislik, Riyaziyyat) bir addım daha irəli aparır.
   collection_hardware: Avadanlıqlara diqqət yetirin
   collection_hardware_desc: Tələbələrə problemləri həll etmək üçün məlumat və fiziki
     cihazlardan istifadə etmək imkanı verir.
@@ -470,6 +496,7 @@ az:
   module_label_student_content_resources: Məzmun və resurslar
   module_label_new: Yeni
   module_label_coming_soon: Tezliklə
+  module_label_available_now: İndi mövcuddur
   module_label_video_series: Video seriyası
   module_label_self_paced: Self-öğreten modul
   module_ages_5_10: 5-10
@@ -480,6 +507,8 @@ az:
   module_grade_2_5: 2-5
   module_grade_3_5: 3-5
   module_grade_3_8: 3-8
+  module_grade_k_12: K-12
+  module_grade_3_12: 3-12
   module_grade_6_12: 6-12
   module_grade_6_10: 6-10
   module_grade_9_12: 9-12
@@ -576,6 +605,7 @@ az:
   heading_java_lab: Java Laboratoriyası
   heading_objects_first: Əvvəlcə obyektlər
   heading_these_lessons_will: 'Bu dərslər:'
+  heading_explore_curriculum_catalog: Kurikulum Kataloqunda bütün kurslarımızı araşdırın
   professional_learning_section_desc: Öyrətməyə hazırlaşarkən sizə lazım olan dəstəyi
     alın. Müəllimlər bunu sevirlər, 90% -dən çoxu bu günə qədər ən yaxşı peşəkar inkişafdır!
   professional_learning_section_desc_short: Öyrətməyə hazırlaşarkən sizə lazım olan
@@ -841,6 +871,11 @@ az:
     yeni texnologiya haqqında daha çox məlumat əldə edin. Bu yeni texnologiyaların
     birbaşa mütəxəssislərdən necə işlədiyini eşidin: OpenAI şirkətinin CTO-su Mira
     Murati və RunwayML şirkətinin baş direktoru Cristobal Valenzuela.'
+  ai_pl_101_llm_slides_title: Tərbiyəçilər üçün Böyük Dil Modeli İstəkləri
+  ai_pl_101_llm_slides_desc: Başlanğıcdan qabaqcıl səviyyəyə qədər ChatGPT kimi LLM-lərdən
+    mümkün olan ən yaxşı çıxışı əldə etmək üçün vasitələr. Yalnız ayaq barmaqlarını
+    batıranlar üçün başlanğıc göstərişləri, eləcə də potensiallarını artırmaq istəyənlər
+    üçün qabaqcıl alətlər daxildir.
   how_ai_works_hero_heading: AI necə işləyir
   how_ai_works_hero_desc: "“AI necə işləyir”, video seriyamız və müşayiət olunan dərslərimizlə
     AI dünyasına dalın!"
@@ -1442,10 +1477,10 @@ az:
     eyni ölçüdə başqa bir çəki ilə əvəz edilə bilər unutmayın). Bu təchizatlara girişiniz
     yoxdursa, alternativ fəaliyyətlər mövcuddur.
   csd_page_faq_answer_04_06: Cihazlarla Proqramlar Yaratmaq (Seçim A və Seçim B)
-  csd_page_faq_answer_04_07: 'Option A: Classroom set of Circuit Playgrounds. Check
-    out [code.org/maker/circuitplayground](%{url}) for more details.'
-  csd_page_faq_answer_04_08: 'Option B: Classroom set of micro:bit devices. Check
-    out [code.org/maker/microbit](%{url}) for more details.'
+  csd_page_faq_answer_04_07: 'Seçim A: Dövrə Oyun Meydançalarının Sinif dəsti. Daha
+    ətraflı məlumat üçün [code.org/maker/circuitplayground] () saytına baxın.%{url}'
+  csd_page_faq_answer_04_08: 'Seçim B: Mikro sinif dəsti: bit cihazları. Daha ətraflı
+    məlumat üçün [code.org/maker/microbit] () -ə baxın.%{url}'
   csd_page_faq_answer_04_09: Boş toxuma qutuları və ya karton rulonlar və ya cızıq
     kağızı kimi istehsalçı təchizatı
   csd_page_faq_answer_04_10: "* Qeyd: Cihazlar ilə Proqramlar Yaratmaq bölməsində
@@ -1455,12 +1490,11 @@ az:
     eyni məzmunu əhatə edir."
   csd_page_faq_question_06: CS Discoveries digər Code.org kursları ilə necə uyğun
     gəlir?
-  csd_page_faq_answer_06_01: CS Discoveries is designed to fit naturally between our
-    [CS Fundamentals](%{csf_url}) courses and our [CS Principles](%{csp_url}) course.
-    While each of these courses is designed to be an age-appropriate entry point to
-    computer science, students with previous experience will find many new topics
-    to explore, and they will revisit familiar topics in novel and more challenging
-    contexts.
+  csd_page_faq_answer_06_01: CS Discoveries bizim [CS Fundamentals] (%{csf_url}) kurslarımız
+    və [CS Prinsipləri] () kursumuz arasında təbii uyğunlaşmaq üçün nəzərdə tutulmuşdur.%{csp_url}Bu
+    kursların hər biri kompüter elminə yaşa uyğun bir giriş nöqtəsi olaraq hazırlansa
+    da, əvvəlki təcrübəsi olan tələbələr araşdırmaq üçün bir çox yeni mövzu tapacaq
+    və tanış mövzulara yeni və daha çətin kontekstlərdə yenidən baxacaqlar.
   csc_page_top_desc: Kompüter elmləri (CS) ilə riyaziyyat, dil sənəti, elm və sosial
     elmlər kimi digər fənlər arasında əlaqə qurun.
   csc_page_intro_heading: Əsas mövzu standartlarını əhatə edərkən CS öyrət
@@ -1576,10 +1610,10 @@ az:
     müəllimlərə qoşulun. Regional Tərəfdaşlarımız fərdi müəllimlər və ya məktəb boyu
     PD üçün yüksək keyfiyyətli, bir günlük Code.org seminarları təklif edir. [Sizə
     yaxın bir peşəkar inkişaf seminarı üçün qeydiyyatdan keçin] (%{sign_up_url})!
-  csf_page_faq_answer_04_02: Join over 100,000 teachers who have participated in our
-    workshops. The majority of our workshop attendees say, 'It's the best professional
-    development I've ever attended.' In fact, [90% of attendees would recommend our
-    program to other teachers](%{rec_url})!
+  csf_page_faq_answer_04_02: Seminarlarımızda iştirak etmiş 100 mindən çox müəllimə
+    qoşulun. Seminar iştirakçılarımızın əksəriyyəti “Bu, indiyə qədər iştirak etdiyim
+    ən yaxşı peşəkar inkişafdır” deyirlər. Əslində, [iştirakçıların 90% -i proqramımızı
+    digər müəllimlərə tövsiyə edərdi] ()!%{rec_url}
   csf_page_faq_question_05: CS Fundamentals öyrətmək üçün tövsiyə olunan vaxt nədir?
   csf_page_faq_answer_05: Hər CSF kursuna 45 dəqiqəlik müddət üçün nəzərdə tutulmuş
     13-17 dərs daxildir. Bütün şagirdlərə müəllimin təyin etdiyi sürətlə dərsdən dərsə
@@ -1587,9 +1621,10 @@ az:
     öz sürətləri ilə tamamlana bildiyi halda, bir araya gəlmək üçün hazırlanmış bir
     çox müəllim rəhbərlik etdiyi layihə səviyyələri var.
   csf_page_faq_question_06: CS Fundamentals üçün hansı materiallara ehtiyacım var?
-  csf_page_faq_answer_06: Many lessons have handouts that guide students through activities.
-    These resources can be printed or assigned digitally. Some lessons call for typical
-    classroom supplies and manipulatives. [Visit the CSF Syllabus to learn more](%{syllabus_url}).
+  csf_page_faq_answer_06: Bir çox dərslərdə şagirdlərə fəaliyyətlər vasitəsilə rəhbərlik
+    edən paylama materialları var. Bu mənbələr çap edilə və ya rəqəmsal olaraq təyin
+    edilə bilər. Bəzi dərslər tipik sinif təchizatı və manipulyativləri tələb edir.
+    [Ətraflı məlumat üçün CSF Proqramını ziyarət edin] ().%{syllabus_url}
   csa_page_top_desc: Introduce students to software engineering and object-oriented
     design while they learn the Java programming language in this free curriculum
     for [AP® Computer Science A (AP® CSA)](%{csa_url}).
@@ -1738,8 +1773,8 @@ az:
   ai_activity_zooniverse: Zooniverse - Snapshot Dağ Zebra
   ai_activity_zooniverse_desc: Şəkillərdəki müxtəlif heyvanları müəyyən etməklə nəsli
     kəsilməkdə olan Cape Mountain Zebra qorumağa kömək edin.
-  codeorg_homepage_hoc2018_curriculum: Go further with <a href="%{studio_url}/courses"
-    class="hoc2018-curriculum-link">Code.org courses</a>
+  codeorg_homepage_hoc2018_curriculum: <a href="%{studio_url}/courses" class="hoc2018-curriculum-link">Code.org
+    kursları ilə daha da irəli gedin</a>
   codeorg_homepage_hoc2018_dance_heading: Öz <span class="highlight-word">rəqs&nbsp;şənliyi</span>nizi
     düzəldin
   codeorg_homepage_hoc2018_header_line1: Kod Saatı gəlir...
@@ -1951,7 +1986,7 @@ az:
   whats_next_how_to_promote: "<a href='/promote/resources'>Kod</a>saatını necə təşviq
     etmək olar"
   whats_next_how_to_promote_link: "<a href='/promote'>Kod saatını necə tanıtım etməli</a>"
-  whats_next_try: "<a href='%{learn_url}'>Try tutorials</a>"
+  whats_next_try: "<a href='%{learn_url}'>Dərsliklərə cəhd edin</a>"
   whats_next_try_button: Dərslikləri sınaqdan keçirin
   n_have_learned_an_hoc: "<h1>Bir Kod Saatı</h1><h2>ilə özünüzü sınayın</h2><h3>#
     nəfər faydalanıb</h3>"
@@ -1973,9 +2008,9 @@ az:
   front_join_us_header: Hər kəs təməl bilikləri öyrənərək bundan zövq ala bilər!
   front_join_us_volunteer_header: Kod Saatı könüllüləri
   front_join_us_tutorials: Kod Saatı dərsliyinizi seçin!
-  front_join_us_tutorials_link: Filter and browse <i>over 200 tutorials and lesson
-    plans</i>! Find activities for different subject areas, multiple hardware needs,
-    and students at any experience level.
+  front_join_us_tutorials_link: Süzün və <i>200-dən çox dərs və dərs</i>planına göz
+    atın! İstənilən təcrübə səviyyəsində müxtəlif fənn sahələri, çoxsaylı avadanlıq
+    ehtiyacları və tələbələr üçün fəaliyyətlər tapın.
   front_join_us_robotics: Robotunuz var?
   front_join_us_robotics_link: Şagirdlərinizlə birlikdə istifadə etmək üçün bir sıra
     robotlar və ya fiziki hesablama dəstləri istəyirsiniz? Səxavətli tərəfdaşlarımız
@@ -2036,10 +2071,10 @@ az:
     olunur.
   signup_closed: Kod Saatı üçün qeydiyyat artıq bağlıdır. Növbəti Kod Saatı üçün qeydiyyatdan
     keçmək üçün oktyabr ayında yenidən yoxlayın.
-  signup_registration_not_required: You don't need to register to participate! The
-    Hour of Code activities are available year-round. <a href='%{hoc_activities_url}'>Try
-    an activity</a> or read our <a href='%{howto_guide_url}'>How-to guide</a> to plan
-    an event for your class.
+  signup_registration_not_required: İştirak etmək üçün qeydiyyatdan keçməyinizə ehtiyac
+    yoxdur! Kod Saatı fəaliyyətləri il boyu mövcuddur. <a href='%{hoc_activities_url}'>Sinifiniz
+    üçün bir tədbir planlaşdırmaq üçün bir <a href='%{howto_guide_url}'>fəaliyyətə
+    cəhd edin</a> və ya Necə</a> etməli bələdçimizi oxuyun.
   signup_registration_not_required_markdown: İştirak etmək üçün qeydiyyatdan keçməyinizə
     ehtiyac yoxdur! Kod Saatı fəaliyyətləri il boyu mövcuddur. [Fəaliyyəti sınayın]
     (%{hoc_activities_url}) və ya sinifiniz üçün bir hadisə planlaşdırmaq üçün [Necə
@@ -2079,6 +2114,13 @@ az:
     imkanlar və ya digər informatika xəbərləri barədə e-məktub yaza bilərik?
   signup_email_preference_privacy: "(Məxfilik siyasətimizi nəzərdən keçirin)"
   signup_email_preference_yes: Bəli
+  signup_email_preference_yes_elementary: Bəli - Mənə İbtidai məktəb Resursları haqqında
+    yeniliklər göndərin
+  signup_email_preference_yes_middle: Bəli - Orta Məktəb Resursları haqqında mənə
+    yeniliklər göndərin
+  signup_email_preference_yes_high: Bəli - Mənə Lisey Resursları haqqında yeniliklər
+    göndərin
+  signup_email_preference_yes_general: Bəli - Mənə ümumi yenilikləri göndər
   signup_email_preference_no: Xeyr
   signup_email_preference_error: E-poçt seçimi tələb olunur
   signup_multiple_event_warning: 'Siz qeydiyyatdan keçərkən biz məktəbinizin adı və
@@ -2159,12 +2201,12 @@ az:
     qlobal bir kampaniyadır.
   twitter_default_text: 'Mən builki #HourOfCode Kod Saatında iştirak edirəm, bəs siz?
     @codeorg'
-  twitter_donor_text: 'This year''s #HourOfCode is about creativity. I’m in! Are you?
-    (Thanks %{random_donor} for supporting @codeorg)'
-  twitter_donor_text_2019: 'This year''s #HourOfCode is about #CSforGood. I’m in!
-    Are you? (Thanks %{random_donor} for supporting @codeorg)'
-  twitter_default_text_donor: 'I''m participating in this year''s #HourOfCode, are
-    you? (Thanks %{random_donor} for supporting @codeorg)'
+  twitter_donor_text: 'Bu ilki #HourOfCode yaradıcılıq haqqındadır. Mən içindəyəm!
+    Sən? (@codeorg dəstəklədiyiniz %{random_donor} üçün təşəkkür edirik)'
+  twitter_donor_text_2019: 'Bu ilki #HourOfCode təxminən #CSforGood. Mən içindəyəm!
+    Sən? (@codeorg dəstəklədiyiniz %{random_donor} üçün təşəkkür edirik)'
+  twitter_default_text_donor: 'Bu ilki #HourOfCode -də iştirak edirəm, sən? (@codeorg
+    dəstəklədiyiniz %{random_donor} üçün təşəkkür edirik)'
   hoc_faq_title: Tez-tez verilən suallar
   hoc_faq_what_is_hoc_q: 'Kod Saatı nədir? '
   hoc_faq_what_is_hoc_a: Kod Saatı proqramlaşdırmanın üzərdindən sehr pərdəsini götürərək,
@@ -2232,16 +2274,18 @@ az:
     başlayaraq hər yaşa və təcrübə səviyyəsinə uyğun seçimlərimiz də var. Tədbirinizi
     [necə bələdçi] oxuyaraq planlaşdırmağa başlayın (%{howto}).
   hoc_faq_devices_q: Tələbələrim üçün hansı cihazlardan istifadə etməliyəm?
-  hoc_faq_devices_a: Code.org tutorials work on all devices and browsers. You can
-    see more information about Code.org's tutorial tech needs <a href='%{codeorg_url}/educate/it'>here</a>.
-    Tech needs for non-Code.org tutorials can be found on <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a>
-    in the tutorial specific description. Don't forget we also offer <a href='%{unplugged_url}'>unplugged
-    activities</a> if your school can't accommodate the tutorials!
-  hoc_faq_devices_a_markdown: Code.org tutorials work on all devices and browsers.
-    You can see more information about Code.org's tutorial tech needs [here](%{codeorg_url}/educate/it).
-    Tech needs for non-Code.org tutorials can be found on [%{partner_url}/learn](%{codeorg_url}/learn)
-    in the tutorial specific description. Don't forget we also offer [unplugged activities](%{unplugged_url})
-    if your school can't accommodate the tutorials!
+  hoc_faq_devices_a: Code.org dərsləri bütün cihazlarda və brauzerlərdə işləyir. Code.org-un
+    təlim texnologiyası <a href='%{codeorg_url}/educate/it'>ehtiyacları haqqında daha
+    çox məlumatı burada görə bilərsiniz.</a>Qeyri-Code.org dərslikləri üçün texniki
+    ehtiyaclar dərsliyin xüsusi</a> təsvirində <a href='%{codeorg_url}/learn'>%{partner_url}/öyrənə
+    bilərsiniz. Unutmayın ki, məktəbiniz dərsləri qəbul edə</a> bilmirsə, şəbəkədən
+    çıxarılan fəaliyyətlər də təklif <a href='%{unplugged_url}'>edirik!
+  hoc_faq_devices_a_markdown: Code.org dərsləri bütün cihazlarda və brauzerlərdə işləyir.
+    Code.org-un dərs texnologiyası ehtiyacları [here](%{codeorg_url}/educate/it) haqqında
+    daha çox məlumatı görə bilərsiniz. Qeyri-Code.org dərslikləri üçün texniki ehtiyacları
+    [%{partner_url}/öyrənmək] (%{codeorg_url}/öyrənmək) dərsliyin xüsusi təsvirində
+    tapa bilərsiniz. Unutmayın ki, məktəbiniz dərsləri yerləşdirə bilmirsə, [şəbəkədən
+    çıxarılan fəaliyyətlər] (%{unplugged_url}) təklif edirik!
   hoc_faq_need_computers_q: Hər bir iştirakçı üçün kompüter lazımdırmı?
   hoc_faq_need_computers_a: Xeyr. Kompüter, smartfon, planşetdə işləyən Kod Saatı
     dərslikləri var, bəzi dərsliklər üçün isə heç kompüterə gərək də yoxdur! Siz olduğunuz
@@ -2256,13 +2300,13 @@ az:
     olar.</b> Elə dərsliklər təqdim edirik ki, onların heç kompüterə ehtiyacı yoxdur.
     </ul>
   hoc_faq_need_computers_a_markdown: |-
-    No. We have Hour of Code tutorials that work on PCs, smartphones, tablets, and some that require no computer at all! You can join wherever you are, with whatever you have.
+    Xeyr. Kompüterlərdə, smartfonlarda, planşetlərdə və heç bir kompüter tələb etməyən bəzilərində işləyən Hour of Code dərslərimiz var! Harada olursunuzsa olun, nə varsa qoşula bilərsiniz.
 
-    _Here are a few options:_
+    _Budur bir neçə seçim var: _
 
-    - **Work in pairs.** [Research shows](%{pair_programming_research}) students learn best with [pair programming](%{pair_programming_video}), sharing a computer and working together. Encourage your students to double up.
-    - **Use a projected screen.** If you have a projector and screen for a Web-connected computer, your entire group can do an Hour of Code together. Watch video portions together and take turns solving puzzles or answering questions.
-    - **Go unplugged.** We offer [tutorials that require no computer](%{unplugged_url}) at all.
+    - **Cüt işləyin.** [Tədqiqat göstərir] (%{pair_programming_research}) tələbələr [cüt proqramlaşdırma] (%{pair_programming_video}) ilə ən yaxşı şəkildə öyrənirlər, kompüter paylaşır və birlikdə işləyirlər. Şagirdlərinizi ikiqat artırmağa təşviq edin.
+    - ** Proqnozlaşdırılan ekrandan istifadə edin.** Bir Web bağlı kompüter üçün bir proyektor və ekran varsa, bütün qrup birlikdə Kod Saatı edə bilərsiniz. Birlikdə video hissələrinə baxın və növbə ilə bulmacalar həll edin və ya suallara cavab verin.
+    - **Unplugged.** Biz [heç bir kompüter tələb Dərsliklər] () bütün təklif edirik.%{unplugged_url}
   hoc_faq_international_q: "<country> indi olduğum ölkədir. Buradan necə iştirak edim?"
   hoc_faq_international_a: Hər kəs dünyanın istənilən yerində bir Hour of Code tədbiri
     təşkil edə bilər. Keçən il dünya miqyasında tələbələr Kod Saatı üçün bir araya
@@ -2383,21 +2427,21 @@ az:
     cavab axtarın."
   hoc_faq_more_questions_a_markdown: "[Dəstək forumumuzda] cavab tapmağa çalışın (http://support.code.org)."
   hoc_faq_keep_learning_q: Kod Saatından sonra öyrənməyə necə davam edim?
-  hoc_faq_keep_learning_a: Anyone can host an Hour of Code at any time. The tutorials
-    stay up year-round. You can expect all our tutorials and curriculum to be available
-    on our site in perpetuity. Please go to <a href='/promote'>our resources</a> for
-    event how-to guides and other resources to help make your Hour of Code event a
-    success.
+  hoc_faq_keep_learning_a: Hər kəs istənilən vaxt bir Saat Koduna ev sahibliyi edə
+    bilər. Dərsliklər il boyu qalır. Bütün dərsliklərimizin və tədris proqramımızın
+    saytımızda əbədi olaraq mövcud olmasını gözləyə bilərsiniz. Kod Saatı tədbirinizin
+    uğurlu olmasına kömək etmək</a> üçün tədbir təlimatları və digər resurslar üçün
+    <a href='/promote'>resurslarımıza daxil olun.
   hoc_faq_keep_learning_a_markdown: Hər kəs istənilən vaxt bir Saat Koduna ev sahibliyi
     edə bilər. Dərsliklər il boyu qalır. Bütün dərsliklərimizin və tədris proqramımızın
     saytımızda əbədi olaraq mövcud olmasını gözləyə bilərsiniz. Kod Saatı tədbirinizin
     uğurlu olmasına kömək etmək üçün tədbirin necə aparılması təlimatları və digər
     mənbələr üçün [resurslarımız] (%{promote}) ünvanına daxil olun.
   hoc_faq_certificates_q: Tələbələrim üçün sertifikatları harada çap edə bilərəm?
-  hoc_faq_certificates_a: Go to our <a href='%{codeorg_url}/certificates'>certificates
-    page</a> where you can print certificates for your entire class ahead of time.
-    You can also print out <a href='%{codeorg_url}/certificates?course=mc'>special
-    certificates</a> for students doing the Minecraft tutorial.
+  hoc_faq_certificates_a: Bütün sinifiniz üçün <a href='%{codeorg_url}/certificates'>sertifikatları
+    vaxtından əvvəl çap edə</a> biləcəyiniz sertifikatlar səhifəmizə keçin. Minecraft
+    təlimatı ilə məşğul olan tələbələr</a> üçün <a href='%{codeorg_url}/certificates?course=mc'>xüsusi
+    sertifikatlar da çap edə bilərsiniz.
   hoc_faq_certificates_a_markdown: Bütün sinifiniz üçün sertifikatları vaxtından əvvəl
     çap edə biləcəyiniz [sertifikatlar səhifəmizə] (%{codeorg_url}/sertifikat) keçin.
     Siz həmçinin çap edə bilərsiniz [xüsusi sertifikatlar] (%{codeorg_url}/sertifikatlar?
@@ -2557,10 +2601,10 @@ az:
     saatdan kənara çıxın</a>
   learn_banner_beyond_markdown: Öyrənməyə davam etmək istəyirsiniz? [Bir saatdan kənara
     çıxın] (%{url})
-  learn_banner_teachers: 'Teachers: <a id=''teacher_banner_host''>Host an hour</a>
-    or <a id=''teacher_banner_howto''>read the How-To Guide</a>'
-  learn_banner_teachers_markdown: 'Teachers: [Host an hour](%{host_url}) or [read
-    the How-To Guide](%{howto_url})'
+  learn_banner_teachers: 'Müəllimlər: Bir saat <a id=''teacher_banner_host''>ev sahibliyi
+    edin</a> və ya Necə <a id=''teacher_banner_howto''>Ediləcək Bələdçisini oxuyun</a>'
+  learn_banner_teachers_markdown: 'Müəllimlər: [Bir saat ev sahibi] (%{host_url})
+    və ya [Necə Ediləcək Bələdçini oxuyun] ()%{howto_url}'
   tutorial_dance2019_name: Rəqs şənliyi 2019
   tutorial_danceparty_name: Rəqs şənliyi
   tutorial_chibitronics_name: 'Chibitronics: İşıqlandırılmış Hekayə'
@@ -5480,11 +5524,11 @@ az:
     aparmaq üçün kod bloklarından istifadə edin.
   tutorial_minecraft-2016_longdescription: Minecraft oyunu yaradın. Toyuq, qoyun,
     sürünənlər, zombilər və daha çox şeylərin öz versiyalarını yaradın.
-  tutorial_thinkersmith-es_longdescription: Mediante el uso de un "Vocabulario Robot"
-    predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar
-    a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento
-    ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones
-    as&iacute; como la valiosa habilidad de depuraci&oacute;n.
+  tutorial_thinkersmith-es_longdescription: Mediante el uso de un “Vocabulario Robot”
+    predefindo, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar
+    a cabo tareas espec ficas sin ser estas discutidas previamente.&iacute;Este segmento
+    ense&ntilde;a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones
+    as como la valiosa habilidad de depuraci n.&iacute;&oacute;
   tutorial_pixie_longdescription: Pixie ilə Kod Saatı təlimatı
   tutorial_play_longdescription: Play Lab ilə bir hekayə yaradın və ya oyun yaradın!
     Heyvanları, quldurları, zombiləri, ninjaları və daha çox simvolları hərəkət etdirin,
@@ -12615,12 +12659,12 @@ az:
   tutorial_googlename _longdescription: Bir ad seçin və kodu istifadə edərək sözün
     hərflərini həyata keçirin. Ləqəb, ev heyvanının adı, heyvan, idman, yer və ya
     hobbi seçin.
-  tutorial_carnegiezillah_longdescription: Zillah City is thriving, and music is in
-    the air. Rumor has it, the famed Gargantua bot is online and sending the last
-    Toxibots to trash the city block by block…. Grab your cobot hoverboard and get
-    ready to groove, move, and finish off what you started! Players program their
-    cobot hoverbots to change lanes, avoid obstacles, and take out many Toxibots in
-    this rhythm-styled game.
+  tutorial_carnegiezillah_longdescription: Zillah City inkişaf edir və musiqi havadadır.
+    Şayiələrə görə, məşhur Gargantua botu onlayndır və şəhər blokunu blok -blok zibil
+    atmaq üçün son Toxibotlar göndərir.…Cobot hoverboardunuzu tutun və yiv açmağa,
+    hərəkət etməyə və başladığınız şeyi bitirməyə hazır olun! Oyunçular, zolaqları
+    dəyişdirmək, maneələrdən qaçmaq və bu ritm tipli oyunda bir çox Toxibotu çıxarmaq
+    üçün cobot hoverbotlarını proqramlaşdırırlar.
   tutorial_nasachspacejam_longdescription: Həqiqətən daşlayan bir günəş sistemi yaradın!
     Bu özünü idarə edən fəaliyyətdə musiqi, astronomiya və kodlaşdırma haqqında məlumat
     əldə edin (kodlaşdırma təcrübəsi tələb olunmur). Spacey melodiyaları ilə tamamlanan

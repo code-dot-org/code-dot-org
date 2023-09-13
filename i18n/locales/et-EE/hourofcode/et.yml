@@ -109,19 +109,20 @@ et:
     võiks mängida õiglasema maailma loomisel.
   oceans_landing_videos: Videod tehisintellekti ja masinõppe kohta
   oceans_behind_the_scenes: 'AI ookeanidele: kulisside taga'
-  oceans_behind_the_scenes_1: Levels 2-4 use a pretrained model provided by the <a
-    href="https://www.tensorflow.org/" >TensorFlow</a> <a href="https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md">
-    MobileNet </a> project. A MobileNet model is a <a href="https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks">convolutional
-    neural network</a> that has been trained on <a href="http://www.image-net.org/">ImageNet</a>,
-    a dataset of over 14 million images hand-annotated with words such as "balloon"
-    or "strawberry". In order to customize this model with the labeled training data
-    the student generates in this activity, we use a technique called <a href="https://en.wikipedia.org/wiki/Transfer_learning">Transfer
-    Learning</a>. Each image in the training dataset is fed to MobileNet, as pixels,
-    to obtain a list of annotations that are most likely to apply to it. Then, for
-    a new image, we feed it to MobileNet and compare its resulting list of annotations
-    to those from the training dataset. We classify the new image with the same label
-    (such as "fish" or "not fish") as the images from the training set with the most
-    similar results.
+  oceans_behind_the_scenes_1: Tasemed 2-4 kasutavad <a href="https://www.tensorflow.org/"
+    >TensorFlow</a> <a href="https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md">
+    MobileNeti projekti poolt pakutavat eelkoolitatud mudelit. </a> MobileNet mudel
+    on <a href="https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks">konvolutsiooniline
+    närvivõrk</a> , mis on koolitatud <a href="http://www.image-net.org/">Imageneti</a>,
+    andmekogum üle 14 miljoni kujutise käsitsi annoteeritud sõnadega nagu „balloon”
+    või „maasikas”. Selle mudeli kohandamiseks märgistatud koolitusandmetega, mida
+    õpilane selles tegevuses genereerib, kasutame tehnikat nimega <a href="https://en.wikipedia.org/wiki/Transfer_learning">Transfer
+    Learning</a>. Iga koolitusandmekogumi pilt suunatakse MobileNeti pikslitena, et
+    saada loetelu annotatsioonidest, mis sellele kõige tõenäolisemalt rakenduvad.
+    Seejärel toome uue pildi jaoks MobileNeti ja võrdleme selle tulemuseks olevate
+    märkuste loendit koolitusandmekogumi nendega. Klassifitseerime uue pildi sama
+    sildiga (näiteks „kala” või „mitte kala”) kui kõige sarnasemate tulemustega koolituskomplekti
+    pildid.
   oceans_behind_the_scenes_1_markdown: Tasemed 2-4 kasutavad eelkoolitatud mudelit,
     mida pakub projekt [TensorFlow](https://www.tensorflow.org/) [MobileNet](https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md).
     MobileNeti mudel on [konvolutsiooniline närvivõrk] (https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks),
@@ -183,6 +184,15 @@ et:
   grade_level_label_elementary: Põhikool
   grade_level_label_middle: Põhikool
   grade_level_label_high: Keskkool
+  curricula_title_elementary: Põhikooli õppekavad
+  curricula_desc_elementary: Sirvige lõbusaid, tasuta kursusi ja tegevusi, mis kutsuvad
+    teid õppima arvutiteadust oma algkooliõpilastega.
+  curricula_title_middle: Põhikooli õppekavad
+  curricula_desc_middle: Sirvige huvitavaid pakkumisi, mis võimaldavad teil ja teie
+    keskkooliõpilastel arvutiteadust koos uurida.
+  curricula_title_high: Keskkooli õppekavad
+  curricula_desc_high: Sirvige kaalukaid kursusi ja tegevusi, mis kutsuvad teid ja
+    teie keskkooliõpilasi arvutiteadusesse sügavamale kaevama.
   students_label: Õpilased
   teachers_label: Õpetajad
   teacher_label_csf: CS põhialuste õpetaja
@@ -209,6 +219,13 @@ et:
   call_to_action_explore_choice_level: Avasta näiteks valik tasandil
   call_to_action_explore_collection: Tutvu kollektsioonis
   call_to_action_explore_unplugged_lesson: Avastage ühendamata õppetunde
+  call_to_action_explore_csf: Tutvu CS põhialused
+  call_to_action_explore_csd: Avasta CS avastused
+  call_to_action_explore_csp: Tutvu CS põhimõtetega
+  call_to_action_explore_csc: Tutvu CS-ühendustega
+  call_to_action_explore_csa: Tutvu AP® Computer Science A
+  call_to_action_explore_maker: Tutvu Makeri õppekavadega
+  call_to_action_explore_hoc: Tutvu tunniga koodi õpetused
   call_to_action_try_app_lab: Proovige rakenduse laborit
   call_to_action_view_lesson_plan: Vaata tunniplaani
   call_to_action_self_paced_pl: Alusta enesetempo professionaalset õpet
@@ -253,6 +270,7 @@ et:
   call_to_action_notify_available: Teavita mind, kui see on saadaval
   call_to_action_register_early_access: Registreeri varajase juurdepääsu saamiseks
   call_to_action_open_positions: Vaata avatud positsioone
+  call_to_action_get_guide: Hankige juhend
   aria_label_call_to_action_afe: Lisateave Amazon Future Engineeri kohta
   aria_label_call_to_action_teaching_csf: Alusta õpetamine arvutiteaduse alused professionaalne
     õppe programm
@@ -354,6 +372,8 @@ et:
   curriculum_name_csa: AP® Arvutiteadus A
   curriculum_name_csc_02: Iga CS ühenduste moodul
   curriculum_name_ai: Tehisintellekti ja masinõpe
+  curriculum_name_artificial_intelligence: Tehisintellekt (AI)
+  curriculum_name_maker: Tegija
   curriculum_name_maker_cp: Rakenduste loomine seadmetega (ringkonnakohtu mänguväljak)
   curriculum_name_maker_microbit: Rakenduste loomine seadmetega (micro:bit)
   curriculum_name_creating_apps_with_devices: Rakenduste loomine seadmetega
@@ -407,6 +427,12 @@ et:
   curriculum_desc_creating_apps_with_devices: Avastage füüsiliste seadmete rolli arvutustehnika.
     Arendada programme, mis kasutavad riistvara sisendeid ja väljundeid. Sellest seadmest
     on olemas versioon nii micro:bit kui ka Circuit Playground jaoks.
+  curriculum_desc_csa: Tutvustage õpilastele tarkvaratehnika ja objektorienteeritud
+    disaini, kui nad õpivad Java programmeerimiskeelt selles tasuta õppekavas AP®
+    Computer Science A (AP® CSA) jaoks.
+  curriculum_desc_maker: Tegija haridus võtab STEM (teadus, tehnoloogia, tehnika,
+    matemaatika) sammu edasi, kutsudes praktilisi kogemusi ja koostööd klassiruumi,
+    et aidata õpetada probleemide lahendamist ja kriitilist mõtlemist.
   collection_hardware: Keskenduge riistvarale
   collection_hardware_desc: Võimaldab õpilastel kasutada andmeid ja füüsilisi seadmeid
     probleemide lahendamiseks.
@@ -444,6 +470,7 @@ et:
   module_label_student_content_resources: Sisu ja ressursid
   module_label_new: Uus
   module_label_coming_soon: Peatselt
+  module_label_available_now: Saadaval nüüd
   module_label_video_series: Video seeria
   module_label_self_paced: Isetempoga moodul
   module_ages_5_10: 5-10
@@ -454,6 +481,8 @@ et:
   module_grade_2_5: 2-5
   module_grade_3_5: 3-5
   module_grade_3_8: 3-8
+  module_grade_k_12: K-12
+  module_grade_3_12: 3-12
   module_grade_6_12: 6-12
   module_grade_6_10: 6-10
   module_grade_9_12: 9-12
@@ -545,6 +574,7 @@ et:
   heading_java_lab: Java laboratoorium
   heading_objects_first: Esmalt objektid
   heading_these_lessons_will: 'Need õppetunnid:'
+  heading_explore_curriculum_catalog: Tutvuge kõigi meie kursuste õppekavakataloogis
   professional_learning_section_desc: Hankige toetus, mida vajate, kui valmistate
     õpetama. Õpetajad armastavad seda, üle 90% pingerida see parim professionaalne
     areng kunagi!
@@ -793,6 +823,11 @@ et:
     kaks uut videot Large Language Mudelid (nagu ChatGPT) ja generatiivne AI. Kuulge,
     kuidas need uued tehnoloogiad töötavad otse ekspertidelt: Mira Murati, OpenAI
     CTO ja RunWayML-i tegevjuht Cristóbal Valenzuela.'
+  ai_pl_101_llm_slides_title: Suur keele mudel küsib õpetajatele
+  ai_pl_101_llm_slides_desc: Tööriistad parima võimaliku väljundi saamiseks LLM-idest
+    nagu ChatGPT, algajast kuni arenenud. Sisaldab starter küsib neile lihtsalt kastes
+    oma varbad, samuti täiustatud tööriistad neile, kes soovivad maksimeerida oma
+    potentsiaali.
   how_ai_works_hero_heading: Kuidas tehisintellekt toimib
   how_ai_works_hero_desc: Sukelduge AI maailma „Kuidas AI töötab”, meie video seeria
     ja sellega kaasnevad õppetunnid!
@@ -1371,10 +1406,10 @@ et:
     et penne võib asendada mõne muu sama suurusega kaaluga). Alternatiivsed tegevused
     on saadaval, kui teil pole juurdepääsu nendele tarnetele.
   csd_page_faq_answer_04_06: Seadmetega rakenduste loomine (variant A ja B)
-  csd_page_faq_answer_04_07: 'Option A: Classroom set of Circuit Playgrounds. Check
-    out [code.org/maker/circuitplayground](%{url}) for more details.'
-  csd_page_faq_answer_04_08: 'Option B: Classroom set of micro:bit devices. Check
-    out [code.org/maker/microbit](%{url}) for more details.'
+  csd_page_faq_answer_04_07: 'Variant A: Classroom komplekt Circuit Mänguväljakud.
+    Vaadake [code.org/tegija/circuitplayground] () rohkem üksikasju.%{url}'
+  csd_page_faq_answer_04_08: 'Variant B: Classroom komplekt micro:bit seadmeid. Vaadake
+    lisateavet [code.org/maker/microbit] ().%{url}'
   csd_page_faq_answer_04_09: Tegija tarvikud, näiteks tühjad koekastid või papist
     rullid või kriimustuspaber
   csd_page_faq_answer_04_10: "* Märkus: Seadmetega rakenduste loomine on kaks rakendusvalikut
@@ -1382,12 +1417,11 @@ et:
     micro:bit. Õpetajad ei peaks ostma mõlemat seadmekomplekti ega õpetama mõlemat
     üksusvalikut, kuna need on samaväärsed ja hõlmavad sama sisu."
   csd_page_faq_question_06: Kuidas CS Discoveries sobib teiste Code.org kursustega?
-  csd_page_faq_answer_06_01: CS Discoveries is designed to fit naturally between our
-    [CS Fundamentals](%{csf_url}) courses and our [CS Principles](%{csp_url}) course.
-    While each of these courses is designed to be an age-appropriate entry point to
-    computer science, students with previous experience will find many new topics
-    to explore, and they will revisit familiar topics in novel and more challenging
-    contexts.
+  csd_page_faq_answer_06_01: CS Discoveries on mõeldud sobima loomulikult vahel meie
+    [CS Fundamentals] (%{csf_url}) kursused ja meie [CS põhimõtted] () muidugi.%{csp_url}Kuigi
+    kõik need kursused on mõeldud olema eakohane lähtepunkt infotehnoloogia, õpilased
+    varasemate kogemustega leida palju uusi teemasid uurida, ja nad vaatavad tuttavad
+    teemad uudsetes ja keerulisemates kontekstides.
   csc_page_top_desc: Tehke seoseid arvutiteaduse (CS) ja muude ainete, nagu matemaatika,
     keelekunsti, teaduse ja ühiskonnaõpetuse vahel.
   csc_page_intro_heading: Õpeta CS hõlmates samas põhiteema standardid
@@ -1498,10 +1532,10 @@ et:
     Meie piirkondlikud partnerid pakuvad kvaliteetseid ühepäevaseid Code.org töötubasid
     üksikutele õpetajatele või kooliealistele PD-dele. [Registreeru professionaalse
     arengu töökoda lähedal] (%{sign_up_url})!
-  csf_page_faq_answer_04_02: Join over 100,000 teachers who have participated in our
-    workshops. The majority of our workshop attendees say, 'It's the best professional
-    development I've ever attended.' In fact, [90% of attendees would recommend our
-    program to other teachers](%{rec_url})!
+  csf_page_faq_answer_04_02: 'Liitu üle 100 000 õpetaja, kes on osalenud meie töötubades.
+    Enamik meie töökojas osalejaid ütleb: „See on parim professionaalne areng, mida
+    ma olen kunagi osalenud.” Tegelikult [90% osalejatest soovitaks meie programmi
+    teistele õpetajatele] ()!%{rec_url}'
   csf_page_faq_question_05: Milline on soovitatav ajastus õpetamiseks CS alused?
   csf_page_faq_answer_05: Iga CSF-kursus sisaldab 13-17 õppetundi, mis on mõeldud
     45-minutilisteks perioodideks. Soovitame kõigil õpilastel liikuda õppetundilt
@@ -1509,9 +1543,10 @@ et:
     mille eesmärk on kogeda ühtselt, samas kui oskuste loomise õppetunnid saavad lõpule
     viia õpilased oma tempos.
   csf_page_faq_question_06: Milliseid materjale ma vajan CS Fundamentals?
-  csf_page_faq_answer_06: Many lessons have handouts that guide students through activities.
-    These resources can be printed or assigned digitally. Some lessons call for typical
-    classroom supplies and manipulatives. [Visit the CSF Syllabus to learn more](%{syllabus_url}).
+  csf_page_faq_answer_06: Paljudel õppetundidel on jaotusmaterjalid, mis juhivad õpilasi
+    tegevuste kaudu. Neid ressursse saab trükkida või digitaalselt määrata. Mõned
+    õppetunnid nõuavad tüüpilisi klassiruumi tarvikuid ja manipuleerivaid vahendeid.
+    [Külasta CSF õppekava rohkem teada] ().%{syllabus_url}
   csa_page_top_desc: Introduce students to software engineering and object-oriented
     design while they learn the Java programming language in this free curriculum
     for [AP® Computer Science A (AP® CSA)](%{csa_url}).
@@ -1991,6 +2026,11 @@ et:
     võimaluste või arvutiteaduse uudiste kohta?
   signup_email_preference_privacy: "(Vaata privaatsusreegleid)"
   signup_email_preference_yes: Jah
+  signup_email_preference_yes_elementary: Jah - Saada mulle uudiseid algkooli ressursside
+    kohta
+  signup_email_preference_yes_middle: Jah - Saada mulle uudiseid Põhikool Resources
+  signup_email_preference_yes_high: Jah - Saada mulle uudiseid High School Resources
+  signup_email_preference_yes_general: Jah - Saada mulle üldised uuendused
   signup_email_preference_no: Ei
   signup_email_preference_error: Vajalik on e-posti aadress
   signup_multiple_event_warning: Kui viid läbi rohkem kui ühe sündmuse palun sisesta
@@ -2099,12 +2139,11 @@ et:
     Arvutiteaduse hariduse nädal toimub iga aasta ja märgib arvutiteaduse algataja
     <a href='%{grace_hopper}'> admiral Grace Murray Hopper</a> sünnipäeva (9. detsember
     1906)
-  hoc_faq_when_is_hoc_a_markdown: The Hour of Code takes place each year during [Computer
-    Science Education Week](%{csedweek_url}). The %{campaign_date_year} Computer Science
-    Education Week will be %{campaign_date_full}, but you can host an Hour of Code
-    all year-round. Computer Science Education Week is held annually in recognition
-    of the birthday of computing pioneer [Admiral Grace Murray Hopper](%{grace_hopper})
-    (December 9, 1906).
+  hoc_faq_when_is_hoc_a_markdown: Koodeksi tund toimub igal aastal [[Arvutiteaduse
+    haridusnädal]] ajal (%{csedweek_url}). %{campaign_date_year} Arvutiteaduse haridusnädal
+    on %{campaign_date_full}, kuid saate kogu aastaringselt kooditund. Computer Science
+    Education Week toimub igal aastal tunnustades sünnipäeva arvuti pioneer [admiral
+    Grace Murray Hopper] (%{grace_hopper}) (9. detsember 1906).
   hoc_faq_why_cs_q: Miks just arvutiteadus?
   hoc_faq_why_cs_a: "<i>Igal</i>õpilasel peaks olema võimalus arvutiteadusi õppida.
     See aitab arendada probleemilahendusoskust, loogikat ja loovust. Kui alustada
@@ -2151,11 +2190,11 @@ et:
     leiate <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a>iga juhendi juures.
     Lisaks pakume <a href='%{unplugged_url}'> arvutivabasid tegevusi</a>, kui kool
     ei saa teisi tegevusi läbi viia!
-  hoc_faq_devices_a_markdown: Code.org tutorials work on all devices and browsers.
-    You can see more information about Code.org's tutorial tech needs [here](%{codeorg_url}/educate/it).
-    Tech needs for non-Code.org tutorials can be found on [%{partner_url}/learn](%{codeorg_url}/learn)
-    in the tutorial specific description. Don't forget we also offer [unplugged activities](%{unplugged_url})
-    if your school can't accommodate the tutorials!
+  hoc_faq_devices_a_markdown: Code.org õpetused töötavad kõigis seadmetes ja brauseritega.
+    Lisateavet Code.org õppetehniliste vajaduste [here]kohta (/educate/it) näete.%{codeorg_url}Non-Code.org
+    õpetuste tehnilised vajadused leiate juhendaja spetsiifilisest kirjeldusest [%{partner_url}/learn]
+    (%{codeorg_url}/learn). Ärge unustage, et pakume ka [unplugged tegevusi] (%{unplugged_url}),
+    kui teie kool ei suuda õpetusi mahutada!
   hoc_faq_need_computers_q: Kas igal osalejal peab olema oma arvuti?
   hoc_faq_need_computers_a: Ei. Meil on KoodiTund tegevusi, mis töötavad lauaarvutites,
     tahvelarvutites, nutitelefonides ning mõned sellised, mis üldse arvutit ei vaja!
@@ -2169,13 +2208,13 @@ et:
     kordamööda.<li><b> Tee arvutivabasid tegevusi.</b> Me pakume <a href='%{unplugged_url}'>
     juhendeid tegevustele, mis </a>ei vaja üldse arvutit.</ul>
   hoc_faq_need_computers_a_markdown: |-
-    No. We have Hour of Code tutorials that work on PCs, smartphones, tablets, and some that require no computer at all! You can join wherever you are, with whatever you have.
+    Ei. Meil on Hour of Code õpetused, mis töötavad arvutid, nutitelefonid, tahvelarvutid, ja mõned, mis ei nõua arvuti üldse! Võite liituda kus iganes sa oled, mida iganes sul on.
 
-    _Here are a few options:_
+    _Siin on mõned võimalused:_
 
-    - **Work in pairs.** [Research shows](%{pair_programming_research}) students learn best with [pair programming](%{pair_programming_video}), sharing a computer and working together. Encourage your students to double up.
-    - **Use a projected screen.** If you have a projector and screen for a Web-connected computer, your entire group can do an Hour of Code together. Watch video portions together and take turns solving puzzles or answering questions.
-    - **Go unplugged.** We offer [tutorials that require no computer](%{unplugged_url}) at all.
+    - **Töö paarides.** [Uuringud näitavad] (%{pair_programming_research}) õpilased õpivad kõige paremini [paari programmeerimine] (%{pair_programming_video}), jagades arvutit ja töötavad koos. Julgusta oma õpilasi kahekordistada.
+    - ** Kasutage prognoositud ekraani.** Kui teil on projektor ja ekraan veebiühendusega arvuti jaoks, saab kogu grupp teha kooditunni koos. Vaadake videoosi koos ja võtke kordamööda mõistatusi või vastates küsimustele.
+    - **Mine unplugged.** Pakume [õpetused, mis ei nõua arvutit] () üldse.%{unplugged_url}
   hoc_faq_international_q: Asun riigis <country>. Kuidas saan rahvusvaheliselt osaleda?
   hoc_faq_international_a: Igaüks saab korraldada KoodiTund ürituse üle maailma. Eelmisel
     aastal liitusid KoodiTund üritusega õpilased üle maailma. Loe lähemalt <a href='/promote'>
@@ -2211,23 +2250,22 @@ et:
     et alustada. Näiteks mäng Angry Birds või Anna ja Elsa. Keskkooliõpilane peaks
     ühe neist valmis saama 30 minutiga ning võib siis proovida keerulisemaid juhendeid,
     mis kasutavad JavaScripti, nagu näiteks Khan Academy või CodeHS.
-  hoc_faq_high_school_a_markdown: Our Star Wars and Minecraft tutorials are great
-    for high schoolers, especially the Star Wars JavaScript version and the free play
-    level on both tutorials. Alternately, we recommend trying one of the beginner
-    tutorials on [%{partner_url}/learn](%{codeorg_url}/learn) to start, such as the
-    tutorial with Angry Birds or with Anna and Elsa. A high school student should
-    be able to finish one of these in 30 minutes and can then try a more advanced
-    tutorial in JavaScript, such as Khan Academy or CodeHS.
+  hoc_faq_high_school_a_markdown: Meie Star Wars ja Minecraft õpetused on suurepärased
+    keskkooliõpilastele, eriti Star Wars JavaScript versioon ja tasuta mängida tase
+    nii õpetused. Alternatiivselt soovitame proovida üht algaja õpetust [%{partner_url}/learn]
+    (%{codeorg_url}/learn), et alustada, näiteks juhendaja Angry Birds või koos Anna
+    ja Elsa. Keskkooliõpilane peaks suutma ühe neist 30 minutiga lõpetada ja seejärel
+    proovida JavaScripti täiustatud juhendatut, näiteks Khan Academy või CodeHS.
   hoc_faq_scratch_q: Kasutan KoodiTunnis Scratchi, kuid mis saab siis kui õpilastel
     on sülearvutite asemel tahvelarvutid?
   hoc_faq_scratch_a: Scratch ei tööta tahvelarvutis. Kui Teie õpilased on väikesed,
     saavad nad kasutada ScratchJR rakendust iPadile (noortele lugejatele). Kui vaatad
     juhendeid <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a>, leiad juhendeid,
     mis on mõeldud iPadile veebilehtedelt Code.org, Tynker, Lightbot, or CodeSpark.
-  hoc_faq_scratch_a_markdown: Scratch doesn't run on tablets. If your students are
-    young, they can use the ScratchJR iPad app (for early-readers). If you look at
-    the tutorials on [%{partner_url}/learn](%{codeorg_url}/learn), you can find other
-    tutorials that work on iPads - from Code.org, Tynker, Lightbot, or CodeSpark.
+  hoc_faq_scratch_a_markdown: Scratch ei tööta tahvelarvutites. Kui teie õpilased
+    on noored, saavad nad kasutada rakendust ScratchJR iPad (varajase lugeja jaoks).
+    Kui vaatate õpetusi lehelt [%{partner_url}/learn] (%{codeorg_url}/learn), leiate
+    muud õpetused, mis töötavad iPadidel - Code.org, Tynker, Lightbot või CodeSpark.
   hoc_faq_count_hoc_q: Kuidas te KoodiTunde arvestate?
   hoc_faq_map_q: Miks ei ole minu sündmuse linnukest kaardilt näha?
   hoc_faq_map_a: Meiil on kahju, et Teie sündmust ei ole KoodiTunni kaardilt näha.
@@ -2294,10 +2332,10 @@ et:
     lehele</a>, kus saate printida tunnistused kogu klassile juba ette. Samuti saata
     printida<a href='%{codeorg_url}/certificates?course=mc'>eritunnustused</a>õpilastele,
     kes on läbi teinud Minecrafti õpetuse.
-  hoc_faq_certificates_a_markdown: Go to our [certificates page](%{codeorg_url}/certificates)
-    where you can print certificates for your entire class ahead of time. You can
-    also print out [special certificates](%{codeorg_url}/certificates?course=mc) for
-    students doing the Minecraft tutorial.
+  hoc_faq_certificates_a_markdown: Minge meie [sertifikaatide lehele] (%{codeorg_url}/sertifikaadid),
+    kus saad enne tähtaega printida kogu klassi sertifikaate. Võite ka välja printida
+    [erisertifikaadid] (%{codeorg_url}/sertifikaadid? kursus=mc) õpilastele, kes teevad
+    Minecraft juhendaja.
   hoc_faq_logo_q: Kas on piiranguid KoodiTund logo või nime kasutamisele?
   hoc_faq_logo_a: Hour of Code (KoodiTund) on kaubamärk. Me ei soovi selle kasutamist
     ära hoida, kuid soovime, et seda kasutataks teatud piirides. Palun lugege lähemalt<a
@@ -2452,8 +2490,8 @@ et:
     (%{url})
   learn_banner_teachers: Õpetajad:<a id='teacher_banner_host'> Korralda KoodiTund</a>
     või <a id='teacher_banner_howto'> loe meie juhist</a>
-  learn_banner_teachers_markdown: 'Teachers: [Host an hour](%{host_url}) or [read
-    the How-To Guide](%{howto_url})'
+  learn_banner_teachers_markdown: 'Õpetajad: [Host tund] (%{host_url}) või [loe juhend]
+    ()%{howto_url}'
   tutorial_dance2019_name: Tantsuõhtu
   tutorial_danceparty_name: Tantsuõhtu
   tutorial_chibitronics_name: 'Chibitronics: Illuminated Story'
@@ -5193,11 +5231,11 @@ et:
     selle Minecraft maailma.
   tutorial_minecraft-2016_longdescription: Ehitamine Minecraft mäng. Loo oma versioonid
     kana, lambad, Creepers, zombisid ja palju muud.
-  tutorial_thinkersmith-es_longdescription: Mediante el uso de un "Vocabulario Robot"
+  tutorial_thinkersmith-es_longdescription: Mediante el uso de un „Vocabulario Robot”
     predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar
-    a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento
-    ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones
-    as&iacute; como la valiosa habilidad de depuraci&oacute;n.
+    a cabo tareas espec ficas sin ser estas discutidas previamente.&iacute;Este segmento
+    ense&ntilde;a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones
+    nagu como la valiosa habilidad de depuraci n.&iacute;&oacute;
   tutorial_pixie_longdescription: Tund kood juhendaja Pixie
   tutorial_play_longdescription: Loo lugu või teha mängu Play Lab! Tee loomad, piraadid,
     zombisid, ninjas ja palju rohkem märke liikuda, teha helisid, punkte, ja isegi
@@ -12119,12 +12157,11 @@ et:
     Hero, uhkeldama oma kangelase erivolitusi ja oma loovust CS First ja Scratch.
   tutorial_googlename _longdescription: Vali nimi ja tooge sõna tähed koodi abil ellu.
     Valige hüüdnimi, lemmiklooma nimi, loom, sport, koht või hobi.
-  tutorial_carnegiezillah_longdescription: Zillah City is thriving, and music is in
-    the air. Rumor has it, the famed Gargantua bot is online and sending the last
-    Toxibots to trash the city block by block…. Grab your cobot hoverboard and get
-    ready to groove, move, and finish off what you started! Players program their
-    cobot hoverbots to change lanes, avoid obstacles, and take out many Toxibots in
-    this rhythm-styled game.
+  tutorial_carnegiezillah_longdescription: Zillah City on edukas, ja muusika on õhus.
+    Kuulujutt on see, kuulus Gargantua bot on online ja saates viimase Toxibots prügikasti
+    linnaploki plokkide kaupa.…Haara oma cobot hoverboard ja saada valmis soon, liikuda
+    ja lõpetada, mida sa hakkasid! Mängijad programmeerida oma cobot hoverbots muuta
+    sõidurada, vältida takistusi ja võtta palju Toxibots selles rütmi stiilis mäng.
   tutorial_nasachspacejam_longdescription: Loo Päikesesüsteemi, mis tõesti kivid!
     Lugege muusika, astronoomia ja kodeerimise kohta selles isejuhitud tegevuses (kodeerimiskogemust
     pole vaja). Programm planeedid teha muusikat, luues oma muusikaline Päikesesüsteemi,

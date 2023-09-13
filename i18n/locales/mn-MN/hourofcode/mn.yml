@@ -116,19 +116,21 @@ mn:
     компьютерийн шинжлэх ухаан гүйцэтгэх үүргийг ойлгоход нь туслах нөөц.
   oceans_landing_videos: AI ба машин сургалтын тухай видео
   oceans_behind_the_scenes: 'Далай тэнгист зориулсан AI: Хөшигний цаана'
-  oceans_behind_the_scenes_1: Levels 2-4 use a pretrained model provided by the <a
-    href="https://www.tensorflow.org/" >TensorFlow</a> <a href="https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md">
-    MobileNet </a> project. A MobileNet model is a <a href="https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks">convolutional
-    neural network</a> that has been trained on <a href="http://www.image-net.org/">ImageNet</a>,
-    a dataset of over 14 million images hand-annotated with words such as "balloon"
-    or "strawberry". In order to customize this model with the labeled training data
-    the student generates in this activity, we use a technique called <a href="https://en.wikipedia.org/wiki/Transfer_learning">Transfer
-    Learning</a>. Each image in the training dataset is fed to MobileNet, as pixels,
-    to obtain a list of annotations that are most likely to apply to it. Then, for
-    a new image, we feed it to MobileNet and compare its resulting list of annotations
-    to those from the training dataset. We classify the new image with the same label
-    (such as "fish" or "not fish") as the images from the training set with the most
-    similar results.
+  oceans_behind_the_scenes_1: Түвшин 2-4 <a href="https://www.tensorflow.org/" >TensorFlow</a>
+    <a href="https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md">
+    MobileNet төслийн өгсөн урьдчилан бэлтгэгдсэн загварыг ашигладаг. </a> A MobileNet
+    загвар <a href="http://www.image-net.org/">ImageNet дээр бэлтгэгдсэн байна <a
+    href="https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks">convolutional
+    мэдрэлийн сүлжээ юм</a>,</a> Ийм “бөмбөлөг” эсвэл “гүзээлзгэнэ” гэх мэт үгээр
+    гараар annotated 14 сая гаруй зураг нь өгөгдлийн сан. Энэ загварыг оюутны энэ
+    үйл ажиллагаанд бий болгосон сургалтын өгөгдлийг өөрчлөхийн тулд бид Transfer
+    Learning хэмээх <a href="https://en.wikipedia.org/wiki/Transfer_learning">техникийг
+    ашигладаг.</a>Сургалтын өгөгдлийн бүрдэлд байгаа дүрс бүрийг MobileNet руу пиксел
+    болгон ашиглах хамгийн их магадлалтай тэмдэглэлийн жагсаалтыг олж авахын тулд
+    тэжээгддэг. Дараа нь шинэ дүр төрхийн хувьд бид үүнийг MobileNet руу тэжээж, түүний
+    үр дүнгийн тэмдэглэлийн жагсаалтыг сургалтын мэдээллийн багцаас авсан хүмүүст
+    харьцуулж үзээрэй. Бид шинэ дүрсийг ижил шошготой (“загас” эсвэл “загас биш” гэх
+    мэт) сургалтын багцаас хамгийн ижил төстэй үр дүн бүхий зургуудаар ангилдаг.
   oceans_behind_the_scenes_1_markdown: Түвшин 2-4 нь [TensorFlow](https://www.tensorflow.org/)
     [MobileNet](https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md)
     төслөөс урьдчилан бэлтгэгдсэн загварыг ашигладаг. MobileNet загвар нь [convolutional
@@ -196,6 +198,15 @@ mn:
   grade_level_label_elementary: Бага сургууль
   grade_level_label_middle: Дунд сургууль
   grade_level_label_high: Ахлах сургууль
+  curricula_title_elementary: Бага сургуулийн сургалтын хөтөлбөр
+  curricula_desc_elementary: Бага сургуулийн сурагчидтайгаа компьютерийн шинжлэх ухааныг
+    судлахыг урьж буй хөгжилтэй, үнэгүй сургалт, үйл ажиллагаануудыг үзээрэй.
+  curricula_title_middle: Дунд сургуулийн сургалтын хөтөлбөр
+  curricula_desc_middle: Та болон дунд сургуулийн сурагчдад компьютерийн шинжлэх ухааныг
+    хамтдаа судлах боломжийг олгодог сонирхолтой өргөлүүдийг үзээрэй.
+  curricula_title_high: Ахлах сургууль Crack
+  curricula_desc_high: Та болон ахлах сургуулийн сурагчдыг компьютерийн шинжлэх ухаанд
+    гүн гүнзгий ухахыг урьсан хичээл, үйл ажиллагаануудыг үзээрэй.
   students_label: Оюутнууд
   teachers_label: Багш нар
   teacher_label_csf: CS багш үндэс
@@ -222,6 +233,13 @@ mn:
   call_to_action_explore_choice_level: Жишээ сонголтын түвшинг судлах
   call_to_action_explore_collection: Цуглуулгыг судлах
   call_to_action_explore_unplugged_lesson: Залгаасгүй хичээлүүдийг судлах
+  call_to_action_explore_csf: CS үндэс судлах
+  call_to_action_explore_csd: CS нээлтүүдийг судлах
+  call_to_action_explore_csp: CS зарчмуудыг судлах
+  call_to_action_explore_csc: CS холболтуудыг судлах
+  call_to_action_explore_csa: AP® Компьютерийн шинжлэх ухааны талаар судлах
+  call_to_action_explore_maker: Maker сургалтын хөтөлбөрийг судлах
+  call_to_action_explore_hoc: Код хичээл цаг судлах
   call_to_action_try_app_lab: Апп Лаб үзээрэй
   call_to_action_view_lesson_plan: Хичээлийн төлөвлөгөөг харах
   call_to_action_self_paced_pl: Өөрийгөө хөгжүүлэх мэргэжлийн сургалтыг эхлээрэй
@@ -267,6 +285,7 @@ mn:
   call_to_action_notify_available: Боломжтой бол надад мэдэгдээрэй
   call_to_action_register_early_access: Эрт нэвтрэхийн тулд бүртгүүлэх
   call_to_action_open_positions: Нээлттэй байрлалыг харах
+  call_to_action_get_guide: Гарын авлагыг авах
   aria_label_call_to_action_afe: Амазоны ирээдүйн инженер талаар илүү ихийг олж мэдэх
   aria_label_call_to_action_teaching_csf: Заах Компьютерийн шинжлэх ухааны үндэс мэргэжлийн
     сургалтын хөтөлбөрийг эхлүүлэх
@@ -375,6 +394,8 @@ mn:
   curriculum_name_csa: AP® Компьютерийн шинжлэх ухаан A
   curriculum_name_csc_02: Аливаа CS холболтуудын модуль
   curriculum_name_ai: AI & Машины сургалтын
+  curriculum_name_artificial_intelligence: Хиймэл оюун ухаан (AI)
+  curriculum_name_maker: Maker
   curriculum_name_maker_cp: Төхөөрөмжүүдтэй Apps үүсгэх (Circuit Тоглоомын талбай)
   curriculum_name_maker_microbit: Төхөөрөмжүүдтэй Apps үүсгэх (микро:бит)
   curriculum_name_creating_apps_with_devices: Төхөөрөмжүүдтэй Апп үүсгэх
@@ -432,6 +453,12 @@ mn:
   curriculum_desc_creating_apps_with_devices: Тооцоолоход физик төхөөрөмжүүдийн үүргийг
     судлах. тоног төхөөрөмжийн орц, гаралтыг ашиглах хөтөлбөр боловсруулах. Энэ нэгжийн
     аль алинд нь микро хувилбар байдаг:бит ба Circuit Playground.
+  curriculum_desc_csa: Оюутнуудыг AP® Computer Science A (AP® CSA) -д зориулсан энэхүү
+    үнэгүй сургалтын хөтөлбөрт Java програмчлалын хэлийг сурч байхдаа програм хангамжийн
+    инженерчлэл, объект хандалтат дизайнтай танилцуул.
+  curriculum_desc_maker: Maker боловсролын үүдэл авдаг (Шинжлэх ухаан, Технологийн,
+    Инженерийн, Математик) нэг алхам цаашид анги руу гар дээр туршлага, хамтын ажиллагааг
+    урьж асуудал шийдвэрлэх, чухал сэтгэлгээ зааж туслах.
   collection_hardware: Тоног төхөөрөмж дээр анхаарлаа төвлөрүүл
   collection_hardware_desc: Оюутнуудад асуудлыг шийдвэрлэхийн тулд өгөгдөл, физик
     төхөөрөмж ашиглах боломжийг олгодог.
@@ -471,6 +498,7 @@ mn:
   module_label_student_content_resources: Агуулга ба нөөц
   module_label_new: Шинэ
   module_label_coming_soon: Тун удахгүй
+  module_label_available_now: Одоо ашиглах боломжтой
   module_label_video_series: Видео цуврал
   module_label_self_paced: Өөрөө хурдацтай модуль
   module_ages_5_10: 5-10
@@ -481,6 +509,8 @@ mn:
   module_grade_2_5: 2-5
   module_grade_3_5: 3-5
   module_grade_3_8: 3-8
+  module_grade_k_12: К-12
+  module_grade_3_12: 3-12
   module_grade_6_12: 6-12
   module_grade_6_10: 6-10
   module_grade_9_12: 9-12
@@ -575,6 +605,8 @@ mn:
   heading_java_lab: Жава Лаб
   heading_objects_first: Эхлээд объектууд
   heading_these_lessons_will: 'Эдгээр хичээлүүд нь:'
+  heading_explore_curriculum_catalog: Сургалтын хөтөлбөрийн каталогид манай бүх хичээлийг
+    судлаарай
   professional_learning_section_desc: Заах бэлтгэлээ базааж байхдаа хэрэгтэй дэмжлэгээ
     аваарай. Багш нар үүнийг хайрладаг бөгөөд 90% -иас дээш нь хамгийн сайн мэргэжлийн
     хөгжлийг эрэмбэлдэг!
@@ -835,6 +867,11 @@ mn:
     технологийн талаар илүү ихийг олж мэдээрэй. Эдгээр шинэ технологиуд хэрхэн ажилладаг
     талаар мэргэжилтнүүдээс шууд сонсоорой: Мира Мурати, OpenAI-ийн CTO, RunwayML-ийн
     гүйцэтгэх захирал Кристобал Валензуэла нар.'
+  ai_pl_101_llm_slides_title: Том хэлний загвар сурган хүмүүжүүлэгчдэд зориулсан сануулга
+  ai_pl_101_llm_slides_desc: ChatGPT шиг LLM-ээс хамгийн сайн гаралтыг авах хэрэгсэл,
+    эхлэн суралцагчаас дэвшилтэт хүртэл. Зөвхөн хөлийнхөө хурууг дүрэх хүмүүст зориулсан
+    гарааны сануулгыг багтаасан болно, түүнчлэн тэдний боломжийг нэмэгдүүлэхийн тулд
+    хайж буй хүмүүст зориулсан дэвшилтэт хэрэгслүүд.
   how_ai_works_hero_heading: AI хэрхэн ажилладаг вэ
   how_ai_works_hero_desc: "“AI хэрхэн ажилладаг вэ”, манай видео цуврал болон дагалдах
     хичээлүүдээр хиймэл оюун ухааны ертөнцөд шумбах!"
@@ -1446,10 +1483,10 @@ mn:
     хэмжээтэй бусад төрлийн жингээр сольж болно гэдгийг анхаарна уу). Хэрэв та эдгээр
     хангамж хандах байхгүй бол өөр үйл ажиллагаа байдаг.
   csd_page_faq_answer_04_06: Төхөөрөмжүүдтэй Apps үүсгэх (Сонголт А ба Сонголт Б)
-  csd_page_faq_answer_04_07: 'Option A: Classroom set of Circuit Playgrounds. Check
-    out [code.org/maker/circuitplayground](%{url}) for more details.'
-  csd_page_faq_answer_04_08: 'Option B: Classroom set of micro:bit devices. Check
-    out [code.org/maker/microbit](%{url}) for more details.'
+  csd_page_faq_answer_04_07: 'Сонголт А: Circuit Тоглоомын талбайн танхимын багц.
+    Гарах [code.org/maker/circuitТОГЛООМЫН] () Илүү дэлгэрэнгүйг.%{url}'
+  csd_page_faq_answer_04_08: 'Сонголт Б: бичил Танхимын багц: битийн төхөөрөмжүүд.
+    Дэлгэрэнгүйг [code.org/maker/microbit] () -аас шалгана уу.%{url}'
   csd_page_faq_answer_04_09: Ийм хоосон эд хайрцаг, эсвэл картон нэрийн жагсаалт,
     эсвэл зурлага цаас гэх мэт Maker хангамж
   csd_page_faq_answer_04_10: "* Тэмдэглэл: Төхөөрөмжийн нэгжтэй Аппликейшн үүсгэх
@@ -1578,19 +1615,20 @@ mn:
     гар дээр дэмжлэг үзүүлэх орон нутгийн багш нартай нэгдээрэй. Манай Бүсийн Түншүүд
     багш нар эсвэл сургуулийн PD-д зориулсан өндөр чанартай, нэг өдрийн Code.org семинарыг
     санал болгодог. [Ойролцоох мэргэжлийн хөгжлийн семинарт бүртгүүлнэ үү] (%{sign_up_url})!
-  csf_page_faq_answer_04_02: Join over 100,000 teachers who have participated in our
-    workshops. The majority of our workshop attendees say, 'It's the best professional
-    development I've ever attended.' In fact, [90% of attendees would recommend our
-    program to other teachers](%{rec_url})!
+  csf_page_faq_answer_04_02: Манай семинарт оролцсон 100,000 гаруй багш нартай нэгдээрэй.
+    Манай семинарт оролцогчдын дийлэнх нь 'Энэ бол миний оролцож байсан хамгийн сайн
+    мэргэжлийн хөгжил юм' гэж хэлдэг. Үнэндээ [Оролцогсдын 90% нь манай хөтөлбөрийг
+    бусад багш нарт зөвлөж байна] ()!%{rec_url}
   csf_page_faq_question_05: CS үндэс заах санал болгосон цаг хугацаа гэж юу вэ?
   csf_page_faq_answer_05: CSF курс бүр нь 13-17 минутын хугацаатай 45 хичээлийг багтаасан
     болно. Бүх сурагчдыг хичээлээс хичээл рүү багшийн тогтоосон хурдаар шилжихийг
     зөвлөж байна. Ур чадвар хөгжүүлэх хичээлийг оюутнууд өөрсдийн хурдаар хийж гүйцэтгэх
     боломжтой бол багш нарын удирдсан төслийн олон түвшин байдаг.
   csf_page_faq_question_06: CS үндэс нь би ямар материал хэрэгтэй вэ?
-  csf_page_faq_answer_06: Many lessons have handouts that guide students through activities.
-    These resources can be printed or assigned digitally. Some lessons call for typical
-    classroom supplies and manipulatives. [Visit the CSF Syllabus to learn more](%{syllabus_url}).
+  csf_page_faq_answer_06: Олон хичээлд суралцагчдыг үйл ажиллагаагаар удирдан чиглүүлдэг
+    тараах материал байдаг. Эдгээр нөөцийг дижитал хэлбэрээр хэвлэх эсвэл хуваарилж
+    болно. Зарим хичээлүүд нь ердийн ангийн хангамж, заль мэхийг уриалж байна. [Илүү
+    ихийг мэдэхийн тулд CSF-ийн хичээлд зочилно уу] ().%{syllabus_url}
   csa_page_top_desc: Introduce students to software engineering and object-oriented
     design while they learn the Java programming language in this free curriculum
     for [AP® Computer Science A (AP® CSA)](%{csa_url}).
@@ -1742,8 +1780,8 @@ mn:
   ai_activity_zooniverse: Zooniverse - Хормын хувилбар уулын тахө
   ai_activity_zooniverse_desc: Ховордсон Cape Mountain Zebra хамгаалах нь тусал зураг
     янз бүрийн амьтан тодорхойлох замаар.
-  codeorg_homepage_hoc2018_curriculum: Go further with <a href="%{studio_url}/courses"
-    class="hoc2018-curriculum-link">Code.org courses</a>
+  codeorg_homepage_hoc2018_curriculum: Цааш нь <a href="%{studio_url}/courses" class="hoc2018-curriculum-link">Code.org
+    курсуудтай хамт яваарай</a>
   codeorg_homepage_hoc2018_dance_heading: Өөрийн үүсгэх <span class="highlight-word">Бүжгийн&nbsp;Үдэшлэг</span>
   codeorg_homepage_hoc2018_header_line1: Кодын цаг ирж байна...
   codeorg_homepage_hoc2018_header_line2_desktop: Та <span class="hoc2018-highlight-word">үүсгэх
@@ -1957,7 +1995,7 @@ mn:
     вэ</a>"
   whats_next_how_to_promote_link: "<a href='/promote'>Кодын цагийг хэрхэн сурталчлах
     вэ</a>"
-  whats_next_try: "<a href='%{learn_url}'>Try tutorials</a>"
+  whats_next_try: "<a href='%{learn_url}'>Хичээл үзээрэй</a>"
   whats_next_try_button: Хичээл үзээрэй
   n_have_learned_an_hoc: "<h1></h1><h2>Кодын цаг</h2><h3># үйлчилсэн</h3>"
   anybody_can_learn: Хэн ч сурч болно.
@@ -1979,9 +2017,9 @@ mn:
   front_join_us_header: Хэн ч үндсийг сурч болно, мөн үүнийг хийж хөгжилтэй байдаг!
   front_join_us_volunteer_header: Кодын цагийн сайн дурынхан
   front_join_us_tutorials: Код заавар нь таны цаг сонгоно уу!
-  front_join_us_tutorials_link: Filter and browse <i>over 200 tutorials and lesson
-    plans</i>! Find activities for different subject areas, multiple hardware needs,
-    and students at any experience level.
+  front_join_us_tutorials_link: Шүүлтүүр болон 200 <i>гаруй хичээлүүд болон хичээлийн
+    төлөвлөгөөг үзэх!</i>өөр өөр сэдэв газар үйл ажиллагааг хай, олон тоног төхөөрөмжийн
+    хэрэгцээ,, ямар ч туршлага түвшинд оюутан.
   front_join_us_robotics: Роботууд эсвэл хэлхээг ялах!
   front_join_us_robotics_link: Та роботууд эсвэл физик тооцооллын иж бүрдлийг оюутнуудтайгаа
     хамт ашиглахыг хүсч байна уу? Манай өгөөмөр түншүүд 75 анги танхимд багц хандивлаж
@@ -2016,7 +2054,8 @@ mn:
   front_join_us_sign_up: Бүртгүүлэх
   front_join_us_host: Үүнийг хост
   front_join_us_support: Үүнийг дэмжих
-  front_join_us_more_info: For more information, please visit <a href='https://code.org'>code.org</a>.
+  front_join_us_more_info: Дэлгэрэнгүй мэдээллийг <a href='https://code.org'></a>code.org
+    хаягаар зочилно уу.
   front_join_us_code_info: Дэлгэрэнгүй мэдээллийг code.org хаягаар зочилно уу
   front_join_us_n_students_served: "# байсан."
   front_join_us_challenge: нь алдартнуудын нь таны ангид видео чат ялалт!
@@ -2041,10 +2080,10 @@ mn:
   hoc_homepage_organized_by: Кодын цаг нь [Code.org](%{codeorg_url}) -ээр зохион байгуулагддаг.
   signup_closed: Код цагийн бүртгэл одоо хаалттай байна. Кодын дараагийн цаг хүртэл
     гарын үсэг зурах аравдугаар сард дахин шалгана уу.
-  signup_registration_not_required: You don't need to register to participate! The
-    Hour of Code activities are available year-round. <a href='%{hoc_activities_url}'>Try
-    an activity</a> or read our <a href='%{howto_guide_url}'>How-to guide</a> to plan
-    an event for your class.
+  signup_registration_not_required: Та оролцохын тулд бүртгүүлэх шаардлагагүй! Кодын
+    цагийн үйл ажиллагааг жилийн турш ашиглах боломжтой. <a href='%{hoc_activities_url}'>Үйл
+    ажиллагааг туршиж үзээрэй</a> эсвэл ангийнхаа үйл явдлыг төлөвлөхдөө <a href='%{howto_guide_url}'></a>
+    хэрхэн хийх зааврыг уншина уу.
   signup_registration_not_required_markdown: Та оролцохын тулд бүртгүүлэх шаардлагагүй!
     Кодын цагийн үйл ажиллагааг жилийн турш ашиглах боломжтой. [Үйл ажиллагааг туршиж
     үзээрэй] (%{hoc_activities_url}) эсвэл ангийнхаа үйл явдлыг төлөвлөхдөө [Хэрхэн
@@ -2058,8 +2097,7 @@ mn:
     байгуулах] (%{hoc_activities_url}) боломжтой бөгөөд олон нийтийн мэдээллийн хэрэгслээр
     баяр ёслолд нэгдээрэй! #HourOfCode hashtag ашиглан өөрийн үйл явдлын хөгжилтэй
     зураг эсвэл видеог байрлуул!'
-  signup_header: Organize an Hour of Code during %{campaign_date}, and register it
-    here.
+  signup_header: үед хуулийн цаг зохион байгуулах %{campaign_date}, энд бүртгүүлэх.
   signup_name_label: Таны нэр
   signup_name_error: Нэр шаардлагатай.
   signup_email_label: Таны имэйл
@@ -2089,6 +2127,13 @@ mn:
     боломжтой юу?
   signup_email_preference_privacy: "(Манай нууцлалын бодлогыг үзнэ үү)"
   signup_email_preference_yes: Тийм
+  signup_email_preference_yes_elementary: Тийм - Бага сургуулийн нөөцийн талаархи
+    шинэчлэлтүүдийг надад илгээнэ үү
+  signup_email_preference_yes_middle: Тийм - Дунд сургуулийн нөөцийн талаархи шинэчлэлтүүдийг
+    надад илгээнэ үү
+  signup_email_preference_yes_high: Тийм - Ахлах сургуулийн нөөцийн талаархи шинэчлэлтүүдийг
+    надад илгээнэ үү
+  signup_email_preference_yes_general: Тийм - Надад ерөнхий шинэчлэлтүүдийг илгээх
   signup_email_preference_no: Үгүй
   signup_email_preference_error: И-мэйл давуу эрх шаардлагатай байна
   signup_multiple_event_warning: Бүртгүүлэхдээ бид танай сургуулийн нэр, хотыг газрын
@@ -2178,13 +2223,14 @@ mn:
     (Баярлалаа %{random_donor} @codeorg дэмжих)'
   hoc_faq_title: Түгээмэл асуултууд
   hoc_faq_what_is_hoc_q: Кодын цаг гэж юу вэ?
-  hoc_faq_what_is_hoc_a: The Hour of Code started as a one-hour introduction to computer
-    science, designed to demystify "code", to show that anybody can learn the basics,
-    and to broaden participation in the field of computer science. It has since become
-    a worldwide effort to celebrate computer science, starting with 1-hour coding
-    activities but expanding to all sorts of community efforts. Check out the <a href='%{tutorials}'>tutorials
-    and activities</a>. This grassroots campaign is supported by over <a href='%{partners}'>400
-    partners</a> and 200,000 educators worldwide.
+  hoc_faq_what_is_hoc_a: Кодын цаг нь компьютерийн шинжлэх ухааны нэг цагийн танилцуулга
+    болж эхэлсэн бөгөөд “код” -ыг буулгах, хэн ч үндсийг сурч чадна гэдгийг харуулах,
+    компьютерийн шинжлэх ухааны салбарт оролцоог өргөжүүлэх зорилготой юм. Үүнээс
+    хойш 1 цагийн кодлох үйл ажиллагаанаас эхлээд компьютерийн шинжлэх ухааныг тэмдэглэх
+    дэлхий даяар хүчин чармайлт гаргаж ирсэн боловч олон нийтийн хүчин чармайлтыг
+    өргөжүүлэн өргөжүүлж байна. <a href='%{tutorials}'>хичээл, үйл ажиллагааг нь шалгах.</a>Энэхүү
+    анхан шатны кампанит ажлыг дэлхий даяар <a href='%{partners}'>400 гаруй түншүүд</a>
+    , 200,000 сурган хүмүүжүүлэгчид дэмждэг.
   hoc_faq_what_is_hoc_a_markdown: Кодын цаг нь компьютерийн шинжлэх ухааны нэг цагийн
     танилцуулга болж эхэлсэн бөгөөд “код” -ыг буулгах, хэн ч үндсийг сурч чадна гэдгийг
     харуулах, компьютерийн шинжлэх ухааны салбарт оролцоог өргөжүүлэх зорилготой юм.
@@ -2195,12 +2241,13 @@ mn:
     гаруй сурган хүмүүжүүлэгчид дэмждэг.
   hoc_faq_last_year: Хичээлийг туршиж үзээрэй
   hoc_faq_when_is_hoc_q: Кодын цаг хэзээ вэ?
-  hoc_faq_when_is_hoc_a: The Hour of Code takes place each year during <a href='%{csedweek_url}'>Computer
-    Science Education Week</a>. The %{campaign_date_year} Computer Science Education
-    Week will be %{campaign_date_full}, but you can host an Hour of Code all year-round.
-    Computer Science Education Week is held annually in recognition of the birthday
-    of computing pioneer <a href='%{grace_hopper}'>Admiral Grace Murray Hopper</a>
-    (December 9, 1906).
+  hoc_faq_when_is_hoc_a: Код цаг нь жил бүр <a href='%{csedweek_url}'>Компьютерийн
+    шинжлэх ухааны боловсролын долоо хоногт болдог</a>. %{campaign_date_year} Компьютерийн
+    шинжлэх ухааны боловсролын долоо хоног байх болно %{campaign_date_full}, гэхдээ
+    та жилийн турш кодын цагийг зохион байгуулж болно. Компьютерийн шинжлэх ухааны
+    боловсролын долоо хоног тооцоолох анхдагч <a href='%{grace_hopper}'>адмирал Grace
+    Мюррей Бункер</a> (арванхоёрдугаар сарын 9, 1906) төрсөн өдөр хүлээн зөвшөөрөх
+    жил бүр зохион байгуулж байна.
   hoc_faq_when_is_hoc_a_markdown: Кодын цаг нь [Компьютерийн шинжлэх ухааны боловсролын
     долоо хоног] (%{csedweek_url}) -д жил бүр болдог. %{campaign_date_year} Компьютерийн
     шинжлэх ухааны боловсролын долоо хоног %{campaign_date_full}байх болно, гэхдээ
@@ -2227,58 +2274,63 @@ mn:
     Hour of Code арга хэмжээг зохион байгуулж болно - хичээлээс гадуурх клуб, ашгийн
     бус эсвэл ажил дээрээ гэх мэт. Эсвэл %{campaign_date} ирэхэд өөрөө туршиж үзээрэй."
   hoc_faq_behind_hoc_q: Кодын цагийн цаана хэн байна вэ?
-  hoc_faq_behind_hoc_a: The Hour of Code is organized by Code.org and driven by the
-    Hour of Code Review Committee as well as an unprecedented coalition of <a href='%{partner_url}'>partners</a>
-    that have come together to support the Hour of Code — including Microsoft, Apple,
-    Amazon, Boys and Girls Clubs of America and the College Board.
+  hoc_faq_behind_hoc_a: Кодын цагийг Code.org-ээс зохион байгуулж, Кодын цагийн тойм
+    хороо, түүнчлэн Майкрософт, Apple, Амазон, Америкийн Хөвгүүд, Охидын Клуб, Коллежийн
+    Удирдах Зөвлөл зэрэг Кодын цагийг дэмжихийн тулд урьд өмнө байгаагүй <a href='%{partner_url}'>түншүүдийн</a>
+    эвсэл юм.
   hoc_faq_behind_hoc_a_markdown: Кодын цагийг Code.org-ээс зохион байгуулж, Кодын
     цагийн тойм хороо, түүнчлэн Microsoft, Apple, Amazon, Америкийн хөвгүүд, охидын
     клубууд, коллежийн зөвлөл зэрэг Кодын цагийг дэмжихээр нэгдэж байсан [partners](%{partner_url})
     урьд өмнө хэзээ ч байгаагүй эвсэл юм.
   hoc_faq_host_q: Би кодлох талаар юу ч мэдэхгүй байна. Би одоо ч гэсэн үйл явдлыг
     зохион байгуулж болох уу?
-  hoc_faq_host_a: Of course. Hour of Code activities are self-guided. All you have
-    to do is <a href='%{codeorg_url}/learn'>try our current tutorials</a>, pick the
-    tutorial you want, and pick an hour &mdash; we take care of the rest. We also
-    have options for every age and experience-level, from kindergarten and up. Start
-    planning your event by reading our <a href='/how-to'>how to guide</a>.
+  hoc_faq_host_a: Мэдээж хэрэг. Код үйл ажиллагааны цаг өөрөө удирдан чиглүүлдэг.
+    Та хийх ёстой бүх бидний одоогийн хичээл <a href='%{codeorg_url}/learn'>оролдож
+    байна</a>, Хэрэв та хүссэн заавар түүх, болон цаг авах &mdash; бид үлдсэн анхаарал
+    халамж тавих. Мөн цэцэрлэгийн болон түүнээс дээш насны бүх нас, туршлагын түвшинд
+    сонголт хийх боломжтой. <a href='/how-to'>Хэрхэн удирдан чиглүүлэхээ уншиж, үйл
+    явдлаа төлөвлөж эхэл</a>.
   hoc_faq_host_a_markdown: Мэдээж хэрэг. Код үйл ажиллагааны цаг өөрөө удирдан чиглүүлдэг.
     Таны хийх ёстой зүйл бол [одоогийн хичээлүүдээ туршиж үзээрэй] (%{codeorg_url}/сурах),
     хүссэн хичээлээ сонгож, цаг сонгоорой - бид үлдсэнийг нь анхаарч үздэг. Мөн цэцэрлэгийн
     болон түүнээс дээш насны бүх нас, туршлагын түвшинд сонголт хийх боломжтой. Манай
     [хэрхэн удирдан чиглүүлэх] (%{howto}) -ийг уншаад үйл явдлаа төлөвлөж эхэл.
   hoc_faq_devices_q: Би оюутнууддаа ямар төхөөрөмж ашиглах ёстой вэ?
-  hoc_faq_devices_a: Code.org tutorials work on all devices and browsers. You can
-    see more information about Code.org's tutorial tech needs <a href='%{codeorg_url}/educate/it'>here</a>.
-    Tech needs for non-Code.org tutorials can be found on <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a>
-    in the tutorial specific description. Don't forget we also offer <a href='%{unplugged_url}'>unplugged
-    activities</a> if your school can't accommodate the tutorials!
-  hoc_faq_devices_a_markdown: Code.org tutorials work on all devices and browsers.
-    You can see more information about Code.org's tutorial tech needs [here](%{codeorg_url}/educate/it).
-    Tech needs for non-Code.org tutorials can be found on [%{partner_url}/learn](%{codeorg_url}/learn)
-    in the tutorial specific description. Don't forget we also offer [unplugged activities](%{unplugged_url})
-    if your school can't accommodate the tutorials!
+  hoc_faq_devices_a: Code.org хичээлүүд нь бүх төхөөрөмжүүд болон хөтчүүд дээр ажилладаг.
+    Та Code.org-ийн заавар технологийн хэрэгцээний талаар дэлгэрэнгүй мэдээллийг эндээс
+    үзэх боломжтой. <a href='%{codeorg_url}/educate/it'></a>Төрийн бус Code.org хичээл
+    Tech хэрэгцээг олж <a href='%{codeorg_url}/learn'>%{partner_url}</a> болно/заавар
+    тодорхой тайлбар сурах. Таны сургууль хичээл багтах чадахгүй байгаа</a> бол бид
+    ч бас <a href='%{unplugged_url}'>unplugged үйл ажиллагааг санал болгож бүү март!
+  hoc_faq_devices_a_markdown: Code.org хичээлүүд нь бүх төхөөрөмжүүд болон хөтчүүд
+    дээр ажилладаг. Та Code.org-ийн заавар технологийн хэрэгцээний [here]талаар дэлгэрэнгүй
+    мэдээллийг харах боломжтой (/educate/it).%{codeorg_url}Төрийн бус Code.org хичээл
+    Tech хэрэгцээг олж болно [%{partner_url}/learn] (%{codeorg_url}/сурах) заавар
+    тодорхой тайлбар. Бид ч бас санал бүү март [салгагдсан үйл ажиллагаа] (%{unplugged_url})
+    Таны сургууль хичээл багтах чадахгүй байгаа бол!
   hoc_faq_need_computers_q: Оролцогч бүрт компьютер хэрэгтэй юу?
-  hoc_faq_need_computers_a: No. We have Hour of Code tutorials that work on PCs, smartphones,
-    tablets, and some that require no computer at all! You can join wherever you are,
-    with whatever you have. <p><i>Here are a few options:</i> <br> <ul> <li><b>Work
-    in pairs.</b> <a href='%{pair_programming_research}'>Research shows</a> students
-    learn best with <a href='%{pair_programming_video}'>pair programming</a>, sharing
-    a computer and working together. Encourage your students to double up. <li><b>Use
-    a projected screen.</b> If you have a projector and screen for a Web-connected
-    computer, your entire group can do an Hour of Code together. Watch video portions
-    together and take turns solving puzzles or answering questions. <li><b>Go unplugged.</b>
-    We offer <a href='%{unplugged_url}'>tutorials that require no computer</a> at
-    all. </ul>
+  hoc_faq_need_computers_a: 'Үгүй Бидэнд компьютер, ухаалаг гар утас, таблет, компьютер
+    огт шаардагдахгүй компьютер дээр ажилладаг Hour of Code хичээлүүд байна! Та хаана
+    ч байсан, байгаа зүйлтэйгээ нэгдэж болно. <p><i>Энд хэд хэдэн сонголт байна: хосоороо</i>
+    <br> <ul> <li><b>ажиллах.</b> <a href=''%{pair_programming_research}''>Судалгаагаар</a>
+    оюутнууд <a href=''%{pair_programming_video}''>хос програмчлал</a>, компьютер
+    хуваалцах, хамтран ажиллах зэргээр хамгийн сайн суралцдаг болохыг харуулж байна.
+    Суралцагчдаа хоёр дахин өсгөсөөр урамшуулан дэмж. <li><b>Төсөөлсөн дэлгэцийг ашиглана
+    уу.</b> Хэрэв танд Вэб холбогдсон компьютерт зориулсан проектор, дэлгэцтэй бол
+    таны бүхэл бүтэн бүлэг хамтдаа Hour of Code хийх боломжтой. Видео хэсгүүдийг хамтдаа
+    үзэж, таавар таах эсвэл асуултанд хариулах зэргээр ээлжлэн үзээрэй. <li><b>салгагдсан
+    Go.</b> Бид бүх ямар ч компьютер шаарддаг <a href=''%{unplugged_url}''>хичээл
+    санал болгож</a> байна. </ul>'
   hoc_faq_need_computers_a_markdown: |-
-    No. We have Hour of Code tutorials that work on PCs, smartphones, tablets, and some that require no computer at all! You can join wherever you are, with whatever you have.
+    Үгүй Бидэнд компьютер, ухаалаг гар утас, таблет, компьютер огт шаардагдахгүй компьютер дээр ажилладаг Hour of Code хичээлүүд байна! Та хаана ч байсан, байгаа зүйлтэйгээ нэгдэж болно.
 
-    _Here are a few options:_
+    _Энд хэдэн сонголт байна:_
 
-    - **Work in pairs.** [Research shows](%{pair_programming_research}) students learn best with [pair programming](%{pair_programming_video}), sharing a computer and working together. Encourage your students to double up.
-    - **Use a projected screen.** If you have a projector and screen for a Web-connected computer, your entire group can do an Hour of Code together. Watch video portions together and take turns solving puzzles or answering questions.
-    - **Go unplugged.** We offer [tutorials that require no computer](%{unplugged_url}) at all.
-  hoc_faq_international_q: I am in <country>. How do I participate internationally?
+    - ** Хосууд ажиллах.** [Судалгааны шоу] (%{pair_programming_research}) оюутнууд [хос програмчлал] (%{pair_programming_video}), компьютерийг хуваалцах, хамтран ажиллах зэргээр хамгийн сайн суралцдаг. Суралцагчдаа хоёр дахин өсгөсөөр урамшуулан дэмж.
+    - **Төсөөлсөн дэлгэц ашиглах.** Хэрэв танд Вэб холбогдсон компьютерийн проектор болон дэлгэц байгаа бол таны бүхэл бүтэн бүлэг хамтдаа Hour of Code хийж болно. Видео хэсгүүдийг хамтдаа үзэж, таавар таах эсвэл асуултанд хариулах зэргээр ээлжлэн үзээрэй.
+    - ** салгагдсан.** Бид санал болгож байна [ямар ч компьютер шаарддаг хичээлүүд] () бүх.%{unplugged_url}
+  hoc_faq_international_q: Би байна <country>. Би олон улсын хэмжээнд хэрхэн оролцох
+    вэ?
   hoc_faq_international_a: Хэн ч дэлхийн хаана ч байсан Hour of Code арга хэмжээг
     зохион байгуулж болно. Өнгөрсөн жил дэлхий даяар оюутнууд Кодын цагийн төлөө нэгдэв.
     Илүү ихийг олж мэдэх <a href='/promote'>энд</a>.
@@ -2416,10 +2468,10 @@ mn:
     хуудас руу очно уу</a> Та бүх ангийнхаа гэрчилгээг хугацаанаас нь өмнө хэвлэх
     боломжтой. Та мөн Minecraft заавар хийж буй оюутнуудад зориулсан <a href='%{codeorg_url}/certificates?course=mc'>тусгай
     гэрчилгээ</a> хэвлэж болно.
-  hoc_faq_certificates_a_markdown: Go to our [certificates page](%{codeorg_url}/certificates)
-    where you can print certificates for your entire class ahead of time. You can
-    also print out [special certificates](%{codeorg_url}/certificates?course=mc) for
-    students doing the Minecraft tutorial.
+  hoc_faq_certificates_a_markdown: Манай [гэрчилгээний хуудас] (%{codeorg_url}/certificates)
+    руу орж, бүх ангийнхаа гэрчилгээг хугацаанаас нь өмнө хэвлэх боломжтой. Та бас
+    хэвлэж болно [тусгай гэрчилгээ] (%{codeorg_url}/гэрчилгээ? курс = mc) Minecraft
+    заавар хийж буй оюутнуудад зориулсан.
   hoc_faq_logo_q: Код цагийн лого эсвэл нэрийг хэрхэн ашиглаж болох талаар хязгаарлалт
     бий юу?
   hoc_faq_logo_a: Код цаг барааны тэмдэг юм. Бид түүний хэрэглээг урьдчилан сэргийлэхийг
@@ -2581,10 +2633,10 @@ mn:
   learn_banner_beyond: Суралцахыг хүсч байна уу?  <a id='learn_banner_beyond'>Цагаас
     цааш явах</a>
   learn_banner_beyond_markdown: Суралцахыг хүсч байна уу? [Нэг цагаас цааш явах] (%{url})
-  learn_banner_teachers: 'Teachers: <a id=''teacher_banner_host''>Host an hour</a>
-    or <a id=''teacher_banner_howto''>read the How-To Guide</a>'
-  learn_banner_teachers_markdown: 'Teachers: [Host an hour](%{host_url}) or [read
-    the How-To Guide](%{howto_url})'
+  learn_banner_teachers: 'Багш нар: Нэг цаг <a id=''teacher_banner_host''>зохион</a>
+    эсвэл хэрхэн <a id=''teacher_banner_howto''>гарын авлагыг уншина уу</a>'
+  learn_banner_teachers_markdown: 'Багш нар: [Цаг зохион] (%{host_url}) эсвэл [Хэрхэн
+    хийх гарын авлагыг уншина уу] ()%{howto_url}'
   tutorial_dance2019_name: Бүжгийн үдэшлэг
   tutorial_danceparty_name: Бүжгийн үдэшлэг
   tutorial_chibitronics_name: 'Чибитроник: Гэрэлтүүлсэн түүх'
@@ -4595,13 +4647,13 @@ mn:
     гарын авлага дээрээ ашиглахад бэлэн TI Basic хэлийг ашиглан математикийн ойлголтыг
     бэхжүүлж чадах програмуудыг бичих болно.
   tutorial_itchbounceball_longdescription: |-
-    We take you through an introduction to Itch, utilizing the Scratch visual programming language.
+    Бид Scratch харааны програмчлалын хэлийг ашиглан загатнах танилцуулгыг танд хүргэж байна.
 
-    This lesson provides a video and text directions for the code students need to add to get a ball bouncing zanily around the screen.
+    Энэ хичээл нь оюутнууд дэлгэц дээр zanily үсэрч бөмбөг авахын тулд нэмэх хэрэгтэй код нь видео болон текст чиглэл өгдөг.
 
-    Once students complete this activity there is an opportunity to explore with ideas for other changes and activities that can be made.  There is no set goal or outcome as it's an open learning environment, but with just this starting code students come up with amazing projects!
+    Оюутнууд энэ үйл ажиллагааг дуусгасны дараа хийж болох бусад өөрчлөлт, үйл ажиллагааны санаануудыг судлах боломж байна. Энэ нь нээлттэй сургалтын орчин юм шиг ямар ч тогтоосон зорилго, эсвэл үр дүн байдаг, Харин зүгээр л энэ эхлэн код оюутнууд гайхалтай төсөл гарч ирэх нь!
 
-    All instruction is contained within the Itch environment so there is no need to be switching screens to follow along with the project. Headphones are recommended.
+    Бүх заавар нь загатнах орчинд агуулагдаж байгаа тул төслийн хамт дагаж мөрдөх дэлгэцийг өөрчлөх шаардлагагүй болно. Чихэвчийг зөвлөж байна.
   tutorial_vidclim_longdescription: Оюутнууд дэлхийн цаг уурын талаархи баримтыг судалж,
     уур амьсгалын өөрчлөлтийн хариуд эрдэмтэд, уран бүтээлчдийн ажилд оролцож байна.
     Оюутнууд өөрсдийн судалгаа авч, тэдний баримтыг хуваалцах видео төлөвлөж байна.
@@ -5462,11 +5514,11 @@ mn:
     эсвэл Стив авах кодын блок ашиглах.
   tutorial_minecraft-2016_longdescription: нь Minecraft тоглоом бий болгох. тахианы
     өөрийн хувилбарыг бий болгох, хонь, Creepers, зомби ба түүнээс дээш.
-  tutorial_thinkersmith-es_longdescription: Mediante el uso de un "Vocabulario Robot"
-    predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar
-    a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento
-    ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones
-    as&iacute; como la valiosa habilidad de depuraci&oacute;n.
+  tutorial_thinkersmith-es_longdescription: Гэсэн хэдий ч “Робот толь” -ийн урьдчилсан
+    тодорхойлолтыг ашиглав. Энэ нь урьд өмнө нь үл&aacute;тоомсорлосны дараа кабо
+    талбаруудын талаар ямар ч арга хэмжээ авах болно.&iacute;Энэ сегменто&ntilde;нь
+    Лос естудиантес ла конекси&oacute;н Entre с&iacute;mbolos у хүлээн авах зэрэг
+    комо ла валиоса хабитидад де депураци н.&iacute;&oacute;
   tutorial_pixie_longdescription: Pixie нь код заавар цаг
   tutorial_play_longdescription: өгүүллэг Бий болгох, эсвэл Жүжиг Lab -ээр тоглоом
     хийдэг! Амьтан, далайн дээрэмчид, зомби, нинжа нар болон бусад олон тэмдэгтүүд
@@ -12518,12 +12570,12 @@ mn:
     харуулах.
   tutorial_googlename _longdescription: нэр сонгож, код ашиглан амьдралд үгийн үсэг
     авчрах. Хоч, гэрийн тэжээмэл амьтны нэр, амьтан, спорт, газар, хобби зэргийг сонго.
-  tutorial_carnegiezillah_longdescription: Zillah City is thriving, and music is in
-    the air. Rumor has it, the famed Gargantua bot is online and sending the last
-    Toxibots to trash the city block by block…. Grab your cobot hoverboard and get
-    ready to groove, move, and finish off what you started! Players program their
-    cobot hoverbots to change lanes, avoid obstacles, and take out many Toxibots in
-    this rhythm-styled game.
+  tutorial_carnegiezillah_longdescription: Зилла хот цэцэглэн хөгжиж, хөгжим агаарт
+    байна. Цуу яриатай, алдарт Gargantua bot нь онлайн бөгөөд хамгийн сүүлийн Toxibots-ийг
+    хотын блокоор хог хаяхаар илгээдэг.…Таны cobot hoverboard татаж авах болон ховил
+    бэлэн авах, хөдөлж, та нар эхэлсэн зүйлээ унтраах дуусгах! Тоглогчид өөрсдийн
+    cobot hoverbots програмчилдаг эгнээг өөрчлөх, саад тотгороос зайлсхийх, энэ хэмнэл
+    загвар тоглолтонд олон Toxibots гаргаж авах.
   tutorial_nasachspacejam_longdescription: үнэхээр чулуулаг нь нарны системийг бий
     болгох! Энэхүү өөрөө удирддаг үйл ажиллагаанд хөгжим, одон орон судлал, кодчиллын
     талаар олж мэдээрэй (кодлох туршлага шаардагдахгүй). Хөтөлбөрийн гаригууд хөгжим

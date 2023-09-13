@@ -193,6 +193,16 @@ pt:
   grade_level_label_elementary: Ensino Fundamental 1
   grade_level_label_middle: Ensino Fundamental 2
   grade_level_label_high: Ensino Médio
+  curricula_title_elementary: Currículos do ensino fundamental
+  curricula_desc_elementary: Explore os cursos e atividades divertidos e gratuitos
+    que convidam você a explorar a ciência da computação com seus alunos do ensino
+    fundamental.
+  curricula_title_middle: Currículos do ensino médio
+  curricula_desc_middle: Explore as ofertas envolventes que permitem que você e seus
+    alunos do ensino médio explorem a ciência da computação juntos.
+  curricula_title_high: Currículos do ensino médio
+  curricula_desc_high: Explore os cursos e atividades interessantes que convidam você
+    e seus alunos do ensino médio a se aprofundarem na ciência da computação.
   students_label: Estudantes
   teachers_label: Professores
   teacher_label_csf: Professor de fundamentos de CS
@@ -219,6 +229,13 @@ pt:
   call_to_action_explore_choice_level: Explore o exemplo de nível de escolha
   call_to_action_explore_collection: Explore a coleção
   call_to_action_explore_unplugged_lesson: Explore aulas desconectadas
+  call_to_action_explore_csf: Explore os fundamentos do CS
+  call_to_action_explore_csd: Explore CS Discoveries
+  call_to_action_explore_csp: Explore os princípios de CS
+  call_to_action_explore_csc: Explore as conexões CS
+  call_to_action_explore_csa: Conheça a AP® Computer Science A
+  call_to_action_explore_maker: Explore os currículos do Maker
+  call_to_action_explore_hoc: Explore os tutoriais da Hora do Código
   call_to_action_try_app_lab: Experimente o App Lab
   call_to_action_view_lesson_plan: Veja o plano de aula
   call_to_action_self_paced_pl: Comece o aprendizado profissional individualizado
@@ -263,6 +280,7 @@ pt:
   call_to_action_notify_available: Notifique-me quando disponível
   call_to_action_register_early_access: Registre-se para acesso antecipado
   call_to_action_open_positions: Exibir vagas abertas
+  call_to_action_get_guide: Obtenha o guia
   aria_label_call_to_action_afe: Saiba mais sobre o Amazon Future Engineer
   aria_label_call_to_action_teaching_csf: Inicie o programa de aprendizagem profissional
     Teaching Computer Science Fundamentals
@@ -375,6 +393,8 @@ pt:
   curriculum_name_csa: AP® Ciência da Computação A
   curriculum_name_csc_02: Qualquer Módulo de Conexões em CC
   curriculum_name_ai: IA & Machine Learning
+  curriculum_name_artificial_intelligence: Inteligência artificial (IA)
+  curriculum_name_maker: Criador
   curriculum_name_maker_cp: Criação de aplicativos com dispositivos (Circuit Playground)
   curriculum_name_maker_microbit: Criação de aplicativos com dispositivos (micro:bit)
   curriculum_name_creating_apps_with_devices: Criação de aplicativos com dispositivos
@@ -433,6 +453,12 @@ pt:
   curriculum_desc_creating_apps_with_devices: Explore o papel dos dispositivos físicos
     na computação. Desenvolva programas que utilizem entradas e saídas de hardware.
     Há uma versão desta unidade tanto para o micro:bit quanto para o Circuit Playground.
+  curriculum_desc_csa: Apresente aos alunos a engenharia de software e o design orientado
+    a objetos enquanto eles aprendem a linguagem de programação Java neste currículo
+    gratuito para AP® Computer Science A (AP® CSA).
+  curriculum_desc_maker: A educação Maker leva STEM (Ciência, Tecnologia, Engenharia,
+    Matemática) um passo adiante, convidando experiência prática e colaboração para
+    a sala de aula para ajudar a ensinar a resolução de problemas e o pensamento crítico.
   collection_hardware: Foco no hardware
   collection_hardware_desc: Capacita os alunos a usar dados e dispositivos físicos
     para resolver problemas.
@@ -471,6 +497,7 @@ pt:
   module_label_student_content_resources: Conteúdo e recursos
   module_label_new: Novo
   module_label_coming_soon: Em breve
+  module_label_available_now: Disponível agora
   module_label_video_series: Série de vídeos
   module_label_self_paced: Módulo individualizado
   module_ages_5_10: 5-10
@@ -481,6 +508,8 @@ pt:
   module_grade_2_5: 2-5
   module_grade_3_5: 3-5
   module_grade_3_8: 3-8
+  module_grade_k_12: K-12
+  module_grade_3_12: 3-12
   module_grade_6_12: 6-12
   module_grade_6_10: 6-10
   module_grade_9_12: 9-12
@@ -576,6 +605,8 @@ pt:
   heading_java_lab: Laboratório Java
   heading_objects_first: Objetos em primeiro lugar
   heading_these_lessons_will: 'Essas aulas irão:'
+  heading_explore_curriculum_catalog: Explore todos os nossos cursos no Catálogo de
+    Currículos
   professional_learning_section_desc: Obtenha o apoio de que precisa ao se preparar
     para ensinar. Os professores adoram, com mais de 90% classificando-o como o melhor
     desenvolvimento profissional de todos os tempos!
@@ -841,6 +872,11 @@ pt:
     (como o ChatGPT) e a IA generativa. Ouça como essas novas tecnologias funcionam
     diretamente com os especialistas: Mira Murati, CTO da OpenAI, e Cristóbal Valenzuela,
     CEO da RunwayML.'
+  ai_pl_101_llm_slides_title: Grandes instruções de modelo de linguagem para educadores
+  ai_pl_101_llm_slides_desc: Ferramentas para obter o melhor resultado possível de
+    LLMs como o ChatGPT, do iniciante ao avançado. Inclui instruções iniciais para
+    quem está começando, bem como ferramentas avançadas para quem quer maximizar seu
+    potencial.
   how_ai_works_hero_heading: Como a IA funciona
   how_ai_works_hero_desc: Mergulhe no mundo da IA com “Como a IA funciona”, nossa
     série de vídeos e as aulas que a acompanham!
@@ -2109,6 +2145,13 @@ pt:
     da Code.org, oportunidades locais ou outras notícias de ciência da computação?
   signup_email_preference_privacy: "(Veja nossa politica de privacidade)"
   signup_email_preference_yes: Sim
+  signup_email_preference_yes_elementary: Sim - Envie-me atualizações sobre os recursos
+    do ensino fundamental
+  signup_email_preference_yes_middle: Sim - Envie-me atualizações sobre recursos do
+    ensino médio
+  signup_email_preference_yes_high: Sim - Envie-me atualizações sobre recursos do
+    ensino médio
+  signup_email_preference_yes_general: Sim - Envie-me atualizações gerais
   signup_email_preference_no: Não
   signup_email_preference_error: Preferência de e-mail é obrigatória
   signup_multiple_event_warning: Se você está sediando vários eventos, envie um nome
