@@ -1115,21 +1115,25 @@ section.quote {
   }
 }
 
-// Curriculum at a glance section
-// Works with curriculum_glance_section.haml partial
-// See code.org/educate/csp for an example
-.curriculum-glance {
+
+// At a glance sections
+// See code.org/educate/csp and code.org/teach for examples
+.at-a-glance {
   background: $neutral-white;
   border: 1px solid $neutral_dark10;
   border-radius: $border-radius;
-  margin-top: 2rem;
   padding: 1.5rem;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
+  display: grid;
 
-  @media screen and (max-width: $width-md) {
-    grid-template-columns: unset;
-    gap: 1rem;
+  // Used with two ul elements
+  &.two-col {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+
+    @media screen and (max-width: $width-md) {
+      grid-template-columns: unset;
+      gap: 1rem;
+    }
   }
 
   ul {
