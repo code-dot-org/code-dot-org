@@ -8,10 +8,7 @@ import PropTypes from 'prop-types';
 import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
-import AgeDialog, {
-  ageDialogSelectedOver13,
-  songFilterOn,
-} from '../templates/AgeDialog';
+import AgeDialog, {getFilterStatus} from '../templates/AgeDialog';
 import {getFilteredSongKeys} from '@cdo/apps/dance/songs';
 
 const SongSelector = Radium(
@@ -73,7 +70,7 @@ class DanceVisualizationColumn extends React.Component {
   };
 
   state = {
-    filterOn: this.getFilterStatus(),
+    filterOn: getFilterStatus(this.props.userType, this.props.under13),
   };
 
   /*
@@ -82,31 +79,6 @@ class DanceVisualizationColumn extends React.Component {
   turnFilterOff = () => {
     this.setState({filterOn: false});
   };
-
-  /*
-    The filter defaults to on. If the user is over 13 (identified via account or anon dialog), filter turns off.
-   */
-  getFilterStatus() {
-    const {userType, under13} = this.props;
-
-    // Check if song filter override is triggered and initialize song filter to true.
-    const songFilter = songFilterOn();
-    if (songFilter) {
-      return true;
-    }
-
-    // userType - 'teacher', 'student', 'unknown' - signed out users.
-    // If the user is signed out . . .
-    if (userType === 'unknown') {
-      // Query session key set from user selection in age dialog.
-      // Return false (no filter), if user is over 13.
-      return !ageDialogSelectedOver13();
-    }
-
-    // User is signed in (student or teacher) and the filter override is not turned on.
-    // Return true (filter should be turned on) if the user is under 13. Teachers assumed over13.
-    return under13;
-  }
 
   render() {
     const filenameToImgUrl = {

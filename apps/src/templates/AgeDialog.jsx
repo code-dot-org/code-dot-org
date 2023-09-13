@@ -14,15 +14,38 @@ import queryString from 'query-string';
  * We want users seeing that dialog to have to input their age, so using
  * a different session storage key here.
  */
-const AGE_DIALOG_SESSION_KEY = 'ad_anon_over13';
-const SONG_FILTER_SESSION_KEY = 'song_filter_on';
+export const AGE_DIALOG_SESSION_KEY = 'ad_anon_over13';
+export const SONG_FILTER_SESSION_KEY = 'song_filter_on';
 
-export const ageDialogSelectedOver13 = () => {
+const ageDialogSelectedOver13 = () => {
   return sessionStorage.getItem(AGE_DIALOG_SESSION_KEY) === 'true';
 };
 
-export const songFilterOn = () => {
+const songFilterOn = () => {
   return sessionStorage.getItem(SONG_FILTER_SESSION_KEY) === 'true';
+};
+
+/**
+ * The filter defaults to on. If the user is over 13 (identified via account or anon dialog), filter turns off.
+ */
+export const getFilterStatus = (userType, under13) => {
+  // Check if song filter override is triggered and initialize song filter to true.
+  const songFilter = songFilterOn();
+  if (songFilter) {
+    return true;
+  }
+
+  // userType - 'teacher', 'student', 'unknown' - signed out users.
+  // If the user is signed out . . .
+  if (userType === 'unknown') {
+    // Query session key set from user selection in age dialog.
+    // Return false (no filter), if user is over 13.
+    return !ageDialogSelectedOver13();
+  }
+
+  // User is signed in (student or teacher) and the filter override is not turned on.
+  // Return true (filter should be turned on) if the user is under 13. Teachers assumed over13.
+  return under13;
 };
 
 class AgeDialog extends Component {
