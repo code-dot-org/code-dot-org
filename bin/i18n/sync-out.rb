@@ -16,9 +16,9 @@ require 'tempfile'
 require 'yaml'
 require 'active_support/core_ext/object/blank'
 
-require_relative 'hoc_sync_utils'
 require_relative 'i18n_script_utils'
 require_relative 'redact_restore_utils'
+require_relative 'utils/malformed_i18n_reporter'
 require_relative '../animation_assets/manifest_builder'
 
 Dir[File.expand_path('../resources/**/*.rb', __FILE__)].sort.each {|file| require file}
@@ -28,13 +28,12 @@ module I18n
     def self.perform
       puts "Sync out starting"
       I18n::Resources::Apps.sync_out
+      I18n::Resources::Pegasus.sync_out
       rename_from_crowdin_name_to_locale
       restore_redacted_files
       distribute_translations
-      copy_untranslated_apps
       restore_markdown_headers
       Services::I18n::CurriculumSyncUtils.sync_out
-      HocSyncUtils.sync_out
       puts "updating TTS I18n (should usually take 2-3 minutes, may take up to 15 if there are a whole lot of translation updates)"
       I18nScriptUtils.with_synchronous_stdout do
         I18nScriptUtils.run_standalone_script "dashboard/scripts/update_tts_i18n.rb"
@@ -77,12 +76,13 @@ module I18n
       # Move directories like `i18n/locales/Italian` to `i18n/locales/it-it` for
       # all languages in our system
       PegasusLanguages.get_crowdin_name_and_locale.each do |prop|
-        next unless File.directory?("i18n/locales/#{prop[:crowdin_name_s]}/")
+        crowdin_locale_dir = I18nScriptUtils.locale_dir(prop[:crowdin_name_s])
+        next unless File.exist?(crowdin_locale_dir)
 
         # copy and remove rather than moving so we can easily and recursively deal
         # with existing files
-        FileUtils.cp_r "i18n/locales/#{prop[:crowdin_name_s]}/.", "i18n/locales/#{prop[:locale_s]}"
-        FileUtils.rm_r "i18n/locales/#{prop[:crowdin_name_s]}"
+        i18n_locale_dir = I18nScriptUtils.locale_dir(prop[:locale_s])
+        I18nScriptUtils.rename_dir(crowdin_locale_dir, i18n_locale_dir)
       end
 
       # Now, any remaining directories named after the language name (rather than
@@ -91,21 +91,6 @@ module I18n
       # A regex is used in the .select rather than Dir.glob because Dir.glob will ignore
       # character case on file systems which are case insensitive by default, such as OSX.
       FileUtils.rm_r Dir.glob("i18n/locales/*").grep(/i18n\/locales\/[A-Z].*/)
-    end
-
-    def self.find_malformed_links_images(locale, file_path)
-      return unless File.exist?(file_path)
-      is_json = File.extname(file_path) == '.json'
-      data =
-        if is_json
-          JSON.parse(File.read(file_path))
-        else
-          YAML.load_file(file_path)
-        end
-
-      return unless data
-      return unless data&.values&.first&.length
-      I18nScriptUtils.recursively_find_malformed_links_images(data, locale, file_path)
     end
 
     def self.restore_redacted_files
@@ -125,7 +110,6 @@ module I18n
       puts "Restoring redacted files in #{locales.count} locales, parallelized between #{Parallel.processor_count / 2} processes"
 
       # Prepare some collection literals
-      app_types_with_link = %w(applab gamelab weblab)
       resource_and_vocab_paths = [
         'i18n/locales/original/dashboard/scripts.yml',
         'i18n/locales/original/dashboard/courses.yml'
@@ -136,9 +120,11 @@ module I18n
         next if locale == 'en-US'
         next unless File.directory?("i18n/locales/#{locale}/")
 
+        malformed_i18n_reporter = I18n::Utils::MalformedI18nReporter.new(locale)
+
         original_files.each do |original_path|
           relative_path = original_path.delete_prefix(original_dir)
-          next unless file_changed?(locale, relative_path)
+          next unless I18nScriptUtils.file_changed?(locale, relative_path)
 
           translated_path = original_path.sub("original", locale)
           next unless File.file?(translated_path)
@@ -164,15 +150,15 @@ module I18n
               plugins << 'visualCodeBlock'
               plugins << 'link'
               plugins << 'resourceLink'
-            elsif app_types_with_link.include?(File.basename(original_path, '.json'))
-              plugins << 'link'
+            elsif I18n::Resources::Apps::Labs::REDACTABLE_LABS.include?(File.basename(original_path, '.json'))
+              next # moved to I18n::Resources::Apps::Labs::SyncOut#restore_crawding_locale_files
             end
             RedactRestoreUtils.restore(original_path, translated_path, translated_path, plugins)
           end
 
-          find_malformed_links_images(locale, translated_path)
+          malformed_i18n_reporter.process_file(translated_path)
         end
-        I18nScriptUtils.upload_malformed_restorations(locale)
+        malformed_i18n_reporter.report
       end
       puts "Restoration finished!"
     end
@@ -198,56 +184,6 @@ module I18n
         # pass
       else
         raise "can't process unknown type: #{data}"
-      end
-    end
-
-    def self.parse_file(path)
-      case File.extname(path)
-      when '.yaml', '.yml'
-        YAML.load_file(path)
-      when '.json'
-        JSON.parse(File.read(path))
-      else
-        raise "do not know how to parse file #{path.inspect}"
-      end
-    end
-
-    def self.sanitize_file_and_write(loc_path, dest_path)
-      loc_data = parse_file(loc_path)
-      sanitize_data_and_write(loc_data, dest_path)
-    end
-
-    def self.sanitize_data_and_write(data, dest_path)
-      sorted_data = sort_and_sanitize(data)
-
-      dest_data =
-        case File.extname(dest_path)
-        when '.yaml', '.yml'
-          sorted_data.to_yaml
-        when '.json'
-          JSON.pretty_generate(sorted_data)
-        else
-          raise "do not know how to serialize localization data to #{dest_path}"
-        end
-
-      FileUtils.mkdir_p(File.dirname(dest_path))
-      File.write(dest_path, dest_data)
-    end
-
-    def self.sort_and_sanitize(hash)
-      hash.sort_by {|key, _| key}.each_with_object({}) do |(key, value), result|
-        case value
-        when Hash
-          # ensure we always call sort_and_sanitize on the hash to avoid top-level empty objects
-          sorted_hash = sort_and_sanitize(value)
-          result[key] = sorted_hash unless sorted_hash.empty?
-        when Array
-          result[key] = value.filter_map {|v| v.is_a?(Hash) ? sort_and_sanitize(v) : v}
-        when String
-          result[key] = value.gsub(/\\r/, "\r") unless value.empty?
-        else
-          result[key] = value unless value.nil?
-        end
       end
     end
 
@@ -331,13 +267,13 @@ module I18n
         type_file = "dashboard/config/locales/#{type}.#{locale}.#{extension}"
 
         existing_data = File.exist?(type_file) ?
-                          parse_file(type_file).dig(locale, "data", type) || {} :
+                          I18nScriptUtils.parse_file(type_file).dig(locale, "data", type) || {} :
                           {}
 
         merged_data = existing_data.deep_merge(translations.sort.to_h)
         type_data = wrap_with_locale(merged_data, locale, type)
 
-        sanitize_data_and_write(type_data, type_file)
+        I18nScriptUtils.sanitize_data_and_write(type_data, type_file)
       end
     end
 
@@ -390,81 +326,14 @@ module I18n
             # JSON files in this directory need the root key to be set to the locale
             loc_data = JSON.parse(File.read(loc_file))
             loc_data = wrap_with_locale(loc_data, locale, basename)
-            sanitize_data_and_write(loc_data, destination)
+            I18nScriptUtils.sanitize_data_and_write(loc_data, destination)
           else
-            sanitize_file_and_write(loc_file, destination)
+            I18nScriptUtils.sanitize_file_and_write(loc_file, destination)
           end
         end
 
         ### Course Content
         distribute_course_content(locale)
-
-        ### Apps
-        js_locale = I18nScriptUtils.to_js_locale(locale)
-        Dir.glob("#{locale_dir}/blockly-mooc/*.json") do |loc_file|
-          relative_path = loc_file.delete_prefix(locale_dir)
-          next unless I18nScriptUtils.file_changed?(locale, relative_path)
-
-          basename = File.basename(loc_file, '.json')
-          destination = "apps/i18n/#{basename}/#{js_locale}.json"
-          sanitize_file_and_write(loc_file, destination)
-        end
-
-        ### ml-playground strings to Apps directory
-        Dir.glob("#{locale_dir}/external-sources/ml-playground/mlPlayground.json") do |loc_file|
-          relative_path = loc_file.delete_prefix(locale_dir)
-          next unless I18nScriptUtils.file_changed?(locale, relative_path)
-
-          basename = File.basename(loc_file, '.json')
-          destination = "apps/i18n/#{basename}/#{js_locale}.json"
-          sanitize_file_and_write(loc_file, destination)
-        end
-
-        ### Merge ml-playground datasets into apps' mlPlayground JSON
-        Dir.glob("#{locale_dir}/external-sources/ml-playground/datasets/*.json") do |loc_file|
-          ml_playground_path = "apps/i18n/mlPlayground/#{js_locale}.json"
-          dataset_id = File.basename(loc_file, '.json')
-          relative_path = loc_file.delete_prefix(locale_dir)
-          next unless I18nScriptUtils.file_changed?(locale, relative_path)
-
-          external_translations = parse_file(loc_file)
-          next if external_translations.empty?
-
-          # Merge new translations
-          existing_translations = File.exist?(ml_playground_path) ? parse_file(ml_playground_path) || {} : {}
-          existing_translations['datasets'] = existing_translations['datasets'] || Hash.new
-          existing_translations['datasets'][dataset_id] = external_translations
-          sanitize_data_and_write(existing_translations, ml_playground_path)
-        end
-
-        ### Blockly Core
-        # Blockly doesn't know how to fall back to English, so here we manually and
-        # explicitly default all untranslated strings to English.
-        blockly_english = JSON.parse(File.read("i18n/locales/source/blockly-core/core.json"))
-        Dir.glob("#{locale_dir}/blockly-core/*.json") do |loc_file|
-          relative_path = loc_file.delete_prefix(locale_dir)
-          next unless I18nScriptUtils.file_changed?(locale, relative_path)
-
-          translations = JSON.parse(File.read(loc_file))
-          # Create a hash containing all translations, with English strings in
-          # place of any missing translations. We do this as 'english merge
-          # translations' rather than 'translations merge english' to ensure that
-          # we include all the keys from English, regardless of which keys are in
-          # the translations hash.
-          translations_with_fallback = blockly_english.merge(translations) do |_key, english, translation|
-            translation.empty? ? english : translation
-          end
-          translations_with_fallback = sort_and_sanitize(translations_with_fallback)
-
-          # Replaced the original script `apps/node_modules/@code-dot-org/blockly/i18n/codeorg-messages.sh`
-          # to generate js translation files right away only for the "changed files"
-          js_translations = translations_with_fallback.each_with_object('') do |(i18n_key, i18n_val), js_string|
-            js_string << "Blockly.Msg.#{i18n_key} = #{JSON.dump(i18n_val)};\n"
-          end
-          destination = CDO.dir(File.join('apps/lib/blockly', "#{js_locale}.js"))
-          FileUtils.mkdir_p(File.dirname(destination))
-          File.write(destination, js_translations)
-        end
 
         ### Pegasus markdown
         Dir.glob("#{locale_dir}/codeorg-markdown/**/*.*") do |loc_file|
@@ -496,12 +365,12 @@ module I18n
           programming_env = File.basename(loc_file, '.json')
           destination = "dashboard/config/locales/programming_environments.#{locale}.json"
           programming_env_data = File.exist?(destination) ?
-                                   parse_file(destination).dig(locale, "data", "programming_environments") || {} :
+                                   I18nScriptUtils.parse_file(destination).dig(locale, "data", "programming_environments") || {} :
                                    {}
           programming_env_data[programming_env] = loc_data[programming_env]
           # JSON files in this directory need the root key to be set to the locale
           programming_env_data = wrap_with_locale(programming_env_data, locale, "programming_environments")
-          sanitize_data_and_write(programming_env_data, destination)
+          I18nScriptUtils.sanitize_data_and_write(programming_env_data, destination)
         end
 
         ### Standards
@@ -519,18 +388,18 @@ module I18n
           # Frameworks
           destination = "dashboard/config/locales/frameworks.#{locale}.json"
           framework_data = File.exist?(destination) ?
-                             parse_file(destination).dig(locale, "data", "frameworks") || {} :
+                             I18nScriptUtils.parse_file(destination).dig(locale, "data", "frameworks") || {} :
                              {}
           framework_data[framework] = {
             "name" => loc_data["name"]
           }
           framework_data = wrap_with_locale(framework_data, locale, "frameworks")
-          sanitize_data_and_write(framework_data, destination)
+          I18nScriptUtils.sanitize_data_and_write(framework_data, destination)
 
           # Standard Categories
           destination = "dashboard/config/locales/standard_categories.#{locale}.json"
           category_data = File.exist?(destination) ?
-                            parse_file(destination).dig(locale, "data", "standard_categories") || {} :
+                            I18nScriptUtils.parse_file(destination).dig(locale, "data", "standard_categories") || {} :
                             {}
           (loc_data["categories"] || {}).keys.each do |category|
             category_data[category] = {
@@ -538,12 +407,12 @@ module I18n
             }
           end
           category_data = wrap_with_locale(category_data, locale, "standard_categories")
-          sanitize_data_and_write(category_data, destination)
+          I18nScriptUtils.sanitize_data_and_write(category_data, destination)
 
           # Standards
           destination = "dashboard/config/locales/standards.#{locale}.json"
           standard_data = File.exist?(destination) ?
-                            parse_file(destination).dig(locale, "data", "standards") || {} :
+                            I18nScriptUtils.parse_file(destination).dig(locale, "data", "standards") || {} :
                             {}
           (loc_data["standards"] || {}).keys.each do |standard|
             standard_data[standard] = {
@@ -551,29 +420,16 @@ module I18n
             }
           end
           standard_data = wrap_with_locale(standard_data, locale, "standards")
-          sanitize_data_and_write(standard_data, destination)
+          I18nScriptUtils.sanitize_data_and_write(standard_data, destination)
         end
 
         ### Pegasus
         loc_file = "#{locale_dir}/pegasus/mobile.yml"
         destination = "pegasus/cache/i18n/#{locale}.yml"
-        sanitize_file_and_write(loc_file, destination)
+        I18nScriptUtils.sanitize_file_and_write(loc_file, destination)
       end
 
       puts "Distribution finished!"
-    end
-
-    # For untranslated apps, copy English file for all locales
-    def self.copy_untranslated_apps
-      untranslated_apps = %w(calc eval netsim)
-
-      PegasusLanguages.get_locale.each do |prop|
-        next unless prop[:locale_s] != 'en-US'
-        untranslated_apps.each do |app|
-          app_locale = prop[:locale_s].tr('-', '_').downcase!
-          FileUtils.cp_r "apps/i18n/#{app}/en_us.json", "apps/i18n/#{app}/#{app_locale}.json"
-        end
-      end
     end
 
     # In the sync in, we slice the YAML headers of the files we upload to crowdin
@@ -604,8 +460,10 @@ module I18n
           puts "Error parsing yaml header path=#{path}"
           raise exception
         end
-        I18nScriptUtils.sanitize_header!(header)
-        restored_header = source_header.merge(header)
+
+        sanitized_header = I18nScriptUtils.sanitize_markdown_header(header)
+        restored_header = source_header.merge(sanitized_header)
+
         I18nScriptUtils.write_markdown_with_header(content, restored_header, path)
       end
     end

@@ -9,6 +9,7 @@ import {setIsMiniView} from '@cdo/apps/code-studio/progressRedux';
 import instructions, {
   setTtsAutoplayEnabledForLevel,
   setCodeReviewEnabledForLevel,
+  setTaRubric,
 } from '@cdo/apps/redux/instructions';
 import experiments from '@cdo/apps/util/experiments';
 import RubricFloatingActionButton from '@cdo/apps/templates/rubrics/RubricFloatingActionButton';
@@ -54,8 +55,7 @@ function initPage() {
     );
   }
 
-  const rubricFabMountPoint = document.getElementById('rubric-fab-mount-point');
-  if (rubricFabMountPoint && experiments.isEnabled('ai-rubrics')) {
+  if (experiments.isEnabled('ai-rubrics')) {
     const rubricData = getScriptData('rubricdata');
     const {rubric, studentLevelInfo} = rubricData;
     const reportingData = {
@@ -63,13 +63,21 @@ function initPage() {
       courseName: config.course_name,
       levelName: config.level_name,
     };
-    ReactDOM.render(
-      <RubricFloatingActionButton
-        rubric={rubric}
-        studentLevelInfo={studentLevelInfo}
-        reportingData={reportingData}
-      />,
-      rubricFabMountPoint
+    getStore().dispatch(setTaRubric(rubric));
+
+    const rubricFabMountPoint = document.getElementById(
+      'rubric-fab-mount-point'
     );
+    if (rubricFabMountPoint) {
+      ReactDOM.render(
+        <RubricFloatingActionButton
+          rubric={rubric}
+          studentLevelInfo={studentLevelInfo}
+          reportingData={reportingData}
+          currentLevelName={config.level_name}
+        />,
+        rubricFabMountPoint
+      );
+    }
   }
 }

@@ -11,6 +11,8 @@ module I18n
 
       def self.sync_out
         Animations.sync_out
+        ExternalSources.sync_out
+        Labs.sync_out
       end
     end
   end

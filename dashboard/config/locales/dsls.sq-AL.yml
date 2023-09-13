@@ -452,6 +452,22 @@ sq-AL:
           # Eventi i Madh
 
           Në shkencat kompjuterike, eventet janë veprime që monitorohen nga një kompjuter. Në këtë mësim do të reagoni ndryshe në varësi të butonit që shtypet.
+      CSD CSS project Review_2021:
+        description: Këtu janë disa atribute CSS që ju mund të keni parë në dy mësime
+          të kaluara. Ju mund t'i përdorni ato për të rishikuar stilet që mund të
+          dëshironi për webfaqen tuaj.
+        display_name: Rishikimi i CSS
+      CSD CSS project Review_2022:
+        description: Këtu janë disa atribute CSS që ju mund të keni parë në dy mësime
+          të kaluara. Ju mund t'i përdorni ato për të rishikuar stilet që mund të
+          dëshironi për webfaqen tuaj.
+        display_name: Rishikimi i CSS
+      CSD End of Unit Survey - Unit 1 - IntroMD_2022:
+        teacher_markdown: |-
+          **Anketat e fundit të njësisë për mësimdhënës:** Përderisa nxënësit plotësojnë anketën, ne do ta vlersonim nëse edhe ju do ta plotësonit anketën për mësimdhënës
+
+          ## [Kliko këtu për anketën e mësimdhënësve]
+          (https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=1)
       CSD Games Properties multi predict_2021:
         answers:
         - {}
@@ -500,6 +516,8 @@ sq-AL:
         - {}
         - {}
         - {}
+      CSD Student End of Unit Survey - Unit 1_2022:
+        title: 'Anketa e Fundit të Njësisë së CS Discoveries! '
       CSD U1 IOSP match:
         answers:
         - {}
@@ -508,9 +526,9 @@ sq-AL:
         - {}
         questions:
         - {}
+        - text: Output
         - {}
-        - {}
-        - {}
+        - text: Përpunimi
       CSD U1 IOSP match_2021:
         answers:
         - {}
@@ -519,9 +537,9 @@ sq-AL:
         - {}
         questions:
         - {}
+        - text: Output
         - {}
-        - {}
-        - {}
+        - text: Përpunimi
       CSD U1 IOSP match_2022:
         answers:
         - {}
@@ -530,9 +548,9 @@ sq-AL:
         - {}
         questions:
         - {}
+        - text: Output
         - {}
-        - {}
-        - {}
+        - text: Përpunimi
       CSD U1 Test PSP match:
         answers:
         - {}
@@ -617,6 +635,14 @@ sq-AL:
         - {}
         questions:
         - {}
+      CSD U2 CSS challenge_pilot_2021:
+        description: Ka shumë mënyra të ndryshme për të stiluar tekstin. Përdorni
+          sfidat më poshtë për të marrë ide të reja për faqen tuaj të internetit.
+        display_name: Sfidat dhe kodi shtesë
+      CSD U2 CSS challenge_pilot_2022:
+        description: Ka shumë mënyra të ndryshme për të stiluar tekstin. Përdorni
+          sfidat më poshtë për të marrë ide të reja për faqen tuaj të internetit.
+        display_name: Sfidat dhe kodi shtesë
       CSD U2 Design Project:
         content1: përshkrimi këtu
       CSD U2 Design Project_2018:
@@ -1913,6 +1939,52 @@ sq-AL:
         - {}
         questions:
         - {}
+      CSD Web Headings challenge_2021:
+        description: Këtu janë disa kode shtesë HTML për të provuar, dhe një zonë
+          Luaj Falas për t'i përdorur ato.
+        display_name: Titujt HTML
+      CSD Web Headings challenge_2022:
+        description: Këtu janë disa kode shtesë HTML për të provuar, dhe një zonë
+          Luaj Falas për t'i përdorur ato.
+        display_name: Titujt HTML
+      CSD Web Headings practice_2021:
+        description: Provoni atë që keni mësuar në një ose më shumë nga aktivitetet
+          e mëposhtme.
+        display_name: Titujt HTML
+      CSD Web Headings practice_2022:
+        description: Provoni atë që keni mësuar në një ose më shumë nga aktivitetet
+          e mëposhtme.
+        display_name: Titujt HTML
+      CSD Web Sample Pages_2021:
+        content1: Shikoni përmes këtyre shembujve të webfaqeve dhe vendosni se çfarë
+          qëllimi u shërbejnë krijuesve dhe vizitorëve të tyre.
+        markdown: |-
+          # Shembuj të webfaqeve personale
+
+          <div style="float: left; text-align:center;"><strong>Qeni më i lezetshëm</strong><br /><a href="https://codeprojects.org/uqvtQ_zKapQ2XocJkdGZypbJWM1nDMCpts1dN7NZ9wQ" target="_new "><img style="border-radius:10px; margin: 10px;" src="https://images.code.org/be0c20dba6319b34dc07a9f87ae615fa-image-1565304900473.png" alt="Faqja e mostrës së qenit"></a></div>
+          <div style="float: left; text-align:center;"><strong>Udhëtimi im</strong><br /><a href="https://codeprojects.org/qNceXIsgEYKraWZxd0Lq9uOO7Jj3yBfcp8pHR4uXq8c" target="_new" ><img style="border-radius:10px; margin: 10px;" src="https://images.code.org/51b787b6a25663e092b3f55e051e9a94-image-1565630570417.png" alt="Faqja e shembullit të udhëtimit"></a></div>
+          <div style="float: left; text-align:center;"><strong>Instrumente muzikore</strong><br /><a href="https://codeprojects.org/HxtpYQ-r79cNzFpnSfGyhMuNKEOTdyH5PPeUpDimEeY" target=" _new"><img style="border-radius:10px; margin: 10px;" src="https://images.code.org/82323a78b17b69101dd6e98a6a21c55c-image-1565630573896.png" alt="Faqja e mostrës së instrumentit"></a></div>
+          <div style="float: left; text-align:center;"><strong>Klubi i riciklimit</strong><br /><a href="https://codeprojects.org/HxtpYQ-r79cNzFpnSfGyhBiffg8HpOk2lRx1kd5sgaw" target=" _new"><img style="border-radius:10px; margin: 10px;" src="https://images.code.org/5b0044bfd92d44c97cd74d82f1933daa-image-1565630578147.png" alt="Riciklimi i faqes së mostrës"></a></div>
+          <div style="float: left; text-align:center;"><strong>Haikus</strong><br /><a href="https://codeprojects.org/PPGOslHhH0Od4yEOHHdnjLT4-x4yfDMStUTlMUZy6Cc" target="_new "><img style="border-radius:10px; margin: 10px;" src="https://images.code.org/40892c338c78da445310ddfb7cf63127-image-1565630595445.png" alt="Faqja e mostrës Haiku"></a></div>
+      CSD Web Sample Pages_2022:
+        content1: Shikoni përmes këtyre shembujve të webfaqeve dhe vendosni se çfarë
+          qëllimi u shërbejnë krijuesve dhe vizitorëve të tyre.
+        markdown: |-
+          # Shembuj të webfaqeve personale
+
+          <div style="float: left; text-align:center;"><strong>Qeni më i lezetshëm</strong><br /><a href="https://codeprojects.org/uqvtQ_zKapQ2XocJkdGZypbJWM1nDMCpts1dN7NZ9wQ" target="_new "><img style="border-radius:10px; margin: 10px;" src="https://images.code.org/be0c20dba6319b34dc07a9f87ae615fa-image-1565304900473.png" alt="Faqja e mostrës së qenit"></a></div>
+          <div style="float: left; text-align:center;"><strong>Udhëtimi im</strong><br /><a href="https://codeprojects.org/qNceXIsgEYKraWZxd0Lq9uOO7Jj3yBfcp8pHR4uXq8c" target="_new" ><img style="border-radius:10px; margin: 10px;" src="https://images.code.org/51b787b6a25663e092b3f55e051e9a94-image-1565630570417.png" alt="Faqja e shembullit të udhëtimit"></a></div>
+          <div style="float: left; text-align:center;"><strong>Instrumente muzikore</strong><br /><a href="https://codeprojects.org/HxtpYQ-r79cNzFpnSfGyhMuNKEOTdyH5PPeUpDimEeY" target=" _new"><img style="border-radius:10px; margin: 10px;" src="https://images.code.org/82323a78b17b69101dd6e98a6a21c55c-image-1565630573896.png" alt="Faqja e mostrës së instrumentit"></a></div>
+          <div style="float: left; text-align:center;"><strong>Klubi i riciklimit</strong><br /><a href="https://codeprojects.org/HxtpYQ-r79cNzFpnSfGyhBiffg8HpOk2lRx1kd5sgaw" target=" _new"><img style="border-radius:10px; margin: 10px;" src="https://images.code.org/5b0044bfd92d44c97cd74d82f1933daa-image-1565630578147.png" alt="Riciklimi i faqes së mostrës"></a></div>
+          <div style="float: left; text-align:center;"><strong>Haikus</strong><br /><a href="https://codeprojects.org/PPGOslHhH0Od4yEOHHdnjLT4-x4yfDMStUTlMUZy6Cc" target="_new "><img style="border-radius:10px; margin: 10px;" src="https://images.code.org/40892c338c78da445310ddfb7cf63127-image-1565630595445.png" alt="Faqja e mostrës Haiku"></a></div>
+      CSD games cake challenge choice_2021:
+        display_name: Sfidat
+      CSD games cake challenge choice_2022:
+        display_name: Sfidat
+      CSD games platform challenge choice_2021:
+        display_name: Sfidat
+      CSD games platform challenge choice_2022:
+        display_name: Sfidat
       CSD web draw loop practice choice_2021:
         display_name: Ushtrime
       CSD web draw loop practice choice_2022:
@@ -2111,6 +2183,22 @@ sq-AL:
           Treble \n\n</h2>\n\n<img src=\"https://images.code.org/3825556a395fd31bc4f767ca7ea5c566-image-1541746894197.gif\"></a>\n\n</div>\n\n<div
           style=\"float: left; margin: 10px\">\n<a href=\"7\">\n<h2>\nShpejtoje, Ngadalsoje\n\n</h2>\n\n<img
           src=\"https://images.code.org/d7f35c686ef0a9c5a6975889fd7c566b-image-1541746900730.gif\"></a>\n\n</div>\n"
+      DesigningForAccessibilityMarkdownLevel_2021:
+        markdown: |-
+          # Dizajnimi për Qasshmëri
+
+
+          * Në botën e shkencës kompjuterike, **qasshmëria** ka të bëjë me krijimin e teknologjisë për njerëzit me aftësi të kufizuara.
+          * Aftësitë e kufizuara përfshijnë ato fizike, auditive, vizuale dhe shumë të tjera.
+          * Aftësitë e kufizuara janë të ndryshme dhe prekin njerëzit në mënyra të ndryshme, përfshirë mënyrën se si ata përdorin teknologjinë si **aplikacionet e smartphone**.
+          *Dizajnimi i aplikacioneve që kanë qasje nga njerëzit me aftësi të kufizuara bën që ato aplikacione të jenë më të mira për të gjithë të tjerët gjithashtu!
+
+          ![](https://images.code.org/0c670d0d9078657a870df0ca799492cb-image-1557166420066.png)
+      DigitalSharing-Unplugged_2021:
+        markdown: |
+          # Ndarja Dixhitale
+
+          Në këtë mësim do të merrni parasysh sfidat dhe përfitimet e respektimit të pronësisë dhe të drejtës së autorit veçanërisht në mjediset dixhitale.
       EnvelopeVariables-Unplugged_2021_2:
         markdown: |-
           # Blank Space Stories
@@ -2144,6 +2232,11 @@ sq-AL:
           # Happy Maps
 
           Krijo një algoritëm për të lëvizur një personazh nëpër labirint.
+      HappyMaps-Unplugged_2021:
+        markdown: |-
+          # Happy Maps
+
+          Krijoni një algoritëm për të lëvizur një personazh nëpër labirint.
       Internet Simulator Setup:
         content1: përshkrimi këtu
       Internet Simulator Setup 2:
@@ -2527,6 +2620,11 @@ sq-AL:
           ## Çfarë duhet të bëni kur dikush përdor gjuhë të keqe ose lënduese në internet?
       Prepare for your presentation:
         content1: përshkrimi këtu
+      PrivatePersonalInformation-Unplugged_2021:
+        markdown: |
+          # Informacion Privat dhe Personal
+
+          ## Çfarë informacioni rreth jush është në rregull që t'a ndani në internet?
       RelayProgramming-Unplugged_2021:
         markdown: |-
           #Programimi Relay
@@ -2540,6 +2638,11 @@ sq-AL:
       Songwriting-Unplugged2022:
         markdown: |-
           # Shkrim i këngëve
+
+          Përdorni konceptin e refrenit në një këngë për të mësuar rreth përcaktimit dhe thirrjes së funksioneve.
+      Songwriting-Unplugged_2021:
+        markdown: |-
+          # Shkrimi i këngëve
 
           Përdorni konceptin e refrenit në një këngë për të mësuar rreth përcaktimit dhe thirrjes së funksioneve.
       Student End of Unit Survey - Q1_2022:
@@ -2949,7 +3052,7 @@ sq-AL:
         - {}
         - {}
         questions:
-        - {}
+        - text: Unë jam i bindur se kam aftësinë për të mësuar shkenca kompjuterike.
       confident-ability-to-learn_2022:
         answers:
         - {}
@@ -2960,7 +3063,7 @@ sq-AL:
         - {}
         - {}
         questions:
-        - {}
+        - text: Unë jam i bindur se kam aftësinë për të mësuar shkenca kompjuterike.
       contained_Choose_2_Test:
         answers:
         - {}
@@ -2991,20 +3094,28 @@ sq-AL:
         - text: po
         - text: jo
         questions:
-        - {}
+        - text: A ju inkurajoi një këshilltar në shkollë që të merrni këtë klasë?
       counselor_encourage_2022:
         answers:
         - text: po
         - text: jo
         questions:
-        - {}
+        - text: A ju inkurajoi një këshilltar në shkollë që të merrni këtë klasë?
       courseAB_EOC2022:
+        description: Ju keni arritur në mësimin e fundit! Zgjidhni një projekt për
+          të krijuar.
         display_name: Përfundimi i projektit të kursit
       courseAB_EOC_2021:
+        description: Ju keni arritur në mësimin e fundit! Zgjidhni një projekt për
+          të krijuar.
         display_name: Përfundimi i projektit të kursit
       courseB_EOC2022:
+        description: Ju keni arritur në mësimin e fundit! Zgjidhni një projekt për
+          të krijuar.
         display_name: Përfundimi i projektit të kursit
       courseB_EOC_2021:
+        description: Ju keni arritur në mësimin e fundit! Zgjidhni një projekt për
+          të krijuar.
         display_name: Përfundimi i projektit të kursit
       courseC_multi_artist_prog6_predict1:
         answers:
@@ -3362,7 +3473,7 @@ sq-AL:
         - text: A
         - text: B
         - text: C
-        - {}
+        - text: Asnjë prej atyre lart
         questions:
         - {}
       courseD_multi_artist_nestedLoops9_predict1_2018:
@@ -3391,12 +3502,21 @@ sq-AL:
         - {}
       courseD_multi_artist_nestedLoops9_predict1_2021:
         answers:
-        - text: A
-        - text: B
-        - text: C
-        - {}
+        - correct: true
+          feedback: E saktë!
+          text: A
+        - feedback: E pasaktë. Loop i brendshëm bën një pesëkëndësh dhe loop i jashtëm
+            e përsërit atë 4 herë në një rreth.
+          text: B
+        - feedback: E pasaktë. Loop i brendshëm bën një pesëkëndësh dhe loop i jashtëm
+            e përsërit atë 4 herë në një rreth.
+          text: C
+        - feedback: E pasaktë. Loop i brendshëm bën një pesëkëndësh dhe loop i jashtëm
+            e përsërit atë 4 herë në një rreth.
+          text: Asnjë prej atyre lart
         questions:
-        - {}
+        - text: Shikoni mirë kodin më poshtë. Cili vizatim do t'a bëjë ky program
+            kur klikoni “Run”?
       courseD_multi_bee_conditionals1_predict1:
         answers:
         - {}
@@ -3410,7 +3530,7 @@ sq-AL:
         - {}
         - {}
         - {}
-        - {}
+        - text: 'Bleta nuk do të arrijë në re. '
         questions:
         - {}
       courseD_multi_bee_conditionals1_predict1_2018:
@@ -3442,7 +3562,7 @@ sq-AL:
         - {}
         - {}
         - {}
-        - {}
+        - text: 'Bleta nuk do të arrijë në re. '
         questions:
         - {}
       courseD_multi_bee_conditionals1_predict1_copy:
@@ -3474,7 +3594,8 @@ sq-AL:
         - {}
         - {}
         - {}
-        - {}
+        - text: Bleta do të përpiqet të marrë nektar nga të dyja, lulet dhe huall
+            mjalti.
         questions:
         - {}
       courseD_multi_bee_conditionals7_predict2_2018:
@@ -3506,7 +3627,8 @@ sq-AL:
         - {}
         - {}
         - {}
-        - {}
+        - text: Bleta do të përpiqet të marrë nektar nga të dyja, lulet dhe huall
+            mjalti.
         questions:
         - {}
       courseD_multi_bee_nestedLoops2_predict1:
@@ -3522,7 +3644,7 @@ sq-AL:
         - {}
         - {}
         - {}
-        - {}
+        - text: Bleta do të kthejë drejtimin e gabuar.
         questions:
         - {}
       courseD_multi_bee_nestedLoops2_predict1_2018:
@@ -3554,7 +3676,7 @@ sq-AL:
         - {}
         - {}
         - {}
-        - {}
+        - text: Bleta do të kthejë drejtimin e gabuar.
         questions:
         - {}
       courseD_multi_bee_nestedLoops9_predict2:
@@ -3682,7 +3804,7 @@ sq-AL:
         - {}
         - {}
         - {}
-        - {}
+        - text: Ky kod do t'a lërë grumbullin plotësisht të paprekur.
         questions:
         - {}
       courseD_multi_farmer_while10_predict2_2018:
@@ -3714,7 +3836,7 @@ sq-AL:
         - {}
         - {}
         - {}
-        - {}
+        - text: Ky kod do t'a lërë grumbullin plotësisht të paprekur.
         questions:
         - {}
       courseD_multi_farmer_while4_predict1:
@@ -3827,7 +3949,7 @@ sq-AL:
         - {}
         - {}
         - {}
-        - {}
+        - text: Zogu kthehet në rrugën e gabuar.
         questions:
         - {}
       courseD_multi_maze_until2_predict1_2018:
@@ -3859,7 +3981,7 @@ sq-AL:
         - {}
         - {}
         - {}
-        - {}
+        - text: Zogu kthehet në rrugën e gabuar.
         questions:
         - {}
       courseD_multi_scrat_predict1:
@@ -3879,6 +4001,8 @@ sq-AL:
       courseE_EOC_examples2022:
         display_name: Përfundimi i projektit të kursit
       courseE_EOC_examples_2021:
+        description: Ju keni arritur mësimin e fundit të kursit E! Zgjidhni një projekt
+          për t'a krijuar.
         display_name: Përfundimi i projektit të kursit
       courseE_multi_bee_functions_predict1:
         answers:
@@ -3890,12 +4014,19 @@ sq-AL:
         - {}
       courseE_multi_dance_events_predict1_2021:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - feedback: E pasaktë. Alieni do të fillojë të lëvizë lartë e poshtë në ekran.
+          text: Asgjë nuk do të ndodhë.
+        - feedback: E pasaktë. Alieni do të fillojë të lëvizë lartë e poshtë në ekran.
+          text: Alieni do të fillojë patrullimin nga e djathta në të majtë.
+        - correct: true
+          feedback: E saktë!
+          text: Alieni do të fillojë të lëvizë lartë e poshtë në ekran.
+        - feedback: E pasaktë. Alieni i kaltër do të fillojë të lëvizë lartë e poshtë
+            në ekran.
+          text: Alieni do të zhduket jashtë pjesës së sipërme të ekranit.
         questions:
-        - {}
+        - text: Shikoni nga afër kodin më poshtë. Çfarë do të ndodhë pasi të klikoni
+            mbi alien?
       courseE_multi_farmer_functions11_predict:
         answers:
         - {}
@@ -4078,7 +4209,7 @@ sq-AL:
         - {}
         - {}
         questions:
-        - {}
+        - text: Lexo kodin, pastaj bëj një parashikim.
       courseF_groups_predict_multi_2022_pilot_-2022-2:
         answers:
         - {}
@@ -4088,6 +4219,19 @@ sq-AL:
         questions:
         - text: 'Bëni një parashikim: Pas të shtypni Ekzekuto, çfarë do të ndodhë
             kur klikoni një nga spritet?'
+      courseF_intro_apps:
+        description: Mirë se vini në CS Fundamentals! Të gjitha këto projekte janë
+          krijuar me Sprite Lab. Provoni ato tani për të parë se çfarë është e mundur.
+          Deri në fund të këtij kursi, ju do të jeni në gjendje të bëni projektet
+          tuaja si këto ... dhe më shumë!
+        display_name: Aplikacionet Sprite Lab
+        teacher_markdown: |-
+          # Përmbledhje e nivelit të zgjedhjes
+          Nivelet e zgjedhjes ofrojnë një menu të niveleve shtesë që nxënësit të plotësojnë. Nxënësit duhet të plotësojnë të paktën një nga nën-nivelet këtu, por mund të punojnë sa më shumë që ata (ose ju) të pëlqejnë.
+
+          Zgjedhjet këtu i çojnë nxënësit në mostrat e aplikacioneve që mund të eksplorojnë. Ky aktivitet synon të koordinohet me fletën punuese "Eksplorimi i aplikacioneve", që gjendet në [planin e mësimit] (.././).
+      courseF_intro_apps2022_2022_pilot_-2022-2:
+        display_name: Aplikacionet Sprite Lab
       courseF_labels_predict_multi:
         answers:
         - {}
@@ -4281,20 +4425,68 @@ sq-AL:
         - {}
         questions:
         - {}
+      courseF_sprites_freeplay:
+        description: Është radha juaj të krijoni çfarëdo që dëshironi! Çfarë lloj
+          projekti do të bëni?
+        display_name: Sprites - Lojë e lirë
+      courseF_sprites_freeplay2022_2022_pilot_-2022-2:
+        description: Është radha juaj të krijoni çfarëdo që dëshironi! Çfarë lloj
+          projekti do të bëni?
+        display_name: Sprites - Lojë e lirë
+      courseF_sprites_practice:
+        description: Punë e shkëlqyeshme deri më tani! Zgjedhni aktivitetin tuaj të
+          ardhshëm. Plotësoni sa më shumë që të mundeni. Vazhdoni të praktikoni me
+          sprites dhe sjelljet!
+        display_name: Praktika me sprites
+        teacher_markdown: |-
+          # Përmbledhje e nivelit të zgjedhjes
+          Nivelet e zgjedhjes ofrojnë një menu të niveleve shtesë që nxënësit të plotësojnë. Nxënësit duhet të plotësojnë të paktën një nga nën-nivelet këtu, por mund të punojnë sa më shumë që ata (ose ju) të pëlqejnë.
+
+          Ju mund të përdorni përshkrimet e mëposhtme për t'i ndihmuar nxënësit të zgjedhin vetë zgjedhjet, ose për të vendosur pritshmëri rreth numrit të nën niveleve që duhet të plotësojnë.
+
+          |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; |Skena e shkretëtirës|Ndryshoni përmasat e frutave.|Animojeni një anije me vela|Një ditë e freskët|
+          |-|-|-|-|-|
+          | ***Lloji*** |**Rishikim**|**Rishikim**|**Rishikim**|**Rishikim**|
+          | ***Koncepti***|*sprites, vendndodhjet*|*sprites, properties*|*sprites, vendndodhjet, sjelljet*|*sjelljet*|
+      courseF_sprites_practice2022_2022_pilot_-2022-2:
+        description: Punë e shkëlqyeshme deri më tani! Zgjedhni aktivitetin tuaj të
+          ardhshëm. Plotësoni sa më shumë që të mundeni. Vazhdoni të praktikoni me
+          sprites dhe sjelljet!
+        display_name: Praktika me sprites
       courseF_sprites_predict_multi:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - feedback: E pasaktë. Këto sprite kanë "sjellje" të cilat vazhdojnë të ekzekutohen
+            derisa t'u thuhet të ndalojnë.
+          text: Të dy aeroplanët do të lëvizin një hapësirë përgjatë rrjetit, pastaj
+            do të ndalojnë.
+        - feedback: E saktë! Këto sjellje u tregojnë aeroplanëve të fillojnë të lëvizin
+            dhe të vazhdojnë.
+          text: Të dy aeroplanët do të fillojnë të lëvizin dhe nuk do të ndalen.
+        - feedback: E pasaktë. Çdo bllok në kodi të Sprite Lab ekzekutohet menjëherë
+            pas tjetrës.
+          text: Një aeroplan do të lëvizë i pari, dhe aeroplani tjetër do të lëvizë
+            më vonë.
+        - feedback: E pasaktë. Aeroplanët nuk janë të pozicionuar në një mënyrë që
+            do të preken.
+          text: Aeroplanët do të përplasen.
         questions:
         - text: Lexo kodin, pastaj bëj një parashikim.
       courseF_sprites_predict_multi2022_2022_pilot_-2022-2:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - feedback: E pasaktë. Këto sprite kanë "sjellje" të cilat vazhdojnë të ekzekutohen
+            derisa t'u thuhet të ndalojnë.
+          text: Të dy aeroplanët do të lëvizin një hapësirë përgjatë rrjetit, pastaj
+            do të ndalojnë.
+        - feedback: E saktë! Këto sjellje u tregojnë aeroplanëve të fillojnë të lëvizin
+            dhe të vazhdojnë.
+          text: Të dy aeroplanët do të fillojnë të lëvizin dhe nuk do të ndalen.
+        - feedback: E pasaktë. Çdo bllok në kodi të Sprite Lab ekzekutohet menjëherë
+            pas tjetrës.
+          text: Një aeroplan do të lëvizë i pari, dhe aeroplani tjetër do të lëvizë
+            më vonë.
+        - feedback: E pasaktë. Aeroplanët nuk janë të pozicionuar në një mënyrë që
+            do të preken.
+          text: Aeroplanët do të përplasen.
         questions:
         - text: Lexo kodin, pastaj bëni një parashikim.
       courseF_variables2_predict2_multi2022_-2022-2:
@@ -7516,6 +7708,10 @@ sq-AL:
         content1: përshkrimi këtu
       csf_be_a_super_digital_citizen_2021:
         content1: përshkrimi këtu
+        markdown: |
+          # Qytetar Super Dixhital
+
+          ## Si mund të mbrojmë të tjerët kur shohim bullizëm online?
       csf_digital_trails_2021:
         markdown: |-
           # Ndiqni Gjurmët Digjitale
@@ -7579,6 +7775,11 @@ sq-AL:
 
           ![](https://images.code.org/f3e4987a130b27f7b589d7829b753aac-image-1584750971069.png)
       csf_safety_in_my_online_neighborhood2022:
+        markdown: |
+          # Lagja ime në internet
+
+          ## Si të shkosh në vende të sigurta në internet?
+      csf_safety_in_my_online_neighborhood_2021:
         markdown: |
           # Lagja ime në internet
 
@@ -8025,6 +8226,66 @@ sq-AL:
         - {}
         questions:
         - {}
+      csp-pre-survey-2017 preamble 1_2021:
+        markdown: "### **Kjo anketë është anonime**\n\n* Kjo anketë e shkurtër duhet
+          të marrë **10 minuta ose më pak** për t'u përfunduar.\n* Code.org e merr
+          shumë seriozisht privatësinë tuaj.\n* Përgjigjet tuaja këtu do të mbahen
+          **anonime**.\n\nMësimdhënësi juaj do të shohë përgjigjet e përmbledhura
+          për të gjithë klasën, por nuk do të jetë në gjendje t'i identifikojë përgjigjet
+          tuaja individuale. Ne e bëjmë këtë sepse duam që ju të **të jeni sa më të
+          hapur dhe të sinqertë**. Ne kujdesemi për përvojën tuaj në kurs dhe ne bëjmë
+          përmirësime bazuar në atë që thoni.\n\n***\n### Shkolla në përgjithësi### "
+        teacher_markdown: "Praktika më e mirë është t'i lini nxënësit të plotësojnë
+          këtë anketë **përpara** se të angazhohen në ndonjë aktivitet në klasë. Shumica
+          e mësimdhënësve e bëjnë këtë si pjesë e një dite të konfigurimit të teknologjisë
+          fillestare të klasës.\n\nJu do të jeni në gjendje të shihni rezultatet anonime
+          të anketimit për nxënësit tuaj.\n\nPse është kjo anketë këtu?\n* Qëllimi
+          kryesor i këtij kursi është të zgjerojë pjesëmarrjen në shkencat kompjuterike.\n*
+          Ne përpiqemi të matim se si qëndrimet dhe besimet e nxënësve në lidhje me
+          shkencat kompjuterike mund të ndryshojnë gjatë kursit përmes anketave para
+          dhe pas.\n* Plotësimi i tij na ndihmon gjithashtu të kuptojmë përmirësime
+          të rëndësishme që mund të bëjmë në kurrikulë për të përmirësuar përvojën
+          e mësimdhënësit dhe të nxënësve.\n\n\n*Ju lutemi ndihmoni duke i bërë nxënësit
+          tuaj të kontribuojnë në këtë grup të dhënash jetike. Zërat e tyre bëjnë
+          diferencën! "
+      csp-pre-survey-2017 preamble 1_2022:
+        markdown: "### **Kjo anketë është anonime**\n\n* Kjo anketë e shkurtër duhet
+          të marrë **10 minuta ose më pak** për t'u përfunduar.\n* Code.org e merr
+          shumë seriozisht privatësinë tuaj.\n* Përgjigjet tuaja këtu do të mbahen
+          **anonime**.\n\nMësimdhënësi juaj do të shohë përgjigjet e përmbledhura
+          për të gjithë klasën, por nuk do të jetë në gjendje t'i identifikojë përgjigjet
+          tuaja individuale. Ne e bëjmë këtë sepse duam që ju të **të jeni sa më të
+          hapur dhe të sinqertë**. Ne kujdesemi për përvojën tuaj në kurs dhe ne bëjmë
+          përmirësime bazuar në atë që thoni.\n\n***\n### Shkolla në përgjithësi### "
+        teacher_markdown: "Praktika më e mirë është t'i lini nxënësit të plotësojnë
+          këtë anketë **përpara** se të angazhohen në ndonjë aktivitet në klasë. Shumica
+          e mësimdhënësve e bëjnë këtë si pjesë e një dite të konfigurimit të teknologjisë
+          fillestare të klasës.\n\nJu do të jeni në gjendje të shihni rezultatet anonime
+          të anketimit për nxënësit tuaj.\n\nPse është kjo anketë këtu?\n* Qëllimi
+          kryesor i këtij kursi është të zgjerojë pjesëmarrjen në shkencat kompjuterike.\n*
+          Ne përpiqemi të matim se si qëndrimet dhe besimet e nxënësve në lidhje me
+          shkencat kompjuterike mund të ndryshojnë gjatë kursit përmes anketave para
+          dhe pas.\n* Plotësimi i tij na ndihmon gjithashtu të kuptojmë përmirësime
+          të rëndësishme që mund të bëjmë në kurrikulë për të përmirësuar përvojën
+          e mësimdhënësit dhe të nxënësve.\n\n\n*Ju lutemi ndihmoni duke i bërë nxënësit
+          tuaj të kontribuojnë në këtë grup të dhënash jetike. Zërat e tyre bëjnë
+          diferencën! "
+      csp-pre-survey-2017 preamble 2 cs in general_2021:
+        markdown: Shkenca kompjuterike në përgjithësi
+      csp-pre-survey-2017 preamble 2 cs in general_2022:
+        markdown: Shkenca kompjuterike në përgjithësi
+      csp-pre-survey-2017 preamble 3 this class_2021:
+        markdown: "### Shkenca kompjuterike në të ardhmen"
+      csp-pre-survey-2017 preamble 3 this class_2022:
+        markdown: "### Shkenca kompjuterike në të ardhmen"
+      csp-pre-survey-2017 preamble 4 the future_2021:
+        markdown: "### Shkenca kompjuterike në të ardhmen"
+      csp-pre-survey-2017 preamble 4 the future_2022:
+        markdown: "### Shkenca kompjuterike në të ardhmen"
+      csp-pre-survey-2017 preamble 5 demographics_2021:
+        markdown: "### Sfondi juaj në shkencat kompjuterike"
+      csp-pre-survey-2017 preamble 5 demographics_2022:
+        markdown: "### Sfondi juaj në shkencat kompjuterike"
       csp-pre-survey-2017-q1:
         answers:
         - {}
@@ -9051,36 +9312,40 @@ sq-AL:
         - {}
       ever-learned-cs:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Po, unë mora një klasë
+        - text: Po, disa aktivitete, por jo një klasë të plotë
+        - text: Nuk jam i/e sigurt
+        - text: Definitivisht jo
         questions:
-        - {}
+        - text: A keni mësuar ndonjëherë ndonjë shkencë kompjuterike <em>në shkollë</em>
+            më parë?
       ever-learned-cs-outside-school:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Po, një program pas shkollës
+        - text: Po, aktivitete të pavarura në internet
+        - text: Po, një kamp ose program veror
+        - text: Jo, kurrë nuk kam bërë shkenca kompjuterike jashtë shkollës
         questions:
-        - {}
+        - text: A keni mësuar ndonjëherë ndonjë shkencë kompjuterike <em>jashtë shkollës</em>
+            më parë? (nëse po, ju lutemi zgjedhni përvojën tuaj më të fundit)
       ever-learned-cs-outside-school_2022:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Po, një program pas shkollës
+        - text: Po, aktivitete të pavarura në internet
+        - text: Po, një kamp ose program veror
+        - text: Jo, kurrë nuk kam bërë shkenca kompjuterike jashtë shkollës
         questions:
-        - {}
+        - text: A keni mësuar ndonjëherë ndonjë shkencë kompjuterike <em>jashtë shkollës</em>
+            më parë? (nëse po, ju lutemi zgjedhni përvojën tuaj më të fundit)
       ever-learned-cs_2022:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: Po, unë mora një klasë
+        - text: Po, disa aktivitete, por jo një klasë të plotë
+        - text: Nuk jam i/e sigurt
+        - text: Definitivisht jo
         questions:
-        - {}
+        - text: A keni mësuar ndonjëherë ndonjë shkencë kompjuterike <em>në shkollë</em>
+            më parë?
       express_EOC2022:
         display_name: Përfundimi i projektit të kursit
       express_EOC_2021:
@@ -9094,13 +9359,15 @@ sq-AL:
         - text: po
         - text: jo
         questions:
-        - {}
+        - text: A ju inkurajoi një anëtar i familjes, si një prind, vëlla ose kushëri,
+            të merrni këtë klasë?
       family_encourage_2022:
         answers:
         - text: po
         - text: jo
         questions:
-        - {}
+        - text: A ju inkurajoi një anëtar i familjes, si një prind, vëlla ose kushëri,
+            të merrni këtë klasë?
       grade2_multi_collector_A_predict1:
         answers:
         - {}
@@ -9261,7 +9528,7 @@ sq-AL:
         - {}
         - {}
         questions:
-        - {}
+        - text: Jam i interesuar të mësoj shkenca kompjuterike.
       interested-in-learning-cs_2022:
         answers:
         - {}
@@ -9272,7 +9539,7 @@ sq-AL:
         - {}
         - {}
         questions:
-        - {}
+        - text: Jam i interesuar të mësoj shkenca kompjuterike.
       made-choices-about-assignments:
         answers:
         - {}
@@ -9282,6 +9549,12 @@ sq-AL:
         - {}
         questions:
         - {}
+      ml-models in applab-choice parent:
+        description: Provoni atë që keni mësuar në një ose më shumë nga aktivitetet
+          e mëposhtme.
+      ml-models in applab-choice parent_2022:
+        description: Provoni atë që keni mësuar në një ose më shumë nga aktivitetet
+          e mëposhtme.
       naturally-better-at-cs:
         answers:
         - {}
@@ -9678,13 +9951,13 @@ sq-AL:
         - text: po
         - text: jo
         questions:
-        - {}
+        - text: A ju ka inkurajuar dikush tjetër në shkollë për të marrë këtë klasë?
       someone_else_encourage_2022:
         answers:
         - text: po
         - text: jo
         questions:
-        - {}
+        - text: A ju ka inkurajuar dikush tjetër në shkollë për të marrë këtë klasë?
       taken-other-code-org:
         answers:
         - text: Po
@@ -9705,13 +9978,13 @@ sq-AL:
         - text: po
         - text: jo
         questions:
-        - {}
+        - text: A ju inkurajoi një mësues në shkollë për të marrë këtë klasë?
       teacher_encourage_2022:
         answers:
         - text: po
         - text: jo
         questions:
-        - {}
+        - text: A ju inkurajoi një mësues në shkollë për të marrë këtë klasë?
       test anonymous student survey educational:
         answers:
         - text: Po
@@ -9735,7 +10008,7 @@ sq-AL:
         - {}
         - {}
         - {}
-        - {}
+        - text: Asnjë prej atyre lart
       test-single-multi-standalone-retriable:
         answers:
         - {}
@@ -9798,7 +10071,8 @@ sq-AL:
         - {}
         - {}
         questions:
-        - {}
+        - text: Unë jam i shqetësuar se unë do të shihem nga të tjerët si më pak i
+            aftë në këtë klasë.
       worried-seen-incapable_2022:
         answers:
         - {}
@@ -9809,4 +10083,5 @@ sq-AL:
         - {}
         - {}
         questions:
-        - {}
+        - text: Unë jam i shqetësuar se unë do të shihem nga të tjerët si më pak i
+            aftë në këtë klasë.

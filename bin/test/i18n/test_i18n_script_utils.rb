@@ -10,14 +10,6 @@ class I18nScriptUtilsTest < Minitest::Test
     assert_equal "---\n:en:\n  test: \"#example\"\n  'yes': 'y'\n", I18nScriptUtils.to_crowdin_yaml({en: {'test' => '#example', 'yes' => 'y'}})
   end
 
-  def test_header_sanitization
-    header = {'title' => 'Expects only title', 'invalid' => 'Unexpected header'}
-
-    I18nScriptUtils.sanitize_header!(header)
-
-    assert_equal({'title' => 'Expects only title'}, header)
-  end
-
   def test_markdown_with_header_writing
     exec_seq = sequence('execution')
 
@@ -106,6 +98,16 @@ describe I18nScriptUtils do
     FakeFS.with_fresh {yield}
   end
 
+  describe '.sanitize_markdown_header' do
+    subject {I18nScriptUtils.sanitize_markdown_header(markdown_header)}
+
+    let(:markdown_header) {{'title' => 'Expects only title', 'invalid' => 'Unexpected header'}}
+
+    it 'returns hash with only the `title` key' do
+      assert_equal({'title' => 'Expects only title'}, subject)
+    end
+  end
+
   describe '.file_changed?' do
     before do
       I18nScriptUtils.remove_instance_variable(:@change_data) if I18nScriptUtils.instance_variable_get(:@change_data)
@@ -188,33 +190,195 @@ describe I18nScriptUtils do
     end
   end
 
-  describe '.delete_empty_crowdin_locale_dir' do
-    let(:crowdin_locale) {'expected_crowdin_locale'}
-    let(:crowdin_locale_dir_path) {CDO.dir(File.join('i18n/locales', crowdin_locale))}
+  describe '.sort_and_sanitize' do
+    it 'returns sorted and sanitized hash' do
+      initial_hash_data = {
+        hash: {2 => '2', 1 => '1'},
+        empty_hash: {},
+        array: [b: 'b', a: 'a'],
+        empty_array: [],
+        string: "\rstr\\r",
+        empty_string: '',
+        number: 0,
+        null: nil
+      }
+
+      sorted_and_sanitized_hash_data = {
+        array: [a: 'a', b: 'b'],
+        empty_array: [],
+        hash: {1 => '1', 2 => '2'},
+        number: 0,
+        string: "\rstr\r"
+      }
+
+      assert_equal sorted_and_sanitized_hash_data, I18nScriptUtils.sort_and_sanitize(initial_hash_data)
+    end
+  end
+
+  describe '.sanitize_data_and_write' do
+    let(:data) {{'expected' => 'data'}}
+    let(:sorted_and_sanitized_data) {{'expected' => 'sorted_and_sanitized_data'}}
 
     before do
-      FileUtils.mkdir_p(crowdin_locale_dir_path)
+      I18nScriptUtils.expects(:sort_and_sanitize).with(data).once.returns(sorted_and_sanitized_data)
+    end
+
+    context 'when the dest file is .yaml' do
+      let(:dest_path) {'/expected.yaml'}
+
+      it 'creates the dest file with the data' do
+        I18nScriptUtils.sanitize_data_and_write(data, dest_path)
+
+        assert File.exist?(dest_path)
+
+        assert_equal "---\nexpected: sorted_and_sanitized_data\n", File.read(dest_path)
+      end
+    end
+
+    context 'when the dest file is .yml' do
+      let(:dest_path) {'/expected.yml'}
+
+      it 'creates the file with the data' do
+        I18nScriptUtils.sanitize_data_and_write(data, dest_path)
+
+        assert File.exist?(dest_path)
+
+        assert_equal "---\nexpected: sorted_and_sanitized_data\n", File.read(dest_path)
+      end
+    end
+
+    context 'when the dest file is .json' do
+      let(:dest_path) {'/expected.json'}
+
+      it 'creates the file with the data' do
+        I18nScriptUtils.sanitize_data_and_write(data, dest_path)
+
+        assert File.exist?(dest_path)
+
+        assert_equal %Q[{\n  "expected": "sorted_and_sanitized_data"\n}], File.read(dest_path)
+      end
+    end
+
+    context 'when the file is in unknown format' do
+      let(:dest_path) {'/unexpected.txt'}
+
+      it 'raises error' do
+        actual_error = assert_raises {I18nScriptUtils.sanitize_data_and_write(data, dest_path)}
+
+        refute File.exist?(dest_path)
+
+        assert_equal 'do not know how to serialize localization data to /unexpected.txt', actual_error.message
+      end
+    end
+  end
+
+  describe '.parse_file' do
+    subject {I18nScriptUtils.parse_file(file_path)}
+
+    let(:file_path) {'/expected.txt'}
+    let(:file_data) {{'expected' => 'data'}}
+    let(:file_content) {file_data}
+
+    before do
+      File.write(file_path, file_content)
+    end
+
+    context 'when the file is .yaml' do
+      let(:file_path) {'/expected.yaml'}
+      let(:file_content) {YAML.dump(file_data)}
+
+      it 'loads the file data' do
+        assert_equal file_data, subject
+      end
+    end
+
+    context 'when the file is .yml' do
+      let(:file_path) {'/expected.yml'}
+      let(:file_content) {YAML.dump(file_data)}
+
+      it 'loads the file data' do
+        assert_equal file_data, subject
+      end
+    end
+
+    context 'when the file is .json' do
+      let(:file_path) {'/expected.json'}
+      let(:file_content) {JSON.dump(file_data)}
+
+      it 'loads the file data' do
+        assert_equal file_data, subject
+      end
+    end
+
+    context 'when the file is unknown format' do
+      let(:file_path) {'/unexpected.txt'}
+
+      it 'raises error' do
+        actual_error = assert_raises {subject}
+        assert_equal 'do not know how to parse file "/unexpected.txt"', actual_error.message
+      end
+    end
+  end
+
+  describe '.rename_dir' do
+    let(:from_dir) {'/from_dir'}
+    let(:to_dir) {'/to_dir'}
+
+    it 'renames directory' do
+      FileUtils.mkdir_p(from_dir)
+      File.write(File.join(from_dir, 'test1.txt'), 'new_data')
+
+      I18nScriptUtils.rename_dir(from_dir, to_dir)
+
+      refute File.exist?(from_dir)
+      assert File.exist?(to_dir)
+      assert_equal [File.join(to_dir, 'test1.txt')], Dir.glob(File.join(to_dir, '*'))
+      assert_equal 'new_data', File.read(File.join(to_dir, 'test1.txt'))
+
+      File.write(File.join(to_dir, 'test2.txt'), 'old_data')
+      FileUtils.mkdir_p(from_dir)
+      File.write(File.join(from_dir, 'test2.txt'), 'new_data')
+
+      I18nScriptUtils.rename_dir(from_dir, to_dir)
+
+      refute File.exist?(from_dir)
+      assert_equal [File.join(to_dir, 'test1.txt'), File.join(to_dir, 'test2.txt')], Dir.glob(File.join(to_dir, '*'))
+      assert_equal 'new_data', File.read(File.join(to_dir, 'test2.txt'))
+    end
+  end
+
+  describe '.remove_empty_dir' do
+    let(:dir) {'/expected_dir'}
+
+    before do
+      FileUtils.mkdir_p(dir)
+    end
+
+    context 'when Crowdin locale dir does not exist' do
+      it 'does not raise the error "No such file or directory"' do
+        I18nScriptUtils.remove_empty_dir('non/existent/dir')
+      end
     end
 
     context 'when Crowdin locale dir is empty' do
-      it 'deletes the Crowdin locale dir' do
-        assert File.directory?(crowdin_locale_dir_path)
+      it 'removes the Crowdin locale dir' do
+        assert File.directory?(dir)
 
-        I18nScriptUtils.delete_empty_crowdin_locale_dir(crowdin_locale)
+        I18nScriptUtils.remove_empty_dir(dir)
 
-        refute File.directory?(crowdin_locale_dir_path)
+        refute File.directory?(dir)
       end
     end
 
     context 'when Crowdin locale dir is not empty' do
       before do
-        FileUtils.touch(File.join(crowdin_locale_dir_path, 'test.txt'))
+        FileUtils.touch(File.join(dir, 'test.txt'))
       end
 
-      it 'does not delete the Crowdin locale dir' do
-        I18nScriptUtils.delete_empty_crowdin_locale_dir(crowdin_locale)
+      it 'does not remove the Crowdin locale dir' do
+        I18nScriptUtils.remove_empty_dir(dir)
 
-        assert File.directory?(crowdin_locale_dir_path)
+        assert File.directory?(dir)
       end
     end
   end
