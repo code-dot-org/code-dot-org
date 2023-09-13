@@ -142,10 +142,131 @@ Feature: Curriculum Catalog Page
     And I see that "Section 1" is not assigned to "AI for Oceans" in the section table
     And I see that "Section 2" is not assigned to "Computer Science Principles" in the section table
 
+  #Expanded card scenarios
   Scenario: Signed-out user sees the curriculum catalog with offerings and can expand card
     Given I am on "http://studio.code.org/catalog?quick_view=true"
     And I wait until element "h4:contains(AI for Oceans)" is visible
 
     And I click selector "[aria-label='View details about AI for Oceans']"
+    When I wait until element "a:contains(What is Machine Learning?)" is visible within element "iframe"
+
+  Scenario: Signed-out user sees course offering page when clicking on see curriculum details on expanded card
+    Given I am on "http://studio.code.org/catalog?quick_view=true"
+    And I wait until element "h4:contains(AI for Oceans)" is visible
+
+    And I click selector "[aria-label='View details about AI for Oceans']"
+
+    And I click selector "a:contains(See curriculum details)"
+    And I wait until element "h1:contains(AI for Oceans)" is visible
+    
+
+
+  # Expanded Card Assign button scenarios
+  Scenario: On expanded card, Signed-out user is redirected to sign-in page when clicking Assign to class sections
+    Given I am on "http://studio.code.org/catalog?quick_view=true"
+    And I wait until element "h4:contains(AI for Oceans)" is visible
+    And I click selector "[aria-label='View details about AI for Oceans']"
+    And I click selector "button:contains(Assign to class sections)"
+    And I wait until element "h3:contains(Sign in or create account to assign a curriculum)" is visible
+    Then I click selector "a:contains(Sign in or create account)"
+    And I wait until element "h2:contains(Have an account already? Sign in)" is visible
+
+  Scenario: On expanded card, Signed-in student is redirected to help page when clicking Assign to class sections
+    Given I create a student named "Student Sam"
+    Given I am on "http://studio.code.org/catalog?quick_view=true"
+    And I wait until element "h4:contains(AI for Oceans)" is visible
+
+    And I click selector "[aria-label='View details about AI for Oceans']"
+    And I click selector "button:contains(Assign to class sections)"
+    And I wait until element "h3:contains(Use a teacher account to assign a curriculum)" is visible
+    Then I click selector "a:contains(Learn how to update account type)"
+    And I wait until current URL contains "/articles/360023222371-How-can-I-change-my-account-type-from-student-to-teacher-or-vice-versa"
+
+  Scenario: On the expanded card, Signed-in teacher without sections is prompted to created sections when clicking Assign to class sections
+    Given I create a teacher named "Teacher Tom"
+    Then I am on "http://studio.code.org/catalog?quick_view=true"
+    And I wait until element "h4:contains(AI for Oceans)" is visible
+
+    And I click selector "[aria-label='View details about AI for Oceans']"
+
+    And I click selector "button:contains(Assign to class sections)"
+    And I wait until element "h3:contains(Create class section to assign a curriculum)" is visible
+    Then I click selector "a:contains(Create Section)"
+    And I wait until element "h3:contains(Create a new section)" is visible
+  
+  Scenario: On expanded card, Signed-in teacher with sections assigns and unassigns offerings to sections
+    Given I am a teacher with student sections named Section 1 and Section 2
+
+    # Assign a standalone unit
+    And I am on "http://studio.code.org/catalog?quick_view=true"
+    Then I wait until element "h4:contains(AI for Oceans)" is visible
+    And I click selector "[aria-label='View details about AI for Oceans']"
+
+    And I click selector "button:contains(Assign to class sections)"
+    And element "span:contains(Section 1)" is visible
+    And element "span:contains(Section 2)" is visible
+    And the "Section 1" checkbox is not selected
+    And the "Section 2" checkbox is not selected
+    And I click the "Section 1" checkbox in the dialog
+    And the "Section 1" checkbox is selected
+    And the "Section 2" checkbox is not selected
+    And I click selector "button:contains(Confirm section assignments)"
+
+    # Assign a course
+    Then I wait until element "h4:contains(Computer Science Principles)" is visible
+
+    And I click selector "[aria-label='View details about Computer Science Principles']"
+    And I click selector "button:contains(Assign to class sections)"
+    And element "span:contains(Section 1)" is visible
+    And element "span:contains(Section 2)" is visible
+    And element "input[type=checkbox]:nth(2)" is not checked
+    And the "Section 1" checkbox is not selected
+    And the "Section 2" checkbox is not selected
+    And I click the "Section 2" checkbox in the dialog
+    And the "Section 1" checkbox is not selected
+    And the "Section 2" checkbox is selected
+    And I click selector "button:contains(Confirm section assignments)"
+    And element "p:contains(You have successfully assigned)" is visible
+
+    # Confirm assignment
+    Then I am on "http://studio.code.org"
+    And I see that "Section 1" is assigned to "AI for Oceans" in the section table
+    And I see that "Section 2" is assigned to "Computer Science Principles" in the section table
+
+    # Unassign standalone unit
+    Then I am on "http://studio.code.org/catalog?quick_view=true"
+    And I wait until element "h4:contains(AI for Oceans)" is visible
+    And I click selector "[aria-label='View details about AI for Oceans']"
+
+    And I click selector "button:contains(Assign to class sections)"
+    And element "span:contains(Section 1)" is visible
+    And element "span:contains(Section 2)" is visible
+    And the "Section 1" checkbox is selected
+    And the "Section 2" checkbox is not selected
+    And I click the "Section 1" checkbox in the dialog
+    And the "Section 1" checkbox is not selected
+    And the "Section 2" checkbox is not selected
+    And I click selector "button:contains(Confirm section assignments)"
+
+    # Unassign course unit
+    Then I wait until element "h4:contains(Computer Science Principles)" is visible
+
+    And I click selector "[aria-label='View details about Computer Science Principles']"
+    And I click selector "button:contains(Assign to class sections)"
+    And element "span:contains(Section 1)" is visible
+    And element "span:contains(Section 2)" is visible
+    And element "input[type=checkbox]:nth(2)" is not checked
+    And the "Section 1" checkbox is not selected
+    And the "Section 2" checkbox is selected
+    And I click the "Section 2" checkbox in the dialog
+    And the "Section 1" checkbox is not selected
+    And the "Section 2" checkbox is not selected
+    And I click selector "button:contains(Confirm section assignments)"
+    And element "p:contains(You have successfully assigned)" is not visible
+
+    # Confirm unassign
+    Then I am on "http://studio.code.org"
+    And I see that "Section 1" is not assigned to "AI for Oceans" in the section table
+    And I see that "Section 2" is not assigned to "Computer Science Principles" in the section table
   
 
