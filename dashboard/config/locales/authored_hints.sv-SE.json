@@ -207,6 +207,10 @@
           "challenges": "**Valfria utmaningar**   \\_Välj att spela en annan sång.   Flytta din dansare till ett nytt ställe.   Skapa mer än en dansare.",
           "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Kontrollera att en dansare visas på skärmen.\n\n_Denna nivå slutar efter 4 takter._"
         },
+        "CourseD_Dance_2020_01_2023": {
+          "challenges": "**Valfria utmaningar**   \\_Välj att spela en annan sång.   Flytta din dansare till ett nytt ställe.   Skapa mer än en dansare.",
+          "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Kontrollera att en dansare visas på skärmen.\n\n_Denna nivå slutar efter 4 takter._"
+        },
         "CourseD_Dance_2020_02": {
           "challenges": "**Valfri utmaning**-   Använd mer än ett <xml><block type=\"Dancelab_whenKey\"><title name=\"KEY\"></title></block></xml>-block.",
           "validation": "**Hur klarar jag den här nivån?**-   Dansaren måste ta ett danssteg.-   Du måste trycka på en piltangent._Den här nivån är slut efter fyra takter._"
@@ -216,6 +220,10 @@
           "validation": "**Hur klarar jag den här nivån?**-   Dansaren måste ta ett danssteg.-   Du måste trycka på en piltangent._Den här nivån är slut efter fyra takter._"
         },
         "CourseD_Dance_2020_02_2021": {
+          "challenges": "**Valfri utmaning**-   Använd mer än ett <xml><block type=\"Dancelab_whenKey\"><title name=\"KEY\"></title></block></xml>-block.",
+          "validation": "**Hur klarar jag den här nivån?**-   Dansaren måste ta ett danssteg.-   Du måste trycka på en piltangent._Den här nivån är slut efter fyra takter._"
+        },
+        "CourseD_Dance_2020_02_2023": {
           "challenges": "**Valfri utmaning**-   Använd mer än ett <xml><block type=\"Dancelab_whenKey\"><title name=\"KEY\"></title></block></xml>-block.",
           "validation": "**Hur klarar jag den här nivån?**-   Dansaren måste ta ett danssteg.-   Du måste trycka på en piltangent._Den här nivån är slut efter fyra takter._"
         },
@@ -231,6 +239,10 @@
           "challenges": "\\*Valfri utmaning\\*\\*-   Gör så att en dansare rör sig med vänster och höger piltangent.",
           "validation": "**Hur klarar jag den här nivån?**-   Båda dansarna måste ta ett danssteg.-   Du måste trycka på piltangenterna._Den här nivån är slut efter sex takter._"
         },
+        "CourseD_Dance_2020_03_2023": {
+          "challenges": "\\*Valfri utmaning\\*\\*-   Gör så att en dansare rör sig med vänster och höger piltangent.",
+          "validation": "**Hur klarar jag den här nivån?**-   Båda dansarna måste ta ett danssteg.-   Du måste trycka på piltangenterna._Den här nivån är slut efter sex takter._"
+        },
         "CourseD_Dance_2020_04": {
           "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Dansaren måste växla till en ny rörelse efter 4 takter.\n\n_Denna nivå slutar efter 7 takter._"
         },
@@ -238,6 +250,9 @@
           "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Dansaren måste växla till en ny rörelse efter 4 takter.\n\n_Denna nivå slutar efter 7 takter._"
         },
         "CourseD_Dance_2020_04_2021": {
+          "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Dansaren måste växla till en ny rörelse efter 4 takter.\n\n_Denna nivå slutar efter 7 takter._"
+        },
+        "CourseD_Dance_2020_04_2023": {
           "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Dansaren måste växla till en ny rörelse efter 4 takter.\n\n_Denna nivå slutar efter 7 takter._"
         },
         "CourseD_Dance_2020_05": {
@@ -249,6 +264,10 @@
           "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Efter 6 takter måste din dansare göra en annan dans än den som gjordes efter 4 takter.\n\n_Denna nivå slutar efter 11 takter._"
         },
         "CourseD_Dance_2020_05_2021": {
+          "challenges": "**Valfri utmaning**-   \n\n-   Ändra bakgrunden när dansarna ändrar danssteg.",
+          "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Efter 6 takter måste din dansare göra en annan dans än den som gjordes efter 4 takter.\n\n_Denna nivå slutar efter 11 takter._"
+        },
+        "CourseD_Dance_2020_05_2023": {
           "challenges": "**Valfri utmaning**-   \n\n-   Ändra bakgrunden när dansarna ändrar danssteg.",
           "validation": "**Hur ska man ta sig förbi denna nivå?**\n\n-   Efter 6 takter måste din dansare göra en annan dans än den som gjordes efter 4 takter.\n\n_Denna nivå slutar efter 11 takter._"
         },
@@ -264,6 +283,10 @@
           "challenges": "**Valfri utmaning**\n\n-   Skapa flera grupper med bakgrundsdansare.",
           "validation": "**Hur klarar jag den här nivån?**\n\n-   Skapa en ledande dansare och en grupp bakgrundsdansare.\n\n_Den här nivån är slut efter sju takter._"
         },
+        "CourseD_Dance_2020_06_2023": {
+          "challenges": "**Valfri utmaning**\n\n-   Skapa flera grupper med bakgrundsdansare.",
+          "validation": "**Hur klarar jag den här nivån?**\n\n-   Skapa en ledande dansare och en grupp bakgrundsdansare.\n\n_Den här nivån är slut efter sju takter._"
+        },
         "CourseD_Dance_2020_07": {
           "challenges": "**Valfri utmaning**\n\n-   Experimentera genom att ändra andra egenskaper (bredd, längd, rotation osv.).",
           "validation": "**Hur klara jag den här nivån?**\n\n-   Ändra storlek på minst en dansare när musiken har börjat.\n\n_Den här nivån är slut efter sex takter._"
@@ -276,6 +299,10 @@
           "challenges": "**Valfri utmaning**\n\n-   Experimentera genom att ändra andra egenskaper (bredd, längd, rotation osv.).",
           "validation": "**Hur klara jag den här nivån?**\n\n-   Ändra storlek på minst en dansare när musiken har börjat.\n\n_Den här nivån är slut efter sex takter._"
         },
+        "CourseD_Dance_2020_07_2023": {
+          "challenges": "**Valfri utmaning**\n\n-   Experimentera genom att ändra andra egenskaper (bredd, längd, rotation osv.).",
+          "validation": "**Hur klara jag den här nivån?**\n\n-   Ändra storlek på minst en dansare när musiken har börjat.\n\n_Den här nivån är slut efter sex takter._"
+        },
         "CourseD_Dance_2020_08": {
           "tint_hint": "Märkte du att dina dansare inte ändrar färg till exakt den ton du valde? Det beror på att **tints** blandar de färger som du väljer med dansarens färger.",
           "validation": "**Hur klarar jag den här nivån?**\n\n-   Ändra färgton på minst en dansare.\n\n_Den här nivån är slut efter sex takter._"
@@ -285,6 +312,10 @@
           "validation": "**Hur klarar jag den här nivån?**\n\n-   Ändra färgton på minst en dansare.\n\n_Den här nivån är slut efter sex takter._"
         },
         "CourseD_Dance_2020_08_2021": {
+          "tint_hint": "Märkte du att dina dansare inte ändrar färg till exakt den ton du valde? Det beror på att **tints** blandar de färger som du väljer med dansarens färger.",
+          "validation": "**Hur klarar jag den här nivån?**\n\n-   Ändra färgton på minst en dansare.\n\n_Den här nivån är slut efter sex takter._"
+        },
+        "CourseD_Dance_2020_08_2023": {
           "tint_hint": "Märkte du att dina dansare inte ändrar färg till exakt den ton du valde? Det beror på att **tints** blandar de färger som du väljer med dansarens färger.",
           "validation": "**Hur klarar jag den här nivån?**\n\n-   Ändra färgton på minst en dansare.\n\n_Den här nivån är slut efter sex takter._"
         },
@@ -303,6 +334,11 @@
           "repeat_every_ideas": "**Behöver du idéer?**\n\n-   Ändra en dansares storlek flera gånger så att den blir större.\n-   Ändra en dansares rotation flera gånger så att den snurrar runt.\n-   Ändra en dansares horisontella eller vertikala position flera gånger så att den rör sig över skärmen.\n\n_Du kan också använda negativa siffror för att skapa motsatt effekt!_",
           "validation": "**Hur klarar jag den här nivån?**\n\n-   Du behöver bara att trycka på ”Klar”-knappen!"
         },
+        "CourseD_Dance_2020_09_2023": {
+          "next_previous": "**Valfri utmaning**-   Du kan också använda det här nya händelse-blocket för att gå igenom flera olika danssteg genom att ange rörelsen som ”(Slumpmässig)”, ”(Nästa)” eller ”(Föregående)”.    <xml><block type=\"Dancelab_changeMoveEachLR\">    <title name=\"GROUP\" config=\"sprites, &quot;BEAR&quot;, &quot;CAT&quot;, &quot;DOG&quot;, &quot;DUCK&quot;, &quot;FROG&quot;, &quot;PINEAPPLE&quot;, &quot;ROBOT&quot;, &quot;SHARK&quot;, &quot;UNICORN&quot;\">???</title>    <title name=\"MOVE\">\"slump\"</title>    <title name=\"DIR\">-1</title>    </block></xml>",
+          "repeat_every_ideas": "**Behöver du idéer?**\n\n-   Ändra en dansares storlek flera gånger så att den blir större.\n-   Ändra en dansares rotation flera gånger så att den snurrar runt.\n-   Ändra en dansares horisontella eller vertikala position flera gånger så att den rör sig över skärmen.\n\n_Du kan också använda negativa siffror för att skapa motsatt effekt!_",
+          "validation": "**Hur klarar jag den här nivån?**\n\n-   Du behöver bara att trycka på ”Klar”-knappen!"
+        },
         "CourseD_Dance_2020_bonus1": {
           "alternate": "Alternate blocket finns i \"Dansare\" kategorin."
         },
@@ -312,10 +348,19 @@
         "CourseD_Dance_2020_bonus1_2021": {
           "alternate": "Alternate blocket finns i \"Dansare\" kategorin."
         },
+        "CourseD_Dance_2020_bonus1_2023": {
+          "alternate": "Alternate blocket finns i \"Dansare\" kategorin."
+        },
         "CourseD_Dance_2022_lessonextra1": {
           "alternate": "Alternate blocket finns i \"Dansare\" kategorin."
         },
         "CourseD_Dance_2022_lessonextra10a": {
+          "alternate": "Alternate blocket finns i \"Dansare\" kategorin."
+        },
+        "CourseD_Dance_2022_lessonextra10a_2023": {
+          "alternate": "Alternate blocket finns i \"Dansare\" kategorin."
+        },
+        "CourseD_Dance_2022_lessonextra1_2023": {
           "alternate": "Alternate blocket finns i \"Dansare\" kategorin."
         },
         "CourseD_Dance_Party_01": {
@@ -367,6 +412,9 @@
         "CourseE_HOC 2018 Level_10_2021": {
           "voyage_aquatic_10a": "Se **Havslyktor** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? Hur kan du använda dig av villkor med dem för att ta dig igenom Havsmonumentet?"
         },
+        "CourseE_HOC 2018 Level_10_2023": {
+          "voyage_aquatic_10a": "Se **Havslyktor** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? Hur kan du använda dig av villkor med dem för att ta dig igenom Havsmonumentet?"
+        },
         "CourseE_HOC 2018 Level_9b": {
           "voyage_aquatic_9a": "Vilket vackert korallrev! Blå korall är den **rätta** vägen att gå och kontrollera att röd korall inte är till **vänster**!"
         },
@@ -379,6 +427,9 @@
         "CourseE_HOC 2018 Level_9b_2021": {
           "voyage_aquatic_9a": "Vilket vackert korallrev! Blå korall är den **rätta** vägen att gå och kontrollera att röd korall inte är till **vänster**!"
         },
+        "CourseE_HOC 2018 Level_9b_2023": {
+          "voyage_aquatic_9a": "Vilket vackert korallrev! Blå korall är den **rätta** vägen att gå och kontrollera att röd korall inte är till **vänster**!"
+        },
         "CourseF_outbreak1": {
           "step1": "Använd dessa block för att skapa dina sprites:\n\n[blockly block][0]\n\n[blockly block][1]\n\nDetta block finns i kategorin **Sprites** i verktygslådan.",
           "step2": "Ändra storleken på sprites med detta block: [blockly block][0].\n\nDet finns i kategorin **Actions** i verktygslådan.",
@@ -389,10 +440,18 @@
           "step2": "Ändra storleken på sprites med detta block: <xml><block type=\"gamelab_setProp\"><title name=\"PROPERTY\">\"scale\"</title><value name=\"SPRITE\"><block type=\"gamelab_getAllSprites\"/></value><value name=\"VAL\"><block type=\"math_number\"><title name=\"NUM\">50</title></block></value></block></xml>.\n\nDet finns i kategorin **Actions** i verktygslådan.",
           "step3": "Gör så att alla sprites börja vandra med detta: <xml><block type=\"gamelab_addBehaviorSimple\" uservisible=\"false\"><value name=\"SPRITE\"><block type=\"gamelab_getAllSprites\"></block></value><value name=\"BEHAVIOR\"><block type=\"gamelab_behavior_get\"><mutation></mutation><title name=\"VAR\">wandering</title></block></value></block></xml>.\n\nDetta block finns i kategorin **Actions** i verktygslådan."
         },
+        "CourseF_outbreak1_2023": {
+          "step1": "Använd dessa block för att skapa dina sprites:\n\n<xml><block type=\"gamelab_makeNumSprites\">\n      <title name=\"ANIMATION_NAME\">\"healthy\"</title>\n      <value name=\"NUM\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>\n\n<xml><block type=\"gamelab_makeNumSprites\">\n      <title name=\"ANIMATION_NAME\">\"sick\"</title>\n      <value name=\"NUM\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">1</title>\n        </block>\n      </value>\n    </block></xml>\n\nDetta block finns i kategorin **Sprites** i verktygslådan.",
+          "step2": "Ändra storleken på sprites med detta block: <xml><block type=\"gamelab_setProp\"><title name=\"PROPERTY\">\"scale\"</title><value name=\"SPRITE\"><block type=\"gamelab_getAllSprites\"/></value><value name=\"VAL\"><block type=\"math_number\"><title name=\"NUM\">50</title></block></value></block></xml>.\n\nDet finns i kategorin **Actions** i verktygslådan.",
+          "step3": "Gör så att alla sprites börja vandra med detta: <xml><block type=\"gamelab_addBehaviorSimple\" uservisible=\"false\"><value name=\"SPRITE\"><block type=\"gamelab_getAllSprites\"></block></value><value name=\"BEHAVIOR\"><block type=\"gamelab_behavior_get\"><mutation></mutation><title name=\"VAR\">wandering</title></block></value></block></xml>.\n\nDetta block finns i kategorin **Actions** i verktygslådan."
+        },
         "CourseF_outbreak2": {
           "hint1": "Klicka på '+'-knappen i event-blocket. Fyll det tomma utrymmet i 'change costume'-blocket med 'subject'-blocket däri.\n\n[blockly block][0]"
         },
         "CourseF_outbreak2_-2022-2": {
+          "hint1": "Klicka på '+'-knappen i event-blocket. Fyll det tomma utrymmet i 'change costume'-blocket med 'subject'-blocket däri.\n\n<xml><block type=\"gamelab_checkTouching\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE1\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><value name=\"SPRITE2\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick\"</title><value name=\"THIS\"><block type=\"gamelab_subjectSpritePointer\"></block></value></block></next></block></xml>"
+        },
+        "CourseF_outbreak2_2023": {
           "hint1": "Klicka på '+'-knappen i event-blocket. Fyll det tomma utrymmet i 'change costume'-blocket med 'subject'-blocket däri.\n\n<xml><block type=\"gamelab_checkTouching\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE1\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><value name=\"SPRITE2\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick\"</title><value name=\"THIS\"><block type=\"gamelab_subjectSpritePointer\"></block></value></block></next></block></xml>"
         },
         "CourseF_outbreak3": {
@@ -400,8 +459,12 @@
           "hint2": "Den nya koden för denna nivå ska se ut så här:\n\n[blockly block][0]"
         },
         "CourseF_outbreak3_-2022-2": {
-          "hint1": "Ge monster munskydd genom att använd 'change costume'-blocket med en 'when clicked-händelse:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title></block></next></block></xml>\n\nVar noga med att också dra in det lilla röda 'clicked'-blocket!",
-          "hint2": "Den nya koden för denna nivå ska se ut så här:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title><value name=\"THIS\"><block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick_mask\"</title><value name=\"THIS\"><block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block></xml>"
+          "hint1": "Ge monster munskydd genom att använd 'change costume'-blocket med en 'when clicked-händelse:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy\\_mask\"</title></block></next></block></xml>\n\nVar noga med att också dra in det lilla röda 'clicked'-blocket!",
+          "hint2": "Den nya koden för denna nivå ska se ut så här:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title><value name=\"THIS\">\\<block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick_mask\"</title><value name=\"THIS\">\\<block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block></xml>"
+        },
+        "CourseF_outbreak3_2023": {
+          "hint1": "Ge monster munskydd genom att använd 'change costume'-blocket med en 'when clicked-händelse:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy\\_mask\"</title></block></next></block></xml>\n\nVar noga med att också dra in det lilla röda 'clicked'-blocket!",
+          "hint2": "Den nya koden för denna nivå ska se ut så här:\n\n<xml><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"healthy\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"healthy_mask\"</title><value name=\"THIS\">\\<block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block><block type=\"gamelab_spriteClicked\"><title name=\"CONDITION\">\"when\"</title><value name=\"SPRITE\"><block type=\"gamelab_allSpritesWithAnimation\"><title name=\"ANIMATION\">\"sick\"</title></block></value><next><block type=\"gamelab_setAnimation\"><title name=\"ANIMATION\">\"sick_mask\"</title><value name=\"THIS\">\\<block type=\"gamelab_clickedSpritePointer\"></block></value></block></next></block></xml>"
         },
         "CourseF_outbreak4": {
           "challenge": "## Letar du efter en extra utmaning?\n\nDu kan också få monster att röra sig snabbare eller långsammare.\n\n1.  Klicka på 'Edit' i detta block [blockly block][0] \n2.  Öka eller minska talet i detta block: \n\n[blockly block][1]\n\nFör att få monster att röra sig långsammare, välj ett decimaltal som '0.5' eller '0,25'. För att få dem att röra sig snabbare, välj valfritt tal över 1."
@@ -409,12 +472,19 @@
         "CourseF_outbreak4_-2022-2": {
           "challenge": "## Letar du efter en extra utmaning?\n\nDu kan också få monster att röra sig snabbare eller långsammare.\n\n1.  Klicka på 'Edit' i detta block <xml><block type=\"gamelab_behavior_get\"><mutation></mutation><title name=\"VAR\">wandering</title></block></xml> \n2.  Öka eller minska talet i detta block: \n\n<xml><block type=\"gamelab_moveForward\"><value name=\"SPRITE\"><block type=\"sprite_parameter_get\"><title name=\"VAR\">this sprite</title></block></value><value name=\"DISTANCE\"><block type=\"math_number\"><title name=\"NUM\">1</title></block></value></block>\n</xml>\n\nFör att få monster att röra sig långsammare, välj ett decimaltal som '0.5' eller '0,25'. För att få dem att röra sig snabbare, välj valfritt tal över 1."
         },
+        "CourseF_outbreak4_2023": {
+          "challenge": "## Letar du efter en extra utmaning?\n\nDu kan också få monster att röra sig snabbare eller långsammare.\n\n1.  Klicka på 'Edit' i detta block <xml><block type=\"gamelab_behavior_get\"><mutation></mutation><title name=\"VAR\">wandering</title></block></xml> \n2.  Öka eller minska talet i detta block: \n\n<xml><block type=\"gamelab_moveForward\"><value name=\"SPRITE\"><block type=\"sprite_parameter_get\"><title name=\"VAR\">this sprite</title></block></value><value name=\"DISTANCE\"><block type=\"math_number\"><title name=\"NUM\">1</title></block></value></block>\n</xml>\n\nFör att få monster att röra sig långsammare, välj ett decimaltal som '0.5' eller '0,25'. För att få dem att röra sig snabbare, välj valfritt tal över 1."
+        },
         "CourseF_outbreak6": {
           "hint1": "Du måste lägga till ytterligare 3 'when touches'-händelser för att se alla möjliga kombinationer av 'touches' mellan friska och infekterade sprites.\n\n[blockly block][0]",
           "hint2": "Var noga med att flytta in de andra 'action'-blocken i 'if chance'-blocket:\n\n[blockly block][0]"
         },
         "CourseF_outbreak6_-2022-2": {
-          "hint1": "Du måste lägga till ytterligare 3 'when touches'-händelser för att se alla möjliga kombinationer av 'touches' mellan friska och infekterade sprites.\n\n<xml><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick\"</title>\n        </block>\n      </value><next>\n      <block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">75</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick_mask\"</title>\n        </block>\n      </value><next>\n      <block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">25</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick_mask\"</title>\n        </block>\n      </value><next>\n      <block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">10</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block></xml>",
+          "hint1": "Du måste lägga till ytterligare 3 'when touches'-händelser för att se alla möjliga kombinationer av 'touches' mellan friska och infekterade sprites.\n\n<xml><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        \\<block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick\"</title>\n        </block>\n      </value><next>\n      <block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">75</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick_mask\"</title>\n        </block>\n      </value><next>\n      \\<block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">25</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        \\<block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick_mask\"</title>\n        </block>\n      </value><next>\n      \\<block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">10</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block></xml>",
+          "hint2": "Var noga med att flytta in de andra 'action'-blocken i 'if chance'-blocket:\n\n<xml><block type=\"gamelab_checkTouching\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE1\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"healthy\"</title>\n      </block>\n    </value>\n    <value name=\"SPRITE2\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"sick\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">90</title>\n        <statement name=\"STATEMENT\">\n          <block type=\"gamelab_setAnimation\">\n            <title name=\"ANIMATION\">\"sick\"</title>\n            <value name=\"THIS\">\n              <block type=\"gamelab_subjectSpritePointer\"></block>\n            </value>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "CourseF_outbreak6_2023": {
+          "hint1": "Du måste lägga till ytterligare 3 'when touches'-händelser för att se alla möjliga kombinationer av 'touches' mellan friska och infekterade sprites.\n\n<xml><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        \\<block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick\"</title>\n        </block>\n      </value><next>\n      <block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">75</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick_mask\"</title>\n        </block>\n      </value><next>\n      \\<block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">25</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block><block type=\"gamelab_checkTouching\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE1\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n      <value name=\"SPRITE2\">\n        \\<block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"sick_mask\"</title>\n        </block>\n      </value><next>\n      \\<block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">10</title>\n      <statement name=\"STATEMENT\"></statement></block></next>\n    </block></xml>",
           "hint2": "Var noga med att flytta in de andra 'action'-blocken i 'if chance'-blocket:\n\n<xml><block type=\"gamelab_checkTouching\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE1\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"healthy\"</title>\n      </block>\n    </value>\n    <value name=\"SPRITE2\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"sick\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_withPercentChanceDropdown\">\n      <title name=\"NUM\">90</title>\n        <statement name=\"STATEMENT\">\n          <block type=\"gamelab_setAnimation\">\n            <title name=\"ANIMATION\">\"sick\"</title>\n            <value name=\"THIS\">\n              <block type=\"gamelab_subjectSpritePointer\"></block>\n            </value>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "CourseF_outbreak7": {
@@ -423,7 +493,11 @@
         },
         "CourseF_outbreak7_-2022-2": {
           "verionhistory": "Har du kört fast? Du kan alltid återställa koden genom att klicka på 'Verson History\" nedan och sedan välja 'Start Over'.",
-          "whenclicked": "## Vaccin\n\nDu kan ge monster ett vaccin när du klickar på dem. För att göra detta, använd blocket 'change constume' med den här händelsen:\n\n<xml><block type=\"gamelab_spriteClicked\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy_mask\"</title>\n        </block>\n      </value>\n    </block></xml>"
+          "whenclicked": "## Vaccin\n\nDu kan ge monster ett vaccin när du klickar på dem. För att göra detta, använd blocket 'change constume' med den här händelsen:\n\n<xml><block type=\"gamelab_spriteClicked\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy\\_mask\"</title>\n        </block>\n      </value>\n    </block></xml>"
+        },
+        "CourseF_outbreak7_2023": {
+          "verionhistory": "Har du kört fast? Du kan alltid återställa koden genom att klicka på 'Verson History\" nedan och sedan välja 'Start Over'.",
+          "whenclicked": "## Vaccin\n\nDu kan ge monster ett vaccin när du klickar på dem. För att göra detta, använd blocket 'change constume' med den här händelsen:\n\n<xml><block type=\"gamelab_spriteClicked\">\n      <title name=\"CONDITION\">\"when\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"healthy\\_mask\"</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "Dance_2019_01": {
           "challenges": "**Valfria utmaningar**   \\_Välj att spela en annan sång.   Flytta din dansare till ett nytt ställe.   Skapa mer än en dansare.",
@@ -524,6 +598,10 @@
           "Function_intro_Ryan_a": "Du kan kalla på en funktion flera gånger i ditt program!  Kalla på den två gånger för att lösa det här pusslet.",
           "Function_intro_Ryan_b": "Om du gett funktionen rätt namn så är detta den väg du kommer att färdas..."
         },
+        "Function intro Ryan_2023": {
+          "Function_intro_Ryan_a": "Du kan kalla på en funktion flera gånger i ditt program!  Kalla på den två gånger för att lösa det här pusslet.",
+          "Function_intro_Ryan_b": "Om du gett funktionen rätt namn så är detta den väg du kommer att färdas..."
+        },
         "HOC 2018 Level_10": {
           "voyage_aquatic_10a": "Se **Havslyktor** ![](https://images.code.org/471b33234222ddffb463aeb65de6b371-image-1539183353423.net-resizeimage.png)? Hur kan du använda dig av villkor med dem för att ta dig igenom Havsmonumentet?"
         },
@@ -558,6 +636,11 @@
           "MC_HOC_2017_01_RETRY_b": "Glöm inte att klicka på \"Kör\" för att köra agentens kod.",
           "MC_HOC_2017_01_RETRY_c": "När agenten har kört sin kod kan du styra spelaren med piltangenterna!"
         },
+        "MC_HOC_2017_01_RETRY_2023": {
+          "MC_HOC_2017_01_RETRY_a": "Dra ett \"gå framåt\"-block från verktygslådan till arbetsytan och fäst det under \"vid körning\"-blocket.",
+          "MC_HOC_2017_01_RETRY_b": "Glöm inte att klicka på \"Kör\" för att köra agentens kod.",
+          "MC_HOC_2017_01_RETRY_c": "När agenten har kört sin kod kan du styra spelaren med piltangenterna!"
+        },
         "MC_HOC_2017_02_Cole": {
           "MC_HOC_2017_02_Cole_a": "Flytta agenten två rutor framåt så att den står på tryckplattan.  Det öppnar dörren åt spelaren.",
           "MC_HOC_2017_02_Cole_b": "Tryck på \"Kör\"! \nDu kan köra koden även om den inte stämmer.  Kör och nollställ koden om och om igen tills du förstår vad som går fel.",
@@ -588,6 +671,12 @@
           "MC_HOC_2017_02_Cole_c": "När agenten har öppnat dörren kan du använda piltangenterna för att styra spelaren till kartan!",
           "MC_HOC_2017_02_Cole_d": "Se till att Agenten följer vägen som är uppmärkt på kartan!"
         },
+        "MC_HOC_2017_02_Cole_2023": {
+          "MC_HOC_2017_02_Cole_a": "Flytta agenten två rutor framåt så att den står på tryckplattan.  Det öppnar dörren åt spelaren.",
+          "MC_HOC_2017_02_Cole_b": "Tryck på \"Kör\"! \nDu kan köra koden även om den inte stämmer.  Kör och nollställ koden om och om igen tills du förstår vad som går fel.",
+          "MC_HOC_2017_02_Cole_c": "När agenten har öppnat dörren kan du använda piltangenterna för att styra spelaren till kartan!",
+          "MC_HOC_2017_02_Cole_d": "Se till att Agenten följer vägen som är uppmärkt på kartan!"
+        },
         "MC_HOC_2017_03_Cole": {
           "MC_HOC_2017_03_Cole_a": "När agenten står på tryckplattan kan du använda piltangenterna för att styra spelaren till kompassen!",
           "MC_HOC_2017_03_Cole_b": "Verkar koden lite för lång?  Använd \"upprepa\"-loopar och se om du kan korta ned koden!"
@@ -608,6 +697,10 @@
           "MC_HOC_2017_03_Cole_a": "När agenten står på tryckplattan kan du använda piltangenterna för att styra spelaren till kompassen!",
           "MC_HOC_2017_03_Cole_b": "Verkar koden lite för lång?  Använd \"upprepa\"-loopar och se om du kan korta ned koden!"
         },
+        "MC_HOC_2017_03_Cole_2023": {
+          "MC_HOC_2017_03_Cole_a": "När agenten står på tryckplattan kan du använda piltangenterna för att styra spelaren till kompassen!",
+          "MC_HOC_2017_03_Cole_b": "Verkar koden lite för lång?  Använd \"upprepa\"-loopar och se om du kan korta ned koden!"
+        },
         "MC_HOC_2017_04POINT5_RYAN": {
           "MC_HOC_2017_04POINT5_RYAN_a": "Agenten behöver bara ta sig till den första tryckplattan för att släppa förbi Alex eller Steve till yxan.",
           "MC_HOC_2017_04POINT5_RYAN_b": "Använd \"sväng vänster\"-blocket för att vända på agenten. "
@@ -625,6 +718,10 @@
           "MC_HOC_2017_04POINT5_RYAN_b": "Använd \"sväng vänster\"-blocket för att vända på agenten. "
         },
         "MC_HOC_2017_04POINT5_RYAN_2021": {
+          "MC_HOC_2017_04POINT5_RYAN_a": "Agenten behöver bara ta sig till den första tryckplattan för att släppa förbi Alex eller Steve till yxan.",
+          "MC_HOC_2017_04POINT5_RYAN_b": "Använd \"sväng vänster\"-blocket för att vända på agenten. "
+        },
+        "MC_HOC_2017_04POINT5_RYAN_2023": {
           "MC_HOC_2017_04POINT5_RYAN_a": "Agenten behöver bara ta sig till den första tryckplattan för att släppa förbi Alex eller Steve till yxan.",
           "MC_HOC_2017_04POINT5_RYAN_b": "Använd \"sväng vänster\"-blocket för att vända på agenten. "
         },
@@ -653,6 +750,11 @@
           "MC_HOC_2017_04_Cole_b": "När agenten når tryckplattan öppnar han dörren åt spelaren.",
           "MC_HOC_2017_04_Cole_c": "Tryck på \"Kör\"! \nDu kan köra koden även om den inte stämmer.  Kör och nollställ koden om och om igen tills du förstår vad som går fel."
         },
+        "MC_HOC_2017_04_Cole_2023": {
+          "MC_HOC_2017_04_Cole_a": "Agenten måste \"gå framåt\" 7 gånger.  Hur kan du använda en \"upprepa\"-loop för att få det att hända?",
+          "MC_HOC_2017_04_Cole_b": "När agenten når tryckplattan öppnar han dörren åt spelaren.",
+          "MC_HOC_2017_04_Cole_c": "Tryck på \"Kör\"! \nDu kan köra koden även om den inte stämmer.  Kör och nollställ koden om och om igen tills du förstår vad som går fel."
+        },
         "MC_HOC_2017_05_Cole": {
           "MC_HOC_2017_05_Cole_a": "Visste du att man kan ha mer än ett kodblock i en loop? Prova att sätta en planka **och** \"gå framåt\" inuti \"upprepa\" för att klara av det här pusslet.",
           "MC_HOC_2017_05_Cole_b": "Få Agenten över floden, bygg en bro samtidigt som du går."
@@ -673,6 +775,10 @@
           "MC_HOC_2017_05_Cole_a": "Visste du att man kan ha mer än ett kodblock i en loop? Prova att sätta en planka **och** \"gå framåt\" inuti \"upprepa\" för att klara av det här pusslet.",
           "MC_HOC_2017_05_Cole_b": "Få Agenten över floden, bygg en bro samtidigt som du går."
         },
+        "MC_HOC_2017_05_Cole_2023": {
+          "MC_HOC_2017_05_Cole_a": "Visste du att man kan ha mer än ett kodblock i en loop? Prova att sätta en planka **och** \"gå framåt\" inuti \"upprepa\" för att klara av det här pusslet.",
+          "MC_HOC_2017_05_Cole_b": "Få Agenten över floden, bygg en bro samtidigt som du går."
+        },
         "MC_HOC_2017_06_Cole": {
           "MC_HOC_2017_06_Cole_a": "Hur många gånger körs den här loopen?  Hur många gånger _ska_ den köras?",
           "MC_HOC_2017_06_Cole_b": "Hjälp Agenten att bygga en bro hela vägen över vattnet!"
@@ -690,6 +796,10 @@
           "MC_HOC_2017_06_Cole_b": "Hjälp Agenten att bygga en bro hela vägen över vattnet!"
         },
         "MC_HOC_2017_06_Cole_2021": {
+          "MC_HOC_2017_06_Cole_a": "Hur många gånger körs den här loopen?  Hur många gånger _ska_ den köras?",
+          "MC_HOC_2017_06_Cole_b": "Hjälp Agenten att bygga en bro hela vägen över vattnet!"
+        },
+        "MC_HOC_2017_06_Cole_2023": {
           "MC_HOC_2017_06_Cole_a": "Hur många gånger körs den här loopen?  Hur många gånger _ska_ den köras?",
           "MC_HOC_2017_06_Cole_b": "Hjälp Agenten att bygga en bro hela vägen över vattnet!"
         },
@@ -718,6 +828,11 @@
           "MC_HOC_2017_07_Cole_b": "Prova att blanda funktionsblock med andra block från verktygslådan för att lösa det här pusslet.",
           "MC_HOC_2017_07_Cole_c": "Allt du behöver göra är att använda Agenten till att rensa en väg till Gruvvagnen."
         },
+        "MC_HOC_2017_07_Cole_2023": {
+          "MC_HOC_2017_07_Cole_a": "För att lösa det här pusslet måste du klura ut vad \"rensa väg\"-funktionen gör och använda den så många gånger som nödvändigt med det lilla gröna \"rensa väg\"-blocket i verktygslådan.",
+          "MC_HOC_2017_07_Cole_b": "Prova att blanda funktionsblock med andra block från verktygslådan för att lösa det här pusslet.",
+          "MC_HOC_2017_07_Cole_c": "Allt du behöver göra är att använda Agenten till att rensa en väg till Gruvvagnen."
+        },
         "MC_HOC_2017_10_RETRY": {
           "MC_HOC_2017_10_Cole_a": "Använd funktioner för att lösa det här pusslet enklare!",
           "MC_HOC_2017_10_Cole_b": "Vet du inte vart du ska? Se om du kan hitta den streckade linjen!"
@@ -735,6 +850,10 @@
           "MC_HOC_2017_10_Cole_b": "Vet du inte vart du ska? Se om du kan hitta den streckade linjen!"
         },
         "MC_HOC_2017_10_RETRY_2021": {
+          "MC_HOC_2017_10_Cole_a": "Använd funktioner för att lösa det här pusslet enklare!",
+          "MC_HOC_2017_10_Cole_b": "Vet du inte vart du ska? Se om du kan hitta den streckade linjen!"
+        },
+        "MC_HOC_2017_10_RETRY_2023": {
           "MC_HOC_2017_10_Cole_a": "Använd funktioner för att lösa det här pusslet enklare!",
           "MC_HOC_2017_10_Cole_b": "Vet du inte vart du ska? Se om du kan hitta den streckade linjen!"
         },
@@ -763,6 +882,11 @@
           "MC_HOC_2017_08_RY_b": "Det finns MÅNGA sätt att lösa det här pusslet. Prova dig fram!",
           "MC_HOC_2017_08_RY_c": "Försök att följa den streckade linjen för en enkel väg genom lavan."
         },
+        "MC_HOC_2017_Ali_2023": {
+          "MC_HOC_2017_08_RY_a": "Tryck på \"Kör\"! \nDu kan köra koden även om den inte stämmer.  Kör och nollställ koden om och om igen tills du förstår vad som går fel.",
+          "MC_HOC_2017_08_RY_b": "Det finns MÅNGA sätt att lösa det här pusslet. Prova dig fram!",
+          "MC_HOC_2017_08_RY_c": "Försök att följa den streckade linjen för en enkel väg genom lavan."
+        },
         "MC_HOC_2017_FP20x20": {
           "MC_HOC_2017_13_Cole_a": "Se om du kan få agenten att bygga några broar så att Alex eller Steve kan gå bortom kartans kanter."
         },
@@ -776,6 +900,9 @@
           "MC_HOC_2017_13_Cole_a": "Se om du kan få agenten att bygga några broar så att Alex eller Steve kan gå bortom kartans kanter."
         },
         "MC_HOC_2017_FP20x20_2021": {
+          "MC_HOC_2017_13_Cole_a": "Se om du kan få agenten att bygga några broar så att Alex eller Steve kan gå bortom kartans kanter."
+        },
+        "MC_HOC_2017_FP20x20_2023": {
           "MC_HOC_2017_13_Cole_a": "Se om du kan få agenten att bygga några broar så att Alex eller Steve kan gå bortom kartans kanter."
         },
         "OPD-K5-events-2": {
@@ -806,6 +933,11 @@
           "mc_8_b": "Använd 'upprepa'-blocket för att förenkla din kod.",
           "mc_8_c": "Ditt mål är att komma till husets dörröppning vid toppen av skärmen."
         },
+        "Overworld Avoid Monsters_2023": {
+          "mc_8_a": "Det finns några vägar du kan ta. Vilken är kortast?",
+          "mc_8_b": "Använd 'upprepa'-blocket för att förenkla din kod.",
+          "mc_8_c": "Ditt mål är att komma till husets dörröppning vid toppen av skärmen."
+        },
         "Overworld Chop Tree": {
           "mc_2_a": "Du behöver 'gå framåt' två gånger för att stå framför trädet.",
           "mc_2_b": "'Förstör block'-kommandot hugger ner trädet framför dig."
@@ -826,6 +958,10 @@
           "mc_2_a": "Du behöver 'gå framåt' två gånger för att stå framför trädet.",
           "mc_2_b": "'Förstör block'-kommandot hugger ner trädet framför dig."
         },
+        "Overworld Chop Tree_2023": {
+          "mc_2_a": "Du behöver 'gå framåt' två gånger för att stå framför trädet.",
+          "mc_2_b": "'Förstör block'-kommandot hugger ner trädet framför dig."
+        },
         "Overworld Chop Trees": {
           "mc_4_a": "Du kan hugga ner träd i vilken ordning som helst. Vilken väg kräver så liten mängd block som möjligt?",
           "mc_4_b": "'Förstör block'-kommandot hugger ner trädet framför dig."
@@ -843,6 +979,10 @@
           "mc_4_b": "'Förstör block'-kommandot hugger ner trädet framför dig."
         },
         "Overworld Chop Trees_2021": {
+          "mc_4_a": "Du kan hugga ner träd i vilken ordning som helst. Vilken väg kräver så liten mängd block som möjligt?",
+          "mc_4_b": "'Förstör block'-kommandot hugger ner trädet framför dig."
+        },
+        "Overworld Chop Trees_2023": {
           "mc_4_a": "Du kan hugga ner träd i vilken ordning som helst. Vilken väg kräver så liten mängd block som möjligt?",
           "mc_4_b": "'Förstör block'-kommandot hugger ner trädet framför dig."
         },
@@ -871,6 +1011,11 @@
           "mc_6_b": "Var inte rädd för att göra fel! Kör koden för att se vad som händer, även om du inte löst pusslet än.",
           "mc_6_c": "Du kan lägga mer än ett block inuti ett 'upprepa'-block."
         },
+        "Overworld House Frame Chosen_2023": {
+          "mc_6_a": "Klicka på pilen på 'placera'-blocket för att välja vad du vill lägga ut.",
+          "mc_6_b": "Var inte rädd för att göra fel! Kör koden för att se vad som händer, även om du inte löst pusslet än.",
+          "mc_6_c": "Du kan lägga mer än ett block inuti ett 'upprepa'-block."
+        },
         "Overworld Move to Sheep": {
           "mc_1_a": "'Gå framåt'-blocket är högst upp i verktygslådan.",
           "mc_1_b": "Se till att båda 'gå framåt'-blocken har klickat fast i 'vid kör'-blocket."
@@ -888,6 +1033,10 @@
           "mc_1_b": "Se till att båda 'gå framåt'-blocken har klickat fast i 'vid kör'-blocket."
         },
         "Overworld Move to Sheep_2021": {
+          "mc_1_a": "'Gå framåt'-blocket är högst upp i verktygslådan.",
+          "mc_1_b": "Se till att båda 'gå framåt'-blocken har klickat fast i 'vid kör'-blocket."
+        },
+        "Overworld Move to Sheep_2023": {
           "mc_1_a": "'Gå framåt'-blocket är högst upp i verktygslådan.",
           "mc_1_b": "Se till att båda 'gå framåt'-blocken har klickat fast i 'vid kör'-blocket."
         },
@@ -912,6 +1061,11 @@
           "mc_5_c": "Var inte rädd för att göra fel! Kör koden för att se vad som händer, även om du inte löst pusslet än."
         },
         "Overworld Place Wall_2021": {
+          "mc_5_a": "Använd 'placera'-blocket först och sen 'gå'-blocket.",
+          "mc_5_b": "Se till att båda blocken är inuti 'upprepa'-blocket för att köra koden mer än en gång.",
+          "mc_5_c": "Var inte rädd för att göra fel! Kör koden för att se vad som händer, även om du inte löst pusslet än."
+        },
+        "Overworld Place Wall_2023": {
           "mc_5_a": "Använd 'placera'-blocket först och sen 'gå'-blocket.",
           "mc_5_b": "Se till att båda blocken är inuti 'upprepa'-blocket för att köra koden mer än en gång.",
           "mc_5_c": "Var inte rädd för att göra fel! Kör koden för att se vad som händer, även om du inte löst pusslet än."
@@ -941,6 +1095,11 @@
           "mc_7_b": "Båda strecken av brunt land vid vattnet behöver fyllas med grödor.",
           "mc_7_c": "Du kan lägga mer än ett block inuti ett 'upprepa'-block."
         },
+        "Overworld Plant Crops_2023": {
+          "mc_7_a": "Använd 'plantera gröda'-blocket för att plantera en gröda i rutan du står i.",
+          "mc_7_b": "Båda strecken av brunt land vid vattnet behöver fyllas med grödor.",
+          "mc_7_c": "Du kan lägga mer än ett block inuti ett 'upprepa'-block."
+        },
         "Overworld Powered Minecart": {
           "mc_13_a": "Använd 'placera räls' för att lägga räls i rutan du står i.",
           "mc_13_b": "Använd 'upprepa'-slingor för att korta ner din kod."
@@ -958,6 +1117,10 @@
           "mc_13_b": "Använd 'upprepa'-slingor för att korta ner din kod."
         },
         "Overworld Powered Minecart_2021": {
+          "mc_13_a": "Använd 'placera räls' för att lägga räls i rutan du står i.",
+          "mc_13_b": "Använd 'upprepa'-slingor för att korta ner din kod."
+        },
+        "Overworld Powered Minecart_2023": {
           "mc_13_a": "Använd 'placera räls' för att lägga räls i rutan du står i.",
           "mc_13_b": "Använd 'upprepa'-slingor för att korta ner din kod."
         },
@@ -986,6 +1149,11 @@
           "mc_3_b": "Om du behöver ändra vilket håll du är vänd mot, använd ett 'sväng'-block.",
           "mc_3_c": "Var inte rädd för att göra fel! Kör koden för att se vad som händer, även om du inte löst pusslet än."
         },
+        "Overworld Shear Sheep_2023": {
+          "mc_3_a": "'Sax'-blocket når fåren framför dig. Står du vänd mot fåret?",
+          "mc_3_b": "Om du behöver ändra vilket håll du är vänd mot, använd ett 'sväng'-block.",
+          "mc_3_c": "Var inte rädd för att göra fel! Kör koden för att se vad som händer, även om du inte löst pusslet än."
+        },
         "Underground Avoiding Lava": {
           "mc_11_a": "All kod som behövs för att leta efter lava och hantera den finns på plats. Allt du behöver göra är att lägga till ett block för att gå.",
           "mc_11_b": "Borde ditt 'gå framåt'-kommando vara inuti 'om'-satsen eller efter?"
@@ -1003,6 +1171,10 @@
           "mc_11_b": "Borde ditt 'gå framåt'-kommando vara inuti 'om'-satsen eller efter?"
         },
         "Underground Avoiding Lava_2021": {
+          "mc_11_a": "All kod som behövs för att leta efter lava och hantera den finns på plats. Allt du behöver göra är att lägga till ett block för att gå.",
+          "mc_11_b": "Borde ditt 'gå framåt'-kommando vara inuti 'om'-satsen eller efter?"
+        },
+        "Underground Avoiding Lava_2023": {
           "mc_11_a": "All kod som behövs för att leta efter lava och hantera den finns på plats. Allt du behöver göra är att lägga till ett block för att gå.",
           "mc_11_b": "Borde ditt 'gå framåt'-kommando vara inuti 'om'-satsen eller efter?"
         },
@@ -1027,6 +1199,11 @@
           "mc_12_c": "Använd ett 'om'-uttryck för att kolla av rutor efter lava, placera sen kullersten."
         },
         "Underground If Statements_2021": {
+          "mc_12_a": "Du hittar röd sten i rutorna med röda fläckar.",
+          "mc_12_b": "Kan du använda en 'upprepa'-slinga för att göra din kod kortare?",
+          "mc_12_c": "Använd ett 'om'-uttryck för att kolla av rutor efter lava, placera sen kullersten."
+        },
+        "Underground If Statements_2023": {
           "mc_12_a": "Du hittar röd sten i rutorna med röda fläckar.",
           "mc_12_b": "Kan du använda en 'upprepa'-slinga för att göra din kod kortare?",
           "mc_12_c": "Använd ett 'om'-uttryck för att kolla av rutor efter lava, placera sen kullersten."
@@ -1056,6 +1233,11 @@
           "mc_10_b": "När du står vid kanten av lavan, använd 'placera kullersten framför'-blocket för att göra en säker väg. Sen kan du gå över!",
           "mc_10_c": "Var inte rädd för att göra fel! Kör koden för att se vad som händer, även om du inte löst pusslet än."
         },
+        "Underground Iron_2023": {
+          "mc_10_a": "Järnblocket är det fläckade området bakom facklan! Hur ska du komma dit bort?",
+          "mc_10_b": "När du står vid kanten av lavan, använd 'placera kullersten framför'-blocket för att göra en säker väg. Sen kan du gå över!",
+          "mc_10_c": "Var inte rädd för att göra fel! Kör koden för att se vad som händer, även om du inte löst pusslet än."
+        },
         "Underground Mining Coal": {
           "mc_9_a": "Står du vänd åt rätt håll? 'Förstör block'-blocket gräver i blocket framför dig.",
           "mc_9_b": "De svarta fläckarna i väggen är kol! Använd 'förstör block'-blocket på dessa för att gräva fram kolet.",
@@ -1077,6 +1259,11 @@
           "mc_9_c": "Använd 'placera fackla'-blocket för att lägga en fackla i rutan du står i."
         },
         "Underground Mining Coal_2021": {
+          "mc_9_a": "Står du vänd åt rätt håll? 'Förstör block'-blocket gräver i blocket framför dig.",
+          "mc_9_b": "De svarta fläckarna i väggen är kol! Använd 'förstör block'-blocket på dessa för att gräva fram kolet.",
+          "mc_9_c": "Använd 'placera fackla'-blocket för att lägga en fackla i rutan du står i."
+        },
+        "Underground Mining Coal_2023": {
           "mc_9_a": "Står du vänd åt rätt håll? 'Förstör block'-blocket gräver i blocket framför dig.",
           "mc_9_b": "De svarta fläckarna i väggen är kol! Använd 'förstör block'-blocket på dessa för att gräva fram kolet.",
           "mc_9_c": "Använd 'placera fackla'-blocket för att lägga en fackla i rutan du står i."
@@ -1156,10 +1343,16 @@
         "courseB_maze_seq8_2021": {
           "courseB_maze_seq8_b": "Det finns två sätt att lösa detta pussel!"
         },
+        "courseB_maze_seq8_2023": {
+          "courseB_maze_seq8_b": "Det finns två sätt att lösa detta pussel!"
+        },
         "courseB_starWars_prog9": {
           "courseB_starWars_prog9_a": "Var inte rädd för att göra fel! Kör koden för att se vad som händer, även om du inte löst pusslet än."
         },
         "courseB_starWars_prog92022": {
+          "courseB_starWars_prog9_a": "Var inte rädd för att göra fel! Kör koden för att se vad som händer, även om du inte löst pusslet än."
+        },
+        "courseB_starWars_prog92022_2023": {
           "courseB_starWars_prog9_a": "Var inte rädd för att göra fel! Kör koden för att se vad som händer, även om du inte löst pusslet än."
         },
         "courseB_starWars_prog9_2018": {
@@ -1192,6 +1385,9 @@
         "courseC_collector_loops_challenge2_2021": {
           "courseC_maze_loops_challenge2_b": "Använd slingor så att du inte får slut på 'samla in'-block!"
         },
+        "courseC_collector_loops_challenge2_2023": {
+          "courseC_maze_loops_challenge2_b": "Använd slingor så att du inte får slut på 'samla in'-block!"
+        },
         "courseC_flappy_events1": {
           "courseC_flappy_events1_a": "![](https://images.code.org/5f1d0edf6ebb44d98ffdce623cfe0ad4-image-1501192487040.gif)"
         },
@@ -1208,6 +1404,9 @@
           "courseC_flappy_events1_a": "![](https://images.code.org/5f1d0edf6ebb44d98ffdce623cfe0ad4-image-1501192487040.gif)"
         },
         "courseC_flappy_events1_2021": {
+          "courseC_flappy_events1_a": "![](https://images.code.org/5f1d0edf6ebb44d98ffdce623cfe0ad4-image-1501192487040.gif)"
+        },
+        "courseC_flappy_events1_2023": {
           "courseC_flappy_events1_a": "![](https://images.code.org/5f1d0edf6ebb44d98ffdce623cfe0ad4-image-1501192487040.gif)"
         },
         "courseC_harvester_loops_challenge2": {
@@ -1246,6 +1445,12 @@
           "courseC_harvester_loops_challenge2_c": "Det här zig-zag-mönstret kan upprepas två gånger för att göra klart pusslet med enbart 20 block!",
           "courseC_harvester_loops_challenge2_d": "Detta spiralmönster kan kodas med enbart 18 block!"
         },
+        "courseC_harvester_loops_challenge2_2023": {
+          "courseC_harvester_loops_challenge2_a": "Ett sätt att lösa det här pusslet på är i formen av ett zig-zag-mönster. Ett annat sätt ser ut som en spiral! Det finns många olika lösningar till pussel som det här. Var ihärdig!",
+          "courseC_harvester_loops_challenge2_b": "Du kan upprepa 'gå framåt' och 'välj sallad' så många gånger du behöver, sväng sedan vid varje hörn.",
+          "courseC_harvester_loops_challenge2_c": "Det här zig-zag-mönstret kan upprepas två gånger för att göra klart pusslet med enbart 20 block!",
+          "courseC_harvester_loops_challenge2_d": "Detta spiralmönster kan kodas med enbart 18 block!"
+        },
         "courseC_maze_programming6": {
           "courseC_maze_programming6_a": "Det finns två sätt att lösa detta pussel!"
         },
@@ -1262,6 +1467,9 @@
           "courseC_maze_programming6_a": "Det finns två sätt att lösa detta pussel!"
         },
         "courseC_maze_programming6_2021": {
+          "courseC_maze_programming6_a": "Det finns två sätt att lösa detta pussel!"
+        },
+        "courseC_maze_programming6_2023": {
           "courseC_maze_programming6_a": "Det finns två sätt att lösa detta pussel!"
         },
         "courseC_starWars_loops1": {
@@ -1285,6 +1493,9 @@
         "courseC_starWars_loops10_2021": {
           "courseC_starWars_loops10_c": "Var inte rädd för att göra fel! Kör koden för att se vad som händer, även om du inte löst pusslet än."
         },
+        "courseC_starWars_loops10_2023": {
+          "courseC_starWars_loops10_c": "Var inte rädd för att göra fel! Kör koden för att se vad som händer, även om du inte löst pusslet än."
+        },
         "courseC_starWars_loops12022": {
           "courseC_starWars_loops1_b": "Var inte rädd för att göra fel! Kör koden för att se vad som händer, även om du inte löst pusslet än."
         },
@@ -1298,6 +1509,9 @@
           "courseC_starWars_loops1_b": "Var inte rädd för att göra fel! Kör koden för att se vad som händer, även om du inte löst pusslet än."
         },
         "courseC_starWars_loops1_2021": {
+          "courseC_starWars_loops1_b": "Var inte rädd för att göra fel! Kör koden för att se vad som händer, även om du inte löst pusslet än."
+        },
+        "courseC_starWars_loops1_2023": {
           "courseC_starWars_loops1_b": "Var inte rädd för att göra fel! Kör koden för att se vad som händer, även om du inte löst pusslet än."
         },
         "courseC_starWars_loops7": {
@@ -1316,6 +1530,9 @@
           "courseC_starWars_loops7_c": "Var inte rädd för att göra fel! Kör koden för att se vad som händer, även om du inte löst pusslet än."
         },
         "courseC_starWars_loops7_2021": {
+          "courseC_starWars_loops7_c": "Var inte rädd för att göra fel! Kör koden för att se vad som händer, även om du inte löst pusslet än."
+        },
+        "courseC_starWars_loops7_2023": {
           "courseC_starWars_loops7_c": "Var inte rädd för att göra fel! Kör koden för att se vad som händer, även om du inte löst pusslet än."
         },
         "courseC_starWars_loops7_copy": {
@@ -1345,6 +1562,9 @@
         "courseD_artist_nestedLoops3_2021": {
           "courseD_artist_nestedLoops3_a": "Försök att använda 'hoppa framåt'-blocket för att komma från toppen av en kvadrat till platsen där du ska börja rita nästa.\n\nOm dina kvadrater är 20 pixlar höga och 20 pixlar ifrån varandra, hur långt behöver du då hoppa?"
         },
+        "courseD_artist_nestedLoops3_2023": {
+          "courseD_artist_nestedLoops3_a": "Försök att använda 'hoppa framåt'-blocket för att komma från toppen av en kvadrat till platsen där du ska börja rita nästa.\n\nOm dina kvadrater är 20 pixlar höga och 20 pixlar ifrån varandra, hur långt behöver du då hoppa?"
+        },
         "courseD_artist_nestedLoops_challenge2": {
           "courseD_artist_nestedLoops_challenge2_a": "För att rita en vanlig åtthörning behöver konstnären svänga 45 grader 8 gånger.",
           "courseD_artist_nestedLoops_challenge2_b": "För att rita en kvadrat behöver artisten svänga 90 grader 4 gånger."
@@ -1369,6 +1589,10 @@
           "courseD_artist_nestedLoops_challenge2_a": "För att rita en vanlig åtthörning behöver konstnären svänga 45 grader 8 gånger.",
           "courseD_artist_nestedLoops_challenge2_b": "För att rita en kvadrat behöver artisten svänga 90 grader 4 gånger."
         },
+        "courseD_artist_nestedLoops_challenge2_2023": {
+          "courseD_artist_nestedLoops_challenge2_a": "För att rita en vanlig åtthörning behöver konstnären svänga 45 grader 8 gånger.",
+          "courseD_artist_nestedLoops_challenge2_b": "För att rita en kvadrat behöver artisten svänga 90 grader 4 gånger."
+        },
         "courseD_bee_conditionals_challenge1": {
           "courseD_bee_conditionals_challenge1_b": "Varje ruta i det här pusslet skulle kunna ha en blomma, vaxkaka eller ingenting i sig. Det betyder att du kan upprepa ditt 'vid om'-argument för varje ruta."
         },
@@ -1385,6 +1609,9 @@
           "courseD_bee_conditionals_challenge1_b": "Varje ruta i det här pusslet skulle kunna ha en blomma, vaxkaka eller ingenting i sig. Det betyder att du kan upprepa ditt 'vid om'-argument för varje ruta."
         },
         "courseD_bee_conditionals_challenge1_2021": {
+          "courseD_bee_conditionals_challenge1_b": "Varje ruta i det här pusslet skulle kunna ha en blomma, vaxkaka eller ingenting i sig. Det betyder att du kan upprepa ditt 'vid om'-argument för varje ruta."
+        },
+        "courseD_bee_conditionals_challenge1_2023": {
           "courseD_bee_conditionals_challenge1_b": "Varje ruta i det här pusslet skulle kunna ha en blomma, vaxkaka eller ingenting i sig. Det betyder att du kan upprepa ditt 'vid om'-argument för varje ruta."
         },
         "courseD_maze_ramp6": {
@@ -1420,6 +1647,9 @@
         "courseE_artist_functions8_2021": {
           "courseD_artist_functions8_g": "![](https://images.code.org/c5b48a0db328c6cb32a024d2bf9c00af-image-1493139855549.gif)"
         },
+        "courseE_artist_functions8_2023": {
+          "courseD_artist_functions8_g": "![](https://images.code.org/c5b48a0db328c6cb32a024d2bf9c00af-image-1493139855549.gif)"
+        },
         "courseF_artist_fwp_challenge2": {
           "courseF_artist_fwp_challenge1_a": "![](https://images.code.org/9310e6352e85a8265b424c9d57ca28d1-image-1446239776339.gif)"
         },
@@ -1429,8 +1659,20 @@
         "coursee_helloworld_events": {
           "hello_world_click": "Anslut ett `säga` block under ett `when click` händelseblock:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_burger_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_spriteSay\">\n        <title name=\"SPEECH\">Hello, world!</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"face_burger_1\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
         },
+        "coursee_helloworld_events_2023": {
+          "hello_world_click": "Anslut ett `säga` block under ett `when click` händelseblock:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_burger_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_spriteSay\">\n        <title name=\"SPEECH\">Hello, world!</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"face_burger_1\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
+        },
         "coursee_helloworld_say": {
           "hello-world-first-solution-pizza": "För att få pizzan att säga något, anslut kodblocken så här:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"face_pizza_1\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_pizza_1\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
+        },
+        "coursee_helloworld_say_2023": {
+          "hello-world-first-solution-pizza": "För att få pizzan att säga något, anslut kodblocken så här:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"face_pizza_1\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_pizza_1\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
+        },
+        "csc_bookcovers_project_character1": {
+          "hint1": "Om du vill ändra en sprites plats klickar du på nålen på platsblocket och klickar sedan på vart du vill att den ska gå.\n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
+        },
+        "ecosystems_helloworld_say_2023": {
+          "change_location": "Om du vill ändra en sprites plats klickar du på nålen på platsblocket och klickar sedan på vart du vill att den ska gå.\n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
         },
         "helloworld_animals_backgrounds": {
           "hello_world_background": "Du kan ändra bakgrunden genom att ansluta ett `set background` block under ett `när klickade` händelseblock:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"cuteanimals_hippo\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setBackgroundImageAs\">\n        <title name=\"IMG\">\"gradient_30\"</title>\n      </block>\n    </next>\n  </block>\n</xml>"
@@ -1460,6 +1702,9 @@
         "helloworld_animals_sizes": {
           "storyboard_changePropBy": "Om du vill ändra en sprites storlek om och om igen (med händelser), använd det här blocket:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"cuteanimals_cheetah_hello\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>",
           "storyboard_setProp": "För att ställa in storleken på en sprite bara en gång kan du använda det här blocket:\n\n<xml><block type=\"gamelab_setProp\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"cuteanimals_tiger\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">50</title>\n        </block>\n      </value>\n    </block></xml>"
+        },
+        "helloworld_bunny_click_2023": {
+          "sprite_say": "För att få spriten att säga något, anslut kodblocken så här:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"face_pizza_1\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_pizza_1\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
         },
         "helloworld_emoji_backgrounds": {
           "hello_world_background": "Du kan ändra bakgrunden genom att ansluta ett `set background` block under ett `när klickade` händelseblock:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"emoji_35_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setBackgroundImageAs\">\n        <title name=\"IMG\">\"gradient_17_1\"</title>\n      </block>\n    </next>\n  </block>\n</xml>"
@@ -1493,6 +1738,9 @@
         "helloworld_food_backgrounds": {
           "hello_world_background": "Du kan ändra bakgrunden genom att ansluta ett `set background` block under ett `när klickade` händelseblock:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_avocado_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setBackgroundImageAs\">\n        <title name=\"IMG\">\"gradient_25_1\"</title>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
+        "helloworld_food_backgrounds_2023": {
+          "hello_world_background": "Du kan ändra bakgrunden genom att ansluta ett `set background` block under ett `när klickade` händelseblock:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_avocado_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setBackgroundImageAs\">\n        <title name=\"IMG\">\"gradient_25_1\"</title>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
         "helloworld_food_backgrounds_soccer-2022": {
           "hello_world_background": "Du kan ändra bakgrunden genom att ansluta ett `set background` block under ett `när klickade` händelseblock:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_avocado_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setBackgroundImageAs\">\n        <title name=\"IMG\">\"gradient_25_1\"</title>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
@@ -1500,6 +1748,9 @@
           "hello_world_background": "Du kan ändra bakgrunden genom att ansluta ett `set background` block under ett `när klickade` händelseblock:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_avocado_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setBackgroundImageAs\">\n        <title name=\"IMG\">\"gradient_25_1\"</title>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "helloworld_food_behaviors": {
+          "storyboard_behavior_example": "_Note:_ För att ge en sprite ett beteende måste du använda ett `sprite börjar` -block med ett av de gröna beteendeblocken, till exempel `spinning right`.\n\n<xml><block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"face_burger_1\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">spinning right</title>\n              </block>\n              </value></block></xml>"
+        },
+        "helloworld_food_behaviors_2023": {
           "storyboard_behavior_example": "_Note:_ För att ge en sprite ett beteende måste du använda ett `sprite börjar` -block med ett av de gröna beteendeblocken, till exempel `spinning right`.\n\n<xml><block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"face_burger_1\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">spinning right</title>\n              </block>\n              </value></block></xml>"
         },
         "helloworld_food_behaviors_soccer-2022": {
@@ -1512,6 +1763,10 @@
           "hw_click_sprites": "Klicka på sprites medan programmet körs.",
           "hw_no_changes": "Du behöver inte ändra någon av koden på den här nivån."
         },
+        "helloworld_food_click_2023": {
+          "hw_click_sprites": "Klicka på sprites medan programmet körs.",
+          "hw_no_changes": "Du behöver inte ändra någon av koden på den här nivån."
+        },
         "helloworld_food_click_soccer-2022": {
           "hw_click_sprites": "Klicka på sprites medan programmet körs.",
           "hw_no_changes": "Du behöver inte ändra någon av koden på den här nivån."
@@ -1521,6 +1776,9 @@
           "hw_no_changes": "Du behöver inte ändra någon av koden på den här nivån."
         },
         "helloworld_food_costumes": {
+          "hello_world_costumes": "Försök ansluta ett `change costume` block under ett `när klickade` händelseblock.\n\n<xml><block type=\"gamelab_spriteClicked\" deletable=\"false\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n        <title name=\"ANIMATION\">\"face_burger_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setAnimation\">\n        <title name=\"ANIMATION\">\"face_taco_1\"</title>\n        <value name=\"THIS\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"face_burger_1\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "helloworld_food_costumes_2023": {
           "hello_world_costumes": "Försök ansluta ett `change costume` block under ett `när klickade` händelseblock.\n\n<xml><block type=\"gamelab_spriteClicked\" deletable=\"false\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n        <title name=\"ANIMATION\">\"face_burger_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setAnimation\">\n        <title name=\"ANIMATION\">\"face_taco_1\"</title>\n        <value name=\"THIS\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"face_burger_1\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "helloworld_food_costumes_soccer-2022": {
@@ -1541,6 +1799,9 @@
         "helloworld_food_location": {
           "location_pin_hint": "Om du vill ändra en sprites plats klickar du på nålen på platsblocket och klickar sedan på vart du vill att den ska gå.\n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
         },
+        "helloworld_food_location_2023": {
+          "location_pin_hint": "Om du vill ändra en sprites plats klickar du på nålen på platsblocket och klickar sedan på vart du vill att den ska gå.\n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
+        },
         "helloworld_food_location_soccer-2022": {
           "location_pin_hint": "Om du vill ändra en sprites plats klickar du på nålen på platsblocket och klickar sedan på vart du vill att den ska gå.\n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
         },
@@ -1550,8 +1811,11 @@
         "helloworld_food_multi": {
           "storyboard_costume": "Se till att kostymerna matchar för varje sprite.\n<xml><block type=\"gamelab_spriteSay\">\n      <title name=\"SPEECH\">Hello, broccoli!</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"face_carrot_1\"</title>\n        </block>\n      </value>\n    </block></xml>"
         },
+        "helloworld_food_multi_2023": {
+          "storyboard_costume": "Se till att kostymerna matchar för varje sprite.\n<xml><block type=\"gamelab_spriteSay\">\n      <title name=\"SPEECH\">Hello, broccoli!</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"face_carrot_1\"</title>\n        </block>\n      </value>\n    </block></xml>"
+        },
         "helloworld_food_multi_soccer-2022": {
-          "storyboard_costume": "Se till att kostymerna matchar för varje sprite.\n<xml><block type=\"gamelab_spriteSay\">\n      <title name=\"SPEECH\">Goal!</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"soccer_ball\"</title>\n        </block>\n      </value>\n    </block></xml>"
+          "storyboard_costume": "Se till att kostymerna matchar för varje sprite.\n<xml><block type=\"gamelab_spriteSay\">\n      <title name=\"SPEECH\">Goal!</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"soccer\\_ball\"</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "helloworld_food_multi_space-2022": {
           "storyboard_costume": "Se till att kostymerna matchar för varje sprite.\n<xml><block type=\"gamelab_spriteSay\">\n      <title name=\"SPEECH\">Hello, alien!</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"face_carrot_1\"</title>\n        </block>\n      </value>\n    </block></xml>"
@@ -1566,6 +1830,10 @@
           "hello-world-first-solution-pizza": "För att få spriten att säga något, anslut kodblocken så här:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"face_pizza_1\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_pizza_1\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
         },
         "helloworld_food_sizes": {
+          "storyboard_changePropBy": "Om du vill ändra en sprites storlek om och om igen (med händelser), använd det här blocket:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"face_strawberry_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>",
+          "storyboard_setProp": "För att ställa in storleken på en sprite bara en gång kan du använda det här blocket:\n\n<xml><block type=\"gamelab_setProp\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"face_strawberry_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">50</title>\n        </block>\n      </value>\n    </block></xml>"
+        },
+        "helloworld_food_sizes_2023": {
           "storyboard_changePropBy": "Om du vill ändra en sprites storlek om och om igen (med händelser), använd det här blocket:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"face_strawberry_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>",
           "storyboard_setProp": "För att ställa in storleken på en sprite bara en gång kan du använda det här blocket:\n\n<xml><block type=\"gamelab_setProp\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"face_strawberry_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">50</title>\n        </block>\n      </value>\n    </block></xml>"
         },
