@@ -166,6 +166,10 @@
           "0ab65920c84bec05a22e09feea7fe4ea": "Mətni bura daxil edin",
           "30fcc1693fa8402931d13ac3a5f396fd": "Bura başlıq əlavə edin"
         },
+        "courseC19_playLab_EOC1_2023": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "Mətni bura daxil edin",
+          "30fcc1693fa8402931d13ac3a5f396fd": "Bura başlıq əlavə edin"
+        },
         "courseC19_playLab_EOC2": {
           "0ab65920c84bec05a22e09feea7fe4ea": "Mətni bura daxil edin",
           "30fcc1693fa8402931d13ac3a5f396fd": "Bura başlıq əlavə edin"
@@ -179,6 +183,10 @@
           "30fcc1693fa8402931d13ac3a5f396fd": "Bura başlıq əlavə edin"
         },
         "courseC19_playLab_EOC2_2021": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "Mətni bura daxil edin",
+          "30fcc1693fa8402931d13ac3a5f396fd": "Bura başlıq əlavə edin"
+        },
+        "courseC19_playLab_EOC2_2023": {
           "0ab65920c84bec05a22e09feea7fe4ea": "Mətni bura daxil edin",
           "30fcc1693fa8402931d13ac3a5f396fd": "Bura başlıq əlavə edin"
         },
@@ -198,6 +206,10 @@
           "0ab65920c84bec05a22e09feea7fe4ea": "Mətni bura daxil edin",
           "30fcc1693fa8402931d13ac3a5f396fd": "Bura başlıq əlavə edin"
         },
+        "courseC19_playLab_EOC3_2023": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "Mətni bura daxil edin",
+          "30fcc1693fa8402931d13ac3a5f396fd": "Bura başlıq əlavə edin"
+        },
         "courseC19_playLab_EOC4": {
           "0ab65920c84bec05a22e09feea7fe4ea": "Mətni bura daxil edin",
           "30fcc1693fa8402931d13ac3a5f396fd": "Bura başlıq əlavə edin"
@@ -211,6 +223,10 @@
           "30fcc1693fa8402931d13ac3a5f396fd": "Bura başlıq əlavə edin"
         },
         "courseC19_playLab_EOC4_2021": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "Mətni bura daxil edin",
+          "30fcc1693fa8402931d13ac3a5f396fd": "Bura başlıq əlavə edin"
+        },
+        "courseC19_playLab_EOC4_2023": {
           "0ab65920c84bec05a22e09feea7fe4ea": "Mətni bura daxil edin",
           "30fcc1693fa8402931d13ac3a5f396fd": "Bura başlıq əlavə edin"
         },
@@ -230,6 +246,10 @@
           "3e11a2dc6edb909c47778bed75a81769": "Tekst bura",
           "5cec903c4d41c49412a70a94d54999ee": "Sən nə isə yaza bilərsən. "
         },
+        "courseC19_playLab_EOC5_2023": {
+          "3e11a2dc6edb909c47778bed75a81769": "Tekst bura",
+          "5cec903c4d41c49412a70a94d54999ee": "Sən nə isə yaza bilərsən. "
+        },
         "courseC19_playLab_EOC6": {
           "3e11a2dc6edb909c47778bed75a81769": "Tekst bura",
           "5cec903c4d41c49412a70a94d54999ee": "Sən nə isə yaza bilərsən. "
@@ -246,11 +266,19 @@
           "3e11a2dc6edb909c47778bed75a81769": "Tekst bura",
           "5cec903c4d41c49412a70a94d54999ee": "Sən nə isə yaza bilərsən. "
         },
+        "courseC19_playLab_EOC6_2023": {
+          "3e11a2dc6edb909c47778bed75a81769": "Tekst bura",
+          "5cec903c4d41c49412a70a94d54999ee": "Sən nə isə yaza bilərsən. "
+        },
         "courseC19_playLab_sample12022": {
           "3e11a2dc6edb909c47778bed75a81769": "Tekst bura",
           "5cec903c4d41c49412a70a94d54999ee": "Sən nə isə yaza bilərsən. "
         },
         "courseC19_playLab_sample1_2021": {
+          "3e11a2dc6edb909c47778bed75a81769": "Tekst bura",
+          "5cec903c4d41c49412a70a94d54999ee": "Sən nə isə yaza bilərsən. "
+        },
+        "courseC19_playLab_sample1_2023": {
           "3e11a2dc6edb909c47778bed75a81769": "Tekst bura",
           "5cec903c4d41c49412a70a94d54999ee": "Sən nə isə yaza bilərsən. "
         },
@@ -260,6 +288,11 @@
           "83db90f8846d091d3532256816f105d9": "Bu Neiladır"
         },
         "courseC19_playLab_sample2_2021": {
+          "3e11a2dc6edb909c47778bed75a81769": "Tekst bura",
+          "5cec903c4d41c49412a70a94d54999ee": "Sən nə isə yaza bilərsən. ",
+          "83db90f8846d091d3532256816f105d9": "Bu Neiladır"
+        },
+        "courseC19_playLab_sample2_2023": {
           "3e11a2dc6edb909c47778bed75a81769": "Tekst bura",
           "5cec903c4d41c49412a70a94d54999ee": "Sən nə isə yaza bilərsən. ",
           "83db90f8846d091d3532256816f105d9": "Bu Neiladır"
@@ -285,6 +318,10 @@
           "30fcc1693fa8402931d13ac3a5f396fd": "Bura başlıq əlavə edin"
         },
         "courseC_PlayLab_eventsFP_2021": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "Mətni bura daxil edin",
+          "30fcc1693fa8402931d13ac3a5f396fd": "Bura başlıq əlavə edin"
+        },
+        "courseC_PlayLab_eventsFP_2023": {
           "0ab65920c84bec05a22e09feea7fe4ea": "Mətni bura daxil edin",
           "30fcc1693fa8402931d13ac3a5f396fd": "Bura başlıq əlavə edin"
         },
@@ -328,6 +365,19 @@
           "f62038e77820419cd978f7b722da560a": "Neçəsi meydana çıxacaq?"
         },
         "courseC_data wizard_2021": {
+          "1c64ef29c853587fbe94f69f05272b79": "quş!",
+          "22f6f6821f4d6d0a08653935b466ac2f": "pişiklər!",
+          "27944770529dd15319a983bee8951560": "pişik!",
+          "336ad881e37e713ba0325500a8fa1f00": "itlər!",
+          "4b23c908b939eaf7918e07142b9e05e0": "əjdaha!",
+          "5b402e6ea05e847a076e03ad74420c45": " quşlar!",
+          "71fc859f3abd22273bad5d0d8eda2173": "Bütün heyvanları sayın!",
+          "7f945c111ba5ea6d7b1547601db6ba0e": "əjdahalar!",
+          "81a2909a24e4ca3b582ab9ee539c080c": "Ev eeyvanlarını sayın",
+          "d93dfc24c6ce3e53d8ee07416c743e60": "it!",
+          "f62038e77820419cd978f7b722da560a": "Neçəsi meydana çıxacaq?"
+        },
+        "courseC_data wizard_2023": {
           "1c64ef29c853587fbe94f69f05272b79": "quş!",
           "22f6f6821f4d6d0a08653935b466ac2f": "pişiklər!",
           "27944770529dd15319a983bee8951560": "pişik!",
@@ -390,6 +440,9 @@
         "courseE_aboutme_3_2021": {
           "ed076287532e86365e841e92bfc50d8c": "Salam, dünya!"
         },
+        "courseE_aboutme_3_2023": {
+          "ed076287532e86365e841e92bfc50d8c": "Salam, dünya!"
+        },
         "courseE_aboutme_4": {
           "ed076287532e86365e841e92bfc50d8c": "Salam, dünya!"
         },
@@ -400,6 +453,9 @@
           "ed076287532e86365e841e92bfc50d8c": "Salam, dünya!"
         },
         "courseE_aboutme_4_2021": {
+          "ed076287532e86365e841e92bfc50d8c": "Salam, dünya!"
+        },
+        "courseE_aboutme_4_2023": {
           "ed076287532e86365e841e92bfc50d8c": "Salam, dünya!"
         },
         "courseE_aboutme_5": {
@@ -415,6 +471,10 @@
           "ed076287532e86365e841e92bfc50d8c": "Salam, dünya!"
         },
         "courseE_aboutme_5_2021": {
+          "6ae99d4d2de5e3cbd29fec87ae7d76eb": "Salam!",
+          "ed076287532e86365e841e92bfc50d8c": "Salam, dünya!"
+        },
+        "courseE_aboutme_5_2023": {
           "6ae99d4d2de5e3cbd29fec87ae7d76eb": "Salam!",
           "ed076287532e86365e841e92bfc50d8c": "Salam, dünya!"
         },
@@ -476,6 +536,16 @@
           "caaf8264ca397dba2d35ef902bbbd953": "Hansı varlıq?",
           "f655df68ec33643278de7e69794e8d76": "Virtual akvarium"
         },
+        "courseF_apps_aquarium_2023": {
+          "0d3e73168beb875063ea0f0302fe32bd": "Hansı balıq?",
+          "78574118d153534fd0925a2f5ca25e79": "Hansı şey?",
+          "795f3202b17cb6bc3d4b771d8c6c9eaf": "digər",
+          "83e4a96aed96436c621b9809e258b309": "balıq",
+          "8a52e7a8d3b4c955d6f7927c6ba3fe72": "məxluq",
+          "a1a2a07348784279a1e7a6f46dc7e353": "Nə əlavə edəcəksiniz?",
+          "caaf8264ca397dba2d35ef902bbbd953": "Hansı varlıq?",
+          "f655df68ec33643278de7e69794e8d76": "Virtual akvarium"
+        },
         "courseF_apps_card": {
           "d1210f945885351b13feb9bbb868aeef": "Neçə yaşdarı olacaq?",
           "e243ac4e74cc5a76adbecf3b4daa1906": "mənim sualım",
@@ -487,6 +557,11 @@
           "ff4d94eeb46da1dbec33fa9cfc2749ee": "Kimin ad günüdür?"
         },
         "courseF_apps_card_-2022-2": {
+          "d1210f945885351b13feb9bbb868aeef": "Neçə yaşdarı olacaq?",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "mənim sualım",
+          "ff4d94eeb46da1dbec33fa9cfc2749ee": "Kimin ad günüdür?"
+        },
+        "courseF_apps_card_2023": {
           "d1210f945885351b13feb9bbb868aeef": "Neçə yaşdarı olacaq?",
           "e243ac4e74cc5a76adbecf3b4daa1906": "mənim sualım",
           "ff4d94eeb46da1dbec33fa9cfc2749ee": "Kimin ad günüdür?"
@@ -524,6 +599,17 @@
           "ae096fbf24d913754b01a1601672bf62": "da!",
           "f0e5da70d264f312a1658d51c130b101": "Adınızı daxil edin:"
         },
+        "courseF_apps_chatbot_2023": {
+          "05584ab56b744b51cd8c4a6e8b3a08ee": "Yaşınızı daxil edin:",
+          "13e575be866ecf5ac3dcbf61ab2048d7": "Neçə yaşın var?",
+          "1f258d88a70309efc1435ef5daa277a0": "Bu gün mənimlə söhbət etdiyiniz üçün təşəkkür edirik!",
+          "605f302ebc9f7fbacba60b15f551a633": "Sevdiyiniz rəng nədir?",
+          "6dfcc5e477ebd3e2c893b3fc86b2eb93": "çox illər!",
+          "91c4549fe2a5e9325c8f8d51afbb751b": "Sevdiyiniz rəngi daxil edin:",
+          "a72e7c5c68af0546e963e510297f5233": "Salam, mən X-9! Sizin adınız nədir?",
+          "ae096fbf24d913754b01a1601672bf62": "da!",
+          "f0e5da70d264f312a1658d51c130b101": "Adınızı daxil edin:"
+        },
         "courseF_apps_collector": {
           "077449fb290b51b9d70c9f2f3d3213bc": "saniyələr",
           "41f2b2212de0105c2a942ebb4a44e449": "Böyük kolleksiyaner oyun",
@@ -537,6 +623,12 @@
           "e8a10c04d72b2f135dabe360c4bdd534": "Qazandın!"
         },
         "courseF_apps_collector_-2022-2": {
+          "077449fb290b51b9d70c9f2f3d3213bc": "saniyələr",
+          "41f2b2212de0105c2a942ebb4a44e449": "Böyük kolleksiyaner oyun",
+          "490082498449bd20ff0199737dfa4916": "Oyun növünü seçin:",
+          "e8a10c04d72b2f135dabe360c4bdd534": "Qazandın!"
+        },
+        "courseF_apps_collector_2023": {
           "077449fb290b51b9d70c9f2f3d3213bc": "saniyələr",
           "41f2b2212de0105c2a942ebb4a44e449": "Böyük kolleksiyaner oyun",
           "490082498449bd20ff0199737dfa4916": "Oyun növünü seçin:",
@@ -572,12 +664,27 @@
           "e522ee28f39133b45497637539ff429b": "Rəqəmi daxil edin:",
           "f6175c6f0b0bcfff0256286315f0eb7b": "Parti Oyunları"
         },
+        "courseF_apps_madlib_2023": {
+          "2f6e9ffcbb531b9f8983aef3ae4242ac": "Bədən hissəsini daxil edin:",
+          "514b8d5320196898a9ced3efe0d4c802": "Sifət daxil edin:",
+          "7c9fbd20ed3a7bcfad08351050ffe0ff": " oyunlar.",
+          "88794317e8c695bbc7bc7d2f35792c7f": "Obyekti daxil edin:",
+          "bf08dd3d1961874f13e77c936aad27e5": "A Blank Space Story",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "mənim sualım",
+          "e522ee28f39133b45497637539ff429b": "Rəqəmi daxil edin:",
+          "f6175c6f0b0bcfff0256286315f0eb7b": "Parti Oyunları"
+        },
         "courseF_editable_card": {
           "d1210f945885351b13feb9bbb868aeef": "Neçə yaşdarı olacaq?",
           "e243ac4e74cc5a76adbecf3b4daa1906": "mənim sualım",
           "ff4d94eeb46da1dbec33fa9cfc2749ee": "Kimin ad günüdür?"
         },
         "courseF_editable_card_-2022-2": {
+          "d1210f945885351b13feb9bbb868aeef": "Neçə yaşdarı olacaq?",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "mənim sualım",
+          "ff4d94eeb46da1dbec33fa9cfc2749ee": "Kimin ad günüdür?"
+        },
+        "courseF_editable_card_2023": {
           "d1210f945885351b13feb9bbb868aeef": "Neçə yaşdarı olacaq?",
           "e243ac4e74cc5a76adbecf3b4daa1906": "mənim sualım",
           "ff4d94eeb46da1dbec33fa9cfc2749ee": "Kimin ad günüdür?"
@@ -606,6 +713,18 @@
           "e243ac4e74cc5a76adbecf3b4daa1906": "mənim sualım",
           "f0e5da70d264f312a1658d51c130b101": "Adınızı daxil edin:"
         },
+        "courseF_editable_chatbot_2023": {
+          "05584ab56b744b51cd8c4a6e8b3a08ee": "Yaşınızı daxil edin:",
+          "13e575be866ecf5ac3dcbf61ab2048d7": "Neçə yaşın var?",
+          "1f258d88a70309efc1435ef5daa277a0": "Bu gün mənimlə söhbət etdiyiniz üçün təşəkkür edirik!",
+          "605f302ebc9f7fbacba60b15f551a633": "Sevdiyiniz rəng nədir?",
+          "6dfcc5e477ebd3e2c893b3fc86b2eb93": "çox illər!",
+          "91c4549fe2a5e9325c8f8d51afbb751b": "Sevdiyiniz rəngi daxil edin:",
+          "a72e7c5c68af0546e963e510297f5233": "Salam, mən X-9! Sizin adınız nədir?",
+          "ae096fbf24d913754b01a1601672bf62": "da!",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "mənim sualım",
+          "f0e5da70d264f312a1658d51c130b101": "Adınızı daxil edin:"
+        },
         "courseF_editable_madlib": {
           "2f6e9ffcbb531b9f8983aef3ae4242ac": "Bədən hissəsini daxil edin:",
           "514b8d5320196898a9ced3efe0d4c802": "Sifət daxil edin:",
@@ -617,6 +736,16 @@
           "f6175c6f0b0bcfff0256286315f0eb7b": "Parti Oyunları"
         },
         "courseF_editable_madlib_-2022-2": {
+          "2f6e9ffcbb531b9f8983aef3ae4242ac": "Bədən hissəsini daxil edin:",
+          "514b8d5320196898a9ced3efe0d4c802": "Sifət daxil edin:",
+          "7c9fbd20ed3a7bcfad08351050ffe0ff": " oyunlar.",
+          "88794317e8c695bbc7bc7d2f35792c7f": "Obyekti daxil edin:",
+          "bf08dd3d1961874f13e77c936aad27e5": "A Blank Space Story",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "mənim sualım",
+          "e522ee28f39133b45497637539ff429b": "Rəqəmi daxil edin:",
+          "f6175c6f0b0bcfff0256286315f0eb7b": "Parti Oyunları"
+        },
+        "courseF_editable_madlib_2023": {
           "2f6e9ffcbb531b9f8983aef3ae4242ac": "Bədən hissəsini daxil edin:",
           "514b8d5320196898a9ced3efe0d4c802": "Sifət daxil edin:",
           "7c9fbd20ed3a7bcfad08351050ffe0ff": " oyunlar.",
@@ -721,16 +850,25 @@
         "courseF_text_answer_-2022-2": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "mənim sualım"
         },
+        "courseF_text_answer_2023": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "mənim sualım"
+        },
         "courseF_text_choice_color": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "mənim sualım"
         },
         "courseF_text_choice_color_-2022-2": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "mənim sualım"
         },
+        "courseF_text_choice_color_2023": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "mənim sualım"
+        },
         "courseF_text_choice_conversation": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "mənim sualım"
         },
         "courseF_text_choice_conversation_-2022-2": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "mənim sualım"
+        },
+        "courseF_text_choice_conversation_2023": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "mənim sualım"
         },
         "courseF_text_choice_events": {
@@ -741,10 +879,17 @@
           "c529a06c3f8518b63ff6dfac482b335c": "Bu planet adlandırın:",
           "e243ac4e74cc5a76adbecf3b4daa1906": "mənim sualım"
         },
+        "courseF_text_choice_events_2023": {
+          "c529a06c3f8518b63ff6dfac482b335c": "Bu planet adlandırın:",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "mənim sualım"
+        },
         "courseF_text_choice_freeplay": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "mənim sualım"
         },
         "courseF_text_choice_freeplay_-2022-2": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "mənim sualım"
+        },
+        "courseF_text_choice_freeplay_2023": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "mənim sualım"
         },
         "courseF_text_choice_interview": {
@@ -752,6 +897,10 @@
           "5bd698afd23bccde289bb0b4aa72a518": "Robot adlandırın."
         },
         "courseF_text_choice_interview_-2022-2": {
+          "34088af1fb721900963462375b3bbe23": "Robot!",
+          "5bd698afd23bccde289bb0b4aa72a518": "Robot adlandırın."
+        },
+        "courseF_text_choice_interview_2023": {
           "34088af1fb721900963462375b3bbe23": "Robot!",
           "5bd698afd23bccde289bb0b4aa72a518": "Robot adlandırın."
         },
@@ -763,10 +912,17 @@
           "d1210f945885351b13feb9bbb868aeef": "Neçə yaşdarı olacaq?",
           "ff4d94eeb46da1dbec33fa9cfc2749ee": "Kimin ad günüdür?"
         },
+        "courseF_text_choice_multiprompt_2023": {
+          "d1210f945885351b13feb9bbb868aeef": "Neçə yaşdarı olacaq?",
+          "ff4d94eeb46da1dbec33fa9cfc2749ee": "Kimin ad günüdür?"
+        },
         "courseF_text_choice_title": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "mənim sualım"
         },
         "courseF_text_choice_title_-2022-2": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "mənim sualım"
+        },
+        "courseF_text_choice_title_2023": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "mənim sualım"
         },
         "courseF_text_concat": {
@@ -774,6 +930,10 @@
           "f6429fe0f1a76611670df7e1234af936": "Sənin adın nədir?"
         },
         "courseF_text_concat_-2022-2": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "mənim sualım",
+          "f6429fe0f1a76611670df7e1234af936": "Sənin adın nədir?"
+        },
+        "courseF_text_concat_2023": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "mənim sualım",
           "f6429fe0f1a76611670df7e1234af936": "Sənin adın nədir?"
         },
@@ -785,10 +945,17 @@
           "e243ac4e74cc5a76adbecf3b4daa1906": "mənim sualım",
           "f6429fe0f1a76611670df7e1234af936": "Sənin adın nədir?"
         },
+        "courseF_text_prompts_2023": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "mənim sualım",
+          "f6429fe0f1a76611670df7e1234af936": "Sənin adın nədir?"
+        },
         "courseF_variables_card": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "mənim sualım"
         },
         "courseF_variables_card_-2022-2": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "mənim sualım"
+        },
+        "courseF_variables_card_2023": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "mənim sualım"
         },
         "courseF_variables_card_finish": {
@@ -799,10 +966,17 @@
           "464a456e0747ec9b09fc9afc6fbd13ed": "Doğum gününüz üçün nə istəyirsiz?",
           "e243ac4e74cc5a76adbecf3b4daa1906": "mənim sualım"
         },
+        "courseF_variables_card_finish_2023": {
+          "464a456e0747ec9b09fc9afc6fbd13ed": "Doğum gününüz üçün nə istəyirsiz?",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "mənim sualım"
+        },
         "courseF_variables_chatbot": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "mənim sualım"
         },
         "courseF_variables_chatbot_-2022-2": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "mənim sualım"
+        },
+        "courseF_variables_chatbot_2023": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "mənim sualım"
         },
         "courseF_variables_chatbot_finish": {
@@ -813,10 +987,17 @@
           "46463b2e9f71f2f15b7238f56f09ba30": "Son",
           "e243ac4e74cc5a76adbecf3b4daa1906": "mənim sualım"
         },
+        "courseF_variables_chatbot_finish_2023": {
+          "46463b2e9f71f2f15b7238f56f09ba30": "Son",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "mənim sualım"
+        },
         "courseF_variables_madlib": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "mənim sualım"
         },
         "courseF_variables_madlib_-2022-2": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "mənim sualım"
+        },
+        "courseF_variables_madlib_2023": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "mənim sualım"
         },
         "courseF_variables_madlib_finish": {
@@ -825,13 +1006,25 @@
         "courseF_variables_madlib_finish_-2022-2": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "mənim sualım"
         },
+        "courseF_variables_madlib_finish_2023": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "mənim sualım"
+        },
         "courseF_variables_predict": {
           "f6429fe0f1a76611670df7e1234af936": "Sənin adın nədir?"
         },
         "courseF_variables_predict_-2022-2": {
           "f6429fe0f1a76611670df7e1234af936": "Sənin adın nədir?"
         },
+        "courseF_variables_predict_2023": {
+          "f6429fe0f1a76611670df7e1234af936": "Sənin adın nədir?"
+        },
         "coursee_helloworld_freeplay": {
+          "6cd3556deb0da54bca060b4c39479839": "Salam, dünya!"
+        },
+        "coursee_helloworld_freeplay_2023": {
+          "6cd3556deb0da54bca060b4c39479839": "Salam, dünya!"
+        },
+        "csc_bookcover_widget_2023": {
           "6cd3556deb0da54bca060b4c39479839": "Salam, dünya!"
         },
         "helloworld_animals_freeplay": {
