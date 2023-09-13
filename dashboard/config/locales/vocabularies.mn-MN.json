@@ -245,6 +245,300 @@
         "debugging/pre-express/2022": {
           "word": "Алдааг засах"
         },
+        "adaptation/csc-adaptations/2023": {
+          "word": "Дасан зохицох",
+          "definition": "Организмын өөрчлөлт нь хүрээлэн буй орчиндоо илүү сайн амьдрах"
+        },
+        "code/csc-adaptations/2023": {
+          "word": "Код",
+          "definition": "(v) Компьютерт зориулсан зааврыг бичих"
+        },
+        "event/csc-adaptations/2023": {
+          "definition": "Ямар нэг зүйл тохиолдоход хүргэдэг үйлдэл"
+        },
+        "evolution/csc-adaptations/2023": {
+          "word": "Хувьсал",
+          "definition": "Хэд хэдэн үеийн туршид зүйлийн шинж чанарын өөрчлөлт"
+        },
+        "migration/csc-adaptations/2023": {
+          "word": "Шилжилт",
+          "definition": "Холын зайд шилжих нь амьтан илүү сайн орчинг эрэлхийлдэг"
+        },
+        "camouflage/csc-adaptations/2023": {
+          "word": "өнгөлөн далдлах",
+          "definition": "Батлан хамгаалах механизм организмууд өөрсдийн гадаад төрхийг далдлах, хүрээлэн буй орчинтойгоо холилдуулахад ашигладаг"
+        },
+        "behavior/csc-adaptations/2023": {
+          "word": "Зан төлөв",
+          "definition": "Хэрэв та sprite дахин дахин гүйцэтгэх хүсэж үйл ажиллагааны багц. "
+        },
+        "code_v_/csc-bookcovers/2023": {
+          "word": "Код (V)",
+          "definition": "компьютерийн зааврыг бичих."
+        },
+        "background/csc-bookcovers/2023": {
+          "word": "Оршил",
+          "definition": "Дэлгэц дээр гол зүйл, эсвэл ард түмний ард харааны."
+        },
+        "character/csc-bookcovers/2023": {
+          "word": "Тэмдэгт",
+          "definition": "Түүхэн дэх хүн, амьтан, оршихуй, бүтээл."
+        },
+        "setting/csc-bookcovers/2023": {
+          "word": "Тохиргоо",
+          "definition": "Түүхийн цаг хугацаа, газар (эсвэл хэзээ, хаана)."
+        },
+        "summary/csc-bookcovers/2023": {
+          "word": "Хураангуй",
+          "definition": "Текстийн хамгийн чухал хэсгүүдийг өөрийн үгээр, илүү богино байдлаар хэлэх"
+        },
+        "code/csc-ecosystems/2023": {
+          "word": "Код",
+          "definition": "(v) Компьютерт зориулсан зааврыг бичих"
+        },
+        "condition/csc-ecosystems/2023": {
+          "definition": "Програм нь үйлдэл хийхийг зөвшөөрөхөөс өмнө үнэн эсэхийг шалгадаг"
+        },
+        "conditionals/csc-ecosystems/2023": {
+          "word": "Нөхцлүүд",
+          "definition": "Зөвхөн тодорхой нөхцөлд ажилладаг мэдэгдлүүд"
+        },
+        "ecosystem/csc-ecosystems/2023": {
+          "word": "Экосистемийн",
+          "definition": "Харилцан үйлчлэлтэй организм ба тэдгээрийн хүрээлэн буй орчны биологийн нийгэмлэг"
+        },
+        "event/csc-ecosystems/2023": {
+          "definition": "Ямар нэг зүйл тохиолдоход хүргэдэг үйлдэл"
+        },
+        "overfishing/csc-ecosystems/2023": {
+          "word": "Хэт загасчлах",
+          "definition": "Тэд үржих боломжтой илүү хурдан загас зайлуулах"
+        },
+        "simulation/csc-ecosystems/2023": {
+          "word": "Симуляци",
+          "definition": "Судалгааны зорилгоор компьютерийн загвар."
+        },
+        "debug/csc-ecosystems/2023": {
+          "word": "Дибаг хийх",
+          "definition": "Олох, код алдаа, эсвэл асуудлыг засах."
+        },
+        "variable/csc-ecosystems/2023": {
+          "word": "Хувьсагч",
+          "definition": "Үнэ цэнийг хадгалах боломжтой сав. "
+        },
+        "ecologist/csc-ecosystems/2023": {
+          "word": "Экологич",
+          "definition": "Амьтан, ургамал хүрээлэн буй орчинтойгоо хэрхэн харьцдаг талаар судалдаг эрдэмтэн."
+        },
+        "energy/csc-ecosystems/2023": {
+          "word": "Эрчим хүч",
+          "definition": "хэрэглэгчдэд үйлдвэрлэгчдийн хүнсний жаазан бэхэлгээг нь организмын хооронд шилжүүлсэн. Эрчим хүчийг организмууд нарийн төвөгтэй ажлуудыг гүйцэтгэхэд ашигладаг."
+        },
+        "food_chain/csc-ecosystems/2023": {
+          "word": "Хүнсний сүлжээ ",
+          "definition": "Идэж буй хоол хүнс, үйлдвэрлэгчээс хэрэглэгчид, идэш тэжээлээс махчин амьтдад хамааралтай бүлэг организмууд."
+        },
+        "code/csc-mappinglandmarks/2023": {
+          "word": "Код"
+        },
+        "landmark/csc-mappinglandmarks/2023": {
+          "word": "зам заагч",
+          "definition": "Оршил гэдэг нь объект (байгалийн эсвэл гар хийцийн) чухал ач холбогдолтой, эсвэл газар амархан танигдах боломжтой болгодог."
+        },
+        "sprite/csc-mappinglandmarks/2023": {
+          "definition": "Таны хөтөлбөрт нь дүрс, эсвэл тэмдэгт."
+        },
+        "map/csc-mappinglandmarks/2023": {
+          "word": "Газрын зураг",
+          "definition": "Физик шинж чанар, хот, зам гэх мэтийг харуулсан газар эсвэл далайн бүсийн дүрслэл."
+        },
+        "pattern/csc-starquilts/2023": {
+          "word": "Хээ",
+          "definition": "Тогтмол, давтагдах байдлаар тохиолддог эсвэл гарч ирдэг зүйл"
+        },
+        "rhombus/csc-starquilts/2023": {
+          "word": "Ромбо",
+          "definition": "Дөрвөн тэнцүү тал бүхий полигон, эсрэг талууд нь параллель, эсрэг өнцөг нь тэнцүү"
+        },
+        "star_quilt/csc-starquilts/2023": {
+          "word": "Оддын халхавчин дор",
+          "definition": "Их Plains нь уугуул америкчуудын дунд уламжлалт, үнэ цэнэтэй бэлэг"
+        },
+        "artist/csc-starquilts/2023": {
+          "word": "Зураач",
+          "definition": "Та түүнийг бараг юу ч зурж болгохын тулд код бичиж болно"
+        },
+        "loop/csc-starquilts/2023": {
+          "definition": "давтан кодын дараалал"
+        },
+        "point/csc-starquilts/2023": {
+          "word": "Цэг",
+          "definition": "Оддын хэлбэрийн нэг хэсэг"
+        },
+        "row/csc-starquilts/2023": {
+          "word": "Мөр",
+          "definition": "Энэ тохиолдолд ромбусын эмх цэгцтэй шугам"
+        },
+        "concentric/csc-starquilts/2023": {
+          "word": "хэмжээсийн",
+          "definition": "Нэг төвийг хуваалцдаг объект эсвэл хэлбэр"
+        },
+        "comments/csc-starquilts/2023": {
+          "word": "Тайлбарууд",
+          "definition": "кодын хэсгийг тайлбарлах өөртөө тэмдэглэл. Тэд хөтөлбөрийг өөрчлөх биш, харин дарааллаар нь таны кодыг байлгах тусалдаг."
+        },
+        "imagery/csc-timecapsule/2023": {
+          "word": "Дүрслэл",
+          "definition": "Шүлэг эсвэл түүхээр бүтээсэн сэтгэцийн зургууд"
+        },
+        "mood/csc-timecapsule/2023": {
+          "definition": "Урлаг эсвэл бичгээр мэдрэмж, уур амьсгал, сэтгэл хөдлөлийн илэрхийлэл."
+        },
+        "sprite/csc-timecapsule/2023": {
+          "definition": "Таны хөтөлбөрт нь зураг, эсвэл тэмдэгт"
+        },
+        "time_capsule/csc-timecapsule/2023": {
+          "definition": "Тодорхой цаг хугацаанд амьдарч буй хэн нэгний амьдралд нэг өдрийг төлөөлдөг дурсамж, өдөр тутмын эд зүйлсийг хадгалах газар. "
+        },
+        "code/poetry/2023": {
+          "word": "Код"
+        },
+        "line/poetry/2023": {
+          "definition": "(яруу найраг) - баруун гар талын захад дуусдаг дараалан зохион байгуулсан шүлгийн дэд хэсэг."
+        },
+        "mood/poetry/2023": {
+          "definition": "Урлаг эсвэл бичгээр мэдрэмж, уур амьсгал, сэтгэл хөдлөлийн илэрхийлэл."
+        },
+        "poem/poetry/2023": {
+          "word": "Шүлэг",
+          "definition": "Уншигчдын оюун санаанд зураг, мэдрэмж, санааг бий болгохын тулд үгсийг ашигладаг бичгийн мөрүүд."
+        },
+        "constructive_feedback/poetry/2023": {
+          "word": "Бүтээлч санал хүсэлт",
+          "definition": "Хэн нэгэнд ажлаа сайжруулахад тусалдаг хүндэтгэлтэй сэтгэгдэл"
+        },
+        "poetry_circle/poetry/2023": {
+          "definition": "Шинэ шүлэг туршиж үзэх, бусдаас бүтээлч санал авах аюулгүй, бүтээлч орон зай"
+        },
+        "debugging/coursea/2023": {
+          "word": "Алдааг засах"
+        },
+        "drop/coursea/2023": {
+          "word": "Унах"
+        },
+        "debugging/courseb/2023": {
+          "word": "Алдааг засах"
+        },
+        "drop/courseb/2023": {
+          "word": "Унах"
+        },
+        "debugging/coursec/2023": {
+          "word": "Алдааг засах"
+        },
+        "sequencing/coursec/2023": {
+          "word": "Дараалуулах"
+        },
+        "data/coursec/2023": {
+          "word": "Өгөгдөл"
+        },
+        "binary/coursec/2023": {
+          "word": "Хоёрт"
+        },
+        "debugging/coursed/2023": {
+          "word": "Алдааг засах"
+        },
+        "conditionals/coursed/2023": {
+          "word": "Нөхцлүүд"
+        },
+        "behavior/coursee/2023": {
+          "word": "Зан төлөв"
+        },
+        "function/coursee/2023": {
+          "word": "Функц"
+        },
+        "conditionals/coursee/2023": {
+          "word": "Нөхцлүүд"
+        },
+        "copyright/coursee/2023": {
+          "word": "Зохиогчийн эрх"
+        },
+        "define/coursee/2023": {
+          "word": "Тодорхойлох"
+        },
+        "behavior/coursef/2023": {
+          "word": "Зан төлөв"
+        },
+        "variable/coursef/2023": {
+          "word": "Хувьсагч"
+        },
+        "input/coursef/2023": {
+          "word": "Оролт"
+        },
+        "machine_learning/coursef/2023": {
+          "word": "Машины сургалт"
+        },
+        "internet/coursef/2023": {
+          "word": "Интернэт"
+        },
+        "packets/coursef/2023": {
+          "word": "Пакетууд"
+        },
+        "define/coursef/2023": {
+          "word": "Тодорхойлох"
+        },
+        "debugging/express/2023": {
+          "word": "Алдааг засах"
+        },
+        "sequencing/express/2023": {
+          "word": "Дараалуулах"
+        },
+        "behavior/express/2023": {
+          "word": "Зан төлөв"
+        },
+        "conditionals/express/2023": {
+          "word": "Нөхцлүүд"
+        },
+        "function/express/2023": {
+          "word": "Функц"
+        },
+        "variable/express/2023": {
+          "word": "Хувьсагч"
+        },
+        "define/express/2023": {
+          "word": "Тодорхойлох"
+        },
+        "drop/pre-express/2023": {
+          "word": "Унах"
+        },
+        "debugging/pre-express/2023": {
+          "word": "Алдааг засах"
+        },
+        "machine_learning/how-ai-works/2023": {
+          "word": "Машины сургалт"
+        },
+        "algorithm/how-ai-works/2023": {
+          "definition": "асуудлыг шийдэх эсвэл шийдвэр гаргах хэд хэдэн алхмууд"
+        },
+        "network/how-ai-works/2023": {
+          "word": "Сүлжээ",
+          "definition": "Хамтдаа холбогдсон зүйлсийн цуглуулга. Эдгээр холболтуудыг дагах нь алгоритм дахь алхмуудыг илэрхийлж болно, нь flowchart шиг."
+        },
+        "large_language_model_llm_/how-ai-works/2023": {
+          "word": "Том хэлний загвар (LLM)",
+          "definition": "Мэдлэгийн маш том бие дээр бэлтгэгдсэн хиймэл оюун ухааны ерөнхий зориулалтын хэлбэр"
+        },
+        "diffusion_ai/how-ai-works/2023": {
+          "word": "AI диффузийн",
+          "definition": "дүрсийг дуу чимээ болгон хөрвүүлэх, үйл явцыг буцаахын тулд AI-ийг сургах"
+        },
+        "gan_generative_adversarial_network_/how-ai-works/2023": {
+          "word": "GAN (Үүсгэгч дайсан сүлжээ)",
+          "definition": "ямар нэг зүйлийг бий болгохын тулд хоёр өрсөлдөгч хиймэл оюун ухааны загварыг ашиглах арга"
+        },
+        "artificial_intelligence/how-ai-works/2023": {
+          "word": "Хиймэл оюун ухаан",
+          "definition": "машин сурах, асуудлыг шийдвэрлэх чадвар."
+        },
         "conditionals/aquatic/unversioned": {
           "word": "Нөхцлүүд"
         },
