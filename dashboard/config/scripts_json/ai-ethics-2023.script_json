@@ -1,48 +1,70 @@
 {
   "script": {
-    "name": "nevada-standards-aligned-fifth-grade-2023-2023",
+    "name": "ai-ethics-2023",
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
       "hideable_lessons": true,
+      "include_student_lesson_plans": true,
       "is_course": true,
       "is_migrated": true,
-      "lesson_extras_available": true,
-      "project_widget_types": [
-        "playlab",
-        "playlab_k1",
-        "artist"
-      ],
-      "tts": true,
       "version_year": "2023"
     },
     "new_name": null,
-    "family_name": "nevada-standards-aligned-fifth-grade-2023",
-    "serialized_at": "2023-09-12 21:24:38 UTC",
+    "family_name": "ai-ethics",
+    "serialized_at": "2023-09-12 21:09:57 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",
     "seeding_key": {
-      "script.name": "nevada-standards-aligned-fifth-grade-2023-2023"
+      "script.name": "ai-ethics-2023"
     }
   },
   "lesson_groups": [
     {
-      "key": "lessonGroup-2",
-      "user_facing": true,
+      "key": "",
+      "user_facing": false,
       "position": 1,
       "properties": {
-        "display_name": "Sprites"
       },
       "seeding_key": {
-        "lesson_group.key": "lessonGroup-2",
-        "script.name": "nevada-standards-aligned-fifth-grade-2023-2023"
+        "lesson_group.key": "",
+        "script.name": "ai-ethics-2023"
       }
     }
   ],
   "lessons": [
-
+    {
+      "key": "lesson-1",
+      "name": "Our AI Code of Ethics",
+      "absolute_position": 1,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-1",
+        "lesson_group.key": "",
+        "script.name": "ai-ethics-2023"
+      }
+    },
+    {
+      "key": "lesson-2",
+      "name": "Societal Impact of Generative AI",
+      "absolute_position": 2,
+      "lockable": false,
+      "has_lesson_plan": true,
+      "relative_position": 2,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "ai-ethics-2023"
+      }
+    }
   ],
   "lesson_activities": [
 
