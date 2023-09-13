@@ -1,0 +1,17 @@
+= inline_css "/generated/csa-ai-skinny-banner.css"
+- header_text = hoc_s(:csa_ai_page_hero_title)
+- text = hoc_s(:csa_ai_skinny_banner_desc)
+- button_label = hoc_s(:call_to_action_explore_course)
+- link_address = "/curriculum/computer-vision"
+
+%aside.csa-ai-skinny-banner.overlay
+  %a{href: link_address}
+    .wrapper
+      .text-wrapper
+        %h1.heading-lg
+          = header_text
+        %p
+          = text
+      .button-wrapper
+        %button= button_label
+.clear
