@@ -217,7 +217,7 @@ module RakeUtils
   end
 
   def self.yarn_install(*args)
-    run_packages_with('yarn', ENV['CI'] && '--immutable', *args)
+    run_packages_with('yarn', ENV['CI'] && '--frozen-lockfile', *args)
   end
 
   def self.npm_rebuild(*args)
