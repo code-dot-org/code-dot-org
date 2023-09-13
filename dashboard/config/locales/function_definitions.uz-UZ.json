@@ -322,6 +322,11 @@
             "name": "mening funksiyam"
           }
         },
+        "Course E: Artist Project_examples_2023": {
+          "my function": {
+            "name": "mening funksiyam"
+          }
+        },
         "Course E: Frozen Project_examples2022": {
           "LOGIC FLOWER": {
             "name": "LOGIC FLOWER"
@@ -386,6 +391,69 @@
           }
         },
         "Course E: Frozen Project_examples_2021": {
+          "LOGIC FLOWER": {
+            "name": "LOGIC FLOWER"
+          },
+          "LOGIC FLOWERS": {
+            "name": "LOGIC FLOWERS"
+          },
+          "LOGIC FLOWERS2": {
+            "name": "LOGIC FLOWERS2"
+          },
+          "draw a circle": {
+            "description": "berilgan radiusda doira chizish",
+            "name": "aylana chizish",
+            "parameters": {
+              "radius": "radius"
+            }
+          },
+          "draw a house": {
+            "name": "uy chizish",
+            "parameters": {
+              "length": "uzunlik"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "parrak chizish",
+            "parameters": {
+              "length": "uzunlik",
+              "repeat": "takrorlash",
+              "sides": "tomonlar"
+            }
+          },
+          "draw a shape": {
+            "name": "shakl chizish",
+            "parameters": {
+              "length": "uzunlik",
+              "sides": "tomonlar"
+            }
+          },
+          "draw a square": {
+            "name": "kvadrat chizish",
+            "parameters": {
+              "length": "uzunlik",
+              "sides": "tomonlar"
+            }
+          },
+          "draw a star": {
+            "description": "uchlari berilgan sonda va tomonlari berilgan uzunlikda bo'lgan yulduzcha chizish",
+            "name": "yulduz chizish",
+            "parameters": {
+              "length": "uzunlik",
+              "points": "ballar"
+            }
+          },
+          "draw a triangle": {
+            "name": "uchburchak chizish",
+            "parameters": {
+              "length": "uzunlik"
+            }
+          },
+          "small flower": {
+            "name": "kichik gul"
+          }
+        },
+        "Course E: Frozen Project_examples_2023": {
           "LOGIC FLOWER": {
             "name": "LOGIC FLOWER"
           },
@@ -653,6 +721,56 @@
             }
           }
         },
+        "CourseD_EOC_artist_2023": {
+          "draw a circle": {
+            "description": "berilgan radiusda doira chizish",
+            "name": "aylana chizish",
+            "parameters": {
+              "radius": "radius"
+            }
+          },
+          "draw a house": {
+            "name": "uy chizish",
+            "parameters": {
+              "length": "uzunlik"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "parrak chizish",
+            "parameters": {
+              "length": "uzunlik",
+              "repeat": "takrorlash",
+              "sides": "tomonlar"
+            }
+          },
+          "draw a shape": {
+            "name": "shakl chizish",
+            "parameters": {
+              "length": "uzunlik",
+              "sides": "tomonlar"
+            }
+          },
+          "draw a square": {
+            "name": "kvadrat chizish",
+            "parameters": {
+              "length": "uzunlik"
+            }
+          },
+          "draw a star": {
+            "description": "uchlari berilgan sonda va tomonlari berilgan uzunlikda bo'lgan yulduzcha chizish",
+            "name": "yulduz chizish",
+            "parameters": {
+              "length": "uzunlik",
+              "points": "ballar"
+            }
+          },
+          "draw a triangle": {
+            "name": "uchburchak chizish",
+            "parameters": {
+              "length": "uzunlik"
+            }
+          }
+        },
         "CourseD_EOC_artist_example2021": {
           "draw a circle": {
             "description": "berilgan radiusda doira chizish",
@@ -753,6 +871,56 @@
             }
           }
         },
+        "CourseD_EOC_artist_example2021_2023": {
+          "draw a circle": {
+            "description": "berilgan radiusda doira chizish",
+            "name": "aylana chizish",
+            "parameters": {
+              "radius": "radius"
+            }
+          },
+          "draw a house": {
+            "name": "uy chizish",
+            "parameters": {
+              "length": "uzunlik"
+            }
+          },
+          "draw a pinwheel": {
+            "name": "parrak chizish",
+            "parameters": {
+              "length": "uzunlik",
+              "repeat": "takrorlash",
+              "sides": "tomonlar"
+            }
+          },
+          "draw a shape": {
+            "name": "shakl chizish",
+            "parameters": {
+              "length": "uzunlik",
+              "sides": "tomonlar"
+            }
+          },
+          "draw a square": {
+            "name": "kvadrat chizish",
+            "parameters": {
+              "length": "uzunlik"
+            }
+          },
+          "draw a star": {
+            "description": "uchlari berilgan sonda va tomonlari berilgan uzunlikda bo'lgan yulduzcha chizish",
+            "name": "yulduz chizish",
+            "parameters": {
+              "length": "uzunlik",
+              "points": "ballar"
+            }
+          },
+          "draw a triangle": {
+            "name": "uchburchak chizish",
+            "parameters": {
+              "length": "uzunlik"
+            }
+          }
+        },
         "CourseF_app_computer": {
           "reset game": {
             "name": "o'yinni qaytarish"
@@ -764,6 +932,11 @@
           }
         },
         "CourseF_app_computer_-2022-2": {
+          "reset game": {
+            "name": "o'yinni qaytarish"
+          }
+        },
+        "CourseF_app_computer_2023": {
           "reset game": {
             "name": "o'yinni qaytarish"
           }
@@ -804,6 +977,11 @@
           }
         },
         "Function intro Ryan_2021": {
+          "build bridge": {
+            "name": "ko'prik qurish"
+          }
+        },
+        "Function intro Ryan_2023": {
           "build bridge": {
             "name": "ko'prik qurish"
           }
@@ -959,6 +1137,11 @@
             "name": "yo'lni tozalash"
           }
         },
+        "MC_HOC_2017_07_Cole_2023": {
+          "clear path": {
+            "name": "yo'lni tozalash"
+          }
+        },
         "MC_HOC_2017_10_RETRY": {
           "fix long path": {
             "name": "uzun yo'lni tuzatish"
@@ -992,6 +1175,14 @@
           }
         },
         "MC_HOC_2017_10_RETRY_2021": {
+          "fix long path": {
+            "name": "uzun yo'lni tuzatish"
+          },
+          "fix short path": {
+            "name": "qisqa yo'lni tuzatish"
+          }
+        },
+        "MC_HOC_2017_10_RETRY_2023": {
           "fix long path": {
             "name": "uzun yo'lni tuzatish"
           },
@@ -1039,6 +1230,14 @@
             "name": "qisqa ko'prik qurish"
           }
         },
+        "MC_HOC_2017_Ali_2023": {
+          "build long bridge": {
+            "name": "uzun ko'prik qurish"
+          },
+          "build short bridge": {
+            "name": "qisqa ko'prik qurish"
+          }
+        },
         "MC_HOC_2017_FP20x20": {
           "function 1": {
             "name": "funksiya 1"
@@ -1072,6 +1271,14 @@
           }
         },
         "MC_HOC_2017_FP20x20_2021": {
+          "function 1": {
+            "name": "funksiya 1"
+          },
+          "function 2": {
+            "name": "funksiya 2"
+          }
+        },
+        "MC_HOC_2017_FP20x20_2023": {
           "function 1": {
             "name": "funksiya 1"
           },
@@ -1564,6 +1771,11 @@
             "name": "potensial yechim"
           }
         },
+        "courseB_artist_loops_challenge2_2023": {
+          "potential solution": {
+            "name": "potensial yechim"
+          }
+        },
         "courseC_artist_prog3": {
           "draw fire": {
             "name": "o't (olov) chizish"
@@ -1660,6 +1872,11 @@
             "name": "kuchaytirgich"
           }
         },
+        "courseC_artist_prog4_2023": {
+          "booster": {
+            "name": "kuchaytirgich"
+          }
+        },
         "courseC_data wizard": {
           "do something": {
             "name": "nimadir qilish"
@@ -1676,6 +1893,11 @@
           }
         },
         "courseC_data wizard_2021": {
+          "do something": {
+            "name": "nimadir qilish"
+          }
+        },
+        "courseC_data wizard_2023": {
           "do something": {
             "name": "nimadir qilish"
           }
@@ -2114,6 +2336,17 @@
             "name": "oltiburchak chizig'ini chizish"
           }
         },
+        "courseE_artist_functions10_2023": {
+          "do something": {
+            "name": "nimadir qilish"
+          },
+          "draw hexagon": {
+            "name": "oltiburchakni chizish"
+          },
+          "draw line of hexagons": {
+            "name": "oltiburchak chizig'ini chizish"
+          }
+        },
         "courseE_artist_functions2": {
           "draw a square": {
             "name": "kvadrat chizish"
@@ -2140,6 +2373,11 @@
           }
         },
         "courseE_artist_functions2_2021": {
+          "draw a square": {
+            "name": "kvadrat chizish"
+          }
+        },
+        "courseE_artist_functions2_2023": {
           "draw a square": {
             "name": "kvadrat chizish"
           }
@@ -2175,6 +2413,11 @@
           }
         },
         "courseE_artist_functions3_2021": {
+          "draw a star": {
+            "name": "yulduz chizish"
+          }
+        },
+        "courseE_artist_functions3_2023": {
           "draw a star": {
             "name": "yulduz chizish"
           }
@@ -2224,6 +2467,11 @@
             "name": "yulduz chizish"
           }
         },
+        "courseE_artist_functions5_2023": {
+          "draw a star": {
+            "name": "yulduz chizish"
+          }
+        },
         "courseE_artist_functions5_copy": {
           "draw a star": {
             "name": "yulduz chizish"
@@ -2269,6 +2517,11 @@
           }
         },
         "courseE_artist_functions7_2021": {
+          "draw a window": {
+            "name": "oyna chizish"
+          }
+        },
+        "courseE_artist_functions7_2023": {
           "draw a window": {
             "name": "oyna chizish"
           }
@@ -2354,6 +2607,20 @@
             "name": "shaxmat katakchalari"
           }
         },
+        "courseE_artist_functions8_2023": {
+          "do something": {
+            "name": "nimadir qilish"
+          },
+          "draw a line of squares": {
+            "name": "kvadratlar chizig'ini chizish"
+          },
+          "draw square": {
+            "name": "kvadrat chizish"
+          },
+          "staggered squares": {
+            "name": "shaxmat katakchalari"
+          }
+        },
         "courseE_artist_functions8a2022": {
           "do something": {
             "name": "nimadir qilish"
@@ -2387,6 +2654,14 @@
           }
         },
         "courseE_artist_functions8a_2021": {
+          "do something": {
+            "name": "nimadir qilish"
+          },
+          "draw a square": {
+            "name": "kvadrat chizish"
+          }
+        },
+        "courseE_artist_functions8a_2023": {
           "do something": {
             "name": "nimadir qilish"
           },
@@ -2439,6 +2714,17 @@
           }
         },
         "courseE_artist_functions8b_2021": {
+          "do something": {
+            "name": "nimadir qilish"
+          },
+          "draw a line of squares": {
+            "name": "kvadratlar chizig'ini chizish"
+          },
+          "draw square": {
+            "name": "kvadrat chizish"
+          }
+        },
+        "courseE_artist_functions8b_2023": {
           "do something": {
             "name": "nimadir qilish"
           },
@@ -2519,6 +2805,20 @@
             "name": "shaxmat katakchalari"
           }
         },
+        "courseE_artist_functions8c_2023": {
+          "do something": {
+            "name": "nimadir qilish"
+          },
+          "draw a line of squares": {
+            "name": "kvadratlar chizig'ini chizish"
+          },
+          "draw square": {
+            "name": "kvadrat chizish"
+          },
+          "staggered squares": {
+            "name": "shaxmat katakchalari"
+          }
+        },
         "courseE_artist_functions9": {
           "do something": {
             "name": "nimadir qilish"
@@ -2575,6 +2875,17 @@
           }
         },
         "courseE_artist_functions9_2021": {
+          "do something": {
+            "name": "nimadir qilish"
+          },
+          "draw line of triangles": {
+            "name": "uchburchaklar chizig'ini chizish"
+          },
+          "draw triangle": {
+            "name": "uchburchak chizish"
+          }
+        },
+        "courseE_artist_functions9_2023": {
           "do something": {
             "name": "nimadir qilish"
           },
@@ -2670,6 +2981,23 @@
             "name": "shaxmat katakchalari"
           }
         },
+        "courseE_artist_functionsProj_2023": {
+          "draw a line of squares": {
+            "name": "kvadratlar chizig'ini chizish"
+          },
+          "draw hexagon": {
+            "name": "oltiburchakni chizish"
+          },
+          "draw line of hexagons": {
+            "name": "oltiburchak chizig'ini chizish"
+          },
+          "draw square": {
+            "name": "kvadrat chizish"
+          },
+          "staggered squares": {
+            "name": "shaxmat katakchalari"
+          }
+        },
         "courseE_artist_functions_challenge1": {
           "do something": {
             "name": "nimadir qilish"
@@ -2711,6 +3039,14 @@
           }
         },
         "courseE_artist_functions_challenge1_2021": {
+          "do something": {
+            "name": "nimadir qilish"
+          },
+          "my design": {
+            "name": "mening dizaynim"
+          }
+        },
+        "courseE_artist_functions_challenge1_2023": {
           "do something": {
             "name": "nimadir qilish"
           },
@@ -2766,6 +3102,14 @@
             "name": "mening dizaynim"
           }
         },
+        "courseE_artist_functions_challenge2_2023": {
+          "do something": {
+            "name": "nimadir qilish"
+          },
+          "my design": {
+            "name": "mening dizaynim"
+          }
+        },
         "courseE_artist_functions_predict1": {
           "draw a square": {
             "name": "kvadrat chizish"
@@ -2792,6 +3136,11 @@
           }
         },
         "courseE_artist_functions_predict1_2021": {
+          "draw a square": {
+            "name": "kvadrat chizish"
+          }
+        },
+        "courseE_artist_functions_predict1_2023": {
           "draw a square": {
             "name": "kvadrat chizish"
           }
@@ -2862,6 +3211,17 @@
           }
         },
         "courseE_artist_functions_predict2_2021": {
+          "do something": {
+            "name": "nimadir qilish"
+          },
+          "draw line of polygons": {
+            "name": "ko'pburchaklar chizig'ini chizish"
+          },
+          "draw polygon": {
+            "name": "ko'pburchak chizish"
+          }
+        },
+        "courseE_artist_functions_predict2_2023": {
           "do something": {
             "name": "nimadir qilish"
           },
@@ -3005,6 +3365,20 @@
             "name": "qovoq maydoni"
           }
         },
+        "courseE_farmer_functions10a1_2023": {
+          "check square for corn": {
+            "name": "makkajo'xori uchun kvadratni tekshiring"
+          },
+          "get all pumpkins": {
+            "name": "barcha oshqovoqlarni terib oling"
+          },
+          "pick along path": {
+            "name": "uzun yo'lni tuzatish"
+          },
+          "pumpkin square": {
+            "name": "qovoq maydoni"
+          }
+        },
         "courseE_farmer_functions10b": {
           "navigate": {
             "name": "yo'l topib yurish"
@@ -3106,6 +3480,23 @@
             "name": "qovoq maydoni"
           }
         },
+        "courseE_farmer_functions11_predict_2023": {
+          "check square for corn": {
+            "name": "makkajo'xori uchun kvadratni tekshiring"
+          },
+          "get all pumpkins": {
+            "name": "barcha oshqovoqlarni terib oling"
+          },
+          "get produce": {
+            "name": "mahsulot olish"
+          },
+          "pick along path": {
+            "name": "uzun yo'lni tuzatish"
+          },
+          "pumpkin square": {
+            "name": "qovoq maydoni"
+          }
+        },
         "courseE_farmer_functions132022": {
           "check for corn": {
             "name": "makkajo'xori borligini tekshirib ko'ring"
@@ -3176,6 +3567,20 @@
             "name": "uzun yo'lni tuzatish"
           }
         },
+        "courseE_farmer_functions13_2023": {
+          "check for corn": {
+            "name": "makkajo'xori borligini tekshirib ko'ring"
+          },
+          "corn rectangle": {
+            "name": "makkajo'xori to'rtburchagi"
+          },
+          "lettuce stairs": {
+            "name": "salat zinalar"
+          },
+          "pick along path": {
+            "name": "uzun yo'lni tuzatish"
+          }
+        },
         "courseE_farmer_functions1a2022": {
           "check square for corn": {
             "name": "makkajo'xori uchun kvadratni tekshiring"
@@ -3201,6 +3606,11 @@
             "name": "makkajo'xori uchun kvadratni tekshiring"
           }
         },
+        "courseE_farmer_functions1a_2023": {
+          "check square for corn": {
+            "name": "makkajo'xori uchun kvadratni tekshiring"
+          }
+        },
         "courseE_farmer_functions2b2022": {
           "check square for corn": {
             "name": "makkajo'xori uchun kvadratni tekshiring"
@@ -3222,6 +3632,11 @@
           }
         },
         "courseE_farmer_functions2b_2021": {
+          "check square for corn": {
+            "name": "makkajo'xori uchun kvadratni tekshiring"
+          }
+        },
+        "courseE_farmer_functions2b_2023": {
           "check square for corn": {
             "name": "makkajo'xori uchun kvadratni tekshiring"
           }
@@ -3264,6 +3679,14 @@
           }
         },
         "courseE_farmer_functions2ba_2021": {
+          "check square for corn": {
+            "name": "makkajo'xori uchun kvadratni tekshiring"
+          },
+          "get all pumpkins": {
+            "name": "barcha oshqovoqlarni terib oling"
+          }
+        },
+        "courseE_farmer_functions2ba_2023": {
           "check square for corn": {
             "name": "makkajo'xori uchun kvadratni tekshiring"
           },
@@ -3331,6 +3754,17 @@
             "name": "uzun yo'lni tuzatish"
           }
         },
+        "courseE_farmer_functions3c1_2023": {
+          "check square for corn": {
+            "name": "makkajo'xori uchun kvadratni tekshiring"
+          },
+          "get all pumpkins": {
+            "name": "barcha oshqovoqlarni terib oling"
+          },
+          "pick along path": {
+            "name": "uzun yo'lni tuzatish"
+          }
+        },
         "courseE_farmer_functions3c2022": {
           "check square for corn": {
             "name": "makkajo'xori uchun kvadratni tekshiring"
@@ -3364,6 +3798,14 @@
           }
         },
         "courseE_farmer_functions3c_2021": {
+          "check square for corn": {
+            "name": "makkajo'xori uchun kvadratni tekshiring"
+          },
+          "get all pumpkins": {
+            "name": "barcha oshqovoqlarni terib oling"
+          }
+        },
+        "courseE_farmer_functions3c_2023": {
           "check square for corn": {
             "name": "makkajo'xori uchun kvadratni tekshiring"
           },
@@ -3411,6 +3853,11 @@
             "name": "bog' maydoni"
           }
         },
+        "courseE_farmer_functions7a1_2023": {
+          "garden square": {
+            "name": "bog' maydoni"
+          }
+        },
         "courseE_farmer_functions8a12022": {
           "garden square": {
             "name": "bog' maydoni"
@@ -3432,6 +3879,11 @@
           }
         },
         "courseE_farmer_functions8a1_2021": {
+          "garden square": {
+            "name": "bog' maydoni"
+          }
+        },
+        "courseE_farmer_functions8a1_2023": {
           "garden square": {
             "name": "bog' maydoni"
           }
@@ -3462,6 +3914,11 @@
           }
         },
         "courseE_farmer_functions9a1_2021": {
+          "garden square": {
+            "name": "bog' maydoni"
+          }
+        },
+        "courseE_farmer_functions9a1_2023": {
           "garden square": {
             "name": "bog' maydoni"
           }
@@ -3502,6 +3959,11 @@
           }
         },
         "courseF_apps_collector_-2022-2": {
+          "end game": {
+            "name": "o'yin oxiri"
+          }
+        },
+        "courseF_apps_collector_2023": {
           "end game": {
             "name": "o'yin oxiri"
           }

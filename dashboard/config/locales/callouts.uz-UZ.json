@@ -92,6 +92,9 @@
         "CourseD_Dance_2020_01_2021": {
           "dance_callout_01": "Bu yerda raqqosning turini tanlang."
         },
+        "CourseD_Dance_2020_01_2023": {
+          "dance_callout_01": "Bu yerda raqqosning turini tanlang."
+        },
         "CourseD_Dance_2020_02": {
           "arrow_buttons": "Raqqosni boshqarish uchun o'q tugmachalarini bosing.",
           "dance_callout_11_a": "Ushbu blokni dasturingizga qo'shing."
@@ -104,6 +107,10 @@
           "arrow_buttons": "Raqqosni boshqarish uchun o'q tugmachalarini bosing.",
           "dance_callout_11_a": "Ushbu blokni dasturingizga qo'shing."
         },
+        "CourseD_Dance_2020_02_2023": {
+          "arrow_buttons": "Raqqosni boshqarish uchun o'q tugmachalarini bosing.",
+          "dance_callout_11_a": "Ushbu blokni dasturingizga qo'shing."
+        },
         "CourseD_Dance_2020_04": {
           "dance_callout_02": "Ushbu blokni dasturingizga qo'shing!"
         },
@@ -111,6 +118,9 @@
           "dance_callout_02": "Ushbu blokni dasturingizga qo'shing!"
         },
         "CourseD_Dance_2020_04_2021": {
+          "dance_callout_02": "Ushbu blokni dasturingizga qo'shing!"
+        },
+        "CourseD_Dance_2020_04_2023": {
           "dance_callout_02": "Ushbu blokni dasturingizga qo'shing!"
         },
         "CourseD_Dance_2020_05": {
@@ -122,6 +132,9 @@
         "CourseD_Dance_2020_05_2021": {
           "dance_callout_05": "Dasturingizga yangi hodisa qo'shing."
         },
+        "CourseD_Dance_2020_05_2023": {
+          "dance_callout_05": "Dasturingizga yangi hodisa qo'shing."
+        },
         "CourseD_Dance_2020_06": {
           "dance_party_11_5_groups": "Yangi blok!"
         },
@@ -129,6 +142,9 @@
           "dance_party_11_5_groups": "Yangi blok!"
         },
         "CourseD_Dance_2020_06_2021": {
+          "dance_party_11_5_groups": "Yangi blok!"
+        },
+        "CourseD_Dance_2020_06_2023": {
           "dance_party_11_5_groups": "Yangi blok!"
         },
         "CourseD_Dance_2020_07": {
@@ -140,6 +156,9 @@
         "CourseD_Dance_2020_07_2021": {
           "setprop_hint": "Yangi blok!"
         },
+        "CourseD_Dance_2020_07_2023": {
+          "setprop_hint": "Yangi blok!"
+        },
         "CourseD_Dance_2020_09": {
           "new_block_3": "Yangi blok!",
           "new_block_4": "Yangi blok!"
@@ -149,6 +168,10 @@
           "new_block_4": "Yangi blok!"
         },
         "CourseD_Dance_2020_09_2021": {
+          "new_block_3": "Yangi blok!",
+          "new_block_4": "Yangi blok!"
+        },
+        "CourseD_Dance_2020_09_2023": {
           "new_block_3": "Yangi blok!",
           "new_block_4": "Yangi blok!"
         },
@@ -176,6 +199,10 @@
           "pointerlocation": "Mavzu blokini bu yerga torting."
         },
         "CourseF_outbreak2_-2022-2": {
+          "minitoolbox": "Blokni kengaytirish uchun shu yerni bosing.",
+          "pointerlocation": "Mavzu blokini bu yerga torting."
+        },
+        "CourseF_outbreak2_2023": {
           "minitoolbox": "Blokni kengaytirish uchun shu yerni bosing.",
           "pointerlocation": "Mavzu blokini bu yerga torting."
         },
@@ -236,6 +263,9 @@
         "Fish Tank 3-validated_2021": {
           "spritelab_comment": "O'zingiz yoki o'qituvchingiz kodingiz ishlashi haqida eslatma qoldirishi uchun ushbu blokdan foydalaning."
         },
+        "Fish Tank 3-validated_2023": {
+          "spritelab_comment": "O'zingiz yoki o'qituvchingiz kodingiz ishlashi haqida eslatma qoldirishi uchun ushbu blokdan foydalaning."
+        },
         "Function intro Ryan": {
           "Function_intro_Ryan_1": "Ushbu kichik ko'rsatma kompyuterga bir xil nomli katta kod qismini ish maydonida ishlashini aytadi."
         },
@@ -249,6 +279,9 @@
           "Function_intro_Ryan_1": "Ushbu kichik ko'rsatma kompyuterga bir xil nomli katta kod qismini ish maydonida ishlashini aytadi."
         },
         "Function intro Ryan_2021": {
+          "Function_intro_Ryan_1": "Ushbu kichik ko'rsatma kompyuterga bir xil nomli katta kod qismini ish maydonida ishlashini aytadi."
+        },
+        "Function intro Ryan_2023": {
           "Function_intro_Ryan_1": "Ushbu kichik ko'rsatma kompyuterga bir xil nomli katta kod qismini ish maydonida ishlashini aytadi."
         },
         "Geometric Sun": {
@@ -297,6 +330,9 @@
         "MC_HOC_2017_03_Cole_2021": {
           "MC_HOC_2017_03_Cole_1": "Bu \"takrorlash\" sikli! Uni ish maydoniga joylang va qayta-qayta ishlatmoqchi bo'lgan kodni qo'shing."
         },
+        "MC_HOC_2017_03_Cole_2023": {
+          "MC_HOC_2017_03_Cole_1": "Bu \"takrorlash\" sikli! Uni ish maydoniga joylang va qayta-qayta ishlatmoqchi bo'lgan kodni qo'shing."
+        },
         "MC_HOC_2017_04_Cole": {
           "MC_HOC_2017_04_Cole_a": "Agent suv ustida suzib yurishi mumkin, ammo o'yinchi bunga qodir emas!"
         },
@@ -310,6 +346,9 @@
           "MC_HOC_2017_04_Cole_a": "Agent suv ustida suzib yurishi mumkin, ammo o'yinchi bunga qodir emas!"
         },
         "MC_HOC_2017_04_Cole_2021": {
+          "MC_HOC_2017_04_Cole_a": "Agent suv ustida suzib yurishi mumkin, ammo o'yinchi bunga qodir emas!"
+        },
+        "MC_HOC_2017_04_Cole_2023": {
           "MC_HOC_2017_04_Cole_a": "Agent suv ustida suzib yurishi mumkin, ammo o'yinchi bunga qodir emas!"
         },
         "MC_HOC_2017_06_Cole": {
@@ -327,6 +366,9 @@
         "MC_HOC_2017_06_Cole_2021": {
           "MC_HOC_2017_06_Cole_1": "Siz ushbu bloklarni tashlay olmaysiz, lekin ularni tahrirlashingiz mumkin!"
         },
+        "MC_HOC_2017_06_Cole_2023": {
+          "MC_HOC_2017_06_Cole_1": "Siz ushbu bloklarni tashlay olmaysiz, lekin ularni tahrirlashingiz mumkin!"
+        },
         "MC_HOC_2017_Ali": {
           "MC_HOC_2017_08_RY_1": "Agent lava ustida yurishi mumkin, ammo Stiv va Aleks bunga qodir emas!  "
         },
@@ -340,6 +382,9 @@
           "MC_HOC_2017_08_RY_1": "Agent lava ustida yurishi mumkin, ammo Stiv va Aleks bunga qodir emas!  "
         },
         "MC_HOC_2017_Ali_2021": {
+          "MC_HOC_2017_08_RY_1": "Agent lava ustida yurishi mumkin, ammo Stiv va Aleks bunga qodir emas!  "
+        },
+        "MC_HOC_2017_Ali_2023": {
           "MC_HOC_2017_08_RY_1": "Agent lava ustida yurishi mumkin, ammo Stiv va Aleks bunga qodir emas!  "
         },
         "NEW Course 4 Artist Functions 7": {
@@ -404,6 +449,9 @@
         "Overworld Chop Trees_2021": {
           "craft_callout_preplaced": "Sizga boshlash uchun bu yerga bir nechta bloklarni oldindan joylashtirdik"
         },
+        "Overworld Chop Trees_2023": {
+          "craft_callout_preplaced": "Sizga boshlash uchun bu yerga bir nechta bloklarni oldindan joylashtirdik"
+        },
         "Overworld House Frame Chosen": {
           "craft_callout_preplaced_house": "Ushbu kod uyingizni qurishni boshlaydi. Siz buni tugata olasizmi?"
         },
@@ -417,6 +465,9 @@
           "craft_callout_preplaced_house": "Ushbu kod uyingizni qurishni boshlaydi. Siz buni tugata olasizmi?"
         },
         "Overworld House Frame Chosen_2021": {
+          "craft_callout_preplaced_house": "Ushbu kod uyingizni qurishni boshlaydi. Siz buni tugata olasizmi?"
+        },
+        "Overworld House Frame Chosen_2023": {
           "craft_callout_preplaced_house": "Ushbu kod uyingizni qurishni boshlaydi. Siz buni tugata olasizmi?"
         },
         "Overworld Move to Sheep": {
@@ -439,6 +490,10 @@
           "craft_drag_block_callout": "\"move forward\" bo‘lagini olib boshqa bo‘laklar pastiga biriktiring.",
           "craft_run_button_callout": "Dasturingizni sinab ko‘rish uchun \"Ishga tushirish\" tugmachasini bosing"
         },
+        "Overworld Move to Sheep_2023": {
+          "craft_drag_block_callout": "\"move forward\" bo‘lagini olib boshqa bo‘laklar pastiga biriktiring.",
+          "craft_run_button_callout": "Dasturingizni sinab ko‘rish uchun \"Ishga tushirish\" tugmachasini bosing"
+        },
         "Overworld Place Wall": {
           "craft_inside_repeat": "Bloklarni bu yerga joylashtirish orqali amallarni takrorlang"
         },
@@ -452,6 +507,9 @@
           "craft_inside_repeat": "Bloklarni bu yerga joylashtirish orqali amallarni takrorlang"
         },
         "Overworld Place Wall_2021": {
+          "craft_inside_repeat": "Bloklarni bu yerga joylashtirish orqali amallarni takrorlang"
+        },
+        "Overworld Place Wall_2023": {
           "craft_inside_repeat": "Bloklarni bu yerga joylashtirish orqali amallarni takrorlang"
         },
         "Robot Doodle": {
@@ -475,6 +533,9 @@
         "Underground Avoiding Lava_2021": {
           "craft_callout_moveforward": "Ushbu kod lavani tekshiradi, oldinga siljish uchun buyruq qo‘sha olasizmi?"
         },
+        "Underground Avoiding Lava_2023": {
+          "craft_callout_moveforward": "Ushbu kod lavani tekshiradi, oldinga siljish uchun buyruq qo‘sha olasizmi?"
+        },
         "Underground Iron": {
           "craft_what_is_iron": "Bu temirni qazib oling!"
         },
@@ -488,6 +549,9 @@
           "craft_what_is_iron": "Bu temirni qazib oling!"
         },
         "Underground Iron_2021": {
+          "craft_what_is_iron": "Bu temirni qazib oling!"
+        },
+        "Underground Iron_2023": {
           "craft_what_is_iron": "Bu temirni qazib oling!"
         },
         "Virtual Pet 2_2019": {
@@ -530,10 +594,16 @@
         "courseA_EOC_playlab_animals2022": {
           "question_mark": "?"
         },
+        "courseA_EOC_playlab_animals_2023": {
+          "question_mark": "?"
+        },
         "courseA_EOC_playlab_fantasy": {
           "question_mark": "?"
         },
         "courseA_EOC_playlab_fantasy2022": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_fantasy_2023": {
           "question_mark": "?"
         },
         "courseA_EOC_playlab_people": {
@@ -542,10 +612,16 @@
         "courseA_EOC_playlab_people2022": {
           "question_mark": "?"
         },
+        "courseA_EOC_playlab_people_2023": {
+          "question_mark": "?"
+        },
         "courseA_artist_loops4": {
           "courseA_artist_loops4_1": "Bu son sizga jumboqda ushbu bloklardan nechtasini ishlatishingiz mumkinligini bildiradi."
         },
         "courseA_artist_loops42022": {
+          "courseA_artist_loops4_1": "Bu son sizga jumboqda ushbu bloklardan nechtasini ishlatishingiz mumkinligini bildiradi."
+        },
+        "courseA_artist_loops42022_2023": {
           "courseA_artist_loops4_1": "Bu son sizga jumboqda ushbu bloklardan nechtasini ishlatishingiz mumkinligini bildiradi."
         },
         "courseA_artist_loops4_2018": {
@@ -566,6 +642,9 @@
         "courseA_artist_loops72022": {
           "courseA_artist_loops7_1": "Bu raqam ushbu turdagi bloklardan faqat bittasi yakuniy javobda ishlatilishini anglatadi."
         },
+        "courseA_artist_loops72022_2023": {
+          "courseA_artist_loops7_1": "Bu raqam ushbu turdagi bloklardan faqat bittasi yakuniy javobda ishlatilishini anglatadi."
+        },
         "courseA_artist_loops7_2018": {
           "courseA_artist_loops7_1": "Bu raqam ushbu turdagi bloklardan faqat bittasi yakuniy javobda ishlatilishini anglatadi."
         },
@@ -582,6 +661,9 @@
           "courseA_artist_loops8_1": "Agar kerak bo'lsa, siz biron bir chiziqdan orqaga chekinishingiz mumkinligini bilasizmi?"
         },
         "courseA_artist_loops82022": {
+          "courseA_artist_loops8_1": "Agar kerak bo'lsa, siz biron bir chiziqdan orqaga chekinishingiz mumkinligini bilasizmi?"
+        },
+        "courseA_artist_loops82022_2023": {
           "courseA_artist_loops8_1": "Agar kerak bo'lsa, siz biron bir chiziqdan orqaga chekinishingiz mumkinligini bilasizmi?"
         },
         "courseA_artist_loops8_2018": {
@@ -611,6 +693,9 @@
         "courseA_collector_loops1_2021": {
           "courseA_collector_loops1_1": "Xazinani olish uchun ushbu blokdan foydalaning."
         },
+        "courseA_collector_loops1_2023": {
+          "courseA_collector_loops1_1": "Xazinani olish uchun ushbu blokdan foydalaning."
+        },
         "courseA_collector_loops3": {
           "gradek_adventurer_loops2_1": "Bu son sizga jumboqda ushbu bloklardan nechtasini ishlatishingiz mumkinligini bildiradi."
         },
@@ -627,6 +712,9 @@
           "gradek_adventurer_loops2_1": "Bu son sizga jumboqda ushbu bloklardan nechtasini ishlatishingiz mumkinligini bildiradi."
         },
         "courseA_collector_loops3_2021": {
+          "gradek_adventurer_loops2_1": "Bu son sizga jumboqda ushbu bloklardan nechtasini ishlatishingiz mumkinligini bildiradi."
+        },
+        "courseA_collector_loops3_2023": {
           "gradek_adventurer_loops2_1": "Bu son sizga jumboqda ushbu bloklardan nechtasini ishlatishingiz mumkinligini bildiradi."
         },
         "courseA_collector_preLoops1": {
@@ -659,6 +747,9 @@
         "courseA_maze_ramp2_2021": {
           "courseC_maze_programming2_1": "Bu asboblar qutichasi. Bu yerda boshqotirmangizni yechish uchun zarur bo‘lgan qo‘shimcha bo‘laklarni topasiz."
         },
+        "courseA_maze_ramp2_2023": {
+          "courseC_maze_programming2_1": "Bu asboblar qutichasi. Bu yerda boshqotirmangizni yechish uchun zarur bo‘lgan qo‘shimcha bo‘laklarni topasiz."
+        },
         "courseA_maze_ramp3a_2018": {
           "courseC_maze_programming2_1": "Bu asboblar qutichasi. Bu yerda boshqotirmangizni yechish uchun zarur bo‘lgan qo‘shimcha bo‘laklarni topasiz."
         },
@@ -680,6 +771,9 @@
         "courseA_maze_seq1_2021": {
           "courseA_maze_seq1_1": "Maslahat uchun lampochkani bosing!"
         },
+        "courseA_maze_seq1_2023": {
+          "courseA_maze_seq1_1": "Maslahat uchun lampochkani bosing!"
+        },
         "courseA_maze_seq2": {
           "courseA_maze_seqA_callout1": "Dastur orqali bosqichma-bosqich o'tish uchun qadam tugmachasidan foydalaning. Bu sizga xatoni topishda yordam beradi!"
         },
@@ -690,6 +784,9 @@
           "courseA_playlab_events4_callout1": "Bu ogohlantirish"
         },
         "courseA_playLab_events42022": {
+          "courseA_playlab_events4_callout1": "Bu ogohlantirish"
+        },
+        "courseA_playLab_events42022_2023": {
           "courseA_playlab_events4_callout1": "Bu ogohlantirish"
         },
         "courseA_playLab_events4_2018": {
@@ -710,6 +807,9 @@
         "courseA_playLab_events52022": {
           "courseA_playLab_events5_1": "Hodisa o'qining yo'nalishini o'zgartirish uchun shu yerni bosing."
         },
+        "courseA_playLab_events52022_2023": {
+          "courseA_playLab_events5_1": "Hodisa o'qining yo'nalishini o'zgartirish uchun shu yerni bosing."
+        },
         "courseA_playLab_events5_2018": {
           "courseA_playLab_events5_1": "Hodisa o'qining yo'nalishini o'zgartirish uchun shu yerni bosing."
         },
@@ -728,6 +828,9 @@
         "courseA_playLab_events62022": {
           "courseA_playLab_events6_1": "Bu sizga \"tasodifiy\" ovozni tanlashga imkon beradi, ya'ni siz ovozni eshitmaguningizcha nima bo'lishni bilmaysiz!"
         },
+        "courseA_playLab_events62022_2023": {
+          "courseA_playLab_events6_1": "Bu sizga \"tasodifiy\" ovozni tanlashga imkon beradi, ya'ni siz ovozni eshitmaguningizcha nima bo'lishni bilmaysiz!"
+        },
         "courseA_playLab_events6_2018": {
           "courseA_playLab_events6_1": "Bu sizga \"tasodifiy\" ovozni tanlashga imkon beradi, ya'ni siz ovozni eshitmaguningizcha nima bo'lishni bilmaysiz!"
         },
@@ -743,6 +846,9 @@
         "courseB_Scrat_ramp12022": {
           "grade2_CaringForNewPet_0_1": "Barcha bo‘laklarni bir biriga ulaganingizdan so‘ng, dasturingizni ishga tushirish uchun \"Run\" tugmachasini bo‘sing."
         },
+        "courseB_Scrat_ramp12022_2023": {
+          "grade2_CaringForNewPet_0_1": "Barcha bo‘laklarni bir biriga ulaganingizdan so‘ng, dasturingizni ishga tushirish uchun \"Run\" tugmachasini bo‘sing."
+        },
         "courseB_Scrat_ramp1_2018": {
           "grade2_CaringForNewPet_0_1": "Barcha bo‘laklarni bir biriga ulaganingizdan so‘ng, dasturingizni ishga tushirish uchun \"Run\" tugmachasini bo‘sing."
         },
@@ -756,6 +862,9 @@
           "grade2_CaringForNewPet_0_1": "Barcha bo‘laklarni bir biriga ulaganingizdan so‘ng, dasturingizni ishga tushirish uchun \"Run\" tugmachasini bo‘sing."
         },
         "courseB_Scrat_ramp3a2022": {
+          "courseC_maze_programming2_1": "Bu asboblar qutichasi. Bu yerda boshqotirmangizni yechish uchun zarur bo‘lgan qo‘shimcha bo‘laklarni topasiz."
+        },
+        "courseB_Scrat_ramp3a2022_2023": {
           "courseC_maze_programming2_1": "Bu asboblar qutichasi. Bu yerda boshqotirmangizni yechish uchun zarur bo‘lgan qo‘shimcha bo‘laklarni topasiz."
         },
         "courseB_Scrat_ramp3a_2019": {
@@ -785,6 +894,9 @@
         "courseB_artist_loops3_2021": {
           "courseB_artist_loops3_1": "Ushbu bloklardan faqat bittasi asboblar qutisida mavjud. Siz uni qanday ishlatasiz?"
         },
+        "courseB_artist_loops3_2023": {
+          "courseB_artist_loops3_1": "Ushbu bloklardan faqat bittasi asboblar qutisida mavjud. Siz uni qanday ishlatasiz?"
+        },
         "courseB_artist_loops5": {
           "courseB_artist_loops5_1": "Ushbu raqam asboblar qutisida ushbu blokdan boshqa hech narsa qolmaganligini anglatadi."
         },
@@ -806,6 +918,9 @@
         "courseB_collector_loops1_2021": {
           "courseB_collector_loops1_1": "Xazinani olish uchun ushbu blokdan foydalaning."
         },
+        "courseB_collector_loops1_2023": {
+          "courseB_collector_loops1_1": "Xazinani olish uchun ushbu blokdan foydalaning."
+        },
         "courseB_maze_seq1": {
           "courseB_maze_seq1": "Maslahat uchun lampochkani bosing!"
         },
@@ -822,6 +937,9 @@
           "courseB_maze_seq1": "Maslahat uchun lampochkani bosing!"
         },
         "courseB_maze_seq1_2021": {
+          "courseB_maze_seq1": "Maslahat uchun lampochkani bosing!"
+        },
+        "courseB_maze_seq1_2023": {
           "courseB_maze_seq1": "Maslahat uchun lampochkani bosing!"
         },
         "courseB_maze_seq2": {
@@ -848,6 +966,9 @@
         "courseB_playlab_events6_2021": {
           "courseB_playlab_events6_a": "Yo'nalishlarni o'zgartirish uchun yashil dropdaundagi o'qdan foydalaning."
         },
+        "courseB_playlab_events6_2023": {
+          "courseB_playlab_events6_a": "Yo'nalishlarni o'zgartirish uchun yashil dropdaundagi o'qdan foydalaning."
+        },
         "courseC19_playLab_EOC3": {
           "courseE_playLab_scaffold3_1": "Keyingi bosqichga o'tish uchun aktyorni ushbu bayroqqa olib boring."
         },
@@ -858,6 +979,9 @@
           "courseE_playLab_scaffold3_1": "Keyingi bosqichga o'tish uchun aktyorni ushbu bayroqqa olib boring."
         },
         "courseC19_playLab_EOC3_2021": {
+          "courseE_playLab_scaffold3_1": "Keyingi bosqichga o'tish uchun aktyorni ushbu bayroqqa olib boring."
+        },
+        "courseC19_playLab_EOC3_2023": {
           "courseE_playLab_scaffold3_1": "Keyingi bosqichga o'tish uchun aktyorni ushbu bayroqqa olib boring."
         },
         "courseC_PlayLab_events8": {
@@ -878,6 +1002,9 @@
         "courseC_PlayLab_events8_2021": {
           "courseC_PlayLab_events8_callout1": " Waddles va Chomp to‘qnashganida ushbu blokdan foydalaning!"
         },
+        "courseC_PlayLab_events8_2023": {
+          "courseC_PlayLab_events8_callout1": " Waddles va Chomp to‘qnashganida ushbu blokdan foydalaning!"
+        },
         "courseC_PlayLab_events_challenge1": {
           "courseC_PlayLab_events_challenge1_1": "Ushbu blok aktyorlarni o‘yin maydonining turli qismlariga ko‘chirishga imkon beradi."
         },
@@ -896,7 +1023,13 @@
         "courseC_PlayLab_events_challenge1_2021": {
           "courseC_PlayLab_events_challenge1_1": "Ushbu blok aktyorlarni o‘yin maydonining turli qismlariga ko‘chirishga imkon beradi."
         },
+        "courseC_PlayLab_events_challenge1_2023": {
+          "courseC_PlayLab_events_challenge1_1": "Ushbu blok aktyorlarni o‘yin maydonining turli qismlariga ko‘chirishga imkon beradi."
+        },
         "courseC_PlayLab_events_lesson_extras": {
+          "courseC_PlayLab_events_challenge1_1": "Ushbu blok aktyorlarni o‘yin maydonining turli qismlariga ko‘chirishga imkon beradi."
+        },
+        "courseC_PlayLab_events_lesson_extras_2023": {
           "courseC_PlayLab_events_challenge1_1": "Ushbu blok aktyorlarni o‘yin maydonining turli qismlariga ko‘chirishga imkon beradi."
         },
         "courseC_artist_loops1a2022": {
@@ -911,6 +1044,9 @@
         "courseC_artist_loops1a_2021": {
           "jumpto_callout": "Bu blok bu loyiha uchun juda muhim. Uni ishlatishga ishonch hosil qiling!"
         },
+        "courseC_artist_loops1a_2023": {
+          "jumpto_callout": "Bu blok bu loyiha uchun juda muhim. Uni ishlatishga ishonch hosil qiling!"
+        },
         "courseC_artist_loops1b2022": {
           "sticker2": "Buni dasturingizning o'rtasiga qo'shing."
         },
@@ -921,6 +1057,9 @@
           "sticker2": "Buni dasturingizning o'rtasiga qo'shing."
         },
         "courseC_artist_loops1b_2021": {
+          "sticker2": "Buni dasturingizning o'rtasiga qo'shing."
+        },
+        "courseC_artist_loops1b_2023": {
           "sticker2": "Buni dasturingizning o'rtasiga qo'shing."
         },
         "courseC_artist_loopsPrePre1a": {
@@ -941,6 +1080,9 @@
         "courseC_artist_prog2_2021": {
           "slider": "Bu yerda siz dasturni sekinlashtira olasiz."
         },
+        "courseC_artist_prog2_2023": {
+          "slider": "Bu yerda siz dasturni sekinlashtira olasiz."
+        },
         "courseC_collector_prog1": {
           "courseC_collector_prog1_1": "Asboblar qutisidagi ba'zi yangi bloklarni ko'ryapsizmi? Xavotir olmang, biz ularni keyinchalik qanday ishlatishni sahnada ko'rsatib beramiz."
         },
@@ -957,6 +1099,9 @@
           "courseC_collector_prog1_1": "Asboblar qutisidagi ba'zi yangi bloklarni ko'ryapsizmi? Xavotir olmang, biz ularni boshqa darsda qanday ishlatishni ko'rsatamiz."
         },
         "courseC_collector_prog1_2021": {
+          "courseC_collector_prog1_1": "Asboblar qutisidagi ba'zi yangi bloklarni ko'ryapsizmi? Xavotir olmang, biz ularni boshqa darsda qanday ishlatishni ko'rsatamiz."
+        },
+        "courseC_collector_prog1_2023": {
           "courseC_collector_prog1_1": "Asboblar qutisidagi ba'zi yangi bloklarni ko'ryapsizmi? Xavotir olmang, biz ularni boshqa darsda qanday ishlatishni ko'rsatamiz."
         },
         "courseC_collector_prog7": {
@@ -977,6 +1122,9 @@
         "courseC_collector_prog7_2021": {
           "courseC_collector_prog7_1": "Agar sizga kerak bo‘lsa, uskunalar panelidan ko‘proq bloklarni olishingiz mumkin!"
         },
+        "courseC_collector_prog7_2023": {
+          "courseC_collector_prog7_1": "Agar sizga kerak bo‘lsa, uskunalar panelidan ko‘proq bloklarni olishingiz mumkin!"
+        },
         "courseC_harvester_loops1": {
           "courseC_harvester_loops1_callout1": "Qovoqdagi to‘rtinchi raqam sizga to‘rtta qovoqni to‘plashingiz mumkinligini anglatadi."
         },
@@ -993,6 +1141,9 @@
           "courseC_harvester_loops1_callout1": "Qovoqdagi to‘rtinchi raqam sizga to‘rtta qovoqni to‘plashingiz mumkinligini anglatadi."
         },
         "courseC_harvester_loops1_2021": {
+          "courseC_harvester_loops1_callout1": "Qovoqdagi to‘rtinchi raqam sizga to‘rtta qovoqni to‘plashingiz mumkinligini anglatadi."
+        },
+        "courseC_harvester_loops1_2023": {
           "courseC_harvester_loops1_callout1": "Qovoqdagi to‘rtinchi raqam sizga to‘rtta qovoqni to‘plashingiz mumkinligini anglatadi."
         },
         "courseC_maze_debugging5": {
@@ -1013,6 +1164,9 @@
         "courseC_maze_debugging5_2021": {
           "courseC_maze_debugging5_1": "Ushbu bloklar bloklangan va ularni o'chirib bo'lmaydi!"
         },
+        "courseC_maze_debugging5_2023": {
+          "courseC_maze_debugging5_1": "Ushbu bloklar bloklangan va ularni o'chirib bo'lmaydi!"
+        },
         "courseC_maze_debugging92022": {
           "courseC_maze_debugging9_2019_1": "Asboblar qutisidan bloklarni ish maydoniga torting."
         },
@@ -1023,6 +1177,9 @@
           "courseC_maze_debugging9_2019_1": "Asboblar qutisidan bloklarni ish maydoniga torting."
         },
         "courseC_maze_debugging9_2021": {
+          "courseC_maze_debugging9_2019_1": "Asboblar qutisidan bloklarni ish maydoniga torting."
+        },
+        "courseC_maze_debugging9_2023": {
           "courseC_maze_debugging9_2019_1": "Asboblar qutisidan bloklarni ish maydoniga torting."
         },
         "courseC_maze_debugging9_copy_2020": {
@@ -1046,6 +1203,9 @@
         "courseC_maze_programming1_2021": {
           "grade2_CaringForNewPet_0_1": "Barcha bo‘laklarni bir biriga ulaganingizdan so‘ng, dasturingizni ishga tushirish uchun \"Run\" tugmachasini bo‘sing."
         },
+        "courseC_maze_programming1_2023": {
+          "grade2_CaringForNewPet_0_1": "Barcha bo‘laklarni bir biriga ulaganingizdan so‘ng, dasturingizni ishga tushirish uchun \"Run\" tugmachasini bo‘sing."
+        },
         "courseC_maze_programming2": {
           "courseC_maze_programming2_1": "Bu asboblar qutichasi. Bu yerda boshqotirmangizni yechish uchun zarur bo‘lgan qo‘shimcha bo‘laklarni topasiz."
         },
@@ -1062,6 +1222,9 @@
           "courseC_maze_programming2_1": "Bu asboblar qutichasi. Bu yerda boshqotirmangizni yechish uchun zarur bo‘lgan qo‘shimcha bo‘laklarni topasiz."
         },
         "courseC_maze_programming2_2021": {
+          "courseC_maze_programming2_1": "Bu asboblar qutichasi. Bu yerda boshqotirmangizni yechish uchun zarur bo‘lgan qo‘shimcha bo‘laklarni topasiz."
+        },
+        "courseC_maze_programming2_2023": {
           "courseC_maze_programming2_1": "Bu asboblar qutichasi. Bu yerda boshqotirmangizni yechish uchun zarur bo‘lgan qo‘shimcha bo‘laklarni topasiz."
         },
         "courseC_maze_programming3": {
@@ -1088,6 +1251,10 @@
           "courseC_maze_programming3_2": "Qo‘shimcha bo‘laklarni o‘chirib tashlash uchun ularni asboblar qutichasiga olib o‘tishingiz mumkin.",
           "courseC_maze_programming3_3": "Ushbu bloklar toshdek bo‘lib, ularni tashlab bo‘lmaydi."
         },
+        "courseC_maze_programming3_2023": {
+          "courseC_maze_programming3_2": "Qo‘shimcha bo‘laklarni o‘chirib tashlash uchun ularni asboblar qutichasiga olib o‘tishingiz mumkin.",
+          "courseC_maze_programming3_3": "Ushbu bloklar toshdek bo‘lib, ularni tashlab bo‘lmaydi."
+        },
         "courseC_maze_programming4": {
           "courseC_maze_programming4_1": "Bu yerda sizdagi kod bo‘laklari soni chegaralangan va nechta bo‘laklar qolganligini ham bilib olishingiz mumkin."
         },
@@ -1106,6 +1273,9 @@
         "courseC_maze_programming4_2021": {
           "courseC_maze_programming4_1": "Bu yerda sizdagi kod bo‘laklari soni chegaralangan va nechta bo‘laklar qolganligini ham bilib olishingiz mumkin."
         },
+        "courseC_maze_programming4_2023": {
+          "courseC_maze_programming4_1": "Bu yerda sizdagi kod bo‘laklari soni chegaralangan va nechta bo‘laklar qolganligini ham bilib olishingiz mumkin."
+        },
         "courseC_maze_programming5": {
           "": "Bu bo‘laklar raqamlarga ega emas. Shu sababli ulardan istalgancha foydalanishingiz mumkin!"
         },
@@ -1122,6 +1292,9 @@
           "": "Bu bo‘laklar raqamlarga ega emas. Shu sababli ulardan istalgancha foydalanishingiz mumkin!"
         },
         "courseC_maze_programming5_2021": {
+          "": "Bu bo‘laklar raqamlarga ega emas. Shu sababli ulardan istalgancha foydalanishingiz mumkin!"
+        },
+        "courseC_maze_programming5_2023": {
           "": "Bu bo‘laklar raqamlarga ega emas. Shu sababli ulardan istalgancha foydalanishingiz mumkin!"
         },
         "courseC_maze_programming7": {
@@ -1148,6 +1321,10 @@
           "courseC_maze_programming7_1": "Bu sizning birinchi qiyin jumbog’ingiz! Bu qiyin bo‘lishi va uni yechish uchun bir necha marta urinishingiz mumkin.",
           "courseC_maze_programming7_2": "Ushbu bloklar toshdan yasalgan va ularni tashlab bo‘lmaydi."
         },
+        "courseC_maze_programming7_2023": {
+          "courseC_maze_programming7_1": "Bu sizning birinchi qiyin jumbog’ingiz! Bu qiyin bo‘lishi va uni yechish uchun bir necha marta urinishingiz mumkin.",
+          "courseC_maze_programming7_2": "Ushbu bloklar toshdan yasalgan va ularni tashlab bo‘lmaydi."
+        },
         "courseC_starWars_loops2": {
           "courseC_starWars_loops2": "Ushbu jumboqda sizda faqat bitta blok mavjud."
         },
@@ -1164,6 +1341,9 @@
           "courseC_starWars_loops2": "Ushbu jumboqda sizda faqat bitta blok mavjud."
         },
         "courseC_starWars_loops2_2021": {
+          "courseC_starWars_loops2": "Ushbu jumboqda sizda faqat bitta blok mavjud."
+        },
+        "courseC_starWars_loops2_2023": {
           "courseC_starWars_loops2": "Ushbu jumboqda sizda faqat bitta blok mavjud."
         },
         "courseC_starWars_loops2_copy": {
@@ -1193,6 +1373,9 @@
         "courseD_artist_nestedLoops1a_2021": {
           "courseD_artist_nestedLoops1a_1": "Ushbu jumboqni to'g'ri bajarish uchun ranglardan foydalanish shart emas. Agar xohlasangiz, ushbu \"tasodifiy rang\" bloki buni osonlashtiradi!"
         },
+        "courseD_artist_nestedLoops1a_2023": {
+          "courseD_artist_nestedLoops1a_1": "Ushbu jumboqni to'g'ri bajarish uchun ranglardan foydalanish shart emas. Agar xohlasangiz, ushbu \"tasodifiy rang\" bloki buni osonlashtiradi!"
+        },
         "courseD_artist_ramp11": {
           "courseD_artist_ramp11_1": "Siz bu raqamni o'zgartirishingiz mumkin.",
           "courseD_artist_ramp11_2": "Kodingizni  necha marta takrorlash kerakligini yozish uchun shu yerni bosing."
@@ -1214,6 +1397,9 @@
           "4_5_Bee_Conditionals_2_1": "Yodingizda bo'lsin, har bir bulutda GUL borligini tekshiring. Asal qoliplarini umuman tekshirishingiz shart emas."
         },
         "courseD_bee_conditionals2_2021": {
+          "4_5_Bee_Conditionals_2_1": "Yodingizda bo'lsin, har bir bulutda GUL borligini tekshiring. Asal qoliplarini umuman tekshirishingiz shart emas."
+        },
+        "courseD_bee_conditionals2_2023": {
           "4_5_Bee_Conditionals_2_1": "Yodingizda bo'lsin, har bir bulutda GUL borligini tekshiring. Asal qoliplarini umuman tekshirishingiz shart emas."
         },
         "courseD_bee_conditionals2_copy": {
@@ -1242,6 +1428,9 @@
         "courseD_bee_conditionals_challenge2_2021": {
           "courseD_bee_conditionals_challenge2_1": "Ushbu tsikl yordamida barcha nektarlarni (yoki asalni) bitta guldan (yoki asal qolipidan) yig'ib oling."
         },
+        "courseD_bee_conditionals_challenge2_2023": {
+          "courseD_bee_conditionals_challenge2_1": "Ushbu tsikl yordamida barcha nektarlarni (yoki asalni) bitta guldan (yoki asal qolipidan) yig'ib oling."
+        },
         "courseD_bee_debugging_challenge1": {
           "courseD_bee_debugging_challenge1_callout1": "Arini orqaga harakatlanishi uchun ushbu buyruqdan foydalaning."
         },
@@ -1252,6 +1441,9 @@
           "stepButton": "Kod orqali birma-bir bloklardan o'tishga harakat qiling."
         },
         "courseD_bee_nestedLoops1a_2021": {
+          "stepButton": "Kod orqali birma-bir bloklardan o'tishga harakat qiling."
+        },
+        "courseD_bee_nestedLoops1a_2023": {
           "stepButton": "Kod orqali birma-bir bloklardan o'tishga harakat qiling."
         },
         "courseD_collector_ramp8": {
@@ -1272,6 +1464,9 @@
         "courseD_farmer_while7_2021": {
           "courseD_farmer_while7_2018_PathAhead": "Ushbu jumboqni yechish uchun siz \"oldinda yo'l bo'lguncha\" blokidan foydalanishingiz kerak."
         },
+        "courseD_farmer_while7_2023": {
+          "courseD_farmer_while7_2018_PathAhead": "Ushbu jumboqni yechish uchun siz \"oldinda yo'l bo'lguncha\" blokidan foydalanishingiz kerak."
+        },
         "courseD_maze_intro42022": {
           "courseC_maze_programming4_1": "Bu yerda sizdagi kod bo‘laklari soni chegaralangan va nechta bo‘laklar qolganligini ham bilib olishingiz mumkin."
         },
@@ -1284,6 +1479,9 @@
         "courseD_maze_intro4_2021": {
           "courseC_maze_programming4_1": "Bu yerda sizdagi kod bo‘laklari soni chegaralangan va nechta bo‘laklar qolganligini ham bilib olishingiz mumkin."
         },
+        "courseD_maze_intro4_2023": {
+          "courseC_maze_programming4_1": "Bu yerda sizdagi kod bo‘laklari soni chegaralangan va nechta bo‘laklar qolganligini ham bilib olishingiz mumkin."
+        },
         "courseD_maze_intro5a2022": {
           "": "Bu bo‘laklar raqamlarga ega emas. Shu sababli ulardan istalgancha foydalanishingiz mumkin!"
         },
@@ -1294,6 +1492,9 @@
           "": "Bu bo‘laklar raqamlarga ega emas. Shu sababli ulardan istalgancha foydalanishingiz mumkin!"
         },
         "courseD_maze_intro5a_2021": {
+          "": "Bu bo‘laklar raqamlarga ega emas. Shu sababli ulardan istalgancha foydalanishingiz mumkin!"
+        },
+        "courseD_maze_intro5a_2023": {
           "": "Bu bo‘laklar raqamlarga ega emas. Shu sababli ulardan istalgancha foydalanishingiz mumkin!"
         },
         "courseD_maze_ramp1": {
@@ -1314,6 +1515,9 @@
         "courseD_maze_ramp1_2021": {
           "grade2_CaringForNewPet_0_1": "Barcha bo‘laklarni bir biriga ulaganingizdan so‘ng, dasturingizni ishga tushirish uchun \"Run\" tugmachasini bo‘sing."
         },
+        "courseD_maze_ramp1_2023": {
+          "grade2_CaringForNewPet_0_1": "Barcha bo‘laklarni bir biriga ulaganingizdan so‘ng, dasturingizni ishga tushirish uchun \"Run\" tugmachasini bo‘sing."
+        },
         "courseD_maze_ramp2": {
           "courseC_maze_programming2_1": "Bu asboblar qutichasi. Bu yerda boshqotirmangizni yechish uchun zarur bo‘lgan qo‘shimcha bo‘laklarni topasiz."
         },
@@ -1330,6 +1534,9 @@
           "courseC_maze_programming2_1": "Bu asboblar qutichasi. Bu yerda boshqotirmangizni yechish uchun zarur bo‘lgan qo‘shimcha bo‘laklarni topasiz."
         },
         "courseD_maze_ramp2_2021": {
+          "courseC_maze_programming2_1": "Bu asboblar qutichasi. Bu yerda boshqotirmangizni yechish uchun zarur bo‘lgan qo‘shimcha bo‘laklarni topasiz."
+        },
+        "courseD_maze_ramp2_2023": {
           "courseC_maze_programming2_1": "Bu asboblar qutichasi. Bu yerda boshqotirmangizni yechish uchun zarur bo‘lgan qo‘shimcha bo‘laklarni topasiz."
         },
         "courseD_maze_ramp3": {
@@ -1353,6 +1560,10 @@
           "stone_block_2": "Kulrang bloklarni olib tashlab bo'lmaydi."
         },
         "courseD_maze_ramp3_2021": {
+          "courseC_maze_programming3_2": "Qo‘shimcha bo‘laklarni o‘chirib tashlash uchun ularni asboblar qutichasiga olib o‘tishingiz mumkin.",
+          "stone_block_2": "Kulrang bloklarni olib tashlab bo'lmaydi."
+        },
+        "courseD_maze_ramp3_2023": {
           "courseC_maze_programming3_2": "Qo‘shimcha bo‘laklarni o‘chirib tashlash uchun ularni asboblar qutichasiga olib o‘tishingiz mumkin.",
           "stone_block_2": "Kulrang bloklarni olib tashlab bo'lmaydi."
         },
@@ -1384,6 +1595,9 @@
           "": "Bu bo‘laklar raqamlarga ega emas. Shu sababli ulardan istalgancha foydalanishingiz mumkin!"
         },
         "courseD_maze_ramp5_2021": {
+          "": "Bu bo‘laklar raqamlarga ega emas. Shu sababli ulardan istalgancha foydalanishingiz mumkin!"
+        },
+        "courseD_maze_ramp5_2023": {
           "": "Bu bo‘laklar raqamlarga ega emas. Shu sababli ulardan istalgancha foydalanishingiz mumkin!"
         },
         "courseD_maze_ramp5a": {
@@ -1471,6 +1685,9 @@
         "courseE_artist_functions2_2021": {
           "courseD_artist_functions2_1": "Ushbu yashil blok ishga tushganda, funksiyadagi barcha kodlar ishlaydi. Birinchi kvadrat chizilganidan keyin rassom nima qilishi kerak?"
         },
+        "courseE_artist_functions2_2023": {
+          "courseD_artist_functions2_1": "Ushbu yashil blok ishga tushganda, funksiyadagi barcha kodlar ishlaydi. Birinchi kvadrat chizilganidan keyin rassom nima qilishi kerak?"
+        },
         "courseE_artist_functions2_copy": {
           "courseD_artist_functions2_1": "Ushbu yashil blok ishga tushganda, funksiyadagi barcha kodlar ishlaydi. Birinchi kvadrat chizilganidan keyin rassom nima qilishi kerak?"
         },
@@ -1493,6 +1710,9 @@
           "courseD_artist_functions8_1": "Funksiyalarni yaratish uchun bloklar asboblar qutisidagi ushbu yorliq ostida joylashgan."
         },
         "courseE_artist_functions8a_2021": {
+          "courseD_artist_functions8_1": "Funksiyalarni yaratish uchun bloklar asboblar qutisidagi ushbu yorliq ostida joylashgan."
+        },
+        "courseE_artist_functions8a_2023": {
           "courseD_artist_functions8_1": "Funksiyalarni yaratish uchun bloklar asboblar qutisidagi ushbu yorliq ostida joylashgan."
         },
         "courseE_artist_functions_challenge1": {
@@ -1519,6 +1739,10 @@
           "courseE_artist_functions_challenge1_callout1": "Pastga qo'shimcha kod qo'shish orqali ushbu dasturni davom eting.",
           "courseE_artist_functions_challenge1_callout2": "Agar sizga ushbu dizayn yoqmasa, uni xohlagan narsangizga o'zgartiring!"
         },
+        "courseE_artist_functions_challenge1_2023": {
+          "courseE_artist_functions_challenge1_callout1": "Pastga qo'shimcha kod qo'shish orqali ushbu dasturni davom eting.",
+          "courseE_artist_functions_challenge1_callout2": "Agar sizga ushbu dizayn yoqmasa, uni xohlagan narsangizga o'zgartiring!"
+        },
         "courseE_artist_functions_challenge2": {
           "courseE_artist_functions_challenge2_callout1": "Pastga qo'shimcha kod qo'shish orqali ushbu dasturni davom eting.",
           "courseE_artist_functions_challenge2_callout2": "Agar sizga ushbu dizayn yoqmasa, uni xohlagan narsangizga o'zgartiring!"
@@ -1540,6 +1764,10 @@
           "courseE_artist_functions_challenge2_callout2": "Agar sizga ushbu dizayn yoqmasa, uni xohlagan narsangizga o'zgartiring!"
         },
         "courseE_artist_functions_challenge2_2021": {
+          "courseE_artist_functions_challenge2_callout1": "Pastga qo'shimcha kod qo'shish orqali ushbu dasturni davom eting.",
+          "courseE_artist_functions_challenge2_callout2": "Agar sizga ushbu dizayn yoqmasa, uni xohlagan narsangizga o'zgartiring!"
+        },
+        "courseE_artist_functions_challenge2_2023": {
           "courseE_artist_functions_challenge2_callout1": "Pastga qo'shimcha kod qo'shish orqali ushbu dasturni davom eting.",
           "courseE_artist_functions_challenge2_callout2": "Agar sizga ushbu dizayn yoqmasa, uni xohlagan narsangizga o'zgartiring!"
         },
@@ -1572,6 +1800,9 @@
         "courseE_farmer_functions13_2021": {
           "courseE_farmer_functions1a_1": "Bu noma'lum sabzavot. Dasturni har safar ishga tushirganingizda u o'zgaradi."
         },
+        "courseE_farmer_functions13_2023": {
+          "courseE_farmer_functions1a_1": "Bu noma'lum sabzavot. Dasturni har safar ishga tushirganingizda u o'zgaradi."
+        },
         "courseE_farmer_functions1_2018": {
           "courseE_farmer_functions1_2": "Asboblar qutisi bu safar biroz boshqacha tartibda! Qaysi bloklaringiz borligini ko'rish uchun turli toifalarni bosib ko'ring."
         },
@@ -1582,6 +1813,9 @@
           "courseE_farmer_functions1_2": "Asboblar qutisi bu safar biroz boshqacha tartibda! Qaysi bloklaringiz borligini ko'rish uchun turli toifalarni bosib ko'ring."
         },
         "courseE_farmer_functions1_2021": {
+          "courseE_farmer_functions1_2": "Asboblar qutisi bu safar biroz boshqacha tartibda! Qaysi bloklaringiz borligini ko'rish uchun turli toifalarni bosib ko'ring."
+        },
+        "courseE_farmer_functions1_2023": {
           "courseE_farmer_functions1_2": "Asboblar qutisi bu safar biroz boshqacha tartibda! Qaysi bloklaringiz borligini ko'rish uchun turli toifalarni bosib ko'ring."
         },
         "courseE_farmer_functions1a": {
@@ -1602,6 +1836,9 @@
         "courseE_farmer_functions1a_2021": {
           "courseE_farmer_functions1a_1": "Bu noma'lum sabzavot. Dasturni har safar ishga tushirganingizda u o'zgaradi."
         },
+        "courseE_farmer_functions1a_2023": {
+          "courseE_farmer_functions1a_1": "Bu noma'lum sabzavot. Dasturni har safar ishga tushirganingizda u o'zgaradi."
+        },
         "courseE_farmer_functions2b": {
           "courseE_farmer_functions1a_1": "Bu noma'lum sabzavot. Dasturni har safar ishga tushirganingizda u o'zgaradi."
         },
@@ -1618,6 +1855,9 @@
           "courseE_farmer_functions1a_1": "Bu noma'lum sabzavot. Dasturni har safar ishga tushirganingizda u o'zgaradi."
         },
         "courseE_farmer_functions2b_2021": {
+          "courseE_farmer_functions1a_1": "Bu noma'lum sabzavot. Dasturni har safar ishga tushirganingizda u o'zgaradi."
+        },
+        "courseE_farmer_functions2b_2023": {
           "courseE_farmer_functions1a_1": "Bu noma'lum sabzavot. Dasturni har safar ishga tushirganingizda u o'zgaradi."
         },
         "courseE_playLab_challenge1": {
@@ -1638,6 +1878,10 @@
           "run_button": "Avval Run tugmasini bosing",
           "visualizationResizeBar": "O'yin maydonining o'lchamini sozlash uchun 3 ta nuqtani torting"
         },
+        "courseF_apps_aquarium_2023": {
+          "run_button": "Avval Run tugmasini bosing",
+          "visualizationResizeBar": "O'yin maydonining o'lchamini sozlash uchun 3 ta nuqtani torting"
+        },
         "courseF_apps_card": {
           "visualizationResizeBar": "O'yin maydonining o'lchamini sozlash uchun 3 ta nuqtani torting"
         },
@@ -1645,6 +1889,9 @@
           "visualizationResizeBar": "O'yin maydonining o'lchamini sozlash uchun 3 ta nuqtani torting"
         },
         "courseF_apps_card_-2022-2": {
+          "visualizationResizeBar": "O'yin maydonining o'lchamini sozlash uchun 3 ta nuqtani torting"
+        },
+        "courseF_apps_card_2023": {
           "visualizationResizeBar": "O'yin maydonining o'lchamini sozlash uchun 3 ta nuqtani torting"
         },
         "courseF_apps_chatbot": {
@@ -1656,6 +1903,10 @@
           "visualizationResizeBar": "O'yin maydonining o'lchamini sozlash uchun 3 ta nuqtani torting"
         },
         "courseF_apps_chatbot_-2022-2": {
+          "run_button": "Avval Run tugmasini bosing",
+          "visualizationResizeBar": "O'yin maydonining o'lchamini sozlash uchun 3 ta nuqtani torting"
+        },
+        "courseF_apps_chatbot_2023": {
           "run_button": "Avval Run tugmasini bosing",
           "visualizationResizeBar": "O'yin maydonining o'lchamini sozlash uchun 3 ta nuqtani torting"
         },
@@ -1671,16 +1922,32 @@
           "run_button": "Avval Run tugmasini bosing",
           "visualizationResizeBar": "O'yin maydonining o'lchamini sozlash uchun 3 ta nuqtani torting"
         },
+        "courseF_apps_collector_2023": {
+          "run_button": "Avval Run tugmasini bosing",
+          "visualizationResizeBar": "O'yin maydonining o'lchamini sozlash uchun 3 ta nuqtani torting"
+        },
         "courseF_apps_collector_drag_-2022-2": {
+          "visualizationResizeBar": "O'yin maydonining o'lchamini sozlash uchun 3 ta nuqtani torting"
+        },
+        "courseF_apps_collector_drag_2023": {
           "visualizationResizeBar": "O'yin maydonining o'lchamini sozlash uchun 3 ta nuqtani torting"
         },
         "courseF_apps_collector_drive_-2022-2": {
           "visualizationResizeBar": "O'yin maydonining o'lchamini sozlash uchun 3 ta nuqtani torting"
         },
+        "courseF_apps_collector_drive_2023": {
+          "visualizationResizeBar": "O'yin maydonining o'lchamini sozlash uchun 3 ta nuqtani torting"
+        },
         "courseF_apps_collector_move2_-2022-2": {
           "visualizationResizeBar": "O'yin maydonining o'lchamini sozlash uchun 3 ta nuqtani torting"
         },
+        "courseF_apps_collector_move2_2023": {
+          "visualizationResizeBar": "O'yin maydonining o'lchamini sozlash uchun 3 ta nuqtani torting"
+        },
         "courseF_apps_collector_move_-2022-2": {
+          "visualizationResizeBar": "O'yin maydonining o'lchamini sozlash uchun 3 ta nuqtani torting"
+        },
+        "courseF_apps_collector_move_2023": {
           "visualizationResizeBar": "O'yin maydonining o'lchamini sozlash uchun 3 ta nuqtani torting"
         },
         "courseF_apps_madlib": {
@@ -1692,6 +1959,9 @@
         "courseF_apps_madlib_-2022-2": {
           "visualizationResizeBar": "O'yin maydonining o'lchamini sozlash uchun 3 ta nuqtani torting"
         },
+        "courseF_apps_madlib_2023": {
+          "visualizationResizeBar": "O'yin maydonining o'lchamini sozlash uchun 3 ta nuqtani torting"
+        },
         "courseF_apps_pet": {
           "run_button": "Avval Run tugmasini bosing",
           "visualizationResizeBar": "O'yin maydonining o'lchamini sozlash uchun 3 ta nuqtani torting"
@@ -1701,6 +1971,10 @@
           "visualizationResizeBar": "O'yin maydonining o'lchamini sozlash uchun 3 ta nuqtani torting"
         },
         "courseF_apps_pet_-2022-2": {
+          "run_button": "Avval Run tugmasini bosing",
+          "visualizationResizeBar": "O'yin maydonining o'lchamini sozlash uchun 3 ta nuqtani torting"
+        },
+        "courseF_apps_pet_2023": {
           "run_button": "Avval Run tugmasini bosing",
           "visualizationResizeBar": "O'yin maydonining o'lchamini sozlash uchun 3 ta nuqtani torting"
         },
@@ -1720,6 +1994,9 @@
           "courseF_artist_for1_1": "Sizning kodingizga ko‘proq joy ajratish uchun asboblar qutisi \"toifadagi\" rejimda. Bu yerda `for` siklidan joylari mavjud."
         },
         "courseF_artist_for1_2021": {
+          "courseF_artist_for1_1": "Sizning kodingizga ko‘proq joy ajratish uchun asboblar qutisi \"toifadagi\" rejimda. Bu yerda `for` siklidan joylari mavjud."
+        },
+        "courseF_artist_for1_2023": {
           "courseF_artist_for1_1": "Sizning kodingizga ko‘proq joy ajratish uchun asboblar qutisi \"toifadagi\" rejimda. Bu yerda `for` siklidan joylari mavjud."
         },
         "courseF_artist_fwp1": {
@@ -1791,6 +2068,9 @@
         "courseF_bee_for4_2021": {
           "courseF_bee_for4_1": "`for` siklidan bu yerda topasiz!"
         },
+        "courseF_bee_for4_2023": {
+          "courseF_bee_for4_1": "`for` siklidan bu yerda topasiz!"
+        },
         "courseF_bee_for9": {
           "courseF_bee_for9_1": "Siz bu yerda \"matematik\" bo‘lagini topasiz."
         },
@@ -1807,6 +2087,9 @@
           "courseF_bee_for9_1": "Siz bu yerda \"matematik\" bo‘lagini topasiz."
         },
         "courseF_bee_for9_2021": {
+          "courseF_bee_for9_1": "Siz bu yerda \"matematik\" bo‘lagini topasiz."
+        },
+        "courseF_bee_for9_2023": {
           "courseF_bee_for9_1": "Siz bu yerda \"matematik\" bo‘lagini topasiz."
         },
         "courseF_bee_functions2": {
@@ -1849,10 +2132,16 @@
         "courseF_bee_variables_1a_2021": {
           "courseF_bee_functions_1_2018_1": "O'zgaruvchilaringizni bu yerda topishingiz mumkin!"
         },
+        "courseF_bee_variables_1a_2023": {
+          "courseF_bee_functions_1_2018_1": "O'zgaruvchilaringizni bu yerda topishingiz mumkin!"
+        },
         "courseF_editable_card": {
           "visualizationResizeBar": "O'yin maydonining o'lchamini sozlash uchun 3 ta nuqtani torting"
         },
         "courseF_editable_card_-2022-2": {
+          "visualizationResizeBar": "O'yin maydonining o'lchamini sozlash uchun 3 ta nuqtani torting"
+        },
+        "courseF_editable_card_2023": {
           "visualizationResizeBar": "O'yin maydonining o'lchamini sozlash uchun 3 ta nuqtani torting"
         },
         "courseF_editable_chatbot": {
@@ -1861,10 +2150,16 @@
         "courseF_editable_chatbot_-2022-2": {
           "visualizationResizeBar": "O'yin maydonining o'lchamini sozlash uchun 3 ta nuqtani torting"
         },
+        "courseF_editable_chatbot_2023": {
+          "visualizationResizeBar": "O'yin maydonining o'lchamini sozlash uchun 3 ta nuqtani torting"
+        },
         "courseF_editable_madlib": {
           "visualizationResizeBar": "O'yin maydonining o'lchamini sozlash uchun 3 ta nuqtani torting"
         },
         "courseF_editable_madlib_-2022-2": {
+          "visualizationResizeBar": "O'yin maydonining o'lchamini sozlash uchun 3 ta nuqtani torting"
+        },
+        "courseF_editable_madlib_2023": {
           "visualizationResizeBar": "O'yin maydonining o'lchamini sozlash uchun 3 ta nuqtani torting"
         },
         "courseF_playlab_variables1a": {
@@ -1894,6 +2189,54 @@
         "coursea_maze_ramp1_2021": {
           "grade2_CaringForNewPet_0_1": "Barcha bloklarni bir biriga ulaganingizdan so‘ng, dasturingizni ishga tushirish uchun \"Ishga tushirish\" tugmachasini bosing."
         },
+        "coursea_maze_ramp1_2023": {
+          "grade2_CaringForNewPet_0_1": "Barcha bloklarni bir biriga ulaganingizdan so‘ng, dasturingizni ishga tushirish uchun \"Ishga tushirish\" tugmachasini bosing."
+        },
+        "csc-starquilts-comment_2023": {
+          "New Artist Project_callout1": "Asboblar qutisidagi bloklarni ko'rish uchun \"Toifalar\" bo'limini bosing! Bloklarni dasturingizga qo'shish uchun ularni ish joyiga tortib joylang",
+          "New Artist Project_callout2": "Dasturingizni saqlash va ishga tushirish uchun \"Ishga tushirish\" tugmasini bosing",
+          "sign_in_to_save_project": "Keyinchalik loyiha ustida ishni davom etishni xohlaysizmi? Ushbu loyihani o'z hisobingizda saqlash uchun tizimga kiring!"
+        },
+        "csc-starquilts-repeat_2023": {
+          "New Artist Project_callout1": "Asboblar qutisidagi bloklarni ko'rish uchun \"Toifalar\" bo'limini bosing! Bloklarni dasturingizga qo'shish uchun ularni ish joyiga tortib joylang",
+          "New Artist Project_callout2": "Dasturingizni saqlash va ishga tushirish uchun \"Ishga tushirish\" tugmasini bosing",
+          "sign_in_to_save_project": "Keyinchalik loyiha ustida ishni davom etishni xohlaysizmi? Ushbu loyihani o'z hisobingizda saqlash uchun tizimga kiring!"
+        },
+        "csc-starquilts-rhombus-freeplay_2023": {
+          "New Artist Project_callout1": "Asboblar qutisidagi bloklarni ko'rish uchun \"Toifalar\" bo'limini bosing! Bloklarni dasturingizga qo'shish uchun ularni ish joyiga tortib joylang",
+          "New Artist Project_callout2": "Dasturingizni saqlash va ishga tushirish uchun \"Ishga tushirish\" tugmasini bosing",
+          "sign_in_to_save_project": "Keyinchalik loyiha ustida ishni davom etishni xohlaysizmi? Ushbu loyihani o'z hisobingizda saqlash uchun tizimga kiring!"
+        },
+        "csc-starquilts-row1_2023": {
+          "New Artist Project_callout1": "Asboblar qutisidagi bloklarni ko'rish uchun \"Toifalar\" bo'limini bosing! Bloklarni dasturingizga qo'shish uchun ularni ish joyiga tortib joylang",
+          "New Artist Project_callout2": "Dasturingizni saqlash va ishga tushirish uchun \"Ishga tushirish\" tugmasini bosing",
+          "sign_in_to_save_project": "Keyinchalik loyiha ustida ishni davom etishni xohlaysizmi? Ushbu loyihani o'z hisobingizda saqlash uchun tizimga kiring!"
+        },
+        "csc-starquilts-row2_2023": {
+          "New Artist Project_callout1": "Asboblar qutisidagi bloklarni ko'rish uchun \"Toifalar\" bo'limini bosing! Bloklarni dasturingizga qo'shish uchun ularni ish joyiga tortib joylang",
+          "New Artist Project_callout2": "Dasturingizni saqlash va ishga tushirish uchun \"Ishga tushirish\" tugmasini bosing",
+          "sign_in_to_save_project": "Keyinchalik loyiha ustida ishni davom etishni xohlaysizmi? Ushbu loyihani o'z hisobingizda saqlash uchun tizimga kiring!"
+        },
+        "csc-starquilts-row3_2023": {
+          "New Artist Project_callout1": "Asboblar qutisidagi bloklarni ko'rish uchun \"Toifalar\" bo'limini bosing! Bloklarni dasturingizga qo'shish uchun ularni ish joyiga tortib joylang",
+          "New Artist Project_callout2": "Dasturingizni saqlash va ishga tushirish uchun \"Ishga tushirish\" tugmasini bosing",
+          "sign_in_to_save_project": "Keyinchalik loyiha ustida ishni davom etishni xohlaysizmi? Ushbu loyihani o'z hisobingizda saqlash uchun tizimga kiring!"
+        },
+        "csc-starquilts-row4_2023": {
+          "New Artist Project_callout1": "Asboblar qutisidagi bloklarni ko'rish uchun \"Toifalar\" bo'limini bosing! Bloklarni dasturingizga qo'shish uchun ularni ish joyiga tortib joylang",
+          "New Artist Project_callout2": "Dasturingizni saqlash va ishga tushirish uchun \"Ishga tushirish\" tugmasini bosing",
+          "sign_in_to_save_project": "Keyinchalik loyiha ustida ishni davom etishni xohlaysizmi? Ushbu loyihani o'z hisobingizda saqlash uchun tizimga kiring!"
+        },
+        "csc-starquilts-row5_2023": {
+          "New Artist Project_callout1": "Asboblar qutisidagi bloklarni ko'rish uchun \"Toifalar\" bo'limini bosing! Bloklarni dasturingizga qo'shish uchun ularni ish joyiga tortib joylang",
+          "New Artist Project_callout2": "Dasturingizni saqlash va ishga tushirish uchun \"Ishga tushirish\" tugmasini bosing",
+          "sign_in_to_save_project": "Keyinchalik loyiha ustida ishni davom etishni xohlaysizmi? Ushbu loyihani o'z hisobingizda saqlash uchun tizimga kiring!"
+        },
+        "csc_starquilts_freeplay_2023": {
+          "New Artist Project_callout1": "Asboblar qutisidagi bloklarni ko'rish uchun \"Toifalar\" bo'limini bosing! Bloklarni dasturingizga qo'shish uchun ularni ish joyiga tortib joylang",
+          "New Artist Project_callout2": "Dasturingizni saqlash va ishga tushirish uchun \"Ishga tushirish\" tugmasini bosing",
+          "sign_in_to_save_project": "Keyinchalik loyiha ustida ishni davom etishni xohlaysizmi? Ushbu loyihani o'z hisobingizda saqlash uchun tizimga kiring!"
+        },
         "express_maze_debugging92022": {
           "express_maze_debugging9_2019_1": "Asboblar qutisidan bloklarni ish maydoniga torting."
         },
@@ -1904,6 +2247,9 @@
           "express_maze_debugging9_2019_1": "Asboblar qutisidan bloklarni ish maydoniga torting."
         },
         "express_maze_debugging9_2021": {
+          "express_maze_debugging9_2019_1": "Asboblar qutisidan bloklarni ish maydoniga torting."
+        },
+        "express_maze_debugging9_2023": {
           "express_maze_debugging9_2019_1": "Asboblar qutisidan bloklarni ish maydoniga torting."
         },
         "frozen circle function with parameter": {
@@ -1981,6 +2327,9 @@
         "helloworld_food_costumes": {
           "hello_world_new": "Yangi blok!"
         },
+        "helloworld_food_costumes_2023": {
+          "hello_world_new": "Yangi blok!"
+        },
         "helloworld_food_costumes_soccer-2022": {
           "hello_world_new": "Yangi blok!"
         },
@@ -1988,6 +2337,10 @@
           "hello_world_new": "Yangi blok!"
         },
         "helloworld_food_sizes": {
+          "hello_world_new": "Yangi blok!",
+          "hello_world_new_block": "Yangi blok!"
+        },
+        "helloworld_food_sizes_2023": {
           "hello_world_new": "Yangi blok!",
           "hello_world_new_block": "Yangi blok!"
         },
@@ -2000,6 +2353,9 @@
           "hello_world_new_block": "Yangi blok!"
         },
         "helloworld_food_sounds": {
+          "hello_world_new": "Yangi blok!"
+        },
+        "helloworld_food_sounds_2023": {
           "hello_world_new": "Yangi blok!"
         },
         "helloworld_food_sounds_soccer-2022": {
@@ -2028,7 +2384,14 @@
         "poetry_hoc_addSprites": {
           "poetry_sprite": "Yangi blok!"
         },
+        "poetry_hoc_addSprites_2023": {
+          "poetry_sprite": "Yangi blok!"
+        },
         "poetry_hoc_events1": {
+          "poetry_event": "Yangi blok!",
+          "poetry_foreground": "Yangi blok!"
+        },
+        "poetry_hoc_events1_2023": {
           "poetry_event": "Yangi blok!",
           "poetry_foreground": "Yangi blok!"
         },
@@ -2037,7 +2400,14 @@
           "poetry_multiple_sprites": "Yangi blok!",
           "poetry_new_block": "Yangi blok!"
         },
+        "poetry_hoc_freeplay_2023": {
+          "poetry_new_block": "Yangi blok!"
+        },
         "poetry_hoc_sounds": {
+          "poetry_music": "Yangi blok!",
+          "poetry_sound": "Yangi blok!"
+        },
+        "poetry_hoc_sounds_2023": {
           "poetry_music": "Yangi blok!",
           "poetry_sound": "Yangi blok!"
         },
@@ -2045,7 +2415,15 @@
           "poetry_sprite_begins": "Yangi blok!",
           "poetry_sprite_stops": "Yangi blok!"
         },
+        "poetry_hoc_spriteBehaviors_2023": {
+          "poetry_sprite_begins": "Yangi blok!",
+          "poetry_sprite_stops": "Yangi blok!"
+        },
         "poetry_hoc_spriteSizes": {
+          "poetry_remove_sprite": "Yangi blok!",
+          "poetry_set_sprite": "Yangi blok!"
+        },
+        "poetry_hoc_spriteSizes_2023": {
           "poetry_remove_sprite": "Yangi blok!",
           "poetry_set_sprite": "Yangi blok!"
         }
