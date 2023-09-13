@@ -194,6 +194,108 @@
         "debugging/pre-express/2022": {
           "word": "Feilsøking"
         },
+        "code/csc-adaptations/2023": {
+          "word": "Kode"
+        },
+        "code/csc-ecosystems/2023": {
+          "word": "Kode"
+        },
+        "conditionals/csc-ecosystems/2023": {
+          "word": "Betingelser"
+        },
+        "variable/csc-ecosystems/2023": {
+          "word": "Variabel"
+        },
+        "code/csc-mappinglandmarks/2023": {
+          "word": "Kode"
+        },
+        "artist/csc-starquilts/2023": {
+          "word": "Kunstnar"
+        },
+        "comments/csc-starquilts/2023": {
+          "word": "Kommentar"
+        },
+        "code/poetry/2023": {
+          "word": "Kode"
+        },
+        "debugging/coursea/2023": {
+          "word": "Feilsøking"
+        },
+        "drop/coursea/2023": {
+          "word": "Dropp"
+        },
+        "debugging/courseb/2023": {
+          "word": "Feilsøking"
+        },
+        "drop/courseb/2023": {
+          "word": "Dropp"
+        },
+        "debugging/coursec/2023": {
+          "word": "Feilsøking"
+        },
+        "sequencing/coursec/2023": {
+          "word": "Sekvensiering"
+        },
+        "binary/coursec/2023": {
+          "word": "Binær"
+        },
+        "debugging/coursed/2023": {
+          "word": "Feilsøking"
+        },
+        "conditionals/coursed/2023": {
+          "word": "Betingelser"
+        },
+        "function/coursee/2023": {
+          "word": "Funksjon"
+        },
+        "conditionals/coursee/2023": {
+          "word": "Betingelser"
+        },
+        "copyright/coursee/2023": {
+          "word": "Opphavsrett"
+        },
+        "define/coursee/2023": {
+          "word": "Definer"
+        },
+        "variable/coursef/2023": {
+          "word": "Variabel"
+        },
+        "input/coursef/2023": {
+          "word": "Inngang"
+        },
+        "internet/coursef/2023": {
+          "word": "Internett"
+        },
+        "define/coursef/2023": {
+          "word": "Definer"
+        },
+        "debugging/express/2023": {
+          "word": "Feilsøking"
+        },
+        "sequencing/express/2023": {
+          "word": "Sekvensiering"
+        },
+        "conditionals/express/2023": {
+          "word": "Betingelser"
+        },
+        "function/express/2023": {
+          "word": "Funksjon"
+        },
+        "variable/express/2023": {
+          "word": "Variabel"
+        },
+        "define/express/2023": {
+          "word": "Definer"
+        },
+        "drop/pre-express/2023": {
+          "word": "Dropp"
+        },
+        "debugging/pre-express/2023": {
+          "word": "Feilsøking"
+        },
+        "network/how-ai-works/2023": {
+          "word": "Nettverk"
+        },
         "conditionals/aquatic/unversioned": {
           "word": "Betingelser"
         },
