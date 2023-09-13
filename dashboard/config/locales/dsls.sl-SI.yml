@@ -505,6 +505,13 @@ sl-SI:
           Ustvarite zapestnico, na kateri bo tvoje ime v sistemu, ki ga razumejo računalniki!
 
 
+      BinaryBracelets-Unplugged2022_2023:
+        markdown: |+
+          # Binarne zapestnice
+
+          Ustvarite zapestnico, na kateri bo tvoje ime v sistemu, ki ga razumejo računalniki!
+
+
       BinaryBracelets-Unplugged_2020:
         markdown: |+
           # Binarne zapestnice
@@ -2114,6 +2121,11 @@ sl-SI:
           # Moji zankasti robotski prijatelji
 
           Naredite svoje programe krajše z uporabo zank!
+      MyLoopyRoboticFriends-Unplugged2022_2023:
+        markdown: |
+          # Moji zankasti robotski prijatelji
+
+          Naredite svoje programe krajše z uporabo zank!
       MyLoopyRoboticFriends-Unplugged_2020:
         markdown: |
           # Moji zankasti robotski prijatelji
@@ -2130,6 +2142,11 @@ sl-SI:
 
           Naučite se programirati s pisanjem kode za svoje prijatelje!
       MyRoboticFriends-Unplugged2022:
+        markdown: |-
+          # Moji robotski prijatelji
+
+          Naučite se programirati s pisanjem kode za svoje prijatelje!
+      MyRoboticFriends-Unplugged2022_2023:
         markdown: |-
           # Moji robotski prijatelji
 
@@ -2729,6 +2746,15 @@ sl-SI:
           text: Umetnik bo narisal pentagon
         questions:
         - {}
+      courseC_multi_artist_prog6_predict12022_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - feedback: Nepravilno. Umetnik nariše kvadrat.
+          text: Umetnik bo narisal pentagon
+        questions:
+        - {}
       courseC_multi_artist_prog6_predict1_2018:
         answers:
         - {}
@@ -2771,6 +2797,14 @@ sl-SI:
         questions:
         - {}
       courseC_multi_harvester_loops11_predict12022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_harvester_loops11_predict12022_2023:
         answers:
         - {}
         - {}
@@ -2837,6 +2871,16 @@ sl-SI:
         - text: Scrat se ne bo premaknil iz prvega bloka.
         questions:
         - {}
+      courseC_multi_maze_debugging8_predict12022_2023:
+        answers:
+        - feedback: Nepravilno. Scrat ne bo dosegel želoda, ker se obrne na napačno
+            smer.
+        - feedback: Pravilno! Scrat se obrne v napačno smer in ne bo dosegel želoda.
+        - feedback: Nepravilno. Scrat ne bo dosegel želoda, ker se obrne na napačno
+            smer.
+        - text: Scrat se ne bo premaknil iz prvega bloka.
+        questions:
+        - {}
       courseC_multi_maze_debugging8_predict1_2018:
         answers:
         - {}
@@ -2878,6 +2922,14 @@ sl-SI:
         questions:
         - {}
       courseC_multi_maze_programming8_predict12022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - text: Ptica se bo zaletela v steno.
+        questions:
+        - {}
+      courseC_multi_maze_programming8_predict12022_2023:
         answers:
         - {}
         - {}
@@ -2933,6 +2985,14 @@ sl-SI:
         - text: BB-8 se bo premaknil samo 3 korake.
         questions:
         - {}
+      courseC_multi_starWars_predict12022_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - text: BB-8 se bo premaknil samo 3 korake.
+        questions:
+        - {}
       courseC_multi_starWars_predict1_2018:
         answers:
         - {}
@@ -2974,6 +3034,14 @@ sl-SI:
         questions:
         - {}
       courseC_multi_starWars_predict22022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - text: BB-8 se bo po prvi zanki obrnil v napačno smer.
+        questions:
+        - {}
+      courseC_multi_starWars_predict22022_2023:
         answers:
         - {}
         - {}
@@ -3061,6 +3129,14 @@ sl-SI:
         - {}
         questions:
         - {}
+      courseD_multi_artist_nestedLoops9_predict12022_2023:
+        answers:
+        - text: A
+        - text: B
+        - text: C
+        - {}
+        questions:
+        - {}
       courseD_multi_artist_nestedLoops9_predict1_2018:
         answers:
         - text: A
@@ -3102,6 +3178,14 @@ sl-SI:
         questions:
         - {}
       courseD_multi_bee_conditionals1_predict12022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_conditionals1_predict12022_2023:
         answers:
         - {}
         - {}
@@ -3173,6 +3257,14 @@ sl-SI:
         - {}
         questions:
         - {}
+      courseD_multi_bee_conditionals7_predict22022_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseD_multi_bee_conditionals7_predict2_2018:
         answers:
         - {}
@@ -3221,6 +3313,14 @@ sl-SI:
         - {}
         questions:
         - {}
+      courseD_multi_bee_nestedLoops2_predict12022_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseD_multi_bee_nestedLoops2_predict1_2018:
         answers:
         - {}
@@ -3262,6 +3362,14 @@ sl-SI:
         questions:
         - {}
       courseD_multi_bee_nestedLoops9_predict22022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops9_predict22022_2023:
         answers:
         - {}
         - {}
@@ -3325,6 +3433,14 @@ sl-SI:
         - {}
         questions:
         - {}
+      courseD_multi_farmer_condLoops9_predict12022_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseD_multi_farmer_condLoops9_predict1_2018:
         answers:
         - {}
@@ -3381,6 +3497,14 @@ sl-SI:
         - {}
         questions:
         - {}
+      courseD_multi_farmer_while10_predict22022_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseD_multi_farmer_while10_predict2_2018:
         answers:
         - {}
@@ -3422,6 +3546,14 @@ sl-SI:
         questions:
         - {}
       courseD_multi_farmer_while4_predict12022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_while4_predict12022_2023:
         answers:
         - {}
         - {}
@@ -3477,6 +3609,14 @@ sl-SI:
         - {}
         questions:
         - {}
+      courseD_multi_maze_until10_predict22022_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseD_multi_maze_until10_predict2_2018:
         answers:
         - {}
@@ -3518,6 +3658,14 @@ sl-SI:
         questions:
         - {}
       courseD_multi_maze_until2_predict12022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_maze_until2_predict12022_2023:
         answers:
         - {}
         - {}
@@ -3597,6 +3745,14 @@ sl-SI:
         - {}
         questions:
         - {}
+      courseE_multi_farmer_functions11_predict2022_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseE_multi_farmer_functions11_predict_2018:
         answers:
         - {}
@@ -3638,6 +3794,14 @@ sl-SI:
         questions:
         - {}
       courseE_prediction_artistFunction12022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseE_prediction_artistFunction12022_2023:
         answers:
         - {}
         - {}
@@ -3701,6 +3865,14 @@ sl-SI:
         - {}
         questions:
         - {}
+      courseE_swim_fish_behavior_predict12022_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseE_swim_fish_behavior_predict1_2021:
         answers:
         - {}
@@ -3753,7 +3925,23 @@ sl-SI:
         - {}
         questions:
         - {}
+      courseF_events_predict_multi2022_2022_pilot_-2022-2_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseF_groups_predict_multi_2022_pilot_-2022-2:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_groups_predict_multi_2022_pilot_-2022-2_2023:
         answers:
         - {}
         - {}
@@ -3771,6 +3959,15 @@ sl-SI:
         questions:
         - {}
       courseF_labels_predict_multi2022_2022_pilot_-2022-2:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_labels_predict_multi2022_2022_pilot_-2022-2_2023:
         answers:
         - {}
         - {}
@@ -3828,6 +4025,14 @@ sl-SI:
         questions:
         - {}
       courseF_multi_artist_variables3a_predict12022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_multi_artist_variables3a_predict12022_2023:
         answers:
         - {}
         - {}
@@ -3899,6 +4104,14 @@ sl-SI:
         - {}
         questions:
         - {}
+      courseF_multi_bee_for3_predict12022_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseF_multi_bee_for3_predict1_2018:
         answers:
         - {}
@@ -3963,6 +4176,14 @@ sl-SI:
         - {}
         questions:
         - {}
+      courseF_sprites_predict_multi2022_2022_pilot_-2022-2_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseF_variables2_predict2_multi2022_-2022-2:
         answers:
         - {}
@@ -3971,7 +4192,23 @@ sl-SI:
         - {}
         questions:
         - {}
+      courseF_variables2_predict2_multi2022_-2022-2_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseF_variables2_predict_multi2022_2022_pilot_-2022-2:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_variables2_predict_multi2022_2022_pilot_-2022-2_2023:
         answers:
         - {}
         - {}
@@ -3995,6 +4232,14 @@ sl-SI:
         - {}
         questions:
         - {}
+      courseF_variables_predict_multi2022_2022_pilot_-2022-2_2023:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       coursee_prediction_artistfunction2:
         answers:
         - {}
@@ -4004,6 +4249,14 @@ sl-SI:
         questions:
         - {}
       coursee_prediction_artistfunction22022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      coursee_prediction_artistfunction22022_2023:
         answers:
         - {}
         - {}
@@ -4042,6 +4295,39 @@ sl-SI:
         - {}
         - {}
         questions:
+        - {}
+      csc_animal_adaptations_predict:
+        answers:
+        - {}
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      csc_ecosystems_matching_cfu:
+        answers:
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+      csc_ecosystems_matching_conditionals:
+        answers:
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+      csc_ecosystems_matching_events:
+        answers:
+        - {}
+        - {}
+        questions:
+        - {}
         - {}
       csd-post-survey-2017-q11_2018:
         answers:
@@ -7163,6 +7449,19 @@ sl-SI:
           * Uporabite črke, številke in simbole **** v svojem geslu.
 
           ! [] (https://images.code.org/bfa69295fbf33c77ecdeb79b5498d8f7-image-1584751340896.png)
+      csf_password_power-up2022_2023:
+        markdown: |
+          # Vklopite geslo
+
+          ## Nasveti za geslo:
+
+          * Začnite z nepozabno **frazo**.
+          * Samo vaši starši** lahko poznati vaše geslo.
+          * Nikoli ne uporabljajte nobenih **zasebnih** podatkov o identiteti v svojem geslu.
+          * Ustvarite gesla z vsaj **osem** znaki.
+          * Uporabite črke, številke in simbole **** v svojem geslu.
+
+          ! [] (https://images.code.org/bfa69295fbf33c77ecdeb79b5498d8f7-image-1584751340896.png)
       csf_password_power-up_2021:
         markdown: |
           # Vklopite geslo
@@ -7189,6 +7488,18 @@ sl-SI:
 
           ! [] (https://images.code.org/f3e4987a130b27f7b589d7829b753aac-image-1584750971069.png)
       csf_putting_a_stop_to_online_meanness2022:
+        markdown: |
+          # STOP Nesramnosti
+
+          ## Kaj morate storiti, če je nekdo zloben do vas na spletu?
+
+          * **S**topi stran.
+          * **T** o povej zaupanja vredni odrasli osebi.
+          * **O**K strani vnajprej.
+          * **P**remor si vzemi in razmišljaj na spletu.
+
+          ! [] (https://images.code.org/f3e4987a130b27f7b589d7829b753aac-image-1584750971069.png)
+      csf_putting_a_stop_to_online_meanness2022_2023:
         markdown: |
           # STOP Nesramnosti
 
@@ -8727,6 +9038,14 @@ sl-SI:
         - text: Bodite pozorni na spodnjo kodo. Če bi koda tekla do konca (in ignorirala
             morebitne napake), koliko kosov zaklada bi Laurel zbrala?
       grade2_multi_collector_A_predict12022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - text: Laurel bo z uporabo te kode zbrala 1 kos zaklada.
+        questions:
+        - {}
+      grade2_multi_collector_A_predict12022_2023:
         answers:
         - {}
         - {}
