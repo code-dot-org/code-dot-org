@@ -8,6 +8,39 @@
         "AppLab Intro 7 - thisOrThatAddButton": {
           "AppLabHoCFinal11": "Ju jeni tani në Modalitetin e Dizajnit."
         },
+        "CSD U3 Draw Loop Plugged wiggle sprite y_2018": {
+          "": "[empty string]"
+        },
+        "CSD U3 Draw Loop Plugged wiggle sprite y_2019": {
+          "": "[empty string]"
+        },
+        "CSD U3 Draw Loop Plugged wiggle sprite y_2021": {
+          "": "[empty string]"
+        },
+        "CSD U3 Draw Loop Plugged wiggle sprite y_2022": {
+          "": "[empty string]"
+        },
+        "CSD U3 Random add_2021": {
+          "CSD_U3_butterfly": "Shikoni me kujdes këtë kod."
+        },
+        "CSD U3 Random add_2022": {
+          "CSD_U3_butterfly": "Shikoni me kujdes këtë kod."
+        },
+        "CSD U6 - Color LEDs - CA_2222": {
+          "CSD U6L7.8b - counter": "Rritni variablën tuaj këtu!",
+          "CSD U6L7.8b - toggle": "Përdorni variablën tuaj këtu"
+        },
+        "CSD U6 - Combine Inputs - PracD_2222": {
+          "CSD U6L9.7 - if-statement": "Shtoni deklaratën tuaj nëse këtu"
+        },
+        "CSD U6 - Combine Inputs - SB1_2222": {
+          "CSD U6L10.2 - add_code": "Shtoni kodin tuaj këtu!"
+        },
+        "CSD U6 - If Variables - A_2222": {
+          "U6L6.4 - Counter": "Rritni variablën tuaj këtu",
+          "U6L6.4 - If": "Shtoni deklaratën tuaj nëse këtu",
+          "U6L6.4 - Variable": "Përcaktoni variablën tuaj këtu"
+        },
         "Course 4 Artist 4": {
           "repeat_full_circle": "Fut numrin e herëve që zombi duhet të lëvizë për të bërë një rreth të plotë"
         },
@@ -53,6 +86,9 @@
         "CourseD_Dance_2020_01_2021": {
           "dance_callout_01": "Zgjidhni llojin e vallezuesit këtu."
         },
+        "CourseD_Dance_2020_01_2023": {
+          "dance_callout_01": "Zgjidhni llojin e vallezuesit këtu."
+        },
         "CourseD_Dance_2020_02": {
           "arrow_buttons": "Shtypni butonat shigjetë për të kontrolluar vallezuesin tuaj.",
           "dance_callout_11_a": "Shtoni këtë bllok në programin tuaj."
@@ -65,6 +101,10 @@
           "arrow_buttons": "Shtypni butonat shigjetë për të kontrolluar vallezuesin tuaj.",
           "dance_callout_11_a": "Shtoni këtë bllok në programin tuaj."
         },
+        "CourseD_Dance_2020_02_2023": {
+          "arrow_buttons": "Shtypni butonat shigjetë për të kontrolluar vallezuesin tuaj.",
+          "dance_callout_11_a": "Shtoni këtë bllok në programin tuaj."
+        },
         "CourseD_Dance_2020_04": {
           "dance_callout_02": "Shtoni këtë bllok në programin tuaj!"
         },
@@ -72,6 +112,9 @@
           "dance_callout_02": "Shtoni këtë bllok në programin tuaj!"
         },
         "CourseD_Dance_2020_04_2021": {
+          "dance_callout_02": "Shtoni këtë bllok në programin tuaj!"
+        },
+        "CourseD_Dance_2020_04_2023": {
           "dance_callout_02": "Shtoni këtë bllok në programin tuaj!"
         },
         "CourseD_Dance_2020_05": {
@@ -83,6 +126,9 @@
         "CourseD_Dance_2020_05_2021": {
           "dance_callout_05": "Shto një ngjarje të re në programin tuaj."
         },
+        "CourseD_Dance_2020_05_2023": {
+          "dance_callout_05": "Shto një ngjarje të re në programin tuaj."
+        },
         "CourseD_Dance_2020_06": {
           "dance_party_11_5_groups": "Bllok i Ri!"
         },
@@ -90,6 +136,9 @@
           "dance_party_11_5_groups": "Bllok i Ri!"
         },
         "CourseD_Dance_2020_06_2021": {
+          "dance_party_11_5_groups": "Bllok i Ri!"
+        },
+        "CourseD_Dance_2020_06_2023": {
           "dance_party_11_5_groups": "Bllok i Ri!"
         },
         "CourseD_Dance_2020_07": {
@@ -101,6 +150,9 @@
         "CourseD_Dance_2020_07_2021": {
           "setprop_hint": "Bllok i Ri!"
         },
+        "CourseD_Dance_2020_07_2023": {
+          "setprop_hint": "Bllok i Ri!"
+        },
         "CourseD_Dance_2020_09": {
           "new_block_3": "Bllok i Ri!",
           "new_block_4": "Bllok i Ri!"
@@ -110,6 +162,10 @@
           "new_block_4": "Bllok i Ri!"
         },
         "CourseD_Dance_2020_09_2021": {
+          "new_block_3": "Bllok i Ri!",
+          "new_block_4": "Bllok i Ri!"
+        },
+        "CourseD_Dance_2020_09_2023": {
           "new_block_3": "Bllok i Ri!",
           "new_block_4": "Bllok i Ri!"
         },
@@ -132,7 +188,13 @@
         "CourseD_Dance_Party_11_5": {
           "dance_party_11_5_groups": "Shikoni këtu për blloqet “të gjitha rosat”"
         },
+        "CourseF_outbreak7": {
+          "costumes_callout": "Klikoni për të bërë një kostum të ri"
+        },
         "CourseF_outbreak7_-2022-2": {
+          "costumes_tab": "Kliko këtu për të shtuar kostume në projektin tuaj."
+        },
+        "CourseF_outbreak7_2023": {
           "costumes_tab": "Kliko këtu për të shtuar kostume në projektin tuaj."
         },
         "Dance_2019_01": {
@@ -177,6 +239,9 @@
         "Dance_Party_11_5": {
           "dance_party_11_5_groups": "Shikoni këtu për blloqet “të gjitha rosat”"
         },
+        "Fish Tank 3-validated_2021": {
+          "spritelab_comment": "Përdoreni këtë bllok për t'i lënë shënime vetes ose msësimdhënësit tuaj për mënyrën se si funksionon kodi juaj."
+        },
         "Function intro Ryan": {
           "Function_intro_Ryan_1": "Ky udhëzim i vogël i tregon kompjuterit për të drejtuar copën BIG të kodit me të njëjtin emër në hapësirën e punës."
         },
@@ -190,6 +255,9 @@
           "Function_intro_Ryan_1": "Ky udhëzim i vogël i tregon kompjuterit për të drejtuar copën BIG të kodit me të njëjtin emër në hapësirën e punës."
         },
         "Function intro Ryan_2021": {
+          "Function_intro_Ryan_1": "Ky udhëzim i vogël i tregon kompjuterit për të drejtuar copën BIG të kodit me të njëjtin emër në hapësirën e punës."
+        },
+        "Function intro Ryan_2023": {
           "Function_intro_Ryan_1": "Ky udhëzim i vogël i tregon kompjuterit për të drejtuar copën BIG të kodit me të njëjtin emër në hapësirën e punës."
         },
         "Infinity_move_collide": {
@@ -226,6 +294,9 @@
         "MC_HOC_2017_03_Cole_2021": {
           "MC_HOC_2017_03_Cole_1": "Kjo është një lak `përsëritur`! Klikoni atë në hapësirën e punës dhe shtoni kodin që dëshironi të kaloni pa pushim."
         },
+        "MC_HOC_2017_03_Cole_2023": {
+          "MC_HOC_2017_03_Cole_1": "Kjo është një lak `përsëritur`! Klikoni atë në hapësirën e punës dhe shtoni kodin që dëshironi të kaloni pa pushim."
+        },
         "MC_HOC_2017_04_Cole": {
           "MC_HOC_2017_04_Cole_a": "Agjenti mund të rri pezull mbi ujë, por lojtari nuk mund të!"
         },
@@ -239,6 +310,9 @@
           "MC_HOC_2017_04_Cole_a": "Agjenti mund të rri pezull mbi ujë, por lojtari nuk mund të!"
         },
         "MC_HOC_2017_04_Cole_2021": {
+          "MC_HOC_2017_04_Cole_a": "Agjenti mund të rri pezull mbi ujë, por lojtari nuk mund të!"
+        },
+        "MC_HOC_2017_04_Cole_2023": {
           "MC_HOC_2017_04_Cole_a": "Agjenti mund të rri pezull mbi ujë, por lojtari nuk mund të!"
         },
         "MC_HOC_2017_06_Cole": {
@@ -256,6 +330,9 @@
         "MC_HOC_2017_06_Cole_2021": {
           "MC_HOC_2017_06_Cole_1": "Ju nuk mund të hedhni këto blloqe larg, por ju mund të editoni ato!"
         },
+        "MC_HOC_2017_06_Cole_2023": {
+          "MC_HOC_2017_06_Cole_1": "Ju nuk mund të hedhni këto blloqe larg, por ju mund të editoni ato!"
+        },
         "MC_HOC_2017_Ali": {
           "MC_HOC_2017_08_RY_1": "Agjenti mund të rri pezull mbi ujë, por lojtari nuk mund të!  "
         },
@@ -269,6 +346,9 @@
           "MC_HOC_2017_08_RY_1": "Agjenti mund të rri pezull mbi ujë, por lojtari nuk mund të!  "
         },
         "MC_HOC_2017_Ali_2021": {
+          "MC_HOC_2017_08_RY_1": "Agjenti mund të rri pezull mbi ujë, por lojtari nuk mund të!  "
+        },
+        "MC_HOC_2017_Ali_2023": {
           "MC_HOC_2017_08_RY_1": "Agjenti mund të rri pezull mbi ujë, por lojtari nuk mund të!  "
         },
         "NEW Course 4 Artist Functions 7": {
@@ -311,6 +391,9 @@
         "Overworld Chop Trees_2021": {
           "craft_callout_preplaced": "Ne kemi vendosur disa blloqe këtu që ju të filloni"
         },
+        "Overworld Chop Trees_2023": {
+          "craft_callout_preplaced": "Ne kemi vendosur disa blloqe këtu që ju të filloni"
+        },
         "Overworld House Frame Chosen": {
           "craft_callout_preplaced_house": "Ky kod do të fillojë ndërtimin e shtëpisë tuaj. Mund të përfundoni atë?"
         },
@@ -324,6 +407,9 @@
           "craft_callout_preplaced_house": "Ky kod do të fillojë ndërtimin e shtëpisë tuaj. Mund të përfundoni atë?"
         },
         "Overworld House Frame Chosen_2021": {
+          "craft_callout_preplaced_house": "Ky kod do të fillojë ndërtimin e shtëpisë tuaj. Mund të përfundoni atë?"
+        },
+        "Overworld House Frame Chosen_2023": {
           "craft_callout_preplaced_house": "Ky kod do të fillojë ndërtimin e shtëpisë tuaj. Mund të përfundoni atë?"
         },
         "Overworld Move to Sheep": {
@@ -346,6 +432,10 @@
           "craft_drag_block_callout": "Terhiq një bllok \"lëvizPërpara ();\" dhe vendose atë poshtë një bllok tjetër",
           "craft_run_button_callout": "Shtyp \"Run\" për të provuar programin tënd"
         },
+        "Overworld Move to Sheep_2023": {
+          "craft_drag_block_callout": "Terhiq një bllok \"lëvizPërpara ();\" dhe vendose atë poshtë një bllok tjetër",
+          "craft_run_button_callout": "Shtyp \"Run\" për të provuar programin tënd"
+        },
         "Overworld Place Wall": {
           "craft_inside_repeat": "Përsëritni veprimet duke vendosur blloqe këtu"
         },
@@ -359,6 +449,9 @@
           "craft_inside_repeat": "Përsëritni veprimet duke vendosur blloqe këtu"
         },
         "Overworld Place Wall_2021": {
+          "craft_inside_repeat": "Përsëritni veprimet duke vendosur blloqe këtu"
+        },
+        "Overworld Place Wall_2023": {
           "craft_inside_repeat": "Përsëritni veprimet duke vendosur blloqe këtu"
         },
         "Underground Avoiding Lava": {
@@ -376,6 +469,9 @@
         "Underground Avoiding Lava_2021": {
           "craft_callout_moveforward": "Ky kod do të kontrollojë për llava, mund të shtoni një komandë për të lëvizur përpara?"
         },
+        "Underground Avoiding Lava_2023": {
+          "craft_callout_moveforward": "Ky kod do të kontrollojë për llava, mund të shtoni një komandë për të lëvizur përpara?"
+        },
         "Underground Iron": {
           "craft_what_is_iron": "Hidhe në erë këtë hekur!"
         },
@@ -391,10 +487,34 @@
         "Underground Iron_2021": {
           "craft_what_is_iron": "Hidhe në erë këtë hekur!"
         },
+        "Underground Iron_2023": {
+          "craft_what_is_iron": "Hidhe në erë këtë hekur!"
+        },
+        "Virtual Pet 2_-2022-2": {
+          "vp_costumes": "Kliko këtu për të shtuar kostume në projektin tuaj!"
+        },
+        "Virtual Pet 2_2021": {
+          "vp_costumes": "Kliko këtu për të shtuar kostume në projektin tuaj!"
+        },
+        "Virtual Pet 2_2023": {
+          "vp_costumes": "Kliko këtu për të shtuar kostume në projektin tuaj!"
+        },
+        "Virtual Pet 6_-2022-2": {
+          "vp_costumes": "Kliko këtu për të shtuar kostume në projektin tuaj!"
+        },
+        "Virtual Pet 6_2021": {
+          "vp_costumes": "Kliko këtu për të shtuar kostume në projektin tuaj!"
+        },
+        "Virtual Pet 6_2023": {
+          "vp_costumes": "Kliko këtu për të shtuar kostume në projektin tuaj!"
+        },
         "courseA_EOC_playlab_animals": {
           "question_mark": "?"
         },
         "courseA_EOC_playlab_animals2022": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_animals_2023": {
           "question_mark": "?"
         },
         "courseA_EOC_playlab_fantasy": {
@@ -403,17 +523,143 @@
         "courseA_EOC_playlab_fantasy2022": {
           "question_mark": "?"
         },
+        "courseA_EOC_playlab_fantasy_2023": {
+          "question_mark": "?"
+        },
         "courseA_EOC_playlab_people": {
           "question_mark": "?"
         },
         "courseA_EOC_playlab_people2022": {
           "question_mark": "?"
         },
+        "courseA_EOC_playlab_people_2023": {
+          "question_mark": "?"
+        },
+        "courseA_artist_loops4_2021": {
+          "courseA_artist_loops4_1": "Ky numër ju tregon se sa prej këtyre blloqeve mund të përdorni në këtë enigmë."
+        },
+        "courseA_artist_loops7_2021": {
+          "courseA_artist_loops7_1": "Ky numër do të thotë se në përgjigjen përfundimtare mund të përdoret vetëm një nga ky lloj blloku."
+        },
+        "courseA_artist_loops8_2021": {
+          "courseA_artist_loops8_1": "A e dini se mund të tërhiqni nga një vijë sa herë të keni nevojë?"
+        },
+        "courseA_collector_loops1_2021": {
+          "courseA_collector_loops1_1": "Përdoreni këtë bllok për të mbledhur thesarin."
+        },
+        "courseA_collector_loops3_2021": {
+          "gradek_adventurer_loops2_1": "Ky numër ju tregon se sa prej këtyre blloqeve mund të përdorni në këtë enigmë."
+        },
         "courseA_maze_ramp2_2021": {
           "courseC_maze_programming2_1": "Kjo është kutia e blloqeve. Është vendi ku do të gjeni blloqe shtesë për të përfunduar enigmat tuaja."
         },
+        "courseA_maze_seq1": {
+          "courseA_maze_seq1_1": "Klikoni llambën kur keni nevojë për ndihmë!"
+        },
+        "courseA_maze_seq12022": {
+          "courseA_maze_seq1_1": "Klikoni llambën kur keni nevojë për ndihmë!"
+        },
+        "courseA_maze_seq1_2018": {
+          "courseA_maze_seq1_1": "Klikoni llambën kur keni nevojë për ndihmë!"
+        },
+        "courseA_maze_seq1_2019": {
+          "courseA_maze_seq1_1": "Klikoni llambën kur keni nevojë për ndihmë!"
+        },
+        "courseA_maze_seq1_2020": {
+          "courseA_maze_seq1_1": "Klikoni llambën kur keni nevojë për ndihmë!"
+        },
+        "courseA_maze_seq1_2021": {
+          "courseA_maze_seq1_1": "Klikoni llambën kur keni nevojë për ndihmë!"
+        },
+        "courseA_maze_seq1_2023": {
+          "courseA_maze_seq1_1": "Klikoni llambën kur keni nevojë për ndihmë!"
+        },
+        "courseA_playLab_events4_2021": {
+          "courseA_playlab_events4_callout1": "Kjo është një thirrje"
+        },
+        "courseA_playLab_events5_2021": {
+          "courseA_playLab_events5_1": "Klikoni këtu për të ndryshuar drejtimin e shigjetës së eventit."
+        },
+        "courseA_playLab_events6_2021": {
+          "courseA_playLab_events6_1": "Kjo ju lejon juve të zgjidhni një tingull “të rastësishëm”, që do të thotë se nuk e dini se çfarë do të merrni derisa ta dëgjoni!"
+        },
+        "courseB_Scrat_ramp1_2021": {
+          "grade2_CaringForNewPet_0_1": "Pasi të keni lidhur të gjitha blloqet, shtypni \"Ekzekuto\" për të filluar programin tuaj."
+        },
+        "courseB_Scrat_ramp3a_2021": {
+          "courseC_maze_programming2_1": "Kjo është kutia e blloqeve. Është vendi ku do të gjeni blloqe shtesë për të përfunduar enigmat tuaja."
+        },
+        "courseB_artist_loops3_2021": {
+          "courseB_artist_loops3_1": "Ekziston vetëm një nga këto blloqe në kutinë e blloqeve. Si do ta përdorni?"
+        },
+        "courseB_collector_loops1_2021": {
+          "courseB_collector_loops1_1": "Përdoreni këtë bllok për të mbledhur thesarin."
+        },
+        "courseB_maze_seq1": {
+          "courseB_maze_seq1": "Klikoni llambën kur keni nevojë për ndihmë!"
+        },
+        "courseB_maze_seq12022": {
+          "courseB_maze_seq1": "Klikoni llambën kur keni nevojë për ndihmë!"
+        },
+        "courseB_maze_seq1_2018": {
+          "courseB_maze_seq1": "Klikoni llambën kur keni nevojë për ndihmë!"
+        },
+        "courseB_maze_seq1_2019": {
+          "courseB_maze_seq1": "Klikoni llambën kur keni nevojë për ndihmë!"
+        },
+        "courseB_maze_seq1_2020": {
+          "courseB_maze_seq1": "Klikoni llambën kur keni nevojë për ndihmë!"
+        },
+        "courseB_maze_seq1_2021": {
+          "courseB_maze_seq1": "Klikoni llambën kur keni nevojë për ndihmë!"
+        },
+        "courseB_maze_seq1_2023": {
+          "courseB_maze_seq1": "Klikoni llambën kur keni nevojë për ndihmë!"
+        },
+        "courseB_playlab_events6_2021": {
+          "courseB_playlab_events6_a": "Përdorni shigjetën e gjelbër te menyja rënëse për të ndryshuar drejtimet."
+        },
+        "courseC19_playLab_EOC3_2021": {
+          "courseE_playLab_scaffold3_1": "Qojeni aktorin te ky flamur për të kaluar në nivelin tjetër."
+        },
         "courseC_PlayLab_events82022": {
           "courseC_PlayLab_events8_callout1": "Përdoreni këtë bllok kur prekin Waddles dhe Chomp!"
+        },
+        "courseC_PlayLab_events8_2021": {
+          "courseC_PlayLab_events8_callout1": "Përdoreni këtë bllok kur prekin Waddles dhe Chomp!"
+        },
+        "courseC_PlayLab_events_challenge1_2021": {
+          "courseC_PlayLab_events_challenge1_1": "Ky bllok ju lejon të lëvizni aktorët në pjesë të ndryshme të hapësirës së lojës."
+        },
+        "courseC_artist_loops1a_2021": {
+          "jumpto_callout": "Ky bllok është shumë i rëndësishëm për këtë projekt. Sigurohuni që ta përdorni!"
+        },
+        "courseC_artist_loops1b_2021": {
+          "sticker2": "Shtoni këtë në mes të programit tuaj."
+        },
+        "courseC_artist_prog22022": {
+          "slider": "Ju mund t'a ngadalësoni programin tuaj këtu."
+        },
+        "courseC_artist_prog2_2021": {
+          "slider": "Ju mund t'a ngadalësoni programin tuaj këtu."
+        },
+        "courseC_artist_prog2_2023": {
+          "slider": "Ju mund t'a ngadalësoni programin tuaj këtu."
+        },
+        "courseC_collector_prog1_2021": {
+          "courseC_collector_prog1_1": "A po i shihni disa blloqe të reja në kutinë e blloqeve? Mos u shqetësoni, ne do t'ju tregojmë se si t'i përdorni ato në një mësim tjetër."
+        },
+        "courseC_collector_prog7_2021": {
+          "courseC_collector_prog7_1": "Mund të marrësh më shumë blloqe nga kutia e blloqeve nëse të duhen!"
+        },
+        "courseC_harvester_loops1_2021": {
+          "courseC_harvester_loops1_callout1": "Numri katër te kungulli ju tregon se ka katër kunguj të disponueshëm për të mbledhur."
+        },
+        "courseC_maze_debugging5_2021": {
+          "courseC_maze_debugging5_1": "Këto blloqe janë të bllokuara dhe nuk mund të fshihen!"
+        },
+        "courseC_maze_debugging9_2021": {
+          "courseC_maze_debugging9_2019_1": "Tërhiqni blloqet nga kutia e blloqeve në hapësirën tuaj punuese."
         },
         "courseC_maze_programming1_2021": {
           "grade2_CaringForNewPet_0_1": "Pasi të keni lidhur të gjitha blloqet, shtypni \"Ekzekuto\" për të nisur programin tuaj."
@@ -434,6 +680,27 @@
         "courseC_maze_programming7_2021": {
           "courseC_maze_programming7_1": "Kjo është enigma juaj e parë sfiduese! Këto janë menduar të jenë të vështira dhe mund të kërkojnë disa përpjekje.",
           "courseC_maze_programming7_2": "Këto blloqe janë guri dhe nuk mund të hidhen larg."
+        },
+        "courseC_starWars_loops2_2021": {
+          "courseC_starWars_loops2": "Ju keni vetëm një nga këto blloqe në dispozicion në këtë enigmë."
+        },
+        "courseD_bee_conditionals2_2021": {
+          "4_5_Bee_Conditionals_2_1": "Mos harroni, kontrolloni për të parë nëse ÇDO re ka një LULE. Ju nuk keni pse të kontrolloni për huall mjalti fare."
+        },
+        "courseD_bee_conditionals_challenge2_2021": {
+          "courseD_bee_conditionals_challenge2_1": "Përdoreni këtë loop për të mbledhur të gjithë nektarin (ose mjaltin) nga një lule (ose huall mjalti)."
+        },
+        "courseD_bee_nestedLoops1a2022": {
+          "stepButton": "Provoni të kaloni nëpër kodin tuaj një bllok në të njejtën kohë."
+        },
+        "courseD_bee_nestedLoops1a_2021": {
+          "stepButton": "Provoni të kaloni nëpër kodin tuaj një bllok në të njejtën kohë."
+        },
+        "courseD_bee_nestedLoops1a_2023": {
+          "stepButton": "Provoni të kaloni nëpër kodin tuaj një bllok në të njejtën kohë."
+        },
+        "courseD_farmer_while7_2021": {
+          "courseD_farmer_while7_2018_PathAhead": "Ju do të duhet të përdorni bllokun “ndërsa rruga përpara” në mënyrë që t'a zgjidhni këtë enigmë."
         },
         "courseD_maze_intro4_2021": {
           "courseC_maze_programming4_1": "Ky është kufiri juaj i bllokimit. Ai ju tregon se sa nga këto blloqe ju kanë mbetur për të përdorur."
@@ -460,6 +727,53 @@
         "courseE_aboutme_2_2021": {
           "": "Kliko këtu!"
         },
+        "courseE_aboutme_2_2023": {
+          "": "Kliko këtu për të shtuar kostume në projektin tuaj."
+        },
+        "courseE_artist_functions2_2021": {
+          "courseD_artist_functions2_1": "Kur ky bllok i gjelbër ekzekutohet, të gjithë kodet në funksion do të ekzekutohen. Çfarë duhet të bëjë artisti pas vizatimit të katrorit të parë?"
+        },
+        "courseE_artist_functions8a_2021": {
+          "courseD_artist_functions8_1": "Blloqet tuaja për të krijuar funksione janë zhvendosur nën këtë etiketë në kutinë e veglave."
+        },
+        "courseE_artist_functions_challenge1_2021": {
+          "courseE_artist_functions_challenge1_callout1": "Mbani këtë program duke shtuar më shumë kod në fund.",
+          "courseE_artist_functions_challenge1_callout2": "Nëse nuk ju pëlqen ky dizajn, ndryshoni atë si do që dëshironi!"
+        },
+        "courseE_artist_functions_challenge2_2021": {
+          "courseE_artist_functions_challenge2_callout1": "Mbani këtë program duke shtuar më shumë kod në fund.",
+          "courseE_artist_functions_challenge2_callout2": "Nëse nuk ju pëlqen ky dizajn, ndryshoni atë si do që dëshironi!"
+        },
+        "courseE_farmer_functions1": {
+          "courseE_farmer_functions1_2": "Kutia e veglave është organizuar pak më ndryshe këtë herë! Klikoni mbi kategoritë e ndryshme për të parë se cilat blloqe keni."
+        },
+        "courseE_farmer_functions12022": {
+          "courseE_farmer_functions1_2": "Kutia e veglave është organizuar pak më ndryshe këtë herë! Klikoni mbi kategoritë e ndryshme për të parë se cilat blloqe keni."
+        },
+        "courseE_farmer_functions13_2021": {
+          "courseE_farmer_functions1a_1": "Kjo perime është e panjohur. Ndryshon çdo herë që ekzekutoni programin."
+        },
+        "courseE_farmer_functions1_2018": {
+          "courseE_farmer_functions1_2": "Kutia e veglave është organizuar pak më ndryshe këtë herë! Klikoni mbi kategoritë e ndryshme për të parë se cilat blloqe keni."
+        },
+        "courseE_farmer_functions1_2019": {
+          "courseE_farmer_functions1_2": "Kutia e veglave është organizuar pak më ndryshe këtë herë! Klikoni mbi kategoritë e ndryshme për të parë se cilat blloqe keni."
+        },
+        "courseE_farmer_functions1_2020": {
+          "courseE_farmer_functions1_2": "Kutia e veglave është organizuar pak më ndryshe këtë herë! Klikoni mbi kategoritë e ndryshme për të parë se cilat blloqe keni."
+        },
+        "courseE_farmer_functions1_2021": {
+          "courseE_farmer_functions1_2": "Kutia e veglave është organizuar pak më ndryshe këtë herë! Klikoni mbi kategoritë e ndryshme për të parë se cilat blloqe keni."
+        },
+        "courseE_farmer_functions1_2023": {
+          "courseE_farmer_functions1_2": "Kutia e veglave është organizuar pak më ndryshe këtë herë! Klikoni mbi kategoritë e ndryshme për të parë se cilat blloqe keni."
+        },
+        "courseE_farmer_functions1a_2021": {
+          "courseE_farmer_functions1a_1": "Kjo perime është e panjohur. Ndryshon çdo herë që ekzekutoni programin."
+        },
+        "courseE_farmer_functions2b_2021": {
+          "courseE_farmer_functions1a_1": "Kjo perime është e panjohur. Ndryshon çdo herë që ekzekutoni programin."
+        },
         "courseF_apps_aquarium": {
           "run_button": "Shtypni së pari butonin Ekzekuto!",
           "visualizationResizeBar": "Tërhiqni 3 pikat për të ndryshuar madhësinë e zonës së lojës."
@@ -472,6 +786,10 @@
           "run_button": "Shtypni së pari butonin Ekzekuto!",
           "visualizationResizeBar": "Tërhiqni 3 pikat për të ndryshuar madhësinë e zonës së lojës."
         },
+        "courseF_apps_aquarium_2023": {
+          "run_button": "Shtypni së pari butonin Ekzekuto!",
+          "visualizationResizeBar": "Tërhiqni 3 pikat për të ndryshuar madhësinë e zonës së lojës."
+        },
         "courseF_apps_card": {
           "visualizationResizeBar": "Tërhiqni 3 pikat për të ndryshuar madhësinë e zonës së lojës."
         },
@@ -479,6 +797,9 @@
           "visualizationResizeBar": "Tërhiqni 3 pikat për të ndryshuar madhësinë e zonës së lojës."
         },
         "courseF_apps_card_-2022-2": {
+          "visualizationResizeBar": "Tërhiqni 3 pikat për të ndryshuar madhësinë e zonës së lojës."
+        },
+        "courseF_apps_card_2023": {
           "visualizationResizeBar": "Tërhiqni 3 pikat për të ndryshuar madhësinë e zonës së lojës."
         },
         "courseF_apps_chatbot": {
@@ -490,6 +811,10 @@
           "visualizationResizeBar": "Tërhiqni 3 pikat për të ndryshuar madhësinë e zonës së lojës."
         },
         "courseF_apps_chatbot_-2022-2": {
+          "run_button": "Shtypni së pari butonin Ekzekuto!",
+          "visualizationResizeBar": "Tërhiqni 3 pikat për të ndryshuar madhësinë e zonës së lojës."
+        },
+        "courseF_apps_chatbot_2023": {
           "run_button": "Shtypni së pari butonin Ekzekuto!",
           "visualizationResizeBar": "Tërhiqni 3 pikat për të ndryshuar madhësinë e zonës së lojës."
         },
@@ -505,16 +830,32 @@
           "run_button": "Shtypni së pari butonin Ekzekuto!",
           "visualizationResizeBar": "Tërhiqni 3 pikat për të ndryshuar madhësinë e zonës së lojës."
         },
+        "courseF_apps_collector_2023": {
+          "run_button": "Shtypni së pari butonin Ekzekuto!",
+          "visualizationResizeBar": "Tërhiqni 3 pikat për të ndryshuar madhësinë e zonës së lojës."
+        },
         "courseF_apps_collector_drag_-2022-2": {
+          "visualizationResizeBar": "Tërhiqni 3 pikat për të ndryshuar madhësinë e zonës së lojës."
+        },
+        "courseF_apps_collector_drag_2023": {
           "visualizationResizeBar": "Tërhiqni 3 pikat për të ndryshuar madhësinë e zonës së lojës."
         },
         "courseF_apps_collector_drive_-2022-2": {
           "visualizationResizeBar": "Tërhiqni 3 pikat për të ndryshuar madhësinë e zonës së lojës."
         },
+        "courseF_apps_collector_drive_2023": {
+          "visualizationResizeBar": "Tërhiqni 3 pikat për të ndryshuar madhësinë e zonës së lojës."
+        },
         "courseF_apps_collector_move2_-2022-2": {
           "visualizationResizeBar": "Tërhiqni 3 pikat për të ndryshuar madhësinë e zonës së lojës."
         },
+        "courseF_apps_collector_move2_2023": {
+          "visualizationResizeBar": "Tërhiqni 3 pikat për të ndryshuar madhësinë e zonës së lojës."
+        },
         "courseF_apps_collector_move_-2022-2": {
+          "visualizationResizeBar": "Tërhiqni 3 pikat për të ndryshuar madhësinë e zonës së lojës."
+        },
+        "courseF_apps_collector_move_2023": {
           "visualizationResizeBar": "Tërhiqni 3 pikat për të ndryshuar madhësinë e zonës së lojës."
         },
         "courseF_apps_madlib": {
@@ -524,6 +865,9 @@
           "visualizationResizeBar": "Tërhiqni 3 pikat për të ndryshuar madhësinë e zonës së lojës."
         },
         "courseF_apps_madlib_-2022-2": {
+          "visualizationResizeBar": "Tërhiqni 3 pikat për të ndryshuar madhësinë e zonës së lojës."
+        },
+        "courseF_apps_madlib_2023": {
           "visualizationResizeBar": "Tërhiqni 3 pikat për të ndryshuar madhësinë e zonës së lojës."
         },
         "courseF_apps_pet": {
@@ -538,10 +882,29 @@
           "run_button": "Shtypni së pari butonin Ekzekuto!",
           "visualizationResizeBar": "Tërhiqni 3 pikat për të ndryshuar madhësinë e zonës së lojës."
         },
+        "courseF_apps_pet_2023": {
+          "run_button": "Shtypni së pari butonin Ekzekuto!",
+          "visualizationResizeBar": "Tërhiqni 3 pikat për të ndryshuar madhësinë e zonës së lojës."
+        },
+        "courseF_artist_for1_2021": {
+          "courseF_artist_for1_1": "Kutia e blloqeve është në modelin “kategori” për të krijuae më shumë hapësirë për kodin tuaj. “For” loops jetojnë këtu."
+        },
+        "courseF_bee_for4_2021": {
+          "courseF_bee_for4_1": "Ju do të gjeni `for` loop këtu!"
+        },
+        "courseF_bee_for9_2021": {
+          "courseF_bee_for9_1": "Këtu do të gjeni bllokun \"matematikë\"."
+        },
+        "courseF_bee_variables_1a_2021": {
+          "courseF_bee_functions_1_2018_1": "Ju mund të gjeni variablat tuaj këtu poshtë!"
+        },
         "courseF_editable_card": {
           "visualizationResizeBar": "Tërhiqni 3 pikat për të ndryshuar madhësinë e zonës së lojës."
         },
         "courseF_editable_card_-2022-2": {
+          "visualizationResizeBar": "Tërhiqni 3 pikat për të ndryshuar madhësinë e zonës së lojës."
+        },
+        "courseF_editable_card_2023": {
           "visualizationResizeBar": "Tërhiqni 3 pikat për të ndryshuar madhësinë e zonës së lojës."
         },
         "courseF_editable_chatbot": {
@@ -550,16 +913,82 @@
         "courseF_editable_chatbot_-2022-2": {
           "visualizationResizeBar": "Tërhiqni 3 pikat për të ndryshuar madhësinë e zonës së lojës."
         },
+        "courseF_editable_chatbot_2023": {
+          "visualizationResizeBar": "Tërhiqni 3 pikat për të ndryshuar madhësinë e zonës së lojës."
+        },
         "courseF_editable_madlib": {
           "visualizationResizeBar": "Tërhiqni 3 pikat për të ndryshuar madhësinë e zonës së lojës."
         },
         "courseF_editable_madlib_-2022-2": {
           "visualizationResizeBar": "Tërhiqni 3 pikat për të ndryshuar madhësinë e zonës së lojës."
         },
+        "courseF_editable_madlib_2023": {
+          "visualizationResizeBar": "Tërhiqni 3 pikat për të ndryshuar madhësinë e zonës së lojës."
+        },
+        "courseF_events_choice_penguin": {
+          "whenToWhile": "Mundohuni të ndryshoni kur në gjersa."
+        },
+        "courseF_events_choice_penguin_-2022-2": {
+          "whenToWhile": "Mundohuni të ndryshoni kur në gjersa."
+        },
+        "courseF_events_choice_penguin_2023": {
+          "whenToWhile": "Mundohuni të ndryshoni kur në gjersa."
+        },
+        "courseF_events_conflict": {
+          "stops_block": "Blloqe të reja këtu!"
+        },
+        "courseF_events_conflict_-2022-2": {
+          "stops_block": "Blloqe të reja këtu!"
+        },
+        "courseF_events_conflict_2023": {
+          "stops_block": "Blloqe të reja këtu!"
+        },
+        "courseF_events_key": {
+          "whenKey": "Përdorni bllokun e ri të eventeve që gjendet këtu."
+        },
+        "courseF_events_key_-2022-2": {
+          "whenKey": "Përdorni bllokun e ri të eventeve që gjendet këtu."
+        },
+        "courseF_events_key_2023": {
+          "whenKey": "Përdorni bllokun e ri të eventeve që gjendet këtu."
+        },
+        "courseF_events_practice_reorder": {
+          "stopAllBug": "Ky bllok është në rendin e gabuar."
+        },
+        "courseF_events_practice_reorder_-2022-2": {
+          "stopAllBug": "Ky bllok është në rendin e gabuar."
+        },
+        "courseF_events_practice_reorder_2023": {
+          "stopAllBug": "Ky bllok është në rendin e gabuar."
+        },
+        "courseF_events_predict": {
+          "behaviors_edit": "Klikoni këtu për të parë se si funksionon kjo sjellje."
+        },
+        "courseF_events_time": {
+          "events_category": "Klikoni këtu për të hapur kategorinë e eventeve."
+        },
+        "courseF_events_time_-2022-2": {
+          "events_category": "Klikoni këtu për të hapur kategorinë e eventeve."
+        },
+        "courseF_events_time_2023": {
+          "events_category": "Klikoni këtu për të hapur kategorinë e eventeve."
+        },
+        "courseF_label_predict": {
+          "variablesPredict": "Shikoni nga afër kodin poshtë kësaj pike."
+        },
+        "courseF_label_predict_-2022-2": {
+          "variablesPredict": "Shikoni nga afër kodin poshtë kësaj pike."
+        },
+        "courseF_label_predict_2023": {
+          "variablesPredict": "Shikoni nga afër kodin poshtë kësaj pike."
+        },
         "courseF_sprites_behaviors": {
           "behaviors_category": "Kliko këtu për të hapur kategorinë e sjelljeve."
         },
         "courseF_sprites_behaviors_-2022-2": {
+          "behaviors_category": "Kliko këtu për të hapur kategorinë e sjelljeve."
+        },
+        "courseF_sprites_behaviors_2023": {
           "behaviors_category": "Kliko këtu për të hapur kategorinë e sjelljeve."
         },
         "courseF_sprites_make": {
@@ -568,10 +997,16 @@
         "courseF_sprites_make_-2022-2": {
           "sprites_category": "Kliko këtu për të hapur kategorinë Sprites."
         },
+        "courseF_sprites_make_2023": {
+          "sprites_category": "Kliko këtu për të hapur kategorinë Sprites."
+        },
         "courseF_sprites_positioning": {
           "locations_category": "Kliko këtu për të hapur kategorinë e vendndodhjes."
         },
         "courseF_sprites_positioning_-2022-2": {
+          "locations_category": "Kliko këtu për të hapur kategorinë e vendndodhjes."
+        },
+        "courseF_sprites_positioning_2023": {
           "locations_category": "Kliko këtu për të hapur kategorinë e vendndodhjes."
         },
         "courseF_sprites_properties": {
@@ -579,6 +1014,102 @@
         },
         "courseF_sprites_properties_-2022-2": {
           "sprites_category2": "Shikoni për një bllok të ri këtu."
+        },
+        "courseF_sprites_properties_2023": {
+          "sprites_category2": "Shikoni për një bllok të ri këtu."
+        },
+        "courseF_text_answer": {
+          "answered_block": "Shikoni për një bllok të ri këtu!"
+        },
+        "courseF_text_answer_-2022-2": {
+          "answered_block": "Shikoni për një bllok të ri këtu!"
+        },
+        "courseF_text_answer_2023": {
+          "answered_block": "Shikoni për një bllok të ri këtu!"
+        },
+        "courseF_text_choice_color": {
+          "text_color_finish": "A ndryshoi ngjyrën prapavija kur iu përgjigjët pyetjes? Nëse po, shtypni 'Përfundo'. Nëse jo, shtypni 'Reseto', ndryshoni kodin tuaj dhe shtypni 'Ekzekuto' përsëri."
+        },
+        "courseF_text_choice_color_-2022-2": {
+          "text_color_finish": "A ndryshoi ngjyrën prapavija kur iu përgjigjët pyetjes? Nëse po, shtypni 'Përfundo'. Nëse jo, shtypni 'Reseto', ndryshoni kodin tuaj dhe shtypni 'Ekzekuto' përsëri."
+        },
+        "courseF_text_choice_color_2023": {
+          "text_color_finish": "A ndryshoi ngjyrën prapavija kur iu përgjigjët pyetjes? Nëse po, shtypni 'Përfundo'. Nëse jo, shtypni 'Reseto', ndryshoni kodin tuaj dhe shtypni 'Ekzekuto' përsëri."
+        },
+        "courseF_text_choice_conversation": {
+          "text_generic_finish": "A keni mbaruar? Nëse po, shtypni 'Përfundo'. Nëse jo, shtypni 'Reseto', ndryshoni kodin tuaj dhe shtypni 'Ekzekuto' përsëri."
+        },
+        "courseF_text_choice_conversation_-2022-2": {
+          "text_generic_finish": "A keni mbaruar? Nëse po, shtypni 'Përfundo'. Nëse jo, shtypni 'Reseto', ndryshoni kodin tuaj dhe shtypni 'Ekzekuto' përsëri."
+        },
+        "courseF_text_choice_conversation_2023": {
+          "text_generic_finish": "A keni mbaruar? Nëse po, shtypni 'Përfundo'. Nëse jo, shtypni 'Reseto', ndryshoni kodin tuaj dhe shtypni 'Ekzekuto' përsëri."
+        },
+        "courseF_text_choice_title": {
+          "text_answer_finish": "A u shfaq titulli në ekran për 3 sekonda? Nëse po, shtypni 'Përfundo'. Nëse jo, shtypni 'Reseto', ndryshoni kodin tuaj dhe shtypni 'Ekzekuto' përsëri.",
+          "title_block": "Shikoni për një bllok të ri këtu!"
+        },
+        "courseF_text_choice_title_-2022-2": {
+          "text_answer_finish": "A u shfaq titulli në ekran për 3 sekonda? Nëse po, shtypni 'Përfundo'. Nëse jo, shtypni 'Reseto', ndryshoni kodin tuaj dhe shtypni 'Ekzekuto' përsëri.",
+          "title_block": "Shikoni për një bllok të ri këtu!"
+        },
+        "courseF_text_choice_title_2023": {
+          "text_answer_finish": "A u shfaq titulli në ekran për 3 sekonda? Nëse po, shtypni 'Përfundo'. Nëse jo, shtypni 'Reseto', ndryshoni kodin tuaj dhe shtypni 'Ekzekuto' përsëri.",
+          "title_block": "Shikoni për një bllok të ri këtu!"
+        },
+        "courseF_text_concat": {
+          "join_blocks": "Shikoni për një bllok të ri këtu!"
+        },
+        "courseF_text_concat_-2022-2": {
+          "join_blocks": "Shikoni për një bllok të ri këtu!"
+        },
+        "courseF_text_concat_2023": {
+          "join_blocks": "Shikoni për një bllok të ri këtu!"
+        },
+        "courseF_text_events": {
+          "events_category": "Klikoni këtu për të hapur kategorinë e eventeve."
+        },
+        "courseF_text_events_-2022-2": {
+          "events_category": "Klikoni këtu për të hapur kategorinë e eventeve."
+        },
+        "courseF_text_events_2023": {
+          "events_category": "Klikoni këtu për të hapur kategorinë e eventeve."
+        },
+        "courseF_text_print": {
+          "print_block": "Gjeni bllokun e printimit këtu!",
+          "text_print_finish": "A u printua mesazhi juaj më lart? Nëse po, shtypni 'Përfundo'. Nëse jo, shtypni 'Reseto', ndryshoni kodin tuaj dhe shtypni 'Ekzekuto' përsëri."
+        },
+        "courseF_text_print_-2022-2": {
+          "print_block": "Gjeni bllokun e printimit këtu!",
+          "text_print_finish": "A u printua mesazhi juaj më lart? Nëse po, shtypni 'Përfundo'. Nëse jo, shtypni 'Reseto', ndryshoni kodin tuaj dhe shtypni 'Ekzekuto' përsëri."
+        },
+        "courseF_text_print_2023": {
+          "print_block": "Gjeni bllokun e printimit këtu!",
+          "text_print_finish": "A u printua mesazhi juaj më lart? Nëse po, shtypni 'Përfundo'. Nëse jo, shtypni 'Reseto', ndryshoni kodin tuaj dhe shtypni 'Ekzekuto' përsëri."
+        },
+        "courseF_text_prompts": {
+          "prompt_block": "Gjeni bllokun e kërkesës këtu!"
+        },
+        "courseF_text_prompts_-2022-2": {
+          "prompt_block": "Gjeni bllokun e kërkesës këtu!"
+        },
+        "courseF_text_prompts_2023": {
+          "prompt_block": "Gjeni bllokun e kërkesës këtu!"
+        },
+        "courseF_variables2_predict_-2022-2": {
+          "variablesPredict": "Shikoni nga afër kodin poshtë kësaj pike."
+        },
+        "courseF_variables2_predict_2023": {
+          "variablesPredict": "Shikoni nga afër kodin poshtë kësaj pike."
+        },
+        "courseF_variables_predict": {
+          "variablesPredict": "Shikoni nga afër kodin poshtë kësaj pike."
+        },
+        "courseF_variables_predict_-2022-2": {
+          "variablesPredict": "Shikoni nga afër kodin poshtë kësaj pike."
+        },
+        "courseF_variables_predict_2023": {
+          "variablesPredict": "Shikoni nga afër kodin poshtë kësaj pike."
         },
         "coursea_maze_ramp12022": {
           "grade2_CaringForNewPet_0_1": "Pasi të keni lidhur të gjitha blloqet, shtypni \"Ekzekuto\" për të nisur programin tuaj."
@@ -589,12 +1120,32 @@
         "coursee_helloworld_events": {
           "hello_world_click_hint": "Shtoni kete event bllok ne vendin tuaj te punes. "
         },
+        "coursee_helloworld_events_2023": {
+          "hello_world_click_hint": "Shtoni kete event bllok ne vendin tuaj te punes. "
+        },
         "coursee_helloworld_freeplay": {
+          "costumes_tab": "Kliko këtu për të shtuar kostume në projektin tuaj."
+        },
+        "coursee_helloworld_freeplay_2023": {
           "costumes_tab": "Kliko këtu për të shtuar kostume në projektin tuaj."
         },
         "coursee_helloworld_say": {
           "hello_world_make_sprite": "Perdorni kete bllok per te krijuar nje sprite. ",
           "hello_world_say": "Perdorni kete bllok per t'i bere sprites te flasin. "
+        },
+        "coursee_helloworld_say_2023": {
+          "hello_world_make_sprite": "Perdorni kete bllok per te krijuar nje sprite. ",
+          "hello_world_say": "Perdorni kete bllok per t'i bere sprites te flasin. "
+        },
+        "csc_animal_adaptations_bugs2": {
+          "hello_world_behavior_blocks": "Perdor kete bllok me nje nga sjelljet me poshte: "
+        },
+        "ecosystems_helloworld_say_2023": {
+          "hello_world_make_sprite": "Perdorni kete bllok per te krijuar nje sprite. ",
+          "hello_world_say": "Perdorni kete bllok per t'i bere sprites te flasin. "
+        },
+        "express_maze_debugging9_2021": {
+          "express_maze_debugging9_2019_1": "Tërhiqni blloqet nga kutia e blloqeve në hapësirën tuaj punuese."
         },
         "frozen circle function with parameter": {
           "frozen_circle_function_with_parameter_circle": "Përdor bllokun \"create a circle\" dhe ndrysho madhësinë."
@@ -672,6 +1223,12 @@
         "helloworld_animals_sounds": {
           "hello_world_new": "Bllok i Ri!"
         },
+        "helloworld_bugs_behaviors_2023": {
+          "hello_world_behavior_blocks": "Perdor kete bllok me nje nga sjelljet me poshte: "
+        },
+        "helloworld_bunny_adaptation_2023": {
+          "hw_Run": "Kliko ketu per te ekzekutuar kodin. "
+        },
         "helloworld_emoji_backgrounds": {
           "hw_background_location": "Përdoreni këtë bllok për të vendosur një sfond të ri."
         },
@@ -710,6 +1267,9 @@
         "helloworld_food_backgrounds": {
           "hw_background_location": "Përdoreni këtë bllok për të vendosur një sfond të ri."
         },
+        "helloworld_food_backgrounds_2023": {
+          "hw_background_location": "Përdoreni këtë bllok për të vendosur një sfond të ri."
+        },
         "helloworld_food_backgrounds_soccer-2022": {
           "hw_background_location": "Përdoreni këtë bllok për të vendosur një sfond të ri."
         },
@@ -717,6 +1277,9 @@
           "hw_background_location": "Përdoreni këtë bllok për të vendosur një sfond të ri."
         },
         "helloworld_food_behaviors": {
+          "hello_world_behavior_blocks": "Perdor kete bllok me nje nga sjelljet me poshte: "
+        },
+        "helloworld_food_behaviors_2023": {
           "hello_world_behavior_blocks": "Perdor kete bllok me nje nga sjelljet me poshte: "
         },
         "helloworld_food_behaviors_soccer-2022": {
@@ -728,6 +1291,9 @@
         "helloworld_food_click": {
           "hw_Run": "Kliko ketu per te ekzekutuar kodin. "
         },
+        "helloworld_food_click_2023": {
+          "hw_Run": "Kliko ketu per te ekzekutuar kodin. "
+        },
         "helloworld_food_click_soccer-2022": {
           "hw_Run": "Kliko ketu per te ekzekutuar kodin. "
         },
@@ -735,6 +1301,9 @@
           "hw_Run": "Kliko këtu së pari!"
         },
         "helloworld_food_costumes": {
+          "hello_world_new": "Bllok i Ri!"
+        },
+        "helloworld_food_costumes_2023": {
           "hello_world_new": "Bllok i Ri!"
         },
         "helloworld_food_costumes_soccer-2022": {
@@ -764,6 +1333,9 @@
         "helloworld_food_location": {
           "pin": "Pin"
         },
+        "helloworld_food_location_2023": {
+          "pin": "Pin"
+        },
         "helloworld_food_location_soccer-2022": {
           "pin": "Pin"
         },
@@ -771,6 +1343,9 @@
           "pin": "Pin"
         },
         "helloworld_food_multi": {
+          "pin": "Pin"
+        },
+        "helloworld_food_multi_2023": {
           "pin": "Pin"
         },
         "helloworld_food_multi_soccer-2022": {
@@ -795,6 +1370,10 @@
           "hello_world_new": "Bllok i Ri!",
           "hello_world_new_block": "Bllok i Ri!"
         },
+        "helloworld_food_sizes_2023": {
+          "hello_world_new": "Bllok i Ri!",
+          "hello_world_new_block": "Bllok i Ri!"
+        },
         "helloworld_food_sizes_soccer-2022": {
           "hello_world_new": "Bllok i Ri!",
           "hello_world_new_block": "Bllok i Ri!"
@@ -804,6 +1383,9 @@
           "hello_world_new_block": "Bllok i Ri!"
         },
         "helloworld_food_sounds": {
+          "hello_world_new": "Bllok i Ri!"
+        },
+        "helloworld_food_sounds_2023": {
           "hello_world_new": "Bllok i Ri!"
         },
         "helloworld_food_sounds_soccer-2022": {
@@ -847,20 +1429,109 @@
         "helloworld_retro_sounds": {
           "hello_world_new": "Bllok i Ri!"
         },
+        "ml-customize apps-choice3": {
+          "CSD_AI_L10_predict": "Shtoni deklaratën tuaj nëse këtu"
+        },
+        "ml-customize apps-choice3_2022": {
+          "CSD_AI_L10_predict": "Shtoni deklaratën tuaj nëse këtu"
+        },
+        "ml-customize apps-choice5": {
+          "CSD_AI_L11_top": "Vendosni bllokun mbi këtë linjë"
+        },
+        "ml-customize apps-choice5_2022": {
+          "CSD_AI_L11_top": "Vendosni bllokun mbi këtë linjë"
+        },
+        "ml-intro app lab-book recommender 5C-2021": {
+          "CSD_AI_L7_event": "Shto bllokun \"play sound\" këtu"
+        },
+        "ml-intro app lab-book recommender 5C_2022": {
+          "CSD_AI_L7_event": "Shto bllokun \"play sound\" këtu"
+        },
+        "ml-intro app lab-book recommender 5E-2021": {
+          "CSD_AI_L7_top": "Vendosni bllokun mbi këtë linjë"
+        },
+        "ml-intro app lab-book recommender 5E_2022": {
+          "CSD_AI_L7_top": "Vendosni bllokun mbi këtë linjë"
+        },
+        "ml-models in applab-screens-1-2021": {
+          "CSD_AI_L10_ifstatement": "Shtoni deklaratën tuaj nëse këtu"
+        },
+        "ml-models in applab-screens-1_2022": {
+          "CSD_AI_L10_ifstatement": "Shtoni deklaratën tuaj nëse këtu"
+        },
+        "ml-models in applab-screens-3-2021": {
+          "CSD_AI_L7_ifstatement": "Shtoni deklaratën tuaj nëse këtu"
+        },
+        "ml-models in applab-screens-3_2022": {
+          "CSD_AI_L7_ifstatement": "Shtoni deklaratën tuaj nëse këtu"
+        },
+        "ml-use model card-choice3": {
+          "CSD_AI_L10_predict": "Shtoni deklaratën tuaj nëse këtu"
+        },
+        "ml-use model card-choice3_2022": {
+          "CSD_AI_L10_predict": "Shtoni deklaratën tuaj nëse këtu"
+        },
+        "ml-use model card-choice5": {
+          "CSD_AI_L11_top": "Vendosni bllokun mbi këtë linjë"
+        },
+        "ml-use model card-choice5_2022": {
+          "CSD_AI_L11_top": "Vendosni bllokun mbi këtë linjë"
+        },
+        "ml-use model card-example3C-2021": {
+          "CSD_AI_L11_temp": "Kjo është karakteristika e temperaturës"
+        },
+        "ml-use model card-example3C_2022": {
+          "CSD_AI_L11_temp": "Kjo është karakteristika e temperaturës"
+        },
+        "ml-use model card-example3D-2021": {
+          "CSD_AI_L11_time": "Kjo është karakteristika e Time of Day"
+        },
+        "ml-use model card-example3D_2022": {
+          "CSD_AI_L11_time": "Kjo është karakteristika e Time of Day"
+        },
+        "ml-use model card-example3_EditB-2021": {
+          "CSD_AI_L11_cars": "Kjo është karakteristika e numrit të makinave"
+        },
+        "ml-use model card-example3_EditB_2022": {
+          "CSD_AI_L11_cars": "Kjo është karakteristika e numrit të makinave"
+        },
+        "ml-use model card-example3_EditC-2021": {
+          "CSD_AI_L11_weather": "Kjo është karakteristika e motit"
+        },
+        "ml-use model card-example3_EditC_2022": {
+          "CSD_AI_L11_weather": "Kjo është karakteristika e motit"
+        },
         "poetry_hoc_addSprites": {
           "poetry_sprite": "Bllok i Ri!"
         },
+        "poetry_hoc_addSprites_2023": {
+          "poetry_sprite": "Bllok i Ri!"
+        },
         "poetry_hoc_backgroundEffects": {
+          "run_button": "Testoni animacionin tuaj me këtë buton. "
+        },
+        "poetry_hoc_backgroundEffects_2023": {
           "run_button": "Testoni animacionin tuaj me këtë buton. "
         },
         "poetry_hoc_events1": {
           "poetry_event": "Bllok i Ri!",
           "poetry_foreground": "Bllok i Ri!"
         },
+        "poetry_hoc_events1_2023": {
+          "poetry_event": "Bllok i Ri!",
+          "poetry_foreground": "Bllok i Ri!"
+        },
         "poetry_hoc_freeplay": {
           "poetry_new_block": "Bllok i Ri!"
         },
+        "poetry_hoc_freeplay_2023": {
+          "poetry_new_block": "Bllok i Ri!"
+        },
         "poetry_hoc_sounds": {
+          "poetry_music": "Bllok i Ri!",
+          "poetry_sound": "Bllok i Ri!"
+        },
+        "poetry_hoc_sounds_2023": {
           "poetry_music": "Bllok i Ri!",
           "poetry_sound": "Bllok i Ri!"
         },
@@ -868,7 +1539,15 @@
           "poetry_sprite_begins": "Bllok i Ri!",
           "poetry_sprite_stops": "Bllok i Ri!"
         },
+        "poetry_hoc_spriteBehaviors_2023": {
+          "poetry_sprite_begins": "Bllok i Ri!",
+          "poetry_sprite_stops": "Bllok i Ri!"
+        },
         "poetry_hoc_spriteSizes": {
+          "poetry_remove_sprite": "Bllok i Ri!",
+          "poetry_set_sprite": "Bllok i Ri!"
+        },
+        "poetry_hoc_spriteSizes_2023": {
           "poetry_remove_sprite": "Bllok i Ri!",
           "poetry_set_sprite": "Bllok i Ri!"
         }

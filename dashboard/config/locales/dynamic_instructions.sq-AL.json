@@ -1,2 +1,142 @@
 {
+  "sq-AL": {
+    "data": {
+      "dynamic_instructions": {
+        "ml-bad data-club investigations": {
+          "modelSummary": "[empty string]",
+          "saveModel": "[empty string]",
+          "uploadedDataset": "[empty string]"
+        },
+        "ml-bad data-club investigations_2022": {
+          "modelSummary": "[empty string]",
+          "saveModel": "[empty string]",
+          "uploadedDataset": "[empty string]"
+        },
+        "ml-bad data-loneliness all": {
+          "modelSummary": "[empty string]",
+          "saveModel": "[empty string]",
+          "uploadedDataset": "[empty string]"
+        },
+        "ml-bad data-loneliness all_2022": {
+          "modelSummary": "[empty string]",
+          "saveModel": "[empty string]",
+          "uploadedDataset": "[empty string]"
+        },
+        "ml-data decisions-zoo1-2021": {
+          "selectDataset": "[empty string]",
+          "selectedDataset": "[empty string]",
+          "selectedFeatureNumerical": "[empty string]",
+          "uploadedDataset": "[empty string]"
+        },
+        "ml-data decisions-zoo1_2022": {
+          "selectDataset": "[empty string]",
+          "selectedDataset": "[empty string]",
+          "selectedFeatureNumerical": "[empty string]",
+          "uploadedDataset": "[empty string]"
+        },
+        "ml-data decisions-zoo2-2021": {
+          "selectDataset": "[empty string]",
+          "selectedDataset": "[empty string]",
+          "selectedFeatureNumerical": "[empty string]",
+          "uploadedDataset": "[empty string]"
+        },
+        "ml-data decisions-zoo2_2022": {
+          "selectDataset": "[empty string]",
+          "selectedDataset": "[empty string]",
+          "selectedFeatureNumerical": "[empty string]",
+          "uploadedDataset": "[empty string]"
+        },
+        "ml-data decisions-zoo3-2021": {
+          "selectDataset": "[empty string]",
+          "selectedDataset": "[empty string]",
+          "selectedFeatureNumerical": "[empty string]",
+          "uploadedDataset": "[empty string]"
+        },
+        "ml-data decisions-zoo3_2022": {
+          "selectDataset": "[empty string]",
+          "selectedDataset": "[empty string]",
+          "selectedFeatureNumerical": "[empty string]",
+          "uploadedDataset": "[empty string]"
+        },
+        "ml-good data-upload isaac csv": {
+          "modelSummary": "[empty string]",
+          "saveModel": "[empty string]"
+        },
+        "ml-good data-upload isaac csv_2022": {
+          "modelSummary": "[empty string]",
+          "saveModel": "[empty string]"
+        },
+        "ml-intro ai lab-shapes v1": {
+          "dataDisplayLabel": "[empty string]",
+          "modelSummary": "[empty string]",
+          "results": "Në këtë ekran ju mund të shihni se sa i saktë AI Bot kur krahasoni parashikimet e tij me të dhënat e testimit për të cilat ne tashmë i dimë përgjigjet. \n\n** Bëni këtë: ** Mbani trajnimin e modelit tuaj derisa të keni të paktën 100% saktësi",
+          "saveModel": "[empty string]",
+          "selectDataset": "[empty string]",
+          "selectedDataset": "[empty string]",
+          "selectedFeatureCategorical": "Kur zgjidhni një kolonë, informacione shtesë shfaqen në panelin e djathtë. Kjo mund t'ju ndihmojë të vendosni nëse kjo është një veçori e dobishme për parashikimin e etiketës tuaj. Ju mund të mësoni më shumë në seksionin Ndihmë dhe Këshilla të këtyre udhëzimeve.\n\n**Bëni këtë: ** Vendosni nëse dëshironi ta përdorni këtë kolonë si veçori. Nëse po, shtypni butonin “Shto veçori”. Nëse jo, zgjidhni një kolonë të re për të eksploruar. Përsëriteni këtë derisa të keni zgjedhur disa kolona për t'u përdorur si veçori.",
+          "selectedFeatureNumerical": "[empty string]",
+          "uploadedDataset": "[empty string]"
+        },
+        "ml-intro ai lab-shapes v1_2022": {
+          "dataDisplayLabel": "[empty string]",
+          "modelSummary": "[empty string]",
+          "saveModel": "[empty string]",
+          "selectDataset": "[empty string]",
+          "selectedDataset": "[empty string]",
+          "selectedFeatureNumerical": "[empty string]",
+          "uploadedDataset": "[empty string]"
+        },
+        "ml-intro categorical-food choices-2021": {
+          "dataDisplayLabel": "[empty string]",
+          "modelSummary": "[empty string]",
+          "saveModel": "[empty string]",
+          "selectedFeatureNumerical": "[empty string]",
+          "uploadedDataset": "[empty string]"
+        },
+        "ml-intro categorical-food choices_2022": {
+          "dataDisplayLabel": "[empty string]",
+          "modelSummary": "[empty string]",
+          "saveModel": "[empty string]",
+          "selectedFeatureNumerical": "[empty string]",
+          "uploadedDataset": "[empty string]"
+        },
+        "ml-intro categorical-pizza-2021": {
+          "dataDisplayLabel": "[empty string]",
+          "modelSummary": "[empty string]",
+          "saveModel": "[empty string]",
+          "selectDataset": "[empty string]",
+          "selectedDataset": "[empty string]",
+          "selectedFeatureNumerical": "[empty string]",
+          "uploadedDataset": "[empty string]"
+        },
+        "ml-intro categorical-pizza_2022": {
+          "dataDisplayLabel": "[empty string]",
+          "modelSummary": "[empty string]",
+          "saveModel": "[empty string]",
+          "selectDataset": "[empty string]",
+          "selectedDataset": "[empty string]",
+          "selectedFeatureNumerical": "[empty string]",
+          "uploadedDataset": "[empty string]"
+        },
+        "ml-mini project-ai lab 2": {
+          "uploadedDataset": "[empty string]"
+        },
+        "ml-mini project-ai lab 2_2022": {
+          "uploadedDataset": "[empty string]"
+        },
+        "ml-numerical ai lab-safari 1-2021": {
+          "dataDisplayLabel": "[empty string]",
+          "selectDataset": "[empty string]",
+          "selectedDataset": "[empty string]",
+          "uploadedDataset": "[empty string]"
+        },
+        "ml-numerical ai lab-safari 1_2022": {
+          "dataDisplayLabel": "[empty string]",
+          "selectDataset": "[empty string]",
+          "selectedDataset": "[empty string]",
+          "uploadedDataset": "[empty string]"
+        }
+      }
+    }
+  }
 }

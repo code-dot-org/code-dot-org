@@ -222,7 +222,7 @@ sq:
     login_username: 'Email-i ose emri i përdoruesit'
     password: 'Fjalëkalimi'
     remember: 'Më mbaj mend'
-    submit: 'Futu'
+    submit: 'Kyçu'
   signin:
     try_heading: 'Dëshiron të provosh të kodosh pa u rregjistruar?'
     try_hoc: 'Provo një Orë Kodimi si fillim'
@@ -316,6 +316,7 @@ sq:
       sections: "Seksionet"
       help_support: "Ndihmë dhe mbështetje"
       report_bug: "Raporto një problem"
+      report_abuse: "Raporto abuzim"
       teacher_community: "Forumi i mësimdhënësve"
       educate_hoc: "Ora e Kodimit"
       learn: "Mëso"
@@ -350,12 +351,14 @@ sq:
       eval: 'Vlerëso'
       flappy: 'Flappy'
       frozen: 'Frozen'
+      gamelab: 'Game Lab'
       gumball: 'Bota Mahnitëse e Gumball'
       iceage: 'Epoka e Akullnajave'
       infinity: 'Pafundësi'
       minecraft_adventurer: 'Aventurieri Minecraft'
       minecraft_designer: 'Minecraft'
       playlab: 'Play Lab'
+      poetry_hoc: 'Arti i poezisë'
       spritelab: 'Sprite Lab'
       starwars: 'Lufta e Yjeve'
       loading: 'Në ngarkim...'
@@ -385,7 +388,7 @@ sq:
     user_not_found: 'Mësuesi nuk mund te gjendet.'
     student_teacher_disassociated: 'Ju e keni hequr %{teacher_name} si mësuesi juaj.'
     panel:
-      answer_viewer: 'Paneli i mësuesit'
+      answer_viewer: 'Paneli i mësimdhënësit'
       student: 'Student'
       viewing_solution: 'Duke parë zgjidhjen'
       try_it_yourself: 'Bëje vetë'
@@ -502,6 +505,7 @@ sq:
     title: 'Keni nevojë për ndihmë?'
     subtitle: 'Shiko këto video dhe udhëzimet'
     teacher: 'Shiko zgjidhjen'
+    teacher_no_solution: 'Ndaloni së shikuari zgjidhjet'
     auth_error: 'Ti nuk je i autorizuar të shohësh zgjidhjen.'
     submit: 'Përditëso Vendndodhjen e Artistit'
     direction: 'Fillo Drejtimin (në gradë)'
@@ -511,6 +515,7 @@ sq:
     notes_coming_soon: 'Shënimet për këtë video vijnë së shpejti.'
     autoplay_option: 'Luaj videot automatikisht'
     download: 'Shkarko videon'
+    show_notes: 'Shfaq shënime'
     label: 'Video'
   compatibility:
     upgrade:
@@ -572,6 +577,7 @@ sq:
       title: "Galeria"
       body: "Shiko një galeri imazhesh artistësh dhe aplikacionesh, të krijuar nga përdoruesit tonë"
     gamelab:
+      title: "Game Lab"
       audience: "Moshat 13 +"
       cta: "Mëso si "
     hero:
@@ -591,6 +597,8 @@ sq:
     minecraft2016:
       title: "Minecraft"
       body: "Kafshët e programit dhe krijesa të tjera Minecraft në versionin tuaj të Minecraft."
+    poem-art:
+      title: 'Arti i poezisë'
     starwars:
       title: "Lufta e Yjeve"
     weblab:
@@ -664,6 +672,8 @@ sq:
     open_response_body: "Faleminderit për përgjigjen!"
     correct_title: "E saktë"
     correct_body: "Kjo është përgjigja e saktë."
+  lesson_extras:
+    bonus_level: "Nivel Bonus"
   dialog:
     ok: "Në rregull"
     startover_title: "A jeni i sigurt që doni të filloni nga fillimi?"
@@ -796,9 +806,9 @@ sq:
     windows: 'Windows (64-bit)'
     mac: 'Mac OS X'
   locked_stage: 'Përmbajtjet e kësaj faze nuk janë të dukshme për shkak se kjo fazë është e bllokuar aktualisht. Mësuesi juaj mund të zhbllokuar këtë fazë kur është koha për të punuar mbi të ose të shqyrtojë përgjigjet tuaja.'
-  hidden_stage: "Mësuesi juaj nuk pret që të jeni këtu. Ju lutem pyesni mësuesin tuaj se cili mësim duhet të jetë."
+  hidden_stage: "Mësimdhënësi juaj nuk e priste që ju të ishit këtu. Ju lutemi pyesni mësimdhënësin tuaj në cilin mësim duhet të jeni."
   no_script_access_student: "Ju nuk keni qasje në këtë njësi. Ju lutemi pyesni mësimdhënësin tuaj se në cilën njësi duhet të jeni."
-  return_unit_overview: 'Shko në njësinë e rishikimit'
+  return_unit_overview: 'Shkoni te përmbledhja e njësisë'
   return_course_overview: 'Shko në njësinë e rishikimit'
   view_all_units: 'Shiko të gjitha njësitë'
   pd:

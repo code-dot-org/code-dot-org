@@ -147,6 +147,7 @@ sq:
         Farmer2: Fermeri 2
         Farmer3: Fermeri 3
         Flappy: Flappy Bird
+        Gamelab: Game Lab
         Jigsaw: Jigsaw
         Maze: Labirinti
         MazeEC: Labirinti
@@ -174,7 +175,7 @@ sq:
         Custom_builder: Lëviz blloqet nga toolboxi tek vendi i punës për të vizatuar
           nivelin që dëshiron të krijosh. Shtyp "Run" kur të jesh gati.
         applab_ec_simple: Krijo aplikacionin tënd duke përdorur blloqet në toolbox.
-        jigsaw_1: Kliko bllokun
+        jigsaw_1: Klikoni bllokun
         jigsaw_10: Bashkoni blloqet për të formuar imazhin
         jigsaw_11: Vendosni këto blloqe në rend sipas numrit
         jigsaw_12: Vendosni këto blloqe në rend sipas numrit
@@ -668,13 +669,13 @@ sq:
         C1_maze_intro_sequencing: Hyrja e Sekuencuar e Maze
         C1_maze_loops: Përsëritja e Maze
         C1_moveitmoveit_unplugged: Lëvize atë, lëvize atë
-        C1_pair_programming: Programim në çift
+        C1_pair_programming: Programimi në ekip
         C1_planting_seed: Mbjellja e një fare
         C1_playlab_storytelling: Play Lab - Krijo një Ngjarje
         C1_spelling_bee_intro: Hyrja e Bletëve të gërmëzuara
         C1_zuck_repeat_loop: Përsëritja e Maze
         C2_artist_debugging: Riparimi i Artistit
-        C2_artist_intro: Hyrja e Artistit
+        C2_artist_intro: Artisti
         C2_artist_loops: Përsëritjet e Artistit
         C2_bee_conditionals: Kushtet e Bletëve
         C2_bee_debugging: Riparimi i Bletëve
@@ -731,9 +732,15 @@ sq:
         CSF_SpriteLab_Intro_v2: Prezantimi i Sprite Lab
         CSF_SpriteLab_SpritesInAction_CDEF: Sprites në veprim
         CSF_SpriteLab_SpritesInAction_v2: Sprites në veprim
+        CSF_Spritelab_MakeSprite_v2: Si të krijoni një Sprite
+        CSF_a_b_artist_loops: Loops te Artisti
+        CSF_collector_k1_blocks: 'Bazat e Shkencave Kompjuterike: Mbledhësja'
+        CSF_collector_repeat_loops: 'Mbledhësja: Repeat Loops'
+        CSF_collector_text_blocks: Mbledhësja
         CSF_debugging_k1_blocks: Debugging
         CSF_debugging_text_blocks: Debugging
-        CSF_loops_AB: cikle
+        CSF_if_allskins: Blloku If
+        CSF_loops_AB: Cikle
         CSF_maze_intro_k1_blocks: Hyrje në Code Studio
         CSF_maze_intro_text_blocks: Hyrje Code Studio
         CSF_my_robotic_friends: Shokët e mi robotik
@@ -749,14 +756,15 @@ sq:
         Unplug8: Abstraksion
         Unplug9: Programim i Besueshëm
         artist_intro: Hyrja e Artistit
+        csc_timecapsule_intro: Kodimi i kapsulës së kohës
         csd_applab_parameters: Funksionet me parametra
         csd_debugging: Debugging
-        csd_pair_programming: Programim në çift
+        csd_pair_programming: Programimi në ekip
         csd_u6_input_output: Inputet dhe Outputet
         csf_my_online_neighborhood_2020: Lagja ime në Internet
         csp_applab_functions: Hyrja në Funksione
         csp_applab_functions_parameters: Funksionet me parametra
-        csp_applab_loops: cikle
+        csp_applab_loops: Cikle
         csp_applab_parameters: Funksionet me parametra
         csp_concept_rgb: Disa të dhëna rreth Piksel-ave
         farmer_intro: Hyrja e Fermerit
