@@ -4684,6 +4684,909 @@
           "purpose": "Sa online na aktibidad na ito, matututunan ng mga mag-aaral kung paano gumamit ng mga kaganapan sa Play Lab. Magsisimula sila sa pamamagitan ng pagsasanay sa kabalyero na gumalaw kapag pinindot ang arrow key, pagkatapos ay magtatapos sa pagkakataong ipakita ang iba pang mga kasanayan na natutunan nila sa buong kursong ito, kabilang ang pagkakasunud-sunod at pag-loop, bilang bahagi ng panghuling freeplay na palaisipan.",
           "student_overview": "Gumamit ng mga kaganapan upang lumikha ng kuwento o gumawa ng interactive na laro."
         },
+        "coursea-2023/Safety in My Online Neighborhood": {
+          "name": "Kaligtasan sa Aking Kapaligiran sa Internet",
+          "overview": "[![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nAng araling ito ay orihinal na nilikha ng Common Sense Education. [Matuto pa.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nAng kapangyarihan ng internet ay nagbibigay-daan sa mga mag-aaral na maranasan at bisitahin ang mga lugar na maaaring hindi nila makita nang personal. Ngunit, tulad ng paglalakbay sa totoong mundo, mahalagang maging ligtas kapag naglalakbay online. Sa virtual field trip na ito, maaaring magsanay ang mga bata na manatiling ligtas sa mga online na pakikipagsapalaran.",
+          "preparation": "-   Suriin ang mga materyales sa pagtuturo.\n-   I-print ang (mga) handout sa bawat mag-aaral.\n-   (Opsyonal) Mag-print ng poster ng tula para ipakita sa silid-aralan.",
+          "purpose": "Ang Digital Citizenship Curriculum ng Common Sense ay tumutugon sa anim na pangunahing paksa, batay sa pinakabagong pananaliksik sa mga bata, media, at teknolohiya. Nakatuon ang araling ito sa Privacy at Seguridad. Natututo ang mga mag-aaral kung paano protektahan ang personal na impormasyon at magkaroon ng mas malalim na pag-unawa sa kanilang mga karapatan sa privacy ng data upang makapagtaguyod sila sa kanilang sarili at sa iba.",
+          "student_overview": "Alamin kung paano pumunta sa mga lugar nang ligtas online."
+        },
+        "coursea-2023/Learn to Drag and Drop": {
+          "name": "Matutong Mag-Drag at Mag-Drop",
+          "overview": "Ang araling ito ay magbibigay sa mga estudyante ng ideya kung ano ang aasahan nila kapag pumunta na sila sa kompyuter lab. Ito ay nagsisimula sa isang maikling pagtatalakay na nagpapakilala sa kanila sa mga gawi sa loob ng kompyuter lab, pagkatapos sila ay uunlad papunta sa paggamit ng kompyuter para makumpleto ang mga online na mga palaisipan.",
+          "preparation": "-   Panoorin ang **\\*aano Gumawa ng Seksiyon ng Klase** sa Code.org - Teacher Video. Gumawa ng sarili mong seksiyon ng klase sa Code.org at tiyaking may card ang bawat mag-aaral na may passcode.\n-   Tiyaking maa-access ng mga mag-aaral ang Aralin 2 sa kanilang mga device. Pag-isipan kung gusto mong itago ang mga aralin sa hinaharap upang maiwasan ang mga mag-aaral na magpatuloy nang masyadong mabilis.\n-   Ipadagdag sa IT ng paaralan ang mabilis na link sa seksiyon ng iyong klase sa desktop ng computer.\n-   Suriin ang website ng Common Sense Education sa higit pang nilalamang pangkaligtasan sa online.",
+          "purpose": "Ang pangunahing layunin ng araling ito ay bumuo ng karanasan ng mga mag-aaral sa mga computer. Sa pamamagitan ng pagsakop sa pinakapangunahing mga function ng computer tulad ng pag-click, pag-drag, at pag-drop, lumilikha kami ng mas pantay na larangan ng paglalaro sa klase para sa mga puzzle sa hinaharap. Ang araling ito ay nagbibigay din ng magandang pagkakataon upang ipakilala ang mga pangunahing terminolohiya ng computer hardware, na posibleng kasama ang \"mouse\", \"trackpad\" o \"touchscreen\", depende sa iyong mga device.",
+          "student_overview": "I-click at i-drag para tapusin ang mga puzzle."
+        },
+        "coursea-2023/Happy Maps": {
+          "name": "Happy Maps",
+          "overview": "Ang tulay mula sa mga algoritmo papunta sa pag-program ay maaaring napakaikli kung ang mga estudyante ay nakakaintindi sa kaibahan ng pagplano ng pagkakasunod-sunod at pag-encode ng pagkakasunod na iyon sa angkop na linggwahe. Ang gawaing ito ay makakatulong sa mga estudyante na magkaroon ng karanasan sa pagbasa at pagsulat ng madaliang code.",
+          "preparation": "-   Mag-print ng isang **\\*Worksheet** at isang set ng **\\*Mga Manipulative** bawat grupo ng 2-3.\n-   Tiyaking may Reflection Journal ang bawat mag-aaral.",
+          "purpose": "Ang tulay mula sa mga algoritmo papunta sa pag-program ay maaaring napakaikli kung ang mga estudyante ay nakakaintindi sa kaibahan ng pagplano ng pagkakasunod-sunod at pag-encode ng pagkakasunod na iyon sa angkop na linggwahe. Ang gawaing ito ay makakatulong sa mga estudyante na magkaroon ng karanasan sa pagbasa at pagsulat ng madaliang code.",
+          "student_overview": "Sumulat ng mga tagubilin upang makuha ang Flurb sa prutas."
+        },
+        "coursea-2023/Sequencing with Scrat": {
+          "overview": "Ang araling ito ay magbibigay sa mga estudyante ng ideya kung ano ang aasahan nila kapag pumunta na sila sa kompyuter lab. Ito ay nagsisimula sa isang maikling pagtatalakay na nagpapakilala sa kanila sa mga gawi sa loob ng kompyuter lab, pagkatapos sila ay uunlad papunta sa paggamit ng kompyuter para makumpleto ang mga online na mga palaisipan.",
+          "preparation": "-   Gupitin ang mga block ng direksiyon sa **\\*Mga Manipulative** na gagamitin sa aktibidad ng pagbubuklod ng Mga Maligayang Mapa.\n-   Tiyaking may Reflection Journal ang bawat mag-aaral..",
+          "purpose": "Sa araling ito, bubuo ang mga mag-aaral ng mga kasanayan sa programming at debugging sa computer platform. Ang block-based na format ng mga palaisipang ito ay tumutulong sa mga mag-aaral na malaman ang tungkol sa pagkakasunud-sunod at mga konsepto, nang hindi kinakailangang mag-alala tungkol sa pagperpekto ng syntax.",
+          "student_overview": "I-program si Scrat upang maabot ang acorn."
+        },
+        "coursea-2023/Programming with Scrat": {
+          "name": "Programming kasama si Scrat",
+          "overview": "Sa **pagbuo ng kasanayan** na araling ito, ang mga mag-aaral ay patuloy na bubuo ng mga sequential algorithm.",
+          "preparation": "-   Maglaro sa pamamagitan ng mga palaisipan upang mahanap ang anumang mga potensyal na lugar ng problema sa klase mo. \n-   (Opsyonal) Pumili ng ilang palaisipang gagawin bilang grupo kasama ng iyong klase. \n-   Tiyaking may reflection journal ang bawat mag-aaral.",
+          "purpose": "Sa araling ito, bubuo ang mga mag-aaral ng mga kasanayan sa programming at debugging sa computer platform. Ang block-based na format ng mga palaisipang ito ay tumutulong sa mga mag-aaral na malaman ang tungkol sa pagkakasunud-sunod at mga konsepto, nang hindi kinakailangang mag-alala tungkol sa pagperpekto ng syntax.",
+          "student_overview": "Sumulat ng mga program upang matulungan si Scrat na maabot ang acorn."
+        },
+        "coursea-2023/Programming with Rey and BB-8": {
+          "name": "Pag-Program kasama sina Rey at BB-8",
+          "overview": "Sa **pagbuo ng kasanayan** na araling ito, gagamitin ng mga mag-aaral ang kanilang bagong nahanap na mga kasanayan sa programming sa mas kumplikadong mga paraan upang mag-navigate sa nakakalito na kurso kasama si _BB-8_.",
+          "preparation": "-   Laruin ang mga palaisipang nauugnay sa araling ito upang mahanap ang anumang potensyal na lugar ng problema sa klase mo.\n-   Repasuhin ang **\\*Mga Tip sa Pangunahing Aktibidad ng Mga Batayan sa CS - Mga Rekomendasyon sa Aralin**. \n-   Tiyaking may Reflection Journal ang bawat mag-aaral.",
+          "purpose": "Sa pag-iisip ng paglipat ng kaalaman, ang araling ito ay nagbibigay sa mga mag-aaral ng bagong kapaligiran upang maisagawa ang mga kasanayan na kanilang nalilinang. Magtatalon sa tuwa ang mga tagahanga ng _Star Wars_ kapag nakita nila ang mga palaisipang ito. Ang bawat palaisipan sa seryeng ito ay idinagdag upang magbigay ng mas malalim na pag-unawa sa mga pangunahing konsepto na kanilang gagamitin sa kabuuan ng kursong ito",
+          "student_overview": "Tulungan si BB-8 na mangolekta ng scrap metal."
+        },
+        "coursea-2023/Happy Loops": {
+          "name": "Mga Maligayang Loop",
+          "overview": "Ang mga loop ay lubhang nakakatulong at makapangyarihan na kagamitan sa pag-program. Para maunawaan kung paano nakakatulong ang mga loops, ang mga estudyante ay kailangang hikayatin na gustohin ang madaliang paraan para lutasin ang mga di-gaanong mahalagang mga problema.",
+          "preparation": "-   Mag-print ng **\\*Worksheet** na ipapakita sa klase\n-   Para sa bawat grupo ng 2-3, i-print ang isa sa bawat isa: **\\*Piraso ng laro, \\*XL Worksheet, at \\*Bonus Pack Manipulatives**.\n-   Tiyaking may Reflection Journal ang bawat mag-aaral.",
+          "purpose": "Ang araling ito ay nagsisilbing pagpapakilala sa mga loop. Pinapayagan ng mga loop ang mga mag-aaral na gawing simple ang kanilang code sa pamamagitan ng pagbubuklod ng mga utos na kailangang ulitin. Ang mga mag-aaral ay magtatatag ng mga kasanayan sa kritikal na pag-iisip sa pamamagitan ng pagmamasid ng paulit-ulit na paggalaw ng kanilang mga kaklase at pagtukoy kung ilang beses ulitin ang mga utos. Sa pamamagitan ng pagtingin muli sa \"Mga Maligayang Mapa\", makakakuha ang mga mag-aaral ng pagkakataon na ikonekta ang mga lumang konsepto tulad ng pagkasunud-sunod sa bagong konsepto ng mga paulit-ulit na loop.",
+          "student_overview": "Tulungan ang Flurb na malutas ang mas malalaking problema gamit ang mga loop."
+        },
+        "coursea-2023/Loops with Scrat": {
+          "name": "Mga loop kasama si Scrat",
+          "overview": "Sa **pagbuo ng kasanayan** na araling ito, magsasanay ang mga mag-aaral ng mga loop sa programming na palaisipan kung saan ang layunin ay tulungan ang squirrel na maabot ang acorn.",
+          "preparation": "-   Repasuhin ang nakaraang hindi naka-plug na aralin at bumuo ng mga tanong para ipaalala sa mga mag-aaral kung bakit ginagamit ang mga loop.\n-   (Opsyonal) Pumili ng ilang palaisipang gagawin bilang grupo kasama ng klase mo.\n-   Magtipon ng mga supply mula sa nakaraang Mga Maligayang Loop para magamit muli sa warm up\n-   Tiyaking may Reflection Journal ang bawat mag-aaral.",
+          "purpose": "Sa araling ito, matututo ang mga mag-aaral ng higit pa tungkol sa mga loop at kung paano ipatupad ang mga ito sa Blockly code. Ang paggamit ng mga loop ay mahalagang kasanayan sa programming dahil ang manu-manong pag-uulit ng mga utos ay nakakapagod at hindi epektibo. Gamit itong mga palaisipan ng Code.org, matututo ang mga mag-aaral na magdagdag ng mga tagubilin sa mga umiiral nang loop, magtipon ng paulit-ulit na code sa mga loop, at makilala ang mga pattern na kailangang ulitin.",
+          "student_overview": "Tulungan si Scrat na sakupin ang higit pang lugar gamit ang mga loop."
+        },
+        "coursea-2023/Loops with Laurel": {
+          "name": "Mga Loop kay Laurel",
+          "overview": "Ang pagbubuo sa konsepto ng paulit-ulit na mga instruksyon mula sa \"Masayang mga Loop\", ang yugtong ito ay mag-uudyok sa mga estudyante na gumamit ng mga loop para mas mabisang makakolekta ng mga kayamanan sa Code.org.",
+          "preparation": "-   Maglaro sa pamamagitan ng mga palaisipan upang mahanap ang anumang mga potensyal na lugar ng problema sa klase mo. \n-   (Opsyonal) Pumili ng ilang palaisipang gagawin bilang grupo kasama ng iyong klase. \n-   Repasuhin ang **\\*Mga Rekomendasyon sa Aralin sa CSF**. \n-   Tiyaking may reflection journal ang bawat mag-aaral",
+          "purpose": "Ang araling ito ay nagbibigay sa mga mag-aaral ng higit pang pagsasanay na may mga loop at nagpapakilala ng bagong block, `kumuha ng kayamanan`. Gumagana ang block tulad ng ginawa ng `pumitas ng mais` sa Mang-aani. Ang mga palaisipang ito ay mas bukas, na nagbibigay sa mga mag-aaral ng higit na kakayahang umangkop sa kanilang mga huling solusyon.",
+          "student_overview": "Tulungan si Laurel na manlalakbay na mangolekta ng kayamanan sa ilalim ng lupa."
+        },
+        "coursea-2023/Ocean Scene with Loops": {
+          "name": "Eksena sa Karagatan na may mga Loop",
+          "overview": "Pagbabalik sa mga loop, ang mga estudyante ay matututong gumuhit ng mga larawan sa pamamagitan ng pag-loop ng mga simpleng pagkakasunod-sunod ng mga instruksyon. Sa huling plugged na aralin, ang mga loop ay ginamit para makatawid sa maze at makakolekta ng mga kayamanan. Dito, ang mga loops ay lilikha ng mga pattern. Sa dulo ng yugtong ito, ang mga estudyante ay bibigyan ng pagkakataong makalikha ng kanilang sariling mga larawan gamit ang mga loop.",
+          "preparation": "-   Maglaro sa pamamagitan ng mga palaisipan upang mahanap ang anumang mga potensyal na lugar ng problema sa klase mo.\n-   Repasuhin ang **\\*Mga Rekomendasyon sa Aralin sa CSF**.\n-   Tiyaking may reflection journal ang bawat mag-aaral.",
+          "purpose": "Ang araling ito ay nagbibigay ng ibang pananaw sa kung paano ang mga loop ay maaaring lumikha ng mga bagay sa programming. Maaari ding pag-isipan ng mga mag-aaral ang kawalan ng kahusayan ng programming nang walang mga loop dito dahil sa kung gaano karaming mga block ang kakailanganin ng program nang walang tulong ng mga `ulitin` na loop.",
+          "student_overview": "Gumamit ng mga loop at pattern upang tapusin ang mga larawan."
+        },
+        "coursea-2023/The Big Event Jr": {
+          "overview": "Ang mga pangyayari ay magandang paraan para magdagdag ng kaibahan sa isang naisulat na na algoritmo. Minsan gusto mo na ang iyong programa ay maaaring tumugon sa mga gumagamit nang eksakto kapag nais ito ng gumagamit. Para sa mga ito ang mga kaganapan.",
+          "preparation": "-   Maghandang i-project **\\*Ang Controller Image**.\n-   Mag-print ng **\\*Pagtatasa** bawat mag-aaral.\n-   Tiyaking may reflection journal ang bawat mag-aaral.",
+          "purpose": "Ngayon, matututunan ng mga mag-aaral na makilala ang mga kaganapan sa mga aksiyon. Makikita ng mga mag-aaral ang mga aktibidad na naantala sa pamamagitan ng pagpindot ng \"button\" sa remote na papel. Kapag nakikita ang kaganapang ito, magre-react ang klase ng natatanging aksiyon. Ang mga kaganapan ay malawakang ginagamit sa programming at dapat na madaling makilala pagkatapos ng araling ito.",
+          "student_overview": "Gumalaw at sumigaw kapag pinindot ng mga guro mo ang mga button sa higanteng remote."
+        },
+        "coursea-2023/Mini-Project: On the Move with Play Lab": {
+          "name": "Mini-Project: Sa Paglalakbay kasama ang Play Lab",
+          "overview": "Sa online na gawaing ito, ang mga estudyante ay magkakaroon ng pagkakataong matuto kung paano gumamit ng mga pangyayari sa Play Lab at para gumamit sa lahat ng mga kakayahan sa pag-code na natutunan nila para lumikha ng isang laro na naka-animate. Oras na para maging malikhain at gumawa ng istorya sa Play Lab!",
+          "preparation": "-   Maglaro sa pamamagitan ng mga palaisipan upang mahanap ang anumang mga potensyal na lugar ng problema sa klase mo. \n-   (Opsyonal) Pumili ng ilang palaisipang gagawin bilang grupo kasama ng iyong klase. \n-   Repasuhin ang **\\*Mga Rekomendasyon sa Aralin sa CSF**. \n-   Tiyaking may reflection journal ang bawat mag-aaral.",
+          "purpose": "Mapapaunlad pa ng mga mag-aaral ang kanilang pag-unawa sa mga kaganapan gamit ang Play Lab ngayon. Ang mga kaganapan ay karaniwan sa karamihan ng mga program sa computer. Sa aktibidad na ito, gagamit ang mga mag-aaral ng mga kaganapan upang gawing gumalaw ang karakter sa screen, gumawa ng mga ingay, at magpalit ng mga background batay sa mga kaganapang pinasimulan ng user.",
+          "student_overview": "Gumawa ng sarili mong laro o kwento."
+        },
+        "coursea-2023/End of Course Project": {
+          "overview": "Sa **proyekto** araling ito, ilalapat ng mga mag-aaral ang kanilang natutunan tungkol sa pagkakasunud-sunod at pag-loop sa Artist.",
+          "preparation": "-   Isulat at i-code ang iyong sariling kuwento sa Artist nang maaga upang magbigay ng inspirasyon sa mga mag-aaral!",
+          "purpose": "Ang araling ito ay nagbibigay sa mga mag-aaral ng huling pagkakataon na malikhaing gamitin ang kanilang mga bagong kasanayan sa computer science.",
+          "student_overview": "Magkwento kasama ang Artista!"
+        },
+        "courseb-2023/Digital Trails": {
+          "overview": " [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nAng araling ito ay orihinal na nilikha ng Common Sense Education. [Matuto pa.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nLagi bang nananatiling online ang ginagawa mo online? Nalaman ng mga mag-aaral na ang impormasyong ibinabahagi nila online ay nag-iiwan ng digital footprint o \"trail.\" Depende sa kung paano nila ito pinamamahalaan, ang trail na ito ay maaaring malaki o maliit, at nakakapinsala o nakakatulong. Ang mga mag-aaral ay naghahambing ng iba't ibang mga landas at nag-iisip nang kritikal tungkol sa kung anong uri ng impormasyon ang gusto nilang iwan.",
+          "preparation": "-   Suriin ang mga materyales sa pagtuturo.\n-   I-print ang (mga) handout sa bawat mag-aaral.",
+          "purpose": "Ang Digital Citizenship Curriculum ng Common Sense ay tumutugon sa anim na pangunahing paksa, batay sa pinakabagong pananaliksik sa mga bata, media, at teknolohiya. Nakatuon ang araling ito sa Digital Footprint & Identity. Isinasaalang-alang ng mga mag-aaral ang mga benepisyo at panganib ng online na pagbabahagi at tuklasin kung paano makakaapekto ang digital na persona sa pakiramdam ng tao sa sarili, reputasyon, at mga relasyon.",
+          "student_overview": "Alamin ang tungkol sa digital footprint mo at kung paano manatiling ligtas kapag bumibisita sa mga website."
+        },
+        "courseb-2023/Move It, Move It": {
+          "name": "Galawin ito, Galawin ito",
+          "overview": "Ipo-program ng mga mag-aaral ang kanilang mga kaklase na maingat na humakbang sa malaking grid sa sahig sa **context-setting** na aralin.",
+          "preparation": "-   Panoorin ang **\\*Video ng Guro**\n-   Mag-print (o kung hindi man ay maghanda upang ipakita) ang **\\*Susi sa Pagwawasto sa Worksheet**\n-   Mag-print ng **\\*Map Activity** at **\\*Worksheet** bawat grupo ng 2-3 mag-aaral\n-   Maghanda ng mga blangkong papel upang punan ang natitirang bahagi ng walking grid (4-7 ang kailangan bawat grupo)",
+          "purpose": "Sa pamamagitan ng paggamit ng pisikal na paggalaw upang iprograma ang kanilang mga kaklase, ang mga mag-aaral ay tatakbo sa mga isyu at emosyon na katulad ng kanilang mararamdaman kapag nagsimula silang mag-coding sa computer. Ang pagharap sa mga stress na iyon sa mapaglaro at bukas na kapaligiran ay makakatulong upang maibsan ang tindi at payagan ang mga mag-aaral na magsanay ng mga kinakailangang kasanayan bago sila magkaroon ng mga problema sa kanilang sarili.",
+          "student_overview": "I-program ang mga kaklase mo na maingat na humakbang sa bawat lugar."
+        },
+        "courseb-2023/Sequencing with Angry Birds": {
+          "name": "Pagsusunod-sunod kasama ang Mga Angry Bird",
+          "overview": "Ang araling ito ay magbibigay sa mga estudyante ng ideya kung ano ang aasahan nila kapag pumunta na sila sa kompyuter lab. Ito ay nagsisimula sa isang maikling pagtatalakay na nagpapakilala sa kanila sa mga gawi sa loob ng kompyuter lab, pagkatapos sila ay uunlad papunta sa paggamit ng kompyuter para makumpleto ang mga online na mga palaisipan.",
+          "preparation": "-   Kung ang mga mag-aaral mo ay bago sa pag-drag at pag-drop, isaalang-alang ang pagtalaga sa kanila ng **\\*Drag at Drop na Pagsasanay** bago simulan ang araling ito.\n-   Panoorin ang **\\*Paano Gumawa ng Seksiyon ng Klase sa Code.org** - Video ng Guro, Gumawa ng sarili mong seksiyon ng klase sa Code.org at tiyaking may card ang bawat mag-aaral kung saan nakalagay ang kanilang passcode.\n-   Hayaang magdagdag ang IT ng paaralan ng mabilis na link sa seksiyon ng klase mo sa desktop ng computer.\n-   Tiyaking may journal ang bawat mag-aaral.",
+          "purpose": "Sa araling ito, bubuo ang mga mag-aaral ng mga kasanayan sa programming at debugging sa computer platform. Ang block-based na format ng mga palaisipang ito ay tumutulong sa mga mag-aaral na malaman ang tungkol sa pagkakasunud-sunod at mga konsepto, nang hindi kinakailangang mag-alala tungkol sa pagperpekto ng syntax.",
+          "student_overview": "Tulungan si Red ang Angry Bird na sundan ang landas patungo sa salbaheng baboy."
+        },
+        "courseb-2023/Programming with Angry Birds": {
+          "name": "Pag-Program sa Maze",
+          "overview": "Sa **pagbuo ng kasanayan** na araling ito, ang mga mag-aaral ay patuloy na bubuo ng mga sequential algorithm.",
+          "preparation": "-   Maglaro sa pamamagitan ng mga palaisipan upang mahanap ang anumang mga potensyal na lugar ng problema sa klase mo.\n-   Maghanap o mag-print muli ng mga supply sa **\\*Maligayang Mapa**.\n-   Tiyaking may Reflection Journal ang bawat mag-aaral.\n-   Gupitin ang sapat na **\\*Manipulative** ng bawat direksiyon (H, T, S, K) para magbigay ng dalawang set sa bawat pares ng mga mag-aaral (kung pipiliin mo ang Opsyon ng Pagbubuklod #1).",
+          "purpose": "Sa araling ito, bubuo ang mga mag-aaral ng mga kasanayan sa programming sa computer platform. Ang block-based na format ng mga palaisipang ito ay tumutulong sa mga mag-aaral na malaman ang tungkol sa pagkakasunud-sunod at mga konsepto, nang hindi kinakailangang mag-alala tungkol sa pagperpekto ng syntax.",
+          "student_overview": "Lumikha ng mga program upang matulungan ang _Angry Bird_ na lumipat sa maze."
+        },
+        "courseb-2023/Programming with Harvester": {
+          "name": "Programming kasama ang Mang-aani",
+          "overview": "Ilalapat ng mga mag-aaral ang mga konsepto ng programming na natutunan nila sa kapaligiran ng Mang-aani sa **pagbuo ng kasanayan** na araling ito. Ang mga mag-aaral ay patuloy na bubuo ng mga kasanayan sa sunud-sunod na algorithm at magsisimulang gamitin ang proseso ng pag-debug.",
+          "preparation": "-   Maglaro sa mga palaisipan upang mahanap ang anumang mga potensiyal na lugar ng problema sa klase mo.\n-   Siguraduhing may reflection journal ang bawat mag-aaral.",
+          "purpose": "Sa araling ito, bubuo ang mga mag-aaral ng mga kasanayan sa pag-debug at magpapatuloy sa pagbuo ng kanilang mga kasanayan sa programming.",
+          "student_overview": "Tulungan ang Mang-aani na mangolekta ng mga gulay sa isang landas."
+        },
+        "courseb-2023/Getting Loopy": {
+          "name": "Pagiging Loopy",
+          "overview": "Sa **context-setting** na araling ito, matututo ang mga mag-aaral na gumamit ng mga loop para mas madaling makapagbigay ng mga tagubilin sa pamamagitan ng pagtingin sa mga paulit-ulit na pattern ng sayaw.",
+          "preparation": "-   Maghanda upang ipakita ang **\\*Worksheet** sa mga mag-aaral.\n-   Mag-print ng **\\*Pagtatasa** sa bawat mag-aaral.\n-   Tiyaking may reflection journal ang bawat mag-aaral.",
+          "purpose": "Sa puntong ito ng kurso, ang mga mag-aaral ay dapat magkaroon ng kaginhawaan sa pagprogram ng hanay ng mga linear na tagubilin. Kadalasan ang linear na hanay ng mga tagubilin ay may kasamang mga pattern na inuulit nang maraming beses at dahil gusto ng mga mag-aaral na magsulat ng mas kumplikado at kawili-wiling mga program, ang manu-manong pagdoble sa code na iyon ay nagiging mahirap at hindi epektibo. Upang bigyang-daan ang mga mag-aaral na magsulat ng mas makapangyarihang mga program, kakailanganin nating umasa sa mga istrukturang lumabas sa solong linear na listahang iyon. Binibigyang-daan ng mga loop ang mga mag-aaral na buuin ang kanilang code sa paraang umuulit. Sa araling ito, tututukan natin ang pagtukoy ng mga pattern sa pisikal na paggalaw bago bumalik sa computer upang maghanap ng mga pattern sa ating code.",
+          "student_overview": "Sa araling ito, magkakaroon tayo ng dance party gamit ang paulit-ulit na mga loop!"
+        },
+        "courseb-2023/Loops with Harvester": {
+          "name": "Mga Loops sa Harvester",
+          "overview": "Sa **pagbuo ng kasanayan** na araling ito, tutulungan ng mga mag-aaral ang mang-aani na mangolekta ng mga pananim sa pamamagitan ng paggamit ng mga loop.",
+          "preparation": "-   Maglaro sa pamamagitan ng mga palaisipan upang mahanap ang anumang mga potensyal na lugar ng problema sa klase mo.\n-   Suriin **\\*Mga Tip sa Pangunahing Aktibidad ng Mga Batayan sa CS - Mga Rekomendasyon sa Aralin**.\n-   Tiyaking may reflection journal ang bawat mag-aaral.\n-   (Opsyonal) Pumili ng ilang palaisipan na gagawin bilang grupo kasama ng klase mo.\n-   (Opsyonal) Kung hindi mo pa nagagawa, i-print at gupitin ang mga block sa **\\*Mga Manipulative** upang maghanda sa isa sa mga aktibidad ng pagbubuklod sa araling ito.",
+          "purpose": "Sa araling ito, matututo ang mga mag-aaral ng higit pa tungkol sa mga loop at kung paano ipatupad ang mga ito sa Blockly code. Ang paggamit ng mga loop ay mahalagang kasanayan sa programming dahil ang manu-manong pag-uulit ng mga utos ay nakakapagod at hindi epektibo. Gamit ang mga palaisipan ng Code.org, matututo ang mga mag-aaral na magdagdag ng mga tagubilin sa mga umiiral nang loop, magtipon ng paulit-ulit na code sa mga loop, at makilala ang mga pattern na kailangang i-loop.",
+          "student_overview": "Tulungan ang Mang-aani na mangolekta ng higit pa, gamit ang mga loop!"
+        },
+        "courseb-2023/Loops with Laurel": {
+          "name": "Mga Loop kay Laurel",
+          "overview": "Sa leksiyong ito ng **pagbuo ng kasanayan**, patuloy na natututo ang mga mag-aaral ng konsepto ng mga loop. Dito, ginagamit ni Laurel ang Abenturero ang mga loop upang mangolekta ng kayamanan sa mga bukas na espasyo ng kuweba.",
+          "preparation": "-   Maglaro sa pamamagitan ng mga palaisipan upang mahanap ang anumang mga potensyal na lugar ng problema sa klase mo. \n-   (Opsyonal) Pumili ng ilang palaisipang gagawin bilang grupo kasama ng iyong klase. \n-   Repasuhin ang **\\*Mga Tip sa Pangunahing Aktibidad ng Mga Batayan sa CS - Mga Rekomendasyon sa Aralin**. \n-   Tiyaking may reflection journal ang bawat mag-aaral.",
+          "purpose": "Ang araling ito ay nagbibigay sa mga mag-aaral ng higit pang pagsasanay na may mga loop at hinihikayat silang maglagay ng maraming block sa loob ng `ulitin` habang sinusubukan nilang mangolekta ng maraming kayamanan hangga't maaari.",
+          "student_overview": "I-program si Laurel na magtipon ng kayamanan sa bukas na kuweba."
+        },
+        "courseb-2023/Drawing Gardens with Loops": {
+          "name": "Pagguhit ng mga Hardin gamit ang mga Loop",
+          "overview": "Sa **pagbuo ng kasanayan** na araling ito, natututo ang mga mag-aaral na gumuhit ng mga larawan sa pamamagitan ng pag-loop ng mga simpleng pagkakasunud-sunod ng mga tagubilin. Dito, ang mga mag-aaral ay gumagamit ng mga loop upang lumikha ng mga pattern.",
+          "preparation": "-   Maglaro sa ng mga palaisipan bago ang aralin upang mahanap ang anumang mga potensyal na lugar ng problema sa klase mo.\n-   Repasuhin ang **\\*Mga Tip sa Pangunahing Aktibidad ng Mga Batayan sa CS - Mga Rekomendasyon sa Aralin**. \n-   Tiyaking may reflection journal ang bawat mag-aaral.",
+          "purpose": "Ang araling ito ay nagbibigay ng ibang pananaw sa kung paano ang mga loop ay maaaring lumikha ng mga bagay sa programming. Susubukan ng mga mag-aaral ang kanilang mga kasanayan sa kritikal na pag-iisip sa pamamagitan ng pagsusuri sa ibinigay na code at pagtukoy kung ano ang kailangang idagdag upang malutas ang palaisipan. Maaari din pag-isipan ng mga mag-aaral ang kawalan ng kahusayan ng programming nang walang mga loop dito dahil sa gaano karaming mga block ang kakailanganin ng program nang walang tulong ng mga `ulitin` na loop.",
+          "student_overview": "Gumamit ng mga pattern at mga loop upang tapusin ang mga imahe."
+        },
+        "courseb-2023/The Right App": {
+          "overview": "Sa **pagtuklas** na araling ito, nagpakita ng empatiya ang mga mag-aaral sa ilang fictional smartphone user para tulungan silang mahanap ang \"tamang app\" na tumutugon sa kanilang mga pangangailangan.",
+          "preparation": "-   Basahin ang mga tala ng speaker sa **\\*slide deck**. \n-   Maghanda ng sapat na sketching/drawing supplies sa lahat ng mag-aaral.\n-   Tiyaking may reflection journal ang bawat mag-aaral.",
+          "purpose": "Ngayon, ang pag-compute ay mas naa-access kaysa dati. Ang mga tao sa lahat ng antas ng pamumuhay ay gumagamit ng software sa maraming iba't ibang device, partikular na ang mga smartphone, sa impormasyon, komunikasyon, at entertainment. Dahil ang mga tao ay may iba't ibang karanasan at pangangailangan, mahalaga sa mga umuusbong na computer scientist na magpakita ng empatiya sa mga tao at tumukoy ng mga solusyon na nasa isip sila.",
+          "student_overview": "Gumawa ng sarili mong smartphone app."
+        },
+        "courseb-2023/The Big Event Jr": {
+          "overview": "Ang mga pangyayari ay magandang paraan para magdagdag ng kaibahan sa isang naisulat na na algoritmo. Minsan gusto mo na ang iyong programa ay maaaring tumugon sa mga gumagamit nang eksakto kapag nais ito ng gumagamit. Para sa mga ito ang mga kaganapan.",
+          "preparation": "-   Maghanda sa proyekto **\\*Controller Image**.\n-   Mag-print ng **\\*Pagtatasa** bawat mag-aaral.\n-   Tiyaking may reflection journal ang bawat mag-aaral.",
+          "purpose": "Ngayon, matututunan ng mga mag-aaral na makilala ang mga kaganapan sa mga aksiyon. Makikita ng mga mag-aaral ang mga aktibidad na naantala sa pamamagitan ng pagpindot ng \"button\" sa remote na papel. Kapag nakikita ang kaganapang ito, magre-react ang klase ng natatanging aksiyon. Ang mga kaganapan ay malawakang ginagamit sa programming at dapat na madaling makilala pagkatapos ng araling ito.",
+          "student_overview": "Gumalaw o sumigaw kapag pinindot ng guro mo ang mga button sa higanteng remote."
+        },
+        "courseb-2023/Mini-Project: A Royal Battle with Events": {
+          "name": "Mini-Project: Isang Royal Battle na may Mga Kaganapan",
+          "overview": "Sa **mini-project** na ito, magkakaroon ng pagkakataon ang mga mag-aaral na matutunan kung paano gamitin ang mga kaganapan sa Play Lab at ilapat ang lahat ng kasanayan sa coding na natutunan nila upang lumikha ng animated na laro.",
+          "preparation": "-   Maglaro sa pamamagitan ng mga palaisipan upang mahanap ang anumang mga potensyal na lugar ng problema sa klase mo. \n-   (Opsyonal) Pumili ng ilang palaisipang gagawin bilang grupo kasama ng iyong klase. \n-   Repasuhin ang **\\*Mga Tip sa Pangunahing Aktibidad ng Mga Batayan sa CS - Mga Rekomendasyon sa Aralin**. \n-   Tiyaking may reflection journal ang bawat mag-aaral.",
+          "purpose": "Sa online na aktibidad na ito, matututunan ng mga mag-aaral kung paano gumamit ng mga kaganapan sa Play Lab. Magsisimula sila sa pamamagitan ng pagsasanay sa kabalyero na gumalaw kapag pinindot ang arrow key, pagkatapos ay magtatapos sa pagkakataong ipakita ang iba pang mga kasanayan na natutunan nila sa buong kursong ito, kabilang ang pagkakasunud-sunod at pag-loop, bilang bahagi ng panghuling freeplay na palaisipan.",
+          "student_overview": "Gumamit ng mga kaganapan upang lumikha ng kuwento o gumawa ng interactive na laro."
+        },
+        "courseb-2023/End of Course Project": {
+          "overview": "Sa **project** lesson na ito, ilalapat ng mga mag-aaral ang natutunan nila tungkol sa sequencing at mga kaganapan sa open-ended na proyekto sa Play Lab.",
+          "preparation": "-   I-code nang maaga ang sarili mong mga proyekto sa Play Lab para magbigay ng inspirasyon sa mga mag-aaral!",
+          "purpose": "Ang araling ito ay nagbibigay sa mga mag-aaral ng huling pagkakataon na malikhaing gamitin ang kanilang mga bagong kasanayan sa computer science.",
+          "student_overview": "Lumikha ng sarili mong kwento o laro."
+        },
+        "coursec-2023/Putting a STOP to Online Meanness": {
+          "name": "Paglalagay ng TIGIL sa Online na Kasamaan",
+          "overview": " [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nAng araling ito ay orihinal na nilikha ng Common Sense Education. [Matuto pa.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nAng internet ay puno ng lahat ng uri ng mga kawili-wiling tao, ngunit kung minsan, ang ilan sa kanila ay maaaring maging masama sa isa't isa. Sa role play na ito, tulungan ang mga mag-aaral mo na maunawaan kung bakit madalas na mas madaling maging masama online kaysa sa personal, at kung paano haharapin ang online na kasamaan kapag nakita nila ito.",
+          "preparation": "-   Suriin ang mga materyales sa pagtuturo.\n-   I-print ang (mga) handout sa bawat mag-aaral.\n-   Magdala ng stuffed animal o laruan sa klase.",
+          "purpose": "Tinatalakay ng Common Sense's Digital Citizenship Curriculum ang anim na pangunahing paksa, batay sa pinakabagong pananaliksik sa mga bata, media, at teknolohiya. Ang araling ito ay nakatuon sa Cyberbullying, Digital Drama & Mapoot na Pagsasalita. Isinasaalang-alang ng mga mag-aaral ang mahihirap na paksang ito at ginagampanan ang aktibong papel ng mga naninindigan upang bumuo ng positibo, sumusuporta sa mga online na komunidad at labanan ang online na kalupitan.",
+          "student_overview": "Sa araling ito, matututunan mo ang tungkol sa kasamaan at kung ano ang gagawin kung makatagpo mo ito online."
+        },
+        "coursec-2023/My Robotic Friends Jr": {
+          "overview": "Sa **context-setting** na aralin, ang mga mag-aaral ay gagamit ng set ng mga simbolo upang turuan ang \"robot\" na mag-stack ng mga tasa sa iba't ibang pattern. Ang mga mag-aaral ay maghahalinhinan sa pakikilahok bilang robot, tumutugon lamang sa algorithm na tinukoy ng kanilang mga kasamahan.",
+          "preparation": "-   Maghanda ng stack ng 20 paper cups (o paper trapezoids) sa bawat grupo ng 2-3 na mag-aaral. \n-   Ipakita ang mga simbolo sa **\\*Symbol Key** kung saan maaaring sumangguni ang mga mag-aaral sa buong aralin. \n-   (Opsyonal) Mag-print ng **\\*Cup Stacking Ideas** bawat grupo ng 2-3 mag-aaral.",
+          "purpose": "Pinagsasama-sama ng hindi naka-plug na araling ito ang klase bilang team na may simpleng task na dapat tapusin: kumuha ng \"robot\" para i-stack ang mga cup sa partikular na disenyo. Ang aktibidad na ito ay naglalatag ng batayan sa programming na gagawin ng mga mag-aaral sa buong kurso habang natututo sila ng kahalagahan ng pagtukoy ng malinaw na naiparating na algorithm.",
+          "student_overview": "Sa araling ito, magpapanggap ka na mga robot ang mga kaklase mo at iprograma sila upang bumuo ng mga pattern ng mga nakasalansan na tasa."
+        },
+        "coursec-2023/Programming with Angry Birds": {
+          "name": "Pag-Program sa Maze",
+          "overview": "Sa **pagbuo ng kasanayan** na araling ito, ang mga mag-aaral ay bubuo ng mga sequential algorithm para ilipat ang ibon sa gilid ng maze patungo sa baboy sa kabilang panig. Upang gawin ito, isasalansan nila ang mga block ng code nang magkasama sa linear na pagkakasunud-sunod, na gagawing diretso ang mga ito, kumaliwa, o kumanan.",
+          "preparation": "-   Maglaro sa mga palaisipan upang mahanap ang anumang mga potensyal na lugar ng problema para sa klase mo. \n-   (Opsyonal) Pumili ng ilang palaisipan na gagawin bilang grupo kasama ng iyong klase.",
+          "purpose": "Sa araling ito, bubuo ang mga mag-aaral ng mga kasanayan sa programming at debugging sa computer platform. Ang block-based na format ng mga palaisipang ito ay tumutulong sa mga mag-aaral na malaman ang tungkol sa pagkakasunud-sunod at mga konsepto, nang hindi kinakailangang mag-alala tungkol sa pagperpekto ng syntax.",
+          "student_overview": "Matuto tungkol sa mga sequence at algorithm gamit ang _Angry Birds_."
+        },
+        "coursec-2023/Debugging in Maze": {
+          "name": "Pagde-debug sa Maze",
+          "overview": "Sa **pagbuo ng kasanayan** na araling ito, makakatagpo ang mga mag-aaral ng pre-written code na naglalaman ng mga pagkakamali. Kakailanganin nilang dumaan sa umiiral na code upang matukoy ang mga error.",
+          "preparation": "-   Maglaro sa pamamagitan ng mga palaisipan upang mahanap ang anumang mga potensyal na lugar ng problema sa klase mo. \n-   (Opsyonal) Pumili ng ilang palaisipang gagawin bilang grupo kasama ng iyong klase. \n-   Repasuhin ang **\\*Mga Tip sa Pangunahing Aktibidad ng CS Fundamentals - Mga Rekomendasyon sa Aralin**. \n-   Suriin ang **\\*Gabay sa Pag-debug** mula sa page ng pangkalahatang-ideya ng curriculum ng kursong ito kasama ng klase.",
+          "purpose": "Ang mga mag-aaral sa klase mo ay maaaring mabigo sa araling ito dahil sa esensya ng pag-debug. Ang pag-debug ay konsepto na napakahalaga sa computer programming. Kailangang maging mahusay ang mga computer scientist sa pagharap sa mga bug sa sarili nilang mga program. Pinipilit ng pag-debug ang mga mag-aaral na kilalanin ang mga problema at malampasan ang mga ito habang bumubuo ng kritikal na pag-iisip at mga kasanayan sa paglutas ng problema.",
+          "student_overview": "Maghanap ng mga problema sa mga palaisipan at sanayin ang mga kasanayan mo sa pag-debug."
+        },
+        "coursec-2023/Collecting Treasure with Laurel": {
+          "name": "Pag-program sa Kolektor",
+          "overview": "Sa **pagbuo ng kasanayan** na araling ito, patuloy na bubuo ang mga mag-aaral ng kanilang pag-unawa sa mga algorithm at pag-debug. Sa bagong karakter, si _Laurel ang Manlalakbay_, gagawa ang mga mag-aaral ng mga sequential algorithm upang gawin si _Laurel_ na kumuha ng kayamanan habang naglalakad siya sa landas.",
+          "preparation": "-   Maglaro sa pamamagitan ng mga palaisipan upang mahanap ang mga potensyal na problema sa klase mo.",
+          "purpose": "Sa araling ito, ang mga mag-aaral ay magsasanay ng kanilang mga kasanayan sa programming gamit ang bagong karakter, si Laurel ang Manlalakbay. Kapag nagsimula ang tao sa programming, pinagsasama-sama nila ang mga tagubilin sa tiyak na pagkakasunud-sunod gamit ang bagay na maaaring basahin ng makina. Sa pamamagitan ng paggamit ng programming, ang mga mag-aaral ay magkakaroon ng pag-unawa sa kung paano nag-navigate ang computer sa mga tagubilin at kaayusan. Ang paggamit ng bagong karakter na may ibang layunin ng palaisipan ay makakatulong sa mga mag-aaral na palawakin ang kanilang saklaw ng karanasan sa sequencing at mga algorithm sa programming.",
+          "student_overview": "Sumulat ng mga algorithm para matulungan si Laurel ang Manlalakbay na mangolekta ng maraming hiyas!"
+        },
+        "coursec-2023/Creating Art with Code": {
+          "name": "Pag-program sa Artist",
+          "overview": "Sa **pagbuo ng kasanayan** sa araling ito, kukunin ng mga mag-aaral ang kontrol sa Artist para kumpletuhin ang mga drawing sa screen.",
+          "preparation": "-   Maglaro sa mga palaisipan upang hanapin ang anumang posibleng problema sa inyong klase.\n-   (Opsyonal) Kumuha ng mga protractor para sa klase mo upang mailarawan ang mga anggulo na dapat nilang gamitin upang makumpleto ang mga palaisipan.\n-   Mag-print ng **\\*Handout ng Mag-aaral** para sa bawat mag-aaral.",
+          "purpose": "Pagbubuo ng nakaraang karanasan ng mga mag-aaral sa sequencing, gagana ang araling ito upang magbigay ng inspirasyon sa higit pang pagkamalikhain gamit ang coding. Ang layunin ng araling ito ay patatagin ang kaalaman sa sequencing sa pamamagitan ng pagpapakilala ng mga bagong block at layunin. Sa kasong ito, mas natututo ang mga mag-aaral tungkol sa mga pixel at anggulo gamit ang mga bagong block, habang sinasanay pa rin ang kanilang mga kasanayan sa sequencing. Gayundin, magagawa ng mga mag-aaral na mailarawan ang mga bagong layunin tulad ng pag-coding sa Artist upang gumuhit ng parisukat.",
+          "student_overview": "Lumikha ng magagandang larawan sa pamamagitan ng pagprograma sa Artist."
+        },
+        "coursec-2023/My Loopy Robotic Friends Jr": {
+          "overview": "Ang **pag-set ng konteksto** na araling ito ay bubuo sa paunang aktibidad na \"Mga Robotic Kong Kaibigan\", na nagtatampok ng mas malaki at mas kumplikadong mga disenyo.",
+          "preparation": "-   Maghanda ng stack ng 20 paper cups (o \\*_\\\\_paper trapezoids) sa bawat grupo ng 4 na mag-aaral. \n-   Ipakita ang **\\*mga simbolo** kung saan maaaring sumangguni ang mga mag-aaral sa buong aralin. \n-   (Opsyonal) Mag-print ng **\\*Mga Ideya sa Pag-stack ng Tasa** bawat grupo ng 4 mag-aaral.",
+          "purpose": "Ang araling ito ay nagsisilbing pagpapakilala muli sa mga loop, gamit ang pamilyar na ngayon na hanay ng mga tagubilin sa programming na \"robot\". Ang mga mag-aaral ay bubuo ng mga kritikal na kasanayan sa pag-iisip sa pamamagitan ng paghahanap ng mga pattern ng pag-uulit sa mga galaw ng mga kaklase at pagtukoy kung paano pasimplehin ang mga paulit-ulit na pattern na iyon gamit ang mga loop.",
+          "student_overview": "Sa araling ito, muli mong ipo-program ang mga kaklase mo, ngunit ang paggamit ng mga loop ay malulutas mo ang mas malaki at mas kumplikadong mga problema."
+        },
+        "coursec-2023/Loops with Rey and BB-8": {
+          "name": "Mga Loops kasama sina Rey at BB-8",
+          "overview": "Ang **pagbuo ng kasanayan** na aralin na ito ay may mga mag-aaral na gumagamit ng mga loop upang matulungan ang BB-8 na mahusay na tumawid sa maze.",
+          "preparation": "-   Maglaro sa mga palaisipan upang matukoy kung magkakaroon ng anumang mga lugar ng problema sa klase mo.",
+          "purpose": "Sa araling ito, ang mga mag-aaral ay matututunan ang higit pa tungkol sa mga loop at kung paano ilapat ang mga ito sa Blockly code. Ang paggamit ng mga loop ay mahalagang kasanayan sa pag-program sapagkat ang manu-manong pag-uulit ng mga utos ay nakakapagod at hindi epektibo. Gamit ang mga palaisipan ng Code.org, matututunan ng mga mag-aaral na magdagdag ng mga tagubilin sa mga umiiral na loop, mangolekta ng paulit-ulit na code sa mga loop, at makilala ang mga pattern na kailangang i-loop. Dapat tandaan na ang mga mag-aaral ay haharap sa mga palaisipan na may maraming iba't ibang solusyon. Ito ay magbubukas ng mga talakayan tungkol sa iba't ibang paraan ng paglutas ng mga palaisipan na may mga pakinabang at disbentaha sa bawat diskarte.",
+          "student_overview": "Tulungan si _BB-8_ sa mga maze gamit ang mga loop!"
+        },
+        "coursec-2023/Harvesting Crops with Loops": {
+          "name": "Mga Loops sa Harvester",
+          "overview": "Ang mga mag-aaral ay nag-loop ng mga bagong aksiyon upang matulungan ang mang-aani na mangolekta ng maraming gulay na lumalaki sa malalaking bungkos sa **pagbuo ng kasanayan** na aralin.",
+          "preparation": "-   Maglaro sa pamamagitan ng mga palaisipan upang mahanap ang anumang mga potensyal na problema sa klase mo.",
+          "purpose": "Sa araling ito, gagamit ang mga mag-aaral ng mga loop upang ulitin ang mga aksiyon tulad ng pag-aani ng mga kalabasa. Lilitaw ang mga bagong pattern at gagamit ang mga mag-aaral ng pagkamalikhain at lohikal na pag-iisip upang matukoy kung anong code ang kailangang ulitin at kung gaano karaming beses.",
+          "student_overview": "Gamitin natin ang mga loop upang matulungan ang mang-aani na mangolekta ng ilang mga gulay!"
+        },
+        "coursec-2023/Mini-Project: Sticker Art": {
+          "name": "Mini-Project: Art ng Sticker",
+          "overview": "Ang **mini-project** na araling ito ay bubuo sa pag-unawa sa mga loop sa mga nakaraang aralin. Ang mga mag-aaral ay gagawa ng natatanging likhang sining kasama ang Artist.",
+          "preparation": "-   Magsanay sa paggawa ng sarili mong disenyo. Tandaan kung paano naiiba ang mga antas na ito sa lahat ng nauna.",
+          "purpose": "Itinatampok ng seryeng ito ang kapangyarihan ng mga loop na may malikhain at personal na mga disenyo. \n\nInaalok bilang project-backed sequence, ang pag-unlad na ito ay magbibigay-daan sa mga mag-aaral na bumuo sa ibabaw ng kanilang sariling trabaho at lumikha ng mga kamangha-manghang artifact.",
+          "student_overview": "Sa araling ito, pinapadali ng mga loop na gumawa ng mga mas cool na larawan kasama ang Artist!"
+        },
+        "coursec-2023/The Big Event": {
+          "name": "The Big Event",
+          "overview": "Sa **setting ng konteksto** na aralin, malalaman ng mga mag-aaral na ang mga kaganapan ay mahusay na paraan upang magdagdag ng flexibility sa paunang nakasulat na algorithm.",
+          "preparation": "-   I-print o ipakita ang **\\*Event Controller**. \n-   Mag-print ng isang **\\*pagtatasa** sa bawat mag-aaral.",
+          "purpose": "Ngayon, matututunan ng mga mag-aaral na makilala ang mga kaganapan at mga aksiyon. Makikita ng mga mag-aaral ang mga aktibidad na naantala sa pamamagitan ng pagpindot ng \"button\" sa remote na papel. Kapag nakikita ang kaganapang ito, magre-react ang klase ng natatanging aksiyon. Ang mga kaganapan ay malawakang ginagamit sa programming at dapat na madaling makilala pagkatapos ng araling ito.",
+          "student_overview": "Maglaro ng masayang laro upang malaman ang tungkol sa mga kaganapan."
+        },
+        "coursec-2023/Build a Flappy Game": {
+          "name": "Bumuo ng Flappy na Laro",
+          "overview": "Pinagsasama ng araling ito ang **pagbuo ng kasanayan** sa mga kaganapan sa **mini-proyekto** kung saan makakagawa ang mga mag-aaral ng sarili nilang laro ng Flappy Bird. Sa pagtatapos ng aralin, magagawa ng mga mag-aaral na i-customize ang kanilang laro sa pamamagitan ng pagbabago ng mga visual o panuntunan.",
+          "preparation": "-   Maglaro sa pamamagitan ng mga palaisipan upang mahanap ang anumang mga potensyal na problema sa klase mo.",
+          "purpose": "Ang mga kaganapan ay karaniwan sa mga program sa computer. Sa araling ito, higit na mapapaunlad ng mga mag-aaral ang kanilang pag-unawa sa mga pangyayari sa pamamagitan ng paggawa ng larong _Flappy Bird_. Matututo ang mga mag-aaral na gawin ang kanilang karakter na lumipat sa screen, gumawa ng mga ingay, at tumugon sa mga hadlang batay sa mga kaganapang pinasimulan ng user.",
+          "student_overview": "Bumuo ng sarili mong laro ng Flappy Bird sa gusto mo, pagkatapos ay ibahagi ito sa iyong mga kaibigan!"
+        },
+        "coursec-2023/Mini-Project: Chase Game": {
+          "name": "Mini-Project: Larong Habolan",
+          "overview": "Pinagsasama ng araling ito ang **pagbuo ng kasanayan** sa mga kaganapan sa **mini-project** kung saan makakagawa ang mga mag-aaral ng sarili nilang animated na laro.",
+          "preparation": "-   Maglaro sa pamamagitan ng mga palaisipan upang mahanap ang anumang mga potensyal na problema sa klase mo.",
+          "purpose": "Dito, mas mapapaunlad ng mga mag-aaral ang kanilang pag-unawa sa mga kaganapan gamit ang Play Lab. Gagamitin ng mga mag-aaral ang mga kaganapan upang palipat-lipat ang mga karakter sa screen, gumawa ng mga ingay, at baguhin ang mga background batay sa input ng user. Sa pagtatapos ng pagkakasunud-sunod ng palaisipan, ang mga mag-aaral ay bibigyan ng pagkakataong ibahagi ang kanilang mga proyekto.",
+          "student_overview": "Oras na para maging malikhain at gumawa ng laro sa Play Lab!"
+        },
+        "coursec-2023/Picturing Data": {
+          "name": "Paglalarawan ng Data",
+          "overview": "Mangongolekta ang mga mag-aaral ng data sa proyekto sa Play Lab at isasalarawan ito gamit ang iba't ibang mga graph sa **eksplorasyon** na araling ito.",
+          "preparation": "-   Mag-print ng isang **\\*worksheet** para sa bawat mag-aaral. \n-   Subukan ang aralin ngayon sa Code Studio. Ito ay sinadya upang magamit bilang tool sa aktibidad ngayon. Maging handa na i-proyekto ito sa klase, o kung hindi man ay payagan ang mga mag-aaral na bisitahin ito sa kanilang sariling mga computer.",
+          "purpose": "Ang mga computer ay nilikha upang tumulong sa pagproseso ng data. Mayroong dumaraming data sa mundo, kaya't ang kakayahang basahin at suriin ito ay mahalaga. Narito ang araling ito upang matiyak na ang mga mag-aaral ay may pangunahing karanasan sa pagkolekta, paggunita, at pagsusuri ng simpleng hanay ng data.",
+          "student_overview": "Maaaring gamitin ang data upang maunawaan ang ating mundo at masagot ang mga interesanteng tanong."
+        },
+        "coursec-2023/Binary Bracelets": {
+          "name": "Binary na mga Pulseras",
+          "overview": "Ang **eksplorasyon** na araling ito ay nagpapakilala sa konsepto ng binary na kung paano iniimbak ng mga computer ngayon ang lahat ng uri ng impormasyon.",
+          "preparation": "-   (Opsyonal) Panoorin ang **\\*Leksiyon sa Aksiyon** na video. \n-   Magtipon ng mga marker para sa mga pulseras. Opsyonal ang iba pang mga dekorasyon tulad ng mga kuwintas at pipecleaner. \n-   Mag-print ng isang **\\*worksheet** at isang **\\*pagtatasa** sa bawat mag-aaral. \n-   (Opsyonal) Sumulat ng maikling mensahe sa pisara sa binary.",
+          "purpose": "Sa araling ito, matututuhan ng mga mag-aaral kung paano kinakatawan ang impormasyon sa paraang mabibigyang-kahulugan at maiimbak ito ng computer. Kapag nag-aaral ng binary, ang mga mag-aaral ay magkakaroon ng pagkakataong magsulat ng mga code at ibahagi ang mga ito sa mga kaedad bilang mga lihim na mensahe. Maaari itong maiugnay pabalik sa kung paano binabasa ng mga computer ang program, isinasalin ito sa binary, ginagamit ang impormasyon sa ilang paraan, pagkatapos ay tumugon pabalik sa paraang mauunawaan ng mga tao. Halimbawa, kapag nag-type tayo ng pangungusap sa dokumento pagkatapos ay pinindot ang save, isinasalin ng computer ang pangungusap sa binary, iniimbak ang impormasyon, pagkatapos ay nag-post ng mensahe na nagsasaad na ang dokumento ay nai-save na.",
+          "student_overview": "Lumikha ng sarili mong binary bracelet at alamin kung paano naaalala ng mga computer ang impormasyon!"
+        },
+        "coursec-2023/End of Course Project": {
+          "overview": "Ang **proyekto** na araling ito ay dadalhin sa mga mag-aaral sa pamamagitan ng pagdidisenyo, pagbuo, at pagpapakita ng mga bagong proyekto sa Play Lab",
+          "preparation": "-   Maglaro sa pamamagitan ng mga palaisipan upang mahanap ang anumang mga potensyal na lugar ng problema sa klase mo.\n-   Mag-print ng **\\*Gabay sa Pagpaplano ng Proyekto** sa bawat mag-aaral (o pares).\n-   Suriin ang **\\*Gabay sa Pagpaplano ng Proyekto (Exemplar)** na dokumento.\n-   (Opsyonal) Kumpletuhin ang sarili mong gabay sa pagpaplano at i-code ang sarili mong proyekto upang ipakita sa mga mag-aaral!",
+          "purpose": "Ang araling ito ay nagbibigay sa mga mag-aaral ng espasyo upang lumikha ng proyekto ng kanilang sariling disenyo, gamit ang hakbang-hakbang na proseso na nangangailangan ng pagpaplano ngunit nagbibigay-daan din sa malawak na pagkamalikhain.",
+          "student_overview": "Ihanda ang iyong mga kamay para sa maraming pag-code! Oras na para magsimulang bumuo ng iyong proyekto."
+        },
+        "coursed-2023/Password Power-Up": {
+          "name": "Pagpapalakas ng Password",
+          "overview": " [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nAng araling ito ay orihinal na nilikha ng [Common Sense Education](https://www.commonsense.org/education/digital-citizenship/curriculum).\n\nAng mas malakas, mas secure na mga online na password ay magandang ideya sa lahat. Ngunit paano natin matutulungan ang mga bata na gumawa ng mas mahuhusay na password at talagang matandaan ang mga ito? Gamitin ang mga tip sa araling ito upang matulungan ang mga bata na gumawa ng mga password na parehong secure at hindi malilimutan.",
+          "preparation": "-   Suriin ang mga materyales sa pagtuturo.\n-   I-print ang (mga) handout sa bawat mag-aaral.\n-   Maghanda ng papel o kwaderno para sa mga mag-aaral.",
+          "purpose": "Ang Digital Citizenship Curriculum ng Common Sense ay tumutugon sa anim na pangunahing paksa, batay sa pinakabagong pananaliksik sa mga bata, media, at teknolohiya. Nakatuon ang araling ito sa Privacy at Seguridad. Natututo ang mga mag-aaral kung paano protektahan ang personal na impormasyon at magkaroon ng mas malalim na pag-unawa sa kanilang mga karapatan sa privacy ng data upang makapagtaguyod sila sa kanilang sarili at sa iba.",
+          "student_overview": "Sa araling ito, matututunan mo ang tungkol sa kung paano pinoprotektahan ng mga password ang impormasyon mo, at kung paano gumawa ng magandang password."
+        },
+        "coursed-2023/Graph Paper Programming": {
+          "name": "Graph Paper Programming",
+          "overview": "Sa **setting ng konteksto** na aralin, ang mga mag-aaral ay gumagamit ng mga simbolo upang turuan ang isa't isa na kulayan ang mga parisukat sa graph paper. Sa pamamagitan ng \"pag-program\" sa isa't isa upang gumuhit ng mga larawan, nagkakaroon ng pagkakataon ang mga mag-aaral na maranasan ang ilan sa mga pangunahing konsepto ng programming sa masaya at madaling paraan.",
+          "preparation": "-   (Opsyonal) Panoorin ang video na **\\*Lesson in Action**. \n-   I-print ang **\\*worksheet** at **\\*assessment** para sa bawat mag-aaral.",
+          "purpose": "Ang layunin ng aktibidad na ito ay bumuo ng mga kritikal na kasanayan sa pag-iisip at kaguluhan sa kurso, habang ipinakikilala ang ilan sa mga pangunahing konsepto ng programming na gagamitin sa buong kurso. Sa pamamagitan ng pagpapakilala ng mga pangunahing konsepto tulad ng pagkakasunud-sunod at mga algorithm sa klase sa hindi naka-plug na aktibidad, ang mga mag-aaral na natatakot sa mga computer ay maaari pa ring bumuo ng pundasyon ng pag-unawa sa mga paksang ito. Sa araling ito, matututunan ng mga mag-aaral kung paano bumuo ng algorithm at i-encode ito sa program.",
+          "student_overview": "Sa araling ito, ikaw ay mag-program sa iyong kaklase para gumuhit ng mga larawan!"
+        },
+        "coursed-2023/Introduction to Online Puzzles": {
+          "name": "Pambungad sa mga Online na mga Palaisipan",
+          "overview": "Sa **pagbuo ng kasanayan** na araling ito, isasagawa ng mga mag-aaral ang kanilang mga kasanayan sa _sequencing_ at pag-debug sa mga maze na palaisipan.",
+          "preparation": "-   Maglaro sa pamamagitan ng mga palaisipan upang mahanap ang anumang mga potensyal na problema sa klase mo.",
+          "purpose": "Kinikilala natin na ang bawat silid-aralan ay may spectrum ng pag-unawa sa bawat paksa. Ang ilang mga mag-aaral sa klase mo ay maaaring mga computer wizard, habang ang iba ay hindi pa gaanong may karanasan. Upang makalikha ng pantay na larangan ng paglalaro (at pagkatuto), binuo natin itong \"Ramp Up Stage\" sa Kurso D. Magagamit ito bilang panimula o pagsusuri kung paano gamitin ang Code.org at mga pangunahing konsepto ng computer science. Ang yugtong ito ay sumasaklaw sa lahat ng mga kinakailangan upang simulan ang Kurso D.",
+          "student_overview": "Ang araling ito ay magbibigay sa iyo ng pagsasanay sa mga kakayahan na kakailanganin mo sa kursong ito."
+        },
+        "coursed-2023/Relay Programming": {
+          "name": "Relay Programming",
+          "overview": "Magsisimula ang **setting ng konteksto** na aralin sa maikling aralin sa pag-debug at pagtitiyaga, pagkatapos ay mabilisang lilipat sa karera laban sa orasan habang ang mga mag-aaral ay naghahati-hati sa mga team at nagtutulungan upang magsulat ng programa isang instruksiyon sa bawat pagkakataon.",
+          "preparation": "-   Panoorin ang **\\*Video ng Guro**. \n-   Maghanap ng malawak na bukas na espasyo sa aktibidad na ito, tulad ng gym o outdoor field. \n-   Mag-print ng **\\*Packet ng Aktibidad** sa bawat pangkat. \n-   Bigyan ang bawat pangkat ng maraming papel at panulat/lapis. \n-   Mag-print ng **\\*Worksheet** sa bawat mag-aaral.",
+          "purpose": "Ang teamwork ay napakahalaga sa computer science. Ang mga team ay nagsusulat at nagde-debug ng code sa isa't isa, sa halip na magtrabaho bilang mga indibidwal. Sa araling ito, matututo ang mga mag-aaral na magtulungan habang mahusay sila hangga't maaari.\n\nAng aktibidad na ito ay nagbibigay din ng pakiramdam ng pangangailangan ng madaliang pagkilos na magtuturo sa mga mag-aaral na balansehin ang kanilang oras nang maingat at maiwasan ang mga pagkakamali nang hindi masyadong nahuhuli. Maaaring maging nakaka-stress ang karanasang ito (na inaasahan!) Tiyaking binibigyan mo ang mga mag-aaral ng mga tool upang harapin ang potensyal na pagkabigo.",
+          "student_overview": "Natandaan mo ba na sa simula ng kurso gumawa ka ng mga drawing gamit ang code? Sa araling ito, makikipagtulungan ka sa team para gumawa ng bagay na halos kapareho!"
+        },
+        "coursed-2023/Debugging with Laurel": {
+          "name": "Pagde-debug sa Kolektor",
+          "overview": "Sa **pagbuo ng kasanayan** na araling ito, ang mga mag-aaral ay magsasanay sa pag-debug sa \"kolektor\" na kapaligiran. Ang mga mag-aaral ay makakapagsanay din sa pagbasa at pagbago ng mga code para maayos ang mga palaisipan gamit ang mga simpleng algoritmo, mga loop at naka-nest na mga loop.",
+          "preparation": "-   Maglaro sa pamamagitan ng mga palaisipan upang mahanap ang anumang mga potensyal na problema sa klase mo.",
+          "purpose": "Ang layunin ng aralin na ito ay upang turuan ang mga mag-aaral na ang kabiguan ay normal kapag natututo ng bagong kasanayan. Ang mga mag-aaral ay bibigyan ng mga program na isinulat nang maaga na HINDI gumagana. Hihilingin sa kanila na ayusin ang mga program na ito. Ang prosesong ito, na tinatawag na pag-debug, ay nagtuturo sa mga mag-aaral ng mahalagang mga kasanayan sa paglutas ng problema at kritikal na pag-iisip. Ang mga kasanayang ito ay napapasok habang ang mga mag-aaral ay nagpapatuloy sa mas mahirap at mas mahirap na mga proyekto sa programming.",
+          "student_overview": "Nakakatagpo ka na ba ng mga problema habang nag-code? Sa araling ito, matutunan mo ang tungkol sa mga sekreto sa pag-debug. Ang pag-debug ay proseso ng paghahanap at pag-aayos ng mga problema sa code mo."
+        },
+        "coursed-2023/Events in Bounce": {
+          "name": "Mga Pangyayari sa Bounce",
+          "overview": "Sa **setting ng konteksto**/**pagbuo ng kasanayan** na araling ito, malalaman ng mga mag-aaral kung ano ang mga kaganapan at kung paano ginagamit ng mga programmer ang mga ito sa mga video game. Bubuo ang mga mag-aaral ng laro na maaari nilang i-customize na may iba't ibang bilis at tunog.",
+          "preparation": "-   Maglaro sa pamamagitan ng mga palaisipan upang mahanap ang anumang mga potensyal na problema sa klase mo.",
+          "purpose": "Ang mga kaganapan ay karaniwan sa mga program sa computer, lalo na sa mga video game.\n\nSa araling ito, mapapaunlad ng mga mag-aaral ang kanilang pag-unawa sa mga kaganapan sa pamamagitan ng paggawa ng larong batay sa palakasan. Ang mga mag-aaral ay matututong gawin ang kanilang paddle na gumagalaw ayon sa mga arrow key, at gumawa ng mga ingay kapag nagbanggaan ang mga bagay. Sa pinakadulo, mako-customize nila ang kanilang laro para gawin itong mas kakaiba!",
+          "student_overview": "Nais mo bang maglaro ng mga video game sa paaralan? Sa araling ito, gagawa ka ng laro mismo!"
+        },
+        "coursed-2023/Build a Star Wars Game": {
+          "name": "Bumuo ng Star Wars na Laro",
+          "overview": "Sa araling ito, ang mga estudyante ay magsasanay sa paggamit ng mga pangyayari para makabuo ng laro na maaari nilang ibahagi online. Nagpapakita kay R2-D2 at ibang mga karakter sa Star Wars, ang mga estudyante ay gagabayan sa mga pangyayari, pagkatapos ay bibigyan ng lugar para makalikha ng kanilang sariling laro.",
+          "preparation": "-   Maglaro sa mga palaisipan at maghanap ng anumang mga potensyal na aspekto ng problema.",
+          "purpose": "Ang CS Fundamentals ay hindi lamang tungkol sa pagtuturo ng computer science, ito ay tungkol sa paggawa ng computer science na masaya at kapana-panabik. Sa seryeng ito, malalaman ng mga mag-aaral ang tungkol sa mga kaganapan gamit ang mga sikat na karakter sa _Star Wars_. Ang mga palaisipang ito ay nagpapalabo ng mga linya sa pagitan ng \"pag-aaral\" at \"katuwaan\". Gayundin, matututunan ng mga mag-aaral na kilalanin ang mga regular na kasanayan sa programming sa mga laro upang kapag naglalaro sila sa bahay, makikita nila ang mga karaniwang prinsipyo ng computer science na ginagamit.",
+          "student_overview": "Damdamin ang puwersa habang nagbubuo ka ng iyong sariling Star Wars na laro sa araling ito."
+        },
+        "coursed-2023/Dance Party": {
+          "name": "Dance Party",
+          "overview": "Sa **pagbuo ng kasanayan** na araling ito, ang mga mag-aaral ay magpo-program ng interactive dance party.",
+          "preparation": "-   Maglaro sa mga palaisipan upang mahanap ang anumang mga potensyal na aspekto ng problema sa klase mo. \n-   Isaalang-alang ang pangangailangan sa mga headphone. Ang aktibidad na ito ay umaasa sa tunog.",
+          "purpose": "Ang leksiyong ito ay nagpapakilala sa pangunahing mga konsepto ng coding ng CS at programming sa event (gamit ang mga block).",
+          "student_overview": "Oras na para magdiwang! Sa araling ito, magpoprogram ka ng sarili mong interactive dance party."
+        },
+        "coursed-2023/Loops in Ice Age": {
+          "name": "Mga loop sa panahon ng yelo",
+          "overview": "Ang **setting ng konteksto/pagbuo ng kasanayan** na araling ito ay mabilis na magpapakilala sa mga mag-aaral sa mga loop.",
+          "preparation": "-   (Opsyonal) Pumili ng ilang palaisipang gagawin bilang grupo kasama ng klase mo.",
+          "purpose": "Sa araling ito, matututo ang mga mag-aaral ng higit pa tungkol sa mga loop at kung paano ipatupad ang mga ito sa Blockly code. Ang paggamit ng mga loop ay mahalagang kasanayan sa programming dahil ang manu-manong pag-uulit ng mga utos ay nakakapagod at hindi epektibo. Gamit itong mga palaisipan ng Code.org, matututo ang mga mag-aaral na magdagdag ng mga tagubilin sa mga umiiral nang loop, magtipon ng paulit-ulit na code sa mga loop, at makilala ang mga pattern na kailangang ulitin.",
+          "student_overview": "Sa araling ito, gagamitin mo ang paulit-ulit na block upang matulungan si Scrat na maabot ang acorn sa pinakamabisang paraan hangga't maaari."
+        },
+        "coursed-2023/Drawing Shapes with Loops": {
+          "name": "Pagguhit ng mga Hugis gamit ang mga Loop",
+          "overview": "Ang **pagbuo ng kasanayan** na araling ito ay bubuo sa pag-unawa sa mga loopsa nakaraang aralin at dumudoble bilang pagsasanay sa pag-debug sa karagdagang kasanayan sa paglutas ng problema.",
+          "preparation": "-   Maglaro sa pamamagitan ng mga palaisipan upang mahanap ang anumang mga potensyal na problema sa klase mo.",
+          "purpose": "Itinatampok ng seryeng ito ang kapangyarihan ng mga loop na may hanay ng mga palaisipang naglalayong makapag-isip ang mga mag-aaral tungkol sa kung bakit mas mahusay ang mga loop na `uulitin` kaysa sa longhand.",
+          "student_overview": "Sa araling ito, pinapadali ng mga loop na gumawa ng mga cool na larawan kasama ang Artist!"
+        },
+        "coursed-2023/Nested Loops in Maze": {
+          "name": "Naka-nest na mga Loops sa Maze",
+          "overview": "Sa **pagbuo ng kasanayan** na araling ito, matututunan ng mga mag-aaral kung paano mag-program ng loop sa loob ng isa pang loop.",
+          "preparation": "-   Maglaro sa pamamagitan ng mga palaisipan upang mahanap ang anumang mga potensyal na problema sa klase mo.",
+          "purpose": "Sa panimula na ito sa mga nested loop, lalabas ang mga mag-aaral sa kanilang comfort zone upang lumikha ng mas mahusay na mga solusyon sa mga palaisipan.\n\nSa mga naunang palaisipan, ang mga loop ay nagtulak sa mga mag-aaral na makilala ang pag-uulit. Dito, matututunan ng mga mag-aaral na kilalanin ang mga pattern _sa loob_ ng paulit-ulit na mga pattern para bumuo ng mga nested loop na ito. Ang yugtong ito ay nagsisimula sa pamamagitan ng paghikayat sa mga mag-aaral na subukang lutasin ang palaisipan kung saan ang code ay nakakairita at masyadong kumplikado upang isulat sa mahabang paraan. Pagkatapos ipakilala ng video ang mga nested loop, ipinapakita sa mga mag-aaral ang halimbawa at hinihiling na hulaan kung ano ang mangyayari kapag ang loop ay inilagay sa loob ng isa pang loop. Ang pag-unlad na ito ay humahantong sa maraming pagsasanay sa mga mag-aaral upang patatagin at mabuo ang kanilang pang-unawa sa pag-loop sa programming.",
+          "student_overview": "Ituturo sa iyo ng araling ito kung ano ang mangyayari kapag naglagay ka ng mga loop sa loob ng mga loop sa loob ng mga loop."
+        },
+        "coursed-2023/Conditionals with Cards": {
+          "name": "Mga Conditional gamit ang mga Card",
+          "overview": "Sa **setting ng konteksto** na araling ito, magsusulat ang mga mag-aaral ng _conditional (kung/iba pa) na mga pahayag_ para isaad ang mga panuntunan ng simpleng card game.",
+          "preparation": "-   Magtipon ng mga deck ng mga card o katulad na bagay. \n-   I-print o ipakita ang **\\*mga sample na program**. \n-   Mag-print ng **\\*pagtatasa** para sa bawat mag-aaral.",
+          "purpose": "Isa sa mga pinakamagandang bahagi ng mga kondisyon sa pagtuturo ay naiintindihan na ng mga mag-aaral ang konsepto sa kanilang pang-araw-araw na buhay.\n\nPinagsasama ng araling ito ang computer science sa totoong mundo sa pamamagitan ng pagbuo ng kanilang kakayahang sabihin kung totoo o mali ang kondisyon. Matututo ang mga mag-aaral na gamitin ang mga pahayag na ipahayag kung kailan dapat patakbuhin ang partikular na utos, gayundin ang mga pahayag na kung / iba pa na idedeklara kung kailan dapat patakbuhin ang utos at kung ano ang tatakbo kung hindi man. Maaaring hindi makilala ng mga mag-aaral ang salitang kondisyon, ngunit mauunawaan ng karamihan sa mga mag-aaral ang ideya ng paggamit ng \"kung\" upang matiyak na ang ilang aksiyon ay nangyayari lamang kapag ito ay dapat.",
+          "student_overview": "Oras na para maglaro ng laro kung saan makakakuha ka ng puntos kapag nasa ilalim ka ng iilang mga kondisyon lang!"
+        },
+        "coursed-2023/Looking Ahead with Minecraft": {
+          "name": "Masdan ang Hinaharap",
+          "overview": "Ang **pagbuo ng kasanayan** na araling ito ay nagbibigay sa mga mag-aaral ng pagkakataong magsanay ng mga konseptong natutunan nila hanggang sa puntong ito at makuha ang kanilang unang karanasan sa mga conditional!",
+          "preparation": "-   Maglaro sa mga palaisipan na nauugnay sa araling ito upang mahanap ang anumang potensyal na aspekto ng problema sa klase mo.",
+          "purpose": "Ang hanay ng mga palaisipang ito ay gagana upang patatagin at bumuo sa kaalaman ng mga loop, at magpakilala ng mga conditional. Sa pamamagitan ng pagsasama-sama ng dalawang konseptong ito, matutuklasan ng mga mag-aaral ang potensyal sa paglikha ng masaya at makabagong mga program sa isang bago at kapana-panabik na kapaligiran.",
+          "student_overview": "Iwasan ang lava! Dito magsisimula kang matuto tungkol sa mga conditional sa mundo ng _Minecraft_."
+        },
+        "coursed-2023/If/Else with Bee": {
+          "name": "Mga Kondisyonal sa Bee",
+          "overview": "Sa **pagbuo ng kasanayan** na araling ito, ang klase mo ay patuloy na magko-code gamit ang mga conditional, na magbibigay-daan sa kanila na magsulat ng code na gumagana nang iba depende sa mga partikular na kondisyon na nararanasan ng program.",
+          "preparation": "-   Maglaro sa pamamagitan ng mga palaisipan upang mahanap ang anumang mga potensyal na problema sa klase mo.",
+          "purpose": "Pagkatapos ipakilala sa mga conditional sa \"Mga Conditional na may Mga Baraha,\" magsasanay na ngayon ang mga mag-aaral sa paggamit ng mga ito sa kanilang mga program. Ang \"kung / iba pa\" na mga block ay magbibigay-daan sa mas nababaluktot na program. Ang bubuyog ay mangongolekta lamang ng nektar _kung_ may bulaklak o gumawa ng pulot _kung_ may pulot-pukyutan.",
+          "student_overview": "Ngayon na nauunawaan mo na ang mga conditional, oras na para i-program si Bee gamit ang mga ito kapag nagkokolekta ng mga pulot at nektar. "
+        },
+        "coursed-2023/While Loops in Farmer": {
+          "name": "Mga While Loops sa Farmer",
+          "overview": "Sa **pagbuo ng kasanayan** na araling ito, ang mga mag-aaral ay magsisikap na punan ang mga butas at maghukay ng dumi sa Magsasaka, ngunit hindi nila malalaman ang laki ng mga butas o ang taas ng mga bunton ng dumi. Upang malutas ang mga palaisipang ito, gagamit ang mga mag-aaral ng bagong uri ng loop.",
+          "preparation": "-   Maglaro sa pamamagitan ng mga palaisipan upang mahanap ang anumang mga potensyal na problema sa klase mo.",
+          "purpose": "Habang patuloy na pinapalalim ng mga mag-aaral mo ang kanilang kaalaman sa mga loop, makakatagpo sila ng mga problema kung saan kailangang ulitin ang command, ngunit hindi alam kung ilang beses itong kailangang ulitin. Dito papasok ang mga loop. Sa aralin ngayon, bubuo ang mga mag-aaral ng pag-unawa ng baguhan sa mga loop na nakabatay sa kondisyon at palalawakin din ang kanilang kaalaman sa mga loop sa pangkalahatan.",
+          "student_overview": "Ang mga loops ay sadyang kapaki-pakinabang sa pag-code. Ang araling ito ay magtuturo sa'yo tungkol sa bagong uri ng loop: ang mga habang na loop!"
+        },
+        "coursed-2023/Until Loops in Maze": {
+          "name": "Hanggang na Mga Loop sa Maze",
+          "overview": "Sa **pagbuo ng kasanayan** na araling ito, matututunan ng mga mag-aaral ang tungkol sa \"hanggang\" na mga loop. Ang mga mag-aaral ay bubuo ng mga program na ang pangunahing tauhan ay umuulit ng mga aksiyon \"hanggang\" maabot nila ang kanilang nais na hinto.",
+          "preparation": "-   Maglaro sa pamamagitan ng mga palaisipan upang mahanap ang anumang mga potensyal na problema sa klase mo.",
+          "purpose": "Ang hanay ng mga palaisipang ito ay gagana upang patatagin at bumuo sa kaalaman ng mga loop sa pamamagitan ng pagdaragdag ng `hanggang` na conditional. Sa pamamagitan ng pagsasama-sama ng mga konseptong ito, matutuklasan ng mga mag-aaral ang potensyal sa paglikha ng mga kumplikado at makabagong program.",
+          "student_overview": "Maaari kang gumawa ng ilang mga kamangha-manghang bagay kapag gumamit ka ng \"hanggang\" na mga loop!"
+        },
+        "coursed-2023/End of Course Project": {
+          "overview": "Ang **proyekto** na araling ito ay magdadala sa mga mag-aaral sa proseso ng pagdidisenyo, pagbuo, at pagpapakita ng mga bagong proyekto!",
+          "preparation": "-   Maglaro sa pamamagitan ng mga palaisipan upang mahanap ang anumang mga potensyal na lugar ng problema sa klase mo.\n-   Mag-print ng **\\*Gabay sa Pagpaplano ng Proyekto** sa bawat mag-aaral (o pares).\n-   (Opsyonal) Kumpletuhin ang sarili mong gabay sa pagpaplano at i-code ang sarili mong proyekto upang ipakita sa mga mag-aaral!",
+          "purpose": "Ang araling ito ay nagbibigay sa mga mag-aaral ng espasyo upang lumikha ng proyekto ng kanilang sariling disenyo, gamit ang hakbang-hakbang na proseso na nangangailangan ng pagpaplano ngunit nagbibigay-daan din sa malawak na pagkamalikhain.",
+          "student_overview": "Ihanda ang iyong mga kamay para sa maraming pag-code! Oras na para magsimulang bumuo ng iyong proyekto."
+        },
+        "coursee-2023/Be A Super Digital Citizen": {
+          "name": "Maging Super Digital na Mamamayan",
+          "overview": " [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nAng araling ito ay orihinal na nilikha ng Common Sense Education. <b>[Matuto pa.](https://www.commonsense.org/education/digital-citizenship/curriculum)</b>\n\nAng mga online na tool ay nagbibigay-kapangyarihan sa mga bata, at mayroon din silang malalaking responsibilidad. Ngunit palagi bang alam ng mga bata kung ano ang gagawin kapag nakatagpo sila ng cyberbullying? Ipakita sa mga mag-aaral mo ang mga naaangkop na paraan upang kumilos at malutas ang mga salungatan, mula sa pagiging upstanders hanggang sa pagtulong sa iba na nangangailangan.",
+          "preparation": "-   Suriin ang mga materyales sa pagtuturo.\n-   I-print ang (mga) handout sa bawat mag-aaral.\n-   Maghanda ng mga kulay na lapis o marker para sa mga mag-aaral.",
+          "purpose": "Tinatalakay ng Common Sense's Digital Citizenship Curriculum ang anim na pangunahing paksa, batay sa pinakabagong pananaliksik sa mga bata, media, at teknolohiya. Ang araling ito ay nakatuon sa Cyberbullying, Digital Drama & Mapoot na Pagsasalita. Isinasaalang-alang ng mga mag-aaral ang mahihirap na paksang ito at ginagampanan ang aktibong papel ng mga naninindigan upang bumuo ng positibo, sumusuporta sa mga online na komunidad at labanan ang online na kalupitan.",
+          "student_overview": "Alamin kung paano ka magiging upstander kapag nakakita ka ng cyberbullying."
+        },
+        "coursee-2023/Private and Personal Information": {
+          "name": "Pribado at Personal na Impormasyon",
+          "overview": " [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nAng araling ito ay orihinal na nilikha ng Common Sense Education. [Matuto pa.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nLikas sa ating mga mag-aaral na magbahagi at makipag-ugnayan sa iba. Ngunit ang pagbabahagi online ay may ilang mga panganib. Paano natin matutulungan ang mga bata na bumuo ng matatag, positibo, at ligtas na relasyon online? Tulungan ang mga mag-aaral mo na malaman ang pagkakaiba sa pagitan ng kung ano ang personal at kung ano ang pinakamahusay na iwanang pribado.",
+          "preparation": "-   Suriin ang mga materyales sa pagtuturo.\n-   I-print ang (mga) handout sa bawat mag-aaral.",
+          "purpose": "Ang Digital Citizenship Curriculum ng Common Sense ay tumutugon sa anim na pangunahing paksa, batay sa pinakabagong pananaliksik sa mga bata, media, at teknolohiya. Nakatuon ang araling ito sa Privacy at Seguridad. Natututo ang mga mag-aaral kung paano protektahan ang personal na impormasyon at magkaroon ng mas malalim na pag-unawa sa kanilang mga karapatan sa privacy ng data upang makapagtaguyod sila sa kanilang sarili at sa iba.",
+          "student_overview": "Ang internet ay masaya at kasabik-sabik, ngunit importante din na manatiling ligtas. Ang araling ito ay nagtuturo sa iyo sa kaibahan ng impormasyon na ligtas na ibahagi at impormasyon na pribado."
+        },
+        "coursee-2023/Swimming Fish with Sprite Lab": {
+          "name": "Paglangoy ng Isda gamit ang Sprite Lab",
+          "overview": "Magpo-program ang mga mag-aaral ng simpleng animated na eksena sa ilalim ng dagat sa **aralin sa pagbuo ng kasanayan**.",
+          "preparation": "-   Maglaro sa pamamagitan ng mga puzzle upang mahanap ang anumang mga potensiyal na lugar ng problema sa klase mo.\n-   Siguraduhing may reflection journal ang bawat mag-aaral.",
+          "purpose": "Ang araling ito ay idinisenyo upang ipakilala sa mga mag-aaral ang pangunahing bokabularyo ng Sprite Lab, at payagan silang ilapat ang mga konseptong natutunan nila sa ibang mga kapaligiran sa tool na ito. Sa pamamagitan ng paglikha ng tangke ng isda, magsisimula ang mga mag-aaral na bumuo ng pag-unawa sa modelo ng programming ng tool na ito, at tuklasin ang mga paraan na magagamit nila ito upang ipahayag ang kanilang sarili.",
+          "student_overview": "Alamin kung paano gumawa at mag-edit ng mga sprite."
+        },
+        "coursee-2023/Hello World": {
+          "name": "Hello World",
+          "overview": "Sa **pagbuo ng kasanayan** na araling ito, matututo ang mga mag-aaral na lumikha at mag-animate ng mga sprite at gawin silang interactive gamit ang mga kaganapan.",
+          "preparation": "-   Maglaro sa mga puzzle upang mahanap ang anumang mga potensyal na problema sa klase mo. \n-   [Optional] Gamitin ang mga mapagkukunan sa [CS Connections](https://code.org/educate/csc) upang gumawa ng plano sa higit pang pag-aaral ng computer science pagkatapos ng unang tutorial.",
+          "purpose": "Ang araling ito ay inilaan upang ihanda ang mga mag-aaral na lumikha ng mga simpleng proyekto ng programming sa Sprite Lab. Matututuhan ng mga mag-aaral kung paano magsabi ng mga bagay ang mga sprite, na kasanayang gagamitin nila sa susunod na aralin sa Tungkol sa Akin.",
+          "student_overview": "Sa araling ito, matututo kang lumikha at i-animate ng mga sprite at gawin silang interactive gamit ang mga kaganapan."
+        },
+        "coursee-2023/Mini-Project: About Me": {
+          "name": "Mini-Project: Tungkol sa Akin",
+          "overview": "Ilalapat ng mga mag-aaral ang kanilang pang-unawa sa pagbabahagi ng personal at pribadong impormasyon sa web sa pamamagitan ng paggawa ng interactive na poster sa **mini-project** na ito.",
+          "preparation": "-   (Opsyonal) Mag-print ng mga kopya ng **gabay sa pagpaplano** para sa mga mag-aaral, o mamahagi ng mga digital na kopya.\n-   Isaalang-alang ang paggawa ng halimbawa na proyekto na ibahagi sa klase. \n-   Tiyaking may reflection journal ang bawat mag-aaral.",
+          "purpose": "Nilalayon ng araling ito na gawing personal na nauugnay sa mga mag-aaral ang nakaraang aralin sa personal at pribadong impormasyon. Sa LIGTAS (personal) at HINDI LIGTAS (pribado) na mga halimbawa sa isip, ang mga mag-aaral ay nagsasanay ng ligtas na pagpapahayag ng sarili sa web, gamit ang SpriteLab upang mag-ayos ng kanilang sariling mga sprite na costume at bumuo ng text.",
+          "student_overview": "Paglikha ng interactive na poster, ngunit pag-isipang mabuti kung anong impormasyon ang ligtas na ibahagi online."
+        },
+        "coursee-2023/Drawing with Loops": {
+          "name": "Pagguhit gamit ang mga Loop",
+          "overview": "Ang **setting ng konteksto** na aralin na ito ay inilipat ang focus sa Sprite Lab patungo sa Artist, bagong tool na tutuklasin ng mga mag-aaral sa kabuuan ng natitirang kurso.  ",
+          "preparation": "-   Maglaro sa pamamagitan ng mga puzzle upang mahanap ang anumang mga potensiyal na lugar ng problema sa klase mo.\n-   Siguraduhing may reflection journal ang bawat mag-aaral.",
+          "purpose": "Magsasanay ang mga mag-aaral gamit ang mga loop, konsepto na muling babalikan sa mga darating na aralin.",
+          "student_overview": "Sa araling ito, pinapadali ng **mga loop** na gumawa ng mga cool na larawan kasama ang Artist!"
+        },
+        "coursee-2023/Fancy Shapes using Nested Loops": {
+          "overview": "Sa **pagbuo ng kasanayan** na araling ito, gagawa ang mga mag-aaral ng masalimuot na disenyo gamit ang Artist. Ang aralin ay nagtatapos sa pagkakataon sa mga mag-aaral na lumikha ng kanilang sariling mga disenyo.",
+          "preparation": "-   Maglaro sa pamamagitan ng mga palaisipan upang mahanap ang anumang mga potensyal na lugar ng problema sa klase mo.\n-   Tiyaking may reflection journal ang bawat mag-aaral.\n-   Isaalang-alang kung ano ang sumusuporta sa iyong mga mag-aaral na maaaring kailanganin sa mga pagliko at anggulo.",
+          "purpose": "Sa online na aktibidad na ito, gagawa ang mga mag-aaral ng mga disenyo sa Artist na maipagmamalaki nilang ibahagi sa kanilang mga mahal sa buhay.\n\nAng layunin ng aktibidad na ito ay gamitin ang mga nested loop bilang paraan upang magbigay ng inspirasyon sa mga mag-aaral na may masining na pag-iisip na makita ang coding bilang isa pang creative outlet. Ang hanay ng mga palaisipang ito ay binuo upang bumuo ng mga kritikal na kasanayan sa pag-iisip, pag-unawa sa elementarya na geometry, at pagkamalikhain -- lahat ay nasa saklaw ng mga nested loop!",
+          "student_overview": "Higit pang mga nested loop! Sa pagkakataong ito, makakagawa ka ng KAHANGA-HANGANG pagguhit gamit ang mga nested loop."
+        },
+        "coursee-2023/Mini-Project: Design a Snowflake": {
+          "name": "Mini-Project: Magdisenyo ng Snowflake",
+          "overview": "Ang **mini-project** na araling ito ay magdadala sa mga mag-aaral sa serye ng mga pagsasanay upang lumikha ng mga snowflake na larawan gamit ang mga karakter sa _Frozen_ na pelikula.",
+          "preparation": "-   Maglaro sa pamamagitan ng mga palaisipan upang mahanap ang anumang mga potensiyal na lugar ng problema sa klase mo.\n-   Siguraduhing may reflection journal ang bawat mag-aaral.",
+          "purpose": "Sa araling ito, mailalapat ng mga mag-aaral ang kanilang mga kasanayan gamit ang mga nested loops upang lumikha ng mga larawang nasasabik silang ibahagi.",
+          "student_overview": "Sina _Anna_ at _Elsa_ ay may mahusay na mga kasanayan sa ice-skating, ngunit kailangan ang tulong mo upang lumikha ng mga pattern sa yelo. Gumamit ng mga nested loop para gumawa ng bagay na sobrang ASTIG."
+        },
+        "coursee-2023/Songwriting": {
+          "name": "Pagsusulat ng Awit",
+          "overview": "Isa sa mga pinakadakilang istraktura sa mundo ng computer science ay ang function. Ang mga function (minsang tinatawag na mga pamamaraan) ay maliliit na mga programa na maaari mong gamitin nang paulit-ulit sa loob ng iyong mas malaking programa. Ang araling ito ay makakatulong sa mga estudyante na likas na makakaunawa kung bakit ang pagsama-sama sa mga piraso ng code sa isang function ay maaaring lubhang nakakatulong na pag-uugali.",
+          "preparation": "-   (Opsyonal) Panoorin ang **\\*Gumaganang Aralin** na Video.\n-   Mag-print ng ilang **\\*worksheet** para sa bawat grupo.\n-   Mag-print ng **\\*pagtatasa** para sa bawat mag-aaral.\n-   Ligtas na access sa mga kanta at lyrics para sa aktibidad.\n-   Tiyaking may journal ang bawat mag-aaral.",
+          "purpose": "Ang paggamit ng mga function ay nakakatulong na gawing simple ang code at bumuo ng kakayahan ng mag-aaral na ayusin ang kanilang program. Mabilis na malalaman ng mga mag-aaral na ang mga function ng pagsusulat ay maaaring gawing mas madaling basahin ang kanilang mahahabang program at mas madaling i-debug kung may mali.",
+          "student_overview": "Kahit ang mga rockstar ay nangangailangan ng mga kakayahan sa pag-program. Ang araling ito ay nagtuturo sa iyo tungkol sa mga kakayahan gamit ang mga titik mula sa mga awitin."
+        },
+        "coursee-2023/Functions in Minecraft": {
+          "name": "Mga Function sa Minecraft",
+          "overview": "Sa **pagbuo ng kasanayan** na araling ito, magsisimulang maunawaan ng mga mag-aaral kung paano makakatulong ang mga function!",
+          "preparation": "-   Maglaro sa pamamagitan ng mga puzzle upang mahanap ang anumang mga potensiyal na lugar ng problema sa klase mo.\n-   Siguraduhing may reflection journal ang bawat mag-aaral.",
+          "purpose": "Matutuklasan ng mga mag-aaral ang dami ng mapaggagamitan ng programming sa pamamagitan ng pagsasanay ng mga function sa iba't ibang kapaligiran. Dito, makikilala ng mga mag-aaral ang mga magagamit muli na pattern at magagawa nilang isama ang mga pinangalanang block para tumawag ng mga paunang natukoy na function.",
+          "student_overview": "Maaari mo bang malaman kung paano gamitin ang mga function sa pinakamahusay na code?"
+        },
+        "coursee-2023/Functions with Artist": {
+          "name": "Mga Function sa Artist",
+          "overview": "Ang mga estudyante ay ipapakilala sa paggamit ng mga function sa Code.org. Ang mga dakilang mga larawan ay ililikha at babaguhin gamit ang mga function sa Artist. Para sa mas kumplikadong mga pattern, ang mga estudyante ay matututo tungkol sa pag-nest ng mga function sa pamamagitan ng pagtawag ng isang function sa loob ng isa pa.",
+          "preparation": "-   Maglaro sa pamamagitan ng mga puzzle upang mahanap ang anumang mga potensiyal na lugar ng problema sa klase mo.\n-   Siguraduhing may reflection journal ang bawat mag-aaral.",
+          "purpose": "Isa sa pinakamahalagang bahagi sa araling ito ay ang pagbibigay sa mga mag-aaral ng puwang upang lumikha ng bagay na kanilang ipinagmamalaki. Ang mga palaisipang ito ay umuusad sa higit at mas kumplikadong mga larawan, ngunit ang bawat bagong palaisipan ay bumubuo lamang sa nakaraang palaisipan. Sa pagtatapos ng araling ito, ang mga mag-aaral ay makadarama ng tiwala at pagmamalaki sa kanilang pagsusumikap.",
+          "student_overview": "Gumawa ng kumplikadong mga drowing nang mas madali gamit ang mga function!"
+        },
+        "coursee-2023/Conditionals in Minecraft: Voyage Aquatic": {
+          "name": "Mga Conditional sa Minecraft: Paglalakbay sa Tubig",
+          "overview": "Sa **skill-building/context-setting** lesson na ito, magkakaroon ng pagkakataon ang mga mag-aaral na magsanay ng content na natutunan nila hanggang sa puntong ito, pati na rin ang pagkuha ng sneak peek sa mga conditional!",
+          "preparation": "-   Maglaro sa pamamagitan ng mga puzzle nauugnay sa araling ito upang mahanap ang anumang mga potensiyal na lugar ng problema sa klase mo.\n-   Siguraduhing may reflection journal ang bawat mag-aaral.",
+          "purpose": "Ang hanay ng mga palaisipang ito ay gagana upang patatagin at bumuo sa kaalaman ng mga loop, at magpakilala ng mga conditional. Sa pamamagitan ng pagsasama-sama ng dalawang konseptong ito, matutuklasan ng mga mag-aaral ang potensyal sa paglikha ng masaya at makabagong mga program sa isang bago at kapana-panabik na kapaligiran.",
+          "student_overview": "Dito matututo ka tungkol sa mga conditional sa mundo ng _Minecraft_."
+        },
+        "coursee-2023/Conditionals with the Farmer": {
+          "name": "Mga Conditional sa Magsasaka",
+          "overview": "Ang araling ito ay nagpapakilala sa mga estudyante sa `while` na mga loop at `if/else` na mga pahayag. Ang mga _while loop_ ay mga loop na patuloy na nag-uulit sa mga utos hanggang sa ang kondisyon ay true. Ang mga while loop ay ginagamit kapag ang nag-program ay hindi alam ang eksaktong bilang ng beses na kailangang ulitin ang kautusan, ngunit alam ng nag-program kung anong kondisyon ang kailangang maging true para magpagtuloy ang pag-loop. Ang `If / Else` na mga pahayag ay nagbibigay ng pleksibilidad sa pag-program sa pamamagitan ng pagpapatakbo lang sa buong bahagi ng code kapag ang isang bagay ay true, kung hindi magpapatakbo ito ng iba.",
+          "preparation": "-   Maglaro sa pamamagitan ng mga puzzle upang mahanap ang anumang mga potensiyal na lugar ng problema sa klase mo.\n-   Siguraduhing may reflection journal ang bawat mag-aaral.",
+          "purpose": "Ang araling ito ay nagpapakilala sa mga mag-aaral sa mga habang na loop at \"kung / iba pa\" na mga pahayag.",
+          "student_overview": "Ikaw ay maaaring makapagsabi sa kompyuter kung ano ang gagawin sa loob ng iilang mga kondisyon sa loob ng masaya at mahirap na mga seryeng ito."
+        },
+        "coursee-2023/Functions with Harvester": {
+          "name": "Mga Function sa Mang-aani",
+          "overview": "Sa **pagbuo ng kasanayan** na araling ito, ang mga mag-aaral ay gagamit ng mga conditional na may mga function upang mag-ani ng mga pananim sa _Mang-aani_.",
+          "preparation": "-   Maglaro sa pamamagitan ng mga puzzle upang mahanap ang anumang mga potensiyal na lugar ng problema sa klase mo.\n-   Siguraduhing may reflection journal ang bawat mag-aaral.",
+          "purpose": "Ang araling ito ay nilalayong higit pang idiin ang mga mag-aaral na gumamit ng mga conditional na may mga function. Ang mga palaisipang ito ay nilayon upang madagdagan ang paglutas ng problema at mga kasanayan sa kritikal na pag-iisip.",
+          "student_overview": "Makakapadali ang mga functions sa iyong gawain para matulungan ang magsasaka sa kanyang mga ani!"
+        },
+        "coursee-2023/Designing for Accessibility": {
+          "name": "Pagdidisenyo sa Accessibility",
+          "overview": "Sa **eksplorasyon** na araling ito, matututunan ng mga mag-aaral ang tungkol sa pagiging naa-access at ang halaga ng empatiya sa pamamagitan ng brainstorming at pagdidisenyo ng mga naa-access na solusyon sa hypothetical na mga app.",
+          "preparation": "-   Para sa konteksto, basahin ang tungkol sa **\\*mga uri ng mga kapansanan**. \n-   Basahin ang mga tala ng speaker sa **\\*slide deck**.\n-   Maghanda ng sapat na sketching/drawing supplies para sa lahat ng mag-aaral.",
+          "purpose": "Sa pamamagitan ng pag-aaral tungkol sa pagiging naa-access, nakikilala ng mga mag-aaral ang mga epekto ng pag-compute sa kanilang sariling buhay. Ang pagiging naa-access ay maaaring hindi mukhang nauugnay na paksa sa CS, ngunit ang paggawa ng teknolohiya na naa-access sa mga hindi gaanong naseserbisyuhan na mga user ay nakakatulong na gawing mas mahusay din ang teknolohiya sa lahat.",
+          "student_overview": "Matuto tungkol sa pagiging madaling ma-access at ang halaga ng empatiya sa pamamagitan ng brainstorming at pagdidisenyo ng mga naa-access na solusyon sa mga hypothetical na app. "
+        },
+        "coursee-2023/Digital Sharing": {
+          "name": "Digital na Pagbabahagi",
+          "overview": "Ang **eksplorasyon** na araling ito ay tumutulong sa mga mag-aaral na maunawaan ang mga hamon at benepisyo ng paggalang sa pagmamay-ari at copyright, lalo na sa mga digital na kapaligiran.",
+          "preparation": "-   Hanapin ang **\\*Copyright Sharing video** sa \"Mga Link\" sa ibaba\n-   I-download at suriin ang kumpletong **\\*Digital na Pagbabahagi na Plano ng Aralin** sa Copyright at Creativity\n-   Bilang guro, lumikha ng piraso ng sining sa aralin (larawan, kanta, slideshow, atbp.)\n-   Tiyaking may reflection journal ang bawat mag-aaral.\n-   Kakailanganin mo ang tablet o smart phone upang gayahin ang pagbabahagi ng item na iyon",
+          "purpose": "Malapit nang gumawa ang mga mag-aaral ng mga proyektong ibabahagi at karamihan sa mga proyektong ito ay maglalaman ng alinman sa code o imagery na hindi ginawa ng mga mag-aaral sa kanilang sarili. Narito ang araling ito upang ipakita sa mga mag-aaral ang wastong paraan upang mahawakan ang paggamit ng nilalaman na hindi sa kanila.",
+          "student_overview": "Sa araling ito, matututunan mo ang tungkol sa mga hamon at benepisyo ng pagmamay-ari at copyright."
+        },
+        "coursee-2023/End of Course Project": {
+          "overview": "Ang **proyekto** na araling ito ay magdadala sa mga mag-aaral sa proseso ng pagdidisenyo, pagbuo, at pagpapakita ng mga bagong proyekto!",
+          "preparation": "-   Gumugol ng oras sa paggawa ng sarili mong proyekto kasama ang Artist at Sprite Lab. Alamin ang sarili mo sa mga kakayahan at limitasyon ng bawat tool.\n-   Baguhin ang **\\*rubric** upang umangkop sa mga layunin mo sa klase at mag-print ng kopya sa bawat mag-aaral.\n-   Baguhin ang **\\*worksheet ng disenyo ng proyekto** upang magkasya sa klase mo at mag-print ng packet sa bawat mag-aaral.",
+          "purpose": "Maaaring handa na ang mga mag-aaral na dumiretso sa pagbuo ng kanilang mga proyekto, ngunit ang araling ito ay makakatulong sa paghubog ng kanilang mga ideya sa mga plano. Ang istrakturang ito ay magpapahintulot sa mga nangangarap na manatiling matatag at ilawan ang landas sa mga may pakiramdam na naiwan sa dilim. Bigyan ang mga mag-aaral ng sapat na oras upang buuin at baguhin ang kanilang mga proyekto. Ang pagsubok at pagkakamali na hindi maiiwasang kasali sa araling ito ay magtuturo sa paglutas ng problema at pagtitiyaga.",
+          "student_overview": "Ang mga proyektong ganito kalaki ay nangangailangan ng oras at maraming pagpaplano. Hanapin ang inspirasyon mo, bumuo ng plano, at ipamalas ang iyong pagkamalikhain!"
+        },
+        "coursef-2023/The Power of Words": {
+          "name": "Ang Kapangyarihan ng mga Salita",
+          "overview": " [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nAng araling ito ay orihinal na nilikha ng Common Sense Education. [Matuto pa.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nHabang lumalaki ang mga bata, natural na magsisimula silang makipag-ugnayan nang higit pa online. Ngunit ang ilan sa kanilang nakikita ay makapagpaparamdam sa kanila ng sakit, kalungkutan, galit, o kahit na takot. Tulungan ang mga mag-aaral mo na bumuo ng empatiya sa iba at matuto ng mga diskarte na gagamitin kapag nahaharap sa cyberbullying.",
+          "preparation": "-   Suriin ang mga materyales sa pagtuturo.\n-   I-print ang (mga) handout para sa bawat mag-aaral.\n-   Maghanda ng mahabang tali (o lubid) at papel sa klase.",
+          "purpose": "Tinatalakay ng Common Sense's Digital Citizenship Curriculum ang anim na pangunahing paksa, batay sa pinakabagong pananaliksik sa mga bata, media, at teknolohiya. Ang araling ito ay nakatuon sa Cyberbullying, Digital Drama & Mapoot na Pagsasalita. Isinasaalang-alang ng mga mag-aaral ang mahihirap na paksang ito at ginagampanan ang aktibong papel ng mga naninindigan upang bumuo ng positibo, sumusuporta sa mga online na komunidad at labanan ang online na kalupitan.",
+          "student_overview": "Ang pang-aapi ay hindi talaga mabuti. Ang araling ito ay magtuturo sa iyong tungkol sa kung ano pwede at hindi pwedeng sabihin online."
+        },
+        "coursef-2023/Introducing Sprite Lab": {
+          "name": "Ipinapakilala ang Sprite Lab",
+          "overview": "Sa **context-setting** lesson na ito, tatalakayin ng mga mag-aaral ang papel ng mga computer at teknolohiya sa kanilang buhay, na tumutuon sa kung paano binibigyan ng mga app at tool ang mga user ng mga pagpipilian tungkol sa kung paano gamitin ang mga ito. Tutuklasin din ng mga mag-aaral ang mga app na katulad ng mga ginawa nila sa ibang pagkakataon.",
+          "preparation": "-   Tukuyin kung paano mag-login ang mga mag-aaral sa Code.org.\n-   Kung kinakailangan, gumawa ng Code.org account para sa mga mag-aaral.\n-   Italaga ang Pagpapakilala sa Sprite Lab sa mga mag-aaral.\n-   Mag-print ng mga kopya ng **\\*Pagtuklas ng Mga App** na worksheet (o i-post ang digital na bersiyon sa LMS mo).",
+          "purpose": "Ang unang aralin ay tungkol sa pagpapasigla sa mga mag-aaral tungkol sa kurso at pagkonekta ng kanilang sariling mga personal na interes sa computer science.",
+          "student_overview": "Tatalakayin mo ang papel ng mga computer at teknolohiya sa buhay mo na may pagtuon sa kung paano binibigyan ng mga app at tool ang mga user ng mga pagpipilian tungkol sa kung paano gamitin ang mga ito."
+        },
+        "coursef-2023/Making Sprites": {
+          "name": "Paggawa ng mga Sprite",
+          "overview": "Sa leksiyon na ito ng **pagbuo ng kasanayan**, gagawa ang mga mag-aaral sa serye ng mga antas ng programming sa computer, na magtatapos sa open-ended na \"libreng laro\" na task kung saan maaari silang bumuo ng kahit anong gusto nila. Ang mga mag-aaral ay magsusulat ng mga program at matutunan ang tungkol sa dalawang konsepto sa gitna ng Sprite Lab: mga sprite at pag-uugali.",
+          "preparation": "Maglaro sa mga antas at repasuhin ang **\\*mga slide ng aralin**.",
+          "purpose": "Ang araling ito ay idinisenyo upang ipakilala ang mga mag-aaral sa programming sa Sprite Lab. Magsisimula ang mga mag-aaral na bumuo ng pag-unawa sa modelo ng programming ng tool na ito, at tuklasin ang mga paraan na magagamit nila ito upang ipahayag ang kanilang sarili.",
+          "student_overview": "Sa araling ito susulat ka ng mga program at matututo ka tungkol sa mga sprite at pag-uugali."
+        },
+        "coursef-2023/Sprites in Action": {
+          "name": "Sprites sa aksyon",
+          "overview": "Sa leksiyon na ito ng **pagbuo ng kasanayan**, gagawa ang mga mag-aaral sa serye ng mga antas ng programming sa computer, na magtatapos sa open-ended na \"libreng laro\" na task kung saan maaari silang bumuo ng kahit anong gusto nila. Isusulat ng mga mag-aaral ang mga programang tumutugon sa mga nakatakdang kaganapan at input ng user.",
+          "preparation": "Maglaro sa mga antas at repasuhin ang mga slide ng aralin.",
+          "purpose": "Ang araling ito ay idinisenyo upang palakasin ang mga kasanayan sa nakaraang aralin at ipakilala sa mga mag-aaral ang programming na may mga kaganapan. Sa buong kursong ito, ang mga kaganapan ang magiging pangunahing paraan ng pagbabago ng mga mag-aaral kung paano tumatakbo ang kanilang mga program sa paglipas ng panahon o bilang tugon sa user.",
+          "student_overview": "Gagawin mo ang mga antas ng programming at magtatapos sa open-ended na \"libreng laro\" na task kung saan maaari kang bumuo ng kahit anong gusto mo."
+        },
+        "coursef-2023/Mini-Project: Virtual Pet": {
+          "name": "Mini-Project: Virtual na Alaga",
+          "overview": "Ang mga mag-aaral ay gagawa ng interactive na Virtual Pet na ang hitsura at pag-uugali ay ayon sa gusto nila sa **mini-project** na aralin. Gagamitin ng mga mag-aaral ang tool na \"Mga Costume\" ng Sprite Lab upang i-customize ang hitsura ng kanilang alagang hayop. Gagamitin nila ang mga kaganapan, pag-uugali, at iba pang mga konsepto na natutunan nila upang bigyang-buhay ang kanilang proyekto.",
+          "preparation": "-   Maglaro sa pamamagitan ng mga puzzle upang mahanap ang anumang mga potensiyal na lugar ng problema sa klase mo.\n-   Siguraduhing may reflection journal ang bawat mag-aaral.",
+          "purpose": "Ang araling ito ay nagpapahintulot sa mga mag-aaral na ilapat ang mga konsepto ng programming sa mga naunang aralin sa isa pang malikhaing konteksto.",
+          "student_overview": "Lumikha ng interactive na Virtual Pet na ang hitsura at pagkilos ay ayon sa gusto mo! Bigyan ang alaga mong hayop ng sariling buhay!"
+        },
+        "coursef-2023/Blank Space Stories": {
+          "name": "Mga Kuwentong Blank Space",
+          "overview": "Sa **context-setting** lesson na ito, gagamitin ng mga mag-aaral ang fill-in-the-blank na mga kwento (katulad ng Mad Libs®) bilang konteksto sa pag-unawa kung paano kumukuha at nag-iimbak ng input ang mga computer sa user, pagkatapos ay gamitin ito sa ibang pagkakataon habang tumatakbo ang program.",
+          "preparation": "Kumuha ng 6 na sobre (angkop din: papel o mga index card, nakatiklop sa kalahati).\n\n-   Lagyan ng malalaking titik ang harap ng bawat sobre: ​​bagay, likido, numero, pang-uri, bahagi ng katawan, numero\n-   Mag-print ng mga kopya ng mag-aaral **\\*worksheet** (o i-post ang digital na bersiyon sa LMS mo).",
+          "purpose": "Ang araling ito ay nagbibigay ng nakabahaging konteksto na makakatulong sa pag-unawa kung paano gumagana ang mga variable kapag bumalik ang mga mag-aaral sa programming.",
+          "student_overview": "Sa aktibidad na ito, gagamit ka ng fill-in-the-blank na mga kwento (katulad ng Mad Libs®) para maghanda sa pag-unawa kung paano kumukuha at nag-iimbak ng input ang mga computer sa user, pagkatapos ay gamitin ito sa ibang pagkakataon habang tumatakbo ang program."
+        },
+        "coursef-2023/Text and Prompts": {
+          "name": "Text at Mga Prompt",
+          "overview": "Sa leksiyong ito ng **pagbuo ng kasanayan**, ang mga mag-aaral ay makakakuha ng pagsasanay sa mga variable sa Sprite Lab.",
+          "preparation": "Maglaro sa mga antas at repasuhin ang mga slide ng aralin.",
+          "purpose": "Gagamitin ang mga variable sa kursong ito upang mag-imbak at magbago ng data. Sa puntong ito, ang mga mag-aaral ay mag-iimbak at kumukuha ng mga halaga nang hindi binabago ang mga ito. Sa mga susunod na aralin, mag-iimbak ang mga mag-aaral ng mga numerong halaga at babaguhin ang mga ito sa paglipas ng panahon upang masubaybayan ang mga bagay tulad ng marka ng manlalaro sa isang laro.",
+          "student_overview": "Sa araling ito ay magsasanay ka sa mga variable sa Sprite Lab."
+        },
+        "coursef-2023/Mini-Project: User Input Programs": {
+          "name": "Mini-Project: Mga Programa sa Pag-input ng User",
+          "overview": "Ilalapat ng mga mag-aaral ang kanilang mga bagong kasanayan na may mga variable sa isa sa tatlong open-ended **mini-project**. Tutuklasin ng mga mag-aaral ang mga sample na program, gagawa ng plano para sa kanilang sariling proyekto, at ipoprogram ito mula sa simula.",
+          "preparation": "-   I-print ang gabay sa pagpaplano o ipamahagi ang digital copy sa bawat mag-aaral. Suriin ito nang maaga kung sakaling gusto mong gumawa ng anumang mga pagbabago upang umangkop sa klase mo.\n\n-   Suriin ang mga opsyon sa antas 3 nang maaga upang maging pamilyar sa daloy na kailangang sundin ng mga mag-aaral.\n\n-   Ang araling ito ay may potensyal na umabot sa maraming panahon ng klase. Isaalang-alang ang pag-iskedyul ng mga implikasyon nang maaga.",
+          "purpose": "Ang araling ito ay hindi nagpapakilala ng mga bagong kasanayan o konsepto, ngunit sa halip ay nagbibigay sa mga mag-aaral ng pagkakataong ilapat ang kanilang natutunan sa malikhaing paraan.",
+          "student_overview": "Ilapat ang mga bago mong kasanayan na may mga variable sa isa sa tatlong open-ended na proyekto."
+        },
+        "coursef-2023/Lots of Sprites": {
+          "name": "Maraming Sprite",
+          "overview": "Sa **setting ng konteksto**/**pagbuo ng kasanayan** na araling ito, mas mauunawaan ng mga mag-aaral ang mga kakayahan ng Sprite Lab at matututo sila kung paano pamahalaan ang mga grupo ng mga sprite na may parehong costume.",
+          "preparation": "Maglaro sa mga antas at repasuhin ang **mga slide ng aralin**.",
+          "purpose": "Ang araling ito ay pansamantalang lumilipat mula sa mga variable at sa halip ay nakatuon sa pagprogram na may mga grupo ng mga sprite. Sa susunod na kurso, ang mga mag-aaral ay matututo ng higit pa tungkol sa mga variable at simulation. Ang mga uri ng mga program na gagawin ng mga mag-aaral sa araling ito ay magbibigay ng karagdagang konteksto sa mga araling iyon.",
+          "student_overview": "Matututunan mo kung paano gumawa ng higit pa sa Sprite Lab at gumawa ng mga proyekto na may maraming sprite!"
+        },
+        "coursef-2023/Counting with Variables": {
+          "name": "Nagbibilang gamit ang mga Variable",
+          "overview": "Sa **pagbuo ng kasanayan** na araling ito, gagamit ang mga mag-aaral ng mga variable upang subaybayan ang value na nagbabago sa paglipas ng panahon, tulad ng isang counter. Kasama rin sa araling ito ang maikling **mini-project** kung saan ang mga mag-aaral ay gumagawa ng simpleng laro.",
+          "preparation": "Maglaro sa mga antas at repasuhin ang **mga slide ng aralin**.",
+          "purpose": "Sa mga nakaraang aralin, natututo ang mga mag-aaral na gumamit ng mga variable upang mag-imbak ng data na maaaring makuha sa ibang pagkakataon. Sa araling ito, magsisimulang matuto ang mga mag-aaral na baguhin ang data na nakaimbak sa isang variable. Ang pangunahing pag-unawa sa kung paano gumagana ang mga variable ay magbibigay-daan din sa kanila na lumikha ng mas advanced na mga proyekto.",
+          "student_overview": "Matututo kang gumamit ng mga variable para makagawa ng counter o subaybayan ang score sa isang laro."
+        },
+        "coursef-2023/Mini-Project: Collector Game": {
+          "overview": "Sa **mini-project** na araling ito, gagawa ang mga mag-aaral ng customized na \"collector game\", kung saan ang user ay nagpapalipat-lipat ng sprite para mangolekta ng mga bagay.",
+          "preparation": "Maglaro sa mga antas at repasuhin ang **mga slide ng aralin**.",
+          "purpose": "Ang proyektong ito ay idinisenyo upang payagan ang mga mag-aaral na ilapat ang kanilang bagong kaalaman sa mga variable sa masayang paraan. Sa pamamagitan ng pag-unawa kung paano baguhin ang value na nakaimbak sa variable, maaaring lumikha ang mga mag-aaral ng laro na awtomatikong nagpapanatili ng marka batay sa mga aksiyon ng manlalaro.",
+          "student_overview": "Kolektahin ang lahat ng mga sprite! Sa proyektong ito, gagawa ka ng isang laro na maaaring laruin ng iba."
+        },
+        "coursef-2023/Simulating Experiments": {
+          "overview": "Sa **context-setting** na aralin, tatakbo at mangongolekta ang mga mag-aaral ng data sa simpleng simulation sa Sprite Lab. Pagkatapos patakbuhin ang simulation nang maraming beses, magkakaroon ng pagkakataon ang mga mag-aaral na hulaan kung paano maaaring makaapekto sa resulta ang pagbabago ng variable sa simulation at subukan ang hypothesis na iyon.",
+          "preparation": "-   Tukuyin kung ang mga mag-aaral ay magpapatakbo ng mga simulation sa kanilang sariling computer, o kung ikaw ang magpapatakbo sa kanila bilang buong klase\n-   Kung kinakailangan, maghandang iproyekto ang dalawang simulation sa araling ito.",
+          "purpose": "Ginagamit ng mga agham sa maraming disiplina ang Computer Science upang magpatakbo ng mga modelo at simulation upang magpatakbo ng mga eksperimento, mangolekta ng data, at suriin ang data na iyon sa mga insight. Bagama't ang simulation na ipinakilala sa araling ito ay medyo simple, maaari itong gamitin bilang jumping off point sa mga mag-aaral na isaalang-alang kung paano maaaring gamitin ang mas sopistikadong mga modelo ng computational upang subukan ang mga hypotheses.",
+          "student_overview": "Magpatakbo ng mga simulation sa computer at mag-eksperimento sa pamamagitan ng pagpapalit ng mga variable."
+        },
+        "coursef-2023/Outbreak": {
+          "name": "Pagsiklab",
+          "overview": "Pinagsasama ng araling ito ang **pagbuo ng kasanayan** sa mga event sa isang **mini-project** kung saan makakagawa ang mga mag-aaral ng sarili nilang computer simulation sa Sprite Lab. Pag-aaralan ng mga mag-aaral ang simulation upang maunawaan kung gaano kabilis kumalat ang isang virus at kung ano ang maaaring gawin upang mapabagal ito.",
+          "preparation": "-   Maglaro sa pamamagitan ng mga puzzle upang mahanap ang anumang mga potensiyal na lugar ng problema sa klase mo.\n-   Siguraduhing may reflection journal ang bawat mag-aaral.",
+          "purpose": "Sa nakaraang aralin, ang mga mag-aaral ay nangolekta at nag-interpret ng mga datos mula sa isang simpleng simulation. Sa araling ito, susundin ng mga mag-aaral ang mga tagubilin upang mai-code ang kanilang sariling modelo ng simulation. Ang dating kaalaman ng mga mag-aaral tungkol sa mga paglaganap ng virus sa totoong mundo ay ilalapat sa isang kathang-isip na senaryo.",
+          "student_overview": "Isang virus ang dumating sa Monster Town! Matutong gumawa ng virus simulator at tulungan na maging malusog muli ang mga halimaw."
+        },
+        "coursef-2023/AI For Oceans": {
+          "name": "AI Para sa Mga Karagatan  ",
+          "overview": "Sa **pagsasaliksik** na araling ito, sasanayin ng mga mag-aaral ang machine learning model sa pamamagitan ng pag-uuri ng isda at iba pang bagay.",
+          "purpose": "Idinisenyo ang araling ito upang mabilis na ipakilala sa mga mag-aaral ang machine learning, isang uri ng artificial intelligence. Tuklasin ng mga mag-aaral kung paano ginagamit ang training data para paganahin ang machine learning model na mag-classify ng bagong data. Ang mga mag-aaral ay dapat magkaroon ng positibong karanasan sa panahon ng tutorial at higit sa lahat ay dapat ma-motivate na patuloy na matuto ng computer science.",
+          "student_overview": "Uriin ang mga bagay bilang alinman sa \"isda\" o \"hindi isda\" upang subukang alisin ang mga basura sa karagatan. Pagkatapos, palawakin ang set ng data mo ng pagsasanay upang maisama ang iba pang nilalang sa dagat na kabilang sa tubig. Sa ikalawang bahagi ng aktibidad, pumili ng sarili mong mga label na ilalapat sa mga larawan ng random na nabuong isda. Ginagamit ang data ng pagsasanay na ito sa modelo ng machine learning na dapat pagkatapos ay makapag-label ng mga bagong larawan nang mag-isa."
+        },
+        "coursef-2023/The Internet": {
+          "name": "The Internet",
+          "overview": "Kahit na maraming mga tao ang gumamit ng Internet araw-araw, hindi masyadong marami ang may alam kung paano ito gumagana. Sa araling ito, ang mga estudyante ay magkukunwaring dumaloy sa Internet, habang natututo tungkol sa mga koneksyon, mga URL, mga IP Address, at ang DNS.",
+          "preparation": "-   Panoorin ang **\\*Internet** - Video ng Guro.\n-   Mag-print nang sapat na **\\*Mga IP Address Card at Delivery Type Card** - Mga Manipulative sa bawat grupo.\n-   Mag-print ng **\\*Internet** na Pagtatasa - sa bawat mag-aaral.\n-   Access sa internet (tulad ng **\\*get-site-ip.com**.\n-   Tiyaking may reflection journal ang bawat mag-aaral.",
+          "purpose": "Kung ginagawa mo ang bawat aralin sa kursong ito, kung gayon ang bawat mag-aaral sa iyong silid-aralan ay gumamit ng internet... ngunit ilan ang nakakaalam kung paano ito gumagana? Ang pag-aaral ng higit pa tungkol sa internet ay makakatulong sa mga mag-aaral na magkaroon ng mas mahusay na pag-unawa sa walang katapusang mga posibilidad nito.",
+          "student_overview": "Nagtataka ka na ba kung paano ang mga impormasyon naglalakbay sa kabuoan ng Internet? Ito ay hindi mahika! Ang araling ito ay magtuturo sa iyo sa mga pangunahing kaalaman kung paano ang Internet gumagana."
+        },
+        "coursef-2023/End of Course Project": {
+          "overview": "Ang **proyekto** na araling ito ay magdadala sa mga mag-aaral sa proseso ng pagdidisenyo, pagbuo, at pagpapakita ng mga bagong proyekto!",
+          "preparation": "-   Gumugol ng oras sa paggawa ng sarili mong proyekto kasama ang Artist at Sprite Lab. Alamin ang sarili mo sa mga kakayahan at limitasyon ng bawat tool.\n-   Baguhin ang rubric upang umangkop sa mga layunin mo sa klase at mag-print ng kopya sa bawat mag-aaral.\n-   Baguhin ang worksheet ng disenyo ng proyekto upang magkasya sa klase mo at mag-print ng packet sa bawat mag-aaral.",
+          "purpose": "Maaaring handa na ang mga mag-aaral na dumiretso sa pagbuo ng kanilang mga proyekto, ngunit ang araling ito ay makakatulong sa paghubog ng kanilang mga ideya sa mga plano. Ang istrakturang ito ay magpapahintulot sa mga nangangarap na manatiling matatag at ilawan ang landas sa mga may pakiramdam na naiwan sa dilim. Bigyan ang mga mag-aaral ng sapat na oras upang buuin at baguhin ang kanilang mga proyekto. Ang pagsubok at pagkakamali na hindi maiiwasang kasali sa araling ito ay magtuturo sa paglutas ng problema at pagtitiyaga.",
+          "student_overview": "Ang mga proyektong ganito kalaki ay nangangailangan ng oras at maraming pagpaplano. Hanapin ang inspirasyon mo, bumuo ng plano, at ipamalas ang iyong pagkamalikhain!"
+        },
+        "express-2023/Programming with Angry Birds": {
+          "name": "Pag-Program sa Maze",
+          "overview": "Sa **pagbuo ng kasanayan** na araling ito, ang mga mag-aaral ay bubuo ng mga sequential algorithm para ilipat ang ibon sa gilid ng maze patungo sa baboy sa kabilang panig. Upang gawin ito, isasalansan nila ang mga block ng code nang magkasama sa linear na pagkakasunud-sunod, na gagawing diretso ang mga ito, kumaliwa, o kumanan.",
+          "preparation": "-   Maglaro sa pamamagitan ng mga palaisipan upang mahanap ang anumang mga potensyal na lugar ng problema sa klase mo. \n-   (Opsyonal) Pumili ng ilang palaisipang gagawin bilang grupo kasama ng iyong klase.\n-   Tiyaking may reflection journal ang bawat mag-aaral.",
+          "purpose": "Sa araling ito, bubuo ang mga mag-aaral ng mga kasanayan sa programming sa computer platform. Ang block-based na format ng mga palaisipang ito ay tumutulong sa mga mag-aaral na malaman ang tungkol sa pagkakasunud-sunod at mga konsepto, nang hindi kinakailangang mag-alala tungkol sa pagperpekto ng syntax.",
+          "student_overview": "Matuto tungkol sa mga sequence at algorithm gamit ang _Angry Birds_."
+        },
+        "express-2023/Debugging in Maze": {
+          "name": "Pagde-debug sa Maze",
+          "overview": "Sa **pagbuo ng kasanayan** na araling ito, makakatagpo ang mga mag-aaral ng pre-written code na naglalaman ng mga pagkakamali. Kakailanganin nilang dumaan sa umiiral na code upang matukoy ang mga error.",
+          "preparation": "-   Maglaro sa pamamagitan ng aralin upang mahanap ang anumang mga potensyal na lugar ng problema sa klase mo.\n-   (Opsyonal) Pumili ng ilang palaisipang gagawin bilang grupo kasama ng klase mo.\n-   Tiyaking may Reflection Journal ang bawat mag-aaral.",
+          "purpose": "Ang mga mag-aaral sa klase mo ay maaaring mabigo sa araling ito dahil sa esensya ng pag-debug. Ang pag-debug ay konsepto na napakahalaga sa computer programming. Kailangang maging mahusay ang mga computer scientist sa paghahanap sa mga bug sa sarili nilang mga program. Pinipilit ng pag-debug ang mga mag-aaral na kilalanin ang mga problema at malampasan ang mga ito habang bumubuo ng kritikal na pag-iisip at mga kasanayan sa paglutas ng problema.",
+          "student_overview": "Maghanap ng mga problema sa mga palaisipan at sanayin ang mga kasanayan mo sa pag-debug."
+        },
+        "express-2023/Collecting Treasure with Laurel": {
+          "name": "Pag-program sa Kolektor",
+          "overview": "Sa **pagbuo ng kasanayan** na araling ito, patuloy na bubuo ang mga mag-aaral ng kanilang pag-unawa sa mga algorithm at pag-debug. Sa bagong karakter, si _Laurel ang Manlalakbay_, gagawa ang mga mag-aaral ng mga sequential algorithm upang gawin si _Laurel_ na kumuha ng kayamanan habang naglalakad siya sa landas.",
+          "preparation": "-   Maglaro sa pamamagitan ng mga puzzle upang mahanap ang mga potensiyal na lugar ng problema sa klase mo.\n-   Siguraduhing may Reflection Journal ang bawat mag-aaral.",
+          "purpose": "Sa araling ito, ang mga mag-aaral ay magsasanay ng kanilang mga kasanayan sa programming gamit ang bagong karakter, si _Laurel ang Manlalakbay_. Kapag nagsimula ang tao sa programming, pinagsasama-sama nila ang mga tagubilin sa tiyak na pagkakasunud-sunod gamit ang bagay na maaaring basahin ng makina. Sa pamamagitan ng paggamit ng programming, ang mga mag-aaral ay magkakaroon ng pag-unawa sa kung paano nag-navigate ang computer sa mga tagubilin at kaayusan. Ang paggamit ng bagong karakter na may ibang layunin ng palaisipan ay makakatulong sa mga mag-aaral na palawakin ang kanilang saklaw ng karanasan sa sequencing at mga algorithm sa programming.",
+          "student_overview": "Sumulat ng mga algorithm para matulungan si _Laurel ang Manlalakbay_ na mangolekta ng maraming hiyas!"
+        },
+        "express-2023/Creating Art with Code": {
+          "name": "Pag-program sa Artist",
+          "overview": "Sa **pagbuo ng kasanayan** sa araling ito, kukunin ng mga mag-aaral ang kontrol sa Artist para kumpletuhin ang mga drawing sa screen.",
+          "preparation": "-   Maglaro sa mga palaisipan upang hanapin ang anumang posibleng problema sa inyong klase.\n-   (Opsyonal) Kumuha ng mga protractor para sa klase mo upang mailarawan ang mga anggulo na dapat nilang gamitin upang makumpleto ang mga palaisipan.\n-   Mag-print ng **\\*Handout ng Mag-aaral** para sa bawat mag-aaral.",
+          "purpose": "Pagbubuo ng nakaraang karanasan ng mga mag-aaral sa sequencing, gagana ang araling ito upang magbigay ng inspirasyon sa higit pang pagkamalikhain gamit ang coding. Ang layunin ng araling ito ay patatagin ang kaalaman sa sequencing sa pamamagitan ng pagpapakilala ng mga bagong block at layunin. Sa kasong ito, mas natututo ang mga mag-aaral tungkol sa mga pixel at anggulo gamit ang mga bagong block, habang sinasanay pa rin ang kanilang mga kasanayan sa sequencing. Gayundin, magagawa ng mga mag-aaral na mailarawan ang mga bagong layunin tulad ng pag-coding sa Artist upang gumuhit ng parisukat.",
+          "student_overview": "Lumikha ng magagandang larawan sa pamamagitan ng pagprograma sa Artist."
+        },
+        "express-2023/Swimming Fish in Sprite Lab": {
+          "overview": "Magpo-program ang mga mag-aaral ng simpleng animated na eksena sa ilalim ng dagat sa **aralin sa pagbuo ng kasanayan**.",
+          "preparation": "-   Maglaro sa pamamagitan ng mga puzzle upang mahanap ang anumang mga potensiyal na lugar ng problema sa klase mo.\n-   Siguraduhing may Reflection Journal ang bawat mag-aaral.",
+          "purpose": "Ang araling ito ay idinisenyo upang ipakilala sa mga mag-aaral ang pangunahing bokabularyo ng Sprite Lab, at payagan silang ilapat ang mga konseptong natutunan nila sa ibang mga kapaligiran sa tool na ito. Sa pamamagitan ng paglikha ng tangke ng isda, magsisimula ang mga mag-aaral na bumuo ng pag-unawa sa modelo ng programming ng tool na ito, at tuklasin ang mga paraan na magagamit nila ito upang ipahayag ang kanilang sarili.",
+          "student_overview": "Alamin kung paano gumawa at mag-edit ng mga sprite."
+        },
+        "express-2023/Making Sprites": {
+          "name": "Paggawa ng mga Sprite",
+          "overview": "Sa leksiyon na ito ng **pagbuo ng kasanayan**, gagawa ang mga mag-aaral sa serye ng mga antas ng programming sa computer, na magtatapos sa open-ended na \"libreng laro\" na task kung saan maaari silang bumuo ng kahit anong gusto nila. Ang mga mag-aaral ay magsusulat ng mga program at matutunan ang tungkol sa dalawang konsepto sa gitna ng Sprite Lab: mga sprite at pag-uugali.",
+          "preparation": "Maglaro sa mga antas at repasuhin ang **\\*mga slide ng aralin**.",
+          "purpose": "Ang araling ito ay idinisenyo upang ipakilala ang mga mag-aaral sa programming sa Sprite Lab. Magsisimula ang mga mag-aaral na bumuo ng pag-unawa sa modelo ng programming ng tool na ito, at tuklasin ang mga paraan na magagamit nila ito upang ipahayag ang kanilang sarili.",
+          "student_overview": "Sa araling ito susulat ka ng mga program at matututo ka tungkol sa mga sprite at pag-uugali."
+        },
+        "express-2023/Sprites in Action": {
+          "name": "Sprites sa aksyon",
+          "overview": "Sa leksiyon na ito ng **pagbuo ng kasanayan**, gagawa ang mga mag-aaral sa serye ng mga antas ng programming sa computer, na magtatapos sa open-ended na \"libreng laro\" na task kung saan maaari silang bumuo ng kahit anong gusto nila. Isusulat ng mga mag-aaral ang mga programang tumutugon sa mga nakatakdang kaganapan at input ng user.",
+          "preparation": "Maglaro sa mga antas at repasuhin ang mga slide ng aralin.",
+          "purpose": "Ang araling ito ay idinisenyo upang ipakilala sa mga mag-aaral ang programming na may mga kaganapan. Sa buong kursong ito, ang mga kaganapan ang magiging pangunahing paraan ng pagbabago ng mga mag-aaral kung paano tumatakbo ang kanilang mga program sa paglipas ng panahon o bilang tugon sa user.",
+          "student_overview": "Gagawin mo ang mga antas ng programming at magtatapos sa open-ended na \"libreng laro\" na task kung saan maaari kang bumuo ng kahit anong gusto mo."
+        },
+        "express-2023/Virtual Pet with Sprite Lab": {
+          "name": "Virtual Pet na may Sprite Lab",
+          "overview": "Ang mga mag-aaral ay gagawa ng interactive na Virtual Pet na ang hitsura at pag-uugali ay ayon sa gusto nila sa **mini-project** na aralin. Gagamitin ng mga mag-aaral ang tool na \"Mga Costume\" ng Sprite Lab upang i-customize ang hitsura ng kanilang alagang hayop. Gagamitin nila ang mga kaganapan, pag-uugali, at iba pang mga konsepto na natutunan nila upang bigyang-buhay ang kanilang proyekto.",
+          "preparation": "-   Maglaro sa pamamagitan ng mga puzzle upang mahanap ang anumang mga potensiyal na lugar ng problema sa klase mo.\n-   Siguraduhing may Reflection Journal ang bawat mag-aaral.",
+          "purpose": "Ang araling ito ay nagpapahintulot sa mga mag-aaral na ilapat ang mga konsepto ng programming sa mga naunang aralin sa isa pang malikhaing konteksto.",
+          "student_overview": "Lumikha ng interactive na Virtual Pet na ang hitsura at pagkilos ay ayon sa gusto mo! Bigyan ang alaga mong hayop ng sariling buhay!"
+        },
+        "express-2023/Dance Party": {
+          "name": "Dance Party",
+          "overview": "Sa **pagbuo ng kasanayan** na araling ito, ang mga mag-aaral ay magpo-program ng interactive dance party.",
+          "preparation": "-   Maglaro sa pamamagitan ng mga palaisipan upang mahanap ang anumang mga potensyal na lugar ng problema sa klase mo.\n-   Tiyaking may Reflection Journal ang bawat mag-aaral.\n-   Isaalang-alang ang pangangailangan sa mga headphone. Ang aktibidad na ito ay umaasa sa tunog.",
+          "purpose": "Ang leksiyong ito ay nagpapakilala sa pangunahing mga konsepto ng coding ng CS at programming sa event (gamit ang mga block).",
+          "student_overview": "Oras na para magdiwang! Sa araling ito, magpoprogram ka ng sarili mong interactive dance party."
+        },
+        "express-2023/Loops with Rey and BB-8": {
+          "name": "Mga Loops kasama sina Rey at BB-8",
+          "overview": "Ang **pagbuo ng kasanayan** na araling ito ay may mga mag-aaral na gumagamit ng mga loop upang matulungan ang _Star Wars_ karakter na si _BB-8_ na mahusay na tumawid sa maze.",
+          "preparation": "-   Maglaro sa mga palaisapan upang matukoy kung magkakaroon ng anumang mga lugar ng problema sa klase mo.\n-   Siguraduhing may Reflection Journal ang bawat mag-aaral.",
+          "purpose": "Sa araling ito, ang mga mag-aaral ay matututunan ang tungkol sa mga loop at kung paano ilapat ang mga ito sa Blockly code. Ang paggamit ng mga loop ay mahalagang kasanayan sa pag-program sapagkat ang manu-manong pag-uulit ng mga utos ay nakakapagod at hindi epektibo. Gamit ang mga palaisipan ng Code.org, matututunan ng mga mag-aaral na magdagdag ng mga tagubilin sa mga umiiral na loop, mangolekta ng paulit-ulit na code sa mga loop, at makilala ang mga pattern na kailangang i-loop. Dapat tandaan na ang mga mag-aaral ay haharap sa mga palaisipan na may maraming iba't ibang solusyon. Ito ay magbubukas ng mga talakayan tungkol sa iba't ibang paraan ng paglutas ng mga palaisipan na may mga pakinabang at disbentaha sa bawat diskarte.",
+          "student_overview": "Tulungan si _BB-8_ sa mga maze gamit ang mga loop!"
+        },
+        "express-2023/Mini-Project: Sticker Art": {
+          "name": "Mini-Project: Art ng Sticker",
+          "overview": "Ang **mini-project** na araling ito ay bubuo sa pag-unawa sa mga loop. Ang mga mag-aaral ay gagawa ng natatanging likhang sining kasama ang Artist.",
+          "preparation": "-   Magsanay sa paggawa ng sarili mong disenyo. Tandaan kung paano naiiba ang mga antas na ito sa lahat ng nauna.\n-   Tiyaking may Reflection Journal ang bawat mag-aaral.",
+          "purpose": "Itinatampok ng seryeng ito ang kapangyarihan ng mga loop na may malikhain at personal na mga disenyo. \n\nInaalok bilang project-backed sequence, ang pag-unlad na ito ay magbibigay-daan sa mga mag-aaral na bumuo sa ibabaw ng kanilang sariling trabaho at lumikha ng mga kamangha-manghang artifact.",
+          "student_overview": "Sa araling ito, pinapadali ng mga loop na gumawa ng mga mas cool na larawan kasama ang Artist!"
+        },
+        "express-2023/Nested Loops in Maze": {
+          "name": "Naka-nest na mga Loops sa Maze",
+          "overview": "Sa **pagbuo ng kasanayan** na araling ito, matututunan ng mga mag-aaral kung paano mag-program ng loop sa loob ng isa pang loop.",
+          "preparation": "-   Maglaro sa pamamagitan ng mga puzzle upang mahanap ang anumang mga potensiyal na lugar ng problema sa klase mo.\n-   Siguraduhing may Reflection Journal ang bawat mag-aaral.",
+          "purpose": "Sa panimula na ito sa mga nested loop, lalabas ang mga mag-aaral sa kanilang comfort zone upang lumikha ng mas mahusay na mga solusyon sa mga palaisipan.\n\nSa mga naunang palaisipan, ang mga loop ay nagtulak sa mga mag-aaral na makilala ang pag-uulit. Dito, matututunan ng mga mag-aaral na kilalanin ang mga pattern _sa loob_ ng paulit-ulit na mga pattern para bumuo ng mga nested loop na ito. Ang yugtong ito ay nagsisimula sa pamamagitan ng paghikayat sa mga mag-aaral na subukang lutasin ang palaisipan kung saan ang code ay nakakairita at kumplikado upang isulat sa mahabang paraan. Pagkatapos ipakilala ng video ang mga nested loop, ipinapakita sa mga mag-aaral ang halimbawa at hinihiling na hulaan kung ano ang mangyayari kapag ang loop ay inilagay sa loob ng isa pang loop. Ang pag-unlad na ito ay humahantong sa maraming pagsasanay sa mga mag-aaral upang patatagin at mabuo ang kanilang pang-unawa sa pag-loop sa programming.",
+          "student_overview": "Mga loop sa loob ng mga loop na nasa loob ng mga loop. Ano ang ibig sabihin nito? Ang araling ito ay nagtuturo sa iyo kung ano ang mangyayari kapag gumawa ka ng nested na loop."
+        },
+        "express-2023/Snowflakes with Anna and Elsa": {
+          "name": "Naka-nest na mga Loop sa Frozen",
+          "overview": "Ang **mini-project** na araling ito ay magdadala sa mga mag-aaral sa serye ng mga pagsasanay upang lumikha ng mga snowflake na larawan gamit ang mga karakter sa _Frozen_ na pelikula.",
+          "preparation": "-   Maglaro sa mga aralin upang mahanap ang anumang mga potensiyal na lugar ng problema sa klase mo.\n-   Siguraduhing may Reflection Journal ang bawat mag-aaral.",
+          "purpose": "Sa seryeng ito, makakakuha ang mga mag-aaral ng mga pagsasanay sa mga loop ng nesting habang gumagawa ng mga larawang ikasasabik nilang ibahagi. \n\nSimula sa ilang mga tagubilin, ang mga mag-aaral ay gagawa ng kanilang sariling mga desisyon pagdating sa paglikha ng mga disenyo sa pag-uulit. Pagkatapos ay paikutin nila ang mga nakapaligid sa iba't ibang paraan upang magkaroon ng gawa ng sining na talagang kakaiba.",
+          "student_overview": "Sina _Anna_ at _Elsa_ ay may mahusay na mga kasanayan sa ice-skating, ngunit kailangan ang tulong mo upang lumikha ng mga pattern sa yelo. Gumamit ng mga nested loop para gumawa ng bagay na sobrang ASTIG."
+        },
+        "express-2023/Looking Ahead with Minecraft": {
+          "name": "Masdan ang Hinaharap",
+          "overview": "Ang **pagbuo ng kasanayan** na araling ito ay nagbibigay sa mga mag-aaral ng pagkakataong magsanay ng mga konseptong natutunan nila hanggang sa puntong ito at makuha ang kanilang unang karanasan sa mga conditional!",
+          "preparation": "-   Maglaro sa pamamagitan ng mga palaisipang nauugnay sa araling ito upang mahanap ang anumang mga potensiyal na lugar ng problema sa klase mo.\n-   Siguraduhing may Reflection Journal ang bawat mag-aaral.",
+          "purpose": "Ang hanay ng mga palaisipang ito ay gagana upang patatagin at bumuo sa kaalaman ng mga loop, at magpakilala ng mga conditional. Sa pamamagitan ng pagsasama-sama ng dalawang konseptong ito, matutuklasan ng mga mag-aaral ang potensyal sa paglikha ng masaya at makabagong mga program sa isang bago at kapana-panabik na kapaligiran.",
+          "student_overview": "Iwasan ang lava! Dito magsisimula kang matuto tungkol sa mga conditional sa mundo ng _Minecraft_."
+        },
+        "express-2023/If/Else with Bee": {
+          "name": "Mga Kondisyonal sa Bee",
+          "overview": "Sa **pagbuo ng kasanayan** na araling ito, ang klase mo ay patuloy na magko-code gamit ang mga conditional, na magbibigay-daan sa kanila na magsulat ng code na gumagana nang iba depende sa mga partikular na kondisyon na nararanasan ng program.",
+          "preparation": "-   Maglaro sa pamamagitan ng mga puzzle upang mahanap ang anumang mga potensiyal na lugar ng problema sa klase mo.\n-   Siguraduhing may Reflection Journal ang bawat mag-aaral.",
+          "purpose": "Magsasanay ang mga mag-aaral sa paggamit ng mga conditional sa kanilang mga program. Ang kung / iba pa na block ay magbibigay-daan sa mas nababaluktot na program. Ang bubuyog ay mangongolekta lamang ng nektar _kung_ may bulaklak o gumawa ng pulot _kung_ may pulot-pukyutan.",
+          "student_overview": "Ngayon na nauunawaan mo na ang mga conditional, oras na para i-program si Bee gamit ang mga ito kapag nagkokolekta ng mga pulot at nektar. "
+        },
+        "express-2023/While Loops in Farmer": {
+          "name": "Mga While Loops sa Farmer",
+          "overview": "Sa **pagbuo ng kasanayan** na araling ito, ang mga mag-aaral ay magsisikap na punan ang mga butas at maghukay ng dumi sa Magsasaka, ngunit hindi nila malalaman ang laki ng mga butas o ang taas ng mga bunton ng dumi. Upang malutas ang mga palaisipang ito, gagamit ang mga mag-aaral ng bagong uri ng loop.",
+          "preparation": "-   Maglaro sa pamamagitan ng mga puzzle upang mahanap ang anumang mga potensiyal na lugar ng problema sa klase mo.\n-   Siguraduhing may Reflection Journal ang bawat mag-aaral.",
+          "purpose": "Habang patuloy na pinapalalim ng mga mag-aaral mo ang kanilang kaalaman sa mga loop, makakatagpo sila ng mga problema kung saan kailangang ulitin ang command, ngunit hindi alam kung ilang beses itong kailangang ulitin. Dito papasok ang mga loop. Sa aralin ngayon, bubuo ang mga mag-aaral ng pag-unawa ng baguhan sa mga loop na nakabatay sa kondisyon at palalawakin din ang kanilang kaalaman sa mga loop sa pangkalahatan.",
+          "student_overview": "Ang mga loops ay sadyang kapaki-pakinabang sa pag-code. Ang araling ito ay magtuturo sa'yo tungkol sa bagong uri ng loop: ang mga habang na loop!"
+        },
+        "express-2023/Conditionals in Minecraft: Voyage Aquatic": {
+          "name": "Mga Conditional sa Minecraft: Paglalakbay sa Tubig",
+          "overview": "Sa **setting ng konteksto** na araling ito, magkakaroon ng pagkakataon ang mga mag-aaral na magsanay ng content na natutunan nila hanggang sa puntong ito, pati na rin ang pagkuha ng sneak peek sa mga conditional!",
+          "preparation": "-   Maglaro sa pamamagitan ng mga palaisipang nauugnay sa araling ito upang mahanap ang anumang mga potensiyal na lugar ng problema sa klase mo.\n-   Siguraduhing may Reflection Journal ang bawat mag-aaral.",
+          "purpose": "Ang hanay ng mga palaisipang ito ay gagana upang patatagin at bumuo sa kaalaman ng mga loop, at mga conditional. Sa pamamagitan ng pagsasama-sama ng dalawang konseptong ito, matutuklasan ng mga mag-aaral ang potensyal sa paglikha ng masaya at makabagong mga program sa isang bago at kapana-panabik na kapaligiran.",
+          "student_overview": "Dito gagamit ka ng mga conditional sa mundo ng Minecraft."
+        },
+        "express-2023/Until Loops in Maze": {
+          "name": "Hanggang na Mga Loop sa Maze",
+          "overview": "Sa **pagbuo ng kasanayan** na araling ito, matututunan ng mga mag-aaral ang tungkol sa hanggang na mga loop. Ang mga mag-aaral ay bubuo ng mga program na ang pangunahing tauhan ay umuulit ng mga aksiyon hanggang maabot nila ang kanilang nais na hinto.",
+          "preparation": "-   Maglaro sa pamamagitan ng mga puzzle upang mahanap ang anumang mga potensiyal na lugar ng problema sa klase mo.\n-   Siguraduhing may Reflection Journal ang bawat mag-aaral.",
+          "purpose": "Ang hanay ng mga palaisipang ito ay gagana upang patatagin at bumuo sa kaalaman ng mga loop sa pamamagitan ng pagdaragdag ng hanggang na conditional. Sa pamamagitan ng pagsasama-sama ng mga konseptong ito, matutuklasan ng mga mag-aaral ang potensyal sa paglikha ng mga kumplikado at makabagong program.",
+          "student_overview": "Maaari kang gumawa ng ilang mga kamangha-manghang bagay kapag gumamit ka ng hanggang na mga loop!"
+        },
+        "express-2023/Harvesting with Conditionals": {
+          "name": "Mga Kondisyonal & Mga Loop sa Harvester",
+          "overview": "Ang mga estudyante ay magsasanay sa mga habang na mga loop, hanggang na mga loop, at kung / iba pa na mga pahayag. Lahat ng mga blokeng ito ay gumagamit ng mga kondisyonal. Sa pamamagitan ng pagsasanay sa lahat ng tatlong ito, ang mga estudyante ay matututong magsulat ng komplikado at nakikibagay na code.",
+          "preparation": "-   Maglaro sa mga aralin upang mahanap ang anumang mga potensiyal na lugar ng problema sa klase mo.\n-   Siguraduhing may Reflection Journal ang bawat mag-aaral.",
+          "purpose": "Ang pagsasanay sa paggamit ng mga conditional sa iba't ibang mga sitwasyon ay nakakatulong na bumuo ng pag-unawa ng mag-aaral sa kung ano ang maaaring gawin ng mga conditional. Sa nakaraang aralin, gumamit lamang ng mga conditional ang mga mag-aaral sa paglilibot sa maze. Sa araling ito, gagamit ang mga mag-aaral ng mga conditional upang matulungan ang magsasaka na malaman kung kailan mag-aani ng mga pananim. Lilitaw ang mga bagong pattern at gagamit ang mga mag-aaral ng pagkamalikhain at lohikal na pag-iisip upang matukoy ang mga kondisyon kung saan dapat patakbuhin at ulitin ang code.",
+          "student_overview": "Hindi laging malinaw kung kailan gagamitin ang bawat conditional. Tutulungan ka ng araling ito na magsanay sa pagpapasya kung ano ang gagawin."
+        },
+        "express-2023/Functions in Minecraft": {
+          "name": "Mga Function sa Minecraft",
+          "overview": "Sa **pagbuo ng kasanayan** na araling ito, magsisimulang maunawaan ng mga mag-aaral kung paano makakatulong ang mga function!",
+          "preparation": "-   Maglaro sa pamamagitan ng mga puzzle upang mahanap ang anumang mga potensiyal na lugar ng problema sa klase mo.\n-   Siguraduhing may Reflection Journal ang bawat mag-aaral.",
+          "purpose": "Matutuklasan ng mga mag-aaral ang dami ng mapaggagamitan ng programming sa pamamagitan ng pagsasanay ng mga function sa iba't ibang kapaligiran. Dito, makikilala ng mga mag-aaral ang mga magagamit muli na pattern at magagawa nilang isama ang mga pinangalanang block para tumawag ng mga paunang natukoy na function.",
+          "student_overview": "Maaari mo bang malaman kung paano gamitin ang mga function sa pinakamahusay na code?"
+        },
+        "express-2023/Functions with Harvester": {
+          "name": "Mga Function sa Mang-aani",
+          "overview": "Sa **pagbuo ng kasanayan** na araling ito, ang mga mag-aaral ay gagamit ng mga conditional na may mga function upang mag-ani ng mga pananim sa Mang-aani.",
+          "preparation": "-   Maglaro sa pamamagitan ng mga puzzle upang mahanap ang anumang mga potensiyal na lugar ng problema sa klase mo.\n-   Siguraduhing may Reflection Journal ang bawat mag-aaral.",
+          "purpose": "Nilalayon ng araling ito na higit pang hikayatin ang mga mag-aaral na gumamit ng mga function sa mas malikhaing paraan. Matututuhan ng mga mag-aaral na maraming paraan upang harapin ang problema, ngunit ang ilan ay mas mahusay kaysa sa iba. Ang mga palaisipang ito ay nilayon upang madagdagan ang paglutas ng problema at mga kasanayan sa kritikal na pag-iisip.",
+          "student_overview": "Makakapadali ang mga functions sa iyong gawain para matulungan ang magsasaka sa kanyang mga ani!"
+        },
+        "express-2023/Functions with Artist": {
+          "name": "Mga Function sa Artist",
+          "overview": "Ang mga estudyante ay ipapakilala sa paggamit ng mga function sa Code.org. Ang mga dakilang mga larawan ay ililikha at babaguhin gamit ang mga function sa Artist. Para sa mas kumplikadong mga pattern, ang mga estudyante ay matututo tungkol sa pag-nest ng mga function sa pamamagitan ng pagtawag ng isang function sa loob ng isa pa.",
+          "preparation": "-   Maglaro sa pamamagitan ng mga puzzle upang mahanap ang anumang mga potensiyal na lugar ng problema sa klase mo.\n-   Siguraduhing may Reflection Journal ang bawat mag-aaral.",
+          "purpose": "Isa sa pinakamahalagang bahagi sa araling ito ay ang pagbibigay sa mga mag-aaral ng puwang upang lumikha ng bagay na kanilang ipinagmamalaki. Ang mga palaisipang ito ay umuusad sa higit at mas kumplikadong mga larawan, ngunit ang bawat bagong palaisipan ay bumubuo lamang sa nakaraang palaisipan. Sa pagtatapos ng araling ito, ang mga mag-aaral ay makadarama ng tiwala at pagmamalaki sa kanilang pagsusumikap.",
+          "student_overview": "Gumawa ng kumplikadong mga drowing nang mas madali gamit ang mga function!"
+        },
+        "express-2023/Text and Prompts": {
+          "name": "Text at Mga Prompt",
+          "overview": "Sa leksiyong ito ng **pagbuo ng kasanayan**, ang mga mag-aaral ay makakakuha ng pagsasanay sa mga variable sa Sprite Lab.",
+          "preparation": "Maglaro sa mga antas at repasuhin ang mga slide ng aralin.",
+          "purpose": "Gagamitin ang mga variable sa kursong ito upang mag-imbak at magbago ng data. Sa puntong ito, ang mga mag-aaral ay mag-iimbak at kumukuha ng mga halaga nang hindi binabago ang mga ito. Sa mga susunod na aralin, mag-iimbak ang mga mag-aaral ng mga numerong halaga at babaguhin ang mga ito sa paglipas ng panahon upang masubaybayan ang mga bagay tulad ng marka ng manlalaro sa isang laro.",
+          "student_overview": "Sa araling ito ay magsasanay ka sa mga variable sa Sprite Lab."
+        },
+        "express-2023/Counting with Variables": {
+          "name": "Nagbibilang gamit ang mga Variable",
+          "overview": "Sa **pagbuo ng kasanayan** na araling ito, gagamit ang mga mag-aaral ng mga variable upang subaybayan ang value na nagbabago sa paglipas ng panahon, tulad ng isang counter. Kasama rin sa araling ito ang maikling **mini-project** kung saan ang mga mag-aaral ay gumagawa ng simpleng laro.",
+          "preparation": "Maglaro sa mga antas at repasuhin ang plano ng aralin.",
+          "purpose": "Sa mga nakaraang aralin, natututo ang mga mag-aaral na gumamit ng mga variable upang mag-imbak ng data na maaaring makuha sa ibang pagkakataon. Sa araling ito, magsisimulang matuto ang mga mag-aaral na baguhin ang data na nakaimbak sa isang variable. Ang pangunahing pag-unawa sa kung paano gumagana ang mga variable ay magbibigay-daan din sa kanila na lumikha ng mas advanced na mga proyekto.",
+          "student_overview": "Matututo kang gumamit ng mga variable para makagawa ng counter o subaybayan ang score sa isang laro."
+        },
+        "express-2023/Using Variables with the Artist": {
+          "name": "Paggamit ng mga Variable kasama ang Artist",
+          "overview": "Sa araling ito, ang mga estudyante ay tutuklas sa paglikha ng mga disenyong paulit-ulit gamit ang mga variables sa Artist na kapaligiran. Ang mga estudyante ay matututo kung paano ang mga variables maaaring gamitin para madaling isulat ang mga code at madaling basahin. Pagkatapos ng ginabayang mga palaisipan, ang mga estudyante ay magtatapos sa isang libreng laro na antas para ipakita kung ano ang kanilang natutunan at maglikha ng kanilang sariling mga disenyo.",
+          "preparation": "-   Maglaro sa pamamagitan ng mga puzzle upang mahanap ang anumang mga potensiyal na lugar ng problema sa klase mo.\n-   Siguraduhing may Reflection Journal ang bawat mag-aaral.",
+          "purpose": "Ang mga variable ay mahalagang mga placeholder sa mga value na maaaring hindi alam sa oras na pinapatakbo mo ang iyong program o sa mga value na maaaring magbago sa panahon ng pagpapatupad ng program. Ang mga ito ay mahalaga sa paglikha ng dynamic na code dahil pinapayagan nila ang program mo na magbago at lumago batay sa anumang bilang ng mga potensyal na pagbabago. Ang yugtong ito ay nagpapatibay sa paggamit ng mga variable, gamit ang pinakapangunahing mga kakayahan ng pagtatakda at paggamit ng mga ito.",
+          "student_overview": "Sa araling ito, gagawa ka ng mga guhit gamit ang mga variable na nagbabago habang tumatakbo ang program."
+        },
+        "express-2023/Variables with the Bee": {
+          "name": "Mga Variable na Kasama ng Bubuyog",
+          "overview": "Ang aralin na ito ng **pagbuo ng kasanayan** ay makakatulong upang ilarawan kung paano ang mga variable ay maaaring gumawa ng mga program na mas dinamiko sa pamamagitan ng pagpapahintulot sa mga halaga na magbago habang tumatakbo ang code.",
+          "preparation": "-   Maglaro sa pamamagitan ng mga puzzle upang mahanap ang anumang mga potensiyal na lugar ng problema sa klase mo.\n-   Siguraduhing may Reflection Journal ang bawat mag-aaral.",
+          "purpose": "Ang araling ito ay maglalarawan kung paano makakatulong ang code na may pagbabago ng mga halaga at ihanda ang mga mag-aaral na maunawaan kung paano gumagana ang \"para na mga loop\" sa paparating na mga aralin.",
+          "student_overview": "Ang bubuyog na ito ay mahilig sa mga variable!"
+        },
+        "express-2023/For Loops with Bee": {
+          "overview": "Nagtatampok sa Bee, ang araling ito ay nakatuon sa mga for loop at gamit ang isang lumalaking variable para malutas ang mas mahirap na mga palaisipan. Ang mga estudyante ay magsisimula sa pamamagitan ng pagbabalik-aral sa mga loop mula sa nakaraang mga aralin, pagkatapos ay dadaanan ang paggamit ng mga for loop para mas epektibong maglutas ng mga kumplikadong mga problema.",
+          "preparation": "-   Maglaro sa pamamagitan ng mga puzzle upang mahanap ang anumang mga potensiyal na lugar ng problema sa klase mo.\n-   Siguraduhing may Reflection Journal ang bawat mag-aaral.",
+          "purpose": "Ang konsepto ngayon, sa mga loop ay napakahalagang paksa sa computer science. Hindi lamang malawak na ginagamit ang mga ito, ang proseso ng pag-aaral sa mga loop ay nagpapahusay sa pagkatuto ng iba pang mahahalagang konsepto (tulad ng mga variable at parameter.) Ang mga mag-aaral ay magkakaroon ng maraming pagsasanay sa kritikal na pag-iisip sa mga problema sa pamamagitan ng pagtukoy sa mga halaga ng panimula, pagtatapos, at hakbang sa bawat isa para sa loop. Gumagamit din ang konseptong ito ng maraming matematika, kaya huwag mag-atubiling ipares ito sa aralin sa matematika sa mas malalim na karanasan sa pag-aaral.",
+          "student_overview": "Buzz buzz. Sa mga palaisipang ito ikaw ay gagabay sa isang bubuyog papunta sa nektar at sa pulot gamit ang mga `for` loop!"
+        },
+        "express-2023/For Loops with Artist": {
+          "name": "Mga Loops sa Artist",
+          "overview": "Sa araling ito, ang mga estudyante ay patuloy na magsasanay sa mga for loop, sa pagkakataong ito gamit ang Artist. Ang mga estudyante ay magkukumpleto ng mga palaisipan sa pamamagitan ng pagsama-sama sa mga ideya ng mga variable, mga loop, at mga for loop para makalikha ng mga komplikadong mga disenyo. Sa bandang huli, sila ay magkakaroon ng pagkakataon na maglikha ng kanilang sariling sining sa libreng laro na antas.",
+          "preparation": "-   Maglaro sa mga aralin upang mahanap ang anumang mga potensiyal na lugar ng problema sa klase mo.\n-   Siguraduhing may Reflection Journal ang bawat mag-aaral.",
+          "purpose": "Ang pagkamalikhain at kritikal na pag-iisip ay nagsasama-sama nang maganda sa araling ito. Ipagpapatuloy ng mga mag-aaral ang kanilang pagsasanay sa para sa mga loop at variable habang gumagawa sila ng mga imaheng nakakapanghina ng panga. Ang araling ito ay nagbibigay inspirasyon sa malikhaing pag-iisip habang nagtuturo ng mga pangunahing konsepto sa computer science.",
+          "student_overview": "Maghanda na sa iyong susunod na obra maestra. Dito ay gagamit ka ng mga `for` loop para makagawa ng iilang kamangha-manghang mga larawan."
+        },
+        "express-2023/End of Course Project": {
+          "overview": "Ang **proyekto** na araling ito ay magdadala sa mga mag-aaral sa proseso ng pagdidisenyo, pagbuo, at pagpapakita ng mga bagong proyekto!",
+          "preparation": "-   Gumugol ng oras sa paggawa ng sarili mong proyekto gamit ang parehong mga tool sa proyekto na magagamit sa mga mag-aaral. Alamin ang sarili mo sa mga kakayahan at limitasyon ng bawat tool.\n-   Baguhin ang **\\*rubric** upang umangkop sa mga layunin mo sa klase at mag-print ng kopya sa bawat mag-aaral o grupo.\n-   Baguhin ang **\\*gabay sa pagpaplano ng proyekto** upang magkasya sa klase mo at mag-print ng isa sa bawat mag-aaral o grupo.",
+          "purpose": "Ang araling ito ay nagbibigay sa mga mag-aaral ng espasyo upang lumikha ng proyekto ng kanilang sariling disenyo, gamit ang hakbang-hakbang na proseso na nangangailangan ng pagpaplano ngunit nagbibigay-daan din sa malawak na pagkamalikhain.",
+          "student_overview": "Ihanda ang iyong mga kamay para sa maraming pag-code! Oras na para magsimulang bumuo ng iyong proyekto."
+        },
+        "pre-express-2023/Learn to Drag and Drop": {
+          "name": "Matutong Mag-Drag at Mag-Drop",
+          "overview": "Ang araling ito ay magbibigay sa mga estudyante ng ideya kung ano ang aasahan nila kapag pumunta na sila sa kompyuter lab. Ito ay nagsisimula sa isang maikling pagtatalakay na nagpapakilala sa kanila sa mga gawi sa loob ng kompyuter lab, pagkatapos sila ay uunlad papunta sa paggamit ng kompyuter para makumpleto ang mga online na mga palaisipan.",
+          "preparation": "-   Panoorin ang **\\*aano Gumawa ng Seksiyon ng Klase sa Code.org** - video ng Guro. Gumawa ng sarili mong seksiyon ng klase sa Code.org at tiyaking may card ang bawat mag-aaral na may **passcode**.\n-   Tiyaking maa-access ng mga mag-aaral ang Aralin 2 sa kanilang mga device. Pag-isipan kung gusto mong itago ang mga aralin sa hinaharap upang maiwasan ang mga mag-aaral na magpatuloy nang masyadong mabilis.\n-   Ipadagdag sa IT ng paaralan ang mabilis na link sa seksiyon ng iyong klase sa desktop ng computer.\n-   Suriin ang website ng Common Sense Education sa higit pang nilalamang pangkaligtasan sa online.",
+          "purpose": "Ang pangunahing layunin ng araling ito ay bumuo ng karanasan ng mga mag-aaral sa mga computer. Sa pamamagitan ng pagsakop sa pinakapangunahing mga function ng computer tulad ng pag-click, pag-drag, at pag-drop, lumilikha kami ng mas pantay na larangan ng paglalaro sa klase para sa mga puzzle sa hinaharap. Ang araling ito ay nagbibigay din ng magandang pagkakataon upang ipakilala ang mga pangunahing terminolohiya ng computer hardware, na posibleng kasama ang \"mouse\", \"trackpad\" o \"touchscreen\", depende sa iyong mga device.",
+          "student_overview": "I-click at i-drag para tapusin ang mga puzzle."
+        },
+        "pre-express-2023/Sequencing with Scrat": {
+          "overview": "Ang araling ito ay magbibigay sa mga estudyante ng ideya kung ano ang aasahan nila kapag pumunta na sila sa kompyuter lab. Ito ay nagsisimula sa isang maikling pagtatalakay na nagpapakilala sa kanila sa mga gawi sa loob ng kompyuter lab, pagkatapos sila ay uunlad papunta sa paggamit ng kompyuter para makumpleto ang mga online na mga palaisipan.",
+          "preparation": "-   Siguraduhing may Reflection Journal ang bawat mag-aaral.",
+          "purpose": "Sa araling ito, bubuo ang mga mag-aaral ng mga kasanayan sa programming at debugging sa computer platform. Ang block-based na format ng mga palaisipang ito ay tumutulong sa mga mag-aaral na malaman ang tungkol sa pagkakasunud-sunod at mga konsepto, nang hindi kinakailangang mag-alala tungkol sa pagperpekto ng syntax.",
+          "student_overview": "I-program si Scrat upang maabot ang acorn."
+        },
+        "pre-express-2023/Programming with Angry Birds": {
+          "name": "Pag-Program sa Maze",
+          "overview": "Sa **pagbuo ng kasanayan** na araling ito, ang mga mag-aaral ay patuloy na bubuo ng mga sequential algorithm.",
+          "preparation": "-   Maglaro sa pamamagitan ng aralin upang mahanap ang anumang mga potensyal na lugar ng problema sa klase mo.\n-   (Opsyonal) Pumili ng ilang palaisipang gagawin bilang grupo kasama ng klase mo.\n-   Tiyaking may Reflection Journal ang bawat mag-aaral.",
+          "purpose": "Sa araling ito, bubuo ang mga mag-aaral ng mga kasanayan sa programming at debugging sa computer platform. Ang block-based na format ng mga palaisipang ito ay tumutulong sa mga mag-aaral na malaman ang tungkol sa pagkakasunud-sunod at mga konsepto, nang hindi kinakailangang mag-alala tungkol sa pagperpekto ng syntax."
+        },
+        "pre-express-2023/Programming with Rey and BB-8": {
+          "name": "Pag-Program kasama sina Rey at BB-8",
+          "overview": "Sa **pagbuo ng kasanayan** na araling ito, gagamitin ng mga mag-aaral ang kanilang bagong nahanap na mga kasanayan sa programming sa mas kumplikadong mga paraan upang mag-navigate sa nakakalito na kurso kasama si BB-8.",
+          "preparation": "-   Maglaro sa mga aralin upang mahanap ang anumang mga potensiyal na lugar ng problema sa klase mo.\n-   Siguraduhing may Reflection Journal ang bawat mag-aaral.",
+          "purpose": "Sa pag-iisip ng paglipat ng kaalaman, ang araling ito ay nagbibigay sa mga mag-aaral ng bagong kapaligiran upang maisagawa ang mga kasanayan na kanilang nalilinang. Magtatalon sa tuwa ang mga tagahanga ng Star Wars kapag nakita nila ang mga palaisipang ito. Ang bawat palaisipan sa seryeng ito ay idinagdag upang magbigay ng mas malalim na pag-unawa sa mga pangunahing konsepto na kanilang gagamitin sa kabuuan ng kursong ito"
+        },
+        "pre-express-2023/Programming with Harvester": {
+          "name": "Programming kasama ang Mang-aani",
+          "overview": "Sa **pagbuo ng kasanayan** na araling ito, ilalapat ng mga mag-aaral ang mga konsepto ng programming na natutunan nila sa kapaligiran ng Mang-aani. Ang mga mag-aaral ay patuloy na bubuo ng mga kasanayan sa sunud-sunod na algorithm at magsisimulang gamitin ang proseso ng pag-debug.",
+          "preparation": "-   Maglaro sa mga palaisipan upang mahanap ang anumang mga potensiyal na lugar ng problema sa klase mo\n-   Siguraduhing may Reflection Journal ang bawat mag-aaral.",
+          "purpose": "Sa araling ito, bubuo ang mga mag-aaral ng mga kasanayan sa pag-debug at magpapatuloy sa pagbuo ng kanilang mga kasanayan sa programming.",
+          "student_overview": "Tulungan ang Mang-aani na mangolekta ng mga gulay sa isang landas."
+        },
+        "pre-express-2023/Loops with Scrat": {
+          "name": "Mga loop kasama si Scrat",
+          "overview": "Sa **pagbuo ng kasanayan** na araling ito, magsasanay ang mga mag-aaral ng mga konsepto ng mga loop sa programming na palaisipan kung saan ang layunin ay tulungan ang squirrel na maabot ang acorn.",
+          "preparation": "-   (Opsyonal) Pumili ng ilang palaisipang gagawin bilang grupo kasama ng klase mo.\n-   Tiyaking may Reflection Journal ang bawat mag-aaral.",
+          "purpose": "Sa araling ito, matututo ang mga mag-aaral ng higit pa tungkol sa mga loop at kung paano ipatupad ang mga ito sa Blockly code. Ang paggamit ng mga _loop_ ay mahalagang kasanayan sa programming dahil ang manu-manong pag-uulit ng mga utos ay nakakapagod at hindi epektibo. Gamit itong mga palaisipan ng Code.org, matututo ang mga mag-aaral na magdagdag ng mga tagubilin sa mga umiiral nang loop, magtipon ng paulit-ulit na code sa mga loop, at makilala ang mga pattern na kailangang ulitin.",
+          "student_overview": "Tulungan si Scrat na sakupin ang higit pang lugar gamit ang mga loop."
+        },
+        "pre-express-2023/Loops with Laurel": {
+          "name": "Mga Loop kay Laurel",
+          "overview": "Sa araling ito, patuloy na natututunan ng mga mag-aaral ang konsepto ng mga loop. <b>Dito, gumagamit si Laurel na Manlalakbay ng mga loop para mangolekta ng kayamanan sa mga bukas na espasyo sa kuweba.</b> <b>Isang bagong `kumuha ng kayamanan` na block ang ipinakilala para tulungan siya sa kanyang paglalakbay.</b>",
+          "preparation": "-   Maglaro sa pamamagitan ng mga palaisipan upang mahanap ang anumang mga potensyal na lugar ng problema sa klase mo. \n-   (Opsyonal) Pumili ng ilang palaisipang gagawin bilang grupo kasama ng iyong klase. \n-   Tiyaking may Reflection Journal ang bawat mag-aaral.",
+          "purpose": "Ang araling ito ay nagbibigay sa mga mag-aaral ng higit pang pagsasanay na may mga loop at hinihikayat silang maglagay ng maraming block sa loob ng `ulitin` habang sinusubukan nilang mangolekta ng maraming kayamanan hangga't maaari."
+        },
+        "pre-express-2023/Ocean Scene with Loops": {
+          "name": "Eksena sa Karagatan na may mga Loop",
+          "overview": "Pagbabalik sa mga loop, ang mga estudyante ay matututong gumuhit ng mga larawan sa pamamagitan ng pag-loop ng mga simpleng pagkakasunod-sunod ng mga instruksyon. Sa huling plugged na aralin, ang mga loop ay ginamit para makatawid sa maze at makakolekta ng mga kayamanan. Dito, ang mga loops ay lilikha ng mga pattern. Sa dulo ng yugtong ito, ang mga estudyante ay bibigyan ng pagkakataong makalikha ng kanilang sariling mga larawan gamit ang mga loop.",
+          "preparation": "-   Maglaro sa mga palaisipan upang mahanap ang anumang mga potensiyal na lugar ng problema sa klase mo.\n-   Siguraduhing may Reflection Journal ang bawat mag-aaral.",
+          "purpose": "Ang araling ito ay nagbibigay ng ibang pananaw sa kung paano ang mga loop ay maaaring lumikha ng mga bagay sa programming. Maaari ding pag-isipan ng mga mag-aaral ang kawalan ng kahusayan ng programming nang walang mga loop dito dahil sa kung gaano karaming mga block ang kakailanganin ng program nang walang tulong ng mga `ulitin` na loop.",
+          "student_overview": "Gumamit ng mga loop at pattern upang tapusin ang mga larawan."
+        },
+        "pre-express-2023/Drawing Gardens with Loops": {
+          "name": "Pagguhit ng mga Hardin gamit ang mga Loop",
+          "overview": "Sa **pagbuo ng kasanayan** na araling ito, natututo ang mga mag-aaral na gumuhit ng mga larawan sa pamamagitan ng pag-loop ng mga simpleng pagkakasunud-sunod ng mga tagubilin. Dito, gumagamit ang mga mag-aaral ng mga loop upang lumikha ng mga pattern. Sa pagtatapos ng araling ito, bibigyan ng pagkakataon ang mga mag-aaral na lumikha ng sarili nilang larawan.",
+          "preparation": "-   Maglaro sa mga aralin upang mahanap ang anumang mga potensiyal na lugar ng problema sa klase mo.\n-   Siguraduhing may reflection journal ang bawat mag-aaral.",
+          "purpose": "Ang araling ito ay nagbibigay ng ibang pananaw sa kung paano ang mga loop ay maaaring lumikha ng mga bagay sa programming. Susubukan ng mga mag-aaral ang kanilang mga kasanayan sa kritikal na pag-iisip sa pamamagitan ng pagsusuri sa ibinigay na code at pagtukoy kung ano ang kailangang idagdag upang malutas ang palaisipan. Maaari din pag-isipan ng mga mag-aaral ang kawalan ng kahusayan ng programming nang walang mga loop dito dahil sa gaano karaming mga block ang kakailanganin ng program nang walang tulong ng mga `ulitin` na loop.",
+          "student_overview": "Gumamit ng mga pattern at mga loop upang tapusin ang mga imahe."
+        },
+        "pre-express-2023/On the Move with Events": {
+          "name": "Sa Paglalakbay kasama ang mga Kaganapan",
+          "overview": "Sa online na gawaing ito, ang mga estudyante ay magkakaroon ng pagkakataong matuto kung paano gumamit ng mga pangyayari sa Play Lab at para gumamit sa lahat ng mga kakayahan sa pag-code na natutunan nila para lumikha ng isang laro na naka-animate. Oras na para maging malikhain at gumawa ng istorya sa Play Lab!",
+          "preparation": "-   Maglaro sa pamamagitan ng mga palaisipan upang mahanap ang anumang mga potensyal na lugar ng problema sa klase mo. \n-   (Opsyonal) Pumili ng ilang palaisipang gagawin bilang grupo kasama ng iyong klase.\n-   Tiyaking may Reflection Journal ang bawat mag-aaral",
+          "purpose": "Mapapaunlad pa ng mga mag-aaral ang kanilang pag-unawa sa mga kaganapan gamit ang Play Lab ngayon. Ang mga kaganapan ay karaniwan sa karamihan ng mga program sa computer. Sa aktibidad na ito, gagamit ang mga mag-aaral ng mga kaganapan upang gawing gumalaw ang karakter sa screen, gumawa ng mga ingay, at magpalit ng mga background batay sa mga kaganapang pinasimulan ng user.",
+          "student_overview": "Gumawa ng sarili mong laro o kwento."
+        },
+        "pre-express-2023/A Royal Battle with Events": {
+          "name": "Isang Royal Battle na may Mga Kaganapan",
+          "overview": "Sa **mini-project** na ito, magkakaroon ng pagkakataon ang mga mag-aaral na matutunan kung paano gamitin ang mga kaganapan sa Play Lab at ilapat ang lahat ng kasanayan sa coding na natutunan nila upang lumikha ng animated na laro.",
+          "preparation": "-   Maglaro sa pamamagitan ng mga palaisipan upang mahanap ang anumang mga potensyal na lugar ng problema sa klase mo.\n-   (Opsyonal) Pumili ng ilang palaisipang gagawin bilang grupo kasama ng iyong klase.\n-   Tiyaking may reflection journal ang bawat mag-aaral.",
+          "purpose": "Sa online na aktibidad na ito, matututunan ng mga mag-aaral kung paano gumamit ng mga kaganapan sa Play Lab. Magsisimula sila sa pamamagitan ng pagsasanay sa kabalyero na gumalaw kapag pinindot ang arrow key, pagkatapos ay magtatapos sa pagkakataong ipakita ang iba pang mga kasanayan na natutunan nila sa buong kursong ito, kabilang ang pagkakasunud-sunod at pag-loop, bilang bahagi ng panghuling freeplay na palaisipan.",
+          "student_overview": "Gumamit ng mga kaganapan upang lumikha ng kuwento o gumawa ng interactive na laro."
+        },
+        "how-ai-works-2023/Our AI Code of Ethics": {
+          "name": "Ang aming Kodigo ng Etika sa AI."
+        },
         "Hour of Code/Hour of Code 2013": {
           "name": "Hour of Code 2013"
         },
