@@ -1198,6 +1198,368 @@
         "pause_and_think_online/pre-express/2022": {
           "type": "Vídeo"
         },
+        "star_quilts_1/csc-starquilts/2023": {
+          "type": "Vídeo"
+        },
+        "poem_art_1_-_introduction/csc-timecapsule/2023": {
+          "type": "Vídeo"
+        },
+        "poem_art_2_-_events/csc-timecapsule/2023": {
+          "type": "Vídeo"
+        },
+        "poem_art_3_-_imagery/csc-timecapsule/2023": {
+          "type": "Vídeo"
+        },
+        "poem_art_4_-_celebration/csc-timecapsule/2023": {
+          "type": "Vídeo"
+        },
+        "poem_art_celebration_video_optional_/csc-timecapsule/2023": {
+          "type": "Vídeo"
+        },
+        "poem_art_events_video_optional_/csc-timecapsule/2023": {
+          "type": "Vídeo"
+        },
+        "poem_art_video_optional_/csc-timecapsule/2023": {
+          "type": "Vídeo"
+        },
+        "enter_your_own_poem/csc-timecapsule/2023": {
+          "type": "Vídeo"
+        },
+        "poem_art_1_-_introduction/poetry/2023": {
+          "type": "Vídeo"
+        },
+        "poem_art_2_-_events/poetry/2023": {
+          "type": "Vídeo"
+        },
+        "poem_art_3_-_imagery/poetry/2023": {
+          "type": "Vídeo"
+        },
+        "poem_art_4_-_celebration/poetry/2023": {
+          "type": "Vídeo"
+        },
+        "enter_your_own_poem/poetry/2023": {
+          "type": "Vídeo"
+        },
+        "poem_art_celebration_video_optional_/poetry/2023": {
+          "type": "Vídeo"
+        },
+        "poem_art_events_video_optional_/poetry/2023": {
+          "type": "Vídeo"
+        },
+        "poem_art_video_optional_/poetry/2023": {
+          "type": "Vídeo"
+        },
+        "implementation_guide/coursea/2023": {
+          "name": "Guía de implementación"
+        },
+        "getting_started_-_creating_a_class_section/coursea/2023": {
+          "type": "Vídeo"
+        },
+        "pair_programming/coursea/2023": {
+          "name": "Programación por parellas"
+        },
+        "wiggles-go_noodle/coursea/2023": {
+          "type": "Vídeo"
+        },
+        "happy_maps/coursea/2023": {
+          "name": "Mapas Felices"
+        },
+        "wiggles_-_gonoodle/coursea/2023": {
+          "type": "Vídeo"
+        },
+        "debugging_with_the_step_button/coursea/2023": {
+          "type": "Vídeo"
+        },
+        "pair-programming/coursea/2023": {
+          "type": "Vídeo"
+        },
+        "pause_and_think_online/coursea/2023": {
+          "type": "Vídeo"
+        },
+        "the_big_event/coursea/2023": {
+          "name": "O Gran Evento"
+        },
+        "the_big_event_1/coursea/2023": {
+          "name": "O Gran Evento"
+        },
+        "the_big_event_2/coursea/2023": {
+          "name": "O Gran Evento"
+        },
+        "implementation_guide/courseb/2023": {
+          "name": "Guía de implementación"
+        },
+        "move_it_move_it/courseb/2023": {
+          "name": "Creando camiños"
+        },
+        "move_it_move_it_1/courseb/2023": {
+          "name": "Creando camiños"
+        },
+        "move_it_move_it_2/courseb/2023": {
+          "name": "Creando camiños"
+        },
+        "move_it_move_it_3/courseb/2023": {
+          "name": "Móveo, móveo"
+        },
+        "pair_programming/courseb/2023": {
+          "name": "Programación por parellas"
+        },
+        "wiggles_-_gonoodle/courseb/2023": {
+          "type": "Vídeo"
+        },
+        "unspotted_bugs/courseb/2023": {
+          "type": "Vídeo"
+        },
+        "getting_loopy/courseb/2023": {
+          "name": "Bucleándose"
+        },
+        "getting_loopy_1/courseb/2023": {
+          "name": "Bucleándose"
+        },
+        "getting_loopy_2/courseb/2023": {
+          "name": "Bucleándose"
+        },
+        "getting_loopy_3/courseb/2023": {
+          "name": "Bucleándose"
+        },
+        "pause_and_think_online/courseb/2023": {
+          "type": "Vídeo"
+        },
+        "the_big_event/courseb/2023": {
+          "name": "O Gran Evento"
+        },
+        "the_big_event_1/courseb/2023": {
+          "name": "O Gran Evento"
+        },
+        "the_big_event_2/courseb/2023": {
+          "name": "O Gran Evento"
+        },
+        "implementation_guide/coursec/2023": {
+          "name": "Guía de implementación"
+        },
+        "my_robotic_friends/coursec/2023": {
+          "name": "Os meus amigos robóticos"
+        },
+        "my_robotic_friends_1/coursec/2023": {
+          "name": "Os meus amigos robóticos"
+        },
+        "my_robotic_friends_2/coursec/2023": {
+          "name": "Os meus amigos robóticos"
+        },
+        "my_robotic_friends_3/coursec/2023": {
+          "name": "Os meus amigos robóticos"
+        },
+        "my_robotic_friends_4/coursec/2023": {
+          "name": "Os meus amigos robóticos"
+        },
+        "pair_programming/coursec/2023": {
+          "name": "Programación por parellas",
+          "type": "Vídeo"
+        },
+        "the_big_event/coursec/2023": {
+          "name": "O Gran Evento"
+        },
+        "the_big_event_1/coursec/2023": {
+          "name": "O Gran Evento"
+        },
+        "the_big_event_2/coursec/2023": {
+          "name": "O Gran Evento"
+        },
+        "pause_and_think_online/coursec/2023": {
+          "type": "Vídeo"
+        },
+        "binary_bracelets/coursec/2023": {
+          "name": "Pulseiras Binarias"
+        },
+        "binary_bracelets_1/coursec/2023": {
+          "name": "Pulseiras Binarias"
+        },
+        "binary_bracelets_2/coursec/2023": {
+          "name": "Pulseiras Binarias"
+        },
+        "binary_bracelets_3/coursec/2023": {
+          "name": "Pulseiras Binarias"
+        },
+        "binary_bracelets_4/coursec/2023": {
+          "name": "Pulseiras Binarias"
+        },
+        "implementation_guide/coursed/2023": {
+          "name": "Guía de implementación"
+        },
+        "graph_paper_programming/coursed/2023": {
+          "name": "Programación en Papel Cadriculado"
+        },
+        "graph_paper_programming_1/coursed/2023": {
+          "name": "Programación en Papel Cadriculado"
+        },
+        "graph_paper_programming_2/coursed/2023": {
+          "name": "Programación en Papel Cadriculado"
+        },
+        "graph_paper_programming_3/coursed/2023": {
+          "name": "Programación en Papel Cadriculado"
+        },
+        "graph_paper_programming_4/coursed/2023": {
+          "name": "Programación en Papel Cadriculado"
+        },
+        "graph_paper_programming_5/coursed/2023": {
+          "name": "Programación en Papel Cadriculado"
+        },
+        "pair_programming/coursed/2023": {
+          "name": "Programación por parellas"
+        },
+        "relay_programming/coursed/2023": {
+          "name": "Programación por relevos"
+        },
+        "relay_programming_1/coursed/2023": {
+          "name": "Programación por relevos"
+        },
+        "relay_programming_2/coursed/2023": {
+          "name": "Programación por relevos"
+        },
+        "relay_programming_3/coursed/2023": {
+          "name": "Programación por relevos"
+        },
+        "relay_programming_4/coursed/2023": {
+          "name": "Programación por relevos"
+        },
+        "relay_programming_5/coursed/2023": {
+          "name": "Programación por relevos"
+        },
+        "pause_and_think_online/coursed/2023": {
+          "type": "Vídeo"
+        },
+        "conditionals_with_cards/coursed/2023": {
+          "name": "Condicionais con cartas"
+        },
+        "conditionals_with_cards_1/coursed/2023": {
+          "name": "Condicionais con cartas"
+        },
+        "conditionals_with_cards_2/coursed/2023": {
+          "name": "Condicionais con cartas"
+        },
+        "conditionals_with_cards_3/coursed/2023": {
+          "name": "Condicionais con cartas"
+        },
+        "conditionals_with_cards_4/coursed/2023": {
+          "name": "Condicionais con cartas"
+        },
+        "implementation_guide/coursee/2023": {
+          "name": "Guía de implementación"
+        },
+        "pause_and_think_online/coursee/2023": {
+          "type": "Vídeo"
+        },
+        "digital_sharing_ethics_video_/coursee/2023": {
+          "type": "Vídeo"
+        },
+        "implementation_guide/coursef/2023": {
+          "name": "Guía de implementación"
+        },
+        "the_power_of_words_the_power_of_words/coursef/2023": {
+          "type": "Vídeo"
+        },
+        "introducing_sprite_lab/coursef/2023": {
+          "type": "Vídeo"
+        },
+        "ai_impact_on_society/coursef/2023": {
+          "type": "Vídeo"
+        },
+        "ai_machine_learning/coursef/2023": {
+          "type": "Vídeo"
+        },
+        "ai_training_data_bias/coursef/2023": {
+          "type": "Vídeo"
+        },
+        "internet/coursef/2023": {
+          "name": "Internet"
+        },
+        "internet_1/coursef/2023": {
+          "name": "Internet"
+        },
+        "the_internet/coursef/2023": {
+          "name": "A Internet"
+        },
+        "pair_programming/express/2023": {
+          "name": "Programación por parellas",
+          "type": "Vídeo"
+        },
+        "artist_introduction/express/2023": {
+          "type": "Vídeo"
+        },
+        "turns_angles/express/2023": {
+          "type": "Vídeo"
+        },
+        "pause_and_think_online/express/2023": {
+          "type": "Vídeo"
+        },
+        "pair_programming_video/express/2023": {
+          "type": "Vídeo"
+        },
+        "variables/express/2023": {
+          "name": "Variables"
+        },
+        "20_20_20_rule/pre-express/2023": {
+          "type": "Vídeo"
+        },
+        "pair_programming/pre-express/2023": {
+          "name": "Programación por parellas"
+        },
+        "wiggles_-_go_noodle/pre-express/2023": {
+          "type": "Vídeo"
+        },
+        "pause_and_think_online/pre-express/2023": {
+          "type": "Vídeo"
+        },
+        "how_ai_works_-_training_data_and_bias/how-ai-works/2023": {
+          "type": "Vídeo"
+        },
+        "how_ai_works_-_what_is_machine_learning_/how-ai-works/2023": {
+          "type": "Vídeo"
+        },
+        "how_ai_works_how_computer_vision_works/how-ai-works/2023": {
+          "type": "Vídeo"
+        },
+        "what_a_neural_network_sees/how-ai-works/2023": {
+          "type": "Vídeo"
+        },
+        "how_ai_works_how_neural_networks_work/how-ai-works/2023": {
+          "type": "Vídeo"
+        },
+        "how_ai_works_chatbots_and_large_language_models_part_1_/how-ai-works/2023": {
+          "type": "Vídeo"
+        },
+        "how_ai_works_chatbots_and_large_language_models_part_2_/how-ai-works/2023": {
+          "type": "Vídeo"
+        },
+        "how_ai_works_creativity_and_imagination/how-ai-works/2023": {
+          "type": "Vídeo"
+        },
+        "how_ai_works_-_societal_impact/how-ai-works/2023": {
+          "type": "Vídeo"
+        },
+        "how_ai_works_-_privacy_and_future_of_work/how-ai-works/2023": {
+          "type": "Vídeo"
+        },
+        "does_ai_have_creativity_and_imagination_/how-ai-works/2023": {
+          "type": "Vídeo"
+        },
+        "how_ai_works_ethics_ai_equal_access_and_algorithmic_bias/how-ai-works/2023": {
+          "type": "Vídeo"
+        },
+        "how_ai_works_ethics_ai_privacy_the_future_of_work/how-ai-works/2023": {
+          "type": "Vídeo"
+        },
+        "how_ai_works_introduction/how-ai-works/2023": {
+          "type": "Vídeo"
+        },
+        "how_ai_works_training_data_and_bias/how-ai-works/2023": {
+          "type": "Vídeo"
+        },
+        "how_ai_works_what_is_machine_learning_/how-ai-works/2023": {
+          "type": "Vídeo"
+        },
+        "how_chatbots_and_large_language_models_work/how-ai-works/2023": {
+          "type": "Vídeo"
+        },
         "encryption-and-public-keys-optional-1/hoc-encryption/unversioned": {
           "type": "Vídeo"
         },
