@@ -360,6 +360,47 @@
             }
           }
         },
+        "Course E: Frozen Project_examples_2023": {
+          "draw a circle": {
+            "name": "joonista ring"
+          },
+          "draw a house": {
+            "name": "joonista maja",
+            "parameters": {
+              "length": "pikkus"
+            }
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "pikkus",
+              "repeat": "korda"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "pikkus"
+            }
+          },
+          "draw a square": {
+            "name": "joonista ruut",
+            "parameters": {
+              "length": "pikkus"
+            }
+          },
+          "draw a star": {
+            "name": "joonista täht",
+            "parameters": {
+              "length": "pikkus",
+              "points": "punktid"
+            }
+          },
+          "draw a triangle": {
+            "name": "joonista kolmnurk",
+            "parameters": {
+              "length": "pikkus"
+            }
+          }
+        },
         "Course E: Play Lab Project": {
           "do something": {
             "name": "tee midagi"
@@ -529,6 +570,47 @@
             }
           }
         },
+        "CourseD_EOC_artist_2023": {
+          "draw a circle": {
+            "name": "joonista ring"
+          },
+          "draw a house": {
+            "name": "joonista maja",
+            "parameters": {
+              "length": "pikkus"
+            }
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "pikkus",
+              "repeat": "korda"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "pikkus"
+            }
+          },
+          "draw a square": {
+            "name": "joonista ruut",
+            "parameters": {
+              "length": "pikkus"
+            }
+          },
+          "draw a star": {
+            "name": "joonista täht",
+            "parameters": {
+              "length": "pikkus",
+              "points": "punktid"
+            }
+          },
+          "draw a triangle": {
+            "name": "joonista kolmnurk",
+            "parameters": {
+              "length": "pikkus"
+            }
+          }
+        },
         "CourseD_EOC_artist_example2021": {
           "draw a circle": {
             "name": "joonista ring"
@@ -611,6 +693,47 @@
             }
           }
         },
+        "CourseD_EOC_artist_example2021_2023": {
+          "draw a circle": {
+            "name": "joonista ring"
+          },
+          "draw a house": {
+            "name": "joonista maja",
+            "parameters": {
+              "length": "pikkus"
+            }
+          },
+          "draw a pinwheel": {
+            "parameters": {
+              "length": "pikkus",
+              "repeat": "korda"
+            }
+          },
+          "draw a shape": {
+            "parameters": {
+              "length": "pikkus"
+            }
+          },
+          "draw a square": {
+            "name": "joonista ruut",
+            "parameters": {
+              "length": "pikkus"
+            }
+          },
+          "draw a star": {
+            "name": "joonista täht",
+            "parameters": {
+              "length": "pikkus",
+              "points": "punktid"
+            }
+          },
+          "draw a triangle": {
+            "name": "joonista kolmnurk",
+            "parameters": {
+              "length": "pikkus"
+            }
+          }
+        },
         "Find the Wizard": {
           "do something": {
             "name": "tee midagi"
@@ -644,6 +767,11 @@
           }
         },
         "Function intro Ryan_2021": {
+          "build bridge": {
+            "name": "ehitage sild"
+          }
+        },
+        "Function intro Ryan_2023": {
           "build bridge": {
             "name": "ehitage sild"
           }
@@ -718,6 +846,11 @@
             "name": "selge tee"
           }
         },
+        "MC_HOC_2017_07_Cole_2023": {
+          "clear path": {
+            "name": "selge tee"
+          }
+        },
         "MC_HOC_2017_10_RETRY": {
           "fix long path": {
             "name": "parandada pikk tee"
@@ -758,6 +891,14 @@
             "name": "parandada lühike tee"
           }
         },
+        "MC_HOC_2017_10_RETRY_2023": {
+          "fix long path": {
+            "name": "parandada pikk tee"
+          },
+          "fix short path": {
+            "name": "parandada lühike tee"
+          }
+        },
         "MC_HOC_2017_Ali": {
           "build long bridge": {
             "name": "ehitage pikk sild"
@@ -791,6 +932,14 @@
           }
         },
         "MC_HOC_2017_Ali_2021": {
+          "build long bridge": {
+            "name": "ehitage pikk sild"
+          },
+          "build short bridge": {
+            "name": "ehitage lühike sild"
+          }
+        },
+        "MC_HOC_2017_Ali_2023": {
           "build long bridge": {
             "name": "ehitage pikk sild"
           },
@@ -1211,6 +1360,11 @@
             "name": "tee midagi"
           }
         },
+        "courseC_data wizard_2023": {
+          "do something": {
+            "name": "tee midagi"
+          }
+        },
         "courseD_artist_binary1": {
           "draw": {
             "parameters": {
@@ -1589,6 +1743,11 @@
             "name": "tee midagi"
           }
         },
+        "courseE_artist_functions10_2023": {
+          "do something": {
+            "name": "tee midagi"
+          }
+        },
         "courseE_artist_functions2": {
           "draw a square": {
             "name": "joonista ruut"
@@ -1615,6 +1774,11 @@
           }
         },
         "courseE_artist_functions2_2021": {
+          "draw a square": {
+            "name": "joonista ruut"
+          }
+        },
+        "courseE_artist_functions2_2023": {
           "draw a square": {
             "name": "joonista ruut"
           }
@@ -1650,6 +1814,11 @@
           }
         },
         "courseE_artist_functions3_2021": {
+          "draw a star": {
+            "name": "joonista täht"
+          }
+        },
+        "courseE_artist_functions3_2023": {
           "draw a star": {
             "name": "joonista täht"
           }
@@ -1695,6 +1864,11 @@
           }
         },
         "courseE_artist_functions5_2021": {
+          "draw a star": {
+            "name": "joonista täht"
+          }
+        },
+        "courseE_artist_functions5_2023": {
           "draw a star": {
             "name": "joonista täht"
           }
@@ -1754,6 +1928,11 @@
             "name": "tee midagi"
           }
         },
+        "courseE_artist_functions8_2023": {
+          "do something": {
+            "name": "tee midagi"
+          }
+        },
         "courseE_artist_functions8a2022": {
           "do something": {
             "name": "tee midagi"
@@ -1794,6 +1973,14 @@
             "name": "joonista ruut"
           }
         },
+        "courseE_artist_functions8a_2023": {
+          "do something": {
+            "name": "tee midagi"
+          },
+          "draw a square": {
+            "name": "joonista ruut"
+          }
+        },
         "courseE_artist_functions8b2022": {
           "do something": {
             "name": "tee midagi"
@@ -1819,6 +2006,11 @@
             "name": "tee midagi"
           }
         },
+        "courseE_artist_functions8b_2023": {
+          "do something": {
+            "name": "tee midagi"
+          }
+        },
         "courseE_artist_functions8c2022": {
           "do something": {
             "name": "tee midagi"
@@ -1840,6 +2032,11 @@
           }
         },
         "courseE_artist_functions8c_2021": {
+          "do something": {
+            "name": "tee midagi"
+          }
+        },
+        "courseE_artist_functions8c_2023": {
           "do something": {
             "name": "tee midagi"
           }
@@ -1874,6 +2071,11 @@
             "name": "tee midagi"
           }
         },
+        "courseE_artist_functions9_2023": {
+          "do something": {
+            "name": "tee midagi"
+          }
+        },
         "courseE_artist_functions_challenge1": {
           "do something": {
             "name": "tee midagi"
@@ -1900,6 +2102,11 @@
           }
         },
         "courseE_artist_functions_challenge1_2021": {
+          "do something": {
+            "name": "tee midagi"
+          }
+        },
+        "courseE_artist_functions_challenge1_2023": {
           "do something": {
             "name": "tee midagi"
           }
@@ -1934,6 +2141,11 @@
             "name": "tee midagi"
           }
         },
+        "courseE_artist_functions_challenge2_2023": {
+          "do something": {
+            "name": "tee midagi"
+          }
+        },
         "courseE_artist_functions_predict1": {
           "draw a square": {
             "name": "joonista ruut"
@@ -1960,6 +2172,11 @@
           }
         },
         "courseE_artist_functions_predict1_2021": {
+          "draw a square": {
+            "name": "joonista ruut"
+          }
+        },
+        "courseE_artist_functions_predict1_2023": {
           "draw a square": {
             "name": "joonista ruut"
           }
@@ -2000,6 +2217,11 @@
           }
         },
         "courseE_artist_functions_predict2_2021": {
+          "do something": {
+            "name": "tee midagi"
+          }
+        },
+        "courseE_artist_functions_predict2_2023": {
           "do something": {
             "name": "tee midagi"
           }
@@ -2065,6 +2287,11 @@
           }
         },
         "courseF_apps_collector_-2022-2": {
+          "end game": {
+            "name": "lõpeta mäng"
+          }
+        },
+        "courseF_apps_collector_2023": {
           "end game": {
             "name": "lõpeta mäng"
           }
