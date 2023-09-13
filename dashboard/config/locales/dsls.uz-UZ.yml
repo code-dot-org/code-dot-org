@@ -496,6 +496,11 @@ uz-UZ:
           # Katta hodisa
 
           Informatika fanida hodisalar kompyuter nazorat qiladigan harakatlardir. Ushbu darsda siz qaysi tugma bosilganiga qarab har xil javob qaytarasiz.
+      BigEvent-Unplugged2022_2023:
+        markdown: |-
+          # Katta hodisa
+
+          Informatika fanida hodisalar kompyuter nazorat qiladigan harakatlardir. Ushbu darsda siz qaysi tugma bosilganiga qarab har xil javob qaytarasiz.
       BigEvent-Unplugged_2020:
         markdown: |-
           # Katta hodisa
@@ -514,6 +519,13 @@ uz-UZ:
 
           ![](https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)
       BinaryBracelets-Unplugged2022:
+        markdown: |
+          # Ikkilik bilaguzuklar
+
+          Kompyuterlar tushunadigan tizimda sizning ismingizni ifodalovchi bilaguzuk yarating!
+
+          ![](https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)
+      BinaryBracelets-Unplugged2022_2023:
         markdown: |
           # Ikkilik bilaguzuklar
 
@@ -2596,6 +2608,11 @@ uz-UZ:
           # Kartalar bilan shartli bayonotlar
 
           Karta o'yinini o'ynang va "Agar men qizil karta olsam, men ball olaman" va "agar men qora kartani tortsam, siz ball olasiz" kabi qoidalarni yaratadilar.
+      ConditionalsWithCards-Unplugged2022_2023:
+        markdown: |-
+          # Kartalar bilan shartli bayonotlar
+
+          Karta o'yinini o'ynang va "Agar men qizil karta olsam, men ball olaman" va "agar men qora kartani tortsam, siz ball olasiz" kabi qoidalarni yaratadilar.
       ConditionalsWithCards-Unplugged_2020:
         markdown: |-
           # Kartalar bilan shartli bayonotlar
@@ -2739,7 +2756,91 @@ uz-UZ:
 
 
           Tugatgandan so'ng, simulyatsiyangizni boshqalar bilan ulashing. Virus shaharga kelganda boshqalarning sog'lig'ini saqlashga yordam berish uchun nima qilishimiz mumkinligi haqida xabaringizni ulashing.
+      CourseF_outbreak_story2022_2022_pilot_-2022-2_2023:
+        content1: tafsilotlar bu yerda
+        markdown: |
+          # Kasallik: o'zingizning simulyatsiyangizni kodlash
+
+          ## Monster Town-ga xush kelibsiz!
+          Monster Town baxtli va sog'lom joy edi. Monster Town monstrlari do'stlarinikiga borish va mehmon bo'lishni yaxshi ko'rishardi.
+
+          <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%">
+
+          Bir kuni mosnstrlardan biri kasal bo'lib qoldi. U ** virusni ** ushladi! Virus - sizni kasal qilib qo'yadigan mayda jonzot. Boshqa monstrlar juda xavotirlanmadi. Ular do'stlarini ziyorat qilishda davom etishdi.
+
+          <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%">
+
+          Ko'p o'tmay, yana ikkita monstr kasal bo'lib qoldi. Xuddi shu virus bilan! Aftidan ular virusni do'stidan yuqtirib olishgan.
+
+          <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%">
+
+          Virus asta-sekin yaqin atrofdagi boshqa monstrlarga tarqaldi. Sog'lom monstrlarning barchasi kasal bo'lib qolishidan xavotirlana boshladi. Kasal monstrlar virusni boshqalarga yuqtirishdan xavotirlana boshladi.
+
+          <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%"> <img src="https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png" style="width:8%">
+
+
+          <div style="display: inline-block">
+          <img src="https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png" style="float:right; width:30%">
+
+          ## Tarqatishni to'xtatish
+          Yaxshiyamki, virusni o'rgangandan so'ng, Monster Town-ning qo'shnilari muhim kashfiyot qilishdi. Agar ular og'ziga niqob kiysalar, virusni yuqtirish ehtimoli kamligini angladilar. Yuz maskalari bilan kasallangan monstrlar sog'lom monstrlarga virusni berish ehtimoli kamroq edi.
+
+          <img src="https://images.code.org/c98f28f9bf6a027143592109d59ee484-image-1603134766360.png" style="width:8%"> <img src="https://images.code.org/bac9dbfaf1815c6627fc24e8e6db396d-image-1603134760456.png" style="width:8%">
+
+          </div>
+
+          <img src="https://images.code.org/ef7499758496b39bcccc24aabd2af5d7-image-1603137920037.2020-10-19 16_04_58.gif" style="float:left; width:25%; padding-right:25px">
+
+          ## Keyin nima bo'ladi?
+
+          Bugun siz Monster Town-da virusning ** simulyatsiyasini ** yaratish va boshqarish uchun kod yozasiz. Simulyatsiya - bu jarayon yoki tizimning kompyuter modeli. Monster Town qo'shnilari bilan nima sodir bo'lishi haqida kod yozishni va bashorat qilishni o'rganing.
+
+          <img src="https://images.code.org/fcbfd250d58652bdfd6393ec4f2fe2dd-image-1603134705074.png" style="float:right; width:15%">
+
+          * * Virus qanchalik tez tarqaladi? *
+
+          * * Hamma kasal bo'lib qoladimi? *
+
+          * * Yuz maskalari qanday yordam beradi? *
+
+
+          Tugatgandan so'ng, simulyatsiyangizni boshqalar bilan ulashing. Virus shaharga kelganda boshqalarning sog'lig'ini saqlashga yordam berish uchun nima qilishimiz mumkinligi haqida xabaringizni ulashing.
       CourseF_outbreak_story22022_2022_pilot_-2022-2:
+        content1: tafsilotlar bu yerda
+        markdown: |-
+          # Kasallik: Olim kabi fikrlash
+
+          <img src="https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png" style="float:right; width:30%">
+
+          Simulyatsiyalar - bu haqiqiy dunyoda kuzatilishi qiyin bo'lgan narsalarni o'rganishning ajoyib usuli. Ular olimlarga muammolarni hal qilishda va yangi g'oyalarni xavfsiz va samarali sinovdan o'tkazishda yordam beradi. Sizning simulyatsiyaingiz Monster Town shahrida virus tarqalishi ko'rsatadigan usuldir.
+
+          ## Qayta tiklash va takrorlash!
+          Kodni o'zingiz yozganingizda ham, run tugmachasini bosganingizda nima bo'lishini aniq bilmaysiz. Monstrlar tasodifiy yaradi, shuning uchun virus tez tarqaladimi yoki sekin tarqaladimi, bilmaysiz. Har kodingizni o'zgartirganingizda, simulyatsiyani bir necha marta ishlatib ko'ring. Hech narsa ikki marta takrorlanmaydi!
+
+          ## Ma'lumotlarni yig'ish
+          Simulyatsiyani amalga oshirayotganda kuzatuvlaringizni yozib ko'ring. Ishlarning qanchalik tez sodir bo'lishini ko'rish uchun siz kasal bo'lib qolgan hayvonlar sonini hisoblashingiz yoki taymerdan foydalanishingiz mumkin. Masalan, hech qanday niqob bo'lmasa, barcha hayvonlarning kasal bo'lishlari odatda qancha vaqtni oladi?
+
+          ## Bashorat qilish
+          Agar siz modelingizni tushunsangiz, undan bashorat qilish uchun foydalanishingiz mumkin. Siz hatto simulyatsiya qanday ishlashini o'zgartirishingiz va nima bo'lishini taxmin qilishingiz mumkin. Masalan:
+          * Agar ikki baravar ko'p monstrlar bo'lsa, nima bo'ladi?
+          * Monstrlar yarim tezlikda harakat qilsalar nima bo'ladi?
+
+          <img src="https://images.code.org/2e83373ffd346ce3f42917a0624d441c-image-1603749526420.png" style="float:right">
+
+          ## Monster Town haqiqiy dunyoga o'xshaydimi?
+          Har qanday modelni aniqlik chegarasi bor.
+          * Sizningcha tarqalishni simulyatsiya qilishning haqiqiy dunyo viruslari bilan umumiyligi nimada?
+          * Qanday farqlar mavjud?
+          Ushbu mashg'ulotni tugatgandan so'ng, bu savollarni o'qituvchilar yoki oilangiz bilan muhokama qiling!
+
+          ## Yana nimani modellashtirishimiz mumkin?
+          Siz allaqachon Monster Town-da epidemiyaning ishchi modelini yaratdingiz. Sizning simulyatsiya qila olmagan yoki xohlaganingizni ko'rsatadigan narsalar nimada? Davom eting va undan ham ko'proq modellashni o'rganing:
+          * Simulyatsiyada hayvonlar sonini ko'paytirish
+          * Monstrlarga virusni tiklashda yordam berish
+          * Ehtimollar, immunitet, vaksinalar va boshqalar!
+
+          Siz simulyatsiya modelingizni boshqalar bilan ulashishingiz yoki shaharga virus kelganda boshqalarning sog'lig'ini saqlashga yordam berish uchun nima qilishimiz mumkinligi haqida dikr almashishingiz mumkin.
+      CourseF_outbreak_story22022_2022_pilot_-2022-2_2023:
         content1: tafsilotlar bu yerda
         markdown: |-
           # Kasallik: Olim kabi fikrlash
@@ -2946,6 +3047,16 @@ uz-UZ:
           * Imkoniyati cheklanganlar uchun qulay bo'lgan dasturlarni loyihalashtirish ushbu dasturlarni boshqalar uchun ham yaxshilaydi!
 
           ![](https://images.code.org/0c670d0d9078657a870df0ca799492cb-image-1557166420066.png)
+      DesigningForAccessibilityMarkdownLevel2022_2023:
+        markdown: |
+          # Erishuvchanlik (Accessibility) uchun dizayn
+
+          * Informatika dunyosida ** erishuvchanlik ** bu imkoniyati cheklanganlar uchun texnologiyalarni yaratishdir.
+          * Cheklangan imkoniyatlar jismoniy, eshitish, ko'rish va boshqalarni o'z ichiga oladi.
+          * Cheklangan imkoniyatlar turli xil va odamlarga turli xil ta'sir ko'rsatadi, shu jumladan ular **smartfon ilovalari** kabi texnologiyalardan qanday foydalanishiga.
+          * Imkoniyati cheklanganlar uchun qulay bo'lgan dasturlarni loyihalashtirish ushbu dasturlarni boshqalar uchun ham yaxshilaydi!
+
+          ![](https://images.code.org/0c670d0d9078657a870df0ca799492cb-image-1557166420066.png)
       DesigningForAccessibilityMarkdownLevel_2019:
         markdown: |
           # Erishuvchanlik (Accessibility) uchun dizayn
@@ -2994,6 +3105,11 @@ uz-UZ:
           # Sikllanish
 
           Ushbu dars raqs harakatlari orqali sikllarni dasturlash bilan tanishtiradi.
+      GettingLoopy-Unplugged2022_2023:
+        markdown: |-
+          # Sikllanish
+
+          Ushbu dars raqs harakatlari orqali sikllarni dasturlash bilan tanishtiradi.
       GettingLoopy-Unplugged_2020:
         markdown: |-
           # Sikllanish
@@ -3014,6 +3130,11 @@ uz-UZ:
           # Katakli qog'ozda dasturlash
 
           Sinfdoshlaringiz rasm chizishda foydalanishi mumkin bo'lgan algoritmlarni yozing.
+      GraphPaperProgramming-Unplugged2022_2023:
+        markdown: |-
+          # Katakli qog'ozda dasturlash
+
+          Sinfdoshlaringiz rasm chizishda foydalanishi mumkin bo'lgan algoritmlarni yozing.
       GraphPaperProgramming-Unplugged_2020:
         markdown: |-
           # Katakli qog'ozda dasturlash
@@ -3030,6 +3151,11 @@ uz-UZ:
 
           Qahramonni labirint orqali o'tkazish uchun algoritm yarating.
       HappyMaps-Unplugged2022:
+        markdown: |-
+          # Baxtli xaritalar
+
+          Qahramonni labirint orqali o'tkazish uchun algoritm yarating.
+      HappyMaps-Unplugged2022_2023:
         markdown: |-
           # Baxtli xaritalar
 
@@ -3252,6 +3378,11 @@ uz-UZ:
           # Harakatlan, harakatlan
 
           Maqsadga erishish uchun xaritadan foydalaning va buyruqlar bering.
+      MoveItMoveIt-Unplugged2022_2023:
+        markdown: |-
+          # Harakatlan, harakatlan
+
+          Maqsadga erishish uchun xaritadan foydalaning va buyruqlar bering.
       MoveItMoveIt-Unplugged_2020:
         markdown: |-
           # Harakatlan, harakatlan
@@ -3284,6 +3415,11 @@ uz-UZ:
           # Mening sikllashtirilgan Robot Do'stlarim
 
           Sikl yordamida dasturlaringizni qisqartiring!
+      MyLoopyRoboticFriends-Unplugged2022_2023:
+        markdown: |-
+          # Mening sikllashtirilgan Robot Do'stlarim
+
+          Sikl yordamida dasturlaringizni qisqartiring!
       MyLoopyRoboticFriends-Unplugged_2020:
         markdown: |-
           # Mening sikllashtirilgan Robot Do'stlarim
@@ -3300,6 +3436,11 @@ uz-UZ:
 
           Do'stlaringiz uchun kod yozish orqali dasturlashni o'rganing!
       MyRoboticFriends-Unplugged2022:
+        markdown: |-
+          # Mening robot do'stlarim
+
+          Do'stlaringiz uchun kod yozish orqali dasturlashni o'rganing!
+      MyRoboticFriends-Unplugged2022_2023:
         markdown: |-
           # Mening robot do'stlarim
 
@@ -5516,6 +5657,11 @@ uz-UZ:
           #So'z kuchi
 
           ## Agar kimdir internetda qo'pol yoki haqoratli so'z ishlatsa, nima qilish kerak?
+      PowerOfWords-Unplugged2022_2022_pilot_-2022-2_2023:
+        markdown: |-
+          #So'z kuchi
+
+          ## Agar kimdir internetda qo'pol yoki haqoratli so'z ishlatsa, nima qilish kerak?
       PowerOfWords-Unplugged_2020:
         markdown: |-
           #So'z kuchi
@@ -5549,6 +5695,11 @@ uz-UZ:
           # Maxfiy va shaxsiy ma'lumotlar
 
           ## O'zingiz haqingizda qanday maʼlumotlarni internetda ulashishingiz mumkin?
+      PrivatePersonalInformation-Unplugged2022_2023:
+        markdown: |-
+          # Maxfiy va shaxsiy ma'lumotlar
+
+          ## O'zingiz haqingizda qanday maʼlumotlarni internetda ulashishingiz mumkin?
       PrivatePersonalInformation-Unplugged_2020:
         markdown: |-
           # Maxfiy va shaxsiy ma'lumotlar
@@ -5565,6 +5716,11 @@ uz-UZ:
 
           Jamoalarga bo'lining va birgalikda rasm chizish uchun dasturlarni yozing.
       RelayProgramming-Unplugged2022:
+        markdown: |-
+          # Navbatda dasturlash
+
+          Jamoalarga bo'lining va birgalikda rasm chizish uchun dasturlarni yozing.
+      RelayProgramming-Unplugged2022_2023:
         markdown: |-
           # Navbatda dasturlash
 
@@ -5599,6 +5755,11 @@ uz-UZ:
 
           Talabalar funksiyalarni aniqlash va chaqirish haqida ma'lumot olish uchun qo'shiqdagi xor tushunchasidan foydalanadilar
       Songwriting-Unplugged2022:
+        markdown: |-
+          # Qo'shiq yozish
+
+          Talabalar funksiyalarni aniqlash va chaqirish haqida ma'lumot olish uchun qo'shiqdagi xor tushunchasidan foydalanadilar
+      Songwriting-Unplugged2022_2023:
         markdown: |-
           # Qo'shiq yozish
 
@@ -5718,6 +5879,13 @@ uz-UZ:
         questions:
         - {}
       TheRightAppMarkdownLevel2022:
+        markdown: "# The Right App\n\n* Hozirgi kunda hamma kompyuterlardan, ayniqsa,
+          smartfonlardan foydalanmoqda. \n* Smartfon ilovasi yoki \"app\" odamlarga
+          do'stlari bilan suhbatlashish, musiqa tinglash, xarid qilish yoki shunchaki
+          Internetni o'rganish kabi ishlarni bajarishda yordam beradi.\n* Dasturchilar
+          boshqalarning ehtiyojlarini tushunishlari va ularni hisobga olgan holda
+          dasturlarni loyihalashlari muhimdir!\n\n![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)"
+      TheRightAppMarkdownLevel2022_2023:
         markdown: "# The Right App\n\n* Hozirgi kunda hamma kompyuterlardan, ayniqsa,
           smartfonlardan foydalanmoqda. \n* Smartfon ilovasi yoki \"app\" odamlarga
           do'stlari bilan suhbatlashish, musiqa tinglash, xarid qilish yoki shunchaki
@@ -6156,10 +6324,16 @@ uz-UZ:
       courseAB_EOC2022:
         description: Siz oxirgi darsga keldingiz! Endi ijod qilish uchun loyiha tanlang.
         display_name: End of Course Project
+      courseAB_EOC2022_2023:
+        description: Siz oxirgi darsga keldingiz! Endi ijod qilish uchun loyiha tanlang.
+        display_name: End of Course Project
       courseAB_EOC_2021:
         description: Siz oxirgi darsga keldingiz! Endi ijod qilish uchun loyiha tanlang.
         display_name: End of Course Project
       courseB_EOC2022:
+        description: Siz oxirgi darsga keldingiz! Endi ijod qilish uchun loyiha tanlang.
+        display_name: End of Course Project
+      courseB_EOC2022_2023:
         description: Siz oxirgi darsga keldingiz! Endi ijod qilish uchun loyiha tanlang.
         display_name: End of Course Project
       courseB_EOC_2021:
@@ -6180,6 +6354,20 @@ uz-UZ:
         - text: Quyidagi kodga diqqat bilan qarang. "Run" tugmasini bosganingizda
             nima bo‘ladi?
       courseC_multi_artist_prog6_predict12022:
+        answers:
+        - feedback: Noto‘g’ri. Rassom kvadrat chizadi.
+          text: Rassom uchta teng tomonli uchburchak chizadi.
+        - feedback: Noto‘g’ri. Rassom kvadrat chizadi.
+          text: Rassom bitta chiziq chizadi.
+        - correct: true
+          feedback: To‘g’ri!
+          text: Rassom bitta kvadrat chizadi.
+        - feedback: Noto‘g’ri. Rassom kvadrat chizadi.
+          text: Rassom bitta beshburchak chizadi.
+        questions:
+        - text: Quyidagi kodga diqqat bilan qarang. "Run" tugmasini bosganingizda
+            nima bo‘ladi?
+      courseC_multi_artist_prog6_predict12022_2023:
         answers:
         - feedback: Noto‘g’ri. Rassom kvadrat chizadi.
           text: Rassom uchta teng tomonli uchburchak chizadi.
@@ -6283,6 +6471,23 @@ uz-UZ:
         questions:
         - text: Quyidagi kodga diqqat bilan qarang.  "Run"tugmasini bosgandan so‘ng,
             fermer qancha qovoq yig’adi?
+      courseC_multi_harvester_loops11_predict12022_2023:
+        answers:
+        - feedback: Noto‘g’ri. Fermer har 3 siklda 4 tadan qovoq yig‘adi. 3 karra
+            4 12 ga teng bo‘ladi!
+          text: '4'
+        - correct: true
+          feedback: To‘g’ri!
+          text: '12'
+        - feedback: Noto‘g’ri. Fermer har 3 siklda 4 tadan qovoq yig‘adi. 3 karra
+            4 12 ga teng bo‘ladi!
+          text: '15'
+        - feedback: Noto‘g’ri. Fermer har 3 siklda 4 tadan qovoq yig‘adi. 3 karra
+            4 12 ga teng bo‘ladi!
+          text: '20'
+        questions:
+        - text: Quyidagi kodga diqqat bilan qarang.  "Run"tugmasini bosgandan so‘ng,
+            fermer qancha qovoq yig’adi?
       courseC_multi_harvester_loops11_predict1_2018:
         answers:
         - feedback: Noto‘g’ri. Fermer har 3 siklda 4 tadan qovoq yig‘adi. 3 karra
@@ -6369,6 +6574,18 @@ uz-UZ:
         - text: Quyidagi kodga diqqat bilan qarang. Ushbu dastur ishlamay qoladigan
             birinchi xato nima?
       courseC_multi_maze_debugging8_predict12022:
+        answers:
+        - text: Skrat daraxtga yetib boradi. Kodda hech qanday xatolik yo'q.
+        - correct: true
+          text: Skrat yong'oqqa yetib bormaydi, chunki u noto'g'ri tomonga buriladi.
+        - text: Skrat yong'oqqa yetib bormaydi, chunki "oldinga siljish" bloklari
+            yetarli emas.
+        - feedback: Skrat yong'oqqa yetib bormaydi, chunki u noto'g'ri tomonga buriladi.
+          text: Scrat birinchi blokdan qimirlamaydi.
+        questions:
+        - text: Ushbu koddagi xatolarni qidirib toping. Skrat eman yong'og'iga yetib
+            boradimi yoki biror nosozlik bormi?
+      courseC_multi_maze_debugging8_predict12022_2023:
         answers:
         - text: Skrat daraxtga yetib boradi. Kodda hech qanday xatolik yo'q.
         - correct: true
@@ -6486,6 +6703,20 @@ uz-UZ:
         questions:
         - text: Quyidagi kodni diqqat bilan o‘qing. "Run"tugmasini bosganingizda nima
             sodir bo‘ladi??
+      courseC_multi_maze_programming8_predict12022_2023:
+        answers:
+        - feedback: Noto‘g’ri. Ushbu kod qushni cho‘chqaga juda yaxshi yetkazadi.
+          text: Oxirida qush cho‘chqadan bir qadam ortda bo‘ladi.
+        - correct: true
+          feedback: To‘g’ri!
+          text: Qush cho‘chqaga yetib boradi.
+        - feedback: Noto‘g’ri. Ushbu kod qushni cho‘chqaga juda yaxshi yetkazadi.
+          text: Qush TNT ga tushadi.
+        - feedback: Noto‘g’ri. Ushbu kod qushni cho‘chqaga juda yaxshi yetkazadi.
+          text: Qush devorga tegadi.
+        questions:
+        - text: Quyidagi kodni diqqat bilan o‘qing. "Run"tugmasini bosganingizda nima
+            sodir bo‘ladi??
       courseC_multi_maze_programming8_predict1_2018:
         answers:
         - feedback: Noto‘g’ri. Ushbu kod qushni cho‘chqaga juda yaxshi yetkazadi.
@@ -6558,6 +6789,22 @@ uz-UZ:
         questions:
         - text: Sizningcha "Run" tugmasini bosganingizda nima bo‘ladi?
       courseC_multi_starWars_predict12022:
+        answers:
+        - feedback: Noto‘g’ri. Takroriy blok BB-8ni 5 marta oldinga siljitishga majbur
+            qiladi.
+          text: BB-8 harakatlanmaydi.
+        - feedback: Noto‘g’ri. Takroriy blok BB-8ni 5 marta oldinga siljitishga majbur
+            qiladi.
+          text: BB-8 faqat bitta maydonni harakatga keltiradi
+        - correct: true
+          feedback: To‘g’ri!
+          text: BB-8 5 marotaba harakatlanadi va barcha metallolomlarni oladi
+        - feedback: Noto‘g’ri. Takroriy blok BB-8ni 5 marta oldinga siljitishga majbur
+            qiladi.
+          text: BB-8 faqat uchta maydonni harakatga keltiradi.
+        questions:
+        - text: Sizningcha "Run" tugmasini bosganingizda nima bo‘ladi?
+      courseC_multi_starWars_predict12022_2023:
         answers:
         - feedback: Noto‘g’ri. Takroriy blok BB-8ni 5 marta oldinga siljitishga majbur
             qiladi.
@@ -6670,6 +6917,24 @@ uz-UZ:
         questions:
         - text: Quyidagi kodga diqqat bilan qarang. "Run" tugmasini bossangiz nima
             bo‘ladi?
+      courseC_multi_starWars_predict22022_2023:
+        answers:
+        - feedback: Noto‘g’ri. Birinchi sikl BB-8 ga faqat 3 ta oraliq oldinga yurish
+            kerak bo‘lganda, ikkita oraliq oldinga yurishga imkon beradi.
+          text: BB-8 birinchi siklda juda uzoqqa boradi.
+        - correct: true
+          feedback: To‘g’ri!
+          text: BB-8 barcha metallolomlarni olish uchun birinchi sikl bo‘yicha yetarlicha
+            uzoq yurmaydi.
+        - feedback: Noto‘g’ri. Birinchi sikl BB-8 ga faqat 3 ta oraliq oldinga yurish
+            kerak bo‘lganda, ikkita oraliq oldinga yurishga imkon beradi.
+          text: BB-8 barcha metallolomlarni muammosiz yig’adi.
+        - feedback: Noto‘g’ri. Birinchi sikl BB-8 ga faqat 3 ta oraliq oldinga yurish
+            kerak bo‘lganda, ikkita oraliq oldinga yurishga imkon beradi.
+          text: BB-8 birinchi sikldan keyin noto'g'ri tomonga buriladi.
+        questions:
+        - text: Quyidagi kodga diqqat bilan qarang. "Run" tugmasini bossangiz nima
+            bo‘ladi?
       courseC_multi_starWars_predict2_2018:
         answers:
         - feedback: Noto‘g’ri. Birinchi sikl BB-8 ga faqat 3 ta oraliq oldinga yurish
@@ -6745,6 +7010,9 @@ uz-UZ:
       courseD_EOC2022:
         description: Siz D kursini yakunladingiz! Endi ijod qilish uchun loyiha tanlang.
         display_name: End of Course Project
+      courseD_EOC2022_2023:
+        description: Siz D kursini yakunladingiz! Endi ijod qilish uchun loyiha tanlang.
+        display_name: End of Course Project
       courseD_EOC_2020:
         description: Siz D kursini yakunladingiz! Endi ijod qilish uchun loyiha tanlang.
         display_name: End of Course Project
@@ -6752,6 +7020,10 @@ uz-UZ:
         description: Siz D kursini yakunladingiz! Endi ijod qilish uchun loyiha tanlang.
         display_name: End of Course Project
       courseD_EOC_examples2022:
+        description: Siz yakuniy loyihangizni boshlamoqchisiz. Ishni boshlashdan oldin,
+          namunali loyihalarni ko'rib chiqishga vaqt ajrating.
+        display_name: Loyiha namunalari
+      courseD_EOC_examples2022_2023:
         description: Siz yakuniy loyihangizni boshlamoqchisiz. Ishni boshlashdan oldin,
           namunali loyihalarni ko'rib chiqishga vaqt ajrating.
         display_name: Loyiha namunalari
@@ -6971,6 +7243,30 @@ uz-UZ:
         questions:
         - text: Quyidagi kodni yaxshilab ko'rib chiqing. "Ishga tushirish " tugmachasini
             bosganingizda ushbu dastur qaysi rasmni chiqaradi?
+      courseD_multi_artist_nestedLoops9_predict12022_2023:
+        answers:
+        - correct: true
+          feedback: To‘g’ri!
+          text: A
+        - feedback: Noto'g'ri.  Ichki tsikl beshburchak yasaydi, tashqi tsikl esa
+            uni aylanada 4 marta takrorlaydi.
+          text: B
+        - feedback: Noto'g'ri.  Ichki tsikl beshburchak yasaydi, tashqi tsikl esa
+            uni aylanada 4 marta takrorlaydi.
+          text: C
+        - feedback: Noto'g'ri.  Ichki tsikl beshburchak yasaydi, tashqi tsikl esa
+            uni aylanada 4 marta takrorlaydi.
+          text: Yuqoridagilardan hech biri
+        markdown: |+
+          <table>
+          <tr><td>A</td><td><img src="https://images.code.org/cfc3f8206438a60afe3be9afe7fc0a22-image-1489118742610.10.15.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>B</td><td><img src="https://images.code.org/975b027684d2f5411b960bf82987663e-image-1489119999013.11.13.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>C</td><td><img src="https://images.code.org/635ac54ed7cb2e2d24eb341b3ec4eecb-image-1489120024059.12.00.png" width="80px" style="mix-blend-mode: multiply; clip: rect(0px,0px,0px,40px);"/></td></tr>
+          </table>
+
+          <br/><br/>
+
+        questions:
+        - text: Quyidagi kodni yaxshilab ko'rib chiqing. "Ishga tushirish " tugmachasini
+            bosganingizda ushbu dastur qaysi rasmni chiqaradi?
       courseD_multi_artist_nestedLoops9_predict1_2018:
         answers:
         - correct: true
@@ -7113,6 +7409,25 @@ uz-UZ:
             kerak. Agar gul bo'lmasa, asalarilar hech narsa qilmasliklari kerak. Quyidagi
             kodni yaxshilab ko'rib chiqing. "Ishga tushirish " tugmachasini bosgandan
             so'ng nima bo'ladi deb o'ylaysiz?
+      courseD_multi_bee_conditionals1_predict12022_2023:
+        answers:
+        - feedback: Noto'g'ri. "If at flower" bloki asalari faqat bulut ostida gul
+            bo'lsa, nektar olishga harakat qilishini ta'minlaydi.
+          text: 'Asalari bulutga o''tib, nima bo''lishidan qat''i nazar, nektar olishga
+            harakat qiladi. '
+        - correct: true
+          feedback: To‘g’ri!
+          text: Asalari bulutga o'tadi va faqat ostida gul bo'lsa, nektar olishga
+            harakat qiladi.
+        - feedback: Noto'g'ri. "If at flower" bloki asalari faqat bulut ostida gul
+            bo'lsa, nektar olishga harakat qilishini ta'minlaydi.
+          text: 'Asalari bulutga o''tadi va keyin nima bo''lishidan qat''iy nazar
+            hech narsa qilmaydi. '
+        - feedback: Noto'g'ri. "If at flower" bloki asalari faqat bulut ostida gul
+            bo'lsa, nektar olishga harakat qilishini ta'minlaydi.
+          text: Asalari bulutga etib bormaydi.
+        questions:
+        - {}
       courseD_multi_bee_conditionals1_predict1_2018:
         answers:
         - feedback: Noto'g'ri. "If at flower" bloki asalari faqat bulut ostida gul
@@ -7294,6 +7609,29 @@ uz-UZ:
         - text: 'Quyidagi kodga diqqat bilan qarang. "Ishga tushirish " tugmachasini
             bosgandan so''ng nima bo''ladi deb o''ylaysiz? Esingizda bo''lsin: har
             bir bulut orqasida faqat * bitta * asal zahirasi yoki * bitta * gul bo''ladi.'
+      courseD_multi_bee_conditionals7_predict22022_2023:
+        answers:
+        - correct: true
+          feedback: To‘g’ri!
+          text: Asalari har bir guldan nektar olib, har bir asalari iniga asal joylaydi.
+        - feedback: Noto'g'ri. "if at flower" bloki asalari har bir gulga nektar va
+            har bir asalari inidagi chuqurchada (sotada) asal joylashiga imkon beradi.
+          text: Asalarilar ham gullardan, ham asal uyasidan nektar olishga harakat
+            qiladi.
+        - feedback: Noto'g'ri. Noto'g'ri. "if at flower" bloki asalari har bir gulga
+            nektar va har bir asalari inidagi chuqurchada (sotada) asal joylashiga
+            imkon beradi.
+          text: Asalarilar asalni ham gullardan, ham asal qoliplaridan olishga harakat
+            qiladi.
+        - feedback: Noto'g'ri. Noto'g'ri. "if at flower" bloki asalari har bir gulga
+            nektar va har bir asalari inidagi chuqurchada (sotada) asal joylashiga
+            imkon beradi.
+          text: Asalarilar ham gullardan, ham asal uyasidan asal va nektar olishga
+            harakat qiladi.
+        questions:
+        - text: 'Quyidagi kodga diqqat bilan qarang. "Ishga tushirish " tugmachasini
+            bosgandan so''ng nima bo''ladi deb o''ylaysiz? Esingizda bo''lsin: har
+            bir bulut orqasida faqat * bitta * asal zahirasi yoki * bitta * gul bo''ladi.'
       courseD_multi_bee_conditionals7_predict2_2018:
         answers:
         - correct: true
@@ -7413,6 +7751,23 @@ uz-UZ:
         questions:
         - text: Quyidagi ichki tsikllarga diqqat bilan qarang. "Ishga tushirish "
             tugmachasini bosganingizda nima bo'ladi?
+      courseD_multi_bee_nestedLoops2_predict12022_2023:
+        answers:
+        - feedback: Noto'g'ri.  Asalari jumboqni yechishga imkon beradigan oldinga
+            siljish va nektar yig'ish tsiklli harakatlarini bajaradi.
+          text: Asalarilar faqat bir marta oldinga siljiydi va nektar oladi.
+        - feedback: Noto'g'ri.  Asalari jumboqni yechishga imkon beradigan oldinga
+            siljish va nektar yig'ish tsiklli harakatlarini bajaradi.
+          text: Ari faqat 2 dona nektar oladi.
+        - correct: true
+          feedback: To‘g’ri!
+          text: Asalari nektarning hammasini oladi.
+        - feedback: Noto'g'ri.  Asalari jumboqni yechishga imkon beradigan oldinga
+            siljish va nektar yig'ish tsiklli harakatlarini bajaradi.
+          text: Asalari noto'g'ri tomonga buriladi.
+        questions:
+        - text: Quyidagi ichki tsikllarga diqqat bilan qarang. "Ishga tushirish "
+            tugmachasini bosganingizda nima bo'ladi?
       courseD_multi_bee_nestedLoops2_predict1_2018:
         answers:
         - feedback: Noto'g'ri.  Asalari jumboqni yechishga imkon beradigan oldinga
@@ -7502,6 +7857,26 @@ uz-UZ:
         - text: Quyidagi kodga diqqat bilan qarang. "Run " tugmachasini bosganingizda
             asalari qancha asal hosil qiladi?
       courseD_multi_bee_nestedLoops9_predict22022:
+        answers:
+        - feedback: Noto'g'ri. Asalarilar oldinga siljiyotgan tsiklda 2 nektarni,
+            so'ngra pastdagi tsiklda 2 nektar to'playdi. Bularning barchasi ikki marta
+            sodir bo'ladigan boshqa tsiklning ichida. 4 marta 2 - 8!
+          text: '4'
+        - correct: true
+          feedback: To‘g’ri!
+          text: '8'
+        - feedback: Noto'g'ri. Asalarilar oldinga siljiyotgan tsiklda 2 nektarni,
+            so'ngra pastdagi tsiklda 2 nektar to'playdi. Bularning barchasi ikki marta
+            sodir bo'ladigan boshqa tsiklning ichida. 4 marta 2 - 8!
+          text: '10'
+        - feedback: Noto'g'ri. Asalarilar oldinga siljiyotgan tsiklda 2 nektarni,
+            so'ngra pastdagi tsiklda 2 nektar to'playdi. Bularning barchasi ikki marta
+            sodir bo'ladigan boshqa tsiklning ichida. 4 marta 2 - 8!
+          text: '12'
+        questions:
+        - text: Quyidagi kodga diqqat bilan qarang. "Run " tugmachasini bosganingizda
+            asalari qancha asal hosil qiladi?
+      courseD_multi_bee_nestedLoops9_predict22022_2023:
         answers:
         - feedback: Noto'g'ri. Asalarilar oldinga siljiyotgan tsiklda 2 nektarni,
             so'ngra pastdagi tsiklda 2 nektar to'playdi. Bularning barchasi ikki marta
@@ -7662,6 +8037,26 @@ uz-UZ:
         questions:
         - text: Quyidagi kodni diqqat bilan ko'rib chiqing. "Ishga tushirish " tugmachasini
             bosgandan so'ng nima bo'ladi?
+      courseD_multi_farmer_condLoops9_predict12022_2023:
+        answers:
+        - feedback: Noto'g'ri. Bu yerda oshqovoqni yig'ish uchun kod yo'q.
+          text: O'rim-yig'imchi barcha hosilni yig'ib oladi.
+        - feedback: Noto'g'ri. Kod terimchini zinapoya naqshida bir necha marotaba
+            o'tkazib, u duch kelganicha makkajo'xori yoki karam yig'ib beradi. U oshqovoqni
+            olmaydi.
+          text: Terimchi o'zi olgan yo'l bilan biron hosilni yig'maydi.
+        - correct: true
+          feedback: To‘g’ri!
+          text: Terimchi oshqovoqdan tashqari barcha hosilni yig'ib oladi.
+        - feedback: Noto'g'ri. Kod terimchini zinapoya naqshida bir necha marotaba
+            o'tkazib, u duch kelganicha makkajo'xori yoki karam yig'ib beradi. U oshqovoqni
+            olmaydi.
+        markdown: |-
+          Ushbu jumboqdagi o'simliklar yo makkajo'xori yoki karam bo'ladi.
+          <br/>
+        questions:
+        - text: Quyidagi kodni diqqat bilan ko'rib chiqing. "Ishga tushirish " tugmachasini
+            bosgandan so'ng nima bo'ladi?
       courseD_multi_farmer_condLoops9_predict1_2018:
         answers:
         - feedback: Noto'g'ri. Bu yerda oshqovoqni yig'ish uchun kod yo'q.
@@ -7798,6 +8193,21 @@ uz-UZ:
         questions:
         - text: Quyidagi kodni yaxshilab ko'rib chiqing. Ushbu jumboqning oxirida
             nima qoladi?
+      courseD_multi_farmer_while10_predict22022_2023:
+        answers:
+        - feedback: Noto'g'ri. To'plamdagi tuproqni olib tashlash uchun kod yo'q.
+          text: Hech narsa yo'q. Ushbu kod faqat tekis zaminni qoldiradi.
+        - correct: true
+          feedback: To‘g’ri!
+          text: Ushbu kod to'plamni shundayligicha qoldiradi.
+        - feedback: Noto'g'ri. "While" tsikli har qanday o'lchamdagi tsikl bilan ishlaydi,
+            lekin to'plamdagi tuproqni olib tashlash uchun kod yo'q.
+          text: Ushbu kod chuqurni shundayligicha qoldiradi.
+        - feedback: Noto'g'ri. To'plamdagi tuproqni olib tashlash uchun kod yo'q.
+          text: Ushbu kod oxirgi chuqurni shundayligicha qoldiradi.
+        questions:
+        - text: Quyidagi kodni yaxshilab ko'rib chiqing. Ushbu jumboqning oxirida
+            nima qoladi?
       courseD_multi_farmer_while10_predict2_2018:
         answers:
         - feedback: Noto'g'ri. To'plamdagi tuproqni olib tashlash uchun kod yo'q.
@@ -7880,6 +8290,24 @@ uz-UZ:
         - text: Quyidagi kodga diqqat bilan qarang. "Ishga tushirish " tugmachasini
             bosgandan so'ng nima bo'ladi?
       courseD_multi_farmer_while4_predict12022:
+        answers:
+        - feedback: Noto'g'ri. To'plam bor ekan, dehqon tuproqni olib tashlayveradi,
+            keyin to'plam yo'q bo'lganda to'xtaydi
+          text: Hech narsa bo'lmaydi.
+        - feedback: Noto'g'ri. To'plam bor ekan, dehqon tuproqni olib tashlayveradi,
+            keyin to'plam yo'q bo'lganda to'xtaydi
+          text: Dehqon tuproqni tozalashdan hech qachon to'xtamaydi.
+        - correct: true
+          feedback: To‘g’ri!
+          text: To'plam bor ekan, dehqon tuproqni olib tashlayveradi, keyin to'plam
+            yo'q bo'lganda to'xtaydi.
+        - feedback: Noto'g'ri. To'plam bor ekan, dehqon tuproqni olib tashlayveradi,
+            keyin to'plam yo'q bo'lganda to'xtaydi
+          text: Fermer axlatni faqat bir marta tozalaydi.
+        questions:
+        - text: Quyidagi kodga diqqat bilan qarang. "Ishga tushirish " tugmachasini
+            bosgandan so'ng nima bo'ladi?
+      courseD_multi_farmer_while4_predict12022_2023:
         answers:
         - feedback: Noto'g'ri. To'plam bor ekan, dehqon tuproqni olib tashlayveradi,
             keyin to'plam yo'q bo'lganda to'xtaydi
@@ -7999,6 +8427,17 @@ uz-UZ:
         questions:
         - text: Quyidagi kodga diqqat bilan qarang. "Ishga tushirish " tugmachasini
             bosgandan so'ng nima bo'ladi?
+      courseD_multi_maze_until10_predict22022_2023:
+        answers:
+        - correct: true
+          feedback: To‘g’ri!
+        - text: Zombi kungaboqarga yetib boradi.
+        - text: Zombi birinchi yo‘lda o‘ng tomonga buriladi va abadiy aylana bo‘ylab
+            yuradi.
+        - text: Zombi oldinga boradigan yo'lning oxirida qolib ketadi.
+        questions:
+        - text: Quyidagi kodga diqqat bilan qarang. "Ishga tushirish " tugmachasini
+            bosgandan so'ng nima bo'ladi?
       courseD_multi_maze_until10_predict2_2018:
         answers:
         - correct: true
@@ -8089,6 +8528,23 @@ uz-UZ:
         - text: Quyidagi kodni diqqat bilan ko'rib chiqing. Sizningcha, "Ishga tushirish
             " tugmachasini bosganingizda nima bo'ladi?
       courseD_multi_maze_until2_predict12022:
+        answers:
+        - feedback: Noto'g'ri. Kod, qushni yo'l bor ekan, oldinga siljitadi, so'ng
+            chapga buriladi. U buni cho'chqaga yetguncha davom ettiradi!
+          text: Qush umuman harakat qilmaydi.
+        - correct: true
+          feedback: To‘g’ri!
+          text: Qush cho‘chqaga yetib boradi.
+        - feedback: Noto'g'ri. Kod xavfsiz yo'l bo'lsa, qushni oldinga siljitadi,
+            so'ng chapga buriladi. U buni cho'chqaga yetguncha davom ettiradi!
+          text: Qush oldinga siljiydi va TNTga uriladi.
+        - feedback: Kod, qushni yo'l bor ekan, oldinga siljitadi, so'ng chapga buriladi.
+            U buni cho'chqaga yetguncha davom ettiradi!.
+          text: Qush noto'g'ri tomonga buriladi.
+        questions:
+        - text: Quyidagi kodni diqqat bilan ko'rib chiqing. Sizningcha, "Ishga tushirish
+            " tugmachasini bosganingizda nima bo'ladi?
+      courseD_multi_maze_until2_predict12022_2023:
         answers:
         - feedback: Noto'g'ri. Kod, qushni yo'l bor ekan, oldinga siljitadi, so'ng
             chapga buriladi. U buni cho'chqaga yetguncha davom ettiradi!
@@ -8215,6 +8671,9 @@ uz-UZ:
       courseE_EOC2022:
         description: Siz E kursini yakunladingiz! Endi ijod qilish uchun loyiha tanlang.
         display_name: End of Course Project
+      courseE_EOC2022_2023:
+        description: Siz E kursini yakunladingiz! Endi ijod qilish uchun loyiha tanlang.
+        display_name: End of Course Project
       courseE_EOC_2020:
         description: Siz E kursini yakunladingiz! Endi ijod qilish uchun loyiha tanlang.
         display_name: End of Course Project
@@ -8222,6 +8681,9 @@ uz-UZ:
         description: Siz E kursini yakunladingiz! Endi ijod qilish uchun loyiha tanlang.
         display_name: End of Course Project
       courseE_EOC_examples2022:
+        description: Siz E kursini yakunladingiz! Endi ijod qilish uchun loyiha tanlang.
+        display_name: End of Course Project
+      courseE_EOC_examples2022_2023:
         description: Siz E kursini yakunladingiz! Endi ijod qilish uchun loyiha tanlang.
         display_name: End of Course Project
       courseE_EOC_examples_2021:
@@ -8272,6 +8734,22 @@ uz-UZ:
         questions:
         - text: Quyida tavsiflangan funksiyalarga qarang. Terimchi nima yig'adi?
       courseE_multi_farmer_functions11_predict2022:
+        answers:
+        - feedback: Noto'g'ri. Terimchi yo'lning oxirigacha oldinga qarab boradi,
+            so'ng burilib, salat terguncha orqaga qaytadi.
+          text: Terimchi ikkita oshqovoqni terib oladi.
+        - feedback: Noto'g'ri. Terimchi yo'lning oxirigacha oldinga qarab boradi,
+            so'ng burilib, salat terguncha orqaga qaytadi.
+          text: Terimchi barcha oshqovoqni terib oladi.
+        - correct: true
+          feedback: To‘g’ri!
+          text: Terimchi salatni terib oladi.
+        - feedback: Noto'g'ri. Terimchi yo'lning oxirigacha oldinga qarab boradi,
+            so'ng burilib, salat terguncha orqaga qaytadi.
+          text: Terimchi makkajo'xorini terib oladi.
+        questions:
+        - text: Quyida tavsiflangan funksiyalarga qarang. Terimchi nima yig'adi?
+      courseE_multi_farmer_functions11_predict2022_2023:
         answers:
         - feedback: Noto'g'ri. Terimchi yo'lning oxirigacha oldinga qarab boradi,
             so'ng burilib, salat terguncha orqaga qaytadi.
@@ -8367,6 +8845,21 @@ uz-UZ:
         questions:
         - text: '"Run" tugmasini bosganingizda nima bo‘ladi?'
       courseE_prediction_artistFunction12022:
+        answers:
+        - feedback: Noto'g'ri. Funksiya aslida dasturda ikki marta chaqirilgan.
+          text: Hech narsa bo'lmadi. Funksiya dasturda chaqirilmagan.
+        - feedback: Noto'g'ri. Funksiya aslida dasturda ikki marta chaqirilgan.
+          text: Rassom bitta kvadrat chizadi.
+        - feedback: Noto'g'ri. Kvadratning har bir tomonining uzunligi atigi 100 pikselni
+            tashkil etadi, ammo rassom funksiyalar orasida 175 pikselga sakrab chiqadi.
+          text: Rassom bir-biri ustidan ikkita kvadratni chizadi.
+        - correct: true
+          feedback: To'g'ri! Funksiya dasturda ikki marta chaqiriladi, oralig'ida
+            sakrash mavjud.
+          text: Rassom ikkita kvadratni o'rtada kichik bo'shliq bilan chizadi.
+        questions:
+        - text: '"Run" tugmasini bosganingizda nima bo‘ladi?'
+      courseE_prediction_artistFunction12022_2023:
         answers:
         - feedback: Noto'g'ri. Funksiya aslida dasturda ikki marta chaqirilgan.
           text: Hech narsa bo'lmadi. Funksiya dasturda chaqirilmagan.
@@ -8523,6 +9016,16 @@ uz-UZ:
         questions:
         - text: Quyidagi kodga diqqat bilan qarang. "Ishga tushirish " tugmachasini
             bosgandan so'ng nima bo'ladi?
+      courseE_swim_fish_behavior_predict12022_2023:
+        answers:
+        - text: Hech narsa bo'lmaydi.
+        - {}
+        - correct: true
+          feedback: To‘g’ri!
+        - {}
+        questions:
+        - text: Quyidagi kodga diqqat bilan qarang. "Ishga tushirish " tugmachasini
+            bosgandan so'ng nima bo'ladi?
       courseE_swim_fish_behavior_predict1_2021:
         answers:
         - text: Hech narsa bo'lmaydi.
@@ -8545,10 +9048,16 @@ uz-UZ:
         display_name: End of Course Project
       courseF_EOC_examples2022_2022_pilot_-2022-2:
         display_name: End of Course Project
+      courseF_EOC_examples2022_2022_pilot_-2022-2_2023:
+        display_name: End of Course Project
       courseF_EOC_examples_2021:
         description: Siz F kursini yakunladingiz! Endi ijod qilish uchun loyiha tanlang.
         display_name: End of Course Project
       courseF_EOC_samples2022:
+        description: Siz yakuniy loyihangizni boshlamoqchisiz. Ishni boshlashdan oldin,
+          namunali loyihalarni ko'rib chiqishga vaqt ajrating.
+        display_name: End of Course Project
+      courseF_EOC_samples2022_2023:
         description: Siz yakuniy loyihangizni boshlamoqchisiz. Ishni boshlashdan oldin,
           namunali loyihalarni ko'rib chiqishga vaqt ajrating.
         display_name: End of Course Project
@@ -8629,6 +9138,14 @@ uz-UZ:
         - {}
         questions:
         - {}
+      courseF_events_predict_multi2022_2022_pilot_-2022-2_2023:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
       courseF_external_variableConstant:
         markdown: |+
           <h2>O'zgaruvchilar haqida ko'proq ma'lumot</h2>
@@ -8683,6 +9200,14 @@ uz-UZ:
         - {}
         questions:
         - {}
+      courseF_groups_predict_multi_2022_pilot_-2022-2_2023:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseF_intro_apps:
         description: CS Fundamentals kursiga xush kelibsiz! Undagi loyihalarning barchasi
           Sprite Lab yordamida yaratilgan. Mumkin bo'lgan narsalarni ko'rish uchun
@@ -8690,6 +9215,8 @@ uz-UZ:
           va ulardan ham a'lo loyihalaringizni amalga oshira olasiz!
         display_name: Sprite Lab ilovalari
       courseF_intro_apps2022_2022_pilot_-2022-2:
+        display_name: Sprite Lab ilovalari
+      courseF_intro_apps2022_2022_pilot_-2022-2_2023:
         display_name: Sprite Lab ilovalari
       courseF_labels_predict_multi:
         answers:
@@ -8701,6 +9228,15 @@ uz-UZ:
         questions:
         - {}
       courseF_labels_predict_multi2022_2022_pilot_-2022-2:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseF_labels_predict_multi2022_2022_pilot_-2022-2_2023:
         answers:
         - {}
         - {}
@@ -9185,6 +9721,23 @@ uz-UZ:
         questions:
         - text: Biz "uzunlik" o'zgaruvchisini 50 ga o'rnatdik. "Ishga tushirish" tugmachasini
             bosganingizda nima bo'ladi?
+      courseF_multi_artist_variables3a_predict12022_2023:
+        answers:
+        - correct: true
+          feedback: To‘g’ri!
+          text: Rassom 50 piksel tomonli uchburchak chizadi.
+        - feedback: Noto'g'ri. Buning uchun "uzunlik" o'zgaruvchisi "takrorlash" siklida
+            bo'lishi kerak.
+          text: Rassom har bir tomoni 3 pikselga teng 50-burchak chizadi.
+        - feedback: Noto'g'ri. Buning uchun "uzunlik" o'zgaruvchisini "burilish" blokida
+            ishlatish kerak bo'ladi.
+          text: Rassom uchta ochiq tomonni 50 darajaga burilish bilan chizadi.
+        - feedback: '`Uzunlik` o''zgaruvchisi 50 ga o''rnatilgan va u "oldinga siljish"
+            blokida ishlatiladi, shuning uchun rassom tomonlari 50 pikselli uchburchak
+            chizadi.'
+        questions:
+        - text: Biz "uzunlik" o'zgaruvchisini 50 ga o'rnatdik. "Ishga tushirish" tugmachasini
+            bosganingizda nima bo'ladi?
       courseF_multi_artist_variables3a_predict1_2018:
         answers:
         - correct: true
@@ -9325,6 +9878,23 @@ uz-UZ:
         questions:
         - text: Quyidagi kodni o'qing. "Run" tugmasini bossangiz nima bo‘ladi?
       courseF_multi_bee_for3_predict12022:
+        answers:
+        - feedback: Noto'g'ri. `For` sikli asalariga kerakli miqdordagi nektar to'plashiga
+            imkon beradi, ammo u faqat 4 ta gulga yetishga sozlangan.
+          text: Asalari oldinga siljiydi va har bir guldan barcha nektarlarni yig'adi.
+        - correct: true
+          feedback: To‘g’ri!
+          text: Asalari oldinga siljiydi va bittadan tashqari barcha guldan barcha
+            nektarlarni yig'adi.
+        - feedback: Noto'g'ri. `For` sikli asalariga kerakli miqdordagi nektar to'plashiga
+            imkon beradi, ammo u faqat 4 ta gulga yetishga sozlangan.
+          text: Asalari oldinga siljiydi va har bir guldan bitta nektarni yig'adi.
+        - feedback: Noto'g'ri. `For` sikli asalariga kerakli miqdordagi nektar to'plashiga
+            imkon beradi, ammo u faqat 4 ta gulga yetishga sozlangan.
+        markdown: Ah! "For" siklidan foydalanish bu jumboqni ancha osonlashtiradi!
+        questions:
+        - text: Quyidagi kodni o'qing. "Run" tugmasini bossangiz nima bo‘ladi?
+      courseF_multi_bee_for3_predict12022_2023:
         answers:
         - feedback: Noto'g'ri. `For` sikli asalariga kerakli miqdordagi nektar to'plashiga
             imkon beradi, ammo u faqat 4 ta gulga yetishga sozlangan.
@@ -9493,6 +10063,14 @@ uz-UZ:
         - {}
         questions:
         - {}
+      courseF_sprites_predict_multi2022_2022_pilot_-2022-2_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
       courseF_variables2_predict2_multi2022_-2022-2:
         answers:
         - correct: true
@@ -9501,7 +10079,23 @@ uz-UZ:
         - {}
         questions:
         - {}
+      courseF_variables2_predict2_multi2022_-2022-2_2023:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseF_variables2_predict_multi2022_2022_pilot_-2022-2:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseF_variables2_predict_multi2022_2022_pilot_-2022-2_2023:
         answers:
         - {}
         - {}
@@ -9525,9 +10119,19 @@ uz-UZ:
         - {}
         questions:
         - {}
+      courseF_variables_predict_multi2022_2022_pilot_-2022-2_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
       courseF_variables_stop:
         content1: tafsilotlar bu yerda
       courseF_variables_stop2022_2022_pilot_-2022-2:
+        content1: tafsilotlar bu yerda
+      courseF_variables_stop2022_2022_pilot_-2022-2_2023:
         content1: tafsilotlar bu yerda
       coursee_prediction_artistfunction2:
         answers:
@@ -9545,6 +10149,21 @@ uz-UZ:
         questions:
         - text: '"Run" tugmasini bosganingizda nima bo‘ladi?'
       coursee_prediction_artistfunction22022:
+        answers:
+        - feedback: Noto'g'ri. Siklda "ko'pburchaklar qatori" o'rniga "ko'pburchak
+            chizish" funksiyasi ishlatiladi.
+          text: Rassom jumboqni to'g'ri yachadi.
+        - correct: true
+          feedback: To‘g’ri!
+          text: Rassom deraza naqshida to'rtta kvadrat chizadi.
+        - feedback: Noto'g'ri. Dastur "ko'pburchaklar qatori" funksiyasini chaqirmaydi.
+          text: Rassom kvadratlarning faqat bitta qatorini chizadi.
+        - feedback: Noto'g'ri. "Ko'pburchak chizish" chaqirishlari o'rtasida sikl
+            90 darajaga buriladi.
+          text: Rassom to'rt kvadratni bir-birining ustiga chizadi.
+        questions:
+        - text: '"Run" tugmasini bosganingizda nima bo‘ladi?'
+      coursee_prediction_artistfunction22022_2023:
         answers:
         - feedback: Noto'g'ri. Siklda "ko'pburchaklar qatori" o'rniga "ko'pburchak
             chizish" funksiyasi ishlatiladi.
@@ -9619,6 +10238,42 @@ uz-UZ:
           text: Rassom to'rt kvadratni bir-birining ustiga chizadi.
         questions:
         - text: '"Run" tugmasini bosganingizda nima bo‘ladi?'
+      csc_animal_adaptations_predict:
+        answers:
+        - {}
+        - correct: true
+          feedback: To‘g’ri!
+        - {}
+        - {}
+        questions:
+        - {}
+      csc_ecosystems_matching_cfu:
+        answers:
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+      csc_ecosystems_matching_conditionals:
+        answers:
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+      csc_ecosystems_matching_events:
+        answers:
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+      csc_timecapsule_info_2023:
+        content1: tafsilotlar bu yerda
       csd-post-survey-2017-q11_2018:
         answers:
         - correct: true
@@ -12773,6 +13428,12 @@ uz-UZ:
           # Super raqamli fuqaro
 
           ## Kiberbullingga duch kelsak, qanday qilib unga qarshi kurashimiz mumkin?
+      csf_be_a_super_digital_citizen2022_2023:
+        content1: tafsilotlar bu yerda
+        markdown: |-
+          # Super raqamli fuqaro
+
+          ## Kiberbullingga duch kelsak, qanday qilib unga qarshi kurashimiz mumkin?
       csf_be_a_super_digital_citizen_2021:
         content1: tafsilotlar bu yerda
         markdown: |-
@@ -12785,6 +13446,11 @@ uz-UZ:
 
           ## Raqamli izingizda qanday ma'lumotlar bo‘lishi mumkin?
       csf_digital_trails2022:
+        markdown: |-
+          # Raqamli izdan boring
+
+          ## Raqamli izingizda qanday ma'lumotlar bo‘lishi mumkin?
+      csf_digital_trails2022_2023:
         markdown: |-
           # Raqamli izdan boring
 
@@ -12809,6 +13475,20 @@ uz-UZ:
 
           ![](https://images.code.org/bfa69295fbf33c77ecdeb79b5498d8f7-image-1584751340896.png)
       csf_password_power-up2022:
+        content1: tafsilotlar bu yerda
+        markdown: |
+          #  Parolingizni kuchaytiring
+
+          ## Parolni eslab qolish bo'yicha maslahatlar
+
+          * Parolingizni esda qolarli **ibora** bilan boshlang.
+          * Parolingizni faqat sizning **ota-onangiz** bilishi kerak.
+          * Parolingizda hech qachon **shaxsiy** ma'lumotlarini ishlatmang.
+          * Kamida **sakkizta** belgidan iborat parollar tuzing.
+          * Parolingizda ham harflar, ham raqamlar va ** belgilar ** bo‘lsin.
+
+          ![](https://images.code.org/bfa69295fbf33c77ecdeb79b5498d8f7-image-1584751340896.png)
+      csf_password_power-up2022_2023:
         content1: tafsilotlar bu yerda
         markdown: |
           #  Parolingizni kuchaytiring
@@ -12848,6 +13528,12 @@ uz-UZ:
           bo‘lsa, nima qilish kerak?\n\n* **S**tep away - to‘xta.\n* **T**ell a trusted
           adult - ishonchli kattalarga ayt.\n* **O**K sites first - yaxshi saytlarga
           kir.\n* **P**ause and think online - onlayn bo‘lganda o‘ylab ish tut.\n\n![](https://images.code.org/f3e4987a130b27f7b589d7829b753aac-image-1584750971069.png)"
+      csf_putting_a_stop_to_online_meanness2022_2023:
+        content1: tafsilotlar bu yerda
+        markdown: "# Nopoklikka STOP \n\n## Agar kimdir sizga Internetda yomon munosabatda
+          bo‘lsa, nima qilish kerak?\n\n* **S**tep away - to‘xta.\n* **T**ell a trusted
+          adult - ishonchli kattalarga ayt.\n* **O**K sites first - yaxshi saytlarga
+          kir.\n* **P**ause and think online - onlayn bo‘lganda o‘ylab ish tut.\n\n![](https://images.code.org/f3e4987a130b27f7b589d7829b753aac-image-1584750971069.png)"
       csf_putting_a_stop_to_online_meanness_2021:
         content1: tafsilotlar bu yerda
         markdown: "# Nopoklikka STOP \n\n## Agar kimdir sizga Internetda yomon munosabatda
@@ -12860,6 +13546,11 @@ uz-UZ:
 
           ## Qanday qilib onlayn tarzda xavfsiz joylarga boriladi?
       csf_safety_in_my_online_neighborhood2022:
+        markdown: |-
+          # Mening onlayn mahallam
+
+          ## Qanday qilib onlayn tarzda xavfsiz joylarga boriladi?
+      csf_safety_in_my_online_neighborhood2022_2023:
         markdown: |-
           # Mening onlayn mahallam
 
@@ -14381,10 +15072,17 @@ uz-UZ:
       express_EOC2022:
         description: Siz E kursini yakunladingiz! Endi ijod qilish uchun loyiha tanlang.
         display_name: End of Course Project
+      express_EOC2022_2023:
+        description: Siz E kursini yakunladingiz! Endi ijod qilish uchun loyiha tanlang.
+        display_name: End of Course Project
       express_EOC_2021:
         description: Siz E kursini yakunladingiz! Endi ijod qilish uchun loyiha tanlang.
         display_name: End of Course Project
       express_EOC_examples2022:
+        description: Siz yakuniy loyihangizni boshlamoqchisiz. Ishni boshlashdan oldin,
+          namunali loyihalarni ko'rib chiqishga vaqt ajrating.
+        display_name: Loyiha namunalari
+      express_EOC_examples2022_2023:
         description: Siz yakuniy loyihangizni boshlamoqchisiz. Ishni boshlashdan oldin,
           namunali loyihalarni ko'rib chiqishga vaqt ajrating.
         display_name: Loyiha namunalari
@@ -14427,6 +15125,24 @@ uz-UZ:
         - text: Quyidagi kodga diqqat bilan qarang. Agar kod oxirigacha ishlasa (xatolarni
             hisobga olmasa) Laurel qancha xazina to‘playdi?
       grade2_multi_collector_A_predict12022:
+        answers:
+        - feedback: Noto‘g’ri. Laurel xazina yo‘q joyda xazina to‘plashga harakat
+            qiladi va bu xatoga olib keladi.
+          text: Laurel ushbu kod yordamida 4 ta xazina yig’adi.
+        - correct: true
+          feedback: To‘g’ri!
+          text: Laurel will try to collect treasure where there is not any and it
+            causes an error.
+        - feedback: Noto‘g’ri. Laurel xazina yo‘q joyda xazina to‘plashga harakat
+            qiladi va bu xatoga olib keladi.
+          text: Laurel barcha xazinalarni to‘playdi.
+        - feedback: Noto‘g’ri. Laurel xazina yo‘q joyda xazina to‘plashga harakat
+            qiladi va bu xatoga olib keladi.
+          text: Laurel ushbu kod yordamida 1 ta xazina yig’adi.
+        questions:
+        - text: Ushbu kodni diqqat bilan ko'rib chiqing. Sizningcha, dastur ishga
+            tushganda nima bo'ladi?
+      grade2_multi_collector_A_predict12022_2023:
         answers:
         - feedback: Noto‘g’ri. Laurel xazina yo‘q joyda xazina to‘plashga harakat
             qiladi va bu xatoga olib keladi.

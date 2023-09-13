@@ -1166,6 +1166,614 @@
           "word": "Hodisa",
           "definition": "Biror narsa sodir bo‘lishiga olib keladigan harakat."
         },
+        "code/csc-adaptations/2023": {
+          "word": "Kod"
+        },
+        "event/csc-adaptations/2023": {
+          "word": "Hodisa"
+        },
+        "behavior/csc-adaptations/2023": {
+          "word": "Harakatlar/O‘zini tutish"
+        },
+        "event/csc-bookcovers/2023": {
+          "word": "Hodisa",
+          "definition": "Biror narsa sodir bo‘lishiga olib keladigan harakat."
+        },
+        "program/csc-bookcovers/2023": {
+          "word": "Dastur"
+        },
+        "prompt/csc-bookcovers/2023": {
+          "word": "Tez",
+          "definition": "Kompyuter ekranidagi foydalanuvchidan kirishni kutadigan xabar."
+        },
+        "sprite/csc-bookcovers/2023": {
+          "word": "Sprait",
+          "definition": "Ekrandagi grafika; joylashuv, harakat va tashqi ko‘rinish kabi xususiyatlarga ega bo‘ladi."
+        },
+        "code/csc-ecosystems/2023": {
+          "word": "Kod"
+        },
+        "condition/csc-ecosystems/2023": {
+          "word": "Shart"
+        },
+        "conditionals/csc-ecosystems/2023": {
+          "word": "Shartli bayonotlar"
+        },
+        "event/csc-ecosystems/2023": {
+          "word": "Hodisa"
+        },
+        "variable/csc-ecosystems/2023": {
+          "word": "O‘zgaruvchi"
+        },
+        "energy/csc-ecosystems/2023": {
+          "word": "Energiya"
+        },
+        "code/csc-mappinglandmarks/2023": {
+          "word": "Kod"
+        },
+        "event/csc-mappinglandmarks/2023": {
+          "word": "Hodisa",
+          "definition": "Biror narsa sodir bo‘lishiga olib keladigan harakat."
+        },
+        "sprite/csc-mappinglandmarks/2023": {
+          "word": "Sprait"
+        },
+        "map/csc-mappinglandmarks/2023": {
+          "word": "Xarita"
+        },
+        "artist/csc-starquilts/2023": {
+          "word": "Rassom"
+        },
+        "loop/csc-starquilts/2023": {
+          "word": "Sikl"
+        },
+        "comments/csc-starquilts/2023": {
+          "word": "Fikrlar"
+        },
+        "event/csc-timecapsule/2023": {
+          "word": "Hodisa",
+          "definition": "Biror narsa sodir bo‘lishiga olib keladigan harakat."
+        },
+        "sprite/csc-timecapsule/2023": {
+          "word": "Sprait"
+        },
+        "code/poetry/2023": {
+          "word": "Kod"
+        },
+        "event/poetry/2023": {
+          "word": "Hodisa",
+          "definition": "Biror narsa sodir bo‘lishiga olib keladigan harakat."
+        },
+        "program/poetry/2023": {
+          "word": "Dastur"
+        },
+        "algorithm/coursea/2023": {
+          "word": "Algoritm",
+          "definition": "Biror masalani yechish uchun qadamlar ro‘yxati."
+        },
+        "debugging/coursea/2023": {
+          "word": "Nosozliklarni bartaraf etish (Debugging)",
+          "definition": "Biron algoritm yoki dasturdagi muammolarni topish va to‘g‘rilash."
+        },
+        "program/coursea/2023": {
+          "word": "Dastur",
+          "definition": "mashina tomonidan ishlatsa bo‘ladigan biror narsaning kodini yozishda ishlatiladigan algoritm."
+        },
+        "click/coursea/2023": {
+          "word": "Klik",
+          "definition": "Sichqoncha tugmasini bosish"
+        },
+        "double_click/coursea/2023": {
+          "word": "Double-Click",
+          "definition": "Sichqoncha tugmachasini juda tez bosish"
+        },
+        "drag/coursea/2023": {
+          "word": "Drag (Sudrash)",
+          "definition": "Sichqoncha tugmachasini bosing va sichqonchani yangi joyga olib bormaguncha bosib turing"
+        },
+        "drop/coursea/2023": {
+          "word": "Tashlash",
+          "definition": "Sichqoncha tugmachasini bo‘shatib, sudrab borilgan narsani \"qo‘yib yuborish\""
+        },
+        "bug/coursea/2023": {
+          "word": "Bag",
+          "definition": "Dasturning xato yoki kutilgandek ishlamaydigan joyi. "
+        },
+        "programming/coursea/2023": {
+          "word": "Dasturlash (Programming)",
+          "definition": "Dastur yaratish san'ati."
+        },
+        "loop/coursea/2023": {
+          "word": "Sikl",
+          "definition": "Biror narsani qayta-qayta bajarish."
+        },
+        "repeat/coursea/2023": {
+          "word": "Takrorlash (Repeat)",
+          "definition": "Biror nimani takroran bajarish."
+        },
+        "event/coursea/2023": {
+          "word": "Hodisa",
+          "definition": "Biror narsa sodir bo‘lishiga olib keladigan harakat."
+        },
+        "algorithm/courseb/2023": {
+          "word": "Algoritm",
+          "definition": "Biror masalani yechish uchun qadamlar ro‘yxati."
+        },
+        "bug/courseb/2023": {
+          "word": "Bag",
+          "definition": "Dasturning xato yoki kutilgandek ishlamaydigan joyi. "
+        },
+        "debugging/courseb/2023": {
+          "word": "Nosozliklarni bartaraf etish (Debugging)",
+          "definition": "Biron algoritm yoki dasturdagi muammolarni topish va to‘g‘rilash."
+        },
+        "click/courseb/2023": {
+          "word": "Klik",
+          "definition": "Sichqoncha tugmasini bosish"
+        },
+        "double_click/courseb/2023": {
+          "word": "Double-Click",
+          "definition": "Sichqoncha tugmachasini juda tez bosish"
+        },
+        "drag/courseb/2023": {
+          "word": "Drag (Sudrash)",
+          "definition": "Sichqoncha tugmachasini bosing va sichqonchani yangi joyga olib bormaguncha bosib turing"
+        },
+        "drop/courseb/2023": {
+          "word": "Tashlash",
+          "definition": "Sichqoncha tugmachasini bo‘shatib, sudrab borilgan narsani \"qo‘yib yuborish\""
+        },
+        "program/courseb/2023": {
+          "word": "Dastur",
+          "definition": "mashina tomonidan ishlatsa bo‘ladigan biror narsaning kodini yozishda ishlatiladigan algoritm."
+        },
+        "programming/courseb/2023": {
+          "word": "Dasturlash (Programming)",
+          "definition": "Dastur yaratish san'ati."
+        },
+        "persistence/courseb/2023": {
+          "word": "Qat'iylik",
+          "definition": "Biror narsa juda qiyin bo‘lsa ham, qayta-qayta yechishga urinish."
+        },
+        "loop/courseb/2023": {
+          "word": "Sikl",
+          "definition": "Biror narsani qayta-qayta bajarish."
+        },
+        "repeat/courseb/2023": {
+          "word": "Takrorlash (Repeat)",
+          "definition": "Biror nimani takroran bajarish."
+        },
+        "event/courseb/2023": {
+          "word": "Hodisa",
+          "definition": "Biror narsa sodir bo‘lishiga olib keladigan harakat."
+        },
+        "algorithm/coursec/2023": {
+          "word": "Algoritm",
+          "definition": "Biror masalani yechish uchun qadamlar ro‘yxati."
+        },
+        "bug/coursec/2023": {
+          "word": "Bag",
+          "definition": "Dasturning xato yoki kutilgandek ishlamaydigan joyi. "
+        },
+        "debugging/coursec/2023": {
+          "word": "Nosozliklarni bartaraf etish (Debugging)",
+          "definition": "Biron algoritm yoki dasturdagi muammolarni topish va to‘g‘rilash."
+        },
+        "program/coursec/2023": {
+          "word": "Dastur",
+          "definition": "mashina tomonidan ishlatsa bo‘ladigan biror narsaning kodini yozishda ishlatiladigan algoritm."
+        },
+        "sequencing/coursec/2023": {
+          "word": "Sequencing",
+          "definition": "Kompyuter buyruqlarni o‘qishi uchun buyruqlarni to‘g‘ri tartibda qo‘yish."
+        },
+        "persistence/coursec/2023": {
+          "word": "Qat'iylik",
+          "definition": "Taslim bo'lmaslik."
+        },
+        "programming/coursec/2023": {
+          "word": "Dasturlash (Programming)",
+          "definition": "Dastur yaratish san'ati."
+        },
+        "angle/coursec/2023": {
+          "word": "Burchak",
+          "definition": "-   **Burchak** - Shaklning ikki tomoni birikadigan joyi, darajasi bilan o'lchanadi"
+        },
+        "loop/coursec/2023": {
+          "word": "Sikl",
+          "definition": "Biror narsani qayta-qayta bajarish."
+        },
+        "repeat/coursec/2023": {
+          "word": "Takrorlash (Repeat)",
+          "definition": "Biror nimani takroran bajarish."
+        },
+        "event/coursec/2023": {
+          "word": "Hodisa",
+          "definition": "Biror narsa sodir bo‘lishiga olib keladigan harakat."
+        },
+        "data/coursec/2023": {
+          "word": "Maʼlumotlar"
+        },
+        "binary/coursec/2023": {
+          "word": "Binarli",
+          "definition": "Faqat ikki xil qiymatdan foydalangan holda ma'lumotni tasvirlash usuli."
+        },
+        "algorithm/coursed/2023": {
+          "word": "Algoritm",
+          "definition": "Biror masalani yechish uchun qadamlar ro‘yxati."
+        },
+        "program/coursed/2023": {
+          "word": "Dastur",
+          "definition": "mashina tomonidan ishlatsa bo‘ladigan biror narsaning kodini yozishda ishlatiladigan algoritm."
+        },
+        "bug/coursed/2023": {
+          "word": "Bag",
+          "definition": "Dasturning xato yoki kutilgandek ishlamaydigan joyi. "
+        },
+        "debugging/coursed/2023": {
+          "word": "Nosozliklarni bartaraf etish (Debugging)",
+          "definition": "Biron algoritm yoki dasturdagi muammolarni topish va to‘g‘rilash."
+        },
+        "loop/coursed/2023": {
+          "word": "Sikl",
+          "definition": "Biror narsani qayta-qayta bajarish."
+        },
+        "programming/coursed/2023": {
+          "word": "Dasturlash (Programming)",
+          "definition": "Dastur yaratish san'ati."
+        },
+        "frustrated/coursed/2023": {
+          "word": "Umidsizlik",
+          "definition": "Biror narsa siz xohlagan darajada emasligi sababli bezovtalanish yoki g‘azablanish."
+        },
+        "persistence/coursed/2023": {
+          "word": "Qat'iylik",
+          "definition": "Biror narsa juda qiyin bo‘lsa ham, qayta-qayta yechishga urinish."
+        },
+        "event/coursed/2023": {
+          "word": "Hodisa",
+          "definition": "Biror narsa sodir bo‘lishiga olib keladigan harakat."
+        },
+        "code/coursed/2023": {
+          "definition": "(fe'l) kod yozish, kompyuter uchun buyruqlar yozish."
+        },
+        "repeat/coursed/2023": {
+          "word": "Takrorlash (Repeat)",
+          "definition": "Biror nimani takroran bajarish."
+        },
+        "command/coursed/2023": {
+          "word": "Buyruq (Command)",
+          "definition": "Kompyuter uchun ko‘rsatma. Birlashtirilgan ko‘plab buyruqlar algoritmlar va kompyuter dasturlarini tashkil qiladi."
+        },
+        "conditionals/coursed/2023": {
+          "word": "Shartli bayonotlar",
+          "definition": "Faqat ma'lum shartlar to'g'ri bo'lganda ishlaydigan bayonotlar."
+        },
+        "pseudocode/coursed/2023": {
+          "word": "psevdokod",
+          "definition": "Algoritmdagi qadamlarning oddiy til tavsifi"
+        },
+        "condition/coursed/2023": {
+          "word": "Shart",
+          "definition": "Dastur biror narsa amalga oshirishdan oldin uning to'g'riligini tekshiradi."
+        },
+        "while_loop/coursed/2023": {
+          "word": "While (...guncha) sikli",
+          "definition": "Unda berilgan shart haqiqat bo‘lmaguncha bajariladigan sikl."
+        },
+        "until/coursed/2023": {
+          "word": "...gacha (Until)",
+          "definition": "Bu buyruq biror nimani unda berilgan shart haqiqat bo‘lmaguncha bajarishni aytadi. "
+        },
+        "behavior/coursee/2023": {
+          "word": "Harakatlar/O‘zini tutish",
+          "definition": "Sprayt to‘xtash buyrug‘i berilmaguncha qiladigan amal. "
+        },
+        "sprite/coursee/2023": {
+          "word": "Sprait",
+          "definition": "Ekrandagi grafika; joylashuv, harakat va tashqi ko‘rinish kabi xususiyatlarga ega bo‘ladi."
+        },
+        "loop/coursee/2023": {
+          "word": "Sikl",
+          "definition": "Biror narsani qayta-qayta bajarish."
+        },
+        "repeat/coursee/2023": {
+          "word": "Takrorlash (Repeat)",
+          "definition": "Biror nimani takroran bajarish."
+        },
+        "function/coursee/2023": {
+          "word": "Funksiya"
+        },
+        "condition/coursee/2023": {
+          "word": "Shart"
+        },
+        "conditionals/coursee/2023": {
+          "word": "Shartli bayonotlar",
+          "definition": "Faqat ma'lum shartlar to'g'ri bo'lganda ishlaydigan bayonotlar."
+        },
+        "while_loop/coursee/2023": {
+          "word": "While (...guncha) sikli",
+          "definition": "Unda berilgan shart haqiqat bo‘lmaguncha bajariladigan sikl."
+        },
+        "copyright/coursee/2023": {
+          "word": "Mualliflik huquqi",
+          "definition": "adabiy, badiiy yoki musiqiy materiallarni chop etish, nashr etish, ijro etish, videoga tushirish yoki yozib olish va boshqalarga ham shu imkoniyatlarni beradigan eksklyuziv qonuniy huquq."
+        },
+        "define/coursee/2023": {
+          "word": "Aniqlash",
+          "definition": "Siz hal qilmoqchi bo‘lgan muammolar tafsilotlarini aniqlash"
+        },
+        "prepare/coursee/2023": {
+          "word": "Tayyorlanish",
+          "definition": "Siz qilmoqchi bo‘lgan faoliyat uchun materiallarni o‘rganish, rejalashtirish va qo‘lga kiritish jarayoni"
+        },
+        "reflect/coursee/2023": {
+          "word": "O‘ylamoq",
+          "definition": "Kelajakda natijani yaxshilash niyatida biron bir narsani yaxshilab o‘ylab ko‘rish"
+        },
+        "try/coursee/2023": {
+          "word": "Urinish (Try)",
+          "definition": "Biror nima qilishga urinish"
+        },
+        "sprite/coursef/2023": {
+          "word": "Sprait",
+          "definition": "Ekrandagi grafika; joylashuv, harakat va tashqi ko‘rinish kabi xususiyatlarga ega bo‘ladi."
+        },
+        "user/coursef/2023": {
+          "word": "Foydalanuvchi",
+          "definition": "Ob'ektni, shu jumladan dasturiy ta'minot va apparatni ishlatadigan kishi."
+        },
+        "algorithm/coursef/2023": {
+          "word": "Algoritm",
+          "definition": "Vazifani bajarish uchun qadamlar ro'yxati."
+        },
+        "behavior/coursef/2023": {
+          "word": "Harakatlar/O‘zini tutish",
+          "definition": "Sprite laboratoriyasida sprayt to'xtatish buyurilmaguncha doimiy ravishda bajaradigan harakat."
+        },
+        "program/coursef/2023": {
+          "word": "Dastur",
+          "definition": "mashina tomonidan ishlatsa bo‘ladigan biror narsaning kodini yozishda ishlatiladigan algoritm."
+        },
+        "event/coursef/2023": {
+          "word": "Hodisa",
+          "definition": "Biror narsa sodir bo‘lishiga olib keladigan harakat."
+        },
+        "variable/coursef/2023": {
+          "word": "O‘zgaruvchi",
+          "definition": "Dasturda ishlatilgan biror ma'lumot yoki qiymat uchun nom."
+        },
+        "prompt/coursef/2023": {
+          "word": "Tez",
+          "definition": "Kompyuter ekranidagi foydalanuvchidan kirishni kutadigan xabar."
+        },
+        "input/coursef/2023": {
+          "word": "Kiritish",
+          "definition": "Kompyuterlar foydalanuvchilardan oladigan ma'lumot."
+        },
+        "machine_learning/coursef/2023": {
+          "word": "Mashinalar o‘rganishi",
+          "definition": "Kompyuterlar aniq dasturlashtirilmasdan naqshlarni tanishi va qarorlarni qabul qila olishi uslublari"
+        },
+        "dns/coursef/2023": {
+          "word": "DNS",
+          "definition": "domen nomlari tizimi uchun qisqartma, ushbu tizim domen nomlarini (masalan.com.com) IP-manzillarga o‘giradi (93.184.216.34 kabi)"
+        },
+        "dsl_cable/coursef/2023": {
+          "word": "DSL/Cable",
+          "definition": "Telefon yoki televizion kabellar yordamida ma'lumot uzatish usuli."
+        },
+        "fiber_optic_cable/coursef/2023": {
+          "word": "Optik kabel (Fiber Optic Cable)",
+          "definition": "Axborotni uzatish uchun yorug‘likdan foydalanadigan aloqa"
+        },
+        "internet/coursef/2023": {
+          "word": "Internet",
+          "definition": "Bir-biriga ulangan kompyuter va serverlar to‘plami."
+        },
+        "ip_address/coursef/2023": {
+          "word": "IP manzil",
+          "definition": "Internetga ulangan har qanday elementga tayinlangan son."
+        },
+        "packets/coursef/2023": {
+          "word": "Paketlar",
+          "definition": "Katta hajmli ma'lumotlardan ehtiyotkorlik bilan shakllangan kichik ma'lumotlar qismlari."
+        },
+        "servers/coursef/2023": {
+          "word": "Serverlar",
+          "definition": "Faqat boshqa kompyuterlarga ma'lumot taqdim qilish uchun xizmat qiladigan kompyuter."
+        },
+        "url/coursef/2023": {
+          "word": "URL",
+          "definition": "Biror saytning eslab qolish oson bo‘lgan manzili (masalan, www.code.org)."
+        },
+        "wi_fi/coursef/2023": {
+          "word": "Wi-Fi",
+          "definition": "Simsiz tarzda radio to‘lqinlar orqali ma'lumot uzatish usuli."
+        },
+        "define/coursef/2023": {
+          "word": "Aniqlash",
+          "definition": "Siz hal qilmoqchi bo‘lgan muammolar tafsilotlarini aniqlash"
+        },
+        "prepare/coursef/2023": {
+          "word": "Tayyorlanish",
+          "definition": "Siz qilmoqchi bo‘lgan faoliyat uchun materiallarni o‘rganish, rejalashtirish va qo‘lga kiritish jarayoni"
+        },
+        "reflect/coursef/2023": {
+          "word": "O‘ylamoq",
+          "definition": "Kelajakda natijani yaxshilash niyatida biron bir narsani yaxshilab o‘ylab ko‘rish"
+        },
+        "try/coursef/2023": {
+          "word": "Urinish (Try)",
+          "definition": "Biror nima qilishga urinish"
+        },
+        "algorithm/express/2023": {
+          "word": "Algoritm",
+          "definition": "Biror masalani yechish uchun qadamlar ro‘yxati."
+        },
+        "bug/express/2023": {
+          "word": "Bag",
+          "definition": "Dasturning xato yoki kutilgandek ishlamaydigan joyi. "
+        },
+        "debugging/express/2023": {
+          "word": "Nosozliklarni bartaraf etish (Debugging)",
+          "definition": "Biron algoritm yoki dasturdagi muammolarni topish va to‘g‘rilash."
+        },
+        "sequencing/express/2023": {
+          "word": "Sequencing",
+          "definition": "Kompyuter buyruqlarni o‘qishi uchun buyruqlarni to‘g‘ri tartibda qo‘yish."
+        },
+        "program/express/2023": {
+          "word": "Dastur",
+          "definition": "mashina tomonidan ishlatsa bo‘ladigan biror narsaning kodini yozishda ishlatiladigan algoritm."
+        },
+        "programming/express/2023": {
+          "word": "Dasturlash (Programming)",
+          "definition": "Dastur yaratish san'ati."
+        },
+        "behavior/express/2023": {
+          "word": "Harakatlar/O‘zini tutish",
+          "definition": "Sprayt to‘xtash buyrug‘i berilmaguncha qiladigan amal. "
+        },
+        "sprite/express/2023": {
+          "word": "Sprait",
+          "definition": "Ekrandagi grafika; joylashuv, harakat va tashqi ko‘rinish kabi xususiyatlarga ega bo‘ladi."
+        },
+        "event/express/2023": {
+          "word": "Hodisa",
+          "definition": "Biror narsa sodir bo‘lishiga olib keladigan harakat."
+        },
+        "code/express/2023": {
+          "definition": "kod yozish yoki kompyuter uchun ko'rsatmalar yozish uchun."
+        },
+        "loop/express/2023": {
+          "word": "Sikl",
+          "definition": "Biror narsani qayta-qayta bajarish."
+        },
+        "repeat/express/2023": {
+          "word": "Takrorlash (Repeat)",
+          "definition": "Biror nimani takroran bajarish."
+        },
+        "command/express/2023": {
+          "word": "Buyruq (Command)",
+          "definition": "Kompyuter uchun ko‘rsatma. Birlashtirilgan ko‘plab buyruqlar algoritmlar va kompyuter dasturlarini tashkil qiladi."
+        },
+        "condition/express/2023": {
+          "word": "Shart",
+          "definition": "Dastur biror narsa amalga oshirishdan oldin uning to'g'riligini tekshiradi."
+        },
+        "conditionals/express/2023": {
+          "word": "Shartli bayonotlar",
+          "definition": "Faqat ma'lum shartlar to'g'ri bo'lganda ishlaydigan bayonotlar."
+        },
+        "while_loop/express/2023": {
+          "word": "While (...guncha) sikli",
+          "definition": "Unda berilgan shart haqiqat bo‘lmaguncha bajariladigan sikl."
+        },
+        "until/express/2023": {
+          "word": "...gacha (Until)",
+          "definition": "Bu buyruq biror nimani unda berilgan shart haqiqat bo‘lmaguncha bajarishni aytadi. "
+        },
+        "function/express/2023": {
+          "word": "Funksiya",
+          "definition": "Siz osongina qayta-qayta chaqirishingiz mumkin bo‘lgan kod parchasi."
+        },
+        "prompt/express/2023": {
+          "word": "tezkor",
+          "definition": "Kompyuter ekranidagi foydalanuvchidan kirishni kutadigan xabar."
+        },
+        "variable/express/2023": {
+          "word": "O‘zgaruvchi",
+          "definition": "Dasturda ishlatilgan biror ma'lumot yoki qiymat uchun nom."
+        },
+        "for_loop/express/2023": {
+          "word": "For sikli",
+          "definition": "Boshlanish, tugash va o‘sish qadami (oralig‘i) oldindan belgilangan sikllar."
+        },
+        "define/express/2023": {
+          "word": "Aniqlash",
+          "definition": "Siz hal qilmoqchi bo‘lgan muammolar tafsilotlarini aniqlash"
+        },
+        "prepare/express/2023": {
+          "word": "Tayyorlanish",
+          "definition": "Siz qilmoqchi bo‘lgan faoliyat uchun materiallarni o‘rganish, rejalashtirish va qo‘lga kiritish jarayoni"
+        },
+        "reflect/express/2023": {
+          "word": "O‘ylamoq",
+          "definition": "Kelajakda natijani yaxshilash niyatida biron bir narsani yaxshilab o‘ylab ko‘rish"
+        },
+        "try/express/2023": {
+          "word": "Urinish (Try)",
+          "definition": "Biror nima qilishga urinish"
+        },
+        "click/pre-express/2023": {
+          "word": "Klik",
+          "definition": "Sichqoncha tugmasini bosish"
+        },
+        "double_click/pre-express/2023": {
+          "word": "Double-Click",
+          "definition": "Sichqoncha tugmachasini juda tez bosish"
+        },
+        "drag/pre-express/2023": {
+          "word": "Drag (Sudrash)",
+          "definition": "Sichqoncha tugmachasini bosing va sichqonchani yangi joyga olib bormaguncha bosib turing"
+        },
+        "drop/pre-express/2023": {
+          "word": "Tashlash",
+          "definition": "Sichqoncha tugmachasini bo‘shatib, sudrab borilgan narsani \"qo‘yib yuborish\""
+        },
+        "algorithm/pre-express/2023": {
+          "word": "Algoritm",
+          "definition": "Biror masalani yechish uchun qadamlar ro‘yxati."
+        },
+        "bug/pre-express/2023": {
+          "word": "Bag",
+          "definition": "Dasturning xato yoki kutilgandek ishlamaydigan joyi. "
+        },
+        "debugging/pre-express/2023": {
+          "word": "Nosozliklarni bartaraf etish (Debugging)",
+          "definition": "Biron algoritm yoki dasturdagi muammolarni topish va to‘g‘rilash."
+        },
+        "program/pre-express/2023": {
+          "word": "Dastur",
+          "definition": "mashina tomonidan ishlatsa bo‘ladigan biror narsaning kodini yozishda ishlatiladigan algoritm."
+        },
+        "programming/pre-express/2023": {
+          "word": "Dasturlash (Programming)",
+          "definition": "Dastur yaratish san'ati."
+        },
+        "persistence/pre-express/2023": {
+          "word": "Qat'iylik",
+          "definition": "Biror narsa juda qiyin bo‘lsa ham, qayta-qayta yechishga urinish."
+        },
+        "loop/pre-express/2023": {
+          "word": "Sikl",
+          "definition": "Biror narsani qayta-qayta bajarish."
+        },
+        "repeat/pre-express/2023": {
+          "word": "Takrorlash (Repeat)",
+          "definition": "Biror nimani takroran bajarish."
+        },
+        "event/pre-express/2023": {
+          "word": "Hodisa",
+          "definition": "Biror narsa sodir bo‘lishiga olib keladigan harakat."
+        },
+        "machine_learning/how-ai-works/2023": {
+          "word": "Mashinalar o‘rganishi",
+          "definition": "Kompyuterlar aniq dasturlashtirilmasdan naqshlarni tanishi va qarorlarni qabul qila olishi uslublari"
+        },
+        "algorithm/how-ai-works/2023": {
+          "word": "Algoritm"
+        },
+        "network/how-ai-works/2023": {
+          "word": "Tarmoq"
+        },
+        "artificial_intelligence/how-ai-works/2023": {
+          "word": "Sun'iy Intellekt"
+        },
+        "ethics/how-ai-works/2023": {
+          "word": "Etika"
+        },
         "code/aquatic/unversioned": {
           "definition": "(fe'l) kod yozish, kompyuter uchun buyruqlar yozish."
         },

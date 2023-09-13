@@ -4936,6 +4936,874 @@
           "purpose": " Bu onlayn mashg‘ulotda, talabalar Play Labda hodisalardan qanday foydalanishni o‘rganishadi. Ular yo‘nalishli tugma bosilganda otliqni harakatlantirishni mashq qilib ko‘rish orqali boshlashadi va keyin tekinga o‘ynaladigan boshqotirma a’zosi sifatida bu kurs davomida o‘rgangan boshqa mahoratlari, jumladan ketma-ketliklar va sikllarni namoyish qilish imkoniyati bilan tugatishadi.",
           "student_overview": "Use events to create a story or make an interactive game."
         },
+        "coursea-2023/Safety in My Online Neighborhood": {
+          "name": "Mening onlayn atrofimda xavfsizlik",
+          "overview": "[![Common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nUshbu dars [Common Sense Education](https://www.commonsense.org/education/digital-citizenship/curriculum) tomonidan yaratilgan.\n\nInternetning kuchi o‘quvchilarga shaxsan ko‘rishlari mumkin bo‘lmagan joylarni ko‘rish va aylanish imkoniyatini beradi. Ammo, xuddi real dunyoda sayohat qilish kabi, Internetda sayohat qilishda ham xavfsiz bo‘lish muhim hisoblanadi. Ushbu virtual ekskursiyada bolalar onlayn sarguzashtlarda xavfsizlikni ta'minlash bilan shug‘ullanishlari mumkin.",
+          "preparation": "-   Ko'rsatma materiallarni ko'rish.\n-   Har bir o'quvchi uchun tarqatma materiallarni chop etish.\n-   (Ixtiyoriy) Sinfda taqdim etish uchun poster chop etish.",
+          "purpose": "Common Sense raqamli fuqarolik o'quv dasturi bolalar, ommaviy axborot vositalari va texnologiyalar bo'yicha so'nggi tadqiqotlarga asoslangan oltita asosiy mavzuga bag'ishlangan. Ushbu dars Maxfiylik va xavfsizlikka qaratilgan. Talabalar shaxsiy ma'lumotlarni qanday himoya qilishni o'rganadilar va o'zlari va boshqalarni himoya qilishlari uchun ma'lumotlarning maxfiyligi huquqlarini chuqurroq tushunadilar.",
+          "student_overview": "Xavfsiz onlayn aylanishni o'rganing"
+        },
+        "coursea-2023/Learn to Drag and Drop": {
+          "name": "Drag&Drop - Olib ko‘chirishni o‘rganish",
+          "overview": "Bu dars o‘quvchilarga ular kompyuter laboratoriyalariga kirganda nima kutishi kerakligi haqida o‘rgatadi. U ularga laboratoriya qonun-qoidalarini tanishtirish kabi qisqacha muhokama bilan boshlanadi, shunda ularda onlayin boshqotirmalarni yechishda kompyuterdan foydalanishda o‘sish kuzatiladi.",
+          "preparation": "-   Code.org saytida **\\*Qanday sinf bo'limini yaratish mumkin**-ni tomosha qiling - O'qituvchi videosi. Code.org saytida o'zingizning sinf bo'limingizni yarating va har bir talaba o'z paroli ko'rsatilgan kartaga ega ekanligiga ishonch hosil qiling.\n-   Talabalar 2-darsga o'z qurilmalaridan kira olishlariga ishonch hosil qiling. Talabalar juda tez oldinga siljishlariga yo'l qo'ymaslik uchun kelajakdagi darslarni yashirishni xohlaysizmi yoki yo'qligini o'ylab ko'ring.\n-   Maktab IT xodimidan kompyuter ish stoliga sinfingiz bo'limi uchun tezkor havolani qo'shishini so'rang.\n-   Common Sense Education veb-saytini ko'proq onlayn xavfsizlik mazmuni uchun ko'rib chiqing.",
+          "purpose": "Bu darsning asl maqsadi talabalarga komputer bilan ishlash tajribasiga erishishiga yordam berish. Bosish, ko‘chirib olish va ko‘chirib qo‘yish kabi eng asosiy funksiyalarini o‘tish orqali, biz sinfda kelajakdagi boshqotirmalar uchun yana ham tengroq shug‘ullanish maydoni yaratayapmiz. Bu dars yana mos komputer labaratoriyasi xatti-harakatlaini tanishtirish uchun ajoyib imkoniyat bilan ta’minlaydi.",
+          "student_overview": "Click and drag to finish the puzzles."
+        },
+        "coursea-2023/Happy Maps": {
+          "name": "Xursand Xaritalar",
+          "overview": "Bu kompyutersiz o‘tiladigan dars jamoalarga oddiy vazifa yuklaydi: \"flurb\"ni mevaga yetkazing. Talabalar ko‘rsatmalarni taqdim etilgan belgilarga tarjima qilish jarayonida aniq ko‘rsatmalar yozishni mashq qiladilar. Kodda muammolar tug‘ilsa, talabalar xatolikni topish uchun va yechim topish uchun ham birgalikda ishlashlari kerak bo‘ladi.",
+          "preparation": "-   2-3 guruhga bitta**\\\\ \\*Ish varag'i** va bitta**\\\\ \\*Manipulyatsiyalar** to'plamini chop eting.\n-   Har bir talabada aks ettirish jurnali borligiga ishonch hosil qiling.",
+          "purpose": "Agar talabalar ketma-ketlikda rejalashtirish va ushbu ketma-ketlikni mos dasturlash tiliga aylantira olish o‘rtasidagi farqni tushuna olsa, algoritmlardan dasturlashgacha bo‘lgan ko‘prik qisqa bo‘lishi mumkin. Bu mashg‘ulot talabalarga qisqa yo‘lda yozilgan kodlarni o‘qish va yozishga erishishda yordam beradi.",
+          "student_overview": "Write instructions to get the Flurb to the fruit."
+        },
+        "coursea-2023/Sequencing with Scrat": {
+          "name": "Sequencing with Scrat",
+          "overview": "Using Scrat from the Ice Age franchise, students will develop sequential algorithms to move a squirrel character from one side of a maze to the acorn at the other side. To do this they will stack code blocks together in a linear sequence.",
+          "preparation": "-   Happy Maps ko'prigi faoliyatida foydalanish uchun**\\\\ \\* Manipulyatsiyalar** dan yo'nalish bloklarini kesib oling.\n-   Har bir talabada aks ettirish jurnali borligiga ishonch hosil qiling..",
+          "purpose": "Bu darsda, talabalar biron komputer platformasida o‘zlarining debug qilish va dasturlash mahoratlarini oshiradilar. Bu boshqotirmalarning bo‘limlarga asoslangan shakli talabalarga sintaksisni mukammallashtirish haqida o‘ylamasdan ketma-ketlik va tushunchalar haqida o‘rganishga yordam beradi.",
+          "student_overview": "Program Scrat to reach the acorn."
+        },
+        "coursea-2023/Programming with Scrat": {
+          "name": "Programming with Scrat",
+          "overview": "Using characters from the Ice Age, students will develop sequential algorithms to move Scrat from one side of a maze to the acorn at the other side. To do this they will stack code blocks together in a linear sequence, making them move straight, turn left, or turn right.",
+          "preparation": "-   Sinfingiz uchun yuzaga kelishi mumkin bo'lgan muammoli joylarni topish uchun jumboqlarni o'ynang.\n-   (Ixtiyoriy) Sinfingiz bilan guruh bo'lib ishlash uchun bir nechta jumboqlarni tanlang.\n-   Har bir talabaning aks ettirish jurnali borligiga ishonch hosil qiling.",
+          "purpose": "Bu darsda, talabalar biron komputer platformasida o‘zlarining debug qilish va dasturlash mahoratlarini oshiradilar. Bu boshqotirmalarning bo‘limlarga asoslangan shakli talabalarga sintaksisni mukammallashtirish haqida o‘ylamasdan ketma-ketlik va tushunchalar haqida o‘rganishga yordam beradi.",
+          "student_overview": "Write programs to help Scrat reach the acorn."
+        },
+        "coursea-2023/Programming with Rey and BB-8": {
+          "name": "Rey va BB-8 bilan dasturlash",
+          "overview": "Ushbu darsda talabalar o'zlarining yangi dasturlash qobiliyatlaridan yanada murakkab usullarda BB-8 bilan murakkab kursni o'tish uchun foydalanadilar.",
+          "preparation": "-   Sinfingiz uchun yuzaga kelishi mumkin bo'lgan muammoli joylarni topish uchun ushbu darsga mos keladigan jumboqlarni o'ynang.\n-   Mulohaza qilish**\\\\ \\*CS asoslari Asosiy faoliyat bo'yicha maslahatlar - Dars tavsiyalari**.\n-   Har bir talabada aks ettirish jurnali borligiga ishonch hosil qiling.",
+          "purpose": "Bilimlarni hisobga olgan holda, ushbu dars talabalarga o'zlari etishtirgan ko'nikmalarni amalda qo'llash uchun yangi muhit yaratadi. _Star Wars_ muxlislari bu jumboqlarni ko'rganlarida quvonchga sakrashadi. Ushbu turkumdagi har bir jumboq ushbu kursning qolgan qismida foydalanadigan asosiy tushunchalarni chuqurroq tushunish uchun qo'shilgan.",
+          "student_overview": "Help BB-8 collect the scrap metal."
+        },
+        "coursea-2023/Happy Loops": {
+          "name": "Xursand sikllar",
+          "overview": "Bu mashg‘ulot Xursand Xaritalarga qayta tashrif buyuradi. Bu safar, talabalar ularni uzun kodlarni osonroq yo‘l bilan yozishga imkon beruvchi tuzilmalardan foydalanishni ko‘rishga yetaklaydigan kodlari bilan kattaroq va uzunroq boshqotirmalarni yechishadi.",
+          "preparation": "\\-\nsinf uchun ko'rsatish uchun**\\\\ \\*Worksheet** ni chop eting - 2-3 kishidan iborat har bir guruh uchun har biridan bittasini chop eting: **\\\\ \\*O'yin qismlari,\\\\ \\*XL ishchi varag'i va\\\\ \\*Bonus to'plami manipulyatsiyalari**.\n\n-   Har bir talabaning Reflection Journal mavjudligiga ishonch hosil qiling.",
+          "purpose": " Bu dars sikllar uchun tanishtiruv sifatida xizmat qiladi. Sikllar talabalarga qaytarilishi kerak bo‘lgan buyruqlarni guruhlash orqali ularning kodini osonlashtirish imkonini beradi. Talabalar sinfdoshlarining harakatlaridagi takrorlanishni payqash va buyruqlarni necha marta takrorlash kerakligini aniqlash orqali tanqidiy fikrlash qobiliyatlarini oshiradilar. \"Xursand Xaritalar\"ni yana bir marta ko‘rish orqali, talabalarda tartiblash eski tushunchalarni yangi, takrorlanuvchi sikllar tushunchasiga bog‘lash imkoni paydo bo‘ladi.",
+          "student_overview": "Help the Flurb solve bigger problems using loops."
+        },
+        "coursea-2023/Loops with Scrat": {
+          "name": "Loops with Scrat",
+          "overview": "\"Xursand sikllar\"dan takrorlanuvchi ko‘rsatmalar tushunchasini yaratgan holda, bu bosqichda Code.orgdagi yong‘oqni samaraliroq usulda yig‘ish uchun sikllardan foydalanish ko‘rsatiladi.",
+          "preparation": "-   Oldingi elektrdan uzilgan darsni ko'rib chiqing va o'quvchilarga nima uchun ilmoqlar ishlatilishini eslatish uchun savollar ishlab chiqing.\n-   (Ixtiyoriy) Sinfingiz bilan guruh bo'lib ishlash uchun bir nechta jumboqlarni tanlang.\n-   Isitish uchun qayta foydalanish uchun oldingi Happy Loops-dan materiallarni to'plang\n-   Har bir o'quvchining Reflection Journal borligiga ishonch hosil qiling.",
+          "purpose": "Ushbu darsda talabalar ko'chadan va ularni Blockly kodida qanday amalga oshirish haqida ko'proq bilib olishadi. Ko'chadan foydalanish dasturlashda muhim mahoratdir, chunki buyruqlarni qo'lda takrorlash zerikarli va samarasiz. Ushbu Code.org jumboqlari yordamida talabalar mavjud ko'chadan ko'rsatmalar qo'shishni, takrorlangan kodni ko'chadan to'plashni va takrorlanishi kerak bo'lgan naqshlarni tan olishni o'rganadilar.",
+          "student_overview": "Help Scrat cover more ground using loops."
+        },
+        "coursea-2023/Loops with Laurel": {
+          "name": "Laurel bilan sikllar",
+          "overview": "Bu darsda, talabalar sikllar tushunchasini o‘rganishda davom etishadi. Oldingi darsda, talabalar labirint bo‘yicha harkatlanish va hosilni yig‘ish orqali sikllar bilan tanishtirilgan edi. Bu yerda, sikllar ochiq g‘orlardagi xazinalarni yig‘ish uchun ishlatiladi.",
+          "preparation": "-   Sinfingiz uchun yuzaga kelishi mumkin bo'lgan muammoli joylarni topish uchun jumboqlarni o'ynang.\n-   (Ixtiyoriy) Sinfingiz bilan guruh bo'lib ishlash uchun bir nechta jumboqlarni tanlang.\n-   Ko'rib chiqing**\\\\ \\*CSF darslari tavsiyalari**\n-   Har bir talabaning aks ettirish jurnali borligiga ishonch hosil qiling",
+          "purpose": "Bu darsda talabalar sikllar bilan ko‘proq amaliy tajribaga ega bo‘ladilar va yangi bo‘lim 'xazinaga erishish' bilan tanishadilar. Ushbu bo‘lim, xuddi Terimchi loyihasidagi `pick corn`ga o‘xshab ishlaydi. Bu boshqotirmalar yana ham ochiqroq, ular bilan talabalar yakuniy yechimlarini yanada moslashuvchan qila oladi.",
+          "student_overview": "Help Laurel the adventurer collect the treasure underground."
+        },
+        "coursea-2023/Ocean Scene with Loops": {
+          "name": "Sikllar bilan okean manzarasi",
+          "overview": "Sikllar mavzusiga qaytgan holda, talabalar ko‘rsatmalarning oddiy ketma-ketligini takrorlash orqali rasmlar chizishni o‘rganishadi. Kompyuter bilan o‘tilgan oldingi darsda, sikllar labirintdan o‘tish va xazinani yig‘ish uchun foydalanilgan edi. Bu yerda, sikllar yordamida shakllar yaratilyapti. Bu bosqichning oxirida, talabalarga sikllardan foydalanib o‘z rasmlarini yaratish imkoniyati beriladi.",
+          "preparation": "-   Sinfingiz uchun yuzaga kelishi mumkin bo'lgan muammoli joylarni topish uchun jumboqlarni o'ynang.\n-   Ko'rib chiqish**\\\\ \\*CSF dars tavsiyalari**.\n-   Har bir talabaning aks ettirish jurnali borligiga ishonch hosil qiling.",
+          "purpose": "Ushbu dars looplar dasturlashda narsalarni qanday yaratishi mumkinligi haqida boshqacha nuqtai nazar beradi. Talabalar, shuningdek, “takrorlash” halqalari yordamisiz dastur qancha blokni talab qilishi mumkinligi sababli, bu erda loopsiz dasturlashning samarasizligi haqida ham fikr yuritishlari mumkin.",
+          "student_overview": "Use loops and patterns to finish the images."
+        },
+        "coursea-2023/The Big Event Jr": {
+          "name": "Katta hodisa Jr.",
+          "overview": "Hodisalar - oldindan yozilgan algoritmga interfaollik qo‘shishning ajoyib usuli. Ba'zan siz dasturingiz foydalanuvchi xohlagan vaqtda unga aniq javob bera olishini xohlaysiz. Hodisalar aynan shu uchun mo‘ljallangan.",
+          "preparation": "-   Loyihaga tayyorlaning**\\\\ \\*Controller Image**.\n-   Har bir talabaga bitta**\\\\ \\*Baholash** ni chop eting.\n-   Har bir talabaning aks ettirish jurnali borligiga ishonch hosil qiling.",
+          "purpose": "Bugungi kunda talabalar voqealarni harakatlardan ajratishni o'rganadilar. Talabalar qog'oz pultiga “tugma” bosish bilan mashg'ulotlarni to'xtatadilar. Ushbu hodisani ko'rganda, sinf o'ziga xos harakat bilan munosabatda bo'ladi. Voqealar dasturlashda keng qo'llaniladi va ushbu darsdan so'ng ularni osongina tanib olish kerak.",
+          "student_overview": "Move and shout when your teachers presses buttons on a giant remote."
+        },
+        "coursea-2023/Mini-Project: On the Move with Play Lab": {
+          "name": "Mini-loyiha: Play Lab bilan harakatda",
+          "overview": "Bu onlayn mashg‘ulotda, o‘quvchilar Play Labdagi hodisalardan qanday foydalanishni o‘rganish va ular animatsiyalashtirilgan o‘yinlar yaratishda o‘rgangan kod yozish mahoratlaridan foydalanish imkoniyatiga ega bo‘ladilar. Ijod qilish va Play Labda o‘z hikoyangizni yaratish vaqti keldi!",
+          "preparation": "-   Sinfingiz uchun mumkin bo'lgan muammoli joylarni topish uchun jumboqlarni o'ynang.\n-   (Ixtiyoriy) Sinfingiz bilan guruh bo'lib bajarish uchun bir nechta jumboqlarni tanlang.\n-   **\\*CSF darslari bo'yicha tavsiyalarni ko'rib chiqing**.\n-   Har bir o'quvchining aks ettirish jurnali borligiga ishonch hosil qiling.",
+          "purpose": "Bugun talabalar Play Labdan foydalanib hodisalar haqidagi tushunchalarini yanada rivojlantiradilar. Ko‘plab komputer daasturlarida hodisalar juda muhim hisoblanishadi. Bu mashg‘ulotda, talabalar hodisalardan biron obrazni ekran bo‘ylab harakatlantirishda, shovqin solishda va foydalanuvchi qanday boshlashiga qarab fonni o‘zgartirishda ishlatishadi.",
+          "student_overview": "O'z o'yiningiz yoki hikoyangizni yarating!"
+        },
+        "coursea-2023/End of Course Project": {
+          "name": "End of Course Project",
+          "overview": "Ushbu **loyiha** darsida talabalar ketma-ketlik va tsikllar haqida o‘rganganlarini Rassom bilan qo‘llashadi.",
+          "preparation": "-   O'quvchilarni ilhomlantirish uchun Rassom uchun o'z hikoyangizni oldindan yozing va kodlang!",
+          "purpose": "Ushbu dars talabalarga yangi informatika ko'nikmalaridan ijodiy foydalanish uchun oxirgi imkoniyatni beradi.",
+          "student_overview": "Rassom bilan voqeani aytib bering!"
+        },
+        "courseb-2023/Digital Trails": {
+          "name": "Raqamli izlar",
+          "overview": " [![sog'lom fikr ta'limi](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nUshbu dars dastlab Common Sense Education tomonidan yaratilgan. [Batafsil ma'lumot.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nInternetda qilayotgan ishlaringiz doimo Internetda qoladimi? Talabalar Internetda baham ko'radigan ma'lumotlar raqamli iz yoki “iz” qoldirishini bilib olishadi. Ular uni qanday boshqarishiga qarab, bu iz katta yoki kichik, zararli yoki foydali bo'lishi mumkin. Talabalar turli yo'llarni taqqoslaydilar va qanday ma'lumotlarni qoldirmoqchi ekanliklari haqida tanqidiy o'ylaydilar.",
+          "preparation": "-   O'quv materiallarini ko'rib chiqing.\n-   Har bir talaba uchun tarqatma material (lar) ni chop etish.",
+          "purpose": "Common Sense raqamli fuqarolik o'quv dasturi bolalar, ommaviy axborot vositalari va texnologiyalar bo'yicha so'nggi tadqiqotlarga asoslangan oltita asosiy mavzuga bag'ishlangan. Ushbu dars Digital Footprint & Identityga qaratilgan. Talabalar onlayn almashishning afzalliklari va xavflarini ko'rib chiqadilar va raqamli shaxsning o'zini his qilishiga, obro'siga va munosabatlariga qanday ta'sir qilishini o'rganadilar.",
+          "student_overview": "Learn about your digital footprint and how to stay safe when visiting websites. "
+        },
+        "courseb-2023/Move It, Move It": {
+          "name": "Move It, Move It (Harakatlan)",
+          "overview": "Ushbu dars o'quvchilarni ushbu kurs davomida duch keladigan kodlash mashqlariga ruhiy jihatdan tayyorlash uchun mo'ljallangan. Kichik jamoalarda talabalar jismoniy mashqlar yordamida sinfdoshlarini bir joydan boshqa joyga diqqat bilan qadam qo'yishni dasturlash uchun foydalanadilar ",
+          "preparation": "-   **\\\\ \\*O'qituvchi videosini tomosha qiling**\n-   Bitta**\\\\ \\*Ish varag'ining javob kaliti**\n-   bitta**\\\\ \\*Xarita faoliyati** va bitta**\\\\ \\*Ish varag'i** 2-3 talabadan iborat guruh uchun\n-   Yurish panjarasining qolgan qismini to'ldirish uchun bo'sh qog'ozlarni tayyorlang (har bir guruhga 4-7 kerak)",
+          "purpose": "Sinfdoshlarini dasturlash uchun jismoniy harakatni qo'llagan holda, o'quvchilar kompyuterda kodlashni boshlaganlarida his etadigan narsalarga o'xshash masalalar va hissiyotlarga duch kelishadi. Ushbu stresslarga qarshi o'ynoqi va ochiq muhitda uchrashish intensivlikni kamaytirishga yordam beradi va talabalarga o'zlari muammolarga duch kelmasdan oldin zarur ko'nikmalarni mashq qilishlariga imkon beradi ",
+          "student_overview": "Program your classmates to step carefully from place to place."
+        },
+        "courseb-2023/Sequencing with Angry Birds": {
+          "name": "Jahldor qushlar bilan tartiblash",
+          "overview": "Jahldor qushlar o‘yinidagi obrazlardan foydalanib, talabalar qushni labirintning bir tomonidan boshqa tomonidagi cho‘chqaga qaratib harakatlantirish uchun ketma-ket algoritmlarni tuzib chiqadilar. Buni qilish uchun ular to‘g‘riga, chapga va keyin o‘ngga harakatlanadigan qilib kod bo‘limlarini chiziqli ketma-ketlikda taxlab chiqishadi.",
+          "preparation": "-   Agar sizning o'quvchilaringiz sudrab yurish va tushirish uchun yangi bo'lsa, ushbu darsni boshlashdan oldin ularga**\\\\ \\* Drag and Drop Practice** tayinlashni o'ylab ko'ring.\n-   Code.org\\*\\* -da sinf bo'limini qanday qilish kerak\\*\\* - O'qituvchi videosini tomosha qiling, Code.org saytida o'zingizning sinf bo'limingizni yarating va har bir o'quvchining parol kodi bo'lgan karta borligiga ishonch hosil qiling.\n-   Maktab IT-odamiga sinf bo'limingiz uchun kompyuter ish stoliga tezkor havola qo'shsin.\n-   Har bir talabaning jurnali borligiga ishonch hosil qiling.",
+          "purpose": "Bu darsda, talabalar biron komputer platformasida o‘zlarining debug qilish va dasturlash mahoratlarini oshiradilar. Bu boshqotirmalarning bo‘limlarga asoslangan shakli talabalarga sintaksisni mukammallashtirish haqida o‘ylamasdan ketma-ketlik va tushunchalar haqida o‘rganishga yordam beradi.",
+          "student_overview": "Qizil Jahldor Qushga yaramas cho‘chqaga boradigan yo‘ldan yurishiga yordam bering."
+        },
+        "courseb-2023/Programming with Angry Birds": {
+          "name": "Jahldor qushlar bilan dasturlash",
+          "overview": "Using characters from the Ice Age, students will develop sequential algorithms to move Scrat from one side of a maze to the acorn at the other side. To do this they will stack code blocks together in a linear sequence, making them move straight, turn left, or turn right.",
+          "preparation": "-   Sinfingiz uchun yuzaga kelishi mumkin bo'lgan muammoli joylarni topish uchun jumboqlarni o'ynang.\n-   **\\\\ \\*Baxtli xaritalar** uchun materiallarni toping yoki qayta chop eting.\n-   Har bir talabaning Reflection Journal mavjudligiga ishonch hosil qiling.\n-   Har bir yo'nalishdagi (N, S, E, W) **\\\\ \\*manipulyatsiyalar** ni har bir o'quvchiga ikkita to'plam berish uchun etarlicha kesib oling (agar siz Bridging Option #1 ni tanlasangiz).",
+          "purpose": "Ushbu darsda talabalar kompyuter platformasida dasturlash ko'nikmalarini rivojlantiradilar. Ushbu jumboqlarning blokka asoslangan formati o'quvchilarga sintaksisni takomillashtirish haqida qayg'urmasdan, ketma-ketlik va tushunchalarni o'rganishga yordam beradi.",
+          "student_overview": "Create programs to help the Angry Bird move through the maze."
+        },
+        "courseb-2023/Programming with Harvester": {
+          "name": "Terimchi bilan dasturlash",
+          "overview": "Talabalar Terimchi (Harvester) muhitida o‘rgangan dasturlash tushunchalariga murojaat qiladilar. Endi, shunchaki obrazni maqsadiga yetkazish o‘rniga, talabalar biron yangi bo‘limdan foydalanib hosilni yig‘ishi kerak bo‘ladi. Talabalar algoritmlar ketma-ketligi bo‘yicha mahoratlarini oshirishda davom etadilar va debug qilish jarayonidan foydalanishni boshlashadi.",
+          "preparation": "-   Sinfingiz uchun yuzaga kelishi mumkin bo'lgan muammoli joylarni topish uchun jumboqlarni o'ynang.\n-   Har bir talabaning aks ettirish jurnali borligiga ishonch hosil qiling.",
+          "purpose": "Bu darsda, talabalar o‘zlarining debug qilish mahoratlarini oshiradilar va dasturlash mahoratlarini oshirishda davom etadilar.",
+          "student_overview": "Terimchiga yo‘lida sabzavotlarni yig‘ib olishiga yordam bering."
+        },
+        "courseb-2023/Getting Loopy": {
+          "name": "Sikllashtirish",
+          "overview": "Bu uzoq va qiziqarli dasturlarni yozishni boshlaganimiz sayin kodimiz ko‘pincha ko‘plab takrorlanishlardan tashkil topadi. Bu darsda, talabalar sikllar qanday qilib biron raqsdagi harakatning takrorlanuvchi ko‘rinishiga qarash orqali ko‘plab takrorlanishlarga ega bo‘lgan ko‘rsatmalar bilan osonroq aloqa qilishi haqida o‘rganishadi.",
+          "preparation": "-   **\\\\ \\*Ish varag'i** ni talabalarga ko'rsatishga tayyorlaning.\n-   Har bir talabaga bitta**\\\\ \\*Baholash** ni chop eting.\n-   Har bir talabaning aks ettirish jurnali borligiga ishonch hosil qiling.",
+          "purpose": "Kursning ushbu nuqtasida talabalar chiziqli ko'rsatmalar to'plamini dasturlash bilan qulaylikni rivojlantirishlari kerak edi. Ko'pincha chiziqli ko'rsatmalar to'plami bir necha marta takrorlanadigan naqshlarni o'z ichiga oladi va talabalar murakkabroq va qiziqarli dasturlarni yozishni xohlasa, bu kodni qo'lda takrorlash noqulay va samarasiz bo'ladi. Talabalarga yanada kuchli dasturlarni yozishga imkon berish uchun biz bitta chiziqli ro'yxatdan chiqadigan tuzilmalarga tayanishimiz kerak. Looplar talabalarga o'z kodlarini takrorlanadigan tarzda tuzishga imkon beradi. Ushbu darsda biz kodimizdagi naqshlarni izlash uchun kompyuterga qaytishdan oldin jismoniy harakat modellarini aniqlashga e'tibor qaratamiz.",
+          "student_overview": "Bu darsda, takrorlanuvchi sikllardan foydalanib, raqs bazmi tashkillashtiramiz!"
+        },
+        "courseb-2023/Loops with Harvester": {
+          "name": "Terimchi (Harvester) bilan sikllar",
+          "overview": "Building on the concept of repeating instructions from \"Getting Loopy,\" this stage will have students using loops to pick corn more efficiently on Code.org.",
+          "preparation": "-   Sinfingiz uchun yuzaga kelishi mumkin bo'lgan muammoli joylarni topish uchun jumboqlarni o'ynang.\n-   Mulohaza qilish**\\\\ \\*CS asoslari Asosiy faoliyat bo'yicha maslahatlar - Dars tavsiyalari**.\n-   Har bir talabaning aks ettirish jurnali borligiga ishonch hosil qiling.\n-   (Ixtiyoriy) Sinfingiz bilan guruh bo'lib ishlash uchun bir nechta jumboqlarni tanlang.\n-   (Ixtiyoriy) Agar siz hali qilmagan bo'lsangiz, ushbu darsda ko'prik mashg'ulotlaridan biriga tayyorgarlik ko'rish uchun**\\\\ \\*Manipulyatsiyalar** dan bloklarni chop eting va kesib oling.",
+          "purpose": "Ushbu darsda talabalar ko'chadan va ularni Blockly kodida qanday amalga oshirish haqida ko'proq bilib olishadi. Ko'chadan foydalanish dasturlashda muhim mahoratdir, chunki buyruqlarni qo'lda takrorlash zerikarli va samarasiz. Code.org jumboqlari yordamida talabalar mavjud halqalarga ko'rsatmalar qo'shishni, takrorlangan kodni ko'chadan to'plashni va pastadir kerak bo'lgan naqshlarni tanishni o'rganadilar.",
+          "student_overview": "Help the Harvester collect even more, using loops!"
+        },
+        "courseb-2023/Loops with Laurel": {
+          "name": "Laurel bilan sikllar",
+          "overview": "Bu darsda, talabalar sikllar tushunchasini o‘rganishda davom etishadi. Mana bu yerda, Laurel the Adventurer ochiq g‘ordagi xazinani yig‘ishda sikllardan foydalanadi. Uning sayohati davomida unga yordam berish uchun yangi 'get treasure' bo‘limi tanishtiriladi.",
+          "preparation": "-   Sinfingiz uchun yuzaga kelishi mumkin bo'lgan muammoli joylarni topish uchun jumboqlarni o'ynang.\n-   (Ixtiyoriy) Sinfingiz bilan guruh bo'lib ishlash uchun bir nechta jumboqlarni tanlang.\n-   Ko'rib chiqish**\\\\ \\*CS asoslari Asosiy faoliyat bo'yicha maslahatlar - Dars tavsiyalari**\n-   Har bir talabaning aks ettirish jurnali borligiga ishonch hosil qiling.",
+          "purpose": "Bu dars talabalarga sikllar bilan ko‘proq amalyot qilish imkonini beradi va ularni iloji boricha ko‘proq xazina yig‘ishi uchun ‘takrorlanuvchi’ sikl ichida ko‘plab bo‘limlarni joylashtirishga undaydi. ",
+          "student_overview": "Program Laurel the adventurer to collect treasure in an open cave."
+        },
+        "courseb-2023/Drawing Gardens with Loops": {
+          "name": "Drawing Gardens with Loops",
+          "overview": "Sikllarga qaytadigan bo‘lsak, talabalar ko‘rsatmalarning oddiy ketma-ketligini takrorlash orqali rasm chizishni o‘rganishadi. Oldingi onlayn darsda, sikllar labirintni kesib o‘tish va xazina to‘plash uchun ishlatilgan. Bu yerda talabalar sikllardan ko‘rinishlar yaratishda foydalanishadi. Bu bosqichning oxirida, talabalarga sikllardan foydalanib o‘zlarining shaxsiy rasmlarini yaratish imkoniyati beriladi.",
+          "preparation": "-   Sinfingiz uchun yuzaga kelishi mumkin bo'lgan muammoli joylarni topish uchun dars oldidan jumboqlarni o'ynang.\n-   Mulohaza qilish**\\\\ \\*CS asoslari Asosiy faoliyat bo'yicha maslahatlar - Dars tavsiyalari**.\n-   Har bir talabaning aks ettirish jurnali borligiga ishonch hosil qiling.",
+          "purpose": "Bu dars dasturlashda sikllar qanday qilib ba’zi narsalarni yarata olishi bo‘yicha turli xil nuqta’i nazar bilan ta’minlaydi. Talabalar berilgan kodni baholash va boshqotirmani yechish uchun qanday qo‘shimchalar qilish keraklini aniqlash orqali o‘zlarining tanqidiy fikrlash mahoratlarini sinab ko‘rishadi. Talabalar bu yerda sikllarsiz dasturlashning samarasizligini ham aks ettishlari mumkin chunki, takrorlanuvchi sikllarsiz ushbu dastur ko‘plab bo‘llimlarni talab qiladi.",
+          "student_overview": "Use patterns and loops to finish the images."
+        },
+        "courseb-2023/The Right App": {
+          "name": "To'g'ri ilova",
+          "overview": "Ushbu dars o‘quvchilarga kompyuter fanlari hayotda odamlarga yordam berishi mumkinligini o‘rgatadi. Birinchidan, o‘quvchilar o‘zlarining ehtiyojlarini qondiradigan \"to‘g‘ri dastur\"ni topishda yordam berish uchun xayolan bir nechta smartfon foydalanuvchilarini tasavvur qilishadi. So‘ngra, o‘quvchilar o‘zlarining smartfon dasturlarini qo‘shimcha ravishda bitta foydalanuvchi ehtiyojlarini qondirish uchun yordam beradilar va ijodkorlikdan foydalanadilar.",
+          "preparation": "-   \\*\\*\\\\ \\*slayd kemasidagi ma'ruzachi yozuvlarini o'qing. \n-   Barcha talabalar uchun etarlicha eskiz/chizmachilik materiallarini tayyorlang.\n-   Har bir talabaning aks ettirish jurnali borligiga ishonch hosil qiling.",
+          "purpose": "Bugungi kunda hisoblash har qachongidan ham qulayroq. Har xil toifadagi odamlar ma'lumot, aloqa va o'yin-kulgi uchun turli xil qurilmalarda, xususan smartfonlarda dasturiy ta'minotdan foydalanadilar. Odamlar turli xil tajriba va ehtiyojlarga ega bo'lganligi sababli, yangi paydo bo'lgan kompyuter olimlari odamlarga hamdardlik bildirishlari va ular bilan echimlarni aniqlashlari muhimdir. ",
+          "student_overview": "O'zingizning smartfon ilovangizni eskiz qiling."
+        },
+        "courseb-2023/The Big Event Jr": {
+          "name": "Katta hodisa Jr.",
+          "overview": "Hodisalar - oldindan yozilgan algoritmga interfaollik qo‘shishning ajoyib usuli. Ba'zan siz dasturingiz foydalanuvchi xohlagan vaqtda unga aniq javob bera olishini xohlaysiz. Hodisalar aynan shu uchun mo‘ljallangan.",
+          "preparation": "-   Loyihaga tayyorlaning**\\\\ \\*Controller Image**.\n-   Har bir talabaga bitta**\\\\ \\*Baholash** ni chop eting.\n-   Har bir talabaning aks ettirish jurnali borligiga ishonch hosil qiling.",
+          "purpose": "Bugungi kunda talabalar voqealarni harakatlardan ajratishni o'rganadilar. Talabalar qog'oz pultiga “tugma” bosish bilan mashg'ulotlarni to'xtatadilar. Ushbu hodisani ko'rganda, sinf o'ziga xos harakat bilan munosabatda bo'ladi. Voqealar dasturlashda keng qo'llaniladi va ushbu darsdan so'ng ularni osongina tanib olish kerak.",
+          "student_overview": "O'qituvchingiz ulkan masofadan boshqarish pultidagi tugmachalarni bosganda harakatlaning yoki baqiring."
+        },
+        "courseb-2023/Mini-Project: A Royal Battle with Events": {
+          "name": "Mini-loyiha: voqealar bilan qirollik jangi",
+          "overview": "Bu onlayn mashg‘ulotda, talabalarda Play Labda hodisalardan qanday foydalanishni o‘rganish va animatsiyalashtirilgan o‘yin yaratish uchun ular o‘rgangan barcha kod yozish mahoratlariga murojaat qilish imkoniyati mavjud. Yaratuvchan bo‘lish vaqti keldi va Play Labda biron o‘yin yarating!",
+          "preparation": "-   Sinfingiz uchun yuzaga kelishi mumkin bo'lgan muammoli joylarni topish uchun jumboqlarni o'ynang.\n-   (Ixtiyoriy) Sinfingiz bilan guruh bo'lib ishlash uchun bir nechta jumboqlarni tanlang.\n-   Ko'rib chiqish**\\\\ \\*CS asoslari Asosiy faoliyat bo'yicha maslahatlar - Dars tavsiyalari**.\n-   Har bir talabaning aks ettirish jurnali borligiga ishonch hosil qiling.",
+          "purpose": " Bu onlayn mashg‘ulotda, talabalar Play Labda hodisalardan qanday foydalanishni o‘rganishadi. Ular yo‘nalishli tugma bosilganda otliqni harakatlantirishni mashq qilib ko‘rish orqali boshlashadi va keyin tekinga o‘ynaladigan boshqotirma a’zosi sifatida bu kurs davomida o‘rgangan boshqa mahoratlari, jumladan ketma-ketliklar va sikllarni namoyish qilish imkoniyati bilan tugatishadi.",
+          "student_overview": "Use events to create a story or make an interactive game."
+        },
+        "courseb-2023/End of Course Project": {
+          "name": "End of Course Project",
+          "overview": "Ushbu \\*\\* loyiha\\*\\* darsida talabalar ketma-ketlik va hodisalar haqida o'rganganlarini Play Lab bilan ochiq loyihada qo'llaydilar.",
+          "preparation": "-   Talabalarni ilhomlantirish uchun o'zingizning Play Lab loyihalaringizni oldindan kodlang!",
+          "purpose": "Ushbu dars talabalarga yangi informatika ko'nikmalaridan ijodiy foydalanish uchun oxirgi imkoniyatni beradi.",
+          "student_overview": "O'zingizning hikoyangizni yoki o'yiningizni yarating."
+        },
+        "coursec-2023/Putting a STOP to Online Meanness": {
+          "name": "Onlayn ma'nolarga STOP qo'yish",
+          "overview": " [![sog'lom fikr ta'limi](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nUshbu dars dastlab Common Sense Education tomonidan yaratilgan. [Batafsil ma'lumot.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nInternet har xil qiziqarli odamlar bilan to'ldirilgan, lekin ba'zida ularning ba'zilari bir-biriga yomon munosabatda bo'lishi mumkin. Ushbu rolli o'yin bilan, o'quvchilaringizga nima uchun Internetda yomon bo'lish osonroq ekanligini va ular ko'rganlarida Internetda yomonlik bilan qanday kurashish kerakligini tushunishga yordam bering.",
+          "preparation": "-   O'quv materiallarini ko'rib chiqing.\n-   Har bir talaba uchun tarqatma material (lar) ni chop etish.\n-   to'ldirilgan hayvon yoki o'yinchoqni sinfga olib keling.",
+          "purpose": "Common Sense raqamli fuqarolik o'quv dasturi bolalar, ommaviy axborot vositalari va texnologiyalar bo'yicha so'nggi tadqiqotlarga asoslangan oltita asosiy mavzuga bag'ishlangan. Bu dars kiberhujum, raqamli drama va nafrat nutqiga bag'ishlangan. Talabalar ushbu qiyin mavzularni o'z zimmalariga oladilar va ijobiy, qo'llab -quvvatlovchi onlayn hamjamiyatlarni yaratish va onlayn shafqatsizlikka qarshi kurashish uchun faol rol o'ynaydilar.",
+          "student_overview": "Ushbu darsda siz ma'nosizlik haqida va agar Internetda duch kelganda nima qilish kerakligi haqida bilib olasiz."
+        },
+        "coursec-2023/My Robotic Friends Jr": {
+          "name": "Mening robot do‘stlarim Jr.",
+          "overview": "Ushbu **sozlash konteksti** darsida o‘quvchilar “robot”ga stakanlarni turli naqshlarda yigish uchun ko‘rsatma berish  belgilar to‘plamidan foydalanadilar. Talabalar navbatma-navbat robot sifatida qatnashadilar, faqat tengdoshlari tomonidan belgilangan algoritmga javob berishadi.",
+          "preparation": "-   Har bir 2-3 o‘quvchidan iborat guruh uchun 20 ta qog‘oz stakan (yoki qog‘oz trapesiya) dastasini tayyorlang.\n-   Talabalar dars davomida murojaat qilishlari mumkin bo'lgan **\\*Symbol Key** dan belgilarni ko'rsating.\n-   (Ixtiyoriy) 2-3 nafar talabadan iborat guruhga bittadan **\\*Cup Stacking tartibga solish g‘oyalari**ni chop eting.",
+          "purpose": "Bu tarmoqsiz olib boriladigan dars sinfni birgalikda jamoa bo‘lib biron oddiy vazifani bajarishga o‘rgatadi: stakanlarni maxsus dizaynda taxlash uchun biron \"robot\" dan foydalanishadi. Bu mashg‘ulot kurs davomida talabalar dasturlash bo‘yicha algoritmlarning aniqlikda bog‘langanlishlarining ahamiyatini o‘zlashtirish uchun poydevor yaratadi.",
+          "student_overview": "In this lesson, you'll pretend your classmates are robots and program them to build patterns of stacked cups."
+        },
+        "coursec-2023/Programming with Angry Birds": {
+          "name": "Jahldor qushlar bilan dasturlash",
+          "overview": "Jahldor qushlar o‘yinidagi obrazlardan foydalanib, talabalar qushni labirintning bir tomonidan boshqa tomonidagi cho‘chqaga qaratib harakatlantirish uchun ketma-ket algoritmlarni tuzib chiqadilar. Buni qilish uchun ular to‘g‘riga, chapga va keyin o‘ngga harakatlanadigan qilib kod bo‘limlarini chiziqli ketma-ketlikda taxlab chiqishadi.",
+          "preparation": "-   Sinfingiz da paydo bo'lgan muammolarni topish uchun jumboqlarni yeching.\n-   (ixtiyoriy) Sinfingiz bilan hal qilish uchun bir juft jumboq tanlang.",
+          "purpose": "Bu darsda, talabalar biron komputer platformasida o‘zlarining debug qilish va dasturlash mahoratlarini oshiradilar. Bu boshqotirmalarning bo‘limlarga asoslangan shakli talabalarga sintaksisni mukammallashtirish haqida o‘ylamasdan ketma-ketlik va tushunchalar haqida o‘rganishga yordam beradi.",
+          "student_overview": "Angry Birds bilan ketma-ketlik va algoritmlar haqida o‘rganing."
+        },
+        "coursec-2023/Debugging in Maze": {
+          "name": "Debugging in Maze",
+          "overview": "Debug qilish dasturlashni o‘rganishning muhim elementidir. Bu darsda, talabalar noto‘g‘ri yechilgan boshqotirmalarga duch kelishadi. Ular xatolikni topish uchun mavjud kodni qatorma-qator tekshirib chiqishadi, jumladan, noto‘g‘ri ishlatilgan sikllar, unutib qoldirilgan bo‘limlar, ortiqcha bo‘limlar va tartibdan tashqaridagi bo‘limlarni.",
+          "preparation": "-   Sinfingizda paydo bo'lgan muammolarni topish uchun jumboqlarni yeching.\n-   (ixtiyoriy) Sinfingiz bilan hal qilish uchun bir juft jumboq tanlang.\n-   Umumiy ko'rinish **\\*CS asoslari asosiy dars maslahatlari - Dars bo'yicha takliflar**\n-   Har bir o'quvchining o'ylashi uchun kundaligi borligiga ishonch hosil qiling.",
+          "purpose": "Sizning sinfingizdagi talabalar disk raskadrovka mohiyati tufayli ushbu darsdan hafsalasi pir bo'lishi mumkin. Nosozliklarni tuzatish - bu kompyuter dasturlash uchun juda muhim bo'lgan tushuncha. Kompyuter olimlari o'z dasturlarida xatolarga duch kelishda juda yaxshi bo'lishlari kerak. Nosozliklarni tuzatish talabalarni muammolarni tan olishga va ularni engishga majbur qiladi, shu bilan birga tanqidiy fikrlash va muammolarni hal qilish ko'nikmalarini shakllantiradi.",
+          "student_overview": "Boshqotirmalardagi muammolarni toping va debug qilish mahoratingizni amalda sinab ko‘ring."
+        },
+        "coursec-2023/Collecting Treasure with Laurel": {
+          "name": "Laurel bilan xazina yig‘ish",
+          "overview": "Boshqotirmalar to‘plamida, talabalar algoritmlar va debug qilish bo‘yicha o‘zlarining tushunchalarini rivojlantirishda davom etishadi. Yangi obraz, sarguzashtchi Laurel bilan talabalar Laurelni u yo‘lak bo‘ylab harakatlanganda xazinalar cho‘qqisiga olib chiqish uchun algoritmlar ketma-ketligini yaratishadi.",
+          "preparation": "-   Sinfingizda paydo bo'lgan muammolarni yechish uchun jumboqlarni yeching",
+          "purpose": "Ushbu darsda talabalar o'zlarining dasturlash ko'nikmalarini yangi belgi - Laurel the Adventurer yordamida mashq qiladilar. Kimdir dasturlashni boshlaganda, ular mashina o'qiy oladigan narsadan foydalanib, ko'rsatmalarni ma'lum tartibda birlashtiradi. Dasturlashdan foydalanish orqali talabalar kompyuterning ko'rsatmalar va tartiblarni qanday boshqarishi haqida tushuncha hosil qiladilar. Boshqa jumboq maqsadi bilan yangi belgidan foydalanish o'quvchilarga dasturlashda ketma -ketlik va algoritmlar bo'yicha tajriba doirasini kengaytirishga yordam beradi.",
+          "student_overview": "Sarguzashtchi Laurelga ko‘plab marvaridlar yig‘ishda yordam berish uchun algoritm yozing!"
+        },
+        "coursec-2023/Creating Art with Code": {
+          "name": "Kod bilan san’at yaratish",
+          "overview": "Bu darsda talabalar ekrandagi chizmalarni tugatish uchun Rassomni boshqarishadi. Bu Rassom bosqichi talabalarga yangi bo‘limlar, masalan, `move forward by 100 pixels` va `turn right by 90 degrees` kabilardan foydalangan holda yuqori mukammallikdagi rasmlar yaratish imkonini beradi.",
+          "preparation": "-   Sinfingiz uchun yuzaga kelishi mumkin bo'lgan muammoli joylarni topish uchun jumboqlarni o'ynang.\n-   (Majburiy emas) Jumboqlarni to'ldirish uchun foydalanishi kerak bo'lgan burchaklarni tasavvur qilish uchun sinfingiz uchun protraktorlarni oling.\n-   Har bir talaba uchun bitta**\\\\ \\*Talaba tarqatma** ni chop eting.",
+          "purpose": "Talabalar oldingi tajribalarini ketma-ketlik bilan boshlagan bo‘lsa, bu dars kod yozishni ko‘proq ijodkorlik bilan ilhomlantirish uchun ishlaydi. Bu darsning maqsadi yangi bo‘limlar va maqsadlarni tanishtirish orqali ketma-ketlik bo‘yicha bilimlarni mustahkamlash uchun. Bu holda, talabalar hamon o‘zlarining ketma-ketlik bo‘yicha ko‘nikmalarini amalda sinash bilan bir vaqtda yangi bo‘limlardan foydalanib, ko‘proq piksellar va burchaklar haqida ham o‘rganishadi. Shuningdek, talabalar yangi maqsadlar, masalan, biron kvadrat chizish uchun ushbu San’atkorni kodini yozishni tasavvur qilishga qodir bo‘ladi.",
+          "student_overview": "Rassomni dasturlash orqali chiroyli rasmlar yarating."
+        },
+        "coursec-2023/My Loopy Robotic Friends Jr": {
+          "name": "Mening sikllashtirilgan robot do‘stlarim Jr.",
+          "overview": "\"Mening Robot Do‘stlarim\" mashg‘ulotiga asoslangan holda, talabalar kattaroq va yanada mukammalroq dizaynlarni ham yecha olishadi. Bu mukammalroq dizaynlarni yaratish jarayonida o‘z robotlarini dasturlash maqsadida talabalar o‘z ko‘rsatmalaridagi biron sikl bilan almashtirsa bo‘ladigan takrorlanuvchi ko‘rinishlarni aniqlashi kerak bo‘ladi.",
+          "preparation": "-   Har bir 4 nafar o‘quvchidan iborat guruh uchun 20 ta qog‘oz stakan (yoki **\\*qog‘oz trapesiya**)dan iborat to‘plam tayyorlang.\n-   Talabalar dars davomida murojaat qilishlari mumkin bo'lgan **\\*belgilarni** ko'rsating.\n-   (Ixtiyoriy) 4 nafar talabadan iborat guruhga bittadan **\\*Tartibga solish g‘oyalari**ni chop eting.",
+          "purpose": "Bu dars hozirda tanish bo'lgan \"robot \" dasturlash ko'rsatmalaridan foydalangan holda sikllar uchun qayta tanishtiruv sifatida xizmat qiladi. Talabalar sinfdoshlarining harakatlaridagi takrorlanuvchi ko‘rinishlarni izlash va sikllardan foydalanib ushbu takroriy ko‘rinishlarni qanday soddalashtirsh orqali tanqidiy fikrlash mahoratlarini rivojlantiradilar.",
+          "student_overview": "In this lesson, you'll program your classmates again, but using loops you'll be able to solve bigger and more complicated problems."
+        },
+        "coursec-2023/Loops with Rey and BB-8": {
+          "name": "Loops with Rey and BB-8",
+          "overview": "\"Getting loopy\"dagi takrorlanuvchi ko‘rsatmalar tushunchalari asosida yaratilib, bu bosqichda talabalar BB-8ga labirintdan oldingiga qaraganda samaraliroq o‘tishiga yordam berish uchun sikllardan foydalanishadi.",
+          "preparation": "-   Sinfingizda paydo bo'lgan muammolarni yechish uchun jumboqlarni toping.",
+          "purpose": "Ushbu darsda talabalar ko'chadan va ularni Blockly kodida qanday amalga oshirish haqida ko'proq bilib olishadi. Ko'chadan foydalanish dasturlashda muhim mahoratdir, chunki buyruqlarni qo'lda takrorlash zerikarli va samarasiz. Code.org jumboqlari yordamida talabalar mavjud halqalarga ko'rsatmalar qo'shishni, takrorlangan kodni ko'chadan to'plashni va pastadir kerak bo'lgan naqshlarni tanishni o'rganadilar. Shuni ta'kidlash kerakki, talabalar turli xil echimlarga ega jumboqlarga duch kelishadi. Bu har bir yondashuvning afzalliklari va kamchiliklari bo'lgan jumboqlarni hal qilishning turli usullari bo'yicha munozaralarni ochadi.",
+          "student_overview": "Sikllardan foydalanib BB-8 ga labirint bo‘ylab harakatlanishida yordam bering! "
+        },
+        "coursec-2023/Harvesting Crops with Loops": {
+          "name": "Harvesting Crops with Loops",
+          "overview": "Talabalar ushbu mahoratni shakllantirish\\*\\* darsida o'rim-yig'im mashinasiga katta dastalarda o'sadigan bir nechta sabzavotlarni yig'ishda yordam berish uchun yangi harakatlarni amalga oshiradilar.",
+          "purpose": "Ushbu darsda talabalar oshqovoq yig'ish kabi harakatlarni takrorlash uchun ko'chadan foydalanadilar. Yangi naqshlar paydo bo'ladi va talabalar ijodkorlik va mantiqiy fikrlashdan foydalanib, qanday kodni va necha marta takrorlash kerakligini aniqlaydilar.",
+          "student_overview": "Keling, dehqonga ba’zi sabzavotlarni yig‘ishda sikllardan foydalanib yordam beramiz!"
+        },
+        "coursec-2023/Mini-Project: Sticker Art": {
+          "name": "Mini-loyiha: Sticker Art",
+          "overview": "Bu**mini-loyiha** darsi oldingi darslardagi ilmoqlarni tushunishga asoslanadi. Talabalar Rassom bilan noyob san'at asarlarini yaratadilar.",
+          "preparation": "-   O'z dizayningizni yaratishda mashq qiling. Bu darajalar avvalgilaridan qanday farq qilishiga e'tibor bering.",
+          "purpose": "Bu to‘plamlar sikllarning ahammiyatini yaratuvchan va shaxsiy dizaynlar bilan ta’kidlab ko‘rsatadi.\n\n Loyiha ortidagi ketma-ketlik sifatida taklif qilinib, bu o‘sish talabalarga o‘z ishining ustasi bo‘lishga va ajoyib asarlar yaratishga imkon beradi.",
+          "student_overview": "In this lesson, loops make it easy to make even cooler images with Artist!"
+        },
+        "coursec-2023/The Big Event": {
+          "name": "Katta hodisa",
+          "overview": "Talabalar tez orada hodisalar oldindan yozib qo‘yilgan algoritmlarga qulaylik qo‘shishning eng yaxshi yo‘li ekanligini bilib olishadi. Ba’zida siz dasturingiz foydalanuvchi aynan xohlagan paytda unga javob qaytarishini xohlaysiz. Hodisalar dasturingizni yanada qiziqarli va interfaol qiladi.",
+          "preparation": "-   Chop etish yoki ko'rsatish **\\*Voqealar boshqaruvchisi**.\n-   Har bir talaba uchun bitta **\\*baho** chop eting.",
+          "purpose": "Bugungi kunda talabalar voqealar va harakatlarni ajratishni o'rganadilar. Talabalar qog'oz pultiga “tugma” bosish bilan mashg'ulotlarni to'xtatadilar. Ushbu hodisani ko'rganda, sinf o'ziga xos harakat bilan munosabatda bo'ladi. Voqealar dasturlashda keng qo'llaniladi va ushbu darsdan so'ng ularni osongina tanib olish kerak.",
+          "student_overview": "Hodisalar haqida o‘rganish uchun biron qiziqarli o‘yin o‘ynang."
+        },
+        "coursec-2023/Build a Flappy Game": {
+          "name": "Build a Flappy Game",
+          "overview": "Bu maxsus bosqichda, talabalar obyektlar to‘qnashuvi va sichqoncha bosilishini taniy oladigan hodisa tinglovchilaridan foydalangan holda o‘zlarining Flappy Bird o‘yinini yaratishadi. Bu bosqichning oxirida talabalar tasvirlar yoki qoidalarni o‘zgartirgan holda o‘z o‘yinlarini yarata oladilar.",
+          "purpose": "Voqealar kompyuter dasturlarida juda keng tarqalgan. Ushbu darsda talabalar _Flappy Bird_ o'yinini yaratish orqali voqealar haqidagi tushunchalarini yanada rivojlantiradilar. Talabalar o'z xarakterini ekran bo'ylab harakatlantirishni, shovqin qilishni va foydalanuvchi tomonidan boshlangan voqealar asosida to'siqlarga munosabat bildirishni o'rganadilar.",
+          "student_overview": "O‘zingizning Flappy Bird o‘yiningizni yarating, agar xohlasangiz keyin uni do‘stlaringiz bilan ulashishingiz mumkin!"
+        },
+        "coursec-2023/Mini-Project: Chase Game": {
+          "name": "Mini-loyiha: Chase Game",
+          "overview": "Bu onlayn mashg‘ulotda, talabalalarda Play Labda hodisalardan qanday foydalanishni o‘rganishga va biron animatsiyalashtirilgan o‘yin yaratish uchun ular o‘rgangan barcha ko‘nikmalarini qo‘llab ko‘rishga imkoniyat bo‘ladi. Yaratuvchan bo‘lishning vaqti keldi! Play Labda o‘yin yarating!",
+          "purpose": "Mana bu yerda, talabalar Play Labdan foydalangan holda o‘zlarining hodisalar haqidagi tushunchalarini rivojlantiradilar. Talabalar obrazlarni ekran bo‘ylab harakatlantirishda, shovqin solishda va foydalanuvchining kiritgan ma’lumotiga asoslanib orqa fonni o‘zgartirishda hodisalardan foydalanishadi. ",
+          "student_overview": "Yaratuvchan bo‘lishning ayni vaqti va Play Labda biron o‘yin yarating!"
+        },
+        "coursec-2023/Picturing Data": {
+          "name": "Ma'lumotlarni tasvirlash",
+          "overview": "Ushbu ma'lumotlardan o‘quvchilarga o‘z dunyolarini tushunishda va qiziqarli savollarga javob berishda foydalanish mumkin. Ushbu darsda o‘quvchilar Play Lab loyihasidan ma'lumotlarni olishadi va ularni turli xil grafik ko‘rinishlarda vizuallashtirishadi.",
+          "purpose": "Kompyuterlar ma'lumotlarni qayta ishlashga yordam berish uchun yaratilgan. Dunyoda ma'lumotlar soni ortib bormoqda, shuning uchun uni o'qish va tahlil qilish juda muhimdir. Bu dars talabalarning oddiy ma'lumotlar to'plamini to'plash, vizualizatsiya qilish va tahlil qilish bo'yicha asosiy tajribaga ega ekanligiga ishonch hosil qilish uchun shu erda.",
+          "student_overview": "Ushbu ma'lumotlardan o‘quvchilarga o‘z dunyolarini tushunishda va qiziqarli savollarga javob berishda foydalanish mumkin. Ushbu darsda o‘quvchilar Play Lab loyihasidan ma'lumotlarni olishadi va ularni turli xil grafik ko‘rinishlarda vizuallashtirishadi."
+        },
+        "coursec-2023/Binary Bracelets": {
+          "name": "Ikkilik bilakuzuklar",
+          "overview": "Ikkilik sanoq tizimi komputerlar dunyosida juda muhim ahamiyatga ega. Bugungi kunda, komputerlarning ko‘pchiligi barcha turdagi ma’lumotni ikkilik ko‘rinishida saqlaydi. Bu dars haqiqiy hayotdan nimadirni olib uni birlar va nollar to‘plamiga tarjima qilishni ko‘rsatishga yordam beradi.",
+          "purpose": "Bu darsda talabalar ma'lumotni kompyuter talqin qilishi va saqlashi mumkin bo'lgan tarzda qanday ifodalanishini bilib oladilar. Ikkilikni o'rganishda talabalar kodlarni yozish va ularni tengdoshlari bilan maxfiy xabarlar sifatida bo'lishish imkoniyatiga ega bo'ladilar. Bu kompyuterlarning dasturni qanday o'qishi, uni ikkilikka tarjima qilishi, ma'lumotni qandaydir tarzda ishlatishi, keyin odamlar tushunadigan tarzda javob berishi bilan bog'liq bo'lishi mumkin. Masalan, biz jumlani hujjatga yozganimizda, saqlash tugmasini bosganimizda, kompyuter jumlani ikkilikka tarjima qiladi, ma'lumotlarni saqlaydi, so'ngra hujjat saqlanganligini ko'rsatuvchi xabarni yuboradi.",
+          "student_overview": "O‘zingizning ikkilik bilakuzugingizni yarating va komputerlar qanday qilib ma’lumotni eslab qolishini o‘rganing!"
+        },
+        "coursec-2023/End of Course Project": {
+          "name": "End of Course Project",
+          "overview": "Ushbu yakunlovchi dars o‘quvchilarni o‘z Play Lab loyihalarini loyihalashtirish, ishlab chiqish va namoyish etish jarayonidan o‘tadi! Ushbu jarayon muammosiz o‘tishini ta'minlash uchun biz o‘quvchilarga qog‘ozda rejalashtirishdan boshlab veb-saytimizdagi kodlashgacha bosqichma-bosqich o‘tish tuzilmasini ta'minladik. Bundan tashqari, biz o'qituvchilarga taqdimotli finalni engillashtirishda yordam beradigan g'oyalarni taklif etamiz! ",
+          "preparation": "-   Sinfingiz uchun yuzaga kelishi mumkin bo'lgan muammoli joylarni topish uchun jumboqlarni o'ynang.\n-   Har bir talaba (yoki juftlik) uchun bitta**\\\\ \\*Loyihani rejalashtirish bo'yicha qo'llanma** ni chop eting.\n-   \\*\\*\\\\ \\* Loyihani rejalashtirish bo'yicha qo'llanma (namuna) \\*\\* hujjatini ko'rib chiqing.\n-   (Ixtiyoriy) O'zingizning rejalashtirish qo'llanmangizni to'ldiring va talabalarga ko'rsatish uchun o'z loyihangizni kodlang!",
+          "purpose": "Ushbu dars talabalarga rejalashtirishni talab qiladigan, lekin keng ijodkorlikka imkon beradigan bosqichma-bosqich jarayondan foydalangan holda o'z dizayni loyihasini yaratish uchun joy beradi.",
+          "student_overview": "Ushbu qo‘llarni bir dunyo kod yozish uchun tayyorlang! Loyihangizni yaratishni boshlashning vaqti keldi."
+        },
+        "coursed-2023/Password Power-Up": {
+          "name": "Parolni yoqish",
+          "overview": " [![sog'lom fikr ta'limi](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nBu dars dastlab [Common Sense Education](https://www.commonsense.org/education/digital-citizenship/curriculum)tomonidan yaratilgan.\n\nKuchli, xavfsizroq onlayn parollar hamma uchun yaxshi fikr. Ammo bolalarga yaxshiroq parollar yaratishda va ularni eslab qolishda qanday yordam berishimiz mumkin? Bolalarga xavfsiz va esda qolarli parollar yaratishda yordam berish uchun ushbu darsdagi maslahatlardan foydalaning.",
+          "preparation": "-   O'quv materiallarini ko'rib chiqing.\n-   Har bir talaba uchun tarqatma material (lar) ni chop etish.\n-   talabalar uchun yozuv qog'ozi yoki daftarlarni tayyorlang.",
+          "purpose": "Common Sense raqamli fuqarolik o'quv dasturi bolalar, ommaviy axborot vositalari va texnologiyalar bo'yicha so'nggi tadqiqotlarga asoslangan oltita asosiy mavzuga bag'ishlangan. Ushbu dars Maxfiylik va xavfsizlikka qaratilgan. Talabalar shaxsiy ma'lumotlarni qanday himoya qilishni o'rganadilar va o'zlari va boshqalarni himoya qilishlari uchun ma'lumotlarning maxfiyligi huquqlarini chuqurroq tushunadilar.",
+          "student_overview": "Ushbu darsda siz parollar sizning ma'lumotlaringizni qanday himoya qilishi va yaxshi parolni tanlash haqida bilib olasiz."
+        },
+        "coursed-2023/Graph Paper Programming": {
+          "name": "Katakchali varaqda dasturlash",
+          "overview": "By \"programming\" one another to draw pictures, students get an opportunity to experience some of the core concepts of programming in a fun and accessible way. The class will start by having students use symbols to instruct each other to color squares on graph paper in an effort to reproduce an existing picture. If there’s time, the lesson can conclude with images that the students create themselves.  ",
+          "purpose": "Bu mashg‘ulotning maqsadi kurs davomida ishlatiladigan ba’zi bir asosiy dasturlash tushunchalarini tanishtirish bilan birga tanqidiy fikrlash mahoratini va kurs uchun qiziqishni oshirish. Tarmoqsiz darsda sinfga ketma-ketlik va algoritmlar kabi asosiy tushunchalarni tanishtirish orqali, komputer bilan ishlashga qo‘rqadigan talabalar bu mavzular bo‘yicha hanuzgacha asos yaratish imkoniyatiga ega bo‘lishadi. Bu darsda, talabalar biron algoritmni qanday qilib shakllantirishni va uni dasturga o‘girishni o‘rganishadi. ",
+          "student_overview": "In this lesson, you will program your classmate to draw pictures!"
+        },
+        "coursed-2023/Introduction to Online Puzzles": {
+          "name": "Onlayn boshqotirmalar bilan tanishish.",
+          "overview": "Boshqotirmalarning bu to‘plamini talabalar Code.orgning onlayn ish joyi bilan tanishtiruvdan (yoki sinfingizning tajribasiga bog‘liq holda ko‘rib chiqish) boshlashadi. U yerda ish joyining asosiy vazifalariga ishora qiluvchi videolar bo‘ladi, jumladan, `Run`, `Reset`, va `Step` tugmalari. Shuningdek, mana bu videolarda ham muhokama qilinadi: Blockly bo‘limlarini ko‘chirib olish, Blockly bo‘limlarini o‘chirish, va Blockly bo‘limlarini bog‘lash. Keyingisi, talabalar labirintda o‘zlarining ketma-ketlik va debug qilish bo‘yicha mahoratlarini amalda qo‘llab ko‘rishadi. Bu yerda talabalar sikllar asoslarini o‘rganish davomida boshqotirmalarning yangi turlari, Yig‘uvchi, San’atkor va Hosil yig‘uvchi kabi turlarini ko‘rishadi.",
+          "purpose": "Biz bilamizki, har bir sinfning har bir fan uchun o‘zining tushunish ko‘lami bo‘ladi. Sinfingizdagi ba’zilar komputer afsungarlari bo‘lishi mumkin, lekin boshqalari ko‘p tajribaga ega bo‘lmasligi mumkin. Hamma birdek o‘rganishi uchun biz Kurs D uchun  mana bu \"Ramp Up Stage\" ni yaratdik. Bu Code.org dan qanday foydalanish va asosiy Informatika tushunchalari bo‘yicha tanishtiruv yoki tahlil sifatida ishlatilishi mumkin. Bu bosqich Kurs D ni boshlash uchun talab qilinadigan barcha shartlarni qamrab oladi.",
+          "student_overview": "Bu dars ushbu kurs uchun sizga kerak bo‘ladigan ko‘nikmalarni amalda bajarib ko‘rishingizga imkon beradi."
+        },
+        "coursed-2023/Relay Programming": {
+          "name": "Estafetali dasturlash",
+          "overview": "Bu \\*\\* kontekstni sozlash\\*\\* darsi disk raskadrovka va qat'iyatlilik bo'yicha qisqa dars bilan boshlanadi, so'ngra talabalar guruhlarga bo'linib, dasturni bir vaqtning o'zida bitta ko'rsatma yozish uchun birgalikda harakat qilishlari bilan tezda soatga qarshi poygaga o'tadilar.",
+          "purpose": "Informatika fanida jamoaviy ish juda muhimdir. Jamoalar birma-bir ishlash o'rniga, bir-birlari bilan kod yozishadi va disk sozlama  qilishadi. Ushbu darsda talabalar iloji boricha samarali bo'lishlari bilan birgalikda ishlashni o'rganadilar.\\\n Bu mashg'ulot talabalarni o'z vaqtlarini ehtiyotkorlik bilan saqlashga va xatolardan qochishga yo'l qo'ymaslik uchun o'rgatadigan shoshilinchlikni ta'minlaydi. Ushbu tajriba stressni keltirib chiqarishi mumkin (bu kutilmoqda!) Talabalarni mumkin bo'lgan ko'ngilsizliklarni  yengish uchun vositalar bilan ta'minlaganingizga ishonch hosil qiling. ",
+          "student_overview": "Kursni boshida kod bilan chizmalar chizganingizni eslaysizmi? Bu darsda, xuddi shunga o‘xshash narsa qiish uchun biron jamoa bilan ishlaysiz!"
+        },
+        "coursed-2023/Debugging with Laurel": {
+          "name": "Debugging with Laurel",
+          "overview": "Bu onlayn mashg‘ulotda talabalar \"yig‘uvchi\" muhitida debug qilishni mashq qilishadi. Talabalar boshqotirmalarni oddiy algoritmlar, sikllar va ichma-ich sikllar bilan to‘g‘rilash uchun kodni o‘qish va o‘zgartirishni mashq qilib ko‘rishadi.",
+          "purpose": "Ushbu darsning maqsadi o'quvchilarga yangi ko'nikmalarni o'rganishda muvaffaqiyatsizlik normal ekanligini o'rgatishdir. Talabalarga ishlamaydigan oldindan yozilgan dasturlar beriladi. Ulardan ushbu dasturlarni tuzatish so'raladi. Nosozliklarni tuzatish deb ataladigan bu jarayon talabalarga muhim muammolarni hal qilish va tanqidiy fikrlash ko'nikmalarini o'rgatadi. Talabalar qiyinroq va qiyinroq dasturlash loyihalariga o'tishlari bilan bu ko'nikmalar o'tadi.",
+          "student_overview": "Siz hech kod yozish davomida muammolarga duch kelganmisiz? Bu darsda siz debug qilish sirlari haqida o‘rganasiz. Debug qilish bu kodingizdagi muammolarni topish va to‘g‘rilash jarayonidir."
+        },
+        "coursed-2023/Events in Bounce": {
+          "name": "Events in Bounce",
+          "overview": "Bu onlayn mashg‘ulotda, talabalar hodisalar nima ekanligi va komputerlar ularni video o‘yinlar kabi dasturlarda qanday ishlatishi haqida o‘rganishadi. Talabalar hodisalarga (masalan, yo‘nalishli tugmalar bosilganda) javob qaytaradigan qilish uchun boshqotirmalar ustida ishlashadi. Boshqotirmaning oxirida, talabalarda o‘yinlarini turli xil tezlik va tovushlar bilan moslashtirish imkoniyati tug‘iladi.",
+          "purpose": "Hodisalar komputer dasturlarida keng qo‘llaniladi, ayniqsa, video o‘yinlarda.  \n\nBu darsda, talabalar sportga taaluqli o‘yin yasash orqali o‘zlarining hodisalar haqidagi tushunchalarini rivojlantirishadi. Talabalar ularning eshkaklarini yo‘nalishli tugmalarga asosan harakatlanadigan qiladi va ob’ektlar to‘qnashib ketganda shovqin soladigan qilishni o‘rgashadi. Eng oxirida, ular o‘yinini boshqalaridan ajralib turadigan qilish uchun uni moslashtiradi!",
+          "student_overview": "Maktabda biron marta video o‘ynashni orzu qilganmisiz? Bu darsda, siz shaxsan o‘zingiznikini yaratasiz!"
+        },
+        "coursed-2023/Build a Star Wars Game": {
+          "name": "Build a Star Wars Game",
+          "overview": "Bu darsda, talabalar onlayn tarzda tarqata oladigan o‘yinni yaratish uchun hodisalardan foydalanishni amalda sinab ko‘rishadi. R2-D2 va boshqa \"Star Wars\" belgilarini namoyish etgan holda, talabalar hodisalarni boshqaradilar, so'ngra o'zlarining o'yinlarini yaratish uchun joy ajratadilar.",
+          "purpose": "CS Fundamentals nafaqat informatika fanini o'rgatish, balki informatika fanini qiziqarli va hayajonli qilishdir. Ushbu turkumda talabalar _Star Wars_ filmidagi mashhur qahramonlardan foydalangan holda voqealar haqida bilib oladilar. Ushbu jumboqlar “o'rganish” va “qiziqarli” o'rtasidagi chiziqlarni xiralashtiradi. Shuningdek, talabalar o'yinlarda muntazam dasturlash amaliyotlarini tan olishni o'rganadilar, shunda ular uyda o'yin o'ynashganda, informatika fanining umumiy tamoyillari qo'llanilishini ko'rishlari mumkin.",
+          "student_overview": "Bu darsda o‘z Star Wars o‘yiningizni yarata olish kuchini jis qiling."
+        },
+        "coursed-2023/Dance Party": {
+          "name": "Dance Party",
+          "overview": "Bu darsda, talabalar o‘zlarining interaktiv raqs bazmini dasturlashtiradilar. Qurilma musiqaga javob qaytarish uchun yaratilganligi sababli bu mashg‘ulot tovushni talab qiladi.",
+          "purpose": "Ushbu dars Infomatikadagi asosiy tushunchalar, kodlash va hodisaviy dasturlash (bloklardan foydalangan holda) bilan tanishtiradi.",
+          "student_overview": "Bayram qilish vaqti keldi! Ushbu darsda siz o‘z interaktiv raqs bazmingizni dasturlashtirasiz."
+        },
+        "coursed-2023/Loops in Ice Age": {
+          "name": "Muz davridagi sikllar",
+          "overview": "As a quick update (or introduction) to using loops, this stage will have students using the `repeat` block to get Scrat to the acorn more efficiently.",
+          "purpose": "Ushbu darsda talabalar ko'chadan va ularni Blockly kodida qanday amalga oshirish haqida ko'proq bilib olishadi. Ko'chadan foydalanish dasturlashda muhim mahoratdir, chunki buyruqlarni qo'lda takrorlash zerikarli va samarasiz. Ushbu Code.org jumboqlari yordamida talabalar mavjud ko'chadan ko'rsatmalar qo'shishni, takrorlangan kodni ko'chadan to'plashni va takrorlanishi kerak bo'lgan naqshlarni tan olishni o'rganadilar.",
+          "student_overview": "In this lesson you'll use the repeat block to help Scrat reach the acorn as efficiently as possible."
+        },
+        "coursed-2023/Drawing Shapes with Loops": {
+          "name": "Drawing Shapes with Loops",
+          "overview": "This lesson builds on the understanding of loops from previous lessons and gives students a chance to be truly creative.  This activity doubles as a debugging exercise for extra problem-solving practice.",
+          "purpose": "Ushbu ketma-ketlik boshqotirmalar to‘plami yordamida o‘quvchilarga nima uchun takrorlanuvchi sikllar qo‘lda yozilganidan ko‘ra ustunligini ko‘rsatish orqali sikllarning qudratini ta’kidlab ko‘rsatadi.",
+          "student_overview": "In this lesson, loops make it easy to make cool images with the Artist!"
+        },
+        "coursed-2023/Nested Loops in Maze": {
+          "name": "Nested Loops in Maze",
+          "overview": "Bu onlayn mashg‘ulotda, talabalarda o‘zlarining sikllar haqidagi tushunchalarini butun yangi darajaga olib o‘tish imkoni tug‘iladi. Asalari va O‘simliklar vs Zombilar bilan o‘ynab, talabalar boshqa sikl ichida bo‘ladigan boshqa bir siklni qanday dasturlashni o‘rganishadi. Ular yana 'Run' bosilganda sikllardagi kichik o‘zgarishlar ularning dasturiga qanday ta’sir ko‘rsatishini aniqlash uchun ruhlantiriladi.",
+          "purpose": "Ichki ilmoqlar bilan tanishishda talabalar jumboqlarga yanada samarali echimlar yaratish uchun o'zlarining qulaylik zonasidan tashqariga chiqadilar.  \n\nOldingi jumboqlarda ilmoqlar o'quvchilarni takrorlashni tan olishga undadi. Bu erda talabalar ushbu ichki halqalarni ishlab chiqish uchun takrorlangan naqshlar bilan naqshlarni tan olishni o'rganadilar. Bu bosqich talabalarni kodni bezovta qiladigan va uzoq yo'lni yozish uchun juda murakkab bo'lgan jumboqni echishga urinishga undash bilan boshlanadi. Video ichki ko'chadan tanishtirgandan so'ng, talabalarga misol ko'rsatiladi va halqa boshqa halqa ichiga qo'yilganda nima bo'lishini oldindan aytib berish so'raladi. Bu rivojlanish talabalarning dasturlashda looplash haqidagi tushunchalarini mustahkamlash va mustahkamlash uchun ko'p amaliyotlarga olib keladi.",
+          "student_overview": "Loops inside loops inside loops. What does this mean? This lesson will teach you what happens when you create a nested loop."
+        },
+        "coursed-2023/Conditionals with Cards": {
+          "name": "Conditionals with Cards",
+          "overview": "**Kontekstni sozlash** darsida talabalar oddiy karta o'yinlari qoidalarini bayon qilish uchun _shartli (agar/else) bayonotlar_ yozadilar. ",
+          "purpose": "Shartlarni o'qitishning eng yaxshi qismlaridan biri shundaki, talabalar bu kontseptsiyani kundalik hayotlaridan tushunishadi. \n\nBu dars informatika fanini haqiqiy dunyoga birlashtiradi, bu ularning shartning to'g'ri yoki yolg'onligini aniqlash qobiliyatini rivojlantiradi. Talabalar ma'lum bir buyruq qachon bajarilishi kerakligini e'lon qilish uchun if statementlardan, shuningdek, if/else bayonotlaridan foydalanishni o'rganadilar. Talabalar shartli so'zni tanimasliklari mumkin, lekin ko'pchilik talabalar “agar” dan foydalanish g'oyasini tushunishadi, chunki ba'zi harakatlar faqat kerak bo'lganda sodir bo'ladi.",
+          "student_overview": "Ma’lum bir shartlar bajarilgandagina bal yig‘ishingiz mumkin bo‘lgan o‘yin o‘ynashning vaqti!"
+        },
+        "coursed-2023/Looking Ahead with Minecraft": {
+          "name": "Minecraft bilan oldinga qarab",
+          "overview": "Bu dars aslida, Minecraft jamoasi bilan birgalikda Hour of Code uchun yaratilgan. Talabalar shu paytgacha o‘rgangan g‘oyalarini amalda sinab ko‘rish, shuningdek, shartli bayonotlarning yashirin jihatlarini ko‘rib chiqish imkoniyatiga ham ega bo‘ladilar!",
+          "purpose": "Boshqotirmalarning bu to‘plami sikllar bo‘yicha bilimga ega bo‘lish va uni kengaytirish uchun juda foydali va shartli bayonotlar bilan tanishtiradi. Bu tushunchalarni birga ishlatgan holda, talabalar yangi va hayajonli muhitda qiziqarli va zamonaviy dastur yaratish salohiyatiga ega bo‘ladilar.",
+          "student_overview": "Lavadan saqlaning! Bu yerda siz Minecraft dunyosidagi shartli bayonotlar haqida o‘rgana boshlaysiz."
+        },
+        "coursed-2023/If/Else with Bee": {
+          "name": "Asalari bilan If/Else",
+          "overview": "Shu paytgacha talabalar har safar ishlatib ko‘rilganda aynan bir xil tarzda ijro etiladigan -ishonchli, ammo moslashuvchan bo‘lmagan kod yozib kelishayotgan edi. Bu darsda, sinfingiz dasturingiz turli xil maxsus holatlarga duch kelishiga qarab turli xil vazifalarni bajaradigan funksiyalarni yozishga imkon beradigan shartli boyonotlar bilan kod yozishni boshlashadi.",
+          "purpose": "“Kartali shartlar” dagi shartlar bilan tanishtirilgandan so'ng, talabalar endi ularni o'z dasturlarida qo'llashni mashq qiladilar. “If/else” bloklari yanada moslashuvchan dasturga imkon beradi. Asalari faqat nektar yig'adi _agar_ gul bo'lsa yoki asal qilsa _agar_ asal bo'lsa. ",
+          "student_overview": "Siz hozir shartli boyonotlarni tushunib oldingiz, endi asal va gul shirasini yig‘adigan Asalari dasturini tuzishda ulardan foydalansak bo‘ladi. "
+        },
+        "coursed-2023/While Loops in Farmer": {
+          "name": "While Loops in Farmer",
+          "overview": "Ushbu \\*\\* mahoratni shakllantirish\\*\\* darsida talabalar Fermerda teshiklarni to'ldirish va axloqsizlik qazish ustida ishlaydilar, lekin ular teshiklarning o'lchamini yoki axloqsizlik tepaliklarining balandligini bilishmaydi. Ushbu jumboqlarni hal qilish uchun talabalar yangi turdagi pastadirdan foydalanadilar.",
+          "purpose": "Sizning o'quvchilaringiz ilmoqlar haqidagi bilimlarini chuqurlashtirishda davom etar ekan, ular buyruqni takrorlash kerak bo'lgan muammolarga duch kelishadi, lekin uni necha marta takrorlash kerakligi noma'lum. Bu erda looplar kirib keladi. Bugungi darsda talabalar yangi boshlanuvchilarning shartlarga asoslangan ilmoqlar haqidagi tushunchalarini rivojlantiradilar va umuman ilmoqlar haqidagi bilimlarini kengaytiradilar. ",
+          "student_overview": "Sikllar kod yozishda juda foydali. Bu dars sizga siklning yangi turini o‘rgatadi: while sikllari!"
+        },
+        "coursed-2023/Until Loops in Maze": {
+          "name": "Until Loops in Maze",
+          "overview": "Bu darsda, talabalar `until` sikllari haqida o‘rganishadi. Talabalar o‘zlari xohlagan nuqtagacha qaytarilaveradigan harakatlarni ijro etuvchi obrazga ega bo‘lgan dastur yaratishadi.",
+          "purpose": "Boshqotirmalarning bu to‘plami `until` shartini qo‘shish orqali o‘quvchilarga sikllar haqida bilishga va bilimlarini mustahkamlashga yordam beradi. Bu ikki tushunchani birgalikda ishlatish orqali, talabalar murakkab va yangi dasturlar yaratish uchun salohiyatni tadqiq qila oladilar.",
+          "student_overview": "`Until` sikli bilan siz ba’zi bir ajoyib narsalarni amalga oshira olasiz!"
+        },
+        "coursed-2023/End of Course Project": {
+          "name": "End of Course Project",
+          "overview": "Ushbu yakunlovchi dars o‘quvchilarni o‘zlarining loyihalarini loyihalashtirish, ishlab chiqish va namoyish etish jarayonidan o‘tadi!",
+          "preparation": "-   Sinfingiz uchun yuzaga kelishi mumkin bo'lgan muammoli joylarni topish uchun jumboqlarni o'ynang.\n-   Har bir talaba (yoki juftlik) uchun bitta**\\\\ \\*Loyihani rejalashtirish bo'yicha qo'llanma** ni chop eting.\n-   (Ixtiyoriy) O'zingizning rejalashtirish bo'yicha qo'llanmani to'ldiring va talabalarga ko'rsatish uchun o'z loyihangizni kodlang!",
+          "purpose": "Ushbu dars talabalarga rejalashtirishni talab qiladigan, lekin keng ijodkorlikka imkon beradigan bosqichma-bosqich jarayondan foydalangan holda o'z dizayni loyihasini yaratish uchun joy beradi.",
+          "student_overview": "Ushbu qo‘llarni bir dunyo kod yozish uchun tayyorlang! Loyihangizni yaratishni boshlashning vaqti keldi."
+        },
+        "coursee-2023/Be A Super Digital Citizen": {
+          "name": "Super raqamli fuqaro bo'ling",
+          "overview": " [![sog'lom fikr ta'limi](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nUshbu dars dastlab Common Sense Education tomonidan yaratilgan. [Batafsil ma'lumot.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nOnlayn vositalar bolalar uchun kuch beradi va ular ham katta mas'uliyat bilan birga keladi. Ammo bolalar har doim kiberhujumga duch kelganda nima qilish kerakligini bilishadimi? Talabalaringizga yordam berishdan tortib, muhtojlarga yordam berishgacha bo'lgan choralar ko'rish va nizolarni hal qilishning to'g'ri usullarini ko'rsating.",
+          "preparation": "-   O'quv materiallarini ko'rib chiqing.\n-   Har bir talaba uchun tarqatma material (lar) ni chop etish.\n-   Talabalar uchun rangli qalam yoki markerlarni tayyorlang.",
+          "purpose": "Common Sense raqamli fuqarolik o'quv dasturi bolalar, ommaviy axborot vositalari va texnologiyalar bo'yicha so'nggi tadqiqotlarga asoslangan oltita asosiy mavzuga bag'ishlangan. Bu dars kiberhujum, raqamli drama va nafrat nutqiga bag'ishlangan. Talabalar ushbu qiyin mavzularni o'z zimmalariga oladilar va ijobiy, qo'llab -quvvatlovchi onlayn hamjamiyatlarni yaratish va onlayn shafqatsizlikka qarshi kurashish uchun faol rol o'ynaydilar.",
+          "student_overview": "Kiberhujumni ko‘rganingizda qanday qilib undan himoyada bo‘lishingizni bilib oling."
+        },
+        "coursee-2023/Private and Personal Information": {
+          "name": "Maxfiy va Shaxsiy ma'lumotlar",
+          "overview": " [![sog'lom fikr ta'limi](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nUshbu dars dastlab Common Sense Education tomonidan yaratilgan. [Batafsil ma'lumot.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nBoshqalar bilan bo'lishish va ular bilan bog'lanish bizning talabalarimiz tabiatida. Ammo onlayn almashish ba'zi xavflar bilan birga keladi. Qanday qilib biz bolalarga Internetda kuchli, ijobiy va xavfsiz munosabatlarni o'rnatishda yordam bera olamiz? Talabalaringizga shaxsiy va eng yaxshi shaxsiy narsalar o'rtasidagi farqni bilib olishga yordam bering.",
+          "preparation": "-   O'quv materiallarini ko'rib chiqing.\n-   Har bir talaba uchun tarqatma material (lar) ni chop etish.",
+          "purpose": "Common Sense raqamli fuqarolik o'quv dasturi bolalar, ommaviy axborot vositalari va texnologiyalar bo'yicha so'nggi tadqiqotlarga asoslangan oltita asosiy mavzuga bag'ishlangan. Ushbu dars Maxfiylik va xavfsizlikka qaratilgan. Talabalar shaxsiy ma'lumotlarni qanday himoya qilishni o'rganadilar va o'zlari va boshqalarni himoya qilishlari uchun ma'lumotlarning maxfiyligi huquqlarini chuqurroq tushunadilar.",
+          "student_overview": "Internet qiziqarli va maroqli, ammo xavfsiz bo‘lish ham muhim. Bu dars sizga tarqatish uchun xavfsiz bo‘lgan axborot va maxfiy qolishi kerak bo‘lgan axborotlar o‘rtasidagi farqni o‘rgatishadi. "
+        },
+        "coursee-2023/Swimming Fish with Sprite Lab": {
+          "name": "Swimming Fish with Sprite Lab",
+          "overview": "In this lesson, students will learn about the two concepts at the heart of Sprite Lab: sprites and behaviors. Sprites are characters or objects on the screen that students can move, change, and manipulate. Behaviors are actions that sprites will take continuously until they are stopped.",
+          "purpose": "Ushbu dars talabalarni Sprite Lab -ning asosiy lug'ati bilan tanishtirish va ularga boshqa muhitda o'rgangan tushunchalarini ushbu vositaga qo'llash imkonini berish uchun mo'ljallangan. Baliq akvariumini yaratish orqali talabalar ushbu vositaning dasturlash modeli haqida tushuncha hosil qila boshlaydilar va undan o'zlarini ifoda etish uchun foydalanish usullarini o'rganadilar.",
+          "student_overview": "Learn how to create and edit sprites."
+        },
+        "coursee-2023/Mini-Project: About Me": {
+          "name": "Men haqimda Sprite Lab bilan",
+          "overview": "Talabalar ushbu mini-loyihada\\*\\* interaktiv plakat yaratish orqali Internetda shaxsiy va shaxsiy ma'lumotlarni almashish haqidagi tushunchalarini qo'llaydilar.",
+          "purpose": "Ushbu dars shaxsiy va shaxsiy ma'lumotlar bo'yicha oldingi darsni talabalar uchun shaxsan dolzarb qilish uchun mo'ljallangan. SAFE (shaxsiy) va UNSAFE (shaxsiy) misollarni hisobga olgan holda, talabalar Internetda o'zlarini xavfsiz ifoda etishni mashq qiladilar, SpriteLab-dan foydalanib, o'zlarining sprite kostyumlarini yaratadilar va matn yaratadilar.",
+          "student_overview": "SpriteLab bilan interaktiv plakat yaratish orqali talabalar Internetda shaxsiy va maxfiy ma'lumotlarni almashish haqidagi bilimlarini qo‘llaydilar."
+        },
+        "coursee-2023/Drawing with Loops": {
+          "name": "Drawing with Loops",
+          "overview": "Watch student faces light up as they make their own gorgeous designs using a small number of blocks and digital stickers! This lesson builds on the understanding of loops from previous lessons and gives students a chance to be truly creative.  This activity is fantastic for producing artifacts for portfolios or parent/teacher conferences.",
+          "purpose": "Talabalar ilmoqlardan foydalangan holda mashq qiladilar, bu tushuncha kelgusi darslar davomida qayta ko'rib chiqiladi.",
+          "student_overview": "In this lesson, loops make it easy to make even cooler images with Artist!"
+        },
+        "coursee-2023/Fancy Shapes using Nested Loops": {
+          "name": "Fancy Shapes using Nested Loops",
+          "overview": "Ushbu \\*\\* mahoratni shakllantirish\\*\\* darsida talabalar Rassom yordamida murakkab dizaynlarni yaratadilar. Dars talabalarga o'z dizaynlarini yaratish imkoniyati bilan yakunlanadi.",
+          "preparation": "-   Sinfingiz uchun yuzaga kelishi mumkin bo'lgan muammoli joylarni topish uchun jumboqlarni o'ynang.\n-   Har bir talabaning aks ettirish jurnali borligiga ishonch hosil qiling.\n-   Burilish va burchak bilan o'quvchilaringizga nima yordam berishi mumkinligini ko'rib chiqing. ",
+          "purpose": "Bu onlayn mashg‘ulotda, talabalar o‘zlari sevgan do‘stlari bilan g‘ururlanib ulasha oladigan San’atkor uchun dizaynlar yaratishadi. \n\nBu mashg‘ulotning maqsadi boshqa bir ijodkorona chiqish yo‘li sifatida talabalarni artistona fikrlar bilan kodlashini ko‘rish uchun ruhlantiradigan usulda ichma-ich sikllardan foydalanish. Boshqotirmalarning bu to‘plami tanqidiy fikrlash mahoratlarini, boshlang‘ich geometriya tushunchalarini va yaratuvchanlikni shakllantirish uchun yaratilgan -- barchasi ichma-ich sikllar ko‘lamida o‘rganiladi!",
+          "student_overview": "Ko‘proq ichma-ich sikllar! Bu safar biz ichma-ich sikllar bilan AJOYIB chizmalar chizamiz."
+        },
+        "coursee-2023/Mini-Project: Design a Snowflake": {
+          "name": "Mini-loyiha: qor parchasini loyihalash",
+          "overview": "Endi talabalar o‘z siklarini qatlamlarga ajratishni bilib olishadi, ular ko‘plab chiroyli narsalar yarata olishadi.  Ushbu dars talabalarni Anna va Elzaning muzda uchish bo'yicha mukammal qobiliyatlaridan foydalangan holda o'zlarining portfoliosi uchun tayyor tasvirlarini yaratishda yordam beradigan bir qator mashqlarni bajaradi!",
+          "preparation": "-   Sinfingiz uchun mumkin bo'lgan muammoli joylarni topish uchun jumboqlarni o'ynang.\n-   Har bir talabaning aks ettirish jurnali borligiga ishonch hosil qiling.",
+          "purpose": "Ushbu darsda talabalar o'zlarining malakalarini ichki ilmoqlar bilan qo'llaydilar, ular baham ko'rishdan xursand bo'ladigan tasvirlarni yaratadilar. ",
+          "student_overview": "Anna va Elsaning ajoyib muzda uchish qobiliyati bor, ammo muzda shakllar yaratish uchun ularga yordamingiz kerak. AJOYIB nimadir yaratish uchun ichma-ich sikllardan foydalaning. "
+        },
+        "coursee-2023/Songwriting": {
+          "name": "Qo'shiq yozish",
+          "overview": "Informatika dunyosidagi eng ajoyib tuzilmalardan biri bu funksiya. Funksiyalar (ba'zida protsedura deb ham yuritiladi) - bu kichik dastur bo'lib, undan kattaroq dasturning ichida qayta-qayta foydalanishingiz mumkin. Ushbu dars talabalarga intuitiv ravishda funksiyalar nima uchun ekanligini va kod qismlarini funksiyalarga birlashtirish qanchalik foydali amaliyot bo'lishi mumkinligini tushunishga  yordam beradi. ",
+          "preparation": "-   (Ixtiyoriy) **\\\\ \\*Harakat darsi** Videoni tomosha qiling.\n-   Har bir guruh uchun bir nechta **\\\\ \\*ish varaqlari** ni chop eting.\n-   Har bir talaba uchun bitta**\\\\ \\*baholash** ni chop eting.\n-   Faoliyat uchun qo'shiqlar va so'zlarga xavfsiz kirish.\n-   Har bir talabaning jurnali borligiga ishonch hosil qiling.",
+          "purpose": "Funksiyalardan foydalanish kodni soddalashtirishga yordam beradi va talabaning o'z dasturini tartibga solish qobiliyatini rivojlantiradi. Talabalar funksiyalar yozishi uzun dasturlarini o'qishni osonlashtirishi va agar biror narsa noto'g'ri bo'lsa, disk sozlama qilishni osonlashtirishi mumkinligini tezda anglaydilar.",
+          "student_overview": "Hatto rok yulduzlari ham dasturlash ko'nikmalariga muhtoj. Ushbu dars sizga qo'shiqlar matnlaridan foydalangan holda funksiyalar haqida ma'lumot beradi."
+        },
+        "coursee-2023/Functions in Minecraft": {
+          "name": "Minecraftdagi funksiyalar",
+          "overview": "Students will begin to understand how functions can be helpful in this fun and interactive Minecraft adventure!",
+          "purpose": "Talabalar turli xil muhitda funksiyalarni bajarish orqali dasturlashning ko'p qirraliligini kashf etadilar. Bu yerda talabalar qayta ishlatilishi mumkin bo'lgan naqshlarni tanib oladilar va oldindan belgilangan funksiyalarni chaqirish uchun nomlangan bloklarni birlashtira oladilar.",
+          "student_overview": "Can you figure out how to use functions for the most efficient code?"
+        },
+        "coursee-2023/Functions with Artist": {
+          "name": "Rassom bilan funksiyalar",
+          "overview": "Talabalar Rassom bilan funksiyalarni ishlatishga kirishadi. Jozibali rasmlar yaratiladi va o‘zgartiriladi. Yanada murakkabroq ko‘rinishlar uchun, talabalar biron funksiya ichida boshqa birini chaqirish orqali ichma-ich funksiyalar haqida o‘rganishadi.",
+          "purpose": "Ushbu darsning eng muhim tarkibiy qismlaridan biri bu o'quvchilarga faxrlanadigan narsalarni yaratish uchun joy berishdir. Bu jumboqlar tobora murakkab tasvirlarga o'tadi, lekin har bir yangi jumboq faqat oldingi jumboqdan kelib chiqadi. Ushbu dars yakunida talabalar o'zlarining mehnatlari bilan ishonchli va faxrlanadilar.",
+          "student_overview": "Funksiyalar bilan murakkab chizmalarni osonlashtiring!"
+        },
+        "coursee-2023/Conditionals in Minecraft: Voyage Aquatic": {
+          "name": "Minecraftda shartli bayonotlar: Suv sayohati",
+          "preparation": "-   Sinfingiz uchun yuzaga kelishi mumkin bo'lgan muammoli joylarni topish uchun ushbu dars bilan bog'liq jumboqlarni o'ynang.\n-   Har bir talabaning aks ettirish jurnali borligiga ishonch hosil qiling.",
+          "purpose": "Boshqotirmalarning bu to‘plami sikllar bo‘yicha bilimga ega bo‘lish va uni kengaytirish uchun juda foydali va shartli bayonotlar bilan tanishtiradi. Bu tushunchalarni birga ishlatgan holda, talabalar yangi va hayajonli muhitda qiziqarli va zamonaviy dastur yaratish salohiyatiga ega bo‘ladilar.",
+          "student_overview": "Bu yerda siz Minecreaft dunyosidagi shartli bayonotlar haqida o‘rganasiz."
+        },
+        "coursee-2023/Conditionals with the Farmer": {
+          "name": "Conditionals with the Farmer",
+          "overview": "Bu dars talabalarga `while` siklari va `if / else` bayonotlarini tanishtiradi.  _While sikllari_ biron shart bajarilmaguncha davom etaveradigan sikllardir.  While sikllari dasturchi buyruqlarni aynan necha marta takrorlanishini bilmagan holda, ammo dasturchi sikl davom etishi uchun qanaqa shart bajarilishi kerakligini bilgan holda ishlatiladi. `If / Else` bayonotlari agar nimadir to‘g‘ri bo‘lsa, kodning butun bo‘limini ishlatish orqali va aks holda boshqa bir narsani ishlatish orqali dasturlashda qulayliklar taklif qiladi.",
+          "purpose": "Ushbu dars talabalarni while loops va “if/else” bayonotlari bilan tanishtiradi.",
+          "student_overview": "Bu qiziqarli va qiyin bosqichda siz komputerga biron narsani ma’lum bir shart ostida bajarishni aytasiz."
+        },
+        "coursee-2023/Functions with Harvester": {
+          "name": "Terimchi bilan funksiyalar",
+          "overview": "Talabalar Rassom loyihasida ta’sirchan dizaynlar yaratishni va Asalarini labirintda yo‘naltirishni mashq qilib ko‘rishgan, ammo bugun ular funksiyalardan dehqondagi hosilni yig‘ish uchun ishlatadilar. Bu dars talabalarni funksiyalardan 'while' sikli va 'if/else' bayononotlari bilan birlashtirgan holda foydalanishga undaydi.",
+          "purpose": "Ushbu dars o'quvchilarni funktsiyalarga ega shartlardan foydalanishga undash uchun mo'ljallangan. Ushbu jumboqlar muammolarni hal qilish va tanqidiy fikrlash ko'nikmalarini oshirishga qaratilgan.",
+          "student_overview": "Fermerga yordam berayotganingizda, funksiyalar sizni ko‘p ishlar qilishdan saqlab qoladi!"
+        },
+        "coursee-2023/Designing for Accessibility": {
+          "overview": "Miya hujumi (brainstorm) va faraziy ilovalar uchun qulay yechimlarni loyihalashtirish orqali kirish imkoniyati va empatiya qiymati haqida bilib oling. ",
+          "preparation": "-   Kontekst uchun\\*\\*\\\\ \\* nogironlik turlari haqida o'qing. \n-   **\\\\ \\*slayd kemada** karnay yozuvlarini o'qing.\n-   Barcha talabalar uchun etarlicha eskiz/chizmachilik materiallarini tayyorlang.",
+          "purpose": "Kirish imkoniyatini o'rganish orqali talabalar hisoblashning o'z hayotidan tashqari ta'sirini tan olishadi. Maxsus imkoniyatlar tegishli CS mavzusiga o'xshamasligi mumkin, ammo kam ta'minlangan foydalanuvchilar uchun mavjud bo'lgan texnologiyani yaratish texnologiyani hamma uchun ham yaxshilashga yordam beradi. ",
+          "student_overview": "Aqliy hujum va faraziy ilovalar uchun qulay echimlarni ishlab chiqish orqali kirish imkoniyati va empatiyaning ahamiyati haqida bilib oling. "
+        },
+        "coursee-2023/Digital Sharing": {
+          "name": "Raqamli Ulashish",
+          "overview": "Bu **Exploratory** darsi talabalarga mulkchilik va mualliflik huquqini hurmat qilishning qiyinchiliklari va afzalliklarini, ayniqsa raqamli muhitda tushunishga yordam beradi. ",
+          "preparation": "-   **\\\\ \\*Mualliflik huquqi bilan bo'lishish videosi** ni “Links” da toping\n-   Mualliflik huquqi va ijodkorlik fanidan to'liq**\\\\ \\*Raqamli almashish dars rejasi** ni yuklab oling va ko'rib chiqing\n-   O'qituvchi sifatida dars uchun san'at asarini yarating (rasm, qo'shiq, slayd-shou va boshqalar) \n-   Har bir talabaning aks ettirish jurnali borligiga ishonch hosil qiling.\n-   Ushbu elementni almashishni takrorlash uchun sizga planshet yoki aqlli telefon kerak bo'ladi",
+          "purpose": "Talabalar tez orada bir-biriga ulashish uchun loyihalar yaratayotgan bo‘lishadi va bu loyihalarning ko‘pchiligi talabalarning o‘zlari yaratmagan kod yoki tasvirlardan tashkil topadi. Ushbu dars talabalarga o'zlariga tegishli bo'lmagan tarkibdan foydalanishning to'g'ri usullarini ko'rsatish uchun berilgan.",
+          "student_overview": "In this lesson, you'll learn about the challenges and benefits of ownership and copyright. "
+        },
+        "coursee-2023/End of Course Project": {
+          "name": "End of Course Project",
+          "overview": "Keyingi to‘rtta dars talabalarga biron kapston loyihasida kod yozish ko‘nikmalaridan foydalanish imkonini beradi. Bu loyiha yakka holda kod yozish bo‘yicha tajriba orttirishga va tengdoshlar va yaxshi ko‘rgan insonlar bilan ulashish uchun namuna yaratishga yordam beradi. Ko‘p dars  yoki ko‘p haftalik tajribaga ega bo‘lishi kutilgan holda, talabalar aqlli saralash, dizaynlashtirishni o‘rganish, yaratish va o‘zlarining yakuniy loyihalarini namoyish qilishga vaqt sarflashadi. \n\nTadqiq qilish bosqichida,  talabalar Rassom va ilhomlantirish uchun Sprite Labdagi loyihalarning oldindan yaratilgan misollari bilan ishlashadi. Keyingisida, talabalar dizaynlashtirish jarayoni va uni o‘z loyihalarida qanday amalga oshirishni o‘rganishadi. Keyin ularga Rassom, Sprite Lab yoki ular tanishib chiqadigan biron interfeysda o‘zlarining loyihalarini yaratishi uchun joy beriladi (bu loyihaning eng uzun bosqichi bo‘lishi kutiladi). Va nihoyat, talabalar tugatgan ishlarini do‘stlari bilan ulasha oladi.",
+          "preparation": "-   Artist va Sprite Lab bilan o'z loyihangizni yaratishga vaqt ajrating. Har bir vositaning imkoniyatlari va cheklovlari bilan tanishib chiqing.\n-   Sinf maqsadlaringizga mos keladi**\\\\ \\*rubrika** ni o'zgartiring va har bir talaba uchun nusxasini chop eting.\n-   sinfingizga mos keladigan **\\\\ \\* loyiha dizayni ish varag'i** ni o'zgartiring va har bir talaba uchun bitta paketni chop eting.",
+          "purpose": "Talabalar to‘g‘ridan-to‘g‘ri o‘z loyihalarini yaratish uchun tayyor bo‘lishlari mumkin, ammo bu dars ularning g‘oyalarini rejalarga aylantirishga yordam beradi. Ushbu tuzilma orzu qiluvchi ko‘ngillilarni bir joyda ushlab turgan holda, o’zlarini zulmatda qolgandek  his qiladiganlar uchun yo‘lni yoritib beradi. Qolaversa, talabalarga  o‘z loyihalarini yaratish va qayta ko‘rib chiqish uchun  yetarli vaqt bilan ta’minlaydi. Ushbu darsda ishtirok etgan sinov va xatolar muammolarni hal qilishga va qat’iylikka o‘rgatadi. ",
+          "student_overview": "Projects this big take time and plenty of planning. Find your inspiration, develop a plan, and unleash your creativity!"
+        },
+        "coursef-2023/The Power of Words": {
+          "name": "The Power of Words",
+          "overview": " [![sog'lom fikr ta'limi](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nUshbu dars dastlab Common Sense Education tomonidan yaratilgan. [Batafsil ma'lumot.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nBolalar o'sib ulg'aygan sayin, ular tabiiy ravishda ko'proq onlayn muloqot qilishni boshlaydilar. Ammo ular ko'rgan narsalarning ba'zilari ularni xafa qilishi, qayg'uli, g'azablanishi yoki hatto qo'rqitishi mumkin. Talabalaringizga boshqalarga hamdardlik bildirishga yordam bering va kiberhujumlarga duch kelganda foydalanish strategiyasini o'rganing.",
+          "preparation": "-   O'quv materiallarini ko'rib chiqing.\n-   Har bir talaba uchun tarqatma material (lar) ni chop etish.\n-   sinf uchun uzun ip (yoki arqon) va qog'oz tayyorlang.",
+          "purpose": "Common Sense raqamli fuqarolik o'quv dasturi bolalar, ommaviy axborot vositalari va texnologiyalar bo'yicha so'nggi tadqiqotlarga asoslangan oltita asosiy mavzuga bag'ishlangan. Bu dars kiberhujum, raqamli drama va nafrat nutqiga bag'ishlangan. Talabalar ushbu qiyin mavzularni o'z zimmalariga oladilar va ijobiy, qo'llab -quvvatlovchi onlayn hamjamiyatlarni yaratish va onlayn shafqatsizlikka qarshi kurashish uchun faol rol o'ynaydilar.",
+          "student_overview": "Bezorilik hech qachon yaxshi bo’lmaydi. Ushbu dars sizga onlaynda nima deyish va nima deyish mumkinligi to’g’risida ma’lumot beradi."
+        },
+        "coursef-2023/Introducing Sprite Lab": {
+          "name": "Sprite laboratoriyasi bilan tanishish",
+          "overview": "**Kontekstni sozlash** darsida talabalar kompyuterlar va texnologiyalarning o'z hayotidagi rolini muhokama qiladilar, bunda ilovalar va vositalar foydalanuvchilarga ulardan qanday foydalanishni tanlash imkoniyatini beradi. Talabalar, shuningdek, keyinchalik o'zlari yaratadigan ilovalarga o'xshash ilovalarni o'rganadilar.",
+          "preparation": "-   Talabalar Code.org saytiga qanday kirishlarini aniqlang.\n-   Agar kerak bo'lsa, talabalar uchun Code.org hisoblarini yarating.\n-   Talabalarga Sprite laboratoriyasini tanishtirishni tayinlang.\n-   **\\\\ \\*Exploring Apps** ishchi varag'ining nusxalarini chop eting (yoki raqamli versiyasini LMS-ga joylashtiring).",
+          "purpose": "Birinchi dars talabalarni kursdan hayajonga tushirish va shaxsiy qiziqishlarini informatika bilan bog'lash haqida. ",
+          "student_overview": "Siz kompyuterlar va texnologiyalarning hayotingizdagi rolini muhokama qilasiz, bunda ilovalar va vositalar foydalanuvchilarga ulardan qanday foydalanish to'g'risida tanlov qilishiga e'tibor qaratasiz."
+        },
+        "coursef-2023/Making Sprites": {
+          "name": "Sprayt yasash",
+          "overview": "Bu \\*\\* mahoratni shakllantirish\\*\\* darsida talabalar kompyuterda bir qator dasturlash darajalari orqali ishlaydilar va o'zlari xohlagan narsani qurishlari mumkin bo'lgan ochiq “bepul o'yin” vazifasi bilan yakunlaydilar. Talabalar dasturlar yozadilar va Sprite laboratoriyasining markazida joylashgan ikkita tushuncha haqida bilib oladilar: spritlar va xatti -harakatlar. ",
+          "preparation": "Darajalar orqali o'ynang va**\\\\ \\*dars slaydlari** ni ko'rib chiqing.",
+          "purpose": "Ushbu dars talabalarni Sprite laboratoriyasida dasturlash bilan tanishtirish uchun mo'ljallangan. Talabalar ushbu vositaning dasturlash modeli haqida tushunchani shakllantira boshlaydilar va undan o'zlarini ifoda etish uchun foydalanish usullarini o'rganadilar.",
+          "student_overview": "Ushbu darsda siz dasturlar yozasiz va spritlar va xatti-harakatlar haqida bilib olasiz."
+        },
+        "coursef-2023/Sprites in Action": {
+          "name": "Spraytlar amalda",
+          "overview": "Bu \\*\\* mahoratni shakllantirish\\*\\* darsida talabalar kompyuterda bir qator dasturlash darajalari orqali ishlaydilar va o'zlari xohlagan narsani qurishlari mumkin bo'lgan ochiq “bepul o'yin” vazifasi bilan yakunlaydilar. Talabalar vaqtli voqealar va foydalanuvchi kiritishiga javob beradigan dasturlarni yozadilar. ",
+          "preparation": "Darajalar bo'ylab o'ynang va dars slaydlarini ko'rib chiqing.",
+          "purpose": "Ushbu dars oldingi darsdagi ko'nikmalarni mustahkamlash va o'quvchilarni voqealar bilan dasturlash bilan tanishtirish uchun mo'ljallangan. Ushbu kurs davomida voqealar talabalarning o'z dasturlari vaqt o'tishi bilan yoki foydalanuvchiga javoban ishlashini o'zgartirishning asosiy usuli bo'ladi.",
+          "student_overview": "Siz dasturlash darajalari orqali ishlaysiz va o'zingiz xohlagan narsani qurishingiz mumkin bo'lgan ochiq “bepul o'yin” vazifasi bilan yakunlaysiz."
+        },
+        "coursef-2023/Mini-Project: Virtual Pet": {
+          "name": "Mini-loyiha: Virtual Pet",
+          "overview": "Bu darsda talabalar ular xohlagandek ko‘rinadigan va o‘zini tutadigan interfaol virtual uy hayvonini yaratishadi. Talabalar uy hayvoninig tashqi ko‘rinishini moslashtirish uchun Sprite Labning \"Costumes\" qurilmasidan foydalanishadi. Keyin ular uy hayvonini jonlantirish uchun hodisalar, xatti-harakatlar va ular o‘rgangan boshqa tushunchalardan foydalanishadi!",
+          "purpose": "Bu dars talabalarga oldingi darslardan dasturlash tushunchalarini boshqa ijodiy kontekstda qo'llash imkonini beradi. ",
+          "student_overview": "In this lesson, students will create an interactive Virtual Pet that looks and behaves how they wish. Students will use Sprite Lab's \"Costumes\" tool to customize their pet's appearance. They will then use events, behaviors, and other concepts they have learned to give their pet a life of its own!"
+        },
+        "coursef-2023/Blank Space Stories": {
+          "name": "Bo'sh kosmik hikoyalar",
+          "overview": "**Kontekstni sozlash** darsida talabalar bo'sh joyni to'ldirish hikoyalaridan foydalanadilar (Mad Libs® ga o'xshash) kompyuterlar foydalanuvchidan ma'lumotlarni qanday qabul qilishini va saqlashini tushunish uchun kontekst sifatida, keyin uni keyinchalik dastur sifatida ishlatishadi. ishlaydi. ",
+          "preparation": "6 ta konvertni oling (shuningdek, mos keladi: qog'oz yoki indeks kartalari, yarmiga katlanmış). \n\n-   Har bir konvertning old qismini katta harflar bilan belgilang: ob'ekt, suyuqlik, raqam, sifat, tana qismi,\n    raqami - Talabaning nusxalarini chop etish**\\\\ \\*ish varag'i** (yoki raqamli versiyasini LMS-ga joylashtiring).",
+          "purpose": "Bu dars talabalar dasturlashga qaytganlarida o'zgaruvchilar qanday ishlashini tushunish uchun foydali bo'lgan umumiy kontekstni taqdim etadi.",
+          "student_overview": "Ushbu mashg'ulotda siz bo'sh joyni to'ldiradigan hikoyalardan foydalanasiz (Mad Libs® ga o'xshash) kompyuterlar foydalanuvchidan ma'lumotlarni qanday qabul qilishini va saqlashini tushunishga tayyor bo'lasiz, keyin uni dastur ishlayotganda ishlatasiz. "
+        },
+        "coursef-2023/Text and Prompts": {
+          "name": "Matn va ko'rsatmalar",
+          "overview": "Ushbu \\*\\* ko'nikmalarni shakllantirish\\*\\* darsida talabalar Sprite laboratoriyasida o'zgaruvchilar bilan mashq qilishadi. ",
+          "preparation": "Darajalar bo'ylab o'ynang va dars slaydlarini ko'rib chiqing.",
+          "purpose": "Ushbu kursda ma'lumotlarni saqlash va o'zgartirish uchun o'zgaruvchilar ishlatiladi. Bu vaqtda talabalar qadriyatlarni o'zgartirmasdan saqlaydilar va olishadi. Keyingi darslarda talabalar raqamli qiymatlarni saqlaydilar va vaqt o'tishi bilan o'yinchining o'yindagi ballari kabi narsalarni kuzatib borish uchun o'zgartiradilar.",
+          "student_overview": "Ushbu darsda siz Sprite Lab -da o'zgaruvchilar bilan mashq qilasiz."
+        },
+        "coursef-2023/Mini-Project: User Input Programs": {
+          "name": "Chat-Bot yaratish",
+          "overview": "Talabalar o'zlarining yangi ko'nikmalarini o'zgaruvchilar bilan uchta ochiq\\*\\* mini-loyihalardan biriga qo'llaydilar. Talabalar namunaviy dasturlarni o'rganadilar, o'z loyihalari uchun reja tuzadilar va noldan dasturlaydilar.",
+          "preparation": "-   Rejalashtirish qo'llanmasini chop eting yoki har bir talabaga raqamli nusxasini tarqating. O'zingizning sinfingizga mos keladigan biron bir o'zgartirish kiritmoqchi bo'lsangiz, uni oldindan ko'rib chiqing.\n\n-   Talabalar kuzatishi kerak bo'lgan oqim bilan tanishish uchun 3 -darajadagi variantlarni oldindan ko'rib chiqing.\n\n-   Bu dars bir necha sinf davrlariga cho'zilishi mumkin. Imtiyojlarni oldindan rejalashtirishni ko'rib chiqing.",
+          "purpose": "Bu dars yangi ko'nikmalar yoki tushunchalarni kiritmaydi, aksincha o'quvchilarga o'rgangan narsalarini ijodiy usulda qo'llash imkoniyatini beradi.",
+          "student_overview": "O'zgaruvchilar bilan yangi ko'nikmalaringizni uchta ochiq loyihadan biriga qo'llang."
+        },
+        "coursef-2023/Lots of Sprites": {
+          "student_overview": "Siz Sprite Laboratoriyasi bilan yanada ko'proq ishlashni va ko'plab spritlar bilan loyihalar yaratishni o'rganasiz!"
+        },
+        "coursef-2023/Counting with Variables": {
+          "name": "O'zgaruvchilarni sanash",
+          "overview": "Ushbu **malaka oshirish** darsida talabalar hisoblagich kabi vaqt o‘tishi bilan o‘zgarib turadigan qiymatni kuzatish uchun o‘zgaruvchilardan foydalanadilar. Ushbu darsda talabalar oddiy o'yin yaratadigan qisqa **mini-loyiha** ham mavjud.",
+          "purpose": "Oldingi darslarda talabalar keyinroq olinishi mumkin bo'lgan ma'lumotlarni saqlash uchun o'zgaruvchilardan foydalanishni o'rganadilar. Ushbu darsda talabalar o'zgaruvchida saqlangan ma'lumotlarni o'zgartirishni o'rganishni boshlaydilar. O'zgaruvchilar qanday ishlashini tushunish, ularga yanada ilg'or loyihalarni yaratishga imkon beradi.",
+          "student_overview": "Hisoblagich yaratish yoki o'yinda hisobni kuzatish uchun o'zgaruvchilardan foydalanishni o'rganasiz."
+        },
+        "coursef-2023/Mini-Project: Collector Game": {
+          "overview": "Ushbu **mini-loyiha** darsida talabalar moslashtirilgan \"kollektor o'yini\" yaratadilar, unda foydalanuvchi ob'ektlarni yig'ish uchun spraytni harakatga keltiradi.",
+          "purpose": "Ushbu loyiha talabalarga o'zgaruvchilar haqidagi yangi bilimlarini qiziqarli tarzda qo'llash imkonini berish uchun mo'ljallangan. O'zgaruvchida saqlangan qiymatni qanday o'zgartirishni tushunib, talabalar o'yinchining harakatlariga qarab hisobni avtomatik ravishda saqlaydigan o'yin yaratishlari mumkin.",
+          "student_overview": "Barcha spritlarni to'plang! Ushbu loyihada siz boshqalar o'ynashi mumkin bo'lgan o'yin yaratasiz"
+        },
+        "coursef-2023/Simulating Experiments": {
+          "name": "Simulating Experiments",
+          "overview": "By running a simple simulation in Sprite Lab, students will experience how computing can be used to collect data that identify trends or patterns. After running the simulation multiple times, students will have an opportunity to make a prediction about how changing a variable in the simulation might impact the outcome, and then test that hypothesis.",
+          "preparation": "-   Talabalar simulyatsiyalarni o'z kompyuterida bajaradimi yoki siz ularni butun sinf sifatida boshqarasizmi yoki yo'qligini aniqlang\n-   Agar kerak bo'lsa, ushbu darsda ikkita simulyatsiyani loyihalashga tayyorlaning.",
+          "purpose": "Ko'pgina fanlardagi fanlar eksperimentlarni o'tkazish, ma'lumotlarni to'plash va tushunish uchun bu ma'lumotlarni tahlil qilish uchun modellar va simulyatsiyalarni ishga tushirish uchun kompyuter fanidan foydalanadi. Garchi bu darsda kiritilgan simulyatsiya juda sodda bo'lsa -da, u talabalar gipotezalarni sinab ko'rish uchun qanchalik murakkab hisoblash modellaridan foydalanish mumkinligini ko'rib chiqishlari uchun sakrash nuqtasi sifatida ishlatilishi mumkin.",
+          "student_overview": "Run simulations on the computer and experiment by changing variables."
+        },
+        "coursef-2023/AI For Oceans": {
+          "name": "AI for Oceans",
+          "overview": "\\*\\* O'quv qo'llanmasining qisqacha mazmuni: \\*\\* Dastlabki talabalar okeandan chiqindilarni olib tashlash uchun ob'ektlarni \" baliq yoki 'baliq emas 'deb tasniflashadi. Keyin talabalar o'zlarining o'quv ma'lumotlari to'plamini kengaytirishlari kerak bo'ladi. Suvga kiradigan boshqa dengiz jonivorlarini qo'shish. Faoliyatning ikkinchi qismida talabalar tasodifiy hosil bo'lgan baliqlarning rasmlariga murojaat qilish uchun o'zlarining yorliqlarini tanlaydilar. Bu o'quv ma'lumotlari keyinchalik o'rganish imkoniyatiga ega bo'lishi kerak bo'lgan mashinani o'rganish modeli uchun ishlatiladi. U o'z-o'zidan yangi rasmlarni belgilay oladi.\\\\r\n\\\\r\n\\\\r\n\\*\\* To'g'rilikni tekshirish: \\*\\* Ushbu o'quv qo'llanma talabalarga ularning saviyasini to'g'ri to'ldirgan-qilmaganligini aytmaydi. Faoliyatning turli qismlaridan tezda o'tish mumkin. Talabalarni rasmlarni tomosha qilishga undaydi. Videolar, ko'rsatmalarni o'qing va yo'lda turli xil narsalarni sinab ko'ring. Istalgan vaqtda ular siz yoki sinfdoshingiz bilan o'zlarining topilmalari haqida bo'lishishlari mumkin. \\\\r",
+          "purpose": "Ushbu dars o'quvchilarni sun'iy intellektning bir turi bo'lgan mashinani o'rganish bilan tezda tanishtirish uchun mo'ljallangan. Talabalar yangi ma'lumotlarni tasniflash uchun mashinani o'rganish modelini yoqish uchun o'quv ma'lumotlaridan qanday foydalanilishini o'rganadilar. Talabalar dars davomida ijobiy tajribaga ega bo'lishlari kerak va eng muhimi, informatika fanini o'rganishni davom ettirishga undash kerak. ",
+          "student_overview": "O'quv qo'llanmasining qisqacha mazmuni: Dastlab talabalar okeandan chiqindilarni olib tashlash uchun obyektlarni 'baliqlar' yoki 'baliqlar emas' deb tasniflashadi. Keyin talabalar o'zlarining ma'lumot to'plamlarini boshqa dengizni o'z ichiga olgan holda kengaytirishlari kerak bo'ladi. Faoliyatning ikkinchi qismida talabalar tasodifiy hosil bo'lgan baliqlarning rasmlariga murojaat qilish uchun o'zlarining yorliqlarini tanlaydilar. Ushbu ma'lumotlar yangi tasvirlarni belgilashga qodir bo'lgan mashina o'rganish modeli uchun ishlatiladi. "
+        },
+        "coursef-2023/The Internet": {
+          "name": "Internet",
+          "overview": "Ko'pchilik Internetdan har kuni foydalanayotganiga qaramay, ko'pchilik uning qanday ishlashini bilmaydi. Ushbu darsda talabalar ulanishlar, URL manzillari, IP-manzillar va DNS haqida ma'lumot olish davomida o'zlarini Internetda aylanib yurgandek his qilishadi. ",
+          "preparation": "-   **\\\\ \\*Internet** - O'qituvchi videosini tomosha qiling.\n-   Etarli chop eting**\\\\ \\*IP manzil kartalari va etkazib berish turi kartalari** - Har bir guruh uchun manipulyativlar.\n-   Har bir talaba uchun bitta**\\\\ \\*Internet** Baholash chop eting.\n-   Internetga kirish (masalan, **\\\\ \\*get-site-ip.com**.\n-   Har bir talabaning aks ettirish jurnali borligiga ishonch hosil qiling.",
+          "purpose": "Agar siz ushbu kursda har bir darsni bajargan bo'lsangiz, unda sizning sinfingizdagi har bir talaba internetdan foydalangan... lekin uning qanday ishlashini qancha biladi? Internet haqida ko'proq ma'lumot olish talabalarga uning cheksiz imkoniyatlarini yaxshiroq tushunishga yordam beradi.",
+          "student_overview": "Axborot qanday qilib Internet orqali tarqalishini o'ylab ko'rganmisiz? Bu sehr emas! Bu dars sizga Internet qanday ishlashi asoslarini o'rgatadi."
+        },
+        "coursef-2023/End of Course Project": {
+          "name": "End of Course Project",
+          "overview": "Ushbu yakunlovchi dars o‘quvchilarni o‘zlarining loyihalarini loyihalashtirish, ishlab chiqish va namoyish etish jarayonidan o‘tadi!",
+          "preparation": "-   Artist va Sprite laboratoriyasida o‘zingizning loyihangizni tayyorlashga vaqt ajrating. Har bir uskunaning imkoniyatlari va cheklovlari bilan tanishib chiqing. \n-   Rubrikani sinf maqsadlariga mos ravishda o‘zgartiring va har bir talaba uchun nusxasini chop eting. . \n-   Loyiha dizayni jadvalini sinfingizga mos ravishda o‘zgartiring va har bir talaba uchun bitta paketni chop eting. ",
+          "purpose": "Talabalar to‘g‘ridan-to‘g‘ri o‘z loyihalarini yaratish uchun tayyor bo‘lishlari mumkin, ammo bu dars ularning g‘oyalarini rejalarga aylantirishga yordam beradi. Ushbu tuzilma orzu qiluvchi ko‘ngillilarni bir joyda ushlab turgan holda, o’zlarini zulmatda qolgandek  his qiladiganlar uchun yo‘lni yoritib beradi. Qolaversa, talabalarga  o‘z loyihalarini yaratish va qayta ko‘rib chiqish uchun  yetarli vaqt bilan ta’minlaydi. Ushbu darsda ishtirok etgan sinov va xatolar muammolarni hal qilishga va qat’iylikka o‘rgatadi. ",
+          "student_overview": "Projects this big take time and plenty of planning. Find your inspiration, develop a plan, and unleash your creativity!"
+        },
+        "express-2023/Programming with Angry Birds": {
+          "name": "Jahldor qushlar bilan dasturlash",
+          "overview": "Jahldor qushlar o‘yinidagi obrazlardan foydalanib, talabalar qushni labirintning bir tomonidan boshqa tomonidagi cho‘chqaga qaratib harakatlantirish uchun ketma-ket algoritmlarni tuzib chiqadilar. Buni qilish uchun ular to‘g‘riga, chapga va keyin o‘ngga harakatlanadigan qilib kod bo‘limlarini chiziqli ketma-ketlikda taxlab chiqishadi.",
+          "preparation": "-   Sinfingiz uchun yuzaga kelishi mumkin bo'lgan muammoli joylarni topish uchun jumboqlarni o'ynang.\n-   (Ixtiyoriy) Sinfingiz bilan guruh bo'lib ishlash uchun bir nechta jumboqlarni tanlang. \n-   Har bir talabaning aks ettirish jurnali borligiga ishonch hosil qiling.",
+          "purpose": "Ushbu darsda talabalar kompyuter platformasida dasturlash ko'nikmalarini rivojlantiradilar. Ushbu jumboqlarning blokka asoslangan formati o'quvchilarga sintaksisni takomillashtirish haqida qayg'urmasdan, ketma-ketlik va tushunchalarni o'rganishga yordam beradi.",
+          "student_overview": "Angry Birds bilan ketma-ketlik va algoritmlar haqida o‘rganing."
+        },
+        "express-2023/Debugging in Maze": {
+          "name": "Debugging in Maze",
+          "overview": "Debug qilish dasturlashni o‘rganishning muhim elementidir. Bu darsda, talabalar noto‘g‘ri yechilgan boshqotirmalarga duch kelishadi. Ular xatolikni topish uchun mavjud kodni qatorma-qator tekshirib chiqishadi, jumladan, noto‘g‘ri ishlatilgan sikllar, unutib qoldirilgan bo‘limlar, ortiqcha bo‘limlar va tartibdan tashqaridagi bo‘limlarni.",
+          "preparation": "-   Sinfingiz uchun yuzaga kelishi mumkin bo'lgan muammoli joylarni topish uchun dars davomida o'ynang.\n-   (Ixtiyoriy) Sinfingiz bilan guruh bo'lib ishlash uchun bir nechta jumboqlarni tanlang. \n-   Har bir talabada aks ettirish jurnali borligiga ishonch hosil qiling.",
+          "purpose": "Sizning sinfingizdagi talabalar disk raskadrovka mohiyati tufayli ushbu darsdan hafsalasi pir bo'lishi mumkin. Nosozliklarni tuzatish - bu kompyuter dasturlash uchun juda muhim bo'lgan tushuncha. Kompyuter olimlari o'z dasturlarida xatolarni topishda juda yaxshi natijalarga erishishlari kerak. Nosozliklarni tuzatish talabalarni muammolarni tan olishga va ularni engishga majbur qiladi, shu bilan birga tanqidiy fikrlash va muammolarni hal qilish ko'nikmalarini shakllantiradi.",
+          "student_overview": "Boshqotirmalardagi muammolarni toping va debug qilish mahoratingizni amalda sinab ko‘ring."
+        },
+        "express-2023/Collecting Treasure with Laurel": {
+          "name": "Laurel bilan xazina yig‘ish",
+          "overview": "Boshqotirmalar to‘plamida, talabalar algoritmlar va debug qilish bo‘yicha o‘zlarining tushunchalarini rivojlantirishda davom etishadi. Yangi obraz, sarguzashtchi Laurel bilan talabalar Laurelni u yo‘lak bo‘ylab harakatlanganda xazinalar cho‘qqisiga olib chiqish uchun algoritmlar ketma-ketligini yaratishadi.",
+          "preparation": "-   Sinfingiz uchun mumkin bo'lgan muammoli joylarni topish uchun jumboqlarni o'ynang.\n-   Har bir talabada aks ettirish jurnali borligiga ishonch hosil qiling.",
+          "purpose": "Ushbu darsda talabalar dasturlash ko'nikmalarini yangi belgi, _Laurel the Adventurer_ yordamida mashq qiladilar. Kimdir dasturlashni boshlaganda, ular mashina o'qiy oladigan narsadan foydalanib, ko'rsatmalarni ma'lum tartibda birlashtiradi. Dasturlashdan foydalanish orqali talabalar kompyuterning ko'rsatmalar va tartiblarni qanday boshqarishi haqida tushuncha hosil qiladilar. Boshqa jumboq maqsadi bilan yangi belgidan foydalanish o'quvchilarga dasturlashda ketma -ketlik va algoritmlar bo'yicha tajriba doirasini kengaytirishga yordam beradi.",
+          "student_overview": "_Laurel the Adventurer_ ko'plab qimmatbaho toshlarni to'plashga yordam beradigan algoritmlarni yozing!"
+        },
+        "express-2023/Creating Art with Code": {
+          "name": "Kod bilan san’at yaratish",
+          "overview": "Bu darsda talabalar ekrandagi chizmalarni tugatish uchun Rassomni boshqarishadi. Bu Rassom bosqichi talabalarga yangi bo‘limlar, masalan, `move forward by 100 pixels` va `turn right by 90 degrees` kabilardan foydalangan holda yuqori mukammallikdagi rasmlar yaratish imkonini beradi.",
+          "preparation": "-   Sinfingiz uchun yuzaga kelishi mumkin bo'lgan muammoli joylarni topish uchun jumboqlarni o'ynang.\n-   (Majburiy emas) Jumboqlarni to'ldirish uchun foydalanishi kerak bo'lgan burchaklarni tasavvur qilish uchun sinfingiz uchun protraktorlarni oling.\n-   Har bir talaba uchun bitta**\\\\ \\*Talaba tarqatma** ni chop eting.",
+          "purpose": "Talabalar oldingi tajribalarini ketma-ketlik bilan boshlagan bo‘lsa, bu dars kod yozishni ko‘proq ijodkorlik bilan ilhomlantirish uchun ishlaydi. Bu darsning maqsadi yangi bo‘limlar va maqsadlarni tanishtirish orqali ketma-ketlik bo‘yicha bilimlarni mustahkamlash uchun. Bu holda, talabalar hamon o‘zlarining ketma-ketlik bo‘yicha ko‘nikmalarini amalda sinash bilan bir vaqtda yangi bo‘limlardan foydalanib, ko‘proq piksellar va burchaklar haqida ham o‘rganishadi. Shuningdek, talabalar yangi maqsadlar, masalan, biron kvadrat chizish uchun ushbu San’atkorni kodini yozishni tasavvur qilishga qodir bo‘ladi.",
+          "student_overview": "Rassomni dasturlash orqali chiroyli rasmlar yarating."
+        },
+        "express-2023/Swimming Fish in Sprite Lab": {
+          "overview": "In this lesson, students will learn about the two concepts at the heart of Sprite Lab: sprites and behaviors. Sprites are characters or objects on the screen that students can move, change, and manipulate. Behaviors are actions that sprites will take continuously until they are stopped.",
+          "preparation": "-   Sinfingiz uchun yuzaga kelishi mumkin bo'lgan muammoli joylarni topish uchun jumboqlarni o'ynang.\n-   Har bir talabada aks ettirish jurnali borligiga ishonch hosil qiling.",
+          "purpose": "Ushbu dars talabalarni Sprite Lab -ning asosiy lug'ati bilan tanishtirish va ularga boshqa muhitda o'rgangan tushunchalarini ushbu vositaga qo'llash imkonini berish uchun mo'ljallangan. Baliq akvariumini yaratish orqali talabalar ushbu vositaning dasturlash modeli haqida tushuncha hosil qila boshlaydilar va undan o'zlarini ifoda etish uchun foydalanish usullarini o'rganadilar.",
+          "student_overview": "Learn how to create and edit sprites."
+        },
+        "express-2023/Making Sprites": {
+          "name": "Sprayt yasash",
+          "overview": "Bu \\*\\* mahoratni shakllantirish\\*\\* darsida talabalar kompyuterda bir qator dasturlash darajalari orqali ishlaydilar va o'zlari xohlagan narsani qurishlari mumkin bo'lgan ochiq “bepul o'yin” vazifasi bilan yakunlaydilar. Talabalar dasturlar yozadilar va Sprite laboratoriyasining markazida joylashgan ikkita tushuncha haqida bilib oladilar: spritlar va xatti -harakatlar. ",
+          "preparation": "Darajalar orqali o'ynang va**\\\\ \\*dars slaydlari** ni ko'rib chiqing.",
+          "purpose": "Ushbu dars talabalarni Sprite laboratoriyasida dasturlash bilan tanishtirish uchun mo'ljallangan. Talabalar ushbu vositaning dasturlash modeli haqida tushunchani shakllantira boshlaydilar va undan o'zlarini ifoda etish uchun foydalanish usullarini o'rganadilar.",
+          "student_overview": "Ushbu darsda siz dasturlar yozasiz va spritlar va xatti-harakatlar haqida bilib olasiz."
+        },
+        "express-2023/Sprites in Action": {
+          "name": "Spraytlar amalda",
+          "overview": "Bu \\*\\* mahoratni shakllantirish\\*\\* darsida talabalar kompyuterda bir qator dasturlash darajalari orqali ishlaydilar va o'zlari xohlagan narsani qurishlari mumkin bo'lgan ochiq “bepul o'yin” vazifasi bilan yakunlaydilar. Talabalar vaqtli voqealar va foydalanuvchi kiritishiga javob beradigan dasturlarni yozadilar. ",
+          "preparation": "Darajalar bo'ylab o'ynang va dars slaydlarini ko'rib chiqing.",
+          "purpose": "Ushbu dars talabalarni tadbirlar bilan dasturlash bilan tanishtirish uchun mo'ljallangan. Ushbu kurs davomida voqealar talabalarning o'z dasturlari vaqt o'tishi bilan yoki foydalanuvchiga javoban ishlashini o'zgartirishning asosiy usuli bo'ladi.",
+          "student_overview": "Siz dasturlash darajalari orqali ishlaysiz va o'zingiz xohlagan narsani qurishingiz mumkin bo'lgan ochiq “bepul o'yin” vazifasi bilan yakunlaysiz."
+        },
+        "express-2023/Virtual Pet with Sprite Lab": {
+          "name": "Virtual Pet with Sprite Lab",
+          "overview": "Bu darsda talabalar ular xohlagandek ko‘rinadigan va o‘zini tutadigan interfaol virtual uy hayvonini yaratishadi. Talabalar uy hayvoninig tashqi ko‘rinishini moslashtirish uchun Sprite Labning \"Costumes\" qurilmasidan foydalanishadi. Keyin ular uy hayvonini jonlantirish uchun hodisalar, xatti-harakatlar va ular o‘rgangan boshqa tushunchalardan foydalanishadi!",
+          "preparation": "-   Sinfingiz uchun yuzaga kelishi mumkin bo'lgan muammoli joylarni topish uchun jumboqlarni o'ynang.\n-   Har bir talabada aks ettirish jurnali borligiga ishonch hosil qiling.",
+          "purpose": "Bu dars talabalarga oldingi darslardan dasturlash tushunchalarini boshqa ijodiy kontekstda qo'llash imkonini beradi. ",
+          "student_overview": "In this lesson, students will create an interactive Virtual Pet that looks and behaves how they wish. Students will use Sprite Lab's \"Costumes\" tool to customize their pet's appearance. They will then use events, behaviors, and other concepts they have learned to give their pet a life of its own!"
+        },
+        "express-2023/Dance Party": {
+          "name": "Dance Party",
+          "overview": "Bu darsda, talabalar o‘zlarining interaktiv raqs bazmini dasturlashtiradilar. Qurilma musiqaga javob qaytarish uchun yaratilganligi sababli bu mashg‘ulot tovushni talab qiladi.",
+          "preparation": "-   Sinfingiz uchun yuzaga kelishi mumkin bo'lgan muammoli joylarni topish uchun jumboqlarni o'ynang.\n-   Har bir talabada aks ettirish jurnali borligiga ishonch hosil qiling.\n-   Eshitish vositalariga bo'lgan ehtiyojni ko'rib chiqing. Ushbu faoliyat ovozga tayanadi.",
+          "purpose": "Ushbu dars Infomatikadagi asosiy tushunchalar, kodlash va hodisaviy dasturlash (bloklardan foydalangan holda) bilan tanishtiradi.",
+          "student_overview": "Bayram qilish vaqti keldi! Ushbu darsda siz o‘z interaktiv raqs bazmingizni dasturlashtirasiz."
+        },
+        "express-2023/Loops with Rey and BB-8": {
+          "name": "Loops with Rey and BB-8",
+          "overview": "Bu \\*\\* mahoratni shakllantirish\\*\\* darsida talabalar _Star Wars_ belgisi _BB-8_ labirintni samarali bosib o'tishda yordam berish uchun ko'chadan foydalanadilar.",
+          "preparation": "-   Sinfingiz uchun muammoli joylar mavjudligini aniqlash uchun jumboqlarni o'ynang.\n-   Har bir talabada aks ettirish jurnali borligiga ishonch hosil qiling.",
+          "purpose": "Ushbu darsda talabalar ko'chadan va ularni Blockly kodida qanday amalga oshirishni o'rganadilar. Ko'chadan foydalanish dasturlashda muhim mahoratdir, chunki buyruqlarni qo'lda takrorlash zerikarli va samarasiz. Code.org jumboqlari yordamida talabalar mavjud halqalarga ko'rsatmalar qo'shishni, takrorlangan kodni ko'chadan to'plashni va pastadir kerak bo'lgan naqshlarni tanishni o'rganadilar. Shuni ta'kidlash kerakki, talabalar turli xil echimlarga ega jumboqlarga duch kelishadi. Bu har bir yondashuvning afzalliklari va kamchiliklari bo'lgan jumboqlarni hal qilishning turli usullari bo'yicha munozaralarni ochadi.",
+          "student_overview": "Sikllardan foydalanib BB-8 ga labirint bo‘ylab harakatlanishida yordam bering! "
+        },
+        "express-2023/Mini-Project: Sticker Art": {
+          "name": "Mini-loyiha: Sticker Art",
+          "overview": "Watch student faces light up as they make their own gorgeous designs using a small number of blocks and digital stickers! This lesson builds on the understanding of loops from previous lessons and gives students a chance to be truly creative.  This activity is fantastic for producing artifacts for portfolios or parent/teacher conferences.",
+          "preparation": "-   O'zingizning dizayningizni yaratishni mashq qiling. Ushbu darajalar avvalgi hamma narsadan qanday farq qilishiga e'tibor bering.\n-   Har bir talabada aks ettirish jurnali borligiga ishonch hosil qiling.",
+          "purpose": "Bu to‘plamlar sikllarning ahammiyatini yaratuvchan va shaxsiy dizaynlar bilan ta’kidlab ko‘rsatadi.\n\n Loyiha ortidagi ketma-ketlik sifatida taklif qilinib, bu o‘sish talabalarga o‘z ishining ustasi bo‘lishga va ajoyib asarlar yaratishga imkon beradi.",
+          "student_overview": "In this lesson, loops make it easy to make even cooler images with Artist!"
+        },
+        "express-2023/Nested Loops in Maze": {
+          "name": "Nested Loops in Maze",
+          "overview": "Bu onlayn mashg‘ulotda, talabalarda o‘zlarining sikllar haqidagi tushunchalarini butun yangi darajaga olib o‘tish imkoni tug‘iladi. Asalari va O‘simliklar vs Zombilar bilan o‘ynab, talabalar boshqa sikl ichida bo‘ladigan boshqa bir siklni qanday dasturlashni o‘rganishadi. Ular yana 'Run' bosilganda sikllardagi kichik o‘zgarishlar ularning dasturiga qanday ta’sir ko‘rsatishini aniqlash uchun ruhlantiriladi.",
+          "preparation": "-   Sinfingiz uchun yuzaga kelishi mumkin bo'lgan muammoli joylarni topish uchun jumboqlarni o'ynang.\n-   Har bir talabada aks ettirish jurnali borligiga ishonch hosil qiling.",
+          "purpose": "Ichki ilmoqlar bilan tanishishda talabalar jumboqlarga yanada samarali echimlar yaratish uchun o'zlarining qulaylik zonasidan tashqariga chiqadilar.  \n\nOldingi jumboqlarda ilmoqlar o'quvchilarni takrorlashni tan olishga undadi. Bu erda talabalar ushbu ichki halqalarni ishlab chiqish uchun takrorlangan naqshlar bilan naqshlarni tan olishni o'rganadilar. Bu bosqich talabalarni kodni bezovta qiladigan va uzoq yo'lni yozish uchun murakkab bo'lgan jumboqni echishga urinishga undash bilan boshlanadi. Video ichki ko'chadan tanishtirgandan so'ng, talabalarga misol ko'rsatiladi va halqa boshqa halqa ichiga qo'yilganda nima bo'lishini oldindan aytib berish so'raladi. Bu rivojlanish talabalarning dasturlashda looplash haqidagi tushunchalarini mustahkamlash va mustahkamlash uchun ko'p amaliyotlarga olib keladi.",
+          "student_overview": "Loops inside loops inside loops. What does this mean? This lesson will teach you what happens when you create a nested loop."
+        },
+        "express-2023/Snowflakes with Anna and Elsa": {
+          "name": "Snowflakes with Anna and Elsa",
+          "overview": "Endi talabalar o‘z siklarini qatlamlarga ajratishni bilib olishadi, ular ko‘plab chiroyli narsalar yarata olishadi.  Ushbu dars talabalarni Anna va Elzaning muzda uchish bo'yicha mukammal qobiliyatlaridan foydalangan holda o'zlarining portfoliosi uchun tayyor tasvirlarini yaratishda yordam beradigan bir qator mashqlarni bajaradi!",
+          "preparation": "-   Sinfingiz uchun muammoli joylarni topish va topish uchun dars davomida o'ynang.\n-   Har bir talabada aks ettirish jurnali borligiga ishonch hosil qiling.",
+          "purpose": "#### Bepul o'yin (10 daqiqa)\n\nDarsning yakuniy bosqichida o'quvchilar o'z loyihasini tuzish mumkin.",
+          "student_overview": "Anna va Elsaning ajoyib muzda uchish qobiliyati bor, ammo muzda shakllar yaratish uchun ularga yordamingiz kerak. AJOYIB nimadir yaratish uchun ichma-ich sikllardan foydalaning. "
+        },
+        "express-2023/Looking Ahead with Minecraft": {
+          "name": "Minecraft bilan oldinga qarab",
+          "overview": "Bu dars aslida, Minecraft jamoasi bilan birgalikda Hour of Code uchun yaratilgan. Talabalar shu paytgacha o‘rgangan g‘oyalarini amalda sinab ko‘rish, shuningdek, shartli bayonotlarning yashirin jihatlarini ko‘rib chiqish imkoniyatiga ham ega bo‘ladilar!",
+          "preparation": "-   Sinfingiz uchun yuzaga kelishi mumkin bo'lgan muammoli joylarni topish uchun ushbu dars bilan bog'liq jumboqlarni o'ynang.\n-   Har bir talabada aks ettirish jurnali borligiga ishonch hosil qiling.",
+          "purpose": "Boshqotirmalarning bu to‘plami sikllar bo‘yicha bilimga ega bo‘lish va uni kengaytirish uchun juda foydali va shartli bayonotlar bilan tanishtiradi. Bu tushunchalarni birga ishlatgan holda, talabalar yangi va hayajonli muhitda qiziqarli va zamonaviy dastur yaratish salohiyatiga ega bo‘ladilar.",
+          "student_overview": "Lavadan saqlaning! Bu yerda siz Minecraft dunyosidagi shartli bayonotlar haqida o‘rgana boshlaysiz."
+        },
+        "express-2023/If/Else with Bee": {
+          "name": "Asalari bilan If/Else",
+          "overview": "Shu paytgacha talabalar har safar ishlatib ko‘rilganda aynan bir xil tarzda ijro etiladigan -ishonchli, ammo moslashuvchan bo‘lmagan kod yozib kelishayotgan edi. Bu darsda, sinfingiz dasturingiz turli xil maxsus holatlarga duch kelishiga qarab turli xil vazifalarni bajaradigan funksiyalarni yozishga imkon beradigan shartli boyonotlar bilan kod yozishni boshlashadi.",
+          "preparation": "-   Sinfingiz uchun yuzaga kelishi mumkin bo'lgan muammoli joylarni topish uchun jumboqlarni o'ynang.\n-   Har bir talabada aks ettirish jurnali borligiga ishonch hosil qiling.",
+          "purpose": "Talabalar o'z dasturlarida shartli shartlardan foydalangan holda mashq qiladilar. If/else bloklari yanada moslashuvchan dasturga imkon beradi. Asalari faqat nektar yig'adi _agar_ gul bo'lsa yoki asal qilsa _agar_ asal bo'lsa. ",
+          "student_overview": "Siz hozir shartli boyonotlarni tushunib oldingiz, endi asal va gul shirasini yig‘adigan Asalari dasturini tuzishda ulardan foydalansak bo‘ladi. "
+        },
+        "express-2023/While Loops in Farmer": {
+          "name": "While Loops in Farmer",
+          "overview": "Ushbu \\*\\* mahoratni shakllantirish\\*\\* darsida talabalar Fermerda teshiklarni to'ldirish va axloqsizlik qazish ustida ishlaydilar, lekin ular teshiklarning o'lchamini yoki axloqsizlik tepaliklarining balandligini bilishmaydi. Ushbu jumboqlarni hal qilish uchun talabalar yangi turdagi pastadirdan foydalanadilar.",
+          "preparation": "-   Sinfingiz uchun yuzaga kelishi mumkin bo'lgan muammoli joylarni topish uchun jumboqlarni o'ynang.\n-   Har bir talabada aks ettirish jurnali borligiga ishonch hosil qiling.",
+          "purpose": "Sizning o'quvchilaringiz ilmoqlar haqidagi bilimlarini chuqurlashtirishda davom etar ekan, ular buyruqni takrorlash kerak bo'lgan muammolarga duch kelishadi, lekin uni necha marta takrorlash kerakligi noma'lum. Bu erda looplar kirib keladi. Bugungi darsda talabalar yangi boshlanuvchilarning shartlarga asoslangan ilmoqlar haqidagi tushunchalarini rivojlantiradilar va umuman ilmoqlar haqidagi bilimlarini kengaytiradilar. ",
+          "student_overview": "Sikllar kod yozishda juda foydali. Bu dars sizga siklning yangi turini o‘rgatadi: while sikllari!"
+        },
+        "express-2023/Conditionals in Minecraft: Voyage Aquatic": {
+          "name": "Minecraftda shartli bayonotlar: Suv sayohati",
+          "overview": "Bu dars aslida, Minecraft jamoasi bilan birgalikda Hour of Code uchun yaratilgan. Talabalar shu paytgacha o‘rgangan g‘oyalarini amalda sinab ko‘rish, shuningdek, shartli bayonotlarning yashirin jihatlarini ko‘rib chiqish imkoniyatiga ham ega bo‘ladilar!",
+          "preparation": "-   Sinfingiz uchun yuzaga kelishi mumkin bo'lgan muammoli joylarni topish uchun ushbu dars bilan bog'liq jumboqlarni o'ynang.\n-   Har bir talabada aks ettirish jurnali borligiga ishonch hosil qiling.",
+          "purpose": "Ushbu jumboqlar to'plami ilmoqlar va shartlar haqidagi bilimlarni mustahkamlash va mustahkamlash uchun ishlaydi. Ushbu ikkita tushunchani bir-biriga bog'lab, talabalar yangi va hayajonli muhitda qiziqarli va innovatsion dasturlarni yaratish imkoniyatlarini o'rganishlari mumkin bo'ladi.",
+          "student_overview": "Bu yerda siz Minecreaft dunyosidagi shartli bayonotlar haqida o‘rganasiz."
+        },
+        "express-2023/Until Loops in Maze": {
+          "name": "Until Loops in Maze",
+          "overview": "Bu darsda, talabalar `until` sikllari haqida o‘rganishadi. Talabalar o‘zlari xohlagan nuqtagacha qaytarilaveradigan harakatlarni ijro etuvchi obrazga ega bo‘lgan dastur yaratishadi.",
+          "preparation": "-   Sinfingiz uchun yuzaga kelishi mumkin bo'lgan muammoli joylarni topish uchun jumboqlarni o'ynang.\n-   Har bir talabada aks ettirish jurnali borligiga ishonch hosil qiling.",
+          "purpose": "Ushbu jumboqlar to'plami shartli qadar qo'shib, ilmoqlar haqidagi bilimlarni mustahkamlash va mustahkamlash uchun ishlaydi. Ushbu tushunchalarni birlashtirib, talabalar murakkab va innovatsion dasturlarni yaratish imkoniyatlarini o'rganishlari mumkin bo'ladi.",
+          "student_overview": "`Until` sikli bilan siz ba’zi bir ajoyib narsalarni amalga oshira olasiz!"
+        },
+        "express-2023/Harvesting with Conditionals": {
+          "name": "Harvesting with Conditionals",
+          "overview": "Talabalar `while` sikllarini, `until` sikllarini va `if / else` bayonotlarini amalda ishlatib ko‘rishadi. Bu bo‘limlarning barchasi shartli bayonotlardan foydalanishadi. Bu uchchalasini ham amalda bajarib ko‘rish orqali, talabalar mukammal va moslashuvchan kod yozishni o‘rganishadi.",
+          "preparation": "-   Sinfingiz uchun yuzaga kelishi mumkin bo'lgan muammoli joylarni topish uchun dars davomida o'ynang.\n-   Har bir talabada aks ettirish jurnali borligiga ishonch hosil qiling.",
+          "purpose": "Shartli boyonotlardan foydalanishni turli xil ssenariylarda bajarib ko‘rish talabalarning shartli boyonotlar nima qila olishi haqidagi tushunchalarini rivojlantirishga yordam beradi. Oldingi darsda, talabalar shartli boyonotlardan faqatgina labirint bo‘ylab harakatlanish uchun foydalanishgan. Bu darsda, talabalar fermer hosilni qachon yig‘ib olinishi kerakligini bilishiga yordam berish uchun sharrtli boyonotlardan foydalanishadi. Yangi ko‘rinishlar paydo bo‘ladi va talabalar kod qayerda ishlatilishi va takrorlanishi kerakligini aniqlash uchun ijodiy va mantiqiy fikrlashdan foydalanishadi.",
+          "student_overview": "Har bir shartli bayonotni qachon ishlatish kerakligini har doim ham aniq bilib bo‘lmaydi. Bu dars sizga nima qilish kerakligini hal qilishingizga yordam beradi."
+        },
+        "express-2023/Functions in Minecraft": {
+          "name": "Minecraftdagi funksiyalar",
+          "overview": "Students will begin to understand how functions can be helpful in this fun and interactive Minecraft adventure!",
+          "preparation": "-   Sinfingiz uchun yuzaga kelishi mumkin bo'lgan muammoli joylarni topish uchun jumboqlarni o'ynang.\n-   Har bir talabada aks ettirish jurnali borligiga ishonch hosil qiling.",
+          "purpose": "Talabalar turli xil muhitda funksiyalarni bajarish orqali dasturlashning ko'p qirraliligini kashf etadilar. Bu yerda talabalar qayta ishlatilishi mumkin bo'lgan naqshlarni tanib oladilar va oldindan belgilangan funksiyalarni chaqirish uchun nomlangan bloklarni birlashtira oladilar.",
+          "student_overview": "Can you figure out how to use functions for the most efficient code?"
+        },
+        "express-2023/Functions with Harvester": {
+          "name": "Terimchi bilan funksiyalar",
+          "overview": "Talabalar Rassom loyihasida ta’sirchan dizaynlar yaratishni va Asalarini labirintda yo‘naltirishni mashq qilib ko‘rishgan, ammo bugun ular funksiyalardan dehqondagi hosilni yig‘ish uchun ishlatadilar. Bu dars talabalarni funksiyalardan 'while' sikli va 'if/else' bayononotlari bilan birlashtirgan holda foydalanishga undaydi.",
+          "preparation": "-   Sinfingiz uchun yuzaga kelishi mumkin bo'lgan muammoli joylarni topish uchun jumboqlarni o'ynang.\n-   Talabada aks ettirish jurnali borligiga ishonch hosil qiling.",
+          "purpose": "Ushbu dars o'quvchilarni funktsiyalardan yanada ijodiy foydalanishga undash uchun mo'ljallangan. Talabalar muammoga yondashishning ko'plab usullari borligini bilib olishadi, lekin ba'zilari boshqalarga qaraganda samaraliroq. Ushbu jumboqlar muammolarni hal qilish va tanqidiy fikrlash ko'nikmalarini oshirishga qaratilgan.",
+          "student_overview": "Fermerga yordam berayotganingizda, funksiyalar sizni ko‘p ishlar qilishdan saqlab qoladi!"
+        },
+        "express-2023/Functions with Artist": {
+          "name": "Rassom bilan funksiyalar",
+          "overview": "Talabalar Rassom bilan funksiyalarni ishlatishga kirishadi. Jozibali rasmlar yaratiladi va o‘zgartiriladi. Yanada murakkabroq ko‘rinishlar uchun, talabalar biron funksiya ichida boshqa birini chaqirish orqali ichma-ich funksiyalar haqida o‘rganishadi.",
+          "preparation": "-   Sinfingiz uchun yuzaga kelishi mumkin bo'lgan muammoli joylarni topish uchun jumboqlarni o'ynang.\n-   Har bir talabada aks ettirish jurnali borligiga ishonch hosil qiling.",
+          "purpose": "Ushbu darsning eng muhim tarkibiy qismlaridan biri bu o'quvchilarga faxrlanadigan narsalarni yaratish uchun joy berishdir. Bu jumboqlar tobora murakkab tasvirlarga o'tadi, lekin har bir yangi jumboq faqat oldingi jumboqdan kelib chiqadi. Ushbu dars yakunida talabalar o'zlarining mehnatlari bilan ishonchli va faxrlanadilar.",
+          "student_overview": "Funksiyalar bilan murakkab chizmalarni osonlashtiring!"
+        },
+        "express-2023/Text and Prompts": {
+          "name": "Matn va ko'rsatmalar",
+          "overview": "Ushbu \\*\\* ko'nikmalarni shakllantirish\\*\\* darsida talabalar Sprite laboratoriyasida o'zgaruvchilar bilan mashq qilishadi. ",
+          "preparation": "Darajalar bo'ylab o'ynang va dars slaydlarini ko'rib chiqing.",
+          "purpose": "Ushbu kursda ma'lumotlarni saqlash va o'zgartirish uchun o'zgaruvchilar ishlatiladi. Bu vaqtda talabalar qadriyatlarni o'zgartirmasdan saqlaydilar va olishadi. Keyingi darslarda talabalar raqamli qiymatlarni saqlaydilar va vaqt o'tishi bilan o'yinchining o'yindagi ballari kabi narsalarni kuzatib borish uchun o'zgartiradilar.",
+          "student_overview": "Ushbu darsda siz Sprite Lab -da o'zgaruvchilar bilan mashq qilasiz."
+        },
+        "express-2023/Counting with Variables": {
+          "name": "O'zgaruvchilarni sanash",
+          "overview": "Ushbu **malaka oshirish** darsida talabalar hisoblagich kabi vaqt o‘tishi bilan o‘zgarib turadigan qiymatni kuzatish uchun o‘zgaruvchilardan foydalanadilar. Ushbu darsda talabalar oddiy o'yin yaratadigan qisqa **mini-loyiha** ham mavjud.",
+          "preparation": "Darajalar bo'yicha o'ynang va dars rejasini ko'rib chiqing.",
+          "purpose": "Oldingi darslarda talabalar keyinroq olinishi mumkin bo'lgan ma'lumotlarni saqlash uchun o'zgaruvchilardan foydalanishni o'rganadilar. Ushbu darsda talabalar o'zgaruvchida saqlangan ma'lumotlarni o'zgartirishni o'rganishni boshlaydilar. O'zgaruvchilar qanday ishlashini tushunish, ularga yanada ilg'or loyihalarni yaratishga imkon beradi.",
+          "student_overview": "Hisoblagich yaratish yoki o'yinda hisobni kuzatish uchun o'zgaruvchilardan foydalanishni o'rganasiz."
+        },
+        "express-2023/Using Variables with the Artist": {
+          "name": "Artist bilan o'zgaruvchilardan foydalanish",
+          "overview": "Ushbu darsda talabalar Artist  muhitida o'zgaruvchilar yordamida takrorlanadigan dizaynlarni yaratishni o'rganadilar. Talabalar o'zgaruvchilar yordamida qanday qilib kodni yozishni va o'qishni osonlashtirish uchun qanday foydalanish mumkinligini bilib oladilar. Yonaltirilgan jumboqlar tugagandan  so'ng talabalar freeplay darajasida o'zlarining o'rgangan narsalarini namoyish etish va o'z dizaynlarini yaratishni o’rganadilar ",
+          "preparation": "-   Sinfingiz uchun yuzaga kelishi mumkin bo'lgan muammoli joylarni topish uchun jumboqlarni o'ynang.\n-   Har bir talabada aks ettirish jurnali borligiga ishonch hosil qiling.",
+          "purpose": "O'zgaruvchilar asosan dasturni ishga tushirishda noma'lum bo'lishi mumkin bo'lgan qiymatlarni yoki dasturni bajarish paytida o'zgarishi mumkin bo'lgan qiymatlarni to'ldiruvchidir. Bular dinamik kod yaratish uchun juda muhimdir, chunki ular sizning dasturingizni o'zgartirishga imkon beradi va har qanday potentsial modifikatsiyaga asoslangan holda o'sishi mumkin. Ushbu bosqich o'zgaruvchilarni ishlatishni kuchaytiradi, ularni o'rnatish va ulardan foydalanishning eng oddiy imkoniyatlaridan foydalanadi. ",
+          "student_overview": "In this lesson, you'll make drawings using variables that change as the program runs."
+        },
+        "express-2023/Variables with the Bee": {
+          "name": "Changing Variables with Bee",
+          "overview": "This lesson will help illustrate how variables can make programs more powerful by allowing values to change while the code is running. ",
+          "preparation": "-   Sinfingiz uchun yuzaga kelishi mumkin bo'lgan muammoli joylarni topish uchun jumboqlarni o'ynang.\n-   Har bir talabada aks ettirish jurnali borligiga ishonch hosil qiling.",
+          "purpose": "Ushbu dars o'zgaruvchan qiymatlarga ega kod qanday foydali bo'lishi mumkinligini ko'rsatib beradi va o'quvchilarni kelgusi darslarda “for loops” qanday ishlashini tushunishga tayyorlaydi.",
+          "student_overview": "This bee loves variables!"
+        },
+        "express-2023/For Loops with Bee": {
+          "name": "Asalari bilan for sikllari",
+          "overview": "Featuring Bee, this lesson focuses on `for` loops and using an incrementing variable to solve more complicated puzzles. Students will begin by reviewing loops from previous lessons, then they'll walk through an introduction to `for` loops so they can more effectively solve complicated problems.",
+          "preparation": "-   Sinfingiz uchun yuzaga kelishi mumkin bo'lgan muammoli joylarni topish uchun jumboqlarni o'ynang.\n-   Har bir talabada aks ettirish jurnali borligiga ishonch hosil qiling.",
+          "purpose": "Bugungi kontseptsiya, for loops kompyuter fanida juda muhim mavzu. Ular nafaqat keng qo'llaniladi, balki ilmoqlarni o'rganish jarayoni boshqa muhim tushunchalarni (masalan, o'zgaruvchilar va parametrlarni) o'rganishni kuchaytiradi. Talabalar har bir for loop uchun boshlang'ich, tugash va qadam qiymatlarini aniqlash orqali muammolarni tanqidiy o'ylab, ko'p mashg'ulotlarga ega bo'ladilar. Bu kontseptsiya juda ko'p matematikadan foydalanadi, shuning uchun uni yanada chuqurroq o'rganish uchun uni matematika darsi bilan bog'lang.",
+          "student_overview": "Buzz buzz. Ushbu jumboqlarda siz asalarini for sikllari yordamida gul shirasi va asalga yo'naltirasiz."
+        },
+        "express-2023/For Loops with Artist": {
+          "name": "Rassom bilan For Sikllarini ishlatish",
+          "overview": "In this lesson, students continue to practice `for` loops, but this time with Artist. Students will complete puzzles combining the ideas of variables, loops, and `for` loops to create complex designs. At the end, they will have a chance to create their own art in a freeplay level.",
+          "preparation": "-   Sinfingiz uchun muammoli joylarni topish va topish uchun dars davomida o'ynang.\n-   Har bir talabada aks ettirish jurnali borligiga ishonch hosil qiling.",
+          "purpose": "Ijodkorlik va tanqidiy fikrlash bu darsda ajoyib tarzda birlashadi. Talabalar amaliyotni for loops va o'zgaruvchilar bilan davom ettiradilar, shu bilan birga ular jag'ni tushiradigan tasvirlarni yaratadilar. Ushbu dars kompyuter faniga asosiy tushunchalarni o'rgatish bilan birga ijodiy ongni ilhomlantiradi.",
+          "student_overview": "Keyingi asaringizni yaratishga tayyorlaning. Bu yerda siz 'for' sikllari yordamida hayratlantiruvchi rasmlarni yaratasiz."
+        },
+        "express-2023/End of Course Project": {
+          "name": "End of Course Project",
+          "overview": "Ushbu yakunlovchi dars o‘quvchilarni o‘zlarining loyihalarini loyihalashtirish, ishlab chiqish va namoyish etish jarayonidan o‘tadi!",
+          "preparation": "-   Talabalar uchun mavjud bo'lgan ikkala loyiha vositalari bilan o'z loyihangizni yaratishga vaqt ajrating. Har bir vositaning imkoniyatlari va cheklovlari bilan tanishib chiqing.\n-   Sinf maqsadlaringizga mos keladi**\\\\ \\*rubrika** ni o'zgartiring va har bir talaba yoki guruh uchun bitta nusxani chop eting.\n-   Sinfingizga mos keladigan **\\\\ \\*loyihani rejalashtirish bo'yicha qo'llanma** ni o'zgartiring va har bir talaba yoki guruh uchun bittasini chop eting.",
+          "purpose": "Ushbu dars talabalarga rejalashtirishni talab qiladigan, lekin keng ijodkorlikka imkon beradigan bosqichma-bosqich jarayondan foydalangan holda o'z dizayni loyihasini yaratish uchun joy beradi.",
+          "student_overview": "Ushbu qo‘llarni bir dunyo kod yozish uchun tayyorlang! Loyihangizni yaratishni boshlashning vaqti keldi."
+        },
+        "pre-express-2023/Learn to Drag and Drop": {
+          "name": "Drag&Drop - Olib ko‘chirishni o‘rganish",
+          "overview": "Bu dars o‘quvchilarga ular kompyuter laboratoriyalariga kirganda nima kutishi kerakligi haqida o‘rgatadi. U ularga laboratoriya qonun-qoidalarini tanishtirish kabi qisqacha muhokama bilan boshlanadi, shunda ularda onlayin boshqotirmalarni yechishda kompyuterdan foydalanishda o‘sish kuzatiladi.",
+          "preparation": "-   Code.org\\*\\* da sinf bo'limini qanday qilish kerak**\\\\ \\*ni tomosha qiling - O'qituvchi videosi. Code.org saytida o'zingizning sinf bo'limingizni yarating va har bir talabada \\*\\*passcode** bo'lgan karta borligiga ishonch hosil qiling.\n-   Talabalar 2-darsga o'z qurilmalaridan kira olishlariga ishonch hosil qiling. Talabalarning juda tez oldinga siljishiga yo'l qo'ymaslik uchun kelajakdagi darslarni yashirishni xohlaysizmi, o'ylab ko'ring.\n-   Maktab IT-odamiga sinf bo'limingiz uchun kompyuter ish stoliga tezkor havola qo'shsin.\n-   Qo'shimcha onlayn xavfsizlik mazmuni uchun Common Sense Education veb-saytini ko'rib chiqing.",
+          "purpose": "Bu darsning asl maqsadi talabalarga komputer bilan ishlash tajribasiga erishishiga yordam berish. Bosish, ko‘chirib olish va ko‘chirib qo‘yish kabi eng asosiy funksiyalarini o‘tish orqali, biz sinfda kelajakdagi boshqotirmalar uchun yana ham tengroq shug‘ullanish maydoni yaratayapmiz. Bu dars yana mos komputer labaratoriyasi xatti-harakatlaini tanishtirish uchun ajoyib imkoniyat bilan ta’minlaydi.",
+          "student_overview": "Click and drag to finish the puzzles."
+        },
+        "pre-express-2023/Sequencing with Scrat": {
+          "name": "Sequencing with Scrat",
+          "overview": "Using Scrat from the Ice Age franchise, students will develop sequential algorithms to move a squirrel character from one side of a maze to the acorn at the other side. To do this they will stack code blocks together in a linear sequence.",
+          "preparation": "-   Har bir talabaning Reflection Journal mavjudligiga ishonch hosil qiling.",
+          "purpose": "Bu darsda, talabalar biron komputer platformasida o‘zlarining debug qilish va dasturlash mahoratlarini oshiradilar. Bu boshqotirmalarning bo‘limlarga asoslangan shakli talabalarga sintaksisni mukammallashtirish haqida o‘ylamasdan ketma-ketlik va tushunchalar haqida o‘rganishga yordam beradi.",
+          "student_overview": "Program Scrat to reach the acorn."
+        },
+        "pre-express-2023/Programming with Angry Birds": {
+          "name": "Jahldor qushlar bilan dasturlash",
+          "overview": "Using characters from the Ice Age, students will develop sequential algorithms to move Scrat from one side of a maze to the acorn at the other side. To do this they will stack code blocks together in a linear sequence, making them move straight, turn left, or turn right.",
+          "preparation": "-   Sinfingiz uchun yuzaga kelishi mumkin bo'lgan muammoli joylarni topish uchun dars davomida o'ynang.\n-   (Ixtiyoriy) Sinfingiz bilan guruh bo'lib ishlash uchun bir nechta jumboqlarni tanlang.\n-   Har bir talabaning Reflection Journal mavjudligiga ishonch hosil qiling.",
+          "purpose": "Bu darsda, talabalar biron komputer platformasida o‘zlarining debug qilish va dasturlash mahoratlarini oshiradilar. Bu boshqotirmalarning bo‘limlarga asoslangan shakli talabalarga sintaksisni mukammallashtirish haqida o‘ylamasdan ketma-ketlik va tushunchalar haqida o‘rganishga yordam beradi."
+        },
+        "pre-express-2023/Programming with Rey and BB-8": {
+          "name": "Rey va BB-8 bilan dasturlash",
+          "overview": "Ushbu darsda talabalar o'zlarining yangi dasturlash qobiliyatlaridan yanada murakkab usullarda BB-8 bilan murakkab kursni o'tish uchun foydalanadilar.",
+          "preparation": "-   Sinfingiz uchun yuzaga kelishi mumkin bo'lgan muammoli joylarni topish uchun dars davomida o'ynang.\n-   Har bir talabada aks ettirish jurnali borligiga ishonch hosil qiling.",
+          "purpose": "Xayoldagi bilimlarni ko‘chirish bilan, bu dars talabalarga o‘zlashtirib kelinayotgan mahoratlarini amalda bajarib ko‘rishi uchun yangi muhit yaratib beradi. Star Warsning ishqibozlari bu boshqotirmalarni ko‘rib, xursandchilikdan osmonga sakraydilar. Bu to‘plamdagi har bir boshqotirma ular kursning qolgan qismida foydalanadigan asosiy tushunchalarning chuqurroq mohiyati bilan ta’minlash uchun qo‘shilgan."
+        },
+        "pre-express-2023/Programming with Harvester": {
+          "name": "Terimchi bilan dasturlash",
+          "overview": "Talabalar Terimchi (Harvester) muhitida o‘rgangan dasturlash tushunchalariga murojaat qiladilar. Endi, shunchaki obrazni maqsadiga yetkazish o‘rniga, talabalar biron yangi bo‘limdan foydalanib hosilni yig‘ishi kerak bo‘ladi. Talabalar algoritmlar ketma-ketligi bo‘yicha mahoratlarini oshirishda davom etadilar va debug qilish jarayonidan foydalanishni boshlashadi.",
+          "preparation": "\\-\nsinfingiz uchun mumkin bo'lgan muammoli joylarni topish uchun jumboqlarni o'ynang - Har bir o'quvchining Reflection Journal borligiga ishonch hosil qiling.",
+          "purpose": "Bu darsda, talabalar o‘zlarining debug qilish mahoratlarini oshiradilar va dasturlash mahoratlarini oshirishda davom etadilar.",
+          "student_overview": "Terimchiga yo‘lida sabzavotlarni yig‘ib olishiga yordam bering."
+        },
+        "pre-express-2023/Loops with Scrat": {
+          "name": "Loops with Scrat",
+          "overview": "Ushbu \\*\\* mahoratni shakllantirish\\*\\* darsida talabalar dasturlash jumboqlarida halqa tushunchasini mashq qiladilar, bu erda maqsad sincapning boshoqqa etib borishiga yordam berishdir.",
+          "preparation": "-   (Ixtiyoriy) Sinfingiz bilan guruh bo'lib bajarish uchun bir nechta jumboqlarni tanlang.\n-   Har bir talabada aks ettirish jurnali borligiga ishonch hosil qiling.",
+          "purpose": "Bu darsda, talabalar ko‘proq sikllar va bo‘limlar bilan kodlashda ularni qanday qo‘llash haqida o‘rganishadi. Dasturlashda sikllardan foydalanish muhim ko‘nikma hisoblanadi chunki, buyruqlarni taxminiy ravishda takrorlayverish samarasiz va zerikarli. Bu Code.org boshqotirmalari bilan, talabalar mavjud sikllarga ko‘rsatmalar qo‘shishni, sikl ichida takrorlanuvchi kodni jamlashni va takrorlanishi kerak bo‘lgan ko‘rinishlarni tanishni o‘rganishadi.",
+          "student_overview": "Help Scrat cover more ground using loops."
+        },
+        "pre-express-2023/Loops with Laurel": {
+          "name": "Laurel bilan sikllar",
+          "overview": "Bu darsda, talabalar sikllar tushunchasini o‘rganishda davom etishadi. Mana bu yerda, Laurel the Adventurer ochiq g‘ordagi xazinani yig‘ishda sikllardan foydalanadi. Uning sayohati davomida unga yordam berish uchun yangi 'get treasure' bo‘limi tanishtiriladi.",
+          "preparation": "-   Sinfingiz uchun yuzaga kelishi mumkin bo'lgan muammoli joylarni topish uchun jumboqlarni o'ynang.\n-   (Ixtiyoriy) Sinfingiz bilan guruh bo'lib ishlash uchun bir nechta jumboqlarni tanlang.\n-   Har bir talabaning Reflection Journal mavjudligiga ishonch hosil qiling.",
+          "purpose": "Bu dars talabalarga sikllar bilan ko‘proq amalyot qilish imkonini beradi va ularni iloji boricha ko‘proq xazina yig‘ishi uchun ‘takrorlanuvchi’ sikl ichida ko‘plab bo‘limlarni joylashtirishga undaydi. "
+        },
+        "pre-express-2023/Ocean Scene with Loops": {
+          "name": "Sikllar bilan okean manzarasi",
+          "overview": "Sikllar mavzusiga qaytgan holda, talabalar ko‘rsatmalarning oddiy ketma-ketligini takrorlash orqali rasmlar chizishni o‘rganishadi. Kompyuter bilan o‘tilgan oldingi darsda, sikllar labirintdan o‘tish va xazinani yig‘ish uchun foydalanilgan edi. Bu yerda, sikllar yordamida shakllar yaratilyapti. Bu bosqichning oxirida, talabalarga sikllardan foydalanib o‘z rasmlarini yaratish imkoniyati beriladi.",
+          "preparation": "-   Sinfingiz uchun yuzaga kelishi mumkin bo'lgan muammoli joylarni topish uchun jumboqlarni o'ynang.\n-   Har bir talabada aks ettirish jurnali borligiga ishonch hosil qiling.",
+          "purpose": "Bu dars sikllar dasturlashda narsalarni qanday qilib yarata olishi bo‘yicha turli xil nuqta’i nazarni shakllantiradi. Talabalar bu yerda sikllarsiz dasturlashning samarasizligini ham aks ettira olishadi chunki dasturning ko‘plab bo‘limlari 'takrorlanuvchi' sikllar yordamiga muhtoj.",
+          "student_overview": "Use loops and patterns to finish the images."
+        },
+        "pre-express-2023/Drawing Gardens with Loops": {
+          "name": "Drawing Gardens with Loops",
+          "overview": "Sikllarga qaytadigan bo‘lsak, talabalar ko‘rsatmalarning oddiy ketma-ketligini takrorlash orqali rasm chizishni o‘rganishadi. Oldingi onlayn darsda, sikllar labirintni kesib o‘tish va xazina to‘plash uchun ishlatilgan. Bu yerda talabalar sikllardan ko‘rinishlar yaratishda foydalanishadi. Bu bosqichning oxirida, talabalarga sikllardan foydalanib o‘zlarining shaxsiy rasmlarini yaratish imkoniyati beriladi.",
+          "preparation": "-   Sinfingiz uchun yuzaga kelishi mumkin bo'lgan muammoli joylarni topish uchun dars davomida o'ynang.\n-   Har bir talabaning aks ettirish jurnali borligiga ishonch hosil qiling.",
+          "purpose": "Bu dars dasturlashda sikllar qanday qilib ba’zi narsalarni yarata olishi bo‘yicha turli xil nuqta’i nazar bilan ta’minlaydi. Talabalar berilgan kodni baholash va boshqotirmani yechish uchun qanday qo‘shimchalar qilish keraklini aniqlash orqali o‘zlarining tanqidiy fikrlash mahoratlarini sinab ko‘rishadi. Talabalar bu yerda sikllarsiz dasturlashning samarasizligini ham aks ettishlari mumkin chunki, takrorlanuvchi sikllarsiz ushbu dastur ko‘plab bo‘llimlarni talab qiladi.",
+          "student_overview": "Use patterns and loops to finish the images."
+        },
+        "pre-express-2023/On the Move with Events": {
+          "name": "Hodisalar bilan harakatda",
+          "overview": "Bu onlayn mashg‘ulotda, o‘quvchilar Play Labdagi hodisalardan qanday foydalanishni o‘rganish va ular animatsiyalashtirilgan o‘yinlar yaratishda o‘rgangan kod yozish mahoratlaridan foydalanish imkoniyatiga ega bo‘ladilar. Ijod qilish va Play Labda o‘z hikoyangizni yaratish vaqti keldi!",
+          "preparation": "-   Sinfingiz uchun yuzaga kelishi mumkin bo'lgan muammoli joylarni topish uchun jumboqlarni o'ynang.\n-   (Ixtiyoriy) Sinfingiz bilan guruh bo'lib ishlash uchun bir nechta jumboqlarni tanlang.\n-   Har bir talabada aks ettirish jurnali borligiga ishonch hosil qiling",
+          "purpose": "Bugun talabalar Play Labdan foydalanib hodisalar haqidagi tushunchalarini yanada rivojlantiradilar. Ko‘plab komputer daasturlarida hodisalar juda muhim hisoblanishadi. Bu mashg‘ulotda, talabalar hodisalardan biron obrazni ekran bo‘ylab harakatlantirishda, shovqin solishda va foydalanuvchi qanday boshlashiga qarab fonni o‘zgartirishda ishlatishadi.",
+          "student_overview": "O'z o'yiningiz yoki hikoyangizni yarating!"
+        },
+        "pre-express-2023/A Royal Battle with Events": {
+          "name": "A Royal Battle with Events",
+          "overview": "Bu onlayn mashg‘ulotda, talabalarda Play Labda hodisalardan qanday foydalanishni o‘rganish va animatsiyalashtirilgan o‘yin yaratish uchun ular o‘rgangan barcha kod yozish mahoratlariga murojaat qilish imkoniyati mavjud. Yaratuvchan bo‘lish vaqti keldi va Play Labda biron o‘yin yarating!",
+          "preparation": "-   Sinfingiz uchun yuzaga kelishi mumkin bo'lgan muammoli joylarni topish uchun jumboqlarni o'ynang.\n-   (Ixtiyoriy) Sinfingiz bilan guruh bo'lib ishlash uchun bir nechta jumboqlarni tanlang.\n-   Har bir talabaning aks ettirish jurnali borligiga ishonch hosil qiling.",
+          "purpose": " Bu onlayn mashg‘ulotda, talabalar Play Labda hodisalardan qanday foydalanishni o‘rganishadi. Ular yo‘nalishli tugma bosilganda otliqni harakatlantirishni mashq qilib ko‘rish orqali boshlashadi va keyin tekinga o‘ynaladigan boshqotirma a’zosi sifatida bu kurs davomida o‘rgangan boshqa mahoratlari, jumladan ketma-ketliklar va sikllarni namoyish qilish imkoniyati bilan tugatishadi.",
+          "student_overview": "Use events to create a story or make an interactive game."
+        },
         "Hour of Code/Hour of Code 2013": {
           "name": "Dasturlash soati - 2013"
         },
