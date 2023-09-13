@@ -580,6 +580,52 @@
         "express-2022/Dance Party": {
           "name": "Dansfeest"
         },
+        "coursea-2023/Happy Maps": {
+          "name": "Vrolijke Routes"
+        },
+        "courseb-2023/Move It, Move It": {
+          "name": "verplaats het, verplaats het"
+        },
+        "courseb-2023/Getting Loopy": {
+          "name": "Rondjes lopen"
+        },
+        "coursec-2023/The Big Event": {
+          "name": "De grote gebeurtenis"
+        },
+        "coursec-2023/Binary Bracelets": {
+          "name": "Binaire armbanden"
+        },
+        "coursed-2023/Graph Paper Programming": {
+          "name": "Programmeren op Ruitjespapier"
+        },
+        "coursed-2023/Relay Programming": {
+          "name": "Estafette Programmeren"
+        },
+        "coursed-2023/Build a Star Wars Game": {
+          "name": "Bouw een Star Wars Spel!"
+        },
+        "coursed-2023/Dance Party": {
+          "name": "Dansfeest"
+        },
+        "coursed-2023/Conditionals with Cards": {
+          "name": "Statements met Kaarten"
+        },
+        "coursee-2023/Hello World": {
+          "name": "Hallo Wereld"
+        },
+        "coursee-2023/Songwriting": {
+          "name": "Songwriting",
+          "overview": "Een van de meest prachtige structuren in de informatica wereld is de functie. Functies (soms procedures genoemd) zijn mini programma's die telkens opnieuw kunnen gebruikt worden binnen het grotere geheel van je programma. Deze les helpt leerlingen intuïtief te begrijpen waarom brokken code samenvoegen in functies een nuttige praktijk is.  "
+        },
+        "coursef-2023/Outbreak": {
+          "name": "Uitbraak"
+        },
+        "coursef-2023/The Internet": {
+          "name": "Het Internet"
+        },
+        "express-2023/Dance Party": {
+          "name": "Dansfeest"
+        },
         "Hour of Code/Hour of Code 2013": {
           "name": "Uur van Code 2013"
         },
