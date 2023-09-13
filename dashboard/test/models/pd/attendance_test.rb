@@ -83,7 +83,7 @@ class Pd::AttendanceTest < ActiveSupport::TestCase
 
     assert_nil attendance.enrollment
     assert attendance.save
-    assert_not_nil attendance.reload.enrollment
+    refute_nil attendance.reload.enrollment
     assert_equal enrollment.id, attendance.enrollment.id
   end
 

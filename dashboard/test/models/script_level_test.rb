@@ -15,8 +15,8 @@ class ScriptLevelTest < ActiveSupport::TestCase
   end
 
   test "setup should work" do
-    assert_not_nil @script_level.script
-    assert_not_nil @script_level.level
+    refute_nil @script_level.script
+    refute_nil @script_level.level
   end
 
   test "should destroy when all related levels are destroyed" do
@@ -25,7 +25,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
     @script_level.levels[1].destroy
     assert ScriptLevel.exists?(@script_level.id)
     @script_level.levels[0].destroy
-    assert_not ScriptLevel.exists?(@script_level.id)
+    refute ScriptLevel.exists?(@script_level.id)
   end
 
   test "destroying should not destroy related level" do
@@ -783,7 +783,7 @@ class ScriptLevelTest < ActiveSupport::TestCase
     create_fake_plc_data
 
     assert @script_level1.has_another_level_to_go_to?
-    assert_not @script_level2.has_another_level_to_go_to?
+    refute @script_level2.has_another_level_to_go_to?
   end
 
   test 'redirects appropriately for professional learning courses' do

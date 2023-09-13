@@ -140,7 +140,7 @@ class UnitGroupTest < ActiveSupport::TestCase
     assert_equal Curriculum::SharedCourseConstants::PARTICIPANT_AUDIENCE.student, seeded_unit_group.participant_audience
     assert_equal Curriculum::SharedCourseConstants::INSTRUCTOR_AUDIENCE.teacher, seeded_unit_group.instructor_audience
     course_version = seeded_unit_group.course_version
-    assert_not_nil course_version
+    refute_nil course_version
     assert_equal '2021', course_version.key
     assert_equal 'family', course_version.course_offering&.key
     assert_equal Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable, course_version.published_state

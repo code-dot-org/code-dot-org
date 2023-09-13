@@ -767,7 +767,7 @@ class SectionTest < ActiveSupport::TestCase
   test 'update_code_review_expiration resets expiration time when enabling code review' do
     @section.update_code_review_expiration(true)
     @section.save
-    assert_not_nil @section.code_review_expires_at
+    refute_nil @section.code_review_expires_at
     # check the expiration date was set to a time greater than now.
     assert DateTime.parse(@section.code_review_expires_at) > DateTime.now
   end

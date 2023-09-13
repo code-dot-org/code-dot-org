@@ -571,8 +571,8 @@ class ScriptLevelsControllerTest < ActionController::TestCase
       id: '1'
     }
     assert_response :success
-    assert_not_empty assigns(:level).related_videos
-    assert_not_nil assigns(:view_options)[:autoplay_video]
+    refute_empty assigns(:level).related_videos
+    refute_nil assigns(:view_options)[:autoplay_video]
   end
 
   test 'should have autoplay video when never_autoplay_video is false on level' do
@@ -586,8 +586,8 @@ class ScriptLevelsControllerTest < ActionController::TestCase
       id: '1'
     }
     assert_response :success
-    assert_not_empty assigns(:level).related_videos
-    assert_not_nil assigns(:view_options)[:autoplay_video]
+    refute_empty assigns(:level).related_videos
+    refute_nil assigns(:view_options)[:autoplay_video]
   end
 
   test 'should not have autoplay video when never_autoplay_video is true on level' do
@@ -601,7 +601,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
       id: '1'
     }
     assert_response :success
-    assert_not_empty assigns(:level).related_videos
+    refute_empty assigns(:level).related_videos
     assert_nil assigns(:view_options)[:autoplay_video]
   end
 
@@ -617,7 +617,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
       id: '1'
     }
     assert_response :success
-    assert_not_empty assigns(:level).related_videos
+    refute_empty assigns(:level).related_videos
     assert_nil assigns(:view_options)[:autoplay_video]
   end
 
@@ -634,7 +634,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
       id: '1'
     }
     assert_response :success
-    assert_not_empty assigns(:level).related_videos
+    refute_empty assigns(:level).related_videos
     assert_nil assigns(:view_options)[:autoplay_video]
   end
 
@@ -1981,7 +1981,7 @@ class ScriptLevelsControllerTest < ActionController::TestCase
       id: '1',
     }
     assert_response :success
-    assert_not_nil assigns(:view_options)[:is_challenge_level]
+    refute_nil assigns(:view_options)[:is_challenge_level]
   end
 
   test "should not indicate non-challenge levels as challenge levels" do

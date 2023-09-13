@@ -1663,9 +1663,9 @@ class UnitTest < ActiveSupport::TestCase
     Unit.stubs(:modern_elementary_courses).returns([course1_modern, course2_modern])
 
     assert Unit.modern_elementary_courses_available?("en-us")
-    assert_not Unit.modern_elementary_courses_available?("ch-ch")
-    assert_not Unit.modern_elementary_courses_available?("it-it")
-    assert_not Unit.modern_elementary_courses_available?("fr-fr")
+    refute Unit.modern_elementary_courses_available?("ch-ch")
+    refute Unit.modern_elementary_courses_available?("it-it")
+    refute Unit.modern_elementary_courses_available?("fr-fr")
   end
 
   test 'locale_english_name_map' do

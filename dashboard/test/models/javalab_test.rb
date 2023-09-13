@@ -10,7 +10,7 @@ class JavalabTest < ActiveSupport::TestCase
     }
 
     neighborhood_level = Javalab.create(neighborhood_data)
-    assert_not_empty(neighborhood_level.serialized_maze)
+    refute_empty(neighborhood_level.serialized_maze)
     assert_equal(2, neighborhood_level.serialized_maze.size)
   end
 

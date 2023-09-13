@@ -9,7 +9,7 @@ class SchoolTest < ActiveSupport::TestCase
 
     schools = School.merge_from_csv(School.get_seed_filename(true))
     assert_equal(20, schools.size, 'test data contains 20 schools')
-    assert_not_nil School.find_by(
+    refute_nil School.find_by(
       {
         id: '10000500871',
         school_district_id: 100005,

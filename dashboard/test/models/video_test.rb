@@ -32,7 +32,7 @@ class VideoTest < ActiveSupport::TestCase
     Video.create(key: 'multi_lang_video', youtube_code: '_fake_code_es_', download: 'my-download-link-es.com', locale: 'es-MX')
     with_locale('es-MX') do
       es_video = Video.current_locale.find_by_key('multi_lang_video')
-      assert_not_nil es_video
+      refute_nil es_video
       assert_equal 'es-MX', es_video.locale
     end
   end
@@ -42,7 +42,7 @@ class VideoTest < ActiveSupport::TestCase
     Video.create(key: 'multi_lang_video', youtube_code: '_fake_code_es_', download: 'my-download-link-es.com', locale: 'es-MX')
     with_locale('nl-NL') do
       en_video = Video.current_locale.find_by_key('multi_lang_video')
-      assert_not_nil en_video
+      refute_nil en_video
       assert_equal 'en-US', en_video.locale
     end
   end

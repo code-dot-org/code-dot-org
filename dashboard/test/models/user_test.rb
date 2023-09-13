@@ -159,7 +159,7 @@ class UserTest < ActiveSupport::TestCase
     user.update_school_info(new_school_info)
     refute_equal original_school_info, user.school_info
     assert_equal new_school_info, user.school_info
-    assert_not_nil user.school_info_id
+    refute_nil user.school_info_id
 
     assert_equal user.user_school_infos.count, 2
     assert_equal user.user_school_infos.where(end_date: nil).count, 1
@@ -172,7 +172,7 @@ class UserTest < ActiveSupport::TestCase
 
     user.update_school_info(new_school_info)
     assert_equal new_school_info, user.school_info
-    assert_not_nil user.school_info_id
+    refute_nil user.school_info_id
 
     assert_equal user.user_school_infos.count, 2
   end
@@ -186,7 +186,7 @@ class UserTest < ActiveSupport::TestCase
     user.update_school_info(new_school_info)
     assert_equal original_school_info, user.school_info
     refute_equal new_school_info, user.school_info
-    assert_not_nil user.school_info_id
+    refute_nil user.school_info_id
 
     assert_equal user.user_school_infos.count, 1
   end
@@ -199,7 +199,7 @@ class UserTest < ActiveSupport::TestCase
     user.update_school_info(new_school_info)
     refute_equal original_school_info, user.school_info
     assert_equal new_school_info, user.school_info
-    assert_not_nil user.school_info_id
+    refute_nil user.school_info_id
 
     assert_equal user.user_school_infos.count, 2
   end
@@ -212,7 +212,7 @@ class UserTest < ActiveSupport::TestCase
     user.update_school_info(new_school_info)
     refute_equal original_school_info, user.school_info
     assert_equal new_school_info, user.school_info
-    assert_not_nil user.school_info_id
+    refute_nil user.school_info_id
 
     assert_equal user.user_school_infos.count, 2
   end
@@ -392,14 +392,14 @@ class UserTest < ActiveSupport::TestCase
   test 'cannot create user when a user with the same credentials exists' do
     User.create(@good_data_google_classroom_import)
     duplicate_user = User.create(@good_data_google_classroom_import)
-    assert_not_empty(duplicate_user.errors)
+    refute_empty(duplicate_user.errors)
     assert(duplicate_user.errors[:uid])
   end
 
   test 'cannot create user when an non-migrated user with the same credentials exists' do
     User.create(@good_data_google_classroom_import).demigrate_from_multi_auth
     duplicate_user = User.create(@good_data_google_classroom_import)
-    assert_not_empty(duplicate_user.errors)
+    refute_empty(duplicate_user.errors)
     assert(duplicate_user.errors[:uid])
   end
 
@@ -713,14 +713,14 @@ class UserTest < ActiveSupport::TestCase
                   password: 'xxxxxxxx', provider: 'manual'
       )
     end
-    assert_not_nil user.errors[:email]
+    refute_nil user.errors[:email]
   end
 
   # FND-1130: This test will no longer be required
   test "teacher with no email created after 2016-06-14 should be invalid" do
     user = create :teacher, :without_email
     assert user.invalid?
-    assert_not_empty user.errors[:email]
+    refute_empty user.errors[:email]
   end
 
   # FND-1130: This test will no longer be required
@@ -2405,7 +2405,7 @@ class UserTest < ActiveSupport::TestCase
     parent_email_params = @good_parent_email_params
     User.create(@good_data.merge(parent_email_params))
     email_preference = EmailPreference.find_by_email(parent_email_params[:parent_email_preference_email])
-    assert_not_nil email_preference
+    refute_nil email_preference
     assert_parent_email_params_equals_email_preference parent_email_params, email_preference
   end
 
@@ -2413,7 +2413,7 @@ class UserTest < ActiveSupport::TestCase
     parent_email_params = @good_parent_email_params.merge({parent_email_preference_opt_in: 'no'})
     User.create(@good_data.merge(parent_email_params))
     email_preference = EmailPreference.find_by_email(parent_email_params[:parent_email_preference_email])
-    assert_not_nil email_preference
+    refute_nil email_preference
     assert_parent_email_params_equals_email_preference parent_email_params, email_preference
   end
 
@@ -2426,7 +2426,7 @@ class UserTest < ActiveSupport::TestCase
     user.update!(parent_email_params)
     email_preference = EmailPreference.find_by_email(parent_email_params[:parent_email_preference_email])
     # There should now be an email preference because the user was updated with a parent_email.
-    assert_not_nil email_preference
+    refute_nil email_preference
     assert_parent_email_params_equals_email_preference parent_email_params, email_preference
   end
 
@@ -3708,7 +3708,7 @@ class UserTest < ActiveSupport::TestCase
   test 'new users require a password if no authentication provided' do
     assert_raises(ActiveRecord::RecordInvalid) do
       user = create :user, password: nil
-      assert_not user.errors[:password].empty?
+      refute user.errors[:password].empty?
     end
   end
 
@@ -4830,7 +4830,7 @@ class UserTest < ActiveSupport::TestCase
 
     user.family_name = family_name
 
-    assert_not(user.valid?)
+    refute(user.valid?)
   end
 
   test 'family name is not allowed on teachers' do
@@ -4838,7 +4838,7 @@ class UserTest < ActiveSupport::TestCase
     family_name = 'TestFamilyName'
     user.family_name = family_name
 
-    assert_not(user.valid?)
+    refute(user.valid?)
   end
 
   test 'school_info_school returns the school associated with the user' do
@@ -4970,7 +4970,7 @@ class UserTest < ActiveSupport::TestCase
     student = create :non_compliant_child
     student.save!
     assert_equal Policies::ChildAccount::ComplianceState::LOCKED_OUT, student.child_account_compliance_state
-    assert_not_empty student.child_account_compliance_lock_out_date
+    refute_empty student.child_account_compliance_lock_out_date
   end
 
   test "given a compliant child account, that account is NOT locked out" do

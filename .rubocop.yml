@@ -66,6 +66,9 @@ Rails/AssertNot:
 Rails/Date:
   EnforcedStyle: strict
 
+Rails/RefuteMethods:
+  EnforcedStyle: refute
+
 Style/AccessModifierDeclarations:
   EnforcedStyle: inline
 

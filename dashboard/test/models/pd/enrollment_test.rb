@@ -185,7 +185,7 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
     Pd::WorkshopMailer.expects(:exit_survey).once.returns(mock_mail)
 
     enrollment.send_exit_survey
-    assert_not_nil enrollment.reload.survey_sent_at
+    refute_nil enrollment.reload.survey_sent_at
   end
 
   test 'send_exit_survey tries to send email and, if unsuccessful, does not update survey_sent_at' do

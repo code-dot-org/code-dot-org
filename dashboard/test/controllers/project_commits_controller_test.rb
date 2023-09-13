@@ -10,7 +10,7 @@ class ProjectCommitsControllerTest < ActionController::TestCase
       post :create, params: {storage_id: 'abcdef', version_id: 'fghj', comment: 'This is a comment'}
     end
     project_commit = ProjectCommit.find_by(project_id: 654, object_version_id: 'fghj')
-    assert_not_nil project_commit
+    refute_nil project_commit
     assert_equal 'This is a comment', project_commit.comment
   end
 
