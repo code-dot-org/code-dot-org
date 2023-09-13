@@ -1,0 +1,151 @@
+/*
+ * File is used in dashboard/app/assets/stylesheets/application.scss and pegasus/sites.v3/code.org/public/hourofcode/overview.haml
+ * In order to add font to the Pegasus pages you should manually add this file to every page. In case you'll need
+ * to add this font to many Pegasus page - you should probably think of other solution and not forget to update
+  the Pegasus pages that were using font already.
+ */
+
+//100 – Thin
+//200 – Extra Light (Ultra Light)
+//300 – Light
+//400 – Regular (Normal)
+//500 – Medium
+//600 – Semi Bold (Demi Bold)
+//700 – Bold
+//800 – Extra Bold (Ultra Bold)
+//900 – Black (Heavy)
+
+@font-face {
+  font-family: 'Metropolis';
+  font-style: normal;
+  font-weight: 100;
+  src: url('/fonts/metropolis/Metropolis-Thin.otf') format('opentype'),
+local('?');
+}
+
+@font-face {
+  font-family: 'Metropolis';
+  font-style: italic;
+  font-weight: 100;
+  src: url('/fonts/metropolis/Metropolis-ThinItalic.otf') format('opentype'), local('?');
+}
+
+@font-face {
+  font-family: 'Metropolis';
+  font-style: normal;
+  font-weight: 200;
+  src: url('/fonts/metropolis/Metropolis-ExtraLight.otf') format('opentype'),
+local('?');
+}
+
+@font-face {
+  font-family: 'Metropolis';
+  font-style: italic;
+  font-weight: 200;
+  src: url('/fonts/metropolis/Metropolis-ExtraLightItalic.otf') format('opentype'), local('?');
+}
+
+@font-face {
+  font-family: 'Metropolis';
+  font-style: normal;
+  font-weight: 300;
+  src: url('/fonts/metropolis/Metropolis-Light.otf') format('opentype'),
+  local('?');
+}
+
+@font-face {
+  font-family: 'Metropolis';
+  font-style: italic;
+  font-weight: 300;
+  src: url('/fonts/metropolis/Metropolis-LightItalic.otf') format('opentype'), local('?');
+}
+
+@font-face {
+  font-family: 'Metropolis';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/metropolis/Metropolis-Regular.otf') format('opentype'),
+  local('?');
+}
+
+@font-face {
+  font-family: 'Metropolis';
+  font-style: italic;
+  font-weight: 400;
+  src: url('/fonts/metropolis/Metropolis-RegularItalic.otf') format('opentype'), local('?');
+}
+
+@font-face {
+  font-family: 'Metropolis';
+  font-style: normal;
+  font-weight: 500;
+  src: url('/fonts/metropolis/Metropolis-Medium.otf') format('opentype'),
+  local('?');
+}
+
+@font-face {
+  font-family: 'Metropolis';
+  font-style: italic;
+  font-weight: 500;
+  src: url('/fonts/metropolis/Metropolis-MediumItalic.otf') format('opentype'), local('?');
+}
+
+@font-face {
+  font-family: 'Metropolis';
+  font-style: normal;
+  font-weight: 600;
+  src: url('/fonts/metropolis/Metropolis-SemiBold.otf') format('opentype'),
+  local('?');
+}
+
+@font-face {
+  font-family: 'Metropolis';
+  font-style: italic;
+  font-weight: 600;
+  src: url('/fonts/metropolis/Metropolis-SemiBoldItalic.otf') format('opentype'), local('?');
+}
+
+@font-face {
+  font-family: 'Metropolis';
+  font-style: normal;
+  font-weight: 700;
+  src: url('/fonts/metropolis/Metropolis-Bold.otf') format('opentype'),
+  local('?');
+}
+
+@font-face {
+  font-family: 'Metropolis';
+  font-style: italic;
+  font-weight: 700;
+  src: url('/fonts/metropolis/Metropolis-BoldItalic.otf') format('opentype'), local('?');
+}
+
+@font-face {
+  font-family: 'Metropolis';
+  font-style: normal;
+  font-weight: 800;
+  src: url('/fonts/metropolis/Metropolis-ExtraBold.otf') format('opentype'),
+  local('?');
+}
+
+@font-face {
+  font-family: 'Metropolis';
+  font-style: italic;
+  font-weight: 800;
+  src: url('/fonts/metropolis/Metropolis-ExtraBoldItalic.otf') format('opentype'), local('?');
+}
+
+@font-face {
+  font-family: 'Metropolis';
+  font-style: normal;
+  font-weight: 900;
+  src: url('/fonts/metropolis/Metropolis-Black.otf') format('opentype'),
+  local('?');
+}
+
+@font-face {
+  font-family: 'Metropolis';
+  font-style: italic;
+  font-weight: 900;
+  src: url('/fonts/metropolis/Metropolis-BlackItalic.otf') format('opentype'), local('?');
+}

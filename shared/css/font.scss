@@ -7,6 +7,109 @@ $gotham-bold-italics: "Gotham 5i", sans-serif;
 $gotham-extra-bold: "Gotham 7r", sans-serif;
 $gotham-extra-bold-italics: "Gotham 7i";
 
+$metropolis-font: "Metropolis", sans-serif;
+
+$main-font: $metropolis-font;
+
+@mixin main-font-thin {
+  font-family: $main-font;
+  font-weight: 100;
+  font-style: normal;
+}
+
+@mixin main-font-thin-italic {
+  @include main-font-thin;
+  font-style: italic;
+}
+
+@mixin main-font-extra-light {
+  font-family: $main-font;
+  font-weight: 200;
+  font-style: normal;
+}
+
+@mixin main-font-extra-light-italic {
+  @include main-font-extra-light;
+  font-style: italic;
+}
+
+@mixin main-font-light {
+  font-family: $main-font;
+  font-weight: 300;
+  font-style: normal;
+}
+
+@mixin main-font-light-italic {
+  @include main-font-light;
+  font-style: italic;
+}
+
+@mixin main-font-regular {
+  font-family: $main-font;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@mixin main-font-regular-italic {
+  @include main-font-regular;
+  font-style: italic;
+}
+
+@mixin main-font-medium {
+  font-family: $main-font;
+  font-weight: 500;
+  font-style: normal;
+}
+
+@mixin main-font-medium-italic {
+  @include main-font-medium;
+  font-style: italic;
+}
+
+@mixin main-font-semi-bold {
+  font-family: $main-font;
+  font-weight: 600;
+  font-style: normal;
+}
+
+@mixin main-font-semi-bold-italic {
+  @include main-font-semi-bold;
+  font-style: italic;
+}
+
+@mixin main-font-bold {
+  font-family: $main-font;
+  font-weight: 700;
+  font-style: normal;
+}
+
+@mixin main-font-bold-italic {
+  @include main-font-bold;
+  font-style: italic;
+}
+
+@mixin main-font-extra-bold {
+  font-family: $main-font;
+  font-weight: 800;
+  font-style: normal;
+}
+
+@mixin main-font-extra-bold-italic {
+  @include main-font-extra-bold;
+  font-style: italic;
+}
+
+@mixin main-font-black {
+  font-family: $main-font;
+  font-weight: 900;
+  font-style: normal;
+}
+
+@mixin main-font-black-italic {
+  @include main-font-black;
+  font-style: italic;
+}
+
 $barlowSemiCondensed-semibold: 'Barlow Semi Condensed Semibold', sans-serif;
 $barlowSemiCondensed-medium: 'Barlow Semi Condensed Medium', sans-serif;
 
