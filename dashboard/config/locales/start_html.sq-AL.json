@@ -2,6 +2,10 @@
   "sq-AL": {
     "data": {
       "start_html": {
+        "AppLab Intro 7 - onEvent twoButtons": {
+          "Off": "Fikur",
+          "On": "Ndezur"
+        },
         "CSD U1 IO Pet Chooser 2_2021": {
           "1584 Maple St": "Rruga Maple 1584",
           "Are you allergic to pet fur?": "A jeni alergjik ndaj gëzofit të kafshëve shtëpiake?",
@@ -147,6 +151,7 @@
           "text": "tekst"
         },
         "CSD U1 processing bday_2021": {
+          "1": "1",
           "15": "15",
           "17": "17",
           "3": "3",
@@ -155,6 +160,7 @@
           "8": "8"
         },
         "CSD U1 processing bday_2022": {
+          "1": "1",
           "15": "15",
           "17": "17",
           "3": "3",
@@ -193,6 +199,8 @@
           "Which finger is the FASTEST?": "Cili gisht është më i shpejti?"
         },
         "CSD U1 processing guess_2021": {
+          "1": "1",
+          "100": "100",
           "15": "15",
           "17": "17",
           "3": "3",
@@ -240,6 +248,7 @@
           "8": "8",
           "80": "80",
           "81": "81",
+          "82": "82",
           "83": "83",
           "84": "84",
           "85": "85",
@@ -247,6 +256,7 @@
           "87": "87",
           "88": "88",
           "89": "89",
+          "90": "90",
           "91": "91",
           "92": "92",
           "93": "93",
@@ -268,6 +278,8 @@
           "text": "tekst"
         },
         "CSD U1 processing guess_2022": {
+          "1": "1",
+          "100": "100",
           "15": "15",
           "17": "17",
           "3": "3",
@@ -315,6 +327,7 @@
           "8": "8",
           "80": "80",
           "81": "81",
+          "82": "82",
           "83": "83",
           "84": "84",
           "85": "85",
@@ -322,6 +335,7 @@
           "87": "87",
           "88": "88",
           "89": "89",
+          "90": "90",
           "91": "91",
           "92": "92",
           "93": "93",
@@ -393,12 +407,15 @@
           "walking": "në këmbë"
         },
         "CSD U1 processing npark_2021": {
+          "Correct!": "E saktë!",
           "Sorry!": "Më fal!"
         },
         "CSD U1 processing npark_2022": {
+          "Correct!": "E saktë!",
           "Sorry!": "Më fal!"
         },
         "CSD U1 processing writers_2021": {
+          "1": "1",
           "15": "15",
           "17": "17",
           "3": "3",
@@ -407,6 +424,7 @@
           "8": "8"
         },
         "CSD U1 processing writers_2022": {
+          "1": "1",
           "15": "15",
           "17": "17",
           "3": "3",
@@ -497,27 +515,187 @@
           "white": "e bardhë"
         },
         "CSD U2 RGB intro": {
+          "1": "1",
           "3": "3",
           "5": "5"
         },
         "CSD U2 RGB intro_2018": {
+          "1": "1",
           "3": "3",
           "5": "5"
         },
         "CSD U2 RGB intro_2019": {
+          "1": "1",
           "3": "3",
           "5": "5"
         },
         "CSD U2 RGB intro_2021": {
+          "1": "1",
           "3": "3",
           "5": "5"
         },
         "CSD U2 RGB intro_2022": {
+          "1": "1",
           "3": "3",
           "5": "5"
         },
+        "CSD U6 - Board Inputs - PracA_2222": {
+          "This is a Label": "Kjo është një etiketë"
+        },
+        "CSD U6 - Board Inputs - SB1_2222": {
+          "Board Not Detected!": "Pllaka nuk detektohet!",
+          "Follow the instructions in this level, then plug in your board and press Run": "Ndiqni udhëzimet në këtë nivel, pastaj futni në prizë tabelën tuaj dhe shtypni Run",
+          "Plug the board into a different USB": "Lidheni pllakën me një USB tjetër",
+          "Refresh this page and try again": "Rifreskoni këtë faqe dhe provoni përsëri",
+          "Try the following:": "Provoni sa vijon:",
+          "Visit studio.code.org/maker/setup": "Vizitoni studio.code.org/maker/setup"
+        },
+        "CSD U6 - Board Inputs - SB2_2222": {
+          "Board Not Detected!": "Pllaka nuk detektohet!",
+          "Follow the instructions in this level, then plug in your board and press Run": "Ndiqni udhëzimet në këtë nivel, pastaj futni në prizë tabelën tuaj dhe shtypni Run",
+          "Plug the board into a different USB": "Lidheni pllakën me një USB tjetër",
+          "Refresh this page and try again": "Rifreskoni këtë faqe dhe provoni përsëri",
+          "Try the following:": "Provoni sa vijon:",
+          "Visit studio.code.org/maker/setup": "Vizitoni studio.code.org/maker/setup"
+        },
+        "CSD U6 - Board Inputs - SB3_2222": {
+          "Board Not Detected!": "Pllaka nuk detektohet!",
+          "Follow the instructions in this level, then plug in your board and press Run": "Ndiqni udhëzimet në këtë nivel, pastaj futni në prizë tabelën tuaj dhe shtypni Run",
+          "Plug the board into a different USB": "Lidheni pllakën me një USB tjetër",
+          "Refresh this page and try again": "Rifreskoni këtë faqe dhe provoni përsëri",
+          "Try the following:": "Provoni sa vijon:",
+          "Visit studio.code.org/maker/setup": "Vizitoni studio.code.org/maker/setup"
+        },
+        "CSD U6 - Board Inputs - SB4_2222": {
+          "Nothing to see here...": "Asgjë për të parë këtu...",
+          "The Password is \"Sushi\"": "Fjalëkalimi është “Sushi”"
+        },
+        "CSD U6 - Board Outputs - A_2222": {
+          "Decorate your Circuit Playground to look like your own personal monster, then use the buttons below to give it different emotions!": "Dekoroni qarkun tuaj të lojërave të duket si përbindëshi juaj personal, pastaj përdorni butonat më poshtë për t'i dhënë asaj emocione të ndryshme!",
+          "My Personal Monster": "Përbindëshi im personal",
+          "Nervous": "Nervoz",
+          "Sleepy": "I përgjumur"
+        },
+        "CSD U6 - Board Outputs - P2_2222": {
+          "High": "Lartë",
+          "Low": "Ulët",
+          "Mid": "Mes"
+        },
+        "CSD U6 - Board Outputs - P_2222": {
+          "Board Not Detected!": "Pllaka nuk detektohet!",
+          "Click Me": "Kliko këtu",
+          "Plug the board into a different USB": "Lidheni pllakën me një USB tjetër",
+          "Refresh this page and try again": "Rifreskoni këtë faqe dhe provoni përsëri",
+          "Try the following:": "Provoni sa vijon:",
+          "Visit studio.code.org/maker/setup": "Vizitoni studio.code.org/maker/setup"
+        },
+        "CSD U6 - Board Outputs - PracA_2222": {
+          "Off": "Fikur",
+          "On": "Ndezur"
+        },
+        "CSD U6 - Board Outputs - PracB_2222": {
+          "Click the mouse to make it squeak!": "Kliko miun për ta bërë atë kërcitje!"
+        },
+        "CSD U6 - Board Outputs - PracC_2222": {
+          "Light Off": "Dritat fikur",
+          "Light On": "Dritat ndezur"
+        },
+        "CSD U6 - Board Outputs - PracD_2222": {
+          "100": "100",
+          "200": "200",
+          "300": "300",
+          "400": "400",
+          "500": "500",
+          "600": "600",
+          "700": "700",
+          "800": "800",
+          "900": "900"
+        },
+        "CSD U6 - Board Outputs - PracE_2222": {
+          "1 Second": "1 Sekondë",
+          "100 Milliseconds": "100 milisekonda",
+          "2 Seconds": "2 Sekonda",
+          "4 Seconds": "4 Sekonda",
+          "Half a Second": "Gjysmë sekondi",
+          "Quarter of a Second": "Çerek sekondi"
+        },
+        "CSD U6 - Board Outputs - SB1_2222": {
+          "Board Not Detected!": "Pllaka nuk detektohet!",
+          "OFF": "OFF - fikur",
+          "ON": "ON - ndezur",
+          "Plug the board into a different USB": "Lidheni pllakën me një USB tjetër",
+          "Refresh this page and try again": "Rifreskoni këtë faqe dhe provoni përsëri",
+          "Try the following:": "Provoni sa vijon:",
+          "Visit studio.code.org/maker/setup": "Vizitoni studio.code.org/maker/setup"
+        },
+        "CSD U6 - Board Outputs - SB2_2222": {
+          "Board Not Detected!": "Pllaka nuk detektohet!",
+          "Plug the board into a different USB": "Lidheni pllakën me një USB tjetër",
+          "Refresh this page and try again": "Rifreskoni këtë faqe dhe provoni përsëri",
+          "Try the following:": "Provoni sa vijon:",
+          "Visit studio.code.org/maker/setup": "Vizitoni studio.code.org/maker/setup",
+          "change the light": "Ndryshoni dritën"
+        },
+        "CSD U6 - Board Outputs - SB3_2222": {
+          "Long": "Gjatë",
+          "Short": "Shkurt"
+        },
+        "CSD U6 - Board Outputs - SB4_2222": {
+          "Cat": "Mace",
+          "Dog": "Qen",
+          "Lizard": "Hardhucë",
+          "Which type of animal makes the best pet?": "Cili lloj kafshe është kafsha më e mirë?"
+        },
+        "CSD U6 - Board Outputs - Setup_2222": {
+          "Board Not Detected!": "Pllaka nuk detektohet!",
+          "Plug the board into a different USB": "Lidheni pllakën me një USB tjetër",
+          "Refresh this page and try again": "Rifreskoni këtë faqe dhe provoni përsëri",
+          "Try the following:": "Provoni sa vijon:",
+          "Visit studio.code.org/maker/setup": "Vizitoni studio.code.org/maker/setup"
+        },
+        "CSD U6 - Color LEDs - CA_2222": {
+          "Toggle Next LED": "Ndërroni LED të ardhshëm"
+        },
+        "CSD U6 - Color LEDs - ChalD_2222": {
+          "Off": "Fikur"
+        },
+        "CSD U6 - Color LEDs - PracA_2222": {
+          "Board Not Detected!": "Pllaka nuk detektohet!",
+          "Follow the instructions in this level, then plug in your board and press Run": "Ndiqni udhëzimet në këtë nivel, pastaj futni në prizë tabelën tuaj dhe shtypni Run",
+          "Plug the board into a different USB": "Lidheni pllakën me një USB tjetër",
+          "Refresh this page and try again": "Rifreskoni këtë faqe dhe provoni përsëri",
+          "Try the following:": "Provoni sa vijon:",
+          "Visit studio.code.org/maker/setup": "Vizitoni studio.code.org/maker/setup"
+        },
+        "CSD U6 - Color LEDs - PracC_2222": {
+          "OFF": "OFF - fikur",
+          "ON": "ON - ndezur"
+        },
+        "CSD U6 - Color LEDs - SB1_2222": {
+          "Turn off bottom color LEDs": "Fikni LEDs me ngjyra të poshtme",
+          "Turn on bottom color LEDs": "Aktivizoni LEDs me ngjyra të poshtme"
+        },
+        "CSD U6 - Color LEDs - SB2_2222": {
+          "Board Not Detected!": "Pllaka nuk detektohet!",
+          "Follow the instructions in this level, then plug in your board and press Run": "Ndiqni udhëzimet në këtë nivel, pastaj futni në prizë tabelën tuaj dhe shtypni Run",
+          "Plug the board into a different USB": "Lidheni pllakën me një USB tjetër",
+          "Refresh this page and try again": "Rifreskoni këtë faqe dhe provoni përsëri",
+          "Try the following:": "Provoni sa vijon:",
+          "Visit studio.code.org/maker/setup": "Vizitoni studio.code.org/maker/setup"
+        },
+        "CSD U6 - Color LEDs - SB3_2222": {
+          "Board Not Detected!": "Pllaka nuk detektohet!",
+          "Follow the instructions in this level, then plug in your board and press Run": "Ndiqni udhëzimet në këtë nivel, pastaj futni në prizë tabelën tuaj dhe shtypni Run",
+          "Plug the board into a different USB": "Lidheni pllakën me një USB tjetër",
+          "Refresh this page and try again": "Rifreskoni këtë faqe dhe provoni përsëri",
+          "Try the following:": "Provoni sa vijon:",
+          "Visit studio.code.org/maker/setup": "Vizitoni studio.code.org/maker/setup"
+        },
         "CSD U6 - Color LEDs - SB4_2222": {
-          "Medium": "Mesatare"
+          "Bright": "I ndritshëm",
+          "Dim": "\nI errët",
+          "Medium": "Mesatare",
+          "Rainbow Lights!": "Dritat e ylberit!"
         },
         "CSD U6 - Combine Inputs - A_2222": {
           "green": "jeshile",
@@ -528,8 +706,16 @@
           "yellow": "zverdh"
         },
         "CSD U6 - Combine Inputs - CA_2022": {
+          "blink": "mbyll",
           "long": "i gjatë",
+          "pulse": "puls",
           "short": "i shkurtër"
+        },
+        "CSD U6 - Combine Inputs - P_2222": {
+          "Choose your LED style, then use the left and right buttons on your Circuit Playground to turn the LED off and on.": "Zgjidhni stilin tuaj LED, pastaj përdorni butonat majtas dhe djathtas në qarkun e lojërave për të fikur dhe ndezur LED.",
+          "Off": "Fikur",
+          "blink": "mbyll",
+          "pulse": "puls"
         },
         "CSD U6 - Combine Inputs - PracA_2222": {
           "left": "majtas",
@@ -544,6 +730,11 @@
         "CSD U6 - Combine Inputs - PracD_2222": {
           "quiet": "i qetë"
         },
+        "CSD U6 - Combine Inputs - SB1_2222": {
+          "Off": "Fikur",
+          "blink": "mbyll",
+          "pulse": "puls"
+        },
         "CSD U6 - Combine Inputs - SB2_2222": {
           "long": "i gjatë",
           "short": "i shkurtër"
@@ -556,12 +747,44 @@
           "long": "i gjatë",
           "short": "i shkurtër"
         },
+        "CSD U6 - Functions - P2C_2222": {
+          "Yellow": "E verdhë"
+        },
+        "CSD U6 - If Variables - A_2222": {
+          "Every time you do a good deed or make a positive comment, press a button on your Circuit Playground to increase the size of the heart. Try to get your heart to fill the whole box with positivity!": "Sa herë që bëni një vepër të mirë ose bëni një koment pozitiv, shtypni një buton në qark lojërash për të rritur madhësinë e zemrës. Mundohuni të merrni zemrën tuaj për të mbushur të gjithë kutinë me pozitivitet!",
+          "Positive Attitude App": "Aplikacioni i qëndrimit pozitiv"
+        },
+        "CSD U6 - If Variables - ChalA_2222": {
+          "Hey - what's the name of that Indian restaurant we went to last week?": "Çfarë është emri i restorantit indian në të cilin kemi shkuar javën e kaluar?",
+          "Oh awesome! You should try their Saag Aloo": "Oh i mrekullueshëm! Ju duhet të provoni Saag Aloo tyre",
+          "Oh yah? What's in that?": "Oh, po? Çfarë ka në këtë?",
+          "Saffron Indian - why?": "Shafran Indian - pse?",
+          "Spinach and potatoes - it's yummy!": "Spinaqi dhe patatet - është e shijshme!",
+          "We want to go back. Their Naan was really good!": "Ne duam të kthehemi. Naan tyre ishte me të vërtetë i mirë!"
+        },
+        "CSD U6 - If Variables - ChalB_2222": {
+          "Press the left and right buttons to raise and lower the water in the bath tub. If the water gets too close to the edge, the app will buzz to warn you!": "Shtypni butonat majtas dhe djathtas për të ngritur dhe ulur ujin në vaskë. Nëse uji afrohet shumë afër buzës, aplikacioni do të lëvizë për t'ju paralajmëruar!"
+        },
+        "CSD U6 - If Variables - ChalC_2222": {
+          "Blue Player Wins!": "Lojtari blu fiton!",
+          "Emoji Race!": "Gara me emoji!",
+          "Press the left button to move the red emoji. Press the right button to move the blue emoji. Whoever reaches the bottom of the screen first is the winner!": "Shtypni butonin e majtë për të lëvizur emoji të kuq. Shtypni butonin e djathtë për të lëvizur emoji blu. Kushdo që arrin pjesën e poshtme të ekranit së pari është fituesi!",
+          "Red Player Wins!": "Lojtari i Kuq fiton!"
+        },
         "CSD U6 - If Variables - ChalD_2222": {
           "+": "+",
-          "-": "-"
+          "-": "-",
+          "Recommend": "Rekomandoj",
+          "Use the buttons on the screen to enter your age. Then press the \"Recommend\" button to view a recommendation!": "Përdorni butonat në ekran për të hyrë në moshën tuaj. Pastaj shtypni butonin “Rekomandoj” për të parë një rekomandim!"
         },
         "CSD U6 - If Variables - SB3_2222": {
           "Name": "Emri"
+        },
+        "CSD U6 - If Variables - SB7_2222": {
+          "psst... come closer...": "psst... eja më afër..."
+        },
+        "CSD U6 - Music - A_2222": {
+          "Sad": "I mërzitur"
         },
         "CSD U6 - Music - ChalD_2222": {
           "A": "A",
@@ -609,24 +832,241 @@
           "F": "F",
           "G": "G"
         },
+        "CSD U6 - Music - SB4_2222": {
+          "Board Not Detected!": "Pllaka nuk detektohet!",
+          "Follow the instructions in this level, then plug in your board and press Run": "Ndiqni udhëzimet në këtë nivel, pastaj futni në prizë tabelën tuaj dhe shtypni Run",
+          "Plug the board into a different USB": "Lidheni pllakën me një USB tjetër",
+          "Refresh this page and try again": "Rifreskoni këtë faqe dhe provoni përsëri",
+          "Try the following:": "Provoni sa vijon:",
+          "Visit studio.code.org/maker/setup": "Vizitoni studio.code.org/maker/setup"
+        },
+        "CSD U6 - Physical Input - A_2222": {
+          "1": "1"
+        },
+        "CSD U6 - Physical Input - ChalA_2222": {
+          "Board Not Detected!": "Pllaka nuk detektohet!",
+          "Follow the instructions in this level, then plug in your board and press Run": "Ndiqni udhëzimet në këtë nivel, pastaj futni në prizë tabelën tuaj dhe shtypni Run",
+          "Plug the board into a different USB": "Lidheni pllakën me një USB tjetër",
+          "Refresh this page and try again": "Rifreskoni këtë faqe dhe provoni përsëri",
+          "Try the following:": "Provoni sa vijon:",
+          "Visit studio.code.org/maker/setup": "Vizitoni studio.code.org/maker/setup"
+        },
+        "CSD U6 - Physical Input - ChalB_2222": {
+          "Board Not Detected!": "Pllaka nuk detektohet!",
+          "Follow the instructions in this level, then plug in your board and press Run": "Ndiqni udhëzimet në këtë nivel, pastaj futni në prizë tabelën tuaj dhe shtypni Run",
+          "Plug the board into a different USB": "Lidheni pllakën me një USB tjetër",
+          "Refresh this page and try again": "Rifreskoni këtë faqe dhe provoni përsëri",
+          "Try the following:": "Provoni sa vijon:",
+          "Visit studio.code.org/maker/setup": "Vizitoni studio.code.org/maker/setup"
+        },
+        "CSD U6 - Physical Input - ChalC_2222": {
+          "Board Not Detected!": "Pllaka nuk detektohet!",
+          "Follow the instructions in this level, then plug in your board and press Run": "Ndiqni udhëzimet në këtë nivel, pastaj futni në prizë tabelën tuaj dhe shtypni Run",
+          "Plug the board into a different USB": "Lidheni pllakën me një USB tjetër",
+          "Refresh this page and try again": "Rifreskoni këtë faqe dhe provoni përsëri",
+          "Try the following:": "Provoni sa vijon:",
+          "Visit studio.code.org/maker/setup": "Vizitoni studio.code.org/maker/setup"
+        },
         "CSD U6 - Physical Input - PA_2222": {
           "Score": "rezultati"
         },
+        "CSD U6 - Physical Input - PC_2222": {
+          "Board Not Detected!": "Pllaka nuk detektohet!",
+          "Follow the instructions in this level, then plug in your board and press Run": "Ndiqni udhëzimet në këtë nivel, pastaj futni në prizë tabelën tuaj dhe shtypni Run",
+          "Plug the board into a different USB": "Lidheni pllakën me një USB tjetër",
+          "Refresh this page and try again": "Rifreskoni këtë faqe dhe provoni përsëri",
+          "Try the following:": "Provoni sa vijon:",
+          "Visit studio.code.org/maker/setup": "Vizitoni studio.code.org/maker/setup"
+        },
+        "CSD U6 - Physical Input - PD_2222": {
+          "Board Not Detected!": "Pllaka nuk detektohet!",
+          "Follow the instructions in this level, then plug in your board and press Run": "Ndiqni udhëzimet në këtë nivel, pastaj futni në prizë tabelën tuaj dhe shtypni Run",
+          "Plug the board into a different USB": "Lidheni pllakën me një USB tjetër",
+          "Refresh this page and try again": "Rifreskoni këtë faqe dhe provoni përsëri",
+          "Try the following:": "Provoni sa vijon:",
+          "Visit studio.code.org/maker/setup": "Vizitoni studio.code.org/maker/setup"
+        },
+        "CSD U6 - Physical Input - SB1_2222": {
+          "Board Not Detected!": "Pllaka nuk detektohet!",
+          "Follow the instructions in this level, then plug in your board and press Run": "Ndiqni udhëzimet në këtë nivel, pastaj futni në prizë tabelën tuaj dhe shtypni Run",
+          "Plug the board into a different USB": "Lidheni pllakën me një USB tjetër",
+          "Refresh this page and try again": "Rifreskoni këtë faqe dhe provoni përsëri",
+          "Try the following:": "Provoni sa vijon:",
+          "Visit studio.code.org/maker/setup": "Vizitoni studio.code.org/maker/setup"
+        },
+        "CSD U6 - Physical Output - ChalA_2222": {
+          "Board Not Detected!": "Pllaka nuk detektohet!",
+          "Follow the instructions in this level, then plug in your board and press Run": "Ndiqni udhëzimet në këtë nivel, pastaj futni në prizë tabelën tuaj dhe shtypni Run",
+          "Plug the board into a different USB": "Lidheni pllakën me një USB tjetër",
+          "Refresh this page and try again": "Rifreskoni këtë faqe dhe provoni përsëri",
+          "Try the following:": "Provoni sa vijon:",
+          "Visit studio.code.org/maker/setup": "Vizitoni studio.code.org/maker/setup"
+        },
+        "CSD U6 - Physical Output - ChalB_2222": {
+          "Board Not Detected!": "Pllaka nuk detektohet!",
+          "Follow the instructions in this level, then plug in your board and press Run": "Ndiqni udhëzimet në këtë nivel, pastaj futni në prizë tabelën tuaj dhe shtypni Run",
+          "Plug the board into a different USB": "Lidheni pllakën me një USB tjetër",
+          "Refresh this page and try again": "Rifreskoni këtë faqe dhe provoni përsëri",
+          "Try the following:": "Provoni sa vijon:",
+          "Visit studio.code.org/maker/setup": "Vizitoni studio.code.org/maker/setup"
+        },
+        "CSD U6 - Physical Output - ChalC_2222": {
+          "Board Not Detected!": "Pllaka nuk detektohet!",
+          "Follow the instructions in this level, then plug in your board and press Run": "Ndiqni udhëzimet në këtë nivel, pastaj futni në prizë tabelën tuaj dhe shtypni Run",
+          "Plug the board into a different USB": "Lidheni pllakën me një USB tjetër",
+          "Refresh this page and try again": "Rifreskoni këtë faqe dhe provoni përsëri",
+          "Try the following:": "Provoni sa vijon:",
+          "Visit studio.code.org/maker/setup": "Vizitoni studio.code.org/maker/setup"
+        },
+        "CSD U6 - Physical Output - PA_2222": {
+          "Off": "Fikur",
+          "On": "Ndezur"
+        },
+        "CSD U6 - Physical Output - PB_2222": {
+          "Board Not Detected!": "Pllaka nuk detektohet!",
+          "Follow the instructions in this level, then plug in your board and press Run": "Ndiqni udhëzimet në këtë nivel, pastaj futni në prizë tabelën tuaj dhe shtypni Run",
+          "Plug the board into a different USB": "Lidheni pllakën me një USB tjetër",
+          "Refresh this page and try again": "Rifreskoni këtë faqe dhe provoni përsëri",
+          "Try the following:": "Provoni sa vijon:",
+          "Visit studio.code.org/maker/setup": "Vizitoni studio.code.org/maker/setup"
+        },
+        "CSD U6 - Physical Output - PC_2222": {
+          "Board Not Detected!": "Pllaka nuk detektohet!",
+          "Follow the instructions in this level, then plug in your board and press Run": "Ndiqni udhëzimet në këtë nivel, pastaj futni në prizë tabelën tuaj dhe shtypni Run",
+          "Plug the board into a different USB": "Lidheni pllakën me një USB tjetër",
+          "Refresh this page and try again": "Rifreskoni këtë faqe dhe provoni përsëri",
+          "Try the following:": "Provoni sa vijon:",
+          "Visit studio.code.org/maker/setup": "Vizitoni studio.code.org/maker/setup"
+        },
+        "CSD U6 - Physical Output - P_2222": {
+          "Board Not Detected!": "Pllaka nuk detektohet!",
+          "Plug the board into a different USB": "Lidheni pllakën me një USB tjetër",
+          "Refresh this page and try again": "Rifreskoni këtë faqe dhe provoni përsëri",
+          "Try the following:": "Provoni sa vijon:",
+          "Visit studio.code.org/maker/setup": "Vizitoni studio.code.org/maker/setup"
+        },
+        "CSD U6 - Physical Output - SB1_2222": {
+          "Board Not Detected!": "Pllaka nuk detektohet!",
+          "Follow the instructions in this level, then plug in your board and press Run": "Ndiqni udhëzimet në këtë nivel, pastaj futni në prizë tabelën tuaj dhe shtypni Run",
+          "Plug the board into a different USB": "Lidheni pllakën me një USB tjetër",
+          "Refresh this page and try again": "Rifreskoni këtë faqe dhe provoni përsëri",
+          "Try the following:": "Provoni sa vijon:",
+          "Visit studio.code.org/maker/setup": "Vizitoni studio.code.org/maker/setup"
+        },
+        "CSD U6 - Physical Output - SB2.2_2222": {
+          "Board Not Detected!": "Pllaka nuk detektohet!",
+          "Follow the instructions in this level, then plug in your board and press Run": "Ndiqni udhëzimet në këtë nivel, pastaj futni në prizë tabelën tuaj dhe shtypni Run",
+          "Plug the board into a different USB": "Lidheni pllakën me një USB tjetër",
+          "Refresh this page and try again": "Rifreskoni këtë faqe dhe provoni përsëri",
+          "Try the following:": "Provoni sa vijon:",
+          "Visit studio.code.org/maker/setup": "Vizitoni studio.code.org/maker/setup"
+        },
+        "CSD U6 - Physical Output - SB2_2222": {
+          "Board Not Detected!": "Pllaka nuk detektohet!",
+          "Follow the instructions in this level, then plug in your board and press Run": "Ndiqni udhëzimet në këtë nivel, pastaj futni në prizë tabelën tuaj dhe shtypni Run",
+          "Plug the board into a different USB": "Lidheni pllakën me një USB tjetër",
+          "Refresh this page and try again": "Rifreskoni këtë faqe dhe provoni përsëri",
+          "Try the following:": "Provoni sa vijon:",
+          "Visit studio.code.org/maker/setup": "Vizitoni studio.code.org/maker/setup"
+        },
+        "CSD U6 - Screen Inputs - ChalD_2222": {
+          "Enter words that will be used in a story on the next screens!": "Shkruani fjalët që do të përdoren në një histori në ekranet e ardhshme!",
+          "In design mode, replace this with the final part of your story!": "Në modalitetin e dizajnit, zëvendësoni këtë me pjesën përfundimtare të historisë tuaj!",
+          "In design mode, replace this with the first part of your story!": "Në modalitetin e dizajnit, zëvendësoni këtë me pjesën e parë të historisë tuaj!",
+          "In design mode, replace this with the second part of your story!": "Në modalitetin e dizajnit, zëvendësoni këtë me pjesën e dytë të historisë tuaj!",
+          "Next Page": "Faqja tjetër",
+          "Part 1": "Pjesa 1",
+          "Part 2": "Pjesa 2",
+          "Part 3": "Pjesa 3",
+          "Start The Story!": "Filloni historinë!",
+          "Story Generator!": "Gjeneratori i historisë!"
+        },
         "CSD U6 - Screen Inputs - P_2222": {
-          "Save": "Ruaj"
+          "Fav Color:": "Ngjyra e preferuar:",
+          "How I feel about dogs:": "Si ndihem për qentë:",
+          "Indigo": "Indigo",
+          "My favorite color is:": "Ngjyra ime e preferuar është:",
+          "My name is: ": "Emri im është: ",
+          "On a scale from 1-3, how do you feel about dogs?": "Në një shkallë nga 1-3, si ndiheni për qentë?",
+          "Orange": "Portokall",
+          "Profile Editor": "Redaktori i profilit",
+          "Save": "Ruaj",
+          "Violet": "Vjollcë",
+          "Yellow": "E verdhë"
+        },
+        "CSD U6 - Screen Inputs - PracA_2222": {
+          "Create!": "Krijo!",
+          "Select Background": "Zgjidhni prapavijën",
+          "Select Pet": "Zgjidhni kafshën shtëpiake"
+        },
+        "CSD U6 - Screen Inputs - PracB_2222": {
+          "Create!": "Krijo!",
+          "Today's Special": "Specialiteti i sotshëm"
+        },
+        "CSD U6 - Screen Inputs - SB1_2222": {
+          "82": "82",
+          "Set Welcome Screen": "Vendos ekranin mirëseardhës",
+          "You are in the": "Ju jeni në",
+          "room of the house. The temperature is": "dhomën e shtëpisë. Temperatura është"
         },
         "CSD U6 - Screen Inputs - SB2.1_2022": {
+          "Update Background": "Përditëso sfondin",
           "black": "e zezë",
           "white": "e bardhë"
         },
         "CSD U6 - Screen Inputs - SB2.2_2022": {
+          "Update Background": "Përditëso sfondin",
           "black": "e zezë",
           "white": "e bardhë"
         },
+        "CSD U6 - Screen Inputs - SB3_2222": {
+          "Height:": "Lartësia:",
+          "Update!": "Përditëso!",
+          "Width:": "Gjerësia:"
+        },
+        "CSD U6 - Screen Inputs - SB4_2222": {
+          "Height:": "Lartësia:",
+          "Update!": "Përditëso!",
+          "Width:": "Gjerësia:"
+        },
+        "CSD U6 - Screen Inputs - SB5_2222": {
+          "Height:": "Lartësia:",
+          "Update!": "Përditëso!",
+          "Width:": "Gjerësia:"
+        },
+        "CSD U6 - Screen Outputs - A_2222": {
+          "Hedy Lamarr was an inventor in the 1950swhose ideas laid the groundwork for WiFi, GPS, and Bluetooth used today": "Hedy Lamarr ishte një shpikës në vitet 1950, idetë e të cilit hodhën bazat për WiFi, GPS dhe Bluetooth të përdorur sot."
+        },
+        "CSD U6 - Screen Outputs - ChalA_2222": {
+          "Alarm:": "Alarmi:",
+          "OFF": "OFF - fikur",
+          "Stop Alarm": "Ndaloni alarmin",
+          "Trigger Alarm": "Aktivizo alarmin"
+        },
         "CSD U6 - Screen Outputs - ChalB_2222": {
-          "?": "?"
+          "?": "?",
+          "Emotion Machine": "Makinë emocionesh",
+          "I'm feeling...": "Ndjehem...",
+          "Meh": "Meh",
+          "Sad": "I mërzitur"
+        },
+        "CSD U6 - Screen Outputs - ChalC_2222": {
+          "Example Button": "Shembull buton",
+          "Example Label": "Shembull etiketë",
+          "Example Theme": "Shembull temë",
+          "My Theme": "Tema ime"
+        },
+        "CSD U6 - Screen Outputs - ChalD_2222": {
+          "About Me": "Rreth meje",
+          "Click a button to learn more about me": "Klikoni një buton për të mësuar më shumë rreth meje",
+          "Favorite Animal": "Kafsha e preferuar",
+          "Favorite Class in School": "Klasa e preferuar në shkollë",
+          "Favorite Color": "Ngjyra e preferuar",
+          "Favorite Food": "Ushqimi i preferuar"
         },
         "CSD U6 - Screen Outputs - P_2222": {
+          "Button": "Buton",
+          "You've always wondered what your cat is saying when it meows in the middle of the night. Now you can finally know!": "Gjithmonë keni menduar se çfarë po thotë macja juaj kur mjaullohet në mes të natës. Tani më në fund mund ta dini!",
           "title": "titull"
         },
         "CSD U6 - Screen Outputs - PracA_2222": {
@@ -638,8 +1078,16 @@
           "right": "djathtas",
           "up": "lart"
         },
+        "CSD U6 - Screen Outputs - PracC_2222": {
+          "The App Is Not Running": "Aplikacioni nuk po funksionon"
+        },
         "CSD U6 - Screen Outputs - SB1.1_2222": {
+          "Hello": "Përshëndetje",
+          "Welcome To My App!": "Mirë se vini në aplikacionin tim!",
           "name": "emri"
+        },
+        "CSD U6 - Screen Outputs - SB1_2222": {
+          "Welcome To My App!": "Mirë se vini në aplikacionin tim!"
         },
         "CSD U6 - Sensors - P_2222": {
           "text": "tekst"
@@ -659,6 +1107,90 @@
         },
         "CSD U6 - Sensors - SB4_2222": {
           "value": "vlerë"
+        },
+        "CSD U6 LED all": {
+          "blink": "mbyll",
+          "pulse": "puls"
+        },
+        "CSD U6 LED all_2018": {
+          "blink": "mbyll",
+          "pulse": "puls"
+        },
+        "CSD U6 LED all_2019": {
+          "blink": "mbyll",
+          "pulse": "puls"
+        },
+        "CSD U6 LED all_2021": {
+          "blink": "mbyll",
+          "pulse": "puls"
+        },
+        "CSD U6 LED toggle": {
+          "Board Not Detected!": "Pllaka nuk detektohet!",
+          "Plug the board into a different USB": "Lidheni pllakën me një USB tjetër",
+          "Refresh this page and try again": "Rifreskoni këtë faqe dhe provoni përsëri",
+          "Try the following:": "Provoni sa vijon:",
+          "Visit studio.code.org/maker/setup": "Vizitoni studio.code.org/maker/setup",
+          "change the light": "Ndryshoni dritën"
+        },
+        "CSD U6 LED toggle_2018": {
+          "Board Not Detected!": "Pllaka nuk detektohet!",
+          "Plug the board into a different USB": "Lidheni pllakën me një USB tjetër",
+          "Refresh this page and try again": "Rifreskoni këtë faqe dhe provoni përsëri",
+          "Try the following:": "Provoni sa vijon:",
+          "Visit studio.code.org/maker/setup": "Vizitoni studio.code.org/maker/setup",
+          "change the light": "Ndryshoni dritën"
+        },
+        "CSD U6 LED toggle_2019": {
+          "Board Not Detected!": "Pllaka nuk detektohet!",
+          "Plug the board into a different USB": "Lidheni pllakën me një USB tjetër",
+          "Refresh this page and try again": "Rifreskoni këtë faqe dhe provoni përsëri",
+          "Try the following:": "Provoni sa vijon:",
+          "Visit studio.code.org/maker/setup": "Vizitoni studio.code.org/maker/setup",
+          "change the light": "Ndryshoni dritën"
+        },
+        "CSD U6 LED toggle_2021": {
+          "Board Not Detected!": "Pllaka nuk detektohet!",
+          "Plug the board into a different USB": "Lidheni pllakën me një USB tjetër",
+          "Refresh this page and try again": "Rifreskoni këtë faqe dhe provoni përsëri",
+          "Try the following:": "Provoni sa vijon:",
+          "Visit studio.code.org/maker/setup": "Vizitoni studio.code.org/maker/setup",
+          "change the light": "Ndryshoni dritën"
+        },
+        "CSD U6 add LED button": {
+          "Board Not Detected!": "Pllaka nuk detektohet!",
+          "OFF": "OFF - fikur",
+          "ON": "ON - ndezur",
+          "Plug the board into a different USB": "Lidheni pllakën me një USB tjetër",
+          "Refresh this page and try again": "Rifreskoni këtë faqe dhe provoni përsëri",
+          "Try the following:": "Provoni sa vijon:",
+          "Visit studio.code.org/maker/setup": "Vizitoni studio.code.org/maker/setup"
+        },
+        "CSD U6 add LED button_2018": {
+          "Board Not Detected!": "Pllaka nuk detektohet!",
+          "OFF": "OFF - fikur",
+          "ON": "ON - ndezur",
+          "Plug the board into a different USB": "Lidheni pllakën me një USB tjetër",
+          "Refresh this page and try again": "Rifreskoni këtë faqe dhe provoni përsëri",
+          "Try the following:": "Provoni sa vijon:",
+          "Visit studio.code.org/maker/setup": "Vizitoni studio.code.org/maker/setup"
+        },
+        "CSD U6 add LED button_2019": {
+          "Board Not Detected!": "Pllaka nuk detektohet!",
+          "OFF": "OFF - fikur",
+          "ON": "ON - ndezur",
+          "Plug the board into a different USB": "Lidheni pllakën me një USB tjetër",
+          "Refresh this page and try again": "Rifreskoni këtë faqe dhe provoni përsëri",
+          "Try the following:": "Provoni sa vijon:",
+          "Visit studio.code.org/maker/setup": "Vizitoni studio.code.org/maker/setup"
+        },
+        "CSD U6 add LED button_2021": {
+          "Board Not Detected!": "Pllaka nuk detektohet!",
+          "OFF": "OFF - fikur",
+          "ON": "ON - ndezur",
+          "Plug the board into a different USB": "Lidheni pllakën me një USB tjetër",
+          "Refresh this page and try again": "Rifreskoni këtë faqe dhe provoni përsëri",
+          "Try the following:": "Provoni sa vijon:",
+          "Visit studio.code.org/maker/setup": "Vizitoni studio.code.org/maker/setup"
         },
         "CSD U6 analog change": {
           "value": "vlerë"
@@ -776,17 +1308,45 @@
           "long": "i gjatë",
           "short": "i shkurtër"
         },
+        "CSD U6 colorLED on": {
+          "Turn off bottom color LEDs": "Fikni LEDs me ngjyra të poshtme",
+          "Turn on bottom color LEDs": "Aktivizoni LEDs me ngjyra të poshtme"
+        },
+        "CSD U6 colorLED on_2018": {
+          "Turn off bottom color LEDs": "Fikni LEDs me ngjyra të poshtme",
+          "Turn on bottom color LEDs": "Aktivizoni LEDs me ngjyra të poshtme"
+        },
+        "CSD U6 colorLED on_2019": {
+          "Turn off bottom color LEDs": "Fikni LEDs me ngjyra të poshtme",
+          "Turn on bottom color LEDs": "Aktivizoni LEDs me ngjyra të poshtme"
+        },
+        "CSD U6 colorLED on_2021": {
+          "Turn off bottom color LEDs": "Fikni LEDs me ngjyra të poshtme",
+          "Turn on bottom color LEDs": "Aktivizoni LEDs me ngjyra të poshtme"
+        },
         "CSD U6 colorLeds intensity": {
-          "Medium": "Mesatare"
+          "Bright": "I ndritshëm",
+          "Dim": "\nI errët",
+          "Medium": "Mesatare",
+          "Rainbow Lights!": "Dritat e ylberit!"
         },
         "CSD U6 colorLeds intensity_2018": {
-          "Medium": "Mesatare"
+          "Bright": "I ndritshëm",
+          "Dim": "\nI errët",
+          "Medium": "Mesatare",
+          "Rainbow Lights!": "Dritat e ylberit!"
         },
         "CSD U6 colorLeds intensity_2019": {
-          "Medium": "Mesatare"
+          "Bright": "I ndritshëm",
+          "Dim": "\nI errët",
+          "Medium": "Mesatare",
+          "Rainbow Lights!": "Dritat e ylberit!"
         },
         "CSD U6 colorLeds intensity_2021": {
-          "Medium": "Mesatare"
+          "Bright": "I ndritshëm",
+          "Dim": "\nI errët",
+          "Medium": "Mesatare",
+          "Rainbow Lights!": "Dritat e ylberit!"
         },
         "CSD U6 emoji race demo": {
           "Emoji Race": "Gara me emoji"
@@ -801,16 +1361,56 @@
           "Emoji Race": "Gara me emoji"
         },
         "CSD U6 emotion machine example": {
-          "?": "?"
+          "?": "?",
+          "Emotion Machine": "Makinë emocionesh",
+          "I'm feeling...": "Ndjehem...",
+          "Meh": "Meh",
+          "Sad": "I mërzitur"
         },
         "CSD U6 emotion machine example_2018": {
-          "?": "?"
+          "?": "?",
+          "Emotion Machine": "Makinë emocionesh",
+          "I'm feeling...": "Ndjehem...",
+          "Meh": "Meh",
+          "Sad": "I mërzitur"
         },
         "CSD U6 emotion machine example_2019": {
-          "?": "?"
+          "?": "?",
+          "Emotion Machine": "Makinë emocionesh",
+          "I'm feeling...": "Ndjehem...",
+          "Meh": "Meh",
+          "Sad": "I mërzitur"
         },
         "CSD U6 emotion machine example_2021": {
-          "?": "?"
+          "?": "?",
+          "Emotion Machine": "Makinë emocionesh",
+          "I'm feeling...": "Ndjehem...",
+          "Meh": "Meh",
+          "Sad": "I mërzitur"
+        },
+        "CSD U6 for loop click exit": {
+          "Toggle Next LED": "Ndërroni LED të ardhshëm"
+        },
+        "CSD U6 for loop click exit_2018": {
+          "Toggle Next LED": "Ndërroni LED të ardhshëm"
+        },
+        "CSD U6 for loop click exit_2019": {
+          "Toggle Next LED": "Ndërroni LED të ardhshëm"
+        },
+        "CSD U6 for loop click exit_2021": {
+          "Toggle Next LED": "Ndërroni LED të ardhshëm"
+        },
+        "CSD U6 for loop click predict": {
+          "Toggle Next LED": "Ndërroni LED të ardhshëm"
+        },
+        "CSD U6 for loop click predict_2018": {
+          "Toggle Next LED": "Ndërroni LED të ardhshëm"
+        },
+        "CSD U6 for loop click predict_2019": {
+          "Toggle Next LED": "Ndërroni LED të ardhshëm"
+        },
+        "CSD U6 for loop click predict_2021": {
+          "Toggle Next LED": "Ndërroni LED të ardhshëm"
         },
         "CSD U6 frequency": {
           "long": "i gjatë",
@@ -845,16 +1445,84 @@
           "short": "i shkurtër"
         },
         "CSD U6 getProperty Demo": {
-          "Save": "Ruaj"
+          "Fav Color:": "Ngjyra e preferuar:",
+          "Indigo": "Indigo",
+          "My favorite color is:": "Ngjyra ime e preferuar është:",
+          "My name is: ": "Emri im është: ",
+          "Orange": "Portokall",
+          "Profile Editor": "Redaktori i profilit",
+          "Save": "Ruaj",
+          "Violet": "Vjollcë",
+          "Yellow": "E verdhë"
         },
         "CSD U6 getProperty Demo_2018": {
-          "Save": "Ruaj"
+          "Fav Color:": "Ngjyra e preferuar:",
+          "Indigo": "Indigo",
+          "My favorite color is:": "Ngjyra ime e preferuar është:",
+          "My name is: ": "Emri im është: ",
+          "Orange": "Portokall",
+          "Profile Editor": "Redaktori i profilit",
+          "Save": "Ruaj",
+          "Violet": "Vjollcë",
+          "Yellow": "E verdhë"
         },
         "CSD U6 getProperty Demo_2019": {
-          "Save": "Ruaj"
+          "Fav Color:": "Ngjyra e preferuar:",
+          "Indigo": "Indigo",
+          "My favorite color is:": "Ngjyra ime e preferuar është:",
+          "My name is: ": "Emri im është: ",
+          "Orange": "Portokall",
+          "Profile Editor": "Redaktori i profilit",
+          "Save": "Ruaj",
+          "Violet": "Vjollcë",
+          "Yellow": "E verdhë"
         },
         "CSD U6 getProperty Demo_2021": {
-          "Save": "Ruaj"
+          "Fav Color:": "Ngjyra e preferuar:",
+          "Indigo": "Indigo",
+          "My favorite color is:": "Ngjyra ime e preferuar është:",
+          "My name is: ": "Emri im është: ",
+          "Orange": "Portokall",
+          "Profile Editor": "Redaktori i profilit",
+          "Save": "Ruaj",
+          "Violet": "Vjollcë",
+          "Yellow": "E verdhë"
+        },
+        "CSD U6 getProperty board predict": {
+          "Choose your LED style, then use the left and right buttons on your Circuit Playground to turn the LED off and on.": "Zgjidhni stilin tuaj LED, pastaj përdorni butonat majtas dhe djathtas në qarkun e lojërave për të fikur dhe ndezur LED.",
+          "blink": "mbyll",
+          "pulse": "puls"
+        },
+        "CSD U6 getProperty board predict_2018": {
+          "Choose your LED style, then use the left and right buttons on your Circuit Playground to turn the LED off and on.": "Zgjidhni stilin tuaj LED, pastaj përdorni butonat majtas dhe djathtas në qarkun e lojërave për të fikur dhe ndezur LED.",
+          "blink": "mbyll",
+          "pulse": "puls"
+        },
+        "CSD U6 getProperty board predict_2019": {
+          "Choose your LED style, then use the left and right buttons on your Circuit Playground to turn the LED off and on.": "Zgjidhni stilin tuaj LED, pastaj përdorni butonat majtas dhe djathtas në qarkun e lojërave për të fikur dhe ndezur LED.",
+          "blink": "mbyll",
+          "pulse": "puls"
+        },
+        "CSD U6 getProperty board predict_2021": {
+          "Choose your LED style, then use the left and right buttons on your Circuit Playground to turn the LED off and on.": "Zgjidhni stilin tuaj LED, pastaj përdorni butonat majtas dhe djathtas në qarkun e lojërave për të fikur dhe ndezur LED.",
+          "blink": "mbyll",
+          "pulse": "puls"
+        },
+        "CSD U6 getProperty buzzer": {
+          "blink": "mbyll",
+          "pulse": "puls"
+        },
+        "CSD U6 getProperty buzzer_2018": {
+          "blink": "mbyll",
+          "pulse": "puls"
+        },
+        "CSD U6 getProperty buzzer_2019": {
+          "blink": "mbyll",
+          "pulse": "puls"
+        },
+        "CSD U6 getProperty buzzer_2021": {
+          "blink": "mbyll",
+          "pulse": "puls"
         },
         "CSD U6 getProperty input": {
           "Submit": "Dorëzo"
@@ -869,19 +1537,27 @@
           "Submit": "Dorëzo"
         },
         "CSD U6 getters debug": {
+          "blink": "mbyll",
           "long": "i gjatë",
+          "pulse": "puls",
           "short": "i shkurtër"
         },
         "CSD U6 getters debug_2018": {
+          "blink": "mbyll",
           "long": "i gjatë",
+          "pulse": "puls",
           "short": "i shkurtër"
         },
         "CSD U6 getters debug_2019": {
+          "blink": "mbyll",
           "long": "i gjatë",
+          "pulse": "puls",
           "short": "i shkurtër"
         },
         "CSD U6 getters debug_2021": {
+          "blink": "mbyll",
           "long": "i gjatë",
+          "pulse": "puls",
           "short": "i shkurtër"
         },
         "CSD U6 interval": {
@@ -900,6 +1576,66 @@
           "long": "i gjatë",
           "short": "i shkurtër"
         },
+        "CSD U6 light show": {
+          "blink": "mbyll",
+          "pulse": "puls"
+        },
+        "CSD U6 light show_2018": {
+          "blink": "mbyll",
+          "pulse": "puls"
+        },
+        "CSD U6 light show_2019": {
+          "blink": "mbyll",
+          "pulse": "puls"
+        },
+        "CSD U6 light show_2021": {
+          "blink": "mbyll",
+          "pulse": "puls"
+        },
+        "CSD U6 params create colors": {
+          "Yellow": "E verdhë"
+        },
+        "CSD U6 params create colors_2018": {
+          "Yellow": "E verdhë"
+        },
+        "CSD U6 params create colors_2019": {
+          "Yellow": "E verdhë"
+        },
+        "CSD U6 params create colors_2021": {
+          "Yellow": "E verdhë"
+        },
+        "CSD U6 predict LED button": {
+          "Board Not Detected!": "Pllaka nuk detektohet!",
+          "Click Me": "Kliko këtu",
+          "Plug the board into a different USB": "Lidheni pllakën me një USB tjetër",
+          "Refresh this page and try again": "Rifreskoni këtë faqe dhe provoni përsëri",
+          "Try the following:": "Provoni sa vijon:",
+          "Visit studio.code.org/maker/setup": "Vizitoni studio.code.org/maker/setup"
+        },
+        "CSD U6 predict LED button_2018": {
+          "Board Not Detected!": "Pllaka nuk detektohet!",
+          "Click Me": "Kliko këtu",
+          "Plug the board into a different USB": "Lidheni pllakën me një USB tjetër",
+          "Refresh this page and try again": "Rifreskoni këtë faqe dhe provoni përsëri",
+          "Try the following:": "Provoni sa vijon:",
+          "Visit studio.code.org/maker/setup": "Vizitoni studio.code.org/maker/setup"
+        },
+        "CSD U6 predict LED button_2019": {
+          "Board Not Detected!": "Pllaka nuk detektohet!",
+          "Click Me": "Kliko këtu",
+          "Plug the board into a different USB": "Lidheni pllakën me një USB tjetër",
+          "Refresh this page and try again": "Rifreskoni këtë faqe dhe provoni përsëri",
+          "Try the following:": "Provoni sa vijon:",
+          "Visit studio.code.org/maker/setup": "Vizitoni studio.code.org/maker/setup"
+        },
+        "CSD U6 predict LED button_2021": {
+          "Board Not Detected!": "Pllaka nuk detektohet!",
+          "Click Me": "Kliko këtu",
+          "Plug the board into a different USB": "Lidheni pllakën me një USB tjetër",
+          "Refresh this page and try again": "Rifreskoni këtë faqe dhe provoni përsëri",
+          "Try the following:": "Provoni sa vijon:",
+          "Visit studio.code.org/maker/setup": "Vizitoni studio.code.org/maker/setup"
+        },
         "CSD U6 sensor experiment embedded": {
           "text": "tekst"
         },
@@ -912,16 +1648,72 @@
         "CSD U6 sensor experiment embedded_2021": {
           "text": "tekst"
         },
+        "CSD U6 setProperty hidden": {
+          "Alarm:": "Alarmi:",
+          "OFF": "OFF - fikur",
+          "Stop Alarm": "Ndaloni alarmin",
+          "Trigger Alarm": "Aktivizo alarmin"
+        },
+        "CSD U6 setProperty hidden 2": {
+          "Alarm:": "Alarmi:",
+          "OFF": "OFF - fikur",
+          "Stop Alarm": "Ndaloni alarmin",
+          "Trigger Alarm": "Aktivizo alarmin"
+        },
+        "CSD U6 setProperty hidden 2_2018": {
+          "Alarm:": "Alarmi:",
+          "OFF": "OFF - fikur",
+          "Stop Alarm": "Ndaloni alarmin",
+          "Trigger Alarm": "Aktivizo alarmin"
+        },
+        "CSD U6 setProperty hidden 2_2019": {
+          "Alarm:": "Alarmi:",
+          "OFF": "OFF - fikur",
+          "Stop Alarm": "Ndaloni alarmin",
+          "Trigger Alarm": "Aktivizo alarmin"
+        },
+        "CSD U6 setProperty hidden 2_2021": {
+          "Alarm:": "Alarmi:",
+          "OFF": "OFF - fikur",
+          "Stop Alarm": "Ndaloni alarmin",
+          "Trigger Alarm": "Aktivizo alarmin"
+        },
+        "CSD U6 setProperty hidden_2018": {
+          "Alarm:": "Alarmi:",
+          "OFF": "OFF - fikur",
+          "Stop Alarm": "Ndaloni alarmin",
+          "Trigger Alarm": "Aktivizo alarmin"
+        },
+        "CSD U6 setProperty hidden_2019": {
+          "Alarm:": "Alarmi:",
+          "OFF": "OFF - fikur",
+          "Stop Alarm": "Ndaloni alarmin",
+          "Trigger Alarm": "Aktivizo alarmin"
+        },
+        "CSD U6 setProperty hidden_2021": {
+          "Alarm:": "Alarmi:",
+          "OFF": "OFF - fikur",
+          "Stop Alarm": "Ndaloni alarmin",
+          "Trigger Alarm": "Aktivizo alarmin"
+        },
         "CSD U6 setProperty predict app": {
+          "Button": "Buton",
+          "You've always wondered what your cat is saying when it meows in the middle of the night. Now you can finally know!": "Gjithmonë keni menduar se çfarë po thotë macja juaj kur mjaullohet në mes të natës. Tani më në fund mund ta dini!",
           "title": "titull"
         },
         "CSD U6 setProperty predict app_2018": {
+          "Button": "Buton",
+          "You've always wondered what your cat is saying when it meows in the middle of the night. Now you can finally know!": "Gjithmonë keni menduar se çfarë po thotë macja juaj kur mjaullohet në mes të natës. Tani më në fund mund ta dini!",
           "title": "titull"
         },
         "CSD U6 setProperty predict app_2019": {
+          "Button": "Buton",
+          "You've always wondered what your cat is saying when it meows in the middle of the night. Now you can finally know!": "Gjithmonë keni menduar se çfarë po thotë macja juaj kur mjaullohet në mes të natës. Tani më në fund mund ta dini!",
           "title": "titull"
         },
         "CSD U6 setProperty predict app_2021": {
+          "Button": "Buton",
+          "You've always wondered what your cat is saying when it meows in the middle of the night. Now you can finally know!": "Gjithmonë keni menduar se çfarë po thotë macja juaj kur mjaullohet në mes të natës. Tani më në fund mund ta dini!",
           "title": "titull"
         },
         "CSD U6 slider intro": {
@@ -940,28 +1732,72 @@
           "long": "i gjatë",
           "short": "i shkurtër"
         },
+        "CSD U6 test LED": {
+          "Board Not Detected!": "Pllaka nuk detektohet!",
+          "Plug in your Circuit Playground and click \"Run\"": "Kyçni në qarkun e lojërave tuaj dhe klikoni “Ekzekuto”",
+          "Plug the board into a different USB": "Lidheni pllakën me një USB tjetër",
+          "Refresh this page and try again": "Rifreskoni këtë faqe dhe provoni përsëri",
+          "Try the following:": "Provoni sa vijon:",
+          "Visit studio.code.org/maker/setup": "Vizitoni studio.code.org/maker/setup"
+        },
+        "CSD U6 test LED_2018": {
+          "Board Not Detected!": "Pllaka nuk detektohet!",
+          "Plug in your Circuit Playground and click \"Run\"": "Kyçni në qarkun e lojërave tuaj dhe klikoni “Ekzekuto”",
+          "Plug the board into a different USB": "Lidheni pllakën me një USB tjetër",
+          "Refresh this page and try again": "Rifreskoni këtë faqe dhe provoni përsëri",
+          "Try the following:": "Provoni sa vijon:",
+          "Visit studio.code.org/maker/setup": "Vizitoni studio.code.org/maker/setup"
+        },
+        "CSD U6 test LED_2019": {
+          "Board Not Detected!": "Pllaka nuk detektohet!",
+          "Plug in your Circuit Playground and click \"Run\"": "Kyçni në qarkun e lojërave tuaj dhe klikoni “Ekzekuto”",
+          "Plug the board into a different USB": "Lidheni pllakën me një USB tjetër",
+          "Refresh this page and try again": "Rifreskoni këtë faqe dhe provoni përsëri",
+          "Try the following:": "Provoni sa vijon:",
+          "Visit studio.code.org/maker/setup": "Vizitoni studio.code.org/maker/setup"
+        },
+        "CSD U6 test LED_2021": {
+          "Board Not Detected!": "Pllaka nuk detektohet!",
+          "Plug in your Circuit Playground and click \"Run\"": "Kyçni në qarkun e lojërave tuaj dhe klikoni “Ekzekuto”",
+          "Plug the board into a different USB": "Lidheni pllakën me një USB tjetër",
+          "Refresh this page and try again": "Rifreskoni këtë faqe dhe provoni përsëri",
+          "Try the following:": "Provoni sa vijon:",
+          "Visit studio.code.org/maker/setup": "Vizitoni studio.code.org/maker/setup"
+        },
         "CSDU4 Crowdsource App Demo": {
           "About": "Rreth",
           "Cancel": "Anulo",
+          "Indigo": "Indigo",
           "No": "Jo",
+          "Orange": "Portokall",
           "Save": "Ruaj",
           "User": "Përdorues",
+          "Violet": "Vjollcë",
+          "Yellow": "E verdhë",
           "Yes": "Po"
         },
         "CSDU4 Crowdsource App Demo_2018": {
           "About": "Rreth",
           "Cancel": "Anulo",
+          "Indigo": "Indigo",
           "No": "Jo",
+          "Orange": "Portokall",
           "Save": "Ruaj",
           "User": "Përdorues",
+          "Violet": "Vjollcë",
+          "Yellow": "E verdhë",
           "Yes": "Po"
         },
         "CSDU4 Crowdsource App Demo_2019": {
           "About": "Rreth",
           "Cancel": "Anulo",
+          "Indigo": "Indigo",
           "No": "Jo",
+          "Orange": "Portokall",
           "Save": "Ruaj",
           "User": "Përdorues",
+          "Violet": "Vjollcë",
+          "Yellow": "E verdhë",
           "Yes": "Po"
         },
         "CSDU4 Decision App Demo": {
@@ -996,16 +1832,19 @@
         },
         "CSDU4 Quiz App Demo": {
           "About": "Rreth",
+          "Correct!": "E saktë!",
           "Submit": "Dorëzo",
           "When?": "Kur?"
         },
         "CSDU4 Quiz App Demo_2018": {
           "About": "Rreth",
+          "Correct!": "E saktë!",
           "Submit": "Dorëzo",
           "When?": "Kur?"
         },
         "CSDU4 Quiz App Demo_2019": {
           "About": "Rreth",
+          "Correct!": "E saktë!",
           "Submit": "Dorëzo",
           "When?": "Kur?"
         },
@@ -1013,7 +1852,54 @@
           "+": "+"
         },
         "CSDU6 - UI and Inputs - setScreen": {
+          "About Me": "Rreth meje",
           "Back": "Kthehu"
+        },
+        "CSDU6 - UI and Inputs - setText": {
+          "Alarm:": "Alarmi:",
+          "OFF": "OFF - fikur",
+          "Stop Alarm": "Ndaloni alarmin",
+          "Trigger Alarm": "Aktivizo alarmin"
+        },
+        "CSDU6 Circuit Playground Test": {
+          "Board Not Detected!": "Pllaka nuk detektohet!",
+          "Plug in your Circuit Playground and click \"Run\"": "Kyçni në qarkun e lojërave tuaj dhe klikoni “Ekzekuto”",
+          "Plug the board into a different USB": "Lidheni pllakën me një USB tjetër",
+          "Refresh this page and try again": "Rifreskoni këtë faqe dhe provoni përsëri",
+          "Try the following:": "Provoni sa vijon:",
+          "Visit studio.code.org/maker/setup": "Vizitoni studio.code.org/maker/setup"
+        },
+        "CSDU6 Circuit Playground Test_2018": {
+          "Board Not Detected!": "Pllaka nuk detektohet!",
+          "Plug in your Circuit Playground and click \"Run\"": "Kyçni në qarkun e lojërave tuaj dhe klikoni “Ekzekuto”",
+          "Plug the board into a different USB": "Lidheni pllakën me një USB tjetër",
+          "Refresh this page and try again": "Rifreskoni këtë faqe dhe provoni përsëri",
+          "Try the following:": "Provoni sa vijon:",
+          "Visit studio.code.org/maker/setup": "Vizitoni studio.code.org/maker/setup"
+        },
+        "CSDU6 Circuit Playground Test_2019": {
+          "Board Not Detected!": "Pllaka nuk detektohet!",
+          "Plug in your Circuit Playground and click \"Run\"": "Kyçni në qarkun e lojërave tuaj dhe klikoni “Ekzekuto”",
+          "Plug the board into a different USB": "Lidheni pllakën me një USB tjetër",
+          "Refresh this page and try again": "Rifreskoni këtë faqe dhe provoni përsëri",
+          "Try the following:": "Provoni sa vijon:",
+          "Visit studio.code.org/maker/setup": "Vizitoni studio.code.org/maker/setup"
+        },
+        "CSDU6 Circuit Playground Test_2021": {
+          "Board Not Detected!": "Pllaka nuk detektohet!",
+          "Plug in your Circuit Playground and click \"Run\"": "Kyçni në qarkun e lojërave tuaj dhe klikoni “Ekzekuto”",
+          "Plug the board into a different USB": "Lidheni pllakën me një USB tjetër",
+          "Refresh this page and try again": "Rifreskoni këtë faqe dhe provoni përsëri",
+          "Try the following:": "Provoni sa vijon:",
+          "Visit studio.code.org/maker/setup": "Vizitoni studio.code.org/maker/setup"
+        },
+        "CSDU6 Circuit Playground Test_2222": {
+          "Board Not Detected!": "Pllaka nuk detektohet!",
+          "Plug in your Circuit Playground and click \"Run\"": "Kyçni në qarkun e lojërave tuaj dhe klikoni “Ekzekuto”",
+          "Plug the board into a different USB": "Lidheni pllakën me një USB tjetër",
+          "Refresh this page and try again": "Rifreskoni këtë faqe dhe provoni përsëri",
+          "Try the following:": "Provoni sa vijon:",
+          "Visit studio.code.org/maker/setup": "Vizitoni studio.code.org/maker/setup"
         },
         "CSDU6 circuit playground piano": {
           "A": "A",
@@ -1087,7 +1973,14 @@
           "F": "F",
           "G": "G"
         },
+        "LLM - Written Voice Simulator_ai23": {
+          "Back": "Kthehu"
+        },
+        "U9L5 Cropping Widget_ai2023": {
+          "Reset": "Rifillo"
+        },
         "allthethings design mode elements": {
+          "Button": "Buton",
           "text": "tekst"
         },
         "csa widget test2": {
@@ -1112,9 +2005,11 @@
           "Next": "Tjetër"
         },
         "csd-apps for good-3": {
+          "1": "1",
           "3": "3"
         },
         "csd-apps for good-3_2022": {
+          "1": "1",
           "3": "3"
         },
         "csd-explore ui-2": {
@@ -1124,6 +2019,7 @@
           "Next": "Tjetër"
         },
         "csd-explore ui-3": {
+          "1": "1",
           "15": "15",
           "17": "17",
           "3": "3",
@@ -1132,6 +2028,7 @@
           "8": "8"
         },
         "csd-explore ui-3_2022": {
+          "1": "1",
           "15": "15",
           "17": "17",
           "3": "3",
@@ -1140,12 +2037,15 @@
           "8": "8"
         },
         "csd-explore ui-4": {
+          "Correct!": "E saktë!",
           "Sorry!": "Më fal!"
         },
         "csd-explore ui-4_2022": {
+          "Correct!": "E saktë!",
           "Sorry!": "Më fal!"
         },
         "csd-explore ui-5": {
+          "1": "1",
           "15": "15",
           "17": "17",
           "3": "3",
@@ -1154,6 +2054,7 @@
           "8": "8"
         },
         "csd-explore ui-5_2022": {
+          "1": "1",
           "15": "15",
           "17": "17",
           "3": "3",
@@ -1197,6 +2098,12 @@
           "Continue": "Vazhdo ",
           "Loading...": "Në ngarkim..."
         },
+        "ml-intro app lab-book recommender demo-2021": {
+          "Cat": "Mace"
+        },
+        "ml-intro app lab-book recommender demo_2022": {
+          "Cat": "Mace"
+        },
         "ml-model card-medical app v2 2021-2": {
           "A": "A",
           "W": "P",
@@ -1211,30 +2118,44 @@
           "no": "jo",
           "yes": "po"
         },
+        "ml-model cards-book recommender model card": {
+          "Cat": "Mace"
+        },
+        "ml-model cards-book recommender model card_2022": {
+          "Cat": "Mace"
+        },
         "ml-models in applab-choice if quotes": {
+          "1": "1",
           "3": "3"
         },
         "ml-models in applab-choice if quotes_2022": {
+          "1": "1",
           "3": "3"
         },
         "ml-models in applab-choice if wrong place": {
+          "1": "1",
           "3": "3"
         },
         "ml-models in applab-choice if wrong place_2022": {
+          "1": "1",
           "3": "3"
         },
         "ml-models in applab-choice intended warnings": {
+          "1": "1",
           "3": "3",
           "Back": "Kthehu"
         },
         "ml-models in applab-choice intended warnings_2022": {
+          "1": "1",
           "3": "3",
           "Back": "Kthehu"
         },
         "ml-models in applab-choice predict typos": {
+          "1": "1",
           "3": "3"
         },
         "ml-models in applab-choice predict typos_2022": {
+          "1": "1",
           "3": "3"
         },
         "ml-models in applab-zoo assessment": {
@@ -1256,10 +2177,12 @@
           "Yes": "Po"
         },
         "ml-use model card-example3A-2021": {
+          "Get Started": "Fillo",
           "cloudy": " re",
           "night": "natë"
         },
         "ml-use model card-example3A_2022": {
+          "Get Started": "Fillo",
           "cloudy": " re",
           "night": "natë"
         }

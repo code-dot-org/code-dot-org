@@ -3,6 +3,7 @@ sq:
   data:
     block_categories:
       Actions: Veprime
+      Behaviors: Sjelljet
       Color: Ngjyra
       Comment: Komento
       Conditionals: Kushtet
@@ -10,10 +11,13 @@ sq:
       Functions: funksione
       'Functions ': 'funksione '
       Location: Lokacioni
+      Locations: Vendndodhjet
       Logic: Logjikë
-      Loops: cikle
+      Loops: Cikle
       Math: Matematikë
       Sprites: Sprites
       Text: Tekst
       Variables: variabla
       'Variables ': 'Variabla '
+      'Variables  ': 'Variablat  '
+      World: Bota

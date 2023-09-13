@@ -67,6 +67,9 @@ sq:
           dhe të durojnë një peshë të sigurtë), dhestudentët të diskutojnë idenë e
           të qënit këmbëngulës kur gjërat komplikohen.
         title: Krijimi i një fondacioni
+      BuildingAFoundation_2018:
+        desc: "[empty string]"
+        title: "[empty string]"
       CollisionDetection:
         desc: Te percaktosh se kur te prekesh objektet ne ekran eshte nje aspekt i
           rendesishem per shumicen e lojrave. Ne kete mesim do te shikojme sesi Teorema
@@ -113,6 +116,9 @@ sq:
           zakonshme në shkencën kompjuterike, për të përfunduar një detyrë bashkë
           si një klasë, më efiçente se sa një student të përpiqej vetë.
         title: Crowdsourcing
+      Crowdsourcing_2018:
+        desc: "[empty string]"
+        title: "[empty string]"
       DesignRecipe:
         desc: Ne fazën finale, studentet shkruajtën disa funksione shume te thjeshta
           - por funksione me të sofistikuara kërkojnë një qasje me të mirëmenduar.
@@ -125,11 +131,14 @@ sq:
           Si pjesë e kësaj, studentët do të identifikojnë dhe do shkruajnë algoritmat
           për një lojë garë me zara.
         title: 'Algoritmet e jetës reale: Dice Race'
+      DiceRace_2018:
+        desc: "[empty string]"
+        title: "[empty string]"
       DigitalCitizenship:
         desc: Studentët eksplorojnë ndryshimin ndërmjet informacionit privat dhe informacionit
           personal, duke dalluar çfarë është e sigurt dhe jo e sigurt, për tu ndarë
           online.
-        title: Shtetësi Dixhitale
+        title: Shtetësia digjitale
       DigitalFootprint:
         desc: Mësuesit i prezantojnë studentëve idenë që futja e informacionit online
           rreth vetes krijon një gjurmë dixhitale ose "shteg" që ka pasoja.
@@ -148,11 +157,17 @@ sq:
           të ndryshme. Përdor këtë veprimatri përpara (ose në bahkëpunim me) mësimit
           që të goditet ideja e shtëpisë vërtet.
         title: Variablat Zarf
+      EnvelopeVariables_2018:
+        desc: "[empty string]"
+        title: "[empty string]"
       ForLoopFun:
         desc: Ne e dimë që ciklet na lejojnë të bëjmë veprime herë pas here, por tani
           ne do të mësojmë se si të përdorim ciklet me një strukturë shtesë të ndërtuar
           brënda.
         title: Qef me Ciklet For
+      ForLoopFun_2018:
+        desc: "[empty string]"
+        title: "[empty string]"
       FunctionalSuncatchers:
         desc: Studentët krijojnë një algoritëm me variabla dhe funksione (pjesë kodi
           që ti dëshiron ti përdorësh herë pas here) për të krijuar suncatchers duke
@@ -206,6 +221,9 @@ sq:
         desc: Studentët dërgojnë mesazhe duke paraqitur metoda të ndryshme transmetiti
           Interneti, duke përdorur copa letre.
         title: Internet
+      Internet_2018:
+        desc: "[empty string]"
+        title: "[empty string]"
       MadGlibs:
         desc: Abstraksioni është një nga njohuritë më të rëndësishme për një shkencëtar
           kompjuterash që ta kuptojë. Ky aktivitet do ti bëjë studentët të analizojnë
@@ -217,8 +235,10 @@ sq:
           midis një tuneli duke përdorur një komandë të vetme.
         title: Lëvize, Lëvize
       MoveItMoveIt_2018:
+        desc: "[empty string]"
         title: Lëvize atë, lëvize atë
       MoveItMoveIt_2019:
+        desc: "[empty string]"
         title: Lëvize atë, lëvize atë
       PaperPlanes:
         desc: Ky mësim tregon mënyra se si ne të përdorim algoritmat në jetën e përditshme,
@@ -266,11 +286,20 @@ sq:
         title: Programimi i Besuar
       RelayProgramming_2018_2019:
         title: Programimi i Besuar
+      SP-VPL-CSA-21-mod3-1-1:
+        desc: "[empty string]"
+        title: "[empty string]"
+      SP-VPL-CSD-21-CourseNavigation:
+        desc: "[empty string]"
+        title: "[empty string]"
       SongwritingParameters:
         desc: Studentët përdorin konceptin e refrenit në një këngë për të mësuar rreth
           kalimit të parametrave (që rregullojnë një funksion pa rishkruajtur të gjithë
           funksionin).
         title: Të shkruarit e Këngëve
+      SongwritingParameters_2018:
+        desc: "[empty string]"
+        title: "[empty string]"
       SongwritingWithParameters:
         desc: 'Një nga strukturat më madhështore në botën e shkencës kompjuterike
           është funksioni. Funksionet (ndonjëhere quhen proçedura) janë programe të
@@ -278,12 +307,18 @@ sq:
           Ky mësim do të ndihmojë studentët në mënyrë logjike të kuptojnë pse duke
           kombinuar pjesët e kodit në funksione, është një praktikë kaq ndihmuese.  '
         title: Të shkruarit këngë me Parametra
+      SongwritingWithParameters_2018:
+        desc: "[empty string]"
+        title: "[empty string]"
       TangramAlgorithms:
         desc: Ky mësim na tregon ne diçka të rëndësishme rreth algoritmeve. Nëse e
           mban një algoritëm të thjeshtë, ka shumë mënyra ta përdorësh atë. Nëse do
           të sigurohesh që çdo njeri të përfundojë me të njëjtën gjë, atëhere algoritmi
           jot ka nevojë për më shumë detaje.
         title: Algoritmat Tangram
+      TangramAlgorithms_2018:
+        desc: "[empty string]"
+        title: "[empty string]"
       Unplug1:
         desc: Ky mësim do ju prezantojë me konceptet e Shkencës Kompjuterike dhe do
           shpjegojë çfarë bën një Shkencëtar Kompjuterik. Do ti japë gjithashtu, studentëve
@@ -401,15 +436,15 @@ sq:
       UnplugHappyMaps:
         desc: Studentët krijojnë algoritma të thjeshtë (grup udhëzimesh) për të lëvizur
           midis një tuneli duke përdorur një komandë të vetme.
-        title: Hartat e Gëzuara
+        title: Hartat e Lumtura
       UnplugHappyMaps_2018:
         desc: Studentët krijojnë algoritma të thjeshtë (grup udhëzimesh) për të lëvizur
           midis një tuneli duke përdorur një komandë të vetme.
-        title: Hartat e Gëzuara
+        title: Hartat e Lumtura
       UnplugHappyMaps_2019:
         desc: Studentët krijojnë algoritma të thjeshtë (grup udhëzimesh) për të lëvizur
           midis një tuneli duke përdorur një komandë të vetme.
-        title: Hartat e Gëzuara
+        title: Hartat e Lumtura
       VideoGamesCoordinatePlanes:
         desc: Mëso sesi lojrat që të pelqejnë janë faktikisht të drejtuara nga algjebra!
           Eksploro se si shprehjet algjebrike dhe plani koordinativ mund të n'a ndihmojnë
@@ -435,7 +470,7 @@ sq:
       courseA_unplugged_happyMaps:
         desc: Studentët krijojnë algoritma të thjeshtë (grup udhëzimesh) për të lëvizur
           midis një tuneli duke përdorur një komandë të vetme.
-        title: Hartat e Gëzuara
+        title: Hartat e Lumtura
       courseB_unplugged_MRF:
         title: Aktiviteti Unplugged
       courseB_unplugged_MRF_2018:
@@ -448,6 +483,11 @@ sq:
         title: Gjurmët e Tua Dixhitale
       courseB_unplugged_loopyMRF:
         title: Aktiviteti Unplugged
+      courseB_unplugged_loopyMRF_2018:
+        desc: "[empty string]"
+        title: "[empty string]"
+      courseB_unplugged_loopyMRF_2019:
+        desc: "[empty string]"
       courseC_Unplugged_ScreenOutTheMean:
         title: Aktiviteti Unplugged
       courseC_Unplugged_ScreenOutTheMean_2018:
@@ -519,6 +559,9 @@ sq:
         desc: Studentët dërgojnë mesazhe duke paraqitur metoda të ndryshme transmetiti
           Interneti, duke përdorur copa letre.
         title: Internet
+      courseE_unplugged_privateInformation_2018:
+        desc: "[empty string]"
+        title: "[empty string]"
       courseE_unplugged_songwriting:
         desc: Studentët përdorin konceptin e refrenit në një këngë për të mësuar rreth
           kalimit të parametrave (që rregullojnë një funksion pa rishkruajtur të gjithë
@@ -542,6 +585,9 @@ sq:
         title: Qef me Ciklet For
       courseF_unplugged_powerOfWords:
         title: Aktiviteti Unplugged
+      courseF_unplugged_powerOfWords_2018:
+        desc: "[empty string]"
+        title: "[empty string]"
       courseF_unplugged_songwritingParameters:
         desc: 'Një nga strukturat më madhështore në botën e shkencës kompjuterike
           është funksioni. Funksionet (ndonjëhere quhen proçedura) janë programe të
@@ -555,6 +601,8 @@ sq:
           të sigurohesh që çdo njeri të përfundojë me të njëjtën gjë, atëhere algoritmi
           jot ka nevojë për më shumë detaje.
         title: Algoritmat Tangram
+      deeper learning description:
+        title: "[empty string]"
       timeforcs_demo_conditionals:
         desc: Për të mësuar rreth përcaktimeve të kushtoreve, studentët luajnë një
           lojë me karta dhe krijojnë rregulla si "Nëse vizatoj një kartë të kuqe,
