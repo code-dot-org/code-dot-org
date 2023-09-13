@@ -1931,6 +1931,942 @@
         "d2669646-8580-4bb3-a6e0-54961b42a029": {
           "description": "Tworzyć animowaną, interaktywną historię z użyciem sekwencji i funkcjami \"event-handler\"."
         },
+        "33f3d6db-54e2-4c96-b11a-511672ae3be9": {
+          "description": "Stwórz interaktywną animację za pomocą duszków i zdarzeń."
+        },
+        "1bd88170-e38e-4c5b-bd62-8107acd68567": {
+          "description": "Reprezentuj w tekście język figuratywny i dosłowny."
+        },
+        "521bc123-9d0a-4588-9b39-a3cc94229a64": {
+          "description": "Zaplanuj i napisz swoje własne wiersze."
+        },
+        "08121200-84b5-4a5a-bba6-4b562022d2dd": {
+          "description": "Wyjaśnij zasady bezpiecznego podróżowania w Internecie."
+        },
+        "2c26b049-30e8-427f-bd1e-227322388384": {
+          "description": "Porównaj, jak pobyt bezpieczny online jest podobny do bezpiecznego pobytu w prawdziwym świecie."
+        },
+        "4a183608-259a-4e03-96d5-84c2ce44ecde": {
+          "description": "Odkryj, że internet może być używany do odwiedzania odległych miejsc i uczenia się nowych rzeczy."
+        },
+        "9135f13e-3644-4b46-8afc-7ed7979867b6": {
+          "description": "Rozpoznawać oczekiwania, gdy uczniowie przechodzą do laboratorium komputerowego."
+        },
+        "cced4f5f-b5e7-44c2-883d-0693a6c4d57b": {
+          "description": "Stosować właściwą terminologię mówiąc o myszce, panelu dotykowego lub ekranu dotykowego."
+        },
+        "4c1740dc-3b8f-4efd-bd67-9747ea192b0e": {
+          "description": "Przekładać algorytm na program."
+        },
+        "8792657e-57ee-4898-a30e-f715b621bf2c": {
+          "description": "Odszyfrować i uruchić program utworzony przez kogoś innego"
+        },
+        "ad6f8f7b-d1dd-40e7-9591-0ab9737bd492": {
+          "description": "Identyfikować i zajmuj się błędami lub pomyłkami w poleceniach sekwencjonowanych"
+        },
+        "410fa6be-9c10-4a0b-aa54-d9352a22806d": {
+          "description": "Wypracowywać odpowiednie zachowania w laboratorium komputerowym"
+        },
+        "845acba3-a6c0-4e21-824c-f76a97df1cf3": {
+          "description": "Eksperymentować ze standardowymi działaniami programistycznymi z użyciem bloków, takimi jak: klikanie, przeciąganie i opuszczanie, itp."
+        },
+        "3a4dd2f8-5564-4957-ad2a-c0202a6cd256": {
+          "description": "Konstruować program poprzez przeorganizowanie ruchów sekwencyjnych."
+        },
+        "5ab2b6fd-3e20-4420-879c-26f9a7dad398": {
+          "description": "Budować program komputerowy z zestawu poleceń pisemnych"
+        },
+        "9a786a2b-5088-4006-a726-ae2aa7cfccf9": {
+          "description": "Wybierać odpowiednie praktyki w zakresie debugowania przy rozwiązywaniu problemu."
+        },
+        "a0837de2-0b9b-42f8-b700-5f90891b3272": {
+          "description": "Tworzyć sekwencję komend w porządku logicznym."
+        },
+        "da5db99d-15b9-41c2-9542-ea9ed3aea616": {
+          "description": "Rozpoznawać problemy lub \"błędy\" w programie i opracowywać plan rozwiązania tych kwestii."
+        },
+        "60df971c-013e-43f6-8f58-59fd01f7b62b": {
+          "description": "Interpretować program z pętlami jako serię wielu działań."
+        },
+        "b141adf4-aa11-463a-bc2d-5d0cd985c932": {
+          "description": "Identyfikować kod powtarzający się i skracaj serię działań wielokrotnych w pojedynczą pętlę."
+        },
+        "5cfa4ba6-2df6-4801-871b-beae2f9408e1": {
+          "description": "Konstruować program z użyciem struktur, w których powtarzają się obszary kodu"
+        },
+        "9d899829-68e8-4b6a-8d0d-dffc16f8f347": {
+          "description": "Doskonalić istniejący kod znajdując obszary powtarzania i przenoszenia ich w struktury zapętlające się"
+        },
+        "26e467c8-fd1c-4e8a-a5fe-c8e8ba533350": {
+          "description": "Dzielićić długą sekwencję poleceń na najmniejszą możliwą powtarzalną sekwencję."
+        },
+        "75181906-2b7e-42bb-a102-c8f0e455d867": {
+          "description": "Identyfikuj korzyści używania struktury pętli zamiast powtarzania ręcznego."
+        },
+        "19ce2bed-a8be-4bbe-98bd-f59877edaa89": {
+          "description": "Rozłożyć kształt na największe powtarzalne sekwencje."
+        },
+        "7a1f9e4e-632a-4b14-9bf1-0c9cbb84370a": {
+          "description": "Policzyć ile razy należy powtórzyć działanie i przedstawić tę liczbę w postaci pętli."
+        },
+        "808d8643-8bfe-4790-9c7b-e3b6ff47094d": {
+          "description": "Tworzyć program do rysowania skomplikowanych kształtów poprzez powtarzanie prostych sekwencji."
+        },
+        "2ed8599e-93ae-40d0-bfe4-afc32a531562": {
+          "description": "Powtórz polecenia wydawane przez nauczyciela."
+        },
+        "454c407c-5b0b-441f-82ee-e37b448a8c43": {
+          "description": "Rozpoznawać ruchy nauczyciela jako sygnały do inicjowania komend."
+        },
+        "5d17f261-7325-43b2-b8fd-978eba1e3c45": {
+          "description": "Ćwiczyć rozróżnianie pomiędzy zdefiniowanymi wcześniej działaniami a działaniami kształtowanymi przez zdarzenia."
+        },
+        "055bb50f-7acd-4c39-835d-1dc0dbf643bf": {
+          "description": "Dzielić się kreatywnym rekwizytem z innymi uczniami."
+        },
+        "b557f9b3-361a-4c65-a2fb-18ca17927694": {
+          "description": "Tworzyć animowaną, interaktywną historię z użyciem sekwencji i funkcjami \"event-handler\"."
+        },
+        "c85e3900-b2a8-4255-851b-4d1cd31c508b": {
+          "description": "Identyfikować działania, które nawiązują do zdarzeń wejściowych."
+        },
+        "27c5d1ff-3e92-4d6b-95db-2c7d845ab0cb": {
+          "description": "Pokonywać przeszkody takie jak ograniczenia czasowe lub błędy."
+        },
+        "536bdbcb-c39c-40d5-979b-21faebb4c98c": {
+          "description": "Zastosowanie koncepcji informatyki w otwartym projekcie."
+        },
+        "5bdc95ad-f428-4996-a790-bd3e8e202e7a": {
+          "description": "Dowiedz się, jakie informacje są w porządku, aby być udostępniane online."
+        },
+        "980fa7c9-c3f3-4ec7-8c64-6eac2545728d": {
+          "description": "Dowiedz się, że informacje, które udostępniają online, pozostawiają cyfrowy ślad lub „szlak”."
+        },
+        "52b206c3-8f53-4e77-9417-a7c9edcee705": {
+          "description": "Identyfikować i naprawiać błędy w zakresie egzekwowania algorytmu"
+        },
+        "7ab6d3e4-fd00-47c7-9d96-cc1e3844fd39": {
+          "description": "Przekładać listę kroków na serię czynności fizycznych."
+        },
+        "ff751540-1042-420b-9d8f-fd3034b313a2": {
+          "description": "Definiować listę kroków (algorytm), aby doprowadzić znajomego z pozycji wyjściowej do celu"
+        },
+        "8a529843-8998-4713-ad40-b157514bff66": {
+          "description": "Eksperymentować ze standardowymi działaniami programistycznymi z użyciem bloków, takimi jak: klikanie, przeciąganie i opuszczanie, itp."
+        },
+        "9e786548-19e2-45d3-99e3-4734dabc36af": {
+          "description": "Wypracowywać odpowiednie zachowania w laboratorium komputerowym"
+        },
+        "67d693d7-7cf6-4005-9952-e04190933bee": {
+          "description": "Przekładać ruchy na serię komend."
+        },
+        "9286e247-6f4a-4f9f-ad44-84d73770d5ca": {
+          "description": "Zbuduj program komputerowy z zestawu pisemnych instrukcji."
+        },
+        "b542be3d-fd73-4e76-88ea-0d07d604c356": {
+          "description": "Zbuduj program, reorganizując sekwencyjne ruchy."
+        },
+        "cdfa4113-5f0b-4bb5-aa6b-c0350e6c73ae": {
+          "description": "Identyfikować i lokalizuj błędy w programie."
+        },
+        "ee3439ef-52c7-44fa-80b4-66f0c60efe8d": {
+          "description": "Przekładać ruchy na serię komend."
+        },
+        "3324d203-a3f2-401a-8600-c233ab2574b3": {
+          "description": "Powtarzać czynności zainicjowane przez instruktora."
+        },
+        "756b0feb-a03b-4943-95e7-b942def7c479": {
+          "description": "Zamienić serię działań wielokrotnych w pojedynczą pętlę."
+        },
+        "f89be89b-dbfe-47d8-80ac-a751216ac651": {
+          "description": "Przekładać program obrazkowy na taniec w świecie rzeczywistym."
+        },
+        "0c32ef49-bdfc-44e6-b3cc-4de6ad91b350": {
+          "description": "Tworzyć program na potrzeby danego zadania, który zapętla sekwencję komend."
+        },
+        "133ddc88-adec-4f3f-b7c0-4989f5d19314": {
+          "description": "Identyfikuj korzyści używania struktury pętli zamiast powtarzania ręcznego."
+        },
+        "7c9e729a-746d-445f-92d4-cedf8834c8c3": {
+          "description": "Dzielićić długą sekwencję poleceń na najmniejszą możliwą powtarzalną sekwencję."
+        },
+        "eef72866-061c-405b-a93f-28440500d358": {
+          "description": "Używać połączenia komend sekwencyjnych i zapętlonych, aby dojść do końca labiryntu."
+        },
+        "06f170f1-441d-425b-8b3e-7b698224bec8": {
+          "description": "Dzielićić długą sekwencję poleceń na najmniejszą możliwą powtarzalną sekwencję."
+        },
+        "ab2b5999-c81b-44dd-aa73-22e150e905d5": {
+          "description": "Identyfikuj korzyści używania struktury pętli zamiast powtarzania ręcznego."
+        },
+        "0db98543-004c-484f-8c10-48877fdbc12f": {
+          "description": "Policzyć ile razy należy powtórzyć działanie i przedstawić tę liczbę w postaci pętli."
+        },
+        "67525026-7c34-4612-8c23-9e23a6bc3db0": {
+          "description": "Tworzyć program do rysowania skomplikowanych kształtów poprzez powtarzanie prostych sekwencji."
+        },
+        "e58b52e7-277d-43ec-aed1-558ecd47e354": {
+          "description": "Rozłożyć kształt na największe powtarzalne sekwencje."
+        },
+        "3e732d8f-6b08-43b8-a7c9-b3d09f782b37": {
+          "description": "Rekomenduj technologię innym w oparciu o ich unikalne potrzeby. "
+        },
+        "54226aac-0811-4011-ab16-7153f412ed16": {
+          "description": "Zastosuj empatię i kreatywność do projektowania technologii dla innych. "
+        },
+        "d88740c6-3bed-4917-95a6-0bd541273af0": {
+          "description": "Wymień kilka różnych przykładów aplikacji na smartfony."
+        },
+        "6cd47594-c70e-42e4-8052-f627b3fc3282": {
+          "description": "Powtórz polecenia wydawane przez nauczyciela."
+        },
+        "79b6b10a-0662-4d50-9c9c-ae4e8171d21e": {
+          "description": "Ćwiczyć rozróżnianie pomiędzy zdefiniowanymi wcześniej działaniami a działaniami kształtowanymi przez zdarzenia."
+        },
+        "c23d5735-a656-4626-8f7a-94615312d289": {
+          "description": "Rozpoznawać ruchy nauczyciela jako sygnały do inicjowania komend."
+        },
+        "1f4e2653-1ca8-4eaa-b9d6-e38dc31cbfce": {
+          "description": "Tworzyć animowaną, interaktywną historię z użyciem sekwencji i funkcjami \"event-handler\"."
+        },
+        "637a8add-f38c-4223-a1e3-5b5afce7fd40": {
+          "description": "Identyfikować działania, które nawiązują do zdarzeń wejściowych."
+        },
+        "6fc2eb20-8727-4674-b974-e1532031c3c5": {
+          "description": "Dzielić się kreatywnym rekwizytem z innymi uczniami."
+        },
+        "4972490c-b955-4b4b-982c-48477221896b": {
+          "description": "Zastosowanie koncepcji informatyki w otwartym projekcie."
+        },
+        "ec142981-67db-481f-9ad9-345e63b7b323": {
+          "description": "Pokonywać przeszkody takie jak ograniczenia czasowe lub błędy."
+        },
+        "55a09477-cb28-4661-a2fc-725977e32af1": {
+          "description": "Zidentyfikuj sposoby reagowania na średnie słowa online, używając S-T-O-P."
+        },
+        "7f4ce12c-e224-4dbb-89c4-7a535cdf7b82": {
+          "description": "Zrozum, jak może wyglądać podłość online i jak może sprawić, że ludzie czują się."
+        },
+        "4dd208db-3fb3-4253-8560-ebbc3ccab8a3": {
+          "description": "Identyfikować i zajmuj się błędami lub pomyłkami w poleceniach sekwencjonowanych"
+        },
+        "ebe7a043-dbde-44ad-ac29-019e53f81513": {
+          "description": "Wykazywać się dokładnością przy tworzeniu poleceń"
+        },
+        "14fee8be-0a09-45f9-9f7d-876385f9e555": {
+          "description": "Identyfikować i lokalizuj błędy w programie."
+        },
+        "59efd82b-31ca-476c-a21c-9eccb856cf82": {
+          "description": "Przekładać ruchy na serię komend."
+        },
+        "856114c0-8a29-4d75-ac7e-f1ca8eb476e7": {
+          "description": "Modyfikować istniejący program, aby rozwiązywać błędy."
+        },
+        "85d8fe3b-6b97-460a-9d31-68af3e9fa37d": {
+          "description": "Przewidywaćy, gdzie program się nie sprawdzi."
+        },
+        "bc5a36ce-5d15-4e87-a2b1-3434a3639a5d": {
+          "description": "Przedstawiać przemyślenia  dotyczące procesu debugowania w sposób dostosowany do wieku."
+        },
+        "2ff64d38-c52d-4cd6-ba79-2b3a5100b7fe": {
+          "description": "Wydawać komendy przemieszczania jako działania sekwencyjne w programie."
+        },
+        "48ee4f9a-585f-4cb2-a89a-b0daecde6f87": {
+          "description": "Przedstawiać algorytm jako program komputerowy."
+        },
+        "ed26adef-4f54-4fac-954f-f21373f04e21": {
+          "description": "Rozwijać umiejętności w zakresie rozwiązywania problemu i krytycznego myślenia poprzez powtarzanie praktyk debugowania."
+        },
+        "229ebc69-f4c9-4996-aa54-8a85ff20b62d": {
+          "description": "Utwórz program, aby ukończyć obraz używając czynności sekwencyjnych."
+        },
+        "2f8217e2-eb6a-470d-b459-9e8e7427a5c6": {
+          "description": "Rozłóż złożone kształty na prostsze części."
+        },
+        "70b6434a-184b-43d1-893a-ad471f4c432e": {
+          "description": "Identyfikować wzorce powtarzalne w kodzie, które można zastąpić pętlą"
+        },
+        "c07f525c-f1f8-43fd-a300-812dfcc7b721": {
+          "description": "Zapisywać instrukcje, w których używa się pętli, aby powtarzać wzorce"
+        },
+        "1d8cb6e9-96c2-4f76-8821-9712f7eb7679": {
+          "description": "Używać połączenia komend sekwencyjnych i zapętlonych, aby dojść do końca labiryntu."
+        },
+        "27a33580-ad30-413f-a534-fda554807d85": {
+          "description": "Identyfikuj korzyści używania struktury pętli zamiast powtarzania ręcznego."
+        },
+        "9dda3d5a-3eb7-406e-bc6b-46faeebd5c3e": {
+          "description": "Dzielićić długą sekwencję poleceń na największą powtarzalną sekwencję."
+        },
+        "1eff1485-7e01-4b90-a563-c20dba6ad15c": {
+          "description": "Identyfikować, kiedy można użyć pętli, aby uprościć działanie powtarzalne."
+        },
+        "5539afc7-7adb-45f6-aa9b-0dfefa06f020": {
+          "description": "Napisać program na potrzeby danego zadania, który zapętla pojedynczą komendę."
+        },
+        "fb49b7eb-67bc-4cad-a644-710007c9a805": {
+          "description": "Używać połączenia komend sekwencyjnych i zapętlonych, aby przemieszczać i wykonywać działania."
+        },
+        "066a899e-a5f0-403e-9269-977d85c2147b": {
+          "description": "Rozróżniać pomiędzy komendami, które należy powtarzać w pętlach, a komendami, które powinny być używane indywidualnie."
+        },
+        "fc46f94d-3f0f-481b-ad28-e937199a6d13": {
+          "description": "Identyfikuj korzyści używania struktury pętli zamiast powtarzania ręcznego."
+        },
+        "421fdb33-b57e-4323-a607-d4be7a63dc58": {
+          "description": "Ćwiczyć rozróżnianie pomiędzy zdefiniowanymi wcześniej działaniami a działaniami kształtowanymi przez zdarzenia."
+        },
+        "57a91022-682c-4b14-8fe1-d59e917dfe5b": {
+          "description": "Rozpoznawać ruchy nauczyciela jako sygnały do inicjowania komend."
+        },
+        "c7b579bb-ac4c-4c83-acbc-e3be38f22201": {
+          "description": "Powtórz polecenia wydawane przez nauczyciela."
+        },
+        "7409434e-498e-4a38-871d-d3e07e5513ea": {
+          "description": "Dzielić się kreatywnym rekwizytem z innymi uczniami."
+        },
+        "8a26dd8d-73a5-4b4e-aff5-96555755dffa": {
+          "description": "Tworzyć interaktywną grę z użyciem funkcji \"event-handler\"."
+        },
+        "ef358d1d-f0da-47d2-94cc-a235422adcd1": {
+          "description": "Łączyć bloki z odpowiednią funkcją \"event handler\"."
+        },
+        "40eca7d9-43be-49f8-98bd-e5e1b0f9ce76": {
+          "description": "Tworzyć animowaną, interaktywną grę z użyciem sekwencji i funkcjami \"event-handler\"."
+        },
+        "f3250339-3797-4706-a20a-52a9d41fc452": {
+          "description": "Identyfikować działania, które nawiązują do zdarzeń wejściowych."
+        },
+        "45c7489d-b2b5-4773-8ca4-706ebfb4b7c1": {
+          "description": "Dokonaj porównań między wizualizacjami danych dokonanymi przez innych osób i używaj ich do prognozowania."
+        },
+        "d3ff4345-57a2-4fb6-b60b-90f9d259894d": {
+          "description": "Gromadzenie i rejestrowanie danych o ilości rzeczywistych obiektów lub znaków na ekranie"
+        },
+        "eb342a3b-6b44-4788-94b5-370406763c79": {
+          "description": "Tworzenie wykresu słupkowego i wykresu kołowego do reprezentowania prostych danych."
+        },
+        "3623af29-f5f4-4abb-b6c1-9971c501707c": {
+          "description": "Odnosić pomysł przechowywania listów w postaci papierowej na pomysł przechowywania informacji na komputerze."
+        },
+        "c96d6ebe-9029-4dbb-9fcd-a992db084bea": {
+          "description": "Kodować litery na zapis binarny."
+        },
+        "cc4a347d-4d19-40b3-beee-65525c111419": {
+          "description": "Dekodować zapis binarny z powrotem na litery."
+        },
+        "7870e60f-8cde-48f8-8dee-a49ce46eba61": {
+          "description": "Użyj planowanego projektu jako planu do utworzenia."
+        },
+        "801c4df1-5112-4d84-abe6-210838902845": {
+          "description": "Pokonywać przeszkody takie jak ograniczenia czasowe lub błędy."
+        },
+        "37124f0b-631a-41a6-806c-cec9ebcf80b6": {
+          "description": "Ćwicz tworzenie niezapomnianego i silnego hasła."
+        },
+        "ebac082d-a94e-474e-812c-b9f5e792a13e": {
+          "description": "Zdefiniuj termin „hasło” i opisuj cel hasła."
+        },
+        "58ac2483-d00b-4167-b610-d2868c5a094f": {
+          "description": "Przeformatować sekwencję swoich działań na zakodowany program"
+        },
+        "8b260be7-f18d-4406-a4e9-173dd50a29e4": {
+          "description": "Wyjaśniać ograniczenia związane z przekładaniem problemów z języka ludzkiego na język maszyny."
+        },
+        "2da917c0-f586-4089-b85e-8f0a12e54762": {
+          "description": "Dzielićić długą sekwencję poleceń na największą powtarzalną sekwencję."
+        },
+        "b43a1de3-d365-4313-b3f0-c9d628cf372a": {
+          "description": "Wydawać komendy przemieszczania jako działania sekwencyjne w programie."
+        },
+        "ba720b1e-b6a5-4b9b-9f57-5226fc1ab2ca": {
+          "description": "Modyfikować istniejący program, aby rozwiązywać błędy."
+        },
+        "993470c2-9c57-4fe4-82c3-e9188caf386f": {
+          "description": "Identyfikować oznaki frustracji"
+        },
+        "a56b7718-fda6-4c5d-8da9-b9309707654c": {
+          "description": "Definiować pomysły za pomocą kodu i symboli."
+        },
+        "e25d0146-f001-44ff-8e04-0443d1fe08cc": {
+          "description": "Weryfikować pracę wykonaną przez kolegów z zespołu."
+        },
+        "3ae40879-3b0f-4d7f-96c3-d228cde35253": {
+          "description": "Odczytywać i zrozumieć podany kod."
+        },
+        "c82f260a-e0ca-4a4a-be3d-e72d581758e1": {
+          "description": "Opisać i wdrażać plan debugowania programu."
+        },
+        "c8bc26ae-fb6b-4154-8ac3-09f9c7236cc9": {
+          "description": "Identyfikować błąd i problemy, jakie powoduje w programie."
+        },
+        "975eb131-ed08-46f3-99e3-5673fc1a7cba": {
+          "description": "Tworzyć interaktywną grę z użyciem sekwencji i funkcjami \"event-handler\"."
+        },
+        "bd96f83d-bb11-45d7-8f9d-318dfe4780ea": {
+          "description": "Identyfikować działania, które nawiązują do zdarzeń wejściowych."
+        },
+        "e77643d4-be8a-4168-b1e9-8db021a61e2c": {
+          "description": "Dzielić się kreatywnym rekwizytem z innymi uczniami."
+        },
+        "4accef26-495e-4979-8567-3d23178769b5": {
+          "description": "Identyfikować działania, które nawiązują do zdarzeń wejściowych."
+        },
+        "98e5b36d-9439-4748-bf6f-e619018f92fe": {
+          "description": "Tworzyć animowaną, interaktywną grę z użyciem sekwencji i zdarzeń."
+        },
+        "65e4c7cc-3e04-46f6-a879-8439d75a1a87": {
+          "description": "Twórz programy reagujące na określone czasowo zdarzenia"
+        },
+        "7b61c64a-1235-4bb8-a660-ae9f09c57606": {
+          "description": "Twórz animacje tańców za pomocą kodu"
+        },
+        "bc6ede73-31d3-4995-9c16-90f09151e937": {
+          "description": "Twórz programy reagujące na dane wejściowe użytkowników"
+        },
+        "2c0d2675-5ba9-468e-8126-856c439ce5e7": {
+          "description": "Konstruować program z użyciem struktur, w których powtarzają się obszary kodu"
+        },
+        "8fe71e7b-e38e-4dbc-b4de-032d68b61b3e": {
+          "description": "Doskonalić istniejący kod znajdując obszary powtarzania i przenoszenia ich w struktury zapętlające się"
+        },
+        "91741d56-477d-459c-bbc4-98afb1902312": {
+          "description": "Identyfikuj korzyści używania struktury pętli zamiast powtarzania ręcznego."
+        },
+        "d932a994-85f8-4b1f-8c12-2b6696c4f333": {
+          "description": "Rozróżniać pomiędzy komendami, które należy powtarzać w pętlach, a komendami, które powinny być używane indywidualnie."
+        },
+        "6d4f6860-ea45-4a37-ac56-f147c7f9f93b": {
+          "description": "Zauważać duże, powtórzone wzorce wytworzone z mniejszych powtórzonych wzorców."
+        },
+        "a77951f8-0b27-4891-80fd-0826d9f6d5d2": {
+          "description": "Identyfikuj korzyści używania struktury pętli zamiast powtarzania ręcznego."
+        },
+        "b9a291a3-8054-4aa9-85e5-37e4a6354ebf": {
+          "description": "Łamać skomplikowane zadania na mniejsze, powtarzalne sekcje."
+        },
+        "2517dfd3-fab0-4a56-9ed3-ebaf7a3c2584": {
+          "description": "Przechodzić program i przewidywać wynik mają dany zestaw danych wejściowych."
+        },
+        "6f2a37fe-15c1-4827-8448-dfd5a85fdc0c": {
+          "description": "Określać na postawie kryteriów, czy wyrażenie warunkowe jest spełnione."
+        },
+        "fb9d1712-200c-431b-a3f0-4aeb225fd04e": {
+          "description": "Definiować okoliczności, kiedy pewne części programu należy uruchamiać, a kiedy nie."
+        },
+        "787817f5-ae6a-423c-80d7-5ffc390c32ec": {
+          "description": "Określać na postawie kryteriów, czy wyrażenie warunkowe jest spełnione."
+        },
+        "e4da391a-eff1-4386-9057-07218dc0a68f": {
+          "description": "Definiować okoliczności, kiedy pewne części programu należy uruchamiać, a kiedy nie."
+        },
+        "dffba375-7b6c-43ff-9c10-1e3a6197c492": {
+          "description": "Przekładać język potoczny wyrażeń warunkowych w program."
+        },
+        "e99389ab-59a8-4af6-94bb-1f2c8eb0b13a": {
+          "description": "Rozwiązywać łamigłówki używając połączenie zapętlonych sekwencji i wyrażeń warunkowych."
+        },
+        "c4590e08-60e6-4005-9fed-7b6376f25054": {
+          "description": "Rozróżniać pomiędzy pętlami, które powtarzają stałą liczbę razy i pętli, które się powtarzają, o ile warunek jest spełniony."
+        },
+        "fd02b811-3ce4-4f0c-bdb8-7c49bc2c7c03": {
+          "description": "Używać pętli \"dopóki\", aby tworzyć programy, które są w stanie rozwiązywać problemy o nieznanych wartościach."
+        },
+        "a566fcba-9df2-40ef-babc-fffa9634043f": {
+          "description": "Przekładać język potoczny wyrażeń warunkowych i pętle w program."
+        },
+        "d6927279-4ff5-45f5-82b1-db71cbadccc6": {
+          "description": "Budować programy cechujące się zrozumieniem licznych strategii, aby wdrażać wyrażenia warunkowe."
+        },
+        "946e341c-e9f3-44a9-8a59-5b4be0adf4a7": {
+          "description": "Pokonywać przeszkody takie jak ograniczenia czasowe lub błędy."
+        },
+        "a3a0f820-0f93-4525-99d6-25578f7c2c48": {
+          "description": "Wyjaśnij, dlaczego udostępnianie prywatnych informacji online jest ryzykowne."
+        },
+        "a4e0e4d9-0eb7-41fb-a1f2-bbee2d27c690": {
+          "description": "Wyjaśnij różnicę między danymi prywatnymi a danymi osobowymi."
+        },
+        "b3c10f40-3fba-4247-b680-bea68b00c62d": {
+          "description": "Zidentyfikuj powody, dla których ludzie dzielą się informacjami o sobie w Internecie."
+        },
+        "19a06e30-46f9-4ccd-8484-c01dcd915981": {
+          "description": "Twórz nowe kształty i przypisz im kostiumy i zachowania."
+        },
+        "4d6e99ae-325d-49f8-8e38-2ee2ac4f81dc": {
+          "description": "Definiować \"duszka\" jako postać lub obiekt na ekranie, który można przemieszczać i zmieniać."
+        },
+        "23d3203d-fd55-4994-a5ea-db01f6e5ea8f": {
+          "description": "Twórz nowe duszki i przypisuj im kostiumy i lokalizacje"
+        },
+        "d943af7f-1329-432c-95fe-99a27ef065a7": {
+          "description": "Stwórz interaktywną animację za pomocą duszków i zdarzeń."
+        },
+        "0eeaa187-0d40-40e5-b3e6-abfcb346d0b8": {
+          "description": "Utwórz interaktywny program komputerowy, który wyraża, kim są za pomocą tekstu i niestandardowych obrazów."
+        },
+        "b4c86cd9-548e-4fd1-8083-3c4b4d108052": {
+          "description": "Wybierz, jakie informacje o sobie można bezpiecznie udostępniać online."
+        },
+        "c8e9b54c-7931-40e0-8a87-391a930b8a7a": {
+          "description": "Identyfikuj korzyści używania struktury pętli zamiast powtarzania ręcznego."
+        },
+        "fe9dbb80-e70b-474b-a1fa-dbff4990264a": {
+          "description": "Rozróżniać pomiędzy komendami, które należy powtarzać w pętlach, a komendami, które powinny być używane indywidualnie."
+        },
+        "35d77767-4731-48c7-968a-0d1d7eda55a3": {
+          "description": "Łamać skomplikowane zadania na mniejsze, powtarzalne sekcje."
+        },
+        "7a557413-e74e-4841-a76f-ae9f901c553d": {
+          "description": "Łączyć proste kształty w skomplikowane układy przy pomocy zagnieżdżonych pętli."
+        },
+        "b53e2e1c-30de-4843-946c-cd7df12b38c3": {
+          "description": "Policzyć ile razy należy powtórzyć działanie i przedstawić tę liczbę w postaci pętli."
+        },
+        "322e98a8-9e00-447a-98f6-30fd8a5193b4": {
+          "description": "Dzielić kod na największe powtarzalne sekwencje używając zarówno pętli, jak i pętli zagnieżdżonych."
+        },
+        "77e00b69-871a-4df7-9bed-daaa6607b442": {
+          "description": "Rozpoznawać różnicę pomiędzy używaniem pętli a pętli zagnieżdżonej."
+        },
+        "8b5adab8-8d05-430d-bda7-b875f837684b": {
+          "description": "Opisać, kiedy potrzebna jest pętla, pętla zagnieżdżona lub kiedy pętla nie jest potrzebna."
+        },
+        "baa24db8-77c1-4be4-9c40-8b62c79074ea": {
+          "description": "Lokalizować powtarzające się zwroty w tekstach piosenek."
+        },
+        "c5ab6014-fad2-407f-a940-5df6ae9e1c6f": {
+          "description": "Identyfikować części piosenki, aby wciągnąć je do funkcji."
+        },
+        "d5bb7b38-81d4-4dda-aa66-ef9925a2cdfb": {
+          "description": "Opisać sposób, w jaki funkcje mogą ułatwiać pisanie."
+        },
+        "7152c50b-409e-4ef2-bffc-9407d1e600d1": {
+          "description": "Używać określonych wcześniej funkcji do realizacji zwykle powtarzanych zadań."
+        },
+        "adce7990-5f04-43b7-a3f9-f8d2fb82c003": {
+          "description": "Używaj funkcji, aby upraszczać złożone programy."
+        },
+        "1336725c-ca2c-41f2-91a3-79bae642bb53": {
+          "description": "Rozpoznawać, kiedy funkcja może pomóc w uproszczeniu programu."
+        },
+        "4649d804-1cea-4748-a164-48c0826a19c6": {
+          "description": "Dzielićić na kategorie i generalizować kod tworząc użyteczne funkcje."
+        },
+        "95c787fe-e3f4-4e0d-9321-755e1f2138ff": {
+          "description": "Definiować okoliczności, kiedy pewne części programu należy uruchamiać, a kiedy nie."
+        },
+        "c358a3cc-bdda-4899-8b93-24a8f41cc139": {
+          "description": "Określać na postawie kryteriów, czy wyrażenie warunkowe jest spełnione."
+        },
+        "0d758b6c-1f60-4c36-ac88-10c83525abfd": {
+          "description": "Definiować okoliczności, kiedy pewne części programu należy uruchamiać, a kiedy nie."
+        },
+        "c1cdb005-bf70-499f-b6ef-c5375755af5e": {
+          "description": "Określać na postawie kryteriów, czy wyrażenie warunkowe jest spełnione."
+        },
+        "588729d9-c86f-4ce4-ad0e-d195b9d488bd": {
+          "description": "Używać określonych wcześniej funkcji do realizacji zwykle powtarzanych zadań."
+        },
+        "d9f53a95-0fcf-496b-8d62-c19e63285b9b": {
+          "description": "Rozpoznawać, kiedy funkcja może pomóc w uproszczeniu programu."
+        },
+        "07318d43-27a2-4f67-ab68-bec43f8aeb06": {
+          "description": "Ulepsz istniejący projekt aplikacji, odpowiadając na potrzeby użytkowników w zakresie dostępności."
+        },
+        "2415d19b-be4d-45f0-9997-297955855224": {
+          "description": "Opisz wpływ aplikacji mobilnych na współczesny świat."
+        },
+        "bcb9bb81-0424-4ee8-8e61-25fb2038f410": {
+          "description": "Wyjaśnij, dlaczego dostępność jest ważną częścią projektowania aplikacji dla użytkowników."
+        },
+        "0c04b242-36af-4438-b1e6-957abc26e810": {
+          "description": "Interpretować etyczne udostępnianie materiałów chronionych prawem autorskim w przeciwieństwie do sytuacji, gdy udostępnianie nie jest etyczne."
+        },
+        "28abc392-9310-402f-ab2a-4d17fb785e88": {
+          "description": "Rozumieć własne prawa dotyczące materiałów, które utworzyli"
+        },
+        "1292695d-d411-4b86-a5e7-97fe3a9c0bd8": {
+          "description": "Omawiać proces projektowania i sposób, w jaki pomógł ukształtować ukończony projekt końcowy."
+        },
+        "45ca0645-0bf7-4e81-90a8-a39dff0fd2db": {
+          "description": "Opisać sposób, w jaki kompromis może pomóc w utrzymywaniu projektu na właściwym torze oraz inspirowaniu kreatywności."
+        },
+        "5f2f1c81-a3aa-435c-93fe-6d01ac37ec05": {
+          "description": "Uczyć się planować z wyprzedzeniem na potrzeby bieżącego zadania."
+        },
+        "d293d6fa-721b-45eb-9397-f772421119ad": {
+          "description": "Wyjaśniać sposób, w jaki ograniczenia systemu mogą wpływać na układ projektu."
+        },
+        "f11b65b8-8c9b-4b92-a3cb-1b10a2be0c37": {
+          "description": "Sporządzać projekty i wdrażać plany rozwiązywania wszelkich kwestii w swoim kodzie."
+        },
+        "3bb4f045-c53e-4625-b7ad-bdba2adab86d": {
+          "description": "Zdecyduj, jakie rodzaje oświadczeń są w porządku powiedzieć online, a które nie."
+        },
+        "6eb496de-c49a-4ef1-89b2-07422b8fd940": {
+          "description": "Opisz znaczenie użytkownika w procesie projektowania."
+        },
+        "9d91c903-599b-4f39-8794-b60e5b82a728": {
+          "description": "Zidentyfikuj duszki w uruchomionym programie komputerowym."
+        },
+        "54bdf34a-22bd-4455-8572-4e2da88b3ae4": {
+          "description": "Utwórz animację za pomocą kształtek i zachowań."
+        },
+        "b1f66a40-0fc0-4682-85a5-ad2f20016ebd": {
+          "description": "Twórz nowe kształty i przypisz im kostiumy i zachowania."
+        },
+        "7bd9f479-f0e7-40e2-a1c1-d40567877f1e": {
+          "description": "Opracowuj programy reagujące na dane wejściowe użytkownika."
+        },
+        "996e32df-b9f6-4a50-b810-86f90710e962": {
+          "description": "Opracowuj programy reagujące na określone czasowo zdarzenia."
+        },
+        "d385d281-f206-4e46-89d5-8a2b7ddf4fbb": {
+          "description": "Utwórz interaktywną animację stosując zdarzenia."
+        },
+        "1a32a452-b987-41b6-9a46-cf0d0c4ad28e": {
+          "description": "Tworzenie interaktywnego zwierzaka wirtualnego za pomocą zdarzeń, zachowań i niestandardowych kompozycji."
+        },
+        "6d53d2da-482f-4f7f-aeba-4724d7cd94fd": {
+          "description": "Programuj rozwiązania problemów, które pojawiają się podczas projektowania wirtualnego zwierzaka, takich jak karmienie go."
+        },
+        "10c60f4a-ddfe-4828-8f53-36292496b61b": {
+          "description": "Zadeklaruj zmienną"
+        },
+        "21a5fada-187b-4d8c-bdac-e9eff5b2079b": {
+          "description": "Wywołać zmienną wiele razy w programie."
+        },
+        "29eba41b-038a-44a1-aedb-20ea77a84d73": {
+          "description": "Określić zależność między tym, jak zmienna jest zdefiniowana, przechowywana i pobierana po naciśnięciu przycisku „Uruchom” na programie."
+        },
+        "c79bc65d-866c-42c7-a4ca-cb55bce36ae8": {
+          "description": "Przypisz wartość zmiennej"
+        },
+        "19a247ec-7d77-4a99-bf3b-6976a59e1eae": {
+          "description": "Użyj zmiennych w połączeniu z monitami."
+        },
+        "9ccb61df-fd60-45b4-bfea-fda92842dcda": {
+          "description": "Używaj zmiennych do przechowywania słów i zwrotów."
+        },
+        "b495a1ea-5c79-43d5-b1a3-f0b60c2f28fe": {
+          "description": "Użyj zmiennych w połączeniu z monitami."
+        },
+        "e319eebd-91ad-4a83-b8bb-c3f7ad8dbce0": {
+          "description": "Utwórz interaktywny program komputerowy, który reaguje na dane wejściowe użytkownika."
+        },
+        "e6e61481-5798-4cc1-b392-974c1a0f9b6d": {
+          "description": "Używaj zmiennych do przechowywania słów i zwrotów."
+        },
+        "93d9a679-eca0-4ec5-bc30-3473b8e0ba86": {
+          "description": "Utwórz wykres dwuliniowy, aby porównać dane o dwóch różnych źródłach"
+        },
+        "bd16b6b1-5021-4575-a85f-50fbcfa88eb2": {
+          "description": "Używanie symulacji komputerowej do zbierania danych o modelu"
+        },
+        "e5027ee5-ef3b-4550-b333-b861127c3964": {
+          "description": "Wykonywanie i testowanie prognozy poprzez modyfikowanie zmiennych symulacyjnych"
+        },
+        "0a79d647-d90e-447e-a60a-79ad3ff34580": {
+          "description": "Zastanawiać się w jaki sposób ludzkie uprzedzenia odgrywają rolę w nauce maszynowej."
+        },
+        "362fda44-20c3-4bfe-a942-090257c7055e": {
+          "description": "Szkolić się i testować model nauki maszynowej."
+        },
+        "964af2d3-37b9-4763-a215-dc99af94e7f1": {
+          "description": "Omawiać rolę, jaką sztuczna inteligencja odgrywa w ich życiu."
+        },
+        "69923930-b963-4971-9fd2-4797aff683eb": {
+          "description": "Przekładać adresy URL na IP."
+        },
+        "e19d8fce-b2de-4320-9614-b0b7a7fac5f4": {
+          "description": "Uczyć się o złożoności wysyłania wiadomości w Internecie."
+        },
+        "16fde203-5274-44eb-9953-0230356ecadb": {
+          "description": "Bądź w stanie wyjaśnić sposób, w jaki ograniczenia systemu mogą wpływać na układ projektu."
+        },
+        "64262bc9-71e0-479a-aed8-9edf6febcfb2": {
+          "description": "Sporządzać projekty i wdrażać plany rozwiązywania wszelkich kwestii w swoim kodzie."
+        },
+        "7596f6ef-a0cf-4161-99ab-47e503282aff": {
+          "description": "Omawiać proces projektowania i sposób, w jaki pomógł ukształtować ukończony projekt końcowy."
+        },
+        "cbc2d137-5084-4683-9953-5b84607d3b5e": {
+          "description": "Uczyć się planować z wyprzedzeniem na potrzeby bieżącego zadania."
+        },
+        "da122480-d822-40ed-b900-9f85e5f9a219": {
+          "description": "Opisać sposób, w jaki kompromis może pomóc w utrzymywaniu projektu na właściwym torze oraz inspirowaniu kreatywności."
+        },
+        "0d6f6de7-7f64-44f9-b145-04e20abb5f06": {
+          "description": "Identyfikować i lokalizuj błędy w programie."
+        },
+        "6d0272f5-1839-4362-9d24-d01e3c22878a": {
+          "description": "Przekładać ruchy na serię komend."
+        },
+        "17661603-f5a5-48a8-af4e-d890693958b8": {
+          "description": "Przedstawiać przemyślenia  dotyczące procesu debugowania w sposób dostosowany do wieku."
+        },
+        "30417d34-6df7-499f-a3d2-f2211f6c25c6": {
+          "description": "Przewidywaćy, gdzie program się nie sprawdzi."
+        },
+        "51a885af-378f-40b8-b732-5847e3029ca6": {
+          "description": "Modyfikować istniejący program, aby rozwiązywać błędy."
+        },
+        "81cbe598-0faf-485a-929d-37d84a9b2ae0": {
+          "description": "Rozwijać umiejętności w zakresie rozwiązywania problemu i krytycznego myślenia poprzez powtarzanie praktyk debugowania."
+        },
+        "cff6d24c-027b-4868-833b-39f8455969c5": {
+          "description": "Przedstawiać algorytm jako program komputerowy."
+        },
+        "fae63d1e-d4c3-4476-b83e-be2fed01d593": {
+          "description": "Wydawać komendy przemieszczania jako działania sekwencyjne w programie."
+        },
+        "2278fe47-674a-452b-a110-c2d084168b78": {
+          "description": "Utwórz program, aby ukończyć obraz używając czynności sekwencyjnych."
+        },
+        "b3943442-56a4-4b41-8bd3-4a24fdca57bb": {
+          "description": "Rozłóż złożone kształty na prostsze części."
+        },
+        "038af8d5-eb34-4704-8182-3544b59bfa5f": {
+          "description": "Definiować \"duszka\" jako postać lub obiekt na ekranie, który można przemieszczać i zmieniać."
+        },
+        "aa1e23b5-2513-4fcf-a928-f155a76de514": {
+          "description": "Twórz nowe kształty i przypisz im kostiumy i zachowania."
+        },
+        "71bba805-f69d-4c22-b17c-78445660e467": {
+          "description": "Twórz nowe kształty i przypisz im kostiumy i zachowania."
+        },
+        "ba09c181-b13a-4893-bed3-0e7be200e924": {
+          "description": "Utwórz animację za pomocą kształtek i zachowań."
+        },
+        "1c35af10-00d4-4f62-8210-f47021abc4c7": {
+          "description": "Opracowuj programy reagujące na określone czasowo zdarzenia."
+        },
+        "823b89dd-e152-4a4a-9247-35048f1da7a7": {
+          "description": "Utwórz interaktywną animację stosując zdarzenia."
+        },
+        "ed78bcaf-fb55-420e-8461-2b584d29557c": {
+          "description": "Opracowuj programy reagujące na dane wejściowe użytkownika."
+        },
+        "2ac10d94-c775-4a35-a2f8-110644f349fb": {
+          "description": "Programować rozwiązania problemów, które wyłaniają się przy projektowaniu wirtualnego zwierzątka takich jak: karmienie czy monitorowanie jego poczucia szczęścia."
+        },
+        "f02c6a10-0ba5-4005-a17b-565775ae6505": {
+          "description": "Tworzyć interaktywne wirtualne zwierzątko z użyciem zdarzeń, zachowań, zmiennych i własnych zdolności artystycznych."
+        },
+        "0815895c-2118-4dbc-8580-b95ce2e4a86b": {
+          "description": "Twórz programy reagujące na określone czasowo zdarzenia"
+        },
+        "56af8491-b4f2-477c-bb4d-433e82aacd4d": {
+          "description": "Twórz programy reagujące na dane wejściowe użytkowników"
+        },
+        "66a6368e-7191-4008-96a3-5df2dd519487": {
+          "description": "Twórz animacje tańców za pomocą kodu"
+        },
+        "dd233cc9-8725-40f5-9d7e-0800669cdb9c": {
+          "description": "Dzielićić długą sekwencję poleceń na największą powtarzalną sekwencję."
+        },
+        "eb44ae33-d96d-452c-ba0f-c69873c73c7d": {
+          "description": "Identyfikuj korzyści używania struktury pętli zamiast powtarzania ręcznego."
+        },
+        "ff1dc7da-d700-4b8b-9d38-cb42c327d722": {
+          "description": "Używać połączenia komend sekwencyjnych i zapętlonych, aby dojść do końca labiryntu."
+        },
+        "5f045788-30d6-4959-917e-fb90f29076df": {
+          "description": "Rozróżniać pomiędzy komendami, które należy powtarzać w pętlach, a komendami, które powinny być używane indywidualnie."
+        },
+        "cc04bc6b-d50f-4af3-b1ba-46e9da93a2ad": {
+          "description": "Identyfikuj korzyści używania struktury pętli zamiast powtarzania ręcznego."
+        },
+        "184cbf16-7035-47ce-b330-a38633c938d4": {
+          "description": "Identyfikuj korzyści używania struktury pętli zamiast powtarzania ręcznego."
+        },
+        "5193b13c-1c18-41da-bd39-4b97bc341615": {
+          "description": "Łamać skomplikowane zadania na mniejsze, powtarzalne sekcje."
+        },
+        "a2f5c2c9-1db5-4bec-bb03-82f5c9ab32c9": {
+          "description": "Zauważać duże, powtórzone wzorce wytworzone z mniejszych powtórzonych wzorców."
+        },
+        "44e65bc2-f4e8-4500-9664-444ec7f3c08a": {
+          "description": "Opisać, kiedy potrzebna jest pętla, pętla zagnieżdżona lub kiedy pętla nie jest potrzebna."
+        },
+        "71473df7-9841-40f0-8369-4085a1a6e042": {
+          "description": "Dzielić kod na największe powtarzalne sekwencje używając zarówno pętli, jak i pętli zagnieżdżonych."
+        },
+        "accd1c6c-e5b2-4a88-8aa9-efbd5f797260": {
+          "description": "Rozpoznawać różnicę pomiędzy używaniem pętli a pętli zagnieżdżonej."
+        },
+        "71538175-c679-49e4-a654-cee3a772b57a": {
+          "description": "Określać na postawie kryteriów, czy wyrażenie warunkowe jest spełnione."
+        },
+        "a1f58b86-3103-4620-a599-db8cf682ad4a": {
+          "description": "Definiować okoliczności, kiedy pewne części programu należy uruchamiać, a kiedy nie."
+        },
+        "26b5197f-9e6b-4fd5-adc6-f14fd7dfc91b": {
+          "description": "Rozwiązywać łamigłówki używając połączenie zapętlonych sekwencji i wyrażeń warunkowych."
+        },
+        "a93d4e66-ccc1-4a4b-accf-a18147f3b3c6": {
+          "description": "Przekładać język potoczny wyrażeń warunkowych w program."
+        },
+        "3900f9e2-399d-4635-82d5-4306b7742894": {
+          "description": "Rozróżniać pomiędzy pętlami, które powtarzają stałą liczbę razy i pętli, które się powtarzają, o ile warunek jest spełniony."
+        },
+        "d2e3fbb2-b562-470f-92f9-ea8af784acd6": {
+          "description": "Używać pętli \"dopóki\", aby tworzyć programy, które są w stanie rozwiązywać problemy o nieznanych wartościach."
+        },
+        "39f3e57a-db39-4c23-b597-c8cde4a16d2c": {
+          "description": "Określać na postawie kryteriów, czy wyrażenie warunkowe jest spełnione."
+        },
+        "abf0753e-31d1-4329-aeb3-86589deee06a": {
+          "description": "Definiować okoliczności, kiedy pewne części programu należy uruchamiać, a kiedy nie."
+        },
+        "10d155dc-e043-40b0-b6fa-40571cf271c3": {
+          "description": "Budować programy cechujące się zrozumieniem licznych strategii, aby wdrażać wyrażenia warunkowe."
+        },
+        "2b52c2b7-4177-4170-9ad4-375c17194e36": {
+          "description": "Przekładać język potoczny wyrażeń warunkowych i pętle w program."
+        },
+        "1c8eba0c-224f-4803-a8f1-a10b8d1cae14": {
+          "description": "Zagnieżdżać wyrażenia warunkowe, aby analizować liczne warunki wartości używając logiki \"jeśli\", \"w przeciwnym razie jeśli\" , \"w przeciwnym razie\"."
+        },
+        "50f29024-74df-48e0-95eb-93e6ebe60a2d": {
+          "description": "Łączyć w pary pętlę i wyrażenie warunkowe."
+        },
+        "201b5bbb-a506-4158-aa05-e4dd5e1b84ae": {
+          "description": "Używać określonych wcześniej funkcji do realizacji zwykle powtarzanych zadań."
+        },
+        "eded0214-c39e-4a3e-9033-c490c9869bd9": {
+          "description": "Używaj funkcji, aby upraszczać złożone programy."
+        },
+        "69bcb3ef-5a10-4e53-b5c3-0180653a7bd3": {
+          "description": "Używać określonych wcześniej funkcji do realizacji zwykle powtarzanych zadań."
+        },
+        "ee1b66a0-2f61-46b9-bdda-a43005bc666d": {
+          "description": "Rozpoznawać, kiedy funkcja może pomóc w uproszczeniu programu."
+        },
+        "17634871-f4ef-417f-a6bc-e9c0e76da60c": {
+          "description": "Rozpoznawać, kiedy funkcja może pomóc w uproszczeniu programu."
+        },
+        "18286e91-a106-48ee-93f4-1f782daea3fc": {
+          "description": "Dzielićić na kategorie i generalizować kod tworząc użyteczne funkcje."
+        },
+        "65f062bb-b2ca-4b6a-9703-3829dc861277": {
+          "description": "Użyj zmiennych w połączeniu z monitami."
+        },
+        "964c8b4f-f4be-440d-87ec-49d846ee1f49": {
+          "description": "Operacje Użyj zmiennych do przechowywania słów i fraz."
+        },
+        "20c60f52-328b-4b76-bded-a5a4f6cfaf46": {
+          "description": "Używać zmiennych w miejsce powtarzających się wartości wewnątrz programu."
+        },
+        "c9fe2240-53cd-457b-844e-d651dda2981b": {
+          "description": "Używaj zmiennych do zmiany wartości w pętli."
+        },
+        "d1d6c23b-fcc7-4ddf-90a2-ebbf0369ca4d": {
+          "description": "Przypisywać wartości do istniejących zmiennych."
+        },
+        "b9bacce3-773c-4481-9888-2ac638b2e0dd": {
+          "description": "Badać kod, aby znaleźć miejsca, w których zmienne można zastąpić konkretnymi wartościami."
+        },
+        "f122ba8c-e478-40fd-baac-c7c1d491de47": {
+          "description": "Identyfikować obszary, w którym można używać zmiennych do modyfikowania ilości w trakcie czasu przebiegu."
+        },
+        "749bff30-281b-4fb5-bd44-c59f4147c12f": {
+          "description": "Rozpoznaj, kiedy używać pętli for i kiedy używać innych pętli, takich jak powtarzanie i while pętli."
+        },
+        "c9dc4c8b-3766-4431-a645-dcdd01004729": {
+          "description": "Określić wartość początkową, wartość zatrzymania i wartość krokową dla pętli for."
+        },
+        "4ae94b61-edec-422a-a972-faf2aba5ca34": {
+          "description": "Użyj dla pętli, aby zmienić pętlę kilka razy z różnymi wartościami."
+        },
+        "70a4854a-3d08-488e-9b7e-829bb19378e0": {
+          "description": "Rozpoznaj, kiedy używać pętli for i kiedy używać innych pętli, takich jak powtarzanie i while pętli."
+        },
+        "0e1063a5-74f3-4b77-9ecd-b65f1793d5c6": {
+          "description": "Pokonywać przeszkody takie jak ograniczenia czasowe lub błędy."
+        },
+        "35caa451-b503-4105-9a03-19a2b5ba7efe": {
+          "description": "Rozpoznawać oczekiwania, gdy uczniowie przechodzą do laboratorium komputerowego."
+        },
+        "8ed06bac-d128-4388-8b82-63bed501bc87": {
+          "description": "Stosować właściwą terminologię mówiąc o myszce, panelu dotykowego lub ekranu dotykowego."
+        },
+        "beb030b9-f0f3-499c-bd5a-6da9e8266ca4": {
+          "description": "Eksperymentować ze standardowymi działaniami programistycznymi z użyciem bloków, takimi jak: klikanie, przeciąganie i opuszczanie, itp."
+        },
+        "f50e44ae-ba81-475d-a780-06f7ccb2784b": {
+          "description": "Wypracowywać odpowiednie zachowania w laboratorium komputerowym"
+        },
+        "0bc300ad-be51-42e1-a5ab-c11b50e5aa2e": {
+          "description": "Konstruować program poprzez przeorganizowanie ruchów sekwencyjnych."
+        },
+        "e0ea7881-94a3-4e3f-8330-c6c3835be958": {
+          "description": "Przekładać ruchy na serię komend."
+        },
+        "fbf4a1c8-c405-456d-968b-731bacd63b5d": {
+          "description": "Budować program komputerowy z zestawu poleceń pisemnych"
+        },
+        "3ca3fd88-d543-4394-b290-3077dd49c7d0": {
+          "description": "Tworzyć sekwencję komend w porządku logicznym."
+        },
+        "5abe7a0d-96f9-4c2e-98ba-1edc37bcbb9c": {
+          "description": "Rozpoznawać problemy lub \"błędy\" w programie i opracowywać plan rozwiązania tych kwestii."
+        },
+        "4ab1cc74-c357-473f-b860-023590257b8e": {
+          "description": "Przekładać ruchy na serię komend."
+        },
+        "cdd28404-7d5a-4081-af55-be88baa52e1c": {
+          "description": "Identyfikować i lokalizuj błędy w programie."
+        },
+        "722433cb-a98d-4830-a581-dc08bbdb2522": {
+          "description": "Konstruować program z użyciem struktur, w których powtarzają się obszary kodu"
+        },
+        "7858cda1-ca5d-4367-9ac4-123a0e57e2b5": {
+          "description": "Doskonalić istniejący kod znajdując obszary powtarzania i przenoszenia ich w struktury zapętlające się"
+        },
+        "76d1ff89-59cc-4f0a-a92c-ae0469b6a880": {
+          "description": "Dzielićić długą sekwencję poleceń na najmniejszą możliwą powtarzalną sekwencję."
+        },
+        "8866b921-a2c8-43a1-850c-3f6d840d20e4": {
+          "description": "Identyfikuj korzyści używania struktury pętli zamiast powtarzania ręcznego."
+        },
+        "302a6528-ac67-4591-99be-6ec6ed20e45f": {
+          "description": "Tworzyć program do rysowania skomplikowanych kształtów poprzez powtarzanie prostych sekwencji."
+        },
+        "537dca43-d083-411c-936c-0b91d75d8936": {
+          "description": "Policzyć ile razy należy powtórzyć działanie i przedstawić tę liczbę w postaci pętli."
+        },
+        "cf8ca80c-59da-42ec-bd62-4dfd897d0caf": {
+          "description": "Rozłożyć kształt na największe powtarzalne sekwencje."
+        },
+        "163df6a6-3169-4139-b7ed-e4f29d30d945": {
+          "description": "Policzyć ile razy należy powtórzyć działanie i przedstawić tę liczbę w postaci pętli."
+        },
+        "4bb35630-2996-4bb0-8049-152a7dee5add": {
+          "description": "Tworzyć program do rysowania skomplikowanych kształtów poprzez powtarzanie prostych sekwencji."
+        },
+        "7afcb83c-4dfd-4206-8f62-224be6ccbada": {
+          "description": "Rozłożyć kształt na największe powtarzalne sekwencje."
+        },
+        "33f7a55b-b35c-45d5-b3d1-eae65ca53d46": {
+          "description": "Identyfikować działania, które nawiązują do zdarzeń wejściowych."
+        },
+        "3dc76a76-2336-4100-9dce-340ecb36335c": {
+          "description": "Tworzyć animowaną, interaktywną historię z użyciem sekwencji i funkcjami \"event-handler\"."
+        },
+        "bd8c007c-692a-4433-a3fa-6645aefb73ce": {
+          "description": "Dzielić się kreatywnym rekwizytem z innymi uczniami."
+        },
+        "6fa60c6b-18bb-4031-96c8-f30da36fe9ef": {
+          "description": "Identyfikować działania, które nawiązują do zdarzeń wejściowych."
+        },
+        "77cbc6fc-2092-4d48-9228-dc83813fda4c": {
+          "description": "Tworzyć animowaną, interaktywną historię z użyciem sekwencji i funkcjami \"event-handler\"."
+        },
+        "86f2847b-df75-4023-a828-61521c7bd71d": {
+          "description": "Dzielić się kreatywnym rekwizytem z innymi uczniami."
+        },
         "50b1fb31-4471-433d-a5f1-74e38886d49f": {
           "description": "Budować i udostępniać swoje własne aplikacje w \"App Lab\" używając elementów takich jak: przyciski, tekst, dźwięk i ekrany."
         },

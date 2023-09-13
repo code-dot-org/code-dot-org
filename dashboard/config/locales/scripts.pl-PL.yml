@@ -351,6 +351,8 @@ pl:
               name: Czat AI
             lesson-51:
               name: Rubryki AI
+            lesson-52:
+              name: Dance Lab2
           name: wszystkie rzeczy
           student_description: Wszystkie typy poziomów dla testowania UI
           title: Wszystkie te Rzeczy!
@@ -2823,6 +2825,8 @@ pl:
             lesson-4:
               name: Zaprojektuj okładkę swojej interaktywnej książki
           name: csc-bookcovers-2023
+        csc-ecosystems:
+          name: csc-ecosystems
         csc-ecosystems-2022:
           name: csc-ecosystems-2022
         csc-ecosystems-2023:
@@ -3799,6 +3803,7 @@ pl:
               display_name: Treści
             cspSurvey:
               display_name: Treści
+          name: csd3-virtual
           student_description: Będziesz programować animacje, sztukę interaktywną
             i gry w Game Lab.Zacznij od prostych kształtów i buduj bardziej wyszukane
             animacje i gry oparte na duszku, używając tych samych koncepcji programowania

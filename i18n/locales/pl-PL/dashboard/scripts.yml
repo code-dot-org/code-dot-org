@@ -151,6 +151,8 @@ pl:
               name: Czat AI
             lesson-51:
               name: Rubryki AI
+            lesson-52:
+              name: Dance Lab2
         algebraPD2b:
           description: 'Faza 2 Online: Mieszane letnie studia'
           description_short: 'Faza 2 Online: Mieszane letnie studia'
@@ -2892,6 +2894,7 @@ pl:
             cspSurvey:
               display_name: Treści
           student_description: Będziesz programować animacje, sztukę interaktywną i gry w Game Lab.Zacznij od prostych kształtów i buduj bardziej wyszukane animacje i gry oparte na duszku, używając tych samych koncepcji programowania i procesu projektowania, którego informatycy używają w codziennej pracy. W ramach projektu finałowego będziesz opracowywać spersonalizowany program interaktywny.
+          name: csd3-virtual
         ui-test-script-in-course-2017:
           lesson_groups:
             lg_1:
@@ -4883,6 +4886,8 @@ pl:
           name: csa-pl-standalone-code-2022
           title: Projekty CSA Profesjonalnego kodowania edukacyjnego
           description: Uczestnicy warsztatów będą mogli zobaczyć przykładowe projekty i kod podczas PL z sąsiedztwa, konsoli i teatru.
+        csc-ecosystems:
+          name: csc-ecosystems
         dlp-csd-overview-2022:
           title: Odkrycia informatyki Omówienie głębszego uczenia się
           description: Witamy w programie Głębsze uczenie 2021 dla zaczynających moderatorów Odkryć informatyki.
