@@ -1517,6 +1517,184 @@
         "pre-express-2022/A Royal Battle with Events": {
           "name": "Királyi csata eseményekkel"
         },
+        "coursea-2023/Safety in My Online Neighborhood": {
+          "name": "Online környezetem biztonsága",
+          "overview": "[![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nEredetileg a leckét a Common Sense Education készítette. [Tudj meg többet róla.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nAz internet ereje által a diákok megtapasztalják és meg is láthathatják azokat a helyeket, amelyeket esetleg személyesen nem kereshetnek fel. De csakúgy, mint a való világban való utazás során, itt is fontos, hogy az utazás során biztonságban legyenek. Ezen a virtuális kirándoláson a gyerekek gyakorolhatják, hogy hogyan maradjanak biztonságban az online kalandozásaik során."
+        },
+        "coursea-2023/Learn to Drag and Drop": {
+          "name": "Ismerkedés a Fogd és Vidd technikával",
+          "overview": "Ez a **készségfejlesztő** lecke képet ad a hallgatóknak arról, hogy mire számíthatnak, amikor a számítógépes laborba indulnak. Egy rövid beszélgetéssel kezdődik, amelyben megismerik a a számítógépes laborban való viselkedést, majd áttérnek a számítógép használatára, és online rejtvényeket oldanak meg.",
+          "student_overview": "A feladvány befejezéséhez kattints és húzd át"
+        },
+        "coursea-2023/Happy Maps": {
+          "name": "Vidám térképek",
+          "overview": "Ez a **kontextusbeállító** lecke összehozza a csapatokat egy egyszerű feladattal: juttasd el a \"Flurb” -öt a gyümölcshöz. A diákok gyakorolják a pontos utasítások megadását, miközben azon dolgoznak, hogy az utasításokat lefordítsák a megadott szimbólumokra."
+        },
+        "coursea-2023/Sequencing with Scrat": {
+          "name": "Szekvenciák a Motkánnyal",
+          "overview": "Ebben a **készségépítő** leckében a diákok szekvenciális algoritmusokat dolgoznak ki, amelyek segítségével a mókusszerű karaktert a labirintus egyik oldaláról a másik oldalon lévő makkhoz mozgatják. Ehhez lineáris sorrendben rakják össze a kódblokkokat."
+        },
+        "coursea-2023/Programming with Rey and BB-8": {
+          "name": "Programozás Rey és BB-8 segítségével",
+          "overview": "Ebben a leckében a diákok újszerű programozási képességeiket bonyolultabb módon fogják használni egy trükkös tanfolyamban, BB-8-tet irányítva.",
+          "student_overview": "Segíts BB-8-nek begyűjteni a fémdarabokat"
+        },
+        "coursea-2023/The Big Event Jr": {
+          "name": "Az ifjabbik Nagy Esemény"
+        },
+        "coursea-2023/End of Course Project": {
+          "name": "Kurzus Projekt vége"
+        },
+        "courseb-2023/Digital Trails": {
+          "name": "Digitális útonalak",
+          "overview": " [![common sense education](https://curriculum.code.org/static/img/common_sense_education.png)](https://www.commonsense.org)\n\nEzt a leckét eredetileg a Common Sense Education készítette. [Learn more.](https://www.commonsense.org/education/digital-citizenship/curriculum)\n\nAmit online csinálsz, az mindig online marad? A diákok megtanulják, hogy az általuk online megosztott információk digitális lábnyomot hagynak maguk után. Az, hogy ez az útvonal egy keskeny ösvény lesz-e, vagy egy széles út, káros lesz-e számukra, vagy hasznos, attól függ, hogy hogyan kezelik ezt a lábnyomot. A tanulók összehasonlíthatják a különféle nyomvonalakat, és elsajátíthatják a kritikus gondolkodást, ami alapján képesek lesznek megfelelő döntéseket hozni arról, hogy milyen információkat hagynak maguk után a digiális úton.",
+          "preparation": "-   Az oktatási anyagok áttekintése.\n-   Egyes tanulók szórólapjának nyomtatása.",
+          "purpose": "A Common Sense digitális állampolgársági tanterve a gyermekekkel, a médiával és a technológiával kapcsolatos legújabb kitatások alapján hat fő témakörrel foglalkozik. Ez a lecke a digitális lábnyomra és identitásra összpontosít. A tanulók megismerik az online megosztás előnyeit és kockázatait, és felfedezik, hogy a digitális személyiség hogyan befolyásolhatja az önismeretet, hírnevet, és a kapcsolatokat.",
+          "student_overview": "A digitális lábnyom megismerése, valamint a biztonság megteremtése a webhelyek látogatása során. "
+        },
+        "courseb-2023/Move It, Move It": {
+          "name": "Gyerünk, gyerünk!"
+        },
+        "courseb-2023/Programming with Harvester": {
+          "name": "Programozás az aratóval"
+        },
+        "courseb-2023/Getting Loopy": {
+          "name": "Ciklikusság"
+        },
+        "courseb-2023/The Right App": {
+          "name": "A megfelelő alkalmazás"
+        },
+        "courseb-2023/The Big Event Jr": {
+          "name": "Az ifjabbik Nagy Esemény"
+        },
+        "courseb-2023/Mini-Project: A Royal Battle with Events": {
+          "name": "Mini-projekt: Királyi csata eseményekkel"
+        },
+        "courseb-2023/End of Course Project": {
+          "name": "Kurzus Projekt vége"
+        },
+        "coursec-2023/Loops with Rey and BB-8": {
+          "name": "Ciklusok Reyjel és BB-8-tel",
+          "overview": "A „Getting Loopy” című utasítások ismétlődésének koncepciójára építve ebben a szakaszban a tanulók ciklusokat használnak, amiben BB-8 lesz a segítségükre.",
+          "student_overview": "Segíts BB-8-nek teljesíteni ezt a kihívást ciklusok használatával! "
+        },
+        "coursec-2023/The Big Event": {
+          "name": "A nagy esemény"
+        },
+        "coursec-2023/Picturing Data": {
+          "name": "Az adatok leképezése"
+        },
+        "coursec-2023/Binary Bracelets": {
+          "name": "Bináris karkötők"
+        },
+        "coursec-2023/End of Course Project": {
+          "name": "Kurzus Projekt vége"
+        },
+        "coursed-2023/Graph Paper Programming": {
+          "name": "Grafikus programozás"
+        },
+        "coursed-2023/Relay Programming": {
+          "name": "Váltó programozás"
+        },
+        "coursed-2023/Dance Party": {
+          "name": "Táncos buli",
+          "purpose": "A leckék a kódírás és az eseményprogramozás fő számítástechnikai koncepcióit mutatják be (blokkok segítségével)."
+        },
+        "coursed-2023/Conditionals with Cards": {
+          "name": "Feltételek kártyákkal"
+        },
+        "coursed-2023/End of Course Project": {
+          "name": "Kurzus Projekt vége"
+        },
+        "coursee-2023/Private and Personal Information": {
+          "name": "Magán és személyes információk",
+          "preparation": "-   Az oktatási anyagok áttekintése.\n-   Egyes tanulók szórólapjának nyomtatása."
+        },
+        "coursee-2023/Swimming Fish with Sprite Lab": {
+          "preparation": "-   Játszd végig a feladványokat, keresd azokat a területeket, amelyek problémát jelenthetnek az osztályodnak.\n-   Ellenőrizd, hogy minden diáknak van egy olyan naplója, amelyben a gondolatait rögzíti."
+        },
+        "coursee-2023/Hello World": {
+          "name": "Helló világ"
+        },
+        "coursee-2023/Mini-Project: About Me": {
+          "name": "Miniprojekt: Rólam"
+        },
+        "coursee-2023/Drawing with Loops": {
+          "preparation": "-   Játszd végig a feladványokat, keresd azokat a területeket, amelyek problémát jelenthetnek az osztályodnak.\n-   Ellenőrizd, hogy minden diáknak van egy olyan naplója, amelyben a gondolatait rögzíti."
+        },
+        "coursee-2023/Songwriting": {
+          "name": "Dalszerzés paraméterekkel"
+        },
+        "coursee-2023/Functions in Minecraft": {
+          "preparation": "-   Játszd végig a feladványokat, keresd azokat a területeket, amelyek problémát jelenthetnek az osztályodnak.\n-   Ellenőrizd, hogy minden diáknak van egy olyan naplója, amelyben a gondolatait rögzíti."
+        },
+        "coursee-2023/Functions with Artist": {
+          "preparation": "-   Játszd végig a feladványokat, keresd azokat a területeket, amelyek problémát jelenthetnek az osztályodnak.\n-   Ellenőrizd, hogy minden diáknak van egy olyan naplója, amelyben a gondolatait rögzíti."
+        },
+        "coursee-2023/Conditionals with the Farmer": {
+          "preparation": "-   Játszd végig a feladványokat, keresd azokat a területeket, amelyek problémát jelenthetnek az osztályodnak.\n-   Ellenőrizd, hogy minden diáknak van egy olyan naplója, amelyben a gondolatait rögzíti."
+        },
+        "coursee-2023/Functions with Harvester": {
+          "preparation": "-   Játszd végig a feladványokat, keresd azokat a területeket, amelyek problémát jelenthetnek az osztályodnak.\n-   Ellenőrizd, hogy minden diáknak van egy olyan naplója, amelyben a gondolatait rögzíti."
+        },
+        "coursee-2023/Designing for Accessibility": {
+          "name": "Hozzáférhetőség tervezése"
+        },
+        "coursee-2023/Digital Sharing": {
+          "name": "Digitális megosztás"
+        },
+        "coursee-2023/End of Course Project": {
+          "name": "Kurzus Projekt vége"
+        },
+        "coursef-2023/Mini-Project: Virtual Pet": {
+          "name": "Miniprojekt: Virtuális kisállat",
+          "preparation": "-   Játszd végig a feladványokat, keresd azokat a területeket, amelyek problémát jelenthetnek az osztályodnak.\n-   Ellenőrizd, hogy minden diáknak van egy olyan naplója, amelyben a gondolatait rögzíti."
+        },
+        "coursef-2023/Mini-Project: User Input Programs": {
+          "name": "Miniprojekt: Felhasználói adatbeviteli programok"
+        },
+        "coursef-2023/Outbreak": {
+          "overview": "Ez a leckében az események köré épülő **készségfejlesztést** kombináljuk egy **miniprojekttel**, ahol a diákok saját számítógépes szimulációt készíthetnek a Sprite Lab program segítségével. A diákok tanulmányozva a szimulációt megértik, hogy milyen gyorsan terjed egy vírus, és hogy mit lehet tenni a terjedés lassítása érdekében. ",
+          "preparation": "-   Játszd végig a feladványokat, keresd azokat a területeket, amelyek problémát jelenthetnek az osztályodnak.\n-   Ellenőrizd, hogy minden diáknak van egy olyan naplója, amelyben a gondolatait rögzíti.",
+          "purpose": "Az előző leckében a diákok egy egyszerű szimulációból származó adatokat gyűjtöttek és értelmeztek.  Ebben a leckében a diákok az utasításokat követve saját szimulációs modelljüket programozzák. A diákok a valós világban előforduló vírusjárványokról szerzett előzetes ismereteiket egy fiktív forgatókönyvre fogják alkalmazni. ",
+          "student_overview": "Egy vírus elérte Szörnyvárost! Tanulj meg vírusszimulátort készíteni, és segíts a szörnyeknek, hogy újra egészségesek legyenek."
+        },
+        "coursef-2023/The Internet": {
+          "name": "Az internet"
+        },
+        "coursef-2023/End of Course Project": {
+          "name": "Kurzus Projekt vége"
+        },
+        "express-2023/Dance Party": {
+          "name": "Táncos buli",
+          "purpose": "A leckék a kódírás és az eseményprogramozás fő számítástechnikai koncepcióit mutatják be (blokkok segítségével)."
+        },
+        "express-2023/Loops with Rey and BB-8": {
+          "name": "Ciklusok Reyjel és BB-8-tel",
+          "student_overview": "Segíts BB-8-nek teljesíteni ezt a kihívást ciklusok használatával! "
+        },
+        "express-2023/End of Course Project": {
+          "name": "Kurzus Projekt vége"
+        },
+        "pre-express-2023/Learn to Drag and Drop": {
+          "name": "Ismerkedés a Fogd és Vidd technikával",
+          "overview": "Ez a **készségfejlesztő** lecke képet ad a hallgatóknak arról, hogy mire számíthatnak, amikor a számítógépes laborba indulnak. Egy rövid beszélgetéssel kezdődik, amelyben megismerik a a számítógépes laborban való viselkedést, majd áttérnek a számítógép használatára, és online rejtvényeket oldanak meg.",
+          "student_overview": "A feladvány befejezéséhez kattints és húzd át"
+        },
+        "pre-express-2023/Sequencing with Scrat": {
+          "name": "Szekvenciák a Motkánnyal",
+          "overview": "Ebben a **készségépítő** leckében a diákok szekvenciális algoritmusokat dolgoznak ki, amelyek segítségével a mókusszerű karaktert a labirintus egyik oldaláról a másik oldalon lévő makkhoz mozgatják. Ehhez lineáris sorrendben rakják össze a kódblokkokat."
+        },
+        "pre-express-2023/Programming with Rey and BB-8": {
+          "name": "Programozás Rey és BB-8 segítségével",
+          "overview": "Ebben a leckében a diákok újszerű programozási képességeiket bonyolultabb módon fogják használni egy trükkös tanfolyamban, BB-8-tet irányítva."
+        },
+        "pre-express-2023/Programming with Harvester": {
+          "name": "Programozás az aratóval"
+        },
+        "pre-express-2023/A Royal Battle with Events": {
+          "name": "Királyi csata eseményekkel"
+        },
         "Hour of Code/Hour of Code 2013": {
           "name": "Kódolás órája 2013"
         },
