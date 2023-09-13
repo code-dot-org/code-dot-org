@@ -76,7 +76,6 @@
   "designWorkspace_makeDefaultButton": "Направи по Подразбиране",
   "designWorkspace_propertiesTab": "СВОЙСТВА",
   "designWorkspace_restoreThemeButton": "Приложи Тема",
-  "downloadMakerAppFor": "Инсталирайте Code.org Maker App за {OS} ({installerVersion})",
   "dropletBlock_appendItem_param0_description": "Масивът за промяна.",
   "dropletBlock_appendItem_param1_description": "Елемнтът за добавяне към края на масива.",
   "dropletBlock_arcLeft_description": "Премества костенурката напред и наляво в гладка, закръглена дъга. ",

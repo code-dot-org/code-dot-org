@@ -5,13 +5,30 @@
   "correctAnswer": "E saktë",
   "datasets": {
     "abalone": {
+      "card": {
+        "context": {
+          "potentialMisuses": "[empty string]"
+        }
+      },
       "fields": {
         "Length": {
           "id": "Gjatësi"
         }
       }
     },
+    "basketball_shots": {
+      "card": {
+        "context": {
+          "potentialMisuses": "[empty string]"
+        }
+      }
+    },
     "bike_sharing": {
+      "card": {
+        "context": {
+          "potentialMisuses": "[empty string]"
+        }
+      },
       "fields": {
         "index": {
           "id": "indeks"
@@ -56,6 +73,11 @@
       }
     },
     "heart": {
+      "card": {
+        "context": {
+          "potentialMisuses": "[empty string]"
+        }
+      },
       "fields": {
         "Age": {
           "id": "Mosha"
@@ -63,9 +85,21 @@
       }
     },
     "insurance_cost": {
+      "card": {
+        "context": {
+          "potentialMisuses": "[empty string]"
+        }
+      },
       "fields": {
         "age": {
           "id": "mosha"
+        }
+      }
+    },
+    "jeans": {
+      "card": {
+        "context": {
+          "potentialMisuses": "[empty string]"
         }
       }
     },
@@ -91,6 +125,11 @@
       }
     },
     "movies": {
+      "card": {
+        "context": {
+          "potentialMisuses": "[empty string]"
+        }
+      },
       "fields": {
         "Country": {
           "id": "Shteti"
@@ -120,6 +159,11 @@
       }
     },
     "nutrition": {
+      "card": {
+        "context": {
+          "potentialMisuses": "[empty string]"
+        }
+      },
       "fields": {
         "Description": {
           "id": "Përshkrimi"
@@ -230,6 +274,9 @@
     },
     "shapes_v1_toy": {
       "fields": {
+        "sides": {
+          "id": "brinjtë"
+        },
         "size": {
           "id": "madhësia"
         }
@@ -237,6 +284,9 @@
     },
     "shapes_v2_toy": {
       "fields": {
+        "sides": {
+          "id": "brinjtë"
+        },
         "size": {
           "id": "madhësia"
         }
@@ -253,6 +303,11 @@
       }
     },
     "songs": {
+      "card": {
+        "context": {
+          "potentialMisuses": "[empty string]"
+        }
+      },
       "fields": {
         "Artist": {
           "id": "Artisti"
@@ -260,6 +315,12 @@
       }
     },
     "student_alcohol_consumption": {
+      "card": {
+        "context": {
+          "potentialMisuses": "[empty string]",
+          "potentialUses": "[empty string]"
+        }
+      },
       "fields": {
         "age": {
           "id": "mosha"
@@ -301,12 +362,16 @@
       }
     }
   },
+  "modelCardFeatures": "Karakteristikat",
+  "modelCardLabel": "Emërtimi",
   "modelCardPossibleValuesMaximum": "Maksimum",
   "modelCardPossibleValuesMinimum": "minimum",
   "navigateBack": "Kthehu",
   "navigateDone": "Përfundo",
   "navigateForward": "Vazhdo ",
+  "resultsTableFeatureHeader": "Karakteristikat",
   "saveProgress": "Ruaj",
+  "trainModelHeading": "Trajnimi",
   "tryAgain": "Provo përsëri",
   "uniqueOptionsWarningNotice": "Shënim"
 }

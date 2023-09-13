@@ -53,6 +53,7 @@
   "dropletBlock_showMobileControls_param3_description": "Smerová podložka a medzerníkové tlačidlo viditeľné iba na mobilnom telefóne, ak je to pravda.",
   "dropletBlock_sprite.height_signatureOverride": "[Sprite].výška",
   "dropletBlock_sprite.height_description": "Výška sprite.",
+  "dropletBlock_sprite.width_signatureOverride": "[Sprite].width",
   "dropletBlock_sprite.width_description": "Šírka sprite.",
   "dropletBlock_Group_description": "Vytvorí prázdnu skupinu.",
   "dropletBlock_add_description": "Pridá daného sprite do skupiny.",
