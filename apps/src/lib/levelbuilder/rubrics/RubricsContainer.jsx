@@ -301,6 +301,7 @@ export default function RubricsContainer({
           text="Save your rubric"
           onClick={saveRubric}
           size={Button.ButtonSize.narrow}
+          disabled={saveNotificationText === 'Saving...'}
         />
       </div>
       <div style={styles.bottomRow}>
