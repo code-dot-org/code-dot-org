@@ -1981,7 +1981,7 @@ pt:
           student_description: Esta unidade contém uma pesquisa para quando e a sua
             aula de Descobertas CS e as unidades forem concluídas. O seu professor
             lhe dirá quando você deverá fazer essa pesquisa.
-          title: Pesquisa pós-curso da CS Discoveries
+          title: Pesquisa pós-curso da Descobertas da CC
         csd-post-survey-2022:
           description: Esta unidade contém a Pesquisa Após o Curso das Descobertas
             CS. Esta unidade pode ser atribuída depois que os alunos completarem a
@@ -1989,7 +1989,7 @@ pt:
           student_description: Esta unidade contém uma pesquisa para quando e a sua
             aula de Descobertas CS e as unidades forem concluídas. O seu professor
             lhe dirá quando você deverá fazer essa pesquisa.
-          title: Pesquisa pós-curso da CS Discoveries
+          title: Pesquisa pós-curso da Descobertas da CC
         csd-post-survey-2023:
           description: Esta unidade contém a Pesquisa Pós-Curso. Esta unidade pode
             ser disponibilizada depois que os alunos concluírem a sua unidade final
@@ -2011,9 +2011,9 @@ pt:
             para resolver problemas."
           lesson_groups:
             csd1_1:
-              display_name: 'Capítulo 1: O Processo de Solução de Problemas'
+              display_name: 'Capítulo 1: O Processo de Resolução de Problemas'
             csd1_2:
-              display_name: 'Capítulo 2: Computadores e Solução de Problemas'
+              display_name: 'Capítulo 2: Computação e Resolução de Problemas'
             cspSurvey:
               display_name: Questionário
           title: Unidade 1 de CSD - Solução de problemas ('17 -'18)
@@ -2022,9 +2022,9 @@ pt:
             para resolver problemas."
           lesson_groups:
             csd1_1:
-              display_name: 'Capítulo 1: O Processo de Solução de Problemas'
+              display_name: 'Capítulo 1: O Processo de Resolução de Problemas'
             csd1_2:
-              display_name: 'Capítulo 2: Computadores e Solução de Problemas'
+              display_name: 'Capítulo 2: Computação e Resolução de Problemas'
             cspSurvey:
               display_name: Questionário
           title: Unidade 1 CSD - Solução de problemas ('18 -'19)
@@ -2033,9 +2033,9 @@ pt:
             para resolver problemas."
           lesson_groups:
             csd1_1:
-              display_name: 'Capítulo 1: O Processo de Solução de Problemas'
+              display_name: 'Capítulo 1: O Processo de Resolução de Problemas'
             csd1_2:
-              display_name: 'Capítulo 2: Computadores e Solução de Problemas'
+              display_name: 'Capítulo 2: Computação e Resolução de Problemas'
             cspSurvey:
               display_name: Questionário
           title: Unidade 1 de CSD - Solução de problemas e computação ('19 -'20)
@@ -2044,9 +2044,9 @@ pt:
             para resolver problemas."
           lesson_groups:
             csd1_1:
-              display_name: 'Capítulo 1: O Processo de Solução de Problemas'
+              display_name: 'Capítulo 1: O Processo de Resolução de Problemas'
             csd1_2:
-              display_name: 'Capítulo 2: Computadores e Solução de Problemas'
+              display_name: 'Capítulo 2: Computação e Resolução de Problemas'
             cspSurvey:
               display_name: Questionário
         csd1-2021:
@@ -2054,9 +2054,9 @@ pt:
             para resolver problemas."
           lesson_groups:
             csd1_1:
-              display_name: 'Capítulo 1: O Processo de Solução de Problemas'
+              display_name: 'Capítulo 1: O Processo de Resolução de Problemas'
             csd1_2:
-              display_name: 'Capítulo 2: Computadores e Solução de Problemas'
+              display_name: 'Capítulo 2: Computação e Resolução de Problemas'
             cspSurvey:
               display_name: Questionário
         csd1-2022:
@@ -2079,7 +2079,7 @@ pt:
             para resolver problemas."
           lesson_groups:
             csd1_1:
-              display_name: 'Capítulo 1: O Processo de Solução de Problemas'
+              display_name: 'Capítulo 1: O Processo de Resolução de Problemas'
             csd1_2:
               display_name: 'Capítulo 2: Computadores e Solução de Problemas'
             csd1_3:
@@ -2100,9 +2100,9 @@ pt:
         csd1-2023:
           lesson_groups:
             lessonGroup-2:
-              display_name: 'Capítulo 1: O Processo de Solução de Problemas'
+              display_name: 'Capítulo 1: O Processo de Resolução de Problemas'
             lessonGroup-3:
-              display_name: 'Capítulo 2: Computadores e Solução de Problemas'
+              display_name: 'Capítulo 2: Computação e Resolução de Problemas'
             lessonGroup-5:
               display_name: Questionário
           title: Unidade 1 - Resolução de Problemas e Computação ('23-'24)
@@ -2166,9 +2166,9 @@ pt:
             para resolver problemas."
           lesson_groups:
             csd1_1:
-              display_name: 'Capítulo 1: O Processo de Solução de Problemas'
+              display_name: 'Capítulo 1: O Processo de Resolução de Problemas'
             csd1_2:
-              display_name: 'Capítulo 2: Computadores e Solução de Problemas'
+              display_name: 'Capítulo 2: Computação e Resolução de Problemas'
             cspSurvey:
               display_name: Questionário
           title: CSD Unidade 1 - solução de problemas (versão piloto)
@@ -2968,7 +2968,7 @@ pt:
         csd4-pilot:
           lesson_groups:
             csd1_2:
-              display_name: 'Capítulo 2: Computadores e Solução de Problemas'
+              display_name: 'Capítulo 2: Computação e Resolução de Problemas'
           title: Computação e Resolução de Problemas
         csd4-preview-2021:
           description: A unidade 4 apresenta os impactos sociais mais amplos da computação.
@@ -6168,7 +6168,7 @@ pt:
         focus-on-coding1-2023:
           lesson_groups:
             lessonGroup-2:
-              display_name: 'Capítulo 1: O Processo de Solução de Problemas'
+              display_name: 'Capítulo 1: O Processo de Resolução de Problemas'
             lessonGroup-4:
               display_name: Questionário
           title: Unidade 1 - Resolução de Problemas e Computação ('23-'24)
@@ -6423,7 +6423,7 @@ pt:
         focus-on-creativity1-2023:
           lesson_groups:
             lessonGroup-2:
-              display_name: 'Capítulo 1: O Processo de Solução de Problemas'
+              display_name: 'Capítulo 1: O Processo de Resolução de Problemas'
             lessonGroup-4:
               display_name: Questionário
           title: Unidade 1 - Resolução de Problemas e Computação ('23-'24)
@@ -6678,7 +6678,7 @@ pt:
         focus-on-data1-2023:
           lesson_groups:
             lessonGroup-2:
-              display_name: 'Capítulo 1: O Processo de Solução de Problemas'
+              display_name: 'Capítulo 1: O Processo de Resolução de Problemas'
             lessonGroup-4:
               display_name: Questionário
         focus-on-data2:
@@ -6878,7 +6878,7 @@ pt:
         focus-on-design-with-purpose1-2023:
           lesson_groups:
             lessonGroup-2:
-              display_name: 'Capítulo 1: O Processo de Solução de Problemas'
+              display_name: 'Capítulo 1: O Processo de Resolução de Problemas'
             lessonGroup-4:
               display_name: Questionário
           title: Unidade 1 - Resolução de Problemas e Computação ('23-'24)
@@ -7185,9 +7185,9 @@ pt:
             do Professor\" da unidade.\n    :::\n\n<br>\n<br>"
           lesson_groups:
             lessonGroup-2:
-              display_name: 'Capítulo 1: O Processo de Solução de Problemas'
+              display_name: 'Capítulo 1: O Processo de Resolução de Problemas'
             lessonGroup-3:
-              display_name: 'Capítulo 2: Computadores e Solução de Problemas'
+              display_name: 'Capítulo 2: Computação e Resolução de Problemas'
             lessonGroup-5:
               display_name: Questionário
           title: Unidade 1 - Resolução de Problemas e Computação ('23-'24)
@@ -7347,7 +7347,7 @@ pt:
         focus-on-impact-in-society1-2023:
           lesson_groups:
             lessonGroup-2:
-              display_name: 'Capítulo 1: O Processo de Solução de Problemas'
+              display_name: 'Capítulo 1: O Processo de Resolução de Problemas'
             lessonGroup-4:
               display_name: Questionário
         focus-on-impact-in-society2-2023:
@@ -8173,9 +8173,9 @@ pt:
             do Professor\" da unidade.\n    :::\n\n<br>\n<br>"
           lesson_groups:
             lessonGroup-2:
-              display_name: 'Capítulo 1: O Processo de Solução de Problemas'
+              display_name: 'Capítulo 1: O Processo de Resolução de Problemas'
             lessonGroup-3:
-              display_name: 'Capítulo 2: Computadores e Solução de Problemas'
+              display_name: 'Capítulo 2: Computação e Resolução de Problemas'
         public-key-cryptography:
           title: Para o Widget de Criptografia de Chave Pública
         pwc:
