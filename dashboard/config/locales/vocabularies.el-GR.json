@@ -451,6 +451,275 @@
           "word": "Εκδήλωση",
           "definition": "Μια ενέργεια που προκαλεί κάτι να συμβεί."
         },
+        "code/csc-adaptations/2023": {
+          "word": "Κώδικας"
+        },
+        "event/csc-adaptations/2023": {
+          "word": "Εκδήλωση"
+        },
+        "behavior/csc-adaptations/2023": {
+          "word": "Συμπεριφορά"
+        },
+        "event/csc-bookcovers/2023": {
+          "word": "Εκδήλωση",
+          "definition": "Μια ενέργεια που προκαλεί κάτι να συμβεί."
+        },
+        "program/csc-bookcovers/2023": {
+          "word": "Πρόγραμμα"
+        },
+        "code/csc-ecosystems/2023": {
+          "word": "Κώδικας"
+        },
+        "conditionals/csc-ecosystems/2023": {
+          "word": "Συνθήκες"
+        },
+        "event/csc-ecosystems/2023": {
+          "word": "Εκδήλωση"
+        },
+        "variable/csc-ecosystems/2023": {
+          "word": "Μεταβλητή"
+        },
+        "energy/csc-ecosystems/2023": {
+          "word": "Ενέργεια"
+        },
+        "code/csc-mappinglandmarks/2023": {
+          "word": "Κώδικας"
+        },
+        "event/csc-mappinglandmarks/2023": {
+          "word": "Εκδήλωση",
+          "definition": "Μια ενέργεια που προκαλεί κάτι να συμβεί."
+        },
+        "map/csc-mappinglandmarks/2023": {
+          "word": "Χάρτης"
+        },
+        "artist/csc-starquilts/2023": {
+          "word": "Καλλιτέχνης"
+        },
+        "comments/csc-starquilts/2023": {
+          "word": "Σχόλια"
+        },
+        "event/csc-timecapsule/2023": {
+          "word": "Εκδήλωση",
+          "definition": "Μια ενέργεια που προκαλεί κάτι να συμβεί."
+        },
+        "code/poetry/2023": {
+          "word": "Κώδικας"
+        },
+        "event/poetry/2023": {
+          "word": "Εκδήλωση",
+          "definition": "Μια ενέργεια που προκαλεί κάτι να συμβεί."
+        },
+        "program/poetry/2023": {
+          "word": "Πρόγραμμα"
+        },
+        "algorithm/coursea/2023": {
+          "word": "Αλγόριθμος"
+        },
+        "debugging/coursea/2023": {
+          "word": "Εντοπισμός σφαλμάτων"
+        },
+        "program/coursea/2023": {
+          "word": "Πρόγραμμα",
+          "definition": "Ένας αλγόριθμος που έχει κωδικοποιηθεί σε κάτι που μπορεί να λειτουργήσει με μια μηχανή."
+        },
+        "drop/coursea/2023": {
+          "word": "Πέσιμο"
+        },
+        "programming/coursea/2023": {
+          "word": "Προγραμματισμός"
+        },
+        "event/coursea/2023": {
+          "word": "Εκδήλωση",
+          "definition": "Μια ενέργεια που προκαλεί κάτι να συμβεί."
+        },
+        "algorithm/courseb/2023": {
+          "word": "Αλγόριθμος"
+        },
+        "debugging/courseb/2023": {
+          "word": "Εντοπισμός σφαλμάτων"
+        },
+        "drop/courseb/2023": {
+          "word": "Πέσιμο"
+        },
+        "program/courseb/2023": {
+          "word": "Πρόγραμμα",
+          "definition": "Ένας αλγόριθμος που έχει κωδικοποιηθεί σε κάτι που μπορεί να λειτουργήσει με μια μηχανή."
+        },
+        "programming/courseb/2023": {
+          "word": "Προγραμματισμός"
+        },
+        "event/courseb/2023": {
+          "word": "Εκδήλωση",
+          "definition": "Μια ενέργεια που προκαλεί κάτι να συμβεί."
+        },
+        "algorithm/coursec/2023": {
+          "word": "Αλγόριθμος"
+        },
+        "debugging/coursec/2023": {
+          "word": "Εντοπισμός σφαλμάτων"
+        },
+        "program/coursec/2023": {
+          "word": "Πρόγραμμα",
+          "definition": "Ένας αλγόριθμος που έχει κωδικοποιηθεί σε κάτι που μπορεί να λειτουργήσει με μια μηχανή."
+        },
+        "persistence/coursec/2023": {
+          "definition": "Δεν τα παρατάω."
+        },
+        "programming/coursec/2023": {
+          "word": "Προγραμματισμός"
+        },
+        "angle/coursec/2023": {
+          "word": "Γωνία"
+        },
+        "event/coursec/2023": {
+          "word": "Εκδήλωση",
+          "definition": "Μια ενέργεια που προκαλεί κάτι να συμβεί."
+        },
+        "data/coursec/2023": {
+          "word": "Δεδομένα"
+        },
+        "binary/coursec/2023": {
+          "word": "Δυαδικό"
+        },
+        "algorithm/coursed/2023": {
+          "word": "Αλγόριθμος"
+        },
+        "program/coursed/2023": {
+          "word": "Πρόγραμμα",
+          "definition": "Ένας αλγόριθμος που έχει κωδικοποιηθεί σε κάτι που μπορεί να λειτουργήσει με μια μηχανή."
+        },
+        "debugging/coursed/2023": {
+          "word": "Εντοπισμός σφαλμάτων"
+        },
+        "programming/coursed/2023": {
+          "word": "Προγραμματισμός"
+        },
+        "event/coursed/2023": {
+          "word": "Εκδήλωση",
+          "definition": "Μια ενέργεια που προκαλεί κάτι να συμβεί."
+        },
+        "code/coursed/2023": {
+          "word": "κώδικας",
+          "definition": "(v) για να γράφετε κώδικα, ή να γράφετε οδηγίες εγγραφής για έναν υπολογιστή."
+        },
+        "conditionals/coursed/2023": {
+          "word": "Συνθήκες"
+        },
+        "behavior/coursee/2023": {
+          "word": "Συμπεριφορά"
+        },
+        "function/coursee/2023": {
+          "word": "Συνάρτηση"
+        },
+        "conditionals/coursee/2023": {
+          "word": "Συνθήκες"
+        },
+        "copyright/coursee/2023": {
+          "word": "Πνευματικά δικαιώματα"
+        },
+        "define/coursee/2023": {
+          "word": "Όρισε"
+        },
+        "algorithm/coursef/2023": {
+          "word": "Αλγόριθμος"
+        },
+        "behavior/coursef/2023": {
+          "word": "Συμπεριφορά"
+        },
+        "program/coursef/2023": {
+          "word": "Πρόγραμμα",
+          "definition": "Ένας αλγόριθμος που έχει κωδικοποιηθεί σε κάτι που μπορεί να λειτουργήσει με μια μηχανή."
+        },
+        "event/coursef/2023": {
+          "word": "Εκδήλωση",
+          "definition": "Μια ενέργεια που προκαλεί κάτι να συμβεί."
+        },
+        "variable/coursef/2023": {
+          "word": "Μεταβλητή"
+        },
+        "input/coursef/2023": {
+          "word": "Είσοδος"
+        },
+        "models_and_simulations/coursef/2023": {
+          "word": "Μοντέλα και Προσομοιώσεις",
+          "definition": "ένα πρόγραμμα που αντιγράφει ή μιμείται βασικά χαρακτηριστικά του πραγματικού κόσμου προκειμένου να ερευνηθεί η συμπεριφορά του χωρίς το κόστος, τον χρόνο ή τον κίνδυνο της εκτέλεσης ενός πειράματος στην πραγματική ζωή."
+        },
+        "machine_learning/coursef/2023": {
+          "word": "Εκμάθηση μηχανής"
+        },
+        "internet/coursef/2023": {
+          "word": "Διαδίκτυο"
+        },
+        "define/coursef/2023": {
+          "word": "Όρισε"
+        },
+        "algorithm/express/2023": {
+          "word": "Αλγόριθμος"
+        },
+        "debugging/express/2023": {
+          "word": "Εντοπισμός σφαλμάτων"
+        },
+        "program/express/2023": {
+          "word": "Πρόγραμμα",
+          "definition": "Ένας αλγόριθμος που έχει κωδικοποιηθεί σε κάτι που μπορεί να λειτουργήσει με μια μηχανή."
+        },
+        "programming/express/2023": {
+          "word": "Προγραμματισμός"
+        },
+        "behavior/express/2023": {
+          "word": "Συμπεριφορά"
+        },
+        "event/express/2023": {
+          "word": "Εκδήλωση",
+          "definition": "Μια ενέργεια που προκαλεί κάτι να συμβεί."
+        },
+        "code/express/2023": {
+          "word": "κώδικας"
+        },
+        "conditionals/express/2023": {
+          "word": "Συνθήκες"
+        },
+        "function/express/2023": {
+          "word": "Συνάρτηση"
+        },
+        "variable/express/2023": {
+          "word": "Μεταβλητή"
+        },
+        "define/express/2023": {
+          "word": "Όρισε"
+        },
+        "drop/pre-express/2023": {
+          "word": "Πέσιμο"
+        },
+        "algorithm/pre-express/2023": {
+          "word": "Αλγόριθμος"
+        },
+        "debugging/pre-express/2023": {
+          "word": "Εντοπισμός σφαλμάτων"
+        },
+        "program/pre-express/2023": {
+          "word": "Πρόγραμμα",
+          "definition": "Ένας αλγόριθμος που έχει κωδικοποιηθεί σε κάτι που μπορεί να λειτουργήσει με μια μηχανή."
+        },
+        "programming/pre-express/2023": {
+          "word": "Προγραμματισμός"
+        },
+        "event/pre-express/2023": {
+          "word": "Εκδήλωση",
+          "definition": "Μια ενέργεια που προκαλεί κάτι να συμβεί."
+        },
+        "machine_learning/how-ai-works/2023": {
+          "word": "Εκμάθηση μηχανής"
+        },
+        "algorithm/how-ai-works/2023": {
+          "word": "Αλγόριθμος"
+        },
+        "network/how-ai-works/2023": {
+          "word": "Δίκτυο"
+        },
+        "artificial_intelligence/how-ai-works/2023": {
+          "word": "Τεχνητή Νοημοσύνη"
+        },
         "code/aquatic/unversioned": {
           "word": "κώδικας",
           "definition": "(v) για να γράφετε κώδικα, ή να γράφετε οδηγίες εγγραφής για έναν υπολογιστή."
