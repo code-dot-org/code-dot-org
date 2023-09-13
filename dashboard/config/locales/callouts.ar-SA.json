@@ -62,6 +62,9 @@
         "CourseD_Dance_2020_01_2021": {
           "dance_callout_01": "أضف هذه القطعة البرمجية إلى برنامجك!"
         },
+        "CourseD_Dance_2020_01_2023": {
+          "dance_callout_01": "أضف هذه القطعة البرمجية إلى برنامجك!"
+        },
         "CourseD_Dance_2020_02": {
           "arrow_buttons": "اضغط أزرار الأسهم للتحكم في الراقص الخاص بك.",
           "dance_callout_11_a": "أضف هذا المربع البرمجي إلى البرنامج الخاص بك."
@@ -74,6 +77,10 @@
           "arrow_buttons": "اضغط أزرار الأسهم للتحكم في الراقص الخاص بك.",
           "dance_callout_11_a": "أضف هذا المربع البرمجي إلى البرنامج الخاص بك."
         },
+        "CourseD_Dance_2020_02_2023": {
+          "arrow_buttons": "اضغط أزرار الأسهم للتحكم في الراقص الخاص بك.",
+          "dance_callout_11_a": "أضف هذا المربع البرمجي إلى البرنامج الخاص بك."
+        },
         "CourseD_Dance_2020_04": {
           "dance_callout_02": "أضف هذا المربع البرمجي إلى برنامجك!"
         },
@@ -81,6 +88,9 @@
           "dance_callout_02": "أضف هذا المربع البرمجي إلى برنامجك!"
         },
         "CourseD_Dance_2020_04_2021": {
+          "dance_callout_02": "أضف هذا المربع البرمجي إلى برنامجك!"
+        },
+        "CourseD_Dance_2020_04_2023": {
           "dance_callout_02": "أضف هذا المربع البرمجي إلى برنامجك!"
         },
         "CourseD_Dance_2020_05": {
@@ -92,6 +102,9 @@
         "CourseD_Dance_2020_05_2021": {
           "dance_callout_05": "إضافة حدث جديد إلى البرنامج."
         },
+        "CourseD_Dance_2020_05_2023": {
+          "dance_callout_05": "إضافة حدث جديد إلى البرنامج."
+        },
         "CourseD_Dance_2020_06": {
           "dance_party_11_5_groups": "قطعة برمجية جديدة!"
         },
@@ -99,6 +112,9 @@
           "dance_party_11_5_groups": "قطعة برمجية جديدة!"
         },
         "CourseD_Dance_2020_06_2021": {
+          "dance_party_11_5_groups": "قطعة برمجية جديدة!"
+        },
+        "CourseD_Dance_2020_06_2023": {
           "dance_party_11_5_groups": "قطعة برمجية جديدة!"
         },
         "CourseD_Dance_2020_07": {
@@ -110,6 +126,9 @@
         "CourseD_Dance_2020_07_2021": {
           "setprop_hint": "قطعة برمجية جديدة!"
         },
+        "CourseD_Dance_2020_07_2023": {
+          "setprop_hint": "قطعة برمجية جديدة!"
+        },
         "CourseD_Dance_2020_09": {
           "new_block_3": "قطعة برمجية جديدة!",
           "new_block_4": "قطعة برمجية جديدة!"
@@ -119,6 +138,10 @@
           "new_block_4": "قطعة برمجية جديدة!"
         },
         "CourseD_Dance_2020_09_2021": {
+          "new_block_3": "قطعة برمجية جديدة!",
+          "new_block_4": "قطعة برمجية جديدة!"
+        },
+        "CourseD_Dance_2020_09_2023": {
           "new_block_3": "قطعة برمجية جديدة!",
           "new_block_4": "قطعة برمجية جديدة!"
         },
@@ -149,10 +172,17 @@
           "minitoolbox": "انقر هنا لتوسيع الكتلة.",
           "pointerlocation": "اسحب كتلة الموضوع هنا."
         },
+        "CourseF_outbreak2_2023": {
+          "minitoolbox": "انقر هنا لتوسيع الكتلة.",
+          "pointerlocation": "اسحب كتلة الموضوع هنا."
+        },
         "CourseF_outbreak7": {
           "costumes_callout": "انقر لصنع زي جديد"
         },
         "CourseF_outbreak7_-2022-2": {
+          "costumes_tab": "انقر هنا لإضافة أزياء لمشروعك."
+        },
+        "CourseF_outbreak7_2023": {
           "costumes_tab": "انقر هنا لإضافة أزياء لمشروعك."
         },
         "Dance_2019_01": {
@@ -209,6 +239,9 @@
         "Fish Tank 3-validated_2021": {
           "spritelab_comment": "استخدم القطعة البرمجية لتترك لنفسك أو للمعلم ملاحظات حول كيفية عمل أوامرك البرمجية."
         },
+        "Fish Tank 3-validated_2023": {
+          "spritelab_comment": "استخدم القطعة البرمجية لتترك لنفسك أو للمعلم ملاحظات حول كيفية عمل أوامرك البرمجية."
+        },
         "Function intro Ryan": {
           "Function_intro_Ryan_1": "هذا الأمر الصغير يُخبر جهاز الحاسوب بتشغيل الجزء \"الكبير\" من الكود البرمجي بنفس الاسم في مساحة العمل."
         },
@@ -222,6 +255,9 @@
           "Function_intro_Ryan_1": "هذا الأمر الصغير يُخبر جهاز الحاسوب بتشغيل الجزء \"الكبير\" من الكود البرمجي بنفس الاسم في مساحة العمل."
         },
         "Function intro Ryan_2021": {
+          "Function_intro_Ryan_1": "هذا الأمر الصغير يُخبر جهاز الحاسوب بتشغيل الجزء \"الكبير\" من الكود البرمجي بنفس الاسم في مساحة العمل."
+        },
+        "Function intro Ryan_2023": {
           "Function_intro_Ryan_1": "هذا الأمر الصغير يُخبر جهاز الحاسوب بتشغيل الجزء \"الكبير\" من الكود البرمجي بنفس الاسم في مساحة العمل."
         },
         "Geometric Sun": {
@@ -270,6 +306,9 @@
         "MC_HOC_2017_03_Cole_2021": {
           "MC_HOC_2017_03_Cole_1": "هذه هي حلقة \"التكرار\"! انقر فوقها في مساحة العمل، وأضف الكود البرمجي الذي تريد تشغيله مرارًا وتكرارًا."
         },
+        "MC_HOC_2017_03_Cole_2023": {
+          "MC_HOC_2017_03_Cole_1": "هذه هي حلقة \"التكرار\"! انقر فوقها في مساحة العمل، وأضف الكود البرمجي الذي تريد تشغيله مرارًا وتكرارًا."
+        },
         "MC_HOC_2017_04_Cole": {
           "MC_HOC_2017_04_Cole_a": "يمكن أن يمشي \"العميل\" فوق الماء، لكن اللاعب لا يمكنه فعل ذلك!"
         },
@@ -283,6 +322,9 @@
           "MC_HOC_2017_04_Cole_a": "يمكن أن يمشي \"العميل\" فوق الماء، لكن اللاعب لا يمكنه فعل ذلك!"
         },
         "MC_HOC_2017_04_Cole_2021": {
+          "MC_HOC_2017_04_Cole_a": "يمكن أن يمشي \"العميل\" فوق الماء، لكن اللاعب لا يمكنه فعل ذلك!"
+        },
+        "MC_HOC_2017_04_Cole_2023": {
           "MC_HOC_2017_04_Cole_a": "يمكن أن يمشي \"العميل\" فوق الماء، لكن اللاعب لا يمكنه فعل ذلك!"
         },
         "MC_HOC_2017_06_Cole": {
@@ -300,6 +342,9 @@
         "MC_HOC_2017_06_Cole_2021": {
           "MC_HOC_2017_06_Cole_1": "لا يمكنك إزالة هذه القطع البرمجية، لكن يمكنك تعديلها!"
         },
+        "MC_HOC_2017_06_Cole_2023": {
+          "MC_HOC_2017_06_Cole_1": "لا يمكنك إزالة هذه القطع البرمجية، لكن يمكنك تعديلها!"
+        },
         "MC_HOC_2017_Ali": {
           "MC_HOC_2017_08_RY_1": "يمكن أن يمشي \"العميل\" فوق الحمم البركانية، لكن \"ستيف\" و\"أليكس\" لا يمكنهما فعل ذلك!"
         },
@@ -313,6 +358,9 @@
           "MC_HOC_2017_08_RY_1": "يمكن أن يمشي \"العميل\" فوق الحمم البركانية، لكن \"ستيف\" و\"أليكس\" لا يمكنهما فعل ذلك!"
         },
         "MC_HOC_2017_Ali_2021": {
+          "MC_HOC_2017_08_RY_1": "يمكن أن يمشي \"العميل\" فوق الحمم البركانية، لكن \"ستيف\" و\"أليكس\" لا يمكنهما فعل ذلك!"
+        },
+        "MC_HOC_2017_Ali_2023": {
           "MC_HOC_2017_08_RY_1": "يمكن أن يمشي \"العميل\" فوق الحمم البركانية، لكن \"ستيف\" و\"أليكس\" لا يمكنهما فعل ذلك!"
         },
         "NEW Course 4 Artist Functions 7": {
@@ -380,6 +428,9 @@
         "Overworld Chop Trees_2021": {
           "craft_callout_preplaced": "وضعنا بعض الكتل هنا لنساعدك في البدء"
         },
+        "Overworld Chop Trees_2023": {
+          "craft_callout_preplaced": "وضعنا بعض الكتل هنا لنساعدك في البدء"
+        },
         "Overworld House Frame Chosen": {
           "craft_callout_preplaced_house": "ستساعدك هذه التعليمة البرمجية في البدء في بناء منزلك. هل يمكنك الانتهاء من ذلك؟"
         },
@@ -393,6 +444,9 @@
           "craft_callout_preplaced_house": "ستساعدك هذه التعليمة البرمجية في البدء في بناء منزلك. هل يمكنك الانتهاء من ذلك؟"
         },
         "Overworld House Frame Chosen_2021": {
+          "craft_callout_preplaced_house": "ستساعدك هذه التعليمة البرمجية في البدء في بناء منزلك. هل يمكنك الانتهاء من ذلك؟"
+        },
+        "Overworld House Frame Chosen_2023": {
           "craft_callout_preplaced_house": "ستساعدك هذه التعليمة البرمجية في البدء في بناء منزلك. هل يمكنك الانتهاء من ذلك؟"
         },
         "Overworld Move to Sheep": {
@@ -415,6 +469,10 @@
           "craft_drag_block_callout": "اسحب القطع البرمجية \"التحرك إلى الأمام\" وألصقها بالقطعة البرمجية الأخرى",
           "craft_run_button_callout": "انقر فوق \"تشغيل\" لتجربة البرنامج الخاص بك"
         },
+        "Overworld Move to Sheep_2023": {
+          "craft_drag_block_callout": "اسحب القطع البرمجية \"التحرك إلى الأمام\" وألصقها بالقطعة البرمجية الأخرى",
+          "craft_run_button_callout": "انقر فوق \"تشغيل\" لتجربة البرنامج الخاص بك"
+        },
         "Overworld Place Wall": {
           "craft_inside_repeat": "كرر الإجراءات من خلال وضع الكتل هنا"
         },
@@ -428,6 +486,9 @@
           "craft_inside_repeat": "كرر الإجراءات من خلال وضع الكتل هنا"
         },
         "Overworld Place Wall_2021": {
+          "craft_inside_repeat": "كرر الإجراءات من خلال وضع الكتل هنا"
+        },
+        "Overworld Place Wall_2023": {
           "craft_inside_repeat": "كرر الإجراءات من خلال وضع الكتل هنا"
         },
         "Robot Doodle": {
@@ -451,6 +512,9 @@
         "Underground Avoiding Lava_2021": {
           "craft_callout_moveforward": "ستبحث هذه التعليمة البرمجية عن وجود حمم، هل يمكنك إضافة أمر للتقدم؟"
         },
+        "Underground Avoiding Lava_2023": {
+          "craft_callout_moveforward": "ستبحث هذه التعليمة البرمجية عن وجود حمم، هل يمكنك إضافة أمر للتقدم؟"
+        },
         "Underground Iron": {
           "craft_what_is_iron": "الحفر لاستخراج كتلة حديدية!"
         },
@@ -466,6 +530,9 @@
         "Underground Iron_2021": {
           "craft_what_is_iron": "الحفر لاستخراج كتلة حديدية!"
         },
+        "Underground Iron_2023": {
+          "craft_what_is_iron": "الحفر لاستخراج كتلة حديدية!"
+        },
         "Virtual Pet 2_-2022-2": {
           "vp_costumes": "انقر هنا لإضافة أزياء جديدة لمشروعك!"
         },
@@ -478,10 +545,16 @@
         "Virtual Pet 2_2021": {
           "vp_costumes": "انقر هنا لإضافة أزياء جديدة لمشروعك!"
         },
+        "Virtual Pet 2_2023": {
+          "vp_costumes": "انقر هنا لإضافة أزياء جديدة لمشروعك!"
+        },
         "Virtual Pet 6_-2022-2": {
           "vp_costumes": "انقر هنا لإضافة أزياء جديدة لمشروعك!"
         },
         "Virtual Pet 6_2021": {
+          "vp_costumes": "انقر هنا لإضافة أزياء جديدة لمشروعك!"
+        },
+        "Virtual Pet 6_2023": {
           "vp_costumes": "انقر هنا لإضافة أزياء جديدة لمشروعك!"
         },
         "behaviors 1": {
@@ -552,10 +625,16 @@
         "courseA_EOC_playlab_animals2022": {
           "question_mark": "؟"
         },
+        "courseA_EOC_playlab_animals_2023": {
+          "question_mark": "؟"
+        },
         "courseA_EOC_playlab_fantasy": {
           "question_mark": "؟"
         },
         "courseA_EOC_playlab_fantasy2022": {
+          "question_mark": "؟"
+        },
+        "courseA_EOC_playlab_fantasy_2023": {
           "question_mark": "؟"
         },
         "courseA_EOC_playlab_people": {
@@ -564,10 +643,16 @@
         "courseA_EOC_playlab_people2022": {
           "question_mark": "؟"
         },
+        "courseA_EOC_playlab_people_2023": {
+          "question_mark": "؟"
+        },
         "courseA_artist_loops4": {
           "courseA_artist_loops4_1": "هذا الرقم يخبرك بعدد القطع البرمجية التي يمكنك استخدامها في هذا اللغز.\n"
         },
         "courseA_artist_loops42022": {
+          "courseA_artist_loops4_1": "هذا الرقم يخبرك بعدد القطع البرمجية التي يمكنك استخدامها في هذا اللغز.\n"
+        },
+        "courseA_artist_loops42022_2023": {
           "courseA_artist_loops4_1": "هذا الرقم يخبرك بعدد القطع البرمجية التي يمكنك استخدامها في هذا اللغز.\n"
         },
         "courseA_artist_loops4_2018": {
@@ -588,6 +673,9 @@
         "courseA_artist_loops72022": {
           "courseA_artist_loops7_1": "هذا العدد يعني أن نوعًا واحدًا من هذه القطع البرمجية يمكن استخدامها في الجواب الآخير."
         },
+        "courseA_artist_loops72022_2023": {
+          "courseA_artist_loops7_1": "هذا العدد يعني أن نوعًا واحدًا من هذه القطع البرمجية يمكن استخدامها في الجواب الآخير."
+        },
         "courseA_artist_loops7_2018": {
           "courseA_artist_loops7_1": "هذا العدد يعني أن نوعًا واحدًا من هذه القطع البرمجية يمكن استخدامها في الجواب الآخير."
         },
@@ -604,6 +692,9 @@
           "courseA_artist_loops8_1": "هل تعلم أنه بإمكانك الرسم فوق الخطّ متى ما شئت؟\n"
         },
         "courseA_artist_loops82022": {
+          "courseA_artist_loops8_1": "هل تعلم أنه بإمكانك الرسم فوق الخطّ متى ما شئت؟\n"
+        },
+        "courseA_artist_loops82022_2023": {
           "courseA_artist_loops8_1": "هل تعلم أنه بإمكانك الرسم فوق الخطّ متى ما شئت؟\n"
         },
         "courseA_artist_loops8_2018": {
@@ -633,6 +724,9 @@
         "courseA_collector_loops1_2021": {
           "courseA_collector_loops1_1": "استخدِم هذه القطع البرمجية لتجميع الكنز."
         },
+        "courseA_collector_loops1_2023": {
+          "courseA_collector_loops1_1": "استخدِم هذه القطع البرمجية لتجميع الكنز."
+        },
         "courseA_collector_loops3": {
           "gradek_adventurer_loops2_1": "هذا الرقم يخبرك بعدد القطع البرمجية التي يمكنك استخدامها في هذا اللغز.\n"
         },
@@ -649,6 +743,9 @@
           "gradek_adventurer_loops2_1": "هذا الرقم يخبرك بعدد القطع البرمجية التي يمكنك استخدامها في هذا اللغز.\n"
         },
         "courseA_collector_loops3_2021": {
+          "gradek_adventurer_loops2_1": "هذا الرقم يخبرك بعدد القطع البرمجية التي يمكنك استخدامها في هذا اللغز.\n"
+        },
+        "courseA_collector_loops3_2023": {
           "gradek_adventurer_loops2_1": "هذا الرقم يخبرك بعدد القطع البرمجية التي يمكنك استخدامها في هذا اللغز.\n"
         },
         "courseA_collector_preLoops2": {
@@ -678,6 +775,9 @@
         "courseA_maze_ramp2_2021": {
           "courseC_maze_programming2_1": "هذا هو صندوق الأدوات. حيث ستجد كل القطع البرمجية الإضافية لإكمال الألغاز."
         },
+        "courseA_maze_ramp2_2023": {
+          "courseC_maze_programming2_1": "هذا هو صندوق الأدوات. حيث ستجد كل القطع البرمجية الإضافية لإكمال الألغاز."
+        },
         "courseA_maze_ramp3a_2018": {
           "courseC_maze_programming2_1": "هذا هو صندوق الأدوات. حيث ستجد كل القطع البرمجية الإضافية لإكمال الألغاز."
         },
@@ -699,6 +799,9 @@
         "courseA_maze_seq1_2021": {
           "courseA_maze_seq1_1": "انقر على المصباح عندما تحتاج إلى تلميح!\n"
         },
+        "courseA_maze_seq1_2023": {
+          "courseA_maze_seq1_1": "انقر على المصباح عندما تحتاج إلى تلميح!\n"
+        },
         "courseA_maze_seq2": {
           "courseA_maze_seqA_callout1": "استخدم زر الخطوة لتذهب خطوة بعد خطوة من خلال البرنامج. هذا يساعدك عل اكتشاف الخطأ!\n"
         },
@@ -709,6 +812,9 @@
           "courseA_playlab_events4_callout1": "هذه وسيلة شرح"
         },
         "courseA_playLab_events42022": {
+          "courseA_playlab_events4_callout1": "هذه وسيلة شرح"
+        },
+        "courseA_playLab_events42022_2023": {
           "courseA_playlab_events4_callout1": "هذه وسيلة شرح"
         },
         "courseA_playLab_events4_2018": {
@@ -729,6 +835,9 @@
         "courseA_playLab_events52022": {
           "courseA_playLab_events5_1": "أنقر هنا لتغيير اتجاه سهم الحدث.\n"
         },
+        "courseA_playLab_events52022_2023": {
+          "courseA_playLab_events5_1": "أنقر هنا لتغيير اتجاه سهم الحدث.\n"
+        },
         "courseA_playLab_events5_2018": {
           "courseA_playLab_events5_1": "أنقر هنا لتغيير اتجاه سهم الحدث.\n"
         },
@@ -747,6 +856,9 @@
         "courseA_playLab_events62022": {
           "courseA_playLab_events6_1": "هذا يتيح لك اختيار صوت \"عشوائي\"، مما يعني أنك لن تعرف الصوت الذي سيصدُر حتى تسمعه.\n"
         },
+        "courseA_playLab_events62022_2023": {
+          "courseA_playLab_events6_1": "هذا يتيح لك اختيار صوت \"عشوائي\"، مما يعني أنك لن تعرف الصوت الذي سيصدُر حتى تسمعه.\n"
+        },
         "courseA_playLab_events6_2018": {
           "courseA_playLab_events6_1": "هذا يتيح لك اختيار صوت \"عشوائي\"، مما يعني أنك لن تعرف الصوت الذي سيصدُر حتى تسمعه.\n"
         },
@@ -762,6 +874,9 @@
         "courseB_Scrat_ramp12022": {
           "grade2_CaringForNewPet_0_1": "بعد توصيل كل القطع البرمجية، اضغط \"تشغيل\" لبدء برنامجك."
         },
+        "courseB_Scrat_ramp12022_2023": {
+          "grade2_CaringForNewPet_0_1": "بعد توصيل كل القطع البرمجية، اضغط \"تشغيل\" لبدء برنامجك."
+        },
         "courseB_Scrat_ramp1_2018": {
           "grade2_CaringForNewPet_0_1": "بعد توصيل كل القطع البرمجية، اضغط \"تشغيل\" لبدء برنامجك."
         },
@@ -775,6 +890,9 @@
           "grade2_CaringForNewPet_0_1": "بعد توصيل كل القطع البرمجية، اضغط \"تشغيل\" لبدء برنامجك."
         },
         "courseB_Scrat_ramp3a2022": {
+          "courseC_maze_programming2_1": "هذا هو صندوق الأدوات. حيث ستجد كل القطع البرمجية الإضافية لإكمال الألغاز."
+        },
+        "courseB_Scrat_ramp3a2022_2023": {
           "courseC_maze_programming2_1": "هذا هو صندوق الأدوات. حيث ستجد كل القطع البرمجية الإضافية لإكمال الألغاز."
         },
         "courseB_Scrat_ramp3a_2019": {
@@ -804,6 +922,9 @@
         "courseB_artist_loops3_2021": {
           "courseB_artist_loops3_1": "يوجد قطعة برمجية واحدة فقط من هذه القطع البرمجية في صندوق الأدوات. كيف سوف تستخدمه؟"
         },
+        "courseB_artist_loops3_2023": {
+          "courseB_artist_loops3_1": "يوجد قطعة برمجية واحدة فقط من هذه القطع البرمجية في صندوق الأدوات. كيف سوف تستخدمه؟"
+        },
         "courseB_artist_loops5": {
           "courseB_artist_loops5_1": "يعني هذا الرقم أنه لا يوجد المزيد من القطع البرمجية المتبقية في صندوق الأدوات."
         },
@@ -825,6 +946,9 @@
         "courseB_collector_loops1_2021": {
           "courseB_collector_loops1_1": "استخدِم هذه القطع البرمجية لتجميع الكنز."
         },
+        "courseB_collector_loops1_2023": {
+          "courseB_collector_loops1_1": "استخدِم هذه القطع البرمجية لتجميع الكنز."
+        },
         "courseB_maze_seq1": {
           "courseB_maze_seq1": "انقر على المصباح عندما تحتاج إلى تلميح!\n"
         },
@@ -841,6 +965,9 @@
           "courseB_maze_seq1": "انقر على المصباح عندما تحتاج إلى تلميح!\n"
         },
         "courseB_maze_seq1_2021": {
+          "courseB_maze_seq1": "انقر على المصباح عندما تحتاج إلى تلميح!\n"
+        },
+        "courseB_maze_seq1_2023": {
           "courseB_maze_seq1": "انقر على المصباح عندما تحتاج إلى تلميح!\n"
         },
         "courseB_maze_seq2": {
@@ -867,6 +994,9 @@
         "courseB_playlab_events6_2021": {
           "courseB_playlab_events6_a": "استخدم السهم لأسفل المنسدل الأخضر لتغيير الاتجاهات."
         },
+        "courseB_playlab_events6_2023": {
+          "courseB_playlab_events6_a": "استخدم السهم لأسفل المنسدل الأخضر لتغيير الاتجاهات."
+        },
         "courseC19_playLab_EOC3": {
           "courseE_playLab_scaffold3_1": "أوصل الممثل إلى هذه الراية ليتحرك إلى المستوى التالي"
         },
@@ -877,6 +1007,9 @@
           "courseE_playLab_scaffold3_1": "أوصل الممثل إلى هذه الراية ليتحرك إلى المستوى التالي"
         },
         "courseC19_playLab_EOC3_2021": {
+          "courseE_playLab_scaffold3_1": "أوصل الممثل إلى هذه الراية ليتحرك إلى المستوى التالي"
+        },
+        "courseC19_playLab_EOC3_2023": {
           "courseE_playLab_scaffold3_1": "أوصل الممثل إلى هذه الراية ليتحرك إلى المستوى التالي"
         },
         "courseC_PlayLab_events8": {
@@ -897,6 +1030,9 @@
         "courseC_PlayLab_events8_2021": {
           "courseC_PlayLab_events8_callout1": "استخدم هذه القطعة البرمجية عندما يلامس البطريقُ التمساحَ!"
         },
+        "courseC_PlayLab_events8_2023": {
+          "courseC_PlayLab_events8_callout1": "استخدم هذه القطعة البرمجية عندما يلامس البطريقُ التمساحَ!"
+        },
         "courseC_PlayLab_events_challenge1": {
           "courseC_PlayLab_events_challenge1_1": "هذه القطعة البرمجية تحرك اللاعب إلى أماكن أاخرى في ساحة اللعب."
         },
@@ -915,7 +1051,13 @@
         "courseC_PlayLab_events_challenge1_2021": {
           "courseC_PlayLab_events_challenge1_1": "هذه القطعة البرمجية تحرك اللاعب إلى أماكن أاخرى في ساحة اللعب."
         },
+        "courseC_PlayLab_events_challenge1_2023": {
+          "courseC_PlayLab_events_challenge1_1": "هذه القطعة البرمجية تحرك اللاعب إلى أماكن أاخرى في ساحة اللعب."
+        },
         "courseC_PlayLab_events_lesson_extras": {
+          "courseC_PlayLab_events_challenge1_1": "هذه القطعة البرمجية تحرك اللاعب إلى أماكن أاخرى في ساحة اللعب."
+        },
+        "courseC_PlayLab_events_lesson_extras_2023": {
           "courseC_PlayLab_events_challenge1_1": "هذه القطعة البرمجية تحرك اللاعب إلى أماكن أاخرى في ساحة اللعب."
         },
         "courseC_artist_loops1a2022": {
@@ -930,6 +1072,9 @@
         "courseC_artist_loops1a_2021": {
           "jumpto_callout": "هذه القطعة البرمجية مهمة جداً لبرنامجك. احرص على استخدامها!"
         },
+        "courseC_artist_loops1a_2023": {
+          "jumpto_callout": "هذه القطعة البرمجية مهمة جداً لبرنامجك. احرص على استخدامها!"
+        },
         "courseC_artist_loops1b2022": {
           "sticker2": "أضف هذه في منتصف برنامجك."
         },
@@ -940,6 +1085,9 @@
           "sticker2": "أضف هذه في منتصف برنامجك."
         },
         "courseC_artist_loops1b_2021": {
+          "sticker2": "أضف هذه في منتصف برنامجك."
+        },
+        "courseC_artist_loops1b_2023": {
           "sticker2": "أضف هذه في منتصف برنامجك."
         },
         "courseC_artist_loopsPrePre1a": {
@@ -960,6 +1108,9 @@
         "courseC_artist_prog2_2021": {
           "slider": "باستخدام هذا، يمكنك إبطاء سرعة تشغيل برنامجك."
         },
+        "courseC_artist_prog2_2023": {
+          "slider": "باستخدام هذا، يمكنك إبطاء سرعة تشغيل برنامجك."
+        },
         "courseC_collector_prog1": {
           "courseC_collector_prog1_1": "هل ترى بعض القطع جديدة في صندوق الأدوات؟ لا تقلق، سنوضح لك كيفيةتستخدمها لاحقًا في المرحلة."
         },
@@ -978,6 +1129,9 @@
         "courseC_collector_prog1_2021": {
           "courseC_collector_prog1_1": "هل ترى قطعاً برمجية جديدة في صندوق الأدوات؟ لا تقلق، سنريك كيفية استخدامها في دروس قادمة."
         },
+        "courseC_collector_prog1_2023": {
+          "courseC_collector_prog1_1": "هل ترى قطعاً برمجية جديدة في صندوق الأدوات؟ لا تقلق, سنريك كيفية استخدامها في دروس قادمة."
+        },
         "courseC_collector_prog7": {
           "courseC_collector_prog7_1": "يمكنك استخدام بعض من القطع البرمجية الموجودة في صندوق الأدوات في حال احتجت إليهم!"
         },
@@ -994,6 +1148,9 @@
           "courseC_collector_prog7_1": "يمكنك استخدام بعض من القطع البرمجية الموجودة في صندوق الأدوات في حال احتجت إليهم!"
         },
         "courseC_collector_prog7_2021": {
+          "courseC_collector_prog7_1": "يمكنك استخدام بعض من القطع البرمجية الموجودة في صندوق الأدوات في حال احتجت إليهم!"
+        },
+        "courseC_collector_prog7_2023": {
           "courseC_collector_prog7_1": "يمكنك استخدام بعض من القطع البرمجية الموجودة في صندوق الأدوات في حال احتجت إليهم!"
         },
         "courseC_harvester_loops1": {
@@ -1014,6 +1171,9 @@
         "courseC_harvester_loops1_2021": {
           "courseC_harvester_loops1_callout1": "الرقم 4 في اليقطين يخبرك أن هناك أربع يقطينات يمكنك جمعها."
         },
+        "courseC_harvester_loops1_2023": {
+          "courseC_harvester_loops1_callout1": "الرقم 4 في اليقطين يخبرك أن هناك أربع يقطينات يمكنك جمعها."
+        },
         "courseC_maze_debugging5": {
           "courseC_maze_debugging5_1": "القطع البرمجية الرمادية لا يمكن إلغاؤها."
         },
@@ -1032,6 +1192,9 @@
         "courseC_maze_debugging5_2021": {
           "courseC_maze_debugging5_1": "هذه القطع البرمجية مغلقة ولايمكن حذفها!"
         },
+        "courseC_maze_debugging5_2023": {
+          "courseC_maze_debugging5_1": "هذه البلوكات مغلقة ولايمكن حذفها!"
+        },
         "courseC_maze_debugging92022": {
           "courseC_maze_debugging9_2019_1": "اسحب القطع البرمجيةمن صندوق الأدوات إلى مساحة العمل الخاصة بك."
         },
@@ -1042,6 +1205,9 @@
           "courseC_maze_debugging9_2019_1": "اسحب القطع البرمجيةمن صندوق الأدوات إلى مساحة العمل الخاصة بك."
         },
         "courseC_maze_debugging9_2021": {
+          "courseC_maze_debugging9_2019_1": "اسحب القطع البرمجيةمن صندوق الأدوات إلى مساحة العمل الخاصة بك."
+        },
+        "courseC_maze_debugging9_2023": {
           "courseC_maze_debugging9_2019_1": "اسحب القطع البرمجيةمن صندوق الأدوات إلى مساحة العمل الخاصة بك."
         },
         "courseC_maze_debugging9_copy_2020": {
@@ -1065,6 +1231,9 @@
         "courseC_maze_programming1_2021": {
           "grade2_CaringForNewPet_0_1": "بعد توصيل كل القطع البرمجية، اضغط \"تشغيل\" لبدء برنامجك."
         },
+        "courseC_maze_programming1_2023": {
+          "grade2_CaringForNewPet_0_1": "بعد توصيل كل القطع البرمجية، اضغط \"تشغيل\" لبدء برنامجك."
+        },
         "courseC_maze_programming2": {
           "courseC_maze_programming2_1": "هذا هو صندوق الأدوات. حيث ستجد كل القطع البرمجية الإضافية لإكمال الألغاز."
         },
@@ -1081,6 +1250,9 @@
           "courseC_maze_programming2_1": "هذا هو صندوق الأدوات. حيث ستجد كل القطع البرمجية الإضافية لإكمال الألغاز."
         },
         "courseC_maze_programming2_2021": {
+          "courseC_maze_programming2_1": "هذا هو صندوق الأدوات. حيث ستجد كل القطع البرمجية الإضافية لإكمال الألغاز."
+        },
+        "courseC_maze_programming2_2023": {
           "courseC_maze_programming2_1": "هذا هو صندوق الأدوات. حيث ستجد كل القطع البرمجية الإضافية لإكمال الألغاز."
         },
         "courseC_maze_programming3": {
@@ -1107,6 +1279,10 @@
           "courseC_maze_programming3_2": "يمكنك سحب القطع البرمجية الإضافية إلى صندوق الأدوات لحذفها بعيداً.",
           "courseC_maze_programming3_3": "هذي القطع البرمجي مقفلة ولا يمكن حذفها."
         },
+        "courseC_maze_programming3_2023": {
+          "courseC_maze_programming3_2": "يمكنك سحب القطع البرمجية الإضافية إلى صندوق الأدوات لحذفها بعيداً.",
+          "courseC_maze_programming3_3": "هذي القطع البرمجي مقفلة ولا يمكن حذفها."
+        },
         "courseC_maze_programming4": {
           "courseC_maze_programming4_1": "هذا هو حد القطع البرمجية. وهو يخبرك بعدد القطع البرمجية التي تبقّت لديك لاستخدامها."
         },
@@ -1125,6 +1301,9 @@
         "courseC_maze_programming4_2021": {
           "courseC_maze_programming4_1": "هذا هو حد القطع البرمجية. وهو يخبرك بعدد القطع البرمجية التي تبقّت لديك لاستخدامها."
         },
+        "courseC_maze_programming4_2023": {
+          "courseC_maze_programming4_1": "هذا هو حد القطع البرمجية. وهو يخبرك بعدد القطع البرمجية التي تبقّت لديك لاستخدامها."
+        },
         "courseC_maze_programming5": {
           "": "هذه القطع لا تحتوي على أرقام. يمكنك استخدام أي عدد تريده!"
         },
@@ -1141,6 +1320,9 @@
           "": "هذه القطع لا تحتوي على أرقام. يمكنك استخدام أي عدد تريده!"
         },
         "courseC_maze_programming5_2021": {
+          "": "هذه القطع لا تحتوي على أرقام. يمكنك استخدام أي عدد تريده!"
+        },
+        "courseC_maze_programming5_2023": {
           "": "هذه القطع لا تحتوي على أرقام. يمكنك استخدام أي عدد تريده!"
         },
         "courseC_maze_programming7": {
@@ -1167,6 +1349,10 @@
           "courseC_maze_programming7_1": "هذا تحدي لغزك الاول! لا تقلق من المفترض ان يكون صعباً ويحتاج العديد من المحاولات لحلها.",
           "courseC_maze_programming7_2": "هذه القطع البرمجية ثابتة ولايمكن حذفها."
         },
+        "courseC_maze_programming7_2023": {
+          "courseC_maze_programming7_1": "هذا تحدي لغزك الاول! لا تقلق من المفترض ان يكون صعباً ويحتاج العديد من المحاولات لحلها.",
+          "courseC_maze_programming7_2": "هذه القطع البرمجية ثابتة ولايمكن حذفها."
+        },
         "courseC_starWars_loops2": {
           "courseC_starWars_loops2": "تستطع استخدام هذه القطعة البرمجية مرة واحدة فقط في هذا اللغز."
         },
@@ -1183,6 +1369,9 @@
           "courseC_starWars_loops2": "تستطع استخدام هذه القطعة البرمجية مرة واحدة فقط في هذا اللغز."
         },
         "courseC_starWars_loops2_2021": {
+          "courseC_starWars_loops2": "تستطع استخدام هذه القطعة البرمجية مرة واحدة فقط في هذا اللغز."
+        },
+        "courseC_starWars_loops2_2023": {
           "courseC_starWars_loops2": "تستطع استخدام هذه القطعة البرمجية مرة واحدة فقط في هذا اللغز."
         },
         "courseC_starWars_loops2_copy": {
@@ -1212,6 +1401,9 @@
         "courseD_artist_nestedLoops1a_2021": {
           "courseD_artist_nestedLoops1a_1": "لست ملزمًا باستخدام الألوان لتكملة هذا اللغز. \nوإذا أردت، فإن هذه القطعة  البرمجية \"اللون العشوائي\" تسهّل المهمة!"
         },
+        "courseD_artist_nestedLoops1a_2023": {
+          "courseD_artist_nestedLoops1a_1": "لست ملزمًا باستخدام الألوان لتكملة هذا اللغز. \nوإذا أردت، فإن هذه القطعة  البرمجية \"اللون العشوائي\" تسهّل المهمة!"
+        },
         "courseD_artist_ramp11": {
           "courseD_artist_ramp11_1": "يمكنك تغيير هذا الرقم.",
           "courseD_artist_ramp11_2": "انقر هنا لطباعة رقم مرات تكرار الكود."
@@ -1233,6 +1425,9 @@
           "4_5_Bee_Conditionals_2_1": "تذكّر، تحقّق ما إذا كان لكل غيمة زهرة. لست ملزمًا بفحص خلايا النحل بتاتًا."
         },
         "courseD_bee_conditionals2_2021": {
+          "4_5_Bee_Conditionals_2_1": "تذكّر، تحقّق ما إذا كان لكل غيمة زهرة. لست ملزمًا بفحص خلايا النحل بتاتًا."
+        },
+        "courseD_bee_conditionals2_2023": {
           "4_5_Bee_Conditionals_2_1": "تذكّر، تحقّق ما إذا كان لكل غيمة زهرة. لست ملزمًا بفحص خلايا النحل بتاتًا."
         },
         "courseD_bee_conditionals2_copy": {
@@ -1261,6 +1456,9 @@
         "courseD_bee_conditionals_challenge2_2021": {
           "courseD_bee_conditionals_challenge2_1": "استخدم هذه الحلقة لجمع كل الرحيق (أو العسل) من زهرة واحدة (أو من خلية نحل)."
         },
+        "courseD_bee_conditionals_challenge2_2023": {
+          "courseD_bee_conditionals_challenge2_1": "استخدم هذه الحلقة لجمع كل الرحيق (أو العسل) من زهرة واحدة (أو من خلية نحل)."
+        },
         "courseD_bee_debugging_challenge1": {
           "courseD_bee_debugging_challenge1_callout1": "استخدم هذا الأمر لجعل النحل يتحرك للخلف."
         },
@@ -1271,6 +1469,9 @@
           "stepButton": "جرب الكود الذي كتبته قطعة تلو الأخرى."
         },
         "courseD_bee_nestedLoops1a_2021": {
+          "stepButton": "جرب الكود الذي كتبته قطعة تلو الأخرى."
+        },
+        "courseD_bee_nestedLoops1a_2023": {
           "stepButton": "جرب الكود الذي كتبته قطعة تلو الأخرى."
         },
         "courseD_collector_ramp8": {
@@ -1291,6 +1492,9 @@
         "courseD_farmer_while7_2021": {
           "courseD_farmer_while7_2018_PathAhead": "ستحتاج إلى استخدام حلقة \"بينما الطريق إلى الأمام\" لحل هذا اللغز."
         },
+        "courseD_farmer_while7_2023": {
+          "courseD_farmer_while7_2018_PathAhead": "ستحتاج إلى استخدام حلقة \"بينما الطريق إلى الأمام\" لحل هذا اللغز."
+        },
         "courseD_maze_intro42022": {
           "courseC_maze_programming4_1": "هذا هو حد القطع البرمجية. وهو يخبرك بعدد القطع البرمجية التي تبقّت لديك لاستخدامها."
         },
@@ -1303,6 +1507,9 @@
         "courseD_maze_intro4_2021": {
           "courseC_maze_programming4_1": "هذا هو حد القطع البرمجية. وهو يخبرك بعدد القطع البرمجية التي تبقّت لديك لاستخدامها."
         },
+        "courseD_maze_intro4_2023": {
+          "courseC_maze_programming4_1": "هذا هو حد القطع البرمجية. وهو يخبرك بعدد القطع البرمجية التي تبقّت لديك لاستخدامها."
+        },
         "courseD_maze_intro5a2022": {
           "": "هذه القطع لا تحتوي على أرقام. يمكنك استخدام أي عدد تريده!"
         },
@@ -1313,6 +1520,9 @@
           "": "هذه القطع لا تحتوي على أرقام. يمكنك استخدام أي عدد تريده!"
         },
         "courseD_maze_intro5a_2021": {
+          "": "هذه القطع لا تحتوي على أرقام. يمكنك استخدام أي عدد تريده!"
+        },
+        "courseD_maze_intro5a_2023": {
           "": "هذه القطع لا تحتوي على أرقام. يمكنك استخدام أي عدد تريده!"
         },
         "courseD_maze_ramp1": {
@@ -1333,6 +1543,9 @@
         "courseD_maze_ramp1_2021": {
           "grade2_CaringForNewPet_0_1": "بعد توصيل كل القطع البرمجية، اضغط \"تشغيل\" لبدء برنامجك."
         },
+        "courseD_maze_ramp1_2023": {
+          "grade2_CaringForNewPet_0_1": "بعد توصيل كل القطع البرمجية، اضغط \"تشغيل\" لبدء برنامجك."
+        },
         "courseD_maze_ramp2": {
           "courseC_maze_programming2_1": "هذا هو صندوق الأدوات. حيث ستجد كل القطع البرمجية الإضافية لإكمال الألغاز."
         },
@@ -1349,6 +1562,9 @@
           "courseC_maze_programming2_1": "هذا هو صندوق الأدوات. حيث ستجد كل القطع البرمجية الإضافية لإكمال الألغاز."
         },
         "courseD_maze_ramp2_2021": {
+          "courseC_maze_programming2_1": "هذا هو صندوق الأدوات. حيث ستجد كل القطع البرمجية الإضافية لإكمال الألغاز."
+        },
+        "courseD_maze_ramp2_2023": {
           "courseC_maze_programming2_1": "هذا هو صندوق الأدوات. حيث ستجد كل القطع البرمجية الإضافية لإكمال الألغاز."
         },
         "courseD_maze_ramp3": {
@@ -1372,6 +1588,10 @@
           "stone_block_2": "القطع البرمجية الرمادية ثابتة لا يمكن حذفها."
         },
         "courseD_maze_ramp3_2021": {
+          "courseC_maze_programming3_2": "يمكنك سحب القطع البرمجية الإضافية إلى صندوق الأدوات لحذفها بعيداً.",
+          "stone_block_2": "القطع البرمجية الرمادية ثابتة لا يمكن حذفها."
+        },
+        "courseD_maze_ramp3_2023": {
           "courseC_maze_programming3_2": "يمكنك سحب القطع البرمجية الإضافية إلى صندوق الأدوات لحذفها بعيداً.",
           "stone_block_2": "القطع البرمجية الرمادية ثابتة لا يمكن حذفها."
         },
@@ -1403,6 +1623,9 @@
           "": "هذه القطع لا تحتوي على أرقام. يمكنك استخدام أي عدد تريده!"
         },
         "courseD_maze_ramp5_2021": {
+          "": "هذه القطع لا تحتوي على أرقام. يمكنك استخدام أي عدد تريده!"
+        },
+        "courseD_maze_ramp5_2023": {
           "": "هذه القطع لا تحتوي على أرقام. يمكنك استخدام أي عدد تريده!"
         },
         "courseD_maze_ramp5a": {
@@ -1466,6 +1689,9 @@
         "courseE_aboutme_2_2021": {
           "": "انقر هنا!"
         },
+        "courseE_aboutme_2_2023": {
+          "": "انقر هنا لإضافة أزياء لمشروعك."
+        },
         "courseE_artist_functions1": {
           "courseD_artist_functions1_1": "لنبدأ في استخدام هذه القطعة البرمجية للمساعدة في إنشاء المربع الأول."
         },
@@ -1493,6 +1719,9 @@
         "courseE_artist_functions2_2021": {
           "courseD_artist_functions2_1": "عند اشتغال هذا القطعة البرمجية باللون الأخضر، ستعمل جميع الأوامر البرمجية في الوظيفة. ما الذي يفعله الفنان بعد رسم المربع الأول؟"
         },
+        "courseE_artist_functions2_2023": {
+          "courseD_artist_functions2_1": "عند اشتغال هذا القطعة البرمجية باللون الأخضر، ستعمل جميع الأوامر البرمجية في الوظيفة. ما الذي يفعله الفنان بعد رسم المربع الأول؟"
+        },
         "courseE_artist_functions2_copy": {
           "courseD_artist_functions2_1": "عند اشتغال هذا القطعة البرمجية باللون الأخضر، ستعمل جميع الأوامر البرمجية في الوظيفة. ما الذي يفعله الفنان بعد رسم المربع الأول؟"
         },
@@ -1515,6 +1744,9 @@
           "courseD_artist_functions8_1": "مربعاتك الخاصة لإنشاء الوظائف تم تحريكها تحت هذه التسمية في صندوق الأدوات."
         },
         "courseE_artist_functions8a_2021": {
+          "courseD_artist_functions8_1": "مربعاتك الخاصة لإنشاء الوظائف تم تحريكها تحت هذه التسمية في صندوق الأدوات."
+        },
+        "courseE_artist_functions8a_2023": {
           "courseD_artist_functions8_1": "مربعاتك الخاصة لإنشاء الوظائف تم تحريكها تحت هذه التسمية في صندوق الأدوات."
         },
         "courseE_artist_functions_challenge1": {
@@ -1541,6 +1773,10 @@
           "courseE_artist_functions_challenge1_callout1": "استمر في استخدام البرنامج عن طريق إضافة المزيد من الأوامر البرمجية إلى الأسفل.",
           "courseE_artist_functions_challenge1_callout2": "إذا لم يعجبك هذا التصميم، غيره إلى أي شيء يحلو لك!"
         },
+        "courseE_artist_functions_challenge1_2023": {
+          "courseE_artist_functions_challenge1_callout1": "استمر في استخدام البرنامج عن طريق إضافة المزيد من الأوامر البرمجية إلى الأسفل.",
+          "courseE_artist_functions_challenge1_callout2": "إذا لم يعجبك هذا التصميم، غيره إلى أي شيء يحلو لك!"
+        },
         "courseE_artist_functions_challenge2": {
           "courseE_artist_functions_challenge2_callout1": "استمر في استخدام البرنامج عن طريق إضافة المزيد من الأوامر البرمجية إلى الأسفل.",
           "courseE_artist_functions_challenge2_callout2": "إذا لم يعجبك هذا التصميم، غيره إلى أي شيء يحلو لك!"
@@ -1562,6 +1798,10 @@
           "courseE_artist_functions_challenge2_callout2": "إذا لم يعجبك هذا التصميم، غيره إلى أي شيء يحلو لك!"
         },
         "courseE_artist_functions_challenge2_2021": {
+          "courseE_artist_functions_challenge2_callout1": "استمر في استخدام البرنامج عن طريق إضافة المزيد من الأوامر البرمجية إلى الأسفل.",
+          "courseE_artist_functions_challenge2_callout2": "إذا لم يعجبك هذا التصميم، غيره إلى أي شيء يحلو لك!"
+        },
+        "courseE_artist_functions_challenge2_2023": {
           "courseE_artist_functions_challenge2_callout1": "استمر في استخدام البرنامج عن طريق إضافة المزيد من الأوامر البرمجية إلى الأسفل.",
           "courseE_artist_functions_challenge2_callout2": "إذا لم يعجبك هذا التصميم، غيره إلى أي شيء يحلو لك!"
         },
@@ -1594,6 +1834,9 @@
         "courseE_farmer_functions13_2021": {
           "courseE_farmer_functions1a_1": "هذا الخضار غير معروف. أنه يتغيّر في كل مرة تقوم فيها بتشغيل البرنامج."
         },
+        "courseE_farmer_functions13_2023": {
+          "courseE_farmer_functions1a_1": "هذا الخضار غير معروف. أنه يتغيّر في كل مرة تقوم فيها بتشغيل البرنامج."
+        },
         "courseE_farmer_functions1_2018": {
           "courseE_farmer_functions1_2": "تم تنظيم صندوق الأدوات بصورة مختلفة هذه المرة! انقر على الفئات المختلفة لمشاهدة أي قطع برمجية لديك."
         },
@@ -1604,6 +1847,9 @@
           "courseE_farmer_functions1_2": "تم تنظيم صندوق الأدوات بصورة مختلفة هذه المرة! انقر على الفئات المختلفة لمشاهدة أي قطع برمجية لديك."
         },
         "courseE_farmer_functions1_2021": {
+          "courseE_farmer_functions1_2": "تم تنظيم صندوق الأدوات بصورة مختلفة هذه المرة! انقر على الفئات المختلفة لمشاهدة أي قطع برمجية لديك."
+        },
+        "courseE_farmer_functions1_2023": {
           "courseE_farmer_functions1_2": "تم تنظيم صندوق الأدوات بصورة مختلفة هذه المرة! انقر على الفئات المختلفة لمشاهدة أي قطع برمجية لديك."
         },
         "courseE_farmer_functions1a": {
@@ -1624,6 +1870,9 @@
         "courseE_farmer_functions1a_2021": {
           "courseE_farmer_functions1a_1": "هذا الخضار غير معروف. أنه يتغيّر في كل مرة تقوم فيها بتشغيل البرنامج."
         },
+        "courseE_farmer_functions1a_2023": {
+          "courseE_farmer_functions1a_1": "هذا الخضار غير معروف. أنه يتغيّر في كل مرة تقوم فيها بتشغيل البرنامج."
+        },
         "courseE_farmer_functions2b": {
           "courseE_farmer_functions1a_1": "هذا الخضار غير معروف. أنه يتغيّر في كل مرة تقوم فيها بتشغيل البرنامج."
         },
@@ -1640,6 +1889,9 @@
           "courseE_farmer_functions1a_1": "هذا الخضار غير معروف. أنه يتغيّر في كل مرة تقوم فيها بتشغيل البرنامج."
         },
         "courseE_farmer_functions2b_2021": {
+          "courseE_farmer_functions1a_1": "هذا الخضار غير معروف. أنه يتغيّر في كل مرة تقوم فيها بتشغيل البرنامج."
+        },
+        "courseE_farmer_functions2b_2023": {
           "courseE_farmer_functions1a_1": "هذا الخضار غير معروف. أنه يتغيّر في كل مرة تقوم فيها بتشغيل البرنامج."
         },
         "courseE_playLab_challenge1": {
@@ -1660,6 +1912,10 @@
           "run_button": "انقر زر التشغيل أولاً!",
           "visualizationResizeBar": "اسحب النقاط الثلاث لتغيير حجم مساحة اللعب."
         },
+        "courseF_apps_aquarium_2023": {
+          "run_button": "انقر زر التشغيل أولاً!",
+          "visualizationResizeBar": "اسحب النقاط الثلاث لتغيير حجم مساحة اللعب."
+        },
         "courseF_apps_card": {
           "visualizationResizeBar": "اسحب النقاط الثلاث لتغيير حجم مساحة اللعب."
         },
@@ -1667,6 +1923,9 @@
           "visualizationResizeBar": "اسحب النقاط الثلاث لتغيير حجم مساحة اللعب."
         },
         "courseF_apps_card_-2022-2": {
+          "visualizationResizeBar": "اسحب النقاط الثلاث لتغيير حجم مساحة اللعب."
+        },
+        "courseF_apps_card_2023": {
           "visualizationResizeBar": "اسحب النقاط الثلاث لتغيير حجم مساحة اللعب."
         },
         "courseF_apps_chatbot": {
@@ -1678,6 +1937,10 @@
           "visualizationResizeBar": "اسحب النقاط الثلاث لتغيير حجم مساحة اللعب."
         },
         "courseF_apps_chatbot_-2022-2": {
+          "run_button": "انقر زر التشغيل أولاً!",
+          "visualizationResizeBar": "اسحب النقاط الثلاث لتغيير حجم مساحة اللعب."
+        },
+        "courseF_apps_chatbot_2023": {
           "run_button": "انقر زر التشغيل أولاً!",
           "visualizationResizeBar": "اسحب النقاط الثلاث لتغيير حجم مساحة اللعب."
         },
@@ -1693,16 +1956,32 @@
           "run_button": "انقر زر التشغيل أولاً!",
           "visualizationResizeBar": "اسحب النقاط الثلاث لتغيير حجم مساحة اللعب."
         },
+        "courseF_apps_collector_2023": {
+          "run_button": "انقر زر التشغيل أولاً!",
+          "visualizationResizeBar": "اسحب النقاط الثلاث لتغيير حجم مساحة اللعب."
+        },
         "courseF_apps_collector_drag_-2022-2": {
+          "visualizationResizeBar": "اسحب النقاط الثلاث لتغيير حجم مساحة اللعب."
+        },
+        "courseF_apps_collector_drag_2023": {
           "visualizationResizeBar": "اسحب النقاط الثلاث لتغيير حجم مساحة اللعب."
         },
         "courseF_apps_collector_drive_-2022-2": {
           "visualizationResizeBar": "اسحب النقاط الثلاث لتغيير حجم مساحة اللعب."
         },
+        "courseF_apps_collector_drive_2023": {
+          "visualizationResizeBar": "اسحب النقاط الثلاث لتغيير حجم مساحة اللعب."
+        },
         "courseF_apps_collector_move2_-2022-2": {
           "visualizationResizeBar": "اسحب النقاط الثلاث لتغيير حجم مساحة اللعب."
         },
+        "courseF_apps_collector_move2_2023": {
+          "visualizationResizeBar": "اسحب النقاط الثلاث لتغيير حجم مساحة اللعب."
+        },
         "courseF_apps_collector_move_-2022-2": {
+          "visualizationResizeBar": "اسحب النقاط الثلاث لتغيير حجم مساحة اللعب."
+        },
+        "courseF_apps_collector_move_2023": {
           "visualizationResizeBar": "اسحب النقاط الثلاث لتغيير حجم مساحة اللعب."
         },
         "courseF_apps_madlib": {
@@ -1714,6 +1993,9 @@
         "courseF_apps_madlib_-2022-2": {
           "visualizationResizeBar": "اسحب النقاط الثلاث لتغيير حجم مساحة اللعب."
         },
+        "courseF_apps_madlib_2023": {
+          "visualizationResizeBar": "اسحب النقاط الثلاث لتغيير حجم مساحة اللعب."
+        },
         "courseF_apps_pet": {
           "run_button": "انقر زر التشغيل أولاً!",
           "visualizationResizeBar": "اسحب النقاط الثلاث لتغيير حجم مساحة اللعب."
@@ -1723,6 +2005,10 @@
           "visualizationResizeBar": "اسحب النقاط الثلاث لتغيير حجم مساحة اللعب."
         },
         "courseF_apps_pet_-2022-2": {
+          "run_button": "انقر زر التشغيل أولاً!",
+          "visualizationResizeBar": "اسحب النقاط الثلاث لتغيير حجم مساحة اللعب."
+        },
+        "courseF_apps_pet_2023": {
           "run_button": "انقر زر التشغيل أولاً!",
           "visualizationResizeBar": "اسحب النقاط الثلاث لتغيير حجم مساحة اللعب."
         },
@@ -1742,6 +2028,9 @@
           "courseF_artist_for1_1": "صندوق الأدوات في وضع \"الفئات\" يتيح توفير مساحة أكبر لأوامرك البرمجية. تكمن حلقات \"لِكَيْ\" هنا."
         },
         "courseF_artist_for1_2021": {
+          "courseF_artist_for1_1": "صندوق الأدوات في وضع \"الفئات\" يتيح توفير مساحة أكبر لأوامرك البرمجية. تكمن حلقات \"لِكَيْ\" هنا."
+        },
+        "courseF_artist_for1_2023": {
           "courseF_artist_for1_1": "صندوق الأدوات في وضع \"الفئات\" يتيح توفير مساحة أكبر لأوامرك البرمجية. تكمن حلقات \"لِكَيْ\" هنا."
         },
         "courseF_artist_fwp1": {
@@ -1813,6 +2102,9 @@
         "courseF_bee_for4_2021": {
           "courseF_bee_for4_1": "ستجد الحلقة \"لِكَيْ\" هنا!"
         },
+        "courseF_bee_for4_2023": {
+          "courseF_bee_for4_1": "ستجد الحلقة \"لِكَيْ\" هنا!"
+        },
         "courseF_bee_for9": {
           "courseF_bee_for9_1": "ستجد القطعة البرمجية \"رياضيات\" هنا."
         },
@@ -1829,6 +2121,9 @@
           "courseF_bee_for9_1": "ستجد القطعة البرمجية \"رياضيات\" هنا."
         },
         "courseF_bee_for9_2021": {
+          "courseF_bee_for9_1": "ستجد القطعة البرمجية \"رياضيات\" هنا."
+        },
+        "courseF_bee_for9_2023": {
           "courseF_bee_for9_1": "ستجد القطعة البرمجية \"رياضيات\" هنا."
         },
         "courseF_bee_functions2": {
@@ -1871,10 +2166,16 @@
         "courseF_bee_variables_1a_2021": {
           "courseF_bee_functions_1_2018_1": "بإمكانك إيجاد المتغيرات الخاصة بك هنا!"
         },
+        "courseF_bee_variables_1a_2023": {
+          "courseF_bee_functions_1_2018_1": "بإمكانك إيجاد المتغيرات الخاصة بك هنا!"
+        },
         "courseF_editable_card": {
           "visualizationResizeBar": "اسحب النقاط الثلاث لتغيير حجم مساحة اللعب."
         },
         "courseF_editable_card_-2022-2": {
+          "visualizationResizeBar": "اسحب النقاط الثلاث لتغيير حجم مساحة اللعب."
+        },
+        "courseF_editable_card_2023": {
           "visualizationResizeBar": "اسحب النقاط الثلاث لتغيير حجم مساحة اللعب."
         },
         "courseF_editable_chatbot": {
@@ -1883,10 +2184,16 @@
         "courseF_editable_chatbot_-2022-2": {
           "visualizationResizeBar": "اسحب النقاط الثلاث لتغيير حجم مساحة اللعب."
         },
+        "courseF_editable_chatbot_2023": {
+          "visualizationResizeBar": "اسحب النقاط الثلاث لتغيير حجم مساحة اللعب."
+        },
         "courseF_editable_madlib": {
           "visualizationResizeBar": "اسحب النقاط الثلاث لتغيير حجم مساحة اللعب."
         },
         "courseF_editable_madlib_-2022-2": {
+          "visualizationResizeBar": "اسحب النقاط الثلاث لتغيير حجم مساحة اللعب."
+        },
+        "courseF_editable_madlib_2023": {
           "visualizationResizeBar": "اسحب النقاط الثلاث لتغيير حجم مساحة اللعب."
         },
         "courseF_events_choice_penguin": {
@@ -1895,10 +2202,16 @@
         "courseF_events_choice_penguin_-2022-2": {
           "whenToWhile": "حاول التغيير من \"عندما\" الى \"بينما\"."
         },
+        "courseF_events_choice_penguin_2023": {
+          "whenToWhile": "حاول التغيير من \"عندما\" الى \"بينما\"."
+        },
         "courseF_events_conflict": {
           "stops_block": "قطع برمجية جديدة!"
         },
         "courseF_events_conflict_-2022-2": {
+          "stops_block": "قطع برمجية جديدة!"
+        },
+        "courseF_events_conflict_2023": {
           "stops_block": "قطع برمجية جديدة!"
         },
         "courseF_events_key": {
@@ -1907,10 +2220,16 @@
         "courseF_events_key_-2022-2": {
           "whenKey": "استخدام قطعة الحدث البرمجي الجديدة الموجودة هنا."
         },
+        "courseF_events_key_2023": {
+          "whenKey": "استخدام قطعة الحدث البرمجي الجديدة الموجودة هنا."
+        },
         "courseF_events_practice_reorder": {
           "stopAllBug": "إن هذه القطعة البرمجية في الترتيب الخاطئ."
         },
         "courseF_events_practice_reorder_-2022-2": {
+          "stopAllBug": "إن هذه القطعة البرمجية في الترتيب الخاطئ."
+        },
+        "courseF_events_practice_reorder_2023": {
           "stopAllBug": "إن هذه القطعة البرمجية في الترتيب الخاطئ."
         },
         "courseF_events_predict": {
@@ -1919,16 +2238,25 @@
         "courseF_events_predict_-2022-2": {
           "behaviors_edit": "انقر هنا لترى أسلوب عمل هذا السلوك."
         },
+        "courseF_events_predict_2023": {
+          "behaviors_edit": "انقر هنا لترى أسلوب عمل هذا السلوك."
+        },
         "courseF_events_time": {
           "events_category": "انقر هنا لتفتح فئة \"الأحداث البرمجية\"."
         },
         "courseF_events_time_-2022-2": {
           "events_category": "انقر هنا لتفتح فئة \"الأحداث البرمجية\"."
         },
+        "courseF_events_time_2023": {
+          "events_category": "انقر هنا لتفتح فئة \"الأحداث البرمجية\"."
+        },
         "courseF_label_predict": {
           "variablesPredict": "انظر عن كثب إلى الكود أسفل هذه النقطة."
         },
         "courseF_label_predict_-2022-2": {
+          "variablesPredict": "انظر عن كثب إلى الكود أسفل هذه النقطة."
+        },
+        "courseF_label_predict_2023": {
           "variablesPredict": "انظر عن كثب إلى الكود أسفل هذه النقطة."
         },
         "courseF_playlab_variables1a": {
@@ -1949,10 +2277,16 @@
         "courseF_sprites_behaviors_-2022-2": {
           "behaviors_category": "انقر هنا لتفتح فئة \"السلوكيات\"."
         },
+        "courseF_sprites_behaviors_2023": {
+          "behaviors_category": "انقر هنا لتفتح فئة \"السلوكيات\"."
+        },
         "courseF_sprites_make": {
           "sprites_category": "انقر هنا لتفتح فئة \"الكائنات\"."
         },
         "courseF_sprites_make_-2022-2": {
+          "sprites_category": "انقر هنا لتفتح فئة \"الكائنات\"."
+        },
+        "courseF_sprites_make_2023": {
           "sprites_category": "انقر هنا لتفتح فئة \"الكائنات\"."
         },
         "courseF_sprites_positioning": {
@@ -1961,10 +2295,16 @@
         "courseF_sprites_positioning_-2022-2": {
           "locations_category": "انقر هنا لتفتح فئة \"المواقع\"."
         },
+        "courseF_sprites_positioning_2023": {
+          "locations_category": "انقر هنا لتفتح فئة \"المواقع\"."
+        },
         "courseF_sprites_properties": {
           "sprites_category2": "ابحث عن قطعة برمجية جديدة هنا."
         },
         "courseF_sprites_properties_-2022-2": {
+          "sprites_category2": "ابحث عن قطعة برمجية جديدة هنا."
+        },
+        "courseF_sprites_properties_2023": {
           "sprites_category2": "ابحث عن قطعة برمجية جديدة هنا."
         },
         "courseF_text_answer": {
@@ -1973,16 +2313,25 @@
         "courseF_text_answer_-2022-2": {
           "answered_block": "ابحث عن قطعة برمجية جديدة هنا!"
         },
+        "courseF_text_answer_2023": {
+          "answered_block": "ابحث عن قطعة برمجية جديدة هنا!"
+        },
         "courseF_text_choice_color": {
           "text_color_finish": "هل تغير لون الخلفية عندما أجبت على السؤال؟ إذا كان الأمر كذلك، فاضغط على \"إنهاء\". إذا لم يكن الوضع كذلك، فاضغط على \"إعادة تعيين\"، وقم بتغيير الكود الخاص بك، واضغط على \"تشغيل\" مرة أخرى."
         },
         "courseF_text_choice_color_-2022-2": {
           "text_color_finish": "هل تغير لون الخلفية عندما أجبت على السؤال؟ إذا كان الأمر كذلك، فاضغط على \"إنهاء\". إذا لم يكن الوضع كذلك، فاضغط على \"إعادة تعيين\"، وقم بتغيير الكود الخاص بك، واضغط على \"تشغيل\" مرة أخرى."
         },
+        "courseF_text_choice_color_2023": {
+          "text_color_finish": "هل تغير لون الخلفية عندما أجبت على السؤال؟ إذا كان الأمر كذلك، فاضغط على \"إنهاء\". إذا لم يكن الوضع كذلك، فاضغط على \"إعادة تعيين\"، وقم بتغيير الكود الخاص بك، واضغط على \"تشغيل\" مرة أخرى."
+        },
         "courseF_text_choice_conversation": {
           "text_generic_finish": "هل انتهيت؟ إذا كان الأمر كذلك، فاضغط على \"إنهاء\". إذا لم يكن كذلك، فاضغط على \"إعادة تعيين\"، وقم بتغيير الكود الخاص بك، واضغط على \"تشغيل\" مرة أخرى."
         },
         "courseF_text_choice_conversation_-2022-2": {
+          "text_generic_finish": "هل انتهيت؟ إذا كان الأمر كذلك، فاضغط على \"إنهاء\". إذا لم يكن كذلك، فاضغط على \"إعادة تعيين\"، وقم بتغيير الكود الخاص بك، واضغط على \"تشغيل\" مرة أخرى."
+        },
+        "courseF_text_choice_conversation_2023": {
           "text_generic_finish": "هل انتهيت؟ إذا كان الأمر كذلك، فاضغط على \"إنهاء\". إذا لم يكن كذلك، فاضغط على \"إعادة تعيين\"، وقم بتغيير الكود الخاص بك، واضغط على \"تشغيل\" مرة أخرى."
         },
         "courseF_text_choice_title": {
@@ -1993,16 +2342,26 @@
           "text_answer_finish": "هل ظهرت شاشة العنوان لمدة ٣ ثوان؟ إذا كان الأمر كذلك، فاضغط على \"إنهاء\". إذا لم يكن كذلك، فاضغط على \"إعادة تعيين\" ، وقم بتغيير الكود الخاص بك، واضغط على \"تشغيل\" مرة أخرى.",
           "title_block": "ابحث عن قطعتين برمجيتين جديدتين هنا!"
         },
+        "courseF_text_choice_title_2023": {
+          "text_answer_finish": "هل ظهرت شاشة العنوان لمدة ٣ ثوان؟ إذا كان الأمر كذلك، فاضغط على \"إنهاء\". إذا لم يكن كذلك، فاضغط على \"إعادة تعيين\" ، وقم بتغيير الكود الخاص بك، واضغط على \"تشغيل\" مرة أخرى.",
+          "title_block": "ابحث عن قطعتين برمجيتين جديدتين هنا!"
+        },
         "courseF_text_concat": {
           "join_blocks": "ابحث عن قطع برمجية جديدة هنا!"
         },
         "courseF_text_concat_-2022-2": {
           "join_blocks": "ابحث عن قطع برمجية جديدة هنا!"
         },
+        "courseF_text_concat_2023": {
+          "join_blocks": "ابحث عن قطع برمجية جديدة هنا!"
+        },
         "courseF_text_events": {
           "events_category": "انقر هنا لتفتح فئة \"الأحداث البرمجية\"."
         },
         "courseF_text_events_-2022-2": {
+          "events_category": "انقر هنا لتفتح فئة \"الأحداث البرمجية\"."
+        },
+        "courseF_text_events_2023": {
           "events_category": "انقر هنا لتفتح فئة \"الأحداث البرمجية\"."
         },
         "courseF_text_print": {
@@ -2013,19 +2372,32 @@
           "print_block": "اعثر على القطعة البرمجية \"اطبع\" هنا!",
           "text_print_finish": "هل تمت طباعة رسالتك أعلاه؟ إذا كان الأمر كذلك، فاضغط على \"إنهاء\". إذا لم يكن كذلك، فاضغط على \"إعادة تعيين\" ، وقم بتغيير الكود الخاص بك، واضغط على \"تشغيل\" مرة أخرى."
         },
+        "courseF_text_print_2023": {
+          "print_block": "اعثر على القطعة البرمجية \"اطبع\" هنا!",
+          "text_print_finish": "هل تمت طباعة رسالتك أعلاه؟ إذا كان الأمر كذلك، فاضغط على \"إنهاء\". إذا لم يكن كذلك، فاضغط على \"إعادة تعيين\" ، وقم بتغيير الكود الخاص بك، واضغط على \"تشغيل\" مرة أخرى."
+        },
         "courseF_text_prompts": {
           "prompt_block": "اعثر على القطعة البرمجية \"المحفز\" هنا!"
         },
         "courseF_text_prompts_-2022-2": {
           "prompt_block": "اعثر على القطعة البرمجية \"المحفز\" هنا!"
         },
+        "courseF_text_prompts_2023": {
+          "prompt_block": "اعثر على القطعة البرمجية \"المحفز\" هنا!"
+        },
         "courseF_variables2_predict_-2022-2": {
+          "variablesPredict": "انظر عن كثب إلى الكود أسفل هذه النقطة."
+        },
+        "courseF_variables2_predict_2023": {
           "variablesPredict": "انظر عن كثب إلى الكود أسفل هذه النقطة."
         },
         "courseF_variables_predict": {
           "variablesPredict": "انظر عن كثب إلى الكود أسفل هذه النقطة."
         },
         "courseF_variables_predict_-2022-2": {
+          "variablesPredict": "انظر عن كثب إلى الكود أسفل هذه النقطة."
+        },
+        "courseF_variables_predict_2023": {
           "variablesPredict": "انظر عن كثب إلى الكود أسفل هذه النقطة."
         },
         "coursea_maze_ramp12022": {
@@ -2043,13 +2415,99 @@
         "coursea_maze_ramp1_2021": {
           "grade2_CaringForNewPet_0_1": "بعد تحريك جميع القطع البرمجية معًا بسرعة، اضغط على \"تشغيل\" لتبدأ برنامجك."
         },
+        "coursea_maze_ramp1_2023": {
+          "grade2_CaringForNewPet_0_1": "بعد تحريك جميع القطع البرمجية معًا بسرعة، اضغط على \"تشغيل\" لتبدأ برنامجك."
+        },
         "coursee_helloworld_events": {
+          "hello_world_click_hint": "أضف هذا الحدث إلى مساحة العمل الخاصة بك."
+        },
+        "coursee_helloworld_events_2023": {
           "hello_world_click_hint": "أضف هذا الحدث إلى مساحة العمل الخاصة بك."
         },
         "coursee_helloworld_freeplay": {
           "costumes_tab": "انقر هنا لإضافة أزياء لمشروعك."
         },
+        "coursee_helloworld_freeplay_2023": {
+          "costumes_tab": "انقر هنا لإضافة أزياء لمشروعك."
+        },
         "coursee_helloworld_say": {
+          "hello_world_make_sprite": "استخدم هذه الكتلة لإنشاء كائن.",
+          "hello_world_say": "استخدم هذه الكتلة لجعل الكائنات تتحدث."
+        },
+        "coursee_helloworld_say_2023": {
+          "hello_world_make_sprite": "استخدم هذه الكتلة لإنشاء كائن.",
+          "hello_world_say": "استخدم هذه الكتلة لجعل الكائنات تتحدث."
+        },
+        "csc-starquilts-comment_2023": {
+          "New Artist Project_callout1": "قم بالضغط على التصنيفات لرؤية الكتل البرمجية الموجودة في صندوق الأدوات! قم بسحب القطع البرمجية إلى مساحة العمل لإضافتها إلى برنامجك.",
+          "New Artist Project_callout2": "انقر على \"تشغيل\" لحفظ و تشغيل برنامجك",
+          "sign_in_to_save_project": "هل تريد الوصول إلى برنامجك في وقت لاحق؟ قم بتسجيل الدخول لحفظ هذا المشروع في حسابك!"
+        },
+        "csc-starquilts-repeat_2023": {
+          "New Artist Project_callout1": "قم بالضغط على التصنيفات لرؤية الكتل البرمجية الموجودة في صندوق الأدوات! قم بسحب القطع البرمجية إلى مساحة العمل لإضافتها إلى برنامجك.",
+          "New Artist Project_callout2": "انقر على \"تشغيل\" لحفظ و تشغيل برنامجك",
+          "sign_in_to_save_project": "هل تريد الوصول إلى برنامجك في وقت لاحق؟ قم بتسجيل الدخول لحفظ هذا المشروع في حسابك!"
+        },
+        "csc-starquilts-rhombus-freeplay_2023": {
+          "New Artist Project_callout1": "قم بالضغط على التصنيفات لرؤية الكتل البرمجية الموجودة في صندوق الأدوات! قم بسحب القطع البرمجية إلى مساحة العمل لإضافتها إلى برنامجك.",
+          "New Artist Project_callout2": "انقر على \"تشغيل\" لحفظ و تشغيل برنامجك",
+          "sign_in_to_save_project": "هل تريد الوصول إلى برنامجك في وقت لاحق؟ قم بتسجيل الدخول لحفظ هذا المشروع في حسابك!"
+        },
+        "csc-starquilts-row1_2023": {
+          "New Artist Project_callout1": "قم بالضغط على التصنيفات لرؤية الكتل البرمجية الموجودة في صندوق الأدوات! قم بسحب القطع البرمجية إلى مساحة العمل لإضافتها إلى برنامجك.",
+          "New Artist Project_callout2": "انقر على \"تشغيل\" لحفظ و تشغيل برنامجك",
+          "sign_in_to_save_project": "هل تريد الوصول إلى برنامجك في وقت لاحق؟ قم بتسجيل الدخول لحفظ هذا المشروع في حسابك!"
+        },
+        "csc-starquilts-row2_2023": {
+          "New Artist Project_callout1": "قم بالضغط على التصنيفات لرؤية الكتل البرمجية الموجودة في صندوق الأدوات! قم بسحب القطع البرمجية إلى مساحة العمل لإضافتها إلى برنامجك.",
+          "New Artist Project_callout2": "انقر على \"تشغيل\" لحفظ و تشغيل برنامجك",
+          "sign_in_to_save_project": "هل تريد الوصول إلى برنامجك في وقت لاحق؟ قم بتسجيل الدخول لحفظ هذا المشروع في حسابك!"
+        },
+        "csc-starquilts-row3_2023": {
+          "New Artist Project_callout1": "قم بالضغط على التصنيفات لرؤية الكتل البرمجية الموجودة في صندوق الأدوات! قم بسحب القطع البرمجية إلى مساحة العمل لإضافتها إلى برنامجك.",
+          "New Artist Project_callout2": "انقر على \"تشغيل\" لحفظ و تشغيل برنامجك",
+          "sign_in_to_save_project": "هل تريد الوصول إلى برنامجك في وقت لاحق؟ قم بتسجيل الدخول لحفظ هذا المشروع في حسابك!"
+        },
+        "csc-starquilts-row4_2023": {
+          "New Artist Project_callout1": "قم بالضغط على التصنيفات لرؤية الكتل البرمجية الموجودة في صندوق الأدوات! قم بسحب القطع البرمجية إلى مساحة العمل لإضافتها إلى برنامجك.",
+          "New Artist Project_callout2": "انقر على \"تشغيل\" لحفظ و تشغيل برنامجك",
+          "sign_in_to_save_project": "هل تريد الوصول إلى برنامجك في وقت لاحق؟ قم بتسجيل الدخول لحفظ هذا المشروع في حسابك!"
+        },
+        "csc-starquilts-row5_2023": {
+          "New Artist Project_callout1": "قم بالضغط على التصنيفات لرؤية الكتل البرمجية الموجودة في صندوق الأدوات! قم بسحب القطع البرمجية إلى مساحة العمل لإضافتها إلى برنامجك.",
+          "New Artist Project_callout2": "انقر على \"تشغيل\" لحفظ و تشغيل برنامجك",
+          "sign_in_to_save_project": "هل تريد الوصول إلى برنامجك في وقت لاحق؟ قم بتسجيل الدخول لحفظ هذا المشروع في حسابك!"
+        },
+        "csc_animal_adaptations_behaviors_edit2": {
+          "behavior_callout": "لماذا لا يعمل هذا السلوك مع النجمة الوسطى؟",
+          "star2_callout": "احذف هذا المربع البرمجي الخاص بالزيّ، واستخدِم القطعة البرمجية \"هذه الصورة المتحركة\" بدلاً منه.",
+          "this_sprite_callout": "استبدِل المربع البرمجي الخاص بهذا."
+        },
+        "csc_animal_adaptations_behaviors_elephantleader": {
+          "behavior_callout": "لماذا لا يعمل هذا السلوك مع النجمة الوسطى؟",
+          "star2_callout": "احذف هذا المربع البرمجي الخاص بالزيّ، واستخدِم القطعة البرمجية \"هذه الصورة المتحركة\" بدلاً منه.",
+          "this_sprite_callout": "استبدِل المربع البرمجي الخاص بهذا."
+        },
+        "csc_animal_adaptations_behaviors_wolfpack": {
+          "behavior_callout": "لماذا لا يعمل هذا السلوك مع النجمة الوسطى؟",
+          "star2_callout": "احذف هذا المربع البرمجي الخاص بالزيّ، واستخدِم القطعة البرمجية \"هذه الصورة المتحركة\" بدلاً منه.",
+          "this_sprite_callout": "استبدِل المربع البرمجي الخاص بهذا."
+        },
+        "csc_animal_adaptations_bugs2": {
+          "hello_world_behavior_blocks": "استخدم هذه الكتلة مع أحد السلوكيات التالية."
+        },
+        "csc_animal_adaptations_make_behavior": {
+          "behaviors_edit": "أضِف قطعةً برمجيةً لهذا السلوك."
+        },
+        "csc_animal_adaptations_predict_gamelab": {
+          "behaviors_edit": "انقر هنا لترى أسلوب عمل هذا السلوك."
+        },
+        "csc_starquilts_freeplay_2023": {
+          "New Artist Project_callout1": "قم بالضغط على التصنيفات لرؤية الكتل البرمجية الموجودة في صندوق الأدوات! قم بسحب القطع البرمجية إلى مساحة العمل لإضافتها إلى برنامجك.",
+          "New Artist Project_callout2": "انقر على \"تشغيل\" لحفظ و تشغيل برنامجك",
+          "sign_in_to_save_project": "هل تريد الوصول إلى برنامجك في وقت لاحق؟ قم بتسجيل الدخول لحفظ هذا المشروع في حسابك!"
+        },
+        "ecosystems_helloworld_say_2023": {
           "hello_world_make_sprite": "استخدم هذه الكتلة لإنشاء كائن.",
           "hello_world_say": "استخدم هذه الكتلة لجعل الكائنات تتحدث."
         },
@@ -2064,6 +2522,9 @@
         },
         "express_maze_debugging9_2021": {
           "express_maze_debugging9_2019_1": "اسحب القطع البرمجية من صندوق الأدوات إلى مساحة العمل الخاصة بك."
+        },
+        "express_maze_debugging9_2023": {
+          "express_maze_debugging9_2019_1": "اسحب القطع البرمجيةمن صندوق الأدوات إلى مساحة العمل الخاصة بك."
         },
         "frozen circle function with parameter": {
           "frozen_circle_function_with_parameter_circle": "استخدم القطعة \"ارسم دائرة\" وغيّر الحجم."
@@ -2153,6 +2614,12 @@
         "helloworld_animals_sounds": {
           "hello_world_new": "قطعة برمجية جديدة!"
         },
+        "helloworld_bugs_behaviors_2023": {
+          "hello_world_behavior_blocks": "استخدم هذه الكتلة مع أحد السلوكيات التالية."
+        },
+        "helloworld_bunny_adaptation_2023": {
+          "hw_Run": "انقر هنا لتشغيل الكود."
+        },
         "helloworld_emoji_backgrounds": {
           "hw_background_location": "استخدم هذه الكتلة لضبط خلفية جديدة."
         },
@@ -2191,6 +2658,9 @@
         "helloworld_food_backgrounds": {
           "hw_background_location": "استخدم هذه الكتلة لضبط خلفية جديدة."
         },
+        "helloworld_food_backgrounds_2023": {
+          "hw_background_location": "استخدم هذه الكتلة لضبط خلفية جديدة."
+        },
         "helloworld_food_backgrounds_soccer-2022": {
           "hw_background_location": "استخدم هذه الكتلة لضبط خلفية جديدة."
         },
@@ -2198,6 +2668,9 @@
           "hw_background_location": "استخدم هذه الكتلة لضبط خلفية جديدة."
         },
         "helloworld_food_behaviors": {
+          "hello_world_behavior_blocks": "استخدم هذه الكتلة مع أحد السلوكيات التالية."
+        },
+        "helloworld_food_behaviors_2023": {
           "hello_world_behavior_blocks": "استخدم هذه الكتلة مع أحد السلوكيات التالية."
         },
         "helloworld_food_behaviors_soccer-2022": {
@@ -2209,6 +2682,9 @@
         "helloworld_food_click": {
           "hw_Run": "انقر هنا لتشغيل الكود."
         },
+        "helloworld_food_click_2023": {
+          "hw_Run": "انقر هنا لتشغيل الكود."
+        },
         "helloworld_food_click_soccer-2022": {
           "hw_Run": "انقر هنا لتشغيل الكود."
         },
@@ -2216,6 +2692,9 @@
           "hw_Run": "انقر هنا أولاً!"
         },
         "helloworld_food_costumes": {
+          "hello_world_new": "قطعة برمجية جديدة!"
+        },
+        "helloworld_food_costumes_2023": {
           "hello_world_new": "قطعة برمجية جديدة!"
         },
         "helloworld_food_costumes_soccer-2022": {
@@ -2245,6 +2724,9 @@
         "helloworld_food_location": {
           "pin": "تثبيت"
         },
+        "helloworld_food_location_2023": {
+          "pin": "تثبيت"
+        },
         "helloworld_food_location_soccer-2022": {
           "pin": "تثبيت"
         },
@@ -2252,6 +2734,9 @@
           "pin": "تثبيت"
         },
         "helloworld_food_multi": {
+          "pin": "تثبيت"
+        },
+        "helloworld_food_multi_2023": {
           "pin": "تثبيت"
         },
         "helloworld_food_multi_soccer-2022": {
@@ -2276,6 +2761,10 @@
           "hello_world_new": "قطعة برمجية جديدة!",
           "hello_world_new_block": "قطعة برمجية جديدة!"
         },
+        "helloworld_food_sizes_2023": {
+          "hello_world_new": "قطعة برمجية جديدة!",
+          "hello_world_new_block": "قطعة برمجية جديدة!"
+        },
         "helloworld_food_sizes_soccer-2022": {
           "hello_world_new": "قطعة برمجية جديدة!",
           "hello_world_new_block": "قطعة برمجية جديدة!"
@@ -2285,6 +2774,9 @@
           "hello_world_new_block": "قطعة برمجية جديدة!"
         },
         "helloworld_food_sounds": {
+          "hello_world_new": "قطعة برمجية جديدة!"
+        },
+        "helloworld_food_sounds_2023": {
           "hello_world_new": "قطعة برمجية جديدة!"
         },
         "helloworld_food_sounds_soccer-2022": {
@@ -2338,12 +2830,23 @@
         "poetry_hoc_addSprites": {
           "poetry_sprite": "قطعة برمجية جديدة!"
         },
+        "poetry_hoc_addSprites_2023": {
+          "poetry_sprite": "قطعة برمجية جديدة!"
+        },
         "poetry_hoc_backgroundEffects": {
           "pause_button": "اختبر الرسوم المتحركة الخاصة بك مع هذا الزر.",
           "poetry_background": "ابحث عن كتل للكود هنا.",
           "run_button": "اختبر الكائنات المتحركة الخاصة بك مع هذا الزر."
         },
+        "poetry_hoc_backgroundEffects_2023": {
+          "poetry_background": "ابحث عن كتل للكود هنا.",
+          "run_button": "اختبر الكائنات المتحركة الخاصة بك مع هذا الزر."
+        },
         "poetry_hoc_events1": {
+          "poetry_event": "قطعة برمجية جديدة!",
+          "poetry_foreground": "قطعة برمجية جديدة!"
+        },
+        "poetry_hoc_events1_2023": {
           "poetry_event": "قطعة برمجية جديدة!",
           "poetry_foreground": "قطعة برمجية جديدة!"
         },
@@ -2353,7 +2856,15 @@
           "poetry_new_block": "قطعة برمجية جديدة!",
           "poetry_selector": "اختر أي قصيدة، أو أدخل قصيدتك الخاصة!"
         },
+        "poetry_hoc_freeplay_2023": {
+          "poetry_new_block": "قطعة برمجية جديدة!",
+          "poetry_selector": "اختر أي قصيدة، أو أدخل قصيدتك الخاصة!"
+        },
         "poetry_hoc_sounds": {
+          "poetry_music": "قطعة برمجية جديدة!",
+          "poetry_sound": "قطعة برمجية جديدة!"
+        },
+        "poetry_hoc_sounds_2023": {
           "poetry_music": "قطعة برمجية جديدة!",
           "poetry_sound": "قطعة برمجية جديدة!"
         },
@@ -2361,7 +2872,15 @@
           "poetry_sprite_begins": "قطعة برمجية جديدة!",
           "poetry_sprite_stops": "قطعة برمجية جديدة!"
         },
+        "poetry_hoc_spriteBehaviors_2023": {
+          "poetry_sprite_begins": "قطعة برمجية جديدة!",
+          "poetry_sprite_stops": "قطعة برمجية جديدة!"
+        },
         "poetry_hoc_spriteSizes": {
+          "poetry_remove_sprite": "قطعة برمجية جديدة!",
+          "poetry_set_sprite": "قطعة برمجية جديدة!"
+        },
+        "poetry_hoc_spriteSizes_2023": {
           "poetry_remove_sprite": "قطعة برمجية جديدة!",
           "poetry_set_sprite": "قطعة برمجية جديدة!"
         }

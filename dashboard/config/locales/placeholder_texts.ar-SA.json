@@ -37,12 +37,22 @@
           "7fec9998c3e5a11f435dc6f2f8e399db": "الخيار ٢",
           "c3787b1ed128fdeec3ad638c8ba547d3": "الخيار ٣"
         },
+        "CourseF_Project_SpriteLab_chatbot_examples_2023": {
+          "6e41661ddc1edd50b00b7c607cdcec1a": "الخيار ١",
+          "7fec9998c3e5a11f435dc6f2f8e399db": "الخيار ٢",
+          "c3787b1ed128fdeec3ad638c8ba547d3": "الخيار ٣"
+        },
         "CourseF_Project_SpriteLab_cupcake_examples_-2022-2": {
           "6e41661ddc1edd50b00b7c607cdcec1a": "الخيار ١",
           "7fec9998c3e5a11f435dc6f2f8e399db": "الخيار ٢",
           "c3787b1ed128fdeec3ad638c8ba547d3": "الخيار ٣"
         },
         "CourseF_Project_SpriteLab_cupcake_examples_2021": {
+          "6e41661ddc1edd50b00b7c607cdcec1a": "الخيار ١",
+          "7fec9998c3e5a11f435dc6f2f8e399db": "الخيار ٢",
+          "c3787b1ed128fdeec3ad638c8ba547d3": "الخيار ٣"
+        },
+        "CourseF_Project_SpriteLab_cupcake_examples_2023": {
           "6e41661ddc1edd50b00b7c607cdcec1a": "الخيار ١",
           "7fec9998c3e5a11f435dc6f2f8e399db": "الخيار ٢",
           "c3787b1ed128fdeec3ad638c8ba547d3": "الخيار ٣"
@@ -57,6 +67,11 @@
           "78d989e01047ba7043a38650d695abaa": "اختر لاعباً",
           "7fec9998c3e5a11f435dc6f2f8e399db": "الخيار ٢",
           "8e7d34ed67fe4ec0910cefee2f5059cd": "راقص السماء",
+          "c3787b1ed128fdeec3ad638c8ba547d3": "الخيار ٣"
+        },
+        "CourseF_Project_SpriteLab_examples_2023": {
+          "6e41661ddc1edd50b00b7c607cdcec1a": "الخيار ١",
+          "7fec9998c3e5a11f435dc6f2f8e399db": "الخيار ٢",
           "c3787b1ed128fdeec3ad638c8ba547d3": "الخيار ٣"
         },
         "Find the Wizard": {
@@ -140,6 +155,10 @@
           "0ab65920c84bec05a22e09feea7fe4ea": "اكتب النص هنا",
           "30fcc1693fa8402931d13ac3a5f396fd": "اكتب العنوان هنا"
         },
+        "courseC19_playLab_EOC1_2023": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "اكتب النص هنا",
+          "30fcc1693fa8402931d13ac3a5f396fd": "اكتب العنوان هنا"
+        },
         "courseC19_playLab_EOC2": {
           "0ab65920c84bec05a22e09feea7fe4ea": "اكتب النص هنا",
           "30fcc1693fa8402931d13ac3a5f396fd": "اكتب العنوان هنا"
@@ -153,6 +172,10 @@
           "30fcc1693fa8402931d13ac3a5f396fd": "اكتب العنوان هنا"
         },
         "courseC19_playLab_EOC2_2021": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "اكتب النص هنا",
+          "30fcc1693fa8402931d13ac3a5f396fd": "اكتب العنوان هنا"
+        },
+        "courseC19_playLab_EOC2_2023": {
           "0ab65920c84bec05a22e09feea7fe4ea": "اكتب النص هنا",
           "30fcc1693fa8402931d13ac3a5f396fd": "اكتب العنوان هنا"
         },
@@ -172,6 +195,10 @@
           "0ab65920c84bec05a22e09feea7fe4ea": "اكتب النص هنا",
           "30fcc1693fa8402931d13ac3a5f396fd": "اكتب العنوان هنا"
         },
+        "courseC19_playLab_EOC3_2023": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "اكتب النص هنا",
+          "30fcc1693fa8402931d13ac3a5f396fd": "اكتب العنوان هنا"
+        },
         "courseC19_playLab_EOC4": {
           "0ab65920c84bec05a22e09feea7fe4ea": "اكتب النص هنا",
           "30fcc1693fa8402931d13ac3a5f396fd": "اكتب العنوان هنا"
@@ -185,6 +212,10 @@
           "30fcc1693fa8402931d13ac3a5f396fd": "اكتب العنوان هنا"
         },
         "courseC19_playLab_EOC4_2021": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "اكتب النص هنا",
+          "30fcc1693fa8402931d13ac3a5f396fd": "اكتب العنوان هنا"
+        },
+        "courseC19_playLab_EOC4_2023": {
           "0ab65920c84bec05a22e09feea7fe4ea": "اكتب النص هنا",
           "30fcc1693fa8402931d13ac3a5f396fd": "اكتب العنوان هنا"
         },
@@ -204,6 +235,10 @@
           "3e11a2dc6edb909c47778bed75a81769": "النص هنا",
           "5cec903c4d41c49412a70a94d54999ee": "يمكنك كتابة شيء هنا."
         },
+        "courseC19_playLab_EOC5_2023": {
+          "3e11a2dc6edb909c47778bed75a81769": "النص هنا",
+          "5cec903c4d41c49412a70a94d54999ee": "يمكنك كتابة شيء هنا."
+        },
         "courseC19_playLab_EOC6": {
           "3e11a2dc6edb909c47778bed75a81769": "النص هنا",
           "5cec903c4d41c49412a70a94d54999ee": "يمكنك كتابة شيء هنا."
@@ -220,11 +255,19 @@
           "3e11a2dc6edb909c47778bed75a81769": "النص هنا",
           "5cec903c4d41c49412a70a94d54999ee": "يمكنك كتابة شيء هنا."
         },
+        "courseC19_playLab_EOC6_2023": {
+          "3e11a2dc6edb909c47778bed75a81769": "النص هنا",
+          "5cec903c4d41c49412a70a94d54999ee": "يمكنك كتابة شيء هنا."
+        },
         "courseC19_playLab_sample12022": {
           "3e11a2dc6edb909c47778bed75a81769": "النص هنا",
           "5cec903c4d41c49412a70a94d54999ee": "يمكنك كتابة شيء هنا."
         },
         "courseC19_playLab_sample1_2021": {
+          "3e11a2dc6edb909c47778bed75a81769": "النص هنا",
+          "5cec903c4d41c49412a70a94d54999ee": "يمكنك كتابة شيء هنا."
+        },
+        "courseC19_playLab_sample1_2023": {
           "3e11a2dc6edb909c47778bed75a81769": "النص هنا",
           "5cec903c4d41c49412a70a94d54999ee": "يمكنك كتابة شيء هنا."
         },
@@ -239,6 +282,16 @@
           "df8312187449c70820d7c58229a6b17e": "إن الروبوت الفضائي يخيف المخلوقات الأخرى."
         },
         "courseC19_playLab_sample2_2021": {
+          "0192cdc04916ec27aa11738bb6e48d6e": "تحاول Neila حماية منزلها من الروبوت الفضائي.",
+          "2a28483f9f4f9ee44cec653a445d4c82": "إن المخلوقات الأخرى لم تعد خائفة بعد الآن!",
+          "3e11a2dc6edb909c47778bed75a81769": "النص هنا",
+          "5cec903c4d41c49412a70a94d54999ee": "يمكنك كتابة شيء هنا.",
+          "83db90f8846d091d3532256816f105d9": "هذه Neila.",
+          "b2f02bf648ce32c4362afe1578d41f70": "\nنجحت! لقد أرت Neila الروبوت الفضائي قوة الطيبة.",
+          "c084e152431f9116b9fdb3f7d465f13d": "تريد Neila أن تساعد الروبوت الفضائي ليتعلم كيف يصبح لطيفاً.",
+          "df8312187449c70820d7c58229a6b17e": "إن الروبوت الفضائي يخيف المخلوقات الأخرى."
+        },
+        "courseC19_playLab_sample2_2023": {
           "0192cdc04916ec27aa11738bb6e48d6e": "تحاول Neila حماية منزلها من الروبوت الفضائي.",
           "2a28483f9f4f9ee44cec653a445d4c82": "إن المخلوقات الأخرى لم تعد خائفة بعد الآن!",
           "3e11a2dc6edb909c47778bed75a81769": "النص هنا",
@@ -269,6 +322,10 @@
           "30fcc1693fa8402931d13ac3a5f396fd": "اكتب العنوان هنا"
         },
         "courseC_PlayLab_eventsFP_2021": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "اكتب النص هنا",
+          "30fcc1693fa8402931d13ac3a5f396fd": "اكتب العنوان هنا"
+        },
+        "courseC_PlayLab_eventsFP_2023": {
           "0ab65920c84bec05a22e09feea7fe4ea": "اكتب النص هنا",
           "30fcc1693fa8402931d13ac3a5f396fd": "اكتب العنوان هنا"
         },
@@ -324,6 +381,19 @@
           "d93dfc24c6ce3e53d8ee07416c743e60": "كلب!",
           "f62038e77820419cd978f7b722da560a": "كم منها سيظهر؟"
         },
+        "courseC_data wizard_2023": {
+          "1c64ef29c853587fbe94f69f05272b79": "طائر!",
+          "22f6f6821f4d6d0a08653935b466ac2f": "قطط!",
+          "27944770529dd15319a983bee8951560": "قطة!",
+          "336ad881e37e713ba0325500a8fa1f00": "كلاب!",
+          "4b23c908b939eaf7918e07142b9e05e0": "تنّين!",
+          "5b402e6ea05e847a076e03ad74420c45": "طيور!",
+          "71fc859f3abd22273bad5d0d8eda2173": "قم بعد جميع الحيوانات!",
+          "7f945c111ba5ea6d7b1547601db6ba0e": "التّنين!",
+          "81a2909a24e4ca3b582ab9ee539c080c": "قم بعد الحيوانات الأليفة",
+          "d93dfc24c6ce3e53d8ee07416c743e60": "كلب!",
+          "f62038e77820419cd978f7b722da560a": "كم منها سيظهر؟"
+        },
         "courseD_playLab_condFP": {
           "0ab65920c84bec05a22e09feea7fe4ea": "اكتب النص هنا",
           "30fcc1693fa8402931d13ac3a5f396fd": "اكتب العنوان هنا"
@@ -361,6 +431,9 @@
         "courseE_aboutme_3_2021": {
           "ed076287532e86365e841e92bfc50d8c": "مرحباً بالعالم!"
         },
+        "courseE_aboutme_3_2023": {
+          "ed076287532e86365e841e92bfc50d8c": "مرحباً بالعالم!"
+        },
         "courseE_aboutme_4": {
           "ed076287532e86365e841e92bfc50d8c": "مرحباً بالعالم!"
         },
@@ -371,6 +444,9 @@
           "ed076287532e86365e841e92bfc50d8c": "مرحباً بالعالم!"
         },
         "courseE_aboutme_4_2021": {
+          "ed076287532e86365e841e92bfc50d8c": "مرحباً بالعالم!"
+        },
+        "courseE_aboutme_4_2023": {
           "ed076287532e86365e841e92bfc50d8c": "مرحباً بالعالم!"
         },
         "courseE_aboutme_5": {
@@ -386,6 +462,10 @@
           "ed076287532e86365e841e92bfc50d8c": "مرحباً بالعالم!"
         },
         "courseE_aboutme_5_2021": {
+          "6ae99d4d2de5e3cbd29fec87ae7d76eb": "مهلاً!",
+          "ed076287532e86365e841e92bfc50d8c": "مرحباً بالعالم!"
+        },
+        "courseE_aboutme_5_2023": {
           "6ae99d4d2de5e3cbd29fec87ae7d76eb": "مهلاً!",
           "ed076287532e86365e841e92bfc50d8c": "مرحباً بالعالم!"
         },
@@ -447,6 +527,16 @@
           "caaf8264ca397dba2d35ef902bbbd953": "أي مخلوق؟",
           "f655df68ec33643278de7e69794e8d76": "حوض السمك الافتراضي"
         },
+        "courseF_apps_aquarium_2023": {
+          "0d3e73168beb875063ea0f0302fe32bd": "أي سمكة؟",
+          "78574118d153534fd0925a2f5ca25e79": "أي شيء؟",
+          "795f3202b17cb6bc3d4b771d8c6c9eaf": "أخرى",
+          "83e4a96aed96436c621b9809e258b309": "سمكة",
+          "8a52e7a8d3b4c955d6f7927c6ba3fe72": "مخلوق",
+          "a1a2a07348784279a1e7a6f46dc7e353": "ماذا ستضيف؟",
+          "caaf8264ca397dba2d35ef902bbbd953": "أي مخلوق؟",
+          "f655df68ec33643278de7e69794e8d76": "حوض السمك الافتراضي"
+        },
         "courseF_apps_card": {
           "d1210f945885351b13feb9bbb868aeef": "كم سيصبح عمره؟",
           "e243ac4e74cc5a76adbecf3b4daa1906": "سؤالي",
@@ -458,6 +548,11 @@
           "ff4d94eeb46da1dbec33fa9cfc2749ee": "من يحتفل بعيد ميلاده؟"
         },
         "courseF_apps_card_-2022-2": {
+          "d1210f945885351b13feb9bbb868aeef": "كم سيصبح عمره؟",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "سؤالي",
+          "ff4d94eeb46da1dbec33fa9cfc2749ee": "من يحتفل بعيد ميلاده؟"
+        },
+        "courseF_apps_card_2023": {
           "d1210f945885351b13feb9bbb868aeef": "كم سيصبح عمره؟",
           "e243ac4e74cc5a76adbecf3b4daa1906": "سؤالي",
           "ff4d94eeb46da1dbec33fa9cfc2749ee": "من يحتفل بعيد ميلاده؟"
@@ -492,6 +587,16 @@
           "ae096fbf24d913754b01a1601672bf62": "أيضاً!",
           "f0e5da70d264f312a1658d51c130b101": "أدخل اسمك:"
         },
+        "courseF_apps_chatbot_2023": {
+          "05584ab56b744b51cd8c4a6e8b3a08ee": "أدخل عمرك:",
+          "13e575be866ecf5ac3dcbf61ab2048d7": "كم عمرك؟",
+          "1f258d88a70309efc1435ef5daa277a0": "شكراً على محادثتك معي اليوم!",
+          "605f302ebc9f7fbacba60b15f551a633": "ما هو لونك المفضل؟",
+          "91c4549fe2a5e9325c8f8d51afbb751b": "أدخل لونك المفضل:",
+          "a72e7c5c68af0546e963e510297f5233": "مرحباً، أنا X-9! ما اسمك؟",
+          "ae096fbf24d913754b01a1601672bf62": "أيضاً!",
+          "f0e5da70d264f312a1658d51c130b101": "أدخل اسمك:"
+        },
         "courseF_apps_collector": {
           "077449fb290b51b9d70c9f2f3d3213bc": " ثوانٍ",
           "41f2b2212de0105c2a942ebb4a44e449": "لعبة المجمّع العظيم!",
@@ -505,6 +610,12 @@
           "e8a10c04d72b2f135dabe360c4bdd534": "لقد فزت!"
         },
         "courseF_apps_collector_-2022-2": {
+          "077449fb290b51b9d70c9f2f3d3213bc": " ثوانٍ",
+          "41f2b2212de0105c2a942ebb4a44e449": "لعبة المجمّع العظيم!",
+          "490082498449bd20ff0199737dfa4916": "اختر نوع اللعبة:",
+          "e8a10c04d72b2f135dabe360c4bdd534": "لقد فزت!"
+        },
+        "courseF_apps_collector_2023": {
           "077449fb290b51b9d70c9f2f3d3213bc": " ثوانٍ",
           "41f2b2212de0105c2a942ebb4a44e449": "لعبة المجمّع العظيم!",
           "490082498449bd20ff0199737dfa4916": "اختر نوع اللعبة:",
@@ -543,12 +654,28 @@
           "e522ee28f39133b45497637539ff429b": "أدخل رقماً:",
           "f6175c6f0b0bcfff0256286315f0eb7b": "ألعاب الحفلة"
         },
+        "courseF_apps_madlib_2023": {
+          "2f6e9ffcbb531b9f8983aef3ae4242ac": "أدخل اسم عضو من أعضاء الجسم:",
+          "514b8d5320196898a9ced3efe0d4c802": "أدخل صفة:",
+          "5306eed2fd2c43fe033efd6016c0c38b": "- سباق الأرجل!",
+          "7c9fbd20ed3a7bcfad08351050ffe0ff": " ألعاب.",
+          "88794317e8c695bbc7bc7d2f35792c7f": "أدخل اسم شيئ:",
+          "bf08dd3d1961874f13e77c936aad27e5": "قصة مساحة فارغة",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "سؤالي",
+          "e522ee28f39133b45497637539ff429b": "أدخل رقماً:",
+          "f6175c6f0b0bcfff0256286315f0eb7b": "ألعاب الحفلة"
+        },
         "courseF_editable_card": {
           "d1210f945885351b13feb9bbb868aeef": "كم سيصبح عمره؟",
           "e243ac4e74cc5a76adbecf3b4daa1906": "سؤالي",
           "ff4d94eeb46da1dbec33fa9cfc2749ee": "من يحتفل بعيد ميلاده؟"
         },
         "courseF_editable_card_-2022-2": {
+          "d1210f945885351b13feb9bbb868aeef": "كم سيصبح عمره؟",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "سؤالي",
+          "ff4d94eeb46da1dbec33fa9cfc2749ee": "من يحتفل بعيد ميلاده؟"
+        },
+        "courseF_editable_card_2023": {
           "d1210f945885351b13feb9bbb868aeef": "كم سيصبح عمره؟",
           "e243ac4e74cc5a76adbecf3b4daa1906": "سؤالي",
           "ff4d94eeb46da1dbec33fa9cfc2749ee": "من يحتفل بعيد ميلاده؟"
@@ -566,6 +693,17 @@
           "f0e5da70d264f312a1658d51c130b101": "أدخل اسمك:"
         },
         "courseF_editable_chatbot_-2022-2": {
+          "05584ab56b744b51cd8c4a6e8b3a08ee": "أدخل عمرك:",
+          "13e575be866ecf5ac3dcbf61ab2048d7": "كم عمرك؟",
+          "1f258d88a70309efc1435ef5daa277a0": "شكراً على محادثتك معي اليوم!",
+          "605f302ebc9f7fbacba60b15f551a633": "ما هو لونك المفضل؟",
+          "91c4549fe2a5e9325c8f8d51afbb751b": "أدخل لونك المفضل:",
+          "a72e7c5c68af0546e963e510297f5233": "مرحباً، أنا X-9! ما اسمك؟",
+          "ae096fbf24d913754b01a1601672bf62": "أيضاً!",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "سؤالي",
+          "f0e5da70d264f312a1658d51c130b101": "أدخل اسمك:"
+        },
+        "courseF_editable_chatbot_2023": {
           "05584ab56b744b51cd8c4a6e8b3a08ee": "أدخل عمرك:",
           "13e575be866ecf5ac3dcbf61ab2048d7": "كم عمرك؟",
           "1f258d88a70309efc1435ef5daa277a0": "شكراً على محادثتك معي اليوم!",
@@ -598,11 +736,26 @@
           "e522ee28f39133b45497637539ff429b": "أدخل رقماً:",
           "f6175c6f0b0bcfff0256286315f0eb7b": "ألعاب الحفلة"
         },
+        "courseF_editable_madlib_2023": {
+          "2f6e9ffcbb531b9f8983aef3ae4242ac": "أدخل اسم عضو من أعضاء الجسم:",
+          "514b8d5320196898a9ced3efe0d4c802": "أدخل صفة:",
+          "5306eed2fd2c43fe033efd6016c0c38b": "- سباق الأرجل!",
+          "7c9fbd20ed3a7bcfad08351050ffe0ff": " ألعاب.",
+          "88794317e8c695bbc7bc7d2f35792c7f": "أدخل اسم شيئ:",
+          "bf08dd3d1961874f13e77c936aad27e5": "قصة مساحة فارغة",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "سؤالي",
+          "e522ee28f39133b45497637539ff429b": "أدخل رقماً:",
+          "f6175c6f0b0bcfff0256286315f0eb7b": "ألعاب الحفلة"
+        },
         "courseF_label_predict": {
           "937dc37c06cc5d89a7096eb048b73590": "يأتي فوراً",
           "f15045cb7e57652546d4a0b2c695356f": "ما الذي سوف تأكله؟"
         },
         "courseF_label_predict_-2022-2": {
+          "937dc37c06cc5d89a7096eb048b73590": "يأتي فوراً",
+          "f15045cb7e57652546d4a0b2c695356f": "ما الذي سوف تأكله؟"
+        },
+        "courseF_label_predict_2023": {
           "937dc37c06cc5d89a7096eb048b73590": "يأتي فوراً",
           "f15045cb7e57652546d4a0b2c695356f": "ما الذي سوف تأكله؟"
         },
@@ -665,16 +818,25 @@
         "courseF_text_answer_-2022-2": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "سؤالي"
         },
+        "courseF_text_answer_2023": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "سؤالي"
+        },
         "courseF_text_choice_color": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "سؤالي"
         },
         "courseF_text_choice_color_-2022-2": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "سؤالي"
         },
+        "courseF_text_choice_color_2023": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "سؤالي"
+        },
         "courseF_text_choice_conversation": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "سؤالي"
         },
         "courseF_text_choice_conversation_-2022-2": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "سؤالي"
+        },
+        "courseF_text_choice_conversation_2023": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "سؤالي"
         },
         "courseF_text_choice_events": {
@@ -687,10 +849,18 @@
           "c529a06c3f8518b63ff6dfac482b335c": "اذكر اسم هذا الكوكب:",
           "e243ac4e74cc5a76adbecf3b4daa1906": "سؤالي"
         },
+        "courseF_text_choice_events_2023": {
+          "44506356d48394cd903b579df9de9117": "الأرض!",
+          "c529a06c3f8518b63ff6dfac482b335c": "اذكر اسم هذا الكوكب:",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "سؤالي"
+        },
         "courseF_text_choice_freeplay": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "سؤالي"
         },
         "courseF_text_choice_freeplay_-2022-2": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "سؤالي"
+        },
+        "courseF_text_choice_freeplay_2023": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "سؤالي"
         },
         "courseF_text_choice_interview": {
@@ -698,6 +868,10 @@
           "5bd698afd23bccde289bb0b4aa72a518": "اذكر اسم الروبوت"
         },
         "courseF_text_choice_interview_-2022-2": {
+          "34088af1fb721900963462375b3bbe23": "الربوت!",
+          "5bd698afd23bccde289bb0b4aa72a518": "اذكر اسم الروبوت"
+        },
+        "courseF_text_choice_interview_2023": {
           "34088af1fb721900963462375b3bbe23": "الربوت!",
           "5bd698afd23bccde289bb0b4aa72a518": "اذكر اسم الروبوت"
         },
@@ -709,10 +883,17 @@
           "d1210f945885351b13feb9bbb868aeef": "كم سيصبح عمره؟",
           "ff4d94eeb46da1dbec33fa9cfc2749ee": "من يحتفل بعيد ميلاده؟"
         },
+        "courseF_text_choice_multiprompt_2023": {
+          "d1210f945885351b13feb9bbb868aeef": "كم سيصبح عمره؟",
+          "ff4d94eeb46da1dbec33fa9cfc2749ee": "من يحتفل بعيد ميلاده؟"
+        },
         "courseF_text_choice_title": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "سؤالي"
         },
         "courseF_text_choice_title_-2022-2": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "سؤالي"
+        },
+        "courseF_text_choice_title_2023": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "سؤالي"
         },
         "courseF_text_concat": {
@@ -721,16 +902,25 @@
         "courseF_text_concat_-2022-2": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "سؤالي"
         },
+        "courseF_text_concat_2023": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "سؤالي"
+        },
         "courseF_text_prompts": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "سؤالي"
         },
         "courseF_text_prompts_-2022-2": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "سؤالي"
         },
+        "courseF_text_prompts_2023": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "سؤالي"
+        },
         "courseF_variables_card": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "سؤالي"
         },
         "courseF_variables_card_-2022-2": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "سؤالي"
+        },
+        "courseF_variables_card_2023": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "سؤالي"
         },
         "courseF_variables_card_finish": {
@@ -741,10 +931,17 @@
           "464a456e0747ec9b09fc9afc6fbd13ed": "ماذا تريد لعيد ميلادك؟",
           "e243ac4e74cc5a76adbecf3b4daa1906": "سؤالي"
         },
+        "courseF_variables_card_finish_2023": {
+          "464a456e0747ec9b09fc9afc6fbd13ed": "ماذا تريد لعيد ميلادك؟",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "سؤالي"
+        },
         "courseF_variables_chatbot": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "سؤالي"
         },
         "courseF_variables_chatbot_-2022-2": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "سؤالي"
+        },
+        "courseF_variables_chatbot_2023": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "سؤالي"
         },
         "courseF_variables_chatbot_finish": {
@@ -757,10 +954,18 @@
           "c757766b0a7e2017c79e1c94f60e44f7": "شكرا للدردشة!",
           "e243ac4e74cc5a76adbecf3b4daa1906": "سؤالي"
         },
+        "courseF_variables_chatbot_finish_2023": {
+          "46463b2e9f71f2f15b7238f56f09ba30": "النهاية",
+          "c757766b0a7e2017c79e1c94f60e44f7": "شكرا للدردشة!",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "سؤالي"
+        },
         "courseF_variables_madlib": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "سؤالي"
         },
         "courseF_variables_madlib_-2022-2": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "سؤالي"
+        },
+        "courseF_variables_madlib_2023": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "سؤالي"
         },
         "courseF_variables_madlib_finish": {
@@ -771,10 +976,20 @@
           "50d489a15105b987ec6d4410900c95dd": "أدخل كلمة عمل:",
           "e243ac4e74cc5a76adbecf3b4daa1906": "سؤالي"
         },
+        "courseF_variables_madlib_finish_2023": {
+          "50d489a15105b987ec6d4410900c95dd": "أدخل كلمة عمل:",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "سؤالي"
+        },
         "courseF_variables_predict": {
           "f6429fe0f1a76611670df7e1234af936": "ما اسمك؟"
         },
         "coursee_helloworld_freeplay": {
+          "6cd3556deb0da54bca060b4c39479839": "مرحبا بالعالم!"
+        },
+        "coursee_helloworld_freeplay_2023": {
+          "6cd3556deb0da54bca060b4c39479839": "مرحبا بالعالم!"
+        },
+        "csc_bookcover_widget_2023": {
           "6cd3556deb0da54bca060b4c39479839": "مرحبا بالعالم!"
         },
         "helloworld_animals_freeplay": {
