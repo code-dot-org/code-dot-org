@@ -116,6 +116,10 @@ section.pl-offerings {
     min-width: 300px;
     max-width: 420px;
     margin: 0 auto;
+
+    &:hover {
+      cursor: auto;
+    }
   }
 
   @media (min-width: 640px) {
@@ -148,7 +152,6 @@ section.pl-offerings {
     }
   }
   @media (min-width: 1280px) {
-
     &__prev {
       position: absolute;
       top: calc(50% - 20px);
