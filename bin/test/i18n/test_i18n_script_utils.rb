@@ -10,14 +10,6 @@ class I18nScriptUtilsTest < Minitest::Test
     assert_equal "---\n:en:\n  test: \"#example\"\n  'yes': 'y'\n", I18nScriptUtils.to_crowdin_yaml({en: {'test' => '#example', 'yes' => 'y'}})
   end
 
-  def test_header_sanitization
-    header = {'title' => 'Expects only title', 'invalid' => 'Unexpected header'}
-
-    I18nScriptUtils.sanitize_header!(header)
-
-    assert_equal({'title' => 'Expects only title'}, header)
-  end
-
   def test_markdown_with_header_writing
     exec_seq = sequence('execution')
 
@@ -104,6 +96,16 @@ end
 describe I18nScriptUtils do
   def around
     FakeFS.with_fresh {yield}
+  end
+
+  describe '.sanitize_markdown_header' do
+    subject {I18nScriptUtils.sanitize_markdown_header(markdown_header)}
+
+    let(:markdown_header) {{'title' => 'Expects only title', 'invalid' => 'Unexpected header'}}
+
+    it 'returns hash with only the `title` key' do
+      assert_equal({'title' => 'Expects only title'}, subject)
+    end
   end
 
   describe '.file_changed?' do
