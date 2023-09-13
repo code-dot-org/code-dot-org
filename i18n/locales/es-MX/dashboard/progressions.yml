@@ -2,6 +2,8 @@ es-MX:
   data:
     progressions:
       '"If/Else" with the Bee': '"If/Else" con Abeja'
+      "(Optional) Eliza Widget": "(Opcional) Widget de Eliza"
+      "(Optional) GAN Guess Widget": "Widget GAN Guess (opcional)"
       8-Bit Binary Number Widget: Widget de Números Binarios de 8 Bits
       AI Lab and Isaac's Data: Laboratorio de IA y los datos de Isaac
       AI Lab and Kim's Data: Laboratorio de IA y datos de Kim
@@ -114,6 +116,7 @@ es-MX:
       'Circuit Playground: LEDs': 'Circuit Playground: LED'
       Circuits and Logic: Circuitos y lógica
       Club Datasets: Bases de Datos de Club
+      Code My Poem: Programa Mi Poema
       Code Prediction: Predicción de Código
       Code Your Own Flappy Game: Crea Tu Propio Juego Flappy
       Code Your Page: Programa tu Página
@@ -272,6 +275,8 @@ es-MX:
       InspirationalArtwork: InspirationalArtwork
       Interactive Art: Arte Interactivo
       Interactive Card: Tarjeta interactiva
+      Interactive Characters: Personajes Interactivos
+      Interactive Maps Intro Video: Video de introducción a los Mapas Interactivos
       Intro to Design Mode: Introducción al modo de diseño
       Intro to Flyer Game: Introducción al Juego de Voladores
       Intro to For Loops: Introducción a los bucles "For"
@@ -279,6 +284,7 @@ es-MX:
       Intro to Sprites: Introducción a los Sprites
       Intro to Variables: Introducción a las Variables
       Introducing Sprite Lab: Presentamos el Laboratorio de sprites
+      Introduction: Introducción
       Introduction to Arrays: Introducción a los arreglos
       Introduction to Game Lab: Introducción al Laboratorio de juegos
       Introduction to Variables: Introducción a las variables
@@ -358,6 +364,7 @@ es-MX:
       My Loopy Robotic Friends - Unplugged Activity: Mis Amigos Robóticos Loopy - Actividad Desconectada
       My Online Neighborhood: Mi barrio en línea
       My Robotic Friends - Unplugged Activity: Mis Amigos Robóticos - Actividad Desconectada
+      My Time Capsule: Mi Capsula de Tiempo
       Naming Variables: Nombrar variables
       Nested Loops with the Bee: Bucles anidados con la Abeja
       New Challenge Introduction: Nuevo Desafío Introducción
@@ -465,6 +472,7 @@ es-MX:
       Setup: Configuración
       Shapes and Parameters: Formas y parámetros
       Shapes and the Draw Loop: Figuras y el Bucle de Dibujo
+      Share Out: Compartir
       Share Your App: Comparte tu Aplicación
       Share Your Pages: Comparte tus Páginas
       Share Your Stylesheets: Comparte tus Hojas de Estilo
@@ -518,6 +526,7 @@ es-MX:
       UI Element Properties: Propiedades del Elemento "Pantalla de Usuario"
       Ultimate Shoe Recommender: El Mejor Recomendador de Calzado
       Unit 5 Lesson 1 Overview: Unidad 5 Lección 1 Resumen
+      Unplugged Activity: Actividad sin conexión
       Updating Your Prototype: Actualizando tu Prototipo
       Upload Your Images: Sube tus Imágenes
       User Interface: Pantalla de Usuario
