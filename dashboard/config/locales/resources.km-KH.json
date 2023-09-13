@@ -1612,6 +1612,394 @@
           "name": "តាមអ៊ីនធឺណិតផ្អាកសិន ហើយគិត",
           "type": "វីដេអូ"
         },
+        "star_quilts_1/csc-starquilts/2023": {
+          "type": "វីដេអូ"
+        },
+        "poem_art_1_-_introduction/csc-timecapsule/2023": {
+          "type": "វីដេអូ"
+        },
+        "poem_art_2_-_events/csc-timecapsule/2023": {
+          "type": "វីដេអូ"
+        },
+        "poem_art_3_-_imagery/csc-timecapsule/2023": {
+          "type": "វីដេអូ"
+        },
+        "poem_art_4_-_celebration/csc-timecapsule/2023": {
+          "type": "វីដេអូ"
+        },
+        "poem_art_celebration_video_optional_/csc-timecapsule/2023": {
+          "type": "វីដេអូ"
+        },
+        "poem_art_events_video_optional_/csc-timecapsule/2023": {
+          "type": "វីដេអូ"
+        },
+        "poem_art_video_optional_/csc-timecapsule/2023": {
+          "type": "វីដេអូ"
+        },
+        "enter_your_own_poem/csc-timecapsule/2023": {
+          "type": "វីដេអូ"
+        },
+        "poem_art_1_-_introduction/poetry/2023": {
+          "type": "វីដេអូ"
+        },
+        "poem_art_2_-_events/poetry/2023": {
+          "type": "វីដេអូ"
+        },
+        "poem_art_3_-_imagery/poetry/2023": {
+          "type": "វីដេអូ"
+        },
+        "poem_art_4_-_celebration/poetry/2023": {
+          "type": "វីដេអូ"
+        },
+        "enter_your_own_poem/poetry/2023": {
+          "type": "វីដេអូ"
+        },
+        "poem_art_celebration_video_optional_/poetry/2023": {
+          "type": "វីដេអូ"
+        },
+        "poem_art_events_video_optional_/poetry/2023": {
+          "type": "វីដេអូ"
+        },
+        "poem_art_video_optional_/poetry/2023": {
+          "type": "វីដេអូ"
+        },
+        "implementation_guide/coursea/2023": {
+          "name": "សៀវភៅណែនាំការអនុវត្ត"
+        },
+        "teacher_forum/coursea/2023": {
+          "name": "វេទិការគ្រូបង្រៀន"
+        },
+        "20_20_20_rule/coursea/2023": {
+          "name": "ក្បួន 20/20/20"
+        },
+        "getting_started_-_creating_a_class_section/coursea/2023": {
+          "type": "វីដេអូ"
+        },
+        "pair_programming/coursea/2023": {
+          "name": "ការសរសេរកម្មវិធីជាគូ",
+          "type": "វីដេអូសម្រាប់សិស្ស"
+        },
+        "wiggles-go_noodle/coursea/2023": {
+          "type": "វីដេអូ"
+        },
+        "wiggles_-_gonoodle/coursea/2023": {
+          "type": "វីដេអូ"
+        },
+        "debugging_with_the_step_button/coursea/2023": {
+          "type": "វីដេអូ"
+        },
+        "feeling_faces/coursea/2023": {
+          "name": "មុខចំណាប់អារម្មណ៍",
+          "type": "រូបភាពចំណាប់អារម្មណ៍"
+        },
+        "pair-programming/coursea/2023": {
+          "type": "វីដេអូ"
+        },
+        "pause_and_think_online/coursea/2023": {
+          "name": "តាមអ៊ីនធឺណិតផ្អាកសិន ហើយគិត",
+          "type": "វីដេអូ"
+        },
+        "the_big_event/coursea/2023": {
+          "name": "ព្រឹត្តិការណ៍ធំ"
+        },
+        "the_big_event_1/coursea/2023": {
+          "name": "ព្រឹត្តិការណ៍ធំ"
+        },
+        "the_big_event_2/coursea/2023": {
+          "name": "ព្រឹត្តិការណ៍ធំ"
+        },
+        "implementation_guide/courseb/2023": {
+          "name": "សៀវភៅណែនាំការអនុវត្ត"
+        },
+        "teacher_forum/courseb/2023": {
+          "name": "វេទិការគ្រូបង្រៀន"
+        },
+        "move_it_move_it_3/courseb/2023": {
+          "type": "វីដេអូសម្រាប់គ្រូ"
+        },
+        "20_20_20_rule/courseb/2023": {
+          "name": "ក្បួន 20/20/20"
+        },
+        "feeling_faces/courseb/2023": {
+          "name": "មុខចំណាប់អារម្មណ៍",
+          "type": "រូបភាពចំណាប់អារម្មណ៍"
+        },
+        "how_to_make_a_class_section_on_code_org/courseb/2023": {
+          "name": "របៀបបង្កើតថ្នាក់នៅលើ Code.org"
+        },
+        "pair_programming/courseb/2023": {
+          "name": "ការសរសេរកម្មវិធីជាគូ",
+          "type": "វីដេអូសម្រាប់សិស្ស"
+        },
+        "wiggles_-_gonoodle/courseb/2023": {
+          "type": "វីដេអូ"
+        },
+        "stevie_and_the_big_project/courseb/2023": {
+          "name": "Stevie and the Big Project"
+        },
+        "unspotted_bugs/courseb/2023": {
+          "name": "កំហុសដែលមិនបានគ្រោងទុក",
+          "type": "វីដេអូ"
+        },
+        "pause_and_think_online/courseb/2023": {
+          "name": "តាមអ៊ីនធឺណិតផ្អាកសិន ហើយគិត",
+          "type": "វីដេអូ"
+        },
+        "the_big_event/courseb/2023": {
+          "name": "ព្រឹត្តិការណ៍ធំ"
+        },
+        "the_big_event_1/courseb/2023": {
+          "name": "ព្រឹត្តិការណ៍ធំ"
+        },
+        "the_big_event_2/courseb/2023": {
+          "name": "ព្រឹត្តិការណ៍ធំ"
+        },
+        "implementation_guide/coursec/2023": {
+          "name": "សៀវភៅណែនាំការអនុវត្ត"
+        },
+        "teacher_forum/coursec/2023": {
+          "name": "វេទិការគ្រូបង្រៀន"
+        },
+        "my_robotic_friends/coursec/2023": {
+          "name": "មិត្តរ៉ូបូតរបស់ខ្ញុំ"
+        },
+        "my_robotic_friends_1/coursec/2023": {
+          "name": "មិត្តរ៉ូបូតរបស់ខ្ញុំ"
+        },
+        "my_robotic_friends_2/coursec/2023": {
+          "name": "មិត្តរ៉ូបូតរបស់ខ្ញុំ"
+        },
+        "my_robotic_friends_3/coursec/2023": {
+          "name": "មិត្តរ៉ូបូតរបស់ខ្ញុំ"
+        },
+        "my_robotic_friends_4/coursec/2023": {
+          "name": "មិត្តរ៉ូបូតរបស់ខ្ញុំ"
+        },
+        "pair_programming/coursec/2023": {
+          "name": "ការសរសេរកម្មវិធីជាគូ",
+          "type": "វីដេអូ"
+        },
+        "artist_introduction/coursec/2023": {
+          "type": "វីដេអូសម្រាប់សិស្ស"
+        },
+        "turns_angles/coursec/2023": {
+          "type": "វីដេអូសម្រាប់សិស្ស"
+        },
+        "the_big_event/coursec/2023": {
+          "name": "ព្រឹត្តិការណ៍ធំ"
+        },
+        "the_big_event_1/coursec/2023": {
+          "name": "ព្រឹត្តិការណ៍ធំ"
+        },
+        "the_big_event_2/coursec/2023": {
+          "name": "ព្រឹត្តិការណ៍ធំ"
+        },
+        "pause_and_think_online/coursec/2023": {
+          "name": "តាមអ៊ីនធឺណិតផ្អាកសិន ហើយគិត",
+          "type": "វីដេអូ"
+        },
+        "bits_versus_bytes/coursec/2023": {
+          "type": "វីដេអូសម្រាប់សិស្ស"
+        },
+        "implementation_guide/coursed/2023": {
+          "name": "សៀវភៅណែនាំការអនុវត្ត"
+        },
+        "teacher_forum/coursed/2023": {
+          "name": "វេទិការគ្រូបង្រៀន"
+        },
+        "pair_programming/coursed/2023": {
+          "name": "ការសរសេរកម្មវិធីជាគូ",
+          "type": "វីដេអូសម្រាប់សិស្ស"
+        },
+        "relay_programming_4/coursed/2023": {
+          "type": "វីដេអូសម្រាប់គ្រូ"
+        },
+        "pause_and_think_online/coursed/2023": {
+          "name": "តាមអ៊ីនធឺណិតផ្អាកសិន ហើយគិត",
+          "type": "វីដេអូ"
+        },
+        "feeling_faces/coursed/2023": {
+          "name": "មុខចំណាប់អារម្មណ៍",
+          "type": "រូបភាពចំណាប់អារម្មណ៍"
+        },
+        "conditionals_with_cards/coursed/2023": {
+          "name": "ការប្រើលក្ខខណ្ឌជាមួយកាត"
+        },
+        "conditionals_with_cards_1/coursed/2023": {
+          "name": "ការប្រើលក្ខខណ្ឌជាមួយកាត"
+        },
+        "conditionals_with_cards_2/coursed/2023": {
+          "name": "ការប្រើលក្ខខណ្ឌជាមួយកាត"
+        },
+        "conditionals_with_cards_3/coursed/2023": {
+          "name": "ការប្រើលក្ខខណ្ឌជាមួយកាត"
+        },
+        "conditionals_with_cards_4/coursed/2023": {
+          "name": "ការប្រើលក្ខខណ្ឌជាមួយកាត"
+        },
+        "implementation_guide/coursee/2023": {
+          "name": "សៀវភៅណែនាំការអនុវត្ត"
+        },
+        "sprite_lab_documentation/coursee/2023": {
+          "name": "ឯកសារ Sprite Lab"
+        },
+        "teacher_forum/coursee/2023": {
+          "name": "វេទិការគ្រូបង្រៀន"
+        },
+        "private_and_personal_information_private_and_personal_information/coursee/2023": {
+          "type": "វីដេអូសម្រាប់សិស្ស"
+        },
+        "pause_and_think_online/coursee/2023": {
+          "name": "តាមអ៊ីនធឺណិតផ្អាកសិន ហើយគិត",
+          "type": "វីដេអូ"
+        },
+        "turns_angles_1/coursee/2023": {
+          "type": "វីដេអូសម្រាប់សិស្ស"
+        },
+        "digital_sharing_ethics_video_/coursee/2023": {
+          "type": "វីដេអូ"
+        },
+        "implementation_guide/coursef/2023": {
+          "name": "សៀវភៅណែនាំការអនុវត្ត"
+        },
+        "sprite_lab_documentation_1/coursef/2023": {
+          "name": "ឯកសារ Sprite Lab"
+        },
+        "teacher_forum/coursef/2023": {
+          "name": "វេទិការគ្រូបង្រៀន"
+        },
+        "the_power_of_words_the_power_of_words/coursef/2023": {
+          "type": "វីដេអូ"
+        },
+        "introducing_sprite_lab/coursef/2023": {
+          "name": "សេចក្ដីណែនាំពី Sprite Lab",
+          "type": "វីដេអូ"
+        },
+        "making_sprites/coursef/2023": {
+          "name": "ការបង្កើត Sprites"
+        },
+        "sprite_lab_documentation/coursef/2023": {
+          "name": "ឯកសារ Sprite Lab"
+        },
+        "ai_impact_on_society/coursef/2023": {
+          "type": "វីដេអូ"
+        },
+        "ai_machine_learning/coursef/2023": {
+          "type": "វីដេអូ"
+        },
+        "ai_training_data_bias/coursef/2023": {
+          "type": "វីដេអូ"
+        },
+        "the_internet/coursef/2023": {
+          "name": "អ៊ីនធឺណិត"
+        },
+        "teacher_forum/express/2023": {
+          "name": "វេទិការគ្រូបង្រៀន"
+        },
+        "pair_programming/express/2023": {
+          "name": "ការសរសេរកម្មវិធីជាគូ",
+          "type": "វីដេអូ"
+        },
+        "artist_introduction/express/2023": {
+          "type": "វីដេអូ"
+        },
+        "turns_angles/express/2023": {
+          "type": "វីដេអូ"
+        },
+        "sprite_lab_documentation/express/2023": {
+          "name": "ឯកសារ Sprite Lab"
+        },
+        "sprites_in_action/express/2023": {
+          "name": "កំណត់សកម្មភាពឱ្យ Sprites"
+        },
+        "pause_and_think_online/express/2023": {
+          "name": "តាមអ៊ីនធឺណិតផ្អាកសិន ហើយគិត",
+          "type": "វីដេអូ"
+        },
+        "pair_programming_video/express/2023": {
+          "type": "វីដេអូ"
+        },
+        "variables/express/2023": {
+          "name": "អ​ថេរ",
+          "type": "វីដេអូសម្រាប់សិស្ស"
+        },
+        "teacher_forum/pre-express/2023": {
+          "name": "វេទិការគ្រូបង្រៀន"
+        },
+        "20_20_20_rule/pre-express/2023": {
+          "name": "ក្បួន 20/20/20",
+          "type": "វីដេអូ"
+        },
+        "feeling_faces/pre-express/2023": {
+          "name": "មុខចំណាប់អារម្មណ៍",
+          "type": "រូបភាពចំណាប់អារម្មណ៍"
+        },
+        "how_to_make_a_class_section_on_code_org/pre-express/2023": {
+          "name": "របៀបបង្កើតថ្នាក់នៅលើ Code.org",
+          "type": "វីដេអូសម្រាប់គ្រូ"
+        },
+        "pair_programming/pre-express/2023": {
+          "name": "ការសរសេរកម្មវិធីជាគូ",
+          "type": "វីដេអូសម្រាប់សិស្ស"
+        },
+        "wiggles_-_go_noodle/pre-express/2023": {
+          "type": "វីដេអូ"
+        },
+        "pause_and_think_online/pre-express/2023": {
+          "name": "តាមអ៊ីនធឺណិតផ្អាកសិន ហើយគិត",
+          "type": "វីដេអូ"
+        },
+        "how_ai_works_-_training_data_and_bias/how-ai-works/2023": {
+          "type": "វីដេអូ"
+        },
+        "how_ai_works_-_what_is_machine_learning_/how-ai-works/2023": {
+          "type": "វីដេអូ"
+        },
+        "how_ai_works_how_computer_vision_works/how-ai-works/2023": {
+          "type": "វីដេអូ"
+        },
+        "what_a_neural_network_sees/how-ai-works/2023": {
+          "type": "វីដេអូ"
+        },
+        "how_ai_works_how_neural_networks_work/how-ai-works/2023": {
+          "type": "វីដេអូ"
+        },
+        "how_ai_works_chatbots_and_large_language_models_part_1_/how-ai-works/2023": {
+          "type": "វីដេអូ"
+        },
+        "how_ai_works_chatbots_and_large_language_models_part_2_/how-ai-works/2023": {
+          "type": "វីដេអូ"
+        },
+        "how_ai_works_creativity_and_imagination/how-ai-works/2023": {
+          "type": "វីដេអូ"
+        },
+        "how_ai_works_-_societal_impact/how-ai-works/2023": {
+          "type": "វីដេអូ"
+        },
+        "how_ai_works_-_privacy_and_future_of_work/how-ai-works/2023": {
+          "type": "វីដេអូ"
+        },
+        "does_ai_have_creativity_and_imagination_/how-ai-works/2023": {
+          "type": "វីដេអូ"
+        },
+        "how_ai_works_ethics_ai_equal_access_and_algorithmic_bias/how-ai-works/2023": {
+          "type": "វីដេអូ"
+        },
+        "how_ai_works_ethics_ai_privacy_the_future_of_work/how-ai-works/2023": {
+          "type": "វីដេអូ"
+        },
+        "how_ai_works_introduction/how-ai-works/2023": {
+          "type": "វីដេអូ"
+        },
+        "how_ai_works_training_data_and_bias/how-ai-works/2023": {
+          "type": "វីដេអូ"
+        },
+        "how_ai_works_what_is_machine_learning_/how-ai-works/2023": {
+          "type": "វីដេអូ"
+        },
+        "how_chatbots_and_large_language_models_work/how-ai-works/2023": {
+          "type": "វីដេអូ"
+        },
         "csf-artist-intro-video/artist/unversioned": {
           "type": "វីដេអូសម្រាប់សិស្ស"
         },
