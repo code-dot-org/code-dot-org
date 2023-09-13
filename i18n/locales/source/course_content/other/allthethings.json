@@ -2959,5 +2959,11 @@
   "https://studio.code.org/s/allthethings/lessons/48/levels/2": {
     "display_name": "Challenge: Extend Your Scene",
     "long_instructions": "# Review Your Scene\n\nCheck over your scene one last time to make sure you have included everything that you want.\n\n# Do this\n\n1.  Compare the scene that you drew to your plan.\n2.  Make any last changes.\n3.  What are you most proud of?"
+  },
+  "https://studio.code.org/s/allthethings/lessons/49/levels/1": {
+    "long_instructions": "Let's get this moose dancing! Click the `\"dancer1\" do \"Floss\" forever` block onto the \"at 4 measures\" block to make him start flossing at the second measure."
+  },
+  "https://studio.code.org/s/allthethings/lessons/49/levels/2": {
+    "long_instructions": "Let's get this moose dancing! Click the `\"dancer1\" do \"Floss\" forever` block onto the \"at 4 measures\" block to make him start flossing at the second measure."
   }
 }
