@@ -42,7 +42,7 @@
   }
 
   .text-wrapper {
-    width: 68%;
+    width: 54%;
 
     @media screen and (max-width: $width-sm) {
       width: 100%;
@@ -50,7 +50,7 @@
   }
 
   figure {
-    width: 25%;
+    width: 33%;
 
     @media screen and (max-width: $width-sm) {
       display: none;
@@ -58,15 +58,6 @@
 
     img {
       width: 100%;
-    }
-  }
-
-  a.link-button {
-    background-color: $neutral-white;
-    border-color: $neutral-white;
-    color: $neutral-dark;
-    &:hover {
-        background: #EAEBEB;
     }
   }
 }
@@ -165,57 +156,12 @@
   }
 }
 
-.video-wrapper {
-  &__space {
-    height: 2rem;
-    display: block;
-    @media screen and (max-width: 800px) {
-      display: none;
-    }
-  }
-}
-
-.video_caption_link {
-  font-family: var(--gotham);
-  font-weight: normal;
-}
-
-section#collections,
-section#flexible-units {
-  padding-bottom: calc(64px - 10px);
-}
-
-.footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 3.6rem 0px 0.3rem 0;
-
-    a.link-button {
-        background-color: $neutral-white;
-        border-color: $neutral-dark;
-        color: $neutral-dark;
-        &:hover {
-            background: #EAEBEB;
-        }
-    }
-
-    &__line {
-        margin: 1.5rem 0;
-    }
-}
-
 .video-series {
-    margin: 0 auto;
+  margin: 0 auto;
 }
 
 .thumbnail-wrapper .thumbnail-image {
   height: 15rem;
-}
-
-.video-wrapper .video_caption_link {
-  margin: 0;
-  display: flex;
 }
 
 .video-wrapper--one-col img {
@@ -224,7 +170,7 @@ section#flexible-units {
 
 @media (max-width: 640px) {
   .slides {
-    height: 13.5rem;
+    height: 15rem !important;
     display: flex;
   }
 
@@ -232,33 +178,7 @@ section#flexible-units {
     height: 100%;
   }
 
-  .slides .video__container__without__caption {
-    height: 15rem;
-    display: flex;
-  }
-
   .carousel-wrapper .pagination {
     margin-top: 1rem;
   }
-
-  .video_caption_link {
-    font-size: 0.775rem;
-  }
 }
-
-@media (max-width: 280px) {
-  .slides {
-    height: 11.25rem;
-    display: flex;
-  }
-
-  .slides .video__container__without__caption  {
-    height: 7.5rem;
-    display: flex;
-  }
-
-  .footer {
-    padding: 4rem 2rem;
-  }
-}
-

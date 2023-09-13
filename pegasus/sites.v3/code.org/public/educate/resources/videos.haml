@@ -4,7 +4,9 @@ theme: responsive_full_width
 video_player: true
 ---
 
--video_page_index = 8
+- video_page_index = 7
+- video_page_section_title = [hoc_s(:video_library_page_title_ai_works), hoc_s(:video_library_page_title_computers_work), hoc_s(:video_library_page_title_internet_works), hoc_s(:video_library_page_title_not_hacked), hoc_s(:video_library_page_title_blockchain), hoc_s(:video_library_page_title_careers), hoc_s(:video_library_page_title_inspirational)]
+- video_page_section_desc = [hoc_s(:video_library_page_description_ai_works), hoc_s(:video_library_page_description_computers_work), hoc_s(:video_library_page_description_internet_works), hoc_s(:video_library_page_description_not_hacked), hoc_s(:video_library_page_description_blockchain), hoc_s(:video_library_page_description_careers), hoc_s(:video_library_page_description_inspirational)]
 
 %link{href: "/css/generated/design-system-pegasus.css", rel: "stylesheet"}
 %link{href: "/css/generated/page/video-page-styles.css", rel: "stylesheet"}
@@ -16,55 +18,41 @@ video_player: true
         =hoc_s(:teach_page_additional_materials_list_heading_02)
       %p{style: "color: white"}
         =hoc_s(:video_library_page_hero_description)
-      %a.link-button{href: "#pick-a-course"}
+      %a.link-button.white{href: "#pick-a-course"}
         =hoc_s(:call_to_action_explore_courses)
     %figure
-      %img{src: "/images/banners/video-logo.png", alt: "", style: "width: 150%"}
+      %img{src: "/images/banners/video-logo.png", alt: ""}
     .clear
 
 - video_page_index.times do |index|
-  -if index === 5 
-    %section.without__caption
-      .wrapper
-        %h2{style: "text-align: center"}
-          =hoc_s("video_library_page_title_#{index + 1}")
-        %p{style: "text-align: center"}
-          =hoc_s("video_library_page_description_#{index + 1}")
+  %section.centered
+    .wrapper
+      %h2
+        = video_page_section_title[index]
+      %p
+        = video_page_section_desc[index]
+      - if index === 0
+        = view :carousel_video_flexible
+      - if index === 1
+        = view :carousel_computer_works_video
+      - if index === 2
+        = view :carousel_internet_video
+      - if index === 3
         = view :carousel_not_hacked_video
-    = view :section_divider_line
-  -if index < 5 || index > 5
-    %section
-      .wrapper
-        %h2{style: "text-align: center"}
-          =hoc_s("video_library_page_title_#{index + 1}")
-        %p{style: "text-align: center"}
-          =hoc_s("video_library_page_description_#{index + 1}")
-        -if index === 0
-          = view :carousel_video_flexible
-        -if index === 1
-          = view :carousel_ai_teacher_flexible
-        -if index === 2
-          = view :carousel_computer_works_video
-        -if index === 3 
-          = view :carousel_internet_video
-        -if index === 4
-          = view :carousel_blockchain_video
-        -if index === 6
-          = view :carousel_cs_video
-        -if index === 7 
-          = view :carousel_inspirational_video
-    = view :section_divider_line
+      - if index === 4
+        = view :carousel_blockchain_video
+      - if index === 5
+        = view :carousel_cs_video
+      - if index === 6
+        = view :carousel_inspirational_video
+  = view :section_divider_line
 
-%section.footer
-  %p{style: "text-align: center"}
+%section.centered
+  %p
     =hoc_s(:video_library_page_footer_description)
-  %a.link-button{href: "https://www.youtube.com/channel/UCJyEBMU1xVP2be1-AoGS1BA"}
+  %a.link-button.secondary{href: "https://www.youtube.com/channel/UCJyEBMU1xVP2be1-AoGS1BA", target: "_blank", rel: "noopener noreferrer"}
     =hoc_s(:video_library_page_footer_cta)
-
 
 %script{:src=>'/js/jquery.carouFredSel-6.2.1-packed.js'}
 %script{:src=>'/js/jquery.touchSwipe.min.js'}
 %script{:src=>'/js/page/video_page.js'}
-
-
-
