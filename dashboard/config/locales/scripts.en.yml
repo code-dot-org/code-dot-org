@@ -13120,3 +13120,16 @@ en:
           description_short: ''
           description: ''
           student_description: ''
+        ai-ethics-2023:
+          lessons:
+            lesson-1:
+              name: Our AI Code of Ethics
+            lesson-2:
+              name: Societal Impact of Generative AI
+          lesson_groups: {}
+          name: ai-ethics-2023
+          title: AI Ethics
+          description_audience: ''
+          description_short: ''
+          description: These lessons introduce students to ethical considerations around artificial intelligence. Students research different topics and current events surrounding AI technologies, then are asked to reflect and take a stance on how they feel these technologies should be used in society.
+          student_description: ''
