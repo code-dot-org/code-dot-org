@@ -1,4 +1,5 @@
 import Sounds from '../Sounds';
+import {fetchSignedCookies} from '../utils';
 
 /**
  * Requests the song manifest in parallel with signed cloudfront cookies. These cookies
@@ -41,24 +42,19 @@ export async function getSongManifest(useRestrictedSongs, manifestFilename) {
 }
 
 /**
- * Fetch cookies signed by cloudfront which grant access to restricted songs.
- * @returns {Promise<Response>}
- */
-export function fetchSignedCookies() {
-  return fetch('/dashboardapi/sign_cookies', {credentials: 'same-origin'});
-}
-
-/**
- * Decide which song to select based on the song list and appOptions config.
+ * Decide which song to select based on the song list and provided options.
  * @param songManifest
- * @param config {Object} appOptions config object
+ * @param options {Object} set of options that determine which song to select.
+ *    These are typically derived from the level and/or project sources.
  * @returns {String} song id to select
  */
-export function getSelectedSong(songManifest, config) {
+export function getSelectedSong(
+  songManifest,
+  {selectedSong, defaultSong, isProjectLevel, freePlay}
+) {
   // The selectedSong and defaultSong might not be present in the songManifest
   // in development mode, so just select the first song in the list instead.
   const songs = songManifest.map(song => song.id);
-  const {selectedSong, defaultSong, isProjectLevel, freePlay} = config.level;
   if (
     (isProjectLevel || freePlay) &&
     selectedSong &&

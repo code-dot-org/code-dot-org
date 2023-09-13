@@ -22138,7 +22138,7 @@
         },
         "63df0c6e-ae3d-4724-9c1d-2ecd5bf8986a": {
           "tips": [
-            "Một cách để giới thiệu Giờ lập trình nếu bản thân bạn không rành về lập trình là chiếu một trong những [video truyền cảm hứng của chúng tôi][0]. Hãy chọn nội dung mà bạn cho rằng học sinh của mình sẽ cảm thấy hứng thú và chia sẻ ngay bây giờ. Đối với học viên nhỏ tuổi, chúng tôi đề xuất “[Giờ lập trình tới rồi][1].”"
+            "Một cách để giới thiệu Giờ lập trình nếu bản thân bạn không rành về lập trình là chiếu một trong những [video truyền cảm hứng của chúng tôi](https://hourofcode.com/us/resources#videos). Hãy chọn nội dung mà bạn cho rằng học sinh của mình sẽ cảm thấy hứng thú và chia sẻ ngay bây giờ. Đối với học viên nhỏ tuổi, chúng tôi đề xuất “[Giờ lập trình tới rồi](https://youtu.be/FC5FbmsH4fw).”"
           ]
         },
         "f96053ea-387e-47d5-a018-65619ec093b0": {
@@ -22151,7 +22151,7 @@
         },
         "91cc858b-9f90-4134-b890-237f457e8423": {
           "name": "Minecraft Chuyến thám hiểm đại dương",
-          "description": "Hãy thử thách học sinh hoàn thành bài học [Minecraft: Chuyến du hành dưới nước][0] này.\n\nTùy vào độ tuổi và khả năng của học sinh, bạn có thể cân nhắc:\n\n-   Đối với học sinh nhỏ tuổi, chúng tôi khuyên bạn nên chia lớp thành từng cặp và yêu cầu mỗi nhóm làm việc cùng nhau để hoàn thành bài hướng dẫn bằng cách sử dụng phương pháp [lập trình theo cặp][1].\n-   Đối với học viên ở cấp trung học cơ sở, chúng tôi thấy rằng việc tự làm các bài hướng dẫn sẽ có hiệu quả. Đôi khi, việc để học sinh tự chọn bài hướng dẫn cho riêng mình sẽ rất hữu ích. Nếu học sinh không thích Minecraft, họ sẽ có được trải nghiệm tương tự với bài hướng dẫn [Lập trình với Anna và Elsa][2] hoặc [Chiến tranh giữa các vì sao][3].\n-   Đối với học viên lớn tuổi hoặc người lớn, bài hướng dẫn [Minecraft: Chuyến du hành dưới nước][4] sẽ phát huy hiệu quả dưới dạng một thử thách độc lập hoặc một hoạt động lập trình theo cặp."
+          "description": "Hãy thử thách học sinh hoàn thành bài học [Minecraft: Chuyến du hành dưới nước](http://studio.code.org/s/aquatic/lessons/1/levels/1) này.\n\nTùy vào độ tuổi và khả năng của học sinh, bạn có thể cân nhắc:\n\n-   Đối với học sinh nhỏ tuổi, chúng tôi khuyên bạn nên chia lớp thành từng cặp và yêu cầu mỗi nhóm làm việc cùng nhau để hoàn thành bài hướng dẫn bằng cách sử dụng phương pháp [lập trình theo cặp](https://youtu.be/vgkahOzFH2Q).\n-   Đối với học viên ở cấp trung học cơ sở, chúng tôi thấy rằng việc tự làm các bài hướng dẫn sẽ có hiệu quả. Đôi khi, việc để học sinh tự chọn bài hướng dẫn cho riêng mình sẽ rất hữu ích. Nếu học sinh không thích Minecraft, họ sẽ có được trải nghiệm tương tự với bài hướng dẫn [Lập trình với Anna và Elsa](https://studio.code.org/s/frozen/stage/1/puzzle/1) hoặc [Chiến tranh giữa các vì sao](https://code.org/starwars).\n-   Đối với học viên lớn tuổi hoặc người lớn, bài hướng dẫn [Minecraft: Chuyến du hành dưới nước](http://studio.code.org/s/aquatic/lessons/1/levels/1) sẽ phát huy hiệu quả dưới dạng một thử thách độc lập hoặc một hoạt động lập trình theo cặp."
         },
         "900f3fd4-40aa-42f7-89fc-e5240b2db143": {
           "tips": [
@@ -22159,7 +22159,7 @@
           ]
         },
         "1be305a6-52f5-40bb-a8d5-f851a3c61a3a": {
-          "description": "Nếu một nhóm hoặc cá nhân hoàn thành sớm, họ có thể thử bài hướng dẫn khác bằng cách truy cập [code.org/learn][0]."
+          "description": "Nếu một nhóm hoặc cá nhân hoàn thành sớm, họ có thể thử bài hướng dẫn khác bằng cách truy cập [code.org/learn](http://code.org/learn)."
         },
         "29412a26-dd7b-4990-a8bb-7e6f7bfa00d6": {
           "name": "Hỏi đáp",
@@ -22167,18 +22167,18 @@
         },
         "7e26ffea-ccaa-4969-9b40-01573fbe4303": {
           "name": "Ăn mừng",
-          "description": "Giải thích rằng hôm nay bạn đang dành một giờ để lập trình, bởi vì tuần này là Tuần lễ Giáo dục KHMT và hàng triệu học sinh khác trên toàn cầu cũng đã học Giờ lập trình trong tuần này. Hãy chúc mừng các em học sinh đã hòa mình vào phong trào toàn cầu này.\n\nHãy phát cho mỗi học sinh một [chứng chỉ][0] có tên của học sinh trên đó."
+          "description": "Giải thích rằng hôm nay bạn đang dành một giờ để lập trình, bởi vì tuần này là Tuần lễ Giáo dục KHMT và hàng triệu học sinh khác trên toàn cầu cũng đã học Giờ lập trình trong tuần này. Hãy chúc mừng các em học sinh đã hòa mình vào phong trào toàn cầu này.\n\nHãy phát cho mỗi học sinh một [chứng chỉ](https://studio.code.org/certificates/batch?course=bWM=) có tên của học sinh trên đó."
         },
         "de9c3d28-c38a-4d2e-af91-a72a92d31f52": {
           "name": "Bước tiếp theo",
-          "description": "Hãy cho học sinh biết rằng nếu họ thích hoạt động hôm nay, họ có nhiều lựa chọn để tiếp tục lập trình. Hãy khuyến khích học sinh truy cập [code.org/learn][0] để xem danh sách các lựa chọn hoặc nếu bạn đang lên kế hoạch cho hoạt động mở rộng nào tiếp theo, hãy cho học sinh biết kế hoạch sắp tới trong lớp học."
+          "description": "Hãy cho học sinh biết rằng nếu họ thích hoạt động hôm nay, họ có nhiều lựa chọn để tiếp tục lập trình. Hãy khuyến khích học sinh truy cập [code.org/learn](<>) để xem danh sách các lựa chọn hoặc nếu bạn đang lên kế hoạch cho hoạt động mở rộng nào tiếp theo, hãy cho học sinh biết kế hoạch sắp tới trong lớp học."
         },
         "ebf68fd6-9cfe-4fc2-93b4-e61860fc853b": {
-          "description": "Hãy trao cho mỗi học sinh một [“Câu hỏi tổng kết”][0] và yêu cầu họ tóm tắt những nội dung đã học được hôm nay, cảm giác của họ hoặc những gì họ đã trải qua. Học sinh có thể vẽ, viết hoặc thể hiện bản thân theo bất kỳ cách nào mà họ cảm thấy thoải mái. Nhận “Câu hỏi tổng kết” từ mỗi học sinh trên đường ra khỏi phòng. Nếu thích, bạn có thể đăng “Câu hỏi tổng kết” trên bảng thông báo hoặc một số địa điểm nổi bật trong trường như một lời nhắc nhở về Giờ lập trình của bạn."
+          "description": "Hãy trao cho mỗi học sinh một [“Câu hỏi tổng kết”](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) và yêu cầu họ tóm tắt những nội dung đã học được hôm nay, cảm giác của họ hoặc những gì họ đã trải qua. Học sinh có thể vẽ, viết hoặc thể hiện bản thân theo bất kỳ cách nào mà họ cảm thấy thoải mái. Nhận “Câu hỏi tổng kết” từ mỗi học sinh trên đường ra khỏi phòng. Nếu thích, bạn có thể đăng “Câu hỏi tổng kết” trên bảng thông báo hoặc một số địa điểm nổi bật trong trường như một lời nhắc nhở về Giờ lập trình của bạn."
         },
         "f3360f34-a0a8-4d3d-98e2-fe6176ad0e2e": {
           "name": "Mở rộng Giờ lập trình",
-          "description": "Sau khi Giờ lập trình kết thúc, có nhiều cách để tiếp tục giảng dạy môn khoa học máy tính trong lớp học K-5. Sau đây là một số ý tưởng:\n\n-   **Dạy các khóa học [Nguyên tắc cơ bản về khoa học máy tính của Code Studio][0]**. Sáu khóa học này được thiết kế cho những học sinh nhỏ tuổi. Học sinh sẽ làm việc theo cách của họ thông qua một loạt bài tập bài hướng dẫn lập trình và giáo viên có quyền truy cập vào các giáo án hấp dẫn giúp làm cho việc học trở nên sôi động. Code.org cung cấp chương trình phát triển chuyên môn miễn phí cho các khóa học này theo hình thức trực tuyến hoặc trực tiếp.\n-   **Hãy truy cập [Bạn có thể dạy Khoa học máy tính][1]** để nhận thêm đề xuất khóa học.\n-   **Mời chuyên gia khoa học máy tính nói chuyện với lớp về công việc của họ**. Bạn không biết bất kỳ chuyên gia khoa học máy tính nào tại địa phương? Hãy liên hệ với một tình nguyện viên trên [bản đồ tình nguyện viên][2] của chúng tôi."
+          "description": "Sau khi Giờ lập trình kết thúc, có nhiều cách để tiếp tục giảng dạy môn khoa học máy tính trong lớp học K-5. Sau đây là một số ý tưởng:\n\n-   **Dạy các khóa học [Nguyên tắc cơ bản về khoa học máy tính của Code Studio](http://code.org/educate/k5)**. Sáu khóa học này được thiết kế cho những học sinh nhỏ tuổi. Học sinh sẽ làm việc theo cách của họ thông qua một loạt bài tập bài hướng dẫn lập trình và giáo viên có quyền truy cập vào các giáo án hấp dẫn giúp làm cho việc học trở nên sôi động. Code.org cung cấp chương trình phát triển chuyên môn miễn phí cho các khóa học này theo hình thức trực tuyến hoặc trực tiếp.\n-   **Hãy truy cập [Bạn có thể dạy Khoa học máy tính](https://code.org/teach)** để nhận thêm đề xuất khóa học.\n-   **Mời chuyên gia khoa học máy tính nói chuyện với lớp về công việc của họ**. Bạn không biết bất kỳ chuyên gia khoa học máy tính nào tại địa phương? Hãy liên hệ với một tình nguyện viên trên [bản đồ tình nguyện viên](https://code.org/volunteer/local) của chúng tôi."
         },
         "6b51b4f1-5b1d-4b29-af25-c48d716a2d22": {
           "description": "#### Bố trí sân khấu\n\nHãy chào mừng học sinh đến lớp và giới thiệu ngắn gọn về hoạt động trong ngày.\n\n**Nói:** _Hôm nay chúng ta sẽ dành một giờ để học lập trình. Có ai ở đây đã nghe thuật ngữ “mã lệnh” trước đây chưa? Thuật ngữ đó có nghĩa là gì?_\n\nHọc sinh có thể đề cập rằng “mã lệnh” giống như một thông điệp bí mật, hoặc liên quan đến máy tính theo một cách nào đó.",
@@ -22569,7 +22569,7 @@
         },
         "aced2726-6ed1-4645-9fd2-eccfe982584f": {
           "tips": [
-            "Một cách để giới thiệu Giờ lập trình nếu bản thân bạn không rành về lập trình là chiếu một trong những [video truyền cảm hứng của chúng tôi][0]. Hãy chọn nội dung mà bạn cho rằng học sinh của mình sẽ cảm thấy hứng thú và chia sẻ ngay bây giờ. Đối với học viên nhỏ tuổi, chúng tôi đề xuất “[Ai cũng có thể học][1].”"
+            "Một cách để giới thiệu Giờ lập trình nếu bản thân bạn không rành về lập trình là chiếu một trong những [video truyền cảm hứng của chúng tôi](https://hourofcode.com/us/resources#videos). Hãy chọn nội dung mà bạn cho rằng học sinh của mình sẽ cảm thấy hứng thú và chia sẻ ngay bây giờ. Đối với học viên nhỏ tuổi, chúng tôi đề xuất “[Ai cũng có thể học](https://youtu.be/qYZF6oIZtfc).”"
           ]
         },
         "a0692bbb-9e61-49d2-ac85-96bd4a922f5a": {
@@ -22577,7 +22577,7 @@
         },
         "8af57fdb-d7be-4cc2-9964-8f7eed4102f9": {
           "name": "Lập trình Flappy",
-          "description": "Hãy thử thách học sinh hoàn thành bài học [Lập trình game dạng Flappy Bird][0] này.\n\nTùy vào độ tuổi và khả năng của học sinh, bạn có thể cân nhắc:\n\n-   Đối với học sinh ở bậc trung học phổ thông và trung học cơ sở, chúng tôi khuyên bạn nên chọn bài học cho phép chơi tự do và tạo game hoặc ứng dụng. Bạn có thể cho học sinh làm việc độc lập hoặc theo cặp hoặc theo nhóm nhỏ. Có nhiều bài học khác trên [code.org/learn][1] cho phép sáng tạo tự do, chẳng hạn như [Playlab][2] và công cụ beta mới của chúng tôi là [AppLab][3]\n-   Đối với học sinh nhỏ tuổi, chúng tôi khuyên bạn nên chia lớp thành từng cặp hoặc nhóm thật nhỏ (ba đến bốn học sinh mỗi nhóm) và yêu cầu mỗi nhóm làm việc cùng nhau để hoàn thành bài hướng dẫn bằng cách sử dụng phương pháp [lập trình theo cặp][4].\n-   Đối với học viên là người lớn, bài hướng dẫn [Viết chương trình máy tính đầu tiên][5] sẽ phát huy hiệu quả tuyệt vời dưới dạng một thử thách độc lập hoặc một hoạt động lập trình theo cặp."
+          "description": "Hãy thử thách học sinh hoàn thành bài học [Lập trình game dạng Flappy Bird](https://studio.code.org/flappy/1) này.\n\nTùy vào độ tuổi và khả năng của học sinh, bạn có thể cân nhắc:\n\n-   Đối với học sinh ở bậc trung học phổ thông và trung học cơ sở, chúng tôi khuyên bạn nên chọn bài học cho phép chơi tự do và tạo game hoặc ứng dụng. Bạn có thể cho học sinh làm việc độc lập hoặc theo cặp hoặc theo nhóm nhỏ. Có nhiều bài học khác trên [code.org/learn](http://code.org/learn) cho phép sáng tạo tự do, chẳng hạn như [Playlab](https://studio.code.org/s/playlab/stage/1/puzzle/1) và công cụ beta mới của chúng tôi là [AppLab](https://code.org/educate/applab)\n-   Đối với học sinh nhỏ tuổi, chúng tôi khuyên bạn nên chia lớp thành từng cặp hoặc nhóm thật nhỏ (ba đến bốn học sinh mỗi nhóm) và yêu cầu mỗi nhóm làm việc cùng nhau để hoàn thành bài hướng dẫn bằng cách sử dụng phương pháp [lập trình theo cặp](https://youtu.be/vgkahOzFH2Q).\n-   Đối với học viên là người lớn, bài hướng dẫn [Viết chương trình máy tính đầu tiên](https://studio.code.org/hoc/1) sẽ phát huy hiệu quả tuyệt vời dưới dạng một thử thách độc lập hoặc một hoạt động lập trình theo cặp."
         },
         "47fe47af-9de3-4ba5-8193-1f489bef9544": {
           "tips": [
@@ -22585,7 +22585,7 @@
           ]
         },
         "55f2f6a9-8e6b-49c2-8988-e2a09956e222": {
-          "description": "Nếu một nhóm hoặc cá nhân hoàn thành sớm, họ có thể thử bài hướng dẫn khác bằng cách truy cập [code.org/learn][0]."
+          "description": "Nếu một nhóm hoặc cá nhân hoàn thành sớm, họ có thể thử bài hướng dẫn khác bằng cách truy cập [code.org/learn](http://code.org/learn)."
         },
         "cd649101-5c1f-4bcb-9258-3cabf2bfccb6": {
           "name": "Hỏi đáp",
@@ -22593,7 +22593,7 @@
         },
         "ca7d5e61-0396-4885-934c-0d70ab63b072": {
           "name": "Ăn mừng",
-          "description": "Giải thích rằng hôm nay bạn đang dành một giờ để lập trình, bởi vì tuần này là Tuần lễ Giáo dục KHMT và hàng triệu học sinh khác trên toàn cầu cũng đã học Giờ lập trình trong tuần này. Hãy chúc mừng các em học sinh đã hòa mình vào phong trào toàn cầu này.\n\nHãy phát cho mỗi học sinh một [chứng chỉ][0] có tên của học sinh trên đó."
+          "description": "Giải thích rằng hôm nay bạn đang dành một giờ để lập trình, bởi vì tuần này là Tuần lễ Giáo dục KHMT và hàng triệu học sinh khác trên toàn cầu cũng đã học Giờ lập trình trong tuần này. Hãy chúc mừng các em học sinh đã hòa mình vào phong trào toàn cầu này.\n\nHãy phát cho mỗi học sinh một [chứng chỉ](http://code.org/certificates) có tên của học sinh trên đó."
         },
         "d4bf5db5-6884-4166-ae90-3a5cd01b9695": {
           "name": "Bước tiếp theo",
@@ -22605,7 +22605,7 @@
         },
         "f7c11887-da26-4c7b-be7a-1b84d330ed30": {
           "name": "Mở rộng Giờ lập trình",
-          "description": "Sau khi Giờ lập trình kết thúc, có nhiều cách để tiếp tục giảng dạy môn khoa học máy tính trong lớp học K-5. Sau đây là một số ý tưởng:\n\n-   **Dạy các khóa học [Nguyên tắc cơ bản về khoa học máy tính của Code Studio][0]**. Sáu khóa học này được thiết kế cho những học sinh nhỏ tuổi. Học sinh sẽ làm việc theo cách của họ thông qua một loạt bài tập bài hướng dẫn lập trình và giáo viên có quyền truy cập vào các giáo án hấp dẫn giúp làm cho việc học trở nên sôi động. Code.org cung cấp chương trình phát triển chuyên môn miễn phí cho các khóa học này theo hình thức trực tuyến hoặc trực tiếp.\n-   **Mời chuyên gia khoa học máy tính nói chuyện với lớp về công việc của họ**. Nếu bạn không biết bất kỳ tình nguyện viên nào, hãy liên hệ với một vài tình nguyện viên trên [bản đồ tình nguyện viên][1] của chúng tôi."
+          "description": "Sau khi Giờ lập trình kết thúc, có nhiều cách để tiếp tục giảng dạy môn khoa học máy tính trong lớp học K-5. Sau đây là một số ý tưởng:\n\n-   **Dạy các khóa học [Nguyên tắc cơ bản về khoa học máy tính của Code Studio](http://code.org/educate/k5)**. Sáu khóa học này được thiết kế cho những học sinh nhỏ tuổi. Học sinh sẽ làm việc theo cách của họ thông qua một loạt bài tập bài hướng dẫn lập trình và giáo viên có quyền truy cập vào các giáo án hấp dẫn giúp làm cho việc học trở nên sôi động. Code.org cung cấp chương trình phát triển chuyên môn miễn phí cho các khóa học này theo hình thức trực tuyến hoặc trực tiếp.\n-   **Mời chuyên gia khoa học máy tính nói chuyện với lớp về công việc của họ**. Nếu bạn không biết bất kỳ tình nguyện viên nào, hãy liên hệ với một vài tình nguyện viên trên [bản đồ tình nguyện viên](https://code.org/volunteer/local) của chúng tôi."
         },
         "4fddbdf5-8e43-4536-bdaa-98b0b8c240ad": {
           "name": "Bố trí sân khấu",
@@ -22613,7 +22613,7 @@
         },
         "55cc55a9-45cb-4bbd-bf37-2de8a2abd9db": {
           "tips": [
-            "Nếu bạn có thời gian hoặc nếu học sinh cần thêm một chút thông tin cơ bản, bạn có thể cân nhắc gửi [“Máy vẽ”][0] trước sự kiện Giờ lập trình. Bài học ngắn gọn này giới thiệu cho học sinh ý tưởng về cách vẽ với sự hỗ trợ của máy tính, từ đó sẽ giúp họ thành công hơn với [Bài hướng dẫn lập trình cùng Anna và Elsa][1]."
+            "Nếu bạn có thời gian hoặc nếu học sinh cần thêm một chút thông tin cơ bản, bạn có thể cân nhắc gửi [“Máy vẽ”](https://code.org/curriculum/misc/hocunplugged/Teacher) trước sự kiện Giờ lập trình. Bài học ngắn gọn này giới thiệu cho học sinh ý tưởng về cách vẽ với sự hỗ trợ của máy tính, từ đó sẽ giúp họ thành công hơn với [Bài hướng dẫn lập trình cùng Anna và Elsa](https://studio.code.org/s/frozen/stage/1/puzzle/1)."
           ]
         },
         "46e7088b-b207-46ae-be95-3ceacecc3f35": {
@@ -22621,7 +22621,7 @@
         },
         "063fb28a-8520-4c66-9821-3be0f0d1ed5f": {
           "tips": [
-            "Một cách để giới thiệu Giờ lập trình nếu bản thân bạn không rành về lập trình là chiếu một trong những [video truyền cảm hứng của chúng tôi][0]. Hãy chọn nội dung mà bạn cho rằng học sinh của mình sẽ cảm thấy hứng thú và chia sẻ ngay bây giờ. Đối với học viên ở cấp trung học cơ sở, chúng tôi đề xuất “[Giờ lập trình tới rồi][1]”."
+            "Một cách để giới thiệu Giờ lập trình nếu bản thân bạn không rành về lập trình là chiếu một trong những [video truyền cảm hứng của chúng tôi](https://hourofcode.com/us/resources#videos). Hãy chọn nội dung mà bạn cho rằng học sinh của mình sẽ cảm thấy hứng thú và chia sẻ ngay bây giờ. Đối với học viên ở cấp trung học cơ sở, chúng tôi đề xuất “[Giờ lập trình tới rồi](https://youtu.be/FC5FbmsH4fw)”."
           ]
         },
         "c18f0050-ba65-4f12-8cc6-fe7f16b5806b": {
@@ -22629,7 +22629,7 @@
         },
         "e5e802d6-9ee4-4ef3-aab2-616ac241b5f8": {
           "name": "Lập trình với Anna và Elsa",
-          "description": "Hãy thử thách học sinh hoàn thành bài học [Minecraft: Lập trình cùng Anna và Elsa][0] này.\n\nTùy vào độ tuổi và khả năng của học sinh, bạn có thể cân nhắc:\n\n-   Đối với học sinh nhỏ tuổi, chúng tôi khuyên bạn nên chia lớp thành từng cặp hoặc các nhóm thật nhỏ (ba đến bốn học sinh mỗi nhóm) và yêu cầu mỗi nhóm làm việc cùng nhau để hoàn thành bài hướng dẫn bằng cách sử dụng phương pháp [lập trình theo cặp][1]. Học sinh từ lớp K-5 có thể gặp khó khăn với môn toán trong bài hướng dẫn (yêu cầu kiến thức cơ bản về phép đo góc). Nếu học sinh của bạn nhỏ tuổi hơn, hãy cân nhắc việc dạy giáo án bổ sung [“Máy vẽ”][2] để giới thiệu những kiến thức cơ bản trước khi bạn tổ chức Giờ lập trình.\n-   Đối với học sinh lớn hơn, chúng tôi thấy rằng việc tự học bài hướng dẫn có hiệu quả. Đôi khi, việc để học sinh chọn bài hướng dẫn của riêng mình sẽ rất hữu ích. Nếu học sinh không thích Frozen, họ có thể nhận được trải nghiệm tương tự với bài hướng dẫn [Viết chương trình máy tính đầu tiên][3].\n-   Đối với học viên lớn tuổi hoặc người lớn, bài hướng dẫn [Lập trình cùng Anna và Else][4] sẽ phát huy hiệu quả dưới dạng một thử thách độc lập hoặc một hoạt động lập trình theo cặp."
+          "description": "Hãy thử thách học sinh hoàn thành bài học [Minecraft: Lập trình cùng Anna và Elsa](https://studio.code.org/s/frozen/stage/1/puzzle/1) này.\n\nTùy vào độ tuổi và khả năng của học sinh, bạn có thể cân nhắc:\n\n-   Đối với học sinh nhỏ tuổi, chúng tôi khuyên bạn nên chia lớp thành từng cặp hoặc các nhóm thật nhỏ (ba đến bốn học sinh mỗi nhóm) và yêu cầu mỗi nhóm làm việc cùng nhau để hoàn thành bài hướng dẫn bằng cách sử dụng phương pháp [lập trình theo cặp](https://youtu.be/vgkahOzFH2Q). Học sinh từ lớp K-5 có thể gặp khó khăn với môn toán trong bài hướng dẫn (yêu cầu kiến thức cơ bản về phép đo góc). Nếu học sinh của bạn nhỏ tuổi hơn, hãy cân nhắc việc dạy giáo án bổ sung [“Máy vẽ”](https://code.org/curriculum/misc/hocunplugged/Teacher) để giới thiệu những kiến thức cơ bản trước khi bạn tổ chức Giờ lập trình.\n-   Đối với học sinh lớn hơn, chúng tôi thấy rằng việc tự học bài hướng dẫn có hiệu quả. Đôi khi, việc để học sinh chọn bài hướng dẫn của riêng mình sẽ rất hữu ích. Nếu học sinh không thích Frozen, họ có thể nhận được trải nghiệm tương tự với bài hướng dẫn [Viết chương trình máy tính đầu tiên](https://studio.code.org/hoc/1).\n-   Đối với học viên lớn tuổi hoặc người lớn, bài hướng dẫn [Lập trình cùng Anna và Else](https://studio.code.org/s/frozen/stage/1/puzzle/1) sẽ phát huy hiệu quả dưới dạng một thử thách độc lập hoặc một hoạt động lập trình theo cặp."
         },
         "bdb8b54a-c21d-4bcf-a960-67ecf0468a7f": {
           "tips": [
@@ -22637,15 +22637,15 @@
           ]
         },
         "da8b52b2-8db6-440d-add3-8578161f59e2": {
-          "description": "Nếu một nhóm hoặc cá nhân hoàn thành sớm, họ có thể thử bài hướng dẫn khác bằng cách truy cập [code.org/learn][0]."
+          "description": "Nếu một nhóm hoặc cá nhân hoàn thành sớm, họ có thể thử bài hướng dẫn khác bằng cách truy cập [code.org/learn](http://code.org/learn)."
         },
         "38799019-2b81-4c28-a239-762b90e0f5e3": {
           "name": "Hỏi đáp",
-          "description": "Hãy phát cho mỗi học sinh một vài tờ giấy ghi chú hoặc giấy nhớ. Tổ chức nhanh hoạt động [“Tập hợp câu trả lời quanh lớp”][0]:\n\n-   Đưa ra lời nhắc có nhiều câu trả lời, chẳng hạn như “Hãy chia sẻ lại điều bạn thực sự thích về hoạt động Giờ lập trình mà bạn đã hoàn thành” hoặc “Hãy chia sẻ một số kỹ năng bạn đã học được hôm nay.”\n-   Yêu cầu học sinh viết ra nhiều câu trả lời nhất có thể, một ý tưởng cho mỗi tờ giấy dán hoặc giấy nhớ.\n    Hãy “tập hợp câu trả lời” quanh lớp, gọi từng học sinh. Có học sinh chia sẻ một trong những câu trả lời của mình. Khi được gọi, học sinh không nên lặp lại câu trả lời; các em phải thêm nội dung mới.\n-   Sau khi hoàn thành hoạt động tập hợp câu trả lời quanh lớp, hãy để học sinh thảo luận về ý tưởng và chủ đề xuất hiện nhiều nhất trong câu trả lời của họ."
+          "description": "Hãy phát cho mỗi học sinh một vài tờ giấy ghi chú hoặc giấy nhớ. Tổ chức nhanh hoạt động [“Tập hợp câu trả lời quanh lớp”](http://www.theteachertoolkit.com/index.php/tool/whip-around):\n\n-   Đưa ra lời nhắc có nhiều câu trả lời, chẳng hạn như “Hãy chia sẻ lại điều bạn thực sự thích về hoạt động Giờ lập trình mà bạn đã hoàn thành” hoặc “Hãy chia sẻ một số kỹ năng bạn đã học được hôm nay.”\n-   Yêu cầu học sinh viết ra nhiều câu trả lời nhất có thể, một ý tưởng cho mỗi tờ giấy dán hoặc giấy nhớ.\n    Hãy “tập hợp câu trả lời” quanh lớp, gọi từng học sinh. Có học sinh chia sẻ một trong những câu trả lời của mình. Khi được gọi, học sinh không nên lặp lại câu trả lời; các em phải thêm nội dung mới.\n-   Sau khi hoàn thành hoạt động tập hợp câu trả lời quanh lớp, hãy để học sinh thảo luận về ý tưởng và chủ đề xuất hiện nhiều nhất trong câu trả lời của họ."
         },
         "e9751fff-a71d-4d90-b401-0ccbf3356c44": {
           "name": "Ăn mừng",
-          "description": "Giải thích rằng hôm nay bạn đang dành một giờ để lập trình, bởi vì tuần này là Tuần lễ Giáo dục KHMT và hàng triệu học sinh khác trên toàn cầu cũng đã học Giờ lập trình trong tuần này. Hãy chúc mừng các em học sinh đã hòa mình vào phong trào toàn cầu này.\n\nHãy phát cho mỗi học sinh một [chứng chỉ][0] có tên của học sinh trên đó."
+          "description": "Giải thích rằng hôm nay bạn đang dành một giờ để lập trình, bởi vì tuần này là Tuần lễ Giáo dục KHMT và hàng triệu học sinh khác trên toàn cầu cũng đã học Giờ lập trình trong tuần này. Hãy chúc mừng các em học sinh đã hòa mình vào phong trào toàn cầu này.\n\nHãy phát cho mỗi học sinh một [chứng chỉ](http://code.org/certificates) có tên của học sinh trên đó."
         },
         "3596cc47-e661-4d00-943e-ed858c4f6f5d": {
           "name": "Bước tiếp theo",
@@ -22656,7 +22656,7 @@
         },
         "3a8c30ae-50bb-4a85-99d8-b62c9f7e1bbf": {
           "name": "Mở rộng Giờ lập trình",
-          "description": "Sau khi Giờ lập trình kết thúc, có nhiều cách để tiếp tục giảng dạy môn khoa học máy tính trong lớp học K-5. Sau đây là một số ý tưởng:\n\n-   **Dạy các khóa học [Nguyên tắc cơ bản về khoa học máy tính của Code Studio][0]**. Sáu khóa học này được thiết kế cho những học sinh nhỏ tuổi. Học sinh sẽ làm việc theo cách của họ thông qua một loạt bài tập bài hướng dẫn lập trình và giáo viên có quyền truy cập vào các giáo án hấp dẫn giúp làm cho việc học trở nên sôi động. Code.org cung cấp chương trình phát triển chuyên môn miễn phí cho các khóa học này theo hình thức trực tuyến hoặc trực tiếp.\n-   Tìm hiểu một số nghề nghiệp trong lĩnh vực lập trình mà bạn đã xác định trong ngày hôm nay. Hãy tìm các nguồn tài liệu về lập kế hoạch dự án tìm hiểu nghề nghiệp trên [Sharemylesson.com][1].\n-   **Mời chuyên gia khoa học máy tính nói chuyện với lớp về công việc của họ**. Nếu bạn không biết bất kỳ tình nguyện viên nào, hãy liên hệ với một vài tình nguyện viên trên [bản đồ tình nguyện viên][2] của chúng tôi."
+          "description": "Sau khi Giờ lập trình kết thúc, có nhiều cách để tiếp tục giảng dạy môn khoa học máy tính trong lớp học K-5. Sau đây là một số ý tưởng:\n\n-   **Dạy các khóa học [Nguyên tắc cơ bản về khoa học máy tính của Code Studio](http://code.org/educate/k5)**. Sáu khóa học này được thiết kế cho những học sinh nhỏ tuổi. Học sinh sẽ làm việc theo cách của họ thông qua một loạt bài tập bài hướng dẫn lập trình và giáo viên có quyền truy cập vào các giáo án hấp dẫn giúp làm cho việc học trở nên sôi động. Code.org cung cấp chương trình phát triển chuyên môn miễn phí cho các khóa học này theo hình thức trực tuyến hoặc trực tiếp.\n-   Tìm hiểu một số nghề nghiệp trong lĩnh vực lập trình mà bạn đã xác định trong ngày hôm nay. Hãy tìm các nguồn tài liệu về lập kế hoạch dự án tìm hiểu nghề nghiệp trên [Sharemylesson.com](http://www.sharemylesson.com/TaxonomySearchResults.aspx?area=resources&keywords=career+research).\n-   **Mời chuyên gia khoa học máy tính nói chuyện với lớp về công việc của họ**. Nếu bạn không biết bất kỳ tình nguyện viên nào, hãy liên hệ với một vài tình nguyện viên trên [bản đồ tình nguyện viên](https://code.org/volunteer/local) của chúng tôi."
         },
         "a2f60a17-c25f-4c4d-9f2d-384486d7a67d": {
           "name": "Bố trí sân khấu",
@@ -22664,7 +22664,7 @@
         },
         "c857d03e-91e3-4949-8ccc-79a2aec463c8": {
           "tips": [
-            "Một cách để giới thiệu Giờ lập trình nếu bản thân bạn không rành về lập trình là chiếu một trong những [video truyền cảm hứng của chúng tôi][0]. Hãy chọn nội dung mà bạn cho rằng học sinh của mình sẽ cảm thấy hứng thú và chia sẻ ngay bây giờ. Đối với học viên nhỏ tuổi, chúng tôi đề xuất “[Ai cũng có thể học][1].”"
+            "Một cách để giới thiệu Giờ lập trình nếu bản thân bạn không rành về lập trình là chiếu một trong những [video truyền cảm hứng của chúng tôi](https://hourofcode.com/us/resources#videos). Hãy chọn nội dung mà bạn cho rằng học sinh của mình sẽ cảm thấy hứng thú và chia sẻ ngay bây giờ. Đối với học viên nhỏ tuổi, chúng tôi đề xuất “[Ai cũng có thể học](https://youtu.be/qYZF6oIZtfc).”"
           ]
         },
         "8ad0974f-b2ad-4632-bfe5-8c8760cd2e45": {
@@ -22672,7 +22672,7 @@
         },
         "0e395269-9740-4229-a7ac-b18b9f4eced9": {
           "name": "Gumball Play Lab",
-          "description": "Hãy thử thách học sinh hoàn thành bài học [Play Lab Gumball][0] này.\n\nTùy vào độ tuổi và khả năng của học sinh, bạn có thể cân nhắc:\n\n-   Đối với học sinh ở bậc trung học phổ thông và trung học cơ sở, chúng tôi khuyên bạn nên chọn bài học cho phép chơi tự do và tạo game hoặc ứng dụng. Bạn có thể cho học sinh làm việc độc lập hoặc theo cặp hoặc theo nhóm nhỏ. Có nhiều bài học khác trên [code.org/learn][1] cho phép sáng tạo tự do, chẳng hạn như [Lập trình game dạng Flappy Bird][2] và công cụ beta mới của chúng tôi là [AppLab][3]\n-   Đối với học sinh nhỏ tuổi, chúng tôi khuyên bạn nên chia lớp thành từng cặp hoặc nhóm thật nhỏ (ba đến bốn học sinh mỗi nhóm) và yêu cầu mỗi nhóm làm việc cùng nhau để hoàn thành bài hướng dẫn bằng cách sử dụng phương pháp [lập trình theo cặp][4].\n-   Đối với học viên là người lớn, bài hướng dẫn [Viết chương trình máy tính đầu tiên][5] sẽ phát huy hiệu quả tuyệt vời dưới dạng một thử thách độc lập hoặc một hoạt động lập trình theo cặp."
+          "description": "Hãy thử thách học sinh hoàn thành bài học [Play Lab Gumball](https://studio.code.org/s/gumball/lessons/1/levels/1) này.\n\nTùy vào độ tuổi và khả năng của học sinh, bạn có thể cân nhắc:\n\n-   Đối với học sinh ở bậc trung học phổ thông và trung học cơ sở, chúng tôi khuyên bạn nên chọn bài học cho phép chơi tự do và tạo game hoặc ứng dụng. Bạn có thể cho học sinh làm việc độc lập hoặc theo cặp hoặc theo nhóm nhỏ. Có nhiều bài học khác trên [code.org/learn](http://code.org/learn) cho phép sáng tạo tự do, chẳng hạn như [Lập trình game dạng Flappy Bird](https://studio.code.org/s/flappy) và công cụ beta mới của chúng tôi là [AppLab](https://code.org/educate/applab)\n-   Đối với học sinh nhỏ tuổi, chúng tôi khuyên bạn nên chia lớp thành từng cặp hoặc nhóm thật nhỏ (ba đến bốn học sinh mỗi nhóm) và yêu cầu mỗi nhóm làm việc cùng nhau để hoàn thành bài hướng dẫn bằng cách sử dụng phương pháp [lập trình theo cặp](https://youtu.be/vgkahOzFH2Q).\n-   Đối với học viên là người lớn, bài hướng dẫn [Viết chương trình máy tính đầu tiên](https://studio.code.org/hoc/1) sẽ phát huy hiệu quả tuyệt vời dưới dạng một thử thách độc lập hoặc một hoạt động lập trình theo cặp."
         },
         "eea63453-59c2-4c48-8d04-d6612d379584": {
           "tips": [
@@ -22680,7 +22680,7 @@
           ]
         },
         "fd77d784-72d9-4687-843d-7d1ecd17b9a1": {
-          "description": "Nếu một nhóm hoặc cá nhân hoàn thành sớm, họ có thể thử bài hướng dẫn khác bằng cách truy cập [code.org/learn][0]."
+          "description": "Nếu một nhóm hoặc cá nhân hoàn thành sớm, họ có thể thử bài hướng dẫn khác bằng cách truy cập [code.org/learn](http://code.org/learn)."
         },
         "0815f2e7-8336-48ae-8ac0-5d0af1f956d9": {
           "name": "Hỏi đáp",
@@ -22688,7 +22688,7 @@
         },
         "3b92bb05-ac4c-4717-afce-ed3d10f54527": {
           "name": "Ăn mừng",
-          "description": "Giải thích rằng hôm nay bạn đang dành một giờ để lập trình, bởi vì tuần này là Tuần lễ Giáo dục KHMT và hàng triệu học sinh khác trên toàn cầu cũng đã học Giờ lập trình trong tuần này. Hãy chúc mừng các em học sinh đã hòa mình vào phong trào toàn cầu này.\n\nHãy phát cho mỗi học sinh một [chứng chỉ][0] có tên của học sinh trên đó."
+          "description": "Giải thích rằng hôm nay bạn đang dành một giờ để lập trình, bởi vì tuần này là Tuần lễ Giáo dục KHMT và hàng triệu học sinh khác trên toàn cầu cũng đã học Giờ lập trình trong tuần này. Hãy chúc mừng các em học sinh đã hòa mình vào phong trào toàn cầu này.\n\nHãy phát cho mỗi học sinh một [chứng chỉ](http://code.org/certificates) có tên của học sinh trên đó."
         },
         "59cd05df-cb4d-4280-8700-840826c01845": {
           "name": "Bước tiếp theo",
@@ -22700,7 +22700,7 @@
         },
         "2836d5f0-0808-4868-bc34-bbd3cf8b631f": {
           "name": "Mở rộng Giờ lập trình",
-          "description": "Sau khi Giờ lập trình kết thúc, có nhiều cách để tiếp tục giảng dạy môn khoa học máy tính trong lớp học K-5. Dưới đây là một số ý tưởng:\n\n-   **Dạy các khóa học [Code Studio Computer Science Cơ bản][0]**. Bốn khóa học này được thiết kế cho những học sinh nhỏ tuổi. Học sinh làm việc theo cách của họ thông qua một loạt bài tập dạy họ lập trình và các nhà giáo dục có quyền truy cập vào các giáo án hấp dẫn giúp làm cho việc học trở nên sống động. Code.org cung cấp chương trình phát triển chuyên môn miễn phí cho các khóa học này, trực tuyến hoặc trực tiếp.\n-   **Mời một chuyên gia khoa học máy tính nói chuyện với lớp về công việc của họ**. Không biết bất kỳ tình nguyện viên nào, hãy liên hệ với một số người trên [bản đồ tình nguyện][1]."
+          "description": "Sau khi Giờ lập trình kết thúc, có nhiều cách để tiếp tục giảng dạy môn khoa học máy tính trong lớp học K-5. Dưới đây là một số ý tưởng:\n\n-   **Dạy các khóa học [Code Studio Computer Science Cơ bản](http://code.org/educate/k5)**. Bốn khóa học này được thiết kế cho những học sinh nhỏ tuổi. Học sinh làm việc theo cách của họ thông qua một loạt bài tập dạy họ lập trình và các nhà giáo dục có quyền truy cập vào các giáo án hấp dẫn giúp làm cho việc học trở nên sống động. Code.org cung cấp chương trình phát triển chuyên môn miễn phí cho các khóa học này, trực tuyến hoặc trực tiếp.\n-   **Mời một chuyên gia khoa học máy tính nói chuyện với lớp về công việc của họ**. Không biết bất kỳ tình nguyện viên nào, hãy liên hệ với một số người trên [bản đồ tình nguyện](https://code.org/volunteer/local)."
         },
         "c4d6d315-bb5c-47d7-bc5e-f5fce2e4ae67": {
           "name": "Bố trí sân khấu",
@@ -22714,18 +22714,18 @@
         },
         "ce182c47-efed-4526-bb9c-f4ec66b052a4": {
           "name": "Hỗ trợ chung",
-          "description": "Dưới đây là một số mẹo có thể giúp ích cho học sinh bất kể họ đang học ở cấp độ nào\n\n-   **Hợp tác với bạn kế bên:** Khuyến khích học sinh thảo luận với bạn kế bên khi gặp khó khăn. Tùy thuộc vào độ tuổi và khả năng của học sinh, bạn có thể cân nhắc chính thức chia lớp học của mình thành từng cặp để hoàn thành bài hướng dẫn bằng phương pháp [lập trình theo cặp][0].\n\n-   **Đọc hướng dẫn:** Hướng dẫn thường cung cấp các mẹo hữu ích về cách hoàn thành cấp độ. Trước khi cho học sinh câu trả lời, hãy đảm bảo họ đã xem kỹ hướng dẫn, gợi ý, video và bất kỳ mã lệnh ban đầu nào.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Bạn bị bí à? Hãy xem gợi ý:** Mỗi cấp độ có một gợi ý khuyên bạn cách vượt qua một cấp độ, bao gồm cả khối mã lệnh cần thử.\n\n-   **Hãy dành thời gian thử nghiệm.** Nhìn chung, hướng dẫn cho học sinh biết phải làm gì, nhưng họ cũng nên thoải mái thử nghiệm các ý tưởng của riêng mình."
+          "description": "Dưới đây là một số mẹo có thể giúp ích cho học sinh bất kể họ đang học ở cấp độ nào\n\n-   **Hợp tác với bạn kế bên:** Khuyến khích học sinh thảo luận với bạn kế bên khi gặp khó khăn. Tùy thuộc vào độ tuổi và khả năng của học sinh, bạn có thể cân nhắc chính thức chia lớp học của mình thành từng cặp để hoàn thành bài hướng dẫn bằng phương pháp [lập trình theo cặp](https://youtu.be/vgkahOzFH2Q).\n\n-   **Đọc hướng dẫn:** Hướng dẫn thường cung cấp các mẹo hữu ích về cách hoàn thành cấp độ. Trước khi cho học sinh câu trả lời, hãy đảm bảo họ đã xem kỹ hướng dẫn, gợi ý, video và bất kỳ mã lệnh ban đầu nào.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Bạn bị bí à? Hãy xem gợi ý:** Mỗi cấp độ có một gợi ý khuyên bạn cách vượt qua một cấp độ, bao gồm cả khối mã lệnh cần thử.\n\n-   **Hãy dành thời gian thử nghiệm.** Nhìn chung, hướng dẫn cho học sinh biết phải làm gì, nhưng họ cũng nên thoải mái thử nghiệm các ý tưởng của riêng mình."
         },
         "893dba56-7c8e-4897-949b-de514de76011": {
           "name": "Xin chào cả thế giới",
           "progression_name": "Xin chào cả thế giới"
         },
         "05ad915a-32e0-4799-90a2-2a53efb937f1": {
-          "description": "Nếu một nhóm hoặc cá nhân hoàn thành sớm, hãy khuyến khích họ tiếp tục xây dựng một dự án ở cấp độ cuối cùng. Nếu học sinh không chắc chắn phải làm gì thêm, bạn có thể nhắc họ bằng các câu hỏi:\n\n-   Bạn có thể thêm nhân vật nào khác vào dự án của mình?\n-   Bạn đã xem qua thư viện trang phục hoặc thử vẽ trang phục nhân vật của riêng mình chưa?\n-   Bạn có thể cho nhân vật của mình nói gì khác không?\n-   Nhân vật của bạn nên làm gì khi nhấp chuột?\n-   Mời học sinh chia sẻ ý kiến và học hỏi lẫn nhau. Họ cũng có thể thử hướng dẫn khác bằng cách truy cập [code.org/learn][0]."
+          "description": "Nếu một nhóm hoặc cá nhân hoàn thành sớm, hãy khuyến khích họ tiếp tục xây dựng một dự án ở cấp độ cuối cùng. Nếu học sinh không chắc chắn phải làm gì thêm, bạn có thể nhắc họ bằng các câu hỏi:\n\n-   Bạn có thể thêm nhân vật nào khác vào dự án của mình?\n-   Bạn đã xem qua thư viện trang phục hoặc thử vẽ trang phục nhân vật của riêng mình chưa?\n-   Bạn có thể cho nhân vật của mình nói gì khác không?\n-   Nhân vật của bạn nên làm gì khi nhấp chuột?\n-   Mời học sinh chia sẻ ý kiến và học hỏi lẫn nhau. Họ cũng có thể thử hướng dẫn khác bằng cách truy cập [code.org/learn](https://code.org/learn)."
         },
         "d5d3f8eb-f17e-4f26-88a8-ca6422ed7a1f": {
           "name": "Suy nghĩ",
-          "description": "#### Thảo luận\n\nYêu cầu học sinh suy nghĩ về các hoạt động trong ngày. Họ đã học gì về lập trình? Nhân vật? Sự kiện?\n\nHọ cảm thấy thế nào về khoa học máy tính và lập trình sau khi dành một giờ khám phá?\n\n#### Các bước tiếp theo\n\nCho học sinh biết rằng nếu họ thích hoạt động hôm nay, họ có nhiều lựa chọn để tiếp tục lập trình. Hãy truy cập [Kết nối KHMT][0] để xem ý tưởng tích hợp khoa học máy tính vào các môn học khác hoặc đọc thêm về [các khóa học có sẵn dành cho trường tiểu học][1] của chúng tôi."
+          "description": "#### Thảo luận\n\nYêu cầu học sinh suy nghĩ về các hoạt động trong ngày. Họ đã học gì về lập trình? Nhân vật? Sự kiện?\n\nHọ cảm thấy thế nào về khoa học máy tính và lập trình sau khi dành một giờ khám phá?\n\n#### Các bước tiếp theo\n\nCho học sinh biết rằng nếu họ thích hoạt động hôm nay, họ có nhiều lựa chọn để tiếp tục lập trình. Hãy truy cập [Kết nối KHMT](https://code.org/educate/csc) để xem ý tưởng tích hợp khoa học máy tính vào các môn học khác hoặc đọc thêm về [các khóa học có sẵn dành cho trường tiểu học](https://code.org/educate/curriculum/elementary-school) của chúng tôi."
         },
         "aad08892-e7b6-4fdc-bfd6-8199118fc2d6": {
           "name": "Bố trí sân khấu",
@@ -22739,18 +22739,18 @@
         },
         "0a05af25-05aa-4e56-92ce-f14570cc1c64": {
           "name": "Hỗ trợ chung",
-          "description": "Dưới đây là một số mẹo có thể giúp ích cho học sinh bất kể họ đang học ở cấp độ nào\n\n-   **Hợp tác với bạn kế bên:** Khuyến khích học sinh thảo luận với bạn kế bên khi gặp khó khăn. Tùy thuộc vào độ tuổi và khả năng của học sinh, bạn có thể cân nhắc chính thức chia lớp học của mình thành từng cặp để hoàn thành bài hướng dẫn bằng phương pháp [lập trình theo cặp][0].\n\n-   **Đọc hướng dẫn:** Hướng dẫn thường cung cấp các mẹo hữu ích về cách hoàn thành cấp độ. Trước khi cho học sinh câu trả lời, hãy đảm bảo họ đã xem kỹ hướng dẫn, gợi ý, video và bất kỳ mã lệnh ban đầu nào.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Bạn bị bí à? Hãy xem gợi ý:** Mỗi cấp độ có một gợi ý khuyên bạn cách vượt qua một cấp độ, bao gồm cả khối mã lệnh cần thử.\n\n-   **Hãy dành thời gian thử nghiệm.** Nhìn chung, hướng dẫn cho học sinh biết phải làm gì, nhưng họ cũng nên thoải mái thử nghiệm các ý tưởng của riêng mình."
+          "description": "Dưới đây là một số mẹo có thể giúp ích cho học sinh bất kể họ đang học ở cấp độ nào\n\n-   **Hợp tác với bạn kế bên:** Khuyến khích học sinh thảo luận với bạn kế bên khi gặp khó khăn. Tùy thuộc vào độ tuổi và khả năng của học sinh, bạn có thể cân nhắc chính thức chia lớp học của mình thành từng cặp để hoàn thành bài hướng dẫn bằng phương pháp [lập trình theo cặp](https://youtu.be/vgkahOzFH2Q).\n\n-   **Đọc hướng dẫn:** Hướng dẫn thường cung cấp các mẹo hữu ích về cách hoàn thành cấp độ. Trước khi cho học sinh câu trả lời, hãy đảm bảo họ đã xem kỹ hướng dẫn, gợi ý, video và bất kỳ mã lệnh ban đầu nào.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Bạn bị bí à? Hãy xem gợi ý:** Mỗi cấp độ có một gợi ý khuyên bạn cách vượt qua một cấp độ, bao gồm cả khối mã lệnh cần thử.\n\n-   **Hãy dành thời gian thử nghiệm.** Nhìn chung, hướng dẫn cho học sinh biết phải làm gì, nhưng họ cũng nên thoải mái thử nghiệm các ý tưởng của riêng mình."
         },
         "f6a21949-1c94-4269-acae-98046f6a9052": {
           "name": "Xin chào cả thế giới",
           "progression_name": "Xin chào cả thế giới"
         },
         "3e2a74f4-d574-42fd-9bf3-5b319526299a": {
-          "description": "Nếu một nhóm hoặc cá nhân hoàn thành sớm, hãy khuyến khích họ tiếp tục xây dựng một dự án ở cấp độ cuối cùng. Nếu học sinh không chắc chắn phải làm gì thêm, bạn có thể nhắc họ bằng các câu hỏi:\n\n-   Bạn có thể thêm nhân vật nào khác vào dự án của mình?\n-   Bạn đã xem qua thư viện trang phục hoặc thử vẽ trang phục nhân vật của riêng mình chưa?\n-   Bạn có thể cho nhân vật của mình nói gì khác không?\n-   Nhân vật của bạn nên làm gì khi nhấp chuột?\n-   Mời học sinh chia sẻ ý kiến và học hỏi lẫn nhau. Họ cũng có thể thử hướng dẫn khác bằng cách truy cập [code.org/learn][0]."
+          "description": "Nếu một nhóm hoặc cá nhân hoàn thành sớm, hãy khuyến khích họ tiếp tục xây dựng một dự án ở cấp độ cuối cùng. Nếu học sinh không chắc chắn phải làm gì thêm, bạn có thể nhắc họ bằng các câu hỏi:\n\n-   Bạn có thể thêm nhân vật nào khác vào dự án của mình?\n-   Bạn đã xem qua thư viện trang phục hoặc thử vẽ trang phục nhân vật của riêng mình chưa?\n-   Bạn có thể cho nhân vật của mình nói gì khác không?\n-   Nhân vật của bạn nên làm gì khi nhấp chuột?\n-   Mời học sinh chia sẻ ý kiến và học hỏi lẫn nhau. Họ cũng có thể thử hướng dẫn khác bằng cách truy cập [code.org/learn](https://code.org/learn)."
         },
         "f95b4eed-639e-483e-bef7-ead9abf4808e": {
           "name": "Suy nghĩ",
-          "description": "#### Thảo luận\n\nYêu cầu học sinh suy nghĩ về các hoạt động trong ngày. Họ đã học gì về lập trình? Nhân vật? Sự kiện?\n\nHọ cảm thấy thế nào về khoa học máy tính và lập trình sau khi dành một giờ khám phá?\n\n#### Các bước tiếp theo\n\nCho học sinh biết rằng nếu họ thích hoạt động hôm nay, họ có nhiều lựa chọn để tiếp tục lập trình. Hãy truy cập [Kết nối KHMT][0] để xem ý tưởng tích hợp khoa học máy tính vào các môn học khác hoặc đọc thêm về [các khóa học có sẵn dành cho trường tiểu học][1] của chúng tôi."
+          "description": "#### Thảo luận\n\nYêu cầu học sinh suy nghĩ về các hoạt động trong ngày. Họ đã học gì về lập trình? Nhân vật? Sự kiện?\n\nHọ cảm thấy thế nào về khoa học máy tính và lập trình sau khi dành một giờ khám phá?\n\n#### Các bước tiếp theo\n\nCho học sinh biết rằng nếu họ thích hoạt động hôm nay, họ có nhiều lựa chọn để tiếp tục lập trình. Hãy truy cập [Kết nối KHMT](https://code.org/educate/csc) để xem ý tưởng tích hợp khoa học máy tính vào các môn học khác hoặc đọc thêm về [các khóa học có sẵn dành cho trường tiểu học](https://code.org/educate/curriculum/elementary-school) của chúng tôi."
         },
         "5ba761c1-02df-411f-96cd-69a8327e0d2c": {
           "name": "Bố trí sân khấu",
@@ -22764,18 +22764,18 @@
         },
         "11f167ca-2cf6-4e6b-8857-316c5cb55f82": {
           "name": "Hỗ trợ chung",
-          "description": "Dưới đây là một số mẹo có thể giúp ích cho học sinh bất kể họ đang học ở cấp độ nào\n\n-   **Hợp tác với bạn kế bên:** Khuyến khích học sinh thảo luận với bạn kế bên khi gặp khó khăn. Tùy thuộc vào độ tuổi và khả năng của học sinh, bạn có thể cân nhắc chính thức chia lớp học của mình thành từng cặp để hoàn thành bài hướng dẫn bằng phương pháp [lập trình theo cặp][0].\n\n-   **Đọc hướng dẫn:** Hướng dẫn thường cung cấp các mẹo hữu ích về cách hoàn thành cấp độ. Trước khi cho học sinh câu trả lời, hãy đảm bảo họ đã xem kỹ hướng dẫn, gợi ý, video và bất kỳ mã lệnh ban đầu nào.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Bạn bị bí à? Hãy xem gợi ý:** Mỗi cấp độ có một gợi ý khuyên bạn cách vượt qua một cấp độ, bao gồm cả khối mã lệnh cần thử.\n\n-   **Hãy dành thời gian thử nghiệm.** Nhìn chung, hướng dẫn cho học sinh biết phải làm gì, nhưng họ cũng nên thoải mái thử nghiệm các ý tưởng của riêng mình."
+          "description": "Dưới đây là một số mẹo có thể giúp ích cho học sinh bất kể họ đang học ở cấp độ nào\n\n-   **Hợp tác với bạn kế bên:** Khuyến khích học sinh thảo luận với bạn kế bên khi gặp khó khăn. Tùy thuộc vào độ tuổi và khả năng của học sinh, bạn có thể cân nhắc chính thức chia lớp học của mình thành từng cặp để hoàn thành bài hướng dẫn bằng phương pháp [lập trình theo cặp](https://youtu.be/vgkahOzFH2Q).\n\n-   **Đọc hướng dẫn:** Hướng dẫn thường cung cấp các mẹo hữu ích về cách hoàn thành cấp độ. Trước khi cho học sinh câu trả lời, hãy đảm bảo họ đã xem kỹ hướng dẫn, gợi ý, video và bất kỳ mã lệnh ban đầu nào.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Bạn bị bí à? Hãy xem gợi ý:** Mỗi cấp độ có một gợi ý khuyên bạn cách vượt qua một cấp độ, bao gồm cả khối mã lệnh cần thử.\n\n-   **Hãy dành thời gian thử nghiệm.** Nhìn chung, hướng dẫn cho học sinh biết phải làm gì, nhưng họ cũng nên thoải mái thử nghiệm các ý tưởng của riêng mình."
         },
         "c721eddb-4cfb-4237-a031-0730bbfdc926": {
           "name": "Xin chào cả thế giới",
           "progression_name": "Xin chào cả thế giới"
         },
         "8341212e-8528-4ad8-9c02-22066467054b": {
-          "description": "Nếu một nhóm hoặc cá nhân hoàn thành sớm, hãy khuyến khích họ tiếp tục xây dựng một dự án ở cấp độ cuối cùng. Nếu học sinh không chắc chắn phải làm gì thêm, bạn có thể nhắc họ bằng các câu hỏi:\n\n-   Bạn có thể thêm nhân vật nào khác vào dự án của mình?\n-   Bạn đã xem qua thư viện trang phục hoặc thử vẽ trang phục nhân vật của riêng mình chưa?\n-   Bạn có thể cho nhân vật của mình nói gì khác không?\n-   Nhân vật của bạn nên làm gì khi nhấp chuột?\n-   Mời học sinh chia sẻ ý kiến và học hỏi lẫn nhau. Họ cũng có thể thử hướng dẫn khác bằng cách truy cập [code.org/learn][0]."
+          "description": "Nếu một nhóm hoặc cá nhân hoàn thành sớm, hãy khuyến khích họ tiếp tục xây dựng một dự án ở cấp độ cuối cùng. Nếu học sinh không chắc chắn phải làm gì thêm, bạn có thể nhắc họ bằng các câu hỏi:\n\n-   Bạn có thể thêm nhân vật nào khác vào dự án của mình?\n-   Bạn đã xem qua thư viện trang phục hoặc thử vẽ trang phục nhân vật của riêng mình chưa?\n-   Bạn có thể cho nhân vật của mình nói gì khác không?\n-   Nhân vật của bạn nên làm gì khi nhấp chuột?\n-   Mời học sinh chia sẻ ý kiến và học hỏi lẫn nhau. Họ cũng có thể thử hướng dẫn khác bằng cách truy cập [code.org/learn](https://code.org/learn)."
         },
         "656eee11-dc6d-428e-8849-6e4b31dc8c81": {
           "name": "Suy nghĩ",
-          "description": "#### Thảo luận\n\nYêu cầu học sinh suy nghĩ về các hoạt động trong ngày. Họ đã học gì về lập trình? Nhân vật? Sự kiện?\n\nHọ cảm thấy thế nào về khoa học máy tính và lập trình sau khi dành một giờ khám phá?\n\n#### Các bước tiếp theo\n\nCho học sinh biết rằng nếu họ thích hoạt động hôm nay, họ có nhiều lựa chọn để tiếp tục lập trình. Hãy truy cập [Kết nối KHMT][0] để xem ý tưởng tích hợp khoa học máy tính vào các môn học khác hoặc đọc thêm về [các khóa học có sẵn dành cho trường tiểu học][1] của chúng tôi."
+          "description": "#### Thảo luận\n\nYêu cầu học sinh suy nghĩ về các hoạt động trong ngày. Họ đã học gì về lập trình? Nhân vật? Sự kiện?\n\nHọ cảm thấy thế nào về khoa học máy tính và lập trình sau khi dành một giờ khám phá?\n\n#### Các bước tiếp theo\n\nCho học sinh biết rằng nếu họ thích hoạt động hôm nay, họ có nhiều lựa chọn để tiếp tục lập trình. Hãy truy cập [Kết nối KHMT](https://code.org/educate/csc) để xem ý tưởng tích hợp khoa học máy tính vào các môn học khác hoặc đọc thêm về [các khóa học có sẵn dành cho trường tiểu học](https://code.org/educate/curriculum/elementary-school) của chúng tôi."
         },
         "9d3ef78a-4043-489e-898b-f407c914f698": {
           "name": "Bố trí sân khấu",
@@ -22789,18 +22789,18 @@
         },
         "2ff80a97-db35-4d10-9703-4d0cc3ff0c3a": {
           "name": "Hỗ trợ chung",
-          "description": "Dưới đây là một số mẹo có thể giúp ích cho học sinh bất kể họ đang học ở cấp độ nào\n\n-   **Hợp tác với bạn kế bên:** Khuyến khích học sinh thảo luận với bạn kế bên khi gặp khó khăn. Tùy thuộc vào độ tuổi và khả năng của học sinh, bạn có thể cân nhắc chính thức chia lớp học của mình thành từng cặp để hoàn thành bài hướng dẫn bằng phương pháp [lập trình theo cặp][0].\n\n-   **Đọc hướng dẫn:** Hướng dẫn thường cung cấp các mẹo hữu ích về cách hoàn thành cấp độ. Trước khi cho học sinh câu trả lời, hãy đảm bảo họ đã xem kỹ hướng dẫn, gợi ý, video và bất kỳ mã lệnh ban đầu nào.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Bạn bị bí à? Hãy xem gợi ý:** Mỗi cấp độ có một gợi ý khuyên bạn cách vượt qua một cấp độ, bao gồm cả khối mã lệnh cần thử.\n\n-   **Hãy dành thời gian thử nghiệm.** Nhìn chung, hướng dẫn cho học sinh biết phải làm gì, nhưng họ cũng nên thoải mái thử nghiệm các ý tưởng của riêng mình."
+          "description": "Dưới đây là một số mẹo có thể giúp ích cho học sinh bất kể họ đang học ở cấp độ nào\n\n-   **Hợp tác với bạn kế bên:** Khuyến khích học sinh thảo luận với bạn kế bên khi gặp khó khăn. Tùy thuộc vào độ tuổi và khả năng của học sinh, bạn có thể cân nhắc chính thức chia lớp học của mình thành từng cặp để hoàn thành bài hướng dẫn bằng phương pháp [lập trình theo cặp](https://youtu.be/vgkahOzFH2Q).\n\n-   **Đọc hướng dẫn:** Hướng dẫn thường cung cấp các mẹo hữu ích về cách hoàn thành cấp độ. Trước khi cho học sinh câu trả lời, hãy đảm bảo họ đã xem kỹ hướng dẫn, gợi ý, video và bất kỳ mã lệnh ban đầu nào.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Bạn bị bí à? Hãy xem gợi ý:** Mỗi cấp độ có một gợi ý khuyên bạn cách vượt qua một cấp độ, bao gồm cả khối mã lệnh cần thử.\n\n-   **Hãy dành thời gian thử nghiệm.** Nhìn chung, hướng dẫn cho học sinh biết phải làm gì, nhưng họ cũng nên thoải mái thử nghiệm các ý tưởng của riêng mình."
         },
         "70daba44-c26e-4286-95ae-50cbd8724b2d": {
           "name": "Xin chào cả thế giới",
           "progression_name": "Xin chào cả thế giới"
         },
         "77cef9f9-1949-455b-a0bd-f2cbc4a32986": {
-          "description": "Nếu một nhóm hoặc cá nhân hoàn thành sớm, hãy khuyến khích họ tiếp tục xây dựng một dự án ở cấp độ cuối cùng. Nếu học sinh không chắc chắn phải làm gì thêm, bạn có thể nhắc họ bằng các câu hỏi:\n\n-   Bạn có thể thêm nhân vật nào khác vào dự án của mình?\n-   Bạn đã xem qua thư viện trang phục hoặc thử vẽ trang phục nhân vật của riêng mình chưa?\n-   Bạn có thể cho nhân vật của mình nói gì khác không?\n-   Nhân vật của bạn nên làm gì khi nhấp chuột?\n-   Mời học sinh chia sẻ ý kiến và học hỏi lẫn nhau. Họ cũng có thể thử hướng dẫn khác bằng cách truy cập [code.org/learn][0]."
+          "description": "Nếu một nhóm hoặc cá nhân hoàn thành sớm, hãy khuyến khích họ tiếp tục xây dựng một dự án ở cấp độ cuối cùng. Nếu học sinh không chắc chắn phải làm gì thêm, bạn có thể nhắc họ bằng các câu hỏi:\n\n-   Bạn có thể thêm nhân vật nào khác vào dự án của mình?\n-   Bạn đã xem qua thư viện trang phục hoặc thử vẽ trang phục nhân vật của riêng mình chưa?\n-   Bạn có thể cho nhân vật của mình nói gì khác không?\n-   Nhân vật của bạn nên làm gì khi nhấp chuột?\n-   Mời học sinh chia sẻ ý kiến và học hỏi lẫn nhau. Họ cũng có thể thử hướng dẫn khác bằng cách truy cập [code.org/learn](https://code.org/learn)."
         },
         "ec905c64-2e80-49d0-8da3-7d75ed8d0693": {
           "name": "Suy nghĩ",
-          "description": "#### Thảo luận\n\nYêu cầu học sinh suy nghĩ về các hoạt động trong ngày. Họ đã học gì về lập trình? Nhân vật? Sự kiện?\n\nHọ cảm thấy thế nào về khoa học máy tính và lập trình sau khi dành một giờ khám phá?\n\n#### Các bước tiếp theo\n\nCho học sinh biết rằng nếu họ thích hoạt động hôm nay, họ có nhiều lựa chọn để tiếp tục lập trình. Hãy truy cập [Kết nối KHMT][0] để xem ý tưởng tích hợp khoa học máy tính vào các môn học khác hoặc đọc thêm về [các khóa học có sẵn dành cho trường tiểu học][1] của chúng tôi."
+          "description": "#### Thảo luận\n\nYêu cầu học sinh suy nghĩ về các hoạt động trong ngày. Họ đã học gì về lập trình? Nhân vật? Sự kiện?\n\nHọ cảm thấy thế nào về khoa học máy tính và lập trình sau khi dành một giờ khám phá?\n\n#### Các bước tiếp theo\n\nCho học sinh biết rằng nếu họ thích hoạt động hôm nay, họ có nhiều lựa chọn để tiếp tục lập trình. Hãy truy cập [Kết nối KHMT](https://code.org/educate/csc) để xem ý tưởng tích hợp khoa học máy tính vào các môn học khác hoặc đọc thêm về [các khóa học có sẵn dành cho trường tiểu học](https://code.org/educate/curriculum/elementary-school) của chúng tôi."
         },
         "6c387b78-14b7-4209-919a-97dbf64b9bc2": {
           "name": "Bố trí sân khấu",
@@ -22814,18 +22814,18 @@
         },
         "cc4e7bc2-813a-4d4a-be58-83d08ca5d970": {
           "name": "Hỗ trợ chung",
-          "description": "Dưới đây là một số mẹo có thể giúp ích cho học sinh bất kể họ đang học ở cấp độ nào\n\n-   **Hợp tác với bạn kế bên:** Khuyến khích học sinh thảo luận với bạn kế bên khi gặp khó khăn. Tùy thuộc vào độ tuổi và khả năng của học sinh, bạn có thể cân nhắc chính thức chia lớp học của mình thành từng cặp để hoàn thành bài hướng dẫn bằng phương pháp [lập trình theo cặp][0].\n\n-   **Đọc hướng dẫn:** Hướng dẫn thường cung cấp các mẹo hữu ích về cách hoàn thành cấp độ. Trước khi cho học sinh câu trả lời, hãy đảm bảo họ đã xem kỹ hướng dẫn, gợi ý, video và bất kỳ mã lệnh ban đầu nào.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Bạn bị bí à? Hãy xem gợi ý:** Mỗi cấp độ có một gợi ý khuyên bạn cách vượt qua một cấp độ, bao gồm cả khối mã lệnh cần thử.\n\n-   **Hãy dành thời gian thử nghiệm.** Nhìn chung, hướng dẫn cho học sinh biết phải làm gì, nhưng họ cũng nên thoải mái thử nghiệm các ý tưởng của riêng mình."
+          "description": "Dưới đây là một số mẹo có thể giúp ích cho học sinh bất kể họ đang học ở cấp độ nào\n\n-   **Hợp tác với bạn kế bên:** Khuyến khích học sinh thảo luận với bạn kế bên khi gặp khó khăn. Tùy thuộc vào độ tuổi và khả năng của học sinh, bạn có thể cân nhắc chính thức chia lớp học của mình thành từng cặp để hoàn thành bài hướng dẫn bằng phương pháp [lập trình theo cặp](https://youtu.be/vgkahOzFH2Q).\n\n-   **Đọc hướng dẫn:** Hướng dẫn thường cung cấp các mẹo hữu ích về cách hoàn thành cấp độ. Trước khi cho học sinh câu trả lời, hãy đảm bảo họ đã xem kỹ hướng dẫn, gợi ý, video và bất kỳ mã lệnh ban đầu nào.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Bạn bị bí à? Hãy xem gợi ý:** Mỗi cấp độ có một gợi ý khuyên bạn cách vượt qua một cấp độ, bao gồm cả khối mã lệnh cần thử.\n\n-   **Hãy dành thời gian thử nghiệm.** Nhìn chung, hướng dẫn cho học sinh biết phải làm gì, nhưng họ cũng nên thoải mái thử nghiệm các ý tưởng của riêng mình."
         },
         "062143a1-3063-4af1-864a-2ad1f9c88dd5": {
           "name": "Xin chào cả thế giới",
           "progression_name": "Xin chào cả thế giới"
         },
         "da91f0fe-e142-453f-a093-8e367d0a1454": {
-          "description": "Nếu một nhóm hoặc cá nhân hoàn thành sớm, hãy khuyến khích họ tiếp tục xây dựng một dự án ở cấp độ cuối cùng. Nếu học sinh không chắc chắn phải làm gì thêm, bạn có thể nhắc họ bằng các câu hỏi:\n\n-   Bạn có thể thêm nhân vật nào khác vào dự án của mình?\n-   Bạn đã xem qua thư viện trang phục hoặc thử vẽ trang phục nhân vật của riêng mình chưa?\n-   Bạn có thể cho nhân vật của mình nói gì khác không?\n-   Nhân vật của bạn nên làm gì khi nhấp chuột?\n-   Mời học sinh chia sẻ ý kiến và học hỏi lẫn nhau. Họ cũng có thể thử hướng dẫn khác bằng cách truy cập [code.org/learn][0]."
+          "description": "Nếu một nhóm hoặc cá nhân hoàn thành sớm, hãy khuyến khích họ tiếp tục xây dựng một dự án ở cấp độ cuối cùng. Nếu học sinh không chắc chắn phải làm gì thêm, bạn có thể nhắc họ bằng các câu hỏi:\n\n-   Bạn có thể thêm nhân vật nào khác vào dự án của mình?\n-   Bạn đã xem qua thư viện trang phục hoặc thử vẽ trang phục nhân vật của riêng mình chưa?\n-   Bạn có thể cho nhân vật của mình nói gì khác không?\n-   Nhân vật của bạn nên làm gì khi nhấp chuột?\n-   Mời học sinh chia sẻ ý kiến và học hỏi lẫn nhau. Họ cũng có thể thử hướng dẫn khác bằng cách truy cập [code.org/learn](https://code.org/learn)."
         },
         "f5756484-7296-4391-99e2-7b2678653934": {
           "name": "Suy nghĩ",
-          "description": "#### Thảo luận\n\nYêu cầu học sinh suy nghĩ về các hoạt động trong ngày. Họ đã học gì về lập trình? Nhân vật? Sự kiện?\n\nHọ cảm thấy thế nào về khoa học máy tính và lập trình sau khi dành một giờ khám phá?\n\n#### Các bước tiếp theo\n\nCho học sinh biết rằng nếu họ thích hoạt động hôm nay, họ có nhiều lựa chọn để tiếp tục lập trình. Hãy truy cập [Kết nối KHMT][0] để xem ý tưởng tích hợp khoa học máy tính vào các môn học khác hoặc đọc thêm về [các khóa học có sẵn dành cho trường tiểu học][1] của chúng tôi."
+          "description": "#### Thảo luận\n\nYêu cầu học sinh suy nghĩ về các hoạt động trong ngày. Họ đã học gì về lập trình? Nhân vật? Sự kiện?\n\nHọ cảm thấy thế nào về khoa học máy tính và lập trình sau khi dành một giờ khám phá?\n\n#### Các bước tiếp theo\n\nCho học sinh biết rằng nếu họ thích hoạt động hôm nay, họ có nhiều lựa chọn để tiếp tục lập trình. Hãy truy cập [Kết nối KHMT](https://code.org/educate/csc) để xem ý tưởng tích hợp khoa học máy tính vào các môn học khác hoặc đọc thêm về [các khóa học có sẵn dành cho trường tiểu học](https://code.org/educate/curriculum/elementary-school) của chúng tôi."
         },
         "bcc9e44c-ad4e-4efc-a12e-e9c74a5c1960": {
           "name": "Bố trí sân khấu",
@@ -22839,25 +22839,25 @@
         },
         "0d1c3be1-c6e4-437f-85b9-4912d1cd725b": {
           "name": "Hỗ trợ chung",
-          "description": "Dưới đây là một số mẹo có thể giúp ích cho học sinh bất kể họ đang học ở cấp độ nào\n\n-   **Hợp tác với bạn kế bên:** Khuyến khích học sinh thảo luận với bạn kế bên khi gặp khó khăn. Tùy thuộc vào độ tuổi và khả năng của học sinh, bạn có thể cân nhắc chính thức chia lớp học của mình thành từng cặp để hoàn thành bài hướng dẫn bằng phương pháp [lập trình theo cặp][0].\n\n-   **Đọc hướng dẫn:** Hướng dẫn thường cung cấp các mẹo hữu ích về cách hoàn thành cấp độ. Trước khi cho học sinh câu trả lời, hãy đảm bảo họ đã xem kỹ hướng dẫn, gợi ý, video và bất kỳ mã lệnh ban đầu nào.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Bạn bị bí à? Hãy xem gợi ý:** Mỗi cấp độ có một gợi ý khuyên bạn cách vượt qua một cấp độ, bao gồm cả khối mã lệnh cần thử.\n\n-   **Hãy dành thời gian thử nghiệm.** Nhìn chung, hướng dẫn cho học sinh biết phải làm gì, nhưng họ cũng nên thoải mái thử nghiệm các ý tưởng của riêng mình."
+          "description": "Dưới đây là một số mẹo có thể giúp ích cho học sinh bất kể họ đang học ở cấp độ nào\n\n-   **Hợp tác với bạn kế bên:** Khuyến khích học sinh thảo luận với bạn kế bên khi gặp khó khăn. Tùy thuộc vào độ tuổi và khả năng của học sinh, bạn có thể cân nhắc chính thức chia lớp học của mình thành từng cặp để hoàn thành bài hướng dẫn bằng phương pháp [lập trình theo cặp](https://youtu.be/vgkahOzFH2Q).\n\n-   **Đọc hướng dẫn:** Hướng dẫn thường cung cấp các mẹo hữu ích về cách hoàn thành cấp độ. Trước khi cho học sinh câu trả lời, hãy đảm bảo họ đã xem kỹ hướng dẫn, gợi ý, video và bất kỳ mã lệnh ban đầu nào.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Bạn bị bí à? Hãy xem gợi ý:** Mỗi cấp độ có một gợi ý khuyên bạn cách vượt qua một cấp độ, bao gồm cả khối mã lệnh cần thử.\n\n-   **Hãy dành thời gian thử nghiệm.** Nhìn chung, hướng dẫn cho học sinh biết phải làm gì, nhưng họ cũng nên thoải mái thử nghiệm các ý tưởng của riêng mình."
         },
         "fcf13574-b04a-42a7-9e17-ef0dba0bfe33": {
           "name": "Xin chào cả thế giới",
           "progression_name": "Xin chào cả thế giới"
         },
         "7cccfa6d-83c2-4d74-a71f-c9134fb1d0c2": {
-          "description": "Nếu một nhóm hoặc cá nhân hoàn thành sớm, hãy khuyến khích họ tiếp tục xây dựng một dự án ở cấp độ cuối cùng. Nếu học sinh không chắc chắn phải làm gì thêm, bạn có thể nhắc họ bằng các câu hỏi:\n\n-   Bạn có thể thêm nhân vật nào khác vào dự án của mình?\n-   Bạn đã xem qua thư viện trang phục hoặc thử vẽ trang phục nhân vật của riêng mình chưa?\n-   Bạn có thể cho nhân vật của mình nói gì khác không?\n-   Nhân vật của bạn nên làm gì khi nhấp chuột?\n-   Mời học sinh chia sẻ ý kiến và học hỏi lẫn nhau. Họ cũng có thể thử hướng dẫn khác bằng cách truy cập [code.org/learn][0]."
+          "description": "Nếu một nhóm hoặc cá nhân hoàn thành sớm, hãy khuyến khích họ tiếp tục xây dựng một dự án ở cấp độ cuối cùng. Nếu học sinh không chắc chắn phải làm gì thêm, bạn có thể nhắc họ bằng các câu hỏi:\n\n-   Bạn có thể thêm nhân vật nào khác vào dự án của mình?\n-   Bạn đã xem qua thư viện trang phục hoặc thử vẽ trang phục nhân vật của riêng mình chưa?\n-   Bạn có thể cho nhân vật của mình nói gì khác không?\n-   Nhân vật của bạn nên làm gì khi nhấp chuột?\n-   Mời học sinh chia sẻ ý kiến và học hỏi lẫn nhau. Họ cũng có thể thử hướng dẫn khác bằng cách truy cập [code.org/learn](https://code.org/learn)."
         },
         "574954ea-9128-428b-9965-b0d34518c11d": {
           "name": "Suy nghĩ",
-          "description": "#### Thảo luận\n\nYêu cầu học sinh suy nghĩ về các hoạt động trong ngày. Họ đã học gì về lập trình? Nhân vật? Sự kiện?\n\nHọ cảm thấy thế nào về khoa học máy tính và lập trình sau khi dành một giờ khám phá?\n\n#### Các bước tiếp theo\n\nCho học sinh biết rằng nếu họ thích hoạt động hôm nay, họ có nhiều lựa chọn để tiếp tục lập trình. Hãy truy cập [Kết nối KHMT][0] để xem ý tưởng tích hợp khoa học máy tính vào các môn học khác hoặc đọc thêm về [các khóa học có sẵn dành cho trường tiểu học][1] của chúng tôi."
+          "description": "#### Thảo luận\n\nYêu cầu học sinh suy nghĩ về các hoạt động trong ngày. Họ đã học gì về lập trình? Nhân vật? Sự kiện?\n\nHọ cảm thấy thế nào về khoa học máy tính và lập trình sau khi dành một giờ khám phá?\n\n#### Các bước tiếp theo\n\nCho học sinh biết rằng nếu họ thích hoạt động hôm nay, họ có nhiều lựa chọn để tiếp tục lập trình. Hãy truy cập [Kết nối KHMT](https://code.org/educate/csc) để xem ý tưởng tích hợp khoa học máy tính vào các môn học khác hoặc đọc thêm về [các khóa học có sẵn dành cho trường tiểu học](https://code.org/educate/curriculum/elementary-school) của chúng tôi."
         },
         "79f9bd46-60a5-4891-ad3b-8369879847fc": {
           "description": "#### Bố trí sân khấu\n\nChào mừng học sinh đến lớp và giới thiệu ngắn gọn về hoạt động trong ngày.\n\nHọc sinh sẽ được trải nghiêm thực tế bài học này. Có thể hầu hết học sinh đã nghe nói về Minecraft, nhưng hãy giới thiệu ngắn gọn cho những người có thể chưa biết.\nMinecraft là một trò chơi hình khối. Bạn có thể đóng vai Alex hoặc Steve khi khám phá mê cung. Bạn cần nhặt các vật phẩm và khám phá trong một thế giới được tạo thành từ các hình khối của mọi thứ.\n\n_Nói: “Hôm nay chúng ta sẽ dành một giờ để học lập trình. Có ai ở đây đã nghe thuật ngữ “mã lệnh” trước đây chưa? Thuật ngữ đó có nghĩa là gì?”_\n\nHọc sinh có thể đề cập rằng “mã lệnh” giống như một thông điệp bí mật, hoặc liên quan đến máy tính theo một cách nào đó."
         },
         "cc1ed89e-268e-472b-9bce-4f976d8c2ea3": {
           "tips": [
-            "Một cách để giới thiệu Giờ lập trình nếu bản thân bạn không rành về lập trình là chiếu một trong những [video truyền cảm hứng của chúng tôi][0]. Hãy chọn nội dung mà bạn cho rằng học sinh của mình sẽ cảm thấy hứng thú và chia sẻ ngay bây giờ. Đối với học viên nhỏ tuổi, chúng tôi đề xuất “[Giờ lập trình tới rồi][1].”"
+            "Một cách để giới thiệu Giờ lập trình nếu bản thân bạn không rành về lập trình là chiếu một trong những [video truyền cảm hứng của chúng tôi](https://hourofcode.com/us/resources#videos). Hãy chọn nội dung mà bạn cho rằng học sinh của mình sẽ cảm thấy hứng thú và chia sẻ ngay bây giờ. Đối với học viên nhỏ tuổi, chúng tôi đề xuất “[Giờ lập trình tới rồi](https://youtu.be/FC5FbmsH4fw).”"
           ]
         },
         "850945f6-6352-403b-a73f-3fb613f4728a": {
@@ -22870,7 +22870,7 @@
         },
         "fc5c47f6-08fa-4702-86a3-e687a2ad5bc1": {
           "name": "Minecraft: Hero's Journey",
-          "description": "Hãy thử thách học sinh hoàn thành bài học [Minecraft: Chuyến đi của vị anh hùng][0] này.\n\nTùy vào độ tuổi và khả năng của học sinh, bạn có thể cân nhắc:\n\n-   Đối với học sinh nhỏ tuổi, chúng tôi khuyên bạn nên chia lớp thành từng cặp và yêu cầu mỗi nhóm làm việc cùng nhau để hoàn thành bài hướng dẫn bằng cách sử dụng phương pháp [lập trình theo cặp][1].\n-   Đối với học viên ở cấp trung học cơ sở, chúng tôi thấy rằng việc tự làm các bài hướng dẫn sẽ có hiệu quả. Đôi khi, việc để học sinh tự chọn bài hướng dẫn cho riêng mình sẽ rất hữu ích. Nếu học sinh không thích Minecraft, họ sẽ có được trải nghiệm tương tự với bài hướng dẫn [Lập trình với Anna và Elsa][2] hoặc [Chiến tranh giữa các vì sao][3].\n-   Đối với học viên lớn tuổi hoặc người lớn, bài hướng dẫn [Minecraft: Chuyến đi của vị anh hùng][4] sẽ phát huy hiệu quả dưới dạng một thử thách độc lập hoặc một hoạt động lập trình theo cặp."
+          "description": "Hãy thử thách học sinh hoàn thành bài học [Minecraft: Chuyến đi của vị anh hùng](https://studio.code.org/s/hero/lessons/1/levels/1) này.\n\nTùy vào độ tuổi và khả năng của học sinh, bạn có thể cân nhắc:\n\n-   Đối với học sinh nhỏ tuổi, chúng tôi khuyên bạn nên chia lớp thành từng cặp và yêu cầu mỗi nhóm làm việc cùng nhau để hoàn thành bài hướng dẫn bằng cách sử dụng phương pháp [lập trình theo cặp](https://youtu.be/vgkahOzFH2Q).\n-   Đối với học viên ở cấp trung học cơ sở, chúng tôi thấy rằng việc tự làm các bài hướng dẫn sẽ có hiệu quả. Đôi khi, việc để học sinh tự chọn bài hướng dẫn cho riêng mình sẽ rất hữu ích. Nếu học sinh không thích Minecraft, họ sẽ có được trải nghiệm tương tự với bài hướng dẫn [Lập trình với Anna và Elsa](https://studio.code.org/s/frozen/stage/1/puzzle/1) hoặc [Chiến tranh giữa các vì sao](https://code.org/starwars).\n-   Đối với học viên lớn tuổi hoặc người lớn, bài hướng dẫn [Minecraft: Chuyến đi của vị anh hùng](https://studio.code.org/s/hero/lessons/1/levels/1) sẽ phát huy hiệu quả dưới dạng một thử thách độc lập hoặc một hoạt động lập trình theo cặp."
         },
         "296703c2-cad7-43bb-b3cf-4ffb525e7ad1": {
           "tips": [
@@ -22878,7 +22878,7 @@
           ]
         },
         "b518cf9c-9568-4e85-a520-0e2a81c3b330": {
-          "description": "Nếu một nhóm hoặc cá nhân hoàn thành sớm, họ có thể thử bài hướng dẫn khác bằng cách truy cập [code.org/learn][0]."
+          "description": "Nếu một nhóm hoặc cá nhân hoàn thành sớm, họ có thể thử bài hướng dẫn khác bằng cách truy cập [code.org/learn](http://code.org/learn)."
         },
         "34238f3b-6699-4e27-b77a-54bcd8d57459": {
           "progression_name": "Minecraft: Hero's Journey"
@@ -22889,18 +22889,18 @@
         },
         "145782a9-a436-4615-9827-0f75d7e4b3a0": {
           "name": "Ăn mừng",
-          "description": "Giải thích rằng hôm nay bạn đang dành một giờ để lập trình, bởi vì tuần này là Tuần lễ Giáo dục KHMT và hàng triệu học sinh khác trên toàn cầu cũng đã học Giờ lập trình trong tuần này. Hãy chúc mừng các em học sinh đã hòa mình vào phong trào toàn cầu này.\n\nHãy phát cho mỗi học sinh một [chứng chỉ][0] có tên của học sinh trên đó."
+          "description": "Giải thích rằng hôm nay bạn đang dành một giờ để lập trình, bởi vì tuần này là Tuần lễ Giáo dục KHMT và hàng triệu học sinh khác trên toàn cầu cũng đã học Giờ lập trình trong tuần này. Hãy chúc mừng các em học sinh đã hòa mình vào phong trào toàn cầu này.\n\nHãy phát cho mỗi học sinh một [chứng chỉ](https://studio.code.org/certificates/batch?course=bWM=) có tên của học sinh trên đó."
         },
         "cc38f575-4db4-4ca6-ab2f-a9d8557f16cf": {
           "name": "Bước tiếp theo",
-          "description": "Hãy cho học sinh biết rằng nếu họ thích hoạt động hôm nay, họ có nhiều lựa chọn để tiếp tục lập trình. Hãy khuyến khích học sinh truy cập [code.org/learn][0] để xem danh sách các lựa chọn hoặc nếu bạn đang lên kế hoạch cho hoạt động mở rộng nào tiếp theo, hãy cho học sinh biết kế hoạch sắp tới trong lớp học."
+          "description": "Hãy cho học sinh biết rằng nếu họ thích hoạt động hôm nay, họ có nhiều lựa chọn để tiếp tục lập trình. Hãy khuyến khích học sinh truy cập [code.org/learn](<>) để xem danh sách các lựa chọn hoặc nếu bạn đang lên kế hoạch cho hoạt động mở rộng nào tiếp theo, hãy cho học sinh biết kế hoạch sắp tới trong lớp học."
         },
         "e276fe28-3302-4ba2-94cc-aaf03b3d2d06": {
-          "description": "Hãy trao cho mỗi học sinh một [“Câu hỏi tổng kết”][0] và yêu cầu họ tóm tắt những nội dung đã học được hôm nay, cảm giác của họ hoặc những gì họ đã trải qua. Học sinh có thể vẽ, viết hoặc thể hiện bản thân theo bất kỳ cách nào mà họ cảm thấy thoải mái. Nhận “Câu hỏi tổng kết” từ mỗi học sinh trên đường ra khỏi phòng. Nếu thích, bạn có thể đăng “Câu hỏi tổng kết” trên bảng thông báo hoặc một số địa điểm nổi bật trong trường như một lời nhắc nhở về Giờ lập trình của bạn."
+          "description": "Hãy trao cho mỗi học sinh một [“Câu hỏi tổng kết”](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) và yêu cầu họ tóm tắt những nội dung đã học được hôm nay, cảm giác của họ hoặc những gì họ đã trải qua. Học sinh có thể vẽ, viết hoặc thể hiện bản thân theo bất kỳ cách nào mà họ cảm thấy thoải mái. Nhận “Câu hỏi tổng kết” từ mỗi học sinh trên đường ra khỏi phòng. Nếu thích, bạn có thể đăng “Câu hỏi tổng kết” trên bảng thông báo hoặc một số địa điểm nổi bật trong trường như một lời nhắc nhở về Giờ lập trình của bạn."
         },
         "147a2b22-0cba-4505-81ef-770b81eee73e": {
           "name": "Mở rộng Giờ lập trình",
-          "description": "Sau khi Giờ lập trình kết thúc, có nhiều cách để tiếp tục giảng dạy môn khoa học máy tính trong lớp học K-5. Sau đây là một số ý tưởng:\n\n-   **Dạy các khóa học [Nguyên tắc cơ bản về khoa học máy tính của Code Studio][0]**. Sáu khóa học này được thiết kế cho những học sinh nhỏ tuổi. Học sinh sẽ làm việc theo cách của họ thông qua một loạt bài tập bài hướng dẫn lập trình và giáo viên có quyền truy cập vào các giáo án hấp dẫn giúp làm cho việc học trở nên sôi động. Code.org cung cấp chương trình phát triển chuyên môn miễn phí cho các khóa học này theo hình thức trực tuyến hoặc trực tiếp.\n-   **Hãy truy cập [Bạn có thể dạy Khoa học máy tính][1]** để nhận thêm đề xuất khóa học.\n-   **Mời chuyên gia khoa học máy tính nói chuyện với lớp về công việc của họ**. Bạn không biết bất kỳ chuyên gia khoa học máy tính nào tại địa phương? Hãy liên hệ với một tình nguyện viên trên [bản đồ tình nguyện viên][2] của chúng tôi."
+          "description": "Sau khi Giờ lập trình kết thúc, có nhiều cách để tiếp tục giảng dạy môn khoa học máy tính trong lớp học K-5. Sau đây là một số ý tưởng:\n\n-   **Dạy các khóa học [Nguyên tắc cơ bản về khoa học máy tính của Code Studio](http://code.org/educate/k5)**. Sáu khóa học này được thiết kế cho những học sinh nhỏ tuổi. Học sinh sẽ làm việc theo cách của họ thông qua một loạt bài tập bài hướng dẫn lập trình và giáo viên có quyền truy cập vào các giáo án hấp dẫn giúp làm cho việc học trở nên sôi động. Code.org cung cấp chương trình phát triển chuyên môn miễn phí cho các khóa học này theo hình thức trực tuyến hoặc trực tiếp.\n-   **Hãy truy cập [Bạn có thể dạy Khoa học máy tính](https://code.org/teach)** để nhận thêm đề xuất khóa học.\n-   **Mời chuyên gia khoa học máy tính nói chuyện với lớp về công việc của họ**. Bạn không biết bất kỳ chuyên gia khoa học máy tính nào tại địa phương? Hãy liên hệ với một tình nguyện viên trên [bản đồ tình nguyện viên](https://code.org/volunteer/local) của chúng tôi."
         },
         "9475b0bd-6a58-4318-b3e5-0d77cfe5a35d": {
           "tips": [
@@ -22999,7 +22999,7 @@
         },
         "6b55015f-aebc-401b-b0c9-c40a5fd0056e": {
           "tips": [
-            "Một cách để giới thiệu Giờ lập trình nếu bản thân bạn không rành về lập trình là chiếu một trong những [video truyền cảm hứng của chúng tôi][0]. Hãy chọn nội dung mà bạn cho rằng học sinh của mình sẽ cảm thấy hứng thú và chia sẻ ngay bây giờ. Đối với học viên nhỏ tuổi, chúng tôi đề xuất “[Giờ lập trình tới rồi][1].”"
+            "Một cách để giới thiệu Giờ lập trình nếu bản thân bạn không rành về lập trình là chiếu một trong những [video truyền cảm hứng của chúng tôi](https://hourofcode.com/us/resources#videos). Hãy chọn nội dung mà bạn cho rằng học sinh của mình sẽ cảm thấy hứng thú và chia sẻ ngay bây giờ. Đối với học viên nhỏ tuổi, chúng tôi đề xuất “[Giờ lập trình tới rồi](https://youtu.be/FC5FbmsH4fw).”"
           ]
         },
         "e841a687-1da5-46c7-b31e-42629fe0377c": {
@@ -23012,7 +23012,7 @@
         },
         "9aba0e85-a709-43f5-8cfb-251671159b3a": {
           "name": "Mê cung",
-          "description": "Hãy thử thách học sinh hoàn thành bài học [Viết chương trình máy tính đầu tiên][0] này.\n\nTùy vào độ tuổi và khả năng của học sinh, bạn có thể cân nhắc:\n\n-   Đối với học sinh nhỏ tuổi, chúng tôi khuyên bạn nên chia lớp thành từng cặp hoặc các nhóm thật nhỏ (ba đến bốn học sinh mỗi nhóm) và yêu cầu mỗi nhóm làm việc cùng nhau để hoàn thành bài hướng dẫn bằng cách sử dụng phương pháp [lập trình theo cặp][1].\n-   Đối với học viên ở bậc trung học cơ sở, chúng tôi thấy rằng việc tự làm các bài hướng dẫn sẽ có hiệu quả. Đôi khi, việc để học sinh tự chọn bài hướng dẫn cho riêng mình sẽ rất hữu ích. Nếu học sinh không thích Angry Birds, họ sẽ có được trải nghiệm tương tự với bài hướng dẫn [Lập trình với Anna và Elsa][2] hoặc [Lập trình game dạng Flappy Bird][3].\n-   Đối với học viên lớn tuổi hoặc người lớn, bài hướng dẫn [Viết chương trình máy tính đầu tiên][4] sẽ phát huy hiệu quả dưới dạng một thử thách độc lập hoặc một hoạt động lập trình theo cặp."
+          "description": "Hãy thử thách học sinh hoàn thành bài học [Viết chương trình máy tính đầu tiên](https://studio.code.org/hoc/1) này.\n\nTùy vào độ tuổi và khả năng của học sinh, bạn có thể cân nhắc:\n\n-   Đối với học sinh nhỏ tuổi, chúng tôi khuyên bạn nên chia lớp thành từng cặp hoặc các nhóm thật nhỏ (ba đến bốn học sinh mỗi nhóm) và yêu cầu mỗi nhóm làm việc cùng nhau để hoàn thành bài hướng dẫn bằng cách sử dụng phương pháp [lập trình theo cặp](https://youtu.be/vgkahOzFH2Q).\n-   Đối với học viên ở bậc trung học cơ sở, chúng tôi thấy rằng việc tự làm các bài hướng dẫn sẽ có hiệu quả. Đôi khi, việc để học sinh tự chọn bài hướng dẫn cho riêng mình sẽ rất hữu ích. Nếu học sinh không thích Angry Birds, họ sẽ có được trải nghiệm tương tự với bài hướng dẫn [Lập trình với Anna và Elsa](https://studio.code.org/s/frozen/stage/1/puzzle/1) hoặc [Lập trình game dạng Flappy Bird](https://studio.code.org/flappy/1).\n-   Đối với học viên lớn tuổi hoặc người lớn, bài hướng dẫn [Viết chương trình máy tính đầu tiên](https://studio.code.org/hoc/1) sẽ phát huy hiệu quả dưới dạng một thử thách độc lập hoặc một hoạt động lập trình theo cặp."
         },
         "524f2e35-6286-4585-879e-96e7286e8a6d": {
           "tips": [
@@ -23020,7 +23020,7 @@
           ]
         },
         "3f29a14c-3903-4615-8a6b-d1961b57dc7b": {
-          "description": "Nếu một nhóm hoặc cá nhân hoàn thành sớm, họ có thể thử bài hướng dẫn khác bằng cách truy cập [code.org/learn][0]."
+          "description": "Nếu một nhóm hoặc cá nhân hoàn thành sớm, họ có thể thử bài hướng dẫn khác bằng cách truy cập [code.org/learn](http://code.org/learn)."
         },
         "50db3674-3387-4932-ba7e-c9f176ebd976": {
           "name": "Hỏi đáp",
@@ -23028,18 +23028,18 @@
         },
         "46f387e2-c275-4c57-acec-c9709e7f44fc": {
           "name": "Ăn mừng",
-          "description": "Giải thích rằng hôm nay bạn đang dành một giờ để lập trình, bởi vì tuần này là Tuần lễ Giáo dục KHMT và hàng triệu học sinh khác trên toàn cầu cũng đã học Giờ lập trình trong tuần này. Hãy chúc mừng các em học sinh đã hòa mình vào phong trào toàn cầu này.\n\nHãy phát cho mỗi học sinh một [chứng chỉ][0] có tên của học sinh trên đó."
+          "description": "Giải thích rằng hôm nay bạn đang dành một giờ để lập trình, bởi vì tuần này là Tuần lễ Giáo dục KHMT và hàng triệu học sinh khác trên toàn cầu cũng đã học Giờ lập trình trong tuần này. Hãy chúc mừng các em học sinh đã hòa mình vào phong trào toàn cầu này.\n\nHãy phát cho mỗi học sinh một [chứng chỉ](http://code.org/certificates) có tên của học sinh trên đó."
         },
         "692a60f1-d3a2-44d3-8c58-19461d6b5999": {
           "name": "Bước tiếp theo",
           "description": "Hãy cho học sinh biết rằng nếu họ thích hoạt động hôm nay, họ có nhiều lựa chọn để tiếp tục lập trình. Hãy khuyến khích học sinh truy cập code.org/learn để xem danh sách các lựa chọn hoặc nếu bạn đang lên kế hoạch cho hoạt động mở rộng nào tiếp theo, hãy cho học sinh biết kế hoạch sắp tới trong lớp học."
         },
         "c00f4730-69b0-4533-bf47-253647c6715f": {
-          "description": "Hãy trao cho mỗi học sinh một [“Câu hỏi tổng kết”][0] và yêu cầu họ tóm tắt những nội dung đã học được hôm nay, cảm giác của họ hoặc những gì họ đã trải qua. Học sinh có thể vẽ, viết hoặc thể hiện bản thân theo bất kỳ cách nào mà họ cảm thấy thoải mái. Nhận “Câu hỏi tổng kết” từ mỗi học sinh trên đường ra khỏi phòng. Nếu thích, bạn có thể đăng “Câu hỏi tổng kết” trên bảng thông báo hoặc một số địa điểm nổi bật trong trường như một lời nhắc nhở về Giờ lập trình của bạn."
+          "description": "Hãy trao cho mỗi học sinh một [“Câu hỏi tổng kết”](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) và yêu cầu họ tóm tắt những nội dung đã học được hôm nay, cảm giác của họ hoặc những gì họ đã trải qua. Học sinh có thể vẽ, viết hoặc thể hiện bản thân theo bất kỳ cách nào mà họ cảm thấy thoải mái. Nhận “Câu hỏi tổng kết” từ mỗi học sinh trên đường ra khỏi phòng. Nếu thích, bạn có thể đăng “Câu hỏi tổng kết” trên bảng thông báo hoặc một số địa điểm nổi bật trong trường như một lời nhắc nhở về Giờ lập trình của bạn."
         },
         "6e6e32c8-6dfd-4075-b1c7-0c96b6853b09": {
           "name": "Mở rộng Giờ lập trình",
-          "description": "Sau khi Giờ lập trình kết thúc, có nhiều cách để tiếp tục giảng dạy môn khoa học máy tính trong lớp học K-5. Sau đây là một số ý tưởng:\n\n-   **Dạy các khóa học [Nguyên tắc cơ bản về khoa học máy tính của Code Studio][0]**. Sáu khóa học này được thiết kế cho những học sinh nhỏ tuổi. Học sinh sẽ làm việc theo cách của họ thông qua một loạt bài tập bài hướng dẫn lập trình và giáo viên có quyền truy cập vào các giáo án hấp dẫn giúp làm cho việc học trở nên sôi động. Code.org cung cấp chương trình phát triển chuyên môn miễn phí cho các khóa học này theo hình thức trực tuyến hoặc trực tiếp."
+          "description": "Sau khi Giờ lập trình kết thúc, có nhiều cách để tiếp tục giảng dạy môn khoa học máy tính trong lớp học K-5. Sau đây là một số ý tưởng:\n\n-   **Dạy các khóa học [Nguyên tắc cơ bản về khoa học máy tính của Code Studio](http://code.org/educate/k5)**. Sáu khóa học này được thiết kế cho những học sinh nhỏ tuổi. Học sinh sẽ làm việc theo cách của họ thông qua một loạt bài tập bài hướng dẫn lập trình và giáo viên có quyền truy cập vào các giáo án hấp dẫn giúp làm cho việc học trở nên sôi động. Code.org cung cấp chương trình phát triển chuyên môn miễn phí cho các khóa học này theo hình thức trực tuyến hoặc trực tiếp."
         },
         "5858c0fa-a7a6-44c2-afcb-bfb816b18a5b": {
           "name": "Điều chỉnh dành cho Giáo viên K-2",
@@ -23051,7 +23051,7 @@
         },
         "fc04ef5f-0d78-418b-9311-e12201106453": {
           "tips": [
-            "Một cách để giới thiệu Giờ lập trình nếu bản thân bạn không rành về lập trình là chiếu một trong những [video truyền cảm hứng của chúng tôi][0]. Hãy chọn nội dung mà bạn cho rằng học sinh của mình sẽ cảm thấy hứng thú và chia sẻ ngay bây giờ. Đối với học viên nhỏ tuổi, chúng tôi đề xuất “[Ai cũng có thể học][1].”"
+            "Một cách để giới thiệu Giờ lập trình nếu bản thân bạn không rành về lập trình là chiếu một trong những [video truyền cảm hứng của chúng tôi](https://hourofcode.com/us/resources#videos). Hãy chọn nội dung mà bạn cho rằng học sinh của mình sẽ cảm thấy hứng thú và chia sẻ ngay bây giờ. Đối với học viên nhỏ tuổi, chúng tôi đề xuất “[Ai cũng có thể học](https://youtu.be/qYZF6oIZtfc).”"
           ]
         },
         "ea8a3bf2-1425-482a-9f98-a5b30d6ee809": {
@@ -23059,7 +23059,7 @@
         },
         "c628ba28-35c2-4ded-a19d-74079377b309": {
           "name": "Kho dữ liệu trò chơi Kỷ băng hà",
-          "description": "Hãy thử thách học sinh hoàn thành bài học [Play Lab Kỷ băng hà][0] này.\n\nTùy vào độ tuổi và khả năng của học sinh, bạn có thể cân nhắc:\n\n-   Đối với học sinh ở bậc trung học phổ thông và trung học cơ sở, chúng tôi khuyên bạn nên chọn bài học cho phép chơi tự do và tạo game hoặc ứng dụng. Bạn có thể cho học sinh làm việc độc lập hoặc theo cặp hoặc theo nhóm nhỏ. Có nhiều bài học khác trên [code.org/learn][1] cho phép sáng tạo tự do, chẳng hạn như [Lập trình game dạng Flappy Bird][2] và công cụ beta mới của chúng tôi là [AppLab][3]\n-   Đối với học sinh nhỏ tuổi, chúng tôi khuyên bạn nên chia lớp thành từng cặp hoặc nhóm thật nhỏ (ba đến bốn học sinh mỗi nhóm) và yêu cầu mỗi nhóm làm việc cùng nhau để hoàn thành bài hướng dẫn bằng cách sử dụng phương pháp [lập trình theo cặp][4].\n-   Đối với học viên là người lớn, bài hướng dẫn [Viết chương trình máy tính đầu tiên][5] sẽ phát huy hiệu quả tuyệt vời dưới dạng một thử thách độc lập hoặc một hoạt động lập trình theo cặp."
+          "description": "Hãy thử thách học sinh hoàn thành bài học [Play Lab Kỷ băng hà](https://studio.code.org/s/iceage/lessons/1/levels/1) này.\n\nTùy vào độ tuổi và khả năng của học sinh, bạn có thể cân nhắc:\n\n-   Đối với học sinh ở bậc trung học phổ thông và trung học cơ sở, chúng tôi khuyên bạn nên chọn bài học cho phép chơi tự do và tạo game hoặc ứng dụng. Bạn có thể cho học sinh làm việc độc lập hoặc theo cặp hoặc theo nhóm nhỏ. Có nhiều bài học khác trên [code.org/learn](http://code.org/learn) cho phép sáng tạo tự do, chẳng hạn như [Lập trình game dạng Flappy Bird](https://studio.code.org/s/flappy) và công cụ beta mới của chúng tôi là [AppLab](https://code.org/educate/applab)\n-   Đối với học sinh nhỏ tuổi, chúng tôi khuyên bạn nên chia lớp thành từng cặp hoặc nhóm thật nhỏ (ba đến bốn học sinh mỗi nhóm) và yêu cầu mỗi nhóm làm việc cùng nhau để hoàn thành bài hướng dẫn bằng cách sử dụng phương pháp [lập trình theo cặp](https://youtu.be/vgkahOzFH2Q).\n-   Đối với học viên là người lớn, bài hướng dẫn [Viết chương trình máy tính đầu tiên](https://studio.code.org/hoc/1) sẽ phát huy hiệu quả tuyệt vời dưới dạng một thử thách độc lập hoặc một hoạt động lập trình theo cặp."
         },
         "548dc37b-f338-4a52-a77e-7380794c64f2": {
           "tips": [
@@ -23067,7 +23067,7 @@
           ]
         },
         "86d8427e-15bf-420c-b405-3d1f1c3c46c6": {
-          "description": "Nếu một nhóm hoặc cá nhân hoàn thành sớm, họ có thể thử bài hướng dẫn khác bằng cách truy cập [code.org/learn][0]."
+          "description": "Nếu một nhóm hoặc cá nhân hoàn thành sớm, họ có thể thử bài hướng dẫn khác bằng cách truy cập [code.org/learn](http://code.org/learn)."
         },
         "d8b92f56-a741-43ac-9d6f-3fdf1c452001": {
           "name": "Hỏi đáp",
@@ -23075,7 +23075,7 @@
         },
         "3d63393a-9146-4027-8783-247e19637d25": {
           "name": "Ăn mừng",
-          "description": "Giải thích rằng hôm nay bạn đang dành một giờ để lập trình, bởi vì tuần này là Tuần lễ Giáo dục KHMT và hàng triệu học sinh khác trên toàn cầu cũng đã học Giờ lập trình trong tuần này. Hãy chúc mừng các em học sinh đã hòa mình vào phong trào toàn cầu này.\n\nHãy phát cho mỗi học sinh một [chứng chỉ][0] có tên của học sinh trên đó."
+          "description": "Giải thích rằng hôm nay bạn đang dành một giờ để lập trình, bởi vì tuần này là Tuần lễ Giáo dục KHMT và hàng triệu học sinh khác trên toàn cầu cũng đã học Giờ lập trình trong tuần này. Hãy chúc mừng các em học sinh đã hòa mình vào phong trào toàn cầu này.\n\nHãy phát cho mỗi học sinh một [chứng chỉ](http://code.org/certificates) có tên của học sinh trên đó."
         },
         "4ae122fa-da6f-4aaf-b2f8-c68fd0bb68af": {
           "name": "Bước tiếp theo",
@@ -23087,7 +23087,7 @@
         },
         "4ae8bc68-25be-4eaa-ae1e-b9bfe8623a23": {
           "name": "Mở rộng Giờ lập trình",
-          "description": "Sau khi Giờ lập trình kết thúc, có nhiều cách để tiếp tục giảng dạy môn khoa học máy tính trong lớp học K-5. Dưới đây là một số ý tưởng:\n\n-   **Dạy các khóa học [Code Studio Computer Science Cơ bản][0]**. Bốn khóa học này được thiết kế cho những học sinh nhỏ tuổi. Học sinh làm việc theo cách của họ thông qua một loạt bài tập dạy họ lập trình và các nhà giáo dục có quyền truy cập vào các giáo án hấp dẫn giúp làm cho việc học trở nên sống động. Code.org cung cấp chương trình phát triển chuyên môn miễn phí cho các khóa học này, trực tuyến hoặc trực tiếp.\n-   **Mời một chuyên gia khoa học máy tính nói chuyện với lớp về công việc của họ**. Không biết bất kỳ tình nguyện viên nào, hãy liên hệ với một số người trên [bản đồ tình nguyện][1]."
+          "description": "Sau khi Giờ lập trình kết thúc, có nhiều cách để tiếp tục giảng dạy môn khoa học máy tính trong lớp học K-5. Dưới đây là một số ý tưởng:\n\n-   **Dạy các khóa học [Code Studio Computer Science Cơ bản](http://code.org/educate/k5)**. Bốn khóa học này được thiết kế cho những học sinh nhỏ tuổi. Học sinh làm việc theo cách của họ thông qua một loạt bài tập dạy họ lập trình và các nhà giáo dục có quyền truy cập vào các giáo án hấp dẫn giúp làm cho việc học trở nên sống động. Code.org cung cấp chương trình phát triển chuyên môn miễn phí cho các khóa học này, trực tuyến hoặc trực tiếp.\n-   **Mời một chuyên gia khoa học máy tính nói chuyện với lớp về công việc của họ**. Không biết bất kỳ tình nguyện viên nào, hãy liên hệ với một số người trên [bản đồ tình nguyện](https://code.org/volunteer/local)."
         },
         "88079aec-5c42-4f3f-bbb6-cba4f8866c92": {
           "name": "Bố trí sân khấu",
@@ -23095,7 +23095,7 @@
         },
         "6874de98-8778-447b-8453-0138809b2c7e": {
           "tips": [
-            "Một cách để giới thiệu Giờ lập trình nếu bản thân bạn không rành về lập trình là chiếu một trong những [video truyền cảm hứng của chúng tôi][0]. Hãy chọn nội dung mà bạn cho rằng học sinh của mình sẽ cảm thấy hứng thú và chia sẻ ngay bây giờ. Đối với học viên nhỏ tuổi, chúng tôi đề xuất “[Ai cũng có thể học][1].”"
+            "Một cách để giới thiệu Giờ lập trình nếu bản thân bạn không rành về lập trình là chiếu một trong những [video truyền cảm hứng của chúng tôi](https://hourofcode.com/us/resources#videos). Hãy chọn nội dung mà bạn cho rằng học sinh của mình sẽ cảm thấy hứng thú và chia sẻ ngay bây giờ. Đối với học viên nhỏ tuổi, chúng tôi đề xuất “[Ai cũng có thể học](https://youtu.be/qYZF6oIZtfc).”"
           ]
         },
         "82e4a494-65fb-40ac-b2c2-323044e15b77": {
@@ -23103,7 +23103,7 @@
         },
         "bd5d11f4-9c4c-4f24-bb9f-482392bd65aa": {
           "name": "Chơi thử nghiệm Disney Infinity",
-          "description": "Hãy thử thách học sinh hoàn thành bài học [Play Lab Disney Vô cực][0] này.\n\nTùy vào độ tuổi và khả năng của học sinh, bạn có thể cân nhắc:\n\n-   Đối với học sinh ở bậc trung học phổ thông và trung học cơ sở, chúng tôi khuyên bạn nên chọn bài học cho phép chơi tự do và tạo game hoặc ứng dụng. Bạn có thể cho học sinh làm việc độc lập hoặc theo cặp hoặc theo nhóm nhỏ. Có nhiều bài học khác trên [code.org/learn][1] cho phép sáng tạo tự do, chẳng hạn như [Lập trình game dạng Flappy Bird][2] và công cụ beta mới của chúng tôi là [AppLab][3]\n-   Đối với học sinh nhỏ tuổi, chúng tôi khuyên bạn nên chia lớp thành từng cặp hoặc nhóm thật nhỏ (ba đến bốn học sinh mỗi nhóm) và yêu cầu mỗi nhóm làm việc cùng nhau để hoàn thành bài hướng dẫn bằng cách sử dụng phương pháp [lập trình theo cặp][4].\n-   Đối với học viên là người lớn, bài hướng dẫn [Viết chương trình máy tính đầu tiên][5] sẽ phát huy hiệu quả tuyệt vời dưới dạng một thử thách độc lập hoặc một hoạt động lập trình theo cặp."
+          "description": "Hãy thử thách học sinh hoàn thành bài học [Play Lab Disney Vô cực](https://studio.code.org/s/infinity/lessons/1/levels/1) này.\n\nTùy vào độ tuổi và khả năng của học sinh, bạn có thể cân nhắc:\n\n-   Đối với học sinh ở bậc trung học phổ thông và trung học cơ sở, chúng tôi khuyên bạn nên chọn bài học cho phép chơi tự do và tạo game hoặc ứng dụng. Bạn có thể cho học sinh làm việc độc lập hoặc theo cặp hoặc theo nhóm nhỏ. Có nhiều bài học khác trên [code.org/learn](http://code.org/learn) cho phép sáng tạo tự do, chẳng hạn như [Lập trình game dạng Flappy Bird](https://studio.code.org/s/flappy) và công cụ beta mới của chúng tôi là [AppLab](https://code.org/educate/applab)\n-   Đối với học sinh nhỏ tuổi, chúng tôi khuyên bạn nên chia lớp thành từng cặp hoặc nhóm thật nhỏ (ba đến bốn học sinh mỗi nhóm) và yêu cầu mỗi nhóm làm việc cùng nhau để hoàn thành bài hướng dẫn bằng cách sử dụng phương pháp [lập trình theo cặp](https://youtu.be/vgkahOzFH2Q).\n-   Đối với học viên là người lớn, bài hướng dẫn [Viết chương trình máy tính đầu tiên](https://studio.code.org/hoc/1) sẽ phát huy hiệu quả tuyệt vời dưới dạng một thử thách độc lập hoặc một hoạt động lập trình theo cặp."
         },
         "b1ea2c15-24bb-475a-bb3f-bbc8ea1a51c0": {
           "tips": [
@@ -23111,7 +23111,7 @@
           ]
         },
         "712a8a98-3ab7-43d0-8f6f-a68e6984b009": {
-          "description": "Nếu một nhóm hoặc cá nhân hoàn thành sớm, họ có thể thử bài hướng dẫn khác bằng cách truy cập [code.org/learn][0]."
+          "description": "Nếu một nhóm hoặc cá nhân hoàn thành sớm, họ có thể thử bài hướng dẫn khác bằng cách truy cập [code.org/learn](http://code.org/learn)."
         },
         "a0530acf-3bce-4de9-b392-fe8725044086": {
           "name": "Hỏi đáp",
@@ -23119,7 +23119,7 @@
         },
         "ceaf9d96-e806-48e1-9a95-30566999264e": {
           "name": "Ăn mừng",
-          "description": "Giải thích rằng hôm nay bạn đang dành một giờ để lập trình, bởi vì tuần này là Tuần lễ Giáo dục KHMT và hàng triệu học sinh khác trên toàn cầu cũng đã học Giờ lập trình trong tuần này. Hãy chúc mừng các em học sinh đã hòa mình vào phong trào toàn cầu này.\n\nHãy phát cho mỗi học sinh một [chứng chỉ][0] có tên của học sinh trên đó."
+          "description": "Giải thích rằng hôm nay bạn đang dành một giờ để lập trình, bởi vì tuần này là Tuần lễ Giáo dục KHMT và hàng triệu học sinh khác trên toàn cầu cũng đã học Giờ lập trình trong tuần này. Hãy chúc mừng các em học sinh đã hòa mình vào phong trào toàn cầu này.\n\nHãy phát cho mỗi học sinh một [chứng chỉ](http://code.org/certificates) có tên của học sinh trên đó."
         },
         "680268d8-e3db-4f80-b56d-dfe40ada4d77": {
           "name": "Bước tiếp theo",
@@ -23131,7 +23131,7 @@
         },
         "38f15942-4a08-48f7-a0c4-e04232bc9bdc": {
           "name": "Mở rộng Giờ lập trình",
-          "description": "Sau khi Giờ lập trình kết thúc, có nhiều cách để tiếp tục giảng dạy môn khoa học máy tính trong lớp học K-5. Dưới đây là một số ý tưởng:\n\n-   **Dạy các khóa học [Code Studio Computer Science Cơ bản][0]**. Bốn khóa học này được thiết kế cho những học sinh nhỏ tuổi. Học sinh làm việc theo cách của họ thông qua một loạt bài tập dạy họ lập trình và các nhà giáo dục có quyền truy cập vào các giáo án hấp dẫn giúp làm cho việc học trở nên sống động. Code.org cung cấp chương trình phát triển chuyên môn miễn phí cho các khóa học này, trực tuyến hoặc trực tiếp.\n-   **Mời một chuyên gia khoa học máy tính nói chuyện với lớp về công việc của họ**. Không biết bất kỳ tình nguyện viên nào, hãy liên hệ với một số người trên [bản đồ tình nguyện][1]."
+          "description": "Sau khi Giờ lập trình kết thúc, có nhiều cách để tiếp tục giảng dạy môn khoa học máy tính trong lớp học K-5. Dưới đây là một số ý tưởng:\n\n-   **Dạy các khóa học [Code Studio Computer Science Cơ bản](http://code.org/educate/k5)**. Bốn khóa học này được thiết kế cho những học sinh nhỏ tuổi. Học sinh làm việc theo cách của họ thông qua một loạt bài tập dạy họ lập trình và các nhà giáo dục có quyền truy cập vào các giáo án hấp dẫn giúp làm cho việc học trở nên sống động. Code.org cung cấp chương trình phát triển chuyên môn miễn phí cho các khóa học này, trực tuyến hoặc trực tiếp.\n-   **Mời một chuyên gia khoa học máy tính nói chuyện với lớp về công việc của họ**. Không biết bất kỳ tình nguyện viên nào, hãy liên hệ với một số người trên [bản đồ tình nguyện](https://code.org/volunteer/local)."
         },
         "a16594a7-8312-4ac3-87c8-fd2d5d6e5bfb": {
           "name": "Giới thiệu",
@@ -23139,7 +23139,7 @@
         },
         "6415b9b2-1e23-43ee-9d0c-e65efcb0d65c": {
           "tips": [
-            "Một cách để giới thiệu Giờ lập trình nếu bản thân bạn không rành về lập trình là chiếu một trong những [video truyền cảm hứng của chúng tôi][0]. Hãy chọn nội dung mà bạn cho rằng học sinh của mình sẽ cảm thấy hứng thú và chia sẻ ngay bây giờ. Đối với học viên nhỏ tuổi, chúng tôi đề xuất “[Giờ lập trình tới rồi][1].”"
+            "Một cách để giới thiệu Giờ lập trình nếu bản thân bạn không rành về lập trình là chiếu một trong những [video truyền cảm hứng của chúng tôi](https://hourofcode.com/us/resources#videos). Hãy chọn nội dung mà bạn cho rằng học sinh của mình sẽ cảm thấy hứng thú và chia sẻ ngay bây giờ. Đối với học viên nhỏ tuổi, chúng tôi đề xuất “[Giờ lập trình tới rồi](https://youtu.be/FC5FbmsH4fw).”"
           ]
         },
         "3fee530c-6d5f-44da-89f7-cfae73040787": {
@@ -23152,16 +23152,16 @@
         },
         "aafa75c2-9439-415c-b42f-cac8ddfc2874": {
           "name": "Minecraft Chuyến phiêu lưu",
-          "description": "Hãy thử thách học sinh hoàn thành bài học [Minecraft: Nhà thám hiểm][0] này.\n\nTùy vào độ tuổi và khả năng của học sinh, bạn có thể cân nhắc:\n\n-   Đối với học sinh nhỏ tuổi, chúng tôi khuyên bạn nên chia lớp thành từng cặp và yêu cầu mỗi nhóm làm việc cùng nhau để hoàn thành bài hướng dẫn bằng cách sử dụng phương pháp [lập trình theo cặp][1].\n-   Đối với học viên ở cấp trung học cơ sở, chúng tôi thấy rằng việc tự làm các bài hướng dẫn sẽ có hiệu quả. Đôi khi, việc để học sinh tự chọn bài hướng dẫn cho riêng mình sẽ rất hữu ích. Nếu học sinh không thích Minecraft, họ sẽ có được trải nghiệm tương tự với bài hướng dẫn [Lập trình với Anna và Elsa][2] hoặc [Chiến tranh giữa các vì sao][3].\n-   Đối với học viên lớn tuổi hoặc người lớn, bài hướng dẫn [Minecraft][4] sẽ phát huy hiệu quả dưới dạng một thử thách độc lập hoặc một hoạt động lập trình theo cặp.",
+          "description": "Hãy thử thách học sinh hoàn thành bài học [Minecraft: Nhà thám hiểm](studio.code.org/s/mc/lessons/1/levels/1) này.\n\nTùy vào độ tuổi và khả năng của học sinh, bạn có thể cân nhắc:\n\n-   Đối với học sinh nhỏ tuổi, chúng tôi khuyên bạn nên chia lớp thành từng cặp và yêu cầu mỗi nhóm làm việc cùng nhau để hoàn thành bài hướng dẫn bằng cách sử dụng phương pháp [lập trình theo cặp](https://youtu.be/vgkahOzFH2Q).\n-   Đối với học viên ở cấp trung học cơ sở, chúng tôi thấy rằng việc tự làm các bài hướng dẫn sẽ có hiệu quả. Đôi khi, việc để học sinh tự chọn bài hướng dẫn cho riêng mình sẽ rất hữu ích. Nếu học sinh không thích Minecraft, họ sẽ có được trải nghiệm tương tự với bài hướng dẫn [Lập trình với Anna và Elsa](https://studio.code.org/s/frozen/stage/1/puzzle/1) hoặc [Chiến tranh giữa các vì sao](https://code.org/starwars).\n-   Đối với học viên lớn tuổi hoặc người lớn, bài hướng dẫn [Minecraft](https://hourofcode.com/mc) sẽ phát huy hiệu quả dưới dạng một thử thách độc lập hoặc một hoạt động lập trình theo cặp.",
           "tips": [
             "Đừng quên tự mình thử các bài hướng dẫn bạn đã chọn trước khi yêu cầu học sinh thử làm. Bằng cách đó, bạn sẽ biết trước nội dung và có thể đưa ra quyết định có nên để học sinh chọn bài hướng dẫn của riêng họ hay bạn muốn chỉ định bài hướng dẫn dựa trên nhu cầu của học sinh."
           ]
         },
         "1766511d-3639-46a3-911f-acc7f8c4b922": {
-          "description": "Nếu một nhóm hoặc cá nhân hoàn thành sớm, họ có thể thử bài hướng dẫn khác bằng cách truy cập [code.org/learn][0]."
+          "description": "Nếu một nhóm hoặc cá nhân hoàn thành sớm, họ có thể thử bài hướng dẫn khác bằng cách truy cập [code.org/learn](http://code.org/learn)."
         },
         "8c990fee-4a0f-4d70-a635-ab66a8195193": {
-          "description": "Hãy trao cho mỗi học sinh một [“Câu hỏi tổng kết”][0] và yêu cầu họ tóm tắt những nội dung đã học được hôm nay, cảm giác của họ hoặc những gì họ đã trải qua. Học sinh có thể vẽ, viết hoặc thể hiện bản thân theo bất kỳ cách nào mà họ cảm thấy thoải mái. Nhận “Câu hỏi tổng kết” từ mỗi học sinh trên đường ra khỏi phòng. Nếu thích, bạn có thể đăng “Câu hỏi tổng kết” trên bảng thông báo hoặc một số địa điểm nổi bật trong trường như một lời nhắc nhở về Giờ lập trình của bạn."
+          "description": "Hãy trao cho mỗi học sinh một [“Câu hỏi tổng kết”](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) và yêu cầu họ tóm tắt những nội dung đã học được hôm nay, cảm giác của họ hoặc những gì họ đã trải qua. Học sinh có thể vẽ, viết hoặc thể hiện bản thân theo bất kỳ cách nào mà họ cảm thấy thoải mái. Nhận “Câu hỏi tổng kết” từ mỗi học sinh trên đường ra khỏi phòng. Nếu thích, bạn có thể đăng “Câu hỏi tổng kết” trên bảng thông báo hoặc một số địa điểm nổi bật trong trường như một lời nhắc nhở về Giờ lập trình của bạn."
         },
         "bcdecd77-2efb-44b5-9fdc-e244d1f5ccf6": {
           "name": "Hỏi đáp",
@@ -23169,7 +23169,7 @@
         },
         "6b574c8b-2319-4244-acc8-fb8405fa5737": {
           "name": "Ăn mừng",
-          "description": "Giải thích rằng hôm nay bạn đang dành một giờ để lập trình, bởi vì tuần này là Tuần lễ Giáo dục KHMT và hàng triệu học sinh khác trên toàn cầu cũng đã học Giờ lập trình trong tuần này. Hãy chúc mừng các em học sinh đã hòa mình vào phong trào toàn cầu này.\n\nHãy phát cho mỗi học sinh một [chứng chỉ][0] có tên của học sinh trên đó."
+          "description": "Giải thích rằng hôm nay bạn đang dành một giờ để lập trình, bởi vì tuần này là Tuần lễ Giáo dục KHMT và hàng triệu học sinh khác trên toàn cầu cũng đã học Giờ lập trình trong tuần này. Hãy chúc mừng các em học sinh đã hòa mình vào phong trào toàn cầu này.\n\nHãy phát cho mỗi học sinh một [chứng chỉ](https://studio.code.org/certificates/batch?course=bWM=) có tên của học sinh trên đó."
         },
         "02dfa607-4f9e-404c-bdae-f9f423fa526c": {
           "name": "Bước tiếp theo",
@@ -23177,7 +23177,7 @@
         },
         "5bc8aefa-7bb0-4f22-a555-321738755b8c": {
           "name": "Mở rộng Giờ lập trình",
-          "description": "Sau khi Giờ lập trình kết thúc, có nhiều cách để tiếp tục giảng dạy môn khoa học máy tính trong lớp học K-5. Sau đây là một số ý tưởng:\n\n-   **Dạy các khóa học [Nguyên tắc cơ bản về khoa học máy tính của Code Studio][0]**. Bốn khóa học này được thiết kế cho những học sinh nhỏ tuổi. Học sinh sẽ làm việc theo cách của họ thông qua một loạt bài tập bài hướng dẫn lập trình và giáo viên có quyền truy cập vào các giáo án hấp dẫn giúp làm cho việc học trở nên sôi động. Code.org cung cấp chương trình phát triển chuyên môn miễn phí cho các khóa học này theo hình thức trực tuyến hoặc trực tiếp.\n-   **Hãy truy cập [Bạn có thể dạy Khoa học máy tính][1]** để nhận thêm đề xuất khóa học.\n-   **Mời chuyên gia khoa học máy tính nói chuyện với lớp về công việc của họ**. Bạn không biết bất kỳ chuyên gia khoa học máy tính nào tại địa phương? Hãy liên hệ với một tình nguyện viên trên [bản đồ tình nguyện viên][2] của chúng tôi."
+          "description": "Sau khi Giờ lập trình kết thúc, có nhiều cách để tiếp tục giảng dạy môn khoa học máy tính trong lớp học K-5. Sau đây là một số ý tưởng:\n\n-   **Dạy các khóa học [Nguyên tắc cơ bản về khoa học máy tính của Code Studio](http://code.org/educate/k5)**. Bốn khóa học này được thiết kế cho những học sinh nhỏ tuổi. Học sinh sẽ làm việc theo cách của họ thông qua một loạt bài tập bài hướng dẫn lập trình và giáo viên có quyền truy cập vào các giáo án hấp dẫn giúp làm cho việc học trở nên sôi động. Code.org cung cấp chương trình phát triển chuyên môn miễn phí cho các khóa học này theo hình thức trực tuyến hoặc trực tiếp.\n-   **Hãy truy cập [Bạn có thể dạy Khoa học máy tính](https://code.org/teach)** để nhận thêm đề xuất khóa học.\n-   **Mời chuyên gia khoa học máy tính nói chuyện với lớp về công việc của họ**. Bạn không biết bất kỳ chuyên gia khoa học máy tính nào tại địa phương? Hãy liên hệ với một tình nguyện viên trên [bản đồ tình nguyện viên](https://code.org/volunteer/local) của chúng tôi."
         },
         "563d9088-3ce6-48c1-aa79-6f673e089247": {
           "name": "Giới thiệu",
@@ -23185,7 +23185,7 @@
         },
         "9f1107d0-cde6-4f78-911c-5018ea9264e0": {
           "tips": [
-            "Một cách để giới thiệu Giờ lập trình nếu bản thân bạn không rành về lập trình là chiếu một trong những [video truyền cảm hứng của chúng tôi][0]. Hãy chọn nội dung mà bạn cho rằng học sinh của mình sẽ cảm thấy hứng thú và chia sẻ ngay bây giờ. Đối với học viên nhỏ tuổi, chúng tôi đề xuất “[Giờ lập trình tới rồi][1].”"
+            "Một cách để giới thiệu Giờ lập trình nếu bản thân bạn không rành về lập trình là chiếu một trong những [video truyền cảm hứng của chúng tôi](https://hourofcode.com/us/resources#videos). Hãy chọn nội dung mà bạn cho rằng học sinh của mình sẽ cảm thấy hứng thú và chia sẻ ngay bây giờ. Đối với học viên nhỏ tuổi, chúng tôi đề xuất “[Giờ lập trình tới rồi](https://youtu.be/FC5FbmsH4fw).”"
           ]
         },
         "ed8509fa-59b4-43a4-bd4a-05a5018387c2": {
@@ -23198,7 +23198,7 @@
         },
         "75d779c4-24f7-40be-bf92-b0c094c16d11": {
           "name": "Nhà thiết kế Giờ lập trình Minecraft",
-          "description": "Hãy thử thách học sinh hoàn thành hoạt động [Minecraft: Nhà thiết kế][0]này.\n\nTùy vào độ tuổi và khả năng của học sinh, bạn có thể cân nhắc:\n\n-   Đối với học sinh nhỏ tuổi, chúng tôi khuyên bạn nên chia lớp thành từng cặp và yêu cầu mỗi nhóm làm việc cùng nhau để hoàn thành bài hướng dẫn bằng cách sử dụng phương pháp [lập trình theo cặp][1].\n-   Đối với học viên ở cấp trung học cơ sở, chúng tôi thấy rằng việc tự làm các bài hướng dẫn sẽ có hiệu quả. Đôi khi, việc để học sinh tự chọn bài hướng dẫn cho riêng mình sẽ rất hữu ích. Nếu học sinh không thích Minecraft, họ sẽ có được trải nghiệm tương tự với bài hướng dẫn [Lập trình với Anna và Elsa][2] hoặc [Chiến tranh giữa các vì sao][3].\n-   Đối với học viên lớn tuổi hoặc người lớn, bài hướng dẫn [Minecraft: Nhà thiết kế][4] sẽ phát huy hiệu quả dưới dạng một thử thách độc lập hoặc một hoạt động lập trình theo cặp."
+          "description": "Hãy thử thách học sinh hoàn thành hoạt động [Minecraft: Nhà thiết kế](http://studio.code.org/s/minecraft/lessons/1/levels/1)này.\n\nTùy vào độ tuổi và khả năng của học sinh, bạn có thể cân nhắc:\n\n-   Đối với học sinh nhỏ tuổi, chúng tôi khuyên bạn nên chia lớp thành từng cặp và yêu cầu mỗi nhóm làm việc cùng nhau để hoàn thành bài hướng dẫn bằng cách sử dụng phương pháp [lập trình theo cặp](https://youtu.be/vgkahOzFH2Q).\n-   Đối với học viên ở cấp trung học cơ sở, chúng tôi thấy rằng việc tự làm các bài hướng dẫn sẽ có hiệu quả. Đôi khi, việc để học sinh tự chọn bài hướng dẫn cho riêng mình sẽ rất hữu ích. Nếu học sinh không thích Minecraft, họ sẽ có được trải nghiệm tương tự với bài hướng dẫn [Lập trình với Anna và Elsa](https://studio.code.org/s/frozen/stage/1/puzzle/1) hoặc [Chiến tranh giữa các vì sao](https://code.org/starwars).\n-   Đối với học viên lớn tuổi hoặc người lớn, bài hướng dẫn [Minecraft: Nhà thiết kế](http://studio.code.org/s/minecraft/lessons/1/levels/1) sẽ phát huy hiệu quả dưới dạng một thử thách độc lập hoặc một hoạt động lập trình theo cặp."
         },
         "8d4ecee7-5f04-4f80-9673-c2aec0c5ab9d": {
           "tips": [
@@ -23206,7 +23206,7 @@
           ]
         },
         "307ffdf6-e274-484b-a10f-329ddfe568dc": {
-          "description": "Nếu một nhóm hoặc cá nhân hoàn thành sớm, họ có thể thử bài hướng dẫn khác bằng cách truy cập [code.org/learn][0]."
+          "description": "Nếu một nhóm hoặc cá nhân hoàn thành sớm, họ có thể thử bài hướng dẫn khác bằng cách truy cập [code.org/learn](http://code.org/learn)."
         },
         "70935a98-82e9-4553-94f7-90a4e615dd34": {
           "name": "Hỏi đáp",
@@ -23214,18 +23214,18 @@
         },
         "5f00e31d-70fa-4bb2-9bef-223793082f5c": {
           "name": "Ăn mừng",
-          "description": "Giải thích rằng hôm nay bạn đang dành một giờ để lập trình, bởi vì tuần này là Tuần lễ Giáo dục KHMT và hàng triệu học sinh khác trên toàn cầu cũng đã học Giờ lập trình trong tuần này. Hãy chúc mừng các em học sinh đã hòa mình vào phong trào toàn cầu này.\n\nHãy phát cho mỗi học sinh một [chứng chỉ][0] có tên của học sinh trên đó."
+          "description": "Giải thích rằng hôm nay bạn đang dành một giờ để lập trình, bởi vì tuần này là Tuần lễ Giáo dục KHMT và hàng triệu học sinh khác trên toàn cầu cũng đã học Giờ lập trình trong tuần này. Hãy chúc mừng các em học sinh đã hòa mình vào phong trào toàn cầu này.\n\nHãy phát cho mỗi học sinh một [chứng chỉ](https://studio.code.org/certificates/batch?course=bWM=) có tên của học sinh trên đó."
         },
         "20b7009c-3a45-4211-a9ad-c65f56099200": {
           "name": "Bước tiếp theo",
-          "description": "Hãy cho học sinh biết rằng nếu họ thích hoạt động hôm nay, họ có nhiều lựa chọn để tiếp tục lập trình. Hãy khuyến khích học sinh truy cập [code.org/learn][0] để xem danh sách các lựa chọn hoặc nếu bạn đang lên kế hoạch cho hoạt động mở rộng nào tiếp theo, hãy cho học sinh biết kế hoạch sắp tới trong lớp học."
+          "description": "Hãy cho học sinh biết rằng nếu họ thích hoạt động hôm nay, họ có nhiều lựa chọn để tiếp tục lập trình. Hãy khuyến khích học sinh truy cập [code.org/learn](<>) để xem danh sách các lựa chọn hoặc nếu bạn đang lên kế hoạch cho hoạt động mở rộng nào tiếp theo, hãy cho học sinh biết kế hoạch sắp tới trong lớp học."
         },
         "85fc4f24-eb97-4ff5-813f-4af3e5497034": {
-          "description": "Hãy trao cho mỗi học sinh một [“Câu hỏi tổng kết”][0] và yêu cầu họ tóm tắt những nội dung đã học được hôm nay, cảm giác của họ hoặc những gì họ đã trải qua. Học sinh có thể vẽ, viết hoặc thể hiện bản thân theo bất kỳ cách nào mà họ cảm thấy thoải mái. Nhận “Câu hỏi tổng kết” từ mỗi học sinh trên đường ra khỏi phòng. Nếu thích, bạn có thể đăng “Câu hỏi tổng kết” trên bảng thông báo hoặc một số địa điểm nổi bật trong trường như một lời nhắc nhở về Giờ lập trình của bạn."
+          "description": "Hãy trao cho mỗi học sinh một [“Câu hỏi tổng kết”](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) và yêu cầu họ tóm tắt những nội dung đã học được hôm nay, cảm giác của họ hoặc những gì họ đã trải qua. Học sinh có thể vẽ, viết hoặc thể hiện bản thân theo bất kỳ cách nào mà họ cảm thấy thoải mái. Nhận “Câu hỏi tổng kết” từ mỗi học sinh trên đường ra khỏi phòng. Nếu thích, bạn có thể đăng “Câu hỏi tổng kết” trên bảng thông báo hoặc một số địa điểm nổi bật trong trường như một lời nhắc nhở về Giờ lập trình của bạn."
         },
         "7f24d7ca-8a9e-417c-ac8e-18ca3ab48ac1": {
           "name": "Mở rộng Giờ lập trình",
-          "description": "Sau khi Giờ lập trình kết thúc, có nhiều cách để tiếp tục giảng dạy môn khoa học máy tính trong lớp học K-5. Sau đây là một số ý tưởng:\n\n-   **Dạy các khóa học [Nguyên tắc cơ bản về khoa học máy tính của Code Studio][0]**. Sáu khóa học này được thiết kế cho những học sinh nhỏ tuổi. Học sinh sẽ làm việc theo cách của họ thông qua một loạt bài tập bài hướng dẫn lập trình và giáo viên có quyền truy cập vào các giáo án hấp dẫn giúp làm cho việc học trở nên sôi động. Code.org cung cấp chương trình phát triển chuyên môn miễn phí cho các khóa học này theo hình thức trực tuyến hoặc trực tiếp.\n-   **Hãy truy cập [Bạn có thể dạy Khoa học máy tính][1]** để nhận thêm đề xuất khóa học.\n-   **Mời chuyên gia khoa học máy tính nói chuyện với lớp về công việc của họ**. Bạn không biết bất kỳ chuyên gia khoa học máy tính nào tại địa phương? Hãy liên hệ với một tình nguyện viên trên [bản đồ tình nguyện viên][2] của chúng tôi."
+          "description": "Sau khi Giờ lập trình kết thúc, có nhiều cách để tiếp tục giảng dạy môn khoa học máy tính trong lớp học K-5. Sau đây là một số ý tưởng:\n\n-   **Dạy các khóa học [Nguyên tắc cơ bản về khoa học máy tính của Code Studio](http://code.org/educate/k5)**. Sáu khóa học này được thiết kế cho những học sinh nhỏ tuổi. Học sinh sẽ làm việc theo cách của họ thông qua một loạt bài tập bài hướng dẫn lập trình và giáo viên có quyền truy cập vào các giáo án hấp dẫn giúp làm cho việc học trở nên sôi động. Code.org cung cấp chương trình phát triển chuyên môn miễn phí cho các khóa học này theo hình thức trực tuyến hoặc trực tiếp.\n-   **Hãy truy cập [Bạn có thể dạy Khoa học máy tính](https://code.org/teach)** để nhận thêm đề xuất khóa học.\n-   **Mời chuyên gia khoa học máy tính nói chuyện với lớp về công việc của họ**. Bạn không biết bất kỳ chuyên gia khoa học máy tính nào tại địa phương? Hãy liên hệ với một tình nguyện viên trên [bản đồ tình nguyện viên](https://code.org/volunteer/local) của chúng tôi."
         },
         "54b95e4d-58b7-4551-9782-7ce134f4e457": {
           "name": "Hãy khơi dậy nguồn cảm hứng!",
@@ -23493,7 +23493,7 @@
         },
         "6fa68bdd-8f9b-4d69-b54e-28141ee6d732": {
           "tips": [
-            "Một cách để giới thiệu Giờ lập trình nếu bản thân bạn không rành về lập trình là chiếu một trong những [video truyền cảm hứng][0] của chúng tôi. Hãy chọn nội dung mà bạn cho rằng học sinh của mình sẽ cảm thấy hứng thú và chia sẻ ngay bây giờ. Đối với học viên nhỏ tuổi, chúng tôi đề xuất [Giờ lập trình tới rồi][1]."
+            "Một cách để giới thiệu Giờ lập trình nếu bản thân bạn không rành về lập trình là chiếu một trong những [video truyền cảm hứng](https://hourofcode.com/us/resources#videos) của chúng tôi. Hãy chọn nội dung mà bạn cho rằng học sinh của mình sẽ cảm thấy hứng thú và chia sẻ ngay bây giờ. Đối với học viên nhỏ tuổi, chúng tôi đề xuất [Giờ lập trình tới rồi](https://youtu.be/FC5FbmsH4fw)."
           ]
         },
         "7f1244d9-811b-410c-96b2-9f7086959c6b": {
@@ -23501,7 +23501,7 @@
         },
         "a69a3310-4b81-4e04-8313-51044489351a": {
           "name": "Chiến tranh giữa các vì sao: Xây dựng thiên hà bằng mã lệnh",
-          "description": "Hãy thử thách học sinh hoàn thành bài học [Chiến tranh giữa các vì sao: Xây dựng thiên hà bằng mã lệnh][0] này.\n\nTùy vào độ tuổi và khả năng của học sinh, bạn có thể cân nhắc:\n\n-   Đối với học sinh nhỏ tuổi, chúng tôi khuyên bạn nên chia lớp thành từng cặp và yêu cầu mỗi cặp làm việc cùng nhau để hoàn thành bài hướng dẫn bằng cách sử dụng phương pháp [lập trình theo cặp][1].\n-   Đối với học sinh lớn hơn, chúng tôi thấy rằng việc tự làm các bài hướng dẫn sẽ có hiệu quả. Đôi khi, việc để học sinh tự chọn bài hướng dẫn cho riêng mình sẽ rất hữu ích. Nếu học sinh không thích Chiến tranh giữa các vì sao, họ sẽ có được trải nghiệm tương tự với bài hướng dẫn [Viết chương trình máy tính đầu tiên][2].\n-   Đối với học viên lớn hơn hoặc người lớn, bài hướng dẫn [Chiến tranh giữa các vì sao: Xây dựng thiên hà bằng mã lệnh][3] sẽ phát huy hiệu quả dưới dạng một thử thách độc lập hoặc một hoạt động lập trình theo cặp."
+          "description": "Hãy thử thách học sinh hoàn thành bài học [Chiến tranh giữa các vì sao: Xây dựng thiên hà bằng mã lệnh](https://studio.code.org/s/starwars/lessons/1/levels/1) này.\n\nTùy vào độ tuổi và khả năng của học sinh, bạn có thể cân nhắc:\n\n-   Đối với học sinh nhỏ tuổi, chúng tôi khuyên bạn nên chia lớp thành từng cặp và yêu cầu mỗi cặp làm việc cùng nhau để hoàn thành bài hướng dẫn bằng cách sử dụng phương pháp [lập trình theo cặp](https://youtu.be/vgkahOzFH2Q).\n-   Đối với học sinh lớn hơn, chúng tôi thấy rằng việc tự làm các bài hướng dẫn sẽ có hiệu quả. Đôi khi, việc để học sinh tự chọn bài hướng dẫn cho riêng mình sẽ rất hữu ích. Nếu học sinh không thích Chiến tranh giữa các vì sao, họ sẽ có được trải nghiệm tương tự với bài hướng dẫn [Viết chương trình máy tính đầu tiên](https://studio.code.org/hoc/1).\n-   Đối với học viên lớn hơn hoặc người lớn, bài hướng dẫn [Chiến tranh giữa các vì sao: Xây dựng thiên hà bằng mã lệnh](https://studio.code.org/s/starwars/lessons/1/levels/1) sẽ phát huy hiệu quả dưới dạng một thử thách độc lập hoặc một hoạt động lập trình theo cặp."
         },
         "b17f8e8a-6b46-4f46-a4fc-894cf561bb9d": {
           "tips": [
@@ -23509,15 +23509,15 @@
           ]
         },
         "eb72d828-788d-4090-9e4f-71423c081948": {
-          "description": "Ở phần cuối phần bài hướng dẫn, học sinh sẽ có cơ hội làm game Chiến tranh giữa các vì sao. Nếu học sinh hoàn thành sớm, hãy khuyến khích các em chơi thử các game của nhau và sau đó phát triển game của riêng mình sao cho thú vị hoặc khó hơn.\n\nBạn cũng có thể để một nhóm hoặc cá nhân thử một bài hướng dẫn khác bằng cách truy cập [code.org/learn][0]."
+          "description": "Ở phần cuối phần bài hướng dẫn, học sinh sẽ có cơ hội làm game Chiến tranh giữa các vì sao. Nếu học sinh hoàn thành sớm, hãy khuyến khích các em chơi thử các game của nhau và sau đó phát triển game của riêng mình sao cho thú vị hoặc khó hơn.\n\nBạn cũng có thể để một nhóm hoặc cá nhân thử một bài hướng dẫn khác bằng cách truy cập [code.org/learn](http://code.org/learn)."
         },
         "bec776b1-a8cd-4e18-a1bc-be30f2942863": {
           "name": "Hỏi đáp",
-          "description": "Hãy phát cho mỗi học sinh một vài tờ giấy ghi chú hoặc giấy nhớ. Tổ chức nhanh hoạt động [“Tập hợp câu trả lời quanh lớp”][0]:\n\n-   Đưa ra lời nhắc có nhiều câu trả lời, chẳng hạn như “Hãy chia sẻ lại điều bạn thực sự thích về hoạt động Giờ lập trình mà bạn đã hoàn thành” hoặc “Hãy chia sẻ một số kỹ năng bạn đã học được hôm nay.”\n-   Yêu cầu học sinh viết ra nhiều câu trả lời nhất có thể, một ý tưởng cho mỗi tờ giấy dán hoặc giấy nhớ.\n    Hãy “tập hợp câu trả lời” quanh lớp, gọi từng học sinh. Có học sinh chia sẻ một trong những câu trả lời của mình. Khi được gọi, học sinh không nên lặp lại câu trả lời; các em phải thêm nội dung mới.\n-   Sau khi hoàn thành hoạt động tập hợp câu trả lời quanh lớp, hãy để học sinh thảo luận về ý tưởng và chủ đề xuất hiện nhiều nhất trong câu trả lời của họ."
+          "description": "Hãy phát cho mỗi học sinh một vài tờ giấy ghi chú hoặc giấy nhớ. Tổ chức nhanh hoạt động [“Tập hợp câu trả lời quanh lớp”](http://www.theteachertoolkit.com/index.php/tool/whip-around):\n\n-   Đưa ra lời nhắc có nhiều câu trả lời, chẳng hạn như “Hãy chia sẻ lại điều bạn thực sự thích về hoạt động Giờ lập trình mà bạn đã hoàn thành” hoặc “Hãy chia sẻ một số kỹ năng bạn đã học được hôm nay.”\n-   Yêu cầu học sinh viết ra nhiều câu trả lời nhất có thể, một ý tưởng cho mỗi tờ giấy dán hoặc giấy nhớ.\n    Hãy “tập hợp câu trả lời” quanh lớp, gọi từng học sinh. Có học sinh chia sẻ một trong những câu trả lời của mình. Khi được gọi, học sinh không nên lặp lại câu trả lời; các em phải thêm nội dung mới.\n-   Sau khi hoàn thành hoạt động tập hợp câu trả lời quanh lớp, hãy để học sinh thảo luận về ý tưởng và chủ đề xuất hiện nhiều nhất trong câu trả lời của họ."
         },
         "4cb35c62-404e-42b9-9eaf-09ec2f485a2b": {
           "name": "Ăn mừng",
-          "description": "Giải thích rằng hôm nay bạn đang dành một giờ để lập trình, bởi vì tuần này là Tuần lễ Giáo dục KHMT và hàng triệu học sinh khác trên toàn cầu cũng đã học Giờ lập trình trong tuần này. Hãy chúc mừng các em học sinh đã hòa mình vào phong trào toàn cầu này.\n\nHãy phát cho mỗi học sinh một [chứng chỉ][0] có tên của học sinh trên đó."
+          "description": "Giải thích rằng hôm nay bạn đang dành một giờ để lập trình, bởi vì tuần này là Tuần lễ Giáo dục KHMT và hàng triệu học sinh khác trên toàn cầu cũng đã học Giờ lập trình trong tuần này. Hãy chúc mừng các em học sinh đã hòa mình vào phong trào toàn cầu này.\n\nHãy phát cho mỗi học sinh một [chứng chỉ](http://code.org/certificates) có tên của học sinh trên đó."
         },
         "80ff32c9-0373-4125-a65e-bef5f0e21cba": {
           "name": "Bước tiếp theo",
@@ -23525,7 +23525,7 @@
         },
         "57e403d7-a8be-47fc-bb97-1a068e2469ed": {
           "name": "Mở rộng Giờ lập trình",
-          "description": "Sau khi Giờ lập trình kết thúc, có nhiều cách để tiếp tục giảng dạy môn khoa học máy tính trong lớp học K-5. Sau đây là một số ý tưởng:\n\n-   **Dạy các khóa học [Nguyên tắc cơ bản về khoa học máy tính của Code Studio][0]**. Sáu khóa học này được thiết kế cho những học sinh nhỏ tuổi. Học sinh sẽ làm việc theo cách của họ thông qua một loạt bài tập bài hướng dẫn lập trình và giáo viên có quyền truy cập vào các giáo án hấp dẫn giúp làm cho việc học trở nên sôi động. Code.org cung cấp chương trình phát triển chuyên môn miễn phí cho các khóa học này theo hình thức trực tuyến hoặc trực tiếp.\n-   Tìm hiểu một số nghề nghiệp trong lĩnh vực lập trình mà bạn đã xác định trong ngày hôm nay. Hãy tìm các nguồn tài liệu về lập kế hoạch dự án tìm hiểu nghề nghiệp trên [Sharemylesson.com][1].\n-   **Mời chuyên gia khoa học máy tính nói chuyện với lớp về công việc của họ**. Nếu bạn không biết bất kỳ tình nguyện viên nào, hãy liên hệ với một vài tình nguyện viên trên [bản đồ tình nguyện viên][2] của chúng tôi."
+          "description": "Sau khi Giờ lập trình kết thúc, có nhiều cách để tiếp tục giảng dạy môn khoa học máy tính trong lớp học K-5. Sau đây là một số ý tưởng:\n\n-   **Dạy các khóa học [Nguyên tắc cơ bản về khoa học máy tính của Code Studio](http://code.org/educate/k5)**. Sáu khóa học này được thiết kế cho những học sinh nhỏ tuổi. Học sinh sẽ làm việc theo cách của họ thông qua một loạt bài tập bài hướng dẫn lập trình và giáo viên có quyền truy cập vào các giáo án hấp dẫn giúp làm cho việc học trở nên sôi động. Code.org cung cấp chương trình phát triển chuyên môn miễn phí cho các khóa học này theo hình thức trực tuyến hoặc trực tiếp.\n-   Tìm hiểu một số nghề nghiệp trong lĩnh vực lập trình mà bạn đã xác định trong ngày hôm nay. Hãy tìm các nguồn tài liệu về lập kế hoạch dự án tìm hiểu nghề nghiệp trên [Sharemylesson.com](http://www.sharemylesson.com/TaxonomySearchResults.aspx?area=resources&keywords=career+research).\n-   **Mời chuyên gia khoa học máy tính nói chuyện với lớp về công việc của họ**. Nếu bạn không biết bất kỳ tình nguyện viên nào, hãy liên hệ với một vài tình nguyện viên trên [bản đồ tình nguyện viên](https://code.org/volunteer/local) của chúng tôi."
         },
         "d0f5c55b-b19c-418c-8dc6-f87a80e08f45": {
           "description": "Hãy yêu cầu học sinh thêm các nhãn hoặc thẻ ghi chú “Câu hỏi ôn tập” vào sơ đồ tư duy “Khoa học máy tính” của bạn khi rời khỏi lớp. Hãy cố gắng đưa ra càng nhiều ý tưởng tuyệt vời càng tốt về khái niệm và tầm quan trọng của KHMT."
@@ -23536,14 +23536,14 @@
         },
         "88f6ccc1-0efa-4c60-985c-971a235d5645": {
           "tips": [
-            "Một cách để giới thiệu Giờ lập trình nếu bản thân bạn không rành về lập trình là chiếu một trong những [video truyền cảm hứng][0] của chúng tôi. Hãy chọn nội dung mà bạn cho rằng học sinh của mình sẽ cảm thấy hứng thú và chia sẻ ngay bây giờ. Đối với học viên nhỏ tuổi, chúng tôi đề xuất [Giờ lập trình tới rồi][1]."
+            "Một cách để giới thiệu Giờ lập trình nếu bản thân bạn không rành về lập trình là chiếu một trong những [video truyền cảm hứng](https://hourofcode.com/us/resources#videos) của chúng tôi. Hãy chọn nội dung mà bạn cho rằng học sinh của mình sẽ cảm thấy hứng thú và chia sẻ ngay bây giờ. Đối với học viên nhỏ tuổi, chúng tôi đề xuất [Giờ lập trình tới rồi](https://youtu.be/FC5FbmsH4fw)."
           ]
         },
         "dbeab27b-4231-4281-be73-ae2aaa3d94b2": {
           "description": "Hãy giải thích rằng trong khoa học máy tính, “mã lệnh” là tập hợp bài hướng dẫn mà máy tính có thể hiểu được. Hãy cho học sinh biết rằng hôm nay, họ sẽ thực hành “viết mã lệnh”, “lập trình” và “sửa lỗi”.\n\nĐịnh nghĩa:\n\n-   **Viết mã lệnh** nghĩa là lập trình hoặc viết bài hướng dẫn cho máy tính.\n-   Tương tự như vậy, **lập trình** là viết mã lệnh hoặc bài hướng dẫn. Hôm nay, bạn sẽ lập trình với các khối trên máy tính (nếu bạn đang học trực tuyến) hoặc bằng bút và giấy (nếu bạn đang sử dụng hoạt động không dùng thiết bị điện tử).\n\nHãy yêu cầu học sinh kể tên một số công việc mà các em đã từng biết có liên quan đến lập trình. Học sinh có thể đề cập đến những nghề như “lập trình viên”, “nhà khoa học máy tính”, “nhà phát triển phần mềm” hoặc “kỹ sư”. Hãy ghi lại câu trả lời của học sinh trên bảng “Khoa học máy tính”, vẽ sơ đồ tư duy với thông tin mà học sinh chia sẻ.\n\n**Nói:** _Đúng rồi! Ở đây không có câu trả lời đúng hay sai... thực ra bất kỳ công việc nào ngày nay đều liên quan đến một số kiến thức về lập trình. Có rất nhiều nghề nghiệp đòi hỏi kiến thức về lập trình và học lập trình là điều mà ai cũng có thể làm được. Chúng ta sẽ làm điều đó ngay hôm nay. Những điều chúng ta sẽ làm hôm nay có vẻ không hoàn toàn giống những nghề đó, nhưng mọi thứ bạn học được hôm nay có thể giúp tạo ra những chương trình giống như Angry Birds hoặc Twitter tương lai._"
         },
         "0ac387c0-d67a-4177-aacf-837ce03c55aa": {
-          "description": "Hãy thử thách học sinh hoàn thành bài học [Chiến tranh giữa các vì sao: Xây dựng thiên hà bằng mã lệnh][0] này.\n\nTùy vào độ tuổi và khả năng của học sinh, bạn có thể cân nhắc:\n\n-   Đối với học sinh nhỏ tuổi, chúng tôi khuyên bạn nên chia lớp thành từng cặp và yêu cầu mỗi cặp làm việc cùng nhau để hoàn thành bài hướng dẫn bằng cách sử dụng phương pháp [lập trình theo cặp][1].\n-   Đối với học sinh lớn hơn, chúng tôi thấy rằng việc tự làm các bài hướng dẫn sẽ có hiệu quả. Đôi khi, việc để học sinh tự chọn bài hướng dẫn cho riêng mình sẽ rất hữu ích. Nếu học sinh không thích Chiến tranh giữa các vì sao, họ sẽ có được trải nghiệm tương tự với bài hướng dẫn [Viết chương trình máy tính đầu tiên][2].\n-   Đối với học viên lớn hơn hoặc người lớn, bài hướng dẫn [Chiến tranh giữa các vì sao: Xây dựng thiên hà bằng mã lệnh][3] sẽ phát huy hiệu quả dưới dạng một thử thách độc lập hoặc một hoạt động lập trình theo cặp."
+          "description": "Hãy thử thách học sinh hoàn thành bài học [Chiến tranh giữa các vì sao: Xây dựng thiên hà bằng mã lệnh](https://studio.code.org/s/starwarsblocks/lessons/1/levels/1) này.\n\nTùy vào độ tuổi và khả năng của học sinh, bạn có thể cân nhắc:\n\n-   Đối với học sinh nhỏ tuổi, chúng tôi khuyên bạn nên chia lớp thành từng cặp và yêu cầu mỗi cặp làm việc cùng nhau để hoàn thành bài hướng dẫn bằng cách sử dụng phương pháp [lập trình theo cặp](https://youtu.be/vgkahOzFH2Q).\n-   Đối với học sinh lớn hơn, chúng tôi thấy rằng việc tự làm các bài hướng dẫn sẽ có hiệu quả. Đôi khi, việc để học sinh tự chọn bài hướng dẫn cho riêng mình sẽ rất hữu ích. Nếu học sinh không thích Chiến tranh giữa các vì sao, họ sẽ có được trải nghiệm tương tự với bài hướng dẫn [Viết chương trình máy tính đầu tiên](https://studio.code.org/hoc/1).\n-   Đối với học viên lớn hơn hoặc người lớn, bài hướng dẫn [Chiến tranh giữa các vì sao: Xây dựng thiên hà bằng mã lệnh](https://studio.code.org/s/starwarsblocks/lessons/1/levels/1) sẽ phát huy hiệu quả dưới dạng một thử thách độc lập hoặc một hoạt động lập trình theo cặp."
         },
         "88879c41-12f5-4d2e-86e6-93925b83d7d0": {
           "tips": [
@@ -23551,15 +23551,15 @@
           ]
         },
         "719affd9-c1a0-4b0c-8bc3-22060893f5e0": {
-          "description": "Ở phần cuối phần bài hướng dẫn, học sinh sẽ có cơ hội làm game Chiến tranh giữa các vì sao. Nếu học sinh hoàn thành sớm, hãy khuyến khích các em chơi thử các game của nhau và sau đó phát triển game của riêng mình sao cho thú vị hoặc khó hơn.\n\nBạn cũng có thể để một nhóm hoặc cá nhân thử một bài hướng dẫn khác bằng cách truy cập [code.org/learn][0]."
+          "description": "Ở phần cuối phần bài hướng dẫn, học sinh sẽ có cơ hội làm game Chiến tranh giữa các vì sao. Nếu học sinh hoàn thành sớm, hãy khuyến khích các em chơi thử các game của nhau và sau đó phát triển game của riêng mình sao cho thú vị hoặc khó hơn.\n\nBạn cũng có thể để một nhóm hoặc cá nhân thử một bài hướng dẫn khác bằng cách truy cập [code.org/learn](http://code.org/learn)."
         },
         "afb5ecc7-af66-492d-96bb-2412754005e0": {
           "name": "Hỏi đáp",
-          "description": "Hãy phát cho mỗi học sinh một vài tờ giấy ghi chú hoặc giấy nhớ. Tổ chức nhanh hoạt động [“Tập hợp câu trả lời quanh lớp”][0]:\n\n-   Đưa ra lời nhắc có nhiều câu trả lời, chẳng hạn như “Hãy chia sẻ lại điều bạn thực sự thích về hoạt động Giờ lập trình mà bạn đã hoàn thành” hoặc “Hãy chia sẻ một số kỹ năng bạn đã học được hôm nay.”\n-   Yêu cầu học sinh viết ra nhiều câu trả lời nhất có thể, một ý tưởng cho mỗi tờ giấy dán hoặc giấy nhớ.\n    Hãy “tập hợp câu trả lời” quanh lớp, gọi từng học sinh. Có học sinh chia sẻ một trong những câu trả lời của mình. Khi được gọi, học sinh không nên lặp lại câu trả lời; các em phải thêm nội dung mới.\n-   Sau khi hoàn thành hoạt động tập hợp câu trả lời quanh lớp, hãy để học sinh thảo luận về ý tưởng và chủ đề xuất hiện nhiều nhất trong câu trả lời của họ."
+          "description": "Hãy phát cho mỗi học sinh một vài tờ giấy ghi chú hoặc giấy nhớ. Tổ chức nhanh hoạt động [“Tập hợp câu trả lời quanh lớp”](http://www.theteachertoolkit.com/index.php/tool/whip-around):\n\n-   Đưa ra lời nhắc có nhiều câu trả lời, chẳng hạn như “Hãy chia sẻ lại điều bạn thực sự thích về hoạt động Giờ lập trình mà bạn đã hoàn thành” hoặc “Hãy chia sẻ một số kỹ năng bạn đã học được hôm nay.”\n-   Yêu cầu học sinh viết ra nhiều câu trả lời nhất có thể, một ý tưởng cho mỗi tờ giấy dán hoặc giấy nhớ.\n    Hãy “tập hợp câu trả lời” quanh lớp, gọi từng học sinh. Có học sinh chia sẻ một trong những câu trả lời của mình. Khi được gọi, học sinh không nên lặp lại câu trả lời; các em phải thêm nội dung mới.\n-   Sau khi hoàn thành hoạt động tập hợp câu trả lời quanh lớp, hãy để học sinh thảo luận về ý tưởng và chủ đề xuất hiện nhiều nhất trong câu trả lời của họ."
         },
         "16a6a4db-d853-478e-9945-3f0d17865e80": {
           "name": "Ăn mừng",
-          "description": "Giải thích rằng hôm nay bạn đang dành một giờ để lập trình, bởi vì tuần này là Tuần lễ Giáo dục KHMT và hàng triệu học sinh khác trên toàn cầu cũng đã học Giờ lập trình trong tuần này. Hãy chúc mừng các em học sinh đã hòa mình vào phong trào toàn cầu này.\n\nHãy phát cho mỗi học sinh một [chứng chỉ][0] có tên của học sinh trên đó."
+          "description": "Giải thích rằng hôm nay bạn đang dành một giờ để lập trình, bởi vì tuần này là Tuần lễ Giáo dục KHMT và hàng triệu học sinh khác trên toàn cầu cũng đã học Giờ lập trình trong tuần này. Hãy chúc mừng các em học sinh đã hòa mình vào phong trào toàn cầu này.\n\nHãy phát cho mỗi học sinh một [chứng chỉ](http://code.org/certificates) có tên của học sinh trên đó."
         },
         "450db873-f55e-4f30-bbb9-5dfde5bf47e4": {
           "name": "Bước tiếp theo",
@@ -23567,7 +23567,7 @@
         },
         "5ec42aed-0b79-49f8-bd64-0716e60498a4": {
           "name": "Mở rộng Giờ lập trình",
-          "description": "Sau khi Giờ lập trình kết thúc, có nhiều cách để tiếp tục giảng dạy môn khoa học máy tính trong lớp học K-5. Sau đây là một số ý tưởng:\n\n-   **Dạy các khóa học [Nguyên tắc cơ bản về khoa học máy tính của Code Studio][0]**. Sáu khóa học này được thiết kế cho những học sinh nhỏ tuổi. Học sinh sẽ làm việc theo cách của họ thông qua một loạt bài tập bài hướng dẫn lập trình và giáo viên có quyền truy cập vào các giáo án hấp dẫn giúp làm cho việc học trở nên sôi động. Code.org cung cấp chương trình phát triển chuyên môn miễn phí cho các khóa học này theo hình thức trực tuyến hoặc trực tiếp.\n-   Tìm hiểu một số nghề nghiệp trong lĩnh vực lập trình mà bạn đã xác định trong ngày hôm nay. Hãy tìm các nguồn tài liệu về lập kế hoạch dự án tìm hiểu nghề nghiệp trên [Sharemylesson.com][1].\n-   **Mời chuyên gia khoa học máy tính nói chuyện với lớp về công việc của họ**. Nếu bạn không biết bất kỳ tình nguyện viên nào, hãy liên hệ với một vài tình nguyện viên trên [bản đồ tình nguyện viên][2] của chúng tôi."
+          "description": "Sau khi Giờ lập trình kết thúc, có nhiều cách để tiếp tục giảng dạy môn khoa học máy tính trong lớp học K-5. Sau đây là một số ý tưởng:\n\n-   **Dạy các khóa học [Nguyên tắc cơ bản về khoa học máy tính của Code Studio](http://code.org/educate/k5)**. Sáu khóa học này được thiết kế cho những học sinh nhỏ tuổi. Học sinh sẽ làm việc theo cách của họ thông qua một loạt bài tập bài hướng dẫn lập trình và giáo viên có quyền truy cập vào các giáo án hấp dẫn giúp làm cho việc học trở nên sôi động. Code.org cung cấp chương trình phát triển chuyên môn miễn phí cho các khóa học này theo hình thức trực tuyến hoặc trực tiếp.\n-   Tìm hiểu một số nghề nghiệp trong lĩnh vực lập trình mà bạn đã xác định trong ngày hôm nay. Hãy tìm các nguồn tài liệu về lập kế hoạch dự án tìm hiểu nghề nghiệp trên [Sharemylesson.com](http://www.sharemylesson.com/TaxonomySearchResults.aspx?area=resources&keywords=career+research).\n-   **Mời chuyên gia khoa học máy tính nói chuyện với lớp về công việc của họ**. Nếu bạn không biết bất kỳ tình nguyện viên nào, hãy liên hệ với một vài tình nguyện viên trên [bản đồ tình nguyện viên](https://code.org/volunteer/local) của chúng tôi."
         },
         "b0fff664-80cc-4318-b031-edf88ad1aebc": {
           "description": "Hãy yêu cầu học sinh thêm các nhãn hoặc thẻ ghi chú “Câu hỏi ôn tập” vào sơ đồ tư duy “Khoa học máy tính” của bạn khi rời khỏi lớp. Hãy cố gắng đưa ra càng nhiều ý tưởng tuyệt vời càng tốt về khái niệm và tầm quan trọng của KHMT."
@@ -23684,7 +23684,7 @@
         },
         "bacf1db7-dc91-41b8-ad71-9fb655e18dfa": {
           "tips": [
-            "-   Giữ bình tĩnh trong phòng máy tính\n-   Không nhai kẹo cao su hoặc kẹo cứng\n-   Khử khuẩn tay\n-   Ngồi cùng máy tính với bạn cùng nhóm\n-   Đảm bảo rằng “người thực hiện” đầu tiên có thể sử dụng chuột\n-   Khi bạn bực bội, đừng đập hay lắc máy tính hoặc màn hình\n-   Tuân theo [Quy tắc 20/20/20][0].\n-   Cách đối phó với thói quen [Ngọ nguậy][1] sau mỗi 20- 30 phút (cần đăng nhập miễn phí trên GoNoodle)\n-   Hỏi bạn cùng nhóm trước khi hỏi giáo viên\n-   Giảm âm lượng để người khác có thể nghe được tiếng bạn cùng nhóm của mình\n-   Sử dụng nhật ký để ghi lại cảm xúc và giải pháp"
+            "-   Giữ bình tĩnh trong phòng máy tính\n-   Không nhai kẹo cao su hoặc kẹo cứng\n-   Khử khuẩn tay\n-   Ngồi cùng máy tính với bạn cùng nhóm\n-   Đảm bảo rằng “người thực hiện” đầu tiên có thể sử dụng chuột\n-   Khi bạn bực bội, đừng đập hay lắc máy tính hoặc màn hình\n-   Tuân theo [Quy tắc 20/20/20](http://www.anthro.com/blog/2013/10/how-to-prevent-eye-strain-with-the-20-20-20-rule#.WOU39BLyu35).\n-   Cách đối phó với thói quen [Ngọ nguậy](https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll) sau mỗi 20- 30 phút (cần đăng nhập miễn phí trên GoNoodle)\n-   Hỏi bạn cùng nhóm trước khi hỏi giáo viên\n-   Giảm âm lượng để người khác có thể nghe được tiếng bạn cùng nhóm của mình\n-   Sử dụng nhật ký để ghi lại cảm xúc và giải pháp"
           ]
         },
         "aa328958-bd87-4dbb-8585-cb33f905051f": {
@@ -23707,7 +23707,7 @@
           ]
         },
         "66f2f042-aa67-41db-a756-4ab6e5623f77": {
-          "description": "Hãy đố học sinh hoàn thành bài hướng dẫn [Ghép hình][0].\n\n-   Khuyến khích học sinh đặt câu hỏi/thử thách bắt đầu bằng cách hỏi bạn cùng nhóm.\n-   Các câu hỏi chưa trả lời được có thể chuyển cho nhóm khác gần đó có thể đã biết lời giải.\n-   Cho học sinh mô tả vấn đề mà họ đang gặp phải. Như thế nào mới là đúng? Chương trình chạy như thế nào? Bạn rút ra được kết luận gì?\n-   Nhắc nhở học sinh đang bực bội rằng bực bội là một phần của con đường học tập và sự kiên trì sẽ được đền đáp.\n-   Nếu học sinh vẫn gặp khó khăn sau tất cả những lời khuyên này thì hãy đặt những câu hỏi định hướng để học sinh tự phát hiện lỗi."
+          "description": "Hãy đố học sinh hoàn thành bài hướng dẫn [Ghép hình](http://studio.code.org/s/jigsaw/lessons/1/levels/1).\n\n-   Khuyến khích học sinh đặt câu hỏi/thử thách bắt đầu bằng cách hỏi bạn cùng nhóm.\n-   Các câu hỏi chưa trả lời được có thể chuyển cho nhóm khác gần đó có thể đã biết lời giải.\n-   Cho học sinh mô tả vấn đề mà họ đang gặp phải. Như thế nào mới là đúng? Chương trình chạy như thế nào? Bạn rút ra được kết luận gì?\n-   Nhắc nhở học sinh đang bực bội rằng bực bội là một phần của con đường học tập và sự kiên trì sẽ được đền đáp.\n-   Nếu học sinh vẫn gặp khó khăn sau tất cả những lời khuyên này thì hãy đặt những câu hỏi định hướng để học sinh tự phát hiện lỗi."
         },
         "11068ad0-f20b-4daf-94cd-7b4549b76f3a": {
           "progression_name": "Cấp độ"
@@ -23717,10 +23717,10 @@
           "description": "Cho học sinh viết hoặc vẽ về những kiến thức đã học và cảm xúc của họ sau khi hoàn thành bài tập.\n\n**Lời nhắc:**\n\n-   Bạn có thể vẽ một trình tự để chuẩn bị đến phòng máy tính không?\n-   Hãy vẽ những điều “Nên” và “Không nên” trong phòng máy tính\n-   Hãy vẽ và dán nhãn tên của bộ phận máy tính bạn đã sử dụng khi nhấp chuột và kéo trong bài tập. (nút chuột, màn hình cảm ứng, bàn di chuột)"
         },
         "8f47b370-5569-4a34-b105-c765a39c8460": {
-          "description": "Hãy trao cho mỗi học sinh một [Câu hỏi tổng kết][0] và yêu cầu họ tóm tắt những nội dung đã học được hôm nay, cảm giác của họ hoặc những gì họ đã trải qua. Học sinh có thể vẽ, viết hoặc thể hiện bản thân theo bất kỳ cách nào mà họ cảm thấy thoải mái. Nhận “Câu hỏi tổng kết” từ mỗi học sinh trên đường ra khỏi phòng. Nếu thích, bạn có thể đăng “Câu hỏi tổng kết” trên bảng thông báo hoặc một số địa điểm nổi bật trong trường như một lời nhắc nhở về Giờ lập trình của bạn."
+          "description": "Hãy trao cho mỗi học sinh một [Câu hỏi tổng kết](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) và yêu cầu họ tóm tắt những nội dung đã học được hôm nay, cảm giác của họ hoặc những gì họ đã trải qua. Học sinh có thể vẽ, viết hoặc thể hiện bản thân theo bất kỳ cách nào mà họ cảm thấy thoải mái. Nhận “Câu hỏi tổng kết” từ mỗi học sinh trên đường ra khỏi phòng. Nếu thích, bạn có thể đăng “Câu hỏi tổng kết” trên bảng thông báo hoặc một số địa điểm nổi bật trong trường như một lời nhắc nhở về Giờ lập trình của bạn."
         },
         "6ddc599f-da51-4adc-9dcc-f13b8b53e760": {
-          "description": "#### Sau Giờ lập trình\n\nSau khi Giờ lập trình kết thúc, có nhiều cách để tiếp tục giảng dạy môn khoa học máy tính trong lớp học K-5 của bạn. Sau đây là một số ý tưởng: \n\n-   Dạy các khóa học [Nguyên tắc cơ bản về khoa học máy tính của Code Studio][0]. Sáu khóa học này được thiết kế cho những học sinh nhỏ tuổi. Học sinh sẽ làm việc theo cách của họ thông qua một loạt bài tập hướng dẫn lập trình và giáo viên có quyền truy cập vào các giáo án hấp dẫn giúp làm cho việc học trở nên sôi động. Code.org cung cấp chương trình phát triển chuyên môn miễn phí cho các khóa học này theo hình thức trực tuyến hoặc trực tiếp.\n\n-   Mời chuyên gia khoa học máy tính nói chuyện với lớp về công việc của họ. Bạn không biết bất kỳ chuyên gia khoa học máy tính nào tại địa phương? Hãy liên hệ với một tình nguyện viên trên [bản đồ tình nguyện viên][1] của chúng tôi"
+          "description": "#### Sau Giờ lập trình\n\nSau khi Giờ lập trình kết thúc, có nhiều cách để tiếp tục giảng dạy môn khoa học máy tính trong lớp học K-5 của bạn. Sau đây là một số ý tưởng: \n\n-   Dạy các khóa học [Nguyên tắc cơ bản về khoa học máy tính của Code Studio](http://code.org/educate/k5). Sáu khóa học này được thiết kế cho những học sinh nhỏ tuổi. Học sinh sẽ làm việc theo cách của họ thông qua một loạt bài tập hướng dẫn lập trình và giáo viên có quyền truy cập vào các giáo án hấp dẫn giúp làm cho việc học trở nên sôi động. Code.org cung cấp chương trình phát triển chuyên môn miễn phí cho các khóa học này theo hình thức trực tuyến hoặc trực tiếp.\n\n-   Mời chuyên gia khoa học máy tính nói chuyện với lớp về công việc của họ. Bạn không biết bất kỳ chuyên gia khoa học máy tính nào tại địa phương? Hãy liên hệ với một tình nguyện viên trên [bản đồ tình nguyện viên](https://code.org/volunteer/local) của chúng tôi"
         },
         "b16d189d-d990-44c4-be49-8f81ac81a96e": {
           "description": "#### Tạo không khíChào mừng học viên đến lớp và giới thiệu hoạt động trong ngày.",

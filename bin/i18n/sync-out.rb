@@ -16,9 +16,9 @@ require 'tempfile'
 require 'yaml'
 require 'active_support/core_ext/object/blank'
 
-require_relative 'hoc_sync_utils'
 require_relative 'i18n_script_utils'
 require_relative 'redact_restore_utils'
+require_relative 'utils/malformed_i18n_reporter'
 require_relative '../animation_assets/manifest_builder'
 
 Dir[File.expand_path('../resources/**/*.rb', __FILE__)].sort.each {|file| require file}
@@ -28,13 +28,12 @@ module I18n
     def self.perform
       puts "Sync out starting"
       I18n::Resources::Apps.sync_out
+      I18n::Resources::Pegasus.sync_out
       rename_from_crowdin_name_to_locale
       restore_redacted_files
       distribute_translations
-      copy_untranslated_apps
       restore_markdown_headers
       Services::I18n::CurriculumSyncUtils.sync_out
-      HocSyncUtils.sync_out
       puts "updating TTS I18n (should usually take 2-3 minutes, may take up to 15 if there are a whole lot of translation updates)"
       I18nScriptUtils.with_synchronous_stdout do
         I18nScriptUtils.run_standalone_script "dashboard/scripts/update_tts_i18n.rb"
@@ -77,12 +76,13 @@ module I18n
       # Move directories like `i18n/locales/Italian` to `i18n/locales/it-it` for
       # all languages in our system
       PegasusLanguages.get_crowdin_name_and_locale.each do |prop|
-        next unless File.directory?("i18n/locales/#{prop[:crowdin_name_s]}/")
+        crowdin_locale_dir = I18nScriptUtils.locale_dir(prop[:crowdin_name_s])
+        next unless File.exist?(crowdin_locale_dir)
 
         # copy and remove rather than moving so we can easily and recursively deal
         # with existing files
-        FileUtils.cp_r "i18n/locales/#{prop[:crowdin_name_s]}/.", "i18n/locales/#{prop[:locale_s]}"
-        FileUtils.rm_r "i18n/locales/#{prop[:crowdin_name_s]}"
+        i18n_locale_dir = I18nScriptUtils.locale_dir(prop[:locale_s])
+        I18nScriptUtils.rename_dir(crowdin_locale_dir, i18n_locale_dir)
       end
 
       # Now, any remaining directories named after the language name (rather than
@@ -91,21 +91,6 @@ module I18n
       # A regex is used in the .select rather than Dir.glob because Dir.glob will ignore
       # character case on file systems which are case insensitive by default, such as OSX.
       FileUtils.rm_r Dir.glob("i18n/locales/*").grep(/i18n\/locales\/[A-Z].*/)
-    end
-
-    def self.find_malformed_links_images(locale, file_path)
-      return unless File.exist?(file_path)
-      is_json = File.extname(file_path) == '.json'
-      data =
-        if is_json
-          JSON.parse(File.read(file_path))
-        else
-          YAML.load_file(file_path)
-        end
-
-      return unless data
-      return unless data&.values&.first&.length
-      I18nScriptUtils.recursively_find_malformed_links_images(data, locale, file_path)
     end
 
     def self.restore_redacted_files
@@ -125,7 +110,6 @@ module I18n
       puts "Restoring redacted files in #{locales.count} locales, parallelized between #{Parallel.processor_count / 2} processes"
 
       # Prepare some collection literals
-      app_types_with_link = %w(applab gamelab weblab)
       resource_and_vocab_paths = [
         'i18n/locales/original/dashboard/scripts.yml',
         'i18n/locales/original/dashboard/courses.yml'
@@ -135,6 +119,8 @@ module I18n
         locale = prop[:locale_s]
         next if locale == 'en-US'
         next unless File.directory?("i18n/locales/#{locale}/")
+
+        malformed_i18n_reporter = I18n::Utils::MalformedI18nReporter.new(locale)
 
         original_files.each do |original_path|
           relative_path = original_path.delete_prefix(original_dir)
@@ -164,15 +150,15 @@ module I18n
               plugins << 'visualCodeBlock'
               plugins << 'link'
               plugins << 'resourceLink'
-            elsif app_types_with_link.include?(File.basename(original_path, '.json'))
-              plugins << 'link'
+            elsif I18n::Resources::Apps::Labs::REDACTABLE_LABS.include?(File.basename(original_path, '.json'))
+              next # moved to I18n::Resources::Apps::Labs::SyncOut#restore_crawding_locale_files
             end
             RedactRestoreUtils.restore(original_path, translated_path, translated_path, plugins)
           end
 
-          find_malformed_links_images(locale, translated_path)
+          malformed_i18n_reporter.process_file(translated_path)
         end
-        I18nScriptUtils.upload_malformed_restorations(locale)
+        malformed_i18n_reporter.report
       end
       puts "Restoration finished!"
     end
@@ -349,17 +335,6 @@ module I18n
         ### Course Content
         distribute_course_content(locale)
 
-        ### Apps
-        js_locale = I18nScriptUtils.to_js_locale(locale)
-        Dir.glob("#{locale_dir}/blockly-mooc/*.json") do |loc_file|
-          relative_path = loc_file.delete_prefix(locale_dir)
-          next unless I18nScriptUtils.file_changed?(locale, relative_path)
-
-          basename = File.basename(loc_file, '.json')
-          destination = "apps/i18n/#{basename}/#{js_locale}.json"
-          I18nScriptUtils.sanitize_file_and_write(loc_file, destination)
-        end
-
         ### Pegasus markdown
         Dir.glob("#{locale_dir}/codeorg-markdown/**/*.*") do |loc_file|
           relative_path = loc_file.delete_prefix("#{locale_dir}/codeorg-markdown")
@@ -457,19 +432,6 @@ module I18n
       puts "Distribution finished!"
     end
 
-    # For untranslated apps, copy English file for all locales
-    def self.copy_untranslated_apps
-      untranslated_apps = %w(calc eval netsim)
-
-      PegasusLanguages.get_locale.each do |prop|
-        next unless prop[:locale_s] != 'en-US'
-        untranslated_apps.each do |app|
-          app_locale = prop[:locale_s].tr('-', '_').downcase!
-          FileUtils.cp_r "apps/i18n/#{app}/en_us.json", "apps/i18n/#{app}/#{app_locale}.json"
-        end
-      end
-    end
-
     # In the sync in, we slice the YAML headers of the files we upload to crowdin
     # down to just the part we want to translate (ie, the title). Here, we
     # reinflate the header with all the values from the source file.
@@ -498,8 +460,10 @@ module I18n
           puts "Error parsing yaml header path=#{path}"
           raise exception
         end
-        I18nScriptUtils.sanitize_header!(header)
-        restored_header = source_header.merge(header)
+
+        sanitized_header = I18nScriptUtils.sanitize_markdown_header(header)
+        restored_header = source_header.merge(sanitized_header)
+
         I18nScriptUtils.write_markdown_with_header(content, restored_header, path)
       end
     end

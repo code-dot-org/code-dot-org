@@ -346,19 +346,42 @@ sq-AL:
   coursea-2017_gradelevel: Moshat 4-7
   coursea-2018_gradelevel: Moshat 4-7
   coursea-2019_gradelevel: Moshat 4-7
+  coursea-2019_name: Kursi A (2019)
   coursea-2020_gradelevel: Moshat 4-7
+  coursea-2020_name: Kursi A (2020)
+  coursea-2020_shortdescription_congrats: Mësoni bazat e shkencave kompjuterike dhe
+    sigurisë në internet. Në fund të kursit, krijoni lojën ose historinë tuaj që mund
+    të ndani.
   coursea-2021_gradelevel: Moshat 4-7
+  coursea-2021_name: Kursi A (2021)
+  coursea-2021_shortdescription_congrats: Mësoni bazat e shkencave kompjuterike dhe
+    sigurisë në internet. Në fund të kursit, krijoni lojën ose historinë tuaj që mund
+    të ndani.
   coursea-2022_gradelevel: Moshat 4-7
   coursea-2022_name: Kursi A (2022)
+  coursea-2022_shortdescription_congrats: Mësoni bazat e shkencave kompjuterike dhe
+    sigurisë në internet. Në fund të kursit, krijoni lojën ose historinë tuaj që mund
+    të ndani.
+  coursea-draft_name: Kursi A
   coursea_gradelevel: Moshat 4-7
+  coursea_name: Kursi A
   courseb-2017_gradelevel: Moshat 5-8
   courseb-2018_gradelevel: Moshat 5-8
   courseb-2019_gradelevel: Moshat 5-8
   courseb-2020_gradelevel: Moshat 5-8
+  courseb-2020_shortdescription_congrats: Mësoni bazat e shkencave kompjuterike dhe
+    sigurisë në internet. Në fund të kursit, krijoni lojën ose historinë tuaj që mund
+    të ndani.
   courseb-2021_gradelevel: Moshat 5-8
   courseb-2021_name: Kursi B (2021)
+  courseb-2021_shortdescription_congrats: Mësoni bazat e shkencave kompjuterike dhe
+    sigurisë në internet. Në fund të kursit, krijoni lojën ose historinë tuaj që mund
+    të ndani.
   courseb-2022_gradelevel: Moshat 5-8
   courseb-2022_name: Kursi B (2022)
+  courseb-2022_shortdescription_congrats: Mësoni bazat e shkencave kompjuterike dhe
+    sigurisë në internet. Në fund të kursit, krijoni lojën ose historinë tuaj që mund
+    të ndani.
   courseb_gradelevel: Moshat 5-8
   coursec-2017_gradelevel: Moshat 6-10
   coursec-2018_gradelevel: Moshat 6-10
@@ -659,6 +682,8 @@ sq-AL:
     studentet tuaj:'
   dashboard_students_total_lines: Rreshta Kodi
   dashboard_students_url: URL
+  dashboard_submission_in_progress: Në proces
+  dashboard_submission_submitted: Dorëzuar
   dashboard_teacher: Mësues
   dashboard_teacher_worksheet: puna mësuesit
   dashboard_view_all_lesson_plans: Shkarko planin mësimor për kurset 1-3

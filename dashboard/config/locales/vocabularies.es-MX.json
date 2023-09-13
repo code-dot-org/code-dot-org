@@ -1146,7 +1146,7 @@
         },
         "persistence/coursec/2022": {
           "word": "Perseverancia",
-          "definition": "No te rindas."
+          "definition": "No darse por vencido."
         },
         "programming/coursec/2022": {
           "word": "Programación",
@@ -1154,7 +1154,7 @@
         },
         "angle/coursec/2022": {
           "word": "Ángulo",
-          "definition": "Punto de encuentro de dos lados de una figura, medido en grados."
+          "definition": "Donde dos lados de una forma se unen, medidos en grados."
         },
         "loop/coursec/2022": {
           "word": "Bucle",
@@ -1173,8 +1173,8 @@
           "definition": "Una recopilación de información"
         },
         "graph/coursec/2022": {
-          "word": "Gráfico",
-          "definition": "Una imagen o un diagrama que representa datos o valores de forma organizada."
+          "word": "Gráfica",
+          "definition": "Una imagen o un diagrama que representa datos o valores de manera organizada"
         },
         "binary/coursec/2022": {
           "word": "Binario",
@@ -1265,19 +1265,19 @@
         },
         "function/coursee/2022": {
           "word": "Función",
-          "definition": "Un fragmento de código que puedes llamar una y otra vez."
+          "definition": "Un trozo de código al que puedes llamar una y otra vez."
         },
         "call_a_function/coursee/2022": {
-          "word": "Llamar a una Función",
-          "definition": "Utilizar el nombre de la función para indicar al ordenador que ejecute el código escrito en la función."
+          "word": "Llamar a una función",
+          "definition": "Usar el nombre de la función para decirle a la computadora que ejecute el código escrito en la función."
         },
         "declare_a_function/coursee/2022": {
-          "word": "Declarar una Función",
-          "definition": "Rellena una función con código y dale un nombre."
+          "word": "Declarar una función",
+          "definition": "Rellena una función con código y dale un nombre a la función."
         },
         "condition/coursee/2022": {
           "word": "Condición",
-          "definition": "Una sentencia que un programa comprueba para ver si es verdadera o falsa. Si es verdadera, se realiza una acción. En caso contrario, se ignora la acción."
+          "definition": "Una declaración que un programa comprueba para ver si es verdadera o falsa. Si es cierto, se toma una acción. De lo contrario, se ignora la acción."
         },
         "conditionals/coursee/2022": {
           "word": "Condicionales",
@@ -1321,7 +1321,7 @@
         },
         "behavior/coursef/2022": {
           "word": "Comportamiento",
-          "definition": "Una acción en el Laboratorio Sprite que un sprite realiza continuamente hasta que se le dice que se detenga."
+          "definition": "Una acción en Sprite Lab que un sprite realiza continuamente hasta que se le dice que se detenga."
         },
         "program/coursef/2022": {
           "word": "Programa",

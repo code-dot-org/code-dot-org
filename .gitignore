@@ -41,7 +41,6 @@ npm-debug.log
 /apps/src/styleConstants.js
 /apps/storybook-deploy
 /apps/test/entry-tests.js
-/apps/test/interpreter/test-results-new*.json
 /apps/yarn-error.log
 /aws/.code-studio-built
 /aws/.code-studio-commit-built

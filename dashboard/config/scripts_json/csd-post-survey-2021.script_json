@@ -6,11 +6,14 @@
     "properties": {
       "curriculum_umbrella": "CSD",
       "hideable_lessons": true,
-      "is_migrated": true
+      "is_migrated": true,
+      "supported_locales": [
+        "it-IT"
+      ]
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2021-11-22 17:09:17 UTC",
+    "serialized_at": "2023-09-06 21:49:17 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -145,6 +148,15 @@
 
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

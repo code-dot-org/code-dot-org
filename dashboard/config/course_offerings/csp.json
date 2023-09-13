@@ -16,5 +16,6 @@
   "professional_learning_program": "https://code.org/apply",
   "video": "https://www.youtube-nocookie.com/embed/jQm0z894CG0/?autoplay=1&enablejsapi=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=1&v=jQm0z894CG0&wmode=transparent",
   "published_date": "2023-07-10 04:00:00 UTC",
-  "self_paced_pl_course_offering_id": 449
+  "self_paced_pl_course_offering_id": 449,
+  "self_paced_pl_course_offering_key": "self-paced-pl-csp"
 }

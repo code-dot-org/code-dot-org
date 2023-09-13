@@ -1,7 +1,6 @@
 require File.expand_path('../../../dashboard/config/environment', __FILE__)
 require File.expand_path('../../../pegasus/helpers/pegasus_languages', __FILE__)
 
-require 'cdo/google/drive'
 require 'cdo/honeybadger'
 require 'cgi'
 require 'fileutils'
@@ -129,46 +128,6 @@ class I18nScriptUtils
     I18nScriptUtils.run_standalone_script("bash #{location}")
   end
 
-  def self.report_malformed_restoration(key, translation, file_name)
-    @malformed_restorations ||= [["Key", "File Name", "Translation"]]
-    @malformed_restorations << [key, file_name, translation]
-  end
-
-  def self.upload_malformed_restorations(locale)
-    return if @malformed_restorations.blank?
-    if CDO.gdrive_export_secret
-      begin
-        @google_drive ||= Google::Drive.new(service_account_key: StringIO.new(CDO.gdrive_export_secret.to_json))
-        @google_drive.add_sheet_to_spreadsheet(@malformed_restorations, "i18n_bad_translations", locale)
-      rescue
-        puts "Failed to upload malformed restorations for #{locale}"
-      end
-    end
-    @malformed_restorations = nil
-  end
-
-  def self.recursively_find_malformed_links_images(hash, key_str, file_name)
-    hash.each do |key, val|
-      if val.is_a?(Hash)
-        I18nScriptUtils.recursively_find_malformed_links_images(val, "#{key_str}.#{key}", file_name)
-      else
-        I18nScriptUtils.report_malformed_restoration("#{key_str}.#{+key}", val, file_name) if I18nScriptUtils.contains_malformed_link_or_image(val)
-      end
-    end
-  end
-
-  # This function currently looks for
-  # 1. Translations with malformed redaction syntax, i.e. [] [0] (note the space)
-  # 2. Translations with similarly malformed markdown, i.e. [link] (example.com)
-  # If this function finds either of these cases in the string, it return true.
-  def self.contains_malformed_link_or_image(translation)
-    malformed_redaction_regex = /\[.*\]\s+\[[0-9]+\]/
-    malformed_markdown_regex = /\[.*\]\s+\(.+\)/
-    non_malformed_redaction = (translation =~ malformed_redaction_regex).nil?
-    non_malformed_translation = (translation =~ malformed_markdown_regex).nil?
-    return !(non_malformed_redaction && non_malformed_translation)
-  end
-
   def self.get_level_url_key(script, level)
     script_level = level.script_levels.find_by_script_id(script.id)
     path = script_level.build_script_level_path(script_level)
@@ -258,8 +217,8 @@ class I18nScriptUtils
   #
   # Right now, this is just page titles but it could be expanded to include
   # any English content (description, social share stuff, etc).
-  def self.sanitize_header!(header)
-    header.slice!("title")
+  def self.sanitize_markdown_header(header)
+    header.slice('title')
   end
 
   # For resources like `course_content` and `curriculum_content`,
@@ -364,7 +323,7 @@ class I18nScriptUtils
 
   # Formats strings like 'en-US' to 'en_us'
   #
-  # @param [String] locale the BCP 47 (IETF language tag) format (e.g., 'en-US')
+  # @param locale [String] the BCP 47 (IETF language tag) format (e.g., 'en-US')
   # @return [String] the BCP 47 (IETF language tag) JS format (e.g., 'en_us')
   def self.to_js_locale(locale)
     locale.tr('-', '_').downcase
@@ -428,7 +387,18 @@ class I18nScriptUtils
     Parallel.each(data_array, **args, in_threads: PARALLEL_PROCESSES) {|data| yield(data)}
   end
 
+  # Copies file
+  #
+  # @param file_path [String] path to the file
+  # @param dest_path [String] destination path
+  def self.copy_file(file_path, dest_path)
+    dest_dir = File.extname(dest_path).empty? ? dest_path : File.dirname(dest_path)
+    FileUtils.mkdir_p(dest_dir)
+    FileUtils.cp(file_path, dest_path)
+  end
+
   # Renames directory
+  #
   # @param [String] from_dir, e.g. `i18n/locales/English/resource`
   # @param [String] to_dir, e.g. `i18n/locales/en-US/resource`
   def self.rename_dir(from_dir, to_dir)
@@ -437,12 +407,14 @@ class I18nScriptUtils
     FileUtils.rm_r(from_dir)
   end
 
-  def self.delete_empty_crowdin_locale_dir(crowdin_locale)
-    crowdin_locale_dir = CDO.dir(File.join(I18N_LOCALES_DIR, crowdin_locale))
+  def self.locale_dir(locale, *paths)
+    CDO.dir(File.join(I18N_LOCALES_DIR, locale, *paths))
+  end
 
-    return unless File.exist?(crowdin_locale_dir)
-    return unless Dir.empty?(crowdin_locale_dir)
+  def self.remove_empty_dir(dir)
+    return unless File.exist?(dir)
+    return unless Dir.empty?(dir)
 
-    FileUtils.rm_r(crowdin_locale_dir)
+    FileUtils.rm_r(dir)
   end
 end
