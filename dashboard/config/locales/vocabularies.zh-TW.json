@@ -1167,6 +1167,630 @@
           "word": "事件（Event）",
           "definition": "導致某些事情發生的操作。"
         },
+        "code/csc-adaptations/2023": {
+          "word": "代碼"
+        },
+        "event/csc-adaptations/2023": {
+          "word": "事件（Event）"
+        },
+        "behavior/csc-adaptations/2023": {
+          "word": "行為"
+        },
+        "event/csc-bookcovers/2023": {
+          "word": "事件（Event）",
+          "definition": "導致某些事情發生的操作。"
+        },
+        "program/csc-bookcovers/2023": {
+          "word": "程式",
+          "definition": "一系列已編碼的步驟，可在設備上運行。"
+        },
+        "prompt/csc-bookcovers/2023": {
+          "word": "提示",
+          "definition": "電腦螢幕上的訊息，等待來自使用者的輸入。"
+        },
+        "sprite/csc-bookcovers/2023": {
+          "word": "雪碧",
+          "definition": "螢幕上具有位置、大小和外觀的圖形。"
+        },
+        "code/csc-ecosystems/2023": {
+          "word": "代碼"
+        },
+        "condition/csc-ecosystems/2023": {
+          "word": "條件（Condition）"
+        },
+        "conditionals/csc-ecosystems/2023": {
+          "word": "條件判斷（Conditionals）"
+        },
+        "event/csc-ecosystems/2023": {
+          "word": "事件（Event）"
+        },
+        "variable/csc-ecosystems/2023": {
+          "word": "變數"
+        },
+        "energy/csc-ecosystems/2023": {
+          "word": "能源"
+        },
+        "code/csc-mappinglandmarks/2023": {
+          "word": "代碼",
+          "definition": "（動詞）為電腦編寫指令。"
+        },
+        "event/csc-mappinglandmarks/2023": {
+          "word": "事件（Event）",
+          "definition": "導致某些事情發生的操作。"
+        },
+        "sprite/csc-mappinglandmarks/2023": {
+          "word": "雪碧"
+        },
+        "map/csc-mappinglandmarks/2023": {
+          "word": "地圖"
+        },
+        "artist/csc-starquilts/2023": {
+          "word": "藝術家"
+        },
+        "loop/csc-starquilts/2023": {
+          "word": "迴圈"
+        },
+        "comments/csc-starquilts/2023": {
+          "word": "註解"
+        },
+        "event/csc-timecapsule/2023": {
+          "word": "事件（Event）",
+          "definition": "導致某些事情發生的操作。"
+        },
+        "mood/csc-timecapsule/2023": {
+          "word": "意境"
+        },
+        "sprite/csc-timecapsule/2023": {
+          "word": "雪碧"
+        },
+        "code/poetry/2023": {
+          "word": "代碼",
+          "definition": "（動詞）為電腦編寫指令。"
+        },
+        "event/poetry/2023": {
+          "word": "事件（Event）",
+          "definition": "導致某些事情發生的操作。"
+        },
+        "line/poetry/2023": {
+          "word": "詩歌行"
+        },
+        "mood/poetry/2023": {
+          "word": "意境"
+        },
+        "program/poetry/2023": {
+          "word": "程式",
+          "definition": "一系列已編碼的步驟，可在設備上運行。"
+        },
+        "poetry_circle/poetry/2023": {
+          "word": "詩圈"
+        },
+        "algorithm/coursea/2023": {
+          "word": "演算法（Algorithm）",
+          "definition": "用於完成某項任務的步驟清單。"
+        },
+        "debugging/coursea/2023": {
+          "word": "除錯",
+          "definition": "尋找並修復演算法或程式中的問題。"
+        },
+        "program/coursea/2023": {
+          "word": "程式",
+          "definition": "編碼為可以由電腦運行的演算法。"
+        },
+        "click/coursea/2023": {
+          "word": "點擊（Click）",
+          "definition": "按下滑鼠按鈕"
+        },
+        "double_click/coursea/2023": {
+          "word": "點擊兩下（Double-Click）",
+          "definition": "快速按下滑鼠按鈕兩下"
+        },
+        "drag/coursea/2023": {
+          "word": "拖曳（Drag）",
+          "definition": "點擊滑鼠按鈕，然後按住按鈕不放，把滑鼠指標移動到新的位置"
+        },
+        "drop/coursea/2023": {
+          "word": "Drop",
+          "definition": "放開滑鼠按鈕，「放開」正在拖曳的物件"
+        },
+        "bug/coursea/2023": {
+          "word": "程式錯誤（Bug）",
+          "definition": "程式中無法正確運作的部分。"
+        },
+        "programming/coursea/2023": {
+          "word": "程式設計",
+          "definition": "製作程式的藝術。"
+        },
+        "loop/coursea/2023": {
+          "word": "迴圈",
+          "definition": "不斷重複做某件事情的動作。"
+        },
+        "repeat/coursea/2023": {
+          "word": "重複（Repeat）",
+          "definition": "某件事情再做一次。"
+        },
+        "event/coursea/2023": {
+          "word": "事件（Event）",
+          "definition": "導致某些事情發生的操作。"
+        },
+        "algorithm/courseb/2023": {
+          "word": "演算法（Algorithm）",
+          "definition": "用於完成某項任務的步驟清單。"
+        },
+        "bug/courseb/2023": {
+          "word": "程式錯誤（Bug）",
+          "definition": "程式中無法正確運作的部分。"
+        },
+        "debugging/courseb/2023": {
+          "word": "除錯",
+          "definition": "尋找並修復演算法或程式中的問題。"
+        },
+        "click/courseb/2023": {
+          "word": "點擊（Click）",
+          "definition": "按下滑鼠按鈕"
+        },
+        "double_click/courseb/2023": {
+          "word": "點擊兩下（Double-Click）",
+          "definition": "快速按下滑鼠按鈕兩下"
+        },
+        "drag/courseb/2023": {
+          "word": "拖曳（Drag）",
+          "definition": "點擊滑鼠按鈕，然後按住按鈕不放，把滑鼠指標移動到新的位置"
+        },
+        "drop/courseb/2023": {
+          "word": "Drop",
+          "definition": "放開滑鼠按鈕，「放開」正在拖曳的物件"
+        },
+        "program/courseb/2023": {
+          "word": "程式",
+          "definition": "編碼為可以由電腦運行的演算法。"
+        },
+        "programming/courseb/2023": {
+          "word": "程式設計",
+          "definition": "製作程式的藝術。"
+        },
+        "persistence/courseb/2023": {
+          "word": "堅持（Persistence）",
+          "definition": "不斷重複嘗試某件事情，即使非常困難仍然嘗試下去。"
+        },
+        "loop/courseb/2023": {
+          "word": "迴圈",
+          "definition": "不斷重複做某件事情的動作。"
+        },
+        "repeat/courseb/2023": {
+          "word": "重複（Repeat）",
+          "definition": "某件事情再做一次。"
+        },
+        "event/courseb/2023": {
+          "word": "事件（Event）",
+          "definition": "導致某些事情發生的操作。"
+        },
+        "algorithm/coursec/2023": {
+          "word": "演算法（Algorithm）",
+          "definition": "用於完成某項任務的步驟清單。"
+        },
+        "bug/coursec/2023": {
+          "word": "程式錯誤（Bug）",
+          "definition": "程式中無法正確運作的部分。"
+        },
+        "debugging/coursec/2023": {
+          "word": "除錯",
+          "definition": "尋找並修復演算法或程式中的問題。"
+        },
+        "program/coursec/2023": {
+          "word": "程式",
+          "definition": "編碼為可以由電腦運行的演算法。"
+        },
+        "sequencing/coursec/2023": {
+          "word": "序列",
+          "definition": "把命令以正確的順序排列，讓電腦可讀取命令。"
+        },
+        "persistence/coursec/2023": {
+          "word": "堅持（Persistence）"
+        },
+        "programming/coursec/2023": {
+          "word": "程式設計",
+          "definition": "製作程式的藝術。"
+        },
+        "loop/coursec/2023": {
+          "word": "迴圈",
+          "definition": "不斷重複做某件事情的動作。"
+        },
+        "repeat/coursec/2023": {
+          "word": "重複（Repeat）",
+          "definition": "某件事情再做一次。"
+        },
+        "event/coursec/2023": {
+          "word": "事件（Event）",
+          "definition": "導致某些事情發生的操作。"
+        },
+        "data/coursec/2023": {
+          "word": "數據"
+        },
+        "binary/coursec/2023": {
+          "word": "二進制（Binary）",
+          "definition": "僅使用兩個選項來表示資訊的方式。"
+        },
+        "algorithm/coursed/2023": {
+          "word": "演算法（Algorithm）",
+          "definition": "用於完成某項任務的步驟清單。"
+        },
+        "program/coursed/2023": {
+          "word": "程式",
+          "definition": "編碼為可以由電腦運行的演算法。"
+        },
+        "bug/coursed/2023": {
+          "word": "程式錯誤（Bug）",
+          "definition": "程式中無法正確運作的部分。"
+        },
+        "debugging/coursed/2023": {
+          "word": "除錯",
+          "definition": "尋找並修復演算法或程式中的問題。"
+        },
+        "loop/coursed/2023": {
+          "word": "迴圈",
+          "definition": "不斷重複做某件事情的動作。"
+        },
+        "programming/coursed/2023": {
+          "word": "程式設計",
+          "definition": "製作程式的藝術。"
+        },
+        "frustrated/coursed/2023": {
+          "word": "挫折（Frustrated）",
+          "definition": "由於某些事情不像所希望的方式進展，因此感到煩擾或生氣。"
+        },
+        "persistence/coursed/2023": {
+          "word": "堅持（Persistence）",
+          "definition": "不斷重複嘗試某件事情，即使非常困難仍然嘗試下去。"
+        },
+        "event/coursed/2023": {
+          "word": "事件（Event）",
+          "definition": "導致某些事情發生的操作。"
+        },
+        "code/coursed/2023": {
+          "word": "代碼",
+          "definition": "(v) 編寫程式碼或電腦指令。"
+        },
+        "repeat/coursed/2023": {
+          "word": "重複（Repeat）",
+          "definition": "某件事情再做一次。"
+        },
+        "command/coursed/2023": {
+          "word": "命令（Command）",
+          "definition": "電腦的指令。許多命令合併在一起，便可組成演算法和電腦程式。"
+        },
+        "conditionals/coursed/2023": {
+          "word": "條件判斷（Conditionals）",
+          "definition": " 僅可在某些條件下執行的陳述句。"
+        },
+        "pseudocode/coursed/2023": {
+          "word": "偽代碼",
+          "definition": "演算法中步驟的簡單語言描述"
+        },
+        "condition/coursed/2023": {
+          "word": "條件（Condition）",
+          "definition": "程式允許某個動作前會檢查條件，確認條件是否為真（true）。"
+        },
+        "while_loop/coursed/2023": {
+          "word": "「當」迴圈（While Loop）",
+          "definition": "符合某個條件時會繼續重複的迴圈。"
+        },
+        "until/coursed/2023": {
+          "word": "直到",
+          "definition": "一個命令，告訴你只做一些事情，直到某些事情變成真實的地步。"
+        },
+        "behavior/coursee/2023": {
+          "word": "行為",
+          "definition": "一個精靈持續執行，直到它被告知停止的動作。"
+        },
+        "sprite/coursee/2023": {
+          "word": "雪碧",
+          "definition": "螢幕上具有位置、大小和外觀的圖形。"
+        },
+        "loop/coursee/2023": {
+          "word": "迴圈",
+          "definition": "不斷重複做某件事情的動作。"
+        },
+        "repeat/coursee/2023": {
+          "word": "重複（Repeat）",
+          "definition": "某件事情再做一次。"
+        },
+        "function/coursee/2023": {
+          "word": "函式"
+        },
+        "condition/coursee/2023": {
+          "word": "條件（Condition）"
+        },
+        "conditionals/coursee/2023": {
+          "word": "條件判斷（Conditionals）",
+          "definition": " 僅可在某些條件下執行的陳述句。"
+        },
+        "while_loop/coursee/2023": {
+          "word": "「當」迴圈（While Loop）",
+          "definition": "符合某個條件時會繼續重複的迴圈。"
+        },
+        "copyright/coursee/2023": {
+          "word": "版權所有",
+          "definition": "印刷、出版、表演、拍攝或錄製文學、藝術或音樂材料的專屬法律權利，並授權他人這樣做"
+        },
+        "define/coursee/2023": {
+          "word": "定義",
+          "definition": "找出嘗試解決的問題裡中的詳情"
+        },
+        "prepare/coursee/2023": {
+          "word": "準備（Prepare）",
+          "definition": "研究、計畫並取得材料，用於你將要進行的活動"
+        },
+        "reflect/coursee/2023": {
+          "word": "反思（Reflect）",
+          "definition": "小心回想起某件事情，目的是改善未來的結果"
+        },
+        "try/coursee/2023": {
+          "word": "嘗試（Try）",
+          "definition": "試著去做某件事"
+        },
+        "sprite/coursef/2023": {
+          "word": "雪碧",
+          "definition": "螢幕上具有位置、大小和外觀的圖形。"
+        },
+        "user/coursef/2023": {
+          "word": "使用者",
+          "definition": "使用物件的人員，包括軟體和硬體。"
+        },
+        "algorithm/coursef/2023": {
+          "word": "演算法（Algorithm）",
+          "definition": "完成工作的步驟清單。"
+        },
+        "behavior/coursef/2023": {
+          "word": "行為"
+        },
+        "program/coursef/2023": {
+          "word": "程式",
+          "definition": "編碼為可以由電腦運行的演算法。"
+        },
+        "event/coursef/2023": {
+          "word": "事件（Event）",
+          "definition": "導致某些事情發生的操作。"
+        },
+        "variable/coursef/2023": {
+          "word": "變數",
+          "definition": "放置可變更資訊的佔位符。"
+        },
+        "prompt/coursef/2023": {
+          "word": "提示",
+          "definition": "電腦螢幕上的訊息，等待來自使用者的輸入。"
+        },
+        "input/coursef/2023": {
+          "word": "輸入",
+          "definition": "電腦從使用者取得的資訊。"
+        },
+        "models_and_simulations/coursef/2023": {
+          "word": "模型和模擬",
+          "definition": "複製或模仿現實世界事件的關鍵特徵以研究其行為的程式，無需在現實生活中進行實驗的成本、時間或危險。"
+        },
+        "machine_learning/coursef/2023": {
+          "word": "機器學習",
+          "definition": "這種方式可讓電腦瞭解規律模式並做出決定，而不用明確設計程式"
+        },
+        "dns/coursef/2023": {
+          "word": "DNS (網域名稱系統)",
+          "definition": "網域名稱系統（Domain Name System）的縮寫。這個系統會把網域名稱（例如 example.com）翻譯為 IP 位址（例如 93.184.216.34）"
+        },
+        "dsl_cable/coursef/2023": {
+          "word": "DSL/纜線（Cable）",
+          "definition": "使用電話或電視纜線傳送資訊的方法。"
+        },
+        "fiber_optic_cable/coursef/2023": {
+          "word": "光纖纜線（Fiber Optic Cable）",
+          "definition": "使用光線來傳輸資訊的連線方式。"
+        },
+        "internet/coursef/2023": {
+          "word": "網際網路 Internet",
+          "definition": "互相連線的電腦與伺服器群組。"
+        },
+        "ip_address/coursef/2023": {
+          "word": "IP 位址（IP Address）",
+          "definition": "一個數字；會分配至已建立網際網路連線的任何項目。"
+        },
+        "packets/coursef/2023": {
+          "word": "封包",
+          "definition": "小塊的資訊，從較大塊的資訊小心地組成。"
+        },
+        "servers/coursef/2023": {
+          "word": "伺服器（Servers）",
+          "definition": "僅用來為其他人提供資訊的電腦。"
+        },
+        "url/coursef/2023": {
+          "word": "網址",
+          "definition": "易於記憶的位址，用於呼叫網站（例如 www.code.org）。"
+        },
+        "wi_fi/coursef/2023": {
+          "word": "Wi-Fi",
+          "definition": "使用無線電波無線傳送資訊的方式。"
+        },
+        "define/coursef/2023": {
+          "word": "定義",
+          "definition": "找出嘗試解決的問題裡中的詳情"
+        },
+        "prepare/coursef/2023": {
+          "word": "準備（Prepare）",
+          "definition": "研究、計畫並取得材料，用於你將要進行的活動"
+        },
+        "reflect/coursef/2023": {
+          "word": "反思（Reflect）",
+          "definition": "小心回想起某件事情，目的是改善未來的結果"
+        },
+        "try/coursef/2023": {
+          "word": "嘗試（Try）",
+          "definition": "試著去做某件事"
+        },
+        "algorithm/express/2023": {
+          "word": "演算法（Algorithm）",
+          "definition": "用於完成某項任務的步驟清單。"
+        },
+        "bug/express/2023": {
+          "word": "程式錯誤（Bug）",
+          "definition": "程式中無法正確運作的部分。"
+        },
+        "debugging/express/2023": {
+          "word": "除錯",
+          "definition": "尋找並修復演算法或程式中的問題。"
+        },
+        "sequencing/express/2023": {
+          "word": "序列",
+          "definition": "把命令以正確的順序排列，讓電腦可讀取命令。"
+        },
+        "program/express/2023": {
+          "word": "程式",
+          "definition": "編碼為可以由電腦運行的演算法。"
+        },
+        "programming/express/2023": {
+          "word": "程式設計",
+          "definition": "製作程式的藝術。"
+        },
+        "behavior/express/2023": {
+          "word": "行為",
+          "definition": "一個精靈持續執行，直到它被告知停止的動作。"
+        },
+        "sprite/express/2023": {
+          "word": "雪碧",
+          "definition": "螢幕上具有位置、大小和外觀的圖形。"
+        },
+        "event/express/2023": {
+          "word": "事件（Event）",
+          "definition": "導致某些事情發生的操作。"
+        },
+        "code/express/2023": {
+          "word": "代碼",
+          "definition": "編寫代碼，或為計算機編寫指令。"
+        },
+        "loop/express/2023": {
+          "word": "迴圈",
+          "definition": "不斷重複做某件事情的動作。"
+        },
+        "repeat/express/2023": {
+          "word": "重複（Repeat）",
+          "definition": "某件事情再做一次。"
+        },
+        "command/express/2023": {
+          "word": "命令（Command）",
+          "definition": "電腦的指令。許多命令合併在一起，便可組成演算法和電腦程式。"
+        },
+        "condition/express/2023": {
+          "word": "條件（Condition）",
+          "definition": "程式允許某個動作前會檢查條件，確認條件是否為真（true）。"
+        },
+        "conditionals/express/2023": {
+          "word": "條件判斷（Conditionals）",
+          "definition": " 僅可在某些條件下執行的陳述句。"
+        },
+        "while_loop/express/2023": {
+          "word": "「當」迴圈（While Loop）",
+          "definition": "符合某個條件時會繼續重複的迴圈。"
+        },
+        "until/express/2023": {
+          "word": "直到",
+          "definition": "一個命令，告訴你只做一些事情，直到某些事情變成真實的地步。"
+        },
+        "function/express/2023": {
+          "word": "函式",
+          "definition": "你可輕鬆不斷呼叫的程式碼。"
+        },
+        "prompt/express/2023": {
+          "word": "提示",
+          "definition": "電腦螢幕上的訊息，等待來自使用者的輸入。"
+        },
+        "variable/express/2023": {
+          "word": "變數",
+          "definition": "放置可變更資訊的佔位符。"
+        },
+        "for_loop/express/2023": {
+          "word": "計數/計次迴圈（For Loop）",
+          "definition": "有預先確定的開始、結束與增加幅度（階值）的迴圈。"
+        },
+        "define/express/2023": {
+          "word": "定義",
+          "definition": "找出嘗試解決的問題裡中的詳情"
+        },
+        "prepare/express/2023": {
+          "word": "準備（Prepare）",
+          "definition": "研究、計畫並取得材料，用於你將要進行的活動"
+        },
+        "reflect/express/2023": {
+          "word": "反思（Reflect）",
+          "definition": "小心回想起某件事情，目的是改善未來的結果"
+        },
+        "try/express/2023": {
+          "word": "嘗試（Try）",
+          "definition": "試著去做某件事"
+        },
+        "click/pre-express/2023": {
+          "word": "點擊（Click）",
+          "definition": "按下滑鼠按鈕"
+        },
+        "double_click/pre-express/2023": {
+          "word": "點擊兩下（Double-Click）",
+          "definition": "快速按下滑鼠按鈕兩下"
+        },
+        "drag/pre-express/2023": {
+          "word": "拖曳（Drag）",
+          "definition": "點擊滑鼠按鈕，然後按住按鈕不放，把滑鼠指標移動到新的位置"
+        },
+        "drop/pre-express/2023": {
+          "word": "Drop",
+          "definition": "放開滑鼠按鈕，「放開」正在拖曳的物件"
+        },
+        "algorithm/pre-express/2023": {
+          "word": "演算法（Algorithm）",
+          "definition": "用於完成某項任務的步驟清單。"
+        },
+        "bug/pre-express/2023": {
+          "word": "程式錯誤（Bug）",
+          "definition": "程式中無法正確運作的部分。"
+        },
+        "debugging/pre-express/2023": {
+          "word": "除錯",
+          "definition": "尋找並修復演算法或程式中的問題。"
+        },
+        "program/pre-express/2023": {
+          "word": "程式",
+          "definition": "編碼為可以由電腦運行的演算法。"
+        },
+        "programming/pre-express/2023": {
+          "word": "程式設計",
+          "definition": "製作程式的藝術。"
+        },
+        "persistence/pre-express/2023": {
+          "word": "堅持（Persistence）",
+          "definition": "不斷重複嘗試某件事情，即使非常困難仍然嘗試下去。"
+        },
+        "loop/pre-express/2023": {
+          "word": "迴圈",
+          "definition": "不斷重複做某件事情的動作。"
+        },
+        "repeat/pre-express/2023": {
+          "word": "重複（Repeat）",
+          "definition": "某件事情再做一次。"
+        },
+        "event/pre-express/2023": {
+          "word": "事件（Event）",
+          "definition": "導致某些事情發生的操作。"
+        },
+        "machine_learning/how-ai-works/2023": {
+          "word": "機器學習",
+          "definition": "這種方式可讓電腦瞭解規律模式並做出決定，而不用明確設計程式"
+        },
+        "algorithm/how-ai-works/2023": {
+          "word": "演算法（Algorithm）"
+        },
+        "network/how-ai-works/2023": {
+          "word": "網路"
+        },
+        "artificial_intelligence/how-ai-works/2023": {
+          "word": "人工智能"
+        },
+        "ethics/how-ai-works/2023": {
+          "word": "倫理"
+        },
         "code/aquatic/unversioned": {
           "word": "代碼",
           "definition": "(v) 編寫程式碼或電腦指令。"

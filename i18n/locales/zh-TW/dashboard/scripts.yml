@@ -3918,7 +3918,7 @@ zh-TW:
               display_name: 事件
             lessonGroup-6:
               display_name: 課程結束專案
-              description: "\\!\\[] (<https://images.code.org/0c33f6c158290834562bf8a6a39769b5-flower.png>)"
+              description: "!\\[] (<https://images.code.org/0c33f6c158290834562bf8a6a39769b5-flower.png>)"
           name: 課程
           student_description: 學習計算機科學以及網路安全的基礎知識，在課程結束後，創造並分享屬於你自己的遊戲或故事。
         coursec-2021:
