@@ -1,3 +1,4 @@
+/*jshint esversion: 6 */
 const https = require("https");
 
 exports.sendCfnResponse = (
@@ -21,6 +22,8 @@ exports.sendCfnResponse = (
       Data: responseData,
     };
 
+    console.log(responseBody);
+
     const { hostname, path } = new URL(event.ResponseURL);
     const options = {
       hostname: hostname,
@@ -34,10 +37,21 @@ exports.sendCfnResponse = (
     };
 
     const req = https.request(options, (res) => {
+      // TODO: Remove this debug logic.
+      console.log("statusCode:", res.statusCode);
+      console.log("headers:", res.headers);
+      res.on("data", (d) => {
+        console.log(res.body);
+      });
       resolve();
     });
 
+    // TODO: Remove this debug logic.
+    console.log(req);
+
     req.on("error", (err) => {
+      // TODO: Remove this debug logic.
+      console.log(err);
       reject(err);
     });
 
