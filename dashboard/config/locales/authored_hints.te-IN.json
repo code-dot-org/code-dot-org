@@ -11,6 +11,9 @@
         "CourseD_Dance_2020_01_2021": {
           "validation": "\"**నేను ఈ లెవల్ ఎలా పాస్ అవుతాను?**\n\n-   ఒక డాన్సర్ స్క్రీన్ మీద కనిపించేలా చూడండి.\n\n-   ఈ లెవల్ 4 మెజర్స్ తరువాత ముగుస్తుంది.\\*\""
         },
+        "CourseD_Dance_2020_01_2023": {
+          "validation": "\"**నేను ఈ లెవల్ ఎలా పాస్ అవుతాను?**\n\n-   ఒక డాన్సర్ స్క్రీన్ మీద కనిపించేలా చూడండి.\n\n-   ఈ లెవల్ 4 మెజర్స్ తరువాత ముగుస్తుంది.\\*\""
+        },
         "CourseD_Dance_2020_04": {
           "validation": "\"**నేను ఈ లెవల్ ఎలా పాస్ అవుతాను?**\n\n-   4 మెజర్స్ తరువాత డాన్సర్ ఒక కొత్త మువ్‌కు మారవలసిన అవసరం ఉంది. \n\n-   ఈ లెవల్ 7 మెజర్స్ తరువాత ముగిస్తుంది.\\*\""
         },
@@ -20,6 +23,9 @@
         "CourseD_Dance_2020_04_2021": {
           "validation": "\"**నేను ఈ లెవల్ ఎలా పాస్ అవుతాను?**\n\n-   4 మెజర్స్ తరువాత డాన్సర్ ఒక కొత్త మువ్‌కు మారవలసిన అవసరం ఉంది. \n\n-   ఈ లెవల్ 7 మెజర్స్ తరువాత ముగిస్తుంది.\\*\""
         },
+        "CourseD_Dance_2020_04_2023": {
+          "validation": "\"**నేను ఈ లెవల్ ఎలా పాస్ అవుతాను?**\n\n-   4 మెజర్స్ తరువాత డాన్సర్ ఒక కొత్త మువ్‌కు మారవలసిన అవసరం ఉంది. \n\n-   ఈ లెవల్ 7 మెజర్స్ తరువాత ముగిస్తుంది.\\*\""
+        },
         "CourseD_Dance_2020_05": {
           "validation": "\"**నేను ఈ లెవల్ ఎలా పాస్ అవుతాను?**\n\n-   6 మెజర్స్ తరువాత మీ డాన్సర్ తాను 4 మెజర్స్ తరువాత చేస్తున్న డాన్స్ కంటే భిన్నమైన డాన్స్ చేయవలసిన అవసరం ఉంది. \n\n_ఈ లెవల్ 11 మెజర్స్ తరువాత ముగుస్తుంది._\""
         },
@@ -27,6 +33,9 @@
           "validation": "\"**నేను ఈ లెవల్ ఎలా పాస్ అవుతాను?**\n\n-   6 మెజర్స్ తరువాత మీ డాన్సర్ తాను 4 మెజర్స్ తరువాత చేస్తున్న డాన్స్ కంటే భిన్నమైన డాన్స్ చేయవలసిన అవసరం ఉంది. \n\n_ఈ లెవల్ 11 మెజర్స్ తరువాత ముగుస్తుంది._\""
         },
         "CourseD_Dance_2020_05_2021": {
+          "validation": "\"**నేను ఈ లెవల్ ఎలా పాస్ అవుతాను?**\n\n-   6 మెజర్స్ తరువాత మీ డాన్సర్ తాను 4 మెజర్స్ తరువాత చేస్తున్న డాన్స్ కంటే భిన్నమైన డాన్స్ చేయవలసిన అవసరం ఉంది. \n\n_ఈ లెవల్ 11 మెజర్స్ తరువాత ముగుస్తుంది._\""
+        },
+        "CourseD_Dance_2020_05_2023": {
           "validation": "\"**నేను ఈ లెవల్ ఎలా పాస్ అవుతాను?**\n\n-   6 మెజర్స్ తరువాత మీ డాన్సర్ తాను 4 మెజర్స్ తరువాత చేస్తున్న డాన్స్ కంటే భిన్నమైన డాన్స్ చేయవలసిన అవసరం ఉంది. \n\n_ఈ లెవల్ 11 మెజర్స్ తరువాత ముగుస్తుంది._\""
         },
         "CourseD_Dance_Party_01": {
@@ -124,7 +133,14 @@
         "courseA_collector_loops3_2021": {
           "courseA_collector_loops3_a": "Try using a \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>\n\n loop!"
         },
+        "courseA_collector_loops3_2023": {
+          "courseA_collector_loops3_a": "Try using a \n\n<xml><block type=\"controls_repeat_simplified_dropdown\"><title name=\"TIMES\" config=\"3-10\">???</title></block></xml>\n\n loop!"
+        },
         "courseB_iceage_loops32022": {
+          "courseB_iceage_loops3_a": "Use this new block!\n <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"3-10\">5</title>\n    </block></xml>",
+          "courseB_iceage_loops3_b": "To repeat code, drag out a `repeat` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml>loop, then put the block you want inside of it."
+        },
+        "courseB_iceage_loops32022_2023": {
           "courseB_iceage_loops3_a": "Use this new block!\n <xml><block type=\"controls_repeat_simplified_dropdown\">\n    <title name=\"TIMES\" config=\"3-10\">5</title>\n    </block></xml>",
           "courseB_iceage_loops3_b": "To repeat code, drag out a `repeat` <xml><block type=\"controls_repeat_simplified\">\n    <title name=\"TIMES\">???</title>\n  </block></xml>loop, then put the block you want inside of it."
         },
@@ -143,8 +159,20 @@
         "coursee_helloworld_events": {
           "hello_world_click": "ఈవెంట్ బ్లాక్ క్లిక్ చేసినప్పుడు ``ఒక `Say` బ్లాక్ను \\`కనెక్ట్ చేయండి:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_burger_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_spriteSay\">\n        <title name=\"SPEECH\">Hello, world!</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"face_burger_1\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
         },
+        "coursee_helloworld_events_2023": {
+          "hello_world_click": "ఈవెంట్ బ్లాక్ క్లిక్ చేసినప్పుడు ``ఒక `Say` బ్లాక్ను \\`కనెక్ట్ చేయండి:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_burger_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_spriteSay\">\n        <title name=\"SPEECH\">Hello, world!</title>\n        <value name=\"SPRITE\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"face_burger_1\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block></xml>"
+        },
         "coursee_helloworld_say": {
           "hello-world-first-solution-pizza": "పిజ్జా ఏదో చెప్పటానికి చేయడానికి, ఈ వంటి కోడ్ బ్లాక్స్ కనెక్ట్:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"face_pizza_1\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_pizza_1\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
+        },
+        "coursee_helloworld_say_2023": {
+          "hello-world-first-solution-pizza": "పిజ్జా ఏదో చెప్పటానికి చేయడానికి, ఈ వంటి కోడ్ బ్లాక్స్ కనెక్ట్:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"face_pizza_1\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_pizza_1\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
+        },
+        "csc_bookcovers_project_character1": {
+          "hint1": "స్ప్రైట్ స్థానాన్ని మార్చడానికి, స్థాన బ్లాక్లోని పిన్ను క్లిక్ చేసి, ఆపై మీరు ఎక్కడికి వెళ్లాలనుకుంటున్నారో క్లిక్ చేయండి.\n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
+        },
+        "ecosystems_helloworld_say_2023": {
+          "change_location": "స్ప్రైట్ స్థానాన్ని మార్చడానికి, స్థాన బ్లాక్లోని పిన్ను క్లిక్ చేసి, ఆపై మీరు ఎక్కడికి వెళ్లాలనుకుంటున్నారో క్లిక్ చేయండి.\n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
         },
         "helloworld_animals_backgrounds": {
           "hello_world_background": "మీరు `సెట్ నేపథ్య` బ్లాక్ను `క్లిక్ చేసినప్పుడు` ఈవెంట్ బ్లాక్ కింద `సెట్ బ్యాక్గ్రౌండ్` బ్లాక్ను కనెక్ట్ చేయడం ద్వారా నేపథ్యాన్ని మార్చవచ్చు:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"cuteanimals_hippo\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setBackgroundImageAs\">\n        <title name=\"IMG\">\"gradient_30\"</title>\n      </block>\n    </next>\n  </block>\n</xml>"
@@ -174,6 +202,9 @@
         "helloworld_animals_sizes": {
           "storyboard_changePropBy": "మీరు స్ప్రైట్ పరిమాణాన్ని పదే పదే మార్చాలనుకుంటే (సంఘటనలతో), ఈ బ్లాక్ను ఉపయోగించండి:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"cuteanimals_cheetah_hello\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>",
           "storyboard_setProp": "ఒక స్ప్రైట్ యొక్క పరిమాణం కేవలం ఒక సారి సెట్, మీరు ఈ బ్లాక్ ఉపయోగించవచ్చు:\n\n<xml><block type=\"gamelab_setProp\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"cuteanimals_tiger\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">50</title>\n        </block>\n      </value>\n    </block></xml>"
+        },
+        "helloworld_bunny_click_2023": {
+          "sprite_say": "స్ప్రైట్ ఏదో చెప్పడానికి, కోడ్ యొక్క బ్లాక్లను ఇలా కనెక్ట్ చేయండి:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"face_pizza_1\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_pizza_1\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
         },
         "helloworld_emoji_backgrounds": {
           "hello_world_background": "మీరు `సెట్ నేపథ్య` బ్లాక్ను `క్లిక్ చేసినప్పుడు` ఈవెంట్ బ్లాక్ కింద `సెట్ బ్యాక్గ్రౌండ్` బ్లాక్ను కనెక్ట్ చేయడం ద్వారా నేపథ్యాన్ని మార్చవచ్చు:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"emoji_35_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setBackgroundImageAs\">\n        <title name=\"IMG\">\"gradient_17_1\"</title>\n      </block>\n    </next>\n  </block>\n</xml>"
@@ -207,6 +238,9 @@
         "helloworld_food_backgrounds": {
           "hello_world_background": "మీరు `సెట్ నేపథ్య` బ్లాక్ను `క్లిక్ చేసినప్పుడు` ఈవెంట్ బ్లాక్ కింద `సెట్ బ్యాక్గ్రౌండ్` బ్లాక్ను కనెక్ట్ చేయడం ద్వారా నేపథ్యాన్ని మార్చవచ్చు:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_avocado_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setBackgroundImageAs\">\n        <title name=\"IMG\">\"gradient_25_1\"</title>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
+        "helloworld_food_backgrounds_2023": {
+          "hello_world_background": "మీరు `సెట్ నేపథ్య` బ్లాక్ను `క్లిక్ చేసినప్పుడు` ఈవెంట్ బ్లాక్ కింద `సెట్ బ్యాక్గ్రౌండ్` బ్లాక్ను కనెక్ట్ చేయడం ద్వారా నేపథ్యాన్ని మార్చవచ్చు:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_avocado_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setBackgroundImageAs\">\n        <title name=\"IMG\">\"gradient_25_1\"</title>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
         "helloworld_food_backgrounds_soccer-2022": {
           "hello_world_background": "మీరు `సెట్ నేపథ్య` బ్లాక్ను `క్లిక్ చేసినప్పుడు` ఈవెంట్ బ్లాక్ కింద `సెట్ బ్యాక్గ్రౌండ్` బ్లాక్ను కనెక్ట్ చేయడం ద్వారా నేపథ్యాన్ని మార్చవచ్చు:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_avocado_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setBackgroundImageAs\">\n        <title name=\"IMG\">\"gradient_25_1\"</title>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
@@ -214,6 +248,9 @@
           "hello_world_background": "మీరు `సెట్ నేపథ్య` బ్లాక్ను `క్లిక్ చేసినప్పుడు` ఈవెంట్ బ్లాక్ కింద `సెట్ బ్యాక్గ్రౌండ్` బ్లాక్ను కనెక్ట్ చేయడం ద్వారా నేపథ్యాన్ని మార్చవచ్చు:\n\n<xml><block type=\"gamelab_spriteClicked\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_avocado_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setBackgroundImageAs\">\n        <title name=\"IMG\">\"gradient_25_1\"</title>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "helloworld_food_behaviors": {
+          "storyboard_behavior_example": "_గమనిక:_ స్ప్రైట్కు ప్రవర్తనను ఇవ్వడానికి, మీరు `స్పిన్నింగ్ రైట్` వంటి ఆకుపచ్చ ప్రవర్తన బ్లాక్లలో ఒకదానితో `స్ప్రైట్ బిగినింగ్` బ్లాక్ను ఉపయోగించాలి.\n\n<xml><block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"face_burger_1\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">spinning right</title>\n              </block>\n              </value></block></xml>"
+        },
+        "helloworld_food_behaviors_2023": {
           "storyboard_behavior_example": "_గమనిక:_ స్ప్రైట్కు ప్రవర్తనను ఇవ్వడానికి, మీరు `స్పిన్నింగ్ రైట్` వంటి ఆకుపచ్చ ప్రవర్తన బ్లాక్లలో ఒకదానితో `స్ప్రైట్ బిగినింగ్` బ్లాక్ను ఉపయోగించాలి.\n\n<xml><block type=\"gamelab_addBehaviorSimple\">\n            <value name=\"SPRITE\">\n              <block type=\"gamelab_allSpritesWithAnimation\">\n                <title name=\"ANIMATION\">\"face_burger_1\"</title>\n              </block>\n            </value>\n            <value name=\"BEHAVIOR\">\n              <block type=\"gamelab_behavior_get\">\n                <mutation></mutation>\n                <title name=\"VAR\" id=\"spinning right\">spinning right</title>\n              </block>\n              </value></block></xml>"
         },
         "helloworld_food_behaviors_soccer-2022": {
@@ -226,6 +263,10 @@
           "hw_click_sprites": "ప్రోగ్రామ్ నడుస్తున్నప్పుడు స్ప్రిట్స్ పై క్లిక్ చేయండి.",
           "hw_no_changes": "మీరు ఈ స్థాయిలో ఏ కోడ్ మార్చడానికి అవసరం లేదు."
         },
+        "helloworld_food_click_2023": {
+          "hw_click_sprites": "ప్రోగ్రామ్ నడుస్తున్నప్పుడు స్ప్రిట్స్ పై క్లిక్ చేయండి.",
+          "hw_no_changes": "మీరు ఈ స్థాయిలో ఏ కోడ్ మార్చడానికి అవసరం లేదు."
+        },
         "helloworld_food_click_soccer-2022": {
           "hw_click_sprites": "ప్రోగ్రామ్ నడుస్తున్నప్పుడు స్ప్రిట్స్ పై క్లిక్ చేయండి.",
           "hw_no_changes": "మీరు ఈ స్థాయిలో ఏ కోడ్ మార్చడానికి అవసరం లేదు."
@@ -235,6 +276,9 @@
           "hw_no_changes": "మీరు ఈ స్థాయిలో ఏ కోడ్ మార్చడానికి అవసరం లేదు."
         },
         "helloworld_food_costumes": {
+          "hello_world_costumes": "ఈవెంట్ బ్లాక్ క్లిక్ చేసినప్పుడు `మార్పు దుస్తులు`బ్లాక్ను ``కింద కనెక్ట్ చేయడానికి ప్రయత్నించండి.\n\n<xml><block type=\"gamelab_spriteClicked\" deletable=\"false\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n        <title name=\"ANIMATION\">\"face_burger_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setAnimation\">\n        <title name=\"ANIMATION\">\"face_taco_1\"</title>\n        <value name=\"THIS\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"face_burger_1\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n</xml>"
+        },
+        "helloworld_food_costumes_2023": {
           "hello_world_costumes": "ఈవెంట్ బ్లాక్ క్లిక్ చేసినప్పుడు `మార్పు దుస్తులు`బ్లాక్ను ``కింద కనెక్ట్ చేయడానికి ప్రయత్నించండి.\n\n<xml><block type=\"gamelab_spriteClicked\" deletable=\"false\">\n    <title name=\"CONDITION\">\"when\"</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\" can_disconnect_from_parent=\"false\">\n        <title name=\"ANIMATION\">\"face_burger_1\"</title>\n      </block>\n    </value>\n    <next>\n      <block type=\"gamelab_setAnimation\">\n        <title name=\"ANIMATION\">\"face_taco_1\"</title>\n        <value name=\"THIS\">\n          <block type=\"gamelab_allSpritesWithAnimation\">\n            <title name=\"ANIMATION\">\"face_burger_1\"</title>\n          </block>\n        </value>\n      </block>\n    </next>\n  </block>\n</xml>"
         },
         "helloworld_food_costumes_soccer-2022": {
@@ -255,6 +299,9 @@
         "helloworld_food_location": {
           "location_pin_hint": "స్ప్రైట్ స్థానాన్ని మార్చడానికి, స్థాన బ్లాక్లోని పిన్ను క్లిక్ చేసి, ఆపై మీరు ఎక్కడికి వెళ్లాలనుకుంటున్నారో క్లిక్ చేయండి.\n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
         },
+        "helloworld_food_location_2023": {
+          "location_pin_hint": "స్ప్రైట్ స్థానాన్ని మార్చడానికి, స్థాన బ్లాక్లోని పిన్ను క్లిక్ చేసి, ఆపై మీరు ఎక్కడికి వెళ్లాలనుకుంటున్నారో క్లిక్ చేయండి.\n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
+        },
         "helloworld_food_location_soccer-2022": {
           "location_pin_hint": "స్ప్రైట్ స్థానాన్ని మార్చడానికి, స్థాన బ్లాక్లోని పిన్ను క్లిక్ చేసి, ఆపై మీరు ఎక్కడికి వెళ్లాలనుకుంటున్నారో క్లిక్ చేయండి.\n\n![](https://images.code.org/e3267d2b50f754befc63744be14287ac-image-1633360873408.gif)"
         },
@@ -264,8 +311,11 @@
         "helloworld_food_multi": {
           "storyboard_costume": "ప్రతి స్ప్రైట్కు దుస్తులు సరిపోలాయని నిర్ధారించుకోండి.\n<xml><block type=\"gamelab_spriteSay\">\n      <title name=\"SPEECH\">Hello, broccoli!</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"face_carrot_1\"</title>\n        </block>\n      </value>\n    </block></xml>"
         },
+        "helloworld_food_multi_2023": {
+          "storyboard_costume": "ప్రతి స్ప్రైట్కు దుస్తులు సరిపోలాయని నిర్ధారించుకోండి.\n<xml><block type=\"gamelab_spriteSay\">\n      <title name=\"SPEECH\">Hello, broccoli!</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"face_carrot_1\"</title>\n        </block>\n      </value>\n    </block></xml>"
+        },
         "helloworld_food_multi_soccer-2022": {
-          "storyboard_costume": "ప్రతి స్ప్రైట్కు దుస్తులు సరిపోలాయని నిర్ధారించుకోండి.\n<xml><block type=\"gamelab_spriteSay\">\n      <title name=\"SPEECH\">Goal!</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"soccer_ball\"</title>\n        </block>\n      </value>\n    </block></xml>"
+          "storyboard_costume": "ప్రతి స్ప్రైట్కు దుస్తులు సరిపోలాయని నిర్ధారించుకోండి.\n<xml><block type=\"gamelab_spriteSay\">\n      <title name=\"SPEECH\">Goal!</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"soccer\\_ball\"</title>\n        </block>\n      </value>\n    </block></xml>"
         },
         "helloworld_food_multi_space-2022": {
           "storyboard_costume": "ప్రతి స్ప్రైట్కు దుస్తులు సరిపోలాయని నిర్ధారించుకోండి.\n<xml><block type=\"gamelab_spriteSay\">\n      <title name=\"SPEECH\">Hello, alien!</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"face_carrot_1\"</title>\n        </block>\n      </value>\n    </block></xml>"
@@ -280,6 +330,10 @@
           "hello-world-first-solution-pizza": "స్ప్రైట్ ఏదో చెప్పడానికి, కోడ్ యొక్క బ్లాక్లను ఇలా కనెక్ట్ చేయండి:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\"><next>  <block type=\"gamelab_makeNewSpriteAnon\">\n    <title name=\"ANIMATION_NAME\">\"face_pizza_1\"</title>\n    <value name=\"LOCATION\">\n      <block type=\"gamelab_location_picker\">\n        <title name=\"LOCATION\">{\"x\":200,\"y\":200}</title>\n      </block>\n    </value><next>  <block type=\"gamelab_spriteSay\">\n    <title name=\"SPEECH\">Hello, world!</title>\n    <value name=\"SPRITE\">\n      <block type=\"gamelab_allSpritesWithAnimation\">\n        <title name=\"ANIMATION\">\"face_pizza_1\"</title>\n      </block>\n    </value>\n  </block></next>\n  </block></next></block>\n</xml>"
         },
         "helloworld_food_sizes": {
+          "storyboard_changePropBy": "మీరు స్ప్రైట్ పరిమాణాన్ని పదే పదే మార్చాలనుకుంటే (సంఘటనలతో), ఈ బ్లాక్ను ఉపయోగించండి:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"face_strawberry_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>",
+          "storyboard_setProp": "ఒక స్ప్రైట్ యొక్క పరిమాణం కేవలం ఒక సారి సెట్, మీరు ఈ బ్లాక్ ఉపయోగించవచ్చు:\n\n<xml><block type=\"gamelab_setProp\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"face_strawberry_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">50</title>\n        </block>\n      </value>\n    </block></xml>"
+        },
+        "helloworld_food_sizes_2023": {
           "storyboard_changePropBy": "మీరు స్ప్రైట్ పరిమాణాన్ని పదే పదే మార్చాలనుకుంటే (సంఘటనలతో), ఈ బ్లాక్ను ఉపయోగించండి:\n\n<xml><block type=\"gamelab_changePropBy\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"face_strawberry_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">10</title>\n        </block>\n      </value>\n    </block></xml>",
           "storyboard_setProp": "ఒక స్ప్రైట్ యొక్క పరిమాణం కేవలం ఒక సారి సెట్, మీరు ఈ బ్లాక్ ఉపయోగించవచ్చు:\n\n<xml><block type=\"gamelab_setProp\">\n      <title name=\"PROPERTY\">\"scale\"</title>\n      <value name=\"SPRITE\">\n        <block type=\"gamelab_allSpritesWithAnimation\">\n          <title name=\"ANIMATION\">\"face_strawberry_1\"</title>\n        </block>\n      </value>\n      <value name=\"VAL\">\n        <block type=\"math_number\">\n          <title name=\"NUM\">50</title>\n        </block>\n      </value>\n    </block></xml>"
         },

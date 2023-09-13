@@ -107,6 +107,13 @@
             }
           }
         },
+        "Course E: Frozen Project_examples_2023": {
+          "draw a star": {
+            "parameters": {
+              "points": "పాయింట్లు"
+            }
+          }
+        },
         "Course F: Artist Project_Flowers_examples_2021": {
           "draw a star": {
             "parameters": {
@@ -135,6 +142,13 @@
             }
           }
         },
+        "CourseD_EOC_artist_2023": {
+          "draw a star": {
+            "parameters": {
+              "points": "పాయింట్లు"
+            }
+          }
+        },
         "CourseD_EOC_artist_example2021": {
           "draw a star": {
             "parameters": {
@@ -143,6 +157,13 @@
           }
         },
         "CourseD_EOC_artist_example20212022": {
+          "draw a star": {
+            "parameters": {
+              "points": "పాయింట్లు"
+            }
+          }
+        },
+        "CourseD_EOC_artist_example2021_2023": {
           "draw a star": {
             "parameters": {
               "points": "పాయింట్లు"
