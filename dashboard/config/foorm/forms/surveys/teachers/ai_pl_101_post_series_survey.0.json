@@ -201,6 +201,7 @@
           "type": "matrix",
           "name": "ai_pl_101",
           "title": "Are you planning to use what you learned in your role as {teacher_role}?",
+          "description": "Choose a response for each of the videos Listed. If you did not watch a video, please select that option.",
           "columns": [
             {
               "value": "yes_already_did",
@@ -222,23 +223,23 @@
           "rows": [
             {
               "value": "video1",
-              "text": "Video 1 - Fireside Chat"
+              "text": "Video 1: Fireside chat with Hadi Partovi and Sal Khan"
             },
             {
               "value": "video2",
-              "text": "Video 2"
+              "text": "Video 2: Demystifying AI for Educators"
             },
             {
               "value": "video3",
-              "text": "Video 3"
+              "text": "Video 3: Transforming Learning with AI"
             },
             {
               "value": "video4",
-              "text": "Video 4"
+              "text": "Video 4: Ensuring a Responsible Approach to AI"
             },
             {
               "value": "video5",
-              "text": "Video 5"
+              "text": "Video 5: Bringing AI to the Classroom"
             }
           ]
         },
@@ -305,27 +306,27 @@
           "rows": [
             {
               "value": "video1",
-              "text": "Video 1 - Fireside Chat",
+              "text": "Video 1: Fireside chat with Hadi Partovi and Sal Khan",
               "visibleIf": "{ai_pl_101.video1} <> 'didnt_watch'"
             },
             {
               "value": "video2",
-              "text": "Video 2",
+              "text": "Video 2: Demystifying AI for Educators",
               "visibleIf": "{ai_pl_101.video2} <> 'didnt_watch'"
             },
             {
               "value": "video3",
-              "text": "Video 3",
+              "text": "Video 3: Transforming Learning with AI",
               "visibleIf": "{ai_pl_101.video3} <> 'didnt_watch'"
             },
             {
               "value": "video4",
-              "text": "Video 4",
+              "text": "Video 4: Ensuring a Responsible Approach to AI",
               "visibleIf": "{ai_pl_101.video4} <> 'didnt_watch'"
             },
             {
               "value": "video5",
-              "text": "Video 5",
+              "text": "Video 5: Bringing AI to the Classroom",
               "visibleIf": "{ai_pl_101.video5} <> 'didnt_watch'"
             }
           ]
@@ -352,27 +353,27 @@
           "rows": [
             {
               "value": "video1",
-              "text": "Video 1 - Fireside Chat",
+              "text": "Video 1: Fireside chat with Hadi Partovi and Sal Khan",
               "visibleIf": "{ai_pl_101.video1} = 'didnt_watch'"
             },
             {
               "value": "video2",
-              "text": "Video 2",
+              "text": "Video 2: Demystifying AI for Educators",
               "visibleIf": "{ai_pl_101.video2} = 'didnt_watch'"
             },
             {
               "value": "video3",
-              "text": "Video 3",
+              "text": "Video 3: Transforming Learning with AI",
               "visibleIf": "{ai_pl_101.video3} = 'didnt_watch'"
             },
             {
               "value": "video4",
-              "text": "Video 4",
+              "text": "Video 4: Ensuring a Responsible Approach to AI",
               "visibleIf": "{ai_pl_101.video4} = 'didnt_watch'"
             },
             {
               "value": "video5",
-              "text": "Video 5",
+              "text": "Video 5: Bringing AI to the Classroom",
               "visibleIf": "{ai_pl_101.video5} = 'didnt_watch'"
             }
           ]
@@ -465,7 +466,7 @@
         {
           "type": "radiogroup",
           "name": "how_ai_works_pl_interest",
-          "title": "Would you be interested in a professional learning experience to teach the ‘How AI Works’ video series? ",
+          "title": "Would you be interested in engaging with further professional learning to teach the 'How AI Works' video series?",
           "choices": [
             {
               "value": "yes",

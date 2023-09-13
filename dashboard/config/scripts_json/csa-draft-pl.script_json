@@ -10,7 +10,7 @@
     },
     "new_name": null,
     "family_name": "csa-draft-pl",
-    "serialized_at": "2023-01-09 23:48:58 UTC",
+    "serialized_at": "2023-09-12 14:14:06 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "facilitator",
@@ -2797,5 +2797,80 @@
   ],
   "lessons_opportunity_standards": [
 
+  ],
+  "rubrics": [
+    {
+      "level_name": "vpl-csa-module-6-2022-u6l8-level1-clone",
+      "seeding_key": {
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "csa-draft-pl"
+      }
+    }
+  ],
+  "learning_goals": [
+    {
+      "key": "151f6997-6719-4c4d-9a9c-19b2e66d1bf4",
+      "position": 1,
+      "learning_goal": "I can parse strings",
+      "ai_enabled": false,
+      "tips": null,
+      "seeding_key": {
+        "learning_goal.key": "151f6997-6719-4c4d-9a9c-19b2e66d1bf4",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "csa-draft-pl"
+      }
+    }
+  ],
+  "learning_goal_evidence_levels": [
+    {
+      "understanding": 0,
+      "teacher_description": "parses no strings",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 0,
+        "learning_goal.key": "151f6997-6719-4c4d-9a9c-19b2e66d1bf4",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "csa-draft-pl"
+      }
+    },
+    {
+      "understanding": 1,
+      "teacher_description": "parses a string",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 1,
+        "learning_goal.key": "151f6997-6719-4c4d-9a9c-19b2e66d1bf4",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "csa-draft-pl"
+      }
+    },
+    {
+      "understanding": 2,
+      "teacher_description": "parses some strings",
+      "ai_prompt": "",
+      "seeding_key": {
+        "understanding": 2,
+        "learning_goal.key": "151f6997-6719-4c4d-9a9c-19b2e66d1bf4",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "csa-draft-pl"
+      }
+    },
+    {
+      "understanding": 3,
+      "teacher_description": "Parses many strings",
+      "ai_prompt": "Parses some strings",
+      "seeding_key": {
+        "understanding": 3,
+        "learning_goal.key": "151f6997-6719-4c4d-9a9c-19b2e66d1bf4",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "csa-draft-pl"
+      }
+    }
   ]
 }

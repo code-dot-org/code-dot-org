@@ -165,6 +165,20 @@ class PdWorkshopMailerPreview < ActionMailer::Preview
       target: :facilitator
   end
 
+  def facilitator_pre_workshop_csf_intro
+    mail :facilitator_pre_workshop,
+      Pd::Workshop::COURSE_CSF,
+      Pd::Workshop::SUBJECT_CSF_101,
+      target: :facilitator
+  end
+
+  def facilitator_pre_workshop_csf_deepdive
+    mail :facilitator_pre_workshop,
+      Pd::Workshop::COURSE_CSF,
+      Pd::Workshop::SUBJECT_CSF_201,
+      target: :facilitator
+  end
+
   def facilitator_post_workshop_csp_summer
     regional_partner = build :regional_partner, name: 'We Teach Code'
 
@@ -186,6 +200,36 @@ class PdWorkshopMailerPreview < ActionMailer::Preview
     mail :facilitator_post_workshop,
       Pd::Workshop::COURSE_CSD,
       Pd::Workshop::SUBJECT_CSD_WORKSHOP_1,
+      target: :facilitator,
+      workshop_params: {
+        num_sessions: 1,
+        id: highest_workshop_id + 5
+      }
+  end
+
+  def facilitator_post_workshop_csf_intro
+    # the way we set up workshops for mailers means they won't have an id.
+    # We want to test that this mailer can extract the workshop id correctly--find
+    # an unused id and assign it to this workshop.
+    highest_workshop_id = Pd::Workshop.last&.id || 0
+    mail :facilitator_post_workshop,
+      Pd::Workshop::COURSE_CSF,
+      Pd::Workshop::SUBJECT_CSF_101,
+      target: :facilitator,
+      workshop_params: {
+        num_sessions: 1,
+        id: highest_workshop_id + 5
+      }
+  end
+
+  def facilitator_post_workshop_csf_deepdive
+    # the way we set up workshops for mailers means they won't have an id.
+    # We want to test that this mailer can extract the workshop id correctly--find
+    # an unused id and assign it to this workshop.
+    highest_workshop_id = Pd::Workshop.last&.id || 0
+    mail :facilitator_post_workshop,
+      Pd::Workshop::COURSE_CSF,
+      Pd::Workshop::SUBJECT_CSF_201,
       target: :facilitator,
       workshop_params: {
         num_sessions: 1,
