@@ -91,6 +91,12 @@ bg:
           version_title: "'23 - '24"
         self-paced-pl-csd-2023:
           version_title: "'23-'24"
+        vpl-csp-2023:
+          version_title: '2023'
+        vpl-csa-2023:
+          version_title: '2023'
+        vpl-csd-2023:
+          version_title: '2023'
     resources:
       curriculum/csd/2017:
         name: Учебна програма

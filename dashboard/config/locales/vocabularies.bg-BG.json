@@ -439,6 +439,230 @@
         "loop/pre-express/2022": {
           "word": "Цикъл"
         },
+        "code/csc-adaptations/2023": {
+          "word": "Код"
+        },
+        "behavior/csc-adaptations/2023": {
+          "word": "Поведение"
+        },
+        "code/csc-ecosystems/2023": {
+          "word": "Код"
+        },
+        "condition/csc-ecosystems/2023": {
+          "word": "Условие"
+        },
+        "conditionals/csc-ecosystems/2023": {
+          "word": "Условия"
+        },
+        "variable/csc-ecosystems/2023": {
+          "word": "Променлива"
+        },
+        "energy/csc-ecosystems/2023": {
+          "word": "Енергия"
+        },
+        "code/csc-mappinglandmarks/2023": {
+          "word": "Код"
+        },
+        "map/csc-mappinglandmarks/2023": {
+          "word": "Карта"
+        },
+        "artist/csc-starquilts/2023": {
+          "word": "Художник"
+        },
+        "loop/csc-starquilts/2023": {
+          "word": "Цикъл"
+        },
+        "comments/csc-starquilts/2023": {
+          "word": "Коментари"
+        },
+        "code/poetry/2023": {
+          "word": "Код"
+        },
+        "algorithm/coursea/2023": {
+          "word": "Алгоритъм"
+        },
+        "debugging/coursea/2023": {
+          "word": "Отстраняване на грешки"
+        },
+        "drop/coursea/2023": {
+          "word": "Капка"
+        },
+        "programming/coursea/2023": {
+          "word": "Програмиране"
+        },
+        "loop/coursea/2023": {
+          "word": "Цикъл"
+        },
+        "algorithm/courseb/2023": {
+          "word": "Алгоритъм"
+        },
+        "debugging/courseb/2023": {
+          "word": "Отстраняване на грешки"
+        },
+        "drop/courseb/2023": {
+          "word": "Капка"
+        },
+        "programming/courseb/2023": {
+          "word": "Програмиране"
+        },
+        "loop/courseb/2023": {
+          "word": "Цикъл"
+        },
+        "algorithm/coursec/2023": {
+          "word": "Алгоритъм"
+        },
+        "debugging/coursec/2023": {
+          "word": "Отстраняване на грешки"
+        },
+        "persistence/coursec/2023": {
+          "definition": "Да не се предаваш."
+        },
+        "programming/coursec/2023": {
+          "word": "Програмиране"
+        },
+        "angle/coursec/2023": {
+          "word": "Ъгъл",
+          "definition": "Където две страни на фигура се срещнат, измерван в градуси."
+        },
+        "loop/coursec/2023": {
+          "word": "Цикъл"
+        },
+        "data/coursec/2023": {
+          "word": "Данни",
+          "definition": "Колекция от информация"
+        },
+        "graph/coursec/2023": {
+          "word": "Графика",
+          "definition": "Снимка или диаграма, която представя данни или стойности по организиран начин"
+        },
+        "binary/coursec/2023": {
+          "word": "Двоичен код"
+        },
+        "algorithm/coursed/2023": {
+          "word": "Алгоритъм"
+        },
+        "debugging/coursed/2023": {
+          "word": "Отстраняване на грешки"
+        },
+        "loop/coursed/2023": {
+          "word": "Цикъл"
+        },
+        "programming/coursed/2023": {
+          "word": "Програмиране"
+        },
+        "conditionals/coursed/2023": {
+          "word": "Условия"
+        },
+        "condition/coursed/2023": {
+          "word": "Условие",
+          "definition": "Нещо, което програмта проверява дали е вярно преди да изпълни дадено действие."
+        },
+        "behavior/coursee/2023": {
+          "word": "Поведение"
+        },
+        "loop/coursee/2023": {
+          "word": "Цикъл"
+        },
+        "function/coursee/2023": {
+          "word": "Функция"
+        },
+        "condition/coursee/2023": {
+          "word": "Условие"
+        },
+        "conditionals/coursee/2023": {
+          "word": "Условия"
+        },
+        "copyright/coursee/2023": {
+          "word": "Авторско право"
+        },
+        "define/coursee/2023": {
+          "word": "Дефиниране"
+        },
+        "user/coursef/2023": {
+          "word": "Потребител",
+          "definition": "Някой, който използва обект, включително софтуер и хардуер."
+        },
+        "algorithm/coursef/2023": {
+          "word": "Алгоритъм"
+        },
+        "behavior/coursef/2023": {
+          "word": "Поведение"
+        },
+        "variable/coursef/2023": {
+          "word": "Променлива"
+        },
+        "input/coursef/2023": {
+          "word": "Поле за въвеждане"
+        },
+        "machine_learning/coursef/2023": {
+          "word": "Машинно Обучение",
+          "definition": "Как компютрите разпознават модели и правят решения без да са програмирани за точно този случай"
+        },
+        "internet/coursef/2023": {
+          "word": "Интернет"
+        },
+        "define/coursef/2023": {
+          "word": "Дефиниране"
+        },
+        "algorithm/express/2023": {
+          "word": "Алгоритъм"
+        },
+        "debugging/express/2023": {
+          "word": "Отстраняване на грешки"
+        },
+        "programming/express/2023": {
+          "word": "Програмиране"
+        },
+        "behavior/express/2023": {
+          "word": "Поведение"
+        },
+        "loop/express/2023": {
+          "word": "Цикъл"
+        },
+        "condition/express/2023": {
+          "word": "Условие",
+          "definition": "Нещо, което програмта проверява дали е вярно преди да изпълни дадено действие."
+        },
+        "conditionals/express/2023": {
+          "word": "Условия"
+        },
+        "function/express/2023": {
+          "word": "Функция"
+        },
+        "variable/express/2023": {
+          "word": "Променлива"
+        },
+        "define/express/2023": {
+          "word": "Дефиниране"
+        },
+        "drop/pre-express/2023": {
+          "word": "Капка"
+        },
+        "algorithm/pre-express/2023": {
+          "word": "Алгоритъм"
+        },
+        "debugging/pre-express/2023": {
+          "word": "Отстраняване на грешки"
+        },
+        "programming/pre-express/2023": {
+          "word": "Програмиране"
+        },
+        "loop/pre-express/2023": {
+          "word": "Цикъл"
+        },
+        "machine_learning/how-ai-works/2023": {
+          "word": "Машинно Обучение",
+          "definition": "Как компютрите разпознават модели и правят решения без да са програмирани за точно този случай"
+        },
+        "algorithm/how-ai-works/2023": {
+          "word": "Алгоритъм"
+        },
+        "network/how-ai-works/2023": {
+          "word": "Мрежа"
+        },
+        "artificial_intelligence/how-ai-works/2023": {
+          "word": "Изкуствен интелект"
+        },
         "condition/aquatic/unversioned": {
           "word": "Условие",
           "definition": "Нещо, което програмта проверява дали е вярно преди да изпълни дадено действие."
