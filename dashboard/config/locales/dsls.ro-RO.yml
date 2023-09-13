@@ -519,6 +519,10 @@ ro-RO:
         markdown: "# Marele evenimentÎn știința calculatoarelor, evenimentele sunt
           acțiuni monitorizate de un computer. În această lecție veți reacționa diferit
           în funcție de butonul care este apăsat."
+      BigEvent-Unplugged2022_2023:
+        markdown: "# Marele evenimentÎn știința calculatoarelor, evenimentele sunt
+          acțiuni monitorizate de un computer. În această lecție veți reacționa diferit
+          în funcție de butonul care este apăsat."
       BigEvent-Unplugged_2020:
         markdown: "# Marele evenimentÎn știința calculatoarelor, evenimentele sunt
           acțiuni monitorizate de un computer. În această lecție veți reacționa diferit
@@ -531,6 +535,9 @@ ro-RO:
         markdown: "# Brățări binareCreați o brățară care vă reprezintă numele, într-un
           sistem care să fie înțeles de computere!![](https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)"
       BinaryBracelets-Unplugged2022:
+        markdown: "# Brățări binareCreați o brățară care vă reprezintă numele, într-un
+          sistem care să fie înțeles de computere!![](https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)"
+      BinaryBracelets-Unplugged2022_2023:
         markdown: "# Brățări binareCreați o brățară care vă reprezintă numele, într-un
           sistem care să fie înțeles de computere!![](https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)"
       BinaryBracelets-Unplugged_2020:
@@ -2229,6 +2236,10 @@ ro-RO:
         markdown: "# Relații de condiționalitate cu cărți de jocJucați un joc de cărți
           și creați reguli precum: „Dacă trag o carte roșie, primesc un punct” și
           „Dacă trag o carte neagră, adversarul primește un punct”."
+      ConditionalsWithCards-Unplugged2022_2023:
+        markdown: "# Relații de condiționalitate cu cărți de jocJucați un joc de cărți
+          și creați reguli precum: „Dacă trag o carte roșie, primesc un punct” și
+          „Dacă trag o carte neagră, adversarul primește un punct”."
       ConditionalsWithCards-Unplugged_2020:
         markdown: "# Relații de condiționalitate cu cărți de jocJucați un joc de cărți
           și creați reguli precum: „Dacă trag o carte roșie, primesc un punct” și
@@ -2241,9 +2252,17 @@ ro-RO:
         description: V-ați descurcat foarte bine până acum! Alegeți următoarea activitate.
           Realizați cât de multe puteți. Continuați să exersați cu bucle și cu Artistul!
         display_name: Exerciții practice cu Artistul
+      CourseE_Artist_Practice_2023:
+        description: V-ați descurcat foarte bine până acum! Alegeți următoarea activitate.
+          Realizați cât de multe puteți. Continuați să exersați cu bucle și cu Artistul!
+        display_name: Exerciții practice cu Artistul
       CourseE_Lesson_11_Artist_Practice_2022:
         display_name: Exerciții practice cu Artistul
+      CourseE_Lesson_11_Artist_Practice_2023:
+        display_name: Exerciții practice cu Artistul
       CourseE_Lesson_7_Artist_Practice_2022:
+        display_name: Exerciții practice cu Artistul
+      CourseE_Lesson_7_Artist_Practice_2023:
         display_name: Exerciții practice cu Artistul
       CourseF_outbreak_story:
         content1: descrierea aici
@@ -2394,7 +2413,98 @@ ro-RO:
           style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
           style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
           style=\"width:8%\">"
+      CourseF_outbreak_story2022_2022_pilot_-2022-2_2023:
+        content1: descrierea aici
+        markdown: "Epideme: Cod Propriu de Simulare\n\n## Bine Ai Venit în Orașul
+          Monstrullui!\nOrașul Monstrului era, de obiceim un loc vesel și sănătos.
+          Monștrii Orașului Monstrului iubeau să se plimbe și să își viziteze prietenii.
+          \n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\nÎntr-o zi, unul dintre monștri a început să se simtă
+          rău. Monstrul a căpătat un **virus**! Un virus este un germen mic, care
+          te poate face să devii bolnav. Ceilalți monștri nu au fost prea îngrijorați.
+          Au continuat să îți viziteze prietenii.\n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\nCurând după aceea, alți doi monștri s-au îmbolnăvit.
+          De același virus! Se pare că au luat virusul de la prietenul lor.\n\n<img
+          src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\nThe virus slowly spread to other monsters who were
+          nearby. The healthy monsters began to worry that they were all going to
+          get sick. The sick monsters began to worry that they were going to give
+          the virus to everyone else.\n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">"
       CourseF_outbreak_story22022_2022_pilot_-2022-2:
+        content1: descrierea aici
+        markdown: "# Epidemie: Gândind Ca un Om de Știință\n\n<img src=\"https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png\"
+          style=\"float:right; width:30%\">\n\nSimulările sun un mod minunat de a
+          învăța lucrurile care pot fi greu de observat în lumea reală. Ele îi ajută
+          pe oamenii de știință să rezolve probleme și să testeze idei noi în mod
+          sigur și eficient. Simularea ta este un mod de a arăta cum poate arăta o
+          epidemie virusală înt Orașul Monstrului.\n\n## Resetează și Reia!\nChiar
+          dacă scrii codul personal, este imposibil să știi exact ce se va întâmpla
+          când apeși pe rulare. Monștrii colindă aleatoriu, deci nu poți știi dacă
+          virului se va împrăștia rapid sau lent. Ori de câte ori schimbi codul, asigură-te
+          să fulezi simularea ta mai mult de o dată. Lucrurile nu se petrec la fel
+          de două ori!\n\n## Culegerea Datelor\nÎncearcă să scrii observațiile pe
+          măsură ce rulezi simularea. Poți număra monștrii care se îmbolnăvesc sau
+          folosi un temporizator pentru a vedea cât de rapid se petrec lucrurile.
+          De exemplu, cât durează până ce toți monștrii se îmbolnăvesc dacă niciunul
+          nu poartă măști?\n\n## Predicții\nDacă înțelegi modelul tău, poți să îl
+          folosești pentru a face predicții. Poți chiar să schimbi modul de funcționare
+          a simulării și să presupui ce va fi diferit. De exemplu:\n* Ce s-ar întâmpla
+          acă ar fi de două ori mai mulți monștri?\n* Ce s-ar întâmpla dacă monștrii
+          s-ar mișca cu jumătate din viteză?\n\n<img src=\"https://images.code.org/2e83373ffd346ce3f42917a0624d441c-image-1603749526420.png\"
+          style=\"float:right\">\n\n## Este Orașul Monstrului ca lumea reală?\nExistă
+          o limită a cât de ralist poate fi orice model\n* Ce are în comun simularea
+          epidemiei tale cu epidemiile virale din lumea reală?\n* Care sunt diferențele?\nCând
+          termini această activitate, discută aceste întrebări cu profesorii sau familia
+          ta!\n\n## Ce mai putem modela?\nAi creat deja un model de lucru al epidemiei
+          din Orașul Monstrului. Care sunt lucrurile pe care simularea ta nu le poate
+          face sau care arată ce ai dori să facă? Apasă continuă pentru a continua
+          si a învăța să modelezi și mai mult:\n* Mărind numărul de monștri în simulare\n*
+          Ajutând monștrii să își revină din virus\n* Probabilitate, imunitate, vaccinuri
+          și multe altele!\n\nDe asemenea, poți să partajezi modelul tău de simulare
+          cu alții, sau să partajezi un mesaj despre ce crezi că putem să facem ca
+          să îi menținem pe ceilalți sănătoși atunci când un virus intră în oraș. "
+      CourseF_outbreak_story22022_2022_pilot_-2022-2_2023:
         content1: descrierea aici
         markdown: "# Epidemie: Gândind Ca un Om de Știință\n\n<img src=\"https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png\"
           style=\"float:right; width:30%\">\n\nSimulările sun un mod minunat de a
@@ -2545,6 +2655,15 @@ ro-RO:
           cum ar fi **aplicațiile pentru smartphone**.* Proiectarea de aplicații care
           sunt accesibile pentru persoanele cu dizabilități face ca aceste aplicații
           să fie mai bune și pentru toți ceilalți!![](https://images.code.org/0c670d0d9078657a870df0ca799492cb-image-1557166420066.png)"
+      DesigningForAccessibilityMarkdownLevel2022_2023:
+        markdown: "# Design pentru accesibilitate* În universul științei calculatoarelor,
+          **accesibilitatea** se referă la crearea de tehnologie pentru persoanele
+          cu dizabilități.* Dizabilitățile pot fi fizice, auditive, vizuale și de
+          multe alte feluri.* Dizabilitățile sunt diverse și îi afectează pe oameni
+          în moduri diferite, inclusiv în ceea ce privește utilizarea tehnologiei,
+          cum ar fi **aplicațiile pentru smartphone**.* Proiectarea de aplicații care
+          sunt accesibile pentru persoanele cu dizabilități face ca aceste aplicații
+          să fie mai bune și pentru toți ceilalți!![](https://images.code.org/0c670d0d9078657a870df0ca799492cb-image-1557166420066.png)"
       DesigningForAccessibilityMarkdownLevel_2019:
         markdown: "# Design pentru accesibilitate* În universul științei calculatoarelor,
           **accesibilitatea** se referă la crearea de tehnologie pentru persoanele
@@ -2580,6 +2699,10 @@ ro-RO:
         markdown: "# Partajare digitalăÎn această lecție veți înțelege provocările
           și avantajele respectării drepturilor de proprietate intelectuală și a drepturilor
           de autor, în special în mediile digitale."
+      DigitalSharing-Unplugged2022_2023:
+        markdown: "# Partajare digitalăÎn această lecție veți înțelege provocările
+          și avantajele respectării drepturilor de proprietate intelectuală și a drepturilor
+          de autor, în special în mediile digitale."
       DigitalSharing-Unplugged_2020:
         markdown: "# Partajare digitalăÎn această lecție veți înțelege provocările
           și avantajele respectării drepturilor de proprietate intelectuală și a drepturilor
@@ -2594,6 +2717,11 @@ ro-RO:
 
           În această lecție, veți învăța să folosiți și să scrieți povestiri cu spații necompletate. Urmăriți acest clip video pentru a afla care este legătura dintre acestea și știința calculatoarelor.
       EnvelopeVariables-Unplugged_2021_22022_2022_pilot_-2022-2:
+        markdown: |
+          # Povești cu spații necompletate
+
+          În această lecție, veți învăța să folosiți și să scrieți povestiri cu spații necompletate. Urmăriți acest clip video pentru a afla care este legătura dintre acestea și știința calculatoarelor.
+      EnvelopeVariables-Unplugged_2021_22022_2022_pilot_-2022-2_2023:
         markdown: |
           # Povești cu spații necompletate
 
@@ -2622,6 +2750,9 @@ ro-RO:
       GettingLoopy-Unplugged2022:
         markdown: "# Cum e să ai mintea creațăÎn această lecție este prezentat conceptul
           de bucle în programare, prin dans."
+      GettingLoopy-Unplugged2022_2023:
+        markdown: "# Cum e să ai mintea creațăÎn această lecție este prezentat conceptul
+          de bucle în programare, prin dans."
       GettingLoopy-Unplugged_2020:
         markdown: "# Cum e să ai mintea creațăÎn această lecție este prezentat conceptul
           de bucle în programare, prin dans."
@@ -2634,6 +2765,9 @@ ro-RO:
       GraphPaperProgramming-Unplugged2022:
         markdown: "# Programare cu hârtie de copiatScrieți algoritmi pe care colegii
           voștri îi pot folosi pentru a desena imagini."
+      GraphPaperProgramming-Unplugged2022_2023:
+        markdown: "# Programare cu hârtie de copiatScrieți algoritmi pe care colegii
+          voștri îi pot folosi pentru a desena imagini."
       GraphPaperProgramming-Unplugged_2020:
         markdown: "# Programare cu hârtie de copiatScrieți algoritmi pe care colegii
           voștri îi pot folosi pentru a desena imagini."
@@ -2644,6 +2778,9 @@ ro-RO:
         markdown: "# Hărți veseleCreați un algoritm pentru a mișca un personaj printr-un
           labirint."
       HappyMaps-Unplugged2022:
+        markdown: "# Hărți veseleCreați un algoritm pentru a mișca un personaj printr-un
+          labirint."
+      HappyMaps-Unplugged2022_2023:
         markdown: "# Hărți veseleCreați un algoritm pentru a mișca un personaj printr-un
           labirint."
       HappyMaps-Unplugged_2020:
@@ -2779,6 +2916,11 @@ ro-RO:
 
           Construiți propriul internet în sala de clasă cu ajutorul unor bucăți de hârtie.
       Internet-Unplugged2022_2022_pilot_-2022-2:
+        markdown: |
+          # Internetul
+
+          Construiți propriul internet în sala de clasă cu ajutorul unor bucăți de hârtie.
+      Internet-Unplugged2022_2022_pilot_-2022-2_2023:
         markdown: |
           # Internetul
 
@@ -3028,6 +3170,9 @@ ro-RO:
       MyLoopyRoboticFriends-Unplugged2022:
         markdown: "# Prietenii mei, roboții trăsnițiScurtați programele cu ajutorul
           buclelor!"
+      MyLoopyRoboticFriends-Unplugged2022_2023:
+        markdown: "# Prietenii mei, roboții trăsnițiScurtați programele cu ajutorul
+          buclelor!"
       MyLoopyRoboticFriends-Unplugged_2020:
         markdown: "# Prietenii mei, roboții trăsnițiScurtați programele cu ajutorul
           buclelor!"
@@ -3038,6 +3183,9 @@ ro-RO:
         markdown: "# Prietenii mei, roboțiiÎnvățați să programați scriind cod pentru
           prietenii voștri!"
       MyRoboticFriends-Unplugged2022:
+        markdown: "# Prietenii mei, roboțiiÎnvățați să programați scriind cod pentru
+          prietenii voștri!"
+      MyRoboticFriends-Unplugged2022_2023:
         markdown: "# Prietenii mei, roboțiiÎnvățați să programați scriind cod pentru
           prietenii voștri!"
       MyRoboticFriends-Unplugged_2020:
@@ -3485,6 +3633,9 @@ ro-RO:
       PowerOfWords-Unplugged2022_2022_pilot_-2022-2:
         markdown: "# Puterea cuvintelor## Ce ar trebui să faceți atunci când cineva
           folosește un limbaj răutăcios sau jignitor pe internet?"
+      PowerOfWords-Unplugged2022_2022_pilot_-2022-2_2023:
+        markdown: "# Puterea cuvintelor## Ce ar trebui să faceți atunci când cineva
+          folosește un limbaj răutăcios sau jignitor pe internet?"
       PowerOfWords-Unplugged_2020:
         markdown: "# Puterea cuvintelor## Ce ar trebui să faceți atunci când cineva
           folosește un limbaj răutăcios sau jignitor pe internet?"
@@ -3498,6 +3649,9 @@ ro-RO:
       PrivatePersonalInformation-Unplugged2022:
         markdown: "# Informații private și informații personale## Ce informații despre
           voi puteți partaja online?"
+      PrivatePersonalInformation-Unplugged2022_2023:
+        markdown: "# Informații private și informații personale## Ce informații despre
+          voi puteți partaja online?"
       PrivatePersonalInformation-Unplugged_2020:
         markdown: "# Informații private și informații personale## Ce informații despre
           voi puteți partaja online?"
@@ -3508,6 +3662,9 @@ ro-RO:
         markdown: "# Programare cu ștafetăOrganizați-vă în echipe și lucrați împreună
           pentru a scrie programe care să deseneze imagini."
       RelayProgramming-Unplugged2022:
+        markdown: "# Programare cu ștafetăOrganizați-vă în echipe și lucrați împreună
+          pentru a scrie programe care să deseneze imagini."
+      RelayProgramming-Unplugged2022_2023:
         markdown: "# Programare cu ștafetăOrganizați-vă în echipe și lucrați împreună
           pentru a scrie programe care să deseneze imagini."
       RelayProgramming-Unplugged_2020:
@@ -3523,6 +3680,9 @@ ro-RO:
         markdown: "# Compoziți muzicaleFolosiți conceptul de refren dintr-un cântec
           pentru a învăța despre definirea și apelarea funcțiilor."
       Songwriting-Unplugged2022:
+        markdown: "# Compoziți muzicaleFolosiți conceptul de refren dintr-un cântec
+          pentru a învăța despre definirea și apelarea funcțiilor."
+      Songwriting-Unplugged2022_2023:
         markdown: "# Compoziți muzicaleFolosiți conceptul de refren dintr-un cântec
           pentru a învăța despre definirea și apelarea funcțiilor."
       Songwriting-Unplugged_2020:
@@ -3640,6 +3800,13 @@ ro-RO:
         questions:
         - {}
       TheRightAppMarkdownLevel2022:
+        markdown: "# Aplicația potrivită* Toată lumea folosește computere în zilele
+          noastre, în special smartphone-uri. * Aplicațiile pentru smartphone-uri
+          îi ajută pe oameni să vorbească cu prietenii, să asculte muzică, să facă
+          cumpărături sau pur și simplu să navigheze pe internet.* Este important
+          ca programatorii să înțeleagă nevoile celorlalți și să conceapă aplicațiile
+          ținând cont de ele!![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)"
+      TheRightAppMarkdownLevel2022_2023:
         markdown: "# Aplicația potrivită* Toată lumea folosește computere în zilele
           noastre, în special smartphone-uri. * Aplicațiile pentru smartphone-uri
           îi ajută pe oameni să vorbească cu prietenii, să asculte muzică, să facă
@@ -4108,11 +4275,19 @@ ro-RO:
         description: Ați ajuns la ultima lecție! Selectați proiectul pe care doriți
           să-l creați.
         display_name: Proiect de final de curs
+      courseAB_EOC2022_2023:
+        description: Ați ajuns la ultima lecție! Selectați proiectul pe care doriți
+          să-l creați.
+        display_name: Proiect de final de curs
       courseAB_EOC_2021:
         description: Ați ajuns la ultima lecție! Selectați proiectul pe care doriți
           să-l creați.
         display_name: Proiect de final de curs
       courseB_EOC2022:
+        description: Ați ajuns la ultima lecție! Selectați proiectul pe care doriți
+          să-l creați.
+        display_name: Proiect de final de curs
+      courseB_EOC2022_2023:
         description: Ați ajuns la ultima lecție! Selectați proiectul pe care doriți
           să-l creați.
         display_name: Proiect de final de curs
@@ -4136,6 +4311,23 @@ ro-RO:
         - text: Analizați cu atenție codul care urmează. Ce se va întâmpla atunci
             când veți face clic pe „Rulează”?
       courseC_multi_artist_prog6_predict12022:
+        answers:
+        - correct: true
+          feedback: Greșit.  Artistul desenează un pătrat.
+          text: Artistul va desena un triunghi cu trei laturi egale.
+        - correct: true
+          feedback: Greșit.  Artistul desenează un pătrat.
+          text: Artistul va desena o singură linie.
+        - correct: true
+          feedback: Corect!
+          text: Artistul va desena un pătrat.
+        - correct: true
+          feedback: Greșit. Artistul desenează un pătrat.
+          text: Artistul va desena un pentagon.
+        questions:
+        - text: Analizați cu atenție codul care urmează. Ce se va întâmpla atunci
+            când veți face clic pe „Rulează”?
+      courseC_multi_artist_prog6_predict12022_2023:
         answers:
         - correct: true
           feedback: Greșit.  Artistul desenează un pătrat.
@@ -4255,6 +4447,26 @@ ro-RO:
         questions:
         - text: Uitați-vă cu atenție la codul care urmează. Câți dovleci va culege
             fermierul după ce veți face click pe „Rulează”?
+      courseC_multi_harvester_loops11_predict12022_2023:
+        answers:
+        - correct: true
+          feedback: Greșit. Fermierul va culege 4 dovleci în fiecare dintre cele 3
+            bucle. 4 ori 3 egal cu 12!
+          text: '4'
+        - correct: true
+          feedback: Corect!
+          text: '12'
+        - correct: true
+          feedback: Greșit. Fermierul va culege 4 dovleci în fiecare dintre cele 3
+            bucle. 4 ori 3 egal cu 12!
+          text: '15'
+        - correct: true
+          feedback: Greșit. Fermierul va culege 4 dovleci în fiecare dintre cele 3
+            bucle. 4 ori 3 egal cu 12!
+          text: '20'
+        questions:
+        - text: Uitați-vă cu atenție la codul care urmează. Câți dovleci va culege
+            fermierul după ce veți face click pe „Rulează”?
       courseC_multi_harvester_loops11_predict1_2018:
         answers:
         - correct: true
@@ -4340,6 +4552,22 @@ ro-RO:
         questions:
         - {}
       courseC_multi_maze_debugging8_predict12022:
+        answers:
+        - correct: true
+          text: Scrat va ajunge la ghindă. Nu există erori în cod.
+        - correct: true
+          text: Scrat nu va ajunge la ghindă pentru că se întoarce în direcția greșită.
+        - correct: true
+          text: Scrat nu va ajunge la ghindă pentru că nu sunt suficiente blocuri
+            `move forward`.
+        - correct: true
+          feedback: Scrat nu va ajunge la ghindă pentru că se întoarce în direcția
+            greșită.
+          text: Scrat nu se va deplasa de pe primul bloc.
+        questions:
+        - text: Căutați erorile din acest cod. Va ajunge Scrat la ghindă sau există
+            o problemă?
+      courseC_multi_maze_debugging8_predict12022_2023:
         answers:
         - correct: true
           text: Scrat va ajunge la ghindă. Nu există erori în cod.
@@ -4454,6 +4682,23 @@ ro-RO:
         questions:
         - text: Citiți codul care urmează cu atenție. Ce se va întâmpla atunci când
             faceți clic pe „Rulează”?
+      courseC_multi_maze_programming8_predict12022_2023:
+        answers:
+        - correct: true
+          feedback: Greșit. Cu acest cod pasărea va ajunge fără probleme la porc.
+          text: Pasărea va ajunge la distanță de un pas de porc.
+        - correct: true
+          feedback: Corect!
+          text: Pasărea va ajunge la porc.
+        - correct: true
+          feedback: Greșit. Cu acest cod pasărea va ajunge fără probleme la porc.
+          text: Pasărea va ajunge la TNT.
+        - correct: true
+          feedback: Greșit. Cu acest cod pasărea va ajunge fără probleme la porc.
+          text: Pasărea se va lovi de perete.
+        questions:
+        - text: Citiți codul care urmează cu atenție. Ce se va întâmpla atunci când
+            faceți clic pe „Rulează”?
       courseC_multi_maze_programming8_predict1_2018:
         answers:
         - correct: true
@@ -4537,6 +4782,25 @@ ro-RO:
         questions:
         - text: Ce credeți că se va întâmpla atunci când faceți clic pe „Rulează”?
       courseC_multi_starWars_predict12022:
+        answers:
+        - correct: true
+          feedback: Greșit. Blocul repeat îl va determina pe BB-8 să se deplaseze
+            înainte de 5 ori.
+          text: BB-8 nu se va mișca.
+        - correct: true
+          feedback: Greșit. Blocul repeat îl va determina pe BB-8 să se deplaseze
+            înainte de 5 ori.
+          text: BB-8 se va deplasa doar cu un spațiu
+        - correct: true
+          feedback: Corect!
+          text: BB-8 se va deplasa de 5 ori și va strânge tot fierul vechi.
+        - correct: true
+          feedback: Greșit. Blocul repeat îl va determina pe BB-8 să se deplaseze
+            înainte de 5 ori.
+          text: BB-8 se va deplasa doar cu 3 spații.
+        questions:
+        - text: Ce credeți că se va întâmpla atunci când faceți clic pe „Rulează”?
+      courseC_multi_starWars_predict12022_2023:
         answers:
         - correct: true
           feedback: Greșit. Blocul repeat îl va determina pe BB-8 să se deplaseze
@@ -4665,6 +4929,27 @@ ro-RO:
         questions:
         - text: Uitați-vă cu atenție la codul care urmează. Ce se va întâmpla atunci
             când veți face clic pe „Rulează”?
+      courseC_multi_starWars_predict22022_2023:
+        answers:
+        - correct: true
+          feedback: Greșit. Prima buclă îl lasă pe BB-8 să se deplaseze înainte doar
+            cu 2 spații, dar el trebuie să se deplaseze înainte cu 3 spații.
+          text: BB-8 se va deplasa prea mult în prima buclă.
+        - correct: true
+          feedback: Corect!
+          text: BB-8 nu se va deplasa suficient de mult în prima buclă pentru a strânge
+            tot fierul vechi.
+        - correct: true
+          feedback: Greșit. Prima buclă îl lasă pe BB-8 să se deplaseze înainte doar
+            cu 2 spații, dar el trebuie să se deplaseze înainte cu 3 spații.
+          text: BB-8 va strânge tot fierul vechi fără probleme.
+        - correct: true
+          feedback: Greșit. Prima buclă îl lasă pe BB-8 să se deplaseze înainte doar
+            cu 2 spații, dar el trebuie să se deplaseze înainte cu 3 spații.
+          text: BB-8 se va întoarce în direcția greșită după prima buclă.
+        questions:
+        - text: Uitați-vă cu atenție la codul care urmează. Ce se va întâmpla atunci
+            când veți face clic pe „Rulează”?
       courseC_multi_starWars_predict2_2018:
         answers:
         - correct: true
@@ -4747,6 +5032,10 @@ ro-RO:
         description: Ați ajuns la ultima lecție din cursul D! Selectați un proiect
           pe care doriți să-l creați.
         display_name: Proiect de final de curs
+      courseD_EOC2022_2023:
+        description: Ați ajuns la ultima lecție din cursul D! Selectați un proiect
+          pe care doriți să-l creați.
+        display_name: Proiect de final de curs
       courseD_EOC_2020:
         description: Ați ajuns la ultima lecție din cursul D! Selectați un proiect
           pe care doriți să-l creați.
@@ -4756,6 +5045,10 @@ ro-RO:
           pe care doriți să-l creați.
         display_name: Proiect de final de curs
       courseD_EOC_examples2022:
+        description: Sunteți pe punctul de a începe proiectul final. Înainte de a
+          începe, consultați exemplele de proiecte.
+        display_name: Exemple de proiecte
+      courseD_EOC_examples2022_2023:
         description: Sunteți pe punctul de a începe proiectul final. Înainte de a
           începe, consultați exemplele de proiecte.
         display_name: Exemple de proiecte
@@ -4840,6 +5133,32 @@ ro-RO:
         - text: Uitați-vă cu atenție la codul de mai jos. Ce desen credeți că va crea
             programul atunci când faceți clic pe „Rulează”?
       courseD_multi_artist_nestedLoops9_predict12022:
+        answers:
+        - correct: true
+          feedback: Corect!
+          text: A
+        - correct: true
+          feedback: Greșit.  Bucla interioară creează un pentagon, iar bucla exterioară
+            îl repetă de 4 ori într-un cerc.
+          text: B
+        - correct: true
+          feedback: Greșit.  Bucla interioară creează un pentagon, iar bucla exterioară
+            îl repetă de 4 ori într-un cerc.
+          text: C
+        - correct: true
+          feedback: Greșit.  Bucla interioară creează un pentagon, iar bucla exterioară
+            îl repetă de 4 ori într-un cerc.
+          text: Niciuna dintre varianele de mai sus
+        markdown: '<table><tr><td>A</td><td><img src="https://images.code.org/cfc3f8206438a60afe3be9afe7fc0a22-image-1489118742610.10.15.png"
+          width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>B</td><td><img
+          src="https://images.code.org/975b027684d2f5411b960bf82987663e-image-1489119999013.11.13.png"
+          width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>C</td><td><img
+          src="https://images.code.org/635ac54ed7cb2e2d24eb341b3ec4eecb-image-1489120024059.12.00.png"
+          width="80px" style="mix-blend-mode: multiply; clip: rect(0px,0px,0px,40px);"/></td></tr></table><br/><br/>'
+        questions:
+        - text: Uitați-vă cu atenție la codul de mai jos. Ce desen credeți că va crea
+            programul atunci când faceți clic pe „Rulează”?
+      courseD_multi_artist_nestedLoops9_predict12022_2023:
         answers:
         - correct: true
           feedback: Corect!
@@ -5011,6 +5330,27 @@ ro-RO:
             Dacă nu există o floare, albina nu ar trebui să facă nimic. Analizaț cu
             atenție codul de mai jos. Ce credeți că se va întâmpla după ce faceți
             clic pe „Rulează”?
+      courseD_multi_bee_conditionals1_predict12022_2023:
+        answers:
+        - correct: true
+          feedback: Greșit. Blocul `if at flower` garantează că albina va încerca
+            să strângă nectar doar dacă există o floare sub nor.
+          text: Albina se va deplasa spre nor și va încerca să strângă nectar, indiferent
+            de situație.
+        - correct: true
+          feedback: Corect!
+          text: Albina se va deplasa spre nor și va încerca să strângă nectar dacă
+            există o floare sub acesta.
+        - correct: true
+          feedback: Greșit. Blocul `if at flower` garantează că albina va încerca
+            să strângă nectar dacă există o floare sub nor.
+          text: Albina se va deplasa spre nor și nu va face nimic, indiferent de situație.
+        - correct: true
+          feedback: Greșit. Blocul `if at flower` garantează că albina va încerca
+            să strângă nectar doar dacă există o floare sub nor.
+          text: Albina nu va ajunge la nor.
+        questions:
+        - {}
       courseD_multi_bee_conditionals1_predict1_2018:
         answers:
         - correct: true
@@ -5190,6 +5530,31 @@ ro-RO:
         - text: 'Priviți cu atenție codul de mai jos. Ce credeți că se va întâmpla
             după ce faceți clic pe „Rulează”? Nu uitați: în spatele fiecărui nor va
             exista doar *un* fagure de miere sau *o* floare.'
+      courseD_multi_bee_conditionals7_predict22022_2023:
+        answers:
+        - correct: true
+          feedback: Corect!
+          text: Albina va strânge nectar de la fiecare floare și va produce miere
+            la fiecare fagure de miere.
+        - correct: true
+          feedback: Greșit. Blocul `if at flower` o lasă pe albină să strângă nectarul
+            de la fiecare floare și să producă miere în fiecare fagure.
+          text: Albina va încerca să strângă nectar atât de la flori, cât și din fagurele
+            de miere.
+        - correct: true
+          feedback: Greșit. Greșit. Blocul `if at flower` o lasă pe albină să strângă
+            nectarul de la fiecare floare și să producă miere în fiecare fagure.
+          text: Albina va încerca să strângă miere atât de la flori, cât și de la
+            fagurele de miere.
+        - correct: true
+          feedback: Greșit. Greșit. Blocul `if at flower` o lasă pe albină să strângă
+            nectarul de la fiecare floare și să producă miere în fiecare fagure.
+          text: Albina va încerca să strângă miere și nectar atât de la flori, cât
+            și din fagurele de miere.
+        questions:
+        - text: 'Priviți cu atenție codul de mai jos. Ce credeți că se va întâmpla
+            după ce faceți clic pe „Rulează”? Nu uitați: în spatele fiecărui nor va
+            exista doar *un* fagure de miere sau *o* floare.'
       courseD_multi_bee_conditionals7_predict2_2018:
         answers:
         - correct: true
@@ -5311,6 +5676,26 @@ ro-RO:
         questions:
         - text: Priviți cu atenție buclele imbricate de mai jos. Ce se va întâmpla
             atunci când faceți clic pe „Rulează”?
+      courseD_multi_bee_nestedLoops2_predict12022_2023:
+        answers:
+        - correct: true
+          feedback: Greșit. Albina execută în buclă acțiunea în buclă de deplasare
+            înainte și de strângere a nectarului, rezolvând astfel puzzle-ul.
+          text: Albinuța se va deplasa înainte și va strânge nectarul o singură dată.
+        - correct: true
+          feedback: Greșit. Albina execută în buclă acțiunea în buclă de deplasare
+            înainte și de strângere a nectarului, rezolvând astfel puzzle-ul.
+          text: Albina va strânge doar 2 unități de nectar.
+        - correct: true
+          feedback: Corect!
+          text: Albina va strânge tot nectarul.
+        - correct: true
+          feedback: Greșit. Albina execută în buclă acțiunea în buclă de deplasare
+            înainte și de strângere a nectarului, rezolvând astfel puzzle-ul.
+          text: Albina se va întoarce în direcția greșită.
+        questions:
+        - text: Priviți cu atenție buclele imbricate de mai jos. Ce se va întâmpla
+            atunci când faceți clic pe „Rulează”?
       courseD_multi_bee_nestedLoops2_predict1_2018:
         answers:
         - correct: true
@@ -5408,6 +5793,32 @@ ro-RO:
         - text: Uitați-vă cu atenție la codul care urmează. Câtă miere va face albina
             atunci când veți face click pe „Rulează”?
       courseD_multi_bee_nestedLoops9_predict22022:
+        answers:
+        - correct: true
+          feedback: Greșit. Albina strânge 2 unități de nectar într-o buclă deplasându-se
+            înainte, apoi 2 unități de nectar într-o buclă orientată în jos. Toate
+            acestea se află în interiorul unei alte bucle, care se repetă de două
+            ori. 4 ori 2 face 8!
+          text: '4'
+        - correct: true
+          feedback: Corect!
+          text: '8'
+        - correct: true
+          feedback: Greșit. Albina strânge 2 unități de nectar într-o buclă deplasându-se
+            înainte, apoi 2 unități de nectar într-o buclă orientată în jos. Toate
+            acestea se află în interiorul unei alte bucle, care se repetă de două
+            ori. 4 ori 2 face 8!
+          text: '10'
+        - correct: true
+          feedback: Greșit. Albina strânge 2 unități de nectar într-o buclă deplasându-se
+            înainte, apoi 2 unități de nectar într-o buclă orientată în jos. Toate
+            acestea se află în interiorul unei alte bucle, care se repetă de două
+            ori. 4 ori 2 face 8!
+          text: '12'
+        questions:
+        - text: Uitați-vă cu atenție la codul care urmează. Câtă miere va face albina
+            atunci când veți face click pe „Rulează”?
+      courseD_multi_bee_nestedLoops9_predict22022_2023:
         answers:
         - correct: true
           feedback: Greșit. Albina strânge 2 unități de nectar într-o buclă deplasându-se
@@ -5570,6 +5981,28 @@ ro-RO:
         questions:
         - text: Uitați-vă cu atenție la codul de mai jos. Ce se va întâmpla atunci
             când faceți clic pe „Rulează”?
+      courseD_multi_farmer_condLoops9_predict12022_2023:
+        answers:
+        - correct: true
+          feedback: Greșit. Nu există niciun cod aici pentru a culege dovleacul.
+          text: Culegătoarea va strânge toate recoltele.
+        - correct: true
+          feedback: Greșit. Codul o va face pe culegătoare să parcurgă în mod repetat
+            un traseu cu trepte și să culeagă cât mai mult din porumbul sau salata
+            pe care le întâlnește. Ea nu va culege dovleacul.
+          text: Culegătoarea nu va strânge niciuna dintre recolte pe calea aleasă.
+        - correct: true
+          feedback: Corect!
+          text: Culegătoarea va strânge toate recoltele, cu excepția dovleacului.
+        - correct: true
+          feedback: Greșit. Codul o va face pe culegătoare să parcurgă în mod repetat
+            un traseu cu trepte și să culeagă cât mai mult din porumbul sau salata
+            pe care le întâlnește. Ea nu va culege dovleacul.
+          text: Culegătoarea va strânge doar dovleacul.
+        markdown: Răsadurile din acest puzzle sunt fie de porumb, fie de salată.<br/>
+        questions:
+        - text: Uitați-vă cu atenție la codul de mai jos. Ce se va întâmpla atunci
+            când faceți clic pe „Rulează”?
       courseD_multi_farmer_condLoops9_predict1_2018:
         answers:
         - correct: true
@@ -5677,6 +6110,24 @@ ro-RO:
         - text: Uitați-vă cu atenție la codul de mai jos. Ce va rămâne la sfârșitul
             acestui puzzle?
       courseD_multi_farmer_while10_predict22022:
+        answers:
+        - correct: true
+          feedback: Greșit. Nu există niciun cod care să îndepărteze pământ din grămadă.
+          text: Nimic. Cu acest cod veți obține doar teren nivelat.
+        - correct: true
+          feedback: Corect!
+          text: Acest cod va lăsa grămada neatinsă.
+        - correct: true
+          feedback: Greșit. Bucla `while` acceptă bucle de orice dimensiune, dar nu
+            există niciun cod pentru a îndepărta pământ din grămadă.
+          text: Acest cod va lăsa gropile neatinse.
+        - correct: true
+          feedback: Greșit. Nu există niciun cod care să îndepărteze pământ din grămadă.
+          text: Acest cod va lăsa ultima groapă neatinsă.
+        questions:
+        - text: Uitați-vă cu atenție la codul de mai jos. Ce va rămâne la sfârșitul
+            acestui puzzle?
+      courseD_multi_farmer_while10_predict22022_2023:
         answers:
         - correct: true
           feedback: Greșit. Nu există niciun cod care să îndepărteze pământ din grămadă.
@@ -5803,6 +6254,27 @@ ro-RO:
         questions:
         - text: Uitați-vă cu atenție la codul care urmează. Ce se va întâmpla după
             ce veți face clic pe „Rulează”?
+      courseD_multi_farmer_while4_predict12022_2023:
+        answers:
+        - correct: true
+          feedback: Greșit. Fermierul va îndepărta pământul atâta timp cât există
+            o grămadă, apoi se va opri când grămada nu mai există.
+          text: Nu se va întâmpla nimic.
+        - correct: true
+          feedback: Greșit. Fermierul va îndepărta pământul atâta timp cât există
+            o grămadă, apoi se va opri când grămada nu mai există.
+          text: Fermierul nu se va opri niciodată din a îndepărta pământul.
+        - correct: true
+          feedback: Corect!
+          text: Fermierul va îndepărta pământul atâta timp cât există o grămadă, apoi
+            se va opri când grămada nu mai există.
+        - correct: true
+          feedback: Greșit. Fermierul va îndepărta pământul atâta timp cât există
+            o grămadă, apoi se va opri când grămada nu mai există.
+          text: Fermierul va îndepărta pământul o singură dată.
+        questions:
+        - text: Uitați-vă cu atenție la codul care urmează. Ce se va întâmpla după
+            ce veți face clic pe „Rulează”?
       courseD_multi_farmer_while4_predict1_2018:
         answers:
         - correct: true
@@ -5896,6 +6368,20 @@ ro-RO:
         - text: Analizați cu atenție codul care urmează. Ce se va întâmpla după ce
             veți face clic pe „Rulează”?
       courseD_multi_maze_until10_predict22022:
+        answers:
+        - correct: true
+          feedback: Corect!
+        - correct: true
+          text: Zombiul va ajunge la floarea-soarelui.
+        - correct: true
+          text: Zombiul se va întoarce la dreapta pe prima cărare și se va învârti
+            în cerc la nesfârșit.
+        - correct: true
+          text: Zombiul va fi blocat la capătul căii care merge înainte.
+        questions:
+        - text: Analizați cu atenție codul care urmează. Ce se va întâmpla după ce
+            veți face clic pe „Rulează”?
+      courseD_multi_maze_until10_predict22022_2023:
         answers:
         - correct: true
           feedback: Corect!
@@ -6043,6 +6529,29 @@ ro-RO:
         questions:
         - text: Uitați-vă cu atenție la codul de mai jos. Ce credeți că se va întâmpla
             atunci când faceți clic pe „Rulează”?
+      courseD_multi_maze_until2_predict12022_2023:
+        answers:
+        - correct: true
+          feedback: Greșit. Codul face ca pasărea să se deplaseze înainte cât timp
+            există o cale, apoi să se întoarcă la stânga. Aceasta va continua să facă
+            acest lucru până când ajunge la porc!
+          text: Pasărea nu se va deplasa deloc.
+        - correct: true
+          feedback: Corect!
+          text: Pasărea va ajunge la porc.
+        - correct: true
+          feedback: Greșit. Codul face ca pasărea să se deplaseze înainte cât timp
+            există o cale sigură, apoi să se întoarcă la stânga. Aceasta va continua
+            să facă acest lucru până când ajunge la porc!
+          text: Pasărea se va deplasa înainte și va ajunge la TNT.
+        - correct: true
+          feedback: Codul face ca pasărea să se deplaseze înainte cât timp există
+            o cale, apoi să se întoarcă la stânga. Aceasta va continua să facă acest
+            lucru până când ajunge la porc!
+          text: Pasărea se întoarce în direcția greșită.
+        questions:
+        - text: Uitați-vă cu atenție la codul de mai jos. Ce credeți că se va întâmpla
+            atunci când faceți clic pe „Rulează”?
       courseD_multi_maze_until2_predict1_2018:
         answers:
         - correct: true
@@ -6149,6 +6658,10 @@ ro-RO:
         description: Ați ajuns la sfârșitul cursului E! Selectați un proiect pe care
           doriți să-l creați.
         display_name: Proiect de final de curs
+      courseE_EOC2022_2023:
+        description: Ați ajuns la sfârșitul cursului E! Selectați un proiect pe care
+          doriți să-l creați.
+        display_name: Proiect de final de curs
       courseE_EOC_2020:
         description: Ați ajuns la sfârșitul cursului E! Selectați un proiect pe care
           doriți să-l creați.
@@ -6158,6 +6671,10 @@ ro-RO:
           doriți să-l creați.
         display_name: Proiect de final de curs
       courseE_EOC_examples2022:
+        description: Ați ajuns la sfârșitul cursului E! Selectați un proiect pe care
+          doriți să-l creați.
+        display_name: Proiect de final de curs
+      courseE_EOC_examples2022_2023:
         description: Ați ajuns la sfârșitul cursului E! Selectați un proiect pe care
           doriți să-l creați.
         display_name: Proiect de final de curs
@@ -6208,6 +6725,25 @@ ro-RO:
         questions:
         - text: Uitați-vă cu atenție la funcțiile definite mai jos. Ce va culege culegătoarea?
       courseE_multi_farmer_functions11_predict2022:
+        answers:
+        - correct: true
+          feedback: Greșit. Culegătoarea va înainta până la capătul căii, apoi se
+            va întoarce și se va deplasează înapoi până când culege salata.
+          text: Culegătoarea va strânge doi dovleci.
+        - correct: true
+          feedback: Greșit. Culegătoarea va înainta până la capătul căii, apoi se
+            va întoarce și se va deplasează înapoi până când culege salata.
+          text: Culegătoarea va strânge toți dovlecii.
+        - correct: true
+          feedback: Corect!
+          text: Culegătoarea va strânge salata.
+        - correct: true
+          feedback: Greșit. Culegătoarea va înainta până la capătul căii, apoi se
+            va întoarce și se va deplasează înapoi până când culege salata.
+          text: Culegătoarea va strânge porumbul.
+        questions:
+        - text: Uitați-vă cu atenție la funcțiile definite mai jos. Ce va culege culegătoarea?
+      courseE_multi_farmer_functions11_predict2022_2023:
         answers:
         - correct: true
           feedback: Greșit. Culegătoarea va înainta până la capătul căii, apoi se
@@ -6321,6 +6857,24 @@ ro-RO:
         questions:
         - text: Ce se va întâmpla când apăsați „Rulează”?
       courseE_prediction_artistFunction12022:
+        answers:
+        - correct: true
+          feedback: Greșit. Funcția este de fapt apelată de două ori în program.
+          text: Nimic. Funcția nu este apelată în program.
+        - correct: true
+          feedback: Greșit. Funcția este de fapt apelată de două ori în program.
+          text: Artistul va desena un singur pătrat.
+        - correct: true
+          feedback: Greșit. Lungimea fiecărei laturi a pătratului este de numai 100
+            de pixeli, dar artistul sare cu 175 de pixeli între funcții.
+          text: Artistul va desena două pătrate care se suprapun.
+        - correct: true
+          feedback: Corect! Funcția este apelată de două ori în program, cu un salt
+            între ele.
+          text: Artistul va desena două pătrate separate de un mic spațiu.
+        questions:
+        - text: Ce se va întâmpla când apăsați „Rulează”?
+      courseE_prediction_artistFunction12022_2023:
         answers:
         - correct: true
           feedback: Greșit. Funcția este de fapt apelată de două ori în program.
@@ -6463,6 +7017,23 @@ ro-RO:
         questions:
         - text: Uitați-vă cu atenție la codul care urmează. Ce se va întâmpla după
             ce veți face clic pe „Rulează”?
+      courseE_swim_fish_behavior_predict12022_2023:
+        answers:
+        - correct: true
+          feedback: Greșit. Ghemul de ierburi va începe să se rostogolească
+          text: Nu se va întâmpla nimic.
+        - correct: true
+          feedback: Greșit. Ghemul de ierburi va începe să se rostogolească
+          text: Ghemul de ierburi va pluti către partea de sus a ecranului
+        - correct: true
+          feedback: Corect!
+          text: Ghemul de ierburi va începe să se rostogolească
+        - correct: true
+          feedback: Greșit. Ghemul de ierburi va începe să se rostogolească
+          text: Tumbleweed va clipi intermitent.
+        questions:
+        - text: Uitați-vă cu atenție la codul care urmează. Ce se va întâmpla după
+            ce veți face clic pe „Rulează”?
       courseE_swim_fish_behavior_predict1_2021:
         answers:
         - correct: true
@@ -6492,11 +7063,17 @@ ro-RO:
         display_name: Proiect de final de curs
       courseF_EOC_examples2022_2022_pilot_-2022-2:
         display_name: Proiect de final de curs
+      courseF_EOC_examples2022_2022_pilot_-2022-2_2023:
+        display_name: Proiect de final de curs
       courseF_EOC_examples_2021:
         description: Ați ajuns la sfârșitul cursului F! Selectați un proiect pe care
           doriți să-l creați.
         display_name: Proiect de final de curs
       courseF_EOC_samples2022:
+        description: Sunteți pe punctul de a începe proiectul final. Înainte de a
+          începe, consultați exemplele de proiecte.
+        display_name: Proiect de final de curs
+      courseF_EOC_samples2022_2023:
         description: Sunteți pe punctul de a începe proiectul final. Înainte de a
           începe, consultați exemplele de proiecte.
         display_name: Proiect de final de curs
@@ -6554,12 +7131,19 @@ ro-RO:
         - {}
       courseF_collector_samples_2022_pilot_-2022-2:
         display_name: Explorare - Exemple de programe
+      courseF_collector_samples_2022_pilot_-2022-2_2023:
+        display_name: Explorare - Exemple de programe
       courseF_events_freeplay:
         description: Acum puteți folosi ceea ce ați învățat pentru a vă îmbunătăți
           proiectul! Continuați să adăugați elemente la program sau începeți unul
           nou!
         display_name: Evenimente - Joc liber
       courseF_events_freeplay2022_2022_pilot_-2022-2:
+        description: Acum puteți folosi ceea ce ați învățat pentru a vă îmbunătăți
+          proiectul! Continuați să adăugați elemente la program sau începeți unul
+          nou!
+        display_name: Evenimente - Joc liber
+      courseF_events_freeplay2022_2022_pilot_-2022-2_2023:
         description: Acum puteți folosi ceea ce ați învățat pentru a vă îmbunătăți
           proiectul! Continuați să adăugați elemente la program sau începeți unul
           nou!
@@ -6579,6 +7163,10 @@ ro-RO:
           | ***Tip*** |**Recapitulare**|**Depanare**|**Depanare**|**Depanare**|**Conținut opțional**|**Conținut opțional**
           | ***Concept***|*evenimente, comportamente*|*evenimente, comportamente*|*evenimente, comportamente*|*evenimente, comportamente*|*evenimente when/while*|*evenimente when/while*|
       courseF_events_practice2022_2022_pilot_-2022-2:
+        description: V-ați descurcat foarte bine până acum! Alegeți următoarea activitate.
+          Realizați cât de multe puteți. Continuați să exersați cu evenimentele!
+        display_name: Exerciții practice cu evenimente
+      courseF_events_practice2022_2022_pilot_-2022-2_2023:
         description: V-ați descurcat foarte bine până acum! Alegeți următoarea activitate.
           Realizați cât de multe puteți. Continuați să exersați cu evenimentele!
         display_name: Exerciții practice cu evenimente
@@ -6620,7 +7208,34 @@ ro-RO:
           text: Acest sprite se va roti mai întâi și se va deplasa după aceea.
         questions:
         - text: Citiți codul, apoi faceți o predicție.
+      courseF_events_predict_multi2022_2022_pilot_-2022-2_2023:
+        answers:
+        - correct: true
+          feedback: Greșit. Sprite se va și deplasa către est.
+          text: Acest sprite se va roti la dreapta.
+        - correct: true
+          feedback: Greșit. Acest sprite nu s-a oprit din rotit, așa că va întreprinde
+            ambele acțiuni simultan.
+          text: Sprite se va deplasare către est.
+        - correct: true
+          feedback: Corect! Ambele comportamente vor avea loc simultan.
+          text: Acest sprite se va roti și se va deplasa în același timp.
+        - correct: true
+          feedback: Greșit. În Laboratorul cu sprite-uri, acțiunile asociate blocurilor
+            conectate se produc imediat după ce acțiunea anterioară s-a încheiat,
+            așa că ambele comportamente se vor produce simultan.
+          text: Acest sprite se va roti mai întâi și se va deplasa după aceea.
+        questions:
+        - text: Citiți codul, apoi faceți o predicție.
       courseF_groups_predict_multi_2022_pilot_-2022-2:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      courseF_groups_predict_multi_2022_pilot_-2022-2_2023:
         answers:
         - correct: true
         - correct: true
@@ -6640,6 +7255,8 @@ ro-RO:
 
           După ce fac alegeri aici, elevii sunt redirecționați către exemple de aplicații pe care le pot explora. Această activitate trebuie să fie coordonată cu fișa de lucru Explorarea aplicațiilor, care poate fi găsită în [plan de lecție].(.././).
       courseF_intro_apps2022_2022_pilot_-2022-2:
+        display_name: Aplicații realizate cu Laboratorul cu sprite-uri
+      courseF_intro_apps2022_2022_pilot_-2022-2_2023:
         display_name: Aplicații realizate cu Laboratorul cu sprite-uri
       courseF_labels_predict_multi:
         answers:
@@ -6662,6 +7279,26 @@ ro-RO:
         - text: Acest cod poate părea familiar, dar citiți-l cu atenție. Ce se va
             afișa dacă utilizatorul tastează „pizza”?
       courseF_labels_predict_multi2022_2022_pilot_-2022-2:
+        answers:
+        - correct: true
+          feedback: Greșit. Etichetele variabilelor nu coincid.
+          text: "„O pizza vine imediat!”"
+        - correct: true
+          feedback: Greșit. Eticheta unei variabile nu este afișată niciodată.
+          text: "„Un prânz vine imediat!”"
+        - correct: true
+          feedback: Greșit. Eticheta unei variabile nu este afișată niciodată.
+          text: "„O mâncare vine imediat!”"
+        - correct: true
+          feedback: Corect! Etichetele variabilelor nu coincid.
+          text: "„Un  vine imediat!”"
+        - correct: true
+          feedback: Greșit. Evenimentul și blocul de imprimare vor funcționa.
+          text: Nu se va afișa nimic.
+        questions:
+        - text: Acest cod poate părea familiar, dar citiți-l cu atenție. Ce se va
+            afișa dacă utilizatorul tastează „pizza”?
+      courseF_labels_predict_multi2022_2022_pilot_-2022-2_2023:
         answers:
         - correct: true
           feedback: Greșit. Etichetele variabilelor nu coincid.
@@ -6755,6 +7392,29 @@ ro-RO:
         - text: Am setat variabila `length` la 50. Ce se va întâmpla atunci când veți
             face clic pe „Rulează”?
       courseF_multi_artist_variables3a_predict12022:
+        answers:
+        - correct: true
+          feedback: Corect!
+          text: Artistul va desena un triunghi cu laturile de 50 de pixeli.
+        - correct: true
+          feedback: Greșit. Variabila `length` ar trebui să fie inclusă în bucla `repeat`
+            pentru ca acest lucru să se întâmple.
+          text: Artistul va desena un poligon cu 50 de laturi, cu laturile de câte
+            3 de pixeli.
+        - correct: true
+          feedback: Greșit. Variabila `length` ar trebui să fie folosită în blocul
+            `turn` pentru ca acest lucru să se întâmple.
+          text: Artistul va desena trei laturi deschise cu întoarceri de câte 50 de
+            grade.
+        - correct: true
+          feedback: Variabila `length` este setată la 50 și este folosită în blocul
+            `move forward by`, iar artistul va desena un triunghi cu laturile de 50
+            de pixeli.
+          text: Calculatorul va solicita utilizatorului să specifice un număr.
+        questions:
+        - text: Am setat variabila `length` la 50. Ce se va întâmpla atunci când veți
+            face clic pe „Rulează”?
+      courseF_multi_artist_variables3a_predict12022_2023:
         answers:
         - correct: true
           feedback: Corect!
@@ -6956,6 +7616,34 @@ ro-RO:
         questions:
         - text: Citiți codul care urmează. Ce se va întâmpla atunci când veți face
             clic pe „Rulează”?
+      courseF_multi_bee_for3_predict12022_2023:
+        answers:
+        - correct: true
+          feedback: Greșit. Bucla `for` va permite albinuței să strângă cantitatea
+            corectă de nectar, dar este setată să ajungă doar la 4 flori.
+          text: Albinuța se va deplasa înainte și va strânge tot nectarul din fiecare
+            floare.
+        - correct: true
+          feedback: Corect!
+          text: Albinuța se va deplasa înainte și va strânge tot nectarul din fiecare
+            floare, cu excepția uneia.
+        - correct: true
+          feedback: Greșit. Bucla `for` va permite albinuței să strângă cantitatea
+            corectă de nectar, dar este setată să ajungă doar la 4 flori.
+          text: Albinuța se va deplasa înainte și va strânge tot nectarul din fiecare
+            floare.
+        - correct: true
+          feedback: Greșit. Bucla `for` va permite albinuței să strângă cantitatea
+            corectă de nectar, dar este setată să ajungă doar la 4 flori.
+          text: Albinuța se va deplasa înainte și va strânge o unitate de nectar de
+            la florile cu numerele 1 și 4.
+        markdown: 'Ah!  Folosirea buclelor `for` face ca acest puzzle să fie mult
+          mai ușor!
+
+          '
+        questions:
+        - text: Citiți codul care urmează. Ce se va întâmpla atunci când veți face
+            clic pe „Rulează”?
       courseF_multi_bee_for3_predict1_2018:
         answers:
         - correct: true
@@ -7080,6 +7768,10 @@ ro-RO:
         description: Este rândul vostru să creați tot ce vreți! Ce fel de proiect
           veți crea?
         display_name: Sprite-uri - Joc liber
+      courseF_sprites_freeplay2022_2022_pilot_-2022-2_2023:
+        description: Este rândul vostru să creați tot ce vreți! Ce fel de proiect
+          veți crea?
+        display_name: Sprite-uri - Joc liber
       courseF_sprites_practice:
         description: V-ați descurcat foarte bine până acum! Alegeți următoarea activitate.
           Realizați cât de multe puteți. Continuați să exersați cu sprite-urile și
@@ -7098,6 +7790,11 @@ ro-RO:
 
 
       courseF_sprites_practice2022_2022_pilot_-2022-2:
+        description: V-ați descurcat foarte bine până acum! Alegeți următoarea activitate.
+          Realizați cât de multe puteți. Continuați să exersați cu sprite-urile și
+          cu comportamentele!
+        display_name: Exerciții practice cu Sprite-urile
+      courseF_sprites_practice2022_2022_pilot_-2022-2_2023:
         description: V-ați descurcat foarte bine până acum! Alegeți următoarea activitate.
           Realizați cât de multe puteți. Continuați să exersați cu sprite-urile și
           cu comportamentele!
@@ -7144,6 +7841,27 @@ ro-RO:
           text: Avioanele se vor prăbuși.
         questions:
         - text: Citiți codul, apoi faceți o predicție.
+      courseF_sprites_predict_multi2022_2022_pilot_-2022-2_2023:
+        answers:
+        - correct: true
+          feedback: Greșit. Aceste sprite-uri au „comportamente” care continuă să
+            se desfășoare până când li se spune să se oprească.
+          text: Ambele avioane se vor deplasa un spațiu de-a lungul grilei, apoi se
+            vor opri.
+        - correct: true
+          feedback: Corect! Aceste comportamente le transmit avioanelor să înceapă
+            să se deplaseze și să continue să se deplaseze.
+          text: Ambele avioane se vor deplasa și nu se vor opri.
+        - correct: true
+          feedback: Greșit. Fiecare bloc de cod din Laboratorul cu sprite-uri este
+            executat instantaneu după blocul următor.
+          text: Unul dintre avioane se va deplasa primul, iar apoi celălalt avion
+            se va deplasa și el mai târziu.
+        - correct: true
+          feedback: Greșit. Poziția avioanelor nu le permite să se atingă.
+          text: Avioanele se vor prăbuși.
+        questions:
+        - text: Citiți codul, apoi faceți o predicție.
       courseF_text_practice:
         description: V-ați descurcat foarte bine până acum! Alegeți următoarea activitate.
           Realizați cât de multe puteți. Continuați să exersați cu texte și prompturi!
@@ -7163,6 +7881,10 @@ ro-RO:
         description: V-ați descurcat foarte bine până acum! Alegeți următoarea activitate.
           Realizați cât de multe puteți. Continuați să exersați cu texte și prompturi!
         display_name: Activități practice cu text și prompturi
+      courseF_text_practice2022_2022_pilot_-2022-2_2023:
+        description: V-ați descurcat foarte bine până acum! Alegeți următoarea activitate.
+          Realizați cât de multe puteți. Continuați să exersați cu texte și prompturi!
+        display_name: Activități practice cu text și prompturi
       courseF_variables2_predict2_multi2022_-2022-2:
         answers:
         - correct: true
@@ -7171,7 +7893,23 @@ ro-RO:
         - correct: true
         questions:
         - {}
+      courseF_variables2_predict2_multi2022_-2022-2_2023:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
       courseF_variables2_predict_multi2022_2022_pilot_-2022-2:
+        answers:
+        - correct: true
+        - correct: true
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      courseF_variables2_predict_multi2022_2022_pilot_-2022-2_2023:
         answers:
         - correct: true
         - correct: true
@@ -7215,6 +7953,24 @@ ro-RO:
         - text: 'Acest program îți permite să răspunzi la o întrebare tastând răspunsul
             cu ajutorul tastaturii. Blocul `print` afișează textul pe ecran. Fă o
             predicție: ce se va întâmpla după ce răspunzi la întrebare?'
+      courseF_variables_predict_multi2022_2022_pilot_-2022-2_2023:
+        answers:
+        - correct: true
+          feedback: Greșit. Blocul nume va fi înlocuit cu ceea ce introduci.
+          text: Programul va imprima mesajul „Bună ziua, nume!”
+        - correct: true
+          feedback: Corect! Datele introduse vor fi utilizate în locul blocului nume.
+          text: Programul te va întâmpina cu numele pe care l-ai introdus.
+        - correct: true
+          feedback: Greșit. Pe ecran va fi afișat text.
+          text: Sprite își va schimba dimensiunile.
+        - correct: true
+          feedback: Greșit. Se pune o singură întrebare, la începutul programului.
+          text: Calculatorul va pune o altă întrebare.
+        questions:
+        - text: 'Acest program îți permite să răspunzi la o întrebare tastând răspunsul
+            cu ajutorul tastaturii. Blocul `print` afișează textul pe ecran. Fă o
+            predicție: ce se va întâmpla după ce răspunzi la întrebare?'
       courseF_variables_projects:
         description: Veți crea fie o felicitare, fie un chatbot, fie o poveste cu
           spații necompletate. Dacă ați terminat deja \"Partea 1\" a proiectului,
@@ -7226,6 +7982,11 @@ ro-RO:
 
           Este posibil ca elevii să aibă nevoie de instrucțiuni foarte clare pentru a înțelege cum să navigheze printre opțiuni. Pentru fiecare dintre alegeri există două subniveluri. Pentru a începe, elevii trebuie să aleagă unul dintre nivelurile marcate „Partea 1”. După ce termină acel nivel, aceștia trebuie să revină în această secțiune și să selecteze „Partea 2” a *aceluiași* proiect. În primul nivel al fiecărei alegeri, elevii vor primi feedback pe măsură ce combină componentele de bază ale proiectului. Cel de-al doilea nivel este de tip „joc liber”, iar aici elevii pot să aducă orice modificări codului scris de ei.
       courseF_variables_projects2022_2022_pilot_-2022-2:
+        description: Veți crea fie o felicitare, fie un chatbot, fie o poveste cu
+          spații necompletate. Dacă ați terminat deja \"Partea 1\" a proiectului,
+          treceți la \"Partea 2\".
+        display_name: Alegeți un proiect
+      courseF_variables_projects2022_2022_pilot_-2022-2_2023:
         description: Veți crea fie o felicitare, fie un chatbot, fie o poveste cu
           spații necompletate. Dacă ați terminat deja \"Partea 1\" a proiectului,
           treceți la \"Partea 2\".
@@ -7247,6 +8008,12 @@ ro-RO:
           pentru a vedea ce doriți să creați. Apăsați \"Terminare\" când sunteți gata
           să începeți să planificați propriul program.
         display_name: Explorare - Exemple de programe
+      courseF_variables_samples2022_2022_pilot_-2022-2_2023:
+        description: Veți crea fie o felicitare, fie un chatbot, fie o poveste cu
+          spații necompletate. Înainte de a începe, explorați proiectele de mai jos
+          pentru a vedea ce doriți să creați. Apăsați \"Terminare\" când sunteți gata
+          să începeți să planificați propriul program.
+        display_name: Explorare - Exemple de programe
       courseF_variables_stop:
         content1: descriere aici
         markdown: "# Stop!\n\n## Sigur sunteți gata să mergeți mai departe? \n\n\nLa
@@ -7261,6 +8028,19 @@ ro-RO:
           nu sunteți siguri că sunteți pregătiți să treceți mai departe, consultați-vă
           cu profesorul!\n"
       courseF_variables_stop2022_2022_pilot_-2022-2:
+        content1: descrierea aici
+        markdown: "# Stop!\n\n## Sigur sunteți gata să mergeți mai departe? \n\n\nLa
+          nivelul următor, veți începe să scrieți codul pentru proiectul vostru. Această
+          etapă se desfășoară bine dacă aveți deja un plan.\n\nPlanul finalizat trebuie
+          să includă următoarele:\n\n<img src=\"https://images.code.org/b476ac330f2b66e44e02208fee386a56-image-1614802439867.png\"
+          style=\"float:left; height:70px; padding:10px\"/>\n\n* Tipul de proiect
+          pe care îl creați. De exemplu, o felicitare, un chatbot sau o poveste cu
+          spații necompletate.\n* O listă de întrebări pe care le veți pune utilizatorului.\n*
+          Alte texte pe care le veți afișa pe ecran.\n* O descriere sau un desen al
+          sprite-urilor de care veți avea nevoie (și comportamentele acestora).\n\nDacă
+          nu sunteți siguri că sunteți pregătiți să treceți mai departe, consultați-vă
+          cu profesorul!\n"
+      courseF_variables_stop2022_2022_pilot_-2022-2_2023:
         content1: descrierea aici
         markdown: "# Stop!\n\n## Sigur sunteți gata să mergeți mai departe? \n\n\nLa
           nivelul următor, veți începe să scrieți codul pentru proiectul vostru. Această
@@ -7293,6 +8073,25 @@ ro-RO:
         questions:
         - text: Ce se va întâmpla atunci când apăsați butonul „Rulează”?
       coursee_prediction_artistfunction22022:
+        answers:
+        - correct: true
+          feedback: Greșit. Bucla folosește „draw polygon” (desenează poligon) în
+            loc de „draw line of polygons” (desenează un rând de poligoane).
+          text: Artistul va rezolva corect puzzle-ul.
+        - correct: true
+          feedback: Corect!
+          text: Artistul va desena patru pătrate care vor forma o fereastră.
+        - correct: true
+          feedback: Greșit. Programul nu apelează „draw line of polygons” (desenează
+            un rând de poligoane).
+          text: Artistul va desena numai un singur rând de pătrate.
+        - correct: true
+          feedback: Greșit. Bucla se întoarce la 90 de grade între apeluri pentru
+            a „desena poligonul”.
+          text: Artistul va desena patru pătrate suprapuse.
+        questions:
+        - text: Ce se va întâmpla atunci când apăsați butonul „Rulează”?
+      coursee_prediction_artistfunction22022_2023:
         answers:
         - correct: true
           feedback: Greșit. Bucla folosește „draw polygon” (desenează poligon) în
@@ -7387,6 +8186,42 @@ ro-RO:
           text: Artistul va desena patru pătrate suprapuse.
         questions:
         - text: Ce se va întâmpla atunci când apăsați butonul „Rulează”?
+      csc_animal_adaptations_predict:
+        answers:
+        - correct: true
+        - correct: true
+          feedback: Corect!
+        - correct: true
+        - correct: true
+        questions:
+        - {}
+      csc_ecosystems_matching_cfu:
+        answers:
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+      csc_ecosystems_matching_conditionals:
+        answers:
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+        - {}
+      csc_ecosystems_matching_events:
+        answers:
+        - {}
+        - {}
+        questions:
+        - {}
+        - {}
+      csc_timecapsule_info_2023:
+        content1: descrierea aici
       csd-post-survey-2017-q11_2018:
         answers:
         - correct: true
@@ -10560,6 +11395,10 @@ ro-RO:
         content1: descrierea aici
         markdown: "# Supercetățeanul digital## Cum putem fi un exemplu pentru cei
           din jur atunci când asistăm la cyberbullying?"
+      csf_be_a_super_digital_citizen2022_2023:
+        content1: descrierea aici
+        markdown: "# Supercetățeanul digital## Cum putem fi un exemplu pentru cei
+          din jur atunci când asistăm la cyberbullying?"
       csf_be_a_super_digital_citizen_2021:
         content1: descrierea aici
         markdown: "# Supercetățeanul digital## Cum putem fi un exemplu pentru cei
@@ -10567,6 +11406,8 @@ ro-RO:
       csf_digital_trails:
         markdown: "# Urma digitală## Ce informații puteți include în amprenta digitală?"
       csf_digital_trails2022:
+        markdown: "# Urma digitală## Ce informații puteți include în amprenta digitală?"
+      csf_digital_trails2022_2023:
         markdown: "# Urma digitală## Ce informații puteți include în amprenta digitală?"
       csf_digital_trails_2021:
         markdown: "# Urma digitală## Ce informații puteți include în amprenta digitală?"
@@ -10579,6 +11420,14 @@ ro-RO:
           puțin **opt** caractere.* Folosiți litere, cifre și **simboluri** în parola
           voastră.![](https://images.code.org/bfa69295fbf33c77ecdeb79b5498d8f7-image-1584751340896.png)"
       csf_password_power-up2022:
+        content1: descrierea aici
+        markdown: "#  Îmbunătățiți-vă parolele## Sfaturi de reținut cu privire la
+          parole* Începeți cu o **frază** memorabilă.* Numai **părinții** voștri trebuie
+          să știe care este parola voastră.* Nu folosiți niciodată în parolă informații
+          **private** care vă pot dezvălui identitatea.* Creați parole care au cel
+          puțin **opt** caractere.* Folosiți litere, cifre și **simboluri** în parola
+          voastră.![](https://images.code.org/bfa69295fbf33c77ecdeb79b5498d8f7-image-1584751340896.png)"
+      csf_password_power-up2022_2023:
         content1: descrierea aici
         markdown: "#  Îmbunătățiți-vă parolele## Sfaturi de reținut cu privire la
           parole* Începeți cu o **frază** memorabilă.* Numai **părinții** voștri trebuie
@@ -10608,6 +11457,13 @@ ro-RO:
           **Să îi spuneți ce se întâmplă unui adult în care aveți încredere.* **Să
           aveți OK-ul pentru site-uri înainte de a le accesa.* **Să faceți o pauză
           de gândire online.![](https://images.code.org/f3e4987a130b27f7b589d7829b753aac-image-1584750971069.png)"
+      csf_putting_a_stop_to_online_meanness2022_2023:
+        content1: descrierea aici
+        markdown: "# STOP comportamentelor răutăcioase## Ce ar trebui să faceți dacă
+          cineva se poartă urât cu voi online?* **Să vă ridicați-vă de la calculator.*
+          **Să îi spuneți ce se întâmplă unui adult în care aveți încredere.* **Să
+          aveți OK-ul pentru site-uri înainte de a le accesa.* **Să faceți o pauză
+          de gândire online.![](https://images.code.org/f3e4987a130b27f7b589d7829b753aac-image-1584750971069.png)"
       csf_putting_a_stop_to_online_meanness_2021:
         content1: descrierea aici
         markdown: "# STOP comportamentelor răutăcioase## Ce ar trebui să faceți dacă
@@ -10618,6 +11474,8 @@ ro-RO:
       csf_safety_in_my_online_neighborhood:
         markdown: "# Cartierul meu online## Cum vizitați în siguranță locuri online?"
       csf_safety_in_my_online_neighborhood2022:
+        markdown: "# Cartierul meu online## Cum vizitați în siguranță locuri online?"
+      csf_safety_in_my_online_neighborhood2022_2023:
         markdown: "# Cartierul meu online## Cum vizitați în siguranță locuri online?"
       csf_safety_in_my_online_neighborhood_2021:
         markdown: "# Cartierul meu online## Cum vizitați în siguranță locuri online?"
@@ -12179,11 +13037,19 @@ ro-RO:
         description: Ați ajuns la sfârșitul cursului E! Selectați un proiect pe care
           doriți să-l creați.
         display_name: Proiect de final de curs
+      express_EOC2022_2023:
+        description: Ați ajuns la sfârșitul cursului E! Selectați un proiect pe care
+          doriți să-l creați.
+        display_name: Proiect de final de curs
       express_EOC_2021:
         description: Ați ajuns la sfârșitul cursului E! Selectați un proiect pe care
           doriți să-l creați.
         display_name: Proiect de final de curs
       express_EOC_examples2022:
+        description: Sunteți pe punctul de a începe proiectul final. Înainte de a
+          începe, consultați exemplele de proiecte.
+        display_name: Exemple de proiecte
+      express_EOC_examples2022_2023:
         description: Sunteți pe punctul de a începe proiectul final. Înainte de a
           începe, consultați exemplele de proiecte.
         display_name: Exemple de proiecte
@@ -12226,6 +13092,27 @@ ro-RO:
         questions:
         - {}
       grade2_multi_collector_A_predict12022:
+        answers:
+        - correct: true
+          feedback: Greșit.  Laurel încearcă să strângă comori, dar acestea nu există
+            și aceasta cauzează o eroare.
+          text: Laurel va strânge cel puțin 4 comori folosind acest cod.
+        - correct: true
+          feedback: Corect!
+          text: Laurel va încerca să strângă comori, dar acestea nu există și aceasta
+            cauzează o eroare.
+        - correct: true
+          feedback: Greșit.  Laurel încearcă să strângă comori, dar acestea nu există
+            și aceasta cauzează o eroare.
+          text: Laurel va strânge toate comorile.
+        - correct: true
+          feedback: Greșit.  Laurel încearcă să strângă comori, dar acestea nu există
+            și aceasta cauzează o eroare.
+          text: Laurel va strânge 1 comoară folosind acest cod.
+        questions:
+        - text: Uitați-vă cu atenție la acest cod. Ce credeți că se va întâmpla atunci
+            când va rula programul?
+      grade2_multi_collector_A_predict12022_2023:
         answers:
         - correct: true
           feedback: Greșit.  Laurel încearcă să strângă comori, dar acestea nu există
