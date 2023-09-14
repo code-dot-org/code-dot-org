@@ -1,12 +1,12 @@
 ---
-title: Educational Short Videos
+title: Educational short videos
 theme: responsive_full_width
 video_player: true
 ---
 
 - video_page_index = 7
-- video_page_section_title = [hoc_s(:video_library_page_title_ai_works), hoc_s(:video_library_page_title_computers_work), hoc_s(:video_library_page_title_internet_works), hoc_s(:video_library_page_title_not_hacked), hoc_s(:video_library_page_title_blockchain), hoc_s(:video_library_page_title_careers), hoc_s(:video_library_page_title_inspirational)]
-- video_page_section_desc = [hoc_s(:video_library_page_description_ai_works), hoc_s(:video_library_page_description_computers_work), hoc_s(:video_library_page_description_internet_works), hoc_s(:video_library_page_description_not_hacked), hoc_s(:video_library_page_description_blockchain), hoc_s(:video_library_page_description_careers), hoc_s(:video_library_page_description_inspirational)]
+- video_page_section_title = [hoc_s(:video_library_page_title_ai_works), hoc_s(:video_library_page_title_computers_work), hoc_s(:video_library_page_title_internet_works), hoc_s(:video_library_page_title_not_hacked), hoc_s(:video_library_page_title_blockchain), hoc_s(:video_library_page_title_inspirational), hoc_s(:video_library_page_title_careers)]
+- video_page_section_desc = [hoc_s(:video_library_page_description_ai_works), hoc_s(:video_library_page_description_computers_work), hoc_s(:video_library_page_description_internet_works), hoc_s(:video_library_page_description_not_hacked), hoc_s(:video_library_page_description_blockchain), hoc_s(:video_library_page_description_inspirational), hoc_s(:video_library_page_description_careers)]
 
 %link{href: "/css/generated/design-system-pegasus.css", rel: "stylesheet"}
 %link{href: "/css/generated/page/video-page-styles.css", rel: "stylesheet"}
@@ -15,11 +15,9 @@ video_player: true
   .wrapper.flex-container.justify-space-between.align-items-center.wrap
     .text-wrapper
       %h1{style: "color: white"}
-        =hoc_s(:teach_page_additional_materials_list_heading_02)
+        =hoc_s(:video_library_page_main_title)
       %p{style: "color: white"}
         =hoc_s(:video_library_page_hero_description)
-      %a.link-button.white{href: "#pick-a-course"}
-        =hoc_s(:call_to_action_explore_courses)
     %figure
       %img{src: "/images/banners/video-logo.png", alt: ""}
     .clear
@@ -42,9 +40,9 @@ video_player: true
       - if index === 4
         = view :carousel_blockchain_video
       - if index === 5
-        = view :carousel_cs_video
-      - if index === 6
         = view :carousel_inspirational_video
+      - if index === 6
+        = view :carousel_cs_video
   = view :section_divider_line
 
 %section.centered

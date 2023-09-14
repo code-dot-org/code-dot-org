@@ -52,7 +52,7 @@ def page_load(wait = true, blank_tab: false)
     unless blank_tab
       wait_until do
         (url = @browser.current_url) != '' &&
-           url != 'about:blank' &&
+          url != 'about:blank' &&
           @browser.execute_script('return document.readyState;') == 'complete'
       end
     end
