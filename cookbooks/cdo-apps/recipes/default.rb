@@ -24,6 +24,15 @@ apt_package %w(
   fonts-noto
 )
 
+# Used by pycall library
+apt_package %w(
+  python3
+  python3-venv
+  python3.8
+  python3.8-venv
+  python3.8-dev
+)
+
 # Used by lesson plan generator; we install on staging so the actual
 # functionality will work, on test so we can test that functionality, and on
 # adhoc so we can verify that installation continues to work
