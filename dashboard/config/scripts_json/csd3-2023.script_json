@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-09-11 22:25:33 UTC",
+    "serialized_at": "2023-09-13 16:31:26 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -16197,6 +16197,18 @@
       }
     },
     {
+      "name": "Animation and Game Design Template",
+      "url": "https://docs.google.com/presentation/d/1O1oWeMbIOetBbgmuwyXlUDmlr6L9ygQi0wLG89w_uq0/edit?usp=sharing",
+      "key": "animation_and_game_design_template",
+      "properties": {
+        "audience": "Student",
+        "type": "Resource"
+      },
+      "seeding_key": {
+        "resource.key": "animation_and_game_design_template"
+      }
+    },
+    {
       "name": "Animation Tab",
       "url": "https://drive.google.com/file/d/1ytsY-Hv17uCKmwY4Af7OpljWdsLtGfTn/view",
       "key": "animation_tab",
@@ -17551,19 +17563,6 @@
       "seeding_key": {
         "resource.key": "velocity_and_the_counter_pattern"
       }
-    },
-    {
-      "name": "Web Design Template ",
-      "url": "https://docs.google.com/presentation/d/1L7BgZu3XJVajibAfhK4c9o2R1_-nMC0ND_R3mXgN2wg/edit?usp=sharing",
-      "key": "web_design_template",
-      "properties": {
-        "audience": "Student",
-        "include_in_pdf": true,
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "web_design_template"
-      }
     }
   ],
   "lessons_resources": [
@@ -17876,6 +17875,12 @@
     {
       "seeding_key": {
         "lesson.key": "Programming for Entertainment",
+        "resource.key": "animation_and_game_design_template"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Programming for Entertainment",
         "resource.key": "app_design_for_users"
       }
     },
@@ -17901,12 +17906,6 @@
       "seeding_key": {
         "lesson.key": "Programming for Entertainment",
         "resource.key": "the_problem_solving_process"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Programming for Entertainment",
-        "resource.key": "web_design_template"
       }
     },
     {
