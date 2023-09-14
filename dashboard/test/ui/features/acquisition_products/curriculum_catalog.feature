@@ -159,13 +159,15 @@ Feature: Curriculum Catalog Page
     And I click selector "a:contains(See curriculum details)"
     And I wait until element "h1:contains(AI for Oceans)" is visible
 
+  @no_mobile
   Scenario: Signed-out user can navigate to facilitator led workshop through expanded card
     Given I am on "http://studio.code.org/catalog?quick_view=true"
     And I wait until element "h4:contains(CS Fundamentals: Course A)" is visible
 
     And I click selector "[aria-label='View details about CS Fundamentals: Course A']"
+    Then I wait until element "a:contains(Facilitator led workshops)" is visible
     And I click selector "a:contains(Facilitator led workshops)"
-    And I wait until element "h1:contains(Professional development for elementary teachers)" is visible
+    Then I wait until element "h1:contains(Professional development for elementary teachers)" is visible
     
 
 
