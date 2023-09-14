@@ -517,7 +517,8 @@
           "description": "Quanto tempo impieghi per andare a scuola?",
           "id": "minuti scolastici"
         }
-      }
+      },
+      "name": "Il sondaggio del club di Nico"
     },
     "club_random_toy": {
       "card": {
@@ -548,7 +549,8 @@
           "description": "Che ne pensi dell'affermazione: \"Preferirei leggere che guardare la TV\"?",
           "id": "lettura vs tv"
         }
-      }
+      },
+      "name": "Il sondaggio del club di Isaac"
     },
     "club_sparse_toy": {
       "card": {
@@ -583,7 +585,8 @@
           "description": "Come ti piace trascorrere il tuo tempo?",
           "id": "personalità"
         }
-      }
+      },
+      "name": "Il sondaggio del club di Zoey"
     },
     "club_specific_toy": {
       "card": {
@@ -615,7 +618,7 @@
           "id": "animali che possiedi"
         }
       },
-      "name": "Il sondaggio di Kim"
+      "name": "Il sondaggio del club di Kim"
     },
     "cookies_toy": {
       "card": {
