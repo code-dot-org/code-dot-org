@@ -86,6 +86,10 @@ hi:
         ai-ethics-2021:
           description_audience: ग्रेड्स 6-12
           title: हमारी AI आचार संहिता
+        ai-ethics-2023:
+          lessons:
+            lesson-1:
+              name: हमारी AI आचार संहिता
         ai-temp:
           title: AI कैसे काम करता है
         aiml-2021:
