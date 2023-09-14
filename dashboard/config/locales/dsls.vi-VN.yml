@@ -465,6 +465,11 @@ vi-VN:
           # Sự kiện lớn
 
           Trong khoa học máy tính, sự kiện là những thao tác được máy tính giám sát. Trong bài học này, bạn sẽ có những phản ứng khác nhau tùy thuộc vào nút được nhấn.
+      BigEvent-Unplugged2022_2023:
+        markdown: |
+          # Sự kiện lớn
+
+          Trong khoa học máy tính, sự kiện là những thao tác được máy tính giám sát. Trong bài học này, bạn sẽ có những phản ứng khác nhau tùy thuộc vào nút được nhấn.
       BigEvent-Unplugged_2020:
         markdown: |
           # Sự kiện lớn
@@ -483,6 +488,13 @@ vi-VN:
 
           ![](https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)
       BinaryBracelets-Unplugged2022:
+        markdown: |
+          # Vòng tay nhị phân
+
+          Hãy làm một chiếc vòng tay thể hiện cho tên của bạn trong một hệ thống mà máy tính hiểu được!
+
+          ![](https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)
+      BinaryBracelets-Unplugged2022_2023:
         markdown: |
           # Vòng tay nhị phân
 
@@ -2130,6 +2142,11 @@ vi-VN:
           # Lệnh điều kiện với lá bài
 
           Hãy chơi một trò chơi với lá bài và tạo ra luật chơi như sau: “Nếu tôi rút phải lá màu đỏ, tôi được một điểm” và “Nếu tôi rút phái lá màu đen, bạn được một điểm.”
+      ConditionalsWithCards-Unplugged2022_2023:
+        markdown: |
+          # Lệnh điều kiện với lá bài
+
+          Hãy chơi một trò chơi với lá bài và tạo ra luật chơi như sau: “Nếu tôi rút phải lá màu đỏ, tôi được một điểm” và “Nếu tôi rút phái lá màu đen, bạn được một điểm.”
       ConditionalsWithCards-Unplugged_2020:
         markdown: |
           # Lệnh điều kiện với lá bài
@@ -2145,9 +2162,18 @@ vi-VN:
           càng nhiều càng tốt. Tiếp tục luyện tập với vòng lặp và chương trình Họa
           sĩ nhé!
         display_name: Thực hành chương trình Họa sĩ
+      CourseE_Artist_Practice_2023:
+        description: Làm tốt lắm! Hãy chọn hoạt động tiếp theo của bạn. Hãy hoàn thành
+          càng nhiều càng tốt. Tiếp tục luyện tập với vòng lặp và chương trình Họa
+          sĩ nhé!
+        display_name: Thực hành chương trình Họa sĩ
       CourseE_Lesson_11_Artist_Practice_2022:
         display_name: Thực hành chương trình Họa sĩ
+      CourseE_Lesson_11_Artist_Practice_2023:
+        display_name: Thực hành chương trình Họa sĩ
       CourseE_Lesson_7_Artist_Practice_2022:
+        display_name: Thực hành chương trình Họa sĩ
+      CourseE_Lesson_7_Artist_Practice_2023:
         display_name: Thực hành chương trình Họa sĩ
       CourseF_outbreak_story:
         content1: mô tả ở đây
@@ -2338,7 +2364,119 @@ vi-VN:
           điệp mang những suy nghĩ của bạn về cách giữ gìn sức khỏe cho mọi người
           khi vi rút lan tới thị trấn. \n\n<img src=\"https://images.code.org/5e41169fcaf0e949b09ab225d183c165-image-1617128998517.png\"
           style=\"float:left;width:30%\">\n"
+      CourseF_outbreak_story2022_2022_pilot_-2022-2_2023:
+        content1: mô tả ở đây
+        markdown: "# Dịch bệnh bùng phát: Tự lập trình mô phỏng\n\n## Chào mừng bạn
+          đến với Thị Trấn Quái Vật!\nThị Trấn Quái Vật vốn là một thị trấn hạnh phúc
+          và khỏe mạnh. Các quái vật trong Thị Trấn Quái Vật rất thích lang thang
+          khắp nơi để ghé thăm bạn bè.\n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\nMột ngày nọ, một chú quái vật bắt đầu có cảm giác
+          bị bệnh. Chú quái vật này đã bị dính **vi rút** rồi! Vi rút là một loại
+          vi khuẩn nhỏ xíu khiến bạn bị bệnh. Các quái vật khác thì vẫn vô tư. Họ
+          tiếp tục ghé thăm bạn bè.\n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\nKhông lâu sau, thêm hai quái vật nữa bị bệnh. Vẫn
+          là loại vi rút đó! Dường như họ bị nhiễm vi rút từ bạn bè của mình.\n\n<img
+          src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\nVi rút dần lây lan sang các quái vật khác ở xung
+          quanh. Các quái vật khỏe mạnh bắt đầu lo lắng rằng họ cũng bị bệnh. Các
+          quái vật bị bệnh bắt đầu lo lắng rằng họ sẽ lây vi rút cho những quái vật
+          khác.\n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\n\n<div style=\"display: inline-block\">\n<img src=\"https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png\"
+          style=\"float:right; width:30%\">\n\n## Ngăn chặn lây lan\nMay mắn thay,
+          sau khi nghiên cứu loại vi rút này, vùng đất láng giềng của Thị Trấn Quái
+          Vật đã phát hiện ra một thông tin quan trọng. Họ nhận ra rằng vi rút sẽ
+          khó lây lan hơn nếu họ đeo khẩu trang che miệng. Nếu đeo khẩu trang, quái
+          vật bị bệnh sẽ khó truyền vi rút cho các quái vật khỏe mạnh.\n\n<img src=\"https://images.code.org/c98f28f9bf6a027143592109d59ee484-image-1603134766360.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/bac9dbfaf1815c6627fc24e8e6db396d-image-1603134760456.png\"
+          style=\"width:8%\">\n\n</div>\n\n<img src=\"https://images.code.org/ef7499758496b39bcccc24aabd2af5d7-image-1603137920037.2020-10-19
+          16_04_58.gif\" style=\"float:left; width:25%; padding-right:25px\">\n\n##
+          Rồi chuyện gì sẽ xảy ra?\n\nHôm nay, bạn sẽ lập trình để tạo ra và tự mình
+          chạy **mô phỏng** dịch bệnh bùng phát do vi rút tại Thị Trấn Quái Vật. Bản
+          mô phỏng là một mô hình máy tính cho một quy trình hoặc một hệ thống. Hãy
+          học cách lập trình và dự đoán điều gì sẽ xảy ra với các vùng đất láng giềng
+          của Thị Trấn Quái Vật.\n\n<img src=\"https://images.code.org/fcbfd250d58652bdfd6393ec4f2fe2dd-image-1603134705074.png\"
+          style=\"float:right; width:15%\">\n\n* *Vi rút lây lan nhanh tới mức nào?*\n\n*
+          *Rồi rất cả mọi người sẽ bị bệnh sao?*\n\n* *Khẩu trang có tác dụng gì?*\n\n\nSau
+          khi hoàn thành, hãy chia sẻ bản mô phỏng với mọi người. Hãy chia sẻ thông
+          điệp mang những suy nghĩ của bạn về cách giữ gìn sức khỏe cho mọi người
+          khi vi rút lan tới thị trấn. \n\n<img src=\"https://images.code.org/5e41169fcaf0e949b09ab225d183c165-image-1617128998517.png\"
+          style=\"float:left;width:30%\">\n"
       CourseF_outbreak_story22022_2022_pilot_-2022-2:
+        content1: mô tả ở đây
+        markdown: |
+          # Dịch bệnh bùng phát: Tư duy như nhà khoa học
+
+          <img src="https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png" style="float:right; width:30%">
+
+          Mô phỏng là phương pháp lý tưởng để tìm hiểu những sự việc khó quan sát trong thế giới thực. Phương pháp này giúp các nhà khoa học giải quyết các vấn đề và thử nghiệm các ý tưởng mới một cách an toàn và hiệu quả. Bản mô phỏng của bạn là phương thức minh họa cách vi rút lây lan trong Thị Trấn Quái Vật.
+
+          ## Đặt lại và chạy lại!
+          Ngay cả khi bạn chính là người lập trình thì cũng không thể biết chính xác điều gì sẽ xảy ra khi nhấn nút chạy. Các quái vật lang thang ngẫu nhiên nên bạn không biết vi rút sẽ lây lan nhanh hay chậm. Mỗi khi bạn thay đổi mã lập trình, hãy đảm bảo chạy mô phỏng nhiều hơn một lần. Sự việc có thể không lặp lại tới lần thứ hai đâu!
+
+          ## Thu thập dữ liệu
+          Hãy thử ghi lại những gì bạn quan sát được trong quá trình chạy mô phỏng. Bạn có thể đếm số quái vật bị bệnh hoặc sử dụng đồng hồ bấm giờ xem sự việc diễn ra nhanh tới mức nào. Ví dụ: Thông thường sẽ mất bao nhiêu thời gian để toàn bộ quái vật bị bệnh nếu không có ai đeo khẩu trang?
+
+          ## Đưa ra dự đoán
+          Nếu bạn hiểu mô hình của mình, bạn có thể sử dụng mô hình đó để đưa ra dự đoán. Bạn thậm chí còn có thể thay đổi cách chạy mô phỏng và đoán xem sẽ có những thay đổi gì xảy ra. Ví dụ:
+          * Điều gì sẽ xảy ra nếu có số lượng quái vật gấp đôi?
+          * Điều gì sẽ xảy ra nếu tốc độ di chuyển của quái vật giảm còn một nửa?
+
+          <img src="https://images.code.org/2e83373ffd346ce3f42917a0624d441c-image-1603749526420.png" style="float:right">
+
+          ## Thị Trấn Quái Vật có giống thế giới thực không?
+          Mỗi mô hình đều có giới hạn về tính chân thực.
+          * Mô phỏng dịch bệnh bùng phát có điểm chung gì so với dịch bệnh bùng phát do vi rút trong thế giới thực?
+          * Điểm khác biệt là gì?
+          Sau khi hoàn thành hoạt động này, hãy thảo luận các câu hỏi này với thầy cô giáo và gia đình nhé!
+
+          ## Chúng ta có thể tạo mô hình nào khác?
+          Bạn đã tạo mô hình vận hành dịch bệnh bùng phát tại Thị Trấn Quái vật rồi. Những điểm nào bản mô phỏng của bạn chưa làm được hoặc cho thấy bạn mong muốn làm được điều đó? Hãy nhấn tiếp tục để tìm hiểu thêm và học thêm về cách tạo mô hình:
+          * Tăng số lượng quái vật trong bản mô phỏng
+          * Giúp quái vật hồi phục sau khi nhiễm vi rút
+          * Xác suất, miễn dịch, vắc xin và nhiều điều khác!
+
+          Bạn còn có thể chia sẻ mô hình mô phỏng của mình với người khác hoặc chia sẻ thông điệp về những gì bạn nghĩ bạn có thể làm được để giúp mọi người khỏe mạnh khi vi rút lan tới thị trấn.
+      CourseF_outbreak_story22022_2022_pilot_-2022-2_2023:
         content1: mô tả ở đây
         markdown: |
           # Dịch bệnh bùng phát: Tư duy như nhà khoa học
@@ -2501,6 +2639,16 @@ vi-VN:
           * Thiết kế các ứng dụng để người khuyết tật có thể truy cập khiến các ứng dụng đó có ích hơn cho cả những người khác!
 
           ![](https://images.code.org/0c670d0d9078657a870df0ca799492cb-image-1557166420066.png)
+      DesigningForAccessibilityMarkdownLevel2022_2023:
+        markdown: |-
+          # Thiết kế cho trợ năng
+
+          * Trong thế giới khoa học máy tính, **trợ năng** là hoạt động kiến tạo công nghệ dành cho người khuyết tật.
+          * Khuyết tật bao gồm thể chất, thính giác, thị giác và nhiều dạng khuyết tật khác.
+          * Khuyết tật rất đa dạng và tác động đến mọi người theo những cách khác nhau, bao gồm cả cách họ sử dụng công nghệ như **ứng dụng trên điện thoại thông minh**.
+          * Thiết kế các ứng dụng để người khuyết tật có thể truy cập khiến các ứng dụng đó có ích hơn cho cả những người khác!
+
+          ![](https://images.code.org/0c670d0d9078657a870df0ca799492cb-image-1557166420066.png)
       DesigningForAccessibilityMarkdownLevel_2019:
         markdown: |-
           # Thiết kế cho trợ năng
@@ -2541,6 +2689,11 @@ vi-VN:
           # Chia sẻ nội dung số
 
           Trong bài học này, bạn sẽ xem xét những khó khăn và lợi ích của việc tôn trọng quyền sở hữu và bản quyền, đặc biệt là trong môi trường số.
+      DigitalSharing-Unplugged2022_2023:
+        markdown: |
+          # Chia sẻ nội dung số
+
+          Trong bài học này, bạn sẽ xem xét những khó khăn và lợi ích của việc tôn trọng quyền sở hữu và bản quyền, đặc biệt là trong môi trường số.
       DigitalSharing-Unplugged_2020:
         markdown: |
           # Chia sẻ nội dung số
@@ -2557,6 +2710,11 @@ vi-VN:
 
           Trong bài học này, bạn sẽ học cách sử dụng và viết câu chuyện khoảng trống. Hãy xem video này để tìm hiểu mối liên hệ với khoa học máy tính.
       EnvelopeVariables-Unplugged_2021_22022_2022_pilot_-2022-2:
+        markdown: |
+          # Câu chuyện khoảng trống
+
+          Trong bài học này, bạn sẽ học cách sử dụng và viết câu chuyện khoảng trống. Hãy xem video này để tìm hiểu mối liên hệ với khoa học máy tính.
+      EnvelopeVariables-Unplugged_2021_22022_2022_pilot_-2022-2_2023:
         markdown: |
           # Câu chuyện khoảng trống
 
@@ -2589,6 +2747,11 @@ vi-VN:
           # Bắt lấy Loopy
 
           Bài học này sẽ giới thiệu khái niệm vòng lặp trong lập trình thông qua hoạt động khiêu vũ.
+      GettingLoopy-Unplugged2022_2023:
+        markdown: |
+          # Bắt lấy Loopy
+
+          Bài học này sẽ giới thiệu khái niệm vòng lặp trong lập trình thông qua hoạt động khiêu vũ.
       GettingLoopy-Unplugged_2020:
         markdown: |
           # Bắt lấy Loopy
@@ -2609,6 +2772,11 @@ vi-VN:
           # Lập trình trên giấy kẻ ô ly
 
           Hãy viết các thuật toán để bạn cùng lớp có thể dùng để vẽ hình tranh.
+      GraphPaperProgramming-Unplugged2022_2023:
+        markdown: |
+          # Lập trình trên giấy kẻ ô ly
+
+          Hãy viết các thuật toán để bạn cùng lớp có thể dùng để vẽ hình tranh.
       GraphPaperProgramming-Unplugged_2020:
         markdown: |
           # Lập trình trên giấy kẻ ô ly
@@ -2625,6 +2793,11 @@ vi-VN:
 
           பிரமை வழியாக ஒரு பாத்திரத்தை நகர்த்த ஒரு வழிமுறையை உருவாக்கவும்.
       HappyMaps-Unplugged2022:
+        markdown: |-
+          # மகிழ்ச்சியான வரைபடம்
+
+          பிரமை வழியாக ஒரு பாத்திரத்தை நகர்த்த ஒரு வழிமுறையை உருவாக்கவும்.
+      HappyMaps-Unplugged2022_2023:
         markdown: |-
           # மகிழ்ச்சியான வரைபடம்
 
@@ -2762,6 +2935,11 @@ vi-VN:
 
           Hãy tự tạo ra hệ thống Internet của riêng bạn trong lớp học chỉ bằng những mẩu giấy.
       Internet-Unplugged2022_2022_pilot_-2022-2:
+        markdown: |
+          # Internet
+
+          Hãy tự tạo ra hệ thống Internet của riêng bạn trong lớp học chỉ bằng những mẩu giấy.
+      Internet-Unplugged2022_2022_pilot_-2022-2_2023:
         markdown: |
           # Internet
 
@@ -2982,6 +3160,11 @@ vi-VN:
           # Di chuyển nào
 
           Hãy dùng bản đồ và đưa ra mệnh lệnh để đến đích.
+      MoveItMoveIt-Unplugged2022_2023:
+        markdown: |
+          # Di chuyển nào
+
+          Hãy dùng bản đồ và đưa ra mệnh lệnh để đến đích.
       MoveItMoveIt-Unplugged_2020:
         markdown: |
           # Di chuyển nào
@@ -3014,6 +3197,11 @@ vi-VN:
           # Những người bạn robot Loopy của tôi
 
           Rút gọn chương trình bằng cách dùng vòng lặp!
+      MyLoopyRoboticFriends-Unplugged2022_2023:
+        markdown: |
+          # Những người bạn robot Loopy của tôi
+
+          Rút gọn chương trình bằng cách dùng vòng lặp!
       MyLoopyRoboticFriends-Unplugged_2020:
         markdown: |
           # Những người bạn robot Loopy của tôi
@@ -3030,6 +3218,11 @@ vi-VN:
 
           Học lập trình bằng cách viết mã lệnh cho bạn bè!
       MyRoboticFriends-Unplugged2022:
+        markdown: |
+          # Những người bạn robot của tôi
+
+          Học lập trình bằng cách viết mã lệnh cho bạn bè!
+      MyRoboticFriends-Unplugged2022_2023:
         markdown: |
           # Những người bạn robot của tôi
 
@@ -3564,6 +3757,11 @@ vi-VN:
           # Moc slov
 
           ## Co byste měli dělat, když někdo na internetu použije zlovolnou nebo urážející mluvu?
+      PowerOfWords-Unplugged2022_2022_pilot_-2022-2_2023:
+        markdown: |
+          # Moc slov
+
+          ## Co byste měli dělat, když někdo na internetu použije zlovolnou nebo urážející mluvu?
       PowerOfWords-Unplugged_2020:
         markdown: |
           # Moc slov
@@ -3577,6 +3775,11 @@ vi-VN:
       Prepare for your presentation:
         content1: mô tả ở đây
       PrivatePersonalInformation-Unplugged2022:
+        markdown: |-
+          # Thông tin cá nhân và riêng tư
+
+          ## Thông tin nào về bạn có thể chia sẻ trực tuyến?
+      PrivatePersonalInformation-Unplugged2022_2023:
         markdown: |-
           # Thông tin cá nhân và riêng tư
 
@@ -3597,6 +3800,11 @@ vi-VN:
 
           Hãy chia thành các nhóm và làm việc cùng nhau để viết các chương trình có chức năng vẽ hình.
       RelayProgramming-Unplugged2022:
+        markdown: |
+          # Lập trình tiếp sức
+
+          Hãy chia thành các nhóm và làm việc cùng nhau để viết các chương trình có chức năng vẽ hình.
+      RelayProgramming-Unplugged2022_2023:
         markdown: |
           # Lập trình tiếp sức
 
@@ -3622,6 +3830,11 @@ vi-VN:
 
           Hãy dùng khái niệm điệp khúc trong một bài hát để tìm hiểu về cách xác định và khai báo các hàm.
       Songwriting-Unplugged2022:
+        markdown: |-
+          # Sáng tác nhạc
+
+          Hãy dùng khái niệm điệp khúc trong một bài hát để tìm hiểu về cách xác định và khai báo các hàm.
+      Songwriting-Unplugged2022_2023:
         markdown: |-
           # Sáng tác nhạc
 
@@ -3689,6 +3902,15 @@ vi-VN:
         questions:
         - {}
       TheRightAppMarkdownLevel2022:
+        markdown: |
+          # Ứng dụng phù hợp
+
+          * Ngày nay mọi người đều sử dụng máy tính, đặc biệt là điện thoại thông minh.
+          * Các ứng dụng trên điện thoại thông minh giúp mọi người làm những việc như nói chuyện với bạn bè, nghe nhạc, mua sắm hoặc đơn giản là duyệt web.
+          * Lập trình viên cần phải hiểu nhu cầu của mọi người và thiết kế ứng dụng phù hợp với họ!
+
+          ![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)
+      TheRightAppMarkdownLevel2022_2023:
         markdown: |
           # Ứng dụng phù hợp
 
@@ -4128,10 +4350,16 @@ vi-VN:
       courseAB_EOC2022:
         description: Bạn đã đến bài học cuối cùng! Hãy chọn một dự án để tạo.
         display_name: Dự án tổng kết khóa học
+      courseAB_EOC2022_2023:
+        description: Bạn đã đến bài học cuối cùng! Hãy chọn một dự án để tạo.
+        display_name: Dự án tổng kết khóa học
       courseAB_EOC_2021:
         description: Bạn đã đến bài học cuối cùng! Hãy chọn một dự án để tạo.
         display_name: Dự án tổng kết khóa học
       courseB_EOC2022:
+        description: Bạn đã đến bài học cuối cùng! Hãy chọn một dự án để tạo.
+        display_name: Dự án tổng kết khóa học
+      courseB_EOC2022_2023:
         description: Bạn đã đến bài học cuối cùng! Hãy chọn một dự án để tạo.
         display_name: Dự án tổng kết khóa học
       courseB_EOC_2021:
@@ -4150,6 +4378,20 @@ vi-VN:
         - text: Hãy xem kỹ mã lệnh sau đây. Điều gì sẽ xảy ra khi bạn nhấp chuột vào
             nút “Run” (Chạy)?
       courseC_multi_artist_prog6_predict12022:
+        answers:
+        - feedback: Sai rồi. Họa sĩ vẽ một hình vuông.
+          text: Họa sĩ sẽ vẽ một hình tam giác có ba cạnh bằng nhau.
+        - feedback: Sai rồi. Họa sĩ vẽ một hình vuông.
+          text: Họa sĩ sẽ vẽ một đoạn thẳng duy nhất.
+        - correct: true
+          feedback: Chính xác!
+          text: Họa sĩ sẽ vẽ một hình vuông.
+        - feedback: Sai. Họa sĩ vẽ hình vuông.
+          text: Họa sĩ sẽ vẽ hình ngũ giác
+        questions:
+        - text: Hãy xem kỹ mã lệnh sau đây. Điều gì sẽ xảy ra khi bạn nhấp chuột vào
+            nút “Run” (Chạy)?
+      courseC_multi_artist_prog6_predict12022_2023:
         answers:
         - feedback: Sai rồi. Họa sĩ vẽ một hình vuông.
           text: Họa sĩ sẽ vẽ một hình tam giác có ba cạnh bằng nhau.
@@ -4232,6 +4474,23 @@ vi-VN:
         - text: Hãy xem kỹ mã lệnh dưới đây. Người nông dân sẽ thu hoạch được bao
             nhiêu bí ngô sau khi bạn nhấp chuột vào nút “Run” (chạy)?
       courseC_multi_harvester_loops11_predict12022:
+        answers:
+        - feedback: Sai rồi. Với mỗi vòng lặp trong số 3 vòng lặp, người nông dân
+            sẽ lấy 4 bí ngô. 4 nhân 3 là 12!
+          text: '4'
+        - correct: true
+          feedback: Chính xác!
+          text: '12'
+        - feedback: Sai rồi. Với mỗi vòng lặp trong số 3 vòng lặp, người nông dân
+            sẽ lấy 4 bí ngô. 4 nhân 3 là 12!
+          text: '15'
+        - feedback: Sai rồi. Với mỗi vòng lặp trong số 3 vòng lặp, người nông dân
+            sẽ lấy 4 bí ngô. 4 nhân 3 là 12!
+          text: '20'
+        questions:
+        - text: Hãy xem kỹ mã lệnh dưới đây. Người nông dân sẽ thu hoạch được bao
+            nhiêu bí ngô sau khi bạn nhấp chuột vào nút “Run” (chạy)?
+      courseC_multi_harvester_loops11_predict12022_2023:
         answers:
         - feedback: Sai rồi. Với mỗi vòng lặp trong số 3 vòng lặp, người nông dân
             sẽ lấy 4 bí ngô. 4 nhân 3 là 12!
@@ -4331,6 +4590,18 @@ vi-VN:
         questions:
         - text: Hãy tìm lỗi trong mã lệnh này. Liệu Scrat có đến được chỗ hạt sồi
             không hay có vấn đề gì xảy ra?
+      courseC_multi_maze_debugging8_predict12022_2023:
+        answers:
+        - text: Scrat sẽ đến được chỗ hạt sồi. Không có lỗi trong mã lệnh.
+        - correct: true
+          text: Scrat sẽ không đến được chỗ hạt sồi bóng vì cậu xoay sai hướng.
+        - text: Scrat sẽ không đến được chỗ hạt sồi vì không có đủ số lượng khối `move
+            forward` (tiến lên).
+        - feedback: Scrat sẽ không đến được chỗ hạt sồi bóng vì cậu xoay sai hướng.
+          text: Scrat sẽ không di chuyển từ khối đầu tiên.
+        questions:
+        - text: Hãy tìm lỗi trong mã lệnh này. Liệu Scrat có đến được chỗ hạt sồi
+            không hay có vấn đề gì xảy ra?
       courseC_multi_maze_debugging8_predict1_2018:
         answers:
         - {}
@@ -4416,6 +4687,20 @@ vi-VN:
         questions:
         - text: Hãy đọc mã lệnh dưới đây thật cẩn thận. Điều gì sẽ xảy ra khi bạn
             nhấp chuột vào nút “Run” (chạy)?
+      courseC_multi_maze_programming8_predict12022_2023:
+        answers:
+        - feedback: Sai rồi. Mã lệnh này đưa chú chim đến đúng chỗ con heo.
+          text: Cuối cùng, chú chim còn cách con heo một bước.
+        - correct: true
+          feedback: Chính xác!
+          text: Chú chim sẽ đến được chỗ con heo.
+        - feedback: Sai rồi. Mã lệnh này đưa chú chim đến đúng chỗ con heo.
+          text: Chú chim sẽ lao vào thuốc nổ.
+        - feedback: Sai rồi. Mã lệnh này đưa chú chim đến đúng chỗ con heo.
+          text: Chú chim sẽ va vào tường.
+        questions:
+        - text: Hãy đọc mã lệnh dưới đây thật cẩn thận. Điều gì sẽ xảy ra khi bạn
+            nhấp chuột vào nút “Run” (chạy)?
       courseC_multi_maze_programming8_predict1_2018:
         answers:
         - feedback: Sai rồi. Mã lệnh này đưa chú chim đến đúng chỗ con heo.
@@ -4482,6 +4767,19 @@ vi-VN:
         questions:
         - text: Bạn nghĩ điều gì sẽ xảy ra khi bạn nhấp chuột vào nút “Run” (chạy)?
       courseC_multi_starWars_predict12022:
+        answers:
+        - feedback: Sai rồi. Khối lặp lại sẽ khiến BB-8 tiến lên 5 lần.
+          text: BB-8 sẽ không di chuyển.
+        - feedback: Sai rồi. Khối lặp lại sẽ khiến BB-8 tiến lên 5 lần.
+          text: BB-8 sẽ chỉ di chuyển một ô
+        - correct: true
+          feedback: Chính xác!
+          text: BB-8 sẽ di chuyển 5 lần và nhặt toàn bộ phế liệu
+        - feedback: Sai rồi. Khối lặp lại sẽ khiến BB-8 tiến lên 5 lần.
+          text: BB-8 sẽ chỉ di chuyển 3 ô.
+        questions:
+        - text: Bạn nghĩ điều gì sẽ xảy ra khi bạn nhấp chuột vào nút “Run” (chạy)?
+      courseC_multi_starWars_predict12022_2023:
         answers:
         - feedback: Sai rồi. Khối lặp lại sẽ khiến BB-8 tiến lên 5 lần.
           text: BB-8 sẽ không di chuyển.
@@ -4575,6 +4873,23 @@ vi-VN:
         questions:
         - text: Hãy xem kỹ mã lệnh bên dưới. Điều gì sẽ xảy ra khi bạn nhấp chuột
             vào nút “Run” (chạy)?
+      courseC_multi_starWars_predict22022_2023:
+        answers:
+        - feedback: Sai rồi. Vòng lặp đầu tiên chỉ giúp BB-8 tiến lên 2 ô mặc dù cậu
+            ta cần tiến lên 3 ô.
+          text: BB-8 sẽ đi quá xa trong vòng lặp đầu tiên.
+        - correct: true
+          feedback: Chính xác!
+          text: BB-8 không đi đủ xa trong vòng lặp đầu tiên để lấy hết phế liệu.
+        - feedback: Sai rồi. Vòng lặp đầu tiên chỉ giúp BB-8 tiến lên 2 ô mặc dù cậu
+            ta cần tiến lên 3 ô.
+          text: BB-8 sẽ nhặt toàn bộ phế liệu mà không gặp trở ngại gì.
+        - feedback: Sai rồi. Vòng lặp đầu tiên chỉ giúp BB-8 tiến lên 2 ô mặc dù cậu
+            ta cần tiến lên 3 ô.
+          text: BB-8 sẽ rẽ sai hướng sau vòng lặp đầu tiên.
+        questions:
+        - text: Hãy xem kỹ mã lệnh bên dưới. Điều gì sẽ xảy ra khi bạn nhấp chuột
+            vào nút “Run” (chạy)?
       courseC_multi_starWars_predict2_2018:
         answers:
         - feedback: Sai rồi. Vòng lặp đầu tiên chỉ giúp BB-8 tiến lên 2 ô mặc dù cậu
@@ -4641,6 +4956,10 @@ vi-VN:
         description: Bạn đã tới bài học cuối cùng của Khóa D! Hãy tạo một dự án bạn
           muốn nhé.
         display_name: Dự án tổng kết khóa học
+      courseD_EOC2022_2023:
+        description: Bạn đã tới bài học cuối cùng của Khóa D! Hãy tạo một dự án bạn
+          muốn nhé.
+        display_name: Dự án tổng kết khóa học
       courseD_EOC_2020:
         description: Bạn đã tới bài học cuối cùng của Khóa D! Hãy tạo một dự án bạn
           muốn nhé.
@@ -4650,6 +4969,10 @@ vi-VN:
           muốn nhé.
         display_name: Dự án tổng kết khóa học
       courseD_EOC_examples2022:
+        description: Bạn sắp bắt đầu dự án cuối cùng của mình. Trước khi bắt đầu,
+          hãy dành thời gian xem xét các dự án mẫu.
+        display_name: Ví dụ dự án
+      courseD_EOC_examples2022_2023:
         description: Bạn sắp bắt đầu dự án cuối cùng của mình. Trước khi bắt đầu,
           hãy dành thời gian xem xét các dự án mẫu.
         display_name: Ví dụ dự án
@@ -4720,6 +5043,30 @@ vi-VN:
         - text: Hãy xem kỹ mã lệnh dưới đây. Chương trình này sẽ vẽ hình gì khi nhấp
             chuột vào nút “Run” (chạy)?
       courseD_multi_artist_nestedLoops9_predict12022:
+        answers:
+        - correct: true
+          feedback: Chính xác!
+          text: A
+        - feedback: Sai rồi. Vòng lặp bên trong vẽ hình ngũ giác và vòng lặp bên ngoài
+            lặp lại vòng lặp đó 4 lần theo hình tròn.
+          text: B
+        - feedback: Sai rồi. Vòng lặp bên trong vẽ hình ngũ giác và vòng lặp bên ngoài
+            lặp lại vòng lặp đó 4 lần theo hình tròn.
+          text: C
+        - feedback: Sai rồi. Vòng lặp bên trong vẽ hình ngũ giác và vòng lặp bên ngoài
+            lặp lại vòng lặp đó 4 lần theo hình tròn.
+          text: Không mục nào ở trên
+        markdown: |+
+          <table>
+          <tr><td>A</td><td><img src="https://images.code.org/cfc3f8206438a60afe3be9afe7fc0a22-image-1489118742610.10.15.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>B</td><td><img src="https://images.code.org/975b027684d2f5411b960bf82987663e-image-1489119999013.11.13.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>C</td><td><img src="https://images.code.org/635ac54ed7cb2e2d24eb341b3ec4eecb-image-1489120024059.12.00.png" width="80px" style="mix-blend-mode: multiply; clip: rect(0px,0px,0px,40px);"/></td></tr>
+          </table>
+
+          <br/><br/>
+
+        questions:
+        - text: Hãy xem kỹ mã lệnh dưới đây. Chương trình này sẽ vẽ hình gì khi nhấp
+            chuột vào nút “Run” (chạy)?
+      courseD_multi_artist_nestedLoops9_predict12022_2023:
         answers:
         - correct: true
           feedback: Chính xác!
@@ -4875,6 +5222,29 @@ vi-VN:
             Nếu có hoa, chú ong cần lấy mật hoa một lần. Nếu không có hoa, chú ong
             không nên làm gì cả. Hãy xem kỹ mã lệnh dưới đây. Bạn nghĩ điều gì sẽ
             xảy ra sau khi bạn nhấp chuột vào “Run” (chạy)?
+      courseD_multi_bee_conditionals1_predict12022_2023:
+        answers:
+        - feedback: Sai rồi. Khối `if at flower` (nếu ở hoa) sẽ đảm bảo rằng chú ong
+            sẽ chỉ thử lấy mật hoa nếu có bông hoa dưới đám mây.
+          text: Dù sao thì chú ong cũng sẽ di chuyển đến chỗ đám mây và thử lấy mật
+            hoa.
+        - correct: true
+          feedback: Chính xác!
+          text: Chú ong sẽ di chuyển đến chỗ đám mây và thử lấy mật hoa nếu có bông
+            hoa bên dưới.
+        - feedback: Sai rồi. Khối `if at flower` (nếu ở hoa) sẽ đảm bảo rằng chú ong
+            sẽ thử lấy mật hoa nếu có bông hoa dưới đám mây.
+          text: Dù sao thì chú ong cũng sẽ di chuyển đến chỗ đám mây và không làm
+            gì cả.
+        - feedback: Sai rồi. Khối `if at flower` (nếu ở hoa) sẽ đảm bảo rằng chú ong
+            sẽ chỉ thử lấy mật hoa nếu có bông hoa dưới đám mây.
+          text: Chú ong sẽ không chạm được đám mây.
+        questions:
+        - text: Có một đám mây chặn tầm nhìn của chúng tôi. Đám mây sẽ biến mất khi
+            chúng ta nhấp vào “Chạy”. Có thể có một bông hoa dưới đám mây này. Nếu
+            có một bông hoa, con ong sẽ cần phải thu thập mật hoa một lần. Nếu không
+            có một bông hoa, con ong không nên làm gì cả. Hãy xem kỹ đoạn mã dưới
+            đây. Bạn nghĩ điều gì sẽ xảy ra sau khi bạn nhấp vào “Chạy”?
       courseD_multi_bee_conditionals1_predict1_2018:
         answers:
         - feedback: Sai rồi. Khối `if at flower` (nếu ở hoa) sẽ đảm bảo rằng chú ong
@@ -5024,6 +5394,24 @@ vi-VN:
         - text: 'Hãy xem kỹ mã lệnh dưới đây. Bạn nghĩ điều gì sẽ xảy ra sau khi bạn
             nhấp chuột vào “Run” (chạy)? Hãy nhớ rằng: sẽ chỉ có *một* tổ ong hoặc
             *một* bông hoa đằng sau mỗi đám mây.'
+      courseD_multi_bee_conditionals7_predict22022_2023:
+        answers:
+        - correct: true
+          feedback: Chính xác!
+          text: Chú ong sẽ lấy mật hoa ở từng bông hoa và làm mật ở từng tổ ong.
+        - feedback: Sai rồi. Khối `if at flower` (nếu ở bông hoa) sẽ giúp chú ong
+            lấy mật hoa ở mỗi bông hoa và làm mật ở mỗi tổ ong.
+          text: Chú ong sẽ thử lấy mật hoa ở cả bông hoa và tổ ong.
+        - feedback: Sai rồi. Khối `if at flower` (nếu ở bông hoa) sẽ giúp chú ong
+            lấy mật hoa ở mỗi bông hoa và làm mật ở mỗi tổ ong.
+          text: Chú ong sẽ cố gắng lấy mật từ cả bông hoa và tổ ong.
+        - feedback: Sai rồi. Khối `if at flower` (nếu ở bông hoa) sẽ giúp chú ong
+            lấy mật hoa ở mỗi bông hoa và làm mật ở mỗi tổ ong.
+          text: Chú ong sẽ cố gắng lấy mật và mật hoa từ cả hoa và tổ ong.
+        questions:
+        - text: 'Hãy xem kỹ mã lệnh dưới đây. Bạn nghĩ điều gì sẽ xảy ra sau khi bạn
+            nhấp chuột vào “Run” (chạy)? Hãy nhớ rằng: sẽ chỉ có *một* tổ ong hoặc
+            *một* bông hoa đằng sau mỗi đám mây.'
       courseD_multi_bee_conditionals7_predict2_2018:
         answers:
         - correct: true
@@ -5099,6 +5487,23 @@ vi-VN:
         - text: Hãy quan sát kỹ các vòng lặp lồng nhau bên dưới. Điều gì sẽ xảy ra
             khi bạn nhấp chuột vào nút “Run” (chạy)?
       courseD_multi_bee_nestedLoops2_predict12022:
+        answers:
+        - feedback: Sai rồi. Chú ong lặp lại hành động tiến lên và lấy mật hoa, từ
+            đó giải được bài tập.
+          text: Chú ong sẽ tiến lên và lấy mật hoa một lần duy nhất.
+        - feedback: Sai rồi. Chú ong lặp lại hành động tiến lên và lấy mật hoa, từ
+            đó giải được bài tập.
+          text: Chú ong sẽ chỉ lấy được 2 đơn vị mật hoa.
+        - correct: true
+          feedback: Chính xác!
+          text: Chú ong sẽ lấy toàn bộ mật hoa.
+        - feedback: Sai rồi. Chú ong lặp lại hành động tiến lên và lấy mật hoa, từ
+            đó giải được bài tập.
+          text: Chũ ong sẽ rẽ sai hướng.
+        questions:
+        - text: Hãy quan sát kỹ các vòng lặp lồng nhau bên dưới. Điều gì sẽ xảy ra
+            khi bạn nhấp chuột vào nút “Run” (chạy)?
+      courseD_multi_bee_nestedLoops2_predict12022_2023:
         answers:
         - feedback: Sai rồi. Chú ong lặp lại hành động tiến lên và lấy mật hoa, từ
             đó giải được bài tập.
@@ -5214,6 +5619,26 @@ vi-VN:
         questions:
         - text: Hãy xem kỹ mã lệnh dưới đây. Chú ong sẽ tạo ra bao nhiêu mật ong sau
             khi bạn nhấp chuột vào nút “Run” (chạy)?
+      courseD_multi_bee_nestedLoops9_predict22022_2023:
+        answers:
+        - feedback: Sai rồi. Chú ong lấy 2 mật hoa trong vòng lặp tiến lên, sau đó
+            lấy tiếp 2 mật hoa trong vòng đi xuống. Tất cả nằm trong một vòng lặp
+            khác lặp lại hai lần. 4 nhân 2 là 8!
+          text: '4'
+        - correct: true
+          feedback: Chính xác!
+          text: '8'
+        - feedback: Sai rồi. Chú ong lấy 2 mật hoa trong vòng lặp tiến lên, sau đó
+            lấy tiếp 2 mật hoa trong vòng đi xuống. Tất cả nằm trong một vòng lặp
+            khác lặp lại hai lần. 4 nhân 2 là 8!
+          text: '10'
+        - feedback: Sai rồi. Chú ong lấy 2 mật hoa trong vòng lặp tiến lên, sau đó
+            lấy tiếp 2 mật hoa trong vòng đi xuống. Tất cả nằm trong một vòng lặp
+            khác lặp lại hai lần. 4 nhân 2 là 8!
+          text: '12'
+        questions:
+        - text: Hãy xem kỹ mã lệnh dưới đây. Chú ong sẽ tạo ra bao nhiêu mật ong sau
+            khi bạn nhấp chuột vào nút “Run” (chạy)?
       courseD_multi_bee_nestedLoops9_predict2_2018:
         answers:
         - feedback: Sai rồi. Chú ong lấy 2 mật hoa trong vòng lặp tiến lên, sau đó
@@ -5308,6 +5733,28 @@ vi-VN:
         - text: Hãy xem kỹ mã lệnh dưới đây. Điều gì sẽ xảy ra sau khi bạn nhấp chuột
             vào nút “Run” (chạy)?
       courseD_multi_farmer_condLoops9_predict12022:
+        answers:
+        - feedback: Sai rồi. Không có mã lệnh nào để nhặt bí ngô.
+          text: Người thu hoạch sẽ nhặt tất cả các loại nông sản.
+        - feedback: Sai rồi. Mã lệnh sẽ yêu cầu người thu hoạch liên tục đi theo hình
+            bậc thang và nhặt toàn bộ ngô hoặc rau diếp khi cô ấy tìm thấy. Cô ấy
+            sẽ không nhặt bí ngô.
+          text: Người thu hoạch sẽ không nhặt bất kỳ loại nông sản nào trên con đường
+            mà cô ấy đang đi.
+        - correct: true
+          feedback: Chính xác!
+          text: Người thu hoạch sẽ nhặt tất cả các loại nông sản, ngoại trừ bí ngô.
+        - feedback: Sai rồi. Mã lệnh sẽ yêu cầu người thu hoạch liên tục đi theo hình
+            bậc thang và nhặt toàn bộ ngô hoặc rau diếp khi cô ấy tìm thấy. Cô ấy
+            sẽ không nhặt bí ngô.
+          text: Người thu hoạch sẽ chỉ hái bí.
+        markdown: |
+          Cây trong bài tập này có thể là ngô hoặc rau diếp.
+          <br/>
+        questions:
+        - text: Hãy xem kỹ mã lệnh dưới đây. Điều gì sẽ xảy ra sau khi bạn nhấp chuột
+            vào nút “Run” (chạy)?
+      courseD_multi_farmer_condLoops9_predict12022_2023:
         answers:
         - feedback: Sai rồi. Không có mã lệnh nào để nhặt bí ngô.
           text: Người thu hoạch sẽ nhặt tất cả các loại nông sản.
@@ -5444,6 +5891,20 @@ vi-VN:
           text: Mã lệnh này sẽ không xử lý hố cuối cùng.
         questions:
         - text: Hãy xem kỹ mã lệnh dưới đây. Cuối bài tập này sẽ còn sót lại gì?
+      courseD_multi_farmer_while10_predict22022_2023:
+        answers:
+        - feedback: Sai rồi. Không có mã lệnh nào để dọn đống đất.
+          text: Không có gì. Mã lệnh này sẽ chỉ để lại mặt đất phẳng.
+        - correct: true
+          feedback: Chính xác!
+          text: Mã lệnh này sẽ khiến đống đất còn nguyên.
+        - feedback: Sai rồi. Vòng lặp `while` (khi) sẽ xử lý vòng lặp có kích thước
+            bất kỳ, nhưng không có mã lệnh nào để dọn đống đất.
+          text: Mã lệnh này sẽ khiến hố còn nguyên.
+        - feedback: Sai rồi. Không có mã lệnh nào để dọn đống đất.
+          text: Mã lệnh này sẽ không xử lý hố cuối cùng.
+        questions:
+        - text: Hãy xem kỹ mã lệnh dưới đây. Cuối bài tập này sẽ còn sót lại gì?
       courseD_multi_farmer_while10_predict2_2018:
         answers:
         - feedback: Sai rồi. Không có mã lệnh nào để dọn đống đất.
@@ -5516,6 +5977,24 @@ vi-VN:
         - text: Hãy xem kỹ mã lệnh bên dưới. Điều gì sẽ xảy ra sau khi bạn nhấp chuột
             vào nút “Run” (chạy)?
       courseD_multi_farmer_while4_predict12022:
+        answers:
+        - feedback: Sai rồi. Người nông dân sẽ dọn tiếp chừng nào đống đất vẫn còn,
+            rồi dừng lại khi hết đống đất.
+          text: Sẽ không có gì xảy ra.
+        - feedback: Sai rồi. Người nông dân sẽ dọn tiếp chừng nào đống đất vẫn còn,
+            rồi dừng lại khi hết đống đất.
+          text: Người nông dân sẽ không ngừng dọn đống đất.
+        - correct: true
+          feedback: Chính xác!
+          text: Người nông dân sẽ dọn tiếp chừng nào đống đất vẫn còn, rồi dừng lại
+            khi hết đống đất.
+        - feedback: Sai rồi. Người nông dân sẽ dọn tiếp chừng nào đống đất vẫn còn,
+            rồi dừng lại khi hết đống đất.
+          text: Bác nông dân sẽ làm sạch vết bẩn một lần duy nhất.
+        questions:
+        - text: Hãy xem kỹ mã lệnh bên dưới. Điều gì sẽ xảy ra sau khi bạn nhấp chuột
+            vào nút “Run” (chạy)?
+      courseD_multi_farmer_while4_predict12022_2023:
         answers:
         - feedback: Sai rồi. Người nông dân sẽ dọn tiếp chừng nào đống đất vẫn còn,
             rồi dừng lại khi hết đống đất.
@@ -5625,6 +6104,16 @@ vi-VN:
         questions:
         - text: Hãy xem kỹ mã lệnh sau đây. Điều gì sẽ xảy ra sau khi bạn nhấp chuột
             vào nút “Run” (Chạy)?
+      courseD_multi_maze_until10_predict22022_2023:
+        answers:
+        - correct: true
+          feedback: Chính xác!
+        - text: Thây ma sẽ đến được chỗ hoa hướng dương.
+        - text: Thây ma sẽ xoay phải ở lối đi đầu tiên và đi vòng quanh mãi mãi.
+        - text: Thây ma sẽ bị mắc kẹt ở cuối con đường phía trước.
+        questions:
+        - text: Hãy xem kỹ mã lệnh sau đây. Điều gì sẽ xảy ra sau khi bạn nhấp chuột
+            vào nút “Run” (Chạy)?
       courseD_multi_maze_until10_predict2_2018:
         answers:
         - correct: true
@@ -5712,6 +6201,24 @@ vi-VN:
         - text: Hãy xem kỹ mã lệnh dưới đây. Bạn nghĩ điều gì sẽ xảy ra khi nhấp chuột
             vào nút “Run” (chạy)?
       courseD_multi_maze_until2_predict12022:
+        answers:
+        - feedback: Sai rồi. Mã lệnh làm chú chim tiến lên khi có đường đi, sau đó
+            xoay trái. Chú chim sẽ tiếp tục làm như vậy cho đến khi tới chỗ con heo!
+          text: Chú chim sẽ không di chuyển chút nào.
+        - correct: true
+          feedback: Chính xác!
+          text: Chú chim sẽ đến được chỗ con heo.
+        - feedback: Sai rồi. Mã lệnh làm chú chim tiến lên khi có đường đi an toàn,
+            sau đó xoay trái. Chú chim sẽ tiếp tục làm như vậy cho đến khi tới chỗ
+            con heo!
+          text: Chú chim sẽ tiến lên và lao vào thuốc nổ.
+        - feedback: Mã lệnh làm chú chim tiến lên khi có đường đi, sau đó xoay trái.
+            Chú chim sẽ tiếp tục làm như vậy cho đến khi tới chỗ con heo!
+          text: Chú chim sẽ quay sai hướng.
+        questions:
+        - text: Hãy xem kỹ mã lệnh dưới đây. Bạn nghĩ điều gì sẽ xảy ra khi nhấp chuột
+            vào nút “Run” (chạy)?
+      courseD_multi_maze_until2_predict12022_2023:
         answers:
         - feedback: Sai rồi. Mã lệnh làm chú chim tiến lên khi có đường đi, sau đó
             xoay trái. Chú chim sẽ tiếp tục làm như vậy cho đến khi tới chỗ con heo!
@@ -5831,6 +6338,9 @@ vi-VN:
       courseE_EOC2022:
         description: Bạn đã đến phần cuối của Khóa học E! Hãy chọn một dự án để tạo.
         display_name: Dự án tổng kết khóa học
+      courseE_EOC2022_2023:
+        description: Bạn đã đến phần cuối của Khóa học E! Hãy chọn một dự án để tạo.
+        display_name: Dự án tổng kết khóa học
       courseE_EOC_2020:
         description: Bạn đã đến phần cuối của Khóa học E! Hãy chọn một dự án để tạo.
         display_name: Dự án tổng kết khóa học
@@ -5838,6 +6348,9 @@ vi-VN:
         description: Bạn đã đến phần cuối của Khóa học E! Hãy chọn một dự án để tạo.
         display_name: Dự án tổng kết khóa học
       courseE_EOC_examples2022:
+        description: Bạn đã đến phần cuối của Khóa học E! Hãy chọn một dự án để tạo.
+        display_name: Dự án tổng kết khóa học
+      courseE_EOC_examples2022_2023:
         description: Bạn đã đến phần cuối của Khóa học E! Hãy chọn một dự án để tạo.
         display_name: Dự án tổng kết khóa học
       courseE_EOC_examples_2021:
@@ -5880,6 +6393,23 @@ vi-VN:
         - text: Hãy nhìn vào các hàm được định nghĩa bên dưới. Người thu hoạch sẽ
             hái những nông sản nào?
       courseE_multi_farmer_functions11_predict2022:
+        answers:
+        - feedback: Sai rồi. Người thu hoạch tiến lên cho đến cuối con đường, sau
+            đó xoay ngược lại và lùi đến khi hái được rau diếp.
+          text: Người thu hoạch sẽ hái hai quả bí ngô.
+        - feedback: Sai rồi. Người thu hoạch tiến lên cho đến cuối con đường, sau
+            đó xoay ngược lại và lùi đến khi hái được rau diếp.
+          text: Người thu hoạch sẽ hái toàn bộ bí ngô.
+        - correct: true
+          feedback: Chính xác!
+          text: Người thu hoạch sẽ hái rau diếp.
+        - feedback: Sai rồi. Người thu hoạch tiến lên cho đến cuối con đường, sau
+            đó xoay ngược lại và lùi đến khi hái được rau diếp.
+          text: Người thu hoạch sẽ hái ngô.
+        questions:
+        - text: Hãy nhìn vào các hàm được định nghĩa bên dưới. Người thu hoạch sẽ
+            hái những nông sản nào?
+      courseE_multi_farmer_functions11_predict2022_2023:
         answers:
         - feedback: Sai rồi. Người thu hoạch tiến lên cho đến cuối con đường, sau
             đó xoay ngược lại và lùi đến khi hái được rau diếp.
@@ -5980,6 +6510,21 @@ vi-VN:
         questions:
         - text: Bạn nghĩ điều gì sẽ xảy ra khi bạn nhấp Run vào nút “Run” (chạy)?
       courseE_prediction_artistFunction12022:
+        answers:
+        - feedback: Sai rồi. Hàm thực ra được khai báo hai lần trong chương trình.
+          text: Không có gì. Hàm không được khai báo trong chương trình.
+        - feedback: Sai rồi. Hàm thực ra được khai báo hai lần trong chương trình.
+          text: Họa sĩ sẽ vẽ một hình vuông duy nhất.
+        - feedback: Sai rồi. Chiều dài mỗi cạnh của hình vuông chỉ là 100 điểm ảnh,
+            nhưng họa sĩ đã nhảy 175 điểm ảnh giữa các hàm.
+          text: Họa sĩ sẽ vẽ hai hình vuông chồng lên nhau.
+        - correct: true
+          feedback: Chính xác! Hàm được khai báo hai lần trong chương trình, kèm theo
+            một bước nhảy ở giữa.
+          text: Họa sĩ sẽ vẽ hai hình vuông với một khoảng trống nhỏ ở giữa.
+        questions:
+        - text: Bạn nghĩ điều gì sẽ xảy ra khi bạn nhấp Run vào nút “Run” (chạy)?
+      courseE_prediction_artistFunction12022_2023:
         answers:
         - feedback: Sai rồi. Hàm thực ra được khai báo hai lần trong chương trình.
           text: Không có gì. Hàm không được khai báo trong chương trình.
@@ -6098,6 +6643,20 @@ vi-VN:
         questions:
         - text: Hãy xem kỹ mã lệnh bên dưới. Điều gì sẽ xảy ra sau khi bạn nhấp chuột
             vào nút “Run” (chạy)?
+      courseE_swim_fish_behavior_predict12022_2023:
+        answers:
+        - feedback: Sai. Cỏ lăn sẽ bắt đầu lăn
+          text: Sẽ không có gì xảy ra.
+        - feedback: Sai. Cỏ lăn sẽ bắt đầu lăn
+          text: Cỏ lăn sẽ nổi lên trên cùng của màn hình
+        - correct: true
+          feedback: Chính xác!
+          text: Cỏ lăn sẽ bắt đầu lăn
+        - feedback: Sai. Cỏ lăn sẽ bắt đầu lăn
+          text: Cỏ lăn sẽ nhấp nháy.
+        questions:
+        - text: Hãy xem kỹ mã lệnh bên dưới. Điều gì sẽ xảy ra sau khi bạn nhấp chuột
+            vào nút “Run” (chạy)?
       courseE_swim_fish_behavior_predict1_2021:
         answers:
         - feedback: Sai. Cỏ lăn sẽ bắt đầu lăn
@@ -6122,10 +6681,16 @@ vi-VN:
         display_name: Dự án tổng kết khóa học
       courseF_EOC_examples2022_2022_pilot_-2022-2:
         display_name: Dự án tổng kết khóa học
+      courseF_EOC_examples2022_2022_pilot_-2022-2_2023:
+        display_name: Dự án tổng kết khóa học
       courseF_EOC_examples_2021:
         description: Bạn đã đến phần cuối của Khóa học F! Hãy chọn một dự án để tạo.
         display_name: Dự án tổng kết khóa học
       courseF_EOC_samples2022:
+        description: Bạn sắp bắt đầu dự án cuối cùng của mình. Trước khi bắt đầu,
+          hãy dành thời gian xem xét các dự án mẫu.
+        display_name: Dự án tổng kết khóa học
+      courseF_EOC_samples2022_2023:
         description: Bạn sắp bắt đầu dự án cuối cùng của mình. Trước khi bắt đầu,
           hãy dành thời gian xem xét các dự án mẫu.
         display_name: Dự án tổng kết khóa học
@@ -6182,12 +6747,19 @@ vi-VN:
         - {}
       courseF_collector_samples_2022_pilot_-2022-2:
         display_name: Khám phá – Chương trình mẫu
+      courseF_collector_samples_2022_pilot_-2022-2_2023:
+        display_name: Khám phá – Chương trình mẫu
       courseF_events_freeplay:
         description: Bây giờ bạn có thể vận dụng những kiến thức đã học để cải thiện
           dự án của chính mình rồi! Hãy tiếp tục bổ sung vào chương trình của bạn
           hoặc bắt đầu một dự án mới!
         display_name: Sự kiện – Chơi tự do
       courseF_events_freeplay2022_2022_pilot_-2022-2:
+        description: Bây giờ bạn có thể vận dụng những kiến thức đã học để cải thiện
+          dự án của chính mình rồi! Hãy tiếp tục bổ sung vào chương trình của bạn
+          hoặc bắt đầu một dự án mới!
+        display_name: Sự kiện – Chơi tự do
+      courseF_events_freeplay2022_2022_pilot_-2022-2_2023:
         description: Bây giờ bạn có thể vận dụng những kiến thức đã học để cải thiện
           dự án của chính mình rồi! Hãy tiếp tục bổ sung vào chương trình của bạn
           hoặc bắt đầu một dự án mới!
@@ -6209,6 +6781,10 @@ vi-VN:
 
 
       courseF_events_practice2022_2022_pilot_-2022-2:
+        description: Làm tốt lắm! Hãy chọn hoạt động tiếp theo của bạn. Hãy hoàn thành
+          càng nhiều càng tốt. Tiếp tục luyện tập với sự kiện nhé!
+        display_name: Thực hành với Sự kiện
+      courseF_events_practice2022_2022_pilot_-2022-2_2023:
         description: Làm tốt lắm! Hãy chọn hoạt động tiếp theo của bạn. Hãy hoàn thành
           càng nhiều càng tốt. Tiếp tục luyện tập với sự kiện nhé!
         display_name: Thực hành với Sự kiện
@@ -6242,7 +6818,30 @@ vi-VN:
           text: Nhân vật sẽ xoay trước, rồi di chuyển sau.
         questions:
         - text: Hãy đọc mã lệnh, sau đó dự đoán.
+      courseF_events_predict_multi2022_2022_pilot_-2022-2_2023:
+        answers:
+        - feedback: Sai. Nhân vật còn di chuyển sang phải nữa.
+          text: Nhân vật sẽ chỉ xoay phải.
+        - feedback: Sai. Nhân vật đã không ngừng xoay, do đó nhân vật sẽ thực hiện
+            cả hai hành vi cùng lúc.
+          text: Nhân vật sẽ chỉ di chuyển sang phải.
+        - correct: true
+          feedback: Chính xác! Cả hai hành vi sẽ xảy ra đồng thời.
+          text: Nhân vật sẽ xoay và di chuyển cùng lúc.
+        - feedback: Sai. Trong Sprite Lab, các khối gắn với nhau sẽ xảy ra liên tiếp
+            nhau, vì vậy cả hai hành vi sẽ xảy ra đồng thời.
+          text: Nhân vật sẽ xoay trước, rồi di chuyển sau.
+        questions:
+        - text: Hãy đọc mã lệnh, sau đó dự đoán.
       courseF_groups_predict_multi_2022_pilot_-2022-2:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_groups_predict_multi_2022_pilot_-2022-2_2023:
         answers:
         - correct: true
         - {}
@@ -6263,6 +6862,8 @@ vi-VN:
           Các lựa chọn ở đây sẽ đưa học sinh đến các ứng dụng mẫu mà họ có thể khám phá. Hoạt động này nhằm phối hợp với trang tính Ứng dụng khám phá, có trong [giáo án](.././).
       courseF_intro_apps2022_2022_pilot_-2022-2:
         display_name: Ứng dụng Sprite Lab
+      courseF_intro_apps2022_2022_pilot_-2022-2_2023:
+        display_name: Ứng dụng Sprite Lab
       courseF_labels_predict_multi:
         answers:
         - feedback: Sai. Các nhãn biến không khớp.
@@ -6280,6 +6881,22 @@ vi-VN:
         - text: Mã lệnh này có thể trông quen thuộc nhưng hãy đọc kỹ. Nội dung nào
             sẽ được hiển thị nếu người dùng nhập “pizza”?
       courseF_labels_predict_multi2022_2022_pilot_-2022-2:
+        answers:
+        - feedback: Sai. Các nhãn biến không khớp.
+          text: "“Một chiếc pizza sắp ra ngay đây!”"
+        - feedback: Sai. Nhãn của biến không bao giờ hiển thị.
+          text: "“Một bữa ăn sắp ra ngay đây!”"
+        - feedback: Sai. Nhãn của biến không bao giờ hiển thị.
+          text: "“Một món sắp ra ngay đây!”"
+        - correct: true
+          feedback: Chính xác! Các nhãn biến không khớp.
+          text: "“Một  sắp ra ngay đây!”"
+        - feedback: Sai. Sự kiện và khối hiện sẽ vẫn hoạt động.
+          text: Màn hình sẽ không hiển thị nội dung nào.
+        questions:
+        - text: Mã lệnh này có thể trông quen thuộc nhưng hãy đọc kỹ. Nội dung nào
+            sẽ được hiển thị nếu người dùng nhập “pizza”?
+      courseF_labels_predict_multi2022_2022_pilot_-2022-2_2023:
         answers:
         - feedback: Sai. Các nhãn biến không khớp.
           text: "“Một chiếc pizza sắp ra ngay đây!”"
@@ -6359,6 +6976,24 @@ vi-VN:
         - text: Chúng ta đã đặt biến “length” (chiều dài) thành 50. Điều gì sẽ xảy
             ra khi bạn nhấp chuột vào nút “Run” (Chạy)?
       courseF_multi_artist_variables3a_predict12022:
+        answers:
+        - correct: true
+          feedback: Chính xác!
+          text: Họa sĩ sẽ vẽ hình tam giác có cạnh 50 điểm ảnh.
+        - feedback: Sai rồi. Biến `length` (chiều dài) cần phải ở trong vòng lặp `repeat`
+            (lặp lại) để làm được điều đó.
+          text: Họa sĩ sẽ vẽ đa giác 50 cạnh, mỗi cạnh 3 điểm ảnh.
+        - feedback: Sai rồi. Biến `length` (chiều dài) cần được dùng trong khối `turn`
+            (xoay) để làm được điều đó.
+          text: Họa sĩ sẽ vẽ ba cạnh mở có các góc xoay 50 độ.
+        - feedback: Biến `length` được đặt giá trị 50 và đang được dùng trong khối
+            `move forward by` (tiến lên một khoảng), vì vậy họa sĩ sẽ vẽ hình tam
+            giác có cạnh 50 điểm ảnh.
+          text: Máy tính sẽ nhắc người dùng nhập số.
+        questions:
+        - text: Chúng ta đã đặt biến “length” (chiều dài) thành 50. Điều gì sẽ xảy
+            ra khi bạn nhấp chuột vào nút “Run” (Chạy)?
+      courseF_multi_artist_variables3a_predict12022_2023:
         answers:
         - correct: true
           feedback: Chính xác!
@@ -6520,6 +7155,30 @@ vi-VN:
         questions:
         - text: Hãy đọc mã lệnh dưới đây. Điều gì sẽ xảy ra khi bạn nhấp chuột vào
             nút “Run” (Chạy)?
+      courseF_multi_bee_for3_predict12022_2023:
+        answers:
+        - feedback: Sai rồi. Vòng lặp `for` (với) sẽ giúp chú ong lấy lượng mật hoa
+            phù hợp, nhưng giá trị của vòng lặp này chỉ tới được vị trí 4 bông hoa
+            mà thôi.
+          text: Chú ong sẽ tiến lên và lấy tất cả mật hoa từ mỗi bông hoa.
+        - correct: true
+          feedback: Chính xác!
+          text: Chú ong sẽ tiến lên và lấy tất cả mật hoa từ mỗi bông hoa, trừ một
+            bông.
+        - feedback: Sai rồi. Vòng lặp `for` (với) sẽ giúp chú ong lấy lượng mật hoa
+            phù hợp, nhưng giá trị của vòng lặp này chỉ tới được vị trí 4 bông hoa
+            mà thôi.
+          text: Chú ong sẽ tiến lên và lấy một mật hoa từ mỗi bông hoa.
+        - feedback: Sai rồi. Vòng lặp `for` (với) sẽ giúp chú ong lấy lượng mật hoa
+            phù hợp, nhưng giá trị của vòng lặp này chỉ tới được vị trí 4 bông hoa
+            mà thôi.
+          text: Chú ong sẽ di chuyển về phía trước và thu thập một mật hoa từ hoa
+            số 1 và 4.
+        markdown: Đúng rồi! Dùng vòng lặp `for` (với) sẽ khiến bài tập này đơn giản
+          hơn rất nhiều đấy!
+        questions:
+        - text: Hãy đọc mã lệnh dưới đây. Điều gì sẽ xảy ra khi bạn nhấp chuột vào
+            nút “Run” (Chạy)?
       courseF_multi_bee_for3_predict1_2018:
         answers:
         - feedback: Sai rồi. Vòng lặp `for` (với) sẽ giúp chú ong lấy lượng mật hoa
@@ -6630,6 +7289,10 @@ vi-VN:
         description: Đến lượt bạn tự sáng tạo bằng ý tưởng của chính mình rồi! Bạn
           sẽ thực hiện loại dự án nào?
         display_name: Nhân vật – Chơi tự do
+      courseF_sprites_freeplay2022_2022_pilot_-2022-2_2023:
+        description: Đến lượt bạn tự sáng tạo bằng ý tưởng của chính mình rồi! Bạn
+          sẽ thực hiện loại dự án nào?
+        display_name: Nhân vật – Chơi tự do
       courseF_sprites_practice:
         description: Làm tốt lắm! Hãy chọn hoạt động tiếp theo của bạn. Hãy hoàn thành
           càng nhiều càng tốt. Tiếp tục luyện tập với các nhân vật và hành vi nhé!
@@ -6647,6 +7310,10 @@ vi-VN:
 
 
       courseF_sprites_practice2022_2022_pilot_-2022-2:
+        description: Làm tốt lắm! Hãy chọn hoạt động tiếp theo của bạn. Hãy hoàn thành
+          càng nhiều càng tốt. Tiếp tục luyện tập với các nhân vật và hành vi nhé!
+        display_name: Thực hành nhân vật
+      courseF_sprites_practice2022_2022_pilot_-2022-2_2023:
         description: Làm tốt lắm! Hãy chọn hoạt động tiếp theo của bạn. Hãy hoàn thành
           càng nhiều càng tốt. Tiếp tục luyện tập với các nhân vật và hành vi nhé!
         display_name: Thực hành nhân vật
@@ -6682,6 +7349,22 @@ vi-VN:
           text: Máy bay sẽ đâm vào nhau.
         questions:
         - text: Hãy đọc mã lệnh, sau đó dự đoán.
+      courseF_sprites_predict_multi2022_2022_pilot_-2022-2_2023:
+        answers:
+        - feedback: Sai. Những nhân vật này có “hành vi” tiếp tục chạy cho đến khi
+            được yêu cầu dừng lại.
+          text: Cả hai máy bay sẽ di chuyển một ô dọc theo đường kẻ, sau đó dừng lại.
+        - correct: true
+          feedback: Chính xác! Những hành vi này yêu cầu máy bay bắt đầu di chuyển
+            và tiếp tục.
+          text: Cả hai máy bay sẽ bắt đầu di chuyển và không dừng lại.
+        - feedback: Sai. Các khối mã lệnh trong Sprite Lab sẽ liên tiếp nhau.
+          text: Một máy bay sẽ di chuyển trước và máy bay kia sẽ di chuyển động.
+        - feedback: Sai. Máy bay không được di chuyển đến vị trí khiến chúng đâm vào
+            nhau.
+          text: Máy bay sẽ đâm vào nhau.
+        questions:
+        - text: Hãy đọc mã lệnh, sau đó dự đoán.
       courseF_text_practice:
         description: Làm tốt lắm! Hãy chọn hoạt động tiếp theo của bạn. Hãy hoàn thành
           càng nhiều càng tốt. Tiếp tục luyện tập với văn bản và lời nhắc nhé!
@@ -6702,6 +7385,10 @@ vi-VN:
         description: Làm tốt lắm! Hãy chọn hoạt động tiếp theo của bạn. Hãy hoàn thành
           càng nhiều càng tốt. Tiếp tục luyện tập với văn bản và lời nhắc nhé!
         display_name: Thực hành văn bản và lời nhắc
+      courseF_text_practice2022_2022_pilot_-2022-2_2023:
+        description: Làm tốt lắm! Hãy chọn hoạt động tiếp theo của bạn. Hãy hoàn thành
+          càng nhiều càng tốt. Tiếp tục luyện tập với văn bản và lời nhắc nhé!
+        display_name: Thực hành văn bản và lời nhắc
       courseF_variables2_predict2_multi2022_-2022-2:
         answers:
         - correct: true
@@ -6710,7 +7397,23 @@ vi-VN:
         - {}
         questions:
         - {}
+      courseF_variables2_predict2_multi2022_-2022-2_2023:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseF_variables2_predict_multi2022_2022_pilot_-2022-2:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseF_variables2_predict_multi2022_2022_pilot_-2022-2_2023:
         answers:
         - {}
         - {}
@@ -6750,6 +7453,22 @@ vi-VN:
         - text: 'Chương trình này cho phép bạn trả lời câu hỏi bằng cách nhập bằng
             bàn phím. Khối `print` sẽ hiện chữ trên màn hình. Hãy dự đoán: Điều gì
             sẽ xảy ra sau khi trả lời câu hỏi?'
+      courseF_variables_predict_multi2022_2022_pilot_-2022-2_2023:
+        answers:
+        - feedback: Sai. Khối tên sẽ được thay thế bằng bất cứ văn bản nào bạn nhập
+            vào.
+          text: Chương trình sẽ hiện chữ “Xin chào tên!”
+        - correct: true
+          feedback: Chính xác! Nội dung bạn nhập sẽ được sử dụng thay cho khối tên.
+          text: Chương trình sẽ chào đón bạn với tên mà bạn nhập.
+        - feedback: Sai. Chữ hiện ra trên màn hình.
+          text: Nhân vật sẽ thay đổi kích thước.
+        - feedback: Sai. Chỉ một câu hỏi được đặt ra ngay khi chương trình bắt đầu.
+          text: Máy tính sẽ hỏi một câu hỏi khác.
+        questions:
+        - text: 'Chương trình này cho phép bạn trả lời câu hỏi bằng cách nhập bằng
+            bàn phím. Khối `print` sẽ hiện chữ trên màn hình. Hãy dự đoán: Điều gì
+            sẽ xảy ra sau khi trả lời câu hỏi?'
       courseF_variables_projects:
         description: Bạn sẽ tạo thiệp mừng, một chatbot hoặc câu chuyện khoảng trống.
           Nếu bạn đã hoàn thành \"Part 1\" của dự án, hãy chuyển sang \"Part 2\".
@@ -6760,6 +7479,10 @@ vi-VN:
 
           Học sinh có thể cần được hướng dẫn thực sự rõ ràng để hiểu cách thay đổi các lựa chọn ở đây. Đối với mỗi lựa chọn dự án, có hai cấp độ phụ ở đây. Ban đầu, học sinh nên chọn một trong các cấp độ được đánh dấu “Phần 1”. Sau khi hoàn thành cấp độ đó, các em sẽ trở lại phần này và chọn “Phần 2” của *cùng một* dự án đó. Cấp độ đầu tiên cho mỗi lựa chọn sẽ cho học sinh phản hồi khi các em ghép các thành phần cơ bản của dự án với nhau. Cấp độ thứ hai là “chơi tự do” nhằm giúp học sinh thay đổi mã lệnh theo sở thích.
       courseF_variables_projects2022_2022_pilot_-2022-2:
+        description: Bạn sẽ tạo thiệp mừng, một chatbot hoặc câu chuyện khoảng trống.
+          Nếu bạn đã hoàn thành \"Part 1\" của dự án, hãy chuyển sang \"Part 2\".
+        display_name: Chọn dự án
+      courseF_variables_projects2022_2022_pilot_-2022-2_2023:
         description: Bạn sẽ tạo thiệp mừng, một chatbot hoặc câu chuyện khoảng trống.
           Nếu bạn đã hoàn thành \"Part 1\" của dự án, hãy chuyển sang \"Part 2\".
         display_name: Chọn dự án
@@ -6775,6 +7498,12 @@ vi-VN:
 
           Học sinh nên xem các dự án thật kỹ trước khi quyết định muốn sáng tạo điều gì. Bạn có thể quan sát cả lớp hoặc để học sinh tự khám phá.
       courseF_variables_samples2022_2022_pilot_-2022-2:
+        description: Bạn sẽ tạo thiệp chúc mừng, chatbot hoặc câu chuyện khoảng trống.
+          Trước khi bắt đầu, hãy khám phá các dự án ví dụ bên dưới để xem bạn muốn
+          tạo gì. Nhấn \"Finish\" khi bạn sẵn sàng bắt đầu lập kế hoạch cho chương
+          trình của riêng mình.
+        display_name: Khám phá – Chương trình mẫu
+      courseF_variables_samples2022_2022_pilot_-2022-2_2023:
         description: Bạn sẽ tạo thiệp chúc mừng, chatbot hoặc câu chuyện khoảng trống.
           Trước khi bắt đầu, hãy khám phá các dự án ví dụ bên dưới để xem bạn muốn
           tạo gì. Nhấn \"Finish\" khi bạn sẵn sàng bắt đầu lập kế hoạch cho chương
@@ -6820,6 +7549,26 @@ vi-VN:
           * Mô tả hoặc bản vẽ của các nhân vật bạn sẽ cần (và các hành vi của chúng).
 
           Nếu bạn không chắc mình đã sẵn sàng để tiếp tục hay chưa, hãy hỏi giáo viên nhé!
+      courseF_variables_stop2022_2022_pilot_-2022-2_2023:
+        content1: mô tả ở đây
+        markdown: |
+          # Dừng lại!
+
+          ## Bạn đã sẵn sàng tiếp tục chưa?
+
+
+          Ở cấp độ tiếp theo, bạn sẽ bắt đầu viết mã lệnh cho dự án của mình. Phần này sẽ phát huy hiệu quả cao nhất nếu bạn đã có sẵn kế hoạch.
+
+          Kế hoạch đã hoàn thành của bạn nên bao gồm:
+
+          <img src="https://images.code.org/b476ac330f2b66e44e02208fee386a56-image-1614802439867.png" style="float:left; height:70px; padding:10px"/>
+
+          * Loại dự án bạn đang xây dựng. Ví dụ: thiệp chúc mừng, chatbot hoặc câu chuyện khoảng trống.
+          * Danh sách các câu hỏi bạn sẽ hỏi người dùng.
+          * Văn bản khác bạn sẽ hiển thị ra màn hình.
+          * Mô tả hoặc bản vẽ của các nhân vật bạn sẽ cần (và các hành vi của chúng).
+
+          Nếu bạn không chắc mình đã sẵn sàng để tiếp tục hay chưa, hãy hỏi giáo viên nhé!
       coursee_prediction_artistfunction2:
         answers:
         - feedback: Sai rồi. Vòng lặp sử dụng “draw polygon” (vẽ đa giác) thay vì
@@ -6837,6 +7586,22 @@ vi-VN:
         questions:
         - text: Điều gì sẽ xảy ra khi bạn nhấp chuột vào nút “Run” (chạy)?
       coursee_prediction_artistfunction22022:
+        answers:
+        - feedback: Sai rồi. Vòng lặp sử dụng “draw polygon” (vẽ đa giác) thay vì
+            “draw line of polygon” (vẽ hàng đa giác).
+          text: Họa sĩ sẽ giải quyết các bài tập một cách chính xác.
+        - correct: true
+          feedback: Chính xác!
+          text: Họa sĩ sẽ vẽ bốn hình vuông theo mẫu cửa sổ.
+        - feedback: Sai rồi. Chương trình không khai báo hàm “draw line of polygons”
+            (vẽ hàng đa giác).
+          text: Họa sĩ sẽ chỉ vẽ một hàng hình vuông.
+        - feedback: Sai rồi. Vòng lặp xoay 90 độ giữa các lần khai báo hàm “draw polygon”
+            (vẽ đa giác).
+          text: Họa sĩ sẽ vẽ bốn hình vuông chồng lên nhau.
+        questions:
+        - text: Điều gì sẽ xảy ra khi bạn nhấp chuột vào nút “Run” (chạy)?
+      coursee_prediction_artistfunction22022_2023:
         answers:
         - feedback: Sai rồi. Vòng lặp sử dụng “draw polygon” (vẽ đa giác) thay vì
             “draw line of polygon” (vẽ hàng đa giác).
@@ -6916,6 +7681,321 @@ vi-VN:
           text: Họa sĩ sẽ vẽ bốn hình vuông chồng lên nhau.
         questions:
         - text: Điều gì sẽ xảy ra khi bạn nhấp chuột vào nút “Run” (chạy)?
+      csc_animal_adaptations_L3_intro:
+        markdown: "#Make hành vi của riêng bạn!\n\n<br>\n\n# #Now bạn đang kiểm soát
+          các hành vi!\n\n## #Edit các hành vi hiện có để sửa đổi và thay đổi chúng.
+          \n! [] (https://images.code.org/e2e63b1cd7302b6548591c65ad23a0ee-image-1680019477336.gif)\n\n##
+          #Make hành vi mới của riêng bạn với bất kỳ hành động nào bạn muốn!\n\n!
+          [] (https://images.code.org/5345f53f3b33b2ad2bbf2bc86539cb96-image-1680019210225.gif)\n\n\n"
+      csc_animal_adaptations_choice:
+        description: Chọn từ các kịch bản bên dưới và sử dụng mã sáng tạo của riêng
+          bạn để mô hình hóa một sự thích nghi động vật mới và độc đáo! Bạn có thể
+          chọn nhiều tùy chọn và làm nhiều hơn một!
+        display_name: Mã hóa sự thích nghi động vật của riêng bạn!
+      csc_animal_adaptations_intro:
+        markdown: "#Survival Hành vi\n\n# #Behaviors trong tự nhiên\nĐộng vật đã phát
+          triển <strong>các hành vi</strong> và hành động để giúp chúng tồn tại. <br>
+          Ví dụ: một số động vật ** di đổi** trong mùa đông và những con khác cố gắng
+          ở trong ** nhóm**.\n\n<img style=\" float: left; width:50%; padding-top:10px\"
+          src=\"https://images.code.org/424ef84f41b7cabdf62e8cc509abe62c-image-1678322413909.jpg\"
+          style= \"width:60%\">\n<img style=\" float: left; width:46%; padding-top:10px\"
+          src=\"https://images.code.org/7c79e255d048e7ccf099eb61976bb90c-image-1678322295452.jpg\"
+          style= \"width:60%\">\n\n<div style=\"float: left\">\n<h2>Các hành vi trong
+          khoa học máy tính</h2>\nTrong khoa học máy tính, <strong>hành vi</strong>
+          là một tập hợp các hành động mà một sprite lặp đi lặp lại giống như một
+          hình ảnh động. <br>\nCác hành động trong hành vi tiếp tục cho đến khi được
+          hướng dẫn dừng lại. \n<br>\n<br>\n\n<img src=\"https://images.code.org/56809209ca823047729cc01a033a7ac0-image-1679937249706.gif\"
+          style=\" float: left; width:70%; padding-top:10px\">\n</div>\n"
+      csc_animal_adaptations_predict:
+        answers:
+        - feedback: Không chính xác. Sprite sẽ phát triển.
+          text: Sprite sẽ quay.
+        - correct: true
+          feedback: Chính xác!
+          text: Sprite sẽ phát triển.
+        - feedback: Không chính xác. Sprite sẽ phát triển.
+        - feedback: Không chính xác. Sprite sẽ phát triển.
+        questions:
+        - {}
+      csc_animal_adaptations_shareout:
+        markdown: "# #Share Dự án của bạn\n<img src=\"https://images.code.org/c480c5c42d9c02e154943f49bbed87ff-image-1675984438344.13.53
+          PM.png\" style= \"width:60%\">\n<div style= \"width: 60%\"> \n\n** Bây giờ
+          bạn đã mã hóa một bản thích ứng sinh tồn, đã đến lúc chia sẻ nó ra! **\n\nKhi
+          bạn xem các dự án của bạn cùng lớp từ cấp 9, hãy xem xét các câu hỏi sau:
+          > 1.\n\nBạn đã chọn cùng một kịch bản môi trường hay những môi trường khác
+          nhau? \n> 2. Họ có sử dụng bất kỳ khối mã hóa nào giống nhau không? \n>
+          3. Bạn có nghĩ rằng con vật sẽ sống sót sau sự thay đổi môi trường? Tại
+          sao hoặc tại sao không? \n\n</div>\n\n"
+      csc_bookcover_extensions_choice_2023:
+        description: Chọn từ các hoạt động dưới đây để thêm vào bìa sách của bạn!
+          Bạn có thể chọn nhiều tùy chọn và làm nhiều hơn một!
+        display_name: Mở rộng bìa sách của bạn!
+      csc_bookcovers_markdown_lesson_4:
+        markdown: "# #Share Bìa sách của bạn\n<img src=\"https://images.code.org/c480c5c42d9c02e154943f49bbed87ff-image-1675984438344.13.53
+          PM.png\" style= \"width:60%\">\n<div style= \"width: 60%\"> \n\n** Bây giờ
+          bạn đã mã hóa bìa sách của mình, đã đến lúc chia sẻ nó ra! **\n\nKhi bạn
+          xem các dự án của bạn cùng lớp, hãy xem xét các câu hỏi sau: > 1.\n\nBạn
+          đã thấy những câu chuyện và đoạn hội thoại nào trong bìa sách của các bạn
+          cùng lớp?\n> 2. Điều gì xảy ra khi bạn nhấp vào các nhân vật?\n> 2. Lựa
+          chọn của họ tương tự như của bạn như thế nào? Họ khác nhau như thế nào?\n>
+          3. Bạn có muốn đọc cuốn sách dựa trên bìa của nó không?\n</div>\n\n"
+      csc_bookcovers_planning:
+        markdown: "# #Plan Bìa sách kỹ thuật số của bạn\n\n<div>\n<img style=\" float:
+          left; width:25%; padding-top:10px\" src=\"https://images.code.org/08ece3f13c8f0f82343e302fb52dc45c-image-1676499630865.png\"
+          />\n\n<div style=\"float: left; width: 70%; padding-left:20px\">\n<h4>\n<strong>Đã
+          đến lúc lập kế hoạch của bạn!</strong>\n</h4>\n\n>Bạn nên bao gồm:\n> -
+          Tên sách\n> - Tác giả\n> - Hai nhân vật chính và một câu để mô tả bản thân
+          \n> - Tóm tắt một hai câu của cuốn sách\n\n** Đây là một mẫu kế hoạch bạn
+          có thể sao chép để sử dụng cho mình: ** Hướng dẫn</a>lập kế hoạch bìa  <a
+          href=\"https://docs.google.com/document/d/18cVgDdq77dbdk6gmQ1rGjHIr7pQk3I2Wb2WsAEeNH64/template/preview\"
+          target=\"_blank\"> sách.\n\n</div>\n"
+      csc_codingwithpoetry_markdown_lesson_4:
+        markdown: "# #Share Ứng dụng bài thơ của bạn\n<img src=\"https://images.code.org/c480c5c42d9c02e154943f49bbed87ff-image-1675984438344.13.53
+          PM.png\" style= \"width:60%\">\n<div style= \"width: 60%\"> \n\n** Bây giờ
+          bạn đã mã hóa bài thơ của mình, đã đến lúc chia sẻ nó! **\n\nKhi bạn xem
+          dự án của các bạn cùng lớp, hãy nghĩ về “ánh sáng”, “phát triển” và “câu
+          hỏi”, bạn có thể viết cho đối tác của mình:\n\n- Một “ánh sáng” là điều
+          họ đã làm tốt\n- “phát triển” là thứ họ có thể thay đổi hoặc cải thiện\n-
+          “câu hỏi” là điều bạn muốn biết thêm\n</div>\n\n** Sẵn sàng để bắt đầu?
+          ** Sử dụng tài nguyên <a href=\"https://docs.google.com/document/d/1b6w_lOnibUHyDLYCP3rAWED5iElGm6LOQAJwG-hlih0/template/preview\"
+          target=\"_blank\">này</a> để chia sẻ phản hồi với đối tác của bạn.\n\n"
+      csc_ecosystemes_foodchain_info:
+        markdown: "\n##** Tất cả các hệ sinh thái đều có chuỗi thức ăn _ cân bằng
+          tinh xảo _ ## #The chuỗi\nthức ăn của hệ sinh thái biển: >## #1.\n\n\n\n<img
+          src=\"https://images.code.org/2270cbb4656875db210e9871883a7d45-image-1683677265473.jpg\"
+          style= \"width:80%\">\n<div style= \"width: 80%\"> \n\nMặt trời cung cấp
+          năng lượng cho quá trình quang hợp xảy ra ở tảo.\n>## #2. Tảo được cá ăn.\n>##
+          #3. Cá được đánh bắt và ăn bởi con người, những người sử dụng thuyền đánh
+          cá có lưới. \n\n</div>\n\n\n##** Nếu có quá nhiều hoặc quá ít một sinh vật
+          trong chuỗi thức ăn, sẽ có những ảnh hưởng đến toàn bộ hệ sinh thái.\n"
+      csc_ecosystems_choice_freeplay_2023:
+        description: Mỗi mô phỏng hệ sinh thái này cần được điều chỉnh. Chọn một hệ
+          sinh thái, chạy mô phỏng để quan sát sự cố và điều chỉnh mã để khắc phục
+          nó.
+        display_name: Chọn một hệ sinh thái!
+      csc_ecosystems_conditionals_overview:
+        markdown: "#Cause & Effect Conditionals \n\n</div>\n\n## Tiếp theo bạn sẽ
+          thêm mã để kiểm tra xem có bao nhiêu tảo trong nước <br>\n<img src=\"https://images.code.org/8be316d4e408466b4300c614712fd652-image-1684798211348.jpg\"
+          \ width=50% style=\"margin-right: 10px; float: right\">\n<br> <br>\n\n-
+          Đầu tiên, máy tính kiểm tra xem một điều kiện là đúng hay sai.\n\n- Nếu
+          nó là sự thật, sau đó nó sẽ chạy các khối bên trong.\n- Nếu nó là sai, thì
+          nó sẽ không làm gì cả.\n\n<br>\n<br>\n<br>\n\n## Nếu có quá nhiều tảo, thì
+          san hô bị bệnh\n\n<br>\n\n<img src=\"https://images.code.org/4d8aaa9c6562e0ca0b3d92ff7aed1d03-image-1681847951794.png\"
+          \ width=20% style=\"margin-right: 10px; float: left\">\n<img src=\"https://images.code.org/941774921f367566bef36cb712cf2bfb-image-1681840836607.png\"
+          \ width=30% style=\" margin-right: 10px; float: left\">\n\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n\n***\n\n\n\n##
+          Nếu có quá ít tảo, thì cá sẽ rời đi\n<img src=\"https://images.code.org/6869f418200edfb88190c0a1e4e5cd10-image-1681838202310.png\"
+          \ width=20% style=\"margin-right: 10px; float: left\">\n\n\n<img src=\"https://images.code.org/233178645539bc7966f55af47865096d-image-1681840833690.png\"
+          \ width=20% style=\" margin-right: 10px; float: left\">\n\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n\n\n***\n\n\n\n##
+          Nếu chỉ có đủ tảo, thì hệ sinh thái khỏe mạnh\n\n<img src=\"https://images.code.org/8bb9247c35d7d167611b02764beaeff3-image-1681838011797.png\"
+          \ width=20% style=\"margin-right: 30px; float: left\">\n<img src=\"https://images.code.org/b1ed2f5c135f9637fd7a9c5778db2b0c-image-1681840830929.png\"
+          \ width=30% style=\"margin-left: 10px;float: left\">\n<br>\n<br>\n<br>\n<br>\n\n"
+      csc_ecosystems_matching_cfu:
+        answers:
+        - text: "! [] (https://images.code.org/284e3b6e09f5d58052a8840e756644c5-image-1683752491112.png)"
+        - text: "! [] (https://images.code.org/d466f0912cd0cadb3d655263c71c072f-image-1683752857648.jpg)"
+        - text: "! [] (https://images.code.org/de2ab3c63bc2cf7cb319be86d5dcdec0-image-1683752570051.png)"
+        markdown: |+
+          ## Nhìn vào ba phương pháp đánh bắt cá bền vững
+
+          Kéo mã vào hình ảnh phù hợp.
+
+        questions:
+        - text: Tạo một khu vực câu cá cho thuyền! [] (https://images.code.org/5f5e0640a82242d632db10b872280e18-image-1683753001613.gif)
+        - text: |-
+            Bắt đầu một mùa câu cá và một mùa không câu cá
+            ! [] (https://images.code.org/becad47fd19a4d0e938a0cd10c404e41-image-1683838684289.gif)
+        - text: Đặt giới hạn câu cá! [] (https://images.code.org/f8bbd98ff6199af5d3ad23d64f39629d-image-1683753402925.gif)
+        title: Ghép mã với hình ảnh
+      csc_ecosystems_matching_conditionals:
+        answers:
+        - text: "! [] (https://images.code.org/db1db479bec9b40c6e0574ade394d32b-image-1680118613718.36.41
+            PM.png)"
+        - text: "! [] (https://images.code.org/7c9171ab2ee2e833e5ff60d5519d8728-image-1680118617438.31.00
+            PM.png)"
+        - text: "! [] (https://images.code.org/412968ba617ef19d2049e0e63d271937-image-1680118620636.30.50
+            PM.png)"
+        markdown: |
+          ## Nhìn vào ba hệ sinh thái
+
+          Một hệ sinh thái cân bằng và hai hệ sinh thái còn lại mất cân bằng theo những cách khác nhau. Kéo mã vào hình ảnh phù hợp.
+        questions:
+        - text: Quá ít tảo làm cho cá rời đi.! [] (https://images.code.org/c0a28473307b7e9b0e827532d2a6ddda-image-1680212227032.png)
+        - text: |-
+            Quá nhiều tảo làm cho san hô bị bệnh. <br>
+            ! [] (https://images.code.org/1230fd96832b692b0c8ab88e77957f33-image-1680212254888.png)
+        - text: Chỉ cần lượng tảo vừa đủ cho phép san hô bị bệnh chữa lành và giữ
+            cho cá khỏe mạnh.! [] (https://images.code.org/3dd061538a7a73285aa0916fdde34e77-image-1680212284869.png)
+        title: Ghép mã với hình ảnh
+      csc_ecosystems_matching_events:
+        answers:
+        - text: "! [] (https://images.code.org/bf70d0664e68690f2359a48365e50ccc-image-1680556679495.16.33
+            PM.png)"
+        - text: "! [] (https://images.code.org/fe4d2803162186a8e53ec0027f27a206-image-1680556683660.36.04
+            PM.png)"
+        markdown: |+
+          Nhìn vào những gì xảy ra khi các họa sĩ chạm vào cả hai hình ảnh động. Sau đó kéo từng hình ảnh mã vào hình ảnh phù hợp của nó.
+
+
+        questions:
+        - text: Thuyền bắt cá!! [] (https://images.code.org/bcdefefdd1787330e3ad72558b5b492d-image-1680556053866.gif)
+        - text: Cá ăn tảo.! [] (https://images.code.org/73febc58a3d23fbf4c66e693abec9e3d-image-1680556608027.gif)
+        title: Ghép mã với hình ảnh động
+      csc_ecosystems_overfishing_solution2_overview:
+        markdown: "> #Sustainable Fishing Practice #2:\n>># #Create Một Mùa Câu Cá
+          <img src=\"https://images.code.org/123dd5c82e4c03dcbc32b775fd16ec60-image-1681937158113.png\"
+          \ width=400 style=\"margin-right: 30px; float: left\">\n** Đặt giới hạn
+          về thời điểm mọi người có thể bắt cá. Khi không phải là mùa đánh bắt cá,
+          hệ sinh thái có thời gian để phục hồi.** \n<br>\n\n#Save Biển của chúng
+          tôi! \n<img src=\"https://images.code.org/f3f55eddff9891464c8fb5a5405c31c3-image-1681781301257.png\"
+          width=250 style=\"margin-left: 30px; margin-bottom: 30px; float: right\">\n<img
+          src=\"https://images.code.org/cbccfc42b7e1fe329ac7c9c37dfcb6b5-image-1681781296669.png\"
+          width=250 style=\"margin-left: 30px; margin-bottom: 30px; float: right\">\n\n</div>\n\n###
+          Đánh bắt quá mức là một vấn đề có thể gây hại cho hệ sinh thái sinh vật
+          biển và những người dựa vào chúng. Điều quan trọng là thực hành đánh bắt
+          bền vững để giúp bảo vệ các hệ sinh thái này và đảm bảo rằng các quần thể
+          cá vẫn khỏe mạnh.\n\n\n\n<br>\n<br>\n<br>\n"
+      csc_ecosystems_overfishing_solution3_overview:
+        markdown: "> #Sustainable Fishing Practice #3:\n>># #Set Giới hạn câu cá <img
+          src=\"https://images.code.org/58d4ca52deba39a990c3165ba16e284b-image-1681747630352.png\"
+          \ width=300 style=\"margin-right: 30px; float: left\">\n** Các nhà khoa
+          học có thể giúp tìm ra có bao nhiêu con cá có thể bị bắt mà không gây hại
+          cho đại dương. Sau đó, ngư dân sẽ biết để chỉ bắt được nhiều cá đó.** \n<br>\n<br>\n<br>\n\n#Save
+          Biển của chúng tôi! \n<img src=\"https://images.code.org/35e557d27c4bdb5f546da560716dc10b-image-1681756387784.jpg\"
+          width=400 style=\"margin-left: 30px; margin-bottom: 30px; float: right\">\n</div>\n\n###
+          Bằng cách làm việc cùng nhau, chúng ta có thể giúp giữ cho đại dương của
+          chúng ta tràn đầy sức sống cho các thế hệ mai sau!\n\n\n\n<br>\n<br>\n<br>\n\n"
+      csc_ecosystems_overfishing_solutions_overview:
+        markdown: "#Save Biển của chúng tôi! \n<img src=\"https://images.code.org/d4267a1de975b8ea46468f74187eb95c-image-1681756621010.jpg\"
+          width=400 style=\"margin-left: 30px; margin-bottom: 30px; float: right\">\n</div>\n\n###
+          Đại dương có rất nhiều cá trong đó, nhưng đôi khi người ta bắt quá nhiều
+          cá và nó có thể gây hại cho hệ sinh thái. Ở các cấp độ sau, bạn sẽ mã hóa**
+          ba phương pháp đánh bắt cá bền vững khác nhau** để giúp bảo vệ hệ sinh thái
+          đại dương của chúng ta.\n\n<br>\n\n## #To đọc thêm về các giải pháp bền
+          vững cho đại dương của chúng ta: <a href=\"https://www.seafoodwatch.org/seafood-basics/sustainable-solutions/avoid-overfishing\"
+          target=\"_blank\">Bấm vào đây</a>\n<br>\n<br>\n\n> #Sustainable Câu cá Thực
+          hành #1:\n>> # #Fishing Khu <img src=\"https://images.code.org/c33e46309c5335dc557c67c34310e723-image-1681511054034.png\"
+          \ width=300 style=\"margin-right: 30px; float: left\">\n** Thuyền đánh cá
+          chỉ có thể câu cá ở các khu vực được chỉ định. Một số khu vực nằm ngoài
+          giới hạn cho tàu đánh cá để hệ sinh thái có thể phục hồi. \n<br>\n<br>\n\n\n"
+      csc_ecosystems_planning:
+        markdown: "# #Share Mô phỏng hệ sinh thái của bạn!\n<img src=\"https://images.code.org/c480c5c42d9c02e154943f49bbed87ff-image-1675984438344.13.53
+          PM.png\" style= \"width:50%\">\n<div style= \"width: 60%\"> \n\n###** Nhà
+          sinh thái học! Đã đến lúc chia sẻ nghiên cứu của bạn! **\n\n## #Explain
+          những quan sát sau bạn đã thực hiện:\n\n> 1. Giải thích chuỗi thức ăn trong
+          hệ sinh thái của bạn và cách bạn mã hóa nó.\n> 2. Có quá nhiều hay quá ít
+          của một sinh vật?\n> 3. Giải thích các sửa đổi bạn đã thực hiện cho mô phỏng.
+          \n> 4. Bạn đã nhận thấy gì sau khi bạn thay đổi các giá trị?\n</div>\n\n<div
+          style=\"background-color: #a6e3e8; border-radius: 10px; color: #000000;
+          width: 95%; padding: 0.5px 20px 1px 20px;\">\n\n<p style=\"line-height:
+          1.5; margin-left: 10px; margin-right: 10px; margin-top: 20px; margin-bottom:
+          20px; font-size: 18px; \">\n\n###** Sẵn sàng cho mã hóa nhiều hơn? ** \nHãy
+          thử [Khóa học nhanh] của code.org (https://studio.code.org/s/express-2022)
+          để tìm hiểu thêm về khoa học máy tính theo tốc độ của riêng bạn.   \n<br>\n</p></div>\n"
+      csc_mappinglandmarks_markdown_lesson_2:
+        markdown: |+
+          # #Plan Bản đồ địa danh của bạn
+          <div>
+          <img style=" float: left; width:20%; padding-top:10px" src="https://images.code.org/08ece3f13c8f0f82343e302fb52dc45c-image-1676499630865.png" />
+
+          <div style="float: left; width: 70%; padding-left:20px">
+          <h4>
+          <strong>Đã đến lúc lập kế hoạch bản đồ địa danh của riêng bạn.</strong>
+          </h4>
+
+          Bạn có thể tạo bản đồ lớp học, trường học hoặc thành phố của mình. Có thể bạn sẽ chọn làm nổi bật các địa danh của tiểu bang, khu vực hoặc quốc gia. Hoặc bạn có thể chọn tạo bản đồ dựa trên khu vực bạn đã học trong lớp.
+
+          Khi bạn lập kế hoạch bản đồ của mình, hãy nghĩ về hình nền, họa tiết và bài phát biểu bạn muốn sử dụng để dạy cho người khác về các địa danh bạn đã chọn.
+
+          ** Cần một số trợ giúp để bắt đầu? ** Sử dụng tài nguyên <a href="https://docs.google.com/document/d/1t_-cd-f6EhhUbblu8nSGRajStY9FVwLnKn1Bj90GL3Q/template/preview" target="_blank">này</a> để lập kế hoạch công việc của bạn.
+
+
+      csc_mappinglandmarks_markdown_lesson_4:
+        markdown: "# #Share Bản đồ Địa danh Địa phương của bạn\n\nBây giờ bạn đã mã
+          hóa bản đồ của mình, đã đến lúc chia sẻ nó ra! Đầu tiên, hãy hoàn thành
+          một phản ánh ngắn về dự án của bạn: \n\n> 1. Giải thích phần yêu thích của
+          bạn trong dự án của bạn.\n> 2. Một khối mã hữu ích trong dự án của bạn là
+          gì?\n> 3. Giải thích một lỗi hoặc thách thức bạn phải đối mặt khi xây dựng
+          dự án của bạn.\n> 4. Làm thế nào bạn sửa lỗi hoặc vượt qua thử thách?\n>
+          5. Những thay đổi nào bạn vẫn muốn thực hiện để cải thiện dự án của mình?\n\nKhi
+          bạn trình bày công việc của mình với các bạn cùng lớp, hãy đảm bảo giải
+          thích cách mã của bạn hoạt động, những lựa chọn thiết kế bạn đã thực hiện
+          và những thách thức bạn phải đối mặt.\n\n\n\n"
+      csc_starquilts_markdown_lesson_1:
+        markdown: |+
+          # #Plan Chăn
+
+          <div>
+          <img style=" float: left; width:25%; padding-top:10px" src="https://images.code.org/d5e1eedfbe978ba6feebd3f89da0a667-image-1679522801245.png" />
+
+          <div style="float: left; width: 70%; padding-left:20px">
+          <h4>
+          <strong>sao của bạn Đã đến lúc lên kế hoạch cho chăn bông sao của bạn.</strong>
+          </h4>
+
+          > Đầu tiên bạn sẽ chọn bốn màu khác nhau và điền vào Star Quilt của bạn. Sau đó, bạn sẽ thực hiện thêm một số hoạt động với các mẫu.
+
+          ** Sẵn sàng để bắt đầu? ** Sử dụng tài nguyên <a href="https://docs.google.com/document/d/1c__530oWLDH-mX0kSxLMStSz-5Lt3cKUm5K3bTV7Uvo/template/preview" target="_blank">này</a>.
+
+
+          </div>
+
+
+      csc_timecapsule_choice_lesson_3:
+        description: Chọn từ các hoạt động dưới đây để làm mới trí nhớ của bạn về
+          cách thêm mã vào bài thơ viên nang thời gian của bạn! Bạn có thể chọn nhiều
+          tùy chọn và làm nhiều hơn một!
+        display_name: Xem lại kỹ năng viết mã của bạn!
+      csc_timecapsule_choice_lesson_3_ -l3:
+        description: Chọn từ các hoạt động dưới đây để làm mới trí nhớ của bạn về
+          cách thêm mã vào bài thơ viên nang thời gian của bạn! Bạn có thể chọn nhiều
+          tùy chọn và làm nhiều hơn một!
+        display_name: Xem lại kỹ năng viết mã của bạn!
+      csc_timecapsule_info_2023:
+        content1: mô tả ở đây
+        markdown: "# #Time Capsules\n\n<img src=\"https://images.code.org/846b0e2d7a84392a70f432fdce00cd29-image-1676501071993.png\"
+          style= \"float:left; width: 25%; padding-right:30px\"/>\n\n<div style= \"width:
+          70%\"> \n<strong>Một viên nang thời gian giống như một hộp kho báu</strong>,
+          nhưng thay vì giữ đồ chơi và kẹo bên trong, nó chứa những vật phẩm đặc biệt
+          kể câu chuyện về cuộc sống hiện tại như thế nào. Sau đó, nó được đặt ở một
+          nơi an toàn, như chôn dưới đất hoặc trong một hộp chắc chắn trong thư viện,
+          trong nhiều năm. \n<br>\n<br>\n<strong>Khi đến thời điểm thích hợp, ai đó
+          sẽ mở hộp</strong> và nhìn thấy tất cả những thứ đặc biệt được đặt bên trong,
+          và họ sẽ biết tất cả về cuộc sống như thế nào khi nó được chôn cất. \n<br>\n<br>\n<strong>Một
+          bài thơ </strong>về viên nang thời gian kỹ thuật số cũng tương tự, nhưng
+          thay vì giữ mọi thứ bên trong hộp, nó chứa hình ảnh, video và tin nhắn được
+          lưu trữ trên máy tính hoặc trên internet.\n</div>\n\n"
+      csc_timecapsule_markdown_lesson_2:
+        markdown: "# #Plan Your Time Capsule\n\n<div>\n<img style=\" float: left;
+          width:25%; padding-top:10px\" src=\"https://images.code.org/08ece3f13c8f0f82343e302fb52dc45c-image-1676499630865.png\"
+          />\n\n<div style=\"float: left; width: 70%; padding-left:20px\">\n<h4>\n<strong>Đã
+          đến lúc lên kế hoạch cho bài thơ viên nang thời gian của riêng bạn.</strong>\n</h4>\n\n>Bạn
+          nên bao gồm:\n> - Những gì bạn muốn làm \n> - Điều gì là quan trọng đối
+          với bạn\n> - Điều gì hiện đang xảy ra trong cộng đồng của bạn \n> - Một
+          vài sự kiện thế giới hiện tại\n\n** Cần giúp đỡ để bắt đầu bài thơ của bạn?
+          ** Sử dụng tài nguyên <a href=\"https://docs.google.com/document/d/1fahr11zX92NW-rLdyZBqrNK2VqgOGtCACkcT87M_luU/template/preview\"
+          target=\"_blank\">này</a>.\n\n** Chỉ cần một số cảm hứng? ** Sử dụng tài
+          nguyên <a href=\"https://docs.google.com/document/d/1-aPA3uJIKJAuQ_2Gtck1Ma79eCFY88ZC8YzegQIckG4/template/preview\"
+          target=\"_blank\">này</a>.\n\n</div>\n"
+      csc_timecapsule_markdown_lesson_2_poetry:
+        markdown: "# #Plan Bài thơ\n\n<div>\n<img style=\" float: left; width:25%;
+          padding-top:10px\" src=\"https://images.code.org/08ece3f13c8f0f82343e302fb52dc45c-image-1676499630865.png\"
+          />\n\n<div style=\"float: left; width: 70%; padding-left:20px\">\n<h4>\n<strong>của
+          bạn Đã đến lúc lên kế hoạch cho bài thơ của riêng bạn.</strong>\n</h4>\n\n>Bạn
+          nên bao gồm:\n> - Một cái gì đó bạn thích làm.\n> - Một người quan trọng
+          với bạn.\n> - Một số điều yêu thích của bạn. \n\n** Sẵn sàng để bắt đầu
+          lập kế hoạch? ** Sử dụng tài nguyên <a href=\"https://docs.google.com/document/d/1b6w_lOnibUHyDLYCP3rAWED5iElGm6LOQAJwG-hlih0/template/preview\"
+          target=\"_blank\">này</a>.\n\n** Tìm kiếm một chủ đề? ** Sử dụng tài nguyên
+          <a href=\"https://docs.google.com/document/d/1V-DaWOIUk0xT7NYTzx3AEt4my-jc-Hx4vy21Kl4SPoE/template/preview\"
+          target=\"_blank\">này</a>.\n\n</div>\n"
+      csc_timecapsule_markdown_lesson_4:
+        markdown: "# #Share Viên nang thời gian của bạn\n<img src=\"https://images.code.org/c480c5c42d9c02e154943f49bbed87ff-image-1675984438344.13.53
+          PM.png\" style= \"width:60%\">\n<div style= \"width: 60%\"> \n\n** Bây giờ
+          bạn đã mã hóa bài thơ viên nang thời gian của mình, đã đến lúc chia sẻ nó!
+          **\n\nKhi bạn xem các dự án của bạn cùng lớp, hãy xem xét các câu hỏi sau:
+          > 1.\n\nBạn đã nhìn thấy những hình ảnh và âm thanh nào trong viên nang
+          thời gian của bạn cùng lớp?\n> 2. Câu chuyện của họ khác với câu chuyện
+          của bạn như thế nào?\n> 3. Câu chuyện của họ giống với câu chuyện của bạn
+          như thế nào?\n> 4. Hình ảnh của họ làm cho bạn cảm thấy như thế nào?\n</div>\n\n"
       csd-post-survey-2017-q11_2018:
         answers:
         - correct: true
@@ -10088,6 +11168,12 @@ vi-VN:
           # Siêu công dân số
 
           ## Làm thế nào để có thể trở thành người bênh vực khi chứng kiến hành vi bắt nạt trên mạng?
+      csf_be_a_super_digital_citizen2022_2023:
+        content1: mô tả ở đây
+        markdown: |-
+          # Siêu công dân số
+
+          ## Làm thế nào để có thể trở thành người bênh vực khi chứng kiến hành vi bắt nạt trên mạng?
       csf_be_a_super_digital_citizen_2021:
         content1: mô tả ở đây
         markdown: |-
@@ -10100,6 +11186,11 @@ vi-VN:
 
           ## Thông tin nào là OK để có trong dấu chân số của bạn?
       csf_digital_trails2022:
+        markdown: |-
+          # Theo dấu chân số
+
+          ## Thông tin nào là OK để có trong dấu chân số của bạn?
+      csf_digital_trails2022_2023:
         markdown: |-
           # Theo dấu chân số
 
@@ -10124,6 +11215,20 @@ vi-VN:
 
           ![](https://images.code.org/bfa69295fbf33c77ecdeb79b5498d8f7-image-1584751340896.png)
       csf_password_power-up2022:
+        content1: mô tả ở đây
+        markdown: |
+          # Nâng cấp mật khẩu
+
+          ## Lời khuyên cần nhớ về mật khẩu
+
+          * Bắt đầu bằng một **cụm từ** dễ nhớ.
+          * Chỉ có **cha mẹ** bạn mới nên biết mật khẩu của bạn.
+          * Không bao giờ sử dụng bất kỳ thông tin định danh **riêng tư** nào trong mật khẩu của bạn.
+          * Tạo mật khẩu có ít nhất **tám** ký tự.
+          * Hãy dùng các chữ cái, số và **ký tự** trong mật khẩu của bạn.
+
+          ![](https://images.code.org/bfa69295fbf33c77ecdeb79b5498d8f7-image-1584751340896.png)
+      csf_password_power-up2022_2023:
         content1: mô tả ở đây
         markdown: |
           # Nâng cấp mật khẩu
@@ -10165,6 +11270,13 @@ vi-VN:
           a trusted adult (Nói với người lớn đáng tin cậy).\n* **O**K sites first
           (Chọn trước trang web tốt).\n* **P**ause and think online (Dừng lại và suy
           nghĩ khi lên mạng).\n\n![](https://images.code.org/f3e4987a130b27f7b589d7829b753aac-image-1584750971069.png)\n "
+      csf_putting_a_stop_to_online_meanness2022_2023:
+        content1: mô tả ở đây
+        markdown: "# STOP (DỪNG) hành vi tiêu cực\n\n## Bạn nên làm gì nếu ai đó có
+          hành vi tiêu cực với bạn trên mạng?\n\n* **S**tep away (Bỏ đi).\n* **T**ell
+          a trusted adult (Nói với người lớn đáng tin cậy).\n* **O**K sites first
+          (Chọn trước trang web tốt).\n* **P**ause and think online (Dừng lại và suy
+          nghĩ khi lên mạng).\n\n![](https://images.code.org/f3e4987a130b27f7b589d7829b753aac-image-1584750971069.png)\n "
       csf_putting_a_stop_to_online_meanness_2021:
         content1: mô tả ở đây
         markdown: "# STOP (DỪNG) hành vi tiêu cực\n\n## Bạn nên làm gì nếu ai đó có
@@ -10178,6 +11290,11 @@ vi-VN:
 
           ## Làm thế nào để bạn đến những nơi trực tuyến một cách an toàn
       csf_safety_in_my_online_neighborhood2022:
+        markdown: |-
+          # Khu phố trực tuyến của tôi
+
+          ## Làm thế nào để bạn đến những nơi trực tuyến một cách an toàn
+      csf_safety_in_my_online_neighborhood2022_2023:
         markdown: |-
           # Khu phố trực tuyến của tôi
 
@@ -11741,10 +12858,17 @@ vi-VN:
       express_EOC2022:
         description: Bạn đã đến phần cuối của Khóa học E! Hãy chọn một dự án để tạo.
         display_name: Dự án tổng kết khóa học
+      express_EOC2022_2023:
+        description: Bạn đã đến phần cuối của Khóa học E! Hãy chọn một dự án để tạo.
+        display_name: Dự án tổng kết khóa học
       express_EOC_2021:
         description: Bạn đã đến phần cuối của Khóa học E! Hãy chọn một dự án để tạo.
         display_name: Dự án tổng kết khóa học
       express_EOC_examples2022:
+        description: Bạn sắp bắt đầu dự án cuối cùng của mình. Trước khi bắt đầu,
+          hãy dành thời gian xem xét các dự án mẫu.
+        display_name: Ví dụ dự án
+      express_EOC_examples2022_2023:
         description: Bạn sắp bắt đầu dự án cuối cùng của mình. Trước khi bắt đầu,
           hãy dành thời gian xem xét các dự án mẫu.
         display_name: Ví dụ dự án
@@ -11781,6 +12905,20 @@ vi-VN:
         questions:
         - {}
       grade2_multi_collector_A_predict12022:
+        answers:
+        - feedback: Sai rồi. Laurel cố gắng lấy ở ô không có báu vật và do đó bị lỗi.
+          text: Laurel sẽ lấy 4 mảnh báu vật khi sử dụng mã lệnh này.
+        - correct: true
+          feedback: Chính xác!
+          text: Laurel sẽ cố gắng lấy báu vật ở ô không có báu vật và do đó bị lỗi.
+        - feedback: Sai rồi. Laurel cố gắng lấy ở ô không có báu vật và do đó bị lỗi.
+          text: Laurel sẽ lấy toàn bộ báu vật.
+        - feedback: Sai rồi. Laurel cố gắng lấy ở ô không có báu vật và do đó bị lỗi.
+          text: Laurel sẽ thu thập 1 mẩu kho báu bằng cách sử dụng mã lệnh này.
+        questions:
+        - text: Hãy xem kỹ mã lệnh này. Bạn nghĩ điều gì sẽ xảy ra khi chạy chương
+            trình?
+      grade2_multi_collector_A_predict12022_2023:
         answers:
         - feedback: Sai rồi. Laurel cố gắng lấy ở ô không có báu vật và do đó bị lỗi.
           text: Laurel sẽ lấy 4 mảnh báu vật khi sử dụng mã lệnh này.
