@@ -4630,6 +4630,7 @@ de:
         self-paced-pl-csp4-2022: {}
         csa9-2022: {}
         csa-pl-standalone-code-2022: {}
+        csc-ecosystems: {}
         dlp-csd-overview-2022: {}
         dlp-csd-mod1-2022: {}
         dlp-csd-mod2-2022: {}
@@ -5722,3 +5723,7 @@ de:
           title: Modul 7
         vpl-csd-2023-m8:
           title: Modul 8
+        ai-ethics-2023:
+          lessons:
+            lesson-1:
+              name: Unser KI-Ethikkodex

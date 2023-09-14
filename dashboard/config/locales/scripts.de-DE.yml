@@ -228,6 +228,10 @@ de:
         ai-ethics-2021:
           description_audience: Klassen 6-12
           title: Unser KI-Ethikkodex
+        ai-ethics-2023:
+          lessons:
+            lesson-1:
+              name: Unser KI-Ethikkodex
         ai-temp:
           title: So funktioniert KI
         aiml-2021:
