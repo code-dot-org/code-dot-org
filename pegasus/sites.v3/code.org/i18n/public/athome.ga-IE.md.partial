@@ -38,8 +38,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>Páirtí Rince</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Cód Páirtí Rince a roinnt le cairde agus teaghlaigh. Featuring Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez, ceol ó Disney “Encanto,” agus níos mó!</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Cód Páirtí Damhsa Páirtí Rince a roinnt le cairde agus teaghlaigh. Featuring Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez, ceol ó Disney “Encanto,” agus níos mó!</div>
         <a class="linktag" id="danceparty" href="/dance" target="_blank"><button>Bain triail as gníomhaíocht</button></a>
     </span>
   </div>
@@ -53,8 +53,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Minecraft Uair an Chóid</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Is Minecraft ar ais le haghaidh an Uair an Chóid le gníomhaíocht branda nua! Turas trí Minecraft le cód.</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px">Is Minecraft Uair an Chóid</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Minecraft ar ais le haghaidh an Uair an Chóid le gníomhaíocht branda nua! Turas trí Minecraft le cód.</div>
         <br>
         <a class="linktag" id="minecraft" href="/minecraft" target="_blank"><button>Bain triail as gníomhaíocht</button></a>
     </span>
@@ -69,8 +69,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>AI le haghaidh Aigéin</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Cabhair AI na haigéin a ghlanadh trí oiliúint a chur air chun bruscar a bhrath! Faigh amach faoi shonraí oiliúna agus claontacht, agus conas is féidir le AI aghaidh a thabhairt ar fhadhbanna domhanda. Féach <a class="linktag" id="oceans-lesson" href="https://curriculum.code.org/hoc/plugged/9/" target="_blank">plean ceachta</a>.</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px">AI le haghaidh Aigéin</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Cabhair AI glan na haigéin trí oiliúint a chur air bruscar a bhrath! Faigh amach faoi shonraí oiliúna agus claontacht, agus conas is féidir le AI aghaidh a thabhairt ar fhadhbanna domhanda. Féach <a class="linktag" id="oceans-lesson" href="https://curriculum.code.org/hoc/plugged/9/" target="_blank">plean ceachta</a>.</div>
         <a class="linktag" id="aiforoceans" href="https://studio.code.org/s/oceans/lessons/1/levels/1" target="_blank"><button>Bain triail as gníomhaíocht</button></a>
     </span>
   </div>
@@ -96,8 +96,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>Conas a Oibríonn Ríomhairí</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Le réamhrá ag Bill Gates, míníonn an tsraith seo de shé fhíseán gearra cad a dhéanann ríomhaire ar ríomhaire agus ar an gcaoi a n-oibríonn ciorcaid ríomhaire.</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px">Conas a Oibríonn Ríomhairí</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Le réamhrá ag Bill Gates, mínítear sa tsraith seo de shé fhíseán gearra cad a dhéanann ríomhaire ina ríomhaire agus conas a oibríonn ciorcaid ríomhaire.</div>
         <a class="linktag" id="howcomputers" href="https://www.youtube.com/watch?v=OAx_6-wdslM&list=PLzdnOPI1iJNcsRwJhvksEo1tJqjIqWbN-" target="_blank"><button>Féach ar an tsraith físeán</button></a>
     </span>
   </div>
@@ -111,8 +111,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Conas a Oibríonn an Idirlíon</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Sa tsraith seo de ocht físeáin gearr, beidh tú ag foghlaim conas a bhí invented an idirlíon, cad é HTML, agus conas innill chuardaigh cosúil le obair Google.</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px">Conas a oibríonn an Idirlíon</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Sa tsraith seo d'ocht bhfíseán gearra, foghlaimeoidh tú conas a cumadh an t-idirlíon, cad é HTML, agus conas a oibríonn innill chuardaigh mar Google.</div>
         <a class="linktag" id="howinternet" href="https://www.youtube.com/watch?v=Dxcc6ycZ73M&list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7-" target="_blank"><button>Féach ar an tsraith físeán</button></a>
     </span>
   </div>
@@ -126,8 +126,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Conas a Oibríonn AI</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Faigh amach faoi conas a oibríonn AI agus cén fáth a mbaineann sé leis an tsraith seo d'fhíseáin ghearra. Featuring Microsoft POF Satya Nadella agus foireann éagsúil de shaineolaithe.</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px">Conas a Oibríonn AI</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Foghlaim faoi conas a oibríonn AI agus cén fáth a mbaineann sé leis an tsraith seo d'fhíseáin ghearra. Featuring Microsoft POF Satya Nadella agus foireann éagsúil de shaineolaithe.</div>
         <a class="linktag" id="ai-videos" href="/ai#ai-videos" target="_blank"><button>Féach ar an físeán sraith</button></a>
     </span>
   </div>
@@ -136,7 +136,7 @@ theme: responsive
 
 <div style="clear: both"></div>
 
-<p>View more videos, including short inspirational videos featuring celebrities like Steph Curry and Shakira, <a class="linktag" id="all-videos" href="https://code.org/educate/resources/videos" target="_blank">here</a>.</p>
+<p>Féach ar níos mó físeáin, lena n-áirítear físeáin spreagthacha gearra ina bhfuil daoine cáiliúla mar Steph Curry agus Shakira, anseo. <a class="linktag" id="all-videos" href="https://code.org/educate/resources/videos" target="_blank"></a></p>
 <br>
 <p><a href="#top">[Ar ais go barr]</a></p>
 
@@ -147,7 +147,7 @@ theme: responsive
 <a id="express"></a>
 <h2>Foghlaim na buneilimintí lenár gcúrsaí féin-luas</h2>
 <h3>Cúrsaí tosaigh féin-paced</h3>
-<p>Tá rogha iontach do mhic léinn ag tosú ar a gcuid féin. Foghlaimeoidh tú buneilimintí na ríomheolaíochta le bloic tarraing & scaoil. Cruthaigh do líníochtaí agus cluichí féin. Nóta: Tá cúrsaí Express ar fáil faoi láthair i mBéarla, Hiondúis, Iodáilis agus Spáinnis. For other languages, we recommend our 20-hour <a class="linktag" id="accelerated" href="https://studio.code.org/s/20-hour" target="_blank">Accelerated Course</a>. Chun féachaint ar cad atá ar fáil i do theanga, tabhair cuairt ar ár gcatalóg <a class="linktag" id="course-catalog" href="https://studio.code.org/courses" target="_blank">cúrsa</a>.</p>
+<p>Tá rogha iontach do mhic léinn ag tosú ar a gcuid féin. Foghlaimeoidh tú buneilimintí na ríomheolaíochta le bloic tarraing & scaoil. Cruthaigh do líníochtaí agus cluichí féin. Nóta: Tá cúrsaí Express ar fáil faoi láthair i mBéarla, Hiondúis, Iodáilis agus Spáinnis. I gcás teangacha eile, molaimid ár gCúrsa <a class="linktag" id="accelerated" href="https://studio.code.org/s/20-hour" target="_blank">Luathaithe 20 uair an chloig.</a> Chun féachaint ar cad atá ar fáil i do theanga, tabhair cuairt ar ár gcatalóg <a class="linktag" id="course-catalog" href="https://studio.code.org/courses" target="_blank">cúrsa</a>.</p>
 
 <br>
 
@@ -159,10 +159,10 @@ theme: responsive
 
 <div class="col-50" style="padding-right: 20px; padding-bottom:10px">
 
-<a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express-2019" target="_blank"><img src="/images/curriculum/course-tile-pre-reader-express.png" style="width: 100%" alt="Cúrsa Express Réamh-Léitheora"></a><br><a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express-2019" target="_blank">Express Course for pre-readers</a>
+<a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express-2019" target="_blank"><img src="/images/curriculum/course-tile-pre-reader-express.png" style="width: 100%" alt="Cúrsa Express Réamh-Léitheora"></a><br><a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express-2019" target="_blank">Cúrsa Express do réamhléitheoirí</a>
 
 </div>
-<div style="clear: both"></div>
+<div style="clear: both; margin-bottom: 2rem"></div>
 
 <h3>Réamhrá féin-luas ar Game Lab agus App Lab</h3>
 <p>In oiriúint as ár Cúrsaí CS Fionnachtana agus Prionsabail CS, tá na gearr, modúil féin-paced slí iontach chun coincheapa a chuimsíonn gach teanga cláir agus uirlisí a fhoghlaim. <i>Éilíonn Code.org cuntas a rochtain</i>.</p>
@@ -176,8 +176,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>Réamhrá le Cluiche Lab</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">beochan Clár, ealaín idirghníomhach, agus cluichí i Cluiche Lab. Tosaigh amach le cruthanna simplí agus a thógáil suas go dtí beochan sprite-bhunaithe níos sofaisticiúla agus cluichí.</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px">Réamhrá le beochan Game Lab</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Program, ealaín idirghníomhach, agus cluichí i Cluiche Lab. Tosaigh amach le cruthanna simplí agus a thógáil suas go dtí beochan sprite-bhunaithe níos sofaisticiúla agus cluichí.</div>
         <a class="linktag" id="gamelab-intro" href="https://studio.code.org/s/csd3-virtual" target="_blank"><button>Bain triail as an modúl</button></a>
     </span>
   </div>
@@ -191,8 +191,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Turtle Programming in App Lab</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Bain úsáid as orduithe JavaScript simplí chun cruthanna agus íomhánna a tharraingt ag baint úsáide as fíorúil “turtar.” Dearadh agus clár do radharc digiteach féin!</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px">Clárú Turtle i App Lab</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Úsáid orduithe JavaScript simplí chun cruthanna agus íomhánna a tharraingt ag baint úsáide as “turtar fíorúil.” Dearadh agus clár do radharc digiteach féin!</div>
         <a class="linktag" id="turtle-applab" href="https://studio.code.org/s/csp3-virtual" target="_blank"><button>Bain triail as an modúl</button></a>
     </span>
   </div>
@@ -206,8 +206,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Cláir Imeacht-Tiomáinte i App Lab</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Foghlaim conas apps a freagra a thabhairt ar cad a tharlaíonn agus cófraí tábhachtacha a dhearadh. Cruthaigh sraith feidhmchlár simplí (aipeanna) a chónaíonn ar an ngréasán!</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px">Clárú Imeachta-Tiomáinte i App Lab</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Foghlaim conas aipeanna a dhearadh a fhreagraíonn do cad a tharlaíonn agus cófraí tábhachtacha. Cruthaigh sraith feidhmchlár simplí (aipeanna) a chónaíonn ar an ngréasán!</div>
         <a class="linktag" id="events-applab" href="https://studio.code.org/s/csp5-virtual" target="_blank"><button>Bain triail as an modúl</button></a>
     </span>
   </div>
@@ -230,7 +230,7 @@ theme: responsive
 
 <div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
   <div style="width: 87%; float: left">
-    <a class="linktag" id="applab" href="https://code.org/educate/applab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none"><strong>App Lab</strong></h3></a>
+    <a class="linktag" id="applab" href="https://code.org/educate/applab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none">App Lab</h3></a>
     <p style="color:#ffffff">Is App Lab timpeallacht cláir áit ar féidir leat a dhéanamh apps simplí. Dear aip, cód le bloic nó JavaScript chun go n-oibreoidh sé, ansin roinn d'aip i soicindí.</p>
     <a class="linktag" id="applab" href="https://code.org/educate/applab" target="_blank"><button style="background-color:#e7e8ea; border-color:#e7e8ea; color:#696969">Tógáil app</button></a>
   </div>
@@ -239,7 +239,7 @@ theme: responsive
 
 <div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
   <div style="width: 87%; float: left">
-    <a class="linktag" id="gamelab" href="https://code.org/educate/gamelab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none"><strong>Cluiche Lab</strong></h3></a>
+    <a class="linktag" id="gamelab" href="https://code.org/educate/gamelab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none">Cluiche Lab</h3></a>
     <p style="color:#ffffff">Is cluiche Lab timpeallacht cláir áit ar féidir leat a dhéanamh beochan simplí agus cluichí le rudaí agus carachtair a idirghníomhú lena chéile.</p>
     <br>
     <a class="linktag" id="gamelab" href="https://code.org/educate/gamelab" target="_blank"><button style="background-color:#e7e8ea; border-color:#e7e8ea; color:#696969">Cruthaigh cluiche</button></a>
@@ -249,7 +249,7 @@ theme: responsive
 
 <div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
   <div style="width: 87%; float: left">
-    <a class="linktag" id="weblab" href="https://code.org/educate/weblab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none"><strong>Saotharlann Gréasáin</strong></h3></a>
+    <a class="linktag" id="weblab" href="https://code.org/educate/weblab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none">Saotharlann Gréasáin</h3></a>
     <p style="color:#ffffff">Is Web Lab timpeallacht cláir áit ar féidir leat a dhéanamh leathanaigh ghréasáin simplí ag baint úsáide as HTML agus CSS. Dear do leathanaigh ghréasáin agus a roinnt do shuíomh i soicindí.</p>
     <br>
     <a class="linktag" id="weblab" href="https://code.org/educate/weblab" target="_blank"><button style="background-color:#e7e8ea; border-color:#e7e8ea; color:#696969">Déan leathanach gréasáin</button></a>
@@ -286,16 +286,12 @@ theme: responsive
 
 <h2>Gan aon ríomhaire sa bhaile? Bain triail as CS ar do ghuthán leis na feidhmchláir seo ónár gcomhpháirtithe</h2>
 
-<div class="col-33" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><img src="images/tutorials/new/boxisland.jpg" style="width: 100%" alt="Bosca Oileán"></a><br><a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><h3 style="color:#7665a0"><strong>Oileán Bosca</strong></h3></a>A fheictear soghluaiste códaithe cluiche a thógann foghlaimeoirí ar eachtra spreagúil, agus teagasc an bunúsacha códaithe, cosúil le halgartaim, aitheantas patrún, seichimh, lúba agus conditionals. <i>(do gach aois)</i>
+<div class="col-50" style="padding-right: 30px; padding-bottom:40px">
+  <a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><img src="images/tutorials/new/boxisland.jpg" style="width: 100%" alt="Bosca Oileán"></a><br><a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><h3 style="margin-top: 1rem;">Oileán Bosca Cluiche</h3></a>a fheictear códaithe soghluaiste a thógann foghlaimeoirí ar eachtra corraitheach, agus iad ag múineadh an bunúsacha códaithe, cosúil le halgartaim, aitheantas patrún, seichimh, lúba agus conditionals. <i>(do gach aois)</i>
 </div>
 
-<div class="col-33" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><img src="/images/tutorials/hoc2018/codespark_create.jpg" style="width: 100%" alt="CodeSpark"></a><br><a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><h3 style="color:#7665a0"><strong>CodeSpark</strong></h3></a>Ardán foghlaim-go-cód a bhuaigh duaiseanna do pháistí 5-9 bliana d'aois. Réitigh puzail agus cruthaigh cluichí le The Foos agus iad ag foghlaim cód a dhéanamh. Nóta <strong>: Tá CodeSpark ag tairiscint triail 3 mhí saor in aisce. Parent's email address and credit card information are required at signup.</strong> <i>(for pre-readers through Grade 5)</i>
-</div>
-
-<div class="col-33" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="grasshopper" href="https://grasshopper.app/" target="_blank"><img src="/images/athome/grasshopper.png" style="width: 100%" alt="dreoilín teaspaigh"></a><br><a class="linktag" id="grasshopper" href="https://grasshopper.app/" target="_blank"><h3 style="color:#7665a0"><strong>dreoilín teaspaigh</strong></h3></a>Foghlaim códaithe le spraoi, ceachtanna tapaidh ar do ghuthán a mhúineadh tú a scríobh JavaScript fíor. Cód le Clár Google. <i>(don mheánscoil agus suas)</i>
+<div class="col-50" style="padding-right: 30px; padding-bottom:40px">
+  <a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><img src="/images/tutorials/hoc2018/codespark_create.jpg" style="width: 100%" alt="CodeSpark"></a><br><a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><h3 style="margin-top: 1rem;">Ardán foghlaim-go-cód a</h3></a>bhuaigh duaiseanna CodeSpark do pháistí 5-9 bliana d'aois. Réitigh puzail agus cruthaigh cluichí le The Foos agus iad ag foghlaim cód a dhéanamh. Nóta <strong>: Tá CodeSpark ag tairiscint triail 3 mhí saor in aisce. Teastaíonn seoladh ríomhphoist agus faisnéis faoi chárta creidmheasa tuismitheora ag síniú.</strong> <i>(do réamhléitheoirí trí Ghrád 5)</i>
 </div>
 
 <div style="clear: both; margin-bottom: 15px"></div>
@@ -312,8 +308,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="margin-top:10px"><strong>CodeBytes</strong></h3>
-        <div class="smalltext" style="color: dimgray;">CodeBytes atá éasca le díolama, 20 nóiméad ceachtanna idirghníomhacha chumasc eolaíocht ríomhaireachta le hábhair fíor-domhan. Traenáil AI chun teanga chomharthaíochta a léamh, aip a dhearadh go maith, domhan Minecraft a iniúchadh, agus go leor eile!</div>
+        <h3 class="tutorial-info-h" style="margin-top:10px">Tá CodeBytes</h3>
+        <div class="smalltext" style="color: dimgray;">CodeBytes éasca le díolama, ceachtanna idirghníomhacha 20 nóiméad ag cumasc eolaíocht ríomhaireachta le hábhair sa saol fíor. Traenáil AI chun teanga chomharthaíochta a léamh, aip a dhearadh go maith, domhan Minecraft a iniúchadh, agus go leor eile!</div>
         <br>
         <br>
         <a class="linktag" id="codebytes" href="https://code.org/codebytes" target="_blank"><button>Féach eipeasóid</button></a>
@@ -329,7 +325,7 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="margin-top:10px"><strong>Cód Briseadh</strong></h3>
+        <h3 class="tutorial-info-h" style="margin-top:10px">Sos cód</h3>
         <div class="smalltext" style="">Coinnigh spraoi eolaíocht ríomhaireachta ag cur Sos Cód! Is féidir leat cypher a chruthú le Ashton Kutcher, foghlaim faoi athróga le Yara Shahidi, agus fiú iniúchadh a dhéanamh ar an gcaoi a n-oibríonn an tIdirlíon le aireagóir iarbhír an Idirlín, Vint Cerf!</div>
         <br>
         <a class="linktag" id="codebreak" href="https://code.org/break" target="_blank"><button>Faigh ceangailte</button></a>

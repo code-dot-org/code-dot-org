@@ -38,8 +38,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>නර්තන පක්ෂය</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">මිතුරන් හා පවුලේ අය සමඟ බෙදා හදා ගැනීමට නර්තන පක්ෂය සංග්රහයේ. බියොන්සේ, හැරී ස්ටයිල්ස්, ලිසෝ, ලිල් නාස් එක්ස්, සෙලීනා ගෝමස්, ඩිස්නි හි සංගීතය “එන්කැන්ටෝ” සහ තවත් බොහෝ දේ ඇතුළත් වේ!</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px">නර්තන සාද</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">සංග්රහය මිතුරන් හා පවුලේ අය සමඟ බෙදා ගැනීමට නර්තන සාදයකි. බියොන්සේ, හැරී ස්ටයිල්ස්, ලිසෝ, ලිල් නාස් එක්ස්, සෙලීනා ගෝමස්, ඩිස්නි හි සංගීතය “එන්කැන්ටෝ” සහ තවත් බොහෝ දේ ඇතුළත් වේ!</div>
         <a class="linktag" id="danceparty" href="/dance" target="_blank"><button>ක්රියාකාරකම් උත්සාහ කරන්න</button></a>
     </span>
   </div>
@@ -53,8 +53,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>සංග්රහයේ මයින්ක්රාෆ්ට් බිඳ පැය</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">මයින්ක්රාෆ්ට් බිඳ නවතම ක්රියාකාරකම් සමඟ සංග්රහයේ පැය සඳහා නැවත වේ! කේතය සමඟ Minecraft හරහා ගමන.</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px">කේත මයින්ක්රාෆ්ට් බිඳ</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Minecraft පැය නවතම ක්රියාකාරකමක් සමඟ සංග්රහයේ පැය සඳහා ආපසු වේ! කේතය සමඟ Minecraft හරහා ගමන.</div>
         <br>
         <a class="linktag" id="minecraft" href="/minecraft" target="_blank"><button>ක්රියාකාරකම් උත්සාහ කරන්න</button></a>
     </span>
@@ -69,8 +69,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>සාගර සඳහා AI</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">කුණු කූඩයට හඳුනා ගැනීමට එය පුහුණු කිරීමෙන් සාගර පිරිසිදු කිරීමට AI උදව් කරන්න! පුහුණු දත්ත සහ නැඹුරුව ගැන ඉගෙන ගන්න, සහ AI ලෝක ගැටළු වලට විසඳුම් ලබා දෙන්නේ කෙසේද. බලන්න <a class="linktag" id="oceans-lesson" href="https://curriculum.code.org/hoc/plugged/9/" target="_blank">පාඩම් සැලැස්ම</a>.</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px">සාගර සඳහා AI කුණු කූඩය හඳුනා ගැනීමට පුහුණු කිරීමෙන් සාගර පිරිසිදු කිරීමට AI</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">උදව් කරන්න! පුහුණු දත්ත සහ නැඹුරුව ගැන ඉගෙන ගන්න, සහ AI ලෝක ගැටළු වලට විසඳුම් ලබා දෙන්නේ කෙසේද. බලන්න <a class="linktag" id="oceans-lesson" href="https://curriculum.code.org/hoc/plugged/9/" target="_blank">පාඩම් සැලැස්ම</a>.</div>
         <a class="linktag" id="aiforoceans" href="https://studio.code.org/s/oceans/lessons/1/levels/1" target="_blank"><button>ක්රියාකාරකම් උත්සාහ කරන්න</button></a>
     </span>
   </div>
@@ -96,9 +96,9 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>පරිගණක ක්රියා කරන ආකාරය</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">බිල් ගේට්ස් විසින් කරන ලද හැඳින්වීමක් සමඟ කෙටි වීඩියෝ හයකින් යුත් මෙම කෙටි වීඩියෝ මාලාවෙන් පරිගණකයක් පරිගණකයක් බවට පත් කරන්නේ කුමක් ද සහ පරිගණක පරිපථ ක්රියා කරන ආකාරය පැහැදිලි කරයි.</div>
-        <a class="linktag" id="howcomputers" href="https://www.youtube.com/watch?v=OAx_6-wdslM&list=PLzdnOPI1iJNcsRwJhvksEo1tJqjIqWbN-" target="_blank"><button></button></a>වීඩියෝ මාලාව නරඹන්න
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px">පරිගණක ක්රියා කරන ආකාරය බිල් ගේට්ස් විසින් කරන ලද හැඳින්වීමක්</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">සමඟ කෙටි වීඩියෝ හයකින් සමන්විත මෙම කෙටි වීඩියෝ මාලාවෙන් පරිගණකයක් පරිගණකයක් බවට පත් කරන්නේ කුමක් ද සහ පරිගණක පරිපථ ක්රියා කරන්නේ කෙසේද යන්න පැහැදිලි කරයි.</div>
+        <a class="linktag" id="howcomputers" href="https://www.youtube.com/watch?v=OAx_6-wdslM&list=PLzdnOPI1iJNcsRwJhvksEo1tJqjIqWbN-" target="_blank"><button>වීඩියෝ මාලාව නරඹන්න</button></a>
     </span>
   </div>
 </div>
@@ -111,9 +111,9 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>අන්තර්ජාලය ක්රියා කරන ආකාරය</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">කෙටි වීඩියෝ අටකින් යුත් මෙම මාලාවේදී, අන්තර්ජාලය නිර්මාණය කළ ආකාරය, HTML යනු කුමක්ද සහ ගූගල් වැනි සෙවුම් යන්ත්ර ක්රියා කරන ආකාරය ඔබ ඉගෙන ගනු ඇත.</div>
-        <a class="linktag" id="howinternet" href="https://www.youtube.com/watch?v=Dxcc6ycZ73M&list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7-" target="_blank"><button></button></a>වීඩියෝ මාලාව නරඹන්න
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px">අන්තර්ජාලය ක්රියා කරන ආකාරය කෙටි වීඩියෝ අටකින් යුත් මෙම</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">මාලාවේදී, අන්තර්ජාලය නිර්මාණය කළ ආකාරය, HTML යනු කුමක්ද සහ ගූගල් වැනි සෙවුම් යන්ත්ර ක්රියා කරන්නේ කෙසේද යන්න ඔබ ඉගෙන ගනු ඇත.</div>
+        <a class="linktag" id="howinternet" href="https://www.youtube.com/watch?v=Dxcc6ycZ73M&list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7-" target="_blank"><button>වීඩියෝ මාලාව නරඹන්න</button></a>
     </span>
   </div>
 </div>
@@ -126,8 +126,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>AI ක්රියා කරන ආකාරය</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">AI ක්රියා කරන ආකාරය සහ මෙම කෙටි වීඩියෝ මාලාව සමඟ එය වැදගත් වන්නේ ඇයිද යන්න ගැන ඉගෙන ගන්න. මයික්රොසොෆ්ට් ප්රධාන විධායක නිලධාරී සැට්යා නඩෙල්ලා සහ විශේෂඥයන් විවිධ කාස්ට් පහසුකම.</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px">AI ක්රියා කරන ආකාරය AI ක්රියා කරන ආකාරය සහ මෙම කෙටි වීඩියෝ මාලාව සමඟ එය වැදගත් වන්නේ ඇයිද යන්න ගැන</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">ඉගෙන ගන්න. මයික්රොසොෆ්ට් ප්රධාන විධායක නිලධාරී සැට්යා නඩෙල්ලා සහ විශේෂඥයන් විවිධ කාස්ට් පහසුකම.</div>
         <a class="linktag" id="ai-videos" href="/ai#ai-videos" target="_blank"><button>වීඩියෝ මාලාව නරඹන්න</button></a>
     </span>
   </div>
@@ -136,7 +136,7 @@ theme: responsive
 
 <div style="clear: both"></div>
 
-<p>View more videos, including short inspirational videos featuring celebrities like Steph Curry and Shakira, <a class="linktag" id="all-videos" href="https://code.org/educate/resources/videos" target="_blank">here</a>.</p>
+<p>ස්ටෙප් කරි සහ ෂකිරා වැනි කීර්තිමත් පුද්ගලයින්ගේ කෙටි දේවානුභාවයෙන් යුත් වීඩියෝ ඇතුළු තවත් වීඩියෝ බලන්න. <a class="linktag" id="all-videos" href="https://code.org/educate/resources/videos" target="_blank"></a></p>
 <br>
 <p><a href="#top">[ආපසු මුලට]</a></p>
 
@@ -159,13 +159,13 @@ theme: responsive
 
 <div class="col-50" style="padding-right: 20px; padding-bottom:10px">
 
-<a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express-2019" target="_blank"><img src="/images/curriculum/course-tile-pre-reader-express.png" style="width: 100%" alt="පෙර-පාඨකයා එක්ස්ප්රස් පාඨමාලාව"></a><br><a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express-2019" target="_blank">Express Course for pre-readers</a>
+<a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express-2019" target="_blank"><img src="/images/curriculum/course-tile-pre-reader-express.png" style="width: 100%" alt="පෙර-පාඨකයා එක්ස්ප්රස් පාඨමාලාව"></a><br><a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express-2019" target="_blank">පූර්ව පාඨකයින් සඳහා එක්ස්ප්රස් පා se මාලාව</a>
 
 </div>
-<div style="clear: both"></div>
+<div style="clear: both; margin-bottom: 2rem"></div>
 
 <h3>ගේම් විද්යාගාරය සහ යෙදුම් විද්යාගාරය සඳහා ස්වයං හඳුන්වාදීම්</h3>
-<p>අපගේ CS සොයාගැනීම් සහ CS මූලධර්ම පා courses මාලා වලින් අනුවර්තනය කරන ලද මෙම කෙටි, ස්වයං-මොඩියුලයන් සියලු ක්රමලේඛන භාෂා සහ මෙවලම් විහිදෙන සංකල්ප ඉගෙන ගැනීමට හොඳ ක්රමයකි. <i>Requires Code.org account to access</i>.</p>
+<p>අපගේ CS සොයාගැනීම් සහ CS මූලධර්ම පා courses මාලා වලින් අනුවර්තනය කරන ලද මෙම කෙටි, ස්වයං-මොඩියුලයන් සියලු ක්රමලේඛන භාෂා සහ මෙවලම් විහිදෙන සංකල්ප ඉගෙන ගැනීමට හොඳ ක්රමයකි. <i>ප්රවේශ වීමට Code.org ගිණුමක් අවශ්ය වේ.</i></p>
 
 <br>
 
@@ -176,8 +176,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>ගේම් විද්යාගාරය හැඳින්වීම</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">වැඩසටහන් සජීවිකරණ, අන්තර්ක්රියාකාරී කලාව සහ ගේම් විද්යාගාරයේ ක්රීඩා. සරල හැඩයන්ගෙන් ආරම්භ කර වඩාත් නවීන ස්ප්රිට් මත පදනම් වූ සජීවිකරණ සහ ක්රීඩා දක්වා ගොඩනඟන්න.</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px">ගේම් විද්යාගාරයේ ගේම් විද්යාගාර</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">වැඩසටහන් සජීවිකරණ, අන්තර්ක්රියාකාරී කලාව සහ ක්රීඩා පිළිබඳ හැඳින්වීම. සරල හැඩයන්ගෙන් ආරම්භ කර වඩාත් නවීන ස්ප්රිට් මත පදනම් වූ සජීවිකරණ සහ ක්රීඩා දක්වා ගොඩනඟන්න.</div>
         <a class="linktag" id="gamelab-intro" href="https://studio.code.org/s/csd3-virtual" target="_blank"><button>මොඩියුලය</button></a>උත්සාහ කරන්න
     </span>
   </div>
@@ -191,9 +191,9 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>යෙදුම් විද්යාගාරයේ කැස්බෑවා ක්රමලේඛනය</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">අතථ්ය “කැස්බෑවා” භාවිතා කරමින් හැඩතල සහ රූප ඇඳීමට සරල ජාවාස්ක්රිප්ට් විධාන භාවිතා කරන්න. ඔබේම ඩිජිටල් දර්ශන සැලසුම් කර වැඩසටහන්ගත කරන්න!</div>
-        <a class="linktag" id="turtle-applab" href="https://studio.code.org/s/csp3-virtual" target="_blank"><button>මොඩියුලය</button></a>උත්සාහ කරන්න
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px">යෙදුම් විද්යාගාරයේ කැස්බෑවා ක්රමලේඛනය අතථ්ය “කැස්බෑවා”</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">භාවිතා කරමින් හැඩතල සහ රූප ඇඳීමට සරල ජාවාස්ක්රිප්ට් විධාන භාවිතා කරන්න. ඔබේම ඩිජිටල් දර්ශන සැලසුම් කර වැඩසටහන්ගත කරන්න!</div>
+        <a class="linktag" id="turtle-applab" href="https://studio.code.org/s/csp3-virtual" target="_blank"><button>මොඩියුලය උත්සාහ කරන්න</button></a>
     </span>
   </div>
 </div>
@@ -206,8 +206,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>යෙදුම් විද්යාගාරයේ සිදුවීම් ධාවක ක්රමලේඛනය</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">ක්ලික් කිරීම් සහ යතුරු මුද්රණ වලට ප්රතිචාර දක්වන යෙදුම් සැලසුම් කිරීමට ඉගෙන ගන්න. වෙබයේ ජීවත් වන සරල යෙදුම් (යෙදුම්) මාලාවක් සාදන්න!</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px">යෙදුම් විද්යාගාරයේ සිදුවීම් මත පදනම් වූ ක්රමලේඛනය ක්ලික් කිරීම් සහ යතුරු මුද්රණ වලට ප්රතිචාර දක්වන යෙදුම් සැලසුම් කිරීමට</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">ඉගෙන ගන්න. වෙබයේ ජීවත් වන සරල යෙදුම් (යෙදුම්) මාලාවක් සාදන්න!</div>
         <a class="linktag" id="events-applab" href="https://studio.code.org/s/csp5-virtual" target="_blank"><button>මොඩියුලය</button></a>උත්සාහ කරන්න
     </span>
   </div>
@@ -230,7 +230,7 @@ theme: responsive
 
 <div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
   <div style="width: 87%; float: left">
-    <a class="linktag" id="applab" href="https://code.org/educate/applab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none"><strong>විද්යාගාරය ඇප්</strong></h3></a>
+    <a class="linktag" id="applab" href="https://code.org/educate/applab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none">යෙදුම් විද්යාගාරය</h3></a>
     <p style="color:#ffffff">යෙදුම් විද්යාගාරය යනු ඔබට සරල යෙදුම් සෑදිය හැකි ක්රමලේඛන පරිසරයකි. යෙදුමක් සැලසුම් කරන්න, බ්ලොක් හෝ ජාවාස්ක්රිප්ට් සමඟ කේතයක් එය ක්රියාත්මක කිරීමට, ඉන්පසු ඔබේ යෙදුම තත්පර කිහිපයකින් බෙදා ගන්න.</p>
     <a class="linktag" id="applab" href="https://code.org/educate/applab" target="_blank"><button style="background-color:#e7e8ea; border-color:#e7e8ea; color:#696969">යෙදුමක් සාදන්න</button></a>
   </div>
@@ -239,7 +239,7 @@ theme: responsive
 
 <div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
   <div style="width: 87%; float: left">
-    <a class="linktag" id="gamelab" href="https://code.org/educate/gamelab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none"><strong>ක්රීඩා විද්යාගාරය</strong></h3></a>
+    <a class="linktag" id="gamelab" href="https://code.org/educate/gamelab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none">ගේම් විද්යාගාරය</h3></a>
     <p style="color:#ffffff">ගේම් විද්යාගාරය යනු ක්රමලේඛන පරිසරයක් වන අතර ඔබට එකිනෙකා සමඟ අන්තර් ක්රියා කරන වස්තූන් හා චරිත සමඟ සරල සජීවිකරණ සහ ක්රීඩා කළ හැකිය.</p>
     <br>
     <a class="linktag" id="gamelab" href="https://code.org/educate/gamelab" target="_blank"><button style="background-color:#e7e8ea; border-color:#e7e8ea; color:#696969">ක්රීඩාවක් සාදන්න</button></a>
@@ -249,7 +249,7 @@ theme: responsive
 
 <div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
   <div style="width: 87%; float: left">
-    <a class="linktag" id="weblab" href="https://code.org/educate/weblab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none"><strong>වෙබ් විද්යාගාරය</strong></h3></a>
+    <a class="linktag" id="weblab" href="https://code.org/educate/weblab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none">වෙබ් විද්යාගාරය</h3></a>
     <p style="color:#ffffff">Web Lab යනු HTML සහ CSS භාවිතා කර සරල වෙබ් පිටු සෑදිය හැකි ක්රමලේඛන පරිසරයකි. ඔබේ වෙබ් පිටු සැලසුම් කර තත්පර කිහිපයකින් ඔබේ වෙබ් අඩවිය බෙදා ගන්න.</p>
     <br>
     <a class="linktag" id="weblab" href="https://code.org/educate/weblab" target="_blank"><button style="background-color:#e7e8ea; border-color:#e7e8ea; color:#696969">වෙබ් පිටුවක් සාදන්න</button></a>
@@ -286,16 +286,12 @@ theme: responsive
 
 <h2>නිවසේ පරිගණකයක් නැද්ද? අපගේ හවුල්කරුවන්ගෙන් මෙම යෙදුම් සමඟ ඔබගේ දුරකථනයෙන් CS උත්සාහ කරන්න</h2>
 
-<div class="col-33" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><img src="images/tutorials/new/boxisland.jpg" style="width: 100%" alt="කොටුව දූපත"></a><br><a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><h3 style="color:#7665a0"><strong>බොක්ස් අයිලන්ඩ්</strong></h3></a>ඇල්ගොරිතම, රටා හඳුනාගැනීම, අනුපිළිවෙලවල්, ලූප සහ කොන්දේසි වැනි කේතීකරණයේ මූලධර්ම උගන්වන අතරම ඉගෙන ගන්නන් සිත් ඇදගන්නාසුළු ත්රාසජනක ගමනක් ගෙන යන ආකර්ශනීය ජංගම කේතීකරණ ක්රීඩාවක්. <i>(සියලුම වයස් කාණ්ඩ සඳහා)</i>
+<div class="col-50" style="padding-right: 30px; padding-bottom:40px">
+  <a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><img src="images/tutorials/new/boxisland.jpg" style="width: 100%" alt="කොටුව දූපත"></a><br><a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><h3 style="margin-top: 1rem;">බොක්ස් අයිලන්ඩ්</h3></a>ආකර්ශනීය ජංගම කේතීකරණ ක්රීඩාවක් වන අතර ඇල්ගොරිතම, රටා හඳුනාගැනීම, අනුපිළිවෙලවල්, ලූප සහ කොන්දේසි වැනි කේතීකරණයේ මූලධර්ම උගන්වන අතරම ඉගෙන ගන්නන් සිත් ඇදගන්නාසුළු වික්රමාන්විතයකට ගෙන යයි. <i>(සියලුම වයස් කාණ්ඩ සඳහා)</i>
 </div>
 
-<div class="col-33" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><img src="/images/tutorials/hoc2018/codespark_create.jpg" style="width: 100%" alt="කෝඩ්පාක්"></a><br><a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><h3 style="color:#7665a0"><strong>CodeSark</strong></h3></a>වයස අවුරුදු 5-9 ළමයින් සඳහා සම්මානලාභී ඉගෙනුම්-සිට-කේත වේදිකාව. කේත කිරීමට ඉගෙන ගන්නා අතරතුර ප්රහේලිකා විසඳන්න සහ ෆෝස් සමඟ ක්රීඩා සාදන්න. <strong>සටහන: කෝඩ්ස්පාර්ක් විසින් මාස 3 ක නොමිලේ අත්හදා බැලීමක් ලබා දෙයි. Parent's email address and credit card information are required at signup.</strong> <i>(for pre-readers through Grade 5)</i>
-</div>
-
-<div class="col-33" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="grasshopper" href="https://grasshopper.app/" target="_blank"><img src="/images/athome/grasshopper.png" style="width: 100%" alt="ග්‍රාස්ෂොපර්"></a><br><a class="linktag" id="grasshopper" href="https://grasshopper.app/" target="_blank"><h3 style="color:#7665a0"><strong>Grasshopper</strong></h3></a>සැබෑ ජාවාස්ක්රිප්ට් ලිවීමට ඔබට උගන්වන ඔබගේ දුරකථනයේ විනෝදජනක, ඉක්මන් පාඩම් සමඟ කේතනය ඉගෙන ගන්න. ගූගල් වැඩසටහන සමඟ කේතයක්. <i>(මධ්යම පාසල සහ ඉහළට)</i>
+<div class="col-50" style="padding-right: 30px; padding-bottom:40px">
+  <a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><img src="/images/tutorials/hoc2018/codespark_create.jpg" style="width: 100%" alt="කෝඩ්පාක්"></a><br><a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><h3 style="margin-top: 1rem;">වයස අවුරුදු 5-9 ළමයින් සඳහා කේත පාක්</h3></a>සම්මානලාභී ඉගෙනුම්-සිට-කේත වේදිකාව. කේත කිරීමට ඉගෙන ගන්නා අතරතුර ප්රහේලිකා විසඳන්න සහ ෆෝස් සමඟ ක්රීඩා සාදන්න. <strong>සටහන: කෝඩ්ස්පාර්ක් විසින් මාස 3 ක නොමිලේ අත්හදා බැලීමක් ලබා දෙයි. දෙමාපියන්ගේ විද්යුත් තැපැල් ලිපිනය සහ ක්රෙඩිට් කාඩ් තොරතුරු ලියාපදිංචි වීමේ දී අවශ්ය වේ.</strong> <i>(5 ශ්රේණිය හරහා පෙර පාඨකයින් සඳහා)</i>
 </div>
 
 <div style="clear: both; margin-bottom: 15px"></div>
@@ -312,11 +308,11 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="margin-top:10px"><strong>CodeBytes</strong></h3>
-        <div class="smalltext" style="color: dimgray;">CodeBytes පහසුවෙන් ජීර්ණය කළ හැකි, 20 විනාඩි අන්තර්ක්රියාකාරී පාඩම් පරිගණක විද්යාව තථ්ය-ලෝක මාතෘකා සමඟ මුසු කිරීම. Train an AI to read sign language, design an app for good, explore the world of Minecraft, and more!</div>
+        <h3 class="tutorial-info-h" style="margin-top:10px">CodeBytes</h3>
+        <div class="smalltext" style="color: dimgray;">CodeBytes පහසුවෙන් ජීර්ණය කළ හැකි, 20 විනාඩි අන්තර්ක්රියාකාරී පාඩම් පරිගණක විද්යාව තථ්ය-ලෝක මාතෘකා සමඟ මුසු කිරීම. සං sign ා භාෂාව කියවීමට AI පුහුණු කරන්න, යහපත සඳහා යෙදුමක් සැලසුම් කරන්න, Minecraft ලෝකය ගවේෂණය කරන්න, සහ තවත් බොහෝ දේ!</div>
         <br>
         <br>
-        <a class="linktag" id="codebytes" href="https://code.org/codebytes" target="_blank"><button>View episodes</button></a>
+        <a class="linktag" id="codebytes" href="https://code.org/codebytes" target="_blank"><button>කථාංග බලන්න</button></a>
     </span>
   </div>
 </div>
@@ -329,8 +325,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="margin-top:10px"><strong>Code Break</strong></h3>
-        <div class="smalltext" style="">Code Break එකක් ගැනීමෙන් පරිගණක විද්යාව විනෝදයෙන් තබා ගන්න! ඔබට ඇෂ්ටන් කුචර් සමඟ සයිෆර් එකක් නිර්මාණය කළ හැකිය, යාරා ෂහීඩි සමඟ විචල්යයන් ගැන ඉගෙන ගන්න, සහ අන්තර්ජාලයේ සැබෑ නව නිපැයුම්කරු වන වින්ට් සර්ෆ් සමඟ අන්තර්ජාලය ක්රියා කරන ආකාරය ගවේෂණය කිරීමට පවා හැකිය!</div>
+        <h3 class="tutorial-info-h" style="margin-top:10px">Code Break එකක් ගැනීමෙන් පරිගණක විද්යාව විනෝදයෙන්</h3>
+        <div class="smalltext" style="">තබා ගන්න! ඔබට ඇෂ්ටන් කුචර් සමඟ සයිෆර් එකක් නිර්මාණය කළ හැකිය, යාරා ෂහීඩි සමඟ විචල්යයන් ගැන ඉගෙන ගන්න, සහ අන්තර්ජාලයේ සැබෑ නව නිපැයුම්කරු වන වින්ට් සර්ෆ් සමඟ අන්තර්ජාලය ක්රියා කරන ආකාරය ගවේෂණය කිරීමට පවා හැකිය!</div>
         <br>
         <a class="linktag" id="codebreak" href="https://code.org/break" target="_blank"><button>සම්බන්ධ වන්න</button></a>
     </span>

@@ -38,8 +38,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>Šokių vakarėlis</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Šokių vakarėlio kodas, kurį norite pasidalinti su draugais ir šeima. “Beyoncé”, “Harry Styles”, “Lizzo”, “Lil Nas X”, Selena Gomez, muzika iš “Disney” “Encanto” ir dar daugiau!</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px">“Dance Party</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Code” šokių vakarėlis, kurį norite pasidalinti su draugais ir šeima. “Beyoncé”, “Harry Styles”, “Lizzo”, “Lil Nas X”, Selena Gomez, muzika iš “Disney” “Encanto” ir dar daugiau!</div>
         <a class="linktag" id="danceparty" href="/dance" target="_blank"><button>Pabandykite veiklą</button></a>
     </span>
   </div>
@@ -53,8 +53,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Minecraft Kodo valanda</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Minecraft grįžo į Kodo valandą su visiškai nauja veikla! Kelionė per “Minecraft” su kodu.</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px">Minecraft Kodo valanda</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Minecraft grįžta į Kodo valandą su visiškai nauja veikla! Kelionė per “Minecraft” su kodu.</div>
         <br>
         <a class="linktag" id="minecraft" href="/minecraft" target="_blank"><button>Pabandykite veiklą</button></a>
     </span>
@@ -69,8 +69,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>AI vandenynams</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Pagalba A.I. išvalykite vandenynus, mokydami jį aptikti šiukšles! Sužinokite apie mokymo duomenis ir šališkumą bei tai, kaip dirbtinis intelektas gali spręsti pasaulio problemas. Peržiūrėti <a class="linktag" id="oceans-lesson" href="https://curriculum.code.org/hoc/plugged/9/" target="_blank">pamokos planą</a>.</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px">AI vandenynams</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Padėkite A.I. išvalyti vandenynus, mokydami jį aptikti šiukšles! Sužinokite apie mokymo duomenis ir šališkumą bei tai, kaip dirbtinis intelektas gali spręsti pasaulio problemas. Peržiūrėti <a class="linktag" id="oceans-lesson" href="https://curriculum.code.org/hoc/plugged/9/" target="_blank">pamokos planą</a>.</div>
         <a class="linktag" id="aiforoceans" href="https://studio.code.org/s/oceans/lessons/1/levels/1" target="_blank"><button>Pabandykite veiklą</button></a>
     </span>
   </div>
@@ -96,9 +96,9 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>Kaip veikia kompiuteriai</strong></h3>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px">Kaip veikia kompiuteriai</h3>
         <div class="smalltext" style="text-align: left; margin-bottom: 10px">Su Billo Gateso įžanga, ši šešių trumpų vaizdo įrašų serija paaiškina, kas daro kompiuterį kompiuteriu ir kaip veikia kompiuterio grandinės.</div>
-        <a class="linktag" id="howcomputers" href="https://www.youtube.com/watch?v=OAx_6-wdslM&list=PLzdnOPI1iJNcsRwJhvksEo1tJqjIqWbN-" target="_blank"><button>Žiūrėti vaizdo seriją</button></a>
+        <a class="linktag" id="howcomputers" href="https://www.youtube.com/watch?v=OAx_6-wdslM&list=PLzdnOPI1iJNcsRwJhvksEo1tJqjIqWbN-" target="_blank"><button>Žiūrėkite vaizdo įrašų seriją</button></a>
     </span>
   </div>
 </div>
@@ -111,9 +111,9 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Kaip veikia internetas</strong></h3>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px">Kaip veikia internetas</h3>
         <div class="smalltext" style="text-align: left; margin-bottom: 10px">Šioje aštuonių trumpų vaizdo įrašų serijoje sužinosite, kaip buvo išrastas internetas, kas yra HTML ir kaip veikia paieškos sistemos, tokios kaip “Google”.</div>
-        <a class="linktag" id="howinternet" href="https://www.youtube.com/watch?v=Dxcc6ycZ73M&list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7-" target="_blank"><button>Žiūrėti vaizdo seriją</button></a>
+        <a class="linktag" id="howinternet" href="https://www.youtube.com/watch?v=Dxcc6ycZ73M&list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7-" target="_blank"><button>Žiūrėkite vaizdo įrašų seriją</button></a>
     </span>
   </div>
 </div>
@@ -126,7 +126,7 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Kaip veikia dirbtinis intelektas</strong></h3>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px">Kaip veikia dirbtinis intelektas</h3>
         <div class="smalltext" style="text-align: left; margin-bottom: 10px">Sužinokite apie tai, kaip veikia dirbtinis intelektas ir kodėl tai svarbu naudojant šią trumpų vaizdo įrašų seriją. Įrengtas “Microsoft” generalinis direktorius Satya Nadella ir įvairūs ekspertai.</div>
         <a class="linktag" id="ai-videos" href="/ai#ai-videos" target="_blank"><button>Žiūrėti vaizdo seriją</button></a>
     </span>
@@ -136,7 +136,7 @@ theme: responsive
 
 <div style="clear: both"></div>
 
-<p>View more videos, including short inspirational videos featuring celebrities like Steph Curry and Shakira, <a class="linktag" id="all-videos" href="https://code.org/educate/resources/videos" target="_blank">here</a>.</p>
+<p>Peržiūrėkite daugiau vaizdo įrašų, įskaitant trumpus įkvepiančius vaizdo įrašus, kuriuose yra įžymybių, tokių kaip Steph Curry ir Shakira, čia. <a class="linktag" id="all-videos" href="https://code.org/educate/resources/videos" target="_blank"></a></p>
 <br>
 <p><a href="#top">[Atgal į viršų]</a></p>
 
@@ -147,7 +147,7 @@ theme: responsive
 <a id="express"></a>
 <h2>Sužinokite pagrindus naudodamiesi mūsų savarankiškais kursais</h2>
 <h3>Savarankiško tempo įvadiniai kursai</h3>
-<p>Puiki galimybė studentams pradėti savarankiškai. Sužinosite kompiuterių mokslo pagrindus naudodami “drag & drop” blokus. Sukurkite savo piešinius ir žaidimus. Pastaba: Express kursai šiuo metu yra anglų, hindi, italų ir ispanų kalbomis. For other languages, we recommend our 20-hour <a class="linktag" id="accelerated" href="https://studio.code.org/s/20-hour" target="_blank">Accelerated Course</a>. Norėdami pamatyti, kas yra jūsų kalba, apsilankykite mūsų <a class="linktag" id="course-catalog" href="https://studio.code.org/courses" target="_blank">kursų kataloge</a>.</p>
+<p>Puiki galimybė studentams pradėti savarankiškai. Sužinosite kompiuterių mokslo pagrindus naudodami “drag & drop” blokus. Sukurkite savo piešinius ir žaidimus. Pastaba: Express kursai šiuo metu yra anglų, hindi, italų ir ispanų kalbomis. Kitoms kalboms rekomenduojame 20 valandų <a class="linktag" id="accelerated" href="https://studio.code.org/s/20-hour" target="_blank">pagreitintą kursą.</a> Norėdami pamatyti, kas yra jūsų kalba, apsilankykite mūsų <a class="linktag" id="course-catalog" href="https://studio.code.org/courses" target="_blank">kursų kataloge</a>.</p>
 
 <br>
 
@@ -159,13 +159,13 @@ theme: responsive
 
 <div class="col-50" style="padding-right: 20px; padding-bottom:10px">
 
-<a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express-2019" target="_blank"><img src="/images/curriculum/course-tile-pre-reader-express.png" style="width: 100%" alt="Išankstinis skaitytojas Express kursas"></a><br><a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express-2019" target="_blank">Express Course for pre-readers</a>
+<a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express-2019" target="_blank"><img src="/images/curriculum/course-tile-pre-reader-express.png" style="width: 100%" alt="Išankstinis skaitytojas Express kursas"></a><br><a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express-2019" target="_blank">Express kursas išankstiniams skaitytojams</a>
 
 </div>
-<div style="clear: both"></div>
+<div style="clear: both; margin-bottom: 2rem"></div>
 
 <h3>Savarankiškos įžangos į “Game Lab” ir “App Lab”</h3>
-<p>Šie trumpi, savarankiški moduliai, pritaikyti mūsų CS atradimų ir CS principų kursuose, yra puikus būdas išmokti koncepcijų, kurios apima visas programavimo kalbas ir įrankius. <i>Requires Code.org account to access</i>.</p>
+<p>Šie trumpi, savarankiški moduliai, pritaikyti mūsų CS atradimų ir CS principų kursuose, yra puikus būdas išmokti koncepcijų, kurios apima visas programavimo kalbas ir įrankius. <i>Norint pasiekti, reikia Code.org paskyros.</i></p>
 
 <br>
 
@@ -176,8 +176,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>Įvadas į “Game Lab”</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Programos animacijos, interaktyvus menas ir žaidimai “Game Lab”. Pradėkite nuo paprastų formų ir sukurkite sudėtingesnes animacijas ir žaidimus.</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px">Įvadas į “Game Lab”</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">programos animacijas, interaktyvų meną ir žaidimus “Game Lab”. Pradėkite nuo paprastų formų ir sukurkite sudėtingesnes animacijas ir žaidimus.</div>
         <a class="linktag" id="gamelab-intro" href="https://studio.code.org/s/csd3-virtual" target="_blank"><button>Išbandykite modulį</button></a>
     </span>
   </div>
@@ -191,9 +191,9 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Vėžlių programavimas “App Lab”</strong></h3>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px">Vėžlių programavimas “App Lab”</h3>
         <div class="smalltext" style="text-align: left; margin-bottom: 10px">Naudokite paprastas “JavaScript” komandas, kad pieštumėte figūras ir vaizdus naudodami virtualų “vėžlį”. Sukurkite ir programuokite savo skaitmeninę sceną!</div>
-        <a class="linktag" id="turtle-applab" href="https://studio.code.org/s/csp3-virtual" target="_blank"><button>Pabandykite modulį</button></a>
+        <a class="linktag" id="turtle-applab" href="https://studio.code.org/s/csp3-virtual" target="_blank"><button>Išbandykite modulį</button></a>
     </span>
   </div>
 </div>
@@ -206,8 +206,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Įvykiu paremtas programavimas “App Lab”</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Išmokite kurti programas, reaguojančias į paspaudimus ir klavišų paspaudimus. Sukurkite paprastų programų (programų), kurios gyvena internete, seriją!</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px">Įvykiu valdomas programavimas “App Lab”</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Išmokite kurti programas, kurios reaguoja į paspaudimus ir klavišų paspaudimus. Sukurkite paprastų programų (programų), kurios gyvena internete, seriją!</div>
         <a class="linktag" id="events-applab" href="https://studio.code.org/s/csp5-virtual" target="_blank"><button>Išbandykite modulį</button></a>
     </span>
   </div>
@@ -230,7 +230,7 @@ theme: responsive
 
 <div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
   <div style="width: 87%; float: left">
-    <a class="linktag" id="applab" href="https://code.org/educate/applab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none"><strong>App Lab</strong></h3></a>
+    <a class="linktag" id="applab" href="https://code.org/educate/applab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none">“App Lab”</h3></a>
     <p style="color:#ffffff">“App Lab” yra programavimo aplinka, kurioje galite kurti paprastas programas. Sukurkite programą, kodą su blokais arba “JavaScript”, kad ji veiktų, tada bendrinkite programą per kelias sekundes.</p>
     <a class="linktag" id="applab" href="https://code.org/educate/applab" target="_blank"><button style="background-color:#e7e8ea; border-color:#e7e8ea; color:#696969">Sukurkite programą</button></a>
   </div>
@@ -239,7 +239,7 @@ theme: responsive
 
 <div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
   <div style="width: 87%; float: left">
-    <a class="linktag" id="gamelab" href="https://code.org/educate/gamelab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none"><strong>Game Lab</strong></h3></a>
+    <a class="linktag" id="gamelab" href="https://code.org/educate/gamelab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none">Žaidimo Lab</h3></a>
     <p style="color:#ffffff">“Game Lab” yra programavimo aplinka, kurioje galite kurti paprastas animacijas ir žaidimus su objektais ir simboliais, kurie sąveikauja tarpusavyje.</p>
     <br>
     <a class="linktag" id="gamelab" href="https://code.org/educate/gamelab" target="_blank"><button style="background-color:#e7e8ea; border-color:#e7e8ea; color:#696969">Sukurkite žaidimą</button></a>
@@ -249,7 +249,7 @@ theme: responsive
 
 <div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
   <div style="width: 87%; float: left">
-    <a class="linktag" id="weblab" href="https://code.org/educate/weblab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none"><strong>Web Lab</strong></h3></a>
+    <a class="linktag" id="weblab" href="https://code.org/educate/weblab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none">Interneto laboratorija</h3></a>
     <p style="color:#ffffff">“Web Lab” yra programavimo aplinka, kurioje galite kurti paprastus tinklalapius naudodami HTML ir CSS. Sukurkite savo tinklalapius ir bendrinkite savo svetainę per kelias sekundes.</p>
     <br>
     <a class="linktag" id="weblab" href="https://code.org/educate/weblab" target="_blank"><button style="background-color:#e7e8ea; border-color:#e7e8ea; color:#696969">Padaryti tinklalapį</button></a>
@@ -286,16 +286,12 @@ theme: responsive
 
 <h2>Nėra kompiuterio namuose? Išbandykite CS savo telefone naudodami šias programas iš mūsų partnerių</h2>
 
-<div class="col-33" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><img src="images/tutorials/new/boxisland.jpg" style="width: 100%" alt="Box sala"></a><br><a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><h3 style="color:#7665a0"><strong>Box Island</strong></h3></a>Žavingas mobilusis kodavimo žaidimas, kuris priima besimokančiuosius į įdomų nuotykį, mokydamas kodavimo pagrindus, tokius kaip algoritmai, modelio atpažinimas, sekos, kilpos ir sąlygos. <i>(visoms amžiaus grupėms)</i>
+<div class="col-50" style="padding-right: 30px; padding-bottom:40px">
+  <a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><img src="images/tutorials/new/boxisland.jpg" style="width: 100%" alt="Box sala"></a><br><a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><h3 style="margin-top: 1rem;">Box Island</h3></a>Žavingas mobilusis kodavimo žaidimas, kuris priima besimokančiuosius į įdomų nuotykį, mokydamas kodavimo pagrindus, tokius kaip algoritmai, modelio atpažinimas, sekos, kilpos ir sąlygos. <i>(visoms amžiaus grupėms)</i>
 </div>
 
-<div class="col-33" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><img src="/images/tutorials/hoc2018/codespark_create.jpg" style="width: 100%" alt="KodaiParkas"></a><br><a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><h3 style="color:#7665a0"><strong>codeSpark</strong></h3></a>Award-winning learn-to-code platform for kids ages 5-9. Išspręskite galvosūkius ir kurkite žaidimus naudodami “The Foos” mokydamiesi koduoti. <strong>Pastaba: “CodeSpark” siūlo nemokamą 3 mėnesių bandomąją versiją. Parent's email address and credit card information are required at signup.</strong> <i>(for pre-readers through Grade 5)</i>
-</div>
-
-<div class="col-33" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="grasshopper" href="https://grasshopper.app/" target="_blank"><img src="/images/athome/grasshopper.png" style="width: 100%" alt="Žiogas"></a><br><a class="linktag" id="grasshopper" href="https://grasshopper.app/" target="_blank"><h3 style="color:#7665a0"><strong>Žiogas</strong></h3></a>Mokykitės kodavimo naudodamiesi smagiomis, greitomis pamokomis telefone, kurios moko rašyti tikrą “JavaScript”. Kodas su “Google” programa. <i>(vidurinei mokyklai ir daugiau)</i>
+<div class="col-50" style="padding-right: 30px; padding-bottom:40px">
+  <a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><img src="/images/tutorials/hoc2018/codespark_create.jpg" style="width: 100%" alt="KodaiParkas"></a><br><a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><h3 style="margin-top: 1rem;">“CodesPark”</h3></a>apdovanojimų pelniusi “learn-to-code” platforma 5—9 metų vaikams. Išspręskite galvosūkius ir kurkite žaidimus naudodami “The Foos” mokydamiesi koduoti. <strong>Pastaba: “CodeSpark” siūlo nemokamą 3 mėnesių bandomąją versiją. Registracijos metu reikalingas tėvų el. pašto adresas ir kredito kortelės informacija.</strong> <i>(išankstiniams skaitytojams pagal 5 klasę)</i>
 </div>
 
 <div style="clear: both; margin-bottom: 15px"></div>
@@ -312,11 +308,11 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="margin-top:10px"><strong>CodeBytes</strong></h3>
-        <div class="smalltext" style="color: dimgray;">CodeBytes yra lengvai virškinamos, 20 minučių interaktyvios pamokos, maišančios informatiką su realaus pasaulio temomis. Train an AI to read sign language, design an app for good, explore the world of Minecraft, and more!</div>
+        <h3 class="tutorial-info-h" style="margin-top:10px">CodeBytes</h3>
+        <div class="smalltext" style="color: dimgray;">CodeBytes yra lengvai virškinamos, 20 minučių interaktyvios pamokos, maišančios informatiką su realaus pasaulio temomis. Treniruokite AI skaityti gestų kalbą, suprojektuokite programą, kad galėtumėte gerai, tyrinėkite “Minecraft” pasaulį ir dar daugiau!</div>
         <br>
         <br>
-        <a class="linktag" id="codebytes" href="https://code.org/codebytes" target="_blank"><button>View episodes</button></a>
+        <a class="linktag" id="codebytes" href="https://code.org/codebytes" target="_blank"><button>Peržiūrėti epizodus</button></a>
     </span>
   </div>
 </div>
@@ -329,8 +325,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="margin-top:10px"><strong>Kodas Break</strong></h3>
-        <div class="smalltext" style="">Laikyti informatikos įdomus atsižvelgiant Code Break! Galite sukurti cypher su Ashton Kutcher, sužinoti apie kintamuosius su Yara Shahidi, ir net ištirti, kaip internetas veikia su faktiniu išradėjas internete, Vint Cerf!</div>
+        <h3 class="tutorial-info-h" style="margin-top:10px">Kodas pertrauka</h3>
+        <div class="smalltext" style="">Laikyti kompiuterių mokslo įdomus atsižvelgiant Code Break! Galite sukurti cypher su Ashton Kutcher, sužinoti apie kintamuosius su Yara Shahidi, ir net ištirti, kaip internetas veikia su faktiniu išradėjas internete, Vint Cerf!</div>
         <br>
         <a class="linktag" id="codebreak" href="https://code.org/break" target="_blank"><button>Prijunkite</button></a>
     </span>
