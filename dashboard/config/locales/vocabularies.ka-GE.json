@@ -356,6 +356,354 @@
         "loop/pre-express/2022": {
           "word": "ციკლი"
         },
+        "adaptation/csc-adaptations/2023": {
+          "word": "ადაპტაცია",
+          "definition": "ორგანიზმის ცვლილება, რათა უკეთ გადარჩეს გარემო"
+        },
+        "code/csc-adaptations/2023": {
+          "word": "კოდი",
+          "definition": "(v) კომპიუტერის ინსტრუქციების დასაწერად"
+        },
+        "event/csc-adaptations/2023": {
+          "definition": "მოქმედება, რომელიც იწვევს რაღაცას"
+        },
+        "evolution/csc-adaptations/2023": {
+          "word": "ევოლუცია",
+          "definition": "სახეობის მახასიათებლების ცვლილება რამდენიმე თაობის განმავლობაში"
+        },
+        "migration/csc-adaptations/2023": {
+          "word": "მიგრაცია",
+          "definition": "ცხოველის შორ მანძილზე გადაადგილება უკეთეს გარემოს ძიებას ქმნის"
+        },
+        "camouflage/csc-adaptations/2023": {
+          "word": "შენიღბვა",
+          "definition": "დამცავი მექანიზმი, რომელსაც ორგანიზმები იყენებენ თავიანთი გარეგნობის შენიღბვისა და გარემოსთან შერწყმის მიზნით"
+        },
+        "behavior/csc-adaptations/2023": {
+          "word": "ქცევა",
+          "definition": "კომპლექტი ქმედებები გსურთ Sprite შეასრულოს მეტი და მეტი. "
+        },
+        "code_v_/csc-bookcovers/2023": {
+          "word": "კოდი (v)",
+          "definition": "კომპიუტერის ინსტრუქციების დაწერა."
+        },
+        "sprite/csc-bookcovers/2023": {
+          "word": "სპრაიტი"
+        },
+        "background/csc-bookcovers/2023": {
+          "word": "ფონი",
+          "definition": "ვიზუალური უკან მთავარი რამ ან ადამიანი ეკრანზე."
+        },
+        "character/csc-bookcovers/2023": {
+          "word": "პერსონაჟი",
+          "definition": "ადამიანი, ცხოველი, არსება, არსება რამ ამბავი."
+        },
+        "setting/csc-bookcovers/2023": {
+          "word": "შექმნის",
+          "definition": "მოთხრობის დრო და ადგილი (ან როდის და სად)."
+        },
+        "summary/csc-bookcovers/2023": {
+          "word": "რეზიუმე",
+          "definition": "ტექსტის ყველაზე მნიშვნელოვანი ნაწილების თქმა, თქვენივე სიტყვებით, ბევრად უფრო მოკლე გზით"
+        },
+        "code/csc-ecosystems/2023": {
+          "word": "კოდი",
+          "definition": "(v) კომპიუტერის ინსტრუქციების დასაწერად"
+        },
+        "condition/csc-ecosystems/2023": {
+          "word": "პირობა",
+          "definition": "რაღაც პროგრამა ამოწმებს, მართალია თუ არა მოქმედების დაშვებამდე"
+        },
+        "conditionals/csc-ecosystems/2023": {
+          "word": "პირობითი ბრძანებები",
+          "definition": "განცხადებები, რომლებიც მხოლოდ გარკვეულ პირობებში მიმდინარეობს"
+        },
+        "ecosystem/csc-ecosystems/2023": {
+          "word": "ეკოსისტემა",
+          "definition": "ურთიერთქმედების ორგანიზმებისა და მათი გარემოს ბიოლოგიური საზოგადოება"
+        },
+        "event/csc-ecosystems/2023": {
+          "definition": "მოქმედება, რომელიც იწვევს რაღაცას"
+        },
+        "overfishing/csc-ecosystems/2023": {
+          "word": "ჭარბი თევზაობა",
+          "definition": "თევზის მოცილება უფრო სწრაფად, ვიდრე მათ შეუძლიათ რეპროდუცირება"
+        },
+        "simulation/csc-ecosystems/2023": {
+          "word": "სიმულაციური",
+          "definition": "კომპიუტერული მოდელი შესწავლის მიზნით."
+        },
+        "debug/csc-ecosystems/2023": {
+          "word": "გამართვის",
+          "definition": "კოდის შეცდომების ან პრობლემების მოძიება და გამოსწორება."
+        },
+        "variable/csc-ecosystems/2023": {
+          "word": "ცვლადი",
+          "definition": "კონტეინერი, რომელსაც შეუძლია შეინახოს ღირებულება. "
+        },
+        "ecologist/csc-ecosystems/2023": {
+          "word": "ეკოლოგი",
+          "definition": "მეცნიერი, რომელიც სწავლობს, თუ როგორ ურთიერთქმედებენ ცხოველები და მცენარეები მათ გარემოსთან."
+        },
+        "energy/csc-ecosystems/2023": {
+          "word": "ენერგია",
+          "definition": "გადაეცემა ორგანიზმებს შორის კვების ქსელებში მწარმოებლებიდან მომხმარებლებზე. ენერგიას ორგანიზმები იყენებენ რთული ამოცანების შესასრულებლად."
+        },
+        "food_chain/csc-ecosystems/2023": {
+          "word": "კვების ჯაჭვი ",
+          "definition": "ორგანიზმების ჯგუფი დაკავშირებულია საკვების მიხედვით, რომელსაც ისინი ჭამენ, მწარმოებლებიდან მომხმარებლებამდე და მტაცებლებიდან მტაცებლებამდე."
+        },
+        "code/csc-mappinglandmarks/2023": {
+          "word": "კოდი"
+        },
+        "landmark/csc-mappinglandmarks/2023": {
+          "word": "საეტაპო",
+          "definition": "საეტაპო არის ობიექტი (ბუნებრივი ან ადამიანის ხელით შექმნილი), რომელსაც აქვს მნიშვნელობა ან ადგილს ადვილად ცნობს."
+        },
+        "sprite/csc-mappinglandmarks/2023": {
+          "word": "სპრაიტი",
+          "definition": "სურათი ან პერსონაჟი თქვენს პროგრამაში."
+        },
+        "map/csc-mappinglandmarks/2023": {
+          "word": "რუკა",
+          "definition": "სახმელეთო ან ზღვის ფართობის წარმოდგენა, რომელიც აჩვენებს ფიზიკურ მახასიათებლებს, ქალაქებს, გზებს და ა."
+        },
+        "pattern/csc-starquilts/2023": {
+          "word": "ნიმუში",
+          "definition": "რაღაც, რაც ხდება ან ჩნდება რეგულარულად და განმეორებით"
+        },
+        "rhombus/csc-starquilts/2023": {
+          "word": "რომბი",
+          "definition": "პოლიგონი ოთხი თანაბარი გვერდით, საპირისპირო მხარეები პარალელურია, საპირისპირო კუთხეები ტოლია"
+        },
+        "star_quilt/csc-starquilts/2023": {
+          "word": "ვარსკვლავი ქვილთი",
+          "definition": "ტრადიციული და ღირებული საჩუქარი ადგილობრივ ამერიკელებს შორის დიდი დაბლობებიდან"
+        },
+        "artist/csc-starquilts/2023": {
+          "word": "მხატვარი",
+          "definition": "თქვენ შეგიძლიათ დაწეროთ კოდი, რათა მან თითქმის ყველაფერი დახატოს"
+        },
+        "loop/csc-starquilts/2023": {
+          "word": "ციკლი",
+          "definition": "კოდის თანმიმდევრობა, რომელიც მეორდება"
+        },
+        "point/csc-starquilts/2023": {
+          "word": "წერტილი",
+          "definition": "ვარსკვლავის ფორმის ერთი ნაწილი"
+        },
+        "row/csc-starquilts/2023": {
+          "word": "მწკრივი",
+          "definition": "ამ შემთხვევაში, rhombuses- ის მოწესრიგებული ხაზი"
+        },
+        "concentric/csc-starquilts/2023": {
+          "word": "კონცენტრული",
+          "definition": "ობიექტები ან ფორმები, რომლებიც იზიარებენ ერთსა და იმავე ცენტრს"
+        },
+        "comments/csc-starquilts/2023": {
+          "word": "კომენტარები",
+          "definition": "შენიშვნები საკუთარ თავს, რომ ახსნას მონაკვეთზე კოდი. ისინი არ ცვლის პროგრამას, მაგრამ ხელს უწყობენ თქვენი კოდის მოწესრიგებას."
+        },
+        "imagery/csc-timecapsule/2023": {
+          "word": "გამოსახულება",
+          "definition": "ლექსის ან მოთხრობის მიერ წარმოებული გონებრივი სურათები"
+        },
+        "mood/csc-timecapsule/2023": {
+          "definition": "გრძნობის, ატმოსფეროს ან ემოციის გამოხატვა ხელოვნებაში ან მწერლობაში."
+        },
+        "sprite/csc-timecapsule/2023": {
+          "word": "სპრაიტი",
+          "definition": "სურათი ან პერსონაჟი თქვენს პროგრამაში"
+        },
+        "time_capsule/csc-timecapsule/2023": {
+          "definition": "ადგილი მოგონებებისა და ყოველდღიური ნივთების შესანახად, რომლებიც წარმოადგენენ დღეს იმ ადამიანის ცხოვრებაში, რომელიც ცხოვრობს კონკრეტულ პერიოდში. "
+        },
+        "code/poetry/2023": {
+          "word": "კოდი"
+        },
+        "line/poetry/2023": {
+          "definition": "(პოეზია) - ზედიზედ მოწყობილი ლექსის ქვედანაყოფი, რომელიც მთავრდება მარჯვენა ზღვარით."
+        },
+        "mood/poetry/2023": {
+          "definition": "გრძნობის, ატმოსფეროს ან ემოციის გამოხატვა ხელოვნებაში ან მწერლობაში."
+        },
+        "poem/poetry/2023": {
+          "word": "პოემა",
+          "definition": "წერის ხაზები, რომლებიც იყენებენ სიტყვებს მკითხველის გონებაში სურათების, გრძნობებისა და იდეების შესაქმნელად."
+        },
+        "constructive_feedback/poetry/2023": {
+          "word": "კონსტრუქციული უკუკავშირი",
+          "definition": "საპატიო კომენტარები, რომლებიც ვინმეს ეხმარება გააუმჯობესოს თავისი საქმიანობა"
+        },
+        "poetry_circle/poetry/2023": {
+          "definition": "უსაფრთხო და შემოქმედებითი სივრცე ახალი ლექსების შესამოწმებლად და სხვებისგან კონსტრუქციული უკუკავშირის მისაღებად"
+        },
+        "debugging/coursea/2023": {
+          "word": "გამართვა"
+        },
+        "programming/coursea/2023": {
+          "word": "პროგრამირება"
+        },
+        "loop/coursea/2023": {
+          "word": "ციკლი"
+        },
+        "debugging/courseb/2023": {
+          "word": "გამართვა"
+        },
+        "programming/courseb/2023": {
+          "word": "პროგრამირება"
+        },
+        "loop/courseb/2023": {
+          "word": "ციკლი"
+        },
+        "debugging/coursec/2023": {
+          "word": "გამართვა"
+        },
+        "sequencing/coursec/2023": {
+          "word": "თანმიმდევრობა"
+        },
+        "programming/coursec/2023": {
+          "word": "პროგრამირება"
+        },
+        "loop/coursec/2023": {
+          "word": "ციკლი"
+        },
+        "data/coursec/2023": {
+          "word": "მონაცემები"
+        },
+        "binary/coursec/2023": {
+          "word": "ორობითი"
+        },
+        "debugging/coursed/2023": {
+          "word": "გამართვა"
+        },
+        "loop/coursed/2023": {
+          "word": "ციკლი"
+        },
+        "programming/coursed/2023": {
+          "word": "პროგრამირება"
+        },
+        "conditionals/coursed/2023": {
+          "word": "პირობითი ბრძანებები"
+        },
+        "condition/coursed/2023": {
+          "word": "პირობა"
+        },
+        "behavior/coursee/2023": {
+          "word": "ქცევა"
+        },
+        "sprite/coursee/2023": {
+          "word": "სპრაიტი"
+        },
+        "loop/coursee/2023": {
+          "word": "ციკლი"
+        },
+        "function/coursee/2023": {
+          "word": "ფუნქცია"
+        },
+        "condition/coursee/2023": {
+          "word": "პირობა"
+        },
+        "conditionals/coursee/2023": {
+          "word": "პირობითი ბრძანებები"
+        },
+        "copyright/coursee/2023": {
+          "word": "საავტორო უფლება"
+        },
+        "define/coursee/2023": {
+          "word": "განსაზღვრეთ"
+        },
+        "sprite/coursef/2023": {
+          "word": "სპრაიტი"
+        },
+        "behavior/coursef/2023": {
+          "word": "ქცევა"
+        },
+        "variable/coursef/2023": {
+          "word": "ცვლადი"
+        },
+        "input/coursef/2023": {
+          "word": "შემომავალი ინფორმაცია"
+        },
+        "machine_learning/coursef/2023": {
+          "word": "მანქანათმცოდნეობა"
+        },
+        "internet/coursef/2023": {
+          "word": "ინტერნეტი"
+        },
+        "url/coursef/2023": {
+          "word": "ბმული"
+        },
+        "define/coursef/2023": {
+          "word": "განსაზღვრეთ"
+        },
+        "debugging/express/2023": {
+          "word": "გამართვა"
+        },
+        "sequencing/express/2023": {
+          "word": "თანმიმდევრობა"
+        },
+        "programming/express/2023": {
+          "word": "პროგრამირება"
+        },
+        "behavior/express/2023": {
+          "word": "ქცევა"
+        },
+        "sprite/express/2023": {
+          "word": "სპრაიტი"
+        },
+        "loop/express/2023": {
+          "word": "ციკლი"
+        },
+        "condition/express/2023": {
+          "word": "პირობა"
+        },
+        "conditionals/express/2023": {
+          "word": "პირობითი ბრძანებები"
+        },
+        "function/express/2023": {
+          "word": "ფუნქცია"
+        },
+        "variable/express/2023": {
+          "word": "ცვლადი"
+        },
+        "define/express/2023": {
+          "word": "განსაზღვრეთ"
+        },
+        "debugging/pre-express/2023": {
+          "word": "გამართვა"
+        },
+        "programming/pre-express/2023": {
+          "word": "პროგრამირება"
+        },
+        "loop/pre-express/2023": {
+          "word": "ციკლი"
+        },
+        "machine_learning/how-ai-works/2023": {
+          "word": "მანქანათმცოდნეობა"
+        },
+        "algorithm/how-ai-works/2023": {
+          "definition": "მთელი რიგი ნაბიჯები პრობლემის გადასაჭრელად ან გადაწყვეტილების მისაღებად"
+        },
+        "network/how-ai-works/2023": {
+          "definition": "ერთმანეთთან დაკავშირებული ნივთების კოლექცია. შემდეგ ეს კავშირები შეიძლება წარმოადგენდეს ნაბიჯები ალგორითმი, როგორც flowchart."
+        },
+        "large_language_model_llm_/how-ai-works/2023": {
+          "word": "დიდი ენის მოდელი (LLM)",
+          "definition": "ხელოვნური ინტელექტის ზოგადი დანიშნულების ფორმა, რომელიც გაწვრთნილია ძალიან, ძალიან დიდ ცოდნაზე"
+        },
+        "diffusion_ai/how-ai-works/2023": {
+          "word": "დიფუზიის AI",
+          "definition": "სურათის ხმაურად გადაქცევა და ხელოვნური ინტელექტის მომზადება პროცესის შესაცვლელად"
+        },
+        "gan_generative_adversarial_network_/how-ai-works/2023": {
+          "word": "GAN (გენერაციული მოწინააღმდეგე ქსელი)",
+          "definition": "ორი კონკურენტი AI მოდელის გამოყენების გზა რაღაცის შესაქმნელად"
+        },
+        "artificial_intelligence/how-ai-works/2023": {
+          "word": "ხელოვნური ინტელექტი",
+          "definition": "მანქანების სწავლისა და პრობლემების გადაჭრის უნარი."
+        },
         "condition/aquatic/unversioned": {
           "word": "პირობა"
         },

@@ -2846,6 +2846,1398 @@
           "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
           "type": "ვიდეო"
         },
+        "cs_connections_landing_page/csc-adaptations/2023": {
+          "name": "CS კავშირების სადესანტო გვერდი",
+          "url": "https://code.org/educate/csc"
+        },
+        "csc_extended_connections_book_list/csc-adaptations/2023": {
+          "name": "CSC გაფართოებული კავშირების წიგნის სია",
+          "url": "https://docs.google.com/document/d/14azofBAy5Riq109ruUPi8BbZRvJ1KIthqA3mH7t428Y/template/preview"
+        },
+        "helpful_hints_for_teachers_and_learners/csc-adaptations/2023": {
+          "name": "სასარგებლო მინიშნებები მასწავლებლებისა და მოსწავლეებისთვის",
+          "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview"
+        },
+        "resource_list_for_all_lessons/csc-adaptations/2023": {
+          "name": "რესურსების სია ყველა გაკვეთილისთვის",
+          "url": "/s/csc-ადაპტაცია-2023/რესურსები"
+        },
+        "standards_in_modeling_animal_adaptations/csc-adaptations/2023": {
+          "name": "სტანდარტები ცხოველთა ადაპტაციის მოდელირებაში ",
+          "url": "/s/csc-ადაპტაცია-2023/სტანდარტები"
+        },
+        "vocabulary_in_modeling_animal_adaptations/csc-adaptations/2023": {
+          "name": "ლექსიკა ცხოველთა ადაპტაციის მოდელირებაში ",
+          "url": "/s/csc-ადაპტაციები-2023/ვოკაბი"
+        },
+        "ecosystems/csc-adaptations/2023": {
+          "url": "https://docs.google.com/presentation/d/1J9yCLR8vBYHgKxuuKymGNWU_KFCGGGUpzTmpl_dvl7A/template/preview"
+        },
+        "helpful_hints_1/csc-adaptations/2023": {
+          "name": "სასარგებლო მინიშნებები",
+          "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview"
+        },
+        "helpful_hints/csc-adaptations/2023": {
+          "name": "სასარგებლო მინიშნებები",
+          "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview"
+        },
+        "helpful_hints_2/csc-adaptations/2023": {
+          "name": "სასარგებლო მინიშნებები",
+          "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview"
+        },
+        "cs_connections_landing_page/csc-bookcovers/2023": {
+          "name": "CS კავშირების სადესანტო გვერდი",
+          "url": "https://code.org/educate/csc"
+        },
+        "helpful_hints_for_teachers_and_learners/csc-bookcovers/2023": {
+          "name": "სასარგებლო მინიშნებები მასწავლებლებისა და მოსწავლეებისთვის",
+          "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview"
+        },
+        "resource_list_for_all_lessons/csc-bookcovers/2023": {
+          "name": "რესურსების სია ყველა გაკვეთილისთვის",
+          "url": "/s/csc-წიგნების გადასაფარებლები-2023/რესურსები"
+        },
+        "standards_in_coding_a_book_cover/csc-bookcovers/2023": {
+          "name": "სტანდარტები წიგნის ყდის კოდირებაში",
+          "url": "/s/csc-წიგნების გადასაფარებლები-2023/სტანდარტები"
+        },
+        "vocabulary_in_coding_a_book_cover/csc-bookcovers/2023": {
+          "name": "ლექსიკა წიგნის ყდის კოდირებაში",
+          "url": "/s/csc-წიგნების გადასაფარებლები-2023/ვოკაბი"
+        },
+        "book_cover/csc-bookcovers/2023": {
+          "name": "წიგნის ყდა",
+          "url": "https://docs.google.com/presentation/d/1GTaZX9z0b-dwk6Z48TSwqwhjZ9pO9Onk7w8n9xNt_Zk/template/preview"
+        },
+        "book_guide/csc-bookcovers/2023": {
+          "name": "წიგნის სახელმძღვანელო",
+          "url": "https://docs.google.com/document/d/1HRSqSLhdRt7O7yv2LN3Y9jOHykw2BvNrtZJRAi11U9k/template/preview"
+        },
+        "helpful_hints/csc-bookcovers/2023": {
+          "name": "სასარგებლო მინიშნებები",
+          "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview"
+        },
+        "create_your_own_book_cover/csc-bookcovers/2023": {
+          "name": "დაგეგმვის სახელმძღვანელო",
+          "url": "https://docs.google.com/document/d/18cVgDdq77dbdk6gmQ1rGjHIr7pQk3I2Wb2WsAEeNH64/template/preview"
+        },
+        "create_your_own_book_cover_key_/csc-bookcovers/2023": {
+          "name": "დაგეგმვის სახელმძღვანელო [Key] Wonder",
+          "url": "https://docs.google.com/document/d/1sinZLdMy8PLHJVKRwGt-mqhcADQtNq0bLYy4oZZwVpQ/template/preview"
+        },
+        "book_cover_rubric/csc-bookcovers/2023": {
+          "name": "წიგნის ყდა რუბრიკა",
+          "url": "https://docs.google.com/document/d/11hnQkEHwwOD6Bo2_oKiE-CxyU5hXJNlMgV30cjaKVYQ/template/preview",
+          "type": "რუბრიკა"
+        },
+        "planning_your_own_book_cover_-_answer_key/csc-bookcovers/2023": {
+          "name": "[Key] Esperanza Rising დაგეგმვა გზამკვლევი",
+          "url": "https://drive.google.com/file/d/1dpyir8Sh4EgrBT0C1i9M_O8lQkw7rREw/view?usp=sharing"
+        },
+        "book_cover_1/csc-bookcovers/2023": {
+          "name": "წიგნის ყდა",
+          "url": "https://docs.google.com/document/d/11hnQkEHwwOD6Bo2_oKiE-CxyU5hXJNlMgV30cjaKVYQ/template/preview",
+          "type": "რუბრიკა"
+        },
+        "helpful_hints_2/csc-bookcovers/2023": {
+          "name": "სასარგებლო მინიშნებები",
+          "url": "https://docs.google.com/presentation/d/19XIgtzM0JxyhjSd90aW9doyrMrgzdhO_nxWQa9Wqv8I/template/preview"
+        },
+        "planning_guide/csc-bookcovers/2023": {
+          "name": "დაგეგმვის სახელმძღვანელო",
+          "url": "https://docs.google.com/document/d/18cVgDdq77dbdk6gmQ1rGjHIr7pQk3I2Wb2WsAEeNH64/template/preview"
+        },
+        "planning_guide_key_esperanza_rising/csc-bookcovers/2023": {
+          "name": "[Key] Esperanza Rising დაგეგმვა გზამკვლევი",
+          "url": "https://drive.google.com/file/d/1dpyir8Sh4EgrBT0C1i9M_O8lQkw7rREw/view"
+        },
+        "_optional_gallery_walk_sticky_notes/csc-bookcovers/2023": {
+          "name": "[Optional] გალერეა Walk წებოვანი შენიშვნები",
+          "url": "https://docs.google.com/document/d/1nG1d6-dVkodEuFod_7DqzKHWjp9wWZs60n_zYfxUCtU/template/preview"
+        },
+        "helpful_hints_1/csc-bookcovers/2023": {
+          "name": "სასარგებლო მინიშნებები",
+          "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview"
+        },
+        "cs_connections_landing_page/csc-ecosystems/2023": {
+          "name": "CS კავშირების სადესანტო გვერდი",
+          "url": "https://code.org/educate/csc"
+        },
+        "csc_extended_connections_book_list/csc-ecosystems/2023": {
+          "name": "CSC გაფართოებული კავშირების წიგნის სია",
+          "url": "https://docs.google.com/document/d/14azofBAy5Riq109ruUPi8BbZRvJ1KIthqA3mH7t428Y/template/preview"
+        },
+        "helpful_hints_for_teachers_and_learners/csc-ecosystems/2023": {
+          "name": "სასარგებლო მინიშნებები მასწავლებლებისა და მოსწავლეებისთვის\t",
+          "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview"
+        },
+        "resource_list_for_all_lessons/csc-ecosystems/2023": {
+          "name": "რესურსების სია ყველა გაკვეთილისთვის"
+        },
+        "standards_in_simulating_a_marine_ecosystem/csc-ecosystems/2023": {
+          "name": "საზღვაო ეკოსისტემის სიმულაციის სტანდარტები "
+        },
+        "vocabulary_in_simulating_a_marine_ecosystem/csc-ecosystems/2023": {
+          "name": "ლექსიკა საზღვაო ეკოსისტემის სიმულაციაში"
+        },
+        "ecosystems/csc-ecosystems/2023": {
+          "url": "https://docs.google.com/presentation/d/1LtXP3ssc5-kOV1DgccN3957oAyF1cf-VaghZJsL7Vtk/template/preview"
+        },
+        "understanding_overfishing_article/csc-ecosystems/2023": {
+          "name": "გადაჭარბებული თევზაობის სტატიის გაგება",
+          "url": "https://www.seafoodwatch.org/seafood-basics/sustainable-solutions/avoid-overfishing"
+        },
+        "ecologist_s_notebook/csc-ecosystems/2023": {
+          "name": "ეკოლოგის რვეული",
+          "url": "https://docs.google.com/document/d/1_xi5PFs5TJyO3-8Hz7ftZxCNRPpd5yQBCwhm8IuysY8/template/preview"
+        },
+        "cs_connections_landing_page/csc-mappinglandmarks/2023": {
+          "name": "CS კავშირების სადესანტო გვერდი",
+          "url": "https://code.org/educate/csc"
+        },
+        "csc_extended_connections_book_list/csc-mappinglandmarks/2023": {
+          "name": "CSC გაფართოებული კავშირების წიგნის სია",
+          "url": "https://docs.google.com/document/d/14azofBAy5Riq109ruUPi8BbZRvJ1KIthqA3mH7t428Y/template/preview"
+        },
+        "helpful_hints_for_teachers_and_learners/csc-mappinglandmarks/2023": {
+          "name": "სასარგებლო მინიშნებები მასწავლებლებისა და მოსწავლეებისთვის\t",
+          "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview"
+        },
+        "resource_list_for_all_lessons/csc-mappinglandmarks/2023": {
+          "name": "რესურსების სია ყველა გაკვეთილისთვის",
+          "url": "/s/csc-რუკების ღირშესანიშნაობები-2023/რესურსები"
+        },
+        "standards_in_mapping_landmarks/csc-mappinglandmarks/2023": {
+          "name": "სტანდარტები ინტერაქტიული რუკების კოდირებაში",
+          "url": "/s/csc-რუკების ღირშესანიშნაობები-2023/სტანდარტები"
+        },
+        "vocabulary_in_coding/csc-mappinglandmarks/2023": {
+          "name": "ლექსიკა ინტერაქტიული რუქების კოდირებაში",
+          "url": "/s/csc-რუკების ღირშესანიშნაობები-2023/ვოკაბი"
+        },
+        "lesson_slides/csc-mappinglandmarks/2023": {
+          "url": "https://docs.google.com/presentation/d/19XIgtzM0JxyhjSd90aW9doyrMrgzdhO_nxWQa9Wqv8I/template/preview"
+        },
+        "helpful_hints/csc-mappinglandmarks/2023": {
+          "name": "სასარგებლო მინიშნებები",
+          "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview"
+        },
+        "list_of_books_about_maps/csc-mappinglandmarks/2023": {
+          "name": "რუკების შესახებ წიგნების სია",
+          "url": "https://docs.google.com/document/d/1HlYgC_KFNHZKsPFJIY5E_TyMWVMhZbKnq88bn7GLuaE/template/preview"
+        },
+        "activity_guide_planning/csc-mappinglandmarks/2023": {
+          "name": "პროექტის გეგმა [Key]",
+          "url": "https://docs.google.com/document/d/1fD9jkEkts5gtYN76P0I-1FGcEPi1q97Cuk0hBy18KvQ/template/preview"
+        },
+        "activity_guide_planning_1/csc-mappinglandmarks/2023": {
+          "name": "პროექტის გეგმა",
+          "url": "https://docs.google.com/document/d/1t_-cd-f6EhhUbblu8nSGRajStY9FVwLnKn1Bj90GL3Q/template/preview"
+        },
+        "interactive_map_rubric/csc-mappinglandmarks/2023": {
+          "name": "კოდირების ინტერაქტიული რუბრიკა რუბრიკა",
+          "url": "https://docs.google.com/document/d/1Be6zwvr-gEbmHpkxg4vnyt-evuvuLAlB1Pl8oFA64nw/template/preview",
+          "type": "რუბრიკა"
+        },
+        "local_landmarks_map_reflection_observation/csc-mappinglandmarks/2023": {
+          "name": "ადგილობრივი ღირშესანიშნაობების რუქის ასახვა და დაკვირვება",
+          "url": "https://docs.google.com/document/d/1OxwZCmnJYKVUQIIsXqTkbbivvG_iXHVDL4FgR8j9V4E/template/preview"
+        },
+        "books_about_maps_list/csc-mappinglandmarks/2023": {
+          "name": "წიგნები რუკების სიის შესახებ",
+          "url": "https://docs.google.com/document/d/1HlYgC_KFNHZKsPFJIY5E_TyMWVMhZbKnq88bn7GLuaE/template/preview"
+        },
+        "cs_connections_landing_page/csc-starquilts/2023": {
+          "name": "CS კავშირების სადესანტო გვერდი",
+          "url": "https://code.org/educate/csc"
+        },
+        "csc_extended_connections_book_list/csc-starquilts/2023": {
+          "name": "CSC გაფართოებული კავშირების წიგნის სია",
+          "url": "https://docs.google.com/document/d/14azofBAy5Riq109ruUPi8BbZRvJ1KIthqA3mH7t428Y/template/preview"
+        },
+        "helpful_hints_for_teachers_and_learners/csc-starquilts/2023": {
+          "name": "სასარგებლო მინიშნებები მასწავლებლებისა და მოსწავლეებისთვის",
+          "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview"
+        },
+        "resource_list_for_all_lessons/csc-starquilts/2023": {
+          "name": "რესურსების სია ყველა გაკვეთილისთვის",
+          "url": "/s/csc-სტარკილტი-2023/რესურსები"
+        },
+        "standards_in_coding_a_star_quilt/csc-starquilts/2023": {
+          "name": "სტანდარტები ვარსკვლავის საბნის კოდირებაში",
+          "url": "/s/csc-სტარკილტები -2023/სტანდარტები"
+        },
+        "vocabulary_in_coding_geometric_star_quilts/csc-starquilts/2023": {
+          "name": "ლექსიკა გეომეტრიული ვარსკვლავის საბნის კოდირებაში",
+          "url": "/s/csc-სტარკილტები -2023/ვოკაბი"
+        },
+        "star_quilt_article/csc-starquilts/2023": {
+          "name": "ვარსკვლავური ქვილთი სტატია",
+          "url": "https://drive.google.com/file/d/1MAcBYUArtNihyt5ZZlwFOraFLhRxZm7G/view"
+        },
+        "star_quilts/csc-starquilts/2023": {
+          "url": "https://docs.google.com/presentation/d/10F-FnjuE2fM9g1MEmBm5MXJAvhKWCNjX5tAeH9YbggM/template/preview"
+        },
+        "star_quilts_1/csc-starquilts/2023": {
+          "name": "ომის კაპოტის ვარსკვლავი ქვილთი",
+          "url": "https://youtu.be/Q210ko41yqo?t=90",
+          "type": "ვიდეო"
+        },
+        "star_quilts_worksheet/csc-starquilts/2023": {
+          "name": "ვარსკვლავური საბნები სამუშაო ფურცელი",
+          "url": "https://docs.google.com/document/d/1vwfjAQ-OErpFcvzDTQuhimhMWjFhiPrtKTUHoEJLufM/template/preview"
+        },
+        "virtual_pattern_blocks_optional_/csc-starquilts/2023": {
+          "name": "ვირტუალური შაბლონის ბლოკები (არასავალდებულო)",
+          "url": "https://mathigon.org/polypad#polygons"
+        },
+        "helpful_hints/csc-starquilts/2023": {
+          "name": "სასარგებლო მინიშნებები",
+          "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview"
+        },
+        "helpful_hints_1/csc-starquilts/2023": {
+          "name": "სასარგებლო მინიშნებები",
+          "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview"
+        },
+        "virtual_pattern_blocks/csc-starquilts/2023": {
+          "name": "ვირტუალური შაბლონის ბლოკები",
+          "url": "https://www.didax.com/apps/pattern-blocks/"
+        },
+        "helpful_hints_2/csc-starquilts/2023": {
+          "name": "სასარგებლო მინიშნებები",
+          "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview"
+        },
+        "all_resources/csc-timecapsule/2023": {
+          "name": "რესურსების სია ყველა გაკვეთილისთვის",
+          "url": "/s/csc-დროის კაფსული-2023/რესურსები"
+        },
+        "all_standards/csc-timecapsule/2023": {
+          "name": "სტანდარტები დროის კაფსულის კოდირებაში",
+          "url": "/s/csc-დროის კაფსულა -2023/სტანდარტები"
+        },
+        "all_vocab/csc-timecapsule/2023": {
+          "name": "ლექსიკა დროის კაფსულის კოდირებაში",
+          "url": "/s/csc-დროის კაფსულა -2023/ვოკაბი"
+        },
+        "cs_connections_landing_page/csc-timecapsule/2023": {
+          "name": "CS კავშირების სადესანტო გვერდი",
+          "url": "https://code.org/educate/csc"
+        },
+        "csc_extended_connections_book_list/csc-timecapsule/2023": {
+          "name": "CSC გაფართოებული კავშირების წიგნის სია",
+          "url": "https://docs.google.com/document/d/14azofBAy5Riq109ruUPi8BbZRvJ1KIthqA3mH7t428Y/template/preview"
+        },
+        "helpful_hints_for_teachers_and_learners/csc-timecapsule/2023": {
+          "name": "სასარგებლო მინიშნებები მასწავლებლებისა და მოსწავლეებისთვის",
+          "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview"
+        },
+        "poem_art_1_-_introduction/csc-timecapsule/2023": {
+          "name": "ლექსი ხელოვნება 1 - შესავალი ",
+          "type": "ვიდეო"
+        },
+        "poem_art_2_-_events/csc-timecapsule/2023": {
+          "type": "ვიდეო"
+        },
+        "poem_art_3_-_imagery/csc-timecapsule/2023": {
+          "type": "ვიდეო"
+        },
+        "poem_art_4_-_celebration/csc-timecapsule/2023": {
+          "name": "პოემა ხელოვნება 4 - ზეიმი ",
+          "type": "ვიდეო"
+        },
+        "time_capsule/csc-timecapsule/2023": {
+          "url": "https://docs.google.com/presentation/d/1jgZ_PS7uDb2KuvUNPNpW_PqSxsvfVKap4f8RscZPwVY/template/preview"
+        },
+        "helpful_hints/csc-timecapsule/2023": {
+          "name": "სასარგებლო მინიშნებები",
+          "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview"
+        },
+        "time_capsule_rubric/csc-timecapsule/2023": {
+          "name": "რუბრიკის კაფსულის დრო",
+          "url": "https://docs.google.com/document/d/1oE_z84x5GRJ34fRDLCc-YfKJQIQab90pLjozaGQKaJ0/template/preview",
+          "type": "რუბრიკა"
+        },
+        "write_your_own_time_capsule_story/csc-timecapsule/2023": {
+          "name": "დაწერეთ თქვენი საკუთარი დროის კაფსულის ლექსი - წინადადების ფუძეები",
+          "url": "https://docs.google.com/document/d/1fahr11zX92NW-rLdyZBqrNK2VqgOGtCACkcT87M_luU/template/preview"
+        },
+        "write_your_own_time_capsule_poem_-_question_grab_bag/csc-timecapsule/2023": {
+          "name": "დაწერეთ თქვენი საკუთარი დრო კაფსულა პოემა - კითხვა Grab ჩანთა",
+          "url": "https://docs.google.com/document/d/1-aPA3uJIKJAuQ_2Gtck1Ma79eCFY88ZC8YzegQIckG4/template/preview"
+        },
+        "poem_art_celebration_video_optional_/csc-timecapsule/2023": {
+          "name": "პოემა ხელოვნების სადღესასწაულო ვიდეო (სურვილისამებრ)",
+          "url": "https://www.youtube.com/watch?v=Q-76vz8i8mo",
+          "type": "ვიდეო"
+        },
+        "poem_art_events_video_optional_/csc-timecapsule/2023": {
+          "name": "პოემა ხელოვნების ღონისძიებები ვიდეო (სურვილისამებრ)",
+          "url": "https://youtu.be/XGwYYUEb6jQ",
+          "type": "ვიდეო"
+        },
+        "poem_art_video_optional_/csc-timecapsule/2023": {
+          "name": "პოემა ხელოვნების ვიდეო (სურვილისამებრ)",
+          "url": "https://www.youtube.com/watch?v=uvwUWTTjIXo",
+          "type": "ვიდეო"
+        },
+        "time_capsule_checklist/csc-timecapsule/2023": {
+          "name": "დროის კაფსულის ჩამონათვალი",
+          "url": "https://docs.google.com/document/d/1_Hg7hhayhHsTCWDo0uJspseuBbtfTqgx1u9frnmvf1Y/template/preview"
+        },
+        "enter_your_own_poem/csc-timecapsule/2023": {
+          "name": "შეიყვანეთ თქვენი საკუთარი ლექსი",
+          "url": "https://www.youtube.com/watch?v=oKPgbzdpTSA",
+          "type": "ვიდეო"
+        },
+        "_optional_gallery_walk_sticky_notes/csc-timecapsule/2023": {
+          "name": "[Optional] გალერეა Walk წებოვანი შენიშვნები",
+          "url": "https://docs.google.com/document/d/16OGg95k4WsOrusXBO-jjTBFMstI2Att8j6ggZCgpvls/template/preview"
+        },
+        "_optional_student_url_sharing_document/csc-timecapsule/2023": {
+          "name": "[Optional] სტუდენტური URL გაზიარების დოკუმენტი",
+          "url": "https://docs.google.com/document/d/1X048JMSRltc-VHfDDWr7NvE5NMNp4lDSsczQXVUbM-A/template/preview"
+        },
+        "all_standards/poetry/2023": {
+          "name": "სტანდარტები პოეზიასთან კოდირებაში ",
+          "url": "https://studio.code.org/s/poetry-2023/standards"
+        },
+        "coding_with_poetry_vocabulary/poetry/2023": {
+          "name": "ლექსიკა პოეზიასთან კოდირებაში ",
+          "url": "https://studio.code.org/s/poetry-2023/vocab"
+        },
+        "cs_connections_landing_page/poetry/2023": {
+          "name": "CS კავშირების სადესანტო გვერდი",
+          "url": "https://code.org/educate/csc"
+        },
+        "csc_extended_connections_book_list/poetry/2023": {
+          "name": "CSC გაფართოებული კავშირების წიგნის სია",
+          "url": "https://docs.google.com/document/d/14azofBAy5Riq109ruUPi8BbZRvJ1KIthqA3mH7t428Y/template/preview"
+        },
+        "helpful_hints_for_teachers_and_learners/poetry/2023": {
+          "name": "სასარგებლო მინიშნებები მასწავლებლებისა და მოსწავლეებისთვის",
+          "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview"
+        },
+        "resource_list_for_all_lessons/poetry/2023": {
+          "name": "რესურსების სია ყველა გაკვეთილისთვის",
+          "url": "https://studio.code.org/s/poetry-2023/resources"
+        },
+        "coding_with_poetry_lesson_1/poetry/2023": {
+          "url": "https://docs.google.com/presentation/d/1k0VP9so-gmAHq9mSOTxiZ98pX7gNfN6TutBeoDa3pxY/template/preview"
+        },
+        "poem_art_1_-_introduction/poetry/2023": {
+          "name": "ლექსი ხელოვნება 1 - შესავალი ",
+          "type": "ვიდეო"
+        },
+        "poem_art_2_-_events/poetry/2023": {
+          "type": "ვიდეო"
+        },
+        "poem_art_3_-_imagery/poetry/2023": {
+          "type": "ვიდეო"
+        },
+        "poem_art_4_-_celebration/poetry/2023": {
+          "name": "პოემა ხელოვნება 4 - ზეიმი ",
+          "type": "ვიდეო"
+        },
+        "helpful_hints_1/poetry/2023": {
+          "name": "სასარგებლო მინიშნებები",
+          "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview"
+        },
+        "helpful_hints/poetry/2023": {
+          "name": "სასარგებლო მინიშნებები",
+          "url": "https://docs.google.com/presentation/d/1RSJhxO9ZMtyLrt160kvAVdyekR4wT2fVSgbrPHR4HS0/template/preview"
+        },
+        "write_your_own_poem/poetry/2023": {
+          "name": "დაწერეთ თქვენი საკუთარი ლექსი - წინადადების ფუძეები",
+          "url": "https://docs.google.com/document/d/1b6w_lOnibUHyDLYCP3rAWED5iElGm6LOQAJwG-hlih0/template/preview"
+        },
+        "coding_with_poetry_rubric/poetry/2023": {
+          "name": "კოდირება პოეზიის რუბრიკით",
+          "url": "https://docs.google.com/document/d/13CJlIIV2CFu9D6-oxAm99PZ6EqNnDUZwFZCEW9fSMaE/template/preview",
+          "type": "რუბრიკა"
+        },
+        "write_your_own_poem_-_topics/poetry/2023": {
+          "name": "დაწერე საკუთარი ლექსი - თემები",
+          "url": "https://docs.google.com/document/d/1V-DaWOIUk0xT7NYTzx3AEt4my-jc-Hx4vy21Kl4SPoE/template/preview"
+        },
+        "enter_your_own_poem/poetry/2023": {
+          "name": "შეიყვანეთ თქვენი საკუთარი ლექსი",
+          "url": "https://www.youtube.com/watch?v=oKPgbzdpTSA",
+          "type": "ვიდეო"
+        },
+        "poem_art_celebration_video_optional_/poetry/2023": {
+          "name": "პოემა ხელოვნების სადღესასწაულო ვიდეო (სურვილისამებრ)",
+          "url": "https://www.youtube.com/watch?v=Q-76vz8i8mo",
+          "type": "ვიდეო"
+        },
+        "poem_art_events_video_optional_/poetry/2023": {
+          "name": "პოემა ხელოვნების ღონისძიებები ვიდეო (სურვილისამებრ)",
+          "url": "https://youtu.be/XGwYYUEb6jQ",
+          "type": "ვიდეო"
+        },
+        "poem_art_video_optional_/poetry/2023": {
+          "name": "პოემა ხელოვნების ვიდეო (სურვილისამებრ)",
+          "url": "https://www.youtube.com/watch?v=uvwUWTTjIXo",
+          "type": "ვიდეო"
+        },
+        "time_capsule_checklist/poetry/2023": {
+          "name": "კოდი თქვენი ლექსის ჩამონათვალი",
+          "url": "https://docs.google.com/document/d/14M3WIBwJg-YUKVrchzKfunAmQaQhuA7-qxYpS738K_0/template/preview"
+        },
+        "_optional_student_url_sharing_document/poetry/2023": {
+          "name": "[Optional] სტუდენტური URL გაზიარების დოკუმენტი",
+          "url": "https://docs.google.com/document/d/1DNcBWminB8MmyLQC4fIWrLZ8uI9HR7d4W3HuuclIpB0/template/preview"
+        },
+        "share_your_app_/poetry/2023": {
+          "name": "გააზიარე შენი აპლიკაცია!",
+          "url": "https://docs.google.com/document/d/1kO4SNEIVyM0GrxxJb6NzVYauXXpi6rzQkDIfrzQf1Ls/template/preview"
+        },
+        "poem_app_example/poetry/2023": {
+          "name": "ლექსების აპლიკაციის მაგალითი",
+          "url": "https://studio.code.org/projects/poetry_hoc/j3TXDXNhz0XEsH4Xjk_rT9buBHYCplirIKtY_Pg_bYo"
+        },
+        "all_resources/coursea/2023": {
+          "url": "/s/კურსი-2023/რესურსები"
+        },
+        "all_standards/coursea/2023": {
+          "url": "/s/კურსი -2023/სტანდარტები"
+        },
+        "all_vocabulary/coursea/2023": {
+          "url": "/s/კურსი-2023/ვოკაბი"
+        },
+        "common_core_and_ngss_guidance/coursea/2023": {
+          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.vq4s1h2aaxxy"
+        },
+        "debugging_guide/coursea/2023": {
+          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
+        },
+        "implementation_guide/coursea/2023": {
+          "name": "დანერგვის ინსტრუქციები",
+          "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview"
+        },
+        "lesson_type_guide/coursea/2023": {
+          "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view"
+        },
+        "teacher_forum/coursea/2023": {
+          "name": "მასწავლებლის ფორუმი",
+          "url": "https://forum.code.org/c/csf/"
+        },
+        "csf_course_syllabus/coursea/2023": {
+          "name": "CSF კურსის სილაბუსი",
+          "url": "https://docs.google.com/document/d/1mGTa71uFIOvLuwcbo_7XIutZIuJKGlbl0KlRqgibs2U/edit?usp=drive_link"
+        },
+        "teaching_and_learning_strategies/coursea/2023": {
+          "name": "სწავლებისა და სწავლის სტრატეგიები",
+          "url": "https://docs.google.com/document/d/1khllUBI1xpSrUmwWwa2J35GaKVV8bb3bQb_5Vc_ty54/preview"
+        },
+        "values_and_philosophy_1/coursea/2023": {
+          "name": "ღირებულებები და ფილოსოფია",
+          "url": "https://docs.google.com/document/d/1_56iN0iyFzPSsuj5-W7-SI6E7A8z9BTpL3qu4fDMkKk/preview"
+        },
+        "getting_started_-_creating_a_class_section/coursea/2023": {
+          "url": "https://www.youtube.com/watch?v=ebQY8fb2OV4",
+          "type": "ვიდეო"
+        },
+        "pair_programming/coursea/2023": {
+          "name": "პროგრამირება წყვილებში",
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
+        },
+        "wiggles-go_noodle/coursea/2023": {
+          "type": "ვიდეო"
+        },
+        "happy_map_cards/coursea/2023": {
+          "name": "ბედნიერი რუკის ბარათები"
+        },
+        "happy_map_cards_1/coursea/2023": {
+          "name": "ბედნიერი რუკის ბარათები"
+        },
+        "happy_map_game_pieces/coursea/2023": {
+          "name": "ბედნიერი რუკის თამაშის ნაწილები"
+        },
+        "happy_maps/coursea/2023": {
+          "name": "ბედნიერი რუკები"
+        },
+        "unplugged_blockly_blocks_grades_k-1_/coursea/2023": {
+          "name": "Blockly-ის ბლოკები უკომპიუტეროდ (საფეხურები K-1)"
+        },
+        "wiggles_-_gonoodle/coursea/2023": {
+          "type": "ვიდეო"
+        },
+        "debugging_with_the_step_button/coursea/2023": {
+          "type": "ვიდეო"
+        },
+        "happy_map_cards_xl/coursea/2023": {
+          "name": "ბედნიერი რუკის ბარათები XL"
+        },
+        "happy_map_game_pieces_bonus_pack/coursea/2023": {
+          "name": "ბედნიერი რუკის თამაშის ნაწილები - ბონუს ნაკრები"
+        },
+        "feeling_faces/coursea/2023": {
+          "name": "მეტყველი სახეები"
+        },
+        "pair-programming/coursea/2023": {
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
+          "type": "ვიდეო"
+        },
+        "csf_lesson_recommendations/coursea/2023": {
+          "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing"
+        },
+        "pause_and_think_online/coursea/2023": {
+          "name": "შეჩერდი და დაფიქრდი",
+          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
+          "type": "ვიდეო"
+        },
+        "the_big_event/coursea/2023": {
+          "name": "დიდი მოვლენა",
+          "url": "https://youtu.be/u0WV9shCoak"
+        },
+        "the_big_event_1/coursea/2023": {
+          "name": "დიდი მოვლენა",
+          "type": "შეფასება"
+        },
+        "the_big_event_2/coursea/2023": {
+          "name": "დიდი მოვლენა"
+        },
+        "the_big_event_courses_a_b_/coursea/2023": {
+          "name": "დიდი მოვლენა (A და B კურსები)"
+        },
+        "cs_fundamentals_main_activity_tips/coursea/2023": {
+          "name": "CS საფუძვლების ძირითადი აქტივობის რჩევები",
+          "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing"
+        },
+        "all_resources/courseb/2023": {
+          "url": "/s/რა თქმა უნდა, 2023/რესურსები"
+        },
+        "all_standards/courseb/2023": {
+          "url": "/s/რა თქმა უნდა, 2023/სტანდარტები"
+        },
+        "all_vocabulary/courseb/2023": {
+          "url": "/s/რა თქმა უნდა, 2023/ვოკაბი"
+        },
+        "common_core_and_ngss_guidance/courseb/2023": {
+          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.rar8dpsqsjqe"
+        },
+        "cross-curricular_extension_activities/courseb/2023": {
+          "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview"
+        },
+        "debugging_guide/courseb/2023": {
+          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
+        },
+        "implementation_guide/courseb/2023": {
+          "name": "დანერგვის ინსტრუქციები",
+          "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview"
+        },
+        "lesson_type_guide/courseb/2023": {
+          "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view"
+        },
+        "teacher_forum/courseb/2023": {
+          "name": "მასწავლებლის ფორუმი",
+          "url": "https://forum.code.org/c/csf/"
+        },
+        "csf_course_syllabus/courseb/2023": {
+          "name": "CSF კურსის სილაბუსი",
+          "url": "https://docs.google.com/document/d/1mGTa71uFIOvLuwcbo_7XIutZIuJKGlbl0KlRqgibs2U/edit?usp=drive_link"
+        },
+        "teaching_and_learning_strategies/courseb/2023": {
+          "name": "სწავლებისა და სწავლის სტრატეგიები",
+          "url": "https://docs.google.com/document/d/1khllUBI1xpSrUmwWwa2J35GaKVV8bb3bQb_5Vc_ty54/preview"
+        },
+        "values_and_philosophy_1/courseb/2023": {
+          "name": "ღირებულებები და ფილოსოფია",
+          "url": "https://docs.google.com/document/d/1_56iN0iyFzPSsuj5-W7-SI6E7A8z9BTpL3qu4fDMkKk/preview"
+        },
+        "move_it_move_it/courseb/2023": {
+          "name": "ვისწავლოთ გადაადგილება"
+        },
+        "move_it_move_it_1/courseb/2023": {
+          "name": "ვისწავლოთ გადაადგილება"
+        },
+        "move_it_move_it_2/courseb/2023": {
+          "name": "ვისწავლოთ გადაადგილება"
+        },
+        "move_it_move_it_3/courseb/2023": {
+          "name": "ვისწავლოთ გადაადგილება"
+        },
+        "feeling_faces/courseb/2023": {
+          "name": "მეტყველი სახეები"
+        },
+        "how_to_make_a_class_section_on_code_org/courseb/2023": {
+          "name": "როგორ გავაკეთოთ კლასის განყოფილება Code.org-ზე"
+        },
+        "pair_programming/courseb/2023": {
+          "name": "პროგრამირება წყვილებში",
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
+        },
+        "unplugged_blockly_blocks_grades_k-1_/courseb/2023": {
+          "name": "Blockly-ის ბლოკები უკომპიუტეროდ (საფეხურები K-1)"
+        },
+        "wiggles_-_gonoodle/courseb/2023": {
+          "type": "ვიდეო"
+        },
+        "compass_rose/courseb/2023": {
+          "name": "კომპასის ვარდი"
+        },
+        "happy_map_game_pieces/courseb/2023": {
+          "name": "ბედნიერი რუკის თამაშის ნაწილები"
+        },
+        "stevie_and_the_big_project/courseb/2023": {
+          "name": "სტივი და დიდი პროექტი"
+        },
+        "unspotted_bugs/courseb/2023": {
+          "name": "შეუჩმნეველი შეცდომები",
+          "url": "https://youtu.be/rah3DYlp5nQ",
+          "type": "ვიდეო"
+        },
+        "getting_loopy/courseb/2023": {
+          "name": "ჩაციკლვა",
+          "url": "https://youtu.be/JoKTqHCni0M"
+        },
+        "getting_loopy_1/courseb/2023": {
+          "name": "ჩაციკლვა",
+          "url": "https://docs.google.com/document/d/1SwYDo6fwkEZRRGogPozWBXCLLncddDS5dLNFgRDe6VQ/edit"
+        },
+        "getting_loopy_2/courseb/2023": {
+          "name": "ჩაციკლვა",
+          "url": "https://docs.google.com/document/d/1MG-vF7zU-abEPZ60bVcK4RhwZ4vfuknBfUkm-4tvoX8/edit",
+          "type": "შეფასება"
+        },
+        "getting_loopy_3/courseb/2023": {
+          "name": "ჩაციკლვა",
+          "url": "https://docs.google.com/document/d/15YLSUX5TT6P9nRKW4tA0f9weEe0Qs4wV5Ylu08wzXFs/edit"
+        },
+        "cs_fundamentals_main_activity_tips/courseb/2023": {
+          "name": "CS საფუძვლების ძირითადი აქტივობის რჩევები",
+          "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing"
+        },
+        "pause_and_think_online/courseb/2023": {
+          "name": "შეჩერდი და დაფიქრდი",
+          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
+          "type": "ვიდეო"
+        },
+        "the_big_event/courseb/2023": {
+          "name": "დიდი მოვლენა",
+          "url": "https://youtu.be/u0WV9shCoak"
+        },
+        "the_big_event_1/courseb/2023": {
+          "name": "დიდი მოვლენა",
+          "type": "შეფასება"
+        },
+        "the_big_event_2/courseb/2023": {
+          "name": "დიდი მოვლენა"
+        },
+        "the_big_event_courses_a_b_/courseb/2023": {
+          "name": "დიდი მოვლენა (A და B კურსები)"
+        },
+        "all_resources/coursec/2023": {
+          "url": "/s/კურსი -2023/რესურსები"
+        },
+        "all_standards/coursec/2023": {
+          "url": "/s/კურსი -2023/სტანდარტები"
+        },
+        "all_vocabulary/coursec/2023": {
+          "url": "/s/კურსი-2023/ვოკაბი"
+        },
+        "common_core_and_ngss_guidance/coursec/2023": {
+          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.a5iytir4b96q"
+        },
+        "cross-curricular_extension_activities/coursec/2023": {
+          "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview"
+        },
+        "debugging_guide_1/coursec/2023": {
+          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
+        },
+        "implementation_guide/coursec/2023": {
+          "name": "დანერგვის ინსტრუქციები",
+          "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview"
+        },
+        "lesson_type_guide/coursec/2023": {
+          "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view"
+        },
+        "teacher_forum/coursec/2023": {
+          "name": "მასწავლებლის ფორუმი",
+          "url": "https://forum.code.org/c/csf/"
+        },
+        "csf_course_syllabus/coursec/2023": {
+          "name": "CSF კურსის სილაბუსი",
+          "url": "https://docs.google.com/document/d/1mGTa71uFIOvLuwcbo_7XIutZIuJKGlbl0KlRqgibs2U/edit?usp=drive_link"
+        },
+        "teaching_and_learning_strategies/coursec/2023": {
+          "name": "სწავლებისა და სწავლის სტრატეგიები",
+          "url": "https://docs.google.com/document/d/1khllUBI1xpSrUmwWwa2J35GaKVV8bb3bQb_5Vc_ty54/preview"
+        },
+        "values_and_philosophy/coursec/2023": {
+          "name": "ღირებულებები და ფილოსოფია",
+          "url": "https://docs.google.com/document/d/1_56iN0iyFzPSsuj5-W7-SI6E7A8z9BTpL3qu4fDMkKk/preview"
+        },
+        "my_robotic_friends/coursec/2023": {
+          "name": "ჩემი რობოტი-მეგობრები"
+        },
+        "my_robotic_friends_1/coursec/2023": {
+          "name": "ჩემი რობოტი-მეგობრები"
+        },
+        "my_robotic_friends_2/coursec/2023": {
+          "name": "ჩემი რობოტი-მეგობრები",
+          "url": "https://youtu.be/xaW3PAzHxCU"
+        },
+        "my_robotic_friends_3/coursec/2023": {
+          "name": "ჩემი რობოტი-მეგობრები"
+        },
+        "my_robotic_friends_4/coursec/2023": {
+          "name": "ჩემი რობოტი-მეგობრები"
+        },
+        "cs_fundamentals_main_activity_tips/coursec/2023": {
+          "name": "CS საფუძვლების ძირითადი აქტივობის რჩევები",
+          "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing"
+        },
+        "pair_programming/coursec/2023": {
+          "name": "პროგრამირება წყვილებში",
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
+          "type": "ვიდეო"
+        },
+        "artist_introduction/coursec/2023": {
+          "name": "შესავალი მხატვარში",
+          "url": "https://www.youtube.com/watch?v=MUavAHn-QUg"
+        },
+        "turns_angles/coursec/2023": {
+          "name": "მობრუნება და კუთხეები",
+          "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs"
+        },
+        "turns_angles_1/coursec/2023": {
+          "name": "მობრუნება და კუთხეები"
+        },
+        "the_big_event/coursec/2023": {
+          "name": "დიდი მოვლენა",
+          "url": "https://youtu.be/u0WV9shCoak"
+        },
+        "the_big_event_1/coursec/2023": {
+          "name": "დიდი მოვლენა",
+          "type": "შეფასება"
+        },
+        "the_big_event_2/coursec/2023": {
+          "name": "დიდი მოვლენა"
+        },
+        "pause_and_think_online/coursec/2023": {
+          "name": "შეჩერდი და დაფიქრდი",
+          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
+          "type": "ვიდეო"
+        },
+        "binary_bracelets/coursec/2023": {
+          "name": "ორობითი სამაჯურები",
+          "url": "https://youtu.be/3S2YfoO4_CM"
+        },
+        "binary_bracelets_1/coursec/2023": {
+          "name": "ორობითი სამაჯურები",
+          "url": "https://www.youtube.com/watch?v=fDLkBqZpxWQ"
+        },
+        "binary_bracelets_2/coursec/2023": {
+          "name": "ორობითი სამაჯურები"
+        },
+        "binary_bracelets_3/coursec/2023": {
+          "name": "ორობითი სამაჯურები",
+          "type": "შეფასება"
+        },
+        "binary_bracelets_4/coursec/2023": {
+          "name": "ორობითი სამაჯურები"
+        },
+        "bits_versus_bytes/coursec/2023": {
+          "name": "ბიტი ბაიტის წინააღმდეგ",
+          "url": "https://www.youtube.com/watch?v=35vkaO_SgzI&feature=youtu.be"
+        },
+        "all_resources/coursed/2023": {
+          "url": "/s/რა თქმა უნდა -2023/რესურსები"
+        },
+        "all_standards/coursed/2023": {
+          "url": "/s/რა თქმა უნდა -2023/სტანდარტები"
+        },
+        "all_vocabulary/coursed/2023": {
+          "url": "/s/რა თქმა უნდა -2023/ვოკაბი"
+        },
+        "common_core_and_ngss_guidance/coursed/2023": {
+          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.sw3rfp1nfbrp"
+        },
+        "cross-curricular_extension_activities/coursed/2023": {
+          "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview"
+        },
+        "debugging_guide/coursed/2023": {
+          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
+        },
+        "implementation_guide/coursed/2023": {
+          "name": "დანერგვის ინსტრუქციები",
+          "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview"
+        },
+        "lesson_type_guide/coursed/2023": {
+          "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view"
+        },
+        "teacher_forum/coursed/2023": {
+          "name": "მასწავლებლის ფორუმი",
+          "url": "https://forum.code.org/c/csf/"
+        },
+        "csf_course_syllabus/coursed/2023": {
+          "name": "CSF კურსის სილაბუსი",
+          "url": "https://docs.google.com/document/d/1mGTa71uFIOvLuwcbo_7XIutZIuJKGlbl0KlRqgibs2U/edit?usp=drive_link"
+        },
+        "teaching_and_learning_strategies/coursed/2023": {
+          "name": "სწავლებისა და სწავლის სტრატეგიები",
+          "url": "https://docs.google.com/document/d/1khllUBI1xpSrUmwWwa2J35GaKVV8bb3bQb_5Vc_ty54/preview"
+        },
+        "values_and_philosophy/coursed/2023": {
+          "name": "ღირებულებები და ფილოსოფია",
+          "url": "https://docs.google.com/document/d/1_56iN0iyFzPSsuj5-W7-SI6E7A8z9BTpL3qu4fDMkKk/preview"
+        },
+        "graph_paper_programming/coursed/2023": {
+          "name": "გრაფიკული პროგრამირება ქაღალდზე",
+          "url": "https://docs.google.com/document/d/1GTB6aTZoQWvkMvx2SWhKerhL8DhevgWlsaetmm5Vpfs/edit?usp=sharing"
+        },
+        "graph_paper_programming_1/coursed/2023": {
+          "name": "გრაფიკული პროგრამირება ქაღალდზე",
+          "url": "https://youtu.be/Y_paSrH2ffw"
+        },
+        "graph_paper_programming_2/coursed/2023": {
+          "name": "გრაფიკული პროგრამირება ქაღალდზე",
+          "url": "https://www.youtube.com/watch?v=vBUtejDNvrs"
+        },
+        "graph_paper_programming_3/coursed/2023": {
+          "name": "გრაფიკული პროგრამირება ქაღალდზე",
+          "url": "https://docs.google.com/document/d/1Nt1vX-8Q-xy7tNyTRElaDFvdVXfpC5e28NbrPreVfPQ/edit"
+        },
+        "graph_paper_programming_4/coursed/2023": {
+          "name": "გრაფიკული პროგრამირება ქაღალდზე",
+          "url": "https://docs.google.com/document/d/1uXNP-9nYnLOeAkh_E8UFzl9Rrpy0rwjVAQVamgdd6XQ/edit",
+          "type": "შეფასება"
+        },
+        "graph_paper_programming_5/coursed/2023": {
+          "name": "გრაფიკული პროგრამირება ქაღალდზე",
+          "url": "https://docs.google.com/document/d/1GXFjDtRjaK8mTnFGb33kT-u72_rXfUh_TyfP7N7Pen4/edit"
+        },
+        "pair_programming/coursed/2023": {
+          "name": "პროგრამირება წყვილებში",
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
+        },
+        "relay_programming/coursed/2023": {
+          "name": "პროგრამირება ცვლაში"
+        },
+        "relay_programming_1/coursed/2023": {
+          "name": "პროგრამირება ცვლაში"
+        },
+        "relay_programming_2/coursed/2023": {
+          "name": "პროგრამირება ცვლაში"
+        },
+        "relay_programming_3/coursed/2023": {
+          "name": "პროგრამირება ცვლაში",
+          "url": "https://youtu.be/l5MKkXbzOsk"
+        },
+        "relay_programming_4/coursed/2023": {
+          "name": "პროგრამირება ცვლაში",
+          "url": "https://youtu.be/ZULpfAVJOBo"
+        },
+        "relay_programming_5/coursed/2023": {
+          "name": "პროგრამირება ცვლაში"
+        },
+        "pause_and_think_online/coursed/2023": {
+          "name": "შეჩერდი და დაფიქრდი",
+          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
+          "type": "ვიდეო"
+        },
+        "open-ended_programming_levels_2/coursed/2023": {
+          "url": "https://docs.google.com/document/d/1f2ayrjpWKVWqydZWZFTtXbDWZDdKcNIg4kGaOLB2o3U/view"
+        },
+        "feeling_faces/coursed/2023": {
+          "name": "მეტყველი სახეები"
+        },
+        "conditionals_with_cards/coursed/2023": {
+          "name": "პირობები ბარათებით",
+          "url": "https://youtu.be/UymN4lTL50s"
+        },
+        "conditionals_with_cards_1/coursed/2023": {
+          "name": "პირობები ბარათებით",
+          "url": "https://www.youtube.com/watch?v=2m2Rn9VxHfU"
+        },
+        "conditionals_with_cards_2/coursed/2023": {
+          "name": "პირობები ბარათებით",
+          "type": "შეფასება"
+        },
+        "conditionals_with_cards_3/coursed/2023": {
+          "name": "პირობები ბარათებით",
+          "url": "https://youtu.be/TbUaEnAYPjI"
+        },
+        "conditionals_with_cards_4/coursed/2023": {
+          "name": "პირობები ბარათებით"
+        },
+        "conditionals_with_cards_sample_program/coursed/2023": {
+          "name": "პირობითი ბრძანებები ბანქოს პროგრამის ნიმუშოთ"
+        },
+        "all_resources/coursee/2023": {
+          "url": "/s/კურსი-2023/რესურსები"
+        },
+        "all_standards/coursee/2023": {
+          "url": "/s/კურსი-2023/სტანდარტები"
+        },
+        "all_vocabulary/coursee/2023": {
+          "url": "/s/კურსი-2023/ვოკაბი"
+        },
+        "common_core_and_ngss_guidance/coursee/2023": {
+          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.iamt4mqlkyt7"
+        },
+        "cross-curricular_extension_activities/coursee/2023": {
+          "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview"
+        },
+        "debugging_guide/coursee/2023": {
+          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
+        },
+        "implementation_guide/coursee/2023": {
+          "name": "დანერგვის ინსტრუქციები",
+          "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview"
+        },
+        "lesson_type_guide/coursee/2023": {
+          "url": "https://docs.google.com/document/d/1Z28A1yF6BZu3lIlVvvHo5UqBpyuc1hX8YVjIt3fwmY4/view"
+        },
+        "sprite_lab_documentation/coursee/2023": {
+          "name": "Sprite ლაბორატორია დოკუმენტაცია",
+          "url": "https://studio.code.org/docs/spritelab/"
+        },
+        "teacher_forum/coursee/2023": {
+          "name": "მასწავლებლის ფორუმი",
+          "url": "https://forum.code.org/c/csf/"
+        },
+        "csf_course_syllabus/coursee/2023": {
+          "name": "CSF კურსის სილაბუსი",
+          "url": "https://docs.google.com/document/d/1mGTa71uFIOvLuwcbo_7XIutZIuJKGlbl0KlRqgibs2U/edit?usp=drive_link"
+        },
+        "teaching_and_learning_strategies/coursee/2023": {
+          "name": "სწავლებისა და სწავლის სტრატეგიები",
+          "url": "https://docs.google.com/document/d/1khllUBI1xpSrUmwWwa2J35GaKVV8bb3bQb_5Vc_ty54/preview"
+        },
+        "values_and_philosophy/coursee/2023": {
+          "name": "ღირებულებები და ფილოსოფია",
+          "url": "https://docs.google.com/document/d/1_56iN0iyFzPSsuj5-W7-SI6E7A8z9BTpL3qu4fDMkKk/preview"
+        },
+        "be_a_super_digital_citizen_lesson_slides/coursee/2023": {
+          "url": "https://docs.google.com/presentation/d/1RSug3cMAa8L0oSCC2H7__NnAayjLdktVPWl_H5vArHM/edit"
+        },
+        "be_a_super_digital_citizen_super_digital_citizen/coursee/2023": {
+          "url": "https://www.commonsense.org/education/videos/super-digital-citizen"
+        },
+        "pause_and_think_online/coursee/2023": {
+          "name": "შეჩერდი და დაფიქრდი",
+          "type": "ვიდეო"
+        },
+        "turns_angles/coursee/2023": {
+          "name": "მობრუნება და კუთხეები"
+        },
+        "turns_angles_1/coursee/2023": {
+          "name": "მობრუნება და კუთხეები",
+          "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs"
+        },
+        "functions_unplugged_songwriting/coursee/2023": {
+          "name": "ფუნქციები უკომპიუტეროდ: სიმღერის წერა",
+          "url": "https://www.youtube.com/watch?v=QuIMLel1mmw"
+        },
+        "functions_unplugged_songwriting_1/coursee/2023": {
+          "name": "ფუნქციები უკომპიუტეროდ: სიმღერის წერა"
+        },
+        "functions_unplugged_songwriting_2/coursee/2023": {
+          "name": "ფუნქციები უკომპიუტეროდ: სიმღერის წერა",
+          "type": "შეფასება"
+        },
+        "functions_unplugged_songwriting_3/coursee/2023": {
+          "name": "ფუნქციები უკომპიუტეროდ: სიმღერის წერა"
+        },
+        "songwriting_with_functions/coursee/2023": {
+          "name": "სიმღერის წერა ფუნქციებით",
+          "url": "https://youtu.be/5iDCKkI6y2Y"
+        },
+        "digital_sharing_ethics_video_/coursee/2023": {
+          "type": "ვიდეო"
+        },
+        "cs_fundamentals_final_project/coursee/2023": {
+          "name": "CS საფუძვლების ფინალური პროექტი",
+          "type": "რუბრიკა"
+        },
+        "all_resources/coursef/2023": {
+          "url": "/s/კურსი-2023/რესურსები"
+        },
+        "all_standards/coursef/2023": {
+          "url": "/s/კურსი-2023/სტანდარტები"
+        },
+        "all_vocabulary/coursef/2023": {
+          "url": "/s/კურსი-2023/ვოკაბი"
+        },
+        "common_core_and_ngss_guidance/coursef/2023": {
+          "url": "https://docs.google.com/document/d/1SqD3MaRbGIONGs5bcL1YhHUFK92ZXFIufypr6UC8XYA/preview#heading=h.8jtw7rltkhe3"
+        },
+        "cross-curricular_extension_activities/coursef/2023": {
+          "url": "https://docs.google.com/document/d/1MRlHy_3VgLXKZwjeB0VmI8HWuPvupZODsslPnA7KYAY/preview"
+        },
+        "debugging_guide/coursef/2023": {
+          "url": "https://docs.google.com/document/d/1_UFVNtS0_f7aH79WtSEAR0niLy-KPwX1xNiXllOBviE/preview"
+        },
+        "implementation_guide/coursef/2023": {
+          "name": "დანერგვის ინსტრუქციები",
+          "url": "https://docs.google.com/document/d/1I04szlSMuDlFLH_pidEC-huk_-t6ig09pBSyMv1Z3pw/preview"
+        },
+        "sprite_lab_documentation_1/coursef/2023": {
+          "name": "Sprite ლაბორატორია დოკუმენტაცია",
+          "url": "https://studio.code.org/docs/spritelab/"
+        },
+        "teacher_forum/coursef/2023": {
+          "name": "მასწავლებლის ფორუმი",
+          "url": "https://forum.code.org/c/csf/"
+        },
+        "csf_course_syllabus/coursef/2023": {
+          "name": "CSF კურსის სილაბუსი",
+          "url": "https://docs.google.com/document/d/1mGTa71uFIOvLuwcbo_7XIutZIuJKGlbl0KlRqgibs2U/edit?usp=drive_link"
+        },
+        "teaching_and_learning_strategies/coursef/2023": {
+          "name": "სწავლებისა და სწავლის სტრატეგიები",
+          "url": "https://docs.google.com/document/d/1khllUBI1xpSrUmwWwa2J35GaKVV8bb3bQb_5Vc_ty54/preview"
+        },
+        "values_and_philosophy/coursef/2023": {
+          "name": "ღირებულებები და ფილოსოფია",
+          "url": "https://docs.google.com/document/d/1_56iN0iyFzPSsuj5-W7-SI6E7A8z9BTpL3qu4fDMkKk/preview"
+        },
+        "the_power_of_words_the_power_of_words/coursef/2023": {
+          "type": "ვიდეო"
+        },
+        "exploring_apps/coursef/2023": {
+          "name": "აპლიკაციების გამოკვლევა"
+        },
+        "exploring_apps_1/coursef/2023": {
+          "name": "აპლიკაციების გამოკვლევა",
+          "url": "https://docs.google.com/document/d/1Vjn1DhjZm17C-Hde97yDHyeFxMzdPlR6Q-rESZgHw2s/template/preview"
+        },
+        "introducing_sprite_lab/coursef/2023": {
+          "name": "წარმოგიდგენთ Sprite ლაბორატორიას",
+          "type": "ვიდეო"
+        },
+        "sprite_lab_documentation/coursef/2023": {
+          "name": "Sprite ლაბორატორია დოკუმენტაცია",
+          "url": "https://studio.code.org/docs/spritelab/"
+        },
+        "blank_space_stories/coursef/2023": {
+          "url": "https://docs.google.com/document/d/1fJNyI0WQTi-Q-XMZDn9sIgD_o6KjGHwZesQRa93ko5E/template/preview"
+        },
+        "blank_space_stories_1/coursef/2023": {
+          "url": "https://docs.google.com/document/d/1mXI-U7ve1JjDchlyhjD53pkdSXKqeMemb7upFGareV4/template/preview"
+        },
+        "ai_impact_on_society/coursef/2023": {
+          "type": "ვიდეო"
+        },
+        "ai_machine_learning/coursef/2023": {
+          "type": "ვიდეო"
+        },
+        "ai_training_data_bias/coursef/2023": {
+          "type": "ვიდეო"
+        },
+        "internet/coursef/2023": {
+          "name": "ინტერნეტი",
+          "type": "შეფასება"
+        },
+        "internet_1/coursef/2023": {
+          "name": "ინტერნეტი"
+        },
+        "ip_address_cards_and_delivery_type_cards/coursef/2023": {
+          "name": "IP მისამართებისა და მიწოდების ტიპის ბარათები"
+        },
+        "the_internet/coursef/2023": {
+          "name": "ინტერნეტი",
+          "url": "https://youtu.be/mFOUbqYv1Sc"
+        },
+        "cs_fundamentals_final_project/coursef/2023": {
+          "name": "CS საფუძვლების ფინალური პროექტი",
+          "type": "რუბრიკა"
+        },
+        "debugging_guide/express/2023": {
+          "url": "https://docs.google.com/document/d/1z2FgBWwUq6vxwWbnbiQC0EaEKxwgAqBdtTZzVi98xHA/preview"
+        },
+        "teacher_forum/express/2023": {
+          "name": "მასწავლებლის ფორუმი",
+          "url": "https://forum.code.org/c/csf/"
+        },
+        "csf_-_express_course_-_slides/express/2023": {
+          "name": "CSF ექსპრეს კურსის სლაიდები ",
+          "url": "https://docs.google.com/presentation/d/1IVGGGdxNfOAyVa2NgPIraL0F910e2WkLDhVkozNV-3g/template/preview"
+        },
+        "pair_programming/express/2023": {
+          "name": "პროგრამირება წყვილებში",
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
+          "type": "ვიდეო"
+        },
+        "artist_introduction/express/2023": {
+          "name": "შესავალი მხატვარში",
+          "url": "https://www.youtube.com/watch?v=MUavAHn-QUg",
+          "type": "ვიდეო"
+        },
+        "turns_angles/express/2023": {
+          "name": "მობრუნება და კუთხეები",
+          "url": "https://www.youtube.com/watch?v=sPKXZBL_Yvs",
+          "type": "ვიდეო"
+        },
+        "turns_angles_1/express/2023": {
+          "name": "მობრუნება და კუთხეები"
+        },
+        "sprite_lab_documentation/express/2023": {
+          "name": "Sprite ლაბორატორია დოკუმენტაცია",
+          "url": "https://studio.code.org/docs/spritelab/"
+        },
+        "sprites_in_action/express/2023": {
+          "name": "სპრაიტები მოქმედებაში"
+        },
+        "pause_and_think_online/express/2023": {
+          "name": "შეჩერდი და დაფიქრდი",
+          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
+          "type": "ვიდეო"
+        },
+        "open-ended_programming_levels/express/2023": {
+          "url": "https://docs.google.com/document/d/1f2ayrjpWKVWqydZWZFTtXbDWZDdKcNIg4kGaOLB2o3U/view"
+        },
+        "pair_programming_video/express/2023": {
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
+          "type": "ვიდეო"
+        },
+        "variables/express/2023": {
+          "name": "ცვლადები",
+          "url": "https://youtu.be/DI7DprN4FtE"
+        },
+        "cs_fundamentals_final_project/express/2023": {
+          "name": "CS საფუძვლების ფინალური პროექტი",
+          "url": "https://docs.google.com/document/d/1QVcQX7czu6T2OL7742hRu-gXB_Fat_Q4bHM6zgb7bq0/",
+          "type": "რუბრიკა"
+        },
+        "debugging_guide/pre-express/2023": {
+          "url": "https://docs.google.com/document/d/1z2FgBWwUq6vxwWbnbiQC0EaEKxwgAqBdtTZzVi98xHA/preview"
+        },
+        "teacher_forum/pre-express/2023": {
+          "name": "მასწავლებლის ფორუმი",
+          "url": "https://forum.code.org/c/csf/"
+        },
+        "20_20_20_rule/pre-express/2023": {
+          "type": "ვიდეო"
+        },
+        "feeling_faces/pre-express/2023": {
+          "name": "მეტყველი სახეები"
+        },
+        "how_to_make_a_class_section_on_code_org/pre-express/2023": {
+          "name": "როგორ გავაკეთოთ კლასის განყოფილება Code.org-ზე",
+          "url": "https://www.youtube.com/watch?v=ebQY8fb2OV4"
+        },
+        "pair_programming/pre-express/2023": {
+          "name": "პროგრამირება წყვილებში",
+          "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q"
+        },
+        "wiggles_-_go_noodle/pre-express/2023": {
+          "type": "ვიდეო"
+        },
+        "csf_pre-reader_express_course_slides/pre-express/2023": {
+          "name": "CSF წინასწარი მკითხველის ექსპრეს კურსის სლაიდები",
+          "url": "https://docs.google.com/presentation/d/1L1YJDVSUet42tTJaTvsEF1AujZ8n3YTZM6lOY6am07g/template/preview"
+        },
+        "pause_and_think_online/pre-express/2023": {
+          "name": "შეჩერდი და დაფიქრდი",
+          "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
+          "type": "ვიდეო"
+        },
+        "classifying_fish/how-ai-works/2023": {
+          "url": "https://docs.google.com/document/d/1gQWtamQ3YBk-gJnmw_z3QWNLfzdrPyaUjS4ZbtfAvEs/view"
+        },
+        "how_ai_works_-_training_data_and_bias/how-ai-works/2023": {
+          "name": "როგორ მუშაობს AI - ტრენინგის მონაცემები და მიკერძოება",
+          "type": "ვიდეო"
+        },
+        "how_ai_works_-_what_is_machine_learning_/how-ai-works/2023": {
+          "name": "როგორ მუშაობს AI - რა არის მანქანური სწავლება?",
+          "type": "ვიდეო"
+        },
+        "introduction_to_machine_learning/how-ai-works/2023": {
+          "url": "https://docs.google.com/presentation/d/1Vj24zhtV4La9t-MRONHhg2L4ZPYYiGW9eXUBN5lM9LQ/template/preview"
+        },
+        "_example_computer_vision_network/how-ai-works/2023": {
+          "name": "[Example] კომპიუტერული ხედვის ქსელი",
+          "url": "https://docs.google.com/presentation/d/1zJzbHDel0uQ62usH8g_qBp5KIFMN08tEps5lXSAb3Ag/edit?usp=sharing"
+        },
+        "computer_vision/how-ai-works/2023": {
+          "name": "კომპიუტერული ხედვა",
+          "url": "https://docs.google.com/presentation/d/1yWJnyVWPq2ut0GmUc0Z41SHxh1_w2B90qis-mo3d2OY/template/preview"
+        },
+        "computer_vision_network/how-ai-works/2023": {
+          "name": "კომპიუტერული ხედვის ქსელი",
+          "url": "https://docs.google.com/document/d/1C7ob1lB-zKi0DSC3do9ZVFfXkHlC2xnSDI2yPFAqEY4/edit"
+        },
+        "how_ai_works_how_computer_vision_works/how-ai-works/2023": {
+          "name": "როგორ მუშაობს AI: როგორ მუშაობს კომპიუტერული ხედვა",
+          "url": "https://youtu.be/2hXG8v8p0KM",
+          "type": "ვიდეო"
+        },
+        "seven_segment_display_manipulative/how-ai-works/2023": {
+          "name": "Seven სეგმენტის ჩვენების მანიპულაციური",
+          "url": "https://docs.google.com/document/d/17QzrodDqCjF2pjZvyo4coWYQbaZxuRwDrPEe20H-yBM/edit"
+        },
+        "what_a_neural_network_sees/how-ai-works/2023": {
+          "name": "რას ხედავს ნერვული ქსელი",
+          "url": "https://www.youtube.com/watch?v=Gu0MkmynWkw",
+          "type": "ვიდეო"
+        },
+        "how_ai_works_how_neural_networks_work/how-ai-works/2023": {
+          "name": "როგორ მუშაობს AI: როგორ მუშაობს ნერვული ქსელები",
+          "url": "https://youtu.be/JrXazCEACVo",
+          "type": "ვიდეო"
+        },
+        "neural_networks/how-ai-works/2023": {
+          "name": "ნერვული ქსელები",
+          "url": "https://docs.google.com/document/d/1HA_zYssm4-s24-8on8BeL5DbzSfi7G7q-4LlywNBoCw/edit?usp=sharing"
+        },
+        "neural_networks_1/how-ai-works/2023": {
+          "name": "ნერვული ქსელები",
+          "url": "https://docs.google.com/presentation/d/1lj6Z3egPkfv7jKtTVNmhCSY9RKHkcw5LV7Oq_ryqDVs/template/preview"
+        },
+        "wetube_content_creators/how-ai-works/2023": {
+          "name": "WeTube კონტენტის შემქმნელები",
+          "url": "https://docs.google.com/document/d/1z7ZO-9zKlmn3brqH7euWVMSOuzVTQOdWDgkGGukRkvc/edit?usp=sharing"
+        },
+        "eliza_activity_guide/how-ai-works/2023": {
+          "name": "(სურვილისამებრ) ელიზას აქტივობის სახელმძღვანელო",
+          "url": "https://docs.google.com/document/d/1IIca15ohoVq2lTLNUAOqQMUT7YgsTLp8yIPfmEnLmXo/edit#heading=h.17wewdcvexo6"
+        },
+        "generative_llm/how-ai-works/2023": {
+          "name": "გენერაციული LLM",
+          "url": "https://docs.google.com/presentation/d/10d_TM6rucYyt8DAuPVoAZ9mgt9v-zzRWcM2A7geDIp0/template/preview"
+        },
+        "how_ai_works_chatbots_and_large_language_models_part_1_/how-ai-works/2023": {
+          "name": "როგორ მუშაობს AI: ჩეთბოტები და დიდი ენის მოდელები (ნაწილი 1)",
+          "url": "https://www.youtube.com/watch?v=kWougDgtE3E",
+          "type": "ვიდეო"
+        },
+        "how_ai_works_chatbots_and_large_language_models_part_2_/how-ai-works/2023": {
+          "name": "როგორ მუშაობს AI: ჩეთბოტები და დიდი ენის მოდელები (ნაწილი 2)",
+          "url": "https://www.youtube.com/watch?v=7Jn9UrnMWK8",
+          "type": "ვიდეო"
+        },
+        "llm_vocab_and_video_guide_answer_key/how-ai-works/2023": {
+          "name": "[Key] Vocab და ვიდეო სახელმძღვანელო",
+          "url": "https://docs.google.com/document/d/1kSVppQd3WBVwvejrJ4ffgCNJEkYbhDzQs88tbQ3rfD0/edit"
+        },
+        "video_and_vocabulary_guide/how-ai-works/2023": {
+          "name": "ვიდეო და ლექსიკის სახელმძღვანელო",
+          "url": "https://docs.google.com/document/d/1zPGOdJ1rcdF7e7CzGXHb4JaWYFMEPX9aeZf4DtbQhNI/edit#heading=h.l82l1gv9gtj4"
+        },
+        "written_voice_simulator_activity_guide_exemplar/how-ai-works/2023": {
+          "name": "[Exemplar] წერილობითი ხმის სიმულატორის აქტივობის სახელმძღვანელო",
+          "url": "https://docs.google.com/document/d/1nZhObuoPc5781ygHgA8P_a0aHItrKkW4mqqJ73XP8Hw/"
+        },
+        "written_voice_simulator_guide/how-ai-works/2023": {
+          "name": "წერილობითი ხმის სიმულატორის სახელმძღვანელო",
+          "url": "https://docs.google.com/document/d/1pebKlY2-pFCw-Zo_nI8cLXYT_eyfn3AKzkwvEmkjo2c/edit#heading=h.sa1769guz3cn"
+        },
+        "written_voice_simulator_user_guide/how-ai-works/2023": {
+          "name": "წერილობითი ხმის სიმულატორის მომხმარებლის სახელმძღვანელო",
+          "url": "https://docs.google.com/presentation/d/1N3l7kEskuT5MFjarekKlJVoz3Gl-z53kjCuQ6bz94m4/edit"
+        },
+        "_optional_gan_game_activity_guide/how-ai-works/2023": {
+          "name": "(სურვილისამებრ) GAN თამაშის აქტივობის სახელმძღვანელო",
+          "url": "https://docs.google.com/document/d/1XJ16vDcCDz1_cI8T9d554n_cxqEPT2EVCNh6ZLe1OwI/edit"
+        },
+        "generative_images/how-ai-works/2023": {
+          "name": "გენერაციული სურათები",
+          "url": "https://docs.google.com/presentation/d/1de7JbrVRXFg-eLUFCWUFTN5q7DAbpYzxU_oi6Ur37oM/template/preview"
+        },
+        "generative_images_activity_guide/how-ai-works/2023": {
+          "name": "[Key] გენერაციული სურათების აქტივობის სახელმძღვანელო",
+          "url": "https://docs.google.com/document/d/1f9K9TA6gjNM5SYZB-yCovGA-agtWJdl-ATbUg9c4K_s/edit"
+        },
+        "how_ai_works_creativity_and_imagination/how-ai-works/2023": {
+          "name": "როგორ მუშაობს AI: კრეატიულობა და წარმოსახვა",
+          "url": "https://www.youtube.com/watch?v=X994dDnmRmY",
+          "type": "ვიდეო"
+        },
+        "noisy_image_activity_exemplar/how-ai-works/2023": {
+          "name": "[Exemplar] ხმაურიანი გამოსახულების აქტივობა",
+          "url": "https://docs.google.com/document/d/1TkzwTBscbPo7fZl-21ggTqSECFdQ35dxoBrBSdX-0yw/"
+        },
+        "noisy_image_widget_activity_guide/how-ai-works/2023": {
+          "name": "ხმაურიანი გამოსახულების ვიჯეტის აქტივობის სახელმძღვანელო",
+          "url": "https://docs.google.com/document/d/1rxB-NpxulH6SUyweHwGTxatqYAQc5Qt8ZQN9Dkgi6sE/"
+        },
+        "user_guide_noise_image_widget/how-ai-works/2023": {
+          "name": "მომხმარებლის სახელმძღვანელო: ხმაურის გამოსახულების ვიჯეტი",
+          "url": "https://docs.google.com/presentation/d/1l3Ide0B-4k_IEhWYiCVz6OnyAL4fCmg-ROqogyqnVCo/view"
+        },
+        "video_and_vocabulary_guide_1/how-ai-works/2023": {
+          "name": "ვიდეო და ლექსიკის სახელმძღვანელო",
+          "url": "https://docs.google.com/document/d/1GtTFgGzPcoyokR3KsJ43ZjvgJnwUCWdZXvtrXoa78rQ/edit?usp=sharing"
+        },
+        "algorithmic_bias/how-ai-works/2023": {
+          "name": "ალგორითმული მიკერძოება",
+          "url": "https://docs.google.com/presentation/d/1N_sFSTNrP2jpnQPdIAaIDPhQYroSiV5EYxSP3dZ-bHc/template/preview"
+        },
+        "how_ai_works_-_societal_impact/how-ai-works/2023": {
+          "name": "როგორ მუშაობს AI - საზოგადოების გავლენა",
+          "url": "https://youtu.be/tJQSyzBUAew",
+          "type": "ვიდეო"
+        },
+        "sharing_learnings_about_our_image_cropping_algorithm_twitter_/how-ai-works/2023": {
+          "name": "ჩვენი სურათების ამოჭრის ალგორითმის შესახებ ცოდნის გაზიარება (Twitter)",
+          "url": "https://blog.twitter.com/engineering/en_us/topics/insights/2021/sharing-learnings-about-our-image-cropping-algorithm"
+        },
+        "twitter_says_its_image-cropping_algorithm_was_biased_so_it_s_ditching_it_cnn_/how-ai-works/2023": {
+          "name": "Twitter ამბობს, რომ მისი გამოსახულების ამოჭრის ალგორითმი მიკერძოებული იყო, ამიტომ ის უარს ამბობს (CNN)",
+          "url": "https://www.cnn.com/2021/05/19/tech/twitter-image-cropping-algorithm-bias/index.html"
+        },
+        "ai_code_of_ethics/how-ai-works/2023": {
+          "url": "https://docs.google.com/presentation/d/18r16dGGz9ZYwG-lSdC7s35-J4yrbc_glpubFZqYsuBg/template/preview"
+        },
+        "ai_ethics_research_areas/how-ai-works/2023": {
+          "url": "https://docs.google.com/document/d/1wfEQVKhZGmlybOevVoWFfpyqpHjTXTvj0ZZWf-8wme0/edit?usp=sharing"
+        },
+        "ai_ethics_research_reflection/how-ai-works/2023": {
+          "url": "https://docs.google.com/document/d/1KKCTMHVmaUA6B8wBnzT-nHzYCQ6seJD8z-o22dYBkd8/edit?usp=sharing"
+        },
+        "how_ai_works_-_privacy_and_future_of_work/how-ai-works/2023": {
+          "name": "როგორ მუშაობს AI - კონფიდენციალურობა და მუშაობის მომავალი",
+          "url": "https://youtu.be/zNxw5gJtHLc",
+          "type": "ვიდეო"
+        },
+        "does_ai_have_creativity_and_imagination_/how-ai-works/2023": {
+          "url": "https://www.youtube.com/watch?v=X994dDnmRmY",
+          "type": "ვიდეო"
+        },
+        "how_ai_works/how-ai-works/2023": {
+          "name": "როგორ მუშაობს AI",
+          "url": "https://docs.google.com/presentation/d/1Ca1i3-7p6sjC16TuEVF5chfC6Fw3ecM12inLOFXEKQg/template/preview"
+        },
+        "how_ai_works_ethics_ai_equal_access_and_algorithmic_bias/how-ai-works/2023": {
+          "name": "როგორ მუშაობს AI: ეთიკა და AI: თანაბარი წვდომა და ალგორითმული მიკერძოება",
+          "url": "https://youtu.be/tJQSyzBUAew",
+          "type": "ვიდეო"
+        },
+        "how_ai_works_ethics_ai_privacy_the_future_of_work/how-ai-works/2023": {
+          "name": "როგორ მუშაობს AI: ეთიკა და AI: კონფიდენციალურობა და მუშაობის მომავალი",
+          "url": "https://youtu.be/zNxw5gJtHLc",
+          "type": "ვიდეო"
+        },
+        "how_ai_works_introduction/how-ai-works/2023": {
+          "name": "როგორ მუშაობს AI: შესავალი",
+          "url": "https://youtu.be/Ok-xpKjKp2g",
+          "type": "ვიდეო"
+        },
+        "how_ai_works_training_data_and_bias/how-ai-works/2023": {
+          "name": "როგორ მუშაობს AI: ტრენინგის მონაცემები და მიკერძოება",
+          "type": "ვიდეო"
+        },
+        "how_ai_works_what_is_machine_learning_/how-ai-works/2023": {
+          "name": "როგორ მუშაობს AI: რა არის მანქანური სწავლება?",
+          "url": "https://youtu.be/KHbwOetbmbs",
+          "type": "ვიდეო"
+        },
+        "how_chatbots_and_large_language_models_work/how-ai-works/2023": {
+          "url": "https://www.youtube.com/watch?v=X-AWdfSFCHQ",
+          "type": "ვიდეო"
+        },
+        "vocabulary_matching/how-ai-works/2023": {
+          "name": "ლექსიკის შესატყვისი",
+          "url": "https://docs.google.com/document/d/1Tbz8ULln11yU1hpD73OzgRUnujWjdpdOi8fKQsOAiIk/edit"
+        },
+        "_key_vocabulary_matching/how-ai-works/2023": {
+          "name": "[Key] ლექსიკის შესატყვისი",
+          "url": "https://drive.google.com/file/d/1cF8MsKO_lCLziA5FisbcQc2-529j1HXZ/view"
+        },
         "csf-artist-intro-video/artist/unversioned": {
           "name": "შესავალი მხატვარში",
           "url": "https://www.youtube.com/watch?v=MUavAHn-QUg"
