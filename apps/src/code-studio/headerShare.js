@@ -8,6 +8,21 @@ import {showShareDialog} from './components/shareDialogRedux';
 import {AllPublishableProjectTypes} from '../util/sharedConstants';
 
 export function shareProject(shareUrl) {
+  // (x) get createdat from redux (maybe set when we hit /v3/channels on page load (or now?)
+  // hourofcode status of project? checking with sam on what an hour of code project is
+  // (x) user created at date
+  // we'll need these checks on back end, so maybe easier just to manage all of the timestamp
+  // work there. maybe we make an endpoint that checks account age / project age to use here to
+  // enable/disable ui,
+  // and can reuse logic on backend to actually prevent save
+
+  dashboard.project.getChannelMetadata(
+    dashboard.project.getCurrentId(),
+    (_, data) => console.log(data)
+  );
+
+  console.log(getStore().getState().currentUser.createdAt);
+
   dashboard.project.saveIfSourcesChanged().then(() => {
     var dialogDom = document.getElementById('project-share-dialog');
     if (!dialogDom) {

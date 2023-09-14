@@ -133,7 +133,8 @@ export default function currentUser(state = initialState, action) {
     };
   }
   if (action.type === SET_INITIAL_DATA) {
-    const {id, username, user_type, mute_music, under_13} = action.serverUser;
+    const {id, username, user_type, mute_music, under_13, created_at} =
+      action.serverUser;
     analyticsReport.setUserProperties(id, user_type, !!id);
     return {
       ...state,
@@ -142,6 +143,7 @@ export default function currentUser(state = initialState, action) {
       userType: user_type,
       isBackgroundMusicMuted: mute_music,
       under13: under_13,
+      createdAt: created_at,
     };
   }
 
