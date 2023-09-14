@@ -1,0 +1,22 @@
+- video_not_hacked_index = 7
+- video_not_hacked_id = ["not_hacked_intro", "not_hacked_passwords","not_hacked_auth", "not_hacked_phising", "not_hacked_wifi", "not_hacked_messaging", "not_hacked_updates"]
+- video_not_hacked_caption = [hoc_s(:video_library_page_not_hacked_video_title_1), hoc_s(:video_library_page_not_hacked_video_title_2), hoc_s(:video_library_page_not_hacked_video_title_3), hoc_s(:video_library_page_not_hacked_video_title_4), hoc_s(:video_library_page_not_hacked_video_title_5), hoc_s(:video_library_page_not_hacked_video_title_6), hoc_s(:video_library_page_not_hacked_video_title_7)]
+- video_not_hacked = ["4J6FNRft9pQ", "qLMIK5YVgfA", "l9mEd8LOMl8", "YfiM8rXg3ug", "E3imvkP3IC0",  "IxjWR_uexOc", "goMnkhKBOHY"]
+
+.carousel-wrapper#not_hacked_works_collection
+  .carousel.not_hacked_works_collection
+    .slides
+      - video_not_hacked_index.times do |index|
+        .slide
+          .video-wrapper.video-wrapper--one-col.flex-space-between
+            .video__container
+              = view :display_video_thumbnail, id: video_not_hacked_id[index], video_code: video_not_hacked[index], play_button: 'center', letterbox: 'false', caption: video_not_hacked_caption[index]
+
+  .pagination
+    #not_hacked_works_collection_pagination
+  .dd__buttons
+    %button.carousel__prev#prev_6
+      %img{src: "/images/carousel/prev.svg", alt: "previous"}
+
+    %button.carousel__next#next_6
+      %img{src: "/images/carousel/next.svg", alt: "next"}
