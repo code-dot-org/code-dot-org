@@ -556,6 +556,7 @@
   ai_curriculum_desc_04: "These lessons supplement the How AI Works video series. Each lesson is paired with a single video from the series, diving-deeper into the concepts introduced in the videos."
   ai_curriculum_btn_aria_label_04: "Explore How AI Works lessons"
   ai_curriculum_grades_05: "Grade Levels: 9-12"
+  ai_curriculum_btn_aria_label_05: "Explore the Software Engineering & Computer Vision module"
   ai_carousel_heading: "What teachers say about AI with Code.org:"
   ai_carousel_quote_01: "This lesson also gave my students the opportunity to see that there is an element of opinion in classification systems. Later, when we started to see how bias can end up in AI, I was able to pull them back and remind them that the data used to train their models was based on choices."
   ai_carousel_quote_02: "My students learned that they don't have to just be consumers when it comes to technological advances that they are experiencing on almost a daily basis. They can actually be creators!"
