@@ -85,7 +85,6 @@ $container-width: 960px;
 .expandedCardContainer {
   position: relative;
   background-color: $neutral_white;
-  color: #333;
   border: 1px solid $neutral_dark;
   border-radius: 4px;
   width: $container-width;
@@ -93,15 +92,15 @@ $container-width: 960px;
 }
 
 .circleCheck {
-  color: $product_affirmative_default;
+  color: $product_affirmative_default !important;
 }
 
 .circleXmark {
-  color: $product_negative_default;
+  color: $product_negative_default !important;
 }
 
 .triangleExclamation {
-  color: $product_caution_default;
+  color: $product_caution_default !important;
 }
 
 .flexDivider {
@@ -122,9 +121,8 @@ $container-width: 960px;
 
 .iconWithDescription {
   display: flex;
-  align-items: center;
   column-gap: 8px;
-  margin: 0 0 0.5em 0;
+  white-space: nowrap;
 
   > p {
     font-size: 0.875em;
@@ -134,16 +132,19 @@ $container-width: 960px;
 
   i {
     font-size: 0.875em;
+    color: $neutral_dark80;
+    align-self: flex-start;
+    padding-top: 4px;
   }
 }
 
 .infoContainer {
   display: flex;
-  align-items: center;
   column-gap: 20px;
 }
 
 .linksContainer {
+  width: 200px;
   hr {
     margin: 8px 0;
   }
@@ -158,10 +159,19 @@ $container-width: 960px;
     color: $brand_secondary_default !important;
     text-decoration: underline !important;
   }
+
+  a:hover {
+    color: $brand_secondary_dark !important;
+    text-decoration: none !important;
+  }
 }
 
 .relatedContainer {
-  margin-top: 36px;
+  margin-top: 32px;
+
+  h4 {
+    margin-bottom: 0;
+  }
 
   hr {
     margin-top: 8px;
@@ -173,11 +183,15 @@ $container-width: 960px;
   background-color: $neutral_light;
   width: 224px;
   padding: 16px;
+  border-radius: 0 4px 4px 0;
 }
 
 .resourcesContainer {
-  width: 200px;
   margin-bottom: 40px;
+
+  h4 {
+    margin-bottom: 0;
+  }
 
   hr {
     margin: 8px 0;
@@ -191,11 +205,16 @@ $container-width: 960px;
   a:hover {
     color: $brand_secondary_default !important;
   }
+
+  p {
+    font-size: 14px;
+    margin-bottom: 0;
+  }
 }
 
 .subjectsText {
   overflow: hidden;
-  white-space: nowrap;
+  white-space: normal;
 }
 
 .thickDivider {
@@ -204,4 +223,39 @@ $container-width: 960px;
 
 .videoContainer {
   height: 246.5px;
+  width: 100%;
+}
+
+.arrowContainer {
+  position: relative;
+  max-width: 600px;
+  height: auto;
+  border: 1px solid $neutral_white;
+  padding-top: 16px;
+  box-sizing: border-box;
+}
+
+.arrowContainer::before {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-top: 1px solid $neutral_dark;
+  border-left: 1px solid $neutral_dark;
+  top: 100%;
+  left: 54.5%;
+  margin-left: -25px;
+  content: '';
+  transform: rotate(45deg);
+  margin-top: -9px;
+  background: $neutral_white;
+  z-index: 1;
+}
+
+.mediaContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.imageContainer {
+  height: 166px;
 }

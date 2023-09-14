@@ -60,7 +60,8 @@
     "name_suffix": "_mb2022",
     "reference_links": [
       "/courses/csd-2022/guides/microbit-overview",
-      "/courses/csd-2022/guides/microbit-display"
+      "/courses/csd-2022/guides/microbit-display",
+      "/maker/setup"
     ],
     "mini_rubric": "false",
     "text_mode_at_start": "false",
@@ -77,7 +78,7 @@
     "preload_asset_list": null
   },
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-02-01T10:45:16.232+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Board Outputs - PracC_2222\\\"\"],\"cloned_from\":\"CSD U6 - Board Outputs - PracC_2222\"},{\"changed_at\":\"2023-02-20 20:07:43 +0000\",\"changed\":[\"code_functions\",\"hide_design_mode\",\"hide_view_data_button\",\"makerlab_enabled\",\"palette_category_at_start\",\"long_instructions\",\"map_reference\",\"start_blocks\",\"start_html\",\"display_name\",\"bubble_choice_description\",\"thumbnail_url\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-03-27 20:45:37 +0000\",\"changed\":[\"code_functions\",\"reference_links\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-07-17 22:56:24 +0000\",\"changed\":[\"code_functions\",\"show_debug_watch\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-02-01T10:45:16.232+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Board Outputs - PracC_2222\\\"\"],\"cloned_from\":\"CSD U6 - Board Outputs - PracC_2222\"},{\"changed_at\":\"2023-02-20 20:07:43 +0000\",\"changed\":[\"code_functions\",\"hide_design_mode\",\"hide_view_data_button\",\"makerlab_enabled\",\"palette_category_at_start\",\"long_instructions\",\"map_reference\",\"start_blocks\",\"start_html\",\"display_name\",\"bubble_choice_description\",\"thumbnail_url\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-03-27 20:45:37 +0000\",\"changed\":[\"code_functions\",\"reference_links\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-07-17 22:56:24 +0000\",\"changed\":[\"code_functions\",\"show_debug_watch\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-08-21 22:57:22 +0000\",\"changed\":[\"code_functions\",\"reference_links\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

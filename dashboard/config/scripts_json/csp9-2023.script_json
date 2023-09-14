@@ -4,6 +4,18 @@
     "wrapup_video_id": null,
     "login_required": true,
     "properties": {
+      "announcements": [
+        {
+          "key": "9664ad65-66f4-46d1-b0dd-14f7d74dcf80",
+          "notice": "Unit Under Construction",
+          "details": "In response to the changes to the Create Performance Task the College Board announced on Aug 28, we will be updating this unit during the Fall 2023. Until these updates are complete, some lessons, activities, and resources will be out of date with the new format of the Create Performance Task.",
+          "link": "https://apcentral.collegeboard.org/courses/ap-computer-science-principles/exam",
+          "type": "bullhorn_yellow",
+          "visibility": "Teacher-only",
+          "dismissible": true,
+          "buttonText": "Learn More"
+        }
+      ],
       "curriculum_umbrella": "CSP",
       "has_lesson_plan": true,
       "has_verified_resources": true,
@@ -18,7 +30,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-07-18 14:22:39 UTC",
+    "serialized_at": "2023-08-30 22:06:12 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -1103,24 +1115,24 @@
     },
     {
       "name": "All Resources",
-      "url": "/s/csp9-2022/resources",
-      "key": "all_resources_8",
+      "url": "/s/csp9-2023/resources",
+      "key": "all_resources_20",
       "properties": {
         "is_rollup": true
       },
       "seeding_key": {
-        "resource.key": "all_resources_8"
+        "resource.key": "all_resources_20"
       }
     },
     {
       "name": "All Standards",
-      "url": "/s/csp9-2022/standards",
-      "key": "all_standards_8",
+      "url": "/s/csp9-2023/standards",
+      "key": "all_standards_20",
       "properties": {
         "is_rollup": true
       },
       "seeding_key": {
-        "resource.key": "all_standards_8"
+        "resource.key": "all_standards_20"
       }
     },
     {
@@ -1149,11 +1161,9 @@
     },
     {
       "name": "Code.org CSP Topic Coverage",
-      "url": "https://docs.google.com/document/d/1RniAGymLBBpIpDaNNR5Ea8CgiiUKv0tMvaDixSj6m_Q/view",
+      "url": "https://docs.google.com/document/d/1l9VDL92DCIbTNhTiLGIr-enBOTM4wEDTTQOBlJ7bBhM/edit?usp=sharing",
       "key": "code_org_csp_topic_coverage",
       "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "code_org_csp_topic_coverage"
@@ -1579,13 +1589,13 @@
   "scripts_resources": [
     {
       "seeding_key": {
-        "resource.key": "all_resources_8",
+        "resource.key": "all_resources_20",
         "script.name": "csp9-2023"
       }
     },
     {
       "seeding_key": {
-        "resource.key": "all_standards_8",
+        "resource.key": "all_standards_20",
         "script.name": "csp9-2023"
       }
     },
@@ -1773,6 +1783,15 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

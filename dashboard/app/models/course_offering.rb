@@ -50,8 +50,8 @@ class CourseOffering < ApplicationRecord
   MIDDLE_SCHOOL_GRADES = %w[6 7 8].freeze
   HIGH_SCHOOL_GRADES = %w[9 10 11 12].freeze
   PROFESSIONAL_LEARNING_PROGRAM_PATHS = {
-    'K5 Workshops': 'code.org/professional-development-workshops',
-    '6-12 Workshops': 'code.org/apply',
+    'K5 Workshops': 'https://code.org/professional-development-workshops',
+    '6-12 Workshops': 'https://code.org/apply',
   }
   validates :professional_learning_program, acceptance: {accept: PROFESSIONAL_LEARNING_PROGRAM_PATHS.values, message: "must be one of the professional learning program path. Expected one of: #{PROFESSIONAL_LEARNING_PROGRAM_PATHS.values}. Got:  \"%{value}\"."}, allow_nil: true
 
@@ -63,6 +63,15 @@ class CourseOffering < ApplicationRecord
     semester: 5000,
     school_year: 525600,
   }
+
+  ACCEPTABLE_RESOURCE_TYPES = [
+    'Answer Key',
+    'Activity Guide',
+    'Slides',
+    'Exemplar',
+    'Slide Deck',
+    'Rubric'
+  ]
   # Seeding method for creating / updating / deleting a CourseOffering and CourseVersion for the given
   # potential content root, i.e. a Unit or UnitGroup.
   #
@@ -306,6 +315,7 @@ class CourseOffering < ApplicationRecord
       key: key,
       display_name: localized_display_name,
       display_name_with_latest_year: display_name_with_latest_year(locale_code),
+      marketing_initiative: marketing_initiative,
       grade_levels: grade_levels,
       duration: duration,
       image: image,
@@ -324,6 +334,7 @@ class CourseOffering < ApplicationRecord
       video: video,
       published_date: published_date,
       self_paced_pl_course_offering_path: self_paced_pl_course_offering&.path_to_latest_published_version(locale_code),
+      available_resources: get_available_resources(locale_code)
     }
   end
 
@@ -347,6 +358,7 @@ class CourseOffering < ApplicationRecord
       video: video,
       published_date: published_date,
       self_paced_pl_course_offering_id: self_paced_pl_course_offering_id,
+      self_paced_pl_course_offering_key: self_paced_pl_course_offering&.key,
     }
   end
 
@@ -357,7 +369,7 @@ class CourseOffering < ApplicationRecord
     File.write(file_path, JSON.pretty_generate(object_to_serialize) + "\n")
   end
 
-  def self.seed_all(glob="config/course_offerings/*.json")
+  def self.seed_all(glob = "config/course_offerings/*.json")
     removed_records = all.pluck(:key)
     Dir.glob(Rails.root.join(glob)).each do |path|
       removed_records -= [CourseOffering.seed_record(path)]
@@ -375,6 +387,14 @@ class CourseOffering < ApplicationRecord
   # seed_all
   def self.seed_record(file_path)
     properties = properties_from_file(File.read(file_path))
+    key = properties[:self_paced_pl_course_offering_key]
+    new_self_paced_pl_course_offering = CourseOffering.find_by_key(key)
+    if new_self_paced_pl_course_offering.nil? && !key.nil?
+      warn "self_paced_pl_course_offering_key: #{key} not found. Please seed again to fix."
+    else
+      properties[:self_paced_pl_course_offering_id] = new_self_paced_pl_course_offering&.id
+    end
+    properties.delete(:self_paced_pl_course_offering_key)
     course_offering = CourseOffering.find_or_initialize_by(key: properties[:key])
     course_offering.update! properties
     course_offering.key
@@ -456,5 +476,30 @@ class CourseOffering < ApplicationRecord
     end
 
     true
+  end
+
+  def get_available_resources(locale_code = 'en-us')
+    latest_version = latest_published_version(locale_code)
+    units = latest_version&.units
+    lessons = units&.first&.lessons
+
+    return nil unless lessons
+    lesson_plan = lessons&.first&.lesson_plan_html_url
+    expanded_card_resources = {"Lesson Plan" => lesson_plan}
+
+    lessons.each do |lesson|
+      break if expanded_card_resources.size >= 5
+      lesson.resources&.each do |resource|
+        properties = resource.properties
+        next unless properties&.key?('type')
+        type = properties['type']
+        type = "Slide Deck" if type == "Slides"
+        type = "Answer Key" if type == "Exemplar"
+        if ACCEPTABLE_RESOURCE_TYPES.include?(type) && !expanded_card_resources.key?(type)
+          expanded_card_resources[type] ||= resource["url"]
+        end
+      end
+    end
+    expanded_card_resources
   end
 end

@@ -1,22 +1,25 @@
-- video_101_index = 6
+- video_101_index = 7
 
-- video_101_tags = [hoc_s(:module_label_new), hoc_s(:module_label_new), hoc_s(:module_label_coming_soon), hoc_s(:module_label_coming_soon), hoc_s(:module_label_coming_soon), hoc_s(:module_label_coming_soon)]
+- video_101_tags = [hoc_s(:module_label_available_now), hoc_s(:module_label_available_now), hoc_s(:module_label_available_now), hoc_s(:module_label_new), hoc_s(:module_label_available_now), hoc_s(:module_label_coming_soon), hoc_s(:module_label_coming_soon)]
 
-- video_101_title = [hoc_s(:ai_pl_101_video_title_1), hoc_s(:how_ai_works_hero_heading), hoc_s(:ai_pl_101_video_title_2), hoc_s(:ai_pl_101_video_title_3), hoc_s(:ai_pl_101_video_title_4), hoc_s(:ai_pl_101_video_title_5)]
+- video_101_title = [hoc_s(:ai_pl_101_video_title_1), hoc_s(:ai_pl_101_video_title_2), hoc_s(:ai_pl_101_llm_slides_title), hoc_s(:ai_pl_101_video_title_3), hoc_s(:how_ai_works_hero_heading), hoc_s(:ai_pl_101_video_title_4), hoc_s(:ai_pl_101_video_title_5)]
 
-- video_101_desc = [hoc_s(:ai_pl_101_video_desc_1), hoc_s(:ai_pl_101_video_desc_6), hoc_s(:ai_pl_101_video_desc_2), hoc_s(:ai_pl_101_video_desc_3), hoc_s(:ai_pl_101_video_desc_4), hoc_s(:ai_pl_101_video_desc_5)]
+- video_101_desc = [hoc_s(:ai_pl_101_video_desc_1), hoc_s(:ai_pl_101_video_desc_6), hoc_s(:ai_pl_101_llm_slides_desc), hoc_s(:ai_pl_101_video_desc_3), hoc_s(:ai_pl_101_video_desc_2), hoc_s(:ai_pl_101_video_desc_4), hoc_s(:ai_pl_101_video_desc_5)]
 
-- video_id = ["ai_101_01", "ai_chatbots"]
+- video_id = ["ai_101_01", "ai_101_02", "", "ai_101_03", "ai_chatbots"]
 
-- video_code = ["ik70A1ge-aY", "X-AWdfSFCHQ"]
+- video_code = ["ik70A1ge-aY", "n-uJ7zUVUoM", "", "cGWEYDt4Dt0", "X-AWdfSFCHQ"]
 
-- video_download_path = ["//videos.code.org/ai_101_for_teachers/ai_101_fireside_chat_01.mp4", "//videos.code.org/ai_series/HowAIWorks_LLM_SM_CoBrand.mp4"]
+- video_download_path = ["//videos.code.org/ai_101_for_teachers/ai_101_fireside_chat_01.mp4", "//videos.code.org/ai_101_for_teachers/ai_101_demystifying_ai_02_v2.mp4", "", "//videos.code.org/ai_101_for_teachers/Mollick+AI+RCv5c+9-07-2023+H265+AWS.mp4",  "//videos.code.org/ai_series/HowAIWorks_LLM_SM_CoBrand.mp4"]
 
 - video_101_index.times do |index|
   .action-block.action-block--two-col
-    - if index === 0 || index === 1
+    - if index === 0 || index === 1 || index === 3 || index == 4
       %figure.video-101__video.col-50
         = view :display_video_thumbnail, id: video_id[index], video_code: video_code[index], play_button: 'center', letterbox: 'false', download_path: video_download_path[index]
+    - elsif index === 2
+      %figure.video-101__slides.col-50
+        %iframe{allowfullscreen: "true", frameborder: "0", height: "258", mozallowfullscreen: "true", src: "https://docs.google.com/presentation/d/e/2PACX-1vRBPHqheht4zNPoFJhPPqT5T9a0b-J6Tm4MYdLRlbZSXBNaGHSFwisQmmdzJqQDs8Rl4cBZcyOLIXKy/embed?start=false&loop=false&delayms=3000", webkitallowfullscreen: "true", width: "459", style: "max-width: 100%;"}
     - else
       .video-101__image
         %img{src: "/images/ai/pl/101/coming-soon.jpg", alt: "", style: "width: 100%"}
@@ -27,9 +30,13 @@
         = video_101_title[index]
       %p.heading-sm
         = video_101_desc[index]
-      - if index === 1
+      - if index === 4
         %a.link-button{href: "/ai#ai-videos"}
           = hoc_s(:call_to_action_watch_now)
-      - if index >= 2
+      - elsif index === 2
+        %a.link-button{href: "https://docs.google.com/presentation/d/1WXvjG9TscUuH5Xz8Pj2okz6lMIKV__g0v6AoYVXKb40/template/preview", target: "_blank", rel: "noopener noreferrer"}
+          = hoc_s(:call_to_action_get_guide)
+      - if index >= 5
         %a.link-button.secondary{href: "#newsletter-signup"}
           = hoc_s(:call_to_action_notify_available)
+

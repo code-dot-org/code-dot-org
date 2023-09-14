@@ -17,6 +17,7 @@ function SortByNameDropdown({
       <div style={sortByStyles}>{i18n.sortBy()}</div>
       <select
         name="familyNameSort"
+        aria-label={i18n.sortBy()}
         style={selectStyles}
         defaultValue={i18n.displayName}
         onChange={e => {

@@ -8,6 +8,7 @@ import DCDO from '@cdo/apps/dcdo';
 import ProgressBubble from '@cdo/apps/templates/progress/ProgressBubble';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {levelWithProgress, studentShape} from './types';
+import letterCompare from '@cdo/apps/util/letterCompare';
 
 class StudentTable extends React.Component {
   static propTypes = {
@@ -51,11 +52,20 @@ class StudentTable extends React.Component {
       isSortedByFamilyName,
     } = this.props;
 
+    // Returns a comparator function that sorts objects a and b by the given
+    // keys, in order of priority.
+    // Example: comparator(['familyName', 'name']) will sort by familyName
+    // first, looking at name if necessary to break ties.
+    const comparator = keys => (a, b) =>
+      keys.reduce(
+        (result, key) => result || letterCompare(a[key] || '', b[key] || ''),
+        0
+      );
+
     // Sort students, in-place.
-    const collator = new Intl.Collator();
     isSortedByFamilyName
-      ? students.sort((a, b) => collator.compare(a.familyName, b.familyName))
-      : students.sort((a, b) => collator.compare(a.name, b.name));
+      ? students.sort(comparator(['familyName', 'name']))
+      : students.sort(comparator(['name', 'familyName']));
 
     return (
       <table style={styles.table} className="student-table">
