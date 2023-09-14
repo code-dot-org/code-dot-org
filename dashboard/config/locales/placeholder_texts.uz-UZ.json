@@ -44,6 +44,11 @@
           "7fec9998c3e5a11f435dc6f2f8e399db": "2-tanlov",
           "c3787b1ed128fdeec3ad638c8ba547d3": "3-tanlov"
         },
+        "CourseF_Project_SpriteLab_chatbot_examples_2023": {
+          "6e41661ddc1edd50b00b7c607cdcec1a": "1-tanlov",
+          "7fec9998c3e5a11f435dc6f2f8e399db": "2-tanlov",
+          "c3787b1ed128fdeec3ad638c8ba547d3": "3-tanlov"
+        },
         "CourseF_Project_SpriteLab_cupcake_examples_-2022-2": {
           "6e41661ddc1edd50b00b7c607cdcec1a": "1-tanlov",
           "7fec9998c3e5a11f435dc6f2f8e399db": "2-tanlov",
@@ -54,12 +59,22 @@
           "7fec9998c3e5a11f435dc6f2f8e399db": "2-tanlov",
           "c3787b1ed128fdeec3ad638c8ba547d3": "3-tanlov"
         },
+        "CourseF_Project_SpriteLab_cupcake_examples_2023": {
+          "6e41661ddc1edd50b00b7c607cdcec1a": "1-tanlov",
+          "7fec9998c3e5a11f435dc6f2f8e399db": "2-tanlov",
+          "c3787b1ed128fdeec3ad638c8ba547d3": "3-tanlov"
+        },
         "CourseF_Project_SpriteLab_examples_-2022-2": {
           "6e41661ddc1edd50b00b7c607cdcec1a": "1-tanlov",
           "7fec9998c3e5a11f435dc6f2f8e399db": "2-tanlov",
           "c3787b1ed128fdeec3ad638c8ba547d3": "3-tanlov"
         },
         "CourseF_Project_SpriteLab_examples_2021": {
+          "6e41661ddc1edd50b00b7c607cdcec1a": "1-tanlov",
+          "7fec9998c3e5a11f435dc6f2f8e399db": "2-tanlov",
+          "c3787b1ed128fdeec3ad638c8ba547d3": "3-tanlov"
+        },
+        "CourseF_Project_SpriteLab_examples_2023": {
           "6e41661ddc1edd50b00b7c607cdcec1a": "1-tanlov",
           "7fec9998c3e5a11f435dc6f2f8e399db": "2-tanlov",
           "c3787b1ed128fdeec3ad638c8ba547d3": "3-tanlov"
@@ -148,6 +163,10 @@
           "0ab65920c84bec05a22e09feea7fe4ea": "matnni shu yerga yozing",
           "30fcc1693fa8402931d13ac3a5f396fd": "sarlavhani shu yerga kiriting"
         },
+        "courseC19_playLab_EOC1_2023": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "matnni shu yerga yozing",
+          "30fcc1693fa8402931d13ac3a5f396fd": "sarlavhani shu yerga kiriting"
+        },
         "courseC19_playLab_EOC2": {
           "0ab65920c84bec05a22e09feea7fe4ea": "matnni shu yerga yozing",
           "30fcc1693fa8402931d13ac3a5f396fd": "sarlavhani shu yerga kiriting"
@@ -161,6 +180,10 @@
           "30fcc1693fa8402931d13ac3a5f396fd": "sarlavhani shu yerga kiriting"
         },
         "courseC19_playLab_EOC2_2021": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "matnni shu yerga yozing",
+          "30fcc1693fa8402931d13ac3a5f396fd": "sarlavhani shu yerga kiriting"
+        },
+        "courseC19_playLab_EOC2_2023": {
           "0ab65920c84bec05a22e09feea7fe4ea": "matnni shu yerga yozing",
           "30fcc1693fa8402931d13ac3a5f396fd": "sarlavhani shu yerga kiriting"
         },
@@ -180,6 +203,10 @@
           "0ab65920c84bec05a22e09feea7fe4ea": "matnni shu yerga yozing",
           "30fcc1693fa8402931d13ac3a5f396fd": "sarlavhani shu yerga kiriting"
         },
+        "courseC19_playLab_EOC3_2023": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "matnni shu yerga yozing",
+          "30fcc1693fa8402931d13ac3a5f396fd": "sarlavhani shu yerga kiriting"
+        },
         "courseC19_playLab_EOC4": {
           "0ab65920c84bec05a22e09feea7fe4ea": "matnni shu yerga yozing",
           "30fcc1693fa8402931d13ac3a5f396fd": "sarlavhani shu yerga kiriting"
@@ -193,6 +220,10 @@
           "30fcc1693fa8402931d13ac3a5f396fd": "sarlavhani shu yerga kiriting"
         },
         "courseC19_playLab_EOC4_2021": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "matnni shu yerga yozing",
+          "30fcc1693fa8402931d13ac3a5f396fd": "sarlavhani shu yerga kiriting"
+        },
+        "courseC19_playLab_EOC4_2023": {
           "0ab65920c84bec05a22e09feea7fe4ea": "matnni shu yerga yozing",
           "30fcc1693fa8402931d13ac3a5f396fd": "sarlavhani shu yerga kiriting"
         },
@@ -212,6 +243,10 @@
           "3e11a2dc6edb909c47778bed75a81769": "Matn kiriting",
           "5cec903c4d41c49412a70a94d54999ee": "Biror nima yozishingiz mumkin."
         },
+        "courseC19_playLab_EOC5_2023": {
+          "3e11a2dc6edb909c47778bed75a81769": "Matn kiriting",
+          "5cec903c4d41c49412a70a94d54999ee": "Biror nima yozishingiz mumkin."
+        },
         "courseC19_playLab_EOC6": {
           "3e11a2dc6edb909c47778bed75a81769": "Matn kiriting",
           "5cec903c4d41c49412a70a94d54999ee": "Biror nima yozishingiz mumkin."
@@ -228,11 +263,19 @@
           "3e11a2dc6edb909c47778bed75a81769": "Matn kiriting",
           "5cec903c4d41c49412a70a94d54999ee": "Biror nima yozishingiz mumkin."
         },
+        "courseC19_playLab_EOC6_2023": {
+          "3e11a2dc6edb909c47778bed75a81769": "Matn kiriting",
+          "5cec903c4d41c49412a70a94d54999ee": "Biror nima yozishingiz mumkin."
+        },
         "courseC19_playLab_sample12022": {
           "3e11a2dc6edb909c47778bed75a81769": "Matn kiriting",
           "5cec903c4d41c49412a70a94d54999ee": "Biror nima yozishingiz mumkin."
         },
         "courseC19_playLab_sample1_2021": {
+          "3e11a2dc6edb909c47778bed75a81769": "Matn kiriting",
+          "5cec903c4d41c49412a70a94d54999ee": "Biror nima yozishingiz mumkin."
+        },
+        "courseC19_playLab_sample1_2023": {
           "3e11a2dc6edb909c47778bed75a81769": "Matn kiriting",
           "5cec903c4d41c49412a70a94d54999ee": "Biror nima yozishingiz mumkin."
         },
@@ -250,6 +293,16 @@
           "0192cdc04916ec27aa11738bb6e48d6e": "Neila o'z uyini kosmik robotdan himoya qilmoqchi.",
           "2a28483f9f4f9ee44cec653a445d4c82": "Boshqa jonzotlar endi qo'rquvda bo'lmaydi!",
           "3e11a2dc6edb909c47778bed75a81769": "Text here",
+          "5cec903c4d41c49412a70a94d54999ee": "Biror nima yozishingiz mumkin.",
+          "83db90f8846d091d3532256816f105d9": "Bu Neila",
+          "b2f02bf648ce32c4362afe1578d41f70": "Bu ishladi! Neila kosmik robotga mehr kuchini ko'rsatdi.",
+          "c084e152431f9116b9fdb3f7d465f13d": "Neila kosmik robotga yaxshi bo'lishni o'rganishga yordam bermoqchi.",
+          "df8312187449c70820d7c58229a6b17e": "Kosmik robot boshqa mavjudotlarni qo'rqitmoqda."
+        },
+        "courseC19_playLab_sample2_2023": {
+          "0192cdc04916ec27aa11738bb6e48d6e": "Neila o'z uyini kosmik robotdan himoya qilmoqchi.",
+          "2a28483f9f4f9ee44cec653a445d4c82": "Boshqa jonzotlar endi qo'rquvda bo'lmaydi!",
+          "3e11a2dc6edb909c47778bed75a81769": "Matn kiriting",
           "5cec903c4d41c49412a70a94d54999ee": "Biror nima yozishingiz mumkin.",
           "83db90f8846d091d3532256816f105d9": "Bu Neila",
           "b2f02bf648ce32c4362afe1578d41f70": "Bu ishladi! Neila kosmik robotga mehr kuchini ko'rsatdi.",
@@ -277,6 +330,10 @@
           "30fcc1693fa8402931d13ac3a5f396fd": "sarlavhani shu yerga kiriting"
         },
         "courseC_PlayLab_eventsFP_2021": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "matnni shu yerga yozing",
+          "30fcc1693fa8402931d13ac3a5f396fd": "sarlavhani shu yerga kiriting"
+        },
+        "courseC_PlayLab_eventsFP_2023": {
           "0ab65920c84bec05a22e09feea7fe4ea": "matnni shu yerga yozing",
           "30fcc1693fa8402931d13ac3a5f396fd": "sarlavhani shu yerga kiriting"
         },
@@ -320,6 +377,19 @@
           "f62038e77820419cd978f7b722da560a": "Nechta paydo bo'ladi?"
         },
         "courseC_data wizard_2021": {
+          "1c64ef29c853587fbe94f69f05272b79": "Qush!",
+          "22f6f6821f4d6d0a08653935b466ac2f": "mushuklar!",
+          "27944770529dd15319a983bee8951560": "Mushuk!",
+          "336ad881e37e713ba0325500a8fa1f00": "itlar!",
+          "4b23c908b939eaf7918e07142b9e05e0": "Ajdarho!",
+          "5b402e6ea05e847a076e03ad74420c45": "qushlar!",
+          "71fc859f3abd22273bad5d0d8eda2173": "Barcha hayvonlarni sanang!",
+          "7f945c111ba5ea6d7b1547601db6ba0e": "jadarholar!",
+          "81a2909a24e4ca3b582ab9ee539c080c": "Hayvonlarni sanang!",
+          "d93dfc24c6ce3e53d8ee07416c743e60": "It!",
+          "f62038e77820419cd978f7b722da560a": "Nechta paydo bo'ladi?"
+        },
+        "courseC_data wizard_2023": {
           "1c64ef29c853587fbe94f69f05272b79": "Qush!",
           "22f6f6821f4d6d0a08653935b466ac2f": "mushuklar!",
           "27944770529dd15319a983bee8951560": "Mushuk!",
@@ -380,6 +450,9 @@
         "courseE_aboutme_3_2021": {
           "ed076287532e86365e841e92bfc50d8c": "Salom Dunyo!"
         },
+        "courseE_aboutme_3_2023": {
+          "ed076287532e86365e841e92bfc50d8c": "Salom Dunyo!"
+        },
         "courseE_aboutme_4": {
           "ed076287532e86365e841e92bfc50d8c": "Salom Dunyo!"
         },
@@ -390,6 +463,9 @@
           "ed076287532e86365e841e92bfc50d8c": "Salom Dunyo!"
         },
         "courseE_aboutme_4_2021": {
+          "ed076287532e86365e841e92bfc50d8c": "Salom Dunyo!"
+        },
+        "courseE_aboutme_4_2023": {
           "ed076287532e86365e841e92bfc50d8c": "Salom Dunyo!"
         },
         "courseE_aboutme_5": {
@@ -405,6 +481,10 @@
           "ed076287532e86365e841e92bfc50d8c": "Salom Dunyo!"
         },
         "courseE_aboutme_5_2021": {
+          "6ae99d4d2de5e3cbd29fec87ae7d76eb": "Hey!",
+          "ed076287532e86365e841e92bfc50d8c": "Salom Dunyo!"
+        },
+        "courseE_aboutme_5_2023": {
           "6ae99d4d2de5e3cbd29fec87ae7d76eb": "Hey!",
           "ed076287532e86365e841e92bfc50d8c": "Salom Dunyo!"
         },
@@ -454,6 +534,12 @@
           "8a52e7a8d3b4c955d6f7927c6ba3fe72": "jonzot",
           "f655df68ec33643278de7e69794e8d76": "Virtual Akvarium"
         },
+        "courseF_apps_aquarium_2023": {
+          "795f3202b17cb6bc3d4b771d8c6c9eaf": "boshqa",
+          "83e4a96aed96436c621b9809e258b309": "baliq",
+          "8a52e7a8d3b4c955d6f7927c6ba3fe72": "jonzot",
+          "f655df68ec33643278de7e69794e8d76": "Virtual Akvarium"
+        },
         "courseF_apps_card": {
           "d1210f945885351b13feb9bbb868aeef": "Ular necha yoshda bo'lishadi?",
           "e243ac4e74cc5a76adbecf3b4daa1906": "savolim",
@@ -465,6 +551,11 @@
           "ff4d94eeb46da1dbec33fa9cfc2749ee": "Kimning tug'ilgan kuni?"
         },
         "courseF_apps_card_-2022-2": {
+          "d1210f945885351b13feb9bbb868aeef": "Ular necha yoshda bo'lishadi?",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "savolim",
+          "ff4d94eeb46da1dbec33fa9cfc2749ee": "Kimning tug'ilgan kuni?"
+        },
+        "courseF_apps_card_2023": {
           "d1210f945885351b13feb9bbb868aeef": "Ular necha yoshda bo'lishadi?",
           "e243ac4e74cc5a76adbecf3b4daa1906": "savolim",
           "ff4d94eeb46da1dbec33fa9cfc2749ee": "Kimning tug'ilgan kuni?"
@@ -502,6 +593,17 @@
           "ae096fbf24d913754b01a1601672bf62": "ham!",
           "f0e5da70d264f312a1658d51c130b101": "Ismingizni kiriting:"
         },
+        "courseF_apps_chatbot_2023": {
+          "05584ab56b744b51cd8c4a6e8b3a08ee": "Yoshingizni kiriting:",
+          "13e575be866ecf5ac3dcbf61ab2048d7": "Yoshingiz nechada?",
+          "1f258d88a70309efc1435ef5daa277a0": "Bugungi suhmatimiz uchun rahmat!",
+          "605f302ebc9f7fbacba60b15f551a633": "Eng sevimli rangingiz qaysi?",
+          "6dfcc5e477ebd3e2c893b3fc86b2eb93": " ham shu yoshda!",
+          "91c4549fe2a5e9325c8f8d51afbb751b": "Eng sevimli rangni kiriting:",
+          "a72e7c5c68af0546e963e510297f5233": "Salom, men X-9! Ismingiz nima?",
+          "ae096fbf24d913754b01a1601672bf62": "ham!",
+          "f0e5da70d264f312a1658d51c130b101": "Ismingizni kiriting:"
+        },
         "courseF_apps_collector": {
           "077449fb290b51b9d70c9f2f3d3213bc": " soniya",
           "41f2b2212de0105c2a942ebb4a44e449": "Ulkan Kollektor o‘yini!",
@@ -515,6 +617,12 @@
           "e8a10c04d72b2f135dabe360c4bdd534": "Siz yutasiz!"
         },
         "courseF_apps_collector_-2022-2": {
+          "077449fb290b51b9d70c9f2f3d3213bc": " soniya",
+          "41f2b2212de0105c2a942ebb4a44e449": "Ulkan Kollektor o‘yini!",
+          "490082498449bd20ff0199737dfa4916": "O'yin turini tanlang:",
+          "e8a10c04d72b2f135dabe360c4bdd534": "Siz yutasiz!"
+        },
+        "courseF_apps_collector_2023": {
           "077449fb290b51b9d70c9f2f3d3213bc": " soniya",
           "41f2b2212de0105c2a942ebb4a44e449": "Ulkan Kollektor o‘yini!",
           "490082498449bd20ff0199737dfa4916": "O'yin turini tanlang:",
@@ -547,12 +655,26 @@
           "e243ac4e74cc5a76adbecf3b4daa1906": "savolim",
           "e522ee28f39133b45497637539ff429b": "Son kiriting:"
         },
+        "courseF_apps_madlib_2023": {
+          "2f6e9ffcbb531b9f8983aef3ae4242ac": "Tana qismini kiriting:",
+          "514b8d5320196898a9ced3efe0d4c802": "Sifat kiriting:",
+          "5306eed2fd2c43fe033efd6016c0c38b": "-oyoqli poyga!",
+          "7c9fbd20ed3a7bcfad08351050ffe0ff": "o'yinlar.",
+          "88794317e8c695bbc7bc7d2f35792c7f": "Obyekt kiriting:",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "savolim",
+          "e522ee28f39133b45497637539ff429b": "Son kiriting:"
+        },
         "courseF_editable_card": {
           "d1210f945885351b13feb9bbb868aeef": "Ular necha yoshda bo'lishadi?",
           "e243ac4e74cc5a76adbecf3b4daa1906": "savolim",
           "ff4d94eeb46da1dbec33fa9cfc2749ee": "Kimning tug'ilgan kuni?"
         },
         "courseF_editable_card_-2022-2": {
+          "d1210f945885351b13feb9bbb868aeef": "Ular necha yoshda bo'lishadi?",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "savolim",
+          "ff4d94eeb46da1dbec33fa9cfc2749ee": "Kimning tug'ilgan kuni?"
+        },
+        "courseF_editable_card_2023": {
           "d1210f945885351b13feb9bbb868aeef": "Ular necha yoshda bo'lishadi?",
           "e243ac4e74cc5a76adbecf3b4daa1906": "savolim",
           "ff4d94eeb46da1dbec33fa9cfc2749ee": "Kimning tug'ilgan kuni?"
@@ -581,6 +703,18 @@
           "e243ac4e74cc5a76adbecf3b4daa1906": "savolim",
           "f0e5da70d264f312a1658d51c130b101": "Ismingizni kiriting:"
         },
+        "courseF_editable_chatbot_2023": {
+          "05584ab56b744b51cd8c4a6e8b3a08ee": "Yoshingizni kiriting:",
+          "13e575be866ecf5ac3dcbf61ab2048d7": "Yoshingiz nechada?",
+          "1f258d88a70309efc1435ef5daa277a0": "Bugungi suhmatimiz uchun rahmat!",
+          "605f302ebc9f7fbacba60b15f551a633": "Eng sevimli rangingiz qaysi?",
+          "6dfcc5e477ebd3e2c893b3fc86b2eb93": " ham shu yoshda!",
+          "91c4549fe2a5e9325c8f8d51afbb751b": "Eng sevimli rangni kiriting:",
+          "a72e7c5c68af0546e963e510297f5233": "Salom, men X-9! Ismingiz nima?",
+          "ae096fbf24d913754b01a1601672bf62": "ham!",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "savolim",
+          "f0e5da70d264f312a1658d51c130b101": "Ismingizni kiriting:"
+        },
         "courseF_editable_madlib": {
           "2f6e9ffcbb531b9f8983aef3ae4242ac": "Tana qismini kiriting:",
           "514b8d5320196898a9ced3efe0d4c802": "Sifat kiriting:",
@@ -591,6 +725,15 @@
           "e522ee28f39133b45497637539ff429b": "Son kiriting:"
         },
         "courseF_editable_madlib_-2022-2": {
+          "2f6e9ffcbb531b9f8983aef3ae4242ac": "Tana qismini kiriting:",
+          "514b8d5320196898a9ced3efe0d4c802": "Sifat kiriting:",
+          "5306eed2fd2c43fe033efd6016c0c38b": "-oyoqli poyga!",
+          "7c9fbd20ed3a7bcfad08351050ffe0ff": "o'yinlar.",
+          "88794317e8c695bbc7bc7d2f35792c7f": "Obyekt kiriting:",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "savolim",
+          "e522ee28f39133b45497637539ff429b": "Son kiriting:"
+        },
+        "courseF_editable_madlib_2023": {
           "2f6e9ffcbb531b9f8983aef3ae4242ac": "Tana qismini kiriting:",
           "514b8d5320196898a9ced3efe0d4c802": "Sifat kiriting:",
           "5306eed2fd2c43fe033efd6016c0c38b": "-oyoqli poyga!",
@@ -683,10 +826,16 @@
         "courseF_text_answer_-2022-2": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "savolim"
         },
+        "courseF_text_answer_2023": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "savolim"
+        },
         "courseF_text_choice_color": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "savolim"
         },
         "courseF_text_choice_color_-2022-2": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "savolim"
+        },
+        "courseF_text_choice_color_2023": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "savolim"
         },
         "courseF_text_choice_conversation": {
@@ -695,16 +844,25 @@
         "courseF_text_choice_conversation_-2022-2": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "savolim"
         },
+        "courseF_text_choice_conversation_2023": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "savolim"
+        },
         "courseF_text_choice_events": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "savolim"
         },
         "courseF_text_choice_events_-2022-2": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "savolim"
         },
+        "courseF_text_choice_events_2023": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "savolim"
+        },
         "courseF_text_choice_freeplay": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "savolim"
         },
         "courseF_text_choice_freeplay_-2022-2": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "savolim"
+        },
+        "courseF_text_choice_freeplay_2023": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "savolim"
         },
         "courseF_text_choice_multiprompt": {
@@ -715,10 +873,17 @@
           "d1210f945885351b13feb9bbb868aeef": "Ular necha yoshda bo'lishadi?",
           "ff4d94eeb46da1dbec33fa9cfc2749ee": "Kimning tug'ilgan kuni?"
         },
+        "courseF_text_choice_multiprompt_2023": {
+          "d1210f945885351b13feb9bbb868aeef": "Ular necha yoshda bo'lishadi?",
+          "ff4d94eeb46da1dbec33fa9cfc2749ee": "Kimning tug'ilgan kuni?"
+        },
         "courseF_text_choice_title": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "savolim"
         },
         "courseF_text_choice_title_-2022-2": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "savolim"
+        },
+        "courseF_text_choice_title_2023": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "savolim"
         },
         "courseF_text_concat": {
@@ -727,10 +892,16 @@
         "courseF_text_concat_-2022-2": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "savolim"
         },
+        "courseF_text_concat_2023": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "savolim"
+        },
         "courseF_text_prompts": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "savolim"
         },
         "courseF_text_prompts_-2022-2": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "savolim"
+        },
+        "courseF_text_prompts_2023": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "savolim"
         },
         "courseF_variables_card": {
@@ -739,10 +910,16 @@
         "courseF_variables_card_-2022-2": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "savolim"
         },
+        "courseF_variables_card_2023": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "savolim"
+        },
         "courseF_variables_card_finish": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "savolim"
         },
         "courseF_variables_card_finish_-2022-2": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "savolim"
+        },
+        "courseF_variables_card_finish_2023": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "savolim"
         },
         "courseF_variables_chatbot": {
@@ -751,10 +928,16 @@
         "courseF_variables_chatbot_-2022-2": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "savolim"
         },
+        "courseF_variables_chatbot_2023": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "savolim"
+        },
         "courseF_variables_chatbot_finish": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "savolim"
         },
         "courseF_variables_chatbot_finish_-2022-2": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "savolim"
+        },
+        "courseF_variables_chatbot_finish_2023": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "savolim"
         },
         "courseF_variables_madlib": {
@@ -763,13 +946,25 @@
         "courseF_variables_madlib_-2022-2": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "savolim"
         },
+        "courseF_variables_madlib_2023": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "savolim"
+        },
         "courseF_variables_madlib_finish": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "savolim"
         },
         "courseF_variables_madlib_finish_-2022-2": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "savolim"
         },
+        "courseF_variables_madlib_finish_2023": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "savolim"
+        },
         "coursee_helloworld_freeplay": {
+          "6cd3556deb0da54bca060b4c39479839": "Salom, dunyo!"
+        },
+        "coursee_helloworld_freeplay_2023": {
+          "6cd3556deb0da54bca060b4c39479839": "Salom, dunyo!"
+        },
+        "csc_bookcover_widget_2023": {
           "6cd3556deb0da54bca060b4c39479839": "Salom, dunyo!"
         },
         "helloworld_animals_freeplay": {
