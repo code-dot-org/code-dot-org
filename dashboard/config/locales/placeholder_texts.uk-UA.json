@@ -31,12 +31,22 @@
           "7fec9998c3e5a11f435dc6f2f8e399db": "вибір 2",
           "c3787b1ed128fdeec3ad638c8ba547d3": "вибір 3"
         },
+        "CourseF_Project_SpriteLab_chatbot_examples_2023": {
+          "6e41661ddc1edd50b00b7c607cdcec1a": "вибір 1",
+          "7fec9998c3e5a11f435dc6f2f8e399db": "вибір 2",
+          "c3787b1ed128fdeec3ad638c8ba547d3": "вибір 3"
+        },
         "CourseF_Project_SpriteLab_cupcake_examples_-2022-2": {
           "6e41661ddc1edd50b00b7c607cdcec1a": "вибір 1",
           "7fec9998c3e5a11f435dc6f2f8e399db": "вибір 2",
           "c3787b1ed128fdeec3ad638c8ba547d3": "вибір 3"
         },
         "CourseF_Project_SpriteLab_cupcake_examples_2021": {
+          "6e41661ddc1edd50b00b7c607cdcec1a": "вибір 1",
+          "7fec9998c3e5a11f435dc6f2f8e399db": "вибір 2",
+          "c3787b1ed128fdeec3ad638c8ba547d3": "вибір 3"
+        },
+        "CourseF_Project_SpriteLab_cupcake_examples_2023": {
           "6e41661ddc1edd50b00b7c607cdcec1a": "вибір 1",
           "7fec9998c3e5a11f435dc6f2f8e399db": "вибір 2",
           "c3787b1ed128fdeec3ad638c8ba547d3": "вибір 3"
@@ -51,6 +61,11 @@
           "78d989e01047ba7043a38650d695abaa": "Вибери гравця",
           "7fec9998c3e5a11f435dc6f2f8e399db": "вибір 2",
           "8e7d34ed67fe4ec0910cefee2f5059cd": "Небесний танцюрист",
+          "c3787b1ed128fdeec3ad638c8ba547d3": "вибір 3"
+        },
+        "CourseF_Project_SpriteLab_examples_2023": {
+          "6e41661ddc1edd50b00b7c607cdcec1a": "вибір 1",
+          "7fec9998c3e5a11f435dc6f2f8e399db": "вибір 2",
           "c3787b1ed128fdeec3ad638c8ba547d3": "вибір 3"
         },
         "Find the Wizard": {
@@ -110,6 +125,10 @@
           "0ab65920c84bec05a22e09feea7fe4ea": "надрукуйте тут текст",
           "30fcc1693fa8402931d13ac3a5f396fd": "надрукуйте тут заголовок"
         },
+        "courseC19_playLab_EOC1_2023": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "надрукуйте тут текст",
+          "30fcc1693fa8402931d13ac3a5f396fd": "надрукуйте тут заголовок"
+        },
         "courseC19_playLab_EOC2": {
           "0ab65920c84bec05a22e09feea7fe4ea": "надрукуйте тут текст",
           "30fcc1693fa8402931d13ac3a5f396fd": "надрукуйте тут заголовок"
@@ -123,6 +142,10 @@
           "30fcc1693fa8402931d13ac3a5f396fd": "надрукуйте тут заголовок"
         },
         "courseC19_playLab_EOC2_2021": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "надрукуйте тут текст",
+          "30fcc1693fa8402931d13ac3a5f396fd": "надрукуйте тут заголовок"
+        },
+        "courseC19_playLab_EOC2_2023": {
           "0ab65920c84bec05a22e09feea7fe4ea": "надрукуйте тут текст",
           "30fcc1693fa8402931d13ac3a5f396fd": "надрукуйте тут заголовок"
         },
@@ -142,6 +165,10 @@
           "0ab65920c84bec05a22e09feea7fe4ea": "надрукуйте тут текст",
           "30fcc1693fa8402931d13ac3a5f396fd": "надрукуйте тут заголовок"
         },
+        "courseC19_playLab_EOC3_2023": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "надрукуйте тут текст",
+          "30fcc1693fa8402931d13ac3a5f396fd": "надрукуйте тут заголовок"
+        },
         "courseC19_playLab_EOC4": {
           "0ab65920c84bec05a22e09feea7fe4ea": "надрукуйте тут текст",
           "30fcc1693fa8402931d13ac3a5f396fd": "надрукуйте тут заголовок"
@@ -155,6 +182,10 @@
           "30fcc1693fa8402931d13ac3a5f396fd": "надрукуйте тут заголовок"
         },
         "courseC19_playLab_EOC4_2021": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "надрукуйте тут текст",
+          "30fcc1693fa8402931d13ac3a5f396fd": "надрукуйте тут заголовок"
+        },
+        "courseC19_playLab_EOC4_2023": {
           "0ab65920c84bec05a22e09feea7fe4ea": "надрукуйте тут текст",
           "30fcc1693fa8402931d13ac3a5f396fd": "надрукуйте тут заголовок"
         },
@@ -188,6 +219,14 @@
           "c084e152431f9116b9fdb3f7d465f13d": "Нейла хоче допомогти космічному роботу навчитися бути добрим.",
           "df8312187449c70820d7c58229a6b17e": "Космічний робот відлякує інших істот."
         },
+        "courseC19_playLab_sample2_2023": {
+          "0192cdc04916ec27aa11738bb6e48d6e": "Нейла намагається захистити свій дім від космічного робота.",
+          "2a28483f9f4f9ee44cec653a445d4c82": "Інші істоти більше не бояться!",
+          "83db90f8846d091d3532256816f105d9": "Це Нейла.",
+          "b2f02bf648ce32c4362afe1578d41f70": "Спрацювало! Нейла показала космічному роботу силу доброти.",
+          "c084e152431f9116b9fdb3f7d465f13d": "Нейла хоче допомогти космічному роботу навчитися бути добрим.",
+          "df8312187449c70820d7c58229a6b17e": "Космічний робот відлякує інших істот."
+        },
         "courseC_PlayLab_eventsFP": {
           "0ab65920c84bec05a22e09feea7fe4ea": "надрукуйте тут текст",
           "30fcc1693fa8402931d13ac3a5f396fd": "надрукуйте тут заголовок"
@@ -209,6 +248,10 @@
           "30fcc1693fa8402931d13ac3a5f396fd": "надрукуйте тут заголовок"
         },
         "courseC_PlayLab_eventsFP_2021": {
+          "0ab65920c84bec05a22e09feea7fe4ea": "надрукуйте тут текст",
+          "30fcc1693fa8402931d13ac3a5f396fd": "надрукуйте тут заголовок"
+        },
+        "courseC_PlayLab_eventsFP_2023": {
           "0ab65920c84bec05a22e09feea7fe4ea": "надрукуйте тут текст",
           "30fcc1693fa8402931d13ac3a5f396fd": "надрукуйте тут заголовок"
         },
@@ -251,6 +294,9 @@
         "courseE_aboutme_3_2021": {
           "ed076287532e86365e841e92bfc50d8c": "Привіт, світе!"
         },
+        "courseE_aboutme_3_2023": {
+          "ed076287532e86365e841e92bfc50d8c": "Привіт, світе!"
+        },
         "courseE_aboutme_4": {
           "ed076287532e86365e841e92bfc50d8c": "Привіт, світе!"
         },
@@ -261,6 +307,9 @@
           "ed076287532e86365e841e92bfc50d8c": "Привіт, світе!"
         },
         "courseE_aboutme_4_2021": {
+          "ed076287532e86365e841e92bfc50d8c": "Привіт, світе!"
+        },
+        "courseE_aboutme_4_2023": {
           "ed076287532e86365e841e92bfc50d8c": "Привіт, світе!"
         },
         "courseE_aboutme_5": {
@@ -274,6 +323,9 @@
         },
         "courseE_aboutme_5_2021": {
           "6ae99d4d2de5e3cbd29fec87ae7d76eb": "Агов!",
+          "ed076287532e86365e841e92bfc50d8c": "Привіт, світе!"
+        },
+        "courseE_aboutme_5_2023": {
           "ed076287532e86365e841e92bfc50d8c": "Привіт, світе!"
         },
         "courseE_playLab_scaffold1": {
@@ -322,6 +374,16 @@
           "caaf8264ca397dba2d35ef902bbbd953": "Яку істоту?",
           "f655df68ec33643278de7e69794e8d76": "Віртуальний акваріум"
         },
+        "courseF_apps_aquarium_2023": {
+          "0d3e73168beb875063ea0f0302fe32bd": "Яку рибу?",
+          "78574118d153534fd0925a2f5ca25e79": "Яку річ?",
+          "795f3202b17cb6bc3d4b771d8c6c9eaf": "інше",
+          "83e4a96aed96436c621b9809e258b309": "риби",
+          "8a52e7a8d3b4c955d6f7927c6ba3fe72": "істота",
+          "a1a2a07348784279a1e7a6f46dc7e353": "Що ти хочеш додати?",
+          "caaf8264ca397dba2d35ef902bbbd953": "Яку істоту?",
+          "f655df68ec33643278de7e69794e8d76": "Віртуальний акваріум"
+        },
         "courseF_apps_card": {
           "d1210f945885351b13feb9bbb868aeef": "Скільки виповниться років?",
           "e243ac4e74cc5a76adbecf3b4daa1906": "моє питання",
@@ -333,6 +395,11 @@
           "ff4d94eeb46da1dbec33fa9cfc2749ee": "У кого день народження?"
         },
         "courseF_apps_card_-2022-2": {
+          "d1210f945885351b13feb9bbb868aeef": "Скільки виповниться років?",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "моє питання",
+          "ff4d94eeb46da1dbec33fa9cfc2749ee": "У кого день народження?"
+        },
+        "courseF_apps_card_2023": {
           "d1210f945885351b13feb9bbb868aeef": "Скільки виповниться років?",
           "e243ac4e74cc5a76adbecf3b4daa1906": "моє питання",
           "ff4d94eeb46da1dbec33fa9cfc2749ee": "У кого день народження?"
@@ -363,6 +430,14 @@
           "a72e7c5c68af0546e963e510297f5233": "Привіт, я Х-9! Як тебе звуть?",
           "f0e5da70d264f312a1658d51c130b101": "Введи своє ім'я:"
         },
+        "courseF_apps_chatbot_2023": {
+          "05584ab56b744b51cd8c4a6e8b3a08ee": "Введи свій вік:",
+          "1f258d88a70309efc1435ef5daa277a0": "Дякую за спілкування!",
+          "605f302ebc9f7fbacba60b15f551a633": "Який твій улюблений колір?",
+          "91c4549fe2a5e9325c8f8d51afbb751b": "Введи свій улюблений колір:",
+          "a72e7c5c68af0546e963e510297f5233": "Привіт, я Х-9! Як тебе звуть?",
+          "f0e5da70d264f312a1658d51c130b101": "Введи своє ім'я:"
+        },
         "courseF_apps_collector": {
           "077449fb290b51b9d70c9f2f3d3213bc": " секунди",
           "41f2b2212de0105c2a942ebb4a44e449": "Велика гра колекціонування!",
@@ -376,6 +451,12 @@
           "e8a10c04d72b2f135dabe360c4bdd534": "Перемога!"
         },
         "courseF_apps_collector_-2022-2": {
+          "077449fb290b51b9d70c9f2f3d3213bc": " секунди",
+          "41f2b2212de0105c2a942ebb4a44e449": "Велика гра колекціонування!",
+          "490082498449bd20ff0199737dfa4916": "Вибери тип гри:",
+          "e8a10c04d72b2f135dabe360c4bdd534": "Перемога!"
+        },
+        "courseF_apps_collector_2023": {
           "077449fb290b51b9d70c9f2f3d3213bc": " секунди",
           "41f2b2212de0105c2a942ebb4a44e449": "Велика гра колекціонування!",
           "490082498449bd20ff0199737dfa4916": "Вибери тип гри:",
@@ -414,12 +495,28 @@
           "e522ee28f39133b45497637539ff429b": "Вкажи номер:",
           "f6175c6f0b0bcfff0256286315f0eb7b": "Ігри для вечірок"
         },
+        "courseF_apps_madlib_2023": {
+          "2f6e9ffcbb531b9f8983aef3ae4242ac": "Вкажи частину тіла:",
+          "514b8d5320196898a9ced3efe0d4c802": "Вкажи прикметник:",
+          "5306eed2fd2c43fe033efd6016c0c38b": "-ногі перегони!",
+          "7c9fbd20ed3a7bcfad08351050ffe0ff": " ігри.",
+          "88794317e8c695bbc7bc7d2f35792c7f": "Вкажи предмет:",
+          "bf08dd3d1961874f13e77c936aad27e5": "Історія з порожніми конвертами",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "моє питання",
+          "e522ee28f39133b45497637539ff429b": "Вкажи номер:",
+          "f6175c6f0b0bcfff0256286315f0eb7b": "Ігри для вечірок"
+        },
         "courseF_editable_card": {
           "d1210f945885351b13feb9bbb868aeef": "Скільки виповниться років?",
           "e243ac4e74cc5a76adbecf3b4daa1906": "моє питання",
           "ff4d94eeb46da1dbec33fa9cfc2749ee": "У кого день народження?"
         },
         "courseF_editable_card_-2022-2": {
+          "d1210f945885351b13feb9bbb868aeef": "Скільки виповниться років?",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "моє питання",
+          "ff4d94eeb46da1dbec33fa9cfc2749ee": "У кого день народження?"
+        },
+        "courseF_editable_card_2023": {
           "d1210f945885351b13feb9bbb868aeef": "Скільки виповниться років?",
           "e243ac4e74cc5a76adbecf3b4daa1906": "моє питання",
           "ff4d94eeb46da1dbec33fa9cfc2749ee": "У кого день народження?"
@@ -437,6 +534,15 @@
           "f0e5da70d264f312a1658d51c130b101": "Введи своє ім'я:"
         },
         "courseF_editable_chatbot_-2022-2": {
+          "05584ab56b744b51cd8c4a6e8b3a08ee": "Введи свій вік:",
+          "1f258d88a70309efc1435ef5daa277a0": "Дякую за спілкування!",
+          "605f302ebc9f7fbacba60b15f551a633": "Який твій улюблений колір?",
+          "91c4549fe2a5e9325c8f8d51afbb751b": "Введи свій улюблений колір:",
+          "a72e7c5c68af0546e963e510297f5233": "Привіт, я Х-9! Як тебе звуть?",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "моє питання",
+          "f0e5da70d264f312a1658d51c130b101": "Введи своє ім'я:"
+        },
+        "courseF_editable_chatbot_2023": {
           "05584ab56b744b51cd8c4a6e8b3a08ee": "Введи свій вік:",
           "1f258d88a70309efc1435ef5daa277a0": "Дякую за спілкування!",
           "605f302ebc9f7fbacba60b15f551a633": "Який твій улюблений колір?",
@@ -467,11 +573,26 @@
           "e522ee28f39133b45497637539ff429b": "Вкажи номер:",
           "f6175c6f0b0bcfff0256286315f0eb7b": "Ігри для вечірок"
         },
+        "courseF_editable_madlib_2023": {
+          "2f6e9ffcbb531b9f8983aef3ae4242ac": "Вкажи частину тіла:",
+          "514b8d5320196898a9ced3efe0d4c802": "Вкажи прикметник:",
+          "5306eed2fd2c43fe033efd6016c0c38b": "-ногі перегони!",
+          "7c9fbd20ed3a7bcfad08351050ffe0ff": " ігри.",
+          "88794317e8c695bbc7bc7d2f35792c7f": "Вкажи предмет:",
+          "bf08dd3d1961874f13e77c936aad27e5": "Історія з порожніми конвертами",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "моє питання",
+          "e522ee28f39133b45497637539ff429b": "Вкажи номер:",
+          "f6175c6f0b0bcfff0256286315f0eb7b": "Ігри для вечірок"
+        },
         "courseF_label_predict": {
           "937dc37c06cc5d89a7096eb048b73590": " вже на підході!",
           "f15045cb7e57652546d4a0b2c695356f": "Що ти будеш їсти?"
         },
         "courseF_label_predict_-2022-2": {
+          "937dc37c06cc5d89a7096eb048b73590": " вже на підході!",
+          "f15045cb7e57652546d4a0b2c695356f": "Що ти будеш їсти?"
+        },
+        "courseF_label_predict_2023": {
           "937dc37c06cc5d89a7096eb048b73590": " вже на підході!",
           "f15045cb7e57652546d4a0b2c695356f": "Що ти будеш їсти?"
         },
@@ -531,16 +652,25 @@
         "courseF_text_answer_-2022-2": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "моє питання"
         },
+        "courseF_text_answer_2023": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "моє питання"
+        },
         "courseF_text_choice_color": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "моє питання"
         },
         "courseF_text_choice_color_-2022-2": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "моє питання"
         },
+        "courseF_text_choice_color_2023": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "моє питання"
+        },
         "courseF_text_choice_conversation": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "моє питання"
         },
         "courseF_text_choice_conversation_-2022-2": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "моє питання"
+        },
+        "courseF_text_choice_conversation_2023": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "моє питання"
         },
         "courseF_text_choice_events": {
@@ -553,10 +683,18 @@
           "c529a06c3f8518b63ff6dfac482b335c": "Назви цю планету:",
           "e243ac4e74cc5a76adbecf3b4daa1906": "моє питання"
         },
+        "courseF_text_choice_events_2023": {
+          "44506356d48394cd903b579df9de9117": ", землянин!",
+          "c529a06c3f8518b63ff6dfac482b335c": "Назви цю планету:",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "моє питання"
+        },
         "courseF_text_choice_freeplay": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "моє питання"
         },
         "courseF_text_choice_freeplay_-2022-2": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "моє питання"
+        },
+        "courseF_text_choice_freeplay_2023": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "моє питання"
         },
         "courseF_text_choice_interview": {
@@ -564,6 +702,10 @@
           "5bd698afd23bccde289bb0b4aa72a518": "Назви робота."
         },
         "courseF_text_choice_interview_-2022-2": {
+          "34088af1fb721900963462375b3bbe23": "робот!",
+          "5bd698afd23bccde289bb0b4aa72a518": "Назви робота."
+        },
+        "courseF_text_choice_interview_2023": {
           "34088af1fb721900963462375b3bbe23": "робот!",
           "5bd698afd23bccde289bb0b4aa72a518": "Назви робота."
         },
@@ -575,10 +717,17 @@
           "d1210f945885351b13feb9bbb868aeef": "Скільки виповниться років?",
           "ff4d94eeb46da1dbec33fa9cfc2749ee": "У кого день народження?"
         },
+        "courseF_text_choice_multiprompt_2023": {
+          "d1210f945885351b13feb9bbb868aeef": "Скільки виповниться років?",
+          "ff4d94eeb46da1dbec33fa9cfc2749ee": "У кого день народження?"
+        },
         "courseF_text_choice_title": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "моє питання"
         },
         "courseF_text_choice_title_-2022-2": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "моє питання"
+        },
+        "courseF_text_choice_title_2023": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "моє питання"
         },
         "courseF_text_concat": {
@@ -587,16 +736,25 @@
         "courseF_text_concat_-2022-2": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "моє питання"
         },
+        "courseF_text_concat_2023": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "моє питання"
+        },
         "courseF_text_prompts": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "моє питання"
         },
         "courseF_text_prompts_-2022-2": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "моє питання"
         },
+        "courseF_text_prompts_2023": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "моє питання"
+        },
         "courseF_variables_card": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "моє питання"
         },
         "courseF_variables_card_-2022-2": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "моє питання"
+        },
+        "courseF_variables_card_2023": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "моє питання"
         },
         "courseF_variables_card_finish": {
@@ -607,10 +765,17 @@
           "464a456e0747ec9b09fc9afc6fbd13ed": "що б тобі хотілося отримати на день народження?",
           "e243ac4e74cc5a76adbecf3b4daa1906": "моє питання"
         },
+        "courseF_variables_card_finish_2023": {
+          "464a456e0747ec9b09fc9afc6fbd13ed": "що б тобі хотілося отримати на день народження?",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "моє питання"
+        },
         "courseF_variables_chatbot": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "моє питання"
         },
         "courseF_variables_chatbot_-2022-2": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "моє питання"
+        },
+        "courseF_variables_chatbot_2023": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "моє питання"
         },
         "courseF_variables_chatbot_finish": {
@@ -623,10 +788,18 @@
           "c757766b0a7e2017c79e1c94f60e44f7": "Дякую за розмову!",
           "e243ac4e74cc5a76adbecf3b4daa1906": "моє питання"
         },
+        "courseF_variables_chatbot_finish_2023": {
+          "46463b2e9f71f2f15b7238f56f09ba30": "Кінець",
+          "c757766b0a7e2017c79e1c94f60e44f7": "Дякую за розмову!",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "моє питання"
+        },
         "courseF_variables_madlib": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "моє питання"
         },
         "courseF_variables_madlib_-2022-2": {
+          "e243ac4e74cc5a76adbecf3b4daa1906": "моє питання"
+        },
+        "courseF_variables_madlib_2023": {
           "e243ac4e74cc5a76adbecf3b4daa1906": "моє питання"
         },
         "courseF_variables_madlib_finish": {
@@ -637,10 +810,20 @@
           "50d489a15105b987ec6d4410900c95dd": "Вкажи дію:",
           "e243ac4e74cc5a76adbecf3b4daa1906": "моє питання"
         },
+        "courseF_variables_madlib_finish_2023": {
+          "50d489a15105b987ec6d4410900c95dd": "Вкажи дію:",
+          "e243ac4e74cc5a76adbecf3b4daa1906": "моє питання"
+        },
         "courseF_variables_predict": {
           "f6429fe0f1a76611670df7e1234af936": "Як тебе звати?"
         },
         "coursee_helloworld_freeplay": {
+          "6cd3556deb0da54bca060b4c39479839": "Привіт, світ!"
+        },
+        "coursee_helloworld_freeplay_2023": {
+          "6cd3556deb0da54bca060b4c39479839": "Привіт, світ!"
+        },
+        "csc_bookcover_widget_2023": {
           "6cd3556deb0da54bca060b4c39479839": "Привіт, світ!"
         },
         "helloworld_animals_freeplay": {
