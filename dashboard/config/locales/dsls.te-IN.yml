@@ -382,6 +382,11 @@ te-IN:
           # The Big Event
 
           In computer science, events are actions that a computer monitors. In this lesson you will react differently depending on which button is pressed.
+      BigEvent-Unplugged2022_2023:
+        markdown: |
+          # The Big Event
+
+          In computer science, events are actions that a computer monitors. In this lesson you will react differently depending on which button is pressed.
       BigEvent-Unplugged_2020:
         markdown: |
           # The Big Event
@@ -1795,6 +1800,11 @@ te-IN:
           # Happy Maps
 
           Create an algorithm to move a character through a maze.
+      HappyMaps-Unplugged2022_2023:
+        markdown: |
+          # Happy Maps
+
+          Create an algorithm to move a character through a maze.
       HappyMaps-Unplugged_2020:
         markdown: |
           # Happy Maps
@@ -2825,6 +2835,14 @@ te-IN:
         - {}
         questions:
         - {}
+      courseC_multi_artist_prog6_predict12022_2023:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
       courseC_multi_artist_prog6_predict1_2018:
         answers:
         - {}
@@ -2867,6 +2885,15 @@ te-IN:
         questions:
         - {}
       courseC_multi_harvester_loops11_predict12022:
+        answers:
+        - text: '4'
+        - correct: true
+          text: '12'
+        - text: '15'
+        - text: '20'
+        questions:
+        - {}
+      courseC_multi_harvester_loops11_predict12022_2023:
         answers:
         - text: '4'
         - correct: true
@@ -2927,6 +2954,14 @@ te-IN:
         - {}
         questions:
         - {}
+      courseC_multi_maze_debugging8_predict12022_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
       courseC_multi_maze_debugging8_predict1_2018:
         answers:
         - {}
@@ -2968,6 +3003,14 @@ te-IN:
         questions:
         - {}
       courseC_multi_maze_programming8_predict12022:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_maze_programming8_predict12022_2023:
         answers:
         - {}
         - correct: true
@@ -3023,6 +3066,14 @@ te-IN:
         - {}
         questions:
         - {}
+      courseC_multi_starWars_predict12022_2023:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
       courseC_multi_starWars_predict1_2018:
         answers:
         - {}
@@ -3064,6 +3115,14 @@ te-IN:
         questions:
         - {}
       courseC_multi_starWars_predict22022:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseC_multi_starWars_predict22022_2023:
         answers:
         - {}
         - correct: true
@@ -3157,6 +3216,15 @@ te-IN:
         - {}
         questions:
         - {}
+      courseD_multi_artist_nestedLoops9_predict12022_2023:
+        answers:
+        - correct: true
+          text: ఒక
+        - text: B
+        - text: సి
+        - {}
+        questions:
+        - {}
       courseD_multi_artist_nestedLoops9_predict1_2018:
         answers:
         - correct: true
@@ -3209,6 +3277,17 @@ te-IN:
         - {}
         questions:
         - {}
+      courseD_multi_bee_conditionals1_predict12022_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - text: మా వీక్షణను నిరోధించే మేఘం ఉంది. మేము “రన్” క్లిక్ చేసిన తర్వాత మేఘం
+            అదృశ్యమవుతుంది. ఈ మేఘం కింద ఒక పువ్వు ఉండవచ్చు. ఒక పువ్వు ఉంటే, తేనెటీగ
+            ఒకసారి తేనెను సేకరించాలి. పువ్వు లేకపోతే తేనెటీగ ఏమీ చేయకూడదు. దిగువ కోడ్ను
+            బాగా చూడండి. మీరు “రన్” క్లిక్ చేసిన తర్వాత ఏమి జరుగుతుందని మీరు అనుకుంటున్నారు?
       courseD_multi_bee_conditionals1_predict1_2018:
         answers:
         - {}
@@ -3273,6 +3352,14 @@ te-IN:
         - {}
         questions:
         - {}
+      courseD_multi_bee_conditionals7_predict22022_2023:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseD_multi_bee_conditionals7_predict2_2018:
         answers:
         - correct: true
@@ -3314,6 +3401,14 @@ te-IN:
         questions:
         - {}
       courseD_multi_bee_nestedLoops2_predict12022:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops2_predict12022_2023:
         answers:
         - {}
         - {}
@@ -3363,6 +3458,15 @@ te-IN:
         questions:
         - {}
       courseD_multi_bee_nestedLoops9_predict22022:
+        answers:
+        - text: '4'
+        - correct: true
+          text: '8'
+        - text: '10'
+        - text: '12'
+        questions:
+        - {}
+      courseD_multi_bee_nestedLoops9_predict22022_2023:
         answers:
         - text: '4'
         - correct: true
@@ -3431,6 +3535,14 @@ te-IN:
         - {}
         questions:
         - {}
+      courseD_multi_farmer_condLoops9_predict12022_2023:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
       courseD_multi_farmer_condLoops9_predict1_2018:
         answers:
         - {}
@@ -3487,6 +3599,14 @@ te-IN:
         - {}
         questions:
         - {}
+      courseD_multi_farmer_while10_predict22022_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
       courseD_multi_farmer_while10_predict2_2018:
         answers:
         - {}
@@ -3528,6 +3648,14 @@ te-IN:
         questions:
         - {}
       courseD_multi_farmer_while4_predict12022:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseD_multi_farmer_while4_predict12022_2023:
         answers:
         - {}
         - {}
@@ -3583,6 +3711,14 @@ te-IN:
         - {}
         questions:
         - {}
+      courseD_multi_maze_until10_predict22022_2023:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseD_multi_maze_until10_predict2_2018:
         answers:
         - correct: true
@@ -3624,6 +3760,14 @@ te-IN:
         questions:
         - {}
       courseD_multi_maze_until2_predict12022:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      courseD_multi_maze_until2_predict12022_2023:
         answers:
         - {}
         - correct: true
@@ -3703,6 +3847,14 @@ te-IN:
         - {}
         questions:
         - {}
+      courseE_multi_farmer_functions11_predict2022_2023:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
       courseE_multi_farmer_functions11_predict_2018:
         answers:
         - {}
@@ -3744,6 +3896,14 @@ te-IN:
         questions:
         - {}
       courseE_prediction_artistFunction12022:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        questions:
+        - {}
+      courseE_prediction_artistFunction12022_2023:
         answers:
         - {}
         - {}
@@ -3807,6 +3967,14 @@ te-IN:
         - {}
         questions:
         - {}
+      courseE_swim_fish_behavior_predict12022_2023:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
       courseE_swim_fish_behavior_predict1_2021:
         answers:
         - {}
@@ -3855,7 +4023,23 @@ te-IN:
         - {}
         questions:
         - {}
+      courseF_events_predict_multi2022_2022_pilot_-2022-2_2023:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
       courseF_groups_predict_multi_2022_pilot_-2022-2:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_groups_predict_multi_2022_pilot_-2022-2_2023:
         answers:
         - correct: true
         - {}
@@ -3873,6 +4057,15 @@ te-IN:
         questions:
         - {}
       courseF_labels_predict_multi2022_2022_pilot_-2022-2:
+        answers:
+        - {}
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseF_labels_predict_multi2022_2022_pilot_-2022-2_2023:
         answers:
         - {}
         - {}
@@ -3930,6 +4123,14 @@ te-IN:
         questions:
         - {}
       courseF_multi_artist_variables3a_predict12022:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_multi_artist_variables3a_predict12022_2023:
         answers:
         - correct: true
         - {}
@@ -4001,6 +4202,14 @@ te-IN:
         - {}
         questions:
         - {}
+      courseF_multi_bee_for3_predict12022_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
       courseF_multi_bee_for3_predict1_2018:
         answers:
         - {}
@@ -4065,6 +4274,14 @@ te-IN:
         - {}
         questions:
         - {}
+      courseF_sprites_predict_multi2022_2022_pilot_-2022-2_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
       courseF_variables2_predict2_multi2022_-2022-2:
         answers:
         - correct: true
@@ -4073,7 +4290,23 @@ te-IN:
         - {}
         questions:
         - {}
+      courseF_variables2_predict2_multi2022_-2022-2_2023:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseF_variables2_predict_multi2022_2022_pilot_-2022-2:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseF_variables2_predict_multi2022_2022_pilot_-2022-2_2023:
         answers:
         - {}
         - {}
@@ -4097,6 +4330,14 @@ te-IN:
         - {}
         questions:
         - {}
+      courseF_variables_predict_multi2022_2022_pilot_-2022-2_2023:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
       coursee_prediction_artistfunction2:
         answers:
         - {}
@@ -4106,6 +4347,14 @@ te-IN:
         questions:
         - {}
       coursee_prediction_artistfunction22022:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      coursee_prediction_artistfunction22022_2023:
         answers:
         - {}
         - correct: true
@@ -4145,6 +4394,313 @@ te-IN:
         - {}
         questions:
         - {}
+      csc_animal_adaptations_L3_intro:
+        markdown: "#Make మీ స్వంత ప్రవర్తన!\n\n<br>\n\n# #Now మీరు ప్రవర్తనలపై నియంత్రణలో
+          ఉన్నారు!\n\n## #Edit వాటిని సవరించడానికి మరియు మార్చడానికి ఇప్పటికే ఉన్న
+          ప్రవర్తనలు. \n! [] (https://images.code.org/e2e63b1cd7302b6548591c65ad23a0ee-image-1680019477336.gif)\n\n##
+          #Make మీరు చేయాలనుకుంటున్న ఏవైనా చర్యలతో మీ స్వంత క్రొత్త ప్రవర్తన!\n\n!
+          [] (https://images.code.org/5345f53f3b33b2ad2bbf2bc86539cb96-image-1680019210225.gif)\n\n\n"
+      csc_animal_adaptations_choice:
+        description: దిగువ దృశ్యాల నుండి ఎంచుకోండి మరియు క్రొత్త & ప్రత్యేకమైన జంతు
+          అనుసరణను మోడల్ చేయడానికి మీ స్వంత సృజనాత్మక కోడ్ని ఉపయోగించండి! మీరు బహుళ
+          ఎంపికలను ఎంచుకోవచ్చు మరియు ఒకటి కంటే ఎక్కువ చేయవచ్చు!
+        display_name: మీ స్వంత జంతు అనుసరణను కోడ్ చేయండి!
+      csc_animal_adaptations_intro:
+        markdown: "#Survival ప్రవర్తనలు\n\n# #Behaviors ప్రకృతిలో\nజంతువులు మనుగడకు
+          సహాయపడే <strong>ప్రవర్తనలు</strong> మరియు చర్యలను అభివృద్ధి చేశాయి. <br>
+          ఉదాహరణకు, కొన్ని జంతువులు** శీతాకాలంలో వలసపోతాయి** మరియు మరికొన్ని జంతువులు**
+          సమూహాలు** లో ఉండటానికి ప్రయత్నిస్తాయి.\n\n<img style=\" float: left; width:50%;
+          padding-top:10px\" src=\"https://images.code.org/424ef84f41b7cabdf62e8cc509abe62c-image-1678322413909.jpg\"
+          style= \"width:60%\">\n<img style=\" float: left; width:46%; padding-top:10px\"
+          src=\"https://images.code.org/7c79e255d048e7ccf099eb61976bb90c-image-1678322295452.jpg\"
+          style= \"width:60%\">\n\n<div style=\"float: left\">\n<h2>కంప్యూటర్ సైన్స్లో
+          ప్రవర్తనలు కంప్యూటర్</h2>\nసైన్స్లో, <strong></strong> ప్రవర్తనలు అనేది
+          యానిమేషన్ లాగా స్ప్రైట్ పదే పదే పునరావృతమయ్యే చర్యల సమితి. <br>\nప్రవర్తనలోని
+          చర్యలు ఆపమని ఆదేశించే వరకు కొనసాగుతాయి. \n<br>\n<br>\n\n<img src=\"https://images.code.org/56809209ca823047729cc01a033a7ac0-image-1679937249706.gif\"
+          style=\" float: left; width:70%; padding-top:10px\">\n</div>\n"
+      csc_animal_adaptations_predict:
+        answers:
+        - feedback: సరికాదు. స్ప్రైట్ పెరుగుతుంది.
+          text: స్ప్రైట్ స్పిన్ అవుతుంది.
+        - correct: true
+          text: స్ప్రైట్ పెరుగుతుంది.
+        - feedback: సరికాదు. స్ప్రైట్ పెరుగుతుంది.
+        - feedback: సరికాదు. స్ప్రైట్ పెరుగుతుంది.
+        questions:
+        - {}
+      csc_animal_adaptations_shareout:
+        markdown: "# #Share మీ\n<img src=\"https://images.code.org/c480c5c42d9c02e154943f49bbed87ff-image-1675984438344.13.53
+          PM.png\" style= \"width:60%\">\n<div style= \"width: 60%\"> \n\nప్రాజెక్ట్**ఇప్పుడు
+          మీరు మనుగడ అనుసరణను కోడ్ చేసారు, దాన్ని భాగస్వామ్యం చేయడానికి సమయం ఆసన్నమైంది!
+          ** మీరు మీ క్లాస్మేట్స్ ప్రాజెక్ట్లను 9 వ స్థాయి నుండి\n\nచూస్తున్నప్పుడు,
+          ఈ క్రింది ప్రశ్నలను పరిగణించండి: > 1.\n\nమీరు ఒకే పర్యావరణ దృష్టాంతాన్ని
+          లేదా భిన్నమైన వాటిని ఎంచుకున్నారా? \n> 2. వారు ఒకే కోడింగ్ బ్లాక్లను ఉపయోగించారా?
+          \n> 3. పర్యావరణ మార్పుల నుండి జంతువు మనుగడ సాగిస్తుందని మీరు అనుకుంటున్నారా?
+          ఎందుకు లేదా ఎందుకు కాదు? \n\n</div>\n\n"
+      csc_bookcover_extensions_choice_2023:
+        description: మీ పుస్తక కవర్కు జోడించడానికి క్రింది కార్యకలాపాల నుండి ఎంచుకోండి!
+          మీరు బహుళ ఎంపికలను ఎంచుకోవచ్చు మరియు ఒకటి కంటే ఎక్కువ చేయవచ్చు!
+        display_name: మీ పుస్తక కవర్ను విస్తరించండి!
+      csc_bookcovers_markdown_lesson_4:
+        markdown: "# #Share మీ పుస్తక\n<img src=\"https://images.code.org/c480c5c42d9c02e154943f49bbed87ff-image-1675984438344.13.53
+          PM.png\" style= \"width:60%\">\n<div style= \"width: 60%\"> \n\nకవర్**ఇప్పుడు
+          మీరు మీ పుస్తక కవర్ను కోడ్ చేసారు, దాన్ని పంచుకునే సమయం వచ్చింది! ** మీరు
+          మీ క్లాస్మేట్స్ 'ప్రాజెక్టులు వీక్షించడానికి\n\nవంటి క్రింది ప్రశ్నలు పరిగణలోకి:
+          > 1.\n\nమీ క్లాస్మేట్స్ పుస్తక కవర్లలో మీరు ఏ స్ప్రిట్స్ మరియు సంభాషణలను
+          చూశారా?\n> 2. మీరు అక్షరాలపై క్లిక్ చేసినప్పుడు ఏమి జరుగుతుంది?\n> 2. వారి
+          ఎంపికలు మీతో ఎలా సమానంగా ఉన్నాయి? అవి ఎలా భిన్నంగా ఉన్నాయి?\n> 3. మీరు దాని
+          కవర్ ఆధారంగా పుస్తకాన్ని చదవాలనుకుంటున్నారా?\n</div>\n\n"
+      csc_bookcovers_planning:
+        markdown: "# #Plan మీ డిజిటల్ బుక్ కవర్\n\n<div>\n<img style=\" float: left;
+          width:25%; padding-top:10px\" src=\"https://images.code.org/08ece3f13c8f0f82343e302fb52dc45c-image-1676499630865.png\"
+          />\n\n<div style=\"float: left; width: 70%; padding-left:20px\">\n<h4>\n<strong>మీ
+          ప్లాన్ చేయడానికి సమయం ఆసన్నమైంది!</strong>\n</h4>\n\n>మీరు వీటిని చేర్చాలి:\n>
+          - పుస్తకం యొక్క శీర్షిక\n> - రచయిత\n> - ప్రధాన పాత్రలు రెండు మరియు తమను
+          తాము వివరించడానికి ఒక వాక్యం \n> - పుస్తకం యొక్క ఒకటి-రెండు వాక్య సారాంశం\n\n**
+          మిమ్మల్ని మీరు ఉపయోగించడానికి కాపీ చేయగల ప్లాన్ టెంప్లేట్ ఇక్కడ ఉంది: **
+          \ <a href=\"https://docs.google.com/document/d/18cVgDdq77dbdk6gmQ1rGjHIr7pQk3I2Wb2WsAEeNH64/template/preview\"
+          target=\"_blank\"> బుక్ కవర్ ప్లానింగ్ గైడ్</a>.\n\n</div>\n"
+      csc_codingwithpoetry_markdown_lesson_4:
+        markdown: "# #Share మీ కవిత\n<img src=\"https://images.code.org/c480c5c42d9c02e154943f49bbed87ff-image-1675984438344.13.53
+          PM.png\" style= \"width:60%\">\n<div style= \"width: 60%\"> \n\nఅనువర్తనం**ఇప్పుడు
+          మీరు మీ కవితను కోడ్ చేసారు, దాన్ని పంచుకునే సమయం వచ్చింది! **\n\nమీరు మీ
+          క్లాస్మేట్స్ ప్రాజెక్ట్ను చూస్తున్నప్పుడు మీ భాగస్వామి కోసం మీరు వ్రాయగల
+          “గ్లో”, “గ్రో” మరియు “ప్రశ్న” గురించి ఆలోచించండి:\n\n- “గ్లో” అనేది వారు
+          బాగా చేసిన పని\n- “పెరుగుతాయి” అనేది వారు మార్చగల లేదా మెరుగుపరచగల విషయం\n-
+          “ప్రశ్న” అనేది మీరు మరింత తెలుసుకోవాలనుకునే విషయం\n</div>\n\n** ప్రారంభించడానికి
+          సిద్ధంగా ఉన్నారా? ** మీ భాగస్వామితో అభిప్రాయాన్ని</a> పంచుకోవడానికి <a href=\"https://docs.google.com/document/d/1b6w_lOnibUHyDLYCP3rAWED5iElGm6LOQAJwG-hlih0/template/preview\"
+          target=\"_blank\">ఈ వనరును ఉపయోగించండి.\n\n"
+      csc_ecosystemes_foodchain_info:
+        markdown: "\n##**అన్ని పర్యావరణ వ్యవస్థలకు _సున్నితంగా సమతుల్యత_ ఆహార గొలుసు**
+          ## #The సముద్ర పర్యావరణ వ్యవస్థ ఆహార గొలుసు\n: >## #1.\n\n\n\n<img src=\"https://images.code.org/2270cbb4656875db210e9871883a7d45-image-1683677265473.jpg\"
+          style= \"width:80%\">\n<div style= \"width: 80%\"> \n\nఆల్గేలో కిరణజన్య
+          సంయోగక్రియ జరగడానికి సూర్యుడు శక్తిని అందిస్తుంది.\n>## #2. ఆల్గేను చేపలు
+          తింటారు.\n>## #3. చేపలను మానవులు పట్టుకుని తింటారు, వారు ఫిషింగ్ బోట్లను
+          వలలతో ఉపయోగిస్తారు. \n\n</div>\n\n\n##**ఆహార గొలుసులో ఒక జీవి చాలా ఎక్కువ
+          లేదా చాలా తక్కువగా ఉంటే, మొత్తం పర్యావరణ వ్యవస్థపై ప్రభావాలు ఉంటాయి.**\n"
+      csc_ecosystems_choice_freeplay_2023:
+        description: ఈ ప్రతి పర్యావరణ వ్యవస్థ అనుకరణలను సర్దుబాటు చేయాలి. పర్యావరణ
+          వ్యవస్థను ఎంచుకోండి, సమస్యను గమనించడానికి అనుకరణను అమలు చేయండి మరియు దాన్ని
+          పరిష్కరించడానికి కోడ్ను సర్దుబాటు చేయండి.
+        display_name: పర్యావరణ వ్యవస్థను ఎంచుకోండి!
+      csc_ecosystems_conditionals_overview:
+        markdown: "#Cause & ప్రభావ షరతులు \n\n</div>\n\n## తదుపరి మీరు నీటిలో ఆల్గే
+          ఎంత ఉందో చూడటానికి కోడ్ను జోడిస్తారు <br>\n<img src=\"https://images.code.org/8be316d4e408466b4300c614712fd652-image-1684798211348.jpg\"
+          \ width=50% style=\"margin-right: 10px; float: right\">\n<br> <br>\n\n-
+          మొదట, ఒక షరతు నిజమా కాదా అని కంప్యూటర్ తనిఖీ చేస్తుంది.\n\n- అది నిజమైన
+          ఉంటే, అప్పుడు అది లోపల బ్లాక్స్ అమలవుతాయి.\n- అది అబద్ధం అయితే, అది ఏమీ
+          చేయదు.\n\n<br>\n<br>\n<br>\n\n## చాలా ఆల్గే ఉంటే, అప్పుడు పగడపు అనారోగ్యం
+          అవుతుంది\n\n<br>\n\n<img src=\"https://images.code.org/4d8aaa9c6562e0ca0b3d92ff7aed1d03-image-1681847951794.png\"
+          \ width=20% style=\"margin-right: 10px; float: left\">\n<img src=\"https://images.code.org/941774921f367566bef36cb712cf2bfb-image-1681840836607.png\"
+          \ width=30% style=\" margin-right: 10px; float: left\">\n\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n\n***\n\n\n\n##
+          చాలా తక్కువ ఆల్గే ఉంటే, అప్పుడు చేపలు వదిలివేస్తాయి\n<img src=\"https://images.code.org/6869f418200edfb88190c0a1e4e5cd10-image-1681838202310.png\"
+          \ width=20% style=\"margin-right: 10px; float: left\">\n\n\n<img src=\"https://images.code.org/233178645539bc7966f55af47865096d-image-1681840833690.png\"
+          \ width=20% style=\" margin-right: 10px; float: left\">\n\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n\n\n***\n\n\n\n##
+          కేవలం తగినంత ఆల్గే ఉంటే, అప్పుడు పర్యావరణ వ్యవస్థ ఆరోగ్యకరమైనది\n\n<img
+          src=\"https://images.code.org/8bb9247c35d7d167611b02764beaeff3-image-1681838011797.png\"
+          \ width=20% style=\"margin-right: 30px; float: left\">\n<img src=\"https://images.code.org/b1ed2f5c135f9637fd7a9c5778db2b0c-image-1681840830929.png\"
+          \ width=30% style=\"margin-left: 10px;float: left\">\n<br>\n<br>\n<br>\n<br>\n\n"
+      csc_ecosystems_matching_cfu:
+        answers:
+        - text: "! [] (https://images.code.org/284e3b6e09f5d58052a8840e756644c5-image-1683752491112.png)"
+        - text: "! [] (https://images.code.org/d466f0912cd0cadb3d655263c71c072f-image-1683752857648.jpg)"
+        - text: "! [] (https://images.code.org/de2ab3c63bc2cf7cb319be86d5dcdec0-image-1683752570051.png)"
+        markdown: |+
+          ## మూడు స్థిరమైన ఫిషింగ్ పద్ధతులను చూడండి సరిపోలిక చిత్రానికి కోడ్ను
+
+          లాగండి.
+
+        questions:
+        - text: పడవల కోసం ఫిషింగ్ జోన్ను సృష్టించండి! [] (https://images.code.org/5f5e0640a82242d632db10b872280e18-image-1683753001613.gif)
+        - text: |-
+            ఫిషింగ్ సీజన్ మరియు ఫిషింగ్ సీజన్ లేదు
+            ! [] (https://images.code.org/becad47fd19a4d0e938a0cd10c404e41-image-1683838684289.gif)
+        - text: ఫిషింగ్ పరిమితులను సెట్ చేయండి! [] (https://images.code.org/f8bbd98ff6199af5d3ad23d64f39629d-image-1683753402925.gif)
+        title: చిత్రానికి కోడ్ను సరిపోల్చండి
+      csc_ecosystems_matching_conditionals:
+        answers:
+        - text: "! [] (https://images.code.org/db1db479bec9b40c6e0574ade394d32b-image-1680118613718.36.41
+            PM.png)"
+        - text: "! [] (https://images.code.org/7c9171ab2ee2e833e5ff60d5519d8728-image-1680118617438.31.00
+            PM.png)"
+        - text: "! [] (https://images.code.org/412968ba617ef19d2049e0e63d271937-image-1680118620636.30.50
+            PM.png)"
+        markdown: |
+          ## మూడు పర్యావరణ వ్యవస్థలను చూడండి
+
+          ఒక పర్యావరణ వ్యవస్థ సమతుల్యమైనది మరియు మిగిలిన రెండు వివిధ మార్గాల్లో అసమతుల్యత కలిగి ఉంటాయి. సరిపోలే చిత్రానికి కోడ్ను లాగండి.
+        questions:
+        - text: చాలా తక్కువ ఆల్గే చేపలను వదిలివేస్తుంది.! [] (https://images.code.org/c0a28473307b7e9b0e827532d2a6ddda-image-1680212227032.png)
+        - text: |-
+            చాలా ఆల్గే పగడపు అనారోగ్యానికి గురి చేస్తుంది. <br>
+            ! [] (https://images.code.org/1230fd96832b692b0c8ab88e77957f33-image-1680212254888.png)
+        - text: ఆల్గే యొక్క సరైన మొత్తం అనారోగ్య పగడపు నయం చేయడానికి అనుమతిస్తుంది
+            మరియు చేపలను కూడా ఆరోగ్యంగా ఉంచుతుంది.! [] (https://images.code.org/3dd061538a7a73285aa0916fdde34e77-image-1680212284869.png)
+        title: చిత్రానికి కోడ్ను సరిపోల్చండి
+      csc_ecosystems_matching_events:
+        answers:
+        - text: "! [] (https://images.code.org/bf70d0664e68690f2359a48365e50ccc-image-1680556679495.16.33
+            PM.png)"
+        - text: "! [] (https://images.code.org/fe4d2803162186a8e53ec0027f27a206-image-1680556683660.36.04
+            PM.png)"
+        markdown: |+
+          రెండు యానిమేషన్లలో స్ప్రిట్స్ తాకినప్పుడు ఏమి జరుగుతుందో చూడండి. కోడ్ యొక్క ప్రతి చిత్రాన్ని దాని మ్యాచింగ్ ఇమేజ్కి లాగండి.
+
+
+        questions:
+        - text: పడవ చేపలను పట్టుకుంటుంది.! [] (https://images.code.org/bcdefefdd1787330e3ad72558b5b492d-image-1680556053866.gif)
+        - text: చేపలు ఆల్గే తింటాయి.! [] (https://images.code.org/73febc58a3d23fbf4c66e693abec9e3d-image-1680556608027.gif)
+        title: యానిమేషన్ కోడ్ మ్యాచ్
+      csc_ecosystems_overfishing_solution2_overview:
+        markdown: "> #Sustainable ఫిషింగ్ ప్రాక్టీస్ #2:\n>># #Create a ఫిషింగ్ <img
+          src=\"https://images.code.org/123dd5c82e4c03dcbc32b775fd16ec60-image-1681937158113.png\"
+          \ width=400 style=\"margin-right: 30px; float: left\">\nసీజన్**ప్రజలు చేపలను
+          పట్టుకోగలిగినప్పుడు పరిమితులను సెట్ చేయండి. ఇది ఫిషింగ్ సీజన్ కానప్పుడు
+          పర్యావరణ వ్యవస్థ కోలుకోవడానికి సమయం ఉంది.** \n<br>\n\n#Save మా సీస్! \n<img
+          src=\"https://images.code.org/f3f55eddff9891464c8fb5a5405c31c3-image-1681781301257.png\"
+          width=250 style=\"margin-left: 30px; margin-bottom: 30px; float: right\">\n<img
+          src=\"https://images.code.org/cbccfc42b7e1fe329ac7c9c37dfcb6b5-image-1681781296669.png\"
+          width=250 style=\"margin-left: 30px; margin-bottom: 30px; float: right\">\n\n</div>\n\n###
+          ఓవర్ ఫిషింగ్ అనేది సముద్ర జీవన పర్యావరణ వ్యవస్థలకు మరియు వాటిపై ఆధారపడే
+          ప్రజలకు హాని కలిగించే సమస్య. ఈ పర్యావరణ వ్యవస్థలను రక్షించడంలో సహాయపడటానికి
+          మరియు చేపల జనాభా ఆరోగ్యంగా ఉండేలా చూడటానికి స్థిరమైన ఫిషింగ్ సాధన చేయడం
+          చాలా ముఖ్యం.\n\n\n\n<br>\n<br>\n<br>\n"
+      csc_ecosystems_overfishing_solution3_overview:
+        markdown: "> #Sustainable ఫిషింగ్ ప్రాక్టీస్ #3:\n>># #Set ఫిషింగ్ <img src=\"https://images.code.org/58d4ca52deba39a990c3165ba16e284b-image-1681747630352.png\"
+          \ width=300 style=\"margin-right: 30px; float: left\">\nలిమిట్స్**సముద్రానికి
+          హాని కలిగించకుండా ఎన్ని చేపలను పట్టుకోవచ్చో గుర్తించడానికి శాస్త్రవేత్తలు
+          సహాయపడగలరు. అప్పుడు మత్స్యకారులు చాలా చేపలను మాత్రమే పట్టుకోవాలని తెలుస్తుంది.**
+          \n<br>\n<br>\n<br>\n\n#Save our Seas! \n<img src=\"https://images.code.org/35e557d27c4bdb5f546da560716dc10b-image-1681756387784.jpg\"
+          width=400 style=\"margin-left: 30px; margin-bottom: 30px; float: right\">\n</div>\n\n###
+          కలిసి పనిచేయడం ద్వారా, రాబోయే తరాల వరకు మన మహాసముద్రాలను జీవితంతో నింపడానికి
+          మేము సహాయపడతాము!\n\n\n\n<br>\n<br>\n<br>\n\n"
+      csc_ecosystems_overfishing_solutions_overview:
+        markdown: "#Save మా సముద్రాలు! \n<img src=\"https://images.code.org/d4267a1de975b8ea46468f74187eb95c-image-1681756621010.jpg\"
+          width=400 style=\"margin-left: 30px; margin-bottom: 30px; float: right\">\n</div>\n\n###
+          సముద్రంలో చాలా చేపలు ఉన్నాయి, కానీ కొన్నిసార్లు ప్రజలు చాలా చేపలను పట్టుకుంటారు
+          మరియు ఇది పర్యావరణ వ్యవస్థకు చెడ్డది. కింది స్థాయిలలో మీరు మా సముద్ర పర్యావరణ
+          వ్యవస్థలను రక్షించడంలో సహాయపడటానికి **మూడు వేర్వేరు స్థిరమైన ఫిషింగ్ పద్ధతులు**
+          కోడ్ చేస్తారు.\n\n<br>\n\n## #To మన మహాసముద్రాల కోసం స్థిరమైన పరిష్కారాల
+          గురించి మరింత చదవండి: ఇక్కడ <a href=\"https://www.seafoodwatch.org/seafood-basics/sustainable-solutions/avoid-overfishing\"
+          target=\"_blank\">క్లిక్</a>\n<br>\n<br>\n\nచేయండి> #Sustainable ఫిషింగ్
+          ప్రాక్టీస్ #1:\n>> # #Fishing <img src=\"https://images.code.org/c33e46309c5335dc557c67c34310e723-image-1681511054034.png\"
+          \ width=300 style=\"margin-right: 30px; float: left\">\nమండలాలు**ఫిషింగ్
+          బోట్లు నియమించబడిన ప్రాంతాలలో మాత్రమే చేపలు పట్టగలవు. కొన్ని ప్రాంతాలు ఫిషింగ్
+          బోట్లకు పరిమితులు లేవు కాబట్టి పర్యావరణ వ్యవస్థ తిరిగి పొందగలదు.** \n<br>\n<br>\n\n\n"
+      csc_ecosystems_planning:
+        markdown: "# #Share మీ పర్యావరణ వ్యవస్థ అనుకరణ!\n<img src=\"https://images.code.org/c480c5c42d9c02e154943f49bbed87ff-image-1675984438344.13.53
+          PM.png\" style= \"width:50%\">\n<div style= \"width: 60%\"> \n\n###**పర్యావరణ
+          శాస్త్రవేత్తలు! మీ పరిశోధనను పంచుకోవడానికి ఇది సమయం! **\n\n## #Explain మీరు
+          చేసిన క్రింది పరిశీలనలు:\n\n>1. మీ పర్యావరణ వ్యవస్థలోని ఆహార గొలుసును మరియు
+          మీరు దానిని ఎలా కోడ్ చేశారో వివరించండి.\n> 2. ఒక జీవి చాలా ఎక్కువ లేదా చాలా
+          తక్కువగా ఉందా?\n> 3. అనుకరణకు మీరు చేసిన మార్పులను వివరించండి. \n> 4. మీరు
+          విలువలను మార్చిన తర్వాత మీరు ఏమి గమనించారు?\n</div>\n\n<div style=\"background-color:
+          #a6e3e8; border-radius: 10px; color: #000000; width: 95%; padding: 0.5px
+          20px 1px 20px;\">\n\n<p style=\"line-height: 1.5; margin-left: 10px; margin-right:
+          10px; margin-top: 20px; margin-bottom: 20px; font-size: 18px; \">\n\n###**మరిన్ని
+          కోడింగ్ కోసం సిద్ధంగా ఉన్నారా? ** మీ స్వంత వేగంతో మరింత కంప్యూటర్ సైన్స్
+          తెలుసుకోవడానికి code.org యొక్క [ఎక్స్ప్రెస్ కోర్సు] (https://studio.code.org/s/express-2022)
+          \nప్రయత్నించండి.   \n<br>\n</p></div>\n"
+      csc_mappinglandmarks_markdown_lesson_2:
+        markdown: |+
+          # #Plan మీ ల్యాండ్మార్క్స్ మ్యాప్
+          <div>
+          <img style=" float: left; width:20%; padding-top:10px" src="https://images.code.org/08ece3f13c8f0f82343e302fb52dc45c-image-1676499630865.png" />
+
+          <div style="float: left; width: 70%; padding-left:20px">
+          <h4>
+          <strong>మీ స్వంత మైలురాకుల మ్యాప్ను ప్లాన్ చేయడానికి సమయం ఆసన్నమైంది.</strong>
+          </h4>
+
+          మీరు మీ తరగతి గది, పాఠశాల లేదా నగరం యొక్క మ్యాప్ను సృష్టించవచ్చు. బహుశా మీరు రాష్ట్ర, ప్రాంతీయ లేదా జాతీయ మైలురాళ్లను ప్రదర్శించడానికి ఎంచుకోవచ్చు. లేదా మీరు తరగతిలో చదివిన ప్రాంతం ఆధారంగా మ్యాప్ను రూపొందించడానికి ఎంచుకోవచ్చు.
+
+          మీరు మీ మ్యాప్ను ప్లాన్ చేస్తున్నప్పుడు, మీరు ఎంచుకున్న మైలురాళ్లను గురించి ఇతర వ్యక్తులకు నేర్పడానికి మీరు ఉపయోగించాలనుకుంటున్న నేపథ్యాలు, స్ప్రిట్స్ మరియు ప్రసంగం గురించి ఆలోచించండి.
+
+          ** ప్రారంభించడానికి కొంత సహాయం కావాలా? ** మీ పనిని ప్లాన్</a> చేయడానికి <a href="https://docs.google.com/document/d/1t_-cd-f6EhhUbblu8nSGRajStY9FVwLnKn1Bj90GL3Q/template/preview" target="_blank">ఈ వనరును ఉపయోగించండి.
+
+
+      csc_mappinglandmarks_markdown_lesson_4:
+        markdown: "# #Share మీ స్థానిక ల్యాండ్మార్క్స్ మ్యాప్\n\nఇప్పుడు మీరు మీ మ్యాప్ను
+          కోడ్ చేసారు, దాన్ని భాగస్వామ్యం చేయడానికి సమయం ఆసన్నమైంది! మొదట మీ ప్రాజెక్ట్లో
+          చిన్న ప్రతిబింబం పూర్తి చేయండి: \n\n> 1. మీ ప్రాజెక్ట్ యొక్క మీకు ఇష్టమైన
+          భాగాన్ని వివరించండి.\n> 2. మీ ప్రాజెక్ట్లో ఉపయోగకరమైన కోడ్ బ్లాక్ ఏమిటి?\n>
+          3. మీ ప్రాజెక్ట్ను నిర్మించేటప్పుడు మీరు ఎదుర్కొన్న ఒక బగ్ లేదా సవాలును
+          వివరించండి.\n> 4. మీరు బగ్ను ఎలా పరిష్కరించారు లేదా సవాలును అధిగమించారు?\n>
+          5. మీ ప్రాజెక్ట్ను మెరుగుపరచడానికి మీరు ఇంకా ఏ మార్పులు చేయాలనుకుంటున్నారు?\n\nమీరు
+          మీ పనిని మీ క్లాస్మేట్స్కు అందిస్తున్నప్పుడు, మీ కోడ్ ఎలా పనిచేస్తుందో,
+          మీరు చేసిన డిజైన్ ఎంపికలు మరియు మీరు ఎదుర్కొన్న సవాళ్లను వివరించాలని నిర్ధారించుకోండి.\n\n\n\n"
+      csc_starquilts_markdown_lesson_1:
+        markdown: |+
+          # #Plan మీ స్టార్ మెత్తని బొంత మీ స్టార్ మెత్తని బొంత ప్లాన్ చేయడానికి
+
+          <div>
+          <img style=" float: left; width:25%; padding-top:10px" src="https://images.code.org/d5e1eedfbe978ba6feebd3f89da0a667-image-1679522801245.png" />
+
+          <div style="float: left; width: 70%; padding-left:20px">
+          <h4>
+          <strong>ఇది సమయం.</strong>
+          </h4>
+
+          > మొదట మీరు నాలుగు వేర్వేరు రంగులను ఎంచుకుని, మీ స్టార్ మెత్తని బొంత నింపుతారు. అప్పుడు మీరు నమూనాలతో మరికొన్ని కార్యకలాపాలు చేస్తారు.
+
+          ** ప్రారంభించడానికి సిద్ధంగా ఉన్నారా? ** <a href="https://docs.google.com/document/d/1c__530oWLDH-mX0kSxLMStSz-5Lt3cKUm5K3bTV7Uvo/template/preview" target="_blank">ఈ వనరును ఉపయోగించండి</a>.
+
+
+          </div>
+
+
+      csc_timecapsule_choice_lesson_3:
+        description: మీ టైమ్ క్యాప్సూల్ కవితకు కోడ్ను ఎలా జోడించాలో మీ జ్ఞాపకశక్తిని
+          రిఫ్రెష్ చేయడానికి క్రింది కార్యకలాపాల నుండి ఎంచుకోండి! మీరు బహుళ ఎంపికలను
+          ఎంచుకోవచ్చు మరియు ఒకటి కంటే ఎక్కువ చేయవచ్చు!
+        display_name: మీ కోడింగ్ నైపుణ్యాలను సమీక్షించండి!
+      csc_timecapsule_choice_lesson_3_ -l3:
+        description: మీ టైమ్ క్యాప్సూల్ కవితకు కోడ్ను ఎలా జోడించాలో మీ జ్ఞాపకశక్తిని
+          రిఫ్రెష్ చేయడానికి క్రింది కార్యకలాపాల నుండి ఎంచుకోండి! మీరు బహుళ ఎంపికలను
+          ఎంచుకోవచ్చు మరియు ఒకటి కంటే ఎక్కువ చేయవచ్చు!
+        display_name: మీ కోడింగ్ నైపుణ్యాలను సమీక్షించండి!
+      csc_timecapsule_info_2023:
+        markdown: "# #Time క్యాప్సూల్స్\n\n<img src=\"https://images.code.org/846b0e2d7a84392a70f432fdce00cd29-image-1676501071993.png\"
+          style= \"float:left; width: 25%; padding-right:30px\"/>\n\n<div style= \"width:
+          70%\"> \n<strong>టైమ్ క్యాప్సూల్ ఒక నిధి పెట్టె లాంటిది</strong>, కానీ బొమ్మలు
+          మరియు మిఠాయిలను లోపల ఉంచడానికి బదులుగా, ఇది ప్రస్తుతం జీవితం ఎలా ఉందో చెప్పే
+          ప్రత్యేక వస్తువులను కలిగి ఉంది. అప్పుడు, అది చాలా సంవత్సరాలు, భూమిలో లేదా
+          ఒక లైబ్రరీ లో ఒక బలమైన బాక్స్ లో ఖననం వంటి, ఒక సురక్షితమైన ప్రదేశంలో
+          ఉంచబడుతుంది. \n<br>\n<br>\n<strong>సమయం సరిగ్గా ఉన్నప్పుడు, ఎవరైనా పెట్టెను
+          తెరిచి, లోపల ఉంచిన అన్ని ప్రత్యేక వస్తువులను చూస్తారు</strong> మరియు ఖననం
+          చేయబడినప్పుడు జీవితం ఎలా ఉందో వారికి తెలుస్తుంది. \n<br>\n<br>\n<strong>డిజిటల్
+          టైమ్ క్యాప్సూల్ పద్యం సారూప్యంగా </strong>ఉంటుంది, కానీ వస్తువులను పెట్టె
+          లోపల ఉంచడానికి బదులుగా, ఇది కంప్యూటర్లో లేదా ఇంటర్నెట్లో నిల్వ చేయబడిన చిత్రాలు,
+          వీడియోలు మరియు సందేశాలను కలిగి ఉంటుంది.\n</div>\n\n"
+      csc_timecapsule_markdown_lesson_2:
+        markdown: "# #Plan మీ టైమ్ క్యాప్సూల్ మీ స్వంత టైమ్ క్యాప్సూల్ కవితను ప్లాన్
+          చేసే సమయం\n\n<div>\n<img style=\" float: left; width:25%; padding-top:10px\"
+          src=\"https://images.code.org/08ece3f13c8f0f82343e302fb52dc45c-image-1676499630865.png\"
+          />\n\n<div style=\"float: left; width: 70%; padding-left:20px\">\n<h4>\n<strong>ఇది.</strong>\n</h4>\n\n>మీరు
+          వీటిని చేర్చాలి:\n> - మీరు ఏమి చేయాలనుకుంటున్నారో \n> - మీకు ముఖ్యమైనది\n>
+          - ప్రస్తుతం మీ సంఘంలో ఏమి జరుగుతోంది \n> - ప్రస్తుత కొన్ని ప్రపంచ సంఘటనలు\n\n**
+          మీ పద్యం ప్రారంభించడానికి సహాయం కావాలా? ** <a href=\"https://docs.google.com/document/d/1fahr11zX92NW-rLdyZBqrNK2VqgOGtCACkcT87M_luU/template/preview\"
+          target=\"_blank\">ఈ వనరును ఉపయోగించండి</a>.\n\n** కొంత ప్రేరణ అవసరమా? **
+          <a href=\"https://docs.google.com/document/d/1-aPA3uJIKJAuQ_2Gtck1Ma79eCFY88ZC8YzegQIckG4/template/preview\"
+          target=\"_blank\">ఈ వనరును ఉపయోగించండి</a>.\n\n</div>\n"
+      csc_timecapsule_markdown_lesson_2_poetry:
+        markdown: "# #Plan మీ కవిత మీ స్వంత కవితను ప్లాన్ చేసే సమయం\n\n<div>\n<img
+          style=\" float: left; width:25%; padding-top:10px\" src=\"https://images.code.org/08ece3f13c8f0f82343e302fb52dc45c-image-1676499630865.png\"
+          />\n\n<div style=\"float: left; width: 70%; padding-left:20px\">\n<h4>\n<strong>ఇది.</strong>\n</h4>\n\n>మీరు
+          వీటిని చేర్చాలి:\n> - మీరు చేయడం ఇష్టపడతారు.\n> - మీకు ముఖ్యమైన ఎవరైనా.\n>
+          - మీకు ఇష్టమైన కొన్ని విషయాలు. \n\n** ప్రణాళిక ప్రారంభించడానికి సిద్ధంగా
+          ఉన్నారా? ** <a href=\"https://docs.google.com/document/d/1b6w_lOnibUHyDLYCP3rAWED5iElGm6LOQAJwG-hlih0/template/preview\"
+          target=\"_blank\">ఈ వనరును ఉపయోగించండి</a>.\n\n** ఒక అంశం కోసం చూస్తున్నారా?
+          ** <a href=\"https://docs.google.com/document/d/1V-DaWOIUk0xT7NYTzx3AEt4my-jc-Hx4vy21Kl4SPoE/template/preview\"
+          target=\"_blank\">ఈ వనరును ఉపయోగించండి</a>.\n\n</div>\n"
+      csc_timecapsule_markdown_lesson_4:
+        markdown: "# #Share మీ టైమ్\n<img src=\"https://images.code.org/c480c5c42d9c02e154943f49bbed87ff-image-1675984438344.13.53
+          PM.png\" style= \"width:60%\">\n<div style= \"width: 60%\"> \n\nక్యాప్సూల్**ఇప్పుడు
+          మీరు మీ టైమ్ క్యాప్సూల్ కవితను కోడ్ చేసారు, దాన్ని పంచుకునే సమయం వచ్చింది!
+          ** మీరు మీ క్లాస్మేట్స్ 'ప్రాజెక్టులు వీక్షించడానికి\n\nవంటి క్రింది ప్రశ్నలు
+          పరిగణలోకి: > 1.\n\nమీ క్లాస్మేట్స్ టైమ్ క్యాప్సూల్స్లో మీరు ఏ చిత్రాలు మరియు
+          శబ్దాలను చూశారా?\n> 2. వారి కథలు మీ నుండి ఎలా భిన్నంగా ఉన్నాయి?\n> 3. వారి
+          కథలు మీతో ఎలా సమానంగా ఉన్నాయి?\n> 4. వారి చిత్రాలు మీకు ఎలా అనిపించాయి?\n</div>\n\n"
       csd-post-survey-2017-q11_2018:
         answers:
         - correct: true
@@ -8861,6 +9417,14 @@ te-IN:
         questions:
         - {}
       grade2_multi_collector_A_predict12022:
+        answers:
+        - {}
+        - correct: true
+        - {}
+        - {}
+        questions:
+        - {}
+      grade2_multi_collector_A_predict12022_2023:
         answers:
         - {}
         - correct: true
