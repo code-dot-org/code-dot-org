@@ -9,8 +9,7 @@ import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
 import AgeDialog from '../templates/AgeDialog';
-import {getFilteredSongKeys} from '@cdo/apps/dance/songs';
-import {getFilterStatus} from './songs';
+import {getFilteredSongKeys, getFilterStatus} from '@cdo/apps/dance/songs';
 
 const SongSelector = Radium(
   class extends React.Component {
