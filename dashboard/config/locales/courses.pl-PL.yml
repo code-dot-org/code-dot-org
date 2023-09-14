@@ -365,8 +365,10 @@ pl:
           title: virtual-pl-csd-summer-2023
         vpl-csa-2023:
           title: CSA Wirtualne profesjonalne uczenie się
+          version_title: '2023'
         vpl-csd-2023:
           title: Wirtualne profesjonalne uczenie się CSD
+          version_title: '2023'
         vpl-csd-ayw-pilot-2022:
           title: Warsztaty wirtualnego roku akademickiego CS Discoveries (Odkrycia
             Informatyki)
@@ -392,6 +394,7 @@ pl:
           version_title: "'21-'22"
         vpl-csp-2023:
           title: Zasady CS Wirtualny kurs warsztatowy PL
+          version_title: '2023'
     resources:
       all_code/csd/2021:
         name: Cały kod

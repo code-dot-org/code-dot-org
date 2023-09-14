@@ -3,6 +3,8 @@ pl:
   data:
     progressions:
       '"If/Else" with the Bee': '"jeśli/w przeciwnym razie" z Pszczółką'
+      "(Optional) Eliza Widget": "(Opcjonalnie) Eliza Widget"
+      "(Optional) GAN Guess Widget": "(Opcjonalnie) GAN Guess Widget"
       AI Machine Learning - Video: AI Uczenie maszynowe — Film
       'AI for Oceans: Fish vs Not Fish': 'AI dla oceanów: ryby kontra nie ryby'
       'AI for Oceans: Types of Fish': 'AI dla oceanów: rodzaje ryb'
@@ -30,6 +32,7 @@ pl:
       Assessment: Ocena
       Attribution: Atrybucja
       Back and Forth: Tam i z powrotem
+      Balance an Ecosystem: Zrównoważyć ekosystem
       Basic Conditionals: Podstawowe Wyrażenia warunkowe
       Bass, Mid, and Treble: Bas, średni i wysoki ton
       Be a Super Digital Citizen: Bądź Super Cyfrowym Obywatelem
@@ -41,6 +44,7 @@ pl:
       Board Events: Zdarzenia na tablicy
       Board Input and Output: Wejście i Wyjście Płyty
       Book Recommender App: Aplikacja polecająca książki
+      Book Summary: Podsumowanie książki
       Boolean Comparison: Porównanie Logiczne
       Build a Platform Jumper: Buduj Platformę Jumper
       Build a Screen: Zbuduj ekran
@@ -60,10 +64,13 @@ pl:
       Challenge Levels: Poziomy Wyzwań
       Challenges: Wyzwania
       Change: Zmień
+      Check For Understanding: Sprawdź, czy rozumiesz
       Check Your Work: Sprawdź swoją pracę
       Checking for a Winner: Szukanie Zwycięzcy
+      Choice: Wybór
       Choose Your Own Adventure: Wybierz własną przygodę
       Choosing Good IDs: Wybieranie dobrych identyfikatorów
+      Code My Poem: Kod swój wiersz
       Code Your Own Flappy Game: Zakoduj Swoją Grę z Flappym
       Code Your Page: Koduj swoją stronę
       Collector Game: Gra Kolekcjonerska
@@ -115,6 +122,7 @@ pl:
       Draw a Background: Narysuj tło
       Drawing: Rysowanie
       Driver Alert System: System ostrzegania kierowcy
+      Ecosystems Simulation: Symulacja ekosystemów
       End of Course Projects: Koniec projektów w ramach kursu
       Escape Room Example: Przykład Escape Room
       Event Types: Typy zdarzeń
@@ -140,9 +148,11 @@ pl:
       Explore HTML: Poznaj HTML
       Exploring CS in Entertainment: Odkrywanie informatyki w rozrywce
       Exploring more CSS: Odkrywanie CSS
+      Extension choices: Opcje rozszerzenia
       Extra: Dodatkowe
       Extra Challenge: Dodatkowe wyzwania
       'Extra Challenge: Sound Board': 'Dodatkowe wyzwanie: płyta dźwiękowa'
+      Final Project: Projekt końcowy
       Final Room Escape App: Finalna aplikacja Room Escape
       Find the Wizard: Znajdź czarodzieja
       Finish a Screen: Ukończ Ekran
@@ -154,6 +164,7 @@ pl:
         bez komputera
       Follow the Mouse: Podążaj za Myszą
       Fonts and Style: Fonty i Styl
+      Food Chain Setup: Konfiguracja łańcucha pokarmowego
       FoodFight: FoodFight
       For Loop Fun - Unplugged Activity: Zabawa z pętlą — Aktywność bez komputera
       For Loops: Pętle dla (for)
@@ -181,6 +192,7 @@ pl:
       How to Make a Sprite: Jak zrobić Duszka
       Hyperlinks: Odnośniki
       Ice Age Loops: Pętle z Epoką Lodowcową
+      If... then... Conditional Statements: Jeśli... to... Instrukcje warunkowe
       Images and Sounds: Obrazki i Dźwięki
       Images in HTML: Obrazy w HTML
       Import Your Model: Importuj swój model
@@ -191,10 +203,12 @@ pl:
       Input with If-Else: Dane wejściowe z jeśli/w przeciwnym razie
       Inspiration!: Inspiracja!
       InspirationalArtwork: InspirationalArtwork
+      Interactive Characters: Interaktywne postacie
       Intro to For Loops: Wprowadzenie do Pętli "dla"
       Intro to Sprites: Wprowadzenie do Duszków
       Intro to Variables: Wprowadzenie do Zmiennych
       Introducing Sprite Lab: Wprowadzenie Sprite Lab
+      Introduction: Wstęp
       Introduction to Arrays: Wprowadzenie do tablic
       Iteration and Parameters: Iteracja i Parametry
       Keep On Dancing!: Nie przestawaj tańczyć!
@@ -264,6 +278,7 @@ pl:
       My Online Neighborhood: Moje internetowe sąsiedztwo
       My Robotic Friends - Unplugged Activity: Moi robotyczni przyjaciele — Aktywność
         bez komputera
+      My Time Capsule: Moja Kapsuła Czasu
       Nested Loops with the Bee: Zagnieżdżone pętle z Pszczółką
       New Challenge Introduction: Nowe wyzwanie Wprowadzenie
       New Shapes: Nowe kształty
@@ -343,14 +358,22 @@ pl:
       Sensors to Colors: Czujniki do Kolorów
       Setting Properties: Ustawianie Właściwości
       Shapes and the Draw Loop: Kształty i pętla rysowania
+      Share Out: Podziel się
       Share Your App: Podziel się swoją aplikacją
+      Share Your Simulation: Udostępnij swoją symulację
+      Sharing Your Book Cover: Udostępnianie Twojej okładki książki
+      Sharing Your Poem: Dzielenie się swoim wierszem
       Side Scroller: Suwak boczny
       Simple Circuits: Proste układy
       Skill Building: Budowanie umiejętności
+      Skill Building - Map Setup: Budowanie umiejętności - Konfiguracja mapy
       Skill-Building: Budowanie umiejętności
       Sliders: Suwaki
       Smart Bike - Blinkers: Mądry rower - migacze
       Social Sleuth: Społeczny detektyw
+      Solution 1 - Fishing Zone: Rozwiązanie 1 - Strefa połowów
+      Solution 2 - Fishing Season: Rozwiązanie 2 - Sezon połowów
+      Solution 3 - Fishing Limits: Rozwiązanie 3 - Limity połowowe
       Songwriting - Functions Unplugged Activity: Pisanie piosenek — Funkcje, aktywność
         bez komputera
       Speed it Up, Slow it Down: Przyspiesz, spowolnij
@@ -373,15 +396,18 @@ pl:
       The Big Event - Unplugged Activity: Wielkie wydarzenie - Aktywność bez komputera
       The Buzzer: Brzęczyk
       The Collector: Zbieracz
+      The Food Chain: Łańcuch pokarmowy
       The Harvester: Kombajn
       The Internet - Unplugged Activity: Internet - Aktywność bez komputera
       The Power of Words - Unplugged Activity: Potęga słów - Aktywność bez komputera
       The Right App - Unplugged Activity: Right App - Aktywność bez komputera
+      Title, Author, Background: Tytuł, Autor, Tło
       Top Websites: Top Strony
       Train AI to Clean the Ocean: Trenuj AI, by czyścił ocean
       Train an AI to Clean the Ocean: Trenuj AI, by czyścił ocean
       UI Element Properties: Właściwości elementów interfejsu graficznego
       Unit 5 Lesson 1 Overview: Jednostka 5 Lekcja 1 Omówienie
+      Unplugged Activity: Aktywność unplugged (bez komputera)
       Updating Your Prototype: Aktualizacja Twojego prototypu
       User Interface: Interfejs użytkownika
       Using Getters and Setters: Używanie pobieraczy i ustawiaczy
@@ -395,8 +421,10 @@ pl:
       Velocity: Prędkość
       Video: Wideo
       Video - Encryption and Public Keys: Film — szyfrowanie i klucze publiczne
+      Video - Events: Film - Zdarzenia
       'Video - Maze Intro: Programming with Blocks': 'Film - Wprowadzenie do labiryntu:
         Programowanie za pomocą bloków'
+      Video - Repeat Blocks: Film - Bloki powtarzania
       'Video:  Debugging with the Step Button': 'Film - Debugowanie za pomocą przycisku
         K '
       'Video:  Minecraft - The Agent': Film - Debugowanie za pomocą przycisku Krok
@@ -495,6 +523,7 @@ pl:
       Warm Up: Rozgrzewka
       Website Project: Projekt Strony internetowej
       Welcome to Monster Town: Witamy w mieście potworów
+      What Is a Time Capsule?: Co to jest kapsuła czasu?
       Where'd They Go?: Gdzie oni poszli?
       While Loops with the Farmer: Pętle "dopóki" z Farmerem
       'Widget: Text Compression': 'Widget: Kompresja tekstu'

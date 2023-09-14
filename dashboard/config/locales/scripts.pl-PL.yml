@@ -205,6 +205,19 @@ pl:
             które ujawniają etyczne pułapki w wybranym przez Ciebie obszarze sztucznej
             inteligencji (AI).
           title: Godzina kodowania - Etyka AI
+        ai-ethics-2023:
+          description: Lekcje te wprowadzają uczniów w kwestie etyczne dotyczące sztucznej
+            inteligencji. Uczniowie badają różne tematy i bieżące wydarzenia związane
+            z technologiami sztucznej inteligencji, a następnie proszeni są o refleksję
+            i zajęcie stanowiska na temat tego, jak uważają, że te technologie powinny
+            być wykorzystywane w społeczeństwie.
+          lessons:
+            lesson-1:
+              name: Godzina kodowania - Etyka AI
+            lesson-2:
+              name: Społeczne oddziaływanie generatywnej sztucznej inteligencji
+          name: ai-ethics-2023
+          title: Etyka AI
         ai-lab:
           name: ai-lab
           student_description: Skorzystaj z tych poziomów, aby poznać AI Lab i wykorzystać
@@ -351,6 +364,8 @@ pl:
               name: Czat AI
             lesson-51:
               name: Rubryki AI
+            lesson-52:
+              name: Dance Lab2
           name: wszystkie rzeczy
           student_description: Wszystkie typy poziomów dla testowania UI
           title: Wszystkie te Rzeczy!
@@ -2823,6 +2838,8 @@ pl:
             lesson-4:
               name: Zaprojektuj okładkę swojej interaktywnej książki
           name: csc-bookcovers-2023
+        csc-ecosystems:
+          name: csc-ecosystems
         csc-ecosystems-2022:
           name: csc-ecosystems-2022
         csc-ecosystems-2023:
@@ -3799,6 +3816,7 @@ pl:
               display_name: Treści
             cspSurvey:
               display_name: Treści
+          name: csd3-virtual
           student_description: Będziesz programować animacje, sztukę interaktywną
             i gry w Game Lab.Zacznij od prostych kształtów i buduj bardziej wyszukane
             animacje i gry oparte na duszku, używając tych samych koncepcji programowania

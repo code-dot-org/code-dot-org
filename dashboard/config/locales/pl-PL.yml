@@ -175,6 +175,7 @@ pl:
       sports: Zawody
       summer_workshops_612: Warsztaty Letnie dla uczniów w klasach 6-12
       teacher_led: Prowadzony przez nauczyciela
+      unsupported: Nieobsługiwany
       virtual_academic_year_workshops_612: Wirtualne Warsztaty Roku Akademickiego
         dla uczniów w klasach 6-12
       workshops_k5: Warsztaty dla uczniów w klasach K-5
@@ -808,7 +809,9 @@ pl:
         mongolia: Mongolia
         new_zealand: Nowa Zelandia
         paraguay: Paragwaj
+        philippines: Filipiny
         portugal: Portugalia
+        puerto_rico: Portoryko
         slovakia: Słowacja
         south_korea: Korea Południowa
         spain: Hiszpania
