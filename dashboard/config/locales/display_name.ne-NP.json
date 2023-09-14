@@ -32,17 +32,23 @@
         "CourseD_Dance_2020_bonus3": "गठनमा हुनुहोस्",
         "CourseD_Dance_2020_bonus32022": "गठनमा हुनुहोस्",
         "CourseD_Dance_2020_bonus3_2021": "गठनमा हुनुहोस्",
+        "CourseD_Dance_2020_bonus3_2023": "गठनमा हुनुहोस्",
         "CourseD_Dance_2022_lessonextra": "गठनमा हुनुहोस्",
         "CourseD_Dance_2022_lessonextra10b": "गठनमा हुनुहोस्",
+        "CourseD_Dance_2022_lessonextra10b_2023": "गठनमा हुनुहोस्",
+        "CourseD_Dance_2022_lessonextra_2023": "गठनमा हुनुहोस्",
         "CourseF_Oceans_Video_Machine_Learning": "भिडियोः Machine Learning",
         "CourseF_Oceans_Video_Machine_Learning_-2022-2": "भिडियोः Machine Learning",
         "CourseF_Oceans_Video_Machine_Learning_2021": "भिडियोः Machine Learning",
+        "CourseF_Oceans_Video_Machine_Learning_2023": "भिडियोः Machine Learning",
         "CourseF_Oceans_Video_Societal_Implications": "भिडियोः सामाजिक प्रभावहरु",
         "CourseF_Oceans_Video_Societal_Implications_-2022-2": "भिडियोः सामाजिक प्रभावहरु",
         "CourseF_Oceans_Video_Societal_Implications_2021": "भिडियोः सामाजिक प्रभावहरु",
+        "CourseF_Oceans_Video_Societal_Implications_2023": "भिडियोः सामाजिक प्रभावहरु",
         "CourseF_Oceans_Video_Training_Data": "भिडियोः प्रशिक्षण डेटा",
         "CourseF_Oceans_Video_Training_Data_-2022-2": "भिडियोः प्रशिक्षण डेटा",
         "CourseF_Oceans_Video_Training_Data_2021": "भिडियोः प्रशिक्षण डेटा",
+        "CourseF_Oceans_Video_Training_Data_2023": "भिडियोः प्रशिक्षण डेटा",
         "Dance_Party_extras_battle": "डान्स टोलीहरु",
         "Dance_Party_extras_battle_2019": "डान्स टोलीहरु",
         "Dance_Party_extras_every_beat": "क्वार्टर नोटहरु",
@@ -65,8 +71,10 @@
         "Oceans_Video_Training_Data_2022": "भिडियोः प्रशिक्षण डेटा",
         "courseF_bee_for52022": "Variables",
         "courseF_bee_for5_2021": "Variables",
+        "courseF_bee_for5_2023": "Variables",
         "ramp_artist_loops42022": "तारा",
-        "ramp_artist_loops4_2021": "तारा"
+        "ramp_artist_loops4_2021": "तारा",
+        "ramp_artist_loops4_2023": "तारा"
       }
     }
   }
