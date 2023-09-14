@@ -318,6 +318,7 @@
   curriculum_desc_csa: "Introduce students to software engineering and object-oriented design while they learn the Java programming language in this free curriculum for AP® Computer Science A (AP® CSA)."
   curriculum_desc_maker: "Maker education takes STEM (Science, Technology, Engineering, Mathematics) a step further by inviting hands-on experience and collaboration into the classroom to help teach problem solving and critical thinking."
   curriculum_desc_csa_ai_long: "This two-chapter post-AP® CSA module offers high school students hands-on experience with professional software development tools, including GitHub and GitHub Copilot, and imparts them with the real-world skills to develop a computer vision program."
+  curriculum_desc_csa_ai_short: "This post-AP® CSA module offers high school students hands-on experience with professional software development tools."
 
   collection_hardware: "Focus on Hardware"
   collection_hardware_desc: "Empowers students to use data and physical devices to solve problems."
@@ -546,6 +547,7 @@
   ai_curriculum_title_04: "How AI Works"
   ai_curriculum_desc_04: "These lessons supplement the How AI Works video series. Each lesson is paired with a single video from the series, diving-deeper into the concepts introduced in the videos."
   ai_curriculum_btn_aria_label_04: "Explore How AI Works lessons"
+  ai_curriculum_grades_05: "Grade Levels: 9-12"
   ai_carousel_heading: "What teachers say about AI with Code.org:"
   ai_carousel_quote_01: "This lesson also gave my students the opportunity to see that there is an element of opinion in classification systems. Later, when we started to see how bias can end up in AI, I was able to pull them back and remind them that the data used to train their models was based on choices."
   ai_carousel_quote_02: "My students learned that they don't have to just be consumers when it comes to technological advances that they are experiencing on almost a daily basis. They can actually be creators!"

@@ -89,63 +89,7 @@ theme: responsive_full_width
   .wrapper
     %h2=hoc_s(:ai_curricula_heading)
     %p=hoc_s(:ai_curricula_desc)
-    .action-block__wrapper.action-block__wrapper--two-col
-      .action-block.action-block--one-col.flex-space-between
-        .content-wrapper
-          %p.overline
-            =hoc_s(:ai_curriculum_grades_01)
-          %h3=hoc_s(:ai_curriculum_title_04)
-          %img{src: "/images/ai/ai-curriculum-how-ai-works.png", alt: ""}
-          %p=hoc_s(:ai_curriculum_desc_04)
-          %p
-            %strong
-              =hoc_s(:module_label_duration)
-            =hoc_s(:module_duration_8_hrs)
-        .content-footer
-          %a.link-button{href: "/ai/how-ai-works", aria:{label: hoc_s(:ai_curriculum_btn_aria_label_04)}}
-            =hoc_s(:call_to_action_explore_lessons)
-      .action-block.action-block--one-col.flex-space-between
-        .content-wrapper
-          %p.overline
-            =hoc_s(:ai_curriculum_grades_01)
-          %h3=hoc_s(:ai_curriculum_title_01)
-          %img{src: "/images/ai/ai-curriclum-machine-learning.png", alt: ""}
-          %p=hoc_s(:ai_curriculum_desc_01)
-          %p
-            %strong
-              =hoc_s(:module_label_duration)
-            =hoc_s(:module_duration_20_hrs)
-        .content-footer
-          %a.link-button{href: CDO.studio_url("/s/aiml"), aria:{label: hoc_s(:ai_curriculum_btn_aria_label_01)}}
-            =hoc_s(:call_to_action_explore_unit)
-      .action-block.action-block--one-col.flex-space-between
-        .content-wrapper
-          %p.overline
-            =hoc_s(:ai_curriculum_grades_02)
-          %h3=hoc_s(:ai_curriculum_title_02)
-          %img{src: "/images/ai/ai-curriclum-ethics.png", alt: ""}
-          %p=hoc_s(:ai_curriculum_desc_02)
-          %p
-            %strong
-              =hoc_s(:module_label_duration)
-            =hoc_s(:module_duration_1_hr)
-        .content-footer
-          %a.link-button{href: CDO.studio_url("/s/ai-ethics-2021/lessons/1"), aria:{label: hoc_s(:ai_curriculum_btn_aria_label_02)}}
-            =hoc_s(:call_to_action_view_lesson_plan)
-      .action-block.action-block--one-col.flex-space-between
-        .content-wrapper
-          %p.overline
-            =hoc_s(:ai_curriculum_grades_03)
-          %h3=hoc_s(:ai_curriculum_title_03)
-          %img{src: "/images/ai/ai-curriclum-oceans.png", alt: ""}
-          %p=hoc_s(:ai_curriculum_desc_03)
-          %p
-            %strong
-              =hoc_s(:module_label_duration)
-            =hoc_s(:module_duration_1_hr)
-        .content-footer
-          %a.link-button{href: CDO.studio_url("/s/oceans"), aria:{label: hoc_s(:ai_curriculum_btn_aria_label_03)}}
-            =hoc_s(:call_to_action_try_activity)
+    = view :ai_curricula_blocks
 
 %section.bg-neutral-light
   .wrapper

@@ -1,0 +1,37 @@
+- ai_curricula_index = 5
+
+- ai_curricula_overline = [hoc_s(:ai_curriculum_grades_05), hoc_s(:ai_curriculum_grades_01), hoc_s(:ai_curriculum_grades_01), hoc_s(:ai_curriculum_grades_02), hoc_s(:ai_curriculum_grades_03)]
+
+- ai_curricula_title = [hoc_s(:curriculum_name_csa_ai), hoc_s(:ai_curriculum_title_04), hoc_s(:ai_curriculum_title_01), hoc_s(:ai_curriculum_title_02), hoc_s(:ai_curriculum_title_03)]
+
+- ai_curricula_img = ["/images/ai/ai-curriculum-computer-vision.png", "/images/ai/ai-curriculum-how-ai-works.png", "/images/ai/ai-curriclum-machine-learning.png", "/images/ai/ai-curriclum-ethics.png", "/images/ai/ai-curriclum-oceans.png"]
+
+- ai_curricula_desc = [hoc_s(:curriculum_desc_csa_ai_short), hoc_s(:ai_curriculum_desc_04), hoc_s(:ai_curriculum_desc_01), hoc_s(:ai_curriculum_desc_02), hoc_s(:ai_curriculum_desc_03)]
+
+- ai_curricula_duration = [hoc_s(:module_duration_5_hrs_plus), hoc_s(:module_duration_8_hrs), hoc_s(:module_duration_20_hrs), hoc_s(:module_duration_1_hr), hoc_s(:module_duration_1_hr)]
+
+- ai_curricula_url = ["/curriculum/computer-vision", "/ai/how-ai-works", CDO.studio_url("/s/aiml"), CDO.studio_url("/s/ai-ethics-2021/lessons/1"), CDO.studio_url("/s/oceans")]
+
+- ai_curricula_aria_label = [hoc_s(:ai_curriculum_btn_aria_label_04), hoc_s(:ai_curriculum_btn_aria_label_04), hoc_s(:ai_curriculum_btn_aria_label_01), hoc_s(:ai_curriculum_btn_aria_label_02), hoc_s(:ai_curriculum_btn_aria_label_03)]
+
+- ai_curricula_button_label = [hoc_s(:call_to_action_explore_module), hoc_s(:call_to_action_explore_lessons), hoc_s(:call_to_action_explore_unit), hoc_s(:call_to_action_view_lesson_plan), hoc_s(:call_to_action_try_activity)]
+
+
+.action-block__wrapper.action-block__wrapper--three-col
+  - ai_curricula_index.times do |index|
+    .action-block.action-block--one-col.flex-space-between
+      .content-wrapper
+        %p.overline
+          = ai_curricula_overline[index]
+        %h3
+          = ai_curricula_title[index]
+        %img{src: ai_curricula_img[index], alt: ""}
+        %p
+          = ai_curricula_desc[index]
+        %p
+          %strong
+            =hoc_s(:module_label_duration)
+          = ai_curricula_duration[index]
+      .content-footer
+        %a.link-button{href: ai_curricula_url[index], aria:{label: ai_curricula_aria_label[index]}}
+          = ai_curricula_button_label[index]
