@@ -368,6 +368,15 @@ class I18nScriptUtils
     Parallel.each(data_array, **args, in_threads: PARALLEL_PROCESSES) {|data| yield(data)}
   end
 
+  # Writes file
+  #
+  # @param file_path [String] path to the file
+  # @param content [String] the file content
+  def self.write_file(file_path, content)
+    FileUtils.mkdir_p(File.dirname(file_path))
+    File.write(file_path, content)
+  end
+
   # Copies file
   #
   # @param file_path [String] path to the file
@@ -376,6 +385,16 @@ class I18nScriptUtils
     dest_dir = File.extname(dest_path).empty? ? dest_path : File.dirname(dest_path)
     FileUtils.mkdir_p(dest_dir)
     FileUtils.cp(file_path, dest_path)
+  end
+
+  # Moves file
+  #
+  # @param file_path [String] path to the file
+  # @param dest_path [String] destination path
+  def self.move_file(file_path, dest_path)
+    dest_dir = File.extname(dest_path).empty? ? dest_path : File.dirname(dest_path)
+    FileUtils.mkdir_p(dest_dir)
+    FileUtils.mv(file_path, dest_path, force: true)
   end
 
   # Renames directory
