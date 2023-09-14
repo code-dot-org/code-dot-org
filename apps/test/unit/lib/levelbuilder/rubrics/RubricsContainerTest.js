@@ -8,9 +8,9 @@ import Button from '@cdo/apps/templates/Button';
 describe('RubricsContainerTest', () => {
   const defaultProps = {
     levels: [
-      {id: 1, name: 'level 1'},
-      {id: 2, name: 'level 2'},
-      {id: 3, name: 'level 3'},
+      {id: 1, name: 'level 1', properties: {submittable: 'false'}},
+      {id: 2, name: 'level 2', properties: {submittable: 'true'}},
+      {id: 3, name: 'level 3', properties: {submittable: 'true'}},
     ],
     unitName: 'sample unit',
     lessonNumber: 0,
@@ -18,7 +18,7 @@ describe('RubricsContainerTest', () => {
 
   it('renders the components on the page correctly for a new rubric', () => {
     const wrapper = mount(<RubricsContainer {...defaultProps} />);
-    expect(wrapper.find('select#rubric_level_id option')).to.have.length(3);
+    expect(wrapper.find('select#rubric_level_id option')).to.have.length(2);
     expect(wrapper.find(LearningGoalItem)).to.have.length(1);
     expect(wrapper.find('Button[text="Save your rubric"]')).to.have.length(1);
   });
