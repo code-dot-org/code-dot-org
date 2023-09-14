@@ -59,6 +59,10 @@ kn:
         ai-ethics-2021:
           description_audience: ಗ್ರೇಡ್‌ 6-12
           title: ನಮ್ಮ AI ನೀತಿ ಸಂಹಿತೆ
+        ai-ethics-2023:
+          lessons:
+            lesson-1:
+              name: ನಮ್ಮ AI ನೀತಿ ಸಂಹಿತೆ
         ai-temp:
           title: ಎಐ ಹೇಗೆ ಕೆಲಸ ಮಾಡುತ್ತದೆ
         aiml-2021:
