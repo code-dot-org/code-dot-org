@@ -17,6 +17,9 @@
         "CourseD_Dance_2020_04_2021": {
           "dance_callout_02": "ဒီဘလော့အား သင့်ရဲ့  program (အစီအစဉ်) ထဲသို့ ထည့်လိုက်ပါ !"
         },
+        "CourseD_Dance_2020_04_2023": {
+          "dance_callout_02": "ဒီဘလော့အား သင့်ရဲ့  program (အစီအစဉ်) ထဲသို့ ထည့်လိုက်ပါ !"
+        },
         "CourseD_Dance_2020_06": {
           "dance_party_11_5_groups": "Block အသစ်! "
         },
@@ -24,6 +27,9 @@
           "dance_party_11_5_groups": "Block အသစ်! "
         },
         "CourseD_Dance_2020_06_2021": {
+          "dance_party_11_5_groups": "Block အသစ်! "
+        },
+        "CourseD_Dance_2020_06_2023": {
           "dance_party_11_5_groups": "Block အသစ်! "
         },
         "CourseD_Dance_2020_07": {
@@ -35,6 +41,9 @@
         "CourseD_Dance_2020_07_2021": {
           "setprop_hint": "Block အသစ်! "
         },
+        "CourseD_Dance_2020_07_2023": {
+          "setprop_hint": "Block အသစ်! "
+        },
         "CourseD_Dance_2020_09": {
           "new_block_3": "Block အသစ်! ",
           "new_block_4": "Block အသစ်! "
@@ -44,6 +53,10 @@
           "new_block_4": "Block အသစ်! "
         },
         "CourseD_Dance_2020_09_2021": {
+          "new_block_3": "Block အသစ်! ",
+          "new_block_4": "Block အသစ်! "
+        },
+        "CourseD_Dance_2020_09_2023": {
           "new_block_3": "Block အသစ်! ",
           "new_block_4": "Block အသစ်! "
         },
@@ -113,6 +126,9 @@
         "Function intro Ryan_2021": {
           "Function_intro_Ryan_1": "ဒီရဲ့လမ်းညွှန်ချက်သေးသေးလေးက codeတော်တော်များများကို workspaceရှိနာမည်နှင့်တူညီစွာ လုပ်ဆောင်ရန် ကွန်ပြူတာကို ခိုင်းစေပါတယ်။"
         },
+        "Function intro Ryan_2023": {
+          "Function_intro_Ryan_1": "ဒီရဲ့လမ်းညွှန်ချက်သေးသေးလေးက codeတော်တော်များများကို workspaceရှိနာမည်နှင့်တူညီစွာ လုပ်ဆောင်ရန် ကွန်ပြူတာကို ခိုင်းစေပါတယ်။"
+        },
         "MC HOC 2016 Level 2-2": {
           "craft2_run_button_callout": "အဆင်သင့်ဖြစ်ပြီဆိုရင် စ ကစားဖို့ \"Run\" ကို နှိပ်ပါ။"
         },
@@ -134,6 +150,9 @@
         "MC_HOC_2017_03_Cole_2021": {
           "MC_HOC_2017_03_Cole_1": "ဒီဟာက ထပ်ခါတလဲလဲ အလုပ်လုပ်တဲ့'repeat'ပါသောအကွင်းပါ ။အဲတာကိုနှိပ်ပြီး အလုပ်လုပ်ခိုင်းမယ့်နေရာ (workspace) ထဲထည့် ပြီးတော့ ထပ်ခါတလဲလဲ အလုပ်လုပ်စေချင်တဲ့ code ရေးပါ."
         },
+        "MC_HOC_2017_03_Cole_2023": {
+          "MC_HOC_2017_03_Cole_1": "ဒီဟာက ထပ်ခါတလဲလဲ အလုပ်လုပ်တဲ့'repeat'ပါသောအကွင်းပါ ။အဲတာကိုနှိပ်ပြီး အလုပ်လုပ်ခိုင်းမယ့်နေရာ (workspace) ထဲထည့် ပြီးတော့ ထပ်ခါတလဲလဲ အလုပ်လုပ်စေချင်တဲ့ code ရေးပါ."
+        },
         "MC_HOC_2017_04_Cole": {
           "MC_HOC_2017_04_Cole_a": "ကိုယ်စားလှယ်(agent) ကတော့ ရေပေါ်မှာပေါ်နေနိုင်ပါတယ်။ ဒါပေမယ့် ကစားသမား(player) ကမလုပ်နိုင်ပါဘူး!"
         },
@@ -147,6 +166,9 @@
           "MC_HOC_2017_04_Cole_a": "ကိုယ်စားလှယ်(agent) ကတော့ ရေပေါ်မှာပေါ်နေနိုင်ပါတယ်။ ဒါပေမယ့် ကစားသမား(player) ကမလုပ်နိုင်ပါဘူး!"
         },
         "MC_HOC_2017_04_Cole_2021": {
+          "MC_HOC_2017_04_Cole_a": "ကိုယ်စားလှယ်(agent) ကတော့ ရေပေါ်မှာပေါ်နေနိုင်ပါတယ်။ ဒါပေမယ့် ကစားသမား(player) ကမလုပ်နိုင်ပါဘူး!"
+        },
+        "MC_HOC_2017_04_Cole_2023": {
           "MC_HOC_2017_04_Cole_a": "ကိုယ်စားလှယ်(agent) ကတော့ ရေပေါ်မှာပေါ်နေနိုင်ပါတယ်။ ဒါပေမယ့် ကစားသမား(player) ကမလုပ်နိုင်ပါဘူး!"
         },
         "MC_HOC_2017_06_Cole": {
@@ -164,6 +186,9 @@
         "MC_HOC_2017_06_Cole_2021": {
           "MC_HOC_2017_06_Cole_1": "ဒီ blockတွေကို လွှတ်ပစ်လို့မရပါဘူး ဒါပေမယ့် ပြန်ပြင်လို့တော့ ရပါတယ်!"
         },
+        "MC_HOC_2017_06_Cole_2023": {
+          "MC_HOC_2017_06_Cole_1": "ဒီ blockတွေကို လွှတ်ပစ်လို့မရပါဘူး ဒါပေမယ့် ပြန်ပြင်လို့တော့ ရပါတယ်!"
+        },
         "MC_HOC_2017_Ali": {
           "MC_HOC_2017_08_RY_1": "ကိုယ်စားလှယ်ကတော့ ချော်ရည်ပေါ်မှာ ပေါ်နေနိုင်ပါတယ်။ဒါပေမယ့် Steve(စတိပ်) နဲ့ Alex (အဲလက်စ်) ကတော့ မလုပ်နိုင်ပါဘူး!  "
         },
@@ -179,6 +204,9 @@
         "MC_HOC_2017_Ali_2021": {
           "MC_HOC_2017_08_RY_1": "ကိုယ်စားလှယ်ကတော့ ချော်ရည်ပေါ်မှာ ပေါ်နေနိုင်ပါတယ်။ဒါပေမယ့် Steve(စတိပ်) နဲ့ Alex (အဲလက်စ်) ကတော့ မလုပ်နိုင်ပါဘူး!  "
         },
+        "MC_HOC_2017_Ali_2023": {
+          "MC_HOC_2017_08_RY_1": "ကိုယ်စားလှယ်ကတော့ ချော်ရည်ပေါ်မှာ ပေါ်နေနိုင်ပါတယ်။ဒါပေမယ့် Steve(စတိပ်) နဲ့ Alex (အဲလက်စ်) ကတော့ မလုပ်နိုင်ပါဘူး!  "
+        },
         "Overworld Move to Sheep": {
           "craft_drag_block_callout": "'Move forward'  block တစ်ခုကို ဆွဲယူလာပြီး အခြား 'move forward' block ၏ ​အောက်တွင် ထားပါ။"
         },
@@ -192,6 +220,9 @@
           "craft_drag_block_callout": "'Move forward'  block တစ်ခုကို ဆွဲယူလာပြီး အခြား 'move forward' block ၏ ​အောက်တွင် ထားပါ။"
         },
         "Overworld Move to Sheep_2021": {
+          "craft_drag_block_callout": "'Move forward'  block တစ်ခုကို ဆွဲယူလာပြီး အခြား 'move forward' block ၏ ​အောက်တွင် ထားပါ။"
+        },
+        "Overworld Move to Sheep_2023": {
           "craft_drag_block_callout": "'Move forward'  block တစ်ခုကို ဆွဲယူလာပြီး အခြား 'move forward' block ၏ ​အောက်တွင် ထားပါ။"
         },
         "helloworld_animals_costumes": {
@@ -216,6 +247,9 @@
         "helloworld_food_costumes": {
           "hello_world_new": "Block အသစ်! "
         },
+        "helloworld_food_costumes_2023": {
+          "hello_world_new": "Block အသစ်! "
+        },
         "helloworld_food_costumes_soccer-2022": {
           "hello_world_new": "Block အသစ်! "
         },
@@ -223,6 +257,10 @@
           "hello_world_new": "Block အသစ်! "
         },
         "helloworld_food_sizes": {
+          "hello_world_new": "Block အသစ်! ",
+          "hello_world_new_block": "Block အသစ်! "
+        },
+        "helloworld_food_sizes_2023": {
           "hello_world_new": "Block အသစ်! ",
           "hello_world_new_block": "Block အသစ်! "
         },
@@ -235,6 +273,9 @@
           "hello_world_new_block": "Block အသစ်! "
         },
         "helloworld_food_sounds": {
+          "hello_world_new": "Block အသစ်! "
+        },
+        "helloworld_food_sounds_2023": {
           "hello_world_new": "Block အသစ်! "
         },
         "helloworld_food_sounds_soccer-2022": {
@@ -256,14 +297,28 @@
         "poetry_hoc_addSprites": {
           "poetry_sprite": "Block အသစ်! "
         },
+        "poetry_hoc_addSprites_2023": {
+          "poetry_sprite": "Block အသစ်! "
+        },
         "poetry_hoc_events1": {
+          "poetry_event": "Block အသစ်! ",
+          "poetry_foreground": "Block အသစ်! "
+        },
+        "poetry_hoc_events1_2023": {
           "poetry_event": "Block အသစ်! ",
           "poetry_foreground": "Block အသစ်! "
         },
         "poetry_hoc_freeplay": {
           "poetry_new_block": "Block အသစ်! "
         },
+        "poetry_hoc_freeplay_2023": {
+          "poetry_new_block": "Block အသစ်! "
+        },
         "poetry_hoc_sounds": {
+          "poetry_music": "Block အသစ်! ",
+          "poetry_sound": "Block အသစ်! "
+        },
+        "poetry_hoc_sounds_2023": {
           "poetry_music": "Block အသစ်! ",
           "poetry_sound": "Block အသစ်! "
         },
@@ -271,7 +326,15 @@
           "poetry_sprite_begins": "Block အသစ်! ",
           "poetry_sprite_stops": "Block အသစ်! "
         },
+        "poetry_hoc_spriteBehaviors_2023": {
+          "poetry_sprite_begins": "Block အသစ်! ",
+          "poetry_sprite_stops": "Block အသစ်! "
+        },
         "poetry_hoc_spriteSizes": {
+          "poetry_remove_sprite": "Block အသစ်! ",
+          "poetry_set_sprite": "Block အသစ်! "
+        },
+        "poetry_hoc_spriteSizes_2023": {
           "poetry_remove_sprite": "Block အသစ်! ",
           "poetry_set_sprite": "Block အသစ်! "
         }
