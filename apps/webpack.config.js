@@ -11,6 +11,7 @@ const TerserPlugin = require('terser-webpack-plugin');
 const UnminifiedWebpackPlugin = require('unminified-webpack-plugin');
 const {WebpackManifestPlugin} = require('webpack-manifest-plugin');
 const WebpackNotifierPlugin = require('webpack-notifier');
+const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 
 const envConstants = require('./envConstants');
 
@@ -120,7 +121,11 @@ const localeDoNotImportP5Lab = (cdo, dir = 'src') => [
 // see `createWepbackConfig()` below. That function extends this config
 // with many more plugins etc.
 const WEBPACK_BASE_CONFIG = {
-  plugins: [...nodePolyfillConfig.plugins],
+  plugins: [
+    ...nodePolyfillConfig.plugins,
+    // Run TypeScript type checking in parallel with the build
+    new ForkTsCheckerWebpackPlugin(),
+  ],
   resolve: {
     extensions: ['.js', '.jsx', '.ts', '.tsx'],
     fallback: {...nodePolyfillConfig.resolve.fallback},
@@ -227,7 +232,16 @@ const WEBPACK_BASE_CONFIG = {
       },
       {
         test: /\.tsx?$/,
-        use: 'ts-loader',
+        use: [
+          {
+            loader: 'ts-loader',
+            options: {
+              // Half the build time was waiting for ts-loader to typecheck.
+              // Instead we typecheck in parallel using ForkTsCheckerWebpackPlugin
+              transpileOnly: true,
+            },
+          },
+        ],
         exclude: /node_modules/,
       },
       // modify WEBPACK_BASE_CONFIG's preLoaders for code coverage info
