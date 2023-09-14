@@ -6,7 +6,7 @@ require 'test_helper'
 class CurriculumProxyControllerTest < ActionController::TestCase
   test "should redirect from studio.code.org/docs path to curriculum.code.org/docs path" do
     stub_request(:get, "https://curriculum.code.org/docs/concepts/game-lab/drawing-shapes/").
-        to_return(body: 'curriculum.code.org content', headers: {})
+      to_return(body: 'curriculum.code.org content', headers: {})
 
     request.host = "studio.code.org"
     get :get_doc, params: {path: 'concepts/game-lab/drawing-shapes/'}

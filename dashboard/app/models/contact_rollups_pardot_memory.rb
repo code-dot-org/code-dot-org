@@ -265,8 +265,8 @@ class ContactRollupsPardotMemory < ApplicationRecord
   # by the account deletion process.
   def self.delete_pardot_prospects(is_dry_run: false)
     emails = ContactRollupsPardotMemory.
-               where.not(marked_for_deletion_at: nil).
-               pluck(:email)
+      where.not(marked_for_deletion_at: nil).
+      pluck(:email)
 
     deleted_emails = []
     if is_dry_run

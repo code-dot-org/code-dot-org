@@ -106,10 +106,10 @@ class Documents < Sinatra::Base
     set :template_extnames, ['.erb', '.haml', '.html', '.md', '.partial']
     set :non_static_extnames,
       settings.not_found_extnames +
-      settings.redirect_extnames +
-      settings.template_extnames +
-      settings.exclude_extnames +
-      ['.fetch']
+        settings.redirect_extnames +
+        settings.template_extnames +
+        settings.exclude_extnames +
+        ['.fetch']
     # Note: shared_resources.rb has additional configuration for Sass::Plugin
     Sass::Plugin.options[:cache_location] = pegasus_dir('cache', '.sass-cache')
     ['code.org', 'hourofcode.com', 'advocacy.code.org'].each do |site|

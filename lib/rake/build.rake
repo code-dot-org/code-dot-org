@@ -14,8 +14,8 @@ namespace :build do
       # Only rebuild if any of the apps_build_trigger_paths have changed since last build.
       commit_hash = apps_dir('build/commit_hash')
       if !RakeUtils.git_staged_changes?(*apps_build_trigger_paths) &&
-        File.exist?(commit_hash) &&
-        File.read(commit_hash) == calculate_apps_commit_hash
+          File.exist?(commit_hash) &&
+          File.read(commit_hash) == calculate_apps_commit_hash
 
         ChatClient.log '<b>apps</b> unchanged since last build, skipping.'
         next
