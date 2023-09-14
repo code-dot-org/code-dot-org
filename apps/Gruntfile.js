@@ -471,9 +471,9 @@ describe('entry tests', () => {
         '/v3/assets/': '/base/test/integration/assets/',
         '/base/static/1x1.gif': '/base/lib/blockly/media/1x1.gif',
 
-        // requests to the webpack output public path should be served from the
-        // webpack output path where bundled assets are written
-        '/webpack_output/': '/absolute/webpack_output/',
+        // requests to the webpack output public path should be served from
+        // `apps/build/karma/`, where assets are written during the karma build
+        '/webpack_output/': '/base/build/karma/',
       },
 
       webpack: {
