@@ -69,7 +69,7 @@ module I18n
       end
 
       def collect_malformed_translations(key, file_name, translation)
-        return if translation.empty?
+        return if translation.nil? || translation.empty?
 
         case translation
         when Hash
