@@ -806,6 +806,7 @@ en:
         blockchain-introd: 'How Blockchain Works: Introduction'
         ai-ethis: Ethics & AI
         how-ai-works-lessons: 'How AI Works: Lessons Overview'
+        se-cv-intro-to-lessons: 'Software Engineering and Computer Vision: Intro to Lessons'
     callout:
       text:
         drag_blocks: Drag a "move" block and snap it below the other block
