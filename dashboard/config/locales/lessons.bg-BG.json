@@ -2021,6 +2021,179 @@
         "pre-express-2022/Loops with Scrat": {
           "name": "Цикли със Скрат"
         },
+        "coursea-2023/Learn to Drag and Drop": {
+          "name": "Научете се да Плъзгате и Пускате"
+        },
+        "coursea-2023/Happy Maps": {
+          "name": "Щастливи карти"
+        },
+        "coursea-2023/Sequencing with Scrat": {
+          "name": "Последователност със Скрат",
+          "student_overview": "Прогеамирайте Скрат да стигне жълъда."
+        },
+        "coursea-2023/Programming with Rey and BB-8": {
+          "name": "Програмиране с Рей и BB-8"
+        },
+        "coursea-2023/Loops with Scrat": {
+          "name": "Цикли със Скрат"
+        },
+        "coursea-2023/The Big Event Jr": {
+          "name": "Голямото Събитие Jr."
+        },
+        "coursea-2023/End of Course Project": {
+          "name": "Проект за Края на Курса"
+        },
+        "courseb-2023/Digital Trails": {
+          "name": "Цифрова Следа"
+        },
+        "courseb-2023/Move It, Move It": {
+          "name": "Преместете го, преместете го"
+        },
+        "courseb-2023/Getting Loopy": {
+          "name": "Да повтаряме"
+        },
+        "courseb-2023/The Right App": {
+          "name": "Правилното Приложение"
+        },
+        "courseb-2023/The Big Event Jr": {
+          "name": "Голямото Събитие Jr."
+        },
+        "courseb-2023/Mini-Project: A Royal Battle with Events": {
+          "name": "Мини-Проект: Царска Битка със Събития"
+        },
+        "courseb-2023/End of Course Project": {
+          "name": "Проект за Края на Курса"
+        },
+        "coursec-2023/My Robotic Friends Jr": {
+          "name": "Моите Роботи Приятели Jr."
+        },
+        "coursec-2023/Collecting Treasure with Laurel": {
+          "preparation": "-   Играйте през пъзелите, за да намерите потенциални проблемни области за вашия клас."
+        },
+        "coursec-2023/My Loopy Robotic Friends Jr": {
+          "name": "Моите Циклични Приятели Роботи Jr."
+        },
+        "coursec-2023/Mini-Project: Sticker Art": {
+          "name": "Мини-Проект: Стикер Изкуство"
+        },
+        "coursec-2023/The Big Event": {
+          "name": "Голямото събитие"
+        },
+        "coursec-2023/Mini-Project: Chase Game": {
+          "name": "Мини-Проект: Игра на Гоненица"
+        },
+        "coursec-2023/Binary Bracelets": {
+          "name": "Двоични гривни"
+        },
+        "coursec-2023/End of Course Project": {
+          "name": "Проект за Края на Курса"
+        },
+        "coursed-2023/Graph Paper Programming": {
+          "name": "Програмиране на милиметрова хартия"
+        },
+        "coursed-2023/Relay Programming": {
+          "name": "Повтори програмирането"
+        },
+        "coursed-2023/Dance Party": {
+          "name": "Танцово Парти"
+        },
+        "coursed-2023/Loops in Ice Age": {
+          "name": "Цикли в Ледена Епоха"
+        },
+        "coursed-2023/Conditionals with Cards": {
+          "name": "Условия с карти"
+        },
+        "coursed-2023/End of Course Project": {
+          "name": "Проект за Края на Курса"
+        },
+        "coursee-2023/Private and Personal Information": {
+          "name": "Лична Информация"
+        },
+        "coursee-2023/Mini-Project: About Me": {
+          "name": "Мини-Проект: За Мен"
+        },
+        "coursee-2023/Fancy Shapes using Nested Loops": {
+          "name": "Готини Фигури използвайки Вложени Цикли"
+        },
+        "coursee-2023/Songwriting": {
+          "name": "Писане на песен"
+        },
+        "coursee-2023/Designing for Accessibility": {
+          "name": "Проектиране за Достъпност"
+        },
+        "coursee-2023/End of Course Project": {
+          "name": "Проект за Края на Курса"
+        },
+        "coursef-2023/The Power of Words": {
+          "name": "Силата на Думите"
+        },
+        "coursef-2023/Introducing Sprite Lab": {
+          "name": "Въведение в Sprite Lab",
+          "purpose": "Първият урок е да ентусиазирате учениците за курса и те да свържат собствените си интереси с компютърните науки. "
+        },
+        "coursef-2023/Sprites in Action": {
+          "name": "Спрайтове в Действие",
+          "preparation": "Играйте през нивата и прегледайте слайдовете на урока."
+        },
+        "coursef-2023/Mini-Project: Virtual Pet": {
+          "name": "Мини-Проект: Виртуален Домашен Любимец"
+        },
+        "coursef-2023/Text and Prompts": {
+          "preparation": "Играйте през нивата и прегледайте слайдовете на урока."
+        },
+        "coursef-2023/Mini-Project: User Input Programs": {
+          "name": "Мини-Проект: Програми за Вход от Потребител"
+        },
+        "coursef-2023/Simulating Experiments": {
+          "name": "Симулиране на Експерименти"
+        },
+        "coursef-2023/Outbreak": {
+          "name": "Епидемия"
+        },
+        "coursef-2023/AI For Oceans": {
+          "name": "ИТ За Океани"
+        },
+        "coursef-2023/The Internet": {
+          "name": "Интернет"
+        },
+        "coursef-2023/End of Course Project": {
+          "name": "Проект за Края на Курса"
+        },
+        "express-2023/Swimming Fish in Sprite Lab": {
+          "name": "Плуващи Риби в Sprite Lab"
+        },
+        "express-2023/Sprites in Action": {
+          "name": "Спрайтове в Действие",
+          "preparation": "Играйте през нивата и прегледайте слайдовете на урока."
+        },
+        "express-2023/Dance Party": {
+          "name": "Танцово Парти"
+        },
+        "express-2023/Mini-Project: Sticker Art": {
+          "name": "Мини-Проект: Стикер Изкуство"
+        },
+        "express-2023/Text and Prompts": {
+          "preparation": "Играйте през нивата и прегледайте слайдовете на урока."
+        },
+        "express-2023/For Loops with Bee": {
+          "name": "For Цикли с Пчелата"
+        },
+        "express-2023/End of Course Project": {
+          "name": "Проект за Края на Курса"
+        },
+        "pre-express-2023/Learn to Drag and Drop": {
+          "name": "Научете се да Плъзгате и Пускате"
+        },
+        "pre-express-2023/Sequencing with Scrat": {
+          "name": "Последователност със Скрат",
+          "student_overview": "Прогеамирайте Скрат да стигне жълъда."
+        },
+        "pre-express-2023/Programming with Rey and BB-8": {
+          "name": "Програмиране с Рей и BB-8"
+        },
+        "pre-express-2023/Loops with Scrat": {
+          "name": "Цикли със Скрат"
+        },
         "Hour of Code/Hour of Code 2013": {
           "name": "Час на кодирането 2013"
         },
