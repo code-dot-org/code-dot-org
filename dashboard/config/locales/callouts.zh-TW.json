@@ -541,6 +541,9 @@
         "CourseD_Dance_2020_01_2021": {
           "dance_callout_01": "在這裡選擇舞者的類型。"
         },
+        "CourseD_Dance_2020_01_2023": {
+          "dance_callout_01": "在這裡選擇舞者的類型。"
+        },
         "CourseD_Dance_2020_02": {
           "arrow_buttons": "按箭頭按鈕控制舞者。",
           "dance_callout_11_a": "將此程式積木添加到您的程式中。"
@@ -553,6 +556,10 @@
           "arrow_buttons": "按箭頭按鈕控制舞者。",
           "dance_callout_11_a": "將此程式積木添加到您的程式中。"
         },
+        "CourseD_Dance_2020_02_2023": {
+          "arrow_buttons": "按箭頭按鈕控制舞者。",
+          "dance_callout_11_a": "將此程式積木添加到您的程式中。"
+        },
         "CourseD_Dance_2020_04": {
           "dance_callout_02": "把這個積木拖曳到工作區！"
         },
@@ -560,6 +567,9 @@
           "dance_callout_02": "把這個積木拖曳到工作區！"
         },
         "CourseD_Dance_2020_04_2021": {
+          "dance_callout_02": "把這個積木拖曳到工作區！"
+        },
+        "CourseD_Dance_2020_04_2023": {
           "dance_callout_02": "把這個積木拖曳到工作區！"
         },
         "CourseD_Dance_2020_05": {
@@ -571,6 +581,9 @@
         "CourseD_Dance_2020_05_2021": {
           "dance_callout_05": "將新事件添加到程式中。"
         },
+        "CourseD_Dance_2020_05_2023": {
+          "dance_callout_05": "將新事件添加到程式中。"
+        },
         "CourseD_Dance_2020_06": {
           "dance_party_11_5_groups": "新的程式積木！"
         },
@@ -578,6 +591,9 @@
           "dance_party_11_5_groups": "新的程式積木！"
         },
         "CourseD_Dance_2020_06_2021": {
+          "dance_party_11_5_groups": "新的程式積木！"
+        },
+        "CourseD_Dance_2020_06_2023": {
           "dance_party_11_5_groups": "新的程式積木！"
         },
         "CourseD_Dance_2020_07": {
@@ -589,6 +605,9 @@
         "CourseD_Dance_2020_07_2021": {
           "setprop_hint": "新的程式積木！"
         },
+        "CourseD_Dance_2020_07_2023": {
+          "setprop_hint": "新的程式積木！"
+        },
         "CourseD_Dance_2020_09": {
           "new_block_3": "新的程式積木！",
           "new_block_4": "新的程式積木！"
@@ -598,6 +617,10 @@
           "new_block_4": "新的程式積木！"
         },
         "CourseD_Dance_2020_09_2021": {
+          "new_block_3": "新的程式積木！",
+          "new_block_4": "新的程式積木！"
+        },
+        "CourseD_Dance_2020_09_2023": {
           "new_block_3": "新的程式積木！",
           "new_block_4": "新的程式積木！"
         },
@@ -628,10 +651,17 @@
           "minitoolbox": "點擊這裡擴展積木。",
           "pointerlocation": "在這裡拖曳一個主題積木。"
         },
+        "CourseF_outbreak2_2023": {
+          "minitoolbox": "點擊這裡擴展積木。",
+          "pointerlocation": "在這裡拖曳一個主題積木。"
+        },
         "CourseF_outbreak7": {
           "costumes_callout": "點擊它來製作新的造型"
         },
         "CourseF_outbreak7_-2022-2": {
+          "costumes_tab": "點擊這裡為你的項目添加服裝。"
+        },
+        "CourseF_outbreak7_2023": {
           "costumes_tab": "點擊這裡為你的項目添加服裝。"
         },
         "Dance_2019_01": {
@@ -688,6 +718,9 @@
         "Fish Tank 3-validated_2021": {
           "spritelab_comment": "使用這個積木來給自己或老師留下關於你的程式碼如何工作的註釋。\n"
         },
+        "Fish Tank 3-validated_2023": {
+          "spritelab_comment": "使用這個積木來給自己或老師留下關於你的程式碼如何工作的註釋。\n"
+        },
         "Function intro Ryan": {
           "Function_intro_Ryan_1": "此簡單的指令可告訴電腦在工作空間中執行有相同名稱的大量代碼。"
         },
@@ -701,6 +734,9 @@
           "Function_intro_Ryan_1": "此簡單的指令可告訴電腦在工作空間中執行有相同名稱的大量代碼。"
         },
         "Function intro Ryan_2021": {
+          "Function_intro_Ryan_1": "此簡單的指令可告訴電腦在工作空間中執行有相同名稱的大量代碼。"
+        },
+        "Function intro Ryan_2023": {
           "Function_intro_Ryan_1": "此簡單的指令可告訴電腦在工作空間中執行有相同名稱的大量代碼。"
         },
         "Geometric Sun": {
@@ -749,6 +785,9 @@
         "MC_HOC_2017_03_Cole_2021": {
           "MC_HOC_2017_03_Cole_1": "這就是「重複」循環！按一下進入工作空間，然後新增您要重複執行的代碼。"
         },
+        "MC_HOC_2017_03_Cole_2023": {
+          "MC_HOC_2017_03_Cole_1": "這就是「重複」循環！按一下進入工作空間，然後新增您要重複執行的代碼。"
+        },
         "MC_HOC_2017_04_Cole": {
           "MC_HOC_2017_04_Cole_a": "Agent 可以在水上漂浮，但玩家不可以！"
         },
@@ -762,6 +801,9 @@
           "MC_HOC_2017_04_Cole_a": "Agent 可以在水上漂浮，但玩家不可以！"
         },
         "MC_HOC_2017_04_Cole_2021": {
+          "MC_HOC_2017_04_Cole_a": "Agent 可以在水上漂浮，但玩家不可以！"
+        },
+        "MC_HOC_2017_04_Cole_2023": {
           "MC_HOC_2017_04_Cole_a": "Agent 可以在水上漂浮，但玩家不可以！"
         },
         "MC_HOC_2017_06_Cole": {
@@ -779,6 +821,9 @@
         "MC_HOC_2017_06_Cole_2021": {
           "MC_HOC_2017_06_Cole_1": "這些方塊無法丟棄，但可以編輯！"
         },
+        "MC_HOC_2017_06_Cole_2023": {
+          "MC_HOC_2017_06_Cole_1": "這些方塊無法丟棄，但可以編輯！"
+        },
         "MC_HOC_2017_Ali": {
           "MC_HOC_2017_08_RY_1": "Agent 可以在熔岩上漂浮，但玩家不可以！  "
         },
@@ -792,6 +837,9 @@
           "MC_HOC_2017_08_RY_1": "Agent 可以在熔岩上漂浮，但玩家不可以！  "
         },
         "MC_HOC_2017_Ali_2021": {
+          "MC_HOC_2017_08_RY_1": "Agent 可以在熔岩上漂浮，但玩家不可以！  "
+        },
+        "MC_HOC_2017_Ali_2023": {
           "MC_HOC_2017_08_RY_1": "Agent 可以在熔岩上漂浮，但玩家不可以！  "
         },
         "NEW Course 4 Artist Functions 3": {
@@ -866,6 +914,9 @@
         "Overworld Chop Trees_2021": {
           "craft_callout_preplaced": "我們預先在這裡放了一些積木，方便您開始"
         },
+        "Overworld Chop Trees_2023": {
+          "craft_callout_preplaced": "我們預先在這裡放了一些積木，方便您開始"
+        },
         "Overworld House Frame Chosen": {
           "craft_callout_preplaced_house": "此代碼會開始建造你的房屋。你能完成嗎？"
         },
@@ -879,6 +930,9 @@
           "craft_callout_preplaced_house": "此代碼會開始建造你的房屋。你能完成嗎？"
         },
         "Overworld House Frame Chosen_2021": {
+          "craft_callout_preplaced_house": "此代碼會開始建造你的房屋。你能完成嗎？"
+        },
+        "Overworld House Frame Chosen_2023": {
           "craft_callout_preplaced_house": "此代碼會開始建造你的房屋。你能完成嗎？"
         },
         "Overworld Move to Sheep": {
@@ -901,6 +955,10 @@
           "craft_drag_block_callout": "拖曳一個「移動-向前」積木並將色貼合到其它積木下方",
           "craft_run_button_callout": "點擊「運行」按鈕，看看程式的結果"
         },
+        "Overworld Move to Sheep_2023": {
+          "craft_drag_block_callout": "拖曳一個「移動-向前」積木並將色貼合到其它積木下方",
+          "craft_run_button_callout": "點擊「運行」按鈕，看看程式的結果"
+        },
         "Overworld Place Wall": {
           "craft_inside_repeat": "將積木放在這裡可以重複執行程式"
         },
@@ -914,6 +972,9 @@
           "craft_inside_repeat": "將積木放在這裡可以重複執行程式"
         },
         "Overworld Place Wall_2021": {
+          "craft_inside_repeat": "將積木放在這裡可以重複執行程式"
+        },
+        "Overworld Place Wall_2023": {
           "craft_inside_repeat": "將積木放在這裡可以重複執行程式"
         },
         "Robot Doodle": {
@@ -937,6 +998,9 @@
         "Underground Avoiding Lava_2021": {
           "craft_callout_moveforward": "此代碼會檢查是否有熔岩，您能添加一個向前移動的指令嗎？"
         },
+        "Underground Avoiding Lava_2023": {
+          "craft_callout_moveforward": "此代碼會檢查是否有熔岩，您能添加一個向前移動的指令嗎？"
+        },
         "Underground Iron": {
           "craft_what_is_iron": "開採這塊鐵礦！"
         },
@@ -952,6 +1016,9 @@
         "Underground Iron_2021": {
           "craft_what_is_iron": "開採這塊鐵礦！"
         },
+        "Underground Iron_2023": {
+          "craft_what_is_iron": "開採這塊鐵礦！"
+        },
         "Virtual Pet 2_-2022-2": {
           "vp_costumes": "點擊這裡為你的項目添加新服裝！"
         },
@@ -964,10 +1031,16 @@
         "Virtual Pet 2_2021": {
           "vp_costumes": "點擊這裡為你的項目添加新服裝！"
         },
+        "Virtual Pet 2_2023": {
+          "vp_costumes": "點擊這裡為你的項目添加新服裝！"
+        },
         "Virtual Pet 6_-2022-2": {
           "vp_costumes": "點擊這裡為你的項目添加新服裝！"
         },
         "Virtual Pet 6_2021": {
+          "vp_costumes": "點擊這裡為你的項目添加新服裝！"
+        },
+        "Virtual Pet 6_2023": {
           "vp_costumes": "點擊這裡為你的項目添加新服裝！"
         },
         "behaviors 1": {
@@ -1038,10 +1111,16 @@
         "courseA_EOC_playlab_animals2022": {
           "question_mark": "？"
         },
+        "courseA_EOC_playlab_animals_2023": {
+          "question_mark": "？"
+        },
         "courseA_EOC_playlab_fantasy": {
           "question_mark": "？"
         },
         "courseA_EOC_playlab_fantasy2022": {
+          "question_mark": "？"
+        },
+        "courseA_EOC_playlab_fantasy_2023": {
           "question_mark": "？"
         },
         "courseA_EOC_playlab_people": {
@@ -1050,10 +1129,16 @@
         "courseA_EOC_playlab_people2022": {
           "question_mark": "？"
         },
+        "courseA_EOC_playlab_people_2023": {
+          "question_mark": "？"
+        },
         "courseA_artist_loops4": {
           "courseA_artist_loops4_1": "這個數字告訴你在關卡中「可以使用的積木數量」。"
         },
         "courseA_artist_loops42022": {
+          "courseA_artist_loops4_1": "這個數字告訴你在關卡中「可以使用的積木數量」。"
+        },
+        "courseA_artist_loops42022_2023": {
           "courseA_artist_loops4_1": "這個數字告訴你在關卡中「可以使用的積木數量」。"
         },
         "courseA_artist_loops4_2018": {
@@ -1074,6 +1159,9 @@
         "courseA_artist_loops72022": {
           "courseA_artist_loops7_1": "這個數字指的是解答中只可以使用一個這類型的積木"
         },
+        "courseA_artist_loops72022_2023": {
+          "courseA_artist_loops7_1": "這個數字指的是解答中只可以使用一個這類型的積木"
+        },
         "courseA_artist_loops7_2018": {
           "courseA_artist_loops7_1": "這個數字指的是解答中只可以使用一個這類型的積木"
         },
@@ -1090,6 +1178,9 @@
           "courseA_artist_loops8_1": "你知道嗎？只要有需要，你隨時可以沿著一條線反向的畫回來哦！"
         },
         "courseA_artist_loops82022": {
+          "courseA_artist_loops8_1": "你知道嗎？只要有需要，你隨時可以沿著一條線反向的畫回來哦！"
+        },
+        "courseA_artist_loops82022_2023": {
           "courseA_artist_loops8_1": "你知道嗎？只要有需要，你隨時可以沿著一條線反向的畫回來哦！"
         },
         "courseA_artist_loops8_2018": {
@@ -1119,6 +1210,9 @@
         "courseA_collector_loops1_2021": {
           "courseA_collector_loops1_1": "發現了嗎？在工具箱有些新的積木囉！別擔心，我們在下個階段會告訴你怎麼使用它們的。"
         },
+        "courseA_collector_loops1_2023": {
+          "courseA_collector_loops1_1": "發現了嗎？在工具箱有些新的積木囉！別擔心，我們在下個階段會告訴你怎麼使用它們的。"
+        },
         "courseA_collector_loops3": {
           "gradek_adventurer_loops2_1": "這個數字告訴你在關卡中「可以使用的積木數量」。"
         },
@@ -1135,6 +1229,9 @@
           "gradek_adventurer_loops2_1": "這個數字告訴你在關卡中「可以使用的積木數量」。"
         },
         "courseA_collector_loops3_2021": {
+          "gradek_adventurer_loops2_1": "這個數字告訴你在關卡中「可以使用的積木數量」。"
+        },
+        "courseA_collector_loops3_2023": {
           "gradek_adventurer_loops2_1": "這個數字告訴你在關卡中「可以使用的積木數量」。"
         },
         "courseA_collector_preLoops1": {
@@ -1167,6 +1264,9 @@
         "courseA_maze_ramp2_2021": {
           "courseC_maze_programming2_1": "這是工具箱。在這裡您可以找到更多積木來完成本關。"
         },
+        "courseA_maze_ramp2_2023": {
+          "courseC_maze_programming2_1": "這是工具箱。在這裡您可以找到更多積木來完成本關。"
+        },
         "courseA_maze_ramp3a_2018": {
           "courseC_maze_programming2_1": "這是工具箱。在這裡您可以找到更多積木來完成本關。"
         },
@@ -1188,6 +1288,9 @@
         "courseA_maze_seq1_2021": {
           "courseA_maze_seq1_1": "當您需要提示時，點一下燈泡！"
         },
+        "courseA_maze_seq1_2023": {
+          "courseA_maze_seq1_1": "當您需要提示時，點一下燈泡！"
+        },
         "courseA_maze_seq2": {
           "courseA_maze_seqA_callout1": "使用步進按鈕可以一步一步地執行程式中的指令，這可以讓你更容易找到出錯的地方！"
         },
@@ -1198,6 +1301,9 @@
           "courseA_playlab_events4_callout1": "這是一個標注"
         },
         "courseA_playLab_events42022": {
+          "courseA_playlab_events4_callout1": "這是一個標注"
+        },
+        "courseA_playLab_events42022_2023": {
           "courseA_playlab_events4_callout1": "這是一個標注"
         },
         "courseA_playLab_events4_2018": {
@@ -1218,6 +1324,9 @@
         "courseA_playLab_events52022": {
           "courseA_playLab_events5_1": "點擊此處變更方向事件的箭頭方向。"
         },
+        "courseA_playLab_events52022_2023": {
+          "courseA_playLab_events5_1": "點擊此處變更方向事件的箭頭方向。"
+        },
         "courseA_playLab_events5_2018": {
           "courseA_playLab_events5_1": "點擊此處變更方向事件的箭頭方向。"
         },
@@ -1236,6 +1345,9 @@
         "courseA_playLab_events62022": {
           "courseA_playLab_events6_1": "這個是讓你選擇一種「隨機」聲音，這表示在聲音出現前，你完全不會知道將會聽到什麼！"
         },
+        "courseA_playLab_events62022_2023": {
+          "courseA_playLab_events6_1": "這個是讓你選擇一種「隨機」聲音，這表示在聲音出現前，你完全不會知道將會聽到什麼！"
+        },
         "courseA_playLab_events6_2018": {
           "courseA_playLab_events6_1": "這個是讓你選擇一種「隨機」聲音，這表示在聲音出現前，你完全不會知道將會聽到什麼！"
         },
@@ -1251,6 +1363,9 @@
         "courseB_Scrat_ramp12022": {
           "grade2_CaringForNewPet_0_1": "在連接所有的積木後，點擊「運行」來啟動你的程式。"
         },
+        "courseB_Scrat_ramp12022_2023": {
+          "grade2_CaringForNewPet_0_1": "在連接所有的積木後，點擊「運行」來啟動你的程式。"
+        },
         "courseB_Scrat_ramp1_2018": {
           "grade2_CaringForNewPet_0_1": "在連接所有的積木後，點擊「運行」來啟動你的程式。"
         },
@@ -1264,6 +1379,9 @@
           "grade2_CaringForNewPet_0_1": "在連接所有的積木後，點擊「運行」來啟動你的程式。"
         },
         "courseB_Scrat_ramp3a2022": {
+          "courseC_maze_programming2_1": "這是工具箱。在這裡您可以找到更多積木來完成本關。"
+        },
+        "courseB_Scrat_ramp3a2022_2023": {
           "courseC_maze_programming2_1": "這是工具箱。在這裡您可以找到更多積木來完成本關。"
         },
         "courseB_Scrat_ramp3a_2019": {
@@ -1293,6 +1411,9 @@
         "courseB_artist_loops3_2021": {
           "courseB_artist_loops3_1": "工具箱裡只有一個積木可以做到。您會如何使用它？"
         },
+        "courseB_artist_loops3_2023": {
+          "courseB_artist_loops3_1": "工具箱裡只有一個積木可以做到。您會如何使用它？"
+        },
         "courseB_artist_loops5": {
           "courseB_artist_loops5_1": "這個數字指的是工具箱中已經沒有這個積木。"
         },
@@ -1314,6 +1435,9 @@
         "courseB_collector_loops1_2021": {
           "courseB_collector_loops1_1": "發現了嗎？在工具箱有些新的積木囉！別擔心，我們在下個階段會告訴你怎麼使用它們的。"
         },
+        "courseB_collector_loops1_2023": {
+          "courseB_collector_loops1_1": "發現了嗎？在工具箱有些新的積木囉！別擔心，我們在下個階段會告訴你怎麼使用它們的。"
+        },
         "courseB_maze_seq1": {
           "courseB_maze_seq1": "當您需要提示時，點一下燈泡！"
         },
@@ -1330,6 +1454,9 @@
           "courseB_maze_seq1": "當您需要提示時，點一下燈泡！"
         },
         "courseB_maze_seq1_2021": {
+          "courseB_maze_seq1": "當您需要提示時，點一下燈泡！"
+        },
+        "courseB_maze_seq1_2023": {
           "courseB_maze_seq1": "當您需要提示時，點一下燈泡！"
         },
         "courseB_maze_seq2": {
@@ -1356,6 +1483,9 @@
         "courseB_playlab_events6_2021": {
           "courseB_playlab_events6_a": "使用綠色的下拉選單來改變方向。"
         },
+        "courseB_playlab_events6_2023": {
+          "courseB_playlab_events6_a": "使用綠色的下拉選單來改變方向。"
+        },
         "courseC19_playLab_EOC3": {
           "courseE_playLab_scaffold3_1": "讓角色移動到這個旗幟以完成這個關卡。"
         },
@@ -1366,6 +1496,9 @@
           "courseE_playLab_scaffold3_1": "讓角色移動到這個旗幟以完成這個關卡。"
         },
         "courseC19_playLab_EOC3_2021": {
+          "courseE_playLab_scaffold3_1": "讓角色移動到這個旗幟以完成這個關卡。"
+        },
+        "courseC19_playLab_EOC3_2023": {
           "courseE_playLab_scaffold3_1": "讓角色移動到這個旗幟以完成這個關卡。"
         },
         "courseC_PlayLab_events8": {
@@ -1386,6 +1519,9 @@
         "courseC_PlayLab_events8_2021": {
           "courseC_PlayLab_events8_callout1": "當企鵝碰到恐龍時，使用此積木！"
         },
+        "courseC_PlayLab_events8_2023": {
+          "courseC_PlayLab_events8_callout1": "當企鵝碰到恐龍時，使用此積木！"
+        },
         "courseC_PlayLab_events_challenge1": {
           "courseC_PlayLab_events_challenge1_1": "此積木可以將角色移動到遊戲區的不同部分。"
         },
@@ -1404,7 +1540,13 @@
         "courseC_PlayLab_events_challenge1_2021": {
           "courseC_PlayLab_events_challenge1_1": "此積木可以將角色移動到遊戲區的不同部分。"
         },
+        "courseC_PlayLab_events_challenge1_2023": {
+          "courseC_PlayLab_events_challenge1_1": "此積木可以將角色移動到遊戲區的不同部分。"
+        },
         "courseC_PlayLab_events_lesson_extras": {
+          "courseC_PlayLab_events_challenge1_1": "此積木可以將角色移動到遊戲區的不同部分。"
+        },
+        "courseC_PlayLab_events_lesson_extras_2023": {
           "courseC_PlayLab_events_challenge1_1": "此積木可以將角色移動到遊戲區的不同部分。"
         },
         "courseC_artist_loops1a2022": {
@@ -1419,6 +1561,9 @@
         "courseC_artist_loops1a_2021": {
           "jumpto_callout": "這個積木對這個專案非常重要。請務必使用它！\n"
         },
+        "courseC_artist_loops1a_2023": {
+          "jumpto_callout": "這個積木對這個專案非常重要。請務必使用它！\n"
+        },
         "courseC_artist_loops1b2022": {
           "sticker2": "把這個新增到你的程式中間。\n"
         },
@@ -1429,6 +1574,9 @@
           "sticker2": "把這個新增到你的程式中間。\n"
         },
         "courseC_artist_loops1b_2021": {
+          "sticker2": "把這個新增到你的程式中間。\n"
+        },
+        "courseC_artist_loops1b_2023": {
           "sticker2": "把這個新增到你的程式中間。\n"
         },
         "courseC_artist_loopsPrePre1a": {
@@ -1449,6 +1597,9 @@
         "courseC_artist_prog2_2021": {
           "slider": "你可以在這裡放慢你的程式。"
         },
+        "courseC_artist_prog2_2023": {
+          "slider": "你可以在這裡放慢你的程式。"
+        },
         "courseC_collector_prog1": {
           "courseC_collector_prog1_1": "發現了嗎？在工具箱有些新的積木囉！別擔心，我們在下個階段會告訴你該如何使用它們。"
         },
@@ -1465,6 +1616,9 @@
           "courseC_collector_prog1_1": "發現了嗎？在工具箱有些新的積木囉！別擔心，我們在下個階段會告訴你怎麼使用它們的。"
         },
         "courseC_collector_prog1_2021": {
+          "courseC_collector_prog1_1": "發現了嗎？在工具箱有些新的積木囉！別擔心，我們在下個階段會告訴你怎麼使用它們的。"
+        },
+        "courseC_collector_prog1_2023": {
           "courseC_collector_prog1_1": "發現了嗎？在工具箱有些新的積木囉！別擔心，我們在下個階段會告訴你怎麼使用它們的。"
         },
         "courseC_collector_prog7": {
@@ -1485,6 +1639,9 @@
         "courseC_collector_prog7_2021": {
           "courseC_collector_prog7_1": "如果需要，可以從工具箱中拖出來更多積木！"
         },
+        "courseC_collector_prog7_2023": {
+          "courseC_collector_prog7_1": "如果需要，可以從工具箱中拖出來更多積木！"
+        },
         "courseC_harvester_loops1": {
           "courseC_harvester_loops1_callout1": "在南瓜上的數字 4 意思是有 4 個南瓜可以收集。"
         },
@@ -1501,6 +1658,9 @@
           "courseC_harvester_loops1_callout1": "在南瓜上的數字 4 意思是有 4 個南瓜可以收集。"
         },
         "courseC_harvester_loops1_2021": {
+          "courseC_harvester_loops1_callout1": "在南瓜上的數字 4 意思是有 4 個南瓜可以收集。"
+        },
+        "courseC_harvester_loops1_2023": {
           "courseC_harvester_loops1_callout1": "在南瓜上的數字 4 意思是有 4 個南瓜可以收集。"
         },
         "courseC_maze_debugging5": {
@@ -1521,6 +1681,9 @@
         "courseC_maze_debugging5_2021": {
           "courseC_maze_debugging5_1": "這些積木被鎖定了，無法刪除！\n"
         },
+        "courseC_maze_debugging5_2023": {
+          "courseC_maze_debugging5_1": "這些積木被鎖定了，無法刪除！\n"
+        },
         "courseC_maze_debugging92022": {
           "courseC_maze_debugging9_2019_1": "將工具箱中的積木拖到你的工作區。\n"
         },
@@ -1531,6 +1694,9 @@
           "courseC_maze_debugging9_2019_1": "將工具箱中的積木拖到你的工作區。\n"
         },
         "courseC_maze_debugging9_2021": {
+          "courseC_maze_debugging9_2019_1": "將工具箱中的積木拖到你的工作區。\n"
+        },
+        "courseC_maze_debugging9_2023": {
           "courseC_maze_debugging9_2019_1": "將工具箱中的積木拖到你的工作區。\n"
         },
         "courseC_maze_debugging9_copy_2020": {
@@ -1554,6 +1720,9 @@
         "courseC_maze_programming1_2021": {
           "grade2_CaringForNewPet_0_1": "在連接所有的積木後，點擊「運行」來啟動你的程式。"
         },
+        "courseC_maze_programming1_2023": {
+          "grade2_CaringForNewPet_0_1": "在連接所有的積木後，點擊「運行」來啟動你的程式。"
+        },
         "courseC_maze_programming2": {
           "courseC_maze_programming2_1": "這是工具箱。在這裡您可以找到更多積木來完成本關。"
         },
@@ -1570,6 +1739,9 @@
           "courseC_maze_programming2_1": "這是工具箱。在這裡您可以找到更多積木來完成本關。"
         },
         "courseC_maze_programming2_2021": {
+          "courseC_maze_programming2_1": "這是工具箱。在這裡您可以找到更多積木來完成本關。"
+        },
+        "courseC_maze_programming2_2023": {
           "courseC_maze_programming2_1": "這是工具箱。在這裡您可以找到更多積木來完成本關。"
         },
         "courseC_maze_programming3": {
@@ -1596,6 +1768,10 @@
           "courseC_maze_programming3_2": "您可以將多餘的積木拖到工具箱移除。",
           "courseC_maze_programming3_3": "You can drag extra blocks to the toolbox to throw them away."
         },
+        "courseC_maze_programming3_2023": {
+          "courseC_maze_programming3_2": "您可以將多餘的積木拖到工具箱移除。",
+          "courseC_maze_programming3_3": "You can drag extra blocks to the toolbox to throw them away."
+        },
         "courseC_maze_programming4": {
           "courseC_maze_programming4_1": "這是您的積木限制。它會告訴您還剩下多少積木可以使用。"
         },
@@ -1614,6 +1790,9 @@
         "courseC_maze_programming4_2021": {
           "courseC_maze_programming4_1": "這是您的積木限制。它會告訴您還剩下多少積木可以使用。"
         },
+        "courseC_maze_programming4_2023": {
+          "courseC_maze_programming4_1": "這是您的積木限制。它會告訴您還剩下多少積木可以使用。"
+        },
         "courseC_maze_programming5": {
           "": "這些積木上沒有數字。您可以想用多少就用多少！"
         },
@@ -1630,6 +1809,9 @@
           "": "這些積木上沒有數字。您可以想用多少就用多少！"
         },
         "courseC_maze_programming5_2021": {
+          "": "這些積木上沒有數字。您可以想用多少就用多少！"
+        },
+        "courseC_maze_programming5_2023": {
           "": "這些積木上沒有數字。您可以想用多少就用多少！"
         },
         "courseC_maze_programming7": {
@@ -1656,6 +1838,10 @@
           "courseC_maze_programming7_1": "這是你的第一個挑戰關卡！這些本來就很難，可能要嘗試幾次。",
           "courseC_maze_programming7_2": "這些積木就像石頭一樣，不能被破壞。"
         },
+        "courseC_maze_programming7_2023": {
+          "courseC_maze_programming7_1": "這是你的第一個挑戰關卡！這些本來就很難，可能要嘗試幾次。",
+          "courseC_maze_programming7_2": "這些積木就像石頭一樣，不能被破壞。"
+        },
         "courseC_starWars_loops2": {
           "courseC_starWars_loops2": "此關卡中只有這些積木可以用。"
         },
@@ -1672,6 +1858,9 @@
           "courseC_starWars_loops2": "此關卡中只有這些積木可以用。"
         },
         "courseC_starWars_loops2_2021": {
+          "courseC_starWars_loops2": "此關卡中只有這些積木可以用。"
+        },
+        "courseC_starWars_loops2_2023": {
           "courseC_starWars_loops2": "此關卡中只有這些積木可以用。"
         },
         "courseC_starWars_loops2_copy": {
@@ -1701,6 +1890,9 @@
         "courseD_artist_nestedLoops1a_2021": {
           "courseD_artist_nestedLoops1a_1": "你不需要使用使用顏色來完成關卡。如果你想要的話，使用`隨機取色`積木就可以輕鬆完成。"
         },
+        "courseD_artist_nestedLoops1a_2023": {
+          "courseD_artist_nestedLoops1a_1": "你不需要使用使用顏色來完成關卡。如果你想要的話，使用`隨機取色`積木就可以輕鬆完成。"
+        },
         "courseD_artist_ramp11": {
           "courseD_artist_ramp11_1": "你可以修改這個數字。",
           "courseD_artist_ramp11_2": "點擊此處輸入程式要重複的次數。"
@@ -1722,6 +1914,9 @@
           "4_5_Bee_Conditionals_2_1": "記住，檢查「每朵雲」裡是否有「花朵」，你不必檢查是否有蜂窩。"
         },
         "courseD_bee_conditionals2_2021": {
+          "4_5_Bee_Conditionals_2_1": "記住，檢查「每朵雲」裡是否有「花朵」，你不必檢查是否有蜂窩。"
+        },
+        "courseD_bee_conditionals2_2023": {
           "4_5_Bee_Conditionals_2_1": "記住，檢查「每朵雲」裡是否有「花朵」，你不必檢查是否有蜂窩。"
         },
         "courseD_bee_conditionals2_copy": {
@@ -1750,6 +1945,9 @@
         "courseD_bee_conditionals_challenge2_2021": {
           "courseD_bee_conditionals_challenge2_1": "使用這個迴圈來收集所有的花朵上的花蜜或蜂窩上的蜂蜜。"
         },
+        "courseD_bee_conditionals_challenge2_2023": {
+          "courseD_bee_conditionals_challenge2_1": "使用這個迴圈來收集所有的花朵上的花蜜或蜂窩上的蜂蜜。"
+        },
         "courseD_bee_debugging_challenge1": {
           "courseD_bee_debugging_challenge1_callout1": "使用這個指令讓蜜蜂向後移動。"
         },
@@ -1760,6 +1958,9 @@
           "stepButton": "嘗試一次一個積木地遍歷代碼。"
         },
         "courseD_bee_nestedLoops1a_2021": {
+          "stepButton": "嘗試一次一個積木地遍歷代碼。"
+        },
+        "courseD_bee_nestedLoops1a_2023": {
           "stepButton": "嘗試一次一個積木地遍歷代碼。"
         },
         "courseD_collector_ramp8": {
@@ -1780,6 +1981,9 @@
         "courseD_farmer_while7_2021": {
           "courseD_farmer_while7_2018_PathAhead": "你需要使用`重複 判斷 前面有路`積木來解決這個關卡。\n"
         },
+        "courseD_farmer_while7_2023": {
+          "courseD_farmer_while7_2018_PathAhead": "你需要使用`重複 判斷 前面有路`積木來解決這個關卡。\n"
+        },
         "courseD_maze_intro42022": {
           "courseC_maze_programming4_1": "這是您的積木限制。它會告訴您還剩下多少積木可以使用。"
         },
@@ -1792,6 +1996,9 @@
         "courseD_maze_intro4_2021": {
           "courseC_maze_programming4_1": "這是您的積木限制。它會告訴您還剩下多少積木可以使用。"
         },
+        "courseD_maze_intro4_2023": {
+          "courseC_maze_programming4_1": "這是您的積木限制。它會告訴您還剩下多少積木可以使用。"
+        },
         "courseD_maze_intro5a2022": {
           "": "這些積木上沒有數字。您可以想用多少就用多少！"
         },
@@ -1802,6 +2009,9 @@
           "": "這些積木上沒有數字。您可以想用多少就用多少！"
         },
         "courseD_maze_intro5a_2021": {
+          "": "這些積木上沒有數字。您可以想用多少就用多少！"
+        },
+        "courseD_maze_intro5a_2023": {
           "": "這些積木上沒有數字。您可以想用多少就用多少！"
         },
         "courseD_maze_ramp1": {
@@ -1822,6 +2032,9 @@
         "courseD_maze_ramp1_2021": {
           "grade2_CaringForNewPet_0_1": "在連接所有的積木後，點擊「運行」來啟動你的程式。"
         },
+        "courseD_maze_ramp1_2023": {
+          "grade2_CaringForNewPet_0_1": "在連接所有的積木後，點擊「運行」來啟動你的程式。"
+        },
         "courseD_maze_ramp2": {
           "courseC_maze_programming2_1": "這是工具箱。在這裡您可以找到更多積木來完成本關。"
         },
@@ -1838,6 +2051,9 @@
           "courseC_maze_programming2_1": "這是工具箱。在這裡您可以找到更多積木來完成本關。"
         },
         "courseD_maze_ramp2_2021": {
+          "courseC_maze_programming2_1": "這是工具箱。在這裡您可以找到更多積木來完成本關。"
+        },
+        "courseD_maze_ramp2_2023": {
           "courseC_maze_programming2_1": "這是工具箱。在這裡您可以找到更多積木來完成本關。"
         },
         "courseD_maze_ramp3": {
@@ -1861,6 +2077,10 @@
           "stone_block_2": "灰色的積木是不能扔掉的。\n"
         },
         "courseD_maze_ramp3_2021": {
+          "courseC_maze_programming3_2": "您可以將多餘的積木拖到工具箱移除。",
+          "stone_block_2": "灰色的積木是不能扔掉的。\n"
+        },
+        "courseD_maze_ramp3_2023": {
           "courseC_maze_programming3_2": "您可以將多餘的積木拖到工具箱移除。",
           "stone_block_2": "灰色的積木是不能扔掉的。\n"
         },
@@ -1892,6 +2112,9 @@
           "": "這些積木上沒有數字。您可以想用多少就用多少！"
         },
         "courseD_maze_ramp5_2021": {
+          "": "這些積木上沒有數字。您可以想用多少就用多少！"
+        },
+        "courseD_maze_ramp5_2023": {
           "": "這些積木上沒有數字。您可以想用多少就用多少！"
         },
         "courseD_maze_ramp5a": {
@@ -1955,6 +2178,9 @@
         "courseE_aboutme_2_2021": {
           "": "請按一下這裡！\n"
         },
+        "courseE_aboutme_2_2023": {
+          "": "點擊這裡為你的項目添加服裝。"
+        },
         "courseE_artist_functions1": {
           "courseD_artist_functions1_1": "讓我們先使用這個積木來畫出第一個正方形。"
         },
@@ -1982,6 +2208,9 @@
         "courseE_artist_functions2_2021": {
           "courseD_artist_functions2_1": "當這個綠色積木運行時，該函式中的所有程式積木都會執行。在繪製第一個正方形後，小藝術家應該怎麼做？"
         },
+        "courseE_artist_functions2_2023": {
+          "courseD_artist_functions2_1": "當這個綠色積木運行時，該函式中的所有程式積木都會執行。在繪製第一個正方形後，小藝術家應該怎麼做？"
+        },
         "courseE_artist_functions2_copy": {
           "courseD_artist_functions2_1": "當這個綠色積木運行時，該函式中的所有程式積木都會執行。在繪製第一個正方形後，小藝術家應該怎麼做？"
         },
@@ -2004,6 +2233,9 @@
           "courseD_artist_functions8_1": "用於建立函式的積木已經移至工具箱中的這個標籤下方。"
         },
         "courseE_artist_functions8a_2021": {
+          "courseD_artist_functions8_1": "用於建立函式的積木已經移至工具箱中的這個標籤下方。"
+        },
+        "courseE_artist_functions8a_2023": {
           "courseD_artist_functions8_1": "用於建立函式的積木已經移至工具箱中的這個標籤下方。"
         },
         "courseE_artist_functions_challenge1": {
@@ -2030,6 +2262,10 @@
           "courseE_artist_functions_challenge1_callout1": "在積木堆的底部添加更多程式，並且讓此程式繼續進行。",
           "courseE_artist_functions_challenge1_callout2": "如果你不喜歡這樣的設計，也可以依照自己的喜好修改內容喔！"
         },
+        "courseE_artist_functions_challenge1_2023": {
+          "courseE_artist_functions_challenge1_callout1": "在積木堆的底部添加更多程式，並且讓此程式繼續進行。",
+          "courseE_artist_functions_challenge1_callout2": "如果你不喜歡這樣的設計，也可以依照自己的喜好修改內容喔！"
+        },
         "courseE_artist_functions_challenge2": {
           "courseE_artist_functions_challenge2_callout1": "在積木堆的底部添加更多程式，並且讓此程式繼續進行。",
           "courseE_artist_functions_challenge2_callout2": "如果你不喜歡這樣的設計，也可以依照自己的喜好修改內容喔！"
@@ -2051,6 +2287,10 @@
           "courseE_artist_functions_challenge2_callout2": "如果你不喜歡這樣的設計，也可以依照自己的喜好修改內容喔！"
         },
         "courseE_artist_functions_challenge2_2021": {
+          "courseE_artist_functions_challenge2_callout1": "在積木堆的底部添加更多程式，並且讓此程式繼續進行。",
+          "courseE_artist_functions_challenge2_callout2": "如果你不喜歡這樣的設計，也可以依照自己的喜好修改內容喔！"
+        },
+        "courseE_artist_functions_challenge2_2023": {
           "courseE_artist_functions_challenge2_callout1": "在積木堆的底部添加更多程式，並且讓此程式繼續進行。",
           "courseE_artist_functions_challenge2_callout2": "如果你不喜歡這樣的設計，也可以依照自己的喜好修改內容喔！"
         },
@@ -2083,6 +2323,9 @@
         "courseE_farmer_functions13_2021": {
           "courseE_farmer_functions1a_1": "這些蔬菜的數量是未知的。每次你運行該程式時，它都會變化。"
         },
+        "courseE_farmer_functions13_2023": {
+          "courseE_farmer_functions1a_1": "這些蔬菜的數量是未知的。每次你運行該程式時，它都會變化。"
+        },
         "courseE_farmer_functions1_2018": {
           "courseE_farmer_functions1_2": "這次工具箱的排列方式有點不同！點擊不同的類別來查看你有哪些積木。"
         },
@@ -2093,6 +2336,9 @@
           "courseE_farmer_functions1_2": "這次工具箱的排列方式有點不同！點擊不同的類別來查看你有哪些積木。"
         },
         "courseE_farmer_functions1_2021": {
+          "courseE_farmer_functions1_2": "這次工具箱的排列方式有點不同！點擊不同的類別來查看你有哪些積木。"
+        },
+        "courseE_farmer_functions1_2023": {
           "courseE_farmer_functions1_2": "這次工具箱的排列方式有點不同！點擊不同的類別來查看你有哪些積木。"
         },
         "courseE_farmer_functions1a": {
@@ -2113,6 +2359,9 @@
         "courseE_farmer_functions1a_2021": {
           "courseE_farmer_functions1a_1": "這些蔬菜的數量是未知的。每次你運行該程式時，它都會變化。"
         },
+        "courseE_farmer_functions1a_2023": {
+          "courseE_farmer_functions1a_1": "這些蔬菜的數量是未知的。每次你運行該程式時，它都會變化。"
+        },
         "courseE_farmer_functions2b": {
           "courseE_farmer_functions1a_1": "這些蔬菜的數量是未知的。每次你運行該程式時，它都會變化。"
         },
@@ -2129,6 +2378,9 @@
           "courseE_farmer_functions1a_1": "這些蔬菜的數量是未知的。每次你運行該程式時，它都會變化。"
         },
         "courseE_farmer_functions2b_2021": {
+          "courseE_farmer_functions1a_1": "這些蔬菜的數量是未知的。每次你運行該程式時，它都會變化。"
+        },
+        "courseE_farmer_functions2b_2023": {
           "courseE_farmer_functions1a_1": "這些蔬菜的數量是未知的。每次你運行該程式時，它都會變化。"
         },
         "courseE_playLab_challenge1": {
@@ -2149,6 +2401,10 @@
           "run_button": "先按運行按鈕！",
           "visualizationResizeBar": "拖動3個點以調整運行區域的大小。"
         },
+        "courseF_apps_aquarium_2023": {
+          "run_button": "先按運行按鈕！",
+          "visualizationResizeBar": "拖動3個點以調整運行區域的大小。"
+        },
         "courseF_apps_card": {
           "visualizationResizeBar": "拖動3個點以調整運行區域的大小。"
         },
@@ -2156,6 +2412,9 @@
           "visualizationResizeBar": "拖動3個點以調整運行區域的大小。"
         },
         "courseF_apps_card_-2022-2": {
+          "visualizationResizeBar": "拖動3個點以調整運行區域的大小。"
+        },
+        "courseF_apps_card_2023": {
           "visualizationResizeBar": "拖動3個點以調整運行區域的大小。"
         },
         "courseF_apps_chatbot": {
@@ -2167,6 +2426,10 @@
           "visualizationResizeBar": "拖動3個點以調整運行區域的大小。"
         },
         "courseF_apps_chatbot_-2022-2": {
+          "run_button": "先按運行按鈕！",
+          "visualizationResizeBar": "拖動3個點以調整運行區域的大小。"
+        },
+        "courseF_apps_chatbot_2023": {
           "run_button": "先按運行按鈕！",
           "visualizationResizeBar": "拖動3個點以調整運行區域的大小。"
         },
@@ -2182,16 +2445,32 @@
           "run_button": "先按運行按鈕！",
           "visualizationResizeBar": "拖動3個點以調整運行區域的大小。"
         },
+        "courseF_apps_collector_2023": {
+          "run_button": "先按運行按鈕！",
+          "visualizationResizeBar": "拖動3個點以調整運行區域的大小。"
+        },
         "courseF_apps_collector_drag_-2022-2": {
+          "visualizationResizeBar": "拖動3個點以調整運行區域的大小。"
+        },
+        "courseF_apps_collector_drag_2023": {
           "visualizationResizeBar": "拖動3個點以調整運行區域的大小。"
         },
         "courseF_apps_collector_drive_-2022-2": {
           "visualizationResizeBar": "拖動3個點以調整運行區域的大小。"
         },
+        "courseF_apps_collector_drive_2023": {
+          "visualizationResizeBar": "拖動3個點以調整運行區域的大小。"
+        },
         "courseF_apps_collector_move2_-2022-2": {
           "visualizationResizeBar": "拖動3個點以調整運行區域的大小。"
         },
+        "courseF_apps_collector_move2_2023": {
+          "visualizationResizeBar": "拖動3個點以調整運行區域的大小。"
+        },
         "courseF_apps_collector_move_-2022-2": {
+          "visualizationResizeBar": "拖動3個點以調整運行區域的大小。"
+        },
+        "courseF_apps_collector_move_2023": {
           "visualizationResizeBar": "拖動3個點以調整運行區域的大小。"
         },
         "courseF_apps_madlib": {
@@ -2203,6 +2482,9 @@
         "courseF_apps_madlib_-2022-2": {
           "visualizationResizeBar": "拖動3個點以調整運行區域的大小。"
         },
+        "courseF_apps_madlib_2023": {
+          "visualizationResizeBar": "拖動3個點以調整運行區域的大小。"
+        },
         "courseF_apps_pet": {
           "run_button": "先按運行按鈕！",
           "visualizationResizeBar": "拖動3個點以調整運行區域的大小。"
@@ -2212,6 +2494,10 @@
           "visualizationResizeBar": "拖動3個點以調整運行區域的大小。"
         },
         "courseF_apps_pet_-2022-2": {
+          "run_button": "先按運行按鈕！",
+          "visualizationResizeBar": "拖動3個點以調整運行區域的大小。"
+        },
+        "courseF_apps_pet_2023": {
           "run_button": "先按運行按鈕！",
           "visualizationResizeBar": "拖動3個點以調整運行區域的大小。"
         },
@@ -2231,6 +2517,9 @@
           "courseF_artist_for1_1": "工具箱的積木現在依用途分類了，這樣可以讓工作區有足夠的空間。`計數`迴圈就在裡面。"
         },
         "courseF_artist_for1_2021": {
+          "courseF_artist_for1_1": "工具箱的積木現在依用途分類了，這樣可以讓工作區有足夠的空間。`計數`迴圈就在裡面。"
+        },
+        "courseF_artist_for1_2023": {
           "courseF_artist_for1_1": "工具箱的積木現在依用途分類了，這樣可以讓工作區有足夠的空間。`計數`迴圈就在裡面。"
         },
         "courseF_artist_fwp1": {
@@ -2302,6 +2591,9 @@
         "courseF_bee_for4_2021": {
           "courseF_bee_for4_1": "您將在這裡找到「for」迴圈！"
         },
+        "courseF_bee_for4_2023": {
+          "courseF_bee_for4_1": "您將在這裡找到「for」迴圈！"
+        },
         "courseF_bee_for9": {
           "courseF_bee_for9_1": "您將在此處找到「math」積木。"
         },
@@ -2318,6 +2610,9 @@
           "courseF_bee_for9_1": "您將在此處找到「math」積木。"
         },
         "courseF_bee_for9_2021": {
+          "courseF_bee_for9_1": "您將在此處找到「math」積木。"
+        },
+        "courseF_bee_for9_2023": {
           "courseF_bee_for9_1": "您將在此處找到「math」積木。"
         },
         "courseF_bee_functions2": {
@@ -2360,10 +2655,16 @@
         "courseF_bee_variables_1a_2021": {
           "courseF_bee_functions_1_2018_1": "可以在這裡找到你的變量！"
         },
+        "courseF_bee_variables_1a_2023": {
+          "courseF_bee_functions_1_2018_1": "可以在這裡找到你的變量！"
+        },
         "courseF_editable_card": {
           "visualizationResizeBar": "拖動3個點以調整運行區域的大小。"
         },
         "courseF_editable_card_-2022-2": {
+          "visualizationResizeBar": "拖動3個點以調整運行區域的大小。"
+        },
+        "courseF_editable_card_2023": {
           "visualizationResizeBar": "拖動3個點以調整運行區域的大小。"
         },
         "courseF_editable_chatbot": {
@@ -2372,10 +2673,16 @@
         "courseF_editable_chatbot_-2022-2": {
           "visualizationResizeBar": "拖動3個點以調整運行區域的大小。"
         },
+        "courseF_editable_chatbot_2023": {
+          "visualizationResizeBar": "拖動3個點以調整運行區域的大小。"
+        },
         "courseF_editable_madlib": {
           "visualizationResizeBar": "拖動3個點以調整運行區域的大小。"
         },
         "courseF_editable_madlib_-2022-2": {
+          "visualizationResizeBar": "拖動3個點以調整運行區域的大小。"
+        },
+        "courseF_editable_madlib_2023": {
           "visualizationResizeBar": "拖動3個點以調整運行區域的大小。"
         },
         "courseF_events_choice_penguin": {
@@ -2384,10 +2691,16 @@
         "courseF_events_choice_penguin_-2022-2": {
           "whenToWhile": "嘗試將when改為while。"
         },
+        "courseF_events_choice_penguin_2023": {
+          "whenToWhile": "嘗試將when改為while。"
+        },
         "courseF_events_conflict": {
           "stops_block": "此處新積木！"
         },
         "courseF_events_conflict_-2022-2": {
+          "stops_block": "此處新積木！"
+        },
+        "courseF_events_conflict_2023": {
           "stops_block": "此處新積木！"
         },
         "courseF_events_key": {
@@ -2396,10 +2709,16 @@
         "courseF_events_key_-2022-2": {
           "whenKey": "使用在這裡找到的新事件積木。"
         },
+        "courseF_events_key_2023": {
+          "whenKey": "使用在這裡找到的新事件積木。"
+        },
         "courseF_events_practice_reorder": {
           "stopAllBug": "這段代碼的順序不正確。"
         },
         "courseF_events_practice_reorder_-2022-2": {
+          "stopAllBug": "這段代碼的順序不正確。"
+        },
+        "courseF_events_practice_reorder_2023": {
           "stopAllBug": "這段代碼的順序不正確。"
         },
         "courseF_events_predict": {
@@ -2408,16 +2727,25 @@
         "courseF_events_predict_-2022-2": {
           "behaviors_edit": "按一下這裡檢視這個行為是如何工作的。\n"
         },
+        "courseF_events_predict_2023": {
+          "behaviors_edit": "按一下這裡檢視這個行為是如何工作的。\n"
+        },
         "courseF_events_time": {
           "events_category": "點擊這裡打開事件類別。"
         },
         "courseF_events_time_-2022-2": {
           "events_category": "點擊這裡打開事件類別。"
         },
+        "courseF_events_time_2023": {
+          "events_category": "點擊這裡打開事件類別。"
+        },
         "courseF_label_predict": {
           "variablesPredict": "仔細看下面的代碼。"
         },
         "courseF_label_predict_-2022-2": {
+          "variablesPredict": "仔細看下面的代碼。"
+        },
+        "courseF_label_predict_2023": {
           "variablesPredict": "仔細看下面的代碼。"
         },
         "courseF_playlab_variables1a": {
@@ -2438,10 +2766,16 @@
         "courseF_sprites_behaviors_-2022-2": {
           "behaviors_category": "點擊這裡打開行為類別。"
         },
+        "courseF_sprites_behaviors_2023": {
+          "behaviors_category": "點擊這裡打開行為類別。"
+        },
         "courseF_sprites_make": {
           "sprites_category": "點擊這裡打開精靈圖類別。"
         },
         "courseF_sprites_make_-2022-2": {
+          "sprites_category": "點擊這裡打開精靈圖類別。"
+        },
+        "courseF_sprites_make_2023": {
           "sprites_category": "點擊這裡打開精靈圖類別。"
         },
         "courseF_sprites_positioning": {
@@ -2450,10 +2784,16 @@
         "courseF_sprites_positioning_-2022-2": {
           "locations_category": "點擊這裡打開位置類別。"
         },
+        "courseF_sprites_positioning_2023": {
+          "locations_category": "點擊這裡打開位置類別。"
+        },
         "courseF_sprites_properties": {
           "sprites_category2": "在這裡尋找一個新積木。"
         },
         "courseF_sprites_properties_-2022-2": {
+          "sprites_category2": "在這裡尋找一個新積木。"
+        },
+        "courseF_sprites_properties_2023": {
           "sprites_category2": "在這裡尋找一個新積木。"
         },
         "courseF_text_answer": {
@@ -2462,16 +2802,25 @@
         "courseF_text_answer_-2022-2": {
           "answered_block": "在這裡尋找一個新積木！"
         },
+        "courseF_text_answer_2023": {
+          "answered_block": "在這裡尋找一個新積木！"
+        },
         "courseF_text_choice_color": {
           "text_color_finish": "你回答問題時背景顏色改變了嗎？如果是，點擊“完成”。如果否，點擊“重置”，改變你的代碼，然後再次點擊“運行”。"
         },
         "courseF_text_choice_color_-2022-2": {
           "text_color_finish": "你回答問題時背景顏色改變了嗎？如果是，點擊“完成”。如果否，點擊“重置”，改變你的代碼，然後再次點擊“運行”。"
         },
+        "courseF_text_choice_color_2023": {
+          "text_color_finish": "你回答問題時背景顏色改變了嗎？如果是，點擊“完成”。如果否，點擊“重置”，改變你的代碼，然後再次點擊“運行”。"
+        },
         "courseF_text_choice_conversation": {
           "text_generic_finish": "你完成了嗎？如果是，點擊“完成”。如果否，點擊“重置”，改變你的代碼，然後再次點擊“運行”。"
         },
         "courseF_text_choice_conversation_-2022-2": {
+          "text_generic_finish": "你完成了嗎？如果是，點擊“完成”。如果否，點擊“重置”，改變你的代碼，然後再次點擊“運行”。"
+        },
+        "courseF_text_choice_conversation_2023": {
           "text_generic_finish": "你完成了嗎？如果是，點擊“完成”。如果否，點擊“重置”，改變你的代碼，然後再次點擊“運行”。"
         },
         "courseF_text_choice_title": {
@@ -2482,16 +2831,26 @@
           "text_answer_finish": "標題螢幕顯示了3秒鐘嗎？如果是，點擊“完成”。如果否，點擊“重置”，改變你的代碼，然後再次點擊“運行”。",
           "title_block": "在這裡尋找兩個新積木！"
         },
+        "courseF_text_choice_title_2023": {
+          "text_answer_finish": "標題螢幕顯示了3秒鐘嗎？如果是，點擊“完成”。如果否，點擊“重置”，改變你的代碼，然後再次點擊“運行”。",
+          "title_block": "在這裡尋找兩個新積木！"
+        },
         "courseF_text_concat": {
           "join_blocks": "在這裡尋找新積木！"
         },
         "courseF_text_concat_-2022-2": {
           "join_blocks": "在這裡尋找新積木！"
         },
+        "courseF_text_concat_2023": {
+          "join_blocks": "在這裡尋找新積木！"
+        },
         "courseF_text_events": {
           "events_category": "點擊這裡打開事件類別。"
         },
         "courseF_text_events_-2022-2": {
+          "events_category": "點擊這裡打開事件類別。"
+        },
+        "courseF_text_events_2023": {
           "events_category": "點擊這裡打開事件類別。"
         },
         "courseF_text_print": {
@@ -2502,19 +2861,32 @@
           "print_block": "在這裡找到列印積木！",
           "text_print_finish": "你的訊息列印在上面了嗎？如果是，點擊“完成”。如果否，點擊“重置”，改變你的代碼，然後再次點擊“運行”。"
         },
+        "courseF_text_print_2023": {
+          "print_block": "在這裡找到列印積木！",
+          "text_print_finish": "你的訊息列印在上面了嗎？如果是，點擊“完成”。如果否，點擊“重置”，改變你的代碼，然後再次點擊“運行”。"
+        },
         "courseF_text_prompts": {
           "prompt_block": "在這裡找到提示積木！"
         },
         "courseF_text_prompts_-2022-2": {
           "prompt_block": "在這裡找到提示積木！"
         },
+        "courseF_text_prompts_2023": {
+          "prompt_block": "在這裡找到提示積木！"
+        },
         "courseF_variables2_predict_-2022-2": {
+          "variablesPredict": "仔細看下面的代碼。"
+        },
+        "courseF_variables2_predict_2023": {
           "variablesPredict": "仔細看下面的代碼。"
         },
         "courseF_variables_predict": {
           "variablesPredict": "仔細看下面的代碼。"
         },
         "courseF_variables_predict_-2022-2": {
+          "variablesPredict": "仔細看下面的代碼。"
+        },
+        "courseF_variables_predict_2023": {
           "variablesPredict": "仔細看下面的代碼。"
         },
         "coursea_maze_ramp12022": {
@@ -2532,13 +2904,99 @@
         "coursea_maze_ramp1_2021": {
           "grade2_CaringForNewPet_0_1": "在將所有的積木連在一起後，按「執行」啟動程式。\n"
         },
+        "coursea_maze_ramp1_2023": {
+          "grade2_CaringForNewPet_0_1": "在將所有的積木連在一起後，按「執行」啟動程式。\n"
+        },
         "coursee_helloworld_events": {
+          "hello_world_click_hint": "將此事件積木添加到工作區。"
+        },
+        "coursee_helloworld_events_2023": {
           "hello_world_click_hint": "將此事件積木添加到工作區。"
         },
         "coursee_helloworld_freeplay": {
           "costumes_tab": "點擊這裡為你的項目添加服裝。"
         },
+        "coursee_helloworld_freeplay_2023": {
+          "costumes_tab": "點擊這裡為你的項目添加服裝。"
+        },
         "coursee_helloworld_say": {
+          "hello_world_make_sprite": "使用這個積木創建精靈圖。",
+          "hello_world_say": "使用這個積木讓精靈圖說話。"
+        },
+        "coursee_helloworld_say_2023": {
+          "hello_world_make_sprite": "使用這個積木創建精靈圖。",
+          "hello_world_say": "使用這個積木讓精靈圖說話。"
+        },
+        "csc-starquilts-comment_2023": {
+          "New Artist Project_callout1": "點擊工具箱上的類別按鈕，來看看其中的積木吧！用滑鼠拖曳積木到工作區，把他們添加到你的程式中。",
+          "New Artist Project_callout2": "點擊「運行」以儲存並運行你的程式",
+          "sign_in_to_save_project": "想要在以後繼續使用這個專案嗎？登入以將這個專案保存到你的帳戶！"
+        },
+        "csc-starquilts-repeat_2023": {
+          "New Artist Project_callout1": "點擊工具箱上的類別按鈕，來看看其中的積木吧！用滑鼠拖曳積木到工作區，把他們添加到你的程式中。",
+          "New Artist Project_callout2": "點擊「運行」以儲存並運行你的程式",
+          "sign_in_to_save_project": "想要在以後繼續使用這個專案嗎？登入以將這個專案保存到你的帳戶！"
+        },
+        "csc-starquilts-rhombus-freeplay_2023": {
+          "New Artist Project_callout1": "點擊工具箱上的類別按鈕，來看看其中的積木吧！用滑鼠拖曳積木到工作區，把他們添加到你的程式中。",
+          "New Artist Project_callout2": "點擊「運行」以儲存並運行你的程式",
+          "sign_in_to_save_project": "想要在以後繼續使用這個專案嗎？登入以將這個專案保存到你的帳戶！"
+        },
+        "csc-starquilts-row1_2023": {
+          "New Artist Project_callout1": "點擊工具箱上的類別按鈕，來看看其中的積木吧！用滑鼠拖曳積木到工作區，把他們添加到你的程式中。",
+          "New Artist Project_callout2": "點擊「運行」以儲存並運行你的程式",
+          "sign_in_to_save_project": "想要在以後繼續使用這個專案嗎？登入以將這個專案保存到你的帳戶！"
+        },
+        "csc-starquilts-row2_2023": {
+          "New Artist Project_callout1": "點擊工具箱上的類別按鈕，來看看其中的積木吧！用滑鼠拖曳積木到工作區，把他們添加到你的程式中。",
+          "New Artist Project_callout2": "點擊「運行」以儲存並運行你的程式",
+          "sign_in_to_save_project": "想要在以後繼續使用這個專案嗎？登入以將這個專案保存到你的帳戶！"
+        },
+        "csc-starquilts-row3_2023": {
+          "New Artist Project_callout1": "點擊工具箱上的類別按鈕，來看看其中的積木吧！用滑鼠拖曳積木到工作區，把他們添加到你的程式中。",
+          "New Artist Project_callout2": "點擊「運行」以儲存並運行你的程式",
+          "sign_in_to_save_project": "想要在以後繼續使用這個專案嗎？登入以將這個專案保存到你的帳戶！"
+        },
+        "csc-starquilts-row4_2023": {
+          "New Artist Project_callout1": "點擊工具箱上的類別按鈕，來看看其中的積木吧！用滑鼠拖曳積木到工作區，把他們添加到你的程式中。",
+          "New Artist Project_callout2": "點擊「運行」以儲存並運行你的程式",
+          "sign_in_to_save_project": "想要在以後繼續使用這個專案嗎？登入以將這個專案保存到你的帳戶！"
+        },
+        "csc-starquilts-row5_2023": {
+          "New Artist Project_callout1": "點擊工具箱上的類別按鈕，來看看其中的積木吧！用滑鼠拖曳積木到工作區，把他們添加到你的程式中。",
+          "New Artist Project_callout2": "點擊「運行」以儲存並運行你的程式",
+          "sign_in_to_save_project": "想要在以後繼續使用這個專案嗎？登入以將這個專案保存到你的帳戶！"
+        },
+        "csc_animal_adaptations_behaviors_edit2": {
+          "behavior_callout": "為什麼這個行為對中間的星星不起作用？\n",
+          "star2_callout": "刪除這個服裝積木，用「這個精靈」積木代替。\n",
+          "this_sprite_callout": "將下面的服裝積木替換成這個。\n"
+        },
+        "csc_animal_adaptations_behaviors_elephantleader": {
+          "behavior_callout": "為什麼這個行為對中間的星星不起作用？\n",
+          "star2_callout": "刪除這個服裝積木，用「這個精靈」積木代替。\n",
+          "this_sprite_callout": "將下面的服裝積木替換成這個。\n"
+        },
+        "csc_animal_adaptations_behaviors_wolfpack": {
+          "behavior_callout": "為什麼這個行為對中間的星星不起作用？\n",
+          "star2_callout": "刪除這個服裝積木，用「這個精靈」積木代替。\n",
+          "this_sprite_callout": "將下面的服裝積木替換成這個。\n"
+        },
+        "csc_animal_adaptations_bugs2": {
+          "hello_world_behavior_blocks": "將此積木與下面的其中一個行為一起使用。"
+        },
+        "csc_animal_adaptations_make_behavior": {
+          "behaviors_edit": "給這個行為添加程式。"
+        },
+        "csc_animal_adaptations_predict_gamelab": {
+          "behaviors_edit": "按一下這裡檢視這個行為是如何工作的。\n"
+        },
+        "csc_starquilts_freeplay_2023": {
+          "New Artist Project_callout1": "點擊工具箱上的類別按鈕，來看看其中的積木吧！用滑鼠拖曳積木到工作區，把他們添加到你的程式中。",
+          "New Artist Project_callout2": "點擊「運行」以儲存並運行你的程式",
+          "sign_in_to_save_project": "想要在以後繼續使用這個專案嗎？登入以將這個專案保存到你的帳戶！"
+        },
+        "ecosystems_helloworld_say_2023": {
           "hello_world_make_sprite": "使用這個積木創建精靈圖。",
           "hello_world_say": "使用這個積木讓精靈圖說話。"
         },
@@ -2552,6 +3010,9 @@
           "express_maze_debugging9_2019_1": "將工具箱中的積木拖到你的工作區。\n"
         },
         "express_maze_debugging9_2021": {
+          "express_maze_debugging9_2019_1": "將工具箱中的積木拖到你的工作區。\n"
+        },
+        "express_maze_debugging9_2023": {
           "express_maze_debugging9_2019_1": "將工具箱中的積木拖到你的工作區。\n"
         },
         "frozen circle function with parameter": {
@@ -2642,6 +3103,12 @@
         "helloworld_animals_sounds": {
           "hello_world_new": "新的程式積木！"
         },
+        "helloworld_bugs_behaviors_2023": {
+          "hello_world_behavior_blocks": "將此積木與下面的其中一個行為一起使用。"
+        },
+        "helloworld_bunny_adaptation_2023": {
+          "hw_Run": "點擊這裡運行代碼。"
+        },
         "helloworld_emoji_backgrounds": {
           "hw_background_location": "使用這個積木來設置一個新背景。"
         },
@@ -2680,6 +3147,9 @@
         "helloworld_food_backgrounds": {
           "hw_background_location": "使用這個積木來設置一個新背景。"
         },
+        "helloworld_food_backgrounds_2023": {
+          "hw_background_location": "使用這個積木來設置一個新背景。"
+        },
         "helloworld_food_backgrounds_soccer-2022": {
           "hw_background_location": "使用這個積木來設置一個新背景。"
         },
@@ -2687,6 +3157,9 @@
           "hw_background_location": "使用這個積木來設置一個新背景。"
         },
         "helloworld_food_behaviors": {
+          "hello_world_behavior_blocks": "將此積木與下面的其中一個行為一起使用。"
+        },
+        "helloworld_food_behaviors_2023": {
           "hello_world_behavior_blocks": "將此積木與下面的其中一個行為一起使用。"
         },
         "helloworld_food_behaviors_soccer-2022": {
@@ -2698,6 +3171,9 @@
         "helloworld_food_click": {
           "hw_Run": "點擊這裡運行代碼。"
         },
+        "helloworld_food_click_2023": {
+          "hw_Run": "點擊這裡運行代碼。"
+        },
         "helloworld_food_click_soccer-2022": {
           "hw_Run": "點擊這裡運行代碼。"
         },
@@ -2705,6 +3181,9 @@
           "hw_Run": "請先點擊這裡！"
         },
         "helloworld_food_costumes": {
+          "hello_world_new": "新的程式積木！"
+        },
+        "helloworld_food_costumes_2023": {
           "hello_world_new": "新的程式積木！"
         },
         "helloworld_food_costumes_soccer-2022": {
@@ -2734,6 +3213,9 @@
         "helloworld_food_location": {
           "pin": "針腳"
         },
+        "helloworld_food_location_2023": {
+          "pin": "針腳"
+        },
         "helloworld_food_location_soccer-2022": {
           "pin": "針腳"
         },
@@ -2741,6 +3223,9 @@
           "pin": "針腳"
         },
         "helloworld_food_multi": {
+          "pin": "針腳"
+        },
+        "helloworld_food_multi_2023": {
           "pin": "針腳"
         },
         "helloworld_food_multi_soccer-2022": {
@@ -2765,6 +3250,10 @@
           "hello_world_new": "新的程式積木！",
           "hello_world_new_block": "新的程式積木！"
         },
+        "helloworld_food_sizes_2023": {
+          "hello_world_new": "新的程式積木！",
+          "hello_world_new_block": "新的程式積木！"
+        },
         "helloworld_food_sizes_soccer-2022": {
           "hello_world_new": "新的程式積木！",
           "hello_world_new_block": "新的程式積木！"
@@ -2774,6 +3263,9 @@
           "hello_world_new_block": "新的程式積木！"
         },
         "helloworld_food_sounds": {
+          "hello_world_new": "新的程式積木！"
+        },
+        "helloworld_food_sounds_2023": {
           "hello_world_new": "新的程式積木！"
         },
         "helloworld_food_sounds_soccer-2022": {
@@ -2827,11 +3319,22 @@
         "poetry_hoc_addSprites": {
           "poetry_sprite": "新的程式積木！"
         },
+        "poetry_hoc_addSprites_2023": {
+          "poetry_sprite": "新的程式積木！"
+        },
         "poetry_hoc_backgroundEffects": {
           "poetry_background": "在這裡尋找代碼積木。",
           "run_button": "用這個按鈕測試動畫。"
         },
+        "poetry_hoc_backgroundEffects_2023": {
+          "poetry_background": "在這裡尋找代碼積木。",
+          "run_button": "用這個按鈕測試動畫。"
+        },
         "poetry_hoc_events1": {
+          "poetry_event": "新的程式積木！",
+          "poetry_foreground": "新的程式積木！"
+        },
+        "poetry_hoc_events1_2023": {
           "poetry_event": "新的程式積木！",
           "poetry_foreground": "新的程式積木！"
         },
@@ -2841,7 +3344,15 @@
           "poetry_new_block": "新的程式積木！",
           "poetry_selector": "選擇任何詩歌，或輸入你自己的！"
         },
+        "poetry_hoc_freeplay_2023": {
+          "poetry_new_block": "新的程式積木！",
+          "poetry_selector": "選擇任何詩歌，或輸入你自己的！"
+        },
         "poetry_hoc_sounds": {
+          "poetry_music": "新的程式積木！",
+          "poetry_sound": "新的程式積木！"
+        },
+        "poetry_hoc_sounds_2023": {
           "poetry_music": "新的程式積木！",
           "poetry_sound": "新的程式積木！"
         },
@@ -2849,7 +3360,15 @@
           "poetry_sprite_begins": "新的程式積木！",
           "poetry_sprite_stops": "新的程式積木！"
         },
+        "poetry_hoc_spriteBehaviors_2023": {
+          "poetry_sprite_begins": "新的程式積木！",
+          "poetry_sprite_stops": "新的程式積木！"
+        },
         "poetry_hoc_spriteSizes": {
+          "poetry_remove_sprite": "新的程式積木！",
+          "poetry_set_sprite": "新的程式積木！"
+        },
+        "poetry_hoc_spriteSizes_2023": {
           "poetry_remove_sprite": "新的程式積木！",
           "poetry_set_sprite": "新的程式積木！"
         }
