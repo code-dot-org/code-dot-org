@@ -1,9 +1,10 @@
 import Instructions from '@cdo/apps/lab2/views/components/Instructions';
 import PanelContainer from '@cdo/apps/lab2/views/components/PanelContainer';
-import AgeDialog, {getFilterStatus} from '@cdo/apps/templates/AgeDialog';
+import AgeDialog from '@cdo/apps/templates/AgeDialog';
 import {CurrentUserState} from '@cdo/apps/templates/CurrentUserState';
 import React, {useCallback, useState} from 'react';
 import {TypedUseSelectorHook, useSelector} from 'react-redux';
+import {getFilterStatus} from '../../songs';
 import moduleStyles from './dance-view.module.scss';
 const commonI18n = require('@cdo/locale');
 
