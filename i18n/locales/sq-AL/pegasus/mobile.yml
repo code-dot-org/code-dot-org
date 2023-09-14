@@ -587,7 +587,7 @@
   dashboard_sections_table_secret: "Mënyra e logimit"
   dashboard_sections_table_grade: "Notë"
   dashboard_sections_table_course: "Kurs"
-  dashboard_sections_table_pairing_allowed: "Programim në çift"
+  dashboard_sections_table_pairing_allowed: "Programimi në ekip"
   dashboard_sections_table_students: "Studentët"
   dashboard_sections_table_code: "Pjesë Kodi"
   dashboard_sections_name: 'Emri Seksionit'
@@ -760,11 +760,15 @@
   course4_name: "Kursi 4"
   coursea-draft_name: Kursi A
   coursea_name: "Kursi A"
+  coursea-2018_name: Kursi A (2018)
+  courseb-2018_name: Kursi B (2018)
   coursea-2019_name: Kursi A (2019)
+  courseb-2019_name: Kursi B (2019)
   coursea-2020_name: Kursi A (2020)
   coursea-2021_name: Kursi A (2021)
   courseb-2021_name: Kursi B (2021)
   coursec-2021_name: Kursi C (2021)
+  coursed-2021_name: Kursi D (2021)
   coursef-2021_name: Kursi F (2021)
   coursea-2022_name: Kursi A (2022)
   courseb-2022_name: Kursi B (2022)
@@ -781,6 +785,7 @@
   iceage_name: "Epoka e Akullnajave"
   minecraft_name: "Minecraft"
   applab_name: "Laboratori i Aplikacioneve"
+  gamelab_name: "Game Lab"
   basketball_name: "Realizo një lojë basketbolli"
   sports_name: "Krijo lojën tënde sportive"
   applab_gradelevel: "Moshat 13 +"
@@ -1216,6 +1221,7 @@
   header_help_us: "Na ndihmoni"
   header_about: "Rreth"
   header_report_bug: "Raporto një problem"
+  header_report_abuse: "Raporto abuzim"
   header_legal: "Privatësia & Ligjore"
   header_legal_privacy: "Rregullat e Privatësisë"
   header_legal_tos: "Kushtet e shërbimit"
@@ -1228,6 +1234,7 @@
   user_header_create: 'Krijo '
   user_header_applab: 'Laboratori i Aplikacioneve '
   user_header_artist: 'Artisti '
+  user_header_gamelab: "Game Lab"
   user_header_playlab: "Play Lab"
   user_header_dance: "Festë vallëzimi"
   user_header_spritelab: "Sprite Lab"
@@ -1264,6 +1271,7 @@
   hoc2018_dance_party_main_heading: "Festë vallëzimi"
   hoc2018_dance_party_box_title: "Festë vallëzimi"
   hoc2018_dance_party_button: "Fillo"
+  hoc2018_dance_keep_on_dancing_box_title: "Vazhdoni të kërceni"
   hoc2018_dance_teacher_resources_tile1_button: "Plani Mësimor"
   hoc2018_dance_teacher_resources_tile2_button: "Aktiviteti Unplugged"
   hoc2018_dance_amazon_about_future_engineer_button: "Mëso më shumë"
@@ -1275,6 +1283,7 @@
   footer_store: "Dyqani"
   footer_support: "Ndihma dhe Komuniteti"
   footer_terms: "Termat"
+  ai_for_oceans: "IA për oqeanet"
   ai_for_oceans_lesson_plan: "plani mësimor"
   ai_activity: "Aktiviteti"
   ai_description: "Përshkrimi"
