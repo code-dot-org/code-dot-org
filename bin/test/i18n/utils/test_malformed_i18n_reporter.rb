@@ -63,6 +63,21 @@ describe I18n::Utils::MalformedI18nReporter do
         assert_empty malformed_i18n_reporter.worksheet_data
       end
     end
+
+    context 'when a translation is nil' do
+      let(:i18n_file_data) do
+        {
+          invalid_i18n_hash: {
+            null: nil,
+          },
+        }
+      end
+
+      it 'does nothing' do
+        malformed_i18n_reporter.process_file(i18n_file_path)
+        assert_empty malformed_i18n_reporter.worksheet_data
+      end
+    end
   end
 
   describe '#report' do
