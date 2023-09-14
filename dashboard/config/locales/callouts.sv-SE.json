@@ -219,6 +219,9 @@
         "CourseD_Dance_2020_01_2021": {
           "dance_callout_01": "Välj din dansare här."
         },
+        "CourseD_Dance_2020_01_2023": {
+          "dance_callout_01": "Välj din dansare här."
+        },
         "CourseD_Dance_2020_02": {
           "arrow_buttons": "Tryck på piltangenterna för att kontrollera din dansare.",
           "dance_callout_11_a": "Lägg till det här blocket i ditt program."
@@ -231,6 +234,10 @@
           "arrow_buttons": "Tryck på piltangenterna för att kontrollera din dansare.",
           "dance_callout_11_a": "Lägg till det här blocket i ditt program."
         },
+        "CourseD_Dance_2020_02_2023": {
+          "arrow_buttons": "Tryck på piltangenterna för att kontrollera din dansare.",
+          "dance_callout_11_a": "Lägg till det här blocket i ditt program."
+        },
         "CourseD_Dance_2020_04": {
           "dance_callout_02": "Lägg till detta block till ditt program!"
         },
@@ -238,6 +245,9 @@
           "dance_callout_02": "Lägg till detta block till ditt program!"
         },
         "CourseD_Dance_2020_04_2021": {
+          "dance_callout_02": "Lägg till detta block till ditt program!"
+        },
+        "CourseD_Dance_2020_04_2023": {
           "dance_callout_02": "Lägg till detta block till ditt program!"
         },
         "CourseD_Dance_2020_05": {
@@ -249,6 +259,9 @@
         "CourseD_Dance_2020_05_2021": {
           "dance_callout_05": "Lägg till en ny händelse i ditt program."
         },
+        "CourseD_Dance_2020_05_2023": {
+          "dance_callout_05": "Lägg till en ny händelse i ditt program."
+        },
         "CourseD_Dance_2020_06": {
           "dance_party_11_5_groups": "Nytt Block!"
         },
@@ -256,6 +269,9 @@
           "dance_party_11_5_groups": "Nytt Block!"
         },
         "CourseD_Dance_2020_06_2021": {
+          "dance_party_11_5_groups": "Nytt Block!"
+        },
+        "CourseD_Dance_2020_06_2023": {
           "dance_party_11_5_groups": "Nytt Block!"
         },
         "CourseD_Dance_2020_07": {
@@ -267,6 +283,9 @@
         "CourseD_Dance_2020_07_2021": {
           "setprop_hint": "Nytt Block!"
         },
+        "CourseD_Dance_2020_07_2023": {
+          "setprop_hint": "Nytt Block!"
+        },
         "CourseD_Dance_2020_09": {
           "new_block_3": "Nytt Block!",
           "new_block_4": "Nytt Block!"
@@ -276,6 +295,10 @@
           "new_block_4": "Nytt Block!"
         },
         "CourseD_Dance_2020_09_2021": {
+          "new_block_3": "Nytt Block!",
+          "new_block_4": "Nytt Block!"
+        },
+        "CourseD_Dance_2020_09_2023": {
           "new_block_3": "Nytt Block!",
           "new_block_4": "Nytt Block!"
         },
@@ -306,10 +329,17 @@
           "minitoolbox": "Klicka här för att utöka blocket.",
           "pointerlocation": "Dra ett subject-block hit."
         },
+        "CourseF_outbreak2_2023": {
+          "minitoolbox": "Klicka här för att utöka blocket.",
+          "pointerlocation": "Dra ett subject-block hit."
+        },
         "CourseF_outbreak7": {
           "costumes_callout": "Klicka för att skapa en ny dräkt"
         },
         "CourseF_outbreak7_-2022-2": {
+          "costumes_tab": "Klicka här för att lägga till kostymer till ditt projekt."
+        },
+        "CourseF_outbreak7_2023": {
           "costumes_tab": "Klicka här för att lägga till kostymer till ditt projekt."
         },
         "Dance_2019_01": {
@@ -369,6 +399,9 @@
         "Function intro Ryan_2021": {
           "Function_intro_Ryan_1": "Den här lilla instruktionen säger åt datorn att köra den STORA gruppen kod med samma namn i arbetsytan."
         },
+        "Function intro Ryan_2023": {
+          "Function_intro_Ryan_1": "Den här lilla instruktionen säger åt datorn att köra den STORA gruppen kod med samma namn i arbetsytan."
+        },
         "Geometric Sun": {
           "4-5_Artist_Patterns_Free_Play_1": "Alla dina favoritblock är nu organiserade i kategorier. Klicka på dessa ord för att se vart allt tog vägen!"
         },
@@ -406,6 +439,9 @@
         "MC_HOC_2017_03_Cole_2021": {
           "MC_HOC_2017_03_Cole_1": "Det här är en \"upprepa\"-loop!  Klicka på den i arbetsytan och lägg till kod som du vill köra om och om igen."
         },
+        "MC_HOC_2017_03_Cole_2023": {
+          "MC_HOC_2017_03_Cole_1": "Det här är en \"upprepa\"-loop!  Klicka på den i arbetsytan och lägg till kod som du vill köra om och om igen."
+        },
         "MC_HOC_2017_04_Cole": {
           "MC_HOC_2017_04_Cole_a": "Agenten kan sväva över vatten, men spelaren kan inte det!"
         },
@@ -419,6 +455,9 @@
           "MC_HOC_2017_04_Cole_a": "Agenten kan sväva över vatten, men spelaren kan inte det!"
         },
         "MC_HOC_2017_04_Cole_2021": {
+          "MC_HOC_2017_04_Cole_a": "Agenten kan sväva över vatten, men spelaren kan inte det!"
+        },
+        "MC_HOC_2017_04_Cole_2023": {
           "MC_HOC_2017_04_Cole_a": "Agenten kan sväva över vatten, men spelaren kan inte det!"
         },
         "MC_HOC_2017_06_Cole": {
@@ -436,6 +475,9 @@
         "MC_HOC_2017_06_Cole_2021": {
           "MC_HOC_2017_06_Cole_1": "Du kan inte kasta bort de här blocken, men du kan redigera dem!"
         },
+        "MC_HOC_2017_06_Cole_2023": {
+          "MC_HOC_2017_06_Cole_1": "Du kan inte kasta bort de här blocken, men du kan redigera dem!"
+        },
         "MC_HOC_2017_Ali": {
           "MC_HOC_2017_08_RY_1": "Agenten kan sväva över lava, men spelaren kan inte det!"
         },
@@ -449,6 +491,9 @@
           "MC_HOC_2017_08_RY_1": "Agenten kan sväva över lava, men spelaren kan inte det!"
         },
         "MC_HOC_2017_Ali_2021": {
+          "MC_HOC_2017_08_RY_1": "Agenten kan sväva över lava, men spelaren kan inte det!"
+        },
+        "MC_HOC_2017_Ali_2023": {
           "MC_HOC_2017_08_RY_1": "Agenten kan sväva över lava, men spelaren kan inte det!"
         },
         "NEW Course 4 Artist Functions 7": {
@@ -491,6 +536,9 @@
         "Overworld Chop Trees_2021": {
           "craft_callout_preplaced": "Vi har lagt ut några block för att hjälpa dig komma igång"
         },
+        "Overworld Chop Trees_2023": {
+          "craft_callout_preplaced": "Vi har lagt ut några block för att hjälpa dig komma igång"
+        },
         "Overworld House Frame Chosen": {
           "craft_callout_preplaced_house": "Den här koden kommer bygga ditt hus. Kan du avsluta det?"
         },
@@ -504,6 +552,9 @@
           "craft_callout_preplaced_house": "Den här koden kommer bygga ditt hus. Kan du avsluta det?"
         },
         "Overworld House Frame Chosen_2021": {
+          "craft_callout_preplaced_house": "Den här koden kommer bygga ditt hus. Kan du avsluta det?"
+        },
+        "Overworld House Frame Chosen_2023": {
           "craft_callout_preplaced_house": "Den här koden kommer bygga ditt hus. Kan du avsluta det?"
         },
         "Overworld Move to Sheep": {
@@ -526,6 +577,10 @@
           "craft_drag_block_callout": "Dra ett 'gå framåt'-block och klicka i det under ett annat block.",
           "craft_run_button_callout": "Tryck på \"Kör\" för att prova programmet"
         },
+        "Overworld Move to Sheep_2023": {
+          "craft_drag_block_callout": "Dra ett 'gå framåt'-block och klicka i det under ett annat block.",
+          "craft_run_button_callout": "Tryck på \"Kör\" för att prova programmet"
+        },
         "Overworld Place Wall": {
           "craft_inside_repeat": "Upprepa handlingar genom att placera block här"
         },
@@ -539,6 +594,9 @@
           "craft_inside_repeat": "Upprepa handlingar genom att placera block här"
         },
         "Overworld Place Wall_2021": {
+          "craft_inside_repeat": "Upprepa handlingar genom att placera block här"
+        },
+        "Overworld Place Wall_2023": {
           "craft_inside_repeat": "Upprepa handlingar genom att placera block här"
         },
         "Underground Avoiding Lava": {
@@ -556,6 +614,9 @@
         "Underground Avoiding Lava_2021": {
           "craft_callout_moveforward": "Den här koden håller koll efter lava. Kan du lägga till ett kommando för att gå framåt?"
         },
+        "Underground Avoiding Lava_2023": {
+          "craft_callout_moveforward": "Den här koden håller koll efter lava. Kan du lägga till ett kommando för att gå framåt?"
+        },
         "Underground Iron": {
           "craft_what_is_iron": "Bryt järnet!"
         },
@@ -569,6 +630,9 @@
           "craft_what_is_iron": "Bryt järnet!"
         },
         "Underground Iron_2021": {
+          "craft_what_is_iron": "Bryt järnet!"
+        },
+        "Underground Iron_2023": {
           "craft_what_is_iron": "Bryt järnet!"
         },
         "Virtual Pet 2_2019": {
@@ -586,16 +650,25 @@
         "courseA_EOC_playlab_animals2022": {
           "question_mark": "?"
         },
+        "courseA_EOC_playlab_animals_2023": {
+          "question_mark": "?"
+        },
         "courseA_EOC_playlab_fantasy": {
           "question_mark": "?"
         },
         "courseA_EOC_playlab_fantasy2022": {
           "question_mark": "?"
         },
+        "courseA_EOC_playlab_fantasy_2023": {
+          "question_mark": "?"
+        },
         "courseA_EOC_playlab_people": {
           "question_mark": "?"
         },
         "courseA_EOC_playlab_people2022": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_people_2023": {
           "question_mark": "?"
         },
         "courseD_artist_ramp11": {
@@ -617,6 +690,9 @@
           "4_5_Bee_Conditionals_2_1": "Kom ihåg att kolla så att ALLA moln har en BLOMMA. Du behöver inte kolla efter bivaxkakor alls."
         },
         "courseD_bee_conditionals2_2021": {
+          "4_5_Bee_Conditionals_2_1": "Kom ihåg att kolla så att ALLA moln har en BLOMMA. Du behöver inte kolla efter bivaxkakor alls."
+        },
+        "courseD_bee_conditionals2_2023": {
           "4_5_Bee_Conditionals_2_1": "Kom ihåg att kolla så att ALLA moln har en BLOMMA. Du behöver inte kolla efter bivaxkakor alls."
         },
         "courseD_bee_conditionals2_copy": {
@@ -643,6 +719,9 @@
         "courseD_bee_conditionals_challenge2_2021": {
           "courseD_bee_conditionals_challenge2_1": "Använd den här slingan för att samla in all nektar (eller honung) från en blomma (eller vaxkaka)."
         },
+        "courseD_bee_conditionals_challenge2_2023": {
+          "courseD_bee_conditionals_challenge2_1": "Använd den här slingan för att samla in all nektar (eller honung) från en blomma (eller vaxkaka)."
+        },
         "courseD_video_nestedLoopsArtist": {
           "courseE_artist_ramp8_1": "Du kan ändra detta antal."
         },
@@ -658,6 +737,9 @@
         "courseE_aboutme_2_2021": {
           "": "Klicka här!"
         },
+        "courseE_aboutme_2_2023": {
+          "": "Klicka här för att lägga till kostymer till ditt projekt."
+        },
         "courseE_artist_ramp8": {
           "courseE_artist_ramp8_1": "Du kan ändra detta antal."
         },
@@ -667,10 +749,27 @@
         "coursee_helloworld_events": {
           "hello_world_click_hint": "Lägg till det här händelseblocket på din arbetsyta."
         },
+        "coursee_helloworld_events_2023": {
+          "hello_world_click_hint": "Lägg till det här händelseblocket på din arbetsyta."
+        },
         "coursee_helloworld_freeplay": {
           "costumes_tab": "Klicka här för att lägga till kostymer till ditt projekt."
         },
+        "coursee_helloworld_freeplay_2023": {
+          "costumes_tab": "Klicka här för att lägga till kostymer till ditt projekt."
+        },
         "coursee_helloworld_say": {
+          "hello_world_make_sprite": "Använd det här blocket för att skapa en sprite.",
+          "hello_world_say": "Använd detta block för att få sprites att tala."
+        },
+        "coursee_helloworld_say_2023": {
+          "hello_world_make_sprite": "Använd det här blocket för att skapa en sprite.",
+          "hello_world_say": "Använd detta block för att få sprites att tala."
+        },
+        "csc_animal_adaptations_bugs2": {
+          "hello_world_behavior_blocks": "Använd detta block med något av beteenden nedan."
+        },
+        "ecosystems_helloworld_say_2023": {
           "hello_world_make_sprite": "Använd det här blocket för att skapa en sprite.",
           "hello_world_say": "Använd detta block för att få sprites att tala."
         },
@@ -750,6 +849,12 @@
         "helloworld_animals_sounds": {
           "hello_world_new": "Nytt Block!"
         },
+        "helloworld_bugs_behaviors_2023": {
+          "hello_world_behavior_blocks": "Använd detta block med något av beteenden nedan."
+        },
+        "helloworld_bunny_adaptation_2023": {
+          "hw_Run": "Klicka här för att köra koden."
+        },
         "helloworld_emoji_backgrounds": {
           "hw_background_location": "Använd det här blocket för att ställa in en ny bakgrund."
         },
@@ -788,6 +893,9 @@
         "helloworld_food_backgrounds": {
           "hw_background_location": "Använd det här blocket för att ställa in en ny bakgrund."
         },
+        "helloworld_food_backgrounds_2023": {
+          "hw_background_location": "Använd det här blocket för att ställa in en ny bakgrund."
+        },
         "helloworld_food_backgrounds_soccer-2022": {
           "hw_background_location": "Använd det här blocket för att ställa in en ny bakgrund."
         },
@@ -795,6 +903,9 @@
           "hw_background_location": "Använd det här blocket för att ställa in en ny bakgrund."
         },
         "helloworld_food_behaviors": {
+          "hello_world_behavior_blocks": "Använd detta block med något av beteenden nedan."
+        },
+        "helloworld_food_behaviors_2023": {
           "hello_world_behavior_blocks": "Använd detta block med något av beteenden nedan."
         },
         "helloworld_food_behaviors_soccer-2022": {
@@ -806,6 +917,9 @@
         "helloworld_food_click": {
           "hw_Run": "Klicka här för att köra koden."
         },
+        "helloworld_food_click_2023": {
+          "hw_Run": "Klicka här för att köra koden."
+        },
         "helloworld_food_click_soccer-2022": {
           "hw_Run": "Klicka här för att köra koden."
         },
@@ -813,6 +927,9 @@
           "hw_Run": "Klicka här först!"
         },
         "helloworld_food_costumes": {
+          "hello_world_new": "Nytt Block!"
+        },
+        "helloworld_food_costumes_2023": {
           "hello_world_new": "Nytt Block!"
         },
         "helloworld_food_costumes_soccer-2022": {
@@ -842,6 +959,9 @@
         "helloworld_food_location": {
           "pin": "stift"
         },
+        "helloworld_food_location_2023": {
+          "pin": "stift"
+        },
         "helloworld_food_location_soccer-2022": {
           "pin": "stift"
         },
@@ -849,6 +969,9 @@
           "pin": "stift"
         },
         "helloworld_food_multi": {
+          "pin": "stift"
+        },
+        "helloworld_food_multi_2023": {
           "pin": "stift"
         },
         "helloworld_food_multi_soccer-2022": {
@@ -873,6 +996,10 @@
           "hello_world_new": "Nytt Block!",
           "hello_world_new_block": "Nytt Block!"
         },
+        "helloworld_food_sizes_2023": {
+          "hello_world_new": "Nytt Block!",
+          "hello_world_new_block": "Nytt Block!"
+        },
         "helloworld_food_sizes_soccer-2022": {
           "hello_world_new": "Nytt Block!",
           "hello_world_new_block": "Nytt Block!"
@@ -882,6 +1009,9 @@
           "hello_world_new_block": "Nytt Block!"
         },
         "helloworld_food_sounds": {
+          "hello_world_new": "Nytt Block!"
+        },
+        "helloworld_food_sounds_2023": {
           "hello_world_new": "Nytt Block!"
         },
         "helloworld_food_sounds_soccer-2022": {
@@ -935,7 +1065,14 @@
         "poetry_hoc_addSprites": {
           "poetry_sprite": "Nytt Block!"
         },
+        "poetry_hoc_addSprites_2023": {
+          "poetry_sprite": "Nytt Block!"
+        },
         "poetry_hoc_events1": {
+          "poetry_event": "Nytt Block!",
+          "poetry_foreground": "Nytt Block!"
+        },
+        "poetry_hoc_events1_2023": {
           "poetry_event": "Nytt Block!",
           "poetry_foreground": "Nytt Block!"
         },
@@ -944,7 +1081,14 @@
           "poetry_multiple_sprites": "Nytt Block!",
           "poetry_new_block": "Nytt Block!"
         },
+        "poetry_hoc_freeplay_2023": {
+          "poetry_new_block": "Nytt Block!"
+        },
         "poetry_hoc_sounds": {
+          "poetry_music": "Nytt Block!",
+          "poetry_sound": "Nytt Block!"
+        },
+        "poetry_hoc_sounds_2023": {
           "poetry_music": "Nytt Block!",
           "poetry_sound": "Nytt Block!"
         },
@@ -952,7 +1096,15 @@
           "poetry_sprite_begins": "Nytt Block!",
           "poetry_sprite_stops": "Nytt Block!"
         },
+        "poetry_hoc_spriteBehaviors_2023": {
+          "poetry_sprite_begins": "Nytt Block!",
+          "poetry_sprite_stops": "Nytt Block!"
+        },
         "poetry_hoc_spriteSizes": {
+          "poetry_remove_sprite": "Nytt Block!",
+          "poetry_set_sprite": "Nytt Block!"
+        },
+        "poetry_hoc_spriteSizes_2023": {
           "poetry_remove_sprite": "Nytt Block!",
           "poetry_set_sprite": "Nytt Block!"
         }
