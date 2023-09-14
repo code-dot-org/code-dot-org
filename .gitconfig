@@ -2,4 +2,4 @@
   textconv = dashboard/db/dump_schema_cache.sh
 
 [blame]
-	ignoreRevsFile = .git-blame-ignore-revs
+  ignoreRevsFile = .git-blame-ignore-revs
