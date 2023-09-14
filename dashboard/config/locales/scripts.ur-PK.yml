@@ -55,6 +55,10 @@ ur:
         ai-ethics-2021:
           description_audience: گریڈز 6-8
           title: ہمارے AI کا ضابطہ اخلاق
+        ai-ethics-2023:
+          lessons:
+            lesson-1:
+              name: ہمارے AI کا ضابطہ اخلاق
         aiml-2021:
           title: AI  اور مشین لرننگ ماڈیول
         aiml-2022:

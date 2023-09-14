@@ -1729,3 +1729,7 @@ ur:
             lessonGroup-5:
               display_name: متغیرات
           description_short: کمپیوٹر سائنس بنیادی اصولوں کے تمام تصورات سیکھیں اور اپنا خود کا فن، اسٹوری یا گیم بنائیں۔
+        ai-ethics-2023:
+          lessons:
+            lesson-1:
+              name: ہمارے AI کا ضابطہ اخلاق
