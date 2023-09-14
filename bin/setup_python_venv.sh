@@ -1,4 +1,15 @@
-python3.8 -mvenv pybin
+if [ "$(uname)" = "Darwin" ]; then
+  REQUIREMENTS=requirements-mac.txt
+elif [ "$(uname)" = "Linux" ]; then
+  REQUIREMENTS=requirements.txt
+else
+  echo "$(uname) not supported"
+  exit 1
+fi
+
+PYTHON_FOR_SETUP=python3.8
+
+$PYTHON_FOR_SETUP -mvenv pybin
 source pybin/bin/activate
-python3.8 -m pip install -U pip
-pip install -r requirements.txt
+$PYTHON_FOR_SETUP -m pip install -U pip
+pip install -r $REQUIREMENTS
