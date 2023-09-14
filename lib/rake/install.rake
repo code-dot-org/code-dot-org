@@ -75,7 +75,14 @@ namespace :install do
     end
   end
 
-  tasks = []
+  desc 'Install python virtual env'
+  timed_task_with_logging :pybin do
+    if RakeUtils.local_environment?
+      RakeUtils.system_stream_output 'bash bin/setup_python_venv.sh'
+    end
+  end
+
+  tasks = [:pybin]
   tasks << :hooks if rack_env?(:development)
   tasks << :locals_yml if rack_env?(:development)
   tasks << :apps if CDO.build_apps
