@@ -715,6 +715,392 @@
           "word": "ព្រឹត្តិការណ៍ (Events)",
           "definition": "សកម្មភាពដែលបណ្តាលឱ្យមានអ្វីមួយកើតឡើង។"
         },
+        "code/csc-adaptations/2023": {
+          "word": "កូដ"
+        },
+        "event/csc-adaptations/2023": {
+          "word": "ព្រឹត្តិការណ៍ (Events)"
+        },
+        "behavior/csc-adaptations/2023": {
+          "word": "ឥរិយាបទ"
+        },
+        "event/csc-bookcovers/2023": {
+          "word": "ព្រឹត្តិការណ៍ (Events)",
+          "definition": "សកម្មភាពដែលបណ្តាលឱ្យមានអ្វីមួយកើតឡើង។"
+        },
+        "program/csc-bookcovers/2023": {
+          "word": "កម្មវិធី (Program)"
+        },
+        "code/csc-ecosystems/2023": {
+          "word": "កូដ"
+        },
+        "conditionals/csc-ecosystems/2023": {
+          "word": "លក្ខខណ្ឌ"
+        },
+        "event/csc-ecosystems/2023": {
+          "word": "ព្រឹត្តិការណ៍ (Events)"
+        },
+        "variable/csc-ecosystems/2023": {
+          "word": "អថេរ"
+        },
+        "code/csc-mappinglandmarks/2023": {
+          "word": "កូដ"
+        },
+        "event/csc-mappinglandmarks/2023": {
+          "word": "ព្រឹត្តិការណ៍ (Events)",
+          "definition": "សកម្មភាពដែលបណ្តាលឱ្យមានអ្វីមួយកើតឡើង។"
+        },
+        "artist/csc-starquilts/2023": {
+          "word": "វិចិត្រករ"
+        },
+        "loop/csc-starquilts/2023": {
+          "word": "ប្រតិបត្តិដដែលៗ (Loop)"
+        },
+        "comments/csc-starquilts/2023": {
+          "word": "មតិយោបល់"
+        },
+        "event/csc-timecapsule/2023": {
+          "word": "ព្រឹត្តិការណ៍ (Events)",
+          "definition": "សកម្មភាពដែលបណ្តាលឱ្យមានអ្វីមួយកើតឡើង។"
+        },
+        "code/poetry/2023": {
+          "word": "កូដ"
+        },
+        "event/poetry/2023": {
+          "word": "ព្រឹត្តិការណ៍ (Events)",
+          "definition": "សកម្មភាពដែលបណ្តាលឱ្យមានអ្វីមួយកើតឡើង។"
+        },
+        "program/poetry/2023": {
+          "word": "កម្មវិធី (Program)"
+        },
+        "algorithm/coursea/2023": {
+          "word": "ក្បួនដោះស្រាយ (Algorithm)",
+          "definition": "គឺជាបញ្ជី​​ ជំហាននៃពាក្យណែនាំ ឬពាក្យបញ្ជាដើម្បីបញ្ចប់ កិច្ចការមួយ។"
+        },
+        "debugging/coursea/2023": {
+          "word": "ការបំបាត់កំហុស (Debugging)",
+          "definition": "ស្វែងរកកំហុសនិងដោះស្រាយបញ្ហានៅក្នុង algorithm ឬកម្មវិធី។"
+        },
+        "program/coursea/2023": {
+          "word": "កម្មវិធី (Program)",
+          "definition": "ជាកម្មវិធីដែលបង្កើតដោយបណ្ដុំនៃកូដនៃ Algorithm ដែលអាច ដំណើរការបានដោយម៉ាស៊ីន។"
+        },
+        "click/coursea/2023": {
+          "word": "ចុច (Click)",
+          "definition": "ចុចប៊ូតុងខាងឆ្វេងរបស់កណ្ដុរ"
+        },
+        "double_click/coursea/2023": {
+          "word": "ចុច​ពីរ​ដង (Double-Click)",
+          "definition": "ចុចប៊ូតុងខាងឆ្វេងពីរដងរបស់កណ្ដុរយ៉ាងលឿន"
+        },
+        "drag/coursea/2023": {
+          "word": "អូស (Drag)",
+          "definition": "ចុចប៊ូតុងខាងឆ្វេងរបស់កណ្ដុរហើយអ្នកសង្កត់នៅពេលអ្នកផ្លាស់ ទីទ្រនិចកណ្តុរទៅទីតាំងថ្មី។"
+        },
+        "drop/coursea/2023": {
+          "word": "ទម្លាក់ (Drop)",
+          "definition": "លែងប៊ូតុងដែលបានចុចប៊ូតុងខាងឆ្វេងរបស់កណ្ដុរដើម្បី \"អនុញ្ញាតឱ្យវាទៅ\" នៃធាតុដែលអ្នកកំពុងអូស"
+        },
+        "bug/coursea/2023": {
+          "word": "កំហុស (Bug)",
+          "definition": " ផ្នែកនៃកម្មវិធីដែលមិនដំណើរការត្រឹមត្រូវ។"
+        },
+        "programming/coursea/2023": {
+          "word": "ការសរសេរប្រូក្រាម (Programming)",
+          "definition": "របៀបនៃការបង្កើតកម្មវិធី។"
+        },
+        "loop/coursea/2023": {
+          "word": "ប្រតិបត្តិដដែលៗ (Loop)",
+          "definition": "ការធ្វើអ្វីមួយម្ដងហើយម្ដងទៀតដែលៗវិលជុំ។"
+        },
+        "repeat/coursea/2023": {
+          "word": "ធ្វើម្ដងទៀត (Repeat)",
+          "definition": "ការធ្វើអ្វីមួយម្ដងទៀត។"
+        },
+        "event/coursea/2023": {
+          "word": "ព្រឹត្តិការណ៍ (Events)",
+          "definition": "សកម្មភាពដែលបណ្តាលឱ្យមានអ្វីមួយកើតឡើង។"
+        },
+        "algorithm/courseb/2023": {
+          "word": "ក្បួនដោះស្រាយ (Algorithm)",
+          "definition": "គឺជាបញ្ជី​​ ជំហាននៃពាក្យណែនាំ ឬពាក្យបញ្ជាដើម្បីបញ្ចប់ កិច្ចការមួយ។"
+        },
+        "bug/courseb/2023": {
+          "word": "កំហុស (Bug)",
+          "definition": " ផ្នែកនៃកម្មវិធីដែលមិនដំណើរការត្រឹមត្រូវ។"
+        },
+        "debugging/courseb/2023": {
+          "word": "ការបំបាត់កំហុស (Debugging)",
+          "definition": "ស្វែងរកកំហុសនិងដោះស្រាយបញ្ហានៅក្នុង algorithm ឬកម្មវិធី។"
+        },
+        "click/courseb/2023": {
+          "word": "ចុច (Click)",
+          "definition": "ចុចប៊ូតុងខាងឆ្វេងរបស់កណ្ដុរ"
+        },
+        "double_click/courseb/2023": {
+          "word": "ចុច​ពីរ​ដង (Double-Click)",
+          "definition": "ចុចប៊ូតុងខាងឆ្វេងពីរដងរបស់កណ្ដុរយ៉ាងលឿន"
+        },
+        "drag/courseb/2023": {
+          "word": "អូស (Drag)",
+          "definition": "ចុចប៊ូតុងខាងឆ្វេងរបស់កណ្ដុរហើយអ្នកសង្កត់នៅពេលអ្នកផ្លាស់ ទីទ្រនិចកណ្តុរទៅទីតាំងថ្មី។"
+        },
+        "drop/courseb/2023": {
+          "word": "ទម្លាក់ (Drop)",
+          "definition": "លែងប៊ូតុងដែលបានចុចប៊ូតុងខាងឆ្វេងរបស់កណ្ដុរដើម្បី \"អនុញ្ញាតឱ្យវាទៅ\" នៃធាតុដែលអ្នកកំពុងអូស"
+        },
+        "program/courseb/2023": {
+          "word": "កម្មវិធី (Program)",
+          "definition": "ជាកម្មវិធីដែលបង្កើតដោយបណ្ដុំនៃកូដនៃ Algorithm ដែលអាច ដំណើរការបានដោយម៉ាស៊ីន។"
+        },
+        "programming/courseb/2023": {
+          "word": "ការសរសេរប្រូក្រាម (Programming)",
+          "definition": "របៀបនៃការបង្កើតកម្មវិធី។"
+        },
+        "persistence/courseb/2023": {
+          "word": "ការតស៊ូព្យាយាម (Persistence)",
+          "definition": "ការព្យាយាមម្តងហើយម្តងទៀតទោះក្នុង ពេលបាកខ្លាំងក៏ដោយ។"
+        },
+        "loop/courseb/2023": {
+          "word": "ប្រតិបត្តិដដែលៗ (Loop)",
+          "definition": "ការធ្វើអ្វីមួយម្ដងហើយម្ដងទៀតដែលៗវិលជុំ។"
+        },
+        "repeat/courseb/2023": {
+          "word": "ធ្វើម្ដងទៀត (Repeat)",
+          "definition": "ការធ្វើអ្វីមួយម្ដងទៀត។"
+        },
+        "event/courseb/2023": {
+          "word": "ព្រឹត្តិការណ៍ (Events)",
+          "definition": "សកម្មភាពដែលបណ្តាលឱ្យមានអ្វីមួយកើតឡើង។"
+        },
+        "algorithm/coursec/2023": {
+          "word": "ក្បួនដោះស្រាយ (Algorithm)",
+          "definition": "គឺជាបញ្ជី​​ ជំហាននៃពាក្យណែនាំ ឬពាក្យបញ្ជាដើម្បីបញ្ចប់ កិច្ចការមួយ។"
+        },
+        "bug/coursec/2023": {
+          "word": "កំហុស (Bug)",
+          "definition": " ផ្នែកនៃកម្មវិធីដែលមិនដំណើរការត្រឹមត្រូវ។"
+        },
+        "debugging/coursec/2023": {
+          "word": "ការបំបាត់កំហុស (Debugging)",
+          "definition": "ស្វែងរកកំហុសនិងដោះស្រាយបញ្ហានៅក្នុង algorithm ឬកម្មវិធី។"
+        },
+        "program/coursec/2023": {
+          "word": "កម្មវិធី (Program)",
+          "definition": "ជាកម្មវិធីដែលបង្កើតដោយបណ្ដុំនៃកូដនៃ Algorithm ដែលអាច ដំណើរការបានដោយម៉ាស៊ីន។"
+        },
+        "sequencing/coursec/2023": {
+          "word": "លំដាប់"
+        },
+        "persistence/coursec/2023": {
+          "word": "ការតស៊ូព្យាយាម (Persistence)"
+        },
+        "programming/coursec/2023": {
+          "word": "ការសរសេរប្រូក្រាម (Programming)",
+          "definition": "របៀបនៃការបង្កើតកម្មវិធី។"
+        },
+        "loop/coursec/2023": {
+          "word": "ប្រតិបត្តិដដែលៗ (Loop)",
+          "definition": "ការធ្វើអ្វីមួយម្ដងហើយម្ដងទៀតដែលៗវិលជុំ។"
+        },
+        "repeat/coursec/2023": {
+          "word": "ធ្វើម្ដងទៀត (Repeat)",
+          "definition": "ការធ្វើអ្វីមួយម្ដងទៀត។"
+        },
+        "event/coursec/2023": {
+          "word": "ព្រឹត្តិការណ៍ (Events)",
+          "definition": "សកម្មភាពដែលបណ្តាលឱ្យមានអ្វីមួយកើតឡើង។"
+        },
+        "algorithm/coursed/2023": {
+          "word": "ក្បួនដោះស្រាយ (Algorithm)",
+          "definition": "គឺជាបញ្ជី​​ ជំហាននៃពាក្យណែនាំ ឬពាក្យបញ្ជាដើម្បីបញ្ចប់ កិច្ចការមួយ។"
+        },
+        "program/coursed/2023": {
+          "word": "កម្មវិធី (Program)",
+          "definition": "ជាកម្មវិធីដែលបង្កើតដោយបណ្ដុំនៃកូដនៃ Algorithm ដែលអាច ដំណើរការបានដោយម៉ាស៊ីន។"
+        },
+        "bug/coursed/2023": {
+          "word": "កំហុស (Bug)",
+          "definition": " ផ្នែកនៃកម្មវិធីដែលមិនដំណើរការត្រឹមត្រូវ។"
+        },
+        "debugging/coursed/2023": {
+          "word": "ការបំបាត់កំហុស (Debugging)",
+          "definition": "ស្វែងរកកំហុសនិងដោះស្រាយបញ្ហានៅក្នុង algorithm ឬកម្មវិធី។"
+        },
+        "loop/coursed/2023": {
+          "word": "ប្រតិបត្តិដដែលៗ (Loop)",
+          "definition": "ការធ្វើអ្វីមួយម្ដងហើយម្ដងទៀតដែលៗវិលជុំ។"
+        },
+        "programming/coursed/2023": {
+          "word": "ការសរសេរប្រូក្រាម (Programming)",
+          "definition": "របៀបនៃការបង្កើតកម្មវិធី។"
+        },
+        "persistence/coursed/2023": {
+          "word": "ការតស៊ូព្យាយាម (Persistence)",
+          "definition": "ការព្យាយាមម្តងហើយម្តងទៀតទោះក្នុង ពេលបាកខ្លាំងក៏ដោយ។"
+        },
+        "event/coursed/2023": {
+          "word": "ព្រឹត្តិការណ៍ (Events)",
+          "definition": "សកម្មភាពដែលបណ្តាលឱ្យមានអ្វីមួយកើតឡើង។"
+        },
+        "repeat/coursed/2023": {
+          "word": "ធ្វើម្ដងទៀត (Repeat)",
+          "definition": "ការធ្វើអ្វីមួយម្ដងទៀត។"
+        },
+        "conditionals/coursed/2023": {
+          "word": "លក្ខខណ្ឌ"
+        },
+        "behavior/coursee/2023": {
+          "word": "ឥរិយាបទ"
+        },
+        "loop/coursee/2023": {
+          "word": "ប្រតិបត្តិដដែលៗ (Loop)",
+          "definition": "ការធ្វើអ្វីមួយម្ដងហើយម្ដងទៀតដែលៗវិលជុំ។"
+        },
+        "repeat/coursee/2023": {
+          "word": "ធ្វើម្ដងទៀត (Repeat)",
+          "definition": "ការធ្វើអ្វីមួយម្ដងទៀត។"
+        },
+        "function/coursee/2023": {
+          "word": "អនុគមន៍"
+        },
+        "conditionals/coursee/2023": {
+          "word": "លក្ខខណ្ឌ"
+        },
+        "copyright/coursee/2023": {
+          "word": "រក្សាសិទ្ធ"
+        },
+        "define/coursee/2023": {
+          "word": "កំណត់"
+        },
+        "algorithm/coursef/2023": {
+          "word": "ក្បួនដោះស្រាយ (Algorithm)"
+        },
+        "behavior/coursef/2023": {
+          "word": "ឥរិយាបទ"
+        },
+        "program/coursef/2023": {
+          "word": "កម្មវិធី (Program)",
+          "definition": "ជាកម្មវិធីដែលបង្កើតដោយបណ្ដុំនៃកូដនៃ Algorithm ដែលអាច ដំណើរការបានដោយម៉ាស៊ីន។"
+        },
+        "event/coursef/2023": {
+          "word": "ព្រឹត្តិការណ៍ (Events)",
+          "definition": "សកម្មភាពដែលបណ្តាលឱ្យមានអ្វីមួយកើតឡើង។"
+        },
+        "variable/coursef/2023": {
+          "word": "អថេរ"
+        },
+        "input/coursef/2023": {
+          "word": "ធាតុបញ្ចូល"
+        },
+        "define/coursef/2023": {
+          "word": "កំណត់"
+        },
+        "algorithm/express/2023": {
+          "word": "ក្បួនដោះស្រាយ (Algorithm)",
+          "definition": "គឺជាបញ្ជី​​ ជំហាននៃពាក្យណែនាំ ឬពាក្យបញ្ជាដើម្បីបញ្ចប់ កិច្ចការមួយ។"
+        },
+        "bug/express/2023": {
+          "word": "កំហុស (Bug)",
+          "definition": " ផ្នែកនៃកម្មវិធីដែលមិនដំណើរការត្រឹមត្រូវ។"
+        },
+        "debugging/express/2023": {
+          "word": "ការបំបាត់កំហុស (Debugging)",
+          "definition": "ស្វែងរកកំហុសនិងដោះស្រាយបញ្ហានៅក្នុង algorithm ឬកម្មវិធី។"
+        },
+        "sequencing/express/2023": {
+          "word": "លំដាប់"
+        },
+        "program/express/2023": {
+          "word": "កម្មវិធី (Program)",
+          "definition": "ជាកម្មវិធីដែលបង្កើតដោយបណ្ដុំនៃកូដនៃ Algorithm ដែលអាច ដំណើរការបានដោយម៉ាស៊ីន។"
+        },
+        "programming/express/2023": {
+          "word": "ការសរសេរប្រូក្រាម (Programming)",
+          "definition": "របៀបនៃការបង្កើតកម្មវិធី។"
+        },
+        "behavior/express/2023": {
+          "word": "ឥរិយាបទ"
+        },
+        "event/express/2023": {
+          "word": "ព្រឹត្តិការណ៍ (Events)",
+          "definition": "សកម្មភាពដែលបណ្តាលឱ្យមានអ្វីមួយកើតឡើង។"
+        },
+        "loop/express/2023": {
+          "word": "ប្រតិបត្តិដដែលៗ (Loop)",
+          "definition": "ការធ្វើអ្វីមួយម្ដងហើយម្ដងទៀតដែលៗវិលជុំ។"
+        },
+        "repeat/express/2023": {
+          "word": "ធ្វើម្ដងទៀត (Repeat)",
+          "definition": "ការធ្វើអ្វីមួយម្ដងទៀត។"
+        },
+        "conditionals/express/2023": {
+          "word": "លក្ខខណ្ឌ"
+        },
+        "function/express/2023": {
+          "word": "អនុគមន៍"
+        },
+        "variable/express/2023": {
+          "word": "អថេរ"
+        },
+        "define/express/2023": {
+          "word": "កំណត់"
+        },
+        "click/pre-express/2023": {
+          "word": "ចុច (Click)",
+          "definition": "ចុចប៊ូតុងខាងឆ្វេងរបស់កណ្ដុរ"
+        },
+        "double_click/pre-express/2023": {
+          "word": "ចុច​ពីរ​ដង (Double-Click)",
+          "definition": "ចុចប៊ូតុងខាងឆ្វេងពីរដងរបស់កណ្ដុរយ៉ាងលឿន"
+        },
+        "drag/pre-express/2023": {
+          "word": "អូស (Drag)",
+          "definition": "ចុចប៊ូតុងខាងឆ្វេងរបស់កណ្ដុរហើយអ្នកសង្កត់នៅពេលអ្នកផ្លាស់ ទីទ្រនិចកណ្តុរទៅទីតាំងថ្មី។"
+        },
+        "drop/pre-express/2023": {
+          "word": "ទម្លាក់ (Drop)",
+          "definition": "លែងប៊ូតុងដែលបានចុចប៊ូតុងខាងឆ្វេងរបស់កណ្ដុរដើម្បី \"អនុញ្ញាតឱ្យវាទៅ\" នៃធាតុដែលអ្នកកំពុងអូស"
+        },
+        "algorithm/pre-express/2023": {
+          "word": "ក្បួនដោះស្រាយ (Algorithm)",
+          "definition": "គឺជាបញ្ជី​​ ជំហាននៃពាក្យណែនាំ ឬពាក្យបញ្ជាដើម្បីបញ្ចប់ កិច្ចការមួយ។"
+        },
+        "bug/pre-express/2023": {
+          "word": "កំហុស (Bug)",
+          "definition": " ផ្នែកនៃកម្មវិធីដែលមិនដំណើរការត្រឹមត្រូវ។"
+        },
+        "debugging/pre-express/2023": {
+          "word": "ការបំបាត់កំហុស (Debugging)",
+          "definition": "ស្វែងរកកំហុសនិងដោះស្រាយបញ្ហានៅក្នុង algorithm ឬកម្មវិធី។"
+        },
+        "program/pre-express/2023": {
+          "word": "កម្មវិធី (Program)",
+          "definition": "ជាកម្មវិធីដែលបង្កើតដោយបណ្ដុំនៃកូដនៃ Algorithm ដែលអាច ដំណើរការបានដោយម៉ាស៊ីន។"
+        },
+        "programming/pre-express/2023": {
+          "word": "ការសរសេរប្រូក្រាម (Programming)",
+          "definition": "របៀបនៃការបង្កើតកម្មវិធី។"
+        },
+        "persistence/pre-express/2023": {
+          "word": "ការតស៊ូព្យាយាម (Persistence)",
+          "definition": "ការព្យាយាមម្តងហើយម្តងទៀតទោះក្នុង ពេលបាកខ្លាំងក៏ដោយ។"
+        },
+        "loop/pre-express/2023": {
+          "word": "ប្រតិបត្តិដដែលៗ (Loop)",
+          "definition": "ការធ្វើអ្វីមួយម្ដងហើយម្ដងទៀតដែលៗវិលជុំ។"
+        },
+        "repeat/pre-express/2023": {
+          "word": "ធ្វើម្ដងទៀត (Repeat)",
+          "definition": "ការធ្វើអ្វីមួយម្ដងទៀត។"
+        },
+        "event/pre-express/2023": {
+          "word": "ព្រឹត្តិការណ៍ (Events)",
+          "definition": "សកម្មភាពដែលបណ្តាលឱ្យមានអ្វីមួយកើតឡើង។"
+        },
+        "algorithm/how-ai-works/2023": {
+          "word": "ក្បួនដោះស្រាយ (Algorithm)"
+        },
         "conditionals/aquatic/unversioned": {
           "word": "លក្ខខណ្ឌ"
         },
