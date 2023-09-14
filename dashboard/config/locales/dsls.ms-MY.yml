@@ -407,6 +407,11 @@ ms-MY:
           # Peristiwa Besar
 
           Dalam sains komputer, peristiwa ialah tindakan yang dipantau oleh komputer. Dalam pelajaran ini anda akan bertindak balas dengan berbeza bergantung pada butang yang ditekan.
+      BigEvent-Unplugged2022_2023:
+        markdown: |
+          # Peristiwa Besar
+
+          Dalam sains komputer, peristiwa ialah tindakan yang dipantau oleh komputer. Dalam pelajaran ini anda akan bertindak balas dengan berbeza bergantung pada butang yang ditekan.
       BigEvent-Unplugged_2020:
         markdown: |
           # Peristiwa Besar
@@ -425,6 +430,13 @@ ms-MY:
 
           ![](https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)
       BinaryBracelets-Unplugged2022:
+        markdown: |
+          # Gelang Binari
+
+          Cipta gelang yang mewakili nama anda dalam sistem yang difahami oleh komputer!
+
+          ![](https://images.code.org/ed15a484276c0989e4adb5daf480f68a-image-1557870226222.png)
+      BinaryBracelets-Unplugged2022_2023:
         markdown: |
           # Gelang Binari
 
@@ -2136,6 +2148,11 @@ ms-MY:
           # Bersyarat dengan Kad
 
           Main permainan kad dan cipta peraturan seperti "Jika saya mencabut kad merah, saya dapat mata" dan "Jika saya mencabut kad hitam, anda akan dapat mata."
+      ConditionalsWithCards-Unplugged2022_2023:
+        markdown: |
+          # Bersyarat dengan Kad
+
+          Main permainan kad dan cipta peraturan seperti "Jika saya mencabut kad merah, saya dapat mata" dan "Jika saya mencabut kad hitam, anda akan dapat mata."
       ConditionalsWithCards-Unplugged_2020:
         markdown: |
           # Bersyarat dengan Kad
@@ -2151,9 +2168,18 @@ ms-MY:
           Lengkapkan seberapa banyak yang anda boleh. Teruskan berlatih dengan gelung
           dan Artis!
         display_name: Latihan Artis
+      CourseE_Artist_Practice_2023:
+        description: Usaha yang hebat setakat ini! Pilih aktiviti anda yang seterusnya.
+          Lengkapkan seberapa banyak yang anda boleh. Teruskan berlatih dengan gelung
+          dan Artis!
+        display_name: Latihan Artis
       CourseE_Lesson_11_Artist_Practice_2022:
         display_name: Latihan Artis
+      CourseE_Lesson_11_Artist_Practice_2023:
+        display_name: Latihan Artis
       CourseE_Lesson_7_Artist_Practice_2022:
+        display_name: Latihan Artis
+      CourseE_Lesson_7_Artist_Practice_2023:
         display_name: Latihan Artis
       CourseF_outbreak_story:
         content1: huraian sini
@@ -2343,7 +2369,119 @@ ms-MY:
           selesai, kongsi simulasi anda dengan orang lain. Kongsi mesej anda mengenai
           apa yang boleh kami lakukan untuk membantu menjaga kesihatan orang lain
           ketika virus merebak ke bandar."
+      CourseF_outbreak_story2022_2022_pilot_-2022-2_2023:
+        content1: penerangan di sini
+        markdown: "# Wabak: Kod Simulasi Anda Yang Tersendiri\n\n## Selamat datang
+          ke Bandar Raksasa!\nBandar Raksasa dulunya tempat yang gembira dan sihat.
+          Raksasa Bandar Raksasa suka berkeliaran untuk melawat rakan mereka. \n\n<img
+          src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\nPada suatu hari, satu raksasa mula jatuh sakit. Raksasa
+          itu terkena **virus**! Virus adalah kuman kecil yang boleh menyebabkan anda
+          sakit. Raksasa lain tidak terlalu risau. Mereka terus melawat rakan mereka.\n\n<img
+          src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\nTidak lama kemudian, dua lagi raksasa jatuh sakit.
+          Ia virus yang sama! Maknanya mereka terkena virus dari rakan mereka.\n\n<img
+          src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\nVirus tersebut merebak secara perlahan kepada raksasa
+          yang berdekatan. Raksasa yang sihat mula risau bahawa mereka semua akan
+          jatuh sakit. Raksasa yang sakit mula risau bahawa mereka akan menyebarkan
+          virus kepada yang lain.\n\n<img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/f30010a430a4189a734467094842b39d-image-1603134238257.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/3b55881f776348c6eb32379e4cbd34e1-image-1603133896503.png\"
+          style=\"width:8%\">\n\n\n<div style=\"display: inline-block\">\n<img src=\"https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png\"
+          style=\"float:right; width:30%\">\n\n## Menghentikan penyebaran\nNasib baik,
+          selepas mengkaji virus, jiran Bandar Raksasa membuat penemuan penting. Mereka
+          sedar bahawa penyebaran virus berkurangan jika mereka memakai pelitup atas
+          mulut mereka. Dengan pelitup muka, raksasa yang sakit kurang berkemungkinan
+          untuk menyebarkan virus kepada raksasa sihat.\n\n<img src=\"https://images.code.org/c98f28f9bf6a027143592109d59ee484-image-1603134766360.png\"
+          style=\"width:8%\"> <img src=\"https://images.code.org/bac9dbfaf1815c6627fc24e8e6db396d-image-1603134760456.png\"
+          style=\"width:8%\">\n\n</div>\n\n<img src=\"https://images.code.org/ef7499758496b39bcccc24aabd2af5d7-image-1603137920037.2020-10-19
+          16_04_58.gif\" style=\"float:left; width:25%; padding-right:25px\">\n\n##
+          Apa yang berlaku seterusnya?\n\nHari ini, anda akan menulis kod untuk mencipta
+          dan menjalankan **simulasi** wabak virus anda yang tersendiri di Bandar
+          Raksasa.  Simulasi adalah model komputer mengenai proses atau sistem. Belajar
+          mengekod dan membuat ramalan tentang apa yang akan berlaku kepada jiran
+          Bandar Raksasa.\n\n<img src=\"https://images.code.org/fcbfd250d58652bdfd6393ec4f2fe2dd-image-1603134705074.png\"
+          style=\"float:right; width:15%\">\n\n* *Seberapa cepat virus merebak?*\n\n*
+          *Adakah semua orang akan jatuh sakit?*\n\n* *Bagaimana pelitup muka membantu?*\n\n\nSetelah
+          selesai, kongsi simulasi anda dengan orang lain. Kongsi mesej anda mengenai
+          apa yang boleh kami lakukan untuk membantu menjaga kesihatan orang lain
+          ketika virus merebak ke bandar."
       CourseF_outbreak_story22022_2022_pilot_-2022-2:
+        content1: penerangan di sini
+        markdown: "# Wabak: Berfikir Seperti Saintis\n\n<img src=\"https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png\"
+          style=\"float:right; width:30%\">\n\nSimulasi adalah cara yang hebat untuk
+          mempelajari perkara-perkara yang sukar diperhatikan di dunia nyata. Ia membantu
+          saintis menyelesaikan masalah dan menguji idea baru dengan selamat dan cekap.
+          Simulasi anda adalah cara untuk menunjukkan bagaimana wabak virus di Bandar
+          Raksasa mungkin berlaku.\n\n## Tetapkan Semula dan Main Semula!\nWalaupun
+          anda menulis kod sendiri, ia mustahil untuk mengetahui dengan tepat apa
+          yang akan berlaku semasa anda menekan jalan. Raksasa berkeliaran secara
+          rawak, jadi anda tidak tahu sekiranya virus itu akan tersebar dengan cepat
+          atau lambat. Setiap kali anda menukar kod anda, pastikan untuk menjalankan
+          simulasi anda lebih dari sekali. Perkara tidak akan berlaku dengan cara
+          yang sama dua kali!\n\n## Mengumpul Data\nCuba menulis pemerhatian anda
+          semasa menjalankan simulasi anda. Anda boleh mengira bilangan raksasa yang
+          jatuh sakit atau menggunakan pemasa untuk melihat seberapa cepat perkara
+          itu berlaku. Contohnya, berapa lama biasanya semua raksasa jatuh sakit jika
+          tiada yang mempunyai pelitup? \n\n## Membuat Ramalan\nSekiranya anda memahami
+          model anda, anda boleh menggunakannya untuk membuat ramalan. Anda juga boleh
+          mengubah cara simulasi anda berjalan dan meneka apa yang akan berlaku secara
+          berbeza. Sebagai contoh:\n* Apa yang akan berlaku sekiranya terdapat dua
+          kali ganda raksasa?\n* Apa yang akan berlaku sekiranya raksasa bergerak
+          pada separuh kelajuan?\n\n<img src=\"https://images.code.org/2e83373ffd346ce3f42917a0624d441c-image-1603749526420.png\"
+          style=\"float:right\">\n\n## Adakah Monster Town seperti dunia nyata?\nTerdapat
+          had realistik kepada model. \n* Apakah persamaan simulasi wabak anda dengan
+          wabak virus dunia nyata?\n* Apakah perbezaannya?\nSelepas anda menyelesaikan
+          aktiviti ini, bincangkan soalan-soalan ini dengan guru atau keluarga anda!\n\n##
+          Apa lagi yang boleh dimodel?\nAnda telah mencipta model yang berfungsi untuk
+          wabak di Bandar Raksasa. Apakah perkara yang tidak dapat dilakukan oleh
+          simulasi anda atau anda perkara yang diharapkan? Tekan teruskan untuk terus
+          berjalan dan belajar mencipta lebih banyak model:\n* Menambah bilangan raksasa
+          dalam simulasi\n* Membantu raksasa pulih dari virus\n* Kebarangkalian, imuniti,
+          vaksin, dan banyak lagi!\n\nAnda juga boleh berkongsi model simulasi anda
+          dengan orang lain, atau berkongsi mesej tentang apa yang anda rasa dapat
+          kami lakukan untuk membantu menjaga kesihatan orang lain ketika virus merebak
+          ke bandar. "
+      CourseF_outbreak_story22022_2022_pilot_-2022-2_2023:
         content1: penerangan di sini
         markdown: "# Wabak: Berfikir Seperti Saintis\n\n<img src=\"https://images.code.org/89376b9ebd5fcee77545f13a7a444430-image-1603135356392.png\"
           style=\"float:right; width:30%\">\n\nSimulasi adalah cara yang hebat untuk
@@ -2503,6 +2641,16 @@ ms-MY:
           * Mereka bentuk aplikasi yang boleh diakses untuk individu kurang upaya membuatkan aplikasi tersebut menjadi lebih baik untuk individu lain juga!
 
           ![](https://images.code.org/0c670d0d9078657a870df0ca799492cb-image-1557166420066.png)
+      DesigningForAccessibilityMarkdownLevel2022_2023:
+        markdown: |
+          # Mereka Bentuk untuk Aksesibiliti
+
+          * Dalam dunia sains komputer, **aksesibiliti** ialah tmengenai mencipta teknologi untuk individu kurang upaya.
+          * Ketidakupayaan termasuk fizikal, pendengaran, penglihatan dan lain-lain.
+          * Ketidakupayaan adalah pelbagai dan memberi kesan kepada individu dalam cara berbeza, termasuk cara mereka menggunakan teknologi seperti **aplikasi telefon pintar**.
+          * Mereka bentuk aplikasi yang boleh diakses untuk individu kurang upaya membuatkan aplikasi tersebut menjadi lebih baik untuk individu lain juga!
+
+          ![](https://images.code.org/0c670d0d9078657a870df0ca799492cb-image-1557166420066.png)
       DesigningForAccessibilityMarkdownLevel_2019:
         markdown: |
           # Mereka Bentuk untuk Aksesibiliti
@@ -2543,6 +2691,11 @@ ms-MY:
           # Perkongsian Digital
 
           Dalam pelajaran ini, anda akan memberikan pertimbangan kepada cabaran dan manfaat menghormati pemilikan dan hak cipta, terutamanya dalam persekitaran digital.
+      DigitalSharing-Unplugged2022_2023:
+        markdown: |
+          # Perkongsian Digital
+
+          Dalam pelajaran ini, anda akan memberikan pertimbangan kepada cabaran dan manfaat menghormati pemilikan dan hak cipta, terutamanya dalam persekitaran digital.
       DigitalSharing-Unplugged_2020:
         markdown: |
           # Perkongsian Digital
@@ -2559,6 +2712,11 @@ ms-MY:
 
           Dalam pelajaran ini, anda akan belajar menggunakan dan menulis cerita ruang kosong. Tonton video ini untuk mengetahui cara perkara ini mempunyai kaitan dengan sains komputer.
       EnvelopeVariables-Unplugged_2021_22022_2022_pilot_-2022-2:
+        markdown: |
+          # Cerita Ruang Kosong
+
+          Dalam pelajaran ini, anda akan belajar menggunakan dan menulis cerita ruang kosong. Tonton video ini untuk mengetahui cara perkara ini mempunyai kaitan dengan sains komputer.
+      EnvelopeVariables-Unplugged_2021_22022_2022_pilot_-2022-2_2023:
         markdown: |
           # Cerita Ruang Kosong
 
@@ -2591,6 +2749,11 @@ ms-MY:
           # Menjadi Bergelung
 
           Pelajaran ini memperkenalkan konsep pengaturcaraan gelung melalui aktiviti menari.
+      GettingLoopy-Unplugged2022_2023:
+        markdown: |-
+          # Menjadi Bergelung
+
+          Pelajaran ini memperkenalkan konsep pengaturcaraan gelung melalui aktiviti menari.
       GettingLoopy-Unplugged_2020:
         markdown: |-
           # Menjadi Bergelung
@@ -2611,6 +2774,11 @@ ms-MY:
           # Pengaturcaraan Kertas Graf
 
           Tuliskan algoritma yang boleh digunakan oleh rakan sekelas anda untuk melukis gambar.
+      GraphPaperProgramming-Unplugged2022_2023:
+        markdown: |
+          # Pengaturcaraan Kertas Graf
+
+          Tuliskan algoritma yang boleh digunakan oleh rakan sekelas anda untuk melukis gambar.
       GraphPaperProgramming-Unplugged_2020:
         markdown: |
           # Pengaturcaraan Kertas Graf
@@ -2627,6 +2795,11 @@ ms-MY:
 
           Cipta algoritma untuk menggerakkan watak melalui pagar sesat.
       HappyMaps-Unplugged2022:
+        markdown: |
+          # Peta Bahagia
+
+          Cipta algoritma untuk menggerakkan watak melalui pagar sesat.
+      HappyMaps-Unplugged2022_2023:
         markdown: |
           # Peta Bahagia
 
@@ -2748,6 +2921,11 @@ ms-MY:
 
           Bina Internet anda sendiri di dalam kelas hanya menggunakan helaian kertas.
       Internet-Unplugged2022_2022_pilot_-2022-2:
+        markdown: |-
+          # Internet
+
+          Bina Internet anda sendiri di dalam kelas hanya menggunakan helaian kertas.
+      Internet-Unplugged2022_2022_pilot_-2022-2_2023:
         markdown: |-
           # Internet
 
@@ -2959,6 +3137,11 @@ ms-MY:
           # Cepat, Cepat
 
           Gunakan peta dan berikan perintah untuk mencapai matlamat.
+      MoveItMoveIt-Unplugged2022_2023:
+        markdown: |-
+          # Cepat, Cepat
+
+          Gunakan peta dan berikan perintah untuk mencapai matlamat.
       MoveItMoveIt-Unplugged_2020:
         markdown: |-
           # Cepat, Cepat
@@ -2991,6 +3174,11 @@ ms-MY:
           # Rakan Robotik Bergelung Saya
 
           Buatkan atur cara anda lebih pendek dengan menggunakan gelung!
+      MyLoopyRoboticFriends-Unplugged2022_2023:
+        markdown: |
+          # Rakan Robotik Bergelung Saya
+
+          Buatkan atur cara anda lebih pendek dengan menggunakan gelung!
       MyLoopyRoboticFriends-Unplugged_2020:
         markdown: |
           # Rakan Robotik Bergelung Saya
@@ -3007,6 +3195,11 @@ ms-MY:
 
           Belajar mengatur cara dengan menulis kod untuk rakan anda!
       MyRoboticFriends-Unplugged2022:
+        markdown: |
+          # Rakan Robotik Saya
+
+          Belajar mengatur cara dengan menulis kod untuk rakan anda!
+      MyRoboticFriends-Unplugged2022_2023:
         markdown: |
           # Rakan Robotik Saya
 
@@ -3551,6 +3744,11 @@ ms-MY:
           # Kuasa Kata-kata
 
           ## Apakah yang perlu anda lakukan apabila seseorang menggunakan bahasa kesat atau menyakitkan hati dalam internet?
+      PowerOfWords-Unplugged2022_2022_pilot_-2022-2_2023:
+        markdown: |
+          # Kuasa Kata-kata
+
+          ## Apakah yang perlu anda lakukan apabila seseorang menggunakan bahasa kesat atau menyakitkan hati dalam internet?
       PowerOfWords-Unplugged_2020:
         markdown: |
           # Kuasa Kata-kata
@@ -3564,6 +3762,11 @@ ms-MY:
       Prepare for your presentation:
         content1: penerangan di sini
       PrivatePersonalInformation-Unplugged2022:
+        markdown: |
+          # Maklumat Sulit dan Peribadi
+
+          ## Apakah maklumat tentang diri anda yang BOLEH dikongsi dalam talian?
+      PrivatePersonalInformation-Unplugged2022_2023:
         markdown: |
           # Maklumat Sulit dan Peribadi
 
@@ -3584,6 +3787,11 @@ ms-MY:
 
           Pecah kepada pasukan dan bekerjasama untuk menulis atur cara yang melukis gambar.
       RelayProgramming-Unplugged2022:
+        markdown: |
+          # Pengaturcaraan Geganti
+
+          Pecah kepada pasukan dan bekerjasama untuk menulis atur cara yang melukis gambar.
+      RelayProgramming-Unplugged2022_2023:
         markdown: |
           # Pengaturcaraan Geganti
 
@@ -3609,6 +3817,11 @@ ms-MY:
 
           Gunakan konsep korus dalam lagu untuk belajar tentang mentakrifkan dan memanggil fungsi.
       Songwriting-Unplugged2022:
+        markdown: |
+          # Penulisan Lagu
+
+          Gunakan konsep korus dalam lagu untuk belajar tentang mentakrifkan dan memanggil fungsi.
+      Songwriting-Unplugged2022_2023:
         markdown: |
           # Penulisan Lagu
 
@@ -3721,6 +3934,15 @@ ms-MY:
         questions:
         - {}
       TheRightAppMarkdownLevel2022:
+        markdown: |
+          # Aplikasi yang Betul
+
+          * Pada masa kini, semua individu menggunakan komputer terutamanya telefon pintar.
+          * Aplikasi telefon pintar membantu orang ramai melakukan banyak perkara seperti bercakap dengan rakan, mendengar muzik, membeli-belah, atau hanya melayari laman web.
+          * Adalah penting untuk pengatur cara memahami keperluan individu lain dan mereka bentuk aplikasi dengan mengambil kira perkara tersebut!
+
+          ![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)
+      TheRightAppMarkdownLevel2022_2023:
         markdown: |
           # Aplikasi yang Betul
 
@@ -4153,11 +4375,19 @@ ms-MY:
         description: Anda telah sampai pada pelajaran terakhir! Pilih projek untuk
           dicipta.
         display_name: Akhir Projek Kursus
+      courseAB_EOC2022_2023:
+        description: Anda telah sampai pada pelajaran terakhir! Pilih projek untuk
+          dicipta.
+        display_name: Akhir Projek Kursus
       courseAB_EOC_2021:
         description: Anda telah sampai pada pelajaran terakhir! Pilih projek untuk
           dicipta.
         display_name: Akhir Projek Kursus
       courseB_EOC2022:
+        description: Anda telah sampai pada pelajaran terakhir! Pilih projek untuk
+          dicipta.
+        display_name: Akhir Projek Kursus
+      courseB_EOC2022_2023:
         description: Anda telah sampai pada pelajaran terakhir! Pilih projek untuk
           dicipta.
         display_name: Akhir Projek Kursus
@@ -4178,6 +4408,20 @@ ms-MY:
         - text: Lihat kod di bawah dengan teliti. Apakah yang akan berlaku apabila
             anda mengklik "Jalankan"?
       courseC_multi_artist_prog6_predict12022:
+        answers:
+        - feedback: Salah. Artis melukis segi empat sama.
+          text: Artis akan melukis segi tiga dengan tiga sisi yang sama.
+        - feedback: Salah. Artis melukis segi empat sama.
+          text: Artis akan melukis garisan tunggal.
+        - correct: true
+          feedback: Betul!
+          text: Artis akan melukis segi empat sama.
+        - feedback: Salah. Artis melukis segi empat sama.
+          text: Artis akan melukis pentagon
+        questions:
+        - text: Lihat kod di bawah dengan teliti. Apakah yang akan berlaku apabila
+            anda mengklik "Jalankan"?
+      courseC_multi_artist_prog6_predict12022_2023:
         answers:
         - feedback: Salah. Artis melukis segi empat sama.
           text: Artis akan melukis segi tiga dengan tiga sisi yang sama.
@@ -4260,6 +4504,23 @@ ms-MY:
         - text: Perhatikan dengan teliti kod di bawah. Berapa banyak labu yang akan
             dikutip oleh petani selepas anda mengklik "Jalankan"?
       courseC_multi_harvester_loops11_predict12022:
+        answers:
+        - feedback: Salah. Petani akan mengutip 4 labu di dalam setiap 3 gelung. 4
+            didarabkan 3 hasilnya ialah 12!
+          text: '4'
+        - correct: true
+          feedback: Betul!
+          text: '12'
+        - feedback: Salah. Petani akan mengutip 4 labu di dalam setiap 3 gelung. 4
+            didarabkan 3 hasilnya ialah 12!
+          text: '15'
+        - feedback: Salah. Petani akan mengutip 4 labu di dalam setiap 3 gelung. 4
+            didarabkan 3 hasilnya ialah 12!
+          text: '20'
+        questions:
+        - text: Perhatikan dengan teliti kod di bawah. Berapa banyak labu yang akan
+            dikutip oleh petani selepas anda mengklik "Jalankan"?
+      courseC_multi_harvester_loops11_predict12022_2023:
         answers:
         - feedback: Salah. Petani akan mengutip 4 labu di dalam setiap 3 gelung. 4
             didarabkan 3 hasilnya ialah 12!
@@ -4361,6 +4622,20 @@ ms-MY:
         questions:
         - text: Cari pepijat dalam kod ini. Adakah Scrat akan mencapai buah oak atau
             terdapat masalah?
+      courseC_multi_maze_debugging8_predict12022_2023:
+        answers:
+        - text: Scrat akan sampai kepada buah oak. Tiada pepijat dalam kod.
+        - correct: true
+          text: Scrat tidak akan sampai kepada buah oak kerana ia berpusing ke arah
+            yang salah.
+        - text: Scrat tidak akan sampai kepada buah oak kerana blok `bergerak ke hadapan`
+            tidak mencukupi.
+        - feedback: Scrat tidak akan sampai kepada buah oak kerana ia berpusing ke
+            arah yang salah.
+          text: Scrat tidak akan bergerak daripada blok pertama.
+        questions:
+        - text: Cari pepijat dalam kod ini. Adakah Scrat akan mencapai buah oak atau
+            terdapat masalah?
       courseC_multi_maze_debugging8_predict1_2018:
         answers:
         - {}
@@ -4449,6 +4724,20 @@ ms-MY:
         questions:
         - text: Baca keseluruhan kod di bawah dengan amat teliti. Apakah yang akan
             berlaku apabila anda mengklik "Jalankan"?
+      courseC_multi_maze_programming8_predict12022_2023:
+        answers:
+        - feedback: Salah. Kod ini betul-betul membawa burung kepada khinzir.
+          text: Burung itu akan ketinggalan selangkah berbanding khinzir.
+        - correct: true
+          feedback: Betul!
+          text: Burung itu akan sampai kepada khinzir.
+        - feedback: Salah. Kod ini betul-betul membawa burung kepada khinzir.
+          text: Burung itu akan terserempak dengan TNT.
+        - feedback: Salah. Kod ini betul-betul membawa burung kepada khinzir.
+          text: Burung itu akan merempuh dinding.
+        questions:
+        - text: Baca keseluruhan kod di bawah dengan amat teliti. Apakah yang akan
+            berlaku apabila anda mengklik "Jalankan"?
       courseC_multi_maze_programming8_predict1_2018:
         answers:
         - feedback: Salah. Kod ini betul-betul membawa burung kepada khinzir.
@@ -4517,6 +4806,22 @@ ms-MY:
         questions:
         - text: Apakah yang anda fikirkan akan berlaku apabila anda mengklik "Jalankan"?
       courseC_multi_starWars_predict12022:
+        answers:
+        - feedback: Salah. Blok berulang akan membuatkan BB-8 bergerak ke hadapan
+            sebanyak 5 kali.
+          text: BB-8 tidak akan bergerak.
+        - feedback: Salah. Blok berulang akan membuatkan BB-8 bergerak ke hadapan
+            sebanyak 5 kali.
+          text: BB-8 akan bergerak ke satu ruang sahaja
+        - correct: true
+          feedback: Betul!
+          text: BB-8 akan bergerak 5 kali dan mendapatkan semua logam sekerap
+        - feedback: Salah. Blok berulang akan membuatkan BB-8 bergerak ke hadapan
+            sebanyak 5 kali.
+          text: BB-8 akan bergerak ke 3 ruang sahaja.
+        questions:
+        - text: Apakah yang anda fikirkan akan berlaku apabila anda mengklik "Jalankan"?
+      courseC_multi_starWars_predict12022_2023:
         answers:
         - feedback: Salah. Blok berulang akan membuatkan BB-8 bergerak ke hadapan
             sebanyak 5 kali.
@@ -4629,6 +4934,27 @@ ms-MY:
         questions:
         - text: Perhatikan dengan teliti kod di bawah. Apakah yang akan berlaku apabila
             anda mengklik "Jalankan"?
+      courseC_multi_starWars_predict22022_2023:
+        answers:
+        - feedback: Salah. Gelung pertama hanya membenarkan BB-8 bergerak ke hadapan
+            sebanyak 2 ruangan, sedangkan ia perlu bergerak ke hadapan sebanyak 3
+            ruangan.
+          text: BB-8 akan berjalan terlalu jauh dalam gelung pertama.
+        - correct: true
+          feedback: Betul!
+          text: BB-8 tidak akan berjalan cukup jauh di dalam gelung pertama untuk
+            mendapatkan semua logam sekerap.
+        - feedback: Salah. Gelung pertama hanya membenarkan BB-8 bergerak ke hadapan
+            sebanyak 2 ruangan, sedangkan ia perlu bergerak ke hadapan sebanyak 3
+            ruangan.
+          text: BB-8 akan mengumpulkan semua logam sekerap tanpa mengalami masalah.
+        - feedback: Salah. Gelung pertama hanya membenarkan BB-8 bergerak ke hadapan
+            sebanyak 2 ruangan, sedangkan ia perlu bergerak ke hadapan sebanyak 3
+            ruangan.
+          text: BB-8 akan berpusing ke arah yang salah selepas gelung pertama.
+        questions:
+        - text: Perhatikan dengan teliti kod di bawah. Apakah yang akan berlaku apabila
+            anda mengklik "Jalankan"?
       courseC_multi_starWars_predict2_2018:
         answers:
         - feedback: Salah. Gelung pertama hanya membenarkan BB-8 bergerak ke hadapan
@@ -4708,6 +5034,10 @@ ms-MY:
         description: Anda telah sampai pada pelajaran terakhir Kursus D! Pilih projek
           untuk dicipta.
         display_name: Akhir Projek Kursus
+      courseD_EOC2022_2023:
+        description: Anda telah sampai pada pelajaran terakhir Kursus D! Pilih projek
+          untuk dicipta.
+        display_name: Akhir Projek Kursus
       courseD_EOC_2020:
         description: Anda telah sampai pada pelajaran terakhir Kursus D! Pilih projek
           untuk dicipta.
@@ -4717,6 +5047,10 @@ ms-MY:
           untuk dicipta.
         display_name: Akhir Projek Kursus
       courseD_EOC_examples2022:
+        description: Anda akan memulakan projek akhir anda. Sebelum anda bermula,
+          luangkan sedikit masa dengan melihat projek contoh.
+        display_name: Contoh Projek
+      courseD_EOC_examples2022_2023:
         description: Anda akan memulakan projek akhir anda. Sebelum anda bermula,
           luangkan sedikit masa dengan melihat projek contoh.
         display_name: Contoh Projek
@@ -4787,6 +5121,30 @@ ms-MY:
         - text: Perhatikan dengan teliti pada kod di bawah. Lukisan yang manakah akan
             dibuat oleh atur cara ini apabila anda mengklik "Jalankan"?
       courseD_multi_artist_nestedLoops9_predict12022:
+        answers:
+        - correct: true
+          feedback: Betul!
+          text: A
+        - feedback: Salah. Gelung dalam membuat pentagon dan gelung luar mengulanginya
+            4 kali dalam bulatan.
+          text: B
+        - feedback: Salah. Gelung dalam membuat pentagon dan gelung luar mengulanginya
+            4 kali dalam bulatan.
+          text: C
+        - feedback: Salah. Gelung dalam membuat pentagon dan gelung luar mengulanginya
+            4 kali dalam bulatan.
+          text: Tiada satu pun di atas
+        markdown: |+
+          <table>
+          <tr><td>A</td><td><img src="https://images.code.org/cfc3f8206438a60afe3be9afe7fc0a22-image-1489118742610.10.15.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>B</td><td><img src="https://images.code.org/975b027684d2f5411b960bf82987663e-image-1489119999013.11.13.png" width="100px" style="mix-blend-mode: multiply;"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;</td><td>C</td><td><img src="https://images.code.org/635ac54ed7cb2e2d24eb341b3ec4eecb-image-1489120024059.12.00.png" width="80px" style="mix-blend-mode: multiply; clip: rect(0px,0px,0px,40px);"/></td></tr>
+          </table>
+
+          <br/><br/>
+
+        questions:
+        - text: Perhatikan dengan teliti pada kod di bawah. Lukisan yang manakah akan
+            dibuat oleh atur cara ini apabila anda mengklik "Jalankan"?
+      courseD_multi_artist_nestedLoops9_predict12022_2023:
         answers:
         - correct: true
           feedback: Betul!
@@ -4942,6 +5300,29 @@ ms-MY:
             Jika terdapat bunga, lebah perlu mengumpul nektar sekali. Jika tiada bunga,
             lebah tidak boleh melakukan apa-apa. Perhatikan dengan teliti pada kod
             di bawah. Apakah yang anda fikir akan berlaku selepas anda mengklik "Jalankan"?
+      courseD_multi_bee_conditionals1_predict12022_2023:
+        answers:
+        - feedback: Salah. Blok `jika pada bunga` memberikan jaminan bahawa lebah
+            hanya akan cuba mendapatkan nektar jika terdapat bunga di bawah awan.
+          text: 'Lebah akan bergerak ke awan dan cuba mendapatkan nektar, walau apa
+            pun yang berlaku. '
+        - correct: true
+          feedback: Betul!
+          text: Lebah akan bergerak ke awan dan hanya cuba mendapatkan nektar jika
+            terdapat bunga di bawah.
+        - feedback: Salah. Blok `jika pada bunga` memberikan jaminan bahawa lebah
+            akan cuba mendapatkan nektar jika terdapat bunga di bawah awan.
+          text: Lebah akan bergerak ke awan dan hanya cuba mendapatkan nektar jika
+            terdapat bunga di bawah.
+        - feedback: Salah. Blok `jika pada bunga` memberikan jaminan bahawa lebah
+            hanya akan cuba mendapatkan nektar jika terdapat bunga di bawah awan.
+          text: 'Lebah tidak akan sampai ke awan. '
+        questions:
+        - text: Terdapat awan yang menyekat pandangan kita. Awan akan hilang sebaik
+            sahaja kita mengklik “Run”. Mungkin ada bunga di bawah awan ini. Sekiranya
+            terdapat bunga, lebah perlu mengumpul nektar sekali. Sekiranya tidak ada
+            bunga, lebah tidak boleh berbuat apa-apa. Lihatlah kod di bawah. Apa yang
+            anda fikir akan berlaku selepas anda mengklik “Run”?
       courseD_multi_bee_conditionals1_predict1_2018:
         answers:
         - feedback: Salah. Blok `jika pada bunga` memberikan jaminan bahawa lebah
@@ -5097,6 +5478,28 @@ ms-MY:
         - text: 'Lihat dengan teliti kod di bawah. Apakah yang anda fikir akan berlaku
             selepas anda mengklik "Jalankan"? Perlu diingat: hanya akan terdapat *satu*
             sarang lebah atau *satu* bunga di belakang setiap awan.'
+      courseD_multi_bee_conditionals7_predict22022_2023:
+        answers:
+        - correct: true
+          feedback: Betul!
+          text: Lebah akan dapatkan nektar pada setiap bunga dan buat madu di setiap
+            sarang lebah.
+        - feedback: Salah. Blok `jika pada bunga` membolehkan lebah mendapatkan nektar
+            pada setiap bunga dan membuat madu di setiap sarang lebah.
+          text: Lebah akan cuba mendapatkan nektar daripada kedua-dua bunga dan sarang
+            lebah.
+        - feedback: Salah. Salah. Blok `jika pada bunga` membolehkan lebah mendapatkan
+            nektar pada setiap bunga dan membuat madu di setiap sarang lebah..
+          text: Lebah akan cuba mendapatkan madu daripada kedua-dua bunga dan sarang
+            lebah.
+        - feedback: Salah. Salah. Blok `jika pada bunga` membolehkan lebah mendapatkan
+            nektar pada setiap bunga dan membuat madu di setiap sarang lebah..
+          text: Lebah akan cuba mendapatkan madu dan nektar daripada kedua-dua bunga
+            dan sarang lebah.
+        questions:
+        - text: 'Lihat dengan teliti kod di bawah. Apakah yang anda fikir akan berlaku
+            selepas anda mengklik "Jalankan"? Perlu diingat: hanya akan terdapat *satu*
+            sarang lebah atau *satu* bunga di belakang setiap awan.'
       courseD_multi_bee_conditionals7_predict2_2018:
         answers:
         - correct: true
@@ -5200,6 +5603,23 @@ ms-MY:
         questions:
         - text: Perhatikan dengan teliti gelung bersarang di bawah. Apakah yang akan
             berlaku apabila anda mengklik "Jalankan"?
+      courseD_multi_bee_nestedLoops2_predict12022_2023:
+        answers:
+        - feedback: Salah. Lebah menggelung tindakan bergerak ke hadapan dan mengumpul
+            nektar yang bergelung, membolehkan lebah tersebut menyelesaikan teka-teki.
+          text: Lebah akan bergerak ke hadapan dan mendapatkan nektar hanya sekali.
+        - feedback: Salah. Lebah menggelung tindakan bergerak ke hadapan dan mengumpul
+            nektar yang bergelung, membolehkan lebah tersebut menyelesaikan teka-teki.
+          text: Lebah akan mendapat hanya 2 unit nektar.
+        - correct: true
+          feedback: Betul!
+          text: Lebah akan mendapat semua nektar.
+        - feedback: Salah. Lebah menggelung tindakan bergerak ke hadapan dan mengumpul
+            nektar yang bergelung, membolehkan lebah tersebut menyelesaikan teka-teki.
+          text: Lebah akan berpusing ke arah yang salah.
+        questions:
+        - text: Perhatikan dengan teliti gelung bersarang di bawah. Apakah yang akan
+            berlaku apabila anda mengklik "Jalankan"?
       courseD_multi_bee_nestedLoops2_predict1_2018:
         answers:
         - feedback: Salah. Lebah menggelung tindakan bergerak ke hadapan dan mengumpul
@@ -5280,6 +5700,26 @@ ms-MY:
         - text: Perhatikan dengan teliti kod di bawah. Berapa banyak madu yang akan
             dibuat oleh lebah apabila anda mengklik "Jalankan"?
       courseD_multi_bee_nestedLoops9_predict22022:
+        answers:
+        - feedback: Salah. Lebah mengumpul 2 nektar dalam gelung bergerak ke hadapan,
+            kemudian 2 nektar dalam gelung ke bawah. Ini semua berlaku di dalam satu
+            lagi gelung sebanyak dua kali. 4 didarabkan dengan 2 ialah 8!
+          text: '4'
+        - correct: true
+          feedback: Betul!
+          text: '8'
+        - feedback: Salah. Lebah mengumpul 2 nektar dalam gelung bergerak ke hadapan,
+            kemudian 2 nektar dalam gelung ke bawah. Ini semua berlaku di dalam satu
+            lagi gelung sebanyak dua kali. 4 didarabkan dengan 2 ialah 8!
+          text: '10'
+        - feedback: Salah. Lebah mengumpul 2 nektar dalam gelung bergerak ke hadapan,
+            kemudian 2 nektar dalam gelung ke bawah. Ini semua berlaku di dalam satu
+            lagi gelung sebanyak dua kali. 4 didarabkan dengan 2 ialah 8!
+          text: '12'
+        questions:
+        - text: Perhatikan dengan teliti kod di bawah. Berapa banyak madu yang akan
+            dibuat oleh lebah apabila anda mengklik "Jalankan"?
+      courseD_multi_bee_nestedLoops9_predict22022_2023:
         answers:
         - feedback: Salah. Lebah mengumpul 2 nektar dalam gelung bergerak ke hadapan,
             kemudian 2 nektar dalam gelung ke bawah. Ini semua berlaku di dalam satu
@@ -5413,6 +5853,27 @@ ms-MY:
         questions:
         - text: Perhatikan dengan teliti kod di bawah. Apakah yang akan berlaku selepas
             anda mengklik "Jalankan"?
+      courseD_multi_farmer_condLoops9_predict12022_2023:
+        answers:
+        - feedback: Salah. Tiada kod di sini untuk mengutip labu.
+          text: Penuai akan mengumpulkan semua tanaman.
+        - feedback: Salah. Kod ini akan meminta penuai berulang kali membuat corak
+            anak tangga dan memilih sebanyak mana jagung atau salad yang dia temui.
+            Dia tidak akan mengutip labu.
+          text: Penuai tidak akan mengutip mana-mana tanaman dengan laluan yang dipilihnya.
+        - correct: true
+          feedback: Betul!
+          text: Penuai akan mengutip semua tanaman, kecuali labu.
+        - feedback: Salah. Kod ini akan meminta penuai berulang kali membuat corak
+            anak tangga dan memilih sebanyak mana jagung atau salad yang dia temui.
+            Dia tidak akan mengutip labu.
+          text: Penuai hanya akan mengutip labu.
+        markdown: Salah. Kod ini akan meminta penuai berulang kali membuat corak anak
+          tangga dan memilih sebanyak mana jagung atau salad yang dia temui. Dia tidak
+          akan mengutip labu.
+        questions:
+        - text: Perhatikan dengan teliti kod di bawah. Apakah yang akan berlaku selepas
+            anda mengklik "Jalankan"?
       courseD_multi_farmer_condLoops9_predict1_2018:
         answers:
         - feedback: Salah. Tiada kod di sini untuk mengutip labu.
@@ -5526,6 +5987,21 @@ ms-MY:
         questions:
         - text: Perhatikan dengan teliti pada kod di bawah. Apakah yang akan ditinggalkan
             pada akhir teka-teki ini?
+      courseD_multi_farmer_while10_predict22022_2023:
+        answers:
+        - feedback: Salah. Tiada kod untuk membuang tanah dari longgokan.
+          text: Tiada apa. Kod ini hanya akan meninggalkan tanah yang rata.
+        - correct: true
+          feedback: Betul!
+          text: Kod ini akan meninggalkan longgokan tanpa disentuh langsung.
+        - feedback: Salah. Gelung `semasa` akan mengendalikan apa-apa saiz gelung,
+            tetapi tiada kod untuk membuang tanah dari longgokan.
+          text: Kod ini akan meninggalkan lubang tanpa disentuh langsung.
+        - feedback: Salah. Tiada kod untuk membuang tanah dari longgokan.
+          text: Kod ini akan meninggalkan lubang terakhir tanpa disentuh.
+        questions:
+        - text: Perhatikan dengan teliti pada kod di bawah. Apakah yang akan ditinggalkan
+            pada akhir teka-teki ini?
       courseD_multi_farmer_while10_predict2_2018:
         answers:
         - feedback: Salah. Tiada kod untuk membuang tanah dari longgokan.
@@ -5600,6 +6076,24 @@ ms-MY:
         - text: Perhatikan dengan teliti kod di bawah. Apakah yang akan berlaku selepas
             anda mengklik "Jalankan"?
       courseD_multi_farmer_while4_predict12022:
+        answers:
+        - feedback: Salah. Petani akan membuang tanah asalkan terdapat longgokan,
+            kemudian berhenti apabila longgokan tersebut tiada
+          text: Tiada apa yang akan berlaku.
+        - feedback: Salah. Petani akan membuang tanah asalkan terdapat longgokan,
+            kemudian berhenti apabila longgokan tersebut tiada
+          text: Petani tidak akan sesekali berhenti membuang tanah.
+        - correct: true
+          feedback: Betul!
+          text: Petani akan membuang kotoran selagi terdapat longgokan, kemudian berhenti
+            apabila longgokan sudah tiada.
+        - feedback: Salah. Petani akan membuang tanah asalkan terdapat longgokan,
+            kemudian berhenti apabila longgokan tersebut tiada
+          text: Petani akan membuang tanah sekali sahaja.
+        questions:
+        - text: Perhatikan dengan teliti kod di bawah. Apakah yang akan berlaku selepas
+            anda mengklik "Jalankan"?
+      courseD_multi_farmer_while4_predict12022_2023:
         answers:
         - feedback: Salah. Petani akan membuang tanah asalkan terdapat longgokan,
             kemudian berhenti apabila longgokan tersebut tiada
@@ -5695,6 +6189,17 @@ ms-MY:
         - text: Lihat kod di bawah dengan teliti. Apakah yang akan berlaku selepas
             anda mengklik "Jalankan"?
       courseD_multi_maze_until10_predict22022:
+        answers:
+        - correct: true
+          feedback: Betul!
+        - text: Zombi akan berjaya sampai kepada bunga matahari.
+        - text: Zombi akan pusing kanan di laluan pertama dan berpusing-pusing dalam
+            bulatan untuk selama-lamanya.
+        - text: Zombi akan menghadapi kesulitan di hujung laluan ke hadapan.
+        questions:
+        - text: Lihat kod di bawah dengan teliti. Apakah yang akan berlaku selepas
+            anda mengklik "Jalankan"?
+      courseD_multi_maze_until10_predict22022_2023:
         answers:
         - correct: true
           feedback: Betul!
@@ -5817,6 +6322,26 @@ ms-MY:
         questions:
         - text: Perhatikan dengan teliti kod di bawah. Apakah yang anda fikirkan akan
             berlaku apabila anda mengklik "Jalankan"?
+      courseD_multi_maze_until2_predict12022_2023:
+        answers:
+        - feedback: Salah. Kod itu membuatkan burung bergerak ke hadapan semasa ada
+            laluan, kemudian pusing kiri. Burung itu terus melakukan ini sehingga
+            ia sampai kepada khinzir!
+          text: Burung itu tidak akan bergerak langsung.
+        - correct: true
+          feedback: Betul!
+          text: Burung itu akan sampai kepada khinzir.
+        - feedback: Salah. Kod itu membuatkan burung bergerak ke hadapan semasa ada
+            laluan, kemudian pusing kiri. Burung itu terus melakukan ini sehingga
+            ia sampai kepada khinzir!
+          text: Burung itu akan bergerak ke hadapan dan terserempak dengan TNT.
+        - feedback: Kod itu membuatkan burung bergerak ke hadapan semasa ada laluan,
+            kemudian pusing kiri. Burung itu terus melakukan ini sehingga ia sampai
+            kepada khinzir!
+          text: Burung berpusing ke arah yang salah.
+        questions:
+        - text: Perhatikan dengan teliti kod di bawah. Apakah yang anda fikirkan akan
+            berlaku apabila anda mengklik "Jalankan"?
       courseD_multi_maze_until2_predict1_2018:
         answers:
         - feedback: Salah. Kod itu membuatkan burung bergerak ke hadapan semasa ada
@@ -5907,6 +6432,10 @@ ms-MY:
         description: Anda telah sampai pada penghujung Kursus E! Pilih projek untuk
           dicipta.
         display_name: Akhir Projek Kursus
+      courseE_EOC2022_2023:
+        description: Anda telah sampai pada penghujung Kursus E! Pilih projek untuk
+          dicipta.
+        display_name: Akhir Projek Kursus
       courseE_EOC_2020:
         description: Anda telah sampai pada penghujung Kursus E! Pilih projek untuk
           dicipta.
@@ -5916,6 +6445,10 @@ ms-MY:
           dicipta.
         display_name: Akhir Projek Kursus
       courseE_EOC_examples2022:
+        description: Anda telah sampai pada penghujung Kursus E! Pilih projek untuk
+          dicipta.
+        display_name: Akhir Projek Kursus
+      courseE_EOC_examples2022_2023:
         description: Anda telah sampai pada penghujung Kursus E! Pilih projek untuk
           dicipta.
         display_name: Akhir Projek Kursus
@@ -5960,6 +6493,23 @@ ms-MY:
         - text: Lihat fungsi yang ditakrifkan di bawah. Apakah yang akan diambil oleh
             penuai?
       courseE_multi_farmer_functions11_predict2022:
+        answers:
+        - feedback: Salah. Penuai bergerak ke hadapan sehingga penghujung jalan, kemudian
+            berpusing dan bergerak ke belakang sehingga dia memetik salad.
+          text: Penuai akan mengutip dua biji labu.
+        - feedback: Salah. Penuai bergerak ke hadapan sehingga penghujung jalan, kemudian
+            berpusing dan bergerak ke belakang sehingga dia memetik salad.
+          text: Penuai akan mengutip semua labu.
+        - correct: true
+          feedback: Betul!
+          text: Penuai akan mengutip salad.
+        - feedback: Salah. Penuai bergerak ke hadapan sehingga penghujung jalan, kemudian
+            berpusing dan bergerak ke belakang sehingga dia memetik salad.
+          text: Penuai akan memetik jagung.
+        questions:
+        - text: Lihat fungsi yang ditakrifkan di bawah. Apakah yang akan diambil oleh
+            penuai?
+      courseE_multi_farmer_functions11_predict2022_2023:
         answers:
         - feedback: Salah. Penuai bergerak ke hadapan sehingga penghujung jalan, kemudian
             berpusing dan bergerak ke belakang sehingga dia memetik salad.
@@ -6061,6 +6611,22 @@ ms-MY:
         questions:
         - text: Apakah yang akan berlaku apabila anda menekan "Jalankan"?
       courseE_prediction_artistFunction12022:
+        answers:
+        - feedback: Salah. Fungsi ini sebenarnya dipanggil dua kali dalam atur cara.
+          text: Tiada apa-apa. Fungsi ini tidak dipanggil dalam atur cara.
+        - feedback: Salah. Fungsi ini sebenarnya dipanggil dua kali dalam atur cara.
+          text: Artis akan melukis segi empat sama tunggal.
+        - feedback: Salah. Panjang setiap sisi segi empat sama hanya 100 piksel, tetapi
+            artis menaikkan sebanyak 175 piksel antara fungsi.
+          text: Artis akan melukiskan dua segi empat sama yang bertindih.
+        - correct: true
+          feedback: Betul! Fungsi itu dipanggil dua kali dalam atur cara, bersama
+            lompatan di antaranya.
+          text: Artis akan melukiskan dua segi empat sama dengan jurang kecil di antara
+            kedua-duanya.
+        questions:
+        - text: Apakah yang akan berlaku apabila anda menekan "Jalankan"?
+      courseE_prediction_artistFunction12022_2023:
         answers:
         - feedback: Salah. Fungsi ini sebenarnya dipanggil dua kali dalam atur cara.
           text: Tiada apa-apa. Fungsi ini tidak dipanggil dalam atur cara.
@@ -6186,6 +6752,20 @@ ms-MY:
         questions:
         - text: Perhatikan dengan teliti kod di bawah. Apakah yang akan berlaku selepas
             anda mengklik "Jalankan"?
+      courseE_swim_fish_behavior_predict12022_2023:
+        answers:
+        - feedback: Salah. Rumpai bergolek akan mula bergolek.
+          text: Tiada apa yang akan berlaku.
+        - feedback: Salah. Rumpai bergolek akan mula bergolek.
+          text: Rumpai bergolek akan terapung pada bahagian atas skrin.
+        - correct: true
+          feedback: Betul!
+          text: Rumpai bergolek akan mula bergolek.
+        - feedback: Salah. Rumpai bergolek akan mula bergolek.
+          text: Rumpai bergolek akan berkelip-kelip.
+        questions:
+        - text: Perhatikan dengan teliti kod di bawah. Apakah yang akan berlaku selepas
+            anda mengklik "Jalankan"?
       courseE_swim_fish_behavior_predict1_2021:
         answers:
         - feedback: Salah. Rumpai bergolek akan mula bergolek.
@@ -6212,11 +6792,17 @@ ms-MY:
         display_name: Akhir Projek Kursus
       courseF_EOC_examples2022_2022_pilot_-2022-2:
         display_name: Akhir Projek Kursus
+      courseF_EOC_examples2022_2022_pilot_-2022-2_2023:
+        display_name: Akhir Projek Kursus
       courseF_EOC_examples_2021:
         description: Anda telah sampai pada penghujung Kursus F! Pilih projek untuk
           dicipta.
         display_name: Akhir Projek Kursus
       courseF_EOC_samples2022:
+        description: Anda akan memulakan projek akhir anda. Sebelum anda bermula,
+          luangkan sedikit masa dengan melihat projek contoh.
+        display_name: Akhir Projek Kursus
+      courseF_EOC_samples2022_2023:
         description: Anda akan memulakan projek akhir anda. Sebelum anda bermula,
           luangkan sedikit masa dengan melihat projek contoh.
         display_name: Akhir Projek Kursus
@@ -6273,12 +6859,19 @@ ms-MY:
         - {}
       courseF_collector_samples_2022_pilot_-2022-2:
         display_name: Penerokaan - Atur Cara Sampel
+      courseF_collector_samples_2022_pilot_-2022-2_2023:
+        display_name: Penerokaan - Atur Cara Sampel
       courseF_events_freeplay:
         description: Kini anda boleh menggunakan perkara yang telah anda pelajari
           untuk membuat projek anda dengan lebih baik! Teruskan menambah atur cara
           anda atau mulakan sesuatu yang baharu!
         display_name: Peristiwa - Permainan Bebas
       courseF_events_freeplay2022_2022_pilot_-2022-2:
+        description: Kini anda boleh menggunakan perkara yang telah anda pelajari
+          untuk membuat projek anda dengan lebih baik! Teruskan menambah atur cara
+          anda atau mulakan sesuatu yang baharu!
+        display_name: Peristiwa - Permainan Bebas
+      courseF_events_freeplay2022_2022_pilot_-2022-2_2023:
         description: Kini anda boleh menggunakan perkara yang telah anda pelajari
           untuk membuat projek anda dengan lebih baik! Teruskan menambah atur cara
           anda atau mulakan sesuatu yang baharu!
@@ -6300,6 +6893,10 @@ ms-MY:
 
 
       courseF_events_practice2022_2022_pilot_-2022-2:
+        description: Usaha yang hebat setakat ini! Pilih aktiviti anda yang seterusnya.
+          Lengkapkan seberapa banyak yang anda boleh. Teruskan berlatih dengan peristiwa!
+        display_name: Latihan Peristiwa
+      courseF_events_practice2022_2022_pilot_-2022-2_2023:
         description: Usaha yang hebat setakat ini! Pilih aktiviti anda yang seterusnya.
           Lengkapkan seberapa banyak yang anda boleh. Teruskan berlatih dengan peristiwa!
         display_name: Latihan Peristiwa
@@ -6335,7 +6932,31 @@ ms-MY:
           text: Sprite akan berputar terlebih dahulu dan kemudian bergerak nanti.
         questions:
         - text: Baca kod, kemudian buat ramalan.
+      courseF_events_predict_multi2022_2022_pilot_-2022-2_2023:
+        answers:
+        - feedback: Salah. Peperi juga akan bergerak ke timur.
+          text: Peperi hanya akan berputar ke kanan.
+        - feedback: Salah. Peperi tidak pernah berhenti berputar, oleh itu ia akan
+            melakukan kedua-duanya serentak.
+          text: Peperi hanya akan bergerak ke timur.
+        - correct: true
+          feedback: Betul! Kedua-dua tingkah laku akan berlaku secara serentak.
+          text: Peperi akan berputar dan bergerak pada masa yang sama.
+        - feedback: Salah. Di dalam Makmal Peperi, blok bersambung berlaku dengan
+            serta-merta selepas setiap blok yang terakhir, oleh itu kedua-dua tingkah
+            laku akan berlaku secara serentak.
+          text: Sprite akan berputar terlebih dahulu dan kemudian bergerak nanti.
+        questions:
+        - text: Baca kod, kemudian buat ramalan.
       courseF_groups_predict_multi_2022_pilot_-2022-2:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
+      courseF_groups_predict_multi_2022_pilot_-2022-2_2023:
         answers:
         - correct: true
         - {}
@@ -6356,6 +6977,8 @@ ms-MY:
           Pilihan di sini membawa pelajar kepada sampel aplikasi yang boleh mereka terokai. Aktiviti ini bertujuan menyelaras dengan lembaran kerja Meneroka Aplikasi, yang terdapat dalam [lesson plan](.././).
       courseF_intro_apps2022_2022_pilot_-2022-2:
         display_name: Aplikasi Makmal Peperi
+      courseF_intro_apps2022_2022_pilot_-2022-2_2023:
+        display_name: Aplikasi Makmal Peperi
       courseF_labels_predict_multi:
         answers:
         - feedback: Salah. Label pemboleh ubah tidak sepadan.
@@ -6373,6 +6996,22 @@ ms-MY:
         - text: Kod ini mungkin kelihatan seperti biasa tetapi sila baca dengan teliti.
             Apakah yang akan dicetak jika pengguna menaip "piza"?
       courseF_labels_predict_multi2022_2022_pilot_-2022-2:
+        answers:
+        - feedback: Salah. Label pemboleh ubah tidak sepadan.
+          text: '"Satu piza datang dengan segera!"'
+        - feedback: Salah. Label pemboleh ubah tidak pernah dicetak.
+          text: '"Satu hidangan datang dengan segera!"'
+        - feedback: Salah. Label pemboleh ubah tidak pernah dicetak.
+          text: '"Satu makanan datang dengan segera!"'
+        - correct: true
+          feedback: Betul!. Label pemboleh ubah tidak sepadan.
+          text: '"Satu datang dengan segera!"'
+        - feedback: Salah. Blok peristiwa dan cetakan masih akan berfungsi.
+          text: Tiada apa-apa yang akan dicetak.
+        questions:
+        - text: Kod ini mungkin kelihatan seperti biasa tetapi sila baca dengan teliti.
+            Apakah yang akan dicetak jika pengguna menaip "piza"?
+      courseF_labels_predict_multi2022_2022_pilot_-2022-2_2023:
         answers:
         - feedback: Salah. Label pemboleh ubah tidak sepadan.
           text: '"Satu piza datang dengan segera!"'
@@ -6453,6 +7092,26 @@ ms-MY:
         - text: Kita telah tetapkan pemboleh ubah "panjang" kepada 50. Apakah yang
             akan berlaku apabila anda mengklik "Jalankan"?
       courseF_multi_artist_variables3a_predict12022:
+        answers:
+        - correct: true
+          feedback: Betul!
+          text: Artis akan melukis segi tiga dengan sisi yang terdiri daripada 50
+            piksel.
+        - feedback: Salah. Pemboleh ubah `panjang` perlu berada di dalam gelung `berulang`
+            untuk perkara tersebut berlaku.
+          text: Artis akan melukis poligon 50 sisi dengan sisi yang terdiri daripada
+            3 piksel.
+        - feedback: Salah. Pemboleh ubah `panjang` perlu digunakan dalam blok `pusing`
+            untuk perkara tersebut berlaku.
+          text: Artis akan melukis tiga sisi terbuka dengan pusingan 50 darjah.
+        - feedback: Pemboleh ubah `panjang` ditetapkan kepada 50 dan sedang digunakan
+            dalam blok `bergerak ke hadapan sebanyak`, oleh itu artis akan melukis
+            segi tiga dengan sisi yang terdiri daripada 50 piksel.
+          text: Komputer akan mengingatkan pengguna untuk nombor.
+        questions:
+        - text: Kita telah tetapkan pemboleh ubah "panjang" kepada 50. Apakah yang
+            akan berlaku apabila anda mengklik "Jalankan"?
+      courseF_multi_artist_variables3a_predict12022_2023:
         answers:
         - correct: true
           feedback: Betul!
@@ -6627,6 +7286,32 @@ ms-MY:
         questions:
         - text: Baca kod di bawah. Apakah yang akan berlaku apabila anda mengklik
             "Jalankan"?
+      courseF_multi_bee_for3_predict12022_2023:
+        answers:
+        - feedback: Salah. Gelung `untuk` akan membenarkan lebah mengumpul jumlah
+            nektar yang betul, tetapi gelung tersebut hanya ditetapkan untuk mencapai
+            4 bunga.
+          text: 'Lebah akan bergerak ke hadapan dan mengumpul semua nektar daripada
+            setiap bunga. '
+        - correct: true
+          feedback: Betul!
+          text: 'Lebah akan bergerak ke hadapan dan mengumpul semua nektar daripada
+            setiap bunga, kecuali satu bunga. '
+        - feedback: Salah. Gelung `untuk` akan membenarkan lebah mengumpul jumlah
+            nektar yang betul, tetapi gelung tersebut hanya ditetapkan untuk mencapai
+            4 bunga.
+          text: 'Lebah akan bergerak ke hadapan dan mengumpul satu nektar daripada
+            setiap bunga. '
+        - feedback: Salah. Gelung `untuk` akan membenarkan lebah mengumpul jumlah
+            nektar yang betul, tetapi gelung tersebut hanya ditetapkan untuk mencapai
+            4 bunga.
+          text: 'Lebah akan bergerak ke hadapan dan mengumpul satu nektar daripada
+            bunga nombor 1 dan 4. '
+        markdown: Ah! Penggunaan gelung `untuk` membuatkan teka-teki ini menjadi lebih
+          mudah!
+        questions:
+        - text: Baca kod di bawah. Apakah yang akan berlaku apabila anda mengklik
+            "Jalankan"?
       courseF_multi_bee_for3_predict1_2018:
         answers:
         - feedback: Salah. Gelung `untuk` akan membenarkan lebah mengumpul jumlah
@@ -6743,6 +7428,10 @@ ms-MY:
         description: Sudah tiba giliran anda untuk mencipta apa sahaja yang anda mahukan!
           Apakah jenis projek yang anda akan buat?
         display_name: Peperi - Permainan Bebas
+      courseF_sprites_freeplay2022_2022_pilot_-2022-2_2023:
+        description: Sudah tiba giliran anda untuk mencipta apa sahaja yang anda mahukan!
+          Apakah jenis projek yang anda akan buat?
+        display_name: Peperi - Permainan Bebas
       courseF_sprites_practice:
         description: Usaha yang hebat setakat ini! Pilih aktiviti anda yang seterusnya.
           Lengkapkan seberapa banyak yang anda boleh. Teruskan berlatih dengan peperi
@@ -6761,6 +7450,11 @@ ms-MY:
 
 
       courseF_sprites_practice2022_2022_pilot_-2022-2:
+        description: Usaha yang hebat setakat ini! Pilih aktiviti anda yang seterusnya.
+          Lengkapkan seberapa banyak yang anda boleh. Teruskan berlatih dengan peperi
+          dan tingkah laku!
+        display_name: Latihan Peperi
+      courseF_sprites_practice2022_2022_pilot_-2022-2_2023:
         description: Usaha yang hebat setakat ini! Pilih aktiviti anda yang seterusnya.
           Lengkapkan seberapa banyak yang anda boleh. Teruskan berlatih dengan peperi
           dan tingkah laku!
@@ -6803,6 +7497,25 @@ ms-MY:
           text: Pesawat akan terhempas.
         questions:
         - text: Baca kod, kemudian buat ramalan.
+      courseF_sprites_predict_multi2022_2022_pilot_-2022-2_2023:
+        answers:
+        - feedback: Salah. Peperi ini mempunyai "tingkah laku" iaitu terus berlari
+            sehingga diberitahu untuk berhenti.
+          text: Kedua-dua pesawat akan bergerak satu ruang di sepanjang grid, kemudian
+            berhenti.
+        - correct: true
+          feedback: Betul! Tingkah laku ini memberitahu pesawat supaya mula bergerak
+            dan teruskan.
+          text: Kedua-dua pesawat akan mula bergerak dan bukan berhenti.
+        - feedback: Salah. Setiap blok kod dalam di dalam Makmal Peperi berjalan serta-merta
+            selepas yang seterusnya.
+          text: Satu pesawat akan bergerak terlebih dahulu dan satu lagi pesawat akan
+            bergerak nanti.
+        - feedback: Salah. Pesawat tidak ditempatkan dengan cara yang akan membuatkan
+            ia bersentuhan.
+          text: Pesawat akan terhempas.
+        questions:
+        - text: Baca kod, kemudian buat ramalan.
       courseF_text_practice:
         description: Usaha yang hebat setakat ini! Pilih aktiviti anda yang seterusnya.
           Lengkapkan seberapa banyak yang anda boleh. Teruskan berlatih dengan teks
@@ -6825,6 +7538,11 @@ ms-MY:
           Lengkapkan seberapa banyak yang anda boleh. Teruskan berlatih dengan teks
           dan prom!
         display_name: Latihan Teks dan Prom
+      courseF_text_practice2022_2022_pilot_-2022-2_2023:
+        description: Usaha yang hebat setakat ini! Pilih aktiviti anda yang seterusnya.
+          Lengkapkan seberapa banyak yang anda boleh. Teruskan berlatih dengan teks
+          dan prom!
+        display_name: Latihan Teks dan Prom
       courseF_variables2_predict2_multi2022_-2022-2:
         answers:
         - correct: true
@@ -6833,7 +7551,23 @@ ms-MY:
         - {}
         questions:
         - {}
+      courseF_variables2_predict2_multi2022_-2022-2_2023:
+        answers:
+        - correct: true
+        - {}
+        - {}
+        - {}
+        questions:
+        - {}
       courseF_variables2_predict_multi2022_2022_pilot_-2022-2:
+        answers:
+        - {}
+        - {}
+        - correct: true
+        - {}
+        questions:
+        - {}
+      courseF_variables2_predict_multi2022_2022_pilot_-2022-2_2023:
         answers:
         - {}
         - {}
@@ -6873,6 +7607,22 @@ ms-MY:
         - text: 'Atur cara ini membolehkan anda menjawab soalan dengan menaip menggunakan
             papan kekunci anda. Blok `cetakan` menunjukkan teks pada skrin. Buat ramalan:
             Apakah yang akan berlaku selepas menjawab soalan?'
+      courseF_variables_predict_multi2022_2022_pilot_-2022-2_2023:
+        answers:
+        - feedback: Salah. Blok nama akan digantikan dengan apa sahaja yang anda taipkan.
+          text: Atur cara ini akan mencetak "Helo nama!"
+        - correct: true
+          feedback: Betul! Perkara yang anda taip digunakan di tempat blok nama.
+          text: Atur cara ini akan menyambut anda dengan nama yang anda taipkan.
+        - feedback: Salah. Teks dicetak pada skrin.
+          text: Peperi akan berubah saiz.
+        - feedback: Salah. Hanya satu soalan ditanya, sebaik sahaja apabila atur cara
+            bermula.
+          text: Komputer akan bertanya soalan lain.
+        questions:
+        - text: 'Atur cara ini membolehkan anda menjawab soalan dengan menaip menggunakan
+            papan kekunci anda. Blok `cetakan` menunjukkan teks pada skrin. Buat ramalan:
+            Apakah yang akan berlaku selepas menjawab soalan?'
       courseF_variables_projects:
         description: Anda akan mencipta sama ada kad ucapan, robot sembang, atau cerita
           ruang kosong. Jika anda sudah menyelesaikan \"Bahagian 1\" projek anda,
@@ -6884,6 +7634,11 @@ ms-MY:
 
           Pelajar mungkin memerlukan arahan yang amat jelas untuk memahami cara menavigasi pilihan di sini. Untuk setiap pilihan projek, terdapat dua subtahap di sini. Untuk mulakan, pelajar perlu memilih satu daripada tahap yang ditandakan sebagai "Bahagian 1". Sebaik sahaja mereka menamatkan tahap itu, mereka perlu kembali ke sini dan memilih "Bahagian 2" daripada projek yang *sama*. Tahap pertama untuk setiap pilihan akan memberikan maklum balas kepada pelajar semasa mereka menggabungkan komponen asas projek mereka. Tahap kedua ialah "permainan bebas" yang bertujuan membolehkan pelajar membuat apa-apa perubahan kepada kod mereka yang mereka suka.
       courseF_variables_projects2022_2022_pilot_-2022-2:
+        description: Anda akan mencipta sama ada kad ucapan, robot sembang, atau cerita
+          ruang kosong. Jika anda sudah menyelesaikan \"Bahagian 1\" projek anda,
+          teriskan kepada \"Bahagian 2\".
+        display_name: Pilih Projek
+      courseF_variables_projects2022_2022_pilot_-2022-2_2023:
         description: Anda akan mencipta sama ada kad ucapan, robot sembang, atau cerita
           ruang kosong. Jika anda sudah menyelesaikan \"Bahagian 1\" projek anda,
           teriskan kepada \"Bahagian 2\".
@@ -6900,6 +7655,12 @@ ms-MY:
 
           Anda boleh menggunakan huraian di bawah untuk membantu pelajar memilih sendiri pilihan mereka, atau menetapkan jangkaan sekitar bilangan subtahap yang perlu mereka lengkapkan.
       courseF_variables_samples2022_2022_pilot_-2022-2:
+        description: Anda akan mencipta sama ada kad ucapan, robot sembang, atau cerita
+          ruang kosong. Sebelum anda bermula, terokai contoh projek di bawah untuk
+          melihat perkara yang anda berminat untuk mencipta. Tekan \"Selesai\" apabila
+          anda bersedia untuk mula merancang atur cara anda sendiri.
+        display_name: Penerokaan - Atur Cara Sampel
+      courseF_variables_samples2022_2022_pilot_-2022-2_2023:
         description: Anda akan mencipta sama ada kad ucapan, robot sembang, atau cerita
           ruang kosong. Sebelum anda bermula, terokai contoh projek di bawah untuk
           melihat perkara yang anda berminat untuk mencipta. Tekan \"Selesai\" apabila
@@ -6931,6 +7692,19 @@ ms-MY:
           peperi yang anda perlukan (dan tingkah laku peperi tersebut).\n\nJika anda
           tidak pasti sama ada anda sudah bersedia untuk meneruskan atau tidak, sila
           semak dengan guru anda!\n"
+      courseF_variables_stop2022_2022_pilot_-2022-2_2023:
+        content1: penerangan di sini
+        markdown: "# Berhenti!\n\n## Adakah anda pasti yang anda sudah bersedia meneruskan?
+          \n\n\nPada tahap seterusnya, anda akan mula menulis kod untuk projek anda.
+          Ini berfungsi paling baik jika anda sudah mempunyai rancangan.\n\nRancangan
+          lengkap anda mesti termasuk:\n\n<img src=\"https://images.code.org/b476ac330f2b66e44e02208fee386a56-image-1614802439867.png\"
+          style=\"float:left; height:70px; padding:10px\"/>\n\n* Jenis projek yang
+          anda sedang bina. Sebagai contoh, kad ucapan, robot sembang, atau cerita
+          ruang kosong.\n* Senarai soalan yang akan anda tanya kepada pengguna.\n*
+          Teks lain yang anda akan paparkan kepada skrin.\n* Huraian atau lukisan
+          peperi yang anda perlukan (dan tingkah laku peperi tersebut).\n\nJika anda
+          tidak pasti sama ada anda sudah bersedia untuk meneruskan atau tidak, sila
+          semak dengan guru anda!\n"
       coursee_prediction_artistfunction2:
         answers:
         - feedback: Salah. Gelung menggunakan "lukiskan poligon" dan bukannya "lukiskan
@@ -6947,6 +7721,21 @@ ms-MY:
         questions:
         - text: Apakah yang akan berlaku apabila anda menekan butang "Jalankan"?
       coursee_prediction_artistfunction22022:
+        answers:
+        - feedback: Salah. Gelung menggunakan "lukiskan poligon" dan bukannya "lukiskan
+            garisan poligon".
+          text: Artis akan menyelesaikan teka-teki dengan betul.
+        - correct: true
+          feedback: Betul!
+          text: Artis akan melukiskan empat segi empat sama dalam corak tingkap.
+        - feedback: Salah. Atur cara tidak memanggil "lukiskan garisan poligon".
+          text: Artis akan melukiskan hanya satu garisan segi empat sama.
+        - feedback: Salah. Gelung berpusing 90 darjah antara panggilan untuk "lukiskan
+            poligon".
+          text: Artis akan melukiskan empat segi empat sama di atas satu sama lain.
+        questions:
+        - text: Apakah yang akan berlaku apabila anda menekan butang "Jalankan"?
+      coursee_prediction_artistfunction22022_2023:
         answers:
         - feedback: Salah. Gelung menggunakan "lukiskan poligon" dan bukannya "lukiskan
             garisan poligon".
@@ -7021,6 +7810,324 @@ ms-MY:
           text: Artis akan melukiskan empat segi empat sama di atas satu sama lain.
         questions:
         - text: Apakah yang akan berlaku apabila anda menekan butang "Jalankan"?
+      csc_animal_adaptations_L3_intro:
+        markdown: "#Make tingkah laku anda sendiri!\n\n<br>\n\n# #Now anda mengawal
+          tingkah laku!\n\n## #Edit tingkah laku sedia ada untuk mengubah suai dan
+          mengubahnya. \n! [] (https://images.code.org/e2e63b1cd7302b6548591c65ad23a0ee-image-1680019477336.gif)\n\n##
+          #Make tingkah laku baru anda sendiri dengan apa-apa tindakan yang anda mahu!\n\n!
+          [] (https://images.code.org/5345f53f3b33b2ad2bbf2bc86539cb96-image-1680019210225.gif)\n\n\n"
+      csc_animal_adaptations_choice:
+        description: Pilih daripada senario di bawah dan gunakan kod kreatif anda
+          sendiri untuk memodelkan penyesuaian haiwan baru & unik! Anda boleh memilih
+          pelbagai pilihan dan melakukan lebih daripada satu!
+        display_name: Kod penyesuaian haiwan anda sendiri!
+      csc_animal_adaptations_intro:
+        markdown: "#Survival Tingkah Laku\n\n# #Behaviors di alam\nHaiwan telah mengembangkan
+          <strong>tingkah laku</strong> dan tindakan untuk menolong mereka bertahan.
+          <br> Sebagai contoh, sesetengah haiwan**berhijrah** semasa musim sejuk dan
+          yang lain cuba tinggal dalam**kumpulan**.\n\n<img style=\" float: left;
+          width:50%; padding-top:10px\" src=\"https://images.code.org/424ef84f41b7cabdf62e8cc509abe62c-image-1678322413909.jpg\"
+          style= \"width:60%\">\n<img style=\" float: left; width:46%; padding-top:10px\"
+          src=\"https://images.code.org/7c79e255d048e7ccf099eb61976bb90c-image-1678322295452.jpg\"
+          style= \"width:60%\">\n\n<div style=\"float: left\">\n<h2>Kelakuan dalam
+          sains komputer</h2>\nDalam sains komputer, <strong>tingkah laku</strong>
+          adalah sekumpulan tindakan yang diulang oleh sprite berulang kali seperti
+          animasi. <br>\nTindakan dalam tingkah laku berterusan sehingga diarahkan
+          untuk berhenti. \n<br>\n<br>\n\n<img src=\"https://images.code.org/56809209ca823047729cc01a033a7ac0-image-1679937249706.gif\"
+          style=\" float: left; width:70%; padding-top:10px\">\n</div>\n"
+      csc_animal_adaptations_predict:
+        answers:
+        - feedback: Tidak betul. Sprite akan berkembang.
+          text: Sprite akan berputar.
+        - correct: true
+          feedback: Betul!
+          text: Sprite akan berkembang.
+        - feedback: Tidak betul. Sprite akan berkembang.
+        - feedback: Tidak betul. Sprite akan berkembang.
+        questions:
+        - {}
+      csc_animal_adaptations_shareout:
+        markdown: "# #Share Projek\n<img src=\"https://images.code.org/c480c5c42d9c02e154943f49bbed87ff-image-1675984438344.13.53
+          PM.png\" style= \"width:60%\">\n<div style= \"width: 60%\"> \n\nAnda**Sekarang
+          setelah anda mengodkan penyesuaian kelangsungan hidup, inilah masanya untuk
+          membagikannya! **\n\nSemasa anda melihat projek rakan sekelas anda dari
+          tahap 9, pertimbangkan soalan berikut:\n\n> 1. Adakah anda memilih senario
+          persekitaran yang sama atau yang berbeza? \n> 2. Adakah mereka menggunakan
+          mana-mana blok pengekodan yang sama? \n> 3. Adakah anda fikir haiwan itu
+          akan bertahan dalam perubahan persekitaran? Mengapa atau mengapa tidak?
+          \n\n</div>\n\n"
+      csc_bookcover_extensions_choice_2023:
+        description: Pilih daripada aktiviti di bawah untuk ditambahkan pada kulit
+          buku anda! Anda boleh memilih pelbagai pilihan dan melakukan lebih daripada
+          satu!
+        display_name: Panjangkan Sampul Buku Anda!
+      csc_bookcovers_markdown_lesson_4:
+        markdown: "# #Share Cover Buku\n<img src=\"https://images.code.org/c480c5c42d9c02e154943f49bbed87ff-image-1675984438344.13.53
+          PM.png\" style= \"width:60%\">\n<div style= \"width: 60%\"> \n\nAnda**Sekarang
+          anda telah mengkodkan kulit buku anda, sudah tiba masanya untuk membagikannya!
+          **\n\nSemasa anda melihat projek rakan sekelas anda, pertimbangkan soalan
+          berikut:\n\n> 1. Apakah sprite dan dialog yang anda lihat dalam sampul buku
+          rakan sekelas anda?\n> 2. Apa yang berlaku apabila anda mengklik pada aksara?\n>
+          2. Bagaimana pilihan mereka serupa dengan pilihan anda? Bagaimana mereka
+          berbeza?\n> 3. Adakah anda ingin membaca buku berdasarkan penutupnya?\n</div>\n\n"
+      csc_bookcovers_planning:
+        markdown: "# #Plan Cover Buku Digital Anda\n\n<div>\n<img style=\" float:
+          left; width:25%; padding-top:10px\" src=\"https://images.code.org/08ece3f13c8f0f82343e302fb52dc45c-image-1676499630865.png\"
+          />\n\n<div style=\"float: left; width: 70%; padding-left:20px\">\n<h4>\n<strong>Sudah
+          tiba masanya untuk membuat rancangan anda!</strong>\n</h4>\n\n>Anda harus
+          memasukkan:\n> - Tajuk\nbuku> -\nPengarang> - Dua watak utama dan satu ayat
+          untuk menggambarkan diri mereka sendiri \n> - Ringkasan ayat satu-dua buku\n\n**Berikut
+          ialah templat pelan yang boleh anda salin untuk digunakan sendiri: ** Panduan</a>Perancangan
+          Kulit  <a href=\"https://docs.google.com/document/d/18cVgDdq77dbdk6gmQ1rGjHIr7pQk3I2Wb2WsAEeNH64/template/preview\"
+          target=\"_blank\"> Buku.\n\n</div>\n"
+      csc_codingwithpoetry_markdown_lesson_4:
+        markdown: "# #Share Aplikasi Puisi\n<img src=\"https://images.code.org/c480c5c42d9c02e154943f49bbed87ff-image-1675984438344.13.53
+          PM.png\" style= \"width:60%\">\n<div style= \"width: 60%\"> \n\nAnda**Sekarang
+          bahawa anda telah mengkodkan puisi anda, sudah tiba masanya untuk membagikannya!
+          **\n\nSemasa anda melihat projek rakan sekelas anda, fikirkan tentang “cahaya”,
+          “tumbuh”, dan “soalan” yang boleh anda tulis untuk pasangan anda:\n\n- “Cahaya”
+          adalah sesuatu yang mereka lakukan dengan baik\n- “berkembang” adalah sesuatu
+          yang boleh mereka ubah atau perbaiki\n- “Soalan” adalah sesuatu yang anda
+          ingin ketahui lebih lanjut\n</div>\n\n**Bersedia untuk bermula? ** Gunakan
+          sumber <a href=\"https://docs.google.com/document/d/1b6w_lOnibUHyDLYCP3rAWED5iElGm6LOQAJwG-hlih0/template/preview\"
+          target=\"_blank\">ini</a> untuk berkongsi maklum balas dengan pasangan anda.\n\n"
+      csc_ecosystemes_foodchain_info:
+        markdown: "\n##**Semua ekosistem mempunyai rantai makanan _diimbangi dengan
+          halus** ## #The rantai\nmakanan ekosistem marin: >## #1.\n\n\n\n<img src=\"https://images.code.org/2270cbb4656875db210e9871883a7d45-image-1683677265473.jpg\"
+          style= \"width:80%\">\n<div style= \"width: 80%\"> \n\nMatahari membekalkan
+          tenaga untuk fotosintesis berlaku dalam alga.\n>## #2. Alga dimakan oleh
+          ikan.\n>## #3. Ikan ditangkap dan dimakan oleh manusia, yang menggunakan
+          bot nelayan dengan jaring. \n\n</div>\n\n\n##**Jika terdapat terlalu banyak
+          atau terlalu sedikit satu organisma dalam rantai makanan, terdapat kesan
+          ke atas keseluruhan ekosistem.**\n"
+      csc_ecosystems_choice_freeplay_2023:
+        description: Setiap simulasi ekosistem ini perlu diselaraskan. Pilih ekosistem,
+          jalankan simulasi untuk memerhatikan masalah, dan laraskan kod untuk memperbaikinya.
+        display_name: Pilih Ekosistem!
+      csc_ecosystems_conditionals_overview:
+        markdown: "#Cause & Keadaan Kesan \n\n</div>\n\n## Seterusnya anda akan menambah
+          kod untuk memeriksa untuk melihat berapa banyak alga di dalam air <br>\n<img
+          src=\"https://images.code.org/8be316d4e408466b4300c614712fd652-image-1684798211348.jpg\"
+          \ width=50% style=\"margin-right: 10px; float: right\">\n<br> <br>\n\n-
+          Pertama, komputer memeriksa untuk melihat sama ada keadaan itu benar atau
+          salah.\n\n- Jika ia benar, maka ia akan menjalankan blok di dalamnya.\n-
+          Sekiranya palsu, maka ia tidak akan melakukan apa-apa.\n\n<br>\n<br>\n<br>\n\n##
+          Jika terdapat terlalu banyak alga, maka karang menjadi sakit\n\n<br>\n\n<img
+          src=\"https://images.code.org/4d8aaa9c6562e0ca0b3d92ff7aed1d03-image-1681847951794.png\"
+          \ width=20% style=\"margin-right: 10px; float: left\">\n<img src=\"https://images.code.org/941774921f367566bef36cb712cf2bfb-image-1681840836607.png\"
+          \ width=30% style=\" margin-right: 10px; float: left\">\n\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n\n***\n\n\n\n##
+          Jika terdapat terlalu sedikit alga, maka ikan akan pergi\n<img src=\"https://images.code.org/6869f418200edfb88190c0a1e4e5cd10-image-1681838202310.png\"
+          \ width=20% style=\"margin-right: 10px; float: left\">\n\n\n<img src=\"https://images.code.org/233178645539bc7966f55af47865096d-image-1681840833690.png\"
+          \ width=20% style=\" margin-right: 10px; float: left\">\n\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n<br>\n\n\n***\n\n\n\n##
+          Sekiranya terdapat cukup alga, maka Ekosistem sihat\n\n<img src=\"https://images.code.org/8bb9247c35d7d167611b02764beaeff3-image-1681838011797.png\"
+          \ width=20% style=\"margin-right: 30px; float: left\">\n<img src=\"https://images.code.org/b1ed2f5c135f9637fd7a9c5778db2b0c-image-1681840830929.png\"
+          \ width=30% style=\"margin-left: 10px;float: left\">\n<br>\n<br>\n<br>\n<br>\n\n"
+      csc_ecosystems_matching_cfu:
+        answers:
+        - text: "! [] (https://images.code.org/284e3b6e09f5d58052a8840e756644c5-image-1683752491112.png)"
+        - text: "! [] (https://images.code.org/d466f0912cd0cadb3d655263c71c072f-image-1683752857648.jpg)"
+        - text: "! [] (https://images.code.org/de2ab3c63bc2cf7cb319be86d5dcdec0-image-1683752570051.png)"
+        markdown: |+
+          ## Lihat tiga amalan memancing yang mampan
+
+          Seret kod ke imej yang sepadan.
+
+        questions:
+        - text: Buat Zon Memancing untuk bot! [] (https://images.code.org/5f5e0640a82242d632db10b872280e18-image-1683753001613.gif)
+        - text: |-
+            Mulakan Musim Memancing dan Musim Tidak Memancing
+            ! [] (https://images.code.org/becad47fd19a4d0e938a0cd10c404e41-image-1683838684289.gif)
+        - text: Tetapkan Had Memancing! [] (https://images.code.org/f8bbd98ff6199af5d3ad23d64f39629d-image-1683753402925.gif)
+        title: Padankan kod dengan imej
+      csc_ecosystems_matching_conditionals:
+        answers:
+        - text: "! [] (https://images.code.org/db1db479bec9b40c6e0574ade394d32b-image-1680118613718.36.41
+            PM.png)"
+        - text: "! [] (https://images.code.org/7c9171ab2ee2e833e5ff60d5519d8728-image-1680118617438.31.00
+            PM.png)"
+        - text: "! [] (https://images.code.org/412968ba617ef19d2049e0e63d271937-image-1680118620636.30.50
+            PM.png)"
+        markdown: |
+          ## Lihat tiga ekosistem
+
+          Satu ekosistem seimbang dan dua yang lain tidak seimbang dengan cara yang berbeza. Seret kod ke imej yang sepadan.
+        questions:
+        - text: Terlalu sedikit alga membuat ikan pergi.! [] (https://images.code.org/c0a28473307b7e9b0e827532d2a6ddda-image-1680212227032.png)
+        - text: |-
+            Terlalu banyak alga membuat karang sakit. <br>
+            ! [] (https://images.code.org/1230fd96832b692b0c8ab88e77957f33-image-1680212254888.png)
+        - text: Jumlah alga yang tepat membolehkan karang yang sakit sembuh dan memastikan
+            ikan juga sihat.! [] (https://images.code.org/3dd061538a7a73285aa0916fdde34e77-image-1680212284869.png)
+        title: Padankan kod dengan imej
+      csc_ecosystems_matching_events:
+        answers:
+        - text: "! [] (https://images.code.org/bf70d0664e68690f2359a48365e50ccc-image-1680556679495.16.33
+            PM.png)"
+        - text: "! [] (https://images.code.org/fe4d2803162186a8e53ec0027f27a206-image-1680556683660.36.04
+            PM.png)"
+        markdown: |+
+          Lihatlah apa yang berlaku apabila sprite menyentuh kedua-dua animasi. Kemudian seret setiap gambar kod ke imej yang sepadan.
+
+
+        questions:
+        - text: Bot menangkap ikan.! [] (https://images.code.org/bcdefefdd1787330e3ad72558b5b492d-image-1680556053866.gif)
+        - text: Ikan memakan alga.! [] (https://images.code.org/73febc58a3d23fbf4c66e693abec9e3d-image-1680556608027.gif)
+        title: Padankan kod dengan animasi
+      csc_ecosystems_overfishing_solution2_overview:
+        markdown: "> #Sustainable Amalan Memancing #2:\n>>># #Create Musim Memancing
+          <img src=\"https://images.code.org/123dd5c82e4c03dcbc32b775fd16ec60-image-1681937158113.png\"
+          \ width=400 style=\"margin-right: 30px; float: left\">\n**Tetapkan had apabila
+          orang boleh menangkap ikan. Apabila ia bukan musim memancing ekosistem mempunyai
+          masa untuk pulih.** \n<br>\n\n#Save Laut kita! \n<img src=\"https://images.code.org/f3f55eddff9891464c8fb5a5405c31c3-image-1681781301257.png\"
+          width=250 style=\"margin-left: 30px; margin-bottom: 30px; float: right\">\n<img
+          src=\"https://images.code.org/cbccfc42b7e1fe329ac7c9c37dfcb6b5-image-1681781296669.png\"
+          width=250 style=\"margin-left: 30px; margin-bottom: 30px; float: right\">\n\n</div>\n\n###
+          Overfishing adalah masalah yang boleh membahayakan ekosistem hidupan laut
+          dan orang-orang yang bergantung kepada mereka. Adalah penting untuk mengamalkan
+          penangkapan ikan yang mampan untuk membantu melindungi ekosistem ini dan
+          memastikan populasi ikan kekal sihat.\n\n\n\n<br>\n<br>\n<br>\n"
+      csc_ecosystems_overfishing_solution3_overview:
+        markdown: "> #Sustainable Amalan Memancing #3:\n>>># #Set Had Memancing <img
+          src=\"https://images.code.org/58d4ca52deba39a990c3165ba16e284b-image-1681747630352.png\"
+          \ width=300 style=\"margin-right: 30px; float: left\">\n**Saintis boleh
+          membantu memikirkan berapa banyak ikan boleh ditangkap tanpa menyebabkan
+          bahaya lautan. Kemudian nelayan akan tahu hanya menangkap ikan banyak.**
+          \n<br>\n<br>\n<br>\n\n#Save Laut kita! \n<img src=\"https://images.code.org/35e557d27c4bdb5f546da560716dc10b-image-1681756387784.jpg\"
+          width=400 style=\"margin-left: 30px; margin-bottom: 30px; float: right\">\n</div>\n\n###
+          Dengan bekerjasama, kita dapat membantu menjaga lautan kita penuh dengan
+          kehidupan untuk generasi akan datang!\n\n\n\n<br>\n<br>\n<br>\n\n"
+      csc_ecosystems_overfishing_solutions_overview:
+        markdown: "#Save Laut kami! \n<img src=\"https://images.code.org/d4267a1de975b8ea46468f74187eb95c-image-1681756621010.jpg\"
+          width=400 style=\"margin-left: 30px; margin-bottom: 30px; float: right\">\n</div>\n\n###
+          Lautan mempunyai banyak ikan di dalamnya, tetapi kadang-kadang orang menangkap
+          terlalu banyak ikan dan ia boleh menjadi buruk bagi ekosistem. Di peringkat
+          berikut, anda akan kod **tiga amalan memancing lestari yang berbeza** untuk
+          membantu melindungi ekosistem lautan kita.\n\n<br>\n\n## #To baca lebih
+          lanjut mengenai penyelesaian lestari untuk lautan kita: <a href=\"https://www.seafoodwatch.org/seafood-basics/sustainable-solutions/avoid-overfishing\"
+          target=\"_blank\">Klik di</a>\n<br>\n<br>\n\nsini> #Sustainable Memancing
+          Amalan #1:\n>> # #Fishing Zon <img src=\"https://images.code.org/c33e46309c5335dc557c67c34310e723-image-1681511054034.png\"
+          \ width=300 style=\"margin-right: 30px; float: left\">\n**Bot nelayan hanya
+          boleh memancing di kawasan yang ditetapkan. Sesetengah kawasan adalah terlarang
+          untuk bot nelayan supaya ekosistem boleh pulih.** \n<br>\n<br>\n\n\n"
+      csc_ecosystems_planning:
+        markdown: "# #Share Simulasi Ekosistem Anda!\n<img src=\"https://images.code.org/c480c5c42d9c02e154943f49bbed87ff-image-1675984438344.13.53
+          PM.png\" style= \"width:50%\">\n<div style= \"width: 60%\"> \n\n###**Ahli
+          ekologi! Sudah tiba masanya untuk berkongsi penyelidikan anda! **\n\n##
+          #Explain pemerhatian berikut yang anda buat:\n\n& gt1. Terangkan rantaian
+          makanan dalam ekosistem anda dan bagaimana anda mengkodkannya.\n> 2. Adakah
+          terdapat terlalu banyak atau terlalu sedikit organisma?\n> 3. Terangkan
+          pengubahsuaian yang anda buat pada simulasi. \n> 4. Apa yang anda perhatikan
+          selepas anda menukar nilai?\n</div>\n\n<div style=\"background-color: #a6e3e8;
+          border-radius: 10px; color: #000000; width: 95%; padding: 0.5px 20px 1px
+          20px;\">\n\n<p style=\"line-height: 1.5; margin-left: 10px; margin-right:
+          10px; margin-top: 20px; margin-bottom: 20px; font-size: 18px; \">\n\n###**Bersedia
+          untuk lebih banyak pengekodan? ** \nCuba [Kursus Ekspres] code.org (https://studio.code.org/s/express-2022)
+          untuk mengetahui lebih banyak sains komputer mengikut kadar anda sendiri.
+          \  \n<br>\n</p></div>\n"
+      csc_mappinglandmarks_markdown_lesson_2:
+        markdown: |+
+          # #Plan Peta Mercu Tanda Anda
+          <div>
+          <img style=" float: left; width:20%; padding-top:10px" src="https://images.code.org/08ece3f13c8f0f82343e302fb52dc45c-image-1676499630865.png" />
+
+          <div style="float: left; width: 70%; padding-left:20px">
+          <h4>
+          <strong>Sudah tiba masanya untuk merancang peta mercu tanda anda sendiri.</strong>
+          </h4>
+
+          Anda mungkin membuat peta bilik darjah, sekolah, atau bandar anda. Mungkin anda akan memilih untuk menampilkan mercu tanda negeri, serantau, atau nasional. Atau anda mungkin memilih untuk membuat peta berdasarkan kawasan yang telah anda pelajari di kelas.
+
+          Semasa anda merancang peta anda, fikirkan latar belakang, sprite, dan ucapan yang ingin anda gunakan untuk mengajar orang lain mengenai mercu tanda yang telah anda pilih.
+
+          **Perlukan bantuan untuk bermula? ** Gunakan sumber <a href="https://docs.google.com/document/d/1t_-cd-f6EhhUbblu8nSGRajStY9FVwLnKn1Bj90GL3Q/template/preview" target="_blank">ini</a> untuk merancang kerja anda.
+
+
+      csc_mappinglandmarks_markdown_lesson_4:
+        markdown: "# #Share Peta Landmark Tempatan Anda\n\nSekarang bahawa anda telah
+          mengkodkan peta anda, sudah tiba masanya untuk berkongsinya! Mula-mula lengkapkan
+          refleksi ringkas mengenai projek anda: \n\n> 1. Terangkan bahagian kegemaran
+          anda dalam projek anda.\n> 2. Apakah blok kod yang berguna dalam projek
+          anda?\n> 3. Terangkan satu pepijat atau cabaran yang anda hadapi semasa
+          membina projek anda.\n> 4. Bagaimana anda membetulkan pepijat atau mengatasi
+          cabaran?\n> 5. Apakah perubahan yang anda masih ingin buat untuk menambah
+          baik projek anda?\n\nSemasa anda membentangkan kerja anda kepada rakan sekelas
+          anda, pastikan anda menerangkan cara kod anda berfungsi, pilihan reka bentuk
+          yang anda buat dan cabaran yang anda hadapi.\n\n\n\n"
+      csc_starquilts_markdown_lesson_1:
+        markdown: |+
+          # #Plan Quilt Bintang Anda
+
+          <div>
+          <img style=" float: left; width:25%; padding-top:10px" src="https://images.code.org/d5e1eedfbe978ba6feebd3f89da0a667-image-1679522801245.png" />
+
+          <div style="float: left; width: 70%; padding-left:20px">
+          <h4>
+          <strong>Sudah tiba masanya untuk merancang selimut bintang anda.</strong>
+          </h4>
+
+          > Mula-mula anda akan memilih empat warna yang berbeza dan mengisi Star Quilt anda. Kemudian anda akan melakukan lebih banyak aktiviti dengan corak.
+
+          **Bersedia untuk bermula? ** Gunakan sumber <a href="https://docs.google.com/document/d/1c__530oWLDH-mX0kSxLMStSz-5Lt3cKUm5K3bTV7Uvo/template/preview" target="_blank">ini</a>.
+
+
+          </div>
+
+
+      csc_timecapsule_choice_lesson_3:
+        description: Pilih daripada aktiviti di bawah untuk menyegarkan ingatan anda
+          tentang cara menambah kod pada puisi kapsul masa anda! Anda boleh memilih
+          pelbagai pilihan dan melakukan lebih daripada satu!
+        display_name: Semak Kemahiran Pengekodan Anda!
+      csc_timecapsule_choice_lesson_3_ -l3:
+        description: Pilih daripada aktiviti di bawah untuk menyegarkan ingatan anda
+          tentang cara menambah kod pada puisi kapsul masa anda! Anda boleh memilih
+          pelbagai pilihan dan melakukan lebih daripada satu!
+        display_name: Semak Kemahiran Pengekodan Anda!
+      csc_timecapsule_info_2023:
+        content1: penerangan di sini
+        markdown: "# #Time Kapsul\n\n<img src=\"https://images.code.org/846b0e2d7a84392a70f432fdce00cd29-image-1676501071993.png\"
+          style= \"float:left; width: 25%; padding-right:30px\"/>\n\n<div style= \"width:
+          70%\"> \n<strong>Kapsul masa adalah seperti kotak harta karun</strong>,
+          tetapi bukannya menyimpan mainan dan gula-gula di dalamnya, ia memegang
+          barang-barang khas yang menceritakan kisah kehidupan seperti sekarang. Kemudian,
+          ia diletakkan di tempat yang selamat, seperti dikebumikan di tanah atau
+          di dalam kotak yang kuat di perpustakaan, selama bertahun-tahun. \n<br>\n<br>\n<strong>Apabila
+          waktunya tepat, seseorang akan membuka kotak</strong> dan melihat semua
+          perkara istimewa yang dimasukkan ke dalam, dan mereka akan tahu semua tentang
+          bagaimana kehidupan ketika ia dikebumikan. \n<br>\n<br>\n<strong>Puisi </strong>kapsul
+          masa digital serupa, tetapi bukannya menyimpan barang di dalam kotak, ia
+          menyimpan gambar, video, dan mesej yang disimpan di komputer atau di internet.\n</div>\n\n"
+      csc_timecapsule_markdown_lesson_2:
+        markdown: "# #Plan Kapsul Masa Anda\n\n<div>\n<img style=\" float: left; width:25%;
+          padding-top:10px\" src=\"https://images.code.org/08ece3f13c8f0f82343e302fb52dc45c-image-1676499630865.png\"
+          />\n\n<div style=\"float: left; width: 70%; padding-left:20px\">\n<h4>\n<strong>Sudah
+          tiba masanya untuk merancang puisi kapsul masa anda sendiri.</strong>\n</h4>\n\n>Anda
+          harus memasukkan:\n> - Apa yang anda suka lakukan \n> - Apa yang penting
+          bagi anda\n> - Apa yang sedang berlaku dalam komuniti anda \n> - Beberapa
+          peristiwa dunia semasa\n\n**Perlukan bantuan memulakan puisi anda? ** Gunakan
+          sumber <a href=\"https://docs.google.com/document/d/1fahr11zX92NW-rLdyZBqrNK2VqgOGtCACkcT87M_luU/template/preview\"
+          target=\"_blank\">ini</a>.\n\n**Hanya memerlukan sedikit inspirasi? ** Gunakan
+          sumber <a href=\"https://docs.google.com/document/d/1-aPA3uJIKJAuQ_2Gtck1Ma79eCFY88ZC8YzegQIckG4/template/preview\"
+          target=\"_blank\">ini</a>.\n\n</div>\n"
+      csc_timecapsule_markdown_lesson_2_poetry:
+        markdown: "# #Plan Puisi Anda\n\n<div>\n<img style=\" float: left; width:25%;
+          padding-top:10px\" src=\"https://images.code.org/08ece3f13c8f0f82343e302fb52dc45c-image-1676499630865.png\"
+          />\n\n<div style=\"float: left; width: 70%; padding-left:20px\">\n<h4>\n<strong>Sudah
+          tiba masanya untuk merancang puisi anda sendiri.</strong>\n</h4>\n\n>Anda
+          harus memasukkan:\n> - Sesuatu yang anda suka lakukan.\n> - Seseorang yang
+          penting kepada anda.\n> - Beberapa perkara kegemaran anda. \n\n**Bersedia
+          untuk memulakan perancangan? ** Gunakan sumber <a href=\"https://docs.google.com/document/d/1b6w_lOnibUHyDLYCP3rAWED5iElGm6LOQAJwG-hlih0/template/preview\"
+          target=\"_blank\">ini</a>.\n\n**Mencari topik? ** Gunakan sumber <a href=\"https://docs.google.com/document/d/1V-DaWOIUk0xT7NYTzx3AEt4my-jc-Hx4vy21Kl4SPoE/template/preview\"
+          target=\"_blank\">ini</a>.\n\n</div>\n"
+      csc_timecapsule_markdown_lesson_4:
+        markdown: "# #Share Kapsul Masa Anda\n<img src=\"https://images.code.org/c480c5c42d9c02e154943f49bbed87ff-image-1675984438344.13.53
+          PM.png\" style= \"width:60%\">\n<div style= \"width: 60%\"> \n\n**Sekarang
+          bahawa anda telah mengkodkan puisi kapsul masa anda, sudah tiba masanya
+          untuk membagikannya! **\n\nSemasa anda melihat projek rakan sekelas anda
+          pertimbangkan soalan berikut:\n\n> 1. Apakah imej dan bunyi yang anda lihat
+          dalam kapsul masa rakan sekelas anda?\n> 2. Bagaimana kisah mereka berbeza
+          dengan kisah anda?\n> 3. Bagaimana kisah mereka serupa dengan kisah anda?\n>
+          4. Bagaimana imej mereka membuat anda merasa?\n</div>\n\n"
       csd-post-survey-2017-q11_2018:
         answers:
         - correct: true
@@ -10189,6 +11296,12 @@ ms-MY:
           # Warga Digital Super
 
           ## Bagaimanakah kita boleh menjadi individu bertanggungjawab apabila kita melihat buli siber?
+      csf_be_a_super_digital_citizen2022_2023:
+        content1: penerangan di sini
+        markdown: |
+          # Warga Digital Super
+
+          ## Bagaimanakah kita boleh menjadi individu bertanggungjawab apabila kita melihat buli siber?
       csf_be_a_super_digital_citizen_2021:
         content1: penerangan di sini
         markdown: |
@@ -10201,6 +11314,11 @@ ms-MY:
 
           ## Apakah maklumat yang OK untuk ada dalam jejak digital anda?
       csf_digital_trails2022:
+        markdown: |-
+          # Ikuti Jejak Digital
+
+          ## Apakah maklumat yang OK untuk ada dalam jejak digital anda?
+      csf_digital_trails2022_2023:
         markdown: |-
           # Ikuti Jejak Digital
 
@@ -10225,6 +11343,20 @@ ms-MY:
 
           ![](https://images.code.org/bfa69295fbf33c77ecdeb79b5498d8f7-image-1584751340896.png)
       csf_password_power-up2022:
+        content1: penerangan di sini
+        markdown: |
+          #  Kukuhkan Kata Laluan Anda
+
+          ## Petua Kata Laluan untuk Diingati
+
+          * Mulakan dengan **frasa** yang sukar dilupakan.
+          * Hanya **ibu bapa** anda yang sepatutnya mengetahui kata laluan anda.
+          * Jangan sesekali menggunakan mana-mana maklumat identiti **peribadi** dalam kata laluan anda.
+          * Cipta kata laluan dengan sekurang-kurangnya **lapan** aksara.
+          * Gunakan huruf, nombor dan **simbol** dalam kata laluan anda.
+
+          ![](https://images.code.org/bfa69295fbf33c77ecdeb79b5498d8f7-image-1584751340896.png)
+      csf_password_power-up2022_2023:
         content1: penerangan di sini
         markdown: |
           #  Kukuhkan Kata Laluan Anda
@@ -10278,6 +11410,19 @@ ms-MY:
           * **P**ause and think online - Berhenti sementara dan berfikir dalam talian.
 
           ![](https://images.code.org/f3e4987a130b27f7b589d7829b753aac-image-1584750971069.png)
+      csf_putting_a_stop_to_online_meanness2022_2023:
+        content1: penerangan di sini
+        markdown: |
+          # HENTIKAN Kezaliman
+
+          ## Apakah yang perlu anda lakukan jika seseorang bertindak zalim kepada anda dalam talian?
+
+          * **S**tep away - Jauhkan diri.
+          * **T**ell a trusted adult - Beritahu orang dewasa yang dipercayai.
+          * **O**K sites first - Layari laman web yang OK terlebih dahulu.
+          * **P**ause and think online - Berhenti sementara dan berfikir dalam talian.
+
+          ![](https://images.code.org/f3e4987a130b27f7b589d7829b753aac-image-1584750971069.png)
       csf_putting_a_stop_to_online_meanness_2021:
         content1: penerangan di sini
         markdown: |
@@ -10297,6 +11442,11 @@ ms-MY:
 
           ## Bagaimanakah anda pergi ke tempat dengan selamat secara dalam talian?
       csf_safety_in_my_online_neighborhood2022:
+        markdown: |
+          # Kejiranan Dalam Talian Saya
+
+          ## Bagaimanakah anda pergi ke tempat dengan selamat secara dalam talian?
+      csf_safety_in_my_online_neighborhood2022_2023:
         markdown: |
           # Kejiranan Dalam Talian Saya
 
@@ -11869,11 +13019,19 @@ ms-MY:
         description: Anda telah sampai pada penghujung Kursus E! Pilih projek untuk
           dicipta.
         display_name: Akhir Projek Kursus
+      express_EOC2022_2023:
+        description: Anda telah sampai pada penghujung Kursus E! Pilih projek untuk
+          dicipta.
+        display_name: Akhir Projek Kursus
       express_EOC_2021:
         description: Anda telah sampai pada penghujung Kursus E! Pilih projek untuk
           dicipta.
         display_name: Akhir Projek Kursus
       express_EOC_examples2022:
+        description: Anda akan memulakan projek akhir anda. Sebelum anda bermula,
+          luangkan sedikit masa dengan melihat projek contoh.
+        display_name: Contoh Projek
+      express_EOC_examples2022_2023:
         description: Anda akan memulakan projek akhir anda. Sebelum anda bermula,
           luangkan sedikit masa dengan melihat projek contoh.
         display_name: Contoh Projek
@@ -11913,6 +13071,24 @@ ms-MY:
         questions:
         - {}
       grade2_multi_collector_A_predict12022:
+        answers:
+        - feedback: Salah. Laurel cuba mengumpulkan harta karun tetapi tidak ditemui
+            di tempat tersebut dan ia menyebabkan ralat.
+          text: Laurel akan mengumpulkan 4 harta karun dengan menggunakan kod ini.
+        - correct: true
+          feedback: Betul!
+          text: Laurel akan cuba mengumpulkan harta karun tetapi tiada apa-apa ditemui
+            di tempat tersebut dan ia menyebabkan ralat.
+        - feedback: Salah. Laurel cuba mengumpulkan harta karun tetapi tidak ditemui
+            di tempat tersebut dan ia menyebabkan ralat.
+          text: Laurel akan mengumpulkan semua harta karun itu.
+        - feedback: Salah. Laurel cuba mengumpulkan harta karun tetapi tidak ditemui
+            di tempat tersebut dan ia menyebabkan ralat.
+          text: Laurel akan mengumpulkan 1 harta karun dengan menggunakan kod ini.
+        questions:
+        - text: Lihat pada kod ini dengan teliti. Pada pendapat anda, apakah yang
+            akan berlaku apabila atur cara ini dijalankan?
+      grade2_multi_collector_A_predict12022_2023:
         answers:
         - feedback: Salah. Laurel cuba mengumpulkan harta karun tetapi tidak ditemui
             di tempat tersebut dan ia menyebabkan ralat.
