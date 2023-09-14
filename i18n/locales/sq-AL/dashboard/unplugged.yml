@@ -68,7 +68,7 @@ sq:
           - unplug11
         video: Unplug11
       UnplugHappyMaps:
-        title: Hartat e Gëzuara
+        title: Hartat e Lumtura
         desc: Studentët krijojnë algoritma të thjeshtë (grup udhëzimesh) për të lëvizur midis një tuneli duke përdorur një komandë të vetme.
       MoveIt:
         title: Lëvize, Lëvize
@@ -125,7 +125,7 @@ sq:
         title: Crowdsourcing
         desc: Studentët përdorin crowdsourcing, një teknikë zgjidhje-problemesh, e zakonshme në shkencën kompjuterike, për të përfunduar një detyrë bashkë si një klasë, më efiçente se sa një student të përpiqej vetë.
       DigitalCitizenship:
-        title: Shtetësi Dixhitale
+        title: Shtetësia digjitale
         desc: Studentët eksplorojnë ndryshimin ndërmjet informacionit privat dhe informacionit personal, duke dalluar çfarë është e sigurt dhe jo e sigurt, për tu ndarë online.
       TangramAlgorithms:
         title: Algoritmat Tangram
@@ -173,11 +173,13 @@ sq:
         title: Aktiviteti Unplugged
       courseF_unplugged_powerOfWords:
         title: Aktiviteti Unplugged
+      deeper learning description:
+        title: '[empty string]'
       courseAB_unplugged_plantASeed:
         title: 'Algoritmet e jetës-Reale: Mbill një Farë'
         desc: Ky mësim thërret mënyrat se si ne përdorim algoritmet në jetët tona të përditshme, duke përdorur veprimin e mbjelljes së një fare për shembull. Gjithashtu, fokusohet në figurën më të madhe të shkencës kompjuterike dhe se si algoritmat luajnë një rol esencial.
       courseA_unplugged_happyMaps:
-        title: Hartat e Gëzuara
+        title: Hartat e Lumtura
         desc: Studentët krijojnë algoritma të thjeshtë (grup udhëzimesh) për të lëvizur midis një tuneli duke përdorur një komandë të vetme.
       courseA_unplugged_goingPlacesSafely:
         title: Të shkuarit nëpër Vende në mënyrë të Sigurtë
@@ -240,11 +242,47 @@ sq:
         desc: 'Një nga strukturat më madhështore në botën e shkencës kompjuterike është funksioni. Funksionet (ndonjëhere quhen proçedura) janë programe të vola që ti mund ti përdorësh herë pas here brenda programit më të madh. Ky mësim do të ndihmojë studentët në mënyrë logjike të kuptojnë pse duke kombinuar pjesët e kodit në funksione, është një praktikë kaq ndihmuese.  '
       courseB_unplugged_MRF_2018:
         title: Shokët e mi robotik
+      BuildingAFoundation_2018:
+        title: '[empty string]'
+        desc: '[empty string]'
+      courseB_unplugged_loopyMRF_2018:
+        title: '[empty string]'
+        desc: '[empty string]'
+      DiceRace_2018:
+        title: '[empty string]'
+        desc: '[empty string]'
+      courseE_unplugged_privateInformation_2018:
+        title: '[empty string]'
+        desc: '[empty string]'
+      SongwritingParameters_2018:
+        title: '[empty string]'
+        desc: '[empty string]'
+      Internet_2018:
+        title: '[empty string]'
+        desc: '[empty string]'
+      Crowdsourcing_2018:
+        title: '[empty string]'
+        desc: '[empty string]'
+      TangramAlgorithms_2018:
+        title: '[empty string]'
+        desc: '[empty string]'
+      courseF_unplugged_powerOfWords_2018:
+        title: '[empty string]'
+        desc: '[empty string]'
+      EnvelopeVariables_2018:
+        title: '[empty string]'
+        desc: '[empty string]'
+      ForLoopFun_2018:
+        title: '[empty string]'
+        desc: '[empty string]'
+      SongwritingWithParameters_2018:
+        title: '[empty string]'
+        desc: '[empty string]'
       PlantASeed_2018:
         title: 'Algoritmet e jetës-Reale: Mbill një Farë'
         desc: Ky mësim thërret mënyrat se si ne përdorim algoritmet në jetët tona të përditshme, duke përdorur veprimin e mbjelljes së një fare për shembull. Gjithashtu, fokusohet në figurën më të madhe të shkencës kompjuterike dhe se si algoritmat luajnë një rol esencial.
       UnplugHappyMaps_2018:
-        title: Hartat e Gëzuara
+        title: Hartat e Lumtura
         desc: Studentët krijojnë algoritma të thjeshtë (grup udhëzimesh) për të lëvizur midis një tuneli duke përdorur një komandë të vetme.
       GoingPlacesSafely_2018:
         title: Të shkuarit nëpër Vende në mënyrë të Sigurtë
@@ -279,10 +317,13 @@ sq:
         desc: Studentët krijojnë byzylykë si një përfaqësim binar të shkronjës së parë të emrit të tyre. Studentët mësojnë që të dhënat mund të përfaqësohen dhe të ruhen në më shumë se një mënyrë.
       MoveItMoveIt_2018:
         title: Lëvize atë, lëvize atë
+        desc: '[empty string]'
       RelayProgramming_2018:
         title: Programimi i Besuar
       courseB_unplugged_MRF_2019:
         title: Shokët e mi robotik
+      courseB_unplugged_loopyMRF_2019:
+        desc: '[empty string]'
       Conditionals_2019:
         title: Kushtet
         desc: Për të mësuar rreth përcaktimeve të kushtoreve, studentët luajnë një lojë me karta dhe krijojnë rregulla si "Nëse vizatoj një kartë të kuqe, unë marr një pikë" dhe "Nëse unë vizatoj një kartë të zezë, ti merr një pikë."
@@ -314,13 +355,14 @@ sq:
         title: 'Algoritmet e jetës-Reale: Mbill një Farë'
         desc: Ky mësim thërret mënyrat se si ne përdorim algoritmet në jetët tona të përditshme, duke përdorur veprimin e mbjelljes së një fare për shembull. Gjithashtu, fokusohet në figurën më të madhe të shkencës kompjuterike dhe se si algoritmat luajnë një rol esencial.
       UnplugHappyMaps_2019:
-        title: Hartat e Gëzuara
+        title: Hartat e Lumtura
         desc: Studentët krijojnë algoritma të thjeshtë (grup udhëzimesh) për të lëvizur midis një tuneli duke përdorur një komandë të vetme.
       GoingPlacesSafely_2019:
         title: Të shkuarit nëpër Vende në mënyrë të Sigurtë
         desc: Interneti është një vend i fuqishëm, por ndonjëherë i rrezikshëm. Mësuesit prezantojnë si të qëndrojmë të sigurtë ndërsa navigojmë në Internet.
       MoveItMoveIt_2019:
         title: Lëvize atë, lëvize atë
+        desc: '[empty string]'
       DigitalFootprint_2019:
         title: Gjurmët e Tua Dixhitale
         desc: Mësuesit i prezantojnë studentëve idenë që futja e informacionit online rreth vetes krijon një gjurmë dixhitale ose "shteg" që ka pasoja.
@@ -331,3 +373,9 @@ sq:
       timeforcs_demo_conditionals:
         title: Kushtet
         desc: Për të mësuar rreth përcaktimeve të kushtoreve, studentët luajnë një lojë me karta dhe krijojnë rregulla si "Nëse vizatoj një kartë të kuqe, unë marr një pikë" dhe "Nëse unë vizatoj një kartë të zezë, ti merr një pikë."
+      SP-VPL-CSD-21-CourseNavigation:
+        title: '[empty string]'
+        desc: '[empty string]'
+      SP-VPL-CSA-21-mod3-1-1:
+        title: '[empty string]'
+        desc: '[empty string]'

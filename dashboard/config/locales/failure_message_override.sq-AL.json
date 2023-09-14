@@ -1,2 +1,14 @@
 {
+  "sq-AL": {
+    "data": {
+      "failure_message_override": {
+        "courseC19_playLab_EOC3": "Ju duhet të shtoni dy ose më shumë aktorë të rinj në lojën tuaj dhe t'i programoni ata të lëvizin.",
+        "courseC19_playLab_EOC32022": "Ju duhet të shtoni dy ose më shumë aktorë të rinj në lojën tuaj dhe t'i programoni ata të lëvizin.",
+        "courseC19_playLab_EOC3_2020": "Ju duhet të shtoni dy ose më shumë aktorë të rinj në lojën tuaj dhe t'i programoni ata të lëvizin.",
+        "courseC19_playLab_EOC3_2021": "Ju duhet të shtoni dy ose më shumë aktorë të rinj në lojën tuaj dhe t'i programoni ata të lëvizin.",
+        "courseC19_playLab_EOC3_2023": "Ju duhet të shtoni dy ose më shumë aktorë të rinj në lojën tuaj dhe t'i programoni ata të lëvizin.",
+        "courseE_playLab_scaffold3": "Ju duhet të shtoni dy ose më shumë aktorë të rinj në lojën tuaj dhe t'i programoni ata të lëvizin."
+      }
+    }
+  }
 }

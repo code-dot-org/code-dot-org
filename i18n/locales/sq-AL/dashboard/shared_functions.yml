@@ -1,1 +1,21 @@
 sq:
+  data:
+    shared_functions:
+      driving with arrow keys: vozitje me tastet e shigjetave
+      fluttering: përplasje krahësh
+      growing: rritet
+      jittering: nervozë
+      moving east: lëviz nga lindja
+      moving east and looping: lëviz nga lindja dhe loop
+      moving north: lëviz nga veriu
+      moving south: lëviz nga jugu
+      moving west: lëviz nga perëndimi
+      moving west and looping: lëviz nga perëndimi dhe loop
+      moving with arrow keys: lëviz me tastet e shigjetave
+      patrolling: patrullim
+      shrinking: tkurret
+      spinning left: rrotullim në të majtë
+      spinning right: rrotullim në të djathtë
+      swimming left and right: not majtas dhe djathtas
+      wandering: bredh rreth e rrotull
+      wobbling: tundje

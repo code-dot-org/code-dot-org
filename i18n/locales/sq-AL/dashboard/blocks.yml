@@ -275,6 +275,7 @@ sq:
           STRING:
             '"diamond"': diamant
             '"x"': x
+            '"1"': '1'
             '"3"': '3'
             '"5"': '5'
             '"6"': '6'
@@ -292,6 +293,7 @@ sq:
             '"g"': g
             '"q"': q
             '"x"': x
+            '"1"': '1'
             '"3"': '3'
             '"5"': '5'
             '"6"': '6'
@@ -320,6 +322,18 @@ sq:
           CONDITION:
             '"when"': kur
             '"while"': ndërsa
+      gamelab_collectibleBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): rrotullim në të djathtë
+            new Behavior(spinning_left, []): rrotullim në të majtë
+            new Behavior(fluttering, []): përplasje krahësh
+            new Behavior(jittering, []): nervozë
+            new Behavior(wobbling, []): tundje
+            new Behavior(wandering, []): bredh rreth e rrotull
+            new Behavior(patrolling, []): patrullim
+            new Behavior(moving_west_and_looping, []): lëviz nga perëndimi dhe loop
+            new Behavior(moving_east_and_looping, []): lëviz nga lindja dhe loop
       gamelab_everyInterval:
         options:
           UNIT:
@@ -342,6 +356,7 @@ sq:
       gamelab_int10:
         options:
           VALUE:
+            '1': '1'
             '3': '3'
             '5': '5'
             '6': '6'
@@ -432,6 +447,11 @@ sq:
             "'sound://category_sports/Airhorn_SFX.mp3'": brirë ajri
             "'sound://category_sports/Crowd_Applause_SFX.mp3'": duartrokit
             "'sound://category_sports/One_Whistle_SFX.mp3'": bilbil
+      gamelab_playerBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(moving_with_arrow_keys, []): lëviz me tastet e shigjetave
+            new Behavior(driving_with_arrow_keys, []): vozitje me tastet e shigjetave
       gamelab_randColor:
         text: ngjyrë e rastësishme
       gamelab_randomColor:
@@ -663,14 +683,31 @@ sq:
       Poetry_startBehavior:
         options:
           BEHAVIOR:
+            '"fluttering"': përplasje krahësh
+            '"growing"': rritet
+            '"jittering"': nervozë
+            '"shrinking"': tkurret
+            '"spinning_left"': rrotullim në të majtë
+            '"spinning_right"': rrotullim në të djathtë
             '"swimming_left_and_right"': not
+            '"wandering"': bredh rreth e rrotull
+            '"wobbling"': tundje
       Poetry_stopBehavior:
         options:
           BEHAVIOR:
+            '"fluttering"': përplasje krahësh
+            '"growing"': rritet
+            '"jittering"': nervozë
+            '"shrinking"': tkurret
+            '"spinning_left"': rrotullim në të majtë
+            '"spinning_right"': rrotullim në të djathtë
             '"swimming_left_and_right"': not
+            '"wandering"': bredh rreth e rrotull
+            '"wobbling"': tundje
       Poetry_whenLineShows:
         options:
           'N':
+            '1': '1'
             '3': '3'
             '5': '5'
             '6': '6'
@@ -692,6 +729,16 @@ sq:
             '"grid"': rrjet
             '"row"': klasë
             '"random"': zakonshëm
+      adaptations_adaptationBehaviors:
+        options:
+          BEHAVIOR:
+            new Behavior(spinning_right, []): rrotullim në të djathtë
+            new Behavior(spinning_left, []): rrotullim në të majtë
+            new Behavior(fluttering, []): përplasje krahësh
+            new Behavior(jittering, []): nervozë
+            new Behavior(wobbling, []): tundje
+            new Behavior(wandering, []): bredh rreth e rrotull
+            new Behavior(patrolling, []): patrullim
       binary_move:
         options:
           DIR:
@@ -799,6 +846,7 @@ sq:
       ecosystems_int10:
         options:
           VALUE:
+            '1': '1'
             '3': '3'
             '5': '5'
             '6': '6'

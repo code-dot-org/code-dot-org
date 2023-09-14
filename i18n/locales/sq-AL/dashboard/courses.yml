@@ -7,6 +7,40 @@ sq:
           assignment_family_title: Ap® Parimet e Shkencave Kompjuterike
         csp-2018:
           assignment_family_title: Ap® Parimet e Shkencave Kompjuterike
+        time4cs-control: {}
+        time4cs-experiment: {}
+        csa-pilot: {}
+        mike-test: {}
+        self-paced-pl-csd-2021: {}
+        self-paced-pl-csp-2021: {}
+        csa-pilot-facilitator: {}
+        csa-pilot-extra: {}
+        vpl-csd-summer-pilot-2022: {}
+        csa-async-2022: {}
+        vpl-csd-summer-pilot-ci-2022: {}
+        self-paced-pl-csa-2022: {}
+        self-paced-pl-csd-2022: {}
+        self-paced-pl-csp-2022: {}
+        vpl-csd-ayw-pilot-2022: {}
+        self-paced-pl-physical-computing-2022: {}
+        self-paced-pl-csa-2023: {}
+        tess-testing-focus-on-creativity-2023: {}
+        focus-on-hardware-2023: {}
+        focus-on-data-2023: {}
+        focus-on-design-with-purpose-2023: {}
+        focus-on-coding-2023: {}
+        focus-on-impact-in-society-2023: {}
+        vpl-csd-summer-ci-2023: {}
+        self-paced-pl-physical-computing-2023: {}
+        self-paced-pl-csd-2023: {}
+        self-paced-pl-microbit-2023: {}
+        pl-csd-summer-2023: {}
+        virtual-pl-csd-summer-2023: {}
+        self-paced-pl-csp-2023: {}
+        self-paced-pl-aiml-2023: {}
+        vpl-csp-2023: {}
+        vpl-csa-2023: {}
+        vpl-csd-2023: {}
     resources:
       curriculum/csd/2017:
         name: Plani mësimor
@@ -38,6 +72,8 @@ sq:
         name: Udhëzues CSD për debugging
       csd_guide_to_differentiation/csd/2021:
         name: Udhëzues CSD për diferencimin
+      csd_guide_to_using_resources/csd/2021:
+        name: Udhëzues CSD për përdorimin e burimeve
       csd_implementation_guide/csd/2021:
         name: Udhëzues për zbatimin e CSD
       all_code_5/csd/2022:
@@ -54,9 +90,13 @@ sq:
         name: Udhëzues CSD për debugging
       csd_guide_to_differentiation/csd/2022:
         name: Udhëzues CSD për diferencimin
+      csd_guide_to_using_resources/csd/2022:
+        name: Udhëzues CSD për përdorimin e burimeve
       csd_implementation_guide/csd/2022:
         name: Udhëzues për zbatimin e CSD
         url: https://docs.google.com/document/d/1vLGKcHC46jE6zZozBTmExOKdKwl544s0tbCds1LSg1Q/preview
+      csd_programming_levels_guide/csd/2022:
+        name: Udhëzues për nivelet e programimit CSD
       all_code_2/csd/2023:
         name: Të gjitha kodet
       all_resources_2/csd/2023:
@@ -67,5 +107,7 @@ sq:
         name: Fjalori
       csd_guide_to_differentiation_1/csd/2023:
         name: Udhëzues CSD për diferencimin
+      csd_guide_to_using_resources_1/csd/2023:
+        name: Udhëzues CSD për përdorimin e burimeve
       csd_implementation_guide_1/csd/2023:
         name: Udhëzues për zbatimin e CSD

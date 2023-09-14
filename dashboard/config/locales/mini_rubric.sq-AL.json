@@ -2,14 +2,525 @@
   "sq-AL": {
     "data": {
       "mini_rubric": {
+        "CDU U6 Playground Sound Board_2019": {
+          "rubric_key_concept": "Krijoni dhe modifikoni vargje, zhvilloni softuer për të kontrolluar një shumëllojshmëri të pajisjeve fizike.",
+          "rubric_performance_level_1": "Programi funksionon siç përshkruhet, me të paktën katër ngjarje të pllakës secila duke shkaktuar një seri të ndryshme notash. ",
+          "rubric_performance_level_2": "Programi luan një seri notash kur shkaktohet nga një ngjarje e veçantë e pllakës, por mund të ketë gabime në kod që e pengojnë atë të funksionojë saktësisht siç përshkruhet.",
+          "rubric_performance_level_3": "Ekziston një kod në program që mund të prodhojë një seri shënimesh në sirenë, por kodi nuk mund të shkaktohet nga një ngjarje e pllakës, ose gabime të rëndësishme në kod parandalojnë luajtjen e notave.",
+          "rubric_performance_level_4": "Nuk ka sekuenca të notave në program, ose nuk ka asnjë kod për të prodhuar dalje sirenë."
+        },
+        "CDU U6 Playground Sound Board_2021": {
+          "rubric_key_concept": "Krijoni dhe modifikoni vargje, zhvilloni softuer për të kontrolluar një shumëllojshmëri të pajisjeve fizike.",
+          "rubric_performance_level_1": "Programi funksionon siç përshkruhet, me të paktën katër ngjarje të pllakës secila duke shkaktuar një seri të ndryshme notash. ",
+          "rubric_performance_level_2": "Programi luan një seri notash kur shkaktohet nga një ngjarje e veçantë e pllakës, por mund të ketë gabime në kod që e pengojnë atë të funksionojë saktësisht siç përshkruhet.",
+          "rubric_performance_level_3": "Ekziston një kod në program që mund të prodhojë një seri shënimesh në sirenë, por kodi nuk mund të shkaktohet nga një ngjarje e pllakës, ose gabime të rëndësishme në kod parandalojnë luajtjen e notave.",
+          "rubric_performance_level_4": "Nuk ka sekuenca të notave në program, ose nuk ka asnjë kod për të prodhuar dalje sirenë."
+        },
+        "CSD Games properties assessment_2021": {
+          "rubric_key_concept": "Përdorni pikë shënimin për të përditësuar atributet e një sprite.",
+          "rubric_performance_level_1": "Rregullimi i spriteve është identik me shembullin e dhënë në udhëzim.",
+          "rubric_performance_level_2": "Sprites janë ridimensionuar për t'u përshtatur brenda rrethit. Mund të ketë disa dallime të vogla midis punës së nxënësit dhe shembullit të dhënë.",
+          "rubric_performance_level_3": "Sprites janë ridimensionuar, por janë ende shumë të mëdha për t'u përshtatur brenda rrethit.",
+          "rubric_performance_level_4": "Kodi është ose i njëjtë ose është ndryshuar në mënyra që nuk lidhen me mësimin."
+        },
+        "CSD Games properties assessment_2022": {
+          "rubric_key_concept": "Përdorni pikë shënimin për të përditësuar atributet e një sprite.",
+          "rubric_performance_level_1": "Rregullimi i spriteve është identik me shembullin e dhënë në udhëzim.",
+          "rubric_performance_level_2": "Sprites janë ridimensionuar për t'u përshtatur brenda rrethit. Mund të ketë disa dallime të vogla midis punës së nxënësit dhe shembullit të dhënë.",
+          "rubric_performance_level_3": "Sprites janë ridimensionuar, por janë ende shumë të mëdha për t'u përshtatur brenda rrethit.",
+          "rubric_performance_level_4": "Kodi është ose i njëjtë ose është ndryshuar në mënyra që nuk lidhen me mësimin."
+        },
+        "CSD U2 Image assessment_2021": {
+          "rubric_key_concept": "Strukturoni përmbajtjen në një webfaqe duke përdorur HTML (Shtoni një imazh në një webfaqe). Atribuoni me saktësi të tjerët kur përdorni punën e tyre.",
+          "rubric_performance_level_1": "Imazhi shfaqet siç duhet dhe një atribut 'alt' jep një përshkrim të arsyeshëm të testit të imazhit. Asnjë kod i panevojshëm nuk përfshihet në etiketën `img`. Ekziston një atribut i saktë dhe imazhi është emërtuar siç duhet.",
+          "rubric_performance_level_2": "Imazhi shfaqet siç duhet dhe po përdoret sipas përshkrimit të licencës së të drejtës së autorit.",
+          "rubric_performance_level_3": "Etiketa `img` përdoret dhe sigurohet një adresë burimi për imazhin, por mund të ketë gabime të vogla sintakse ose gabime të gabuara që parandalojnë shfaqjen e duhur të imazhit. Imazhi mund të mos jetë i disponueshëm për përdorim ligjor në webfaqe."
+        },
+        "CSD U2 Image assessment_2022": {
+          "rubric_key_concept": "Strukturoni përmbajtjen në një webfaqe duke përdorur HTML (Shtoni një imazh në një webfaqe). Atribuoni me saktësi të tjerët kur përdorni punën e tyre.",
+          "rubric_performance_level_1": "Imazhi shfaqet siç duhet dhe një atribut 'alt' jep një përshkrim të arsyeshëm të testit të imazhit. Asnjë kod i panevojshëm nuk përfshihet në etiketën `img`. Ekziston një atribut i saktë dhe imazhi është emërtuar siç duhet.",
+          "rubric_performance_level_2": "Imazhi shfaqet siç duhet dhe po përdoret sipas përshkrimit të licencës së të drejtës së autorit.",
+          "rubric_performance_level_3": "Etiketa `img` përdoret dhe sigurohet një adresë burimi për imazhin, por mund të ketë gabime të vogla sintakse ose gabime të gabuara që parandalojnë shfaqjen e duhur të imazhit. Imazhi mund të mos jetë i disponueshëm për përdorim ligjor në webfaqe.",
+          "rubric_performance_level_4": "Etiketa `img` nuk përdoret ose nuk jepet asnjë adresë burimi për imazhin."
+        },
+        "CSD U2 adding pages_2021": {
+          "rubric_key_concept": "Krijimi i një objekti digjital, që lidh brenda një faqe me shumë faqe\n",
+          "rubric_performance_level_1": "Një faqe e re është krijuar dhe është dhënë një emër unik dhe përshkrues që përfundon në “.html”. Ekziston një link nga faqja index.html në faqen e re dhe nga faqja e re përsëri në index.html",
+          "rubric_performance_level_2": "Ekziston të paktën një link punues nga një faqe HTML në tjetrën\n",
+          "rubric_performance_level_3": "Ekziston një etiketë <a>``, por gabimet e sintaksës ose problemet me emrin e faqes mund ta parandalojnë atë të funksionojë\n",
+          "rubric_performance_level_4": "Asnjë faqe e re nuk u krijua dhe nuk ka links\n"
+        },
+        "CSD U2 adding pages_2022": {
+          "rubric_key_concept": "Krijimi i një objekti digjital, që lidh brenda një faqe me shumë faqe\n",
+          "rubric_performance_level_1": "Një faqe e re është krijuar dhe është dhënë një emër unik dhe përshkrues që përfundon në “.html”. Ekziston një link nga faqja index.html në faqen e re dhe nga faqja e re përsëri në index.html",
+          "rubric_performance_level_2": "Ekziston të paktën një link punues nga një faqe HTML në tjetrën\n",
+          "rubric_performance_level_3": "Ekziston një etiketë <a>``, por gabimet e sintaksës ose problemet me emrin e faqes mund ta parandalojnë atë të funksionojë\n",
+          "rubric_performance_level_4": "Asnjë faqe e re nuk u krijua dhe nuk ka links\n"
+        },
+        "CSD U2 classes haikus_2021": {
+          "rubric_performance_level_1": "Klasa dhe grupi i rregullave janë krijuar në mënyrë korrekte, të gjitha elementet e poezisë të zgjedhur janë të përfshira dhe ka të paktën tre rregulla në rregullat e caktuara.",
+          "rubric_performance_level_2": "Një klasë dhe set rregullash janë krijuar dhe shumica e elementeve në seksionin e zgjedhur të poezisë së webfaqes ndikohen nga kjo klasë, por mund të ketë disa gabime të vogla për disa pjesë të tekstit, ose mund të ketë më pak se tre rregulla në rregull-set.",
+          "rubric_performance_level_3": "Dhe klasa dhe grupi i rregullave krijohen, dhe të paktën disa elementë në webaqe janë në atë klasë, por mund të ketë gabime të mëdha që pengojnë stilimin e tekstit.",
+          "rubric_performance_level_4": "Asnjë klasë ose set rregullash nuk krijohen, ose asnjë element i webfaqes nuk vendoset në klasë."
+        },
+        "CSD U2 classes haikus_2022": {
+          "rubric_performance_level_1": "Klasa dhe grupi i rregullave janë krijuar në mënyrë korrekte, të gjitha elementet e poezisë të zgjedhur janë të përfshira dhe ka të paktën tre rregulla në rregullat e caktuara.",
+          "rubric_performance_level_2": "Një klasë dhe set rregullash janë krijuar dhe shumica e elementeve në seksionin e zgjedhur të poezisë së webfaqes ndikohen nga kjo klasë, por mund të ketë disa gabime të vogla për disa pjesë të tekstit, ose mund të ketë më pak se tre rregulla në rregull-set.",
+          "rubric_performance_level_3": "Krijohen një klasë dhe rregulla, dhe të paktën disa elementë në webfaqe janë në atë klasë, por mund të ketë gabime të mëdha që parandalojnë stilimin e tekstit.",
+          "rubric_performance_level_4": "Asnjë klasë ose set rregullash nuk krijohen, ose asnjë element i webfaqes nuk vendoset në klasë."
+        },
+        "CSD U3 Conditionals Apple 2_2018_2019": {
+          "rubric_key_concept": "Përdorni kushte për të kontrolluar rrjedhën e një programi.",
+          "rubric_performance_level_1": "Imazhi i sprite ndryshon nga një mollë në një dardhë kur shkalla e sprite arrin 2.",
+          "rubric_performance_level_2": "Ekziston një kusht në draw loop që kontrollon nëse shkalla e sprite ka arritur 2.",
+          "rubric_performance_level_3": "Ekziston një kusht në draw loop që kontrollon vlerën e një deklarate Boolean.",
+          "rubric_performance_level_4": "Nuk ka kushte në draw loop."
+        },
+        "CSD U3 Conditionals Apple 2_2021": {
+          "rubric_key_concept": "Përdorni kushte për të kontrolluar rrjedhën e një programi.",
+          "rubric_performance_level_1": "Imazhi i sprite ndryshon nga një mollë në një dardhë kur shkalla e sprite arrin 2.",
+          "rubric_performance_level_2": "Ekziston një kusht në draw loop që kontrollon nëse shkalla e sprite ka arritur 2.",
+          "rubric_performance_level_3": "Ekziston një kusht në draw loop që kontrollon vlerën e një deklarate Boolean.",
+          "rubric_performance_level_4": "Nuk ka kushte në draw loop."
+        },
+        "CSD U3 Conditionals Apple 2_2022": {
+          "rubric_key_concept": "Përdorni kushte për të kontrolluar rrjedhën e një programi.",
+          "rubric_performance_level_1": "Imazhi i sprite ndryshon nga një mollë në një dardhë kur shkalla e sprite arrin 2.",
+          "rubric_performance_level_2": "Ekziston një kusht në draw loop që kontrollon nëse shkalla e sprite ka arritur 2.",
+          "rubric_performance_level_3": "Ekziston një kusht në draw loop që kontrollon vlerën e një deklarate Boolean.",
+          "rubric_performance_level_4": "Nuk ka kushte në draw loop."
+        },
+        "CSD U3 Direction Arrows_2018_2019": {
+          "rubric_key_concept": "Zbuloni dhe përgjigjuni input të përdoruesit nga tastiera.",
+          "rubric_performance_level_1": "Sprite lëviz saktë në përgjigje të të gjitha katër tastet e shigjetave. Nuk ka deklarata shtesë “if”.",
+          "rubric_performance_level_2": "Sprite lëviz në përgjigje të tasteve të shumëfishtë të shigjetave, por mund të ketë disa gabime.",
+          "rubric_performance_level_3": "Programi përdor një deklaratë `if` për të zbuluar input të përdoruesit.",
+          "rubric_performance_level_4": "Programi nuk zbulon input të përdoruesit."
+        },
+        "CSD U3 Direction Arrows_2021": {
+          "rubric_key_concept": "Zbuloni dhe përgjigjuni input të përdoruesit nga tastiera.",
+          "rubric_performance_level_1": "Sprite lëviz saktë në përgjigje të të gjitha katër tastet e shigjetave. Nuk ka deklarata shtesë “if”.",
+          "rubric_performance_level_2": "Sprite lëviz në përgjigje të tasteve të shumëfishtë të shigjetave, por mund të ketë disa gabime.",
+          "rubric_performance_level_3": "Programi përdor një deklaratë `if` për të zbuluar input të përdoruesit.",
+          "rubric_performance_level_4": "Programi nuk zbulon input të përdoruesit."
+        },
+        "CSD U3 Direction Arrows_2022": {
+          "rubric_key_concept": "Zbuloni dhe përgjigjuni input të përdoruesit nga tastiera.",
+          "rubric_performance_level_1": "Sprite lëviz saktë në përgjigje të të gjitha katër tastet e shigjetave. Nuk ka deklarata shtesë “if”.",
+          "rubric_performance_level_2": "Sprite lëviz në përgjigje të tasteve të shumëfishtë të shigjetave, por mund të ketë disa gabime.",
+          "rubric_performance_level_3": "Programi përdor një deklaratë `if` për të zbuluar input të përdoruesit.",
+          "rubric_performance_level_4": "Programi nuk zbulon input të përdoruesit."
+        },
+        "CSD U3 Draw Loop Plugged update your scene_2019": {
+          "rubric_key_concept": "Përdorni loop për të përsëritur sjelljen brenda një programi.",
+          "rubric_performance_level_1": "Sprite animon siç përshkruhet në udhëzimet. Vendosmëri të tjera, të tilla si krijimi sprite, ndodhin jashtë draw loop, dhe nuk ka blloqe shtesë.",
+          "rubric_performance_level_2": "Sprite animon, por mund të ketë probleme të vogla me skenën, si sprite ose teksti i gabuar të jetë përpara. Mund të ketë gabime të tjera, të tilla si krijimi i sprites brenda draw loop ose thirrjet shtesë për `DrawSprites` ose kod tjetër shtesë.",
+          "rubric_performance_level_3": "Sprite animon, por ka probleme të mëdha, të tilla si lënja e një “shtegu” të vendeve të mëparshme prapa dhe teksit ose pjesë të tjera të skenës të zhduken.",
+          "rubric_performance_level_4": "Sprite nuk animon."
+        },
+        "CSD U3 Draw Loop Plugged update your scene_2021": {
+          "rubric_key_concept": "Përdorni loop për të përsëritur sjelljen brenda një programi.",
+          "rubric_performance_level_1": "Sprite animon siç përshkruhet në udhëzimet. Vendosmëri të tjera, të tilla si krijimi sprite, ndodhin jashtë draw loop, dhe nuk ka blloqe shtesë.",
+          "rubric_performance_level_2": "Sprite animon, por mund të ketë probleme të vogla me skenën, si sprite ose teksti i gabuar të jetë përpara. Mund të ketë gabime të tjera, të tilla si krijimi i sprites brenda draw loop ose thirrjet shtesë për `DrawSprites` ose kod tjetër shtesë.",
+          "rubric_performance_level_3": "Sprite animon, por ka probleme të mëdha, të tilla si lënja e një “shtegu” të vendeve të mëparshme prapa dhe teksit ose pjesë të tjera të skenës të zhduken.",
+          "rubric_performance_level_4": "Sprite nuk animon."
+        },
+        "CSD U3 Draw Loop Plugged update your scene_2022": {
+          "rubric_key_concept": "Përdorni loop për të përsëritur sjelljen brenda një programi.",
+          "rubric_performance_level_1": "Sprite animon siç përshkruhet në udhëzimet. Vendosmëri të tjera, të tilla si krijimi sprite, ndodhin jashtë draw loop, dhe nuk ka blloqe shtesë.",
+          "rubric_performance_level_2": "Sprite animon, por mund të ketë probleme të vogla me skenën, si sprite ose teksti i gabuar të jetë përpara. Mund të ketë gabime të tjera, të tilla si krijimi i sprites brenda draw loop ose thirrjet shtesë për `DrawSprites` ose kod tjetër shtesë.",
+          "rubric_performance_level_3": "Sprite animon, por ka probleme të mëdha, të tilla si lënja e një “shtegu” të vendeve të mëparshme prapa dhe teksit ose pjesë të tjera të skenës të zhduken.",
+          "rubric_performance_level_4": "Sprite nuk animon."
+        },
+        "CSD U3 Draw Loop Plugged wiggle sprite y_2021": {
+          "rubric_key_concept": "Përdorni loop për të përsëritur sjelljen brenda një programi.",
+          "rubric_performance_level_1": "Sprite animon siç përshkruhet në udhëzimet. Vendosmëri të tjera, të tilla si krijimi sprite, ndodhin jashtë draw loop, dhe nuk ka blloqe shtesë.",
+          "rubric_performance_level_2": "Sprite animon, por mund të ketë probleme të vogla me skenën, të tilla si krijimi i sprites brenda draw loop ose thirrjet shtesë për `Drawsprites` ose kod tjetër shtesë.",
+          "rubric_performance_level_3": "Sprite animon, por ka probleme të mëdha, të tilla si lënja e një “shtegu” të vendeve të mëparshme prapa ose pjesë të tjera të skenës të zhduken.",
+          "rubric_performance_level_4": "Sprite nuk animon."
+        },
+        "CSD U3 Draw Loop Plugged wiggle sprite y_2022": {
+          "rubric_key_concept": "Përdorni loop për të përsëritur sjelljen brenda një programi.",
+          "rubric_performance_level_1": "Sprite animon siç përshkruhet në udhëzimet. Vendosmëri të tjera, të tilla si krijimi sprite, ndodhin jashtë draw loop, dhe nuk ka blloqe shtesë.",
+          "rubric_performance_level_2": "Sprite animon, por mund të ketë probleme të vogla me skenën, të tilla si krijimi i sprites brenda draw loop ose thirrjet shtesë për `Drawsprites` ose kod tjetër shtesë.",
+          "rubric_performance_level_3": "Sprite animon, por ka probleme të mëdha, të tilla si lënja e një “shtegu” të vendeve të mëparshme prapa ose pjesë të tjera të skenës të zhduken.",
+          "rubric_performance_level_4": "Sprite nuk animon."
+        },
+        "CSD U3 Else_2019": {
+          "rubric_key_concept": "Përdorni kushte për të kontrolluar rrjedhën e një programi; zbuloni dhe përgjigjuni për input të përdoruesit.",
+          "rubric_performance_level_1": "Dhëmbëzorët rrotullohen në drejtim të kundërt kur tasti i hapësirës nuk po shtypet, dhe tehet e dhëmbëzorëve rreshtohen siç duhet.",
+          "rubric_performance_level_2": "Të paktën një dhëmbëzorë rrotullohet në drejtim të kundërt kur tasti i hapësirës nuk po shtypet, por mund të ketë gabime të vogla në program që ndalon të gjithë dhëmbëzorët nga rrotullimi.",
+          "rubric_performance_level_3": "Ekziston një deklaratë 'else' e përdorur, por ka gabime të mëdha në program që ndalojnë dhembëzorët nga rrotulimi.",
+          "rubric_performance_level_4": "Nuk ka deklaratë 'else'."
+        },
+        "CSD U3 Else_2021": {
+          "rubric_key_concept": "Përdorni kushte për të kontrolluar rrjedhën e një programi; zbuloni dhe përgjigjuni për input të përdoruesit.",
+          "rubric_performance_level_1": "Dhëmbëzorët rrotullohen në drejtim të kundërt kur tasti i hapësirës nuk po shtypet, dhe tehet e dhëmbëzorëve rreshtohen siç duhet.",
+          "rubric_performance_level_2": "Të paktën një dhëmbëzorë rrotullohet në drejtim të kundërt kur tasti i hapësirës nuk po shtypet, por mund të ketë gabime të vogla në program që ndalon të gjithë dhëmbëzorët nga rrotullimi.",
+          "rubric_performance_level_3": "Ekziston një deklaratë 'else' e përdorur, por ka gabime të mëdha në program që ndalojnë dhembëzorët nga rrotulimi.",
+          "rubric_performance_level_4": "Nuk ka deklaratë 'else'."
+        },
+        "CSD U3 Else_2022": {
+          "rubric_key_concept": "Përdorni kushte për të kontrolluar rrjedhën e një programi; zbuloni dhe përgjigjuni për input të përdoruesit.",
+          "rubric_performance_level_1": "Dhëmbëzorët rrotullohen në drejtim të kundërt kur tasti i hapësirës nuk po shtypet, dhe tehet e dhëmbëzorëve rreshtohen siç duhet.",
+          "rubric_performance_level_2": "Të paktën një dhëmbëzorë rrotullohet në drejtim të kundërt kur tasti i hapësirës nuk po shtypet, por mund të ketë gabime të vogla në program që ndalon të gjithë dhëmbëzorët nga rrotullimi.",
+          "rubric_performance_level_3": "Ekziston një deklaratë 'else' e përdorur, por ka gabime të mëdha në program që ndalojnë dhembëzorët nga rrotulimi.",
+          "rubric_performance_level_4": "Nuk ka deklaratë 'else'."
+        },
+        "CSD U3 Functions Add Change Background_2019": {
+          "rubric_key_concept": "Përcaktoni dhe thirrni funksionet për të organizuar kodin dhe për ta bërë më të lehtë ripërdorimin.",
+          "rubric_performance_level_1": "Të dy funksionet përcaktohen dhe thirren brenda deklaratës 'if' sipas udhëzimeve, në mënyrë që prapaskena të ndryshme të shfaqen sipas rezultatit aktual. Kodi është i organizuar në mënyrë korrekte brenda dhe jashtë draw loop, dhe nuk ka blloqe shtesë.",
+          "rubric_performance_level_2": "Të paktën një funksion i ri i prapaskenës përcaktohet dhe thirret me sukses brenda programit, por mund të mos funksionojë saktësisht siç udhëzohet. Kodi është i organizuar në mënyrë korrekte brenda dhe jashtë draw loop.",
+          "rubric_performance_level_3": "Një funksion përcaktohet dhe thirret brenda programit, por mund të ketë gabime të mëdha që e pengojnë atë të ekzekutohet me sukses, ose kodi është vendosur gabimisht në draw loop.",
+          "rubric_performance_level_4": "Nuk ka funksione të reja në program."
+        },
+        "CSD U3 Functions Add Change Background_2021": {
+          "rubric_key_concept": "Përcaktoni dhe thirrni funksionet për të organizuar kodin dhe për ta bërë më të lehtë ripërdorimin.",
+          "rubric_performance_level_1": "Të dy funksionet përcaktohen dhe thirren brenda deklaratës 'if' sipas udhëzimeve, në mënyrë që prapaskena të ndryshme të shfaqen sipas rezultatit aktual. Kodi është i organizuar në mënyrë korrekte brenda dhe jashtë draw loop, dhe nuk ka blloqe shtesë.",
+          "rubric_performance_level_2": "Të paktën një funksion i ri i prapaskenës përcaktohet dhe thirret me sukses brenda programit, por mund të mos funksionojë saktësisht siç udhëzohet. Kodi është i organizuar në mënyrë korrekte brenda dhe jashtë draw loop.",
+          "rubric_performance_level_3": "Një funksion përcaktohet dhe thirret brenda programit, por mund të ketë gabime të mëdha që e pengojnë atë të ekzekutohet me sukses, ose kodi është vendosur gabimisht në draw loop.",
+          "rubric_performance_level_4": "Nuk ka funksione të reja në program."
+        },
+        "CSD U3 Functions Add Change Background_2022": {
+          "rubric_key_concept": "Përcaktoni dhe thirrni funksionet për të organizuar kodin dhe për ta bërë më të lehtë ripërdorimin.",
+          "rubric_performance_level_1": "Të dy funksionet përcaktohen dhe thirren brenda deklaratës 'if' sipas udhëzimeve, në mënyrë që prapaskena të ndryshme të shfaqen sipas rezultatit aktual. Kodi është i organizuar në mënyrë korrekte brenda dhe jashtë draw loop, dhe nuk ka blloqe shtesë.",
+          "rubric_performance_level_2": "Të paktën një funksion i ri i prapaskenës përcaktohet dhe thirret me sukses brenda programit, por mund të mos funksionojë saktësisht siç udhëzohet. Kodi është i organizuar në mënyrë korrekte brenda dhe jashtë draw loop.",
+          "rubric_performance_level_3": "Një funksion përcaktohet dhe thirret brenda programit, por mund të ketë gabime të mëdha që e pengojnë atë të ekzekutohet me sukses, ose kodi është vendosur gabimisht në draw loop.",
+          "rubric_performance_level_4": "Nuk ka funksione të reja në program."
+        },
+        "CSD U3 Movement Fish_2021": {
+          "rubric_key_concept": "Përdorni modelin kundërpëgjigjës për të rritur ose zvogëluar atributet e sprite.",
+          "rubric_performance_level_1": "Animacioni i nxënësve është identik me shembullin e dhënë në udhëzimet.",
+          "rubric_performance_level_2": "Peshku lëvizë nëpër ekran siç duhet ashtu siç është treguar në udhëzime.",
+          "rubric_performance_level_3": "Modeli i kundërpërgjigjës përdoret brenda draw loop për të zvogëluar pozicionin x të peshkut blu dhe jeshil. Peshku lëvizë majtas nëpër ekran, por jo domosdoshmërisht në shpejtësinë e udhëzuar.",
+          "rubric_performance_level_4": "Modeli kundërpërgjigjës është përdorur jashtë draw loop, ose hiç fare"
+        },
+        "CSD U3 Movement Fish_2022": {
+          "rubric_key_concept": "Përdorni modelin kundërpëgjigjës për të rritur ose zvogëluar atributet e sprite.",
+          "rubric_performance_level_1": "Animacioni i nxënësve është identik me shembullin e dhënë në udhëzimet.",
+          "rubric_performance_level_2": "Peshku lëvizë nëpër ekran siç duhet ashtu siç është treguar në udhëzime.",
+          "rubric_performance_level_3": "Modeli i kundërpërgjigjës përdoret brenda draw loop për të zvogëluar pozicionin x të peshkut blu dhe jeshil. Peshku lëvizë majtas nëpër ekran, por jo domosdoshmërisht në shpejtësinë e udhëzuar.",
+          "rubric_performance_level_4": "Modeli kundërpërgjigjës është përdorur jashtë draw loop, ose hiç fare"
+        },
+        "CSD U3 Random Debug Cloud_2018_2019": {
+          "rubric_performance_level_1": "Vizatimi programik shfaqet saktësisht siç bën në shembull.",
+          "rubric_performance_level_2": "Vizatimi programik është përafërsisht i njëjtë me atë në foto, dhe gjerësia dhe lartësia e reve janë ndryshuar.",
+          "rubric_performance_level_3": "Lartësia, gjerësia ose pozicioni i reve është ndryshuar, por mund të mos jetë më i gjerë se sa është i gjatë, ose mund të zhvendoset diku tjetër në ekran.",
+          "rubric_performance_level_4": "Asnjë ndryshim nuk është bërë në kod, ose ndryshimet nuk janë të lidhura me udhëzimet."
+        },
+        "CSD U3 Random Debug Cloud_2021": {
+          "rubric_key_concept": "Përdorni parametrat për të ndryshuar mënyrën se si ekzekutohet një metodë ose komandë. ",
+          "rubric_performance_level_1": "Vizatimi programik shfaqet saktësisht siç bën në shembull.",
+          "rubric_performance_level_2": "Vizatimi programik është përafërsisht i njëjtë me atë në foto, dhe gjerësia dhe lartësia e reve janë ndryshuar.",
+          "rubric_performance_level_3": "Lartësia, gjerësia ose pozicioni i reve është ndryshuar, por mund të mos jetë më i gjerë se sa është i gjatë, ose mund të zhvendoset diku tjetër në ekran.",
+          "rubric_performance_level_4": "Asnjë ndryshim nuk është bërë në kod, ose ndryshimet nuk janë të lidhura me udhëzimet."
+        },
+        "CSD U3 Random Debug Cloud_2022": {
+          "rubric_key_concept": "Përdorni parametrat për të ndryshuar mënyrën se si ekzekutohet një metodë ose komandë. ",
+          "rubric_performance_level_1": "Vizatimi programik shfaqet saktësisht siç bën në shembull.",
+          "rubric_performance_level_2": "Vizatimi programik është përafërsisht i njëjtë me atë në foto, dhe gjerësia dhe lartësia e reve janë ndryshuar.",
+          "rubric_performance_level_3": "Lartësia, gjerësia ose pozicioni i reve është ndryshuar, por mund të mos jetë më i gjerë se sa është i gjatë, ose mund të zhvendoset diku tjetër në ekran.",
+          "rubric_performance_level_4": "Asnjë ndryshim nuk është bërë në kod, ose ndryshimet nuk janë të lidhura me udhëzimet."
+        },
+        "CSD U3 Random rainbow snake_2018_2019": {
+          "rubric_key_concept": "Gjeneroni dhe përdorni numra të rastësishëm në një program, përdorni argumente për të ndryshuar mënyrën se si ekzekutohet një metodë ose komandë.",
+          "rubric_performance_level_1": "Të gjithë rrathët kanë pozicione të arsyeshme horizontale, ngjyra të ndryshme dhe shfaqen në pozicione vertikale të rastësishme, dhe disa rrathë kanë madhësi të rastësishme.",
+          "rubric_performance_level_2": "Të gjithë rrathët kanë pozicione të arsyeshme horizontale, ngjyra të ndryshme dhe shfaqen në pozicione vertikale të rastësishme",
+          "rubric_performance_level_3": "Të paktën një rreth i krijuar nga nxënëxsit ka një ngjyrë të re, shfaqet në një pozicion vertikal të rastësishëm dhe ka një pozicion horizontal të ndryshëm nga çdo tjetër.",
+          "rubric_performance_level_4": "Asnjë rrathë i prodhuar nga nxënësit, ose ndonjë rreth i ri nuk ndan një ngjyrë ose pozicion horizontal me rrathët e prodhuara nga kodi origjinal."
+        },
+        "CSD U3 Random rainbow snake_2021": {
+          "rubric_key_concept": "Gjeneroni dhe përdorni numra të rastësishëm në një program, përdorni argumente për të ndryshuar mënyrën se si ekzekutohet një metodë ose komandë.",
+          "rubric_performance_level_1": "Të gjithë rrathët kanë pozicione të arsyeshme horizontale, ngjyra të ndryshme dhe shfaqen në pozicione vertikale të rastësishme, dhe disa rrathë kanë madhësi të rastësishme.",
+          "rubric_performance_level_2": "Të gjithë rrathët kanë pozicione të arsyeshme horizontale, ngjyra të ndryshme dhe shfaqen në pozicione vertikale të rastësishme",
+          "rubric_performance_level_3": "Të paktën një rreth i krijuar nga nxënëxsit ka një ngjyrë të re, shfaqet në një pozicion vertikal të rastësishëm dhe ka një pozicion horizontal të ndryshëm nga çdo tjetër.",
+          "rubric_performance_level_4": "Asnjë rrathë i prodhuar nga nxënësit, ose ndonjë rreth i ri nuk ndan një ngjyrë ose pozicion horizontal me rrathët e prodhuara nga kodi origjinal."
+        },
+        "CSD U3 Random rainbow snake_2022": {
+          "rubric_key_concept": "Gjeneroni dhe përdorni numra të rastësishëm në një program, përdorni argumente për të ndryshuar mënyrën se si ekzekutohet një metodë ose komandë.",
+          "rubric_performance_level_1": "Të gjithë rrathët kanë pozicione të arsyeshme horizontale, ngjyra të ndryshme dhe shfaqen në pozicione vertikale të rastësishme, dhe disa rrathë kanë madhësi të rastësishme.",
+          "rubric_performance_level_2": "Të gjithë rrathët kanë pozicione të arsyeshme horizontale, ngjyra të ndryshme dhe shfaqen në pozicione vertikale të rastësishme",
+          "rubric_performance_level_3": "Të paktën një rreth i krijuar nga nxënëxsit ka një ngjyrë të re, shfaqet në një pozicion vertikal të rastësishëm dhe ka një pozicion horizontal të ndryshëm nga çdo tjetër.",
+          "rubric_performance_level_4": "Asnjë rrathë i prodhuar nga nxënësit, ose ndonjë rreth i ri nuk ndan një ngjyrë ose pozicion horizontal me rrathët e prodhuara nga kodi origjinal."
+        },
+        "CSD U3 Sprites assessment_2021": {
+          "rubric_key_concept": "Krijoni dhe përdorni sprite.",
+          "rubric_performance_level_1": "Më shumë se dy sprites janë krijuar me animacione të ndryshme që janë vizatuar në kanavacë në vende të ndryshme. Çdo sprite ka një etiketë unike dhe kuptimplote.",
+          "rubric_performance_level_2": "Të paktën dy sprites janë krijuar me animacione të ndryshme që janë vizatuar në kanavacë në vende të ndryshme.",
+          "rubric_performance_level_3": "Të paktën një sprite është krijuar me një animacion që është vizatuar në kanavacë.",
+          "rubric_performance_level_4": "Asnjë sprites nuk u krijua ose u krijua pa animacion - treguar nga një katror gri."
+        },
+        "CSD U3 Sprites assessment_2022": {
+          "rubric_key_concept": "Krijoni dhe përdorni sprite.",
+          "rubric_performance_level_1": "Më shumë se dy sprites janë krijuar me animacione të ndryshme që janë vizatuar në kanavacë në vende të ndryshme. Çdo sprite ka një etiketë unike dhe kuptimplote.",
+          "rubric_performance_level_2": "Të paktën dy sprites janë krijuar me animacione të ndryshme që janë vizatuar në kanavacë në vende të ndryshme.",
+          "rubric_performance_level_3": "Të paktën një sprite është krijuar me një animacion që është vizatuar në kanavacë.",
+          "rubric_performance_level_4": "Asnjë sprites nuk u krijua ose u krijua pa animacion - treguar nga një katror gri."
+        },
+        "CSD U3 Variables assessment_2021": {
+          "rubric_key_concept": "Përdorni variabla për të ruajtur dhe përditësuar informacionin",
+          "rubric_performance_level_1": "Variabli EyeSize përdoret në mënyrë të tillë që të dy sytë të kenë të njëjtën madhësi siç përcaktohet nga EyeSize, pa ndryshime të tjera të papritura. Programi është i lirë nga gabimet e sintaksës.",
+          "rubric_performance_level_2": "Variabli EyeSize përdoret në mënyrë të tillë që të dy sytë të kenë të njëjtën madhësi siç përcaktohet nga EyeSize. Ndryshime të tjera në kod mund të kenë futur sjellje të tjera të papritura, ose mund të ketë gabime të vogla të sintaksës që nuk e pengojnë ekzekutimin e kodit.",
+          "rubric_performance_level_3": "Variabla EyeSize është përdorur diku në program, por jo e tillë që të ekzekutohet siç udhëzohet.",
+          "rubric_performance_level_4": "Nuk ka ndryshime në kod, ose ndryshimet duken të palidhura me variablat, ose variablat përdoren në një mënyrë që parandalon ekzekutimin e programit."
+        },
+        "CSD U3 Variables assessment_2022": {
+          "rubric_key_concept": "Përdorni variabla për të ruajtur dhe përditësuar informacionin",
+          "rubric_performance_level_1": "Variabli EyeSize përdoret në mënyrë të tillë që të dy sytë të kenë të njëjtën madhësi siç përcaktohet nga EyeSize, pa ndryshime të tjera të papritura. Programi është i lirë nga gabimet e sintaksës.",
+          "rubric_performance_level_2": "Variabli EyeSize përdoret në mënyrë të tillë që të dy sytë të kenë të njëjtën madhësi siç përcaktohet nga EyeSize. Ndryshime të tjera në kod mund të kenë futur sjellje të tjera të papritura, ose mund të ketë gabime të vogla të sintaksës që nuk e pengojnë ekzekutimin e kodit.",
+          "rubric_performance_level_3": "Variabla EyeSize është përdorur diku në program, por jo e tillë që të ekzekutohet siç udhëzohet.",
+          "rubric_performance_level_4": "Nuk ka ndryshime në kod, ose ndryshimet duken të palidhura me variablat, ose variablat përdoren në një mënyrë që parandalon ekzekutimin e programit."
+        },
+        "CSD U3 Variables random with assignment_2019": {
+          "rubric_key_concept": "Përdorni variabla për të ruajtur dhe përditësuar informacionin",
+          "rubric_performance_level_3": "Variabla EyeSize është përdorur diku në program, por jo e tillë që të ekzekutohet siç udhëzohet."
+        },
+        "CSD U3 abstraction decelerateY_2019": {
+          "rubric_key_concept": "Modeli i lëvizjes komplekse në një rrafshin koordinativ",
+          "rubric_performance_level_1": "Sprite i shkëmbit ngadalëson gjatë kohës kur ai shkon lart në ekran, pastaj fillon të bjerë përsëri poshtë, duke rritur shpejtësinë ndërsa bie. Shkëmbi arrin një lartësi të arsyeshme, dhe nuk ka blloqe shtesë të kodit.",
+          "rubric_performance_level_2": "Sprite i shkëmbit ngadalëson gjerësa ai shkon lart në ekran, pastaj fillon të bjerë përsëri poshtë, duke rritur shpejtësinë ndërsa bie",
+          "rubric_performance_level_3": "Shkëmbi fillon të lëvizë lart në ekran dhe shpejtësia e tij ndryshon vazhdimisht në një farë mënyre ndërsa programi po ekzekutohet.",
+          "rubric_performance_level_4": "Nuk ka asnjë ndryshim në shpejtësinë e shkëmbit ndërsa programi është duke u ekzekutuar."
+        },
+        "CSD U3 abstraction decelerateY_2021": {
+          "rubric_key_concept": "Modeli i lëvizjes komplekse në një rrafshin koordinativ",
+          "rubric_performance_level_1": "Sprite i shkëmbit ngadalëson gjatë kohës kur ai shkon lart në ekran, pastaj fillon të bjerë përsëri poshtë, duke rritur shpejtësinë ndërsa bie. Shkëmbi arrin një lartësi të arsyeshme, dhe nuk ka blloqe shtesë të kodit.",
+          "rubric_performance_level_2": "Sprite i shkëmbit ngadalëson gjerësa ai shkon lart në ekran, pastaj fillon të bjerë përsëri poshtë, duke rritur shpejtësinë ndërsa bie",
+          "rubric_performance_level_3": "Shkëmbi fillon të lëvizë lart në ekran dhe shpejtësia e tij ndryshon vazhdimisht në një farë mënyre ndërsa programi po ekzekutohet.",
+          "rubric_performance_level_4": "Nuk ka asnjë ndryshim në shpejtësinë e shkëmbit ndërsa programi është duke u ekzekutuar."
+        },
+        "CSD U3 abstraction decelerateY_2022": {
+          "rubric_key_concept": "Modeli i lëvizjes komplekse në një rrafshin koordinativ",
+          "rubric_performance_level_1": "Sprite i shkëmbit ngadalëson gjatë kohës kur ai shkon lart në ekran, pastaj fillon të bjerë përsëri poshtë, duke rritur shpejtësinë ndërsa bie. Shkëmbi arrin një lartësi të arsyeshme, dhe nuk ka blloqe shtesë të kodit.",
+          "rubric_performance_level_2": "Sprite i shkëmbit ngadalëson gjerësa ai shkon lart në ekran, pastaj fillon të bjerë përsëri poshtë, duke rritur shpejtësinë ndërsa bie",
+          "rubric_performance_level_3": "Shkëmbi fillon të lëvizë lart në ekran dhe shpejtësia e tij ndryshon vazhdimisht në një farë mënyre ndërsa programi po ekzekutohet.",
+          "rubric_performance_level_4": "Nuk ka asnjë ndryshim në shpejtësinë e shkëmbit ndërsa programi është duke u ekzekutuar."
+        },
+        "CSD U3 abstraction velocityX control_2019": {
+          "rubric_key_concept": "Përdorni kushte për të kontrolluar rrjedhën e një programi; modeloni lëvizjen dy dimensionale në një rrafsh koordinativ."
+        },
+        "CSD U3 abstraction velocityX control_2021": {
+          "rubric_key_concept": "Përdorni kushte për të kontrolluar rrjedhën e një programi; modeloni lëvizjen dy dimensionale në një rrafsh koordinativ.",
+          "rubric_performance_level_1": "Peshku noton në anën e djathtë të ekranit, kthehet dhe noton në anën e majtë të ekranit, pastaj përsëritet. Sprite duket se jetë me drejtimin e duhur në çdo kohë. Nuk ka blloqe shtesë në program, dhe modeli kundërpërgjigjës nuk përdoret.",
+          "rubric_performance_level_2": "Peshku noton në anën e djathtë të ekranit, kthehet dhe noton në anën e majtë të ekranit, por ndoshta nuk është në drejtimin e duhur gjatë lëvizjes. Modeli kundërpëgjigjës nuk përdoret.",
+          "rubric_performance_level_3": "Peshku noton në anën e djathtë të ekranit, kthehet dhe noton në anën e majtë të ekranit, por nuk përsëritet. Nxënësi ndryshoi shpejtësinë e tij vetëm duke përdorur deklaratën e parë të kushtit të dhënë. ",
+          "rubric_performance_level_4": "Peshku lëviz drejtë nëpër ekran, pastaj zhduket."
+        },
+        "CSD U3 abstraction velocityX control_2022": {
+          "rubric_key_concept": "Përdorni kushte për të kontrolluar rrjedhën e një programi; modeloni lëvizjen dy dimensionale në një rrafsh koordinativ.",
+          "rubric_performance_level_1": "Peshku noton në anën e djathtë të ekranit, kthehet dhe noton në anën e majtë të ekranit, pastaj përsëritet. Sprite duket se jetë me drejtimin e duhur në çdo kohë. Nuk ka blloqe shtesë në program, dhe modeli kundërpërgjigjës nuk përdoret.",
+          "rubric_performance_level_2": "Peshku noton në anën e djathtë të ekranit, kthehet dhe noton në anën e majtë të ekranit, por ndoshta nuk është në drejtimin e duhur gjatë lëvizjes. Modeli kundërpëgjigjës nuk përdoret.",
+          "rubric_performance_level_3": "Peshku noton në anën e djathtë të ekranit, kthehet dhe noton në anën e majtë të ekranit, por nuk përsëritet. Nxënësi ndryshoi shpejtësinë e tij vetëm duke përdorur deklaratën e parë të kushtit të dhënë. ",
+          "rubric_performance_level_4": "Peshku lëviz drejtë nëpër ekran, pastaj zhduket."
+        },
+        "CSD U3 collisions flyman make it your own_2019": {
+          "rubric_key_concept": "Model i lëvizjes komplekse në një rrafsh koordinativ."
+        },
+        "CSD U3 collisions horse_2019": {
+          "rubric_key_concept": "Krijoni dhe modifikoni objekte (sprites) për të menaxhuar kompleksitetin e elementeve në ekran. ",
+          "rubric_performance_level_1": "Kali kthehet në një njëbrirësh kur ylberi e prek atë. Nuk ka blloqe shtesë në program.",
+          "rubric_performance_level_2": "Programi reagon në një farë mënyre kur ylberi prek kalin.",
+          "rubric_performance_level_3": "Programi përdor një kusht dhe zbulon kur ylberi prek kalin, por ka gabime të mjaftueshme që nuk reagon në asnjë mënyrë.",
+          "rubric_performance_level_4": "Programi nuk zbulon kur ylberi prek kalin, ose nuk ka kushte në program."
+        },
+        "CSD U3 collisions horse_2021": {
+          "rubric_key_concept": "Krijoni dhe modifikoni objekte (sprites) për të menaxhuar kompleksitetin e elementeve në ekran. ",
+          "rubric_performance_level_1": "Kali kthehet në një njëbrirësh kur ylberi e prek atë. Nuk ka blloqe shtesë në program.",
+          "rubric_performance_level_2": "Programi reagon në një farë mënyre kur ylberi prek kalin.",
+          "rubric_performance_level_3": "Programi përdor një kusht dhe zbulon kur ylberi prek kalin, por ka gabime të mjaftueshme që nuk reagon në asnjë mënyrë.",
+          "rubric_performance_level_4": "Programi nuk zbulon kur ylberi prek kalin, ose nuk ka kushte në program."
+        },
+        "CSD U3 collisions horse_2022": {
+          "rubric_key_concept": "Krijoni dhe modifikoni objekte (sprites) për të menaxhuar kompleksitetin e elementeve në ekran. ",
+          "rubric_performance_level_1": "Kali kthehet në një njëbrirësh kur ylberi e prek atë. Nuk ka blloqe shtesë në program.",
+          "rubric_performance_level_2": "Programi reagon në një farë mënyre kur ylberi prek kalin.",
+          "rubric_performance_level_3": "Programi përdor një kusht dhe zbulon kur ylberi prek kalin, por ka gabime të mjaftueshme që nuk reagon në asnjë mënyrë.",
+          "rubric_performance_level_4": "Programi nuk zbulon kur ylberi prek kalin, ose nuk ka kushte në program."
+        },
         "CSD U3 debug_2019": {
-          "rubric_key_concept": "Përdorni një sistem koordinativ për të vendosur elementët në ekran, duke llogaritur madhësinë e objektit dhe mbivendosjen."
+          "rubric_key_concept": "Përdorni një sistem koordinativ për të vendosur elementët në ekran, duke llogaritur madhësinë e objektit dhe mbivendosjen.",
+          "rubric_performance_level_1": "Vizatimi programik është identik me shembullin dhe përmbahet brenda shtatë rreshtave të kodit.",
+          "rubric_performance_level_2": "Vizatimi programik është kryesisht i njëjtë me vizatimin, por mund të ketë disa gabime të vogla të pozicionimit dhe mund të ketë rreshta shtesë të kodit.",
+          "rubric_performance_level_3": "Katrori është zhvendosur, është i vjollcë dhe shfaqet para rrathëve.",
+          "rubric_performance_level_4": "Fotografia është ose e njëjtë, ose çdo ndryshim duket se nuk ka lidhje me detyrën."
         },
         "CSD U3 debug_2021": {
-          "rubric_key_concept": "Përdorni një sistem koordinativ për të vendosur elementët në ekran, duke llogaritur madhësinë e objektit dhe mbivendosjen."
+          "rubric_key_concept": "Përdorni një sistem koordinativ për të vendosur elementët në ekran, duke llogaritur madhësinë e objektit dhe mbivendosjen.",
+          "rubric_performance_level_1": "Vizatimi programik është identik me shembullin dhe përmbahet brenda shtatë rreshtave të kodit.",
+          "rubric_performance_level_2": "Vizatimi programik është kryesisht i njëjtë me vizatimin, por mund të ketë disa gabime të vogla të pozicionimit dhe mund të ketë rreshta shtesë të kodit.",
+          "rubric_performance_level_3": "Katrori është zhvendosur, është i vjollcë dhe shfaqet para rrathëve.",
+          "rubric_performance_level_4": "Fotografia është ose e njëjtë, ose çdo ndryshim duket se nuk ka lidhje me detyrën."
         },
         "CSD U3 debug_2022": {
-          "rubric_key_concept": "Përdorni një sistem koordinativ për të vendosur elementët në ekran, duke llogaritur madhësinë e objektit dhe mbivendosjen."
+          "rubric_key_concept": "Përdorni një sistem koordinativ për të vendosur elementët në ekran, duke llogaritur madhësinë e objektit dhe mbivendosjen.",
+          "rubric_performance_level_1": "Vizatimi programik është identik me shembullin dhe përmbahet brenda shtatë rreshtave të kodit.",
+          "rubric_performance_level_2": "Vizatimi programik është kryesisht i njëjtë me vizatimin, por mund të ketë disa gabime të vogla të pozicionimit dhe mund të ketë rreshta shtesë të kodit.",
+          "rubric_performance_level_3": "Katrori është zhvendosur, është i vjollcë dhe shfaqet para rrathëve.",
+          "rubric_performance_level_4": "Fotografia është ose e njëjtë, ose çdo ndryshim duket se nuk ka lidhje me detyrën."
+        },
+        "CSD U3 platform challenge_2019": {
+          "rubric_key_concept": "Përdorni një proces të strukturuar për të planifikuar dhe zhvilluar një program",
+          "rubric_performance_level_1": "Udhëzuesi i projektit pasqyron me saktësi programin, siç tregohet në shembull dhe siç është koduar nga nxënësi. Funksionet përkatëse, variablat dhe spritet janë në përputhje midis udhëzuesit të projektit dhe projektit aktual, me shumë pak përjashtime.",
+          "rubric_performance_level_2": "Udhëzuesi i projektit është përgjithësisht në përputhje me projektin shembull dhe projektin e nxënësve, me funksionet kryesore dhe spritet të përfshira. Mund të ketë disa mospërputhje.",
+          "rubric_performance_level_3": "Udhëzuesi i projektit përmend disa veçori të programit, funksionet dhe spritet shoqëruese, por ka pjesë kryesore të programit që mungojnë nga udhëzuesi.",
+          "rubric_performance_level_4": "Udhëzuesi i projektit është i paplotë ose nuk duket se përshkruan programin."
+        },
+        "CSD U3 platform review_2021": {
+          "rubric_key_concept": "Përdorni një proces të strukturuar për të planifikuar dhe zhvilluar një program",
+          "rubric_performance_level_1": "Udhëzuesi i projektit pasqyron me saktësi programin, siç tregohet në shembull dhe siç është koduar nga nxënësi. Funksionet përkatëse, variablat dhe spritet janë në përputhje midis udhëzuesit të projektit dhe projektit aktual, me shumë pak përjashtime.",
+          "rubric_performance_level_2": "Udhëzuesi i projektit është përgjithësisht në përputhje me projektin shembull dhe projektin e nxënësve, me funksionet kryesore dhe spritet të përfshira. Mund të ketë disa mospërputhje.",
+          "rubric_performance_level_3": "Udhëzuesi i projektit përmend disa veçori të programit, funksionet dhe spritet shoqëruese, por ka pjesë kryesore të programit që mungojnë nga udhëzuesi.",
+          "rubric_performance_level_4": "Udhëzuesi i projektit është i paplotë ose nuk duket se përshkruan programin."
+        },
+        "CSD U3 platform review_2022": {
+          "rubric_key_concept": "Përdorni një proces të strukturuar për të planifikuar dhe zhvilluar një program",
+          "rubric_performance_level_1": "Udhëzuesi i projektit pasqyron me saktësi programin, siç tregohet në shembull dhe siç është koduar nga nxënësi. Funksionet përkatëse, variablat dhe spritet janë në përputhje midis udhëzuesit të projektit dhe projektit aktual, me shumë pak përjashtime.",
+          "rubric_performance_level_2": "Udhëzuesi i projektit është përgjithësisht në përputhje me projektin shembull dhe projektin e nxënësve, me funksionet kryesore dhe spritet të përfshira. Mund të ketë disa mospërputhje.",
+          "rubric_performance_level_3": "Udhëzuesi i projektit përmend disa veçori të programit, funksionet dhe spritet shoqëruese, por ka pjesë kryesore të programit që mungojnë nga udhëzuesi.",
+          "rubric_performance_level_4": "Udhëzuesi i projektit është i paplotë ose nuk duket se përshkruan programin."
+        },
+        "CSD U6 - Accelerometer - A_2222": {
+          "rubric_performance_level_4": "Aplikacioni nuk ka nisur"
+        },
+        "CSD U6 - Board Inputs - A_2222": {
+          "rubric_key_concept": "Përdorni butonat dhe ndërroni çelësin në qarkun e lojërave për të krijuar një aplikacion",
+          "rubric_performance_level_1": "Aplikacioni funksionon siç përshkruhet, me emoji-t që ndryshojnë për t'u përputhur me inputet e përdoruesit\n",
+          "rubric_performance_level_2": "Shumica e aplikacionit funksionon siç përshkruhet, por disa nga veprimet nuk përputhen me përshkrimin, siç është ndryshimi i madhësisë ose ndryshimi i emoji-ve.",
+          "rubric_performance_level_3": "Aplikacioni ndryshon elementet në ekran, por nuk përputhet me përshkrimin e programit",
+          "rubric_performance_level_4": "Aplikacioni nuk është përditësuar që të përputhet me përshkrimin"
+        },
+        "CSD U6 - Board Outputs - A_2222": {
+          "rubric_key_concept": "Përgjigjuni hyrjes së përdoruesit duke përdorur LED dhe sirenën në qarkun e lojërave\n",
+          "rubric_performance_level_1": "Çdo buton përputhet saktë me përshkrimin e emocioneve të tij, duke përdorur blloqe LED dhe sirenë në secilin buton.\n",
+          "rubric_performance_level_2": "Çdo buton përdor blloqe LED dhe sirenën, por parametrat mund të mos përputhen me përshkrimin e saktë (për shembull: të gjithë që kanë të njëjtën kohëzgjatje)",
+          "rubric_performance_level_3": "Disa butona mungojnë të gjithë blloqet e LED ose sirenës",
+          "rubric_performance_level_4": "Asnjë bllok shtesë LED ose sirenë nuk janë shtuar në program"
+        },
+        "CSD U6 - Color LEDs - A_2222": {
+          "rubric_key_concept": "Përdorni LEDs me ngjyrë për të krijuar një model në qarkun e lojërave",
+          "rubric_performance_level_1": "Modeli i dritës përdor të paktën 3 ngjyra të ndryshme dhe ndryshon intensitetin e disa prej LED-ve",
+          "rubric_performance_level_2": "Modeli i dritës përdor vetëm 2 ngjyra, ose përdor 3 ngjyra, por nuk ndryshon intensitetin e LED-ve",
+          "rubric_performance_level_3": "Modeli i dritës përdor 1 ngjyrë, ose përdor 2 ngjyra, por nuk ndryshon intensitetin e LED-ve",
+          "rubric_performance_level_4": "Asnjë model nuk përdoret"
+        },
+        "CSD U6 - Combine Inputs - A_2222": {
+          "rubric_key_concept": "Kombinimi i elementeve hyrëse dhe dalëse nga qarku i lojërave dhe ekrani për të krijuar një aplikacion",
+          "rubric_performance_level_1": "Aplikacioni funksionon siç përshkruhet, me variabla të përdorura për të marrë vlerat nga ekrani dhe për të ndezur LED-të e qarkut të lojërave në drejtimin e duhur.",
+          "rubric_performance_level_2": "Aplikacioni mund të ndizni LED-të, por një nga hyrjet (drejtimi, ngjyra ose ndriçimi) nuk po funksionon si duhet",
+          "rubric_performance_level_3": "LED-të ndizen, por nuk reagojnë ndaj vlerave që hyn përdoruesi. Variablat nuk përdoren në mënyrë korrekte në program.",
+          "rubric_performance_level_4": "Aplikacioni nuk është ndryshuar."
+        },
+        "CSD U6 - If Variables - A_2222": {
+          "rubric_key_concept": "Përdorni variabla dhe nëse-deklarata për të krijuar një aplikacion që përdor qarkun e lojërave",
+          "rubric_performance_level_1": "Programi funksionon siç përshkruhet, duke përdorur variabla për të mbajtur gjurmët e madhësisë dhe një deklaratë nëse-për të luajtur zhurmën në kohën e duhur",
+          "rubric_performance_level_2": "Variablat përdoren për të mbajtur gjurmët e madhësisë së elementit, por zhurma nuk tingëllon pasi të arrijë madhësinë e duhur",
+          "rubric_performance_level_3": "Variablat përdoren për madhësinë, por ato nuk rriten kur shtypet butoni",
+          "rubric_performance_level_4": "Kodi nuk ka ndryshuar"
+        },
+        "CSD U6 - Screen Inputs - A_2222": {
+          "rubric_key_concept": "Marrja e hyrjes së përdoruesit nga ekrani dhe përdorimi i tij për të përditësuar një aplikacion",
+          "rubric_performance_level_1": "Secili element i dizajnit është personalizuar në mënyrë korrekte sipas përshkrimit të aplikacionit, dhe kodi merr hyrjen e përdoruesit dhe e përdor atë për të përditësuar aplikacionin",
+          "rubric_performance_level_2": "Kodi merr hyrjen e përdoruesit dhe e përdor atë për të përditësuar aplikacionin, por elementët e dizajnit mund të mos personalizohen në mënyrë korrekte sipas përshkrimit të aplikacionit",
+          "rubric_performance_level_3": "Ka gabime kur përpiqeni të merrni vlera nga futja e tekstit, zbritja ose rrëshqitësi; ose aplikacioni është i paplotë dhe nuk merr të gjithë elementët e hyrjes.",
+          "rubric_performance_level_4": "Aplikacioni nuk merr hyrje nga asnjë prej elementeve në ekran."
+        },
+        "CSD U6 - Screen Outputs - ChalB_2222": {
+          "rubric_key_concept": "Përditësoni vetitë dhe tekstin e elementeve të dizajnit duke përdorur kodin",
+          "rubric_performance_level_1": "Aplikacioni i përfunduar përputhet me përshkrimin, me çdo buton që azhurnon saktë ikonën dhe tekstin",
+          "rubric_performance_level_2": "Aplikacioni i përfunduar është i ngjashëm me përshkrimin, por ka më së shumti një element që është i paplotë (për shembull, mos përditësimi i tekstit ose mos përditësimi i ngjyrës së ikonës)",
+          "rubric_performance_level_3": "Aplikacioni i përfunduar mund të ketë disa elemente që duken të saktë, por shumica e elementeve nuk përditësohen saktë ose aplikacioni përfundon vetëm pjesërisht.\n",
+          "rubric_performance_level_4": "Aplikacioni nuk është përditësuar që të përputhet me përshkrimin"
+        },
+        "CSD U6 - Sensors - A_2222": {
+          "rubric_key_concept": "Përdorni sensorët në qarkun e lojërave për të krijuar një aplikacion",
+          "rubric_performance_level_1": "Aplikacioni shfaq secilën vlerë të sensorit në kohë reale, dhe sensorët e dritës dhe zërit numërohen nga 0-10",
+          "rubric_performance_level_2": "Aplikacioni shfaq secilën vlerë të sensorit, por mund të mos jetë në kohë reale ose sensorët janë nga 0-1023 në vend të 0-10",
+          "rubric_performance_level_3": "Aplikacionit i mungon të paktën një nga vlerat e sensorit",
+          "rubric_performance_level_4": "Aplikacioni nuk ka nisur"
+        },
+        "CSD U6 LED all_2019": {
+          "rubric_key_concept": "Zhvilloni softuer për të kontrolluar një larmi pajisjesh fizike.",
+          "rubric_performance_level_1": "Programi funksionon siç përshkruhet në udhëzimet, me butonat që shkaktojnë LED të ndizet, pulsohet, pulsohet ose fiket. Nuk ka kod të panevojshëm.",
+          "rubric_performance_level_2": "Butonat e ndezjes dhe fikjes së programit funksionojnë, por mund të ketë kod të panevojshëm që nuk ndikon në funksionalitetin e atyre dy butonave.",
+          "rubric_performance_level_3": "Të paktën një nga butonat përveç butonit “on” punon, ose blloqet e sakta për të kontrolluar LED janë të përfshira në program, por nuk shkaktohen saktë nga një ngjarje.",
+          "rubric_performance_level_4": "Asnjë buton tjetër përveç butonit “on” punon, dhe nuk ka asnjë kod që mund të përdoret për të kontrolluar LED."
+        },
+        "CSD U6 LED all_2021": {
+          "rubric_key_concept": "Zhvilloni softuer për të kontrolluar një larmi pajisjesh fizike.",
+          "rubric_performance_level_1": "Programi funksionon siç përshkruhet në udhëzimet, me butonat që shkaktojnë LED të ndizet, pulsohet, pulsohet ose fiket. Nuk ka kod të panevojshëm.",
+          "rubric_performance_level_2": "Butonat e ndezjes dhe fikjes së programit funksionojnë, por mund të ketë kod të panevojshëm që nuk ndikon në funksionalitetin e atyre dy butonave.",
+          "rubric_performance_level_3": "Të paktën një nga butonat përveç butonit “on” punon, ose blloqet e sakta për të kontrolluar LED janë të përfshira në program, por nuk shkaktohen saktë nga një ngjarje.",
+          "rubric_performance_level_4": "Asnjë buton tjetër përveç butonit “on” punon, dhe nuk ka asnjë kod që mund të përdoret për të kontrolluar LED."
+        },
+        "CSD U6 analog rgb 3_2019": {
+          "rubric_key_concept": "Zhvilloni një program që i përgjigjet një shumëllojshmërie hyrjesh harduerike, përfshirë ato që përdoruesi bën dhe nuk i kontrollon në mënyrë aktive. Njohin nevojën për lloje të ndryshme të hyrjes, si analoge ashtu edhe digkitale, dhe përfaqësojnë vlerat e atyre hyrjeve në mënyra të ndryshme.",
+          "rubric_performance_level_1": "Programi shfaq një gamë të gjerë ngjyrash në përgjigje të ndryshimeve në dritë, temperaturë dhe zë. Nuk ka kod të panevojshëm në program.",
+          "rubric_performance_level_2": "Programi zbulon ndryshimet në dritë, temperaturë dhe tinguj, dhe ndryshon dukshëm ngjyrën në përgjigje të të paktën një prej këtyre sensorëve.",
+          "rubric_performance_level_3": "Programi ndryshon ngjyrën dhe përdor të paktën nga tre sensorët analogë për të zbuluar ndryshimet në mjedis.",
+          "rubric_performance_level_4": "Programi përdor sensorë analoge ose nuk ndryshon fare ngjyrat."
+        },
+        "CSD U6 analog rgb 3_2021": {
+          "rubric_key_concept": "Zhvilloni një program që i përgjigjet një shumëllojshmërie hyrjesh harduerike, përfshirë ato që përdoruesi bën dhe nuk i kontrollon në mënyrë aktive. Njohin nevojën për lloje të ndryshme të hyrjes, si analoge ashtu edhe digkitale, dhe përfaqësojnë vlerat e atyre hyrjeve në mënyra të ndryshme.",
+          "rubric_performance_level_1": "Programi shfaq një gamë të gjerë ngjyrash në përgjigje të ndryshimeve në dritë, temperaturë dhe zë. Nuk ka kod të panevojshëm në program.",
+          "rubric_performance_level_2": "Programi zbulon ndryshimet në dritë, temperaturë dhe tinguj, dhe ndryshon dukshëm ngjyrën në përgjigje të të paktën një prej këtyre sensorëve.",
+          "rubric_performance_level_3": "Programi ndryshon ngjyrën dhe përdor të paktën nga tre sensorët analogë për të zbuluar ndryshimet në mjedis.",
+          "rubric_performance_level_4": "Programi përdor sensorë analoge ose nuk ndryshon fare ngjyrat."
+        },
+        "CSD U6 circuit smart bike blinker buttons_2019": {
+          "rubric_key_concept": "Lidhni, zgjidhni problemet dhe korrigjoni gabimet e pajisjeve të jashtme dhe sistemet e integruara informatike.",
+          "rubric_performance_level_1": "Programi funksionon siç përshkruhet, me LED të jashtëm të majtë që pulson kur shtypet butoni i majtë dhe LED i jashtëm i djathtë pulson kur shtypet butoni i djathtë.",
+          "rubric_performance_level_2": "Një LED i jashtëm përgjigjet kur një buton shtypet në qarkun e lojërave, por mund të mos funksionojë saktësisht siç përshkruhet.",
+          "rubric_performance_level_3": "LED i jashtëm është i lidhur fizikisht me qarkun e lojërave dhe ka kod për të kontrolluar LED nga programi, por gabimet e parandalojnë atë të përgjigjet siç duhet në pllakë.",
+          "rubric_performance_level_4": "Nuk ka LED të jashtëm të lidhur me pllakën ose nuk ka kod që do të lejonte programin të kontrollojë LED."
+        },
+        "CSD U6 circuit smart bike blinker buttons_2021": {
+          "rubric_key_concept": "Lidhni, zgjidhni problemet dhe korrigjoni gabimet e pajisjeve të jashtme dhe sistemet e integruara informatike.",
+          "rubric_performance_level_1": "Programi funksionon siç përshkruhet, me LED të jashtëm të majtë që pulson kur shtypet butoni i majtë dhe LED i jashtëm i djathtë pulson kur shtypet butoni i djathtë.",
+          "rubric_performance_level_2": "Një LED i jashtëm përgjigjet kur një buton shtypet në qarkun e lojërave, por mund të mos funksionojë saktësisht siç përshkruhet.",
+          "rubric_performance_level_3": "LED i jashtëm është i lidhur fizikisht me qarkun e lojërave dhe ka kod për të kontrolluar LED nga programi, por gabimet e parandalojnë atë të përgjigjet siç duhet në pllakë.",
+          "rubric_performance_level_4": "Nuk ka LED të jashtëm të lidhur me pllakën ose nuk ka kod që do të lejonte programin të kontrollojë LED."
+        },
+        "CSD U6 circuit smart bike final_2019": {
+          "rubric_key_concept": "Zhvilloni një prototip fizik interaktiv që integron harduerin dhe softuerin, duke përfshirë qarqet e thjeshta.  ",
+          "rubric_performance_level_1": "Programi punon siç përshkruhet, me një buton të jashtëm që kontrollon zhurmën dhe dy LED të jashtëm të kontrolluar nga butonat e majtë dhe të djathtë. LED-të me ngjyra ndizen në errësirë.",
+          "rubric_performance_level_2": "Programi funksionon përgjithësisht siç përshkruhet, me një buton të jashtëm që shkakton përgjigje nga pllaka, dhe LEDs e jashtme të kontrolluara nga ndërveprimi i pllakës.",
+          "rubric_performance_level_3": "Programi përfshin disa elementë të dizajnit, duke përfshirë të paktën një element të jashtëm që është i lidhur me pllakën me një qark dhe ose i përgjigjet ose shkakton një përgjigje nga pllaka.",
+          "rubric_performance_level_4": "Programi nuk përfshin elemente të jashtëm ose elementet e jashtëm nuk mund të ndërveprojnë me pllakën."
+        },
+        "CSD U6 circuit smart bike final_2021": {
+          "rubric_key_concept": "Zhvilloni një prototip fizik interaktiv që integron harduerin dhe softuerin, duke përfshirë qarqet e thjeshta.  ",
+          "rubric_performance_level_1": "Programi punon siç përshkruhet, me një buton të jashtëm që kontrollon zhurmën dhe dy LED të jashtëm të kontrolluar nga butonat e majtë dhe të djathtë. LED-të me ngjyra ndizen në errësirë.",
+          "rubric_performance_level_2": "Programi funksionon përgjithësisht siç përshkruhet, me një buton të jashtëm që shkakton përgjigje nga pllaka, dhe LEDs e jashtme të kontrolluara nga ndërveprimi i pllakës.",
+          "rubric_performance_level_3": "Programi përfshin disa elementë të dizajnit, duke përfshirë të paktën një element të jashtëm që është i lidhur me pllakën me një qark dhe ose i përgjigjet ose shkakton një përgjigje nga pllaka.",
+          "rubric_performance_level_4": "Programi nuk përfshin elemente të jashtëm ose elementet e jashtëm nuk mund të ndërveprojnë me pllakën."
+        },
+        "CSD U6 create LED app 2_2019": {
+          "rubric_key_concept": "Zhvilloni softuer për të kontrolluar një larmi pajisjesh fizike.",
+          "rubric_performance_level_1": "Programi lejon përdoruesin të kontrollojë LED në mënyra të shumta dhe të gjithë elementët interaktivë duket se funksionojnë siç është menduar.",
+          "rubric_performance_level_2": "Programi lejon përdoruesin të kontrollojë LED, por mund të ketë gabime të vogla në elementët interaktivë të aplikacionit.",
+          "rubric_performance_level_3": "Programi ka kod që lidhet me LED, por ka gabime të rëndësishme që e mbajnë përdoruesin nga kontrolli i LED sipas qëllimit.",
+          "rubric_performance_level_4": "Nuk ka asnjë kod që lidhet me kontrollin e LED në aplikacion."
+        },
+        "CSD U6 create LED app 2_2021": {
+          "rubric_key_concept": "Zhvilloni softuer për të kontrolluar një larmi pajisjesh fizike.",
+          "rubric_performance_level_1": "Programi lejon përdoruesin të kontrollojë LED në mënyra të shumta dhe të gjithë elementët interaktivë duket se funksionojnë siç është menduar.",
+          "rubric_performance_level_2": "Programi lejon përdoruesin të kontrollojë LED, por mund të ketë gabime të vogla në elementët interaktivë të aplikacionit.",
+          "rubric_performance_level_3": "Programi ka kod që lidhet me LED, por ka gabime të rëndësishme që e mbajnë përdoruesin nga kontrolli i LED sipas qëllimit.",
+          "rubric_performance_level_4": "Nuk ka asnjë kod që lidhet me kontrollin e LED në aplikacion."
+        },
+        "CSD U6 emotion machine 4_2019": {
+          "rubric_key_concept": "Përdorni mbajtësit e ngjarjeve për t'iu përgjigjur ndërveprimit të përdoruesit dhe përdorni cilësimet për të manipuluar vetitë e elementeve në një sistem.",
+          "rubric_performance_level_1": "Programi ka tre butona me etiketa të sakta, dhe kur klikohet një buton, shfaqet ikona e saktë dhe përshkrimi i emocioneve. ",
+          "rubric_performance_level_2": "Programi ka tre butona, dhe programi përgjigjet në një farë mënyre për çdo klikim butoni, por përgjigja mund të mos jetë saktësisht siç përshkruhet në udhëzimet.",
+          "rubric_performance_level_3": "Të paktën një buton tjetër përveç butonit “Gëzuar” përgjigjet për t'u klikuar në një farë mënyre.",
+          "rubric_performance_level_4": "Asnjë buton tjetër përveç butonit “Gëzuar” nuk përgjigjet nga klikimi."
+        },
+        "CSD U6 emotion machine 4_2021": {
+          "rubric_key_concept": "Përdorni mbajtësit e ngjarjeve për t'iu përgjigjur ndërveprimit të përdoruesit dhe përdorni cilësimet për të manipuluar vetitë e elementeve në një sistem.",
+          "rubric_performance_level_1": "Programi ka tre butona me etiketa të sakta, dhe kur klikohet një buton, shfaqet ikona e saktë dhe përshkrimi i emocioneve. ",
+          "rubric_performance_level_2": "Programi ka tre butona, dhe programi përgjigjet në një farë mënyre për çdo klikim butoni, por përgjigja mund të mos jetë saktësisht siç përshkruhet në udhëzimet.",
+          "rubric_performance_level_3": "Të paktën një buton tjetër përveç butonit “Gëzuar” përgjigjet për t'u klikuar në një farë mënyre.",
+          "rubric_performance_level_4": "Asnjë buton tjetër përveç butonit “Gëzuar” nuk përgjigjet nga klikimi."
         },
         "CSD U6 for loop led color_2019": {
           "rubric_key_concept": "Përdorin një for loop për të iteruar mbi një varg"
@@ -18,10 +529,252 @@
           "rubric_key_concept": "Përdorin një for loop për të iteruar mbi një varg"
         },
         "CSD U6 for loop led personalize_2019": {
-          "rubric_key_concept": "Përdorin një for loop për të iteruar mbi një varg"
+          "rubric_key_concept": "Përdorin një for loop për të iteruar mbi një varg",
+          "rubric_performance_level_1": "Të pesë butonat punojnë siç përshkruhet duke përdorur for loops, dhe loops përdorin gjatësinë e grupit si një kusht daljeje, pa gabime ose kod të panevojshëm.",
+          "rubric_performance_level_2": "Butonat e ndezjes dhe fikjes punojnë siç përshkruhet duke përdorur for loops, dhe nuk ka gabime në kod.",
+          "rubric_performance_level_3": "For loops përdoren për të ndezur dhe fikur LEDs, por mund të ketë gabime që i mbajnë butonat të punojnë siç përshkruhet.",
+          "rubric_performance_level_4": "Nuk ka for loops në kod."
         },
         "CSD U6 for loop led personalize_2021": {
-          "rubric_key_concept": "Përdorin një for loop për të iteruar mbi një varg"
+          "rubric_key_concept": "Përdorin një for loop për të iteruar mbi një varg",
+          "rubric_performance_level_1": "Të pesë butonat punojnë siç përshkruhet duke përdorur for loops, dhe loops përdorin gjatësinë e grupit si një kusht daljeje, pa gabime ose kod të panevojshëm.",
+          "rubric_performance_level_2": "Butonat e ndezjes dhe fikjes punojnë siç përshkruhet duke përdorur for loops, dhe nuk ka gabime në kod.",
+          "rubric_performance_level_3": "For loops përdoren për të ndezur dhe fikur LEDs, por mund të ketë gabime që i mbajnë butonat të punojnë siç përshkruhet.",
+          "rubric_performance_level_4": "Nuk ka for loops në kod."
+        },
+        "CSD U6 getProperty buzzer_2019": {
+          "rubric_key_concept": "Përdorni marrës për të hyrë në vetitë e elementeve në një sistem.",
+          "rubric_performance_level_1": "Programi punon siç përshkruhet, duke përdorur vlerën e menusë zbritëse për të ndryshuar gjatësinë e zhurmës.",
+          "rubric_performance_level_2": "Programi përdor vlerën e menusë zbritëse, por mund të ketë gabime të vogla që parandalojnë ekzekutimin e programit saktësisht siç përshkruhet.",
+          "rubric_performance_level_3": "Programi përfshin kodin për marrjen e vlerës së menusë zbritëse, por gabimet e mëdha në kod e pengojnë atë të funksionojë siç duhet.",
+          "rubric_performance_level_4": "Programi nuk ka qasje në vlerën e menusë zbritëse."
+        },
+        "CSD U6 getProperty buzzer_2021": {
+          "rubric_key_concept": "Përdorni marrës për të hyrë në vetitë e elementeve në një sistem.",
+          "rubric_performance_level_1": "Programi punon siç përshkruhet, duke përdorur vlerën e menusë zbritëse për të ndryshuar gjatësinë e zhurmës.",
+          "rubric_performance_level_2": "Programi përdor vlerën e menusë zbritëse, por mund të ketë gabime të vogla që parandalojnë ekzekutimin e programit saktësisht siç përshkruhet.",
+          "rubric_performance_level_3": "Programi përfshin kodin për marrjen e vlerës së menusë zbritëse, por gabimet e mëdha në kod e pengojnë atë të funksionojë siç duhet.",
+          "rubric_performance_level_4": "Programi nuk ka qasje në vlerën e menusë zbritëse."
+        },
+        "CSD U6 goalie_2019": {
+          "rubric_key_concept": "Përdorni marrës dhe përcaktues për të manipuluar pronat.",
+          "rubric_performance_level_1": "Kur programi është drejtuar, topi lëviz pa probleme në të majtë të ekranit me një shpejtësi të arsyeshme.",
+          "rubric_performance_level_2": "Kur programi është drejtuar, topi lëviz nëpër ekran.",
+          "rubric_performance_level_3": "Programi hyri në pozicionin aktual të topit dhe e përdori atë për të përditësuar tiparin“x” të topit, por gabimet në program parandalojnë që topi të lëvizë nëpër ekran.",
+          "rubric_performance_level_4": "Pozicioni aktual i topit nuk përdoret për të azhurnuar tiparin e tij “x”."
+        },
+        "CSD U6 goalie_2021": {
+          "rubric_key_concept": "Përdorni marrës dhe përcaktues për të manipuluar pronat.",
+          "rubric_performance_level_1": "Kur programi është drejtuar, topi lëviz pa probleme në të majtë të ekranit me një shpejtësi të arsyeshme.",
+          "rubric_performance_level_2": "Kur programi është drejtuar, topi lëviz nëpër ekran.",
+          "rubric_performance_level_3": "Programi hyri në pozicionin aktual të topit dhe e përdori atë për të përditësuar tiparin“x” të topit, por gabimet në program parandalojnë që topi të lëvizë nëpër ekran.",
+          "rubric_performance_level_4": "Pozicioni aktual i topit nuk përdoret për të azhurnuar tiparin e tij “x”."
+        },
+        "CSD U6 light pattern off_2019": {
+          "rubric_key_concept": "Hyni në elementet në vargje dhe zhvilloni softuer për të kontrolluar një shumëllojshmëri të pajisjeve fizike. ",
+          "rubric_performance_level_1": "Programi punon siç përshkruhet, ka tre butona, dy prej të cilave ndezin LED-et e ngjyrave në një model të veçantë, dhe njëra prej të cilave i fiket LEDs me ngjyra. Nuk ka kod të panevojshëm në program.",
+          "rubric_performance_level_2": "Programi në përgjithësi punon siç përshkruhet, ka tre butona, dy prej të cilave ndezin dritat në një model dallues dhe një funksion që fiket LEDs me ngjyra. Mund të ketë gabime të vogla në program.",
+          "rubric_performance_level_3": "Ekziston një kod në program që ndez dhe fiket LEDs, por mund të ketë gabime të mëdha që parandalojnë programin të funksionojë siç duhet.",
+          "rubric_performance_level_4": "Nuk ka asnjë kod të ri që ndez dhe fiket LEDs."
+        },
+        "CSD U6 light pattern off_2021": {
+          "rubric_key_concept": "Hyni në elementet në vargje dhe zhvilloni softuer për të kontrolluar një shumëllojshmëri të pajisjeve fizike. ",
+          "rubric_performance_level_1": "Programi punon siç përshkruhet, ka tre butona, dy prej të cilave ndezin LED-et e ngjyrave në një model të veçantë, dhe njëra prej të cilave i fiket LEDs me ngjyra. Nuk ka kod të panevojshëm në program.",
+          "rubric_performance_level_2": "Programi në përgjithësi punon siç përshkruhet, ka tre butona, dy prej të cilave ndezin dritat në një model dallues dhe një funksion që fiket LEDs me ngjyra. Mund të ketë gabime të vogla në program.",
+          "rubric_performance_level_3": "Ekziston një kod në program që ndez dhe fiket LEDs, por mund të ketë gabime të mëdha që parandalojnë programin të funksionojë siç duhet.",
+          "rubric_performance_level_4": "Nuk ka asnjë kod të ri që ndez dhe fiket LEDs."
+        },
+        "CSD U6 params starchaser 5_2019": {
+          "rubric_performance_level_1": "Programi funksionon siç përshkruhet dhe përfshin të gjitha funksionet me parametra siç përshkruhet në udhëzimet. (MoveStar, LoopStar dhe CheckStar)",
+          "rubric_performance_level_2": "Programi përfshin funksione të shumta me parametra dhe në përgjithësi funksionon siç përshkruhet, por mund të përfshijë gabime të vogla që ndikojnë në lojën.",
+          "rubric_performance_level_3": "Programi përfshin të paktën një funksion me parametra, por mund të ketë gabime të mëdha në kod që parandalojnë punën e lojës.",
+          "rubric_performance_level_4": "Programi nuk përfshin ndonjë funksion me parametra."
+        },
+        "CSD U6 params starchaser 5_2021": {
+          "rubric_performance_level_1": "Programi funksionon siç përshkruhet dhe përfshin të gjitha funksionet me parametra siç përshkruhet në udhëzimet. (MoveStar, LoopStar dhe CheckStar)",
+          "rubric_performance_level_2": "Programi përfshin funksione të shumta me parametra dhe në përgjithësi funksionon siç përshkruhet, por mund të përfshijë gabime të vogla që ndikojnë në lojën.",
+          "rubric_performance_level_3": "Programi përfshin të paktën një funksion me parametra, por mund të ketë gabime të mëdha në kod që parandalojnë punën e lojës.",
+          "rubric_performance_level_4": "Programi nuk përfshin ndonjë funksion me parametra."
+        },
+        "CSD U6 setProperty hidden 2_2019": {
+          "rubric_key_concept": "Përdorin mbajtësit e ngjarjeve për t'iu përgjigjur ndërveprimit të përdoruesit",
+          "rubric_performance_level_1": "Kur shtypet “stopAlarmButton”, teksti i statusit ndryshon në “OFF” dhe butoni zhduket. Nuk ka kod shtesë në program.",
+          "rubric_performance_level_2": "Kur shtypet “stopAlarmButton”, programi përgjigjet në një farë mënyre, por jo domosdoshmërisht siç përshkruhet në udhëzimet, ose mund të ketë kod të panevojshëm të shkaktuar nga ngjarja.",
+          "rubric_performance_level_3": "Një ngjarje e dytë është krijuar, por mund të mos shkaktohet në kohë të përshtatshme, ose programi mund të ketë krijuar ngjarje të panevojshme.",
+          "rubric_performance_level_4": "Asnjë ngjarje e re nuk u krijua."
+        },
+        "CSD U6 setProperty hidden 2_2021": {
+          "rubric_key_concept": "Përdorin mbajtësit e ngjarjeve për t'iu përgjigjur ndërveprimit të përdoruesit",
+          "rubric_performance_level_1": "Kur shtypet “stopAlarmButton”, teksti i statusit ndryshon në “OFF” dhe butoni zhduket. Nuk ka kod shtesë në program.",
+          "rubric_performance_level_2": "Kur shtypet “stopAlarmButton”, programi përgjigjet në një farë mënyre, por jo domosdoshmërisht siç përshkruhet në udhëzimet, ose mund të ketë kod të panevojshëm të shkaktuar nga ngjarja.",
+          "rubric_performance_level_3": "Një ngjarje e dytë është krijuar, por mund të mos shkaktohet në kohë të përshtatshme, ose programi mund të ketë krijuar ngjarje të panevojshme.",
+          "rubric_performance_level_4": "Asnjë ngjarje e re nuk u krijua."
+        },
+        "CSD U6 setProperty xy_2019": {
+          "rubric_key_concept": "Përdorin përcaktuesit për të hyrë dhe manipuluar vetitë e elementeve në një sistem.",
+          "rubric_performance_level_1": "Drejtkëndëshi i kuq është në pozicionin e duhur dhe asnjë drejtkëndësh tjetër nuk është lëvizur. Programi përdor vetëm dy blloqe.",
+          "rubric_performance_level_2": "Drejtkëndëshi i kuq është zhvendosur, por mund të mos jetë në pozicionin e duhur, ose mund të ketë blloqe shtesë të kodit. Drejtkëndëshat e tjera janë në pozicionet e tyre origjinale.",
+          "rubric_performance_level_3": "Disa drejtkëndëshe janë zhvendosur, por fotografia nuk duket e ngjashme me shembullin.",
+          "rubric_performance_level_4": "Drejtkëndëshat nuk janë zhvendosur."
+        },
+        "CSD U6 setProperty xy_2021": {
+          "rubric_key_concept": "Përdorin përcaktuesit për të hyrë dhe manipuluar vetitë e elementeve në një sistem.",
+          "rubric_performance_level_1": "Drejtkëndëshi i kuq është në pozicionin e duhur dhe asnjë drejtkëndësh tjetër nuk është lëvizur. Programi përdor vetëm dy blloqe.",
+          "rubric_performance_level_2": "Drejtkëndëshi i kuq është zhvendosur, por mund të mos jetë në pozicionin e duhur, ose mund të ketë blloqe shtesë të kodit. Drejtkëndëshat e tjera janë në pozicionet e tyre origjinale.",
+          "rubric_performance_level_3": "Disa drejtkëndëshe janë zhvendosur, por fotografia nuk duket e ngjashme me shembullin.",
+          "rubric_performance_level_4": "Drejtkëndëshat nuk janë zhvendosur."
+        },
+        "CSD U6 tugowar buzzer_2019": {
+          "rubric_key_concept": "Zhvilloni një program që i përgjigjet një shumëllojshmërie të hyrjes së harduerit, krijoni dhe përdorni një funksion që përdor parametrat për të përgjithësuar sjelljen. ",
+          "rubric_performance_level_1": "Programi i përgjigjet butonave majtas dhe djathtas dhe përdor funksione të shumta me parametra siç përshkruhet në udhëzuesin e projektit.",
+          "rubric_performance_level_2": "Programi i përgjigjet të paktën një hyrje harduerike dhe përdor të paktën një funksion me parametër siç përshkruhet në udhëzuesin e projektit.",
+          "rubric_performance_level_3": "Programi i përgjigjet hyrjes së harduerit dhe përdor një funksion me një parametër, por mund të ketë gabime që i pengojnë ata të punojnë siç përshkruhet.",
+          "rubric_performance_level_4": "Programi nuk përdor hyrjen e harduerit ose nuk përfshin një funksion me parametra."
+        },
+        "CSD U6 tugowar buzzer_2021": {
+          "rubric_key_concept": "Zhvilloni një program që i përgjigjet një shumëllojshmërie të hyrjes së harduerit, krijoni dhe përdorni një funksion që përdor parametrat për të përgjithësuar sjelljen. ",
+          "rubric_performance_level_1": "Programi i përgjigjet butonave majtas dhe djathtas dhe përdor funksione të shumta me parametra siç përshkruhet në udhëzuesin e projektit.",
+          "rubric_performance_level_2": "Programi i përgjigjet të paktën një hyrje harduerike dhe përdor të paktën një funksion me parametër siç përshkruhet në udhëzuesin e projektit.",
+          "rubric_performance_level_3": "Programi i përgjigjet hyrjes së harduerit dhe përdor një funksion me një parametër, por mund të ketë gabime që i pengojnë ata të punojnë siç përshkruhet.",
+          "rubric_performance_level_4": "Programi nuk përdor hyrjen e harduerit ose nuk përfshin një funksion me parametra."
+        },
+        "CSD Web CSS Assessment_2021": {
+          "rubric_key_concept": "Krijo një style sheet dhe lidheni me fletën në HTML. Style sheet përfshin një rregull që ndryshon elementin e paragrafit të një webfaqe.",
+          "rubric_performance_level_1": "Paragrafët kanë një ngjyrë dhe madhësi të re, dhe nuk ka gabime ose mospërputhje në kodin HTML ose CSS.",
+          "rubric_performance_level_2": "Paragrafët kanë një ngjyrë ose madhësi të re.",
+          "rubric_performance_level_3": "Paragrafët kanë një rregull të veçantë të vendosur në style sheet dhe përdoret atributi i ngjyrës ose madhësisë, por ka gabime të mjaftueshme që teksti nuk ndryshon ngjyrën ose madhësinë. Ekziston kodi HTML që përpiqet të lidhë style sheet me webfaqen.",
+          "rubric_performance_level_4": "Nuk ka rregulla të veçanta për paragrafët ose atributet e ngjyrës ose madhësisë nuk përdoren në grupin e rregullave. Nuk ka asnjë kod për të lidhur style sheet me webfaqen."
+        },
+        "CSD Web CSS Assessment_2022": {
+          "rubric_key_concept": "Krijo një style sheet dhe lidheni me fletën në HTML. Style sheet përfshin një rregull që ndryshon elementin e paragrafit të një webfaqe.",
+          "rubric_performance_level_1": "Paragrafët kanë një ngjyrë dhe madhësi të re, dhe nuk ka gabime ose mospërputhje në kodin HTML ose CSS.",
+          "rubric_performance_level_2": "Paragrafët kanë një ngjyrë ose madhësi të re.",
+          "rubric_performance_level_3": "Paragrafët kanë një rregull të veçantë të vendosur në style sheet dhe përdoret atributi i ngjyrës ose madhësisë, por ka gabime të mjaftueshme që teksti nuk ndryshon ngjyrën ose madhësinë. Ekziston kodi HTML që përpiqet të lidhë style sheet me webfaqen.",
+          "rubric_performance_level_4": "Nuk ka rregulla të veçanta për paragrafët ose atributet e ngjyrës ose madhësisë nuk përdoren në grupin e rregullave. Nuk ka asnjë kod për të lidhur style sheet me webfaqen."
+        },
+        "CSD games collisions assessment_2021": {
+          "rubric_key_concept": "Model i lëvizjes komplekse në një rrafsh koordinativ.",
+          "rubric_performance_level_1": "Programi ekzekutohet pikërisht si në imazhin e synuar, me të gjitha ndërveprimet sprite të treguara, dhe nuk ka gabime në kod.",
+          "rubric_performance_level_2": "Ndërveprimet e shumta sprite janë të përfshira në program, dhe të paktën dy janë siç tregohen në imazhin e synuar.",
+          "rubric_performance_level_3": "Ekziston të paktën një ndërveprim sprite, por mund të mos jetë siç tregohet në imazhin e synuar.",
+          "rubric_performance_level_4": "Nuk ka ndërveprime sprite në program."
+        },
+        "CSD games collisions assessment_2022": {
+          "rubric_key_concept": "Model i lëvizjes komplekse në një rrafsh koordinativ.",
+          "rubric_performance_level_1": "Programi ekzekutohet pikërisht si në imazhin e synuar, me të gjitha ndërveprimet sprite të treguara, dhe nuk ka gabime në kod.",
+          "rubric_performance_level_2": "Ndërveprimet e shumta sprite janë të përfshira në program, dhe të paktën dy janë siç tregohen në imazhin e synuar.",
+          "rubric_performance_level_3": "Ekziston të paktën një ndërveprim sprite, por mund të mos jetë siç tregohet në imazhin e synuar.",
+          "rubric_performance_level_4": "Nuk ka ndërveprime sprite në program."
+        },
+        "CSD games mousedown intro_2021": {
+          "rubric_key_concept": "Përdorni kushte për të kontrolluar rrjedhën e një programi; zbuloni dhe përgjigjuni për input të përdoruesit.",
+          "rubric_performance_level_1": "Dhëmbëzorët rrotullohen në drejtim të kundërt kur tasti i hapësirës nuk po shtypet, dhe tehet e dhëmbëzorëve rreshtohen siç duhet.",
+          "rubric_performance_level_2": "Të paktën një dhëmbëzorë rrotullohet në drejtim të kundërt kur tasti i hapësirës nuk po shtypet, por mund të ketë gabime të vogla në program që ndalon të gjithë dhëmbëzorët nga rrotullimi.",
+          "rubric_performance_level_3": "Ekziston një deklaratë 'else' e përdorur, por ka gabime të mëdha në program që ndalojnë dhembëzorët nga rrotulimi.",
+          "rubric_performance_level_4": "Nuk ka deklaratë 'else'."
+        },
+        "CSD games mousedown intro_2022": {
+          "rubric_key_concept": "Përdorni kushte për të kontrolluar rrjedhën e një programi; zbuloni dhe përgjigjuni për input të përdoruesit.",
+          "rubric_performance_level_1": "Dhëmbëzorët rrotullohen në drejtim të kundërt kur tasti i hapësirës nuk po shtypet, dhe tehet e dhëmbëzorëve rreshtohen siç duhet.",
+          "rubric_performance_level_2": "Të paktën një dhëmbëzorë rrotullohet në drejtim të kundërt kur tasti i hapësirës nuk po shtypet, por mund të ketë gabime të vogla në program që ndalon të gjithë dhëmbëzorët nga rrotullimi.",
+          "rubric_performance_level_3": "Ekziston një deklaratë 'else' e përdorur, por ka gabime të mëdha në program që ndalojnë dhembëzorët nga rrotulimi.",
+          "rubric_performance_level_4": "Nuk ka deklaratë 'else'."
+        },
+        "CSD web conditionals assessment_2021": {
+          "rubric_key_concept": "Përdorni kushte për të kontrolluar rrjedhën e një programi.",
+          "rubric_performance_level_1": "Imazhi i sprite ndryshon nga një T-rex në një pterodaktil kur sprite arrin qiellin.",
+          "rubric_performance_level_2": "Ekziston një kusht në draw loop që kontrollon nëse sprite ka arritur në qiell.",
+          "rubric_performance_level_3": "Ekziston një kusht në draw loop që kontrollon vlerën e një shprehjeje Boolean.",
+          "rubric_performance_level_4": "Nuk ka kushte në draw loop."
+        },
+        "CSD web conditionals assessment_2022": {
+          "rubric_key_concept": "Përdorni kushte për të kontrolluar rrjedhën e një programi.",
+          "rubric_performance_level_1": "Imazhi i sprite ndryshon nga një T-rex në një pterodaktil kur sprite arrin qiellin.",
+          "rubric_performance_level_2": "Ekziston një kusht në draw loop që kontrollon nëse sprite ka arritur në qiell.",
+          "rubric_performance_level_3": "Ekziston një kusht në draw loop që kontrollon vlerën e një shprehjeje Boolean.",
+          "rubric_performance_level_4": "Nuk ka kushte në draw loop."
+        },
+        "CSD web mouse assessment_2021": {
+          "rubric_key_concept": "Përdorni kushte për të kontrolluar rrjedhën e një programi; zbuloni dhe përgjigjuni për input të përdoruesit.",
+          "rubric_performance_level_1": "Krijesa dridhet vetëm kur përdoruesi shtyp mausin, dhe teksti shfaqet vetëm kur përdoruesi nuk po shtyp mausin. Përdoret vetëm një bllok i kushtëzuar dhe programi është pa gabime.",
+          "rubric_performance_level_2": "Krijesa dridhet vetëm kur përdoruesi shtyp mausin, dhe teksti shfaqet vetëm kur përdoruesi nuk po shtyp mausin, por mund të ketë gabime të vogla, të tilla si probleme me madhësinë e tekstit ose pozicionimin e krijesës.",
+          "rubric_performance_level_3": "Ekziston një deklaratë 'else' e përdorur, por ka gabime të mëdha në program që e mbajnë programin të ekzekutohet siç duhet.",
+          "rubric_performance_level_4": "Nuk ka deklaratë 'else'."
+        },
+        "CSD web mouse assessment_2022": {
+          "rubric_key_concept": "Përdorni kushte për të kontrolluar rrjedhën e një programi; zbuloni dhe përgjigjuni për input të përdoruesit.",
+          "rubric_performance_level_1": "Krijesa dridhet vetëm kur përdoruesi shtyp mausin, dhe teksti shfaqet vetëm kur përdoruesi nuk po shtyp mausin. Përdoret vetëm një bllok i kushtëzuar dhe programi është pa gabime.",
+          "rubric_performance_level_2": "Krijesa dridhet vetëm kur përdoruesi shtyp mausin, dhe teksti shfaqet vetëm kur përdoruesi nuk po shtyp mausin, por mund të ketë gabime të vogla, të tilla si probleme me madhësinë e tekstit ose pozicionimin e krijesës.",
+          "rubric_performance_level_3": "Ekziston një deklaratë 'else' e përdorur, por ka gabime të mëdha në program që e mbajnë programin të ekzekutohet siç duhet.",
+          "rubric_performance_level_4": "Nuk ka deklaratë 'else'."
+        },
+        "CSD web text assessment_2021": {
+          "rubric_key_concept": "Vendosni tekstin në ekran duke përdorur një rrafsh koordinativ, përdorni argumente për të ndryshuar pamjen e tekstit.",
+          "rubric_performance_level_1": "Dy pjesë të tekstit shfaqen në ekran në vende të arsyeshme, dhe pjesët e tekstit janë madhësi të ndryshme.",
+          "rubric_performance_level_2": "Blloku i tekstit përdoret dhe shfaqet në ekran në një vend të arsyeshëm.",
+          "rubric_performance_level_3": "Blloku i tekstit përdoret, por teksti nuk shfaqet plotësisht në ekran.",
+          "rubric_performance_level_4": "Asnjë blloqe teksti nuk përdoret, ose përmban aq shumë gabime që programi nuk mund ta ekzekutojë."
+        },
+        "CSD web text assessment_2022": {
+          "rubric_key_concept": "Vendosni tekstin në ekran duke përdorur një rrafsh koordinativ, përdorni argumente për të ndryshuar pamjen e tekstit.",
+          "rubric_performance_level_1": "Dy pjesë të tekstit shfaqen në ekran në vende të arsyeshme, dhe pjesët e tekstit janë madhësi të ndryshme.",
+          "rubric_performance_level_2": "Blloku i tekstit përdoret dhe shfaqet në ekran në një vend të arsyeshëm.",
+          "rubric_performance_level_3": "Blloku i tekstit përdoret, por teksti nuk shfaqet plotësisht në ekran.",
+          "rubric_performance_level_4": "Asnjë blloqe teksti nuk përdoret, ose përmban aq shumë gabime që programi nuk mund ta ekzekutojë."
+        },
+        "CSDU6 - LED toggle buttonL up_2019": {
+          "rubric_key_concept": "Zhvilloni një program që i përgjigjet një shumëllojshmërie të hyrjes së harduerit.",
+          "rubric_performance_level_1": "Programi funksionon siç përshkruhet, me LED që ndizet kur përdoruesi shtypi butonin poshtë dhe fiket kur përdoruesi lëshon butonin. Nuk ka kod të panevojshëm.",
+          "rubric_performance_level_2": "Programi përdor një mbajtës ngjarjesh për të zbuluar lëshimin e butonit, por mund të mos përgjigjet siç përshkruhet, ose mund të ketë kod të panevojshëm të përfshirë në program.",
+          "rubric_performance_level_3": "Programi përdor një mbajtës të ngjarjeve të pllakës(board), por ka gabime mjaft të rëndësishme që programi nuk mund të zbulojë lëshimin e butonit.",
+          "rubric_performance_level_4": "Programi nuk përdor një mbajtës të ngjarjeve të pllakës."
+        },
+        "CSDU6 - LED toggle buttonL up_2021": {
+          "rubric_key_concept": "Zhvilloni një program që i përgjigjet një shumëllojshmërie të hyrjes së harduerit.",
+          "rubric_performance_level_1": "Programi funksionon siç përshkruhet, me LED që ndizet kur përdoruesi shtypi butonin poshtë dhe fiket kur përdoruesi lëshon butonin. Nuk ka kod të panevojshëm.",
+          "rubric_performance_level_2": "Programi përdor një mbajtës ngjarjesh për të zbuluar lëshimin e butonit, por mund të mos përgjigjet siç përshkruhet, ose mund të ketë kod të panevojshëm të përfshirë në program.",
+          "rubric_performance_level_3": "Programi përdor një mbajtës të ngjarjeve të pllakës(board), por ka gabime mjaft të rëndësishme që programi nuk mund të zbulojë lëshimin e butonit.",
+          "rubric_performance_level_4": "Programi nuk përdor një mbajtës të ngjarjeve të pllakës."
+        },
+        "CSDU6 arrays select variable_2019": {
+          "rubric_key_concept": "Hyni në një element në një varg.",
+          "rubric_performance_level_1": "Programi shfaq rastësisht një kombinim të ngjyrave dhe ikonave që përputhen siç përshkruhet në udhëzimet. Elementet në varg arrihen duke përdorur variablin “MyIndex” dhe nuk ka kod të panevojshëm në program.",
+          "rubric_performance_level_2": "Programi shfaq rastësisht një kombinim ngjyrash dhe ikonash. Elementet në varg arrihen duke përdorur variablin “MyIndex”, megjithëse mund të ketë gabime të vogla që parandalojnë ekzekutimin e programit saktësisht siç përshkruhet.",
+          "rubric_performance_level_3": "Shënimi i indeksit përdoret për të hyrë në një element nga një varg, megjithëse mund të ketë gabime të mëdha në program që e pengojnë atë të funksionojë siç duhet.",
+          "rubric_performance_level_4": "Shënimi i indeksit nuk përdoret."
+        },
+        "CSDU6 arrays select variable_2021": {
+          "rubric_key_concept": "Hyni në një element në një varg.",
+          "rubric_performance_level_1": "Programi shfaq rastësisht një kombinim të ngjyrave dhe ikonave që përputhen siç përshkruhet në udhëzimet. Elementet në varg arrihen duke përdorur variablin “MyIndex” dhe nuk ka kod të panevojshëm në program.",
+          "rubric_performance_level_2": "Programi shfaq rastësisht një kombinim ngjyrash dhe ikonash. Elementet në varg arrihen duke përdorur variablin “MyIndex”, megjithëse mund të ketë gabime të vogla që parandalojnë ekzekutimin e programit saktësisht siç përshkruhet.",
+          "rubric_performance_level_3": "Shënimi i indeksit përdoret për të hyrë në një element nga një varg, megjithëse mund të ketë gabime të mëdha në program që e pengojnë atë të funksionojë siç duhet.",
+          "rubric_performance_level_4": "Shënimi i indeksit nuk përdoret."
+        },
+        "CSDU6 making new arrays_2019": {
+          "rubric_key_concept": "Krijoni dhe modifikoni vargje.",
+          "rubric_performance_level_1": "Një varg i ri krijohet dhe ruhet në një variabël, dhe elementet e grupit arrihen rastësisht për të luajtur kur shtypet butoni i djathtë.",
+          "rubric_performance_level_2": "Një vargi ri krijohet dhe ruhet në një ndryshore, por mund të ketë gabime të palidhura që parandalojnë luajtjen e një shënim kur shtypet butoni i djathtë.",
+          "rubric_performance_level_3": "Krijohet një varg i ri, por ose nuk ruhet në një element, ose është bosh, kështu që programi nuk mund të funksionojë siç përshkruhet.",
+          "rubric_performance_level_4": "Nuk ka vargje në program."
+        },
+        "CSDU6 making new arrays_2021": {
+          "rubric_key_concept": "Krijoni dhe modifikoni vargje.",
+          "rubric_performance_level_1": "Një varg i ri krijohet dhe ruhet në një variabël, dhe elementet e grupit arrihen rastësisht për të luajtur kur shtypet butoni i djathtë.",
+          "rubric_performance_level_2": "Një vargi ri krijohet dhe ruhet në një ndryshore, por mund të ketë gabime të palidhura që parandalojnë luajtjen e një shënim kur shtypet butoni i djathtë.",
+          "rubric_performance_level_3": "Krijohet një varg i ri, por ose nuk ruhet në një element, ose është bosh, kështu që programi nuk mund të funksionojë siç përshkruhet.",
+          "rubric_performance_level_4": "Nuk ka vargje në program."
+        },
+        "ml-club app-review submit": {
+          "rubric_performance_level_4": "Aplikacioni nuk ka nisur"
+        },
+        "ml-club app-review submit_2022": {
+          "rubric_performance_level_4": "Aplikacioni nuk ka nisur"
+        },
+        "ml-intro app lab-book recommender 4-2021": {
+          "rubric_performance_level_4": "Aplikacioni nuk ka nisur"
+        },
+        "ml-intro app lab-book recommender 4_2022": {
+          "rubric_performance_level_4": "Aplikacioni nuk ka nisur"
         }
       }
     }
