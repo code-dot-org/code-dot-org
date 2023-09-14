@@ -335,7 +335,11 @@ Dashboard::Application.routes.draw do
       end
     end
 
-    resources :rubrics, only: [:edit, :new]
+    resources :rubrics, only: [:create, :edit, :new, :update] do
+      member do
+        post 'submit_evaluations'
+      end
+    end
 
     resources :course_offerings, only: [:edit, :update], param: 'key' do
       collection do
@@ -1039,6 +1043,8 @@ Dashboard::Application.routes.draw do
     end
 
     resources :code_review_comments, only: [:create, :update, :destroy]
+
+    resources :learning_goal_evaluations, only: [:create, :update]
 
     get '/backpacks/channel', to: 'backpacks#get_channel'
 

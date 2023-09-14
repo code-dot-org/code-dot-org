@@ -758,6 +758,15 @@ pl:
         csc_bookcovers_intro: csc-bookcovers
         llms-cobranded: 'Jak działa sztuczna inteligencja: Chatboty i duże modele językowe (LLM)'
         generative-ai-cobranded: 'Jak działa sztuczna inteligencja: Generatywna sztuczna inteligencja'
+        csa-overview: Nowe podejście do Informatyki AP, A
+        what-is-creativity: Czym jest kreatywność?
+        poetry-programming: Poezja i programowanie
+        push-yourself: Zmuś się. Każdy może się nauczyć.
+        classic-maze-intro: Klasyczny labirynt - Wprowadzenie
+        code-break: Przejdź do Code Brake
+        blockchain-introd: 'Jak działa Blockchain: Wprowadzenie'
+        ai-ethis: Etyka i sztuczna inteligencja
+        how-ai-works-lessons: 'Jak działa sztuczna inteligencja: Przegląd lekcji'
     callout:
       text:
         drag_blocks: Przeciągnij blok "idź" i przypnij go poniżej innego bloku

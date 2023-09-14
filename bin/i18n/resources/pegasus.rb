@@ -20,6 +20,10 @@ module I18n
         I18nScriptUtils.fix_yml_file(pegasus_i18n_file_path)
         FileUtils.cp(pegasus_i18n_file_path, File.join(I18N_SOURCE_DIR_PATH, 'mobile.yml'))
       end
+
+      def self.sync_out
+        HourOfCode.sync_out
+      end
     end
   end
 end

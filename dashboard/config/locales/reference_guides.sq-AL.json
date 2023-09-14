@@ -2,11 +2,26 @@
   "sq-AL": {
     "data": {
       "reference_guides": {
+        "csd-2022/animation-tab": {
+          "display_name": "Tab-i i Animacionit"
+        },
         "csd-2022/app-lab": {
           "display_name": "Laboratori i Aplikacioneve"
         },
         "csd-2022/applab-overview": {
           "display_name": "Përmbledhja"
+        },
+        "csd-2022/body-styling": {
+          "display_name": "Stilimi i trupit"
+        },
+        "csd-2022/classes": {
+          "display_name": "Klasat"
+        },
+        "csd-2022/color-lights": {
+          "display_name": "Dritat me ngjyra"
+        },
+        "csd-2022/css": {
+          "display_name": "CSS"
         },
         "csd-2022/css-overview": {
           "display_name": "Përmbledhja"
@@ -22,6 +37,9 @@
         },
         "csd-2022/game-lab-overview": {
           "display_name": "Përmbledhja"
+        },
+        "csd-2022/html": {
+          "display_name": "HTML"
         },
         "csd-2022/html-overview": {
           "display_name": "Përmbledhja"
@@ -46,6 +64,18 @@
         },
         "csd-2022/patterns-overview": {
           "display_name": "Përmbledhja"
+        },
+        "csd-2022/sprites": {
+          "display_name": "Sprites"
+        },
+        "csd-2022/style-sheets": {
+          "display_name": "Fletët e stilimit"
+        },
+        "csd-2022/taking-input-with-getproperty": {
+          "display_name": "Marrja e hyrjes me getProperty"
+        },
+        "csd-2022/text-properties": {
+          "display_name": "Tiparet e tekstit"
         },
         "csd-2022/variables": {
           "display_name": "variabla"

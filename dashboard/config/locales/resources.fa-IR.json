@@ -2017,7 +2017,7 @@
         "app-presentation-template/csd/2021": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلاید دک"
         },
         "app-presentation-exemplar/csd/2021": {
           "name": "",
@@ -3231,9 +3231,9 @@
           "type": "منبع"
         },
         "the_big_event_courses_a_b_/coursea/2021": {
-          "name": "رویداد بزرگ (دوره‌های A,B)",
+          "name": "رویداد بزرگ (دوره‌های A, B)",
           "url": "https://docs.google.com/document/d/1fS1iktxAuFW3GKdsKT_RsyMN5qnc_BMm6ysFPJHLwKY/edit?usp=sharing",
-          "type": "تصویر ناظر\n"
+          "type": "تصویر کنترلر\n"
         },
         "unplugged-video-big-event/coursea/2021": {
           "name": "رویداد بزرگ",
@@ -3468,9 +3468,9 @@
           "type": "ارزیابی"
         },
         "the_big_event_courses_a_b_/courseb/2021": {
-          "name": "رویداد بزرگ (دوره‌های A,B)",
+          "name": "رویداد بزرگ (دوره‌های A, B)",
           "url": "https://docs.google.com/document/d/1fS1iktxAuFW3GKdsKT_RsyMN5qnc_BMm6ysFPJHLwKY/edit?usp=sharing",
-          "type": "تصویر ناظر\n"
+          "type": "تصویر کنترلر\n"
         },
         "unplugged-video-big-event/courseb/2021": {
           "name": "رویداد بزرگ",
@@ -3478,12 +3478,12 @@
           "type": "ویدئو"
         },
         "play_lab_project_planning_guide/courseb/2021": {
-          "name": "راهنمای برنامه ریزی پروژه آزمایشگاه Play",
+          "name": "راهنمای برنامه ریزی پروژه لابراتوار بازی",
           "url": "https://docs.google.com/document/d/1lSnWU30yuU6ePl5fFB1Rxlki8Br8ALzMghrJTsy4YZQ/edit?usp=sharing",
           "type": "جزوه"
         },
         "play_lab_project_planning_guide_1/courseb/2021": {
-          "name": "راهنمای برنامه ریزی پروژه آزمایشگاه Play",
+          "name": "راهنمای برنامه ریزی پروژه لابراتوار بازی",
           "url": "https://docs.google.com/document/d/1X26GO7mEDRhDCqvpv8exfVjt6oa_TbZK8wkWGUEGyPE/edit?usp=sharing",
           "type": "کلید پاسخ"
         },
@@ -3697,7 +3697,7 @@
           "type": "ویدئوی Unplugged"
         },
         "play-lab-project-guide/coursec/2021": {
-          "name": "راهنمای برنامه ریزی پروژه آزمایشگاه Play",
+          "name": "راهنمای برنامه ریزی پروژه لابراتوار بازی",
           "url": "https://docs.google.com/document/d/11lIOrJw_LWRJsP3A12CVzoZC5q-BzQ8mR7LbXGIVxY8/edit?usp=sharing",
           "type": "کاربرگ"
         },
@@ -3797,32 +3797,32 @@
           "type": "کلید پاسخ"
         },
         "activity-answer-graph-paper/coursed/2021": {
-          "name": "برنامه نویسی روی کاغذ رسم شطرنجی",
+          "name": "برنامه نویسی روی کاغذ شطرنجی ",
           "url": "https://docs.google.com/document/d/1HZr_YlKSSxAXRjW1F0g7xtOrfIKPMAArmsRMd-j1AHY/edit?usp=sharing",
           "type": "کلید پاسخ کاربرگ"
         },
         "assessment-answer-graph-paper/coursed/2021": {
-          "name": "برنامه نویسی روی کاغذ رسم شطرنجی",
+          "name": "برنامه نویسی روی کاغذ شطرنجی ",
           "url": "https://docs.google.com/document/d/1cmmXSH-mI9gu4EZMsDTyPA2MRdotirsHwcxKvnyEe0A/edit?usp=sharing",
           "type": "کلید پاسخ ارزیابی"
         },
         "csf-graph-paper-programming-assessment/coursed/2021": {
-          "name": "برنامه نویسی روی کاغذ رسم شطرنجی",
+          "name": "برنامه نویسی روی کاغذ شطرنجی ",
           "url": "https://docs.google.com/document/d/1S1t7dMPOZkZBxzQhysX1IUQFapyZHcZXSRCRmAngewU/edit?usp=sharing",
           "type": "ارزیابی"
         },
         "graph-paper-programming/coursed/2021": {
-          "name": "برنامه نویسی روی کاغذ رسم شطرنجی",
+          "name": "برنامه نویسی روی کاغذ شطرنجی ",
           "url": "https://docs.google.com/document/d/1P8T-kAAm5KAVW0qOnf2CMWlNKiowDXvs8WJkNoxUFWs/edit?usp=share_link",
           "type": "کاربرگ فعالیت"
         },
         "lesson-in-action-graph-paper/coursed/2021": {
-          "name": "برنامه نویسی روی کاغذ رسم شطرنجی",
+          "name": "برنامه نویسی روی کاغذ شطرنجی ",
           "url": "https://www.youtube.com/watch?v=vBUtejDNvrs",
           "type": "ویدئوی Lesson in Action"
         },
         "unplugged-video-graph-paper/coursed/2021": {
-          "name": "برنامه نویسی روی کاغذ رسم شطرنجی",
+          "name": "برنامه نویسی روی کاغذ شطرنجی ",
           "url": "https://youtu.be/Y_paSrH2ffw",
           "type": "ویدئوی Unplugged"
         },
@@ -6268,7 +6268,7 @@
         "app_presentation_template/csd/2022": {
           "name": "",
           "url": "",
-          "type": ""
+          "type": "اسلاید دک"
         },
         "peer_review_1/csd/2022": {
           "name": "",
@@ -7560,6 +7560,11 @@
           "url": "https://docs.google.com/document/d/1Da5YTD7O5zlMjgKV8ori14jOeMVPovzubWrKuWPmrsU/edit?usp=sharing",
           "type": "پوستر شعر"
         },
+        "csf_course_a_lesson_slides/coursea/2022": {
+          "name": "",
+          "url": "",
+          "type": "اسلایدها"
+        },
         "20_20_20_rule/coursea/2022": {
           "name": "قانون ۲۰/۲۰/۲۰",
           "url": "http://www.anthro.com/blog/2013/10/how-to-prevent-eye-strain-with-the-20-20-20-rule#.WOU39BLyu35",
@@ -7579,6 +7584,11 @@
           "name": "Wiggles-Go Noodle",
           "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
           "type": "ویدئو"
+        },
+        "csf_course_a_lesson_slides_1/coursea/2022": {
+          "name": "",
+          "url": "",
+          "type": "اسلایدها"
         },
         "feeling_faces_-_emotion_image/coursea/2022": {
           "name": "صورتک‌های احساسی - تصویر حسی",
@@ -7605,6 +7615,11 @@
           "url": "https://youtu.be/hrnhiKAQ1_k",
           "type": "ویدئوی Unplugged"
         },
+        "csf_course_a_lesson_slides_2/coursea/2022": {
+          "name": "",
+          "url": "",
+          "type": "اسلایدها"
+        },
         "unplugged_blockly_blocks_grades_k-1_/coursea/2022": {
           "name": "بلاکلی بلاک‌های بدون کامپیوتر ",
           "url": "https://docs.google.com/presentation/d/1yCSXTWqT91yDQU9QLlFEyjk189ntTsJeIyCEyXD2NX0/edit?usp=sharing",
@@ -7614,6 +7629,11 @@
           "name": "ویگلز - گونودل",
           "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
           "type": "ویدئو"
+        },
+        "csf_course_a_lesson_slides_3/coursea/2022": {
+          "name": "",
+          "url": "",
+          "type": "اسلایدها"
         },
         "debugging_with_the_step_button/coursea/2022": {
           "name": "رفع نقص با دکمه Step",
@@ -7625,10 +7645,20 @@
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit",
           "type": "منبع"
         },
+        "csf_course_a_lesson_slides_4/coursea/2022": {
+          "name": "",
+          "url": "",
+          "type": "اسلایدها"
+        },
         "feeling_faces_-_emotion_image_1/coursea/2022": {
           "name": "صورتک‌های احساسی - تصویر حسی",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit",
           "type": "منبع"
+        },
+        "csf_course_a_lesson_slides_5/coursea/2022": {
+          "name": "",
+          "url": "",
+          "type": "اسلایدها"
         },
         "happy_map_cards_xl/coursea/2022": {
           "name": "کارت‌های نقشه شادی ایکس لارج",
@@ -7640,6 +7670,11 @@
           "url": "https://docs.google.com/document/d/110I3bzOmYhGsY2SVZYsGqJmUdSy8_t239VW_3ZQ8r14/edit?usp=sharing",
           "type": "دستکاری‌ها"
         },
+        "csf_course_a_lesson_slides_6/coursea/2022": {
+          "name": "",
+          "url": "",
+          "type": "اسلایدها"
+        },
         "feeling_faces/coursea/2022": {
           "name": "چهره‌های احساسی",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/",
@@ -7650,15 +7685,30 @@
           "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
           "type": "ویدئو"
         },
+        "csf_course_a_lesson_slides_7/coursea/2022": {
+          "name": "",
+          "url": "",
+          "type": "اسلایدها"
+        },
         "csf_lesson_recommendations/coursea/2022": {
           "name": "توصیه های درس CSF",
           "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing",
           "type": "منبع"
         },
+        "csf_course_a_lesson_slides_8/coursea/2022": {
+          "name": "",
+          "url": "",
+          "type": "اسلایدها"
+        },
         "pause_and_think_online/coursea/2022": {
           "name": "مکث و تفکر آنلاین (Pause and Think Online)",
           "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
           "type": "ویدئو"
+        },
+        "csf_course_a_lesson_slides_9/coursea/2022": {
+          "name": "",
+          "url": "",
+          "type": "اسلایدها"
         },
         "the_big_event/coursea/2022": {
           "name": "رویداد بزرگ",
@@ -7676,13 +7726,23 @@
           "type": "کلید پاسخ ارزیابی"
         },
         "the_big_event_courses_a_b_/coursea/2022": {
-          "name": "رویداد بزرگ (دوره‌های A,B)",
+          "name": "رویداد بزرگ (دوره‌های A, B)",
           "url": "https://docs.google.com/document/d/1fS1iktxAuFW3GKdsKT_RsyMN5qnc_BMm6ysFPJHLwKY/edit?usp=sharing",
-          "type": "تصویر ناظر\n"
+          "type": "تصویر کنترلر\n"
+        },
+        "csf_course_a_lesson_slides_10/coursea/2022": {
+          "name": "",
+          "url": "",
+          "type": "اسلایدها"
         },
         "cs_fundamentals_main_activity_tips/coursea/2022": {
           "name": "نکات اساسی فعالیت اصلی علوم کامپیوتر ",
           "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing"
+        },
+        "csf_course_a_lesson_slides_11/coursea/2022": {
+          "name": "",
+          "url": "",
+          "type": "اسلایدها"
         },
         "artist_project_planning_guide/coursea/2022": {
           "name": "راهنمای برنامه ریزی پروژه هنرمند",
@@ -7693,6 +7753,11 @@
           "name": "راهنمای برنامه ریزی پروژه هنرمند",
           "url": "https://docs.google.com/document/d/13FEhzjfZq1ITunIdxyJ-ZSXyiqeaBVkQxXFirWj2iC4/edit?usp=sharing",
           "type": "کلید پاسخ"
+        },
+        "csf_course_a_lesson_slides_12/coursea/2022": {
+          "name": "",
+          "url": "",
+          "type": "اسلایدها"
         },
         "2022_change_log/courseb/2022": {
           "name": "",
@@ -7766,7 +7831,12 @@
         "digital_trails_lesson_slides/courseb/2022": {
           "name": "مسیرهای دیجیتالی: اسلایدهای درس",
           "url": "https://docs.google.com/presentation/d/1hXCx67EO_m13Nn1lBzh1AbF_XV6sakSkSoNvPDM8p-A/edit?usp=sharing",
-          "type": ""
+          "type": "اسلاید دک"
+        },
+        "csf_course_b_lesson_slides/courseb/2022": {
+          "name": "",
+          "url": "",
+          "type": "اسلایدها"
         },
         "feeling_faces_emotion_image/courseb/2022": {
           "name": "صورتک‌های احساسی - تصویر حسی",
@@ -7884,7 +7954,7 @@
         "the_right_app_scenarios/courseb/2022": {
           "name": "سناریوهای نرم‌افزار کاربردی مناسب",
           "url": "https://docs.google.com/presentation/d/10ueRO4YSPdvgZGZ0ZYadcm3GjsHHHNTN3ssueAIY8z8/edit?usp=share_link",
-          "type": ""
+          "type": "اسلاید دک"
         },
         "the_big_event/courseb/2022": {
           "name": "رویداد بزرگ",
@@ -7901,17 +7971,17 @@
           "type": "کلید پاسخ ارزیابی"
         },
         "the_big_event_courses_a_b_/courseb/2022": {
-          "name": "رویداد بزرگ (دوره‌های A,B)",
+          "name": "رویداد بزرگ (دوره‌های A, B)",
           "url": "https://docs.google.com/document/d/1fS1iktxAuFW3GKdsKT_RsyMN5qnc_BMm6ysFPJHLwKY/edit?usp=sharing",
-          "type": "تصویر ناظر\n"
+          "type": "تصویر کنترلر\n"
         },
         "play_lab_project_planning_guide/courseb/2022": {
-          "name": "راهنمای برنامه ریزی پروژه آزمایشگاه Play",
+          "name": "راهنمای برنامه ریزی پروژه لابراتوار بازی",
           "url": "https://docs.google.com/document/d/1lSnWU30yuU6ePl5fFB1Rxlki8Br8ALzMghrJTsy4YZQ/edit?usp=sharing",
           "type": "جزوه"
         },
         "play_lab_project_planning_guide_1/courseb/2022": {
-          "name": "راهنمای برنامه ریزی پروژه آزمایشگاه Play",
+          "name": "راهنمای برنامه‌ریزی پروژه لابراتوار بازی",
           "url": "https://docs.google.com/document/d/1X26GO7mEDRhDCqvpv8exfVjt6oa_TbZK8wkWGUEGyPE/edit?usp=sharing",
           "type": "کلید پاسخ"
         },
@@ -7977,7 +8047,7 @@
         "putting_a_stop_to_online_meanness_lesson_slides/coursec/2022": {
           "name": "قرار دادن یک استاپ برای پست آنلاین: اسلایدهای درس",
           "url": "https://docs.google.com/presentation/d/13p6h8bmDs357KEIHJskNVmITgsOZs6qGlW3QQeKbXJk/edit?usp=sharing",
-          "type": ""
+          "type": "اسلاید دک"
         },
         "putting_a_stop_to_online_meanness_stop_online_meanness/coursec/2022": {
           "name": "قرار دادن یک استاپ برای پست آنلاین: اسلایدهای درس",
@@ -8134,7 +8204,7 @@
           "type": "فیلم دانش‌آموز"
         },
         "play_lab_project_planning_guide/coursec/2022": {
-          "name": "راهنمای برنامه ریزی پروژه آزمایشگاه Play",
+          "name": "راهنمای برنامه ریزی پروژه لابراتوار بازی",
           "url": "https://docs.google.com/document/d/11lIOrJw_LWRJsP3A12CVzoZC5q-BzQ8mR7LbXGIVxY8/edit?usp=sharing",
           "type": "کاربرگ"
         },
@@ -8243,32 +8313,32 @@
           "type": "اسلایدها"
         },
         "graph_paper_programming/coursed/2022": {
-          "name": "برنامه نویسی روی کاغذ رسم شطرنجی",
+          "name": "برنامه نویسی روی کاغذ شطرنجی ",
           "url": "https://docs.google.com/document/d/1P8T-kAAm5KAVW0qOnf2CMWlNKiowDXvs8WJkNoxUFWs/edit?usp=share_link",
           "type": "کاربرگ فعالیت"
         },
         "graph_paper_programming_1/coursed/2022": {
-          "name": "برنامه نویسی روی کاغذ رسم شطرنجی",
+          "name": "برنامه نویسی روی کاغذ شطرنجی ",
           "url": "https://youtu.be/Y_paSrH2ffw",
           "type": "ویدئوی Unplugged"
         },
         "graph_paper_programming_2/coursed/2022": {
-          "name": "برنامه نویسی روی کاغذ رسم شطرنجی",
+          "name": "برنامه نویسی روی کاغذ شطرنجی ",
           "url": "https://www.youtube.com/watch?v=vBUtejDNvrs",
           "type": "ویدئوی Lesson in Action"
         },
         "graph_paper_programming_3/coursed/2022": {
-          "name": "برنامه نویسی روی کاغذ رسم شطرنجی",
+          "name": "برنامه نویسی روی کاغذ شطرنجی ",
           "url": "https://docs.google.com/document/d/1HZr_YlKSSxAXRjW1F0g7xtOrfIKPMAArmsRMd-j1AHY/edit?usp=sharing",
           "type": "کلید پاسخ کاربرگ"
         },
         "graph_paper_programming_4/coursed/2022": {
-          "name": "برنامه نویسی روی کاغذ رسم شطرنجی",
+          "name": "برنامه نویسی روی کاغذ شطرنجی ",
           "url": "https://docs.google.com/document/d/1S1t7dMPOZkZBxzQhysX1IUQFapyZHcZXSRCRmAngewU/edit?usp=sharing",
           "type": "ارزیابی"
         },
         "graph_paper_programming_5/coursed/2022": {
-          "name": "برنامه نویسی روی کاغذ رسم شطرنجی",
+          "name": "برنامه نویسی روی کاغذ شطرنجی ",
           "url": "https://docs.google.com/document/d/1cmmXSH-mI9gu4EZMsDTyPA2MRdotirsHwcxKvnyEe0A/edit?usp=sharing",
           "type": "کلید پاسخ ارزیابی"
         },
@@ -8481,7 +8551,7 @@
         "private_and_personal_information_lesson_slides/coursee/2022": {
           "name": "اطلاعات خصوصی و شخصی: اسلایدهای درس",
           "url": "https://docs.google.com/presentation/d/1NE9BIqB7j3PRgEgOiIYf0GogpZJgijqAHdWDklb11b8/edit?usp=sharing",
-          "type": ""
+          "type": "اسلاید دک"
         },
         "private_and_personal_information_private_and_personal_information/coursee/2022": {
           "name": "اطلاعات خصوصی و شخصی: Private and Personal Information",
@@ -8958,7 +9028,7 @@
         "events-in-bounce-how-do-they-happen/basketball/unversioned": {
           "name": "رویدادها در پرش - چگونه اتفاق می‌افتند؟",
           "url": "https://docs.google.com/presentation/d/11DzVtRaK1FtnI6wppsPBFNOnVFU1P-Jx_HNd0FYR11g/edit?usp=share_link",
-          "type": ""
+          "type": "اسلاید دک"
         },
         "dance-party-playlist/dance-2019/unversioned": {
           "name": "لیست پخش Spotify (تمام سنین)",
@@ -9028,7 +9098,7 @@
         "events-in-bounce-how-do-they-happen/sports/unversioned": {
           "name": "رویدادها در پرش - چگونه اتفاق می‌افتند؟",
           "url": "https://docs.google.com/presentation/d/11DzVtRaK1FtnI6wppsPBFNOnVFU1P-Jx_HNd0FYR11g/edit?usp=share_link",
-          "type": ""
+          "type": "اسلاید دک"
         },
         "activity-guide-text-compression/text-compression/unversioned": {
           "name": "راهنمای فعالیت - فشرده‌سازی متن",

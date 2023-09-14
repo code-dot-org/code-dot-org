@@ -32,6 +32,7 @@ import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import ExpandedCurriculumCatalogCard from './ExpandedCurriculumCatalogCard';
 
 const CurriculumCatalogCard = ({
+  courseKey,
   courseDisplayName,
   duration,
   gradesArray,
@@ -48,9 +49,14 @@ const CurriculumCatalogCard = ({
   video,
   publishedDate,
   selfPacedPlCourseOfferingPath,
+  isExpanded,
+  onQuickViewClick,
+  isInUS,
+  availableResources,
   ...props
 }) => (
   <CustomizableCurriculumCatalogCard
+    courseKey={courseKey}
     assignButtonText={i18n.assign()}
     assignButtonDescription={i18n.assignDescription({
       course_name: courseDisplayName,
@@ -84,11 +90,16 @@ const CurriculumCatalogCard = ({
     video={video}
     publishedDate={publishedDate}
     selfPacedPlCourseOfferingPath={selfPacedPlCourseOfferingPath}
+    isExpanded={isExpanded}
+    onQuickViewClick={onQuickViewClick}
+    isInUS={isInUS}
+    availableResources={availableResources}
     {...props}
   />
 );
 
 CurriculumCatalogCard.propTypes = {
+  courseKey: PropTypes.string,
   courseDisplayName: PropTypes.string.isRequired,
   courseDisplayNameWithLatestYear: PropTypes.string.isRequired,
   duration: PropTypes.oneOf(Object.keys(translatedCourseOfferingDurations))
@@ -118,9 +129,14 @@ CurriculumCatalogCard.propTypes = {
   video: PropTypes.string,
   publishedDate: PropTypes.string,
   selfPacedPlCourseOfferingPath: PropTypes.string,
+  isExpanded: PropTypes.bool,
+  onQuickViewClick: PropTypes.func,
+  isInUS: PropTypes.bool,
+  availableResources: PropTypes.object,
 };
 
 const CustomizableCurriculumCatalogCard = ({
+  courseKey,
   assignButtonDescription,
   assignButtonText,
   courseDisplayName,
@@ -148,19 +164,23 @@ const CustomizableCurriculumCatalogCard = ({
   video,
   publishedDate,
   selfPacedPlCourseOfferingPath,
+  isExpanded,
+  onQuickViewClick,
+  isInUS,
+  availableResources,
   ...props
 }) => {
   const [isAssignDialogOpen, setIsAssignDialogOpen] = useState(false);
-  const [isExpandedCardDisplayed, setIsExpandedCardDisplayed] = useState(false);
 
-  const handleClickAssign = () => {
+  const handleClickAssign = cardType => {
     setIsAssignDialogOpen(true);
     analyticsReporter.sendEvent(
       EVENTS.CURRICULUM_CATALOG_ASSIGN_CLICKED_EVENT,
       {
-        curriculum_offering: courseDisplayNameWithLatestYear,
+        curriculum_offering: courseKey,
         has_sections: sectionsForDropdown.length > 0,
         is_signed_in: !isSignedOut,
+        card_type: cardType,
       }
     );
   };
@@ -201,16 +221,14 @@ const CustomizableCurriculumCatalogCard = ({
       );
     }
   };
-  const handleQuickView = () => {
-    setIsExpandedCardDisplayed(!isExpandedCardDisplayed);
-  };
 
   return (
-    <div>
+    <div className={style.cardsContainer}>
       <div>
         <div
           className={classNames(
             style.curriculumCatalogCardContainer,
+            isExpanded ? style.expandedCard : '',
             isEnglish
               ? style.curriculumCatalogCardContainer_english
               : style.curriculumCatalogCardContainer_notEnglish
@@ -251,7 +269,7 @@ const CustomizableCurriculumCatalogCard = ({
                 <Button
                   color={Button.ButtonColor.neutralDark}
                   type="button"
-                  onClick={handleQuickView}
+                  onClick={onQuickViewClick}
                   aria-label={quickViewButtonDescription}
                   text={'Quick View'}
                 />
@@ -270,7 +288,7 @@ const CustomizableCurriculumCatalogCard = ({
               <Button
                 color={Button.ButtonColor.brandSecondaryDefault}
                 type="button"
-                onClick={handleClickAssign}
+                onClick={() => handleClickAssign('top-card')}
                 aria-label={assignButtonDescription}
                 text={assignButtonText}
               />
@@ -279,7 +297,7 @@ const CustomizableCurriculumCatalogCard = ({
         </div>
         {isAssignDialogOpen && renderAssignDialog()}
       </div>
-      {isExpandedCardDisplayed && (
+      {isExpanded && (
         <ExpandedCurriculumCatalogCard
           courseDisplayName={courseDisplayName}
           duration={duration}
@@ -294,7 +312,11 @@ const CustomizableCurriculumCatalogCard = ({
           pathToCourse={pathToCourse}
           assignButtonOnClick={handleClickAssign}
           assignButtonDescription={assignButtonDescription}
-          onClose={handleQuickView}
+          onClose={onQuickViewClick}
+          isInUS={isInUS}
+          imageSrc={imageSrc}
+          imageAltText={imageAltText}
+          availableResources={availableResources}
         />
       )}
     </div>
@@ -302,6 +324,7 @@ const CustomizableCurriculumCatalogCard = ({
 };
 
 CustomizableCurriculumCatalogCard.propTypes = {
+  courseKey: PropTypes.string,
   courseDisplayName: PropTypes.string.isRequired,
   courseDisplayNameWithLatestYear: PropTypes.string.isRequired,
   duration: PropTypes.string.isRequired,
@@ -335,6 +358,10 @@ CustomizableCurriculumCatalogCard.propTypes = {
   video: PropTypes.string,
   publishedDate: PropTypes.string,
   selfPacedPlCourseOfferingPath: PropTypes.string,
+  isExpanded: PropTypes.bool,
+  onQuickViewClick: PropTypes.func,
+  isInUS: PropTypes.bool,
+  availableResources: PropTypes.object,
 };
 
 export default connect(

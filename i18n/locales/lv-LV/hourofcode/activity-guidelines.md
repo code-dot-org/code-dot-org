@@ -103,6 +103,7 @@ Kas tev būs nepieciešams:
 * Primārās kontaktpersonas vārds un e-pasta adrese, kas pārstāv iesniegto darbību
 * Darbības nosaukums (nosaukumā nevar iekļaut “Kodēšanas stunda”)
 * URL saite uz darbību
+* Vai šī darbība ietver AI: Jā vai Nē
 * Aktivitātes apraksts (maks. rakstzīmju skaits: 400) 
     * Lūdzu, norādiet vai apraksts ir pārsvarā skolēnu veidots vai skolotāju sekmēts. Pie tam, dažas skolas ir ieinteresētas noskaidrot vai "Programmēšanas stundas" aktivitātes atbilst mūsdienās noteiktiem tehnoloģiju apmācību standartiem. Ja aktivitāte atbilst noteiktiem standartiem, pieļaujiet iespēju iekļaut šo informāciju.
 * Ieteicamais (-ie) pakāpes līmenis (-i) paredzētajiem lietotājiem. Jūs varat atsaukties uz \[Computer Skolotāju asociācijas K-12 standarti\] (https://k12cs.org/framework-statements-by-grade-band/) par pakāpei atbilstošu datorzinātņu koncepcijas. Piemēri pakāpju līmeņi ir šādi: 
@@ -110,9 +111,9 @@ Kas tev būs nepieciešams:
     * 2.-5. Klases (7-10 gadi)
     * 6.—8. pakāpe (11-13 gadu vecums)
     * Klases 9+ (vecums 14+)
-* To tēmu jomu saraksts, uz kurām attiecas jūsu darbība (papildus datorzinātnēm). Piemēram, ja matemātikas skolotājs var izmantot jūsu darbību, lai mācītu par leņķiem vai parabolām, uzskaitiet kā matemātiku. Ja jums ir mad libs darbību, kas māca darbības vārdi/lietvārdi/utt. izvēlēties valodu mākslu.
-* Programmēšanas valodu saraksts, ko māca jūsu darbība. Ti. C/C++, Java, JavaScript utt. vai neatkarīgi no valodas (stundu plāniem, kurus var mācīt vairākās valodās)
-* Atbalstīto dabisko valodu saraksts. Piezīme: Valodas noteikšana ir atbildīga par darbību nodrošinātāju; mēs novirzīsim visus lietotājus uz norādīto vienoto URL.
+* Programmēšanas valodu saraksts, ko māca jūsu darbība. Ti. C/C++, Java, JavaScript utt. vai neatkarīgi no valodas (stundu plāniem, kurus var mācīt vairākās valodās) izvēlēties valodu mākslu.
+* Atbalstīto dabisko valodu saraksts. Piezīme: Valodas noteikšana ir atbildīga par darbību nodrošinātāju; mēs novirzīsim visus lietotājus uz norādīto vienoto URL. vai neatkarīgi no valodas (stundu plāniem, kurus var mācīt vairākās valodās)
+* Kādam pieredzes līmenim pedagogam vajadzētu izmantot jūsu darbību? (Piemēram, iesācējs vai ērts.) Un kādam pieredzes līmenim vajadzētu būt studentiem?
 * Kādam pieredzes līmenim pedagogam vajadzētu izmantot jūsu darbību? (Piemēram, iesācējs vai ērts.) Un kādam pieredzes līmenim vajadzētu būt studentiem? Ja vēlaties sagatavot pilnīgākas Programmēšanas stundas™ aktivitātes, lūdzu, norādiet savas darbības aprakstā nepieciešamās iepriekšējās zināšanas.
 * Jūsu darbības ilgums 
     * Tikai 1 stunda
@@ -166,9 +167,11 @@ Kas tev būs nepieciešams:
 
 ## Kā tiks novērtētas aktivitātes
 
-Daudzveidīga datorzinātņu pedagogu komiteja ierindos iesniegumus, pamatojoties uz kvalitatīviem un kvantitatīviem kritērijiem. Tiks uzskaitītas visas darbības, kas atbilst pamatkritērijiem. Skolotāji varēs filtrēt un kārtot, lai atrastu labākās aktivitātes savai klasei.
+Daudzveidīga datorzinātņu pedagogu komiteja ierindos iesniegumus, pamatojoties uz kvalitatīviem un kvantitatīviem kritērijiem. Tiks uzskaitītas visas darbības, kas atbilst pamatkritērijiem.
 
-Darbību un stundu plānu novērtēšanas rubrika meklēs šādus kritērijus visām aktivitātēm un attiecīgi tos ierindos:
+Tradicionālajām kodēšanas aktivitātēm daudzveidīga datorzinātņu pedagogu komiteja ierindos iesniegumus, pamatojoties uz kvalitatīviem un kvantitatīviem kritērijiem. Tiks uzskaitītas visas darbības, kas atbilst pamatkritērijiem. Skolotāji varēs filtrēt un kārtot, lai atrastu labākās aktivitātes savai klasei.
+
+Ja pārskata komiteja novērtē darbību nulles līmenī ražošanas kvalitātē (sliktu kļūdu vai instrukciju dēļ, kas padara to ļoti grūti izmantot), veicinot mācīšanos nepietiekami pārstāvētās grupās (rasistu/seksisma materiālu dēļ), izglītības vērtībā (nemāca CS koncepcijas) vai jautri/iesaistoties (sakarā ar grūtību/atturēšanu skolēniem strādāt), darbība netiks uzskaitīta.
 
 - Augsta produkcijas kvalitāte
 - Veicināt mācīšanos visās demogrāfiskajās grupās (esp. skolēni, kas ir nepietiekami pārstāvēti CS, piemēram, jaunas sievietes, studenti no atstumtām rasu un etniskajām grupām un studenti ar invaliditāti)
@@ -176,9 +179,9 @@ Darbību un stundu plānu novērtēšanas rubrika meklēs šādus kritērijus vi
 - Jautri un iesaistoši
 - Mudina skolēnus radīt kaut ko unikālu viņi var dalīties (Jaunākiem skolēniem: ar vecākiem un klasesbiedriem. Vecajiem studentiem: internetā)
 
-Ja pārskata komiteja novērtē darbību nulles līmenī ražošanas kvalitātē (sliktu kļūdu vai instrukciju dēļ, kas padara to ļoti grūti izmantot), veicinot mācīšanos nepietiekami pārstāvētās grupās (rasistu/seksisma materiālu dēļ), izglītības vērtībā (nemāca CS koncepcijas) vai jautri/iesaistoties (sakarā ar grūtību/atturēšanu skolēniem strādāt), darbība netiks uzskaitīta.
-
 Turklāt, lai tās tiktu uzskaitītas, visām darbībām:
+
+Jaunajiem skolotājiem un skolēniem pašorientētām aktivitātēm pārskata komiteja meklēs, vai:
 
 - Būtu piemērots publiskai skolas klasei (bez ieročiem, nav skaidra/nobrieduša satura, bez reliģiska satura utt.)
 - Nepieciešama reģistrēšanās
@@ -204,11 +207,13 @@ Skolotāji un skolēni varēs meklēt un filtrēt mūsu darbību sarakstu, balst
 
 ## Ieteikumi vienas stundas pašapkalpošanās konsultāciju projektēšanai
 
-Jūs varat iekļaut [Stundas kodēšanas logotipu](https://hourofcode.com/us/promote/resources#logo) savā apmācībā, bet tas nav nepieciešams. Ja izmantojat “Programēšanas stundas” logotipu, skatiet tālāk sniegtās preču zīmes vadlīnijas. <u>Nekādā gadījumā nedrīkst izmantot Code.org logotipu un nosaukumu.</u> Abi ir preču zīmi, un to nevar sadarboties ar trešās puses zīmolu bez skaidras rakstiskas atļaujas.
-
-**Pārliecinieties, ka vidējais students var ērti pabeigt stundu.** Apsveriet iespēju beigās pievienot beztermiņa darbību studentiem, kuri pārvietojas ātrāk, izmantojot nodarbību. Atcerieties, ka lielākā daļa bērnu būs absolūti iesācēji datorzinātnēs un kodēšanā.
+Darbībās nav jāiekļauj AI, lai gan mēs vēlamies piedāvāt vairāk ar mākslīgo intelektu saistītu darbību.
 
 **Iekļaut skolotāju piezīmes.** Lielākajai daļai aktivitāšu jābūt studentiem, bet, ja darbību veicina vai vada skolotājs, lūdzu, iekļaujiet skaidrus un vienkāršus norādījumus skolotāja piezīmju veidā ar atsevišķu URL, kas iesniegts ar savu darbību. Ne tikai studenti iesācēji, daži no skolotājiem ir arī. Iekļaut informāciju, piemēram:
+
+**Iekļaut atgriezenisko saiti darbības beigās.** (Piemēram, “Jūs pabeidzāt 10 līmeņus un uzzinājāt par cilpām! Lielisks darbs!”)
+
+**Mudiniet skolēnus publicēt sociālajos medijos (ja nepieciešams), kad viņi ir pabeidzuši.** Piemēram, “Es esmu darījusi Programmēšanas stunda ar ________ Vai jums? #HourOfCode” vai “Es esmu darījusi #HourOfCode kā daļu no #CSEdWeek. Vai tu esi?
 
 - Kādas platformas un pārlūkprogrammas vislabāk darbojas apmācība?
 - Vai tas darbojas viedtālruņos? Tabletes?
@@ -247,7 +252,7 @@ Kodēšanas stunda® un Hora del Código® ir reģistrētas preču zīmes Code.o
 
 ## Enkura punkts
 
-Lai precīzāk izsekotu līdzdalību, mēs lūdzam katram apmācības partnerim iekļaut 1 pikseļa izsekošanas attēlu Programēšanas stundas pamācības pirmajā lapā. Pikseļa attēlam jābūt tikai sākumlapā. Neiekļaujiet savā apmācībā nekādās pagaidu lapās.
+Ja jūsu apmācība ir apstiprināta un iekļauta pēdējā apmācības lapā, Code.org sniegs jums unikālu izsekošanas pikseli, lai jūs varētu integrēties savā apmācībā. Skatiet piemēru zemāk. Neiekļaujiet savā apmācībā nekādās pagaidu lapās.
 
 Tas ļaus mums saskaitīt lietotājus, kuri veic jūsu kodēšanas stundas pamācību. Tas novedīs pie precīzākas līdzdalības skaita jūsu apmācībai.
 

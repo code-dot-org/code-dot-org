@@ -12,9 +12,10 @@
   "cs_topic": "cybersecurity",
   "school_subject": null,
   "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"not_recommended\",\"mobile\":\"incompatible\",\"no_device\":\"not_recommended\"}",
-  "description": null,
+  "description": "Dive into Blockchain by pairing these lessons with the How Blockchain Works video series! Students engage in an activity and then reflect to understand Blockchain and its users.",
   "professional_learning_program": null,
   "video": "https://www.youtube-nocookie.com/embed/MjibPL4tGqo/?autoplay=1&enablejsapi=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=1&v=MjibPL4tGqo&wmode=transparent",
   "published_date": null,
-  "self_paced_pl_course_offering_id": null
+  "self_paced_pl_course_offering_id": null,
+  "self_paced_pl_course_offering_key": null
 }

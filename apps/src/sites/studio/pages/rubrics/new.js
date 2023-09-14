@@ -5,15 +5,15 @@ import getScriptData from '@cdo/apps/util/getScriptData';
 
 $(document).ready(() => {
   const lessonData = getScriptData('lessonData');
-  const unitName = lessonData.unitName;
-  const lessonNumber = lessonData.lessonNumber;
-  const levels = lessonData.levels;
+  const {unitName, lessonNumber, levels} = lessonData;
+  const lessonId = lessonData.id;
 
   ReactDOM.render(
     <RubricsContainer
       unitName={unitName}
       lessonNumber={lessonNumber}
       levels={levels}
+      lessonId={lessonId}
     />,
     document.getElementById('form')
   );

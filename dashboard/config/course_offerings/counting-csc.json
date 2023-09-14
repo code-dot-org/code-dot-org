@@ -12,9 +12,10 @@
   "cs_topic": "programming",
   "school_subject": "",
   "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"not_recommended\",\"mobile\":\"not_recommended\",\"no_device\":\"incompatible\"}",
-  "description": null,
+  "description": "Count, add, and loop your way through a maze as you collect treasures and master coding commands. Let's guide Laurel to glittering victory!",
   "professional_learning_program": null,
   "video": null,
   "published_date": null,
-  "self_paced_pl_course_offering_id": null
+  "self_paced_pl_course_offering_id": null,
+  "self_paced_pl_course_offering_key": null
 }

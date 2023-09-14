@@ -781,6 +781,7 @@ uk:
         applab_intro_welcome: Апп Лаб - Початок Роботи
         artist_intro: Вступ до художника
         c_and_c_digital_sharing: Обмін та поширення онлайн
+        code-break: Зробіть перерву на код
         csc-ecosystems-intro: Імітація морської екосистеми
         csc-starquilts-intro: Кодуємо геометричний зірковий узор
         csc_timecapsule_intro: Пишемо код для капсули часу
@@ -818,7 +819,10 @@ uk:
         csd_gamelab_velocity: Швидкість
         csd_ml_intro_ai_lab_july2021: Вступ до Лабораторії ШІ
         csd_ml_intro_to_ai_lab: Вступ до Лабораторії ШІ
+        csd_ml_model_cards_july2021: Картки моделі в Лабораторії ШІ
         csd_ml_numerical_ai_lab: Числові дані в Лабораторії ШІ
+        csd_ml_training_testing_ai_lan: Тренування та тестування моделі в Лабораторії
+          ШІ
         csd_pair_programming: Парне програмування
         csd_problem_solving_process: Процес вирішення проблем
         csd_sprite_properties: Властивості спрайтів
@@ -942,6 +946,7 @@ uk:
         teaching_problem_solving: 'Вивчаємо Основи інформатики: Навчаємось вирішувати
           проблеми'
         tutorial_puzzle_challenge: Урок - Головоломка
+        what-is-creativity: Що таке креативність?
         what_is_an_event: Що таке подія?
         what_is_cs: Що таке інформатика?
         why_unplugged_lessons: Безмашинна інформатика

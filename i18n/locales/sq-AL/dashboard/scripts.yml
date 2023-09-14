@@ -105,7 +105,7 @@ sq:
           description_short: Provoni tutorialet tona Jigsaw.
           student_description: Provoni tutorialet tona Jigsaw.
         step:
-          title: Një hap
+          title: Hapi
           description: Pasoje tutorialin
           description_short: Pasoje tutorialin
           student_description: Pasoje tutorialin
@@ -333,6 +333,14 @@ sq:
           lesson_groups:
             content:
               display_name: Përmbajtja
+        coursea-2017:
+          title: Kursi A
+          assignment_family_title: Kursi A
+          description: Mësoni bazat e shkencave kompjuterike dhe sigurisë në internet. Në fund të kursit, krijoni lojën ose historinë tuaj që mund të ndani.
+          student_description: Mësoni bazat e shkencave kompjuterike dhe sigurisë në internet. Në fund të kursit, krijoni lojën ose historinë tuaj që mund të ndani.
+        courseb-2017:
+          description: Mësoni bazat e shkencave kompjuterike dhe sigurisë në internet. Në fund të kursit, krijoni lojën ose historinë tuaj që mund të ndani.
+          student_description: Mësoni bazat e shkencave kompjuterike dhe sigurisë në internet. Në fund të kursit, krijoni lojën ose historinë tuaj që mund të ndani.
         coursee-2017:
           lesson_groups:
             end_of_course_project:
@@ -414,11 +422,16 @@ sq:
             content:
               display_name: Përmbajtja
         express-2017:
+          description: Mësoni bazat e shkencave kompjuterike dhe sigurisë në internet. Në fund të kursit, krijoni lojën ose historinë tuaj që mund të ndani.
           lesson_groups:
             content:
               display_name: Përmbajtja
             end_of_course_project:
               display_name: Përfundimi i projektit të kursit
+          student_description: Mësoni bazat e shkencave kompjuterike dhe sigurisë në internet. Në fund të kursit, krijoni lojën ose historinë tuaj që mund të ndani.
+        pre-express-2017:
+          description: Mësoni bazat e shkencave kompjuterike dhe sigurisë në internet. Në fund të kursit, krijoni lojën ose historinë tuaj që mund të ndani.
+          student_description: Mësoni bazat e shkencave kompjuterike dhe sigurisë në internet. Në fund të kursit, krijoni lojën ose historinë tuaj që mund të ndani.
         e-f-ramp:
           lesson_groups:
             end_of_course_project:
@@ -447,6 +460,16 @@ sq:
           lesson_groups:
             end_of_course_project:
               display_name: Përfundimi i projektit të kursit
+        coursea-2018:
+          assignment_family_title: Kursi A
+          description: Mësoni bazat e shkencave kompjuterike dhe sigurisë në internet. Në fund të kursit, krijoni lojën ose historinë tuaj që mund të ndani.
+          student_description: Mësoni bazat e shkencave kompjuterike dhe sigurisë në internet. Në fund të kursit, krijoni lojën ose historinë tuaj që mund të ndani.
+        express-2018:
+          description: Mësoni bazat e shkencave kompjuterike dhe sigurisë në internet. Në fund të kursit, krijoni lojën ose historinë tuaj që mund të ndani.
+          student_description: Mësoni bazat e shkencave kompjuterike dhe sigurisë në internet. Në fund të kursit, krijoni lojën ose historinë tuaj që mund të ndani.
+        courseb-2018:
+          description: Mësoni bazat e shkencave kompjuterike dhe sigurisë në internet. Në fund të kursit, krijoni lojën ose historinë tuaj që mund të ndani.
+          student_description: Mësoni bazat e shkencave kompjuterike dhe sigurisë në internet. Në fund të kursit, krijoni lojën ose historinë tuaj që mund të ndani.
         coursee-2018:
           lesson_groups:
             end_of_course_project:
@@ -557,6 +580,9 @@ sq:
               display_name: Përmbledhja
             content:
               display_name: Përmbajtja
+        pre-express-2018:
+          description: Mësoni bazat e shkencave kompjuterike dhe sigurisë në internet. Në fund të kursit, krijoni lojën ose historinë tuaj që mund të ndani.
+          student_description: Mësoni bazat e shkencave kompjuterike dhe sigurisë në internet. Në fund të kursit, krijoni lojën ose historinë tuaj që mund të ndani.
         fit-test:
           lesson_groups:
             required:
@@ -588,12 +614,16 @@ sq:
               display_name: Për Ciklet
             csf_internet:
               display_name: Internet
+            csf_sprites:
+              display_name: Sprites
             csf_digcit:
               display_name: Shtetësi Dixhitale
             end_of_course_project:
               display_name: Përfundimi i projektit të kursit
         coursed-2019:
           lesson_groups:
+            csf_sequencing:
+              display_name: Sekuencimi
             csf_events:
               display_name: Ngjarje
             csf_loops:
@@ -608,6 +638,8 @@ sq:
               display_name: Përfundimi i projektit të kursit
         coursee-2019:
           lesson_groups:
+            csf_sprites:
+              display_name: Sprites
             csf_digcit:
               display_name: Shtetësi Dixhitale
             csf_nested_loops:
@@ -618,6 +650,8 @@ sq:
               display_name: Përfundimi i projektit të kursit
         express-2019:
           lesson_groups:
+            csf_sequencing:
+              display_name: Sekuencimi
             csf_loops:
               display_name: cikle
             csf_conditionals:
@@ -628,6 +662,8 @@ sq:
               display_name: variabla
             csf_for_loops:
               display_name: Për Ciklet
+            csf_sprites:
+              display_name: Sprites
         andrea-test:
           lesson_groups:
             required:
@@ -638,6 +674,8 @@ sq:
           lesson_groups:
             csf_digcit:
               display_name: Shtetësi Dixhitale
+            csf_sequencing:
+              display_name: Sekuencimi
             csf_binary:
               display_name: Binare
             csf_loops:
@@ -649,23 +687,34 @@ sq:
             end_of_course_project:
               display_name: Përfundimi i projektit të kursit
         coursea-2019:
+          title: Kursi A (2019)
+          description: Mësoni bazat e shkencave kompjuterike dhe sigurisë në internet. Në fund të kursit, krijoni lojën ose historinë tuaj që mund të ndani.
           lesson_groups:
             csf_digcit:
               display_name: Shtetësi Dixhitale
+            csf_sequencing:
+              display_name: Sekuencimi
             csf_loops:
               display_name: cikle
             csf_events:
               display_name: Ngjarje
+          student_description: Mësoni bazat e shkencave kompjuterike dhe sigurisë në internet. Në fund të kursit, krijoni lojën ose historinë tuaj që mund të ndani.
         courseb-2019:
+          description: Mësoni bazat e shkencave kompjuterike dhe sigurisë në internet. Në fund të kursit, krijoni lojën ose historinë tuaj që mund të ndani.
           lesson_groups:
             csf_digcit:
               display_name: Shtetësi Dixhitale
+            csf_sequencing:
+              display_name: Sekuencimi
             csf_loops:
               display_name: cikle
             csf_events:
               display_name: Ngjarje
+          student_description: Mësoni bazat e shkencave kompjuterike dhe sigurisë në internet. Në fund të kursit, krijoni lojën ose historinë tuaj që mund të ndani.
         pre-express-2019:
           lesson_groups:
+            csf_sequencing:
+              display_name: Sekuencimi
             csf_loops:
               display_name: cikle
             csf_events:
@@ -686,6 +735,10 @@ sq:
           lesson_groups:
             required:
               display_name: Përmbledhja
+        time4csdemo:
+          lesson_groups:
+            csf_sprites:
+              display_name: Sprites
         csp1-pilot-staging:
           lesson_groups:
             csp_variables:
@@ -794,6 +847,8 @@ sq:
               display_name: Përmbledhja
         csl-vn:
           lesson_groups:
+            csf_sequencing:
+              display_name: Sekuencimi
             csf_loops:
               display_name: cikle
             csf_events:
@@ -870,6 +925,8 @@ sq:
               display_name: Përmbajtja
             required:
               display_name: Përmbledhja
+        dance-2019:
+          title: Festë vallëzimi
         k5-onlinepd-2019:
           lesson_groups:
             k5_next_steps:
@@ -898,22 +955,30 @@ sq:
               display_name: Përfundimi i projektit të kursit
         time4cs-control-unit-1:
           lesson_groups:
+            csf_sequencing:
+              display_name: Sekuencimi
             csf_loops:
               display_name: cikle
             csf_conditionals:
               display_name: Kushtet
             csf_events:
               display_name: Ngjarje
+            csf_sprites:
+              display_name: Sprites
             csf_digcit:
               display_name: Shtetësi Dixhitale
         time4cs-experiment-unit-1:
           lesson_groups:
+            csf_sequencing:
+              display_name: Sekuencimi
             csf_loops:
               display_name: cikle
             csf_conditionals:
               display_name: Kushtet
             csf_events:
               display_name: Ngjarje
+            csf_sprites:
+              display_name: Sprites
             csf_digcit:
               display_name: Shtetësi Dixhitale
         csp7-pilot:
@@ -939,25 +1004,36 @@ sq:
             csp_project:
               display_name: Projekt
         coursea-2020:
+          title: Kursi A (2020)
+          description: Mësoni bazat e shkencave kompjuterike dhe sigurisë në internet. Në fund të kursit, krijoni lojën ose historinë tuaj që mund të ndani.
           lesson_groups:
             csf_digcit:
               display_name: Shtetësi Dixhitale
+            csf_sequencing:
+              display_name: Sekuencimi
             csf_loops:
               display_name: cikle
             csf_events:
               display_name: Ngjarje
+          student_description: Mësoni bazat e shkencave kompjuterike dhe sigurisë në internet. Në fund të kursit, krijoni lojën ose historinë tuaj që mund të ndani.
         courseb-2020:
+          description: Mësoni bazat e shkencave kompjuterike dhe sigurisë në internet. Në fund të kursit, krijoni lojën ose historinë tuaj që mund të ndani.
           lesson_groups:
             csf_digcit:
               display_name: Shtetësi Dixhitale
+            csf_sequencing:
+              display_name: Sekuencimi
             csf_loops:
               display_name: cikle
             csf_events:
               display_name: Ngjarje
+          student_description: Mësoni bazat e shkencave kompjuterike dhe sigurisë në internet. Në fund të kursit, krijoni lojën ose historinë tuaj që mund të ndani.
         coursec-2020:
           lesson_groups:
             csf_digcit:
               display_name: Shtetësi Dixhitale
+            csf_sequencing:
+              display_name: Sekuencimi
             csf_binary:
               display_name: Binare
             csf_loops:
@@ -970,6 +1046,8 @@ sq:
               display_name: Përfundimi i projektit të kursit
         coursed-2020:
           lesson_groups:
+            csf_sequencing:
+              display_name: Sekuencimi
             csf_events:
               display_name: Ngjarje
             csf_loops:
@@ -984,6 +1062,8 @@ sq:
               display_name: Përfundimi i projektit të kursit
         coursee-2020:
           lesson_groups:
+            csf_sprites:
+              display_name: Sprites
             csf_digcit:
               display_name: Shtetësi Dixhitale
             csf_nested_loops:
@@ -1002,10 +1082,14 @@ sq:
               display_name: të dhëna
             csf_for_loops:
               display_name: Për Ciklet
+            csf_sprites:
+              display_name: Sprites
             end_of_course_project:
               display_name: Përfundimi i projektit të kursit
         express-2020:
           lesson_groups:
+            csf_sequencing:
+              display_name: Sekuencimi
             csf_loops:
               display_name: cikle
             csf_conditionals:
@@ -1016,10 +1100,14 @@ sq:
               display_name: variabla
             csf_for_loops:
               display_name: Për Ciklet
+            csf_sprites:
+              display_name: Sprites
             end_of_course_project:
               display_name: Përfundimi i projektit të kursit
         pre-express-2020:
           lesson_groups:
+            csf_sequencing:
+              display_name: Sekuencimi
             csf_loops:
               display_name: cikle
             csf_events:
@@ -1063,7 +1151,13 @@ sq:
             lessonGroup-3:
               display_name: variabla
             debugging:
-              display_name: Rregullimi
+              display_name: Debugging
+        csd1-2021:
+          title: Zgjidhja e problemeve dhe Informatika ('21-'22)
+        csd2-2021:
+          title: Zhvillim Web-i ('21-'22)
+        csd6-2021:
+          title: Informatikë fizike ('21-'22)
         csp4-2021:
           lesson_groups:
             csp_variables:
@@ -1087,43 +1181,56 @@ sq:
             csp_unit6_2020:
               display_name: Algoritmet
         coursea-2021:
+          title: Kursi A (2021)
+          description: 'Kursi A ofron një kurrikulë të shkencave kompjuterike për lexuesit fillestarë, përfshirë fëmijët e kopshtit. Nxënësit do të mësojnë të programojnë duke përdorur komanda si loops dhe evente. Mësimet e paraqitura në këtë lëndë gjithashtu u mësojnë nxënësve të bashkëpunojnë në mënyrë domethënëse me të tjerët, të hetojnë teknika të ndryshme të zgjidhjes së problemeve, të vazhdojnë përballë detyrave sfiduese dhe të mësojnë rreth sigurisë në internet. '
           lesson_groups:
             csf_digcit:
-              display_name: Shtetësi Dixhitale
+              display_name: Shtetësia digjitale
+            csf_sequencing:
+              display_name: Sekuencimi
             csf_loops:
               display_name: cikle
             csf_events:
               display_name: Ngjarje
             lessonGroup-5:
               display_name: Përfundimi i projektit të kursit
+          student_description: Mësoni bazat e shkencave kompjuterike dhe sigurisë në internet. Në fund të kursit, krijoni lojën ose historinë tuaj që mund të ndani.
         courseb-2021:
           title: Kursi B (2021)
           description: Ne e zhvilluam Kursin B duke menduar nxënësit në klasën e parë. Ndërsa konceptet në Kursin B janë paralele me ato të Kursit A, nxënësit mësojnë aktivitete të shkëputura më të sofistikuara dhe punojnë përmes një larmie më të madhe enigmash. Studentët do të mësojnë bazat e programimit, teknikat e bashkëpunimit, investigimin dhe shkathtësitë e të menduarit kritik, këmbënguljen përballë vështirësive dhe sigurinë në internet. Në fund të këtij kursi, nxënësit krijojnë lojra në mjedisin e programimit Play Lab.
           lesson_groups:
             csf_digcit:
               display_name: Shtetësi Dixhitale
+            csf_sequencing:
+              display_name: Sekuencimi
             csf_loops:
               display_name: cikle
             csf_events:
               display_name: Ngjarje
             lessonGroup-6:
               display_name: Përfundimi i projektit të kursit
+          student_description: Mësoni bazat e shkencave kompjuterike dhe sigurisë në internet. Në fund të kursit, krijoni lojën ose historinë tuaj që mund të ndani.
         coursec-2021:
+          title: Kursi C (2021)
           lesson_groups:
             csf_digcit:
-              display_name: Shtetësi Dixhitale
+              display_name: Shtetësia digjitale
+            csf_sequencing:
+              display_name: Sekuencimi
             csf_binary:
               display_name: Binare
             csf_loops:
-              display_name: cikle
+              display_name: Loops
             csf_events:
-              display_name: Ngjarje
+              display_name: Events
             csf_data:
-              display_name: të dhëna
+              display_name: Të dhënat
             end_of_course_project:
               display_name: Përfundimi i projektit të kursit
         coursed-2021:
           lesson_groups:
+            csf_sequencing:
+              display_name: Sekuencimi
             csf_events:
               display_name: Ngjarje
             csf_loops:
@@ -1142,6 +1249,8 @@ sq:
           lesson_groups:
             ramp_up:
               display_name: Përsëritjet e Mbivendosura
+            csf_sprites:
+              display_name: Sprites
             csf_digcit:
               display_name: Shtetësi Dixhitale
             csf_nested_loops:
@@ -1151,11 +1260,16 @@ sq:
             end_of_course_project:
               display_name: Përfundimi i projektit të kursit
         coursef-2021:
+          title: Kursi F (2021)
           lesson_groups:
+            ramp_up:
+              display_name: Sprites
             csf_digcit:
               display_name: Shtetësi Dixhitale
             csf_variables:
               display_name: Për Ciklet
+            csf_data:
+              display_name: Të dhënat dhe simulimet
             csf_for_loops:
               display_name: Për Ciklet
             end_of_course_project:
@@ -1167,25 +1281,33 @@ sq:
             lessonGroup-7:
               display_name: Shtetësi Dixhitale
         express-2021:
+          title: Kursi Express (2021)
+          description: Mësoni shkenca kompjuterike duke provuar mësimet më poshtë me ritmin tuaj! Mësoni të krijoni programe kompjuterike, të zhvilloni aftësi për zgjidhjen e problemeve dhe të punoni përmes sfidave argëtuese! Bëni lojëra dhe projekte krijuese për t'i ndarë me miqtë, familjen dhe mësimdhënësit.
           lesson_groups:
             csf_warmup:
               display_name: Parapërgatitje
+            csf_sequencing:
+              display_name: Sekuencimi
             csf_loops:
-              display_name: cikle
+              display_name: Loops
             csf_conditionals:
               display_name: Kushtet
             csf_functions:
-              display_name: funksione
+              display_name: Funksionet
             csf_variables:
-              display_name: variabla
+              display_name: Variablat
             csf_for_loops:
-              display_name: Për Ciklet
+              display_name: Për Loops
+            csf_sprites:
+              display_name: Sprites
             end_of_course_project:
               display_name: Përfundimi i projektit të kursit
             lessonGroup-9:
-              display_name: Ngjarje
+              display_name: Eventet
         pre-express-2021:
           lesson_groups:
+            csf_sequencing:
+              display_name: Sekuencimi
             csf_loops:
               display_name: cikle
             csf_events:
@@ -1196,6 +1318,8 @@ sq:
               display_name: Hyrje
             lessonGroup-3:
               display_name: variabla
+            Sprites:
+              display_name: Sprites
             variables:
               display_name: variabla
         contagion-pilot:
@@ -1246,6 +1370,8 @@ sq:
               display_name: Lekcioni 4
             Lesson 5:
               display_name: Lekcioni 5
+        outbreak-module:
+          title: Shpërthimi
         csa1-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1256,6 +1382,8 @@ sq:
               display_name: Përmbajtja
         csa-videos:
           lesson_groups:
+            lessonGroup-3:
+              display_name: Burimet
             lessonGroup-2:
               display_name: Kapitulli 1
             lessonGroup-4:
@@ -1320,6 +1448,8 @@ sq:
               display_name: Përmbajtja
         spelling-bee:
           title: Bleta Gërmëzuese
+        outbreak-csc:
+          title: Shpërthimi
         csa5-exemplars:
           lesson_groups:
             lessonGroup-2:
@@ -1342,6 +1472,8 @@ sq:
               display_name: Përmbajtja
         csf-2022-pilot:
           lesson_groups:
+            lessonGroup-2:
+              display_name: Sprites
             lessonGroup-3:
               display_name: variabla
             lessonGroup-4:
@@ -1361,16 +1493,24 @@ sq:
         coursea-2022:
           lesson_groups:
             csf_digcit:
-              display_name: Shtetësi Dixhitale
+              display_name: Shtetësia digjitale
+            csf_sequencing:
+              display_name: Sekuencimi
             csf_loops:
-              display_name: cikle
+              display_name: Loops
             csf_events:
-              display_name: Ngjarje
+              display_name: Eventet
             lessonGroup-5:
               display_name: Përfundimi i projektit të kursit
           title: Kursi A (2022)
+          description: 'Kursi A ofron një kurrikulë të shkencave kompjuterike për lexuesit fillestarë, përfshirë fëmijët e kopshtit. Nxënësit do të mësojnë të programojnë duke përdorur komanda si loops dhe evente. Mësimet e paraqitura në këtë lëndë gjithashtu u mësojnë nxënësve të bashkëpunojnë në mënyrë domethënëse me të tjerët, të hetojnë teknika të ndryshme të zgjidhjes së problemeve, të vazhdojnë përballë detyrave sfiduese dhe të mësojnë rreth sigurisë në internet. '
+          student_description: Mësoni bazat e shkencave kompjuterike dhe sigurisë në internet. Në fund të kursit, krijoni lojën ose historinë tuaj që mund të ndani.
         express-2022:
           lesson_groups:
+            csf_sequencing:
+              display_name: Sekuencimi
+            csf_sprites:
+              display_name: Sprites
             lessonGroup-9:
               display_name: Ngjarje
             csf_loops:
@@ -1418,10 +1558,13 @@ sq:
               display_name: Përfundimi i projektit të kursit
           title: Kursi B (2022)
           description: Ne e zhvilluam Kursin B duke menduar nxënësit në klasën e parë. Ndërsa konceptet në Kursin B janë paralele me ato të Kursit A, nxënësit mësojnë aktivitete të shkëputura më të sofistikuara dhe punojnë përmes një larmie më të madhe enigmash. Nxënësit do të mësojnë bazat e programimit, teknikat e bashkëpunimit, investigimin dhe shkathtësitë e të menduarit kritik, këmbënguljen përballë vështirësive dhe sigurinë në internet. Në fund të këtij kursi, nxënësit krijojnë lojra në mjedisin e programimit Play Lab.
+          student_description: Mësoni bazat e shkencave kompjuterike dhe sigurisë në internet. Në fund të kursit, krijoni lojën ose historinë tuaj që mund të ndani.
         coursec-2022:
           lesson_groups:
             csf_digcit:
               display_name: Shtetësi Dixhitale
+            csf_sequencing:
+              display_name: Sekuencimi
             csf_loops:
               display_name: cikle
             csf_events:
@@ -1435,6 +1578,8 @@ sq:
           lesson_groups:
             lessonGroup-6:
               display_name: Shtetësi Dixhitale
+            csf_sequencing:
+              display_name: Sekuencimi
             csf_events:
               display_name: Ngjarje
             csf_loops:
@@ -1446,6 +1591,8 @@ sq:
           title: Kursi D (2022)
         coursee-2022:
           lesson_groups:
+            csf_sprites:
+              display_name: Sprites
             csf_digcit:
               display_name: Shtetësi Dixhitale
             ramp_up:
@@ -1459,10 +1606,14 @@ sq:
           title: Kursi E (2022)
         coursef-2022:
           lesson_groups:
+            ramp_up:
+              display_name: Sprites
             lessonGroup-7:
               display_name: Shtetësi Dixhitale
             lessonGroup-8:
               display_name: variabla
+            csf_data:
+              display_name: Të dhënat dhe simulimet
             end_of_course_project:
               display_name: Përfundimi i projektit të kursit
           title: Kursi F (2022)
@@ -1472,6 +1623,8 @@ sq:
               display_name: Përmbajtja
         pre-express-2022:
           lesson_groups:
+            csf_sequencing:
+              display_name: Sekuencimi
             csf_loops:
               display_name: cikle
             csf_events:
@@ -1508,8 +1661,12 @@ sq:
           lesson_groups:
             lessonGroup-7:
               display_name: Shtetësi Dixhitale
+            ramp_up:
+              display_name: Sprites
             lessonGroup-8:
               display_name: variabla
+            csf_data:
+              display_name: Të dhënat dhe simulimet
             end_of_course_project:
               display_name: Përfundimi i projektit të kursit
           title: Kursi F (2022)
@@ -1529,6 +1686,17 @@ sq:
           lesson_groups:
             lessonGroup-2:
               display_name: Përmbajtja
+        csd1-2022:
+          title: Zgjidhja e problemeve dhe Informatika ('22-'23)
+          description: "Zgjidhja e problemeve dhe llogaritja është një hyrje shumë ndërvepruese dhe bashkëpunuese në fushën e shkencës kompjuterike, e përshtatur në kuadër të kërkimit më të gjerë të zgjidhjes së problemeve. Ju do të praktikoni përdorimin e një procesi të zgjidhjes së problemeve për të adresuar një sërë enigmash, sfidash dhe skenarësh të botës reale. Më pas, do të mësoni se si kompjuterët futin, nxjerrin, ruajnë dhe përpunojnë informacione për t'i ndihmuar njerëzit të zgjidhin problemet. Njësia përfundon me një projekt në të cilin ju hartoni një aplikacion që ndihmon në zgjidhjen e një problemi që keni zgjedhur.\n\n\\*\\*Udhëzues zbatimi për zgjidhjen e problemeve dhe llogaritjen \\*\\*\n\n-   Kapitulli i parë i kësaj njësie duhet të plotësohet përpara çdo njësie tjetër në CS Discoveries\n-   Në këtë njësi jepen mësime alternative për disa mësime, në varësi të kontekstit të klasës suaj\n-   Mund të shikoni [Udhëzuesin e Kurrikulës](https://docs.google.com/document/d/1VUbXHxXqHj5QCb4eSb756KKc7NDzbOLZUE5bPPQmJR8/preview) dhe [Udhëzuesin e Zbatimit](https://docs.google.com/document/d/112OA3_KbicOotqopqUyvXoWPWszz3_LHeMlg0ikCabk/preview) për më shumë informacion rreth kësaj njësie "
+        csd2-2022:
+          title: Zhvillim Web-i ('22-'23)
+          description: "Në Zhvillimin e Web-it, nxënësit janë të autorizuar të krijojnë dhe ndajnë përmbajtje në webfaqet e tyre. Ata fillojnë duke menduar për rolin e web-it dhe se si mund të përdoret si një mjet për shprehje krijuese. Ndërsa nxënësit zhvillojnë faqet e tyre dhe fillojnë ta shohin veten si programues, ata inkurajohen të mendojnë në mënyrë kritike për ndikimin e shkëmbimit të informacionit në internet dhe se si të jenë konsumatorë më kritikë të përmbajtjes. Ata gjithashtu njihen me zgjidhjen e problemeve pasi lidhet me programimin ndërsa mësojnë aftësi të vlefshme si korrigjimi, përdorimi i burimeve dhe puna në grup. Në përfundim të njësisë, nxënësit do të kenë krijuar një faqe interneti personale që mund ta publikojnë dhe ndajnë.\n\n**Udhëzues Zbatimi për Zhvillimin e Web-it**\n\n-   Përfundoni tre mësimet e para të njësisë Zgjidhja e Problemeve dhe Llogaritja përpara se të filloni\n-   Udhëzimet për mbështetjen e nxënësve në nivelet e programimit dhe dallimin e detyrave janë të disponueshme në [Udhëzuesin e niveleve të programimit](https://docs.google.com/document/d/1WGywQ25khB6-FB20x6wO9dGVO9_qJlWkuLVLREJS4Jo/preview) dhe [Udhëzuesin e diferencimit](https://docs.google.com/document/d/15Y6Mo3fMUtHq16SSskABgcYE-5xfk-Ewv0z_o4uaLdI/preview)\n-   Mund të shikoni [Udhëzuesin e Kurrikulës](https://docs.google.com/document/d/1VUbXHxXqHj5QCb4eSb756KKc7NDzbOLZUE5bPPQmJR8/preview) dhe [Udhëzuesin e Zbatimit](https://docs.google.com/document/d/112OA3_KbicOotqopqUyvXoWPWszz3_LHeMlg0ikCabk/preview) për më shumë informacion rreth kësaj njësie\n\n## Përfunduat mësimdhënien e kësaj njësie?\n\nPërgjigjuni kësaj [\\*\\*ankete të shkurtër\\*\\*](https://studio.code.org/form/teacher_csd_unit_survey?survey_data%5Bunit_number%5D=2) për t'i bërë të ditur ekipit të kurrikulës Code.org se si shkoi njësia."
+        csd3-2022:
+          title: Lojra dhe Animacione Interaktive ('22-'23)
+        csd7-2022:
+          title: IA dhe Makinat e mësimit ('22-'23)
+          student_description: Kjo njësi është një hyrje praktike për zhvillimin e një modeli të mësimit të makinave me të dhëna tabelare. Ju do të eksploroni se si kompjuterët mësojnë nga të dhënat për të marrë vendime, më pas do të zhvilloni projektet tuaja të mësimit të makinave rreth të dhënave të botës reale. Njësia arrin kulmin me dizajnimin e aplikacionit tuaj të mësimit të makinave për të zgjidhur një problem të rëndësishëm personalisht.
         soccer:
           name: futboll
         csa1-validation-pilot-2022:
@@ -1597,6 +1765,9 @@ sq:
             lessonGroup-2:
               display_name: Përmbajtja
         csa7-2023:
+          lessons:
+            lesson-6:
+              name: Pronë intelektuale
           lesson_groups:
             lessonGroup-2:
               display_name: Përmbajtja
@@ -1606,6 +1777,8 @@ sq:
               display_name: Përmbajtja
         hello-world-soccer-2022:
           title: 'Përshëndetje Botërore: futboll'
+        csd7-2023:
+          student_description: Kjo njësi është një hyrje praktike për zhvillimin e një modeli të mësimit të makinave me të dhëna tabelare. Ju do të eksploroni se si kompjuterët mësojnë nga të dhënat për të marrë vendime, më pas do të zhvilloni projektet tuaja të mësimit të makinave rreth të dhënave të botës reale. Njësia arrin kulmin me dizajnimin e aplikacionit tuaj të mësimit të makinave për të zgjidhur një problem të rëndësishëm personalisht.
         csc-bookcover:
           lessons:
             lesson-1:
@@ -1642,14 +1815,28 @@ sq:
           lessons:
             lesson-5:
               name: Vlerësimet
+        microbit-2022:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Inputet dhe Outputet
+        microbit-temp:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Inputet dhe Outputet
         pre-express-2023:
           lesson_groups:
+            csf_sequencing:
+              display_name: Sekuencimi
             csf_loops:
               display_name: cikle
             csf_events:
               display_name: Ngjarje
         express-2023:
           lesson_groups:
+            csf_sequencing:
+              display_name: Sekuencimi
+            csf_sprites:
+              display_name: Sprites
             lessonGroup-9:
               display_name: Ngjarje
             csf_loops:
@@ -1668,16 +1855,22 @@ sq:
           lesson_groups:
             csf_digcit:
               display_name: Shtetësi Dixhitale
+            csf_sequencing:
+              display_name: Sekuencimi
             csf_loops:
               display_name: cikle
             csf_events:
               display_name: Ngjarje
             lessonGroup-5:
               display_name: Përfundimi i projektit të kursit
+          description: 'Kursi A ofron një kurrikulë të shkencave kompjuterike për lexuesit fillestarë, përfshirë fëmijët e kopshtit. Nxënësit do të mësojnë të programojnë duke përdorur komanda si loops dhe evente. Mësimet e paraqitura në këtë lëndë gjithashtu u mësojnë nxënësve të bashkëpunojnë në mënyrë domethënëse me të tjerët, të hetojnë teknika të ndryshme të zgjidhjes së problemeve, të vazhdojnë përballë detyrave sfiduese dhe të mësojnë rreth sigurisë në internet. '
+          student_description: Mësoni bazat e shkencave kompjuterike dhe sigurisë në internet. Në fund të kursit, krijoni lojën ose historinë tuaj që mund të ndani.
         courseb-2023:
           lesson_groups:
             csf_digcit:
               display_name: Shtetësi Dixhitale
+            csf_sequencing:
+              display_name: Sekuencimi
             csf_loops:
               display_name: cikle
             csf_events:
@@ -1685,10 +1878,13 @@ sq:
             lessonGroup-6:
               display_name: Përfundimi i projektit të kursit
           description: Ne e zhvilluam Kursin B duke menduar nxënësit në klasën e parë. Ndërsa konceptet në Kursin B janë paralele me ato të Kursit A, nxënësit mësojnë aktivitete të shkëputura më të sofistikuara dhe punojnë përmes një larmie më të madhe enigmash. Studentët do të mësojnë bazat e programimit, teknikat e bashkëpunimit, investigimin dhe shkathtësitë e të menduarit kritik, këmbënguljen përballë vështirësive dhe sigurinë në internet. Në fund të këtij kursi, nxënësit krijojnë lojra në mjedisin e programimit Play Lab.
+          student_description: Mësoni bazat e shkencave kompjuterike dhe sigurisë në internet. Në fund të kursit, krijoni lojën ose historinë tuaj që mund të ndani.
         coursec-2023:
           lesson_groups:
             csf_digcit:
               display_name: Shtetësi Dixhitale
+            csf_sequencing:
+              display_name: Sekuencimi
             csf_loops:
               display_name: cikle
             csf_events:
@@ -1701,6 +1897,8 @@ sq:
           lesson_groups:
             lessonGroup-6:
               display_name: Shtetësi Dixhitale
+            csf_sequencing:
+              display_name: Sekuencimi
             csf_events:
               display_name: Ngjarje
             csf_loops:
@@ -1713,6 +1911,8 @@ sq:
           lesson_groups:
             csf_digcit:
               display_name: Shtetësi Dixhitale
+            csf_sprites:
+              display_name: Sprites
             ramp_up:
               display_name: Përsëritjet e Mbivendosura
             csf_functions:
@@ -1721,30 +1921,117 @@ sq:
               display_name: Kushtet
             end_of_course_project:
               display_name: Përfundimi i projektit të kursit
+        focus-on-data3-2023:
+          student_description: Kjo njësi është një hyrje praktike për zhvillimin e një modeli të mësimit të makinave me të dhëna tabelare. Ju do të eksploroni se si kompjuterët mësojnë nga të dhënat për të marrë vendime, më pas do të zhvilloni projektet tuaja të mësimit të makinave rreth të dhënave të botës reale. Njësia arrin kulmin me dizajnimin e aplikacionit tuaj të mësimit të makinave për të zgjidhur një problem të rëndësishëm personalisht.
+        focus-on-impact-in-society4-2023:
+          student_description: Kjo njësi është një hyrje praktike për zhvillimin e një modeli të mësimit të makinave me të dhëna tabelare. Ju do të eksploroni se si kompjuterët mësojnë nga të dhënat për të marrë vendime, më pas do të zhvilloni projektet tuaja të mësimit të makinave rreth të dhënave të botës reale. Njësia arrin kulmin me dizajnimin e aplikacionit tuaj të mësimit të makinave për të zgjidhur një problem të rëndësishëm personalisht.
+        microbit-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Inputet dhe Outputet
+        focus-on-creativity4b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Inputet dhe Outputet
+        focus-on-hardware3b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Inputet dhe Outputet
+        focus-on-design-with-purpose4b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Inputet dhe Outputet
+        focus-on-coding4b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Inputet dhe Outputet
+        csd6b-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Inputet dhe Outputet
         pl-csd-summer-day1:
           lessons:
             lesson-3:
               name: Hyrje
+        pl-csd-summer-day2:
+          lessons:
+            lesson-10:
+              name: Përmbledhje
+        pl-csd-summer-day3:
+          lessons:
+            lesson-10:
+              name: 'Përmbledhje '
+        pl-csd-summer-day4:
+          lessons:
+            lesson-12:
+              name: Përmbledhje
         virtual-pl-csd-summer-day1:
           lessons:
             lesson-1:
               name: Hyrje
+            lesson-12:
+              name: Përmbledhje
+        virtual-pl-csd-summer-day2:
+          lessons:
+            lesson-10:
+              name: Përmbledhje
+        virtual-pl-csd-summer-day3:
+          lessons:
+            lesson-12:
+              name: Përmbledhje
+        virtual-pl-csd-summer-day4:
+          lessons:
+            lesson-13:
+              name: Përmbledhje
+        virtual-pl-csd-summer-day5:
+          lessons:
+            lesson-3:
+              name: Vlerësim
         coursef-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: Shtetësi Dixhitale
+            lessonGroup-3:
+              display_name: Sprites
             lessonGroup-4:
               display_name: variabla
+            lessonGroup-5:
+              display_name: Të dhënat dhe simulimet
             lessonGroup-6:
               display_name: Përfundimi i projektit të kursit
+        csa-frq-practice:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Klasat
+        csa-frq-practice-2019:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Klasat
+        csa-frq-practice-2021:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Klasat
         csa-frq-practice-2022:
           lessons:
             lesson-4:
               name: të dhëna
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Klasat
+        csa-frq-practice-2023:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Klasat
+        csa-frq-practice-pre2019:
+          lesson_groups:
+            lessonGroup-3:
+              display_name: Klasat
         test-nv-coursea-2023:
           lesson_groups:
             lessonGroup-2:
               display_name: Shtetësi Dixhitale
+            lessonGroup-3:
+              display_name: Sekuencimi
             lessonGroup-4:
               display_name: cikle
         nevada-standards-aligned-kindergarten-2023:
@@ -1754,6 +2041,8 @@ sq:
           lesson_groups:
             lessonGroup-2:
               display_name: Shtetësi Dixhitale
+            lessonGroup-3:
+              display_name: Sekuencimi
             lessonGroup-4:
               display_name: cikle
             lessonGroup-6:
@@ -1765,6 +2054,8 @@ sq:
           lesson_groups:
             lessonGroup-2:
               display_name: Shtetësi Dixhitale
+            lessonGroup-3:
+              display_name: Sekuencimi
             lessonGroup-4:
               display_name: cikle
             lessonGroup-6:
@@ -1778,6 +2069,8 @@ sq:
           lesson_groups:
             lessonGroup-2:
               display_name: Shtetësi Dixhitale
+            lessonGroup-3:
+              display_name: Sekuencimi
             lessonGroup-4:
               display_name: cikle
             lessonGroup-5:
@@ -1788,6 +2081,8 @@ sq:
           lesson_groups:
             lessonGroup-2:
               display_name: Shtetësi Dixhitale
+            lessonGroup-3:
+              display_name: Sekuencimi
             lessonGroup-6:
               display_name: cikle
             lessonGroup-7:
@@ -1800,12 +2095,22 @@ sq:
               display_name: Përsëritjet e Mbivendosura
             lessonGroup-4:
               display_name: funksione
+            lessonGroup-5:
+              display_name: Të dhënat dhe simulimet
             lessonGroup-6:
               display_name: Përfundimi i projektit të kursit
+        nevada-standards-aligned-fifth-grade-2023-2023:
+          lesson_groups:
+            lessonGroup-2:
+              display_name: Sprites
         nevada-standards-aligned-fifth-grade-2023:
           lesson_groups:
+            lessonGroup-2:
+              display_name: Sprites
             lessonGroup-3:
               display_name: Kushtet
+            lessonGroup-4:
+              display_name: Të dhënat dhe simulimet
             lessonGroup-5:
               display_name: variabla
             lessonGroup-7:

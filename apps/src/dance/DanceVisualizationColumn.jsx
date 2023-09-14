@@ -190,10 +190,10 @@ const styles = {
 
 export default connect(state => ({
   isShareView: state.pageConstants.isShareView,
-  songData: state.songs.songData,
-  selectedSong: state.songs.selectedSong,
+  songData: state.dance.songData,
+  selectedSong: state.dance.selectedSong,
   userType: state.currentUser.userType,
   under13: state.currentUser.under13,
   levelIsRunning: state.runState.isRunning,
-  levelRunIsStarting: state.songs.runIsStarting,
+  levelRunIsStarting: state.dance.runIsStarting,
 }))(DanceVisualizationColumn);

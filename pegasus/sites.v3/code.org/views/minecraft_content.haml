@@ -36,7 +36,7 @@
           %img.mc-img{src: aquatic_image}
         .mc-tutorial-info
           .mc-tutorial-details
-            %h2.mc-h1-second-box= aquatic_title
+            %h3.mc-h1-second-box= aquatic_title
             %p.mc-tutorial-description= aquatic_description
             %a{href: aquatic_link, target: '_blank'}
               %button.primary.padded-button= I18n.t(:minecraft_adventurer_button)
@@ -45,7 +45,7 @@
           %img.mc-img{src: hero_image}
         .mc-tutorial-info
           .mc-tutorial-details
-            %h2.mc-h1-second-box= hero_title
+            %h3.mc-h1-second-box= hero_title
             %p.mc-tutorial-description= hero_description
             %a{href: hero_link, target: '_blank'}
               %button.primary= I18n.t(:minecraft_designer_button)
@@ -55,7 +55,7 @@
           %img.mc-img{style: "height: initial", src: adventurer_image}
         .mc-tutorial-info
           .mc-tutorial-details
-            %h2.mc-h1-second-box= adventurer_title
+            %h3.mc-h1-second-box= adventurer_title
             %a{href: adventurer_link, target: '_blank'}
               %button.primary= I18n.t(:minecraft_agent_button)
 
@@ -64,12 +64,12 @@
           %img.mc-img{style: "height: initial", src: designer_image}
         .mc-tutorial-info
           .mc-tutorial-details
-            %h2.mc-h1-second-box= designer_title
+            %h3.mc-h1-second-box= designer_title
             %a{href: designer_link, target: '_blank'}
               %button= I18n.t(:minecraft_agent_button)
 
   %div{style: "clear: both; margin-bottom: 40px;"}
-  %h3.responsive-padding
+  %p.heading-xs.responsive-padding
     =I18n.t(:minecraft_no_internet)
     %a{href: CDO.studio_url("/download/mc")}= I18n.t(:minecraft_download_adventurer)
 

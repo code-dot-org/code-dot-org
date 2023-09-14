@@ -637,7 +637,7 @@ def rerun_filename(test_run_string)
   File.join(LOCAL_LOG_DIRECTORY, "#{test_run_string}.rerun")
 end
 
-def tag(tag, run=true)
+def tag(tag, run = true)
   return skip_tag(tag) unless run
   " -t #{tag}"
 end

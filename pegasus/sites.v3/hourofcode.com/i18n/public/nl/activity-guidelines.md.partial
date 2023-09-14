@@ -104,6 +104,7 @@ Wat u nodig heeft:
 * Naam en e-mailadres van de primaire contactpersoon die de ingezonden activiteit vertegenwoordigt
 * Naam van de activiteit (mag „Hour of Code” niet in de naam opnemen)
 * URL-link naar de activiteit
+* Omvat deze activiteit AI: Ja of Nee
 * Een beschrijving van de activiteit (maximaal aantal tekens: 400) 
     * Vermeld in de beschrijving of het een voornamelijk student-geleide of leraar-begeleide opgave is. Bovendien, zijn sommige scholen er in geïnteresseerd of de Uur Code activiteiten aansluiten bij gemeenschappelijke basis Science Standards. Als de activiteit specifieke normen ondersteunt, kunt u overwegen deze informatie toe te voegen.
 * Aanbevolen niveau (s) voor beoogde gebruikers. U kunt de \[K-12-normen van de Computer Science Teachers' Association\] (https://k12cs.org/framework-statements-by-grade-band/) raadplegen voor computerwetenschappelijke concepten die bij de klas passen. Voorbeelden van cijferniveaus zijn onder meer: 
@@ -111,9 +112,9 @@ Wat u nodig heeft:
     * Graden 2-5 (7-10 jaar)
     * Graad 6-8 (leeftijd 11-13 jaar)
     * Graad 9+ (14 jaar en ouder)
-* Een lijst van vakgebieden die je activiteit omvat (naast informatica). Als een wiskundeleraar je activiteit bijvoorbeeld kan gebruiken om les te geven over hoeken of parabolen, vermeld dit dan als wiskunde. Als je een Mad Libs-activiteit hebt waarbij je werkwoords/zelfstandige naamwoorden/enz. leert. kies voor taalkunsten.
-* Een lijst met programmeertalen die je activiteit leert. Dat wil zeggen C/C++, Java, JavaScript, enz. of taalonafhankelijk (voor lesplannen die in meerdere talen kunnen worden gegeven)
-* Een lijst van ondersteunde natuurlijke talen. Opmerking: Taaldetectie valt onder de verantwoordelijkheid van de aanbieder van de activiteit; we zullen alle gebruikers doorverwijzen naar de enkele opgegeven URL.
+* Een lijst met programmeertalen die je activiteit leert. Dat wil zeggen C/C++, Java, JavaScript, enz. of taalonafhankelijk (voor lesplannen die in meerdere talen kunnen worden gegeven) kies voor taalkunsten.
+* Een lijst van ondersteunde natuurlijke talen. Opmerking: Taaldetectie valt onder de verantwoordelijkheid van de aanbieder van de activiteit; we zullen alle gebruikers doorverwijzen naar de enkele opgegeven URL. of taalonafhankelijk (voor lesplannen die in meerdere talen kunnen worden gegeven)
+* Welk ervaringsniveau moet een opvoeder hebben om uw activiteit te gebruiken? (bijv. Beginner of Comfortabel.) En welk ervaringsniveau moeten de studenten hebben?
 * Welk ervaringsniveau moet een opvoeder hebben om uw activiteit te gebruiken? (bijv. Beginner of Comfortabel.) En welk ervaringsniveau moeten de studenten hebben? Als je meer geavanceerde Hour of Code™ -activiteiten wilt voorbereiden, vermeld dan de vereiste voorkennis in de beschrijving van je activiteit.
 * De duur van je activiteit 
     * Slechts 1 uur
@@ -167,9 +168,11 @@ Wat u nodig heeft:
 
 ## Hoe activiteiten zullen worden geëvalueerd
 
-Een diverse commissie van informaticadocenten zal de inzendingen rangschikken op basis van kwalitatieve en kwantitatieve criteria. Alle activiteiten die voldoen aan de basiscriteria worden vermeld. Leerkrachten kunnen filteren en sorteren om de beste activiteiten voor hun klas te vinden.
+Een diverse commissie van informaticadocenten zal de inzendingen rangschikken op basis van kwalitatieve en kwantitatieve criteria. Alle activiteiten die voldoen aan de basiscriteria worden vermeld.
 
-De rubriek voor het evalueren van activiteiten en lesplannen zal voor alle activiteiten naar de volgende criteria zoeken en deze dienovereenkomstig rangschikken:
+Voor traditionele coderingsactiviteiten zal een diverse commissie van informaticadocenten de inzendingen rangschikken op basis van kwalitatieve en kwantitatieve criteria. Alle activiteiten die voldoen aan de basiscriteria worden vermeld. Leerkrachten kunnen filteren en sorteren om de beste activiteiten voor hun klas te vinden.
+
+Als de beoordelingscommissie de activiteit als nul beoordeelt wat betreft productiekwaliteit (vanwege slechte bugs of instructies waardoor de activiteit erg moeilijk te gebruiken is), wat betreft het bevorderen van leren in ondervertegenwoordigde groepen (vanwege racistisch/seksistisch materiaal), in educatieve waarde (leert geen CS-concepten) of leuk/boeiend (omdat het voor studenten moeilijk/ontmoedigend is om door te werken), wordt de activiteit niet vermeld.
 
 - Hoge productiekwaliteit
 - Bevorder het leren van alle demografische groepen (in het bijzonder studenten die ondervertegenwoordigd zijn in de informatica, zoals jonge vrouwen, studenten uit gemarginaliseerde raciale en etnische groepen en studenten met een handicap)
@@ -177,9 +180,9 @@ De rubriek voor het evalueren van activiteiten en lesplannen zal voor alle activ
 - Leuk en boeiend
 - Stimuleert leerlingen om iets unieks te creëren dat ze kunnen delen (Voor jongere leerlingen: met ouders en klasgenoten). Voor oudere studenten: op het internet)
 
-Als de beoordelingscommissie de activiteit als nul beoordeelt wat betreft productiekwaliteit (vanwege slechte bugs of instructies waardoor de activiteit erg moeilijk te gebruiken is), wat betreft het bevorderen van leren in ondervertegenwoordigde groepen (vanwege racistisch/seksistisch materiaal), in educatieve waarde (leert geen CS-concepten) of leuk/boeiend (omdat het voor studenten moeilijk/ontmoedigend is om door te werken), wordt de activiteit niet vermeld.
-
 Om in de lijst te worden opgenomen, moeten alle activiteiten bovendien:
+
+Voor zelfsturende activiteiten voor nieuwe docenten en leerlingen zal de toetsingscommissie onderzoeken of:
 
 - Geschikt zijn voor een klaslokaal op een openbare school (geen wapens, geen expliciete/volwassen inhoud, geen religieuze inhoud, enz.)
 - Geen aanmelding vereist
@@ -205,11 +208,13 @@ Docenten en studenten kunnen onze lijst met activiteiten doorzoeken en filteren 
 
 ## Suggesties voor het ontwerpen van zelfgeleide tutorials van een uur
 
-Je kunt het [Hour of Code-logo](https://hourofcode.com/us/promote/resources#logo) in je tutorial opnemen, maar dit is niet verplicht. Als u het CodeUur-logo wilt gebruiken, zie dan de onderstaande richtlijnen van het handelsmerk. <u>In geen geval kunnen het logo en de naam van Code.org worden gebruikt.</u> Beide zijn handelsmerken en kunnen niet worden gecombineerd met een merknaam van derden zonder uitdrukkelijke schriftelijke toestemming.
-
-**Zorg er voor dat de gemiddelde student comfortabel in een uurtje kan eindigen.** Overweeg het toevoegen van een open activiteit aan het einde voor studenten die sneller door de les gaan. Hou in gedachten dat de meeste kinderen geen enkele basiskennis hebben van informatica en coderen.
+Activiteiten hoeven geen AI te bevatten, maar we willen wel meer AI-gerelateerde activiteiten aanbieden.
 
 **Leraar aanbevelingen opnemen.** De meeste activiteiten zouden student-gestuurd moeten zijn, maar als een activiteit wordt ondersteund door een leerkracht, geef dan duidelijke en eenvoudige aanwijzingen voor de leraar in de vorm van leraar-opmerkingen, biedt deze aan via een afzonderlijke URL bij uw activiteit. Niet alleen de studenten zijn beginners, sommige van de leraren zijn dat net zo goed. Voeg info toe zoals:
+
+**Voeg feedback toe aan het einde van de activiteit.** (Bijvoorbeeld: „Je hebt 10 levels voltooid en hebt over loops geleerd! Geweldig gedaan!”)
+
+**Moedig de leerlingen aan om te posten op sociale media (in voorkomend geval) wanneer ze klaar.** Bijvoorbeeld "Ik heb meegedaan aan een CodeUur met ________, Doe jij ook mee? #HourOfCode” of „Ik heb een #HourOfCode gedaan als onderdeel van #CSEdWeek. En jij?
 
 - Op welke platforms en browsers werkt de tutorial het beste?
 - Werkt het op smartphones? Tabletten?
@@ -248,7 +253,7 @@ Hour of Code® en Hora de Código® zijn geregistreerde handelsmerken van Code.o
 
 ## Bijhouden van Pixel
 
-Om de deelname nauwkeuriger te kunnen volgen, vragen we elke studiepartner om een trackingafbeelding van 1 pixel toe te voegen op de eerste pagina van hun Hour of Code-tutorials. De pixelafbeelding mag alleen op de startpagina staan. Voeg dit niet toe aan tussenliggende pagina's van je tutorial.
+Als je tutorial is goedgekeurd en op de uiteindelijke instructiepagina is opgenomen, zal Code.org je een unieke trackingpixel geven die je kunt integreren in je tutorial. Zie het voorbeeld hieronder. Voeg dit niet toe aan tussenliggende pagina's van je tutorial.
 
 Dit stelt ons in staat om gebruikers te tellen die jouw Hour of Code-tutorial hebben gedaan. Het zal leiden tot nauwkeurigere deelnametellingen voor je tutorial.
 

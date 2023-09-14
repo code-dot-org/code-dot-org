@@ -5,7 +5,7 @@ theme: responsive
 :ruby
 
   resources = {
-    left_link: CDO.curriculum_url(I18n.locale, "/hoc/plugged/9/"),
+    left_link: CDO.studio_url("/s/oceans/lessons/1"),
     left_image: CDO.code_org_url("/images/fill-485x260/mc/minecraft_teacher_small1.jpg"),
     left_heading: hoc_s(:oceans_landing_teacher_resources),
     left_description: hoc_s(:oceans_landing_teacher_resources_desc),
@@ -98,7 +98,7 @@ theme: responsive
 
   %div{style: "clear: both; margin-top: 10px;"}
 
-  %h3.blurb!= hoc_s(:oceans_landing_explanation_markdown, markdown: :inline)
+  %p.body-one.blurb!= hoc_s(:oceans_landing_explanation_markdown, markdown: :inline)
 
   = view :resource_boxes, resources: resources
 
@@ -133,8 +133,8 @@ theme: responsive
   #behind-the-scenes
     %h2= hoc_s(:oceans_behind_the_scenes)
 
-    %h3!= hoc_s(:oceans_behind_the_scenes_1_markdown, markdown: :inline)
+    %p!= hoc_s(:oceans_behind_the_scenes_1_markdown, markdown: :inline)
 
-    %h3!= hoc_s(:oceans_behind_the_scenes_2_markdown, markdown: :inline)
+    %p!= hoc_s(:oceans_behind_the_scenes_2_markdown, markdown: :inline)
 
 .clear

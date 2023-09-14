@@ -1,3 +1,13 @@
 {
-  "continue": "Pokračovať"
+  "allMessagesSentAreRecorded": "Všetky správy odoslané do služby AI Chat sa zaznamenávajú.",
+  "anythingPersonalCanNotBeSubmitted": "V záujme ochrany vášho súkromia by sa na chat AI nemali odosielať nič, čo sa považuje za osobné údaje (meno, telefónne číslo, adresa atď.).",
+  "continue": "Pokračovať",
+  "inappropriateMessagesAreFlagged": "Nevhodné správy budú označené a váš učiteľ bude upozornený.",
+  "inappropriateUserMessage": "Táto správa bola označená ako nevhodná.",
+  "tooPersonalUserMessage": "Táto správa bola označená ako príliš osobná.",
+  "userChatMessagePlaceholder": "Pridanie správy do chatu...",
+  "waitingForChatResponse": "Čakanie na odpoveď...",
+  "warningModalHeader": "Nezabudnite sa rozprávať zodpovedne!",
+  "warningModalOkButtonText": "Začnite chatovať",
+  "whatIsPersonalInformation": "Čo sa považuje za osobné údaje?"
 }

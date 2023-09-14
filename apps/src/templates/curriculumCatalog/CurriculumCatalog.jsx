@@ -18,12 +18,14 @@ const CurriculumCatalog = ({
   curriculaData,
   isEnglish,
   languageNativeName,
+  isInUS,
   ...props
 }) => {
   const [filteredCurricula, setFilteredCurricula] = useState(curriculaData);
   const [assignSuccessMessage, setAssignSuccessMessage] = useState('');
   const [showAssignSuccessMessage, setShowAssignSuccessMessage] =
     useState(false);
+  const [expandedCardKey, setExpandedCardKey] = useState(null);
 
   const isQuickViewDisplayed = queryParams()['quick_view'] === 'true';
 
@@ -46,6 +48,18 @@ const CurriculumCatalog = ({
   const handleCloseAssignSuccessMessage = () => {
     setShowAssignSuccessMessage(false);
     setAssignSuccessMessage('');
+  };
+
+  const handleExpandedCardChange = key => {
+    if (expandedCardKey !== key) {
+      analyticsReporter.sendEvent(
+        EVENTS.CURRICULUM_CATALOG_QUICK_VIEW_CLICKED_EVENT,
+        {
+          curriculum_offering: key,
+        }
+      );
+    }
+    setExpandedCardKey(expandedCardKey === key ? null : key);
   };
 
   // Renders search results based on the applied filters (or shows the No matching curriculums
@@ -83,9 +97,11 @@ const CurriculumCatalog = ({
                 video,
                 published_date,
                 self_paced_pl_course_offering_path,
+                available_resources,
               }) => (
                 <CurriculumCatalogCard
                   key={key}
+                  courseKey={key}
                   courseDisplayName={display_name}
                   courseDisplayNameWithLatestYear={
                     display_name_with_latest_year
@@ -113,6 +129,10 @@ const CurriculumCatalog = ({
                   selfPacedPlCourseOfferingPath={
                     self_paced_pl_course_offering_path
                   }
+                  isExpanded={expandedCardKey === key}
+                  onQuickViewClick={() => handleExpandedCardChange(key)}
+                  isInUS={isInUS}
+                  availableResources={available_resources}
                   {...props}
                 />
               )
@@ -178,6 +198,7 @@ CurriculumCatalog.propTypes = {
   curriculaData: PropTypes.arrayOf(curriculumDataShape),
   isEnglish: PropTypes.bool.isRequired,
   languageNativeName: PropTypes.string.isRequired,
+  isInUS: PropTypes.bool.isRequired,
 };
 
 export default CurriculumCatalog;

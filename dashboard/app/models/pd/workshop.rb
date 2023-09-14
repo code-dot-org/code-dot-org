@@ -474,7 +474,7 @@ class Pd::Workshop < ApplicationRecord
       end
 
       # send pre-workshop email for CSA, CSD, CSP facilitators 10 days before the workshop only
-      next unless days == 10 && (workshop.course == COURSE_CSD || workshop.course == COURSE_CSP || workshop.course == COURSE_CSA)
+      next unless days == 10 && (workshop.course == COURSE_CSD || workshop.course == COURSE_CSP || workshop.course == COURSE_CSA || workshop.course == COURSE_CSF)
       workshop.facilitators.each do |facilitator|
         next unless facilitator.email
         begin
@@ -578,7 +578,7 @@ class Pd::Workshop < ApplicationRecord
 
   # Send Post-surveys to facilitators of CSD and CSP workshops
   def send_facilitator_post_surveys
-    if course == COURSE_CSD || course == COURSE_CSP || course == COURSE_CSA
+    if course == COURSE_CSD || course == COURSE_CSP || course == COURSE_CSA || course == COURSE_CSF
       facilitators.each do |facilitator|
         next unless facilitator.email
 
@@ -705,7 +705,7 @@ class Pd::Workshop < ApplicationRecord
   end
 
   # Get all teachers who have attended all sessions of this workshop.
-  def teachers_attending_all_sessions(filter_by_cdo_scholarship=false)
+  def teachers_attending_all_sessions(filter_by_cdo_scholarship = false)
     teachers_attending = sessions.flat_map(&:attendances).flat_map(&:teacher).compact
 
     # Filter attendances to only scholarship teachers

@@ -78,7 +78,7 @@ km:
   join_section:
     code:
       title: 'ចូលរួមផ្នែកមួយនៅលើ Code.org'
-      placeholder: "ផ្នែកនៃការសរសេរកូដ (ABCDEF)"
+      placeholder: "លេខកូដថ្នាក់រៀន (ABCDEF)"
       instructions: "សូមបញ្ចូលលេខកូដជាអក្សរចំនួន៦តួអក្សរ ដែលគ្រូរបស់អ្នកបានចែករំលែកជាមួយអ្នក (ឧទាហរណ៍៖ \"ABCDEF\") ដើម្បីចូលរួមផ្នែករបស់ពួកគេ។"
       instructions_short: "សូមធ្វើការវាយបញ្ចូលនូវផ្នែកកូដ៦ខ្ទង់។"
       submit: 'ចូលរួម'
@@ -290,10 +290,10 @@ km:
         personal_login_created_username: 'អ្នកបានបង្កើតគណនីផ្ទាល់ខ្លួនដោយជោគជ័យ។​ ឥលូវនេះអ្នកអាចចូលទៅកាន់គណនីជាមួយនឹងusername​ (%{username})និងលេខសម្ងាត់របស់អ្នក។'
   nav:
     header:
-      finished_hoc: "ខ្ញុំបានបញ្ចប់វគ្គ Hour of Code​​ របស់ខ្ញុំ។"
+      finished_hoc: "ខ្ញុំបានបញ្ចប់!"
       sign_in_to_save: 'ចូលទៅកាន់គណនីដើម្បីកត់ទុកនូវតំណើរការ'
       my_dashboard: "ផ្ទាំង​គ្រប់គ្រងរបស់ខ្ញុំ"
-      course_catalog: "កាតាឡុកវគ្គសិក្សា"
+      course_catalog: "គម្រងវគ្គសិក្សា"
       project_gallery: "គម្រោង​"
       sections: "វគ្គ"
       help_support: "ជំនួយ និងការគាំទ្រ"
@@ -346,7 +346,7 @@ km:
       create: 'បង្កើត '
       algebra_game: 'ពិជគណិត'
       applab: 'មន្ទីរពិសោធន៍កម្មវិធី​'
-      artist: 'សិល្បករ'
+      artist: 'វិចិត្រករ'
       artist_k1: 'សិល្បករ (អ្នកដែលទើបតែរៀនអាន)'
       basketball: 'កីឡាបាល់បោះ'
       bounce: 'បាល់​លោត'
@@ -505,6 +505,7 @@ km:
   try_reloading: 'សូម​សាកល្បង​ផ្ទុក​ទំព័រ​ឡើង​វិញ'
   next_stage: 'បាន​បញ្ចប់! បន្ត​ទៅ​ដំណាក់កាល​បន្ទាប់'
   download_pdf: 'បើក​ប្លង់​មេរៀន'
+  view_lesson_plan: 'មើលកិច្ចតែងការមេរៀន'
   share_code:
     title: "ចុច 'រត់' ដើម្បី​មើល​ដំណើរការ​កម្មវិធី​របស់​ខ្ញុំ"
     check_out_what_i_made: "ពិនិត្យមើលអ្វីដែលខ្ញុំបានធ្វើ"

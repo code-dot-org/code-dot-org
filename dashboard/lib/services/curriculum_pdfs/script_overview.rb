@@ -37,15 +37,13 @@ module Services
         # Check S3 to see if we've already generated an overview PDF for the
         # given script
         def script_overview_pdf_exists_for?(script)
-          AWS::S3.cached_exists_in_bucket?(
-            S3_BUCKET,
-            get_script_overview_pathname(script).to_s
-          )
+          pathname = get_script_overview_pathname(script).to_s
+          return pdf_exists_at?(pathname)
         end
 
         # Generate a PDF containing not only the Unit page itself but also
         # all Lesson Plans within the script.
-        def generate_script_overview_pdf(script, directory="/tmp/")
+        def generate_script_overview_pdf(script, directory = "/tmp/")
           ChatClient.log("Generating script overview PDF for #{script.name.inspect}")
           pdfs_dir = Dir.mktmpdir(__method__.to_s)
           pdfs = []

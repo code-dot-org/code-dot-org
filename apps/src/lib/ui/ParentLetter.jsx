@@ -7,16 +7,12 @@ import {queryParams} from '../../code-studio/utils';
 import color from '../../util/color';
 import i18n from '@cdo/locale';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import {EmailLinks} from '@cdo/apps/util/sharedConstants';
 
-const PRIVACY_PLEDGE_URL = 'https://studentprivacypledge.org/signatories/';
-const COMMON_SENSE_ARTICLE_URL =
-  'https://privacy.commonsense.org/evaluation/code.org';
 const RESEARCH_ARTICLE_URL =
   'https://medium.com/@codeorg/cs-helps-students-outperform-in-school-college-and-workplace-66dd64a69536';
 const ENGAGEMENT_URL =
   'https://support.code.org/hc/en-us/articles/360041539831-How-can-I-keep-track-of-what-my-child-is-working-on-on-Code-org-';
-const STUDENT_PRIVACY_POLICY_URL =
-  'https://code.org/privacy-nov2021#protecting-childrens-privacy';
 
 const LOGIN_TYPE_NAMES = {
   [SectionLoginType.clever]: 'Clever accounts',
@@ -134,9 +130,9 @@ class ParentLetter extends React.Component {
           <h1>{i18n.parentLetterStudentPrivacy()}</h1>
           <SafeMarkdown
             markdown={i18n.parentLetterStudentPrivacyDetails({
-              pledgeLink: PRIVACY_PLEDGE_URL,
-              commonSenseLink: COMMON_SENSE_ARTICLE_URL,
-              privacyPolicyLink: STUDENT_PRIVACY_POLICY_URL,
+              pledgeLink: EmailLinks.STUDENT_PRIVACY_PLEDGE_URL,
+              commonSenseLink: EmailLinks.COMMON_SENSE_MEDIA_URL,
+              privacyPolicyLink: EmailLinks.PRIVACY_POLICY_URL,
             })}
           />
           <p>{i18n.parentLetterClosing()}</p>

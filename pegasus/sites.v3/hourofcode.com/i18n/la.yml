@@ -261,6 +261,8 @@ la:
   call_to_action_learn_about_approach: Aprende más sobre nuestro método
   call_to_action_try_java_lab: Prueba Java Lab
   call_to_action_notify_available: Notificarme cuando esté disponible
+  call_to_action_register_early_access: Inscríbase para acceso anticipado
+  call_to_action_open_positions: Ver posiciones abiertas
   aria_label_call_to_action_afe: Aprenda más sobre Amazon Future Engineer
   aria_label_call_to_action_teaching_csf: Iniciar el programa de aprendizaje profesional
     de Enseñanza de Fundamentos de Ciencias de la Computación
@@ -662,9 +664,14 @@ la:
     de nuevos informes, recomendaciones de políticas y oportunidades de participación
     pública.
   ai_pl_callout_title: Introducción a la IA para Docentes
-  ai_pl_callout_desc_01: Descubre el alucinante mundo de la inteligencia artificial
-    (IA) y su potencial para transformar la educación con nuestra serie virtual para
-    docentes.
+  ai_pl_callout_desc_01: IA 101 es una serie de aprendizaje profesional en línea gratuita
+    y fundamental para cualquier docente y educador interesado en el innovador mundo
+    de la inteligencia artificial (IA) y su potencial transformador en la educación.
+    Code.org, ETS, ISTE y Khan Academy ofrecen atractivas sesiones con expertos de
+    renombre que desmitificarán la IA, explorarán la implementación responsable, abordarán
+    los prejuicios y mostrarán cómo el aprendizaje impulsado por la IA puede revolucionar
+    los resultados de los estudiantes. Únete a nosotros en este viaje de exploración
+    y empoderamiento, y desbloquea el futuro de la enseñanza con y sobre IA.
   ai_pl_callout_desc_02: Code.org, ETS, ISTE y Khan Academy formaron una alianza para
     apoyar a los docentes con el uso de la IA en sus aulas.
   ai_hero_heading: La inteligencia artificial no es magia… ¡Es simplemente código!
@@ -773,7 +780,7 @@ la:
     (IA) en la educación con nuestra serie gratuita de aprendizaje en línea para educadores.
   ai_pl_101_hero_desc_02: Una serie integral de aprendizaje en línea para docentes.
   ai_pl_101_hero_presented: Presentado por
-  ai_pl_101_intro_heading: "¿Qué es AI 101 para docentes?"
+  ai_pl_101_intro_heading: "¿Qué es IA 101?"
   ai_pl_101_intro_text: AI 101 para docentes es una serie de aprendizaje profesional
     en línea gratuita y fundamental para cualquier docente y educador interesado en
     el innovador mundo de la inteligencia artificial (IA) y su potencial transformador
@@ -819,7 +826,7 @@ la:
     la IA, ayudando a los docentes a proporcionar opiniones iterativas y evaluaciones
     formativas a lo largo de la experiencia de escritura.'
   ai_pl_101_explore__button_4: Explora la herramienta
-  ai_pl_101_video_title_1: Charla junto a la chimenea con Sal Khan y Hadi Partovi
+  ai_pl_101_video_title_1: "¿Cómo usar la IA en tú clase? - Sal Khan y Hadi Partovi"
   ai_pl_101_video_desc_1: Únete a Sal Khan (Khan Academy) y Hadi Partovi (Code.org)
     para una charla junto a la chimenea sobre cómo adoptar la inteligencia artificial
     en el aula. Espere una discusión animada que incluya algunos de los temas más
@@ -13761,6 +13768,130 @@ la:
     las Ciencias de la Computación AP de Code.org mediante Quorum, un lenguaje basado
     en pruebas diseñado originalmente para proporcionar accesibilidad a los estudiantes
     ciegos o con discapacidades visuales.
+  engineering_hero_heading: "¡Únete a nuestro equipo de ingeniería!"
+  engineering_hero_desc: A medida que continuamos expandiendo nuestro equipo de ingeniería,
+    queríamos compartir más sobre nuestra organización de ingeniería en Code.org y
+    algunos de los aspectos únicos de trabajar aquí. Si estás interesado en postularte
+    a uno de nuestros roles, ¡nos encantaría saber de ti!
+  engineering_team_title: Conoce al equipo de ingeniería en Code.org
+  engineering_team_card_text_1: "¡Esto es (la mayoría de) nosotros en nuestra cita
+    presencial durante el verano de 2023! Esta multitud se divide en cuatro sub-equipos
+    dentro de nuestro equipo de ingeniería que trabajan juntos para construir y servir
+    la plataforma para todos nuestros estudiantes y profesores."
+  engineering_team_card_text_2: Si estás interesado en postularte a uno de nuestros
+    roles, ¡nos encantaría saber de ti! Puedes encontrar una lista de puestos vacantes
+    en nuestra página de Carreras.
+  engineering_our_team_title: Nuestro equipo de ingeniería
+  engineering_our_team_desc: 'El equipo de ingeniería de Code.org se divide en cuatro
+    subequipos que construyen y dan soporte a diferentes áreas de nuestra plataforma:'
+  engineering_our_team_sub_title_1: Equipo de Aprendizaje Estudiantil
+  engineering_our_team_text_1: Nuestro Equipo de Aprendizaje Estudiantil posee todas
+    nuestras actividades (las llamamos laboratorios) que nuestros alumnos utilizan
+    cada día. Este equipo trabaja principalmente en tecnología front-end (usamos React
+    y muchos JS personalizados) y tenemos una gran relación de trabajo con muchos
+    socios y proyectos de código abierto. Por ejemplo, usamos [Blockly de Google]
+    (%{youtube_url}) para toda nuestra programación basada en bloques. Apoyamos a
+    los estudiantes en su viaje de aprendizaje desde Kindergarten hasta el grado 12.
+  engineering_our_team_sub_title_2: Equipo de Experiencia Docente
+  engineering_our_team_text_2: Nuestro Equipo de Experiencia Docente construye las
+    herramientas que atraen a nuevos maestros a Code.org (a los que llamamos a estos
+    productos de adquisición) y desarrolla la plataforma que empodera a nuestros maestros
+    existentes para enseñar nuestro plan de estudios (nuestras herramientas para maestros).
+    Al igual que con nuestras herramientas para estudiantes, confiamos en React para
+    construir nuestro front-end y nuestros componentes del lado del servidor se sirven
+    con Ruby on Rails.
+  engineering_our_team_sub_title_3: Equipo de Plataforma
+  engineering_our_team_text_3: Nuestro Equipo de Plataforma posee componentes centrales
+    que atienden las necesidades de nuestros equipos de estudiantes y profesores (por
+    ejemplo, autenticación y perfil de usuario) y también tiene la misión de llegar
+    a estudiantes a los que aún no podemos llegar. Esto incluye construir integraciones
+    que nos conecten con escuelas que utilizan diferentes Sistemas de Gestión del
+    Aprendizaje (LMS) y empaquetar nuestro plan de estudios para que pueda ser utilizado
+    en escuelas remotas que no tienen acceso a Internet confiable.
+  engineering_our_team_sub_title_4: Equipo de Infraestructura
+  engineering_our_team_text_4: Nuestro Equipo de Infraestructura proporciona la columna
+    vertebral para la plataforma que apoya a nuestros estudiantes y profesores. Esto
+    incluye nuestra infraestructura de alojamiento y servicios relacionados (utilizamos
+    AWS), administración de datos, programas de seguridad, servicios de desarrollo
+    e implementación y mucho más. Este equipo también posee nuestros sistemas de escalado
+    y aprovisionamiento, que son críticos durante la Hora del Código, donde invitamos
+    a todos los estudiantes del mundo a completar una hora de codificación con nosotros.
+  engineering_faq_question_1: "¿Qué hace Code.org?"
+  engineering_faq_answer_1_a: Code.org es una organización sin fines de lucro de innovación
+    educativa dedicada a la visión de que cada estudiante en cada escuela tiene la
+    oportunidad de aprender ciencias de la computación como parte de su educación
+    básica K-12.
+  engineering_faq_answer_1_b: Ampliamos el acceso a la informática en las escuelas,
+    con un enfoque en incrementar la participación de mujeres jóvenes y estudiantes
+    de otros grupos subrepresentados. El proveedor líder de currículo de informática
+    K-12 en los distritos escolares más grandes de Estados Unidos, Code.org también
+    organiza la campaña anual Hora del Código, que ha involucrado a más del 15% de
+    todos los estudiantes en el mundo.
+  engineering_faq_answer_1_c: Code.org cuenta con el apoyo de generosos donantes,
+    incluidos Microsoft, Amazon, Google y muchos otros.
+  engineering_faq_question_2: "¿Cuál es la experiencia de desarrollador y las herramientas
+    de Code.org?"
+  engineering_faq_answer_2: Nuestra experiencia de desarrollador puede ser diferente
+    a lo que has visto en tus roles pasados. Trabajando en estrecha colaboración con
+    nuestro equipo de productos, enviamos a producción todos los días de la semana
+    y tenemos una variedad de cadencias, a veces estás escribiendo código que se activa
+    ese día; otras veces estás en proyectos a más largo plazo, y aunque seguimos sprints
+    2 semanales, lo hacemos de una manera ligera. Nos indexamos hacia hacer las cosas
+    correctas de la manera correcta vs. tomar una visión purista de cualquier metodología
+    en particular. [Todo nuestro código] (%{code_url}) es de código abierto y utilizamos
+    JIRA y GitHub pull requests para rastrear todos nuestros elementos de trabajo.
+    También nos preocupamos mucho por la calidad y las pruebas y tenemos la suerte
+    de contar con un increíble soporte de [SauceLabs](%{saucelabs_url}), que nos ayudan
+    a ejecutar nuestro conjunto de pruebas de interfaz de usuario en varios dispositivos
+    de estudiantes (por ejemplo, iPads) en su granja de dispositivos en la nube.
+  engineering_faq_question_3: "¿Qué es la rotación del ingeniero de guardia en Code.org?"
+  engineering_faq_answer_3: Nuestro equipo de ingeniería de más de 30 años comparte
+    responsabilidades de guardia. Cada ingeniero cubre un turno de 24 horas y utiliza
+    nuestras rutas de escalada y libros de jugadas para responder a interrupciones
+    del sitio u otros problemas en el sitio en vivo. Estamos orgullosos de la confiabilidad
+    de nuestro sitio; en promedio, cada ingeniero solo se despide una vez al año para
+    problemas que generalmente se resuelven rápidamente. En cambio, el “Desarrollador
+    del día” suele pasar una parte de su jornada laboral administrando la implementación
+    de la producción y triplicando los problemas menos urgentes.
+  engineering_faq_question_4: "¿Eres una organización amigable con el control remoto/FMH?"
+  engineering_faq_answer_4_a: "¡Sí! En 2019, poco antes de la pandemia, Code.org se
+    convirtió en una organización remota primero. Hoy en día, tenemos ingenieros en
+    cada zona horaria de Estados Unidos y acomodamos las horas de trabajo en consecuencia.
+    La mayoría de nuestras reuniones ocurren entre las 10 am y las 3 pm PT."
+  engineering_faq_answer_4_b: También reconocemos el valor del tiempo en persona,
+    y cada trimestre nos reunimos en persona, típicamente en Seattle. Dos de estos
+    eventos (los llamamos Kick-off week y “Codechella”) reúnen a todos los miembros
+    de la organización en enero y junio, y los equipos de ingeniería y producto se
+    reúnen por separado en abril y octubre.
+  engineering_faq_answer_4_c: Creemos firmemente en pasar tiempo con nuestros estudiantes
+    y maestros, por lo que muchos de estos eventos presenciales incluyen viajes a
+    escuelas y aulas para recopilar comentarios o probar nuestros productos
+  engineering_faq_question_5: "¿Qué hace que el equipo de ingeniería de Code.org sea
+    único?"
+  engineering_faq_answer_5_a: 'Más allá de resolver problemas técnicos desafiantes,
+    tenemos algunas cosas que hacen que nuestra ingeniería sea diferente de otras
+    en las que haya trabajado:'
+  engineering_faq_answer_5_b_1: Todos compartimos nuestra pasión por nuestra misión.
+  engineering_faq_answer_5_b_2: Cada uno de nosotros está aquí para apoyar la misión
+    de ampliar el acceso a la informática para cada estudiante en todo el mundo. Todos
+    tenemos nuestra historia y perspectiva únicas sobre lo que nos impulsa hacia esta
+    misión.
+  engineering_faq_answer_5_c_1: Nos preocupamos profundamente el uno por el otro.
+  engineering_faq_answer_5_c_2: Cuando los ingenieros están luchando con un problema,
+    damos un paso adelante y ayudamos. Uno de nuestros principios es que somos duros
+    con los problemas, pero amables el uno con el otro. Promovemos a los ingenieros
+    regularmente, pero no prescribimos soluciones sobrediseñadas solo para apoyar
+    el camino de promoción de alguien. En cambio, invertimos en nuestros ingenieros
+    con un generoso presupuesto de desarrollo profesional y acceso a otras oportunidades
+    de aprendizaje.
+  engineering_faq_answer_5_d_1: Trabajamos duro, pero establecemos límites claros.
+  engineering_faq_answer_5_d_2: Si bien apoyamos a los estudiantes de todo el mundo,
+    nos responsabilizamos de los claros límites entre el trabajo y la vida hogareña.
+    Disfrutamos sin reuniones los miércoles, tomando nuestro PTO (5 semanas en total,
+    que incluye un cierre de oficina de 2 semanas en toda la entidad al final del
+    año, también conocido como las vacaciones de invierno), medio día laborable los
+    viernes durante el verano, también conocido como viernes de verano, y otros beneficios
+    generosos.
   language_code:
     ar: Árabe
     az: Azerbaiyano

@@ -1,12 +1,14 @@
-const storybookWebpackConfig = require('../webpack').storybookConfig;
+const envConstants = require('../envConstants');
+const storybookWebpackConfig = require('../webpackStorybook.config');
+
+const staticDirs = envConstants.STORYBOOK_STATIC_ASSETS ? [
+    '../build/package/',
+    '../../dashboard/public',
+  ] : [];
 
 module.exports = {
   stories: ['../src/**/*.story.@(js|jsx|ts|tsx)'],
-  staticDirs: [
-    '../build/package/',
-    '../../dashboard/public',
-    '../../pegasus/sites.v3/code.org/public'
-  ],
+  staticDirs,
   addons: [
     '@storybook/addon-a11y',
     '@storybook/addon-essentials',

@@ -888,6 +888,26 @@ applabCommands.textInput = function (opts) {
   return Boolean(Applab.activeScreen().appendChild(newInput));
 };
 
+applabCommands.textArea = function (opts) {
+  apiValidateDomIdExistence(opts, 'textArea', 'id', opts.elementId, false);
+  const newTextArea = document.createElement('div');
+  newTextArea.id = opts.elementId;
+  const textNode = document.createTextNode(opts.text);
+  newTextArea.appendChild(textNode);
+  newTextArea.setAttribute('contenteditable', true);
+  newTextArea.style.width = '200px';
+  newTextArea.style.height = '100px';
+  newTextArea.style.borderStyle = 'solid';
+  elementLibrary.setAllPropertiesToCurrentTheme(
+    newTextArea,
+    Applab.activeScreen()
+  );
+
+  $(newTextArea).addClass('textArea');
+
+  return Boolean(Applab.activeScreen().appendChild(newTextArea));
+};
+
 applabCommands.textLabel = function (opts) {
   // PARAMNAME: textLabel: id vs. labelId
   apiValidateDomIdExistence(opts, 'textLabel', 'id', opts.elementId, false);
@@ -945,6 +965,31 @@ applabCommands.radioButton = function (opts) {
   newRadio.style.position = 'relative';
 
   return Boolean(Applab.activeScreen().appendChild(newRadio));
+};
+
+applabCommands.slider = function (opts) {
+  // PARAMNAME: slider: id vs. sliderId
+  apiValidateDomIdExistence(opts, 'slider', 'id', opts.elementId, false);
+
+  var newSlider = document.createElement('input');
+  newSlider.id = opts.elementId;
+  newSlider.setAttribute('type', 'range');
+  newSlider.min = opts.min;
+  newSlider.max = opts.max;
+  newSlider.defaultValue = opts.value;
+  newSlider.step = opts.step;
+  newSlider.style.position = 'relative';
+  newSlider.style.borderStyle = 'solid';
+  newSlider.style.width = 150;
+  newSlider.style.height = 24;
+  newSlider.style.margin = '0px';
+  newSlider.style.padding = '0px';
+  elementLibrary.setAllPropertiesToCurrentTheme(
+    newSlider,
+    Applab.activeScreen()
+  );
+
+  return Boolean(Applab.activeScreen().appendChild(newSlider));
 };
 
 applabCommands.dropdown = function (opts) {

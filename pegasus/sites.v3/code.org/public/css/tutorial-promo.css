@@ -48,8 +48,10 @@
 }
 
 .specific-tutorial-heading {
-  margin-top: 0px;
-  margin-bottom: 10px;
+  font-family: var(--barlowSemiCondensed-medium);
+  font-size: 1.5rem;
+  line-height: 1.32;
+  margin-bottom: 0.5em;
   color: white;
 }
 

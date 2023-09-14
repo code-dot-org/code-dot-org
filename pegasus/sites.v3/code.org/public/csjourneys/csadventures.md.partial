@@ -34,7 +34,7 @@ social:
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
         <div class="smalltext" style="color: #00adbc; text-align: left"><strong>Available on Kahoot!</strong></div>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>Alexa, take me to the Moon!</strong></h3>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px">Alexa, take me to the Moon!</h3>
         <div class="smalltext" style="text-align: left; margin-bottom: 10px">Join Amazon, Lockheed Martin, and Webex for a behind-the-scenes look at the technology being tested on NASA’s Artemis I mission.</div>
         <br>
        <a class="linktag" id="nasa-trip" href="https://www.amazonfutureengineer.com/space?utm_campaign=codeorg&utm_medium=alexaforastronauts&utm_source=US&utm_content=Website" target="_blank"><button>View details</button></a>
@@ -49,7 +49,7 @@ social:
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
         <div class="smalltext" style="color: #00adbc; text-align: left"><strong>One-to-two tours per week</strong></div>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>Explore the universe with NASA's Chandra X-ray Observatory</strong></h3>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px">Explore the universe with NASA's Chandra X-ray Observatory</h3>
         <div class="smalltext" style="text-align: left; margin-bottom: 10px">Tour NASA’s Chandra X-ray Observatory as we investigate hot regions of the Universe, from black holes to exploding stars!</div>
         <div class="smalltext" style="text-align: left; margin-bottom: 10px"><strong>2023 tour dates to be announced.</strong></div>
   </div>
@@ -65,7 +65,7 @@ social:
 
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
         <div class="smalltext" style="color: #00adbc; text-align: left"><strong>Select dates</strong></div>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>Go inside the iRobot Cool Stuff Museum</strong></h3>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px">Go inside the iRobot Cool Stuff Museum</h3>
         <div class="smalltext" style="text-align: left; margin-bottom: 10px">Join us in the iRobot Cool Stuff Museum, exploring 30 years of robotics history. See via our mobile robot as our guide brings robotics and computer science to life.</div>
         <a class="linktag" id="irobot-trip" href="https://experience.irobot.com/irobot-education-virtual-museum-tours-2023" target="_blank"><button>View details</button></a>
   </div>
@@ -81,7 +81,7 @@ social:
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
         <div class="smalltext" style="color: #00adbc; text-align: left"><strong>Self-paced</strong></div>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>Exploring the Deep Bit by Bit 👾</strong></h3>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px">Exploring the Deep Bit by Bit 👾</h3>
         <div class="smalltext" style="text-align: left; margin-bottom: 10px">Learn about the deep sea with the Monterey Bay Aquarium and see how computer science plays a part in helping us understand this challenging habitat!</div>
         <a class="linktag" id="mbari-trip" href="https://montereybayaquarium.thinkific.com/courses/exploring-the-deep-bit-by-bit" target="_blank"><button>View details</button></a>
   </div>
@@ -96,7 +96,7 @@ social:
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
         <div class="smalltext" style="color: #00adbc; text-align: left"><strong>Available on Kahoot!</strong></div>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>Explore the technology of Amazon's Fulfillment Centers</strong></h3>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px">Explore the technology of Amazon's Fulfillment Centers</h3>
         <div class="smalltext" style="text-align: left; margin-bottom: 10px">Discover how computer science, state-of-the-art engineering, and incredible people deliver customer orders at Amazon.</div>
         <a class="linktag" id="amazon-trip" href="https://www.amazonfutureengineer.com/fctours?utm_campaign=Code.org&utm_medium=Website&utm_source=FC%20Tours" target="_blank"><button>View details</button></a>
   </div>
@@ -114,20 +114,20 @@ social:
 
 <div class="col-33" style="border-radius:5px; padding:10px; margin-bottom:20px">
   {{ myjourney14 }}
-  <h3><strong>Using computer science to keep people safe</strong></h3>
+  <h3>Using computer science to keep people safe</h3>
   <p>Hear from Richard Nelson, V, a mechanical engineer at Motorola Solutions who plays a crucial role in ensuring public safety.</p>
 </div>
 
 <div class="col-33" style="border-radius:5px; padding:10px; margin-bottom:20px">
   {{ myjourney5 }}
-  <h3><strong>Building robots</strong></h3>
+  <h3>Building robots</h3>
   <br>
   <p>Learn how Eva Moscat and Anna Elzer are helping build software for robots and designing learning experiences that inspire the next generation of technologists.</p>
 </div>
 
 <div class="col-33" style="border-radius:5px; padding:10px; margin-bottom:20px">
   {{ myjourney13 }}
-  <h3><strong>How to outsmart a malicious hacker</strong></h3>
+  <h3>How to outsmart a malicious hacker</h3>
   <p>Learn how Christopher Lopez, a security analyst with Tanium, helps organizations protect their networks from cybersecurity threats.</p>
 </div>
 

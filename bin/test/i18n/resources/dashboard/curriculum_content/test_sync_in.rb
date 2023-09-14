@@ -24,7 +24,7 @@ class I18n::Resources::Dashboard::CurriculumContent::SyncInTest < Minitest::Test
 
     ::Services::I18n::CurriculumSyncUtils::Serializers::ScriptCrowdinSerializer.expects(:new).with(script, scope: {only_numbered_lessons: true}).in_sequence(exec_seq).returns(script_serializer_mock)
     I18n::Resources::Dashboard::CurriculumContent::SyncIn.expects(:get_script_subdirectory).with(script).in_sequence(exec_seq).returns('expected_script_subdirectory')
-    I18nScriptUtils.expects(:unit_directory_change?).with('expected_script_name.json', expected_i18n_source_file_path).in_sequence(exec_seq).returns(false)
+    I18nScriptUtils.expects(:unit_directory_change?).with(CDO.dir('i18n/locales/source/curriculum_content'), 'expected_script_name.json', expected_i18n_source_file_path).in_sequence(exec_seq).returns(false)
 
     FileUtils.expects(:mkdir_p).with(CDO.dir('i18n/locales/source/curriculum_content/expected_script_subdirectory')).in_sequence(exec_seq)
     File.expects(:write).with(expected_i18n_source_file_path, %Q[{\n  "expected_data": "expected_data"\n}]).in_sequence(exec_seq)
@@ -65,7 +65,7 @@ class I18n::Resources::Dashboard::CurriculumContent::SyncInTest < Minitest::Test
     ::Services::I18n::CurriculumSyncUtils::Serializers::ScriptCrowdinSerializer.expects(:new).with(script, scope: {only_numbered_lessons: true}).in_sequence(exec_seq).returns(script_serializer_mock)
 
     I18n::Resources::Dashboard::CurriculumContent::SyncIn.expects(:get_script_subdirectory).with(script).never.returns('expected_script_subdirectory')
-    I18nScriptUtils.expects(:unit_directory_change?).with('expected_script_name.json', expected_i18n_source_file_path).never.returns(false)
+    I18nScriptUtils.expects(:unit_directory_change?).with(CDO.dir('i18n/locales/source/curriculum_content'), 'expected_script_name.json', expected_i18n_source_file_path).never.returns(false)
     FileUtils.expects(:mkdir_p).with(CDO.dir('i18n/locales/source/curriculum_content/expected_script_subdirectory')).never
     File.expects(:write).with(expected_i18n_source_file_path, %Q[{\n  "expected_data": "expected_data"\n}]).never
 
@@ -85,7 +85,7 @@ class I18n::Resources::Dashboard::CurriculumContent::SyncInTest < Minitest::Test
 
     ::Services::I18n::CurriculumSyncUtils::Serializers::ScriptCrowdinSerializer.expects(:new).with(script, scope: {only_numbered_lessons: true}).in_sequence(exec_seq).returns(script_serializer_mock)
     I18n::Resources::Dashboard::CurriculumContent::SyncIn.expects(:get_script_subdirectory).with(script).in_sequence(exec_seq).returns('expected_script_subdirectory')
-    I18nScriptUtils.expects(:unit_directory_change?).with('expected_script_name.json', expected_i18n_source_file_path).in_sequence(exec_seq).returns(true)
+    I18nScriptUtils.expects(:unit_directory_change?).with(CDO.dir('i18n/locales/source/curriculum_content'), 'expected_script_name.json', expected_i18n_source_file_path).in_sequence(exec_seq).returns(true)
 
     FileUtils.expects(:mkdir_p).with(CDO.dir('i18n/locales/source/curriculum_content/expected_script_subdirectory')).never
     File.expects(:write).with(expected_i18n_source_file_path, %Q[{\n  "expected_data": "expected_data"\n}]).never
@@ -137,6 +137,18 @@ class I18n::Resources::Dashboard::CurriculumContent::SyncInTest < Minitest::Test
     assert_equal 'expected_course_version_key/csf', I18n::Resources::Dashboard::CurriculumContent::SyncIn.get_script_subdirectory(script)
   end
 
+  def test_getting_subdirectory_of_csc_script
+    exec_seq = sequence('execution')
+    script = FactoryBot.build_stubbed(:script, name: 'expected_script_name')
+
+    Unit.expects(:unit_in_category?).with('hoc', 'expected_script_name').in_sequence(exec_seq).returns(false)
+    script.stubs(:get_course_version).returns(stub(key: 'expected_course_version_key'))
+    script.expects(:csf?).in_sequence(exec_seq).returns(false)
+    script.expects(:csc?).in_sequence(exec_seq).returns(true)
+
+    assert_equal 'expected_course_version_key/csc', I18n::Resources::Dashboard::CurriculumContent::SyncIn.get_script_subdirectory(script)
+  end
+
   def test_getting_subdirectory_of_not_csf_script
     exec_seq = sequence('execution')
     script = FactoryBot.build_stubbed(:script, name: 'expected_script_name')
@@ -144,6 +156,7 @@ class I18n::Resources::Dashboard::CurriculumContent::SyncInTest < Minitest::Test
     Unit.expects(:unit_in_category?).with('hoc', 'expected_script_name').in_sequence(exec_seq).returns(false)
     script.stubs(:get_course_version).returns(stub(key: 'expected_course_version_key', course_offering: stub(key: 'expected_course_offering_key')))
     script.expects(:csf?).in_sequence(exec_seq).returns(false)
+    script.expects(:csc?).in_sequence(exec_seq).returns(false)
 
     assert_equal 'expected_course_version_key/expected_course_offering_key', I18n::Resources::Dashboard::CurriculumContent::SyncIn.get_script_subdirectory(script)
   end

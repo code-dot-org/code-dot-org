@@ -25,6 +25,7 @@ import {
   physicalCompShownCurricula,
   nonNullSchoolSubjectShownCurricula,
   tabletAndNoDeviceShownCurricula,
+  csdAndHocShownCurricula,
   translatedCurricula,
   multipleFiltersAppliedShownCurricula,
   allFiltersAppliedShownCurricula,
@@ -42,6 +43,7 @@ describe('CurriculumCatalog', () => {
     isEnglish: false,
     languageNativeName: 'sampleLanguageNativeName',
     isSignedOut: true,
+    isInUS: true,
   };
   let store;
 
@@ -262,6 +264,33 @@ describe('CurriculumCatalog', () => {
       }).length
     ).to.equal(tabletAndNoDeviceShownCurricula.length);
     tabletAndNoDeviceShownCurricula.forEach(curriculum => {
+      expect(screen.getAllByText(curriculum.display_name).length).to.equal(1);
+    });
+  });
+
+  it('filtering by marketing initiative shows any course with at least 1 of the selected initiatives', () => {
+    renderDefault();
+
+    const numTotalCurriculumCards = screen.getAllByText('Learn more', {
+      exact: false,
+    }).length;
+    expect(numTotalCurriculumCards).to.equal(allShownCurricula.length);
+
+    // Select "CSD" and "HOC" in marketing initiative filter
+    const csdFilterCheckbox = screen.getByDisplayValue('csd');
+    fireEvent.click(csdFilterCheckbox);
+    assert(csdFilterCheckbox.checked);
+    const hocFilterCheckbox = screen.getByDisplayValue('hoc');
+    fireEvent.click(hocFilterCheckbox);
+    assert(hocFilterCheckbox.checked);
+
+    // Filters for all courses from CSD and HOC.
+    expect(
+      screen.getAllByText('Learn more', {
+        exact: false,
+      }).length
+    ).to.equal(csdAndHocShownCurricula.length);
+    csdAndHocShownCurricula.forEach(curriculum => {
       expect(screen.getAllByText(curriculum.display_name).length).to.equal(1);
     });
   });

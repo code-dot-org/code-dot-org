@@ -2498,6 +2498,8 @@ fr:
               display_name: Leçons alternatives
             lessonGroup-6:
               display_name: Enquête de fin d'unité
+            lessonGroup-7:
+              display_name: Bacs à sable
           lessons:
             lesson-1:
               name: Bienvenue chez CSA
@@ -2628,6 +2630,8 @@ fr:
               display_name: Leçons alternatives
             lessonGroup-5:
               display_name: Enquête de fin d'unité
+            lessonGroup-6:
+              display_name: Bacs à sable
           lessons:
             lesson-1:
               name: Attributs
@@ -2643,6 +2647,8 @@ fr:
               name: Ce mot clé
             lesson-15:
               name: 'Unité 2 : Enquête'
+            lesson-17:
+              name: Asphalt Art Project — Jour 2
             lesson-2:
               name: Constructeurs sans arguments
             lesson-3:
@@ -2760,6 +2766,8 @@ fr:
               display_name: Leçons alternatives
             lessonGroup-5:
               display_name: Enquête de fin d'unité
+            lessonGroup-6:
+              display_name: Bacs à sable
           lessons:
             lesson-1:
               name: Tableaux unidimensionnels (1D)
@@ -2773,6 +2781,8 @@ fr:
               name: Projet Data for Social Good [Version d'un jour]
             lesson-14:
               name: 'Unité 3 : Enquête'
+            lesson-16:
+              name: Asphalt Art Project — Jour 2
             lesson-2:
               name: Modification d'éléments
             lesson-3:
@@ -2873,6 +2883,8 @@ fr:
               display_name: Leçons alternatives
             lessonGroup-5:
               display_name: Enquête de fin d'unité
+            lessonGroup-6:
+              display_name: Bacs à sable
           lessons:
             lesson-1:
               name: Projet d'art des données abstraites [Version d'un jour]
@@ -2888,6 +2900,8 @@ fr:
               name: Déclarations à sélection multiple
             lesson-15:
               name: 'Unité 4 : Enquête'
+            lesson-17:
+              name: Asphalt Art Project — Jour 2
             lesson-2:
               name: Projet d'art des données abstraites
             lesson-3:
@@ -3011,6 +3025,8 @@ fr:
               display_name: Leçons alternatives
             lessonGroup-5:
               display_name: Enquête de fin d'unité
+            lessonGroup-6:
+              display_name: Bacs à sable
           lessons:
             lesson-1:
               name: Tableaux bidimensionnels (2D)
@@ -3024,6 +3040,8 @@ fr:
               name: Projet narratif personnel [Version d'un jour]
             lesson-14:
               name: 'Unité 5 : Enquête'
+            lesson-16:
+              name: Asphalt Art Project — Jour 2
             lesson-2:
               name: Éléments d'un tableau 2D
             lesson-3:
@@ -3116,6 +3134,8 @@ fr:
               display_name: Leçons alternatives
             lessonGroup-5:
               display_name: Enquête de fin d'unité
+            lessonGroup-6:
+              display_name: Bacs à sable
           lessons:
             lesson-1:
               name: Planification du projet
@@ -3129,6 +3149,8 @@ fr:
               name: Projet de traitement du langage naturel [Version d'un jour]
             lesson-14:
               name: 'Unité 6 : Enquête'
+            lesson-16:
+              name: Asphalt Art Project — Jour 2
             lesson-2:
               name: Sous-chaînes
             lesson-3:
@@ -3268,6 +3290,8 @@ fr:
               display_name: Enquête de fin d'unité
             lessonGroup-5:
               display_name: Leçons alternatives
+            lessonGroup-6:
+              display_name: Bacs à sable
           lessons:
             lesson-1:
               name: Planification du projet
@@ -3281,6 +3305,8 @@ fr:
               name: 'Unité 7 : Enquête'
             lesson-14:
               name: Codage créatif avec The Theater Project [Version d'un jour]
+            lesson-16:
+              name: Asphalt Art Project — Jour 2
             lesson-2:
               name: Références d'objets en tant que paramètres
             lesson-3:
@@ -3419,6 +3445,8 @@ fr:
               display_name: Enquête
             lessonGroup-5:
               display_name: Leçons alternatives
+            lessonGroup-6:
+              display_name: Bacs à sable
           lessons:
             lesson-1:
               name: Planification du projet
@@ -3430,6 +3458,8 @@ fr:
               name: Unité 8 Évaluation
             lesson-13:
               name: Codage créatif avec le projet Console [Version d'un jour]
+            lesson-15:
+              name: Asphalt Art Project — Jour 2
             lesson-2:
               name: Recherche
             lesson-3:
@@ -3550,6 +3580,11 @@ fr:
               display_name: Révision et pratique
             lessonGroup-3:
               display_name: Examens simulés
+            lessonGroup-4:
+              display_name: Bacs à sable
+          lessons:
+            lesson-2:
+              name: Asphalt Art Project — Jour 2
           student_description: Cette unité vous prépare à l'examen AP CSA en passant
             en revue les concepts clés, en vous entraînant à poser des questions à
             choix multiples et à réponse libre et en renforçant les stratégies de
