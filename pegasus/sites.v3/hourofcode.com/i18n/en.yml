@@ -8371,7 +8371,6 @@
   csa_ai_page_faq_answer_11_list_02: "**Goal 2:** Transition from Java Lab to real-world tools."
   csa_ai_page_faq_answer_11_list_03: "**Goal 3:** Deepen understanding of how AI models are trained and integrated into programs."
   csa_ai_page_faq_answer_11_02: "For more information about the values that guided our work, please see our [curriculum values](%{curriculum_values_url})."
-  csa_ai_skinny_banner_desc: "This post-AP® Computer Science A module offers high school students hands-on experience with professional software development tools."
 
   video_library_page_hero_description: "Code.org's growing library of educational videos is available for re-use by educators worldwide, online or in classrooms. Our goal is to amplify our efforts beyond our own curriculum's reach."
   video_library_page_title_ai_works: "How AI Works"
