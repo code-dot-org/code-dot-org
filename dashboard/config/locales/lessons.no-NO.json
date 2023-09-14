@@ -455,6 +455,42 @@
         "express-2022/Dance Party": {
           "name": "Dansefest"
         },
+        "coursea-2023/Happy Maps": {
+          "name": "Glade Kart"
+        },
+        "courseb-2023/Move It, Move It": {
+          "name": "Flytt den, flytt den"
+        },
+        "courseb-2023/Getting Loopy": {
+          "name": "Gå i spinn"
+        },
+        "coursec-2023/The Big Event": {
+          "name": "Den store begivenheten"
+        },
+        "coursec-2023/Binary Bracelets": {
+          "name": "Binær armbånd"
+        },
+        "coursed-2023/Graph Paper Programming": {
+          "name": "Millimeterpapirprogrammering"
+        },
+        "coursed-2023/Relay Programming": {
+          "name": "Relé programmering"
+        },
+        "coursed-2023/Dance Party": {
+          "name": "Dansefest"
+        },
+        "coursed-2023/Conditionals with Cards": {
+          "name": "Betingelser med kort"
+        },
+        "coursee-2023/Songwriting": {
+          "name": "Låtskriving"
+        },
+        "coursef-2023/The Internet": {
+          "name": "Internett"
+        },
+        "express-2023/Dance Party": {
+          "name": "Dansefest"
+        },
         "Hour of Code/Hour of Code 2013": {
           "name": "Kodetimen 2013"
         },
