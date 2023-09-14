@@ -328,6 +328,9 @@
         "CourseD_Dance_2020_01_2021": {
           "dance_callout_01": "Voeg dit blok toe aan je programma!"
         },
+        "CourseD_Dance_2020_01_2023": {
+          "dance_callout_01": "Voeg dit blok toe aan je programma!"
+        },
         "CourseD_Dance_2020_02": {
           "arrow_buttons": "Druk op de pijltjestoetsen om je danser te besturen.",
           "dance_callout_11_a": "Voeg dit blok toe aan je programma."
@@ -340,6 +343,10 @@
           "arrow_buttons": "Druk op de pijltjestoetsen om je danser te besturen.",
           "dance_callout_11_a": "Voeg dit blok toe aan je programma."
         },
+        "CourseD_Dance_2020_02_2023": {
+          "arrow_buttons": "Druk op de pijltjestoetsen om je danser te besturen.",
+          "dance_callout_11_a": "Voeg dit blok toe aan je programma."
+        },
         "CourseD_Dance_2020_04": {
           "dance_callout_02": "Voeg dit blok toe aan je programma!"
         },
@@ -347,6 +354,9 @@
           "dance_callout_02": "Voeg dit blok toe aan je programma!"
         },
         "CourseD_Dance_2020_04_2021": {
+          "dance_callout_02": "Voeg dit blok toe aan je programma!"
+        },
+        "CourseD_Dance_2020_04_2023": {
           "dance_callout_02": "Voeg dit blok toe aan je programma!"
         },
         "CourseD_Dance_2020_05": {
@@ -358,6 +368,9 @@
         "CourseD_Dance_2020_05_2021": {
           "dance_callout_05": "Voeg een nieuw evenement toe aan je programma."
         },
+        "CourseD_Dance_2020_05_2023": {
+          "dance_callout_05": "Voeg een nieuw evenement toe aan je programma."
+        },
         "CourseD_Dance_2020_06": {
           "dance_party_11_5_groups": "Nieuw blok!"
         },
@@ -365,6 +378,9 @@
           "dance_party_11_5_groups": "Nieuw blok!"
         },
         "CourseD_Dance_2020_06_2021": {
+          "dance_party_11_5_groups": "Nieuw blok!"
+        },
+        "CourseD_Dance_2020_06_2023": {
           "dance_party_11_5_groups": "Nieuw blok!"
         },
         "CourseD_Dance_2020_07": {
@@ -376,6 +392,9 @@
         "CourseD_Dance_2020_07_2021": {
           "setprop_hint": "Nieuw blok!"
         },
+        "CourseD_Dance_2020_07_2023": {
+          "setprop_hint": "Nieuw blok!"
+        },
         "CourseD_Dance_2020_09": {
           "new_block_3": "Nieuw blok!",
           "new_block_4": "Nieuw blok!"
@@ -385,6 +404,10 @@
           "new_block_4": "Nieuw blok!"
         },
         "CourseD_Dance_2020_09_2021": {
+          "new_block_3": "Nieuw blok!",
+          "new_block_4": "Nieuw blok!"
+        },
+        "CourseD_Dance_2020_09_2023": {
           "new_block_3": "Nieuw blok!",
           "new_block_4": "Nieuw blok!"
         },
@@ -415,10 +438,17 @@
           "minitoolbox": "Klik hier om het blok uit te breiden.",
           "pointerlocation": "Sleep hier een subjectblok naartoe."
         },
+        "CourseF_outbreak2_2023": {
+          "minitoolbox": "Klik hier om het blok uit te breiden.",
+          "pointerlocation": "Sleep hier een subjectblok naartoe."
+        },
         "CourseF_outbreak7": {
           "costumes_callout": "Klikken om een nieuw kostuum te maken"
         },
         "CourseF_outbreak7_-2022-2": {
+          "costumes_tab": "Klik hier om kostuums aan uw project toe te voegen."
+        },
+        "CourseF_outbreak7_2023": {
           "costumes_tab": "Klik hier om kostuums aan uw project toe te voegen."
         },
         "Dance_2019_01": {
@@ -478,6 +508,9 @@
         "Function intro Ryan_2021": {
           "Function_intro_Ryan_1": "Met deze kleine instructie weet de computer dat het GROTE stuk code met dezelfde naam in de werkruimte moet worden uitgevoerd."
         },
+        "Function intro Ryan_2023": {
+          "Function_intro_Ryan_1": "Met deze kleine instructie weet de computer dat het GROTE stuk code met dezelfde naam in de werkruimte moet worden uitgevoerd."
+        },
         "Geometric Sun": {
           "4-5_Artist_Patterns_Free_Play_1": "Al je favoriete blokken zijn nu ingedeeld in verschillende categorieën. Klik op deze woorden om te zien waar alles is ingedeeld!"
         },
@@ -518,6 +551,9 @@
         "MC_HOC_2017_03_Cole_2021": {
           "MC_HOC_2017_03_Cole_1": "Dit is een 'herhalen'-lus!  Maak deze vast in de werkruimte en voeg code to die je steeds weer wilt uitvoeren."
         },
+        "MC_HOC_2017_03_Cole_2023": {
+          "MC_HOC_2017_03_Cole_1": "Dit is een 'herhalen'-lus!  Maak deze vast in de werkruimte en voeg code to die je steeds weer wilt uitvoeren."
+        },
         "MC_HOC_2017_04_Cole": {
           "MC_HOC_2017_04_Cole_a": "De agent kan over water zweven, maar de speler niet!"
         },
@@ -531,6 +567,9 @@
           "MC_HOC_2017_04_Cole_a": "De agent kan over water zweven, maar de speler niet!"
         },
         "MC_HOC_2017_04_Cole_2021": {
+          "MC_HOC_2017_04_Cole_a": "De agent kan over water zweven, maar de speler niet!"
+        },
+        "MC_HOC_2017_04_Cole_2023": {
           "MC_HOC_2017_04_Cole_a": "De agent kan over water zweven, maar de speler niet!"
         },
         "MC_HOC_2017_06_Cole": {
@@ -548,6 +587,9 @@
         "MC_HOC_2017_06_Cole_2021": {
           "MC_HOC_2017_06_Cole_1": "Je kunt deze blokken niet weggooien, maar je kunt ze wel bewerken!"
         },
+        "MC_HOC_2017_06_Cole_2023": {
+          "MC_HOC_2017_06_Cole_1": "Je kunt deze blokken niet weggooien, maar je kunt ze wel bewerken!"
+        },
         "MC_HOC_2017_Ali": {
           "MC_HOC_2017_08_RY_1": "De agent kan over lava zweven, maar de speler niet!  "
         },
@@ -561,6 +603,9 @@
           "MC_HOC_2017_08_RY_1": "De agent kan over lava zweven, maar de speler niet!  "
         },
         "MC_HOC_2017_Ali_2021": {
+          "MC_HOC_2017_08_RY_1": "De agent kan over lava zweven, maar de speler niet!  "
+        },
+        "MC_HOC_2017_Ali_2023": {
           "MC_HOC_2017_08_RY_1": "De agent kan over lava zweven, maar de speler niet!  "
         },
         "NEW Course 4 Artist Functions 3": {
@@ -622,6 +667,9 @@
         "Overworld Chop Trees_2021": {
           "craft_callout_preplaced": "We hebben hier al wat blokken geplaatst om je op weg te helpen"
         },
+        "Overworld Chop Trees_2023": {
+          "craft_callout_preplaced": "We hebben hier al wat blokken geplaatst om je op weg te helpen"
+        },
         "Overworld House Frame Chosen": {
           "craft_callout_preplaced_house": "Met dit programma begin je je huis te bouwen. Kun jij het afmaken?"
         },
@@ -635,6 +683,9 @@
           "craft_callout_preplaced_house": "Met dit programma begin je je huis te bouwen. Kun jij het afmaken?"
         },
         "Overworld House Frame Chosen_2021": {
+          "craft_callout_preplaced_house": "Met dit programma begin je je huis te bouwen. Kun jij het afmaken?"
+        },
+        "Overworld House Frame Chosen_2023": {
           "craft_callout_preplaced_house": "Met dit programma begin je je huis te bouwen. Kun jij het afmaken?"
         },
         "Overworld Move to Sheep": {
@@ -652,6 +703,9 @@
         "Overworld Move to Sheep_2021": {
           "craft_run_button_callout": "Klik op \"Run\" om je programma te proberen"
         },
+        "Overworld Move to Sheep_2023": {
+          "craft_run_button_callout": "Klik op \"Run\" om je programma te proberen"
+        },
         "Overworld Place Wall": {
           "craft_inside_repeat": "Herhaal acties door blokken hier in te plaatsen"
         },
@@ -665,6 +719,9 @@
           "craft_inside_repeat": "Herhaal acties door blokken hier in te plaatsen"
         },
         "Overworld Place Wall_2021": {
+          "craft_inside_repeat": "Herhaal acties door blokken hier in te plaatsen"
+        },
+        "Overworld Place Wall_2023": {
           "craft_inside_repeat": "Herhaal acties door blokken hier in te plaatsen"
         },
         "Underground Avoiding Lava": {
@@ -682,6 +739,9 @@
         "Underground Avoiding Lava_2021": {
           "craft_callout_moveforward": "Deze code kijkt of er lava is, kun jij een opdracht toevoegen om vooruit te bewegen?"
         },
+        "Underground Avoiding Lava_2023": {
+          "craft_callout_moveforward": "Deze code kijkt of er lava is, kun jij een opdracht toevoegen om vooruit te bewegen?"
+        },
         "Underground Iron": {
           "craft_what_is_iron": "Delf dit ijzer!"
         },
@@ -695,6 +755,9 @@
           "craft_what_is_iron": "Delf dit ijzer!"
         },
         "Underground Iron_2021": {
+          "craft_what_is_iron": "Delf dit ijzer!"
+        },
+        "Underground Iron_2023": {
           "craft_what_is_iron": "Delf dit ijzer!"
         },
         "course2_bee_conditionals_challenge2": {
@@ -739,6 +802,9 @@
         "courseA_playLab_events42022": {
           "courseA_playlab_events4_callout1": "Dit is een toelichting"
         },
+        "courseA_playLab_events42022_2023": {
+          "courseA_playlab_events4_callout1": "Dit is een toelichting"
+        },
         "courseA_playLab_events4_2018": {
           "courseA_playlab_events4_callout1": "Dit is een toelichting"
         },
@@ -755,6 +821,9 @@
           "courseA_playLab_events5_1": "Klik hier om de richting van de gebeurtenis pijl te veranderen."
         },
         "courseA_playLab_events52022": {
+          "courseA_playLab_events5_1": "Klik hier om de richting van de gebeurtenis pijl te veranderen."
+        },
+        "courseA_playLab_events52022_2023": {
           "courseA_playLab_events5_1": "Klik hier om de richting van de gebeurtenis pijl te veranderen."
         },
         "courseA_playLab_events5_2018": {
@@ -785,6 +854,9 @@
           "courseE_playLab_scaffold3_1": "Breng de speler naar deze vlag om naar het volgende level te gaan/"
         },
         "courseC19_playLab_EOC3_2021": {
+          "courseE_playLab_scaffold3_1": "Breng de speler naar deze vlag om naar het volgende level te gaan/"
+        },
+        "courseC19_playLab_EOC3_2023": {
           "courseE_playLab_scaffold3_1": "Breng de speler naar deze vlag om naar het volgende level te gaan/"
         },
         "courseC_artist_loopsPrePre1a": {
@@ -820,6 +892,9 @@
         "courseC_collector_prog7_2021": {
           "courseC_collector_prog7_1": "Je kunt meer blokken uit de gereedschapskist gebruiken als je ze nodig hebt!"
         },
+        "courseC_collector_prog7_2023": {
+          "courseC_collector_prog7_1": "Je kunt meer blokken uit de gereedschapskist gebruiken als je ze nodig hebt!"
+        },
         "courseC_harvester_loops1": {
           "courseC_harvester_loops1_callout1": "Het getal 4 bij de pompoen vertelt je dat er 4 pompoenen zijn die je kunt plukken."
         },
@@ -838,6 +913,9 @@
         "courseC_harvester_loops1_2021": {
           "courseC_harvester_loops1_callout1": "Het getal 4 bij de pompoen vertelt je dat er 4 pompoenen zijn die je kunt plukken."
         },
+        "courseC_harvester_loops1_2023": {
+          "courseC_harvester_loops1_callout1": "Het getal 4 bij de pompoen vertelt je dat er 4 pompoenen zijn die je kunt plukken."
+        },
         "courseC_maze_programming3": {
           "courseC_maze_programming3_3": "Deze grijze blokken zijn gemaakt van steen en kunnen niet weggegooid worden."
         },
@@ -854,6 +932,9 @@
           "courseC_maze_programming3_3": "Deze grijze blokken zijn gemaakt van steen en kunnen niet weggegooid worden."
         },
         "courseC_maze_programming3_2021": {
+          "courseC_maze_programming3_3": "Deze grijze blokken zijn gemaakt van steen en kunnen niet weggegooid worden."
+        },
+        "courseC_maze_programming3_2023": {
           "courseC_maze_programming3_3": "Deze grijze blokken zijn gemaakt van steen en kunnen niet weggegooid worden."
         },
         "courseC_maze_programming7": {
@@ -880,6 +961,10 @@
           "courseC_maze_programming7_1": "Dit is je eerste Uitdaging!  Het is de bedoeling dat dit moeilijke puzzles zijn, en je hebt waarschijnlijk meerdere pogingen nodig om ze op te lossen.",
           "courseC_maze_programming7_2": "Deze grijze blokken zijn gemaakt van steen en kunnen niet weggegooid worden."
         },
+        "courseC_maze_programming7_2023": {
+          "courseC_maze_programming7_1": "Dit is je eerste Uitdaging!  Het is de bedoeling dat dit moeilijke puzzles zijn, en je hebt waarschijnlijk meerdere pogingen nodig om ze op te lossen.",
+          "courseC_maze_programming7_2": "Deze grijze blokken zijn gemaakt van steen en kunnen niet weggegooid worden."
+        },
         "courseC_starWars_loops2": {
           "courseC_starWars_loops2": "Je mag slechts een van deze blokken gebruiken in deze puzzle."
         },
@@ -896,6 +981,9 @@
           "courseC_starWars_loops2": "Je mag slechts een van deze blokken gebruiken in deze puzzle."
         },
         "courseC_starWars_loops2_2021": {
+          "courseC_starWars_loops2": "Je mag slechts een van deze blokken gebruiken in deze puzzle."
+        },
+        "courseC_starWars_loops2_2023": {
           "courseC_starWars_loops2": "Je mag slechts een van deze blokken gebruiken in deze puzzle."
         },
         "courseC_starWars_loops2_copy": {
@@ -922,6 +1010,9 @@
         "courseD_artist_nestedLoops1a_2021": {
           "courseD_artist_nestedLoops1a_1": "Je hoeft geen kleuren te gebruiken om deze puzzle op te lossen. Wil je wel kleuren gebruiken, dan kan dit `willekeurige kleur`-blok je helpen."
         },
+        "courseD_artist_nestedLoops1a_2023": {
+          "courseD_artist_nestedLoops1a_1": "Je hoeft geen kleuren te gebruiken om deze puzzle op te lossen. Wil je wel kleuren gebruiken, dan kan dit `willekeurige kleur`-blok je helpen."
+        },
         "courseD_artist_ramp11": {
           "courseD_artist_ramp11_1": "Je kunt dit getal veranderen.",
           "courseD_artist_ramp11_2": "Klik hier om het aantal keren in te tikken dat je je code wilt herhalen."
@@ -943,6 +1034,9 @@
           "4_5_Bee_Conditionals_2_1": "Vergeet niet, controleer of ELKE wolk een BLOEM heeft. Je hoeft niet te kijken of er honingraten staan."
         },
         "courseD_bee_conditionals2_2021": {
+          "4_5_Bee_Conditionals_2_1": "Vergeet niet, controleer of ELKE wolk een BLOEM heeft. Je hoeft niet te kijken of er honingraten staan."
+        },
+        "courseD_bee_conditionals2_2023": {
           "4_5_Bee_Conditionals_2_1": "Vergeet niet, controleer of ELKE wolk een BLOEM heeft. Je hoeft niet te kijken of er honingraten staan."
         },
         "courseD_bee_conditionals2_copy": {
@@ -971,6 +1065,9 @@
         "courseD_bee_conditionals_challenge2_2021": {
           "courseD_bee_conditionals_challenge2_1": "Gebruik deze lus om alle nectar te verzamelen (of alle honing te maken) uit een bloem (of bij een honingraat)."
         },
+        "courseD_bee_conditionals_challenge2_2023": {
+          "courseD_bee_conditionals_challenge2_1": "Gebruik deze lus om alle nectar te verzamelen (of alle honing te maken) uit een bloem (of bij een honingraat)."
+        },
         "courseD_collector_ramp8": {
           "courseD_collector_ramp8_1": "Gebruik dit blok om een enkele schat op te rapen."
         },
@@ -988,6 +1085,9 @@
           "courseE_artist_ramp8_2": "Klik hier om het aantal keren in te tikken dat je je code wilt herhalen."
         },
         "courseE_aboutme_22022": {
+          "": "Klik hier om kostuums aan uw project toe te voegen."
+        },
+        "courseE_aboutme_2_2023": {
           "": "Klik hier om kostuums aan uw project toe te voegen."
         },
         "courseE_artist_functions1": {
@@ -1017,6 +1117,9 @@
         "courseE_artist_functions2_2021": {
           "courseD_artist_functions2_1": "Als dit groene blok loopt wordt uitgevoerd, zal alle code in de functie worden uitgevoerd. Wat zou de artiest moeten doen nadat hij het eerste vierkant heeft getekend?"
         },
+        "courseE_artist_functions2_2023": {
+          "courseD_artist_functions2_1": "Als dit groene blok loopt wordt uitgevoerd, zal alle code in de functie worden uitgevoerd. Wat zou de artiest moeten doen nadat hij het eerste vierkant heeft getekend?"
+        },
         "courseE_artist_functions2_copy": {
           "courseD_artist_functions2_1": "Als dit groene blok loopt wordt uitgevoerd, zal alle code in de functie worden uitgevoerd. Wat zou de artiest moeten doen nadat hij het eerste vierkant heeft getekend?"
         },
@@ -1039,6 +1142,9 @@
           "courseD_artist_functions8_1": "De blokken waarmee je functies maakt en waarmee je ze aanroept, staan in het vervolg onder dit label."
         },
         "courseE_artist_functions8a_2021": {
+          "courseD_artist_functions8_1": "De blokken waarmee je functies maakt en waarmee je ze aanroept, staan in het vervolg onder dit label."
+        },
+        "courseE_artist_functions8a_2023": {
           "courseD_artist_functions8_1": "De blokken waarmee je functies maakt en waarmee je ze aanroept, staan in het vervolg onder dit label."
         },
         "courseE_artist_functions_challenge1": {
@@ -1065,6 +1171,10 @@
           "courseE_artist_functions_challenge1_callout1": "Laat het programma verder gaan, door onderaan extra code toe te voegen.",
           "courseE_artist_functions_challenge1_callout2": "Als je dit ontwerp niet mooi vindt, kun je het veranderen zoals je maar wilt!"
         },
+        "courseE_artist_functions_challenge1_2023": {
+          "courseE_artist_functions_challenge1_callout1": "Laat het programma verder gaan, door onderaan extra code toe te voegen.",
+          "courseE_artist_functions_challenge1_callout2": "Als je dit ontwerp niet mooi vindt, kun je het veranderen zoals je maar wilt!"
+        },
         "courseE_artist_functions_challenge2": {
           "courseE_artist_functions_challenge2_callout1": "Laat het programma verder gaan, door onderaan extra code toe te voegen.",
           "courseE_artist_functions_challenge2_callout2": "Als je dit ontwerp niet mooi vindt, kun je het veranderen zoals je maar wilt!"
@@ -1086,6 +1196,10 @@
           "courseE_artist_functions_challenge2_callout2": "Als je dit ontwerp niet mooi vindt, kun je het veranderen zoals je maar wilt!"
         },
         "courseE_artist_functions_challenge2_2021": {
+          "courseE_artist_functions_challenge2_callout1": "Laat het programma verder gaan, door onderaan extra code toe te voegen.",
+          "courseE_artist_functions_challenge2_callout2": "Als je dit ontwerp niet mooi vindt, kun je het veranderen zoals je maar wilt!"
+        },
+        "courseE_artist_functions_challenge2_2023": {
           "courseE_artist_functions_challenge2_callout1": "Laat het programma verder gaan, door onderaan extra code toe te voegen.",
           "courseE_artist_functions_challenge2_callout2": "Als je dit ontwerp niet mooi vindt, kun je het veranderen zoals je maar wilt!"
         },
@@ -1118,6 +1232,9 @@
         "courseE_farmer_functions13_2021": {
           "courseE_farmer_functions1a_1": "Deze groenten is onbekend. Als je de puzzle start zal er telkens iets anders staan."
         },
+        "courseE_farmer_functions13_2023": {
+          "courseE_farmer_functions1a_1": "Deze groenten is onbekend. Als je de puzzle start zal er telkens iets anders staan."
+        },
         "courseE_farmer_functions1_2018": {
           "courseE_farmer_functions1_2": "De toolbox is vanaf nu een beetje anders georganiseerd! Klik op de verschillende categorieën om de blokken te zien."
         },
@@ -1128,6 +1245,9 @@
           "courseE_farmer_functions1_2": "De toolbox is vanaf nu een beetje anders georganiseerd! Klik op de verschillende categorieën om de blokken te zien."
         },
         "courseE_farmer_functions1_2021": {
+          "courseE_farmer_functions1_2": "De toolbox is vanaf nu een beetje anders georganiseerd! Klik op de verschillende categorieën om de blokken te zien."
+        },
+        "courseE_farmer_functions1_2023": {
           "courseE_farmer_functions1_2": "De toolbox is vanaf nu een beetje anders georganiseerd! Klik op de verschillende categorieën om de blokken te zien."
         },
         "courseE_farmer_functions1a": {
@@ -1148,6 +1268,9 @@
         "courseE_farmer_functions1a_2021": {
           "courseE_farmer_functions1a_1": "Deze groenten is onbekend. Als je de puzzle start zal er telkens iets anders staan."
         },
+        "courseE_farmer_functions1a_2023": {
+          "courseE_farmer_functions1a_1": "Deze groenten is onbekend. Als je de puzzle start zal er telkens iets anders staan."
+        },
         "courseE_farmer_functions2b": {
           "courseE_farmer_functions1a_1": "Deze groenten is onbekend. Als je de puzzle start zal er telkens iets anders staan."
         },
@@ -1166,16 +1289,81 @@
         "courseE_farmer_functions2b_2021": {
           "courseE_farmer_functions1a_1": "Deze groenten is onbekend. Als je de puzzle start zal er telkens iets anders staan."
         },
+        "courseE_farmer_functions2b_2023": {
+          "courseE_farmer_functions1a_1": "Deze groenten is onbekend. Als je de puzzle start zal er telkens iets anders staan."
+        },
         "courseE_playLab_scaffold3": {
           "courseE_playLab_scaffold3_1": "Breng de speler naar deze vlag om naar het volgende level te gaan/"
         },
         "coursee_helloworld_events": {
           "hello_world_click_hint": "Voeg dit eventblok toe aan uw werkruimte."
         },
+        "coursee_helloworld_events_2023": {
+          "hello_world_click_hint": "Voeg dit eventblok toe aan uw werkruimte."
+        },
         "coursee_helloworld_freeplay": {
           "costumes_tab": "Klik hier om kostuums aan uw project toe te voegen."
         },
+        "coursee_helloworld_freeplay_2023": {
+          "costumes_tab": "Klik hier om kostuums aan uw project toe te voegen."
+        },
         "coursee_helloworld_say": {
+          "hello_world_make_sprite": "Gebruik dit blok om een sprite te creëren.",
+          "hello_world_say": "Gebruik dit blok om sprites te laten spreken."
+        },
+        "coursee_helloworld_say_2023": {
+          "hello_world_make_sprite": "Gebruik dit blok om een sprite te creëren.",
+          "hello_world_say": "Gebruik dit blok om sprites te laten spreken."
+        },
+        "csc-starquilts-comment_2023": {
+          "New Artist Project_callout1": "Klik op de categorieën om de blokken in je gereedschapskist te zien! Sleep blokken naar het werkveld om ze aan je programma toe te voegen.",
+          "New Artist Project_callout2": "Druk op 'Uitvoeren' om je programma op te slaan en uit te voeren",
+          "sign_in_to_save_project": "Wil je later nog bij je project kunnen? Log in om dit project in je account op te slaan!"
+        },
+        "csc-starquilts-repeat_2023": {
+          "New Artist Project_callout1": "Klik op de categorieën om de blokken in je gereedschapskist te zien! Sleep blokken naar het werkveld om ze aan je programma toe te voegen.",
+          "New Artist Project_callout2": "Druk op 'Uitvoeren' om je programma op te slaan en uit te voeren",
+          "sign_in_to_save_project": "Wil je later nog bij je project kunnen? Log in om dit project in je account op te slaan!"
+        },
+        "csc-starquilts-rhombus-freeplay_2023": {
+          "New Artist Project_callout1": "Klik op de categorieën om de blokken in je gereedschapskist te zien! Sleep blokken naar het werkveld om ze aan je programma toe te voegen.",
+          "New Artist Project_callout2": "Druk op 'Uitvoeren' om je programma op te slaan en uit te voeren",
+          "sign_in_to_save_project": "Wil je later nog bij je project kunnen? Log in om dit project in je account op te slaan!"
+        },
+        "csc-starquilts-row1_2023": {
+          "New Artist Project_callout1": "Klik op de categorieën om de blokken in je gereedschapskist te zien! Sleep blokken naar het werkveld om ze aan je programma toe te voegen.",
+          "New Artist Project_callout2": "Druk op 'Uitvoeren' om je programma op te slaan en uit te voeren",
+          "sign_in_to_save_project": "Wil je later nog bij je project kunnen? Log in om dit project in je account op te slaan!"
+        },
+        "csc-starquilts-row2_2023": {
+          "New Artist Project_callout1": "Klik op de categorieën om de blokken in je gereedschapskist te zien! Sleep blokken naar het werkveld om ze aan je programma toe te voegen.",
+          "New Artist Project_callout2": "Druk op 'Uitvoeren' om je programma op te slaan en uit te voeren",
+          "sign_in_to_save_project": "Wil je later nog bij je project kunnen? Log in om dit project in je account op te slaan!"
+        },
+        "csc-starquilts-row3_2023": {
+          "New Artist Project_callout1": "Klik op de categorieën om de blokken in je gereedschapskist te zien! Sleep blokken naar het werkveld om ze aan je programma toe te voegen.",
+          "New Artist Project_callout2": "Druk op 'Uitvoeren' om je programma op te slaan en uit te voeren",
+          "sign_in_to_save_project": "Wil je later nog bij je project kunnen? Log in om dit project in je account op te slaan!"
+        },
+        "csc-starquilts-row4_2023": {
+          "New Artist Project_callout1": "Klik op de categorieën om de blokken in je gereedschapskist te zien! Sleep blokken naar het werkveld om ze aan je programma toe te voegen.",
+          "New Artist Project_callout2": "Druk op 'Uitvoeren' om je programma op te slaan en uit te voeren",
+          "sign_in_to_save_project": "Wil je later nog bij je project kunnen? Log in om dit project in je account op te slaan!"
+        },
+        "csc-starquilts-row5_2023": {
+          "New Artist Project_callout1": "Klik op de categorieën om de blokken in je gereedschapskist te zien! Sleep blokken naar het werkveld om ze aan je programma toe te voegen.",
+          "New Artist Project_callout2": "Druk op 'Uitvoeren' om je programma op te slaan en uit te voeren",
+          "sign_in_to_save_project": "Wil je later nog bij je project kunnen? Log in om dit project in je account op te slaan!"
+        },
+        "csc_animal_adaptations_bugs2": {
+          "hello_world_behavior_blocks": "Gebruik dit blok met een van de onderstaande gedragingen."
+        },
+        "csc_starquilts_freeplay_2023": {
+          "New Artist Project_callout1": "Klik op de categorieën om de blokken in je gereedschapskist te zien! Sleep blokken naar het werkveld om ze aan je programma toe te voegen.",
+          "New Artist Project_callout2": "Druk op 'Uitvoeren' om je programma op te slaan en uit te voeren",
+          "sign_in_to_save_project": "Wil je later nog bij je project kunnen? Log in om dit project in je account op te slaan!"
+        },
+        "ecosystems_helloworld_say_2023": {
           "hello_world_make_sprite": "Gebruik dit blok om een sprite te creëren.",
           "hello_world_say": "Gebruik dit blok om sprites te laten spreken."
         },
@@ -1255,6 +1443,12 @@
         "helloworld_animals_sounds": {
           "hello_world_new": "Nieuw blok!"
         },
+        "helloworld_bugs_behaviors_2023": {
+          "hello_world_behavior_blocks": "Gebruik dit blok met een van de onderstaande gedragingen."
+        },
+        "helloworld_bunny_adaptation_2023": {
+          "hw_Run": "Klik hier om de code uit te voeren."
+        },
         "helloworld_emoji_backgrounds": {
           "hw_background_location": "Gebruik dit blok om een nieuwe achtergrond in te stellen."
         },
@@ -1293,6 +1487,9 @@
         "helloworld_food_backgrounds": {
           "hw_background_location": "Gebruik dit blok om een nieuwe achtergrond in te stellen."
         },
+        "helloworld_food_backgrounds_2023": {
+          "hw_background_location": "Gebruik dit blok om een nieuwe achtergrond in te stellen."
+        },
         "helloworld_food_backgrounds_soccer-2022": {
           "hw_background_location": "Gebruik dit blok om een nieuwe achtergrond in te stellen."
         },
@@ -1300,6 +1497,9 @@
           "hw_background_location": "Gebruik dit blok om een nieuwe achtergrond in te stellen."
         },
         "helloworld_food_behaviors": {
+          "hello_world_behavior_blocks": "Gebruik dit blok met een van de onderstaande gedragingen."
+        },
+        "helloworld_food_behaviors_2023": {
           "hello_world_behavior_blocks": "Gebruik dit blok met een van de onderstaande gedragingen."
         },
         "helloworld_food_behaviors_soccer-2022": {
@@ -1311,10 +1511,16 @@
         "helloworld_food_click": {
           "hw_Run": "Klik hier om de code uit te voeren."
         },
+        "helloworld_food_click_2023": {
+          "hw_Run": "Klik hier om de code uit te voeren."
+        },
         "helloworld_food_click_soccer-2022": {
           "hw_Run": "Klik hier om de code uit te voeren."
         },
         "helloworld_food_costumes": {
+          "hello_world_new": "Nieuw blok!"
+        },
+        "helloworld_food_costumes_2023": {
           "hello_world_new": "Nieuw blok!"
         },
         "helloworld_food_costumes_soccer-2022": {
@@ -1344,6 +1550,9 @@
         "helloworld_food_location": {
           "pin": "pin"
         },
+        "helloworld_food_location_2023": {
+          "pin": "pin"
+        },
         "helloworld_food_location_soccer-2022": {
           "pin": "pin"
         },
@@ -1351,6 +1560,9 @@
           "pin": "pin"
         },
         "helloworld_food_multi": {
+          "pin": "pin"
+        },
+        "helloworld_food_multi_2023": {
           "pin": "pin"
         },
         "helloworld_food_multi_soccer-2022": {
@@ -1375,6 +1587,10 @@
           "hello_world_new": "Nieuw blok!",
           "hello_world_new_block": "Nieuw blok!"
         },
+        "helloworld_food_sizes_2023": {
+          "hello_world_new": "Nieuw blok!",
+          "hello_world_new_block": "Nieuw blok!"
+        },
         "helloworld_food_sizes_soccer-2022": {
           "hello_world_new": "Nieuw blok!",
           "hello_world_new_block": "Nieuw blok!"
@@ -1384,6 +1600,9 @@
           "hello_world_new_block": "Nieuw blok!"
         },
         "helloworld_food_sounds": {
+          "hello_world_new": "Nieuw blok!"
+        },
+        "helloworld_food_sounds_2023": {
           "hello_world_new": "Nieuw blok!"
         },
         "helloworld_food_sounds_soccer-2022": {
@@ -1437,11 +1656,22 @@
         "poetry_hoc_addSprites": {
           "poetry_sprite": "Nieuw blok!"
         },
+        "poetry_hoc_addSprites_2023": {
+          "poetry_sprite": "Nieuw blok!"
+        },
         "poetry_hoc_backgroundEffects": {
           "poetry_background": "Hier vindt u codeblokken. ",
           "run_button": "Gebruik deze knop om uw animatie te testen. "
         },
+        "poetry_hoc_backgroundEffects_2023": {
+          "poetry_background": "Hier vindt u codeblokken. ",
+          "run_button": "Gebruik deze knop om uw animatie te testen. "
+        },
         "poetry_hoc_events1": {
+          "poetry_event": "Nieuw blok!",
+          "poetry_foreground": "Nieuw blok!"
+        },
+        "poetry_hoc_events1_2023": {
           "poetry_event": "Nieuw blok!",
           "poetry_foreground": "Nieuw blok!"
         },
@@ -1451,7 +1681,15 @@
           "poetry_new_block": "Nieuw blok!",
           "poetry_selector": "Kies een gedicht of typ er zelf een!"
         },
+        "poetry_hoc_freeplay_2023": {
+          "poetry_new_block": "Nieuw blok!",
+          "poetry_selector": "Kies een gedicht of typ er zelf een!"
+        },
         "poetry_hoc_sounds": {
+          "poetry_music": "Nieuw blok!",
+          "poetry_sound": "Nieuw blok!"
+        },
+        "poetry_hoc_sounds_2023": {
           "poetry_music": "Nieuw blok!",
           "poetry_sound": "Nieuw blok!"
         },
@@ -1459,7 +1697,15 @@
           "poetry_sprite_begins": "Nieuw blok!",
           "poetry_sprite_stops": "Nieuw blok!"
         },
+        "poetry_hoc_spriteBehaviors_2023": {
+          "poetry_sprite_begins": "Nieuw blok!",
+          "poetry_sprite_stops": "Nieuw blok!"
+        },
         "poetry_hoc_spriteSizes": {
+          "poetry_remove_sprite": "Nieuw blok!",
+          "poetry_set_sprite": "Nieuw blok!"
+        },
+        "poetry_hoc_spriteSizes_2023": {
           "poetry_remove_sprite": "Nieuw blok!",
           "poetry_set_sprite": "Nieuw blok!"
         }
