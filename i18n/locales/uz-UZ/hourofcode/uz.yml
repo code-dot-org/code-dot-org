@@ -192,6 +192,17 @@ uz:
   grade_level_label_elementary: Boshlang'ich Maktab
   grade_level_label_middle: O‘rta Maktab
   grade_level_label_high: Yuqori Sinflar
+  curricula_title_elementary: Boshlang'ich maktab o'quv dasturlari
+  curricula_desc_elementary: Boshlang'ich sinf o'quvchilari bilan informatika fanini
+    o'rganishga taklif qiladigan qiziqarli, bepul kurslar va mashg'ulotlarni ko'rib
+    chiqing.
+  curricula_title_middle: O'rta maktab o'quv dasturlari
+  curricula_desc_middle: Sizga va o'rta maktab o'quvchilariga informatika fanini birgalikda
+    o'rganishga imkon beradigan qiziqarli takliflarni ko'rib chiqing.
+  curricula_title_high: O'rta maktab o'quv dasturlari
+  curricula_desc_high: Sizni va o'rta maktab o'quvchilaringizni informatika fanini
+    chuqurroq o'rganishga taklif qiladigan qiziqarli kurslar va tadbirlarni ko'rib
+    chiqing.
   students_label: Oʻquvchilar
   teachers_label: O‘qituvchilar
   teacher_label_csf: KF Asoslari o'qituvchisi
@@ -220,6 +231,13 @@ uz:
   call_to_action_explore_collection: 'To''plamni o''rganib chqing '
   call_to_action_explore_unplugged_lesson: 'Kompyutersiz (Oflayn) darslarni o''rganib
     chiqing '
+  call_to_action_explore_csf: CS asoslarini o'rganing
+  call_to_action_explore_csd: CS kashfiyotlarini o'rganing
+  call_to_action_explore_csp: CS tamoyillarini o'rganing
+  call_to_action_explore_csc: CS ulanishlarini o'rganing
+  call_to_action_explore_csa: AP® kompyuter fanlari A ni o'rganing
+  call_to_action_explore_maker: Maker o'quv dasturlarini o'rganing
+  call_to_action_explore_hoc: Kod soatlari bo'yicha darsliklarni o'rganing
   call_to_action_try_app_lab: App Labbni sinab ko'ring
   call_to_action_view_lesson_plan: Dars rejasini ko‘zdan kechirib chiqing
   call_to_action_self_paced_pl: Mustaqil ravishda professional O'rganishni boshlang
@@ -269,6 +287,7 @@ uz:
   call_to_action_notify_available: Mavjud bo'lganda menga xabar bering
   call_to_action_register_early_access: Erta kirish uchun ro'yxatdan o'ting
   call_to_action_open_positions: Ochiq pozitsiyalarni ko'rish
+  call_to_action_get_guide: Qo'llanmani oling
   aria_label_call_to_action_afe: Amazon Future Engineer haqida ko'proq bilib oling
   aria_label_call_to_action_teaching_csf: Kompyuter fanlari asoslarini o'qitish professional
     ta'lim dasturini boshlang
@@ -382,6 +401,8 @@ uz:
   curriculum_name_csa: Kompyuter fanlari A
   curriculum_name_csc_02: Har qanday Kompyuter aloqalari modullari
   curriculum_name_ai: Sun’iy intellekt (AI) va mashinalar o‘rganishi
+  curriculum_name_artificial_intelligence: Sun'iy intellekt (AI)
+  curriculum_name_maker: Ishlab chiqaruvchi
   curriculum_name_maker_cp: 'Vositalar (Circuit Playground) yordamida ilovalarni yaratish '
   curriculum_name_maker_microbit: Vositalar (micro:bit) yordamida ilovalarni yaratish
   curriculum_name_creating_apps_with_devices: Qurilmalar orqali Ilovalarni Yaratish
@@ -443,6 +464,12 @@ uz:
     rolini o'rganing. Uskunalarga ma'lumot kiritish va chiqarishda foydalaniladigan
     dasturlarni ishlab chiqing. Ushbu bo'limning mikro:bit va Circuit Playground (Sxema
     o'yin maydonchasi) uchun versiyasi mavjud.
+  curriculum_desc_csa: Talabalarni AP® Computer Science A (AP® CSA) uchun ushbu bepul
+    o'quv dasturida Java dasturlash tilini o'rganayotganda dasturiy injiniring va
+    ob'ektga yo'naltirilgan dizayn bilan tanishtiring.
+  curriculum_desc_maker: Maker ta'limi STEM (fan, texnologiya, muhandislik, matematika)
+    ni muammoni hal qilish va tanqidiy fikrlashni o'rgatish uchun sinfga amaliy tajriba
+    va hamkorlikni taklif qilish orqali oldinga qadam qo'yadi.
   collection_hardware: Uskunaga diqqat qarating
   collection_hardware_desc: O'quvchilarni muammolarni yechishda uchun ma'lumotlar
     va jismoniy qurilmalardan foydalanish imkoniyatini beradi.
@@ -478,6 +505,7 @@ uz:
   module_label_languages: 'Qo''llab-quvvatlanadigan tillar:'
   module_label_accessibility_features: 'Imkoniyati chegaralanganlar uchun foydalanish
     imkoniyatlari:'
+  module_label_accessibility_features_full: 'Erişilebilirlik xususiyatlari:'
   module_label_educator_tool: O'qituvchi vositasi
   module_label_educator_course: O'qituvchi kursi
   module_label_student_tool: Talaba vositasi
@@ -485,6 +513,7 @@ uz:
   module_label_student_content_resources: Mundarija va manbalar
   module_label_new: Yangi
   module_label_coming_soon: Tez orada
+  module_label_available_now: Hozir mavjud
   module_label_video_series: Video seriyasi
   module_label_self_paced: O'z-o'zidan ishlaydigan modul
   module_ages_5_10: 5-10
@@ -495,6 +524,8 @@ uz:
   module_grade_2_5: 2-5
   module_grade_3_5: 3-5
   module_grade_3_8: 3-8
+  module_grade_k_12: K-12
+  module_grade_3_12: 3-12
   module_grade_6_12: 6-12
   module_grade_6_10: 6-10
   module_grade_9_12: 9-12
@@ -509,7 +540,9 @@ uz:
   module_grade_9_12_teachers: '9-12 O''qituvchilari '
   module_level_beginner: Boshlang'ich
   module_level_intermediate: O'rta
+  module_level_advanced: Kengaytirilgan
   module_duration_45_mins: 45 daqiqa
+  module_duration_2_weeks: 2 hafta
   module_duration_1_hr: 1 soat
   module_duration_2_hrs: 2 soat
   module_duration_3_hrs: 3 soat
@@ -592,6 +625,8 @@ uz:
   heading_java_lab: Java laboratoriyasi
   heading_objects_first: Avval ob'ektlar
   heading_these_lessons_will: 'Ushbu darslar:'
+  heading_explore_curriculum_catalog: O'quv dasturlari katalogidagi barcha kurslarimizni
+    o'rganing
   professional_learning_section_desc: O'qitishga tayyorgarlik ko'rayotganda kerakli
     yordamni oling. O'qituvchilar buni yaxshi ko'radilar, 90% dan ortig'i bu eng yaxshi
     kasbiy rivojlanish reytingiga ega!
@@ -865,6 +900,11 @@ uz:
     keltirib chiqaradigan yangi texnologiya haqida ko''proq bilib oling. Ushbu yangi
     texnologiyalar qanday ishlashini to''g''ridan-to''g''ri mutaxassislardan tinglang:
     Mira Murati, OpenAI CTO va RunwayML bosh direktori Kristobal Valenzuela.'
+  ai_pl_101_llm_slides_title: O'qituvchilar uchun katta til modeli taklif qiladi
+  ai_pl_101_llm_slides_desc: ChatGpt kabi LLM-lardan eng yaxshi natijalarni olish
+    uchun vositalar, boshlang'ichdan ilg'orgacha. Oyoq barmoqlarini botirganlar uchun
+    boshlang'ich ko'rsatmalarni, shuningdek, o'z potentsialini maksimal darajada oshirishni
+    istaganlar uchun ilg'or vositalarni o'z ichiga oladi.
   how_ai_works_hero_heading: AI qanday ishlaydi
   how_ai_works_hero_desc: "“AI qanday ishlaydi”, bizning video seriyamiz va unga qo'shilgan
     darslarimiz bilan sun'iy intellekt dunyosiga sho'ng'ing!"
@@ -2175,6 +2215,13 @@ uz:
     xabar yuborishimiz mumkinmi?
   signup_email_preference_privacy: "(Maxfiylik siyosatimizga qarang)"
   signup_email_preference_yes: Ha
+  signup_email_preference_yes_elementary: Ha - Menga boshlang'ich maktab manbalari
+    haqida yangiliklarni yuboring
+  signup_email_preference_yes_middle: Ha - O'rta maktab manbalari haqida menga yangilanishlarni
+    yuboring
+  signup_email_preference_yes_high: Ha - Menga o'rta maktab manbalari haqida yangiliklarni
+    yuboring
+  signup_email_preference_yes_general: Ha - Menga umumiy yangilanishlarni yuboring
   signup_email_preference_no: Yo‘q
   signup_email_preference_error: Elektron pochta orqali parametr kerak
   signup_multiple_event_warning: Siz ro‘yxatdan o‘tganingizda maktabingiz nomi va
@@ -14171,6 +14218,137 @@ uz:
     tortamiz. Biz chorshanba kunlari yig'ilishlarsiz zavqlanamiz, PTO-ni olamiz (jami
     5 hafta, bu yil oxirida org bo'ylab 2 haftalik ofis yopilishini o'z ichiga oladi),
     yozda juma kunlari yarim ish kuni aka yozgi juma kunlari, va boshqa saxiy imtiyozlar.
+  csa_ai_page_hero_title: Dasturiy ta'minot muhandisligi va kompyuter ko'rinishi
+  csa_ai_page_hero_description: 'Ushbu ikki bobdan keyingi APP CSA moduli o''rta maktab
+    o''quvchilariga GitHub va GitHub Copilot-ni o''z ichiga olgan dasturiy ta''minotni
+    ishlab chiqish bo''yicha professional vositalar bilan amaliy tajribani taklif
+    etadi va ularga kompyuterni ko''rish dasturini ishlab chiqish uchun haqiqiy ko''nikmalarni
+    beradi. '
+  csa_ai_page_video_section_title: Code.org dasturlash muhiti dunyosidan tashqariga
+    chiqing
+  csa_ai_page_video_section_li_1: AI va uning ilovalari haqida bilib oling
+  csa_ai_page_video_section_li_2: Professional dasturiy ta'minotni ishlab chiqish
+    vositalari bilan amaliy tajriba
+  csa_ai_page_video_section_li_3: Sanoat standartidagi amaliyotlarni o'rganing
+  csa_ai_page_video_section_li_4: Tanqidiy fikrlashni rivojlantiring
+  csa_ai_page_programming_tools: 'Dasturlash vositalari: Github, Github Copilot, VSCode,
+    TensorFlow '
+  csa_ai_page_professional_learning: Hech qaysi
+  csa_ai_page_curriculum_topics: 'Mavzular: Dasturlash, Ma''lumotlar, San''at va Dizayn,
+    O''yinlar va Animatsiya'
+  csa_ai_page_curriculum_accessibility_features: Tafsilotlar uchun FAQ bo'limiga qarang
+  csa_ai_page_curriculum_languages_support: Ingliz
+  csa_ai_page_article_title_1: Copilot bilan qurish
+  csa_ai_page_article_description_1: Talabalar mavjud kodni tushuntirish, xatolarni
+    topish va tuzatish va yangi muammolarga yechim yaratish uchun GitHub Copilot-dan
+    juft dasturchi sifatida foydalanishni o'rganadilar.
+  csa_ai_page_article_link_1: Copilot haqida ko'proq bilib oling
+  csa_ai_page_article_title_2: O'zingizning AI modelingizni yarating
+  csa_ai_page_article_description_2: Talabalar Teachable Machine yordamida o'zlarining
+    sun'iy intellekt modellarini o'rgatishadi va veb -kamerada tasvirlar va imo-ishoralarni
+    tanib olishadi va kompyuterni ko'rish foydalanuvchilarning ilovalar bilan o'zaro
+    munosabatiga qanday ta'sir qilishini ko'rib chiqadilar.
+  csa_ai_page_article_link_2: Dars rejasini o'rganing
+  csa_ai_page_article_title_3: Kompyuterni ko'rishni o'rganing
+  csa_ai_page_article_description_3: Talabalar Teachable Machine yordamida yaratgan
+    sun'iy intellekt modellarini Java ilovasiga kiritadilar, GitHub Copilot-dan foydalanib,
+    turli xil kirishlar bilan ishlash uchun ilovalarning mavjud versiyalarini o'zgartirishga
+    yordam beradi.
+  csa_ai_page_article_link_3: Misolni ko'ring
+  csa_ai_page_learn_more_section_title: Sun'iy intellekt haqida ko'proq bilib oling
+  csa_ai_page_learn_more_title: O'qituvchilar uchun AI 101 ni o'rganing
+  csa_ai_page_learn_more_description: O'qituvchilar uchun keng qamrovli onlayn o'quv
+    seriyamiz yordamida sun'iy intellekt (AI) ning yangi dunyosini va uning ta'limdagi
+    o'zgaruvchan salohiyatini kashf eting.
+  csa_ai_page_learn_more_link: O'qituvchilar uchun AI 101 seriyasini tomosha qiling
+  csa_ai_page_faq_question_01: Ushbu modul uchun qanday shartlar mavjud?
+  csa_ai_page_faq_answer_01_01: 'Ushbu modulga kirishdan oldin, talabalar Java haqida
+    boshlang''ich darajadagi bilimga ega bo''lishlari kerak. Xususan, ular quyidagilarni
+    tushunishlari kerak:'
+  csa_ai_page_faq_answer_01_list_01: "**Sinflar va ob'ektlar: ** Talabalar sinflarni
+    aniqlash va ulardan foydalanish, shuningdek ob'ektlarni yaratish va manipulyatsiya
+    qilishni yaxshi bilishlari kerak."
+  csa_ai_page_faq_answer_01_list_02: "**Yozish va chaqirish usullari: ** Talabalar
+    sinf ichidagi usullarni aniqlay olishlari, usul parametrlari va qaytish turlarini
+    tushunishlari, ob'ektlardan yoki boshqa usullardan usullarni chaqirishlari kerak."
+  csa_ai_page_faq_answer_01_list_03: "**1D massivlar va ArrayLists: ** Ular bir o'lchovli
+    massivlar va ArrayLists-ni e'lon qilish, ishga tushirish va manipulyatsiya qilishda,
+    shu jumladan ular orqali takrorlashda malakali bo'lishi kerak."
+  csa_ai_page_faq_answer_01_list_04: "**Tanlash va takrorlash: ** Shartli bayonotlar
+    va halqalarda mustahkam asos hal qiluvchi ahamiyatga ega."
+  csa_ai_page_faq_question_01_02: Ideal holda, AP Computer Science A yoki shunga o'xshash
+    chuqurlik va qat'iylik kursini tamomlagan talabalar ushbu modulga yaxshi tayyorgarlik
+    ko'rgan bo'lar edi.
+  csa_ai_page_faq_question_02: Ushbu modul uchun zarur bo'lgan dasturiy ta'minotni
+    qanday o'rnataman?
+  csa_ai_page_faq_answer_02_01: Ushbu modul noyobdir, chunki u Code.org laboratoriyalari
+    va vositalaridan ko'ra uchinchi tomon dasturlaridan foydalanishni o'z ichiga oladi.
+    [Dasturiy ta'minotni o'rnatish haqida ko'proq ma'lumotni bu erda o'qing] (%{accessibility_url}).
+  csa_ai_page_faq_question_03: Ushbu modulni o'qitishda mavjudlik ehtiyojlarini qanday
+    qo'llab -quvvatlashim mumkin?
+  csa_ai_page_faq_answer_03_01: Kirish ehtiyojlarini qondirish inklyuziv o'quv muhiti
+    uchun juda muhimdir. [Ushbu modulda ishlatiladigan dasturiy ta'minotdagi mavjudlik
+    xususiyatlari haqida ko'proq ma'lumotni bu erda o'qing] ()%{install_url}.
+  csa_ai_page_faq_question_04: Chromebook-da VS kodidan qanday foydalanishim mumkin?
+  csa_ai_page_faq_answer_04: Chromebook-da VS Code-dan foydalanish yanada sodda bo'lib
+    qoldi, ayniqsa Linux dasturlarini yangi Chromebook modellarida ishlatish imkoniyati
+    bilan. [Chromebook-da VS kodini o'rnatish haqida ko'proq ma'lumotni bu erda o'qing]
+    ()%{chromebook_url}.
+  csa_ai_page_faq_question_05: Ushbu modul uchun qanday qilib kasbiy rivojlanishni
+    olishim mumkin?
+  csa_ai_page_faq_answer_05: Hozirda ushbu kurs uchun maxsus kasbiy rivojlanish mavjud
+    emas. Agar siz o'z sinfingizda sun'iy intellektga qanday yondashishni tushunmoqchi
+    bo'lsangiz, [O'qituvchilar uchun AI 101 ni o'rganing] (%{ai_101_url}).
+  csa_ai_page_faq_question_06: Ushbu modulni o'qitish uchun tavsiya etilgan vaqt qancha?
+  csa_ai_page_faq_answer_06_01: Dasturiy ta'minot muhandisligi va kompyuterni ko'rish
+    moduli qisqa vaqt ichida keng qamrovli o'rganishni ta'minlash uchun puxta tuzilgan.
+    Butun modul**2 haftalik ko'rsatma** ni qamrab olish uchun mo'ljallangan. Aksariyat
+    darslar**45 daqiqa** ga moslashtirilgan, talabalar Java loyihalarini ishlab chiqish
+    bo'yicha amaliy mashg'ulotlar esa**90 daqiqa** uchun mo'ljallangan. Bu uzaytirilgan
+    vaqt talabalarga ishlashda tushunish, amalga oshirish va muammolarni bartaraf
+    etish uchun keng imkoniyatlarga ega bo'lishini ta'minlaydi.
+  csa_ai_page_faq_answer_06_02: Modul tuzilishiga qasddan moslashuvchanlik ham mavjud.
+    Sinf dinamikasiga, o'quvchilarning ishtirokiga va har bir mavzuni o'rganmoqchi
+    bo'lgan chuqurlikka qarab, siz davomiylikni o'zgartirishingiz mumkin. Masalan,
+    agar siz GitHub Copilot va ChatGpt kabi katta til modellari va vositalari qanchalik
+    ishlashini chuqurroq o'rganishni istasangiz, 45 daqiqalik dars sifatida ishlab
+    chiqilgan “Intro to Copilot” darsi 90 daqiqagacha kengaytirilishi mumkin.
+  csa_ai_page_faq_question_07: How can I access answer keys?
+  csa_ai_page_faq_answer_07: Tasdiqlangan o'qituvchi hisobi bilan siz javob kalitlarini
+    ko'k rangda topishingiz mumkin “O'qituvchi” Faqat onlayn darslar va mashg'ulotlarda
+    ko'rsatilgan panel.Agar sizga tasdiqlangan o'qituvchi hisobi kerak bo'lsa, siz
+    faqat o'qituvchilar uchun himoyalangan materiallarga kirish uchun ariza topshirishingiz
+    mumkin (javob kalitlari va boshqalar) [ushbu shakl] () orqali.%{form_url}Shuni
+    yodda tutingki, hisobingizni tekshirish uchun 3-5 ish kuni ketishi mumkin.
+  csa_ai_page_faq_question_08: Ushbu modul standartlarga mos keladimi?
+  csa_ai_page_faq_answer_08: Ha, Software Engineering & Computer Vision o'quv dasturi
+    [CSTA K-12 standartlari] (%{csta_k12_url}) va [K-12 ko'rsatmalari] () uchun AI
+    bilan xaritada ko'rsatilgan.%{k12_url}
+  csa_ai_page_faq_question_09: Ushbu modulni o'qitish qancha turadi?
+  csa_ai_page_faq_answer_09_01: Bizning o'quv dasturimiz va platformamiz [hech qanday
+    to'lovsiz] (%{no_cost_url}) har kim uchun, hamma joyda, o'qitish uchun mavjud!
+  csa_ai_page_faq_answer_09_02: Bundan tashqari, ushbu modulda ishlatiladigan dasturiy
+    ta'minot va vositalar bepul. GitHub Copilot tasdiqlangan [teachers](%{teachers_url})
+    va () uchun bepul. [students]%{students_url}
+  csa_ai_page_faq_question_10: Agar dasturiy ta'minotni o'rnatish ishlamasa nima qilishim
+    kerak?
+  csa_ai_page_faq_answer_10: Dasturiy ta'minotni o'rnatish paytida muammolarga duch
+    kelish odatiy bo'lishi mumkin, ammo ularni bartaraf etish va hal qilish uchun
+    tizimli qadamlar mavjud. [Muammolarni bartaraf etish bo'yicha ba'zi maslahatlarni
+    bu erda ko'rib chiqing] ()%{troubleshooting_url}.
+  csa_ai_page_faq_question_11: How was the curriculum developed?
+  csa_ai_page_faq_answer_11_01: 'Bizning dasturiy ta''minot muhandisligi va kompyuterni
+    ko''rish bo''yicha o''quv dasturimiz o''quv dasturimiz qadriyatlarimizni hisobga
+    olgan holda ishlab chiqilgan. Quyidagi maqsadlar ushbu o''quv dasturini yaratishga
+    rahbarlik qildi:'
+  csa_ai_page_faq_answer_11_list_01: "**Maqsad 1: ** Kodni yaratish, disk raskadrovka
+    qilish va tahrirlash uchun AI vositalaridan foydalaning."
+  csa_ai_page_faq_answer_11_list_02: "**Maqsad 2: ** Java laboratoriyasidan haqiqiy
+    vositalarga o'tish."
+  csa_ai_page_faq_answer_11_list_03: "**Maqsad 3: ** AI modellari qanday o'qitilishi
+    va dasturlarga birlashtirilganligini tushunishni chuqurlashtiring."
+  csa_ai_page_faq_answer_11_02: Bizning ishimizga rahbarlik qilgan qadriyatlar haqida
+    ko'proq ma'lumot olish uchun bizning [o'quv dasturlari qiymatlari] ga qarang (%{curriculum_values_url}).
   language_code:
     ar: Arab
     az: Ozarbayjoncha

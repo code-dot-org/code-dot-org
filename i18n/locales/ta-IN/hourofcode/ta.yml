@@ -197,6 +197,15 @@ ta:
   grade_level_label_elementary: 'தொடக்கப்பள்ளி '
   grade_level_label_middle: நடுநிலை பள்ளி
   grade_level_label_high: உயர்நிலை பள்ளி
+  curricula_title_elementary: தொடக்கநிலைப் பள்ளி பாடத்திட்டத்தை
+  curricula_desc_elementary: உங்கள் ஆரம்ப பள்ளி மாணவர்களுடன் கணினி விஞ்ஞானத்தை ஆராய
+    உங்களை அழைக்கின்ற வேடிக்கை, இலவச படிப்புகள் மற்றும் நடவடிக்கைகளை உலாவுங்கள்.
+  curricula_title_middle: நடுநிலைப் பள்ளி ஊராட்சி
+  curricula_desc_middle: நீங்கள் மற்றும் உங்கள் நடுத்தர பள்ளி மாணவர்கள் ஒன்றாக கணினி
+    அறிவியல் ஆராய உதவும் ஈடுபாட்டை பிரசாதம் உலாவ.
+  curricula_title_high: உயர்நிலைப் பள்ளி ஊராட்சி
+  curricula_desc_high: கணினி விஞ்ஞானத்தில் ஆழமாக தோண்டுவதற்கு உங்களையும் உங்கள் உயர்நிலைப்
+    பள்ளி மாணவர்களையும் அழைக்கும் கட்டாய படிப்புகள் மற்றும் நடவடிக்கைகளைத் தேடவும்.
   students_label: மாணவர்கள்
   teachers_label: ஆசிரியர்கள்
   teacher_label_csf: சிஎஸ் அடிப்படைகள் ஆசிரியர்
@@ -223,6 +232,13 @@ ta:
   call_to_action_explore_choice_level: உதாரணமாக தேர்வு நிலை ஆராய்ந்து
   call_to_action_explore_collection: சேகரிப்பை ஆராயுங்கள்
   call_to_action_explore_unplugged_lesson: பிளக்கப்படாத பாடங்களை ஆராயுங்கள்
+  call_to_action_explore_csf: சிஎஸ் அடிப்படைகளை ஆராயுங்கள்
+  call_to_action_explore_csd: சிஎஸ் கண்டுபிடிப்புகள் ஆராய்ந்து
+  call_to_action_explore_csp: சிஎஸ் கோட்பாடுகளை ஆராயுங்கள்
+  call_to_action_explore_csc: சிஎஸ் இணைப்புகளை ஆராயுங்கள்
+  call_to_action_explore_csa: ஆந்திர® கணினி அறிவியல் ஒரு ஆராயுங்கள்
+  call_to_action_explore_maker: மேக்கர் பாடத்திட்டத்தை ஆராயுங்கள்
+  call_to_action_explore_hoc: குறியீடு பயிற்சிகள் ஹவர் ஆராயுங்கள்
   call_to_action_try_app_lab: ஆப் லேப் முயற்சிக்கவும்
   call_to_action_view_lesson_plan: பாடத் திட்டத்தைப் பார்க்கவும்
   call_to_action_self_paced_pl: 'ய-வேக தொழில்முறை கற்றலைத் தொடங்குங்கள் '
@@ -267,6 +283,7 @@ ta:
   call_to_action_notify_available: கிடைக்கும் போது எனக்கு தெரிவி
   call_to_action_register_early_access: ஆரம்ப அணுகல் பதிவு
   call_to_action_open_positions: திறந்த நிலைகளைக் காண்க
+  call_to_action_get_guide: வழிகாட்டி கிடைக்கும்
   aria_label_call_to_action_afe: அமேசான் எதிர்கால பொறியாளர் பற்றி மேலும் அறிக
   aria_label_call_to_action_teaching_csf: கற்பித்தல் கணினி அறிவியல் அடிப்படைகள் தொழில்முறை
     கற்றல் திட்டத்தைத் தொடங்கவும்
@@ -376,6 +393,8 @@ ta:
   curriculum_name_csa: கணினி அறிவியல் A
   curriculum_name_csc_02: எந்த CS இணைப்புகள் தொகுதி
   curriculum_name_ai: AI மற்றும் இயந்திர கற்றல்
+  curriculum_name_artificial_intelligence: செயற்கை நுண்ணறிவு (AI)
+  curriculum_name_maker: மேக்கர்
   curriculum_name_maker_cp: சாதனங்களுடன் பயன்பாடுகளை உருவாக்குதல் (சர்க்யூட் விளையாட்டு
     மைதானம்)
   curriculum_name_maker_microbit: சாதனங்களுடன் பயன்பாடுகளை உருவாக்குதல் (micro:bit)
@@ -436,6 +455,13 @@ ta:
   curriculum_desc_creating_apps_with_devices: கணிப்பொறியில் உடல் சாதனங்களின் பங்கை
     ஆராயுங்கள். வன்பொருள் உள்ளீடுகள் மற்றும் வெளியீடுகளை பயன்படுத்தும் நிரல்களை உருவாக்கவும்.
     மைக்ரோ:பிட் மற்றும் சர்க்யூட் மைதானம் ஆகிய இரண்டிற்கும் இந்த அலகின் பதிப்பு உள்ளது.
+  curriculum_desc_csa: அவர்கள் AP® கணினி அறிவியல் ஏ (AP® CSA) இந்த இலவச பாடத்திட்டத்தில்
+    ஜாவா நிரலாக்க மொழியை கற்று போது மென்பொருள் பொறியியல் மற்றும் பொருள் சார்ந்த
+    வடிவமைப்பு மாணவர்கள் அறிமுகம்.
+  curriculum_desc_maker: மேக்கர் கல்வி ஸ்டெம் எடுக்கும் (அறிவியல், தொழில்நுட்பம்,
+    பொறியியல், கணிதம்) பிரச்சனை தீர்க்கும் மற்றும் விமர்சன சிந்தனை கற்பிக்க உதவும்
+    வகுப்பறையில் ஒரு கைகள்-அனுபவம் மற்றும் ஒத்துழைப்பு அழைப்பதன் மூலம் மேலும் ஒரு
+    படி.
   collection_hardware: வன்பொருள் கவனம்
   collection_hardware_desc: பிரச்சினைகளை தீர்க்க தரவு மற்றும் உடல் சாதனங்களை பயன்படுத்த
     மாணவர்கள் அதிகாரம்.
@@ -469,6 +495,7 @@ ta:
   module_label_professional_learning: 'தொழில்முறை கற்றல்:'
   module_label_languages: 'ஆதரிக்கப்படும் மொழிகள்:'
   module_label_accessibility_features: 'அணுகுகோடு:'
+  module_label_accessibility_features_full: 'அணுகல் அம்சங்கள்:'
   module_label_educator_tool: கல்வியாளர் கருவி
   module_label_educator_course: கல்வியாளர் பாடநெறி
   module_label_student_tool: மாணவர் கருவி
@@ -476,6 +503,7 @@ ta:
   module_label_student_content_resources: உள்ளடக்கம் மற்றும் வளங்கள்
   module_label_new: புதியது
   module_label_coming_soon: விரைவில்
+  module_label_available_now: இப்போது கிடைக்கும்
   module_label_video_series: வீடியோ தொடர்
   module_label_self_paced: சுயவேக தொகுதி
   module_ages_5_10: 5-10
@@ -486,6 +514,8 @@ ta:
   module_grade_2_5: 2-5
   module_grade_3_5: 3-5
   module_grade_3_8: 3-8
+  module_grade_k_12: கே-12
+  module_grade_3_12: 3-12
   module_grade_6_12: 6-12
   module_grade_6_10: 6-10
   module_grade_9_12: 9-12
@@ -500,7 +530,9 @@ ta:
   module_grade_9_12_teachers: 9-12 ஆசிரியர்கள்
   module_level_beginner: தொடக்கப்பள்ளி
   module_level_intermediate: இடைநிலை
+  module_level_advanced: மேம்பட்ட
   module_duration_45_mins: 45 நிமிடங்கள்
+  module_duration_2_weeks: 2 வாரங்கள்
   module_duration_1_hr: 1 மணிநேரம்
   module_duration_2_hrs: 2 மணிநேரம்
   module_duration_3_hrs: 3 மணிநேரம்
@@ -583,6 +615,8 @@ ta:
   heading_java_lab: ஜாவா லேப்
   heading_objects_first: முதல் பொருள்கள்
   heading_these_lessons_will: 'இந்த பாடங்கள்:'
+  heading_explore_curriculum_catalog: பாடத்திட்டத்தின் பட்டியல் எங்கள் படிப்புகள்
+    அனைத்தையும் ஆராயுங்கள்
   professional_learning_section_desc: நீங்கள் கற்பிக்கத் தயாராகுங்கள் உங்களுக்கு தேவையான
     ஆதரவைப் பெறுங்கள். ஆசிரியர்கள் அதை விரும்புகிறேன், படிதல் 90% எப்போதும் அது சிறந்த
     தொழில்முறை வளர்ச்சி தரவரிசை!
@@ -844,6 +878,11 @@ ta:
     AI இல் இரண்டு புதிய வீடியோக்களை இடம்பெறும். இந்த புதிய தொழில்நுட்பங்கள் வல்லுநர்களிடமிருந்து
     நேரடியாக எவ்வாறு செயல்படுகின்றன என்பதைக் கேளுங்கள்: மீரா முரட்டி, OpenAI இன் CTO,
     மற்றும் RunwayML தலைமை நிர்வாக அதிகாரி கிறிஸ்டோபால் வாலென்சுலா.'
+  ai_pl_101_llm_slides_title: பெரிய மொழி மாதிரி கல்வியாளர்களுக்குத் தூண்டுகிறது
+  ai_pl_101_llm_slides_desc: ChatGPT போன்ற எல்எல்எம்களிலிருந்து சிறந்த வெளியீட்டைப்
+    பெறுவதற்கான கருவிகள், தொடக்கத்திலிருந்து மேம்பட்ட வரை. ஸ்டார்டர் தங்கள் கால்விரல்கள்
+    நனைத்தல் அந்த கேட்கும் அடங்கும், அதே போல் அவர்களின் திறனை அதிகரிக்க தேடும் மேம்பட்ட
+    கருவிகள்.
   how_ai_works_hero_heading: AI எவ்வாறு செயல்படுகிறது
   how_ai_works_hero_desc: AI உலகில் டைவ் “எப்படி AI படைப்புகள்,” எங்கள் வீடியோ தொடர்
     மற்றும் அதனுடன் பாடங்கள்!
@@ -1414,11 +1453,11 @@ ta:
   csd_page_courses_collections_desc: ஒரு குறிப்பிட்ட தலைப்பில் கவனம் செலுத்திய அலகுகளின்
     தொகுப்புடன் ஒரு பகுதிக்குள் ஆழமாக மூழ்குங்கள்.
   csd_page_faq_question_01: சிஎஸ் கண்டுபிடிப்புகள் தரநிலைகளுக்கு வரைபடமாக்கப்பட்டுள்ளதா?
-  csd_page_faq_answer_01: CS Discoveries was written using both the K-12 Framework
-    for Computer Science and the 2017 CSTA standards as guidance. Currently, every
-    lesson in CS Discoveries contains mappings to the relevant 2017 CSTA standards.
-    [A summary of standards mappings can be found here](%{mappings_url}). A Google
-    Sheets version of the standards can be found at [CSD Standards](%{csd_standards_url}).
+  csd_page_faq_answer_01: சிஎஸ் கண்டுபிடிப்புகள் கணினி அறிவியல் K-12 கட்டமைப்பின்
+    மற்றும் வழிகாட்டுதலாக 2017 CSTA தரநிலைகள் இரண்டையும் பயன்படுத்தி எழுதப்பட்டது.
+    தற்போது, சிஎஸ் கண்டுபிடிப்புகள் ஒவ்வொரு பாடம் தொடர்புடைய மேப்பிங்ஸ் கொண்டிருக்கிறது
+    2017 CSTA தரநிலைகள். [தரநிலைகள் மேப்பிங்ஸ் ஒரு சுருக்கம் இங்கே காணலாம்] ().%{mappings_url}தரநிலைகளின்
+    ஒரு Google Sheets பதிப்பு காணலாம் [சிஎஸ்டி தரநிலைகள்] (%{csd_standards_url}).
   csd_page_faq_question_02: எப்படி/நான் எங்கே இந்த நிச்சயமாக தொழில்முறை வளர்ச்சி
     பெற முடியும்?
   csd_page_faq_answer_02: எங்கள் தொழில்முறை கற்றல் திட்டம் ஆண்டு முழுவதும் ஆதரவு வழங்குகிறது.
@@ -1464,10 +1503,10 @@ ta:
     விநியோகம் அணுக இல்லை என்றால் மாற்று நடவடிக்கைகள் கிடைக்கின்றன.
   csd_page_faq_answer_04_06: சாதனங்களுடன் பயன்பாடுகளை உருவாக்குதல் (விருப்பம் A மற்றும்
     விருப்பம் B)
-  csd_page_faq_answer_04_07: 'Option A: Classroom set of Circuit Playgrounds. Check
-    out [code.org/maker/circuitplayground](%{url}) for more details.'
-  csd_page_faq_answer_04_08: 'Option B: Classroom set of micro:bit devices. Check
-    out [code.org/maker/microbit](%{url}) for more details.'
+  csd_page_faq_answer_04_07: 'விருப்பம் ஒரு: சர்க்யூட் விளையாட்டு மைதானங்கள் வகுப்பறையில்
+    தொகுப்பு. பாருங்கள் [code.org/maker/circuitplayground] () மேலும் விவரங்களுக்கு.%{url}'
+  csd_page_faq_answer_04_08: 'விருப்பம் B: மைக்ரோ வகுப்பறை தொகுப்பு:பிட் சாதனங்கள்.
+    பாருங்கள் [code.org/மேகர்/மைக்ரோபிட்] () மேலும் விவரங்களுக்கு.%{url}'
   csd_page_faq_answer_04_09: போன்ற வெற்று திசு பெட்டிகள் அல்லது அட்டை ரோல்ஸ் அல்லது
     கீறல் காகித மேக்கர் விநியோகம்
   csd_page_faq_answer_04_10: "*குறிப்பு: சாதனங்களின் அலகு கொண்ட பயன்பாடுகளை உருவாக்குதல்
@@ -1477,12 +1516,13 @@ ta:
     சமமானவர்களாக கற்பித்து, அதே உள்ளடக்கத்தை மூடிவிடக் கூடாது."
   csd_page_faq_question_06: சிஎஸ் கண்டுபிடிப்புகள் மற்ற Code.org படிப்புகள் எவ்வாறு
     பொருந்துகின்றன?
-  csd_page_faq_answer_06_01: CS Discoveries is designed to fit naturally between our
-    [CS Fundamentals](%{csf_url}) courses and our [CS Principles](%{csp_url}) course.
-    While each of these courses is designed to be an age-appropriate entry point to
-    computer science, students with previous experience will find many new topics
-    to explore, and they will revisit familiar topics in novel and more challenging
-    contexts.
+  csd_page_faq_answer_06_01: சிஎஸ் கண்டுபிடிப்புகள் எங்கள் [சிஎஸ் அடிப்படைகள்] (%{csf_url})
+    படிப்புகள் மற்றும் எங்கள் [சிஎஸ் கோட்பாடுகள்] () பாடத்திட்டங்களுக்கு இடையில் இயற்கையாகவே
+    பொருந்தும் வகையில் வடிவமைக்கப்பட்டுள்ளது.%{csp_url}இந்த படிப்புகள் ஒவ்வொன்றும்
+    கணினி அறிவியலுக்கு வயது-பொருத்தமான நுழைவு புள்ளியாக வடிவமைக்கப்பட்டிருந்தாலும்,
+    முந்தைய அனுபவம் கொண்ட மாணவர்கள் பல புதிய தலைப்புகளை ஆராய கண்டுபிடிப்பார்கள், மேலும்
+    அவர்கள் நாவல் மற்றும் மிகவும் சவாலான சூழல்களில் நன்கு தெரிந்த தலைப்புகளை மீண்டும்
+    பார்வையிடுவார்கள்.
   csc_page_top_desc: கணினி அறிவியல் (சிஎஸ்) மற்றும் கணித போன்ற மற்ற பாடங்களில் இடையே
     இணைப்புகளை செய்ய, மொழி கலை, அறிவியல், மற்றும் சமூக ஆய்வுகள்.
   csc_page_intro_heading: முக்கிய பொருள் தரங்களை உள்ளடக்கும் போது சிஎஸ் கற்றுக்கொடுங்கள்
@@ -1616,9 +1656,10 @@ ta:
     சொந்த வேகத்தில் நிறைவு செய்ய முடியும் போது ஒற்றுமை அனுபவம் வடிவமைக்கப்பட்டுள்ளது
     பல ஆசிரியர் தலைமையிலான திட்ட நிலைகள் உள்ளன.
   csf_page_faq_question_06: சிஎஸ் அடிப்படைகளுக்கு நான் என்ன பொருட்கள் தேவை?
-  csf_page_faq_answer_06: Many lessons have handouts that guide students through activities.
-    These resources can be printed or assigned digitally. Some lessons call for typical
-    classroom supplies and manipulatives. [Visit the CSF Syllabus to learn more](%{syllabus_url}).
+  csf_page_faq_answer_06: பல பாடங்கள் நடவடிக்கைகள் மூலம் மாணவர்களுக்கு வழிகாட்டும்
+    கைரேகைகள் உள்ளன. இந்த வளங்களை டிஜிட்டல் முறையில் அச்சிடவோ அல்லது ஒதுக்கவோ முடியும்.
+    சில பாடங்கள் வழக்கமான வகுப்பறை விநியோகம் மற்றும் கையாளுதல் அழைப்பு. [மேலும் அறிய
+    CSF பாடத்திட்டம் வருகை] ().%{syllabus_url}
   csa_page_top_desc: Introduce students to software engineering and object-oriented
     design while they learn the Java programming language in this free curriculum
     for [AP® Computer Science A (AP® CSA)](%{csa_url}).
@@ -2125,6 +2166,13 @@ ta:
     சயின்ஸ் குறித்த புதிய தகவல்களை நாங்கள் உங்களுக்கு மின்னஞ்சல் செய்யலாமா?
   signup_email_preference_privacy: "(எங்களது தனியுரிமை கொள்கையை காணவும்)"
   signup_email_preference_yes: ஆம்
+  signup_email_preference_yes_elementary: ஆம் - ஆரம்ப பள்ளி வளங்கள் பற்றிய புதுப்பிப்புகளை
+    எனக்கு அனுப்பவும்
+  signup_email_preference_yes_middle: ஆம் - நடுநிலைப் பள்ளி வளங்கள் பற்றிய புதுப்பிப்புகளை
+    எனக்கு அனுப்பவும்
+  signup_email_preference_yes_high: ஆம் - உயர்நிலை பள்ளி வளங்கள் பற்றிய புதுப்பிப்புகளை
+    எனக்கு அனுப்பவும்
+  signup_email_preference_yes_general: ஆமாம் - எனக்கு பொது மேம்படுத்தல்கள் அனுப்பவும்
   signup_email_preference_no: இல்லை
   signup_email_preference_error: மின்னஞ்சல் விருப்பத்தேர்வு தேவை
   signup_multiple_event_warning: நீங்கள் பதிவு செய்கையில் மேப்பில் உங்கள் பள்ளியின்
@@ -13062,12 +13110,12 @@ ta:
   tutorial_googlename _longdescription: ஒரு பெயரைத் தேர்ந்தெடுத்து குறியீட்டைப் பயன்படுத்தி
     வார்த்தையின் எழுத்துக்களை உயிர்ப்பிக்கவும். புனைப்பெயர், செல்லப்பிராணியின் பெயர்,
     விலங்கு, விளையாட்டு, இடம் அல்லது பொழுதுபோக்கைத் தேர்வுசெய்க.
-  tutorial_carnegiezillah_longdescription: Zillah City is thriving, and music is in
-    the air. Rumor has it, the famed Gargantua bot is online and sending the last
-    Toxibots to trash the city block by block…. Grab your cobot hoverboard and get
-    ready to groove, move, and finish off what you started! Players program their
-    cobot hoverbots to change lanes, avoid obstacles, and take out many Toxibots in
-    this rhythm-styled game.
+  tutorial_carnegiezillah_longdescription: Zillah நகரம் செல்வாக்குடன் உள்ளது, மற்றும்
+    இசை காற்றில் உள்ளது. வதந்தி அது உள்ளது, புகழ்பெற்ற Gargantua போட் ஆன்லைன் மற்றும்
+    தொகுதி மூலம் நகரம் தொகுதி குப்பைக்கு கடந்த Toxibots அனுப்பும்.…உங்கள் cobot hoverboard
+    எடுத்து பள்ளம் தயாராகுங்கள், நடவடிக்கை, நீங்கள் தொடங்கியது என்ன முடிக்க! வீரர்கள்
+    பாதைகள் மாற்ற, தடைகளை தவிர்க்க, மற்றும் இந்த தாள பாணியில் விளையாட்டு பல Toxibots
+    வெளியே எடுத்து தங்கள் cobot hoverbots நிரல்.
   tutorial_nasachspacejam_longdescription: உண்மையில் பாறைகள் என்று ஒரு சூரிய மண்டலத்தை
     உருவாக்கவும்! இந்த சுய வழிகாட்டுதல் நடவடிக்கையில் இசை, வானியல், மற்றும் குறியீட்டு
     பற்றி அறியவும் (எந்த குறியீட்டு அனுபவம் தேவை). நிரல் கிரகங்கள் இசை செய்ய, உங்கள்
@@ -13719,9 +13767,9 @@ ta:
   accessibility_efforts_card_desc_1: எங்கள் தயாரிப்பு மற்றும் பொறியியல் அணிகள் டிசம்பர்
     2023 ஆம் ஆண்டளவில் விரிவான அணுகுமுறைப் பயிற்சியை நிறைவு செய்யும்.
   accessibility_efforts_card_title_2: VPAT பகுப்பாய்வு
-  accessibility_efforts_card_desc_2: Completing [Voluntary Product Accessibility Template](%{voluntary_url})
-    to establish a baseline and measure progress annually. Results available on this
-    page by September 2023.
+  accessibility_efforts_card_desc_2: "[தன்னார்வ தயாரிப்பு அணுகல்தன்மை வார்ப்புரு]]
+    (%{voluntary_url}) ஆண்டுதோறும் ஒரு அடிப்படையை நிறுவி முன்னேற்றத்தை அளவிட வேண்டும்.
+    செப்டம்பர் மூலம் இந்தப் பக்கத்தில் கிடைக்கும் முடிவுகள் 2023."
   accessibility_efforts_card_title_3: அணுகக்கூடிய வடிவமைப்பை ஆதரிக்கும் கருவிகள்
   accessibility_efforts_card_desc_3: 'குழு உறுப்பினர்கள் அனைத்து புதிய அம்சங்களையும்
     மனதில் அணுகலுடன் வடிவமைக்கப்பட்டு கட்டமைக்கப்படுவதை உறுதிப்படுத்தும் கருவிகளுக்கான
@@ -13916,6 +13964,131 @@ ta:
     இது ஆண்டின் இறுதியில் ஒரு ஆர்க்-பரந்த 2 வார அலுவலக மூடல் அடங்கும்), கோடை எனவும்
     அழைக்கப்படும் கோடை வெள்ளிக்கிழமைகளில் வெள்ளிக்கிழமைகளில் அரை வேலை நாள், மற்றும்
     பிற தாராள நன்மைகள்.
+  csa_ai_page_hero_title: மென்பொருள் பொறியியல் மற்றும் கணினி பார்வை
+  csa_ai_page_hero_description: 'இந்த இரண்டு அத்தியாயம் பிந்தைய ஆந்திர CSA தொகுதி
+    உயர்நிலை பள்ளி மாணவர்கள் அனுபவம் அனுபவங்களை வழங்குகிறது, GitHub மற்றும் GitHub
+    Copilot உட்பட, மற்றும் ஒரு கணினி பார்வை திட்டம் உருவாக்க உண்மையான உலக திறன்களை
+    அவர்களுக்கு வழங்குகிறது. '
+  csa_ai_page_video_section_title: Code.org நிரலாக்க சூழல்களின் உலகத்திற்கு அப்பால்
+    படி
+  csa_ai_page_video_section_li_1: AI மற்றும் அதன் பயன்பாடுகளைப் பற்றி அறியுங்கள்
+  csa_ai_page_video_section_li_2: தொழில்முறை மென்பொருள் மேம்பாட்டுக் கருவிகளுடன் அனுபவம்
+  csa_ai_page_video_section_li_3: தொழிற்துறை-நிலையான நடைமுறைகளை கற்றுக்கொள்ளுங்கள்
+  csa_ai_page_video_section_li_4: விமர்சன சிந்தனை வளர்த்தல்
+  csa_ai_page_programming_tools: 'நிரலாக்க கருவிகள்: கிட்ஹப், கிட்ஹப் கோபிலோட், விஸ்கோட்,
+    டென்ஸார்ஃப்ளோ '
+  csa_ai_page_professional_learning: எதுவும் இல்லை
+  csa_ai_page_curriculum_topics: 'தலைப்புகள்: நிரலாக்கம், தரவு, கலை மற்றும் வடிவமைப்பு,
+    விளையாட்டுகள் மற்றும் அனிமேஷன்'
+  csa_ai_page_curriculum_accessibility_features: விவரங்களுக்கு அடிக்கடி கேட்கப்படும்
+    கேள்விகள் பிரிவைப் பார்க்கவும்
+  csa_ai_page_curriculum_languages_support: English
+  csa_ai_page_article_title_1: கோபிலோட் உடன் கட்டியெழுப்ப
+  csa_ai_page_article_description_1: மாணவர்கள் இருக்கும் குறியீடு விளக்க, கண்டுபிடித்து
+    பிழைகள் சரி, மற்றும் புதிய பிரச்சினைகள் தீர்வுகளை உருவாக்க ஒரு ஜோடி புரோகிராமர்
+    போன்ற GitHub Copilot எவ்வாறு பயன்படுத்த வேண்டும் என்பதை அறிய.
+  csa_ai_page_article_link_1: Copilot பற்றி மேலும் அறிய
+  csa_ai_page_article_title_2: உங்கள் சொந்த AI மாதிரி கட்ட
+  csa_ai_page_article_description_2: மாணவர்கள் படங்கள் மற்றும் சைகைகள் ஒரு வெப்கேம்
+    அமைக்க அங்கீகரிக்க ஆசிரியர் இயந்திரம் பயன்படுத்தி தங்கள் சொந்த AI மாதிரிகள் பயிற்சி
+    மற்றும் பயனர்கள் பயன்பாடுகள் தொடர்பு வழி கணினி பார்வை தாக்கங்கள் எப்படி கருத்தில்.
+  csa_ai_page_article_link_2: பாடத் திட்டத்தை ஆராயுங்கள்
+  csa_ai_page_article_title_3: கணினி பார்வை ஆராயுங்கள்
+  csa_ai_page_article_description_3: மாணவர்கள் Tachable Machine கொண்டு உருவாக்கிய
+    AI மாதிரிகளை ஜாவா பயன்பாட்டில் செயல்படுத்துகின்றனர், GitHub Copilot ஐ பயன்படுத்தி,
+    பல்வேறு உள்ளீடுகளுடன் பணிபுரியும் பயன்பாடுகளின் தற்போதைய பதிப்புகளை மாற்ற உதவும்.
+  csa_ai_page_article_link_3: ஒரு உதாரணத்தைக் காண்க
+  csa_ai_page_learn_more_section_title: செயற்கை நுண்ணறிவு பற்றி மேலும் அறியவும்
+  csa_ai_page_learn_more_title: ஆசிரியர்களுக்கான AI 101 ஐ ஆராயுங்கள்
+  csa_ai_page_learn_more_description: ஆசிரியர்கள் எங்கள் விரிவான ஆன்லைன் கற்றல் தொடர்களுடன்
+    கல்வி செயற்கை நுண்ணறிவு (AI) மற்றும் அதன் உருமாற்ற திறனை முன்மாதிரி உலக கண்டறிய.
+  csa_ai_page_learn_more_link: ஆசிரியர்கள் தொடருக்கு AI 101 ஐப் பார்க்கவும்
+  csa_ai_page_faq_question_01: இந்த தொகுதிக்கான முன்நிபந்தனைகள் என்ன?
+  csa_ai_page_faq_answer_01_01: 'இந்த தொகுதிக்குள் டைவிங் செய்வதற்கு முன், மாணவர்கள்
+    ஜாவாவின் நுழைவு நிலை அறிவைப் பெற்றிருக்க வேண்டும். குறிப்பாக, அவர்கள் ஒரு பிடியில்
+    வேண்டும்:'
+  csa_ai_page_faq_answer_01_list_01: "**வகுப்புகள் மற்றும் பொருள்கள்: ** மாணவர்கள்
+    வகுப்புகள் வரையறுக்கும் மற்றும் பயன்படுத்தி நன்கு தெரிந்திருக்க வேண்டும், அதே
+    போல் பொருட்களை உருவாக்குதல் மற்றும் கையாளுதல்."
+  csa_ai_page_faq_answer_01_list_02: "**எழுதுதல் மற்றும் அழைப்பு முறைகள்: ** மாணவர்கள்
+    ஒரு வர்க்கம் உள்ள முறைகள் வரையறுக்க முடியும் இருக்க வேண்டும், முறை அளவுருக்கள்
+    மற்றும் திரும்ப வகையான புரிந்து, மற்றும் பொருட்களை அல்லது மற்ற முறைகள் முறைகள்
+    அழைக்க."
+  csa_ai_page_faq_answer_01_list_03: "**1டி வரிசைகள் மற்றும் ArrayLlists: ** அவர்கள்
+    அறிவித்து கைதேர்ந்தவர் இருக்க வேண்டும், துவக்குதல், மற்றும் ஒரு பரிமாண வரிசைகள்
+    மற்றும் ArrayLlists கையாள்வது, அவர்கள் மூலம் iterating உட்பட."
+  csa_ai_page_faq_answer_01_list_04: "**தேர்வு மற்றும் மீண்டும்: ** நிபந்தனை அறிக்கைகள்
+    மற்றும் சுழல்கள் ஒரு திட அடித்தளம் முக்கியமாகும்."
+  csa_ai_page_faq_question_01_02: சிறப்பாக, ஆந்திர கம்ப்யூட்டர் சயின்ஸ் ஏ அல்லது இதே
+    போன்ற ஆழம் மற்றும் கடுமையின் போக்கை நிறைவு செய்த மாணவர்கள் இந்த தொகுதிக்கு நன்கு
+    தயாரிக்கப்படுவார்கள்.
+  csa_ai_page_faq_question_02: நான் எப்படி இந்த தொகுதி தேவையான மென்பொருள் நிறுவ
+    வேண்டாம்?
+  csa_ai_page_faq_answer_02_01: இது Code.org ஆய்வகங்கள் மற்றும் கருவிகள் விட மூன்றாம்
+    தரப்பு மென்பொருள் பயன்பாடு ஈடுபடுத்துவதால் இந்த தொகுதி தனித்துவமானது. [இங்கே மென்பொருள்
+    நிறுவும் பற்றி மேலும் படிக்க] (%{accessibility_url}).
+  csa_ai_page_faq_question_03: இந்த தொகுதி கற்பித்தல் போது நான் எப்படி அணுகல் தேவைகளை
+    ஆதரிக்க முடியும்?
+  csa_ai_page_faq_answer_03_01: ஒரு உள்ளடக்கிய கற்றல் சூழலுக்கு அணுகுதிறன் தேவைகளுக்கு
+    உதவுவது மிக முக்கியமானதாகும். [இங்கே இந்த தொகுதி பயன்படுத்தப்படும் மென்பொருள்
+    அணுகல் அம்சங்கள் பற்றி மேலும் படிக்க] (%{install_url}).
+  csa_ai_page_faq_question_04: Chromebooks இல் VS கோட் எவ்வாறு பயன்படுத்துவது?
+  csa_ai_page_faq_answer_04: ஒரு Chromebook இல் VS குறியீட்டை பயன்படுத்துவது மிகவும்
+    நேர்மையானதாகிவிட்டது, குறிப்பாக புதிய Chromebook மாடல்களில் லினக்ஸ் பயன்பாடுகளை
+    இயக்குவதற்கான திறனுடன். [இங்கே Chromebooks இல் VS குறியீடு அமைக்க பற்றி மேலும்
+    படிக்க] ()%{chromebook_url}.
+  csa_ai_page_faq_question_05: நான் எப்படி இந்த தொகுதி தொழில்முறை வளர்ச்சி பெற முடியும்?
+  csa_ai_page_faq_answer_05: இந்த பாடத்திட்டத்திற்கு தற்போது குறிப்பிட்ட தொழில் வளர்ச்சி
+    இல்லை. உங்கள் வகுப்பறையில் செயற்கை நுண்ணறிவை எவ்வாறு அணுகுவது என்பதை நீங்கள் புரிந்து
+    கொள்ள விரும்பினால், நீங்கள் [ஆசிரியர்களுக்கான AI 101 ஆராய]] ()%{ai_101_url}.
+  csa_ai_page_faq_question_06: இந்த தொகுதி கற்பிப்பதற்கான பரிந்துரைக்கப்பட்ட நேரம்
+    என்ன?
+  csa_ai_page_faq_answer_06_01: மென்பொருள் பொறியியல் & கணினி பார்வை தொகுதி சிந்தனையுடன்
+    ஒரு சுருக்கமான காலகட்டத்தில் விரிவான கற்றலை வழங்குவதற்காக கட்டமைக்கப்பட்டுள்ளது.
+    முழு தொகுதியும் **2 வாரங்களின் வழிமுறைகளை** நீட்டிக்க வடிவமைக்கப்பட்டுள்ளது. பெரும்பாலான
+    படிப்பினைகள் **45 நிமிடங்கள்** க்கு வடிவமைக்கப்பட்டுள்ளன, அதே நேரத்தில் மாணவர்கள்
+    ஜாவா திட்ட வளர்ச்சியை கையாளும் படிப்பினைகள் **90 நிமிடங்கள்** வடிவமைக்கப்பட்டுள்ளன.
+    இந்த நீட்டிக்கப்பட்ட நேரம் மாணவர்கள் வேலை புரிந்து கொள்ள, செயல்படுத்த, மற்றும்
+    சரிசெய்தல் போதிய வாய்ப்பு உறுதி.
+  csa_ai_page_faq_answer_06_02: தொகுதியின் கட்டமைப்பில் அமையப்பெற்ற வேண்டுமென்றே நெகிழ்வுத்தன்மையும்
+    உள்ளது. வகுப்பறை இயக்கவியல், மாணவர் நிச்சயதார்த்தம், மற்றும் ஒவ்வொரு தலைப்பை ஆராய
+    விரும்பும் ஆழம் ஆகியவற்றைப் பொறுத்து, காலத்தை சரிசெய்யலாம். உதாரணமாக, Copilot
+    பாடம் அறிமுகம், ஒரு 45 நிமிட பாடம் வடிவமைக்கப்பட்டுள்ளது, நீங்கள் GitHub Copilot
+    மற்றும் ChatGPT வேலை போன்ற எப்படி பெரிய மொழி மாதிரிகள் மற்றும் கருவிகள் ஆழமாக
+    முழுக்கு விரும்பினால் 90 நிமிடங்கள் விரிவாக்க முடியும்.
+  csa_ai_page_faq_question_07: How can I access answer keys?
+  csa_ai_page_faq_answer_07: அங்கீகரிக்கப்பட்ட ஆசிரியர் கணக்குடன், நீல “ஆசிரியர்”
+    இல் பதில் விசைகளை காணலாம் ஆன்லைன் பாடங்கள் மற்றும் நடவடிக்கைகளில் காட்டும் ஒரே
+    குழு. உங்களுக்கு அங்கீகரிக்கப்பட்ட ஆசிரியர் கணக்கு தேவைப்பட்டால், பாதுகாக்கப்பட்ட
+    ஆசிரியர்-மட்டும் பொருட்கள் (பதில் விசைகள், முதலியன) அணுகுவதற்கு விண்ணப்பிக்கலாம்
+    [இந்த வடிவம்] () மூலம்.%{form_url}உங்கள் கணக்கை சரிபார்க்க 3-5 வணிக நாட்கள் ஆகலாம்
+    என்பதை நினைவில் கொள்ளுங்கள்.
+  csa_ai_page_faq_question_08: இந்த தொகுதி தரநிலைகளுக்கு வரைபடமாக்கப்பட்டதா?
+  csa_ai_page_faq_answer_08: ஆம், மென்பொருள் பொறியியல் & கம்ப்யூட்டர் விஷன் பாடத்திட்டமானது
+    [CSTA K-12 தரநிலைகள்] (%{csta_k12_url}) மற்றும் [K-12 வழிகாட்டுதல்களுக்கான] AI
+    ஆகியவற்றிற்கு மேப் செய்யப்படுகிறது.%{k12_url}
+  csa_ai_page_faq_question_09: இந்த தொகுதி கற்பிக்க எவ்வளவு செலவாகும்?
+  csa_ai_page_faq_answer_09_01: எமது பாடத்திட்டம் மற்றும் மேடையில் யாருக்கும், எங்கும்,
+    கற்பிக்க [எந்த செலவும்] (%{no_cost_url}) கிடைக்கின்றன!
+  csa_ai_page_faq_answer_09_02: கூடுதலாக, இந்த தொகுதியில் பயன்படுத்தப்படும் மென்பொருட்களும்
+    கருவிகளும் இலவசமாக உள்ளன. GitHub Copilot சரிபார்க்கப்பட்ட இலவசம் () மற்றும் [teachers]()%{teachers_url}.
+    [students]%{students_url}
+  csa_ai_page_faq_question_10: மென்பொருள் நிறுவல் இயங்கவில்லை என்றால் நான் என்ன செய்வது?
+  csa_ai_page_faq_answer_10: மென்பொருள் நிறுவலின் போது சிக்கல்களை எதிர்கொள்வது பொதுவானதாக
+    இருக்கலாம், ஆனால் அவற்றை சரிசெய்து தீர்க்க நீங்கள் பின்பற்றக்கூடிய முறையான படிநிலைகள்
+    உள்ளன. [இங்கே சில சரிசெய்தல் குறிப்புகள் பாருங்கள்] ()%{troubleshooting_url}.
+  csa_ai_page_faq_question_11: How was the curriculum developed?
+  csa_ai_page_faq_answer_11_01: 'எமது மென்பொருள் பொறியியல் மற்றும் கணினி பார்வை பாடத்திட்டம்
+    எமது பாடத்திட்டத்தை மனதில் கொண்டு வடிவமைக்கப்பட்டது. பின்வரும் இலக்குகள் இந்த
+    பாடத்திட்டத்தை உருவாக்குவதற்கு வழிகாட்டியது:'
+  csa_ai_page_faq_answer_11_list_01: "**இலக்கு 1: ** உருவாக்க AI கருவிகளைப் பயன்படுத்தவும்,
+    பிழைத்திருத்தம், மற்றும் திருத்த குறியீடு."
+  csa_ai_page_faq_answer_11_list_02: "**இலக்கு 2: ** ஜாவா லேப் இருந்து நிகழ் உலக கருவிகள்
+    மாற்றம்."
+  csa_ai_page_faq_answer_11_list_03: "**இலக்கு 3: ** AI மாதிரிகள் பயிற்சி மற்றும்
+    திட்டங்கள் ஒருங்கிணைக்கப்படுகின்றன எப்படி புரிதல் ஆழப்படுத்த."
+  csa_ai_page_faq_answer_11_02: எங்கள் வேலையை வழிநடத்தும் மதிப்புகள் பற்றிய மேலும்
+    தகவலுக்கு, தயவுசெய்து எங்கள் [பாடத்திட்டம் மதிப்புகள்] () பார்க்கவும்.%{curriculum_values_url}
   language_code:
     ar: அரபி மொழி
     az: அசர்பாய்ஜானி

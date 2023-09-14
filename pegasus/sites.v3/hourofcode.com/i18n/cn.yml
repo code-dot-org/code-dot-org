@@ -126,6 +126,12 @@ cn:
   grade_level_label_elementary: 小学
   grade_level_label_middle: 初中
   grade_level_label_high: 高中
+  curricula_title_elementary: 小学课程
+  curricula_desc_elementary: 浏览有趣的免费课程和活动，邀请您与小学生一起探索计算机科学。
+  curricula_title_middle: 中学课程
+  curricula_desc_middle: 浏览引人入胜的课程，使您和您的中学生能够一起探索计算机科学。
+  curricula_title_high: 高中课程
+  curricula_desc_high: 浏览引人入胜的课程和活动，邀请您和您的高中生深入研究计算机科学。
   students_label: 学生
   teachers_label: 教师
   teacher_label_csf: 计算机科学基础教师
@@ -152,6 +158,13 @@ cn:
   call_to_action_explore_choice_level: 浏览示例选择级别
   call_to_action_explore_collection: 浏览系列
   call_to_action_explore_unplugged_lesson: 浏览线下课程
+  call_to_action_explore_csf: 探索 CS 基础知识
+  call_to_action_explore_csd: 探索 CS 发现
+  call_to_action_explore_csp: 探索 CS 原则
+  call_to_action_explore_csc: 探索 CS 连接
+  call_to_action_explore_csa: 探索 AP® 计算机科学 A
+  call_to_action_explore_maker: 浏览创客课程
+  call_to_action_explore_hoc: 探索编程一小时教程
   call_to_action_try_app_lab: 尝试应用实验室
   call_to_action_view_lesson_plan: 查看教学计划
   call_to_action_self_paced_pl: 开始自定进度的专业学习
@@ -196,6 +209,7 @@ cn:
   call_to_action_notify_available: 有货时通知我
   call_to_action_register_early_access: 注册抢先体验
   call_to_action_open_positions: 查看未平仓头寸
+  call_to_action_get_guide: 获取指南
   aria_label_call_to_action_afe: 了解有关亚马逊未来工程师的更多信息
   aria_label_call_to_action_teaching_csf: 启动 “计算机科学基础知识教学” 专业学习计划
   aria_label_call_to_action_teaching_csd: 启动 “计算机科学发现” 教学专业学习计划
@@ -270,6 +284,8 @@ cn:
   curriculum_name_csa: 计算机科学A
   curriculum_name_csc_02: 任何计算机科学联系模块
   curriculum_name_ai: "  AI 和机器学习"
+  curriculum_name_artificial_intelligence: 人工智能 (AI)
+  curriculum_name_maker: 制作者
   curriculum_name_maker_cp: 使用设备创建应用程序（电路游乐场）
   curriculum_name_maker_microbit: '使用设备创建应用程序 (micro: bit)'
   curriculum_name_creating_apps_with_devices: 使用设备创建应用程序
@@ -294,6 +310,9 @@ cn:
   curriculum_desc_design_process: 重点考虑计算的社会影响。通过设计挑战，学生可以同情他人的需求并开发解决方案。
   curriculum_desc_data_society: 强调数据在解决问题中的作用以及计算机在此过程中的帮助。涵盖表征系统和相关挑战。了解数据收集如何帮助解决问题。
   curriculum_desc_creating_apps_with_devices: 探索物理设备在计算中的作用。开发利用硬件输入和输出的程序。这个单元有一个针对micro:bit和电路游乐场的版本。
+  curriculum_desc_csa: 在这个 AP® Computer Science A (AP® CSA) 的免费课程中，向学生介绍软件工程和面向对象的设计，同时学习
+    Java 编程语言。
+  curriculum_desc_maker: 创客教育将STEM（科学、技术、工程、数学）更进一步，将动手体验和协作带入课堂，帮助教授问题解决和批判性思维。
   collection_hardware: 聚焦硬件
   collection_hardware_desc: 使学生能够使用数据和物理设备来解决问题。
   collection_design_purpose: 专注于有目的的设计
@@ -319,6 +338,7 @@ cn:
   module_label_professional_learning: 专业学习：
   module_label_languages: 支持语言：
   module_label_accessibility_features: 辅助功能：
+  module_label_accessibility_features_full: 无障碍功能：
   module_label_educator_tool: 教育工作者工具
   module_label_educator_course: 教育工作者课程
   module_label_student_tool: 学生工具
@@ -326,6 +346,7 @@ cn:
   module_label_student_content_resources: 内容和资源
   module_label_new: 全新
   module_label_coming_soon: 即将上线
+  module_label_available_now: 现已上市
   module_label_video_series: 视频系列
   module_label_self_paced: 自定进度模块
   module_ages_5_10: 5-10
@@ -336,6 +357,8 @@ cn:
   module_grade_2_5: 2-5
   module_grade_3_5: 3-5
   module_grade_3_8: 3-8
+  module_grade_k_12: K-12
+  module_grade_3_12: 3-12
   module_grade_6_12: 6-12
   module_grade_6_10: 6-10
   module_grade_9_12: 9-12
@@ -350,7 +373,9 @@ cn:
   module_grade_9_12_teachers: 9-12年级教师
   module_level_beginner: 初学者
   module_level_intermediate: 中级
+  module_level_advanced: 高级
   module_duration_45_mins: 45 分钟
+  module_duration_2_weeks: 2 个星期
   module_duration_1_hr: 1 个小时
   module_duration_2_hrs: 2 个小时
   module_duration_3_hrs: 3 个小时
@@ -418,6 +443,7 @@ cn:
   heading_java_lab: Java实验室
   heading_objects_first: 对象优先
   heading_these_lessons_will: 这些课程将：
+  heading_explore_curriculum_catalog: 在课程目录中浏览我们的所有课程
   professional_learning_section_desc: 在准备教学时获得所需的支持。老师们喜欢它，超过90％的老师将其评为有史以来最好的职业发展！
   professional_learning_section_desc_short: 在准备教学时获得所需的支持。
   professional_learning_section_desc_self_paced: 及时的支持，让你可以根据自己的日程安排自信地准备教学。
@@ -566,6 +592,8 @@ cn:
   ai_pl_101_video_title_5: 将 AI 带入课堂
   ai_pl_101_video_desc_5: 本课程侧重于人工智能教学、评估和利用 AI 教育工具，以及利用 AI 进行学生评估。它融合了理论、实践示例和资源，旨在使教育工作者能够驾驭人工智能领域并增强学生的学习体验。
   ai_pl_101_video_desc_6: 详细了解推动人工智能重大变革的新技术，包括两个关于大型语言模型（如ChatGPT）和生成式人工智能的新视频。直接从专家那里听听这些新技术的工作原理：OpenAI首席技术官米拉·穆拉蒂和RunwayML首席执行官克里斯托瓦尔·瓦伦苏埃拉。
+  ai_pl_101_llm_slides_title: 面向教育工作者的大型语言模型提示
+  ai_pl_101_llm_slides_desc: 从初学者到高级，可以从 ChatGPT 等 LLM 那里获得最佳输出的工具。包括为那些只想尽情发挥潜力的人提供的入门提示，以及为那些希望最大限度地发挥潜力的人提供的高级工具。
   how_ai_works_hero_heading: 人工智能的工作原理
   how_ai_works_hero_desc: 通过我们的视频系列和随附的课程 “人工智能如何运作”，深入了解人工智能的世界！
   how_ai_works_intro_desc: 这一系列短视频和随附的课堂课程将向您和您的学生介绍人工智能的工作原理及其重要性。您可以根据主题选择单独的课程，在一堂课中探索整个系列主题，或者教授所有
@@ -1425,6 +1453,10 @@ cn:
   signup_email_preference_opt_in: 我们能向您推送 Code.org 课程更新、本地机遇或者其他计算机科学的新闻吗？
   signup_email_preference_privacy: "（请参阅我们的隐私政策）"
   signup_email_preference_yes: 是的
+  signup_email_preference_yes_elementary: 是-向我发送有关小学资源的最新信息
+  signup_email_preference_yes_middle: 是-向我发送有关中学资源的最新信息
+  signup_email_preference_yes_high: 是-向我发送有关高中资源的最新信息
+  signup_email_preference_yes_general: 是-向我发送一般更新
   signup_email_preference_no: 不是
   signup_email_preference_error: 电子邮件首选项为必填项
   signup_multiple_event_warning: 如果你要主办多次活动，请为每个活动提交一个单独的名字或者邮件。我们按照每个名字或邮件来计算数量。
@@ -8275,12 +8307,8 @@ cn:
   tutorial_googlesuperhero_longdescription: 将生活或社区中的日常英雄编程为超级英雄，让他们飞越建筑物、旋转、与搭档合作，并通过触摸游戏中的物体来得分。在
     Code Your Hero 中，使用 CS First 和 Scratch 炫耀你的英雄的特殊力量和你自己的创造力。
   tutorial_googlename _longdescription: 选择一个名字，使用代码让单词的字母变为现实。选择昵称、宠物的名字、动物、运动、地点或爱好。
-  tutorial_carnegiezillah_longdescription: Zillah City is thriving, and music is in
-    the air. Rumor has it, the famed Gargantua bot is online and sending the last
-    Toxibots to trash the city block by block…. Grab your cobot hoverboard and get
-    ready to groove, move, and finish off what you started! Players program their
-    cobot hoverbots to change lanes, avoid obstacles, and take out many Toxibots in
-    this rhythm-styled game.
+  tutorial_carnegiezillah_longdescription: Zillah City 蓬勃发展，空气中弥漫着音乐。有传言说，著名的 Gargantua
+    机器人已上线，正在派出最后一批毒素机器人逐个街区丢掉城市。…拿起你的协作机器人悬浮滑板，准备好进行节奏、移动，完成你开始的事情！在这款节奏风格的游戏中，玩家对协作机器人悬浮机器人进行编程，以改变车道，避开障碍物并消灭许多毒性机器人。
   tutorial_nasachspacejam_longdescription: 创造一个真正摇摆不定的太阳系！在这个自学活动中学习音乐、天文学和编程（无需编程经验）。对行星进行编程以制作音乐，创建自己的音乐太阳系，并配有宽敞的旋律。
   tutorial_hatchxrsolar_longdescription: '使用基于方块的编程概念探索恒星并建造自己的太阳系。学习 3D 空间的基础知识，潜入你的想象力，在不到一个小时的时间内建造一个你梦想中的宇宙。猜猜怎么样，你可以使用
     HatchXR 应用程序在任何 iOS 设备上在 AR 中运行你的项目。别忘了使用 #hatchxr #HourOfCode 与我们分享你的作品'
@@ -8878,6 +8906,75 @@ cn:
   engineering_faq_answer_5_c_2: 当工程师为问题而苦苦挣扎时，我们会介入并提供帮助。我们的原则之一是，我们对问题持严谨态度，但要善待彼此。我们定期晋升工程师，但我们不会仅仅为了支持某人的晋升道路而开出过度设计的解决方案。相反，我们投资于拥有充足的专业发展预算并有机会获得其他学习机会的工程师。
   engineering_faq_answer_5_d_1: 我们努力工作，但我们设定了明确的界限。
   engineering_faq_answer_5_d_2: 在我们为世界各地的学生提供支持的同时，我们也要求自己对工作和家庭生活之间的明确界限负责。我们享受星期三不开会，包括我们的PTO（总共5周，其中包括年底全组织关闭2周的办公室，又名寒假），夏季的星期五（也就是夏季星期五）半个工作日，以及其他丰厚的福利。
+  csa_ai_page_hero_title: 软件工程与计算机视觉
+  csa_ai_page_hero_description: '这个分为两章的 AP 后 CSA 模块为高中生提供了使用专业软件开发工具（包括 GitHub 和
+    GitHub Copilot）的实践经验，并向他们传授了开发计算机视觉程序的现实技能。 '
+  csa_ai_page_video_section_title: 超越 Code.org 编程环境的世界
+  csa_ai_page_video_section_li_1: 了解人工智能及其应用
+  csa_ai_page_video_section_li_2: 使用专业软件开发工具的实践经验
+  csa_ai_page_video_section_li_3: 学习行业标准实践
+  csa_ai_page_video_section_li_4: 培养批判性思维
+  csa_ai_page_programming_tools: '编程工具：Github、Github Copilot、vsCode、TensorF '
+  csa_ai_page_professional_learning: 没有
+  csa_ai_page_curriculum_topics: 主题：编程、数据、艺术与设计、游戏和动画
+  csa_ai_page_curriculum_accessibility_features: 详情请参阅常见问题解答部分
+  csa_ai_page_curriculum_languages_support: 英文
+  csa_ai_page_article_title_1: 使用 Copilot 进行构建
+  csa_ai_page_article_description_1: 学生将学习如何使用 GitHub Copilot 作为配对程序员来解释现有代码、查找和修复错误以及生成新问题的解决方案。
+  csa_ai_page_article_link_1: 了解有关 Copilot 的更多信息
+  csa_ai_page_article_title_2: 构建你自己的 AI 模型
+  csa_ai_page_article_description_2: 学生使用 Teachable Machine 训练自己的 AI 模型，以识别网络摄像头中的图像和手势，并考虑计算机视觉如何影响用户与应用程序的交互方式。
+  csa_ai_page_article_link_2: 探索教学计划
+  csa_ai_page_article_title_3: 探索计算机视觉
+  csa_ai_page_article_description_3: 学生将他们使用 Teachable Machine 创建的人工智能模型实现到 Java 应用程序中，使用
+    GitHub Copilot 帮助他们修改应用程序的现有版本以使用不同的输入。
+  csa_ai_page_article_link_3: 看一个例子
+  csa_ai_page_learn_more_section_title: 了解有关人工智能的更多信息
+  csa_ai_page_learn_more_title: 探索面向教师的 AI 101
+  csa_ai_page_learn_more_description: 通过我们面向教师的全面在线学习系列，探索人工智能 (AI) 的开创性世界及其在教育领域的变革潜力。
+  csa_ai_page_learn_more_link: 观看 AI 101 教师版系列
+  csa_ai_page_faq_question_01: 这个模块的先决条件是什么？
+  csa_ai_page_faq_answer_01_01: 在深入学习本模块之前，学生应具备 Java 的入门级知识。具体而言，他们应该掌握：
+  csa_ai_page_faq_answer_01_list_01: "**课堂和对象：** 学生应熟悉定义和使用课程，以及创建和操作对象。"
+  csa_ai_page_faq_answer_01_list_02: "**写作和调用方法：** 学生应该能够在课堂中定义方法，理解方法参数和返回类型，以及从对象或其他方法中调用方法。"
+  csa_ai_page_faq_answer_01_list_03: "**一维数组和数组列表：** 他们应该精通声明、初始化和操作一维数组和 ArrayList，包括遍历它们。"
+  csa_ai_page_faq_answer_01_list_04: "**选择和迭代：** 条件语句和循环的坚实基础至关重要。"
+  csa_ai_page_faq_question_01_02: 理想情况下，已经完成 AP 计算机科学 A 或深度和严谨程度相似的课程的学生将为本模块做好充分的准备。
+  csa_ai_page_faq_question_02: 如何安装此模块所需的软件？
+  csa_ai_page_faq_answer_02_01: 该模块之所以独特，是因为它涉及使用第三方软件，而不是 Code.org 实验室和工具。[在此处阅读有关安装软件的更多信息]
+    (%{accessibility_url})。
+  csa_ai_page_faq_question_03: 在教授本模块的同时，如何满足无障碍需求？
+  csa_ai_page_faq_answer_03_01: 满足无障碍需求对于包容性学习环境至关重要。[在此处阅读有关本模块所用软件中无障碍功能的更多信息] (%{install_url})。
+  csa_ai_page_faq_question_04: 如何在 Chromebook 上使用 VS Code？
+  csa_ai_page_faq_answer_04: 在 Chromebook 上使用 VS Code 变得更加简单，尤其是能够在较新的 Chromebook
+    机型上运行 Linux 应用程序的情况下。[在此处阅读有关在 Chromebook 上设置 VS Code 的更多信息] ()%{chromebook_url}。
+  csa_ai_page_faq_question_05: 我怎样才能获得这个模块的专业发展？
+  csa_ai_page_faq_answer_05: 本课程目前没有具体的专业发展。如果你想了解如何在课堂上使用人工智能，你可以 [探索面向教师的 AI 101]
+    (%{ai_101_url})。
+  csa_ai_page_faq_question_06: 本模块的推荐教学时间是什么时候？
+  csa_ai_page_faq_answer_06_01: 软件工程与计算机视觉模块的结构经过深思熟虑，可在简洁的时间范围内提供全面的学习。整个模块的设计跨越**2周的教学**。大多数课程均为**45分钟**量身定制，而学生深入动手实践
+    Java 项目开发的课程则设计为**90分钟**。这种延长的时间可确保学生在工作时有充足的机会进行理解、实施和故障排除。
+  csa_ai_page_faq_answer_06_02: 该模块的结构中还内置了有意的灵活性。根据课堂动态、学生参与度以及你想探索每个主题的深度，你可以调整持续时间。例如，如果你想更深入地了解
+    GitHub Copilot 和 ChatGPT 等大型语言模型和工具的工作原理，那么设计为 45 分钟的 Copilot 入门课程可以扩展到 90 分钟。
+  csa_ai_page_faq_question_07: How can I access answer keys?
+  csa_ai_page_faq_answer_07: 使用经批准的教师帐户，您可以在在线课程和活动中显示的蓝色 “仅限教师” 面板中找到答案键。如果您需要经批准的教师帐户，则可以通过
+    [此表格]（）申请访问受保护的教师专用材料（答案键等）。%{form_url}请记住，验证您的账户可能需要 3-5 个工作日。
+  csa_ai_page_faq_question_08: 这个模块是否符合标准？
+  csa_ai_page_faq_answer_08: 是的，软件工程与计算机视觉课程与 [CSTA K-12 标准] (%{csta_k12_url}) 和 [K-12
+    指南] 的人工智能 () 对应。%{k12_url}
+  csa_ai_page_faq_question_09: 教授这个模块要花多少钱？
+  csa_ai_page_faq_answer_09_01: 我们的课程和平台 [免费] (%{no_cost_url}) 可供任何人、任何地方教学！
+  csa_ai_page_faq_answer_09_02: 此外，本模块中使用的软件和工具是免费的。GitHub Copilot 免费提供经过验证的 [teachers](%{teachers_url})
+    和 [students](%{students_url})。
+  csa_ai_page_faq_question_10: 如果软件安装不起作用该怎么办？
+  csa_ai_page_faq_answer_10: 在软件安装过程中遇到问题可能很常见，但是您可以按照一些系统的步骤进行故障排除和解决。[在此处查看一些故障排除提示]
+    (%{troubleshooting_url})。
+  csa_ai_page_faq_question_11: How was the curriculum developed?
+  csa_ai_page_faq_answer_11_01: 我们的软件工程和计算机视觉课程在设计时充分考虑了我们的课程价值观。以下目标指导了本课程的创建：
+  csa_ai_page_faq_answer_11_list_01: "**目标 1：** 使用 AI 工具生成、调试和编辑代码。"
+  csa_ai_page_faq_answer_11_list_02: "**目标 2：** 从 Java 实验室过渡到实际工具。"
+  csa_ai_page_faq_answer_11_list_03: "**目标 3：** 加深对如何训练人工智能模型并将其整合到项目中的理解。"
+  csa_ai_page_faq_answer_11_02: 有关指导我们工作的价值观的更多信息，请参阅我们的 [课程价值观] (%{curriculum_values_url})。
   language_code:
     ar: 阿拉伯语
     az: 阿塞拜疆人

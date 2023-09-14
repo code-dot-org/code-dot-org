@@ -5,35 +5,35 @@ tr:
   language: İngilizce
   front_title: Tarihteki en büyük eğitim etkinliğine katıl, %{campaign_date}
   coming_soon: Çok Yakında
-  campaign_date_start_short: 5 Ara.
-  campaign_date_start_long: 5 Aralık
-  campaign_date_short: 5-11 Aralık
-  campaign_date_full: 5-11 Aralık
-  campaign_date_year: '2022'
-  campaign_date_full_year: 5-11 Aralık, 2022
-  nonus_campaign_date_start_short: 1 Ekim
+  campaign_date_start_short: 7 Ara.
+  campaign_date_start_long: 7 Aralık
+  campaign_date_short: 7-13 Aralık
+  campaign_date_full: 7-13 Aralık
+  campaign_date_year: '2020'
+  campaign_date_full_year: 7-13 Aralık, 2020
+  nonus_campaign_date_start_short: 1 Eki.
   nonus_campaign_date_start_long: 1 Ekim
   nonus_campaign_date_short: 1 Eki. - 18 Ara.
   nonus_campaign_date_full: 1 Ekim - 18 Aralık
-  nonus_campaign_date_year: '2022'
-  nonus_campaign_date_full_year: 1 Ekim 2022 - 18 Aralık 2022
-  latam_campaign_date_start_short: 1 Ekim
+  nonus_campaign_date_year: '2020'
+  nonus_campaign_date_full_year: 1 Ekim 2020 - 18 Aralık 2020
+  latam_campaign_date_start_short: 1 Eki.
   latam_campaign_date_start_long: 1 Ekim
   latam_campaign_date_short: 1 Eki. - 18 Ara.
   latam_campaign_date_full: 1 Ekim - 18 Aralık
-  latam_campaign_date_year: '2022'
-  latam_campaign_date_full_year: 1 Ekim 2022 - 18 Aralık 2022
+  latam_campaign_date_year: '2020'
+  latam_campaign_date_full_year: 1 Ekim 2020 - 18 Aralık 2020
   europe_campaign_date_start_short: 10 Eki.
   europe_campaign_date_start_long: 10 Ekim
   europe_campaign_date_short: 10-25 Eki.
   europe_campaign_date_full: 10-25 Ekim
-  europe_campaign_date_year: '2022'
+  europe_campaign_date_year: '2020'
   europe_campaign_date_full_year: 10-25 Ekim 2020
-  africa_campaign_date_start_short: 1 Ekim
+  africa_campaign_date_start_short: 1 Eki.
   africa_campaign_date_start_long: 1 Ekim
   africa_campaign_date_short: 1-31 Eki.
   africa_campaign_date_full: 1-31 Ekim
-  africa_campaign_date_year: '2022'
+  africa_campaign_date_year: '2020'
   africa_campaign_date_full_year: 1-31 Ekim 2020
   hoc2022_header: Keşfet, Oyna, Yarat!
   social_hoc2022_explore_play_create: Keşfetmek, oynamak ve yaratmak için bilgisayar
@@ -194,6 +194,15 @@ tr:
   grade_level_label_elementary: İlkokul
   grade_level_label_middle: Ortaokul
   grade_level_label_high: Lise
+  curricula_title_elementary: İlkokul Müfredatı
+  curricula_desc_elementary: Sizi ilkokul öğrencilerinizle bilgisayar bilimlerini
+    keşfetmeye davet eden eğlenceye, ücretsiz kurslara ve etkinliklere göz atın.
+  curricula_title_middle: Ortaokul Müfredatı
+  curricula_desc_middle: Sizin ve ortaokul öğrencilerinizin bilgisayar bilimlerini
+    birlikte keşfetmesini sağlayan ilgi çekici tekliflere göz atın.
+  curricula_title_high: Lise Müfredatı
+  curricula_desc_high: Sizi ve lise öğrencilerinizi bilgisayar bilimlerinin derinliklerine
+    inmeye davet eden ilgi çekici kurslara ve etkinliklere göz atın.
   students_label: Öğrenciler
   teachers_label: Öğretmenler
   teacher_label_csf: CS Temelleri Öğretmeni
@@ -220,6 +229,13 @@ tr:
   call_to_action_explore_choice_level: Örnek seçim düzeyini keşfedin
   call_to_action_explore_collection: Koleksiyonu keşfedin
   call_to_action_explore_unplugged_lesson: Takılı olmayan dersleri keşfedin
+  call_to_action_explore_csf: CS Temellerini Keşfedin
+  call_to_action_explore_csd: CS Keşiflerini Keşfedin
+  call_to_action_explore_csp: CS İlkelerini Keşfedin
+  call_to_action_explore_csc: CS Bağlantılarını Keşfedin
+  call_to_action_explore_csa: AP® Computer Science A'yı Keşfedin
+  call_to_action_explore_maker: Maker müfredatını keşfedin
+  call_to_action_explore_hoc: Hour of Code eğitimlerini keşfedin
   call_to_action_try_app_lab: Uygulama Laboratuvarı'nı deneyin
   call_to_action_view_lesson_plan: Ders planını görüntüleyin
   call_to_action_self_paced_pl: Kendi hızınızda profesyonel öğrenmeye başlayın
@@ -265,6 +281,7 @@ tr:
   call_to_action_notify_available: Uygun olduğunda bana haber ver
   call_to_action_register_early_access: Erken erişim için kaydolun
   call_to_action_open_positions: Açık pozisyonları görüntüleyin
+  call_to_action_get_guide: Kılavuzu edinin
   aria_label_call_to_action_afe: Amazon Future Engineer hakkında daha fazla bilgi
     edinin
   aria_label_call_to_action_teaching_csf: Bilgisayar Bilimi Temelleri Öğretimi profesyonel
@@ -375,6 +392,8 @@ tr:
   curriculum_name_csa: Bilgisayar Bilimleri A
   curriculum_name_csc_02: Herhangi Bir Bilgisayar Bilimleri Bağlantıları Modülü
   curriculum_name_ai: Yapay Zeka ve Makine Öğrenimi
+  curriculum_name_artificial_intelligence: Yapay Zeka (AI)
+  curriculum_name_maker: İmalatçı
   curriculum_name_maker_cp: Cihazlarla Uygulama Oluşturma (Circuit Playground)
   curriculum_name_maker_microbit: Cihazlarla Uygulama Oluşturma (micro:bit)
   curriculum_name_creating_apps_with_devices: Cihazlarla Uygulama Oluşturma
@@ -430,6 +449,12 @@ tr:
   curriculum_desc_creating_apps_with_devices: Fiziksel cihazların bilgi işlemdeki
     rolünü keşfedin. Donanım giriş ve çıkışlarını kullanan programlar geliştirin.
     Bu ünitenin hem micro:bit hem de Circuit Playground için bir versiyonu vardır.
+  curriculum_desc_csa: AP® Computer Science A (AP® CSA) için bu ücretsiz müfredatta
+    Java programlama dilini öğrenirken öğrencileri yazılım mühendisliği ve nesne yönelimli
+    tasarımla tanıştırın.
+  curriculum_desc_maker: Maker eğitimi, problem çözmeyi ve eleştirel düşünmeyi öğretmeye
+    yardımcı olmak için uygulamalı deneyim ve işbirliğini sınıfa davet ederek STEM'yi
+    (Bilim, Teknoloji, Mühendislik, Matematik) bir adım daha ileri götürür.
   collection_hardware: Donanıma Odaklanın
   collection_hardware_desc: Öğrencilerin problemleri çözmek için verileri ve fiziksel
     cihazları kullanmalarını sağlar.
@@ -463,6 +488,7 @@ tr:
   module_label_professional_learning: 'Mesleki Öğrenme:'
   module_label_languages: 'Desteklenen Diller:'
   module_label_accessibility_features: 'Erişilebilirlik:'
+  module_label_accessibility_features_full: 'Erişilebilirlik Özellikleri:'
   module_label_educator_tool: Eğitimci aracı
   module_label_educator_course: Eğitimci kursu
   module_label_student_tool: Öğrenci aracı
@@ -470,6 +496,7 @@ tr:
   module_label_student_content_resources: İçerik ve kaynaklar
   module_label_new: Yeni
   module_label_coming_soon: Yakında geliyor
+  module_label_available_now: Şimdi Kullanılabilir
   module_label_video_series: Video serisi
   module_label_self_paced: Kendinden tempolu modül
   module_ages_5_10: 5-10
@@ -480,6 +507,8 @@ tr:
   module_grade_2_5: 2-5
   module_grade_3_5: 3-5
   module_grade_3_8: 3-8
+  module_grade_k_12: K-12
+  module_grade_3_12: 3-12
   module_grade_6_12: 6-12
   module_grade_6_10: 6-10
   module_grade_9_12: 9-12
@@ -494,7 +523,9 @@ tr:
   module_grade_9_12_teachers: 9-12 Öğretmenleri
   module_level_beginner: Acemi
   module_level_intermediate: Orta
+  module_level_advanced: Gelişmiş
   module_duration_45_mins: 45 dakika
+  module_duration_2_weeks: 2 hafta
   module_duration_1_hr: 1 saat
   module_duration_2_hrs: 2 saat
   module_duration_3_hrs: 3 saat
@@ -575,6 +606,7 @@ tr:
   heading_java_lab: Java Laboratuvarı
   heading_objects_first: Önce nesneler
   heading_these_lessons_will: 'Bu dersler:'
+  heading_explore_curriculum_catalog: Müfredat Kataloğu'ndaki tüm kurslarımızı keşfedin
   professional_learning_section_desc: Öğretmeye hazırlanırken ihtiyacınız olan desteği
     alın. Öğretmenler onu seviyor,% 90'dan fazlası onu şimdiye kadarki en iyi mesleki
     gelişim olarak sıralıyor!
@@ -831,6 +863,11 @@ tr:
     yeni teknoloji hakkında daha fazla bilgi edinin. Bu yeni teknolojilerin nasıl
     çalıştığını doğrudan uzmanlardan dinleyin: OpenAI CTO Mira Murati ve RunwayML
     CEO''su Cristóbal Valenzuela.'
+  ai_pl_101_llm_slides_title: Eğitimciler için Büyük Dil Modeli İstemleri
+  ai_pl_101_llm_slides_desc: Başlangıç seviyesinden ileri seviyeye kadar ChatGPT gibi
+    LLM'lerden mümkün olan en iyi çıktıyı elde etmek için araçlar. Sadece ayak parmaklarını
+    batıranlar için başlangıç istemleri içerir, potansiyellerini en üst düzeye çıkarmak
+    isteyenler için gelişmiş araçların yanı sıra.
   how_ai_works_hero_heading: Yapay Zeka Nasıl Çalışır
   how_ai_works_hero_desc: Video serimiz ve beraberindeki derslerimiz “AI Nasıl Çalışır”
     ile AI dünyasına dalın!
@@ -1429,10 +1466,10 @@ tr:
     başka bir ağırlıkla değiştirilebileceğini unutmayın). Bu sarf malzemelerine erişiminiz
     yoksa alternatif etkinlikler mevcuttur.
   csd_page_faq_answer_04_06: Cihazlarla Uygulama Oluşturma (Seçenek A ve Seçenek B)
-  csd_page_faq_answer_04_07: 'Option A: Classroom set of Circuit Playgrounds. Check
-    out [code.org/maker/circuitplayground](%{url}) for more details.'
-  csd_page_faq_answer_04_08: 'Option B: Classroom set of micro:bit devices. Check
-    out [code.org/maker/microbit](%{url}) for more details.'
+  csd_page_faq_answer_04_07: 'Seçenek A: Devre Oyun Alanlarının sınıf seti. Daha fazla
+    ayrıntı için [code.org/maker/circuitplayground] () adresine bakın.%{url}'
+  csd_page_faq_answer_04_08: 'Seçenek B: Sınıf mikro:bit aygıtları kümesi. Daha fazla
+    ayrıntı için [code.org/maker/microbit] () adresine bakın.%{url}'
   csd_page_faq_answer_04_09: Boş kağıt mendil kutuları veya karton rulolar veya kazıma
     kağıdı gibi yapımcı malzemeleri
   csd_page_faq_answer_04_10: "*Not: Cihazlarla Uygulama Oluşturma biriminin iki uygulama
@@ -1440,12 +1477,12 @@ tr:
     kullananlar için. Öğretmenler, eşdeğer oldukları ve aynı içeriği kapsadıkları
     için her iki cihaz setini de satın almamalı veya her iki birim seçeneğini de öğretmemelidir."
   csd_page_faq_question_06: CS Discoveries diğer Code.org kurslarına nasıl uyar?
-  csd_page_faq_answer_06_01: CS Discoveries is designed to fit naturally between our
-    [CS Fundamentals](%{csf_url}) courses and our [CS Principles](%{csp_url}) course.
-    While each of these courses is designed to be an age-appropriate entry point to
-    computer science, students with previous experience will find many new topics
-    to explore, and they will revisit familiar topics in novel and more challenging
-    contexts.
+  csd_page_faq_answer_06_01: CS Discoveries, [CS Temelleri] (%{csf_url}) kurslarımız
+    ve [CS İlkeleri] () kursumuz arasında doğal olarak uyacak şekilde tasarlanmıştır.%{csp_url}Bu
+    kursların her biri bilgisayar bilimlerine yaşa uygun bir giriş noktası olacak
+    şekilde tasarlanmış olsa da, daha önce deneyime sahip öğrenciler keşfedilecek
+    birçok yeni konu bulacak ve tanıdık konuları yeni ve daha zorlu bağlamlarda tekrar
+    gözden geçirirler.
   csc_page_top_desc: Bilgisayar bilimi (CS) ile matematik, dil sanatları, bilim ve
     sosyal bilgiler gibi diğer konular arasında bağlantı kurun.
   csc_page_intro_heading: Temel konu standartlarını ele alırken CS öğretin
@@ -1558,10 +1595,10 @@ tr:
     öğretmenlere katılın. Bölgesel Ortaklarımız, bireysel öğretmenler veya okul çapında
     PD için yüksek kaliteli, bir günlük Code.org atölyeleri sunmaktadır. [Yakınınızdaki
     bir profesyonel gelişim atölyesi için kaydolun] (%{sign_up_url})!
-  csf_page_faq_answer_04_02: Join over 100,000 teachers who have participated in our
-    workshops. The majority of our workshop attendees say, 'It's the best professional
-    development I've ever attended.' In fact, [90% of attendees would recommend our
-    program to other teachers](%{rec_url})!
+  csf_page_faq_answer_04_02: Atölyelerimize katılan 100.000'den fazla öğretmene katılın.
+    Atölye katılımcılarımızın çoğu, “Şimdiye kadar katıldığım en iyi mesleki gelişim”
+    diyor. Aslında, [90% Katılımcıların oranı programımızı diğer öğretmenlere tavsiye
+    eder] ()!%{rec_url}
   csf_page_faq_question_05: CS Temelleri öğretmek için önerilen zamanlama nedir?
   csf_page_faq_answer_05: Her CSF kursu 45 dakikalık dönemler için tasarlanmış 13-17
     ders içerir. Tüm öğrencilerin dersten derse öğretmen tarafından belirlenen bir
@@ -1569,9 +1606,10 @@ tr:
     hızlarında tamamlanabilirken, birlikte deneyimlenmek üzere tasarlanmış öğretmen
     liderliğindeki birçok proje seviyesi vardır..
   csf_page_faq_question_06: CS Fundamentals için hangi materyallere ihtiyacım var?
-  csf_page_faq_answer_06: Many lessons have handouts that guide students through activities.
-    These resources can be printed or assigned digitally. Some lessons call for typical
-    classroom supplies and manipulatives. [Visit the CSF Syllabus to learn more](%{syllabus_url}).
+  csf_page_faq_answer_06: Birçok derste öğrencilere etkinlikler boyunca rehberlik
+    eden bildiriler bulunur. Bu kaynaklar dijital olarak yazdırılabilir veya atanabilir.
+    Bazı dersler tipik sınıf malzemeleri ve manipülatifleri gerektir. [Daha fazla
+    bilgi edinmek için CSF Müfredatını ziyaret edin] ().%{syllabus_url}
   csa_page_top_desc: Introduce students to software engineering and object-oriented
     design while they learn the Java programming language in this free curriculum
     for [AP® Computer Science A (AP® CSA)](%{csa_url}).
@@ -2063,6 +2101,13 @@ tr:
     veya diğer bilgisayar bilimi haberleriyle ilgili e-posta gönderebilir miyiz?
   signup_email_preference_privacy: "(Gizlilik Politikamıza bakın)"
   signup_email_preference_yes: Evet
+  signup_email_preference_yes_elementary: Evet - Bana İlkokul Kaynakları ile ilgili
+    güncellemeleri gönder
+  signup_email_preference_yes_middle: Evet - Ortaokul Kaynakları ile ilgili güncellemeleri
+    gönder
+  signup_email_preference_yes_high: Evet - Bana Lise Kaynakları ile ilgili güncellemeleri
+    gönder
+  signup_email_preference_yes_general: Evet - Bana genel güncellemeleri gönder
   signup_email_preference_no: Hayır
   signup_email_preference_error: E-posta tercihi gereklidir
   signup_multiple_event_warning: Kayıt yaptığınızda, okul ismini şehrini haritaya
@@ -13480,6 +13525,128 @@ tr:
     günleri toplantısız, PTO'muzu (yıl sonunda, yani Winter Break olarak da bilinen
     2 haftalık bir ofis kapatma dahil olmak üzere toplam 5 hafta), yaz aylarında Cuma
     günleri yarım iş günü, yani Yaz Cuma günleri ve diğer cömert faydalar.
+  csa_ai_page_hero_title: Yazılım Mühendisliği ve Bilgisayarla Görme
+  csa_ai_page_hero_description: 'Bu iki bölümlü AP sonrası CSA modülü, lise öğrencilerine
+    GitHub ve GitHub Copilot dahil olmak üzere profesyonel yazılım geliştirme araçlarıyla
+    uygulamalı deneyim sunar ve onlara bir bilgisayarla görme programı geliştirmek
+    için gerçek dünya becerileri kazandırır. '
+  csa_ai_page_video_section_title: Code.org programlama ortamları dünyasının ötesine
+    geçin
+  csa_ai_page_video_section_li_1: Yapay zeka ve uygulamaları hakkında bilgi edinin
+  csa_ai_page_video_section_li_2: Profesyonel yazılım geliştirme araçlarıyla uygulamalı
+    deneyim
+  csa_ai_page_video_section_li_3: Endüstri standardı uygulamaları öğrenir
+  csa_ai_page_video_section_li_4: Eleştirel düşünmeyi geliştirin
+  csa_ai_page_programming_tools: 'Programlama Araçları: Github, Github Copilot, VScode,
+    TensorFlow '
+  csa_ai_page_professional_learning: Hiçbiri
+  csa_ai_page_curriculum_topics: 'Konular: Programlama, Veri, Sanat ve Tasarım, Oyunlar
+    ve Animasyon'
+  csa_ai_page_curriculum_accessibility_features: Ayrıntılar için SSS bölümüne bakın
+  csa_ai_page_curriculum_languages_support: İngilizce
+  csa_ai_page_article_title_1: Copilot ile oluşturun
+  csa_ai_page_article_description_1: Öğrenciler, mevcut kodu açıklamak, hataları bulmak
+    ve düzeltmek ve yeni sorunlara çözümler üretmek için GitHub Copilot'u çift programcı
+    olarak nasıl kullanacaklarını öğrenirler.
+  csa_ai_page_article_link_1: Copilot hakkında daha fazla bilgi edinin
+  csa_ai_page_article_title_2: Kendi AI modelinizi oluşturun
+  csa_ai_page_article_description_2: Öğrenciler, bir web kamerası oluşturan görüntüleri
+    ve hareketleri tanımak ve bilgisayar görüşünün kullanıcıların uygulamalarla etkileşim
+    şeklini nasıl etkilediğini düşünmek için Teachable Machine'i kullanarak kendi
+    AI modellerini eğitir.
+  csa_ai_page_article_link_2: Ders planını keşfedin
+  csa_ai_page_article_title_3: Bilgisayarla görüşü keşfedin
+  csa_ai_page_article_description_3: Öğrenciler, Teachable Machine ile oluşturdukları
+    AI modellerini, farklı girişlerle çalışacak şekilde uygulamaların mevcut sürümlerini
+    değiştirmelerine yardımcı olmak için GitHub Copilot'u kullanarak bir Java uygulamasına
+    uygular.
+  csa_ai_page_article_link_3: Bir örneğe bakın
+  csa_ai_page_learn_more_section_title: Yapay Zeka hakkında daha fazla bilgi edinin
+  csa_ai_page_learn_more_title: Öğretmenler için AI 101'i keşfedin
+  csa_ai_page_learn_more_description: Öğretmenlere yönelik kapsamlı çevrimiçi öğrenme
+    serimizle Yapay Zekanın (AI) çığır açan dünyasını ve eğitimdeki dönüştürücü potansiyelini
+    keşfedin.
+  csa_ai_page_learn_more_link: Öğretmenler için AI 101 serisini izleyin
+  csa_ai_page_faq_question_01: Bu modül için ön koşullar nelerdir?
+  csa_ai_page_faq_answer_01_01: 'Bu modüle dalmadan önce, öğrenciler giriş seviyesi
+    Java bilgisine sahip olmalıdır. Spesifik olarak, aşağıdakileri kavramaları gerekir:'
+  csa_ai_page_faq_answer_01_list_01: "**Sınıflar ve Nesneler: ** Öğrenciler, sınıfları
+    tanımlamaya ve kullanmaya, ayrıca nesneler oluşturmaya ve manipüle etmeye aşina
+    olmalıdır."
+  csa_ai_page_faq_answer_01_list_02: "**Yazma ve Çağrı Yöntemleri: ** Öğrenciler bir
+    sınıf içindeki yöntemleri tanımlayabilmeli, yöntem parametrelerini ve dönüş türlerini
+    anlayabilmeli ve nesnelerden veya diğer yöntemlerden yöntemleri çağırabilmelidir."
+  csa_ai_page_faq_answer_01_list_03: "**1D Diziler ve Diziler Listeleri: ** Tek boyutlu
+    dizileri ve ArrayLists, bunlar arasında yineleme de dahil olmak üzere bildirme,
+    başlatma ve manipüle etme konusunda yetkin olmalıdırlar."
+  csa_ai_page_faq_answer_01_list_04: "**Seçim ve Yineleme: ** Koşullu ifadelerde ve
+    döngülerde sağlam bir temel çok önemlidir."
+  csa_ai_page_faq_question_01_02: İdeal olarak, AP Computer Science A veya benzer
+    derinlik ve titizlik kursunu tamamlayan öğrenciler bu modül için iyi hazırlanmış
+    olacaktır.
+  csa_ai_page_faq_question_02: Bu modül için gerekli yazılımı nasıl yüklerim?
+  csa_ai_page_faq_answer_02_01: Bu modül benzersizdir çünkü Code.org laboratuvarları
+    ve araçları yerine üçüncü taraf yazılımların kullanımını içerir. [Yazılımı yükleme
+    hakkında daha fazla bilgiyi buradan okuyun] (%{accessibility_url}).
+  csa_ai_page_faq_question_03: Bu modülü öğretirken erişilebilirlik ihtiyaçlarını
+    nasıl destekleyebilirim?
+  csa_ai_page_faq_answer_03_01: Kapsayıcı bir öğrenme ortamı için erişilebilirlik
+    ihtiyaçlarını karşılamak çok önemlidir. [Bu modülde kullanılan yazılımdaki erişilebilirlik
+    özellikleri hakkında daha fazla bilgiyi buradan okuyun] (%{install_url}).
+  csa_ai_page_faq_question_04: Chromebook'larda VS Kodunu nasıl kullanırım?
+  csa_ai_page_faq_answer_04: Bir Chromebook'ta VS Code'u kullanmak, özellikle Linux
+    uygulamalarını daha yeni Chromebook modellerinde çalıştırma yeteneği ile daha
+    kolay hale geldi. [Chromebook"larda VS Code kurma hakkında daha fazla bilgiyi
+    buradan okuyun] ()%{chromebook_url}.
+  csa_ai_page_faq_question_05: Bu modül için mesleki gelişimi nasıl alabilirim?
+  csa_ai_page_faq_answer_05: Şu anda bu kurs için belirli bir mesleki gelişim yoktur.
+    Sınıfınızda Yapay Zekaya nasıl yaklaşacağınızı anlamak istiyorsanız, [Öğretmenler
+    için AI 101'i keşfedin] (%{ai_101_url}).
+  csa_ai_page_faq_question_06: Bu modülü öğretmek için önerilen zamanlama nedir?
+  csa_ai_page_faq_answer_06_01: Yazılım Mühendisliği ve Bilgisayarla Görme modülü,
+    kısa bir zaman diliminde kapsamlı öğrenme sağlamak için düşünceli bir şekilde
+    yapılandırılmıştır. Tüm modül, ** 2 haftalık talimat** kapsayacak şekilde tasarlanmıştır.
+    Çoğu ders **45 dakika** için uyarlanırken, öğrencilerin uygulamalı Java proje
+    geliştirmeye girdiği dersler **90 dakika** için tasarlanmıştır. Bu uzatılmış süre,
+    öğrencilerin çalışırken anlama, uygulama ve sorun giderme konusunda bolca fırsata
+    sahip olmalarını sağlar.
+  csa_ai_page_faq_answer_06_02: Modülün yapısında yerleşik kasıtlı esneklik de vardır.
+    Sınıf dinamiklerine, öğrenci katılımına ve her konuyu keşfetmek istediğiniz derinliğe
+    bağlı olarak süreyi ayarlayabilirsiniz. Örneğin, 45 dakikalık bir ders olarak
+    tasarlanan Copilot'a Giriş dersi, GitHub Copilot ve ChatGPT gibi büyük dil modellerinin
+    ve araçlarının ne kadar büyük çalıştığını daha derinlemesine incelemek isterseniz
+    90 dakikaya genişletilebilir.
+  csa_ai_page_faq_question_07: How can I access answer keys?
+  csa_ai_page_faq_answer_07: Onaylı bir öğretmen hesabıyla, cevap anahtarlarını çevrimiçi
+    derslerde ve etkinliklerde gösterilen mavi “Öğretmen” Panelinde bulabilirsiniz.
+    Onaylanmış bir öğretmen hesabına ihtiyacınız varsa, [bu form] () aracılığıyla
+    öğretmenlere özel korumalı materyallere (cevap anahtarları vb.) erişim için başvurabilirsiniz.%{form_url}Lütfen
+    hesabınızı doğrulamanın 3-5 iş günü sürebileceğini unutmayın.
+  csa_ai_page_faq_question_08: Bu modül standartlara eşlenmiş mi?
+  csa_ai_page_faq_answer_08: Evet, Yazılım Mühendisliği & Bilgisayarla Görme müfredatı
+    [CSTA K-12 Standartları] (%{csta_k12_url}) ve AI için [K-12 Yönergeleri] ().%{k12_url}
+  csa_ai_page_faq_question_09: Bu modülü öğretmenin maliyeti nedir?
+  csa_ai_page_faq_answer_09_01: 'Müfredatımız ve platformumuz şu adresten mevcuttur:
+    [ücretsiz] (%{no_cost_url}) herkes için, herhangi bir yer, öğretmek!'
+  csa_ai_page_faq_answer_09_02: Ayrıca, bu modülde kullanılan yazılım ve araçlar ücretsizdir.
+    GitHub Copilot doğrulanmak için ücretsizdir () ve [teachers](%{teachers_url}).
+    [students]%{students_url}
+  csa_ai_page_faq_question_10: Yazılım yüklemesi çalışmıyorsa ne yapmalıyım?
+  csa_ai_page_faq_answer_10: Yazılım yüklemesi sırasında karşılaşılan sorunlar yaygın
+    olabilir, ancak sorunları gidermek ve çözmek için izleyebileceğiniz sistematik
+    adımlar vardır. [Burada bazı sorun giderme ipuçlarına göz atın] (%{troubleshooting_url}).
+  csa_ai_page_faq_question_11: How was the curriculum developed?
+  csa_ai_page_faq_answer_11_01: 'Yazılım Mühendisliği ve Bilgisayarla Görme müfredatımız
+    Müfredat Değerlerimiz düşünülerek tasarlanmıştır. Aşağıdaki hedefler bu müfredatın
+    oluşturulmasına rehberlik etti:'
+  csa_ai_page_faq_answer_11_list_01: "**Hedef 1: ** Kod oluşturmak, hata ayıklamak
+    ve düzenlemek için AI araçlarını kullanın."
+  csa_ai_page_faq_answer_11_list_02: "**Hedef 2: ** Java Lab'den gerçek dünya araçlarına
+    geçiş."
+  csa_ai_page_faq_answer_11_list_03: "**Hedef 3: ** Yapay zeka modellerinin nasıl
+    eğitildiğini ve programlara nasıl entegre edildiğini anlamayı derinleştirin."
+  csa_ai_page_faq_answer_11_02: Çalışmamıza rehberlik eden değerler hakkında daha
+    fazla bilgi için, lütfen [müfredat değerleri] ().%{curriculum_values_url}
   language_code:
     ar: Arapça
     az: Azerice

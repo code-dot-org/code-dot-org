@@ -184,6 +184,16 @@ fi:
   grade_level_label_elementary: Peruskoulu
   grade_level_label_middle: Yläaste
   grade_level_label_high: Lukio
+  curricula_title_elementary: Peruskoulun opetussuunnitelmat
+  curricula_desc_elementary: Selaa hauskoja, ilmaisia kursseja ja aktiviteetteja,
+    jotka kutsuvat sinut tutustumaan tietojenkäsittelytieteeseen ala-asteen oppilaiden
+    kanssa.
+  curricula_title_middle: Lukion opetussuunnitelmat
+  curricula_desc_middle: Selaa kiinnostavia tarjouksia, joiden avulla sinä ja lukiolaiset
+    voivat tutkia tietotekniikkaa yhdessä.
+  curricula_title_high: Lukion opetussuunnitelmat
+  curricula_desc_high: Selaa houkuttelevia kursseja ja aktiviteetteja, jotka kutsuvat
+    sinut ja lukiolaiset syventymään tietojenkäsittelytieteeseen.
   students_label: Oppilaat
   teachers_label: Opettajat
   teacher_label_csf: CS Fundamentals Opettaja
@@ -210,6 +220,13 @@ fi:
   call_to_action_explore_choice_level: Tutki esimerkkivalintatasoa
   call_to_action_explore_collection: Tutustu kokoelmaan
   call_to_action_explore_unplugged_lesson: Tutustu irrotettuihin oppitunteihin
+  call_to_action_explore_csf: Tutustu CS Fundamentals
+  call_to_action_explore_csd: Tutustu CS Löytöihin
+  call_to_action_explore_csp: Tutustu CS -periaatteisiin
+  call_to_action_explore_csc: Tutustu CS-yhteyksiin
+  call_to_action_explore_csa: Tutustu AP® Computer Science A
+  call_to_action_explore_maker: Tutustu Makerin opetussuunnitelmiin
+  call_to_action_explore_hoc: Tutustu Hour of Code -opetusohjelmiin
   call_to_action_try_app_lab: Kokeile App Lab
   call_to_action_view_lesson_plan: Tarkastele oppituntisuunnitelmaa
   call_to_action_self_paced_pl: Aloita itsetempoinen ammatillinen oppiminen
@@ -254,6 +271,7 @@ fi:
   call_to_action_notify_available: Ilmoita minulle, kun saatavilla
   call_to_action_register_early_access: Rekisteröidy Early Access -palveluun
   call_to_action_open_positions: Tarkastele avoimia positioita
+  call_to_action_get_guide: Hanki opas
   aria_label_call_to_action_afe: Lue lisää Amazon Future Engineeristä
   aria_label_call_to_action_teaching_csf: Aloita Teaching Computer Science Fundamentals
     ammatillinen oppimisohjelma
@@ -359,6 +377,8 @@ fi:
   curriculum_name_csa: AP® Tietojenkäsittelytiede A
   curriculum_name_csc_02: Mikä tahansa CS-liitäntämoduuli
   curriculum_name_ai: AI ja Koneoppiminen
+  curriculum_name_artificial_intelligence: Tekoäly (AI)
+  curriculum_name_maker: valmistaja
   curriculum_name_maker_cp: Sovellusten luominen laitteilla (Circuit Playground)
   curriculum_name_maker_microbit: Sovellusten luominen laitteilla (micro:bit)
   curriculum_name_creating_apps_with_devices: Sovellusten luominen laitteilla
@@ -412,6 +432,12 @@ fi:
   curriculum_desc_creating_apps_with_devices: Tutustu fyysisten laitteiden rooliin
     laskennassa. Kehitä ohjelmia, jotka hyödyntävät laitteistotuloja ja -lähtöjä.
     Tästä yksiköstä on olemassa versio sekä micro:bit- että Circuit Playground -laitteelle.
+  curriculum_desc_csa: 'Esittele opiskelijat ohjelmistotekniikkaan ja oliosuunnitteluun,
+    kun he oppivat Java-ohjelmointikielen tässä ilmaisessa AP® Computer Science A:
+    n (AP® CSA) opetussuunnitelmassa.'
+  curriculum_desc_maker: 'Valmistajakoulutus vie STEM: n (tiede, tekniikka, tekniikka,
+    matematiikka) askeleen pidemmälle kutsumalla käytännön kokemusta ja yhteistyötä
+    luokkahuoneeseen auttamaan opettamaan ongelmanratkaisua ja kriittistä ajattelua.'
   collection_hardware: Keskity laitteistoon
   collection_hardware_desc: Valtuuttaa oppilaita käyttämään tietoja ja fyysisiä laitteita
     ongelmien ratkaisemiseksi.
@@ -443,6 +469,7 @@ fi:
   module_label_professional_learning: 'Ammatillinen oppiminen:'
   module_label_languages: 'Tuetut kielet:'
   module_label_accessibility_features: 'Saavutettavuus:'
+  module_label_accessibility_features_full: 'Esteettömyysominaisuudet:'
   module_label_educator_tool: Kouluttajan työkalu
   module_label_educator_course: Kouluttajan kurssi
   module_label_student_tool: Opiskelijan työkalu
@@ -450,6 +477,7 @@ fi:
   module_label_student_content_resources: Sisältö ja resurssit
   module_label_new: Uusi
   module_label_coming_soon: Tulossa pian
+  module_label_available_now: Saatavilla nyt
   module_label_video_series: Video-sarja
   module_label_self_paced: Itsetempoinen moduuli
   module_ages_5_10: 5-10
@@ -460,6 +488,8 @@ fi:
   module_grade_2_5: 2-5
   module_grade_3_5: 3-5
   module_grade_3_8: 3-8
+  module_grade_k_12: K-12
+  module_grade_3_12: 3-12
   module_grade_6_12: 6-12
   module_grade_6_10: 6-10
   module_grade_9_12: 9-12
@@ -474,7 +504,9 @@ fi:
   module_grade_9_12_teachers: 9-12 Opettajat
   module_level_beginner: Aloittelija
   module_level_intermediate: Välituote
+  module_level_advanced: Edistynyt
   module_duration_45_mins: 45 minuuttia
+  module_duration_2_weeks: 2 viikkoa
   module_duration_1_hr: 1 tunti
   module_duration_2_hrs: 2 tuntia
   module_duration_3_hrs: 3 tuntia
@@ -556,6 +588,7 @@ fi:
   heading_java_lab: Java-laboratorio
   heading_objects_first: Objektit ensin
   heading_these_lessons_will: 'Nämä oppitunnit:'
+  heading_explore_curriculum_catalog: Tutustu kaikkiin kursseihimme opetussuunnitelma-luettelossa
   professional_learning_section_desc: Hanki tarvitsemasi tuki valmistautuessasi opettamaan.
     Opettajat rakastavat sitä, sillä yli 90% on kaikkien aikojen paras ammatillinen
     kehitys!
@@ -813,6 +846,11 @@ fi:
     ja Generative AI. Kuule, miten nämä uudet tekniikat toimivat suoraan asiantuntijoilta:
     Mira Murati, OpenAI: n teknologiajohtaja, ja Cristóbal Valenzuela, RunwayML: n
     toimitusjohtaja.'
+  ai_pl_101_llm_slides_title: Suuri kielimalli kehottaa opettajia
+  ai_pl_101_llm_slides_desc: 'Työkalut parhaan mahdollisen tuloksen saamiseksi LLM:
+    stä, kuten ChatGPT, aloittelijasta edistyneeseen. Sisältää aloituskehotteet niille,
+    jotka vain kastavat varpaitaan, sekä edistyneitä työkaluja niille, jotka haluavat
+    maksimoida potentiaalinsa.'
   how_ai_works_hero_heading: Kuinka tekoäly toimii
   how_ai_works_hero_desc: Sukella tekoälyn maailmaan ”Kuinka AI toimii” -videosarjamme
     ja siihen liittyvien oppituntien avulla!
@@ -1408,10 +1446,10 @@ fi:
     ovat käytettävissä, jos sinulla ei ole pääsyä näihin tarvikkeisiin.
   csd_page_faq_answer_04_06: Sovellusten luominen laitteilla (vaihtoehto A ja vaihtoehto
     B)
-  csd_page_faq_answer_04_07: 'Option A: Classroom set of Circuit Playgrounds. Check
-    out [code.org/maker/circuitplayground](%{url}) for more details.'
-  csd_page_faq_answer_04_08: 'Option B: Classroom set of micro:bit devices. Check
-    out [code.org/maker/microbit](%{url}) for more details.'
+  csd_page_faq_answer_04_07: 'Vaihtoehto A: Luokkahuoneen sarja Circuit Playgrounds.
+    Katso [code.org/maker/circuitplayground] () saadaksesi lisätietoja.%{url}'
+  csd_page_faq_answer_04_08: 'Vaihtoehto B: Classroom-sarja micro:bit-laitteita. Katso
+    [code.org/maker/microbit] () saadaksesi lisätietoja.%{url}'
   csd_page_faq_answer_04_09: Valmistajan tarvikkeet, kuten tyhjät pehmopaperilaatikot
     tai pahvirullat tai raaputuspaperi
   csd_page_faq_answer_04_10: "*Huomautus: Sovellusten luominen laitteilla -yksikössä
@@ -1539,10 +1577,10 @@ fi:
     tarjoavat korkealaatuisia yhden päivän Code.org-työpajoja yksittäisille opettajille
     tai koulun laajuiselle PD: lle. [Ilmoittaudu ammatillisen kehityksen työpajaan
     lähelläsi] (%{sign_up_url})!'
-  csf_page_faq_answer_04_02: Join over 100,000 teachers who have participated in our
-    workshops. The majority of our workshop attendees say, 'It's the best professional
-    development I've ever attended.' In fact, [90% of attendees would recommend our
-    program to other teachers](%{rec_url})!
+  csf_page_faq_answer_04_02: 'Liity yli 100 000 opettajan joukkoon, jotka ovat osallistuneet
+    työpajoihimme. Suurin osa työpajan osallistujista sanoo: ”Se on paras ammatillinen
+    kehitys, johon olen koskaan osallistunut.” Itse asiassa, [90% osallistujista suosittelisi
+    ohjelmaa muille opettajille] ()!%{rec_url}'
   csf_page_faq_question_05: Mikä on suositeltava ajoitus CS Fundamentals -opetuksen
     opettamiselle?
   csf_page_faq_answer_05: Jokainen CSF-kurssi sisältää 13-17 oppituntia, jotka on
@@ -1551,9 +1589,10 @@ fi:
     johtamia projektitasoja, jotka on suunniteltu kokemaan yhdessä, kun taas opiskelijat
     voivat suorittaa taitojen kehittämistunnit omaan tahtiinsa.
   csf_page_faq_question_06: Mitä materiaaleja tarvitsen CS Fundamentalsille?
-  csf_page_faq_answer_06: Many lessons have handouts that guide students through activities.
-    These resources can be printed or assigned digitally. Some lessons call for typical
-    classroom supplies and manipulatives. [Visit the CSF Syllabus to learn more](%{syllabus_url}).
+  csf_page_faq_answer_06: Monilla oppitunneilla on monisteita, jotka ohjaavat opiskelijoita
+    aktiviteettien läpi. Nämä resurssit voidaan tulostaa tai määrittää digitaalisesti.
+    Jotkut oppitunnit vaativat tyypillisiä luokkahuonetarvikkeita ja manipulatiivisia
+    aineita. [Käy CSF-opetussuunnitelmassa saadaksesi lisätietoja] ().%{syllabus_url}
   csa_page_top_desc: Introduce students to software engineering and object-oriented
     design while they learn the Java programming language in this free curriculum
     for [AP® Computer Science A (AP® CSA)](%{csa_url}).
@@ -2057,6 +2096,11 @@ fi:
     uutisista?
   signup_email_preference_privacy: "(Katso tietosuojakäytäntömme)"
   signup_email_preference_yes: Kyllä
+  signup_email_preference_yes_elementary: Kyllä - Lähetä minulle päivityksiä peruskoulun
+    resursseista
+  signup_email_preference_yes_middle: Kyllä - Lähetä minulle päivityksiä lukion resursseista
+  signup_email_preference_yes_high: Kyllä - Lähetä minulle päivityksiä lukion resursseista
+  signup_email_preference_yes_general: Kyllä - Lähetä minulle yleisiä päivityksiä
   signup_email_preference_no: Ei
   signup_email_preference_error: Sähköpostiasetukset vaaditaan
   signup_multiple_event_warning: Laitamme koulusi nimen ja kaupungin kartalle, kun
@@ -5435,11 +5479,11 @@ fi:
     tämän Minecraft-maailman läpi.
   tutorial_minecraft-2016_longdescription: Rakenna Minecraft-peli. Luo omat versiosi
     kanasta, lampaista, Creeperistä, zombeista ja muusta.
-  tutorial_thinkersmith-es_longdescription: Mediante el uso de un "Vocabulario Robot"
+  tutorial_thinkersmith-es_longdescription: Mediante el uso de un ”Vocabulario Robot”
     predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar
-    a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento
-    ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones
-    as&iacute; como la valiosa habilidad de depuraci&oacute;n.
+    a cabo tareas espec ficas sin ser estas discutidas previamente.&iacute;Este segmento&ntilde;on
+    a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones nimellä
+    como la valiosa habilidad de depuraci n.&iacute;&oacute;
   tutorial_pixie_longdescription: Hour of Code -opetusohjelma Pixien kanssa
   tutorial_play_longdescription: Luo tarina tai tee peli Play Labilla! Saa eläimet,
     merirosvot, zombit, ninjat ja monet muut hahmot liikkumaan, ääntämään, saamaan
@@ -12429,12 +12473,12 @@ fi:
     Scratch-ohjelmilla.
   tutorial_googlename _longdescription: Valitse nimi ja herätä sanan kirjaimet eloon
     koodin avulla. Valitse lempinimi, lemmikin nimi, eläin, urheilu, paikka tai harrastus.
-  tutorial_carnegiezillah_longdescription: Zillah City is thriving, and music is in
-    the air. Rumor has it, the famed Gargantua bot is online and sending the last
-    Toxibots to trash the city block by block…. Grab your cobot hoverboard and get
-    ready to groove, move, and finish off what you started! Players program their
-    cobot hoverbots to change lanes, avoid obstacles, and take out many Toxibots in
-    this rhythm-styled game.
+  tutorial_carnegiezillah_longdescription: Zillah City kukoistaa, ja musiikkia on
+    ilmassa. Huhujen mukaan kuuluisa Gargantua-botti on verkossa ja lähettää viimeiset
+    toksibotit roskaamaan kaupungin kortteli korttelilta.…Tartu cobot-leijulautaan
+    ja valmistaudu uraamaan, liikkumaan ja lopettamaan aloittamasi! Pelaajat ohjelmoivat
+    cobot-hoverbotit vaihtamaan kaistaa, välttää esteitä, ja ottaa monia toksibotteja
+    tässä rytmityylisessä pelissä.
   tutorial_nasachspacejam_longdescription: Luo aurinkokunta, joka todella rokkaa!
     Opi musiikista, tähtitieteestä ja koodauksesta tässä itseohjatussa toiminnassa
     (koodauskokemusta ei tarvita). Ohjelmoi planeettoja tekemään musiikkia luomalla
@@ -13254,6 +13298,126 @@ fi:
     kokouksista, ottamalla voimanottomme (yhteensä 5 viikkoa, joka sisältää koko organisaationlaajuisen
     2 viikon toimiston sulkemisen vuoden lopussa eli talviloma), puoli työpäivää perjantaisin
     kesällä eli kesäperjantaisin, ja muita anteliaita etuja.
+  csa_ai_page_hero_title: Ohjelmistotekniikka ja tietokonenäkö
+  csa_ai_page_hero_description: 'Tämä kaksiosainen AP: n jälkeinen CSA -moduuli tarjoaa
+    lukiolaisille käytännön kokemusta ammattimaisista ohjelmistokehitystyökaluista,
+    mukaan lukien GitHub ja GitHub Copilot, ja antaa heille reaalimaailman taidot
+    kehittää tietokonenäköohjelma. '
+  csa_ai_page_video_section_title: Astu Code.org-ohjelmointiympäristöjen maailman
+    ulkopuolelle
+  csa_ai_page_video_section_li_1: Lisätietoja tekoälystä ja sen sovelluksista
+  csa_ai_page_video_section_li_2: Käytännön kokemus ammattimaisista ohjelmistokehitystyökaluista
+  csa_ai_page_video_section_li_3: Opi alan standardikäytäntöjä
+  csa_ai_page_video_section_li_4: Viljellä kriittistä ajattelua
+  csa_ai_page_programming_tools: 'Ohjelmointityökalut: Github, Github Copilot, VSCode,
+    TensorFlow '
+  csa_ai_page_professional_learning: Ei mitään
+  csa_ai_page_curriculum_topics: 'Aiheet: Ohjelmointi, Data, Taide ja muotoilu, Pelit
+    ja animaatio'
+  csa_ai_page_curriculum_accessibility_features: Katso lisätietoja FAQ-osiosta
+  csa_ai_page_curriculum_languages_support: Suomi
+  csa_ai_page_article_title_1: Rakenna Copilotilla
+  csa_ai_page_article_description_1: Opiskelija oppii käyttämään GitHub Copilotia
+    pariohjelmoijana selittämään olemassa olevaa koodia, etsimään ja korjaamaan virheitä,
+    ja luoda ratkaisuja uusiin ongelmiin.
+  csa_ai_page_article_link_1: Lue lisää Copilotista
+  csa_ai_page_article_title_2: Rakenna oma AI-mallisi
+  csa_ai_page_article_description_2: Opiskelijat kouluttavat omia AI-mallejaan opettavan
+    koneen avulla tunnistamaan kuvat ja eleet verkkokamerasta ja pohtimaan, miten
+    tietokonenäkö vaikuttaa tapaan, jolla käyttäjät ovat vuorovaikutuksessa sovellusten
+    kanssa.
+  csa_ai_page_article_link_2: Tutustu tuntisuunnitelmaan
+  csa_ai_page_article_title_3: Tutki tietokonenäköä
+  csa_ai_page_article_description_3: Opiskelijat toteuttavat Teachable Machine -sovelluksella
+    luomansa AI-mallit Java-sovellukseen käyttämällä GitHub Copilotia auttaakseen
+    heitä muokkaamaan sovellusten olemassa olevia versioita toimimaan eri tulojen
+    kanssa.
+  csa_ai_page_article_link_3: Katso esimerkki
+  csa_ai_page_learn_more_section_title: Lue lisää tekoälystä
+  csa_ai_page_learn_more_title: Tutustu AI 101 opettajille
+  csa_ai_page_learn_more_description: Tutustu tekoälyn (AI) uraauurtavaan maailmaan
+    ja sen muutospotentiaaliin koulutuksessa kattavan verkko-oppimissarjamme avulla
+    opettajille.
+  csa_ai_page_learn_more_link: Katso AI 101 for Teachers -sarja
+  csa_ai_page_faq_question_01: Mitkä ovat tämän moduulin edellytykset?
+  csa_ai_page_faq_answer_01_01: 'Ennen sukellusta tähän moduuliin opiskelijoilla tulisi
+    olla lähtötason tietämys Java-tiedoista. Erityisesti heidän pitäisi ymmärtää:'
+  csa_ai_page_faq_answer_01_list_01: "**Luokat ja esineet: ** Opiskelijoiden tulee
+    tuntea luokkien määrittely ja käyttö sekä esineiden luominen ja manipulointi."
+  csa_ai_page_faq_answer_01_list_02: "**Kirjoittaminen- ja kutsumenetelmät: ** Opiskelijoiden
+    tulee pystyä määrittelemään luokan menetelmät, ymmärtämään menetelmäparametrit
+    ja palautustyypit sekä kutsumenetelmät objekteista tai muista menetelmistä."
+  csa_ai_page_faq_answer_01_list_03: "**1D-taulukot ja matriisiluettelot: ** Niiden
+    tulisi olla taitavia julistamaan, alustamaan ja manipuloimaan yksiulotteisia taulukoita
+    ja matriisiluetteloita, mukaan lukien iterointi niiden kautta."
+  csa_ai_page_faq_answer_01_list_04: "**Valinta ja iterointi: ** Ehdollisten lausuntojen
+    ja silmukoiden vankka perusta on ratkaisevan tärkeää."
+  csa_ai_page_faq_question_01_02: 'Ihannetapauksessa opiskelijat, jotka ovat suorittaneet
+    AP Computer Science A: n tai vastaavan syvyyden ja tarkkuuden kurssin, olisivat
+    hyvin valmistautuneita tähän moduuliin.'
+  csa_ai_page_faq_question_02: Miten asennan tähän moduuliin tarvittavan ohjelmiston?
+  csa_ai_page_faq_answer_02_01: Tämä moduuli on ainutlaatuinen, koska siihen liittyy
+    kolmannen osapuolen ohjelmistojen käyttö Code.org-laboratorioiden ja työkalujen
+    sijaan. [Lue lisää ohjelmiston asentamisesta täältä] (%{accessibility_url}).
+  csa_ai_page_faq_question_03: Miten voin tukea esteettömyystarpeita opettaessani
+    tätä moduulia?
+  csa_ai_page_faq_answer_03_01: Esteettömyystarpeiden huomioon ottaminen on ratkaisevan
+    tärkeää osallistavan oppimisympäristön kannalta. [Lue lisää tässä moduulissa käytettävien
+    ohjelmistojen esteettömyysominaisuuksista täältä] (%{install_url}).
+  csa_ai_page_faq_question_04: Miten käytän VS-koodia Chromebookeissa?
+  csa_ai_page_faq_answer_04: VS-koodin käyttäminen Chromebookissa on tullut yksinkertaisemmaksi,
+    etenkin kun Linux-sovelluksia voidaan käyttää uudemmissa Chromebook-malleissa.
+    [Lue lisää VS-koodin määrittämisestä Chromebookeissa täältä] ()%{chromebook_url}.
+  csa_ai_page_faq_question_05: Miten saan ammatillista kehitystä tälle moduulille?
+  csa_ai_page_faq_answer_05: Tällä hetkellä kurssille ei ole erityistä ammatillista
+    kehitystä. Jos haluat ymmärtää, miten lähestyä tekoälyä luokkahuoneessasi, voit
+    [tutkia AI 101 opettajille] (%{ai_101_url}).
+  csa_ai_page_faq_question_06: Mikä on suositeltava ajoitus tämän moduulin opettamiselle?
+  csa_ai_page_faq_answer_06_01: Software Engineering & Computer Vision -moduuli on
+    harkitusti jäsennelty tarjoamaan kattavaa oppimista tiiviissä aikataulussa. Koko
+    moduuli on suunniteltu kattamaan **2 viikon ohjeet**. Suurin osa oppitunneista
+    on räätälöity **45 minuuttia**, kun taas oppitunnit, joissa opiskelijat syventyvät
+    käytännön Java-projektien kehittämiseen, on suunniteltu **90 minuuttia**. Tämä
+    pidennetty aika varmistaa, että opiskelijoilla on runsaasti mahdollisuuksia ymmärtää,
+    toteuttaa, ja vianmääritys työskennellessään.
+  csa_ai_page_faq_answer_06_02: Moduulin rakenteeseen on rakennettu myös tarkoituksellista
+    joustavuutta. Voit säätää kestoa riippuen luokkahuoneen dynamiikasta, opiskelijoiden
+    sitoutumisesta ja syvyydestä, johon haluat tutkia kutakin aihetta. Esimerkiksi
+    45 minuutin oppituntina suunniteltu Intro to Copilot -oppitunti voidaan laajentaa
+    90 minuuttiin, jos haluat sukeltaa syvemmälle siihen, kuinka suuret kielimallit
+    ja työkalut, kuten GitHub Copilot ja ChatGPT, toimivat.
+  csa_ai_page_faq_question_07: How can I access answer keys?
+  csa_ai_page_faq_answer_07: Hyväksytyllä opettajatilillä löydät vastausavaimet sinisestä
+    ”Opettaja” Vain -paneelista, joka näkyy online-oppitunneissa ja aktiviteeteissa.
+    Jos tarvitset hyväksytyn opettajan tilin, voit hakea pääsyä suojattuihin opettajien
+    materiaaleihin (vastausavaimet jne.) [tämän lomakkeen] () kautta.%{form_url}Muista,
+    että tilisi vahvistaminen voi kestää 3-5 arkipäivää.
+  csa_ai_page_faq_question_08: Onko tämä moduuli kartoitettu standardeihin?
+  csa_ai_page_faq_answer_08: Kyllä, Software Engineering & Computer Vision -opetussuunnitelma
+    on kartoitettu [CSTA K-12 -standardeihin] (%{csta_k12_url}) ja tekoälyyn [K-12-ohjeet]
+    ().%{k12_url}
+  csa_ai_page_faq_question_09: Kuinka paljon tämän moduulin opettaminen maksaa?
+  csa_ai_page_faq_answer_09_01: Opetussuunnitelmamme ja alustamme ovat saatavilla
+    [maksutta] (%{no_cost_url}) kenelle tahansa, missä tahansa, opettaa!
+  csa_ai_page_faq_answer_09_02: Lisäksi tässä moduulissa käytetyt ohjelmistot ja työkalut
+    ovat ilmaisia. GitHub Copilot on ilmainen vahvistetuille () ja [teachers](%{teachers_url}).
+    [students]%{students_url}
+  csa_ai_page_faq_question_10: Mitä teen, jos ohjelmiston asennus ei toimi?
+  csa_ai_page_faq_answer_10: Ongelmien kohtaaminen ohjelmiston asennuksen aikana voi
+    olla yleistä, mutta vianmäärityksessä ja ratkaisemisessa on järjestelmällisiä
+    vaiheita. [Katso joitain vianmääritysvinkkejä täältä] (%{troubleshooting_url}).
+  csa_ai_page_faq_question_11: How was the curriculum developed?
+  csa_ai_page_faq_answer_11_01: 'Ohjelmistotekniikan ja tietokonenäön opetussuunnitelma
+    on suunniteltu opetussuunnitelmamme arvoja ajatellen. Seuraavat tavoitteet ohjasivat
+    tämän opetussuunnitelman luomista:'
+  csa_ai_page_faq_answer_11_list_01: "** Tavoite 1: ** Käytä AI-työkaluja koodin luomiseen,
+    virheenkorjaukseen ja muokkaamiseen."
+  csa_ai_page_faq_answer_11_list_02: "**Tavoite 2: ** Siirtyminen Java Labista reaalimaailman
+    työkaluihin."
+  csa_ai_page_faq_answer_11_list_03: "**Tavoite 3: ** Syventää ymmärrystä siitä, miten
+    tekoälymallit koulutetaan ja integroidaan ohjelmiin."
+  csa_ai_page_faq_answer_11_02: Lisätietoja arvoista, jotka ohjasivat työtämme, katso
+    meidän [opetussuunnitelman arvot] ()%{curriculum_values_url}.
   language_code:
     ar: arabialainen
     az: Azerbaidžanin

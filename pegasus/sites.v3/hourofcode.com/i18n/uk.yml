@@ -5,10 +5,10 @@ uk:
   language: Англійською
   front_title: Приєднуйтесь до найбільшої навчальної події в історії, %{campaign_date}
   coming_soon: Незабаром
-  campaign_date_start_short: 5 грудня
+  campaign_date_start_short: 4 грудня
   campaign_date_start_long: 4 грудня
-  campaign_date_short: 5-11 грудня
-  campaign_date_full: 5-11 грудня
+  campaign_date_short: 4-10 грудня
+  campaign_date_full: 4-10 грудня
   campaign_date_year: '2022'
   campaign_date_full_year: 5-11 грудня 2022 року
   nonus_campaign_date_start_short: Жов. 1
@@ -190,6 +190,15 @@ uk:
   grade_level_label_elementary: Початкова школа
   grade_level_label_middle: Середня школа
   grade_level_label_high: Середня школа
+  curricula_title_elementary: Навчальні програми початкової школи
+  curricula_desc_elementary: Перегляньте веселі безкоштовні курси та заходи, які запрошують
+    вас вивчити інформатику разом з учнями початкової школи.
+  curricula_title_middle: Навчальні програми середньої школи
+  curricula_desc_middle: Перегляньте цікаві пропозиції, які дозволяють вам та вашим
+    учням середньої школи разом досліджувати інформатику.
+  curricula_title_high: Навчальні програми середньої школи
+  curricula_desc_high: Перегляньте переконливі курси та заходи, які запрошують вас
+    та ваших старшокласників глибше заглибитися в інформатику.
   students_label: Учні
   teachers_label: Вчителі
   teacher_label_csf: Викладач основ інформатики
@@ -217,6 +226,13 @@ uk:
   call_to_action_explore_choice_level: Ознайомтеся з прикладами рівня вибору
   call_to_action_explore_collection: Ознайомтеся з колекцією
   call_to_action_explore_unplugged_lesson: Ознайомтеся з уроками без комп'ютера
+  call_to_action_explore_csf: Ознайомтеся з основами CS
+  call_to_action_explore_csd: Досліджуйте відкриття CS
+  call_to_action_explore_csp: Ознайомтеся з принципами CS
+  call_to_action_explore_csc: Дослідіть підключення CS
+  call_to_action_explore_csa: Дослідіть AP® Комп'ютерні науки A
+  call_to_action_explore_maker: Дослідіть навчальні програми Maker
+  call_to_action_explore_hoc: Ознайомтеся з підручниками «Година коду»
   call_to_action_try_app_lab: Спробуйте Програмну лабораторію
   call_to_action_view_lesson_plan: Переглянути план уроку
   call_to_action_self_paced_pl: Почніть самостійне професійне навчання
@@ -261,6 +277,7 @@ uk:
   call_to_action_notify_available: Повідомте мене, коли буде доступно
   call_to_action_register_early_access: Реєстрація для раннього доступу
   call_to_action_open_positions: Перегляд відкритих позицій
+  call_to_action_get_guide: Отримайте довідник
   aria_label_call_to_action_afe: Дізнайтеся більше про майбутні інженери Amazon
   aria_label_call_to_action_teaching_csf: Почніть програму професійного навчання «Основи
     інформатики»
@@ -370,6 +387,8 @@ uk:
   curriculum_name_csa: 'Інформатика A '
   curriculum_name_csc_02: Будь-який модуль "Зв'язки в інформатиці"
   curriculum_name_ai: AI та машинне навчання
+  curriculum_name_artificial_intelligence: Штучний інтелект (AI)
+  curriculum_name_maker: Виробник
   curriculum_name_maker_cp: Створення програм за допомогою пристроїв (Circuit Playground)
   curriculum_name_maker_microbit: Створення програм за допомогою пристроїв (micro:bit)
   curriculum_name_creating_apps_with_devices: Створення застосунків за допомогою пристроїв
@@ -427,6 +446,12 @@ uk:
   curriculum_desc_creating_apps_with_devices: Досліджуйте роль фізичних пристроїв
     в обчислювальних процесах. Розробляйте програми, які використовують апаратні введення
     й виведення. Існує версія цього блоку як для micro:bit, так і для Circuit Playground.
+  curriculum_desc_csa: Познайомте студентів з програмною інженерією та об'єктно-орієнтованим
+    дизайном, поки вони вивчають мову програмування Java у цій безкоштовній навчальній
+    програмі AP® Computer Science A (AP® CSA).
+  curriculum_desc_maker: Освіта Maker робить STEM (наука, технології, інженерія, математика)
+    на крок далі, запрошуючи практичний досвід та співпрацю в клас, щоб допомогти
+    навчити вирішенню проблем та критичному мисленню.
   collection_hardware: Зосередження на «Апаратному обладнанні»
   collection_hardware_desc: Дає учням можливість використовувати дані й фізичні пристрої
     для вирішення проблем.
@@ -457,6 +482,7 @@ uk:
   module_label_professional_learning: 'Професійне навчання:'
   module_label_languages: 'Підтримувані мови:'
   module_label_accessibility_features: 'Доступність:'
+  module_label_accessibility_features_full: 'Особливості доступності:'
   module_label_educator_tool: Інструмент педагога
   module_label_educator_course: Курс педагога
   module_label_student_tool: Інструмент учня
@@ -464,6 +490,7 @@ uk:
   module_label_student_content_resources: Контент і ресурси
   module_label_new: Нові
   module_label_coming_soon: Скоро
+  module_label_available_now: Доступно зараз
   module_label_video_series: Серія відео
   module_label_self_paced: Самостійний модуль
   module_ages_5_10: 5-10
@@ -474,6 +501,8 @@ uk:
   module_grade_2_5: 2-5
   module_grade_3_5: 3-5
   module_grade_3_8: 3-8
+  module_grade_k_12: К-12
+  module_grade_3_12: 3-12
   module_grade_6_12: 6-12
   module_grade_6_10: 6-10
   module_grade_9_12: 9-12
@@ -488,7 +517,9 @@ uk:
   module_grade_9_12_teachers: 9-12 Вчителі
   module_level_beginner: Початківець
   module_level_intermediate: Проміжний
+  module_level_advanced: Pseudoloc-Адваанседд
   module_duration_45_mins: 45 хвилин
+  module_duration_2_weeks: 2 тижні
   module_duration_1_hr: 1 година
   module_duration_2_hrs: 2 години
   module_duration_3_hrs: 3 годин
@@ -570,6 +601,8 @@ uk:
   heading_java_lab: Лабораторія Java
   heading_objects_first: Насамперед — об'єкти
   heading_these_lessons_will: 'Ці уроки будуть:'
+  heading_explore_curriculum_catalog: Ознайомтеся з усіма нашими курсами в каталозі
+    навчальних програм
   professional_learning_section_desc: Отримайте необхідну підтримку під час підготовки
     до викладання. 90 % викладачів оцінюють це рішення як найкраще з можливих!
   professional_learning_section_desc_short: Отримайте необхідну підтримку під час
@@ -831,6 +864,11 @@ uk:
     мов (наприклад, ChatGPT) та генеративний штучний інтелект. Почуйте, як працюють
     ці нові технології безпосередньо від експертів: Міри Мураті, технічного директора
     OpenAI, та Крістобаля Валенсуели, генерального директора RunwayML.'
+  ai_pl_101_llm_slides_title: Підказки щодо великої мовної моделі для педагогів
+  ai_pl_101_llm_slides_desc: Інструменти для отримання найкращого можливого результату
+    від LLM, таких як ChatGPT, від початківця до просунутого. Включає початкові підказки
+    для тих, хто просто занурює пальці ніг, а також вдосконалені інструменти для тих,
+    хто прагне максимізувати свій потенціал.
   how_ai_works_hero_heading: Як працює AI
   how_ai_works_hero_desc: Пориньте у світ AI з нашою серією відео та супутніми уроками
     «Як працює AI»!
@@ -2025,10 +2063,10 @@ uk:
   hoc_homepage_organized_by: "«Година коду» організована [Code.org](%{codeorg_url})."
   signup_closed: Реєстрація на Годину коду зараз закрита. Будь ласка, перевірте ще
     раз у жовтні, щоб підписатися на наступну Годину коду.
-  signup_registration_not_required: You don't need to register to participate! The
-    Hour of Code activities are available year-round. <a href='%{hoc_activities_url}'>Try
-    an activity</a> or read our <a href='%{howto_guide_url}'>How-to guide</a> to plan
-    an event for your class.
+  signup_registration_not_required: Для участі не потрібно реєструватися! Заходи Години
+    коду доступні цілий рік. <a href='%{hoc_activities_url}'>Спробуйте заняття</a>
+    або прочитайте наш посібник із <a href='%{howto_guide_url}'>інструкцій, щоб</a>
+    спланувати подію для вашого класу.
   signup_registration_not_required_markdown: Для участі не потрібно реєструватися!
     Заходи Години коду доступні цілий рік. [Спробуйте заняття] (%{hoc_activities_url})
     або прочитайте наш [Інструкційний посібник] (%{howto_guide_url}), щоб спланувати
@@ -2069,6 +2107,13 @@ uk:
     локальні можливості чи інші новини інформатики?
   signup_email_preference_privacy: "(Див. нашу політику конфіденційності)"
   signup_email_preference_yes: Так
+  signup_email_preference_yes_elementary: Так - Надішліть мені оновлення про ресурси
+    початкової школи
+  signup_email_preference_yes_middle: Так - Надішліть мені оновлення про ресурси середньої
+    школи
+  signup_email_preference_yes_high: Так - Надішліть мені оновлення про ресурси середньої
+    школи
+  signup_email_preference_yes_general: Так - Надішліть мені загальні оновлення
   signup_email_preference_no: Ні
   signup_email_preference_error: Необхідні налаштування електронної пошти
   signup_multiple_event_warning: Якщо Ви проводите кілька заходів, заповніть унікальну
@@ -5428,11 +5473,10 @@ uk:
     Стіва у пригоду цим світом Майнкрафту.
   tutorial_minecraft-2016_longdescription: Створіть гру Minecraft. Створюйте власні
     версії курки, овець, ліани, зомбі тощо.
-  tutorial_thinkersmith-es_longdescription: Mediante el uso de un "Vocabulario Robot"
-    predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar
-    a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento
-    ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones
-    as&iacute; como la valiosa habilidad de depuraci&oacute;n.
+  tutorial_thinkersmith-es_longdescription: За допомогою використання «Словарний робот»
+    за визначенням студенти описують, як керувати режимами вирівнювання конкретними&aacute;задатками,
+    які раніше не обговорювалися.&iacute;Це сегмент означає, що&ntilde;студенти підключають
+    n до символів і дій, як&oacute;достовірна можливість&iacute;депурації n.&iacute;&oacute;
   tutorial_pixie_longdescription: Підручник Години коду з Pixie
   tutorial_play_longdescription: Створіть історію або гру в Ігровій лабораторії! Ви
     можете зробити так, щоб тварини, пірати, зомбі, ніндзя й багато інших персонажів
@@ -12427,12 +12471,12 @@ uk:
     за допомогою CS First та Scratch.
   tutorial_googlename _longdescription: Виберіть ім'я і оживіть букви слова за допомогою
     коду. Виберіть кличку, ім'я вихованця, тварину, спорт, місце або хобі.
-  tutorial_carnegiezillah_longdescription: Zillah City is thriving, and music is in
-    the air. Rumor has it, the famed Gargantua bot is online and sending the last
-    Toxibots to trash the city block by block…. Grab your cobot hoverboard and get
-    ready to groove, move, and finish off what you started! Players program their
-    cobot hoverbots to change lanes, avoid obstacles, and take out many Toxibots in
-    this rhythm-styled game.
+  tutorial_carnegiezillah_longdescription: Місто Зілла процвітає, а музика витає в
+    повітрі. Подейкують, знаменитий бот Gargantua онлайн і надсилає останніх Toxibots,
+    щоб смістити місто квартал за кварталом.…Візьміть свій ховерборд cobot і приготуйтеся
+    до розбіжності, переміщення та завершення того, що ви почали! Гравці програмують
+    своїх коботів-ховерботів, щоб змінювати смуги руху, уникати перешкод та вивести
+    багато токсиботів у цій грі в стилі ритму.
   tutorial_nasachspacejam_longdescription: Створіть Сонячну систему, яка справді скелиться!
     Дізнайтеся про музику, астрономію та кодування в цій самостійній діяльності (досвід
     кодування не потрібен). Програмуйте планети для створення музики, створюючи власну
@@ -13258,6 +13302,128 @@ uk:
     без зустрічей по середах, приймаючи наш PTO (всього 5 тижнів, що включає 2-тижневе
     закриття офісу в кінці року або зимові канікули), половину робочого дня по п'ятницях
     влітку, або літні п'ятниця, та інші щедрі переваги.
+  csa_ai_page_hero_title: Pseudoloc-Софттварее Eнджджінеееріндждж & CCомпюютер  Вісііон
+  csa_ai_page_hero_description: 'Цей модуль CSA з двох розділів після AP пропонує
+    старшокласникам практичний досвід роботи з професійними інструментами розробки
+    програмного забезпечення, включаючи GitHub та GitHub Copilot, і надає їм реальні
+    навички для розробки програми комп''ютерного зору. '
+  csa_ai_page_video_section_title: Крок за межі світу середовищ програмування Code.org
+  csa_ai_page_video_section_li_1: Дізнайтеся про штучний інтелект та його застосування
+  csa_ai_page_video_section_li_2: Практичний досвід роботи з професійними інструментами
+    розробки програмного забезпечення
+  csa_ai_page_video_section_li_3: Вивчіть стандартні галузеві практики
+  csa_ai_page_video_section_li_4: Виховуйте критичне мислення
+  csa_ai_page_programming_tools: 'Інструменти програмування: Github, Копілон Github,
+    VSCode, TensorFlow '
+  csa_ai_page_professional_learning: Ніхто
+  csa_ai_page_curriculum_topics: 'Теми: Програмування, Дані, Мистецтво та дизайн,
+    Ігри та анімація'
+  csa_ai_page_curriculum_accessibility_features: Докладніше див. Розділ FAQ
+  csa_ai_page_curriculum_languages_support: Англійською
+  csa_ai_page_article_title_1: Pseudoloc-Бюіллд віітх CCопіллот
+  csa_ai_page_article_description_1: Студенти дізнаються, як використовувати GitHub
+    Copilot як програміст для пари, щоб пояснити існуючий код, знайти та виправити
+    помилки та генерувати рішення нових проблем.
+  csa_ai_page_article_link_1: Дізнайтеся більше про Copilot
+  csa_ai_page_article_title_2: Створіть власну модель AI
+  csa_ai_page_article_description_2: Студенти навчають власні моделі штучного інтелекту
+    за допомогою Teachable Machine, щоб розпізнавати зображення та жести з веб-камери
+    та розглядати, як комп'ютерний зір впливає на те, як користувачі взаємодіють з
+    додатками.
+  csa_ai_page_article_link_2: Вивчіть план уроку
+  csa_ai_page_article_title_3: Дослідіть комп'ютерний зір
+  csa_ai_page_article_description_3: Студенти впроваджують моделі штучного інтелекту,
+    створені за допомогою Teachable Machine, у додаток Java, використовуючи GitHub
+    Copilot, щоб допомогти їм змінювати існуючі версії програм для роботи з різними
+    входами.
+  csa_ai_page_article_link_3: Див. Приклад
+  csa_ai_page_learn_more_section_title: Дізнайтеся більше про штучний інтелект
+  csa_ai_page_learn_more_title: Дослідіть AI 101 для вчителів
+  csa_ai_page_learn_more_description: Відкрийте для себе новаторський світ штучного
+    інтелекту (ШІ) та його трансформаційний потенціал в освіті за допомогою нашої
+    комплексної серії онлайн-навчання для вчителів.
+  csa_ai_page_learn_more_link: Дивіться серію AI 101 для вчителів
+  csa_ai_page_faq_question_01: Які передумови для цього модуля?
+  csa_ai_page_faq_answer_01_01: 'Перш ніж зануритися в цей модуль, студенти повинні
+    володіти знаннями Java початкового рівня. Зокрема, вони повинні розуміти:'
+  csa_ai_page_faq_answer_01_list_01: "** Класи та об'єкти: ** Учні повинні бути знайомі
+    з визначенням та використанням класів, а також створенням та маніпулюванням об'єктами."
+  csa_ai_page_faq_answer_01_list_02: "**Написання та виклик методів: ** Студенти повинні
+    мати можливість визначати методи в класі, розуміти параметри методу та типи повернення,
+    а також викликати методи з об'єктів або інших методів."
+  csa_ai_page_faq_answer_01_list_03: "**1D масиви та ArrayLists: ** Вони повинні вміти
+    оголошувати, ініціалізувати та маніпулювати одновимірними масивами та ArrayLists,
+    включаючи ітерацію через них."
+  csa_ai_page_faq_answer_01_list_04: "**Вибір та ітерація: ** Міцна основа в умовних
+    операторах і циклах має вирішальне значення."
+  csa_ai_page_faq_question_01_02: В ідеалі студенти, які закінчили AP Computer Science
+    A або курс подібної глибини та строгості, були б добре підготовлені до цього модуля.
+  csa_ai_page_faq_question_02: Як встановити програмне забезпечення, необхідне для
+    цього модуля?
+  csa_ai_page_faq_answer_02_01: Цей модуль унікальний тим, що передбачає використання
+    стороннього програмного забезпечення, а не лабораторій та інструментів Code.org.
+    [Детальніше про встановлення програмного забезпечення читайте тут] (%{accessibility_url}).
+  csa_ai_page_faq_question_03: Як я можу підтримувати потреби доступності під час
+    викладання цього модуля?
+  csa_ai_page_faq_answer_03_01: Забезпечення потреб доступності має вирішальне значення
+    для інклюзивного навчального середовища. [Докладніше про можливості доступності
+    в програмному забезпеченні, що використовується в цьому модулі, читайте тут] (%{install_url}).
+  csa_ai_page_faq_question_04: Як використовувати код VS на Chromebook?
+  csa_ai_page_faq_answer_04: Використання VS Code на Chromebook стало більш простим,
+    особливо з можливістю запускати програми Linux на новіших моделях Chromebook.
+    [Докладніше про налаштування VS Code на Chromebook читайте тут] ()%{chromebook_url}.
+  csa_ai_page_faq_question_05: Як я можу отримати професійний розвиток для цього модуля?
+  csa_ai_page_faq_answer_05: На даний момент немає конкретного професійного розвитку
+    для цього курсу. Якщо ви хочете зрозуміти, як підійти до штучного інтелекту у
+    своєму класі, ви можете [вивчити AI 101 для вчителів] (%{ai_101_url}).
+  csa_ai_page_faq_question_06: Який рекомендований час для викладання цього модуля?
+  csa_ai_page_faq_answer_06_01: Модуль програмної інженерії та комп'ютерного зору
+    продумано структурований, щоб забезпечити всебічне навчання за стислі терміни.
+    Весь модуль розрахований на тривалі**2 тижні навчання**. Більшість уроків розроблені
+    на **45 хвилин**, тоді як уроки, де учні заглиблюються в практичну розробку проектів
+    Java, розраховані на **90 хвилин**. Цей тривалий час гарантує студентам широкі
+    можливості зрозуміти, впровадити та усунути несправності під час роботи.
+  csa_ai_page_faq_answer_06_02: Існує також навмисна гнучкість, вбудована в структуру
+    модуля. Залежно від динаміки класу, залучення учнів та глибини, з якою ви хочете
+    вивчити кожну тему, ви можете налаштувати тривалість. Наприклад, урок Intro до
+    Copilot, розроблений як 45-хвилинний урок, можна розширити до 90 хвилин, якщо
+    ви хочете глибше зануритися в те, як працюють великі мовні моделі та інструменти,
+    такі як GitHub Copilot та ChatGPT.
+  csa_ai_page_faq_question_07: How can I access answer keys?
+  csa_ai_page_faq_answer_07: За допомогою затвердженого облікового запису вчителя
+    ви можете знайти ключі відповідей на синій панелі «Тільки вчитель», яка відображається
+    в онлайн-уроках та заходах. Якщо вам потрібен затверджений обліковий запис вчителя,
+    ви можете подати заявку на доступ до захищених матеріалів лише для вчителя (ключі
+    відповідей тощо) через [цю форму] ().%{form_url}Будь ласка, майте на увазі, що
+    підтвердження вашого облікового запису може зайняти 3-5 робочих днів.
+  csa_ai_page_faq_question_08: Чи відповідає цей модуль стандартам?
+  csa_ai_page_faq_answer_08: Так, навчальна програма з інженерії програмного забезпечення
+    та комп'ютерного зору зіставлена на карту з [стандартами CSTA K-12] (%{csta_k12_url})
+    та AI для [Керівних принципів K-12] ().%{k12_url}
+  csa_ai_page_faq_question_09: Скільки коштує навчання цьому модулю?
+  csa_ai_page_faq_answer_09_01: Наша навчальна програма та платформа доступні за [безкоштовно]
+    (%{no_cost_url}) для всіх, де завгодно, щоб викладати!
+  csa_ai_page_faq_answer_09_02: Крім того, програмне забезпечення та інструменти,
+    що використовуються в цьому модулі, є безкоштовними. GitHub Copilot безкоштовний
+    для перевірених [teachers](%{teachers_url}) та (). [students]%{students_url}
+  csa_ai_page_faq_question_10: Що робити, якщо установка програмного забезпечення
+    не працює?
+  csa_ai_page_faq_answer_10: Проблеми під час встановлення програмного забезпечення
+    можуть бути поширеними, але є систематичні кроки, які ви можете виконати, щоб
+    усунути неполадки та усунути їх. [Ознайомтеся з деякими порадами щодо усунення
+    несправностей тут] (%{troubleshooting_url}).
+  csa_ai_page_faq_question_11: How was the curriculum developed?
+  csa_ai_page_faq_answer_11_01: 'Наша навчальна програма з інженерії програмного забезпечення
+    та комп''ютерного зору була розроблена з урахуванням цінностей нашої навчальної
+    програми. При створенні цієї навчальної програми керуються наступними цілями:'
+  csa_ai_page_faq_answer_11_list_01: "**Мета 1: ** Використовуйте інструменти AI для
+    створення, налагодження та редагування коду."
+  csa_ai_page_faq_answer_11_list_02: "**Мета 2: ** Перехід від Java Lab до реальних
+    інструментів."
+  csa_ai_page_faq_answer_11_list_03: "**Мета 3: ** Поглибити розуміння того, як моделі
+    ШІ навчаються та інтегруються в програми."
+  csa_ai_page_faq_answer_11_02: Для отримання додаткової інформації про цінності,
+    якими керувала наша робота, перегляньте наш [значення навчальної програми] (%{curriculum_values_url}).
   language_code:
     ar: Арабська
     az: Азербайджанська

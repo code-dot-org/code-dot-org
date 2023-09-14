@@ -202,6 +202,18 @@ el:
   grade_level_label_elementary: Δημοτικό Σχολείο
   grade_level_label_middle: Γυμνάσιο
   grade_level_label_high: Γυμνάσιο
+  curricula_title_elementary: Αναλυτικά Προγράμματα Δημοτικού
+  curricula_desc_elementary: Περιηγηθείτε στη διασκέδαση, δωρεάν μαθήματα και δραστηριότητες
+    που σας προσκαλούν να εξερευνήσετε την επιστήμη των υπολογιστών με τους μαθητές
+    του δημοτικού σχολείου σας.
+  curricula_title_middle: Προγράμματα Σπουδών Γυμνασίου
+  curricula_desc_middle: Περιηγηθείτε στις ελκυστικές προσφορές που επιτρέπουν σε
+    εσάς και τους μαθητές του γυμνασίου σας να εξερευνήσετε μαζί την επιστήμη των
+    υπολογιστών.
+  curricula_title_high: Προγράμματα Σπουδών Λυκείου
+  curricula_desc_high: Περιηγηθείτε στα συναρπαστικά μαθήματα και δραστηριότητες που
+    προσκαλούν εσάς και τους μαθητές γυμνασίου σας να εμβαθύνετε στην επιστήμη των
+    υπολογιστών.
   students_label: Μαθητές
   teachers_label: Δάσκαλοι
   teacher_label_csf: Δάσκαλος βασικών αρχών CS
@@ -229,6 +241,13 @@ el:
   call_to_action_explore_choice_level: Εξερευνήστε ένα δείγμα επιπέδου
   call_to_action_explore_collection: Εξερευνήστε τη συλλογή
   call_to_action_explore_unplugged_lesson: Εξερευνήστε μαθήματα χωρίς σύνδεση
+  call_to_action_explore_csf: Εξερευνήστε τις βασικές αρχές CS
+  call_to_action_explore_csd: Εξερευνήστε τις ανακαλύψεις CS
+  call_to_action_explore_csp: Εξερευνήστε τις αρχές CS
+  call_to_action_explore_csc: Εξερευνήστε τις συνδέσεις CS
+  call_to_action_explore_csa: Εξερευνήστε την Επιστήμη Υπολογιστών AP® A
+  call_to_action_explore_maker: Εξερευνήστε τα προγράμματα σπουδών του Maker
+  call_to_action_explore_hoc: Εξερευνήστε τα σεμινάρια της Ώρας του Κώδικα
   call_to_action_try_app_lab: Δοκιμάστε το App Lab
   call_to_action_view_lesson_plan: Προβολή σχεδίου μαθήματος
   call_to_action_self_paced_pl: Ξεκινήστε την αυτο-ρυθμισμένη επαγγελματική μάθηση
@@ -276,6 +295,7 @@ el:
   call_to_action_notify_available: Ειδοποιήστε με όταν είναι διαθέσιμο
   call_to_action_register_early_access: Εγγραφείτε για έγκαιρη πρόσβαση
   call_to_action_open_positions: Προβολή ανοιχτών θέσεων
+  call_to_action_get_guide: Πάρτε τον οδηγό
   aria_label_call_to_action_afe: Μάθετε περισσότερα για τον Μηχανικό Μελλοντικού της
     Amazon
   aria_label_call_to_action_teaching_csf: Ξεκινήστε το πρόγραμμα επαγγελματικής μάθησης
@@ -389,6 +409,8 @@ el:
   curriculum_name_csa: AP® Επιστήμη Υπολογιστών A
   curriculum_name_csc_02: Οποιαδήποτε ενότητα συνδέσεων CS
   curriculum_name_ai: Al και η Μηχανική Μάθηση
+  curriculum_name_artificial_intelligence: Τεχνητή Νοημοσύνη (AI)
+  curriculum_name_maker: Κατασκευαστής
   curriculum_name_maker_cp: Δημιουργία εφαρμογών με συσκευές (Circuit Playground)
   curriculum_name_maker_microbit: Δημιουργία εφαρμογών με συσκευές (micro:bit)
   curriculum_name_creating_apps_with_devices: Δημιουργία εφαρμογών με συσκευές
@@ -450,6 +472,13 @@ el:
     στην πληροφορική. Αναπτύξτε προγράμματα που χρησιμοποιούν εισόδους και εξόδους
     υλικού. Υπάρχει μια έκδοση αυτής της ενότητας τόσο για το micro:bit όσο και για
     το Circuit Playground.
+  curriculum_desc_csa: Εισαγάγετε τους μαθητές στη μηχανική λογισμικού και τον αντικειμενοστρεφή
+    σχεδιασμό ενώ μαθαίνουν τη γλώσσα προγραμματισμού Java σε αυτό το δωρεάν πρόγραμμα
+    σπουδών για AP® Computer Science A (AP® CSA).
+  curriculum_desc_maker: Η εκπαίδευση των δημιουργών παίρνει το STEM (Επιστήμη, Τεχνολογία,
+    Μηχανική, Μαθηματικά) ένα βήμα παραπέρα προσκαλώντας πρακτική εμπειρία και συνεργασία
+    στην τάξη για να βοηθήσει στη διδασκαλία της επίλυσης προβλημάτων και της κριτικής
+    σκέψης.
   collection_hardware: Εστίαση στο υλικό
   collection_hardware_desc: Δίνει τη δυνατότητα στους μαθητές να χρησιμοποιούν δεδομένα
     και φυσικές συσκευές για την επίλυση προβλημάτων.
@@ -484,6 +513,7 @@ el:
   module_label_professional_learning: 'Επαγγελματική μάθηση:'
   module_label_languages: 'Γλώσσες που υποστηρίζονται:'
   module_label_accessibility_features: 'Προσβασιμότητα:'
+  module_label_accessibility_features_full: 'Χαρακτηριστικά προσβασιμότητας:'
   module_label_educator_tool: Εκπαιδευτικό εργαλείο
   module_label_educator_course: Εκπαιδευτικό μάθημα
   module_label_student_tool: Εργαλείο σπουδαστών
@@ -491,6 +521,7 @@ el:
   module_label_student_content_resources: Περιεχόμενο & πόροι
   module_label_new: Νέα
   module_label_coming_soon: Ερχομαι συντομα
+  module_label_available_now: Διαθέσιμο τώρα
   module_label_video_series: Σειρά βίντεο
   module_label_self_paced: Αυτορυθμιζόμενη μονάδα
   module_ages_5_10: 5-10
@@ -501,6 +532,8 @@ el:
   module_grade_2_5: 2-5
   module_grade_3_5: 3-5
   module_grade_3_8: 3-8
+  module_grade_k_12: K-12
+  module_grade_3_12: 3-12
   module_grade_6_12: 6-12
   module_grade_6_10: 6-10
   module_grade_9_12: 9-12
@@ -515,7 +548,9 @@ el:
   module_grade_9_12_teachers: 9-12 Εκπαιδευτικοί
   module_level_beginner: Αρχάριος
   module_level_intermediate: Μεσαίου επιπέδου
+  module_level_advanced: Για προχωρημένους
   module_duration_45_mins: 45 λεπτά
+  module_duration_2_weeks: 2 εβδομάδες
   module_duration_1_hr: 1 ώρα
   module_duration_2_hrs: 2 ώρες
   module_duration_3_hrs: 3 ώρες
@@ -602,6 +637,8 @@ el:
   heading_java_lab: Εργαστήριο Java
   heading_objects_first: Αντικείμενα πρώτα
   heading_these_lessons_will: 'Αυτά τα μαθήματα θα:'
+  heading_explore_curriculum_catalog: Εξερευνήστε όλα τα μαθήματά μας στον Κατάλογο
+    Προγραμμάτων Σπουδών
   professional_learning_section_desc: Λάβετε την υποστήριξη που χρειάζεστε καθώς προετοιμάζεστε
     να διδάξετε. Οι εκπαιδευτικοί το λατρεύουν, με πάνω από 90% να το κατατάσσουν
     ως την καλύτερη επαγγελματική εξέλιξη όλων των εποχών!
@@ -886,6 +923,11 @@ el:
     γλωσσών (όπως το ChatGPT) και Generative AI. Ακούστε πώς αυτές οι νέες τεχνολογίες
     λειτουργούν απευθείας από τους ειδικούς: Mira Murati, CTO του OpenAI και Cristóbal
     Valenzuela, Διευθύνων Σύμβουλος της RunWayML.'
+  ai_pl_101_llm_slides_title: Προτροπές μεγάλων γλωσσικών μοντέλων για εκπαιδευτικούς
+  ai_pl_101_llm_slides_desc: Εργαλεία για την καλύτερη δυνατή έξοδο από LLM όπως το
+    ChatGPT, από αρχάριους έως προχωρημένους. Περιλαμβάνει προτροπές εκκίνησης για
+    όσους απλώς βυθίζουν τα δάχτυλα των ποδιών τους, καθώς και προηγμένα εργαλεία
+    για όσους θέλουν να μεγιστοποιήσουν τις δυνατότητές τους.
   how_ai_works_hero_heading: Πώς λειτουργεί το AI
   how_ai_works_hero_desc: Βουτήξτε στον κόσμο της τεχνητής νοημοσύνης με το «How AI
     Works», τη σειρά βίντεο και τα συνοδευτικά μαθήματα!
@@ -2199,6 +2241,12 @@ el:
     την επιστήμη των υπολογιστών;
   signup_email_preference_privacy: "(Δείτε την πολιτική απορρήτου μας)"
   signup_email_preference_yes: Ναι
+  signup_email_preference_yes_elementary: Ναι - Στείλτε μου ενημερώσεις για το Δημοτικό
+    Σχολείο
+  signup_email_preference_yes_middle: Ναι - Στείλτε μου ενημερώσεις σχετικά με τους
+    πόρους του Γυμνασίου
+  signup_email_preference_yes_high: Ναι - Στείλτε μου ενημερώσεις για το Λύκειο
+  signup_email_preference_yes_general: Ναι - Στείλτε μου γενικές ενημερώσεις
   signup_email_preference_no: Όχι
   signup_email_preference_error: Απαιτείται μία προτίμηση ηλεκτρονικού ταχυδρομείου
   signup_multiple_event_warning: Εάν φιλοξενείτε πολλές εκδηλώσεις, παρακαλούμε να
@@ -5948,11 +5996,11 @@ el:
   tutorial_minecraft-2016_longdescription: Δημιουργήστε ένα παιχνίδι Minecraft. Δημιουργήστε
     τις δικές σας εκδόσεις κοτόπουλου, προβάτων, αναρριχητικά φυτά, ζόμπι και πολλά
     άλλα.
-  tutorial_thinkersmith-es_longdescription: Mediante el uso de un "Vocabulario Robot"
-    predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar
-    a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento
-    ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones
-    as&iacute; como la valiosa habilidad de depuraci&oacute;n.
+  tutorial_thinkersmith-es_longdescription: Ο μέσος όρος του «Ρομπότ Λεξιλίου» προκαθορισμένος,
+    οι μελέτες που αποτιμήθηκαν από το modo tal de llevar a cabo tareas espec ficas
+    ser stas stas stas stas stas stas&aacute;precutiamente.&iacute;Αυτό είναι&ntilde;ένα
+    από τα καλύτερα μαθητούντα στο conexi και τα&iacute;bolos y acciones όπως το valiosa
+    habilidad de depuraci&oacute;n.&iacute;&oacute;
   tutorial_pixie_longdescription: Εκμάθηση για την ώρα του κώδικα με την Pixie
   tutorial_play_longdescription: Δημιουργήστε μία ιστορία ή φτιάξτε ένα παιχνίδι στο
     εργαστήριο παιχνιδιού! Δώστε κίνηση, φωνή και ήχο σε ζώα, πειρατές, ζόμπι, νίντζα
@@ -13442,12 +13490,13 @@ el:
   tutorial_googlename _longdescription: Διαλέξτε ένα όνομα και ζωντανέψτε τα γράμματα
     της λέξης χρησιμοποιώντας κώδικα. Επιλέξτε ένα ψευδώνυμο, ένα όνομα κατοικίδιου
     ζώου, ένα ζώο, ένα άθλημα, ένα μέρος ή ένα χόμπι.
-  tutorial_carnegiezillah_longdescription: Zillah City is thriving, and music is in
-    the air. Rumor has it, the famed Gargantua bot is online and sending the last
-    Toxibots to trash the city block by block…. Grab your cobot hoverboard and get
-    ready to groove, move, and finish off what you started! Players program their
-    cobot hoverbots to change lanes, avoid obstacles, and take out many Toxibots in
-    this rhythm-styled game.
+  tutorial_carnegiezillah_longdescription: Η πόλη Zillah ευδοκιμεί, και η μουσική
+    είναι στον αέρα. Φήμες λένε, το φημισμένο ρομπότ Gargantua είναι συνδεδεμένο και
+    στέλνει τα τελευταία Toxibots να σκουπίζουν την πόλη μπλοκ προς μπλοκ.…Πιάστε
+    το cobot hoverboard σας και ετοιμαστείτε να ξεκινήσετε, να μετακινηθείτε και να
+    ολοκληρώσετε αυτό που ξεκινήσατε! Οι παίκτες προγραμματίζουν τα cobot hoverbots
+    τους για να αλλάξουν λωρίδες, να αποφύγουν εμπόδια και να βγάλουν πολλά Toxibots
+    σε αυτό το παιχνίδι με στυλ ρυθμού.
   tutorial_nasachspacejam_longdescription: Δημιουργήστε ένα ηλιακό σύστημα που πραγματικά
     λικνίζει! Μάθετε για τη μουσική, την αστρονομία και την κωδικοποίηση σε αυτήν
     την αυτο-καθοδηγούμενη δραστηριότητα (δεν απαιτείται εμπειρία κωδικοποίησης).
@@ -14317,6 +14366,141 @@ el:
     έτους, γνωστό και ως Winter Break), μισή εργάσιμη ημέρα τις Παρασκευές κατά τη
     διάρκεια του καλοκαιριού, γνωστές και ως Καλοκαιρινές Παρασκευές, και άλλα γενναιόδωρα
     οφέλη.
+  csa_ai_page_hero_title: Μηχανική Λογισμικού & Όραμα Υπολογιστών
+  csa_ai_page_hero_description: 'Αυτή η ενότητα δύο κεφαλαίων μετά το AP CSA προσφέρει
+    στους μαθητές γυμνασίου πρακτική εμπειρία με επαγγελματικά εργαλεία ανάπτυξης
+    λογισμικού, συμπεριλαμβανομένων των GitHub και GitHub Copilot, και τους μεταδίδει
+    τις πραγματικές δεξιότητες για την ανάπτυξη ενός προγράμματος όρασης υπολογιστή. '
+  csa_ai_page_video_section_title: Βήμα πέρα από τον κόσμο των περιβαλλόντων προγραμματισμού
+    Code.org
+  csa_ai_page_video_section_li_1: Μάθετε για το AI και τις εφαρμογές του
+  csa_ai_page_video_section_li_2: Πρακτική εμπειρία με επαγγελματικά εργαλεία ανάπτυξης
+    λογισμικού
+  csa_ai_page_video_section_li_3: Μάθετε τις τυποποιημένες πρακτικές του κλάδου
+  csa_ai_page_video_section_li_4: Καλλιεργήστε την κριτική σκέψη
+  csa_ai_page_programming_tools: 'Εργαλεία προγραμματισμού: Github, Αντιγραφή Github,
+    Κωδικός VSC, TensorFlow '
+  csa_ai_page_professional_learning: Κανένας
+  csa_ai_page_curriculum_topics: 'Θέματα: Προγραμματισμός, Δεδομένα, Τέχνη και Σχεδιασμός,
+    Παιχνίδια και Κινούμενα Σχέδια'
+  csa_ai_page_curriculum_accessibility_features: Δείτε την ενότητα Συχνές ερωτήσεις
+    για λεπτομέρειες
+  csa_ai_page_curriculum_languages_support: ελληνικά
+  csa_ai_page_article_title_1: Κατασκευάστηκε με συγκυβερνήτη
+  csa_ai_page_article_description_1: Οι μαθητές μαθαίνουν πώς να χρησιμοποιούν το
+    GitHub Copilot ως προγραμματιστή ζευγών για να εξηγήσουν τον υπάρχοντα κώδικα,
+    να βρουν και να διορθώσουν σφάλματα και να δημιουργήσουν λύσεις σε νέα προβλήματα.
+  csa_ai_page_article_link_1: Μάθετε περισσότερα για το Copilot
+  csa_ai_page_article_title_2: Δημιουργήστε το δικό σας μοντέλο AI
+  csa_ai_page_article_description_2: Οι μαθητές εκπαιδεύουν τα δικά τους μοντέλα AI
+    χρησιμοποιώντας το Teachable Machine για να αναγνωρίσουν εικόνες και χειρονομίες
+    από μια κάμερα web και να εξετάσουν πώς η όραση του υπολογιστή επηρεάζει τον τρόπο
+    με τον οποίο οι χρήστες αλληλεπιδρούν με τις εφαρμογές.
+  csa_ai_page_article_link_2: Εξερευνήστε το σχέδιο μαθήματος
+  csa_ai_page_article_title_3: Εξερευνήστε την όραση του υπολογιστή
+  csa_ai_page_article_description_3: Οι μαθητές εφαρμόζουν τα μοντέλα AI που δημιούργησαν
+    με το Teachable Machine σε μια εφαρμογή Java, χρησιμοποιώντας το GitHub Copilot
+    για να τους βοηθήσουν να τροποποιήσουν τις υπάρχουσες εκδόσεις εφαρμογών ώστε
+    να λειτουργούν με τις διαφορετικές εισόδους.
+  csa_ai_page_article_link_3: Δείτε ένα παράδειγμα
+  csa_ai_page_learn_more_section_title: Μάθετε περισσότερα για την Τεχνητή Νοημοσύνη
+  csa_ai_page_learn_more_title: Εξερευνήστε το AI 101 για εκπαιδευτικούς
+  csa_ai_page_learn_more_description: Ανακαλύψτε τον πρωτοποριακό κόσμο της Τεχνητής
+    Νοημοσύνης (AI) και το μετασχηματιστικό δυναμικό της στην εκπαίδευση με την ολοκληρωμένη
+    διαδικτυακή σειρά μάθησης για εκπαιδευτικούς.
+  csa_ai_page_learn_more_link: Παρακολουθήστε τη σειρά AI 101 για εκπαιδευτικούς
+  csa_ai_page_faq_question_01: Ποιες είναι οι προϋποθέσεις για αυτήν την ενότητα;
+  csa_ai_page_faq_answer_01_01: 'Πριν από την κατάδυση σε αυτήν την ενότητα, οι μαθητές
+    θα πρέπει να διαθέτουν γνώσεις Java σε επίπεδο εισόδου. Συγκεκριμένα, θα πρέπει
+    να κατανοήσουν:'
+  csa_ai_page_faq_answer_01_list_01: "**Μαθήματα και αντικείμενα: ** Οι μαθητές πρέπει
+    να είναι εξοικειωμένοι με τον ορισμό και τη χρήση τάξεων, καθώς και με τη δημιουργία
+    και χειρισμό αντικειμένων."
+  csa_ai_page_faq_answer_01_list_02: "**Μέθοδοι γραφής και κλήσης: ** Οι μαθητές θα
+    πρέπει να είναι σε θέση να καθορίζουν μεθόδους μέσα σε μια τάξη, να κατανοούν
+    τις παραμέτρους της μεθόδου και τους τύπους επιστροφής και τις μεθόδους κλήσης
+    από αντικείμενα ή άλλες μεθόδους."
+  csa_ai_page_faq_answer_01_list_03: "**1D Arrays and ArrayLists: ** Θα πρέπει να
+    είναι ικανοί να δηλώνουν, να αρχικοποιούν και να χειρίζονται μονοδιάστατες συστοιχίες
+    και λίστες συστοιχιών, συμπεριλαμβανομένης της επανάληψής τους."
+  csa_ai_page_faq_answer_01_list_04: "**Επιλογή και επανάληψη: ** Μια σταθερή βάση
+    σε δηλώσεις υπό όρους και βρόχους είναι ζωτικής σημασίας."
+  csa_ai_page_faq_question_01_02: Στην ιδανική περίπτωση, οι μαθητές που έχουν ολοκληρώσει
+    AP Computer Science A ή ένα μάθημα παρόμοιου βάθους και αυστηρότητας θα ήταν καλά
+    προετοιμασμένοι για αυτήν την ενότητα.
+  csa_ai_page_faq_question_02: Πώς μπορώ να εγκαταστήσω το λογισμικό που απαιτείται
+    για αυτήν την ενότητα;
+  csa_ai_page_faq_answer_02_01: Αυτή η ενότητα είναι μοναδική επειδή περιλαμβάνει
+    τη χρήση λογισμικού τρίτων και όχι εργαστηρίων και εργαλείων Code.org. [Διαβάστε
+    περισσότερα σχετικά με την εγκατάσταση του λογισμικού εδώ] (%{accessibility_url}).
+  csa_ai_page_faq_question_03: Πώς μπορώ να υποστηρίξω τις ανάγκες προσβασιμότητας
+    κατά τη διδασκαλία αυτής της ενότητας;
+  csa_ai_page_faq_answer_03_01: Η κάλυψη των αναγκών προσβασιμότητας είναι ζωτικής
+    σημασίας για ένα περιβάλλον μάθησης χωρίς αποκλεισμούς. [Διαβάστε περισσότερα
+    σχετικά με τις δυνατότητες προσβασιμότητας στο λογισμικό που χρησιμοποιείται σε
+    αυτήν την ενότητα εδώ] (%{install_url}).
+  csa_ai_page_faq_question_04: Πώς μπορώ να χρησιμοποιήσω τον κώδικα VS στα Chromebook;
+  csa_ai_page_faq_answer_04: Η χρήση του κώδικα VS σε ένα Chromebook έχει γίνει πιο
+    απλή, ειδικά με τη δυνατότητα εκτέλεσης εφαρμογών Linux σε νεότερα μοντέλα Chromebook.
+    [Διαβάστε περισσότερα σχετικά με τη ρύθμιση του κώδικα VS στα Chromebook εδώ]
+    (%{chromebook_url}).
+  csa_ai_page_faq_question_05: Πώς μπορώ να αποκτήσω επαγγελματική ανάπτυξη για αυτήν
+    την ενότητα;
+  csa_ai_page_faq_answer_05: Προς το παρόν δεν υπάρχει συγκεκριμένη επαγγελματική
+    εξέλιξη για αυτό το μάθημα. Αν θέλετε να καταλάβετε πώς να προσεγγίσετε την Τεχνητή
+    Νοημοσύνη στην τάξη σας, μπορείτε [εξερευνήστε το AI 101 για εκπαιδευτικούς] (%{ai_101_url}).
+  csa_ai_page_faq_question_06: Ποιος είναι ο συνιστώμενος χρόνος για τη διδασκαλία
+    αυτής της ενότητας;
+  csa_ai_page_faq_answer_06_01: Η ενότητα Software Engineering & Computer Vision είναι
+    προσεκτικά δομημένη για να παρέχει ολοκληρωμένη μάθηση σε ένα συνοπτικό χρονικό
+    πλαίσιο. Ολόκληρη η ενότητα έχει σχεδιαστεί για να εκτείνεται σε **2 εβδομάδες
+    οδηγίας**. Τα περισσότερα μαθήματα είναι προσαρμοσμένα για **45 λεπτά**, ενώ τα
+    μαθήματα όπου οι μαθητές εμβαθύνουν στην πρακτική ανάπτυξη έργων Java έχουν σχεδιαστεί
+    για **90 λεπτά**. Αυτός ο παρατεταμένος χρόνος διασφαλίζει ότι οι μαθητές έχουν
+    άφθονες ευκαιρίες να κατανοήσουν, να εφαρμόσουν και να αντιμετωπίσουν προβλήματα
+    καθώς εργάζονται.
+  csa_ai_page_faq_answer_06_02: Υπάρχει επίσης σκόπιμη ευελιξία ενσωματωμένη στη δομή
+    της ενότητας. Ανάλογα με τη δυναμική της τάξης, την αφοσίωση των μαθητών και το
+    βάθος στο οποίο θέλετε να εξερευνήσετε κάθε θέμα, μπορείτε να προσαρμόσετε τη
+    διάρκεια. Για παράδειγμα, το μάθημα Intro to Copilot, σχεδιασμένο ως μάθημα 45
+    λεπτών, μπορεί να επεκταθεί σε 90 λεπτά εάν θέλετε να εμβαθύνετε στο πόσο μεγάλα
+    γλωσσικά μοντέλα και εργαλεία όπως το GitHub Copilot και το ChatGPT λειτουργούν.
+  csa_ai_page_faq_question_07: How can I access answer keys?
+  csa_ai_page_faq_answer_07: Με έναν εγκεκριμένο λογαριασμό καθηγητή, μπορείτε να
+    βρείτε τα πλήκτρα απάντησης σε ένα μπλε πλαίσιο «Μόνο δάσκαλος» που εμφανίζεται
+    στα διαδικτυακά μαθήματα και δραστηριότητες. Εάν χρειάζεστε έναν εγκεκριμένο λογαριασμό
+    εκπαιδευτικού, μπορείτε να υποβάλετε αίτηση για πρόσβαση σε προστατευμένο υλικό
+    μόνο για εκπαιδευτικούς (κλειδιά απάντησης, κ.λπ.) μέσω [αυτή η φόρμα] ().%{form_url}Λάβετε
+    υπόψη ότι μπορεί να χρειαστούν 3-5 εργάσιμες ημέρες για την επαλήθευση του λογαριασμού
+    σας.
+  csa_ai_page_faq_question_08: Είναι αυτή η ενότητα αντιστοιχισμένη στα πρότυπα;
+  csa_ai_page_faq_answer_08: Ναί, το πρόγραμμα σπουδών Μηχανικής Λογισμικού & Υπολογιστής
+    Όρασης αντιστοιχίζεται στα [Πρότυπα CSTA K-12] (%{csta_k12_url}) και το AI για
+    [Οδηγίες K-12] ().%{k12_url}
+  csa_ai_page_faq_question_09: Πόσο κοστίζει η διδασκαλία αυτής της ενότητας;
+  csa_ai_page_faq_answer_09_01: Το πρόγραμμα σπουδών και η πλατφόρμα μας είναι διαθέσιμα
+    στο [χωρίς κόστος] (%{no_cost_url}) για οποιονδήποτε, οπουδήποτε, να διδάξει!
+  csa_ai_page_faq_answer_09_02: Επιπλέον, το λογισμικό και τα εργαλεία που χρησιμοποιούνται
+    σε αυτήν την ενότητα είναι δωρεάν. Το GitHub Copilot είναι δωρεάν για επαλήθευση
+    [teachers](%{teachers_url}) και (). [students]%{students_url}
+  csa_ai_page_faq_question_10: Τι πρέπει να κάνω εάν η εγκατάσταση λογισμικού δεν
+    λειτουργεί;
+  csa_ai_page_faq_answer_10: Η αντιμετώπιση προβλημάτων κατά την εγκατάσταση λογισμικού
+    μπορεί να είναι συνηθισμένη, αλλά υπάρχουν συστηματικά βήματα που μπορείτε να
+    ακολουθήσετε για την αντιμετώπιση προβλημάτων και την επίλυσή τους. [Δείτε μερικές
+    συμβουλές αντιμετώπισης προβλημάτων εδώ] (%{troubleshooting_url}).
+  csa_ai_page_faq_question_11: How was the curriculum developed?
+  csa_ai_page_faq_answer_11_01: 'Το πρόγραμμα σπουδών μας για τη Μηχανική Λογισμικού
+    & το Computer Vision σχεδιάστηκε με γνώμονα τις αξίες του προγράμματος σπουδών
+    μας. Οι ακόλουθοι στόχοι καθοδήγησαν τη δημιουργία αυτού του προγράμματος σπουδών:'
+  csa_ai_page_faq_answer_11_list_01: "**Στόχος 1: ** Χρησιμοποιήστε εργαλεία AI για
+    τη δημιουργία, τον εντοπισμό σφαλμάτων και την επεξεργασία κώδικα."
+  csa_ai_page_faq_answer_11_list_02: "**Στόχος 2: ** Μετάβαση από το Java Lab σε εργαλεία
+    πραγματικού κόσμου."
+  csa_ai_page_faq_answer_11_list_03: "**Στόχος 3: ** Εμβάθυνση της κατανόησης του
+    τρόπου με τον οποίο τα μοντέλα AI εκπαιδεύονται και ενσωματώνονται σε προγράμματα."
+  csa_ai_page_faq_answer_11_02: Για περισσότερες πληροφορίες σχετικά με τις αξίες
+    που καθοδήγησαν το έργο μας, παρακαλώ δείτε μας [τιμές προγράμματος σπουδών] (%{curriculum_values_url}).
   language_code:
     ar: αραβικός
     az: Αζερμπαϊτζάν

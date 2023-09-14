@@ -5,10 +5,10 @@ ms:
   language: Bahasa Inggeris
   front_title: Sertai acara pembelajaran yang terbesar dalam sejarah, %{campaign_date}
   coming_soon: Akan Datang
-  campaign_date_start_short: 5 Disember
-  campaign_date_start_long: 5 Disember
-  campaign_date_short: 5-11 Disember
-  campaign_date_full: 5-11 Disember
+  campaign_date_start_short: 7 Dis.
+  campaign_date_start_long: 7 Disember
+  campaign_date_short: 7-13 Dis.
+  campaign_date_full: 7-13 Disember
   campaign_date_year: '2020'
   campaign_date_full_year: 5-11 Disember 2022
   nonus_campaign_date_start_short: 1 Okt.
@@ -195,6 +195,17 @@ ms:
   grade_level_label_elementary: Sekolah Rendah
   grade_level_label_middle: Sekolah Menengah
   grade_level_label_high: Sekolah Menengah
+  curricula_title_elementary: Kurikulum Sekolah Rendah
+  curricula_desc_elementary: Semak imbas kursus dan aktiviti percuma yang menyeronokkan
+    yang menjemput anda untuk meneroka sains komputer dengan pelajar sekolah rendah
+    anda.
+  curricula_title_middle: Kurikulum Sekolah Menengah
+  curricula_desc_middle: Semak imbas tawaran menarik yang membolehkan anda dan pelajar
+    sekolah menengah anda meneroka sains komputer bersama-sama.
+  curricula_title_high: Kurikulum Sekolah Menengah
+  curricula_desc_high: Semak imbas kursus dan aktiviti menarik yang menjemput anda
+    dan pelajar sekolah menengah anda untuk menggali lebih mendalam ke dalam sains
+    komputer.
   students_label: Pelajar
   teachers_label: Guru
   teacher_label_csf: Guru Asas CS
@@ -221,6 +232,13 @@ ms:
   call_to_action_explore_choice_level: Terokai contoh tahap pilihan
   call_to_action_explore_collection: Terokai koleksi
   call_to_action_explore_unplugged_lesson: Terokai pelajaran secara tradisional
+  call_to_action_explore_csf: Terokai Asas CS
+  call_to_action_explore_csd: Terokai CS Discoveries
+  call_to_action_explore_csp: Terokai Prinsip CS
+  call_to_action_explore_csc: Terokai CS Connections
+  call_to_action_explore_csa: Terokai AP® Sains Komputer A
+  call_to_action_explore_maker: Terokai kurikulum Maker
+  call_to_action_explore_hoc: Terokai tutorial Hour of Code
   call_to_action_try_app_lab: Cuba App Lab
   call_to_action_view_lesson_plan: Lihat rancangan pelajaran
   call_to_action_self_paced_pl: Mulakan pembelajaran profesional kendiri
@@ -265,6 +283,7 @@ ms:
   call_to_action_notify_available: Beritahu saya apabila tersedia
   call_to_action_register_early_access: Daftar untuk akses awal
   call_to_action_open_positions: Lihat kedudukan terbuka
+  call_to_action_get_guide: Dapatkan panduan
   aria_label_call_to_action_afe: Ketahui lebih lanjut mengenai Jurutera Masa Depan
     Amazon
   aria_label_call_to_action_teaching_csf: Mulakan program pembelajaran profesional
@@ -367,6 +386,8 @@ ms:
   curriculum_name_csa: Sains Komputer A
   curriculum_name_csc_02: Mana-mana Modul Rangkaian CS
   curriculum_name_ai: "  AI dan Pembelajaran Mesin  "
+  curriculum_name_artificial_intelligence: Kecerdasan Buatan (AI)
+  curriculum_name_maker: Pembuat
   curriculum_name_maker_cp: Mewujudkan Apl dengan Peranti (Taman Permainan Litar)
   curriculum_name_maker_microbit: 'Mewujudkan Apl dengan Peranti (mikro: bit)'
   curriculum_name_creating_apps_with_devices: Mewujudkan Apl dengan Peranti
@@ -424,6 +445,13 @@ ms:
   curriculum_desc_creating_apps_with_devices: Terokai peranan peranti fizikal dalam
     pengkomputeran. Membangunkan program yang menggunakan input dan output perkakasan.
     Terdapat versi unit ini untuk kedua-dua micro:bit dan Circuit Playground.
+  curriculum_desc_csa: Memperkenalkan pelajar kepada kejuruteraan perisian dan reka
+    bentuk berorientasikan objek semasa mereka mempelajari bahasa pengaturcaraan Java
+    dalam kurikulum percuma ini untuk AP® Sains Komputer A (AP® CSA).
+  curriculum_desc_maker: Pendidikan Maker mengambil STEM (Sains, Teknologi, Kejuruteraan,
+    Matematik) selangkah lebih maju dengan menjemput pengalaman langsung dan kerjasama
+    ke dalam bilik darjah untuk membantu mengajar penyelesaian masalah dan pemikiran
+    kritis.
   collection_hardware: Fokus pada Perkakasan
   collection_hardware_desc: Memberi kuasa kepada pelajar untuk menggunakan data dan
     peranti fizikal untuk menyelesaikan masalah.
@@ -457,6 +485,7 @@ ms:
   module_label_professional_learning: 'Pembelajaran Profesional:'
   module_label_languages: 'Bahasa yang Disokong:'
   module_label_accessibility_features: 'Kebolehcapaian:'
+  module_label_accessibility_features_full: 'Ciri Kebolehcapaian:'
   module_label_educator_tool: Alat pendidik
   module_label_educator_course: Kursus pendidik
   module_label_student_tool: Alat pelajar
@@ -464,6 +493,7 @@ ms:
   module_label_student_content_resources: Kandungan & sumber
   module_label_new: Baru
   module_label_coming_soon: Akan datang tidak lama lagi
+  module_label_available_now: Tersedia Sekarang
   module_label_video_series: Siri video
   module_label_self_paced: Modul kendiri
   module_ages_5_10: 5-10
@@ -474,6 +504,8 @@ ms:
   module_grade_2_5: 2-5
   module_grade_3_5: 3-5
   module_grade_3_8: 3-8
+  module_grade_k_12: K-12
+  module_grade_3_12: 3-12
   module_grade_6_12: 6-12
   module_grade_6_10: 6-10
   module_grade_9_12: 9-12
@@ -488,7 +520,9 @@ ms:
   module_grade_9_12_teachers: Guru 9-12
   module_level_beginner: Pemula
   module_level_intermediate: Perantaraan
+  module_level_advanced: Advanced
   module_duration_45_mins: 45 minit
+  module_duration_2_weeks: 2 minggu
   module_duration_1_hr: 1 jam
   module_duration_2_hrs: 2 jam
   module_duration_3_hrs: 3 jam
@@ -571,6 +605,7 @@ ms:
   heading_java_lab: Makmal Java
   heading_objects_first: Objek pertama
   heading_these_lessons_will: 'Pelajaran ini akan:'
+  heading_explore_curriculum_catalog: Terokai semua kursus kami dalam Katalog Kurikulum
   professional_learning_section_desc: Dapatkan sokongan yang anda perlukan semasa
     anda bersedia untuk mengajar. Guru menyukainya, dengan lebih daripada 90% kedudukannya
     sebagai pembangunan profesional terbaik yang pernah ada!
@@ -832,6 +867,11 @@ ms:
     (seperti ChatGPT) dan Generative AI. Dengar bagaimana teknologi baru ini berfungsi
     secara langsung dari pakar: Mira Murati, CTO OpenAI, dan Cristóbal Valenzuela,
     Ketua Pegawai Eksekutif RunwayML.'
+  ai_pl_101_llm_slides_title: Model Bahasa Besar Prompts untuk Pendidik
+  ai_pl_101_llm_slides_desc: Alat untuk mendapatkan output terbaik dari LLM seperti
+    ChatGPT, dari pemula hingga maju. Termasuk arahan permulaan bagi mereka yang hanya
+    mencelupkan jari kaki mereka, serta alat canggih bagi mereka yang ingin memaksimumkan
+    potensi mereka.
   how_ai_works_hero_heading: Bagaimana AI Berfungsi
   how_ai_works_hero_desc: Selami dunia AI dengan “How AI Works,” siri video kami dan
     pelajaran yang menyertainya!
@@ -1586,10 +1626,10 @@ ms:
     di dalam bilik darjah anda. Rakan Serantau kami menawarkan bengkel Code.org berkualiti
     tinggi satu hari untuk guru individu atau untuk PD di seluruh sekolah. [Daftar
     untuk bengkel pembangunan profesional berhampiran anda] (%{sign_up_url})!
-  csf_page_faq_answer_04_02: Join over 100,000 teachers who have participated in our
-    workshops. The majority of our workshop attendees say, 'It's the best professional
-    development I've ever attended.' In fact, [90% of attendees would recommend our
-    program to other teachers](%{rec_url})!
+  csf_page_faq_answer_04_02: Sertai lebih 100,000 guru yang telah mengambil bahagian
+    dalam bengkel kami. Majoriti peserta bengkel kami berkata, 'Ia adalah pembangunan
+    profesional terbaik yang pernah saya hadiri. ' Malah, [90% peserta akan mengesyorkan
+    program kami kepada guru lain] ()!%{rec_url}
   csf_page_faq_question_05: Apakah masa yang disyorkan untuk mengajar CS Fundamentals?
   csf_page_faq_answer_05: Setiap kursus CSF termasuk 13-17 pelajaran yang direka untuk
     tempoh 45 minit. Kami mengesyorkan semua pelajar berpindah dari pelajaran ke pelajaran
@@ -1597,9 +1637,10 @@ ms:
     oleh guru yang dirancang untuk dialami secara serentak sementara pelajaran membina
     kemahiran dapat diselesaikan oleh pelajar mengikut kadar mereka sendiri.
   csf_page_faq_question_06: Apakah bahan yang saya perlukan untuk CS Fundamentals?
-  csf_page_faq_answer_06: Many lessons have handouts that guide students through activities.
-    These resources can be printed or assigned digitally. Some lessons call for typical
-    classroom supplies and manipulatives. [Visit the CSF Syllabus to learn more](%{syllabus_url}).
+  csf_page_faq_answer_06: Banyak pelajaran mempunyai pemberian yang membimbing pelajar
+    melalui aktiviti. Sumber-sumber ini boleh dicetak atau diberikan secara digital.
+    Beberapa pelajaran memerlukan bekalan dan manipulatif bilik darjah yang biasa.
+    [Lawati Sukatan Pelajaran CSF untuk mengetahui lebih lanjut] ().%{syllabus_url}
   csa_page_top_desc: Introduce students to software engineering and object-oriented
     design while they learn the Java programming language in this free curriculum
     for [AP® Computer Science A (AP® CSA)](%{csa_url}).
@@ -2103,6 +2144,13 @@ ms:
     lain?
   signup_email_preference_privacy: "(Lihat dasar privasi kami)"
   signup_email_preference_yes: Ya
+  signup_email_preference_yes_elementary: Ya - Hantarkan saya kemas kini mengenai
+    Sumber Sekolah Rendah
+  signup_email_preference_yes_middle: Ya - Hantarkan saya kemas kini mengenai Sumber
+    Sekolah Menengah
+  signup_email_preference_yes_high: Ya - Hantarkan saya kemas kini mengenai Sumber
+    Sekolah Menengah
+  signup_email_preference_yes_general: Ya - Hantarkan saya kemas kini umum
   signup_email_preference_no: Tidak
   signup_email_preference_error: Keutamaan e-mel diperlukan
   signup_multiple_event_warning: Kami akan meletakkan nama sekolah dan bandar anda
@@ -12959,12 +13007,13 @@ ms:
   tutorial_googlename _longdescription: Pilih nama dan hidupkan huruf perkataan dengan
     menggunakan kod. Pilih nama samaran, nama haiwan peliharaan, haiwan, sukan, tempat
     atau hobi.
-  tutorial_carnegiezillah_longdescription: Zillah City is thriving, and music is in
-    the air. Rumor has it, the famed Gargantua bot is online and sending the last
-    Toxibots to trash the city block by block…. Grab your cobot hoverboard and get
-    ready to groove, move, and finish off what you started! Players program their
-    cobot hoverbots to change lanes, avoid obstacles, and take out many Toxibots in
-    this rhythm-styled game.
+  tutorial_carnegiezillah_longdescription: Bandar Zillah berkembang maju, dan muzik
+    ada di udara. Khabar angin mengatakan, bot Gargantua yang terkenal sedang dalam
+    talian dan menghantar Toxibots terakhir untuk membuang blok bandar demi blok.…Dapatkan
+    hoverboard cobot anda dan bersiaplah untuk alur, bergerak, dan selesaikan apa
+    yang anda mulakan! Pemain memprogramkan hoverbots cobot mereka untuk menukar lorong,
+    mengelakkan halangan, dan mengeluarkan banyak Toxibots dalam permainan gaya irama
+    ini.
   tutorial_nasachspacejam_longdescription: Buat sistem suria yang benar-benar batu!
     Ketahui mengenai muzik, astronomi, dan pengekodan dalam aktiviti berpandukan diri
     ini (tidak diperlukan pengalaman pengekodan). Planet program untuk membuat muzik,
@@ -13800,6 +13849,133 @@ ms:
     yang merangkumi penutupan pejabat 2 minggu di seluruh dunia pada akhir tahun aka
     Cuti Musim Sejuk), separuh hari bekerja pada hari Jumaat semasa musim panas aka
     Jumaat Musim Panas, dan faedah lain yang murah hati.
+  csa_ai_page_hero_title: Kejuruteraan Perisian & Visi Komputer
+  csa_ai_page_hero_description: 'Modul Post-AP CSA dua bab ini menawarkan pengalaman
+    langsung kepada pelajar sekolah menengah dengan alat pengembangan perisian profesional,
+    termasuk GitHub dan GitHub Copilot, dan memberikan mereka kemahiran dunia nyata
+    untuk mengembangkan program penglihatan komputer. '
+  csa_ai_page_video_section_title: Melangkaui dunia persekitaran pengaturcaraan Code.org
+  csa_ai_page_video_section_li_1: Ketahui mengenai AI dan aplikasinya
+  csa_ai_page_video_section_li_2: Pengalaman praktikal dengan alat pembangunan perisian
+    profesional
+  csa_ai_page_video_section_li_3: Ketahui amalan standard industri
+  csa_ai_page_video_section_li_4: Memupuk pemikiran kritis
+  csa_ai_page_programming_tools: 'Alat Pengaturcaraan: Github, Github Copilot, VSCode,
+    TensorFlow '
+  csa_ai_page_professional_learning: Tiada
+  csa_ai_page_curriculum_topics: 'Topik: Pengaturcaraan, Data, Seni dan Reka Bentuk,
+    Permainan dan Animasi'
+  csa_ai_page_curriculum_accessibility_features: Lihat bahagian Soalan Lazim untuk
+    maklumat lanjut
+  csa_ai_page_curriculum_languages_support: Bahasa Inggeris
+  csa_ai_page_article_title_1: Membina dengan Copilot
+  csa_ai_page_article_description_1: Pelajar belajar bagaimana menggunakan GitHub
+    Copilot sebagai pengaturcara pasangan untuk menerangkan kod sedia ada, mencari
+    dan membetulkan ralat, dan menjana penyelesaian kepada masalah baharu.
+  csa_ai_page_article_link_1: Ketahui lebih lanjut mengenai Copilot
+  csa_ai_page_article_title_2: Bina model AI anda sendiri
+  csa_ai_page_article_description_2: Pelajar melatih model AI mereka sendiri menggunakan
+    Teachable Machine untuk mengenali gambar dan gerak isyarat membentuk kamera web
+    dan mempertimbangkan bagaimana penglihatan komputer mempengaruhi cara pengguna
+    berinteraksi dengan aplikasi.
+  csa_ai_page_article_link_2: Terokai rancangan pelajaran
+  csa_ai_page_article_title_3: Terokai penglihatan komputer
+  csa_ai_page_article_description_3: Pelajar menerapkan model AI yang mereka buat
+    dengan Teachable Machine ke dalam aplikasi Java, menggunakan GitHub Copilot untuk
+    membantu mereka mengubah versi aplikasi yang ada untuk berfungsi dengan input
+    yang berbeza.
+  csa_ai_page_article_link_3: Lihat contoh
+  csa_ai_page_learn_more_section_title: Ketahui lebih lanjut mengenai Kecerdasan Buatan
+  csa_ai_page_learn_more_title: Terokai AI 101 untuk Guru
+  csa_ai_page_learn_more_description: Temui dunia Artificial Intelligence (AI) yang
+    inovatif dan potensi transformatifnya dalam pendidikan dengan siri pembelajaran
+    dalam talian komprehensif kami untuk guru.
+  csa_ai_page_learn_more_link: Tonton siri AI 101 untuk Guru
+  csa_ai_page_faq_question_01: Apakah prasyarat untuk modul ini?
+  csa_ai_page_faq_answer_01_01: 'Sebelum menyelam ke dalam modul ini, pelajar harus
+    memiliki pengetahuan peringkat kemasukan Jawa. Khususnya, mereka harus memahami:'
+  csa_ai_page_faq_answer_01_list_01: "**Kelas dan Objek: ** Pelajar harus biasa dengan
+    menentukan dan menggunakan kelas, serta membuat dan memanipulasi objek."
+  csa_ai_page_faq_answer_01_list_02: "**Kaedah Penulisan dan Panggilan: ** Pelajar
+    harus dapat menentukan kaedah dalam kelas, memahami parameter kaedah dan jenis
+    pengembalian, dan kaedah panggilan dari objek atau kaedah lain."
+  csa_ai_page_faq_answer_01_list_03: "**1D Array dan ArrayLists: ** Mereka harus mahir
+    dalam mengisytiharkan, memulakan, dan memanipulasi tatasusunan satu dimensi dan
+    ArrayLists, termasuk melelar melalui mereka."
+  csa_ai_page_faq_answer_01_list_04: "**Pemilihan dan Pengulangan: ** Asas yang kukuh
+    dalam pernyataan dan gelung bersyarat adalah penting."
+  csa_ai_page_faq_question_01_02: Sebaik-baiknya, pelajar yang telah menamatkan AP
+    Sains Komputer A atau kursus kedalaman dan ketegasan yang serupa akan bersedia
+    untuk modul ini.
+  csa_ai_page_faq_question_02: Bagaimana saya memasang perisian yang diperlukan untuk
+    modul ini?
+  csa_ai_page_faq_answer_02_01: Modul ini unik kerana melibatkan penggunaan perisian
+    pihak ketiga dan bukannya makmal dan alat Code.org. [Baca lebih lanjut mengenai
+    memasang perisian di sini] (%{accessibility_url}).
+  csa_ai_page_faq_question_03: Bagaimanakah saya boleh menyokong keperluan kebolehcapaian
+    semasa mengajar modul ini?
+  csa_ai_page_faq_answer_03_01: Melayan keperluan aksesibilitas sangat penting untuk
+    persekitaran pembelajaran yang inklusif. [Baca lebih lanjut mengenai ciri kebolehcapaian
+    dalam perisian yang digunakan dalam modul ini di sini] (%{install_url}).
+  csa_ai_page_faq_question_04: Bagaimana saya menggunakan Kod VS pada Chromebook?
+  csa_ai_page_faq_answer_04: Menggunakan Kod VS pada Chromebook telah menjadi lebih
+    mudah, terutamanya dengan keupayaan untuk menjalankan aplikasi Linux pada model
+    Chromebook yang lebih baru. [Baca lebih lanjut mengenai menyediakan Kod VS pada
+    Chromebook di sini] ()%{chromebook_url}.
+  csa_ai_page_faq_question_05: Bagaimanakah saya boleh mendapatkan pembangunan profesional
+    untuk modul ini?
+  csa_ai_page_faq_answer_05: Tidak ada perkembangan profesional khusus untuk kursus
+    ini pada masa ini. Sekiranya anda ingin memahami cara mendekati Kecerdasan Buatan
+    di bilik darjah anda, anda boleh [meneroka AI 101 untuk Guru] (%{ai_101_url}).
+  csa_ai_page_faq_question_06: Apakah masa yang disyorkan untuk mengajar modul ini?
+  csa_ai_page_faq_answer_06_01: Modul Kejuruteraan Perisian & Visi Komputer disusun
+    dengan teliti untuk menyediakan pembelajaran komprehensif dalam jangka masa yang
+    ringkas. Keseluruhan modul direka untuk merangkumi **2 minggu arahan**. Kebanyakan
+    pelajaran disesuaikan untuk **45 minit**, manakala pelajaran di mana pelajar menyelidiki
+    pembangunan projek Java secara langsung direka untuk **90 minit**. Masa lanjutan
+    ini memastikan pelajar mempunyai peluang yang mencukupi untuk memahami, melaksanakan,
+    dan menyelesaikan masalah semasa mereka bekerja.
+  csa_ai_page_faq_answer_06_02: Terdapat juga fleksibiliti yang disengajakan yang
+    dibina ke dalam struktur modul. Bergantung pada dinamika kelas, penglibatan pelajar,
+    dan kedalaman yang ingin anda terokai setiap topik, anda boleh menyesuaikan tempohnya.
+    Sebagai contoh, pelajaran Pengenalan kepada Copilot, yang direka sebagai pelajaran
+    45 minit, boleh diperluaskan kepada 90 minit jika anda ingin menyelam lebih mendalam
+    tentang bagaimana model dan alat bahasa besar seperti GitHub Copilot dan ChatGPT
+    berfungsi.
+  csa_ai_page_faq_question_07: How can I access answer keys?
+  csa_ai_page_faq_answer_07: Dengan akaun guru yang diluluskan, anda boleh mencari
+    kunci jawapan dalam panel “Guru” Hanya biru yang menunjukkan dalam pelajaran dan
+    aktiviti dalam talian.Sekiranya anda memerlukan akaun guru yang diluluskan, anda
+    boleh memohon akses kepada bahan guru yang dilindungi sahaja (kunci jawapan, dll)
+    melalui [borang ini] ().%{form_url}Sila ambil perhatian bahawa ia mungkin mengambil
+    masa 3-5 hari bekerja untuk mengesahkan akaun anda.
+  csa_ai_page_faq_question_08: Adakah modul ini dipetakan kepada piawaian?
+  csa_ai_page_faq_answer_08: Ya, kurikulum Kejuruteraan Perisian & Visi Komputer dipetakan
+    ke [Piawaian CSTA K-12] (%{csta_k12_url}) dan AI untuk [Garis Panduan K-12] ().%{k12_url}
+  csa_ai_page_faq_question_09: Berapa kos untuk mengajar modul ini?
+  csa_ai_page_faq_answer_09_01: Kurikulum dan platform kami boleh didapati di [tanpa
+    kos] (%{no_cost_url}) untuk sesiapa sahaja, di mana sahaja, untuk mengajar!
+  csa_ai_page_faq_answer_09_02: Selain itu, perisian dan alat yang digunakan dalam
+    modul ini adalah percuma. GitHub Copilot adalah percuma untuk disahkan [teachers](%{teachers_url})
+    dan (). [students]%{students_url}
+  csa_ai_page_faq_question_10: apa yang perlu saya lakukan jika pemasangan perisian
+    tidak berfungsi?
+  csa_ai_page_faq_answer_10: Menghadapi masalah semasa pemasangan perisian boleh menjadi
+    perkara biasa, tetapi terdapat langkah-langkah sistematik yang boleh anda ikuti
+    untuk menyelesaikan masalah dan menyelesaikannya. [Lihat beberapa petua penyelesaian
+    masalah di sini] (%{troubleshooting_url}).
+  csa_ai_page_faq_question_11: How was the curriculum developed?
+  csa_ai_page_faq_answer_11_01: 'Kurikulum Kejuruteraan Perisian & Visi Komputer kami
+    direka dengan mengambil kira Nilai Kurikulum kami. Matlamat berikut membimbing
+    penciptaan kurikulum ini:'
+  csa_ai_page_faq_answer_11_list_01: "**Matlamat 1: ** Gunakan alat AI untuk menjana,
+    menyahpepijat dan mengedit kod."
+  csa_ai_page_faq_answer_11_list_02: "**Matlamat 2: ** Peralihan dari Makmal Java
+    ke alat dunia nyata."
+  csa_ai_page_faq_answer_11_list_03: "**Matlamat 3: ** Memperdalam pemahaman tentang
+    bagaimana model AI dilatih dan disepadukan ke dalam program."
+  csa_ai_page_faq_answer_11_02: Untuk maklumat lebih lanjut mengenai nilai-nilai yang
+    membimbing kerja kami, sila lihat [nilai kurikulum] kami (%{curriculum_values_url}).
   language_code:
     ar: Bahasa Arab
     az: Azerbaijan

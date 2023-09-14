@@ -197,6 +197,15 @@ vi:
   grade_level_label_elementary: Trường tiểu học
   grade_level_label_middle: Trường trung học cơ sở
   grade_level_label_high: Trường trung học
+  curricula_title_elementary: Chương trình giảng dạy của trường tiểu học
+  curricula_desc_elementary: Duyệt qua các khóa học và hoạt động vui nhộn, miễn phí
+    mời bạn khám phá khoa học máy tính với học sinh tiểu học của mình.
+  curricula_title_middle: Chương trình giảng dạy trung học cơ sở
+  curricula_desc_middle: Duyệt qua các dịch vụ hấp dẫn cho phép bạn và học sinh trung
+    học cơ sở của bạn khám phá khoa học máy tính cùng nhau.
+  curricula_title_high: Chương trình giảng dạy trung học
+  curricula_desc_high: Duyệt qua các khóa học và hoạt động hấp dẫn mời bạn và học
+    sinh trung học của bạn tìm hiểu sâu hơn về khoa học máy tính.
   students_label: Học sinh, sinh viên
   teachers_label: Giáo viên
   teacher_label_csf: Nguyên tắc cơ bản của KHMT cho Giáo viên
@@ -224,6 +233,13 @@ vi:
   call_to_action_explore_collection: Khám phá cụm bài học
   call_to_action_explore_unplugged_lesson: Khám phá bài học không dùng thiết bị điện
     tử
+  call_to_action_explore_csf: Khám phá CS Fundamentals
+  call_to_action_explore_csd: Khám phá CS Discoveries
+  call_to_action_explore_csp: Khám phá các nguyên tắc CS
+  call_to_action_explore_csc: Khám phá CS Connections
+  call_to_action_explore_csa: Khám phá AP® Computer Science A
+  call_to_action_explore_maker: Khám phá chương trình giảng dạy Maker
+  call_to_action_explore_hoc: Khám phá các hướng dẫn Hour of Code
   call_to_action_try_app_lab: Dùng thử App Lab
   call_to_action_view_lesson_plan: Xem kế hoạch bài học
   call_to_action_self_paced_pl: Bắt đầu học chuyên nghiệp theo nhịp độ tự
@@ -269,6 +285,7 @@ vi:
   call_to_action_notify_available: Thông báo cho tôi khi có sẵn
   call_to_action_register_early_access: Đăng ký để truy cập sớm
   call_to_action_open_positions: Xem các vị trí đang mở
+  call_to_action_get_guide: Nhận hướng dẫn
   aria_label_call_to_action_afe: Tìm hiểu thêm về Amazon Future Engineer
   aria_label_call_to_action_teaching_csf: Bắt đầu chương trình Teaching Computer Science
     Fundamentals Professional learning
@@ -379,6 +396,8 @@ vi:
   curriculum_name_csa: Khoa học máy tính A
   curriculum_name_csc_02: Học phần Kết nối KHMT bất kỳ
   curriculum_name_ai: AI và Học Máy
+  curriculum_name_artificial_intelligence: Trí tuệ nhân tạo (AI)
+  curriculum_name_maker: Nhà sản xuất
   curriculum_name_maker_cp: Tạo ứng dụng với thiết bị (Circuit Playground)
   curriculum_name_maker_microbit: Tạo ứng dụng với thiết bị (micro:bit)
   curriculum_name_creating_apps_with_devices: Tạo ứng dụng bằng thiết bị
@@ -437,6 +456,12 @@ vi:
   curriculum_desc_creating_apps_with_devices: Khám phá vai trò của các thiết bị thực
     tế trong điện toán. Phát triển các chương trình sử dụng dữ liệu đầu vào và đầu
     ra phần cứng. Có một phiên bản của bài học này cho cả micro:bit và Circuit Playground.
+  curriculum_desc_csa: Giới thiệu sinh viên về kỹ thuật phần mềm và thiết kế hướng
+    đối tượng trong khi họ học ngôn ngữ lập trình Java trong chương trình giảng dạy
+    miễn phí này cho AP® Computer Science A (AP® CSA).
+  curriculum_desc_maker: Giáo dục Maker đưa STEM (Khoa học, Công nghệ, Kỹ thuật, Toán
+    học) tiến thêm một bước bằng cách mời kinh nghiệm thực hành và cộng tác vào lớp
+    học để giúp dạy cách giải quyết vấn đề và tư duy phản biện.
   collection_hardware: Chuyên đề Phần cứng
   collection_hardware_desc: Tạo điều kiện cho học viên sử dụng dữ liệu và các thiết
     bị thực tế để giải quyết vấn đề.
@@ -470,6 +495,7 @@ vi:
   module_label_professional_learning: 'Đào tạo chuyên môn:'
   module_label_languages: 'Ngôn ngữ hỗ trợ:'
   module_label_accessibility_features: 'Trợ năng:'
+  module_label_accessibility_features_full: 'Các tính năng trợ năng:'
   module_label_educator_tool: Công cụ dạy học
   module_label_educator_course: Khóa học dành cho giáo viên
   module_label_student_tool: Công cụ dành cho học viên
@@ -477,6 +503,7 @@ vi:
   module_label_student_content_resources: Nội dung & tài nguyên
   module_label_new: Mới
   module_label_coming_soon: Sắp ra mắt
+  module_label_available_now: Có sẵn ngay bây giờ
   module_label_video_series: Loạt video
   module_label_self_paced: Mô-đun tự theo nhịp độ
   module_ages_5_10: 5-10
@@ -487,6 +514,8 @@ vi:
   module_grade_2_5: 2-5
   module_grade_3_5: 3-5
   module_grade_3_8: 3-8
+  module_grade_k_12: K-12
+  module_grade_3_12: 3-12
   module_grade_6_12: 6-12
   module_grade_6_10: 6-10
   module_grade_9_12: 9-12
@@ -501,7 +530,9 @@ vi:
   module_grade_9_12_teachers: Giáo viên lớp 9-12
   module_level_beginner: Sơ cấp
   module_level_intermediate: Trung cấp
+  module_level_advanced: Nâng cao
   module_duration_45_mins: 45 phút
+  module_duration_2_weeks: 2 tuần
   module_duration_1_hr: 1 giờ
   module_duration_2_hrs: 2 giờ
   module_duration_3_hrs: 3 giờ
@@ -584,6 +615,8 @@ vi:
   heading_java_lab: Java Lab
   heading_objects_first: Đối tượng đầu tiên
   heading_these_lessons_will: 'Những bài học này sẽ:'
+  heading_explore_curriculum_catalog: Khám phá tất cả các khóa học của chúng tôi trong
+    Danh mục chương trình giảng dạy
   professional_learning_section_desc: Nhận được sự hỗ trợ mà bạn cần trong quá trình
     chuẩn bị giảng dạy. Các thầy cô giáo rất yêu thích chương trình này, trong đó
     hơn 90% giáo viên xếp hạng chương trình này là bước bồi dưỡng chuyên môn tuyệt
@@ -850,6 +883,11 @@ vi:
     lớn trong AI, bao gồm hai video mới về Mô hình ngôn ngữ lớn (như ChatGPT) và AI
     thế hệ. Nghe cách các công nghệ mới này hoạt động trực tiếp từ các chuyên gia:
     Mira Murati, CTO của OpenAI và Cristóbal Valenzuela, Giám đốc điều hành của RunwayML.'
+  ai_pl_101_llm_slides_title: Lời nhắc về mô hình ngôn ngữ lớn cho các nhà giáo dục
+  ai_pl_101_llm_slides_desc: Các công cụ để có được đầu ra tốt nhất có thể từ LLM
+    như ChatGPT, từ người mới bắt đầu đến nâng cao. Bao gồm lời nhắc khởi động cho
+    những người chỉ cần nhúng ngón chân vào, cũng như các công cụ tiên tiến cho những
+    người muốn tối đa hóa tiềm năng của họ.
   how_ai_works_hero_heading: Cách thức hoạt động của AI
   how_ai_works_hero_desc: Đi sâu vào thế giới AI với “Cách thức hoạt động của AI”,
     loạt video của chúng tôi và các bài học kèm theo!
@@ -2142,6 +2180,13 @@ vi:
     học máy tính khác không?
   signup_email_preference_privacy: "(Xem chính sách bảo mật của chúng tôi)"
   signup_email_preference_yes: Có
+  signup_email_preference_yes_elementary: Có - Gửi cho tôi thông tin cập nhật về Tài
+    nguyên của Trường Tiểu học
+  signup_email_preference_yes_middle: Có - Gửi cho tôi thông tin cập nhật về Tài nguyên
+    của Trường Trung học Cơ sở
+  signup_email_preference_yes_high: Có - Gửi cho tôi thông tin cập nhật về Tài nguyên
+    Trung học
+  signup_email_preference_yes_general: Có - Gửi cho tôi thông tin cập nhật chung
   signup_email_preference_no: Không
   signup_email_preference_error: Tùy chọn email là bắt buộc
   signup_multiple_event_warning: Chúng tôi sẽ hiển thị tên trường và thành phố bạn
@@ -5627,11 +5672,11 @@ vi:
     cuộc phiêu lưu thông qua thế giới Minecraft này.
   tutorial_minecraft-2016_longdescription: Xây dựng một trò chơi Minecraft. Tạo phiên
     bản gà, cừu, dây leo, thây ma của riêng bạn và hơn thế nữa.
-  tutorial_thinkersmith-es_longdescription: Mediante el uso de un "Vocabulario Robot"
+  tutorial_thinkersmith-es_longdescription: Mediante el uso de un “Vocabulario Robot”
     predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar
-    a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento
-    ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones
-    as&iacute; como la valiosa habilidad de depuraci&oacute;n.
+    a cabo tareas espec ficas sin ser estas discutidas previamente.&iacute;Este segmento
+    ense&ntilde;a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones
+    as como la valiosa habilidad de depuraci n.&iacute;&oacute;
   tutorial_pixie_longdescription: Hướng dẫn Hour of Code với Pixie
   tutorial_play_longdescription: Tạo câu chuyện hoặc làm một trò chơi với Play Lab!
     Làm cho động vật, cướp biển, zombie, ninja, và nhiều hơn nữa nhân vật di chuyển,
@@ -12912,12 +12957,13 @@ vi:
   tutorial_googlename _longdescription: Chọn một tên và đưa các chữ cái của từ đó
     vào cuộc sống bằng cách sử dụng mã. Chọn một biệt danh, tên của thú cưng, một
     con vật, một môn thể thao, một địa điểm hoặc một sở thích.
-  tutorial_carnegiezillah_longdescription: Zillah City is thriving, and music is in
-    the air. Rumor has it, the famed Gargantua bot is online and sending the last
-    Toxibots to trash the city block by block…. Grab your cobot hoverboard and get
-    ready to groove, move, and finish off what you started! Players program their
-    cobot hoverbots to change lanes, avoid obstacles, and take out many Toxibots in
-    this rhythm-styled game.
+  tutorial_carnegiezillah_longdescription: Thành phố Zillah đang phát triển mạnh,
+    và âm nhạc đang ở trong không khí. Có tin đồn rằng, bot Gargantua nổi tiếng đang
+    trực tuyến và gửi những Toxibots cuối cùng để dọn rác thành phố từng khối.…Lấy
+    hoverboard cobot của bạn và sẵn sàng để tạo rãnh, di chuyển và hoàn thành những
+    gì bạn đã bắt đầu! Người chơi lập trình cobot hoverbots của họ để thay đổi làn
+    đường, tránh chướng ngại vật và loại bỏ nhiều Toxibots trong trò chơi theo phong
+    cách nhịp nhàng này.
   tutorial_nasachspacejam_longdescription: Tạo ra một hệ mặt trời thực sự đá! Tìm
     hiểu về âm nhạc, thiên văn học và mã hóa trong hoạt động tự hướng dẫn này (không
     cần kinh nghiệm mã hóa). Lập trình các hành tinh để tạo ra âm nhạc, tạo ra hệ
@@ -13767,6 +13813,135 @@ vi:
     tôi (tổng cộng 5 tuần, bao gồm đóng cửa văn phòng 2 tuần toàn tổ chức vào cuối
     năm hay còn gọi là Kỳ nghỉ đông), nửa ngày làm việc vào các ngày thứ Sáu trong
     mùa hè hay còn gọi là Thứ Sáu Mùa hè và các lợi ích hào phóng khác.
+  csa_ai_page_hero_title: Kỹ thuật phần mềm & Computer Vision
+  csa_ai_page_hero_description: 'Mô-đun CSA sau AP gồm hai chương này cung cấp cho
+    học sinh trung học kinh nghiệm thực hành với các công cụ phát triển phần mềm chuyên
+    nghiệp, bao gồm GitHub và GitHub Copilot, đồng thời truyền đạt cho họ các kỹ năng
+    thực tế để phát triển chương trình thị giác máy tính. '
+  csa_ai_page_video_section_title: Bước ra ngoài thế giới của môi trường lập trình
+    Code.org
+  csa_ai_page_video_section_li_1: Tìm hiểu về AI và các ứng dụng của nó
+  csa_ai_page_video_section_li_2: Kinh nghiệm thực hành với các công cụ phát triển
+    phần mềm chuyên nghiệp
+  csa_ai_page_video_section_li_3: Tìm hiểu các phương pháp thực hành theo tiêu chuẩn
+    ngành
+  csa_ai_page_video_section_li_4: Tu luyện tư duy phản biện
+  csa_ai_page_programming_tools: 'Công cụ lập trình: Github, Github Copilot, VSCode,
+    TensorFlow '
+  csa_ai_page_professional_learning: Không có
+  csa_ai_page_curriculum_topics: 'Chuyên đề: Lập trình, Dữ liệu, Nghệ thuật và Thiết
+    kế, Games and Animation'
+  csa_ai_page_curriculum_accessibility_features: Xem phần Câu hỏi thường gặp để biết
+    chi tiết
+  csa_ai_page_curriculum_languages_support: Tiếng Việt
+  csa_ai_page_article_title_1: Xây dựng với Copilot
+  csa_ai_page_article_description_1: Học sinh học cách sử dụng GitHub Copilot như
+    một lập trình viên cặp để giải thích mã hiện có, tìm và sửa lỗi và tạo ra các
+    giải pháp cho các vấn đề mới.
+  csa_ai_page_article_link_1: Tìm hiểu thêm về Copilot
+  csa_ai_page_article_title_2: Xây dựng mô hình AI của riêng bạn
+  csa_ai_page_article_description_2: Học sinh đào tạo các mô hình AI của riêng mình
+    bằng cách sử dụng Teachable Machine để nhận dạng hình ảnh và cử chỉ tạo thành
+    webcam và xem xét tầm nhìn máy tính tác động như thế nào đến cách người dùng tương
+    tác với các ứng dụng.
+  csa_ai_page_article_link_2: Khám phá kế hoạch bài học
+  csa_ai_page_article_title_3: Khám phá tầm nhìn máy tính
+  csa_ai_page_article_description_3: Học sinh triển khai các mô hình AI mà họ đã tạo
+    bằng Teachable Machine vào ứng dụng Java, sử dụng GitHub Copilot để giúp họ sửa
+    đổi các phiên bản ứng dụng hiện có để hoạt động với các đầu vào khác nhau.
+  csa_ai_page_article_link_3: Xem một ví dụ
+  csa_ai_page_learn_more_section_title: Tìm hiểu thêm về Artificial Intelligence
+  csa_ai_page_learn_more_title: Khám phá AI 101 dành cho giáo viên
+  csa_ai_page_learn_more_description: Khám phá thế giới đột phá của Trí tuệ nhân tạo
+    (AI) và tiềm năng biến đổi của nó trong giáo dục với loạt bài học trực tuyến toàn
+    diện dành cho giáo viên của chúng tôi.
+  csa_ai_page_learn_more_link: Xem loạt bài AI 101 dành cho giáo viên
+  csa_ai_page_faq_question_01: Các điều kiện tiên quyết cho mô-đun này là gì?
+  csa_ai_page_faq_answer_01_01: 'Trước khi đi sâu vào mô-đun này, sinh viên nên có
+    kiến thức đầu vào về Java. Cụ thể, họ nên nắm bắt được:'
+  csa_ai_page_faq_answer_01_list_01: "** Lớp học và Đối tượng: ** Học sinh nên làm
+    quen với việc xác định và sử dụng các lớp học, cũng như tạo và thao tác các đối
+    tượng."
+  csa_ai_page_faq_answer_01_list_02: "** Phương thức viết và gọi: ** Học sinh có thể
+    định nghĩa các phương thức trong một lớp, hiểu các tham số phương thức và kiểu
+    trả về và gọi các phương thức từ các đối tượng hoặc các phương thức khác."
+  csa_ai_page_faq_answer_01_list_03: "**Mảng 1D và ArrayLists: ** Chúng phải thành
+    thạo trong việc khai báo, khởi tạo và thao tác các mảng và ArrayLists một chiều,
+    bao gồm cả việc lặp lại chúng."
+  csa_ai_page_faq_answer_01_list_04: "** Lựa chọn và lặp lại: ** Một nền tảng vững
+    chắc trong các câu lệnh và vòng lặp có điều kiện là rất quan trọng."
+  csa_ai_page_faq_question_01_02: Lý tưởng nhất, những sinh viên đã hoàn thành AP
+    Computer Science A hoặc một khóa học có chiều sâu và nghiêm ngặt tương tự sẽ được
+    chuẩn bị tốt cho mô-đun này.
+  csa_ai_page_faq_question_02: Làm cách nào để cài đặt phần mềm cần thiết cho mô-đun
+    này?
+  csa_ai_page_faq_answer_02_01: Mô-đun này là duy nhất vì nó liên quan đến việc sử
+    dụng phần mềm của bên thứ ba thay vì các phòng thí nghiệm và công cụ Code.org.
+    [Đọc thêm về cài đặt phần mềm tại đây] (%{accessibility_url}).
+  csa_ai_page_faq_question_03: Làm cách nào tôi có thể hỗ trợ nhu cầu trợ năng trong
+    khi dạy mô-đun này?
+  csa_ai_page_faq_answer_03_01: Phục vụ cho nhu cầu tiếp cận là rất quan trọng đối
+    với một môi trường học tập hòa nhập. [Đọc thêm về các tính năng trợ năng trong
+    phần mềm được sử dụng trong mô-đun này tại đây] (%{install_url}).
+  csa_ai_page_faq_question_04: Làm cách nào để sử dụng Mã VS trên Chromebook?
+  csa_ai_page_faq_answer_04: Sử dụng VS Code trên Chromebook đã trở nên đơn giản hơn,
+    đặc biệt là với khả năng chạy các ứng dụng Linux trên các mẫu Chromebook mới hơn.
+    [Đọc thêm về cách thiết lập Mã VS trên Chromebook tại đây] ()%{chromebook_url}.
+  csa_ai_page_faq_question_05: Làm thế nào tôi có thể có được sự phát triển chuyên
+    nghiệp cho mô-đun này?
+  csa_ai_page_faq_answer_05: Hiện tại không có sự phát triển chuyên môn cụ thể cho
+    khóa học này. Nếu bạn đang muốn hiểu cách tiếp cận Trí tuệ nhân tạo trong lớp
+    học của mình, bạn có thể [khám phá AI 101 dành cho giáo viên] (%{ai_101_url}).
+  csa_ai_page_faq_question_06: Thời gian khuyến nghị để giảng dạy mô-đun này là gì?
+  csa_ai_page_faq_answer_06_01: Mô-đun Kỹ thuật Phần mềm & Tầm nhìn Máy tính được
+    cấu trúc chu đáo để cung cấp việc học toàn diện trong một khung thời gian ngắn
+    gọn. Toàn bộ mô-đun được thiết kế để kéo dài** 2 tuần hướng dẫn**. Hầu hết các
+    bài học được thiết kế cho **45 phút**, trong khi các bài học mà sinh viên đi sâu
+    vào phát triển dự án Java thực hành được thiết kế cho ** 90 phút**. Thời gian
+    kéo dài này đảm bảo sinh viên có nhiều cơ hội để hiểu, thực hiện và khắc phục
+    sự cố khi họ làm việc.
+  csa_ai_page_faq_answer_06_02: 'Ngoài ra còn có sự linh hoạt có chủ ý được tích hợp
+    vào cấu trúc của mô-đun. Tùy thuộc vào sự năng động trong lớp học, sự tham gia
+    của học sinh và độ sâu mà bạn muốn khám phá từng chủ đề, bạn có thể điều chỉnh
+    thời lượng. Ví dụ: bài học Intro to Copilot, được thiết kế như một bài học 45
+    phút, có thể được mở rộng đến 90 phút nếu bạn muốn tìm hiểu sâu hơn về cách các
+    mô hình và công cụ ngôn ngữ lớn như GitHub Copilot và ChatGPT hoạt động.'
+  csa_ai_page_faq_question_07: How can I access answer keys?
+  csa_ai_page_faq_answer_07: Với tài khoản giáo viên đã được phê duyệt, bạn có thể
+    tìm thấy các khóa trả lời trong bảng chỉ dành cho giáo viên màu xanh lam hiển
+    thị trong các bài học và hoạt động trực tuyến.Nếu bạn cần tài khoản giáo viên
+    được phê duyệt, bạn có thể đăng ký quyền truy cập vào các tài liệu chỉ dành cho
+    giáo viên được bảo vệ (khóa trả lời, v.v.) thông qua [biểu mẫu này] ().%{form_url}Xin
+    lưu ý rằng có thể mất 3-5 ngày làm việc để xác minh tài khoản của bạn.
+  csa_ai_page_faq_question_08: Mô-đun này có được ánh xạ theo tiêu chuẩn không?
+  csa_ai_page_faq_answer_08: Có, chương trình giảng dạy Kỹ thuật Phần mềm & Tầm nhìn
+    Máy tính được ánh xạ tới [Tiêu chuẩn CSTA K-12] (%{csta_k12_url}) và AI cho [Hướng
+    dẫn K-12] ().%{k12_url}
+  csa_ai_page_faq_question_09: Chi phí để dạy mô-đun này là bao nhiêu?
+  csa_ai_page_faq_answer_09_01: Chương trình giảng dạy và nền tảng của chúng tôi có
+    sẵn [miễn phí] (%{no_cost_url}) cho bất kỳ ai, ở bất cứ đâu, để giảng dạy!
+  csa_ai_page_faq_answer_09_02: Ngoài ra, phần mềm và công cụ được sử dụng trong mô-đun
+    này là miễn phí. GitHub Copilot miễn phí cho đã được xác minh [teachers](%{teachers_url})
+    và [students]().%{students_url}
+  csa_ai_page_faq_question_10: Tôi phải làm gì nếu cài đặt phần mềm không hoạt động?
+  csa_ai_page_faq_answer_10: Đối mặt với các vấn đề trong quá trình cài đặt phần mềm
+    có thể là phổ biến, nhưng có những bước có hệ thống bạn có thể làm theo để khắc
+    phục sự cố và giải quyết chúng. [Kiểm tra một số mẹo khắc phục sự cố tại đây]
+    (%{troubleshooting_url}).
+  csa_ai_page_faq_question_11: How was the curriculum developed?
+  csa_ai_page_faq_answer_11_01: 'Chương trình giảng dạy Kỹ thuật Phần mềm & Tầm nhìn
+    Máy tính của chúng tôi được thiết kế với các Giá trị Chương trình giảng dạy của
+    chúng tôi. Các mục tiêu sau đây đã hướng dẫn việc tạo ra chương trình giảng dạy
+    này:'
+  csa_ai_page_faq_answer_11_list_01: "** Mục tiêu 1: ** Sử dụng các công cụ AI để
+    tạo, gỡ lỗi và chỉnh sửa mã."
+  csa_ai_page_faq_answer_11_list_02: "** Mục tiêu 2: ** Chuyển đổi từ Java Lab sang
+    các công cụ trong thế giới thực."
+  csa_ai_page_faq_answer_11_list_03: "** Mục tiêu 3: ** Hiểu sâu hơn về cách các mô
+    hình AI được đào tạo và tích hợp vào các chương trình."
+  csa_ai_page_faq_answer_11_02: Để biết thêm thông tin về các giá trị hướng dẫn công
+    việc của chúng tôi, vui lòng xem [giá trị chương trình giảng dạy] của chúng tôi
+    (%{curriculum_values_url}).
   language_code:
     ar: tiếng Ả Rập
     az: Azerbaijani

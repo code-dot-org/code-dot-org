@@ -160,6 +160,12 @@ th:
   grade_level_label_elementary: โรงเรียนประถมศึกษา
   grade_level_label_middle: ระดับมัธยมศึกษาตอนต้น
   grade_level_label_high: โรงเรียนมัธยม
+  curricula_title_elementary: หลักสูตรประถมศึกษา
+  curricula_desc_elementary: เรียกดูหลักสูตรสนุก ๆ และกิจกรรมฟรีที่เชิญชวนให้คุณสำรวจวิทยาการคอมพิวเตอร์กับนักเรียนระดับประถมศึกษาของคุณ
+  curricula_title_middle: หลักสูตรระดับมัธยมศึกษาตอนต้น
+  curricula_desc_middle: เรียกดูข้อเสนอที่น่าสนใจที่ทำให้คุณและนักเรียนระดับมัธยมศึกษาตอนต้นของคุณสำรวจวิทยาการคอมพิวเตอร์ร่วมกัน
+  curricula_title_high: หลักสูตรระดับมัธยมศึกษาตอนปลาย
+  curricula_desc_high: เรียกดูหลักสูตรและกิจกรรมที่น่าสนใจที่เชิญคุณและนักเรียนมัธยมปลายของคุณให้เจาะลึกเข้าไปในวิทยาการคอมพิวเตอร์
   students_label: นักเรียน
   teachers_label: ครู
   teacher_label_csf: ผู้สอนพื้นฐานด้านวิทยาการคอมพิวเตอร์
@@ -186,6 +192,13 @@ th:
   call_to_action_explore_choice_level: สำรวจตัวอย่างระดับการเลือก
   call_to_action_explore_collection: สำรวจคอลเลกชัน
   call_to_action_explore_unplugged_lesson: สำรวจบทเรียนที่ถอดปลั๊ก
+  call_to_action_explore_csf: สำรวจข้อมูลพื้นฐานด้านบริการลูกค้า
+  call_to_action_explore_csd: สำรวจการค้นพบด้าน CS
+  call_to_action_explore_csp: สำรวจหลักการบริการลูกค้า
+  call_to_action_explore_csc: สำรวจการเชื่อมต่อ CS
+  call_to_action_explore_csa: สำรวจวิทยาการคอมพิวเตอร์ AP® A
+  call_to_action_explore_maker: สำรวจหลักสูตรของผู้ผลิต
+  call_to_action_explore_hoc: สำรวจบทเรียนชั่วโมงของโค้ด
   call_to_action_try_app_lab: ทดลองใช้ App Lab
   call_to_action_view_lesson_plan: ดูแผนการเรียน
   call_to_action_self_paced_pl: เริ่มต้นการเรียนรู้แบบมืออาชีพด้วยตนเอง
@@ -230,6 +243,7 @@ th:
   call_to_action_notify_available: แจ้งให้ฉันทราบเมื่อพร้อมใช้งาน
   call_to_action_register_early_access: ลงทะเบียนเพื่อเข้าใช้งานก่อนเวลา
   call_to_action_open_positions: ดูตำแหน่งที่เปิดอยู่
+  call_to_action_get_guide: รับคู่มือ
   aria_label_call_to_action_afe: เรียนรู้เพิ่มเติมเกี่ยวกับวิศวกรในอนาคตของ Amazon
   aria_label_call_to_action_teaching_csf: เริ่มการสอนหลักสูตรวิชาชีพความรู้พื้นฐานวิทยาการคอมพิวเตอร์
   aria_label_call_to_action_teaching_csd: เริ่มการเรียนการสอนโปรแกรมการเรียนรู้วิชาชีพวิทยาการคอมพิวเตอร์
@@ -306,6 +320,8 @@ th:
   curriculum_name_csa: วิทยาการคอมพิวเตอร์ A
   curriculum_name_csc_02: โมดูลการเชื่อมต่อวิทยาการคอมพิวเตอร์ใดๆ
   curriculum_name_ai: "  AI และการเรียนรู้ของระบบขั้นสูง  "
+  curriculum_name_artificial_intelligence: ปัญญาประดิษฐ์ (AI)
+  curriculum_name_maker: ผู้ผลิต
   curriculum_name_maker_cp: การสร้างแอปด้วยอุปกรณ์ (สนามเด็กเล่น)
   curriculum_name_maker_microbit: 'การสร้างแอปด้วยอุปกรณ์ (ไมโคร: บิต)'
   curriculum_name_creating_apps_with_devices: การสร้างแอปด้วยอุปกรณ์
@@ -349,6 +365,10 @@ th:
   curriculum_desc_creating_apps_with_devices: สำรวจบทบาทของอุปกรณ์ทางกายภาพในการคำนวณ
     พัฒนาโปรแกรมที่ใช้อินพุตและเอาต์พุตของฮาร์ดแวร์ มีเวอร์ชั่นของยูนิตนี้สำหรับทั้งแบบ
     micro:bit และ Circuit Playground
+  curriculum_desc_csa: แนะนำนักเรียนให้รู้จักกับวิศวกรรมซอฟต์แวร์และการออกแบบเชิงวัตถุในขณะที่พวกเขาเรียนรู้ภาษาการเขียนโปรแกรมภาษาจาวาในหลักสูตรฟรีสำหรับ
+    AP® Computer Science A (AP® CSA) นี้
+  curriculum_desc_maker: Maker education ยกระดับเทคโนโลยี STEM (Science, Technology,
+    Engineering, Mathematics) ด้วยการเชิญชวนประสบการณ์จริงและการทำงานร่วมกันเข้ามาในห้องเรียนเพื่อช่วยสอนการแก้ปัญหาและการคิดเชิงวิพากษ์
   collection_hardware: มุ่งเน้นไปที่ฮาร์ดแวร์
   collection_hardware_desc: ช่วยให้นักเรียนใช้ข้อมูลและอุปกรณ์ทางกายภาพในการแก้ปัญหา
   collection_design_purpose: มุ่งเน้นไปที่การออกแบบที่มีวัตถุประสงค์
@@ -376,6 +396,7 @@ th:
   module_label_professional_learning: 'การเรียนรู้แบบมืออาชีพ:'
   module_label_languages: 'ภาษาที่รองรับ:'
   module_label_accessibility_features: 'ตัวช่วยการเข้าถึง:'
+  module_label_accessibility_features_full: 'คุณสมบัติการช่วยการเข้าถึง:'
   module_label_educator_tool: เครื่องมือนักการศึกษา
   module_label_educator_course: หลักสูตรนักการศึกษา
   module_label_student_tool: เครื่องมือนักเรียน
@@ -383,6 +404,7 @@ th:
   module_label_student_content_resources: เนื้อหาและแหล่งข้อมูล
   module_label_new: ใหม่
   module_label_coming_soon: เร็ว ๆ นี้
+  module_label_available_now: พร้อมให้บริการแล้ว
   module_label_video_series: วีดีโอชุด
   module_label_self_paced: โมดูลที่ปรับได้เอง
   module_ages_5_10: 5-10
@@ -393,6 +415,8 @@ th:
   module_grade_2_5: 2-5
   module_grade_3_5: 3-5
   module_grade_3_8: 3-8
+  module_grade_k_12: เค-12
+  module_grade_3_12: 3-12
   module_grade_6_12: 6-12
   module_grade_6_10: 6-10
   module_grade_9_12: 9-12
@@ -407,7 +431,9 @@ th:
   module_grade_9_12_teachers: ผู้สอน 9-12
   module_level_beginner: ผู้เริ่มต้น
   module_level_intermediate: ระดับกลาง
+  module_level_advanced: ขั้นสูง
   module_duration_45_mins: 45 นาที
+  module_duration_2_weeks: 2 สัปดาห์
   module_duration_1_hr: 1 ชั่วโมง
   module_duration_2_hrs: 2 ชั่วโมง
   module_duration_3_hrs: 3 ชั่วโมง
@@ -482,6 +508,7 @@ th:
   heading_java_lab: จาวาแลป
   heading_objects_first: วัตถุก่อน
   heading_these_lessons_will: 'บทเรียนเหล่านี้จะ:'
+  heading_explore_curriculum_catalog: สำรวจหลักสูตรทั้งหมดของเราในแคตตาล็อกหลักสูตร
   professional_learning_section_desc: รับการสนับสนุนที่คุณต้องการในขณะที่คุณเตรียมการสอน
     ผู้สอนชอบมัน โดยกว่า 90% ให้คะแนนว่าเป็นการพัฒนาทางวิชาชีพที่ดีที่สุด!
   professional_learning_section_desc_short: รับการสนับสนุนที่คุณต้องการในขณะที่คุณเตรียมการสอน
@@ -680,6 +707,10 @@ th:
     AI โดยมีวิดีโอใหม่สองเรื่องเกี่ยวกับโมเดลภาษาขนาดใหญ่ (เช่น ChatGPT) และ Generative
     AIรับฟังวิธีที่เทคโนโลยีใหม่เหล่านี้ทำงานโดยตรงจากผู้เชี่ยวชาญ: Mira Murati, CTO
     ของ OpenAI และ Cristóbal Valenzuela CEO ของ RunwayML'
+  ai_pl_101_llm_slides_title: รูปแบบภาษาขนาดใหญ่พร้อมท์สำหรับนักการศึกษา
+  ai_pl_101_llm_slides_desc: เครื่องมือสำหรับการแสดงผลที่ดีที่สุดจาก LLM เช่น ChatGPT
+    ตั้งแต่เริ่มต้นจนถึงขั้นสูงรวมถึงคำแนะนำเริ่มต้นสำหรับผู้ที่เพียงแค่จุ่มนิ้วเท้าของพวกเขาใน
+    เช่นเดียวกับเครื่องมือขั้นสูงสำหรับผู้ที่ต้องการเพิ่มศักยภาพของพวกเขา
   how_ai_works_hero_heading: AI ทำงานอย่างไร
   how_ai_works_hero_desc: ดำดิ่งสู่โลกของ AI ด้วย “วิธีการทำงานของ AI” วิดีโอซีรี่ส์และบทเรียนประกอบของเรา!
   how_ai_works_intro_desc: ชุดวิดีโอสั้นและบทเรียนในชั้นเรียนนี้จะแนะนำคุณและนักเรียนของคุณถึงวิธีการทำงานของปัญญาประดิษฐ์
@@ -1418,8 +1449,8 @@ th:
   ai_activity_zooniverse: Zooniverse - สแน็ปช็อตม้าลายภูเขา
   ai_activity_zooniverse_desc: ช่วยปกป้องม้าลายภูเขาเคปที่ใกล้สูญพันธุ์ได้ด้วยการระบุถึงสัตว์ชนิดต่าง
     ๆ ที่อยู่ในภาพ
-  codeorg_homepage_hoc2018_curriculum: Go further with <a href="%{studio_url}/courses"
-    class="hoc2018-curriculum-link">Code.org courses</a>
+  codeorg_homepage_hoc2018_curriculum: ไปต่อกับหลักสูตร <a href="%{studio_url}/courses"
+    class="hoc2018-curriculum-link">Code.org</a>
   codeorg_homepage_hoc2018_dance_heading: สร้างของคุณเอง <span class="highlight-word">เต้นรำ&nbsp;ปาร์ตี้</span>
   codeorg_homepage_hoc2018_header_line1: ชั่วโมงแห่งประมวลกฎหมายกำลังจะมาถึง...
   codeorg_homepage_hoc2018_header_line2_desktop: สิ่งที่คุณจะ <span class="hoc2018-highlight-word">สร้าง?</span>
@@ -1735,6 +1766,10 @@ th:
     Code.org โอกาสในท้องถิ่นหรือข่าววิทยาศาสตร์คอมพิวเตอร์อื่น ๆ ได้หรือไม่
   signup_email_preference_privacy: "(ดูนโยบายความเป็นส่วนตัวของเรา)"
   signup_email_preference_yes: ใช่
+  signup_email_preference_yes_elementary: ใช่ - ส่งข้อมูลอัปเดตเกี่ยวกับแหล่งข้อมูลระดับประถมศึกษาให้ฉัน
+  signup_email_preference_yes_middle: ใช่ - ส่งข้อมูลอัปเดตเกี่ยวกับแหล่งข้อมูลของโรงเรียนมัธยมศึกษาตอนต้นให้ฉัน
+  signup_email_preference_yes_high: ใช่ - ส่งข้อมูลอัปเดตเกี่ยวกับแหล่งข้อมูลของโรงเรียนมัธยม
+  signup_email_preference_yes_general: ใช่ - ส่งการอัปเดตทั่วไปมาให้ฉัน
   signup_email_preference_no: ไม่ใช่
   signup_email_preference_error: ต้องมีการกำหนดลักษณะอีเมล
   signup_multiple_event_warning: เราจะใส่ชื่อโรงเรียนและเมืองของคุณบนแผนที่เมื่อคุณลงทะเบียนหากคุณกำลังโฮสต์หลายกิจกรรม
@@ -2025,8 +2060,8 @@ th:
     ครู"
   stats_student: "“ฉันรู้ว่านี่เป็นโอกาส</b> ครั้งในชีวิต <b>” - มาเรียนา Alzate,
     เกรด 5"
-  stats_michael: '"I have <b>never, ever</b> seen my students so excited about learning."
-    - Michael Clark, Teacher'
+  stats_michael: "“ฉันไม่ <b>เคย</b> เห็นนักเรียนของฉันตื่นเต้นกับการเรียนรู้” - Michael
+    Clark ครู"
   resources_how_to: คู่มือแนะนำสำหรับครู
   resources_how_to_events: คู่มือแนะนำกิจกรรมต่างๆ
   resources_how_to_districts: คู่มือแนะนำอำเภอ
@@ -2148,8 +2183,8 @@ th:
   learn_banner_beyond: ต้องการเรียนรู้ต่อไปหรือไม่?  <a id='learn_banner_beyond'>ไปไกลกว่าหนึ่งชั่วโมง</a>
   learn_banner_beyond_markdown: "  อยากเรียนไปเรื่อยๆ รึเปล่า [เกินชั่วโมง](%{url})
     \ "
-  learn_banner_teachers: 'Teachers: <a id=''teacher_banner_host''>Host an hour</a>
-    or <a id=''teacher_banner_howto''>read the How-To Guide</a>'
+  learn_banner_teachers: 'ครู: <a id=''teacher_banner_host''>โฮสต์หนึ่งชั่วโมง</a>
+    หรือ <a id=''teacher_banner_howto''>อ่านคู่มือวิธีการ</a>'
   learn_banner_teachers_markdown: "  ผู้สอน: [จัดกิจกรรมหนึ่งชั่วโมง](%{host_url})
     หรือ[อ่านวิธีดำเนินการ](%{howto_url})  "
   tutorial_dance2019_name: Dance Party 2019
@@ -4224,11 +4259,11 @@ th:
     Minecraft นี้
   tutorial_minecraft-2016_longdescription: สร้างเกม Minecraftสร้างรุ่นของคุณเองของไก่,
     แกะ, ไม้เลื้อย, ซอมบี้และอื่น ๆ
-  tutorial_thinkersmith-es_longdescription: Mediante el uso de un "Vocabulario Robot"
-    predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar
-    a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento
-    ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones
-    as&iacute; como la valiosa habilidad de depuraci&oacute;n.
+  tutorial_thinkersmith-es_longdescription: Mediante el USO เดอยกเลิก “คำศัพท์หุ่นยนต์”
+    predefinido, ลอส estudiantes descubrir&aacute;n como guiarse de Modo ตาลเดอ llevar
+    Cabo tareas espec Ficas บาป ser estas discutidas previamente.&iacute;Este segmento
+    ense&ntilde;ลอ estudiantes ลา conexi&oacute;n entre s&iacute;mbolos Y acciones
+    เป็น como ลา valiosa habilidad เด depuraci n.&iacute;&oacute;
   tutorial_pixie_longdescription: ชั่วโมงของการกวดวิชารหัสกับ Pixie
   tutorial_play_longdescription: สร้างเรื่องราวหรือสร้างเกมด้วย Play Lab!ทำให้สัตว์โจรสลัดซอมบี้นินจาและตัวละครอื่น
     ๆ อีกมากมายย้ายให้เสียงจุดคะแนนและแม้กระทั่งโยนบั้งไฟ!
@@ -9998,12 +10033,10 @@ th:
     หมุน ทำงานกับเพื่อนสนิท และทำคะแนนโดยการแตะวัตถุในเกมในโค้ดฮีโร่ของคุณ อวดพลังพิเศษของฮีโร่และความคิดสร้างสรรค์ของคุณเองด้วย
     CS First และ Scratch
   tutorial_googlename _longdescription: เลือกชื่อและนำตัวอักษรของคำที่จะมีชีวิตโดยใช้รหัสเลือกชื่อเล่นชื่อสัตว์เลี้ยงสัตว์กีฬาสถานที่หรืองานอดิเรก
-  tutorial_carnegiezillah_longdescription: Zillah City is thriving, and music is in
-    the air. Rumor has it, the famed Gargantua bot is online and sending the last
-    Toxibots to trash the city block by block…. Grab your cobot hoverboard and get
-    ready to groove, move, and finish off what you started! Players program their
-    cobot hoverbots to change lanes, avoid obstacles, and take out many Toxibots in
-    this rhythm-styled game.
+  tutorial_carnegiezillah_longdescription: Zillah City เป็นที่เจริญรุ่งเรือง, และเพลงอยู่ในอากาศ.มีข่าวลือว่า
+    บอทขนาดมหึมาอันโด่งดังกำลังออนไลน์ และส่งท็อกซิบอทตัวสุดท้ายไปทำลายเมืองทีละบล็อก…คว้า
+    hoverboard cobot ของคุณและเตรียมพร้อมที่จะร่อง ย้าย และจบสิ่งที่คุณเริ่มต้น!ผู้เล่นโปรแกรม
+    hoverbots cobot ของพวกเขาเพื่อเปลี่ยนเลนหลีกเลี่ยงอุปสรรคและนำออก Toxibots จำนวนมากในเกมจังหวะสไตล์นี้
   tutorial_nasachspacejam_longdescription: สร้างระบบสุริยะที่หินจริงๆ!เรียนรู้เกี่ยวกับดนตรี
     ดาราศาสตร์ และการเขียนโค้ดในกิจกรรมที่แนะนำด้วยตนเอง (ไม่จำเป็นต้องมีประสบการณ์การเขียนโค้ด)ดาวเคราะห์
     โปรแกรม ที่จะทำให้ เพลง, การสร้าง ระบบสุริยะ ดนตรี ของคุณเอง สมบูรณ์ด้วย ท่วงทำนอง
@@ -10709,6 +10742,99 @@ th:
     การ PTO ของเรา (รวม 5 สัปดาห์ซึ่งรวมถึงการปิดสำนักงานทั้งองค์กรสิ้นปีในช่วงปลายปีหรือวันหยุดฤดูหนาว),
     ครึ่งวันทำการในวันศุกร์ในช่วงฤดูร้อนหรือที่เรียกว่า Summer Fridays และผลประโยชน์อื่น
     ๆ ใจกว้าง
+  csa_ai_page_hero_title: วิศวกรรมซอฟต์แวร์ & วิสัยทัศน์คอมพิวเตอร์
+  csa_ai_page_hero_description: 'โมดูลแบบ Post-AP CSA แบบสองบทนี้มอบประสบการณ์จริงสำหรับนักเรียนระดับมัธยมศึกษาตอนปลายด้วยเครื่องมือพัฒนาซอฟต์แวร์ระดับมืออาชีพ
+    รวมถึง GitHub และ GitHub Copilot และมอบทักษะในโลกแห่งความเป็นจริงในการพัฒนาโปรแกรมคอมพิวเตอร์วิทัศน์ '
+  csa_ai_page_video_section_title: ก้าวไกลกว่าโลกของสภาพแวดล้อมการเขียนโปรแกรม Code.org
+  csa_ai_page_video_section_li_1: เรียนรู้เกี่ยวกับ AI และแอพพลิเคชั่น
+  csa_ai_page_video_section_li_2: ประสบการณ์จริงกับเครื่องมือพัฒนาซอฟต์แวร์ระดับมืออาชีพ
+  csa_ai_page_video_section_li_3: เรียนรู้แนวทางปฏิบัติตามมาตรฐานอุตสาหกรรม
+  csa_ai_page_video_section_li_4: ปลูกฝังความคิดเชิงวิพากษ์
+  csa_ai_page_programming_tools: 'เครื่องมือการเขียนโปรแกรม: Github, Github Copilot,
+    VSCode, TensorFlow '
+  csa_ai_page_professional_learning: ไม่มี
+  csa_ai_page_curriculum_topics: 'หัวข้อ: การเขียนโปรแกรม, ข้อมูล, ศิลปะและการออกแบบ,
+    เกมและภาพเคลื่อนไหว'
+  csa_ai_page_curriculum_accessibility_features: ดูรายละเอียดในส่วน FAQ
+  csa_ai_page_curriculum_languages_support: ภาษาอังกฤษ
+  csa_ai_page_article_title_1: สร้างด้วยนักบินคู่นักบิน
+  csa_ai_page_article_description_1: นักเรียนจะได้เรียนรู้วิธีใช้ GitHub Copilot เป็นโปรแกรมเมอร์คู่เพื่ออธิบายโค้ดที่มีอยู่
+    ค้นหาและแก้ไขข้อผิดพลาด และสร้างวิธีแก้ไขปัญหาใหม่ๆ
+  csa_ai_page_article_link_1: เรียนรู้เพิ่มเติมเกี่ยวกับ Copilot
+  csa_ai_page_article_title_2: สร้างโมเดล AI ของคุณเอง
+  csa_ai_page_article_description_2: นักเรียนฝึกฝนโมเดล AI ของตนเองโดยใช้ Teachable
+    Machine เพื่อจดจำภาพและท่าทางในรูปแบบเว็บแคม และพิจารณาว่าวิสัยทัศน์ของคอมพิวเตอร์มีผลต่อวิธีที่ผู้ใช้โต้ตอบกับแอปอย่างไร
+  csa_ai_page_article_link_2: สำรวจแผนการเรียน
+  csa_ai_page_article_title_3: สำรวจวิสัยทัศน์ของคอมพิวเตอร์
+  csa_ai_page_article_description_3: นักเรียนใช้โมเดล AI ที่สร้างด้วย Teachable Machine
+    ลงในแอป Java โดยใช้ GitHub Copilot เพื่อช่วยในการปรับเปลี่ยนแอปเวอร์ชันที่มีอยู่เพื่อทำงานกับอินพุตต่างๆ
+  csa_ai_page_article_link_3: ดูตัวอย่าง
+  csa_ai_page_learn_more_section_title: เรียนรู้เพิ่มเติมเกี่ยวกับปัญญาประดิษฐ์
+  csa_ai_page_learn_more_title: สำรวจ AI 101 สำหรับครู
+  csa_ai_page_learn_more_description: ค้นพบโลกที่ก้าวล้ำของ Artificial Intelligence
+    (AI) และศักยภาพในการเปลี่ยนแปลงการศึกษาด้วยชุดการเรียนรู้ออนไลน์ที่ครอบคลุมของเราสำหรับครู
+  csa_ai_page_learn_more_link: ดูซีรี่ส์ AI 101 สำหรับครู
+  csa_ai_page_faq_question_01: ข้อกำหนดเบื้องต้นสำหรับโมดูลนี้คืออะไร?
+  csa_ai_page_faq_answer_01_01: 'ก่อนที่จะดำน้ำในโมดูลนี้นักเรียนควรมีความรู้รายการระดับของ
+    Javaโดยเฉพาะอย่างยิ่ง, พวกเขาควรจะเข้าใจใน:'
+  csa_ai_page_faq_answer_01_list_01: "**ชั้นเรียนและวัตถุ: ** นักเรียนควรมีความคุ้นเคยกับการกำหนดและการใช้ชั้นเรียน
+    รวมทั้งการสร้างและจัดการวัตถุ"
+  csa_ai_page_faq_answer_01_list_02: "**การเขียนและวิธีการโทร: ** นักเรียนควรจะสามารถที่จะกำหนดวิธีการภายในชั้นเรียนเข้าใจพารามิเตอร์วิธีการและประเภทผลตอบแทนและวิธีการเรียกจากวัตถุหรือวิธีการอื่น
+    ๆ"
+  csa_ai_page_faq_answer_01_list_03: "**1D อาร์เรย์และ ArrayLists: ** พวกเขาควรจะมีความเชี่ยวชาญในการประกาศเริ่มต้นและการจัดการอาร์เรย์หนึ่งมิติและ
+    ArrayLists รวมทั้งการทำซ้ำผ่านพวกเขา"
+  csa_ai_page_faq_answer_01_list_04: "**การเลือกและการย้ำ: ** รากฐานที่มั่นคงในงบเงื่อนไขและลูปเป็นสิ่งสำคัญ."
+  csa_ai_page_faq_question_01_02: จะเป็นการดีที่นักเรียนที่จบ AP วิทยาการคอมพิวเตอร์
+    A หรือหลักสูตรของความลึกและความรุนแรงที่คล้ายกันจะได้รับการเตรียมความพร้อมสำหรับโมดูลนี้
+  csa_ai_page_faq_question_02: ฉันจะติดตั้งซอฟต์แวร์ที่จำเป็นสำหรับโมดูลนี้ได้อย่างไร?
+  csa_ai_page_faq_answer_02_01: โมดูลนี้มีเอกลักษณ์เฉพาะเพราะมันเกี่ยวข้องกับการใช้ซอฟต์แวร์ของบุคคลที่สามมากกว่าห้องปฏิบัติการและเครื่องมือของ
+    Code.org[อ่านเพิ่มเติมเกี่ยวกับการติดตั้งซอฟต์แวร์ที่นี่] (%{accessibility_url})
+  csa_ai_page_faq_question_03: ฉันจะสนับสนุนความต้องการในการเข้าถึงในขณะที่สอนโมดูลนี้ได้อย่างไร?
+  csa_ai_page_faq_answer_03_01: การจัดเลี้ยงเพื่อตอบสนองความต้องการการเข้าถึงเป็นสิ่งสำคัญสำหรับสภาพแวดล้อมการเรียนรู้รวม[อ่านเพิ่มเติมเกี่ยวกับคุณสมบัติการช่วยการเข้าถึงในซอฟต์แวร์ที่ใช้ในโมดูลนี้ที่นี่]
+    ()%{install_url}
+  csa_ai_page_faq_question_04: ฉันจะใช้ VS Code บน Chromebook ได้อย่างไร
+  csa_ai_page_faq_answer_04: การใช้โค้ด VS บน Chromebook กลายเป็นเรื่องที่ตรงไปตรงมามากขึ้น
+    โดยเฉพาะความสามารถในการเรียกใช้แอป Linux บน Chromebook รุ่นที่ใหม่กว่า[อ่านเพิ่มเติมเกี่ยวกับการตั้งค่ารหัส
+    VS บน Chromebook ได้ที่นี่] ()%{chromebook_url}
+  csa_ai_page_faq_question_05: ฉันจะได้รับการพัฒนาวิชาชีพสำหรับโมดูลนี้ได้อย่างไร?
+  csa_ai_page_faq_answer_05: ขณะนี้ยังไม่มีการพัฒนาวิชาชีพเฉพาะสำหรับหลักสูตรนี้หากคุณกำลังมองหาที่จะเข้าใจวิธีการใช้ปัญญาประดิษฐ์ในห้องเรียนของคุณ
+    คุณสามารถ [สำรวจ AI 101 for Teachers] (%{ai_101_url})
+  csa_ai_page_faq_question_06: ระยะเวลาที่แนะนำสำหรับการสอนโมดูลนี้คืออะไร?
+  csa_ai_page_faq_answer_06_01: โมดูล Software Engineering & Computer Vision มีโครงสร้างอย่างพิถีพิถันเพื่อให้การเรียนรู้ที่ครอบคลุมในกรอบเวลาที่รัดกุมโมดูลทั้งหมดได้รับการออกแบบให้ครอบคลุม**2
+    สัปดาห์ของการเรียนการสอน**.บทเรียนส่วนใหญ่จะปรับแต่งสำหรับ**45 นาที** ในขณะที่บทเรียนที่นักเรียนเจาะลึกในการพัฒนาโครงการ
+    Java แบบฝึกหัดได้รับการออกแบบมาสำหรับ**90 นาที**ระยะเวลาที่ขยายออกไปนี้จะช่วยให้นักเรียนมีโอกาสที่เพียงพอในการทำความเข้าใจ
+    นำไปใช้ และแก้ไขปัญหาขณะที่พวกเขาทำงาน
+  csa_ai_page_faq_answer_06_02: นอกจากนี้ยังมีความยืดหยุ่นโดยเจตนาที่สร้างขึ้นในโครงสร้างของโมดูล.คุณสามารถปรับระยะเวลาได้
+    ทั้งนี้ขึ้นอยู่กับพลวัตของห้องเรียน การมีส่วนร่วมของนักเรียน และความลึกที่คุณต้องการสำรวจแต่ละหัวข้อตัวอย่างเช่น
+    บทเรียนบทนำสู่คูพิลโลน (Intro to Copilot) ที่ออกแบบมาเป็นบทเรียน 45 นาที สามารถขยายได้ถึง
+    90 นาที หากคุณต้องการเจาะลึกว่าโมเดลภาษาและเครื่องมือต่างๆ เช่น GitHub Copilot
+    และ ChatGPT ทำงานได้อย่างลึกซึ้ง
+  csa_ai_page_faq_question_07: How can I access answer keys?
+  csa_ai_page_faq_answer_07: ด้วยบัญชีครูที่ได้รับการอนุมัติคุณสามารถค้นหาคีย์คำตอบในแผงสีฟ้า
+    “ครู” เท่านั้นที่แสดงในบทเรียนออนไลน์และกิจกรรมหากคุณต้องการบัญชีครูที่ได้รับการอนุมัติคุณสามารถสมัครเพื่อเข้าถึงเนื้อหาเฉพาะครูที่ได้รับการป้องกัน
+    (คีย์คำตอบ ฯลฯ) ผ่าน [แบบฟอร์มนี้] ()%{form_url}โปรดทราบว่าอาจใช้เวลาประมาณ 3-5
+    วันทำการในการยืนยันบัญชีของคุณ
+  csa_ai_page_faq_question_08: เป็นโมดูลนี้แมปกับมาตรฐาน?
+  csa_ai_page_faq_answer_08: ใช่ หลักสูตรวิศวกรรมซอฟต์แวร์และคอมพิวเตอร์วิชั่นชั่นถูกแมปเข้ากับ
+    [มาตรฐาน CSTA K-12] (%{csta_k12_url}) และ AI สำหรับ [K-12 Guidelines] ()%{k12_url}
+  csa_ai_page_faq_question_09: มีค่าใช้จ่ายเท่าไรในการสอนโมดูลนี้?
+  csa_ai_page_faq_answer_09_01: หลักสูตรและแพลตฟอร์มของเราพร้อมให้บริการโดยไม่มีค่าใช้จ่าย
+    (%{no_cost_url}) สำหรับทุกคน ทุกที่ เพื่อสอน!
+  csa_ai_page_faq_answer_09_02: นอกจากนี้ซอฟต์แวร์และเครื่องมือที่ใช้ในโมดูลนี้ไม่มีค่าใช้จ่ายGitHub
+    Copilot ฟรีสำหรับการตรวจสอบ [teachers](%{teachers_url}) และ [students]()%{students_url}
+  csa_ai_page_faq_question_10: ฉันจะทำอย่างไรหากการติดตั้งซอฟต์แวร์ไม่ทำงาน
+  csa_ai_page_faq_answer_10: ปัญหาที่พบในระหว่างการติดตั้งซอฟต์แวร์อาจเป็นเรื่องปกติ
+    แต่มีขั้นตอนที่เป็นระบบที่คุณสามารถปฏิบัติตามเพื่อแก้ไขปัญหาและแก้ไขได้[ดูเคล็ดลับการแก้ไขปัญหาบางอย่างที่นี่]
+    (%{troubleshooting_url})
+  csa_ai_page_faq_question_11: How was the curriculum developed?
+  csa_ai_page_faq_answer_11_01: 'หลักสูตรวิศวกรรมซอฟต์แวร์และคอมพิวเตอร์วิชั่นของเราได้รับการออกแบบโดยคำนึงถึงคุณค่าของหลักสูตรของเราเป้าหมายต่อไปนี้นำไปสู่การสร้างหลักสูตรนี้:'
+  csa_ai_page_faq_answer_11_list_01: "**เป้าหมายที่ 1: ** ใช้เครื่องมือ AI เพื่อสร้าง
+    แก้จุดบกพร่อง และแก้ไขโค้ด"
+  csa_ai_page_faq_answer_11_list_02: "**เป้าหมายที่ 2: ** การเปลี่ยนจาก Java Lab เป็นเครื่องมือในโลกแห่งความจริง"
+  csa_ai_page_faq_answer_11_list_03: "**เป้าหมายที่ 3: ** เข้าใจอย่างลึกซึ้งถึงวิธีการฝึกอบรมและบูรณาการโมเดล
+    AI เข้ากับโปรแกรมต่างๆ"
+  csa_ai_page_faq_answer_11_02: สำหรับข้อมูลเพิ่มเติมเกี่ยวกับค่านิยมที่เป็นแนวทางในการทำงานของเรา
+    โปรดดูที่ [ค่าหลักสูตร] ()%{curriculum_values_url}ของเรา
   language_code:
     ar: ตัวอารบิก
     az: เกี่ยวกับอาเซอร์ไบจัน

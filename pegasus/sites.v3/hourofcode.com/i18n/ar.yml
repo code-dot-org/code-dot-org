@@ -177,6 +177,15 @@ ar:
   grade_level_label_elementary: المدرسة الابتدائية
   grade_level_label_middle: المرحلة المتوسطة
   grade_level_label_high: المرحلة الثانوية
+  curricula_title_elementary: مناهج المدارس الابتدائية
+  curricula_desc_elementary: استعرض الدورات والأنشطة الممتعة والمجانية التي تدعوك
+    لاستكشاف علوم الكمبيوتر مع طلاب المدارس الابتدائية.
+  curricula_title_middle: مناهج المدارس المتوسطة
+  curricula_desc_middle: تصفح العروض الجذابة التي تمكنك أنت وطلاب المدارس المتوسطة
+    من استكشاف علوم الكمبيوتر معًا.
+  curricula_title_high: مناهج المدرسة الثانوية
+  curricula_desc_high: استعرض الدورات والأنشطة الجذابة التي تدعوك وطلاب المدارس الثانوية
+    للتعمق في علوم الكمبيوتر.
   students_label: الطلاب
   teachers_label: المعلمون
   teacher_label_csf: مدرس أساسيات علوم الكمبيوتر
@@ -203,6 +212,13 @@ ar:
   call_to_action_explore_choice_level: استكشف مستوى اختيار المثال
   call_to_action_explore_collection: اكتشف المجموعة
   call_to_action_explore_unplugged_lesson: استكشف الدروس غير الموصولة
+  call_to_action_explore_csf: اكتشف أساسيات علوم الكمبيوتر
+  call_to_action_explore_csd: اكتشف اكتشافات علوم الكمبيوتر
+  call_to_action_explore_csp: اكتشف مبادئ علوم الكمبيوتر
+  call_to_action_explore_csc: استكشف اتصالات CS
+  call_to_action_explore_csa: اكتشف علوم الكمبيوتر AP® A
+  call_to_action_explore_maker: اكتشف مناهج Maker
+  call_to_action_explore_hoc: استكشف دروس «ساعة البرمجة»
   call_to_action_try_app_lab: جرب مختبر التطبيقات
   call_to_action_view_lesson_plan: عرض خطة الدرس
   call_to_action_self_paced_pl: التعلم المهني الذاتي
@@ -247,6 +263,7 @@ ar:
   call_to_action_notify_available: أعلمني عندما تكون متاحة
   call_to_action_register_early_access: سجل للوصول المبكر
   call_to_action_open_positions: عرض المراكز المفتوحة
+  call_to_action_get_guide: احصل على الدليل
   aria_label_call_to_action_afe: تعرف على المزيد حول مهندس المستقبل في أمازون
   aria_label_call_to_action_teaching_csf: ابدأ برنامج التعلم المهني لتدريس أساسيات
     علوم الكمبيوتر
@@ -343,6 +360,8 @@ ar:
   curriculum_name_csa: علوم الكمبيوتر A
   curriculum_name_csc_02: أي وحدة من وحدات روابط علوم الكمبيوتر
   curriculum_name_ai: الذكاء الاصطناعي وتعلم الآلة
+  curriculum_name_artificial_intelligence: الذكاء الاصطناعي (AI)
+  curriculum_name_maker: صانع
   curriculum_name_maker_cp: إنشاء تطبيقات باستخدام الأجهزة (Circuit Playground)
   curriculum_name_maker_microbit: إنشاء تطبيقات باستخدام الأجهزة (micro:bit)
   curriculum_name_creating_apps_with_devices: إنشاء تطبيقات باستخدام الأجهزة
@@ -393,6 +412,11 @@ ar:
   curriculum_desc_creating_apps_with_devices: اكتشف دور الأجهزة المادية في الحوسبة.
     تطوير البرامج التي تستخدم مدخلات ومخرجات الأجهزة. يوجد إصدار من هذه الوحدة لكل
     من micro:bit وملعب الدائرة.
+  curriculum_desc_csa: عرّف الطلاب على هندسة البرمجيات والتصميم الموجه للكائنات أثناء
+    تعلمهم لغة برمجة Java في هذا المنهج المجاني لـ AP® Computer Science A (AP® CSA).
+  curriculum_desc_maker: يأخذ تعليم المصنّعين STEM (العلوم والتكنولوجيا والهندسة والرياضيات)
+    خطوة إلى الأمام من خلال دعوة الخبرة العملية والتعاون إلى الفصل الدراسي للمساعدة
+    في تعليم حل المشكلات والتفكير النقدي.
   collection_hardware: التركيز على الأجهزة
   collection_hardware_desc: تُمكّن الطلاب من استخدام البيانات والأجهزة المادية لحل
     المشكلات.
@@ -423,6 +447,7 @@ ar:
   module_label_professional_learning: 'التعلم الاحترافي:'
   module_label_languages: 'اللغات المدعومة:'
   module_label_accessibility_features: 'إمكانية الوصول:'
+  module_label_accessibility_features_full: 'ميزات إمكانية الوصول:'
   module_label_educator_tool: أداة المعلم
   module_label_educator_course: دورة المعلم
   module_label_student_tool: أداة الطالب
@@ -430,6 +455,7 @@ ar:
   module_label_student_content_resources: المحتوى والموارد
   module_label_new: جديد
   module_label_coming_soon: سيتوفر قريبًا
+  module_label_available_now: متاح الآن
   module_label_video_series: سلسلة فيديو
   module_label_self_paced: وحدة ذاتية السرعة
   module_ages_5_10: 5-10
@@ -440,6 +466,8 @@ ar:
   module_grade_2_5: 2-5
   module_grade_3_5: 3-5
   module_grade_3_8: 3-8
+  module_grade_k_12: من رياض الأطفال حتى الصف الثاني عشر
+  module_grade_3_12: 3-12
   module_grade_6_12: 6-12
   module_grade_6_10: 6-10
   module_grade_9_12: 9-12
@@ -454,7 +482,9 @@ ar:
   module_grade_9_12_teachers: معلمو الصفوف 9-12
   module_level_beginner: مبتدئ
   module_level_intermediate: المستوى المتوسط
+  module_level_advanced: Pseudoloc-ليرلؤثي
   module_duration_45_mins: 45 دقيقة
+  module_duration_2_weeks: أسبوعان
   module_duration_1_hr: 1 ساعة
   module_duration_2_hrs: 2 ساعة
   module_duration_3_hrs: 3 ساعات
@@ -530,6 +560,7 @@ ar:
   heading_java_lab: مختبر جافا
   heading_objects_first: الكائنات أولاً
   heading_these_lessons_will: 'ستقوم هذه الدروس بما يلي:'
+  heading_explore_curriculum_catalog: استكشف جميع دوراتنا في كتالوج المناهج
   professional_learning_section_desc: احصل على الدعم الذي تحتاجه أثناء الاستعداد للتدريس.
     يحبها المعلمون، حيث صنفها أكثر من 90٪ على أنها أفضل تطوير مهني على الإطلاق!
   professional_learning_section_desc_short: احصل على الدعم الذي تحتاجه أثناء الاستعداد
@@ -770,6 +801,10 @@ ar:
     (مثل ChatGPT) والذكاء الاصطناعي التوليدي. استمع إلى كيفية عمل هذه التقنيات الجديدة
     مباشرة من الخبراء: ميرا موراتي، رئيسة قسم التكنولوجيا في OpenAI، وكريستوبل فالينزويلا،
     الرئيس التنفيذي لشركة RunWayML.'
+  ai_pl_101_llm_slides_title: موجهات نموذج اللغة الكبيرة للمعلمين
+  ai_pl_101_llm_slides_desc: أدوات للحصول على أفضل إخراج ممكن من LLMs مثل ChatGPT،
+    من المبتدئين إلى المتقدمين. يتضمن تعليمات البدء لأولئك الذين يغمسون أصابع قدمهم
+    فقط، بالإضافة إلى أدوات متقدمة لأولئك الذين يتطلعون إلى تعظيم إمكاناتهم.
   how_ai_works_hero_heading: كيف يعمل الذكاء الاصطناعي
   how_ai_works_hero_desc: انغمس في عالم الذكاء الاصطناعي من خلال سلسلة مقاطع الفيديو
     «How AI Works» والدروس المصاحبة لها!
@@ -1325,10 +1360,10 @@ ar:
     استبدال البنسات بنوع آخر من الوزن من نفس الحجم). تتوفر الأنشطة البديلة إذا لم
     يكن لديك حق الوصول إلى هذه المستلزمات.
   csd_page_faq_answer_04_06: إنشاء تطبيقات باستخدام الأجهزة (الخيار A والخيار B)
-  csd_page_faq_answer_04_07: 'Option A: Classroom set of Circuit Playgrounds. Check
-    out [code.org/maker/circuitplayground](%{url}) for more details.'
-  csd_page_faq_answer_04_08: 'Option B: Classroom set of micro:bit devices. Check
-    out [code.org/maker/microbit](%{url}) for more details.'
+  csd_page_faq_answer_04_07: 'الخيار أ: مجموعة الفصول الدراسية من ملاعب الدائرة. تحقق
+    من [code.org/maker/circuitplayground] () لمزيد من التفاصيل.%{url}'
+  csd_page_faq_answer_04_08: 'الخيار B: مجموعة الفصل الدراسي من أجهزة micro:bit. راجع
+    [code.org/maker/microbit] () لمزيد من التفاصيل.%{url}'
   csd_page_faq_answer_04_09: لوازم المصنّع، مثل علب المناديل الفارغة أو لفائف الكرتون
     أو ورق الخدش
   csd_page_faq_answer_04_10: "*ملاحظة: تحتوي وحدة إنشاء التطبيقات مع الأجهزة على خيارين
@@ -1941,6 +1976,11 @@ ar:
     دورات Code.org أو الفرص المحلية أو غيرها من أخبار علوم الحاسوب؟
   signup_email_preference_privacy: "(راجع سياسة الخصوصية الخاصة بنا)"
   signup_email_preference_yes: نعم
+  signup_email_preference_yes_elementary: نعم - أرسل لي تحديثات حول موارد المدرسة
+    الابتدائية
+  signup_email_preference_yes_middle: نعم - أرسل لي تحديثات حول موارد المدرسة المتوسطة
+  signup_email_preference_yes_high: نعم - أرسل لي تحديثات حول موارد المدرسة الثانوية
+  signup_email_preference_yes_general: نعم - أرسل لي تحديثات عامة
   signup_email_preference_no: لا
   signup_email_preference_error: البريد الإلكتروني مطلوب
   signup_multiple_event_warning: سنضع اسم مدرستك ومدينتك على الخريطة عند التسجيل.
@@ -12014,12 +12054,11 @@ ar:
     وإبداعك الخاص من خلال منهج CS First ولغة "سكراتش".
   tutorial_googlename _longdescription: اختر اسمًا وأضف الحياة إلى حروف الكلمات باستخدام
     البرمجة. اختر لقبًا أو اسم حيوان أليف أو حيوانًا أو رياضة أو مكانًا أو هواية.
-  tutorial_carnegiezillah_longdescription: Zillah City is thriving, and music is in
-    the air. Rumor has it, the famed Gargantua bot is online and sending the last
-    Toxibots to trash the city block by block…. Grab your cobot hoverboard and get
-    ready to groove, move, and finish off what you started! Players program their
-    cobot hoverbots to change lanes, avoid obstacles, and take out many Toxibots in
-    this rhythm-styled game.
+  tutorial_carnegiezillah_longdescription: مدينة زيلا مزدهرة، والموسيقى في الهواء
+    الطلق. تقول الشائعات أن روبوت Gargantua الشهير متصل بالإنترنت ويرسل آخر Toxibots
+    لتحطيم المدينة كتلة تلو الأخرى.…احصل على لوح التزلج cobot الخاص بك واستعد للتحريك
+    وإنهاء ما بدأته! يقوم اللاعبون ببرمجة روبوتات الكوبوت الخاصة بهم لتغيير المسارات
+    وتجنب العقبات وإخراج العديد من Toxibots في هذه اللعبة ذات النمط الإيقاعي.
   tutorial_nasachspacejam_longdescription: قم بإنشاء نظام شمسي رائع حقًا! تعرف على
     الموسيقى وعلم الفلك والترميز في هذا النشاط الموجه ذاتيًا (لا يلزم وجود خبرة في
     الترميز). قم ببرمجة الكواكب لتأليف الموسيقى، وإنشاء نظامك الشمسي الموسيقي الخاص،
@@ -12820,6 +12859,115 @@ ar:
     على مستوى المؤسسة لمدة أسبوعين في نهاية العام المعروف أيضًا باسم عطلة الشتاء)،
     ونصف يوم عمل في أيام الجمعة خلال فصل الصيف المعروف أيضًا باسم أيام الجمعة الصيفية،
     وغيرها من المزايا السخية.
+  csa_ai_page_hero_title: Pseudoloc-سخبفلقث ىلهىثقهى & ؤةحعفق رههخى
+  csa_ai_page_hero_description: 'تقدم وحدة ما بعد AP CSA المكونة من فصلين لطلاب المدارس
+    الثانوية خبرة عملية في أدوات تطوير البرامج الاحترافية، بما في ذلك GitHub و GitHub
+    Copilot، وتزودهم بمهارات العالم الحقيقي لتطوير برنامج رؤية الكمبيوتر. '
+  csa_ai_page_video_section_title: تخطو إلى ما وراء عالم بيئات برمجة Code.org
+  csa_ai_page_video_section_li_1: تعرف على الذكاء الاصطناعي وتطبيقاته
+  csa_ai_page_video_section_li_2: خبرة عملية مع أدوات تطوير البرامج الاحترافية
+  csa_ai_page_video_section_li_3: تعلم الممارسات المتوافقة مع معايير الصناعة
+  csa_ai_page_video_section_li_4: زراعة التفكير النقدي
+  csa_ai_page_programming_tools: 'أدوات البرمجة: جيثب، جيثب كوبيلوت، VSCode، TensorFlow '
+  csa_ai_page_professional_learning: لا شيء مما سبق
+  csa_ai_page_curriculum_topics: 'المواضيع: البرمجة والبيانات والفن والتصميم والألعاب
+    والرسوم المتحركة'
+  csa_ai_page_curriculum_accessibility_features: راجع قسم الأسئلة الشائعة للحصول على
+    التفاصيل
+  csa_ai_page_curriculum_languages_support: الإنجليزية
+  csa_ai_page_article_title_1: Pseudoloc-اعهم صهف ؤخحمخف
+  csa_ai_page_article_description_1: يتعلم الطلاب كيفية استخدام GitHub Copilot كمبرمج
+    مزدوج لشرح التعليمات البرمجية الحالية والعثور على الأخطاء وإصلاحها وإنشاء حلول
+    للمشاكل الجديدة.
+  csa_ai_page_article_link_1: تعرف على المزيد حول مساعد الطيار
+  csa_ai_page_article_title_2: قم ببناء نموذج الذكاء الاصطناعي الخاص بك
+  csa_ai_page_article_description_2: يقوم الطلاب بتدريب نماذج الذكاء الاصطناعي الخاصة
+    بهم باستخدام Teachable Machine للتعرف على الصور والإيماءات من كاميرا الويب والنظر
+    في كيفية تأثير رؤية الكمبيوتر على طريقة تفاعل المستخدمين مع التطبيقات.
+  csa_ai_page_article_link_2: اكتشف خطة الدرس
+  csa_ai_page_article_title_3: اكتشف رؤية الكمبيوتر
+  csa_ai_page_article_description_3: يقوم الطلاب بتطبيق نماذج الذكاء الاصطناعي التي
+    قاموا بإنشائها باستخدام Teachable Machine في تطبيق Java، باستخدام GitHub Copilot
+    لمساعدتهم على تعديل الإصدارات الحالية من التطبيقات للعمل مع المدخلات المختلفة.
+  csa_ai_page_article_link_3: شاهد مثالاً
+  csa_ai_page_learn_more_section_title: تعرف على المزيد حول الذكاء الاصطناعي
+  csa_ai_page_learn_more_title: اكتشف الذكاء الاصطناعي 101 للمعلمين
+  csa_ai_page_learn_more_description: اكتشف العالم الرائد للذكاء الاصطناعي (AI) وإمكاناته
+    التحويلية في التعليم من خلال سلسلة التعلم الشاملة عبر الإنترنت للمعلمين.
+  csa_ai_page_learn_more_link: شاهد سلسلة الذكاء الاصطناعي 101 للمعلمين
+  csa_ai_page_faq_question_01: ما هي المتطلبات الأساسية لهذه الوحدة؟
+  csa_ai_page_faq_answer_01_01: 'قبل الغوص في هذه الوحدة، يجب أن يمتلك الطلاب معرفة
+    أولية بجافا. وعلى وجه التحديد، ينبغي لهم فهم ما يلي:'
+  csa_ai_page_faq_answer_01_list_01: "** الفئات والكائنات: ** يجب أن يكون الطلاب على
+    دراية بتعريف الفصول الدراسية واستخدامها، بالإضافة إلى إنشاء الكائنات ومعالجتها."
+  csa_ai_page_faq_answer_01_list_02: "** طرق الكتابة والاستدعاء: ** يجب أن يكون الطلاب
+    قادرين على تحديد الأساليب داخل الفصل، وفهم معلمات الطريقة وأنواع الإرجاع، وطرق
+    الاتصال من الكائنات أو الطرق الأخرى."
+  csa_ai_page_faq_answer_01_list_03: "** المصفوفات 1D و ArrayLists: ** يجب أن يكونوا
+    بارعين في الإعلان عن المصفوفات أحادية البعد وقوائم ArrayLists وتهيئتها ومعالجتها،
+    بما في ذلك التكرار من خلالها."
+  csa_ai_page_faq_answer_01_list_04: "** التحديد والتكرار: ** يعد الأساس المتين في
+    العبارات الشرطية والحلقات أمرًا بالغ الأهمية."
+  csa_ai_page_faq_question_01_02: من الناحية المثالية، سيكون الطلاب الذين أكملوا AP
+    Computer Science A أو دورة ذات عمق ودقة مماثلين مستعدين جيدًا لهذه الوحدة.
+  csa_ai_page_faq_question_02: كيف أقوم بتثبيت البرنامج المطلوب لهذه الوحدة؟
+  csa_ai_page_faq_answer_02_01: هذه الوحدة فريدة من نوعها لأنها تتضمن استخدام برامج
+    طرف ثالث بدلاً من مختبرات وأدوات Code.org. [اقرأ المزيد حول تثبيت البرنامج هنا]
+    (%{accessibility_url}).
+  csa_ai_page_faq_question_03: كيف يمكنني دعم احتياجات إمكانية الوصول أثناء تدريس
+    هذه الوحدة؟
+  csa_ai_page_faq_answer_03_01: يعد تلبية احتياجات إمكانية الوصول أمرًا بالغ الأهمية
+    لبيئة تعليمية شاملة. [اقرأ المزيد حول ميزات إمكانية الوصول في البرنامج المستخدم
+    في هذه الوحدة هنا] (%{install_url}).
+  csa_ai_page_faq_question_04: كيف أستخدم VS Code على أجهزة Chromebook؟
+  csa_ai_page_faq_answer_04: أصبح استخدام VS Code على Chromebook أكثر وضوحًا، خاصة
+    مع القدرة على تشغيل تطبيقات Linux على طرازات Chromebook الأحدث. [اقرأ المزيد حول
+    إعداد VS Code على أجهزة Chromebook هنا] (%{chromebook_url}).
+  csa_ai_page_faq_question_05: كيف يمكنني الحصول على التطوير المهني لهذه الوحدة؟
+  csa_ai_page_faq_answer_05: لا يوجد حاليًا تطوير مهني محدد لهذه الدورة. إذا كنت تتطلع
+    إلى فهم كيفية التعامل مع الذكاء الاصطناعي في الفصل الدراسي الخاص بك، فيمكنك [استكشاف
+    AI 101 للمعلمين] (%{ai_101_url}).
+  csa_ai_page_faq_question_06: ما هو التوقيت الموصى به لتدريس هذه الوحدة؟
+  csa_ai_page_faq_answer_06_01: تم تصميم وحدة هندسة البرمجيات ورؤية الكمبيوتر بعناية
+    لتوفير التعلم الشامل في إطار زمني موجز. تم تصميم الوحدة بأكملها لتمتد **أسبوعين
+    من التعليم**. تم تصميم معظم الدروس لمدة **45 دقيقة**، بينما تم تصميم الدروس التي
+    يتعمق فيها الطلاب في تطوير مشروع Java العملي لمدة **90 دقيقة**. يضمن هذا الوقت
+    الممتد للطلاب فرصة كبيرة للفهم والتنفيذ واستكشاف الأخطاء وإصلاحها أثناء عملهم.
+  csa_ai_page_faq_answer_06_02: هناك أيضًا مرونة مقصودة مضمنة في بنية الوحدة. استنادًا
+    إلى ديناميكيات الفصل الدراسي ومشاركة الطلاب والعمق الذي ترغب في استكشاف كل موضوع
+    فيه، يمكنك ضبط المدة. على سبيل المثال، يمكن توسيع درس Intro to Copilot، المصمم
+    كدرس مدته 45 دقيقة، إلى 90 دقيقة إذا كنت ترغب في التعمق في كيفية عمل نماذج وأدوات
+    اللغة الكبيرة مثل GitHub Copilot و ChatGPT.
+  csa_ai_page_faq_question_07: How can I access answer keys?
+  csa_ai_page_faq_answer_07: باستخدام حساب المعلم المعتمد، يمكنك العثور على مفاتيح
+    الإجابة في لوحة «المعلم» الزرقاء التي تظهر في الدروس والأنشطة عبر الإنترنت. إذا
+    كنت بحاجة إلى حساب مدرس معتمد، يمكنك التقدم للحصول على مواد محمية خاصة بالمعلم
+    فقط (مفاتيح الإجابة، إلخ) من خلال [هذا النموذج] ().%{form_url}يرجى الأخذ في الاعتبار
+    أن الأمر قد يستغرق 3-5 أيام عمل للتحقق من حسابك.
+  csa_ai_page_faq_question_08: هل تم تعيين هذه الوحدة وفقًا للمعايير؟
+  csa_ai_page_faq_answer_08: نعم، تم تعيين منهج هندسة البرمجيات ورؤية الكمبيوتر وفقًا
+    لـ [معايير CSTA K-12] (%{csta_k12_url}) والذكاء الاصطناعي لـ [إرشادات K-12] ().%{k12_url}
+  csa_ai_page_faq_question_09: كم يكلف تدريس هذه الوحدة؟
+  csa_ai_page_faq_answer_09_01: مناهجنا ومنصتنا متاحان بـ [بدون تكلفة] (%{no_cost_url})
+    لأي شخص، في أي مكان، للتدريس!
+  csa_ai_page_faq_answer_09_02: بالإضافة إلى ذلك، فإن البرامج والأدوات المستخدمة في
+    هذه الوحدة مجانية. برنامج GitHub Copilot مجاني للتحقق من [teachers](%{teachers_url})
+    و [students](%{students_url}).
+  csa_ai_page_faq_question_10: ماذا أفعل إذا لم يعمل تثبيت البرنامج؟
+  csa_ai_page_faq_answer_10: قد تكون مواجهة المشكلات أثناء تثبيت البرامج أمرًا شائعًا،
+    ولكن هناك خطوات منهجية يمكنك اتباعها لاستكشاف الأخطاء وإصلاحها وحلها. [تحقق من
+    بعض نصائح استكشاف الأخطاء وإصلاحها هنا] (%{troubleshooting_url}).
+  csa_ai_page_faq_question_11: How was the curriculum developed?
+  csa_ai_page_faq_answer_11_01: 'تم تصميم منهج هندسة البرمجيات ورؤية الكمبيوتر مع
+    وضع قيم المناهج الدراسية في الاعتبار. أدت الأهداف التالية إلى إنشاء هذا المنهج:'
+  csa_ai_page_faq_answer_11_list_01: "** الهدف 1: ** استخدم أدوات الذكاء الاصطناعي
+    لإنشاء التعليمات البرمجية وتصحيحها وتحريرها."
+  csa_ai_page_faq_answer_11_list_02: "** الهدف 2: ** الانتقال من Java Lab إلى أدوات
+    العالم الحقيقي."
+  csa_ai_page_faq_answer_11_list_03: "** الهدف 3: ** تعميق فهم كيفية تدريب نماذج الذكاء
+    الاصطناعي ودمجها في البرامج."
+  csa_ai_page_faq_answer_11_02: لمزيد من المعلومات حول القيم التي وجهت عملنا، يرجى
+    الاطلاع على [قيم المنهج] (%{curriculum_values_url}).
   language_code:
     ar: العربية
     az: الأذربيجانية

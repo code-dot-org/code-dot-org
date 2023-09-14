@@ -113,19 +113,20 @@ te:
     సైన్స్ పోషించగల పాత్రను అర్థం చేసుకోవడానికి విద్యార్థులకు సహాయపడే వనరులు.
   oceans_landing_videos: AI మరియు మెషిన్ లెర్నింగ్ గురించి వీడియోలు
   oceans_behind_the_scenes: 'మహాసముద్రాల కోసం AI: తెర వెనుక'
-  oceans_behind_the_scenes_1: Levels 2-4 use a pretrained model provided by the <a
-    href="https://www.tensorflow.org/" >TensorFlow</a> <a href="https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md">
-    MobileNet </a> project. A MobileNet model is a <a href="https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks">convolutional
-    neural network</a> that has been trained on <a href="http://www.image-net.org/">ImageNet</a>,
-    a dataset of over 14 million images hand-annotated with words such as "balloon"
-    or "strawberry". In order to customize this model with the labeled training data
-    the student generates in this activity, we use a technique called <a href="https://en.wikipedia.org/wiki/Transfer_learning">Transfer
-    Learning</a>. Each image in the training dataset is fed to MobileNet, as pixels,
-    to obtain a list of annotations that are most likely to apply to it. Then, for
-    a new image, we feed it to MobileNet and compare its resulting list of annotations
-    to those from the training dataset. We classify the new image with the same label
-    (such as "fish" or "not fish") as the images from the training set with the most
-    similar results.
+  oceans_behind_the_scenes_1: స్థాయిలు 2-4 <a href="https://www.tensorflow.org/" >టెన్సార్</a>
+    <a href="https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md">
+    ఫ్లో మొబైల్నెట్ ప్రాజెక్ట్ అందించిన ప్రీట్రైన్డ్ మోడల్ను ఉపయోగిస్తాయి. </a> మొబైల్నెట్
+    మోడల్ అనేది “బెలూన్” లేదా “స్ట్రాబెర్రీ” వంటి పదాలతో చేతితో ఉల్లేఖించిన 14 మిలియన్లకు
+    పైగా చిత్రాల <a href="http://www.image-net.org/">డేటాసెట్</a>అయిన ఇమేజ్నెట్పై
+    శిక్షణ పొందిన ఒక <a href="https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks">మెలికలు
+    తిరిగే న్యూరల్ నెట్వర్క్</a> . ఈ కార్యాచరణలో విద్యార్థి ఉత్పత్తి చేసే లేబుల్ శిక్షణ
+    డేటాతో ఈ మోడల్ను అనుకూలీకరించడానికి, మేము <a href="https://en.wikipedia.org/wiki/Transfer_learning">ట్రాన్స్ఫర్
+    లెర్నింగ్</a>అనే సాంకేతికతను ఉపయోగిస్తాము. శిక్షణ డేటాసెట్లోని ప్రతి చిత్రం మొబైల్నెట్కు
+    పిక్సెల్లగా, దానికి వర్తించే ఉల్లేఖనాల జాబితాను పొందటానికి ఇవ్వబడుతుంది. అప్పుడు,
+    క్రొత్త చిత్రం కోసం, మేము దానిని మొబైల్నెట్కు తినిపిస్తాము మరియు దాని ఫలిత ఉల్లేఖనాల
+    జాబితాను శిక్షణ డేటాసెట్ నుండి వచ్చిన వారితో పోల్చాము. మేము క్రొత్త చిత్రాన్ని
+    అదే లేబుల్తో (“చేప” లేదా “చేపలు కాదు” వంటివి) శిక్షణ సమితి నుండి చాలా సారూప్య
+    ఫలితాలతో వర్గీకరిస్తాము.
   oceans_behind_the_scenes_1_markdown: స్థాయిలు 2-4 [TensorFlow](https://www.tensorflow.org/)
     [MobileNet](https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md)
     ప్రాజెక్ట్ అందించిన ప్రీట్రైన్డ్ మోడల్ను ఉపయోగిస్తాయి. మొబైల్నెట్ మోడల్ అనేది
@@ -191,6 +192,15 @@ te:
   grade_level_label_elementary: ఎలిమెంటరీ స్కూల్
   grade_level_label_middle: మిడిల్ స్కూల్
   grade_level_label_high: ఉన్నత పాఠశాల
+  curricula_title_elementary: ఎలిమెంటరీ స్కూల్ కర్రిక్యులా
+  curricula_desc_elementary: మీ ప్రాథమిక పాఠశాల విద్యార్థులతో కంప్యూటర్ సైన్స్ను అన్వేషించడానికి
+    మిమ్మల్ని ఆహ్వానించే ఆహ్లాదకరమైన, ఉచిత కోర్సులు మరియు కార్యకలాపాలను బ్రౌజ్ చేయండి.
+  curricula_title_middle: మిడిల్ స్కూల్ కరికులం
+  curricula_desc_middle: మీరు మరియు మీ మిడిల్ స్కూల్ విద్యార్థులు కలిసి కంప్యూటర్
+    సైన్స్ను అన్వేషించడానికి వీలు కల్పించే ఆకర్షణీయమైన సమర్పణలను బ్రౌజ్ చేయండి.
+  curricula_title_high: హై స్కూల్ కరికులం
+  curricula_desc_high: కంప్యూటర్ సైన్స్లో లోతుగా త్రవ్వడానికి మిమ్మల్ని మరియు మీ హైస్కూల్
+    విద్యార్థులను ఆహ్వానించే బలవంతపు కోర్సులు మరియు కార్యకలాపాలను బ్రౌజ్ చేయండి.
   students_label: విద్యార్థులు
   teachers_label: టీచర్లు
   teacher_label_csf: CS ప్రాథమికాంశాల టీచర్
@@ -217,6 +227,13 @@ te:
   call_to_action_explore_choice_level: ఉదాహరణ ఐచ్ఛికం స్థాయిని అన్వేషించండి
   call_to_action_explore_collection: సేకరణను అన్వేషించండి
   call_to_action_explore_unplugged_lesson: ప్లగ్ చేయబడని పాఠాలను అన్వేషించండి
+  call_to_action_explore_csf: CS ఫండమెంటల్స్ అన్వేషించండి
+  call_to_action_explore_csd: CS ఆవిష్కరణలను అన్వేషించండి
+  call_to_action_explore_csp: CS సూత్రాలను అన్వేషించండి
+  call_to_action_explore_csc: CS కనెక్షన్లను అన్వేషించండి
+  call_to_action_explore_csa: AP® కంప్యూటర్ సైన్స్ A ని అన్వేషించండి
+  call_to_action_explore_maker: మేకర్ పాఠ్యాంశాలను అన్వేషించండి
+  call_to_action_explore_hoc: కోడ్ ట్యుటోరియల్స్ యొక్క అవర్ అన్వేషించండి
   call_to_action_try_app_lab: యాప్ ల్యాబ్‌ని ప్రయత్నించండి
   call_to_action_view_lesson_plan: పాఠ ప్రణాళికను చూడండి
   call_to_action_self_paced_pl: స్వీయ-వేగవంతమైన వృత్తిపరమైన అభ్యాసాన్ని ప్రారంభించండి
@@ -261,6 +278,7 @@ te:
   call_to_action_notify_available: అందుబాటులో ఉన్నప్పుడు నాకు తెలియజేయండి
   call_to_action_register_early_access: ప్రారంభ ప్రాప్యత కోసం నమోదు చేయండి
   call_to_action_open_positions: ఓపెన్ పొజిషన్లను చూడండి
+  call_to_action_get_guide: గైడ్ పొందండి
   aria_label_call_to_action_afe: అమెజాన్ ఫ్యూచర్ ఇంజనీర్ గురించి మరింత తెలుసుకోండి
   aria_label_call_to_action_teaching_csf: టీచింగ్ కంప్యూటర్ సైన్స్ ఫండమెంటల్స్ ప్రొఫెషనల్
     లెర్నింగ్ ప్రోగ్రామ్ను ప్రారంభించండి
@@ -368,6 +386,8 @@ te:
   curriculum_name_csa: కంప్యూటర్ సైన్స్ A
   curriculum_name_csc_02: ఏదైనా CS కనెక్షన్స్ మాడ్యూల్
   curriculum_name_ai: AI & మెషిన్ లెర్నింగ్
+  curriculum_name_artificial_intelligence: ఆర్టిఫిషియల్ ఇంటెలిజెన్స్ (AI)
+  curriculum_name_maker: తయారీదారు
   curriculum_name_maker_cp: పరికరాలతో అనువర్తనాలను సృష్టిస్తోంది (సర్క్యూట్ ప్లేగ్రౌండ్)
   curriculum_name_maker_microbit: 'పరికరాలతో అనువర్తనాలను సృష్టిస్తోంది (మైక్రో: బిట్)'
   curriculum_name_creating_apps_with_devices: ఉపకరణాలతో యాప్స్ సృష్టించుట
@@ -428,6 +448,12 @@ te:
     అన్వేషించండి. హార్డ్‌వేర్ ఇన్‌పుట్‌లను మరియు ఔట్‌పుట్‌లను వినియోగించుకునే ప్రోగ్రాములను
     అభివృద్ధి చేయండి. మైక్రో:బిట్ మరియు సర్క్యూట్ ప్లేగ్రౌండ్ రెండింటి కోసం ఈ యూనిట్
     యొక్క వెర్షన్ ఒకటి ఉంది.
+  curriculum_desc_csa: AP® కంప్యూటర్ సైన్స్ A (AP® CSA) కోసం ఈ ఉచిత పాఠ్యాంశాల్లో
+    జావా ప్రోగ్రామింగ్ భాషను నేర్చుకునేటప్పుడు సాఫ్ట్వేర్ ఇంజనీరింగ్ మరియు ఆబ్జెక్ట్-ఓరియెంటెడ్
+    డిజైన్కు విద్యార్థులను పరిచయం చేయండి.
+  curriculum_desc_maker: మేకర్ విద్య STEM (సైన్స్, టెక్నాలజీ, ఇంజనీరింగ్, మ్యాథమెటిక్స్)
+    ను ఒక అడుగు ముందుకు వేస్తుంది, సమస్య పరిష్కారం మరియు విమర్శనాత్మక ఆలోచనను నేర్పించడంలో
+    సహాయపడటానికి తరగతి గదిలోకి అనుభవం మరియు సహకారాన్ని ఆహ్వానించడం ద్వారా.
   collection_hardware: హార్డ్‌వేర్ పైన దృష్టి సారించండి
   collection_hardware_desc: సమస్యలను పరిష్కరించడానికి గాను డేటా మరియు భౌతిక ఉపకరణాలను
     ఉపయోగించుకోవడానికి విద్యార్థులను సాధికారపరుస్తుంది.
@@ -461,6 +487,7 @@ te:
   module_label_professional_learning: 'వృత్తినైపుణ్యమైన అభ్యసనం:'
   module_label_languages: 'మద్దతు కల్పించబడిన భాషలు:'
   module_label_accessibility_features: 'ప్రాప్యత చేసుకోవడం:'
+  module_label_accessibility_features_full: 'యాక్సెసిబిలిటీ ఫీచర్స్:'
   module_label_educator_tool: విద్యాబోధకుల సాధనం
   module_label_educator_course: విద్యాబోధకుల కోర్సు
   module_label_student_tool: విద్యార్థి సాధనం
@@ -468,6 +495,7 @@ te:
   module_label_student_content_resources: కంటెంట్ మరియు వనరులు
   module_label_new: కొత్త
   module_label_coming_soon: త్వరలో
+  module_label_available_now: ఇప్పుడు అందుబాటులో ఉంది
   module_label_video_series: వీడియో సిరీస్
   module_label_self_paced: స్వీయ కనబరిచిన మాడ్యూల్
   module_ages_5_10: 5-10
@@ -478,6 +506,8 @@ te:
   module_grade_2_5: 2-5
   module_grade_3_5: 3-5
   module_grade_3_8: 3-8
+  module_grade_k_12: K-12
+  module_grade_3_12: 3-12
   module_grade_6_12: 6-12
   module_grade_6_10: 6-10
   module_grade_9_12: 9-12
@@ -492,7 +522,9 @@ te:
   module_grade_9_12_teachers: 9-12 టీచర్లు
   module_level_beginner: ప్రారంభకులు
   module_level_intermediate: ఇంటర్మీడియట్
+  module_level_advanced: అధునాతన
   module_duration_45_mins: 45 నిమిషాలు
+  module_duration_2_weeks: 2 వారాలు
   module_duration_1_hr: 1 గంట
   module_duration_2_hrs: 2 గంటల
   module_duration_3_hrs: 3 గంటల
@@ -576,6 +608,7 @@ te:
   heading_java_lab: జావా ల్యాబ్
   heading_objects_first: మొదటగా వస్తువులు
   heading_these_lessons_will: 'ఈ పాఠాలు రెడీ:'
+  heading_explore_curriculum_catalog: కరికులం కాటలాగ్లో మా కోర్సులన్నింటినీ అన్వేషించండి
   professional_learning_section_desc: మీరు బోధించడానికి సిద్ధమవుతుండగా మీకు అవసరమైన
     మద్దతు పొందండి. దానిని 90% పైగా ర్యాంకింగ్ చేస్తూ అత్యుత్తమ వృత్తిపరమైన అభివృద్ధితో
     ఉపాధ్యాయులు దీన్ని ఇష్టపడతారు!
@@ -828,6 +861,11 @@ te:
     లలో రెండు కొత్త వీడియోలను కలిగి ఉన్న AI లో పెద్ద మార్పులను నడిపించే కొత్త టెక్నాలజీ
     గురించి మరింత తెలుసుకోండి. ఈ కొత్త సాంకేతికతలు నిపుణుల నుండి నేరుగా ఎలా పనిచేస్తాయో
     వినండి: మీరా మురాటి, ఓపెన్ఏఐ యొక్క CTO మరియు రన్వేఎంఎల్ సిఇఒ క్రిస్టోబల్ వాలెన్జులా.'
+  ai_pl_101_llm_slides_title: అధ్యాపకుల కోసం పెద్ద భాషా నమూనా ప్రాంప్ట్ చేస్తుంది
+  ai_pl_101_llm_slides_desc: చాట్జిపిటి వంటి ఎల్ఎల్ఎంల నుండి, అనుభవశూన్యుడు నుండి
+    అధునాతన వరకు సాధ్యమైనంత ఉత్తమమైన అవుట్పుట్ను పొందే సాధనాలు. వారి కాలిని ముంచే
+    వారికి స్టార్టర్ ప్రాంప్ట్లు, అలాగే వారి సామర్థ్యాన్ని పెంచుకోవాలనుకునే వారికి
+    అధునాతన సాధనాలు ఉన్నాయి.
   how_ai_works_hero_heading: AI ఎలా పనిచేస్తుంది
   how_ai_works_hero_desc: "“హౌ AI వర్క్స్” తో AI ప్రపంచంలోకి ప్రవేశించండి, మా వీడియో
     సిరీస్ మరియు దానితో పాటు పాఠాలు!"
@@ -2076,6 +2114,12 @@ te:
     కంప్యూటర్ సైన్స్ న్యూస్ గురించి అప్‌డేట్స్ మీకు ఇమెయిల్ చేయవచ్చా?
   signup_email_preference_privacy: "(మా గోప్యత పాలసీ చూడండి)"
   signup_email_preference_yes: అవును
+  signup_email_preference_yes_elementary: అవును - ఎలిమెంటరీ స్కూల్ వనరులపై నాకు నవీకరణలను
+    పంపండి
+  signup_email_preference_yes_middle: అవును - మిడిల్ స్కూల్ వనరులపై నాకు నవీకరణలను
+    పంపండి
+  signup_email_preference_yes_high: అవును - హైస్కూల్ వనరులపై నాకు నవీకరణలను పంపండి
+  signup_email_preference_yes_general: అవును - నాకు సాధారణ నవీకరణలను పంపండి
   signup_email_preference_no: లేదు
   signup_email_preference_error: ఇమెయిల్ ప్రాధాన్యత అవసరం
   signup_multiple_event_warning: మీరు రిజిస్టర్ చేసుకున్నప్పుడు, మేము మీ పాఠశాల పేరు
@@ -2260,13 +2304,13 @@ te:
     వెళ్లండి.</b> కంప్యూటర్ అవసరం లేని <a href='%{unplugged_url}'> ట్యుటోరియల్స్ మేము
     అందిస్తాము. </ul>
   hoc_faq_need_computers_a_markdown: |-
-    No. We have Hour of Code tutorials that work on PCs, smartphones, tablets, and some that require no computer at all! You can join wherever you are, with whatever you have.
+    లేదు. PC లు, స్మార్ట్ఫోన్లు, టాబ్లెట్లు మరియు కంప్యూటర్ అవసరం లేని కొన్నింటిలో పనిచేసే అవర్ ఆఫ్ కోడ్ ట్యుటోరియల్స్ మాకు ఉన్నాయి! మీరు ఎక్కడ ఉన్నా, మీ వద్ద ఉన్నదానితో మీరు చేరవచ్చు.
 
-    _Here are a few options:_
+    _ఇక్కడ కొన్ని ఎంపికలు ఉన్నాయి: _
 
-    - **Work in pairs.** [Research shows](%{pair_programming_research}) students learn best with [pair programming](%{pair_programming_video}), sharing a computer and working together. Encourage your students to double up.
-    - **Use a projected screen.** If you have a projector and screen for a Web-connected computer, your entire group can do an Hour of Code together. Watch video portions together and take turns solving puzzles or answering questions.
-    - **Go unplugged.** We offer [tutorials that require no computer](%{unplugged_url}) at all.
+    - **జతలలో పని చేయండి.** [పరిశోధన ప్రదర్శనలు] (%{pair_programming_research}) విద్యార్థులు [జత ప్రోగ్రామింగ్] (%{pair_programming_video}) తో ఉత్తమంగా నేర్చుకుంటారు, కంప్యూటర్ను పంచుకోవడం మరియు కలిసి పనిచేయడం. మీ విద్యార్థులను రెట్టింపు చేయమని ప్రోత్సహించండి.
+    - ** అంచనా వేసిన స్క్రీన్ను ఉపయోగించండి.** మీకు వెబ్-కనెక్ట్ చేయబడిన కంప్యూటర్ కోసం ప్రొజెక్టర్ మరియు స్క్రీన్ ఉంటే, మీ మొత్తం సమూహం కలిసి అవర్ ఆఫ్ కోడ్ చేయవచ్చు. కలిసి వీడియో భాగాలు చూడండి మరియు పజిల్స్ పరిష్కరించడం లేదా ప్రశ్నలకు సమాధానం మలుపులు పడుతుంది.
+    - **అన్ప్లగ్ చేయబడింది.** మేము [కంప్యూటర్ అవసరమయ్యే ట్యుటోరియల్స్] () అస్సలు అందిస్తున్నాము.%{unplugged_url}
   hoc_faq_international_q: నేను <country> లో ఉన్నాను. నేను అంతర్జాతీయంగా ఎలా పాల్గొనగలను?
   hoc_faq_international_a: ఎవ్వరైనా అవర్ ఆఫ్ కోడ్ ఈవెంట్‌ను, ప్రపంచంలో ఎక్కడైనా నిర్వహించవచ్చు.
     గత సంవత్సరం, ప్రపంచవ్యాప్తంగా విద్యార్థులు అవర్ ఆఫ్ కోడ్ కోసం ఒకచోట చేరారు. మరింత
@@ -2568,8 +2612,8 @@ te:
   learn_banner_beyond_markdown: నేర్చుకోవాలనుకుంటున్నారా? [ఒక గంట దాటి] (%{url})
   learn_banner_teachers: 'ఉపాధ్యాయులు: <a id=''teacher_banner_host''>ఒక అవర్ హోస్ట్
     చేయండి</a> or <a id=''teacher_banner_howto''>హౌ-టు గైడ్ చదవండి</a>'
-  learn_banner_teachers_markdown: 'Teachers: [Host an hour](%{host_url}) or [read
-    the How-To Guide](%{howto_url})'
+  learn_banner_teachers_markdown: 'ఉపాధ్యాయులు: [ఒక గంట హోస్ట్] (%{host_url}) లేదా
+    [హౌ-టు గైడ్ చదవండి] ()%{howto_url}'
   tutorial_dance2019_name: డాన్స్ పార్టీ
   tutorial_danceparty_name: డాన్స్ పార్టీ
   tutorial_chibitronics_name: 'చిబిట్రోనిక్స్: ఇల్యూమినేటెడ్ స్టోరీ'
@@ -5497,11 +5541,11 @@ te:
     చేయడానికి కోడ్ బ్లాక్లను ఉపయోగించండి.
   tutorial_minecraft-2016_longdescription: Minecraft గేమ్ను రూపొందించండి. చికెన్,
     గొర్రెలు, క్రీపర్స్, జాంబీస్ మరియు మరిన్ని మీ స్వంత వెర్షన్లను సృష్టించండి.
-  tutorial_thinkersmith-es_longdescription: Mediante el uso de un "Vocabulario Robot"
-    predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar
-    a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento
-    ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones
-    as&iacute; como la valiosa habilidad de depuraci&oacute;n.
+  tutorial_thinkersmith-es_longdescription: "“పదజాలం రోబోట్” ముందు నిర్వచించబడింది,
+    లాస్ ఎస్టూడియంట్స్ డెకుబ్రిర్&aacute;ఎన్ మోడో టాల్ డి లెవర్ ఎ కాబో టారియాస్ ఎస్పెక్
+    ఫికాస్ సిన్ సెర్ ఎస్టాస్ ఎస్టాస్ ఎస్టాస్ ప్రివిమేంట్.&iacute;ఎస్టే సెగ్మెంటో ఎన్స్&ntilde;ఎ
+    లాస్ ఎస్టూడియంట్స్ లా కోనెక్సీ&oacute;ఎన్ ఎంట్రే స్&iacute;ఎంబోలోస్ వై యాక్సియోన్స్
+    అస్ కోమో లా వాలియోసా హబిలిడాడ్ డి డిప్యురాసి ఎన్.&iacute;&oacute;"
   tutorial_pixie_longdescription: Pixie తో కోడ్ ట్యుటోరియల్ యొక్క గంట
   tutorial_play_longdescription: ప్లే ల్యాబ్తో కథను సృష్టించండి లేదా ఆట చేయండి! జంతువులు,
     సముద్రపు దొంగలు, జాంబీస్, నిన్జాస్ మరియు మరెన్నో అక్షరాలను కదిలించండి, శబ్దాలు
@@ -12658,12 +12702,13 @@ te:
   tutorial_googlename _longdescription: ఒక పేరును ఎంచుకుని, కోడ్ ఉపయోగించి పదం యొక్క
     అక్షరాలను జీవితానికి తీసుకురండి. మారుపేరు, పెంపుడు జంతువు పేరు, జంతువు, క్రీడ,
     స్థలం లేదా అభిరుచిని ఎంచుకోండి.
-  tutorial_carnegiezillah_longdescription: Zillah City is thriving, and music is in
-    the air. Rumor has it, the famed Gargantua bot is online and sending the last
-    Toxibots to trash the city block by block…. Grab your cobot hoverboard and get
-    ready to groove, move, and finish off what you started! Players program their
-    cobot hoverbots to change lanes, avoid obstacles, and take out many Toxibots in
-    this rhythm-styled game.
+  tutorial_carnegiezillah_longdescription: జిల్లాః నగరం అభివృద్ధి చెందుతోంది, మరియు
+    సంగీతం గాలిలో ఉంది. పుకారు ఉంది, ప్రఖ్యాత గార్గంతువా బోట్ ఆన్లైన్లో ఉంది మరియు
+    సిటీ బ్లాక్ను బ్లాక్ ద్వారా చెత్త చేయడానికి చివరి టాక్సిబాట్లను పంపుతుంది.…మీ
+    cobot hoverboard పట్టుకోడానికి మరియు గాడి సిద్ధంగా పొందుటకు, తరలించడానికి, మరియు
+    మీరు ప్రారంభించారు ఏమి ఆఫ్ పూర్తి! ఈ లయ-శైలి ఆటలో దారులు మార్చడానికి, అడ్డంకులను
+    నివారించడానికి మరియు అనేక టాక్సిబాట్లను తీయడానికి ఆటగాళ్ళు తమ కోబోట్ హోవర్బోట్లను
+    ప్రోగ్రామ్ చేస్తారు.
   tutorial_nasachspacejam_longdescription: నిజంగా రాళ్ళు రాసే సౌర వ్యవస్థను సృష్టించండి!
     ఈ స్వీయ-గైడెడ్ కార్యాచరణలో సంగీతం, ఖగోళ శాస్త్రం మరియు కోడింగ్ గురించి తెలుసుకోండి
     (కోడింగ్ అనుభవం అవసరం లేదు). మీ స్వంత సంగీత సౌర వ్యవస్థ సృష్టించడం, సంగీతం చేయడానికి
@@ -13498,6 +13543,129 @@ te:
     మా PTO (5 వారాల మొత్తం, సంవత్సరం చివరిలో ఆర్గ్-వైడ్ 2 వారాల కార్యాలయ మూసివేతను
     కలిగి ఉంటుంది), వేసవిలో శుక్రవారాలలో సగం పని దినం వేసవి శుక్రవారాలు మరియు ఇతర
     ఉదార ప్రయోజనాలు.
+  csa_ai_page_hero_title: సాఫ్ట్వేర్ ఇంజనీరింగ్ & కంప్యూటర్ విజన్
+  csa_ai_page_hero_description: 'ఈ రెండు-అధ్యాయాల పోస్ట్-AP CSA మాడ్యూల్ హైస్కూల్
+    విద్యార్థులకు GitHub మరియు GitHub Copilot తో సహా ప్రొఫెషనల్ సాఫ్ట్వేర్ డెవలప్మెంట్
+    సాధనాలతో అనుభవాన్ని అందిస్తుంది మరియు కంప్యూటర్ విజన్ ప్రోగ్రామ్ను అభివృద్ధి చేయడానికి
+    వాస్తవ ప్రపంచ నైపుణ్యాలను వారికి అందిస్తుంది. '
+  csa_ai_page_video_section_title: Code.org ప్రోగ్రామింగ్ పరిసరాల ప్రపంచానికి మించి
+    అడుగు
+  csa_ai_page_video_section_li_1: AI మరియు దాని అనువర్తనాల గురించి తెలుసుకోండి
+  csa_ai_page_video_section_li_2: ప్రొఫెషనల్ సాఫ్ట్వేర్ డెవలప్మెంట్ సాధనాలతో హ్యాండ్స్-ఆన్
+    అనుభవం
+  csa_ai_page_video_section_li_3: పరిశ్రమ-ప్రామాణిక పద్ధతులను తెలుసుకోండి
+  csa_ai_page_video_section_li_4: విమర్శనాత్మక ఆలోచనను పెంపొందించుకోండి
+  csa_ai_page_programming_tools: 'ప్రోగ్రామింగ్ సాధనాలు: గితుబ్, గితుబ్ కోపైలట్, విఎస్కోడ్,
+    టెన్సార్ ఫ్లో '
+  csa_ai_page_professional_learning: ఎవరూ కాదు
+  csa_ai_page_curriculum_topics: 'విషయాలు: ప్రోగ్రామింగ్, డేటా, ఆర్ట్ అండ్ డిజైన్,
+    గేమ్స్ అండ్ యానిమేషన్'
+  csa_ai_page_curriculum_accessibility_features: వివరాల కోసం తరచుగా అడిగే ప్రశ్నలు
+    విభాగాన్ని చూడండి
+  csa_ai_page_curriculum_languages_support: ఆంగ్ల
+  csa_ai_page_article_title_1: కోపైలట్తో నిర్మించండి
+  csa_ai_page_article_description_1: ఇప్పటికే ఉన్న కోడ్ను వివరించడానికి, లోపాలను కనుగొనడానికి
+    మరియు పరిష్కరించడానికి మరియు కొత్త సమస్యలకు పరిష్కారాలను రూపొందించడానికి GitHub
+    Copilot ను జత ప్రోగ్రామర్గా ఎలా ఉపయోగించాలో విద్యార్థులు నేర్చుకుంటారు.
+  csa_ai_page_article_link_1: కోపైలట్ గురించి మరింత తెలుసుకోండి
+  csa_ai_page_article_title_2: మీ స్వంత AI మోడల్ను రూపొందించండి
+  csa_ai_page_article_description_2: చిత్రాలు మరియు హావభావాలు వెబ్క్యామ్ను ఏర్పరుస్తాయి
+    మరియు వినియోగదారులు అనువర్తనాలతో సంభాషించే విధానాన్ని కంప్యూటర్ దృష్టి ఎలా ప్రభావితం
+    చేస్తుందో పరిశీలించడానికి విద్యార్థులు టీచబుల్ మెషీన్ను ఉపయోగించి వారి స్వంత AI
+    మోడళ్లకు శిక్షణ ఇస్తారు.
+  csa_ai_page_article_link_2: పాఠ ప్రణాళికను అన్వేషించండి
+  csa_ai_page_article_title_3: కంప్యూటర్ దృష్టిని అన్వేషించండి
+  csa_ai_page_article_description_3: విద్యార్థులు టీచబుల్ మెషీన్తో సృష్టించిన AI మోడళ్లను
+    జావా అనువర్తనంలో అమలు చేస్తారు, గిట్హబ్ కోపిల్లట్ను ఉపయోగించి విభిన్న ఇన్పుట్లతో
+    పనిచేయడానికి ఇప్పటికే ఉన్న అనువర్తనాల సంస్కరణలను సవరించడంలో వారికి సహాయపడతారు.
+  csa_ai_page_article_link_3: ఒక ఉదాహరణ చూడండి
+  csa_ai_page_learn_more_section_title: ఆర్టిఫిషియల్ ఇంటెలిజెన్స్ గురించి మరింత తెలుసుకోండి
+  csa_ai_page_learn_more_title: ఉపాధ్యాయుల కోసం AI 101 ను అన్వేషించండి
+  csa_ai_page_learn_more_description: ఉపాధ్యాయుల కోసం మా సమగ్ర ఆన్లైన్ లెర్నింగ్ సిరీస్తో
+    ఆర్టిఫిషియల్ ఇంటెలిజెన్స్ (AI) యొక్క అద్భుతమైన ప్రపంచాన్ని మరియు విద్యలో దాని
+    రూపాంతర సామర్థ్యాన్ని కనుగొనండి.
+  csa_ai_page_learn_more_link: టీచర్స్ సిరీస్ కోసం AI 101 చూడండి
+  csa_ai_page_faq_question_01: ఈ మాడ్యూల్ కోసం ముందస్తు అవసరాలు ఏమిటి?
+  csa_ai_page_faq_answer_01_01: 'ఈ మాడ్యూల్లోకి ప్రవేశించే ముందు, విద్యార్థులు జావా
+    యొక్క ఎంట్రీ లెవల్ జ్ఞానాన్ని కలిగి ఉండాలి. ప్రత్యేకంగా, వారు తప్పక గ్రహించండి:'
+  csa_ai_page_faq_answer_01_list_01: "** తరగతులు మరియు వస్తువులు: ** విద్యార్థులకు
+    తరగతులను నిర్వచించడం మరియు ఉపయోగించడం, అలాగే వస్తువులను సృష్టించడం మరియు మార్చడం
+    గురించి తెలిసి ఉండాలి."
+  csa_ai_page_faq_answer_01_list_02: "** రాయడం మరియు కాలింగ్ పద్ధతులు: ** విద్యార్థులు
+    తరగతిలోని పద్ధతులను నిర్వచించగలగాలి, పద్ధతి పారామితులు మరియు రిటర్న్ రకాలను అర్థం
+    చేసుకోవాలి మరియు వస్తువులు లేదా ఇతర పద్ధతుల నుండి పద్ధతులను కాల్ చేయవచ్చు."
+  csa_ai_page_faq_answer_01_list_03: "** 1D శ్రేణులు మరియు శ్రేణి జాబితాలు: ** వారు
+    ఒక డైమెన్షనల్ శ్రేణులను మరియు శ్రేణి జాబితాలను ప్రకటించడం, ప్రారంభించడం మరియు
+    మార్చడంలో నైపుణ్యం కలిగి ఉండాలి, వాటి ద్వారా పునరావృతం చేయడంతో సహా."
+  csa_ai_page_faq_answer_01_list_04: "** ఎంపిక మరియు పునరావృతం: ** షరతులతో కూడిన ప్రకటనలు
+    మరియు ఉచ్చులు లో ఒక ఘన పునాది కీలకం."
+  csa_ai_page_faq_question_01_02: ఆదర్శవంతంగా, AP కంప్యూటర్ సైన్స్ A లేదా ఇలాంటి లోతు
+    మరియు దృ g మైన కోర్సును పూర్తి చేసిన విద్యార్థులు ఈ మాడ్యూల్ కోసం బాగా సిద్ధంగా
+    ఉంటారు.
+  csa_ai_page_faq_question_02: ఈ మాడ్యూల్కు అవసరమైన సాఫ్ట్వేర్ను నేను ఎలా ఇన్స్టాల్
+    చేయాలి?
+  csa_ai_page_faq_answer_02_01: ఈ మాడ్యూల్ ప్రత్యేకమైనది ఎందుకంటే ఇది Code.org లాబ్స్
+    మరియు సాధనాల కంటే మూడవ పార్టీ సాఫ్ట్వేర్ వాడకాన్ని కలిగి ఉంటుంది. [ఇక్కడ సాఫ్ట్వేర్ను
+    ఇన్స్టాల్ చేయడం గురించి మరింత చదవండి] (%{accessibility_url}).
+  csa_ai_page_faq_question_03: ఈ మాడ్యూల్ను బోధించేటప్పుడు ప్రాప్యత అవసరాలకు నేను
+    ఎలా మద్దతు ఇవ్వగలను?
+  csa_ai_page_faq_answer_03_01: సమగ్ర అభ్యాస వాతావరణానికి ప్రాప్యత అవసరాలను తీర్చడం
+    చాలా ముఖ్యం. [ఇక్కడ ఈ మాడ్యూల్ లో ఉపయోగిస్తారు సాఫ్ట్వేర్ లో సౌలభ్యాన్ని లక్షణాలు
+    గురించి మరింత చదవండి] (%{install_url}).
+  csa_ai_page_faq_question_04: నేను Chromebooks లో VS కోడ్ని ఎలా ఉపయోగించగలను?
+  csa_ai_page_faq_answer_04: Chromebook లో VS కోడ్ని ఉపయోగించడం మరింత సూటిగా మారింది,
+    ప్రత్యేకించి క్రొత్త Chromebook మోడళ్లలో Linux అనువర్తనాలను అమలు చేసే సామర్థ్యంతో.
+    [Chromebooks లో VS కోడ్ను సెటప్ చేయడం గురించి ఇక్కడ మరింత చదవండి] ()%{chromebook_url}.
+  csa_ai_page_faq_question_05: ఈ మాడ్యూల్ కోసం నేను వృత్తిపరమైన అభివృద్ధిని ఎలా పొందగలను?
+  csa_ai_page_faq_answer_05: ఈ కోర్సు కోసం ప్రస్తుతం నిర్దిష్ట వృత్తిపరమైన అభివృద్ధి
+    లేదు. మీ తరగతి గదిలో ఆర్టిఫిషియల్ ఇంటెలిజెన్స్ను ఎలా సంప్రదించాలో మీరు అర్థం చేసుకోవాలనుకుంటే
+    మీరు [ఉపాధ్యాయుల కోసం AI 101 ను అన్వేషించండి] (%{ai_101_url}).
+  csa_ai_page_faq_question_06: ఈ మాడ్యూల్ బోధించడానికి సిఫార్సు చేయబడిన సమయం ఏమిటి?
+  csa_ai_page_faq_answer_06_01: సాఫ్ట్వేర్ ఇంజనీరింగ్ & కంప్యూటర్ విజన్ మాడ్యూల్ సంక్షిప్త
+    సమయ వ్యవధిలో సమగ్ర అభ్యాసాన్ని అందించడానికి ఆలోచనాత్మకంగా నిర్మించబడింది. మొత్తం
+    మాడ్యూల్**2 వారాల సూచన** వరకు రూపొందించబడింది. చాలా పాఠాలు**45 నిమిషాలు** కోసం
+    రూపొందించబడ్డాయి, అయితే విద్యార్థులు జావా ప్రాజెక్ట్ అభివృద్ధిని లోతుగా పరిశోధించే
+    పాఠాలు**90 నిమిషాలు** కోసం రూపొందించబడ్డాయి. ఈ పొడిగించిన సమయం విద్యార్థులకు పని
+    చేస్తున్నప్పుడు అర్థం చేసుకోవడానికి, అమలు చేయడానికి మరియు పరిష్కరించడానికి తగినంత
+    అవకాశాన్ని కలిగి ఉందని నిర్ధారిస్తుంది.
+  csa_ai_page_faq_answer_06_02: మాడ్యూల్ యొక్క నిర్మాణంలో ఉద్దేశపూర్వక వశ్యత కూడా
+    ఉంది. తరగతి గది డైనమిక్స్, విద్యార్థుల నిశ్చితార్థం మరియు మీరు ప్రతి అంశాన్ని
+    అన్వేషించాలనుకుంటున్న లోతుపై ఆధారపడి, మీరు వ్యవధిని సర్దుబాటు చేయవచ్చు. ఉదాహరణకు,
+    45 నిమిషాల పాఠంగా రూపొందించబడిన ఇంట్రో టు కోపిల్లట్ పాఠాన్ని 90 నిమిషాలకు విస్తరించవచ్చు,
+    మీరు ఎంత పెద్ద భాషా నమూనాలు మరియు గిట్హబ్ కోపైలట్ మరియు చాట్జిపిటి వంటి సాధనాలు
+    పనిచేస్తాయో లోతుగా డైవ్ చేయాలనుకుంటే.
+  csa_ai_page_faq_question_07: How can I access answer keys?
+  csa_ai_page_faq_answer_07: ఆమోదించబడిన ఉపాధ్యాయ ఖాతాతో, మీరు నీలిరంగు “టీచర్” లో
+    జవాబు కీలను కనుగొనవచ్చు ఆన్లైన్ పాఠాలు మరియు కార్యకలాపాలలో చూపించే ప్యానెల్ మాత్రమే.
+    మీకు ఆమోదించబడిన ఉపాధ్యాయ ఖాతా అవసరమైతే, మీరు [ఈ ఫారమ్] () ద్వారా రక్షిత ఉపాధ్యాయుడు-మాత్రమే
+    పదార్థాలకు (జవాబు కీలు మొదలైనవి) ప్రాప్యత కోసం దరఖాస్తు చేసుకోవచ్చు.%{form_url}దయచేసి
+    మీ ఖాతాను ధృవీకరించడానికి 3-5 పనిదినాలు పట్టవచ్చని గుర్తుంచుకోండి.
+  csa_ai_page_faq_question_08: ఈ మాడ్యూల్ ప్రమాణాలకు మ్యాప్ చేయబడి ఉందా?
+  csa_ai_page_faq_answer_08: అవును, సాఫ్ట్వేర్ ఇంజనీరింగ్ & కంప్యూటర్ విజన్ పాఠ్యాంశాలు
+    [CSTA K-12 స్టాండర్డ్స్] (%{csta_k12_url}) మరియు [K-12 మార్గదర్శకాలు] () కోసం
+    AI కి మ్యాప్ చేయబడతాయి.%{k12_url}
+  csa_ai_page_faq_question_09: ఈ మాడ్యూల్ నేర్పడానికి ఎంత ఖర్చవుతుంది?
+  csa_ai_page_faq_answer_09_01: మా పాఠ్యాంశాలు మరియు వేదిక ఎవరికైనా, ఎక్కడైనా, బోధించడానికి
+    [ఖర్చు లేదు] (%{no_cost_url}) వద్ద అందుబాటులో ఉన్నాయి!
+  csa_ai_page_faq_answer_09_02: అదనంగా, ఈ మాడ్యూల్లో ఉపయోగించే సాఫ్ట్వేర్ మరియు సాధనాలు
+    ఉచితంగా ఉంటాయి. GitHub కోపైలట్ ధృవీకరించబడిన [teachers](%{teachers_url}) మరియు
+    () కోసం ఉచితం. [students]%{students_url}
+  csa_ai_page_faq_question_10: సాఫ్ట్వేర్ ఇన్స్టాలేషన్ పని చేయకపోతే నేను ఏమి చేయాలి?
+  csa_ai_page_faq_answer_10: సాఫ్ట్వేర్ ఇన్స్టాలేషన్ సమయంలో సమస్యలను ఎదుర్కోవడం సాధారణం,
+    కానీ వాటిని పరిష్కరించడానికి మరియు పరిష్కరించడానికి మీరు అనుసరించగల క్రమమైన దశలు
+    ఉన్నాయి. [ఇక్కడ కొన్ని ట్రబుల్షూటింగ్ చిట్కాలను చూడండి] ()%{troubleshooting_url}.
+  csa_ai_page_faq_question_11: How was the curriculum developed?
+  csa_ai_page_faq_answer_11_01: 'మా సాఫ్ట్వేర్ ఇంజనీరింగ్ & కంప్యూటర్ విజన్ పాఠ్యాంశాలు
+    మా కరికులం విలువలను దృష్టిలో ఉంచుకుని రూపొందించబడ్డాయి. ఈ పాఠ్యాంశాల సృష్టికి
+    ఈ క్రింది లక్ష్యాలు మార్గనిర్దేశం చేస్తాయి:'
+  csa_ai_page_faq_answer_11_list_01: "** లక్ష్యం 1: ** కోడ్ను రూపొందించడానికి, డీబగ్
+    చేయడానికి మరియు సవరించడానికి AI సాధనాలను ఉపయోగించండి."
+  csa_ai_page_faq_answer_11_list_02: "** లక్ష్యం 2: ** జావా ల్యాబ్ నుండి వాస్తవ ప్రపంచ
+    సాధనాలకు పరివర్తనం."
+  csa_ai_page_faq_answer_11_list_03: "** లక్ష్యం 3: ** AI మోడల్స్ ఎలా శిక్షణ పొందుతాయి
+    మరియు ప్రోగ్రామ్లలో కలిసిపోతాయి అనే దానిపై అవగాహన పెంచుకోండి."
+  csa_ai_page_faq_answer_11_02: మా పనికి మార్గనిర్దేశం చేసిన విలువల గురించి మరింత
+    సమాచారం కోసం, దయచేసి మా [పాఠ్య ప్రణాళిక విలువలు] () చూడండి.%{curriculum_values_url}
   language_code:
     ar: అరబిక్
     az: అజర్బైజాని

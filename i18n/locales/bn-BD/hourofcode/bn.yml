@@ -110,19 +110,20 @@ bn:
     বুঝতে সাহায্য করার জন্য সম্পদ আরও ন্যায়সঙ্গত বিশ্ব তৈরি করতে পারে।
   oceans_landing_videos: এআই এবং মেশিন লার্নিং সম্পর্কে ভিডিও
   oceans_behind_the_scenes: 'মহাসাগরের জন্য এআই: দৃশ্যের পিছনে'
-  oceans_behind_the_scenes_1: Levels 2-4 use a pretrained model provided by the <a
-    href="https://www.tensorflow.org/" >TensorFlow</a> <a href="https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md">
-    MobileNet </a> project. A MobileNet model is a <a href="https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks">convolutional
-    neural network</a> that has been trained on <a href="http://www.image-net.org/">ImageNet</a>,
-    a dataset of over 14 million images hand-annotated with words such as "balloon"
-    or "strawberry". In order to customize this model with the labeled training data
-    the student generates in this activity, we use a technique called <a href="https://en.wikipedia.org/wiki/Transfer_learning">Transfer
-    Learning</a>. Each image in the training dataset is fed to MobileNet, as pixels,
-    to obtain a list of annotations that are most likely to apply to it. Then, for
-    a new image, we feed it to MobileNet and compare its resulting list of annotations
-    to those from the training dataset. We classify the new image with the same label
-    (such as "fish" or "not fish") as the images from the training set with the most
-    similar results.
+  oceans_behind_the_scenes_1: লেভেল ২-৪ <a href="https://www.tensorflow.org/" >টেন্সরফ্লো</a>
+    <a href="https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md">
+    মোবাইলনেট প্রকল্পের দ্বারা সরবরাহিত একটি প্রাক-প্রশিক্ষিত মডেল ব্যবহার করে। </a>
+    একটি MobileNet মডেল হল একটি <a href="https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks">convolutional
+    নিউরাল নেটওয়ার্ক</a> যা <a href="http://www.image-net.org/">ইমেজনেটে প্রশিক্ষিত
+    হয়েছে</a>, 14 মিলিয়নেরও বেশি চিত্রের একটি ডেটাসেট যা “বেলুন” বা “স্ট্রবেরি”
+    শব্দগুলির সাথে হাতে অ্যানোটেটেড। ছাত্র এই কার্যকলাপ উত্পন্ন লেবেল প্রশিক্ষণ তথ্য
+    সঙ্গে এই মডেল কাস্টমাইজ করার জন্য, আমরা <a href="https://en.wikipedia.org/wiki/Transfer_learning">স্থানান্তর
+    লার্নিং নামক একটি কৌশল ব্যবহার</a>। প্রশিক্ষণ ডেটাসেটের প্রতিটি ইমেজ MOBILENet
+    থেকে খাওয়ানো হয়, পিক্সেল হিসাবে, এটিতে প্রয়োগ করার সম্ভাবনা রয়েছে এমন টীকাগুলির
+    একটি তালিকা প্রাপ্ত করার জন্য। তারপর, একটি নতুন ইমেজ জন্য, আমরা MobileNet এটি
+    ভোজন এবং প্রশিক্ষণ ডেটাসেট থেকে যারা টীকা এর ফলে তালিকা তুলনা। আমরা একই লেবেল
+    (যেমন “মাছ” বা “মাছ না”) সঙ্গে নতুন ইমেজ শ্রেণীভুক্ত সবচেয়ে অনুরূপ ফলাফল সঙ্গে
+    সেট প্রশিক্ষণ থেকে ইমেজ হিসাবে।
   oceans_behind_the_scenes_1_markdown: স্তর 2-4 [TensorFlow](https://www.tensorflow.org/)
     [MobileNet](https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md)
     প্রকল্প দ্বারা সরবরাহিত একটি pretrained মডেল ব্যবহার করে। একটি MobileNet মডেল
@@ -137,13 +138,12 @@ bn:
     ডেটাসেট থেকে যারা টীকা এর ফলে তালিকা তুলনা। আমরা একই লেবেল (যেমন “মাছ” বা “মাছ
     না”) সঙ্গে নতুন ইমেজ শ্রেণীভুক্ত সবচেয়ে অনুরূপ ফলাফল সঙ্গে সেট প্রশিক্ষণ থেকে
     ইমেজ হিসাবে।
-  oceans_behind_the_scenes_2: Levels 6-8 use a <a href="https://en.wikipedia.org/wiki/Support-vector_machine">Support-Vector
-    Machine</a> (SVM). We look at each component of the fish (such as eyes, mouth,
-    body) and assemble all of the metadata for the components (such as number of teeth,
-    body shape) into a vector of numbers for each fish. We use these vectors to train
-    the SVM. Based on the training data, the SVM separates the "space" of all possible
-    fish into two parts, which correspond to the classes we are trying to learn (such
-    as "blue" or "not blue").
+  oceans_behind_the_scenes_2: মাত্রা 6-8 একটি <a href="https://en.wikipedia.org/wiki/Support-vector_machine">সাপোর্ট-ভেক্টর
+    মেশিন</a> (SVM) ব্যবহার করে। আমরা মাছের প্রতিটি উপাদান তাকান (যেমন চোখ, মুখ, শরীর)
+    এবং উপাদান জন্য মেটাডাটা সব জড়ো (যেমন দাঁত সংখ্যা, শরীরের আকৃতি) প্রতিটি মাছ
+    জন্য সংখ্যার একটি ভেক্টর মধ্যে। আমরা এসভিএম প্রশিক্ষণের জন্য এই ভেক্টর ব্যবহার
+    করি। প্রশিক্ষণ তথ্য উপর ভিত্তি করে, SVM সব সম্ভাব্য মাছের “স্থান” দুটি অংশে আলাদা
+    করে, যা আমরা শিখতে চেষ্টা করছি (যেমন “নীল” বা “নীল নয়”) ক্লাসের সাথে মিলিত হয়।
   oceans_behind_the_scenes_2_markdown: ৬-৮ স্তর একটি [সাপোর্ট-ভেক্টর মেশিন] (https://en.wikipedia.org/wiki/Support-vector_machine)
     (SVM) ব্যবহার করে। আমরা মাছের প্রতিটি উপাদান তাকান (যেমন চোখ, মুখ, শরীর) এবং উপাদান
     জন্য মেটাডাটা সব জড়ো (যেমন দাঁত সংখ্যা, শরীরের আকৃতি) প্রতিটি মাছ জন্য সংখ্যার
@@ -186,6 +186,17 @@ bn:
   grade_level_label_elementary: প্রাথমিক বিদ্যালয়
   grade_level_label_middle: মিডল স্কুল
   grade_level_label_high: উচ্চ বিদ্যালয়
+  curricula_title_elementary: এলিমেন্টারি স্কুল পাঠক্রম
+  curricula_desc_elementary: মজাদার, বিনামূল্যে কোর্স এবং ক্রিয়াকলাপগুলি ব্রাউজ করুন
+    যা আপনাকে আপনার প্রাথমিক বিদ্যালয়ের শিক্ষার্থীদের সাথে কম্পিউটার বিজ্ঞান অন্বেষণ
+    করতে আমন্ত্রণ জানায়।
+  curricula_title_middle: মিডল স্কুল পাঠক্রম
+  curricula_desc_middle: আকর্ষক অফারগুলি ব্রাউজ করুন যা আপনাকে এবং আপনার মিডিল স্কুল
+    শিক্ষার্থীদের একসাথে কম্পিউটার বিজ্ঞান অন্বেষণ করতে সক্ষম করে।
+  curricula_title_high: উচ্চ বিদ্যালয় পাঠক্রম
+  curricula_desc_high: বাধ্যতামূলক কোর্স এবং ক্রিয়াকলাপগুলি ব্রাউজ করুন যা আপনাকে
+    এবং আপনার উচ্চ বিদ্যালয়ের শিক্ষার্থীদের কম্পিউটার বিজ্ঞানের গভীরতর খনন করার জন্য
+    আমন্ত্রণ জানায়।
   students_label: ছাত্র-ছাত্রী
   teachers_label: শিক্ষকবৃন্দ
   teacher_label_csf: সি এস মৌলিক শিক্ষক
@@ -212,6 +223,13 @@ bn:
   call_to_action_explore_choice_level: উদাহরণ পছন্দ স্তর এক্সপ্লোর
   call_to_action_explore_collection: সংগ্রহ এক্সপ্লোর করুন
   call_to_action_explore_unplugged_lesson: আনপ্লাগ করা পাঠ এক্সপ্লোর করুন
+  call_to_action_explore_csf: সিএস মৌলিক এক্সপ্লোর
+  call_to_action_explore_csd: CS আবিষ্কারগুলি এক্সপ্লোর করুন
+  call_to_action_explore_csp: সিএস মূলনীতি এক্সপ্লোর
+  call_to_action_explore_csc: CS সংযোগগুলি এক্সপ্লোর করুন
+  call_to_action_explore_csa: এপি® কম্পিউটার বিজ্ঞান এ এক্সপ্লোর করুন
+  call_to_action_explore_maker: এক্সপ্লোর মেকার পাঠক্রম
+  call_to_action_explore_hoc: কোড টিউটোরিয়াল ঘন্টা এক্সপ্লোর করুন
   call_to_action_try_app_lab: অ্যাপ ল্যাব ব্যবহার করে দেখুন
   call_to_action_view_lesson_plan: পাঠ পরিকল্পনা দেখুন
   call_to_action_self_paced_pl: স্ব-গতিসম্পন্ন পেশাদার শেখার শুরু করুন
@@ -256,6 +274,7 @@ bn:
   call_to_action_notify_available: উপলভ্য হলে আমাকে অবহিত করুন
   call_to_action_register_early_access: প্রারম্ভিক অ্যাক্সেসের জন্য নিবন্ধন করুন
   call_to_action_open_positions: ওপেন পজিশন দেখুন
+  call_to_action_get_guide: গাইড পান
   aria_label_call_to_action_afe: আমাজন ফিউচার ইঞ্জিনিয়ার সম্পর্কে আরও জানুন
   aria_label_call_to_action_teaching_csf: শিক্ষণ কম্পিউটার বিজ্ঞান মৌলিক পেশাদার লার্নিং
     প্রোগ্রাম শুরু করুন
@@ -360,6 +379,8 @@ bn:
   curriculum_name_csa: এপি® কম্পিউটার বিজ্ঞান এ
   curriculum_name_csc_02: কোন CS সংযোগ মডিউল
   curriculum_name_ai: এআই এবং মেশিন লার্নিং
+  curriculum_name_artificial_intelligence: কৃত্রিম বুদ্ধিমত্তা (এআই)
+  curriculum_name_maker: সৃষ্টিকর্তা
   curriculum_name_maker_cp: ডিভাইসগুলির সাথে অ্যাপস তৈরি করা (সার্কিট খেলার মাঠ)
   curriculum_name_maker_microbit: ডিভাইসগুলির সাথে অ্যাপস তৈরি করা (মাইক্রো:বিট)
   curriculum_name_creating_apps_with_devices: ডিভাইসগুলির সাথে অ্যাপ তৈরি করা
@@ -413,6 +434,12 @@ bn:
   curriculum_desc_creating_apps_with_devices: কম্পিউটিং মধ্যে শারীরিক ডিভাইসের ভূমিকা
     অন্বেষণ। হার্ডওয়্যার ইনপুট এবং আউটপুট ব্যবহার করে এমন প্রোগ্রামগুলি বিকাশ করুন।
     মাইক্রো:বিট এবং সার্কিট খেলার মাঠ উভয়ের জন্যই এই ইউনিটের একটি সংস্করণ রয়েছে।
+  curriculum_desc_csa: এপি® কম্পিউটার সায়েন্স এ (AP® সিএসএ) এর জন্য বিনামূল্যে পাঠ্যক্রমের
+    মধ্যে জাভা প্রোগ্রামিং ভাষা শেখার সময় সফ্টওয়্যার ইঞ্জিনিয়ারিং এবং অবজেক্ট ওরিয়েন্টেড
+    ডিজাইনের সাথে শিক্ষার্থীদের পরিচয় করিয়ে দিন।
+  curriculum_desc_maker: মেকার শিক্ষা STEM (বিজ্ঞান, প্রযুক্তি, প্রকৌশল, গণিত) কে
+    ক্লাসরুমে হাতে-কলমে অভিজ্ঞতা এবং সহযোগিতার আমন্ত্রণ জানানোর মাধ্যমে সমস্যার সমাধান
+    এবং সমালোচনামূলক চিন্তাভাবনা শেখানোর জন্য এক ধাপ এগিয়ে নিয়ে যায়।
   collection_hardware: হার্ডওয়্যার- এর উপর ফোকাস
   collection_hardware_desc: শিক্ষার্থীদের সমস্যা সমাধানের জন্য ডেটা এবং শারীরিক ডিভাইস
     ব্যবহার করার ক্ষমতায়ন করে।
@@ -446,6 +473,7 @@ bn:
   module_label_professional_learning: 'প্রফেশনাল লার্নিং:'
   module_label_languages: 'সমর্থিত ভাষা:'
   module_label_accessibility_features: 'প্রবেশাধিকার:'
+  module_label_accessibility_features_full: 'অ্যাক্সেসযোগ্যতার বৈশিষ্ট্য:'
   module_label_educator_tool: শিক্ষাবিদ হাতিয়ার
   module_label_educator_course: শিক্ষাক্রম
   module_label_student_tool: ছাত্র টুল
@@ -453,6 +481,7 @@ bn:
   module_label_student_content_resources: বিষয়বস্তু এবং রিসোর্স
   module_label_new: নতুন
   module_label_coming_soon: শীঘ্রই আসছে
+  module_label_available_now: এখন উপলব্ধ
   module_label_video_series: ভিডিও সিরিজ
   module_label_self_paced: স্ব-গতিসম্পন্ন মডিউল
   module_ages_5_10: 5-10
@@ -463,6 +492,8 @@ bn:
   module_grade_2_5: 2-5
   module_grade_3_5: 3-5
   module_grade_3_8: 3-8
+  module_grade_k_12: K-12
+  module_grade_3_12: 3-12
   module_grade_6_12: 6-12
   module_grade_6_10: 6-10
   module_grade_9_12: 9-12
@@ -477,7 +508,9 @@ bn:
   module_grade_9_12_teachers: ৯-১২ জন শিক্ষক
   module_level_beginner: শিক্ষানবিস
   module_level_intermediate: ইন্টারমিডিয়েট
+  module_level_advanced: অ্যাডভান্সড
   module_duration_45_mins: ৪৫ মিনিট
+  module_duration_2_weeks: 2 সপ্তাহ
   module_duration_1_hr: 1 ঘন্টা
   module_duration_2_hrs: 2 ঘন্টা
   module_duration_3_hrs: 3 ঘন্টা
@@ -556,6 +589,8 @@ bn:
   heading_java_lab: জাভা ল্যাব
   heading_objects_first: প্রথম অবজেক্ট
   heading_these_lessons_will: 'এই পাঠগুলি হবে:'
+  heading_explore_curriculum_catalog: পাঠ্যক্রম ক্যাটালগে আমাদের সমস্ত কোর্স এক্সপ্লোর
+    করুন
   professional_learning_section_desc: আপনি শেখার জন্য প্রস্তুত হিসাবে আপনি প্রয়োজন
     সমর্থন পান। শিক্ষকরা এটি পছন্দ করেন, 90% এর বেশি র্যাংকিং এটি সর্বকালের সেরা পেশাগত
     উন্নয়ন!
@@ -804,6 +839,10 @@ bn:
     ভিডিও সমন্বিত এআইতে বড় পরিবর্তন চালানোর নতুন প্রযুক্তি সম্পর্কে আরও জানুন। এই
     নতুন প্রযুক্তিগুলি বিশেষজ্ঞদের কাছ থেকে সরাসরি কীভাবে কাজ করে তা শুনুন: মিরা মুরাতি,
     ওপেনএআইয়ের সিটিও এবং রানওয়েএমএল এর সিইও ক্রিস্টবাল ভ্যালেনজুয়েলা।'
+  ai_pl_101_llm_slides_title: শিক্ষাবিদদের জন্য বড় ভাষা মডেল অনুরোধ
+  ai_pl_101_llm_slides_desc: চ্যাটজিপিটি এর মত এলএলএম থেকে সেরা সম্ভাব্য আউটপুট পাওয়ার
+    জন্য সরঞ্জামগুলি, শুরু থেকে উন্নত পর্যন্ত। স্টার্টার তাদের পায়ের আঙ্গুল ডুবানোর
+    জন্য অনুরোধ করে, সেইসাথে তাদের সম্ভাব্য সর্বাধিক খুঁজছেন যারা উন্নত সরঞ্জাম অন্তর্ভুক্ত।
   how_ai_works_hero_heading: কিভাবে এআই কাজ করে
   how_ai_works_hero_desc: "“কিভাবে এআই কাজ করে,” আমাদের ভিডিও সিরিজ এবং সহগামী পাঠ
     সঙ্গে এআই বিশ্বের মধ্যে ডুব!"
@@ -1399,10 +1438,10 @@ bn:
     অ্যাক্সেস না থাকলে বিকল্প কার্যক্রম উপলব্ধ।
   csd_page_faq_answer_04_06: ডিভাইসগুলির সাথে অ্যাপস তৈরি করা (বিকল্প A এবং বিকল্প
     B)
-  csd_page_faq_answer_04_07: 'Option A: Classroom set of Circuit Playgrounds. Check
-    out [code.org/maker/circuitplayground](%{url}) for more details.'
-  csd_page_faq_answer_04_08: 'Option B: Classroom set of micro:bit devices. Check
-    out [code.org/maker/microbit](%{url}) for more details.'
+  csd_page_faq_answer_04_07: 'বিকল্প A: সার্কিট খেলার মাঠের ক্লাসরুম সেট। আরও বিস্তারিত
+    জানার জন্য [code.org/maker/সার্কিটখেলার মাঠ] () দেখুন।%{url}'
+  csd_page_faq_answer_04_08: 'বিকল্প বি: মাইক্রো:বিট ডিভাইসের ক্লাসরুম সেট। আরও বিস্তারিত
+    জানার জন্য [code.org/maker/microbit] () দেখুন।%{url}'
   csd_page_faq_answer_04_09: মেকার সরবরাহ, যেমন খালি টিস্যু বক্স বা কার্ডবোর্ড রোলস
     বা স্ক্র্যাচ পেপার
   csd_page_faq_answer_04_10: "*দ্রষ্টব্য: ডিভাইস ইউনিটের সাথে অ্যাপস তৈরি করা দুটি
@@ -1544,9 +1583,10 @@ bn:
     অভিজ্ঞ হওয়ার জন্য ডিজাইন করা হয়েছে যখন দক্ষতা-নির্মাণ পাঠগুলি শিক্ষার্থীদের
     নিজস্ব গতিতে সম্পন্ন করা যায়।
   csf_page_faq_question_06: সিএস ফান্ডামেন্টালের জন্য কি উপকরণ দরকার?
-  csf_page_faq_answer_06: Many lessons have handouts that guide students through activities.
-    These resources can be printed or assigned digitally. Some lessons call for typical
-    classroom supplies and manipulatives. [Visit the CSF Syllabus to learn more](%{syllabus_url}).
+  csf_page_faq_answer_06: অনেক পাঠে হাতেখড়ি রয়েছে যা শিক্ষার্থীদের কার্যক্রমের মাধ্যমে
+    নির্দেশনা প্রদান করে। এই সম্পদ মুদ্রিত বা ডিজিটালরূপে বরাদ্দ করা যেতে পারে। কিছু
+    পাঠ সাধারণ শ্রেণীকক্ষ সরবরাহ এবং manipulatives জন্য কল। [আরো জানার জন্য সিএসএফ
+    সিলেবাস দেখুন] (%{syllabus_url})।
   csa_page_top_desc: Introduce students to software engineering and object-oriented
     design while they learn the Java programming language in this free curriculum
     for [AP® Computer Science A (AP® CSA)](%{csa_url}).
@@ -1620,10 +1660,9 @@ bn:
   hoc_live: লাইভ কোড ঘন্টা
   hoc_live_sign_up_title: আওয়ার অফ কোড লাইভ জন্য সাইন আপ
   hoc_live_learn_title: আওয়ার অফ কোড লাইভ সঙ্গে জানুন
-  hoc_live_sign_up_message: Learn in real time alongside special guests! Students
-    of all ages and abilities, including those without computers, are welcome. Join
-    our mailing list to receive recordings of the episodes and resources to continue
-    learning at home. See past episodes [here](%{episodes_url}).
+  hoc_live_sign_up_message: বিশেষ অতিথিদের পাশাপাশি রিয়েল টাইমে শিখুন! কম্পিউটার
+    ছাড়া যারা সহ সব বয়সের এবং ক্ষমতার ছাত্র, স্বাগত জানাই। বাড়িতে শেখার অবিরত পর্ব
+    এবং সম্পদ রেকর্ডিং পেতে আমাদের মেইলিং তালিকা যোগ দিন। অতীত পর্ব দেখুন [here](%{episodes_url})।
   hoc_live_learn_message: বিশেষ অতিথিদের পাশাপাশি কম্পিউটার বিজ্ঞানের মৌলিক ধারণাগুলি
     শিখুন! কম্পিউটার ছাড়া যারা সহ সব বয়সের এবং ক্ষমতার শিক্ষার্থীরা, আমাদের ভার্চুয়াল
     ওয়ার্কশপে স্বাগত জানাই। আমাদের আওয়ার অফ কোড লাইভ পর্বের মাধ্যমে বাড়িতে শেখা
@@ -1695,8 +1734,8 @@ bn:
   ai_activity_zooniverse: জুনিভার্স - স্ন্যাপশট মাউন্টেন জেব্রা
   ai_activity_zooniverse_desc: ইমেজ বিভিন্ন প্রাণী চিহ্নিত করে বিপন্ন কেপ মাউন্টেন
     জেব্রা রক্ষা করতে সাহায্য করুন।
-  codeorg_homepage_hoc2018_curriculum: Go further with <a href="%{studio_url}/courses"
-    class="hoc2018-curriculum-link">Code.org courses</a>
+  codeorg_homepage_hoc2018_curriculum: <a href="%{studio_url}/courses" class="hoc2018-curriculum-link">Code.org
+    কোর্সের সাথে আরও যান</a>
   codeorg_homepage_hoc2018_dance_heading: আপনার নিজের তৈরি করুন <span class="highlight-word">নাচ&nbsp;পার্টি</span>
   codeorg_homepage_hoc2018_header_line1: কোড ঘন্টা আসছে...
   codeorg_homepage_hoc2018_header_line2_desktop: আপনি <span class="hoc2018-highlight-word">কি
@@ -1996,7 +2035,7 @@ bn:
   hoc_homepage_what_is_hoc_cta_how_to_guide: "[আমাদের কিভাবে গাইড পড়ুন] (%{howto_guide_url})
     আপনার ক্লাসের জন্য একটি ইভেন্টের পরিকল্পনা করতে।"
   hoc_homepage_highlights_heading: কোড হাইলাইট ঘন্টা
-  hoc_homepage_organized_by: The Hour of Code is organized by [Code.org](%{codeorg_url}).
+  hoc_homepage_organized_by: কোড আওয়ার [Code.org](%{codeorg_url}) দ্বারা সংগঠিত হয়।
   signup_closed: আওয়ার অফ কোডের জন্য নিবন্ধন এখন বন্ধ। পরের ঘন্টা কোডের জন্য সাইন
     আপ করতে অনুগ্রহ করে অক্টোবর মাসে আবার চেক করুন।
   signup_registration_not_required: অংশগ্রহণের জন্য আপনাকে নিবন্ধন করতে হবে না! আওয়ার
@@ -2014,8 +2053,8 @@ bn:
     জন্য নিবন্ধন বর্তমানে বন্ধ আছে, তবে আপনি এখনও [একটি ঘন্টা অফ কোড হোস্ট] (%{hoc_activities_url})
     এবং সোশ্যাল মিডিয়াতে উদযাপনে যোগ দিতে পারেন! #HourOfCode হ্যাশট্যাগ ব্যবহার করে
     আপনার ইভেন্টের মজার ছবি বা ভিডিও পোস্ট করুন!'
-  signup_header: Organize an Hour of Code during %{campaign_date}, and register it
-    here.
+  signup_header: একটি ঘন্টা অফ কোড সংগঠিত করুন %{campaign_date}, এবং এটি এখানে নিবন্ধন
+    করুন।
   signup_name_label: আপনার নাম
   signup_name_error: নাম প্রয়োজন।
   signup_email_label: আপনার ইমেইল
@@ -2044,6 +2083,12 @@ bn:
     অথবা কম্পিউটার বিজ্ঞান সংক্রান্ত অন্যান্য সংবাদ সম্পর্কে ইমেইল করতে পারি?
   signup_email_preference_privacy: "(আমাদের গোপনীয়তা নীতি দেখুন)"
   signup_email_preference_yes: হ্যাঁ
+  signup_email_preference_yes_elementary: হ্যাঁ - এলিমেন্টারি স্কুল রিসোর্সগুলিতে
+    আমাকে আপডেট পাঠান
+  signup_email_preference_yes_middle: হ্যাঁ - মিডিল স্কুল রিসোর্সগুলিতে আমাকে আপডেট
+    পাঠান
+  signup_email_preference_yes_high: হ্যাঁ - হাই স্কুল রিসোর্সগুলিতে আমাকে আপডেট পাঠান
+  signup_email_preference_yes_general: হ্যাঁ - আমাকে সাধারণ আপডেট পাঠান
   signup_email_preference_no: না
   signup_email_preference_error: ইমেইলের অগ্রাধিকার প্রয়োজন
   signup_multiple_event_warning: যখন আপনি নিবন্ধন করবেন তখন আমরা আপনার স্কুলের নাম
@@ -2099,7 +2144,7 @@ bn:
     পাওয়া যায়।
   map_title: আওয়ার অফ কোডের মানচিত্র
   map_header: "# টি আওয়ার অফ কোড ২০১৭ ইভেন্ট নিবন্ধিত হয়েছে"
-  map_header_count_year: "%{event_count} events registered in %{year}"
+  map_header_count_year: "%{event_count} নিবন্ধিত ইভেন্টগুলি %{year}"
   see_all_events: সকল ইভেন্টের তালিকা দেখুন
   map_header_company: "# কোম্পানি আয়োজকদের দ্বারা"
   map_header_country: "%{country} এ # টি"
@@ -2132,39 +2177,40 @@ bn:
     (@codeorg সমর্থনের জন্য ধন্যবাদ %{random_donor} )'
   hoc_faq_title: প্রায়শই জিজ্ঞাসিত প্রশ্নাবলী
   hoc_faq_what_is_hoc_q: Hour of Code (এক ঘন্টার Code) কি?
-  hoc_faq_what_is_hoc_a: The Hour of Code started as a one-hour introduction to computer
-    science, designed to demystify "code", to show that anybody can learn the basics,
-    and to broaden participation in the field of computer science. It has since become
-    a worldwide effort to celebrate computer science, starting with 1-hour coding
-    activities but expanding to all sorts of community efforts. Check out the <a href='%{tutorials}'>tutorials
-    and activities</a>. This grassroots campaign is supported by over <a href='%{partners}'>400
-    partners</a> and 200,000 educators worldwide.
-  hoc_faq_what_is_hoc_a_markdown: The Hour of Code started as a one-hour introduction
-    to computer science, designed to demystify "code", to show that anybody can learn
-    the basics, and to broaden participation in the field of computer science. It
-    has since become a worldwide effort to celebrate computer science, starting with
-    1-hour coding activities but expanding to all sorts of community efforts. Check
-    out the [tutorials and activities](%{tutorials}). This grassroots campaign is
-    supported by over [400 partners](%{partners}) and 200,000 educators worldwide.
+  hoc_faq_what_is_hoc_a: আওয়ার অফ কোডটি কম্পিউটার বিজ্ঞানের এক ঘণ্টার প্রবর্তন হিসাবে
+    শুরু হয়েছিল, যা “কোড” কে অমান্যকরণ করার জন্য ডিজাইন করা হয়েছে, যাতে দেখা যায়
+    যে কেউ মূলসূত্র শিখতে পারে এবং কম্পিউটার বিজ্ঞানের ক্ষেত্রে অংশগ্রহনকে বিস্তৃত
+    করতে পারে। এটি কম্পিউটার বিজ্ঞান উদযাপন বিশ্বব্যাপী প্রচেষ্টায় পরিণত হয়েছে,
+    1 ঘন্টা কোডিং কার্যক্রম শুরু করে কিন্তু সব ধরণের সম্প্রদায়ের প্রচেষ্টায় বিস্তৃত।
+    <a href='%{tutorials}'>টিউটোরিয়াল এবং ক্রিয়াকলাপগুলি দেখুন</a>। তৃণমূল পর্যায়ের
+    এই প্রচারণা বিশ্বব্যাপী <a href='%{partners}'>৪০০ এর বেশি অংশীদার</a> এবং ২০০,০০০
+    শিক্ষানুরাগী দ্বারা সমর্থিত।
+  hoc_faq_what_is_hoc_a_markdown: আওয়ার অফ কোডটি কম্পিউটার বিজ্ঞানের এক ঘণ্টার প্রবর্তন
+    হিসাবে শুরু হয়েছিল, যা “কোড” কে অমান্যকরণ করার জন্য ডিজাইন করা হয়েছে, যাতে দেখা
+    যায় যে কেউ মূলসূত্র শিখতে পারে এবং কম্পিউটার বিজ্ঞানের ক্ষেত্রে অংশগ্রহনকে বিস্তৃত
+    করতে পারে। এটি কম্পিউটার বিজ্ঞান উদযাপন বিশ্বব্যাপী প্রচেষ্টায় পরিণত হয়েছে,
+    1 ঘন্টা কোডিং কার্যক্রম শুরু করে কিন্তু সব ধরণের সম্প্রদায়ের প্রচেষ্টায় বিস্তৃত।
+    [টিউটোরিয়াল এবং ক্রিয়াকলাপ] (%{tutorials}) দেখুন। এই তৃণমূল অভিযান বিশ্বব্যাপী
+    [[৪০০ সহযোগী]] (%{partners}) এবং ২০০,০০০ শিক্ষানুরাগী দ্বারা সমর্থিত।
   hoc_faq_last_year: টিউটোরিয়াল চেষ্টা করুন
   hoc_faq_when_is_hoc_q: কোড কেয়ামত কখন হবে?
-  hoc_faq_when_is_hoc_a: The Hour of Code takes place each year during <a href='%{csedweek_url}'>Computer
-    Science Education Week</a>. The %{campaign_date_year} Computer Science Education
-    Week will be %{campaign_date_full}, but you can host an Hour of Code all year-round.
-    Computer Science Education Week is held annually in recognition of the birthday
-    of computing pioneer <a href='%{grace_hopper}'>Admiral Grace Murray Hopper</a>
-    (December 9, 1906).
-  hoc_faq_when_is_hoc_a_markdown: The Hour of Code takes place each year during [Computer
-    Science Education Week](%{csedweek_url}). The %{campaign_date_year} Computer Science
-    Education Week will be %{campaign_date_full}, but you can host an Hour of Code
-    all year-round. Computer Science Education Week is held annually in recognition
-    of the birthday of computing pioneer [Admiral Grace Murray Hopper](%{grace_hopper})
-    (December 9, 1906).
+  hoc_faq_when_is_hoc_a: "<a href='%{csedweek_url}'>কম্পিউটার বিজ্ঞান শিক্ষা সপ্তাহে
+    প্রতি বছর আওয়ার অফ কোড অনুষ্ঠিত</a>হয়। %{campaign_date_year} কম্পিউটার বিজ্ঞান
+    শিক্ষা সপ্তাহ হবে %{campaign_date_full}, কিন্তু আপনি সারা বছর ধরে একটি ঘন্টা অফ
+    কোড হোস্ট করতে পারেন। কম্পিউটিং পথিকৃৎ <a href='%{grace_hopper}'>অ্যাডমিরাল গ্রেস
+    মারে হপার</a> (৯ ডিসেম্বর, ১৯০৬) জন্মদিনের স্বীকৃতিস্বরূপ প্রতিবছর কম্পিউটার বিজ্ঞান
+    শিক্ষা সপ্তাহ অনুষ্ঠিত হয়।"
+  hoc_faq_when_is_hoc_a_markdown: প্রতি বছর [কম্পিউটার বিজ্ঞান শিক্ষা সপ্তাহ] (%{csedweek_url})
+    সময় আওয়ার অফ কোড অনুষ্ঠিত হয়। %{campaign_date_year} কম্পিউটার বিজ্ঞান শিক্ষা
+    সপ্তাহ হবে %{campaign_date_full}, কিন্তু আপনি সারা বছর ধরে একটি ঘন্টা অফ কোড হোস্ট
+    করতে পারেন। কম্পিউটিং অগ্রদূত [এডমিরাল গ্রেস মারে হপার] (%{grace_hopper}) (৯ই
+    ডিসেম্বর, ১৯০৬) জন্মদিনের স্বীকৃতিস্বরূপ কম্পিউটার বিজ্ঞান শিক্ষা সপ্তাহ বার্ষিক
+    অনুষ্ঠিত হয়।
   hoc_faq_why_cs_q: কম্পিউটার সায়েন্স কেন?
-  hoc_faq_why_cs_a: "<i>Every</i> student should have the opportunity to learn computer
-    science. It helps nurture problem-solving skills, logic and creativity. By starting
-    early, students will have a foundation for success in any 21st-century career
-    path. See more stats <a href='%{stats_url}'>here</a>."
+  hoc_faq_why_cs_a: "<i>প্রত্যেক</i> শিক্ষার্থীর কম্পিউটার বিজ্ঞান শেখার সুযোগ থাকা
+    উচিত। এটি সমস্যা সমাধানের দক্ষতা, যুক্তিবিজ্ঞান এবং সৃজনশীলতার বিকাশে সহায়তা
+    করে। প্রথম দিকে শুরু করে, ছাত্রদের যে কোন 21 শতকের কর্মজীবনের পথে সাফল্যের ভিত্তি
+    থাকবে। <a href='%{stats_url}'>এখানে আরো পরিসংখ্যান দেখুন</a>।"
   hoc_faq_why_cs_a_markdown: _Evy_ শিক্ষার্থীর কম্পিউটার বিজ্ঞান শেখার সুযোগ থাকা
     উচিত। এটি সমস্যা সমাধানের দক্ষতা, যুক্তিবিজ্ঞান এবং সৃজনশীলতার বিকাশে সহায়তা
     করে। প্রথম দিকে শুরু করে, ছাত্রদের যে কোন 21 শতকের কর্মজীবনের পথে সাফল্যের ভিত্তি
@@ -2183,11 +2229,10 @@ bn:
     কমিটি দ্বারা চালিত এবং সেই সাথে <a href='%{partner_url}'>অংশীদার</a> এর একটি অভূতপূর্ব
     জোট যা আওয়ার অফ কোডকে সমর্থন করার জন্য একত্রিত হয়েছে - মাইক্রোসফট, অ্যাপল, আমাজন,
     ছেলেদের এবং গার্লস ক্লাব অফ আমেরিকা এবং কলেজ বোর্ড সহ।
-  hoc_faq_behind_hoc_a_markdown: The Hour of Code is organized by Code.org and driven
-    by the Hour of Code Review Committee as well as an unprecedented coalition of
-    [partners](%{partner_url}) that have come together to support the Hour of Code
-    — including Microsoft, Apple, Amazon, Boys and Girls Clubs of America and the
-    College Board.
+  hoc_faq_behind_hoc_a_markdown: অর্গ দ্বারা আওয়ার অফ কোড সংগঠিত এবং আওয়ার অফ কোড
+    রিভিউ কমিটি দ্বারা চালিত এবং একই সাথে [partners](%{partner_url}) এর একটি অভূতপূর্ব
+    জোট যা আওয়ার অফ কোডকে সমর্থন করার জন্য একত্রিত হয়েছে - যার মধ্যে রয়েছে মাইক্রোসফট,
+    অ্যাপল, আমাজন, বয়েজ এবং গার্লস ক্লাব অফ আমেরিকা এবং কলেজ বোর্ড।
   hoc_faq_host_q: আমি কোডিং সম্পর্কে কিছুই জানি না। আমি কি এখনও একটি ইভেন্ট হোস্ট
     করতে পারি?
   hoc_faq_host_a: অবশ্যই। আওয়ার অফ কোড কার্যক্রম স্ব-পরিচালিত। আপনাকে যা করতে হবে
@@ -2203,11 +2248,13 @@ bn:
     আছে। আমাদের [কিভাবে গাইড] (%{howto}) পড়ার মাধ্যমে আপনার ইভেন্ট পরিকল্পনা শুরু
     করুন।
   hoc_faq_devices_q: আমার ছাত্রদের জন্য কোন ডিভাইস ব্যবহার করা উচিত?
-  hoc_faq_devices_a: Code.org tutorials work on all devices and browsers. You can
-    see more information about Code.org's tutorial tech needs <a href='%{codeorg_url}/educate/it'>here</a>.
-    Tech needs for non-Code.org tutorials can be found on <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a>
-    in the tutorial specific description. Don't forget we also offer <a href='%{unplugged_url}'>unplugged
-    activities</a> if your school can't accommodate the tutorials!
+  hoc_faq_devices_a: Code.org টিউটোরিয়াল সব ডিভাইস এবং ব্রাউজারে কাজ করে। আপনি <a
+    href='%{codeorg_url}/educate/it'>এখানে</a>Code.org এর টিউটোরিয়াল কারিগরি চাহিদা
+    সম্পর্কে আরও তথ্য দেখতে পারেন। Non-code.org টিউটোরিয়ালের জন্য কারিগরি চাহিদাগুলি
+    টিউটোরিয়ালের নির্দিষ্ট <a href='%{codeorg_url}/learn'>%{partner_url}বিবরণে</a>
+    /লার্ন-এ পাওয়া যাবে।</a> যদি আপনার স্কুল টিউটোরিয়ালগুলি মিটমাট করতে না পারে
+    তবে আমরা <a href='%{unplugged_url}'>আনপ্লাগড ক্রিয়াকলাপগুলিও অফার করি তা ভুলে
+    যাবেন না!
   hoc_faq_devices_a_markdown: Code.org টিউটোরিয়াল সব ডিভাইস এবং ব্রাউজারে কাজ করে।
     আপনি Code.org এর টিউটোরিয়াল কারিগরি প্রয়োজন [here](%{codeorg_url}/education/it)
     সম্পর্কে আরও তথ্য দেখতে পারেন। Non-code.org টিউটোরিয়ালের জন্য কারিগরি চাহিদাগুলি
@@ -2215,32 +2262,33 @@ bn:
     যাবে। ভুলে যাবেন না যে আমরা [unplugged ক্রিয়াকলাপ] অফার করি (%{unplugged_url})
     যদি আপনার স্কুল টিউটোরিয়ালগুলি মিটমাট করতে না পারে!
   hoc_faq_need_computers_q: প্রত্যেক অংশগ্রহণকারীর জন্য কি আমার কম্পিউটার দরকার?
-  hoc_faq_need_computers_a: No. We have Hour of Code tutorials that work on PCs, smartphones,
-    tablets, and some that require no computer at all! You can join wherever you are,
-    with whatever you have. <p><i>Here are a few options:</i> <br> <ul> <li><b>Work
-    in pairs.</b> <a href='%{pair_programming_research}'>Research shows</a> students
-    learn best with <a href='%{pair_programming_video}'>pair programming</a>, sharing
-    a computer and working together. Encourage your students to double up. <li><b>Use
-    a projected screen.</b> If you have a projector and screen for a Web-connected
-    computer, your entire group can do an Hour of Code together. Watch video portions
-    together and take turns solving puzzles or answering questions. <li><b>Go unplugged.</b>
-    We offer <a href='%{unplugged_url}'>tutorials that require no computer</a> at
-    all. </ul>
+  hoc_faq_need_computers_a: 'না। আমাদের কাছে আওয়ার অফ কোড টিউটোরিয়াল রয়েছে যা পিসি,
+    স্মার্টফোন, ট্যাবলেট এবং এমন কিছু ক্ষেত্রে কাজ করে যা কোনও কম্পিউটারের প্রয়োজন
+    নেই! আপনি যেখানেই থাকুন না কেন, যেখানেই থাকুন না কেন আপনি যোগ দিতে পারেন। <p><i>এখানে
+    কয়েকটি বিকল্প রয়েছে: জোড়ায়</i> <br> <ul> <li><b>কাজ করুন।</b> <a href=''%{pair_programming_research}''>গবেষণায়
+    দেখা</a> যায় শিক্ষার্থীরা <a href=''%{pair_programming_video}''>জুড়ি প্রোগ্রামিং</a>,
+    কম্পিউটার ভাগ করে একসাথে কাজ করে ভাল শেখে। আপনার ছাত্রদের দ্বিগুণ করার জন্য উত্সাহিত
+    করুন। <li><b>একটি অভিক্ষিপ্ত পর্দা ব্যবহার করুন</b> আপনার যদি একটি ওয়েব সংযুক্ত
+    কম্পিউটারের জন্য একটি প্রজেক্টর এবং স্ক্রিন থাকে, তাহলে আপনার পুরো গ্রুপ একসাথে
+    একটি ঘন্টা অফ কোড করতে পারে। ভিডিও অংশগুলি একসাথে দেখুন এবং পাজল সমাধান বা প্রশ্নের
+    উত্তর দিন। <li><b>প্লাগ খুলে যাও।</b> আমরা <a href=''%{unplugged_url}''>টিউটোরিয়াল
+    অফার করি যা কোনও কম্পিউটারের</a> প্রয়োজন হয় না। </ul>'
   hoc_faq_need_computers_a_markdown: |-
-    No. We have Hour of Code tutorials that work on PCs, smartphones, tablets, and some that require no computer at all! You can join wherever you are, with whatever you have.
+    না। আমাদের কাছে আওয়ার অফ কোড টিউটোরিয়াল রয়েছে যা পিসি, স্মার্টফোন, ট্যাবলেট এবং এমন কিছু ক্ষেত্রে কাজ করে যা কোনও কম্পিউটারের প্রয়োজন নেই! আপনি যেখানেই থাকুন না কেন, যেখানেই থাকুন না কেন আপনি যোগ দিতে পারেন।
 
-    _Here are a few options:_
+    _এখানে কয়েকটি বিকল্প রয়েছে:_
 
-    - **Work in pairs.** [Research shows](%{pair_programming_research}) students learn best with [pair programming](%{pair_programming_video}), sharing a computer and working together. Encourage your students to double up.
-    - **Use a projected screen.** If you have a projector and screen for a Web-connected computer, your entire group can do an Hour of Code together. Watch video portions together and take turns solving puzzles or answering questions.
-    - **Go unplugged.** We offer [tutorials that require no computer](%{unplugged_url}) at all.
-  hoc_faq_international_q: I am in <country>. How do I participate internationally?
-  hoc_faq_international_a: Anyone can organize an Hour of Code event, anywhere in
-    the world. Last year, students worldwide joined together for the Hour of Code.
-    Find out more <a href='/promote'>here</a>.
-  hoc_faq_international_a_markdown: Anyone can organize an Hour of Code event, anywhere
-    in the world. Last year, students worldwide joined together for the Hour of Code.
-    Find out more [here](%{promote}).
+    - ** জোড়ায় কাজ করুন** [গবেষণা শো] (%{pair_programming_research}) শিক্ষার্থীরা [জোড়া প্রোগ্রামিং] (%{pair_programming_video}), একটি কম্পিউটার ভাগ করে একসাথে কাজ করে ভাল শেখে। আপনার ছাত্রদের দ্বিগুণ করার জন্য উত্সাহিত করুন।
+    ** একটি প্রজেক্টেড স্ক্রিন ব্যবহার করুন** যদি আপনার ওয়েব সংযুক্ত কম্পিউটারের জন্য একটি প্রজেক্টর এবং স্ক্রিন থাকে, তাহলে আপনার পুরো গ্রুপ একসাথে একটি ঘন্টা অফ কোড করতে পারে। ভিডিও অংশগুলি একসাথে দেখুন এবং পাজল সমাধান বা প্রশ্নের উত্তর দিন।
+    ** আনপ্লাগড যান। ** আমরা [টিউটোরিয়াল যা কম্পিউটারের প্রয়োজন নেই] () সব সময়ে অফার করি।%{unplugged_url}
+  hoc_faq_international_q: আমি আছি <country>। আমি কিভাবে আন্তর্জাতিকভাবে অংশগ্রহণ
+    করব?
+  hoc_faq_international_a: যে কেউ বিশ্বের যে কোন স্থানে, একটি আওয়ার অফ কোড ইভেন্ট
+    সংগঠিত করতে পারেন। গত বছর বিশ্বব্যাপী শিক্ষার্থীরা আওয়ার অফ কোড এর জন্য একত্রে
+    যোগ দিয়েছিল। <a href='/promote'>এখানে আরো জানুন</a>।
+  hoc_faq_international_a_markdown: যে কেউ বিশ্বের যে কোন স্থানে, একটি আওয়ার অফ কোড
+    ইভেন্ট সংগঠিত করতে পারেন। গত বছর বিশ্বব্যাপী শিক্ষার্থীরা আওয়ার অফ কোড এর জন্য
+    একত্রে যোগ দিয়েছিল। আরও খুঁজুন [here](%{promote})।
   hoc_faq_tutorial_q: আমি কিভাবে একটি ঘন্টা কোড টিউটোরিয়াল করতে পারি?
   hoc_faq_tutorial_a: আপনি যদি একটি টিউটোরিয়াল অংশীদার হতে আগ্রহী হন, <a href='/tutorial-guidelines'>আমাদের
     নির্দেশিকা এবং নির্দেশাবলী দেখুন</a>। আমরা আকর্ষণীয় বিকল্প বিভিন্ন হোস্ট করতে
@@ -2326,30 +2374,29 @@ bn:
     আমরা আওয়ার অফ কোড ট্র্যাকারটি ব্যবহারের সঠিক পরিমাপ দেখতে পাই না। এটা অবশ্যই
     directionally সঠিক, এবং দেখায় যে লক্ষ লক্ষ ছাত্র অনেক দশ অংশগ্রহণ করেছেন।'
   hoc_faq_one_hour_q: এক ঘন্টার মধ্যে কতটা শিখতে পারে?
-  hoc_faq_one_hour_a: The goal of the Hour of Code is not to teach anybody to become
-    an expert computer scientist in one hour. One hour is only enough to learn that
-    computer science is fun and creative, that it is accessible at all ages, for all
-    students, regardless of background. The measure of success of this campaign is
-    not in how much CS students learn - the success is reflected in broad participation
-    across gender and ethnic and socioeconomic groups, and the resulting increase
-    in enrollment and participation we see in CS courses at all grade levels. Millions
-    of the participating teachers and students have decided to go beyond one hour
-    -  to learn for a whole day or a whole week or longer, and many students have
-    decided to enroll in a whole course (or even a college major) as a result. <br/><br/>
-    Besides the students, another "learner" is the educator who gains the confidence
-    after one hour that they can teach computer science even though they may not have
-    a college degree as a computer scientist. Tens of thousands of teachers decide
-    to pursue computer science further, either attending PD or offering follow-on
-    online courses, or both. And this applies to school administrators too, who realize
-    that computer science is something their students want and their teachers are
-    capable of. <br/><br/> Above all, what all participants can learn in an hour is
-    that we can do this.
+  hoc_faq_one_hour_a: আওয়ার অফ কোডের লক্ষ্য এক ঘণ্টার মধ্যে কাউকে একজন বিশেষজ্ঞ কম্পিউটার
+    বিজ্ঞানী হতে শেখানো নয়। কম্পিউটার বিজ্ঞান মজা এবং সৃজনশীল যে শিখতে এক ঘন্টা শুধুমাত্র
+    যথেষ্ট, এটি সব বয়সের জন্য অ্যাক্সেসযোগ্য, সব ছাত্রদের জন্য, ব্যাকগ্রাউন্ড নির্বিশেষে।
+    এই প্রচারাভিযানের সাফল্যের পরিমাপ সিএস শিক্ষার্থীরা কতটুকু শেখে তা নয় - এই সাফল্য
+    লিঙ্গ এবং জাতিগত ও আর্থসামাজিক গোষ্ঠী জুড়ে বিস্তৃত অংশগ্রহণে প্রতিফলিত হয় এবং
+    এর ফলে আমরা সকল গ্রেড স্তরে সিএস কোর্সে তালিকাভুক্তি এবং অংশগ্রহণ দেখি। অংশগ্রহণকারী
+    শিক্ষক এবং ছাত্রদের লক্ষ লক্ষ এক ঘন্টা অতিক্রম করার সিদ্ধান্ত নিয়েছে - একটি পুরো
+    দিন বা পুরো সপ্তাহ বা তার বেশি সময় শিখতে, এবং অনেক ছাত্র একটি সম্পূর্ণ কোর্স
+    (বা এমনকি একটি কলেজ প্রধান) একটি ফলাফল হিসাবে নথিভুক্ত করার সিদ্ধান্ত নিয়েছে।
+    <br/><br/> শিক্ষার্থীদের পাশাপাশি আরেকজন “শিক্ষার্থী” হলেন সেই শিক্ষিকা যিনি এক
+    ঘণ্টার পর আস্থা অর্জন করেন যে তারা কম্পিউটার বিজ্ঞান শিক্ষা দিতে পারেন যদিও কম্পিউটার
+    বিজ্ঞানী হিসেবে তাদের কলেজ ডিগ্রী নাও থাকতে পারে। হাজার হাজার শিক্ষক কম্পিউটার
+    বিজ্ঞান আরও এগিয়ে যাওয়ার সিদ্ধান্ত নেয়, পিডি যোগদান বা ফলো-অন অনলাইন কোর্স
+    অফার করে, বা উভয়ই। এবং এটি স্কুল অ্যাডমিনিস্ট্রেটরদের ক্ষেত্রেও প্রযোজ্য, যারা
+    উপলব্ধি করে যে কম্পিউটার বিজ্ঞান এমন কিছু যা তাদের ছাত্ররা চায় এবং তাদের শিক্ষকরা
+    সক্ষম। <br/><br/> সর্বোপরি, সমস্ত অংশগ্রহণকারীরা এক ঘন্টার মধ্যে কী শিখতে পারে
+    তা হল আমরা এটি করতে পারি।
   hoc_faq_one_hour_a_markdown: |-
-    The goal of the Hour of Code is not to teach anybody to become an expert computer scientist in one hour. One hour is only enough to learn that computer science is fun and creative, that it is accessible at all ages, for all students, regardless of background. The measure of success of this campaign is not in how much CS students learn - the success is reflected in broad participation across gender, racial/ethnic, and socioeconomic groups, and the resulting increase in enrollment and participation we see in CS courses at all grade levels. Millions of the participating teachers and students have decided to go beyond one hour -  to learn for a whole day or a whole week or longer, and many students have decided to enroll in a whole course (or even a college major) as a result.
+    আওয়ার অফ কোডের লক্ষ্য এক ঘণ্টার মধ্যে কাউকে একজন বিশেষজ্ঞ কম্পিউটার বিজ্ঞানী হতে শেখানো নয়। কম্পিউটার বিজ্ঞান মজা এবং সৃজনশীল যে শিখতে এক ঘন্টা শুধুমাত্র যথেষ্ট, এটি সব বয়সের জন্য অ্যাক্সেসযোগ্য, সব ছাত্রদের জন্য, ব্যাকগ্রাউন্ড নির্বিশেষে। এই প্রচারাভিযানের সাফল্যের পরিমাপ সি এস ছাত্ররা কতটুকু শেখে তা নয় - এই সাফল্য লিঙ্গ, জাতিগত/জাতিগত এবং আর্থসামাজিক গোষ্ঠী জুড়ে বিস্তৃত অংশগ্রহণে প্রতিফলিত হয় এবং এর ফলে তালিকাভুক্তি বৃদ্ধি এবং অংশগ্রহণের ফলে আমরা সব গ্রেড স্তরে সি এস কোর্সে দেখতে পাই। অংশগ্রহণকারী শিক্ষক এবং ছাত্রদের লক্ষ লক্ষ এক ঘন্টা অতিক্রম করার সিদ্ধান্ত নিয়েছে - একটি পুরো দিন বা পুরো সপ্তাহ বা তার বেশি সময় শিখতে, এবং অনেক ছাত্র একটি সম্পূর্ণ কোর্স (বা এমনকি একটি কলেজ প্রধান) একটি ফলাফল হিসাবে নথিভুক্ত করার সিদ্ধান্ত নিয়েছে।
 
-    Besides the students, another "learner" is the educator who gains the confidence after one hour that they can teach computer science even though they may not have a college degree as a computer scientist. Tens of thousands of teachers decide to pursue computer science further, either attending PD or offering follow-on online courses, or both. And this applies to school administrators too, who realize that computer science is something their students want and their teachers are capable of.
+    শিক্ষার্থীদের পাশাপাশি আরেকজন “শিক্ষার্থী” হলেন সেই শিক্ষিকা যিনি এক ঘণ্টার পর আস্থা অর্জন করেন যে তারা কম্পিউটার বিজ্ঞান শিক্ষা দিতে পারেন যদিও কম্পিউটার বিজ্ঞানী হিসেবে তাদের কলেজ ডিগ্রী নাও থাকতে পারে। হাজার হাজার শিক্ষক কম্পিউটার বিজ্ঞান আরও এগিয়ে যাওয়ার সিদ্ধান্ত নেয়, পিডি যোগদান বা ফলো-অন অনলাইন কোর্স অফার করে, বা উভয়ই। এবং এটি স্কুল অ্যাডমিনিস্ট্রেটরদের ক্ষেত্রেও প্রযোজ্য, যারা উপলব্ধি করে যে কম্পিউটার বিজ্ঞান এমন কিছু যা তাদের ছাত্ররা চায় এবং তাদের শিক্ষকরা সক্ষম।
 
-    Above all, what all participants can learn in an hour is that we can do this.
+    সর্বোপরি, সমস্ত অংশগ্রহণকারীরা এক ঘন্টার মধ্যে কী শিখতে পারে তা হল আমরা এটি করতে পারি।
   hoc_faq_more_questions_q: এখনও আরো প্রশ্ন আছে?
   hoc_faq_more_questions_a: আমাদের <a href='http://support.code.org'>সমর্থন ফোরাম</a>এ
     একটি উত্তর খুঁজে বের করার চেষ্টা করুন।
@@ -2511,7 +2558,7 @@ bn:
     নেইমার জুনিয়র, কারমেলো অ্যান্থনি এবং আরো অনেক শিক্ষার্থীদের নিজেদের ধাক্কা দিতে
     অনুপ্রাণিত করেন।
   highlights_constant_athletes_short_heading: নিজেকে ধাক্কা
-  footer_copyright_message: Copyright %{current_year} Code.org. All rights reserved.
+  footer_copyright_message: কপিরাইট %{current_year} কোড। সকল অধিকার সংরক্ষিত।
   footer_trademark_message: ঘন্টা কোড® এবং হোরা দেল কোডিগো® Code.org এর ট্রেডমার্ক।
   footer_built_on_github: মাইক্রোসফট থেকে GitHub নির্মিত
   footer_menu_partners: পার্টনার্স
@@ -4735,9 +4782,9 @@ bn:
     উপর ভিত্তি করে আমাদের পাঠ্যক্রমটি পৃথকীকৃত, এবং প্রতিটি ছাত্রের প্রয়োজনে নিজেকে
     ছাঁচে ফেলে। '
   tutorial_trinket_longdescription: |-
-    Choose from lessons, challenges, and tutorials about the Python programming language.  Make turtle-based animations and solve puzzles, all while learning the basics of this powerful language.
+    পাইথন প্রোগ্রামিং ভাষা সম্পর্কে পাঠ, চ্যালেঞ্জ এবং টিউটোরিয়াল থেকে চয়ন করুন। কচ্ছপ ভিত্তিক অ্যানিমেশন তৈরি করুন এবং পাজল সমাধান করুন, সব এই শক্তিশালী ভাষা মূলসূত্র শেখার সময়।
 
-    Activities range from block-based programming to real Python code, with activities appropriate for most age levels.  Select lessons available in Spanish, Korean and Chinese!
+    ক্রিয়াকলাপ ব্লক-ভিত্তিক প্রোগ্রামিং থেকে বাস্তব পাইথন কোড পর্যন্ত বিস্তৃত, অধিকাংশ বয়সের স্তরের জন্য উপযুক্ত ক্রিয়াকলাপ। স্প্যানিশ, কোরিয়ান এবং চীনা ভাষায় উপলব্ধ পাঠগুলি নির্বাচন করুন!
   tutorial_frogger_longdescription: একটি কম্পিউটেশনাল চিন্তাবিদ হয়ে উঠুন। আপনি আশ্চর্যজনক
     3D আকার মধ্যে চালু যে 2D ইমেজ অঙ্কন দ্বারা 3D অবজেক্ট তৈরি করুন। আপনি শুধু উত্তেজনাপূর্ণ
     বিশ্বের মধ্যে নির্মিত আকার একত্রিত করে 3D ওয়ার্ল্ডস তৈরি করুন। আপনার বিশ্বের
@@ -5397,11 +5444,12 @@ bn:
     উপর অ্যালেক্স বা স্টিভ নিতে কোড ব্লক ব্যবহার করুন।'
   tutorial_minecraft-2016_longdescription: একটি Minecraft খেলা তৈরি করুন। চিকেন, ভেড়া,
     লতা, zombies এবং আরো আপনার নিজস্ব সংস্করণ তৈরি করুন।
-  tutorial_thinkersmith-es_longdescription: Mediante el uso de un "Vocabulario Robot"
-    predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar
-    a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento
-    ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones
-    as&iacute; como la valiosa habilidad de depuraci&oacute;n.
+  tutorial_thinkersmith-es_longdescription: মেডিয়ান্তে এল সুসো দে সান “ভোকাবুলারিও
+    রোবট” পূর্বনির্ধারিত, লস এস্তুডিয়েন্তেস ডেসকিউব্রির&aacute;এন কোমো গিয়ারস দে
+    মোডো তাল দে লেলেভার এ ক্যাবো তেরেস স্পেক ফিকাস সিন ব্যবহারকারী এস্টাস ডিসকুটিডাস
+    প্রিভিয়ামেন্টে।&iacute;এস্তে সেগমেন্টো ইন্দ্রিয় হিসাবে&ntilde;একটি ক্ষতি estudiantes
+    লা conexi একটি কেন্দ্র হিসাবে acciones দ্বারা&iacute;mobolos হিসাবে como la valiosa
+    habilidad de depuraci&oacute;n.&iacute;&oacute;
   tutorial_pixie_longdescription: পিক্সি সহ কোড টিউটোরিয়াল ঘন্টা
   tutorial_play_longdescription: একটি গল্প তৈরি করুন বা প্লে ল্যাব দিয়ে একটি খেলা
     করুন! প্রাণী, জলদস্যু, zombies, ninjas, এবং আরো অনেক অক্ষর সরানো, শব্দ, স্কোর
@@ -12449,12 +12497,12 @@ bn:
   tutorial_googlename _longdescription: একটি নাম বাছাই করুন এবং কোড ব্যবহার করে শব্দটির
     অক্ষরগুলি জীবনের দিকে আনুন। একটি ডাক নাম, একটি পোষা এর নাম, একটি প্রাণী, একটি
     খেলা, একটি জায়গা বা একটি শখ চয়ন করুন।
-  tutorial_carnegiezillah_longdescription: Zillah City is thriving, and music is in
-    the air. Rumor has it, the famed Gargantua bot is online and sending the last
-    Toxibots to trash the city block by block…. Grab your cobot hoverboard and get
-    ready to groove, move, and finish off what you started! Players program their
-    cobot hoverbots to change lanes, avoid obstacles, and take out many Toxibots in
-    this rhythm-styled game.
+  tutorial_carnegiezillah_longdescription: জিল্লাহ সিটি সমৃদ্ধি লাভ করছে এবং সঙ্গীত
+    বাতাসে আছে। গুজব ছড়িয়ে পড়েছে, বিখ্যাত গারগান্তুয়া বোট অনলাইনে এবং শেষ টক্সিবোটদের
+    পাঠানো হয়েছে শহরের ব্লককে ব্লক করে ফেলার জন্য।…আপনার cobot হোভারবোর্ড ধরুন এবং
+    খাঁজ, সরানো, এবং আপনি কি শুরু বন্ধ শেষ করার জন্য প্রস্তুত পেতে! খেলোয়াড়দের তাদের
+    cobot hoverbots প্রোগ্রাম, লেন পরিবর্তন বাধাগুলি এড়াতে, এবং এই ছন্দ শৈলী খেলা
+    অনেক Toxibots নিতে।
   tutorial_nasachspacejam_longdescription: একটি সৌর সিস্টেম তৈরি করুন যা সত্যিই পাথর!
     এই স্ব-নির্দেশিত কার্যকলাপে সঙ্গীত, জ্যোতির্বিজ্ঞান এবং কোডিং সম্পর্কে জানুন (কোনও
     কোডিং অভিজ্ঞতা প্রয়োজন নেই)। প্রোগ্রাম গ্রহ সঙ্গীত করতে, আপনার নিজস্ব বাদ্যযন্ত্র
@@ -13275,6 +13323,129 @@ bn:
     আমরা কোনও মিটিং উপভোগ করি না, আমাদের পিটিও গ্রহণ করি (5 সপ্তাহ মোট, যার মধ্যে
     রয়েছে বছরের শেষে ওরফে শীতকালীন বিরতি), গ্রীষ্মের ওরফে গ্রীষ্মকালীন শুক্রবারে
     শুক্রবারে অর্ধেক কার্যদিবস এবং অন্যান্য উদার সুবিধা।
+  csa_ai_page_hero_title: সফটওয়্যার ইঞ্জিনিয়ারিং ও কম্পিউটার ভিশন
+  csa_ai_page_hero_description: 'এই দুটি অধ্যায়ের পোস্ট-এপি সিএসএ মডিউল উচ্চ বিদ্যালয়
+    শিক্ষার্থীদের GitHub এবং GitHub Copilot সহ পেশাদার সফ্টওয়্যার ডেভেলপমেন্ট সরঞ্জামগুলির
+    সাথে হাতে-অভিজ্ঞতা প্রদান করে এবং একটি কম্পিউটার ভিশন প্রোগ্রাম বিকাশের জন্য তাদের
+    বাস্তব বিশ্বের দক্ষতা প্রদান করে। '
+  csa_ai_page_video_section_title: Code.org প্রোগ্রামিং পরিবেশের বিশ্ব অতিক্রম ধাপ
+  csa_ai_page_video_section_li_1: এআই এবং তার অ্যাপ্লিকেশন সম্পর্কে জানুন
+  csa_ai_page_video_section_li_2: পেশাদার সফটওয়্যার ডেভেলপমেন্ট টুলগুলির সাথে হাতে-কলমে
+    অভিজ্ঞতা
+  csa_ai_page_video_section_li_3: শিল্প-মান অনুশীলনগুলি শিখুন
+  csa_ai_page_video_section_li_4: সমালোচনামূলক চিন্তাভাবনা চাষ করুন
+  csa_ai_page_programming_tools: 'প্রোগ্রামিং টুলস: জিথুব, জিথুব কোপাইলট, ভিএসকোড,
+    টেনসরফ্লো '
+  csa_ai_page_professional_learning: কোনোটিই না
+  csa_ai_page_curriculum_topics: 'বিষয়: প্রোগ্রামিং, ডেটা, আর্ট অ্যান্ড ডিজাইন, গেমস
+    এবং অ্যানিমেশন'
+  csa_ai_page_curriculum_accessibility_features: বিস্তারিত জানার জন্য FAQ বিভাগ দেখুন
+  csa_ai_page_curriculum_languages_support: ইংরেজী
+  csa_ai_page_article_title_1: কপিলট দিয়ে তৈরি করুন
+  csa_ai_page_article_description_1: শিক্ষার্থীরা শিখেন কিভাবে GitHub Copilot একটি
+    জুড়ি প্রোগ্রামার হিসাবে ব্যবহার করতে হয় বিদ্যমান কোড ব্যাখ্যা, ত্রুটি খুঁজে
+    পেতে এবং সমাধান সমাধান, এবং নতুন সমস্যার সমাধান উৎপন্ন।
+  csa_ai_page_article_link_1: কপিলট সম্পর্কে আরও জানুন
+  csa_ai_page_article_title_2: আপনার নিজের এআই মডেল তৈরি করুন
+  csa_ai_page_article_description_2: শিক্ষার্থীরা তাদের নিজস্ব এআই মডেলগুলিকে প্রশিক্ষণ
+    দেয় যাতে টিচেবল মেশিন ব্যবহার করে ছবি এবং অঙ্গভঙ্গি চিনতে পারে একটি ওয়েবক্যাম
+    গঠন করে এবং কম্পিউটার ভিশন ব্যবহারকারীদের অ্যাপগুলির সাথে ইন্টারঅ্যাক্ট করার পদ্ধতি
+    কীভাবে প্রভাবিত করে তা বিবেচনা করে।
+  csa_ai_page_article_link_2: পাঠ পরিকল্পনা এক্সপ্লোর করুন
+  csa_ai_page_article_title_3: কম্পিউটার ভিশন এক্সপ্লোর
+  csa_ai_page_article_description_3: শিক্ষার্থীরা বিভিন্ন ইনপুটগুলির সাথে কাজ করার
+    জন্য অ্যাপ্লিকেশনগুলির বিদ্যমান সংস্করণগুলিকে সংশোধন করতে সহায়তা করার জন্য GitHub
+    Copilot ব্যবহার করে, একটি জাভা অ্যাপে টিচযোগ্য মেশিনের সাথে তৈরি এআই মডেলগুলি
+    বাস্তবায়ন করে।
+  csa_ai_page_article_link_3: একটি উদাহরণ দেখুন
+  csa_ai_page_learn_more_section_title: কৃত্রিম বুদ্ধিমত্তা সম্পর্কে আরও জানুন
+  csa_ai_page_learn_more_title: শিক্ষকদের জন্য এআই 101 এক্সপ্লোর করুন
+  csa_ai_page_learn_more_description: শিক্ষকদের জন্য আমাদের ব্যাপক অনলাইন লার্নিং
+    সিরিজের সাথে কৃত্রিম বুদ্ধিমত্তা (এআই) এবং শিক্ষার তার রূপান্তরমূলক সম্ভাব্যতা
+    আবিষ্কার করুন।
+  csa_ai_page_learn_more_link: শিক্ষক সিরিজের জন্য এআই 101 দেখুন
+  csa_ai_page_faq_question_01: এই মডিউল জন্য পূর্বশর্ত কি?
+  csa_ai_page_faq_answer_01_01: 'এই মডিউলে ডাইভিং করার আগে, শিক্ষার্থীদের জাভা এর
+    একটি এন্ট্রি-লেভেল জ্ঞান থাকা উচিত। বিশেষত, তারা একটি উপলব্ধি করা উচিত:'
+  csa_ai_page_faq_answer_01_list_01: "** ক্লাস এবং অবজেক্ট: ** শিক্ষার্থীদের ক্লাস
+    সংজ্ঞায়িত এবং ব্যবহার করার পাশাপাশি বস্তু তৈরি এবং ম্যানিপুলেট করার সাথে পরিচিত
+    হওয়া উচিত।"
+  csa_ai_page_faq_answer_01_list_02: "** লেখা এবং কলিং পদ্ধতি: ** শিক্ষার্থীদের একটি
+    ক্লাসের মধ্যে পদ্ধতি সংজ্ঞায়িত করতে, পদ্ধতি প্যারামিটার এবং রিটার্ন প্রকারগুলি
+    বুঝতে এবং বস্তু বা অন্যান্য পদ্ধতি থেকে কল পদ্ধতি বুঝতে সক্ষম হওয়া উচিত।"
+  csa_ai_page_faq_answer_01_list_03: "** 1 ডি অ্যারে এবং অ্যারেলিস্ট: ** তাদের মাধ্যমে
+    পুনরাবৃত্তির সহ এক-মাত্রিক অ্যারে এবং অ্যারেলিস্টগুলি ঘোষণা, আরম্ভ এবং ম্যানিপুলেটিং
+    করতে দক্ষ হওয়া উচিত।"
+  csa_ai_page_faq_answer_01_list_04: "** নির্বাচন এবং পুনরাবৃত্তি: ** শর্তাধীন বিবৃতি
+    এবং loops একটি কঠিন ভিত্তি অত্যন্ত গুরুত্বপূর্ণ।"
+  csa_ai_page_faq_question_01_02: আদর্শভাবে, যারা এপি কম্পিউটার সায়েন্স এ বা অনুরূপ
+    গভীরতা এবং কঠোরতা একটি কোর্স সম্পন্ন করেছেন তারা এই মডিউল জন্য ভাল প্রস্তুত করা
+    হবে।
+  csa_ai_page_faq_question_02: এই মডিউলের জন্য প্রয়োজনীয় সফ্টওয়্যারটি কিভাবে ইনস্টল
+    করব?
+  csa_ai_page_faq_answer_02_01: এই মডিউলটি অনন্য কারণ এটি Code.org ল্যাব এবং সরঞ্জামগুলির
+    পরিবর্তে তৃতীয় পক্ষের সফ্টওয়্যার ব্যবহার করে। [এখানে সফ্টওয়্যার ইনস্টল করার
+    বিষয়ে আরও পড়ুন] (%{accessibility_url})।
+  csa_ai_page_faq_question_03: এই মডিউলটি পড়ার সময় আমি কিভাবে অ্যাক্সেসযোগ্যতার
+    প্রয়োজনীয়তাগুলি সমর্থন করতে পারি?
+  csa_ai_page_faq_answer_03_01: একটি সমন্বিত শেখার পরিবেশের জন্য অ্যাক্সেসযোগ্যতার
+    প্রয়োজনগুলি সরবরাহ করা অত্যন্ত গুরুত্বপূর্ণ। [এখানে এই মডিউল ব্যবহৃত সফ্টওয়্যার
+    অ্যাক্সেসিবিলিটি বৈশিষ্ট্য সম্পর্কে আরও পড়ুন] (%{install_url})।
+  csa_ai_page_faq_question_04: আমি কিভাবে Chromebooks এ ভিএস কোড ব্যবহার করব?
+  csa_ai_page_faq_answer_04: ক্রোমবুকের ভিএস কোড ব্যবহার করা আরও সহজবোধ্য হয়ে উঠেছে,
+    বিশেষ করে নতুন Chromebook মডেলগুলিতে লিনাক্স অ্যাপ চালানোর সামর্থ্য সহ। [এখানে
+    Chromebooks এ ভিএস কোড সেট আপ করার বিষয়ে আরও পড়ুন] ()%{chromebook_url}।
+  csa_ai_page_faq_question_05: আমি কিভাবে এই মডিউল জন্য পেশাদারী উন্নয়ন পেতে পারেন?
+  csa_ai_page_faq_answer_05: এই কোর্সের জন্য বর্তমানে নির্দিষ্ট পেশাগত উন্নয়ন নেই।
+    আপনি যদি আপনার শ্রেণীকক্ষে কৃত্রিম বুদ্ধিমত্তার সাথে যোগাযোগ করতে চান তবে আপনি
+    [শিক্ষকদের জন্য এআই 101 এক্সপ্লোর করতে পারেন] (%{ai_101_url})।
+  csa_ai_page_faq_question_06: এই মডিউল শেখার জন্য প্রস্তাবিত সময়জ্ঞান কি?
+  csa_ai_page_faq_answer_06_01: সফ্টওয়্যার ইঞ্জিনিয়ারিং এবং কম্পিউটার ভিশন মডিউল
+    একটি সংক্ষিপ্ত সময়সীমার মধ্যে ব্যাপক শেখার প্রদান করার জন্য চিন্তাশীলভাবে গঠন
+    করা হয়। পুরো মডিউল ** 2 সপ্তাহের নির্দেশ** স্প্যান করার জন্য ডিজাইন করা হয়েছে।
+    বেশিরভাগ পাঠের**45 মিনিট** জন্য উপযোগী করা হয়, যেখানে শিক্ষার্থীরা হাতে-কলমে
+    জাভা প্রকল্প উন্নয়ন করে এমন পাঠগুলি **90 মিনিট** জন্য ডিজাইন করা হয়েছে। এই বর্ধিত
+    সময় শিক্ষার্থীদের কাজ করার সময় বুঝতে, বাস্তবায়ন এবং সমস্যার সমাধান করার যথেষ্ট
+    সুযোগ নিশ্চিত করে।
+  csa_ai_page_faq_answer_06_02: মডিউল এর গঠন মধ্যে নির্মিত ইচ্ছাকৃত নমনীয়তা আছে।
+    শ্রেণীকক্ষের গতিবিদ্যা, ছাত্রদের প্রবৃত্তি এবং আপনি প্রতিটি বিষয়ের সন্ধান করতে
+    চান এমন গভীরতার উপর নির্ভর করে, আপনি সময়কালটি সামঞ্জস্য করতে পারেন। উদাহরণস্বরূপ,
+    45 মিনিটের পাঠ হিসাবে ডিজাইন করা ইন্ট্রো টু কপিলট পাঠটি 90 মিনিটের মধ্যে প্রসারিত
+    করা যেতে পারে যদি আপনি গিটহাব কপিলট এবং চ্যাটজিপিটি এর মত বড় ভাষা মডেল এবং সরঞ্জামগুলি
+    গভীরভাবে ডুব দিতে চান।
+  csa_ai_page_faq_question_07: How can I access answer keys?
+  csa_ai_page_faq_answer_07: একটি অনুমোদিত শিক্ষক অ্যাকাউন্টের মাধ্যমে, আপনি একটি
+    নীল “শিক্ষক” শুধুমাত্র প্যানেলে উত্তর কী খুঁজে পেতে পারেন যা অনলাইন পাঠ এবং কার্যক্রমের
+    মধ্যে প্রদর্শিত হয়। যদি আপনার একটি অনুমোদিত শিক্ষক অ্যাকাউন্টের প্রয়োজন হয়,
+    আপনি [এই ফর্ম] () এর মাধ্যমে সুরক্ষিত শিক্ষক-শুধুমাত্র উপকরণ (উত্তর কী, ইত্যাদি)
+    অ্যাক্সেসের জন্য আবেদন করতে পারেন।%{form_url}অনুগ্রহ করে মনে রাখবেন যে আপনার অ্যাকাউন্ট
+    যাচাই করতে ৩-৫ কার্যদিবসের সময় লাগতে পারে।
+  csa_ai_page_faq_question_08: এই মডিউল মান ম্যাপ করা হয়?
+  csa_ai_page_faq_answer_08: হ্যাঁ, সফটওয়্যার ইঞ্জিনিয়ারিং ও কম্পিউটার ভিশন পাঠ্যক্রমটি
+    [সিএসটিএ কে-১২ স্ট্যান্ডার্ডস]] (%{csta_k12_url}) এবং [K-12 নির্দেশিকা] () এর
+    জন্য এআইতে ম্যাপ করা হয়েছে।%{k12_url}
+  csa_ai_page_faq_question_09: এই মডিউল শেখার খরচ কত?
+  csa_ai_page_faq_answer_09_01: আমাদের পাঠ্যক্রম এবং প্ল্যাটফর্ম [কোন খরচ] (%{no_cost_url})
+    যে কেউ, কোথাও, শেখার জন্য উপলব্ধ!
+  csa_ai_page_faq_answer_09_02: উপরন্তু, এই মডিউল ব্যবহৃত সফ্টওয়্যার এবং সরঞ্জাম
+    বিনামূল্যে। GitHub Copilot যাচাই [teachers](%{teachers_url}) এবং [students](%{students_url})
+    জন্য বিনামূল্যে।
+  csa_ai_page_faq_question_10: সফটওয়্যার ইন্সটলেশন কাজ না করলে আমি কি করব?
+  csa_ai_page_faq_answer_10: সফ্টওয়্যার ইনস্টলেশনের সময় সমস্যার সম্মুখীন হওয়া সাধারণ
+    হতে পারে, তবে সেগুলি সমাধান এবং সমাধান করার জন্য আপনি নিয়মানুগ পদক্ষেপ অনুসরণ
+    করতে পারেন। [এখানে কিছু সমস্যা সমাধান টিপস দেখুন] (%{troubleshooting_url})।
+  csa_ai_page_faq_question_11: How was the curriculum developed?
+  csa_ai_page_faq_answer_11_01: 'আমাদের সফটওয়্যার ইঞ্জিনিয়ারিং এবং কম্পিউটার ভিশন
+    পাঠ্যক্রমটি আমাদের কারিকুলাম মূল্যবোধের সাথে ডিজাইন করা হয়েছিল। নিম্নোক্ত লক্ষ্যগুলি
+    এই পাঠ্যক্রমের সৃষ্টিতে পরিচালিত করেছে:'
+  csa_ai_page_faq_answer_11_list_01: "** লক্ষ্য 1: ** কোড তৈরি, ডিবাগ এবং সম্পাদনা
+    করতে এআই সরঞ্জাম ব্যবহার করুন।"
+  csa_ai_page_faq_answer_11_list_02: "** লক্ষ্য 2: ** জাভা ল্যাব থেকে বাস্তব বিশ্বের
+    সরঞ্জামগুলিতে রূপান্তর।"
+  csa_ai_page_faq_answer_11_list_03: "** লক্ষ্য 3: ** কিভাবে এআই মডেল প্রশিক্ষিত এবং
+    প্রোগ্রামে একত্রিত হয় তা গভীরভাবে বোঝার।"
+  csa_ai_page_faq_answer_11_02: আমাদের কাজকে পরিচালিত মানগুলি সম্পর্কে আরও তথ্যের
+    জন্য, দয়া করে আমাদের [পাঠ্যক্রমের মান] (%{curriculum_values_url}) দেখুন।
   language_code:
     ar: আরবি
     az: আজারবাইজানীয়

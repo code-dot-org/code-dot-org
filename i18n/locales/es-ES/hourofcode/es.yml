@@ -5,10 +5,10 @@ es:
   language: Español (España)
   front_title: Únete al mayor evento educativo de la historia, %{campaign_date}
   coming_soon: Próximamente
-  campaign_date_start_short: 5 de diciembre
+  campaign_date_start_short: Dic. 7
   campaign_date_start_long: 7 de diciembre
-  campaign_date_short: Del 5 al 11 de diciembre
-  campaign_date_full: Del 5 al 11 de diciembre
+  campaign_date_short: Dic. 7-13
+  campaign_date_full: Del 7 al 13 de diciembre
   campaign_date_year: '2022'
   campaign_date_full_year: Del 5 al 11 de diciembre de 2022
   nonus_campaign_date_start_short: '1 oct. '
@@ -197,6 +197,16 @@ es:
   grade_level_label_elementary: Escuela primaria
   grade_level_label_middle: Escuela secundaria
   grade_level_label_high: Escuela secundaria
+  curricula_title_elementary: Currículos de la escuela primaria
+  curricula_desc_elementary: Explore los divertidos cursos y actividades gratuitos
+    que lo invitan a explorar las ciencias de la computación con sus alumnos de primaria.
+  curricula_title_middle: Currículos de la escuela secundaria
+  curricula_desc_middle: Explore las atractivas ofertas que le permiten a usted y
+    a sus estudiantes de secundaria explorar la informática juntos.
+  curricula_title_high: Currículos de la escuela secundaria
+  curricula_desc_high: Explore los atractivos cursos y actividades que lo invitan
+    a usted y a sus estudiantes de secundaria a profundizar en las ciencias de la
+    computación.
   students_label: Estudiantes
   teachers_label: Profesores
   teacher_label_csf: Profesor de fundamentos de la informática
@@ -223,6 +233,13 @@ es:
   call_to_action_explore_choice_level: Explora el nivel de elección del ejemplo
   call_to_action_explore_collection: Explora la colección
   call_to_action_explore_unplugged_lesson: Explora las lecciones desconectadas
+  call_to_action_explore_csf: Explore los fundamentos de CS
+  call_to_action_explore_csd: Explore CS Discoveries
+  call_to_action_explore_csp: Explore los principios de CS
+  call_to_action_explore_csc: Explore CS Connections
+  call_to_action_explore_csa: Explore AP® Computer Science A
+  call_to_action_explore_maker: Explore los planes de estudio de Maker
+  call_to_action_explore_hoc: Explora los tutoriales de La Hora del Código
   call_to_action_try_app_lab: Prueba el laboratorio de aplicaciones
   call_to_action_view_lesson_plan: Ver plan de lección
   call_to_action_self_paced_pl: Comience el aprendizaje profesional a su propio ritmo
@@ -267,6 +284,7 @@ es:
   call_to_action_notify_available: Notificarme cuando esté disponible
   call_to_action_register_early_access: Regístrese para obtener acceso anticipado
   call_to_action_open_positions: Ver puestos vacantes
+  call_to_action_get_guide: Obtenga la guía
   aria_label_call_to_action_afe: Más información sobre Amazon Future Engineer
   aria_label_call_to_action_teaching_csf: Comience el programa de aprendizaje profesional
     para la enseñanza de los fundamentos de la informática
@@ -378,6 +396,8 @@ es:
   curriculum_name_csa: AP® Ciencias de la Computación A
   curriculum_name_csc_02: Cualquier módulo de conexiones CS
   curriculum_name_ai: IA y aprendizaje automático
+  curriculum_name_artificial_intelligence: Inteligencia artificial (IA)
+  curriculum_name_maker: Creador
   curriculum_name_maker_cp: Creación de aplicaciones con dispositivos (Circuit Playground)
   curriculum_name_maker_microbit: Creación de aplicaciones con dispositivos (micro:bit)
   curriculum_name_creating_apps_with_devices: Creación de aplicaciones con dispositivos
@@ -438,6 +458,12 @@ es:
     dispositivos físicos en la informática. Desarrolla programas que utilicen entradas
     y salidas de hardware. Hay una versión de esta unidad tanto para el micro:bit
     como para el Circuit Playground.
+  curriculum_desc_csa: Introduzca a los estudiantes en la ingeniería de software y
+    el diseño orientado a objetos mientras aprenden el lenguaje de programación Java
+    en este plan de estudios gratuito de AP® Computer Science A (AP® CSA).
+  curriculum_desc_maker: Maker Education lleva las STEM (Ciencia, Tecnología, Ingeniería,
+    Matemáticas) un paso más allá al fomentar la experiencia práctica y la colaboración
+    en el aula para ayudar a enseñar la resolución de problemas y el pensamiento crítico.
   collection_hardware: Enfoque en Hardware
   collection_hardware_desc: Capacita a los estudiantes para usar datos y dispositivos
     físicos para resolver problemas.
@@ -471,6 +497,7 @@ es:
   module_label_professional_learning: 'Aprendizaje profesional:'
   module_label_languages: 'Idiomas compatibles:'
   module_label_accessibility_features: 'Accesibilidad:'
+  module_label_accessibility_features_full: 'Características de accesibilidad:'
   module_label_educator_tool: Herramienta para educadores
   module_label_educator_course: Curso para educadores
   module_label_student_tool: Herramienta para estudiantes
@@ -478,6 +505,7 @@ es:
   module_label_student_content_resources: Contenido y recursos
   module_label_new: Nuevo
   module_label_coming_soon: Próximamente
+  module_label_available_now: Disponible ahora
   module_label_video_series: Serie de vídeos
   module_label_self_paced: Módulo autoguiado
   module_ages_5_10: 5-10
@@ -488,6 +516,8 @@ es:
   module_grade_2_5: 2-5
   module_grade_3_5: 3-5
   module_grade_3_8: 3-8
+  module_grade_k_12: K-12
+  module_grade_3_12: 3-12
   module_grade_6_12: 6-12
   module_grade_6_10: 6-10
   module_grade_9_12: 9-12
@@ -502,7 +532,9 @@ es:
   module_grade_9_12_teachers: 9-12 maestros
   module_level_beginner: Principiante
   module_level_intermediate: Intermedio
+  module_level_advanced: Avanzado
   module_duration_45_mins: 45 minutos
+  module_duration_2_weeks: 2 semanas
   module_duration_1_hr: 1 hora
   module_duration_2_hrs: 2 horas
   module_duration_3_hrs: 3 horas
@@ -587,6 +619,8 @@ es:
   heading_java_lab: Java Lab
   heading_objects_first: Los objetos primero
   heading_these_lessons_will: 'Estas lecciones permitirán:'
+  heading_explore_curriculum_catalog: Explore todos nuestros cursos en el catálogo
+    de planes de estudio
   professional_learning_section_desc: Recibe el apoyo que necesitas mientras te preparas
     para enseñar. A los profesores les encanta, ¡y más del 90% lo califica como el
     mejor desarrollo profesional de la historia!
@@ -864,6 +898,12 @@ es:
     grandes (como ChatGPT) y la IA generativa. Descubra cómo funcionan estas nuevas
     tecnologías directamente de la mano de los expertos: Mira Murati, directora de
     tecnología de OpenAI, y Cristóbal Valenzuela, director ejecutivo de RunwayML.'
+  ai_pl_101_llm_slides_title: Indicaciones de modelos lingüísticos de gran tamaño
+    para educadores
+  ai_pl_101_llm_slides_desc: Herramientas para obtener el mejor resultado posible
+    de LLM como ChatGPT, desde principiantes hasta avanzados. Incluye consejos de
+    inicio para aquellos que recién están empezando, así como herramientas avanzadas
+    para aquellos que buscan maximizar su potencial.
   how_ai_works_hero_heading: Cómo funciona la IA
   how_ai_works_hero_desc: "¡Sumérjase en el mundo de la IA con «Cómo funciona la IA»,
     nuestra serie de vídeos y las lecciones que la acompañan!"
@@ -2167,6 +2207,13 @@ es:
     por correo electrónico?"
   signup_email_preference_privacy: "(consulta nuestra política de privacidad)"
   signup_email_preference_yes: Sí
+  signup_email_preference_yes_elementary: Sí, envíenme actualizaciones sobre los recursos
+    de la escuela primaria
+  signup_email_preference_yes_middle: Sí, envíenme actualizaciones sobre los recursos
+    de la escuela secundaria
+  signup_email_preference_yes_high: Sí, envíenme actualizaciones sobre los recursos
+    de la escuela secundaria
+  signup_email_preference_yes_general: Sí, envíame actualizaciones generales
   signup_email_preference_no: 'No'
   signup_email_preference_error: Debes elegir el correo electrónico como preferencia
   signup_multiple_event_warning: Pondremos el nombre de tu escuela y ciudad en el
@@ -13104,12 +13151,12 @@ es:
   tutorial_googlename _longdescription: Elige un nombre y usa código para darles vida
     a las letras que lo componen. Puedes elegir un sobrenombre, el nombre de una mascota,
     un animal, un deporte, un lugar o un pasatiempo.
-  tutorial_carnegiezillah_longdescription: Zillah City is thriving, and music is in
-    the air. Rumor has it, the famed Gargantua bot is online and sending the last
-    Toxibots to trash the city block by block…. Grab your cobot hoverboard and get
-    ready to groove, move, and finish off what you started! Players program their
-    cobot hoverbots to change lanes, avoid obstacles, and take out many Toxibots in
-    this rhythm-styled game.
+  tutorial_carnegiezillah_longdescription: La ciudad de Zillah está prosperando y
+    la música está en el aire. Se rumorea que el famoso robot Gargantua está en línea
+    y envía a los últimos Toxibots a destruir la ciudad cuadra por cuadra.…¡Coge tu
+    aerodeslizador tipo cobot y prepárate para surcar, moverte y acabar con lo que
+    has empezado! Los jugadores programan sus cobots hoverbots para cambiar de carril,
+    evitar obstáculos y acabar con muchos Toxibots en este juego de estilo rítmico.
   tutorial_nasachspacejam_longdescription: "¡Crea un sistema solar que realmente sea
     genial! Aprende sobre música, astronomía y programación en esta actividad autoguiada
     (no se requiere experiencia en programación). Programa planetas para hacer música
@@ -13963,6 +14010,137 @@ es:
     en toda la organización al final del año, también conocido como vacaciones de
     invierno), media jornada laboral los viernes durante el verano, también conocidos
     como viernes de verano, y otros beneficios generosos.
+  csa_ai_page_hero_title: Ingeniería de software y visión artificial
+  csa_ai_page_hero_description: 'Este módulo CSA posterior a la AP de dos capítulos
+    ofrece a los estudiantes de secundaria experiencia práctica con herramientas profesionales
+    de desarrollo de software, incluidas GitHub y GitHub Copilot, y les imparte las
+    habilidades del mundo real para desarrollar un programa de visión artificial. '
+  csa_ai_page_video_section_title: Vaya más allá del mundo de los entornos de programación
+    de Code.org
+  csa_ai_page_video_section_li_1: Más información sobre la IA y sus aplicaciones
+  csa_ai_page_video_section_li_2: Experiencia práctica con herramientas profesionales
+    de desarrollo de software
+  csa_ai_page_video_section_li_3: Conozca las prácticas estándar de la industria
+  csa_ai_page_video_section_li_4: Cultiva el pensamiento crítico
+  csa_ai_page_programming_tools: 'Herramientas de programación: Github, Github Copilot,
+    VSCode, TensorFlow '
+  csa_ai_page_professional_learning: Ninguno
+  csa_ai_page_curriculum_topics: 'Temas: Programación, Datos, Arte y diseño, Juegos
+    y animación'
+  csa_ai_page_curriculum_accessibility_features: Consulte la sección de preguntas
+    frecuentes para obtener más información
+  csa_ai_page_curriculum_languages_support: Español (España)
+  csa_ai_page_article_title_1: Construya con Copilot
+  csa_ai_page_article_description_1: Los estudiantes aprenden a usar GitHub Copilot
+    como un programador en pareja para explicar el código existente, encontrar y corregir
+    errores y generar soluciones a nuevos problemas.
+  csa_ai_page_article_link_1: Más información sobre Copilot
+  csa_ai_page_article_title_2: Cree su propio modelo de IA
+  csa_ai_page_article_description_2: Los estudiantes entrenan sus propios modelos
+    de IA con Teachable Machine para reconocer imágenes y gestos desde una cámara
+    web y considerar cómo la visión artificial afecta a la forma en que los usuarios
+    interactúan con las aplicaciones.
+  csa_ai_page_article_link_2: Explore el plan de la lección
+  csa_ai_page_article_title_3: Explore la visión artificial
+  csa_ai_page_article_description_3: Los estudiantes implementan los modelos de IA
+    que crearon con Teachable Machine en una aplicación Java, utilizando GitHub Copilot
+    para ayudarlos a modificar las versiones existentes de las aplicaciones para que
+    funcionen con las diferentes entradas.
+  csa_ai_page_article_link_3: Vea un ejemplo
+  csa_ai_page_learn_more_section_title: Más información sobre la inteligencia artificial
+  csa_ai_page_learn_more_title: Explore la IA 101 para profesores
+  csa_ai_page_learn_more_description: Descubra el innovador mundo de la inteligencia
+    artificial (IA) y su potencial transformador en la educación con nuestra completa
+    serie de aprendizaje en línea para profesores.
+  csa_ai_page_learn_more_link: Vea la serie AI 101 para profesores
+  csa_ai_page_faq_question_01: "¿Cuáles son los requisitos previos para este módulo?"
+  csa_ai_page_faq_answer_01_01: 'Antes de sumergirse en este módulo, los estudiantes
+    deben poseer un conocimiento básico de Java. En concreto, deben comprender:'
+  csa_ai_page_faq_answer_01_list_01: "**Clases y objetos: ** Los estudiantes deben
+    estar familiarizados con la definición y el uso de las clases, así como con la
+    creación y manipulación de objetos."
+  csa_ai_page_faq_answer_01_list_02: "**Métodos de escritura y llamada: ** Los estudiantes
+    deben poder definir métodos dentro de una clase, comprender los parámetros de
+    los métodos y los tipos de retorno, y llamar a los métodos desde objetos u otros
+    métodos."
+  csa_ai_page_faq_answer_01_list_03: "**Matrices 1D y ArrayLists: ** Deben ser competentes
+    en la declaración, inicialización y manipulación de matrices y ArrayLists unidimensionales,
+    incluida la iteración de ellas."
+  csa_ai_page_faq_answer_01_list_04: "**Selección e iteración: ** Es crucial contar
+    con una base sólida en las declaraciones condicionales y los bucles."
+  csa_ai_page_faq_question_01_02: Idealmente, los estudiantes que hayan completado
+    un curso de Ciencias de la Computación A o un curso de profundidad y rigor similares
+    estarían bien preparados para este módulo.
+  csa_ai_page_faq_question_02: "¿Cómo instalo el software necesario para este módulo?"
+  csa_ai_page_faq_answer_02_01: Este módulo es único porque implica el uso de software
+    de terceros en lugar de laboratorios y herramientas de Code.org. [Obtenga más
+    información sobre la instalación del software aquí] (%{accessibility_url}).
+  csa_ai_page_faq_question_03: "¿Cómo puedo apoyar las necesidades de accesibilidad
+    mientras enseño este módulo?"
+  csa_ai_page_faq_answer_03_01: Satisfacer las necesidades de accesibilidad es crucial
+    para un entorno de aprendizaje inclusivo. [Lea más sobre las funciones de accesibilidad
+    del software utilizado en este módulo aquí] (%{install_url}).
+  csa_ai_page_faq_question_04: "¿Cómo uso VS Code en las Chromebooks?"
+  csa_ai_page_faq_answer_04: El uso de VS Code en un Chromebook se ha vuelto más sencillo,
+    especialmente con la capacidad de ejecutar aplicaciones de Linux en los modelos
+    de Chromebook más nuevos. [Lea más sobre la configuración de VS Code en Chromebooks
+    aquí] ().%{chromebook_url}
+  csa_ai_page_faq_question_05: "¿Cómo puedo obtener desarrollo profesional para este
+    módulo?"
+  csa_ai_page_faq_answer_05: Actualmente no existe un desarrollo profesional específico
+    para este curso. Si quieres entender cómo abordar la inteligencia artificial en
+    tu aula, puedes [explorar AI 101 for Teachers] (%{ai_101_url}).
+  csa_ai_page_faq_question_06: "¿Cuál es el horario recomendado para impartir este
+    módulo?"
+  csa_ai_page_faq_answer_06_01: El módulo de ingeniería de software y visión artificial
+    está cuidadosamente estructurado para proporcionar un aprendizaje integral en
+    un período de tiempo conciso. Todo el módulo está diseñado para abarcar **2 semanas
+    de instrucción**. La mayoría de las clases están diseñadas para **45 minutos**,
+    mientras que las clases en las que los estudiantes profundizan en el desarrollo
+    práctico de proyectos Java están diseñadas para **90 minutos**. Este tiempo prolongado
+    garantiza que los estudiantes tengan amplias oportunidades de comprender, implementar
+    y solucionar problemas mientras trabajan.
+  csa_ai_page_faq_answer_06_02: También hay una flexibilidad intencional incorporada
+    en la estructura del módulo. Dependiendo de la dinámica del aula, la participación
+    de los estudiantes y la profundidad con la que desee explorar cada tema, puede
+    ajustar la duración. Por ejemplo, la lección de introducción a Copilot, diseñada
+    como una lección de 45 minutos, se puede ampliar a 90 minutos si deseas profundizar
+    en el funcionamiento de herramientas y modelos lingüísticos de gran tamaño, como
+    GitHub Copilot y ChatGPT.
+  csa_ai_page_faq_question_07: "¿Cómo puedo acceder a las claves de respuestas?"
+  csa_ai_page_faq_answer_07: Con una cuenta de profesor aprobada, encontrarás las
+    claves de respuestas en un panel azul exclusivo para profesores que aparece en
+    las clases y actividades en línea. Si necesitas una cuenta de profesor aprobada,
+    puedes solicitar el acceso a materiales protegidos exclusivos para profesores
+    (claves de respuestas, etc.) a través de [este formulario] ().%{form_url}Ten en
+    cuenta que la verificación de tu cuenta puede tardar entre 3 y 5 días laborables.
+  csa_ai_page_faq_question_08: "¿Este módulo está mapeado según los estándares?"
+  csa_ai_page_faq_answer_08: Sí, el plan de estudios de ingeniería de software y visión
+    artificial está adaptado a los [estándares K-12 de la CSTA] (%{csta_k12_url})
+    y a la IA para las [pautas de K-12] ().%{k12_url}
+  csa_ai_page_faq_question_09: "¿Cuánto cuesta impartir este módulo?"
+  csa_ai_page_faq_answer_09_01: "¡Nuestro plan de estudios y nuestra plataforma están
+    disponibles [sin costo] (%{no_cost_url}) para que cualquier persona, en cualquier
+    lugar, pueda enseñar!"
+  csa_ai_page_faq_answer_09_02: Además, el software y las herramientas utilizadas
+    en este módulo son gratuitos. GitHub Copilot es gratuito para verificados [teachers](%{teachers_url})
+    y [students](%{students_url}).
+  csa_ai_page_faq_question_10: "¿Qué hago si la instalación del software no funciona?"
+  csa_ai_page_faq_answer_10: Es común que surjan problemas durante la instalación
+    del software, pero hay pasos sistemáticos que puede seguir para solucionarlos
+    y resolverlos. [Consulte algunos consejos de solución de problemas aquí] (%{troubleshooting_url}).
+  csa_ai_page_faq_question_11: How was the curriculum developed?
+  csa_ai_page_faq_answer_11_01: 'Nuestro plan de estudios de ingeniería de software
+    y visión artificial se diseñó teniendo en cuenta los valores de nuestro plan de
+    estudios. Los siguientes objetivos guiaron la creación de este plan de estudios:'
+  csa_ai_page_faq_answer_11_list_01: "**Objetivo 1: ** Usa herramientas de IA para
+    generar, depurar y editar código."
+  csa_ai_page_faq_answer_11_list_02: "**Objetivo 2: ** Transición de Java Lab a herramientas
+    del mundo real."
+  csa_ai_page_faq_answer_11_list_03: "**Objetivo 3: ** Profundizar en la comprensión
+    de cómo se entrenan e integran los modelos de IA en los programas."
+  csa_ai_page_faq_answer_11_02: Para obtener más información sobre los valores que
+    guiaron nuestro trabajo, consulte nuestros [valores curriculares] (%{curriculum_values_url}).
   language_code:
     ar: Árabe
     az: Azerí

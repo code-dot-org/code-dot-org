@@ -114,19 +114,20 @@ ga:
     a chruthú.
   oceans_landing_videos: Físeáin faoi AI agus Foghlaim Meaisín
   oceans_behind_the_scenes: 'AI do Aigéin: Taobh thiar de na Láithreacha'
-  oceans_behind_the_scenes_1: Levels 2-4 use a pretrained model provided by the <a
-    href="https://www.tensorflow.org/" >TensorFlow</a> <a href="https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md">
-    MobileNet </a> project. A MobileNet model is a <a href="https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks">convolutional
-    neural network</a> that has been trained on <a href="http://www.image-net.org/">ImageNet</a>,
-    a dataset of over 14 million images hand-annotated with words such as "balloon"
-    or "strawberry". In order to customize this model with the labeled training data
-    the student generates in this activity, we use a technique called <a href="https://en.wikipedia.org/wiki/Transfer_learning">Transfer
-    Learning</a>. Each image in the training dataset is fed to MobileNet, as pixels,
-    to obtain a list of annotations that are most likely to apply to it. Then, for
-    a new image, we feed it to MobileNet and compare its resulting list of annotations
-    to those from the training dataset. We classify the new image with the same label
-    (such as "fish" or "not fish") as the images from the training set with the most
-    similar results.
+  oceans_behind_the_scenes_1: Leibhéil 2-4 úsáid samhail réamhoilte ar fáil ag an
+    tionscadal <a href="https://www.tensorflow.org/" ></a> <a href="https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md">
+    TensorFlow MobleNet. </a> Is samhail MobileNet líonra</a> neural <a href="https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks">convolutional
+    atá oilte ar <a href="http://www.image-net.org/">ImageNet</a>, tacar sonraí de
+    níos mó ná 14 milliún íomhánna lámh-anótáilte le focail ar nós “balún” nó “sútha
+    talún”. D'fhonn an tsamhail seo a shaincheapadh leis na sonraí oiliúna lipéadaithe
+    a ghineann an mac léinn sa ghníomhaíocht seo, bainimid úsáid as teicníc ar a dtugtar
+    <a href="https://en.wikipedia.org/wiki/Transfer_learning">Foghlaim Aistrithe.</a>Cuirtear
+    gach íomhá sa tacar sonraí oiliúna ar fáil do MobleNet, mar phicteilíní, chun
+    liosta nótaí is dóichí a bhaineann leis a fháil. Ansin, le haghaidh íomhá nua,
+    déanaimid é a bheathú chuig MobleNet agus déanaimid comparáid idir a liosta nótaí
+    mar thoradh orthu siúd ón tacar sonraí oiliúna. Déanaimid an íomhá nua a rangú
+    leis an lipéad céanna (mar shampla “iasc” nó “ní iasc”) mar na híomhánna ón tacar
+    oiliúna leis na torthaí is cosúla.
   oceans_behind_the_scenes_1_markdown: Leibhéil 2-4 úsáid samhail réamhoilte ar fáil
     ag an [TensorFlow](https://www.tensorflow.org/) [MobileNet](https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md)
     tionscadal. Is samhail MobleNet a [líonra neural convolutional] (https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks)
@@ -141,13 +142,14 @@ ga:
     siúd ón tacar sonraí oiliúna. Déanaimid an íomhá nua a rangú leis an lipéad céanna
     (mar shampla “iasc” nó “ní iasc”) mar na híomhánna ón tacar oiliúna leis na torthaí
     is cosúla.
-  oceans_behind_the_scenes_2: Levels 6-8 use a <a href="https://en.wikipedia.org/wiki/Support-vector_machine">Support-Vector
-    Machine</a> (SVM). We look at each component of the fish (such as eyes, mouth,
-    body) and assemble all of the metadata for the components (such as number of teeth,
-    body shape) into a vector of numbers for each fish. We use these vectors to train
-    the SVM. Based on the training data, the SVM separates the "space" of all possible
-    fish into two parts, which correspond to the classes we are trying to learn (such
-    as "blue" or "not blue").
+  oceans_behind_the_scenes_2: Úsáideann Leibhéil 6-8 Meaisín <a href="https://en.wikipedia.org/wiki/Support-vector_machine">Veicteoir
+    Tacaíochta (SVM).</a> Breathnaímid ar gach comhpháirt den iasc (cosúil le súile,
+    béal, corp) agus cuirimid na meiteashonraí go léir le chéile do na comhpháirteanna
+    (mar shampla líon na bhfiacla, cruth an choirp) i veicteoir uimhreacha do gach
+    iasc. Úsáidimid na veicteoirí seo chun an SVM a oiliúint. Bunaithe ar na sonraí
+    oiliúna, scarann an SVM “spás” gach iasc is féidir ina dhá chuid, a fhreagraíonn
+    do na ranganna a bhfuilimid ag iarraidh a fhoghlaim (mar shampla “gorm” nó “ní
+    gorm”).
   oceans_behind_the_scenes_2_markdown: Leibhéil 6-8 úsáid a [Tacaíocht-Veicteoir Machine]
     (https://en.wikipedia.org/wiki/Support-vector_machine) (SVM). Breathnaímid ar
     gach comhpháirt den iasc (cosúil le súile, béal, corp) agus cuirimid na meiteashonraí
@@ -196,6 +198,17 @@ ga:
   grade_level_label_elementary: Bunscoil
   grade_level_label_middle: Meán Scoil
   grade_level_label_high: Scoil Ard
+  curricula_title_elementary: Curaclaim Bunscoile
+  curricula_desc_elementary: Brabhsáil na cúrsaí agus na gníomhaíochtaí spraíúla,
+    saor in aisce a thugann cuireadh duit eolaíocht ríomhaireachta a iniúchadh le
+    do dhaltaí bunscoile.
+  curricula_title_middle: Curaclaim Meán Scoil
+  curricula_desc_middle: Brabhsáil na tairiscintí tarraingteacha a chuireann ar chumas
+    tú féin agus do dhaltaí meánscoile eolaíocht ríomhaireachta a iniúchadh le chéile.
+  curricula_title_high: Curaclaim High School
+  curricula_desc_high: Brabhsáil na cúrsaí agus na gníomhaíochtaí láidre a thugann
+    cuireadh duit féin agus do dhaltaí scoile ard chun tochailt níos doimhne san eolaíocht
+    ríomhaireachta.
   students_label: Mic Léinn
   teachers_label: Múinteoirí
   teacher_label_csf: CS Bunúsacha Múinteoir
@@ -222,6 +235,13 @@ ga:
   call_to_action_explore_choice_level: Déan iniúchadh ar leibhéal rogha sampla
   call_to_action_explore_collection: Déan iniúchadh ar bhailiúchán
   call_to_action_explore_unplugged_lesson: Déan iniúchadh ar cheachtanna neamhphlugáilte
+  call_to_action_explore_csf: Déan iniúchadh CS Bunúsacha
+  call_to_action_explore_csd: Déan iniúchadh ar Fionnachtana CS
+  call_to_action_explore_csp: Déan iniúchadh ar Prionsabail CS
+  call_to_action_explore_csc: Déan iniúchadh ar Naisc CS
+  call_to_action_explore_csa: Déan iniúchadh AP® Eolaíocht Ríomhaireachta A
+  call_to_action_explore_maker: Déan iniúchadh ar curaclaim Déantóir
+  call_to_action_explore_hoc: Déan iniúchadh ar ranganna teagaisc Uair an Chóid
   call_to_action_try_app_lab: Bain triail as App Lab
   call_to_action_view_lesson_plan: Féach plean ceachta
   call_to_action_self_paced_pl: Cuir tús le foghlaim ghairmiúil féin-luas
@@ -266,6 +286,7 @@ ga:
   call_to_action_notify_available: Cuir in iúl dom nuair atá sé ar fáil
   call_to_action_register_early_access: Cláraigh le haghaidh rochtain luath
   call_to_action_open_positions: Féach ar phoist oscailte
+  call_to_action_get_guide: Faigh an treoir
   aria_label_call_to_action_afe: Níos mó a fhoghlaim faoi Innealtóir Todhchaí Amazon
   aria_label_call_to_action_teaching_csf: Tosaigh an Teagasc Eolaíocht Ríomhaireachta
     Bunúsaigh clár foghlama gairmiúla
@@ -377,6 +398,8 @@ ga:
   curriculum_name_csa: AP® Eolaíocht Ríomhaireachta A
   curriculum_name_csc_02: Aon Modúl CS Connections
   curriculum_name_ai: AI & Meaisín Foghlama
+  curriculum_name_artificial_intelligence: Intleacht Shaorga (AI)
+  curriculum_name_maker: Déantóir
   curriculum_name_maker_cp: Aipeanna a Chruthú le Gléasanna (Clós Súgartha Cuarda)
   curriculum_name_maker_microbit: 'Aipeanna a chruthú le Gléasanna (micrea: giotán)'
   curriculum_name_creating_apps_with_devices: Aipeanna a chruthú le Gléasanna
@@ -435,6 +458,13 @@ ga:
     sa ríomhaireacht. cláir a úsáid a bhaint as ionchuir crua-earraí agus aschuir
     a fhorbairt. Tá leagan den aonad seo ann don Chlós Súgartha Micrea: giotán agus
     Cuarda.'
+  curriculum_desc_csa: Mic léinn a thabhairt isteach chun innealtóireacht bogearraí
+    agus dearadh réad-dhírithe agus iad ag foghlaim an teanga cláir Java sa churaclam
+    saor in aisce do AP® Eolaíocht Ríomhaireachta A (AP® CSA).
+  curriculum_desc_maker: Tógann oideachas déantóra STEM (Eolaíocht, Teicneolaíocht,
+    Innealtóireacht, Matamaitic) céim eile trí cuireadh a thabhairt do thaithí phraiticiúil
+    agus do chomhoibriú isteach sa seomra ranga chun cabhrú le réiteach fadhbanna
+    agus smaointeoireacht chriticiúil a mhúineadh.
   collection_hardware: Fócas ar Crua-earraí
   collection_hardware_desc: Cumhachtaíonn sé do mhic léinn sonraí agus gairis fhisiciúla
     a úsáid chun fadhbanna a réiteach.
@@ -469,6 +499,7 @@ ga:
   module_label_professional_learning: 'Foghlaim Ghairmiúil:'
   module_label_languages: 'Teangacha Tacaithe:'
   module_label_accessibility_features: 'Inrochtaineacht:'
+  module_label_accessibility_features_full: 'Gnéithe Inrochtaineachta:'
   module_label_educator_tool: Uirlis oideachasóir
   module_label_educator_course: Cúrsa oideachasóir
   module_label_student_tool: Uirlis mac léinn
@@ -476,6 +507,7 @@ ga:
   module_label_student_content_resources: Ábhar & acmhainní
   module_label_new: Nua
   module_label_coming_soon: Ag teacht go luath
+  module_label_available_now: Ar fáil anois
   module_label_video_series: Sraith físe
   module_label_self_paced: Modúl féin-paced
   module_ages_5_10: 5-10
@@ -486,6 +518,8 @@ ga:
   module_grade_2_5: 2-5
   module_grade_3_5: 3-5
   module_grade_3_8: 3-8
+  module_grade_k_12: K-12
+  module_grade_3_12: 3-12
   module_grade_6_12: 6-12
   module_grade_6_10: 6-10
   module_grade_9_12: 9-12
@@ -500,7 +534,9 @@ ga:
   module_grade_9_12_teachers: 9-12 Múinteoirí
   module_level_beginner: Bunleibhéal
   module_level_intermediate: Idirmheánach
+  module_level_advanced: Casta
   module_duration_45_mins: 45 nóiméad
+  module_duration_2_weeks: Seachtaine 2
   module_duration_1_hr: 1 uair an chloig
   module_duration_2_hrs: 2 uair an chloig
   module_duration_3_hrs: 3 uair an chloig
@@ -584,6 +620,7 @@ ga:
   heading_java_lab: Saotharlann Java
   heading_objects_first: Cuspóirí ar dtús
   heading_these_lessons_will: 'Déanfaidh na ceachtanna seo:'
+  heading_explore_curriculum_catalog: Fiosraigh ár gcúrsaí go léir sa Chatalóg Churaclaim
   professional_learning_section_desc: Faigh an tacaíocht atá uait agus tú ag ullmhú
     chun múineadh. Is breá le múinteoirí é, agus níos mó ná 90% á rangú mar an fhorbairt
     ghairmiúil is fearr riamh!
@@ -859,6 +896,11 @@ ga:
     le ChatGPT) agus AI Giniúnach. Éist leis an gcaoi a n-oibríonn na teicneolaíochtaí
     nua seo go díreach ó na saineolaithe: Mira Murati, CTO de OpenAi, agus Cristóbal
     Valenzuela, POF RunwayML.'
+  ai_pl_101_llm_slides_title: Leideanna Múnla Teanga Móra d'Oideoirí
+  ai_pl_101_llm_slides_desc: Uirlisí chun an t-aschur is fearr is féidir a fháil ó
+    LLManna cosúil le ChatGPT, ó thosaitheoirí go hardleibhéal. San áireamh tá leideanna
+    tosaithe dóibh siúd atá ag tumadh a gcuid toes isteach, chomh maith le huirlisí
+    chun cinn dóibh siúd atá ag iarraidh a gcumas a uasmhéadú.
   how_ai_works_hero_heading: Conas a Oibríonn AI
   how_ai_works_hero_desc: Léim isteach i saol AI le “How AI Works,” ár sraith físe
     agus na ceachtanna tionlacain!
@@ -1490,10 +1532,10 @@ ga:
     pinginí). Tá gníomhaíochtaí malartacha ar fáil mura bhfuil rochtain agat ar na
     soláthairtí seo.
   csd_page_faq_answer_04_06: Aipeanna a Chruthú le Gléasanna (Rogha A agus Rogha B)
-  csd_page_faq_answer_04_07: 'Option A: Classroom set of Circuit Playgrounds. Check
-    out [code.org/maker/circuitplayground](%{url}) for more details.'
-  csd_page_faq_answer_04_08: 'Option B: Classroom set of micro:bit devices. Check
-    out [code.org/maker/microbit](%{url}) for more details.'
+  csd_page_faq_answer_04_07: 'Rogha A: Sraith seomra ranga de Chlós Súgartha Cuarda.
+    Amharc ar [code.org/déantóir/circuitplayground] () le haghaidh tuilleadh sonraí.%{url}'
+  csd_page_faq_answer_04_08: 'Rogha B: Sraith seomra ranga de micrea: feistí giotán.
+    Amharc ar [code.org/déantóir/microbit] () le haghaidh tuilleadh sonraí.%{url}'
   csd_page_faq_answer_04_09: Soláthairtí déantóra, mar shampla boscaí fíocháin folamh
     nó rollaí cairtchláir nó scríobpháipéar
   csd_page_faq_answer_04_10: "* Nóta: Tá dhá rogha cur chun feidhme ag an aonad Aipeanna
@@ -1641,9 +1683,11 @@ ga:
     stiúir múinteoirí deartha le bheith in éineacht leo agus is féidir le mic léinn
     na ceachtanna tógála scileanna a chur i gcrích ar a luas féin.
   csf_page_faq_question_06: Cad iad na hábhair is gá dom le haghaidh Bunúsacha CS?
-  csf_page_faq_answer_06: Many lessons have handouts that guide students through activities.
-    These resources can be printed or assigned digitally. Some lessons call for typical
-    classroom supplies and manipulatives. [Visit the CSF Syllabus to learn more](%{syllabus_url}).
+  csf_page_faq_answer_06: Tá bileoga ag go leor ceachtanna a threoraíonn mic léinn
+    trí ghníomhaíochtaí. Is féidir na hacmhainní seo a phriontáil nó a shannadh go
+    digiteach. Iarrann roinnt ceachtanna soláthairtí agus ionramhálacha tipiciúla
+    sa seomra ranga. [Tabhair cuairt ar an Siollabas CSF chun níos mó a fhoghlaim]
+    ().%{syllabus_url}
   csa_page_top_desc: Introduce students to software engineering and object-oriented
     design while they learn the Java programming language in this free curriculum
     for [AP® Computer Science A (AP® CSA)](%{csa_url}).
@@ -1798,8 +1842,8 @@ ga:
   ai_activity_zooniverse: Zooniverse - Seabra Sléibhe Snapshot
   ai_activity_zooniverse_desc: Cabhair chosaint ar an mbaol Rinn Mountain séabra ag
     aithint na hainmhithe éagsúla sna híomhánna.
-  codeorg_homepage_hoc2018_curriculum: Go further with <a href="%{studio_url}/courses"
-    class="hoc2018-curriculum-link">Code.org courses</a>
+  codeorg_homepage_hoc2018_curriculum: Téigh níos faide le cúrsaí <a href="%{studio_url}/courses"
+    class="hoc2018-curriculum-link">Code.org</a>
   codeorg_homepage_hoc2018_dance_heading: Cruthaigh do chuid féin <span class="highlight-word">Rince&nbsp;Páirtí</span>
   codeorg_homepage_hoc2018_header_line1: Tá Uair an Chóid ag teacht...
   codeorg_homepage_hoc2018_header_line2_desktop: Cad a chruthóidh tú <span class="hoc2018-highlight-word">?</span>
@@ -2013,7 +2057,7 @@ ga:
     chur chun cinn"
   whats_next_how_to_promote_link: "<a href='/promote'>Conas Uair an Chóid</a>a chur
     chun cinn"
-  whats_next_try: "<a href='%{learn_url}'>Try tutorials</a>"
+  whats_next_try: "<a href='%{learn_url}'>Bain triail as ranganna teagaisc</a>"
   whats_next_try_button: Bain triail as ranganna teagaisc
   n_have_learned_an_hoc: "<h1>Bain triail as an</h1><h2>Uair de Chód</h2><h3># sheirbheáil</h3>"
   anybody_can_learn: Is féidir le duine ar bith foghlaim.
@@ -2147,6 +2191,12 @@ ga:
     ar chúrsaí Code.org, deiseanna áitiúla, nó nuacht eolaíochta ríomhaireachta eile?
   signup_email_preference_privacy: "(Féach ar ár bpolasaí príobháideachais)"
   signup_email_preference_yes: 'Yes'
+  signup_email_preference_yes_elementary: Sea - Seol chugam nuashonruithe ar Acmhainní
+    Bunscoile
+  signup_email_preference_yes_middle: Sea - Seol chugam nuashonruithe ar Acmhainní
+    Meán Scoile
+  signup_email_preference_yes_high: Sea - Seol nuashonruithe chugam ar Acmhainní Ardscoile
+  signup_email_preference_yes_general: Sea - Seol nuashonruithe ginearálta chugam
   signup_email_preference_no: Níl
   signup_email_preference_error: Tá rogha ríomhphoist ag teastáil
   signup_multiple_event_warning: Cuirfimid d'ainm scoile agus do chathair ar an léarscáil
@@ -2257,12 +2307,12 @@ ga:
     leis an bhfeachtas Grassroots seo.
   hoc_faq_last_year: Bain triail as na ranganna teagaisc
   hoc_faq_when_is_hoc_q: Cathain a bhíonn Uair an Chóid?
-  hoc_faq_when_is_hoc_a: The Hour of Code takes place each year during <a href='%{csedweek_url}'>Computer
-    Science Education Week</a>. The %{campaign_date_year} Computer Science Education
-    Week will be %{campaign_date_full}, but you can host an Hour of Code all year-round.
-    Computer Science Education Week is held annually in recognition of the birthday
-    of computing pioneer <a href='%{grace_hopper}'>Admiral Grace Murray Hopper</a>
-    (December 9, 1906).
+  hoc_faq_when_is_hoc_a: Bíonn Uair an Chóid ar siúl gach bliain le linn Sheachtain
+    Oideachais na <a href='%{csedweek_url}'>Ríomheolaíochta</a>. Beidh Seachtain Oideachais
+    na %{campaign_date_year} Ríomheolaíochta %{campaign_date_full}, ach is féidir
+    leat Uair an Chóid a óstáil ar feadh na bliana. Tionóltar Seachtain Oideachais
+    Ríomheolaíochta gach bliain mar aitheantas ar lá breithe an cheannródaí ríomhaireachta
+    <a href='%{grace_hopper}'>Aimiréil Grace Murray Hopper</a> (9 Nollaig, 1906).
   hoc_faq_when_is_hoc_a_markdown: Bíonn Uair an Chóid ar siúl gach bliain le linn
     [Seachtain Oideachais na Ríomheolaíochta] (%{csedweek_url}). %{campaign_date_full}a
     bheidh sa tSeachtain Oideachais Ríomheolaíochta %{campaign_date_year} , ach is
@@ -2308,22 +2358,27 @@ ga:
     uair an chloig a thugaimid aire don chuid eile. Tá roghanna againn freisin do
     gach aois agus leibhéal taithí, ó naíolanna agus suas. Tosaigh ag pleanáil d'imeacht
     trí léamh a dhéanamh ar ár <a href='/how-to'>conas treoir a thabhairt</a>.
-  hoc_faq_host_a_markdown: Of course. Hour of Code activities are self-guided. All
-    you have to do is [try our current tutorials](%{codeorg_url}/learn), pick the
-    tutorial you want, and pick an hour — we take care of the rest. We also have options
-    for every age and experience-level, from kindergarten and up. Start planning your
-    event by reading our [how to guide](%{howto}).
+  hoc_faq_host_a_markdown: Ar ndóigh. Tá gníomhaíochtaí Uair an Chóid féintreoraithe.
+    Níl le déanamh agat ach [bain triail as ár ranganna teagaisc reatha] (%{codeorg_url}/foghlaim),
+    roghnaigh an rang teagaisc atá uait, agus roghnaigh uair an chloig - tugaimid
+    aire don chuid eile. Tá roghanna againn freisin do gach aois agus leibhéal taithí,
+    ó naíolanna agus suas. Tosaigh ag pleanáil d'imeacht trí léamh ár [conas treoir
+    a thabhairt] (%{howto}).
   hoc_faq_devices_q: Cad iad na gairis ba chóir dom a úsáid do mo mhic léinn?
-  hoc_faq_devices_a: Code.org tutorials work on all devices and browsers. You can
-    see more information about Code.org's tutorial tech needs <a href='%{codeorg_url}/educate/it'>here</a>.
-    Tech needs for non-Code.org tutorials can be found on <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a>
-    in the tutorial specific description. Don't forget we also offer <a href='%{unplugged_url}'>unplugged
-    activities</a> if your school can't accommodate the tutorials!
-  hoc_faq_devices_a_markdown: Code.org tutorials work on all devices and browsers.
-    You can see more information about Code.org's tutorial tech needs [here](%{codeorg_url}/educate/it).
-    Tech needs for non-Code.org tutorials can be found on [%{partner_url}/learn](%{codeorg_url}/learn)
-    in the tutorial specific description. Don't forget we also offer [unplugged activities](%{unplugged_url})
-    if your school can't accommodate the tutorials!
+  hoc_faq_devices_a: Code.org ranganna teagaisc ag obair ar gach feiste agus brabhsálaithe.
+    Is féidir leat a fheiceáil tuilleadh eolais a fháil faoi riachtanais ardteicneolaíochta
+    teagaisc Code.org <a href='%{codeorg_url}/educate/it'>anseo</a>. Is féidir riachtanais
+    teicneolaíochta do ranganna teagaisc neamh-Code.org a fháil <a href='%{codeorg_url}/learn'>%{partner_url}ar/foghlaim</a>
+    sa tuairisc shonrach teagaisc. Ná déan dearmad a chuirimid ar fáil freisin gníomhaíochtaí
+    <a href='%{unplugged_url}'>unplugged</a> más rud é nach féidir le do scoil freastal
+    ar na ranganna teagaisc!
+  hoc_faq_devices_a_markdown: Code.org ranganna teagaisc ag obair ar gach feiste agus
+    brabhsálaithe. Is féidir leat a fheiceáil tuilleadh eolais a fháil faoi riachtanais
+    ardteicneolaíochta teagaisc Code.org ar [here](%{codeorg_url}/oideachas/é). Is
+    féidir riachtanais teicneolaíochta do ranganna teagaisc neamh-Code.org a fháil
+    ar [%{partner_url}/foghlaim] (%{codeorg_url}/foghlaim) sa chur síos sonrach teagaisc.
+    Ná déan dearmad a chuirimid ar fáil freisin [gníomhaíochtaí unplugged] (%{unplugged_url})
+    más rud é nach féidir le do scoil freastal ar na ranganna teagaisc!
   hoc_faq_need_computers_q: An gá dom ríomhairí le haghaidh gach rannpháirtí?
   hoc_faq_need_computers_a: Níl. Tá ranganna teagaisc Uair an Chóid againn a oibríonn
     ar ríomhairí pearsanta, fóin chliste, táibléad, agus cuid nach dteastaíonn aon
@@ -2338,13 +2393,13 @@ ga:
     nó ceisteanna a fhreagairt. <li><b>Téigh unplugged.</b> Cuirimid <a href='%{unplugged_url}'>ranganna
     teagaisc a éilíonn aon ríomhaire</a> ar chor ar bith. </ul>
   hoc_faq_need_computers_a_markdown: |-
-    No. We have Hour of Code tutorials that work on PCs, smartphones, tablets, and some that require no computer at all! You can join wherever you are, with whatever you have.
+    Níl. Tá ranganna teagaisc Uair an Chóid againn a oibríonn ar ríomhairí pearsanta, fóin chliste, táibléad, agus cuid nach dteastaíonn aon ríomhaire uathu! Is féidir leat páirt a ghlacadh cibé áit ina bhfuil tú, le cibé rud atá agat.
 
-    _Here are a few options:_
+    _Seo cúpla rogha: _
 
-    - **Work in pairs.** [Research shows](%{pair_programming_research}) students learn best with [pair programming](%{pair_programming_video}), sharing a computer and working together. Encourage your students to double up.
-    - **Use a projected screen.** If you have a projector and screen for a Web-connected computer, your entire group can do an Hour of Code together. Watch video portions together and take turns solving puzzles or answering questions.
-    - **Go unplugged.** We offer [tutorials that require no computer](%{unplugged_url}) at all.
+    - ** Obair i mbeirteanna. ** [Taispeánann taighde] () is fearr a fhoghlaimíonn mic léinn le [cláir péire] (%{pair_programming_research}%{pair_programming_video}), ríomhaire a roinnt agus ag obair le chéile. Spreag do mhic léinn dúbailt suas.
+    -** Úsáid scáileán réamh-mheasta.** Má tá teilgeoir agus scáileán agat le haghaidh ríomhaire atá nasctha leis an nGréasán, is féidir le do ghrúpa iomlán Uair an Chóid a dhéanamh le chéile. Féach codanna físe le chéile agus sealanna a ghlacadh puzail a réiteach nó ceisteanna a fhreagairt.
+    -** Téigh unplugged.** Cuirimid [ranganna teagaisc a éilíonn aon ríomhaire] () ar chor ar bith.%{unplugged_url}
   hoc_faq_international_q: Tá mé i <country>. Conas is féidir liom páirt a ghlacadh
     go hidirnáisiúnta?
   hoc_faq_international_a: Is féidir le duine ar bith imeacht Uair an Chóid a eagrú,
@@ -2370,37 +2425,42 @@ ga:
     le haghaidh Uair an Chóid cuntas Stiúideo Cód go huathoibríoch. Más mian leat
     cuntais a chruthú do do mhic léinn, lean na <a href='https://youtu.be/_smelV_KISE'>threoir
     seo</a>.
-  hoc_faq_account_a_markdown: No. Absolutely no signup or login is required for students
-    to try the Hour of Code. Most of the [follow-on courses](%{codeorg_url}/learn/beyond)
-    require account creation to save student progress. Also, signing up for the Hour
-    of Code does NOT automatically create a Code Studio account. If you do want to
-    create accounts for your students, please follow these [instructions](%{section_instructions_url}).
+  hoc_faq_account_a_markdown: Níl. Cinnte níl aon signup ná logáil isteach ag teastáil
+    do mhic léinn chun iarracht a dhéanamh ar an Uair an Chóid. Éilíonn an chuid is
+    mó de na [cúrsaí leantacha] (%{codeorg_url}/foghlaim/níos faide anonn) cruthú
+    cuntas chun dul chun cinn na mac léinn a shábháil. Chomh maith leis sin, NÍ chruthaíonn
+    clárú le haghaidh Uair an Chóid cuntas Stiúideo Cód go huathoibríoch. Más mian
+    leat cuntais a chruthú do do mhic léinn, lean iad seo [instructions](%{section_instructions_url}).
   hoc_faq_high_school_q: Cén ghníomhaíocht ba chóir dom a dhéanamh le daltaí scoile
     ard?
-  hoc_faq_high_school_a: Our Star Wars and Minecraft tutorials are great for high
-    schoolers, especially the Star Wars JavaScript version and the free play level
-    on both tutorials. Alternately, we recommend trying one of the beginner tutorials
-    on <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a> to start, such as the
-    tutorial with Angry Birds or with Anna and Elsa. A high school student should
-    be able to finish one of these in 30 minutes and can then try a more advanced
-    tutorial in JavaScript, such as Khan Academy or CodeHS.
-  hoc_faq_high_school_a_markdown: Our Star Wars and Minecraft tutorials are great
-    for high schoolers, especially the Star Wars JavaScript version and the free play
-    level on both tutorials. Alternately, we recommend trying one of the beginner
-    tutorials on [%{partner_url}/learn](%{codeorg_url}/learn) to start, such as the
-    tutorial with Angry Birds or with Anna and Elsa. A high school student should
-    be able to finish one of these in 30 minutes and can then try a more advanced
-    tutorial in JavaScript, such as Khan Academy or CodeHS.
+  hoc_faq_high_school_a: Tá ár ranganna teagaisc Star Wars agus Minecraft iontach
+    do ard-scolairí, go háirithe leagan Star Wars JavaScript agus an leibhéal súgartha
+    saor in aisce ar an dá rang teagaisc. Re seach, molaimid ag iarraidh ar cheann
+    de na ranganna teagaisc thosaitheoirí <a href='%{codeorg_url}/learn'>%{partner_url}ar/foghlaim</a>
+    a thosú, ar nós an teagaisc le Éin Angry nó le Anna agus Elsa. Ba chóir go mbeadh
+    mac léinn scoile ard a bheith in ann a chríochnú ar cheann de na i 30 nóiméad
+    agus is féidir triail ansin teagaisc níos airde i JavaScript, ar nós Khan Acadamh
+    nó CodeHS.
+  hoc_faq_high_school_a_markdown: Tá ár ranganna teagaisc Star Wars agus Minecraft
+    iontach do ard-scolairí, go háirithe leagan Star Wars JavaScript agus an leibhéal
+    súgartha saor in aisce ar an dá rang teagaisc. Re seach, molaimid ag iarraidh
+    ar cheann de na ranganna teagaisc thosaitheoirí ar [%{partner_url}/foghlaim] (%{codeorg_url}/foghlaim)
+    a thosú, ar nós an teagaisc le Éin Angry nó le Anna agus Elsa. Ba chóir go mbeadh
+    mac léinn scoile ard a bheith in ann a chríochnú ar cheann de na i 30 nóiméad
+    agus is féidir triail ansin teagaisc níos airde i JavaScript, ar nós Khan Acadamh
+    nó CodeHS.
   hoc_faq_scratch_q: Tá mé ag déanamh Scratch do Uair an Chóid, ach cad má tá mo mhic
     léinn iPads seachas ríomhairí glúine?
-  hoc_faq_scratch_a: Scratch doesn't run on tablets. If your students are young, they
-    can use the ScratchJR iPad app (for early-readers). If you look at the tutorials
-    on <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a>, you can find other
-    tutorials that work on iPads - from Code.org, Tynker, Lightbot, or CodeSpark.
-  hoc_faq_scratch_a_markdown: Scratch doesn't run on tablets. If your students are
-    young, they can use the ScratchJR iPad app (for early-readers). If you look at
-    the tutorials on [%{partner_url}/learn](%{codeorg_url}/learn), you can find other
-    tutorials that work on iPads - from Code.org, Tynker, Lightbot, or CodeSpark.
+  hoc_faq_scratch_a: Ní ritheann Scratch ar tháibléid. Má tá do mhic léinn óg, is
+    féidir leo an aip ScratchJR iPad a úsáid (do luath-léitheoirí). Má fhéachann tú
+    ar na ranganna teagaisc <a href='%{codeorg_url}/learn'>%{partner_url}ar/foghlaim</a>,
+    is féidir leat teacht ar ranganna teagaisc eile a oibríonn ar iPads - ó Code.org,
+    Tynker, Lightbot, nó CodeSpark.
+  hoc_faq_scratch_a_markdown: Ní ritheann Scratch ar tháibléid. Má tá do mhic léinn
+    óg, is féidir leo an aip ScratchJR iPad a úsáid (do luath-léitheoirí). Má fhéachann
+    tú ar na ranganna teagaisc ar [%{partner_url}/learn] (%{codeorg_url}/foghlaim),
+    is féidir leat teacht ar ranganna teagaisc eile a oibríonn ar iPads - ó Code.org,
+    Tynker, Lightbot, nó CodeSpark.
   hoc_faq_count_hoc_q: Conas a chomhaireamh tú Uaireanta an Chóid?
   hoc_faq_map_q: Cén fáth nach bhfeicim mo phonc ar an léarscáil?
   hoc_faq_map_a: Táimid chomh leithscéal nach bhfuil tú ag féachaint ar do ócáid ar
@@ -2496,10 +2556,10 @@ ga:
     leathanach</a> áit ar féidir leat teastais a phriontáil do do rang iomlán roimh
     an am. Is féidir leat <a href='%{codeorg_url}/certificates?course=mc'>theastas
     speisialta</a> a phriontáil freisin do mhic léinn atá ag déanamh an teagaisc Minecraft.
-  hoc_faq_certificates_a_markdown: Go to our [certificates page](%{codeorg_url}/certificates)
-    where you can print certificates for your entire class ahead of time. You can
-    also print out [special certificates](%{codeorg_url}/certificates?course=mc) for
-    students doing the Minecraft tutorial.
+  hoc_faq_certificates_a_markdown: Téigh go dtí ár [leathanach teastais] (%{codeorg_url}/teastais)
+    áit ar féidir leat teastais a phriontáil do do rang iomlán roimh an am. Is féidir
+    leat a phriontáil amach freisin [teastais speisialta] (%{codeorg_url}/teastais?
+    cúrsa = mc) do mhic léinn atá ag déanamh an teagaisc Minecraft.
   hoc_faq_logo_q: An bhfuil teorainneacha ann maidir le conas is féidir liom lógó
     nó ainm Uair an Chóid a úsáid?
   hoc_faq_logo_a: Tá Uair an Chóid trademarked. Nílimid ag iarraidh cosc a chur ar
@@ -2528,8 +2588,8 @@ ga:
     50% de na rannpháirtithe**!
   stats_nina: "“Gach lá amháin a fuarthas na torthaí céanna&mdash; 100% rannpháirtíocht.”
     - Nina Nichols Peery, Múinteoir"
-  stats_student: '"I knew this was a <b>once-in-a-lifetime</b> chance." - Mariana
-    Alzate, 5th grader'
+  stats_student: "“Bhí a fhios agam gur</b> seans <b>uair amháin ar feadh an tsaoil
+    é seo.” - Mariana Alzate, 5ú grader"
   stats_michael: "“Ní fhaca mé <b>riamh, chonaic</b> riamh mo mhic léinn an oiread
     sin sceitimíní faoi fhoghlaim.” - Michael Clark, Múinteoir"
   resources_how_to: Conas treoir a thabhairt do mhúinteoirí
@@ -5677,11 +5737,11 @@ ga:
     tríd an domhan Minecraft seo.
   tutorial_minecraft-2016_longdescription: Tóg cluiche Minecraft. Cruthaigh do leaganacha
     féin de sicín, caoirigh, creepers, zombies agus níos mó.
-  tutorial_thinkersmith-es_longdescription: Mediante el uso de un "Vocabulario Robot"
+  tutorial_thinkersmith-es_longdescription: Mediante el uso de “Vocabulario Robot”
     predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar
-    a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento
-    ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones
-    as&iacute; como la valiosa habilidad de depuraci&oacute;n.
+    a cabo tareas espec ficas sin ar a bheith discutidas previamente.&iacute;Tá sé
+    segmento ense&ntilde;a los estudiantes la conexi&oacute;n entre s&iacute;mbolos
+    y acciones mar como la valiosa habilidad de depuraci n.&iacute;&oacute;
   tutorial_pixie_longdescription: Uair an Chóid teagaisc le Pixie
   tutorial_play_longdescription: Cruthaigh scéal nó cluiche a dhéanamh le Play Lab!
     Déan ainmhithe, pirates, zombies, ninjas, agus go leor carachtair níos mó bogadh,
@@ -13007,12 +13067,12 @@ ga:
   tutorial_googlename _longdescription: Roghnaigh ainm agus na litreacha an fhocail
     a thabhairt chun na beatha ag baint úsáide as cód. Roghnaigh leasainm, ainm peataí,
     ainmhí, spórt, áit nó caitheamh aimsire.
-  tutorial_carnegiezillah_longdescription: Zillah City is thriving, and music is in
-    the air. Rumor has it, the famed Gargantua bot is online and sending the last
-    Toxibots to trash the city block by block…. Grab your cobot hoverboard and get
-    ready to groove, move, and finish off what you started! Players program their
-    cobot hoverbots to change lanes, avoid obstacles, and take out many Toxibots in
-    this rhythm-styled game.
+  tutorial_carnegiezillah_longdescription: Tá rath ar Chathair Zillah, agus tá ceol
+    san aer. Tá sé ag Rumor, tá an bot cáiliúil Gargantua ar líne agus ag seoladh
+    na Toxibots deiridh chun bloc na cathrach a bhruscar de bhloc.…Grab do hoverboard
+    cobot agus a fháil réidh chun groove, bogadh, agus críochnaigh as an méid a thosaigh
+    tú! Cláraíonn na himreoirí a gcuid hoverbots cobot chun lánaí a athrú, constaicí
+    a sheachaint, agus go leor Toxibots a thógáil amach sa chluiche seo rithim-styled.
   tutorial_nasachspacejam_longdescription: Cruthaigh córas gréine a charraigeacha
     i ndáiríre! Foghlaim faoi cheol, réalteolaíocht, agus códú sa ghníomhaíocht féin-threoraithe
     seo (níl aon taithí códaithe ag teastáil). Pláinéid Clár ceol a dhéanamh, a chruthú
@@ -13859,6 +13919,139 @@ ga:
     lena n-áirítear dúnadh oifige org-leathan 2 seachtaine ag deireadh na bliana aka
     Sos Gheimhridh), leath lá oibre ar an Aoine i rith an tsamhraidh aka Aoine an
     tSamhraidh, agus sochair flaithiúla eile.
+  csa_ai_page_hero_title: Innealtóireacht Bogearraí & Fís Ríomhaireachta
+  csa_ai_page_hero_description: 'Tugann an modúl CSA iar-AP dhá chaibidil seo taithí
+    phraiticiúil do mhic léinn ardscoile le huirlisí forbartha bogearraí gairmiúla,
+    lena n-áirítear GitHub agus GitHub Copilot, agus tugann sé scileanna an domhain
+    dóibh chun clár fís ríomhaire a fhorbairt. '
+  csa_ai_page_video_section_title: Céim níos faide ná saol na dtimpeallachtaí cláir
+    Code.org
+  csa_ai_page_video_section_li_1: Faigh amach faoi AI agus a fheidhmeanna
+  csa_ai_page_video_section_li_2: Taithí phraiticiúil le huirlisí forbartha bogearraí
+    gairmiúla
+  csa_ai_page_video_section_li_3: Foghlaim cleachtais chaighdeánacha an tionscail
+  csa_ai_page_video_section_li_4: Smaointeoireacht chriticiúil a chothú
+  csa_ai_page_programming_tools: 'Uirlisí Clárúcháin: Github, Github Copilot, VCoDE,
+    TensorFlow '
+  csa_ai_page_professional_learning: Ar bith
+  csa_ai_page_curriculum_topics: 'Ábhair: Clárú, Sonraí, Ealaín agus Dearadh, Cluichí
+    agus Beochan'
+  csa_ai_page_curriculum_accessibility_features: Féach an rannán Ceisteanna Coitianta
+    le haghaidh sonraí
+  csa_ai_page_curriculum_languages_support: Gaeilge
+  csa_ai_page_article_title_1: Tógáil le Copilot
+  csa_ai_page_article_description_1: Foghlaimíonn an scoláire conas GitHub Copilot
+    a úsáid mar ríomhchláraitheoir péire chun an cód atá ann cheana a mhíniú, earráidí
+    a aimsiú agus a shocrú, agus réitigh a ghiniúint ar fhadhbanna nua.
+  csa_ai_page_article_link_1: Níos mó a fhoghlaim faoi Copilot
+  csa_ai_page_article_title_2: Tóg do mhúnla AI féin
+  csa_ai_page_article_description_2: Déanann mic léinn oiliúint ar a gcuid samhlacha
+    AI féin ag baint úsáide as Teachable Machine chun íomhánna agus gothaí a aithint
+    mar cheamara gréasáin agus machnamh a dhéanamh ar an tionchar a bhíonn ag fís
+    ríomhaire ar an mbealach a n-idirghníomhaíonn úsáideoirí le feidhmchláir.
+  csa_ai_page_article_link_2: Déan iniúchadh ar an bplean ceachta
+  csa_ai_page_article_title_3: Déan iniúchadh ar fhís ríomhaire
+  csa_ai_page_article_description_3: Cuireann mic léinn na samhlacha AI a chruthaigh
+    siad le Teachable Machine i bhfeidhm in aip Java, ag baint úsáide as GitHub Copilot
+    chun cabhrú leo leaganacha atá ann cheana d'aipeanna a mhodhnú chun oibriú leis
+    na hionchuir éagsúla.
+  csa_ai_page_article_link_3: Féach sampla
+  csa_ai_page_learn_more_section_title: Níos mó a fhoghlaim faoi Intleacht Shaorga
+  csa_ai_page_learn_more_title: Déan iniúchadh ar AI 101 do Mhúinteoirí
+  csa_ai_page_learn_more_description: Faigh amach an domhan ceannródaíoch de Intleacht
+    Shaorga (AI) agus a acmhainneacht chlaochlaitheach san oideachas lenár sraith
+    chuimsitheach foghlama ar líne do mhúinteoirí.
+  csa_ai_page_learn_more_link: Féach ar an AI 101 do shraith Múinteoirí
+  csa_ai_page_faq_question_01: Cad iad na réamhriachtanais don mhodúl seo?
+  csa_ai_page_faq_answer_01_01: 'Sula tumfaidh siad isteach sa mhodúl seo, ba cheart
+    go mbeadh eolas ar leibhéal iontrála ag mic léinn ar Java. Go sonrach, ba chóir
+    dóibh tuiscint a fháil ar:'
+  csa_ai_page_faq_answer_01_list_01: "** Ranganna agus Réada: ** Ba chóir go mbeadh
+    cur amach ag mic léinn ar ranganna a shainiú agus a úsáid, chomh maith le rudaí
+    a chruthú agus a ionramháil."
+  csa_ai_page_faq_answer_01_list_02: "** Scríbhneoireacht agus Ag glaoch Modhanna:
+    ** Ba chóir go mbeadh mic léinn in ann modhanna laistigh de rang a shainiú, tuiscint
+    a fháil ar paraiméadair modh agus cineálacha ar ais, agus modhanna glaoch ó rudaí
+    nó modhanna eile."
+  csa_ai_page_faq_answer_01_list_03: "** Arrays 1D agus arrayLists: ** Ba chóir dóibh
+    a bheith líofa i dhearbhú, initializing, agus ionramháil arrays aon-tríthoiseach
+    agus arrayLists, lena n-áirítear iterating trí iad."
+  csa_ai_page_faq_answer_01_list_04: "** Roghnú agus Atriall: ** Tá bunús láidir i
+    ráitis choinníollach agus lúba ríthábhachtach."
+  csa_ai_page_faq_question_01_02: Go hidéalach, bheadh mic léinn a bhfuil AP Eolaíocht
+    Ríomhaireachta A críochnaithe acu nó cúrsa doimhneachta agus déine den chineál
+    céanna ullmhaithe go maith don mhodúl seo.
+  csa_ai_page_faq_question_02: Conas is féidir liom na bogearraí a theastaíonn don
+    mhodúl seo a shuiteáil?
+  csa_ai_page_faq_answer_02_01: Tá an modúl seo uathúil toisc go mbaineann sé le húsáid
+    bogearraí tríú páirtí seachas saotharlanna agus uirlisí Code.org. [Léigh tuilleadh
+    faoi shuiteáil na bogearraí anseo] (%{accessibility_url}).
+  csa_ai_page_faq_question_03: Conas is féidir liom tacú le riachtanais inrochtaineachta
+    agus mé ag múineadh an mhodúil seo?
+  csa_ai_page_faq_answer_03_01: Tá sé ríthábhachtach freastal ar riachtanais inrochtaineachta
+    do thimpeallacht foghlama chuimsitheach. [Léigh tuilleadh faoi ghnéithe inrochtaineachta
+    sna bogearraí a úsáidtear sa mhodúl seo anseo] (%{install_url}).
+  csa_ai_page_faq_question_04: Conas a úsáidim Cód VS ar Chromebooks?
+  csa_ai_page_faq_answer_04: Tá sé níos simplí Cód VS a úsáid ar Chromebook, go háirithe
+    leis an gcumas aipeanna Linux a reáchtáil ar mhúnlaí Chromebook níos nuaí. [Léigh
+    tuilleadh faoi Chód VS a bhunú ar Chromebooks anseo] ()%{chromebook_url}.
+  csa_ai_page_faq_question_05: Conas is féidir liom forbairt ghairmiúil a fháil don
+    mhodúl seo?
+  csa_ai_page_faq_answer_05: Níl forbairt ghairmiúil shonrach ann don chúrsa seo faoi
+    láthair. Má tá tú ag iarraidh tuiscint a fháil ar conas dul chuig Intleacht Shaorga
+    i do sheomra ranga is féidir leat [iniúchadh a dhéanamh ar AI 101 do Mhúinteoirí]
+    (%{ai_101_url}).
+  csa_ai_page_faq_question_06: Cad é an t-am a mholtar chun an modúl seo a theagasc?
+  csa_ai_page_faq_answer_06_01: Tá an modúl Innealtóireachta Bogearraí & Fís Ríomhaireachta
+    struchtúrtha go tuisceanach chun foghlaim chuimsitheach a sholáthar i bhfráma
+    ama gonta. Tá an modúl ar fad a ceapadh chun réis** 2 sheachtain de threorach**.
+    Tá an chuid is mó de na ceachtanna curtha in oiriúint do ** 45 nóiméad**, agus
+    tá ceachtanna ina ndéanann mic léinn plé le forbairt phraiticiúil tionscadail
+    Java deartha le haghaidh ** 90 nóiméad**. Cinntíonn an t-am sínte seo go mbíonn
+    go leor deiseanna ag an scoláire tuiscint, cur i bhfeidhm agus fabhtcheartú a
+    dhéanamh de réir mar a oibríonn siad.
+  csa_ai_page_faq_answer_06_02: Tá solúbthacht d'aon ghnó tógtha isteach i struchtúr
+    an mhodúil freisin. Ag brath ar dhinimic an tseomra ranga, rannpháirtíocht na
+    mac léinn, agus an doimhneacht ar mhaith leat gach ábhar a iniúchadh, is féidir
+    leat an fad a choigeartú. Mar shampla, is féidir an ceacht Intro to Copilot, atá
+    deartha mar cheacht 45 nóiméad, a leathnú go 90 nóiméad más mian leat tumadóireacht
+    níos doimhne a dhéanamh ar an gcaoi a n-oibríonn samhlacha agus uirlisí móra teanga
+    mar GitHub Copilot agus ChatGPT.
+  csa_ai_page_faq_question_07: How can I access answer keys?
+  csa_ai_page_faq_answer_07: Le cuntas múinteoirí ceadaithe, is féidir leat eochracha
+    freagartha a fháil i bpainéal gorm “Múinteoir” Amháin a thaispeánann sna ceachtanna
+    agus sna gníomhaíochtaí ar líne.Má theastaíonn cuntas múinteoirí ceadaithe uait,
+    is féidir leat iarratas a dhéanamh ar rochtain ar ábhair mhúinteora faoi chosaint
+    amháin (eochracha freagraí, srl) trí [an fhoirm seo] ().%{form_url}Coinnigh i
+    gcuimhne le do thoil go dtógfaidh sé 3-5 lá gnó chun do chuntas a fhíorú.
+  csa_ai_page_faq_question_08: An bhfuil an modúl seo mapáilte le caighdeáin?
+  csa_ai_page_faq_answer_08: Sea, tá curaclam Innealtóireachta Bogearraí & Fís Ríomhaireachta
+    mapáilte chuig an [CSTA K-12 Caighdeáin] (%{csta_k12_url}) agus an AI le haghaidh
+    [Treoirlínte K-12] ().%{k12_url}
+  csa_ai_page_faq_question_09: Cé mhéid a chosnaíonn sé an modúl seo a mhúineadh?
+  csa_ai_page_faq_answer_09_01: Tá ár gcuraclam agus ár n-ardán ar fáil ag [gan aon
+    chostas] (%{no_cost_url}) do dhuine ar bith, áit ar bith, le múineadh!
+  csa_ai_page_faq_answer_09_02: Ina theannta sin, tá na bogearraí agus na huirlisí
+    a úsáidtear sa mhodúl seo saor in aisce. Tá GitHub Copilot saor in aisce le fíorú
+    () agus [teachers](%{teachers_url}). [students]%{students_url}
+  csa_ai_page_faq_question_10: Cad a dhéanfaidh mé mura bhfuil suiteáil bogearraí
+    ag obair?
+  csa_ai_page_faq_answer_10: Is féidir le saincheisteanna os comhair le linn a shuiteáil
+    bogearraí a bheith coitianta, ach tá céimeanna córasacha is féidir leat a leanúint
+    a troubleshoot agus iad a réiteach. [Amharc ar roinnt leideanna fabhtcheartaithe
+    anseo] ()%{troubleshooting_url}.
+  csa_ai_page_faq_question_11: How was the curriculum developed?
+  csa_ai_page_faq_answer_11_01: 'Dearadh ár gcuraclam Innealtóireachta Bogearraí &
+    Fís Ríomhaireachta lenár Luachanna Curaclaim san áireamh. Threoraigh na spriocanna
+    seo a leanas cruthú an churaclaim seo:'
+  csa_ai_page_faq_answer_11_list_01: "** Sprioc 1: ** Úsáid uirlisí AI chun cód a
+    ghiniúint, a dhífhabhtú agus a chur in eagar."
+  csa_ai_page_faq_answer_11_list_02: "** Sprioc 2: ** Aistriú ó Java Lab go huirlisí
+    sa saol fíor."
+  csa_ai_page_faq_answer_11_list_03: "** Sprioc 3: ** Tuiscint a dhoimhniú ar an gcaoi
+    a ndéantar samhlacha AI a oiliúint agus a chomhtháthú i gcláir."
+  csa_ai_page_faq_answer_11_02: Chun tuilleadh eolais a fháil faoi na luachanna a
+    threoraigh ár gcuid oibre, féach ar ár [luachanna curaclaim] (%{curriculum_values_url}).
   language_code:
     ar: Araibis
     az: Asarbaiseáinis

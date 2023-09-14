@@ -193,6 +193,16 @@ pt:
   grade_level_label_elementary: Ensino Fundamental 1
   grade_level_label_middle: Ensino Fundamental 2
   grade_level_label_high: Ensino Médio
+  curricula_title_elementary: Currículos do ensino fundamental
+  curricula_desc_elementary: Explore os cursos e atividades divertidos e gratuitos
+    que convidam você a explorar a ciência da computação com seus alunos do ensino
+    fundamental.
+  curricula_title_middle: Currículos do ensino médio
+  curricula_desc_middle: Explore as ofertas envolventes que permitem que você e seus
+    alunos do ensino médio explorem a ciência da computação juntos.
+  curricula_title_high: Currículos do ensino médio
+  curricula_desc_high: Explore os cursos e atividades interessantes que convidam você
+    e seus alunos do ensino médio a se aprofundarem na ciência da computação.
   students_label: Estudantes
   teachers_label: Professores
   teacher_label_csf: Professor de fundamentos de CS
@@ -219,6 +229,13 @@ pt:
   call_to_action_explore_choice_level: Explore o exemplo de nível de escolha
   call_to_action_explore_collection: Explore a coleção
   call_to_action_explore_unplugged_lesson: Explore aulas desconectadas
+  call_to_action_explore_csf: Explore os fundamentos do CS
+  call_to_action_explore_csd: Explore CS Discoveries
+  call_to_action_explore_csp: Explore os princípios de CS
+  call_to_action_explore_csc: Explore as conexões CS
+  call_to_action_explore_csa: Conheça a AP® Computer Science A
+  call_to_action_explore_maker: Explore os currículos do Maker
+  call_to_action_explore_hoc: Explore os tutoriais da Hora do Código
   call_to_action_try_app_lab: Experimente o App Lab
   call_to_action_view_lesson_plan: Veja o plano de aula
   call_to_action_self_paced_pl: Comece o aprendizado profissional individualizado
@@ -263,6 +280,7 @@ pt:
   call_to_action_notify_available: Notifique-me quando disponível
   call_to_action_register_early_access: Registre-se para acesso antecipado
   call_to_action_open_positions: Exibir vagas abertas
+  call_to_action_get_guide: Obtenha o guia
   aria_label_call_to_action_afe: Saiba mais sobre o Amazon Future Engineer
   aria_label_call_to_action_teaching_csf: Inicie o programa de aprendizagem profissional
     Teaching Computer Science Fundamentals
@@ -375,6 +393,8 @@ pt:
   curriculum_name_csa: AP® Ciência da Computação A
   curriculum_name_csc_02: Qualquer Módulo de Conexões em CC
   curriculum_name_ai: IA & Machine Learning
+  curriculum_name_artificial_intelligence: Inteligência artificial (IA)
+  curriculum_name_maker: Criador
   curriculum_name_maker_cp: Criação de aplicativos com dispositivos (Circuit Playground)
   curriculum_name_maker_microbit: Criação de aplicativos com dispositivos (micro:bit)
   curriculum_name_creating_apps_with_devices: Criação de aplicativos com dispositivos
@@ -433,6 +453,12 @@ pt:
   curriculum_desc_creating_apps_with_devices: Explore o papel dos dispositivos físicos
     na computação. Desenvolva programas que utilizem entradas e saídas de hardware.
     Há uma versão desta unidade tanto para o micro:bit quanto para o Circuit Playground.
+  curriculum_desc_csa: Apresente aos alunos a engenharia de software e o design orientado
+    a objetos enquanto eles aprendem a linguagem de programação Java neste currículo
+    gratuito para AP® Computer Science A (AP® CSA).
+  curriculum_desc_maker: A educação Maker leva STEM (Ciência, Tecnologia, Engenharia,
+    Matemática) um passo adiante, convidando experiência prática e colaboração para
+    a sala de aula para ajudar a ensinar a resolução de problemas e o pensamento crítico.
   collection_hardware: Foco no hardware
   collection_hardware_desc: Capacita os alunos a usar dados e dispositivos físicos
     para resolver problemas.
@@ -464,6 +490,7 @@ pt:
   module_label_professional_learning: 'Aprendizagem profissional:'
   module_label_languages: 'Idiomas suportados:'
   module_label_accessibility_features: 'Acessibilidade:'
+  module_label_accessibility_features_full: 'Características de acessibilidade:'
   module_label_educator_tool: Ferramenta para educadores
   module_label_educator_course: Curso para educadores
   module_label_student_tool: Ferramenta para estudantes
@@ -471,6 +498,7 @@ pt:
   module_label_student_content_resources: Conteúdo e recursos
   module_label_new: Novo
   module_label_coming_soon: Em breve
+  module_label_available_now: Disponível agora
   module_label_video_series: Série de vídeos
   module_label_self_paced: Módulo individualizado
   module_ages_5_10: 5-10
@@ -481,6 +509,8 @@ pt:
   module_grade_2_5: 2-5
   module_grade_3_5: 3-5
   module_grade_3_8: 3-8
+  module_grade_k_12: K-12
+  module_grade_3_12: 3-12
   module_grade_6_12: 6-12
   module_grade_6_10: 6-10
   module_grade_9_12: 9-12
@@ -495,7 +525,9 @@ pt:
   module_grade_9_12_teachers: Professores 9-12
   module_level_beginner: Iniciante
   module_level_intermediate: Intermediário
+  module_level_advanced: Avançado
   module_duration_45_mins: 45 minutos
+  module_duration_2_weeks: 2 semanas
   module_duration_1_hr: 1 hora
   module_duration_2_hrs: 2 horas
   module_duration_3_hrs: 3 horas
@@ -576,6 +608,8 @@ pt:
   heading_java_lab: Laboratório Java
   heading_objects_first: Objetos em primeiro lugar
   heading_these_lessons_will: 'Essas aulas irão:'
+  heading_explore_curriculum_catalog: Explore todos os nossos cursos no Catálogo de
+    Currículos
   professional_learning_section_desc: Obtenha o apoio de que precisa ao se preparar
     para ensinar. Os professores adoram, com mais de 90% classificando-o como o melhor
     desenvolvimento profissional de todos os tempos!
@@ -841,6 +875,11 @@ pt:
     (como o ChatGPT) e a IA generativa. Ouça como essas novas tecnologias funcionam
     diretamente com os especialistas: Mira Murati, CTO da OpenAI, e Cristóbal Valenzuela,
     CEO da RunwayML.'
+  ai_pl_101_llm_slides_title: Grandes instruções de modelo de linguagem para educadores
+  ai_pl_101_llm_slides_desc: Ferramentas para obter o melhor resultado possível de
+    LLMs como o ChatGPT, do iniciante ao avançado. Inclui instruções iniciais para
+    quem está começando, bem como ferramentas avançadas para quem quer maximizar seu
+    potencial.
   how_ai_works_hero_heading: Como a IA funciona
   how_ai_works_hero_desc: Mergulhe no mundo da IA com “Como a IA funciona”, nossa
     série de vídeos e as aulas que a acompanham!
@@ -2109,6 +2148,13 @@ pt:
     da Code.org, oportunidades locais ou outras notícias de ciência da computação?
   signup_email_preference_privacy: "(Veja nossa politica de privacidade)"
   signup_email_preference_yes: Sim
+  signup_email_preference_yes_elementary: Sim - Envie-me atualizações sobre os recursos
+    do ensino fundamental
+  signup_email_preference_yes_middle: Sim - Envie-me atualizações sobre recursos do
+    ensino médio
+  signup_email_preference_yes_high: Sim - Envie-me atualizações sobre recursos do
+    ensino médio
+  signup_email_preference_yes_general: Sim - Envie-me atualizações gerais
   signup_email_preference_no: Não
   signup_email_preference_error: Preferência de e-mail é obrigatória
   signup_multiple_event_warning: Se você está sediando vários eventos, envie um nome
@@ -13872,6 +13918,136 @@ pt:
     de 2 semanas em toda a organização no final do ano, também conhecido como férias
     de inverno), meio dia útil às sextas-feiras durante o verão, também conhecido
     como sextas-feiras de verão, e outros benefícios generosos.
+  csa_ai_page_hero_title: Engenharia de software e visão computacional
+  csa_ai_page_hero_description: 'Este módulo de CSA pós-AP de dois capítulos oferece
+    aos estudantes do ensino médio uma experiência prática com ferramentas profissionais
+    de desenvolvimento de software, incluindo o GitHub e o Copilot do GitHub, e lhes
+    dá as habilidades do mundo real para desenvolver um programa de visão computacional. '
+  csa_ai_page_video_section_title: Vá além do mundo dos ambientes de programação da
+    Code.org
+  csa_ai_page_video_section_li_1: Saiba mais sobre a IA e seus aplicativos
+  csa_ai_page_video_section_li_2: Experiência prática com ferramentas profissionais
+    de desenvolvimento de software
+  csa_ai_page_video_section_li_3: Conheça as práticas padrão do setor
+  csa_ai_page_video_section_li_4: Cultive o pensamento crítico
+  csa_ai_page_programming_tools: 'Ferramentas de programação: Github, Github Copilot,
+    VSCode, TensorFlow '
+  csa_ai_page_professional_learning: Nenhum
+  csa_ai_page_curriculum_topics: 'Tópicos: Programação, Dados, Arte e Design, Jogos
+    e Animação'
+  csa_ai_page_curriculum_accessibility_features: Consulte a seção de perguntas frequentes
+    para obter detalhes
+  csa_ai_page_curriculum_languages_support: Português (Brasil)
+  csa_ai_page_article_title_1: Crie com o Copilot
+  csa_ai_page_article_description_1: Os alunos aprendem a usar o Copilot do GitHub
+    como programador em dupla para explicar o código existente, encontrar e corrigir
+    erros e gerar soluções para novos problemas.
+  csa_ai_page_article_link_1: Saiba mais sobre o Copilot
+  csa_ai_page_article_title_2: Crie seu próprio modelo de IA
+  csa_ai_page_article_description_2: Os alunos treinam seus próprios modelos de IA
+    usando o Teachable Machine para reconhecer imagens e gestos de uma webcam e considerar
+    como a visão computacional afeta a maneira como os usuários interagem com os aplicativos.
+  csa_ai_page_article_link_2: Explore o plano de aula
+  csa_ai_page_article_title_3: Explore a visão computacional
+  csa_ai_page_article_description_3: Os alunos implementam os modelos de IA que criaram
+    com o Teachable Machine em um aplicativo Java, usando o Copilot do GitHub para
+    ajudá-los a modificar as versões existentes dos aplicativos para que funcionem
+    com as diferentes entradas.
+  csa_ai_page_article_link_3: Veja um exemplo
+  csa_ai_page_learn_more_section_title: Saiba mais sobre Inteligência Artificial
+  csa_ai_page_learn_more_title: Explore o AI 101 para professores
+  csa_ai_page_learn_more_description: Descubra o mundo inovador da Inteligência Artificial
+    (IA) e seu potencial transformador na educação com nossa abrangente série de aprendizado
+    on-line para professores.
+  csa_ai_page_learn_more_link: Assista à série AI 101 for Teachers
+  csa_ai_page_faq_question_01: Quais são os pré-requisitos para este módulo?
+  csa_ai_page_faq_answer_01_01: 'Antes de mergulhar neste módulo, os alunos devem
+    possuir um conhecimento básico de Java. Especificamente, eles devem compreender:'
+  csa_ai_page_faq_answer_01_list_01: "**Classes e objetos: ** Os alunos devem estar
+    familiarizados com a definição e o uso de classes, bem como com a criação e manipulação
+    de objetos."
+  csa_ai_page_faq_answer_01_list_02: "**Métodos de escrita e chamada: ** Os alunos
+    devem ser capazes de definir métodos dentro de uma classe, entender os parâmetros
+    do método e os tipos de retorno e chamar métodos a partir de objetos ou outros
+    métodos."
+  csa_ai_page_faq_answer_01_list_03: "**Matrizes 1D e listas de matrizes: ** Eles
+    devem ser proficientes em declarar, inicializar e manipular matrizes e listas
+    de matrizes unidimensionais, incluindo a iteração por meio delas."
+  csa_ai_page_faq_answer_01_list_04: "**Seleção e iteração: ** Uma base sólida em
+    declarações condicionais e loops é crucial."
+  csa_ai_page_faq_question_01_02: Idealmente, os alunos que concluíram o AP Computer
+    Science A ou um curso de profundidade e rigor semelhantes estariam bem preparados
+    para este módulo.
+  csa_ai_page_faq_question_02: Como faço para instalar o software necessário para
+    este módulo?
+  csa_ai_page_faq_answer_02_01: Esse módulo é exclusivo porque envolve o uso de software
+    de terceiros em vez de laboratórios e ferramentas da Code.org. [Leia mais sobre
+    a instalação do software aqui] (%{accessibility_url}).
+  csa_ai_page_faq_question_03: Como posso atender às necessidades de acessibilidade
+    ao ensinar este módulo?
+  csa_ai_page_faq_answer_03_01: Atender às necessidades de acessibilidade é crucial
+    para um ambiente de aprendizagem inclusivo. [Leia mais sobre os recursos de acessibilidade
+    no software usado neste módulo aqui] (%{install_url}).
+  csa_ai_page_faq_question_04: Como faço para usar o VS Code em Chromebooks?
+  csa_ai_page_faq_answer_04: Usar o VS Code em um Chromebook se tornou mais simples,
+    especialmente com a capacidade de executar aplicativos Linux em modelos mais novos
+    de Chromebook. [Leia mais sobre como configurar o VS Code em Chromebooks aqui]
+    ()%{chromebook_url}.
+  csa_ai_page_faq_question_05: Como posso obter desenvolvimento profissional para
+    este módulo?
+  csa_ai_page_faq_answer_05: Atualmente, não há desenvolvimento profissional específico
+    para este curso. Se você está procurando entender como abordar a Inteligência
+    Artificial em sua sala de aula, você pode [explore o AI 101 para professores]
+    (%{ai_101_url}).
+  csa_ai_page_faq_question_06: Qual é o horário recomendado para ensinar este módulo?
+  csa_ai_page_faq_answer_06_01: O módulo de Engenharia de Software e Visão Computacional
+    é cuidadosamente estruturado para fornecer um aprendizado abrangente em um prazo
+    conciso. O módulo inteiro foi projetado para abranger **2 semanas de instrução**.
+    A maioria das aulas é personalizada para **45 minutos**, enquanto as aulas em
+    que os alunos se aprofundam no desenvolvimento prático de projetos Java são projetadas
+    para **90 minutos**. Esse tempo prolongado garante que os alunos tenham ampla
+    oportunidade de entender, implementar e solucionar problemas enquanto trabalham.
+  csa_ai_page_faq_answer_06_02: Também há flexibilidade intencional incorporada à
+    estrutura do módulo. Dependendo da dinâmica da sala de aula, do envolvimento dos
+    alunos e da profundidade com que você gostaria de explorar cada tópico, você pode
+    ajustar a duração. Por exemplo, a aula de Introdução ao Copilot, projetada como
+    uma aula de 45 minutos, pode ser expandida para 90 minutos se você quiser se aprofundar
+    no funcionamento de grandes modelos de linguagem e ferramentas como GitHub Copilot
+    e ChatGPT.
+  csa_ai_page_faq_question_07: How can I access answer keys?
+  csa_ai_page_faq_answer_07: Com uma conta de professor aprovada, você pode encontrar
+    respostas em um painel azul “Somente para professores”, exibido nas aulas e atividades
+    on-line. Se precisar de uma conta de professor aprovada, você pode solicitar acesso
+    a materiais protegidos somente para professores (chaves de resposta, etc.) por
+    meio de [este formulário] ().%{form_url}Lembre-se de que pode levar de 3 a 5 dias
+    úteis para verificar sua conta.
+  csa_ai_page_faq_question_08: Esse módulo está mapeado de acordo com os padrões?
+  csa_ai_page_faq_answer_08: Sim, o currículo de Engenharia de Software e Visão Computacional
+    está mapeado de acordo com os [Padrões CSTA K-12] (%{csta_k12_url}) e a IA para
+    [Diretrizes K-12] ().%{k12_url}
+  csa_ai_page_faq_question_09: Quanto custa ensinar esse módulo?
+  csa_ai_page_faq_answer_09_01: Nosso currículo e plataforma estão disponíveis [sem
+    custo] (%{no_cost_url}) para qualquer pessoa, em qualquer lugar, ensinar!
+  csa_ai_page_faq_answer_09_02: Além disso, o software e as ferramentas usados neste
+    módulo são gratuitos. O Copilot do GitHub é gratuito para verificados [teachers](%{teachers_url})
+    e [students](%{students_url}).
+  csa_ai_page_faq_question_10: O que eu faço se a instalação do software não estiver
+    funcionando?
+  csa_ai_page_faq_answer_10: Enfrentar problemas durante a instalação do software
+    pode ser comum, mas há etapas sistemáticas que você pode seguir para solucioná-los.
+    [Confira algumas dicas de solução de problemas aqui] (%{troubleshooting_url}).
+  csa_ai_page_faq_question_11: How was the curriculum developed?
+  csa_ai_page_faq_answer_11_01: 'Nosso currículo de Engenharia de Software e Visão
+    Computacional foi projetado com nossos valores curriculares em mente. Os seguintes
+    objetivos orientaram a criação desse currículo:'
+  csa_ai_page_faq_answer_11_list_01: "**Objetivo 1: ** Use ferramentas de IA para
+    gerar, depurar e editar código."
+  csa_ai_page_faq_answer_11_list_02: "**Objetivo 2: ** Transição do Java Lab para
+    ferramentas do mundo real."
+  csa_ai_page_faq_answer_11_list_03: "**Objetivo 3: ** Aprofundar a compreensão de
+    como os modelos de IA são treinados e integrados aos programas."
+  csa_ai_page_faq_answer_11_02: Para obter mais informações sobre os valores que orientaram
+    nosso trabalho, consulte nossos [valores curriculares] (%{curriculum_values_url}).
   language_code:
     ar: árabe
     az: azerbaijano

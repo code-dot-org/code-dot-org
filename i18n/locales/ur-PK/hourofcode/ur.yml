@@ -5,7 +5,7 @@ ur:
   language: انگلش
   front_title: تاریخ میں ہونے والی تدریس کی سب سے بڑی تقریب میں شامل ہوجائیے، %{campaign_date}
   coming_soon: جلد آ رہا ہے
-  campaign_date_start_short: دسمبر 5
+  campaign_date_start_short: 5 دسمبر
   campaign_date_start_long: دسمبر 5
   campaign_date_short: دسمبر 5 - 11
   campaign_date_full: 5 تا 11 دسمبر
@@ -16,25 +16,25 @@ ur:
   nonus_campaign_date_short: 1 اکتوبر - 18 دسمبر
   nonus_campaign_date_full: 1 اکتوبر - 18 دسمبر
   nonus_campaign_date_year: '2022'
-  nonus_campaign_date_full_year: 1 اکتوبر2022 - 18 دسمبر 2022
+  nonus_campaign_date_full_year: 1 اکتوبر، 2022 - 18 دسمبر، 2022
   latam_campaign_date_start_short: اکتوبر 1
   latam_campaign_date_start_long: اکتوبر 1
   latam_campaign_date_short: 1 اکتوبر - 18 دسمبر
   latam_campaign_date_full: 1 اکتوبر - 18 دسمبر
   latam_campaign_date_year: '2022'
-  latam_campaign_date_full_year: 1 اکتوبر2022 - 18 دسمبر 2022
+  latam_campaign_date_full_year: 1 اکتوبر، 2022 - 18 دسمبر، 2022
   europe_campaign_date_start_short: اکتوبر 1
   europe_campaign_date_start_long: اکتوبر 1
   europe_campaign_date_short: 1 اکتوبر - 18 دسمبر
   europe_campaign_date_full: 1 اکتوبر - 18 دسمبر
   europe_campaign_date_year: '2022'
-  europe_campaign_date_full_year: 1 اکتوبر2022 - 18 دسمبر 2022
+  europe_campaign_date_full_year: 1 اکتوبر، 2022 - 18 دسمبر، 2022
   africa_campaign_date_start_short: اکتوبر 1
   africa_campaign_date_start_long: اکتوبر 1
   africa_campaign_date_short: 1 اکتوبر - 18 دسمبر
   africa_campaign_date_full: 1 اکتوبر - 18 دسمبر
   africa_campaign_date_year: '2022'
-  africa_campaign_date_full_year: 1 اکتوبر2022 - 18 دسمبر 2022
+  africa_campaign_date_full_year: 1 اکتوبر، 2022 - 18 دسمبر، 2022
   hoc2022_header: کھوجیں، کھیلیں، تخلیق کریں!
   social_hoc2022_explore_play_create: کمپیوٹر سائنس کا استعمال کرتے ہوئے کھوجیں، کھیلیں،
     اور تخلیق کریں۔
@@ -184,6 +184,15 @@ ur:
   grade_level_label_elementary: ایلیمنٹری اسکول
   grade_level_label_middle: مڈل اسکول
   grade_level_label_high: ہائی اسکول
+  curricula_title_elementary: ایلیمنٹری اسکول کا نصاب
+  curricula_desc_elementary: مزہ، مفت کورس اور سرگرمیوں کو براؤز کریں جو آپ کو اپنے
+    ابتدائی اسکول کے طالب علموں کے ساتھ کمپیوٹر سائنس کی تلاش کے لئے مدعو کرتے ہیں.
+  curricula_title_middle: مڈل اسکول کا نصاب
+  curricula_desc_middle: ان مشغول پیشکشوں کو براؤز کریں جو آپ کو اور آپ کے مڈل اسکول
+    کے طلباء کو مل کر کمپیوٹر سائنس کی تلاش کرنے کے قابل بناتی ہیں۔
+  curricula_title_high: ہائی اسکول کا نصاب
+  curricula_desc_high: مجبور کورسز اور سرگرمیوں کو براؤز کریں جو آپ کو اور آپ کے ہائی
+    اسکول کے طالب علموں کو کمپیوٹر سائنس میں گہری کھودنے کے لئے مدعو کرتے ہیں.
   students_label: طلباء
   teachers_label: استاد
   teacher_label_csf: CS کی بنیادی تعلمیات کے استاد
@@ -210,6 +219,13 @@ ur:
   call_to_action_explore_choice_level: انتخاب کی سطح کی کوئی مثال دریافت کریں
   call_to_action_explore_collection: کلیکشن دریافت کریں
   call_to_action_explore_unplugged_lesson: ان پلگ شدہ اسباق دریافت کریں
+  call_to_action_explore_csf: CS بنیادی اصول دریافت کریں
+  call_to_action_explore_csd: CS دریافتوں کو دریافت کریں
+  call_to_action_explore_csp: CS اصولوں کو دریافت کریں
+  call_to_action_explore_csc: CS کنکشن دریافت کریں
+  call_to_action_explore_csa: AP® کمپیوٹر سائنس A دریافت کریں
+  call_to_action_explore_maker: نصاب ساز دریافت کریں
+  call_to_action_explore_hoc: گھنٹہ کوڈ ٹیوٹوریل دریافت کریں
   call_to_action_try_app_lab: ایپ لیب آزمائیں
   call_to_action_view_lesson_plan: سبق کی منصوبہ بندی دیکھیں
   call_to_action_self_paced_pl: خود رفتار پیشہ ورانہ سیکھنے شروع کریں
@@ -254,6 +270,7 @@ ur:
   call_to_action_notify_available: دستیاب ہونے پر مجھے مطلع کریں
   call_to_action_register_early_access: ابتدائی رسائی کے لئے رجسٹر کریں
   call_to_action_open_positions: کھلی پوزیشنز دیکھیں
+  call_to_action_get_guide: گائیڈ حاصل کریں
   aria_label_call_to_action_afe: ایمیزون مستقبل انجینئر کے بارے میں مزید جانیں
   aria_label_call_to_action_teaching_csf: تدریس کمپیوٹر سائنس کے بنیادی اصول پیشہ
     ورانہ سیکھنے کا پروگرام شروع کریں
@@ -362,6 +379,8 @@ ur:
   curriculum_name_csa: کمپیوٹر سائنس A
   curriculum_name_csc_02: CS کنیکشنز کا کوئی ماڈیول
   curriculum_name_ai: مصنوعی ذہانت اور مشین لرننگ
+  curriculum_name_artificial_intelligence: مصنوعی انٹیلی جنس (AI)
+  curriculum_name_maker: بنانے والا
   curriculum_name_maker_cp: آلات کے ساتھ اطلاقات بنانا (سرکٹ کھیل کے میدان)
   curriculum_name_maker_microbit: 'آلات کے ساتھ اطلاقات بنانا (مائیکرو: بٹ)'
   curriculum_name_creating_apps_with_devices: ڈیوائسز کے ساتھ ایپس کی تخلیق کاری
@@ -420,6 +439,12 @@ ur:
   curriculum_desc_creating_apps_with_devices: کمپیوٹنگ میں مادی ڈیوائسز کی اہمیت دریافت
     کریں۔ ایسے پروگرامز تیار کریں جو ہارڈ ویئر ان پٹس اور آؤٹ پٹس کو استعمال کرتے
     ہیں۔ مائیکرو:بٹ اور سرکٹ پلے گراؤںڈ، دونوں کے لیے اس یونٹ کا ایک ورژن موجود ہے۔
+  curriculum_desc_csa: وہ AP® کمپیوٹر سائنس A (AP® CSA) کے لئے اس مفت نصاب میں جاوا
+    پروگرامنگ زبان سیکھنے جبکہ سافٹ ویئر انجینئرنگ اور اعتراض پر مبنی ڈیزائن کرنے
+    کے لئے طالب علموں کو متعارف کرانے.
+  curriculum_desc_maker: میکر تعلیم STEM (سائنس، ٹیکنالوجی، انجینئرنگ، ریاضی) کو کلاس
+    روم میں ہاتھوں پر تجربے اور تعاون کو مدعو کرکے ایک قدم آگے لے جاتی ہے تاکہ مسئلہ
+    حل کرنے اور تنقیدی سوچ کو سکھانے میں مدد ملے.
   collection_hardware: ہارڈ ویئر پر توجہ مرکوز کریں
   collection_hardware_desc: طالب علموں کو مسائل کو حل کرنے کے لئے اعداد و شمار اور
     مادی آلات استعمال کرنے کا اختیار دیتا ہے.
@@ -454,6 +479,7 @@ ur:
   module_label_professional_learning: 'پیشہ ورانہ تعلیم:'
   module_label_languages: 'معاونت یافتہ زبانیں:'
   module_label_accessibility_features: 'رسائی پذیری:'
+  module_label_accessibility_features_full: 'رسائی کی خصوصیات:'
   module_label_educator_tool: ماہرِ تعلیم کا ٹول
   module_label_educator_course: ماہرِ تعلیم کا کورس
   module_label_student_tool: طالب علم کا ٹول
@@ -461,6 +487,7 @@ ur:
   module_label_student_content_resources: مواد اور وسائل
   module_label_new: نیا
   module_label_coming_soon: جلد ہی آ رہا ہے
+  module_label_available_now: اب دستیاب
   module_label_video_series: ویڈیو سیریز
   module_label_self_paced: خود رفتار ماڈیول
   module_ages_5_10: 5-10
@@ -471,6 +498,8 @@ ur:
   module_grade_2_5: 2-5
   module_grade_3_5: 3-5
   module_grade_3_8: 3-8
+  module_grade_k_12: K-12
+  module_grade_3_12: 3-12
   module_grade_6_12: 6-12
   module_grade_6_10: 6-10
   module_grade_9_12: 9-12
@@ -485,7 +514,9 @@ ur:
   module_grade_9_12_teachers: 9-12 ٹیچرز
   module_level_beginner: نوآموز
   module_level_intermediate: انٹرمیڈیٹ
+  module_level_advanced: اعلی درجے کی
   module_duration_45_mins: 45 منٹ
+  module_duration_2_weeks: 2 ہفتوں
   module_duration_1_hr: 1 گھنٹہ
   module_duration_2_hrs: 2 گھنٹے
   module_duration_3_hrs: 3 گھنٹے
@@ -568,6 +599,7 @@ ur:
   heading_java_lab: Java لیب
   heading_objects_first: اشیاء ہماری اولین ترجیح
   heading_these_lessons_will: 'یہ سبق کریں گے:'
+  heading_explore_curriculum_catalog: نصاب کیٹلاگ میں ہمارے تمام کورسز کو تلاش کریں
   professional_learning_section_desc: تدریس کی تیاری کے دوران ضروری معاونت حاصل کریں۔
     اساتذہ کو یہ بے حد پسند ہے، جن میں سے 90% سے زیادہ اسے بہترین پیشہ ورانہ ترقی
     گردانتے ہیں!
@@ -829,6 +861,11 @@ ur:
     دو نئے ویڈیوز کی خاصیت ہے. سنیں کہ یہ نئی ٹیکنالوجیز ماہرین سے براہ راست کس طرح
     کام کرتی ہیں: مائیرا مرتی، اوپن اے آئی کے سی ٹی او، اور رن وے ایم ایل کے سی ای
     او کرسٹبل ویلنزیلا.'
+  ai_pl_101_llm_slides_title: اساتذہ کے لئے بڑی زبان ماڈل کے اشارے
+  ai_pl_101_llm_slides_desc: ابتدائی طور پر اعلی درجے کی طرف سے، چیٹ جی پی کی طرح
+    ایل ایل ایم سے بہترین ممکنہ پیداوار حاصل کرنے کے لئے اوزار. ان لوگوں کے لئے سٹارٹر
+    اشارے شامل ہیں جو صرف ان کی انگلیوں کو ڈوبنے کے ساتھ ساتھ ان کی صلاحیت کو زیادہ
+    سے زیادہ کرنے کے لئے اعلی درجے کے اوزار بھی شامل ہیں.
   how_ai_works_hero_heading: AI کیسے کام کرتا ہے
   how_ai_works_hero_desc: اے آئی کی دنیا میں “کس طرح اے کام کرتا ہے،” ہماری ویڈیو
     سیریز اور سبق کے ساتھ ساتھ!
@@ -2091,6 +2128,11 @@ ur:
     کورسز، مقامی مواقع، یا دیگر کمپیوٹر سائنس نیوز کو ای میل کر سکتے ہیں؟
   signup_email_preference_privacy: "(ہماری رازداری کی پالیسی دیکھیں)"
   signup_email_preference_yes: ہاں
+  signup_email_preference_yes_elementary: جی ہاں - مجھے ابتدائی اسکول وسائل پر اپ
+    ڈیٹ بھیجیں
+  signup_email_preference_yes_middle: جی ہاں - مجھے مڈل اسکول وسائل پر اپ ڈیٹ بھیجیں
+  signup_email_preference_yes_high: جی ہاں - مجھے ہائی اسکول وسائل پر اپ ڈیٹ بھیجیں
+  signup_email_preference_yes_general: جی ہاں - مجھے عام اپ ڈیٹس بھیجیں
   signup_email_preference_no: نہيں
   signup_email_preference_error: ای میل کی ترجیح مطلوب ہے ۔
   signup_multiple_event_warning: رجسٹر ہونے پر ہم آپ کے اسکول کا نام اور شہر نقشہ
@@ -12839,12 +12881,12 @@ ur:
   tutorial_googlename _longdescription: ایک کا نام لینے اور کلام کے خطوط کوڈ کا استعمال
     کرتے ہوئے زندگی کے لئے لے آئے ۔ ایک عرفی نام، ایک پالتو جانور کا نام، جانور، کھیل،
     ایک جگہ یا ایک شوق کا انتخاب کریں ۔
-  tutorial_carnegiezillah_longdescription: Zillah City is thriving, and music is in
-    the air. Rumor has it, the famed Gargantua bot is online and sending the last
-    Toxibots to trash the city block by block…. Grab your cobot hoverboard and get
-    ready to groove, move, and finish off what you started! Players program their
-    cobot hoverbots to change lanes, avoid obstacles, and take out many Toxibots in
-    this rhythm-styled game.
+  tutorial_carnegiezillah_longdescription: زلہ شہر فروغ پزیر ہے اور موسیقی ہوا میں
+    ہے۔ افواہ یہ ہے، مشہور Gargantua بوٹ آن لائن ہے اور بلاک کی طرف سے شہر کے بلاک
+    کو ردی کی ٹوکری میں آخری Toxibots بھیج رہا ہے.…اپنے cobot hoverboard پکڑو اور
+    نالی، منتقل، اور آپ کو شروع کیا ختم کرنے کے لئے تیار ہو جاؤ! کھلاڑیوں کو لین تبدیل
+    رکاوٹوں سے بچنے، اور اس تال سٹائل کھیل میں بہت سے Toxibots باہر لے جانے کے لئے
+    ان کے cobot hoverbots پروگرام.
   tutorial_nasachspacejam_longdescription: واقعی پتھروں کہ ایک شمسی نظام بنائیں! اس
     خود ہدایت کی سرگرمی میں موسیقی، فلکیات، اور کوڈنگ کے بارے میں جانیں (کوئی کوڈنگ
     تجربہ کی ضرورت نہیں ہے). پروگرام سیارے موسیقی بنانے کے لئے، آپ کے اپنے موسیقی
@@ -13679,6 +13721,132 @@ ur:
     بدھ کو کوئی ملاقاتوں سے لطف اندوز کرتے ہیں، ہمارے پی ٹی او (5 ہفتوں کل، جس میں
     سال کے اختتام پر آرگ وسیع 2 ہفتے کے دفتر کی بندش شامل ہے)، موسم گرما کے دوران
     جمعہ کو نصف کام کرنے والے دن موسم گرما کے جمعہ کے دوران، اور دیگر ادار فوائد.
+  csa_ai_page_hero_title: سافٹ ویئر انجینئرنگ اور کمپیوٹر وژن
+  csa_ai_page_hero_description: 'یہ دو باب پوسٹ اے پی سی ایس ماڈیول ہائی اسکول کے
+    طالب علموں کو پیشہ ورانہ سافٹ ویئر ڈویلپمنٹ ٹولز کے ساتھ ہاتھوں پر تجربہ فراہم
+    کرتا ہے، بشمول گٹ ہب اور گٹ ہب کوپیلوٹ، اور انہیں کمپیوٹر وژن پروگرام تیار کرنے
+    کے لئے حقیقی دنیا کی مہارت کے ساتھ فراہم کرتا ہے. '
+  csa_ai_page_video_section_title: Code.org پروگرامنگ ماحول کی دنیا سے باہر قدم
+  csa_ai_page_video_section_li_1: AI اور اس کے ایپلی کیشنز کے بارے میں جانیں
+  csa_ai_page_video_section_li_2: پیشہ ورانہ سافٹ ویئر ڈویلپمنٹ ٹولز کے ساتھ ہاتھوں
+    پر تجربہ
+  csa_ai_page_video_section_li_3: صنعتی معیاری طرز عمل سیکھیں
+  csa_ai_page_video_section_li_4: تنقیدی سوچ کو فروغ
+  csa_ai_page_programming_tools: 'پروگرامنگ کے اوزار: گیتھب، گیتھب کوپیلوٹ، وی ایس
+    کوڈ، ٹینسورفلو '
+  csa_ai_page_professional_learning: کوئی بھی نہیں
+  csa_ai_page_curriculum_topics: 'موضوعات: پروگرامنگ، ڈیٹا، آرٹ اور ڈیزائن، کھیل اور
+    حرکت پذیری'
+  csa_ai_page_curriculum_accessibility_features: تفصیلات کے لئے اکثر پوچھے گئے سوالات
+    کے سیکشن دیکھیں
+  csa_ai_page_curriculum_languages_support: انگلش
+  csa_ai_page_article_title_1: کوپیلوٹ کے ساتھ تعمیر کریں
+  csa_ai_page_article_description_1: طلباء سیکھتے ہیں کہ کس طرح GitHub Copilot کو
+    ایک جوڑی پروگرامر کے طور پر استعمال کرنے کے لئے موجودہ کوڈ کی وضاحت، غلطیوں کو
+    تلاش کرنے اور درست کرنے اور نئے مسائل کے حل پیدا کرنے کے لئے.
+  csa_ai_page_article_link_1: Copilot کے بارے میں مزید جانیں
+  csa_ai_page_article_title_2: اپنا خود کا AI ماڈل بنائیں
+  csa_ai_page_article_description_2: طالب علم ٹیچبل مشین کا استعمال کرتے ہوئے اپنے
+    AI ماڈلز کو تربیت دیتے ہیں تاکہ تصاویر اور اشاروں کو تسلیم کیا جا سکے اور اس بات
+    پر غور کریں کہ کمپیوٹر وژن کس طرح اثر انداز کرتا ہے جس طرح صارفین ایپس کے ساتھ
+    بات چیت کرتے ہیں.
+  csa_ai_page_article_link_2: سبق کی منصوبہ بندی کو تلاش کریں
+  csa_ai_page_article_title_3: کمپیوٹر وژن کی تلاش کریں
+  csa_ai_page_article_description_3: طالب علموں کو ایک جاوا اپلی کیشن میں ٹیچبل مشین
+    کے ساتھ پیدا AI ماڈلز کو لاگو, انہیں مختلف آدانوں کے ساتھ کام کرنے کے لئے اطلاقات
+    کے موجودہ ورژن میں ترمیم کرنے میں مدد کرنے کے لئے GitHub Copilot کا استعمال کرتے
+    ہوئے.
+  csa_ai_page_article_link_3: ایک مثال ملاحظہ کریں
+  csa_ai_page_learn_more_section_title: مصنوعی انٹیلی جنس کے بارے میں مزید جانیں
+  csa_ai_page_learn_more_title: اساتذہ کے لئے AI 101 دریافت کریں
+  csa_ai_page_learn_more_description: اساتذہ کے لئے ہمارے جامع آن لائن لرننگ سیریز
+    کے ساتھ مصنوعی انٹیلی جنس (AI) اور تعلیم میں اس کی تبدیلی کی صلاحیت کی بنیاد پر
+    دنیا کو دریافت کریں.
+  csa_ai_page_learn_more_link: اساتذہ سیریز کے لئے AI 101 دیکھیں
+  csa_ai_page_faq_question_01: اس ماڈیول کے لئے لازمی شرائط کیا ہیں؟
+  csa_ai_page_faq_answer_01_01: 'اس ماڈیول میں ڈائیونگ کرنے سے پہلے، طالب علموں کو
+    جاوا کے اندراج کی سطح کا علم ہونا چاہئے. خاص طور پر، وہ پر ایک گرفت چاہئے:'
+  csa_ai_page_faq_answer_01_list_01: "** کلاسیں اور اشیاء: ** طالب علموں کو کلاس کی
+    وضاحت اور استعمال کرنے کے ساتھ ساتھ اشیاء بنانے اور ہیرا پھیری کرنے سے واقف ہونا
+    چاہئے."
+  csa_ai_page_faq_answer_01_list_02: "** تحریری اور کالنگ کے طریقوں: ** طالب علموں
+    کو کلاس کے اندر طریقوں کی وضاحت کرنے، طریقہ کار پیرامیٹرز اور واپسی کی اقسام کو
+    سمجھنے اور اشیاء یا دیگر طریقوں سے طریقوں کو کال کرنے کے قابل ہونا چاہئے."
+  csa_ai_page_faq_answer_01_list_03: "** 1D Arrays اور ArrayLists** وہ اعلان شروع،
+    اور ایک جہتی arrays اور ArrayListes ہیرا پھیری میں ماہر ہونا چاہئے ان کے ذریعے
+    iterating سمیت،."
+  csa_ai_page_faq_answer_01_list_04: "** انتخاب اور Ieration: ** مشروط بیانات اور
+    loops میں ایک ٹھوس بنیاد اہم ہے."
+  csa_ai_page_faq_question_01_02: مثالی طور پر، طالب علموں نے اے پی کمپیوٹر سائنس
+    A مکمل کیا ہے یا اسی طرح کی گہرائی اور سختی کا ایک کورس اس ماڈیول کے لئے اچھی
+    طرح سے تیار کیا جائے گا.
+  csa_ai_page_faq_question_02: میں اس ماڈیول کے لئے ضروری سافٹ ویئر کیسے انسٹال کروں؟
+  csa_ai_page_faq_answer_02_01: یہ ماڈیول منفرد ہے کیونکہ اس میں Code.org لیبز اور
+    ٹولز کی بجائے تیسری پارٹی کے سافٹ ویئر کا استعمال شامل ہے. [یہاں سافٹ ویئر نصب
+    کرنے کے بارے میں مزید پڑھیں] (%{accessibility_url}).
+  csa_ai_page_faq_question_03: اس ماڈیول کی تعلیم دیتے وقت میں رسائی کی ضروریات کی
+    حمایت کیسے کرسکتا ہوں؟
+  csa_ai_page_faq_answer_03_01: ایک جامع سیکھنے کے ماحول کے لئے رسائی کی ضروریات کے
+    لئے کیٹرنگ اہم ہے. [اس ماڈیول میں استعمال ہونے والے سافٹ ویئر میں رسائی کی خصوصیات
+    کے بارے میں مزید پڑھیں] (%{install_url}).
+  csa_ai_page_faq_question_04: میں Chromebooks پر وی ایس کوڈ کیسے استعمال کروں؟
+  csa_ai_page_faq_answer_04: Chromebook پر وی ایس کوڈ کا استعمال کرتے ہوئے زیادہ براہ
+    راست بن گیا ہے، خاص طور پر نئے Chromebook ماڈل پر لینکس ایپس کو چلانے کی صلاحیت
+    کے ساتھ. [یہاں Chromebooks پر وی ایس کوڈ قائم کرنے کے بارے میں مزید پڑھیں] ()%{chromebook_url}.
+  csa_ai_page_faq_question_05: میں اس ماڈیول کے لئے پیشہ ورانہ ترقی کیسے حاصل کرسکتا
+    ہوں؟
+  csa_ai_page_faq_answer_05: اس کورس کے لئے فی الحال مخصوص پیشہ ورانہ ترقی نہیں ہے.
+    اگر آپ اپنے کلاس روم میں مصنوعی انٹیلی جنس سے رابطہ کرنے کا طریقہ سمجھنے کے لئے
+    تلاش کر رہے ہیں تو آپ [اساتذہ کے لئے AI 101 کی تلاش] کر سکتے ہیں (%{ai_101_url}).
+  csa_ai_page_faq_question_06: اس ماڈیول کو پڑھانے کے لئے سفارش کی وقت کیا ہے؟
+  csa_ai_page_faq_answer_06_01: سافٹ ویئر انجینئرنگ اور کمپیوٹر ویژن ماڈیول ایک جامع
+    وقت کی حد میں جامع سیکھنے فراہم کرنے کے لئے سوچ سمجھ کر تشکیل دیا گیا ہے. پورے
+    ماڈیول ہدایات کے 2 ہفتوں تک پھیلانے کے لئے ڈیزائن کیا گیا ہے**. زیادہ تر سبق**
+    45 منٹ** کے لئے موزوں ہیں، جبکہ سبق جہاں طالب علموں کو جاوا منصوبے کی ترقی کے
+    ہاتھوں میں ڈالتے ہیں، **90 منٹ** کے لئے ڈیزائن کیا گیا ہے. یہ توسیع شدہ وقت اس
+    بات کو یقینی بناتا ہے کہ طالب علموں کو کام کرنے، سمجھنے، لاگو کرنے اور دشواری
+    کو حل کرنے کا کافی موقع ملے.
+  csa_ai_page_faq_answer_06_02: ماڈیول کی ساخت میں بھی جان بوجھ کر لچک بنایا گیا ہے.
+    کلاس روم کی حرکیات، طالب علموں کی مشغولیت اور ہر موضوع کی گہرائی پر منحصر ہے کہ
+    آپ ہر موضوع کو تلاش کرنا چاہتے ہیں، آپ دورانیے کو ایڈجسٹ کرسکتے ہیں۔ مثال کے طور
+    پر، 45 منٹ کے سبق کے طور پر ڈیزائن کیا گیا Copilot سبق کے لئے انٹرو، 90 منٹ تک
+    وسیع کیا جا سکتا ہے اگر آپ گٹ ہب کوپیلوٹ اور چیٹ جی پی کام جیسے بڑے زبان کے ماڈل
+    اور اوزار میں گہری ڈوبنا چاہتے ہیں.
+  csa_ai_page_faq_question_07: How can I access answer keys?
+  csa_ai_page_faq_answer_07: ایک منظور شدہ استاد اکاؤنٹ کے ساتھ، آپ کو ایک نیلے رنگ
+    میں جواب کی چابیاں تلاش کر سکتے ہیں “استاد” آن لائن سبق اور سرگرمیوں میں ظاہر
+    ہوتا ہے کہ صرف پینل. اگر آپ کو منظور شدہ استاد اکاؤنٹ کی ضرورت ہے تو، آپ [اس فارم]
+    () کے ذریعے محفوظ اساتذہ صرف مواد (جواب کی چابیاں، وغیرہ) تک رسائی کے لئے درخواست
+    دے سکتے ہیں.%{form_url}براہ کرم ذہن میں رکھیں کہ آپ کے اکاؤنٹ کی توثیق کرنے میں
+    3-5 کاروباری دن لگ سکتے ہیں.
+  csa_ai_page_faq_question_08: کیا یہ ماڈیول معیارات پر نقشہ لگایا گیا ہے؟
+  csa_ai_page_faq_answer_08: جی ہاں، سافٹ ویئر انجینئرنگ اور کمپیوٹر ویژن نصاب [CSTA
+    K-12 معیارات] (%{csta_k12_url}) اور AI [K-12 ہدایات] () کے لئے نقشہ لگایا گیا
+    ہے.%{k12_url}
+  csa_ai_page_faq_question_09: اس ماڈیول کو سکھانے کے لئے کتنا خرچ ہوتا ہے؟
+  csa_ai_page_faq_answer_09_01: ہمارے نصاب اور پلیٹ فارم کسی کے لئے، کہیں بھی، سکھانے
+    کے لئے [کوئی قیمت نہیں] (%{no_cost_url}) پر دستیاب ہیں!
+  csa_ai_page_faq_answer_09_02: اس کے علاوہ، اس ماڈیول میں استعمال ہونے والے سافٹ
+    ویئر اور اوزار مفت چارج ہیں. GitHub Copilot تصدیق شدہ [teachers](%{teachers_url})
+    اور [students](%{students_url}) کے لئے مفت ہے.
+  csa_ai_page_faq_question_10: اگر سافٹ ویئر کی تنصیب کام نہیں کر رہی ہے تو میں کیا
+    کروں؟
+  csa_ai_page_faq_answer_10: سافٹ ویئر کی تنصیب کے دوران مسائل کا سامنا کرنا عام ہو
+    سکتا ہے، لیکن منظم اقدامات ہیں جو آپ کو حل کرنے اور حل کرنے کے لئے پیروی کرسکتے
+    ہیں. [یہاں کچھ خرابی کا سراغ لگانے کی تجاویز چیک کریں] (%{troubleshooting_url}).
+  csa_ai_page_faq_question_11: How was the curriculum developed?
+  csa_ai_page_faq_answer_11_01: 'ہمارے سافٹ ویئر انجینئرنگ اور کمپیوٹر وژن نصاب کو
+    ذہن میں ہماری نصاب اقدار کے ساتھ ڈیزائن کیا گیا تھا. مندرجہ ذیل اہداف نے اس نصاب
+    کی تخلیق کی رہنمائی کی:'
+  csa_ai_page_faq_answer_11_list_01: "** مقصد 1: ** کوڈ پیدا کرنے، ڈیبگ کرنے اور ترمیم
+    کرنے کے لئے AI ٹولز کا استعمال کریں."
+  csa_ai_page_faq_answer_11_list_02: "** مقصد 2: ** جاوا لیب سے حقیقی دنیا کے اوزار
+    پر منتقلی."
+  csa_ai_page_faq_answer_11_list_03: "** مقصد 3: ** AI ماڈلز کو تربیت اور پروگراموں
+    میں ضم کیا جاتا ہے کہ کس طرح سمجھ بوجھ."
+  csa_ai_page_faq_answer_11_02: ہمارے کام کی رہنمائی کرنے والے اقدار کے بارے میں مزید
+    معلومات کے لئے، براہ کرم ہماری [نصاب اقدار] (%{curriculum_values_url}) ملاحظہ
+    کریں.
   language_code:
     ar: عربی
     az: آذربائیجان

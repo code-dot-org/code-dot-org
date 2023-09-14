@@ -9,7 +9,7 @@ sv:
   campaign_date_start_short: 5:e December
   campaign_date_start_long: 5 december
   campaign_date_short: 5-11 December
-  campaign_date_full: 5-11 december
+  campaign_date_full: 6-12 december
   campaign_date_year: '2022'
   campaign_date_full_year: 5-11 december 2022
   nonus_campaign_date_start_short: 1 oktober
@@ -172,6 +172,15 @@ sv:
   grade_level_label_elementary: Grundskola
   grade_level_label_middle: Gymnasiet
   grade_level_label_high: Gymnasiet
+  curricula_title_elementary: Grundskolans läroplaner
+  curricula_desc_elementary: Bläddra bland det roliga, gratis kurser och aktiviteter
+    som inbjuder dig att utforska datavetenskap med dina grundskoleelever.
+  curricula_title_middle: Läroplaner för gymnasiet
+  curricula_desc_middle: Bläddra bland de engagerande erbjudanden som gör det möjligt
+    för dig och dina gymnasieelever att utforska datavetenskap tillsammans.
+  curricula_title_high: Läroplaner för gymnasiet
+  curricula_desc_high: Bläddra bland de övertygande kurserna och aktiviteterna som
+    inbjuder dig och dina gymnasieelever att gräva djupare i datavetenskap.
   students_label: Elever
   teachers_label: Lärare
   teacher_label_csf: CS Fundamentals Lärare
@@ -198,6 +207,13 @@ sv:
   call_to_action_explore_choice_level: Utforska exempel på valnivå
   call_to_action_explore_collection: Utforska kollektionen
   call_to_action_explore_unplugged_lesson: Utforska unplugged lektioner
+  call_to_action_explore_csf: Utforska CS Fundamentals
+  call_to_action_explore_csd: Utforska CS Discoveries
+  call_to_action_explore_csp: Utforska CS-principer
+  call_to_action_explore_csc: Utforska CS Connections
+  call_to_action_explore_csa: Utforska AP® Datavetenskap A
+  call_to_action_explore_maker: Utforska Maker läroplaner
+  call_to_action_explore_hoc: Utforska Hour of Code-tutorials
   call_to_action_try_app_lab: Prova App Lab
   call_to_action_view_lesson_plan: Visa lektionsplan
   call_to_action_self_paced_pl: Starta professionellt lärande i egen takt
@@ -242,6 +258,7 @@ sv:
   call_to_action_notify_available: Meddela mig när det är tillgängligt
   call_to_action_register_early_access: Registrera dig för tidig åtkomst
   call_to_action_open_positions: Visa öppna positioner
+  call_to_action_get_guide: Skaffa guiden
   aria_label_call_to_action_afe: Läs mer om Amazon Future Engineer
   aria_label_call_to_action_teaching_csf: Starta programmet Undervisning Datavetenskap
     Fundamentals professionellt lärande
@@ -346,6 +363,8 @@ sv:
   curriculum_name_csa: AP® Datavetenskap A
   curriculum_name_csc_02: Alla CS-anslutningsmodul
   curriculum_name_ai: "  AI och maskininlärning  "
+  curriculum_name_artificial_intelligence: Artificiell intelligens (AI)
+  curriculum_name_maker: Tillverkare
   curriculum_name_maker_cp: Skapa appar med enheter (Circuit Playground)
   curriculum_name_maker_microbit: Skapa appar med enheter (micro:bit)
   curriculum_name_creating_apps_with_devices: Skapa appar med enheter
@@ -397,6 +416,12 @@ sv:
   curriculum_desc_creating_apps_with_devices: Utforska fysiska enheters roll i datoranvändning.
     Utveckla program som använder hårdvaruingångar och utgångar. Det finns en version
     av denna enhet för både micro:bit och Circuit Playground.
+  curriculum_desc_csa: Introducera eleverna till programvaruteknik och objektorienterad
+    design medan de lär sig Java-programmeringsspråket i denna kostnadsfria läroplan
+    för AP® Computer Science A (AP® CSA).
+  curriculum_desc_maker: Makerutbildning tar STEM (Science, Technology, Engineering,
+    Mathematics) ett steg längre genom att bjuda in praktisk erfarenhet och samarbete
+    i klassrummet för att lära ut problemlösning och kritiskt tänkande.
   collection_hardware: Fokusera på hårdvara
   collection_hardware_desc: Ge eleverna möjlighet att använda data och fysiska enheter
     för att lösa problem.
@@ -428,6 +453,7 @@ sv:
   module_label_professional_learning: 'Professionellt lärande:'
   module_label_languages: 'Språk som stöds:'
   module_label_accessibility_features: 'Tillgänglighet:'
+  module_label_accessibility_features_full: 'Tillgänglighet Funktioner:'
   module_label_educator_tool: Verktyg för pedagog
   module_label_educator_course: Utbildare kurs
   module_label_student_tool: Student verktyg
@@ -435,6 +461,7 @@ sv:
   module_label_student_content_resources: Innehåll & resurser
   module_label_new: Ny
   module_label_coming_soon: Kommer snart
+  module_label_available_now: Tillgängligt nu
   module_label_video_series: Video-serien
   module_label_self_paced: Modulen i egen takt
   module_ages_5_10: 5-10
@@ -445,6 +472,8 @@ sv:
   module_grade_2_5: 2-5
   module_grade_3_5: 3-5
   module_grade_3_8: 3-8
+  module_grade_k_12: K-12
+  module_grade_3_12: 3-12
   module_grade_6_12: 6-12
   module_grade_6_10: 6-10
   module_grade_9_12: 9-12
@@ -459,7 +488,9 @@ sv:
   module_grade_9_12_teachers: 9-12 Lärare
   module_level_beginner: Nybörjare
   module_level_intermediate: Mellanliggande
+  module_level_advanced: Avancerad
   module_duration_45_mins: 45 minuter
+  module_duration_2_weeks: 2 veckor
   module_duration_1_hr: 1 timme
   module_duration_2_hrs: 2 timmar
   module_duration_3_hrs: 3 timmar
@@ -538,6 +569,7 @@ sv:
   heading_java_lab: Java Lab
   heading_objects_first: Objekt först
   heading_these_lessons_will: 'Dessa lektioner kommer att:'
+  heading_explore_curriculum_catalog: Utforska alla våra kurser i läroplanskatalogen
   professional_learning_section_desc: Få det stöd du behöver när du förbereder dig
     för att undervisa. Lärare älskar det, med över 90% rankar det som den bästa professionella
     utvecklingen någonsin!
@@ -789,6 +821,10 @@ sv:
     inom AI, med två nya videor om stora språkmodeller (som ChatGPT) och generativ
     AI. Hör hur dessa nya tekniker fungerar direkt från experterna: Mira Murati, CTO
     för OpenAI och Cristóbal Valenzuela, VD för RunWayML.'
+  ai_pl_101_llm_slides_title: Stora språkmodelluppmaningar för lärare
+  ai_pl_101_llm_slides_desc: Verktyg för att få bästa möjliga resultat från LLM som
+    ChatGPT, från nybörjare till avancerad. Inkluderar startmeddelanden för dem som
+    bara doppar tårna i, samt avancerade verktyg för dem som vill maximera sin potential.
   how_ai_works_hero_heading: Så här fungerar AI
   how_ai_works_hero_desc: Dyk in i AI-världen med ”Hur AI fungerar”, vår videoserie
     och tillhörande lektioner!
@@ -1376,10 +1412,10 @@ sv:
     aktiviteter är tillgängliga om du inte har tillgång till dessa leveranser.
   csd_page_faq_answer_04_06: Skapa appar med enheter (alternativ A och alternativ
     B)
-  csd_page_faq_answer_04_07: 'Option A: Classroom set of Circuit Playgrounds. Check
-    out [code.org/maker/circuitplayground](%{url}) for more details.'
-  csd_page_faq_answer_04_08: 'Option B: Classroom set of micro:bit devices. Check
-    out [code.org/maker/microbit](%{url}) for more details.'
+  csd_page_faq_answer_04_07: 'Alternativ A: Klassrumsuppsättning av Circuit Playgrounds.
+    Kolla in [code.org/maker/circuitplayground] () för mer information.%{url}'
+  csd_page_faq_answer_04_08: 'Alternativ B: Klassrumsuppsättning av mikro:bit-enheter.
+    Kolla in [code.org/maker/microbit] () för mer information.%{url}'
   csd_page_faq_answer_04_09: Tillverkarens tillbehör, till exempel tomma mjukpapper
     eller kartongrullar eller reppapper
   csd_page_faq_answer_04_10: "*Obs! Enheten Skapa appar med enheter har två implementeringsalternativ
@@ -1506,10 +1542,10 @@ sv:
     i ditt klassrum. Våra regionala partners erbjuder högkvalitativa, en-dags Code.org-workshops
     för enskilda lärare eller för skolomfattande PD. [Anmäl dig till en professionell
     utvecklingsworkshop nära dig] (%{sign_up_url})!
-  csf_page_faq_answer_04_02: Join over 100,000 teachers who have participated in our
-    workshops. The majority of our workshop attendees say, 'It's the best professional
-    development I've ever attended.' In fact, [90% of attendees would recommend our
-    program to other teachers](%{rec_url})!
+  csf_page_faq_answer_04_02: 'Gå med över 100 000 lärare som har deltagit i våra workshops.
+    Majoriteten av våra workshopdeltagare säger: ”Det är den bästa professionella
+    utvecklingen jag någonsin har deltagit i.” Faktiskt, [90% av deltagarna skulle
+    rekommendera vårt program till andra lärare] ()!%{rec_url}'
   csf_page_faq_question_05: Vad är den rekommenderade tidpunkten för undervisning
     i CS Fundamentals?
   csf_page_faq_answer_05: Varje CSF-kurs innehåller 13-17 lektioner utformade för
@@ -1518,9 +1554,10 @@ sv:
     för att upplevas i samklang medan de kompetensbyggande lektionerna kan slutföras
     av eleverna i sin egen takt.
   csf_page_faq_question_06: Vilka material behöver jag för CS Fundamentals?
-  csf_page_faq_answer_06: Many lessons have handouts that guide students through activities.
-    These resources can be printed or assigned digitally. Some lessons call for typical
-    classroom supplies and manipulatives. [Visit the CSF Syllabus to learn more](%{syllabus_url}).
+  csf_page_faq_answer_06: Många lektioner har utdelningar som guidar eleverna genom
+    aktiviteter. Dessa resurser kan skrivas ut eller tilldelas digitalt. Vissa lektioner
+    kräver typiska klassrumsmateriel och manipulationer. [Besök CSF-kursplanen för
+    att lära dig mer] ().%{syllabus_url}
   csa_page_top_desc: Introduce students to software engineering and object-oriented
     design while they learn the Java programming language in this free curriculum
     for [AP® Computer Science A (AP® CSA)](%{csa_url}).
@@ -2006,6 +2043,12 @@ sv:
     lokala möjligheter eller andra datavetenskaps-nyheter?
   signup_email_preference_privacy: "(Se vår sekretesspolicy)"
   signup_email_preference_yes: Ja
+  signup_email_preference_yes_elementary: Ja - Skicka mig uppdateringar om Elementary
+    School Resources
+  signup_email_preference_yes_middle: Ja - Skicka mig uppdateringar om Middle School
+    Resources
+  signup_email_preference_yes_high: Ja - Skicka mig uppdateringar om High School Resources
+  signup_email_preference_yes_general: Ja - Skicka mig allmänna uppdateringar
   signup_email_preference_no: Nej
   signup_email_preference_error: Mail-preferenser måste anges
   signup_multiple_event_warning: Om du är värd för flera evenemang, skicka in ett
@@ -4830,11 +4873,11 @@ sv:
   tutorial_robob_longdescription: "RoboBlockly är utformad för nybörjare att lära
     sig robotik med kodning i Blockly. Robotikaktiviteterna är självstyrda med handledningsvideor.
     \nRoboBlockly förbereder eleverna för att vara redo att programmera i C/C ++.\n"
-  tutorial_coders_longdescription: "This step-by-step puzzle game provides an easy
-    introduction to bot programming. \n\nThe aim is to win a starship race against
-    other players.\n\nThe game is simple to start and only requires a few lines of
-    code to have a ship move around, but there are near-infinite possibilities of
-    improvement to create more sophisticated bots. "
+  tutorial_coders_longdescription: "Detta steg-för-steg-pusselspel ger en enkel introduktion
+    till botprogrammering. \n\nMålet är att vinna ett rymdskeppslopp mot andra spelare.\n\nSpelet
+    är enkelt att starta och kräver bara några rader kod för att få ett fartyg att
+    röra sig, men det finns nästan oändliga förbättringsmöjligheter för att skapa
+    mer sofistikerade bots. "
   tutorial_tynkerhw_longdescription: Lär dig att programmera med Hot Wheels i detta
     högoktaniga racingspel! Välj bland ett brett urval av bilar och lär dig sedan
     programmera när du navigerar genom komplexa tävlingsbanor. Hoppa över hinder,
@@ -5351,11 +5394,11 @@ sv:
     ett äventyr genom denna Minecraft värld.
   tutorial_minecraft-2016_longdescription: Bygg ett Minecraft-spel. Skapa dina egna
     versioner av kyckling, får, Creepers, zombies och mer.
-  tutorial_thinkersmith-es_longdescription: Mediante el uso de un "Vocabulario Robot"
+  tutorial_thinkersmith-es_longdescription: Mediante el uso de un ”Vocabulario Robot”
     predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar
-    a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento
-    ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones
-    as&iacute; como la valiosa habilidad de depuraci&oacute;n.
+    a cabo tareas espec ficas sin ser estas discutidas previamente.&iacute;Este segmento
+    ense&ntilde;a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones
+    as como la valiosa habilidad de depuraci n.&iacute;&oacute;
   tutorial_pixie_longdescription: Hour of Code handledning med Pixie
   tutorial_play_longdescription: Skapa en berättelse eller ett spel med Leklabbet!
     Väck djur, pirater, zombier, ninjor och många andra figurer till liv genom att
@@ -12347,12 +12390,12 @@ sv:
   tutorial_googlename _longdescription: Välj ett namn och väck bokstäverna i ordet
     till liv med kod. Välj ett smeknamn, ett husdjurs namn, ett djur, en sport, en
     plats eller en hobby.
-  tutorial_carnegiezillah_longdescription: Zillah City is thriving, and music is in
-    the air. Rumor has it, the famed Gargantua bot is online and sending the last
-    Toxibots to trash the city block by block…. Grab your cobot hoverboard and get
-    ready to groove, move, and finish off what you started! Players program their
-    cobot hoverbots to change lanes, avoid obstacles, and take out many Toxibots in
-    this rhythm-styled game.
+  tutorial_carnegiezillah_longdescription: Zillah City blomstrar, och musik är i luften.
+    Ryktet säger det, den berömda Gargantua-boten är online och skickar de sista Toxibots
+    för att skräpa staden kvarter för kvarter.…Ta tag i din cobot hoverboard och gör
+    dig redo att spåra, flytta, och avsluta det du började! Spelare programmerar sina
+    cobot-hoverbots för att byta körfält, undvika hinder, och ta ut många Toxibots
+    i detta rytmformade spel.
   tutorial_nasachspacejam_longdescription: Skapa ett solsystem som verkligen rockar!
     Lär dig mer om musik, astronomi och kodning i denna självstyrda aktivitet (ingen
     kodningserfarenhet krävs). Programmera planeter för att skapa musik, skapa ditt
@@ -13158,6 +13201,128 @@ sv:
     möten onsdagar, tar vår PTO (totalt 5 veckor, vilket inkluderar en organisationsomfattande
     2-veckors kontorsstängning i slutet av året aka Winter Break), halv arbetsdag
     på fredagar under sommaren aka sommarfredagar och andra generösa förmåner.
+  csa_ai_page_hero_title: Programvaruteknik och datorseende
+  csa_ai_page_hero_description: 'Denna tvåkapitels Post-AP CSA-modul erbjuder gymnasieelever
+    praktisk erfarenhet av professionella mjukvaruutvecklingsverktyg, inklusive GitHub
+    och GitHub Copilot, och ger dem de verkliga färdigheterna för att utveckla ett
+    datorvisionsprogram. '
+  csa_ai_page_video_section_title: Steg bortom världen av Code.org programmeringsmiljöer
+  csa_ai_page_video_section_li_1: Lär dig mer om AI och dess applikationer
+  csa_ai_page_video_section_li_2: Praktisk erfarenhet av professionella verktyg för
+    mjukvaruutveckling
+  csa_ai_page_video_section_li_3: Lär dig branschstandardpraxis
+  csa_ai_page_video_section_li_4: Odla kritiskt tänkande
+  csa_ai_page_programming_tools: 'Programmeringsverktyg: Github, Github Copilot, VSCode,
+    TensorFlow '
+  csa_ai_page_professional_learning: Ingen
+  csa_ai_page_curriculum_topics: 'Ämnen: Programmering, Data, Konst och design, Spel
+    och animering'
+  csa_ai_page_curriculum_accessibility_features: Se FAQ-avsnittet för mer information
+  csa_ai_page_curriculum_languages_support: Svenska
+  csa_ai_page_article_title_1: Bygg med Copilot
+  csa_ai_page_article_description_1: Eleverna lär sig att använda GitHub Copilot som
+    parprogrammerare för att förklara befintlig kod, hitta och åtgärda fel, och generera
+    lösningar på nya problem.
+  csa_ai_page_article_link_1: Läs mer om Copilot
+  csa_ai_page_article_title_2: Bygg din egen AI-modell
+  csa_ai_page_article_description_2: Eleverna tränar sina egna AI-modeller med Teachable
+    Machine för att känna igen bilder och gester från en webbkamera och överväga hur
+    datorsyn påverkar hur användare interagerar med appar.
+  csa_ai_page_article_link_2: Utforska lektionsplanen
+  csa_ai_page_article_title_3: Utforska datorseende
+  csa_ai_page_article_description_3: Eleverna implementerar AI-modellerna som de skapade
+    med Teachable Machine i en Java-app, med GitHub Copilot för att hjälpa dem att
+    ändra befintliga versioner av appar för att fungera med de olika ingångarna.
+  csa_ai_page_article_link_3: Se ett exempel
+  csa_ai_page_learn_more_section_title: Läs mer om Artificiell Intelligens
+  csa_ai_page_learn_more_title: Utforska AI 101 för lärare
+  csa_ai_page_learn_more_description: Upptäck den banbrytande världen av artificiell
+    intelligens (AI) och dess transformativa potential i utbildning med vår omfattande
+    online-inlärningsserie för lärare.
+  csa_ai_page_learn_more_link: Se serien AI 101 for Teachers
+  csa_ai_page_faq_question_01: Vilka är förutsättningarna för denna modul?
+  csa_ai_page_faq_answer_01_01: 'Innan du dyker in i den här modulen ska eleverna
+    ha en nybörjarkunskap om Java. Specifikt bör de få grepp om:'
+  csa_ai_page_faq_answer_01_list_01: "**Klasser och objekt: ** Eleverna ska vara bekanta
+    med att definiera och använda klasser, samt skapa och manipulera objekt."
+  csa_ai_page_faq_answer_01_list_02: "**Skriv- och anropsmetoder: ** Eleverna ska
+    kunna definiera metoder inom en klass, förstå metodparametrar och returtyper och
+    anropa metoder från objekt eller andra metoder."
+  csa_ai_page_faq_answer_01_list_03: "**1D Arrays and ArrayLists: ** De bör vara skickliga
+    i att förklara, initiera och manipulera endimensionella matriser och ArrayLists,
+    inklusive iterera genom dem."
+  csa_ai_page_faq_answer_01_list_04: "**Urval och iteration: ** En solid grund i villkorliga
+    uttalanden och loopar är avgörande."
+  csa_ai_page_faq_question_01_02: Helst skulle studenter som har slutfört AP datavetenskap
+    A eller en kurs med liknande djup och noggrannhet vara väl förberedda för denna
+    modul.
+  csa_ai_page_faq_question_02: Hur installerar jag den programvara som krävs för den
+    här modulen?
+  csa_ai_page_faq_answer_02_01: Denna modul är unik eftersom det innebär användning
+    av programvara från tredje part snarare än Code.org laboratorier och verktyg.
+    [Läs mer om att installera programvaran här] (%{accessibility_url}).
+  csa_ai_page_faq_question_03: Hur kan jag stödja tillgänglighetsbehov när jag undervisar
+    i den här modulen?
+  csa_ai_page_faq_answer_03_01: Att tillgodose tillgänglighetsbehov är avgörande för
+    en inkluderande inlärningsmiljö. [Läs mer om tillgänglighetsfunktioner i programvaran
+    som används i den här modulen här] (%{install_url}).
+  csa_ai_page_faq_question_04: Hur använder jag VS-kod på Chromebooks?
+  csa_ai_page_faq_answer_04: Att använda VS-kod på en Chromebook har blivit enklare,
+    särskilt med förmågan att köra Linux-appar på nyare Chromebook-modeller. [Läs
+    mer om hur du ställer in VS-kod på Chromebooks här] ()%{chromebook_url}.
+  csa_ai_page_faq_question_05: Hur kan jag få professionell utveckling för den här
+    modulen?
+  csa_ai_page_faq_answer_05: Det finns för närvarande ingen specifik professionell
+    utveckling för denna kurs. Om du vill förstå hur du närmar dig artificiell intelligens
+    i ditt klassrum kan du [utforska AI 101 för lärare] (%{ai_101_url}).
+  csa_ai_page_faq_question_06: Vad är den rekommenderade tidpunkten för undervisning
+    i denna modul?
+  csa_ai_page_faq_answer_06_01: Modulen Software Engineering & Computer Vision är
+    genomtänkt strukturerad för att ge omfattande lärande inom en kortfattad tidsram.
+    Hela modulen är utformad för att spänna**2 veckors instruktion**. De flesta lektioner
+    är skräddarsydda för **45 minuter**, medan lektioner där eleverna fördjupar sig
+    i praktisk Java-projektutveckling är utformade för **90 minuter**. Denna förlängda
+    tid säkerställer att eleverna har gott om möjligheter att förstå, implementera,
+    och felsöka när de arbetar.
+  csa_ai_page_faq_answer_06_02: Det finns också avsiktlig flexibilitet inbyggd i modulens
+    struktur. Beroende på klassrumsdynamiken, elevernas engagemang och djupet som
+    du vill utforska varje ämne kan du justera varaktigheten. Till exempel kan Intro
+    to Copilot-lektionen, utformad som en 45 minuters lektion, utökas till 90 minuter
+    om du vill dyka djupare in i hur stora språkmodeller och verktyg som GitHub Copilot
+    och ChatGPT fungerar.
+  csa_ai_page_faq_question_07: How can I access answer keys?
+  csa_ai_page_faq_answer_07: Med ett godkänt lärarkonto kan du hitta svarsnycklar
+    i en blå ”Teacher” Only-panel som visas i onlinelektionerna och aktiviteterna.Om
+    du behöver ett godkänt lärarkonto kan du ansöka om tillgång till skyddat lärarmaterial
+    (svarsnycklar, etc) genom [detta formulär] ().%{form_url}Tänk på att det kan ta
+    3-5 arbetsdagar att verifiera ditt konto.
+  csa_ai_page_faq_question_08: Är denna modul mappad till standarder?
+  csa_ai_page_faq_answer_08: Ja, läroplanen för programvaruteknik & Computer Vision
+    är mappad till [CSTA K-12 Standards] (%{csta_k12_url}) och AI för [K-12 Riktlinjer]
+    ().%{k12_url}
+  csa_ai_page_faq_question_09: Hur mycket kostar det att lära ut den här modulen?
+  csa_ai_page_faq_answer_09_01: Vår läroplan och plattform är tillgängliga på [ingen
+    kostnad] (%{no_cost_url}) för alla, var som helst, att undervisa!
+  csa_ai_page_faq_answer_09_02: Dessutom är programvaran och verktygen som används
+    i denna modul gratis. GitHub Copilot är gratis för verifierad [teachers](%{teachers_url})
+    och (). [students]%{students_url}
+  csa_ai_page_faq_question_10: Vad gör jag om installationen av programvaran inte
+    fungerar?
+  csa_ai_page_faq_answer_10: Att möta problem under programvaruinstallationen kan
+    vara vanligt, men det finns systematiska steg du kan följa för att felsöka och
+    lösa dem. [Kolla in några felsökningstips här] (%{troubleshooting_url}).
+  csa_ai_page_faq_question_11: How was the curriculum developed?
+  csa_ai_page_faq_answer_11_01: 'Vår läroplan för programvaruteknik och datorseende
+    utformades med våra läroplansvärden i åtanke. Följande mål styrde skapandet av
+    denna läroplan:'
+  csa_ai_page_faq_answer_11_list_01: "**Mål 1: ** Använd AI-verktyg för att generera,
+    felsöka och redigera kod."
+  csa_ai_page_faq_answer_11_list_02: "**Mål 2: ** Övergång från Java Lab till verkliga
+    verktyg."
+  csa_ai_page_faq_answer_11_list_03: "**Mål 3: ** Fördjupa förståelsen för hur AI-modeller
+    tränas och integreras i program."
+  csa_ai_page_faq_answer_11_02: För mer information om de värden som styrde vårt arbete,
+    se vår [läroplansvärden] ().%{curriculum_values_url}
   language_code:
     ar: arabiska
     az: azerbajdzjanska

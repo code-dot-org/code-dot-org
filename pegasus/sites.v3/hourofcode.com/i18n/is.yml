@@ -109,19 +109,19 @@ is:
     tölvunarfræði gæti spilað í að skapa jafnari heim.
   oceans_landing_videos: Myndbönd um AI og vélanám
   oceans_behind_the_scenes: 'AI fyrir hafið: Bak við tjöldin'
-  oceans_behind_the_scenes_1: Levels 2-4 use a pretrained model provided by the <a
-    href="https://www.tensorflow.org/" >TensorFlow</a> <a href="https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md">
-    MobileNet </a> project. A MobileNet model is a <a href="https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks">convolutional
-    neural network</a> that has been trained on <a href="http://www.image-net.org/">ImageNet</a>,
-    a dataset of over 14 million images hand-annotated with words such as "balloon"
-    or "strawberry". In order to customize this model with the labeled training data
-    the student generates in this activity, we use a technique called <a href="https://en.wikipedia.org/wiki/Transfer_learning">Transfer
-    Learning</a>. Each image in the training dataset is fed to MobileNet, as pixels,
-    to obtain a list of annotations that are most likely to apply to it. Then, for
-    a new image, we feed it to MobileNet and compare its resulting list of annotations
-    to those from the training dataset. We classify the new image with the same label
-    (such as "fish" or "not fish") as the images from the training set with the most
-    similar results.
+  oceans_behind_the_scenes_1: Stig 2-4 nota forþjálfað líkan sem <a href="https://www.tensorflow.org/"
+    >TensorFlow</a> <a href="https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md">
+    MobileNet verkefnið býður upp á. </a> A MobileNet líkan er <a href="https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks">convolutional
+    tauga net</a> sem hefur verið þjálfað á <a href="http://www.image-net.org/">ImageNet</a>,
+    gagnasafn yfir 14 milljón myndir hönd-annotated með orðum eins og “blaðra” eða
+    “jarðarber”. Til þess að sérsníða þetta líkan með merktum þjálfunargögnum sem
+    nemandinn býr til í þessari starfsemi notum við tækni sem kallast <a href="https://en.wikipedia.org/wiki/Transfer_learning">Transfer
+    Learning.</a>Hver mynd í þjálfunargögnunum er fóðruð á MobileNet, sem pixlar,
+    til að fá lista yfir athugasemdir sem líklegast er að eiga við um það. Síðan,
+    fyrir nýja mynd, fóðrum við það til MobileNet og berum saman lista yfir athugasemdir
+    við þá sem eru úr þjálfunargögnunum. Við flokkum nýju myndina með sama merkimiða
+    (eins og “fiskur” eða “ekki fiskur”) sem myndirnar úr þjálfuninni eru settar með
+    svipuðum árangri.
   oceans_behind_the_scenes_1_markdown: Stig 2-4 nota pretrained líkan veitt af [TensorFlow](https://www.tensorflow.org/)
     [MobileNet](https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md)
     verkefninu. A MobileNet líkan er [convolutional tauga net] (https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks)
@@ -181,6 +181,15 @@ is:
   grade_level_label_elementary: Grunnskóli
   grade_level_label_middle: Gagnfræðaskóli
   grade_level_label_high: Gagnfræðaskóli
+  curricula_title_elementary: Grunnskólanámskrá
+  curricula_desc_elementary: Skoðaðu skemmtilega, ókeypis námskeið og athafnir sem
+    bjóða þér að kanna tölvunarfræði með grunnskólanemendum þínum.
+  curricula_title_middle: Grunnskóla Námskrár
+  curricula_desc_middle: Skoðaðu grípandi tilboð sem gera þér og nemendum þínum í
+    grunnskóla kleift að kanna tölvunarfræði saman.
+  curricula_title_high: High School námskrár
+  curricula_desc_high: Skoðaðu sannfærandi námskeið og athafnir sem bjóða þér og framhaldsskólanemum
+    þínum að grafa dýpra í tölvunarfræði.
   students_label: Nemendur
   teachers_label: Kennarar
   teacher_label_csf: CS Undirstöðuatriði Kennari
@@ -207,6 +216,13 @@ is:
   call_to_action_explore_choice_level: Kannaðu dæmi um val stig
   call_to_action_explore_collection: Skoða safn
   call_to_action_explore_unplugged_lesson: Kannaðu ótengdan lærdóm
+  call_to_action_explore_csf: Kannaðu grundvallaratriði CS
+  call_to_action_explore_csd: Kannaðu CS uppgötvanir
+  call_to_action_explore_csp: Kannaðu meginreglur CS
+  call_to_action_explore_csc: Kannaðu CS tengingar
+  call_to_action_explore_csa: Kannaðu AP® tölvunarfræði A
+  call_to_action_explore_maker: Skoða Maker námskrár
+  call_to_action_explore_hoc: Kannaðu klukkustund af kóða námskeiðum
   call_to_action_try_app_lab: Prófaðu App Lab
   call_to_action_view_lesson_plan: Skoða kennsluáætlun
   call_to_action_self_paced_pl: Byrja sjálf-skref faglega nám
@@ -251,6 +267,7 @@ is:
   call_to_action_notify_available: Láttu mig vita þegar það er í boði
   call_to_action_register_early_access: Skráðu þig fyrir snemma aðgang
   call_to_action_open_positions: Skoða opnar stöður
+  call_to_action_get_guide: Fáðu leiðarvísinn
   aria_label_call_to_action_afe: Lærðu meira um Amazon Future Engineer
   aria_label_call_to_action_teaching_csf: Byrjaðu Kennsla Tölvunarfræði Undirstöðuatriði
     faglega nám program
@@ -350,6 +367,8 @@ is:
   curriculum_name_csa: AP® Tölvunarfræði A
   curriculum_name_csc_02: Allir CS Tengingar Module
   curriculum_name_ai: AI & Machine Learning
+  curriculum_name_artificial_intelligence: Gervigreind (AI)
+  curriculum_name_maker: Skapari
   curriculum_name_maker_cp: Búa til forrit með tækjum (Circuit Playground)
   curriculum_name_maker_microbit: Búa til forrit með tækjum (micro:bit)
   curriculum_name_creating_apps_with_devices: Búa til forrit með tækjum
@@ -403,6 +422,12 @@ is:
   curriculum_desc_creating_apps_with_devices: Kannaðu hlutverk líkamlegra tækja í
     tölvunarfræði. Þróa forrit sem nýta vélbúnaðarinntak og útgang. Það er útgáfa
     af þessari einingu fyrir bæði micro:bit og Circuit Playground.
+  curriculum_desc_csa: Kynntu nemendum hugbúnaðarverkfræði og hlutbundna hönnun meðan
+    þeir læra Java forritunarmálið í þessari ókeypis námskrá fyrir AP® tölvunarfræði
+    A (AP® CSA).
+  curriculum_desc_maker: Maker menntun tekur STEM (Science, Technology, Engineering,
+    Mathematics) skrefinu lengra með því að bjóða snertið ekki-á reynslu og samvinnu
+    í skólastofunni til að hjálpa kenna leysa vandamál og gagnrýna hugsun.
   collection_hardware: Einbeittu þér að vélbúnaði
   collection_hardware_desc: Ver nemendum kleift að nota gögn og líkamleg tæki til
     að leysa vandamál.
@@ -433,6 +458,7 @@ is:
   module_label_professional_learning: 'Faglegt nám:'
   module_label_languages: 'Tungumál studd:'
   module_label_accessibility_features: 'Aðgengi:'
+  module_label_accessibility_features_full: 'Aðgengi Lögun:'
   module_label_educator_tool: kennari tól
   module_label_educator_course: Kennslumaður námskeið
   module_label_student_tool: Námsmaður tól
@@ -440,6 +466,7 @@ is:
   module_label_student_content_resources: Innihald og auðlindir
   module_label_new: Nýtt
   module_label_coming_soon: Væntanlegt
+  module_label_available_now: Laus núna
   module_label_video_series: Video röð
   module_label_self_paced: Sjálf-skref mát
   module_ages_5_10: 5-10
@@ -450,6 +477,8 @@ is:
   module_grade_2_5: 2-5
   module_grade_3_5: 3-5
   module_grade_3_8: 3-8
+  module_grade_k_12: K-12
+  module_grade_3_12: 3-12
   module_grade_6_12: 6-12
   module_grade_6_10: 6-10
   module_grade_9_12: 9-12
@@ -464,7 +493,9 @@ is:
   module_grade_9_12_teachers: 9-12 Kennarar
   module_level_beginner: Byrjandi
   module_level_intermediate: Milliefni
+  module_level_advanced: Ítarlegri
   module_duration_45_mins: 45 mínútur
+  module_duration_2_weeks: 2 vikur
   module_duration_1_hr: 1 klukkustund
   module_duration_2_hrs: 2 klukkustundir
   module_duration_3_hrs: 3 klukkustundir
@@ -541,6 +572,7 @@ is:
   heading_java_lab: Java Lab
   heading_objects_first: Hlutir fyrst
   heading_these_lessons_will: 'Þessar kennslustundir munu:'
+  heading_explore_curriculum_catalog: Skoða öll námskeið okkar í Curriculum Catalog
   professional_learning_section_desc: Fáðu þann stuðning sem þú þarft þegar þú býrð
     þig undir að kenna. Kennarar elska það, með yfir 90% röðun það besta faglega þróun
     alltaf!
@@ -788,6 +820,11 @@ is:
     á AI, með tveimur nýjum myndböndum á Large Language Models (eins og ChatGPT) og
     Generative AI. Heyrðu hvernig þessi nýja tækni virkar beint frá sérfræðingunum:
     Mira Murati, CTO OpenAI, og Cristóbal Valenzuela, forstjóri RunwayML.'
+  ai_pl_101_llm_slides_title: Stór Language Model Prompts fyrir kennara
+  ai_pl_101_llm_slides_desc: Verkfæri til að fá bestu mögulegu framleiðslu frá LLMs
+    eins og ChatGPT, frá byrjendum til lengra kominna. Inniheldur ræsir hvetja fyrir
+    þá bara að dýfa tánum í, auk háþróaður verkfæri fyrir þá sem leita að hámarka
+    möguleika þeirra.
   how_ai_works_hero_heading: Hvernig AI virkar
   how_ai_works_hero_desc: Kafa inn í heim AI með “Hvernig AI virkar,” myndbandsseríurnar
     okkar og meðfylgjandi kennslustundir!
@@ -1369,10 +1406,10 @@ is:
     geta verið skipt út fyrir einhvers konar þyngd af sömu stærð). Varamaður starfsemi
     er í boði ef þú hefur ekki aðgang að þessum birgðum.
   csd_page_faq_answer_04_06: Búa til forrit með tækjum (valkostur A og valkostur B)
-  csd_page_faq_answer_04_07: 'Option A: Classroom set of Circuit Playgrounds. Check
-    out [code.org/maker/circuitplayground](%{url}) for more details.'
-  csd_page_faq_answer_04_08: 'Option B: Classroom set of micro:bit devices. Check
-    out [code.org/maker/microbit](%{url}) for more details.'
+  csd_page_faq_answer_04_07: 'Valkostur A: Kennslustofa sett af Circuit Playgrounds.
+    Skoðaðu [code.org/maker/circuitplayground] () fyrir frekari upplýsingar.%{url}'
+  csd_page_faq_answer_04_08: 'Valkostur B: Kennslustofa sett af ör: bita tæki. Skoðaðu
+    [code.org/maker/microbit] () fyrir frekari upplýsingar.%{url}'
   csd_page_faq_answer_04_09: Framleiðandi vistir, svo sem tómir vefjakassar eða papparúllur
     eða klórapappír
   csd_page_faq_answer_04_10: "* Athugið: Búa til forrit með tækjum eining hefur tvo
@@ -1380,12 +1417,12 @@ is:
     sem nota micro:bit. Kennarar ættu ekki að kaupa bæði tækin eða kenna bæði einingarvalkostina
     þar sem þeir eru jafngildir og ná yfir sama efni."
   csd_page_faq_question_06: Hvernig passar CS Discoveries við hin Code.org námskeiðin?
-  csd_page_faq_answer_06_01: CS Discoveries is designed to fit naturally between our
-    [CS Fundamentals](%{csf_url}) courses and our [CS Principles](%{csp_url}) course.
-    While each of these courses is designed to be an age-appropriate entry point to
-    computer science, students with previous experience will find many new topics
-    to explore, and they will revisit familiar topics in novel and more challenging
-    contexts.
+  csd_page_faq_answer_06_01: CS Discoveries er hannað til að passa náttúrulega á milli
+    okkar [CS Grundvallaratriði] (%{csf_url}) námskeið og okkar [CS Principles] ()
+    námskeið.%{csp_url}Þó að hvert þessara námskeiða sé hannað til að vera aldur viðeigandi
+    innganga benda til tölvunarfræði, nemendur með fyrri reynslu vilja finna mörg
+    ný efni til að kanna, og þeir munu endurskoða kunnugleg efni í skáldsögu og meira
+    krefjandi samhengi.
   csc_page_top_desc: Gerðu tengingar milli tölvunarfræði (CS) og annarra námsgreina
     eins og stærðfræði, tungumálalistir, vísindi og félagsfræði.
   csc_page_intro_heading: Kenna CS meðan nær algerlega efni staðla
@@ -1509,9 +1546,10 @@ is:
     undir forystu kennara sem ætlað er að upplifa í einröddun meðan hægt er að ljúka
     kennslustundum með því að nemendur geti lokið á eigin hraða.
   csf_page_faq_question_06: Hvaða efni þarf ég fyrir CS Grundvallaratriði?
-  csf_page_faq_answer_06: Many lessons have handouts that guide students through activities.
-    These resources can be printed or assigned digitally. Some lessons call for typical
-    classroom supplies and manipulatives. [Visit the CSF Syllabus to learn more](%{syllabus_url}).
+  csf_page_faq_answer_06: Margar kennslustundir hafa handouts sem leiðbeina nemendum
+    í gegnum starfsemi. Þessar auðlindir er hægt að prenta eða úthlutað stafrænt.
+    Sumar kennslustundir kalla á dæmigerðar birgðir í kennslustofunni og manipulatives.
+    [Heimsæktu CSF námskrá til að læra meira] ().%{syllabus_url}
   csa_page_top_desc: Introduce students to software engineering and object-oriented
     design while they learn the Java programming language in this free curriculum
     for [AP® Computer Science A (AP® CSA)](%{csa_url}).
@@ -1999,6 +2037,10 @@ is:
     Code.org námskeið, tækifæri á þínu svæði eða aðrar fréttir um tölvunarfræði?
   signup_email_preference_privacy: "(Sjá persónuverndarstefnu okkar)"
   signup_email_preference_yes: Já
+  signup_email_preference_yes_elementary: Já - Sendu mér uppfærslur á auðlindum grunnskólans
+  signup_email_preference_yes_middle: Já - Sendu mér uppfærslur á auðlindum í miðskólum
+  signup_email_preference_yes_high: Já - Sendu mér uppfærslur á menntaskólalindum
+  signup_email_preference_yes_general: Já - Sendu mér almennar uppfærslur
   signup_email_preference_no: Nei
   signup_email_preference_error: Email val er krafist
   signup_multiple_event_warning: Ef þú ert að skipuleggja fleiri en einn viðburð,
@@ -2110,12 +2152,12 @@ is:
     Science Education Week</a> í USA. Er þetta ein tiltekin <i>klukkustund</i>? Nei.
     Það er hægt að gera þetta hvenær sem er þessa viku. (Og ef það næst ekki, þá vikuna
     á undan eða eftir).
-  hoc_faq_when_is_hoc_a_markdown: The Hour of Code takes place each year during [Computer
-    Science Education Week](%{csedweek_url}). The %{campaign_date_year} Computer Science
-    Education Week will be %{campaign_date_full}, but you can host an Hour of Code
-    all year-round. Computer Science Education Week is held annually in recognition
-    of the birthday of computing pioneer [Admiral Grace Murray Hopper](%{grace_hopper})
-    (December 9, 1906).
+  hoc_faq_when_is_hoc_a_markdown: The Hour of Code fer fram á hverju ári á [Computer
+    Science Education Week] (%{csedweek_url}). The %{campaign_date_year} Computer
+    Science Education Week verður %{campaign_date_full}, en þú getur hýst Hour of
+    Code allt árið um kring. Computer Science Education Week er haldin árlega í viðurkenningu
+    á afmæli computing brautryðjandi [Admiral Grace Murray Hopper] (%{grace_hopper})
+    (Desember 9, 1906).
   hoc_faq_why_cs_q: Hvers vegna tölvunarfræði?
   hoc_faq_why_cs_a: "<i>Öllum</i> nemendum ætti að vera gefið tækifæri til að læra
     tölvunarfræði. Það hjálpar til að þroska færni í að leysa vandamál, rökvísi og
@@ -2153,22 +2195,23 @@ is:
     um afganginn. Við erum líka með valkosti fyrir alla aldurs- og reynsluhópa, frá
     leikskólastigi og upp úr. Byrjaðu skipulagninguna á að lesa <a href='/how-to'>leiðarvísinn
     okkar</a>.
-  hoc_faq_host_a_markdown: Of course. Hour of Code activities are self-guided. All
-    you have to do is [try our current tutorials](%{codeorg_url}/learn), pick the
-    tutorial you want, and pick an hour — we take care of the rest. We also have options
-    for every age and experience-level, from kindergarten and up. Start planning your
-    event by reading our [how to guide](%{howto}).
+  hoc_faq_host_a_markdown: Auðvitað. Klukkustund af Code starfsemi eru sjálf-leiðsögn.
+    Allt sem þú þarft að gera er að [prófa núverandi námskeið okkar] (%{codeorg_url}/læra),
+    veldu námskeiðið sem þú vilt og veldu klukkutíma - við sjáum um afganginn. Við
+    höfum einnig valkosti fyrir hvert aldurs- og reynslustig, frá leikskóla og upp
+    úr. Byrjaðu að skipuleggja viðburðinn þinn með því að lesa okkar [hvernig á að
+    leiðbeina] (%{howto}).
   hoc_faq_devices_q: Hvaða tæki ætti ég að nota með nemendum mínum?
   hoc_faq_devices_a: Kennsluefni Code.org virkar á öllum tækjum og vöfrum. Þú getur
     séð meiri upplýsingar um tæknikröfur <a href='%{codeorg_url}/educate/it'>hér</a>.
     Tæknikröfur kennsluefnis sem ekki er frá Code.org má finna á <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a>
     í lýsingu kennsluefnisins. Ekki gleyma að við erum líka með <a href='%{unplugged_url}'>ótengd
     verkefni</a> fyrir æfingar án nettengingar!
-  hoc_faq_devices_a_markdown: Code.org tutorials work on all devices and browsers.
-    You can see more information about Code.org's tutorial tech needs [here](%{codeorg_url}/educate/it).
-    Tech needs for non-Code.org tutorials can be found on [%{partner_url}/learn](%{codeorg_url}/learn)
-    in the tutorial specific description. Don't forget we also offer [unplugged activities](%{unplugged_url})
-    if your school can't accommodate the tutorials!
+  hoc_faq_devices_a_markdown: Code.org námskeið vinna á öllum tækjum og vöfrum. Þú
+    getur séð frekari upplýsingar um kennslutækni þarfir [here]Code.org er (/mennta/það).%{codeorg_url}Tækniþörf
+    fyrir námskeið utan Code.org er að finna á [%{partner_url}/læra] (%{codeorg_url}/læra)
+    í einkatími sérstaka lýsingu. Ekki gleyma að við bjóðum einnig upp á [ótengda
+    starfsemi] (%{unplugged_url}) ef skólinn þinn rúmar ekki námskeiðin!
   hoc_faq_need_computers_q: Þarf ég tölvu fyrir hvern þátttakanda?
   hoc_faq_need_computers_a: Nei. Við erum með kennsluefni fyrir Klukkustund kóðunar
     sem virkar á tölvum, snjallsímum og spjaldtölvum og jafnvel án tölvu! Þú getur
@@ -2180,13 +2223,13 @@ is:
     saman og skipst á að leysa þrautir eða svara spurningum.<li><b>Vinna án tölvu.</b>Við
     erum með verkefni sem gera ekki ráð fyrir tölvu.</ul>
   hoc_faq_need_computers_a_markdown: |-
-    No. We have Hour of Code tutorials that work on PCs, smartphones, tablets, and some that require no computer at all! You can join wherever you are, with whatever you have.
+    Nei. Við höfum Hour of Code námskeið sem vinna á tölvum, smartphones, töflur, og sumir sem þurfa enga tölvu á öllum! Þú getur tekið þátt hvar sem þú ert, með hvað sem þú hefur.
 
-    _Here are a few options:_
+    _Hér eru nokkrir valkostir:_
 
-    - **Work in pairs.** [Research shows](%{pair_programming_research}) students learn best with [pair programming](%{pair_programming_video}), sharing a computer and working together. Encourage your students to double up.
-    - **Use a projected screen.** If you have a projector and screen for a Web-connected computer, your entire group can do an Hour of Code together. Watch video portions together and take turns solving puzzles or answering questions.
-    - **Go unplugged.** We offer [tutorials that require no computer](%{unplugged_url}) at all.
+    - **Vinna í pörum.** [Rannsóknir sýna] (%{pair_programming_research}) nemendur læra best með [paraforritun] (%{pair_programming_video}), deila tölvu og vinna saman. Hvetja nemendur þína til keng.
+    -**Notaðu skjá.** Ef þú ert með skjávarpa og skjá fyrir veftengda tölvu getur allur hópurinn þinn gert klukkutíma kóða saman. Horfa á vídeó hluta saman og taka beygjur leysa þrautir eða svara spurningum.
+    -** Fara unplugged.** Við bjóðum [námskeið sem þurfa enga tölvu] () yfirleitt.%{unplugged_url}
   hoc_faq_international_q: Ég er í landinu <country>. Hvernig er alþjóðlegri þátttöku
     háttað?
   hoc_faq_international_a: Það geta allir skipulagt Klukkustund kóðunar, hvar sem
@@ -2235,10 +2278,10 @@ is:
     kennsluefnið í boði á <a href='http://code.org/learn'>Code.org/learn</a>, munt
     þú finna annað kennsluefni sem virkar á iPad - frá Code.org, Tynker, Lightbot
     eða CodeSpark.
-  hoc_faq_scratch_a_markdown: Scratch doesn't run on tablets. If your students are
-    young, they can use the ScratchJR iPad app (for early-readers). If you look at
-    the tutorials on [%{partner_url}/learn](%{codeorg_url}/learn), you can find other
-    tutorials that work on iPads - from Code.org, Tynker, Lightbot, or CodeSpark.
+  hoc_faq_scratch_a_markdown: Scratch keyrir ekki á töflum. Ef nemendur þínir eru
+    ungir geta þeir notað ScratchJR iPad appið (fyrir snemma lesendur). Ef þú horfir
+    á námskeið á [%{partner_url}/læra] (/%{codeorg_url}læra), getur þú fundið önnur
+    námskeið sem vinna á iPads - frá Code.org, Tynker, Lightbot, eða CodeSpark.
   hoc_faq_count_hoc_q: Hvernig eru Klukkustundir kóðunar taldar?
   hoc_faq_map_q: Af hverju sé ég ekki punktinn minn á kortinu?
   hoc_faq_map_a: Okkur finnst mjög leitt ef þú sérð ekki viðburðinn þinn á Klukkustund
@@ -2318,10 +2361,10 @@ is:
     þar sem þú getur prentað skírteini fyrir allan bekkinn fyrirfram. Þú getur líka
     prentað <a href='%{codeorg_url}/certificates?course=mc'>sérstök skírteini</a>
     fyrir nemendur sem fara í Minecraft kennsluefnið.
-  hoc_faq_certificates_a_markdown: Go to our [certificates page](%{codeorg_url}/certificates)
-    where you can print certificates for your entire class ahead of time. You can
-    also print out [special certificates](%{codeorg_url}/certificates?course=mc) for
-    students doing the Minecraft tutorial.
+  hoc_faq_certificates_a_markdown: Farðu á [skírteinasíðuna okkar] (%{codeorg_url}/vottorð)
+    þar sem þú getur prentað vottorð fyrir allan bekkinn þinn fyrirfram. Þú getur
+    líka prentað út [sérstök vottorð] (%{codeorg_url}/vottorð? course=mc) fyrir nemendur
+    sem gera Minecraft einkatími.
   hoc_faq_logo_q: Eru takmörk á því hvernig ég má nota merki eða heiti Klukkustundar
     kóðunar (Hour of Code)?
   hoc_faq_logo_a: Hour of Code er skrásett vörumerki. Við viljum ekki koma í veg fyrir
@@ -2484,8 +2527,8 @@ is:
     (%{url})
   learn_banner_teachers: 'Kennarar: <a id=''teacher_banner_host''>Skipuleggið Klukkustund</a>
     eða <a id=''teacher_banner_howto''>lesið Leiðarvísinn</a>'
-  learn_banner_teachers_markdown: 'Teachers: [Host an hour](%{host_url}) or [read
-    the How-To Guide](%{howto_url})'
+  learn_banner_teachers_markdown: 'Kennarar: [Gestgjafi klukkutíma] (%{host_url})
+    eða [lestu leiðbeiningarnar um hvernig á að nota] ()%{howto_url}'
   tutorial_dance2019_name: Danspartý
   tutorial_danceparty_name: Danspartý
   tutorial_chibitronics_name: 'Chibitronics: Ljómandi saga'
@@ -5292,11 +5335,11 @@ is:
     á ævintýri í gegnum þennan Minecraft heim.
   tutorial_minecraft-2016_longdescription: Byggja upp Minecraft leik. Búðu til þínar
     eigin útgáfur af kjúklingi, sauðfé, Creepers, zombie og fleira.
-  tutorial_thinkersmith-es_longdescription: Mediante el uso de un "Vocabulario Robot"
+  tutorial_thinkersmith-es_longdescription: Mediante el uso de un “Vocabulario Robot”
     predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar
-    a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento
-    ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones
-    as&iacute; como la valiosa habilidad de depuraci&oacute;n.
+    a cabo tareas espec ficas sin ser estas discutidas previamente.&iacute;Este segmento
+    ense&ntilde;a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones
+    as como la valiosa habilidad de depuraci n.&iacute;&oacute;
   tutorial_pixie_longdescription: Klukkustund af kóða einkatími með Pixie
   tutorial_play_longdescription: Búðu til sögu eða gerðu leik með Play Lab! Gera dýr,
     sjóræningjar, zombie, ninjanna, og margir fleiri stafir færa, gera hljóð, skora
@@ -12215,12 +12258,12 @@ is:
     með CS First og Scratch.
   tutorial_googlename _longdescription: Veldu nafn og lifðu stafina í orðinu með því
     að nota kóða. Veldu gælunafn, nafn gæludýrs, dýr, íþrótt, stað eða áhugamál.
-  tutorial_carnegiezillah_longdescription: Zillah City is thriving, and music is in
-    the air. Rumor has it, the famed Gargantua bot is online and sending the last
-    Toxibots to trash the city block by block…. Grab your cobot hoverboard and get
-    ready to groove, move, and finish off what you started! Players program their
-    cobot hoverbots to change lanes, avoid obstacles, and take out many Toxibots in
-    this rhythm-styled game.
+  tutorial_carnegiezillah_longdescription: Zillah City er blómleg og tónlist er í
+    loftinu. Orðrómur er um að hinn frægi Gargantua láni sé á netinu og sendi síðustu
+    Toxibots til að rusla borgarblokkinni eftir blokk.…Grípa cobot Hoverboard og fá
+    tilbúinn til að gróp, færa, og klára burt það sem þú byrjaðir! Leikmenn forrita
+    cobot hoverbots sína til að skipta um brautir, forðast hindranir og taka út marga
+    Toxibots í þessum taktstíl leik.
   tutorial_nasachspacejam_longdescription: Búðu til sólkerfi sem raunverulega rokkar!
     Lærðu um tónlist, stjörnufræði og kóðun í þessari sjálfstýrðu starfsemi (engin
     kóðunarreynsla er nauðsynleg). Program reikistjörnur til að gera tónlist, búa
@@ -13027,6 +13070,125 @@ is:
     funda miðvikudaga, tökum PTO okkar (5 vikur samtals, sem felur í sér org-breiður
     2-vikna skrifstofu lokun í lok ársins aka Winter Break), hálfan vinnudag á föstudögum
     á sumrin aka Summer Fridays, og önnur örlátur ávinningur.
+  csa_ai_page_hero_title: Hugbúnaðarverkfræði og tölvusjón
+  csa_ai_page_hero_description: 'Þessi tveggja kafla CSA eining eftir AP býður framhaldsskólanemum
+    reynslu af faglegum hugbúnaðarþróunartækjum, þar á meðal GitHub og GitHub Copilot,
+    og miðlar þeim raunverulegri færni til að þróa tölvusjónarforrit. '
+  csa_ai_page_video_section_title: Skref út fyrir heim forritunarumhverfis Code.org
+  csa_ai_page_video_section_li_1: Lærðu um AI og forrit þess
+  csa_ai_page_video_section_li_2: Hands-á reynslu af faglegum verkfærum hugbúnaðarþróun
+  csa_ai_page_video_section_li_3: Lærðu iðnaður-staðall venjur
+  csa_ai_page_video_section_li_4: Rækta gagnrýna hugsun
+  csa_ai_page_programming_tools: 'Forritunarverkfæri: Github, Github Copilot, VScode,
+    TensorFlow '
+  csa_ai_page_professional_learning: Ekkert
+  csa_ai_page_curriculum_topics: 'Umræðuefni: Forritun, Gögn, List og hönnun, Leikir
+    og hreyfimyndir'
+  csa_ai_page_curriculum_accessibility_features: Sjá kaflann Algengar spurningar fyrir
+    nánari upplýsingar
+  csa_ai_page_curriculum_languages_support: Enska
+  csa_ai_page_article_title_1: Byggja með Copilot
+  csa_ai_page_article_description_1: Nemendur læra hvernig á að nota GitHub Copilot
+    sem parforritara til að útskýra núverandi kóða, finna og laga villur og búa til
+    lausnir á nýjum vandamálum.
+  csa_ai_page_article_link_1: Lærðu meira um Copilot
+  csa_ai_page_article_title_2: Búðu til þitt eigið AI líkan
+  csa_ai_page_article_description_2: Nemendur þjálfa eigin AI líkön með því að nota
+    Teachable Machine til að þekkja myndir og bendingar mynda vefmyndavél og íhuga
+    hvernig tölvusjón hefur áhrif á hvernig notendur hafa samskipti við forrit.
+  csa_ai_page_article_link_2: Kannaðu kennslustundina
+  csa_ai_page_article_title_3: Kannaðu tölvusjón
+  csa_ai_page_article_description_3: Nemendur innleiða AI módelin sem þeir bjuggu
+    til með Teachable Machine í Java app og nota GitHub Copilot til að hjálpa þeim
+    að breyta núverandi útgáfum af forritum til að vinna með mismunandi inntak.
+  csa_ai_page_article_link_3: Sjá dæmi
+  csa_ai_page_learn_more_section_title: Lærðu meira um gervigreind
+  csa_ai_page_learn_more_title: Kannaðu AI 101 fyrir kennara
+  csa_ai_page_learn_more_description: Uppgötvaðu byltingarkennda heim gervigreindar
+    (AI) og umbreytandi möguleika þess í menntun með alhliða námsröð okkar á netinu
+    fyrir kennara.
+  csa_ai_page_learn_more_link: Horfðu á AI 101 for Teachers seríuna
+  csa_ai_page_faq_question_01: Hverjar eru forsendur fyrir þessa einingu?
+  csa_ai_page_faq_answer_01_01: 'Áður en köfun í þessa einingu, nemendur ættu að búa
+    yfir innganga-láréttur flötur þekkingu á Java. Nánar tiltekið ættu þeir að átta
+    sig á:'
+  csa_ai_page_faq_answer_01_list_01: "** Classes and Objects: ** Nemendur ættu að
+    vera kunnugir því að skilgreina og nota flokka, auk þess að búa til og vinna með
+    hluti."
+  csa_ai_page_faq_answer_01_list_02: "** Ritunar- og útkallsaðferðir: ** Nemendur
+    eiga að geta skilgreint aðferðir innan bekkjar, skilið aðferðarbreytur og skilagerðir
+    og hringt í aðferðir úr hlutum eða öðrum aðferðum."
+  csa_ai_page_faq_answer_01_list_03: "** 1D Fylki og ArrayLists: ** Þeir ættu að vera
+    vandvirkur í að lýsa, frumstilla, og notfæra einn-víddar fylki og arrayLists,
+    þar á meðal iterating gegnum þá."
+  csa_ai_page_faq_answer_01_list_04: "** Val og endurtekning: ** Traustur grunnur
+    í skilyrtum yfirlýsingum og lykkjum er lykilatriði."
+  csa_ai_page_faq_question_01_02: Helst, nemendur sem hafa lokið AP Computer Science
+    A eða námskeið með svipaða dýpt og dauðastirðnun væri vel undirbúin fyrir þessa
+    einingu.
+  csa_ai_page_faq_question_02: Hvernig set ég upp hugbúnaðinn sem þarf fyrir þessa
+    einingu?
+  csa_ai_page_faq_answer_02_01: Þessi eining er einstök vegna þess að hún felur í
+    sér notkun hugbúnaðar frá þriðja aðila frekar en Code.org rannsóknarstofum og
+    verkfærum. [Lestu meira um uppsetningu hugbúnaðarins hér] (%{accessibility_url}).
+  csa_ai_page_faq_question_03: Hvernig get ég stutt aðgengisþarfir meðan ég kenni
+    þessa einingu?
+  csa_ai_page_faq_answer_03_01: Veitingar til aðgengisþarfa skiptir sköpum fyrir námsumhverfi
+    án aðgreiningar. [Lestu meira um aðgengisaðgerðir í hugbúnaðinum sem notaður er
+    í þessari einingu hér] ()%{install_url}.
+  csa_ai_page_faq_question_04: Hvernig nota ég VS kóða á Chromebooks?
+  csa_ai_page_faq_answer_04: Notkun VS kóða á Chromebook hefur orðið einfaldari, sérstaklega
+    með getu til að keyra Linux forrit á nýrri Chromebook gerðum. [Lestu meira um
+    að setja upp VS kóða á Chromebooks hér] ()%{chromebook_url}.
+  csa_ai_page_faq_question_05: Hvernig get ég fengið faglega þróun fyrir þessa einingu?
+  csa_ai_page_faq_answer_05: Það er ekki eins og er sérstök fagleg þróun fyrir þetta
+    námskeið. Ef þú ert að leita að því að skilja hvernig á að nálgast gervigreind
+    í skólastofunni þinni geturðu [kannað AI 101 fyrir kennara] (%{ai_101_url}).
+  csa_ai_page_faq_question_06: Hver er ráðlögð tímasetning til að kenna þessa einingu?
+  csa_ai_page_faq_answer_06_01: The Software Engineering & Computer Vision einingin
+    er hugsi uppbyggð til að veita alhliða nám í hnitmiðuðum tímaramma. Allt einingin
+    er hönnuð til að spanna** 2 vikna kennslu**. Flestar kennslustundir eru sniðnar
+    í**45 mínútur**, en kennslustundir þar sem nemendur kafa í snertið ekki-á Java
+    verkefni þróun eru hannaðar í**90 mínútur**. Þessi lengdi tími tryggir að nemendur
+    hafi næg tækifæri til að skilja, innleiða og leysa þegar þeir vinna.
+  csa_ai_page_faq_answer_06_02: Það er einnig viljandi sveigjanleiki innbyggður í
+    uppbyggingu einingarinnar. Það fer eftir gangverki kennslustofunnar, þátttöku
+    nemenda og dýpt sem þú vilt kanna hvert efni, þú getur stillt tímalengd. Til dæmis
+    er hægt að stækka Intro to Copilot kennslustundina, sem er hönnuð sem 45 mínútna
+    kennslustund, í 90 mínútur ef þú vilt kafa dýpra í hvernig stór tungumálalíkön
+    og verkfæri eins og GitHub Copilot og ChatGPT virka.
+  csa_ai_page_faq_question_07: How can I access answer keys?
+  csa_ai_page_faq_answer_07: Með viðurkenndum kennarareikningi geturðu fundið svarlykla
+    í bláum “Kennari” Aðeins spjaldið sem sýnir í kennslustundum og starfsemi.Ef þú
+    þarft viðurkenndan kennarareikning geturðu sótt um aðgang að vernduðum kennaraefnum
+    (svarlyklar osfrv.) Í gegnum [þetta eyðublað] ().%{form_url}Vinsamlegast hafðu
+    í huga að það getur tekið 3-5 virka daga að staðfesta reikninginn þinn.
+  csa_ai_page_faq_question_08: Er þessi eining kortlögð samkvæmt stöðlum?
+  csa_ai_page_faq_answer_08: Já, Software Engineering & Computer Vision námskráin
+    er kortlögð á [CSTA K-12 Standards] (%{csta_k12_url}) og AI fyrir [K-12 leiðbeiningar]
+    ().%{k12_url}
+  csa_ai_page_faq_question_09: Hvað kostar að kenna þessa einingu?
+  csa_ai_page_faq_answer_09_01: Námskrá okkar og vettvangur eru í boði á [án kostnaðar]
+    (%{no_cost_url}) fyrir alla, hvar sem er, til að kenna!
+  csa_ai_page_faq_answer_09_02: Að auki eru hugbúnaðurinn og tækin sem notuð eru í
+    þessari einingu ókeypis. GitHub Copilot er ókeypis fyrir staðfest [teachers]()
+    og ()%{teachers_url}. [students]%{students_url}
+  csa_ai_page_faq_question_10: Hvað geri ég ef uppsetning hugbúnaðar virkar ekki?
+  csa_ai_page_faq_answer_10: Það getur verið algengt að horfast í augu við uppsetningu
+    hugbúnaðar, en það eru kerfisbundin skref sem þú getur fylgst með til að leysa
+    og leysa þau. [Skoðaðu nokkrar ábendingar um bilanaleit hér] (%{troubleshooting_url}).
+  csa_ai_page_faq_question_11: How was the curriculum developed?
+  csa_ai_page_faq_answer_11_01: 'Okkar Hugbúnaður Engineering & Computer Vision námskrá
+    var hannað með okkar Curriculum Gildi í huga. Eftirfarandi markmið leiðbeindu
+    að gerð þessarar námskrár:'
+  csa_ai_page_faq_answer_11_list_01: "** Markmið 1: ** Notaðu AI verkfæri til að búa
+    til, kemba og breyta kóða."
+  csa_ai_page_faq_answer_11_list_02: "** Markmið 2: ** Umskipti frá Java Lab til raunverulegur-veröld
+    verkfæri."
+  csa_ai_page_faq_answer_11_list_03: "** Markmið 3: ** Dýpka skilning á því hvernig
+    AI líkön eru þjálfuð og samþætt í forrit."
+  csa_ai_page_faq_answer_11_02: Fyrir frekari upplýsingar um gildin sem leiðbeindu
+    starfi okkar, vinsamlegast sjá okkar [námskrá gildi] (%{curriculum_values_url}).
   language_code:
     ar: Arabíska
     az: Aserska

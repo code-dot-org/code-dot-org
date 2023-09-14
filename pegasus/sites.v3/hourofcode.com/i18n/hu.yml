@@ -13,14 +13,14 @@ hu:
   campaign_date_full_year: 2022. december 5-11.
   nonus_campaign_date_start_short: Okt. 1.
   nonus_campaign_date_start_long: Október 1.
-  nonus_campaign_date_short: Okt. 1. - dec. 18.
-  nonus_campaign_date_full: Október 1. - december 18.
+  nonus_campaign_date_short: Okt. 1. - dec. 12.
+  nonus_campaign_date_full: Október 1. - december 12.
   nonus_campaign_date_year: '2022.'
   nonus_campaign_date_full_year: 2022. október 1. - 2022. december 18.
   latam_campaign_date_start_short: Okt. 1.
   latam_campaign_date_start_long: Október 1.
-  latam_campaign_date_short: Okt. 1. - dec. 18.
-  latam_campaign_date_full: Október 1. - december 18.
+  latam_campaign_date_short: Okt. 1. - dec. 12.
+  latam_campaign_date_full: Október 1. - december 12.
   latam_campaign_date_year: '2022.'
   latam_campaign_date_full_year: 2022. október 1. - 2022. december 18.
   europe_campaign_date_start_short: 'Okt. 10.
@@ -198,6 +198,16 @@ hu:
   grade_level_label_elementary: Általános Iskola
   grade_level_label_middle: Középiskola
   grade_level_label_high: Gimnázium
+  curricula_title_elementary: Általános iskolai tantervek
+  curricula_desc_elementary: Böngésszen a szórakozás között, ingyenes tanfolyamok
+    és tevékenységek, amelyek meghívják Önt, hogy fedezze fel a számítástechnikát
+    általános iskolásokkal.
+  curricula_title_middle: Középiskolai tantervek
+  curricula_desc_middle: Böngésszen a vonzó ajánlatok között, amelyek lehetővé teszik
+    Ön és középiskolás diákjai számára, hogy együtt fedezzék fel a számítástechnikát.
+  curricula_title_high: Középiskolai tantervek
+  curricula_desc_high: Böngésszen a lenyűgöző kurzusok és tevékenységek között, amelyek
+    meghívják Önt és középiskolás diákjait, hogy mélyebbre ássanak a számítástechnikában.
   students_label: Diákok
   teachers_label: Tanárok
   teacher_label_csf: CS Fundamentals tanár
@@ -224,6 +234,13 @@ hu:
   call_to_action_explore_choice_level: Fedezze fel a választási szintet
   call_to_action_explore_collection: Fedezze fel a gyűjteményt
   call_to_action_explore_unplugged_lesson: Fedezze fel az unplugged leckéket
+  call_to_action_explore_csf: Fedezze fel a CS alapjait
+  call_to_action_explore_csd: Fedezze fel a CS felfedezéseket
+  call_to_action_explore_csp: Fedezze fel a CS alapelveket
+  call_to_action_explore_csc: Fedezze fel a CS kapcsolatokat
+  call_to_action_explore_csa: Fedezze fel az AP® Computer Science A-t
+  call_to_action_explore_maker: Fedezze fel a Maker tanterveit
+  call_to_action_explore_hoc: Fedezze fel a Kódolás órája oktatóanyagokat
   call_to_action_try_app_lab: Próbálja ki az App Lab-ot
   call_to_action_view_lesson_plan: Óraterv megtekintése
   call_to_action_self_paced_pl: Indítsa el az önálló tempójú szakmai tanulást
@@ -268,6 +285,7 @@ hu:
   call_to_action_notify_available: Értesítsen, ha elérhető
   call_to_action_register_early_access: Regisztráljon a korai hozzáféréshez
   call_to_action_open_positions: Nyitott pozíciók megtekintése
+  call_to_action_get_guide: Szerezd meg az útmutatót
   aria_label_call_to_action_afe: Tudjon meg többet az Amazon Future Engineer-ről
   aria_label_call_to_action_teaching_csf: Indítsa el a Számítástudomány alapjainak
     oktatása szakmai tanulási programot
@@ -375,6 +393,8 @@ hu:
   curriculum_name_csa: AP® Számítástechnika A
   curriculum_name_csc_02: Bármely CS csatlakozási modul
   curriculum_name_ai: MI és gépi tanulás
+  curriculum_name_artificial_intelligence: Mesterséges intelligencia (AI)
+  curriculum_name_maker: Készítő
   curriculum_name_maker_cp: Alkalmazások létrehozása eszközökkel (Circuit Playground)
   curriculum_name_maker_microbit: Alkalmazások létrehozása eszközökkel (micro:bit)
   curriculum_name_creating_apps_with_devices: Alkalmazások létrehozása eszközökkel
@@ -435,6 +455,13 @@ hu:
     a számítástechnikában. Olyan programok kifejlesztése, amelyek hardveres bemeneteket
     és kimeneteket használnak. Ennek az egységnek van egy változata mind a micro:bit,
     mind a Circuit Playground számára.
+  curriculum_desc_csa: Mutassa be a hallgatókat a szoftverfejlesztésnek és az objektumorientált
+    tervezésnek, miközben megtanulják a Java programozási nyelvet ebben az ingyenes
+    tantervben az AP® Computer Science A (AP® CSA) számára.
+  curriculum_desc_maker: A készítői oktatás egy lépéssel tovább viszi a STEM (Science,
+    Technology, Engineering, Matematika) azáltal, hogy gyakorlati tapasztalatokat
+    és együttműködést hív fel az osztályterembe, hogy segítsen tanítani a problémamegoldást
+    és a kritikus gondolkodást.
   collection_hardware: Fókuszban a hardver
   collection_hardware_desc: Felhatalmazza a tanulókat arra, hogy adatokat és fizikai
     eszközöket használjanak a problémák megoldására.
@@ -468,6 +495,7 @@ hu:
   module_label_professional_learning: 'Szakmai tanulás:'
   module_label_languages: 'Támogatott nyelvek:'
   module_label_accessibility_features: 'Megközelíthetőség:'
+  module_label_accessibility_features_full: 'Kisegítő lehetőségek:'
   module_label_educator_tool: Oktató eszköz
   module_label_educator_course: Pedagógus tanfolyam
   module_label_student_tool: Hallgatói eszköz
@@ -475,6 +503,7 @@ hu:
   module_label_student_content_resources: Tartalom és források
   module_label_new: Új
   module_label_coming_soon: Hamarosan
+  module_label_available_now: Most elérhető
   module_label_video_series: Videó sorozat
   module_label_self_paced: Saját tempójú modul
   module_ages_5_10: 5-10
@@ -485,6 +514,8 @@ hu:
   module_grade_2_5: 2-5
   module_grade_3_5: 3-5
   module_grade_3_8: 3-8
+  module_grade_k_12: K-12
+  module_grade_3_12: 3-12
   module_grade_6_12: 6-12
   module_grade_6_10: 6-10
   module_grade_9_12: 9-12
@@ -499,7 +530,9 @@ hu:
   module_grade_9_12_teachers: 9-12 Tanárok
   module_level_beginner: Kezdő
   module_level_intermediate: Közbenső
+  module_level_advanced: Haladó
   module_duration_45_mins: 45 percek
+  module_duration_2_weeks: 2 hét
   module_duration_1_hr: 1 óra
   module_duration_2_hrs: 2 óra
   module_duration_3_hrs: 3 óra
@@ -583,6 +616,8 @@ hu:
   heading_java_lab: Java Lab
   heading_objects_first: Objektumok először
   heading_these_lessons_will: 'Ezek a leckék:'
+  heading_explore_curriculum_catalog: Fedezze fel az összes tanfolyamunkat a tantervi
+    katalógusban
   professional_learning_section_desc: Szerezd meg a szükséges támogatást, amikor felkészülsz
     a tanításra. A tanárok imádják, több mint 90% -uk rangsorolja a valaha volt legjobb
     szakmai fejlődést!
@@ -845,6 +880,11 @@ hu:
     a Generative AI. Hallgassa meg, hogyan működnek ezek az új technológiák közvetlenül
     a szakértőktől: Mira Murati, az OpenAI műszaki igazgatója és Cristóbal Valenzuela,
     a RunwayML vezérigazgatója.'
+  ai_pl_101_llm_slides_title: Nagyméretű nyelvi modellkérések oktatók számára
+  ai_pl_101_llm_slides_desc: Eszközök a lehető legjobb kimenet megszerzéséhez olyan
+    LLM-ekből, mint a ChatGPT, kezdőtől haladóig. Tartalmazza az indító utasításokat
+    azok számára, akik csak belemerítik a lábujjaikat, valamint fejlett eszközöket
+    azok számára, akik maximalizálni akarják potenciáljukat.
   how_ai_works_hero_heading: Hogyan működik az AI
   how_ai_works_hero_desc: Merüljön el az AI világában a „Hogyan működik az AI” című
     videósorozatunkkal és a kísérő leckékkel!
@@ -2091,6 +2131,11 @@ hu:
     helyi lehetőségekkel és egyéb számítástechnikai hírekkel kapcsolatban?
   signup_email_preference_privacy: "(Tekintsd át adatvédelmi irányelveinket)"
   signup_email_preference_yes: Igen
+  signup_email_preference_yes_elementary: Igen - Küldj frissítéseket a Elementary
+    School Resources
+  signup_email_preference_yes_middle: Igen - Küldj frissítéseket a Middle School Resources
+  signup_email_preference_yes_high: Igen - Küldjön frissítéseket a High School Resources
+  signup_email_preference_yes_general: Igen - Küldjön általános frissítéseket
   signup_email_preference_no: Nem
   signup_email_preference_error: Kérlek adj meg email preferenciát
   signup_multiple_event_warning: Ha több eseményt szervezel, akkor adj egyedi nevet
@@ -13523,6 +13568,129 @@ hu:
     a megbeszélések nélküli szerdákat, a PTO (összesen 5 hét, amely magában foglalja
     az egész org-szintű 2 hetes irodabezárást az év végén, más néven téli szünetet),
     fél munkanap pénteken nyáron, más néven nyári péntek, és egyéb nagylelkű előnyök.
+  csa_ai_page_hero_title: Szoftverfejlesztés és számítógépes látás
+  csa_ai_page_hero_description: 'Ez a két fejezetből álló Post-AP CSA modul gyakorlati
+    tapasztalatokat kínál a középiskolásoknak a professzionális szoftverfejlesztő
+    eszközökkel kapcsolatban, beleértve a GitHub és a GitHub Copilot, és átveszi őket
+    a valós készségekkel egy számítógépes látásprogram kidolgozásához. '
+  csa_ai_page_video_section_title: Lépj túl a Code.org programozási környezetek világán
+  csa_ai_page_video_section_li_1: Tudjon meg többet a mesterséges intelligenciáról
+    és alkalmazásairól
+  csa_ai_page_video_section_li_2: Gyakorlati tapasztalat professzionális szoftverfejlesztő
+    eszközökkel
+  csa_ai_page_video_section_li_3: Ismerje meg az iparági szabványokat
+  csa_ai_page_video_section_li_4: Ápolja a kritikus gondolkodást
+  csa_ai_page_programming_tools: 'Programozási eszközök: Github, Github Copilot, VSCode,
+    TensorFlow '
+  csa_ai_page_professional_learning: Egyik sem
+  csa_ai_page_curriculum_topics: 'Témakörök: Programozás, Adat, Művészet és design,
+    Játékok és animáció'
+  csa_ai_page_curriculum_accessibility_features: Lásd a GYIK részt a részletekért
+  csa_ai_page_curriculum_languages_support: Magyar
+  csa_ai_page_article_title_1: Építsen a Copilot segítségével
+  csa_ai_page_article_description_1: A diákok megtanulják, hogyan kell a GitHub Copilotot
+    páros programozóként használni a meglévő kód magyarázatához, a hibák megkereséséhez
+    és kijavításához, valamint az új problémák megoldásához.
+  csa_ai_page_article_link_1: Tudjon meg többet a Copilotról
+  csa_ai_page_article_title_2: Készítse el saját AI modelljét
+  csa_ai_page_article_description_2: A diákok saját AI-modelljeiket képezik a Teachable
+    Machine segítségével, hogy felismerjék a webkamerát alkotó képeket és gesztusokat,
+    és mérlegeljék, hogy a számítógépes látás hogyan befolyásolja a felhasználók interakcióját
+    az alkalmazásokkal.
+  csa_ai_page_article_link_2: Fedezze fel az óratervet
+  csa_ai_page_article_title_3: Fedezze fel a számítógépes látást
+  csa_ai_page_article_description_3: A diákok a Teachable Machine segítségével létrehozott
+    AI modelleket egy Java alkalmazásba valósítják meg, a GitHub Copilot segítségével,
+    hogy segítsenek nekik módosítani az alkalmazások meglévő verzióit, hogy működjenek
+    a különböző bemenetekkel.
+  csa_ai_page_article_link_3: Lásd egy példát
+  csa_ai_page_learn_more_section_title: Tudjon meg többet a mesterséges intelligenciáról
+  csa_ai_page_learn_more_title: Fedezze fel az AI 101 tanároknak
+  csa_ai_page_learn_more_description: Fedezze fel a mesterséges intelligencia (AI)
+    úttörő világát és átalakító potenciálját az oktatásban a tanároknak szóló átfogó
+    online tanulási sorozatunkkal.
+  csa_ai_page_learn_more_link: Nézze meg az AI 101 tanároknak sorozatot
+  csa_ai_page_faq_question_01: Milyen előfeltételei vannak ennek a modulnak?
+  csa_ai_page_faq_answer_01_01: 'Mielőtt belemerülne ebbe a modulba, a hallgatóknak
+    rendelkezniük kell a Java belépő szintű ismeretekkel. Pontosabban, meg kell érteniük:'
+  csa_ai_page_faq_answer_01_list_01: "**Osztályok és objektumok: ** A hallgatóknak
+    ismerniük kell az osztályok meghatározását és használatát, valamint az objektumok
+    létrehozását és manipulálását."
+  csa_ai_page_faq_answer_01_list_02: "**Írási és hívási módszerek: ** A hallgatóknak
+    képesnek kell lenniük az osztályon belüli módszerek meghatározására, a metódusparaméterek
+    és a visszatérési típusok megértésére, valamint az objektumokból vagy más módszerekből
+    származó hívási módszerek meghatározására."
+  csa_ai_page_faq_answer_01_list_03: "**1D tömbök és tömblisták: ** Jártasnak kell
+    lenniük az egydimenziós tömbök és tömblisták deklarálásában, inicializálásában
+    és manipulálásában, beleértve a rajtuk keresztüli iterálást is."
+  csa_ai_page_faq_answer_01_list_04: "**Kiválasztás és iteráció: ** A feltételes utasítások
+    és hurkok szilárd alapja elengedhetetlen."
+  csa_ai_page_faq_question_01_02: Ideális esetben azok a hallgatók, akik befejezték
+    az AP Computer Science A-t vagy hasonló mélységű és szigorú tanfolyamot, jól felkészültek
+    lennének erre a modulra.
+  csa_ai_page_faq_question_02: Hogyan telepíthetem a modulhoz szükséges szoftvert?
+  csa_ai_page_faq_answer_02_01: Ez a modul egyedülálló, mert magában foglalja a harmadik
+    féltől származó szoftverek használatát a Code.org laboratóriumok és eszközök helyett.
+    [További információ a szoftver telepítéséről itt] (%{accessibility_url}).
+  csa_ai_page_faq_question_03: Hogyan támogathatom az akadálymentesítési igényeket
+    a modul oktatása közben?
+  csa_ai_page_faq_answer_03_01: Az akadálymentesítési igények kielégítése elengedhetetlen
+    az inkluzív tanulási környezet szempontjából. [A modulban használt szoftver kisegítő
+    lehetőségeiről itt olvashat bővebben] (%{install_url}).
+  csa_ai_page_faq_question_04: Hogyan használhatom a VS kódot Chromebookokon?
+  csa_ai_page_faq_answer_04: A VS Code használata Chromebookon egyszerűbbé vált, különösen
+    azzal a képességgel, hogy Linux alkalmazásokat futtathat újabb Chromebook modelleken.
+    [A VS kód Chromebookokon történő beállításáról itt olvashat bővebben] ()%{chromebook_url}.
+  csa_ai_page_faq_question_05: Hogyan szerezhetek szakmai fejlődést ehhez a modulhoz?
+  csa_ai_page_faq_answer_05: Jelenleg nincs konkrét szakmai fejlődés erre a kurzusra.
+    Ha meg akarja érteni, hogyan kell megközelíteni a mesterséges intelligenciát az
+    osztálytermében, akkor [fedezze fel az AI 101 tanároknak] (%{ai_101_url}).
+  csa_ai_page_faq_question_06: Mi az ajánlott időzítés ennek a modulnak a tanításához?
+  csa_ai_page_faq_answer_06_01: A Software Engineering & Computer Vision modul átgondoltan
+    van felépítve, hogy átfogó tanulást biztosítson tömör időkeretben. A teljes modult
+    úgy tervezték, hogy átfogja a**2 hetes oktatás**. A legtöbb leckét **45 percre
+    szabják**, míg az órákat, ahol a hallgatók a gyakorlati Java projektfejlesztésbe
+    merülnek, **90 percre tervezik**. Ez a meghosszabbított idő biztosítja, hogy a
+    hallgatóknak bőséges lehetőségük legyen megérteni, megvalósítani és hibaelhárítani
+    munka közben.
+  csa_ai_page_faq_answer_06_02: Szándékos rugalmasság is beépítve van a modul felépítésébe.
+    Az osztálytermi dinamikától, a diákok elkötelezettségétől és az egyes témák feltárásának
+    mélységétől függően beállíthatja az időtartamot. Például, az Intro to Copilot
+    lecke, amelyet 45 perces leckének terveztek, kibővíthető 90 percre, ha mélyebbre
+    szeretne merülni abban, hogy milyen nagy nyelvi modellek és eszközök működnek,
+    mint például a GitHub Copilot és a ChatGPT.
+  csa_ai_page_faq_question_07: How can I access answer keys?
+  csa_ai_page_faq_answer_07: Jóváhagyott tanári fiókkal, a válaszkulcsokat egy kék
+    „Tanár” panelen találhatja meg, amely az online órákban és tevékenységekben jelenik
+    meg.Ha jóváhagyott tanári fiókra van szüksége, kérheti a hozzáférést a csak tanároknak
+    védett anyagokhoz (válaszkulcsok stb.) az [ezen az űrlapon] () keresztül.%{form_url}Kérjük,
+    ne feledje, hogy fiókjának igazolása 3-5 munkanapot vehet igénybe.
+  csa_ai_page_faq_question_08: Ez a modul szabványokhoz van hozzárendelve?
+  csa_ai_page_faq_answer_08: Igen, a Software Engineering & Computer Vision tanterv
+    a [CSTA K-12 szabványok] (%{csta_k12_url}) és az AI [K-12 irányelvek] () szerint
+    van leképezve.%{k12_url}
+  csa_ai_page_faq_question_09: Mennyibe kerül ennek a modulnak a tanítása?
+  csa_ai_page_faq_answer_09_01: Tantervünk és platformunk elérhető [költség nélkül]
+    (%{no_cost_url}) bárki számára, bárhol, tanítani!
+  csa_ai_page_faq_answer_09_02: Ezenkívül az ebben a modulban használt szoftverek
+    és eszközök ingyenesek. A GitHub Copilot ingyenesen ellenőrizhető [teachers](%{teachers_url})
+    és (). [students]%{students_url}
+  csa_ai_page_faq_question_10: Mit tegyek, ha a szoftver telepítése nem működik?
+  csa_ai_page_faq_answer_10: A szoftvertelepítés során felmerülő problémák gyakoriak
+    lehetnek, de vannak szisztematikus lépések, amelyeket követhet a hibaelhárításhoz
+    és azok megoldásához. [Nézzen meg néhány hibaelhárítási tippet itt] (%{troubleshooting_url}).
+  csa_ai_page_faq_question_11: How was the curriculum developed?
+  csa_ai_page_faq_answer_11_01: 'Szoftvermérnöki és számítógépes látás tantervünket
+    a tantervi értékeink szem előtt tartásával terveztük. A következő célok irányították
+    a tanterv létrehozását:'
+  csa_ai_page_faq_answer_11_list_01: "**1. cél: ** AI eszközökkel generálhat, hibakereshet
+    és szerkeszthet kódot."
+  csa_ai_page_faq_answer_11_list_02: "**2. cél: ** Átmenet a Java Lab-ról a valós
+    eszközökre."
+  csa_ai_page_faq_answer_11_list_03: "**3. cél: ** Mélyítse el annak megértését, hogyan
+    képzik és integrálják az AI modelleket a programokba."
+  csa_ai_page_faq_answer_11_02: További információ a munkánkat irányított értékekről,
+    kérjük, olvassa el a [tantervi értékek] ()%{curriculum_values_url}.
   language_code:
     ar: arab
     az: azerbajdzsáni

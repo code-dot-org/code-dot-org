@@ -108,19 +108,19 @@ ps:
     رول باندې پوه شي چې د ډیر مساوي نړۍ رامینځته کولو کې لوبولی شي.
   oceans_landing_videos: د AI او ماشین زده کړې په اړه ویډیوګانې
   oceans_behind_the_scenes: 'د سمندرونو لپاره AI: د پردې شاته'
-  oceans_behind_the_scenes_1: Levels 2-4 use a pretrained model provided by the <a
-    href="https://www.tensorflow.org/" >TensorFlow</a> <a href="https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md">
-    MobileNet </a> project. A MobileNet model is a <a href="https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks">convolutional
-    neural network</a> that has been trained on <a href="http://www.image-net.org/">ImageNet</a>,
-    a dataset of over 14 million images hand-annotated with words such as "balloon"
-    or "strawberry". In order to customize this model with the labeled training data
-    the student generates in this activity, we use a technique called <a href="https://en.wikipedia.org/wiki/Transfer_learning">Transfer
-    Learning</a>. Each image in the training dataset is fed to MobileNet, as pixels,
-    to obtain a list of annotations that are most likely to apply to it. Then, for
-    a new image, we feed it to MobileNet and compare its resulting list of annotations
-    to those from the training dataset. We classify the new image with the same label
-    (such as "fish" or "not fish") as the images from the training set with the most
-    similar results.
+  oceans_behind_the_scenes_1: کچه 2-4 د <a href="https://www.tensorflow.org/" >TensorFlow</a>
+    <a href="https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md">
+    MobileNet پروژې لخوا چمتو شوي دمخه روزل شوي ماډل کاروي. </a> د ګرځنده نیټ ماډل
+    یو <a href="https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks">پیچلي
+    عصبي شبکه ده</a> چې په <a href="http://www.image-net.org/">ImageNet کې روزل شوې</a>،
+    د 14 ملیون څخه ډیر عکسونو ډیټاسیټ چې د «بالون» یا «سټرابیري» په څیر الفاظو سره
+    تشریح شوی. د دې ماډل د لیبل شوي روزنې ډیټا سره دودیز کولو لپاره چې زده کونکي پدې
+    فعالیت کې رامینځته کوي، موږ د <a href="https://en.wikipedia.org/wiki/Transfer_learning">لیږد
+    زده کړې په نوم تخنیک کاروو</a>. د روزنې ډیټاسیټ کې هر عکس MobileNet ته ورکول کیږي،
+    د پکسلز په توګه، د تشریحاتو لیست ترلاسه کولو لپاره چې ډیری احتمال یې په دې باندې
+    پلي کیږي. بیا، د نوي عکس لپاره، موږ دا MobileNet ته تغذیه کوو او د دې پایلو لیست
+    د روزنې ډیټاسیټ سره پرتله کوو. موږ نوی عکس د ورته لیبل سره طبقه بندي کوو (لکه
+    «کب» یا «کب نه») د ورته ورته پایلو سره د روزنې سیټ عکسونو په توګه.
   oceans_behind_the_scenes_1_markdown: د 2-4 کچه د [TensorFlow](https://www.tensorflow.org/)
     [MobileNet](https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md)
     پروژې لخوا چمتو شوي مخکې روزل شوي ماډل کاروي. د موبایل نیټ ماډل یو [کنولوشن عصبي
@@ -181,6 +181,15 @@ ps:
   grade_level_label_elementary: لومړنی ښوونځی
   grade_level_label_middle: منځنی ښوونځی
   grade_level_label_high: عالي لیسه
+  curricula_title_elementary: د لومړني ښوونځي نصاب
+  curricula_desc_elementary: ساتیري، وړیا کورسونه او فعالیتونه براوز کړئ چې تاسو ته
+    د خپل لومړني ښوونځي زده کونکو سره د کمپیوټر ساینس سپړلو ته بلنه درکوي.
+  curricula_title_middle: د منځني ښوونځي نصاب
+  curricula_desc_middle: په زړه پوري وړاندیزونه براوز کړئ چې تاسو او ستاسو د مینځني
+    ښوونځي زده کونکو ته وړتیا ورکوي چې په ګډه د کمپیوټر ساینس وپلټئ.
+  curricula_title_high: د لیسې نصاب
+  curricula_desc_high: زړه راښکونکي کورسونه او فعالیتونه براوز کړئ چې تاسو او ستاسو
+    د عالي ښوونځي زده کونکو ته بلنه درکوي چې د کمپیوټر ساینس ته ژور کیندنه وکړي.
   students_label: زده کونکي
   teachers_label: ښوونکي
   teacher_label_csf: د CS اساسات ښوونکی
@@ -207,6 +216,13 @@ ps:
   call_to_action_explore_choice_level: د مثال انتخاب کچه وپلټئ
   call_to_action_explore_collection: ټولګه وپلټئ
   call_to_action_explore_unplugged_lesson: غیر پلګ شوي درسونه وپلټئ
+  call_to_action_explore_csf: د CS اساسات وپلټئ
+  call_to_action_explore_csd: د CS کشفونه وپلټئ
+  call_to_action_explore_csp: د CS اصول وپلټئ
+  call_to_action_explore_csc: د CS اړیکې وپلټئ
+  call_to_action_explore_csa: د AP® کمپیوټر ساینس A وپلټئ
+  call_to_action_explore_maker: د جوړونکي نصاب وپلټئ
+  call_to_action_explore_hoc: د کوډ ښوونې ساعت وپلټئ
   call_to_action_try_app_lab: د ایپ لیب هڅه وکړئ
   call_to_action_view_lesson_plan: د لوست پلان وګورئ
   call_to_action_self_paced_pl: د ځان سرعت مسلکي زده کړه پیل کړئ
@@ -251,6 +267,7 @@ ps:
   call_to_action_notify_available: ما ته خبر ورکړئ کله چې شتون ولري
   call_to_action_register_early_access: د لومړني لاسرسي لپاره راجستر کړئ
   call_to_action_open_positions: خلاص پوستونه وګورئ
+  call_to_action_get_guide: لارښود ترلاسه کړئ
   aria_label_call_to_action_afe: د ایمیزون راتلونکي انجینر په اړه نور معلومات زده
     کړئ
   aria_label_call_to_action_teaching_csf: د کمپیوټر ساینس اساساتو د مسلکي زده کړې
@@ -350,6 +367,8 @@ ps:
   curriculum_name_csa: AP® کمپیوټر ساینس A
   curriculum_name_csc_02: هر CS پیوستون ماډل
   curriculum_name_ai: د AI او ماشین زده کړه
+  curriculum_name_artificial_intelligence: مصنوعي استخبارات (AI)
+  curriculum_name_maker: جوړونکی
   curriculum_name_maker_cp: د وسیلو سره د ایپسونو رامینځته کول (د سرکټ لوبې ډګر)
   curriculum_name_maker_microbit: 'د وسیلو سره ایپس رامینځته کول (مایکرو: بټ)'
   curriculum_name_creating_apps_with_devices: د وسیلو سره ایپس رامینځته کول
@@ -403,6 +422,12 @@ ps:
   curriculum_desc_creating_apps_with_devices: 'په کمپیوټري کې د فزیکي وسیلو رول وپلټئ.
     داسې برنامې رامینځته کړئ چې د هارډویر توکي او محصولات کاروي. د مایکرو: بټ او سرکټ
     لوبغالي دواړو لپاره د دې واحد نسخه شتون لري.'
+  curriculum_desc_csa: زده کونکي د سافټویر انجینرۍ او اعتراض لرونکي ډیزاین ته معرفي
+    کړئ پداسې حال کې چې دوی د AP® کمپیوټر ساینس A (AP® CSA) لپاره پدې وړیا نصاب کې
+    د جاوا برنامې ژبه زده کوي.
+  curriculum_desc_maker: د جوړونکي تعلیم STEM (ساینس، ټیکنالوژي، انجینري، ریاضي) په
+    ټولګي کې د لاس تجربې او همکارۍ په بلنه سره یو ګام نور هم اخلي ترڅو د ستونزې حل
+    کولو او انتقادي فکر درس ورکولو کې مرسته وکړي.
   collection_hardware: په هارډویر تمرکز وکړئ
   collection_hardware_desc: زده کونکو ته وړتیا ورکوي چې د ستونزو حل کولو لپاره ډیټا
     او فزیکي وسایل وکاروي.
@@ -434,6 +459,7 @@ ps:
   module_label_professional_learning: 'مسلکي زده کړه:'
   module_label_languages: 'ملاتړ شوي ژبې:'
   module_label_accessibility_features: 'لاسرسی:'
+  module_label_accessibility_features_full: 'د لاسرسي ځانګړتیاوې:'
   module_label_educator_tool: ښوونکی وسیله
   module_label_educator_course: د ښوونکي کورس
   module_label_student_tool: د زده کونکي وسیله
@@ -441,6 +467,7 @@ ps:
   module_label_student_content_resources: مینځپانګه او سرچینې
   module_label_new: نوی
   module_label_coming_soon: ژر راځي
+  module_label_available_now: اوس شتون لري
   module_label_video_series: د ویډیو لړۍ
   module_label_self_paced: د ځان سرعت ماډل
   module_ages_5_10: 5-10
@@ -451,6 +478,8 @@ ps:
   module_grade_2_5: 2-5
   module_grade_3_5: 3-5
   module_grade_3_8: ۳-۸
+  module_grade_k_12: K-12
+  module_grade_3_12: ۳-۱۲
   module_grade_6_12: ۶-۱۲
   module_grade_6_10: ۶-۱۰
   module_grade_9_12: ۹-۱۲
@@ -465,7 +494,9 @@ ps:
   module_grade_9_12_teachers: 9-12 ښوونکي
   module_level_beginner: نوښتګر
   module_level_intermediate: منځمهاله
+  module_level_advanced: پرمختللی
   module_duration_45_mins: 45 دقیقې
+  module_duration_2_weeks: 2 اونۍ
   module_duration_1_hr: 1 ساعت
   module_duration_2_hrs: 2 ساعته
   module_duration_3_hrs: 3 ساعته
@@ -545,6 +576,7 @@ ps:
   heading_java_lab: جاوا لیب
   heading_objects_first: لومړی څیزونه
   heading_these_lessons_will: 'دا درسونه به:'
+  heading_explore_curriculum_catalog: زموږ ټول کورسونه د نصاب کتلاګ کې وپلټئ
   professional_learning_section_desc: هغه ملاتړ ترلاسه کړئ چې تاسو ورته اړتیا لرئ
     لکه څنګه چې تاسو ښوونې ته چمتو کوئ. ښوونکي له دې سره مینه لري، د 90 over څخه ډیر
     دا د تل غوره مسلکي پرمختګ سره درجه بندي کوي!
@@ -795,6 +827,11 @@ ps:
     لوی بدلونونه رامینځته کوي، د لوی ژبې ماډلونو (لکه ChatGPT) او جنریټری AI کې دوه
     نوي ویډیوګانې وړاندې کوي. واورئ چې دا نوې ټیکنالوژي څنګه مستقیم د متخصصینو څخه
     کار کوي: میرا مورټي، د OpenAI CTO، او د RunwayML اجرایوي رییس، کریسټوبل والینزویلا.'
+  ai_pl_101_llm_slides_title: د ښوونکو لپاره د ژبې لوی ماډل هڅونه
+  ai_pl_101_llm_slides_desc: د LLMs څخه د غوره ممکنه محصول ترلاسه کولو لپاره وسیلې
+    لکه ChatGPT، له پیل څخه تر پرمختللي پورې. د هغو کسانو لپاره د سټارټر اشارې شاملې
+    دي چې یوازې د خپلو ګوتو ګوتو کې ډوبوي، په بیله بیا د هغو کسانو لپاره پرمختللي
+    وسیلې چې د دوی احتمالي اعظمي کولو په لټه کې دي.
   how_ai_works_hero_heading: AI څنګه کار کوي
   how_ai_works_hero_desc: د AI نړۍ ته د «AI څنګه کار کوي» سره ډوب کړئ، زموږ د ویډیو
     لړۍ او ورسره درسونه!
@@ -1374,10 +1411,10 @@ ps:
     لري که تاسو دې اکمالاتو ته لاسرسی نلرئ.
   csd_page_faq_answer_04_06: د وسیلو سره د ایپسونو رامینځته کول (اختیار A او اختیار
     B)
-  csd_page_faq_answer_04_07: 'Option A: Classroom set of Circuit Playgrounds. Check
-    out [code.org/maker/circuitplayground](%{url}) for more details.'
-  csd_page_faq_answer_04_08: 'Option B: Classroom set of micro:bit devices. Check
-    out [code.org/maker/microbit](%{url}) for more details.'
+  csd_page_faq_answer_04_07: 'اختیار A: د سرکټ لوبغالي ټولګي سیټ. د نورو جزیاتو لپاره
+    [code.org/maker/circuitplayground] () چیک کړئ.%{url}'
+  csd_page_faq_answer_04_08: 'اختیار B: د مایکرو ټولګي سیټ: بټ وسیلې. د نورو جزیاتو
+    لپاره [code.org/maker/microbit] () چیک کړئ.%{url}'
   csd_page_faq_answer_04_09: جوړونکي اکمالات، لکه د نسج خالي بکسونه یا د کارت بورډ
     رولونه یا سکریچ کاغذ
   csd_page_faq_answer_04_10: "* یادونه: د وسیلو واحد سره د ایپسونو رامینځته کول دوه
@@ -1511,9 +1548,10 @@ ps:
     چې په یووالي کې تجربه کولو لپاره ډیزاین شوي پداسې حال کې چې د مهارت جوړونې درسونه
     د زده کونکو لخوا په خپل سرعت بشپړ کیدی شي.
   csf_page_faq_question_06: زه د CS اساساتو لپاره کوم توکي ته اړتیا لرم؟
-  csf_page_faq_answer_06: Many lessons have handouts that guide students through activities.
-    These resources can be printed or assigned digitally. Some lessons call for typical
-    classroom supplies and manipulatives. [Visit the CSF Syllabus to learn more](%{syllabus_url}).
+  csf_page_faq_answer_06: ډیری درسونه لاسوندونه لري چې زده کونکو ته د فعالیتونو له
+    لارې لارښوونه کوي. دا سرچینې په ډیجیټل ډول چاپ یا ټاکل کیدی شي. ځینې درسونه د
+    ټولګي عادي تجهیزاتو او لاسوهنو غوښتنه کوي. [د نورو زده کړې لپاره د CSF نصاب څخه
+    لیدنه وکړئ] ().%{syllabus_url}
   csa_page_top_desc: Introduce students to software engineering and object-oriented
     design while they learn the Java programming language in this free curriculum
     for [AP® Computer Science A (AP® CSA)](%{csa_url}).
@@ -1658,11 +1696,12 @@ ps:
   ai_activity_zooniverse: زونیورس - د غره زیبرا سنیپ شاټ
   ai_activity_zooniverse_desc: په عکسونو کې د مختلف څارویو په پیژندلو سره د خطر لرونکي
     کیپ ماونټین زیبرا ساتنه کې مرسته وکړئ.
-  codeorg_homepage_hoc2018_curriculum: Go further with <a href="%{studio_url}/courses"
-    class="hoc2018-curriculum-link">Code.org courses</a>
+  codeorg_homepage_hoc2018_curriculum: د <a href="%{studio_url}/courses" class="hoc2018-curriculum-link">Code.org
+    کورسونو سره نور لاړ شئ</a>
   codeorg_homepage_hoc2018_dance_heading: خپل جوړ کړئ <span class="highlight-word">نڅا&nbsp;ګوند</span>
   codeorg_homepage_hoc2018_header_line1: د کوډ ساعت راځي...
-  codeorg_homepage_hoc2018_header_line2_desktop: What will you <span class="hoc2018-highlight-word">create?</span>
+  codeorg_homepage_hoc2018_header_line2_desktop: تاسو به څه <span class="hoc2018-highlight-word">جوړ
+    کړئ؟</span>
   codeorg_homepage_hoc2018_header_line2_mobile: تاسو به څه جوړ کړئ؟
   codeorg_homepage_hoc2018_header_line3: تخیل ته الوتنه ورکړئ او نوښت ته زیږون ورکړئ.
     د کوډ ساعت او خپل خلاقیت برانډ سره پیل کړئ، هرڅه چې ممکن وي.
@@ -1681,7 +1720,8 @@ ps:
   codeorg_homepage_csc_title: CS پيوندونه
   hoc2018_tutorial_mchoc_description: Minecraft د نوي فعالیت سره د کوډ ساعت لپاره
     بیرته راغلی! د کوډ سره د ماین کرافټ له لارې سفر.
-  codeorg_homepage_hoc2019_dance_heading: Code a <span class="highlight-word">Dance&nbsp;Party!</span>
+  codeorg_homepage_hoc2019_dance_heading: د <span class="highlight-word">نڅا&nbsp;ګوند
+    کوډ کړئ!</span>
   codeorg_homepage_hoc2019_dance_heading_markdown: د ** نڅا&nbsp;ګوند کوډ کړئ! **
   codeorg_homepage_special2020_body1: د والدینو او ښوونکو ملاتړ چې د ښوونځیو له بندیدو
     سره مخ دي.
@@ -1699,10 +1739,10 @@ ps:
   cookie_banner_more_information: د Code.org د محرمیت تګلاره وګورئ.
   cookie_banner_accept: زه موافق یم
   front_header_banner: په تاریخ کې د زده کړې ترټولو لوی پیښې کې ګډون وکړئ، %{campaign_date}
-  front_intro_default: The Hour of Code is a global movement reaching tens of millions
-    of students in 180+ countries. Anyone, anywhere can organize an Hour of Code event.
-    One-hour tutorials are available in over 45 languages. No experience needed. <strong>Ages
-    4 to 104.</strong>
+  front_intro_default: د کوډ ساعت یو نړیوال حرکت دی چې په 180+ هیوادونو کې لسګونه
+    ملیون زده کونکو ته رسي. هرڅوک، هرچیرې کولی شي د کوډ ساعت پیښه تنظیم کړي. د یو
+    ساعت ښوونې په 45 ژبو کې شتون لري. هیڅ تجربې ته اړتیا نشته. <strong>عمرونه له 4
+    څخه تر 104 پورې.</strong>
   front_intro_default_2: په 180+ هیوادونو کې نړیوال حرکت.
   front_watch_video: نوې ویډیو وګورئ
   front_watch_regular_video: ویډیو وګورئ
@@ -1998,6 +2038,13 @@ ps:
     فرصتونو، یا نورو کمپیوټر ساینس خبرونو ته د تازه معلوماتو په اړه بریښنالیک درکړو؟
   signup_email_preference_privacy: "(زموږ د محرمیت تګلاره وګورئ)"
   signup_email_preference_yes: هو
+  signup_email_preference_yes_elementary: هو - ماته د لومړني ښوونځي سرچینو په اړه
+    تازه معلومات واستوئ
+  signup_email_preference_yes_middle: هو - ماته د مینځني ښوونځي سرچینو په اړه تازه
+    معلومات واستوئ
+  signup_email_preference_yes_high: هو - ماته د عالي ښوونځي سرچینو په اړه تازه معلومات
+    واستوئ
+  signup_email_preference_yes_general: هو - ما ته عمومي تازه معلومات واستوئ
   signup_email_preference_no: نه
   signup_email_preference_error: د بریښنالیک لومړیتوب اړین دی
   signup_multiple_event_warning: کله چې تاسو نوم لیکنه وکړئ موږ به ستاسو د ښوونځي
@@ -2062,8 +2109,8 @@ ps:
   map_legend_title: افسانوي
   map_legend_hoc_events: د کوډ پیښې ساعت
   map_legend_cs_tech_jam: ځانګړې پیښه
-  map_warning: A full list of the events can be viewed on the <a href='%{events_url}'>events
-    page.</a>
+  map_warning: د پیښو بشپړ لیست د پیښو په پاڼه کې <a href='%{events_url}'>لیدل کیدی
+    شي.</a>
   map_warning_markdown: د پیښو بشپړ لیست په [پیښو پا pageه] (%{events_url}) کې لیدل
     کیدی شي
   meta_tag_og_title: 'د کوډ ساعت: په غورځنګ کې ګډون وکړئ'
@@ -2151,36 +2198,37 @@ ps:
     موږ د هر عمر او تجربې کچې لپاره اختیارونه هم لرو، له وړکتون څخه او پورته. زموږ
     د [لارښود کولو څرنګوالی] (%{howto}) لوستلو سره د خپلې پیښې پلان کول پیل کړئ.
   hoc_faq_devices_q: زه باید د خپلو زده کونکو لپاره کوم وسایل وکاروم؟
-  hoc_faq_devices_a: Code.org tutorials work on all devices and browsers. You can
-    see more information about Code.org's tutorial tech needs <a href='%{codeorg_url}/educate/it'>here</a>.
-    Tech needs for non-Code.org tutorials can be found on <a href='%{codeorg_url}/learn'>%{partner_url}/learn</a>
-    in the tutorial specific description. Don't forget we also offer <a href='%{unplugged_url}'>unplugged
-    activities</a> if your school can't accommodate the tutorials!
+  hoc_faq_devices_a: د Code.org ښوونې په ټولو وسیلو او براوزرونو کار کوي. تاسو کولی
+    شئ <a href='%{codeorg_url}/educate/it'>دلته</a>د Code.org ښوونې ټیک اړتیاو په
+    اړه نور معلومات وګورئ. د غیر Code.org سبقونو لپاره ټیک اړتیاوې د ټیوټوریل ځانګړي
+    توضیحاتو کې <a href='%{codeorg_url}/learn'>%{partner_url}/زده کړه</a> کې موندل
+    کیدی شي. مه هیروئ چې موږ <a href='%{unplugged_url}'>غیر پلګ شوي فعالیتونه هم وړاندیز
+    کوو</a> که ستاسو ښوونځی سبقونه ونه ځای په ځای کړي!
   hoc_faq_devices_a_markdown: د Code.org ښوونې په ټولو وسیلو او براوزرونو کار کوي.
     تاسو کولی شئ د Code.org د ټیوټوریل ټیک اړتیاو په اړه نور معلومات وګورئ [here](%{codeorg_url}/ښوونه/دا).
     د غیر Code.org سبقونو لپاره ټیک اړتیاوې په [%{partner_url}/زده کړه] (%{codeorg_url}/زده
     کړه) کې د ټیوټوریل ځانګړي توضیحاتو کې موندل کیدی شي. مه هیروئ چې موږ [غیر پلګ
     شوي فعالیتونه] هم وړاندیز کوو (%{unplugged_url}) که ستاسو ښوونځی سبقونه ونه کړي!
   hoc_faq_need_computers_q: ایا زه د هر ګډون کونکي لپاره کمپیوټر ته اړتیا لرم؟
-  hoc_faq_need_computers_a: No. We have Hour of Code tutorials that work on PCs, smartphones,
-    tablets, and some that require no computer at all! You can join wherever you are,
-    with whatever you have. <p><i>Here are a few options:</i> <br> <ul> <li><b>Work
-    in pairs.</b> <a href='%{pair_programming_research}'>Research shows</a> students
-    learn best with <a href='%{pair_programming_video}'>pair programming</a>, sharing
-    a computer and working together. Encourage your students to double up. <li><b>Use
-    a projected screen.</b> If you have a projector and screen for a Web-connected
-    computer, your entire group can do an Hour of Code together. Watch video portions
-    together and take turns solving puzzles or answering questions. <li><b>Go unplugged.</b>
-    We offer <a href='%{unplugged_url}'>tutorials that require no computer</a> at
-    all. </ul>
+  hoc_faq_need_computers_a: 'نه. موږ د ساعت کوډ ښوونې لرو چې په کمپیوټرونو، سمارټ
+    فونونو، ټابلیټونو، او ځینې کې کار کوي چې هیڅ کمپیوټر ته اړتیا نلري! تاسو کولی
+    شئ هرچیرې چې یاست ګډون وکړئ، د هر هغه څه سره چې تاسو یې لرئ. <p><i>دلته یو څو
+    اختیارونه دي: په جوړه کې</i> <br> <ul> <li><b>کار وکړئ.</b> <a href=''%{pair_programming_research}''>څیړنې
+    ښیې چې</a> زده کونکي د <a href=''%{pair_programming_video}''>جوړه برنامې</a>،
+    کمپیوټر شریکولو او یوځای کار کولو سره غوره زده کوي. خپل زده کونکي دوه چنده کولو
+    ته وهڅوئ. <li><b>اټکل شوی سکرین وکاروئ.</b> که تاسو د ویب سره وصل کمپیوټر لپاره
+    پروجیکٹر او سکرین لرئ، ستاسو ټوله ډله کولی شي یوځای د کوډ ساعت ترسره کړي. د ویډیو
+    برخې یوځای وګورئ او د پزلونو حل کولو یا پوښتنو ته ځواب ویلو نوبت واخلئ. <li><b>بې
+    پلګ ته لاړ شه.</b> موږ <a href=''%{unplugged_url}''>درسونه وړاندیز کوو چې هیڅ
+    کمپیوټر</a> ته اړتیا نلري. </ul>'
   hoc_faq_need_computers_a_markdown: |-
-    No. We have Hour of Code tutorials that work on PCs, smartphones, tablets, and some that require no computer at all! You can join wherever you are, with whatever you have.
+    نه. موږ د ساعت کوډ ښوونې لرو چې په کمپیوټرونو، سمارټ فونونو، ټابلیټونو، او ځینې کې کار کوي چې هیڅ کمپیوټر ته اړتیا نلري! تاسو کولی شئ هرچیرې چې یاست ګډون وکړئ، د هر هغه څه سره چې تاسو یې لرئ.
 
-    _Here are a few options:_
+    _ دلته یو څو اختیارونه دي: _
 
-    - **Work in pairs.** [Research shows](%{pair_programming_research}) students learn best with [pair programming](%{pair_programming_video}), sharing a computer and working together. Encourage your students to double up.
-    - **Use a projected screen.** If you have a projector and screen for a Web-connected computer, your entire group can do an Hour of Code together. Watch video portions together and take turns solving puzzles or answering questions.
-    - **Go unplugged.** We offer [tutorials that require no computer](%{unplugged_url}) at all.
+    - ** په جوړه کې کار.** [د څیړنې ښیې] (%{pair_programming_research}) زده کونکي د [جوړه برنامې] (%{pair_programming_video}) سره غوره زده کوي، کمپیوټر شریکوي او یوځای کار کوي. خپل زده کونکي دوه چنده کولو ته وهڅوئ.
+    - ** اټکل شوی سکرین وکاروئ. ** که تاسو د ویب سره وصل کمپیوټر لپاره پروجیکٹر او سکرین ولرئ، نو ستاسو ټوله ډله کولی شي یوځای د کوډ ساعت ترسره کړي. د ویډیو برخې یوځای وګورئ او د پزلونو حل کولو یا پوښتنو ته ځواب ویلو نوبت واخلئ.
+    - ** بې ځایه کیږي** موږ وړاندیز کوو [درسونه چې کمپیوټر ته اړتیا نلري] () په بشپړ ډول.%{unplugged_url}
   hoc_faq_international_q: زه په <country>کې یم. زه څنګه په نړیواله کچه ګډون کولی
     شم؟
   hoc_faq_international_a: هرڅوک کولی شي د نړۍ هرچیرې، د کوډ ساعت پیښه تنظیم کړي.
@@ -2348,8 +2396,8 @@ ps:
     برخه اخیستونکو 50٪ جوړوي**!
   stats_nina: "«هره ورځ ورته پایلې ترلاسه کړې&mdash; 100٪ ښکیلتیا.» - نینا نیکولز
     پیري، ښوونکی"
-  stats_student: '"I knew this was a <b>once-in-a-lifetime</b> chance." - Mariana
-    Alzate, 5th grader'
+  stats_student: "«زه پوهیدم چې دا د <b>ژوند په اوږدو کې یو ځل</b> چانس و.» - ماریانا
+    الزیت، د پنځم ټولګي زده کونکی"
   stats_michael: "«زه <b>هیڅکله نه لرم، کله هم</b> زما زده کونکي د زده کړې په اړه
     دومره لیواله ندي.» - مایکل کلارک، ښوونکی"
   resources_how_to: د ښوونکو لپاره لارښود څنګه
@@ -2475,10 +2523,10 @@ ps:
   learn_banner_beyond: غواړئ زده کړه وساتئ؟  <a id='learn_banner_beyond'>د یو ساعت
     څخه بهر لاړ شئ</a>
   learn_banner_beyond_markdown: غواړئ زده کړه وساتئ؟ [له یو ساعت هاخوا لاړ شئ] (%{url})
-  learn_banner_teachers: 'Teachers: <a id=''teacher_banner_host''>Host an hour</a>
-    or <a id=''teacher_banner_howto''>read the How-To Guide</a>'
-  learn_banner_teachers_markdown: 'Teachers: [Host an hour](%{host_url}) or [read
-    the How-To Guide](%{howto_url})'
+  learn_banner_teachers: 'ښوونکي: یو ساعت <a id=''teacher_banner_host''>کوربه کړئ</a>
+    یا د لارښود څرنګوالي <a id=''teacher_banner_howto''>ولولئ</a>'
+  learn_banner_teachers_markdown: 'ښوونکي: [یو ساعت کوربه کړئ] (%{host_url}) یا [د
+    لارښود څرنګوالی ولولئ] ()%{howto_url}'
   tutorial_dance2019_name: د نڅا ګوند
   tutorial_danceparty_name: د نڅا ګوند
   tutorial_chibitronics_name: 'چیبټرونیکس: روښانه کیسه'
@@ -4497,11 +4545,11 @@ ps:
   tutorial_flap_longdescription: د خپل فلاپي برډ لوبې جوړولو لپاره د ډریګ او ډراپ
     برنامې وکاروئ، او دا د مختلف لید لپاره تنظیم کړئ (فلاپي شارک، فلاپي سانټا، هرڅه).
     لوبه په یو کلیک کې خپل تلیفون ته اضافه کړئ.
-  tutorial_galaxy_longdescription: "Grab your Android smartphone and explore distant
-    galaxies! At the #GalaxyGameJam you can create your very own Android app. Design
-    it with our free Pocket Code app and become part of our mission to outer space.
-    With Pocket Code we aim to inspire kids, teenagers, and young adults to create
-    their very own games, animations, and interactive stories directly on their smartphones.
+  tutorial_galaxy_longdescription: "خپل د Android سمارټ فون ونیسئ او لرې کهکشانونه
+    وپلټئ! په #GalaxyGameJam کې تاسو کولی شئ خپل خورا خپل Android ایپ رامینځته کړئ.
+    دا زموږ د وړیا پاکټ کوډ ایپ سره ډیزاین کړئ او بیروني ځای ته زموږ د ماموریت برخه
+    شئ. د پاکټ کوډ سره موږ هدف لرو ماشومان، تنکي ځوانان او ځوان لویان وهڅول ترڅو خپلې
+    لوبې، متحرکات، او متقابل کیسې په مستقیم ډول د دوی سمارټ فونونو کې رامینځته کړي.
     \n"
   tutorial_inf_longdescription: د کیسې یا لوبې ستوري ډیزني انفینټي کرکټرونو رامینځته
     کولو لپاره د Play لابراتوار وکاروئ.
@@ -4710,13 +4758,12 @@ ps:
     شوي وسیلو ته زده کړئ، چیرې چې تاسو د خنډونو له لارې مجازی ډرونونه او روبوټونه
     حرکت کوئ. بیا تاسو چمتو یاست چې د اصلي بې پیلوټه الوتکو او روبوټونو کنټرول لپاره
     برنامې رامینځته کړئ. د آی پیډ یا Android ټابلیټ او ملاتړ شوي لوبو ته اړتیا لري.
-  tutorial_carla_longdescription: '"Programming with Carla" is a series of short activities
-    that guide students through building a simple chatbot, whilst learning about core
-    concepts like variables and conditionals. The activities have been carefully designed
-    to address common misconceptions that new programmers have about these topics
-    by offering many opportunities for practice, as well as targeted hints and feedback.
-
-    '
+  tutorial_carla_longdescription: "«د کارلا سره برنامه کول» د لنډو فعالیتونو لړۍ ده
+    چې زده کونکو ته د ساده چیټ بوټ جوړولو له لارې لارښوونه کوي، پداسې حال کې چې د
+    اصلي مفاهیمو لکه تغیراتو او شرایطو په اړه زده کړه کوي. فعالیتونه په احتیاط سره
+    ډیزاین شوي ترڅو عام غلط فهمۍ په ګوته کړي چې نوي برنامه کونکي د دې موضوعاتو په
+    اړه لري د تمرین لپاره ډیری فرصتونو وړاندیز کولو سره، او همدارنګه په نښه شوي اشارې
+    او نظریات.\n"
   tutorial_zulama_longdescription: پدې فعالیت کې به تاسو د لوبو عمل لوبې او ماسټر
     کمپیوټر ساینس مفاهیمو لکه متغیرونو او دندو له لارې د جاواسکریپټ کوډ ایډیټ کول
     زده کړئ. د موجوده لوبې کوډ کې د ریمیکس کولو او پراخولو سره په سینڈ باکس کې خپله
@@ -4755,9 +4802,9 @@ ps:
     حال کې چې د سمول شوي روبوټونو او دودیز مخلوقاتو لپاره ستاسو په سکرین کې کوچنۍ
     نړۍ رامینځته کړئ. د مخکینۍ برنامې تجربې ته اړتیا نشته. پوښښ شوي موضوعاتو کې شیان،
     میتودونه، پیرامیټونه، او ساده ګرافیک شامل دي.
-  tutorial_roboba_longdescription: "RoboBlockly is designed for beginners to learn
-    math with robots in Blockly. The Algebra 1 activities are self-guided. \nRoboBlockly
-    prepares students to be ready to program in C/C++.\n"
+  tutorial_roboba_longdescription: "RoboBlockly د پیل کونکو لپاره ډیزاین شوی ترڅو
+    په بلاکلي کې د روبوټونو سره ریاضی زده کړي. د الجبرا 1 فعالیتونه پخپله لارښود دي.
+    \nRoboBlockly زده کونکي چمتو کوي چې په C/C ++ کې برنامې ته چمتو وي.\n"
   tutorial_knodsnake_longdescription: 'په جاواسکریپټ کې د سانپ لوبې رامینځته کول زده
     کړئ! '
   tutorial_soccharater_longdescription: خپل خورا خپل پکسل کرکټر کوډ کړئ! د خپل کرکټر
@@ -4804,18 +4851,21 @@ ps:
     چیرې چې زده کونکی یوازې په څو مرحلو کې لومړني ویب پا buildه جوړوي. وروسته له هغه
     چې زده کونکي د کوډموجي فعالیت ترسره کوي زده کونکي د ریښتیني کوډ کولو مهارتونو
     سره ځي.
-  tutorial_robobii_longdescription: "RoboBlockly is designed for beginners to learn
-    coding with robots in Blockly. The coding activities are self-guided with tutorial
-    videos. \nRoboBlockly prepares students to be ready to program in C/C++.\n"
-  tutorial_robobm_longdescription: "RoboBlockly is designed for beginners to learn
-    math with robots in Blockly. The math activities are self-guided. \nRoboBlockly
-    prepares students to be ready to program in C/C++.\n"
-  tutorial_codingrobots_longdescription: "RoboBlockly is designed for beginners to
-    learn coding and math with robots. The activities are student-guided with tutorial
-    videos. \nRoboBlockly prepares students to be ready to program in C/C++.\n"
-  tutorial_robob_longdescription: "RoboBlockly is designed for beginners to learn
-    robotics with coding in Blockly. The robotics activities are self-guided with
-    tutorial videos. \nRoboBlockly prepares students to be ready to program in C/C++.\n"
+  tutorial_robobii_longdescription: "RoboBlockly د پیل کونکو لپاره ډیزاین شوی ترڅو
+    په بلاکلي کې د روبوټونو سره کوډ کولو زده کړي. د کوډینګ فعالیتونه د ټیوټوریل ویډیوګانو
+    سره پخپله لارښود دي. \nRoboBlockly زده کونکي چمتو کوي چې په C/C ++ کې برنامې ته
+    چمتو وي.\n"
+  tutorial_robobm_longdescription: "RoboBlockly د پیل کونکو لپاره ډیزاین شوی ترڅو
+    په بلاکلي کې د روبوټونو سره ریاضی زده کړي. د ریاضی فعالیتونه پخپله لارښود دي.
+    \nRoboBlockly زده کونکي چمتو کوي چې په C/C ++ کې برنامې ته چمتو وي.\n"
+  tutorial_codingrobots_longdescription: "RoboBlockly د پیل کونکو لپاره ډیزاین شوی
+    ترڅو د روبوټونو سره کوډینګ او ریاضی زده کړي. فعالیتونه د زده کونکو لارښود دي چې
+    د ټیوټوریل ویډیوګانو سره. \nRoboBlockly زده کونکي چمتو کوي چې په C/C ++ کې برنامې
+    ته چمتو وي.\n"
+  tutorial_robob_longdescription: "RoboBlockly د پیل کونکو لپاره ډیزاین شوی ترڅو په
+    بلاکلي کې د کوډ کولو سره روبوټکس زده کړي. د روبوټکس فعالیتونه د ټیوټوریل ویډیوګانو
+    سره پخپله لارښود دي. \nRoboBlockly زده کونکي چمتو کوي چې په C/C ++ کې برنامې ته
+    چمتو وي.\n"
   tutorial_coders_longdescription: "دا ګام په ګام پزل لوبه د بوټ برنامه کولو لپاره
     اسانه پیژندنه چمتو کوي. \n\nهدف د نورو لوبغاړو په وړاندې د سټارشپ ریس ګټل دي.\n\nلوبه
     د پیل کولو لپاره ساده ده او یوازې د کوډ څو کرښو ته اړتیا لري ترڅو کښتۍ شاوخوا
@@ -5005,12 +5055,13 @@ ps:
   tutorial_bbcphys_longdescription: د K-5 درجې لپاره د معیارونو پر اساس درسي پلان.
     خپل ماشومان د کمپیوټر لابراتوار ته په لاس کې د کاري پاetsو سره واخلئ، او د فزیک
     په شمول اطلاقات جوړ کړئ.
-  tutorial_bitsbox_longdescription: 'Follow the prompts to code five fun mini-apps
-    using real, typed Javascript. From blowing up pie in ''Food Fight'' to flushing
-    a notebook down a black hole in ''So Long, Homework!'', each app is designed to
-    delight kids while illustrating variables, methods, and more. These apps are also
-    completely open-ended; kids can use them as a starting point for their own app
-    creations. Beginners welcome!
+  tutorial_bitsbox_longdescription: 'د ریښتیني، ټایپ شوي جاواسکریپټ په کارولو سره
+    پنځه ساتیري مینی ایپس کوډ کولو لپاره اشارې تعقیب کړئ. په ''خواړو جنګ'' کې د پای
+    له وهلو څخه په ''دومره اوږد، کور کار! ''کې د تور سوري لاندې نوټ بوک فلش کولو پورې.
+    ، هر ایپ د ماشومانو خوښولو لپاره ډیزاین شوی پداسې حال کې چې تغیرات، میتودونه او
+    نور ډیر څه روښانه کوي. دا اطلاقات هم په بشپړ ډول خلاص پای دي؛ ماشومان کولی شي
+    دا د دوی د خپل اپلیکیشن تخلیقاتو لپاره د پیل ټکي په توګه وکاروي. پیل کونکي ښه
+    راغلاست!
 
     '
   tutorial_tlcemo_longdescription: زده کونکي د کارت څخه جوړ شوی 2D روبوټ رامینځته
@@ -5029,13 +5080,13 @@ ps:
   tutorial_grok_longdescription: 'د نړۍ له ګوټ ګوټ څخه بیرغونه رسم کولو لپاره د ډریګ
     او ډراپ بلاکونه یا د متن پراساس ژبه پایتون وکاروئ، په زړه پوري واورې ګلونه رامینځته
     کړئ، یا د «الیزا» په نوم چیټ بوټ جوړ کړئ. '
-  tutorial_ijournalist_longdescription: "This teacher facilitated lesson teaches Computer
-    Science and Language Arts.  Pupils begin to develop a journalistic style that
-    considers the interest of the reader and presentation of information for an online
-    news story.  Pupils use basic HTML and CSS to create and present an online news
-    story about a fictional school robbery.\n\nIt sets computer science within a meaningful
-    context enabling children to understand the value of computer science in other
-    subject areas. \n\n"
+  tutorial_ijournalist_longdescription: "دا ښوونکی د کمپیوټر ساینس او ژبې هنرونو ته
+    درس ورکوي. زده کونکي د ژورنالیستیکي سټایل رامینځته کول پیل کوي چې د آنلاین خبرونو
+    کیسې لپاره د لوستونکي او معلوماتو وړاندې کولو علاقه په پام کې نیسي. زده کونکي
+    د افسانوي ښوونځي غلا په اړه د آنلاین خبرونو کیسه رامینځته کولو او وړاندې کولو
+    لپاره لومړني HTML او CSS کاروي.\n\nدا د کمپیوټر ساینس په معنی شرایطو کې رامینځته
+    کوي چې ماشومانو ته وړتیا ورکوي چې په نورو موضوعاتو برخو کې د کمپیوټر ساینس ارزښت
+    درک کړي. \n\n"
   tutorial_bbcmusic_longdescription: د K-5 درجې لپاره د معیارونو پر اساس درسي پلان.
     خپل ماشومان د کمپیوټر لابراتوار ته په لاس کې د کاري پاetsو سره واخلئ، او د میوزیک
     په شمول اطلاقات رامینځته کړئ.
@@ -5176,11 +5227,10 @@ ps:
     معرفي کولو په توګه کارول کیدی شي او په ځانګړي توګه ولې ډیری وسایل د اړتیا په پرتله
     کارولو لپاره خورا سخت دي. ډیزاین توپیر رامینځته کوي او دا مهمه ده چې انٹرفیسونه
     ارزول شي ترڅو وګوري چې دوی کارول اسانه دي.
-  tutorial_imathematician_longdescription: "This teacher led activity provides the
-    opportunity for pupils to use a cross curricular approach to computer science
-    and mathematics.  \n\nPupils will create a computer program to solve a variation
-    of a famous problem in a branch of Mathematics (Game Theory), called The Prisoner's
-    Dilemma.\n"
+  tutorial_imathematician_longdescription: "د ښوونکي په مشرۍ دغه فعالیت زده کونکو
+    ته فرصت برابروي چې د کمپیوټر ساینس او ریاضي لپاره د نصاب نصاب څخه کار واخلي.  \n\nزده
+    کونکي به د کمپیوټر برنامه رامینځته کړي ترڅو د ریاضیاتو په څانګه کې د یوې مشهورې
+    ستونزې توپیر حل کړي (د لوبې تیوري)، چې د بندیانو مشکوک نومیږي.\n"
   tutorial_tlcmagic_longdescription: 'په سپړلو کې چې جادو څنګه کار کوي، تاسو د کمپیوټري
     فکر کولو په اړه زده کړه کوئ: په ځانګړي توګه د الګوریتمیک فکر کولو ته د ارزونې
     اهمیت. تاسو دواړه ازموینې او د خطر تحلیل وپلټئ. جادو چال ښیې چې څنګه د کمپیوټر
@@ -5316,11 +5366,11 @@ ps:
     اخیستو لپاره د کوډ بلاکونه وکاروئ.
   tutorial_minecraft-2016_longdescription: د ماین کرافټ لوبه جوړه کړئ. د چرګانو، پسونو،
     کریپرز، زومبي او نور ډیر څه خپلې نسخې رامینځته کړئ.
-  tutorial_thinkersmith-es_longdescription: Mediante el uso de un "Vocabulario Robot"
-    predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar
-    a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento
-    ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones
-    as&iacute; como la valiosa habilidad de depuraci&oacute;n.
+  tutorial_thinkersmith-es_longdescription: Mediante el uso de un «لغتونه روبوټ» له
+    مخکې تعریف شوي، لاس زده کونکي د دې ګیارس ډی موډو تال دی لیور او&aacute;کابو ټاریاس
+    ځانګړي پیښې په تیرو برخو کې تشریح شوي.&iacute;دا&ntilde;یوه برخه ده چې د لاس زده
+    کړې لا conexi&oacute;n entre s&iacute;mbolos y accuones لکه څنګه چې لا لا والیسا
+    د depuraci n.&iacute;&oacute;
   tutorial_pixie_longdescription: د Pixie سره د کوډ ټیوټوریل ساعت
   tutorial_play_longdescription: یوه کیسه جوړه کړئ یا د Play Lab سره لوبه وکړئ! څاروي،
     قزاقان، زومبی، نینجاس، او نور ډیر کرکټرونه حرکت وکړئ، غږونه رامینځته کړئ، نمرې
@@ -12245,12 +12295,12 @@ ps:
   tutorial_googlename _longdescription: یو نوم غوره کړئ او د کوډ په کارولو سره د کلمې
     لیکونه ژوند ته راوړو. یو مستعار نوم، د پالتو نوم، یو څاروی، سپورت، ځای یا شوق
     غوره کړئ.
-  tutorial_carnegiezillah_longdescription: Zillah City is thriving, and music is in
-    the air. Rumor has it, the famed Gargantua bot is online and sending the last
-    Toxibots to trash the city block by block…. Grab your cobot hoverboard and get
-    ready to groove, move, and finish off what you started! Players program their
-    cobot hoverbots to change lanes, avoid obstacles, and take out many Toxibots in
-    this rhythm-styled game.
+  tutorial_carnegiezillah_longdescription: د زیلا ښار وده کوي، او میوزیک په هوا کې
+    دی. افواه دا لري، مشهور ګارګانټوا بوټ آنلاین دی او د بلاک په واسطه د ښار بلاک
+    کثافاتو لپاره وروستی توکسیبوټس لیږي.…خپل کوبوټ هوربورډ ونیسئ او نالی ته چمتو اوسئ،
+    حرکت وکړئ، او هغه څه پای ته ورسیږئ چې تاسو پیل کړی! لوبغاړي خپل کوبوټ هوربوټونه
+    برنامه کوي ترڅو لینونه بدل کړي، له خنډونو څخه مخنیوی وکړي، او پدې تال سټایل شوي
+    لوبې کې ډیری توکسبوټس واخلي.
   tutorial_nasachspacejam_longdescription: یو لمریز سیسټم رامینځته کړئ چې واقعیا ډبرې
     وي! پدې ځان لارښود فعالیت کې د میوزیک، ستورپوهنې، او کوډ کولو په اړه زده کړئ (د
     کوډ کولو تجربه اړتیا نلري). د میوزیک جوړولو لپاره سیارې برنامې کړئ، خپل میوزیک
@@ -13056,6 +13106,122 @@ ps:
     د چهارشنبه له غونډو څخه خوند اخلو، زموږ PTO اخلي (د 5 اونیو مجموعه، چې پکې د کال
     په پای کې د org-پراخه 2 اونۍ دفتر تړل شامل دي)، د دوبي په جریان کې د جمعې په ورځ
     نیمه کاري ورځ د دوبي د جمعې په جریان کې، او نور سخاوت ګټې.
+  csa_ai_page_hero_title: د سافټویر انجینرۍ او کمپیوټر لید
+  csa_ai_page_hero_description: 'دا دوه فصل وروسته د AP CSA ماډل د عالي ښوونځي زده
+    کونکو ته د مسلکي سافټویر پراختیا وسیلو سره تجربه وړاندې کوي، پشمول د GitHub او
+    GitHub Copilot، او دوی ته د کمپیوټر لید برنامې رامینځته کولو لپاره د ریښتیني نړۍ
+    مهارتونو سره وړاندې کوي. '
+  csa_ai_page_video_section_title: د Code.org پروګرام کولو چاپیریال نړۍ څخه بهر ګام
+  csa_ai_page_video_section_li_1: د AI او د هغې غوښتنلیکونو په اړه زده کړه
+  csa_ai_page_video_section_li_2: د مسلکي سافټویر پراختیا وسیلو سره د لاسونو تجربه
+  csa_ai_page_video_section_li_3: د صنعت معیاري تمرینونه زده کړئ
+  csa_ai_page_video_section_li_4: انتقادي فکر کول
+  csa_ai_page_programming_tools: 'د پروګرام کولو وسیلې: ګیټاب، ګیتاب کاپیلټ، VScode،
+    ټینسرفلو '
+  csa_ai_page_professional_learning: هیڅ نه
+  csa_ai_page_curriculum_topics: 'مقالې: پروګرامونې, ډاټا, هنر او ډیزاین, لوبې او
+    حرکت'
+  csa_ai_page_curriculum_accessibility_features: د جزیاتو لپاره د FAQ برخه وګورئ
+  csa_ai_page_curriculum_languages_support: پښتو
+  csa_ai_page_article_title_1: د کاپیلټ سره جوړ کړئ
+  csa_ai_page_article_description_1: زده کونکي زده کوي چې څنګه د GitHub Copilot د
+    جوړه برنامې په توګه وکاروي ترڅو موجوده کوډ تشریح کړي، غلطۍ ومومي او حل کړي، او
+    نوي ستونزو ته حلونه رامینځته کړي.
+  csa_ai_page_article_link_1: د کاپیلټ په اړه نور معلومات زده کړئ
+  csa_ai_page_article_title_2: خپل د AI ماډل جوړ کړئ
+  csa_ai_page_article_description_2: زده کونکي د ښوونې وړ ماشین په کارولو سره خپل
+    د AI ماډلونه وروزي ترڅو عکسونه وپیژني او اشارې ویب کیم رامینځته کړي او په پام
+    کې ونیسي چې څنګه د کمپیوټر لید د کاروونکو سره د غوښتنلیکونو سره تعامل اغیزه کوي.
+  csa_ai_page_article_link_2: د لوست پلان وپلټئ
+  csa_ai_page_article_title_3: د کمپیوټر لید وپلټئ
+  csa_ai_page_article_description_3: زده کونکي د AI ماډلونه پلي کوي چې دوی د ښوونې
+    وړ ماشین سره رامینځته کړي په جاوا ایپ کې، د GitHub Copilot په کارولو سره د دوی
+    سره د مختلف معلوماتو سره کار کولو لپاره د ایپس موجوده نسخو ترمیم کولو کې مرسته
+    کوي.
+  csa_ai_page_article_link_3: یو مثال وګورئ
+  csa_ai_page_learn_more_section_title: د مصنوعي استخباراتو په اړه نور معلومات زده
+    کړئ
+  csa_ai_page_learn_more_title: د ښوونکو لپاره AI 101 وپلټئ
+  csa_ai_page_learn_more_description: د ښوونکو لپاره زموږ د آنلاین زده کړې جامع لړۍ
+    سره د مصنوعي استخباراتو (AI) او په تعلیم کې د دې بدلون وړ ظرفیت کشف کړئ.
+  csa_ai_page_learn_more_link: د ښوونکو لړۍ لپاره AI 101 وګورئ
+  csa_ai_page_faq_question_01: د دې ماډل لپاره شرایط کوم دي؟
+  csa_ai_page_faq_answer_01_01: 'مخکې لدې چې دې ماډل ته ډوب شئ، زده کونکي باید د جاوا
+    د ننوتلو کچې پوهه ولري. په ځانګړي توګه، دوی باید پدې اړه پوه شي:'
+  csa_ai_page_faq_answer_01_list_01: "** ټولګي او توکي: ** زده کونکي باید د ټولګیو
+    تعریف کولو او کارولو، او همدارنګه د شیانو رامینځته کولو او مینځلو سره اشنا وي."
+  csa_ai_page_faq_answer_01_list_02: "** د لیکلو او زنګ وهلو میتودونه: ** زده کونکي
+    باید د دې وړتیا ولري چې په ټولګي کې میتودونه تعریف کړي، د میتود پیرامیټرې او بیرته
+    راستنیدو ډولونه وپیژني، او له شیانو یا نورو میتودونو څخه میتودونه زنګ ووهي."
+  csa_ai_page_faq_answer_01_list_03: "** 1D اریزونه او ارای لیستونه: ** دوی باید د
+    یو اړخیز سریز او ARRAYLسټونو په اعلان کولو، پیل کولو، او سمبالولو کې ماهر وي،
+    پشمول د دوی له لارې تکرار کول."
+  csa_ai_page_faq_answer_01_list_04: "** انتخاب او تکرار: ** په مشروط بیانونو او لوپونو
+    کې قوي بنسټ خورا مهم دی."
+  csa_ai_page_faq_question_01_02: په عین حال کې، هغه زده کونکي چې د AP کمپیوټر ساینس
+    A بشپړ کړي یا د ورته ژورې او سختۍ کورس به د دې ماډل لپاره ښه چمتو وي.
+  csa_ai_page_faq_question_02: زه څنګه کولی شم د دې ماډل لپاره اړین سافټویر نصب کړم؟
+  csa_ai_page_faq_answer_02_01: دا ماډل ځانګړی دی ځکه چې پدې کې د Code.org لابراتوارونو
+    او وسیلو پرځای د دریمې ډلې سافټویر کارول شامل دي. [دلته د سافټویر نصبولو په اړه
+    نور ولولئ] (%{accessibility_url}).
+  csa_ai_page_faq_question_03: زه څنګه کولی شم د دې ماډل درس ورکولو پرمهال د لاسرسي
+    اړتیاو ملاتړ وکړم؟
+  csa_ai_page_faq_answer_03_01: د لاسرسي اړتیاو ته رسیدل د ټول شموله زده کړې چاپیریال
+    لپاره خورا مهم دي. [پدې ماډل کې کارول شوي سافټویر کې د لاسرسي ب featuresو په اړه
+    نور ولولئ دلته] (%{install_url}).
+  csa_ai_page_faq_question_04: زه څنګه په کروم بوکس کې د VS کوډ کارولی شم؟
+  csa_ai_page_faq_answer_04: په کروم بوک کې د VS کوډ کارول خورا مستقیم شوي، په ځانګړي
+    توګه په نوي کروم بوک ماډلونو کې د لینکس ایپس چلولو وړتیا سره. [په کروم بوکونو
+    کې د VS کوډ تنظیم کولو په اړه نور ولولئ دلته] (%{chromebook_url}).
+  csa_ai_page_faq_question_05: زه څنګه کولی شم د دې ماډل لپاره مسلکي پرمختګ ترلاسه
+    کړم؟
+  csa_ai_page_faq_answer_05: اوس مهال د دې کورس لپاره ځانګړي مسلکي پرمختګ شتون نلري.
+    که تاسو د پوهیدو په لټه کې یاست چې څنګه په خپل ټولګي کې مصنوعي استخباراتو ته نږدې
+    شئ تاسو کولی شئ [د ښوونکو لپاره AI 101 وپلټئ] (%{ai_101_url}).
+  csa_ai_page_faq_question_06: د دې ماډل ښوونې لپاره وړاندیز شوی وخت څه شی دی؟
+  csa_ai_page_faq_answer_06_01: د سافټویر انجینرۍ او کمپیوټر لید ماډل په فکري ډول
+    تنظیم شوی ترڅو په لنډ وخت کې جامع زده کړې چمتو کړي. بشپړ ماډل د 2 اونیو لارښود**
+    دورې لپاره ډیزاین شوی. ډیری درسونه د ** 45 دقیقو لپاره** لپاره چمتو شوي، پداسې
+    حال کې چې درسونه چیرې چې زده کونکي د جاوا پروژې پراختیا ته په لاس ورکوي د ** 90
+    دقیقو لپاره** لپاره ډیزاین شوي. دا اوږد شوی وخت ډاډ ورکوي چې زده کونکي د کار کولو
+    په وخت کې د پوهیدو، پلي کولو، او ستونزې حل کولو لپاره کافي فرصت لري.
+  csa_ai_page_faq_answer_06_02: د ماډل جوړښت کې ارادي انعطاف هم شتون لري. د ټولګي
+    متحرکاتو، د زده کونکو ښکیلتیا، او ژورتیا پورې اړه لري چې تاسو یې غواړئ هره موضوع
+    وپلټئ، تاسو کولی شئ موده تنظیم کړئ. د مثال په توګه، د کاپیلوټ لوست ته تعارف، د
+    45 دقیقې درس په توګه ډیزاین شوی، د 90 دقیقو ته پراختیا کیدی شي که تاسو غواړئ ژور
+    ژور ډوب شئ چې څومره د ژبې ماډلونه او اوزار لکه GitHub Copilot او ChatGPT کار کوي.
+  csa_ai_page_faq_question_07: How can I access answer keys?
+  csa_ai_page_faq_answer_07: د منل شوي ښوونکي حساب سره، تاسو کولی شئ په نیلي کې د
+    ځواب کیلي ومومئ «ښوونکي» یوازې پینل چې په آنلاین درسونو او فعالیتونو کې ښیې. که
+    تاسو د ښوونکي منل شوي حساب ته اړتیا لرئ، نو تاسو کولی شئ د [دې فارم] () له لارې
+    خوندي شوي ښوونکي یوازې موادو (د ځواب کیلي، او نور) ته د لاسرسي لپاره غوښتنه وکړئ.%{form_url}مهرباني
+    وکړئ په یاد ولرئ چې دا ممکن ستاسو حساب تصدیق کولو لپاره 3-5 کاري ورځې وخت ونیسي.
+  csa_ai_page_faq_question_08: ایا دا ماډل معیارونو ته نقشه شوی؟
+  csa_ai_page_faq_answer_08: هو، د سافټویر انجینرۍ او کمپیوټر لید نصاب د [CSTA K-12
+    معیارونو] (%{csta_k12_url}) او AI لپاره د [K-12 لارښوونو] () لپاره نقشه شوی.%{k12_url}
+  csa_ai_page_faq_question_09: د دې ماډل ښوونې لپاره څومره لګښت راځي؟
+  csa_ai_page_faq_answer_09_01: زموږ نصاب او پلیټ فارم د هرچا لپاره، هرچیرې، د ښوونې
+    لپاره په [هیڅ لګښت] (%{no_cost_url}) کې شتون لري!
+  csa_ai_page_faq_answer_09_02: سربیره پردې، پدې ماډل کې کارول شوي سافټویر او وسیلې
+    وړیا دي. د ګیټ هب کاپیلټ د تایید شوي [teachers](%{teachers_url}) او () لپاره وړیا
+    دی. [students]%{students_url}
+  csa_ai_page_faq_question_10: زه څه وکړم که د سافټویر نصب کول کار ونکړي؟
+  csa_ai_page_faq_answer_10: د سافټویر نصبولو پرمهال د مسلو سره مخ کیدل عام کیدی شي،
+    مګر سیستماتیک ګامونه شتون لري چې تاسو یې د ستونزې حل کولو او حل کولو لپاره تعقیب
+    کولی شئ. [دلته د ستونزو حل کولو ځینې لارښوونې چیک کړئ] (%{troubleshooting_url}).
+  csa_ai_page_faq_question_11: How was the curriculum developed?
+  csa_ai_page_faq_answer_11_01: 'زموږ د سافټویر انجینرۍ او کمپیوټر لید نصاب زموږ د
+    نصاب ارزښتونو په ذهن کې ډیزاین شوی و. لاندې اهدافو د دې نصاب رامینځته کولو ته
+    لارښوونه کړې:'
+  csa_ai_page_faq_answer_11_list_01: "** هدف 1: ** د کوډ تولید، ډیبګ کولو، او ایډیټ
+    کولو لپاره د AI وسیلې وکاروئ."
+  csa_ai_page_faq_answer_11_list_02: "** هدف 2: ** د جاوا لیب څخه د ریښتینې نړۍ وسیلو
+    ته لیږدول."
+  csa_ai_page_faq_answer_11_list_03: "** هدف 3: ** پدې اړه پوهه ژوره کړئ چې څنګه د
+    AI ماډلونه روزل شوي او په برنامو کې مدغم کیږي."
+  csa_ai_page_faq_answer_11_02: د هغو ارزښتونو په اړه د نورو معلوماتو لپاره چې زموږ
+    د کار لارښوونه کړې، مهرباني وکړئ زموږ [نصاب ارزښتونه] (%{curriculum_values_url})
+    وګورئ.
   language_code:
     ar: عربي
     az: ا‌ذربايجانی

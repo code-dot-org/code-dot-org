@@ -5,7 +5,7 @@ ro:
   language: Română
   front_title: Alăturaţi-vă celui mai mare eveniment educational din istorie, %{campaign_date}
   coming_soon: În curând
-  campaign_date_start_short: 5 decembrie
+  campaign_date_start_short: 6 decembrie
   campaign_date_start_long: 5 decembrie
   campaign_date_short: 5-11 dec.
   campaign_date_full: 5-11 decembrie
@@ -196,6 +196,15 @@ ro:
   grade_level_label_elementary: Școala elementară
   grade_level_label_middle: Școala Gimnazială
   grade_level_label_high: Liceu
+  curricula_title_elementary: Curricula școlii elementare
+  curricula_desc_elementary: Răsfoiți cursurile și activitățile distractive, gratuite,
+    care vă invită să explorați informatica cu elevii dvs. de școală elementară.
+  curricula_title_middle: Curricula de gimnaziu
+  curricula_desc_middle: Răsfoiți ofertele captivante care vă permit dvs. și elevilor
+    dvs. de gimnaziu să explorați împreună informatica.
+  curricula_title_high: Curricula liceului
+  curricula_desc_high: Răsfoiți cursurile și activitățile convingătoare care vă invită
+    pe dvs. și pe elevii dvs. de liceu să săpați mai adânc în informatică.
   students_label: Participanți
   teachers_label: Profesori
   teacher_label_csf: Profesor de Noțiuni de Bază în Informatică
@@ -222,6 +231,13 @@ ro:
   call_to_action_explore_choice_level: Explorați nivelul de alegere a exemplului
   call_to_action_explore_collection: Explorați colecția
   call_to_action_explore_unplugged_lesson: Explorați lecțiile deconectate
+  call_to_action_explore_csf: Explorați fundamentele CS
+  call_to_action_explore_csd: Explorați descoperirile CS
+  call_to_action_explore_csp: Explorați principiile CS
+  call_to_action_explore_csc: Explorați conexiunile CS
+  call_to_action_explore_csa: Explorați AP® Informatică A
+  call_to_action_explore_maker: Explorați curricula Maker
+  call_to_action_explore_hoc: Explorați tutorialele Hour of Code
   call_to_action_try_app_lab: Încercați App Lab
   call_to_action_view_lesson_plan: Vizualizați planul lecției
   call_to_action_self_paced_pl: Începeți învățarea profesională în ritm propriu
@@ -267,6 +283,7 @@ ro:
   call_to_action_notify_available: Anunță-mă când este disponibil
   call_to_action_register_early_access: Înregistrați-vă pentru acces anticipat
   call_to_action_open_positions: Vizualizați pozițiile deschise
+  call_to_action_get_guide: Obțineți ghidul
   aria_label_call_to_action_afe: Aflați mai multe despre Amazon Future Engineer
   aria_label_call_to_action_teaching_csf: Începeți programul de învățare profesională
     Predarea informaticii Fundamentals
@@ -378,6 +395,8 @@ ro:
   curriculum_name_csa: Informatică A
   curriculum_name_csc_02: Orice Modul de Conexiuni de Informatică
   curriculum_name_ai: IA și Învățarea Automată
+  curriculum_name_artificial_intelligence: Inteligență artificială (AI)
+  curriculum_name_maker: Producător
   curriculum_name_maker_cp: Crearea de aplicații cu dispozitive (Circuit Playground)
   curriculum_name_maker_microbit: Crearea de aplicații cu dispozitive (micro:bit)
   curriculum_name_creating_apps_with_devices: Crearea de Aplicații cu ajutorul Dispozitivelor
@@ -439,6 +458,12 @@ ro:
   curriculum_desc_creating_apps_with_devices: Explorați rolul dispozitivelor fizice
     în calcul. Dezvoltați programe care utilizează intrări și ieșiri hardware. Există
     o versiune a acestei unități atât pentru micro:bit, cât și pentru Circuit Playground.
+  curriculum_desc_csa: Prezentați studenților inginerie software și design orientat
+    pe obiecte în timp ce învață limbajul de programare Java în acest curriculum gratuit
+    pentru AP® Computer Science A (AP® CSA).
+  curriculum_desc_maker: Educația Maker duce STEM (Știință, Tehnologie, Inginerie,
+    Matematică) cu un pas mai departe, invitând experiența practică și colaborarea
+    în clasă pentru a ajuta la predarea rezolvării problemelor și a gândirii critice.
   collection_hardware: Concentrați-vă pe Hardware
   collection_hardware_desc: Dă posibilitatea elevilor să utilizeze date și dispozitive
     fizice pentru a rezolva probleme.
@@ -472,6 +497,7 @@ ro:
   module_label_professional_learning: 'Învățare Profesională:'
   module_label_languages: 'Limbi Scceptate:'
   module_label_accessibility_features: 'Accesibilitate:'
+  module_label_accessibility_features_full: 'Caracteristici de accesibilitate:'
   module_label_educator_tool: Instrument pentru educatori
   module_label_educator_course: Curs pentru educatori
   module_label_student_tool: Instrument pentru elevi
@@ -479,6 +505,7 @@ ro:
   module_label_student_content_resources: Conținut & resurse
   module_label_new: Nou
   module_label_coming_soon: În curând
+  module_label_available_now: Disponibil acum
   module_label_video_series: Serii video
   module_label_self_paced: Modul auto-ritmat
   module_ages_5_10: 5-10
@@ -489,6 +516,8 @@ ro:
   module_grade_2_5: 2-5
   module_grade_3_5: 3-5
   module_grade_3_8: 3-8
+  module_grade_k_12: K-12
+  module_grade_3_12: 3-12
   module_grade_6_12: 6-12
   module_grade_6_10: 6-10
   module_grade_9_12: 9-12
@@ -503,7 +532,9 @@ ro:
   module_grade_9_12_teachers: Profesori 9-12
   module_level_beginner: Începător
   module_level_intermediate: Intermediar
+  module_level_advanced: Avansat
   module_duration_45_mins: 45 minute
+  module_duration_2_weeks: 2 săptămâni
   module_duration_1_hr: 1 oră
   module_duration_2_hrs: 2 ore
   module_duration_3_hrs: 3 ore
@@ -586,6 +617,8 @@ ro:
   heading_java_lab: Laboratorul Java
   heading_objects_first: Obiectele mai întâi
   heading_these_lessons_will: 'Aceste lecții vor:'
+  heading_explore_curriculum_catalog: Explorați toate cursurile noastre în Catalogul
+    Curriculum
   professional_learning_section_desc: Obțineți sprijinul de care aveți nevoie în timp
     ce vă pregătiți să predați. Profesorii o adoră, peste 90% dintre ei considerând-o
     cea mai bună dezvoltare profesională!
@@ -854,6 +887,11 @@ ro:
     (cum ar fi ChatGPT) și AI generativă. Ascultați cum funcționează aceste noi tehnologii
     direct de la experți: Mira Murati, CTO al OpenAI și Cristóbal Valenzuela, CEO
     al RunwayML.'
+  ai_pl_101_llm_slides_title: Prompturi de model lingvistic mare pentru educatori
+  ai_pl_101_llm_slides_desc: Instrumente pentru a obține cea mai bună ieșire posibilă
+    de la LLM-uri precum ChatGPT, de la începători la avansați. Include solicitări
+    de pornire pentru cei care doar își scufundă degetele de la picioare, precum și
+    instrumente avansate pentru cei care doresc să-și maximizeze potențialul.
   how_ai_works_hero_heading: Cum funcționează AI
   how_ai_works_hero_desc: Scufundați-vă în lumea AI cu „How AI Works”, seria noastră
     video și lecțiile însoțitoare!
@@ -1424,80 +1462,76 @@ ro:
     pentru clasa dvs..
   csd_page_courses_collections_desc: Aprofundați o zonă cu un set de unități axate
     pe un anumit subiect.
-  csd_page_faq_question_01: Este cursul Descoperiri în Informatică corelat cu standardele?
-  csd_page_faq_answer_01: Descoperiri în Informatică a fost scris folosind ca îndrumare
-    atât Cadrul pentru Informatică K-12, cât și standardele CSTA 2017. În prezent,
-    fiecare lecție a cursului Descoperiri în Informatică conține corespondențe cu
-    standardele CSTA 2017 relevante. [Un rezumat al corespondențelor cu standardele
-    poate fi găsit aici](%{mappings_url}). O versiune Google Sheets a standardelor
-    poate fi găsită la [CSD Standards](%{csd_standards_url}).
-  csd_page_faq_question_02: Cum /Unde pot obține dezvoltare profesională pentru acest
-    curs?
-  csd_page_faq_answer_02: Programul nostru de Învățare Profesională oferă sprijin
-    pe tot parcursul anului. Programul începe cu un atelier de vară de cinci zile,
-    unde veți avea ocazia să lucrați practic cu programa și să întâlniți alți profesori
-    din zona dvs. Pe tot parcursul anului, oferim ateliere de urmărire și sprijin
-    pe forum. Nu aveți nevoie de nicio experiență prealabilă în informatică pentru
-    a începe. Și profesorilor le place! 90% dintre aceștia o clasează ca fiind cea
-    mai bună dezvoltare profesională din toate timpurile. [Faceți clic aici pentru
-    a aplica și a afla mai multe] (%{apply_url}).
-  csd_page_faq_question_03: Predau Descoperiri în Informatică, dar am mai puțin de
-    un semestru cu elevii mei. Ce ați recomanda?
-  csd_page_faq_answer_03_01: Profesorii care au un program restrâns, incapabili să
-    predea toate unitățile Descoperiri în Informatică pe parcursul unui an școlar,
-    pot acum să atribuie cu ușurință un set specific de unități din cursul Descoperiri
-    în Informatică pe baza celor pe care doresc să se concentreze. Aceste colecții
-    sunt în continuare aceleași unități exacte găsite în cursul Descoperiri în Informatică,
-    pur și simplu grupate pe baza recomandărilor noastre de mai jos pentru a aprofunda
-    o zonă specifică din cursul Descoperiri în Informatică. Fiecare colecție durează
-    aproximativ sau mai puțin de un semestru. [Faceți clic aici pentru a vedea opțiunile
-    noastre de colecții] (%{collections_url}).
-  csd_page_faq_answer_03_02: Pentru profesorii care au un program și mai restrâns,
-    aceștia au capacitatea de a atribui o singură unitate la un moment dat din cursul
-    Descoperiri în Informatică fără a atribui întregul curs. Sperăm că acest lucru
-    ajută la sprijinirea claselor unde se predau unități din cursul Descoperiri în
-    Informatică, încorporate ca parte a cursurilor mai mari sau când se predă informatica
-    într-un program limitat. [Click aici pentru a vedea unitățile noastre flexibile]
-    (%).
-  csd_page_faq_question_04: Ce materiale și consumabile sunt necesare pentru cursul
-    Descoperiri în Informatică?
-  csd_page_faq_answer_04_01: Un cost potențial de luat în considerare la predarea
-    acestui curs este tipărirea. Multe lecții au fișe care sunt concepute pentru a
-    ghida elevii prin activități. Deși nu este necesar ca toate aceste fișe să fie
-    tipărite, multe au fost concepute pentru a fi tipărite și recomandăm cu tărie
-    imprimarea atunci când este posibil.
-  csd_page_faq_answer_04_02: 'Dincolo de tipărire, unele lecții necesită rechizite
-    și  materiale de manipulare tipice pentru clasă, precum: jurnale studențești,
-    hârtie poster, markeri/creioane colorate, foarfece, resturi de hârtie, lipici
-    sau bandă, note post-it sau cărți index (sau hârtie de dimensiuni similare) și
-    rigle sau un fel de margine.'
-  csd_page_faq_answer_04_03: 'În plus față de aceste materiale generale de curs, următoarele
-    elemente sunt solicitate în unitățile specifice:'
-  csd_page_faq_answer_04_04: Rezolvarea Problemelor și Calculul
-  csd_page_faq_answer_04_05: Folie de aluminiu, recipient pentru apă, bănuți (rețineți
-    că bănuții pot fi înlocuiți cu un alt tip de greutate de aceeași dimensiune).
-    Sunt disponibile activități alternative dacă nu aveți acces la aceste consumabile.
+  csd_page_faq_question_01: CS Discoveries respectă standardele?
+  csd_page_faq_answer_01: 'Proiectul "CS Discoveries" a fost elaborat având ca referințe
+    atât Cadrul K-12 pentru Informatică, cât și standardele CSTA din 2017. În momentul
+    de față, fiecare lecție din "CS Discoveries" se aliniază standardelor CSTA relevante
+    din 2017. [Aici puteți găsi un rezumat al alinierilor la standarde](%{mappings_url}).
+    De asemenea, o versiune Google Sheets cu standardele poate fi accesată aici: [CSD
+    Standards](%{csd_standards_url}).'
+  csd_page_faq_question_02: Cum/Unde pot găsi oportunități de dezvoltare profesională
+    pentru acest curs?
+  csd_page_faq_answer_02: Programul nostru de Formare Profesională oferă sprijin continuu.
+    Totul începe cu un atelier estival de cinci zile, unde aveți șansa să experimentați
+    direct cu curriculumul și să cunoașteți alți dascăli din regiunea dumneavoastră.
+    De-a lungul anului, organizăm ateliere suplimentare și oferim suport prin intermediul
+    forumurilor. Nu este necesară experiență anterioară în domeniul informaticii pentru
+    a începe. Și ce e mai frumos, profesorilor le place enorm! 90% îl consideră cel
+    mai bun program de dezvoltare profesională la care au participat. [Aplicați și
+    aflați mai multe aici] (%{apply_url}).
+  csd_page_faq_question_03: Predau CS Discoveries, dar dispun de mai puțin de un semestru
+    cu elevii mei. Ce îmi recomandați?
+  csd_page_faq_answer_03_01: Profesorii care au un program restrâns și nu pot acoperi
+    toate unitățile "CS Discoveries" într-un an școlar, au acum posibilitatea de a
+    selecta anumite module bazate pe ariile pe care doresc să le accentueze. Aceste
+    pachete sunt compuse din aceleași module pe care le găsiți în "CS Discoveries",
+    doar că sunt grupate conform recomandărilor noastre pentru a pune accentul mai
+    bine pe anumite aspecte ale cursului. Fiecare pachet este conceput să dureze aproximativ
+    un semestru sau puțin mai puțin. [Vedeți opțiunile pentru pachete aici] (%{collections_url}).
+  csd_page_faq_answer_03_02: Pentru cei cu un orar și mai restrâns, există opțiunea
+    de a atribui doar o unitate la un moment dat din "CS Discoveries", fără a fi nevoie
+    să atribuie întregul curs. Sperăm că aceasta va facilita adaptarea în clasele
+    care integrează unitățile "CS Discoveries" în cadrul unor cursuri mai ample sau
+    când timpul alocat informaticii este limitat.  [Descoperiți modulele noastre flexibile
+    aici] (%).
+  csd_page_faq_question_04: Ce materiale și resurse sunt necesare pentru CS Discoveries?
+  csd_page_faq_answer_04_01: Un aspect financiar de considerat în predarea acestui
+    curs este costul printării. Multe lecții includ materiale de lucru care ajută
+    elevii să navigheze prin activități. Deși nu este obligatoriu să tipăriți toate
+    aceste materiale, multe dintre ele au fost concepute pentru a fi tipărite, iar
+    noi recomandăm tipărirea atunci când este posibil.
+  csd_page_faq_answer_04_02: 'Pe lângă printare, unele lecții necesită materiale uzuale,
+    cum ar fi: caiete pentru elevi, hârtie poster, markere/creioane colorate, foarfece,
+    hârtie pentru schițe, lipici sau bandă adezivă, bilețele adezive sau carduri index
+    (sau bucăți mici de hârtie), și rigle sau un alt instrument pentru trasarea liniilor
+    drepte.'
+  csd_page_faq_answer_04_03: 'În plus față de aceste materiale generale pentru curs,
+    următoarele articole sunt necesare în anumite module:'
+  csd_page_faq_answer_04_04: Rezolvarea Problemelor și Calculul Informatic
+  csd_page_faq_answer_04_05: Folie de aluminiu, recipient pentru apă, monede (acestea
+    pot fi înlocuite cu alte obiecte de aceeași greutate și dimensiune). Există activități
+    alternative disponibile dacă nu aveți acces la aceste materiale.
   csd_page_faq_answer_04_06: Crearea Aplicațiilor cu ajutorul Dispozitivelor (opțiunea
     A și opțiunea B)
-  csd_page_faq_answer_04_07: 'Opțiunea A: Set de Locuri de Joacă în Circuit în clasă.
+  csd_page_faq_answer_04_07: 'Opțiunea A: Set de "Circuit Playgrounds" pentru clasă.
     Consultați [code.org/maker/circuitplayground](%{url}) pentru mai multe detalii.'
   csd_page_faq_answer_04_08: 'Opțiunea B: Set de dispozitive micro:bit pentru clasă.
     Consultați [code.org/maker/microbit](%{url}) pentru mai multe detalii.'
-  csd_page_faq_answer_04_09: Consumabile pentru Executant, cum ar fi cutii goale de
-    șervețele sau role de carton sau maculatură
-  csd_page_faq_answer_04_10: "*Notă: Unitatea Crearea se Aplicații cu ajutorul Dispozitivelor
-    are două opțiuni de implementare - una pentru cei care folosesc locuri de joacă
-    de circuit și una pentru cei care folosesc micro:bit. Profesorii nu ar trebui
-    să cumpere ambele seturi de dispozitive sau să predea ambele opțiuni de unitate,
-    deoarece sunt echivalente și acoperă același conținut."
-  csd_page_faq_question_06: Cum se potrivește cursul Descoperiri în Informatică cu
-    celelalte cursuri Code.org?
-  csd_page_faq_answer_06_01: Cursul Descoperiri în Informatică este conceput pentru
-    a se potrivi în mod natural între cursurile noastre [CS Fundamentals] (%{csf_url})
-    și cursul nostru [Principiile Informaticii] (%{csp_url}). În timp ce fiecare dintre
-    aceste cursuri este conceput pentru a fi un punct de intrare în informatică adecvat
-    vârstei, elevii cu experiență anterioară vor găsi multe subiecte noi de explorat
-    și vor revizui subiecte familiare în contexte noi și mai provocatoare.
+  csd_page_faq_answer_04_09: Materiale pentru bricolaj, cum ar fi cutii goale de șervețele,
+    tuburi de carton sau hârtie de schiță.
+  csd_page_faq_answer_04_10: '*Atenție: Modulul "Crearea Aplicațiilor cu Dispozitive"
+    oferă două opțiuni de implementare - una pentru cei care folosesc "Circuit Playgrounds"
+    și una pentru cei care folosesc micro:bit. Profesorii nu ar trebui să achiziționeze
+    ambele seturi de dispozitive sau să predea ambele opțiuni ale unității, deoarece
+    acestea sunt echivalente și acoperă același conținut.'
+  csd_page_faq_question_06: Cum se încadrează CS Discoveries în celelalte cursuri
+    oferite de Code.org?
+  csd_page_faq_answer_06_01: 'CS Discoveries este conceput să se încadreze natural
+    între cursurile noastre: [CS - Noțiuni de bază] (%{csf_url}) și [CS - Principii
+    de programare] (%{csp_url}). Deși fiecare dintre aceste cursuri este proiectat
+    să fie un punct de intrare adecvat vârstei în domeniul informaticii, studenții
+    cu experiență anterioară vor găsi multe subiecte noi de explorat, iar subiectele
+    cunoscute le vor redescoperi în contexte noi și mai provocatoare.'
   csc_page_top_desc: Faceți conexiuni între informatică (CS) și alte materii precum
     matematica, artele limbajului, știința și studiile sociale.
   csc_page_intro_heading: Predați CS în timp ce acoperiți standardele de bază ale
@@ -1522,31 +1556,31 @@ ro:
   csc_page_find_a_module_desc: Ofertele noastre actuale de Conexiuni în Informatică
     sunt destinate claselor a III-a până la a V-a și sunt concepute pentru a lua o
     săptămână de lecții de 45 de minute în fiecare zi.
-  csc_page_faq_question_01: Corespund Conexiunile în Informatică standardelor?
-  csc_page_faq_answer_01: Da! Conexiunile în Informatică corespund Standardelor Comune
-    Principale de Stat (CCSS) pentru ELA și Matematică, Standardele Științifice de
-    Generație Următoarea (NGSS) și Standardele Asociației Profesorilor de Informatică
+  csc_page_faq_question_01: CS Connections este aliniat la standarde?
+  csc_page_faq_answer_01: Da! CS Connections este aliniat cu Standardele Comune de
+    Stat (CCSS) pentru Limba Engleză și Matematică, cu Standardele Științifice ale
+    Următoarei Generații (NGSS) și cu Standardele Asociației Profesorilor de Informatică
     (CSTA).
-  csc_page_faq_question_02: Cât costă să predai Conexiuni în Informatică?
+  csc_page_faq_question_02: Cât costă predarea cursului CS Connections?
   csc_page_faq_answer_02: Our curriculum and platform are available at [no cost](%{cost_url})
     for anyone, anywhere, to teach!
-  csc_page_faq_question_03: Cum /Unde pot obține dezvoltare profesională pentru Conexiuni
-    în Informatică?
-  csc_page_faq_answer_03: Oferim dezvoltare profesională în ritm propriu pentru Conexiuni
-    în Informatică. Prin citirea, vizualizarea videoclipurilor, completarea puzzle-urilor
-    interactive și reflectarea asupra învățării dvs., vă veți dezvolta propria înțelegere
-    în timp ce vă pregătiți să predați în clasă oricare dintre modulele Conexiunilor
-    în Informatică. [Începeți aici] (%{get_started_url}).
-  csc_page_faq_answer_03_coming_soon: Învățarea profesională pentru Conexiuni în Informatică
-    se lansează în curând!
-  csc_page_faq_question_04: Care este momentul recomandat pentru predarea Conexiunilor
-    în Informatică?
+  csc_page_faq_question_03: Cum/Unde pot obține dezvoltare profesională pentru CS
+    Connections?
+  csc_page_faq_answer_03: Oferim programe de dezvoltare profesională care pot fi parcurse
+    în ritmul fiecăruia pentru CS Connections. Prin intermediul lecturii, vizionării
+    de videoclipuri, rezolvării de puzzle-uri interactive și reflectând asupra cunoștințelor
+    acumulate, vei putea să îți consolidezi înțelegerea în timp ce te pregătești să
+    introduci în sala de clasă oricare dintre modulele CS Connections. [Pornește de
+    aici] (%{get_started_url}).
+  csc_page_faq_answer_03_coming_soon: Formarea profesională pentru CS Connections
+    va fi disponibilă în curând!
+  csc_page_faq_question_04: Care este perioada recomandată pentru predarea CS Connections?
   csc_page_faq_answer_04: Fiecare modul Conexiuni în Informatică este proiectat să
     dureze o săptămână.
-  csc_page_faq_question_05: De ce materiale am nevoie pentru Conexiuni în Informatică?
-  csc_page_faq_answer_05: În mod ideal, fiecare elev va avea propriul computer, iar
-    profesorii vor avea un proiector pentru a afișa prezentarea de diapozitive care
-    corespunde fiecărei lecții.
+  csc_page_faq_question_05: Ce materiale sunt necesare pentru CS Connections?
+  csc_page_faq_answer_05: Ideal ar fi ca fiecare student să dispună de un computer
+    individual, iar profesorii să aibă la îndemână un proiector pentru a reda prezentarea
+    asociată fiecărei lecții.
   csf_page_top_desc: Set gratuit de programe școlare pentru învățământul elementar
     care îi introduce pe elevi în conceptele fundamentale ale informaticii și îi provoacă
     să exploreze modul în care informatica și tehnologia pot avea un impact asupra
@@ -1589,12 +1623,11 @@ ro:
     în ritm propriu alături de cursurile A-F. Aceste cursuri exprese sunt concepute
     pentru situațiile în care profesorii permit fiecărui elev să lucreze în propriul
     ritm independent.
-  csf_page_faq_question_01: Este cursul Noțiuni de Bază în Informatică conform standardelor?
-  csf_page_faq_answer_01_01: 'Cursul Noțiuni de Bază în Informatică a fost scris folosind,
-    ca îndrumare, atât Cadrul K-12 pentru Informatică, cât și standardele CSTA. În
-    prezent, fiecare lecție a Noțiuni de bază în Informatică conține corespondențe
-    cu standardele CSTA relevante. Rezumatul tuturor corespondențelor CSTA pentru
-    fiecare curs poate fi găsit la:'
+  csf_page_faq_question_01: Cursul "CS - Noțiuni de bază" este aliniat la standarde?
+  csf_page_faq_answer_01_01: 'Cursul "CS - Noțiuni de bază" a fost conceput având
+    ca ghid atât Cadru K-12 pentru informatică, cât și standardele CSTA. În prezent,
+    fiecare lecție include corelații cu standardele CSTA relevante. Sumarul tuturor
+    acestor corelații pentru fiecare curs poate fi găsit la:'
   csf_page_faq_answer_01_list_01: "[Standarde Curs A] (%{course_a_url})"
   csf_page_faq_answer_01_list_02: "[Standarde Curs B] (%{course_b_url})"
   csf_page_faq_answer_01_list_03: "[Standarde Curs C] (%{course_c_url})"
@@ -1603,37 +1636,43 @@ ro:
   csf_page_faq_answer_01_list_06: "[Standarde Curs F] (%{course_f_url})"
   csf_page_faq_answer_01_02: O versiune Google Sheets a standardelor poate fi găsită
     la [Standarde CSF] (%{csf_standards_url}).
-  csf_page_faq_question_02: Cum pot aduce Noțiunile de Bază în Informatică pentru
-    toată mea școală?
-  csf_page_faq_answer_02: Principalul plan de învățământ K-12 CS din Statele Unite,
-    programul nostru elementar s-a dovedit a fi eficient în districte școlare urbane
-    importante, precum Dallas, precum și în districte rurale mici din Iowa. Nu este
-    nevoie să angajați specialiști pentru a preda CS. Programul nostru este conceput
-    în mod unic pentru a sprijini profesorii începători în CS, oferind în același
-    timp flexibilitatea de a evolua lecțiile pentru a se adapta la nevoile elevilor.
-    [Împărtășiți această broșură](%{brochure_url}) cu administratorii școlii și districtului
-    dumneavoastră sau [sugerați-le să arunce o privire pe pagina noastră pentru administratori](%{admins_url})
-    special concepută pentru a răspunde la cele mai frecvente întrebări ale administratorilor.
-  csf_page_faq_question_03: Cât costă să predai Noțiuni de Bază în Informatică?
-  csf_page_faq_question_04: Cum /Unde pot obține dezvoltare profesională pentru Noțiuni
-    de Bază în Informatică?
-  csf_page_faq_answer_04_01: Nou în predarea informaticii? Nu vă faceți griji! Majoritatea
-    profesorilor noștri nu au predat niciodată informatică. Alăturați-vă profesorilor
-    locali pentru sprijin inspirat și practic pentru a implementa informatica în clasă.
-    Partenerii noștri regionali oferă ateliere Code.org de înaltă calitate, de o zi,
-    pentru profesori individuali sau pentru Dezvoltarea Profesională la nivel școlar.
-    [Înscrieți-vă la un atelier de dezvoltare profesională în apropierea dvs.] (%{sign_up_url})!
-  csf_page_faq_answer_04_02: 'Alăturați-vă celor peste 100.000 de profesori care au
-    participat la atelierele noastre. Majoritatea participanților la atelierele noastre
-    spun: "Este cea mai bună dezvoltare profesională la care am participat vreodată".
-    De fapt, [90% dintre participanți ar recomanda programul nostru altor profesori](%{rec_url})!'
+  csf_page_faq_question_02: Cum pot introduce cursul "CS - Noțiuni de bază"  în întreaga
+    mea școală?
+  csf_page_faq_answer_02: Fiind cea mai recunoscută programă de studii în domeniul
+    informaticii pentru ciclul primar și secundar din Statele Unite, programul nostru
+    pentru școlile gimnaziale s-a dovedit a fi eficace în districtele școlare urbane
+    mari, cum ar fi Dallas, dar și în zonele rurale mai mici din Iowa. Nu este necesar
+    să recrutați specialiști pentru a preda informatică. Programul nostru este special
+    creat pentru a ajuta profesorii care sunt noi în domeniul informaticii, oferind
+    totodată flexibilitatea de a personaliza lecțiile în funcție de nevoile elevilor.
+    [Distribuiți această broșură](%{brochure_url}) cu administratorii școlii sau [sugerați-le
+    să arunce o privire pe pagina noastră](%{admins_url}) special concepută pentru
+    a le răspunde la cele mai frecvente întrebări.
+  csf_page_faq_question_03: Cât costă predarea cursului "CS - Noțiuni de bază"?
+  csf_page_faq_question_04: 'Cum/Unde pot găsi resurse pentru dezvoltare profesională
+    dedicate acestui curs?
+
+    '
+  csf_page_faq_answer_04_01: Ești la început de drum în predarea informaticii? Nu-i
+    problemă! Majoritatea profesorilor noștri nu au mai predat informatică înainte.
+    Alătură-te altor profesori din zona ta pentru a beneficia de suport practic și
+    inspirațional în implementarea informaticii în sala ta de clasă. Partenerii noștri
+    regionali oferă ateliere Code.org de înaltă calitate, cu durata de o zi, pentru
+    profesori individuali sau pentru întregul colectiv didactic al unei școli. [Înscrie-te
+    la un atelier de dezvoltare profesională în apropierea ta] (%{sign_up_url})!
+  csf_page_faq_answer_04_02: 'Alătură-te celor peste 100,000 de profesori care au
+    participat la atelierele noastre. Majoritatea celor care au luat parte la aceste
+    sesiuni afirmă: "Este cea mai bună formare profesională la care am participat
+    vreodată." De fapt, [90% dintre participanți ar recomanda programul nostru altor
+    profesori](%{rec_url})!'
   csf_page_faq_question_05: Care este momentul recomandat pentru predarea Noțiunilor
     de Bază în Informatică?
-  csf_page_faq_answer_05: Fiecare curs CSF include 13-17 lecții concepute pentru perioade
-    de 45 de minute. Recomandăm tuturor elevilor să treacă de la lecție la lecție
-    într-un ritm stabilit de profesor. Există multe niveluri de proiecte conduse de
-    profesori, concepute pentru a fi experimentate la unison, în timp ce lecțiile
-    de formare a abilităților pot fi finalizate de elevi în ritmul lor.
+  csf_page_faq_answer_05: Fiecare curs CSF include între 13 și 17 lecții, fiecare
+    proiectată pentru a se desfășura pe durata a 45 de minute. Este recomandat ca
+    toți elevii să progreseze de la o lecție la alta într-un ritm dictat de cadrul
+    didactic. Există numeroase proiecte ghidate de profesor, concepute pentru a fi
+    realizate în grup, pe când lecțiile care vizează dezvoltarea de abilități specifice
+    pot fi parcurse de elevi în ritmul lor.
   csf_page_faq_question_06: De ce materiale am nevoie pentru Noțiuni de Bază în Informatică?
   csf_page_faq_answer_06: Multe lecții sunt însoțite de fișe care îi ghidează pe elevi
     prin activități. Aceste resurse pot fi tipărite sau alocate în format digital.
@@ -1789,8 +1828,8 @@ ro:
   ai_activity_zooniverse: Zooniverse - Zebra de munte
   ai_activity_zooniverse_desc: Ajută să protejezi zebra de munte din Cape Mountain
     Zebra, o specie pe cale de dispariție, identificând animalele din imagini.
-  codeorg_homepage_hoc2018_curriculum: Go further with <a href="%{studio_url}/courses"
-    class="hoc2018-curriculum-link">Code.org courses</a>
+  codeorg_homepage_hoc2018_curriculum: Mergeți mai departe cu cursurile <a href="%{studio_url}/courses"
+    class="hoc2018-curriculum-link">Code.org</a>
   codeorg_homepage_hoc2018_dance_heading: Creează-ți propria ta <span class="highlight-word">Dance&nbsp;Petrecere</span>
   codeorg_homepage_hoc2018_header_line1: Hour of Code vine...
   codeorg_homepage_hoc2018_header_line2_desktop: Ce vei crea <span class="hoc2018-highlight-word">?</span>
@@ -2137,6 +2176,12 @@ ro:
     cursurilor Code.org, oportunitățile locale sau alte știri despre știința calculatoarelor?
   signup_email_preference_privacy: "(Vedeți polica noastră de confidențialitate)"
   signup_email_preference_yes: Da
+  signup_email_preference_yes_elementary: Da - Trimite-mi actualizări despre resursele
+    școlii elementare
+  signup_email_preference_yes_middle: Da - Trimite-mi actualizări despre resursele
+    școlii medii
+  signup_email_preference_yes_high: Da - Trimite-mi actualizări despre resursele liceului
+  signup_email_preference_yes_general: Da - Trimite-mi actualizări generale
   signup_email_preference_no: Nu
   signup_email_preference_error: Este necesar să indicați adresa preferată de e-mail
   signup_multiple_event_warning: Dacă organizați mai multe evenimente, vă rugăm să
@@ -5676,11 +5721,11 @@ ro:
     Steve într-o aventură prin această lume Minecraft.
   tutorial_minecraft-2016_longdescription: Construiți un joc Minecraft. Creați-vă
     propriile versiuni de pui, oi, târâtoare, zombi și multe altele.
-  tutorial_thinkersmith-es_longdescription: Mediante el uso de un "Vocabulario Robot"
-    predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar
-    a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento
-    ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones
-    as&iacute; como la valiosa habilidad de depuraci&oacute;n.
+  tutorial_thinkersmith-es_longdescription: Mediante el uso de un „Vocabulario Robot”
+    predefinit, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar
+    a cabo tareas espec ficas sin ser estas discutidas previamente.&iacute;Este segmento
+    ense&ntilde;a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones
+    as como la valiosa habilidad de depuraci n.&iacute;&oacute;
   tutorial_pixie_longdescription: Tutorial Hour of Code cu Pixie
   tutorial_play_longdescription: Creează o poveste sau un joc cu Play Lab! Fă animalele,
     pirații, zombi, ninja și multe alte personaje să se miște, să scoată sunete, să
@@ -12861,12 +12906,12 @@ ro:
   tutorial_googlename _longdescription: Alegeți un nume și aduceți la viață literele
     cuvântului folosind codul. Alegeți o poreclă, numele unui animal de companie,
     un animal, un sport, un loc sau un hobby.
-  tutorial_carnegiezillah_longdescription: Zillah City is thriving, and music is in
-    the air. Rumor has it, the famed Gargantua bot is online and sending the last
-    Toxibots to trash the city block by block…. Grab your cobot hoverboard and get
-    ready to groove, move, and finish off what you started! Players program their
-    cobot hoverbots to change lanes, avoid obstacles, and take out many Toxibots in
-    this rhythm-styled game.
+  tutorial_carnegiezillah_longdescription: Orașul Zillah este înfloritor, iar muzica
+    este în aer. Zvonurile spun că faimosul bot Gargantua este online și trimite ultimii
+    Toxibots la gunoi bloc cu bloc.…Prinde-ți hoverboard-ul de cobot și pregătește-te
+    să canelezi, să miști și să termini ceea ce ai început! Jucătorii își programează
+    hoverbot-urile de cobot pentru a schimba benzile, pentru a evita obstacolele și
+    pentru a elimina mulți Toxibots în acest joc în stil ritmic.
   tutorial_nasachspacejam_longdescription: Creați un sistem solar care se roiește
     cu adevărat! Aflați despre muzică, astronomie și codificare în această activitate
     autoghidată (nu este necesară experiență de codificare). Programează planete pentru
@@ -13712,6 +13757,134 @@ ro:
     include o închidere a biroului de 2 săptămâni la sfârșitul anului, aka Winter
     Break), jumătate de zi lucrătoare vinerea în timpul verii alias vinerea de vară,
     și alte beneficii generoase.
+  csa_ai_page_hero_title: Inginerie software și viziune computerizată
+  csa_ai_page_hero_description: 'Acest modul CSA post-AP cu două capitole oferă elevilor
+    de liceu experiență practică cu instrumente profesionale de dezvoltare software,
+    inclusiv GitHub și GitHub Copilot, și le oferă abilitățile din lumea reală pentru
+    a dezvolta un program de viziune computerizată. '
+  csa_ai_page_video_section_title: Treceți dincolo de lumea mediilor de programare
+    Code.org
+  csa_ai_page_video_section_li_1: Aflați mai multe despre AI și aplicațiile sale
+  csa_ai_page_video_section_li_2: Experiență practică cu instrumente profesionale
+    de dezvoltare software
+  csa_ai_page_video_section_li_3: Aflați practicile standard din industrie
+  csa_ai_page_video_section_li_4: Cultivați gândirea critică
+  csa_ai_page_programming_tools: 'Instrumente de programare: Github, Github Copilot,
+    VSCode, TensorFlow '
+  csa_ai_page_professional_learning: Nici unul
+  csa_ai_page_curriculum_topics: 'Subiecte: Programare, Date, Artă și design, Jocuri
+    și animație'
+  csa_ai_page_curriculum_accessibility_features: Consultați secțiunea Întrebări frecvente
+    pentru detalii
+  csa_ai_page_curriculum_languages_support: Română
+  csa_ai_page_article_title_1: Construiți cu Copilot
+  csa_ai_page_article_description_1: Elevii învață cum să folosească GitHub Copilot
+    ca programator de perechi pentru a explica codul existent, pentru a găsi și remedia
+    erorile și pentru a genera soluții la noi probleme.
+  csa_ai_page_article_link_1: Aflați mai multe despre Copilot
+  csa_ai_page_article_title_2: Construiește-ți propriul model AI
+  csa_ai_page_article_description_2: Elevii își antrenează propriile modele AI folosind
+    Teachable Machine pentru a recunoaște imaginile și gesturile dintr-o cameră web
+    și pentru a lua în considerare modul în care viziunea computerului afectează modul
+    în care utilizatorii interacționează cu aplicațiile.
+  csa_ai_page_article_link_2: Explorați planul lecției
+  csa_ai_page_article_title_3: Explorați viziunea computerizată
+  csa_ai_page_article_description_3: Elevii implementează modelele AI pe care le-au
+    creat cu Teachable Machine într-o aplicație Java, folosind GitHub Copilot pentru
+    a-i ajuta să modifice versiunile existente ale aplicațiilor pentru a lucra cu
+    diferitele intrări.
+  csa_ai_page_article_link_3: Vezi un exemplu
+  csa_ai_page_learn_more_section_title: Aflați mai multe despre inteligența artificială
+  csa_ai_page_learn_more_title: Explorați AI 101 pentru profesori
+  csa_ai_page_learn_more_description: Descoperiți lumea revoluționară a inteligenței
+    artificiale (AI) și potențialul său transformator în educație cu seria noastră
+    cuprinzătoare de învățare online pentru profesori.
+  csa_ai_page_learn_more_link: Urmăriți seria AI 101 pentru profesori
+  csa_ai_page_faq_question_01: Care sunt premisele pentru acest modul?
+  csa_ai_page_faq_answer_01_01: 'Înainte de a se scufunda în acest modul, studenții
+    ar trebui să posede cunoștințe de bază despre Java. Mai exact, ar trebui să înțeleagă:'
+  csa_ai_page_faq_answer_01_list_01: "**Clase și obiecte: ** Elevii ar trebui să fie
+    familiarizați cu definirea și utilizarea claselor, precum și cu crearea și manipularea
+    obiectelor."
+  csa_ai_page_faq_answer_01_list_02: "**Metode de scriere și apelare: ** Elevii ar
+    trebui să poată defini metode într-o clasă, să înțeleagă parametrii metodei și
+    tipurile de returnare și să apeleze metode din obiecte sau alte metode."
+  csa_ai_page_faq_answer_01_list_03: "**Matrice 1D și ArrayLists: ** Ar trebui să
+    fie pricepuți în declararea, inițializarea și manipularea matricelor unidimensionale
+    și a listelor matriceale, inclusiv iterarea prin ele."
+  csa_ai_page_faq_answer_01_list_04: "**Selecție și iterație: ** O bază solidă în
+    enunțuri și bucle condiționale este crucială."
+  csa_ai_page_faq_question_01_02: În mod ideal, studenții care au absolvit AP Computer
+    Science A sau un curs de profunzime și rigoare similare ar fi bine pregătiți pentru
+    acest modul.
+  csa_ai_page_faq_question_02: Cum instalez software-ul necesar pentru acest modul?
+  csa_ai_page_faq_answer_02_01: Acest modul este unic deoarece implică utilizarea
+    de software terță parte, mai degrabă decât laboratoarele și instrumentele Code.org.
+    [Citiți mai multe despre instalarea software-ului aici] (%{accessibility_url}).
+  csa_ai_page_faq_question_03: Cum pot susține nevoile de accesibilitate în timp ce
+    predau acest modul?
+  csa_ai_page_faq_answer_03_01: satisfacerea nevoilor de accesibilitate este esențială
+    pentru un mediu de învățare favorabil incluziunii. [Citiți mai multe despre caracteristicile
+    de accesibilitate din software-ul utilizat în acest modul aici] (%{install_url}).
+  csa_ai_page_faq_question_04: Cum folosesc codul VS pe Chromebookuri?
+  csa_ai_page_faq_answer_04: Utilizarea codului VS pe un Chromebook a devenit mai
+    simplă, mai ales cu capacitatea de a rula aplicații Linux pe modele mai noi de
+    Chromebook. [Citiți mai multe despre configurarea codului VS pe Chromebookuri
+    aici] ()%{chromebook_url}.
+  csa_ai_page_faq_question_05: Cum pot obține dezvoltare profesională pentru acest
+    modul?
+  csa_ai_page_faq_answer_05: În prezent nu există o dezvoltare profesională specifică
+    pentru acest curs. Dacă doriți să înțelegeți cum să abordați inteligența artificială
+    în sala de clasă, puteți [explora AI 101 pentru profesori] (%{ai_101_url}).
+  csa_ai_page_faq_question_06: Care este momentul recomandat pentru predarea acestui
+    modul?
+  csa_ai_page_faq_answer_06_01: Modulul Software Engineering & Computer Vision este
+    structurat cu grijă pentru a oferi învățare cuprinzătoare într-un interval de
+    timp concis. Întregul modul este conceput pentru a acoperi **2 săptămâni de instrucțiune**.
+    Cele mai multe lecții sunt adaptate pentru **45 minute**, în timp ce lecțiile
+    în care elevii se adâncesc în dezvoltarea practică a proiectelor Java sunt concepute
+    pentru **90 minute**. Acest timp prelungit asigură studenților oportunități ample
+    de a înțelege, implementa și depana pe măsură ce lucrează.
+  csa_ai_page_faq_answer_06_02: Există, de asemenea, o flexibilitate intenționată
+    încorporată în structura modulului. În funcție de dinamica clasei, de implicarea
+    elevilor și de profunzimea la care doriți să explorați fiecare subiect, puteți
+    ajusta durata. De exemplu, lecția Introducere în Copilot, concepută ca o lecție
+    de 45 de minute, poate fi extinsă la 90 de minute dacă doriți să aprofundați modul
+    în care funcționează modelele și instrumentele lingvistice mari precum GitHub
+    Copilot și ChatGPT.
+  csa_ai_page_faq_question_07: How can I access answer keys?
+  csa_ai_page_faq_answer_07: Cu un cont de profesor aprobat, puteți găsi cheile de
+    răspuns într-un panou albastru „Profesor” Only care apare în lecțiile și activitățile
+    online.Dacă aveți nevoie de un cont de profesor aprobat, puteți solicita acces
+    la materiale protejate numai pentru profesori (chei de răspuns etc.) prin [acest
+    formular] ().%{form_url}Vă rugăm să rețineți că poate dura 3-5 zile lucrătoare
+    pentru a vă verifica contul.
+  csa_ai_page_faq_question_08: Este acest modul mapat la standarde?
+  csa_ai_page_faq_answer_08: Da, curriculum-ul Software Engineering & Computer Vision
+    este mapat la [Standardele CSTA K-12] (%{csta_k12_url}) și AI pentru [Orientări
+    K-12] ().%{k12_url}
+  csa_ai_page_faq_question_09: Cât costă predarea acestui modul?
+  csa_ai_page_faq_answer_09_01: Curriculum-ul și platforma noastră sunt disponibile
+    la [fără cost] (%{no_cost_url}) pentru oricine, oriunde, să predea!
+  csa_ai_page_faq_answer_09_02: În plus, software-ul și instrumentele utilizate în
+    acest modul sunt gratuite. GitHub Copilot este gratuit pentru verificate [teachers](%{teachers_url})
+    și [students]().%{students_url}
+  csa_ai_page_faq_question_10: Ce fac dacă instalarea software-ului nu funcționează?
+  csa_ai_page_faq_answer_10: Problemele întâmpinate în timpul instalării software-ului
+    pot fi frecvente, dar există pași sistematici pe care îi puteți urma pentru depanarea
+    și rezolvarea acestora. [Consultați câteva sfaturi de depanare aici] ().%{troubleshooting_url}
+  csa_ai_page_faq_question_11: How was the curriculum developed?
+  csa_ai_page_faq_answer_11_01: 'Curriculumul nostru de inginerie software și viziune
+    computerizată a fost conceput având în vedere valorile curriculare. Următoarele
+    obiective au ghidat crearea acestui curriculum:'
+  csa_ai_page_faq_answer_11_list_01: "**Obiectivul 1: ** Utilizați instrumentele AI
+    pentru a genera, depana și edita codul."
+  csa_ai_page_faq_answer_11_list_02: "**Obiectivul 2: ** Tranziția de la Java Lab
+    la instrumente din lumea reală."
+  csa_ai_page_faq_answer_11_list_03: "**Obiectivul 3: ** Înțelegerea aprofundată a
+    modului în care modelele AI sunt instruite și integrate în programe."
+  csa_ai_page_faq_answer_11_02: Pentru mai multe informații despre valorile care ne-au
+    ghidat activitatea, vă rugăm să consultați [valorile curriculare] (%{curriculum_values_url}).
   language_code:
     ar: arabic
     az: azeră

@@ -191,6 +191,15 @@ cs:
   grade_level_label_elementary: Základní škola
   grade_level_label_middle: Střední škola
   grade_level_label_high: Střední škola
+  curricula_title_elementary: Učební osnovy základní školy
+  curricula_desc_elementary: Prohlédněte si zábavu, bezplatné kurzy a aktivity, které
+    vás zvou k prozkoumání informatiky se studenty základních škol.
+  curricula_title_middle: Učební osnovy pro střední školy
+  curricula_desc_middle: Projděte si poutavé nabídky, které vám a vašim studentům
+    středních škol umožní společně prozkoumat informatiku.
+  curricula_title_high: Středoškolské osnovy
+  curricula_desc_high: Prohlédněte si přesvědčivé kurzy a aktivity, které vás a vaše
+    studenty středních škol zvou, abyste se hlouběji ponořili do informatiky.
   students_label: Studenti, žáci
   teachers_label: Učitelé
   teacher_label_csf: 'Základy informatiky: učitel'
@@ -217,6 +226,13 @@ cs:
   call_to_action_explore_choice_level: Prozkoumat vzorovou úroveň s výběrem možností
   call_to_action_explore_collection: Prozkoumat sbírku
   call_to_action_explore_unplugged_lesson: Prozkoumat lekce bez počítače
+  call_to_action_explore_csf: Prozkoumejte základy CS
+  call_to_action_explore_csd: Prozkoumejte CS Discoveries
+  call_to_action_explore_csp: Prozkoumejte principy CS
+  call_to_action_explore_csc: Prozkoumejte CS Connections
+  call_to_action_explore_csa: Prozkoumejte AP® Computer Science A
+  call_to_action_explore_maker: Prozkoumejte kurikula Maker
+  call_to_action_explore_hoc: Prozkoumejte výukové programy Hodina kódu
   call_to_action_try_app_lab: Vyzkoušet App Lab
   call_to_action_view_lesson_plan: Zobrazit plán lekce
   call_to_action_self_paced_pl: Začněte profesionální učení s vlastním tempem
@@ -261,6 +277,7 @@ cs:
   call_to_action_notify_available: Informujte mě, až bude k dispozici
   call_to_action_register_early_access: Zaregistrujte se pro předběžný přístup
   call_to_action_open_positions: Zobrazení otevřených pozic
+  call_to_action_get_guide: Získejte průvodce
   aria_label_call_to_action_afe: Další informace o Amazon Future Engineer
   aria_label_call_to_action_teaching_csf: Začněte odborný vzdělávací program Teaching
     Computer Science Fundamentals
@@ -368,6 +385,8 @@ cs:
   curriculum_name_csa: AP® Počítačová věda A
   curriculum_name_csc_02: Jakýkoli modul CS Connections
   curriculum_name_ai: Umělá inteligence a strojové učení
+  curriculum_name_artificial_intelligence: Umělá inteligence (AI)
+  curriculum_name_maker: Tvůrce
   curriculum_name_maker_cp: Vytváření aplikací pomocí zařízení (Circuit Playground)
   curriculum_name_maker_microbit: Vytváření aplikací pomocí zařízení (micro:bit)
   curriculum_name_creating_apps_with_devices: Tvorba aplikací pomocí nástrojů
@@ -422,6 +441,12 @@ cs:
     technice fyzická zařízení. Vytvářejte programy, které využívají hardwarové vstupy
     a výstupy. Tento tematický celek existuje i jako verze pro micro:bit a Circuit
     Playground.
+  curriculum_desc_csa: Seznámit studenty se softwarovým inženýrstvím a objektově orientovaným
+    designem, zatímco se učí programovací jazyk Java v tomto bezplatném kurikulu pro
+    AP® Computer Science A (AP® CSA).
+  curriculum_desc_maker: Vzdělávání tvůrce posouvá STEM (věda, technologie, inženýrství,
+    matematika) o krok dále tím, že pozve praktické zkušenosti a spolupráci do učebny,
+    aby pomohly učit řešení problémů a kritické myšlení.
   collection_hardware: Zaměření na Hardware
   collection_hardware_desc: Motivuje studenty k tomu, aby k řešení problémů využívali
     data a fyzická zařízení.
@@ -453,6 +478,7 @@ cs:
   module_label_professional_learning: 'Profesní vzdělávání:'
   module_label_languages: 'Podporované jazyky:'
   module_label_accessibility_features: 'Přístupnost:'
+  module_label_accessibility_features_full: 'Funkce usnadnění přístupu:'
   module_label_educator_tool: Nástroj pro učitele
   module_label_educator_course: Kurz pro učitele
   module_label_student_tool: Nástroj pro studenty
@@ -460,6 +486,7 @@ cs:
   module_label_student_content_resources: Obsah a zdroje
   module_label_new: Nový
   module_label_coming_soon: Již brzy
+  module_label_available_now: Nyní k dispozici
   module_label_video_series: Video série
   module_label_self_paced: Modul s vlastním tempem
   module_ages_5_10: 5-10
@@ -470,6 +497,8 @@ cs:
   module_grade_2_5: 2-5
   module_grade_3_5: 3-5
   module_grade_3_8: 3-8
+  module_grade_k_12: K-12
+  module_grade_3_12: 3-12
   module_grade_6_12: 6-12
   module_grade_6_10: 6-10
   module_grade_9_12: 9-12
@@ -484,7 +513,9 @@ cs:
   module_grade_9_12_teachers: 9-12 Učitelé
   module_level_beginner: Začátečník
   module_level_intermediate: Středně pokročilý
+  module_level_advanced: Pokročilý
   module_duration_45_mins: 45 minut
+  module_duration_2_weeks: 2 týdny
   module_duration_1_hr: 1 hodina
   module_duration_2_hrs: 2 hodiny
   module_duration_3_hrs: 3 hodiny
@@ -565,6 +596,8 @@ cs:
   heading_java_lab: Java Lab
   heading_objects_first: Nejprve objekty
   heading_these_lessons_will: 'Tyto lekce budou:'
+  heading_explore_curriculum_catalog: Prozkoumejte všechny naše kurzy v katalogu učebních
+    osnov
   professional_learning_section_desc: Získejte podporu potřebnou k přípravě na učení,
     kterou doporučují samotní učitelé. Až 90 % z nich kurz považuje za ten nejlepší
     program pro profesní rozvoj.
@@ -820,6 +853,11 @@ cs:
     (například ChatGPT) a Generative AI. Poslechněte si, jak tyto nové technologie
     fungují přímo od odborníků: Mira Murati, CTO OpenAI, a Cristóbal Valenzuela, generální
     ředitel RunwayML.'
+  ai_pl_101_llm_slides_title: Výzvy k velkému jazykovému modelu pro pedagogy
+  ai_pl_101_llm_slides_desc: Nástroje pro získání nejlepšího možného výstupu z LLM,
+    jako je ChatGPT, od začátečníků po pokročilé. Zahrnuje startovací výzvy pro ty,
+    kteří si jen ponoří prsty na nohou, stejně jako pokročilé nástroje pro ty, kteří
+    chtějí maximalizovat svůj potenciál.
   how_ai_works_hero_heading: Jak funguje umělá inteligence
   how_ai_works_hero_desc: Ponořte se do světa AI pomocí „Jak AI funguje“, naší video
     série a doprovodných lekcí!
@@ -1706,8 +1744,8 @@ cs:
   ai_activity_zooniverse: Zooniverse - Pořiďte snímek horské zebry
   ai_activity_zooniverse_desc: Pomáhejte chránit ohroženou kapskou horskou zebru určením
     různých zvířat na obrázcích.
-  codeorg_homepage_hoc2018_curriculum: Go further with <a href="%{studio_url}/courses"
-    class="hoc2018-curriculum-link">Code.org courses</a>
+  codeorg_homepage_hoc2018_curriculum: Jděte dále s kurzy <a href="%{studio_url}/courses"
+    class="hoc2018-curriculum-link">Code.org</a>
   codeorg_homepage_hoc2018_dance_heading: Vytvořte si vlastní <span class="highlight-word">Dance&nbsp;Party</span>
   codeorg_homepage_hoc2018_header_line1: Hodina programování se blíží…
   codeorg_homepage_hoc2018_header_line2_desktop: Co vytvoříte <span class="hoc2018-highlight-word">?</span>
@@ -2041,6 +2079,13 @@ cs:
     místních příležitostech nebo jiných novinkách v oblasti informatiky?
   signup_email_preference_privacy: "(Viz naše zásady ochrany osobních údajů)"
   signup_email_preference_yes: Ano
+  signup_email_preference_yes_elementary: Ano - Pošlete mi aktuální informace o Zdroji
+    základní školy
+  signup_email_preference_yes_middle: Ano - Pošlete mi aktuální informace o zdrojích
+    pro střední školy
+  signup_email_preference_yes_high: Ano - Pošlete mi aktuální informace o High School
+    Resources
+  signup_email_preference_yes_general: Ano - Pošlete mi obecné aktualizace
   signup_email_preference_no: Ne
   signup_email_preference_error: Je vyžadována předvolba e-mailu
   signup_multiple_event_warning: Pokud pořádáte více událostí, zvolte prosím jiné
@@ -4836,11 +4881,11 @@ cs:
     učí robotiku s kódováním v Blockly. Robotické činnosti jsou vedeny samostatně
     pomocí výukových videí. \nRoboBlockly připravuje studenty, aby byli připraveni
     programovat v C/C ++.\n"
-  tutorial_coders_longdescription: "This step-by-step puzzle game provides an easy
-    introduction to bot programming. \n\nThe aim is to win a starship race against
-    other players.\n\nThe game is simple to start and only requires a few lines of
-    code to have a ship move around, but there are near-infinite possibilities of
-    improvement to create more sophisticated bots. "
+  tutorial_coders_longdescription: "Tato logická hra krok za krokem poskytuje snadný
+    úvod do programování bot. \n\nCílem je vyhrát závod hvězdné lodi proti ostatním
+    hráčům.\n\nHra se snadno spouští a vyžaduje pouze několik řádků kódu, aby se loď
+    pohybovala, ale existují téměř nekonečné možnosti vylepšení pro vytvoření sofistikovanějších
+    robotů. "
   tutorial_tynkerhw_longdescription: Naučte se programovat s Hot Wheels v této vysoce
     oktanové závodní hře! Vyberte si ze široké nabídky automobilů a poté se naučte
     programovat při procházení složitých závodních tratí. Skákejte přes překážky,
@@ -5334,11 +5379,11 @@ cs:
     v tomto světě Minecraftu.
   tutorial_minecraft-2016_longdescription: Sestavte hru Minecraft. Vytvořte si vlastní
     verze kuřete, ovcí, popínavých rostlin, zombie a dalších.
-  tutorial_thinkersmith-es_longdescription: Mediante el uso de un "Vocabulario Robot"
-    predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar
-    a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento
+  tutorial_thinkersmith-es_longdescription: Mediante el uso de un „Vocabulario Robot“
+    předdefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar
+    a cabo tareas espec ficas sin ser estas discutidas previamente.&iacute;Este segmento
     ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones
-    as&iacute; como la valiosa habilidad de depuraci&oacute;n.
+    jako como la valiosa habilidad de depuraci n.&iacute;&oacute;
   tutorial_pixie_longdescription: Výukový program Hodina kódu s Pixie
   tutorial_play_longdescription: Vytvoř příběh nebo hru s Herní laboratoří! Rozhýbej
     zvířata, piráty, zombie, ninjy a mnoho dalších postav, vytvářej zvuky, sbírej
@@ -12282,12 +12327,12 @@ cs:
   tutorial_googlename _longdescription: Vyberte jméno a oživte písmena slova pomocí
     kódu. Vyberte si přezdívku, jméno domácího mazlíčka, zvíře, sport, místo nebo
     koníček.
-  tutorial_carnegiezillah_longdescription: Zillah City is thriving, and music is in
-    the air. Rumor has it, the famed Gargantua bot is online and sending the last
-    Toxibots to trash the city block by block…. Grab your cobot hoverboard and get
-    ready to groove, move, and finish off what you started! Players program their
-    cobot hoverbots to change lanes, avoid obstacles, and take out many Toxibots in
-    this rhythm-styled game.
+  tutorial_carnegiezillah_longdescription: Zillah City se daří, a hudba je ve vzduchu.
+    Říká se, že slavný robot Gargantua je online a posílá poslední Toxiboty, aby zabili
+    město blok po bloku.…Popadněte svůj cobot hoverboard a připravte se na drážkování,
+    pohyb, a dokončete to, co jste začali! Hráči programují své kobotové hoverboty,
+    aby změnili jízdní pruhy, vyhýbali se překážkám a odstranili mnoho Toxibotů v
+    této hře ve stylu rytmu.
   tutorial_nasachspacejam_longdescription: Vytvořte sluneční soustavu, která opravdu
     skáče! Dozvíte se více o hudbě, astronomii a kódování v této samostatně vedené
     činnosti (nejsou vyžadovány žádné zkušenosti s kódováním). Naprogramujte planety
@@ -13099,6 +13144,124 @@ cs:
     ve středu, přičemž bereme náš PTO (celkem 5 týdnů, což zahrnuje celostátní 2týdenní
     uzavření kanceláře na konci roku aka Zimní přestávka), polovina pracovního dne
     v pátek v létě aka Letní pátky, a další velkorysé výhody.
+  csa_ai_page_hero_title: Softwarové inženýrství a počítačové vidění
+  csa_ai_page_hero_description: 'Tento dvoukapitolový modul CSA po AP nabízí studentům
+    středních škol praktické zkušenosti s profesionálními nástroji pro vývoj softwaru,
+    včetně GitHub a GitHub Copilot, a předává jim skutečné dovednosti pro vývoj programu
+    počítačového vidění. '
+  csa_ai_page_video_section_title: Krok za svět programovacích prostředí Code.org
+  csa_ai_page_video_section_li_1: Další informace o AI a jejích aplikacích
+  csa_ai_page_video_section_li_2: Praktické zkušenosti s profesionálními nástroji
+    pro vývoj softwaru
+  csa_ai_page_video_section_li_3: Naučte se průmyslově standardní postupy
+  csa_ai_page_video_section_li_4: Kultivujte kritické myšlení
+  csa_ai_page_programming_tools: 'Programovací nástroje: Github, Github Copilot, VSCode,
+    TensorFlow '
+  csa_ai_page_professional_learning: Žádný
+  csa_ai_page_curriculum_topics: 'Témata: Programování, Data, Umění a design, Hry
+    a animace'
+  csa_ai_page_curriculum_accessibility_features: Podrobnosti najdete v sekci FAQ
+  csa_ai_page_curriculum_languages_support: Čeština
+  csa_ai_page_article_title_1: Sestavte s Copilotem
+  csa_ai_page_article_description_1: Studenti se naučí používat GitHub Copilot jako
+    párový programátor k vysvětlení existujícího kódu, najít a opravit chyby, a generovat
+    řešení nových problémů.
+  csa_ai_page_article_link_1: Další informace o programu Copilot
+  csa_ai_page_article_title_2: Sestavte si svůj vlastní model AI
+  csa_ai_page_article_description_2: Studenti trénují své vlastní modely AI pomocí
+    Teachable Machine k rozpoznávání obrázků a gest z webové kamery a zvažují, jak
+    počítačové vidění ovlivňuje způsob interakce uživatelů s aplikacemi.
+  csa_ai_page_article_link_2: Prozkoumejte plán lekce
+  csa_ai_page_article_title_3: Prozkoumejte počítačové vidění
+  csa_ai_page_article_description_3: Studenti implementují modely AI, které vytvořili
+    pomocí Teachable Machine, do aplikace Java, pomocí GitHub Copilot jim pomůže upravit
+    stávající verze aplikací tak, aby fungovaly s různými vstupy.
+  csa_ai_page_article_link_3: Podívejte se na příklad
+  csa_ai_page_learn_more_section_title: Další informace o umělé inteligenci
+  csa_ai_page_learn_more_title: Prozkoumejte AI 101 pro učitele
+  csa_ai_page_learn_more_description: Objevte průkopnický svět umělé inteligence (AI)
+    a její transformační potenciál ve vzdělávání s naší komplexní online výukou pro
+    učitele.
+  csa_ai_page_learn_more_link: Podívejte se na sérii AI 101 pro učitele
+  csa_ai_page_faq_question_01: Jaké jsou předpoklady pro tento modul?
+  csa_ai_page_faq_answer_01_01: 'Než se ponoříte do tohoto modulu, studenti by měli
+    mít základní znalosti Java. Konkrétně by měli pochopit:'
+  csa_ai_page_faq_answer_01_list_01: "**Třídy a objekty: ** Studenti by měli být obeznámeni
+    s definováním a používáním tříd, jakož i s vytvářením a manipulací s objekty."
+  csa_ai_page_faq_answer_01_list_02: "**Metody psaní a volání: ** Studenti by měli
+    být schopni definovat metody v rámci třídy, porozumět parametrům metod a návratovým
+    typům a volat metody z objektů nebo jiných metod."
+  csa_ai_page_faq_answer_01_list_03: "**1D Pole a seznamy polí: ** Měli by být zdatní
+    v deklaraci, inicializaci a manipulaci s jednorozměrnými poli a seznamy polí,
+    včetně jejich iterace."
+  csa_ai_page_faq_answer_01_list_04: "**Výběr a iterace: ** Pevný základ v podmíněných
+    příkazech a smyčkách je zásadní."
+  csa_ai_page_faq_question_01_02: Ideálně, studenti, kteří absolvovali AP Computer
+    Science A nebo kurz podobné hloubky a přísnosti, by byli na tento modul dobře
+    připraveni.
+  csa_ai_page_faq_question_02: Jak nainstaluji software potřebný pro tento modul?
+  csa_ai_page_faq_answer_02_01: Tento modul je jedinečný, protože zahrnuje použití
+    softwaru třetích stran spíše než laboratoří a nástrojů Code.org. [Přečtěte si
+    více o instalaci softwaru zde] (%{accessibility_url}).
+  csa_ai_page_faq_question_03: Jak mohu podpořit potřeby přístupnosti při výuce tohoto
+    modulu?
+  csa_ai_page_faq_answer_03_01: Stravování potřeb přístupnosti je zásadní pro inkluzivní
+    vzdělávací prostředí. [Přečtěte si více o funkcích usnadnění přístupu v softwaru
+    použitém v tomto modulu zde] (%{install_url}).
+  csa_ai_page_faq_question_04: Jak mohu použít VS kód na Chromebooky?
+  csa_ai_page_faq_answer_04: Používání kódu VS na Chromebooku se stalo přímočařejším,
+    zejména díky možnosti spouštět aplikace Linux na novějších modelech Chromebooků.
+    [Přečtěte si více o nastavení kódu VS na Chromebookech zde] ()%{chromebook_url}.
+  csa_ai_page_faq_question_05: Jak mohu získat profesionální rozvoj tohoto modulu?
+  csa_ai_page_faq_answer_05: Pro tento kurz v současné době neexistuje konkrétní profesní
+    rozvoj. Pokud chcete pochopit, jak přistupovat k umělé inteligenci ve vaší třídě,
+    můžete [prozkoumejte AI 101 pro učitele] (%{ai_101_url}).
+  csa_ai_page_faq_question_06: Jaké je doporučené načasování výuky tohoto modulu?
+  csa_ai_page_faq_answer_06_01: Modul Softwarové inženýrství a počítačové vidění je
+    promyšleně strukturován tak, aby poskytoval komplexní učení ve stručném časovém
+    rámci. Celý modul je navržen tak, aby pokrývá **2 týdny** instrukce**. Většina
+    lekcí je přizpůsobena pro **45 minut**, zatímco lekce, kde se studenti ponoří
+    do praktického vývoje projektů Java, jsou navrženy na **90 minut**. Tato prodloužená
+    doba zajišťuje studentům dostatek příležitostí porozumět, implementovat a řešit
+    problémy při práci.
+  csa_ai_page_faq_answer_06_02: Ve struktuře modulu je také zabudována záměrná flexibilita.
+    V závislosti na dynamice třídy, zapojení studentů a hloubce, do které chcete každé
+    téma prozkoumat, můžete upravit dobu trvání. Například lekce Intro to Copilot,
+    navržená jako 45 minutová lekce, lze rozšířit na 90 minut, pokud se chcete ponořit
+    hlouběji do toho, jak velké jazykové modely a nástroje jako GitHub Copilot a ChatGPT
+    fungují.
+  csa_ai_page_faq_question_07: How can I access answer keys?
+  csa_ai_page_faq_answer_07: Se schváleným účtem učitele najdete klíče odpovědí v
+    modrém panelu „Učitel“ Pouze panel, který se zobrazuje v online lekcích a aktivitách.
+    Pokud potřebujete schválený účet učitele, můžete požádat o přístup k chráněným
+    materiálům pouze pro učitele (klíče odpovědí atd.) prostřednictvím [tento formulář]
+    ().%{form_url}Mějte prosím na paměti, že ověření vašeho účtu může trvat 3-5 pracovních
+    dnů.
+  csa_ai_page_faq_question_08: Je tento modul mapován podle standardů?
+  csa_ai_page_faq_answer_08: Ano, softwarové inženýrství & Kurikulum počítačového
+    vidění je mapováno na [Standardy CSTA K-12] (%{csta_k12_url}) a AI pro [Pokyny
+    K-12] ().%{k12_url}
+  csa_ai_page_faq_question_09: Kolik stojí výuka tohoto modulu?
+  csa_ai_page_faq_answer_09_01: Naše učební osnovy a platforma jsou k dispozici za
+    [bez nákladů] (%{no_cost_url}) pro kohokoli, kdekoli, učit!
+  csa_ai_page_faq_answer_09_02: Software a nástroje používané v tomto modulu jsou
+    navíc zdarma. GitHub Copilot je zdarma k ověření [teachers](%{teachers_url}) a
+    [students]().%{students_url}
+  csa_ai_page_faq_question_10: Co mám dělat, když instalace softwaru nefunguje?
+  csa_ai_page_faq_answer_10: Řešení problémů během instalace softwaru může být běžné,
+    ale existují systematické kroky, které můžete provést, abyste je mohli vyřešit
+    a vyřešit. [Podívejte se na několik tipů pro řešení problémů zde] ()%{troubleshooting_url}.
+  csa_ai_page_faq_question_11: How was the curriculum developed?
+  csa_ai_page_faq_answer_11_01: 'Naše osnovy softwarového inženýrství a počítačového
+    vidění byly navrženy s ohledem na naše hodnoty učebních osnov. Následující cíle
+    vedly k vytvoření tohoto kurikula:'
+  csa_ai_page_faq_answer_11_list_01: "**Cíl 1: ** Pomocí nástrojů AI můžete generovat,
+    ladit a upravovat kód."
+  csa_ai_page_faq_answer_11_list_02: "**Cíl 2: ** Přechod z Java Lab na reálné nástroje."
+  csa_ai_page_faq_answer_11_list_03: "**Cíl 3: ** Prohloubit porozumění tomu, jak
+    jsou modely AI trénovány a integrovány do programů."
+  csa_ai_page_faq_answer_11_02: Další informace o hodnotách, které vedly naši práci,
+    viz naše [hodnoty učebních osnov] ()%{curriculum_values_url}.
   language_code:
     ar: arabština
     az: ázerbájdžánský

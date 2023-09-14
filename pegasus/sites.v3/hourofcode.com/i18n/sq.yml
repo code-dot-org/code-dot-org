@@ -106,19 +106,20 @@ sq:
     rrolin e shkencave kompjuterike rreth krijimit te nje bote me te drejte.
   oceans_landing_videos: Video rreth AI dhe Machine Learning
   oceans_behind_the_scenes: 'AI për Oqeanet: Prapa skenave'
-  oceans_behind_the_scenes_1: Levels 2-4 use a pretrained model provided by the <a
-    href="https://www.tensorflow.org/" >TensorFlow</a> <a href="https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md">
-    MobileNet </a> project. A MobileNet model is a <a href="https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks">convolutional
-    neural network</a> that has been trained on <a href="http://www.image-net.org/">ImageNet</a>,
-    a dataset of over 14 million images hand-annotated with words such as "balloon"
-    or "strawberry". In order to customize this model with the labeled training data
-    the student generates in this activity, we use a technique called <a href="https://en.wikipedia.org/wiki/Transfer_learning">Transfer
-    Learning</a>. Each image in the training dataset is fed to MobileNet, as pixels,
-    to obtain a list of annotations that are most likely to apply to it. Then, for
-    a new image, we feed it to MobileNet and compare its resulting list of annotations
-    to those from the training dataset. We classify the new image with the same label
-    (such as "fish" or "not fish") as the images from the training set with the most
-    similar results.
+  oceans_behind_the_scenes_1: Nivelet 2-4 përdorin një model të paracaktuar të siguruar
+    nga projekti <a href="https://www.tensorflow.org/" ></a> <a href="https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md">
+    TensorFlow MobileNet. </a> Një model MobileNet është një rrjet nervor <a href="https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks">konvolucional</a>
+    që është trajnuar në <a href="http://www.image-net.org/">ImageNet</a>, një grup
+    i të dhënave me mbi 14 milion imazhe të shënuara me dorë me fjalë të tilla si
+    “tullumbace” ose “luleshtrydhe”. Për ta personalizuar këtë model me të dhënat
+    e etiketuara të trajnimit që nxënësi gjeneron në këtë aktivitet, ne përdorim një
+    teknikë të quajtur <a href="https://en.wikipedia.org/wiki/Transfer_learning">Transfer
+    Learning.</a>Çdo imazh në setin e të dhënave të trajnimit ushqehet në MobileNet,
+    si piksele, për të marrë një listë të shënimeve që kanë më shumë gjasa të zbatohen
+    për të. Pastaj, për një imazh të ri, ne e ushqejmë atë në MobileNet dhe krahasojmë
+    listën e saj rezultuese të shënimeve me ato nga grupi i të dhënave të trajnimit.
+    Ne e klasifikojmë imazhin e ri me të njëjtën etiketë (të tilla si “peshk” ose
+    “jo peshk”) si imazhet nga grupi i trajnimit me rezultatet më të ngjashme.
   oceans_behind_the_scenes_1_markdown: Nivelet 2-4 përdorin një model të paracaktuar
     të siguruar nga projekti [TensorFlow](https://www.tensorflow.org/) [MobileNet](https://github.com/tensorflow/models/blob/master/research/slim/nets/mobilenet_v1.md).
     Një model MobileNet është një [rrjet nervor konvolucional] (https://developers.google.com/machine-learning/practica/image-classification/convolutional-neural-networks)
@@ -133,13 +134,13 @@ sq:
     e saj rezultuese të shënimeve me ato nga grupi i të dhënave të trajnimit. Ne e
     klasifikojmë imazhin e ri me të njëjtën etiketë (të tilla si “peshk” ose “jo peshk”)
     si imazhet nga grupi i trajnimit me rezultatet më të ngjashme.
-  oceans_behind_the_scenes_2: Levels 6-8 use a <a href="https://en.wikipedia.org/wiki/Support-vector_machine">Support-Vector
-    Machine</a> (SVM). We look at each component of the fish (such as eyes, mouth,
-    body) and assemble all of the metadata for the components (such as number of teeth,
-    body shape) into a vector of numbers for each fish. We use these vectors to train
-    the SVM. Based on the training data, the SVM separates the "space" of all possible
-    fish into two parts, which correspond to the classes we are trying to learn (such
-    as "blue" or "not blue").
+  oceans_behind_the_scenes_2: Nivelet 6-8 përdorin një makinë <a href="https://en.wikipedia.org/wiki/Support-vector_machine">mbështetje-vektoriale</a>
+    (SVM). Ne shikojmë në çdo komponent të peshkut (të tilla si sytë, goja, trupi)
+    dhe mbledhim të gjitha meta të dhënat për komponentët (të tilla si numri i dhëmbëve,
+    forma e trupit) në një vektor të numrave për secilin peshk. Ne përdorim këto vektorë
+    për të trajnuar SVM. Bazuar në të dhënat e trajnimit, SVM ndan “hapësirën” e të
+    gjithë peshqve të mundshëm në dy pjesë, të cilat korrespondojnë me klasat që po
+    përpiqemi të mësojmë (të tilla si “blu” ose “jo blu”).
   oceans_behind_the_scenes_2_markdown: Nivelet 6-8 përdorin një [Mbështetje-Vector
     Machine] (https://en.wikipedia.org/wiki/Support-vector_machine) (SVM). Ne shikojmë
     në çdo komponent të peshkut (të tilla si sytë, goja, trupi) dhe mbledhim të gjitha
@@ -185,6 +186,15 @@ sq:
   grade_level_label_elementary: Shkolla Fillore
   grade_level_label_middle: Shkolla e Mesme
   grade_level_label_high: Shkolla e Mesme
+  curricula_title_elementary: Kurrikulat e Shkollës Fillore
+  curricula_desc_elementary: Shfletoni kurset argëtuese, falas dhe aktivitetet që
+    ju ftojnë të eksploroni shkencat kompjuterike me nxënësit tuaj të shkollës fillore.
+  curricula_title_middle: Kurrikulat e shkollës së mesme
+  curricula_desc_middle: Shfletoni ofertat tërheqëse që ju mundësojnë juve dhe nxënësve
+    tuaj të shkollave të mesme të eksploroni shkencat kompjuterike së
+  curricula_title_high: Kurrikulat e shkollës së mesme
+  curricula_desc_high: Shfletoni kurset dhe aktivitetet bindëse që ju ftojnë ju dhe
+    nxënësit tuaj të shkollës së mesme të gërmoni më thellë në shkencat kompjuterike.
   students_label: Nxënësit
   teachers_label: Mësimdhënësit
   teacher_label_csf: CS Bazat Mësues
@@ -211,6 +221,13 @@ sq:
   call_to_action_explore_choice_level: Eksploroni nivelin e zgjedhjes shembull
   call_to_action_explore_collection: Explore koleksionin
   call_to_action_explore_unplugged_lesson: Eksploroni mësimet e shkëputura
+  call_to_action_explore_csf: Eksploroni Bazat e CS
+  call_to_action_explore_csd: Eksploroni Zbulimet e CS
+  call_to_action_explore_csp: Eksploroni Parimet CS
+  call_to_action_explore_csc: Eksploroni lidhjet CS
+  call_to_action_explore_csa: Eksploroni AP® Shkenca Kompjuterike A
+  call_to_action_explore_maker: Eksploroni kurrikulën e Maker
+  call_to_action_explore_hoc: Eksploroni mësime për Orën e Kodit
   call_to_action_try_app_lab: Provoni App Lab
   call_to_action_view_lesson_plan: Shikoni planin e mësimit
   call_to_action_self_paced_pl: Filloni mësimin profesional të vetë-ritmit
@@ -255,6 +272,7 @@ sq:
   call_to_action_notify_available: Më njoftoni kur është në dispozicion
   call_to_action_register_early_access: Regjistrohu për akses të hershëm
   call_to_action_open_positions: Shikoni pozicionet e hapura
+  call_to_action_get_guide: Merrni udhëzuesin
   aria_label_call_to_action_afe: Mësoni më shumë rreth Amazon Future Engineer
   aria_label_call_to_action_teaching_csf: Filloni programin e mësimdhënies së Shkencave
     Kompjuterike Bazat e
@@ -364,6 +382,8 @@ sq:
   curriculum_name_csa: AP® Shkenca Kompjuterike A
   curriculum_name_csc_02: Çdo Modul i Lidhjeve CS
   curriculum_name_ai: AI & Machine Learning
+  curriculum_name_artificial_intelligence: Inteligjenca Artificiale (AI)
+  curriculum_name_maker: prodhues
   curriculum_name_maker_cp: Krijimi i aplikacioneve me pajisje (Playground Circuit)
   curriculum_name_maker_microbit: Krijimi i aplikacioneve me pajisje (micro:bit)
   curriculum_name_creating_apps_with_devices: Krijimi i aplikacioneve me pajisje
@@ -424,6 +444,12 @@ sq:
     në informatikë. Zhvillimi i programeve që shfrytëzojnë hyrjet dhe rezultatet e
     harduerit. Ekziston një version i kësaj njësie si për mikro: bit ashtu edhe për
     shesh lojërash për qark.'
+  curriculum_desc_csa: Prezantoni studentët me inxhinierinë e softuerit dhe dizajnin
+    e orientuar drejt objekteve ndërsa ata mësojnë gjuhën e programimit Java në këtë
+    program falas për AP® Computer Science A (AP® CSA).
+  curriculum_desc_maker: Edukimi i krijuesit e çon STEM (Shkencë, Teknologji, Inxhinieri,
+    Matematikë) një hap më tej duke ftuar përvojën praktike dhe bashkëpunimin në klasë
+    për të ndihmuar në mësimin e zgjidhjes së problemeve dhe të menduarit kritik.
   collection_hardware: Përqendrohuni në Hardware
   collection_hardware_desc: Fuqizon studentët të përdorin të dhëna dhe pajisje fizike
     për të zgjidhur problemet.
@@ -456,6 +482,7 @@ sq:
   module_label_professional_learning: 'Të mësuarit profesional:'
   module_label_languages: 'Gjuhët e mbështetura:'
   module_label_accessibility_features: 'Aksesueshmëria:'
+  module_label_accessibility_features_full: 'Karakteristikat e aksesit:'
   module_label_educator_tool: Mjet edukator
   module_label_educator_course: Kursi i edukatorit
   module_label_student_tool: Mjet studentor
@@ -463,6 +490,7 @@ sq:
   module_label_student_content_resources: Përmbajtja dhe burimet
   module_label_new: I ri
   module_label_coming_soon: Vjen së shpejti
+  module_label_available_now: Në dispozicion tani
   module_label_video_series: Seritë e videove
   module_label_self_paced: Moduli i vetë-ritmit
   module_ages_5_10: 5-10
@@ -473,6 +501,8 @@ sq:
   module_grade_2_5: 2-5
   module_grade_3_5: 3-5
   module_grade_3_8: 3-8
+  module_grade_k_12: K-12
+  module_grade_3_12: 3-12
   module_grade_6_12: 6-12
   module_grade_6_10: 6-10
   module_grade_9_12: 9-12
@@ -487,7 +517,9 @@ sq:
   module_grade_9_12_teachers: 9-12 Mësues
   module_level_beginner: Fillestar
   module_level_intermediate: i ndërmjetëm
+  module_level_advanced: Avancuar
   module_duration_45_mins: 45 minuta
+  module_duration_2_weeks: 2 javë
   module_duration_1_hr: 1 orë
   module_duration_2_hrs: 2 orë
   module_duration_3_hrs: 3 orë
@@ -569,6 +601,8 @@ sq:
   heading_java_lab: Java Lab
   heading_objects_first: Objektet e para
   heading_these_lessons_will: 'Këto mësime do të:'
+  heading_explore_curriculum_catalog: Eksploroni të gjitha kurset tona në Katalogun
+    e Kurrikulave
   professional_learning_section_desc: Merrni mbështetjen që ju nevojitet ndërsa përgatiteni
     për të dhënë mësim. Mësuesit e duan atë, me mbi 90% duke e renditur atë zhvillimin
     më të mirë profesional ndonjëherë!
@@ -838,6 +872,11 @@ sq:
     ChatGPT) dhe AI gjeneruese. Dëgjoni se si funksionojnë këto teknologji të reja
     direkt nga ekspertët: Mira Murati, CTO e OpenAI dhe Cristóbal Valenzuela, CEO
     i RunwayML.'
+  ai_pl_101_llm_slides_title: Modeli i gjuhës së madhe bën thirrje për edukatorët
+  ai_pl_101_llm_slides_desc: Mjetet për marrjen e prodhimit më të mirë të mundshëm
+    nga LLM-të si ChatGPT, nga fillestari në të avancuar. Përfshin kërkesat fillestare
+    për ata që thjesht zhyten gishtërinjtë e tyre, si dhe mjete të përparuara për
+    ata që kërkojnë të maksimizojnë potencialin e tyre.
   how_ai_works_hero_heading: Si funksionon AI
   how_ai_works_hero_desc: Zhytuni në botën e AI me “Si funksionon AI”, seritë tona
     të videove dhe mësimet shoqëruese!
@@ -1459,10 +1498,10 @@ sq:
     alternative janë në dispozicion nëse nuk keni qasje në këto furnizime.
   csd_page_faq_answer_04_06: Krijimi i aplikacioneve me pajisje (Opsioni A dhe Opsioni
     B)
-  csd_page_faq_answer_04_07: 'Option A: Classroom set of Circuit Playgrounds. Check
-    out [code.org/maker/circuitplayground](%{url}) for more details.'
-  csd_page_faq_answer_04_08: 'Option B: Classroom set of micro:bit devices. Check
-    out [code.org/maker/microbit](%{url}) for more details.'
+  csd_page_faq_answer_04_07: 'Opsioni A: Grupi në klasë i terreneve të lojërave të
+    qarkut. Shikoni [code.org/maker/circuitplayground] () për më shumë detaje.%{url}'
+  csd_page_faq_answer_04_08: 'Opsioni B: Grupi në klasë i pajisjeve mikro: bit. Shikoni
+    [code.org/maker/microbit] () për më shumë detaje.%{url}'
   csd_page_faq_answer_04_09: Furnizimet e prodhuesit, të tilla si kutitë e indeve
     të zbrazëta ose rrotullat e kartonit ose let
   csd_page_faq_answer_04_10: "* Shënim: Njësia e Krijimit të Aplikacioneve me Pajisje
@@ -1594,10 +1633,10 @@ sq:
     të lartë, njëditore Code.org për mësuesit individualë ose për PD në të gjithë
     shkollën [Regjistrohuni për një seminar të zhvillimit profesional pranë jush]
     (%{sign_up_url})!
-  csf_page_faq_answer_04_02: Join over 100,000 teachers who have participated in our
-    workshops. The majority of our workshop attendees say, 'It's the best professional
-    development I've ever attended.' In fact, [90% of attendees would recommend our
-    program to other teachers](%{rec_url})!
+  csf_page_faq_answer_04_02: 'Bashkohuni me mbi 100,000 mësues që kanë marrë pjesë
+    në punëtoritë tona. Shumica e pjesëmarrësve të punëtorisë sonë thonë: “Është zhvillimi
+    më i mirë profesional që kam marrë pjesë ndonjëherë”. Në fakt, [90% e të pranishmëve
+    do t''ua rekomandonin programin tonë mësuesve të tjerë] ()!%{rec_url}'
   csf_page_faq_question_05: Cila është koha e rekomanduar për mësimin e Bazave CS?
   csf_page_faq_answer_05: Çdo kurs CSF përfshin 13-17 mësime të dizajnuara për periudha
     45 minutëshe. Ne rekomandojmë që të gjithë studentët të lëvizin nga mësimi në
@@ -1605,9 +1644,10 @@ sq:
     nga mësuesit të dizajnuara për t'u përjetuar në unison ndërsa mësimet e ndërtimit
     të aftësive mund të përfundojnë nga studentët me ritmin e tyre.
   csf_page_faq_question_06: Çfarë materialesh më duhen për CS Bazat?
-  csf_page_faq_answer_06: Many lessons have handouts that guide students through activities.
-    These resources can be printed or assigned digitally. Some lessons call for typical
-    classroom supplies and manipulatives. [Visit the CSF Syllabus to learn more](%{syllabus_url}).
+  csf_page_faq_answer_06: Shumë mësime kanë fletëpalosje që udhëheqin studentët përmes
+    aktiviteteve. Këto burime mund të printohen ose caktohen në mënyrë dixhitale.
+    Disa mësime kërkojnë furnizime tipike në klasë dhe manipulues. [Vizitoni programin
+    mësimor të CSF për të mësuar më shumë] ().%{syllabus_url}
   csa_page_top_desc: Introduce students to software engineering and object-oriented
     design while they learn the Java programming language in this free curriculum
     for [AP® Computer Science A (AP® CSA)](%{csa_url}).
@@ -1758,9 +1798,9 @@ sq:
   ai_activity_zooniverse: Zooniverse - Snapshot Mountain Zebra
   ai_activity_zooniverse_desc: Ndihmoni në mbrojtjen e Cape Mountain Zebra të rrezikuar
     duke identifikuar kafshët e ndryshme në imazhe.
-  codeorg_homepage_hoc2018_curriculum: Go further with <a href="%{studio_url}/courses"
-    class="hoc2018-curriculum-link">Code.org courses</a>
-  codeorg_homepage_hoc2018_dance_heading: Create your own <span class="highlight-word">Dance&nbsp;Party</span>
+  codeorg_homepage_hoc2018_curriculum: Shkoni më tej me <a href="%{studio_url}/courses"
+    class="hoc2018-curriculum-link">kurset Code.org</a>
+  codeorg_homepage_hoc2018_dance_heading: Krijoni&nbsp;partinë tuaj të <span class="highlight-word">vallëzimit</span>
   codeorg_homepage_hoc2018_header_line1: Ora e Kodit po vjen...
   codeorg_homepage_hoc2018_header_line2_desktop: Çfarë do të krijoni <span class="hoc2018-highlight-word">?</span>
   codeorg_homepage_hoc2018_header_line2_mobile: Çfarë do të krijoni?
@@ -2097,6 +2137,13 @@ sq:
     në kurset e Code.org, mundësitë lokale ose lajmet e tjera të shkencave kompjuterike?
   signup_email_preference_privacy: "(Shih politikën tonë të privatësisë)"
   signup_email_preference_yes: po
+  signup_email_preference_yes_elementary: Po - Më dërgoni azhurnime në Burimet e Shkollës
+    Fillore
+  signup_email_preference_yes_middle: Po - Më dërgoni azhurnime në Burimet e Shkollës
+    së Mes
+  signup_email_preference_yes_high: Po - Më dërgoni azhurnime në Burimet e Shkollës
+    së Mes
+  signup_email_preference_yes_general: Po - Më dërgoni përditësime të përgjithshme
   signup_email_preference_no: Jo
   signup_email_preference_error: Kërkohet preferenca e emailit
   signup_multiple_event_warning: Nëse ju po organizoni më shumë se një event, ju lutem
@@ -2598,8 +2645,8 @@ sq:
     përtej një ore</a>
   learn_banner_beyond_markdown: Deshironi te vazhdoni te mesoni (Shkoni me tutje se
     vetem nje ore)
-  learn_banner_teachers: 'Teachers: <a id=''teacher_banner_host''>Host an hour</a>
-    or <a id=''teacher_banner_howto''>read the How-To Guide</a>'
+  learn_banner_teachers: 'Mësuesit: <a id=''teacher_banner_host''>Pritni një orë</a>
+    ose <a id=''teacher_banner_howto''>lexoni Udhëzuesin Si-To</a>'
   learn_banner_teachers_markdown: 'Mesuesit: mbani nje ore kodi ose lexoni guiden
     e pjesemarrjes. '
   tutorial_dance2019_name: Festë Vallëzimi
@@ -4740,13 +4787,13 @@ sq:
 
     Ju mund ta çoni aktivitetin edhe më tej duke shtuar imazhin dhe etiketat tuaja (së bashku me shumë opsione të tjera shtesë të projektit, argëtimi nuk mbaron kurrë). Kufjet janë të rekomanduara.
   tutorial_itchj_longdescription: |-
-    Our Jumping activity provides you the coding skills to get a character to jump onto platforms that is used in many arcade style games.
+    Aktiviteti ynë Jumping ju ofron aftësitë e kodimit për të marrë një karakter për t'u hedhur në platforma që përdoren në shumë lojëra të stilit Arcade.
 
-    Use the Jumping skills and create your own game goal.
+    Përdorni aftësitë Jumping dhe për të krijuar qëllimin tuaj lojë.
 
-    This uses a cartesian coordinate system so you'll get to learn a little about screen coordinates here.
+    Kjo përdor një sistem koordinativ kartezian, kështu që ju do të mësoni pak rreth koordinatave të ekranit këtu.
 
-    Enjoy learning all about jumping with Itch! Headphones are recommended.
+    Gëzoni të mësoni gjithçka rreth kërcimit me kruarje! Kufjet janë të rekomanduara.
   tutorial_tickleo_longdescription: Me Tickle, një aplikacion kodimi miqësor për përdoruesit,
     ju lehtë mund ta programoni Orca për të notuar në një numër mënyrash thjesht duke
     zvarritur dhe hedhur blloqe kodimi për të krijuar një komandë që ajo të ndjekë.
@@ -5053,16 +5100,17 @@ sq:
   tutorial_ticklep_longdescription: Me Tickle, një aplikacion kodimi miqësor për përdoruesit,
     ju lehtë mund të programoni Parrot Drone për të notuar në një numër mënyrash thjesht
     duke zvarritur dhe hedhur blloqe kodimi për të krijuar një komandë që ai të ndjekë.
-  tutorial_bbot_longdescription: "With these 3 one-hour coding activities, you don't
-    need any programming knowledge or experience to teach your students about programming!
-    You can teach programming in a fun and easy way. Go over the activities and download
-    our lesson materials including presentation slides, unplugged materials, and solutions
-    guides and you will find yourself ready to teach your first lesson in 20 - 40
-    minutes! \n\nOur activities include both offline and online exercises to teach
-    your students (ages 7 and up) about programming and fundamental programming concepts
-    like for loops and algorithms. Students will apply their knowledge and skills
-    in the Bomberbot online game, where they will program their robot to solve logic-based
-    puzzles in the most efficient way. "
+  tutorial_bbot_longdescription: "Me këto 3 aktivitete kodimi një-orëshe, nuk keni
+    nevojë për ndonjë njohuri ose përvojë programimi për të mësuar studentët tuaj
+    rreth programimit! Ju mund të mësoni programimin në një mënyrë argëtuese dhe të
+    lehtë. Kaloni mbi aktivitetet dhe shkarkoni materialet tona mësimore duke përfshirë
+    diapozitivët e prezantimit, materialet e shkëputura dhe udhëzuesit e zgjidhjeve
+    dhe do ta gjeni veten të gatshëm të jepni mësimin tuaj të parë në 20 - 40 minuta!
+    \n\nAktivitetet tona përfshijnë ushtrime offline dhe online për të mësuar studentët
+    tuaj (moshat 7 vjeç e lart) rreth programimit dhe koncepteve themelore të programimit
+    si për sythe dhe algoritme. Studentët do të aplikojnë njohuritë dhe aftësitë e
+    tyre në lojën online Bomberbot, ku ata do të programojnë robotin e tyre për të
+    zgjidhur enigmat e bazuara në logjikë në mënyrën më efikase. "
   tutorial_scratchg_longdescription: Fëmijët duan të luajnë lojëra në telefonat e
     tyre dhe në kompjuterë. Por si janë programuar? Ky aktivitet i prezanton studentët
     me gjuhën programuese Scratch dhe më pas u tregon atyre se si të programojnë stile
@@ -5258,13 +5306,13 @@ sq:
   tutorial_grok_longdescription: 'Përdorni blloqe drag-and-drop ose gjuhën e bazuar
     në tekst Python për të nxjerrë flamuj nga e gjithë bota, për të krijuar snowflakes
     fantastike, ose për të ndërtuar një chatbot të quajtur “Eliza”. '
-  tutorial_ijournalist_longdescription: "This teacher facilitated lesson teaches Computer
-    Science and Language Arts.  Pupils begin to develop a journalistic style that
-    considers the interest of the reader and presentation of information for an online
-    news story.  Pupils use basic HTML and CSS to create and present an online news
-    story about a fictional school robbery.\n\nIt sets computer science within a meaningful
-    context enabling children to understand the value of computer science in other
-    subject areas. \n\n"
+  tutorial_ijournalist_longdescription: "Ky mësues lehtësuar mësim mëson Shkenca Kompjuterike
+    dhe Artet Gjuhësore. Nxënësit fillojnë të zhvillojnë një stil gazetaresk që konsideron
+    interesin e lexuesit dhe prezantimin e informacionit për një histori të lajmeve
+    në internet. Nxënësit përdorin HTML dhe CSS bazë për të krijuar dhe paraqitur
+    një histori lajmesh në internet për një grabitje imagjinare të shkollës.\n\nAi
+    vendos shkencën kompjuterike brenda një konteksti kuptimplotë që u mundëson fëmijëve
+    të kuptojnë vlerën e shkencave kompjuterike në fusha të tjera lëndore. \n\n"
   tutorial_bbcmusic_longdescription: Plani i mësimit të bazuar në standarde për klasat
     K-5. Merrni fëmijët tuaj në laboratorin kompjuterik me fletë pune në dorë dhe
     ndërtoni aplikacione që përfshijnë muzikë.
@@ -5424,11 +5472,11 @@ sq:
     janë më të vështira për t'u përdorur sesa duhet. Dizajni bën një ndryshim dhe
     është e rëndësishme që ndërfaqet të vlerësohen për të kontrolluar se ato janë
     të lehta për t'u përdorur.
-  tutorial_imathematician_longdescription: "This teacher led activity provides the
-    opportunity for pupils to use a cross curricular approach to computer science
-    and mathematics.  \n\nPupils will create a computer program to solve a variation
-    of a famous problem in a branch of Mathematics (Game Theory), called The Prisoner's
-    Dilemma.\n"
+  tutorial_imathematician_longdescription: "Ky aktivitet i udhëhequr nga mësuesit
+    ofron mundësinë që nxënësit të përdorin një qasje ndër-kurrikulare për shkencat
+    kompjuterike dhe matematikën.  \n\nNxënësit do të krijojnë një program kompjuterik
+    për të zgjidhur një variant të një problemi të famshëm në një degë të Matematikës
+    (Teoria e Lojërave), të quajtur Dilema e të Burgosurit.\n"
   tutorial_tlcmagic_longdescription: 'Duke eksploruar se si funksionon magjia, ju
     mësoni rreth të menduarit kompjuterik: veçanërisht rëndësinë e vlerësimit për
     të menduarit algoritmik. Ju eksploroni testimin dhe analizën e rrezikut. Mashtrimi
@@ -5570,11 +5618,11 @@ sq:
     një aventurë përmes kësaj bote Minecraft.
   tutorial_minecraft-2016_longdescription: Ndërtoni një lojë Minecraft. Krijo versionet
     tuaja të pulave, deleve, Creepers, zombies dhe më shumë.
-  tutorial_thinkersmith-es_longdescription: Mediante el uso de un "Vocabulario Robot"
+  tutorial_thinkersmith-es_longdescription: Programa el uso de un “Vocabulario Robot”
     predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar
-    a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento
-    ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones
-    as&iacute; como la valiosa habilidad de depuraci&oacute;n.
+    a cabo tareas espec ficas sin ser estas diskutidas previamente.&iacute;Este segment
+    sens&ntilde;në los estudiantes la Conneci&oacute;n entre s&iacute;mbolos y acciones
+    as como la valiosa habilidad de depuraci n.&iacute;&oacute;
   tutorial_pixie_longdescription: Udhëzues i orës së kodimit me Pixie
   tutorial_play_longdescription: Krijoni një histori ose bëni një lojë me Play Lab!
     Bëni kafshët, piratët, zombitë, ninjas dhe shumë personazhe të tjerë të lëvizin,
@@ -12855,12 +12903,13 @@ sq:
   tutorial_googlename _longdescription: Zgjidhni një emër dhe sillni shkronjat e fjalës
     në jetë duke përdorur kodin. Zgjidhni një pseudonim, emrin e një kafshe, një kafshë,
     një sport, një vend ose një hobi.
-  tutorial_carnegiezillah_longdescription: Zillah City is thriving, and music is in
-    the air. Rumor has it, the famed Gargantua bot is online and sending the last
-    Toxibots to trash the city block by block…. Grab your cobot hoverboard and get
-    ready to groove, move, and finish off what you started! Players program their
-    cobot hoverbots to change lanes, avoid obstacles, and take out many Toxibots in
-    this rhythm-styled game.
+  tutorial_carnegiezillah_longdescription: Qyteti Zillah po lulëzon dhe muzika është
+    në ajër. Thashethemet e kanë atë, boti i famshëm Gargantua është në internet dhe
+    dërgon Toxibots të fundit për të hedhur plehra bllokun e qytetit për bllok.…Grab
+    hoverboard tuaj cobot dhe të marrë të gatshme për zakon, lëvizin, dhe të përfundojë
+    off atë që keni filluar! Lojtarët programojnë hoverbots e tyre cobot për të ndryshuar
+    korsi, për të shmangur pengesat, dhe për të marrë nga shumë Toxibots në këtë lojë
+    ritm-vetëquajtur.
   tutorial_nasachspacejam_longdescription: Krijoni një sistem diellor që vërtet shkëmbin!
     Mësoni rreth muzikës, astronomisë dhe kodimit në këtë aktivitet të vetë-drejtuar
     (nuk kërkohet përvojë kodimi). Programoni planetet për të bërë muzikë, duke krijuar
@@ -13698,6 +13747,132 @@ sq:
     përfshin një mbyllje zyre 2-javore org-gjerë në fund të vitit aka Pushimi dimëror),
     gjysmën e ditës së punës të premteve gjatë verës aka Summer Fridays, dhe përfitime
     të tjera bujare.
+  csa_ai_page_hero_title: Inxhinieri Softuerësh & Vizioni Komp
+  csa_ai_page_hero_description: 'Ky modul CSA post-AP me dy kapitull u ofron nxënësve
+    të shkollave të mesme përvojë praktike me mjete profesionale të zhvillimit të
+    softuerit, duke përfshirë GitHub dhe GitHub Compilot, dhe u jep atyre aftësitë
+    e botës reale për të zhvilluar një program vizioni kompjuterik. '
+  csa_ai_page_video_section_title: Hap përtej botës së mjediseve programuese Code.org
+  csa_ai_page_video_section_li_1: Mësoni rreth AI dhe aplikacionet e saj
+  csa_ai_page_video_section_li_2: Përvojë praktike me mjetet profesionale të zhvillimit
+    të softuerit
+  csa_ai_page_video_section_li_3: Mësoni praktikat standarde të industrisë
+  csa_ai_page_video_section_li_4: Kultivoni të menduarit kritik
+  csa_ai_page_programming_tools: 'Mjetet e Programimit: Github, Github Copilot, VCode,
+    TensorFlow '
+  csa_ai_page_professional_learning: Asnjë
+  csa_ai_page_curriculum_topics: 'Temat: Programim, Të dhëna, Art dhe Dizajn, Lojëra
+    dhe Animacion'
+  csa_ai_page_curriculum_accessibility_features: Shihni seksionin FAQ për detaje
+  csa_ai_page_curriculum_languages_support: Shqip
+  csa_ai_page_article_title_1: Ndërtoni me Copilot
+  csa_ai_page_article_description_1: Studentët mësojnë se si të përdorin GitHub Copilot
+    si një programues palësh për të shpjeguar kodin ekzistues, për të gjetur dhe rregulluar
+    gabimet dhe për të gjeneruar zgjidhje për problemet e reja.
+  csa_ai_page_article_link_1: Mësoni më shumë rreth Copilot
+  csa_ai_page_article_title_2: Ndërtoni modelin tuaj të AI
+  csa_ai_page_article_description_2: Studentët trajnojnë modelet e tyre të AI duke
+    përdorur Machine Teachable për të njohur imazhet dhe gjestet formojnë një webcam
+    dhe të marrin në konsideratë se si vizioni kompjuterik ndikon në mënyrën se si
+    përdoruesit ndërveprojnë me aplikacionet
+  csa_ai_page_article_link_2: Eksploroni planin e mësimit
+  csa_ai_page_article_title_3: Explore vizionin kompjuterik
+  csa_ai_page_article_description_3: Studentët zbatojnë modelet e AI që krijuan me
+    Machine Teachable në një aplikacion Java, duke përdorur GitHub Copilot për t'i
+    ndihmuar ata të modifikojnë versionet ekzistuese të aplikacioneve për të punuar
+    me inputet e ndryshme.
+  csa_ai_page_article_link_3: Shihni një shembull
+  csa_ai_page_learn_more_section_title: Mësoni më shumë rreth inteligjencës artificiale
+  csa_ai_page_learn_more_title: Eksploroni AI 101 për Mësuesit
+  csa_ai_page_learn_more_description: Zbuloni botën novatore të Inteligjencës Artificiale
+    (AI) dhe potencialin e saj transformues në arsim me serinë tonë gjithëpërfshirëse
+    të të mësuarit në internet për mësuesit.
+  csa_ai_page_learn_more_link: Shikoni serinë AI 101 për Mësuesit
+  csa_ai_page_faq_question_01: Cilat janë parakushtet për këtë modul?
+  csa_ai_page_faq_answer_01_01: 'Para se të zhyten në këtë modul, studentët duhet
+    të posedojnë një njohuri hyrëse të nivelit të Java. Në mënyrë të veçantë, ata
+    duhet të zotërojnë:'
+  csa_ai_page_faq_answer_01_list_01: "**Klasat dhe Objektet: ** Studentët duhet të
+    jenë të njohur me përcaktimin dhe përdorimin e klasave, si dhe krijimin dhe manipulimin
+    e objekteve."
+  csa_ai_page_faq_answer_01_list_02: "**Metodat e shkrimit dhe thirrjes: ** Studentët
+    duhet të jenë në gjendje të përcaktojnë metodat brenda një klase, të kuptojnë
+    parametrat e metodës dhe llojet e kthimit, dhe metodat e thirrjes nga objektet
+    ose metodat e tjera."
+  csa_ai_page_faq_answer_01_list_03: "**1D Vargjeve dhe ArrayLists: ** Ata duhet të
+    jenë të aftë në deklarimin, inicializimin dhe manipulimin e vargjeve një-dimensionale
+    dhe ArrayLists, duke përfshirë përsëritjen përmes tyre."
+  csa_ai_page_faq_answer_01_list_04: "**Përzgjedhja dhe përsëritja: ** Një themel
+    i fortë në deklaratat dhe sythe të kushtëzuara është thelbësore."
+  csa_ai_page_faq_question_01_02: Në mënyrë ideale, studentët që kanë përfunduar AP
+    Shkenca Kompjuterike A ose një kurs me thellësi dhe ashpërsi të ngjashme do të
+    ishin të përgatitur mirë për këtë modul.
+  csa_ai_page_faq_question_02: Si mund ta instaloj softuerin e kërkuar për këtë modul?
+  csa_ai_page_faq_answer_02_01: Ky modul është unik sepse përfshin përdorimin e softuerit
+    të palëve të treta në vend të laboratorëve dhe mjeteve Code.org. [Lexoni më shumë
+    rreth instalimit të softuerit këtu] (%{accessibility_url}).
+  csa_ai_page_faq_question_03: Si mund të mbështes nevojat e aksesit gjatë mësimdhënies
+    së këtij moduli?
+  csa_ai_page_faq_answer_03_01: Ushqimi për nevojat e aksesit është thelbësor për
+    një mjedis mësimi gjithëpërfshirës. [Lexoni më shumë rreth karakteristikave të
+    aksesit në softuerin e përdorur në këtë modul këtu] (%{install_url}).
+  csa_ai_page_faq_question_04: Si mund ta përdor VS Code në Chromebook?
+  csa_ai_page_faq_answer_04: Përdorimi i VS Code në një Chromebook është bërë më i
+    thjeshtë, veçanërisht me aftësinë për të ekzekutuar aplikacione Linux në modelet
+    më të reja të Chromebook. [Lexoni më shumë rreth vendosjes së Kodit VS në Chromebook
+    këtu] ()%{chromebook_url}.
+  csa_ai_page_faq_question_05: Si mund të marr zhvillim profesional për këtë modul?
+  csa_ai_page_faq_answer_05: Aktualisht nuk ka zhvillim specifik profesional për këtë
+    kurs. Nëse po kërkoni të kuptoni se si t'i qaseni Inteligjencës Artificiale në
+    klasën tuaj, mundeni [eksploroni AI 101 për Mësuesit] (%{ai_101_url}).
+  csa_ai_page_faq_question_06: Cila është koha e rekomanduar për mësimin e këtij moduli?
+  csa_ai_page_faq_answer_06_01: Moduli i Inxhinierisë së Softuerit dhe Vizionit Kompjuterik
+    është i strukturuar me mendime për të siguruar mësim gjithëpërfshirës në një afat
+    kohor I gjithë moduli është krijuar për të shtrirë **2 javë udhëzime**. Shumica
+    e mësimeve janë përshtatur për **45 minuta**, ndërsa mësimet ku studentët gërmojnë
+    në zhvillimin e projektit Java janë të dizajnuara për **90 minuta**. Kjo kohë
+    e zgjatur siguron që studentët të kenë mundësi të mjaftueshme për të kuptuar,
+    zbatuar dhe zgjidhur problemet ndërsa punojnë.
+  csa_ai_page_faq_answer_06_02: Ekziston gjithashtu fleksibilitet i qëllimshëm i integruar
+    në strukturën e modulit. Në varësi të dinamikës së klasës, angazhimit të studentëve
+    dhe thellësisë në të cilën dëshironi të eksploroni secilën temë, mund të rregulloni
+    kohëzgjatjen. Për shembull, mësimi Intro to Copilot, i dizajnuar si një mësim
+    45 minutësh, mund të zgjerohet në 90 minuta nëse dëshironi të zhyteni më thellë
+    në mënyrën se si funksionojnë modelet dhe mjetet e mëdha gjuhësore si GitHub Chilot
+    dhe ChatGPT.
+  csa_ai_page_faq_question_07: How can I access answer keys?
+  csa_ai_page_faq_answer_07: Me një llogari të aprovuar të mësuesit, mund të gjeni
+    çelësat e përgjigjeve në një panel blu “Mësues” Vetëm që tregon në mësimet dhe
+    aktivitetet në internet. Nëse keni nevojë për një llogari të aprovuar të mësuesit,
+    mund të aplikoni për qasje në materialet e mbrojtura vetëm për mësuesit (çelësat
+    e përgjigjes, etj) përmes [kjo formë] ().%{form_url}Ju lutemi mbani në mend se
+    mund të duhen 3-5 ditë pune për të verifikuar llogarinë tuaj.
+  csa_ai_page_faq_question_08: A është ky modul i hartuar sipas standardeve?
+  csa_ai_page_faq_answer_08: Po, programi mësimor i Inxhinierisë së Softuerit dhe
+    Vizionit Kompjuterik është hartuar në [Standardet CSTA K-12] (%{csta_k12_url})
+    dhe AI për [Udhëzimet K-12] ().%{k12_url}
+  csa_ai_page_faq_question_09: Sa kushton për të mësuar këtë modul?
+  csa_ai_page_faq_answer_09_01: Kurrikula dhe platforma jonë janë në dispozicion në
+    [pa kosto] (%{no_cost_url}) për këdo, kudo, për të dhënë mësim!
+  csa_ai_page_faq_answer_09_02: Për më tepër, softueri dhe mjetet e përdorura në këtë
+    modul janë falas. GitHub Copilot është falas për të verifikuar [teachers](%{teachers_url})
+    dhe (). [students]%{students_url}
+  csa_ai_page_faq_question_10: Çfarë të bëj nëse instalimi i softuerit nuk funksionon?
+  csa_ai_page_faq_answer_10: Përballimi i çështjeve gjatë instalimit të softuerit
+    mund të jetë i zakonshëm, por ka hapa sistematikë që mund të ndiqni për të zgjidhur
+    dhe zgjidhur ato. [Shikoni disa këshilla për zgjidhjen e problemeve këtu] (%{troubleshooting_url}).
+  csa_ai_page_faq_question_11: How was the curriculum developed?
+  csa_ai_page_faq_answer_11_01: 'Kurrikula jonë e Inxhinierisë së Softuerit dhe Vizionit
+    Kompjuterik është dizajnuar me vlerat tona Qëllimet e mëposhtme udhëzuan krijimin
+    e këtij programi mësimor:'
+  csa_ai_page_faq_answer_11_list_01: "**Qëllimi 1: ** Përdorni mjetet e AI për të
+    gjeneruar, korrigjuar dhe modifikuar kodin."
+  csa_ai_page_faq_answer_11_list_02: "**Qëllimi 2: ** Kalimi nga Java Lab në mjetet
+    e botës reale."
+  csa_ai_page_faq_answer_11_list_03: "**Qëllimi 3: ** Thelloni të kuptuarit se si
+    modelet e AI trajnohen dhe integrohen në programe."
+  csa_ai_page_faq_answer_11_02: Për më shumë informacion në lidhje me vlerat që udhëhoqën
+    punën tonë, ju lutemi shikoni [vlerat e kurrikulës] (%{curriculum_values_url}).
   language_code:
     ar: arabisht
     az: Azerbajxhanisht

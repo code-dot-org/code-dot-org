@@ -189,6 +189,17 @@ kn:
   grade_level_label_elementary: ಎಲಿಮೆಂಟರಿ ಶಾಲೆ
   grade_level_label_middle: ಮಾಧ್ಯಮಿಕ ಶಾಲೆ
   grade_level_label_high: ಪ್ರೌಢಶಾಲೆ
+  curricula_title_elementary: ಪ್ರಾಥಮಿಕ ಶಾಲಾ ಪಠ್ಯಕ್ರಮ
+  curricula_desc_elementary: ನಿಮ್ಮ ಪ್ರಾಥಮಿಕ ಶಾಲಾ ವಿದ್ಯಾರ್ಥಿಗಳೊಂದಿಗೆ ಕಂಪ್ಯೂಟರ್ ವಿಜ್ಞಾನವನ್ನು
+    ಅನ್ವೇಷಿಸಲು ನಿಮ್ಮನ್ನು ಆಹ್ವಾನಿಸುವ ವಿನೋದ, ಉಚಿತ ಕೋರ್ಸ್ಗಳು ಮತ್ತು ಚಟುವಟಿಕೆಗಳನ್ನು ಬ್ರೌಸ್
+    ಮಾಡಿ.
+  curricula_title_middle: ಮಧ್ಯಮ ಶಾಲಾ ಪಠ್ಯಕ್ರಮ
+  curricula_desc_middle: ಕಂಪ್ಯೂಟರ್ ವಿಜ್ಞಾನವನ್ನು ಒಟ್ಟಿಗೆ ಅನ್ವೇಷಿಸಲು ನಿಮಗೆ ಮತ್ತು ನಿಮ್ಮ
+    ಮಧ್ಯಮ ಶಾಲಾ ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ ಅನುವು ಮಾಡಿಕೊಡುವ ಆಕರ್ಷಕ ಕೊಡುಗೆಗಳನ್ನು ಬ್ರೌಸ್ ಮಾಡಿ.
+  curricula_title_high: ಹೈಸ್ಕೂಲ್ ಪಠ್ಯಕ್ರಮ
+  curricula_desc_high: ಕಂಪ್ಯೂಟರ್ ವಿಜ್ಞಾನದಲ್ಲಿ ಆಳವಾಗಿ ಅಗೆಯಲು ನಿಮ್ಮನ್ನು ಮತ್ತು ನಿಮ್ಮ
+    ಪ್ರೌ school ಶಾಲಾ ವಿದ್ಯಾರ್ಥಿಗಳನ್ನು ಆಹ್ವಾನಿಸುವ ಬಲವಾದ ಕೋರ್ಸ್ಗಳು ಮತ್ತು ಚಟುವಟಿಕೆಗಳನ್ನು
+    ಬ್ರೌಸ್ ಮಾಡಿ.
   students_label: ವಿದ್ಯಾರ್ಥಿಗಳು
   teachers_label: ಶಿಕ್ಷಕರು
   teacher_label_csf: ಸಿಎಸ್ ಫಂಡಮೆಂಟಲ್ಸ್ ಟೀಚರ್
@@ -215,6 +226,13 @@ kn:
   call_to_action_explore_choice_level: ಉದಾಹರಣೆ ಆಯ್ಕೆಯ ಮಟ್ಟವನ್ನು ಅನ್ವೇಷಿಸಿ
   call_to_action_explore_collection: ಕಲೆಕ್ಷನ್ ಅನ್ವೇಷಿಸಿ
   call_to_action_explore_unplugged_lesson: ಅನ್‌ಪ್ಲಗ್ಡ್‌ ಪಾಠಗಳನ್ನು ಅನ್ವೇಷಿಸಿ
+  call_to_action_explore_csf: ಸಿಎಸ್ ಫಂಡಮೆಂಟಲ್ಸ್ ಅನ್ನು ಅನ್ವೇಷಿಸಿ
+  call_to_action_explore_csd: ಸಿಎಸ್ ಅನ್ವೇಷಣೆಗಳನ್ನು ಅನ್ವೇಷಿಸಿ
+  call_to_action_explore_csp: ಸಿಎಸ್ ತತ್ವಗಳನ್ನು ಅನ್ವೇಷಿಸಿ
+  call_to_action_explore_csc: ಸಿಎಸ್ ಸಂಪರ್ಕಗಳನ್ನು ಅನ್ವೇಷಿಸಿ
+  call_to_action_explore_csa: ಎಪಿ® ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್ ಎ ಅನ್ನು ಅನ್ವೇಷಿಸಿ
+  call_to_action_explore_maker: ಮೇಕರ್ ಪಠ್ಯಕ್ರಮವನ್ನು ಅನ್ವೇಷಿಸಿ
+  call_to_action_explore_hoc: ಅವರ್ ಆಫ್ ಕೋಡ್ ಟ್ಯುಟೋರಿಯಲ್ ಅನ್ನು ಅನ್ವೇಷಿಸಿ
   call_to_action_try_app_lab: ಆ್ಯಪ್‌ ಲ್ಯಾಬ್ ಅನ್ನು ಪ್ರಯತ್ನಿಸಿ
   call_to_action_view_lesson_plan: ಪಾಠ ಯೋಜನೆಯನ್ನು ವೀಕ್ಷಿಸಿ
   call_to_action_self_paced_pl: ಸ್ವಯಂ ಗತಿಯ ವೃತ್ತಿಪರ ಕಲಿಕೆಯನ್ನು ಪ್ರಾರಂಭಿಸಿ
@@ -259,6 +277,7 @@ kn:
   call_to_action_notify_available: ಲಭ್ಯವಿದ್ದಾಗ ನನಗೆ ಸೂಚಿಸಿ
   call_to_action_register_early_access: ಆರಂಭಿಕ ಪ್ರವೇಶಕ್ಕಾಗಿ ನೋಂದಾಯಿಸಿ
   call_to_action_open_positions: ತೆರೆದ ಸ್ಥಾನಗಳನ್ನು ವೀಕ್ಷಿಸಿ
+  call_to_action_get_guide: ಮಾರ್ಗದರ್ಶಿ ಪಡೆಯಿರಿ
   aria_label_call_to_action_afe: ಅಮೆಜಾನ್ ಫ್ಯೂಚರ್ ಎಂಜಿನಿಯರ್ ಬಗ್ಗೆ ಇನ್ನಷ್ಟು ತಿಳಿಯಿರಿ
   aria_label_call_to_action_teaching_csf: ಬೋಧನಾ ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್ ಫಂಡಮೆಂಟಲ್ಸ್ ವೃತ್ತಿಪರ
     ಕಲಿಕಾ ಕಾರ್ಯಕ್ರಮವನ್ನು ಪ್ರಾರಂಭಿಸಿ
@@ -367,6 +386,8 @@ kn:
   curriculum_name_csa: ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್‌ A
   curriculum_name_csc_02: ಯಾವುದೇ CS ಕನೆಕ್ಷನ್‌ಗಳ ಮಾಡ್ಯೂಲ್
   curriculum_name_ai: ಎಐ ಮತ್ತು ಯಂತ್ರ ಕಲಿಕೆ
+  curriculum_name_artificial_intelligence: ಕೃತಕ ಬುದ್ಧಿಮತ್ತೆ (ಎಐ)
+  curriculum_name_maker: ತಯಾರಕ
   curriculum_name_maker_cp: ಸಾಧನಗಳೊಂದಿಗೆ ಅಪ್ಲಿಕೇಶನ್ಗಳನ್ನು ರಚಿಸುವುದು (ಸರ್ಕ್ಯೂಟ್ ಆಟದ
     ಮೈದಾನ)
   curriculum_name_maker_microbit: 'ಸಾಧನಗಳೊಂದಿಗೆ ಅಪ್ಲಿಕೇಶನ್ಗಳನ್ನು ರಚಿಸುವುದು (ಮೈಕ್ರೊ:
@@ -428,6 +449,12 @@ kn:
     ಅನ್ವೇಷಿಸಿ. ಹಾರ್ಡ್‌ವೇರ್‌ ಇನ್‌ಪುಟ್‌ಳು ಮತ್ತು ಔಟ್‌ಪುಟ್‌ಗಳನ್ನು ಬಳಸಿಕೊಳ್ಳುವ ಪ್ರೋಗ್ರಾಂಗಳನ್ನು
     ಅಭಿವೃದ್ಧಿಪಡಿಸಿ. ಮೈಕ್ರೋ:ಬಿಟ್ ಮತ್ತು ಸರ್ಕ್ಯೂಟ್ ಪ್ಲೇಗ್ರೌಂಡ್‌ ಎರಡಕ್ಕೂ ಈ ಯುನಿಟ್‌ ಆವೃತ್ತಿ
     ಇದೆ.
+  curriculum_desc_csa: ಎಪಿ® ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್ ಎ (ಎಪಿ® ಸಿಎಸ್ಎ) ಗಾಗಿ ಈ ಉಚಿತ ಪಠ್ಯಕ್ರಮದಲ್ಲಿ
+    ಜಾವಾ ಪ್ರೋಗ್ರಾಮಿಂಗ್ ಭಾಷೆಯನ್ನು ಕಲಿಯುವಾಗ ಸಾಫ್ಟ್ವೇರ್ ಎಂಜಿನಿಯರಿಂಗ್ ಮತ್ತು ಆಬ್ಜೆಕ್ಟ್-ಓರಿಯೆಂಟೆಡ್
+    ವಿನ್ಯಾಸಕ್ಕೆ ವಿದ್ಯಾರ್ಥಿಗಳನ್ನು ಪರಿಚಯಿಸಿ.
+  curriculum_desc_maker: ಮೇಕರ್ ಶಿಕ್ಷಣವು STEM (ವಿಜ್ಞಾನ, ತಂತ್ರಜ್ಞಾನ, ಎಂಜಿನಿಯರಿಂಗ್, ಗಣಿತ)
+    ಅನ್ನು ಒಂದು ಹೆಜ್ಜೆ ಮುಂದೆ ಕೊಂಡೊಯ್ಯುತ್ತದೆ, ಸಮಸ್ಯೆ ಪರಿಹಾರ ಮತ್ತು ವಿಮರ್ಶಾತ್ಮಕ ಚಿಂತನೆಯನ್ನು
+    ಕಲಿಸಲು ಸಹಾಯ ಮಾಡಲು ತರಗತಿಗೆ ಅನುಭವ ಮತ್ತು ಸಹಯೋಗವನ್ನು ಆಹ್ವಾನಿಸುವ ಮೂಲಕ.
   collection_hardware: ಹಾರ್ಡ್‌ವೇರ್‌ನ ಮೇಲೆ ಗಮನ ಹರಿಸಿ
   collection_hardware_desc: ಸಮಸ್ಯೆಗಳನ್ನು ಪರಿಹರಿಸಲು ಡೇಟಾ ಮತ್ತು ಭೌತಿಕ ಸಾಧನಗಳನ್ನು ಬಳಸಲು
     ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ ಅಧಿಕಾರ ನೀಡುತ್ತದೆ.
@@ -460,6 +487,7 @@ kn:
   module_label_professional_learning: 'ವೃತ್ತಿಪರ ಕಲಿಕೆ:'
   module_label_languages: 'ಬೆಂಬಲಿತ ಭಾಷೆಗಳು:'
   module_label_accessibility_features: 'ಪ್ರವೇಶಿಸುವಿಕೆ:'
+  module_label_accessibility_features_full: 'ಪ್ರವೇಶಿಸುವಿಕೆ ವೈಶಿಷ್ಟ್ಯಗಳು:'
   module_label_educator_tool: ಶಿಕ್ಷಕ ಸಾಧನ
   module_label_educator_course: ಎಜುಕೇಟರ್ ಕೋರ್ಸ್
   module_label_student_tool: ವಿದ್ಯಾರ್ಥಿ ಸಾಧನ
@@ -467,6 +495,7 @@ kn:
   module_label_student_content_resources: ವಿಷಯ ಮತ್ತು ಸಂಪನ್ಮೂಲಗಳು
   module_label_new: ಹೊಸ
   module_label_coming_soon: ಶೀಘ್ರದಲ್ಲೇ ಬರಲಿದೆ
+  module_label_available_now: ಈಗ ಲಭ್ಯವಿದೆ
   module_label_video_series: ವೀಡಿಯೊ ಸರಣಿ
   module_label_self_paced: ಸ್ವಯಂ ಗತಿಯ ಮಾಡ್ಯೂಲ್
   module_ages_5_10: 5-10
@@ -477,6 +506,8 @@ kn:
   module_grade_2_5: 2-5
   module_grade_3_5: 3-5
   module_grade_3_8: 3-8
+  module_grade_k_12: ಕೆ-12
+  module_grade_3_12: 3-12
   module_grade_6_12: 6-12
   module_grade_6_10: 6-10
   module_grade_9_12: 9-12
@@ -491,7 +522,9 @@ kn:
   module_grade_9_12_teachers: 9-12 ಶಿಕ್ಷಕರು
   module_level_beginner: ಪ್ರಾರಂಭಿಕ
   module_level_intermediate: ಮಧ್ಯಂತರ
+  module_level_advanced: ಸುಧಾರಿತ
   module_duration_45_mins: 45 ನಿಮಿಷಗಳ
+  module_duration_2_weeks: 2 ವಾರಗಳು
   module_duration_1_hr: 1 ಗಂಟೆ
   module_duration_2_hrs: 2 ಗಂಟೆಗಳ
   module_duration_3_hrs: 3 ಗಂಟೆಗಳ
@@ -573,6 +606,8 @@ kn:
   heading_java_lab: ಜಾವಾ ಲ್ಯಾಬ್
   heading_objects_first: ವಸ್ತುಗಳು ಮೊದಲು
   heading_these_lessons_will: 'ಈ ಪಾಠಗಳನ್ನು ತಿನ್ನುವೆ:'
+  heading_explore_curriculum_catalog: ಪಠ್ಯಕ್ರಮ ಕ್ಯಾಟಲಾಗ್ನಲ್ಲಿ ನಮ್ಮ ಎಲ್ಲಾ ಕೋರ್ಸ್ಗಳನ್ನು
+    ಅನ್ವೇಷಿಸಿ
   professional_learning_section_desc: ನೀವು ಕಲಿಸಲು ತಯಾರಿ ನಡೆಸುವಾಗ ನಿಮಗೆ ಅಗತ್ಯವಿರುವ
     ಬೆಂಬಲವನ್ನು ಪಡೆಯಿರಿ. ಶಿಕ್ಷಕರು ಇದನ್ನು ಪ್ರೀತಿಸುತ್ತಾರೆ, 90% ಕ್ಕಿಂತ ಹೆಚ್ಚು ಶ್ರೇಯಾಂಕದೊಂದಿಗೆ
     ಇದು ಅತ್ಯುತ್ತಮ ವೃತ್ತಿಪರ ಅಭಿವೃದ್ಧಿಯಾಗಿದೆ!
@@ -827,6 +862,10 @@ kn:
     ನಲ್ಲಿ ಎರಡು ಹೊಸ ವೀಡಿಯೊಗಳನ್ನು ಒಳಗೊಂಡಿದೆ. ಈ ಹೊಸ ತಂತ್ರಜ್ಞಾನಗಳು ತಜ್ಞರಿಂದ ನೇರವಾಗಿ ಹೇಗೆ
     ಕಾರ್ಯನಿರ್ವಹಿಸುತ್ತವೆ ಎಂಬುದನ್ನು ಕೇಳಿ: ಮೀರಾ ಮುರಟಿ, ಓಪನ್ ಎಐನ ಸಿಟಿಒ ಮತ್ತು ರನ್ವೇಎಂಎಲ್ನ
     ಸಿಇಒ ಕ್ರಿಸ್ಟೋಬಲ್ ವೇಲೆನ್ಜುವೆಲಾ.'
+  ai_pl_101_llm_slides_title: ಶಿಕ್ಷಕರಿಗೆ ದೊಡ್ಡ ಭಾಷಾ ಮಾದರಿ ಅಪೇಕ್ಷಿಸುತ್ತದೆ
+  ai_pl_101_llm_slides_desc: ಚಾಟ್ಜಿಪಿಟಿಯಂತಹ ಎಲ್ಎಲ್ಎಂಗಳಿಂದ, ಹರಿಕಾರರಿಂದ ಸುಧಾರಿತ ವರೆಗೆ
+    ಉತ್ತಮ ಔಟ್ಪುಟ್ ಪಡೆಯುವ ಸಾಧನಗಳು. ತಮ್ಮ ಕಾಲ್ಬೆರಳುಗಳನ್ನು ಮುಳುಗಿಸುವವರಿಗೆ ಸ್ಟಾರ್ಟರ್ ಪ್ರಾಂಪ್ಟ್ಗಳನ್ನು
+    ಒಳಗೊಂಡಿದೆ, ಜೊತೆಗೆ ಅವರ ಸಾಮರ್ಥ್ಯವನ್ನು ಹೆಚ್ಚಿಸಲು ಬಯಸುವವರಿಗೆ ಸುಧಾರಿತ ಸಾಧನಗಳನ್ನು ಒಳಗೊಂಡಿದೆ.
   how_ai_works_hero_heading: AI ಹೇಗೆ ಕಾರ್ಯನಿರ್ವಹಿಸುತ್ತದೆ
   how_ai_works_hero_desc: "“ಹೌ ಎಐ ವರ್ಕ್ಸ್,” ನಮ್ಮ ವೀಡಿಯೊ ಸರಣಿ ಮತ್ತು ಅದರ ಜೊತೆಗಿನ ಪಾಠಗಳೊಂದಿಗೆ
     AI ಜಗತ್ತಿನಲ್ಲಿ ಧುಮುಕುವುದಿಲ್ಲ!"
@@ -1438,10 +1477,10 @@ kn:
     ಪ್ರವೇಶವಿಲ್ಲದಿದ್ದರೆ ಪರ್ಯಾಯ ಚಟುವಟಿಕೆಗಳು ಲಭ್ಯವಿದೆ.
   csd_page_faq_answer_04_06: ಸಾಧನಗಳೊಂದಿಗೆ ಅಪ್ಲಿಕೇಶನ್ಗಳನ್ನು ರಚಿಸುವುದು (ಆಯ್ಕೆ ಎ ಮತ್ತು
     ಆಯ್ಕೆ ಬಿ)
-  csd_page_faq_answer_04_07: 'Option A: Classroom set of Circuit Playgrounds. Check
-    out [code.org/maker/circuitplayground](%{url}) for more details.'
-  csd_page_faq_answer_04_08: 'Option B: Classroom set of micro:bit devices. Check
-    out [code.org/maker/microbit](%{url}) for more details.'
+  csd_page_faq_answer_04_07: 'ಆಯ್ಕೆ ಎ: ಸರ್ಕ್ಯೂಟ್ ಆಟದ ಮೈದಾನಗಳ ತರಗತಿ ಸೆಟ್. ಪರಿಶೀಲಿಸಿ
+    [code.org/maker/circuitplayground] () ಹೆಚ್ಚಿನ ವಿವರಗಳಿಗಾಗಿ.%{url}'
+  csd_page_faq_answer_04_08: 'ಆಯ್ಕೆ ಬಿ: ಮೈಕ್ರೋ:ಬಿಟ್ ಸಾಧನಗಳ ತರಗತಿ ಸೆಟ್. ಹೆಚ್ಚಿನ ವಿವರಗಳಿಗಾಗಿ
+    [code.org/maker/microbit] () ಪರಿಶೀಲಿಸಿ.%{url}'
   csd_page_faq_answer_04_09: ಖಾಲಿ ಅಂಗಾಂಶ ಪೆಟ್ಟಿಗೆಗಳು ಅಥವಾ ಕಾರ್ಡ್ಬೋರ್ಡ್ ರೋಲ್ಗಳು ಅಥವಾ
     ಸ್ಕ್ರ್ಯಾಚ್ ಪೇಪರ್ನಂತಹ ಮೇಕರ್ ಸರಬರಾಜು
   csd_page_faq_answer_04_10: "* ಗಮನಿಸಿ: ಸಾಧನಗಳ ಘಟಕದೊಂದಿಗೆ ಅಪ್ಲಿಕೇಶನ್ಗಳನ್ನು ರಚಿಸುವುದು
@@ -1450,12 +1489,12 @@ kn:
     ಅಥವಾ ಎರಡೂ ಯುನಿಟ್ ಆಯ್ಕೆಗಳನ್ನು ಸಮನಾಗಿರುವುದರಿಂದ ಮತ್ತು ಒಂದೇ ವಿಷಯವನ್ನು ಒಳಗೊಂಡಿರುವಂತೆ
     ಕಲಿಸಬಾರದು."
   csd_page_faq_question_06: CS ಡಿಸ್ಕವರೀಸ್ ಇತರ Code.org ಕೋರ್ಸ್ಗಳೊಂದಿಗೆ ಹೇಗೆ ಹೊಂದಿಕೊಳ್ಳುತ್ತದೆ?
-  csd_page_faq_answer_06_01: CS Discoveries is designed to fit naturally between our
-    [CS Fundamentals](%{csf_url}) courses and our [CS Principles](%{csp_url}) course.
-    While each of these courses is designed to be an age-appropriate entry point to
-    computer science, students with previous experience will find many new topics
-    to explore, and they will revisit familiar topics in novel and more challenging
-    contexts.
+  csd_page_faq_answer_06_01: ಸಿಎಸ್ ಡಿಸ್ಕವರೀಸ್ ನಮ್ಮ [ಸಿಎಸ್ ಫಂಡಮೆಂಟಲ್ಸ್] (%{csf_url})
+    ಕೋರ್ಸ್ಗಳು ಮತ್ತು ನಮ್ಮ [ಸಿಎಸ್ ಪ್ರಿನ್ಸಿಪಲ್ಸ್] () ಕೋರ್ಸ್ ನಡುವೆ ನೈಸರ್ಗಿಕವಾಗಿ ಹೊಂದಿಕೊಳ್ಳಲು
+    ವಿನ್ಯಾಸಗೊಳಿಸಲಾಗಿದೆ.%{csp_url}ಈ ಪ್ರತಿಯೊಂದು ಕೋರ್ಸ್ಗಳನ್ನು ಕಂಪ್ಯೂಟರ್ ವಿಜ್ಞಾನಕ್ಕೆ ವಯಸ್ಸಿಗೆ
+    ಸೂಕ್ತವಾದ ಪ್ರವೇಶ ಬಿಂದುವಾಗಿ ವಿನ್ಯಾಸಗೊಳಿಸಲಾಗಿದ್ದರೂ, ಹಿಂದಿನ ಅನುಭವ ಹೊಂದಿರುವ ವಿದ್ಯಾರ್ಥಿಗಳು
+    ಅನ್ವೇಷಿಸಲು ಅನೇಕ ಹೊಸ ವಿಷಯಗಳನ್ನು ಕಂಡುಕೊಳ್ಳುತ್ತಾರೆ, ಮತ್ತು ಅವರು ಕಾದಂಬರಿ ಮತ್ತು ಹೆಚ್ಚು
+    ಸವಾಲಿನ ಸಂದರ್ಭಗಳಲ್ಲಿ ಪರಿಚಿತ ವಿಷಯಗಳನ್ನು ಮರುಪರಿಶೀಲಿಸುತ್ತಾರೆ.
   csc_page_top_desc: ಕಂಪ್ಯೂಟರ್ ವಿಜ್ಞಾನ (ಸಿಎಸ್) ಮತ್ತು ಗಣಿತ, ಭಾಷಾ ಕಲೆಗಳು, ವಿಜ್ಞಾನ ಮತ್ತು
     ಸಾಮಾಜಿಕ ಅಧ್ಯಯನಗಳಂತಹ ಇತರ ವಿಷಯಗಳ ನಡುವೆ ಸಂಪರ್ಕವನ್ನು ಮಾಡಿ.
   csc_page_intro_heading: ಕೋರ್ ವಿಷಯದ ಮಾನದಂಡಗಳನ್ನು ಒಳಗೊಂಡಿರುವಾಗ ಸಿಎಸ್ ಅನ್ನು ಕಲಿಸಿ
@@ -1586,9 +1625,10 @@ kn:
     ತಮ್ಮದೇ ಆದ ವೇಗದಲ್ಲಿ ಪೂರ್ಣಗೊಳಿಸಬಹುದಾದರೂ ಅನೇಕ ಶಿಕ್ಷಕರ ನೇತೃತ್ವದ ಯೋಜನಾ ಮಟ್ಟಗಳು ಏಕತೆಯಿಂದ
     ಅನುಭವಿಸಲು ವಿನ್ಯಾಸಗೊಳಿಸಲ್ಪಟ್ಟಿವೆ.
   csf_page_faq_question_06: ಸಿಎಸ್ ಫಂಡಮೆಂಟಲ್ಸ್ಗೆ ನನಗೆ ಯಾವ ವಸ್ತುಗಳು ಬೇಕು?
-  csf_page_faq_answer_06: Many lessons have handouts that guide students through activities.
-    These resources can be printed or assigned digitally. Some lessons call for typical
-    classroom supplies and manipulatives. [Visit the CSF Syllabus to learn more](%{syllabus_url}).
+  csf_page_faq_answer_06: ಅನೇಕ ಪಾಠಗಳು ಚಟುವಟಿಕೆಗಳ ಮೂಲಕ ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ ಮಾರ್ಗದರ್ಶನ ನೀಡುವ
+    ಕರಪತ್ರಗಳನ್ನು ಹೊಂದಿವೆ. ಈ ಸಂಪನ್ಮೂಲಗಳನ್ನು ಡಿಜಿಟಲ್ ರೂಪದಲ್ಲಿ ಮುದ್ರಿಸಬಹುದು ಅಥವಾ ನಿಯೋಜಿಸಬಹುದು.
+    ಕೆಲವು ಪಾಠಗಳು ವಿಶಿಷ್ಟ ತರಗತಿಯ ಸರಬರಾಜು ಮತ್ತು ಕುಶಲತೆಗಾಗಿ ಕರೆ ಮಾಡುತ್ತವೆ. [ಇನ್ನಷ್ಟು
+    ತಿಳಿದುಕೊಳ್ಳಲು ಸಿಎಸ್ಎಫ್ ಪಠ್ಯಕ್ರಮವನ್ನು ಭೇಟಿ ಮಾಡಿ] ().%{syllabus_url}
   csa_page_top_desc: Introduce students to software engineering and object-oriented
     design while they learn the Java programming language in this free curriculum
     for [AP® Computer Science A (AP® CSA)](%{csa_url}).
@@ -1737,8 +1777,8 @@ kn:
   ai_activity_zooniverse: ಝೂನಿವರ್ಸ್‌ - ಸ್ನಾಪ್‌ಶಾಟ್ ಮೌಂಟೇನ್‌ ಝೆಬ್ರಾ
   ai_activity_zooniverse_desc: ಚಿತ್ರಗಳಲ್ಲಿ ವಿಭಿನ್ನ ಪ್ರಾಣಿಗಳನ್ನು ಗುರುತಿಸುವ ಮೂಲಕ ಅಳಿವಿನಂಚಿನಲ್ಲಿರುವ
     ಕೇಪ್ ಮೌಂಟೇನ್ ಝೆಬ್ರಾ ರಕ್ಷಿಸಲು ಸಹಾಯ ಮಾಡಿ.
-  codeorg_homepage_hoc2018_curriculum: Go further with <a href="%{studio_url}/courses"
-    class="hoc2018-curriculum-link">Code.org courses</a>
+  codeorg_homepage_hoc2018_curriculum: <a href="%{studio_url}/courses" class="hoc2018-curriculum-link">Code.org
+    ಕೋರ್ಸ್ಗಳೊಂದಿಗೆ ಮುಂದುವರಿಯಿರಿ</a>
   codeorg_homepage_hoc2018_dance_heading: ನಿಮ್ಮದೇ ಆದದನ್ನು ರಚಿಸಿ <span class="highlight-word">ನೃತ್ಯ&nbsp;ಪಾರ್ಟಿ</span>
   codeorg_homepage_hoc2018_header_line1: ಕೋಡ್ ಅವರ್ ಬರುತ್ತಿದೆ...
   codeorg_homepage_hoc2018_header_line2_desktop: ನೀವು <span class="hoc2018-highlight-word">ಏನು
@@ -1952,7 +1992,7 @@ kn:
     ಪ್ರಚಾರ ಮಾಡುವುದು"
   whats_next_how_to_promote_link: "<a href='/promote'>ಕೋಡ್</a>ರ ಅವರ್ ಅನ್ನು ಹೇಗೆ ಪ್ರಚಾರ
     ಮಾಡುವುದು"
-  whats_next_try: "<a href='%{learn_url}'>Try tutorials</a>"
+  whats_next_try: "<a href='%{learn_url}'>ಟ್ಯುಟೋರಿಯಲ್ ಪ್ರಯತ್ನಿಸಿ</a>"
   whats_next_try_button: ಟ್ಯುಟೋರಿಯಲ್ ಪ್ರಯತ್ನಿಸಿ
   n_have_learned_an_hoc: "<h1></h1>ಅನ್ನು ಪ್ರಯತ್ನಿಸಿ<h2>ಕೋಡ್ ಗಂಟೆ</h2><h3>#</h3>ಸೇವೆ
     ಸಲ್ಲಿಸಲಾಗಿದೆ"
@@ -1975,9 +2015,9 @@ kn:
   front_join_us_header: ಯಾರಾದರೂ ಮೂಲಭೂತ ಅಂಶಗಳನ್ನು ಕಲಿಯಬಹುದು ಮತ್ತು ಅದನ್ನು ಆನಂದಿಸಬಹುದು!
   front_join_us_volunteer_header: ಅವರ್ ಆಫ್ ಕೋಡ್ಗಾಗಿ ಸ್ವಯಂಸೇವಕರು
   front_join_us_tutorials: ನಿಮ್ಮ ಅವರ್ ಆಫ್ ಕೋಡ್ ಟ್ಯುಟೋರಿಯಲ್ ಅನ್ನು ಆರಿಸಿ!
-  front_join_us_tutorials_link: Filter and browse <i>over 200 tutorials and lesson
-    plans</i>! Find activities for different subject areas, multiple hardware needs,
-    and students at any experience level.
+  front_join_us_tutorials_link: 200 <i>ಕ್ಕೂ ಹೆಚ್ಚು ಟ್ಯುಟೋರಿಯಲ್ ಮತ್ತು ಪಾಠ ಯೋಜನೆಗಳನ್ನು
+    ಫಿಲ್ಟರ್ ಮಾಡಿ ಮತ್ತು ಬ್ರೌಸ್ ಮಾಡಿ!</i>ಯಾವುದೇ ಅನುಭವದ ಮಟ್ಟದಲ್ಲಿ ವಿಭಿನ್ನ ವಿಷಯ ಪ್ರದೇಶಗಳು,
+    ಬಹು ಹಾರ್ಡ್ವೇರ್ ಅಗತ್ಯತೆಗಳು ಮತ್ತು ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ ಚಟುವಟಿಕೆಗಳನ್ನು ಹುಡುಕಿ.
   front_join_us_robotics: ರೋಬೋಟ್ಗಳು ಅಥವಾ ಸರ್ಕ್ಯೂಟ್ಗಳನ್ನು ಗೆದ್ದಿರಿ!
   front_join_us_robotics_link: ನಿಮ್ಮ ವಿದ್ಯಾರ್ಥಿಗಳೊಂದಿಗೆ ಬಳಸಲು ರೋಬೋಟ್ಗಳು ಅಥವಾ ಭೌತಿಕ
     ಕಂಪ್ಯೂಟಿಂಗ್ ಕಿಟ್ಗಳ ಗುಂಪನ್ನು ನೀವು ಬಯಸುವಿರಾ? ನಮ್ಮ ಉದಾರ ಪಾಲುದಾರರು 75 ತರಗತಿ ಕೊಠಡಿಗಳಿಗೆ
@@ -2010,7 +2050,8 @@ kn:
   front_join_us_sign_up: ಸೈನ್ ಅಪ್ ಮಾಡಿ
   front_join_us_host: ಅದನ್ನು ಹೋಸ್ಟ್ ಮಾಡಿ
   front_join_us_support: ಅದನ್ನು ಬೆಂಬಲಿಸಿ
-  front_join_us_more_info: For more information, please visit <a href='https://code.org'>code.org</a>.
+  front_join_us_more_info: ಹೆಚ್ಚಿನ ಮಾಹಿತಿಗಾಗಿ, ದಯವಿಟ್ಟು <a href='https://code.org'></a>code.org
+    ಗೆ ಭೇಟಿ ನೀಡಿ.
   front_join_us_code_info: ಹೆಚ್ಚಿನ ಮಾಹಿತಿಗಾಗಿ, ದಯವಿಟ್ಟು code.org ಗೆ ಭೇಟಿ ನೀಡಿ
   front_join_us_n_students_served: "# ಒದಗಿಸಲಾಗಿದೆ."
   front_join_us_challenge: ಸೆಲೆಬ್ರಿಟಿಗಳೊಂದಿಗೆ ನಿಮ್ಮ ತರಗತಿಗಾಗಿ ವೀಡಿಯೊ ಚಾಟ್ ಗೆದ್ದಿರಿ!
@@ -2079,6 +2120,13 @@ kn:
     ಸೈನ್ಸ್ ಸುದ್ದಿಗಳಿಗೆ ನವೀಕರಣಗಳ ಕುರಿತು ನಾವು ನಿಮಗೆ ಇಮೇಲ್ ಮಾಡಬಹುದೇ?
   signup_email_preference_privacy: "(ನಮ್ಮ ಗೌಪ್ಯತೆ ನೀತಿಯನ್ನು ನೋಡಿ)"
   signup_email_preference_yes: ಹೌದು
+  signup_email_preference_yes_elementary: ಹೌದು - ಎಲಿಮೆಂಟರಿ ಸ್ಕೂಲ್ ಸಂಪನ್ಮೂಲಗಳ ನವೀಕರಣಗಳನ್ನು
+    ನನಗೆ ಕಳುಹಿಸಿ
+  signup_email_preference_yes_middle: ಹೌದು - ಮಿಡಲ್ ಸ್ಕೂಲ್ ಸಂಪನ್ಮೂಲಗಳ ಕುರಿತು ನನಗೆ ನವೀಕರಣಗಳನ್ನು
+    ಕಳುಹಿಸಿ
+  signup_email_preference_yes_high: ಹೌದು - ಹೈಸ್ಕೂಲ್ ಸಂಪನ್ಮೂಲಗಳ ಕುರಿತು ನನಗೆ ನವೀಕರಣಗಳನ್ನು
+    ಕಳುಹಿಸಿ
+  signup_email_preference_yes_general: ಹೌದು - ನನಗೆ ಸಾಮಾನ್ಯ ನವೀಕರಣಗಳನ್ನು ಕಳುಹಿಸಿ
   signup_email_preference_no: ಇಲ್ಲ
   signup_email_preference_error: ಇಮೇಲ್ ಆದ್ಯತೆಯ ಅಗತ್ಯವಿದೆ
   signup_multiple_event_warning: ನೀವು ನೋಂದಾಯಿಸಿದಾಗ ನಾವು ನಿಮ್ಮ ಶಾಲೆಯ ಹೆಸರು ಮತ್ತು ನಗರವನ್ನು
@@ -2584,8 +2632,8 @@ kn:
   learn_banner_beyond: ಕಲಿಯುವುದನ್ನು ಮುಂದುವರಿಸಲು ಬಯಸುವಿರಾ?  <a id='learn_banner_beyond'>ಒಂದು
     ಗಂಟೆ ಮೀರಿ ಹೋಗಿ</a>
   learn_banner_beyond_markdown: ಕಲಿಯುತ್ತಲೇ ಇರಬೇಕೆ? [ಒಂದು ಗಂಟೆಗೂ ಹೆಚ್ಚು ಕಾಲ ಕಲಿಯಿರಿ](%{url})
-  learn_banner_teachers: 'Teachers: <a id=''teacher_banner_host''>Host an hour</a>
-    or <a id=''teacher_banner_howto''>read the How-To Guide</a>'
+  learn_banner_teachers: 'ಶಿಕ್ಷಕರು: ಒಂದು ಗಂಟೆ <a id=''teacher_banner_host''>ಹೋಸ್ಟ್
+    ಮಾಡಿ</a> ಅಥವಾ ಹೌ-ಟು ಗೈಡ್ ಅನ್ನು <a id=''teacher_banner_howto''>ಓದಿ</a>'
   learn_banner_teachers_markdown: 'ಶಿಕ್ಷಕರು: [ಒಂದು ಗಂಟೆ ಹೋಸ್ಟ್‌ ಮಾಡಿ](%{host_url})
     ಅಥವಾ [ಮಾರ್ಗದರ್ಶಿಯನ್ನು ಓದಿ](%{howto_url})'
   tutorial_dance2019_name: ಡಾನ್ಸ್ ಪಾರ್ಟಿ
@@ -5551,11 +5599,12 @@ kn:
     ಸಾಹಸಕ್ಕೆ ತೆಗೆದುಕೊಳ್ಳಲು ಕೋಡ್ನ ಬ್ಲಾಕ್ಗಳನ್ನು ಬಳಸಿ.
   tutorial_minecraft-2016_longdescription: Minecraft ಆಟವನ್ನು ನಿರ್ಮಿಸಿ. ಕೋಳಿ, ಕುರಿ,
     ಕ್ರೀಪರ್ಗಳು, ಸೋಮಾರಿಗಳು ಮತ್ತು ಹೆಚ್ಚಿನವುಗಳ ನಿಮ್ಮ ಸ್ವಂತ ಆವೃತ್ತಿಗಳನ್ನು ರಚಿಸಿ.
-  tutorial_thinkersmith-es_longdescription: Mediante el uso de un "Vocabulario Robot"
-    predefinido, los estudiantes descubrir&aacute;n como guiarse de modo tal de llevar
-    a cabo tareas espec&iacute;ficas sin ser estas discutidas previamente. Este segmento
-    ense&ntilde;a a los estudiantes la conexi&oacute;n entre s&iacute;mbolos y acciones
-    as&iacute; como la valiosa habilidad de depuraci&oacute;n.
+  tutorial_thinkersmith-es_longdescription: Mediante el uso de un “Vocabulario Robot”
+    predefinition, los estudiantes descubrir&aacute;n como guiarse de modo tal de
+    llevar a cabo tareas espec ficas sin ser estas discutidas previamente.&iacute;ಎಸ್ಟೆ
+    ಸೆಗ್ಮೆಂಟೊ ಸೆನ್ಸ್&ntilde;ಎ ಲಾಸ್ ಎಸ್ಟುಡಿಯಂಟೆಸ್ ಲಾ ಕೊನೆಕ್ಸಿ&oacute;ಎನ್ ಎಂಟ್ರೆ ಎಸ್
+    ಮೊಬೊಲೊಸ್ ವೈ ಆಕ್ಸಿಯೋನ್ಸ್&iacute;ಆಸ್ ಕೊಮೊ ಲಾ ವ್ಯಾಲಿಯೊಸಾ ಹ್ಯಾಬಿಲಿಡಾಡ್ ಡಿ ಡೆಪುರಾಸಿ
+    ಎನ್.&iacute;&oacute;
   tutorial_pixie_longdescription: ಪಿಕ್ಸೀ ಜೊತೆ ಕೋಡ್ ಟ್ಯುಟೋರಿಯಲ್ ಅವರ್
   tutorial_play_longdescription: ಕಥೆಯನ್ನು ರಚಿಸಿ ಅಥವಾ ಪ್ಲೇ ಲ್ಯಾಬ್ನೊಂದಿಗೆ ಆಟವನ್ನು ಮಾಡಿ!
     ಪ್ರಾಣಿಗಳು, ಕಡಲ್ಗಳ್ಳರು, ಸೋಮಾರಿಗಳು, ನಿಂಜಾಗಳು ಮತ್ತು ಇನ್ನೂ ಅನೇಕ ಪಾತ್ರಗಳು ಚಲಿಸುವಂತೆ
@@ -12811,12 +12860,13 @@ kn:
   tutorial_googlename _longdescription: ಹೆಸರನ್ನು ಆರಿಸಿ ಮತ್ತು ಕೋಡ್ ಬಳಸಿ ಪದದ ಅಕ್ಷರಗಳನ್ನು
     ಜೀವಂತಗೊಳಿಸಿ. ಅಡ್ಡಹೆಸರು, ಸಾಕುಪ್ರಾಣಿಗಳ ಹೆಸರು, ಪ್ರಾಣಿ, ಕ್ರೀಡೆ, ಸ್ಥಳ ಅಥವಾ ಹವ್ಯಾಸವನ್ನು
     ಆರಿಸಿ.
-  tutorial_carnegiezillah_longdescription: Zillah City is thriving, and music is in
-    the air. Rumor has it, the famed Gargantua bot is online and sending the last
-    Toxibots to trash the city block by block…. Grab your cobot hoverboard and get
-    ready to groove, move, and finish off what you started! Players program their
-    cobot hoverbots to change lanes, avoid obstacles, and take out many Toxibots in
-    this rhythm-styled game.
+  tutorial_carnegiezillah_longdescription: ಜಿಲ್ಲಾ ನಗರವು ಅಭಿವೃದ್ಧಿ ಹೊಂದುತ್ತಿದೆ, ಮತ್ತು
+    ಸಂಗೀತವು ಗಾಳಿಯಲ್ಲಿದೆ. ವದಂತಿಯು ಅದನ್ನು ಹೊಂದಿದೆ, ಪ್ರಸಿದ್ಧ ಗಾರ್ಗಾಂಟುವಾ ಬೋಟ್ ಆನ್ಲೈನ್ನಲ್ಲಿದೆ
+    ಮತ್ತು ಕೊನೆಯ ಟಾಕ್ಸಿಬಾಟ್ಗಳನ್ನು ನಗರದ ಬ್ಲಾಕ್ ಮೂಲಕ ಕಸದ ರಾಶಿಗೆ ಕಳುಹಿಸುತ್ತಿದೆ.…ನಿಮ್ಮ
+    ಕೋಬೋಟ್ ಹೋವರ್ಬೋರ್ಡ್ ಅನ್ನು ಪಡೆದುಕೊಳ್ಳಿ ಮತ್ತು ನೀವು ಪ್ರಾರಂಭಿಸಿದ್ದನ್ನು ತೋಡು, ಸರಿಸಲು
+    ಮತ್ತು ಮುಗಿಸಲು ಸಿದ್ಧರಾಗಿ! ಆಟಗಾರರು ತಮ್ಮ ಕೋಬೋಟ್ ಹೋವರ್ಬಾಟ್ಗಳನ್ನು ಲೇನ್ಗಳನ್ನು ಬದಲಾಯಿಸಲು,
+    ಅಡೆತಡೆಗಳನ್ನು ತಪ್ಪಿಸಲು ಮತ್ತು ಈ ಲಯ-ಶೈಲಿಯ ಆಟದಲ್ಲಿ ಅನೇಕ ಟಾಕ್ಸಿಬಾಟ್ಗಳನ್ನು ತೆಗೆದುಕೊಳ್ಳಲು
+    ಪ್ರೋಗ್ರಾಂ ಮಾಡುತ್ತಾರೆ.
   tutorial_nasachspacejam_longdescription: ನಿಜವಾಗಿಯೂ ಬಂಡೆಗಳ ಸೌರಮಂಡಲವನ್ನು ರಚಿಸಿ! ಈ
     ಸ್ವಯಂ-ಮಾರ್ಗದರ್ಶಿ ಚಟುವಟಿಕೆಯಲ್ಲಿ ಸಂಗೀತ, ಖಗೋಳಶಾಸ್ತ್ರ ಮತ್ತು ಕೋಡಿಂಗ್ ಬಗ್ಗೆ ತಿಳಿಯಿರಿ
     (ಯಾವುದೇ ಕೋಡಿಂಗ್ ಅನುಭವದ ಅಗತ್ಯವಿಲ್ಲ). ಸಂಗೀತ ಮಾಡಲು ಪ್ರೋಗ್ರಾಂ ಗ್ರಹಗಳು, ನಿಮ್ಮ ಸ್ವಂತ
@@ -13656,6 +13706,130 @@ kn:
     ಯಾವುದೇ ಸಭೆಗಳನ್ನು ಆನಂದಿಸುತ್ತೇವೆ ಬುಧವಾರಗಳು, ನಮ್ಮ ಪಿಟಿಒ (ಒಟ್ಟು 5 ವಾರಗಳು, ಇದು ವರ್ಷದ
     ಕೊನೆಯಲ್ಲಿ ಆರ್ಗ್-ವೈಡ್ 2 ವಾರಗಳ ಕಚೇರಿ ಮುಚ್ಚುವಿಕೆಯನ್ನು ಒಳಗೊಂಡಿದೆ), ಬೇಸಿಗೆಯ ಅಕಾ ಬೇಸಿಗೆ
     ಶುಕ್ರವಾರದಂದು ಶುಕ್ರವಾರದಂದು ಅರ್ಧ ಕೆಲಸದ ದಿನ, ಮತ್ತು ಇತರ ಉದಾರ ಪ್ರಯೋಜನಗಳು.
+  csa_ai_page_hero_title: ಸಾಫ್ಟ್ವೇರ್ ಎಂಜಿನಿಯರಿಂಗ್ & ಕಂಪ್ಯೂಟರ್ ವಿಷನ್
+  csa_ai_page_hero_description: 'ಈ ಎರಡು-ಅಧ್ಯಾಯದ ನಂತರದ ಎಪಿ ಸಿಎಸ್ಎ ಮಾಡ್ಯೂಲ್ ಪ್ರೌ school
+    ಶಾಲಾ ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ ವೃತ್ತಿಪರ ಸಾಫ್ಟ್ವೇರ್ ಅಭಿವೃದ್ಧಿ ಸಾಧನಗಳೊಂದಿಗೆ ಅನುಭವವನ್ನು ನೀಡುತ್ತದೆ,
+    ಇದರಲ್ಲಿ ಗಿಟ್ಹಬ್ ಮತ್ತು ಗಿಟ್ಹಬ್ ಕೊಪೈಲಟ್, ಮತ್ತು ಕಂಪ್ಯೂಟರ್ ವಿಷನ್ ಪ್ರೋಗ್ರಾಂ ಅನ್ನು ಅಭಿವೃದ್ಧಿಪಡಿಸಲು
+    ನೈಜ-ಪ್ರಪಂಚದ ಕೌಶಲ್ಯಗಳನ್ನು ನೀಡುತ್ತದೆ. '
+  csa_ai_page_video_section_title: Code.org ಪ್ರೋಗ್ರಾಮಿಂಗ್ ಪರಿಸರಗಳ ಜಗತ್ತನ್ನು ಮೀರಿ ಹೆಜ್ಜೆ
+    ಹಾಕಿ
+  csa_ai_page_video_section_li_1: AI ಮತ್ತು ಅದರ ಅಪ್ಲಿಕೇಶನ್ಗಳ ಬಗ್ಗೆ ತಿಳಿಯಿರಿ
+  csa_ai_page_video_section_li_2: ವೃತ್ತಿಪರ ಸಾಫ್ಟ್ವೇರ್ ಅಭಿವೃದ್ಧಿ ಸಾಧನಗಳೊಂದಿಗೆ ಹ್ಯಾಂಡ್ಸ್-ಆನ್
+    ಅನುಭವ
+  csa_ai_page_video_section_li_3: ಉದ್ಯಮ-ಗುಣಮಟ್ಟದ ಅಭ್ಯಾಸಗಳನ್ನು ಕಲಿಯಿರಿ
+  csa_ai_page_video_section_li_4: ವಿಮರ್ಶಾತ್ಮಕ ಚಿಂತನೆಯನ್ನು ಬೆಳೆಸಿಕೊಳ್ಳಿ
+  csa_ai_page_programming_tools: 'ಪ್ರೋಗ್ರಾಮಿಂಗ್ ಪರಿಕರಗಳು: ಗಿಥಬ್, ಗಿಥಬ್ ಕಾಪಿಲೆಟ್, ವಿಎಸ್ಕೋಡ್,
+    ಟೆನ್ಸರ್ಫ್ಲೋ '
+  csa_ai_page_professional_learning: ಇಲ್ಲ
+  csa_ai_page_curriculum_topics: 'ವಿಷಯಗಳು: ಪ್ರೋಗ್ರಾಮಿಂಗ್, ಡೇಟಾ, ಕಲೆ ಮತ್ತು ವಿನ್ಯಾಸ,
+    ಆಟಗಳು ಮತ್ತು ಅನಿಮೇಷನ್'
+  csa_ai_page_curriculum_accessibility_features: ವಿವರಗಳಿಗಾಗಿ FAQ ವಿಭಾಗವನ್ನು ನೋಡಿ
+  csa_ai_page_curriculum_languages_support: ಆಂಗ್ಲ
+  csa_ai_page_article_title_1: ಕೊಪಿಲೋಟ್ನೊಂದಿಗೆ ನಿರ್ಮಿಸಿ
+  csa_ai_page_article_description_1: ಅಸ್ತಿತ್ವದಲ್ಲಿರುವ ಕೋಡ್ ಅನ್ನು ವಿವರಿಸಲು, ದೋಷಗಳನ್ನು
+    ಕಂಡುಹಿಡಿಯಲು ಮತ್ತು ಸರಿಪಡಿಸಲು ಮತ್ತು ಹೊಸ ಸಮಸ್ಯೆಗಳಿಗೆ ಪರಿಹಾರಗಳನ್ನು ರಚಿಸಲು ಜೋಡಿ ಪ್ರೋಗ್ರಾಮರ್
+    ಆಗಿ GitHub Copilot ಅನ್ನು ಹೇಗೆ ಬಳಸುವುದು ಎಂದು ವಿದ್ಯಾರ್ಥಿಗಳು ಕಲಿಯುತ್ತಾರೆ.
+  csa_ai_page_article_link_1: ಕೊಪಿಲೋಟ್ ಬಗ್ಗೆ ಇನ್ನಷ್ಟು ತಿಳಿಯಿರಿ
+  csa_ai_page_article_title_2: ನಿಮ್ಮ ಸ್ವಂತ AI ಮಾದರಿಯನ್ನು ನಿರ್ಮಿಸಿ
+  csa_ai_page_article_description_2: ಚಿತ್ರಗಳು ಮತ್ತು ಸನ್ನೆಗಳು ವೆಬ್ಕ್ಯಾಮ್ ಅನ್ನು ರೂಪಿಸಲು
+    ಮತ್ತು ಬಳಕೆದಾರರು ಅಪ್ಲಿಕೇಶನ್ಗಳೊಂದಿಗೆ ಸಂವಹನ ನಡೆಸುವ ವಿಧಾನವನ್ನು ಕಂಪ್ಯೂಟರ್ ದೃಷ್ಟಿ ಹೇಗೆ
+    ಪರಿಣಾಮ ಬೀರುತ್ತದೆ ಎಂಬುದನ್ನು ಪರಿಗಣಿಸಲು ವಿದ್ಯಾರ್ಥಿಗಳು ಟೀಚಬಲ್ ಯಂತ್ರವನ್ನು ಬಳಸಿಕೊಂಡು
+    ತಮ್ಮದೇ ಆದ AI ಮಾದರಿಗಳನ್ನು ತರಬೇತಿ ನೀಡುತ್ತಾರೆ.
+  csa_ai_page_article_link_2: ಪಾಠ ಯೋಜನೆಯನ್ನು ಅನ್ವೇಷಿಸಿ
+  csa_ai_page_article_title_3: ಕಂಪ್ಯೂಟರ್ ದೃಷ್ಟಿಯನ್ನು ಅನ್ವೇಷಿಸಿ
+  csa_ai_page_article_description_3: ವಿದ್ಯಾರ್ಥಿಗಳು ಟೀಚಬಲ್ ಮೆಷಿನ್ನೊಂದಿಗೆ ರಚಿಸಿದ AI
+    ಮಾದರಿಗಳನ್ನು ಜಾವಾ ಅಪ್ಲಿಕೇಶನ್ಗೆ ಕಾರ್ಯಗತಗೊಳಿಸುತ್ತಾರೆ, GitHub Copilot ಬಳಸಿ ವಿಭಿನ್ನ
+    ಇನ್ಪುಟ್ಗಳೊಂದಿಗೆ ಕೆಲಸ ಮಾಡಲು ಅಪ್ಲಿಕೇಶನ್ಗಳ ಅಸ್ತಿತ್ವದಲ್ಲಿರುವ ಆವೃತ್ತಿಗಳನ್ನು ಮಾರ್ಪಡಿಸಲು
+    ಸಹಾಯ ಮಾಡುತ್ತದೆ.
+  csa_ai_page_article_link_3: ಒಂದು ಉದಾಹರಣೆ ನೋಡಿ
+  csa_ai_page_learn_more_section_title: ಕೃತಕ ಬುದ್ಧಿಮತ್ತೆಯ ಬಗ್ಗೆ ಇನ್ನಷ್ಟು ತಿಳಿಯಿರಿ
+  csa_ai_page_learn_more_title: ಶಿಕ್ಷಕರಿಗೆ AI 101 ಅನ್ನು ಅನ್ವೇಷಿಸಿ
+  csa_ai_page_learn_more_description: ಶಿಕ್ಷಕರಿಗಾಗಿ ನಮ್ಮ ಸಮಗ್ರ ಆನ್ಲೈನ್ ಕಲಿಕಾ ಸರಣಿಯೊಂದಿಗೆ
+    ಕೃತಕ ಬುದ್ಧಿಮತ್ತೆ (ಎಐ) ಯ ಅದ್ಭುತ ಜಗತ್ತನ್ನು ಮತ್ತು ಶಿಕ್ಷಣದಲ್ಲಿ ಅದರ ಪರಿವರ್ತಕ ಸಾಮರ್ಥ್ಯವನ್ನು
+    ಅನ್ವೇಷಿಸಿ.
+  csa_ai_page_learn_more_link: ಶಿಕ್ಷಕರ ಸರಣಿಗಾಗಿ AI 101 ವೀಕ್ಷಿಸಿ
+  csa_ai_page_faq_question_01: ಈ ಮಾಡ್ಯೂಲ್ನ ಪೂರ್ವಾಪೇಕ್ಷಿತಗಳು ಯಾವುವು?
+  csa_ai_page_faq_answer_01_01: 'ಈ ಮಾಡ್ಯೂಲ್ಗೆ ಧುಮುಕುವ ಮೊದಲು, ವಿದ್ಯಾರ್ಥಿಗಳು ಜಾವಾದ ಪ್ರವೇಶ
+    ಮಟ್ಟದ ಜ್ಞಾನವನ್ನು ಹೊಂದಿರಬೇಕು. ನಿರ್ದಿಷ್ಟವಾಗಿ ಹೇಳುವುದಾದರೆ, ಅವರು ಇದನ್ನು ಗ್ರಹಿಸಬೇಕು:'
+  csa_ai_page_faq_answer_01_list_01: "** ತರಗತಿಗಳು ಮತ್ತು ವಸ್ತುಗಳು: ** ವಿದ್ಯಾರ್ಥಿಗಳು
+    ತರಗತಿಗಳನ್ನು ವ್ಯಾಖ್ಯಾನಿಸುವ ಮತ್ತು ಬಳಸುವುದರ ಜೊತೆಗೆ ವಸ್ತುಗಳನ್ನು ರಚಿಸುವ ಮತ್ತು ಕುಶಲತೆಯಿಂದ
+    ಪರಿಚಿತರಾಗಿರಬೇಕು."
+  csa_ai_page_faq_answer_01_list_02: "** ಬರವಣಿಗೆ ಮತ್ತು ಕರೆ ಮಾಡುವ ವಿಧಾನಗಳು: ** ವಿದ್ಯಾರ್ಥಿಗಳು
+    ತರಗತಿಯೊಳಗಿನ ವಿಧಾನಗಳನ್ನು ವ್ಯಾಖ್ಯಾನಿಸಲು, ವಿಧಾನದ ನಿಯತಾಂಕಗಳನ್ನು ಮತ್ತು ರಿಟರ್ನ್ ಪ್ರಕಾರಗಳನ್ನು
+    ಅರ್ಥಮಾಡಿಕೊಳ್ಳಲು ಮತ್ತು ವಸ್ತುಗಳು ಅಥವಾ ಇತರ ವಿಧಾನಗಳಿಂದ ವಿಧಾನಗಳನ್ನು ಕರೆ ಮಾಡಲು ಸಾಧ್ಯವಾಗುತ್ತದೆ."
+  csa_ai_page_faq_answer_01_list_03: "** 1 ಡಿ ಅರೇಗಳು ಮತ್ತು ಅರೇಲಿಸ್ಟ್ಗಳು: ** ಒಂದು ಆಯಾಮದ
+    ಸರಣಿಗಳು ಮತ್ತು ಅರೇಲಿಸ್ಟ್ಗಳನ್ನು ಘೋಷಿಸುವಲ್ಲಿ, ಪ್ರಾರಂಭಿಸುವಲ್ಲಿ ಮತ್ತು ಕುಶಲತೆಯಿಂದ ನಿರ್ವಹಿಸುವಲ್ಲಿ
+    ಅವರು ಪ್ರವೀಣರಾಗಿರಬೇಕು, ಅವುಗಳ ಮೂಲಕ ಪುನರಾವರ್ತಿಸುವುದು ಸೇರಿದಂತೆ."
+  csa_ai_page_faq_answer_01_list_04: "** ಆಯ್ಕೆ ಮತ್ತು ಪುನರಾವರ್ತನೆ: ** ಷರತ್ತುಬದ್ಧ ಹೇಳಿಕೆಗಳು
+    ಮತ್ತು ಕುಣಿಕೆಗಳಲ್ಲಿ ದೃ foundation ವಾದ ಅಡಿಪಾಯ ನಿರ್ಣಾಯಕವಾಗಿದೆ."
+  csa_ai_page_faq_question_01_02: ತಾತ್ತ್ವಿಕವಾಗಿ, ಎಪಿ ಕಂಪ್ಯೂಟರ್ ಸೈನ್ಸ್ ಎ ಅಥವಾ ಇದೇ ರೀತಿಯ
+    ಆಳ ಮತ್ತು ಕಠಿಣತೆಯ ಕೋರ್ಸ್ ಅನ್ನು ಪೂರ್ಣಗೊಳಿಸಿದ ವಿದ್ಯಾರ್ಥಿಗಳು ಈ ಮಾಡ್ಯೂಲ್ಗೆ ಉತ್ತಮವಾಗಿ
+    ಸಿದ್ಧರಾಗುತ್ತಾರೆ.
+  csa_ai_page_faq_question_02: ಈ ಮಾಡ್ಯೂಲ್ಗೆ ಅಗತ್ಯವಿರುವ ಸಾಫ್ಟ್ವೇರ್ ಅನ್ನು ನಾನು ಹೇಗೆ
+    ಸ್ಥಾಪಿಸುವುದು?
+  csa_ai_page_faq_answer_02_01: ಈ ಮಾಡ್ಯೂಲ್ ಅನನ್ಯವಾಗಿದೆ ಏಕೆಂದರೆ ಇದು Code.org ಲ್ಯಾಬ್ಗಳು
+    ಮತ್ತು ಪರಿಕರಗಳಿಗಿಂತ ಮೂರನೇ ವ್ಯಕ್ತಿಯ ಸಾಫ್ಟ್ವೇರ್ ಬಳಕೆಯನ್ನು ಒಳಗೊಂಡಿರುತ್ತದೆ. [ಸಾಫ್ಟ್ವೇರ್
+    ಅನ್ನು ಸ್ಥಾಪಿಸುವ ಬಗ್ಗೆ ಇನ್ನಷ್ಟು ಓದಿ ಇಲ್ಲಿ] (%{accessibility_url}).
+  csa_ai_page_faq_question_03: ಈ ಮಾಡ್ಯೂಲ್ ಅನ್ನು ಕಲಿಸುವಾಗ ಪ್ರವೇಶದ ಅಗತ್ಯಗಳನ್ನು ನಾನು
+    ಹೇಗೆ ಬೆಂಬಲಿಸಬಹುದು?
+  csa_ai_page_faq_answer_03_01: ಪ್ರವೇಶದ ಅಗತ್ಯಗಳನ್ನು ಪೂರೈಸುವುದು ಅಂತರ್ಗತ ಕಲಿಕೆಯ ಪರಿಸರಕ್ಕೆ
+    ನಿರ್ಣಾಯಕವಾಗಿದೆ. [ಈ ಮಾಡ್ಯೂಲ್ನಲ್ಲಿ ಬಳಸಲಾದ ಸಾಫ್ಟ್ವೇರ್ನಲ್ಲಿನ ಪ್ರವೇಶಿಸುವಿಕೆ ವೈಶಿಷ್ಟ್ಯಗಳ
+    ಕುರಿತು ಇನ್ನಷ್ಟು ಓದಿ ಇಲ್ಲಿ] (%{install_url}).
+  csa_ai_page_faq_question_04: Chromebooks ನಲ್ಲಿ ನಾನು VS ಕೋಡ್ ಅನ್ನು ಹೇಗೆ ಬಳಸುವುದು?
+  csa_ai_page_faq_answer_04: Chromebook ನಲ್ಲಿ VS ಕೋಡ್ ಅನ್ನು ಬಳಸುವುದು ಹೆಚ್ಚು ಸರಳವಾಗಿದೆ,
+    ವಿಶೇಷವಾಗಿ ಹೊಸ Chromebook ಮಾದರಿಗಳಲ್ಲಿ ಲಿನಕ್ಸ್ ಅಪ್ಲಿಕೇಶನ್ಗಳನ್ನು ಚಲಾಯಿಸುವ ಸಾಮರ್ಥ್ಯದೊಂದಿಗೆ.
+    [Chromebooks ನಲ್ಲಿ VS ಕೋಡ್ ಅನ್ನು ಹೊಂದಿಸುವ ಕುರಿತು ಇನ್ನಷ್ಟು ಓದಿ ಇಲ್ಲಿ] ()%{chromebook_url}.
+  csa_ai_page_faq_question_05: ಈ ಮಾಡ್ಯೂಲ್ಗಾಗಿ ವೃತ್ತಿಪರ ಅಭಿವೃದ್ಧಿಯನ್ನು ನಾನು ಹೇಗೆ ಪಡೆಯಬಹುದು?
+  csa_ai_page_faq_answer_05: ಈ ಕೋರ್ಸ್ಗೆ ಪ್ರಸ್ತುತ ನಿರ್ದಿಷ್ಟ ವೃತ್ತಿಪರ ಅಭಿವೃದ್ಧಿ ಇಲ್ಲ.
+    ನಿಮ್ಮ ತರಗತಿಯಲ್ಲಿ ಕೃತಕ ಬುದ್ಧಿಮತ್ತೆಯನ್ನು ಹೇಗೆ ಸಮೀಪಿಸುವುದು ಎಂಬುದನ್ನು ಅರ್ಥಮಾಡಿಕೊಳ್ಳಲು
+    ನೀವು ಬಯಸಿದರೆ ನೀವು [ಶಿಕ್ಷಕರಿಗೆ AI 101 ಅನ್ನು ಅನ್ವೇಷಿಸಿ] (%{ai_101_url}).
+  csa_ai_page_faq_question_06: ಈ ಮಾಡ್ಯೂಲ್ ಅನ್ನು ಕಲಿಸಲು ಶಿಫಾರಸು ಮಾಡಲಾದ ಸಮಯ ಎಷ್ಟು?
+  csa_ai_page_faq_answer_06_01: ಸಾಫ್ಟ್ವೇರ್ ಎಂಜಿನಿಯರಿಂಗ್ ಮತ್ತು ಕಂಪ್ಯೂಟರ್ ವಿಷನ್ ಮಾಡ್ಯೂಲ್
+    ಸಂಕ್ಷಿಪ್ತ ಕಾಲಾವಧಿಯಲ್ಲಿ ಸಮಗ್ರ ಕಲಿಕೆಯನ್ನು ಒದಗಿಸಲು ಚಿಂತನಶೀಲವಾಗಿ ರಚಿಸಲಾಗಿದೆ. ** 2
+    ವಾರಗಳ ಸೂಚನೆ** ಅನ್ನು ಸ್ಪ್ಯಾನ್ ಮಾಡಲು ಸಂಪೂರ್ಣ ಮಾಡ್ಯೂಲ್ ಅನ್ನು ವಿನ್ಯಾಸಗೊಳಿಸಲಾಗಿದೆ.
+    ಹೆಚ್ಚಿನ ಪಾಠಗಳು**45 ನಿಮಿಷಗಳು** ಗೆ ಅನುಗುಣವಾಗಿರುತ್ತವೆ, ಆದರೆ ವಿದ್ಯಾರ್ಥಿಗಳು ಜಾವಾ ಪ್ರಾಜೆಕ್ಟ್
+    ಡೆವಲಪ್ಮೆಂಟ್ ಅನ್ನು ಕೈಯಲ್ಲಿ ಪರಿಶೀಲಿಸುವ ಪಾಠಗಳನ್ನು**90 ನಿಮಿಷಗಳು** ಗೆ ವಿನ್ಯಾಸಗೊಳಿಸಲಾಗಿದೆ.
+    ಈ ವಿಸ್ತೃತ ಸಮಯವು ವಿದ್ಯಾರ್ಥಿಗಳಿಗೆ ಕೆಲಸ ಮಾಡುವಂತೆ ಅರ್ಥಮಾಡಿಕೊಳ್ಳಲು, ಕಾರ್ಯಗತಗೊಳಿಸಲು
+    ಮತ್ತು ದೋಷನಿವಾರಣೆಗೆ ಸಾಕಷ್ಟು ಅವಕಾಶವಿದೆ ಎಂದು ಖಚಿತಪಡಿಸುತ್ತದೆ.
+  csa_ai_page_faq_answer_06_02: ಮಾಡ್ಯೂಲ್ನ ರಚನೆಯಲ್ಲಿ ಉದ್ದೇಶಪೂರ್ವಕ ನಮ್ಯತೆಯನ್ನು ನಿರ್ಮಿಸಲಾಗಿದೆ.
+    ತರಗತಿಯ ಡೈನಾಮಿಕ್ಸ್, ವಿದ್ಯಾರ್ಥಿಗಳ ನಿಶ್ಚಿತಾರ್ಥ ಮತ್ತು ನೀವು ಪ್ರತಿ ವಿಷಯವನ್ನು ಅನ್ವೇಷಿಸಲು
+    ಬಯಸುವ ಆಳವನ್ನು ಅವಲಂಬಿಸಿ, ನೀವು ಅವಧಿಯನ್ನು ಸರಿಹೊಂದಿಸಬಹುದು. ಉದಾಹರಣೆಗೆ, 45 ನಿಮಿಷಗಳ ಪಾಠವಾಗಿ
+    ವಿನ್ಯಾಸಗೊಳಿಸಲಾದ ಪರಿಚಯ ಕೊಪೈಲಟ್ ಪಾಠವನ್ನು 90 ನಿಮಿಷಗಳಿಗೆ ವಿಸ್ತರಿಸಬಹುದು, ನೀವು ಎಷ್ಟು
+    ದೊಡ್ಡ ಭಾಷಾ ಮಾದರಿಗಳು ಮತ್ತು ಉಪಕರಣಗಳು GitHub Copilot ಮತ್ತು ChatGpt ಕಾರ್ಯನಿರ್ವಹಿಸುತ್ತವೆ
+    ಎಂಬುದರ ಕುರಿತು ಆಳವಾಗಿ ಧುಮುಕಲು ಬಯಸಿದರೆ.
+  csa_ai_page_faq_question_07: How can I access answer keys?
+  csa_ai_page_faq_answer_07: ಅನುಮೋದಿತ ಶಿಕ್ಷಕ ಖಾತೆಯೊಂದಿಗೆ, ನೀವು ನೀಲಿ “ಶಿಕ್ಷಕ” ದಲ್ಲಿ
+    ಉತ್ತರ ಕೀಲಿಗಳನ್ನು ಕಾಣಬಹುದು ಆನ್ಲೈನ್ ಪಾಠಗಳು ಮತ್ತು ಚಟುವಟಿಕೆಗಳಲ್ಲಿ ತೋರಿಸುವ ಫಲಕ ಮಾತ್ರ.
+    ನಿಮಗೆ ಅನುಮೋದಿತ ಶಿಕ್ಷಕ ಖಾತೆ ಅಗತ್ಯವಿದ್ದರೆ, [ಈ ಫಾರ್ಮ್] () ಮೂಲಕ ಸಂರಕ್ಷಿತ ಶಿಕ್ಷಕ-ಮಾತ್ರ
+    ವಸ್ತುಗಳಿಗೆ (ಉತ್ತರ ಕೀಲಿಗಳು, ಇತ್ಯಾದಿ) ಪ್ರವೇಶಕ್ಕಾಗಿ ನೀವು ಅರ್ಜಿ ಸಲ್ಲಿಸಬಹುದು.%{form_url}ನಿಮ್ಮ
+    ಖಾತೆಯನ್ನು ಪರಿಶೀಲಿಸಲು 3-5 ವ್ಯವಹಾರ ದಿನಗಳನ್ನು ತೆಗೆದುಕೊಳ್ಳಬಹುದು ಎಂಬುದನ್ನು ದಯವಿಟ್ಟು
+    ನೆನಪಿನಲ್ಲಿಡಿ.
+  csa_ai_page_faq_question_08: ಈ ಮಾಡ್ಯೂಲ್ ಅನ್ನು ಮಾನದಂಡಗಳಿಗೆ ಮ್ಯಾಪ್ ಮಾಡಲಾಗಿದೆ?
+  csa_ai_page_faq_answer_08: ಹೌದು, ಸಾಫ್ಟ್ವೇರ್ ಎಂಜಿನಿಯರಿಂಗ್ ಮತ್ತು ಕಂಪ್ಯೂಟರ್ ವಿಷನ್ ಪಠ್ಯಕ್ರಮವನ್ನು
+    [ಸಿಎಸ್ಟಿಎ ಕೆ -12 ಮಾನದಂಡಗಳು] (%{csta_k12_url}) ಮತ್ತು ಎಐ ಫಾರ್ [ಕೆ -12 ಮಾರ್ಗಸೂಚಿಗಳು]
+    () ಗೆ ಮ್ಯಾಪ್ ಮಾಡಲಾಗಿದೆ.%{k12_url}
+  csa_ai_page_faq_question_09: ಈ ಮಾಡ್ಯೂಲ್ ಅನ್ನು ಕಲಿಸಲು ಎಷ್ಟು ವೆಚ್ಚವಾಗುತ್ತದೆ?
+  csa_ai_page_faq_answer_09_01: ನಮ್ಮ ಪಠ್ಯಕ್ರಮ ಮತ್ತು ವೇದಿಕೆ ಲಭ್ಯವಿದೆ [ಯಾವುದೇ ವೆಚ್ಚವಿಲ್ಲ]
+    (%{no_cost_url}) ಯಾರಿಗಾದರೂ, ಎಲ್ಲಿಯಾದರೂ, ಕಲಿಸಲು!
+  csa_ai_page_faq_answer_09_02: ಹೆಚ್ಚುವರಿಯಾಗಿ, ಈ ಮಾಡ್ಯೂಲ್ನಲ್ಲಿ ಬಳಸುವ ಸಾಫ್ಟ್ವೇರ್ ಮತ್ತು
+    ಪರಿಕರಗಳು ಉಚಿತವಾಗಿರುತ್ತವೆ. GitHub Copilot ಪರಿಶೀಲಿಸಿದ [teachers](%{teachers_url})
+    ಮತ್ತು [students]() ಗೆ ಉಚಿತವಾಗಿದೆ.%{students_url}
+  csa_ai_page_faq_question_10: ಸಾಫ್ಟ್ವೇರ್ ಸ್ಥಾಪನೆ ಕಾರ್ಯನಿರ್ವಹಿಸದಿದ್ದರೆ ನಾನು ಏನು ಮಾಡಬೇಕು?
+  csa_ai_page_faq_answer_10: ಸಾಫ್ಟ್ವೇರ್ ಸ್ಥಾಪನೆಯ ಸಮಯದಲ್ಲಿ ಸಮಸ್ಯೆಗಳನ್ನು ಎದುರಿಸುವುದು
+    ಸಾಮಾನ್ಯವಾಗಿದೆ, ಆದರೆ ಅವುಗಳನ್ನು ನಿವಾರಿಸಲು ಮತ್ತು ಪರಿಹರಿಸಲು ನೀವು ಅನುಸರಿಸಬಹುದಾದ ವ್ಯವಸ್ಥಿತ
+    ಹಂತಗಳಿವೆ. [ಕೆಲವು ದೋಷನಿವಾರಣೆಯ ಸಲಹೆಗಳನ್ನು ಇಲ್ಲಿ ಪರಿಶೀಲಿಸಿ] ()%{troubleshooting_url}.
+  csa_ai_page_faq_question_11: How was the curriculum developed?
+  csa_ai_page_faq_answer_11_01: 'ನಮ್ಮ ಸಾಫ್ಟ್ವೇರ್ ಎಂಜಿನಿಯರಿಂಗ್ ಮತ್ತು ಕಂಪ್ಯೂಟರ್ ವಿಷನ್
+    ಪಠ್ಯಕ್ರಮವನ್ನು ನಮ್ಮ ಪಠ್ಯಕ್ರಮದ ಮೌಲ್ಯಗಳನ್ನು ಗಮನದಲ್ಲಿಟ್ಟುಕೊಂಡು ವಿನ್ಯಾಸಗೊಳಿಸಲಾಗಿದೆ.
+    ಈ ಕೆಳಗಿನ ಗುರಿಗಳು ಈ ಪಠ್ಯಕ್ರಮದ ರಚನೆಗೆ ಮಾರ್ಗದರ್ಶನ ನೀಡುತ್ತವೆ:'
+  csa_ai_page_faq_answer_11_list_01: "** ಗುರಿ 1: ** ಕೋಡ್ ಅನ್ನು ರಚಿಸಲು, ಡೀಬಗ್ ಮಾಡಲು
+    ಮತ್ತು ಸಂಪಾದಿಸಲು AI ಪರಿಕರಗಳನ್ನು ಬಳಸಿ."
+  csa_ai_page_faq_answer_11_list_02: "** ಗುರಿ 2: ** ಜಾವಾ ಲ್ಯಾಬ್ನಿಂದ ನೈಜ-ಪ್ರಪಂಚದ ಪರಿಕರಗಳಿಗೆ
+    ಪರಿವರ್ತನೆ."
+  csa_ai_page_faq_answer_11_list_03: "** ಗುರಿ 3: ** ಎಐ ಮಾದರಿಗಳನ್ನು ಹೇಗೆ ತರಬೇತಿ ನೀಡಲಾಗುತ್ತದೆ
+    ಮತ್ತು ಕಾರ್ಯಕ್ರಮಗಳಲ್ಲಿ ಸಂಯೋಜಿಸಲಾಗುತ್ತದೆ ಎಂಬುದರ ಕುರಿತು ತಿಳುವಳಿಕೆಯನ್ನು ಗಾ en ವಾಗಿಸಿ."
+  csa_ai_page_faq_answer_11_02: ನಮ್ಮ ಕೆಲಸಕ್ಕೆ ಮಾರ್ಗದರ್ಶನ ನೀಡಿದ ಮೌಲ್ಯಗಳ ಬಗ್ಗೆ ಹೆಚ್ಚಿನ
+    ಮಾಹಿತಿಗಾಗಿ, ದಯವಿಟ್ಟು ನಮ್ಮ [ಪಠ್ಯಕ್ರಮದ ಮೌಲ್ಯಗಳು] ()%{curriculum_values_url}ನೋಡಿ.
   language_code:
     ar: ಅರೇಬಿಕ್
     az: ಅಜೆರ್ಬೈಜಾನಿ
