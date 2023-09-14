@@ -1,7 +1,7 @@
 /** @file Tests for NetSimPacketEditor */
 import {assert} from '../../util/reconfiguredChai';
 
-import NetSimTestUtils from '../../util/netsimTestUtils';
+import {initializeGlobalsToDefaultValues} from '../../util/netsimTestUtils';
 import NetSimPacketEditor from '@cdo/apps/netsim/NetSimPacketEditor';
 import NetSimGlobals from '@cdo/apps/netsim/NetSimGlobals';
 import {EncodingType} from '@cdo/apps/netsim/NetSimConstants';
@@ -15,13 +15,13 @@ import {
   formatAB,
   formatBinary,
   formatHex,
-} from './DataConverters';
+} from '@cdo/apps/netsim/DataConverters';
 
 describe('NetSimPacketEditor', function () {
   var editor, rootDiv;
 
   beforeEach(function () {
-    NetSimTestUtils.initializeGlobalsToDefaultValues();
+    initializeGlobalsToDefaultValues();
     editor = new NetSimPacketEditor({
       packetSpec: NetSimGlobals.getLevelConfig().clientInitialPacketHeader,
       contentChangeCallback: function () {},
