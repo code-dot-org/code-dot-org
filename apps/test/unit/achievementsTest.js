@@ -1,5 +1,5 @@
 import {expect} from '../util/reconfiguredChai';
-import * as achievements from '@cdo/apps/achievements';
+import {puzzleComplete, usingHints} from '@cdo/apps/achievements';
 import sinon from 'sinon';
 import authoredHintUtils from '@cdo/apps/authoredHintUtils';
 
@@ -7,7 +7,7 @@ describe('achievements', () => {
   describe('puzzleComplete', () => {
     it('is always achieved', () => {
       const state = {};
-      expect(achievements.puzzleComplete(state)).to.include({
+      expect(puzzleComplete(state)).to.include({
         isAchieved: true,
         message: 'Puzzle completed!',
       });
@@ -19,36 +19,42 @@ describe('achievements', () => {
       const stub = sinon
         .stub(authoredHintUtils, 'currentOpenedHintCount')
         .callsFake(() => 1);
-      const state = {
-        pageConstants: {
-          serverLevelId: 123,
-        },
-      };
 
-      expect(achievements.usingHints(state)).to.include({
-        isAchieved: true,
-        message: 'Using just one hint!',
-      });
+      try {
+        const state = {
+          pageConstants: {
+            serverLevelId: 123,
+          },
+        };
 
-      stub.restore();
+        expect(usingHints(state)).to.include({
+          isAchieved: true,
+          message: 'Using just one hint!',
+        });
+      } finally {
+        stub.restore();
+      }
     });
 
     it('is not achieved if you used too many hints', () => {
       const stub = sinon
         .stub(authoredHintUtils, 'currentOpenedHintCount')
         .callsFake(() => 3);
-      const state = {
-        pageConstants: {
-          serverLevelId: 123,
-        },
-      };
 
-      expect(achievements.usingHints(state)).to.include({
-        isAchieved: false,
-        message: 'Using hints',
-      });
+      try {
+        const state = {
+          pageConstants: {
+            serverLevelId: 123,
+          },
+        };
 
-      stub.restore();
+        expect(usingHints(state)).to.include({
+          isAchieved: false,
+          message: 'Using hints',
+        });
+      } finally {
+        stub.restore();
+      }
     });
 
     after(() => {});
