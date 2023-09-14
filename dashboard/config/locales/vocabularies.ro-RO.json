@@ -1145,6 +1145,761 @@
           "word": "Eveniment",
           "definition": "O acțiune care face ca ceva să se întâmple."
         },
+        "adaptation/csc-adaptations/2023": {
+          "word": "Adaptare",
+          "definition": "O schimbare a unui organism pentru a supraviețui mai bine mediului său"
+        },
+        "code/csc-adaptations/2023": {
+          "word": "Cod",
+          "definition": "(v) Pentru a scrie instrucțiuni pentru un computer"
+        },
+        "event/csc-adaptations/2023": {
+          "word": "Eveniment",
+          "definition": "O acțiune care determină să se întâmple ceva"
+        },
+        "evolution/csc-adaptations/2023": {
+          "word": "Evoluție",
+          "definition": "Schimbarea caracteristicilor unei specii de-a lungul mai multor generații"
+        },
+        "migration/csc-adaptations/2023": {
+          "word": "Migrație",
+          "definition": "O mișcare pe distanțe lungi pe care un animal o face să caute un mediu mai bun"
+        },
+        "camouflage/csc-adaptations/2023": {
+          "word": "camuflaj",
+          "definition": "Un mecanism de apărare pe care organismele îl folosesc pentru a-și ascunde aspectul și pentru a se amesteca cu mediul lor"
+        },
+        "behavior/csc-adaptations/2023": {
+          "word": "Comportament",
+          "definition": "Un set de acțiuni pe care doriți ca un sprite să le efectueze din nou și din nou. "
+        },
+        "code_v_/csc-bookcovers/2023": {
+          "word": "Cod (v)",
+          "definition": "pentru a scrie instrucțiuni pentru un computer."
+        },
+        "event/csc-bookcovers/2023": {
+          "word": "Eveniment",
+          "definition": "O acțiune care face ca ceva să se întâmple."
+        },
+        "program/csc-bookcovers/2023": {
+          "word": "Program",
+          "definition": "O serie de pași care au fost programați și formează ceva ce poate fi executat de un computer."
+        },
+        "prompt/csc-bookcovers/2023": {
+          "word": "Prompt",
+          "definition": "Un mesaj afișat pe ecranul calculatorului, prin care i se cere utilizatorului să tasteze ceva."
+        },
+        "sprite/csc-bookcovers/2023": {
+          "word": "Spiriduș",
+          "definition": "Un element grafic afișat pe ecran care are proprietăți precum locul, dimensiunea și aspectul."
+        },
+        "background/csc-bookcovers/2023": {
+          "word": "Fundal",
+          "definition": "Vizualul din spatele principalelor lucruri sau persoane de pe ecran."
+        },
+        "character/csc-bookcovers/2023": {
+          "word": "Caracterul",
+          "definition": "O persoană, un animal, o ființă, o creatură a lucrurilor într-o poveste."
+        },
+        "setting/csc-bookcovers/2023": {
+          "word": "Setare",
+          "definition": "Ora și locul (sau când și unde) unei povești."
+        },
+        "summary/csc-bookcovers/2023": {
+          "word": "Rezumat",
+          "definition": "Spunând cele mai importante părți ale unui text, în propriile cuvinte, într-un mod mult mai scurt"
+        },
+        "code/csc-ecosystems/2023": {
+          "word": "Cod",
+          "definition": "(v) Pentru a scrie instrucțiuni pentru un computer"
+        },
+        "condition/csc-ecosystems/2023": {
+          "word": "Condiție",
+          "definition": "Ceva ce un program verifică pentru a vedea dacă este adevărat înainte de a permite o acțiune"
+        },
+        "conditionals/csc-ecosystems/2023": {
+          "word": "Condiţionale",
+          "definition": "Declarații care se desfășoară numai în anumite condiții"
+        },
+        "ecosystem/csc-ecosystems/2023": {
+          "word": "ecosistem",
+          "definition": "O comunitate biologică de organisme care interacționează și mediul lor"
+        },
+        "event/csc-ecosystems/2023": {
+          "word": "Eveniment",
+          "definition": "O acțiune care determină să se întâmple ceva"
+        },
+        "overfishing/csc-ecosystems/2023": {
+          "word": "Pescuitul excesiv",
+          "definition": "Îndepărtarea peștilor mai repede decât se pot reproduce"
+        },
+        "simulation/csc-ecosystems/2023": {
+          "word": "Simulare",
+          "definition": "Un model computerizat în scopul studiului."
+        },
+        "debug/csc-ecosystems/2023": {
+          "word": "Depanare",
+          "definition": "Găsirea și remedierea erorilor sau problemelor în cod."
+        },
+        "variable/csc-ecosystems/2023": {
+          "word": "Variabilă",
+          "definition": "Un container care poate stoca o valoare. "
+        },
+        "ecologist/csc-ecosystems/2023": {
+          "word": "Ecologist",
+          "definition": "Un om de știință care studiază modul în care animalele și plantele interacționează cu mediul lor."
+        },
+        "energy/csc-ecosystems/2023": {
+          "word": "Energie",
+          "definition": "Transferat între organismele din rețelele trofice de la producători la consumatori. Energia este folosită de organisme pentru a îndeplini sarcini complexe."
+        },
+        "food_chain/csc-ecosystems/2023": {
+          "word": "Lanțul alimentar ",
+          "definition": "Un grup de organisme legate în ordinea alimentelor pe care le consumă, de la producători la consumatori și de la pradă la prădători."
+        },
+        "code/csc-mappinglandmarks/2023": {
+          "word": "Cod",
+          "definition": "(v) a scrie instrucțiuni pentru un calculator."
+        },
+        "event/csc-mappinglandmarks/2023": {
+          "word": "Eveniment",
+          "definition": "O acțiune care face ca ceva să se întâmple."
+        },
+        "landmark/csc-mappinglandmarks/2023": {
+          "word": "Reper",
+          "definition": "Un reper este un obiect (natural sau creat de om) care are importanță sau face un loc ușor de recunoscut."
+        },
+        "sprite/csc-mappinglandmarks/2023": {
+          "word": "Spiriduș",
+          "definition": "O imagine sau un personaj din programul dvs."
+        },
+        "map/csc-mappinglandmarks/2023": {
+          "word": "Hartă",
+          "definition": "O reprezentare a unei zone de uscat sau mare care prezintă caracteristici fizice, orașe, drumuri etc."
+        },
+        "pattern/csc-starquilts/2023": {
+          "word": "Model",
+          "definition": "Ceva care se întâmplă sau apare într-un mod regulat și repetat"
+        },
+        "rhombus/csc-starquilts/2023": {
+          "word": "Rhombus",
+          "definition": "Un poligon cu patru laturi egale, laturile opuse sunt paralele, unghiurile opuse sunt egale"
+        },
+        "star_quilt/csc-starquilts/2023": {
+          "word": "Quilt Star",
+          "definition": "Un cadou tradițional și apreciat în rândul nativilor americani din Marile Câmpii"
+        },
+        "artist/csc-starquilts/2023": {
+          "word": "Artist",
+          "definition": "Puteți scrie cod pentru a-l face să deseneze aproape orice"
+        },
+        "loop/csc-starquilts/2023": {
+          "word": "Buclă",
+          "definition": "O secvență de cod care se repetă"
+        },
+        "point/csc-starquilts/2023": {
+          "word": "Punct",
+          "definition": "O parte a formei stelei"
+        },
+        "row/csc-starquilts/2023": {
+          "word": "Rând",
+          "definition": "În acest caz, o linie ordonată de romburi"
+        },
+        "concentric/csc-starquilts/2023": {
+          "word": "Concentric",
+          "definition": "Obiecte sau forme care împart același centru"
+        },
+        "comments/csc-starquilts/2023": {
+          "word": "Comentarii",
+          "definition": "Note pentru tine care explică o secțiune de cod. Ele nu modifică programul, dar ajută la menținerea codului în ordine."
+        },
+        "event/csc-timecapsule/2023": {
+          "word": "Eveniment",
+          "definition": "O acțiune care face ca ceva să se întâmple."
+        },
+        "imagery/csc-timecapsule/2023": {
+          "word": "Imagistică",
+          "definition": "Imagini mentale produse de o poezie sau poveste"
+        },
+        "mood/csc-timecapsule/2023": {
+          "word": "Atmosferă",
+          "definition": "Expresia unui sentiment, atmosferă sau emoție în artă sau scris."
+        },
+        "sprite/csc-timecapsule/2023": {
+          "word": "Spiriduș",
+          "definition": "O imagine sau un personaj din programul dvs."
+        },
+        "time_capsule/csc-timecapsule/2023": {
+          "definition": "Un loc unde să ții amintiri și obiecte de zi cu zi care reprezintă o zi din viața cuiva care trăiește într-o anumită perioadă de timp. "
+        },
+        "code/poetry/2023": {
+          "word": "Cod",
+          "definition": "(v) a scrie instrucțiuni pentru un calculator."
+        },
+        "event/poetry/2023": {
+          "word": "Eveniment",
+          "definition": "O acțiune care face ca ceva să se întâmple."
+        },
+        "line/poetry/2023": {
+          "word": "Vers",
+          "definition": "(poezie) - o subdiviziune a unui poem aranjat într-un rând care se termină la marginea din dreapta."
+        },
+        "mood/poetry/2023": {
+          "word": "Atmosferă",
+          "definition": "Expresia unui sentiment, atmosferă sau emoție în artă sau scris."
+        },
+        "program/poetry/2023": {
+          "word": "Program",
+          "definition": "O serie de pași care au fost programați și formează ceva ce poate fi executat de un computer."
+        },
+        "poem/poetry/2023": {
+          "word": "Poezie",
+          "definition": "Linii de scriere care folosesc cuvinte pentru a crea imagini, sentimente și idei în mintea cititorului."
+        },
+        "constructive_feedback/poetry/2023": {
+          "word": "Feedback constructiv",
+          "definition": "Comentarii respectuoase care ajută pe cineva să-și îmbunătățească munca"
+        },
+        "poetry_circle/poetry/2023": {
+          "definition": "Un spațiu sigur și creativ pentru a testa noi poezii și pentru a obține feedback constructiv de la alții"
+        },
+        "algorithm/coursea/2023": {
+          "word": "Algoritm",
+          "definition": "O listă de etape care trebuie să fie parcurse pentru finalizarea unei activități."
+        },
+        "debugging/coursea/2023": {
+          "word": "Corectare erori",
+          "definition": "Găsirea și remedierea problemelor într-un algoritm sau program."
+        },
+        "program/coursea/2023": {
+          "word": "Program",
+          "definition": "Un algoritm care a fost programat în ceva care poate fi rulat de o mașină."
+        },
+        "click/coursea/2023": {
+          "word": "Fă clic",
+          "definition": "Apasă butonul mouse-ului"
+        },
+        "double_click/coursea/2023": {
+          "word": "Dublu-clic",
+          "definition": "Apăsați foarte repede butonul mouse-ului"
+        },
+        "drag/coursea/2023": {
+          "word": "Glisați",
+          "definition": "Faceți clic pe butonul mouse-ului și țineți apăsat în timp ce mutați indicatorul mouse-ului într-un alt loc."
+        },
+        "drop/coursea/2023": {
+          "word": "Cădere",
+          "definition": "Eliberați butonul mouse-ului pentru a „da drumul” unui element pe care îl glisați."
+        },
+        "bug/coursea/2023": {
+          "word": "Bug (eroare)",
+          "definition": "O parte a unui program care nu funcționează corect."
+        },
+        "programming/coursea/2023": {
+          "word": "Programare",
+          "definition": "Arta de a crea un program."
+        },
+        "loop/coursea/2023": {
+          "word": "Buclă",
+          "definition": "Acțiunea de a face ceva din nou și din nou."
+        },
+        "repeat/coursea/2023": {
+          "word": "Repetare",
+          "definition": "O acțiune care se repetă."
+        },
+        "event/coursea/2023": {
+          "word": "Eveniment",
+          "definition": "O acțiune care face ca ceva să se întâmple."
+        },
+        "algorithm/courseb/2023": {
+          "word": "Algoritm",
+          "definition": "O listă de etape care trebuie să fie parcurse pentru finalizarea unei activități."
+        },
+        "bug/courseb/2023": {
+          "word": "Bug (eroare)",
+          "definition": "O parte a unui program care nu funcționează corect."
+        },
+        "debugging/courseb/2023": {
+          "word": "Corectare erori",
+          "definition": "Găsirea și remedierea problemelor într-un algoritm sau program."
+        },
+        "click/courseb/2023": {
+          "word": "Fă clic",
+          "definition": "Apasă butonul mouse-ului"
+        },
+        "double_click/courseb/2023": {
+          "word": "Dublu-clic",
+          "definition": "Apăsați foarte repede butonul mouse-ului"
+        },
+        "drag/courseb/2023": {
+          "word": "Glisați",
+          "definition": "Faceți clic pe butonul mouse-ului și țineți apăsat în timp ce mutați indicatorul mouse-ului într-un alt loc."
+        },
+        "drop/courseb/2023": {
+          "word": "Cădere",
+          "definition": "Eliberați butonul mouse-ului pentru a „da drumul” unui element pe care îl glisați."
+        },
+        "program/courseb/2023": {
+          "word": "Program",
+          "definition": "Un algoritm care a fost programat în ceva care poate fi rulat de o mașină."
+        },
+        "programming/courseb/2023": {
+          "word": "Programare",
+          "definition": "Arta de a crea un program."
+        },
+        "persistence/courseb/2023": {
+          "word": "Perseverență",
+          "definition": "Să încerci din nou, iar și iar, chiar și atunci când ceva este foarte greu."
+        },
+        "loop/courseb/2023": {
+          "word": "Buclă",
+          "definition": "Acțiunea de a face ceva din nou și din nou."
+        },
+        "repeat/courseb/2023": {
+          "word": "Repetare",
+          "definition": "O acțiune care se repetă."
+        },
+        "event/courseb/2023": {
+          "word": "Eveniment",
+          "definition": "O acțiune care face ca ceva să se întâmple."
+        },
+        "algorithm/coursec/2023": {
+          "word": "Algoritm",
+          "definition": "O listă de etape care trebuie să fie parcurse pentru finalizarea unei activități."
+        },
+        "bug/coursec/2023": {
+          "word": "Bug (eroare)",
+          "definition": "O parte a unui program care nu funcționează corect."
+        },
+        "debugging/coursec/2023": {
+          "word": "Corectare erori",
+          "definition": "Găsirea și remedierea problemelor într-un algoritm sau program."
+        },
+        "program/coursec/2023": {
+          "word": "Program",
+          "definition": "Un algoritm care a fost programat în ceva care poate fi rulat de o mașină."
+        },
+        "sequencing/coursec/2023": {
+          "word": "Secvențiere",
+          "definition": "Ordonarea corectă a comenzilor, astfel încât calculatoarele să le poată citi."
+        },
+        "persistence/coursec/2023": {
+          "word": "Perseverență"
+        },
+        "programming/coursec/2023": {
+          "word": "Programare",
+          "definition": "Arta de a crea un program."
+        },
+        "loop/coursec/2023": {
+          "word": "Buclă",
+          "definition": "Acțiunea de a face ceva din nou și din nou."
+        },
+        "repeat/coursec/2023": {
+          "word": "Repetare",
+          "definition": "O acțiune care se repetă."
+        },
+        "event/coursec/2023": {
+          "word": "Eveniment",
+          "definition": "O acțiune care face ca ceva să se întâmple."
+        },
+        "data/coursec/2023": {
+          "word": "Date"
+        },
+        "binary/coursec/2023": {
+          "word": "Binar",
+          "definition": "Un mod de a reprezenta informațiile folosind doar două opțiuni."
+        },
+        "algorithm/coursed/2023": {
+          "word": "Algoritm",
+          "definition": "O listă de etape care trebuie să fie parcurse pentru finalizarea unei activități."
+        },
+        "program/coursed/2023": {
+          "word": "Program",
+          "definition": "Un algoritm care a fost programat în ceva care poate fi rulat de o mașină."
+        },
+        "bug/coursed/2023": {
+          "word": "Bug (eroare)",
+          "definition": "O parte a unui program care nu funcționează corect."
+        },
+        "debugging/coursed/2023": {
+          "word": "Corectare erori",
+          "definition": "Găsirea și remedierea problemelor într-un algoritm sau program."
+        },
+        "loop/coursed/2023": {
+          "word": "Buclă",
+          "definition": "Acțiunea de a face ceva din nou și din nou."
+        },
+        "programming/coursed/2023": {
+          "word": "Programare",
+          "definition": "Arta de a crea un program."
+        },
+        "frustrated/coursed/2023": {
+          "word": "Frustrat",
+          "definition": "Sentimentul de supărare sau de furie pentru că ceva nu îți iese așa cum îți dorești."
+        },
+        "persistence/coursed/2023": {
+          "word": "Perseverență",
+          "definition": "Să încerci din nou, iar și iar, chiar și atunci când ceva este foarte greu."
+        },
+        "event/coursed/2023": {
+          "word": "Eveniment",
+          "definition": "O acțiune care face ca ceva să se întâmple."
+        },
+        "code/coursed/2023": {
+          "definition": "(v) pentru a scrie cod sau pentru a scrie instrucțiuni pentru un computer."
+        },
+        "repeat/coursed/2023": {
+          "word": "Repetare",
+          "definition": "O acțiune care se repetă."
+        },
+        "command/coursed/2023": {
+          "word": "Comandă",
+          "definition": "O instrucțiune pentru calculator. Mai multe comenzi puse împreună formează algoritmi și programe de calculator."
+        },
+        "conditionals/coursed/2023": {
+          "word": "Condiţionale",
+          "definition": "Afirmații care rulează doar în anumite condiții."
+        },
+        "pseudocode/coursed/2023": {
+          "word": "pseudocod",
+          "definition": "O descriere în limbaj simplu a etapelor unui algoritm"
+        },
+        "condition/coursed/2023": {
+          "word": "Condiție",
+          "definition": "Ceva pe care un program verifică pentru a vedea dacă este adevărat înainte de a permite o acțiune."
+        },
+        "while_loop/coursed/2023": {
+          "word": "Buclă „while”",
+          "definition": "O buclă care continuă să se repete cât timp o condiție este adevărată."
+        },
+        "until/coursed/2023": {
+          "word": "Until",
+          "definition": "O comandă care vă spune să faceți ceva numai până în momentul în care ceva devine adevărat."
+        },
+        "behavior/coursee/2023": {
+          "word": "Comportament",
+          "definition": "O acțiune pe care un sprite o execută continuu până când i se spune să se oprească."
+        },
+        "sprite/coursee/2023": {
+          "word": "Spiriduș",
+          "definition": "Un element grafic afișat pe ecran care are proprietăți precum locul, dimensiunea și aspectul."
+        },
+        "loop/coursee/2023": {
+          "word": "Buclă",
+          "definition": "Acțiunea de a face ceva din nou și din nou."
+        },
+        "repeat/coursee/2023": {
+          "word": "Repetare",
+          "definition": "O acțiune care se repetă."
+        },
+        "function/coursee/2023": {
+          "word": "Funcţie"
+        },
+        "condition/coursee/2023": {
+          "word": "Condiție"
+        },
+        "conditionals/coursee/2023": {
+          "word": "Condiţionale",
+          "definition": "Afirmații care rulează doar în anumite condiții."
+        },
+        "while_loop/coursee/2023": {
+          "word": "Buclă „while”",
+          "definition": "O buclă care continuă să se repete cât timp o condiție este adevărată."
+        },
+        "copyright/coursee/2023": {
+          "word": "Drept de autor",
+          "definition": "dreptul legal exclusiv de a tipări, publica, interpreta, filma sau înregistra opere literare, artistice sau muzicale și de a autoriza pe alții să facă acest lucru"
+        },
+        "define/coursee/2023": {
+          "word": "Defineşte",
+          "definition": "Aflați care sunt detaliile problemelor pe care încercați să le rezolvați."
+        },
+        "prepare/coursee/2023": {
+          "word": "Pregătire",
+          "definition": "Cercetați, planificați și achiziționați materiale pentru activitatea pe care urmează să o îndepliniți"
+        },
+        "reflect/coursee/2023": {
+          "word": "Reflecție",
+          "definition": "Gândiți-vă cu atenție la ceva cu intenția de a îmbunătăți rezultatul în viitor"
+        },
+        "try/coursee/2023": {
+          "word": "Încercare",
+          "definition": "O acțiune întreprinsă pentru a face ceva"
+        },
+        "sprite/coursef/2023": {
+          "word": "Spiriduș",
+          "definition": "Un element grafic afișat pe ecran care are proprietăți precum locul, dimensiunea și aspectul."
+        },
+        "user/coursef/2023": {
+          "word": "Utilizator",
+          "definition": "O persoană care utilizează un obiect, inclusiv software și hardware."
+        },
+        "algorithm/coursef/2023": {
+          "word": "Algoritm",
+          "definition": "O listă de etape care trebuie să fie parcurse pentru finalizarea unei activități."
+        },
+        "behavior/coursef/2023": {
+          "word": "Comportament"
+        },
+        "program/coursef/2023": {
+          "word": "Program",
+          "definition": "Un algoritm care a fost programat în ceva care poate fi rulat de o mașină."
+        },
+        "event/coursef/2023": {
+          "word": "Eveniment",
+          "definition": "O acțiune care face ca ceva să se întâmple."
+        },
+        "variable/coursef/2023": {
+          "word": "Variabilă",
+          "definition": "O etichetă pentru un fragment de informație utilizat într-un program."
+        },
+        "prompt/coursef/2023": {
+          "word": "Prompt",
+          "definition": "Un mesaj afișat pe ecranul calculatorului, prin care i se cere utilizatorului să tasteze ceva."
+        },
+        "input/coursef/2023": {
+          "word": "Intrare",
+          "definition": "Informațiile pe care calculatoarele le obțin de la utilizatori."
+        },
+        "models_and_simulations/coursef/2023": {
+          "word": "Modele și Simulări",
+          "definition": "un program care reproduce sau imită caracteristicile cheie ale unui eveniment din lumea reală pentru a-i investiga comportamentul fără cost, timp consumat sau pericolul derulării unui experiment în viața reală."
+        },
+        "machine_learning/coursef/2023": {
+          "word": "Învățare Automată",
+          "definition": "Cum recunosc computerele tiparele și iau decizii fără a fi programate în mod explicit"
+        },
+        "dns/coursef/2023": {
+          "word": "DNS",
+          "definition": "prescurtare de la Domain Name System, acest sistem traduce numele de domenii (cum ar fi exemplu.com) în adrese IP (cum ar fi 93.184.216.34)."
+        },
+        "dsl_cable/coursef/2023": {
+          "word": "DSL/Cablu",
+          "definition": "O metodă de transmitere a informațiilor prin intermediul cablurilor telefonice sau de televiziune."
+        },
+        "fiber_optic_cable/coursef/2023": {
+          "word": "Cablu de fibră optică",
+          "definition": "O conexiune care utilizează lumina pentru a transmite informații"
+        },
+        "internet/coursef/2023": {
+          "word": "Internet",
+          "definition": "Un grup de calculatoare și servere conectate între ele."
+        },
+        "ip_address/coursef/2023": {
+          "word": "Adresă IP",
+          "definition": "Un număr atribuit oricărui element care este conectat la internet."
+        },
+        "packets/coursef/2023": {
+          "word": "Pachete",
+          "definition": "Mici fragmente de informații care au fost grupate cu grijă plecând de la fragmente mai mari de informații."
+        },
+        "servers/coursef/2023": {
+          "word": "Servere",
+          "definition": "Calculatoare care există doar pentru a oferi servicii altora."
+        },
+        "url/coursef/2023": {
+          "word": "URL",
+          "definition": "O adresă ușor de reținut pentru a accesa o pagină web (cum ar fi www.code.org)."
+        },
+        "wi_fi/coursef/2023": {
+          "word": "Wi-Fi",
+          "definition": "O metodă de transmitere fără fir a informațiilor prin intermediul undelor radio."
+        },
+        "define/coursef/2023": {
+          "word": "Defineşte",
+          "definition": "Aflați care sunt detaliile problemelor pe care încercați să le rezolvați."
+        },
+        "prepare/coursef/2023": {
+          "word": "Pregătire",
+          "definition": "Cercetați, planificați și achiziționați materiale pentru activitatea pe care urmează să o îndepliniți"
+        },
+        "reflect/coursef/2023": {
+          "word": "Reflecție",
+          "definition": "Gândiți-vă cu atenție la ceva cu intenția de a îmbunătăți rezultatul în viitor"
+        },
+        "try/coursef/2023": {
+          "word": "Încercare",
+          "definition": "O acțiune întreprinsă pentru a face ceva"
+        },
+        "algorithm/express/2023": {
+          "word": "Algoritm",
+          "definition": "O listă de etape care trebuie să fie parcurse pentru finalizarea unei activități."
+        },
+        "bug/express/2023": {
+          "word": "Bug (eroare)",
+          "definition": "O parte a unui program care nu funcționează corect."
+        },
+        "debugging/express/2023": {
+          "word": "Corectare erori",
+          "definition": "Găsirea și remedierea problemelor într-un algoritm sau program."
+        },
+        "sequencing/express/2023": {
+          "word": "Secvențiere",
+          "definition": "Ordonarea corectă a comenzilor, astfel încât calculatoarele să le poată citi."
+        },
+        "program/express/2023": {
+          "word": "Program",
+          "definition": "Un algoritm care a fost programat în ceva care poate fi rulat de o mașină."
+        },
+        "programming/express/2023": {
+          "word": "Programare",
+          "definition": "Arta de a crea un program."
+        },
+        "behavior/express/2023": {
+          "word": "Comportament",
+          "definition": "O acțiune pe care un sprite o execută continuu până când i se spune să se oprească."
+        },
+        "sprite/express/2023": {
+          "word": "Spiriduș",
+          "definition": "Un element grafic afișat pe ecran care are proprietăți precum locul, dimensiunea și aspectul."
+        },
+        "event/express/2023": {
+          "word": "Eveniment",
+          "definition": "O acțiune care face ca ceva să se întâmple."
+        },
+        "code/express/2023": {
+          "definition": "a scrie un cod sau a formula instrucțiuni pentru un calculator."
+        },
+        "loop/express/2023": {
+          "word": "Buclă",
+          "definition": "Acțiunea de a face ceva din nou și din nou."
+        },
+        "repeat/express/2023": {
+          "word": "Repetare",
+          "definition": "O acțiune care se repetă."
+        },
+        "command/express/2023": {
+          "word": "Comandă",
+          "definition": "O instrucțiune pentru calculator. Mai multe comenzi puse împreună formează algoritmi și programe de calculator."
+        },
+        "condition/express/2023": {
+          "word": "Condiție",
+          "definition": "Ceva pe care un program verifică pentru a vedea dacă este adevărat înainte de a permite o acțiune."
+        },
+        "conditionals/express/2023": {
+          "word": "Condiţionale",
+          "definition": "Afirmații care rulează doar în anumite condiții."
+        },
+        "while_loop/express/2023": {
+          "word": "Buclă „while”",
+          "definition": "O buclă care continuă să se repete cât timp o condiție este adevărată."
+        },
+        "until/express/2023": {
+          "word": "Until",
+          "definition": "O comandă care vă spune să faceți ceva numai până în momentul în care ceva devine adevărat."
+        },
+        "function/express/2023": {
+          "word": "Funcţie",
+          "definition": "O parte de cod pe care o poti folosi cu usurinta mereu si mereu."
+        },
+        "prompt/express/2023": {
+          "word": "prompt",
+          "definition": "Un mesaj afișat pe ecranul calculatorului, prin care i se cere utilizatorului să tasteze ceva."
+        },
+        "variable/express/2023": {
+          "word": "Variabilă",
+          "definition": "O etichetă pentru un fragment de informație utilizat într-un program."
+        },
+        "for_loop/express/2023": {
+          "word": "Buclă for",
+          "definition": "Bucle care au un început, un sfârșit și un pas (interval de pas) prestabilite."
+        },
+        "define/express/2023": {
+          "word": "Defineşte",
+          "definition": "Aflați care sunt detaliile problemelor pe care încercați să le rezolvați."
+        },
+        "prepare/express/2023": {
+          "word": "Pregătire",
+          "definition": "Cercetați, planificați și achiziționați materiale pentru activitatea pe care urmează să o îndepliniți"
+        },
+        "reflect/express/2023": {
+          "word": "Reflecție",
+          "definition": "Gândiți-vă cu atenție la ceva cu intenția de a îmbunătăți rezultatul în viitor"
+        },
+        "try/express/2023": {
+          "word": "Încercare",
+          "definition": "O acțiune întreprinsă pentru a face ceva"
+        },
+        "click/pre-express/2023": {
+          "word": "Fă clic",
+          "definition": "Apasă butonul mouse-ului"
+        },
+        "double_click/pre-express/2023": {
+          "word": "Dublu-clic",
+          "definition": "Apăsați foarte repede butonul mouse-ului"
+        },
+        "drag/pre-express/2023": {
+          "word": "Glisați",
+          "definition": "Faceți clic pe butonul mouse-ului și țineți apăsat în timp ce mutați indicatorul mouse-ului într-un alt loc."
+        },
+        "drop/pre-express/2023": {
+          "word": "Cădere",
+          "definition": "Eliberați butonul mouse-ului pentru a „da drumul” unui element pe care îl glisați."
+        },
+        "algorithm/pre-express/2023": {
+          "word": "Algoritm",
+          "definition": "O listă de etape care trebuie să fie parcurse pentru finalizarea unei activități."
+        },
+        "bug/pre-express/2023": {
+          "word": "Bug (eroare)",
+          "definition": "O parte a unui program care nu funcționează corect."
+        },
+        "debugging/pre-express/2023": {
+          "word": "Corectare erori",
+          "definition": "Găsirea și remedierea problemelor într-un algoritm sau program."
+        },
+        "program/pre-express/2023": {
+          "word": "Program",
+          "definition": "Un algoritm care a fost programat în ceva care poate fi rulat de o mașină."
+        },
+        "programming/pre-express/2023": {
+          "word": "Programare",
+          "definition": "Arta de a crea un program."
+        },
+        "persistence/pre-express/2023": {
+          "word": "Perseverență",
+          "definition": "Să încerci din nou, iar și iar, chiar și atunci când ceva este foarte greu."
+        },
+        "loop/pre-express/2023": {
+          "word": "Buclă",
+          "definition": "Acțiunea de a face ceva din nou și din nou."
+        },
+        "repeat/pre-express/2023": {
+          "word": "Repetare",
+          "definition": "O acțiune care se repetă."
+        },
+        "event/pre-express/2023": {
+          "word": "Eveniment",
+          "definition": "O acțiune care face ca ceva să se întâmple."
+        },
+        "machine_learning/how-ai-works/2023": {
+          "word": "Învățare Automată",
+          "definition": "Cum recunosc computerele tiparele și iau decizii fără a fi programate în mod explicit"
+        },
+        "algorithm/how-ai-works/2023": {
+          "word": "Algoritm",
+          "definition": "o serie de pași pentru a rezolva o problemă sau pentru a lua o decizie"
+        },
+        "network/how-ai-works/2023": {
+          "word": "Rețea",
+          "definition": "O colecție de articole conectate împreună. Urmarea acestor conexiuni poate reprezenta pașii dintr-un algoritm, cum ar fi o diagramă logică."
+        },
+        "large_language_model_llm_/how-ai-works/2023": {
+          "word": "Model de limbă mare (LLM)",
+          "definition": "o formă de IA cu scop general, care este instruită pe un corp foarte, foarte mare de cunoștințe"
+        },
+        "diffusion_ai/how-ai-works/2023": {
+          "word": "Difuzie AI",
+          "definition": "convertirea unei imagini în zgomot și instruirea unui AI pentru a inversa procesul"
+        },
+        "gan_generative_adversarial_network_/how-ai-works/2023": {
+          "word": "GAN (Rețeaua Adversarială Generativă)",
+          "definition": "un mod de a utiliza două modele AI concurente pentru a genera ceva"
+        },
+        "artificial_intelligence/how-ai-works/2023": {
+          "word": "Inteligența artificială",
+          "definition": "capacitatea mașinilor de a învăța și de a rezolva probleme."
+        },
         "code/aquatic/unversioned": {
           "word": "cod",
           "definition": "(v) pentru a scrie cod sau pentru a scrie instrucțiuni pentru un computer."
