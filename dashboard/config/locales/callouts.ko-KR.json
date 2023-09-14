@@ -255,6 +255,9 @@
         "CourseD_Dance_2020_01_2021": {
           "dance_callout_01": "여기에서 댄서 유형을 선택하세요!"
         },
+        "CourseD_Dance_2020_01_2023": {
+          "dance_callout_01": "여기에서 댄서 유형을 선택하세요!"
+        },
         "CourseD_Dance_2020_02": {
           "arrow_buttons": "댄서를 조종하려면 화살표 단추를 누르세요.",
           "dance_callout_11_a": "이 블록을 프로그램에 추가합니다."
@@ -267,6 +270,10 @@
           "arrow_buttons": "댄서를 조종하려면 화살표 단추를 누르세요.",
           "dance_callout_11_a": "이 블록을 프로그램에 추가합니다."
         },
+        "CourseD_Dance_2020_02_2023": {
+          "arrow_buttons": "댄서를 조종하려면 화살표 단추를 누르세요.",
+          "dance_callout_11_a": "이 블록을 프로그램에 추가합니다."
+        },
         "CourseD_Dance_2020_04": {
           "dance_callout_02": "이 블록을 프로그램에 추가하세요!"
         },
@@ -274,6 +281,9 @@
           "dance_callout_02": "이 블록을 프로그램에 추가하세요!"
         },
         "CourseD_Dance_2020_04_2021": {
+          "dance_callout_02": "이 블록을 프로그램에 추가하세요!"
+        },
+        "CourseD_Dance_2020_04_2023": {
           "dance_callout_02": "이 블록을 프로그램에 추가하세요!"
         },
         "CourseD_Dance_2020_05": {
@@ -285,6 +295,9 @@
         "CourseD_Dance_2020_05_2021": {
           "dance_callout_05": "새 이벤트를 프로그램에 추가하십시오."
         },
+        "CourseD_Dance_2020_05_2023": {
+          "dance_callout_05": "새 이벤트를 프로그램에 추가하십시오."
+        },
         "CourseD_Dance_2020_06": {
           "dance_party_11_5_groups": "새 블록!"
         },
@@ -292,6 +305,9 @@
           "dance_party_11_5_groups": "새 블록!"
         },
         "CourseD_Dance_2020_06_2021": {
+          "dance_party_11_5_groups": "새 블록!"
+        },
+        "CourseD_Dance_2020_06_2023": {
           "dance_party_11_5_groups": "새 블록!"
         },
         "CourseD_Dance_2020_07": {
@@ -303,6 +319,9 @@
         "CourseD_Dance_2020_07_2021": {
           "setprop_hint": "새 블록!"
         },
+        "CourseD_Dance_2020_07_2023": {
+          "setprop_hint": "새 블록!"
+        },
         "CourseD_Dance_2020_09": {
           "new_block_3": "새 블록!",
           "new_block_4": "새 블록!"
@@ -312,6 +331,10 @@
           "new_block_4": "새 블록!"
         },
         "CourseD_Dance_2020_09_2021": {
+          "new_block_3": "새 블록!",
+          "new_block_4": "새 블록!"
+        },
+        "CourseD_Dance_2020_09_2023": {
           "new_block_3": "새 블록!",
           "new_block_4": "새 블록!"
         },
@@ -342,10 +365,17 @@
           "minitoolbox": "여기를 클릭하여 블록을 확장하세요.",
           "pointerlocation": "대상 블록을 여기로 끌어 오세요."
         },
+        "CourseF_outbreak2_2023": {
+          "minitoolbox": "여기를 클릭하여 블록을 확장하세요.",
+          "pointerlocation": "대상 블록을 여기로 끌어 오세요."
+        },
         "CourseF_outbreak7": {
           "costumes_callout": "클릭하여 새 의상을 만드세요"
         },
         "CourseF_outbreak7_-2022-2": {
+          "costumes_tab": "여기를 클릭하여 의상을 프로젝트에 추가하세요."
+        },
+        "CourseF_outbreak7_2023": {
           "costumes_tab": "여기를 클릭하여 의상을 프로젝트에 추가하세요."
         },
         "Dance_2019_01": {
@@ -402,6 +432,9 @@
         "Fish Tank 3-validated_2021": {
           "spritelab_comment": "이 블록을 사용하여 코드 작동 방법에 관한 여러분 자신 또는 교사의 메모를 남기세요."
         },
+        "Fish Tank 3-validated_2023": {
+          "spritelab_comment": "이 블록을 사용하여 코드 작동 방법에 관한 여러분 자신 또는 교사의 메모를 남기세요."
+        },
         "Function intro Ryan": {
           "Function_intro_Ryan_1": "이 작은 지시문을 사용하면, 작업 공간에 보이는 같은 이름의 '커다란' 코드를 컴퓨터가 실행합니다."
         },
@@ -415,6 +448,9 @@
           "Function_intro_Ryan_1": "이 작은 지시문을 사용하면, 작업 공간에 보이는 같은 이름의 '커다란' 코드를 컴퓨터가 실행합니다."
         },
         "Function intro Ryan_2021": {
+          "Function_intro_Ryan_1": "이 작은 지시문을 사용하면, 작업 공간에 보이는 같은 이름의 '커다란' 코드를 컴퓨터가 실행합니다."
+        },
+        "Function intro Ryan_2023": {
           "Function_intro_Ryan_1": "이 작은 지시문을 사용하면, 작업 공간에 보이는 같은 이름의 '커다란' 코드를 컴퓨터가 실행합니다."
         },
         "Geometric Sun": {
@@ -463,6 +499,9 @@
         "MC_HOC_2017_03_Cole_2021": {
           "MC_HOC_2017_03_Cole_1": "이것이 `반복` 루프입니다! 작업 공간으로 클릭해 가져와서, 여러 번 실행하고 싶은 코드를 추가하세요."
         },
+        "MC_HOC_2017_03_Cole_2023": {
+          "MC_HOC_2017_03_Cole_1": "이것이 `반복` 루프입니다! 작업 공간으로 클릭해 가져와서, 여러 번 실행하고 싶은 코드를 추가하세요."
+        },
         "MC_HOC_2017_04_Cole": {
           "MC_HOC_2017_04_Cole_a": "에이전트는 물 위에서 이동할 수 있지만, 플레이어는 그럴 수 없어요!"
         },
@@ -476,6 +515,9 @@
           "MC_HOC_2017_04_Cole_a": "에이전트는 물 위에서 이동할 수 있지만, 플레이어는 그럴 수 없어요!"
         },
         "MC_HOC_2017_04_Cole_2021": {
+          "MC_HOC_2017_04_Cole_a": "에이전트는 물 위에서 이동할 수 있지만, 플레이어는 그럴 수 없어요!"
+        },
+        "MC_HOC_2017_04_Cole_2023": {
           "MC_HOC_2017_04_Cole_a": "에이전트는 물 위에서 이동할 수 있지만, 플레이어는 그럴 수 없어요!"
         },
         "MC_HOC_2017_06_Cole": {
@@ -493,6 +535,9 @@
         "MC_HOC_2017_06_Cole_2021": {
           "MC_HOC_2017_06_Cole_1": "블록을 버릴 수는 없지만 수정할 수는 있어요!"
         },
+        "MC_HOC_2017_06_Cole_2023": {
+          "MC_HOC_2017_06_Cole_1": "블록을 버릴 수는 없지만 수정할 수는 있어요!"
+        },
         "MC_HOC_2017_Ali": {
           "MC_HOC_2017_08_RY_1": "에이전트는 용암 위를 지나갈 수 있지만, 스티브와 알렉스는 그럴 수 없어요!"
         },
@@ -506,6 +551,9 @@
           "MC_HOC_2017_08_RY_1": "에이전트는 용암 위를 지나갈 수 있지만, 스티브와 알렉스는 그럴 수 없어요!"
         },
         "MC_HOC_2017_Ali_2021": {
+          "MC_HOC_2017_08_RY_1": "에이전트는 용암 위를 지나갈 수 있지만, 스티브와 알렉스는 그럴 수 없어요!"
+        },
+        "MC_HOC_2017_Ali_2023": {
           "MC_HOC_2017_08_RY_1": "에이전트는 용암 위를 지나갈 수 있지만, 스티브와 알렉스는 그럴 수 없어요!"
         },
         "NEW Course 4 Artist Functions 7": {
@@ -564,6 +612,9 @@
         "Overworld Chop Trees_2021": {
           "craft_callout_preplaced": "여러분이 시작할 수 있도록 여기에 블록을 몇 개 놓아두었어요"
         },
+        "Overworld Chop Trees_2023": {
+          "craft_callout_preplaced": "여러분이 시작할 수 있도록 여기에 블록을 몇 개 놓아두었어요"
+        },
         "Overworld House Frame Chosen": {
           "craft_callout_preplaced_house": "이 코드는 집 짓기를 시작합니다. 끝낼 수 있나요?"
         },
@@ -577,6 +628,9 @@
           "craft_callout_preplaced_house": "이 코드는 집 짓기를 시작합니다. 끝낼 수 있나요?"
         },
         "Overworld House Frame Chosen_2021": {
+          "craft_callout_preplaced_house": "이 코드는 집 짓기를 시작합니다. 끝낼 수 있나요?"
+        },
+        "Overworld House Frame Chosen_2023": {
           "craft_callout_preplaced_house": "이 코드는 집 짓기를 시작합니다. 끝낼 수 있나요?"
         },
         "Overworld Move to Sheep": {
@@ -599,6 +653,10 @@
           "craft_drag_block_callout": "'앞으로 이동' 블록을 드래그해 다른 블록 아래에 끼우세요.",
           "craft_run_button_callout": "\"실행하기\"를 눌러 프로그램을 실행시켜보세요"
         },
+        "Overworld Move to Sheep_2023": {
+          "craft_drag_block_callout": "'앞으로 이동' 블록을 드래그해 다른 블록 아래에 끼우세요.",
+          "craft_run_button_callout": "\"실행하기\"를 눌러 프로그램을 실행시켜보세요"
+        },
         "Overworld Place Wall": {
           "craft_inside_repeat": "블록들을 이곳에 놓아서 작업을 반복하세요"
         },
@@ -612,6 +670,9 @@
           "craft_inside_repeat": "블록들을 이곳에 놓아서 작업을 반복하세요"
         },
         "Overworld Place Wall_2021": {
+          "craft_inside_repeat": "블록들을 이곳에 놓아서 작업을 반복하세요"
+        },
+        "Overworld Place Wall_2023": {
           "craft_inside_repeat": "블록들을 이곳에 놓아서 작업을 반복하세요"
         },
         "Robot Doodle": {
@@ -635,6 +696,9 @@
         "Underground Avoiding Lava_2021": {
           "craft_callout_moveforward": "이 코드는 용암을 확인합니다. 앞으로 이동하기 명령을 추가할 수 있나요?"
         },
+        "Underground Avoiding Lava_2023": {
+          "craft_callout_moveforward": "이 코드는 용암을 확인합니다. 앞으로 이동하기 명령을 추가할 수 있나요?"
+        },
         "Underground Iron": {
           "craft_what_is_iron": "이 철을 채굴하세요!"
         },
@@ -650,6 +714,9 @@
         "Underground Iron_2021": {
           "craft_what_is_iron": "이 철을 채굴하세요!"
         },
+        "Underground Iron_2023": {
+          "craft_what_is_iron": "이 철을 채굴하세요!"
+        },
         "Virtual Pet 2_-2022-2": {
           "vp_costumes": "여기를 클릭하여 새 의상을 프로젝트에 추가하세요!"
         },
@@ -662,10 +729,16 @@
         "Virtual Pet 2_2021": {
           "vp_costumes": "여기를 클릭하여 새 의상을 프로젝트에 추가하세요!"
         },
+        "Virtual Pet 2_2023": {
+          "vp_costumes": "여기를 클릭하여 새 의상을 프로젝트에 추가하세요!"
+        },
         "Virtual Pet 6_-2022-2": {
           "vp_costumes": "여기를 클릭하여 새 의상을 프로젝트에 추가하세요!"
         },
         "Virtual Pet 6_2021": {
+          "vp_costumes": "여기를 클릭하여 새 의상을 프로젝트에 추가하세요!"
+        },
+        "Virtual Pet 6_2023": {
           "vp_costumes": "여기를 클릭하여 새 의상을 프로젝트에 추가하세요!"
         },
         "behaviors 1": {
@@ -736,10 +809,16 @@
         "courseA_EOC_playlab_animals2022": {
           "question_mark": "?"
         },
+        "courseA_EOC_playlab_animals_2023": {
+          "question_mark": "?"
+        },
         "courseA_EOC_playlab_fantasy": {
           "question_mark": "?"
         },
         "courseA_EOC_playlab_fantasy2022": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_fantasy_2023": {
           "question_mark": "?"
         },
         "courseA_EOC_playlab_people": {
@@ -748,10 +827,16 @@
         "courseA_EOC_playlab_people2022": {
           "question_mark": "?"
         },
+        "courseA_EOC_playlab_people_2023": {
+          "question_mark": "?"
+        },
         "courseA_artist_loops4": {
           "courseA_artist_loops4_1": "이 숫자는 이 퍼즐에서 이러한 블록을 몇 개 사용할 수 있는지 알려줍니다.  "
         },
         "courseA_artist_loops42022": {
+          "courseA_artist_loops4_1": "이 숫자는 이 퍼즐에서 이러한 블록을 몇 개 사용할 수 있는지 알려줍니다.  "
+        },
+        "courseA_artist_loops42022_2023": {
           "courseA_artist_loops4_1": "이 숫자는 이 퍼즐에서 이러한 블록을 몇 개 사용할 수 있는지 알려줍니다.  "
         },
         "courseA_artist_loops4_2018": {
@@ -772,6 +857,9 @@
         "courseA_artist_loops72022": {
           "courseA_artist_loops7_1": "이 숫자는 이러한 종류의 퍼즐 중 한 개 만이 최종 답에서 사용할 수 있음을 의미합니다.  "
         },
+        "courseA_artist_loops72022_2023": {
+          "courseA_artist_loops7_1": "이 숫자는 이러한 종류의 퍼즐 중 한 개 만이 최종 답에서 사용할 수 있음을 의미합니다.  "
+        },
         "courseA_artist_loops7_2018": {
           "courseA_artist_loops7_1": "이 숫자는 이러한 종류의 퍼즐 중 한 개 만이 최종 답에서 사용할 수 있음을 의미합니다.  "
         },
@@ -788,6 +876,9 @@
           "courseA_artist_loops8_1": "필요할 때마다 라인 그리기를 취소할 수 있다는 거 아세요?"
         },
         "courseA_artist_loops82022": {
+          "courseA_artist_loops8_1": "필요할 때마다 라인 그리기를 취소할 수 있다는 거 아세요?"
+        },
+        "courseA_artist_loops82022_2023": {
           "courseA_artist_loops8_1": "필요할 때마다 라인 그리기를 취소할 수 있다는 거 아세요?"
         },
         "courseA_artist_loops8_2018": {
@@ -817,6 +908,9 @@
         "courseA_collector_loops1_2021": {
           "courseA_collector_loops1_1": "이 블록을 사용하여 보물을 모으세요."
         },
+        "courseA_collector_loops1_2023": {
+          "courseA_collector_loops1_1": "이 블록을 사용하여 보물을 모으세요."
+        },
         "courseA_collector_loops3": {
           "gradek_adventurer_loops2_1": "이 숫자는 이 퍼즐에서 이러한 블록을 몇 개 사용할 수 있는지 알려줍니다.  "
         },
@@ -833,6 +927,9 @@
           "gradek_adventurer_loops2_1": "이 숫자는 이 퍼즐에서 이러한 블록을 몇 개 사용할 수 있는지 알려줍니다.  "
         },
         "courseA_collector_loops3_2021": {
+          "gradek_adventurer_loops2_1": "이 숫자는 이 퍼즐에서 이러한 블록을 몇 개 사용할 수 있는지 알려줍니다.  "
+        },
+        "courseA_collector_loops3_2023": {
           "gradek_adventurer_loops2_1": "이 숫자는 이 퍼즐에서 이러한 블록을 몇 개 사용할 수 있는지 알려줍니다.  "
         },
         "courseA_collector_preLoops2": {
@@ -862,6 +959,9 @@
         "courseA_maze_ramp2_2021": {
           "courseC_maze_programming2_1": "이것은 툴박스입니다. 퍼즐을 완료하기 위해 추가 블록을 여기서 찾을 수 있습니다. "
         },
+        "courseA_maze_ramp2_2023": {
+          "courseC_maze_programming2_1": "이것은 툴박스입니다. 퍼즐을 완료하기 위해 추가 블록을 여기서 찾을 수 있습니다. "
+        },
         "courseA_maze_ramp3a_2018": {
           "courseC_maze_programming2_1": "이것은 툴박스입니다. 퍼즐을 완료하기 위해 추가 블록을 여기서 찾을 수 있습니다. "
         },
@@ -883,6 +983,9 @@
         "courseA_maze_seq1_2021": {
           "courseA_maze_seq1_1": "힌트가 필요하면 전구를 클릭하세요!"
         },
+        "courseA_maze_seq1_2023": {
+          "courseA_maze_seq1_1": "힌트가 필요하면 전구를 클릭하세요!"
+        },
         "courseA_maze_seq2": {
           "courseA_maze_seqA_callout1": "단계 버튼을 사용하여 차근차근 프로그램을 진행하세요. 버그를 찾는데 도움이 될 거예요!"
         },
@@ -893,6 +996,9 @@
           "courseA_playlab_events4_callout1": "이것은 콜아웃입니다."
         },
         "courseA_playLab_events42022": {
+          "courseA_playlab_events4_callout1": "이것은 콜아웃입니다."
+        },
+        "courseA_playLab_events42022_2023": {
           "courseA_playlab_events4_callout1": "이것은 콜아웃입니다."
         },
         "courseA_playLab_events4_2018": {
@@ -913,6 +1019,9 @@
         "courseA_playLab_events52022": {
           "courseA_playLab_events5_1": "여기를 클릭하여 이벤트 화살표의 방향을 변경하세요."
         },
+        "courseA_playLab_events52022_2023": {
+          "courseA_playLab_events5_1": "여기를 클릭하여 이벤트 화살표의 방향을 변경하세요."
+        },
         "courseA_playLab_events5_2018": {
           "courseA_playLab_events5_1": "여기를 클릭하여 이벤트 화살표의 방향을 변경하세요."
         },
@@ -931,6 +1040,9 @@
         "courseA_playLab_events62022": {
           "courseA_playLab_events6_1": "듣고 나서야 어떤 소리가 나오는지 아는 \"무작위' 사운드를 선택해 보세요!"
         },
+        "courseA_playLab_events62022_2023": {
+          "courseA_playLab_events6_1": "듣고 나서야 어떤 소리가 나오는지 아는 \"무작위' 사운드를 선택해 보세요!"
+        },
         "courseA_playLab_events6_2018": {
           "courseA_playLab_events6_1": "듣고 나서야 어떤 소리가 나오는지 아는 \"무작위' 사운드를 선택해 보세요!"
         },
@@ -946,6 +1058,9 @@
         "courseB_Scrat_ramp12022": {
           "grade2_CaringForNewPet_0_1": "모든 블록을 연결한 후, \"실행\"을 클릭하여 프로그램을 시작하세요."
         },
+        "courseB_Scrat_ramp12022_2023": {
+          "grade2_CaringForNewPet_0_1": "모든 블록을 연결한 후, \"실행\"을 클릭하여 프로그램을 시작하세요."
+        },
         "courseB_Scrat_ramp1_2018": {
           "grade2_CaringForNewPet_0_1": "모든 블록을 연결한 후, \"실행\"을 클릭하여 프로그램을 시작하세요."
         },
@@ -959,6 +1074,9 @@
           "grade2_CaringForNewPet_0_1": "모든 블록을 연결한 후, \"실행\"을 클릭하여 프로그램을 시작하세요."
         },
         "courseB_Scrat_ramp3a2022": {
+          "courseC_maze_programming2_1": "이것은 툴박스입니다. 퍼즐을 완료하기 위해 추가 블록을 여기서 찾을 수 있습니다. "
+        },
+        "courseB_Scrat_ramp3a2022_2023": {
           "courseC_maze_programming2_1": "이것은 툴박스입니다. 퍼즐을 완료하기 위해 추가 블록을 여기서 찾을 수 있습니다. "
         },
         "courseB_Scrat_ramp3a_2019": {
@@ -988,6 +1106,9 @@
         "courseB_artist_loops3_2021": {
           "courseB_artist_loops3_1": "이러한 블록은 툴박스에 한 개만 있습니다. 어떻게 사용할거예요?"
         },
+        "courseB_artist_loops3_2023": {
+          "courseB_artist_loops3_1": "이러한 블록은 툴박스에 한 개만 있습니다. 어떻게 사용할거예요?"
+        },
         "courseB_artist_loops5": {
           "courseB_artist_loops5_1": "이 숫자는 이러한 블록이 툴박스에 더 이상 없다는 의미합니다.  "
         },
@@ -1009,6 +1130,9 @@
         "courseB_collector_loops1_2021": {
           "courseB_collector_loops1_1": "이 블록을 사용하여 보물을 모으세요."
         },
+        "courseB_collector_loops1_2023": {
+          "courseB_collector_loops1_1": "이 블록을 사용하여 보물을 모으세요."
+        },
         "courseB_maze_seq1": {
           "courseB_maze_seq1": "힌트가 필요하면 전구를 클릭하세요!"
         },
@@ -1025,6 +1149,9 @@
           "courseB_maze_seq1": "힌트가 필요하면 전구를 클릭하세요!"
         },
         "courseB_maze_seq1_2021": {
+          "courseB_maze_seq1": "힌트가 필요하면 전구를 클릭하세요!"
+        },
+        "courseB_maze_seq1_2023": {
           "courseB_maze_seq1": "힌트가 필요하면 전구를 클릭하세요!"
         },
         "courseB_maze_seq2": {
@@ -1051,6 +1178,9 @@
         "courseB_playlab_events6_2021": {
           "courseB_playlab_events6_a": "녹색 드롭다운 화살표를 사용해 방향을 바꾸세요."
         },
+        "courseB_playlab_events6_2023": {
+          "courseB_playlab_events6_a": "녹색 드롭다운 화살표를 사용해 방향을 바꾸세요."
+        },
         "courseC19_playLab_EOC3": {
           "courseE_playLab_scaffold3_1": "액터를 이 깃발로 가게 하여 다음 레벨로 넘어 가세요."
         },
@@ -1062,6 +1192,9 @@
         },
         "courseC19_playLab_EOC3_2021": {
           "courseE_playLab_scaffold3_1": "배우를 이 깃발로 가게 하여 다음 레벨로 넘어 가세요."
+        },
+        "courseC19_playLab_EOC3_2023": {
+          "courseE_playLab_scaffold3_1": "액터를 이 깃발로 가게 하여 다음 레벨로 넘어 가세요."
         },
         "courseC_PlayLab_events8": {
           "courseC_PlayLab_events8_callout1": "와들과 촘프가 터치할 때 이 블록을 사용하세요!"
@@ -1079,6 +1212,9 @@
           "courseC_PlayLab_events8_callout1": "와들과 촘프가 터치할 때 이 블록을 사용하세요!"
         },
         "courseC_PlayLab_events8_2021": {
+          "courseC_PlayLab_events8_callout1": "와들과 촘프가 터치할 때 이 블록을 사용하세요!"
+        },
+        "courseC_PlayLab_events8_2023": {
           "courseC_PlayLab_events8_callout1": "와들과 촘프가 터치할 때 이 블록을 사용하세요!"
         },
         "courseC_PlayLab_events_challenge1": {
@@ -1099,7 +1235,13 @@
         "courseC_PlayLab_events_challenge1_2021": {
           "courseC_PlayLab_events_challenge1_1": "이 블록은 액터를 게임 공간 내 다른 부분으로 이동하게 해 줍니다."
         },
+        "courseC_PlayLab_events_challenge1_2023": {
+          "courseC_PlayLab_events_challenge1_1": "이 블록은 액터를 게임 공간 내 다른 부분으로 이동하게 해 줍니다."
+        },
         "courseC_PlayLab_events_lesson_extras": {
+          "courseC_PlayLab_events_challenge1_1": "이 블록은 액터를 게임 공간 내 다른 부분으로 이동하게 해 줍니다."
+        },
+        "courseC_PlayLab_events_lesson_extras_2023": {
           "courseC_PlayLab_events_challenge1_1": "이 블록은 액터를 게임 공간 내 다른 부분으로 이동하게 해 줍니다."
         },
         "courseC_artist_loops1a2022": {
@@ -1114,6 +1256,9 @@
         "courseC_artist_loops1a_2021": {
           "jumpto_callout": "이 블록은 이 프로젝트에 매우 중요합니다. 반드시 사용하세요!"
         },
+        "courseC_artist_loops1a_2023": {
+          "jumpto_callout": "이 블록은 이 프로젝트에 매우 중요합니다. 반드시 사용하세요!"
+        },
         "courseC_artist_loops1b2022": {
           "sticker2": "이것을 프로그램 중간에 추가합니다."
         },
@@ -1124,6 +1269,9 @@
           "sticker2": "이것을 프로그램 중간에 추가합니다."
         },
         "courseC_artist_loops1b_2021": {
+          "sticker2": "이것을 프로그램 중간에 추가합니다."
+        },
+        "courseC_artist_loops1b_2023": {
           "sticker2": "이것을 프로그램 중간에 추가합니다."
         },
         "courseC_artist_loopsPrePre1a": {
@@ -1144,6 +1292,9 @@
         "courseC_artist_prog2_2021": {
           "slider": "여기서 프로그램을 느리게 할 수 있습니다."
         },
+        "courseC_artist_prog2_2023": {
+          "slider": "여기서 프로그램을 느리게 할 수 있습니다."
+        },
         "courseC_collector_prog1": {
           "courseC_collector_prog1_1": "툴박스에서 새 블록을 봤어요? 걱정하지 말아요. 나중에 그것들을 단계에서 어떻게 사용하는지 보여줄께요."
         },
@@ -1160,6 +1311,9 @@
           "courseC_collector_prog1_1": "툴박스에서 새 블록을 봤어요? 걱정하지 말아요. 다른 레슨에서 그것들이 어떻게 사용하는지 보여줄께요."
         },
         "courseC_collector_prog1_2021": {
+          "courseC_collector_prog1_1": "툴박스에서 새 블록을 봤어요? 걱정하지 말아요. 다른 레슨에서 그것들이 어떻게 사용하는지 보여줄께요."
+        },
+        "courseC_collector_prog1_2023": {
           "courseC_collector_prog1_1": "툴박스에서 새 블록을 봤어요? 걱정하지 말아요. 다른 레슨에서 그것들이 어떻게 사용하는지 보여줄께요."
         },
         "courseC_collector_prog7": {
@@ -1180,6 +1334,9 @@
         "courseC_collector_prog7_2021": {
           "courseC_collector_prog7_1": "필요하면 툴박스에서 더 많은 블록을 가져올 수 있습니다!"
         },
+        "courseC_collector_prog7_2023": {
+          "courseC_collector_prog7_1": "필요하면 툴박스에서 더 많은 블록을 가져올 수 있습니다!"
+        },
         "courseC_harvester_loops1": {
           "courseC_harvester_loops1_callout1": "호박 위 숫자 4는 딸 수 있는 호박이 네 개가 있음을 말해 줍니다."
         },
@@ -1196,6 +1353,9 @@
           "courseC_harvester_loops1_callout1": "호박 위 숫자 4는 딸 수 있는 호박이 네 개가 있음을 말해 줍니다."
         },
         "courseC_harvester_loops1_2021": {
+          "courseC_harvester_loops1_callout1": "호박 위 숫자 4는 딸 수 있는 호박이 네 개가 있음을 말해 줍니다."
+        },
+        "courseC_harvester_loops1_2023": {
           "courseC_harvester_loops1_callout1": "호박 위 숫자 4는 딸 수 있는 호박이 네 개가 있음을 말해 줍니다."
         },
         "courseC_maze_debugging5": {
@@ -1216,6 +1376,9 @@
         "courseC_maze_debugging5_2021": {
           "courseC_maze_debugging5_1": "이 블록은 잠겨 있으며 삭제할 수 없습니다!"
         },
+        "courseC_maze_debugging5_2023": {
+          "courseC_maze_debugging5_1": "이 블록은 잠겨 있으며 삭제할 수 없습니다!"
+        },
         "courseC_maze_debugging92022": {
           "courseC_maze_debugging9_2019_1": "툴박스에 있는 블록을 작업공간으로 드래그하세요."
         },
@@ -1226,6 +1389,9 @@
           "courseC_maze_debugging9_2019_1": "툴박스에 있는 블록을 작업공간으로 드래그하세요."
         },
         "courseC_maze_debugging9_2021": {
+          "courseC_maze_debugging9_2019_1": "툴박스에 있는 블록을 작업공간으로 드래그하세요."
+        },
+        "courseC_maze_debugging9_2023": {
           "courseC_maze_debugging9_2019_1": "툴박스에 있는 블록을 작업공간으로 드래그하세요."
         },
         "courseC_maze_debugging9_copy_2020": {
@@ -1249,6 +1415,9 @@
         "courseC_maze_programming1_2021": {
           "grade2_CaringForNewPet_0_1": "모든 블록을 연결한 후, \"실행\"을 클릭하여 프로그램을 시작하세요."
         },
+        "courseC_maze_programming1_2023": {
+          "grade2_CaringForNewPet_0_1": "모든 블록을 연결한 후, \"실행\"을 클릭하여 프로그램을 시작하세요."
+        },
         "courseC_maze_programming2": {
           "courseC_maze_programming2_1": "이것은 툴박스입니다. 퍼즐을 완료하기 위해 추가 블록을 여기서 찾을 수 있습니다. "
         },
@@ -1265,6 +1434,9 @@
           "courseC_maze_programming2_1": "이것은 툴박스입니다. 퍼즐을 완료하기 위해 추가 블록을 여기서 찾을 수 있습니다. "
         },
         "courseC_maze_programming2_2021": {
+          "courseC_maze_programming2_1": "이것은 툴박스입니다. 퍼즐을 완료하기 위해 추가 블록을 여기서 찾을 수 있습니다. "
+        },
+        "courseC_maze_programming2_2023": {
           "courseC_maze_programming2_1": "이것은 툴박스입니다. 퍼즐을 완료하기 위해 추가 블록을 여기서 찾을 수 있습니다. "
         },
         "courseC_maze_programming3": {
@@ -1291,6 +1463,10 @@
           "courseC_maze_programming3_2": "추가 블록을 툴박스로 드래그하여 버릴 수 있습니다.",
           "courseC_maze_programming3_3": "이러한 블록은 돌이며 버릴 수 없습니다."
         },
+        "courseC_maze_programming3_2023": {
+          "courseC_maze_programming3_2": "추가 블록을 툴박스로 드래그하여 버릴 수 있습니다.",
+          "courseC_maze_programming3_3": "이러한 블록은 돌이며 버릴 수 없습니다."
+        },
         "courseC_maze_programming4": {
           "courseC_maze_programming4_1": "이것은 블록 한계값입니다. 사용할 블록을 몇 개 남겨둬야 할지 알려줍니다."
         },
@@ -1309,6 +1485,9 @@
         "courseC_maze_programming4_2021": {
           "courseC_maze_programming4_1": "이것은 블록 한계값입니다. 사용할 블록을 몇 개 남겨둬야 할지 알려줍니다."
         },
+        "courseC_maze_programming4_2023": {
+          "courseC_maze_programming4_1": "이것은 블록 한계값입니다. 사용할 블록을 몇 개 남겨둬야 할지 알려줍니다."
+        },
         "courseC_maze_programming5": {
           "": "이 블록 위에는 숫자가 적혀 있지 않습니다. 원하는 만큼 많이 사용할 수 있습니다."
         },
@@ -1325,6 +1504,9 @@
           "": "이 블록 위에는 숫자가 적혀 있지 않습니다. 원하는 만큼 많이 사용할 수 있습니다."
         },
         "courseC_maze_programming5_2021": {
+          "": "이 블록 위에는 숫자가 적혀 있지 않습니다. 원하는 만큼 많이 사용할 수 있습니다."
+        },
+        "courseC_maze_programming5_2023": {
           "": "이 블록 위에는 숫자가 적혀 있지 않습니다. 원하는 만큼 많이 사용할 수 있습니다."
         },
         "courseC_maze_programming7": {
@@ -1351,6 +1533,10 @@
           "courseC_maze_programming7_1": "이것은 첫 번째 도전 퍼즐입니다! 어렵고 서너 번 시도해 봐야 할 수도 있다는 의미입니다.",
           "courseC_maze_programming7_2": "이러한 블록은 돌로 만들어 졌으며 버릴 수 없습니다."
         },
+        "courseC_maze_programming7_2023": {
+          "courseC_maze_programming7_1": "이것은 첫 번째 도전 퍼즐입니다! 어렵고 서너 번 시도해 봐야 할 수도 있다는 의미입니다.",
+          "courseC_maze_programming7_2": "이러한 블록은 돌로 만들어 졌으며 버릴 수 없습니다."
+        },
         "courseC_starWars_loops2": {
           "courseC_starWars_loops2": "이 퍼즐에서 사용 가능한 블록 중 한 개만을 갖고 있습니다."
         },
@@ -1367,6 +1553,9 @@
           "courseC_starWars_loops2": "이 퍼즐에서 사용 가능한 블록 중 한 개만을 갖고 있습니다."
         },
         "courseC_starWars_loops2_2021": {
+          "courseC_starWars_loops2": "이 퍼즐에서 사용 가능한 블록 중 한 개만을 갖고 있습니다."
+        },
+        "courseC_starWars_loops2_2023": {
           "courseC_starWars_loops2": "이 퍼즐에서 사용 가능한 블록 중 한 개만을 갖고 있습니다."
         },
         "courseC_starWars_loops2_copy": {
@@ -1396,6 +1585,9 @@
         "courseD_artist_nestedLoops1a_2021": {
           "courseD_artist_nestedLoops1a_1": "이 퍼즐을 맞추기 위해 색상을 사용할 필요는 없습니다. 원하면, 이 '램덤 색상' 블록이 쉽게 만들어 줍니다!"
         },
+        "courseD_artist_nestedLoops1a_2023": {
+          "courseD_artist_nestedLoops1a_1": "이 퍼즐을 맞추기 위해 색상을 사용할 필요는 없습니다. 원하면, 이 '램덤 색상' 블록이 쉽게 만들어 줍니다!"
+        },
         "courseD_artist_ramp11": {
           "courseD_artist_ramp11_1": "이 숫자는 변경할 수 있습니다.",
           "courseD_artist_ramp11_2": "여기를 클릭하여 코드를 반복할 횟수를 입력하세요."
@@ -1417,6 +1609,9 @@
           "4_5_Bee_Conditionals_2_1": "모든 구름이 꽃을 가지고 있는지 확인하는 것을 잊지 마세요. 벌집은 확인할 필요가 없습니다."
         },
         "courseD_bee_conditionals2_2021": {
+          "4_5_Bee_Conditionals_2_1": "모든 구름이 꽃을 가지고 있는지 확인하는 것을 잊지 마세요. 벌집은 확인할 필요가 없습니다."
+        },
+        "courseD_bee_conditionals2_2023": {
           "4_5_Bee_Conditionals_2_1": "모든 구름이 꽃을 가지고 있는지 확인하는 것을 잊지 마세요. 벌집은 확인할 필요가 없습니다."
         },
         "courseD_bee_conditionals2_copy": {
@@ -1445,6 +1640,9 @@
         "courseD_bee_conditionals_challenge2_2021": {
           "courseD_bee_conditionals_challenge2_1": "이 루프를 사용하여 한송이 꽃 (또는 벌집)에서 과즙 (또는 꿀)을 모두 모으세요."
         },
+        "courseD_bee_conditionals_challenge2_2023": {
+          "courseD_bee_conditionals_challenge2_1": "이 루프를 사용하여 한송이 꽃 (또는 벌집)에서 과즙 (또는 꿀)을 모두 모으세요."
+        },
         "courseD_bee_debugging_challenge1": {
           "courseD_bee_debugging_challenge1_callout1": "이 명령을 사용하여 벌을 뒤로 이동하게 하세요."
         },
@@ -1455,6 +1653,9 @@
           "stepButton": "코드를 한 번에 한 블록씩 진행해 보도록 하세요."
         },
         "courseD_bee_nestedLoops1a_2021": {
+          "stepButton": "코드를 한 번에 한 블록씩 진행해 보도록 하세요."
+        },
+        "courseD_bee_nestedLoops1a_2023": {
           "stepButton": "코드를 한 번에 한 블록씩 진행해 보도록 하세요."
         },
         "courseD_collector_ramp8": {
@@ -1475,6 +1676,9 @@
         "courseD_farmer_while7_2021": {
           "courseD_farmer_while7_2018_PathAhead": "이 퍼즐을 풀기 위해 `경로가 앞에 있는 동안` 블록을 사용해야 할 것입니다."
         },
+        "courseD_farmer_while7_2023": {
+          "courseD_farmer_while7_2018_PathAhead": "이 퍼즐을 풀기 위해 `경로가 앞에 있는 동안` 블록을 사용해야 할 것입니다."
+        },
         "courseD_maze_intro42022": {
           "courseC_maze_programming4_1": "이것은 블록 한계값입니다. 사용할 블록을 몇 개 남겨둬야 할지 알려줍니다."
         },
@@ -1487,6 +1691,9 @@
         "courseD_maze_intro4_2021": {
           "courseC_maze_programming4_1": "이것은 블록 한계값입니다. 사용할 블록을 몇 개 남겨둬야 할지 알려줍니다."
         },
+        "courseD_maze_intro4_2023": {
+          "courseC_maze_programming4_1": "이것은 블록 한계값입니다. 사용할 블록을 몇 개 남겨둬야 할지 알려줍니다."
+        },
         "courseD_maze_intro5a2022": {
           "": "이 블록 위에는 숫자가 적혀 있지 않습니다. 원하는 만큼 많이 사용할 수 있습니다."
         },
@@ -1497,6 +1704,9 @@
           "": "이 블록 위에는 숫자가 적혀 있지 않습니다. 원하는 만큼 많이 사용할 수 있습니다."
         },
         "courseD_maze_intro5a_2021": {
+          "": "이 블록 위에는 숫자가 적혀 있지 않습니다. 원하는 만큼 많이 사용할 수 있습니다."
+        },
+        "courseD_maze_intro5a_2023": {
           "": "이 블록 위에는 숫자가 적혀 있지 않습니다. 원하는 만큼 많이 사용할 수 있습니다."
         },
         "courseD_maze_ramp1": {
@@ -1517,6 +1727,9 @@
         "courseD_maze_ramp1_2021": {
           "grade2_CaringForNewPet_0_1": "모든 블록을 연결한 후, \"실행\"을 클릭하여 프로그램을 시작하세요."
         },
+        "courseD_maze_ramp1_2023": {
+          "grade2_CaringForNewPet_0_1": "모든 블록을 연결한 후, \"실행\"을 클릭하여 프로그램을 시작하세요."
+        },
         "courseD_maze_ramp2": {
           "courseC_maze_programming2_1": "이것은 툴박스입니다. 퍼즐을 완료하기 위해 추가 블록을 여기서 찾을 수 있습니다. "
         },
@@ -1533,6 +1746,9 @@
           "courseC_maze_programming2_1": "이것은 툴박스입니다. 퍼즐을 완료하기 위해 추가 블록을 여기서 찾을 수 있습니다. "
         },
         "courseD_maze_ramp2_2021": {
+          "courseC_maze_programming2_1": "이것은 툴박스입니다. 퍼즐을 완료하기 위해 추가 블록을 여기서 찾을 수 있습니다. "
+        },
+        "courseD_maze_ramp2_2023": {
           "courseC_maze_programming2_1": "이것은 툴박스입니다. 퍼즐을 완료하기 위해 추가 블록을 여기서 찾을 수 있습니다. "
         },
         "courseD_maze_ramp3": {
@@ -1556,6 +1772,10 @@
           "stone_block_2": "회색 블록은 버릴 수 없습니다."
         },
         "courseD_maze_ramp3_2021": {
+          "courseC_maze_programming3_2": "추가 블록을 툴박스로 드래그하여 버릴 수 있습니다.",
+          "stone_block_2": "회색 블록은 버릴 수 없습니다."
+        },
+        "courseD_maze_ramp3_2023": {
           "courseC_maze_programming3_2": "추가 블록을 툴박스로 드래그하여 버릴 수 있습니다.",
           "stone_block_2": "회색 블록은 버릴 수 없습니다."
         },
@@ -1587,6 +1807,9 @@
           "": "이 블록 위에는 숫자가 적혀 있지 않습니다. 원하는 만큼 많이 사용할 수 있습니다."
         },
         "courseD_maze_ramp5_2021": {
+          "": "이 블록 위에는 숫자가 적혀 있지 않습니다. 원하는 만큼 많이 사용할 수 있습니다."
+        },
+        "courseD_maze_ramp5_2023": {
           "": "이 블록 위에는 숫자가 적혀 있지 않습니다. 원하는 만큼 많이 사용할 수 있습니다."
         },
         "courseD_maze_ramp5a": {
@@ -1650,6 +1873,9 @@
         "courseE_aboutme_2_2021": {
           "": "여기를 클릭하세요!"
         },
+        "courseE_aboutme_2_2023": {
+          "": "여기를 클릭하여 의상을 프로젝트에 추가하세요."
+        },
         "courseE_artist_functions1": {
           "courseD_artist_functions1_1": "이 블록을 사용하는 것으로 시작하여 첫 번째 사각형을 만드는 걸 도와주세요."
         },
@@ -1677,6 +1903,9 @@
         "courseE_artist_functions2_2021": {
           "courseD_artist_functions2_1": "이 녹색 블록이 실행될 때, 함수 내 모든 코드는 실행될 것입니다. 첫 번째 사각형을 그린 후 아티스트는 무엇을 해야 할까요?"
         },
+        "courseE_artist_functions2_2023": {
+          "courseD_artist_functions2_1": "이 녹색 블록이 실행될 때, 함수 내 모든 코드는 실행될 것입니다. 첫 번째 사각형을 그린 후 아티스트는 무엇을 해야 할까요?"
+        },
         "courseE_artist_functions2_copy": {
           "courseD_artist_functions2_1": "이 녹색 블록이 실행될 때, 함수 내 모든 코드는 실행될 것입니다. 첫 번째 사각형을 그린 후 아티스트는 무엇을 해야 할까요?"
         },
@@ -1699,6 +1928,9 @@
           "courseD_artist_functions8_1": "함수를 만들기 위한 블록은 툴박스 내 이 라벨 아래에서 이동했습니다."
         },
         "courseE_artist_functions8a_2021": {
+          "courseD_artist_functions8_1": "함수를 만들기 위한 블록은 툴박스 내 이 라벨 아래에서 이동했습니다."
+        },
+        "courseE_artist_functions8a_2023": {
           "courseD_artist_functions8_1": "함수를 만들기 위한 블록은 툴박스 내 이 라벨 아래에서 이동했습니다."
         },
         "courseE_artist_functions_challenge1": {
@@ -1725,6 +1957,10 @@
           "courseE_artist_functions_challenge1_callout1": "더 많은 코드를 하부에 추가하여 이 프로그램을 계속하세요. ",
           "courseE_artist_functions_challenge1_callout2": "이 디자인이 싫으면, 원하는 걸로 변경하세요!"
         },
+        "courseE_artist_functions_challenge1_2023": {
+          "courseE_artist_functions_challenge1_callout1": "더 많은 코드를 하부에 추가하여 이 프로그램을 계속하세요. ",
+          "courseE_artist_functions_challenge1_callout2": "이 디자인이 싫으면, 원하는 걸로 변경하세요!"
+        },
         "courseE_artist_functions_challenge2": {
           "courseE_artist_functions_challenge2_callout1": "더 많은 코드를 하부에 추가하여 이 프로그램을 계속하세요. ",
           "courseE_artist_functions_challenge2_callout2": "이 디자인이 싫으면, 원하는 걸로 변경하세요!"
@@ -1746,6 +1982,10 @@
           "courseE_artist_functions_challenge2_callout2": "이 디자인이 싫으면, 원하는 걸로 변경하세요!"
         },
         "courseE_artist_functions_challenge2_2021": {
+          "courseE_artist_functions_challenge2_callout1": "더 많은 코드를 하부에 추가하여 이 프로그램을 계속하세요. ",
+          "courseE_artist_functions_challenge2_callout2": "이 디자인이 싫으면, 원하는 걸로 변경하세요!"
+        },
+        "courseE_artist_functions_challenge2_2023": {
           "courseE_artist_functions_challenge2_callout1": "더 많은 코드를 하부에 추가하여 이 프로그램을 계속하세요. ",
           "courseE_artist_functions_challenge2_callout2": "이 디자인이 싫으면, 원하는 걸로 변경하세요!"
         },
@@ -1778,6 +2018,9 @@
         "courseE_farmer_functions13_2021": {
           "courseE_farmer_functions1a_1": "이 야채는 모르는 야채입니다. 프로그램을 실행할 때 마다 바뀝니다. "
         },
+        "courseE_farmer_functions13_2023": {
+          "courseE_farmer_functions1a_1": "이 야채는 모르는 야채입니다. 프로그램을 실행할 때 마다 바뀝니다. "
+        },
         "courseE_farmer_functions1_2018": {
           "courseE_farmer_functions1_2": "툴박스는 이번에는 약간 다르게 구성되어 있습니다! 다른 범주를 클릭하여 어떤 블록을 갖고 있는지 보세요."
         },
@@ -1788,6 +2031,9 @@
           "courseE_farmer_functions1_2": "툴박스는 이번에는 약간 다르게 구성되어 있습니다! 다른 범주를 클릭하여 어떤 블록을 갖고 있는지 보세요."
         },
         "courseE_farmer_functions1_2021": {
+          "courseE_farmer_functions1_2": "툴박스는 이번에는 약간 다르게 구성되어 있습니다! 다른 범주를 클릭하여 어떤 블록을 갖고 있는지 보세요."
+        },
+        "courseE_farmer_functions1_2023": {
           "courseE_farmer_functions1_2": "툴박스는 이번에는 약간 다르게 구성되어 있습니다! 다른 범주를 클릭하여 어떤 블록을 갖고 있는지 보세요."
         },
         "courseE_farmer_functions1a": {
@@ -1808,6 +2054,9 @@
         "courseE_farmer_functions1a_2021": {
           "courseE_farmer_functions1a_1": "이 야채는 모르는 야채입니다. 프로그램을 실행할 때 마다 바뀝니다. "
         },
+        "courseE_farmer_functions1a_2023": {
+          "courseE_farmer_functions1a_1": "이 야채는 모르는 야채입니다. 프로그램을 실행할 때 마다 바뀝니다. "
+        },
         "courseE_farmer_functions2b": {
           "courseE_farmer_functions1a_1": "이 야채는 모르는 야채입니다. 프로그램을 실행할 때 마다 바뀝니다. "
         },
@@ -1824,6 +2073,9 @@
           "courseE_farmer_functions1a_1": "이 야채는 모르는 야채입니다. 프로그램을 실행할 때 마다 바뀝니다. "
         },
         "courseE_farmer_functions2b_2021": {
+          "courseE_farmer_functions1a_1": "이 야채는 모르는 야채입니다. 프로그램을 실행할 때 마다 바뀝니다. "
+        },
+        "courseE_farmer_functions2b_2023": {
           "courseE_farmer_functions1a_1": "이 야채는 모르는 야채입니다. 프로그램을 실행할 때 마다 바뀝니다. "
         },
         "courseE_playLab_challenge1": {
@@ -1844,6 +2096,10 @@
           "run_button": "먼저 실행 버튼을 누르세요!",
           "visualizationResizeBar": "도트 3개를 드레그하여 플레이 영역 크기를 조절하세요."
         },
+        "courseF_apps_aquarium_2023": {
+          "run_button": "먼저 실행 버튼을 누르세요!",
+          "visualizationResizeBar": "도트 3개를 드레그하여 플레이 영역 크기를 조절하세요."
+        },
         "courseF_apps_card": {
           "visualizationResizeBar": "도트 3개를 드레그하여 플레이 영역 크기를 조절하세요."
         },
@@ -1851,6 +2107,9 @@
           "visualizationResizeBar": "도트 3개를 드레그하여 플레이 영역 크기를 조절하세요."
         },
         "courseF_apps_card_-2022-2": {
+          "visualizationResizeBar": "도트 3개를 드레그하여 플레이 영역 크기를 조절하세요."
+        },
+        "courseF_apps_card_2023": {
           "visualizationResizeBar": "도트 3개를 드레그하여 플레이 영역 크기를 조절하세요."
         },
         "courseF_apps_chatbot": {
@@ -1862,6 +2121,10 @@
           "visualizationResizeBar": "도트 3개를 드레그하여 플레이 영역 크기를 조절하세요."
         },
         "courseF_apps_chatbot_-2022-2": {
+          "run_button": "먼저 실행 버튼을 누르세요!",
+          "visualizationResizeBar": "도트 3개를 드레그하여 플레이 영역 크기를 조절하세요."
+        },
+        "courseF_apps_chatbot_2023": {
           "run_button": "먼저 실행 버튼을 누르세요!",
           "visualizationResizeBar": "도트 3개를 드레그하여 플레이 영역 크기를 조절하세요."
         },
@@ -1877,16 +2140,32 @@
           "run_button": "먼저 실행 버튼을 누르세요!",
           "visualizationResizeBar": "도트 3개를 드레그하여 플레이 영역 크기를 조절하세요."
         },
+        "courseF_apps_collector_2023": {
+          "run_button": "먼저 실행 버튼을 누르세요!",
+          "visualizationResizeBar": "도트 3개를 드레그하여 플레이 영역 크기를 조절하세요."
+        },
         "courseF_apps_collector_drag_-2022-2": {
+          "visualizationResizeBar": "도트 3개를 드레그하여 플레이 영역 크기를 조절하세요."
+        },
+        "courseF_apps_collector_drag_2023": {
           "visualizationResizeBar": "도트 3개를 드레그하여 플레이 영역 크기를 조절하세요."
         },
         "courseF_apps_collector_drive_-2022-2": {
           "visualizationResizeBar": "도트 3개를 드레그하여 플레이 영역 크기를 조절하세요."
         },
+        "courseF_apps_collector_drive_2023": {
+          "visualizationResizeBar": "도트 3개를 드레그하여 플레이 영역 크기를 조절하세요."
+        },
         "courseF_apps_collector_move2_-2022-2": {
           "visualizationResizeBar": "도트 3개를 드레그하여 플레이 영역 크기를 조절하세요."
         },
+        "courseF_apps_collector_move2_2023": {
+          "visualizationResizeBar": "도트 3개를 드레그하여 플레이 영역 크기를 조절하세요."
+        },
         "courseF_apps_collector_move_-2022-2": {
+          "visualizationResizeBar": "도트 3개를 드레그하여 플레이 영역 크기를 조절하세요."
+        },
+        "courseF_apps_collector_move_2023": {
           "visualizationResizeBar": "도트 3개를 드레그하여 플레이 영역 크기를 조절하세요."
         },
         "courseF_apps_madlib": {
@@ -1898,6 +2177,9 @@
         "courseF_apps_madlib_-2022-2": {
           "visualizationResizeBar": "도트 3개를 드레그하여 플레이 영역 크기를 조절하세요."
         },
+        "courseF_apps_madlib_2023": {
+          "visualizationResizeBar": "도트 3개를 드레그하여 플레이 영역 크기를 조절하세요."
+        },
         "courseF_apps_pet": {
           "run_button": "먼저 실행 버튼을 누르세요!",
           "visualizationResizeBar": "도트 3개를 드레그하여 플레이 영역 크기를 조절하세요."
@@ -1907,6 +2189,10 @@
           "visualizationResizeBar": "도트 3개를 드레그하여 플레이 영역 크기를 조절하세요."
         },
         "courseF_apps_pet_-2022-2": {
+          "run_button": "먼저 실행 버튼을 누르세요!",
+          "visualizationResizeBar": "도트 3개를 드레그하여 플레이 영역 크기를 조절하세요."
+        },
+        "courseF_apps_pet_2023": {
           "run_button": "먼저 실행 버튼을 누르세요!",
           "visualizationResizeBar": "도트 3개를 드레그하여 플레이 영역 크기를 조절하세요."
         },
@@ -1927,6 +2213,9 @@
         },
         "courseF_artist_for1_2021": {
           "courseF_artist_for1_1": "툴박스는 \"범주\" 모드에 있어 코드를 위한 더 많은 여지를 만듭니다. 여기에 `for` 루프가 있습니다."
+        },
+        "courseF_artist_for1_2023": {
+          "courseF_artist_for1_1": "툴박스는 \"카테고리\" 모드에 있어 코드를 위한 더 많은 여지를 만듭니다. 여기에 `for` 루프가 있습니다."
         },
         "courseF_artist_fwp1": {
           "courseF_artist_fwp1_1": "함수 내 코드를 변경하기 위해 \"편집\" 버튼을 클릭하세요."
@@ -1997,6 +2286,9 @@
         "courseF_bee_for4_2021": {
           "courseF_bee_for4_1": "여기서 `for` 루프를 찾게 될 거예요!"
         },
+        "courseF_bee_for4_2023": {
+          "courseF_bee_for4_1": "여기서 `for` 루프를 찾게 될 거예요!"
+        },
         "courseF_bee_for9": {
           "courseF_bee_for9_1": "여기서 `수학` 블록을 찾게 될 거예요."
         },
@@ -2013,6 +2305,9 @@
           "courseF_bee_for9_1": "여기서 `수학` 블록을 찾게 될 거예요."
         },
         "courseF_bee_for9_2021": {
+          "courseF_bee_for9_1": "여기서 `수학` 블록을 찾게 될 거예요."
+        },
+        "courseF_bee_for9_2023": {
           "courseF_bee_for9_1": "여기서 `수학` 블록을 찾게 될 거예요."
         },
         "courseF_bee_functions2": {
@@ -2055,10 +2350,16 @@
         "courseF_bee_variables_1a_2021": {
           "courseF_bee_functions_1_2018_1": "여기서 아래서 변수를 찾을 수 있습니다!"
         },
+        "courseF_bee_variables_1a_2023": {
+          "courseF_bee_functions_1_2018_1": "여기서 아래서 변수를 찾을 수 있습니다!"
+        },
         "courseF_editable_card": {
           "visualizationResizeBar": "도트 3개를 드레그하여 플레이 영역 크기를 조절하세요."
         },
         "courseF_editable_card_-2022-2": {
+          "visualizationResizeBar": "도트 3개를 드레그하여 플레이 영역 크기를 조절하세요."
+        },
+        "courseF_editable_card_2023": {
           "visualizationResizeBar": "도트 3개를 드레그하여 플레이 영역 크기를 조절하세요."
         },
         "courseF_editable_chatbot": {
@@ -2067,10 +2368,16 @@
         "courseF_editable_chatbot_-2022-2": {
           "visualizationResizeBar": "도트 3개를 드레그하여 플레이 영역 크기를 조절하세요."
         },
+        "courseF_editable_chatbot_2023": {
+          "visualizationResizeBar": "도트 3개를 드레그하여 플레이 영역 크기를 조절하세요."
+        },
         "courseF_editable_madlib": {
           "visualizationResizeBar": "도트 3개를 드레그하여 플레이 영역 크기를 조절하세요."
         },
         "courseF_editable_madlib_-2022-2": {
+          "visualizationResizeBar": "도트 3개를 드레그하여 플레이 영역 크기를 조절하세요."
+        },
+        "courseF_editable_madlib_2023": {
           "visualizationResizeBar": "도트 3개를 드레그하여 플레이 영역 크기를 조절하세요."
         },
         "courseF_events_choice_penguin": {
@@ -2079,10 +2386,16 @@
         "courseF_events_choice_penguin_-2022-2": {
           "whenToWhile": "때(when)를 동안(while)으로 변경해 보세요."
         },
+        "courseF_events_choice_penguin_2023": {
+          "whenToWhile": "때(when)를 동안(while)으로 변경해 보세요."
+        },
         "courseF_events_conflict": {
           "stops_block": "새 블록이 여기에 있습니다!"
         },
         "courseF_events_conflict_-2022-2": {
+          "stops_block": "새 블록이 여기에 있습니다!"
+        },
+        "courseF_events_conflict_2023": {
           "stops_block": "새 블록이 여기에 있습니다!"
         },
         "courseF_events_key": {
@@ -2091,10 +2404,16 @@
         "courseF_events_key_-2022-2": {
           "whenKey": "여기서 찾은 새 이벤트 블록을 사용하세요."
         },
+        "courseF_events_key_2023": {
+          "whenKey": "여기서 찾은 새 이벤트 블록을 사용하세요."
+        },
         "courseF_events_practice_reorder": {
           "stopAllBug": "이 블록은 잘못된 순서로 되어 있습니다."
         },
         "courseF_events_practice_reorder_-2022-2": {
+          "stopAllBug": "이 블록은 잘못된 순서로 되어 있습니다."
+        },
+        "courseF_events_practice_reorder_2023": {
           "stopAllBug": "이 블록은 잘못된 순서로 되어 있습니다."
         },
         "courseF_events_predict": {
@@ -2103,16 +2422,25 @@
         "courseF_events_predict_-2022-2": {
           "behaviors_edit": "이 행동의 작동방식을 보려면 여기를 클릭하세요."
         },
+        "courseF_events_predict_2023": {
+          "behaviors_edit": "이 행동의 작동방식을 보려면 여기를 클릭하세요."
+        },
         "courseF_events_time": {
           "events_category": "여기를 클릭하여 이벤트 범주를 여세요."
         },
         "courseF_events_time_-2022-2": {
           "events_category": "여기를 클릭하여 이벤트 범주를 여세요."
         },
+        "courseF_events_time_2023": {
+          "events_category": "여기를 클릭하여 이벤트 범주를 여세요."
+        },
         "courseF_label_predict": {
           "variablesPredict": "이 지점 아래 코드를 자세히 보세요."
         },
         "courseF_label_predict_-2022-2": {
+          "variablesPredict": "이 지점 아래 코드를 자세히 보세요."
+        },
+        "courseF_label_predict_2023": {
           "variablesPredict": "이 지점 아래 코드를 자세히 보세요."
         },
         "courseF_playlab_variables1a": {
@@ -2133,10 +2461,16 @@
         "courseF_sprites_behaviors_-2022-2": {
           "behaviors_category": "여기를 클릭하여 행동 범주를 여세요."
         },
+        "courseF_sprites_behaviors_2023": {
+          "behaviors_category": "여기를 클릭하여 행동 범주를 여세요."
+        },
         "courseF_sprites_make": {
           "sprites_category": "여기를 클릭하여 스프라이트 범주를 여세요."
         },
         "courseF_sprites_make_-2022-2": {
+          "sprites_category": "여기를 클릭하여 스프라이트 범주를 여세요."
+        },
+        "courseF_sprites_make_2023": {
           "sprites_category": "여기를 클릭하여 스프라이트 범주를 여세요."
         },
         "courseF_sprites_positioning": {
@@ -2145,10 +2479,16 @@
         "courseF_sprites_positioning_-2022-2": {
           "locations_category": "여기를 클릭하여 위치 범주를 여세요."
         },
+        "courseF_sprites_positioning_2023": {
+          "locations_category": "여기를 클릭하여 위치 범주를 여세요."
+        },
         "courseF_sprites_properties": {
           "sprites_category2": "여기서 새 블록을 찾으세요."
         },
         "courseF_sprites_properties_-2022-2": {
+          "sprites_category2": "여기서 새 블록을 찾으세요."
+        },
+        "courseF_sprites_properties_2023": {
           "sprites_category2": "여기서 새 블록을 찾으세요."
         },
         "courseF_text_answer": {
@@ -2157,16 +2497,25 @@
         "courseF_text_answer_-2022-2": {
           "answered_block": "여기서 새 블록을 찾으세요!"
         },
+        "courseF_text_answer_2023": {
+          "answered_block": "여기서 새 블록을 찾으세요!"
+        },
         "courseF_text_choice_color": {
           "text_color_finish": "질문에 답변했을 때 배경색상이 변경되었습니까? 그러면, '마침'을 누르세요. 그렇지 않으면, '재설정'을 누르고 코드를 변경하고 다시 '실행'을 누르세요."
         },
         "courseF_text_choice_color_-2022-2": {
           "text_color_finish": "질문에 답변했을 때 배경색상이 변경되었습니까? 그러면, '마침'을 누르세요. 그렇지 않으면, '재설정'을 누르고 코드를 변경하고 다시 '실행'을 누르세요."
         },
+        "courseF_text_choice_color_2023": {
+          "text_color_finish": "질문에 답변했을 때 배경색상이 변경되었습니까? 그러면, '마침'을 누르세요. 그렇지 않으면, '재설정'을 누르고 코드를 변경하고 다시 '실행'을 누르세요."
+        },
         "courseF_text_choice_conversation": {
           "text_generic_finish": "끝났어요? 그러면, '마침'을 누르세요. 그렇지 않으면, '재설정'을 누르고 코드를 변경하고 다시 '실행'을 누르세요."
         },
         "courseF_text_choice_conversation_-2022-2": {
+          "text_generic_finish": "끝났어요? 그러면, '마침'을 누르세요. 그렇지 않으면, '재설정'을 누르고 코드를 변경하고 다시 '실행'을 누르세요."
+        },
+        "courseF_text_choice_conversation_2023": {
           "text_generic_finish": "끝났어요? 그러면, '마침'을 누르세요. 그렇지 않으면, '재설정'을 누르고 코드를 변경하고 다시 '실행'을 누르세요."
         },
         "courseF_text_choice_title": {
@@ -2177,16 +2526,26 @@
           "text_answer_finish": "제목 화면이 3초 동안 나왔습니까? 그러면, '마침'을 누르세요. 그렇지 않으면, '재설정'을 누르고 코드를 변경하고 다시 '실행'을 누르세요.",
           "title_block": "여기서 두 개의 새 블록을 찾으세요!"
         },
+        "courseF_text_choice_title_2023": {
+          "text_answer_finish": "제목 화면이 3초 동안 나왔습니까? 그러면, '마침'을 누르세요. 그렇지 않으면, '재설정'을 누르고 코드를 변경하고 다시 '실행'을 누르세요.",
+          "title_block": "여기서 두 개의 새 블록을 찾으세요!"
+        },
         "courseF_text_concat": {
           "join_blocks": "여기서 새 블록을 찾으세요!"
         },
         "courseF_text_concat_-2022-2": {
           "join_blocks": "여기서 새 블록을 찾으세요!"
         },
+        "courseF_text_concat_2023": {
+          "join_blocks": "여기서 새 블록을 찾으세요!"
+        },
         "courseF_text_events": {
           "events_category": "여기를 클릭하여 이벤트 범주를 여세요."
         },
         "courseF_text_events_-2022-2": {
+          "events_category": "여기를 클릭하여 이벤트 범주를 여세요."
+        },
+        "courseF_text_events_2023": {
           "events_category": "여기를 클릭하여 이벤트 범주를 여세요."
         },
         "courseF_text_print": {
@@ -2197,19 +2556,32 @@
           "print_block": "여기서 인쇄 블록을 찾으세요!",
           "text_print_finish": "메시지가 위에 인쇄되었어요? 그러면, '마침'을 누르세요. 그렇지 않으면, '재설정'을 누르고 코드를 변경하고 다시 '실행'을 누르세요."
         },
+        "courseF_text_print_2023": {
+          "print_block": "여기서 인쇄 블록을 찾으세요!",
+          "text_print_finish": "메시지가 위에 인쇄되었어요? 그러면, '마침'을 누르세요. 그렇지 않으면, '재설정'을 누르고 코드를 변경하고 다시 '실행'을 누르세요."
+        },
         "courseF_text_prompts": {
           "prompt_block": "여기서 프롬프트 블록을 찾으세요!"
         },
         "courseF_text_prompts_-2022-2": {
           "prompt_block": "여기서 프롬프트 블록을 찾으세요!"
         },
+        "courseF_text_prompts_2023": {
+          "prompt_block": "여기서 프롬프트 블록을 찾으세요!"
+        },
         "courseF_variables2_predict_-2022-2": {
+          "variablesPredict": "이 지점 아래 코드를 자세히 보세요."
+        },
+        "courseF_variables2_predict_2023": {
           "variablesPredict": "이 지점 아래 코드를 자세히 보세요."
         },
         "courseF_variables_predict": {
           "variablesPredict": "이 지점 아래 코드를 자세히 보세요."
         },
         "courseF_variables_predict_-2022-2": {
+          "variablesPredict": "이 지점 아래 코드를 자세히 보세요."
+        },
+        "courseF_variables_predict_2023": {
           "variablesPredict": "이 지점 아래 코드를 자세히 보세요."
         },
         "coursea_maze_ramp12022": {
@@ -2227,13 +2599,54 @@
         "coursea_maze_ramp1_2021": {
           "grade2_CaringForNewPet_0_1": "모든 블록을 끼운 후, \"실행\"을 클릭하여 프로그램을 시작하세요."
         },
+        "coursea_maze_ramp1_2023": {
+          "grade2_CaringForNewPet_0_1": "모든 블록을 끼운 후, \"실행\"을 클릭하여 프로그램을 시작하세요."
+        },
         "coursee_helloworld_events": {
+          "hello_world_click_hint": "이 이벤트 블록을 작업공간에 추가합니다."
+        },
+        "coursee_helloworld_events_2023": {
           "hello_world_click_hint": "이 이벤트 블록을 작업공간에 추가합니다."
         },
         "coursee_helloworld_freeplay": {
           "costumes_tab": "여기를 클릭하여 의상을 프로젝트에 추가하세요."
         },
+        "coursee_helloworld_freeplay_2023": {
+          "costumes_tab": "여기를 클릭하여 의상을 프로젝트에 추가하세요."
+        },
         "coursee_helloworld_say": {
+          "hello_world_make_sprite": "이 블록을 사용하여 스프라이트를 만드세요.",
+          "hello_world_say": "이 블록을 사용하여 스프라이트가 말하게 만드세요."
+        },
+        "coursee_helloworld_say_2023": {
+          "hello_world_make_sprite": "이 블록을 사용하여 스프라이트를 만드세요.",
+          "hello_world_say": "이 블록을 사용하여 스프라이트가 말하게 만드세요."
+        },
+        "csc_animal_adaptations_behaviors_edit2": {
+          "behavior_callout": "이 행동이 중간 별에는 왜 작동하지 않을까요?",
+          "star2_callout": "이 의상 블록을 제거하고 대신 \"이 스프라이트\" 블록을 사용하세요.",
+          "this_sprite_callout": "아래 의상 블록을 이것으로 교체하세요."
+        },
+        "csc_animal_adaptations_behaviors_elephantleader": {
+          "behavior_callout": "이 행동이 중간 별에는 왜 작동하지 않을까요?",
+          "star2_callout": "이 의상 블록을 제거하고 대신 \"이 스프라이트\" 블록을 사용하세요.",
+          "this_sprite_callout": "아래 의상 블록을 이것으로 교체하세요."
+        },
+        "csc_animal_adaptations_behaviors_wolfpack": {
+          "behavior_callout": "이 행동이 중간 별에는 왜 작동하지 않을까요?",
+          "star2_callout": "이 의상 블록을 제거하고 대신 \"이 스프라이트\" 블록을 사용하세요.",
+          "this_sprite_callout": "아래 의상 블록을 이것으로 교체하세요."
+        },
+        "csc_animal_adaptations_bugs2": {
+          "hello_world_behavior_blocks": "이 블록을 아래 행동 중 하나와 함께 사용하세요."
+        },
+        "csc_animal_adaptations_make_behavior": {
+          "behaviors_edit": "코드를 이 행동에 추가하세요."
+        },
+        "csc_animal_adaptations_predict_gamelab": {
+          "behaviors_edit": "이 행동의 작동방식을 보려면 여기를 클릭하세요."
+        },
+        "ecosystems_helloworld_say_2023": {
           "hello_world_make_sprite": "이 블록을 사용하여 스프라이트를 만드세요.",
           "hello_world_say": "이 블록을 사용하여 스프라이트가 말하게 만드세요."
         },
@@ -2247,6 +2660,9 @@
           "express_maze_debugging9_2019_1": "툴박스에 있는 블록을 작업공간으로 드래그하세요."
         },
         "express_maze_debugging9_2021": {
+          "express_maze_debugging9_2019_1": "툴박스에 있는 블록을 작업공간으로 드래그하세요."
+        },
+        "express_maze_debugging9_2023": {
           "express_maze_debugging9_2019_1": "툴박스에 있는 블록을 작업공간으로 드래그하세요."
         },
         "frozen circle function with parameter": {
@@ -2337,6 +2753,12 @@
         "helloworld_animals_sounds": {
           "hello_world_new": "새 블록!"
         },
+        "helloworld_bugs_behaviors_2023": {
+          "hello_world_behavior_blocks": "이 블록을 아래 행동 중 하나와 함께 사용하세요."
+        },
+        "helloworld_bunny_adaptation_2023": {
+          "hw_Run": "코드를 실행하려면 여기를 클릭하세요."
+        },
         "helloworld_emoji_backgrounds": {
           "hw_background_location": "이 블록을 사용하여 새 배경을 설정하세요."
         },
@@ -2375,6 +2797,9 @@
         "helloworld_food_backgrounds": {
           "hw_background_location": "이 블록을 사용하여 새 배경을 설정하세요."
         },
+        "helloworld_food_backgrounds_2023": {
+          "hw_background_location": "이 블록을 사용하여 새 배경을 설정하세요."
+        },
         "helloworld_food_backgrounds_soccer-2022": {
           "hw_background_location": "이 블록을 사용하여 새 배경을 설정하세요."
         },
@@ -2382,6 +2807,9 @@
           "hw_background_location": "이 블록을 사용하여 새 배경을 설정하세요."
         },
         "helloworld_food_behaviors": {
+          "hello_world_behavior_blocks": "이 블록을 아래 행동 중 하나와 함께 사용하세요."
+        },
+        "helloworld_food_behaviors_2023": {
           "hello_world_behavior_blocks": "이 블록을 아래 행동 중 하나와 함께 사용하세요."
         },
         "helloworld_food_behaviors_soccer-2022": {
@@ -2393,6 +2821,9 @@
         "helloworld_food_click": {
           "hw_Run": "코드를 실행하려면 여기를 클릭하세요."
         },
+        "helloworld_food_click_2023": {
+          "hw_Run": "코드를 실행하려면 여기를 클릭하세요."
+        },
         "helloworld_food_click_soccer-2022": {
           "hw_Run": "코드를 실행하려면 여기를 클릭하세요."
         },
@@ -2400,6 +2831,9 @@
           "hw_Run": "먼저 여기를 클릭하세요!"
         },
         "helloworld_food_costumes": {
+          "hello_world_new": "새 블록!"
+        },
+        "helloworld_food_costumes_2023": {
           "hello_world_new": "새 블록!"
         },
         "helloworld_food_costumes_soccer-2022": {
@@ -2429,6 +2863,9 @@
         "helloworld_food_location": {
           "pin": "핀"
         },
+        "helloworld_food_location_2023": {
+          "pin": "핀"
+        },
         "helloworld_food_location_soccer-2022": {
           "pin": "핀"
         },
@@ -2436,6 +2873,9 @@
           "pin": "핀"
         },
         "helloworld_food_multi": {
+          "pin": "핀"
+        },
+        "helloworld_food_multi_2023": {
           "pin": "핀"
         },
         "helloworld_food_multi_soccer-2022": {
@@ -2460,6 +2900,10 @@
           "hello_world_new": "새 블록!",
           "hello_world_new_block": "새 블록!"
         },
+        "helloworld_food_sizes_2023": {
+          "hello_world_new": "새 블록!",
+          "hello_world_new_block": "새 블록!"
+        },
         "helloworld_food_sizes_soccer-2022": {
           "hello_world_new": "새 블록!",
           "hello_world_new_block": "새 블록!"
@@ -2469,6 +2913,9 @@
           "hello_world_new_block": "새 블록!"
         },
         "helloworld_food_sounds": {
+          "hello_world_new": "새 블록!"
+        },
+        "helloworld_food_sounds_2023": {
           "hello_world_new": "새 블록!"
         },
         "helloworld_food_sounds_soccer-2022": {
@@ -2587,12 +3034,23 @@
         "poetry_hoc_addSprites": {
           "poetry_sprite": "새 블록!"
         },
+        "poetry_hoc_addSprites_2023": {
+          "poetry_sprite": "새 블록!"
+        },
         "poetry_hoc_backgroundEffects": {
           "pause_button": "이 버튼으로 애니메이션을 테스트하세요.",
           "poetry_background": "여기에서 코드 블럭을 찾으세요. ",
           "run_button": "이 버튼으로 애니메이션을 테스트하세요."
         },
+        "poetry_hoc_backgroundEffects_2023": {
+          "poetry_background": "여기에서 코드 블럭을 찾으세요. ",
+          "run_button": "이 버튼으로 애니메이션을 테스트하세요."
+        },
         "poetry_hoc_events1": {
+          "poetry_event": "새 블록!",
+          "poetry_foreground": "새 블록!"
+        },
+        "poetry_hoc_events1_2023": {
           "poetry_event": "새 블록!",
           "poetry_foreground": "새 블록!"
         },
@@ -2602,7 +3060,15 @@
           "poetry_new_block": "새 블록!",
           "poetry_selector": "시를 선택하거나 또는 자신의 시를 입력하세요!"
         },
+        "poetry_hoc_freeplay_2023": {
+          "poetry_new_block": "새 블록!",
+          "poetry_selector": "시를 선택하거나 또는 자신의 시를 입력하세요!"
+        },
         "poetry_hoc_sounds": {
+          "poetry_music": "새 블록!",
+          "poetry_sound": "새 블록!"
+        },
+        "poetry_hoc_sounds_2023": {
           "poetry_music": "새 블록!",
           "poetry_sound": "새 블록!"
         },
@@ -2610,7 +3076,15 @@
           "poetry_sprite_begins": "새 블록!",
           "poetry_sprite_stops": "새 블록!"
         },
+        "poetry_hoc_spriteBehaviors_2023": {
+          "poetry_sprite_begins": "새 블록!",
+          "poetry_sprite_stops": "새 블록!"
+        },
         "poetry_hoc_spriteSizes": {
+          "poetry_remove_sprite": "새 블록!",
+          "poetry_set_sprite": "새 블록!"
+        },
+        "poetry_hoc_spriteSizes_2023": {
           "poetry_remove_sprite": "새 블록!",
           "poetry_set_sprite": "새 블록!"
         }
