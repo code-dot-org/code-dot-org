@@ -1,7 +1,12 @@
 # Configure python to work inside rails via pycall.
-pybin_path = File.expand_path('../pybin/bin', __FILE__)
-ENV['PATH'] = "#{pybin_path}:#{ENV['PATH']}"
-ENV['PYTHON'] = "#{pybin_path}/python3.8"
+pybin_path = File.expand_path('../pybin', __FILE__)
+ENV['PATH'] = "#{pybin_path}/bin:#{ENV['PATH']}"
+ENV['PYTHON'] = "#{pybin_path}/bin/python3.8"
+
+# load and configure pycall before numpy and any other python-related gems
+# are automatically loaded in application.rb.
+require 'pycall'
+PyCall.sys.path.append("#{pybin_path}/lib/python3.8/site-packages")
 
 $LOAD_PATH.unshift File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift File.expand_path('../shared/middleware', __FILE__)
