@@ -79,6 +79,10 @@ ja:
         ai-ethics-2021:
           description_audience: 小学6～高校3年生
           title: 当社のAI倫理規定
+        ai-ethics-2023:
+          lessons:
+            lesson-1:
+              name: 当社のAI倫理規定
         ai-temp:
           title: 人工知能のしくみ
         aiml-2021:
