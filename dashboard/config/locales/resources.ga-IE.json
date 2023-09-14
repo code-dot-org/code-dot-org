@@ -1746,6 +1746,423 @@
         "pause_and_think_online/pre-express/2022": {
           "type": "Físeán"
         },
+        "star_quilts_1/csc-starquilts/2023": {
+          "type": "Físeán"
+        },
+        "poem_art_1_-_introduction/csc-timecapsule/2023": {
+          "type": "Físeán"
+        },
+        "poem_art_2_-_events/csc-timecapsule/2023": {
+          "type": "Físeán"
+        },
+        "poem_art_3_-_imagery/csc-timecapsule/2023": {
+          "type": "Físeán"
+        },
+        "poem_art_4_-_celebration/csc-timecapsule/2023": {
+          "type": "Físeán"
+        },
+        "poem_art_celebration_video_optional_/csc-timecapsule/2023": {
+          "type": "Físeán"
+        },
+        "poem_art_events_video_optional_/csc-timecapsule/2023": {
+          "type": "Físeán"
+        },
+        "poem_art_video_optional_/csc-timecapsule/2023": {
+          "type": "Físeán"
+        },
+        "enter_your_own_poem/csc-timecapsule/2023": {
+          "type": "Físeán"
+        },
+        "poem_art_1_-_introduction/poetry/2023": {
+          "type": "Físeán"
+        },
+        "poem_art_2_-_events/poetry/2023": {
+          "type": "Físeán"
+        },
+        "poem_art_3_-_imagery/poetry/2023": {
+          "type": "Físeán"
+        },
+        "poem_art_4_-_celebration/poetry/2023": {
+          "type": "Físeán"
+        },
+        "enter_your_own_poem/poetry/2023": {
+          "type": "Físeán"
+        },
+        "poem_art_celebration_video_optional_/poetry/2023": {
+          "type": "Físeán"
+        },
+        "poem_art_events_video_optional_/poetry/2023": {
+          "type": "Físeán"
+        },
+        "poem_art_video_optional_/poetry/2023": {
+          "type": "Físeán"
+        },
+        "implementation_guide/coursea/2023": {
+          "name": "Lámhleabhar Feidhmithe"
+        },
+        "teacher_forum/coursea/2023": {
+          "name": "Fóram do Mhúinteoirí"
+        },
+        "getting_started_-_creating_a_class_section/coursea/2023": {
+          "type": "Físeán"
+        },
+        "pair_programming/coursea/2023": {
+          "name": "Códáil Bheirte"
+        },
+        "wiggles-go_noodle/coursea/2023": {
+          "type": "Físeán"
+        },
+        "happy_maps/coursea/2023": {
+          "name": "Mapaí Meidhreacha"
+        },
+        "wiggles_-_gonoodle/coursea/2023": {
+          "type": "Físeán"
+        },
+        "debugging_with_the_step_button/coursea/2023": {
+          "type": "Físeán"
+        },
+        "pair-programming/coursea/2023": {
+          "type": "Físeán"
+        },
+        "pause_and_think_online/coursea/2023": {
+          "type": "Físeán"
+        },
+        "the_big_event/coursea/2023": {
+          "name": "An Teagmhas Mór"
+        },
+        "the_big_event_1/coursea/2023": {
+          "name": "An Teagmhas Mór",
+          "type": "Measúnú"
+        },
+        "the_big_event_2/coursea/2023": {
+          "name": "An Teagmhas Mór"
+        },
+        "implementation_guide/courseb/2023": {
+          "name": "Lámhleabhar Feidhmithe"
+        },
+        "teacher_forum/courseb/2023": {
+          "name": "Fóram do Mhúinteoirí"
+        },
+        "move_it_move_it/courseb/2023": {
+          "name": "Bog é, Bog é"
+        },
+        "move_it_move_it_1/courseb/2023": {
+          "name": "Bog é, Bog é"
+        },
+        "move_it_move_it_2/courseb/2023": {
+          "name": "Bog é, Bog é"
+        },
+        "move_it_move_it_3/courseb/2023": {
+          "name": "Bog é, Bog é"
+        },
+        "pair_programming/courseb/2023": {
+          "name": "Códáil Bheirte"
+        },
+        "wiggles_-_gonoodle/courseb/2023": {
+          "type": "Físeán"
+        },
+        "stevie_and_the_big_project/courseb/2023": {
+          "name": "Stiofán agus an Tionscadal Mór"
+        },
+        "unspotted_bugs/courseb/2023": {
+          "name": "Fabhtanna nár tugadh faoi deara",
+          "type": "Físeán"
+        },
+        "getting_loopy/courseb/2023": {
+          "name": "Bí Lúbach"
+        },
+        "getting_loopy_1/courseb/2023": {
+          "name": "Bí Lúbach"
+        },
+        "getting_loopy_2/courseb/2023": {
+          "name": "Bí Lúbach",
+          "type": "Measúnú"
+        },
+        "getting_loopy_3/courseb/2023": {
+          "name": "Bí Lúbach"
+        },
+        "pause_and_think_online/courseb/2023": {
+          "type": "Físeán"
+        },
+        "the_big_event/courseb/2023": {
+          "name": "An Teagmhas Mór"
+        },
+        "the_big_event_1/courseb/2023": {
+          "name": "An Teagmhas Mór",
+          "type": "Measúnú"
+        },
+        "the_big_event_2/courseb/2023": {
+          "name": "An Teagmhas Mór"
+        },
+        "implementation_guide/coursec/2023": {
+          "name": "Lámhleabhar Feidhmithe"
+        },
+        "teacher_forum/coursec/2023": {
+          "name": "Fóram do Mhúinteoirí"
+        },
+        "my_robotic_friends/coursec/2023": {
+          "name": "Mo Chairde Róbatacha"
+        },
+        "my_robotic_friends_1/coursec/2023": {
+          "name": "Mo Chairde Róbatacha"
+        },
+        "my_robotic_friends_2/coursec/2023": {
+          "name": "Mo Chairde Róbatacha"
+        },
+        "my_robotic_friends_3/coursec/2023": {
+          "name": "Mo Chairde Róbatacha"
+        },
+        "my_robotic_friends_4/coursec/2023": {
+          "name": "Mo Chairde Róbatacha"
+        },
+        "pair_programming/coursec/2023": {
+          "name": "Códáil Bheirte",
+          "type": "Físeán"
+        },
+        "the_big_event/coursec/2023": {
+          "name": "An Teagmhas Mór"
+        },
+        "the_big_event_1/coursec/2023": {
+          "name": "An Teagmhas Mór",
+          "type": "Measúnú"
+        },
+        "the_big_event_2/coursec/2023": {
+          "name": "An Teagmhas Mór"
+        },
+        "pause_and_think_online/coursec/2023": {
+          "type": "Físeán"
+        },
+        "binary_bracelets/coursec/2023": {
+          "name": "Bráisléid Dhénártha"
+        },
+        "binary_bracelets_1/coursec/2023": {
+          "name": "Bráisléid Dhénártha"
+        },
+        "binary_bracelets_2/coursec/2023": {
+          "name": "Bráisléid Dhénártha"
+        },
+        "binary_bracelets_3/coursec/2023": {
+          "name": "Bráisléid Dhénártha",
+          "type": "Measúnú"
+        },
+        "binary_bracelets_4/coursec/2023": {
+          "name": "Bráisléid Dhénártha"
+        },
+        "implementation_guide/coursed/2023": {
+          "name": "Lámhleabhar Feidhmithe"
+        },
+        "teacher_forum/coursed/2023": {
+          "name": "Fóram do Mhúinteoirí"
+        },
+        "graph_paper_programming/coursed/2023": {
+          "name": "Ríomhchlárú ar Ghrafpháipéar"
+        },
+        "graph_paper_programming_1/coursed/2023": {
+          "name": "Ríomhchlárú ar Ghrafpháipéar"
+        },
+        "graph_paper_programming_2/coursed/2023": {
+          "name": "Ríomhchlárú ar Ghrafpháipéar"
+        },
+        "graph_paper_programming_3/coursed/2023": {
+          "name": "Ríomhchlárú ar Ghrafpháipéar"
+        },
+        "graph_paper_programming_4/coursed/2023": {
+          "name": "Ríomhchlárú ar Ghrafpháipéar",
+          "type": "Measúnú"
+        },
+        "graph_paper_programming_5/coursed/2023": {
+          "name": "Ríomhchlárú ar Ghrafpháipéar"
+        },
+        "pair_programming/coursed/2023": {
+          "name": "Códáil Bheirte"
+        },
+        "relay_programming/coursed/2023": {
+          "name": "Códáil Sealaíochta"
+        },
+        "relay_programming_1/coursed/2023": {
+          "name": "Códáil Sealaíochta"
+        },
+        "relay_programming_2/coursed/2023": {
+          "name": "Códáil Sealaíochta"
+        },
+        "relay_programming_3/coursed/2023": {
+          "name": "Códáil Sealaíochta"
+        },
+        "relay_programming_4/coursed/2023": {
+          "name": "Códáil Sealaíochta"
+        },
+        "relay_programming_5/coursed/2023": {
+          "name": "Códáil Sealaíochta"
+        },
+        "pause_and_think_online/coursed/2023": {
+          "type": "Físeán"
+        },
+        "conditionals_with_cards/coursed/2023": {
+          "name": "Coinníollacha le Cártaí"
+        },
+        "conditionals_with_cards_1/coursed/2023": {
+          "name": "Coinníollacha le Cártaí"
+        },
+        "conditionals_with_cards_2/coursed/2023": {
+          "name": "Coinníollacha le Cártaí",
+          "type": "Measúnú"
+        },
+        "conditionals_with_cards_3/coursed/2023": {
+          "name": "Coinníollacha le Cártaí"
+        },
+        "conditionals_with_cards_4/coursed/2023": {
+          "name": "Coinníollacha le Cártaí"
+        },
+        "implementation_guide/coursee/2023": {
+          "name": "Lámhleabhar Feidhmithe"
+        },
+        "sprite_lab_documentation/coursee/2023": {
+          "name": "Saotharlann na Sprideanna: Doiciméadú"
+        },
+        "teacher_forum/coursee/2023": {
+          "name": "Fóram do Mhúinteoirí"
+        },
+        "pause_and_think_online/coursee/2023": {
+          "type": "Físeán"
+        },
+        "functions_unplugged_songwriting_2/coursee/2023": {
+          "type": "Measúnú"
+        },
+        "digital_sharing_ethics_video_/coursee/2023": {
+          "type": "Físeán"
+        },
+        "implementation_guide/coursef/2023": {
+          "name": "Lámhleabhar Feidhmithe"
+        },
+        "sprite_lab_documentation_1/coursef/2023": {
+          "name": "Saotharlann na Sprideanna: Doiciméadú"
+        },
+        "teacher_forum/coursef/2023": {
+          "name": "Fóram do Mhúinteoirí"
+        },
+        "the_power_of_words_the_power_of_words/coursef/2023": {
+          "type": "Físeán"
+        },
+        "introducing_sprite_lab/coursef/2023": {
+          "name": "Fáilte go dtí Saotharlann na Sprideanna",
+          "type": "Físeán"
+        },
+        "sprite_lab_documentation/coursef/2023": {
+          "name": "Saotharlann na Sprideanna: Doiciméadú"
+        },
+        "ai_impact_on_society/coursef/2023": {
+          "type": "Físeán"
+        },
+        "ai_machine_learning/coursef/2023": {
+          "type": "Físeán"
+        },
+        "ai_training_data_bias/coursef/2023": {
+          "type": "Físeán"
+        },
+        "internet/coursef/2023": {
+          "name": "An tIdirlíon",
+          "type": "Measúnú"
+        },
+        "internet_1/coursef/2023": {
+          "name": "An tIdirlíon"
+        },
+        "the_internet/coursef/2023": {
+          "name": "An tIdirlíon"
+        },
+        "teacher_forum/express/2023": {
+          "name": "Fóram do Mhúinteoirí"
+        },
+        "pair_programming/express/2023": {
+          "name": "Códáil Bheirte",
+          "type": "Físeán"
+        },
+        "artist_introduction/express/2023": {
+          "type": "Físeán"
+        },
+        "turns_angles/express/2023": {
+          "type": "Físeán"
+        },
+        "sprite_lab_documentation/express/2023": {
+          "name": "Saotharlann na Sprideanna: Doiciméadú"
+        },
+        "sprites_in_action/express/2023": {
+          "name": "Sprideanna ar Obair"
+        },
+        "pause_and_think_online/express/2023": {
+          "type": "Físeán"
+        },
+        "pair_programming_video/express/2023": {
+          "type": "Físeán"
+        },
+        "variables/express/2023": {
+          "name": "Athróga"
+        },
+        "teacher_forum/pre-express/2023": {
+          "name": "Fóram do Mhúinteoirí"
+        },
+        "20_20_20_rule/pre-express/2023": {
+          "type": "Físeán"
+        },
+        "pair_programming/pre-express/2023": {
+          "name": "Códáil Bheirte"
+        },
+        "wiggles_-_go_noodle/pre-express/2023": {
+          "type": "Físeán"
+        },
+        "pause_and_think_online/pre-express/2023": {
+          "type": "Físeán"
+        },
+        "how_ai_works_-_training_data_and_bias/how-ai-works/2023": {
+          "type": "Físeán"
+        },
+        "how_ai_works_-_what_is_machine_learning_/how-ai-works/2023": {
+          "type": "Físeán"
+        },
+        "how_ai_works_how_computer_vision_works/how-ai-works/2023": {
+          "type": "Físeán"
+        },
+        "what_a_neural_network_sees/how-ai-works/2023": {
+          "type": "Físeán"
+        },
+        "how_ai_works_how_neural_networks_work/how-ai-works/2023": {
+          "type": "Físeán"
+        },
+        "how_ai_works_chatbots_and_large_language_models_part_1_/how-ai-works/2023": {
+          "type": "Físeán"
+        },
+        "how_ai_works_chatbots_and_large_language_models_part_2_/how-ai-works/2023": {
+          "type": "Físeán"
+        },
+        "how_ai_works_creativity_and_imagination/how-ai-works/2023": {
+          "type": "Físeán"
+        },
+        "how_ai_works_-_societal_impact/how-ai-works/2023": {
+          "type": "Físeán"
+        },
+        "how_ai_works_-_privacy_and_future_of_work/how-ai-works/2023": {
+          "type": "Físeán"
+        },
+        "does_ai_have_creativity_and_imagination_/how-ai-works/2023": {
+          "type": "Físeán"
+        },
+        "how_ai_works_ethics_ai_equal_access_and_algorithmic_bias/how-ai-works/2023": {
+          "type": "Físeán"
+        },
+        "how_ai_works_ethics_ai_privacy_the_future_of_work/how-ai-works/2023": {
+          "type": "Físeán"
+        },
+        "how_ai_works_introduction/how-ai-works/2023": {
+          "type": "Físeán"
+        },
+        "how_ai_works_training_data_and_bias/how-ai-works/2023": {
+          "type": "Físeán"
+        },
+        "how_ai_works_what_is_machine_learning_/how-ai-works/2023": {
+          "type": "Físeán"
+        },
+        "how_chatbots_and_large_language_models_work/how-ai-works/2023": {
+          "type": "Físeán"
+        },
         "encryption-and-public-keys-optional-1/hoc-encryption/unversioned": {
           "type": "Físeán"
         },
