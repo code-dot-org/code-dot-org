@@ -250,6 +250,17 @@ export default function RubricsContainer({
     setSelectedLevelForAssessment(event.target.value);
   };
 
+  function renderOptions() {
+    const selectOptions = levels
+      .filter(level => level.properties.submittable === 'true')
+      .map(level => (
+        <option key={level.id} value={level.id}>
+          {level.name}
+        </option>
+      ));
+    return selectOptions;
+  }
+
   return (
     <div>
       <Heading1>Create or modify your rubric</Heading1>
@@ -265,11 +276,7 @@ export default function RubricsContainer({
           onChange={handleDropdownChange}
           value={selectedLevelForAssessment}
         >
-          {levels.map(level => (
-            <option key={level.id} value={level.id}>
-              {level.name}
-            </option>
-          ))}
+          {renderOptions()}
         </select>
       </div>
 
@@ -295,7 +302,11 @@ RubricsContainer.propTypes = {
   unitName: PropTypes.string,
   lessonNumber: PropTypes.number,
   levels: PropTypes.arrayOf(
-    PropTypes.shape({id: PropTypes.number, name: PropTypes.string})
+    PropTypes.shape({
+      id: PropTypes.number,
+      name: PropTypes.string,
+      properties: PropTypes.object,
+    })
   ),
   rubric: PropTypes.object,
   lessonId: PropTypes.number,
