@@ -46,7 +46,7 @@ steps:
 
   - name: unit-tests
     # see: docker/dockerfiles/Dockerfile
-    image: codedotorg/code-dot-org:corepack-yarn
+    image: codedotorg/code-dot-org:1.8.3
     pull: always
     volumes:
       - name: rbenv
@@ -144,7 +144,7 @@ steps:
 
   - name: ui-tests
     # see: docker/dockerfiles/Dockerfile
-    image: codedotorg/code-dot-org:corepack-yarn
+    image: codedotorg/code-dot-org:1.8.3
     pull: always
     volumes:
       - name: rbenv
@@ -210,6 +210,6 @@ trigger:
     - pull_request
 ---
 kind: signature
-hmac: 2271780a3a761db23e78570831c6f9ca8f2e335fd65b13c7104151e5173d535a
+hmac: 4a01bb949625a45e5445319b70c6268e9e5a4f555786ae999fc6982a94fb3089
 
 ...

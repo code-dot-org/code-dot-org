@@ -16,7 +16,7 @@
 version: "3"
 services:
   site:
-    image: codedotorg/code-dot-org:corepack-yarn
+    image: codedotorg/code-dot-org:1.8.3
     user: ${FIXUID:-1000}:${FIXGID:-1000}
     volumes:
       - ../:/home/circleci/code-dot-org:delegated
