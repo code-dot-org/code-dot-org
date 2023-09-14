@@ -150,12 +150,23 @@ module ScriptConstants
       DANCE_PARTY_NAME = 'dance'.freeze, # 2018 hour of code
       DANCE_PARTY_EXTRAS_NAME = 'dance-extras'.freeze, # 2018 hour of code
       HOW_AI_WORKS_2023_NAME = 'how-ai-works-2023'.freeze,
+      AI_ETHICS_2023_NAME = 'ai-ethics-2023'.freeze,
     ],
     csf_international: [
       COURSE1_NAME = 'course1'.freeze,
       COURSE2_NAME = 'course2'.freeze,
       COURSE3_NAME = 'course3'.freeze,
       COURSE4_NAME = 'course4'.freeze,
+    ],
+    csd_2023: [
+      CSD1_2023_NAME = 'csd1-2022'.freeze,
+      CSD2_2023_NAME = 'csd2-2022'.freeze,
+      CSD3_2023_NAME = 'csd3-2022'.freeze,
+      CSD4_2023_NAME = 'csd4-2022'.freeze,
+      CSD5_2023_NAME = 'csd5-2022'.freeze,
+      CSD6A_2023_NAME = 'csd6a-2022'.freeze,
+      CSD6B_2023_NAME = 'csd6b-2022'.freeze,
+      CSD7_2023_NAME = 'csd7-2022'.freeze,
     ],
     csd_2022: [
       CSD1_2022_NAME = 'csd1-2022'.freeze,
@@ -345,6 +356,7 @@ module ScriptConstants
       ScriptConstants.unit_in_category?(:csd_2019, script) ||
       ScriptConstants.unit_in_category?(:csd_2021, script) ||
       ScriptConstants.unit_in_category?(:csd_2022, script) ||
+      ScriptConstants.unit_in_category?(:csd_2023, script) ||
       ScriptConstants.unit_in_category?(:twenty_hour, script) ||
       ScriptConstants.unit_in_category?(:hoc, script) ||
       script == JIGSAW_NAME ||
