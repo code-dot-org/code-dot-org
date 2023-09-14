@@ -163,7 +163,12 @@ namespace :build do
     end
   end
 
-  tasks = []
+  # set up python virtual environment
+  timed_task_with_logging :pybin do
+    RakeUtils.system_stream_output 'bash bin/setup_python_venv.sh'
+  end
+
+  tasks = [:pybin]
   tasks << :apps if CDO.build_apps
   tasks << :dashboard if CDO.build_dashboard
   tasks << :pegasus if CDO.build_pegasus
