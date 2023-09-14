@@ -203,6 +203,114 @@
         "debugging/pre-express/2022": {
           "word": "Debugimine"
         },
+        "code/csc-adaptations/2023": {
+          "word": "Kood"
+        },
+        "behavior/csc-adaptations/2023": {
+          "word": "Käitumine"
+        },
+        "code/csc-ecosystems/2023": {
+          "word": "Kood"
+        },
+        "conditionals/csc-ecosystems/2023": {
+          "word": "Tingimuslaused"
+        },
+        "variable/csc-ecosystems/2023": {
+          "word": "Muutuja"
+        },
+        "code/csc-mappinglandmarks/2023": {
+          "word": "Kood"
+        },
+        "artist/csc-starquilts/2023": {
+          "word": "Kunstnik"
+        },
+        "comments/csc-starquilts/2023": {
+          "word": "Kommentaarid"
+        },
+        "code/poetry/2023": {
+          "word": "Kood"
+        },
+        "debugging/coursea/2023": {
+          "word": "Debugimine"
+        },
+        "drop/coursea/2023": {
+          "word": "Kükita"
+        },
+        "debugging/courseb/2023": {
+          "word": "Debugimine"
+        },
+        "drop/courseb/2023": {
+          "word": "Kükita"
+        },
+        "debugging/coursec/2023": {
+          "word": "Debugimine"
+        },
+        "data/coursec/2023": {
+          "word": "Andmed"
+        },
+        "binary/coursec/2023": {
+          "word": "Binaarne"
+        },
+        "debugging/coursed/2023": {
+          "word": "Debugimine"
+        },
+        "conditionals/coursed/2023": {
+          "word": "Tingimuslaused"
+        },
+        "behavior/coursee/2023": {
+          "word": "Käitumine"
+        },
+        "function/coursee/2023": {
+          "word": "Funktsioon"
+        },
+        "conditionals/coursee/2023": {
+          "word": "Tingimuslaused"
+        },
+        "copyright/coursee/2023": {
+          "word": "Autoriõigus"
+        },
+        "define/coursee/2023": {
+          "word": "Määra"
+        },
+        "behavior/coursef/2023": {
+          "word": "Käitumine"
+        },
+        "variable/coursef/2023": {
+          "word": "Muutuja"
+        },
+        "input/coursef/2023": {
+          "word": "Sisend"
+        },
+        "internet/coursef/2023": {
+          "word": "Internet"
+        },
+        "define/coursef/2023": {
+          "word": "Määra"
+        },
+        "debugging/express/2023": {
+          "word": "Debugimine"
+        },
+        "behavior/express/2023": {
+          "word": "Käitumine"
+        },
+        "conditionals/express/2023": {
+          "word": "Tingimuslaused"
+        },
+        "function/express/2023": {
+          "word": "Funktsioon"
+        },
+        "variable/express/2023": {
+          "word": "Muutuja"
+        },
+        "define/express/2023": {
+          "word": "Määra"
+        },
+        "drop/pre-express/2023": {
+          "word": "Kükita"
+        },
+        "debugging/pre-express/2023": {
+          "word": "Debugimine"
+        },
         "conditionals/aquatic/unversioned": {
           "word": "Tingimuslaused"
         },
