@@ -109,8 +109,11 @@
         "CourseD_Dance_2020_bonus3": "Uspostavi formaciju",
         "CourseD_Dance_2020_bonus32022": "Uspostavi formaciju",
         "CourseD_Dance_2020_bonus3_2021": "Uspostavi formaciju",
+        "CourseD_Dance_2020_bonus3_2023": "Uspostavi formaciju",
         "CourseD_Dance_2022_lessonextra": "Uspostavi formaciju",
         "CourseD_Dance_2022_lessonextra10b": "Uspostavi formaciju",
+        "CourseD_Dance_2022_lessonextra10b_2023": "Uspostavi formaciju",
+        "CourseD_Dance_2022_lessonextra_2023": "Uspostavi formaciju",
         "Dance_Party_extras_battle": "Plesne skupine",
         "Dance_Party_extras_battle_2019": "Plesne skupine",
         "Dance_Party_extras_every_beat": "Četvrtine nota",
@@ -128,11 +131,15 @@
         "courseA_video_Stevie": "Stivi i veliki projekat",
         "courseA_video_Stevie_2018": "Stivi i veliki projekat",
         "courseD_artist_nestedLoops52022": "Krugovi",
+        "courseD_artist_nestedLoops5_2023": "Krugovi",
         "courseD_artist_nestedLoops72022": "Kvadrati",
+        "courseD_artist_nestedLoops7_2023": "Kvadrati",
         "courseF_bee_for52022": "Varijable",
         "courseF_bee_for5_2021": "Varijable",
+        "courseF_bee_for5_2023": "Varijable",
         "ramp_artist_loops42022": "Zvijezda",
-        "ramp_artist_loops4_2021": "Zvijezda"
+        "ramp_artist_loops4_2021": "Zvijezda",
+        "ramp_artist_loops4_2023": "Zvijezda"
       }
     }
   }
