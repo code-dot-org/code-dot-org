@@ -390,6 +390,10 @@ fr:
             qui exposent les pièges éthiques dans le domaine de l''intelligence artificielle
             (IA) de votre choix. '
           title: Notre code d'éthique en matière d'IA
+        ai-ethics-2023:
+          lessons:
+            lesson-1:
+              name: Notre code d'éthique en matière d'IA
         ai-lab:
           student_description: Utilisez ces niveaux pour explorer AI Lab et les utiliser
             dans d'autres leçons ou activités. Vous devez créer un compte Code.org
