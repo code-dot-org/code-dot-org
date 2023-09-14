@@ -3274,6 +3274,10 @@ sk:
             lessonGroup-3:
               display_name: Kapitola 2 – Navrhujeme aplikáciu strojového učenia
           title: Umelá inteligencia a strojové učenie
+        csc-ecosystems:
+          name: csc-ecosystems
+        csc-ecosystems-2022:
+          name: csc-ecosystems-2022
         vpl-csd1-ayw-pilot-2022:
           lessons:
             lesson-6:
@@ -3548,6 +3552,11 @@ sk:
           lesson_groups:
             lessonGroup-2:
               display_name: Vyučujeme CS Connections
+        csc-ecosystems-2023:
+          lessons:
+            lesson-3:
+              name: Naprogramuj si vlastný ekosystém
+          title: Simulácia morského ekosystému (2023)
         tess-testing-problem-solving-2023:
           lesson_groups:
             lessonGroup-2:

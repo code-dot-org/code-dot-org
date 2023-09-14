@@ -1491,6 +1491,15 @@ sk:
               display_name: Obsah
             lessonGroup-5:
               display_name: Dotazník
+        csc-ecosystems:
+          name: csc-ecosystems
+        csc-ecosystems-2022:
+          name: csc-ecosystems-2022
+        csc-ecosystems-2023:
+          lessons:
+            lesson-3:
+              name: Naprogramuj si vlastný ekosystém
+          title: Simulácia morského ekosystému (2023)
         csc-function-machines-pilot:
           lessons:
             lesson-1:
