@@ -202,7 +202,7 @@ class Pd::Workshop < ApplicationRecord
 
   scope :in_year, ->(year) do
     scheduled_start_on_or_after(Date.new(year)).
-    scheduled_start_on_or_before(Date.new(year + 1))
+      scheduled_start_on_or_before(Date.new(year + 1))
   end
 
   # Filters to workshops that are scheduled on or after today and have not yet ended
