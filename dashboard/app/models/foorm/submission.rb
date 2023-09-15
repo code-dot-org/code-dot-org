@@ -111,10 +111,10 @@ class Foorm::Submission < ApplicationRecord
       where(user: workshop_metadata.user).
       select do |associated_submission_metadata|
         associated_submission_metadata.facilitator_specific? &&
-        associated_submission_metadata[:created_at].between?(
-          workshop_metadata[:created_at] - 1.minute,
-          workshop_metadata[:created_at] + 1.minute
-        )
+          associated_submission_metadata[:created_at].between?(
+            workshop_metadata[:created_at] - 1.minute,
+            workshop_metadata[:created_at] + 1.minute
+          )
       end
 
     associated_submission_metadatas.map(&:foorm_submission)
