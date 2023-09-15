@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": "ai-ethics",
-    "serialized_at": "2023-09-14 03:22:42 UTC",
+    "serialized_at": "2023-09-14 23:59:41 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -60,6 +60,8 @@
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
+        "overview": "Students explore the impact of generative AI by participating in a collaborative game. They start by watching a video introducing how large language models work, like chatbots or generative images. Then, students take on a persona of someone impacted by generative AI to read a few articles and react in-character. Then, students form groups and are given a scenario involving their persona and generative AI. Working together, they come up with guidelines for how generative AI should be implemented in this scenario that includes the voices and perspectives of all stakeholders. Finally, students share their results with the class and reflect on this process.",
+        "student_overview": "Learn about generative AI by taking on a persona and coming up with appropriate guidelines for generative AI"
       },
       "seeding_key": {
         "lesson.key": "lesson-2",
@@ -1655,7 +1657,7 @@
       "key": "bedaca2d-4f48-45b4-b6e9-431f6a38cc13",
       "position": 30,
       "properties": {
-        "description": "**Share Out:** Have groups share out their scenario and the guidelines they created, especially since each group had a different scenario and read a different set of articles."
+        "description": "**Share Out:** Have groups share out their scenario and the guidelines they created, especially since each group had a different scenario and read a different set of articles. Groups should share what their problem was, what their biggest challenges were, and the organization rules they came up with!"
       },
       "seeding_key": {
         "activity_section.key": "bedaca2d-4f48-45b4-b6e9-431f6a38cc13",
