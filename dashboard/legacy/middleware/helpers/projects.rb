@@ -128,7 +128,7 @@ class Projects
     raise NotFound, "channel `#{channel_id}` not found" if update_count == 0
 
     project = @table.where(id: project_id).first
-    raise PublishError, "channel `#{channel_id}` too new to be published" if project[:created_at] > (Time.now - 30.days)
+    raise PublishError, "channel `#{channel_id}` too new to be published" if project[:created_at] > (Time.now - 30.minutes)
     Projects.get_published_project_data(project, channel_id).merge(
       # For privacy reasons, include only the first initial of the student's name.
       studentName: user && UserHelpers.initial(user[:name]),

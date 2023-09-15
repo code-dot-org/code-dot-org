@@ -211,7 +211,7 @@ class ChannelsApi < Sinatra::Base
     forbidden if Projects.in_restricted_share_mode(channel_id, project_type)
 
     # do we already prevent sharing for signed out users?
-    forbidden if current_user && current_user[:created_at] > (Time.now - 30.days)
+    forbidden if current_user && current_user[:created_at] > (Time.now - 7.days)
     begin
       # Once we have back-filled the project_type column for all channels,
       # it will no longer be necessary to specify the project type here.

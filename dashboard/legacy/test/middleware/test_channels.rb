@@ -196,7 +196,7 @@ class ChannelsTest < Minitest::Test
     end
 
     # publish the project and validate the result
-    Timecop.travel 31.days
+    Timecop.travel 8.days
 
     post "/v3/channels/#{channel_id}/publish/applab", {}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
     assert last_response.ok?
@@ -506,7 +506,7 @@ class ChannelsTest < Minitest::Test
     post '/v3/channels', {abc: 123}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
     channel_id = last_response.location.split('/').last
 
-    Timecop.travel 31.days
+    Timecop.travel 8.days
 
     start = 1.second.ago
     post "/v3/channels/#{channel_id}/publish/#{project_type}", {}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
@@ -532,7 +532,7 @@ class ChannelsTest < Minitest::Test
       channel_id = last_response.location.split('/').last
     end
 
-    Timecop.travel 31.days
+    Timecop.travel 8.days
 
     post "/v3/channels/#{channel_id}/publish/#{project_type}", {}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
     assert last_response.client_error?
