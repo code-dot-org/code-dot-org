@@ -1,4 +1,5 @@
 import Sounds from '../Sounds';
+import {ageDialogSelectedOver13, songFilterOn} from '../templates/AgeDialog';
 import {fetchSignedCookies} from '../utils';
 
 /**
@@ -113,4 +114,27 @@ export function getFilteredSongKeys(fullSongManifest, filterOn) {
   }
   // Filter is off, all songs may be displayed.
   return allSongKeys;
+}
+
+/**
+ * The filter defaults to on. If the user is over 13 (identified via account or anon dialog), filter turns off.
+ */
+export function getFilterStatus(userType, under13) {
+  // Check if song filter override is triggered and initialize song filter to true.
+  const songFilter = songFilterOn();
+  if (songFilter) {
+    return true;
+  }
+
+  // userType - 'teacher', 'student', 'unknown' - signed out users.
+  // If the user is signed out . . .
+  if (userType === 'unknown') {
+    // Query session key set from user selection in age dialog.
+    // Return false (no filter), if user is over 13.
+    return !ageDialogSelectedOver13();
+  }
+
+  // User is signed in (student or teacher) and the filter override is not turned on.
+  // Return true (filter should be turned on) if the user is under 13. Teachers assumed over13.
+  return under13;
 }
