@@ -22,6 +22,7 @@ class ChannelsTest < Minitest::Test
   end
 
   def test_create_published_channel
+    # what's up with "publishing" through this shouldPublish param?
     old_user = {name: ' xavier', birthday: 14.years.ago.to_datetime}
     ChannelsApi.any_instance.stubs(:current_user).returns(old_user)
     start = DateTime.now - 1
@@ -325,6 +326,42 @@ class ChannelsTest < Minitest::Test
     assert_cannot_publish('foo')
   end
 
+  def test_publish_ability_depends_on_account_age
+    stub_user = {
+      name: 'xavier',
+      birthday: 14.years.ago.to_datetime,
+      properties: {sharing_disabled: false}.to_json,
+      created_at: DateTime.now
+    }
+    ChannelsApi.any_instance.stubs(:current_user).returns(stub_user)
+
+    post '/v3/channels', {abc: 123}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
+    channel_id = last_response.location.split('/').last
+
+    assert_cannot_publish('applab', channel_id, 1.day)
+    assert_can_publish('applab', channel_id, 8.days)
+  end
+
+  def test_publish_ability_depends_on_project_age
+    stub_user = {
+      name: ' xavier',
+      birthday: 14.years.ago.to_datetime,
+      properties: {sharing_disabled: false}.to_json,
+      created_at: DateTime.now
+    }
+    ChannelsApi.any_instance.stubs(:current_user).returns(stub_user)
+
+    Timecop.travel 8.days
+
+    post '/v3/channels', {abc: 123}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
+    channel_id = last_response.location.split('/').last
+
+    assert_cannot_publish('applab', channel_id, 0, false)
+    assert_can_publish('applab', channel_id, 1.hour)
+  ensure
+    Timecop.return
+  end
+
   def test_restricted_publish_permissions
     # sprite lab projects require talking to S3
     AWS::S3.stubs :create_client
@@ -502,11 +539,15 @@ class ChannelsTest < Minitest::Test
     time.strftime('%Y-%m-%d %H:%M:%S.%L')
   end
 
-  def assert_can_publish(project_type)
-    post '/v3/channels', {abc: 123}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
-    channel_id = last_response.location.split('/').last
+  # Default to checking publish status 8 days in the future because we require
+  # all accounts to have existed for a week before they can publish
+  def assert_can_publish(project_type, channel_id = nil, timecop_travel_time = 8.days)
+    unless channel_id
+      post '/v3/channels', {abc: 123}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
+      channel_id = last_response.location.split('/').last
+    end
 
-    Timecop.travel 8.days
+    Timecop.travel timecop_travel_time
 
     start = 1.second.ago
     post "/v3/channels/#{channel_id}/publish/#{project_type}", {}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
@@ -526,13 +567,15 @@ class ChannelsTest < Minitest::Test
     Timecop.return
   end
 
-  def assert_cannot_publish(project_type, channel_id = nil)
+  # Default to checking publish status 8 days in the future because we require
+  # all accounts to have existed for a week before they can publish
+  def assert_cannot_publish(project_type, channel_id = nil, timecop_travel_time = 8.days, reset_timecop = true)
     unless channel_id
       post '/v3/channels', {abc: 123}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
       channel_id = last_response.location.split('/').last
     end
 
-    Timecop.travel 8.days
+    Timecop.travel timecop_travel_time
 
     post "/v3/channels/#{channel_id}/publish/#{project_type}", {}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
     assert last_response.client_error?
@@ -543,7 +586,7 @@ class ChannelsTest < Minitest::Test
     assert_includes result.keys, 'publishedAt'
     assert_nil result['publishedAt']
   ensure
-    Timecop.return
+    Timecop.return if reset_timecop
   end
 
   def assert_cannot_unpublish(channel_id)
