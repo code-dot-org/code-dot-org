@@ -2378,8 +2378,6 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'upgrade_to_teacher given valid params should delete family_name property' do
-    DCDO.stubs(:get).with('family-name-features', false).returns(true)
-
     family_name = 'TestFamName'
     user = User.create(@good_data.merge({family_name: family_name}))
     user.reload
@@ -2390,8 +2388,6 @@ class UserTest < ActiveSupport::TestCase
 
     user.reload
     assert_nil user.family_name
-
-    DCDO.unstub(:get)
   end
 
   def assert_parent_email_params_equals_email_preference(parent_email_params, email_preference)
@@ -4808,10 +4804,6 @@ class UserTest < ActiveSupport::TestCase
     user = create :user
     family_name = 'TestFamilyName'
     user.family_name = family_name
-
-    assert_nil(user.summarize[:family_name])
-
-    DCDO.stubs(:get).with('family-name-features', false).returns(true)
 
     assert(user.summarize.key?(:family_name))
     assert_equal(family_name, user.summarize[:family_name])
