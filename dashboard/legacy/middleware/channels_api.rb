@@ -210,9 +210,15 @@ class ChannelsApi < Sinatra::Base
     forbidden if sharing_disabled? && CONDITIONALLY_PUBLISHABLE_PROJECT_TYPES.include?(project_type)
     forbidden if Projects.in_restricted_share_mode(channel_id, project_type)
 
-    # Once we have back-filled the project_type column for all channels,
-    # it will no longer be necessary to specify the project type here.
-    Projects.new(get_storage_id).publish(channel_id, project_type, current_user).to_json
+    # do we already prevent sharing for signed out users?
+    forbidden if current_user && current_user[:created_at] > (Time.now - 30.days)
+    begin
+      # Once we have back-filled the project_type column for all channels,
+      # it will no longer be necessary to specify the project type here.
+      Projects.new(get_storage_id).publish(channel_id, project_type, current_user).to_json
+    rescue Projects::PublishError
+      forbidden
+    end
   end
 
   #
