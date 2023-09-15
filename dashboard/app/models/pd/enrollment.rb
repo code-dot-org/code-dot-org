@@ -182,7 +182,7 @@ class Pd::Enrollment < ApplicationRecord
   end
 
   def resolve_user
-    user || User.find_by_email_or_hashed_email(email)
+    user || User.find_by_email_or_hashed_email(email) || (User.all.find {|u| u.email_for_enrollments == email} if deleted_at.nil?)
   end
 
   # Pre-workshop survey URL (if any)
