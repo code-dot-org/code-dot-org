@@ -6,7 +6,7 @@ require_relative '../../dashboard/config/environment'
 BANNED_USERS = [
   {user_id: 101_790_034, banned_datetime: '2021-09-15 00:00:00'},
 ]
-NOTIFY_CHANNEL = 'infrastructure'
+NOTIFY_CHANNEL = 'csam'
 
 # @param message [String] the (base) error message to log.
 def alert(message)
