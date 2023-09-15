@@ -4,7 +4,7 @@ require_relative 'only_one'
 require_relative '../../dashboard/config/environment'
 
 BANNED_USERS = [
-  {user_id: 101_790_034, banned_datetime: '2021-09-15 00:00:00'},
+  {user_id: 101_790_034, banned_datetime: '2023-09-15 00:00:00'},
 ]
 NOTIFY_CHANNEL = 'csam'
 
