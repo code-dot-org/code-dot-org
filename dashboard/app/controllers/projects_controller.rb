@@ -512,6 +512,11 @@ class ProjectsController < ApplicationController
     @game = @level.game
   end
 
+  def can_share
+    project = Project.find_by_channel_id(params[:channel_id])
+    render json: {can_share: project.created_at + 30.minutes > Time.now, created_at: project.created_at}
+  end
+
   # Due to risk of inappropriate content, we can hide non-featured Applab
   # and Gamelab projects via DCDO. Internally, project_validators should
   # always have access to all Applab and Gamelab projects, even if there is a

@@ -102,6 +102,8 @@ class ShareAllowedDialog extends React.Component {
     hasBeenCopied: false,
   };
 
+  // maybe move the checks for whether project/user share allowed here?
+
   componentDidMount() {
     if (this.props.canShareSocial) {
       // check if twitter and facebook are actually available

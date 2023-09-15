@@ -68,6 +68,13 @@ class Api::V1::UsersController < Api::V1::JSONApiController
     }
   end
 
+  # GET /api/v1/users/<user_id>/can_publish_based_on_account_create
+  def get_account_existed_long_enough_for_project_publishing
+    render json: {
+      account_old_enough: current_user.created_at < Time.now - 7.days
+    }
+  end
+
   # GET /api/v1/users/<user_id>/using_text_mode
   def get_using_text_mode
     render json: {using_text_mode: !!@user&.using_text_mode}

@@ -8,22 +8,33 @@ import {showShareDialog} from './components/shareDialogRedux';
 import {AllPublishableProjectTypes} from '../util/sharedConstants';
 
 export function shareProject(shareUrl) {
-  // (x) get createdat from redux (maybe set when we hit /v3/channels on page load (or now?)
-  // hourofcode status of project? checking with sam on what an hour of code project is
-  // (x) user created at date
-  // we'll need these checks on back end, so maybe easier just to manage all of the timestamp
-  // work there. maybe we make an endpoint that checks account age / project age to use here to
-  // enable/disable ui,
-  // and can reuse logic on backend to actually prevent save
+  let canPublishProject, canPublishAccount;
+  let checkIfCanPublishProject = fetch(
+    `/projects/${dashboard.project.getStandaloneApp()}/${dashboard.project.getCurrentId()}/can_share`
+  )
+    .then(response => response.json())
+    .then(data => {
+      canPublishProject = data.can_share;
+    });
 
-  dashboard.project.getChannelMetadata(
-    dashboard.project.getCurrentId(),
-    (_, data) => console.log(data)
-  );
+  const userId = getStore().getState().currentUser.userId;
+  let checkIfcanPublishAccount = fetch(
+    `/api/v1/users/${userId}/can_publish_based_on_account_create`
+  )
+    .then(response => response.json())
+    .then(data => {
+      canPublishAccount = data.account_old_enough;
+    });
 
-  console.log(getStore().getState().currentUser.createdAt);
+  const saveIfSourcesChanged = dashboard.project.saveIfSourcesChanged();
 
-  dashboard.project.saveIfSourcesChanged().then(() => {
+  Promise.all([
+    checkIfCanPublishProject,
+    checkIfcanPublishAccount,
+    saveIfSourcesChanged,
+  ]).then(() => {
+    console.log(canPublishProject);
+    console.log(canPublishAccount);
     var dialogDom = document.getElementById('project-share-dialog');
     if (!dialogDom) {
       dialogDom = document.createElement('div');

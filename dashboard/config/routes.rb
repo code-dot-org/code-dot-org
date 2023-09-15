@@ -264,6 +264,7 @@ Dashboard::Application.routes.draw do
           get "/#{key}/:channel_id/remix", to: 'projects#remix', key: key.to_s, as: "#{key}_project_remix"
           get "/#{key}/:channel_id/export_create_channel", to: 'projects#export_create_channel', key: key.to_s, as: "#{key}_project_export_create_channel"
           get "/#{key}/:channel_id/export_config", to: 'projects#export_config', key: key.to_s, as: "#{key}_project_export_config"
+          get "/#{key}/:channel_id/can_share", to: 'projects#can_share'
         end
 
         get '/:tab_name', to: 'projects#index', constraints: {tab_name: /(public|libraries)/}
@@ -892,6 +893,7 @@ Dashboard::Application.routes.draw do
         get 'users/:user_id/school_name', to: 'users#get_school_name'
         get 'users/:user_id/school_donor_name', to: 'users#get_school_donor_name'
         get 'users/:user_id/tos_version', to: 'users#get_tos_version'
+        get 'users/:user_id/can_publish_based_on_account_create', to: 'users#get_account_existed_long_enough_for_project_publishing'
 
         patch 'user_school_infos/:id/update_last_confirmation_date', to: 'user_school_infos#update_last_confirmation_date'
 
