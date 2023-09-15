@@ -10,7 +10,7 @@ NOTIFY_CHANNEL = 'infrastructure'
 
 # @param message [String] the (base) error message to log.
 def alert(message)
-  ChatClient.message(NOTIFY_CHANNEL, msg, color: 'red')
+  ChatClient.message(NOTIFY_CHANNEL, message, color: 'red')
 end
 
 def main
