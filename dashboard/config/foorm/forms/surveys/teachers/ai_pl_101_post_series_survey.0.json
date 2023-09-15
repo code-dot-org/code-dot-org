@@ -8,7 +8,7 @@
         {
           "type": "html",
           "name": "survey_preamble_header_and_text",
-          "html": "<h1>Welcome to the AI 101 Professional Learning - Post Series Survey</h2>\n\n<p><strong>Code.org relies on surveys as a crucial tool to remain connected to educators, and to give you the opportunity to provide feedback about your experience with our programming.</strong></p>\n<p>This survey asks questions about your experience with the AI 101 Professional Learning series.&nbsp;</p>\n<p><strong>Privacy and Confidentiality</strong></p>\n<ul>\n<li>Your individual responses here are completely <strong>confidential.</strong></li>\n<li>Your identity will&nbsp;<strong>never</strong> be revealed publicly or used to tie any responses back to you personally.</li>\n<li>We may share <strong>de-identified</strong>, aggregate data (representing all responses) publicly.</li>\n<li>Your <strong>de-identified&nbsp;</strong>responses will be used by Code.org, our Regional Partners, and our facilitators for program improvement.</li>\n</ul>\n<p><strong>At the end, you will be offered a $10 Amazon gift card for your time (supplies limited to first 1000 respondents).</strong></P>\n<p>This survey should take <strong>less than 10 minutes</strong> to complete.&nbsp;&nbsp;<strong>Your complete honesty and candor are appreciated.</strong></p>"
+          "html": "<h1>Welcome to the AI 101 Professional Learning - Post Series Survey</h2>\n\n<p><strong>Code.org, ETS, ISTE, and Khan Academy rely on surveys as a crucial tool to remain connected to educators, and to give you the opportunity to provide feedback about your experience with our programming.</strong></p>\n<p>This survey asks questions about your experience with the AI 101 Professional Learning series.&nbsp;</p>\n<p><strong>Privacy and Confidentiality</strong></p>\n<ul>\n<li>Your individual responses here are completely <strong>confidential.</strong></li>\n<li>Your identity will&nbsp;<strong>never</strong> be revealed publicly or used to tie any responses back to you personally.</li>\n<li>We may share <strong>de-identified</strong>, aggregate data (representing all responses) publicly.</li>\n<li>Your <strong>de-identified&nbsp;</strong>responses will be used by Code.org, our Regional Partners, and our facilitators for program improvement.</li>\n</ul>\n<p><strong>At the end, you will be offered a $10 Amazon gift card for your time (supplies limited to first 100 respondents).</strong></P>\n<p>This survey should take <strong>less than 5 minutes</strong> to complete.&nbsp;&nbsp;<strong>Your complete honesty and candor are appreciated.</strong></p>"
         }
       ]
     },
@@ -503,7 +503,7 @@
             },
             {
               "value": "train_other_teachers",
-              "text": "How to train other teachers about using AI (TtT)"
+              "text": "How to train other teachers about using AI"
             },
             {
               "value": "inform_policy_use_ai",
@@ -520,6 +520,10 @@
             {
               "value": "ai_for_assessments",
               "text": "Using AI for assessments"
+            },
+            {
+              "value": "ai_ethics",
+              "text": "AI ethics"
             },
             {
               "value": "other",
