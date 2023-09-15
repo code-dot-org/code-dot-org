@@ -144,14 +144,14 @@ Feature: Curriculum Catalog Page
 
   #Expanded card scenarios
   Scenario: Signed-out user sees the curriculum catalog with offerings and can expand card
-    Given I am on "http://studio.code.org/catalog?quick_view=true"
+    Given I am on "http://studio.code.org/catalog"
     And I wait until element "h4:contains(AI for Oceans)" is visible
 
     And I click selector "[aria-label='View details about AI for Oceans']"
     And I wait until element "a:contains(See curriculum details)" is visible
 
   Scenario: Signed-out user sees course offering page when clicking on see curriculum details on expanded card
-    Given I am on "http://studio.code.org/catalog?quick_view=true"
+    Given I am on "http://studio.code.org/catalog"
     And I wait until element "h4:contains(AI for Oceans)" is visible
 
     And I click selector "[aria-label='View details about AI for Oceans']"
@@ -161,7 +161,7 @@ Feature: Curriculum Catalog Page
 
   @no_mobile
   Scenario: Signed-out user can navigate to facilitator led workshop through expanded card
-    Given I am on "http://studio.code.org/catalog?quick_view=true"
+    Given I am on "http://studio.code.org/catalog"
     And I wait until element "h4:contains(CS Fundamentals: Course A)" is visible
 
     And I click selector "[aria-label='View details about CS Fundamentals: Course A']"
@@ -173,7 +173,7 @@ Feature: Curriculum Catalog Page
 
   # Expanded Card Assign button scenarios
   Scenario: On expanded card, Signed-out user is redirected to sign-in page when clicking Assign to class sections
-    Given I am on "http://studio.code.org/catalog?quick_view=true"
+    Given I am on "http://studio.code.org/catalog"
     And I wait until element "h4:contains(AI for Oceans)" is visible
     And I click selector "[aria-label='View details about AI for Oceans']"
     And I click selector "button:contains(Assign to class sections)"
@@ -183,7 +183,7 @@ Feature: Curriculum Catalog Page
 
   Scenario: On expanded card, Signed-in student is redirected to help page when clicking Assign to class sections
     Given I create a student named "Student Sam"
-    Given I am on "http://studio.code.org/catalog?quick_view=true"
+    Given I am on "http://studio.code.org/catalog"
     And I wait until element "h4:contains(AI for Oceans)" is visible
 
     And I click selector "[aria-label='View details about AI for Oceans']"
@@ -194,7 +194,7 @@ Feature: Curriculum Catalog Page
 
   Scenario: On the expanded card, Signed-in teacher without sections is prompted to created sections when clicking Assign to class sections
     Given I create a teacher named "Teacher Tom"
-    Then I am on "http://studio.code.org/catalog?quick_view=true"
+    Then I am on "http://studio.code.org/catalog"
     And I wait until element "h4:contains(AI for Oceans)" is visible
 
     And I click selector "[aria-label='View details about AI for Oceans']"
@@ -208,7 +208,7 @@ Feature: Curriculum Catalog Page
     Given I am a teacher with student sections named Section 1 and Section 2
 
     # Assign a standalone unit
-    And I am on "http://studio.code.org/catalog?quick_view=true"
+    And I am on "http://studio.code.org/catalog"
     Then I wait until element "h4:contains(AI for Oceans)" is visible
     And I click selector "[aria-label='View details about AI for Oceans']"
 
