@@ -124,11 +124,14 @@ class Projects
       project_type: type,
       published_at: DateTime.now,
     }
-    update_count = @table.where(id: project_id).exclude(state: 'deleted').update(row)
-    raise NotFound, "channel `#{channel_id}` not found" if update_count == 0
+
+    project_query_result = @table.where(id: project_id).exclude(state: 'deleted')
+    project = project_query_result.first
+    raise NotFound, "channel `#{channel_id}` not found" unless project
+    raise PublishError, "channel `#{channel_id}` too new to be published" if project[:created_at] > (Time.now - 30.minutes)
+    project_query_result.update(row)
 
     project = @table.where(id: project_id).first
-    raise PublishError, "channel `#{channel_id}` too new to be published" if project[:created_at] > (Time.now - 30.minutes)
     Projects.get_published_project_data(project, channel_id).merge(
       # For privacy reasons, include only the first initial of the student's name.
       studentName: user && UserHelpers.initial(user[:name]),
