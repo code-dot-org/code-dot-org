@@ -8,16 +8,14 @@ class DatastoreCache
   # @param cache_expiration [int] seconds after which a cached entry expires
   def initialize(datastore, cache_expiration: 30)
     @cache = {}
+    @expirations = {}
     @datastore = datastore
     @cache_expiration = cache_expiration
 
     # A list of change listeners.
     @listeners = []
 
-    # Note we intentionally do this before spawning the background thread
-    # to make sure the cache is seeded successfully on init
     update_cache
-    @update_thread = spawn_update_thread
   end
 
   # Adds a listener that will be invoked whenever the store changes.
@@ -43,7 +41,12 @@ class DatastoreCache
   # @returns stored value
   def get(key)
     raise ArgumentError unless key.is_a? String
-    return @cache[key]
+    old_value = @cache[key]
+    return old_value if @expirations.key?(key) && @expirations[key] > Time.now
+    new_value = @datastore.get(key)
+    set_local(key, new_value)
+    notify_change_listeners if new_value != old_value
+    return new_value
   end
 
   # Sets the given value for the key in both the local cache and datastore
@@ -69,12 +72,6 @@ class DatastoreCache
     notify_change_listeners
   end
 
-  # When unicorn preload the app and then forks worker processes the update_thread
-  # doesn't make it to the other processes.  Restart it here
-  def after_fork
-    @update_thread = spawn_update_thread unless @update_thread&.alive?
-  end
-
   # Pulls all values from the datastore and populates the local cache
   def update_cache
     tries ||= 3
@@ -97,16 +94,6 @@ class DatastoreCache
   # @param value [String]
   private def set_local(key, value)
     @cache[key] = value
-  end
-
-  # Spawns a background thread that periodically updates the cached
-  # values from the persistent datastore
-  private def spawn_update_thread
-    Thread.new do
-      loop do
-        sleep @cache_expiration
-        update_cache
-      end
-    end
+    @expirations[key] = Time.new + @cache_expiration
   end
 end
