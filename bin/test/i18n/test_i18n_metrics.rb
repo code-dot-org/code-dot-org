@@ -23,4 +23,14 @@ class I18nMetricsTest < Minitest::Test
     expect_metric(:FileSize, 8, [{name: 'SyncStep', value: 'step'}, {name: 'FileName', value: 'filesize_metrics_test.txt'}, {name: 'FileDir', value: CDO.dir('bin/test/fixtures')}, {name: 'Environment', value: :test}, {name: 'MachineId', value: 'local_machine'}], 'Bytes')
     I18n::Metrics.report_filesize(fixture_path, 'step')
   end
+
+  def test_report_success
+    expect_metric(:Status, 1, [{name: 'SyncStep', value: 'step'}, {name: 'SyncComponent', value: 'module'}, {name: 'Message', value: 'message'}, {name: 'Environment', value: :test}, {name: 'MachineId', value: 'local_machine'}], 'None')
+    I18n::Metrics.report_success(true, 'step', 'module', 'message')
+  end
+
+  def test_report_failure
+    expect_metric(:Status, 0, [{name: 'SyncStep', value: 'step'}, {name: 'SyncComponent', value: 'module'}, {name: 'Message', value: 'error'}, {name: 'Environment', value: :test}, {name: 'MachineId', value: 'local_machine'}], 'None')
+    I18n::Metrics.report_success(false, 'step', 'module', 'error')
+  end
 end

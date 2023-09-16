@@ -47,7 +47,7 @@ module I18n
     def self.report_success(status, sync_step, sync_component = '', message = '')
       status_value = status ? 1 : 0
       log_metric(
-        :StatusTest,
+        :Status,
         status_value,
         [{name: 'SyncStep', value: sync_step}, {name: 'SyncComponent', value: sync_component}, {name: 'Message', value: message}]
       )
