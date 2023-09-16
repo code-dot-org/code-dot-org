@@ -1,0 +1,72 @@
+---
+title: Software Engineering & Computer Vision
+theme: responsive_full_width
+---
+
+%link{href: "/css/generated/design-system-pegasus.css", rel: "stylesheet"}
+%link{href: "/css/generated/computer-vision-software.css", rel: "stylesheet"}
+
+%section.hero-banner-basic.overlay
+  .wrapper.flex-container.justify-space-between.align-items-center.wrap
+    .text-wrapper
+      %h1{style: "color: white"}
+        =hoc_s(:csa_ai_page_hero_title)
+      %p{style: "color: white"}
+        =hoc_s(:csa_ai_page_hero_description, markdown: :inline, locals: {csa_url: "https://apcentral.collegeboard.org/media/pdf/ap-computer-science-a-course-and-exam-description.pdf?course=ap-computer-science-a"})
+      %a.link-button.white{href: CDO.studio_url("/courses/csa-2023?viewAs=Instructor")}
+        =hoc_s(:call_to_action_explore_course)
+    %figure
+      %img{src: "/images/banners/ai-bot-vision.svg", alt: ""}
+
+%section
+  .wrapper
+    %div.col-45{style: "margin: .5rem 0 1rem; border: 1px solid;"}
+      = view :display_video_thumbnail, id: "intro_csa", video_code: "pWZG9lXehrQ", play_button: 'center', letterbox: 'false'
+    .text-wrapper.col-50{style: "float: right;"}
+      %h2=hoc_s(:csa_ai_page_video_section_title)
+      %ul
+        %li=hoc_s(:csa_ai_page_video_section_li_1)
+        %li=hoc_s(:csa_ai_page_video_section_li_2)
+        %li=hoc_s(:csa_ai_page_video_section_li_3)
+        %li=hoc_s(:csa_ai_page_video_section_li_4)
+      %a.link-button{href: CDO.studio_url("/courses/csa-2023?viewAs=Instructor")}
+        =hoc_s(:call_to_action_explore_course)
+    .clear
+
+%section.bg-neutral-light
+  .wrapper
+    = view :curriculum_glance_section, heading: hoc_s(:heading_curriculum_at_a_glance), grades: hoc_s(:module_grade_9_12), duration: hoc_s(:module_duration_2_weeks), level: hoc_s(:module_level_advanced), tools: hoc_s(:csa_ai_page_programming_tools), devices: hoc_s(:csa_page_curriculum_glance_devices), professional_learning: hoc_s(:csa_ai_page_professional_learning), topics: hoc_s(:csa_ai_page_curriculum_topics), accessibility_features: hoc_s(:csa_ai_page_curriculum_accessibility_features), languages: hoc_s(:csa_ai_page_curriculum_languages_support)
+
+%section
+  .wrapper
+    %h2=hoc_s(:heading_engaging_projects)
+    = view :projects_csa_ai_page
+
+%section.bg-neutral-light
+  .wrapper
+    = view :resources_tabs
+
+%section
+  .wrapper
+    %h2=hoc_s(:csa_ai_page_learn_more_section_title)
+    .action-block.action-block--two-col
+      %img{src: "/shared/images/social-media/ai-101-social.png", alt: "", class: "col-50"}
+      .text-wrapper.col-50
+        %h3.heading-sm
+          =hoc_s(:csa_ai_page_learn_more_title)
+        %p=hoc_s(:csa_ai_page_learn_more_description)
+        %a.link-button{href: "/ai/pl/101"}
+          =hoc_s(:csa_ai_page_learn_more_link)
+
+= view :section_divider_line
+
+%section.no-padding-bottom.faq__section
+  .wrapper
+    %h2=hoc_s(:heading_faq)
+    = view :faq_computer_vision
+
+%section
+  .wrapper
+    = view :support_and_questions_section
+
+= view :analytics_event_log_helper, event_name: AnalyticsConstants::CSA_CURRICULUM_PAGE_VISITED_EVENT

@@ -68,6 +68,8 @@ km:
           lesson_groups:
             end_of_course_project:
               display_name: ចុងបញ្ចប់នៃគម្រោង
+        sports:
+          title: សរសេរកូដបង្កើតហ្គេមកីឡាផ្ទាល់ខ្លួន
         csp3-support:
           lesson_groups:
             required:

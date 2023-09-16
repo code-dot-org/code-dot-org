@@ -219,7 +219,7 @@ class Foorm::Form < ApplicationRecord
   # If any submissions in the array do not belong to this form they will not be written
   # to the csv.
   # @return csv text
-  def submissions_to_csv(submissions_to_report=nil)
+  def submissions_to_csv(submissions_to_report = nil)
     calculated_readable_questions = readable_questions
     headers = calculated_readable_questions[:general]
     has_facilitator_questions = !(calculated_readable_questions[:facilitator].nil_or_empty?)

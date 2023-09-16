@@ -6,7 +6,7 @@
           "display_name": "Події акселерометра"
         },
         "csd-2022/accuracy-in-ai-lab": {
-          "display_name": "Точність в AI Lab"
+          "display_name": "Точність в Лабораторії ШІ"
         },
         "csd-2022/animation-tab": {
           "display_name": "Вкладка \"Анімація\""
@@ -16,6 +16,9 @@
         },
         "csd-2022/applab-overview": {
           "display_name": "Огляд"
+        },
+        "csd-2022/arrays": {
+          "display_name": "Масиви"
         },
         "csd-2022/board-events": {
           "display_name": "Події плати"
@@ -28,6 +31,9 @@
         },
         "csd-2022/changing-screens": {
           "display_name": "Зміна екранів"
+        },
+        "csd-2022/changing-sensor-scale": {
+          "display_name": "Зміна шкали датчика"
         },
         "csd-2022/classes": {
           "display_name": "Класи"
@@ -51,7 +57,10 @@
           "display_name": "Налагодження з спостерігачами"
         },
         "csd-2022/design-mode": {
-          "display_name": "Режим проектування"
+          "display_name": "Режим конструктора"
+        },
+        "csd-2022/design-mode-elements": {
+          "display_name": "Елементи режиму конструктора"
         },
         "csd-2022/designing-screens-with-code": {
           "display_name": "Проектування екранів за допомогою коду"
@@ -102,7 +111,7 @@
           "display_name": "Команди умови"
         },
         "csd-2022/importing-a-model-in-app-lab": {
-          "display_name": "Імпортування моделі в App Lab"
+          "display_name": "Імпортування моделі в Програмну Лабораторію"
         },
         "csd-2022/importing-screens": {
           "display_name": "Імпортування екранів"
@@ -128,8 +137,14 @@
         "csd-2022/maker-toolkit-overview": {
           "display_name": "Огляд"
         },
+        "csd-2022/model-cards-in-ai-lab": {
+          "display_name": "Картки моделі в Лабораторії ШІ"
+        },
         "csd-2022/modifying-arrays": {
           "display_name": "Змінення та створення масивів"
+        },
+        "csd-2022/multi-screen-apps": {
+          "display_name": "Багатоекранні програми"
         },
         "csd-2022/naming-variables": {
           "display_name": "Іменування змінних"
@@ -154,6 +169,9 @@
         },
         "csd-2022/random-numbers": {
           "display_name": "Випадкові числа"
+        },
+        "csd-2022/responding-to-user-input": {
+          "display_name": "Відповідь на введення користувача"
         },
         "csd-2022/selecting-a-label": {
           "display_name": "Вибір мітки"
@@ -181,6 +199,9 @@
         },
         "csd-2022/text-properties": {
           "display_name": "Властивості тексту"
+        },
+        "csd-2022/the-accelerometer": {
+          "display_name": "Акселерометр"
         },
         "csd-2022/the-counter-pattern": {
           "display_name": "Шаблон лічильника"

@@ -14,7 +14,7 @@ button.dropdownButton {
     background-color: $neutral_dark10;
   }
 
-  &:focus {
+  &:focus-visible {
     outline: 2px solid $light_primary_500;
     outline-offset: 2px;
   }

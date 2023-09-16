@@ -2,9 +2,80 @@
   "sq-AL": {
     "data": {
       "vocabularies": {
+        "computer/csd/2021": {
+          "word": "Kompjuter",
+          "definition": "Një makinë që punon me informacion."
+        },
+        "input/csd/2021": {
+          "definition": "informacionin që kompjuterët marrin nga përdoruesit, pajisjet ose kompjuterët e tjerë"
+        },
+        "output/csd/2021": {
+          "word": "Output",
+          "definition": "informacionin që kompjuterët u japin përdoruesve, pajisjeve ose kompjuterëve të tjerë"
+        },
+        "processing/csd/2021": {
+          "word": "Përpunimi",
+          "definition": "Puna e të menduarit që bëjnë kompjuterët për ta kthyer input-in në output."
+        },
+        "storage/csd/2021": {
+          "word": "Ruajtje",
+          "definition": "Ruajtja e informacionit për t'u përdorur në të ardhmen"
+        },
+        "html/csd/2021": {
+          "word": "HTML",
+          "definition": "Hypertext Markup Language, një gjuhë e përdorur për të krijuar webfaqe"
+        },
+        "html_element/csd/2021": {
+          "word": "Element i HTML-së",
+          "definition": "Një pjesë e një webfaqeje, e shënuar nga një etiketë hapëse dhe shpesh e mbyllur me një etiketë mbyllëse"
+        },
+        "html_tag/csd/2021": {
+          "word": "Etiketë e HTML-it",
+          "definition": "Grupi i veçantë i karaktereve që tregon fillimin dhe mbarimin e një elementi të HTML-së dhe llojin e atij elementi"
+        },
+        "website_content/csd/2021": {
+          "word": "Përmbajtja e webfaqes",
+          "definition": "Teksti dhe imazhet në një webfaqe"
+        },
+        "website_structure/csd/2021": {
+          "word": "Struktura e webfaqes",
+          "definition": "Mënyra se si organizohet përmbajtja e një webfaqe"
+        },
+        "heading/csd/2021": {
+          "word": "Titull",
+          "definition": "Një përmbledhje për një dokument ose pjesë të një dokumenti."
+        },
+        "digital_footprint/csd/2021": {
+          "word": "Gjurmë digjitale",
+          "definition": "Informacioni i mbledhur në lidhje me një individ nëpër webfaqe të shumta në internet."
+        },
+        "css/csd/2021": {
+          "word": "CSS",
+          "definition": "Cascading Style Sheets; një gjuhë e përdorur për të përshkruar se si duhet të stilizohen elementet e HTML-së"
+        },
+        "css_selector/csd/2021": {
+          "word": "Përzgjedhës i CSS-së",
+          "definition": "pjesë e një rregulloreje të CSS-së që përcakton se tek cilat elemente të HTML-së duhet të aplikohet stili"
+        },
         "copyright/csd/2021": {
           "word": "E drejta e autorit",
           "definition": "të drejtën ekskluzive ligjore për të shtypur, publikuar, interpretuar, filmuar ose regjistruar materiale letrare, artistike ose muzikore, dhe për të autorizuar të tjerët të bëjnë të njëjtën gjë"
+        },
+        "relevant/csd/2021": {
+          "word": "Relevant",
+          "definition": "lidhur ngushtë me një temë"
+        },
+        "trustworthy/csd/2021": {
+          "word": "I besueshëm",
+          "definition": "i vërtetë dhe i sinqertë "
+        },
+        "search_engine/csd/2021": {
+          "word": "Makina e kërkimit",
+          "definition": "Një program që kërkon artikuj në World Wide Web."
+        },
+        "css_class/csd/2021": {
+          "word": "Klasa CSS",
+          "definition": "Një identifikues që lejon elemente të shumta në një dokument HTML të stilohen në të njëjtën mënyrë"
         },
         "bug/csd/2021": {
           "word": "Bug",
@@ -18,12 +89,25 @@
           "word": "Programi",
           "definition": "Një algoritëm që është koduar në diçka që mund të drejtohet nga një makinë."
         },
+        "parameter/csd/2021": {
+          "word": "Parametri",
+          "definition": "Informacion shtesë i dhënë si input në një bllok për të personalizuar funksionalitetin e tij"
+        },
         "variable/csd/2021": {
           "word": "Variabël",
           "definition": "Një etiketë për një pjesë të informacionit të përdorur në një program."
         },
+        "property/csd/2021": {
+          "word": "Parametrat",
+          "definition": "Një emërtim për një karakteristikë të një sprite, siç është vendndodhja dhe pamja e tij"
+        },
         "sprite/csd/2021": {
-          "word": "Sprite"
+          "word": "Sprite",
+          "definition": "Një karakter në ekran me parametra që përshkruajnë vendndodhjen, lëvizjen dhe pamjen e tij."
+        },
+        "dot_notation/csd/2021": {
+          "word": "Pikë shënimi",
+          "definition": "mënyra se si parametrat e sprites përdoren në Game Lab, duke lidhur sprite dhe parametrin me një pikë."
         },
         "condition/csd/2021": {
           "word": "Kusht"
@@ -40,6 +124,18 @@
         "user/csd/2021": {
           "word": "Përdorues",
           "definition": "Dikush që përdor një objekt, duke përfshirë softuerin dhe harduerin."
+        },
+        "innovation/csd/2021": {
+          "word": "Inovacioni",
+          "definition": "Një ide, pajisje, produkt, etj, i ri ose i përmirësuar ose zhvillimi i tij/saj"
+        },
+        "analog/csd/2021": {
+          "word": "Analog",
+          "definition": "Çdo sinjal që ndryshon vazhdimisht që nuk kufizohet në grupin e fundëm të vlerave. Për shembull, format valë të fjalëve të folura janë një sinjal analog."
+        },
+        "digital/csd/2021": {
+          "word": "Digjital",
+          "definition": "Të dhëna ose sinjale të përfaqësuara nga një numër i caktuar vlerash. Sinjalet analoge (të cilat mund të kenë vlera të pafundme) duhet të konvertohen në digjital në mënyrë që të llogariten me të."
         },
         "machine_learning/csd/2021": {
           "word": "Mësimi i Makinave",
@@ -462,6 +558,9 @@
           "word": "Funksion",
           "definition": "Një pjesë kodi që mund ta aktivizoni lehtësisht vazhdimisht."
         },
+        "prompt/express/2021": {
+          "word": "kërkesë (Prompt)"
+        },
         "variable/express/2021": {
           "word": "Variabël",
           "definition": "Një etiketë për një pjesë të informacionit të përdorur në një program."
@@ -528,9 +627,80 @@
           "word": "Event",
           "definition": "Një veprim që shkakton diçka të ndodhë."
         },
+        "computer/csd/2022": {
+          "word": "Kompjuter",
+          "definition": "Një makinë që punon me informacion."
+        },
+        "input/csd/2022": {
+          "definition": "informacionin që kompjuterët marrin nga përdoruesit, pajisjet ose kompjuterët e tjerë"
+        },
+        "output/csd/2022": {
+          "word": "Output",
+          "definition": "informacionin që kompjuterët u japin përdoruesve, pajisjeve ose kompjuterëve të tjerë"
+        },
+        "processing/csd/2022": {
+          "word": "Përpunimi",
+          "definition": "Puna e të menduarit që bëjnë kompjuterët për ta kthyer input-in në output."
+        },
+        "storage/csd/2022": {
+          "word": "Ruajtje",
+          "definition": "Ruajtja e informacionit për t'u përdorur në të ardhmen"
+        },
+        "html/csd/2022": {
+          "word": "HTML",
+          "definition": "Hypertext Markup Language, një gjuhë e përdorur për të krijuar webfaqe"
+        },
+        "html_element/csd/2022": {
+          "word": "Element i HTML-së",
+          "definition": "Një pjesë e një webfaqeje, e shënuar nga një etiketë hapëse dhe shpesh e mbyllur me një etiketë mbyllëse"
+        },
+        "html_tag/csd/2022": {
+          "word": "Etiketë e HTML-it",
+          "definition": "Grupi i veçantë i karaktereve që tregon fillimin dhe mbarimin e një elementi të HTML-së dhe llojin e atij elementi"
+        },
+        "website_content/csd/2022": {
+          "word": "Përmbajtja e webfaqes",
+          "definition": "Teksti dhe imazhet në një webfaqe"
+        },
+        "website_structure/csd/2022": {
+          "word": "Struktura e webfaqes",
+          "definition": "Mënyra se si organizohet përmbajtja e një webfaqe"
+        },
+        "heading/csd/2022": {
+          "word": "Titull",
+          "definition": "Një përmbledhje për një dokument ose pjesë të një dokumenti."
+        },
+        "digital_footprint/csd/2022": {
+          "word": "Gjurmë digjitale",
+          "definition": "Informacioni i mbledhur në lidhje me një individ nëpër webfaqe të shumta në internet."
+        },
+        "css/csd/2022": {
+          "word": "CSS",
+          "definition": "Cascading Style Sheets; një gjuhë e përdorur për të përshkruar se si duhet të stilizohen elementet e HTML-së"
+        },
+        "css_selector/csd/2022": {
+          "word": "Përzgjedhës i CSS-së",
+          "definition": "pjesë e një rregulloreje të CSS-së që përcakton se tek cilat elemente të HTML-së duhet të aplikohet stili"
+        },
         "copyright/csd/2022": {
           "word": "E drejta e autorit",
           "definition": "të drejtën ekskluzive ligjore për të shtypur, publikuar, interpretuar, filmuar ose regjistruar materiale letrare, artistike ose muzikore, dhe për të autorizuar të tjerët të bëjnë të njëjtën gjë"
+        },
+        "relevant/csd/2022": {
+          "word": "Relevant",
+          "definition": "lidhur ngushtë me një temë"
+        },
+        "search_engine/csd/2022": {
+          "word": "Makina e kërkimit",
+          "definition": "Një program që kërkon artikuj në World Wide Web."
+        },
+        "trustworthy/csd/2022": {
+          "word": "I besueshëm",
+          "definition": "i vërtetë dhe i sinqertë "
+        },
+        "css_class/csd/2022": {
+          "word": "Klasa CSS",
+          "definition": "Një identifikues që lejon elemente të shumta në një dokument HTML të stilohen në të njëjtën mënyrë"
         },
         "bug/csd/2022": {
           "word": "Bug",
@@ -544,12 +714,25 @@
           "word": "Programi",
           "definition": "Një algoritëm që është koduar në diçka që mund të drejtohet nga një makinë."
         },
+        "parameter/csd/2022": {
+          "word": "Parametri",
+          "definition": "Informacion shtesë i dhënë si input në një bllok për të personalizuar funksionalitetin e tij"
+        },
         "variable/csd/2022": {
           "word": "Variabël",
           "definition": "Një etiketë për një pjesë të informacionit të përdorur në një program."
         },
+        "dot_notation/csd/2022": {
+          "word": "Pikë shënimi",
+          "definition": "mënyra se si parametrat e sprites përdoren në Game Lab, duke lidhur sprite dhe parametrin me një pikë."
+        },
+        "property/csd/2022": {
+          "word": "Parametrat",
+          "definition": "Një emërtim për një karakteristikë të një sprite, siç është vendndodhja dhe pamja e tij"
+        },
         "sprite/csd/2022": {
-          "word": "Sprite"
+          "word": "Sprite",
+          "definition": "Një karakter në ekran me parametra që përshkruajnë vendndodhjen, lëvizjen dhe pamjen e tij."
         },
         "condition/csd/2022": {
           "word": "Kusht"
@@ -566,6 +749,9 @@
         "user/csd/2022": {
           "word": "Përdorues",
           "definition": "Dikush që përdor një objekt, duke përfshirë softuerin dhe harduerin."
+        },
+        "innovation/csd/2022": {
+          "word": "Inovacioni"
         },
         "machine_learning/csd/2022": {
           "word": "Mësimi i Makinave",
@@ -1001,6 +1187,9 @@
         "function/express/2022": {
           "word": "Funksion",
           "definition": "Një pjesë kodi që mund ta aktivizoni lehtësisht vazhdimisht."
+        },
+        "prompt/express/2022": {
+          "word": "kërkesë (Prompt)"
         },
         "variable/express/2022": {
           "word": "Variabël",

@@ -38,12 +38,12 @@ describe('RubricFloatingActionButton', () => {
     );
     wrapper.find('button').simulate('click');
     expect(sendEventSpy).to.have.been.calledWith(
-      EVENTS.RUBRIC_OPENED_FROM_FAB,
+      EVENTS.RUBRIC_OPENED_FROM_FAB_EVENT,
       reportingData
     );
     wrapper.find('button').simulate('click');
     expect(sendEventSpy).to.have.been.calledWith(
-      EVENTS.RUBRIC_CLOSED_FROM_FAB,
+      EVENTS.RUBRIC_CLOSED_FROM_FAB_EVENT,
       reportingData
     );
     sendEventSpy.restore();

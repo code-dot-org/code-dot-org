@@ -224,7 +224,7 @@ a:visited,
       background-color: $brand_secondary_dark;
     }
 
-    &:focus {
+    &:focus-visible {
       @include focus-outline;
     }
 
@@ -246,7 +246,7 @@ a:visited,
       background-color: $neutral_dark10;
     }
 
-    &:focus {
+    &:focus-visible {
       @include focus-outline;
     }
 
@@ -334,7 +334,7 @@ a:visited,
       color: $brand_secondary_dark;
     }
 
-    &:focus {
+    &:focus-visible {
       @include focus-outline;
       outline-offset: unset;
     }

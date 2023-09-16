@@ -4,17 +4,18 @@
   "category": "other",
   "is_featured": false,
   "assignable": true,
-  "curriculum_type": null,
+  "curriculum_type": "Standalone Unit",
   "marketing_initiative": "CSA",
   "grade_levels": "9,10,11,12",
   "header": null,
   "image": "https://images.code.org/02fc9253d14f42b35a5d25ec0bdd2d56-ComputerVision.png",
-  "cs_topic": "art_and_design,data,games_and_animations,programming",
+  "cs_topic": "artificial_intelligence,programming",
   "school_subject": null,
   "device_compatibility": "{\"computer\":\"ideal\",\"chromebook\":\"ideal\",\"tablet\":\"incompatible\",\"mobile\":\"incompatible\",\"no_device\":\"incompatible\"}",
   "description": "Offers students hands-on experience with professional software development tools and imparts them with the real-world skills to develop a computer vision program. ",
   "professional_learning_program": null,
-  "video": null,
-  "published_date": null,
-  "self_paced_pl_course_offering_id": null
+  "video": "https://www.youtube-nocookie.com/embed/pWZG9lXehrQ/?autoplay=1&enablejsapi=1&iv_load_policy=3&modestbranding=1&rel=0&showinfo=1&v=pWZG9lXehrQ&wmode=transparent",
+  "published_date": "2023-09-18 05:00:00 UTC",
+  "self_paced_pl_course_offering_id": null,
+  "self_paced_pl_course_offering_key": null
 }

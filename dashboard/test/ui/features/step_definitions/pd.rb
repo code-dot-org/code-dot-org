@@ -469,7 +469,7 @@ def create_fake_daily_survey_results(workshop)
   end
 end
 
-def create_enrollment(workshop, name=nil)
+def create_enrollment(workshop, name = nil)
   first_name = name.nil? ? "First - #{SecureRandom.hex}" : name
   last_name = name.nil? ? "Last - #{SecureRandom.hex}" : "Last"
   user = Retryable.retryable(on: [ActiveRecord::RecordInvalid], tries: 5) do

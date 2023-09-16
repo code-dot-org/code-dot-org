@@ -6,7 +6,7 @@ require 'cdo/legacy_varnish_helpers'
 # Matches `Host` HTTP request headers against standard Pegasus hosts.
 # Also processes HTTP-Cache `proxy` values for correct path-specific behaviors.
 class PegasusSites
-  def initialize(app=nil, params={})
+  def initialize(app = nil, params = {})
     @app = app
 
     config_ru = File.absolute_path(File.dirname(__FILE__) + '/../../pegasus/config.ru')

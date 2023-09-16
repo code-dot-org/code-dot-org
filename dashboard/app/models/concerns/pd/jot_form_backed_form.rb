@@ -202,7 +202,7 @@ module Pd
       #   attempt to use the name field from each question rather than its numerical ID when
       #   storing answers.
       # @return [symbol] one of the PROCESS_SUBMISSION_RESULT states
-      def process_submission(submission, questions_details=nil)
+      def process_submission(submission, questions_details = nil)
         # There should be no duplicates, but just in case handle them gracefully as an upsert.
         find_or_initialize_by(submission.slice(:form_id, :submission_id)).tap do |model|
           dest_answers = model.process_answers_from_submission(submission[:answers], questions_details)
