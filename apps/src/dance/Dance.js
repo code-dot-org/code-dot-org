@@ -492,7 +492,6 @@ Dance.prototype.preview = async function () {
 
 Dance.prototype.onPuzzleComplete = function (result, message) {
   // Stop everything on screen.
-  // this.reset called here so removing this.reset from playSound callback
   this.reset();
 
   const danceMessage = message ? danceMsg[message]() : '';
