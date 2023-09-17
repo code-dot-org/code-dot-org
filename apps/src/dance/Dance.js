@@ -497,6 +497,7 @@ Dance.prototype.onPuzzleComplete = function (result, message) {
   this.reset();
 
   const danceMessage = message ? danceMsg[message]() : '';
+
   if (result === true) {
     this.testResults = TestResults.ALL_PASS;
     this.message = danceMessage;
