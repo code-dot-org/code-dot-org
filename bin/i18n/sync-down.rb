@@ -20,7 +20,7 @@ def sync_down
     logger = Logger.new(STDOUT)
     logger.level = Logger::INFO
 
-    CROWDIN_PROJECTS.each do |name, options|
+    CROWDIN_TEST_PROJECTS.each do |name, options|
       puts "Downloading translations from #{name} project"
       api_token = YAML.load_file(options[:identity_file])["api_token"]
       project_identifier = YAML.load_file(options[:config_file])["project_identifier"]
@@ -47,10 +47,10 @@ def sync_down
       elapsed = with_elapsed {utils.download_changed_files}
       puts "Files downloaded in #{elapsed}"
     end
-    I18n::Metrics.report_success(true, 'down', 'sync-down')
+    I18n::Metrics.report_success(true, 'sync-down')
     puts "Sync down completed successfully"
   rescue => exception
-    I18n::Metrics.report_success(false, 'down', 'sync-down', "Sync down failed from the error: #{exception}")
+    I18n::Metrics.report_success(false, 'sync-down', 'None', "Sync down failed from the error: #{exception}")
     puts "Sync down failed from the error: #{exception}"
     raise exception
   end

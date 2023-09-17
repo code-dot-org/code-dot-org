@@ -25,12 +25,17 @@ class I18nMetricsTest < Minitest::Test
   end
 
   def test_report_success
-    expect_metric(:Status, 1, [{name: 'SyncStep', value: 'step'}, {name: 'SyncComponent', value: 'module'}, {name: 'Message', value: 'message'}, {name: 'Environment', value: :test}, {name: 'MachineId', value: 'local_machine'}], 'None')
-    I18n::Metrics.report_success(true, 'step', 'module', 'message')
+    expect_metric(:Status, 1, [{name: 'SyncStep', value: 'step'}, {name: 'SyncComponent', value: 'component'}, {name: 'Message', value: 'message'}, {name: 'Environment', value: :test}, {name: 'MachineId', value: 'local_machine'}], 'None')
+    I18n::Metrics.report_success(true, 'step', 'component', 'message')
   end
 
   def test_report_failure
-    expect_metric(:Status, 0, [{name: 'SyncStep', value: 'step'}, {name: 'SyncComponent', value: 'module'}, {name: 'Message', value: 'error'}, {name: 'Environment', value: :test}, {name: 'MachineId', value: 'local_machine'}], 'None')
-    I18n::Metrics.report_success(false, 'step', 'module', 'error')
+    expect_metric(:Status, 0, [{name: 'SyncStep', value: 'step'}, {name: 'SyncComponent', value: 'component'}, {name: 'Message', value: 'error'}, {name: 'Environment', value: :test}, {name: 'MachineId', value: 'local_machine'}], 'None')
+    I18n::Metrics.report_success(false, 'step', 'component', 'error')
+  end
+
+  def test_report_success_no_options
+    expect_metric(:Status, 1, [{name: 'SyncStep', value: 'step'}, {name: 'SyncComponent', value: 'None'}, {name: 'Message', value: 'None'}, {name: 'Environment', value: :test}, {name: 'MachineId', value: 'local_machine'}], 'None')
+    I18n::Metrics.report_success(true, 'step')
   end
 end

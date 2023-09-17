@@ -43,10 +43,10 @@ module I18n
         I18nScriptUtils.run_standalone_script "dashboard/scripts/update_tts_i18n_static_messages.rb"
       end
       clean_up_sync_out(CROWDIN_PROJECTS)
-      I18n::Metrics.report_success(true, 'out', 'sync-out')
+      I18n::Metrics.report_success(true, 'sync-out')
       puts "Sync out completed successfully"
     rescue => exception
-      I18n::Metrics.report_success(false, 'out', 'sync-out', "Sync out failed from the error: #{exception}")
+      I18n::Metrics.report_success(false, 'sync-out', 'None', "Sync out failed from the error: #{exception}")
       puts "Sync out failed from the error: #{exception}"
       raise exception
     end
