@@ -455,6 +455,7 @@ Dance.prototype.reset = function () {
   }
 
   Sounds.getSingleton().stopAllAudio();
+
   this.nativeAPI.reset();
 
   var softButtonCount = 0;
