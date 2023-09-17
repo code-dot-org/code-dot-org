@@ -622,7 +622,7 @@ StudioApp.prototype.editDuringRunAlertHandler = function () {
 
   // Check if the user has already dismissed this alert. Don't check localStorage again
   // if showEditDuringRunAlert has already been set to false.
-  if (this.showEditDuringRunAlert) {
+  if (this.showEditDuringRunAlert && this.config.app !== 'dance') {
     this.showEditDuringRunAlert =
       utils.tryGetLocalStorage('hideEditDuringRunAlert', null) === null;
   }
@@ -630,7 +630,9 @@ StudioApp.prototype.editDuringRunAlertHandler = function () {
   // Display the alert if the user hasn't previously dismissed it.
   if (this.showEditDuringRunAlert) {
     const onClose = () => {
-      utils.trySetLocalStorage('hideEditDuringRunAlert', true);
+      if (this.config.app !== 'dance') {
+        utils.trySetLocalStorage('hideEditDuringRunAlert', true);
+      }
       this.editDuringRunAlert = undefined;
       this.showEditDuringRunAlert = false;
     };
