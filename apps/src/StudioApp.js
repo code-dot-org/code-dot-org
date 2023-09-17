@@ -632,9 +632,9 @@ StudioApp.prototype.editDuringRunAlertHandler = function () {
     const onClose = () => {
       if (this.config.app !== 'dance') {
         utils.trySetLocalStorage('hideEditDuringRunAlert', true);
+        this.showEditDuringRunAlert = false;
       }
       this.editDuringRunAlert = undefined;
-      this.showEditDuringRunAlert = false;
     };
     this.editDuringRunAlert = this.displayWorkspaceAlert(
       'warning',
