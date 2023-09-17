@@ -456,8 +456,6 @@ Dance.prototype.reset = function () {
 
   Sounds.getSingleton().stopAllAudio();
 
-  this.nativeAPI.reset();
-
   var softButtonCount = 0;
   for (var i = 0; i < this.level.softButtons.length; i++) {
     document.getElementById(this.level.softButtons[i]).style.display = 'inline';
@@ -494,6 +492,7 @@ Dance.prototype.preview = async function () {
 
 Dance.prototype.onPuzzleComplete = function (result, message) {
   // Stop everything on screen.
+  // this.reset called here so removing this.reset from playSound callback
   this.reset();
 
   const danceMessage = message ? danceMsg[message]() : '';
