@@ -47,6 +47,7 @@ def sync_down
       elapsed = with_elapsed {utils.download_changed_files}
       puts "Files downloaded in #{elapsed}"
     end
+
     I18n::Metrics.report_success(true, 'sync-down')
     puts "Sync down completed successfully"
   rescue => exception
