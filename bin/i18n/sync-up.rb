@@ -27,6 +27,7 @@ def sync_up
         raise "Sync up failed" unless status_thread.value.success?
       end
     end
+
     I18n::Metrics.report_success(true, 'sync-up')
     puts "Sync up completed successfully"
   rescue => exception
