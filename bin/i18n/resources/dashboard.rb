@@ -9,6 +9,7 @@ module I18n
 
       def self.sync_in
         FileUtils.mkdir_p(I18N_SOURCE_DIR_PATH)
+
         Blocks.sync_in
         CourseContent.sync_in
         CourseOfferings.sync_in
