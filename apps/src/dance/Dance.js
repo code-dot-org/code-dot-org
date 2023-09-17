@@ -87,6 +87,7 @@ module.exports = Dance;
  * Inject the studioApp singleton.
  */
 Dance.prototype.injectStudioApp = function (studioApp) {
+  console.log('injectStudioApp');
   this.studioApp_ = studioApp;
   this.studioApp_.reset = this.reset.bind(this);
   this.studioApp_.runButtonClick = this.runButtonClick.bind(this);
@@ -100,6 +101,7 @@ Dance.prototype.injectStudioApp = function (studioApp) {
  * @param {!Dancelab} config.level
  */
 Dance.prototype.init = function (config) {
+  console.log('init');
   if (!this.studioApp_) {
     throw new Error('Dance requires a StudioApp');
   }
@@ -125,6 +127,7 @@ Dance.prototype.init = function (config) {
   config.enableShowLinesCount = false;
 
   const onMount = () => {
+    console.log('onMount');
     config.loadAudio = this.loadAudio_.bind(this);
     config.afterInject = this.afterInject_.bind(this);
     config.valueTypeTabShapeMap = {[Blockly.BlockValueType.SPRITE]: 'angle'};
@@ -132,10 +135,17 @@ Dance.prototype.init = function (config) {
     this.studioApp_.init(config);
 
     this.currentCode = this.studioApp_.getCode();
+    // console.log('this.currentCode', this.currentCode);
+    // console.log('Blockly.getWorkspaceCode)', Blockly.getWorkspaceCode());
     this.studioApp_.addChangeHandler(() => {
+      console.log('changeHandler');
+      // console.log('this', this); // Dance
       const newCode = Blockly.getWorkspaceCode();
+      // console.log('newCode', newCode);
+      // console.log('currentCode', currentCode);
 
       if (newCode !== this.currentCode) {
+        console.log('newCode != this.currentcode');
         this.currentCode = newCode;
         if (!this.studioApp_.isRunning()) {
           this.preview();
@@ -197,6 +207,7 @@ Dance.prototype.awaitTimingMetrics = function () {
 };
 
 Dance.prototype.initSongs = async function (config) {
+  console.log('initSongs');
   // Check for a user-specified manifest file.
   const manifest = queryString.parse(window.location.search).manifest;
   const songManifest = await getSongManifest(
@@ -281,6 +292,7 @@ Dance.prototype.setSongCallback = function (songId) {
 };
 
 Dance.prototype.loadAudio_ = function () {
+  console.log('loadAudio_');
   this.studioApp_.loadAudio(this.skin.winSound, 'win');
   this.studioApp_.loadAudio(this.skin.startSound, 'start');
   this.studioApp_.loadAudio(this.skin.failureSound, 'failure');
@@ -340,6 +352,7 @@ Dance.prototype.onMouseUp = function (e) {
  * Code called after the blockly div + blockly core is injected into the document
  */
 Dance.prototype.afterInject_ = function () {
+  console.log('afterInject_');
   // Connect up arrow button event handlers
   for (const btn in ArrowIds) {
     dom.addMouseUpTouchEvent(
@@ -363,6 +376,7 @@ Dance.prototype.afterInject_ = function () {
   }
 
   if (this.studioApp_.isUsingBlockly()) {
+    console.log('isUsingBlockly');
     // Add to reserved word list: API, validation variables.
     Blockly.JavaScript.addReservedWords(
       [
@@ -434,7 +448,25 @@ Dance.prototype.afterInject_ = function () {
   }
 };
 
+// callback defined in dance-party
+/*
+playSuccess => {
+      console.log('inside playSound_ - this.songMetadata_.file: ', this.songMetadata_.file);  
+      console.log('playSuccess: ', playSuccess);
+      this.songStartTime_ = new Date();
+      this.performanceData_.lastPlayDelay = timeSinceLoad() - this.performanceData_.lastPlayCall;
+      callback && callback(playSuccess);
+    }
+*/
+// onEnded
+/*
+() => {
+      this.reset();
+    }
+*/
 Dance.prototype.playSong = function (url, callback, onEnded) {
+  console.log('playSong - url, callback, onEnded');
+  console.log(url, callback, onEnded);
   audioCommands.playSound({
     url: url,
     callback: callback,
@@ -449,12 +481,15 @@ Dance.prototype.playSong = function (url, callback, onEnded) {
  * Reset Dance to its initial state.
  */
 Dance.prototype.reset = function () {
+  console.log('reset');
   var clickToRunImage = document.getElementById('danceClickToRun');
   if (clickToRunImage) {
+    console.log('if clickToRunImage');
     clickToRunImage.style.display = 'block';
   }
 
   Sounds.getSingleton().stopAllAudio();
+  // console.log('this.nativeAPI', this.nativeAPI);
   this.nativeAPI.reset();
 
   var softButtonCount = 0;
@@ -488,6 +523,7 @@ Dance.prototype.preview = async function () {
   const charactersReferenced = this.computeCharactersReferenced(studentCode);
   await this.nativeAPI.ensureSpritesAreLoaded(charactersReferenced);
   this.hooks.find(v => v.name === 'runUserSetup').func();
+  console.log('this.nativeAPI.p5_.loop();');
   this.nativeAPI.p5_.draw();
 };
 
@@ -496,6 +532,7 @@ Dance.prototype.onPuzzleComplete = function (result, message) {
   this.reset();
 
   const danceMessage = message ? danceMsg[message]() : '';
+  console.log('onPuzzleComplete - result, danceMessage', result, danceMessage);
   if (result === true) {
     this.testResults = TestResults.ALL_PASS;
     this.message = danceMessage;
@@ -547,9 +584,12 @@ Dance.prototype.onReportComplete = function (response) {
  * Click the run button.  Start the program.
  */
 Dance.prototype.runButtonClick = async function () {
+  console.log('runButtonClick');
+  console.log('this.nativeAPI.reset()');
   this.nativeAPI.reset();
   var clickToRunImage = document.getElementById('danceClickToRun');
   if (clickToRunImage) {
+    console.log('if clickToRunImage');
     clickToRunImage.style.display = 'none';
   }
 
@@ -600,6 +640,7 @@ Dance.prototype.runButtonClick = async function () {
 };
 
 Dance.prototype.execute = async function () {
+  console.log('execute');
   this.testResults = TestResults.NO_TESTS_RUN;
   this.response = null;
 
@@ -613,11 +654,15 @@ Dance.prototype.execute = async function () {
   }
 
   const charactersReferenced = this.initInterpreter();
+  console.log('charactersReferenced', charactersReferenced);
 
   await this.nativeAPI.ensureSpritesAreLoaded(charactersReferenced);
 
+  console.log('this.hooks', this.hooks);
+  console.log(this.hooks.find(v => v.name === 'runUserSetup').func);
   this.hooks.find(v => v.name === 'runUserSetup').func();
   const timestamps = this.hooks.find(v => v.name === 'getCueList').func();
+  console.log('timestamps', timestamps);
   this.nativeAPI.addCues(timestamps);
 
   const validationCallback = new Function(
@@ -645,6 +690,7 @@ Dance.prototype.execute = async function () {
 };
 
 Dance.prototype.initInterpreter = function () {
+  console.log('initInterpreter');
   const nativeAPI = this.nativeAPI; // nativeAPI = DanceParty class
   const api = new DanceAPI(nativeAPI); // api = DanceAPI
   const studentCode = this.studioApp_.getCode();
