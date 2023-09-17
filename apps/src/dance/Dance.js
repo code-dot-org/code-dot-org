@@ -649,6 +649,7 @@ Dance.prototype.execute = async function () {
 Dance.prototype.initInterpreter = function () {
   const nativeAPI = this.nativeAPI;
   const api = new DanceAPI(nativeAPI);
+
   const studentCode = this.studioApp_.getCode();
 
   const code = danceCode + studentCode;
