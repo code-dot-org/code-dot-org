@@ -76,6 +76,7 @@ class FollowerTest < ActiveSupport::TestCase
   end
 
   test 'deleting a follower removes the associated student family name' do
+    DCDO.stubs(:get).with('family-name-features', true).returns(true)
     student = @follower.student_user
     student.family_name = 'test'
     student.save!
@@ -87,6 +88,7 @@ class FollowerTest < ActiveSupport::TestCase
     student.reload
 
     assert_nil student.family_name
+    DCDO.unstub(:get)
   end
 
   test 'deleting one of many followers keeps the associated student family name' do
