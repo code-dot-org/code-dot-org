@@ -37,7 +37,7 @@ class ManageStudentsActionsHeaderCell extends Component {
     return (
       <div>
         <QuickActionsCell type={QuickActionsCellType.header}>
-          <PopUpMenu.Item className="uitest-edit-all" onClick={this.onEditAll}>
+          <PopUpMenu.Item onClick={this.onEditAll}>
             {i18n.editAll()}
           </PopUpMenu.Item>
           <MenuBreak />
