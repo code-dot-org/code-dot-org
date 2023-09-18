@@ -105,6 +105,7 @@ Dance.prototype.init = function (config) {
   }
 
   this.level = config.level;
+  this.usesPreview = config.level.usesPreview;
   this.skin = config.skin;
   this.share = config.share;
   this.studioAppInitPromise = new Promise(resolve => {
@@ -131,17 +132,19 @@ Dance.prototype.init = function (config) {
 
     this.studioApp_.init(config);
 
-    this.currentCode = this.studioApp_.getCode();
-    this.studioApp_.addChangeHandler(() => {
-      const newCode = Blockly.getWorkspaceCode();
+    if (this.usesPreview) {
+      this.currentCode = this.studioApp_.getCode();
+      this.studioApp_.addChangeHandler(() => {
+        const newCode = Blockly.getWorkspaceCode();
 
-      if (newCode !== this.currentCode) {
-        this.currentCode = newCode;
-        if (!this.studioApp_.isRunning()) {
-          this.preview();
+        if (newCode !== this.currentCode) {
+          this.currentCode = newCode;
+          if (!this.studioApp_.isRunning()) {
+            this.preview();
+          }
         }
-      }
-    });
+      });
+    }
 
     this.studioAppInitPromiseResolve();
 
@@ -465,7 +468,9 @@ Dance.prototype.reset = function () {
     getStore().dispatch(showArrowButtons());
     $('#soft-buttons').addClass('soft-buttons-' + softButtonCount);
   }
-  this.preview();
+  if (this.usesPreview) {
+    this.preview();
+  }
 };
 
 Dance.prototype.preview = async function () {
@@ -547,7 +552,9 @@ Dance.prototype.onReportComplete = function (response) {
  * Click the run button.  Start the program.
  */
 Dance.prototype.runButtonClick = async function () {
-  this.nativeAPI.reset();
+  if (this.usesPreview) {
+    this.nativeAPI.reset();
+  }
   var clickToRunImage = document.getElementById('danceClickToRun');
   if (clickToRunImage) {
     clickToRunImage.style.display = 'none';
