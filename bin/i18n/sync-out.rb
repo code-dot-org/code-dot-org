@@ -403,11 +403,6 @@ module I18n
           standard_data = wrap_with_locale(standard_data, locale, "standards")
           I18nScriptUtils.sanitize_data_and_write(standard_data, destination)
         end
-
-        ### Pegasus
-        loc_file = "#{locale_dir}/pegasus/mobile.yml"
-        destination = "pegasus/cache/i18n/#{locale}.yml"
-        I18nScriptUtils.sanitize_file_and_write(loc_file, destination)
       end
 
       puts "Distribution finished!"

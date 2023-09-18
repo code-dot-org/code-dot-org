@@ -6,7 +6,7 @@ import EvidenceDescriptions from './EvidenceDescriptions';
 import Button from '../../../templates/Button';
 
 export default function LearningGoalItem({
-  deleteItem,
+  deleteLearningGoal,
   exisitingLearningGoalData,
   updateLearningGoal,
 }) {
@@ -25,6 +25,10 @@ export default function LearningGoalItem({
       'learningGoal',
       event.target.value
     );
+  };
+
+  const handleDelete = event => {
+    deleteLearningGoal(exisitingLearningGoalData.id);
   };
 
   return (
@@ -79,7 +83,7 @@ export default function LearningGoalItem({
         <Button
           text="Delete key concept"
           color={Button.ButtonColor.red}
-          onClick={() => deleteItem()}
+          onClick={handleDelete}
           icon="trash"
           iconClassName="fa-trash"
           className="ui-test-delete-concept-button"
@@ -90,7 +94,7 @@ export default function LearningGoalItem({
 }
 
 LearningGoalItem.propTypes = {
-  deleteItem: PropTypes.func,
+  deleteLearningGoal: PropTypes.func,
   exisitingLearningGoalData: PropTypes.object,
   updateLearningGoal: PropTypes.func,
 };
