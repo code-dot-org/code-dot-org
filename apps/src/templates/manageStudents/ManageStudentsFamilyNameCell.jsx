@@ -41,6 +41,7 @@ class ManageStudentFamilyNameCell extends Component {
           <div>
             <span data-for={tooltipId} data-tip>
               <input
+                id="uitest-family-name"
                 style={styles.inputBox}
                 // Since familyName is optional, explicitly prevent value from
                 // being set to undefined.

@@ -12,6 +12,12 @@ Feature: Using the manage students tab of the teacher dashboard
     And I save the section id from row 0 of the section table
     Then I navigate to manage students for the section I saved
     And I wait until element "#uitest-manage-students-table" is visible
+
+    # Add a family name for Sally
+    And I click selector ".ui-test-section-dropdown" once I see it
+    And I click selector "button:contains(Edit)"
+    And I press keys "SallyAlsoHasAVeryVeryLongLastName" for element "#uitest-family-name"
+    And I click selector "button:contains(Save)"
     And I see no difference for "manage students tab"
 
     And I close my eyes
