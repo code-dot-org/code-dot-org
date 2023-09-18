@@ -101,15 +101,6 @@ section.pl-offerings {
 }
 
 .carousel {
-  &__next {
-    position: absolute;
-    right: -100vh;
-  }
-
-  &__prev {
-    position: absolute;
-    left: -100vw;
-  }
 
   .action-block {
     height: 525px;
@@ -129,6 +120,7 @@ section.pl-offerings {
       width: 300%;
       display: flex;
     }
+
     .slide {
       display: flex;
       justify-content: start;
@@ -140,6 +132,7 @@ section.pl-offerings {
         margin: 0;
       }
     }
+
     .action-block {
       min-width: 230px;
     }
@@ -148,49 +141,6 @@ section.pl-offerings {
     .slide {
       .action-block {
         width: 31%;
-      }
-    }
-  }
-  @media (min-width: 1280px) {
-    &__prev {
-      position: absolute;
-      top: calc(50% - 20px);
-      left: -90px;
-      background: none;
-      border: none;
-      transform: translateY(-50%);
-      transition: .3s;
-      padding: 0;
-      width: 55px;
-
-      &:hover {
-        background: none;
-        opacity: .8;
-      }
-
-      img {
-        width: 100%;
-      }
-    }
-
-    &__next {
-      position: absolute;
-      top: calc(50% - 20px);
-      right: -90px;
-      background: none;
-      border: none;
-      transform: translateY(-50%);
-      transition: .3s;
-      padding: 0;
-      width: 55px;
-
-      &:hover {
-        background: none;
-        opacity: .8;
-      }
-
-      img {
-        width: 100%;
       }
     }
   }
