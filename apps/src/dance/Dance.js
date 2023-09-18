@@ -695,11 +695,7 @@ Dance.prototype.updateSongMetadata = function (id) {
  * This is called while DanceParty is in a draw() call.
  */
 Dance.prototype.onHandleEvents = function (currentFrameEvents) {
-  const runUserEvents = this.hooks.find(v => v.name === 'runUserEvents');
-  if (!runUserEvents) {
-    return;
-  }
-  runUserEvents.func(currentFrameEvents);
+  this.hooks.find(v => v.name === 'runUserEvents').func(currentFrameEvents);
   this.captureThumbnailImage();
 };
 
