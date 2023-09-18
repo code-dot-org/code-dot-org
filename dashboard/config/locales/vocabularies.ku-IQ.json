@@ -116,6 +116,69 @@
         "drop/pre-express/2022": {
           "word": "درۆپ"
         },
+        "code/csc-adaptations/2023": {
+          "word": "کۆد"
+        },
+        "code/csc-ecosystems/2023": {
+          "word": "کۆد"
+        },
+        "conditionals/csc-ecosystems/2023": {
+          "word": "مەرجیەکان"
+        },
+        "variable/csc-ecosystems/2023": {
+          "word": "گۆڕاو"
+        },
+        "code/csc-mappinglandmarks/2023": {
+          "word": "کۆد"
+        },
+        "comments/csc-starquilts/2023": {
+          "word": "سەرنجەکان"
+        },
+        "code/poetry/2023": {
+          "word": "کۆد"
+        },
+        "drop/coursea/2023": {
+          "word": "درۆپ"
+        },
+        "drop/courseb/2023": {
+          "word": "درۆپ"
+        },
+        "conditionals/coursed/2023": {
+          "word": "مەرجیەکان"
+        },
+        "function/coursee/2023": {
+          "word": "فرمان"
+        },
+        "conditionals/coursee/2023": {
+          "word": "مەرجیەکان"
+        },
+        "define/coursee/2023": {
+          "word": "پێناسە بکە"
+        },
+        "variable/coursef/2023": {
+          "word": "گۆڕاو"
+        },
+        "input/coursef/2023": {
+          "word": "داخڵکردن"
+        },
+        "define/coursef/2023": {
+          "word": "پێناسە بکە"
+        },
+        "conditionals/express/2023": {
+          "word": "مەرجیەکان"
+        },
+        "function/express/2023": {
+          "word": "فرمان"
+        },
+        "variable/express/2023": {
+          "word": "گۆڕاو"
+        },
+        "define/express/2023": {
+          "word": "پێناسە بکە"
+        },
+        "drop/pre-express/2023": {
+          "word": "درۆپ"
+        },
         "conditionals/aquatic/unversioned": {
           "word": "مەرجیەکان"
         },
