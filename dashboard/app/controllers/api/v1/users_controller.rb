@@ -26,8 +26,7 @@ class Api::V1::UsersController < Api::V1::JSONApiController
         short_name: current_user.short_name,
         is_verified_instructor: current_user.verified_instructor?,
         mute_music: current_user.mute_music?,
-        under_13: current_user.under_13?,
-        created_at: current_user.created_at
+        under_13: current_user.under_13?
       }
     else
       render json: {

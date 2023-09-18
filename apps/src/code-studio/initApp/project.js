@@ -1282,16 +1282,6 @@ var projects = (module.exports = {
     });
   },
 
-  getChannelMetadata(channelId, callback) {
-    channels.fetch(channelId, function (err, data) {
-      if (err) {
-        executeCallback(callback, null);
-      } else {
-        executeCallback(callback, null, data);
-      }
-    });
-  },
-
   createNewChannelFromSource(source, callback) {
     channels.create(
       {

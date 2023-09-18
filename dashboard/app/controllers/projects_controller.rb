@@ -2,7 +2,7 @@ require 'active_support/core_ext/hash/indifferent_access'
 require 'cdo/firehose'
 
 class ProjectsController < ApplicationController
-  before_action :authenticate_user!, except: [:load, :create_new, :show, :edit, :readonly, :redirect_legacy, :public, :index, :export_config, :weblab_footer, :get_or_create_for_level]
+  before_action :authenticate_user!, except: [:load, :create_new, :show, :edit, :readonly, :redirect_legacy, :public, :index, :export_config, :weblab_footer, :get_or_create_for_level, :can_share]
   before_action :redirect_admin_from_labs, only: [:load, :create_new, :show, :edit, :remix]
   before_action :authorize_load_project!, only: [:load, :create_new, :edit, :remix]
   before_action :set_level, only: [:load, :create_new, :show, :edit, :readonly, :remix, :export_config, :export_create_channel]
@@ -453,6 +453,11 @@ class ProjectsController < ApplicationController
     redirect_to action: 'edit', channel_id: new_channel_id
   end
 
+  def can_share
+    project = Project.find_by_channel_id(params[:channel_id])
+    render json: {can_share: project.old_enough_to_publish?, created_at: project.created_at}
+  end
+
   private def uses_asset_bucket?(project_type)
     %w(applab makerlab gamelab spritelab javalab).include? project_type
   end
@@ -510,11 +515,6 @@ class ProjectsController < ApplicationController
   def set_level
     @level = get_from_cache STANDALONE_PROJECTS[params[:key]][:name]
     @game = @level.game
-  end
-
-  def can_share
-    project = Project.find_by_channel_id(params[:channel_id])
-    render json: {can_share: project.old_enough_to_publish?, created_at: project.created_at}
   end
 
   # Due to risk of inappropriate content, we can hide non-featured Applab
