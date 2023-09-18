@@ -142,10 +142,10 @@
 }
 
 .learningGoalHeaderLeftSide {
+  @include main-font-semi-bold;
   display: flex;
   align-items: center;
   gap: 16px;
-  font-family: $gotham-bold;
 
   // TODO: [DES-321] remove span styles
   span {
@@ -213,8 +213,8 @@ p.aiTokenText {
   // This is body three styles but the typography components don't work well with markdown support
   // SafeMarkdown also wraps everything in its own div so explicitly apply this style to the div
   div {
+    @include main-font-regular;
     color: $neutral-dark;
-    font-family: $gotham-regular, sans-serif;
     font-size: 0.875rem;
     line-height: 1.54;
   }
@@ -236,8 +236,8 @@ p.aiTokenText {
   align-self: stretch;
 
   span {
+    @include main-font-semi-bold;
     font-size: 0.875rem;
-    font-family: $gotham-bold;
     line-height: 154%;
   }
 
@@ -247,7 +247,7 @@ p.aiTokenText {
 }
 
 .evidenceLevelLabel {
-  font-family: $gotham-bold;
+  @include main-font-semi-bold;
   font-size: 0.875rem;
   line-height: 154%;
   margin-bottom: 0;
