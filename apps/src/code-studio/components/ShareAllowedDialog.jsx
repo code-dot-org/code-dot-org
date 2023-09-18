@@ -107,8 +107,6 @@ class ShareAllowedDialog extends React.Component {
     isProjectOldEnoughToPublish: false,
   };
 
-  // maybe move the checks for whether project/user share allowed here?
-
   componentDidMount() {
     if (this.props.canShareSocial) {
       // check if twitter and facebook are actually available
@@ -123,7 +121,7 @@ class ShareAllowedDialog extends React.Component {
       );
     }
 
-    this.checkPublishability();
+    this.checkProjectAndAccountAge();
   }
 
   componentDidUpdate(prevProps, prevState, snapshot) {
@@ -131,37 +129,36 @@ class ShareAllowedDialog extends React.Component {
       recordShare('open');
       this.setState({hasBeenCopied: false});
 
-      this.checkPublishability();
+      this.checkProjectAndAccountAge();
     }
   }
 
-  checkPublishability = () => {
-    let checkIfCanPublishProject = fetch(
-      `/projects/${dashboard.project.getStandaloneApp()}/${dashboard.project.getCurrentId()}/can_share`
-    )
-      .then(response => response.json())
-      .then(data => {
-        console.log(`project old enough to share: ${data.can_share}`);
-        this.setState({isProjectOldEnoughToPublish: data.can_share});
-      });
+  checkProjectAndAccountAge = () => {
+    if (this.isPublishAllowed()) {
+      let checkIfCanPublishProject = fetch(
+        `/projects/${dashboard.project.getStandaloneApp()}/${dashboard.project.getCurrentId()}/can_share`
+      )
+        .then(response => response.json())
+        .then(data => {
+          this.setState({isProjectOldEnoughToPublish: data.can_share});
+        });
 
-    // signed out user?
-    const userId = getStore().getState().currentUser.userId;
-    let checkIfcanPublishAccount = fetch(
-      `/api/v1/users/${userId}/can_publish_based_on_account_create`
-    )
-      .then(response => response.json())
-      .then(data => {
-        console.log(`account old enough to share: ${data.account_old_enough}`);
-        this.setState({isAccountOldEnoughToPublish: data.account_old_enough});
-      });
+      // signed out user?
+      const userId = getStore().getState().currentUser.userId;
+      let checkIfcanPublishAccount = fetch(
+        `/api/v1/users/${userId}/can_publish_based_on_account_create`
+      )
+        .then(response => response.json())
+        .then(data => {
+          this.setState({isAccountOldEnoughToPublish: data.account_old_enough});
+        });
 
-    Promise.all([checkIfCanPublishProject, checkIfcanPublishAccount]).then(
-      () => {
-        console.log('requests completed');
-        this.setState({loadedAccountAndProjectAge: true});
-      }
-    );
+      Promise.all([checkIfCanPublishProject, checkIfcanPublishAccount]).then(
+        () => {
+          this.setState({loadedAccountAndProjectAge: true});
+        }
+      );
+    }
   };
 
   replayVideoNotFound = () => {
@@ -217,10 +214,15 @@ class ShareAllowedDialog extends React.Component {
     );
   };
 
+  // inRestrictedShareMode overrides canPublish and canShareSocial
+  isPublishAllowed = () =>
+    this.props.canPublish && !this.props.inRestrictedShareMode;
+  isSocialShareAllowed = () =>
+    this.props.canShareSocial && !this.props.inRestrictedShareMode;
+
   render() {
     const {
       canPrint,
-      canPublish,
       isPublished,
       inRestrictedShareMode,
       canShareSocial,
@@ -242,9 +244,6 @@ class ShareAllowedDialog extends React.Component {
       loadedAccountAndProjectAge,
     } = this.state;
 
-    // inRestrictedShareMode overrides canPublish and canShareSocial
-    const publishAllowed = canPublish && !inRestrictedShareMode;
-    const socialShareAllowed = canShareSocial && !inRestrictedShareMode;
     const modalClass = 'modal-content no-modal-icon';
 
     const isDroplet = appType === 'applab' || appType === 'gamelab';
@@ -295,6 +294,12 @@ class ShareAllowedDialog extends React.Component {
         iframeWidth: p5labConstants.APP_WIDTH + 40,
       };
     }
+
+    const showPublishInfo = this.isPublishAllowed() && !isPublished;
+    const disablePublishButton =
+      !hasThumbnail ||
+      !isAccountOldEnoughToPublish ||
+      !isProjectOldEnoughToPublish;
 
     return (
       <div>
@@ -388,8 +393,7 @@ class ShareAllowedDialog extends React.Component {
                     </span>
                   </Button>
 
-                  {publishAllowed &&
-                    !isPublished &&
+                  {showPublishInfo &&
                     (loadedAccountAndProjectAge ? (
                       <Button
                         type="button"
@@ -399,11 +403,7 @@ class ShareAllowedDialog extends React.Component {
                           hasThumbnail ? styles.button : styles.buttonDisabled
                         }
                         onClick={wrapShareClick(this.publish, 'publish')}
-                        disabled={
-                          !hasThumbnail ||
-                          !isAccountOldEnoughToPublish ||
-                          !isProjectOldEnoughToPublish
-                        }
+                        disabled={disablePublishButton}
                         className="no-mc"
                       >
                         <span>{i18n.publish()}</span>
@@ -411,7 +411,7 @@ class ShareAllowedDialog extends React.Component {
                     ) : (
                       <Spinner size="medium" style={{marginRight: 16}} />
                     ))}
-                  {publishAllowed && isPublished && (
+                  {this.isPublishAllowed() && isPublished && (
                     <PendingButton
                       id="share-dialog-unpublish-button"
                       isPending={isUnpublishPending}
@@ -430,7 +430,7 @@ class ShareAllowedDialog extends React.Component {
                     </a>
                   )}
                   {/* prevent buttons from overlapping when unpublish is pending */}
-                  {socialShareAllowed && !isUnpublishPending && (
+                  {this.isSocialShareAllowed() && !isUnpublishPending && (
                     <span>
                       {this.state.isFacebookAvailable && (
                         <a
@@ -481,7 +481,7 @@ class ShareAllowedDialog extends React.Component {
                     <div style={{clear: 'both'}} />
                   </div>
                 )}
-                {publishAllowed && !isPublished && !hasThumbnail && (
+                {showPublishInfo && !hasThumbnail && (
                   <div style={{clear: 'both', marginTop: 10}}>
                     <span
                       style={styles.thumbnailWarning}
@@ -491,9 +491,7 @@ class ShareAllowedDialog extends React.Component {
                     </span>
                   </div>
                 )}
-                {/* do we need to check isPublished flag? */}
-                {publishAllowed &&
-                  !isPublished &&
+                {showPublishInfo &&
                   !isProjectOldEnoughToPublish &&
                   loadedAccountAndProjectAge && (
                     <div style={{clear: 'both', marginTop: 10}}>
@@ -505,9 +503,7 @@ class ShareAllowedDialog extends React.Component {
                       </span>
                     </div>
                   )}
-                {/* do we need to check isPublished flag? */}
-                {publishAllowed &&
-                  !isPublished &&
+                {showPublishInfo &&
                   !isAccountOldEnoughToPublish &&
                   loadedAccountAndProjectAge && (
                     <div style={{clear: 'both', marginTop: 10}}>
