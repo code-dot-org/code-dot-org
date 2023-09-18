@@ -102,6 +102,10 @@ vi:
         ai-ethics-2021:
           description_audience: Từ lớp 6-12
           title: Quy tắc đạo đức trí tuệ nhân tạo
+        ai-ethics-2023:
+          lessons:
+            lesson-1:
+              name: Quy tắc đạo đức trí tuệ nhân tạo
         ai-temp:
           title: Cách thức hoạt động của AI
         aiml-2021:
