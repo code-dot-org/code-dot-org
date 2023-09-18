@@ -265,3 +265,15 @@ p.errorMessage {
   color: $product_negative_default;
   margin-bottom: 0;
 }
+
+.teacherFeedbackLabel {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.inputTextbox {
+  width: 95%;
+  height: 5rem;
+  margin-top: 5;
+}

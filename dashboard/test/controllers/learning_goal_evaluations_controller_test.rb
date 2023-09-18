@@ -16,8 +16,8 @@ class LearningGoalEvaluationsControllerTest < ActionController::TestCase
     teacher_id = @teacher.id
     learning_goal_id = @learning_goal.id
     understanding = 5
-    feedback = 'abc'
-    context = 'def'
+    feedback = 'teacher feedback'
+    context = 'context'
 
     post :create, params: {
       userId: user_id,
@@ -43,6 +43,18 @@ class LearningGoalEvaluationsControllerTest < ActionController::TestCase
     assert_not_nil response_json['created_at']
   end
 
+  test 'get_evaluation in learning goal evaluation' do
+    get :get_evaluation, params: {
+      userId: @learning_goal_evaluation.user_id,
+      teacherId: @learning_goal_evaluation.teacher_id,
+      learningGoalId: @learning_goal_evaluation.learning_goal_id
+    }
+    assert_response :success
+
+    response_json = JSON.parse(response.body)
+    assert_equal response_json['id'], @learning_goal_evaluation.id
+  end
+
   test 'update learning goal evaluation' do
     id = @learning_goal_evaluation.id
     user_id = @student.id
@@ -51,8 +63,8 @@ class LearningGoalEvaluationsControllerTest < ActionController::TestCase
     teacher_id = @teacher.id
     learning_goal_id = @learning_goal.id
     understanding = 6
-    feedback = 'ghi'
-    context = 'jkl'
+    feedback = 'teacher feedback'
+    context = 'context'
 
     post :update, params: {
       id: id,
