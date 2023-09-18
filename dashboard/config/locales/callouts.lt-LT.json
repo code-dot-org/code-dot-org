@@ -63,6 +63,9 @@
         "Overworld Chop Trees_2021": {
           "craft_callout_preplaced": "Mes padėjome kelis blokelius, kad tau būtų nuo ko pradėti"
         },
+        "Overworld Chop Trees_2023": {
+          "craft_callout_preplaced": "Mes padėjome kelis blokelius, kad tau būtų nuo ko pradėti"
+        },
         "Overworld House Frame Chosen": {
           "craft_callout_preplaced_house": "Šis kodas pradės statyti tavo namą. Ar tu gali jį pabaigti?"
         },
@@ -76,6 +79,9 @@
           "craft_callout_preplaced_house": "Šis kodas pradės statyti tavo namą. Ar tu gali jį pabaigti?"
         },
         "Overworld House Frame Chosen_2021": {
+          "craft_callout_preplaced_house": "Šis kodas pradės statyti tavo namą. Ar tu gali jį pabaigti?"
+        },
+        "Overworld House Frame Chosen_2023": {
           "craft_callout_preplaced_house": "Šis kodas pradės statyti tavo namą. Ar tu gali jį pabaigti?"
         },
         "Overworld Move to Sheep": {
@@ -93,6 +99,9 @@
         "Overworld Move to Sheep_2021": {
           "craft_run_button_callout": "Paspausk „Paleisti\" ir išmėgink savo programą"
         },
+        "Overworld Move to Sheep_2023": {
+          "craft_run_button_callout": "Paspausk „Paleisti\" ir išmėgink savo programą"
+        },
         "Overworld Place Wall": {
           "craft_inside_repeat": "Kartok veiksmus, įdėdamas čia blokelius"
         },
@@ -106,6 +115,9 @@
           "craft_inside_repeat": "Kartok veiksmus, įdėdamas čia blokelius"
         },
         "Overworld Place Wall_2021": {
+          "craft_inside_repeat": "Kartok veiksmus, įdėdamas čia blokelius"
+        },
+        "Overworld Place Wall_2023": {
           "craft_inside_repeat": "Kartok veiksmus, įdėdamas čia blokelius"
         },
         "Underground Avoiding Lava": {
@@ -123,6 +135,9 @@
         "Underground Avoiding Lava_2021": {
           "craft_callout_moveforward": "Šis kodas tikrins ar yra lava, ar gali pridėti komandą, kad pajudėtum pirmyn?"
         },
+        "Underground Avoiding Lava_2023": {
+          "craft_callout_moveforward": "Šis kodas tikrins ar yra lava, ar gali pridėti komandą, kad pajudėtum pirmyn?"
+        },
         "Underground Iron": {
           "craft_what_is_iron": "Iškask šią geležį!"
         },
@@ -136,6 +151,9 @@
           "craft_what_is_iron": "Iškask šią geležį!"
         },
         "Underground Iron_2021": {
+          "craft_what_is_iron": "Iškask šią geležį!"
+        },
+        "Underground Iron_2023": {
           "craft_what_is_iron": "Iškask šią geležį!"
         },
         "frozen circle function with parameter": {
