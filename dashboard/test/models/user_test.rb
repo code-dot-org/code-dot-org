@@ -4807,8 +4807,6 @@ class UserTest < ActiveSupport::TestCase
 
     assert(user.summarize.key?(:family_name))
     assert_equal(family_name, user.summarize[:family_name])
-
-    DCDO.unstub(:get)
   end
 
   test 'family name is not allowed on pl participants' do
