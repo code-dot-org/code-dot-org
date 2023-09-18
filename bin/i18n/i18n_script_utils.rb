@@ -202,25 +202,6 @@ class I18nScriptUtils
     @levels_by_url[url]
   end
 
-  def self.write_markdown_with_header(markdown, header, path)
-    File.open(path, 'w') do |f|
-      unless header.empty?
-        f.write(I18nScriptUtils.to_crowdin_yaml(header))
-        f.write("---\n\n")
-      end
-      f.write(markdown)
-    end
-  end
-
-  # Reduce the header metadata we include in markdown files down to just the
-  # subset of content we want to allow translators to translate.
-  #
-  # Right now, this is just page titles but it could be expanded to include
-  # any English content (description, social share stuff, etc).
-  def self.sanitize_header!(header)
-    header.slice!("title")
-  end
-
   # For resources like `course_content` and `curriculum_content`,
   # sync-in creates the unit course_version/course_offering directory structure
   # (e.g. `i18n/locales/source/curriculum_content/2017/csd/csd1.json`).
@@ -387,7 +368,18 @@ class I18nScriptUtils
     Parallel.each(data_array, **args, in_threads: PARALLEL_PROCESSES) {|data| yield(data)}
   end
 
+  # Copies file
+  #
+  # @param file_path [String] path to the file
+  # @param dest_path [String] destination path
+  def self.copy_file(file_path, dest_path)
+    dest_dir = File.extname(dest_path).empty? ? dest_path : File.dirname(dest_path)
+    FileUtils.mkdir_p(dest_dir)
+    FileUtils.cp(file_path, dest_path)
+  end
+
   # Renames directory
+  #
   # @param [String] from_dir, e.g. `i18n/locales/English/resource`
   # @param [String] to_dir, e.g. `i18n/locales/en-US/resource`
   def self.rename_dir(from_dir, to_dir)
@@ -401,7 +393,7 @@ class I18nScriptUtils
   end
 
   def self.remove_empty_dir(dir)
-    return unless File.exist?(dir)
+    return unless File.directory?(dir)
     return unless Dir.empty?(dir)
 
     FileUtils.rm_r(dir)

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useRef} from 'react';
 import style from './expanded_curriculum_catalog_card.module.scss';
 import centererStyle from './curriculum_catalog_card.module.scss';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
@@ -36,6 +36,7 @@ const ExpandedCurriculumCatalogCard = ({
   imageAltText,
   availableResources,
 }) => {
+  const expandedCardRef = useRef(null);
   const iconData = {
     ideal: {
       icon: 'circle-check',
@@ -67,8 +68,16 @@ const ExpandedCurriculumCatalogCard = ({
     return ++availableResourceCounter < Object.keys(availableResources).length;
   };
 
+  useEffect(() => {
+    const yOffset =
+      expandedCardRef.current.getBoundingClientRect().top +
+      window.scrollY -
+      150;
+    window.scrollTo({top: yOffset, behavior: 'smooth'});
+  }, [expandedCardRef]);
+
   return (
-    <div>
+    <div ref={expandedCardRef}>
       <div
         className={`${style.arrowContainer} ${centererStyle.arrowContainer}`}
       />
@@ -226,7 +235,7 @@ const ExpandedCurriculumCatalogCard = ({
                 <Button
                   color={Button.ButtonColor.brandSecondaryDefault}
                   type="button"
-                  onClick={assignButtonOnClick}
+                  onClick={() => assignButtonOnClick('expanded-card')}
                   aria-label={assignButtonDescription}
                   text={i18n.assignToClassSections()}
                   style={{flex: 1}}

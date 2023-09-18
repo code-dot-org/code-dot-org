@@ -387,7 +387,6 @@ class CourseOffering < ApplicationRecord
   # seed_all
   def self.seed_record(file_path)
     properties = properties_from_file(File.read(file_path))
-
     key = properties[:self_paced_pl_course_offering_key]
     new_self_paced_pl_course_offering = CourseOffering.find_by_key(key)
     if new_self_paced_pl_course_offering.nil? && !key.nil?
