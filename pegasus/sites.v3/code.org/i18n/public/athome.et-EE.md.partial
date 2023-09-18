@@ -27,7 +27,7 @@ theme: responsive
 
 <a id="hoc"></a>
 <h2>Proovige tunnis koodi nende lõbus sissejuhatav juhendaja</h2>
-<p>Try a <a class="linktag" id="hoc-overview" href="/hourofcode/overview" target="_blank">one-hour tutorial</a> featuring popular games and movies like Minecraft, Frozen, and Star Wars. Paljud õpetused on üles ehitatud nagu mängud, mille eesmärk on õpetada põhilisi arvutiteaduse mõisteid lõbus, kaasates viise.</p>
+<p>Proovige <a class="linktag" id="hoc-overview" href="/hourofcode/overview" target="_blank">ühetunnist õpetust, mis sisaldab</a> populaarseid mänge ja filme nagu Minecraft, Frozen ja Star Wars. Paljud õpetused on üles ehitatud nagu mängud, mille eesmärk on õpetada põhilisi arvutiteaduse mõisteid lõbus, kaasates viise.</p>
 
 <br>
 
@@ -38,8 +38,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>Tantsupidu</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Kood tantsupidu jagada sõprade ja perega. Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez, muusika Disney „Encanto” ja palju muud!</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px">Dance Party</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">kood tantsupidu jagada sõprade ja perega. Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez, muusika Disney „Encanto” ja palju muud!</div>
         <a class="linktag" id="danceparty" href="/dance" target="_blank"><button>Proovige tegevus</button></a>
     </span>
   </div>
@@ -53,8 +53,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Minecraft Hour of Code</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Minecraft on tagasi Hour of Code koos uhiuue tegevuse! Teekond läbi Minecraft koodiga.</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px">Minecraft kooditund</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Minecraft on tagasi tund kood täiesti uus tegevus! Teekond läbi Minecraft koodiga.</div>
         <br>
         <a class="linktag" id="minecraft" href="/minecraft" target="_blank"><button>Proovige tegevus</button></a>
     </span>
@@ -69,8 +69,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>AI ookeanidele</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Abi A.I. puhastada ookeane koolitades seda avastada prügikasti! Lugege koolitusandmete ja eelarvamuste ning selle kohta, kuidas tehisintellekti saab lahendada maailma probleeme. Vaata <a class="linktag" id="oceans-lesson" href="https://curriculum.code.org/hoc/plugged/9/" target="_blank">tunniplaan</a>.</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px">AI ookeanide</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Help A.I. puhastada ookeane koolitades seda avastada prügikasti! Lugege koolitusandmete ja eelarvamuste ning selle kohta, kuidas tehisintellekti saab lahendada maailma probleeme. Vaata <a class="linktag" id="oceans-lesson" href="https://curriculum.code.org/hoc/plugged/9/" target="_blank">tunniplaan</a>.</div>
         <a class="linktag" id="aiforoceans" href="https://studio.code.org/s/oceans/lessons/1/levels/1" target="_blank"><button>Proovige tegevus</button></a>
     </span>
   </div>
@@ -96,8 +96,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>Kuidas arvutid töötavad</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Mis sissejuhatus Bill Gates, see seeria kuus lühikest videot selgitab, mis teeb arvuti arvuti ja kuidas arvuti ahelad töö.</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px">Kuidas arvutid töötavad</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">sissejuhatusega Bill Gates, see seeria kuus lühikest videot selgitab, mis teeb arvuti arvuti ja kuidas arvuti ahelad töötavad.</div>
         <a class="linktag" id="howcomputers" href="https://www.youtube.com/watch?v=OAx_6-wdslM&list=PLzdnOPI1iJNcsRwJhvksEo1tJqjIqWbN-" target="_blank"><button>Vaadake video seeriat</button></a>
     </span>
   </div>
@@ -111,8 +111,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Kuidas Internet töötab</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Selles kaheksa lühivideote seerias saate teada, kuidas internet leiutati, milline on HTML ja kuidas otsingumootorid nagu Google töötavad.</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px">Kuidas Internet töötab</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Selles kaheksa lühikese video seerias saate teada, kuidas internet leiutati, milline on HTML ja kuidas otsingumootorid nagu Google töötavad.</div>
         <a class="linktag" id="howinternet" href="https://www.youtube.com/watch?v=Dxcc6ycZ73M&list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7-" target="_blank"><button>Vaadake video seeriat</button></a>
     </span>
   </div>
@@ -126,7 +126,7 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Kuidas AI töötab</strong></h3>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px">Kuidas AI töötab</h3>
         <div class="smalltext" style="text-align: left; margin-bottom: 10px">Lugege, kuidas AI töötab ja miks see on oluline selle seeria lühike videod. Microsofti tegevjuht Satya Nadella ja mitmekülgne ekspertide valimine.</div>
         <a class="linktag" id="ai-videos" href="/ai#ai-videos" target="_blank"><button>Vaadake video seeriat</button></a>
     </span>
@@ -136,7 +136,7 @@ theme: responsive
 
 <div style="clear: both"></div>
 
-<p>View more videos, including short inspirational videos featuring celebrities like Steph Curry and Shakira, <a class="linktag" id="all-videos" href="https://code.org/educate/resources/videos" target="_blank">here</a>.</p>
+<p>Vaata veel videoid, sh lühikesi inspireerivaid videoid, mis sisaldavad kuulsusi nagu Steph Curry ja Shakira. <a class="linktag" id="all-videos" href="https://code.org/educate/resources/videos" target="_blank"></a></p>
 <br>
 <p><a href="#top">[Tagasi üles]</a></p>
 
@@ -147,7 +147,7 @@ theme: responsive
 <a id="express"></a>
 <h2>Tutvuge põhialuste abil meie enesetempo kursustega</h2>
 <h3>Iseseisev tempo sissejuhatavad kursused</h3>
-<p>Suurepärane võimalus õpilastele, kes hakkavad ise alustama. Sa õpid põhialused infotehnoloogia drag & drop plokid. Loo oma joonised ja mängud. Märkus. Kiirkursused on praegu saadaval inglise, hindi, itaalia ja hispaania keeles. For other languages, we recommend our 20-hour <a class="linktag" id="accelerated" href="https://studio.code.org/s/20-hour" target="_blank">Accelerated Course</a>. Et näha, mis on saadaval teie keeles, külastage meie <a class="linktag" id="course-catalog" href="https://studio.code.org/courses" target="_blank">kursuse kataloogi</a>.</p>
+<p>Suurepärane võimalus õpilastele, kes hakkavad ise alustama. Sa õpid põhialused infotehnoloogia drag & drop plokid. Loo oma joonised ja mängud. Märkus. Kiirkursused on praegu saadaval inglise, hindi, itaalia ja hispaania keeles. Teiste keelte puhul soovitame meie 20-tunnist <a class="linktag" id="accelerated" href="https://studio.code.org/s/20-hour" target="_blank">kiirendatud kursust.</a> Et näha, mis on saadaval teie keeles, külastage meie <a class="linktag" id="course-catalog" href="https://studio.code.org/courses" target="_blank">kursuse kataloogi</a>.</p>
 
 <br>
 
@@ -159,13 +159,13 @@ theme: responsive
 
 <div class="col-50" style="padding-right: 20px; padding-bottom:10px">
 
-<a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express-2019" target="_blank"><img src="/images/curriculum/course-tile-pre-reader-express.png" style="width: 100%" alt="Eellugeja kiirkursus"></a><br><a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express-2019" target="_blank">Express Course for pre-readers</a>
+<a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express-2019" target="_blank"><img src="/images/curriculum/course-tile-pre-reader-express.png" style="width: 100%" alt="Eellugeja kiirkursus"></a><br><a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express-2019" target="_blank">Express-kursus eellugejatele</a>
 
 </div>
-<div style="clear: both"></div>
+<div style="clear: both; margin-bottom: 2rem"></div>
 
 <h3>Isetempo sissejuhatus mängu lab ja App Lab</h3>
-<p>Kohandatud meie CS Discoveries ja CS Principles kursused, need lühikesed, ise tempo moodulid on suurepärane võimalus õppida kontseptsioone, mis ulatuvad kõik programmeerimiskeeled ja tööriistad. <i>Requires Code.org account to access</i>.</p>
+<p>Kohandatud meie CS Discoveries ja CS Principles kursused, need lühikesed, ise tempo moodulid on suurepärane võimalus õppida kontseptsioone, mis ulatuvad kõik programmeerimiskeeled ja tööriistad. <i>Vajalik Code.org konto juurdepääsuks.</i></p>
 
 <br>
 
@@ -176,8 +176,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>Sissejuhatus Game Lab</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Programmi animatsioone, interaktiivne kunst, ja mängud Game Lab. Alusta lihtsaid kujundeid ja luua keerukamaid sprite-põhiseid animatsioone ja mänge.</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px">Sissejuhatus Game Lab</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">programmi animatsioone, interaktiivset kunsti ja mänge Game Lab. Alusta lihtsaid kujundeid ja luua keerukamaid sprite-põhiseid animatsioone ja mänge.</div>
         <a class="linktag" id="gamelab-intro" href="https://studio.code.org/s/csd3-virtual" target="_blank"><button>Proovige moodulit</button></a>
     </span>
   </div>
@@ -191,8 +191,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Turtle Programmeerimine App Lab</strong></h3>
-        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Kasutage lihtsaid JavaScript käske joonistada kujundeid ja pilte kasutades virtuaalne „kilpkonn”. Disain ja programmeerida oma digitaalse stseeni!</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px">Turtle Programmeerimine App Lab</h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Kasutage lihtsaid JavaScripti käske, et joonistada kujundeid ja pilte virtuaalse „kilpkonna” abil. Disain ja programmeerida oma digitaalse stseeni!</div>
         <a class="linktag" id="turtle-applab" href="https://studio.code.org/s/csp3-virtual" target="_blank"><button>Proovige moodulit</button></a>
     </span>
   </div>
@@ -206,7 +206,7 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Sündmusepõhine programmeerimine App Lab</strong></h3>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px">Sündmusepõhine programmeerimine App Lab</h3>
         <div class="smalltext" style="text-align: left; margin-bottom: 10px">Õpi kujundama rakendusi, mis reageerivad klikkidele ja klahvivajutustele. Loo mitmeid lihtsaid rakendusi (rakendusi), mis elavad veebis!</div>
         <a class="linktag" id="events-applab" href="https://studio.code.org/s/csp5-virtual" target="_blank"><button>Proovige moodulit</button></a>
     </span>
@@ -224,13 +224,13 @@ theme: responsive
 
 <a id="labs"></a>
 <h2>Loo midagi!</h2>
-<p>Esiteks, inspireerige! View our <a href="https://studio.code.org/projects" target="_blank">project gallery</a> — play some of the games or try out some of the apps that students have created. Saate projekti „remiksida”, et muuta see omaks, või luua midagi uut rakenduse laboris, mängulabis või veebilabis.</p>
+<p>Esiteks, inspireerige! Vaadake meie <a href="https://studio.code.org/projects" target="_blank">projektigaleriid</a> — mängige mõnda mängu või proovige mõnda õpilaste loodud rakendust. Saate projekti „remiksida”, et muuta see omaks, või luua midagi uut rakenduse laboris, mängulabis või veebilabis.</p>
 
 <br>
 
 <div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
   <div style="width: 87%; float: left">
-    <a class="linktag" id="applab" href="https://code.org/educate/applab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none"><strong>App Lab</strong></h3></a>
+    <a class="linktag" id="applab" href="https://code.org/educate/applab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none">Rakenduse laboratoorium</h3></a>
     <p style="color:#ffffff">App Lab on programmeerimiskeskkond, kus saab teha lihtsaid rakendusi. Kujundage rakendus, plokkidega kood või JavaScript, et see toimiks, ja jagage seejärel rakendust sekunditega ühiskasutusse.</p>
     <a class="linktag" id="applab" href="https://code.org/educate/applab" target="_blank"><button style="background-color:#e7e8ea; border-color:#e7e8ea; color:#696969">Rakenduse loomine</button></a>
   </div>
@@ -239,7 +239,7 @@ theme: responsive
 
 <div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
   <div style="width: 87%; float: left">
-    <a class="linktag" id="gamelab" href="https://code.org/educate/gamelab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none"><strong>mäng lab</strong></h3></a>
+    <a class="linktag" id="gamelab" href="https://code.org/educate/gamelab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none">Mäng Lab</h3></a>
     <p style="color:#ffffff">Mängulab on programmeerimiskeskkond, kus saab teha lihtsaid animatsioone ja mänge objektide ja tähemärkidega, mis omavahel suhtlevad.</p>
     <br>
     <a class="linktag" id="gamelab" href="https://code.org/educate/gamelab" target="_blank"><button style="background-color:#e7e8ea; border-color:#e7e8ea; color:#696969">Loo mäng</button></a>
@@ -249,7 +249,7 @@ theme: responsive
 
 <div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
   <div style="width: 87%; float: left">
-    <a class="linktag" id="weblab" href="https://code.org/educate/weblab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none"><strong>Web Lab</strong></h3></a>
+    <a class="linktag" id="weblab" href="https://code.org/educate/weblab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none">Veebilabor</h3></a>
     <p style="color:#ffffff">Web Lab on programmeerimiskeskkond, kus saab teha lihtsaid veebilehti HTML-i ja CSS-i abil. Kujundage oma veebilehed ja jagage oma saiti sekunditega.</p>
     <br>
     <a class="linktag" id="weblab" href="https://code.org/educate/weblab" target="_blank"><button style="background-color:#e7e8ea; border-color:#e7e8ea; color:#696969">Veebilehe loomine</button></a>
@@ -286,16 +286,12 @@ theme: responsive
 
 <h2>Kodus pole arvutit? Proovige CS-i telefonis nende partnerite rakendustega</h2>
 
-<div class="col-33" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><img src="images/tutorials/new/boxisland.jpg" style="width: 100%" alt="Box Island"></a><br><a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><h3 style="color:#7665a0"><strong>Box Island</strong></h3></a>Võluv mobiilne kodeerimine mäng, mis võtab õppijate põnev seiklus, samas õpetades põhialuste kodeerimine, nagu algoritmid, muster äratundmine, järjestused, silmad ja konditsioneerid. <i>(igas vanuses)</i>
+<div class="col-50" style="padding-right: 30px; padding-bottom:40px">
+  <a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><img src="images/tutorials/new/boxisland.jpg" style="width: 100%" alt="Box Island"></a><br><a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><h3 style="margin-top: 1rem;">Box Island</h3></a>Võluv mobiilne kodeerimine mäng, mis võtab õppijate põnev seiklus, samas õpetades põhialuste kodeerimine, nagu algoritmid, muster tuvastus, järjestused, silmad ja conditionals. <i>(igas vanuses)</i>
 </div>
 
-<div class="col-33" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><img src="/images/tutorials/hoc2018/codespark_create.jpg" style="width: 100%" alt="CodeSpark"></a><br><a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><h3 style="color:#7665a0"><strong>CodeSpark</strong></h3></a>Auhinnatud õppe-to-koodi platvorm lastele vanuses 5-9. Lahenda mõistatusi ja luua mänge Foos õppimise ajal koodi. <strong>Märkus: CodesPark pakub tasuta 3-kuulist prooviversiooni. Parent's email address and credit card information are required at signup.</strong> <i>(for pre-readers through Grade 5)</i>
-</div>
-
-<div class="col-33" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="grasshopper" href="https://grasshopper.app/" target="_blank"><img src="/images/athome/grasshopper.png" style="width: 100%" alt="Rohutirts"></a><br><a class="linktag" id="grasshopper" href="https://grasshopper.app/" target="_blank"><h3 style="color:#7665a0"><strong>Rohutirts</strong></h3></a>Õpi kodeerimine lõbus, kiire õppetunde telefoni, mis õpetab kirjutada tõeline JavaScript. Kood Google Program. <i>(keskkooli ja kuni)</i>
+<div class="col-50" style="padding-right: 30px; padding-bottom:40px">
+  <a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><img src="/images/tutorials/hoc2018/codespark_create.jpg" style="width: 100%" alt="CodeSpark"></a><br><a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><h3 style="margin-top: 1rem;">CodesPark</h3></a>Auhinnatud õppe-to-koodi platvorm lastele vanuses 5-9. Lahenda mõistatusi ja luua mänge Foos õppimise ajal koodi. <strong>Märkus: CodesPark pakub tasuta 3-kuulist prooviversiooni. Vanema e-posti aadress ja krediitkaardi andmed on vajalikud registreerumisel.</strong> <i>(eelnevalt lugejad läbi Hinne 5)</i>
 </div>
 
 <div style="clear: both; margin-bottom: 15px"></div>
@@ -312,11 +308,11 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="margin-top:10px"><strong>CodeBytes</strong></h3>
-        <div class="smalltext" style="color: dimgray;">CodeBytes on kergesti seeditavad, 20-minutilised interaktiivsed õppetunnid, mis segavad arvutiteadust reaalse maailma teemadega. Train an AI to read sign language, design an app for good, explore the world of Minecraft, and more!</div>
+        <h3 class="tutorial-info-h" style="margin-top:10px">CodeBytes</h3>
+        <div class="smalltext" style="color: dimgray;">CodeBytes on kergesti seeditavad, 20-minutilised interaktiivsed õppetunnid, mis segavad arvutiteadust reaalse maailma teemadega. Treeni AI lugeda viipekeelt, kujundada app hea, uurida maailma Minecraft, ja palju muud!</div>
         <br>
         <br>
-        <a class="linktag" id="codebytes" href="https://code.org/codebytes" target="_blank"><button>View episodes</button></a>
+        <a class="linktag" id="codebytes" href="https://code.org/codebytes" target="_blank"><button>Vaata episoode</button></a>
     </span>
   </div>
 </div>
@@ -329,7 +325,7 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="margin-top:10px"><strong>kood Break</strong></h3>
+        <h3 class="tutorial-info-h" style="margin-top:10px">Kood Break</h3>
         <div class="smalltext" style="">Hoidke infotehnoloogia lõbus võttes Code Break! Saate luua küpher Ashton Kutcher, õppida muutujaid Yara Shahidi, ja isegi uurida, kuidas Internet töötab tegelik leiutaja Internet, Vint Cerf!</div>
         <br>
         <a class="linktag" id="codebreak" href="https://code.org/break" target="_blank"><button>Hankige ühendus</button></a>

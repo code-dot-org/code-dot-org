@@ -13,7 +13,7 @@ theme: responsive
   <img src="/images/marketing/fit-318x212/mother-helping-her-daughter-use-a-laptop-4260325.jpg" style="width:100%" alt="Tinutulungan ng Nanay ang kanyang anak na gumamit ng laptop">
 </div>
 
-<p>Maging magulang/tagapag-alaga ka man o mag-aaral na nag-iisang nag-aaral, ang mga opsyon sa ibaba ay nakakaengganyo, madaling subukang mga paraan para simulan ang iyong paggalugad ng computer science.</p>
+<p>Whether you're a parent/guardian or a student learning independently, the options below are engaging, easy-to-try ways to begin your exploration of computer science.</p>
 <ul>
     <li><a class="linktag" id="hoc-nav" href="#hoc">Subukan ang isang Hour of Code</a></li>
     <li><a class="linktag" id="videos-nav" href="#videos">Manood ng maikling serye ng video tungkol sa mga pangunahing kaalaman ng CS</a></li>
@@ -38,7 +38,7 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>Dance Party</strong></h3>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px">Dance Party</h3>
         <div class="smalltext" style="text-align: left; margin-bottom: 10px">Code a Dance Party to share with friends and family. Itinatampok sina Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez, musika sa "Encanto" ng Disney, at higit pa!</div>
         <a class="linktag" id="danceparty" href="/dance" target="_blank"><button>Subukan ang aktibidad</button></a>
     </span>
@@ -53,7 +53,7 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Minecraft Hour of Code</strong></h3>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px">Minecraft Hour of Code</h3>
         <div class="smalltext" style="text-align: left; margin-bottom: 10px">Minecraft is back for the Hour of Code with a brand new activity! Paglalakbay sa Minecraft na may code.</div>        <br>        <a class="linktag" id="minecraft" href="/minecraft" target="_blank"><button>Subukan ang aktibidad</button></a>
     </span>
   </div>
@@ -67,7 +67,7 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>AI for Oceans</strong></h3>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px">AI for Oceans</h3>
         <div class="smalltext" style="text-align: left; margin-bottom: 10px">Help A.I. clean the oceans by training it to detect trash! Matuto pa tungkol sa data at bias, at kung paano ang AI ay kayang tugunan ang problema ng mundo. Tingnan ang <a class="linktag" id="oceans-lesson" href="https://curriculum.code.org/hoc/plugged/9/" target="_blank">lesson plan</a>.</div>        <a class="linktag" id="aiforoceans" href="https://studio.code.org/s/oceans/lessons/1/levels/1" target="_blank"><button>Subukan ang aktibidad</button></a>
     </span>
   </div>
@@ -93,7 +93,7 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>How Computers Work</strong></h3>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px">How Computers Work</h3>
         <div class="smalltext" style="text-align: left; margin-bottom: 10px">With an introduction by Bill Gates, this series of six short videos explains what makes a computer a computer and how computer circuits work.</div>
         <a class="linktag" id="howcomputers" href="https://www.youtube.com/watch?v=OAx_6-wdslM&list=PLzdnOPI1iJNcsRwJhvksEo1tJqjIqWbN-" target="_blank"><button>Watch the video series</button></a>
     </span>
@@ -108,7 +108,7 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>How the Internet Works</strong></h3>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px">How the Internet Works</h3>
         <div class="smalltext" style="text-align: left; margin-bottom: 10px">In this series of eight short videos, you’ll learn how the internet was invented, what HTML is, and how search engines like Google work.</div>
         <a class="linktag" id="howinternet" href="https://www.youtube.com/watch?v=Dxcc6ycZ73M&list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7-" target="_blank"><button>Watch the video series</button></a>
     </span>
@@ -123,7 +123,7 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>How AI Works</strong></h3>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px">How AI Works</h3>
         <div class="smalltext" style="text-align: left; margin-bottom: 10px">Learn about how AI works and why it matters with this series of short videos. Featuring Microsoft CEO Satya Nadella and a diverse cast of experts.</div>        <a class="linktag" id="ai-videos" href="/ai#ai-videos" target="_blank"><button>Panoorin ang mga serye ng video</button></a>
     </span>
   </div>
@@ -158,7 +158,7 @@ theme: responsive
 <a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express-2019" target="_blank"><img src="/images/curriculum/course-tile-pre-reader-express.png" style="width: 100%" alt="Pre-reader na Mabilisang Kurso"></a><br><a class="linktag" id="prereader-course" href="https://studio.code.org/s/pre-express-2019" target="_blank">Mabilisang Kurso para sa mga pre-reader</a>
 
 </div>
-<div style="clear: both"></div>
+<div style="clear: both; margin-bottom: 2rem"></div>
 
 <h3>Self-paced na mga introduksyon sa Game Lab at App Lab</h3>
 <p>Inangkop mula sa aming mga kursong CS Discoveries at CS Principles, ang maiikli, self-paced na mga module na ito ay isang mahusay na paraan para matuto ng mga konsepto na sumasaklaw sa lahat ng wika ng programming at tool. <i>Kinakailangan ang account ng Code.org para maka-access</i>.</p>
@@ -172,7 +172,7 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>Introduction to Game Lab</strong></h3>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px">Introduction to Game Lab</h3>
         <div class="smalltext" style="text-align: left; margin-bottom: 10px">Program animations, interactive art, and games in Game Lab. Magsimula sa mga simpleng hugis at bumuo ng hanggang sa mas sopistikadong sprite-based na mga animation at mga laro.</div>        <a class="linktag" id="gamelab-intro" href="https://studio.code.org/s/csd3-virtual" target="_blank"><button>Subukan ang module</button></a>
     </span>
   </div>
@@ -186,7 +186,7 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Turtle Programming in App Lab</strong></h3>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px">Turtle Programming in App Lab</h3>
         <div class="smalltext" style="text-align: left; margin-bottom: 10px">Use simple JavaScript commands to draw shapes and images using a virtual “turtle.” Design and program your own digital scene!</div>
         <a class="linktag" id="turtle-applab" href="https://studio.code.org/s/csp3-virtual" target="_blank"><button>Try the module</button></a>
     </span>
@@ -201,7 +201,7 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Event-Driven Programming in App Lab</strong></h3>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px">Event-Driven Programming in App Lab</h3>
         <div class="smalltext" style="text-align: left; margin-bottom: 10px">Learn to design apps that respond to clicks and key presses. Gumawa ng serye ng mga simpleng application (apps) na nagtatagal sa web!</div>        <a class="linktag" id="events-applab" href="https://studio.code.org/s/csp5-virtual" target="_blank"><button>Subukan ang module</button></a>
     </span>
   </div>
@@ -224,7 +224,7 @@ theme: responsive
 
 <div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
   <div style="width: 87%; float: left">
-    <a class="linktag" id="applab" href="https://code.org/educate/applab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none"><strong>App Lab</strong></h3></a>
+    <a class="linktag" id="applab" href="https://code.org/educate/applab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none">App Lab</h3></a>
     <p style="color:#ffffff">Ang App Lab ay isang programming environment na kung saan pwede kang gumawa ng mga simpleng app. Magdisenyo ng app, code na may mga block o JavaScript para gumana, pagkatapos ay ibahagi ang iyong app sa ilang segundo.</p>
     <a class="linktag" id="applab" href="https://code.org/educate/applab" target="_blank"><button style="background-color:#e7e8ea; border-color:#e7e8ea; color:#696969">Bumuo ng app</button></a>
   </div>
@@ -233,7 +233,7 @@ theme: responsive
 
 <div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
   <div style="width: 87%; float: left">
-    <a class="linktag" id="gamelab" href="https://code.org/educate/gamelab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none"><strong>Game Lab</strong></h3></a>
+    <a class="linktag" id="gamelab" href="https://code.org/educate/gamelab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none">Game Lab</h3></a>
     <p style="color:#ffffff">Ang Game Lab ay isang programming environment kung saan pwede kang gumawa ng mga simpleng animation at laro gamit ang mga bagay at character na kayang makipag-ugnayan sa isa't isa.</p>
     <br>
     <a class="linktag" id="gamelab" href="https://code.org/educate/gamelab" target="_blank"><button style="background-color:#e7e8ea; border-color:#e7e8ea; color:#696969">Lumikha ng laro</button></a>
@@ -243,7 +243,7 @@ theme: responsive
 
 <div class="col-33" style="padding:15px; border-radius:15px; border:10px solid white; background-color:#00adbc">
   <div style="width: 87%; float: left">
-    <a class="linktag" id="weblab" href="https://code.org/educate/weblab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none"><strong>Web Lab</strong></h3></a>
+    <a class="linktag" id="weblab" href="https://code.org/educate/weblab" style="text-decoration:none" target="_blank"><h3 style="color:#ffffff; margin:0; margin-bottom:5px; text-decoration:none">Web Lab</h3></a>
     <p style="color:#ffffff">Ang Web Lab ay isang programming environment kung saan pwede kang gumawa ng mga simpleng web page gamit ang HTML at CSS. Disenyuhan ang iyong mga web page at ibahagi ang iyong site sa ilang segundo.</p>
     <br>
     <a class="linktag" id="weblab" href="https://code.org/educate/weblab" target="_blank"><button style="background-color:#e7e8ea; border-color:#e7e8ea; color:#696969">Lumika ng web page</button></a>
@@ -280,16 +280,12 @@ theme: responsive
 
 <h2>Walang computer sa bahay? Subukan ang CS sa iyong telepono gamit ang mga app na ito mula sa aming mga kasosyo</h2>
 
-<div class="col-33" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><img src="images/tutorials/new/boxisland.jpg" style="width: 100%" alt="Isla ng Kahon"></a><br><a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><h3 style="color:#7665a0"><strong>Box Island</strong></h3></a>Isang kaakit-akit na larong pang-telepono na coding na nagdadala ng mga mag-aaral sa isang kapana-panabik na pakikipagsapalaran, habang nagtuturo ng mga batayan ng coding, tulad ng mga algorithm, pagkilala ng pattern, mga pagkakasunud-sunod, mga loop at kondisyon. <i>(para sa lahat ng edad)</i>
+<div class="col-50" style="padding-right: 30px; padding-bottom:40px">
+  <a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><img src="images/tutorials/new/boxisland.jpg" style="width: 100%" alt="Isla ng Kahon"></a><br><a class="linktag" id="box-island" href="https://boxisland.io/" target="_blank"><h3 style="margin-top: 1rem;">Box Island</h3></a>A charming mobile coding game that takes learners on an exciting adventure, while teaching the fundamentals of coding, like algorithms, pattern recognition, sequences, loops and conditionals. <i>(para sa lahat ng edad)</i>
 </div>
 
-<div class="col-33" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><img src="/images/tutorials/hoc2018/codespark_create.jpg" style="width: 100%" alt="codeSpark"></a><br><a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><h3 style="color:#7665a0"><strong>codeSpark</strong></h3></a>Award-winning na learn-to-code platform para sa mga batang may edad na 5-9. Lutasin ang mga puzzle at gumawa ng mga laro gamit ang The Foos habang natututong mag-code. <strong>Tandaan: ang codeSpark ay nag-aalok ng libreng 3 buwang trial. Kinakailangan ang email address at impormasyon ng credit card ng magulang sa pag-signup.</strong> <i>(para sa mga pre-reader hanggang Grade 5)</i>
-</div>
-
-<div class="col-33" style="padding-right: 30px; padding-bottom:40px">
-  <a class="linktag" id="grasshopper" href="https://grasshopper.app/" target="_blank"><img src="/images/athome/grasshopper.png" style="width: 100%" alt="Tipaklong"></a><br><a class="linktag" id="grasshopper" href="https://grasshopper.app/" target="_blank"><h3 style="color:#7665a0"><strong>Grasshopper</strong></h3></a>Matuto ng coding na may masaya, mabilis na mga aralin sa iyong telepono na nagtuturo sa iyo na magsulat ng totoong JavaScript. Isang Code na may Google Program. <i>(para sa middle school pataas)</i>
+<div class="col-50" style="padding-right: 30px; padding-bottom:40px">
+  <a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><img src="/images/tutorials/hoc2018/codespark_create.jpg" style="width: 100%" alt="codeSpark"></a><br><a class="linktag" id="codespark" href="https://accounts.codespark.com/promo?utm_source=codeorg&utm_medium=referral&utm_campaign=schoolsclosed-parents&utm_content=offer&promoCode=schoolclosed" target="_blank"><h3 style="margin-top: 1rem;">codeSpark</h3></a>Award-winning learn-to-code platform for kids ages 5-9. Lutasin ang mga puzzle at gumawa ng mga laro gamit ang The Foos habang natututong mag-code. <strong>Tandaan: ang codeSpark ay nag-aalok ng libreng 3 buwang trial. Kinakailangan ang email address at impormasyon ng credit card ng magulang sa pag-signup.</strong> <i>(para sa mga pre-reader hanggang Grade 5)</i>
 </div>
 
 <div style="clear: both; margin-bottom: 15px"></div>
@@ -306,7 +302,7 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="margin-top:10px"><strong>CodeBytes</strong></h3>
+        <h3 class="tutorial-info-h" style="margin-top:10px">CodeBytes</h3>
         <div class="smalltext" style="color: dimgray;">CodeBytes are easy-to-digest, 20 minute interactive lessons blending computer science with real-world topics. Magsanay ang isang AI na magbasa ng sign language, magdisenyo ng app para sa kabutihan, galugarin ang mundo ng Minecraft, at higit pa!</div>        <br>        <br>        <a class="linktag" id="codebytes" href="https://code.org/codebytes" target="_blank"><button>Tingnan ang mga episode</button></a>
     </span>
   </div>
@@ -320,7 +316,7 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="margin-top:10px"><strong>Code Break</strong></h3>
+        <h3 class="tutorial-info-h" style="margin-top:10px">Code Break</h3>
         <div class="smalltext" style="">Keep computer science fun by taking a Code Break! Pwede kang lumikha ng isang cypher kasama si Ashton Kutcher, alamin ang tungkol sa mga variable kasama si Yara Shahidi, at tuklasin din kung paano gumagana ang Internet kasama ang aktwal na imbentor ng Internet, si Vint Cerf!</div>        <br>        <a class="linktag" id="codebreak" href="https://code.org/break" target="_blank"><button>Kumonekta</button></a>
     </span>
   </div>
