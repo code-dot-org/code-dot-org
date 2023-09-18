@@ -514,7 +514,7 @@ class ProjectsController < ApplicationController
 
   def can_share
     project = Project.find_by_channel_id(params[:channel_id])
-    render json: {can_share: project.created_at + 30.minutes > Time.now, created_at: project.created_at}
+    render json: {can_share: project.old_enough_to_publish?, created_at: project.created_at}
   end
 
   # Due to risk of inappropriate content, we can hide non-featured Applab

@@ -71,7 +71,7 @@ class Api::V1::UsersController < Api::V1::JSONApiController
   # GET /api/v1/users/<user_id>/can_publish_based_on_account_create
   def get_account_existed_long_enough_for_project_publishing
     render json: {
-      account_old_enough: current_user.created_at < Time.now - 7.days
+      account_old_enough: Time.now > current_user.created_at + 7.days
     }
   end
 

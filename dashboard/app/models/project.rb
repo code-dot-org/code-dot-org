@@ -28,6 +28,7 @@ class Project < ApplicationRecord
   belongs_to :project_storage, foreign_key: 'storage_id', optional: true
   # Note: owner is nil for projects that are owned by users without an account
   has_one :owner, class_name: 'User', through: :project_storage, source: :user
+  has_one :channel_token
 
   # Finds a project by channel id. Like `find`, this method raises an
   # ActiveRecord::RecordNotFound error if the corresponding project cannot
@@ -51,5 +52,13 @@ class Project < ApplicationRecord
   # value as project.owner.id but is more efficient if only the user_id is needed.
   def owner_id
     project_storage.user_id
+  end
+
+  def old_enough_to_publish?
+    # Allow projects created via free play levels on Hour of Code tutorials
+    # to be published immediately.
+    return true if channel_token&.script&.hoc?
+
+    Time.now > created_at + 30.minutes
   end
 end

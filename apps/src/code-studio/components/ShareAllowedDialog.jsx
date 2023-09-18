@@ -22,7 +22,9 @@ import QRCode from 'qrcode.react';
 import copyToClipboard from '@cdo/apps/util/copyToClipboard';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import Button from '../../templates/Button';
+import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
 import defaultThumbnail from '@cdo/static/projects/project_default.png';
+import {getStore} from '@cdo/apps/redux';
 
 function recordShare(type) {
   if (!window.dashboard) {
@@ -100,6 +102,9 @@ class ShareAllowedDialog extends React.Component {
     isFacebookAvailable: false,
     replayVideoUnavailable: false,
     hasBeenCopied: false,
+    hasLoadedAccountAndProjectAge: false,
+    isAccountOldEnoughToPublish: false,
+    isProjectOldEnoughToPublish: false,
   };
 
   // maybe move the checks for whether project/user share allowed here?
@@ -117,14 +122,47 @@ class ShareAllowedDialog extends React.Component {
         isTwitterAvailable => this.setState({isTwitterAvailable})
       );
     }
+
+    this.checkPublishability();
   }
 
   componentDidUpdate(prevProps, prevState, snapshot) {
     if (this.props.isOpen && !prevProps.isOpen) {
       recordShare('open');
       this.setState({hasBeenCopied: false});
+
+      this.checkPublishability();
     }
   }
+
+  checkPublishability = () => {
+    let checkIfCanPublishProject = fetch(
+      `/projects/${dashboard.project.getStandaloneApp()}/${dashboard.project.getCurrentId()}/can_share`
+    )
+      .then(response => response.json())
+      .then(data => {
+        console.log(`project old enough to share: ${data.can_share}`);
+        this.setState({isProjectOldEnoughToPublish: data.can_share});
+      });
+
+    // signed out user?
+    const userId = getStore().getState().currentUser.userId;
+    let checkIfcanPublishAccount = fetch(
+      `/api/v1/users/${userId}/can_publish_based_on_account_create`
+    )
+      .then(response => response.json())
+      .then(data => {
+        console.log(`account old enough to share: ${data.account_old_enough}`);
+        this.setState({isAccountOldEnoughToPublish: data.account_old_enough});
+      });
+
+    Promise.all([checkIfCanPublishProject, checkIfcanPublishAccount]).then(
+      () => {
+        console.log('requests completed');
+        this.setState({loadedAccountAndProjectAge: true});
+      }
+    );
+  };
 
   replayVideoNotFound = () => {
     this.setState({
@@ -197,6 +235,12 @@ class ShareAllowedDialog extends React.Component {
       exportApp,
       channelId,
     } = this.props;
+
+    const {
+      isAccountOldEnoughToPublish,
+      isProjectOldEnoughToPublish,
+      loadedAccountAndProjectAge,
+    } = this.state;
 
     // inRestrictedShareMode overrides canPublish and canShareSocial
     const publishAllowed = canPublish && !inRestrictedShareMode;
@@ -344,21 +388,29 @@ class ShareAllowedDialog extends React.Component {
                     </span>
                   </Button>
 
-                  {publishAllowed && !isPublished && (
-                    <Button
-                      type="button"
-                      color={Button.ButtonColor.neutralDark}
-                      id="share-dialog-publish-button"
-                      style={
-                        hasThumbnail ? styles.button : styles.buttonDisabled
-                      }
-                      onClick={wrapShareClick(this.publish, 'publish')}
-                      disabled={!hasThumbnail}
-                      className="no-mc"
-                    >
-                      <span>{i18n.publish()}</span>
-                    </Button>
-                  )}
+                  {publishAllowed &&
+                    !isPublished &&
+                    (loadedAccountAndProjectAge ? (
+                      <Button
+                        type="button"
+                        color={Button.ButtonColor.neutralDark}
+                        id="share-dialog-publish-button"
+                        style={
+                          hasThumbnail ? styles.button : styles.buttonDisabled
+                        }
+                        onClick={wrapShareClick(this.publish, 'publish')}
+                        disabled={
+                          !hasThumbnail ||
+                          !isAccountOldEnoughToPublish ||
+                          !isProjectOldEnoughToPublish
+                        }
+                        className="no-mc"
+                      >
+                        <span>{i18n.publish()}</span>
+                      </Button>
+                    ) : (
+                      <Spinner size="medium" style={{marginRight: 16}} />
+                    ))}
                   {publishAllowed && isPublished && (
                     <PendingButton
                       id="share-dialog-unpublish-button"
@@ -439,6 +491,34 @@ class ShareAllowedDialog extends React.Component {
                     </span>
                   </div>
                 )}
+                {/* do we need to check isPublished flag? */}
+                {publishAllowed &&
+                  !isPublished &&
+                  !isProjectOldEnoughToPublish &&
+                  loadedAccountAndProjectAge && (
+                    <div style={{clear: 'both', marginTop: 10}}>
+                      <span
+                        style={styles.thumbnailWarning}
+                        className="thumbnail-warning"
+                      >
+                        Can't publish, project too recent!
+                      </span>
+                    </div>
+                  )}
+                {/* do we need to check isPublished flag? */}
+                {publishAllowed &&
+                  !isPublished &&
+                  !isAccountOldEnoughToPublish &&
+                  loadedAccountAndProjectAge && (
+                    <div style={{clear: 'both', marginTop: 10}}>
+                      <span
+                        style={styles.thumbnailWarning}
+                        className="thumbnail-warning"
+                      >
+                        Can't publish, account not old enough!
+                      </span>
+                    </div>
+                  )}
                 {inRestrictedShareMode && (
                   <div style={{clear: 'both', marginTop: 10}}>
                     <span
