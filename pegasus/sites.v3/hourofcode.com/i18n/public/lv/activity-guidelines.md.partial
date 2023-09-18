@@ -11,7 +11,7 @@ layout: wide
 
 # Vadlīnijas pamācību un stundu izveidei un iesniegšanai “Programēšanas stunda™” un datorzinātņu izglītības nedēļā
 
-Code.org rīko dažādas Programmas stundas™ aktivitātes, nodarbības un videoklipus Code.org un Kodēšanas stundas tīmekļa vietnēs. The current list is at [hourofcode.com/learn]({{ urls/learn }}).
+Code.org rīko dažādas Programmas stundas™ aktivitātes, nodarbības un videoklipus Code.org un Kodēšanas stundas tīmekļa vietnēs. Pašreizējais saraksts ir vietnē []({{ urls/learn }})hourofcode.com/learn.
 
 Vēlaties iesniegt savu pašvadāmu pamācību, skolotāju vadītu nodarbību vai robotikas/veidotāja darbību, kas izskaidro datorzinātnes principu? Pievienojieties šai globālajai kustībai un palīdziet dalībniekiem visā pasaulē sākt darbu ar programmēšanas stundu vai doties tālāk ar vairāku stundu, dienu vai nedēļu ilgām aktivitātēm.
 
@@ -19,7 +19,7 @@ Vēlaties iesniegt savu pašvadāmu pamācību, skolotāju vadītu nodarbību va
 
 Daži padomi:
 
-1. **Submit more than one activity**: If you’ve built activities for different levels, different ages, or other categories, we list your activities separately so each teacher can find the right thing for their classroom. Iesniegt katru pamācību vai darbību atsevišķi. Ņemot vērā iesniegumu skaitu, ko esam redzējuši pēdējos gados, mums būs laiks pārskatīt **līdz 5 aktivitātēm** katram partnerim. Pēc tam mēs darīsim visu iespējamo, lai pārskatītu pēc iespējas vairāk pirms Programmēšanas stundas sākuma.
+1. **Iesniedziet vairāk nekā vienu darbību**: ja esat izveidojis aktivitātes dažādiem līmeņiem, dažādiem vecumiem vai citām kategorijām, mēs uzskaitām jūsu aktivitātes atsevišķi, lai katrs skolotājs varētu atrast sev piemērotāko klasi. Iesniegt katru pamācību vai darbību atsevišķi. Ņemot vērā iesniegumu skaitu, ko esam redzējuši pēdējos gados, mums būs laiks pārskatīt **līdz 5 aktivitātēm** katram partnerim. Pēc tam mēs darīsim visu iespējamo, lai pārskatītu pēc iespējas vairāk pirms Programmēšanas stundas sākuma.
 
 2. **Beyond iesācējs nodarbības**: Papildus nodarbības skolotājiem un studentiem, kuri mācās datorzinātnes pirmo reizi, mēs uzskaitīt mācību pieredzi datorzinātnes gudriem klasēs, kas vēlas iet mazliet tālāk! Palīdziet mums, iesniedzot nodarbības klasēm, kas jau ir apmierinātas ar pamatiem.
 
@@ -46,7 +46,7 @@ Daži padomi:
 
 Šīs aktivitātes ir paredzētas, lai studenti varētu pašnodarboties ar pamācību. Tie neprasa daudz mācību no skolotāja vai skolotāja sagatavošanu darbu.
 
-**Teacher Facilitated lesson ([example](https://studio.code.org/s/course1/lessons/2/levels/1), [template](https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8axKIzv8YI56JGA))**
+**Skolotāju atvieglota nodarbība ([piemērs](https://studio.code.org/s/course1/lessons/2/levels/1), [veidne](https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8axKIzv8YI56JGA))**
 
 Tagad, kad simtiem tūkstošu pedagogu ir izmēģinājuši Programēšanas stundu, daudzas klases ir gatavas vairāk radošām aktivitātēm, kas māca datorzinātņu pamatus. Lai palīdzētu progresīvākiem skolotājiem atrast iedvesmu, mēs apkopojam un kurējam “skolotāju vadītas” nodarbības un aktivitāšu plānus programmēšanas stundas veterāniem.
 
@@ -85,7 +85,7 @@ Programmēšanas stundas mērķis ir dot iesācējiem pieejamu pirmo datorzināt
 
 Darbībām vajadzētu mācīt datorzinātnes koncepciju, piemēram, cilpas, nosacījumi, šifrēšanu vai kā internets darbojas. Aktivitāte var arī mācīt par to, kā datorzinātne savienojas ar reālās pasaules profesijām, notikumiem vai vēsturi. Piemēram, UX noformējuma mācīšana, lai padarītu lietotnes, kas ir nozīmīgas auditorijai vai cēloņiem. Mēs atturam no darbībām, kas vērstas uz programmēšanas sintaksi, nevis uz jēdzieniem. Piemēram, mēs uzskaitīsim, bet ne izcelt darbības, kas māca HTML. Tāpat mēs atturam bloķēt programmēšanas nodarbības, kas koncentrējas uz konfigurācijas opciju iestatīšanu/mainīšanu, nevis mācīties, kā modelēt algoritmu vai procesu.
 
-*Technical requirements:* Because of the wide variety of school and classroom technology setups, the best activities are Web-based or smartphone-friendly, or otherwise unplugged-style activities that teach computer science concepts without the use of a computer (see <http://csunplugged.com/>). Darbības, kurām nepieciešama programmu instalēšana, datora programma vai spēļu konsole, ir labi, bet ne ideāla. Mēs neuzskaitīsim darbības, kurām nepieciešama reģistrēšanās vai maksājums. (Robotikas darbībām var būt nepieciešama robotikas iegāde.)
+*Tehniskās prasības: Skolas un klases tehnoloģiju iestatījumu daudzveidības* dēļ labākās darbības ir tīmeklī vai viedtālrunī draudzīgas vai citādi atvienotas darbības, kas māca datorzinātnes koncepcijas, neizmantojot datoru (sk. http://csunplugged.com/). [](http://csunplugged.com/) Darbības, kurām nepieciešama programmu instalēšana, datora programma vai spēļu konsole, ir labi, bet ne ideāla. Mēs neuzskaitīsim darbības, kurām nepieciešama reģistrēšanās vai maksājums. (Robotikas darbībām var būt nepieciešama robotikas iegāde.)
 
 *Studentu vadīja (Self-Vadoties) Formāts:* Sākotnējā kodēšanas stunda tika veidota galvenokārt uz panākumiem pašapkalpošanās konsultācijas vai nodarbības, pēc izvēles veicināja skolotājs. Ir daudz esošo iespēju, bet, ja vēlaties izveidot jaunu, šīs aktivitātes ir jāizstrādā tā, lai tās varētu būt jautri studentam, kas strādā vienatnē, vai klasē, kuras skolotājam ir minimāla sagatavošana vai CS fons. Viņiem būtu jānodrošina virzieni studentiem pretstatā beztermiņa stundu ilgam izaicinājumam. Ideālā gadījumā instrukcijas un konsultācijas tiek integrētas tieši programmēšanas platformā, lai izvairītos no cilņu vai logu pārslēgšanas starp pamācību un programmēšanas platformu.
 
@@ -142,11 +142,11 @@ Kas tev būs nepieciešams:
     * Atslēgtas
 * Programmēšanas stundas aktivitātes ekrānuzņēmums vai mārketinga attēls. Lūdzu, sūtiet vismaz vienu attēlu ar 4:3 izmēriem. Tam jābūt vismaz 520px ar 390px. Šim attēlam uz tā jābūt NO teksta (izņemot jūsu logotipu), lai padarītu to pieejamāku tiem, kas nav angļu valodā runājošie. Ja nepieciešamais attēls netiks nodrošināts, mēs izmantosim savu ekrānuzņēmumu no jūsu apmācībām VAI mēs varam to neizmantot. Visi attēli ir jāiesniedz kā URL saite uz .jpg, .jpeg vai .png.
 * Lai precīzāk izsekotu līdzdalību, trešo pušu apmācības partneriem ir jāiekļauj 1 pikseļa izsekošanas attēli savā Programēšanas stundas pamācību pirmajā lapā. Skatiet [izsekošanas pikseļu](#pixel) sadaļu zemāk, lai iegūtu sīkāku informāciju.
-* Upon finishing your activity, users should be directed to [code.org/api/hour/finish](https://code.org/api/hour/finish) where they will be able to: 
+* Kad esat pabeidzis savu darbību, lietotāji ir jānovirza uz [code.org/api/hour/finish](https://code.org/api/hour/finish) , kur viņi varēs: 
     * Daļa sociālajos plašsaziņas līdzekļos, ka viņi pabeiguši Programmēšanas stunda
     * Saņemiet sertifikātu, ka viņi pabeiguši Programmēšanas stundu
     * Skatiet līderu padomus par to, kurās valstīs/pilsētās ir visaugstākie dalības rādītāji Programmēšanas stundas aktivitātēs
-    * For users who spend an hour on your activity and don’t complete it, please include a button on your activity that says “I’m finished with my Hour of Code” which links back to [code.org/api/hour/finish](https://code.org/api/hour/finish) as well.
+    * Lietotājiem, kuri pavada stundu jūsu darbībai un nepabeidz to, lūdzu, iekļaujiet pogu savā darbībā, kurā teikts: “Es esmu pabeidzis savu kodēšanas stundu”, kas saista atpakaļ uz [](https://code.org/api/hour/finish) code.org/api/hour/finish, kā arī.
 * (Papildiespēja) Mēs varam sekot ar tiešsaistes aptaujas/veidlapas saiti, lūdzot ziņojumu par šādiem darbības rādītājiem: 
     * Tiešsaistes darbībām (īpaši viedtālruņu/planšetdatoru lietotnēm): 
         * Lietotāju skaits
@@ -263,7 +263,7 @@ PIEZĪME.: Tas nav svarīgi, lai veiktu instalējamas programmas (iOS vai Androi
 
 Piemērs sekošanas pikseļi Dance Party:
 
-IMG SRC = <http://code.org/api/hour/begin_dance.png>   
+IMG SRC = http://code.org/api/hour/begin_dance.png [](http://code.org/api/hour/begin_dance.png)   
 
 
 [**Atgriezties sākumā**](#top)
