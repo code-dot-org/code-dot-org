@@ -8,33 +8,7 @@ import {showShareDialog} from './components/shareDialogRedux';
 import {AllPublishableProjectTypes} from '../util/sharedConstants';
 
 export function shareProject(shareUrl) {
-  let canPublishProject, canPublishAccount;
-  // let checkIfCanPublishProject = fetch(
-  //   `/projects/${dashboard.project.getStandaloneApp()}/${dashboard.project.getCurrentId()}/can_share`
-  // )
-  //   .then(response => response.json())
-  //   .then(data => {
-  //     canPublishProject = data.can_share;
-  //   });
-
-  // const userId = getStore().getState().currentUser.userId;
-  // let checkIfcanPublishAccount = fetch(
-  //   `/api/v1/users/${userId}/can_publish_based_on_account_create`
-  // )
-  //   .then(response => response.json())
-  //   .then(data => {
-  //     canPublishAccount = data.account_old_enough;
-  //   });
-
-  const saveIfSourcesChanged = dashboard.project.saveIfSourcesChanged();
-
-  Promise.all([
-    // checkIfCanPublishProject,
-    // checkIfcanPublishAccount,
-    saveIfSourcesChanged,
-  ]).then(() => {
-    console.log(canPublishProject);
-    console.log(canPublishAccount);
+  dashboard.project.saveIfSourcesChanged().then(() => {
     var dialogDom = document.getElementById('project-share-dialog');
     if (!dialogDom) {
       dialogDom = document.createElement('div');
