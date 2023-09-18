@@ -75,7 +75,14 @@ namespace :install do
     end
   end
 
-  tasks = []
+  desc 'Install emacs'
+  timed_task_with_logging :emacs do
+    if RakeUtils.local_environment?
+      RakeUtils.system_stream_output 'emacs --help'
+    end
+  end
+
+  tasks = [:emacs]
   tasks << :hooks if rack_env?(:development)
   tasks << :locals_yml if rack_env?(:development)
   tasks << :apps if CDO.build_apps
