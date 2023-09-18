@@ -966,7 +966,7 @@ fa:
             '3': جوش شیرین
             '5': هر دو
       DansBlocks_setForegroundEffect2:
-        text: اجرای افکت [EFFECT][0]
+        text: "اجرای افکت [EFFECT][0]"
         options:
           EFFECT:
             '"bubbles"': حباب (افکت)
