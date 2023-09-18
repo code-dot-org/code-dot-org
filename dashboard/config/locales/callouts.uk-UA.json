@@ -288,6 +288,9 @@
         "CourseD_Dance_2020_01_2021": {
           "dance_callout_01": "Оберіть тип танцівника тут."
         },
+        "CourseD_Dance_2020_01_2023": {
+          "dance_callout_01": "Оберіть тип танцівника тут."
+        },
         "CourseD_Dance_2020_02": {
           "arrow_buttons": "Натискайте клавіші зі стрілками, щоб управляти своїм танцівником.",
           "dance_callout_11_a": "Додайте цей блок до своєї програми."
@@ -300,6 +303,10 @@
           "arrow_buttons": "Натискайте клавіші зі стрілками, щоб управляти своїм танцівником.",
           "dance_callout_11_a": "Додайте цей блок до своєї програми."
         },
+        "CourseD_Dance_2020_02_2023": {
+          "arrow_buttons": "Натискайте клавіші зі стрілками, щоб управляти своїм танцівником.",
+          "dance_callout_11_a": "Додайте цей блок до своєї програми."
+        },
         "CourseD_Dance_2020_04": {
           "dance_callout_02": "Додайте цей блок до своєї програми!"
         },
@@ -307,6 +314,9 @@
           "dance_callout_02": "Додайте цей блок до своєї програми!"
         },
         "CourseD_Dance_2020_04_2021": {
+          "dance_callout_02": "Додайте цей блок до своєї програми!"
+        },
+        "CourseD_Dance_2020_04_2023": {
           "dance_callout_02": "Додайте цей блок до своєї програми!"
         },
         "CourseD_Dance_2020_05": {
@@ -318,6 +328,9 @@
         "CourseD_Dance_2020_05_2021": {
           "dance_callout_05": "Додайте нову подію до програми."
         },
+        "CourseD_Dance_2020_05_2023": {
+          "dance_callout_05": "Додайте нову подію до програми."
+        },
         "CourseD_Dance_2020_06": {
           "dance_party_11_5_groups": "Новий блок!"
         },
@@ -325,6 +338,9 @@
           "dance_party_11_5_groups": "Новий блок!"
         },
         "CourseD_Dance_2020_06_2021": {
+          "dance_party_11_5_groups": "Новий блок!"
+        },
+        "CourseD_Dance_2020_06_2023": {
           "dance_party_11_5_groups": "Новий блок!"
         },
         "CourseD_Dance_2020_07": {
@@ -336,6 +352,9 @@
         "CourseD_Dance_2020_07_2021": {
           "setprop_hint": "Новий блок!"
         },
+        "CourseD_Dance_2020_07_2023": {
+          "setprop_hint": "Новий блок!"
+        },
         "CourseD_Dance_2020_09": {
           "new_block_3": "Новий блок!",
           "new_block_4": "Новий блок!"
@@ -345,6 +364,10 @@
           "new_block_4": "Новий блок!"
         },
         "CourseD_Dance_2020_09_2021": {
+          "new_block_3": "Новий блок!",
+          "new_block_4": "Новий блок!"
+        },
+        "CourseD_Dance_2020_09_2023": {
           "new_block_3": "Новий блок!",
           "new_block_4": "Новий блок!"
         },
@@ -375,10 +398,17 @@
           "minitoolbox": "Клацніть тут, щоб розгорнути блок.",
           "pointerlocation": "Перетягніть блок суб'єкта сюди."
         },
+        "CourseF_outbreak2_2023": {
+          "minitoolbox": "Клацніть тут, щоб розгорнути блок.",
+          "pointerlocation": "Перетягніть блок суб'єкта сюди."
+        },
         "CourseF_outbreak7": {
           "costumes_callout": "Клацніть, щоб створити новий костюм"
         },
         "CourseF_outbreak7_-2022-2": {
+          "costumes_tab": "Натисніть тут, щоб додати костюми до вашого проекту."
+        },
+        "CourseF_outbreak7_2023": {
           "costumes_tab": "Натисніть тут, щоб додати костюми до вашого проекту."
         },
         "Dance_2019_01": {
@@ -441,6 +471,9 @@
         "Function intro Ryan_2021": {
           "Function_intro_Ryan_1": "Ця інструкція каже комп’ютеру запустити ВЕЛИКИЙ фрагмент програмного коду з тим самим іменем у робочій області."
         },
+        "Function intro Ryan_2023": {
+          "Function_intro_Ryan_1": "Ця інструкція каже комп’ютеру запустити ВЕЛИКИЙ фрагмент програмного коду з тим самим іменем у робочій області."
+        },
         "Geometric Sun": {
           "4-5_Artist_Patterns_Free_Play_1": "Всі твої улюблені боки тепер посортовані в категорії. Нажми на ці слова, щоб побачити куди все ділось!"
         },
@@ -481,6 +514,9 @@
         "MC_HOC_2017_03_Cole_2021": {
           "MC_HOC_2017_03_Cole_1": "Це цикл \"повтор\"!  Перемістіть його до робочої області та додайте код, який потрібно виконати кілька разів."
         },
+        "MC_HOC_2017_03_Cole_2023": {
+          "MC_HOC_2017_03_Cole_1": "Це цикл \"повтор\"!  Перемістіть його до робочої області та додайте код, який потрібно виконати кілька разів."
+        },
         "MC_HOC_2017_04_Cole": {
           "MC_HOC_2017_04_Cole_a": "Agent може ходити над водою, а гравець – ні!"
         },
@@ -494,6 +530,9 @@
           "MC_HOC_2017_04_Cole_a": "Agent може ходити над водою, а гравець – ні!"
         },
         "MC_HOC_2017_04_Cole_2021": {
+          "MC_HOC_2017_04_Cole_a": "Agent може ходити над водою, а гравець – ні!"
+        },
+        "MC_HOC_2017_04_Cole_2023": {
           "MC_HOC_2017_04_Cole_a": "Agent може ходити над водою, а гравець – ні!"
         },
         "MC_HOC_2017_06_Cole": {
@@ -511,6 +550,9 @@
         "MC_HOC_2017_06_Cole_2021": {
           "MC_HOC_2017_06_Cole_1": "Ці блоки не можна відкинути, але можна змінити!"
         },
+        "MC_HOC_2017_06_Cole_2023": {
+          "MC_HOC_2017_06_Cole_1": "Ці блоки не можна відкинути, але можна змінити!"
+        },
         "MC_HOC_2017_Ali": {
           "MC_HOC_2017_08_RY_1": "Agent може ходити над лавою, а гравець – ні!  "
         },
@@ -524,6 +566,9 @@
           "MC_HOC_2017_08_RY_1": "Agent може ходити над лавою, а гравець – ні!  "
         },
         "MC_HOC_2017_Ali_2021": {
+          "MC_HOC_2017_08_RY_1": "Agent може ходити над лавою, а гравець – ні!  "
+        },
+        "MC_HOC_2017_Ali_2023": {
           "MC_HOC_2017_08_RY_1": "Agent може ходити над лавою, а гравець – ні!  "
         },
         "NEW Course 4 Artist Functions 7": {
@@ -576,6 +621,9 @@
         "Overworld Chop Trees_2021": {
           "craft_callout_preplaced": "Ми вже розмістили деякі блоки в заготовці"
         },
+        "Overworld Chop Trees_2023": {
+          "craft_callout_preplaced": "Ми вже розмістили деякі блоки в заготовці"
+        },
         "Overworld House Frame Chosen": {
           "craft_callout_preplaced_house": "Цей код розпочне побудову будинку. Можеш його завершити?"
         },
@@ -589,6 +637,9 @@
           "craft_callout_preplaced_house": "Цей код розпочне побудову будинку. Можеш його завершити?"
         },
         "Overworld House Frame Chosen_2021": {
+          "craft_callout_preplaced_house": "Цей код розпочне побудову будинку. Можеш його завершити?"
+        },
+        "Overworld House Frame Chosen_2023": {
           "craft_callout_preplaced_house": "Цей код розпочне побудову будинку. Можеш його завершити?"
         },
         "Overworld Move to Sheep": {
@@ -607,6 +658,9 @@
           "craft_drag_block_callout": "Перетягни блок 'рухатися вперед' та прикріпи його під іншим блоком",
           "craft_run_button_callout": "Натисни \"Запустити\", щоб випробувати програму"
         },
+        "Overworld Move to Sheep_2023": {
+          "craft_run_button_callout": "Натисни \"Запустити\", щоб випробувати програму"
+        },
         "Overworld Place Wall": {
           "craft_inside_repeat": "Повторюй дії, розміщуючи тут блоки"
         },
@@ -620,6 +674,9 @@
           "craft_inside_repeat": "Повторюй дії, розміщуючи тут блоки"
         },
         "Overworld Place Wall_2021": {
+          "craft_inside_repeat": "Повторюй дії, розміщуючи тут блоки"
+        },
+        "Overworld Place Wall_2023": {
           "craft_inside_repeat": "Повторюй дії, розміщуючи тут блоки"
         },
         "Underground Avoiding Lava": {
@@ -637,6 +694,9 @@
         "Underground Avoiding Lava_2021": {
           "craft_callout_moveforward": "Цей код перевіряє наявність лави, можеш додати команду, щоб рухатися вперед?"
         },
+        "Underground Avoiding Lava_2023": {
+          "craft_callout_moveforward": "Цей код перевіряє наявність лави, можеш додати команду, щоб рухатися вперед?"
+        },
         "Underground Iron": {
           "craft_what_is_iron": "Добувай це залізо!"
         },
@@ -652,16 +712,25 @@
         "Underground Iron_2021": {
           "craft_what_is_iron": "Добувай це залізо!"
         },
+        "Underground Iron_2023": {
+          "craft_what_is_iron": "Добувай це залізо!"
+        },
         "Virtual Pet 2_-2022-2": {
           "vp_costumes": "Клацни тут, щоб додати нові костюми до свого проєкту!"
         },
         "Virtual Pet 2_2021": {
           "vp_costumes": "Клацни тут, щоб додати нові костюми до свого проєкту!"
         },
+        "Virtual Pet 2_2023": {
+          "vp_costumes": "Клацни тут, щоб додати нові костюми до свого проєкту!"
+        },
         "Virtual Pet 6_-2022-2": {
           "vp_costumes": "Клацни тут, щоб додати нові костюми до свого проєкту!"
         },
         "Virtual Pet 6_2021": {
+          "vp_costumes": "Клацни тут, щоб додати нові костюми до свого проєкту!"
+        },
+        "Virtual Pet 6_2023": {
           "vp_costumes": "Клацни тут, щоб додати нові костюми до свого проєкту!"
         },
         "course3_bee_debugging_challenge1": {
@@ -680,10 +749,16 @@
         "courseA_EOC_playlab_animals2022": {
           "question_mark": "?"
         },
+        "courseA_EOC_playlab_animals_2023": {
+          "question_mark": "?"
+        },
         "courseA_EOC_playlab_fantasy": {
           "question_mark": "?"
         },
         "courseA_EOC_playlab_fantasy2022": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_fantasy_2023": {
           "question_mark": "?"
         },
         "courseA_EOC_playlab_people": {
@@ -692,10 +767,16 @@
         "courseA_EOC_playlab_people2022": {
           "question_mark": "?"
         },
+        "courseA_EOC_playlab_people_2023": {
+          "question_mark": "?"
+        },
         "courseA_artist_loops4": {
           "courseA_artist_loops4_1": "Це число говорить вам, скільки з цих блоків ви можете використовувати в цій головоломці."
         },
         "courseA_artist_loops42022": {
+          "courseA_artist_loops4_1": "Це число говорить вам, скільки з цих блоків ви можете використовувати в цій головоломці."
+        },
+        "courseA_artist_loops42022_2023": {
           "courseA_artist_loops4_1": "Це число говорить вам, скільки з цих блоків ви можете використовувати в цій головоломці."
         },
         "courseA_artist_loops4_2018": {
@@ -731,6 +812,9 @@
         "courseA_collector_loops1_2021": {
           "courseA_collector_loops1_1": "Чи ви бачите деякі нові блоки в панелі інструментів? Не хвилюйтеся, ми покажемо, як їх використовувати пізніше у етапі."
         },
+        "courseA_collector_loops1_2023": {
+          "courseA_collector_loops1_1": "Чи ви бачите деякі нові блоки в панелі інструментів? Не хвилюйтеся, ми покажемо, як їх використовувати пізніше у етапі."
+        },
         "courseA_collector_loops3": {
           "gradek_adventurer_loops2_1": "Це число говорить вам, скільки з цих блоків ви можете використовувати в цій головоломці."
         },
@@ -747,6 +831,9 @@
           "gradek_adventurer_loops2_1": "Це число говорить вам, скільки з цих блоків ви можете використовувати в цій головоломці."
         },
         "courseA_collector_loops3_2021": {
+          "gradek_adventurer_loops2_1": "Це число говорить вам, скільки з цих блоків ви можете використовувати в цій головоломці."
+        },
+        "courseA_collector_loops3_2023": {
           "gradek_adventurer_loops2_1": "Це число говорить вам, скільки з цих блоків ви можете використовувати в цій головоломці."
         },
         "courseA_collector_preLoops2": {
@@ -783,6 +870,9 @@
           "courseA_maze_seq1_1": "Натисніть лампочку, коли вам потрібна підказка!"
         },
         "courseA_maze_seq1_2021": {
+          "courseA_maze_seq1_1": "Натисніть лампочку, коли вам потрібна підказка!"
+        },
+        "courseA_maze_seq1_2023": {
           "courseA_maze_seq1_1": "Натисніть лампочку, коли вам потрібна підказка!"
         },
         "courseA_maze_seq2": {
@@ -824,6 +914,9 @@
         "courseB_collector_loops1_2021": {
           "courseB_collector_loops1_1": "Чи ви бачите деякі нові блоки в панелі інструментів? Не хвилюйтеся, ми покажемо, як їх використовувати пізніше у етапі."
         },
+        "courseB_collector_loops1_2023": {
+          "courseB_collector_loops1_1": "Чи ви бачите деякі нові блоки в панелі інструментів? Не хвилюйтеся, ми покажемо, як їх використовувати пізніше у етапі."
+        },
         "courseB_maze_seq1": {
           "courseB_maze_seq1": "Натисніть лампочку, коли вам потрібна підказка!"
         },
@@ -840,6 +933,9 @@
           "courseB_maze_seq1": "Натисніть лампочку, коли вам потрібна підказка!"
         },
         "courseB_maze_seq1_2021": {
+          "courseB_maze_seq1": "Натисніть лампочку, коли вам потрібна підказка!"
+        },
+        "courseB_maze_seq1_2023": {
           "courseB_maze_seq1": "Натисніть лампочку, коли вам потрібна підказка!"
         },
         "courseB_maze_seq2": {
@@ -872,7 +968,13 @@
         "courseC_PlayLab_events_challenge1_2021": {
           "courseC_PlayLab_events_challenge1_1": "Цей блок дозволяє переміщати виконавців у різні частини ігрового простору.\n"
         },
+        "courseC_PlayLab_events_challenge1_2023": {
+          "courseC_PlayLab_events_challenge1_1": "Цей блок дозволяє переміщати персонажів у різні частини ігрового простору.\n"
+        },
         "courseC_PlayLab_events_lesson_extras": {
+          "courseC_PlayLab_events_challenge1_1": "Цей блок дозволяє переміщати персонажів у різні частини ігрового простору.\n"
+        },
+        "courseC_PlayLab_events_lesson_extras_2023": {
           "courseC_PlayLab_events_challenge1_1": "Цей блок дозволяє переміщати персонажів у різні частини ігрового простору.\n"
         },
         "courseC_artist_loops1a_2021": {
@@ -885,6 +987,9 @@
           "slider": "Тут ти можеш уповільнити свою програму."
         },
         "courseC_artist_prog2_2021": {
+          "slider": "Тут ти можеш уповільнити свою програму."
+        },
+        "courseC_artist_prog2_2023": {
           "slider": "Тут ти можеш уповільнити свою програму."
         },
         "courseC_collector_prog1": {
@@ -933,6 +1038,9 @@
         "courseC_maze_programming4_2021": {
           "courseC_maze_programming4_1": "Це твій ліміт блоків.  Він показує, скільки вільних блоків в тебе залишилося."
         },
+        "courseC_maze_programming4_2023": {
+          "courseC_maze_programming4_1": "Це твій ліміт блоків.  Він показує, скільки вільних блоків в тебе залишилося."
+        },
         "courseC_maze_programming5_2021": {
           "": "На цих блоках немає чисел. Ти можеш використовувати їх стільки, скільки захочеш!"
         },
@@ -960,6 +1068,10 @@
           "courseC_maze_programming7_1": "Це твоя перша головоломка виклику! Вони повинні бути важкими та можуть може потребувати кілька спроб.",
           "courseC_maze_programming7_2": "Ці блоки виробленні з каміння та не можуть бути викинутими."
         },
+        "courseC_maze_programming7_2023": {
+          "courseC_maze_programming7_1": "Це твоя перша головоломка виклику! Вони повинні бути важкими та можуть може потребувати кілька спроб.",
+          "courseC_maze_programming7_2": "Ці блоки виробленні з каміння та не можуть бути викинутими."
+        },
         "courseC_starWars_loops2_2021": {
           "courseC_starWars_loops2": "У цьому завданні тобі доступний лише один такий блок."
         },
@@ -984,6 +1096,9 @@
         "courseD_bee_conditionals2_2021": {
           "4_5_Bee_Conditionals_2_1": "Пам'ятай, переконайся, що КОЖНА хмаринка має КВІТКУ. Тобі зовсім не потрібно перевіряти соту."
         },
+        "courseD_bee_conditionals2_2023": {
+          "4_5_Bee_Conditionals_2_1": "Пам'ятай, переконайся, що КОЖНА хмаринка має КВІТКУ. Тобі зовсім не потрібно перевіряти соту."
+        },
         "courseD_bee_conditionals2_copy": {
           "4_5_Bee_Conditionals_2_1": "Пам'ятай, переконайся, що КОЖНА хмаринка має КВІТКУ. Тобі зовсім не потрібно перевіряти соту."
         },
@@ -1005,6 +1120,9 @@
         "courseD_bee_nestedLoops1a_2021": {
           "stepButton": "Спробуй проходити код по одному блоку за раз."
         },
+        "courseD_bee_nestedLoops1a_2023": {
+          "stepButton": "Спробуй проходити код по одному блоку за раз."
+        },
         "courseD_farmer_while7_2021": {
           "courseD_farmer_while7_2018_PathAhead": "Для виконання цього завдання тобі потрібно використати блок `поки є шлях вперед`."
         },
@@ -1018,6 +1136,9 @@
           "courseC_maze_programming4_1": "Це твій ліміт блоків.  Він показує, скільки вільних блоків в тебе залишилося."
         },
         "courseD_maze_intro4_2021": {
+          "courseC_maze_programming4_1": "Це твій ліміт блоків.  Він показує, скільки вільних блоків в тебе залишилося."
+        },
+        "courseD_maze_intro4_2023": {
           "courseC_maze_programming4_1": "Це твій ліміт блоків.  Він показує, скільки вільних блоків в тебе залишилося."
         },
         "courseD_maze_intro5a_2021": {
@@ -1060,6 +1181,9 @@
         "courseE_aboutme_2_2021": {
           "": "Клацни тут!"
         },
+        "courseE_aboutme_2_2023": {
+          "": "Натисніть тут, щоб додати костюми до вашого проекту."
+        },
         "courseE_artist_functions2_2021": {
           "courseD_artist_functions2_1": "Якщо запустити цей зелений блок, запуститься увесь код у функції. Що має зробити художник після того, як намалює перший квадрат?"
         },
@@ -1101,6 +1225,10 @@
           "run_button": "Спочатку натисни кнопку \"Запустити\"!",
           "visualizationResizeBar": "Перетягни 3 точки, щоб змінити розмір ігрової зони."
         },
+        "courseF_apps_aquarium_2023": {
+          "run_button": "Спочатку натисни кнопку \"Запустити\"!",
+          "visualizationResizeBar": "Перетягни 3 точки, щоб змінити розмір ігрової зони."
+        },
         "courseF_apps_card": {
           "visualizationResizeBar": "Перетягни 3 точки, щоб змінити розмір ігрової зони."
         },
@@ -1108,6 +1236,9 @@
           "visualizationResizeBar": "Перетягни 3 точки, щоб змінити розмір ігрової зони."
         },
         "courseF_apps_card_-2022-2": {
+          "visualizationResizeBar": "Перетягни 3 точки, щоб змінити розмір ігрової зони."
+        },
+        "courseF_apps_card_2023": {
           "visualizationResizeBar": "Перетягни 3 точки, щоб змінити розмір ігрової зони."
         },
         "courseF_apps_chatbot": {
@@ -1119,6 +1250,10 @@
           "visualizationResizeBar": "Перетягни 3 точки, щоб змінити розмір ігрової зони."
         },
         "courseF_apps_chatbot_-2022-2": {
+          "run_button": "Спочатку натисни кнопку \"Запустити\"!",
+          "visualizationResizeBar": "Перетягни 3 точки, щоб змінити розмір ігрової зони."
+        },
+        "courseF_apps_chatbot_2023": {
           "run_button": "Спочатку натисни кнопку \"Запустити\"!",
           "visualizationResizeBar": "Перетягни 3 точки, щоб змінити розмір ігрової зони."
         },
@@ -1134,16 +1269,32 @@
           "run_button": "Спочатку натисни кнопку \"Запустити\"!",
           "visualizationResizeBar": "Перетягни 3 точки, щоб змінити розмір ігрової зони."
         },
+        "courseF_apps_collector_2023": {
+          "run_button": "Спочатку натисни кнопку \"Запустити\"!",
+          "visualizationResizeBar": "Перетягни 3 точки, щоб змінити розмір ігрової зони."
+        },
         "courseF_apps_collector_drag_-2022-2": {
+          "visualizationResizeBar": "Перетягни 3 точки, щоб змінити розмір ігрової зони."
+        },
+        "courseF_apps_collector_drag_2023": {
           "visualizationResizeBar": "Перетягни 3 точки, щоб змінити розмір ігрової зони."
         },
         "courseF_apps_collector_drive_-2022-2": {
           "visualizationResizeBar": "Перетягни 3 точки, щоб змінити розмір ігрової зони."
         },
+        "courseF_apps_collector_drive_2023": {
+          "visualizationResizeBar": "Перетягни 3 точки, щоб змінити розмір ігрової зони."
+        },
         "courseF_apps_collector_move2_-2022-2": {
           "visualizationResizeBar": "Перетягни 3 точки, щоб змінити розмір ігрової зони."
         },
+        "courseF_apps_collector_move2_2023": {
+          "visualizationResizeBar": "Перетягни 3 точки, щоб змінити розмір ігрової зони."
+        },
         "courseF_apps_collector_move_-2022-2": {
+          "visualizationResizeBar": "Перетягни 3 точки, щоб змінити розмір ігрової зони."
+        },
+        "courseF_apps_collector_move_2023": {
           "visualizationResizeBar": "Перетягни 3 точки, щоб змінити розмір ігрової зони."
         },
         "courseF_apps_madlib": {
@@ -1155,6 +1306,9 @@
         "courseF_apps_madlib_-2022-2": {
           "visualizationResizeBar": "Перетягни 3 точки, щоб змінити розмір ігрової зони."
         },
+        "courseF_apps_madlib_2023": {
+          "visualizationResizeBar": "Перетягни 3 точки, щоб змінити розмір ігрової зони."
+        },
         "courseF_apps_pet": {
           "run_button": "Спочатку натисни кнопку \"Запустити\"!",
           "visualizationResizeBar": "Перетягни 3 точки, щоб змінити розмір ігрової зони."
@@ -1164,6 +1318,10 @@
           "visualizationResizeBar": "Перетягни 3 точки, щоб змінити розмір ігрової зони."
         },
         "courseF_apps_pet_-2022-2": {
+          "run_button": "Спочатку натисни кнопку \"Запустити\"!",
+          "visualizationResizeBar": "Перетягни 3 точки, щоб змінити розмір ігрової зони."
+        },
+        "courseF_apps_pet_2023": {
           "run_button": "Спочатку натисни кнопку \"Запустити\"!",
           "visualizationResizeBar": "Перетягни 3 точки, щоб змінити розмір ігрової зони."
         },
@@ -1189,10 +1347,16 @@
         "courseF_editable_card_-2022-2": {
           "visualizationResizeBar": "Перетягни 3 точки, щоб змінити розмір ігрової зони."
         },
+        "courseF_editable_card_2023": {
+          "visualizationResizeBar": "Перетягни 3 точки, щоб змінити розмір ігрової зони."
+        },
         "courseF_editable_chatbot": {
           "visualizationResizeBar": "Перетягни 3 точки, щоб змінити розмір ігрової зони."
         },
         "courseF_editable_chatbot_-2022-2": {
+          "visualizationResizeBar": "Перетягни 3 точки, щоб змінити розмір ігрової зони."
+        },
+        "courseF_editable_chatbot_2023": {
           "visualizationResizeBar": "Перетягни 3 точки, щоб змінити розмір ігрової зони."
         },
         "courseF_editable_madlib": {
@@ -1201,10 +1365,16 @@
         "courseF_editable_madlib_-2022-2": {
           "visualizationResizeBar": "Перетягни 3 точки, щоб змінити розмір ігрової зони."
         },
+        "courseF_editable_madlib_2023": {
+          "visualizationResizeBar": "Перетягни 3 точки, щоб змінити розмір ігрової зони."
+        },
         "courseF_events_choice_penguin": {
           "whenToWhile": "Спробуй змінити \"коли\" на \"поки\"."
         },
         "courseF_events_choice_penguin_-2022-2": {
+          "whenToWhile": "Спробуй змінити \"коли\" на \"поки\"."
+        },
+        "courseF_events_choice_penguin_2023": {
           "whenToWhile": "Спробуй змінити \"коли\" на \"поки\"."
         },
         "courseF_events_conflict": {
@@ -1213,16 +1383,25 @@
         "courseF_events_conflict_-2022-2": {
           "stops_block": "Нові блоки тут!"
         },
+        "courseF_events_conflict_2023": {
+          "stops_block": "Нові блоки тут!"
+        },
         "courseF_events_key": {
           "whenKey": "Використовуй новий блок подій, який можна знайти тут."
         },
         "courseF_events_key_-2022-2": {
           "whenKey": "Використовуй новий блок подій, який можна знайти тут."
         },
+        "courseF_events_key_2023": {
+          "whenKey": "Використовуй новий блок подій, який можна знайти тут."
+        },
         "courseF_events_practice_reorder": {
           "stopAllBug": "Цей блок знаходиться в неправильному порядку."
         },
         "courseF_events_practice_reorder_-2022-2": {
+          "stopAllBug": "Цей блок знаходиться в неправильному порядку."
+        },
+        "courseF_events_practice_reorder_2023": {
           "stopAllBug": "Цей блок знаходиться в неправильному порядку."
         },
         "courseF_events_predict": {
@@ -1234,10 +1413,16 @@
         "courseF_events_time_-2022-2": {
           "events_category": "Клацни тут, щоб відкрити категорію Події."
         },
+        "courseF_events_time_2023": {
+          "events_category": "Клацни тут, щоб відкрити категорію Події."
+        },
         "courseF_label_predict": {
           "variablesPredict": "Подивись уважно на код нижче."
         },
         "courseF_label_predict_-2022-2": {
+          "variablesPredict": "Подивись уважно на код нижче."
+        },
+        "courseF_label_predict_2023": {
           "variablesPredict": "Подивись уважно на код нижче."
         },
         "courseF_sprites_behaviors": {
@@ -1246,10 +1431,16 @@
         "courseF_sprites_behaviors_-2022-2": {
           "behaviors_category": "Клацни тут, щоб відкрити категорію моделей Поведінки."
         },
+        "courseF_sprites_behaviors_2023": {
+          "behaviors_category": "Клацни тут, щоб відкрити категорію моделей Поведінки."
+        },
         "courseF_sprites_make": {
           "sprites_category": "Клацни тут, щоб відкрити категорію Спрайтів."
         },
         "courseF_sprites_make_-2022-2": {
+          "sprites_category": "Клацни тут, щоб відкрити категорію Спрайтів."
+        },
+        "courseF_sprites_make_2023": {
           "sprites_category": "Клацни тут, щоб відкрити категорію Спрайтів."
         },
         "courseF_sprites_positioning": {
@@ -1258,10 +1449,16 @@
         "courseF_sprites_positioning_-2022-2": {
           "locations_category": "Клацни тут, щоб відкрити категорію Розташування."
         },
+        "courseF_sprites_positioning_2023": {
+          "locations_category": "Клацни тут, щоб відкрити категорію Розташування."
+        },
         "courseF_sprites_properties": {
           "sprites_category2": "Шукай новий блок тут."
         },
         "courseF_sprites_properties_-2022-2": {
+          "sprites_category2": "Шукай новий блок тут."
+        },
+        "courseF_sprites_properties_2023": {
           "sprites_category2": "Шукай новий блок тут."
         },
         "courseF_text_answer": {
@@ -1270,16 +1467,25 @@
         "courseF_text_answer_-2022-2": {
           "answered_block": "Шукай новий блок тут!"
         },
+        "courseF_text_answer_2023": {
+          "answered_block": "Шукай новий блок тут!"
+        },
         "courseF_text_choice_color": {
           "text_color_finish": "Чи змінювався колір фону після відповіді на питання? Якщо так, натисни 'Завершити'. Якщо ні, натисни 'Скинути', зміни код та знову натисни 'Запустити'."
         },
         "courseF_text_choice_color_-2022-2": {
           "text_color_finish": "Чи змінювався колір фону після відповіді на питання? Якщо так, натисни 'Завершити'. Якщо ні, натисни 'Скинути', зміни код та знову натисни 'Запустити'."
         },
+        "courseF_text_choice_color_2023": {
+          "text_color_finish": "Чи змінювався колір фону після відповіді на питання? Якщо так, натисни 'Завершити'. Якщо ні, натисни 'Скинути', зміни код та знову натисни 'Запустити'."
+        },
         "courseF_text_choice_conversation": {
           "text_generic_finish": "Готово? Якщо так, натисни 'Завершити'. Якщо ні, натисни 'Скинути', зміни код та знову натисни 'Запустити'."
         },
         "courseF_text_choice_conversation_-2022-2": {
+          "text_generic_finish": "Готово? Якщо так, натисни 'Завершити'. Якщо ні, натисни 'Скинути', зміни код та знову натисни 'Запустити'."
+        },
+        "courseF_text_choice_conversation_2023": {
           "text_generic_finish": "Готово? Якщо так, натисни 'Завершити'. Якщо ні, натисни 'Скинути', зміни код та знову натисни 'Запустити'."
         },
         "courseF_text_choice_title": {
@@ -1290,16 +1496,26 @@
           "text_answer_finish": "Титульний екран відображається протягом 3 секунд? Якщо так, натисни \"Кінець\". Якщо ні, натисни \"Скидання\", зміни свій код та знову натисни \"Запустити\". ",
           "title_block": "Шукай два нові блоки тут!"
         },
+        "courseF_text_choice_title_2023": {
+          "text_answer_finish": "Титульний екран відображається протягом 3 секунд? Якщо так, натисни \"Кінець\". Якщо ні, натисни \"Скидання\", зміни свій код та знову натисни \"Запустити\". ",
+          "title_block": "Шукай два нові блоки тут!"
+        },
         "courseF_text_concat": {
           "join_blocks": "Шукай нові блоки тут!"
         },
         "courseF_text_concat_-2022-2": {
           "join_blocks": "Шукай нові блоки тут!"
         },
+        "courseF_text_concat_2023": {
+          "join_blocks": "Шукай нові блоки тут!"
+        },
         "courseF_text_events": {
           "events_category": "Клацни тут, щоб відкрити категорію Події."
         },
         "courseF_text_events_-2022-2": {
+          "events_category": "Клацни тут, щоб відкрити категорію Події."
+        },
+        "courseF_text_events_2023": {
           "events_category": "Клацни тут, щоб відкрити категорію Події."
         },
         "courseF_text_print": {
@@ -1310,13 +1526,23 @@
           "print_block": "Знайди блок друкування тут!",
           "text_print_finish": "Чи надрукувалося твоє повідомлення вище? Якщо так, натисни \"Завершити\". Якщо ні, натисни \"Скинути\", зміни свій код та знову натисни \"Запустити\"."
         },
+        "courseF_text_print_2023": {
+          "print_block": "Знайди блок друкування тут!",
+          "text_print_finish": "Чи надрукувалося твоє повідомлення вище? Якщо так, натисни \"Завершити\". Якщо ні, натисни \"Скинути\", зміни свій код та знову натисни \"Запустити\"."
+        },
         "courseF_text_prompts": {
           "prompt_block": "Знайди блок питання тут!"
         },
         "courseF_text_prompts_-2022-2": {
           "prompt_block": "Знайди блок питання тут!"
         },
+        "courseF_text_prompts_2023": {
+          "prompt_block": "Знайди блок питання тут!"
+        },
         "courseF_variables2_predict_-2022-2": {
+          "variablesPredict": "Подивись уважно на код нижче."
+        },
+        "courseF_variables2_predict_2023": {
           "variablesPredict": "Подивись уважно на код нижче."
         },
         "courseF_variables_predict": {
@@ -1325,16 +1551,81 @@
         "courseF_variables_predict_-2022-2": {
           "variablesPredict": "Подивись уважно на код нижче."
         },
+        "courseF_variables_predict_2023": {
+          "variablesPredict": "Подивись уважно на код нижче."
+        },
         "coursea_maze_ramp1_2021": {
           "grade2_CaringForNewPet_0_1": "Після з'єднання усіх блоків натисни \"Запустити\" щоб запустити програму."
         },
         "coursee_helloworld_events": {
           "hello_world_click_hint": "Додайте цей блок подій до робочого простору."
         },
+        "coursee_helloworld_events_2023": {
+          "hello_world_click_hint": "Додайте цей блок подій до робочого простору."
+        },
         "coursee_helloworld_freeplay": {
           "costumes_tab": "Натисніть тут, щоб додати костюми до вашого проекту."
         },
+        "coursee_helloworld_freeplay_2023": {
+          "costumes_tab": "Натисніть тут, щоб додати костюми до вашого проекту."
+        },
         "coursee_helloworld_say": {
+          "hello_world_make_sprite": "Використовуйте цей блок, щоб створити спрайт.",
+          "hello_world_say": "Використовуйте цей блок, щоб спрайти говорили."
+        },
+        "coursee_helloworld_say_2023": {
+          "hello_world_make_sprite": "Використовуйте цей блок, щоб створити спрайт.",
+          "hello_world_say": "Використовуйте цей блок, щоб спрайти говорили."
+        },
+        "csc-starquilts-comment_2023": {
+          "New Artist Project_callout1": "Клацніть на категорії, щоб побачити блоки у вашому наборі інструментів! Перетягніть блоки в робочу область, щоб додати їх до своєї програми ",
+          "New Artist Project_callout2": "Натисни \"Запустити\", щоб зберегти та виконати програму ",
+          "sign_in_to_save_project": "Хочете отримати доступ до вашого проекту пізніше? Увійдіть, щоб зберегти проект у своєму обліковому записі!"
+        },
+        "csc-starquilts-repeat_2023": {
+          "New Artist Project_callout1": "Клацніть на категорії, щоб побачити блоки у вашому наборі інструментів! Перетягніть блоки в робочу область, щоб додати їх до своєї програми ",
+          "New Artist Project_callout2": "Натисни \"Запустити\", щоб зберегти та виконати програму ",
+          "sign_in_to_save_project": "Хочете отримати доступ до вашого проекту пізніше? Увійдіть, щоб зберегти проект у своєму обліковому записі!"
+        },
+        "csc-starquilts-rhombus-freeplay_2023": {
+          "New Artist Project_callout1": "Клацніть на категорії, щоб побачити блоки у вашому наборі інструментів! Перетягніть блоки в робочу область, щоб додати їх до своєї програми ",
+          "New Artist Project_callout2": "Натисни \"Запустити\", щоб зберегти та виконати програму ",
+          "sign_in_to_save_project": "Хочете отримати доступ до вашого проекту пізніше? Увійдіть, щоб зберегти проект у своєму обліковому записі!"
+        },
+        "csc-starquilts-row1_2023": {
+          "New Artist Project_callout1": "Клацніть на категорії, щоб побачити блоки у вашому наборі інструментів! Перетягніть блоки в робочу область, щоб додати їх до своєї програми ",
+          "New Artist Project_callout2": "Натисни \"Запустити\", щоб зберегти та виконати програму ",
+          "sign_in_to_save_project": "Хочете отримати доступ до вашого проекту пізніше? Увійдіть, щоб зберегти проект у своєму обліковому записі!"
+        },
+        "csc-starquilts-row2_2023": {
+          "New Artist Project_callout1": "Клацніть на категорії, щоб побачити блоки у вашому наборі інструментів! Перетягніть блоки в робочу область, щоб додати їх до своєї програми ",
+          "New Artist Project_callout2": "Натисни \"Запустити\", щоб зберегти та виконати програму ",
+          "sign_in_to_save_project": "Хочете отримати доступ до вашого проекту пізніше? Увійдіть, щоб зберегти проект у своєму обліковому записі!"
+        },
+        "csc-starquilts-row3_2023": {
+          "New Artist Project_callout1": "Клацніть на категорії, щоб побачити блоки у вашому наборі інструментів! Перетягніть блоки в робочу область, щоб додати їх до своєї програми ",
+          "New Artist Project_callout2": "Натисни \"Запустити\", щоб зберегти та виконати програму ",
+          "sign_in_to_save_project": "Хочете отримати доступ до вашого проекту пізніше? Увійдіть, щоб зберегти проект у своєму обліковому записі!"
+        },
+        "csc-starquilts-row4_2023": {
+          "New Artist Project_callout1": "Клацніть на категорії, щоб побачити блоки у вашому наборі інструментів! Перетягніть блоки в робочу область, щоб додати їх до своєї програми ",
+          "New Artist Project_callout2": "Натисни \"Запустити\", щоб зберегти та виконати програму ",
+          "sign_in_to_save_project": "Хочете отримати доступ до вашого проекту пізніше? Увійдіть, щоб зберегти проект у своєму обліковому записі!"
+        },
+        "csc-starquilts-row5_2023": {
+          "New Artist Project_callout1": "Клацніть на категорії, щоб побачити блоки у вашому наборі інструментів! Перетягніть блоки в робочу область, щоб додати їх до своєї програми ",
+          "New Artist Project_callout2": "Натисни \"Запустити\", щоб зберегти та виконати програму ",
+          "sign_in_to_save_project": "Хочете отримати доступ до вашого проекту пізніше? Увійдіть, щоб зберегти проект у своєму обліковому записі!"
+        },
+        "csc_animal_adaptations_bugs2": {
+          "hello_world_behavior_blocks": "Використовуйте цей блок з одним із способів поведінки нижче."
+        },
+        "csc_starquilts_freeplay_2023": {
+          "New Artist Project_callout1": "Клацніть на категорії, щоб побачити блоки у вашому наборі інструментів! Перетягніть блоки в робочу область, щоб додати їх до своєї програми ",
+          "New Artist Project_callout2": "Натисни \"Запустити\", щоб зберегти та виконати програму ",
+          "sign_in_to_save_project": "Хочете отримати доступ до вашого проекту пізніше? Увійдіть, щоб зберегти проект у своєму обліковому записі!"
+        },
+        "ecosystems_helloworld_say_2023": {
           "hello_world_make_sprite": "Використовуйте цей блок, щоб створити спрайт.",
           "hello_world_say": "Використовуйте цей блок, щоб спрайти говорили."
         },
@@ -1417,6 +1708,12 @@
         "helloworld_animals_sounds": {
           "hello_world_new": "Новий блок!"
         },
+        "helloworld_bugs_behaviors_2023": {
+          "hello_world_behavior_blocks": "Використовуйте цей блок з одним із способів поведінки нижче."
+        },
+        "helloworld_bunny_adaptation_2023": {
+          "hw_Run": "Натисніть тут, щоб запустити код."
+        },
         "helloworld_emoji_backgrounds": {
           "hw_background_location": "Використовуйте цей блок, щоб встановити новий фон."
         },
@@ -1455,6 +1752,9 @@
         "helloworld_food_backgrounds": {
           "hw_background_location": "Використовуйте цей блок, щоб встановити новий фон."
         },
+        "helloworld_food_backgrounds_2023": {
+          "hw_background_location": "Використовуйте цей блок, щоб встановити новий фон."
+        },
         "helloworld_food_backgrounds_soccer-2022": {
           "hw_background_location": "Використовуйте цей блок, щоб встановити новий фон."
         },
@@ -1462,6 +1762,9 @@
           "hw_background_location": "Використовуйте цей блок, щоб встановити новий фон."
         },
         "helloworld_food_behaviors": {
+          "hello_world_behavior_blocks": "Використовуйте цей блок з одним із способів поведінки нижче."
+        },
+        "helloworld_food_behaviors_2023": {
           "hello_world_behavior_blocks": "Використовуйте цей блок з одним із способів поведінки нижче."
         },
         "helloworld_food_behaviors_soccer-2022": {
@@ -1473,6 +1776,9 @@
         "helloworld_food_click": {
           "hw_Run": "Натисніть тут, щоб запустити код."
         },
+        "helloworld_food_click_2023": {
+          "hw_Run": "Натисніть тут, щоб запустити код."
+        },
         "helloworld_food_click_soccer-2022": {
           "hw_Run": "Натисніть тут, щоб запустити код."
         },
@@ -1480,6 +1786,9 @@
           "hw_Run": "Клацніть тут спочатку!"
         },
         "helloworld_food_costumes": {
+          "hello_world_new": "Новий блок!"
+        },
+        "helloworld_food_costumes_2023": {
           "hello_world_new": "Новий блок!"
         },
         "helloworld_food_costumes_soccer-2022": {
@@ -1509,6 +1818,9 @@
         "helloworld_food_location": {
           "pin": "шпилька"
         },
+        "helloworld_food_location_2023": {
+          "pin": "шпилька"
+        },
         "helloworld_food_location_soccer-2022": {
           "pin": "шпилька"
         },
@@ -1516,6 +1828,9 @@
           "pin": "шпилька"
         },
         "helloworld_food_multi": {
+          "pin": "шпилька"
+        },
+        "helloworld_food_multi_2023": {
           "pin": "шпилька"
         },
         "helloworld_food_multi_soccer-2022": {
@@ -1540,6 +1855,10 @@
           "hello_world_new": "Новий блок!",
           "hello_world_new_block": "Новий блок!"
         },
+        "helloworld_food_sizes_2023": {
+          "hello_world_new": "Новий блок!",
+          "hello_world_new_block": "Новий блок!"
+        },
         "helloworld_food_sizes_soccer-2022": {
           "hello_world_new": "Новий блок!",
           "hello_world_new_block": "Новий блок!"
@@ -1549,6 +1868,9 @@
           "hello_world_new_block": "Новий блок!"
         },
         "helloworld_food_sounds": {
+          "hello_world_new": "Новий блок!"
+        },
+        "helloworld_food_sounds_2023": {
           "hello_world_new": "Новий блок!"
         },
         "helloworld_food_sounds_soccer-2022": {
@@ -1674,7 +1996,14 @@
         "poetry_hoc_addSprites": {
           "poetry_sprite": "Новий блок!"
         },
+        "poetry_hoc_addSprites_2023": {
+          "poetry_sprite": "Новий блок!"
+        },
         "poetry_hoc_events1": {
+          "poetry_event": "Новий блок!",
+          "poetry_foreground": "Новий блок!"
+        },
+        "poetry_hoc_events1_2023": {
           "poetry_event": "Новий блок!",
           "poetry_foreground": "Новий блок!"
         },
@@ -1683,7 +2012,14 @@
           "poetry_multiple_sprites": "Новий блок!",
           "poetry_new_block": "Новий блок!"
         },
+        "poetry_hoc_freeplay_2023": {
+          "poetry_new_block": "Новий блок!"
+        },
         "poetry_hoc_sounds": {
+          "poetry_music": "Новий блок!",
+          "poetry_sound": "Новий блок!"
+        },
+        "poetry_hoc_sounds_2023": {
           "poetry_music": "Новий блок!",
           "poetry_sound": "Новий блок!"
         },
@@ -1691,7 +2027,15 @@
           "poetry_sprite_begins": "Новий блок!",
           "poetry_sprite_stops": "Новий блок!"
         },
+        "poetry_hoc_spriteBehaviors_2023": {
+          "poetry_sprite_begins": "Новий блок!",
+          "poetry_sprite_stops": "Новий блок!"
+        },
         "poetry_hoc_spriteSizes": {
+          "poetry_remove_sprite": "Новий блок!",
+          "poetry_set_sprite": "Новий блок!"
+        },
+        "poetry_hoc_spriteSizes_2023": {
           "poetry_remove_sprite": "Новий блок!",
           "poetry_set_sprite": "Новий блок!"
         }
