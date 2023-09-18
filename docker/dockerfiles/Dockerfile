@@ -114,6 +114,11 @@ RUN apt-get install -y --no-install-recommends \
     parallel \
     python \
     python-dev \
+    python3 \
+    python3-venv \
+    python3.8 \
+    python3.8-venv \
+    python3.8-dev \
     software-properties-common \
     sudo \
     tar \
