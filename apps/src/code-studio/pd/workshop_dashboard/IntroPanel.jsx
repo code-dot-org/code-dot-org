@@ -187,6 +187,7 @@ export default class IntroPanel extends React.Component {
         break;
       }
       case 'In Progress': {
+        const signupUrl = `${location.origin}/pd/workshops/${workshopId}/enroll`;
         if (isAccountRequiredForAttendance) {
           contents = (
             <div>
@@ -210,13 +211,17 @@ export default class IntroPanel extends React.Component {
               <h4>Step 2: Take attendance</h4>
               <p>
                 After teachers have signed into their Code Studio accounts, use
-                the attendance links below to take attendance.
+                the attendance links below to take attendance. Note: Teachers
+                need to have enrolled in the workshop in order to take
+                attendance. They can enroll in the workshop using{' '}
+                <a href={signupUrl} target="_blank" rel="noopener noreferrer">
+                  {signupUrl}
+                </a>
               </p>
             </div>
           );
         } else {
           // account not required
-          const signupUrl = `${location.origin}/pd/workshops/${workshopId}/enroll`;
           contents = (
             <div>
               <p>
