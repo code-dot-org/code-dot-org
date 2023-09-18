@@ -4,6 +4,7 @@ require 'fileutils'
 require 'json'
 
 require_relative '../../../i18n_script_utils'
+require_relative '../../../utils/pegasus_markdown'
 require_relative '../hourofcode'
 
 module I18n
@@ -35,18 +36,9 @@ module I18n
             I18nScriptUtils.process_in_threads(hoc_markdown_files) do |hoc_markdown_file_path|
               i18n_source_file_path = hoc_markdown_file_path.sub(hoc_markdown_dir, I18N_SOURCE_DIR_PATH)
               i18n_source_file_path = i18n_source_file_path.delete_suffix(PARTIAL_EXTNAME)
-              I18nScriptUtils.copy_file(hoc_markdown_file_path, i18n_source_file_path)
 
-              # YAML headers can include a lot of things we don't want translators to mess
-              # with or worry about; layout, navigation settings, social media tags, etc.
-              # However, they also include things like page titles that we DO want
-              # translators to be able to translate, so we can't ignore them completely.
-              # Instead, here we reduce the headers down to contain only the keys we care
-              # about and then in the out step we reinflate the received headers with the
-              # values from the original source.
-              header, content, _line = Documents.new.helpers.parse_yaml_header(i18n_source_file_path)
-              sanitized_header = I18nScriptUtils.sanitize_markdown_header(header)
-              I18nScriptUtils.write_markdown_with_header(content, sanitized_header, i18n_source_file_path)
+              I18nScriptUtils.copy_file(hoc_markdown_file_path, i18n_source_file_path)
+              I18n::Utils::PegasusMarkdown.sanitize_file_header(i18n_source_file_path)
             ensure
               mutex.synchronize {progress_bar.increment}
             end
