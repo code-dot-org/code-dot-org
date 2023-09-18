@@ -675,6 +675,343 @@
           "word": "Händelse",
           "definition": "En handling som gör att något händer."
         },
+        "code/csc-adaptations/2023": {
+          "word": "Kod"
+        },
+        "event/csc-adaptations/2023": {
+          "word": "Händelse"
+        },
+        "behavior/csc-adaptations/2023": {
+          "word": "Beteende"
+        },
+        "event/csc-bookcovers/2023": {
+          "word": "Händelse",
+          "definition": "En handling som gör att något händer."
+        },
+        "program/csc-bookcovers/2023": {
+          "word": "Program",
+          "definition": "Ett antal steg som har kodats till något som kan köras av en maskin."
+        },
+        "code/csc-ecosystems/2023": {
+          "word": "Kod"
+        },
+        "conditionals/csc-ecosystems/2023": {
+          "word": "Villkor"
+        },
+        "event/csc-ecosystems/2023": {
+          "word": "Händelse"
+        },
+        "variable/csc-ecosystems/2023": {
+          "word": "Variabel"
+        },
+        "code/csc-mappinglandmarks/2023": {
+          "word": "Kod",
+          "definition": "(v) att skriva instruktioner för en dator."
+        },
+        "event/csc-mappinglandmarks/2023": {
+          "word": "Händelse",
+          "definition": "En handling som gör att något händer."
+        },
+        "map/csc-mappinglandmarks/2023": {
+          "word": "Karta"
+        },
+        "artist/csc-starquilts/2023": {
+          "word": "Konstnären"
+        },
+        "loop/csc-starquilts/2023": {
+          "word": "Loop"
+        },
+        "comments/csc-starquilts/2023": {
+          "word": "Kommentarer"
+        },
+        "event/csc-timecapsule/2023": {
+          "word": "Händelse",
+          "definition": "En handling som gör att något händer."
+        },
+        "mood/csc-timecapsule/2023": {
+          "word": "Stämning"
+        },
+        "code/poetry/2023": {
+          "word": "Kod",
+          "definition": "(v) att skriva instruktioner för en dator."
+        },
+        "event/poetry/2023": {
+          "word": "Händelse",
+          "definition": "En handling som gör att något händer."
+        },
+        "line/poetry/2023": {
+          "word": "Rad"
+        },
+        "mood/poetry/2023": {
+          "word": "Stämning"
+        },
+        "program/poetry/2023": {
+          "word": "Program",
+          "definition": "Ett antal steg som har kodats till något som kan köras av en maskin."
+        },
+        "algorithm/coursea/2023": {
+          "word": "Algoritm"
+        },
+        "debugging/coursea/2023": {
+          "word": "Felsökning"
+        },
+        "program/coursea/2023": {
+          "word": "Program",
+          "definition": "En algotirm som har kodats in i något som kan köras av en maskin."
+        },
+        "click/coursea/2023": {
+          "word": "Klick"
+        },
+        "double_click/coursea/2023": {
+          "word": "Dubbelklicka"
+        },
+        "drop/coursea/2023": {
+          "word": "Släpp"
+        },
+        "bug/coursea/2023": {
+          "word": "Bugg"
+        },
+        "loop/coursea/2023": {
+          "word": "Loop"
+        },
+        "event/coursea/2023": {
+          "word": "Händelse",
+          "definition": "En handling som gör att något händer."
+        },
+        "algorithm/courseb/2023": {
+          "word": "Algoritm"
+        },
+        "bug/courseb/2023": {
+          "word": "Bugg"
+        },
+        "debugging/courseb/2023": {
+          "word": "Felsökning"
+        },
+        "click/courseb/2023": {
+          "word": "Klick"
+        },
+        "double_click/courseb/2023": {
+          "word": "Dubbelklicka"
+        },
+        "drop/courseb/2023": {
+          "word": "Släpp"
+        },
+        "program/courseb/2023": {
+          "word": "Program",
+          "definition": "En algotirm som har kodats in i något som kan köras av en maskin."
+        },
+        "loop/courseb/2023": {
+          "word": "Loop"
+        },
+        "event/courseb/2023": {
+          "word": "Händelse",
+          "definition": "En handling som gör att något händer."
+        },
+        "algorithm/coursec/2023": {
+          "word": "Algoritm"
+        },
+        "bug/coursec/2023": {
+          "word": "Bugg"
+        },
+        "debugging/coursec/2023": {
+          "word": "Felsökning"
+        },
+        "program/coursec/2023": {
+          "word": "Program",
+          "definition": "En algotirm som har kodats in i något som kan köras av en maskin."
+        },
+        "loop/coursec/2023": {
+          "word": "Loop"
+        },
+        "event/coursec/2023": {
+          "word": "Händelse",
+          "definition": "En handling som gör att något händer."
+        },
+        "data/coursec/2023": {
+          "word": "Data"
+        },
+        "binary/coursec/2023": {
+          "word": "Binära"
+        },
+        "algorithm/coursed/2023": {
+          "word": "Algoritm"
+        },
+        "program/coursed/2023": {
+          "word": "Program",
+          "definition": "En algotirm som har kodats in i något som kan köras av en maskin."
+        },
+        "bug/coursed/2023": {
+          "word": "Bugg"
+        },
+        "debugging/coursed/2023": {
+          "word": "Felsökning"
+        },
+        "loop/coursed/2023": {
+          "word": "Loop"
+        },
+        "frustrated/coursed/2023": {
+          "word": "Frustrerad"
+        },
+        "event/coursed/2023": {
+          "word": "Händelse",
+          "definition": "En handling som gör att något händer."
+        },
+        "code/coursed/2023": {
+          "definition": "(v) att skriva kod, eller att skriva instruktioner åt en dator."
+        },
+        "conditionals/coursed/2023": {
+          "word": "Villkor"
+        },
+        "pseudocode/coursed/2023": {
+          "word": "pseudokod"
+        },
+        "behavior/coursee/2023": {
+          "word": "Beteende"
+        },
+        "loop/coursee/2023": {
+          "word": "Loop"
+        },
+        "function/coursee/2023": {
+          "word": "Funktion"
+        },
+        "conditionals/coursee/2023": {
+          "word": "Villkor"
+        },
+        "copyright/coursee/2023": {
+          "word": "Copyright"
+        },
+        "define/coursee/2023": {
+          "word": "Definiera"
+        },
+        "try/coursee/2023": {
+          "word": "Prova"
+        },
+        "user/coursef/2023": {
+          "word": "Användare"
+        },
+        "algorithm/coursef/2023": {
+          "word": "Algoritm"
+        },
+        "behavior/coursef/2023": {
+          "word": "Beteende"
+        },
+        "program/coursef/2023": {
+          "word": "Program",
+          "definition": "En algotirm som har kodats in i något som kan köras av en maskin."
+        },
+        "event/coursef/2023": {
+          "word": "Händelse",
+          "definition": "En handling som gör att något händer."
+        },
+        "variable/coursef/2023": {
+          "word": "Variabel"
+        },
+        "input/coursef/2023": {
+          "word": "Inmatning"
+        },
+        "dns/coursef/2023": {
+          "word": "DNS"
+        },
+        "internet/coursef/2023": {
+          "word": "Internet"
+        },
+        "ip_address/coursef/2023": {
+          "word": "IP-adress"
+        },
+        "servers/coursef/2023": {
+          "word": "Servrar"
+        },
+        "url/coursef/2023": {
+          "word": "URL"
+        },
+        "wi_fi/coursef/2023": {
+          "word": "Wi-Fi"
+        },
+        "define/coursef/2023": {
+          "word": "Definiera"
+        },
+        "try/coursef/2023": {
+          "word": "Prova"
+        },
+        "algorithm/express/2023": {
+          "word": "Algoritm"
+        },
+        "bug/express/2023": {
+          "word": "Bugg"
+        },
+        "debugging/express/2023": {
+          "word": "Felsökning"
+        },
+        "program/express/2023": {
+          "word": "Program",
+          "definition": "En algotirm som har kodats in i något som kan köras av en maskin."
+        },
+        "behavior/express/2023": {
+          "word": "Beteende"
+        },
+        "event/express/2023": {
+          "word": "Händelse",
+          "definition": "En handling som gör att något händer."
+        },
+        "loop/express/2023": {
+          "word": "Loop"
+        },
+        "conditionals/express/2023": {
+          "word": "Villkor"
+        },
+        "function/express/2023": {
+          "word": "Funktion"
+        },
+        "variable/express/2023": {
+          "word": "Variabel"
+        },
+        "define/express/2023": {
+          "word": "Definiera"
+        },
+        "try/express/2023": {
+          "word": "Prova"
+        },
+        "click/pre-express/2023": {
+          "word": "Klick"
+        },
+        "double_click/pre-express/2023": {
+          "word": "Dubbelklicka"
+        },
+        "drop/pre-express/2023": {
+          "word": "Släpp"
+        },
+        "algorithm/pre-express/2023": {
+          "word": "Algoritm"
+        },
+        "bug/pre-express/2023": {
+          "word": "Bugg"
+        },
+        "debugging/pre-express/2023": {
+          "word": "Felsökning"
+        },
+        "program/pre-express/2023": {
+          "word": "Program",
+          "definition": "En algotirm som har kodats in i något som kan köras av en maskin."
+        },
+        "loop/pre-express/2023": {
+          "word": "Loop"
+        },
+        "event/pre-express/2023": {
+          "word": "Händelse",
+          "definition": "En handling som gör att något händer."
+        },
+        "algorithm/how-ai-works/2023": {
+          "word": "Algoritm"
+        },
+        "network/how-ai-works/2023": {
+          "word": "Nätverk"
+        },
+        "model/how-ai-works/2023": {
+          "word": "Modell"
+        },
+        "ethics/how-ai-works/2023": {
+          "word": "Etik"
+        },
         "code/aquatic/unversioned": {
           "definition": "(v) att skriva kod, eller att skriva instruktioner åt en dator."
         },
