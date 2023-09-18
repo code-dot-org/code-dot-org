@@ -310,6 +310,7 @@ export default function RubricsContainer({
       />
       <div style={styles.bottomRow}>
         <Button
+          className="ui-test-save-button"
           color={Button.ButtonColor.brandSecondaryDefault}
           text="Save your rubric"
           onClick={saveRubric}

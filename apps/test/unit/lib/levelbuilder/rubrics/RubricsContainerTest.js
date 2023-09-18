@@ -1,10 +1,12 @@
 import React from 'react';
 import {mount} from 'enzyme';
+import {act} from 'react-dom/test-utils';
 import {expect} from '../../../../util/reconfiguredChai';
 import RubricsContainer from '@cdo/apps/lib/levelbuilder/rubrics/RubricsContainer';
 import LearningGoalItem from '@cdo/apps/lib/levelbuilder/rubrics/LearningGoalItem';
 import Button from '@cdo/apps/templates/Button';
 import {RubricUnderstandingLevels} from '@cdo/apps/util/sharedConstants';
+import sinon from 'sinon';
 
 describe('RubricsContainerTest', () => {
   const defaultProps = {
@@ -83,7 +85,9 @@ describe('RubricsContainerTest', () => {
   it('renders the components on the page correctly for a new rubric', () => {
     const wrapper = mount(<RubricsContainer {...defaultProps} />);
     expect(wrapper.find('Heading1').text()).to.equal('Create your rubric');
-    expect(wrapper.find('select#rubric_level_id option')).to.have.length(3);
+    expect(wrapper.find('select#rubric_level_id option')).to.have.length(
+      defaultProps.levels.length
+    );
     expect(wrapper.find(LearningGoalItem)).to.have.length(1);
     expect(wrapper.find('Button[text="Save your rubric"]')).to.have.length(1);
   });
@@ -92,8 +96,12 @@ describe('RubricsContainerTest', () => {
     const props = {...defaultProps, rubric: rubricInfo};
     const wrapper = mount(<RubricsContainer {...props} />);
     expect(wrapper.find('Heading1').text()).to.equal('Modify your rubric');
-    expect(wrapper.find('select#rubric_level_id option')).to.have.length(3);
-    expect(wrapper.find(LearningGoalItem)).to.have.length(2);
+    expect(wrapper.find('select#rubric_level_id option')).to.have.length(
+      props.levels.length
+    );
+    expect(wrapper.find(LearningGoalItem)).to.have.length(
+      rubricInfo.learningGoals.length
+    );
     expect(wrapper.find('Button[text="Save your rubric"]')).to.have.length(1);
   });
 
@@ -107,5 +115,37 @@ describe('RubricsContainerTest', () => {
     addButton.simulate('click');
     const afterAddLearningGoalItems = wrapper.find('LearningGoalItem').length;
     expect(afterAddLearningGoalItems).to.equal(initialLearningGoalItems + 1);
+  });
+
+  it('changes the saveNotificationText when saving rubric', async () => {
+    const mockFetch = sinon.stub(global, 'fetch');
+    mockFetch.returns(
+      Promise.resolve(new Response(JSON.stringify({redirectUrl: 'test_url'})))
+    );
+
+    const props = {...defaultProps, rubric: rubricInfo};
+
+    const wrapper = mount(<RubricsContainer {...props} />);
+    const notification = wrapper.find('BodyThreeText');
+
+    expect(notification.text()).not.to.contain('Saving...');
+    expect(notification.text()).not.to.contain('Save complete!');
+
+    // Simulate the save button click
+    const saveButton = wrapper
+      .find(Button)
+      .filter('.ui-test-save-button')
+      .at(0);
+    saveButton.simulate('click');
+    expect(notification.text()).to.contain('Saving...');
+    wrapper.update();
+
+    await act(async () => {
+      await Promise.resolve();
+    });
+    wrapper.update();
+
+    expect(notification.text()).to.contain('Save complete!');
+    sinon.restore();
   });
 });
