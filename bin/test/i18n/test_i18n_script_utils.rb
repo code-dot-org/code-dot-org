@@ -308,7 +308,8 @@ describe I18nScriptUtils do
   describe '.copy_file' do
     let(:copy_file) {I18nScriptUtils.copy_file(file_path, dest_path)}
 
-    let(:file_path) {'/origin/dir/file.txt'}
+    let(:file_name) {'file.txt'}
+    let(:file_path) {File.join('/origin/dir', file_name)}
 
     before do
       FileUtils.mkdir_p(File.dirname(file_path))
@@ -320,7 +321,7 @@ describe I18nScriptUtils do
 
       it 'copies the file to the dir' do
         copy_file
-        assert File.exist?('/dest/dir/file.txt')
+        assert File.exist?(File.join(dest_path, file_name))
       end
     end
 
@@ -329,6 +330,40 @@ describe I18nScriptUtils do
 
       it 'copies the file' do
         copy_file
+        assert File.exist?(dest_path)
+      end
+    end
+  end
+
+  describe '.move_file' do
+    let(:move_file) {I18nScriptUtils.move_file(file_path, dest_path)}
+
+    let(:file_name) {'file.txt'}
+    let(:file_path) {File.join('/origin/dir', file_name)}
+
+    before do
+      FileUtils.mkdir_p(File.dirname(file_path))
+      FileUtils.touch(file_path)
+    end
+
+    context 'when the destination is a dir' do
+      let(:dest_path) {'/dest/dir'}
+
+      it 'moves the file to the dir' do
+        move_file
+
+        refute File.exist?(file_path)
+        assert File.exist?(File.join(dest_path, file_name))
+      end
+    end
+
+    context 'when the destination is a file path' do
+      let(:dest_path) {'/dest/dir/copy.txt'}
+
+      it 'moves the file' do
+        move_file
+
+        refute File.exist?(file_path)
         assert File.exist?(dest_path)
       end
     end
