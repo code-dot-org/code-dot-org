@@ -43,16 +43,13 @@ class LearningGoalEvaluationsControllerTest < ActionController::TestCase
     assert_not_nil response_json['created_at']
   end
 
-  test 'get_evaluation in learning goal evaluation' do
-    get :get_evaluation, params: {
-      userId: @learning_goal_evaluation.user_id,
-      teacherId: @learning_goal_evaluation.teacher_id,
-      learningGoalId: @learning_goal_evaluation.learning_goal_id
-    }
+  test 'show learning goal evaluation' do
+    get :show, params: {id: @learning_goal_evaluation.id}
     assert_response :success
 
     response_json = JSON.parse(response.body)
-    assert_equal response_json['id'], @learning_goal_evaluation.id
+
+    assert_equal @learning_goal_evaluation.id, response_json['id']
   end
 
   test 'update learning goal evaluation' do
@@ -91,18 +88,60 @@ class LearningGoalEvaluationsControllerTest < ActionController::TestCase
     assert_not_nil response_json['created_at']
   end
 
-  # Test create response for user not logged in
-  test_user_gets_response_for :create, user: nil, response: :redirect, redirected_to: '/users/sign_in'
+  test 'get_evaluation method' do
+    get :get_evaluation, params: {
+      userId: @learning_goal_evaluation.user_id,
+      teacherId: @learning_goal_evaluation.teacher_id,
+      learningGoalId: @learning_goal_evaluation.learning_goal_id
+    }
+    assert_response :success
 
-  # Test create response for student
+    response_json = JSON.parse(response.body)
+    assert_equal response_json['id'], @learning_goal_evaluation.id
+  end
+
+  test 'get_or_create_evaluation method' do
+    post :get_or_create_evaluation, params: {
+      userId: @learning_goal_evaluation.user_id,
+      learningGoalId: @learning_goal_evaluation.learning_goal_id
+    }
+    assert_response :success
+
+    response_json = JSON.parse(response.body)
+    assert_equal response_json['id'], @learning_goal_evaluation.id
+
+    new_student = create :student
+
+    user_id = new_student.id
+    learning_goal_id = @learning_goal.id
+
+    post :get_or_create_evaluation, params: {
+      userId: user_id,
+      learningGoalId: learning_goal_id,
+    }
+    assert_response :success
+    
+    response_json = JSON.parse(response.body)
+    assert_not_nil response_json['id']
+    assert_not_equal response_json['id'], @learning_goal_evaluation.id
+    assert_equal response_json['user_id'], user_id
+  end
+
+  # Test create responses
+  test_user_gets_response_for :create, user: nil, response: :redirect, redirected_to: '/users/sign_in'
   test_user_gets_response_for :create, user: :student, response: :forbidden
 
-  # Test update response for user not logged in
+  # Test update responses
   test_user_gets_response_for :update, params: -> {{id: @learning_goal_evaluation.id}}, user: nil, response: :redirect, redirected_to: '/users/sign_in'
-
-  # Test update response for student
   test_user_gets_response_for :update, params: -> {{id: @learning_goal_evaluation.id}}, user: :student, response: :forbidden
-
-  # Test update response for wrong teacher
   test_user_gets_response_for :update, params: -> {{id: @learning_goal_evaluation.id}}, user: :teacher, response: :not_found
+
+  # Test get_evaluation responses
+  test_user_gets_response_for :get_evaluation, params: -> {{learningGoalId: @learning_goal.id, userId: @student.id}}, user: nil, response: :redirect, redirected_to: '/users/sign_in'
+  test_user_gets_response_for :get_evaluation, params: -> {{learningGoalId: @learning_goal.id, userId: @student.id}}, user: :student, response: :forbidden
+  test_user_gets_response_for :get_evaluation, params: -> {{learningGoalId: @learning_goal.id, userId: @student.id}}, user: :teacher, response: :not_found
+
+  # Test get_or_create responses
+  test_user_gets_response_for :get_or_create_evaluation, params: -> {{learningGoalId: @learning_goal.id, userId: @student.id}}, user: nil, response: :redirect, redirected_to: '/users/sign_in'
+  test_user_gets_response_for :get_or_create_evaluation, params: -> {{learningGoalId: @learning_goal.id, userId: @student.id}}, user: :student, response: :forbidden
 end

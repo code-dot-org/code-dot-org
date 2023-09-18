@@ -85,7 +85,8 @@
   gap: 0.5rem;
   align-self: stretch;
 
-  h5, p {
+  h5,
+  p {
     margin-bottom: 0;
   }
 }
@@ -276,4 +277,11 @@ p.errorMessage {
   width: 95%;
   height: 5rem;
   margin-top: 5;
+}
+
+.autosaveMessage {
+  font-style: italic;
+  float: right;
+  line-height: 100%;
+  padding: 0;
 }

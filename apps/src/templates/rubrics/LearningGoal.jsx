@@ -56,7 +56,6 @@ export default function LearningGoal({
   };
 
   const handleFeedbackChange = event => {
-    setAutosaved(false);
     if (autosaveTimer.current) {
       clearTimeout(autosaveTimer.current);
     }
@@ -66,6 +65,7 @@ export default function LearningGoal({
 
   const autosaveFeedback = () => {
     console.log('autosaving');
+    setAutosaved(false);
     setIsAutosaving(true);
     setErrorAutosaving(false);
     const bodyData = JSON.stringify({
@@ -83,19 +83,16 @@ export default function LearningGoal({
         },
         body: bodyData,
       })
-        .then(response => {
-          console.log(response);
-          console.log(response.json());
+        .then(() => {
           setIsAutosaving(false);
           setAutosaved(true);
         })
         .catch(error => {
           console.log(error);
-          setErrorAutosaving(true);
           setIsAutosaving(false);
+          setErrorAutosaving(true);
         });
     });
-
     clearTimeout(autosaveTimer.current);
   };
 
@@ -115,14 +112,18 @@ export default function LearningGoal({
         } else {
           setTeacherFeedback(json.feedback);
         }
+        if (json.understanding) {
+          setUnderstanding(json.understanding);
+        }
       })
       .catch(error => console.log(error));
   };
 
   useEffect(() => {
     getOrInitializeLearningGoalEvaluation();
-  });
+  }, []);
 
+  // Callback to retrieve understanding data from EvidenceLevels
   const radioButtonCallback = radioButtonData => {
     setUnderstanding(radioButtonData);
   };
@@ -169,21 +170,31 @@ export default function LearningGoal({
             </div>
           </div>
         )}
-        <label className={style.teacherFeedbackLabel}>
-          <span>Teacher Feedback</span>
-          <textarea
-            className={style.inputTextbox}
-            name="teacherFeedback"
-            value={teacherFeedback}
-            onChange={handleFeedbackChange}
-          />
-        </label>
-        {isAutosaving ? (
-          <span>Autosaving...</span>
-        ) : (
-          autosaved && <span>Autosaved at {learningGoalEval.updated_at}</span>
-        )}
-        {errorAutosaving}
+        <div>
+          <label className={style.teacherFeedbackLabel}>
+            <span>Teacher Feedback</span>
+            <textarea
+              className={style.inputTextbox}
+              name="teacherFeedback"
+              value={teacherFeedback}
+              onChange={handleFeedbackChange}
+            />
+          </label>
+          {isAutosaving ? (
+            <span className={style.autosaveMessage}>Autosaving...</span>
+          ) : (
+            autosaved && (
+              <span className={style.autosaveMessage}>
+                Autosaved {learningGoalEval.updated_at}
+              </span>
+            )
+          )}
+          {errorAutosaving && (
+            <span className={style.autosaveMessage}>
+              There was an error autosaving your feedback
+            </span>
+          )}
+        </div>
       </div>
     </details>
   );
