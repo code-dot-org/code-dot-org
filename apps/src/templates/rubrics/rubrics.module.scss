@@ -24,7 +24,9 @@
 
 .rubricContent {
   border-radius: 0 0 4px 4px;
-  border: 1px solid $neutral_dark;
+  border-right: 2px solid $neutral_dark;
+  border-left: 2px solid $neutral_dark;
+  border-bottom: 2px solid $neutral_dark;
   background: $neutral_light;
   box-shadow: 4px 4px 6px 0 rgba(0 0 0 / 0.25);
 
@@ -85,7 +87,8 @@
   gap: 0.5rem;
   align-self: stretch;
 
-  h5, p {
+  h5,
+  p {
     margin-bottom: 0;
   }
 }
@@ -109,14 +112,51 @@
 }
 
 .rubricHeader {
-  height: 21px;
   border-radius: 4px 4px 0 0;
   background: $neutral_dark;
   color: $neutral_white;
-  padding: 9px 15px 8px;
+  // padding: 9px 15px 8px;
 
+  border-top: 2px solid $neutral_dark;
+  border-right: 2px solid $neutral_dark;
+  border-left: 2px solid $neutral_dark;
+
+  display: flex;
+  height: 40px;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+}
+
+.rubricHeaderLeftSide {
+  display: flex;
+  width: 261.333px;
+  height: 40px;
+  align-items: center;
+}
+
+.rubricHeaderTab {
+  display: flex;
+  height: 40px;
+  padding: 0 16px;
+  align-items: center;
+  // gap: 12px;
+  border-radius: 4px 4px 0 0;
+}
+
+.selectedTab {
+  background: var(--light-gray-50, #f7f8fa);
+  h6 {
+    line-height: 1.1875;
+    margin-bottom: 0;
+    color: var(--light-primary-700, #008291);
+  }
+}
+
+.unselectedTab {
   h6 {
     color: $neutral_white;
+    margin-bottom: 0;
     line-height: 1.1875;
   }
 }
