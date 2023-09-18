@@ -775,6 +775,9 @@
         "CourseD_Dance_2020_01_2021": {
           "dance_callout_01": "Burada rəqqasın növünü seçin."
         },
+        "CourseD_Dance_2020_01_2023": {
+          "dance_callout_01": "Burada rəqqasın növünü seçin."
+        },
         "CourseD_Dance_2020_02": {
           "arrow_buttons": "Rəqqasınızı idarə etmək üçün ox düymələrini basın.",
           "dance_callout_11_a": "Bu bloku proqramına əlavə et"
@@ -787,6 +790,10 @@
           "arrow_buttons": "Rəqqasınızı idarə etmək üçün ox düymələrini basın.",
           "dance_callout_11_a": "Bu bloku proqramına əlavə et"
         },
+        "CourseD_Dance_2020_02_2023": {
+          "arrow_buttons": "Rəqqasınızı idarə etmək üçün ox düymələrini basın.",
+          "dance_callout_11_a": "Bu bloku proqramına əlavə et"
+        },
         "CourseD_Dance_2020_04": {
           "dance_callout_02": "Bu bloku proqramına əlavə et!"
         },
@@ -794,6 +801,9 @@
           "dance_callout_02": "Bu bloku proqramına əlavə et!"
         },
         "CourseD_Dance_2020_04_2021": {
+          "dance_callout_02": "Bu bloku proqramına əlavə et!"
+        },
+        "CourseD_Dance_2020_04_2023": {
           "dance_callout_02": "Bu bloku proqramına əlavə et!"
         },
         "CourseD_Dance_2020_05": {
@@ -805,6 +815,9 @@
         "CourseD_Dance_2020_05_2021": {
           "dance_callout_05": "Proqramına yeni hadisə əlavə et"
         },
+        "CourseD_Dance_2020_05_2023": {
+          "dance_callout_05": "Proqramına yeni hadisə əlavə et"
+        },
         "CourseD_Dance_2020_06": {
           "dance_party_11_5_groups": "Yeni blok!"
         },
@@ -812,6 +825,9 @@
           "dance_party_11_5_groups": "Yeni blok!"
         },
         "CourseD_Dance_2020_06_2021": {
+          "dance_party_11_5_groups": "Yeni blok!"
+        },
+        "CourseD_Dance_2020_06_2023": {
           "dance_party_11_5_groups": "Yeni blok!"
         },
         "CourseD_Dance_2020_07": {
@@ -823,6 +839,9 @@
         "CourseD_Dance_2020_07_2021": {
           "setprop_hint": "Yeni blok!"
         },
+        "CourseD_Dance_2020_07_2023": {
+          "setprop_hint": "Yeni blok!"
+        },
         "CourseD_Dance_2020_09": {
           "new_block_3": "Yeni blok!",
           "new_block_4": "Yeni blok!"
@@ -832,6 +851,10 @@
           "new_block_4": "Yeni blok!"
         },
         "CourseD_Dance_2020_09_2021": {
+          "new_block_3": "Yeni blok!",
+          "new_block_4": "Yeni blok!"
+        },
+        "CourseD_Dance_2020_09_2023": {
           "new_block_3": "Yeni blok!",
           "new_block_4": "Yeni blok!"
         },
@@ -862,7 +885,14 @@
           "minitoolbox": "Bloku genişləndirmək üçün bura basın.",
           "pointerlocation": "Mövzu blokunu bura çəkin."
         },
+        "CourseF_outbreak2_2023": {
+          "minitoolbox": "Bloku genişləndirmək üçün bura basın.",
+          "pointerlocation": "Mövzu blokunu bura çəkin."
+        },
         "CourseF_outbreak7_-2022-2": {
+          "costumes_tab": "Layihəvə kostyum əlavə etmək üçün buraya bas. "
+        },
+        "CourseF_outbreak7_2023": {
           "costumes_tab": "Layihəvə kostyum əlavə etmək üçün buraya bas. "
         },
         "Dance_2019_01": {
@@ -925,6 +955,9 @@
         "Function intro Ryan_2021": {
           "Function_intro_Ryan_1": "Bu kiçik təlimat, kompüterə iş sahəsindəki eyni adlı BIG kod yığınını işə salmağı söyləyir."
         },
+        "Function intro Ryan_2023": {
+          "Function_intro_Ryan_1": "Bu kiçik təlimat, kompüterə iş sahəsindəki eyni adlı BIG kod yığınını işə salmağı söyləyir."
+        },
         "Infinity_move_collide": {
           "Infinity_move_collide_callout": "Bu hadisə baş verəndə səs çalın."
         },
@@ -959,6 +992,9 @@
         "MC_HOC_2017_03_Cole_2021": {
           "MC_HOC_2017_03_Cole_1": "Bu \"təkrar\" döngəsidir! İş sahəsinə klikləyin və dəfələrlə işlətmək istədiyiniz kodu əlavə edin."
         },
+        "MC_HOC_2017_03_Cole_2023": {
+          "MC_HOC_2017_03_Cole_1": "Bu \"təkrar\" döngəsidir! İş sahəsinə klikləyin və dəfələrlə işlətmək istədiyiniz kodu əlavə edin."
+        },
         "MC_HOC_2017_04_Cole": {
           "MC_HOC_2017_04_Cole_a": "Agent su üzərində gəzə bilər, amma oyunçu edə bilməz!"
         },
@@ -972,6 +1008,9 @@
           "MC_HOC_2017_04_Cole_a": "Agent su üzərində gəzə bilər, amma oyunçu edə bilməz!"
         },
         "MC_HOC_2017_04_Cole_2021": {
+          "MC_HOC_2017_04_Cole_a": "Agent su üzərində gəzə bilər, amma oyunçu edə bilməz!"
+        },
+        "MC_HOC_2017_04_Cole_2023": {
           "MC_HOC_2017_04_Cole_a": "Agent su üzərində gəzə bilər, amma oyunçu edə bilməz!"
         },
         "MC_HOC_2017_06_Cole": {
@@ -989,6 +1028,9 @@
         "MC_HOC_2017_06_Cole_2021": {
           "MC_HOC_2017_06_Cole_1": "Bu blokları ata bilməzsiniz, ancaq onları düzəldə bilərsiniz!"
         },
+        "MC_HOC_2017_06_Cole_2023": {
+          "MC_HOC_2017_06_Cole_1": "Bu blokları ata bilməzsiniz, ancaq onları düzəldə bilərsiniz!"
+        },
         "MC_HOC_2017_Ali": {
           "MC_HOC_2017_08_RY_1": "Agent lava üzərində hərəkət edə bilər, lakin Stiv və Aleks bunu edə bilməz!"
         },
@@ -1002,6 +1044,9 @@
           "MC_HOC_2017_08_RY_1": "Agent lava üzərində hərəkət edə bilər, lakin Stiv və Aleks bunu edə bilməz!"
         },
         "MC_HOC_2017_Ali_2021": {
+          "MC_HOC_2017_08_RY_1": "Agent lava üzərində hərəkət edə bilər, lakin Stiv və Aleks bunu edə bilməz!"
+        },
+        "MC_HOC_2017_Ali_2023": {
           "MC_HOC_2017_08_RY_1": "Agent lava üzərində hərəkət edə bilər, lakin Stiv və Aleks bunu edə bilməz!"
         },
         "NEW Course 4 Artist Functions 7": {
@@ -1044,6 +1089,9 @@
         "Overworld Chop Trees_2021": {
           "craft_callout_preplaced": "Bura sizin başlamağınız üçün bəzi bloklar qoyduq."
         },
+        "Overworld Chop Trees_2023": {
+          "craft_callout_preplaced": "Bura sizin başlamağınız üçün bəzi bloklar qoyduq."
+        },
         "Overworld House Frame Chosen": {
           "craft_callout_preplaced_house": "Bu kod evinizi tikməyə başlayacaq. Bitirə bilərsən?"
         },
@@ -1058,6 +1106,9 @@
         },
         "Overworld House Frame Chosen_2021": {
           "craft_callout_preplaced_house": "Bu kod evini tikməyə başlayacaq. Bitirə bilərsən? "
+        },
+        "Overworld House Frame Chosen_2023": {
+          "craft_callout_preplaced_house": "Bu kod evinizi tikməyə başlayacaq. Bitirə bilərsən?"
         },
         "Overworld Move to Sheep": {
           "craft_drag_block_callout": "\"İrəli get\" blokunu sürükləyin və digər blokun aşağısına əlavə edin.",
@@ -1079,6 +1130,10 @@
           "craft_drag_block_callout": "\"İrəli get\" blokunu sürükləyin və digər blokun aşağısına əlavə edin.",
           "craft_run_button_callout": "Proqramınızı sınaqdan keçirmək üçün \"İcra et\"i basın"
         },
+        "Overworld Move to Sheep_2023": {
+          "craft_drag_block_callout": "\"İrəli get\" blokunu sürükləyin və digər blokun aşağısına əlavə edin.",
+          "craft_run_button_callout": "Proqramınızı sınaqdan keçirmək üçün \"İcra et\"i basın"
+        },
         "Overworld Place Wall": {
           "craft_inside_repeat": "Burada bloklar qoyaraq hərəkətləri təkrarlayın"
         },
@@ -1093,6 +1148,9 @@
         },
         "Overworld Place Wall_2021": {
           "craft_inside_repeat": "Burada bloklar qoyaraq hərəkətləri təkrarla"
+        },
+        "Overworld Place Wall_2023": {
+          "craft_inside_repeat": "Burada bloklar qoyaraq hərəkətləri təkrarlayın"
         },
         "Underground Avoiding Lava": {
           "craft_callout_moveforward": "Bu kod lavanı yoxlayacaq, irəli getmək üçün əmr əlavə edə bilərsiniz?"
@@ -1109,6 +1167,9 @@
         "Underground Avoiding Lava_2021": {
           "craft_callout_moveforward": "Bu kod lavanı yoxlayacaq, irəliləmək üçün bir əmr əlavə edə bilərsən mi? "
         },
+        "Underground Avoiding Lava_2023": {
+          "craft_callout_moveforward": "Bu kod lavanı yoxlayacaq, irəli getmək üçün əmr əlavə edə bilərsiniz?"
+        },
         "Underground Iron": {
           "craft_what_is_iron": "Bu dəmir mənimdir!"
         },
@@ -1122,6 +1183,9 @@
           "craft_what_is_iron": "Bu dəmir mənimdir!"
         },
         "Underground Iron_2021": {
+          "craft_what_is_iron": "Bu dəmir mənimdir!"
+        },
+        "Underground Iron_2023": {
           "craft_what_is_iron": "Bu dəmir mənimdir!"
         },
         "Virtual Pet 2_2019": {
@@ -1148,10 +1212,16 @@
         "courseA_EOC_playlab_animals2022": {
           "question_mark": "?"
         },
+        "courseA_EOC_playlab_animals_2023": {
+          "question_mark": "?"
+        },
         "courseA_EOC_playlab_fantasy": {
           "question_mark": "?"
         },
         "courseA_EOC_playlab_fantasy2022": {
+          "question_mark": "?"
+        },
+        "courseA_EOC_playlab_fantasy_2023": {
           "question_mark": "?"
         },
         "courseA_EOC_playlab_people": {
@@ -1160,10 +1230,16 @@
         "courseA_EOC_playlab_people2022": {
           "question_mark": "?"
         },
+        "courseA_EOC_playlab_people_2023": {
+          "question_mark": "?"
+        },
         "courseA_artist_loops4": {
           "courseA_artist_loops4_1": "Bu nömrə sizə bu tapmacada bu bloklardan neçəsini istifadə edə biləcəyinizi bildirir."
         },
         "courseA_artist_loops42022": {
+          "courseA_artist_loops4_1": "Bu nömrə sizə bu tapmacada bu bloklardan neçəsini istifadə edə biləcəyinizi bildirir."
+        },
+        "courseA_artist_loops42022_2023": {
           "courseA_artist_loops4_1": "Bu nömrə sizə bu tapmacada bu bloklardan neçəsini istifadə edə biləcəyinizi bildirir."
         },
         "courseA_artist_loops4_2018": {
@@ -1182,6 +1258,9 @@
           "courseA_artist_loops7_1": "Bu rəqəm o deməkdir ki, son cavabda bu tip blokdan yalnız biri istifadə oluna bilər."
         },
         "courseA_artist_loops72022": {
+          "courseA_artist_loops7_1": "Bu rəqəm o deməkdir ki, son cavabda bu tip blokdan yalnız biri istifadə oluna bilər."
+        },
+        "courseA_artist_loops72022_2023": {
           "courseA_artist_loops7_1": "Bu rəqəm o deməkdir ki, son cavabda bu tip blokdan yalnız biri istifadə oluna bilər."
         },
         "courseA_artist_loops7_2018": {
@@ -1220,6 +1299,9 @@
         "courseA_collector_loops3_2021": {
           "gradek_adventurer_loops2_1": "Bu rəqəm bu problemin içərisində nə qədər blokdan istifadə edə biləcəyinizi göstərir."
         },
+        "courseA_collector_loops3_2023": {
+          "gradek_adventurer_loops2_1": "Bu nömrə sizə bu tapmacada bu bloklardan neçəsini istifadə edə biləcəyinizi bildirir."
+        },
         "courseA_collector_preLoops1": {
           "courseA_collector_preLoops1_1": "Kodun işləməsini izləmək üçün buraya vurun!"
         },
@@ -1250,6 +1332,9 @@
         "courseA_maze_ramp2_2021": {
           "courseC_maze_programming2_1": "Bu alət qutusudur. Tapmacalarınızı tamamlamaq üçün əlavə bloklar tapa biləcəyiniz yer budur."
         },
+        "courseA_maze_ramp2_2023": {
+          "courseC_maze_programming2_1": "Bu alətlər qutusudur. Bulmacalarınızı tamamlamaq üçün əlavə bloklar tapa biləcəyiniz yer budur. "
+        },
         "courseA_maze_ramp3a_2018": {
           "courseC_maze_programming2_1": "Bu alətlər qutusudur. Bulmacalarınızı tamamlamaq üçün əlavə bloklar tapa biləcəyiniz yer budur. "
         },
@@ -1271,6 +1356,9 @@
         "courseA_maze_seq1_2021": {
           "courseA_maze_seq1_1": "Kömək lazım olanda lampaya tosun!"
         },
+        "courseA_maze_seq1_2023": {
+          "courseA_maze_seq1_1": "Bir işarəyə ehtiyacınız olduğu zaman lampaya basın!"
+        },
         "courseA_maze_seq2": {
           "courseA_maze_seqA_callout1": "Proqramı addım-addım keçmək üçün addım düyməsini istifadə edin. Bu, səhvi tapmaqda kömək edəcək!"
         },
@@ -1281,6 +1369,9 @@
           "courseA_playlab_events4_callout1": "Bu bir çağırışdır"
         },
         "courseA_playLab_events42022": {
+          "courseA_playlab_events4_callout1": "Bu bir çağırışdır"
+        },
+        "courseA_playLab_events42022_2023": {
           "courseA_playlab_events4_callout1": "Bu bir çağırışdır"
         },
         "courseA_playLab_events4_2018": {
@@ -1298,6 +1389,9 @@
         "courseB_Scrat_ramp12022": {
           "grade2_CaringForNewPet_0_1": "Bütün blokları bağladıqdan sonra proqramınızı başlatmaq üçün \"Çalış\" düyməsini basın."
         },
+        "courseB_Scrat_ramp12022_2023": {
+          "grade2_CaringForNewPet_0_1": "Bütün blokları bağladıqdan sonra proqramınızı başlatmaq üçün \"Çalış\" düyməsini basın."
+        },
         "courseB_Scrat_ramp1_2018": {
           "grade2_CaringForNewPet_0_1": "Bütün blokları bağladıqdan sonra proqramınızı başlatmaq üçün \"Çalış\" düyməsini basın."
         },
@@ -1311,6 +1405,9 @@
           "grade2_CaringForNewPet_0_1": "Bütün blokları bağladıqdan sonra proqramınızı başlamaq üçün \"Çalış\" düyməsini basın. "
         },
         "courseB_Scrat_ramp3a2022": {
+          "courseC_maze_programming2_1": "Bu alətlər qutusudur. Bulmacalarınızı tamamlamaq üçün əlavə bloklar tapa biləcəyiniz yer budur. "
+        },
+        "courseB_Scrat_ramp3a2022_2023": {
           "courseC_maze_programming2_1": "Bu alətlər qutusudur. Bulmacalarınızı tamamlamaq üçün əlavə bloklar tapa biləcəyiniz yer budur. "
         },
         "courseB_Scrat_ramp3a_2019": {
@@ -1349,6 +1446,9 @@
         "courseB_maze_seq1_2021": {
           "courseB_maze_seq1": "Köməyə ehtiyacınız olduğu zaman lampaya basın!"
         },
+        "courseB_maze_seq1_2023": {
+          "courseB_maze_seq1": "Bir işarəyə ehtiyacınız olduğu zaman lampaya basın!"
+        },
         "courseB_maze_seq2": {
           "courseB_maze_seq2_callout1": "Proqramı addım-addım keçmək üçün addım düyməsini istifadə edin. Bu, səhvi tapmaqda kömək edəcək!"
         },
@@ -1373,6 +1473,9 @@
         "courseC_PlayLab_events8_2021": {
           "courseC_PlayLab_events8_callout1": "Waddles və Chomp toxunduqda bu blokdan istifadə edin!"
         },
+        "courseC_PlayLab_events8_2023": {
+          "courseC_PlayLab_events8_callout1": "Waddles və Chomp toxunduqda bu blokdan istifadə edin!"
+        },
         "courseC_artist_loops1a2022": {
           "jumpto_callout": "Bu blok bu layihə üçün çox vacibdir. İstifadə etdiyinizə əmin olun!"
         },
@@ -1385,6 +1488,9 @@
         "courseC_artist_loops1a_2021": {
           "jumpto_callout": "Bu blok bu layihə üçün çox vacibdir. İstifadə etdiyinizə əmin olun!"
         },
+        "courseC_artist_loops1a_2023": {
+          "jumpto_callout": "Bu blok bu layihə üçün çox vacibdir. İstifadə etdiyinizə əmin olun!"
+        },
         "courseC_artist_loops1b2022": {
           "sticker2": "Bunu proqramınızın ortasına əlavə edin."
         },
@@ -1395,6 +1501,9 @@
           "sticker2": "Bunu proqramınızın ortasına əlavə edin."
         },
         "courseC_artist_loops1b_2021": {
+          "sticker2": "Bunu proqramınızın ortasına əlavə edin."
+        },
+        "courseC_artist_loops1b_2023": {
           "sticker2": "Bunu proqramınızın ortasına əlavə edin."
         },
         "courseC_artist_loopsPrePre1a": {
@@ -1430,6 +1539,9 @@
         "courseC_collector_prog1_2021": {
           "courseC_collector_prog1_1": "Alət qutusunda yeni bloklar görürsünüzmü? Narahat olmayın, onlardan başqa bir dərsdə necə istifadə edəcəyinizi sizə göstərəcəyik."
         },
+        "courseC_collector_prog1_2023": {
+          "courseC_collector_prog1_1": "Alət qutusunda yeni bloklar görürsünüzmü? Narahat olmayın, onlardan başqa bir dərsdə necə istifadə edəcəyinizi sizə göstərəcəyik."
+        },
         "courseC_collector_prog7": {
           "courseC_collector_prog7_1": "Lazım gələrsə alət qutusundan daha çox blok götürə bilərsiniz!"
         },
@@ -1446,6 +1558,9 @@
           "courseC_collector_prog7_1": "Lazım gələrsə alət qutusundan daha çox blok götürə bilərsiniz!"
         },
         "courseC_collector_prog7_2021": {
+          "courseC_collector_prog7_1": "Lazım gələrsə alət qutusundan daha çox blok götürə bilərsiniz!"
+        },
+        "courseC_collector_prog7_2023": {
           "courseC_collector_prog7_1": "Lazım gələrsə alət qutusundan daha çox blok götürə bilərsiniz!"
         },
         "courseC_harvester_loops1": {
@@ -1466,6 +1581,9 @@
         "courseC_harvester_loops1_2021": {
           "courseC_harvester_loops1_callout1": "Balqabağın üzərindəki dörd rəqəmi sənə yığmaq  üçün dörd balqabağın mövcud  olduğunu söyləyir."
         },
+        "courseC_harvester_loops1_2023": {
+          "courseC_harvester_loops1_callout1": "Balqabağın üzərindəki dörd rəqəmi sənə yığmaq  üçün dörd balqabağın mövcud  olduğunu söyləyir."
+        },
         "courseC_maze_debugging5": {
           "courseC_maze_debugging5_1": "Gri bloklar silinemez!"
         },
@@ -1481,6 +1599,9 @@
         "courseC_maze_debugging5_2021": {
           "courseC_maze_debugging5_1": "Bu bloklar kilitlənib və silinə bilməzlər!"
         },
+        "courseC_maze_debugging5_2023": {
+          "courseC_maze_debugging5_1": "Bu bloklar kilitlənib və silinə bilməzlər!"
+        },
         "courseC_maze_debugging92022": {
           "courseC_maze_debugging9_2019_1": "Alətlər qutusundakı blokları iş sahənizə sürükləyin."
         },
@@ -1491,6 +1612,9 @@
           "courseC_maze_debugging9_2019_1": "Alətlər qutusundakı blokları iş sahənizə sürükləyin."
         },
         "courseC_maze_debugging9_2021": {
+          "courseC_maze_debugging9_2019_1": "Alətlər qutusundakı blokları iş sahənizə sürükləyin."
+        },
+        "courseC_maze_debugging9_2023": {
           "courseC_maze_debugging9_2019_1": "Alətlər qutusundakı blokları iş sahənizə sürükləyin."
         },
         "courseC_maze_debugging9_copy_2020": {
@@ -1514,6 +1638,9 @@
         "courseC_maze_programming1_2021": {
           "grade2_CaringForNewPet_0_1": "Bütün blokları birləşdirəndən sonra, proqramı başlatmaq üçün 'icra et' düyməsinə basın."
         },
+        "courseC_maze_programming1_2023": {
+          "grade2_CaringForNewPet_0_1": "Bütün blokları bağladıqdan sonra proqramınızı başlatmaq üçün \"Çalış\" düyməsini basın."
+        },
         "courseC_maze_programming2": {
           "courseC_maze_programming2_1": "Bu alətlər qutusudur. Bulmacalarınızı tamamlamaq üçün əlavə bloklar tapa biləcəyiniz yer budur. "
         },
@@ -1530,6 +1657,9 @@
           "courseC_maze_programming2_1": "Bu alətlər qutusudur. Bulmacalarınızı tamamlamaq üçün əlavə bloklar tapa biləcəyiniz yer budur. "
         },
         "courseC_maze_programming2_2021": {
+          "courseC_maze_programming2_1": "Bu alətlər qutusudur. Bulmacalarınızı tamamlamaq üçün əlavə bloklar tapa biləcəyiniz yer budur. "
+        },
+        "courseC_maze_programming2_2023": {
           "courseC_maze_programming2_1": "Bu alətlər qutusudur. Bulmacalarınızı tamamlamaq üçün əlavə bloklar tapa biləcəyiniz yer budur. "
         },
         "courseC_maze_programming3": {
@@ -1556,6 +1686,10 @@
           "courseC_maze_programming3_2": "Əlavə blokları atmaq üçün alət qutusuna sürükləyə bilərsiniz.",
           "courseC_maze_programming3_3": "Bu bloklar dashdi kimidir, onlari qiraga atmaq olmur."
         },
+        "courseC_maze_programming3_2023": {
+          "courseC_maze_programming3_2": "Əlavə blokları atmaq üçün alət qutusuna sürükləyə bilərsiniz.",
+          "courseC_maze_programming3_3": "Bu bloklar dashdi kimidir, onlari qiraga atmaq olmur."
+        },
         "courseC_maze_programming4": {
           "courseC_maze_programming4_1": "Bu blok limitinizdir. Bu bloklardan neçəsini istifadə etmək üçün qoyduğunuzu izah edir."
         },
@@ -1574,6 +1708,9 @@
         "courseC_maze_programming4_2021": {
           "courseC_maze_programming4_1": "Bu blok limitinizdir. Bu bloklardan neçəsini istifadə etmək üçün qoyduğunuzu izah edir."
         },
+        "courseC_maze_programming4_2023": {
+          "courseC_maze_programming4_1": "Bu blok limitinizdir. Bu bloklardan neçəsini istifadə etmək üçün qoyduğunuzu izah edir."
+        },
         "courseC_maze_programming5": {
           "": "Bu blokların üzərində nömrələr yoxdur. İstədiyiniz qədər istifadə edə bilərsiniz!"
         },
@@ -1590,6 +1727,9 @@
           "": "Bu blokların üzərində nömrələr yoxdur. İstədiyiniz qədər istifadə edə bilərsiniz!"
         },
         "courseC_maze_programming5_2021": {
+          "": "Bu blokların üzərində nömrələr yoxdur. İstədiyiniz qədər istifadə edə bilərsiniz!"
+        },
+        "courseC_maze_programming5_2023": {
           "": "Bu blokların üzərində nömrələr yoxdur. İstədiyiniz qədər istifadə edə bilərsiniz!"
         },
         "courseC_maze_programming7": {
@@ -1616,6 +1756,10 @@
           "courseC_maze_programming7_1": "Bu ilk tapmacandır! Bunlar çətin olmaq üçündür və bir neçə cəhd tələb edə bilər.",
           "courseC_maze_programming7_2": "Bu bloklar daşdan düzəlib və atıla bilməzlər."
         },
+        "courseC_maze_programming7_2023": {
+          "courseC_maze_programming7_1": "Bu ilk tapmacandır! Bunlar çətin olmaq üçündür və bir neçə cəhd tələb edə bilər.",
+          "courseC_maze_programming7_2": "Bu bloklar daşdan düzəlib və atıla bilməzlər."
+        },
         "courseC_starWars_loops2": {
           "courseC_starWars_loops2": "Bu tapmacada sizdə yalnız bu bloklar mövcuddur.  "
         },
@@ -1632,6 +1776,9 @@
           "courseC_starWars_loops2": "Bu tapmacada sizdə yalnız bu bloklar mövcuddur.  "
         },
         "courseC_starWars_loops2_2021": {
+          "courseC_starWars_loops2": "Bu tapmacada sizdə yalnız bu bloklar mövcuddur.  "
+        },
+        "courseC_starWars_loops2_2023": {
           "courseC_starWars_loops2": "Bu tapmacada sizdə yalnız bu bloklar mövcuddur.  "
         },
         "courseC_starWars_loops2_copy": {
@@ -1665,6 +1812,9 @@
         "courseD_maze_intro4_2021": {
           "courseC_maze_programming4_1": "Bu blok limitinizdir. Bu bloklardan neçəsini istifadə etmək üçün qoyduğunuzu izah edir."
         },
+        "courseD_maze_intro4_2023": {
+          "courseC_maze_programming4_1": "Bu blok limitinizdir. Bu bloklardan neçəsini istifadə etmək üçün qoyduğunuzu izah edir."
+        },
         "courseD_maze_intro5a2022": {
           "": "Bu blokların üzərində nömrələr yoxdur. İstədiyiniz qədər istifadə edə bilərsiniz!"
         },
@@ -1675,6 +1825,9 @@
           "": "Bu blokların üzərində nömrələr yoxdur. İstədiyiniz qədər istifadə edə bilərsiniz!"
         },
         "courseD_maze_intro5a_2021": {
+          "": "Bu blokların üzərində nömrələr yoxdur. İstədiyiniz qədər istifadə edə bilərsiniz!"
+        },
+        "courseD_maze_intro5a_2023": {
           "": "Bu blokların üzərində nömrələr yoxdur. İstədiyiniz qədər istifadə edə bilərsiniz!"
         },
         "courseD_maze_ramp1": {
@@ -1695,6 +1848,9 @@
         "courseD_maze_ramp1_2021": {
           "grade2_CaringForNewPet_0_1": "Bütün blokları bağladıqdan sonra proqramınızı başlatmaq üçün \"Çalış\" düyməsini basın."
         },
+        "courseD_maze_ramp1_2023": {
+          "grade2_CaringForNewPet_0_1": "Bütün blokları bağladıqdan sonra proqramınızı başlatmaq üçün \"Çalış\" düyməsini basın."
+        },
         "courseD_maze_ramp2": {
           "courseC_maze_programming2_1": "Bu alətlər qutusudur. Bulmacalarınızı tamamlamaq üçün əlavə bloklar tapa biləcəyiniz yer budur. "
         },
@@ -1712,6 +1868,9 @@
         },
         "courseD_maze_ramp2_2021": {
           "courseC_maze_programming2_1": "Bu alətlər qutusudur. Tapmacanı tamamlamaq üçün əlavə bloklar tapa biləcəyiniz yer buradır."
+        },
+        "courseD_maze_ramp2_2023": {
+          "courseC_maze_programming2_1": "Bu alətlər qutusudur. Bulmacalarınızı tamamlamaq üçün əlavə bloklar tapa biləcəyiniz yer budur. "
         },
         "courseD_maze_ramp3": {
           "courseC_maze_programming3_2": "Əlavə blokları atmaq üçün alət qutusuna sürükləyə bilərsiniz.",
@@ -1736,6 +1895,10 @@
         "courseD_maze_ramp3_2021": {
           "courseC_maze_programming3_2": "Əlavə blokları atmaq üçün alət qutusuna sürükləyə bilərsiniz.",
           "stone_block_2": "Boz bloklar atıla bilməz. "
+        },
+        "courseD_maze_ramp3_2023": {
+          "courseC_maze_programming3_2": "Əlavə blokları atmaq üçün alət qutusuna sürükləyə bilərsiniz.",
+          "stone_block_2": "Boz blokları kənara  atmaq olmaz."
         },
         "courseD_maze_ramp4": {
           "courseC_maze_programming4_1": "Bu blok limitinizdir. Bu bloklardan neçəsini istifadə etmək üçün qoyduğunuzu izah edir."
@@ -1765,6 +1928,9 @@
           "": "Bu blokların üzərində nömrələr yoxdur. İstədiyiniz qədər istifadə edə bilərsiniz!"
         },
         "courseD_maze_ramp5_2021": {
+          "": "Bu blokların üzərində nömrələr yoxdur. İstədiyiniz qədər istifadə edə bilərsiniz!"
+        },
+        "courseD_maze_ramp5_2023": {
           "": "Bu blokların üzərində nömrələr yoxdur. İstədiyiniz qədər istifadə edə bilərsiniz!"
         },
         "courseD_maze_ramp5a": {
@@ -1822,6 +1988,9 @@
         "courseE_aboutme_2_2021": {
           "": "Bura basın!"
         },
+        "courseE_aboutme_2_2023": {
+          "": "Layihəvə kostyum əlavə etmək üçün buraya bas. "
+        },
         "courseE_artist_functions8": {
           "courseD_artist_functions8_1": "Funksiyalar yaratmaq üçün bloklarınız alətlər qutusunda bu etiketin altına köçürülüb."
         },
@@ -1838,6 +2007,9 @@
           "courseD_artist_functions8_1": "Funksiyalar yaratmaq üçün bloklarınız alətlər qutusunda bu etiketin altına köçürülüb."
         },
         "courseE_artist_functions8a_2021": {
+          "courseD_artist_functions8_1": "Funksiyalar yaratmaq üçün bloklarınız alətlər qutusunda bu etiketin altına köçürülüb."
+        },
+        "courseE_artist_functions8a_2023": {
           "courseD_artist_functions8_1": "Funksiyalar yaratmaq üçün bloklarınız alətlər qutusunda bu etiketin altına köçürülüb."
         },
         "courseE_artist_ramp8": {
@@ -1869,6 +2041,9 @@
         "courseE_farmer_functions13_2021": {
           "courseE_farmer_functions1a_1": "This veggie is unknown.  It changes each time you run the program."
         },
+        "courseE_farmer_functions13_2023": {
+          "courseE_farmer_functions1a_1": "This veggie is unknown.  It changes each time you run the program."
+        },
         "courseE_farmer_functions1_2018": {
           "courseE_farmer_functions1_2": "Alətlər qutusu bu dəfə bir az fərqli təşkil olunub! Hansı bloklara sahib olduğunuzu görmək üçün müxtəlif kateqoriyalara klikləyin."
         },
@@ -1879,6 +2054,9 @@
           "courseE_farmer_functions1_2": "Alətlər qutusu bu dəfə bir az fərqli təşkil olunub! Hansı bloklara sahib olduğunuzu görmək üçün müxtəlif kateqoriyalara klikləyin."
         },
         "courseE_farmer_functions1_2021": {
+          "courseE_farmer_functions1_2": "Alətlər qutusu bu dəfə bir az fərqli təşkil olunub! Hansı bloklara sahib olduğunuzu görmək üçün müxtəlif kateqoriyalara klikləyin."
+        },
+        "courseE_farmer_functions1_2023": {
           "courseE_farmer_functions1_2": "Alətlər qutusu bu dəfə bir az fərqli təşkil olunub! Hansı bloklara sahib olduğunuzu görmək üçün müxtəlif kateqoriyalara klikləyin."
         },
         "courseE_farmer_functions1a": {
@@ -1899,6 +2077,9 @@
         "courseE_farmer_functions1a_2021": {
           "courseE_farmer_functions1a_1": "This veggie is unknown.  It changes each time you run the program."
         },
+        "courseE_farmer_functions1a_2023": {
+          "courseE_farmer_functions1a_1": "This veggie is unknown.  It changes each time you run the program."
+        },
         "courseE_farmer_functions2b": {
           "courseE_farmer_functions1a_1": "This veggie is unknown.  It changes each time you run the program."
         },
@@ -1917,6 +2098,9 @@
         "courseE_farmer_functions2b_2021": {
           "courseE_farmer_functions1a_1": "This veggie is unknown.  It changes each time you run the program."
         },
+        "courseE_farmer_functions2b_2023": {
+          "courseE_farmer_functions1a_1": "This veggie is unknown.  It changes each time you run the program."
+        },
         "courseF_apps_aquarium": {
           "run_button": "Əvvəl \"Run\" düymənisini basın!",
           "visualizationResizeBar": "Oyun zonasının ölçüsünü dəyişdirmək üçün 3 nöqtəni sürüşdürün."
@@ -1929,6 +2113,10 @@
           "run_button": "Əvvəl \"Run\" düymənisini basın!",
           "visualizationResizeBar": "Oyun zonasının ölçüsünü dəyişdirmək üçün 3 nöqtəni sürüşdürün."
         },
+        "courseF_apps_aquarium_2023": {
+          "run_button": "Əvvəl \"Run\" düymənisini basın!",
+          "visualizationResizeBar": "Oyun zonasının ölçüsünü dəyişdirmək üçün 3 nöqtəni sürüşdürün."
+        },
         "courseF_apps_card": {
           "visualizationResizeBar": "Oyun zonasının ölçüsünü dəyişdirmək üçün 3 nöqtəni sürüşdürün."
         },
@@ -1936,6 +2124,9 @@
           "visualizationResizeBar": "Oyun zonasının ölçüsünü dəyişdirmək üçün 3 nöqtəni sürüşdürün."
         },
         "courseF_apps_card_-2022-2": {
+          "visualizationResizeBar": "Oyun zonasının ölçüsünü dəyişdirmək üçün 3 nöqtəni sürüşdürün."
+        },
+        "courseF_apps_card_2023": {
           "visualizationResizeBar": "Oyun zonasının ölçüsünü dəyişdirmək üçün 3 nöqtəni sürüşdürün."
         },
         "courseF_apps_chatbot": {
@@ -1947,6 +2138,10 @@
           "visualizationResizeBar": "Oyun zonasının ölçüsünü dəyişdirmək üçün 3 nöqtəni sürüşdürün."
         },
         "courseF_apps_chatbot_-2022-2": {
+          "run_button": "Əvvəl \"Run\" düymənisini basın!",
+          "visualizationResizeBar": "Oyun zonasının ölçüsünü dəyişdirmək üçün 3 nöqtəni sürüşdürün."
+        },
+        "courseF_apps_chatbot_2023": {
           "run_button": "Əvvəl \"Run\" düymənisini basın!",
           "visualizationResizeBar": "Oyun zonasının ölçüsünü dəyişdirmək üçün 3 nöqtəni sürüşdürün."
         },
@@ -1962,16 +2157,32 @@
           "run_button": "Əvvəl \"Run\" düymənisini basın!",
           "visualizationResizeBar": "Oyun zonasının ölçüsünü dəyişdirmək üçün 3 nöqtəni sürüşdürün."
         },
+        "courseF_apps_collector_2023": {
+          "run_button": "Əvvəl \"Run\" düymənisini basın!",
+          "visualizationResizeBar": "Oyun zonasının ölçüsünü dəyişdirmək üçün 3 nöqtəni sürüşdürün."
+        },
         "courseF_apps_collector_drag_-2022-2": {
+          "visualizationResizeBar": "Oyun zonasının ölçüsünü dəyişdirmək üçün 3 nöqtəni sürüşdürün."
+        },
+        "courseF_apps_collector_drag_2023": {
           "visualizationResizeBar": "Oyun zonasının ölçüsünü dəyişdirmək üçün 3 nöqtəni sürüşdürün."
         },
         "courseF_apps_collector_drive_-2022-2": {
           "visualizationResizeBar": "Oyun zonasının ölçüsünü dəyişdirmək üçün 3 nöqtəni sürüşdürün."
         },
+        "courseF_apps_collector_drive_2023": {
+          "visualizationResizeBar": "Oyun zonasının ölçüsünü dəyişdirmək üçün 3 nöqtəni sürüşdürün."
+        },
         "courseF_apps_collector_move2_-2022-2": {
           "visualizationResizeBar": "Oyun zonasının ölçüsünü dəyişdirmək üçün 3 nöqtəni sürüşdürün."
         },
+        "courseF_apps_collector_move2_2023": {
+          "visualizationResizeBar": "Oyun zonasının ölçüsünü dəyişdirmək üçün 3 nöqtəni sürüşdürün."
+        },
         "courseF_apps_collector_move_-2022-2": {
+          "visualizationResizeBar": "Oyun zonasının ölçüsünü dəyişdirmək üçün 3 nöqtəni sürüşdürün."
+        },
+        "courseF_apps_collector_move_2023": {
           "visualizationResizeBar": "Oyun zonasının ölçüsünü dəyişdirmək üçün 3 nöqtəni sürüşdürün."
         },
         "courseF_apps_madlib": {
@@ -1983,6 +2194,9 @@
         "courseF_apps_madlib_-2022-2": {
           "visualizationResizeBar": "Oyun zonasının ölçüsünü dəyişdirmək üçün 3 nöqtəni sürüşdürün."
         },
+        "courseF_apps_madlib_2023": {
+          "visualizationResizeBar": "Oyun zonasının ölçüsünü dəyişdirmək üçün 3 nöqtəni sürüşdürün."
+        },
         "courseF_apps_pet": {
           "run_button": "Əvvəl \"Run\" düymənisini basın!",
           "visualizationResizeBar": "Oyun zonasının ölçüsünü dəyişdirmək üçün 3 nöqtəni sürüşdürün."
@@ -1992,6 +2206,10 @@
           "visualizationResizeBar": "Oyun zonasının ölçüsünü dəyişdirmək üçün 3 nöqtəni sürüşdürün."
         },
         "courseF_apps_pet_-2022-2": {
+          "run_button": "Əvvəl \"Run\" düymənisini basın!",
+          "visualizationResizeBar": "Oyun zonasının ölçüsünü dəyişdirmək üçün 3 nöqtəni sürüşdürün."
+        },
+        "courseF_apps_pet_2023": {
           "run_button": "Əvvəl \"Run\" düymənisini basın!",
           "visualizationResizeBar": "Oyun zonasının ölçüsünü dəyişdirmək üçün 3 nöqtəni sürüşdürün."
         },
@@ -2034,7 +2252,13 @@
         "courseF_collector_items_-2022-2": {
           "costumes_tab_callout": "Kostyum Nişanı"
         },
+        "courseF_collector_items_2023": {
+          "costumes_tab_callout": "Kostyum Nişanı"
+        },
         "courseF_collector_player_move_-2022-2": {
+          "costumes_tab_callout": "Kostyum Nişanı"
+        },
+        "courseF_collector_player_move_2023": {
           "costumes_tab_callout": "Kostyum Nişanı"
         },
         "courseF_editable_card": {
@@ -2043,16 +2267,25 @@
         "courseF_editable_card_-2022-2": {
           "visualizationResizeBar": "Oyun zonasının ölçüsünü dəyişdirmək üçün 3 nöqtəni sürüşdürün."
         },
+        "courseF_editable_card_2023": {
+          "visualizationResizeBar": "Oyun zonasının ölçüsünü dəyişdirmək üçün 3 nöqtəni sürüşdürün."
+        },
         "courseF_editable_chatbot": {
           "visualizationResizeBar": "Oyun zonasının ölçüsünü dəyişdirmək üçün 3 nöqtəni sürüşdürün."
         },
         "courseF_editable_chatbot_-2022-2": {
           "visualizationResizeBar": "Oyun zonasının ölçüsünü dəyişdirmək üçün 3 nöqtəni sürüşdürün."
         },
+        "courseF_editable_chatbot_2023": {
+          "visualizationResizeBar": "Oyun zonasının ölçüsünü dəyişdirmək üçün 3 nöqtəni sürüşdürün."
+        },
         "courseF_editable_madlib": {
           "visualizationResizeBar": "Oyun zonasının ölçüsünü dəyişdirmək üçün 3 nöqtəni sürüşdürün."
         },
         "courseF_editable_madlib_-2022-2": {
+          "visualizationResizeBar": "Oyun zonasının ölçüsünü dəyişdirmək üçün 3 nöqtəni sürüşdürün."
+        },
+        "courseF_editable_madlib_2023": {
           "visualizationResizeBar": "Oyun zonasının ölçüsünü dəyişdirmək üçün 3 nöqtəni sürüşdürün."
         },
         "courseF_events_choice_penguin": {
@@ -2064,16 +2297,25 @@
         "courseF_events_conflict_-2022-2": {
           "stops_block": "Yeni bloklar burada!"
         },
+        "courseF_events_conflict_2023": {
+          "stops_block": "Yeni bloklar burada!"
+        },
         "courseF_events_key": {
           "whenKey": "Burada aşkar yeni bir hadisə blok istifadə edin."
         },
         "courseF_events_key_-2022-2": {
           "whenKey": "Burada aşkar yeni bir hadisə blok istifadə edin."
         },
+        "courseF_events_key_2023": {
+          "whenKey": "Burada aşkar yeni bir hadisə blok istifadə edin."
+        },
         "courseF_events_practice_reorder": {
           "stopAllBug": "Bu blok düzgün qaydada deyil."
         },
         "courseF_events_practice_reorder_-2022-2": {
+          "stopAllBug": "Bu blok düzgün qaydada deyil."
+        },
+        "courseF_events_practice_reorder_2023": {
           "stopAllBug": "Bu blok düzgün qaydada deyil."
         },
         "courseF_events_predict": {
@@ -2085,7 +2327,13 @@
         "courseF_events_time_-2022-2": {
           "events_category": "\"Hadisələr\" kateqoriyasını açmaq üçün buraya vurun."
         },
+        "courseF_events_time_2023": {
+          "events_category": "\"Hadisələr\" kateqoriyasını açmaq üçün buraya vurun."
+        },
         "courseF_groups_size_-2022-2": {
+          "mini-toolbox-blue-button": "Açmaq və ya bağlamaq üçün mavi düyməsini basın."
+        },
+        "courseF_groups_size_2023": {
           "mini-toolbox-blue-button": "Açmaq və ya bağlamaq üçün mavi düyməsini basın."
         },
         "courseF_playlab_variables1a": {
@@ -2106,10 +2354,16 @@
         "courseF_sprites_behaviors_-2022-2": {
           "behaviors_category": "Yerlər kateqoriyasını açmaq üçün bura basın."
         },
+        "courseF_sprites_behaviors_2023": {
+          "behaviors_category": "Yerlər kateqoriyasını açmaq üçün bura basın."
+        },
         "courseF_sprites_make": {
           "sprites_category": "Sprites kateqoriyasını açmaq üçün bura vurun."
         },
         "courseF_sprites_make_-2022-2": {
+          "sprites_category": "Sprites kateqoriyasını açmaq üçün bura vurun."
+        },
+        "courseF_sprites_make_2023": {
           "sprites_category": "Sprites kateqoriyasını açmaq üçün bura vurun."
         },
         "courseF_sprites_positioning": {
@@ -2118,10 +2372,16 @@
         "courseF_sprites_positioning_-2022-2": {
           "locations_category": "Bura basaraq Yerlər kateqoriyasını açın."
         },
+        "courseF_sprites_positioning_2023": {
+          "locations_category": "Bura basaraq Yerlər kateqoriyasını açın."
+        },
         "courseF_sprites_properties": {
           "sprites_category2": "Burda yeni blok axtar."
         },
         "courseF_sprites_properties_-2022-2": {
+          "sprites_category2": "Burda yeni blok axtar."
+        },
+        "courseF_sprites_properties_2023": {
           "sprites_category2": "Burda yeni blok axtar."
         },
         "courseF_text_answer": {
@@ -2130,16 +2390,25 @@
         "courseF_text_answer_-2022-2": {
           "answered_block": "Burada yeni bir blok axtarın!"
         },
+        "courseF_text_answer_2023": {
+          "answered_block": "Burada yeni bir blok axtarın!"
+        },
         "courseF_text_choice_color": {
           "text_color_finish": "Siz suala cavab zaman fon rəngi dəyişdi mi? Əgər belədirsə, \"Bitti\" düyməsini basın. Əgər yoxsa, \"Sıfırla\" düyməsini basın, Kodu dəyişdirin və yenidən \"run\"düyməsini basın."
         },
         "courseF_text_choice_color_-2022-2": {
           "text_color_finish": "Siz suala cavab zaman fon rəngi dəyişdi mi? Əgər belədirsə, \"Bitti\" düyməsini basın. Əgər yoxsa, \"Sıfırla\" düyməsini basın, Kodu dəyişdirin və yenidən \"run\"düyməsini basın."
         },
+        "courseF_text_choice_color_2023": {
+          "text_color_finish": "Siz suala cavab zaman fon rəngi dəyişdi mi? Əgər belədirsə, \"Bitti\" düyməsini basın. Əgər yoxsa, \"Sıfırla\" düyməsini basın, Kodu dəyişdirin və yenidən \"run\"düyməsini basın."
+        },
         "courseF_text_choice_conversation": {
           "text_generic_finish": "Siz başa? Əgər belədirsə, \"Bitti\" düyməsini basın. Əgər yoxsa, \"Sıfırla\" düyməsini basın, Kodu dəyişdirin və yenidən \"run\"düyməsini basın."
         },
         "courseF_text_choice_conversation_-2022-2": {
+          "text_generic_finish": "Siz başa? Əgər belədirsə, \"Bitti\" düyməsini basın. Əgər yoxsa, \"Sıfırla\" düyməsini basın, Kodu dəyişdirin və yenidən \"run\"düyməsini basın."
+        },
+        "courseF_text_choice_conversation_2023": {
           "text_generic_finish": "Siz başa? Əgər belədirsə, \"Bitti\" düyməsini basın. Əgər yoxsa, \"Sıfırla\" düyməsini basın, Kodu dəyişdirin və yenidən \"run\"düyməsini basın."
         },
         "courseF_text_choice_title": {
@@ -2150,16 +2419,26 @@
           "text_answer_finish": "Başlıq ekranı 3 saniyə ərzində göstərdinizmi? Əgər belədirsə, \"Bitti\" düyməsini basın. Əgər yoxsa, \"Sıfırla\" düyməsini basın, Kodu dəyişdirin və yenidən \"run\"düyməsini basın.",
           "title_block": "Burada iki yeni blok axtarın!"
         },
+        "courseF_text_choice_title_2023": {
+          "text_answer_finish": "Başlıq ekranı 3 saniyə ərzində göstərdinizmi? Əgər belədirsə, \"Bitti\" düyməsini basın. Əgər yoxsa, \"Sıfırla\" düyməsini basın, Kodu dəyişdirin və yenidən \"run\"düyməsini basın.",
+          "title_block": "Burada iki yeni blok axtarın!"
+        },
         "courseF_text_concat": {
           "join_blocks": "Burada yeni blokları üçün baxın!"
         },
         "courseF_text_concat_-2022-2": {
           "join_blocks": "Burada yeni blokları üçün baxın!"
         },
+        "courseF_text_concat_2023": {
+          "join_blocks": "Burada yeni blokları üçün baxın!"
+        },
         "courseF_text_events": {
           "events_category": "\"Hadisələr\" kateqoriyasını açmaq üçün buraya vurun."
         },
         "courseF_text_events_-2022-2": {
+          "events_category": "\"Hadisələr\" kateqoriyasını açmaq üçün buraya vurun."
+        },
+        "courseF_text_events_2023": {
           "events_category": "\"Hadisələr\" kateqoriyasını açmaq üçün buraya vurun."
         },
         "courseF_text_print": {
@@ -2170,10 +2449,17 @@
           "print_block": "Çap blokunu burada tapın!",
           "text_print_finish": "Sizin mesaj yuxarıda çap edilmişdir? Əgər belədirsə, \"Bitti\" düyməsini basın. Əgər yoxsa, \"Sıfırla\" düyməsini basın, Kodu dəyişdirin və yenidən \"run\"düyməsini basın."
         },
+        "courseF_text_print_2023": {
+          "print_block": "Çap blokunu burada tapın!",
+          "text_print_finish": "Sizin mesaj yuxarıda çap edilmişdir? Əgər belədirsə, \"Bitti\" düyməsini basın. Əgər yoxsa, \"Sıfırla\" düyməsini basın, Kodu dəyişdirin və yenidən \"run\"düyməsini basın."
+        },
         "courseF_text_prompts": {
           "prompt_block": "Burada ipucu blokunu tapın!"
         },
         "courseF_text_prompts_-2022-2": {
+          "prompt_block": "Burada ipucu blokunu tapın!"
+        },
+        "courseF_text_prompts_2023": {
           "prompt_block": "Burada ipucu blokunu tapın!"
         },
         "coursea_maze_ramp12022": {
@@ -2191,8 +2477,17 @@
         "coursea_maze_ramp1_2021": {
           "grade2_CaringForNewPet_0_1": "Bütün blokları birləşdirəndən sonra, proqramı başlatmaq üçün \"Başlat\"a basın."
         },
+        "coursea_maze_ramp1_2023": {
+          "grade2_CaringForNewPet_0_1": "Bütün blokları birləşdirəndən sonra, proqramı başlatmaq üçün \"Başlat\"a basın."
+        },
         "coursee_helloworld_freeplay": {
           "costumes_tab": "Layihəvə kostyum əlavə etmək üçün buraya bas. "
+        },
+        "coursee_helloworld_freeplay_2023": {
+          "costumes_tab": "Layihəvə kostyum əlavə etmək üçün buraya bas. "
+        },
+        "csc_animal_adaptations_make_behavior": {
+          "behaviors_edit": "Bu davranışa kod əlavə edin."
         },
         "express_maze_debugging92022": {
           "express_maze_debugging9_2019_1": "Alətlər qutusundakı blokları iş sahənizə sürükləyin."
@@ -2204,6 +2499,9 @@
           "express_maze_debugging9_2019_1": "Alətlər qutusundakı blokları iş sahənizə sürükləyin."
         },
         "express_maze_debugging9_2021": {
+          "express_maze_debugging9_2019_1": "Alətlər qutusundakı blokları iş sahənizə sürükləyin."
+        },
+        "express_maze_debugging9_2023": {
           "express_maze_debugging9_2019_1": "Alətlər qutusundakı blokları iş sahənizə sürükləyin."
         },
         "frozen circle function with parameter": {
@@ -2272,6 +2570,9 @@
         "helloworld_animals_sounds": {
           "hello_world_new": "Yeni blok!"
         },
+        "helloworld_bunny_adaptation_2023": {
+          "hw_Run": "Kodu işə salman üçün buraya vurun."
+        },
         "helloworld_emoji_backgrounds": {
           "hw_background_location": "Yeni ara fon yaratmaq üçün bu bloku seçin."
         },
@@ -2300,6 +2601,9 @@
         "helloworld_food_backgrounds": {
           "hw_background_location": "Yeni ara fon yaratmaq üçün bu bloku seçin."
         },
+        "helloworld_food_backgrounds_2023": {
+          "hw_background_location": "Yeni ara fon yaratmaq üçün bu bloku seçin."
+        },
         "helloworld_food_backgrounds_soccer-2022": {
           "hw_background_location": "Yeni ara fon yaratmaq üçün bu bloku seçin."
         },
@@ -2309,6 +2613,9 @@
         "helloworld_food_click": {
           "hw_Run": "Kodu işə salman üçün buraya vurun."
         },
+        "helloworld_food_click_2023": {
+          "hw_Run": "Kodu işə salman üçün buraya vurun."
+        },
         "helloworld_food_click_soccer-2022": {
           "hw_Run": "Kodu işə salman üçün buraya vurun."
         },
@@ -2316,6 +2623,9 @@
           "hw_Run": "birinci bura basın"
         },
         "helloworld_food_costumes": {
+          "hello_world_new": "Yeni blok!"
+        },
+        "helloworld_food_costumes_2023": {
           "hello_world_new": "Yeni blok!"
         },
         "helloworld_food_costumes_soccer-2022": {
@@ -2336,6 +2646,9 @@
         "helloworld_food_location": {
           "pin": "Yapışdır"
         },
+        "helloworld_food_location_2023": {
+          "pin": "Yapışdır"
+        },
         "helloworld_food_location_soccer-2022": {
           "pin": "Yapışdır"
         },
@@ -2343,6 +2656,9 @@
           "pin": "Yapışdır"
         },
         "helloworld_food_multi": {
+          "pin": "Yapışdır"
+        },
+        "helloworld_food_multi_2023": {
           "pin": "Yapışdır"
         },
         "helloworld_food_multi_soccer-2022": {
@@ -2355,6 +2671,10 @@
           "hello_world_new": "Yeni blok!",
           "hello_world_new_block": "Yeni blok!"
         },
+        "helloworld_food_sizes_2023": {
+          "hello_world_new": "Yeni blok!",
+          "hello_world_new_block": "Yeni blok!"
+        },
         "helloworld_food_sizes_soccer-2022": {
           "hello_world_new": "Yeni blok!",
           "hello_world_new_block": "Yeni blok!"
@@ -2364,6 +2684,9 @@
           "hello_world_new_block": "Yeni blok!"
         },
         "helloworld_food_sounds": {
+          "hello_world_new": "Yeni blok!"
+        },
+        "helloworld_food_sounds_2023": {
           "hello_world_new": "Yeni blok!"
         },
         "helloworld_food_sounds_soccer-2022": {
@@ -2403,10 +2726,20 @@
         "poetry_hoc_addSprites": {
           "poetry_sprite": "Yeni blok!"
         },
+        "poetry_hoc_addSprites_2023": {
+          "poetry_sprite": "Yeni blok!"
+        },
         "poetry_hoc_backgroundEffects": {
           "poetry_background": "Kod bloklarını burada tapın. "
         },
+        "poetry_hoc_backgroundEffects_2023": {
+          "poetry_background": "Kod bloklarını burada tapın. "
+        },
         "poetry_hoc_events1": {
+          "poetry_event": "Yeni blok!",
+          "poetry_foreground": "Yeni blok!"
+        },
+        "poetry_hoc_events1_2023": {
           "poetry_event": "Yeni blok!",
           "poetry_foreground": "Yeni blok!"
         },
@@ -2415,7 +2748,14 @@
           "poetry_multiple_sprites": "Yeni blok!",
           "poetry_new_block": "Yeni blok!"
         },
+        "poetry_hoc_freeplay_2023": {
+          "poetry_new_block": "Yeni blok!"
+        },
         "poetry_hoc_sounds": {
+          "poetry_music": "Yeni blok!",
+          "poetry_sound": "Yeni blok!"
+        },
+        "poetry_hoc_sounds_2023": {
           "poetry_music": "Yeni blok!",
           "poetry_sound": "Yeni blok!"
         },
@@ -2423,7 +2763,15 @@
           "poetry_sprite_begins": "Yeni blok!",
           "poetry_sprite_stops": "Yeni blok!"
         },
+        "poetry_hoc_spriteBehaviors_2023": {
+          "poetry_sprite_begins": "Yeni blok!",
+          "poetry_sprite_stops": "Yeni blok!"
+        },
         "poetry_hoc_spriteSizes": {
+          "poetry_remove_sprite": "Yeni blok!",
+          "poetry_set_sprite": "Yeni blok!"
+        },
+        "poetry_hoc_spriteSizes_2023": {
           "poetry_remove_sprite": "Yeni blok!",
           "poetry_set_sprite": "Yeni blok!"
         }
