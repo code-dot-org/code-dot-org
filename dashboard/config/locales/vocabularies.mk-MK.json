@@ -71,6 +71,51 @@
         "define/express/2022": {
           "word": "Дефинирајте"
         },
+        "code/csc-adaptations/2023": {
+          "word": "Код"
+        },
+        "code/csc-ecosystems/2023": {
+          "word": "Код"
+        },
+        "variable/csc-ecosystems/2023": {
+          "word": "Променлива"
+        },
+        "code/csc-mappinglandmarks/2023": {
+          "word": "Код"
+        },
+        "comments/csc-starquilts/2023": {
+          "word": "Коментари"
+        },
+        "code/poetry/2023": {
+          "word": "Код"
+        },
+        "data/coursec/2023": {
+          "word": "Податоци"
+        },
+        "function/coursee/2023": {
+          "word": "Функција"
+        },
+        "define/coursee/2023": {
+          "word": "Дефинирајте"
+        },
+        "variable/coursef/2023": {
+          "word": "Променлива"
+        },
+        "input/coursef/2023": {
+          "word": "Влез"
+        },
+        "define/coursef/2023": {
+          "word": "Дефинирајте"
+        },
+        "function/express/2023": {
+          "word": "Функција"
+        },
+        "variable/express/2023": {
+          "word": "Променлива"
+        },
+        "define/express/2023": {
+          "word": "Дефинирајте"
+        },
         "loops/aquatic/unversioned": {
           "word": "Лупови"
         },
