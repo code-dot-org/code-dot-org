@@ -6,12 +6,16 @@
 - country_code = location&.country_code.to_s.upcase
 -# 'RD' is the 'Reserved' country code for private IP's, i.e. localhost.
 - us_ip = ['US', 'RD'].include?(country_code)
-- @page_title = t('activerecord.attributes.user.finish_sign_up_header')
+- if @user.errors.any?
+  - @page_title = t('activerecord.attributes.user.finish_sign_up_header_error')
+- else
+  - @page_title = t('activerecord.attributes.user.finish_sign_up_header')
 
 #signup
+
   .row
     .span10.header
-      %h1= @page_title
+      %h1= t('activerecord.attributes.user.finish_sign_up_header')
 
   = form_for(@user, url: registration_path(@user), html: {class: "finish-signup"}) do |f|
     .row
@@ -27,6 +31,15 @@
     = f.hidden_field :locale, value: locale
     = f.hidden_field :email
     = f.hidden_field :encrypted_password
+    - if @user.errors.any?
+      .row
+        .span8
+          .padded-container#sign_up_errors
+            .errors
+              %h4= t('activerecord.attributes.user.finish_sign_up_header_error')
+              %ul
+              - @user.errors.full_messages.each do |msg|
+                %li= msg
     .row
       .span3.signup-field-label{:id => 'signup-select-user-type-label'}
         = f.label :user_type, t('signup_form.user_type_label')
