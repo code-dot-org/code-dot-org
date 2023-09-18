@@ -1062,6 +1062,16 @@ section.quote {
         background-color: $neutral_dark10;
         color: $neutral_dark;
       }
+
+      // Use this class to hide a tab
+      // - see computer-vision.haml and resources-tabs.js for an example
+      .resources-tabs-hide-tab & {
+        width: 24%;
+      }
+
+      &.hide {
+        display: none;
+      }
     }
   }
 
@@ -1085,6 +1095,7 @@ section.quote {
 
   &.show-tablet-and-mobile {
     height: unset;
+    min-height: unset;
 
     details {
       padding-left: 0;
