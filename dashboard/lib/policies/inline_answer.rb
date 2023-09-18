@@ -29,7 +29,7 @@ class Policies::InlineAnswer
 
     # Authorized instructors who are instructing the course can view answers
     return true if user.verified_instructor? &&
-        unit&.can_be_instructor?(user) && !unit.old_professional_learning_course?
+      unit&.can_be_instructor?(user) && !unit.old_professional_learning_course?
 
     # For CSF scripts any teacher account should be able to see teacher only markdown and answers
     # even if they are not authorized
