@@ -13058,6 +13058,14 @@ en:
           lessons:
             lesson-2:
               name: CSD Module 3 Synchronous
+            lesson-3:
+              name: 'Synchronous Session 2: Model Lesson'
+            lesson-4:
+              name: 'Synchronous Session 3: Model Lesson Reflection'
+            lesson-5:
+              name: 'Synchronous Session 4: Equity and Data'
+            lesson-6:
+              name: 'Synchronous Session 5: Wrap Up'
           lesson_groups: {}
           name: vpl-csd-2023-m3
           title: Module 3
@@ -13069,6 +13077,12 @@ en:
           lessons:
             lesson-2:
               name: CSD Module 4 Synchronous
+            lesson-4:
+              name: 'Synchronous Session 3: Model Lesson Reflection'
+            lesson-5:
+              name: 'Synchronous Session 4: Curriculum Investigation'
+            lesson-6:
+              name: 'Synchronous Session 5: Wrap Up'
           lesson_groups: {}
           name: vpl-csd-2023-m4
           title: Module 4

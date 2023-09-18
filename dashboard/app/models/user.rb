@@ -1712,9 +1712,9 @@ class User < ApplicationRecord
   # Query to get the user_script the user was most recently assigned.
   def most_recently_assigned_user_script
     user_scripts.
-    where("assigned_at").
-    order(assigned_at: :desc).
-    first
+      where("assigned_at").
+      order(assigned_at: :desc).
+      first
   end
 
   # Get script object of the user_script the user was most recently
@@ -1733,9 +1733,9 @@ class User < ApplicationRecord
   # in.
   def user_script_with_most_recent_progress
     user_scripts.
-    where("last_progress_at").
-    order(last_progress_at: :desc).
-    first
+      where("last_progress_at").
+      order(last_progress_at: :desc).
+      first
   end
 
   # Get script object of the user_script the user made the most recent
@@ -1754,7 +1754,7 @@ class User < ApplicationRecord
   # recent progress in a script.
   def last_assignment_after_most_recent_progress?
     most_recently_assigned_user_script[:assigned_at] >=
-    user_script_with_most_recent_progress[:last_progress_at]
+      user_script_with_most_recent_progress[:last_progress_at]
   end
 
   # Check if the user's most recently assigned script is associated with at least
@@ -1979,10 +1979,10 @@ class User < ApplicationRecord
       script = Unit.get_from_cache(script_id)
       script_valid = script.csf? && script.name != Unit::COURSE1_NAME
       if (!user_level.perfect? || user_level.best_result == ActivityConstants::MANUAL_PASS_RESULT) &&
-        new_result >= ActivityConstants::BEST_PASS_RESULT &&
-        script_valid &&
-        HintViewRequest.no_hints_used?(user_id, script_id, level_id) &&
-        AuthoredHintViewRequest.no_hints_used?(user_id, script_id, level_id)
+          new_result >= ActivityConstants::BEST_PASS_RESULT &&
+          script_valid &&
+          HintViewRequest.no_hints_used?(user_id, script_id, level_id) &&
+          AuthoredHintViewRequest.no_hints_used?(user_id, script_id, level_id)
         new_csf_level_perfected = true
       end
 
