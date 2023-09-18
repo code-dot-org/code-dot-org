@@ -60,10 +60,10 @@ export default function LearningGoal({
       clearTimeout(autosaveTimer.current);
     }
     setTeacherFeedback(event.target.value);
-    autosaveTimer.current = setTimeout(autosaveFeedback, saveAfter);
+    autosaveTimer.current = setTimeout(autosave, saveAfter);
   };
 
-  const autosaveFeedback = () => {
+  const autosave = () => {
     console.log('autosaving');
     setAutosaved(false);
     setIsAutosaving(true);
@@ -126,6 +126,9 @@ export default function LearningGoal({
   // Callback to retrieve understanding data from EvidenceLevels
   const radioButtonCallback = radioButtonData => {
     setUnderstanding(radioButtonData);
+    if (!isAutosaving) {
+      autosave();
+    }
   };
 
   return (
