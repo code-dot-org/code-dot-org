@@ -2,17 +2,13 @@ require_relative '../../../../test_helper'
 require_relative '../../../../../i18n/resources/pegasus/hourofcode/sync_in'
 
 describe I18n::Resources::Pegasus::HourOfCode::SyncIn do
-  class I18n::Resources::Pegasus::HourOfCode::SyncIn::Documents; end
-
-  let(:pegasus_documents_helper) {stub}
-
   def around
     FakeFS.with_fresh {yield}
   end
 
   before do
     STDOUT.stubs(:print)
-    I18n::Resources::Pegasus::HourOfCode::SyncIn::Documents.stubs(new: stub(helpers: pegasus_documents_helper))
+    I18n::Utils::PegasusMarkdown.stubs(:sanitize_file_header)
   end
 
   describe '.perform' do
@@ -45,23 +41,16 @@ describe I18n::Resources::Pegasus::HourOfCode::SyncIn do
     context 'when a Pegasus hourofcode markdown files exist' do
       let(:i18n_source_file_path) {CDO.dir('i18n/locales/source/hourofcode/expected/test.md')}
 
-      let(:file_header) {'expected_markdown_header'}
-      let(:file_content) {'expected_markdown_content'}
-      let(:sanitized_file_header) {'sanitized_markdown_header'}
-
       let(:expect_hoc_markdown_file_to_i18n_source_dir_copying) do
         I18nScriptUtils.expects(:copy_file).with(hoc_markdown_file_path, i18n_source_file_path)
       end
       let(:expect_i18n_source_file_header_sanitizing) do
-        I18nScriptUtils.expects(:write_markdown_with_header).with(file_content, sanitized_file_header, i18n_source_file_path)
+        I18n::Utils::PegasusMarkdown.expects(:sanitize_file_header).with(i18n_source_file_path)
       end
 
       before do
         FileUtils.mkdir_p(File.dirname(hoc_markdown_file_path))
         FileUtils.touch(hoc_markdown_file_path)
-
-        pegasus_documents_helper.expects(:parse_yaml_header).with(i18n_source_file_path).once.returns([file_header, file_content])
-        I18nScriptUtils.stubs(:sanitize_markdown_header).with(file_header).returns(sanitized_file_header)
       end
 
       [
