@@ -40,12 +40,11 @@ class Census::CensusSummary < ApplicationRecord
     Census::CensusSummary.transaction do
       CDO.log.info "Seeding census summary data."
       AWS::S3.seed_from_file('cdo-census', "access-report-data-files-2023/final_csv/final_csv_2023_08_04.csv") do |filename|
-        merge_from_csv(filename).each_with_index do |row, index|
+        merge_from_csv(filename) do |row|
           {
-            id:                 index,
-            school_id:          row['school_id'].to_i.to_s,
+            school_id:          row['school_id'],
             school_year:        row['school_year'].to_i,
-            teaches_cs:         row['teaches_cs'] == 'unknown' ? 'U' : row['teaches_cs'],
+            teaches_cs:         row['teaches_cs'],
           }
         end
       end
@@ -58,18 +57,23 @@ class Census::CensusSummary < ApplicationRecord
   # @param options [Hash] The CSV file parsing options.
   # @param is_dry_run [Boolean] Allows testing of importing a CSV by rolling back any changes.
   def self.merge_from_csv(filename, options = CSV_IMPORT_OPTIONS, is_dry_run: false)
-    # TODO:
-    # - Conditions that don't work
-    #    - School is not found in find_by_id
-    #    - School id starts with '0'
-    # - What other logging/messaging would be useful like in school.rb?
-
     census_summaries = nil
+    entries_skipped = 0
+
     ActiveRecord::Base.transaction do
       census_summaries = CSV.read(filename, **options).each do |row|
         parsed = block_given? ? yield(row) : row.to_hash.symbolize_keys
 
-        next if parsed[:school_id].start_with?('0') || School.find_by_id(parsed[:school_id]).nil?
+        # (As of Sept. 2023) Skip entries with school_id that doesn't match school in our database.
+        # This is likely due to not receiving NCES private school data yet (will be ready in November)
+        # and NCES schools that are being skipped when seeding due to an id conflict issue (tracked
+        # here: https://codedotorg.atlassian.net/browse/ACQ-561). We will skip such entries for now,
+        # and return to ensure all entries are processed once that issue is resolved and we receive
+        # the private school data.
+        if School.find_by_id(parsed[:school_id]).nil?
+          entries_skipped += 1
+          next
+        end
 
         parsed[:teaches_cs] = parsed[:teaches_cs] == 'unknown' ? 'U' : parsed[:teaches_cs]
         db_entry = find_by(school_id: parsed[:school_id])
@@ -83,6 +87,7 @@ class Census::CensusSummary < ApplicationRecord
       # Raise an error so that the db transaction rolls back
       raise "This was a dry run. No rows were modified or added. Set dry_run: false to modify db" if is_dry_run
     ensure
+      CDO.log.info "#{entries_skipped} census summaries skipped due to no school_id match in database."
       CDO.log.info "Census summaries seeding: done processing #{filename}.\n"
     end
 
