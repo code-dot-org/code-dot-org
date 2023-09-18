@@ -9,6 +9,10 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
 
 1. Request and Configure AWS access (code.org staff) or configure local secrets (open source contributors). See [Configure AWS Access or Secrets](#configure-aws-access-or-secrets) below. This step is not required until rake is first run below, but staff may wish to submit the request first so its ready when rake is.
 
+1. Clone the repo, which also may take a while. `git clone git@github.com:code-dot-org/code-dot-org.git`
+
+1. `cd code-dot-org`
+
 1. Install OS-specific prerequisites
    - See the appropriate section below: [macOS](#macos), [Ubuntu](#ubuntu-1804), [Windows](#windows)
    - *Important*: When done, check for correct versions of these dependencies:
@@ -18,10 +22,6 @@ You can do Code.org development using OSX, Ubuntu, or Windows (running Ubuntu in
      node --version  # --> v18.16.0
      yarn --version  # --> 1.22.5
      ```
-
-1. If using SSH (recommended): `git clone git@github.com:code-dot-org/code-dot-org.git` , if using HTTPS: `git clone https://github.com/code-dot-org/code-dot-org.git`
-
-1. `cd code-dot-org`
 
 1. `gem install bundler -v 2.3.22`
 
