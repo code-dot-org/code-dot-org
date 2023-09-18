@@ -356,6 +356,10 @@ cs:
           student_description: 'Provádějte výzkum pomocí článků a videí, které odhalují
             etické úskalí v oblasti umělé inteligence (AI) podle vašeho výběru. '
           title: Náš etický kodex umělé inteligence
+        ai-ethics-2023:
+          lessons:
+            lesson-1:
+              name: Náš etický kodex umělé inteligence
         ai-lab:
           student_description: Použijte tyto úrovně k prozkoumání AI Lab a použití
             v jiných lekcích nebo činnostech. Abyste mohli používat tyto nástroje,
