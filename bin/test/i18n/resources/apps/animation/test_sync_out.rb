@@ -7,7 +7,7 @@ describe I18n::Resources::Apps::Animations::SyncOut do
   end
 
   before do
-    STDOUT.stubs(:print)
+    # STDOUT.stubs(:print)
   end
 
   describe '.perform' do
