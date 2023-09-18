@@ -219,10 +219,7 @@ class ManageStudentsActionsCell extends Component {
         {!isEditing && (
           <QuickActionsCell>
             {this.props.canEdit && (
-              <PopUpMenu.Item
-                className="manage-students-edit"
-                onClick={this.onEdit}
-              >
+              <PopUpMenu.Item onClick={this.onEdit}>
                 {i18n.edit()}
               </PopUpMenu.Item>
             )}

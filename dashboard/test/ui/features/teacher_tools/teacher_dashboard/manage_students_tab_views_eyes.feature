@@ -15,7 +15,7 @@ Feature: Using the manage students tab of the teacher dashboard
 
     # Add a family name for Sally
     And I click selector ".ui-test-section-dropdown" once I see it
-    And I press the first "manage-students-edit" element
+    And I press the first "uitest-edit-all" element
     And I press keys "SallyAlsoHasAVeryVeryLongLastName" for element "#uitest-family-name"
     And I click selector "button:contains(Save)"
     And I see no difference for "manage students tab"
