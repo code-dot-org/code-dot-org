@@ -611,7 +611,6 @@ class Pd::EnrollmentTest < ActiveSupport::TestCase
 
   test 'enrollment is valid after clear_data for deleted owner' do
     enrollment = create :pd_enrollment, :from_user
-
     enrollment.user.destroy!
 
     enrollment.clear_data
