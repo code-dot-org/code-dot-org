@@ -69,6 +69,8 @@ class Api::V1::UsersController < Api::V1::JSONApiController
 
   # GET /api/v1/users/<user_id>/can_publish_based_on_account_create
   def get_account_existed_long_enough_for_project_publishing
+    # need to fix this to handle hoc case
+    # maybe just have one route handled by project that returns reasons for preventing project save
     render json: {
       account_old_enough: Time.now > current_user.created_at + 7.days
     }

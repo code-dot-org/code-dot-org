@@ -492,26 +492,26 @@ class ShareAllowedDialog extends React.Component {
                   </div>
                 )}
                 {showPublishInfo &&
-                  !isProjectOldEnoughToPublish &&
-                  loadedAccountAndProjectAge && (
+                  loadedAccountAndProjectAge &&
+                  !isAccountOldEnoughToPublish && (
                     <div style={{clear: 'both', marginTop: 10}}>
                       <span
                         style={styles.thumbnailWarning}
                         className="thumbnail-warning"
                       >
-                        Can't publish, project too recent!
+                        {i18n.publishFailedAccountTooNew()}
                       </span>
                     </div>
                   )}
                 {showPublishInfo &&
-                  !isAccountOldEnoughToPublish &&
-                  loadedAccountAndProjectAge && (
+                  loadedAccountAndProjectAge &&
+                  !isProjectOldEnoughToPublish && (
                     <div style={{clear: 'both', marginTop: 10}}>
                       <span
                         style={styles.thumbnailWarning}
                         className="thumbnail-warning"
                       >
-                        Can't publish, account not old enough!
+                        {i18n.publishFailedProjectTooNew()}
                       </span>
                     </div>
                   )}

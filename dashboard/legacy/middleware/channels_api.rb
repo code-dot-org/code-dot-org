@@ -209,6 +209,7 @@ class ChannelsApi < Sinatra::Base
     bad_request unless ALL_PUBLISHABLE_PROJECT_TYPES.include?(project_type)
     forbidden if sharing_disabled? && CONDITIONALLY_PUBLISHABLE_PROJECT_TYPES.include?(project_type)
     forbidden if Projects.in_restricted_share_mode(channel_id, project_type)
+    # need to allow for hoc projects...
     forbidden if current_user && current_user[:created_at] > (Time.now - 7.days)
 
     begin

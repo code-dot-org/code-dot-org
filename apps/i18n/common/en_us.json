@@ -1874,6 +1874,8 @@
   "publishFailedError": "We could not publish your project. Please try again.",
   "publishFailedForbidden": "You are not allowed to publish your project. Please check with your teacher.",
   "publishFailedRestrictedShare": "Publish failed. Projects with uploaded images cannot be published.",
+  "publishFailedAccountTooNew": "Project publishing is disabled until your account is at least a week old.",
+  "publishFailedProjectTooNew": "Project publishing is disabled for the first 30 minutes after a project is created.",
   "publishPending": "Publishing...",
   "publishToClassGallery": "Publish to Class Gallery",
   "publishToPublicGallery": "Publish to Public Gallery",
