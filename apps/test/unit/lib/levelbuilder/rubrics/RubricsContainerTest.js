@@ -1,5 +1,5 @@
 import React from 'react';
-import {mount} from 'enzyme';
+import {mount, shallow} from 'enzyme';
 import {act} from 'react-dom/test-utils';
 import {expect} from '../../../../util/reconfiguredChai';
 import RubricsContainer from '@cdo/apps/lib/levelbuilder/rubrics/RubricsContainer';
@@ -117,7 +117,18 @@ describe('RubricsContainerTest', () => {
     expect(afterAddLearningGoalItems).to.equal(initialLearningGoalItems + 1);
   });
 
-  it('changes the saveNotificationText when saving rubric', async () => {
+  it('changes the selected level for assessment when the dropdown is changed', () => {
+    const wrapper = shallow(<RubricsContainer {...defaultProps} />);
+    let dropdown = wrapper.find('select#rubric_level_id');
+    const dropdownValue = dropdown.prop('value');
+    expect(dropdownValue).to.equal(defaultProps.levels[0].id);
+
+    dropdown.simulate('change', {target: {value: defaultProps.levels[1].id}});
+    dropdown = wrapper.find('select#rubric_level_id');
+    expect(dropdown.prop('value')).to.equal(defaultProps.levels[1].id);
+  });
+
+  it('changes the saveNotificationText and disables the save Button when saving rubric', async () => {
     const mockFetch = sinon.stub(global, 'fetch');
     mockFetch.returns(
       Promise.resolve(new Response(JSON.stringify({redirectUrl: 'test_url'})))
@@ -132,13 +143,13 @@ describe('RubricsContainerTest', () => {
     expect(notification.text()).not.to.contain('Save complete!');
 
     // Simulate the save button click
-    const saveButton = wrapper
-      .find(Button)
-      .filter('.ui-test-save-button')
-      .at(0);
+    let saveButton = wrapper.find('Button.ui-test-save-button');
+    expect(saveButton.props().disabled).to.be.false;
     saveButton.simulate('click');
     expect(notification.text()).to.contain('Saving...');
-    wrapper.update();
+    saveButton = wrapper.find('Button.ui-test-save-button');
+    expect(saveButton.props().disabled).to.be.true;
+    expect(saveButton.props().testProp).to.equal('Saving...');
 
     await act(async () => {
       await Promise.resolve();
@@ -146,6 +157,8 @@ describe('RubricsContainerTest', () => {
     wrapper.update();
 
     expect(notification.text()).to.contain('Save complete!');
+    saveButton = wrapper.find('Button.ui-test-save-button');
+    expect(saveButton.props().disabled).to.be.false;
     sinon.restore();
   });
 });
