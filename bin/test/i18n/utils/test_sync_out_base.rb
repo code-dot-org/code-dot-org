@@ -7,19 +7,20 @@ describe I18n::Utils::SyncOutBase do
   end
 
   describe '.process' do
-    let(:define_instance_method_process) {I18n::Utils::SyncOutBase.process {|language| language}}
+    TestSyncOutProcess = Class.new(I18n::Utils::SyncOutBase)
 
-    it 'defines the instance method `#process`' do
-      expected_language = 'expected_language'
+    it 'preserves `@process_block`' do
+      assert_raises(NotImplementedError) {TestSyncOutProcess.send(:process_block).call('expected_language')}
 
-      define_instance_method_process
+      TestSyncOutProcess.send(:process) {|language| language}
 
-      assert_equal expected_language, I18n::Utils::SyncOutBase.new.process(expected_language)
+      assert_equal 'expected_language', TestSyncOutProcess.send(:process_block).call('expected_language')
     end
   end
 
   describe '.perform' do
-    let(:perform_sync_out) {I18n::Utils::SyncOutBase.perform}
+    TestSyncOutPerform = Class.new(I18n::Utils::SyncOutBase)
+    let(:perform_sync_out) {TestSyncOutPerform.perform}
 
     let(:crowdin_locale) {'expected_crowdin_locale'}
     let(:language) {{crowdin_name_s: crowdin_locale}}
@@ -28,19 +29,16 @@ describe I18n::Utils::SyncOutBase do
       I18n::Utils::SyncOutBase.any_instance.stubs(:languages).returns([language])
     end
 
-    it 'executes the sync-out `#process` per language and then removes the empty Crowdin locale dir' do
+    it 'executes `@process_block` per language and then removes the empty Crowdin locale dir`' do
       execution_sequence = sequence('execution')
 
-      I18n::Utils::SyncOutBase.any_instance.expects(:process).with(language).in_sequence(execution_sequence)
+      expected_process = proc {'expected_process'}
+      TestSyncOutPerform.instance_variable_set(:@process_block, expected_process)
+
+      TestSyncOutPerform.any_instance.expects(:instance_exec).with(language, &expected_process).in_sequence(execution_sequence)
       I18nScriptUtils.expects(:remove_empty_dir).with(CDO.dir('i18n/locales', crowdin_locale)).in_sequence(execution_sequence)
 
       perform_sync_out
-    end
-  end
-
-  describe '#process' do
-    it 'raises NotImplementedError' do
-      assert_raises(NotImplementedError) {I18n::Utils::SyncOutBase.new.send(:process)}
     end
   end
 
