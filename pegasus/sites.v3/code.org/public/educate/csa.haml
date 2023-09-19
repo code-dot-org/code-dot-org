@@ -18,6 +18,8 @@ theme: responsive_full_width
     %figure
       %img{src: "/images/banners/banner-csa-student-code-paint.png", alt: ""}
 
+= view :csa_ai_skinny_banner
+
 %section
   .wrapper
     %div.col-50{style: "margin: .5rem 0 1rem;"}
@@ -75,6 +77,23 @@ theme: responsive_full_width
   .wrapper
     %h2=hoc_s(:heading_faq)
     = view :faq_csa
+
+%section.computer-vision
+  .wrapper
+    %h2=hoc_s(:heading_csa_ai)
+    .action-block.action-block--two-col.flex-container.wrap-reverse
+      .text-wrapper.col-50
+        %h3=hoc_s(:curriculum_name_csa_ai)
+        %p=hoc_s(:curriculum_desc_csa_ai_long)
+        %p
+          %strong=hoc_s(:module_label_duration)
+          =hoc_s(:module_duration_5_hrs_plus)
+        %a.link-button{href: "/curriculum/computer-vision"}
+          =hoc_s(:call_to_action_explore_module)
+      %figure.col-50
+      .clear
+
+= view :section_divider_line
 
 %section
   .wrapper

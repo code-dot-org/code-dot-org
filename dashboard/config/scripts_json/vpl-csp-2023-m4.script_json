@@ -12,8 +12,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-08-02 20:00:06 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2023-09-15 16:30:35 UTC",
+    "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
     "participant_audience": null,
@@ -37,7 +37,7 @@
   "lessons": [
     {
       "key": "Module 4: Mental Models, Datasets, & Assessment",
-      "name": "Module 4: Mental Models, Datasets, & Assessment",
+      "name": "Module 4: Mental Models, Lists, and Datasets",
       "absolute_position": 1,
       "lockable": false,
       "has_lesson_plan": false,
@@ -79,13 +79,13 @@
       }
     },
     {
-      "key": "0c5e469d-17c5-4de8-991f-37eb7d1b1797",
+      "key": "0c879fd9-a5d9-4137-a330-ea5fce440923",
       "position": 2,
       "properties": {
-        "progression_name": "Content of the Lists EIPM sequence (~25 minutes)"
+        "progression_name": "Understanding the Context for Lists (~30 minutes)"
       },
       "seeding_key": {
-        "activity_section.key": "0c5e469d-17c5-4de8-991f-37eb7d1b1797",
+        "activity_section.key": "0c879fd9-a5d9-4137-a330-ea5fce440923",
         "lesson_activity.key": "c0a1107a-d263-4706-ae32-97aa5d0c2c92"
       }
     },
@@ -93,7 +93,7 @@
       "key": "6f52f4fb-30fe-433c-be81-fec3336d22e4",
       "position": 3,
       "properties": {
-        "progression_name": "Mental models in Unit 5 (~35 minutes)"
+        "progression_name": "Mental models in Unit 6 (~30 minutes)"
       },
       "seeding_key": {
         "activity_section.key": "6f52f4fb-30fe-433c-be81-fec3336d22e4",
@@ -104,7 +104,7 @@
       "key": "fa1cf797-55f3-45c1-bf3f-99d3542571ef",
       "position": 4,
       "properties": {
-        "progression_name": "Traversals and datasets (~15 minutes)"
+        "progression_name": "Broadening, Labeling, and Recognizing CS Skills in the Classroom (~15 minutes)"
       },
       "seeding_key": {
         "activity_section.key": "fa1cf797-55f3-45c1-bf3f-99d3542571ef",
@@ -157,22 +157,22 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "CSP - Understanding the content of the Lists EIPM sequence_2023"
+          "CSP - Understanding the context for the Model Lesson overview_M4_2023"
         ],
-        "progression": "Content of the Lists EIPM sequence (~25 minutes)"
+        "progression": "Understanding the Context for Lists (~30 minutes)"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSP - Understanding the content of the Lists EIPM sequence_2023"
+          "CSP - Understanding the context for the Model Lesson overview_M4_2023"
         ],
         "lesson.key": "Module 4: Mental Models, Datasets, & Assessment",
         "lesson_group.key": "",
         "script.name": "vpl-csp-2023-m4",
-        "activity_section.key": "0c5e469d-17c5-4de8-991f-37eb7d1b1797"
+        "activity_section.key": "0c879fd9-a5d9-4137-a330-ea5fce440923"
       },
       "level_keys": [
-        "CSP - Understanding the content of the Lists EIPM sequence_2023"
+        "CSP - Understanding the context for the Model Lesson overview_M4_2023"
       ]
     },
     {
@@ -182,22 +182,22 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "CSP - Lists EIPM reflection_2023"
+          "CSP - Reflection 1_M4_2023"
         ],
-        "progression": "Content of the Lists EIPM sequence (~25 minutes)"
+        "progression": "Understanding the Context for Lists (~30 minutes)"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSP - Lists EIPM reflection_2023"
+          "CSP - Reflection 1_M4_2023"
         ],
         "lesson.key": "Module 4: Mental Models, Datasets, & Assessment",
         "lesson_group.key": "",
         "script.name": "vpl-csp-2023-m4",
-        "activity_section.key": "0c5e469d-17c5-4de8-991f-37eb7d1b1797"
+        "activity_section.key": "0c879fd9-a5d9-4137-a330-ea5fce440923"
       },
       "level_keys": [
-        "CSP - Lists EIPM reflection_2023"
+        "CSP - Reflection 1_M4_2023"
       ]
     },
     {
@@ -209,7 +209,7 @@
         "level_keys": [
           "CSP AYW4 - Mental Models in Unit 5_2023"
         ],
-        "progression": "Mental models in Unit 5 (~35 minutes)"
+        "progression": "Mental models in Unit 6 (~30 minutes)"
       },
       "bonus": false,
       "seeding_key": {
@@ -232,14 +232,14 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "CSP - Asynch4 - Intro to Traversals_2023"
+          "CSP - M4 - Intro to CI_2023"
         ],
-        "progression": "Traversals and datasets (~15 minutes)"
+        "progression": "Broadening, Labeling, and Recognizing CS Skills in the Classroom (~15 minutes)"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSP - Asynch4 - Intro to Traversals_2023"
+          "CSP - M4 - Intro to CI_2023"
         ],
         "lesson.key": "Module 4: Mental Models, Datasets, & Assessment",
         "lesson_group.key": "",
@@ -247,7 +247,7 @@
         "activity_section.key": "fa1cf797-55f3-45c1-bf3f-99d3542571ef"
       },
       "level_keys": [
-        "CSP - Asynch4 - Intro to Traversals_2023"
+        "CSP - M4 - Intro to CI_2023"
       ]
     },
     {
@@ -257,14 +257,14 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "CSP - Asynch 4 - U5 Traversals Investigate Mile Tracker Modify_2023"
+          "CSP - M4 - Broadening the def_2023"
         ],
-        "progression": "Traversals and datasets (~15 minutes)"
+        "progression": "Broadening, Labeling, and Recognizing CS Skills in the Classroom (~15 minutes)"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSP - Asynch 4 - U5 Traversals Investigate Mile Tracker Modify_2023"
+          "CSP - M4 - Broadening the def_2023"
         ],
         "lesson.key": "Module 4: Mental Models, Datasets, & Assessment",
         "lesson_group.key": "",
@@ -272,7 +272,7 @@
         "activity_section.key": "fa1cf797-55f3-45c1-bf3f-99d3542571ef"
       },
       "level_keys": [
-        "CSP - Asynch 4 - U5 Traversals Investigate Mile Tracker Modify_2023"
+        "CSP - M4 - Broadening the def_2023"
       ]
     },
     {
@@ -282,14 +282,14 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "CSP - Asynch4 - U5L10 Traversals Investigate_2023"
+          "CSP - M4 - Feedback in CI_2023"
         ],
-        "progression": "Traversals and datasets (~15 minutes)"
+        "progression": "Broadening, Labeling, and Recognizing CS Skills in the Classroom (~15 minutes)"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSP - Asynch4 - U5L10 Traversals Investigate_2023"
+          "CSP - M4 - Feedback in CI_2023"
         ],
         "lesson.key": "Module 4: Mental Models, Datasets, & Assessment",
         "lesson_group.key": "",
@@ -297,7 +297,7 @@
         "activity_section.key": "fa1cf797-55f3-45c1-bf3f-99d3542571ef"
       },
       "level_keys": [
-        "CSP - Asynch4 - U5L10 Traversals Investigate_2023"
+        "CSP - M4 - Feedback in CI_2023"
       ]
     },
     {
@@ -307,14 +307,14 @@
       "assessment": false,
       "properties": {
         "level_keys": [
-          "CSP - Asynch4 -U5 Traversals Investigate Dog Finder Modify_2023"
+          "CSP - M4 - Practice feedback_2023"
         ],
-        "progression": "Traversals and datasets (~15 minutes)"
+        "progression": "Broadening, Labeling, and Recognizing CS Skills in the Classroom (~15 minutes)"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "CSP - Asynch4 -U5 Traversals Investigate Dog Finder Modify_2023"
+          "CSP - M4 - Practice feedback_2023"
         ],
         "lesson.key": "Module 4: Mental Models, Datasets, & Assessment",
         "lesson_group.key": "",
@@ -322,37 +322,12 @@
         "activity_section.key": "fa1cf797-55f3-45c1-bf3f-99d3542571ef"
       },
       "level_keys": [
-        "CSP - Asynch4 -U5 Traversals Investigate Dog Finder Modify_2023"
+        "CSP - M4 - Practice feedback_2023"
       ]
     },
     {
       "chapter": 9,
       "position": 9,
-      "activity_section_position": 5,
-      "assessment": false,
-      "properties": {
-        "level_keys": [
-          "CSP AYW4 - Reflection on datasets_2023"
-        ],
-        "progression": "Traversals and datasets (~15 minutes)"
-      },
-      "bonus": false,
-      "seeding_key": {
-        "script_level.level_keys": [
-          "CSP AYW4 - Reflection on datasets_2023"
-        ],
-        "lesson.key": "Module 4: Mental Models, Datasets, & Assessment",
-        "lesson_group.key": "",
-        "script.name": "vpl-csp-2023-m4",
-        "activity_section.key": "fa1cf797-55f3-45c1-bf3f-99d3542571ef"
-      },
-      "level_keys": [
-        "CSP AYW4 - Reflection on datasets_2023"
-      ]
-    },
-    {
-      "chapter": 10,
-      "position": 10,
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
@@ -391,26 +366,26 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSP - Understanding the content of the Lists EIPM sequence_2023",
+        "level.key": "CSP - Understanding the context for the Model Lesson overview_M4_2023",
         "script_level.level_keys": [
-          "CSP - Understanding the content of the Lists EIPM sequence_2023"
+          "CSP - Understanding the context for the Model Lesson overview_M4_2023"
         ],
         "lesson.key": "Module 4: Mental Models, Datasets, & Assessment",
         "lesson_group.key": "",
         "script.name": "vpl-csp-2023-m4",
-        "activity_section.key": "0c5e469d-17c5-4de8-991f-37eb7d1b1797"
+        "activity_section.key": "0c879fd9-a5d9-4137-a330-ea5fce440923"
       }
     },
     {
       "seeding_key": {
-        "level.key": "CSP - Lists EIPM reflection_2023",
+        "level.key": "CSP - Reflection 1_M4_2023",
         "script_level.level_keys": [
-          "CSP - Lists EIPM reflection_2023"
+          "CSP - Reflection 1_M4_2023"
         ],
         "lesson.key": "Module 4: Mental Models, Datasets, & Assessment",
         "lesson_group.key": "",
         "script.name": "vpl-csp-2023-m4",
-        "activity_section.key": "0c5e469d-17c5-4de8-991f-37eb7d1b1797"
+        "activity_section.key": "0c879fd9-a5d9-4137-a330-ea5fce440923"
       }
     },
     {
@@ -427,9 +402,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSP - Asynch4 - Intro to Traversals_2023",
+        "level.key": "CSP - M4 - Intro to CI_2023",
         "script_level.level_keys": [
-          "CSP - Asynch4 - Intro to Traversals_2023"
+          "CSP - M4 - Intro to CI_2023"
         ],
         "lesson.key": "Module 4: Mental Models, Datasets, & Assessment",
         "lesson_group.key": "",
@@ -439,9 +414,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSP - Asynch 4 - U5 Traversals Investigate Mile Tracker Modify_2023",
+        "level.key": "CSP - M4 - Broadening the def_2023",
         "script_level.level_keys": [
-          "CSP - Asynch 4 - U5 Traversals Investigate Mile Tracker Modify_2023"
+          "CSP - M4 - Broadening the def_2023"
         ],
         "lesson.key": "Module 4: Mental Models, Datasets, & Assessment",
         "lesson_group.key": "",
@@ -451,9 +426,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSP - Asynch4 - U5L10 Traversals Investigate_2023",
+        "level.key": "CSP - M4 - Feedback in CI_2023",
         "script_level.level_keys": [
-          "CSP - Asynch4 - U5L10 Traversals Investigate_2023"
+          "CSP - M4 - Feedback in CI_2023"
         ],
         "lesson.key": "Module 4: Mental Models, Datasets, & Assessment",
         "lesson_group.key": "",
@@ -463,21 +438,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "CSP - Asynch4 -U5 Traversals Investigate Dog Finder Modify_2023",
+        "level.key": "CSP - M4 - Practice feedback_2023",
         "script_level.level_keys": [
-          "CSP - Asynch4 -U5 Traversals Investigate Dog Finder Modify_2023"
-        ],
-        "lesson.key": "Module 4: Mental Models, Datasets, & Assessment",
-        "lesson_group.key": "",
-        "script.name": "vpl-csp-2023-m4",
-        "activity_section.key": "fa1cf797-55f3-45c1-bf3f-99d3542571ef"
-      }
-    },
-    {
-      "seeding_key": {
-        "level.key": "CSP AYW4 - Reflection on datasets_2023",
-        "script_level.level_keys": [
-          "CSP AYW4 - Reflection on datasets_2023"
+          "CSP - M4 - Practice feedback_2023"
         ],
         "lesson.key": "Module 4: Mental Models, Datasets, & Assessment",
         "lesson_group.key": "",

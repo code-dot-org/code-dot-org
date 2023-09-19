@@ -55,8 +55,7 @@ function initPage() {
     );
   }
 
-  const rubricFabMountPoint = document.getElementById('rubric-fab-mount-point');
-  if (rubricFabMountPoint && experiments.isEnabled('ai-rubrics')) {
+  if (experiments.isEnabled('ai-rubrics')) {
     const rubricData = getScriptData('rubricdata');
     const {rubric, studentLevelInfo} = rubricData;
     const reportingData = {
@@ -65,14 +64,20 @@ function initPage() {
       levelName: config.level_name,
     };
     getStore().dispatch(setTaRubric(rubric));
-    ReactDOM.render(
-      <RubricFloatingActionButton
-        rubric={rubric}
-        studentLevelInfo={studentLevelInfo}
-        reportingData={reportingData}
-        currentLevelName={config.level_name}
-      />,
-      rubricFabMountPoint
+
+    const rubricFabMountPoint = document.getElementById(
+      'rubric-fab-mount-point'
     );
+    if (rubricFabMountPoint) {
+      ReactDOM.render(
+        <RubricFloatingActionButton
+          rubric={rubric}
+          studentLevelInfo={studentLevelInfo}
+          reportingData={reportingData}
+          currentLevelName={config.level_name}
+        />,
+        rubricFabMountPoint
+      );
+    }
   }
 }
