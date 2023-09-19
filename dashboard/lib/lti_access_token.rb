@@ -26,15 +26,7 @@ module LtiAccessToken
       jti: SecureRandom.alphanumeric(10),
     }
 
-    private_key_json = CDO.jwk_private_key_data
-    private_key_hash = private_key_json.transform_keys(&:to_sym)
-    private_key = private_key_hash[:private_key]
-    kid = private_key_hash[:kid]
-
-    # sign JWT
-    pri = OpenSSL::PKey::RSA.new(private_key)
-    jwt = JWT.encode(jwt_payload, pri, 'RS256', kid: kid)
-
+    jwt = sign_jwt(jwt_payload)
     query = {
       grant_type: 'client_credentials',
       client_assertion_type: Policies::Lti::JWT_CLIENT_ASSERTION_TYPE,
@@ -52,5 +44,16 @@ module LtiAccessToken
     CDO.shared_cache.write(cache_key, access_token, expires_in: exp)
 
     return access_token
+  end
+
+  # Takes a hash of claims and returns a signed JWT.
+  # See https://datatracker.ietf.org/doc/html/rfc7519#section-4.1
+  # for definitions of the claims.
+  def sign_jwt(payload, private_key_json = CDO.jwk_private_key_data)
+    private_key_hash = private_key_json.transform_keys(&:to_sym)
+    private_key = private_key_hash[:private_key]
+    kid = private_key_hash[:kid]
+    pri = OpenSSL::PKey::RSA.new(private_key)
+    JWT.encode(payload, pri, 'RS256', kid: kid)
   end
 end

@@ -10,4 +10,5 @@ class Policies::Lti
 
   NAMESPACE = 'lti_v1_controller'.freeze
   JWT_CLIENT_ASSERTION_TYPE = 'urn:ietf:params:oauth:client-assertion-type:jwt-bearer'.freeze
+  JWT_ISSUER = CDO.studio_url('', CDO.default_scheme).freeze
 end
