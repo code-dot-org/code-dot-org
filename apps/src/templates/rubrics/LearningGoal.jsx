@@ -129,7 +129,7 @@ export default function LearningGoal({
 
   useEffect(() => {
     getOrInitializeLearningGoalEvaluation();
-  }, [getOrInitializeLearningGoalEvaluation]);
+  }, []);
 
   // Callback to retrieve understanding data from EvidenceLevels
   const radioButtonCallback = radioButtonData => {
