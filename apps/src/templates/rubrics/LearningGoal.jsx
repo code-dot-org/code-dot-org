@@ -29,12 +29,15 @@ export default function LearningGoal({
   studentLevelInfo,
 }) {
   const [isOpen, setIsOpen] = useState(false);
-  const [teacherFeedback, setTeacherFeedback] = useState('');
+
   const [isAutosaving, setIsAutosaving] = useState(false);
   const [autosaved, setAutosaved] = useState(false);
   const [errorAutosaving, setErrorAutosaving] = useState(false);
   const [learningGoalEval, setLearningGoalEval] = useState(null);
-  const [understanding, setUnderstanding] = useState(null);
+  const [displayFeedback, setDisplayFeedback] = useState('');
+  const [displayUnderstanding, setDisplayUnderstanding] = useState(null);
+  const understandingLevel = useRef(0);
+  const teacherFeedback = useRef('');
 
   const aiEnabled = learningGoal.aiEnabled && teacherHasEnabledAi;
   const base_endpoint = '/learning_goal_evaluations';
@@ -59,8 +62,11 @@ export default function LearningGoal({
     if (autosaveTimer.current) {
       clearTimeout(autosaveTimer.current);
     }
-    setTeacherFeedback(event.target.value);
-    autosaveTimer.current = setTimeout(autosave, saveAfter);
+    teacherFeedback.current = event.target.value;
+    setDisplayFeedback(teacherFeedback.current);
+    autosaveTimer.current = setTimeout(() => {
+      autosave();
+    }, saveAfter);
   };
 
   const autosave = () => {
@@ -71,8 +77,8 @@ export default function LearningGoal({
     const bodyData = JSON.stringify({
       studentId: studentLevelInfo.user_id,
       learningGoalId: learningGoal.id,
-      feedback: teacherFeedback,
-      understanding: understanding,
+      feedback: teacherFeedback.current,
+      understanding: understandingLevel.current,
     });
     fetch('/get_token').then(response => {
       fetch(`${base_endpoint}/${learningGoalEval.id}`, {
@@ -108,12 +114,14 @@ export default function LearningGoal({
       .then(json => {
         setLearningGoalEval(json);
         if (!json.feedback) {
-          setTeacherFeedback('');
+          teacherFeedback.current = '';
         } else {
-          setTeacherFeedback(json.feedback);
+          teacherFeedback.current = json.feedback;
+          setDisplayFeedback(teacherFeedback.current);
         }
         if (json.understanding) {
-          setUnderstanding(json.understanding);
+          understandingLevel.current = json.understanding;
+          setDisplayUnderstanding(understandingLevel.current);
         }
       })
       .catch(error => console.log(error));
@@ -121,11 +129,11 @@ export default function LearningGoal({
 
   useEffect(() => {
     getOrInitializeLearningGoalEvaluation();
-  }, []);
+  }, [getOrInitializeLearningGoalEvaluation]);
 
   // Callback to retrieve understanding data from EvidenceLevels
   const radioButtonCallback = radioButtonData => {
-    setUnderstanding(radioButtonData);
+    understandingLevel.current = radioButtonData;
     if (!isAutosaving) {
       autosave();
     }
@@ -163,6 +171,7 @@ export default function LearningGoal({
           learningGoalKey={learningGoal.key}
           evidenceLevels={learningGoal.evidenceLevels}
           canProvideFeedback={canProvideFeedback}
+          understanding={displayUnderstanding}
           radioButtonCallback={radioButtonCallback}
         />
         {learningGoal.tips && (
@@ -179,7 +188,7 @@ export default function LearningGoal({
             <textarea
               className={style.inputTextbox}
               name="teacherFeedback"
-              value={teacherFeedback}
+              value={displayFeedback}
               onChange={handleFeedbackChange}
             />
           </label>

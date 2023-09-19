@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import i18n from '@cdo/locale';
@@ -12,8 +12,11 @@ export default function EvidenceLevels({
   evidenceLevels,
   canProvideFeedback,
   learningGoalKey,
+  understanding,
   radioButtonCallback,
 }) {
+  const [understandingChecked, setUnderstandingChecked] =
+    useState(understanding);
   if (canProvideFeedback) {
     const radioGroupName = `evidence-levels-${learningGoalKey}`;
     return (
@@ -26,11 +29,6 @@ export default function EvidenceLevels({
               style.evidenceLevelOption,
               style.evidenceLevelLabel
             )}
-            onChange={() =>
-              radioButtonCallback(
-                UNDERSTANDING_LEVEL_STRINGS[evidenceLevel.understanding]
-              )
-            }
           >
             {' '}
             <RadioButton
@@ -38,6 +36,11 @@ export default function EvidenceLevels({
               name={radioGroupName}
               value={evidenceLevel.id}
               size="s"
+              checked={understandingChecked === evidenceLevel.id}
+              onChange={() => {
+                radioButtonCallback(evidenceLevel.id);
+                setUnderstandingChecked(evidenceLevel.id);
+              }}
             />
             <BodyThreeText
               className={classNames(style.evidenceLevelDescriptionIndented)}
@@ -69,5 +72,6 @@ EvidenceLevels.propTypes = {
   evidenceLevels: PropTypes.arrayOf(evidenceLevelShape).isRequired,
   canProvideFeedback: PropTypes.bool,
   learningGoalKey: PropTypes.string,
+  understanding: PropTypes.number,
   radioButtonCallback: PropTypes.func,
 };
