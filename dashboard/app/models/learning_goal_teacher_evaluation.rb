@@ -7,8 +7,8 @@
 #  teacher_id       :integer          not null
 #  learning_goal_id :integer          not null
 #  understanding    :integer          not null
-#  feedback         :text(65535)
-#  submitted_at     :datetime
+#  draft_feedback   :text(65535)
+#  feedbacks        :text(65535)
 #  created_at       :datetime         not null
 #  updated_at       :datetime         not null
 #

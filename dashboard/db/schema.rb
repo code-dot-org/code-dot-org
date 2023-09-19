@@ -665,8 +665,8 @@ ActiveRecord::Schema.define(version: 2023_09_11_173341) do
     t.integer "teacher_id", null: false
     t.integer "learning_goal_id", null: false
     t.integer "understanding", null: false
-    t.text "feedback"
-    t.datetime "submitted_at"
+    t.text "draft_feedback"
+    t.text "feedbacks"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["learning_goal_id"], name: "index_learning_goal_teacher_evaluations_on_learning_goal_id"
