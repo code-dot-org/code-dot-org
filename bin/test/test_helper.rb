@@ -25,3 +25,9 @@ end
 
 # Skip this if the tests are run in RubyMine
 Minitest::Reporters.use! reporters unless ENV['RM_INFO']
+
+class Minitest::Spec
+  before do
+    STDOUT.stubs(:print) # to skip the progress bar output
+  end
+end

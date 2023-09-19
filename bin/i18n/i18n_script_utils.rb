@@ -57,6 +57,7 @@ CROWDIN_TEST_PROJECTS = {
 class I18nScriptUtils
   PROGRESS_BAR_FORMAT = '%t: |%B| %p% %a'.freeze
   PARALLEL_PROCESSES = Parallel.processor_count / 2
+  SOURCE_LOCALE = 'en-US'.freeze
 
   # Because we log many of the i18n operations to slack, we often want to
   # explicitly force stdout to operate synchronously, rather than buffering
@@ -423,5 +424,13 @@ class I18nScriptUtils
     return unless Dir.empty?(dir)
 
     FileUtils.rm_r(dir)
+  end
+
+  # Checks if the language is the i18n source language
+  #
+  # @param lang [PegasusLanguage] a pegasus language object
+  # @return [true, false]
+  def self.source_lang?(lang)
+    lang[:locale_s] == SOURCE_LOCALE
   end
 end
