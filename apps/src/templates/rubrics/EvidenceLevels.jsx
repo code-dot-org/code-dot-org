@@ -37,6 +37,7 @@ export default function EvidenceLevels({
               value={evidenceLevel.id}
               size="s"
               checked={understandingChecked === evidenceLevel.id}
+              defaultChecked={understanding === evidenceLevel.id ? true : false}
               onChange={() => {
                 radioButtonCallback(evidenceLevel.id);
                 setUnderstandingChecked(evidenceLevel.id);

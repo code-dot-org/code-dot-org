@@ -59,14 +59,16 @@ export default function LearningGoal({
   };
 
   const handleFeedbackChange = event => {
-    if (autosaveTimer.current) {
-      clearTimeout(autosaveTimer.current);
+    if (studentLevelInfo.user_id && learningGoal.id) {
+      if (autosaveTimer.current) {
+        clearTimeout(autosaveTimer.current);
+      }
+      teacherFeedback.current = event.target.value;
+      setDisplayFeedback(teacherFeedback.current);
+      autosaveTimer.current = setTimeout(() => {
+        autosave();
+      }, saveAfter);
     }
-    teacherFeedback.current = event.target.value;
-    setDisplayFeedback(teacherFeedback.current);
-    autosaveTimer.current = setTimeout(() => {
-      autosave();
-    }, saveAfter);
   };
 
   const autosave = () => {
@@ -103,29 +105,31 @@ export default function LearningGoal({
   };
 
   useEffect(() => {
-    const body = JSON.stringify({
-      userId: studentLevelInfo.user_id,
-      learningGoalId: learningGoal.id,
-    });
-    HttpClient.post(`${base_endpoint}/get_or_create_evaluation`, body, true, {
-      'Content-Type': 'application/json',
-    })
-      .then(response => response.json())
-      .then(json => {
-        setLearningGoalEval(json);
-        if (!json.feedback) {
-          teacherFeedback.current = '';
-        } else {
-          teacherFeedback.current = json.feedback;
-          setDisplayFeedback(teacherFeedback.current);
-        }
-        if (json.understanding) {
-          understandingLevel.current = json.understanding;
-          setDisplayUnderstanding(understandingLevel.current);
-        }
+    if (studentLevelInfo && learningGoal.id) {
+      const body = JSON.stringify({
+        userId: studentLevelInfo.user_id,
+        learningGoalId: learningGoal.id,
+      });
+      HttpClient.post(`${base_endpoint}/get_or_create_evaluation`, body, true, {
+        'Content-Type': 'application/json',
       })
-      .catch(error => console.log(error));
-  }, [studentLevelInfo.user_id, learningGoal.id]);
+        .then(response => response.json())
+        .then(json => {
+          setLearningGoalEval(json);
+          if (!json.feedback) {
+            teacherFeedback.current = '';
+          } else {
+            teacherFeedback.current = json.feedback;
+            setDisplayFeedback(teacherFeedback.current);
+          }
+          if (json.understanding) {
+            understandingLevel.current = json.understanding;
+            setDisplayUnderstanding(understandingLevel.current);
+          }
+        })
+        .catch(error => console.log(error));
+    }
+  }, [studentLevelInfo, learningGoal]);
 
   // Callback to retrieve understanding data from EvidenceLevels
   const radioButtonCallback = radioButtonData => {
@@ -186,6 +190,7 @@ export default function LearningGoal({
               name="teacherFeedback"
               value={displayFeedback}
               onChange={handleFeedbackChange}
+              disabled={!studentLevelInfo ? true : false}
             />
           </label>
           {isAutosaving ? (
