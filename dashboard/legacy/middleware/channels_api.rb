@@ -210,7 +210,8 @@ class ChannelsApi < Sinatra::Base
     forbidden if sharing_disabled? && CONDITIONALLY_PUBLISHABLE_PROJECT_TYPES.include?(project_type)
     forbidden if Projects.in_restricted_share_mode(channel_id, project_type)
     # need to allow for hoc projects...
-    forbidden if current_user && current_user[:created_at] > (Time.now - 7.days)
+    _, project_id = storage_decrypt_channel_id(channel_id)
+    forbidden if current_user && current_user[:created_at] > (Time.now - 7.days) && !Project.find_by(id: project_id).channel_token&.script&.hoc?
 
     begin
       # Once we have back-filled the project_type column for all channels,

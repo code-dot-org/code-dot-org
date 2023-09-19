@@ -128,7 +128,7 @@ class Projects
     project_query_result = @table.where(id: project_id).exclude(state: 'deleted')
     project = project_query_result.first
     raise NotFound, "channel `#{channel_id}` not found" unless project
-    raise PublishError, "channel `#{channel_id}` too new to be published" if project[:created_at] > (Time.now - 30.minutes)
+    raise PublishError, "channel `#{channel_id}` too new to be published" if project[:created_at] > (Time.now - 30.minutes) && !from_hoc_level?(project_id)
     project_query_result.update(row)
 
     project = @table.where(id: project_id).first
@@ -228,6 +228,7 @@ class Projects
   end
 
   def users_paired_on_level?(project_id, current_user_id, owner_user_id, owner_storage_id)
+    # use this!
     channel_tokens_table = DASHBOARD_DB[:channel_tokens]
     level_id_row = channel_tokens_table.where(storage_app_id: project_id, storage_id: owner_storage_id).first
     return false if level_id_row.nil?
@@ -242,6 +243,13 @@ class Projects
     return false if paired_level_row.nil?
 
     return true
+  end
+
+  def from_hoc_level?(project_id)
+    #### NOTE: This references the Rails model (Project, singular)
+    #### rather than this middleware class (Projects, plural)
+    #### such that we can make use of complicated model associations managed by Rails
+    Project.find_by(id: project_id)&.channel_token&.script&.hoc?
   end
 
   def increment_abuse(channel_id, amount = 10)
