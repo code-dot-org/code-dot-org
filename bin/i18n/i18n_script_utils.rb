@@ -399,7 +399,7 @@ class I18nScriptUtils
 
   # Renames directory
   #
-  # @param from_dir [String] the dir origin path, e.g. `i18n/locales/English/resource`
+  # @param from_dir [String] the original directory path name, e.g. `i18n/locales/English/resource`
   # @param to_dir [String] the dir new path, e.g. `i18n/locales/en-US/resource`
   def self.rename_dir(from_dir, to_dir)
     FileUtils.mkdir_p(to_dir)
