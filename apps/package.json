@@ -117,6 +117,7 @@
     "firebase-bolt": "^0.8.0",
     "firebase-mock": "^1.0.5",
     "firmata": "^2.2.0",
+    "fork-ts-checker-webpack-plugin": "^8.0.0",
     "glob": "5.0.14",
     "global-jsdom": "^8.8.0",
     "grunt": "^1.4.1",

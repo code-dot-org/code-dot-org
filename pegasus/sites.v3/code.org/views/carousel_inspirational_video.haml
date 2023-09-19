@@ -1,0 +1,22 @@
+- video_inspirational_index = 12
+- video_inspirational_id = ["change_face", "steph_curry", "anybody_learn", "science_everything", "inspire_a_girl", "science_intro", "school_teach", "president_computer_science", "hc_anybody_learn", "chris_anybody_learn", "aracely", "lo_que_falta"]
+- inspirational_video_caption = [hoc_s(:video_library_page_inspirational_video_title_1), hoc_s(:video_library_page_inspirational_video_title_7), hoc_s(:video_library_page_inspirational_video_title_2), hoc_s(:video_library_page_inspirational_video_title_8),  hoc_s(:video_library_page_inspirational_video_title_3), hoc_s(:video_library_page_inspirational_video_title_9), hoc_s(:video_library_page_inspirational_video_title_4), hoc_s(:video_library_page_inspirational_video_title_10), hoc_s(:video_library_page_inspirational_video_title_5), hoc_s(:video_library_page_inspirational_video_title_11), hoc_s(:video_library_page_inspirational_video_title_6), hoc_s(:video_library_page_inspirational_video_title_12)]
+- video_inspirational = ["uhcA6K8rWp0", "NYzN0a1U8mI", "ip051U7Rvds", "QvyTEx1wyOY", "mFPg96gdPkc", "_IiPLtP-jm8", "nKIu9yen5nc", "6XvmhE1J9PY", "FC5FbmsH4fw", "qYZF6oIZtfc", "rqU8eNJ-SS0", "EGgdCryC8Uo"]
+
+.carousel-wrapper#inspirational_works_collection
+  .carousel.inspirational_works_collection
+    .slides
+      - video_inspirational_index.times do |index|
+        .slide
+          .video-wrapper.video-wrapper--one-col.flex-space-between
+            .dinspirational
+              = view :display_video_thumbnail, id: video_inspirational_id[index], video_code: video_inspirational[index], play_button: 'center', letterbox: 'false', caption: inspirational_video_caption[index]
+
+  .pagination
+    #inspirational_works_collection_pagination
+  .dd__buttons
+    %button.carousel__prev#prev_8
+      %img{src: "/images/carousel/prev.svg", alt: "previous"}
+
+    %button.carousel__next#next_8
+      %img{src: "/images/carousel/next.svg", alt: "next"}
