@@ -23,9 +23,11 @@ process.env.BABEL_ENV = 'test';
 
 module.exports = function (config) {
   var browser = envConstants.BROWSER || 'ChromeHeadless';
+  var KARMA_TEST_TYPE = envConstants.KARMA_TEST_TYPE || 'unit';
+
   config.set({
     // base path that will be used to resolve all patterns (eg. files, exclude)
-    basePath: '',
+    basePath: '.',
 
     // frameworks to use
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
@@ -77,6 +79,10 @@ module.exports = function (config) {
         watched: false,
         included: false,
         nocache: true,
+      },
+      {
+        pattern: `test/${KARMA_TEST_TYPE}-tests.js`,
+        watched: false,
       },
     ],
 
@@ -137,11 +143,11 @@ module.exports = function (config) {
       outputDir: envConstants.CIRCLECI
         ? `${envConstants.CIRCLE_TEST_REPORTS}/apps`
         : '',
-      outputFile: 'all.xml',
+      outputFile: `${KARMA_TEST_TYPE}.xml`,
     },
     coverageIstanbulReporter: {
       reports: ['html', 'lcovonly'],
-      dir: 'coverage',
+      dir: `coverage/${KARMA_TEST_TYPE}`,
       fixWebpackSourcePaths: true,
     },
     mochaReporter: {
@@ -188,19 +194,3 @@ module.exports = function (config) {
     },
   });
 };
-
-/**
- * Get karma config for test entry and output files based on testType.
- *
- * @param {('unit'|'integration'|'storybook'|'entry')} testType
- * @return {object} testType specific karma config to overlay the main config above
- */
-module.exports.customizeKarmaConfigFor = testType => ({
-  coverageIstanbulReporter: {
-    dir: `coverage/${testType}`,
-  },
-  junitReporter: {
-    outputFile: `${testType}.xml`,
-  },
-  files: [{src: [`test/${testType}-tests.js`], watched: false}],
-});
