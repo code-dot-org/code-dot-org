@@ -428,7 +428,7 @@ class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ActionController::TestCas
 
   test 'edit' do
     workshop = create :summer_workshop
-    enrollment = create :pd_enrollment, first_name: 'Rubeus', last_name: 'Hagrid', workshop: workshop
+    enrollment = create :pd_enrollment, first_name: 'Rubeus', last_name: 'Hagrid', email: 'rubeushagrid@code.org', workshop: workshop
 
     admin = create :workshop_admin
     sign_in admin
@@ -436,12 +436,14 @@ class Api::V1::Pd::WorkshopEnrollmentsControllerTest < ActionController::TestCas
     post :edit, params: {
       id: enrollment.id,
       first_name: 'Harry',
-      last_name: 'Potter'
+      last_name: 'Potter',
+      email: 'harrypotter@code.org'
     }
 
     enrollment.reload
     assert_equal 'Harry', enrollment.first_name
     assert_equal 'Potter', enrollment.last_name
+    assert_equal 'harrypotter@code.org', enrollment.email
   end
 
   test 'non-workshop-admins cannot move enrollments' do
