@@ -12,6 +12,8 @@ const {ALL_APPS, appsEntriesFor} = require('./webpackEntryPoints');
 const {createWebpackConfig} = require('./webpack.config');
 const offlineWebpackConfig = require('./webpackOffline.config');
 
+const {customizeKarmaConfigFor} = require('./karma.conf.js');
+
 module.exports = function (grunt) {
   process.env.mocha_entry = grunt.option('entry') || '';
   if (process.env.mocha_entry) {
@@ -397,134 +399,20 @@ describe('entry tests', () => {
     generateSharedConstants: 'bundle exec ./script/generateSharedConstants.rb',
   };
 
-  var junitReporterBaseConfig = {
-    outputDir: envConstants.CIRCLECI
-      ? `${envConstants.CIRCLE_TEST_REPORTS}/apps`
-      : '',
-  };
-
   config.karma = {
     options: {
+      // Most karma configuration should live in `karma.conf.js`
       configFile: 'karma.conf.js',
-      singleRun: !envConstants.WATCH,
-      files: [
-        {
-          pattern: 'test/audio/**/*',
-          watched: false,
-          included: false,
-          nocache: true,
-        },
-        {
-          pattern: 'test/integration/**/*',
-          watched: false,
-          included: false,
-          nocache: true,
-        },
-        {
-          pattern: 'test/storybook/**/*',
-          watched: false,
-          included: false,
-          nocache: true,
-        },
-        {
-          pattern: 'test/unit/**/*',
-          watched: false,
-          included: false,
-          nocache: true,
-        },
-        {
-          pattern: 'test/util/**/*',
-          watched: false,
-          included: false,
-          nocache: true,
-        },
-        {pattern: 'lib/**/*', watched: false, included: false, nocache: true},
-        {pattern: 'build/**/*', watched: false, included: false, nocache: true},
-        {
-          pattern: 'static/**/*',
-          watched: false,
-          included: false,
-          nocache: true,
-        },
-        {
-          pattern: `build/karma/*`,
-          watched: false,
-          included: false,
-          nocache: true,
-        },
-      ],
-      preprocessors: {
-        'build/karma/*.js': ['sourcemap'],
-      },
-      sourceMapLoader: {
-        remapPrefixes: {
-          'webpack://blockly-mooc/': './',
-        },
-        useSourceRoot: '../../',
-      },
-      proxies: {
-        // configure karma server to serve files from the source tree for
-        // various paths (the '/base' prefix points to the apps directory where
-        // karma.conf.js is located)
-        '/blockly/media/': '/base/static/',
-        '/lib/blockly/media/': '/base/static/',
-        '/v3/assets/': '/base/test/integration/assets/',
-        '/base/static/1x1.gif': '/base/lib/blockly/media/1x1.gif',
-
-        // requests to the webpack output public path should be served from
-        // `apps/build/karma/`, where assets are written during the karma build
-        '/webpack_output/': '/base/build/karma/',
-      },
-
-      webpack: {
-        output: {
-          path: path.resolve(__dirname, 'build/karma/'),
-          publicPath: '/webpack_output/',
-        },
-      },
       client: {
         mocha: {
-          timeout: 14000,
           grep: grunt.option('grep'),
         },
       },
     },
-    unit: {
-      coverageIstanbulReporter: {
-        dir: 'coverage/unit',
-      },
-      junitReporter: Object.assign({}, junitReporterBaseConfig, {
-        outputFile: 'unit.xml',
-      }),
-      files: [{src: ['test/unit-tests.js'], watched: false}],
-    },
-    integration: {
-      coverageIstanbulReporter: {
-        dir: 'coverage/integration',
-      },
-      junitReporter: Object.assign({}, junitReporterBaseConfig, {
-        outputFile: 'integration.xml',
-      }),
-      files: [{src: ['test/integration-tests.js'], watched: false}],
-    },
-    storybook: {
-      coverageIstanbulReporter: {
-        dir: 'coverage/storybook',
-      },
-      junitReporter: Object.assign({}, junitReporterBaseConfig, {
-        outputFile: 'storybook.xml',
-      }),
-      files: [{src: ['test/storybook-tests.js'], watched: false}],
-    },
-    entry: {
-      coverageIstanbulReporter: {
-        dir: 'coverage/entry',
-      },
-      files: [{src: ['test/entry-tests.js'], watched: false}],
-      preprocessors: {
-        'test/entry-tests.js': ['webpack', 'sourcemap'],
-      },
-    },
+    unit: customizeKarmaConfigFor('unit'),
+    integration: customizeKarmaConfigFor('integration'),
+    storybook: customizeKarmaConfigFor('storybook'),
+    entry: customizeKarmaConfigFor('entry'),
   };
 
   config.clean = {
