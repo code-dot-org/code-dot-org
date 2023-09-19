@@ -7,7 +7,7 @@
 #########################################################
 FROM ubuntu:18.04 as base
 #########################################################
-# multi-stage build for parallel compiling node & ruby: 
+# multi-stage build for parallel compiling node & ruby:
 # see: https://docs.docker.com/build/building/multi-stage/
 #
 # For adding regular deps, skip to `primary-layer` below
@@ -116,6 +116,11 @@ RUN apt-get install -y --no-install-recommends \
     parallel \
     python \
     python-dev \
+    python3 \
+    python3-venv \
+    python3.8 \
+    python3.8-venv \
+    python3.8-dev \
     software-properties-common \
     sudo \
     tar \
