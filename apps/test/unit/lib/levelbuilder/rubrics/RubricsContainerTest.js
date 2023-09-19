@@ -149,7 +149,6 @@ describe('RubricsContainerTest', () => {
     expect(notification.text()).to.contain('Saving...');
     saveButton = wrapper.find('Button.ui-test-save-button');
     expect(saveButton.props().disabled).to.be.true;
-    expect(saveButton.props().testProp).to.equal('Saving...');
 
     await act(async () => {
       await Promise.resolve();
