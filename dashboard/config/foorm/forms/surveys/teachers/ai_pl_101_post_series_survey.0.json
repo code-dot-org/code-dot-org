@@ -543,7 +543,22 @@
           "type": "text",
           "name": "general_feedback",
           "visibleIf": "{ai_pl_101.video1} <> 'didnt_watch' or {ai_pl_101.video2} <> 'didnt_watch' or {ai_pl_101.video3} <> 'didnt_watch' or {ai_pl_101.video4} <> 'didnt_watch' or {ai_pl_101.video5} <> 'didnt_watch'",
-          "title": "Is there anything else you would like to share about your experience with this AI-focused professional learning series?"
+          "title": "Is there anything you would like to share about your experience with this AI-focused professional learning series? Your thoughts about how valuable you found the series would be highly appreciated."
+        },
+        {
+          "type": "radiogroup",
+          "name": "permission",
+          "title": "I give Code.org permission to quote my written feedback from this survey for use on social media, promotional materials, and other communications.",
+          "choices": [
+            {
+              "value": "yes_anon",
+              "text": "Yes, I give permission to quote me, anonymously."
+            },
+            {
+              "value": "no",
+              "text": "No, I do not give permission to quote me."
+            }
+          ]
         }
       ]
     }
