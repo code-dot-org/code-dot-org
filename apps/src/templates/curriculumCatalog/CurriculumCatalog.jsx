@@ -12,7 +12,6 @@ import CurriculumCatalogFilters from './CurriculumCatalogFilters';
 import CurriculumCatalogCard from '@cdo/apps/templates/curriculumCatalog/CurriculumCatalogCard';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import {queryParams} from '../../code-studio/utils';
 
 const CurriculumCatalog = ({
   curriculaData,
@@ -27,7 +26,7 @@ const CurriculumCatalog = ({
     useState(false);
   const [expandedCardKey, setExpandedCardKey] = useState(null);
 
-  const isQuickViewDisplayed = queryParams()['quick_view'] === 'true';
+  const isQuickViewDisplayed = true;
 
   useEffect(() => {
     const expandedCardFound = filteredCurricula.some(
