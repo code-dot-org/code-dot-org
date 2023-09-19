@@ -175,6 +175,10 @@ input[type=submit] {
 
   &:focus {
     @include focus-outline;
+
+    &:not(:focus-visible) {
+      outline: none;
+    }
   }
 
   &:disabled {
@@ -735,6 +739,45 @@ form {
     padding-bottom: 1rem;
   }
 
+  // Carousel with prev and next button navigation
+  button.carousel__prev,
+  button.carousel__next {
+    display: none !important;
+  }
+
+  @media screen and (min-width: 1280px) {
+    button.carousel__prev {
+      position: absolute;
+      left: -3.5rem;
+    }
+
+    button.carousel__next {
+      position: absolute;
+      right: -3.5rem;
+    }
+
+    button.carousel__prev,
+    button.carousel__next {
+      display: block !important;
+      top: calc(50% - 50px);
+      background: none;
+      border: none;
+      transform: translateY(-50%);
+      transition: .3s;
+      padding: 0;
+      width: 1.75rem;
+
+      &:hover {
+        background: none;
+        opacity: .8;
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
   // Set a min-height inline on the .carousel div
   // inside .carousel-wrapper to account for varying
   // quote lengths and prevent vertical height changes
@@ -786,6 +829,10 @@ form {
 
       &:focus {
         @include focus-outline;
+
+        &:not(:focus-visible) {
+          outline: none;
+        }
       }
     }
   }
