@@ -112,6 +112,10 @@ theme: responsive_full_width
   .wrapper
     = view :support_and_questions_section
 
+%section
+  .wrapper
+    = view :curriculum_subscribe_form, subscribe_form_section_desc: hoc_s(:subscribe_form_section_desc_csd), form_height: "400px", form_src: "http://go.pardot.com/l/153401/2017-08-24/jjjmqx"
+
 = view :analytics_event_log_helper, event_name: AnalyticsConstants::CSD_CURRICULUM_PAGE_VISITED_EVENT
 
 %script{:src=>'/js/jquery.carouFredSel-6.2.1-packed.js'}
