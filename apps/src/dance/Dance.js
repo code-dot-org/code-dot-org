@@ -471,6 +471,12 @@ Dance.prototype.reset = function () {
   }
 };
 
+/**
+ * This function is called when `this.usesPreview` is set to true - only blocks
+ * included in the `setup` block are drawn in the visulization column.
+ * Unlike `execute`, `draw` is called only once (not in a loop) so that a static
+ * image is displayed and sound is NOT played.
+ */
 Dance.prototype.preview = async function () {
   this.nativeAPI.reset();
   const api = new DanceAPI(this.nativeAPI);
