@@ -40,10 +40,10 @@ class TeacherBasedExperiment < Experiment
       teacher_id_modulus = s.user_id % 100
       ((teacher_id_modulus >= min_user_id && teacher_id_modulus < max_user_id) ||
         teacher_id_modulus < overflow_max_user_id) &&
-      (earliest_section_at.nil? || s.first_activity_at.nil? ||
-        earliest_section_at < s.first_activity_at) &&
-      (latest_section_at.nil? ||
-          (s.first_activity_at && latest_section_at > s.first_activity_at))
+        (earliest_section_at.nil? || s.first_activity_at.nil? ||
+          earliest_section_at < s.first_activity_at) &&
+        (latest_section_at.nil? ||
+            (s.first_activity_at && latest_section_at > s.first_activity_at))
     end
   end
 end

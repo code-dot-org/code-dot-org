@@ -1,3 +1,5 @@
+require 'json'
+require 'stringio'
 require 'google_drive'
 require 'cdo/chat_client'
 
@@ -9,7 +11,7 @@ module Google
       def initialize(session, file)
         @session = session
         @file = file
-        $log.debug "Google Drive file opened (key: #{@file.key})"
+        $log&.debug "Google Drive file opened (key: #{@file.key})"
       end
 
       def raw_file
@@ -38,9 +40,11 @@ module Google
     end
 
     def initialize(params = {})
-      $log.debug 'Establishing Google Drive session'
+      $log&.debug 'Establishing Google Drive session'
       @session = if params[:service_account_key]
-                   GoogleDrive::Session.from_service_account_key params[:service_account_key]
+                   account_key = params[:service_account_key]
+                   account_key = StringIO.new JSON.dump(account_key) unless account_key.is_a?(StringIO)
+                   GoogleDrive::Session.from_service_account_key account_key
                  else
                    GoogleDrive.saved_session(deploy_dir('.gdrive_session'))
                  end
@@ -66,21 +70,21 @@ module Google
       target_name = ::File.basename(target_path)
       target_folder = ::File.dirname(target_path)
 
-      $log.debug "Uploading '#{src_path}' as '/#{temp_name}'"
+      $log&.debug "Uploading '#{src_path}' as '/#{temp_name}'"
       file = @session.upload_from_file(src_path, temp_name)
 
-      $log.debug "Moving '/#{temp_name}' to '#{target_folder}/#{temp_name}'"
+      $log&.debug "Moving '/#{temp_name}' to '#{target_folder}/#{temp_name}'"
       folder = self.folder(target_folder)
       folder.add(file)
       @session.root_collection.remove(file)
 
       existing_file = self.file(target_path)
       unless existing_file.nil?
-        $log.debug "Removing existing '#{target_path}'"
+        $log&.debug "Removing existing '#{target_path}'"
         folder.remove(existing_file.raw_file)
       end
 
-      $log.debug "Renaming '#{temp_name}' to '#{target_name}' in '#{target_folder}'"
+      $log&.debug "Renaming '#{temp_name}' to '#{target_name}' in '#{target_folder}'"
       file.title = target_name
     end
 
@@ -120,6 +124,28 @@ module Google
         worksheet.update_cells(current_index, 1, data_batch)
         current_index += BATCH_UPDATE_SIZE
         worksheet.save
+      end
+    end
+
+    # Updates an existing worksheet (tab) in Google Sheets document with new data or creates a new one
+    #
+    # @param spreadsheet_name [String] the Google Sheets document name
+    # @param worksheet_name [String] the Google Sheets document worksheet (tab) name
+    # @param rows [Array.<Array.<String>>] the worksheet rows data
+    def update_worksheet(spreadsheet_name, worksheet_name, rows)
+      spreadsheet = @session.spreadsheet_by_title(spreadsheet_name)
+      worksheet = spreadsheet&.worksheet_by_title(worksheet_name)
+
+      return add_sheet_to_spreadsheet(rows, spreadsheet_name, worksheet_name) unless worksheet
+
+      existing_rows = worksheet.rows
+      new_rows = rows - existing_rows
+      next_row_idx = existing_rows.size.next
+
+      new_rows.each_slice(BATCH_UPDATE_SIZE) do |new_rows_batch|
+        worksheet.update_cells(next_row_idx, 1, new_rows_batch)
+        worksheet.save
+        next_row_idx += new_rows_batch.size
       end
     end
 

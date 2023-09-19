@@ -9,9 +9,9 @@ style_min: true
 
 # Receive news and updates from Code.org
 
-Interested in learning more about the work we do? Take a peek under the hood and stay in touch with what's happening at Code.org and throughout the computer science community. When you sign-up for our emails, you'll hear the latest CS news, learn about special Code.org milestones, and discover heartwarming testimonials and stories from classrooms across the globe. 
+Interested in learning more about the work we do? Take a peek under the hood and stay in touch with what's happening at Code.org and throughout the computer science community. When you sign-up for our emails, you'll hear the latest CS news, learn about special Code.org milestones, and discover heartwarming testimonials and stories from classrooms across the globe.
 
-<br>You can also catch-up by taking a look at our <a href="https://code.org/about/past-newsletters" target="_blank">past newsletters</a>, and following us on <a href="https://twitter.com/codeorg">Twitter</a>, <a href="https://www.facebook.com/Code.org/">Facebook</a>, and <a href="https://www.instagram.com/codeorg/">Instagram</a>.
+<br>You can also catch-up by following us on <a href="https://twitter.com/codeorg">Twitter</a>, <a href="https://www.facebook.com/Code.org/">Facebook</a>, and <a href="https://www.instagram.com/codeorg/">Instagram</a>.
 
 ## Sign-up for our mailing list
 <iframe src="http://go.pardot.com/l/153401/2018-01-08/k4krw5" width="100%" height="435" type="text/html" frameborder="0" allowTransparency="true" style="border: 0"></iframe>
