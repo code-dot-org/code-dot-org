@@ -431,4 +431,24 @@ describe I18nScriptUtils do
       end
     end
   end
+
+  describe '.source_lang?' do
+    let(:is_source_lang) {I18nScriptUtils.source_lang?(language)}
+
+    context 'when the language is the i18n source language' do
+      let(:language) {{locale_s: 'en-US'}}
+
+      it 'returns true' do
+        assert is_source_lang
+      end
+    end
+
+    context 'when the language is not the i18n source language' do
+      let(:language) {{locale_s: 'not-EN'}}
+
+      it 'returns false' do
+        refute is_source_lang
+      end
+    end
+  end
 end
