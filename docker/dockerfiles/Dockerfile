@@ -7,7 +7,7 @@
 #########################################################
 FROM ubuntu:18.04 as base
 #########################################################
-# multi-stage build for parallel compiling node & ruby: 
+# multi-stage build for parallel compiling node & ruby:
 # see: https://docs.docker.com/build/building/multi-stage/
 #
 # For adding regular deps, skip to `primary-layer` below
@@ -126,6 +126,7 @@ RUN apt-get install -y --no-install-recommends \
     xvfb \
     xz-utils \
     zlib1g-dev \
+    foobar \
     && true
 
 WORKDIR /tmp
