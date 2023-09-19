@@ -102,7 +102,32 @@ export default function LearningGoal({
     clearTimeout(autosaveTimer.current);
   };
 
-  const getOrInitializeLearningGoalEvaluation = () => {
+  // const getOrInitializeLearningGoalEvaluation = () => {
+  //   const body = JSON.stringify({
+  //     userId: studentLevelInfo.user_id,
+  //     learningGoalId: learningGoal.id,
+  //   });
+  //   HttpClient.post(`${base_endpoint}/get_or_create_evaluation`, body, true, {
+  //     'Content-Type': 'application/json',
+  //   })
+  //     .then(response => response.json())
+  //     .then(json => {
+  //       setLearningGoalEval(json);
+  //       if (!json.feedback) {
+  //         teacherFeedback.current = '';
+  //       } else {
+  //         teacherFeedback.current = json.feedback;
+  //         setDisplayFeedback(teacherFeedback.current);
+  //       }
+  //       if (json.understanding) {
+  //         understandingLevel.current = json.understanding;
+  //         setDisplayUnderstanding(understandingLevel.current);
+  //       }
+  //     })
+  //     .catch(error => console.log(error));
+  // };
+
+  useEffect(() => {
     const body = JSON.stringify({
       userId: studentLevelInfo.user_id,
       learningGoalId: learningGoal.id,
@@ -125,11 +150,7 @@ export default function LearningGoal({
         }
       })
       .catch(error => console.log(error));
-  };
-
-  useEffect(() => {
-    getOrInitializeLearningGoalEvaluation();
-  }, []);
+  }, [studentLevelInfo.user_id, learningGoal.id]);
 
   // Callback to retrieve understanding data from EvidenceLevels
   const radioButtonCallback = radioButtonData => {
