@@ -21,6 +21,7 @@ function TopInstructionsHeader(props) {
     levelHasMiniRubric,
     displayDocumentationTab,
     displayReviewTab,
+    displayTaRubricTab,
     isViewingAsTeacher,
     hasBackgroundMusic,
     fetchingData,
@@ -31,6 +32,7 @@ function TopInstructionsHeader(props) {
     handleDocumentationTabClick,
     handleReviewTabClick,
     handleTeacherOnlyTabClick,
+    handleTaRubricTabClick,
     handleClickCollapser,
     isOldPurpleColor,
     isMinecraft,
@@ -148,6 +150,18 @@ function TopInstructionsHeader(props) {
               isLegacyTextColor={isOldPurpleColor}
               text={i18n.review()}
               teacherOnly={teacherOnly}
+              isMinecraft={isMinecraft}
+              isRtl={isRtl}
+            />
+          )}
+          {displayTaRubricTab && (
+            <InstructionsTab
+              className="uitest-taRubricTab"
+              onClick={handleTaRubricTabClick}
+              selected={tabSelected === TabType.TA_RUBRIC}
+              isLegacyTextColor={isOldPurpleColor}
+              text={i18n.rubric()}
+              teacherOnly={false}
               isMinecraft={isMinecraft}
               isRtl={isRtl}
             />
@@ -279,6 +293,7 @@ TopInstructionsHeader.propTypes = {
   levelHasMiniRubric: PropTypes.bool,
   displayDocumentationTab: PropTypes.bool,
   displayReviewTab: PropTypes.bool,
+  displayTaRubricTab: PropTypes.bool,
   isViewingAsTeacher: PropTypes.bool,
   hasBackgroundMusic: PropTypes.bool.isRequired,
   fetchingData: PropTypes.bool,
@@ -289,6 +304,7 @@ TopInstructionsHeader.propTypes = {
   handleDocumentationTabClick: PropTypes.func.isRequired,
   handleReviewTabClick: PropTypes.func.isRequired,
   handleTeacherOnlyTabClick: PropTypes.func.isRequired,
+  handleTaRubricTabClick: PropTypes.func.isRequired,
   handleClickCollapser: PropTypes.func.isRequired,
   isOldPurpleColor: PropTypes.bool,
   isMinecraft: PropTypes.bool.isRequired,

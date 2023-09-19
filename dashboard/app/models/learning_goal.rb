@@ -22,6 +22,8 @@ class LearningGoal < ApplicationRecord
 
   before_create :generate_key
 
+  accepts_nested_attributes_for :learning_goal_evidence_levels
+
   def summarize
     {
       key: key,
@@ -53,7 +55,7 @@ class LearningGoal < ApplicationRecord
       position: position,
       learningGoal: learning_goal,
       aiEnabled: ai_enabled,
-      learning_goal_evidence_levels: learning_goal_evidence_levels.map(&:summarize_for_rubric_edit)
+      learningGoalEvidenceLevelsAttributes: learning_goal_evidence_levels.map(&:summarize_for_rubric_edit)
     }
   end
 end
