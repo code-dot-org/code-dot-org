@@ -480,6 +480,14 @@
   support_and_questions_section_subhead: "Still have questions? Reach out to us! We are here to help."
   support_and_questions_section_desc: "Our support team is here to answer any questions you may have about starting teaching with Code.org. You can also ask other teachers about their experience on our teacher forums."
 
+  subscribe_form_section_title: "Subscribe for updates"
+  subscribe_form_section_desc_csa: "Sign up to receive monthly emails about Code.org's Computer Science A and get helpful reminders, tips, and updates sent right to your inbox."
+  subscribe_form_section_desc_csc: "Sign up to receive monthly emails about Code.org's Computer Science Connections and get helpful reminders, tips, and updates sent right to your inbox."
+  subscribe_form_section_desc_csd: "Sign up to receive monthly emails about Code.org's Computer Science Discoveries and get helpful reminders, tips, and updates sent right to your inbox."
+  subscribe_form_section_desc_csf: "Sign up to receive monthly emails about Code.org's Computer Science Fundamentals and get helpful reminders, tips, and updates sent right to your inbox."
+  subscribe_form_section_desc_csp: "Sign up to receive monthly emails about Code.org's Computer Science Principles and get helpful reminders, tips, and updates sent right to your inbox."
+  subscribe_form_section_unsubscribe: "You can unsubscribe at any time."
+
   blockchain_hero_heading: 'How Blockchain Works'
   blockchain_hero_desc: 'Dive into the world of blockchain with "How Blockchain Works," our new video series and accompanying lessons!'
   blockchain_intro_heading: 'See how blockchain works'
