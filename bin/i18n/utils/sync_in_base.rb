@@ -4,15 +4,20 @@ module I18n
   module Utils
     class SyncInBase
       class << self
-        # Inits the instance method `#process`
-        def process(&block)
-          define_method :process do
-            instance_exec(&block)
-          end
-        end
-
         def perform
           new.send(:execute)
+        end
+
+        protected
+
+        def process(&block)
+          @process_block = block
+        end
+
+        private
+
+        def process_block
+          @process_block ||= proc {raise NotImplementedError}
         end
       end
 
@@ -24,15 +29,10 @@ module I18n
 
       private
 
-      # use `.process` to define the method
-      def process
-        raise NotImplementedError
-      end
-
       def execute
         progress_bar.start
 
-        process
+        instance_exec(&self.class.send(:process_block))
 
         progress_bar.finish
       end

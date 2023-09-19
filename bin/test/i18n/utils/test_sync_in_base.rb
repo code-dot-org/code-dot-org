@@ -3,27 +3,29 @@ require_relative '../../../i18n/utils/sync_in_base'
 
 describe I18n::Utils::SyncInBase do
   describe '.process' do
-    it 'defines the instance method `#process`' do
-      expected_process = 'defined_process'
+    TestSyncInProcess = Class.new(I18n::Utils::SyncInBase)
 
-      I18n::Utils::SyncInBase.process {expected_process}
+    it 'preserves `@process_block`' do
+      assert_raises(NotImplementedError) {TestSyncInProcess.send(:process_block).call}
 
-      assert_equal expected_process, I18n::Utils::SyncInBase.new.process
+      TestSyncInProcess.send(:process) {'expected_process'}
+
+      assert_equal 'expected_process', TestSyncInProcess.send(:process_block).call
     end
   end
 
   describe '.perform' do
-    let(:perform_sync_out) {I18n::Utils::SyncInBase.perform}
+    TestSyncInPerform = Class.new(I18n::Utils::SyncInBase)
 
-    it 'executes the sync-out process' do
-      I18n::Utils::SyncInBase.any_instance.expects(:process).once
+    let(:perform_sync_out) {TestSyncInPerform.perform}
+
+    it 'executes `@process_block`' do
+      expected_process = proc {'expected_process'}
+
+      TestSyncInPerform.instance_variable_set(:@process_block, expected_process)
+      TestSyncInPerform.any_instance.expects(:instance_exec).with(&expected_process).once
+
       perform_sync_out
-    end
-  end
-
-  describe '#process' do
-    it 'raises NotImplementedError' do
-      assert_raises(NotImplementedError) {I18n::Utils::SyncInBase.new.send(:process)}
     end
   end
 end
