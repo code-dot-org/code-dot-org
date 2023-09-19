@@ -1,3 +1,8 @@
+# Configure python to work inside rails via pycall.
+pybin_path = File.expand_path('../pybin/bin', __FILE__)
+ENV['PATH'] = "#{pybin_path}:#{ENV['PATH']}"
+ENV['PYTHON'] = "#{pybin_path}/python3.8"
+
 $LOAD_PATH.unshift File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift File.expand_path('../shared/middleware', __FILE__)
 
