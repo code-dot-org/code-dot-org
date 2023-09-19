@@ -217,6 +217,8 @@
   call_to_action_open_positions: "View open positions"
   call_to_action_get_guide: "Get the guide"
   call_to_action_donate_to_cdo: "Donate to Code.org"
+  call_to_action_start_fundraiser: "Start a fundraiser"
+  call_to_action_view_donation_policy: "View donation policy"
 
   aria_label_call_to_action_afe: "Learn more about Amazon Future Engineer"
   aria_label_call_to_action_teaching_csf: "Start the Teaching Computer Science Fundamentals professional learning program"
@@ -1029,6 +1031,13 @@
 
   donate_page_top_heading: "Help fund our mission"
   donate_page_top_desc: "Every donation fuels Code.org's mission to expand access to computer science education. We offer several ways for you to donate and make a difference."
+  donate_page_fundraise_title: "Fundraise for Code.org"
+  donate_page_fundraise_desc: "Help raise money for Code.org! Every student in every school should have the opportunity to learn computer science."
+  donate_page_other_ways_title: "Other ways to give"
+  donate_page_other_ways_desc: "Explore diverse methods to contribute, and find the option that suits you best. Every gesture, big or small, propels our mission forward."
+  donate_page_501c3: "Code.org is registered as a public 501(c)(3) nonprofit organization. Contributions to Code.org are tax-deductible to the extent permitted by law. Code.org's tax identification number is 46-0858543."
+  donate_page_donation_policy_title: "Understanding our Donation Policy"
+  donate_page_donation_policy_desc: "Learn about how we handle and allocate your contributions."
 
   hoc_live: 'Hour of Code Live'
   hoc_live_sign_up_title: 'Sign up for Hour of Code Live'

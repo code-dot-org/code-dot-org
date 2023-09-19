@@ -9,3 +9,21 @@ section.top {
     gap: 1rem;
   }
 }
+
+section.fundraise {
+  background: url("/images/banners/banner-bg-lines-neutral-dark.png") center repeat;
+  background-size: 15%;
+  background-color: $neutral-dark;
+
+  h2,
+  p {
+    color: $neutral-white;
+  }
+}
+
+section.bg-primary-light {
+
+  p {
+    font-family: $gotham-regular;
+  }
+}
