@@ -1221,8 +1221,16 @@ section.quote {
     gap: 1rem;
   }
 
+  @media screen and (max-width: $width-sm) {
+    padding: 1rem;
+  }
+
   .text-wrapper {
-    width: 50%;
+    width: 48%;
+
+    @media screen and (max-width: $width-md) {
+      width: 100%;
+    }
 
     h2, p {
       color: $neutral-white;
@@ -1233,14 +1241,11 @@ section.quote {
     background: $neutral_light;
     border-radius: $border-radius;
     padding: 1rem 0 0;
-    width: 48%;
+
+    @media screen and (max-width: $width-sm) {
+      iframe {
+        height: 500px !important;
+      }
+    }
   }
 }
-
-
-
-
-
-
-
-
