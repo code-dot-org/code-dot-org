@@ -14,7 +14,7 @@ module Acapela
     cl_pwd: CDO.acapela_storage_password
   }.freeze
 
-  def self.text_to_audio_url(text, voice="rosie22k", speed=180, shape=100, context=nil)
+  def self.text_to_audio_url(text, voice = "rosie22k", speed = 180, shape = 100, context = nil)
     params = {
       req_voice: voice,
       req_text: text,

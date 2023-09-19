@@ -4,6 +4,7 @@
  * helps facilitate level-switching between labs without page reloads.
  */
 import AichatView from '@cdo/apps/aichat/views/AichatView';
+import DanceView from '@cdo/apps/dance/lab2/views/DanceView';
 import MusicView from '@cdo/apps/music/views/MusicView';
 import StandaloneVideo from '@cdo/apps/standaloneVideo/StandaloneVideo';
 import classNames from 'classnames';
@@ -47,6 +48,11 @@ const appsProperties: {[appName in AppName]?: AppProperties} = {
   aichat: {
     backgroundMode: false,
     node: <AichatView />,
+    theme: Theme.LIGHT,
+  },
+  dance: {
+    backgroundMode: false,
+    node: <DanceView />,
     theme: Theme.LIGHT,
   },
 };

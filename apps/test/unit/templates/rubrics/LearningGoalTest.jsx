@@ -94,7 +94,7 @@ describe('LearningGoal', () => {
       />
     );
     expect(wrapper.find('FontAwesome').props().icon).to.equal('angle-down');
-    wrapper.find('details').simulate('click');
+    wrapper.find('summary').simulate('click');
     expect(wrapper.find('FontAwesome').props().icon).to.equal('angle-up');
   });
 
@@ -107,7 +107,7 @@ describe('LearningGoal', () => {
         reportingData={{unitName: 'test-2023', levelName: 'test-level'}}
       />
     );
-    wrapper.find('details').simulate('click');
+    wrapper.find('summary').simulate('click');
     expect(sendEventSpy).to.have.been.calledWith(
       EVENTS.RUBRIC_LEARNING_GOAL_EXPANDED_EVENT,
       {
@@ -117,7 +117,7 @@ describe('LearningGoal', () => {
         learningGoal: 'Testing',
       }
     );
-    wrapper.find('details').simulate('click');
+    wrapper.find('summary').simulate('click');
     expect(sendEventSpy).to.have.been.calledWith(
       EVENTS.RUBRIC_LEARNING_GOAL_COLLAPSED_EVENT,
       {

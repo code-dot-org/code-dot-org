@@ -838,7 +838,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     Pd::Workshop.send_reminder_for_upcoming_in_days(10)
   end
 
-  test '10 day reminder for csf workshop does not send pre email to facilitators' do
+  test '10 day reminder for csf workshop sends pre email to facilitators' do
     mock_mail = stub
     mock_mail.stubs(:deliver_now).returns(nil)
 
@@ -846,7 +846,7 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     create_list :pd_enrollment, 3, workshop: workshop
     Pd::Workshop.expects(:scheduled_start_in_days).returns([workshop])
 
-    Pd::WorkshopMailer.expects(:facilitator_pre_workshop).returns(mock_mail).never
+    Pd::WorkshopMailer.expects(:facilitator_pre_workshop).returns(mock_mail).times(2)
     Pd::Workshop.send_reminder_for_upcoming_in_days(10)
   end
 
@@ -1520,9 +1520,9 @@ class Pd::WorkshopTest < ActiveSupport::TestCase
     assert workshop.require_application?
   end
 
-  test 'CSD academic year workshop must require teacher application' do
+  test 'CSD academic year workshop must not require teacher application' do
     workshop = create :csd_academic_year_workshop, regional_partner: @regional_partner
-    assert workshop.require_application?
+    refute workshop.require_application?
   end
 
   test 'CSA summer workshop must require teacher application' do

@@ -819,7 +819,10 @@ uk:
         csd_gamelab_velocity: Швидкість
         csd_ml_intro_ai_lab_july2021: Вступ до Лабораторії ШІ
         csd_ml_intro_to_ai_lab: Вступ до Лабораторії ШІ
+        csd_ml_model_cards_july2021: Картки моделі в Лабораторії ШІ
         csd_ml_numerical_ai_lab: Числові дані в Лабораторії ШІ
+        csd_ml_training_testing_ai_lan: Тренування та тестування моделі в Лабораторії
+          ШІ
         csd_pair_programming: Парне програмування
         csd_problem_solving_process: Процес вирішення проблем
         csd_sprite_properties: Властивості спрайтів

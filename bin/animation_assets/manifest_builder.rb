@@ -205,7 +205,7 @@ class ManifestBuilder
   def upload_localized_manifest(locale, strings)
     return unless upload_spritelab_to_s3?
 
-    animation_metadata = initial_animation_metadata
+    animation_metadata = initial_animation_metadata.deep_dup
     animation_metadata.each do |_, metadata|
       metadata['aliases'] = metadata['aliases'].map {|aliaz| strings[aliaz]}
       metadata['aliases'].delete_if(&:blank?)

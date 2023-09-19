@@ -1004,12 +1004,13 @@ sq:
     teacher: Mësues
   video:
     autoplay_option: Luaj videot automatikisht
-    download: Shkarko Videon
+    download: Shkarko videon
     label: Video
     notes: Asnjë video? Shfaq shënimet.
     notes_coming_soon: Shënimet për këtë video vijnë së shpejti.
     tab: Video.
   video_coming_soon: Video vjen së shpejti!
+  view_all_units: Shiko të gjitha njësitë
   view_lesson_plan: Shiko Planin Mësimor
   welcome_back: Mirë se erdhët sërish, %{name}
   welcome_email:

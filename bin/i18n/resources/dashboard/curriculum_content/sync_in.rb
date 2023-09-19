@@ -74,9 +74,10 @@ module I18n
             # catchall for scripts without courses
             return 'other' if script.get_course_version.blank?
 
-            # special-case CSF; we want to group all CSF courses together, even though
-            # they all have different course offerings.
+            # special-case CSF and CSC; we want to group all CSF courses together and all CSC courses together,
+            # even though they all have different course offerings.
             return File.join(script.get_course_version.key, 'csf') if script.csf?
+            return File.join(script.get_course_version.key, 'csc') if script.csc?
 
             # base case
             return File.join(script.get_course_version.key, script.get_course_version.course_offering.key)

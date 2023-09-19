@@ -52,7 +52,7 @@ def page_load(wait = true, blank_tab: false)
     unless blank_tab
       wait_until do
         (url = @browser.current_url) != '' &&
-           url != 'about:blank' &&
+          url != 'about:blank' &&
           @browser.execute_script('return document.readyState;') == 'complete'
       end
     end
@@ -96,6 +96,20 @@ end
 Given /^I am on "([^"]*)"$/ do |url|
   check_window_for_js_errors('before navigation')
   navigate_to replace_hostname(url)
+end
+
+And /^I take note of the current loaded page$/ do
+  # Remember this page
+  @current_page_body = @browser.find_element(:css, 'body')
+end
+
+Then /^I wait until I am on a different page than I noted before$/ do
+  # When we've seen a page before, look for a different page
+  if @current_page_body
+    wait_until do
+      @current_page_body != @browser.find_element(:css, 'body')
+    end
+  end
 end
 
 When /^I wait to see (?:an? )?"([.#])([^"]*)"$/ do |selector_symbol, name|

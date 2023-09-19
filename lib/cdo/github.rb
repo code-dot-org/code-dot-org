@@ -129,7 +129,7 @@ module GitHub
   # @raise [ArgumentError] If the PR has already been merged.
   # @raise [Exception] From calling Octokit.merge_pull_request.
   # @return [Boolean] Whether the PR was merged.
-  def self.merge_pull_request(pr_number, commit_message='')
+  def self.merge_pull_request(pr_number, commit_message = '')
     configure_octokit
 
     # Let async mergeability check finish before proceeding.

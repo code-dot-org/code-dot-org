@@ -335,7 +335,11 @@ Dashboard::Application.routes.draw do
       end
     end
 
-    resources :rubrics, only: [:edit, :new]
+    resources :rubrics, only: [:create, :edit, :new, :update] do
+      member do
+        post 'submit_evaluations'
+      end
+    end
 
     resources :course_offerings, only: [:edit, :update], param: 'key' do
       collection do
