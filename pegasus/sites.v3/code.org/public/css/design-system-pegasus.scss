@@ -1221,14 +1221,19 @@ section.quote {
     gap: 1rem;
   }
 
-  h2, p {
-    color: $neutral-white;
+  .text-wrapper {
+    width: 50%;
+
+    h2, p {
+      color: $neutral-white;
+    }
   }
 
   figure {
     background: $neutral_light;
     border-radius: $border-radius;
     padding: 1rem 0 0;
+    width: 48%;
   }
 }
 
