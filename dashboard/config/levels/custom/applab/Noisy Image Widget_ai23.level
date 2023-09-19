@@ -1,5 +1,6 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 41,
   "created_at": "2023-07-31T20:43:55.000Z",
   "level_num": "custom",
@@ -33,14 +34,16 @@
     "fail_on_lint_errors": "false",
     "widget_mode": "false",
     "ai_enabled": "false",
-    "long_instructions": "## Noisy Image Widget\r\n\r\n# Overview\r\n\r\nExplore what images look like with different amounts of noise added. Follow the instructions on your activity guide to see how noise affects what we see in an image, and how much of an image we can still detect even when noisy.\r\n\r\nA [User Guide for the Noisy Image Widget](https://docs.google.com/presentation/d/1l3Ide0B-4k_IEhWYiCVz6OnyAL4fCmg-ROqogyqnVCo/edit#slide=id.g247d694c9f1_0_45) is provided if you have questions about how to use the widget.\r\n\r\n# Explore the App - Noisy Image Widget\r\n\r\n**Part 1) Start with the default image.** As a class, describe what details do you see at each of the values in the table on your activity guide\r\n\r\n**Part 2) Choose your own image.** Choose noise levels where you expect someone else to...\r\n- A) Describe the whole picture\r\n- B) Know what it is, but not the details\r\n- C) Start to catch some details\r\n- D) Have no idea what this is a picture of\r\n\r\n**Part 3) Diffusion Sketch.** Using your observations above, describe and / or sketch the image you used, pointing out key details you expect your partner to be able to find at different levels\r\n\r\n**Part 4) Trade Image.**  Now show your partner the images at these noise levels. **Make sure to go in reverse order** - start with the \"most noise\" and gradually remove it. Write the details they see below.\r\n",
+    "long_instructions": "## Noisy Image Widget\r\n\r\n# Overview\r\n\r\nExplore what images look like with different amounts of noise added. Press the orange run button on the bottom of the app, then follow the instructions on your activity guide to see how noise affects what we see in an image, and how much of an image we can still detect even when noisy.\r\n\r\nA [User Guide for the Noisy Image Widget](https://docs.google.com/presentation/d/1l3Ide0B-4k_IEhWYiCVz6OnyAL4fCmg-ROqogyqnVCo/edit#slide=id.g247d694c9f1_0_45) is provided if you have questions about how to use the widget.\r\n\r\n# Explore the App - Noisy Image Widget\r\n\r\n**Part 1) Start with the default image.** As a class, describe what details do you see at each of the values in the table on your activity guide\r\n\r\n**Part 2) Choose your own image.** Choose noise levels where you expect someone else to...\r\n- A) Describe the whole picture\r\n- B) Know what it is, but not the details\r\n- C) Start to catch some details\r\n- D) Have no idea what this is a picture of\r\n\r\n**Part 3) Diffusion Sketch.** Using your observations above, describe and / or sketch the image you used, pointing out key details you expect your partner to be able to find at different levels\r\n\r\n**Part 4) Trade Image.**  Now show your partner the images at these noise levels. **Make sure to go in reverse order** - start with the \"most noise\" and gradually remove it. Write the details they see below.\r\n",
     "display_name": "Voice Simulator",
     "teacher_markdown": "**How Realistic is this?** The spirit of this activity is authentic to a process used by Diffusion AI models, especially in relation to looking at \"noisy images\" and generating an image to remove the noise. You can see an example of this in the [Documentation for Midjourney](https://docs.midjourney.com/docs/video) (an AI model that uses stable diffusion), where images start with a mostly blank canvas and gradually become more detailed and \"in focus\".\r\n\r\n\r\nThe actual method used to generate the noise has been simplified for this widget - it is not truly Gaussian noise (which is used in actual diffusion models), and is not truly done in \"generations\".",
     "name_suffix": "_ai23",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ]
   },
-  "published": true,
-  "audit_log": "[{\"changed_at\":\"2023-07-31T20:43:55.501+00:00\",\"changed\":[\"cloned from \\\"Noisy Image Widget\\\"\"],\"cloned_from\":\"Noisy Image Widget\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-07-31T20:43:55.501+00:00\",\"changed\":[\"cloned from \\\"Noisy Image Widget\\\"\"],\"cloned_from\":\"Noisy Image Widget\"},{\"changed_at\":\"2023-09-19 00:06:17 +0000\",\"changed\":[\"long_instructions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>
