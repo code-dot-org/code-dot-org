@@ -15,6 +15,9 @@ if (envConstants.COVERAGE) {
   reporters.push('coverage-istanbul');
 }
 
+// We run all tests in the UTC timezone so datetimes don't vary by local timezone
+process.env.TZ = 'UTC';
+
 // Use the babel test env defined in .babelrc
 process.env.BABEL_ENV = 'test';
 
