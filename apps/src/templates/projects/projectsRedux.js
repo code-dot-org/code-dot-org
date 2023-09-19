@@ -148,7 +148,6 @@ function captcha(state = initialCaptchaState, action) {
   switch (action.type) {
     case SET_CAPTCHA_KEY:
       return {
-        ...state,
         captchaSiteKey: action.captchaSiteKey,
       };
     default:
@@ -440,18 +439,6 @@ function personalProjectsList(state = initialPersonalProjectsList, action) {
       return state;
   }
 }
-
-// function captcha(state = initialPersonalProjectsList, action) {
-//   switch (action.type) {
-//     case SET_CAPTCHA_KEY:
-//       return {
-//         ...state,
-//         captchaSiteKey: action.captchaSiteKey,
-//       };
-//     default:
-//       return state;
-//   }
-// }
 
 const reducer = combineReducers({
   selectedGallery,
