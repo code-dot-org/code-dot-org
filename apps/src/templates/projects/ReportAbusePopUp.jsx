@@ -9,6 +9,29 @@ import Button from '@cdo/apps/templates/Button';
 import CheckBox from '@cdo/apps/componentLibrary/checkbox';
 import {connect} from 'react-redux';
 
+const initialCheckboxes = [
+  {
+    key: 'Cyberbullying',
+    label: i18n.abuseTypeCyberbullying(),
+    checked: false,
+  },
+  {
+    key: 'Offensive-Content',
+    label: i18n.abuseTypeOffensiveCapital(),
+    checked: false,
+  },
+  {
+    key: 'Copyright-Infringement',
+    label: i18n.abuseTypeInfringement(),
+    checked: false,
+  },
+  {
+    key: 'Other',
+    label: i18n.abuseTypeOther(),
+    checked: false,
+  },
+];
+
 class UnconnectedReportAbusePopUp extends React.Component {
   static propTypes = {
     projectData: PropTypes.object,
@@ -24,26 +47,8 @@ class UnconnectedReportAbusePopUp extends React.Component {
     this.state = {
       showReportConfirmation: false,
       captchaCompleted: false,
-      checkboxes: [
-        {
-          key: 'Cyberbullying',
-          label: i18n.abuseTypeCyberbullying(),
-          checked: false,
-        },
-        {
-          key: 'Offensive-Content',
-          label: i18n.abuseTypeOffensive(),
-          checked: false,
-        },
-        {
-          key: 'Copyright-Infringement',
-          label: i18n.abuseTypeInfringement(),
-          checked: false,
-        },
-        {key: 'Other', label: i18n.abuseTypeOther(), checked: false},
-      ],
+      checkboxes: initialCheckboxes,
       showRecaptcha: false,
-      submitButtonEnabled: false,
       loadedCaptcha: false,
     };
     this.cancel = this.cancel.bind(this);
@@ -85,31 +90,13 @@ class UnconnectedReportAbusePopUp extends React.Component {
     this.setState({
       captchaCompleted: false, // reset captcha completion
       showRecaptcha: false, // reset checkboxes
-      checkboxes: [
-        {
-          key: 'Cyberbullying',
-          label: i18n.abuseTypeCyberbullying(),
-          checked: false,
-        },
-        {
-          key: 'Offensive-Content',
-          label: i18n.abuseTypeOffensive(),
-          checked: false,
-        },
-        {
-          key: 'Copyright-Infringement',
-          label: i18n.abuseTypeInfringement(),
-          checked: false,
-        },
-        {key: 'Other', label: i18n.abuseTypeOther(), checked: false},
-      ],
+      checkboxes: initialCheckboxes,
     });
     this.cleanUpCaptcha();
   }
 
   onCaptchaVerification(token) {
     this.setState({
-      submitButtonEnabled: true,
       captchaCompleted: true,
     });
     this.token = token;
@@ -151,16 +138,12 @@ class UnconnectedReportAbusePopUp extends React.Component {
         }
       })
       .catch(error => {
-        this.setState({
-          submitButtonEnabled: false,
-        });
         console.error('Error sending report data:', error);
       });
   }
 
   onCaptchaExpiration() {
     this.setState({
-      submitButtonEnabled: false,
       captchaCompleted: false,
     });
   }
@@ -200,8 +183,8 @@ class UnconnectedReportAbusePopUp extends React.Component {
     const {
       showRecaptcha,
       checkboxes,
-      submitButtonEnabled,
       showReportConfirmation,
+      captchaCompleted,
     } = this.state;
 
     const captchaSiteKey = this.props.recaptchaSiteKey;
@@ -214,7 +197,7 @@ class UnconnectedReportAbusePopUp extends React.Component {
             <p>{i18n.thankYouForReport()}</p>
             <Button
               onClick={this.cancel}
-              text={'Continue'}
+              text={i18n.continue()}
               color={Button.ButtonColor.brandSecondaryDefault}
             />
           </div>
@@ -223,7 +206,7 @@ class UnconnectedReportAbusePopUp extends React.Component {
             <div className={style.title}>
               <h3 style={{margin: 0}}>{i18n.reportAbuse()}</h3>
               <button
-                type="reset"
+                type="button"
                 onClick={this.cancel}
                 className={style.xButton}
               >
@@ -261,7 +244,10 @@ class UnconnectedReportAbusePopUp extends React.Component {
               />
               <Button
                 onClick={this.handleSubmit}
-                disabled={!submitButtonEnabled}
+                disabled={
+                  !checkboxes.some(checkbox => checkbox.checked) ||
+                  !captchaCompleted
+                }
                 text={i18n.submit()}
                 className={style.submitButton}
                 color={Button.ButtonColor.brandSecondaryDefault}
