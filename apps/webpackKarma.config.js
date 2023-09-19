@@ -55,7 +55,6 @@ const karmaConfig = {
       new webpack.DefinePlugin({
         IN_UNIT_TEST: JSON.stringify(true),
         IN_STORYBOOK: JSON.stringify(false),
-        'process.env.mocha_entry': JSON.stringify(process.env.mocha_entry),
         'process.env.NODE_ENV': JSON.stringify(
           envConstants.NODE_ENV || 'development'
         ),
