@@ -8,6 +8,7 @@ import style from './report-abuse-pop-up.module.scss';
 import Button from '@cdo/apps/templates/Button';
 import CheckBox from '@cdo/apps/componentLibrary/checkbox';
 import {connect} from 'react-redux';
+import {Heading3, BodyTwoText} from '@cdo/apps/componentLibrary/typography';
 
 const initialCheckboxes = [
   {
@@ -193,8 +194,8 @@ class UnconnectedReportAbusePopUp extends React.Component {
       <AccessibleDialog className={style.popUp} onClose={this.cancel}>
         {showReportConfirmation ? (
           <div className={style.submitConfirmation}>
-            <h3>{i18n.thankyou()}!</h3>
-            <p>{i18n.thankYouForReport()}</p>
+            <Heading3>{i18n.thankyou()}!</Heading3>
+            <BodyTwoText>{i18n.thankYouForReport()}</BodyTwoText>
             <Button
               onClick={this.cancel}
               text={i18n.continue()}
@@ -204,7 +205,7 @@ class UnconnectedReportAbusePopUp extends React.Component {
         ) : (
           <div>
             <div className={style.title}>
-              <h3 style={{margin: 0}}>{i18n.reportAbuse()}</h3>
+              <Heading3 style={{margin: 0}}>{i18n.reportAbuse()}</Heading3>
               <button
                 type="button"
                 onClick={this.cancel}
