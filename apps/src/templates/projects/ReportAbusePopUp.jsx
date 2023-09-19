@@ -211,11 +211,11 @@ class UnconnectedReportAbusePopUp extends React.Component {
                 onClick={this.cancel}
                 className={style.xButton}
               >
-                <FontAwesome icon="x" className={style.xIcon} />
+                <FontAwesome icon="fa-solid fa-xmark" className={style.xIcon} />
               </button>
             </div>
             <hr className={style.lines} />
-            <p className={style.body}>{i18n.whyReport()}</p>
+            <BodyTwoText className={style.body}>{i18n.whyReport()}</BodyTwoText>
             <div>
               {checkboxes.map(checkbox => (
                 <CheckBox
