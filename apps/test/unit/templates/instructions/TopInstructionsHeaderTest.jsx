@@ -27,6 +27,7 @@ const DEFAULT_PROPS = {
   handleDocumentationTabClick: () => {},
   handleReviewTabClick: () => {},
   handleTeacherOnlyTabClick: () => {},
+  handleTaRubricTabClick: () => {},
   handleClickCollapser: () => {},
   isMinecraft: false,
   ttsLongInstructionsUrl: '',
