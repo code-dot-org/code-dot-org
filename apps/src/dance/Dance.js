@@ -105,7 +105,7 @@ Dance.prototype.init = function (config) {
   }
 
   this.level = config.level;
-  this.usesPreview = config.level.usesPreview;
+  this.usesPreview = !!config.level.usesPreview;
   this.skin = config.skin;
   this.share = config.share;
   this.studioAppInitPromise = new Promise(resolve => {
@@ -133,15 +133,11 @@ Dance.prototype.init = function (config) {
     this.studioApp_.init(config);
 
     if (this.usesPreview) {
-      this.currentCode = this.studioApp_.getCode();
+      const currentCode = this.studioApp_.getCode();
       this.studioApp_.addChangeHandler(() => {
         const newCode = Blockly.getWorkspaceCode();
-
-        if (newCode !== this.currentCode) {
-          this.currentCode = newCode;
-          if (!this.studioApp_.isRunning()) {
-            this.preview();
-          }
+        if (newCode !== currentCode && !this.studioApp_.isRunning()) {
+          this.preview();
         }
       });
     }
@@ -458,6 +454,8 @@ Dance.prototype.reset = function () {
   }
 
   Sounds.getSingleton().stopAllAudio();
+
+  this.nativeAPI.reset();
 
   var softButtonCount = 0;
   for (var i = 0; i < this.level.softButtons.length; i++) {
