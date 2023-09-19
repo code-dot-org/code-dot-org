@@ -12,50 +12,7 @@ const {ALL_APPS, appsEntriesFor} = require('./webpackEntryPoints');
 const {createWebpackConfig} = require('./webpack.config');
 const offlineWebpackConfig = require('./webpackOffline.config');
 
-const {customizeKarmaConfigFor} = require('./karma.conf.js');
-
 module.exports = function (grunt) {
-  process.env.mocha_entry = grunt.option('entry') || '';
-  if (process.env.mocha_entry) {
-    if (
-      path.resolve(process.env.mocha_entry).indexOf('/apps/test/integration') >
-      -1
-    ) {
-      throw new Error('Cannot use karma:entry to run integration tests');
-    }
-    const isDirectory = fs
-      .lstatSync(path.resolve(process.env.mocha_entry))
-      .isDirectory();
-    const loadContext = isDirectory
-      ? `let testsContext = require.context(${JSON.stringify(
-          path.resolve(process.env.mocha_entry)
-        )}, true, /\\.[j|t]sx?$/);`
-      : '';
-    const runTests = isDirectory
-      ? 'testsContext.keys().forEach(testsContext);'
-      : `require('${path.resolve(process.env.mocha_entry)}');`;
-    const file = `/* eslint-disable */
-// Auto-generated from Gruntfile.js
-import '@babel/polyfill/noConflict';
-import 'whatwg-fetch';
-import Adapter from 'enzyme-adapter-react-16';
-import enzyme from 'enzyme';
-enzyme.configure({adapter: new Adapter()});
-import { throwOnConsoleErrorsEverywhere } from './util/throwOnConsole';
-${loadContext}
-describe('entry tests', () => {
-  throwOnConsoleErrorsEverywhere();
-
-  // TODO: Add warnings back once we've run the rename-unsafe-lifecycles codemod.
-  // https://codedotorg.atlassian.net/browse/XTEAM-377
-  // throwOnConsoleWarningsEverywhere();
-
-  ${runTests}
-});
-`;
-    fs.writeFileSync('test/entry-tests.js', file);
-  }
-
   var config = {};
 
   /**
