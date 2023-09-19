@@ -17,7 +17,7 @@ module LtiAccessToken
 
     # assemble JWT payload
     jwt_payload = {
-      iss: CDO.studio_url('', CDO.default_scheme),
+      iss: Policies::Lti::JWT_ISSUER,
       sub: client_id,
       aud: access_token_url,
       iat: Time.now.to_i,
