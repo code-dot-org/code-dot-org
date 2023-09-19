@@ -102,31 +102,6 @@ export default function LearningGoal({
     clearTimeout(autosaveTimer.current);
   };
 
-  // const getOrInitializeLearningGoalEvaluation = () => {
-  //   const body = JSON.stringify({
-  //     userId: studentLevelInfo.user_id,
-  //     learningGoalId: learningGoal.id,
-  //   });
-  //   HttpClient.post(`${base_endpoint}/get_or_create_evaluation`, body, true, {
-  //     'Content-Type': 'application/json',
-  //   })
-  //     .then(response => response.json())
-  //     .then(json => {
-  //       setLearningGoalEval(json);
-  //       if (!json.feedback) {
-  //         teacherFeedback.current = '';
-  //       } else {
-  //         teacherFeedback.current = json.feedback;
-  //         setDisplayFeedback(teacherFeedback.current);
-  //       }
-  //       if (json.understanding) {
-  //         understandingLevel.current = json.understanding;
-  //         setDisplayUnderstanding(understandingLevel.current);
-  //       }
-  //     })
-  //     .catch(error => console.log(error));
-  // };
-
   useEffect(() => {
     const body = JSON.stringify({
       userId: studentLevelInfo.user_id,
