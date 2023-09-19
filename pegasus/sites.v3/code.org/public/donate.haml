@@ -1,0 +1,19 @@
+---
+title: Donate
+theme: responsive_full_width
+---
+
+%link{href: "/css/generated/design-system-pegasus.css", rel: "stylesheet"}
+%link{href: "/css/generated/page/donate-styles.css", rel: "stylesheet"}
+
+%section.top
+  .wrapper.flex-container.justify-space-between.align-items-center.wrap
+    .text-wrapper.col-50
+      %h1=hoc_s(:donate_page_top_heading)
+      %p.body-one
+        =hoc_s(:donate_page_top_desc)
+      %a.link-button{href: "https://donate.code.org/campaign/support-computer-science-education/c172233", target: "_blank", rel: "noopener noreferrer"}
+        =hoc_s(:call_to_action_donate_to_cdo)
+    %figure.col-45
+      %img.rounded-corners.box-shadow-primary{src: "/images/donate-page-top.png", alt: "", style: "position: relative; width: 100%;"}
+    .clear
