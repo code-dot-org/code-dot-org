@@ -1,6 +1,10 @@
 import React, {useState} from 'react';
 import PropTypes from 'prop-types';
-import {BodyTwoText, Heading1} from '@cdo/apps/componentLibrary/typography';
+import {
+  BodyTwoText,
+  Heading1,
+  Heading2,
+} from '@cdo/apps/componentLibrary/typography';
 import Button from '@cdo/apps/templates/Button';
 import {navigateToHref} from '@cdo/apps/utils';
 import RubricEditor from './RubricEditor';
@@ -50,6 +54,8 @@ export default function RubricsContainer({
           },
         ]
   );
+
+  let hasSubmittableLevels;
 
   const generateLearningGoalKey = () => {
     let learningGoalNumber = learningGoalList.length + 1;
@@ -258,6 +264,7 @@ export default function RubricsContainer({
           {level.name}
         </option>
       ));
+    hasSubmittableLevels = selectOptions.length !== 0;
     return selectOptions;
   }
 
@@ -267,24 +274,29 @@ export default function RubricsContainer({
       <BodyTwoText>
         This rubric will be used for {unitName}, lesson {lessonNumber}.
       </BodyTwoText>
-
-      <div style={styles.containerStyle}>
-        <label>Choose a level for this rubric to be evaluated on</label>
-        <select
-          id="rubric_level_id"
-          required={true}
-          onChange={handleDropdownChange}
-          value={selectedLevelForAssessment}
-        >
-          {renderOptions()}
-        </select>
-      </div>
-
+      {hasSubmittableLevels ? (
+        <div style={styles.containerStyle}>
+          <label>Choose a level for this rubric to be evaluated on</label>
+          <select
+            id="rubric_level_id"
+            required={true}
+            onChange={handleDropdownChange}
+            value={selectedLevelForAssessment}
+          >
+            {renderOptions()}
+          </select>
+        </div>
+      ) : (
+        <Heading2>
+          You need to create a submittable level before creating your rubric.
+        </Heading2>
+      )}
       <RubricEditor
         learningGoalList={learningGoalList}
         addNewConcept={addNewConceptHandler}
         deleteItem={id => deleteKeyConcept(id)}
         updateLearningGoal={updateLearningGoal}
+        disabled={!hasSubmittableLevels}
       />
       <div style={styles.bottomRow}>
         <Button
