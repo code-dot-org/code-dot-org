@@ -9923,13 +9923,6 @@ grunt-exec@^3.0.0:
   resolved "https://registry.yarnpkg.com/grunt-exec/-/grunt-exec-3.0.0.tgz#881f868d64098788fddaf22fa25d8572a9d64dc7"
   integrity sha512-cgAlreXf3muSYS5LzW0Cc4xHK03BjFOYk0MqCQ/MZ3k1Xz2GU7D+IAJg4UKicxpO+XdONJdx/NJ6kpy2wI+uHg==
 
-grunt-karma@^4.0.2:
-  version "4.0.2"
-  resolved "https://registry.yarnpkg.com/grunt-karma/-/grunt-karma-4.0.2.tgz#9a8b7b4ea4b0b537c1412d51477181d55bf96f09"
-  integrity sha512-4+iBBkXZjHHMDAG5kpHCdDUqlSEBJ6sqouLMRf0p+QB8wGMs300DtaCQphHqd7pM3gpXoGVT3yRRsT7KOZpJMA==
-  dependencies:
-    lodash "^4.17.10"
-
 grunt-known-options@~2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/grunt-known-options/-/grunt-known-options-2.0.0.tgz#cac641e897f9a0a680b8c9839803d35f3325103c"

@@ -38,6 +38,8 @@ module.exports = {
   WATCH: !!getMoocEnv('WATCH'),
   // If set, will collect code coverage info
   COVERAGE: getBoolEnv('COVERAGE'),
+  // 'unit', 'integration', 'storybook', or 'entry'
+  KARMA_TEST_TYPE: getMoocEnv('KARMA_TEST_TYPE'),
   NODE_ENV: process.env.NODE_ENV,
   CIRCLECI: process.env.CIRCLECI,
   DRONE: process.env.DRONE,

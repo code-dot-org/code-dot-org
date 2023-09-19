@@ -399,21 +399,14 @@ describe('entry tests', () => {
     generateSharedConstants: 'bundle exec ./script/generateSharedConstants.rb',
   };
 
-  config.karma = {
-    options: {
-      // Most karma configuration should live in `karma.conf.js`
-      configFile: 'karma.conf.js',
-      client: {
-        mocha: {
-          grep: grunt.option('grep'),
-        },
-      },
-    },
-    unit: customizeKarmaConfigFor('unit'),
-    integration: customizeKarmaConfigFor('integration'),
-    storybook: customizeKarmaConfigFor('storybook'),
-    entry: customizeKarmaConfigFor('entry'),
-  };
+  grunt.registerTask('karma', function (KARMA_TEST_TYPE) {
+    const grep = grunt.option('entry') || grunt.option('grep');
+    const GREP_ARGS = grep ? ['--grep', grep] : [];
+    child_process.spawnSync('npx', ['karma', 'start', ...GREP_ARGS], {
+      env: {...process.env, KARMA_TEST_TYPE},
+      stdio: 'inherit',
+    });
+  });
 
   config.clean = {
     build: ['build'],
