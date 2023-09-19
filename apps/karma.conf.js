@@ -1,5 +1,7 @@
 var webpackConfig = require('./webpackKarma.config');
 var envConstants = require('./envConstants');
+
+var path = require('path');
 var tty = require('tty');
 
 var PORT = process.env.PORT || 9876;
@@ -28,10 +30,67 @@ module.exports = function (config) {
 
     // list of files / patterns to load in the browser
     // handled in grunt-karma config
-    files: [],
+    files: [
+      {
+        pattern: 'test/audio/**/*',
+        watched: false,
+        included: false,
+        nocache: true,
+      },
+      {
+        pattern: 'test/integration/**/*',
+        watched: false,
+        included: false,
+        nocache: true,
+      },
+      {
+        pattern: 'test/storybook/**/*',
+        watched: false,
+        included: false,
+        nocache: true,
+      },
+      {
+        pattern: 'test/unit/**/*',
+        watched: false,
+        included: false,
+        nocache: true,
+      },
+      {
+        pattern: 'test/util/**/*',
+        watched: false,
+        included: false,
+        nocache: true,
+      },
+      {pattern: 'lib/**/*', watched: false, included: false, nocache: true},
+      {pattern: 'build/**/*', watched: false, included: false, nocache: true},
+      {
+        pattern: 'static/**/*',
+        watched: false,
+        included: false,
+        nocache: true,
+      },
+      {
+        pattern: `build/karma/*`,
+        watched: false,
+        included: false,
+        nocache: true,
+      },
+    ],
 
     // proxied paths are handled in grunt-karma config
-    proxies: {},
+    proxies: {
+      // configure karma server to serve files from the source tree for
+      // various paths (the '/base' prefix points to the apps directory where
+      // karma.conf.js is located)
+      '/blockly/media/': '/base/static/',
+      '/lib/blockly/media/': '/base/static/',
+      '/v3/assets/': '/base/test/integration/assets/',
+      '/base/static/1x1.gif': '/base/lib/blockly/media/1x1.gif',
+
+      // requests to the webpack output public path should be served from
+      // `apps/build/karma/`, where assets are written during the karma build
+      '/webpack_output/': '/base/build/karma/',
+    },
 
     // list of files to exclude
     exclude: [],
@@ -39,14 +98,22 @@ module.exports = function (config) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
+      'build/karma/*.js': ['sourcemap'],
       'test/index.js': ['webpack', 'sourcemap'],
       'test/integration-tests.js': ['webpack', 'sourcemap'],
       'test/unit-tests.js': ['webpack'],
       'test/code-studio-tests.js': ['webpack', 'sourcemap'],
       'test/storybook-tests.js': ['webpack', 'sourcemap'],
     },
-
-    webpack: {...webpackConfig, optimization: undefined, mode: 'development'},
+    webpack: {
+      ...webpackConfig,
+      output: {
+        path: path.resolve(__dirname, 'build/karma/'),
+        publicPath: '/webpack_output/',
+      },
+      optimization: undefined,
+      mode: 'development',
+    },
 
     client: {
       // log console output in our test console
@@ -99,7 +166,7 @@ module.exports = function (config) {
 
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits
-    singleRun: false,
+    singleRun: !envConstants.WATCH,
 
     // Concurrency level
     // how many browser should be started simultaneous
@@ -108,5 +175,28 @@ module.exports = function (config) {
     // increase timeout to wait for webpack to do its thing.
     captureTimeout: 90000,
     browserNoActivityTimeout: 90000, // 60 seconds
+
+    sourceMapLoader: {
+      remapPrefixes: {
+        'webpack://blockly-mooc/': './',
+      },
+      useSourceRoot: '../../',
+    },
   });
 };
+
+/**
+ * Get karma config for test entry and output files based on testType.
+ *
+ * @param {('unit'|'integration'|'storybook'|'entry')} testType
+ * @return {object} testType specific karma config to overlay the main config above
+ */
+module.exports.customizeKarmaConfigFor = testType => ({
+  coverageIstanbulReporter: {
+    dir: `coverage/${testType}`,
+  },
+  junitReporter: {
+    outputFile: `${testType}.xml`,
+  },
+  files: [{src: [`test/${testType}-tests.js`], watched: false}],
+});
