@@ -174,7 +174,7 @@ These if statements will be removed from production source files at build time.
 
 The test runner starts a server which can serve files in the apps directory to
 your test code. Only allowlisted files and directories are available. See the
-`config.karma.options.files` array in `Gruntfile.js` for the allowlist. When
+`files` array in `karma.conf.js` for the allowlist. When
 fetching files served by the test runner, prefix the file path with
 `/base/`. For example, to load the `test/audio/assets/win.mp3` file in an
 `<audio>` tag inside your test, you could write:
