@@ -4,7 +4,8 @@ const {
   GetSecretValueCommand,
 } = require("@aws-sdk/client-secrets-manager");
 const mysql = require("mysql");
-const { sendCfnResponse } = require("cfn-response");
+
+var response = require("cfn-response");
 
 const queryPromise = (connection, query) => {
   return new Promise((resolve, reject) => {
@@ -35,6 +36,7 @@ exports.handler = async (event, context) => {
 
   let physicalResourceId =
     event.PhysicalResourceId || dbCredentialSQLUser.username;
+  let responseData = event.ResponseData || {};
 
   const connection = mysql.createConnection({
     host: props.DBServerHost,
@@ -71,25 +73,22 @@ exports.handler = async (event, context) => {
         throw new Error("Unsupported Resource Event type.");
     }
 
-    let successCfnResponse = await sendCfnResponse(
+    response.send(
       event,
       context,
-      "SUCCESS",
-      {},
+      response.SUCCESS,
+      responseData,
       physicalResourceId
     );
-    console.log(successCfnResponse);
   } catch (error) {
     console.error("Error:", error);
-    let errorCfnResponse = await sendCfnResponse(
+    response.send(
       event,
       context,
-      "FAILURE",
-      {},
-      physicalResourceId,
-      error.message
+      response.FAILED,
+      responseData,
+      physicalResourceId
     );
-    console.log(errorCfnResponse);
   } finally {
     connection.end();
   }
