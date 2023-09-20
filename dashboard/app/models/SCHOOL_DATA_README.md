@@ -150,9 +150,6 @@ select count(*) from schools where latitude is null;
 1 row in set (1.02 sec)
 ```
 
-# State school ids need to be unique.
-Because of the duplication of schools, we only load the state ids from most recent public/charter dataset. The result is that not all public and charter schools in our DB have a state school id set.
-
 # School ids were initially imported as ints and later converted to strings, dropping leading zeros
 This only applies to public and charter schools, not private schools. 
 ```

@@ -157,13 +157,6 @@ class School < ApplicationRecord
   def self.seed_from_s3
     # NCES school data has been built up in the DB over time by pulling in different
     # data files. This seeding recreates the order in which they were incorporated.
-    # NOTE: we are intentionally not populating the state_school_id based on the
-    # 2014-2015 preliminary or 2013-2014 public/charter data sets. Those files
-    # contain duplicate entries where some schools appear to be listed more than
-    # once but with different NCES ids. Since state_school_id needs to be unique
-    # the seeding would fail if we tried to set the state ids from those files.
-    # The 2014-2015 public/charter data does not have this issue so we do load the
-    # state_school_ids from there.
     School.transaction do
       CDO.log.info "Seeding 2014-2015 PRELIMINARY public and charter school data."
       # Originally from https://nces.ed.gov/ccd/Data/zip/Sch14pre_txt.zip
@@ -500,7 +493,7 @@ class School < ApplicationRecord
             # NCES ID and state school ID are required to be unique,
             # so this error would occur if two rows with different NCES IDs
             # had the same state school ID.
-            CDO.log.info "Record with NCES ID #{csv_entry[:id]} and state school ID #{csv_entry[:state_school_id]} not unique, not added"
+            CDO.log.info "Record with NCES ID #{csv_entry[:id]} not unique, not added"
             duplicate_schools << csv_entry
           end
         elsif !db_entry.nil? && update_existing
@@ -523,7 +516,7 @@ class School < ApplicationRecord
             begin
               db_entry.update!(csv_entry)
             rescue ActiveRecord::RecordNotUnique
-              CDO.log.info "Record with NCES ID #{csv_entry[:id]} and state school ID #{csv_entry[:state_school_id]} not unique, not added"
+              CDO.log.info "Record with NCES ID #{csv_entry[:id]} not unique, not added"
               duplicate_schools << csv_entry
             end
           else
