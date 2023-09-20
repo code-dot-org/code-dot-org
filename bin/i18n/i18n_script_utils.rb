@@ -314,7 +314,7 @@ class I18nScriptUtils
   # Wraps hash in correct format to be loaded by our i18n backend.
   # This will most likely be JSON file data due to Crowdin only
   # setting the locale for yml files.
-  def self.wrap_dashboard_i18n_data(locale, type, i18n_data)
+  def self.to_dashboard_i18n_data(locale, type, i18n_data)
     {locale => {'data' => {type => i18n_data}}}
   end
 

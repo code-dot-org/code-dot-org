@@ -147,6 +147,19 @@ describe I18nScriptUtils do
     end
   end
 
+  describe '.to_dashboard_i18n_struct' do
+    let(:locale) {'expected_locale'}
+    let(:type) {'expected_type'}
+    let(:i18n_data) {'expected_i18n_data'}
+
+    it 'returns correct Dashboard i18n file data structure' do
+      assert_equal(
+        {locale => {'data' => {type => i18n_data}}},
+        I18nScriptUtils.to_dashboard_i18n_data(locale, type, i18n_data)
+      )
+    end
+  end
+
   describe '.sort_and_sanitize' do
     it 'returns sorted and sanitized hash' do
       initial_hash_data = {
