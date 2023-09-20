@@ -173,6 +173,8 @@ class ChannelsTest < Minitest::Test
   end
 
   def test_publish_and_unpublish_channel
+    stub_project_age(true, true)
+
     stub_user = {
       name: ' xavier',
       birthday: 14.years.ago.to_datetime,
@@ -241,6 +243,8 @@ class ChannelsTest < Minitest::Test
   end
 
   def test_publish_permissions
+    stub_project_age(true, true)
+
     # only allow listed project types can be published
 
     # over 13 and sharing is disabled
@@ -248,7 +252,7 @@ class ChannelsTest < Minitest::Test
       name: ' xavier',
       birthday: 14.years.ago.to_datetime,
       properties: {sharing_disabled: true}.to_json,
-      created_at: DateTime.now
+      # created_at: DateTime.now
     }
     ChannelsApi.any_instance.stubs(:current_user).returns(stub_user)
     assert_cannot_publish('applab')
@@ -263,7 +267,7 @@ class ChannelsTest < Minitest::Test
       name: ' xavier',
       birthday: 14.years.ago.to_datetime,
       properties: {sharing_disabled: false}.to_json,
-      created_at: DateTime.now
+      # created_at: DateTime.now
     }
     ChannelsApi.any_instance.stubs(:current_user).returns(stub_user)
     assert_can_publish('applab')
@@ -278,7 +282,7 @@ class ChannelsTest < Minitest::Test
       name: ' xavier',
       birthday: 12.years.ago.to_datetime,
       properties: {sharing_disabled: true}.to_json,
-      created_at: DateTime.now
+      # created_at: DateTime.now
     }
     ChannelsApi.any_instance.stubs(:current_user).returns(stub_user)
     assert_cannot_publish('applab')
@@ -293,7 +297,7 @@ class ChannelsTest < Minitest::Test
       name: ' xavier',
       birthday: 12.years.ago.to_datetime,
       properties: {sharing_disabled: false}.to_json,
-      created_at: DateTime.now
+      # created_at: DateTime.now
     }
     ChannelsApi.any_instance.stubs(:current_user).returns(stub_user)
     assert_can_publish('applab')
@@ -315,7 +319,7 @@ class ChannelsTest < Minitest::Test
       name: ' xavier',
       birthday: 12.years.ago.to_datetime,
       properties: {sharing_disabled: true}.to_json,
-      created_at: DateTime.now
+      # created_at: DateTime.now
     }
     ChannelsApi.any_instance.stubs(:current_user).returns(stub_user)
     assert_cannot_publish('applab')
@@ -326,28 +330,29 @@ class ChannelsTest < Minitest::Test
     assert_cannot_publish('foo')
   end
 
-  def test_publish_ability_depends_on_account_age
+  def test_cannot_publish_if_account_too_new
+    stub_project_age(true, false)
+
     stub_user = {
       name: 'xavier',
       birthday: 14.years.ago.to_datetime,
-      properties: {sharing_disabled: false}.to_json,
-      created_at: DateTime.now
+      properties: {sharing_disabled: false}.to_json
     }
     ChannelsApi.any_instance.stubs(:current_user).returns(stub_user)
 
     post '/v3/channels', {abc: 123}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
     channel_id = last_response.location.split('/').last
 
-    assert_cannot_publish('applab', channel_id, 1.day)
-    assert_can_publish('applab', channel_id, 8.days)
+    assert_cannot_publish('applab', channel_id)
   end
 
-  def test_publish_ability_depends_on_project_age
+  def test_cannot_publish_if_project_too_new
+    stub_project_age(false, true)
+
     stub_user = {
       name: ' xavier',
       birthday: 14.years.ago.to_datetime,
-      properties: {sharing_disabled: false}.to_json,
-      created_at: DateTime.now
+      properties: {sharing_disabled: false}.to_json
     }
     ChannelsApi.any_instance.stubs(:current_user).returns(stub_user)
 
@@ -356,13 +361,12 @@ class ChannelsTest < Minitest::Test
     post '/v3/channels', {abc: 123}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
     channel_id = last_response.location.split('/').last
 
-    assert_cannot_publish('applab', channel_id, 0, false)
-    assert_can_publish('applab', channel_id, 1.hour)
-  ensure
-    Timecop.return
+    assert_cannot_publish('applab', channel_id)
   end
 
   def test_restricted_publish_permissions
+    stub_project_age(true, true)
+
     # sprite lab projects require talking to S3
     AWS::S3.stubs :create_client
 
@@ -539,15 +543,11 @@ class ChannelsTest < Minitest::Test
     time.strftime('%Y-%m-%d %H:%M:%S.%L')
   end
 
-  # Default to checking publish status 8 days in the future because we require
-  # all accounts to have existed for a week before they can publish
-  def assert_can_publish(project_type, channel_id = nil, timecop_travel_time = 8.days)
+  def assert_can_publish(project_type, channel_id = nil)
     unless channel_id
       post '/v3/channels', {abc: 123}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
       channel_id = last_response.location.split('/').last
     end
-
-    Timecop.travel timecop_travel_time
 
     start = 1.second.ago
     post "/v3/channels/#{channel_id}/publish/#{project_type}", {}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
@@ -563,19 +563,15 @@ class ChannelsTest < Minitest::Test
     result = JSON.parse(last_response.body)
     assert (start..DateTime.now).cover? DateTime.parse(result['publishedAt'])
     assert_equal result['projectType'], project_type
-  ensure
-    Timecop.return
   end
 
   # Default to checking publish status 8 days in the future because we require
   # all accounts to have existed for a week before they can publish
-  def assert_cannot_publish(project_type, channel_id = nil, timecop_travel_time = 8.days, reset_timecop = true)
+  def assert_cannot_publish(project_type, channel_id = nil)
     unless channel_id
       post '/v3/channels', {abc: 123}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
       channel_id = last_response.location.split('/').last
     end
-
-    Timecop.travel timecop_travel_time
 
     post "/v3/channels/#{channel_id}/publish/#{project_type}", {}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
     assert last_response.client_error?
@@ -585,8 +581,6 @@ class ChannelsTest < Minitest::Test
     result = JSON.parse(last_response.body)
     assert_includes result.keys, 'publishedAt'
     assert_nil result['publishedAt']
-  ensure
-    Timecop.return if reset_timecop
   end
 
   def assert_cannot_unpublish(channel_id)
@@ -598,5 +592,13 @@ class ChannelsTest < Minitest::Test
     sample_project = StringIO.new
     sample_project.puts "{\"inRestrictedShareMode\": #{should_restrict_share}}"
     SourceBucket.any_instance.stubs(:get).returns({body: sample_project})
+  end
+
+  def stub_project_age(project_old_enough, user_old_enough)
+    test_project = mock
+    test_project.stubs(:old_enough_to_publish?).returns(project_old_enough)
+    test_project.stubs(:user_old_enough_to_publish?).returns(user_old_enough)
+
+    Projects.any_instance.stubs(:get_rails_project).returns(test_project)
   end
 end

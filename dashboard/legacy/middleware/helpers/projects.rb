@@ -24,7 +24,7 @@ class Projects
 
   #### NOTE: This references the Rails model (Project, singular)
   #### rather than this middleware class (Projects, plural)
-  #### such that we can make use of model associations managed by Rails
+  #### such that we can make use of model associations managed by Rails.
   def get_rails_project(project_id)
     return @rails_project if @rails_project
     @rails_project = Project.find(project_id)
