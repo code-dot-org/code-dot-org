@@ -73,12 +73,10 @@ PARALLEL="parallel --will-cite --halt 2 -j ${PROCS} --joblog - :::"
 
 # Each line in this SCRIPT block will be run as a parallel test job
 # If any line fails, the whole block will fail and exit early
-${PARALLEL} <<SCRIPT
+${PARALLEL} <<SCRIPT || (echo && echo && echo "One of the parallel test jobs FAILED, exiting early." && echo && exit 1)
   npm run lint
-
   npx karma start --testType=unit --port=9876
   npx karma start --testType=storybook --port=9877
-
   npx karma start --testType=integration --levelType='turtle' --port=9879
   npx karma start --testType=integration --levelType='maze|calc|eval' --port=9880
   npx karma start --testType=integration --levelType='gamelab' --port=9881
