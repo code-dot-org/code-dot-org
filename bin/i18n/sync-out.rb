@@ -259,7 +259,7 @@ module I18n
                           {}
 
         merged_data = existing_data.deep_merge(translations.sort.to_h)
-        type_data = I18nScriptUtils.wrap_dashboard_i18n_data(locale, type, merged_data)
+        type_data = I18nScriptUtils.to_dashboard_i18n_data(locale, type, merged_data)
 
         I18nScriptUtils.sanitize_data_and_write(type_data, type_file)
       end
@@ -317,7 +317,7 @@ module I18n
           if ext == ".json"
             # JSON files in this directory need the root key to be set to the locale
             loc_data = JSON.parse(File.read(loc_file))
-            loc_data = I18nScriptUtils.wrap_dashboard_i18n_data(locale, basename, loc_data)
+            loc_data = I18nScriptUtils.to_dashboard_i18n_data(locale, basename, loc_data)
             I18nScriptUtils.sanitize_data_and_write(loc_data, destination)
           else
             I18nScriptUtils.sanitize_file_and_write(loc_file, destination)
@@ -343,7 +343,7 @@ module I18n
                                    {}
           programming_env_data[programming_env] = loc_data[programming_env]
           # JSON files in this directory need the root key to be set to the locale
-          programming_env_data = I18nScriptUtils.wrap_dashboard_i18n_data(locale, 'programming_environments', programming_env_data)
+          programming_env_data = I18nScriptUtils.to_dashboard_i18n_data(locale, 'programming_environments', programming_env_data)
           I18nScriptUtils.sanitize_data_and_write(programming_env_data, destination)
         end
 
@@ -367,7 +367,7 @@ module I18n
           framework_data[framework] = {
             "name" => loc_data["name"]
           }
-          framework_data = I18nScriptUtils.wrap_dashboard_i18n_data(locale, 'frameworks', framework_data)
+          framework_data = I18nScriptUtils.to_dashboard_i18n_data(locale, 'frameworks', framework_data)
           I18nScriptUtils.sanitize_data_and_write(framework_data, destination)
 
           # Standard Categories
@@ -380,7 +380,7 @@ module I18n
               "description" => loc_data["categories"][category]["description"]
             }
           end
-          category_data = I18nScriptUtils.wrap_dashboard_i18n_data(locale, 'standard_categories', category_data)
+          category_data = I18nScriptUtils.to_dashboard_i18n_data(locale, 'standard_categories', category_data)
           I18nScriptUtils.sanitize_data_and_write(category_data, destination)
 
           # Standards
@@ -393,7 +393,7 @@ module I18n
               "description" => loc_data["standards"][standard]["description"]
             }
           end
-          standard_data = I18nScriptUtils.wrap_dashboard_i18n_data(locale, 'standards', standard_data)
+          standard_data = I18nScriptUtils.to_dashboard_i18n_data(locale, 'standards', standard_data)
           I18nScriptUtils.sanitize_data_and_write(standard_data, destination)
         end
       end
