@@ -448,7 +448,7 @@ class School < ApplicationRecord
   # @param ignore_attributes [Array] List of attributes included in a given import that should not be used to determine whether a record is being "updated" or "unchanged". Allows us to more clearly identify which schools have real changes to existing data.
   # @param insert_new [Boolean] Determines whether to insert (or if false, skip) importing new schools in this import
   # @param limit [Integer] Limits the number of rows parsed from the csv file (for testing). Default to nil for no limit.
-  def self.merge_from_csv(filename, options = CSV_IMPORT_OPTIONS, update_existing = true, is_dry_run: false, ignore_attributes: [], insert_new: true, limit: nil)
+  def self.merge_from_csv(filename, options = CSV_IMPORT_OPTIONS, update_existing = true, is_dry_run: true, ignore_attributes: [], insert_new: true, limit: nil)
     schools = nil
     new_schools = []
     updated_schools = 0
@@ -459,7 +459,6 @@ class School < ApplicationRecord
 
     ActiveRecord::Base.transaction do
       schools = CSV.read(filename, **options).each do |row|
-        puts row
         break if limit && lines_processed > limit
         lines_processed += 1
         csv_entry = block_given? ? yield(row) : row.to_hash.symbolize_keys
