@@ -16,6 +16,10 @@ require 'bootstrap-sass'
 require 'cdo/hash'
 require 'cdo/i18n_backend'
 
+# load and configure pycall before numpy and any other python-related gems
+# can be automatically loaded just below.
+require 'cdo/pycall'
+
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(:default, Rails.env)
