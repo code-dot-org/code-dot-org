@@ -177,14 +177,13 @@ class ChannelsTest < Minitest::Test
 
     stub_user = {
       name: ' xavier',
-      birthday: 14.years.ago.to_datetime,
-      created_at: DateTime.now
+      birthday: 14.years.ago.to_datetime
     }
     ChannelsApi.any_instance.stubs(:current_user).returns(stub_user)
+    start = DateTime.now - 1
     post '/v3/channels', {abc: 123}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
     channel_id = last_response.location.split('/').last
 
-    start = DateTime.now - 1
     get "/v3/channels/#{channel_id}"
     assert last_response.ok?
     result = JSON.parse(last_response.body)
@@ -199,8 +198,6 @@ class ChannelsTest < Minitest::Test
     end
 
     # publish the project and validate the result
-    Timecop.travel 8.days
-
     post "/v3/channels/#{channel_id}/publish/applab", {}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
     assert last_response.ok?
     result = JSON.parse(last_response.body)
@@ -238,8 +235,6 @@ class ChannelsTest < Minitest::Test
     result = JSON.parse(last_response.body)
     assert_includes result.keys, 'publishedAt'
     assert_nil result['publishedAt']
-  ensure
-    Timecop.return
   end
 
   def test_publish_permissions
@@ -251,8 +246,7 @@ class ChannelsTest < Minitest::Test
     stub_user = {
       name: ' xavier',
       birthday: 14.years.ago.to_datetime,
-      properties: {sharing_disabled: true}.to_json,
-      # created_at: DateTime.now
+      properties: {sharing_disabled: true}.to_json
     }
     ChannelsApi.any_instance.stubs(:current_user).returns(stub_user)
     assert_cannot_publish('applab')
@@ -266,8 +260,7 @@ class ChannelsTest < Minitest::Test
     stub_user = {
       name: ' xavier',
       birthday: 14.years.ago.to_datetime,
-      properties: {sharing_disabled: false}.to_json,
-      # created_at: DateTime.now
+      properties: {sharing_disabled: false}.to_json
     }
     ChannelsApi.any_instance.stubs(:current_user).returns(stub_user)
     assert_can_publish('applab')
@@ -281,8 +274,7 @@ class ChannelsTest < Minitest::Test
     stub_user = {
       name: ' xavier',
       birthday: 12.years.ago.to_datetime,
-      properties: {sharing_disabled: true}.to_json,
-      # created_at: DateTime.now
+      properties: {sharing_disabled: true}.to_json
     }
     ChannelsApi.any_instance.stubs(:current_user).returns(stub_user)
     assert_cannot_publish('applab')
@@ -296,8 +288,7 @@ class ChannelsTest < Minitest::Test
     stub_user = {
       name: ' xavier',
       birthday: 12.years.ago.to_datetime,
-      properties: {sharing_disabled: false}.to_json,
-      # created_at: DateTime.now
+      properties: {sharing_disabled: false}.to_json
     }
     ChannelsApi.any_instance.stubs(:current_user).returns(stub_user)
     assert_can_publish('applab')
@@ -318,8 +309,7 @@ class ChannelsTest < Minitest::Test
     stub_user = {
       name: ' xavier',
       birthday: 12.years.ago.to_datetime,
-      properties: {sharing_disabled: true}.to_json,
-      # created_at: DateTime.now
+      properties: {sharing_disabled: true}.to_json
     }
     ChannelsApi.any_instance.stubs(:current_user).returns(stub_user)
     assert_cannot_publish('applab')
@@ -356,8 +346,6 @@ class ChannelsTest < Minitest::Test
     }
     ChannelsApi.any_instance.stubs(:current_user).returns(stub_user)
 
-    Timecop.travel 8.days
-
     post '/v3/channels', {abc: 123}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
     channel_id = last_response.location.split('/').last
 
@@ -374,8 +362,7 @@ class ChannelsTest < Minitest::Test
     stub_user = {
       name: ' xavier',
       birthday: 12.years.ago.to_datetime,
-      properties: {sharing_disabled: false}.to_json,
-      created_at: DateTime.now
+      properties: {sharing_disabled: false}.to_json
     }
     ChannelsApi.any_instance.stubs(:current_user).returns(stub_user)
     stub_project_body(true)
@@ -543,13 +530,11 @@ class ChannelsTest < Minitest::Test
     time.strftime('%Y-%m-%d %H:%M:%S.%L')
   end
 
-  def assert_can_publish(project_type, channel_id = nil)
-    unless channel_id
-      post '/v3/channels', {abc: 123}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
-      channel_id = last_response.location.split('/').last
-    end
-
+  def assert_can_publish(project_type)
     start = 1.second.ago
+    post '/v3/channels', {abc: 123}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
+    channel_id = last_response.location.split('/').last
+
     post "/v3/channels/#{channel_id}/publish/#{project_type}", {}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
     assert last_response.ok?
     result = JSON.parse(last_response.body)
@@ -565,8 +550,6 @@ class ChannelsTest < Minitest::Test
     assert_equal result['projectType'], project_type
   end
 
-  # Default to checking publish status 8 days in the future because we require
-  # all accounts to have existed for a week before they can publish
   def assert_cannot_publish(project_type, channel_id = nil)
     unless channel_id
       post '/v3/channels', {abc: 123}.to_json, 'CONTENT_TYPE' => 'application/json;charset=utf-8'
