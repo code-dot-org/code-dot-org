@@ -27,8 +27,17 @@ export default function LockoutLinkedAccounts(props) {
     () => !validateEmail(props.pendingEmail)
   );
 
-  // Maintain a loading state for the submit button.
+  // Date the last request email was sent
+  const [lastEmailDate, setLastEmailDate] = useState(props.requestDate);
+
+  // Loading state for the submit button, for use when the request is sending on the backend.
   const [loading, setLoading] = useState(false);
+
+  // Track the state of the request as the user interacts with the form.
+  const [status, setStatus] = useState(props.permissionStatus);
+
+  // State of the parent email entered by the user
+  const [pendingEmail, setPendingEmail] = useState(props.pendingEmail);
 
   // When the email field is updated, also update the disability state of the
   // submit button.
@@ -40,7 +49,7 @@ export default function LockoutLinkedAccounts(props) {
   // form as though they had typed in the same email again.
   const resendPermissionEmail = event => {
     const field = document.getElementById('parent-email');
-    field.value = props.pendingEmail;
+    field.value = pendingEmail;
 
     const form = document.getElementById('lockout-linked-accounts-form');
     form.submit();
@@ -75,7 +84,7 @@ export default function LockoutLinkedAccounts(props) {
 
   // Child permission status from the user record
   const permissionStatus = {};
-  switch (props.permissionStatus) {
+  switch (status) {
     case ChildAccountComplianceStates.REQUEST_SENT:
       permissionStatus.message = i18n.sessionLockoutStatusPending();
       permissionStatus.style = styles.pending;
@@ -95,8 +104,9 @@ export default function LockoutLinkedAccounts(props) {
   const submitPermissionRequest = async e => {
     e.preventDefault();
     setLoading(true);
+    const parentEmail = e.target['parent-email'].value;
     const params = new URLSearchParams({
-      'parent-email': e.target['parent-email'].value,
+      'parent-email': parentEmail,
       authenticity_token: csrfToken,
     });
 
@@ -105,7 +115,9 @@ export default function LockoutLinkedAccounts(props) {
       body: params,
     });
     setLoading(false);
-    window.location.reload();
+    setPendingEmail(parentEmail);
+    setLastEmailDate(new Date());
+    setStatus(ChildAccountComplianceStates.REQUEST_SENT);
   };
 
   return (
@@ -121,12 +133,11 @@ export default function LockoutLinkedAccounts(props) {
         <p>{i18n.lockoutManageLinkedAccountsPrompt()}</p>
         <input type="hidden" value={csrfToken} name="authenticity_token" />
         {/* The top prompt, which depends on whether or not a request is pending. */}
-        {props.pendingEmail &&
-          props.permissionStatus !==
-            ChildAccountComplianceStates.PERMISSION_GRANTED && (
+        {pendingEmail &&
+          status !== ChildAccountComplianceStates.PERMISSION_GRANTED && (
             <p>
               {pendingPromptParts[0]}
-              <strong>{props.pendingEmail}</strong>
+              <strong>{pendingEmail}</strong>
               {pendingPromptParts[1]}
             </p>
           )}
@@ -147,9 +158,8 @@ export default function LockoutLinkedAccounts(props) {
           </div>
 
           {/* This is a floating 'link' that resends the pending email. */}
-          {props.pendingEmail &&
-            props.permissionStatus !==
-              ChildAccountComplianceStates.PERMISSION_GRANTED && (
+          {pendingEmail &&
+            status !== ChildAccountComplianceStates.PERMISSION_GRANTED && (
               <Button
                 id="lockout-resend"
                 styleAsText={true}
@@ -163,10 +173,7 @@ export default function LockoutLinkedAccounts(props) {
 
         {/* This field allows the input of an email address. */}
         {/* Parent Email: [email] */}
-        {!(
-          props.permissionStatus ===
-          ChildAccountComplianceStates.PERMISSION_GRANTED
-        ) && (
+        {!(status === ChildAccountComplianceStates.PERMISSION_GRANTED) && (
           <div style={styles.sections}>
             <div style={styles.section}>
               <label
@@ -183,17 +190,17 @@ export default function LockoutLinkedAccounts(props) {
                   onChange={onEmailUpdate}
                   onInput={onEmailUpdate}
                   onBlur={onEmailUpdate}
-                  defaultValue={props.pendingEmail}
+                  defaultValue={pendingEmail}
                   name="parent-email"
                   id="parent-email"
                 />
 
                 {/* Show a 'Last email sent' prompt when available. */}
-                {props.pendingEmail && (
+                {pendingEmail && (
                   <p style={styles.lastEmail}>
                     <em id="lockout-last-email-date">
                       {i18n.sessionLockoutLastEmailSent() + ' '}
-                      {props.requestDate.toLocaleDateString(locale, {
+                      {lastEmailDate.toLocaleDateString(locale, {
                         ...dateOptions,
                         hour: 'numeric',
                         minute: 'numeric',
@@ -206,8 +213,7 @@ export default function LockoutLinkedAccounts(props) {
           </div>
         )}
 
-        {props.permissionStatus !==
-          ChildAccountComplianceStates.PERMISSION_GRANTED && (
+        {status !== ChildAccountComplianceStates.PERMISSION_GRANTED && (
           <div style={styles.buttons}>
             {/* The submit button. */}
             {/* An empty onClick will still submit the form. */}
@@ -219,7 +225,7 @@ export default function LockoutLinkedAccounts(props) {
                 type="submit"
                 style={styles.button}
                 text={
-                  props.pendingEmail
+                  pendingEmail
                     ? i18n.sessionLockoutUpdateSubmit()
                     : i18n.sessionLockoutSubmit()
                 }
