@@ -1066,10 +1066,9 @@ section.quote {
   }
 }
 
-// Resources tabs section
-// Works with resources_tabs.haml partial
-// See code.org/teach for an example
-.resources-tabs{
+// Tabs section
+// See code.org/teach or code.org/donate for examples
+.tabs-section{
   margin-top: 2rem;
   min-height: 408px;
 
@@ -1112,7 +1111,7 @@ section.quote {
 
       // Use this class to hide a tab
       // - see computer-vision.haml and resources-tabs.js for an example
-      .resources-tabs-hide-tab & {
+      .hide-tab & {
         width: 24%;
       }
 

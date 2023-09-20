@@ -2,7 +2,7 @@
 // Styles that show and hide sections are in "design-system-pegasus.scss"
 // under the "div.resources-tabs" selector.
 
-const tabs = document.querySelectorAll(".resources-tabs button.tab");
+const tabs = document.querySelectorAll(".tabs-section button.tab");
 
 tabs.forEach((tab) => {
   tab.addEventListener("click", (event) => {
@@ -26,8 +26,8 @@ tabs.forEach((tab) => {
 
 // Hide the Programming Tools section on code.org/curriculum/computer-vision
 document
-  .querySelector(".resources-tabs-hide-tab button.tab.tools")
+  .querySelector(".hide-tab .resources-tabs button.tab.tools")
   .classList.add("hide");
 document
-  .querySelector(".resources-tabs-hide-tab details.tools")
+  .querySelector(".hide-tab .resources-tabs details.tools")
   .classList.add("hide");
