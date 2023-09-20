@@ -12,6 +12,10 @@ const {ALL_APPS, appsEntriesFor} = require('./webpackEntryPoints');
 const {createWebpackConfig} = require('./webpack.config');
 const offlineWebpackConfig = require('./webpackOffline.config');
 
+// Review every couple of years to see if an increase improves test performance
+// Should match MEM_PER_KARMA_PROCESS in `run-tests-in-parallel.sh`
+const MEM_PER_KARMA_PROCESS = 4300;
+
 module.exports = function (grunt) {
   var config = {};
 
@@ -356,18 +360,47 @@ module.exports = function (grunt) {
     generateSharedConstants: 'bundle exec ./script/generateSharedConstants.rb',
   };
 
-  grunt.registerTask('karma', function (KARMA_TEST_TYPE) {
-    const grep = grunt.option('entry') || grunt.option('grep');
-    const GREP_ARGS = grep ? ['--grep', grep] : [];
-    child_process.spawnSync('npx', ['karma', 'start', ...GREP_ARGS], {
-      env: {...process.env, KARMA_TEST_TYPE},
+  const passThroughGruntArgs = validCliArgs =>
+    validCliArgs.flatMap(arg =>
+      grunt.option(arg) ? [`--${arg}`, grunt.option(arg)] : []
+    );
+
+  grunt.registerTask('karma', function (gruntSubtask) {
+    grunt.task.run(['preconcatForKarma']);
+
+    // Pass select grunt args to karma, see KARMA_CLI_ARGS in karma.conf.js
+    const KARMA_CLI_ARGS = passThroughGruntArgs([
+      'browser',
+      'entry',
+      'grep',
+      'levelType',
+      'port',
+      'testType',
+      'watchTests',
+    ]);
+    // permit `grunt karma:unit` instead of `grunt karma --testType=unit`
+    KARMA_CLI_ARGS['testType'] = gruntSubtask || KARMA_CLI_ARGS['testType'];
+
+    console.log(`>> npx karma start ${KARMA_CLI_ARGS.join(' ')}`);
+    child_process.spawnSync('npx', ['karma', 'start', ...KARMA_CLI_ARGS], {
       stdio: 'inherit',
+      env: {
+        ...process.env,
+        NODE_OPTIONS: `--max-old-space-size=${MEM_PER_KARMA_PROCESS}`,
+      },
     });
   });
 
+  grunt.registerTask('preconcatForKarma', [
+    'newer:messages',
+    'exec:convertScssVars',
+    'exec:generateSharedConstants',
+    'newer:copy:static',
+  ]);
+
   config.clean = {
     build: ['build'],
-    unitTest: {
+    karma: {
       options: {force: true},
       src: ['build/karma'],
     },
@@ -623,31 +656,12 @@ module.exports = function (grunt) {
 
   grunt.registerTask('rebuild', ['clean', 'build']);
 
-  grunt.registerTask('preconcat', [
-    'newer:messages',
-    'exec:convertScssVars',
-    'exec:generateSharedConstants',
-    'newer:copy:static',
-  ]);
-
   grunt.registerTask('dev', [
     'prebuild',
     'newer:sass',
     'concurrent:watch',
     'postbuild',
   ]);
-
-  grunt.registerTask('unitTest', [
-    'newer:messages',
-    'exec:convertScssVars',
-    'exec:generateSharedConstants',
-    'karma:unit',
-    'clean:unitTest',
-  ]);
-
-  grunt.registerTask('storybookTest', ['karma:storybook']);
-
-  grunt.registerTask('integrationTest', ['preconcat', 'karma:integration']);
 
   grunt.registerTask('default', ['rebuild', 'test']);
 };

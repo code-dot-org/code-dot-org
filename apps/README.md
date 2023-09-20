@@ -76,17 +76,17 @@ npm test
 - ~Right now, the tests require a full/production build to pass. Failures like `Cannot set property 'imageDimensions_' of undefined` in setup steps may indicate that you are testing against a debug build.~
 - These tests will also be run via Circle CI when you create a pull request
 
-To run an individual test, use the `--entry` option with `npm run test:entry` to target a file:
+To run an individual unit test, use the `--entry` option to target a file:
 
 ```
-npm run test:entry -- --entry=./test/unit/gridUtilsTest.js
+npm run test:unit -- --entry=./test/unit/gridUtilsTest.js
 ```
 
 This option also works on directories, in which case all files within that
 directory and any subdirectories will be run:
 
 ```
-npm run test:entry -- --entry=./test/unit/applab/
+npm run test:unit -- --entry=./test/unit/applab/
 ```
 
 It's also possible to run an individual test or subset of tests with:
@@ -98,35 +98,32 @@ npm run test:unit -- --grep='TutorialExplorer'
 To run integration tests for a certain level type:
 
 ```
-LEVEL_TYPE=applab npm run test:integration
+npm run test:integration -- --levelType=maze
 ```
 
 You can also use the `--grep` flag with integration tests:
 
 ```
-LEVEL_TYPE=applab npm run test:integration --grep=ec_data_blocks
+npm run test:integration -- --grep=ec_data_blocks
 ```
 
 ##### Rerun Tests Automatically
 
-To rerun tests automatically on every file change, set the environment variable
-`WATCH=1`:
+To rerun tests automatically on every file change, use the `--watchTests` flag.
 
 ```
-WATCH=1 npm run test:unit
+npm run test:unit -- --watchTests
 ```
 
 This will work on any of the test commands.
 
 ##### Debugging Tests
 
-To debug tests, your best bet is to run them in Chrome. Keep in mind that there
-can be subtle differences between Chrome and PhantomJS, so after fixing your
-test in Chrome, make sure it still works in PhantomJS. To run the tests in
-Chrome, use the `BROWSER` environment variable in conjunction with `WATCH`:
+To debug tests, your best bet is to run them in Chrome. To run the tests in
+Chrome, use the `--browser=Chrome` flag in conjunction with `--watchTests`:
 
 ```
-BROWSER=Chrome WATCH=1 npm run test:unit
+npm run test:unit -- --browser=Chrome --watchTests --grep='TutorialExplorer'
 ```
 
 A new chrome browser window will open where the tests will be running. You can
