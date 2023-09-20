@@ -3,9 +3,9 @@ class CreateLearningGoalAiEvaluatons < ActiveRecord::Migration[6.1]
     create_table :learning_goal_ai_evaluatons do |t|
       t.integer :user_id
       t.integer :learning_goal_id
-      t.datetime :prompt_version
+      t.integer :project_id
+      t.string :project_version
       t.integer :understanding
-      t.text :context
 
       t.timestamps
 

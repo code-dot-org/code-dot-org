@@ -6,6 +6,8 @@
 #  user_id          :integer          not null
 #  teacher_id       :integer          not null
 #  learning_goal_id :integer          not null
+#  project_id       :integer
+#  project_version  :string(255)
 #  understanding    :integer          not null
 #  feedback         :text(65535)
 #  submitted_at     :datetime

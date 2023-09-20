@@ -625,9 +625,9 @@ ActiveRecord::Schema.define(version: 2023_09_11_173341) do
   create_table "learning_goal_ai_evaluatons", charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
     t.integer "learning_goal_id"
-    t.datetime "prompt_version"
+    t.integer "project_id"
+    t.string "project_version"
     t.integer "understanding"
-    t.text "context"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["learning_goal_id"], name: "index_learning_goal_ai_evaluatons_on_learning_goal_id"
@@ -664,6 +664,8 @@ ActiveRecord::Schema.define(version: 2023_09_11_173341) do
     t.integer "user_id", null: false
     t.integer "teacher_id", null: false
     t.integer "learning_goal_id", null: false
+    t.integer "project_id"
+    t.string "project_version"
     t.integer "understanding", null: false
     t.text "feedback"
     t.datetime "submitted_at"

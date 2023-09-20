@@ -5,9 +5,9 @@
 #  id               :bigint           not null, primary key
 #  user_id          :integer
 #  learning_goal_id :integer
-#  prompt_version   :datetime
+#  project_id       :integer
+#  project_version  :string(255)
 #  understanding    :integer
-#  context          :text(65535)
 #  created_at       :datetime         not null
 #  updated_at       :datetime         not null
 #
