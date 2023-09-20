@@ -11,6 +11,14 @@ const localeDoNotImportTest = cdo => localeDoNotImport(cdo, 'test/util');
 const karmaConfig = {
   ...WEBPACK_BASE_CONFIG,
   ...{
+    output: {
+      path: path.resolve(__dirname, 'build/karma/'),
+      publicPath: '/webpack_output/',
+    },
+    // Default karma-webpack config splits chunks in a way that
+    // is not currently working with webpack 5.
+    optimization: undefined,
+    mode: 'development',
     // karma-sourcemap-loader only supports inline-source-map and source-map
     devtool: 'source-map',
     resolve: {
@@ -58,7 +66,6 @@ const karmaConfig = {
         'process.env.NODE_ENV': JSON.stringify(
           envConstants.NODE_ENV || 'development'
         ),
-        LEVEL_TYPE: JSON.stringify(envConstants.LEVEL_TYPE),
         PISKEL_DEVELOPMENT_MODE: JSON.stringify(false),
       }),
     ],

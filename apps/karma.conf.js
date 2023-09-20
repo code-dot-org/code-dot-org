@@ -1,19 +1,8 @@
-var webpackConfig = require('./webpackKarma.config');
+var webpackKarmaConfig = require('./webpackKarma.config');
 var envConstants = require('./envConstants');
 
 var path = require('path');
 var tty = require('tty');
-
-var PORT = process.env.PORT || 9876;
-
-var reporters = ['mocha'];
-if (envConstants.DRONE) {
-  reporters.push('junit');
-  reporters.push('coverage-istanbul');
-}
-if (envConstants.COVERAGE) {
-  reporters.push('coverage-istanbul');
-}
 
 // We run all tests in the UTC timezone so datetimes don't vary by local timezone
 process.env.TZ = 'UTC';
@@ -22,22 +11,33 @@ process.env.TZ = 'UTC';
 process.env.BABEL_ENV = 'test';
 
 module.exports = function (config) {
-  var browser = envConstants.BROWSER || 'ChromeHeadless';
-  var KARMA_TEST_TYPE = envConstants.KARMA_TEST_TYPE || 'unit';
-
-  // CLI args like `karma start --grep=foo` are available on the config object
-  const GREP_CLI_ARG = config.grep;
+  // Defines command-line arguments passed to `karma start` that are available in
+  // this file, and also available to in-browser tests via `./test/util/karmaCliArgs.js`
+  //
+  // See also KARMA_CLI_ARGS in Gruntfile.js to pass arguments through grunt.
+  //
+  // Example: running `karma start --testType=integration --levelType=maze`
+  // will set KARMA_CLI_ARGS.levelType = 'maze'
+  const KARMA_CLI_ARGS = {
+    browser: config.browser || 'ChromeHeadless', // --browser
+    entry: config.entry
+      ? './' + path.relative('./test/unit', config.entry)
+      : undefined, // --entry
+    grep: config.grep, // --grep
+    levelType: config.levelType, // --levelType
+    port: config.port || 9876, // --port
+    testType: config.testType || 'unit', // --testType
+    watchTests: config.watchTests, // --watchTests
+  };
 
   config.set({
     // base path that will be used to resolve all patterns (eg. files, exclude)
     basePath: '.',
 
-    // frameworks to use
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
     frameworks: ['mocha', 'webpack'],
 
     // list of files / patterns to load in the browser
-    // handled in grunt-karma config
     files: [
       {
         pattern: 'test/audio/**/*',
@@ -84,12 +84,12 @@ module.exports = function (config) {
         nocache: true,
       },
       {
-        pattern: `test/${KARMA_TEST_TYPE}-tests.js`,
+        // This determines our test entry point e.g. ./test/unit-tests.js
+        pattern: `test/${KARMA_CLI_ARGS.testType}-tests.js`,
         watched: false,
       },
     ],
 
-    // proxied paths are handled in grunt-karma config
     proxies: {
       // configure karma server to serve files from the source tree for
       // various paths (the '/base' prefix points to the apps directory where
@@ -104,9 +104,6 @@ module.exports = function (config) {
       '/webpack_output/': '/base/build/karma/',
     },
 
-    // list of files to exclude
-    exclude: [],
-
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
@@ -118,42 +115,41 @@ module.exports = function (config) {
       'test/code-studio-tests.js': ['webpack', 'sourcemap'],
       'test/storybook-tests.js': ['webpack', 'sourcemap'],
     },
-    webpack: {
-      ...webpackConfig,
-      output: {
-        path: path.resolve(__dirname, 'build/karma/'),
-        publicPath: '/webpack_output/',
-      },
-      optimization: undefined,
-      mode: 'development',
-    },
+
+    webpack: webpackKarmaConfig,
 
     client: {
       // log console output in our test console
       captureConsole: true,
       mocha: {
         timeout: 14000,
-        bail: browser === 'PhantomJS',
-        grep: GREP_CLI_ARG,
+        grep: KARMA_CLI_ARGS.grep,
       },
+      KARMA_CLI_ARGS,
     },
 
     // test results reporter to use
     // possible values: 'dots', 'progress'
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-    reporters: reporters,
+    reporters: [
+      'mocha',
+      ...(envConstants.DRONE ? ['junit', 'coverage-istanbul'] : []),
+      ...(envConstants.COVERAGE ? ['coverage-istanbul'] : []),
+    ],
 
     junitReporter: {
       outputDir: envConstants.CIRCLECI
         ? `${envConstants.CIRCLE_TEST_REPORTS}/apps`
         : '',
-      outputFile: `${KARMA_TEST_TYPE}.xml`,
+      outputFile: `${KARMA_CLI_ARGS.testType}.xml`,
     },
+
     coverageIstanbulReporter: {
       reports: ['html', 'lcovonly'],
-      dir: `coverage/${KARMA_TEST_TYPE}`,
+      dir: `coverage/${KARMA_CLI_ARGS.testType}`,
       fixWebpackSourcePaths: true,
     },
+
     mochaReporter: {
       output: envConstants.CDO_VERBOSE_TEST_OUTPUT ? 'full' : 'minimal',
       showDiff: true,
@@ -162,7 +158,7 @@ module.exports = function (config) {
     hostname: 'localhost-studio.code.org',
 
     // web server port
-    port: PORT,
+    port: KARMA_CLI_ARGS.port,
 
     // enable / disable colors in the output (reporters and logs)
     colors: tty.isatty(process.stdout.fd),
@@ -176,11 +172,11 @@ module.exports = function (config) {
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: [browser],
+    browsers: [KARMA_CLI_ARGS.browser],
 
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits
-    singleRun: !envConstants.WATCH,
+    singleRun: !KARMA_CLI_ARGS.watchTests,
 
     // Concurrency level
     // how many browser should be started simultaneous
