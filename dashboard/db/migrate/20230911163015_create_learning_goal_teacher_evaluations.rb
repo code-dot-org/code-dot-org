@@ -5,8 +5,8 @@ class CreateLearningGoalTeacherEvaluations < ActiveRecord::Migration[6.1]
       t.integer :teacher_id, null: false
       t.integer :learning_goal_id, null: false
       t.integer :understanding, null: false
-      t.text :draft_feedback
-      t.text :feedbacks
+      t.text :feedback
+      t.datetime :submitted_at
 
       t.timestamps
 
