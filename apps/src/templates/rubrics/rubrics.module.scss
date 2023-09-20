@@ -280,8 +280,9 @@ p.errorMessage {
 }
 
 .autosaveMessage {
-  font-style: italic;
   float: right;
   line-height: 100%;
   padding: 0;
+  margin-right: 2rem;
+  color: #3EA33E;
 }

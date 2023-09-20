@@ -194,11 +194,11 @@ export default function LearningGoal({
             />
           </label>
           {isAutosaving ? (
-            <span className={style.autosaveMessage}>Autosaving...</span>
+            <span className={style.autosaveMessage}>Saving...</span>
           ) : (
             autosaved && (
               <span className={style.autosaveMessage}>
-                Autosaved {learningGoalEval.updated_at}
+                <FontAwesome icon="circle-check" /> Saved
               </span>
             )
           )}
