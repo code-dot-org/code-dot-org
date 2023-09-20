@@ -17,7 +17,10 @@ const karmaConfig = {
     },
     // karma-webpack v5 webpack config splits chunks in a way that
     // breaks sourcemaps. See: https://github.com/ryanclark/karma-webpack/issues/493
-    optimization: undefined,
+    //optimization: undefined,
+    optimization: {
+      splitChunks: false,
+    },
     mode: 'development',
     // karma-sourcemap-loader only supports inline-source-map and source-map
     devtool: 'source-map',
