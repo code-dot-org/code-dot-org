@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_08_31_145020) do
+ActiveRecord::Schema.define(version: 2023_09_20_174014) do
 
   create_table "activities", id: :integer, charset: "utf8", collation: "utf8_unicode_ci", force: :cascade do |t|
     t.integer "user_id"
@@ -1717,7 +1717,7 @@ ActiveRecord::Schema.define(version: 2023_08_31_145020) do
     t.index ["last_known_school_year_open"], name: "index_schools_on_last_known_school_year_open"
     t.index ["name", "city"], name: "index_schools_on_name_and_city", type: :fulltext
     t.index ["school_district_id"], name: "index_schools_on_school_district_id"
-    t.index ["state_school_id"], name: "index_schools_on_state_school_id", unique: true
+    t.index ["state_school_id"], name: "index_schools_on_state_school_id"
     t.index ["zip"], name: "index_schools_on_zip"
   end
 
