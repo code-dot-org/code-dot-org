@@ -15,8 +15,8 @@
     },
     "new_name": null,
     "family_name": "csa-software-engineering",
-    "serialized_at": "2023-09-07 22:15:46 UTC",
-    "published_state": "in_development",
+    "serialized_at": "2023-09-14 19:38:00 UTC",
+    "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
     "participant_audience": "student",
@@ -1141,7 +1141,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "You may want to review sorting algorithms before this activity to remind students of different algorithms and their pseudocode. Encourage students to use a sorting algorithm they learned earlier in the year and to refer to that algorithm when they are interacting with Copilot.\n\nIf you see students who are using copy and paste to prompt Copilot, ask them how they might decompose the problem or reword the information given in the comments or instructions. Have them consider what they might say or ask if their navigator was another student.\n\nIf you use a timer to help manage pair programming in your class normally, you may choose to use the timer in this instance to help remind students to check in with Copilot every 1-2 minutes."
+            "markdown": "You may want to review sorting algorithms before this activity to remind students of different algorithms and their pseudocode. One way that you could do this is to ask Copilot to provide pseudocode for an algorithm and then ask it to convert it to Java code one step at a time. Encourage students to use a sorting algorithm they learned earlier in the year and to refer to that algorithm when they are interacting with Copilot.\n\nIf you see students who are using copy and paste to prompt Copilot, ask them how they might decompose the problem or reword the information given in the comments or instructions. Have them consider what they might say or ask if their navigator was another student.\n\nIf you use a timer to help manage pair programming in your class normally, you may choose to use the timer in this instance to help remind students to check in with Copilot every 1-2 minutes."
           }
         ]
       },
@@ -1336,7 +1336,7 @@
         "tips": [
           {
             "type": "teachingTip",
-            "markdown": "If possible, demonstrate using Copilot to identify the bug and get suggestions for how to fix it by copying and pasting the code into a new Java file in VS Code or GitHub Codespaces. Show students using the chat and right-clicking on the selected code to identify the bug and get suggestions for fixes.\n\nYou might also have students suggest modifications to the code segment to add additional bugs and see if Copilot can identify these and suggest fixes."
+            "markdown": "If possible, demonstrate using Copilot to identify the bug and get suggestions for how to fix it by copying and pasting the code into a new Java file in VS Code. You could also choose to demonstrate using Copilot to generate a code segment that has a bug, and then show students how you could then use Copilot to help identify the bug and suggest fixes. Show students using the chat and right-clicking on the selected code to identify the bug and get suggestions for fixes.\n\nYou might also have students suggest modifications to the code segment to add additional bugs and see if Copilot can identify these and suggest fixes."
           }
         ]
       },

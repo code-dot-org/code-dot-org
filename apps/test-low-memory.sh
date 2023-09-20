@@ -1,7 +1,12 @@
 #!/bin/bash
 set -e
 
-MEM_PER_PROCESS=4096
+# This should be reviewed every couple of years to see if an increase improves
+# test performance. Even if tests run in a given memory limit, if memory is 
+# /super/ tight GC will run frequently and test perf will nosedive.
+#
+# MEM_PER_PROCESS should match the --max_old_space_size set for `npm run test:unit`
+MEM_PER_PROCESS=4200
 
 function linuxNumProcs() {
   local nprocs=$(nproc)
@@ -25,8 +30,30 @@ function linuxNumProcs() {
   echo $procs
 }
 
+function macMemAvailableMB() {
+  # Calculate MemAvailable equivalent for MacOS using `vm_stat` and `pagesize`
+  local pagesize=$(pagesize)
+  local mem_free_mb=$(vm_stat | awk "/Pages free:/ {printf \"%d\", \$3*${pagesize}/(1024*1024)}")
+  local mem_inactive_mb=$(vm_stat | awk "/Pages inactive:/ {printf \"%d\", \$3*${pagesize}/(1024*1024)}")
+  local mem_speculative_mb=$(vm_stat | awk "/Pages speculative:/ {printf \"%d\", \$3*${pagesize}/(1024*1024)}")
+  local mem_available_mb=$(( mem_free_mb + mem_inactive_mb + mem_speculative_mb ))
+  echo $mem_available_mb
+}
+
+function macNumProcs() {
+  local mem_procs=$(( $(macMemAvailableMB) / MEM_PER_PROCESS ))
+  local procs=$(( ${mem_procs} < $(nproc) ? ${mem_procs} : $(nproc) ))
+
+  # Run at least two copies in parallel
+  if ((procs <= 2)); then
+    procs=2
+  fi
+
+  echo $procs
+}
+
 if [ "$(uname)" = "Darwin" ]; then
-  PROCS=2 # TODO: set this dynamically like in linux
+  PROCS=$(macNumProcs)
 elif [ "$(uname)" = "Linux" ]; then
   PROCS=$(linuxNumProcs)
 else

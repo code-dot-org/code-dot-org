@@ -37,9 +37,9 @@ def update_form_with_allow_contact(kind, secret)
 end
 
 secrets = PEGASUS_DB[:forms].
-          select(:secret).
-          where(kind: KIND).
-          where(Sequel.like(:data, '%"allow_contact_b":"on"%'))
+  select(:secret).
+  where(kind: KIND).
+  where(Sequel.like(:data, '%"allow_contact_b":"on"%'))
 
 puts secrets.sql
 puts ''

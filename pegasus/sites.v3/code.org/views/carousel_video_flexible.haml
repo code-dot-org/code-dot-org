@@ -1,0 +1,22 @@
+- video_ai_index = 9
+- video_ai_caption = [hoc_s(:ai_vid_chatbots_caption), hoc_s(:ai_vid_creativity_caption), hoc_s(:ai_vid_intro_caption), hoc_s(:ai_vid_mlintro_caption), hoc_s(:ai_vid_trainingdata_caption), hoc_s(:ai_vid_neuralnetworks_caption), hoc_s(:ai_vid_computervision_caption), hoc_s(:ai_vid_ethics1_caption), hoc_s(:ai_vid_ethics2_caption)]
+- video_id_second = ["ai_101_01", "ai_chatbots", "machine_learning", "neural_networks", "ethics_ai_equak"]
+- video_ai_first = ["X-AWdfSFCHQ", "X994dDnmRmY", "Ok-xpKjKp2g", "OeU5m6vRyCk", "x2mRoFNm22g", "JrXazCEACVo", "2hXG8v8p0KM", "tJQSyzBUAew", "zNxw5gJtHLc"]
+
+.carousel-wrapper#flexible_units_carousel
+  .carousel.carousel--flexible_units
+    .slides
+      - video_ai_index.times do |index|
+        .slide
+          %figure.flex-space-between.video-wrapper.video-wrapper--one-col
+            .video__container
+              = view :display_video_thumbnail, id: video_id_second[index], video_code: video_ai_first[index], play_button: 'center', letterbox: 'false', caption: video_ai_caption[index]
+            
+  .pagination
+    #flexible_units_carousel-pagination
+  .dd__buttons
+    %button.carousel__prev#prev_1
+      %img{src: "/images/carousel/prev.svg", alt: "previous"}
+
+    %button.carousel__next#next_1
+      %img{src: "/images/carousel/next.svg", alt: "next"}

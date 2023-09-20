@@ -352,9 +352,9 @@ class BucketHelper
       map do |version|
         comment = with_comments ?
           DASHBOARD_DB[:project_commits].
-          select(:comment).
-          where(storage_app_id: storage_app_id, object_version_id: version.version_id).
-          first&.
+            select(:comment).
+            where(storage_app_id: storage_app_id, object_version_id: version.version_id).
+            first&.
           fetch(:comment) :
           nil
         {
