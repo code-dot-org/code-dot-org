@@ -360,8 +360,15 @@ module.exports = function (grunt) {
     generateSharedConstants: 'bundle exec ./script/generateSharedConstants.rb',
   };
 
-  grunt.registerTask('karma', function (gruntSubtask) {
-    grunt.task.run(['preconcatForKarma']);
+  const runGruntTasksNow = subtasks => {
+    const {status} = child_process.spawnSync('grunt', subtasks, {
+      stdio: 'inherit',
+    });
+    if (status !== 0) throw new Error(`'grunt ${subtasks.join(' ')}' failed`);
+  };
+
+  grunt.registerTask('karma', async function (gruntSubtask) {
+    runGruntTasksNow(['preconcatForKarma']);
 
     // Forward select grunt command-line flags to `karma start`
     const KARMA_CLI_FLAGS = VALID_KARMA_CLI_FLAGS.flatMap(arg =>
