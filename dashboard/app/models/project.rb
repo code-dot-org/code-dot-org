@@ -54,11 +54,16 @@ class Project < ApplicationRecord
     project_storage.user_id
   end
 
+  def user_old_enough_to_publish?
+    return true if channel_token&.script&.hoc?
+    return false unless owner
+    Time.now > owner.created_at + 7.days
+  end
+
   def old_enough_to_publish?
     # Allow projects created via free play levels on Hour of Code tutorials
     # to be published immediately.
     return true if channel_token&.script&.hoc?
-
     Time.now > created_at + 30.minutes
   end
 end

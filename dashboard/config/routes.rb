@@ -893,7 +893,6 @@ Dashboard::Application.routes.draw do
         get 'users/:user_id/school_name', to: 'users#get_school_name'
         get 'users/:user_id/school_donor_name', to: 'users#get_school_donor_name'
         get 'users/:user_id/tos_version', to: 'users#get_tos_version'
-        get 'users/:user_id/can_publish_based_on_account_create', to: 'users#get_account_existed_long_enough_for_project_publishing'
 
         patch 'user_school_infos/:id/update_last_confirmation_date', to: 'user_school_infos#update_last_confirmation_date'
 

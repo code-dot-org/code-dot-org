@@ -455,7 +455,11 @@ class ProjectsController < ApplicationController
 
   def can_share
     project = Project.find_by_channel_id(params[:channel_id])
-    render json: {can_share: project.old_enough_to_publish?, created_at: project.created_at}
+    render json: {
+      can_share_project: project.old_enough_to_publish?,
+      can_share_user: project.user_old_enough_to_publish?,
+      created_at: project.created_at
+    }
   end
 
   private def uses_asset_bucket?(project_type)

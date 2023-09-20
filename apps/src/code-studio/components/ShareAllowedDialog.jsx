@@ -24,7 +24,6 @@ import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import Button from '../../templates/Button';
 import Spinner from '@cdo/apps/code-studio/pd/components/spinner';
 import defaultThumbnail from '@cdo/static/projects/project_default.png';
-import {getStore} from '@cdo/apps/redux';
 
 function recordShare(type) {
   if (!window.dashboard) {
@@ -135,29 +134,17 @@ class ShareAllowedDialog extends React.Component {
 
   checkProjectAndAccountAge = () => {
     if (this.isPublishAllowed()) {
-      let checkIfCanPublishProject = fetch(
+      fetch(
         `/projects/${dashboard.project.getStandaloneApp()}/${dashboard.project.getCurrentId()}/can_share`
       )
         .then(response => response.json())
         .then(data => {
-          this.setState({isProjectOldEnoughToPublish: data.can_share});
+          this.setState({
+            isProjectOldEnoughToPublish: data.can_share_project,
+            isAccountOldEnoughToPublish: data.can_share_user,
+            hasLoadedAccountAndProjectAge: true,
+          });
         });
-
-      // signed out user?
-      const userId = getStore().getState().currentUser.userId;
-      let checkIfcanPublishAccount = fetch(
-        `/api/v1/users/${userId}/can_publish_based_on_account_create`
-      )
-        .then(response => response.json())
-        .then(data => {
-          this.setState({isAccountOldEnoughToPublish: data.account_old_enough});
-        });
-
-      Promise.all([checkIfCanPublishProject, checkIfcanPublishAccount]).then(
-        () => {
-          this.setState({loadedAccountAndProjectAge: true});
-        }
-      );
     }
   };
 
@@ -241,7 +228,7 @@ class ShareAllowedDialog extends React.Component {
     const {
       isAccountOldEnoughToPublish,
       isProjectOldEnoughToPublish,
-      loadedAccountAndProjectAge,
+      hasLoadedAccountAndProjectAge,
     } = this.state;
 
     const modalClass = 'modal-content no-modal-icon';
@@ -394,7 +381,7 @@ class ShareAllowedDialog extends React.Component {
                   </Button>
 
                   {showPublishInfo &&
-                    (loadedAccountAndProjectAge ? (
+                    (hasLoadedAccountAndProjectAge ? (
                       <Button
                         type="button"
                         color={Button.ButtonColor.neutralDark}
@@ -492,7 +479,7 @@ class ShareAllowedDialog extends React.Component {
                   </div>
                 )}
                 {showPublishInfo &&
-                  loadedAccountAndProjectAge &&
+                  hasLoadedAccountAndProjectAge &&
                   !isAccountOldEnoughToPublish && (
                     <div style={{clear: 'both', marginTop: 10}}>
                       <span
@@ -504,7 +491,7 @@ class ShareAllowedDialog extends React.Component {
                     </div>
                   )}
                 {showPublishInfo &&
-                  loadedAccountAndProjectAge &&
+                  hasLoadedAccountAndProjectAge &&
                   !isProjectOldEnoughToPublish && (
                     <div style={{clear: 'both', marginTop: 10}}>
                       <span
