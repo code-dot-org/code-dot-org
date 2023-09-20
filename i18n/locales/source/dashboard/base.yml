@@ -1221,7 +1221,9 @@ en:
         mongolia: 'Mongolia'
         new_zealand: 'New Zealand'
         paraguay: 'Paraguay'
+        philippines: 'Philippines'
         portugal: 'Portugal'
+        puerto_rico: 'Puerto Rico'
         slovakia: 'Slovakia'
         south_korea: 'South Korea'
         spain: 'Spain'
@@ -1319,6 +1321,7 @@ en:
       workshops_k5: 'K-5 Workshops'
       summer_workshops_612: '6-12 Summer Workshops'
       virtual_academic_year_workshops_612: '6–12 Virtual Academic Year Workshops'
+      unsupported: 'Unsupported'
   cookie_banner:
     message: 'By continuing to browse our site or clicking "I agree," you agree to the storing of cookies on your computer or device.'
     more_information: "See Code.org's Privacy Policy."

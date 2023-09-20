@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-09-13 16:31:26 UTC",
+    "serialized_at": "2023-09-14 22:02:16 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -19341,7 +19341,7 @@
     {
       "key": "e463ba5c-6fb7-46b4-ac0b-b2a608593a77",
       "properties": {
-        "description": "Apply variables, shapes, and ranomNumber concepts to create a program."
+        "description": "Apply variables, shapes, and randomNumber concepts to create a program."
       },
       "seeding_key": {
         "lesson.key": "lesson-18",
