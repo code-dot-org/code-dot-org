@@ -11,6 +11,7 @@ var checkEntryPoints = require('./script/checkEntryPoints');
 const {ALL_APPS, appsEntriesFor} = require('./webpackEntryPoints');
 const {createWebpackConfig} = require('./webpack.config');
 const offlineWebpackConfig = require('./webpackOffline.config');
+const {VALID_KARMA_CLI_ARGS} = require('./karma.conf');
 
 // Review every couple of years to see if an increase improves test performance
 // Should match MEM_PER_KARMA_PROCESS in `run-tests-in-parallel.sh`
@@ -360,25 +361,13 @@ module.exports = function (grunt) {
     generateSharedConstants: 'bundle exec ./script/generateSharedConstants.rb',
   };
 
-  const passThroughGruntArgs = validCliArgs =>
-    validCliArgs.flatMap(arg =>
-      grunt.option(arg) ? [`--${arg}`, grunt.option(arg)] : []
-    );
-
   grunt.registerTask('karma', function (gruntSubtask) {
     grunt.task.run(['preconcatForKarma']);
 
-    // Pass select grunt args to karma, see KARMA_CLI_ARGS in karma.conf.js
-    const KARMA_CLI_ARGS = passThroughGruntArgs([
-      'browser',
-      'entry',
-      'grep',
-      'levelType',
-      'port',
-      'testType',
-      'watchTests',
-    ]);
-    // permit `grunt karma:unit` instead of `grunt karma --testType=unit`
+    // Forward select grunt command-line flags to `karma start`
+    const KARMA_CLI_ARGS = VALID_KARMA_CLI_ARGS.flatMap(arg =>
+      grunt.option(arg) ? [`--${arg}`, grunt.option(arg)] : []
+    );
     KARMA_CLI_ARGS['testType'] = gruntSubtask || KARMA_CLI_ARGS['testType'];
 
     console.log(`>> npx karma start ${KARMA_CLI_ARGS.join(' ')}`);

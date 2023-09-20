@@ -10,25 +10,25 @@ process.env.TZ = 'UTC';
 // Use the babel test env defined in .babelrc
 process.env.BABEL_ENV = 'test';
 
+// Single spot to define command-line arguments to `karma start`.
+// e.g. `karma start --myarg=value` => KARMA_CLI_ARGS.myarg = 'value'
+//
+// Args are automatically available to tests: ./test/util/KARMA_CLI_ARGS.js
+// Args are automatically passed on by grunt: e.g. `grunt karma --myarg=value`
+const karmaCliArgs = (config = {}) => ({
+  browser: config.browser || 'ChromeHeadless', // --browser
+  entry: config.entry
+    ? './' + path.relative('./test/unit', config.entry)
+    : undefined, // --entry
+  grep: config.grep, // --grep
+  levelType: config.levelType, // --levelType
+  port: config.port || 9876, // --port
+  testType: config.testType || 'unit', // --testType
+  watchTests: config.watchTests, // --watchTests
+});
+
 module.exports = function (config) {
-  // Defines command-line arguments passed to `karma start` that are available in
-  // this file, and also available to in-browser tests via `./test/util/karmaCliArgs.js`
-  //
-  // See also KARMA_CLI_ARGS in Gruntfile.js to pass arguments through grunt.
-  //
-  // Example: running `karma start --testType=integration --levelType=maze`
-  // will set KARMA_CLI_ARGS.levelType = 'maze'
-  const KARMA_CLI_ARGS = {
-    browser: config.browser || 'ChromeHeadless', // --browser
-    entry: config.entry
-      ? './' + path.relative('./test/unit', config.entry)
-      : undefined, // --entry
-    grep: config.grep, // --grep
-    levelType: config.levelType, // --levelType
-    port: config.port || 9876, // --port
-    testType: config.testType || 'unit', // --testType
-    watchTests: config.watchTests, // --watchTests
-  };
+  const KARMA_CLI_ARGS = karmaCliArgs(config);
 
   config.set({
     // base path that will be used to resolve all patterns (eg. files, exclude)
@@ -194,3 +194,5 @@ module.exports = function (config) {
     },
   });
 };
+
+module.exports.VALID_KARMA_CLI_ARGS = Object.keys(karmaCliArgs({}));
