@@ -369,7 +369,7 @@ module.exports = function (grunt) {
     );
     KARMA_CLI_FLAGS['testType'] = gruntSubtask || KARMA_CLI_FLAGS['testType'];
 
-    console.log(`>> npx karma start ${KARMA_CLI_FLAGS.join(' ')}`);
+    console.log(chalk.green(`>> npx karma start ${KARMA_CLI_FLAGS.join(' ')}`));
     child_process.spawnSync('npx', ['karma', 'start', ...KARMA_CLI_FLAGS], {
       stdio: 'inherit',
       env: {
