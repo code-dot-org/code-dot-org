@@ -1145,6 +1145,10 @@ section.quote {
       padding-left: 0;
       padding-right: 0;
 
+      &:hover {
+        background: none;
+      }
+
       summary {
         @include heading-md;
       }
@@ -1256,4 +1260,14 @@ section.quote {
       }
     }
   }
+}
+
+// Action wrapper
+// See code.org/donate for example
+.action-wrapper {
+  background: url("/images/banners/banner-bg-lines-neutral-light.png") center repeat;
+  background-size: 22%;
+  background-color: $brand_primary_default;
+  border-radius: $border-radius;
+  padding: 2rem;
 }
