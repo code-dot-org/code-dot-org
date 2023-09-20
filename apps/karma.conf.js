@@ -84,8 +84,7 @@ module.exports = function (config) {
         nocache: true,
       },
       {
-        // This determines our test entry point e.g. ./test/unit-tests.js
-        pattern: `test/${KARMA_CLI_FLAGS.testType}-tests.js`,
+        pattern: `test/tests-entry.js`,
         watched: false,
       },
     ],
@@ -108,9 +107,7 @@ module.exports = function (config) {
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
       'build/karma/*.js': ['sourcemap'],
-      'test/integration-tests.js': ['webpack', 'sourcemap'],
-      'test/unit-tests.js': ['webpack'],
-      'test/storybook-tests.js': ['webpack', 'sourcemap'],
+      'test/tests-entry.js': ['webpack', 'sourcemap'],
     },
 
     webpack: webpackKarmaConfig,

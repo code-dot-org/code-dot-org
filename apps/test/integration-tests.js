@@ -4,9 +4,9 @@ import {throwOnConsoleErrorsEverywhere} from './util/throwOnConsole';
 import {clearTimeoutsBetweenTests} from './util/clearTimeoutsBetweenTests';
 import stubFirehose from './util/stubFirehose';
 
-var integrationContext = require.context('./integration', false, /Tests?\.js$/);
-
 describe('integration tests', function () {
+  var testsContext = require.context('./integration', false, /Tests?\.js$/);
+
   throwOnConsoleErrorsEverywhere();
 
   // TODO: Add warnings back once redux/react-redux and react-inspector have been upgraded.
@@ -17,5 +17,5 @@ describe('integration tests', function () {
   clearTimeoutsBetweenTests();
   stubFirehose();
 
-  integrationContext.keys().forEach(integrationContext);
+  testsContext.keys().forEach(testsContext);
 });
