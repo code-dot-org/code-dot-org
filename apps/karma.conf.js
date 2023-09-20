@@ -23,7 +23,7 @@ const karmaCliFlags = (config = {}) => ({
   grep: config.grep, // --grep
   levelType: config.levelType, // --levelType
   port: config.port || 9876, // --port
-  testType: config.testType || 'unit', // --testType
+  testType: config.testType, // --testType
   watchTests: config.watchTests, // --watchTests
 });
 
