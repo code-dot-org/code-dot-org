@@ -22,6 +22,14 @@ class Projects
     @table = Projects.table
   end
 
+  #### NOTE: This references the Rails model (Project, singular)
+  #### rather than this middleware class (Projects, plural)
+  #### such that we can make use of model associations managed by Rails
+  def get_rails_project(project_id)
+    return @rails_project if @rails_project
+    @rails_project = Project.find(project_id)
+  end
+
   def create(value, ip:, type: nil, published_at: nil, remix_parent_id: nil, standalone: true, level: nil)
     validate_thumbnail_url(nil, value['thumbnailUrl'])
 
@@ -128,7 +136,11 @@ class Projects
     project_query_result = @table.where(id: project_id).exclude(state: 'deleted')
     project = project_query_result.first
     raise NotFound, "channel `#{channel_id}` not found" unless project
-    raise PublishError, "channel `#{channel_id}` too new to be published" if project[:created_at] > (Time.now - 30.minutes) && !from_hoc_level?(project_id)
+
+    rails_project = get_rails_project(project_id)
+    raise PublishError, "channel `#{channel_id}` too new to be published" unless rails_project.old_enough_to_publish?
+    raise PublishError, "user too new to publish channel `#{channel_id}`" unless rails_project.user_old_enough_to_publish?
+
     project_query_result.update(row)
 
     project = @table.where(id: project_id).first
@@ -243,13 +255,6 @@ class Projects
     return false if paired_level_row.nil?
 
     return true
-  end
-
-  def from_hoc_level?(project_id)
-    #### NOTE: This references the Rails model (Project, singular)
-    #### rather than this middleware class (Projects, plural)
-    #### such that we can make use of complicated model associations managed by Rails
-    Project.find_by(id: project_id)&.channel_token&.script&.hoc?
   end
 
   def increment_abuse(channel_id, amount = 10)
