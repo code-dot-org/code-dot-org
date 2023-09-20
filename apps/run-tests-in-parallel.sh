@@ -1,7 +1,8 @@
 #!/bin/bash
 set -e
 
-MEM_PER_KARMA_PROCESS=$(node -e "console.log(require('./Gruntfile').MEM_PER_KARMA_PROCESS)")
+MEM_PER_KARMA_PROCESS=$(node -e "console.log(require('./Gruntfile').MEM_PER_KARMA_PROCESS)" 2>/dev/null)
+NODE_OPTIONS="--max-old-space-size=${MEM_PER_KARMA_PROCESS}"
 
 function linuxNumProcs() {
   local nprocs=$(nproc)
@@ -56,13 +57,22 @@ else
   exit 1
 fi
 
-NODE_OPTIONS="--max-old-space-size=${MEM_PER_KARMA_PROCESS}"
+echo && echo
+echo "##################################################"
+echo "#     Running test jobs with ${PROCS}x-parallelism     #"
+echo "##################################################"
+echo
 
-echo "Running with parallelism: ${PROCS}"
+
+echo && echo "Pre-webpacking karma tests before running them:"
+npx grunt preconcatForKarma
+npx karma start --testType=dontTestJustWebpack
+
+echo && echo && echo "Starting ${PROCS}x-parallel test jobs:"
 PARALLEL="parallel --will-cite --halt 2 -j ${PROCS} --joblog - :::"
 
-npx grunt preconcatForKarma
-
+# Each line in this SCRIPT block will be run as a parallel test job
+# If any line fails, the whole block will fail and exit early
 ${PARALLEL} <<SCRIPT
   npm run lint
 
@@ -77,3 +87,9 @@ ${PARALLEL} <<SCRIPT
   npx karma start --testType=integration --levelType='applab2' --port=9884
   npx karma start --testType=integration --levelType='studio' --port=9885
 SCRIPT
+
+echo && echo
+echo "###################################################"
+echo "#         All parallel test jobs PASSED           #"
+echo "###################################################"
+echo
