@@ -1109,6 +1109,16 @@ section.quote {
         background-color: $neutral_dark10;
         color: $neutral_dark;
       }
+
+      // Use this class to hide a tab
+      // - see computer-vision.haml and resources-tabs.js for an example
+      .resources-tabs-hide-tab & {
+        width: 24%;
+      }
+
+      &.hide {
+        display: none;
+      }
     }
   }
 
@@ -1132,6 +1142,7 @@ section.quote {
 
   &.show-tablet-and-mobile {
     height: unset;
+    min-height: unset;
 
     details {
       padding-left: 0;
@@ -1203,6 +1214,48 @@ section.quote {
         @include body-two;
         margin-bottom: 0;
         width: 100%;
+      }
+    }
+  }
+}
+
+// Subscribe form
+// See code.org/csf for an example
+.subscribe-form {
+  background: url("/images/banners/banner-bg-lines-neutral-dark.png") center repeat;
+  background-size: 22%;
+  background-color: $neutral_dark;
+  border-radius: $border-radius;
+  padding: 2rem;
+
+  @media screen and (max-width: $width-md) {
+    gap: 1rem;
+  }
+
+  @media screen and (max-width: $width-sm) {
+    padding: 1rem;
+  }
+
+  .text-wrapper {
+    width: 48%;
+
+    @media screen and (max-width: $width-md) {
+      width: 100%;
+    }
+
+    h2, p {
+      color: $neutral-white;
+    }
+  }
+
+  figure {
+    background: $neutral_light;
+    border-radius: $border-radius;
+    padding: 1rem 0 0;
+
+    @media screen and (max-width: $width-sm) {
+      iframe {
+        height: 500px !important;
       }
     }
   }
