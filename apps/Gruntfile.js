@@ -14,7 +14,6 @@ const offlineWebpackConfig = require('./webpackOffline.config');
 const {VALID_KARMA_CLI_FLAGS} = require('./karma.conf');
 
 // Review every couple of years to see if an increase improves test performance
-// Should match MEM_PER_KARMA_PROCESS in `run-tests-in-parallel.sh`
 const MEM_PER_KARMA_PROCESS = 4300;
 
 module.exports = function (grunt) {
@@ -654,3 +653,6 @@ module.exports = function (grunt) {
 
   grunt.registerTask('default', ['rebuild', 'test']);
 };
+
+// Exported for matching use in `run-tests-in-parallel.sh`
+module.exports.MEM_PER_KARMA_PROCESS = MEM_PER_KARMA_PROCESS;

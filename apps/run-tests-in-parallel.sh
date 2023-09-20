@@ -1,8 +1,7 @@
 #!/bin/bash
 set -e
 
-# This should match MEM_PER_KARMA_PROCESS in Gruntfile.js
-MEM_PER_KARMA_PROCESS=4300
+MEM_PER_KARMA_PROCESS=$(node -e "console.log(require('./Gruntfile').MEM_PER_KARMA_PROCESS)")
 
 function linuxNumProcs() {
   local nprocs=$(nproc)
