@@ -1,5 +1,5 @@
 var _ = require('lodash');
-const KARMA_CLI_ARGS = require('../../util/KARMA_CLI_ARGS');
+const KARMA_CLI_FLAGS = require('../../util/KARMA_CLI_FLAGS');
 
 /**
  * Given a list of levelSolutions subdirectories, returns only those matching
@@ -11,26 +11,26 @@ const KARMA_CLI_ARGS = require('../../util/KARMA_CLI_ARGS');
  *   file paths if --levelType is not specified.
  */
 function filterFiles(files) {
-  if (!KARMA_CLI_ARGS.levelType) {
+  if (!KARMA_CLI_FLAGS.levelType) {
     return files;
   }
 
   const allowedCharsRegex = /^[a-zA-Z0-9\|]+$/;
-  if (!KARMA_CLI_ARGS.levelType.match(allowedCharsRegex)) {
+  if (!KARMA_CLI_FLAGS.levelType.match(allowedCharsRegex)) {
     throw new Error(
-      `--levelType '${KARMA_CLI_ARGS.levelType}' contains illegal characters`
+      `--levelType '${KARMA_CLI_FLAGS.levelType}' contains illegal characters`
     );
   }
 
   const allowSolutionRegex = new RegExp(
-    `^./(${KARMA_CLI_ARGS.levelType})/`,
+    `^./(${KARMA_CLI_FLAGS.levelType})/`,
     'i'
   );
   files = files.filter(file => allowSolutionRegex.test(file));
 
   if (!files.length) {
     throw new Error(
-      `--levelType '${KARMA_CLI_ARGS.levelType}' did not match anything. Try 'craft' or 'applab|gamelab'`
+      `--levelType '${KARMA_CLI_FLAGS.levelType}' did not match anything. Try 'craft' or 'applab|gamelab'`
     );
   }
 

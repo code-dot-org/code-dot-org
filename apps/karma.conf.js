@@ -11,11 +11,11 @@ process.env.TZ = 'UTC';
 process.env.BABEL_ENV = 'test';
 
 // Single spot to define command-line arguments to `karma start`.
-// e.g. `karma start --myarg=value` => KARMA_CLI_ARGS.myarg = 'value'
+// e.g. `karma start --myarg=value` => KARMA_CLI_FLAGS.myarg = 'value'
 //
-// Args are automatically available to tests: ./test/util/KARMA_CLI_ARGS.js
+// Args are automatically available to tests: ./test/util/KARMA_CLI_FLAGS.js
 // Args are automatically passed on by grunt: e.g. `grunt karma --myarg=value`
-const karmaCliArgs = (config = {}) => ({
+const karmaCliFlags = (config = {}) => ({
   browser: config.browser || 'ChromeHeadless', // --browser
   entry: config.entry
     ? './' + path.relative('./test/unit', config.entry)
@@ -28,7 +28,7 @@ const karmaCliArgs = (config = {}) => ({
 });
 
 module.exports = function (config) {
-  const KARMA_CLI_ARGS = karmaCliArgs(config);
+  const KARMA_CLI_FLAGS = karmaCliFlags(config);
 
   config.set({
     // base path that will be used to resolve all patterns (eg. files, exclude)
@@ -85,7 +85,7 @@ module.exports = function (config) {
       },
       {
         // This determines our test entry point e.g. ./test/unit-tests.js
-        pattern: `test/${KARMA_CLI_ARGS.testType}-tests.js`,
+        pattern: `test/${KARMA_CLI_FLAGS.testType}-tests.js`,
         watched: false,
       },
     ],
@@ -123,9 +123,9 @@ module.exports = function (config) {
       captureConsole: true,
       mocha: {
         timeout: 14000,
-        grep: KARMA_CLI_ARGS.grep,
+        grep: KARMA_CLI_FLAGS.grep,
       },
-      KARMA_CLI_ARGS,
+      KARMA_CLI_FLAGS,
     },
 
     // test results reporter to use
@@ -141,12 +141,12 @@ module.exports = function (config) {
       outputDir: envConstants.CIRCLECI
         ? `${envConstants.CIRCLE_TEST_REPORTS}/apps`
         : '',
-      outputFile: `${KARMA_CLI_ARGS.testType}.xml`,
+      outputFile: `${KARMA_CLI_FLAGS.testType}.xml`,
     },
 
     coverageIstanbulReporter: {
       reports: ['html', 'lcovonly'],
-      dir: `coverage/${KARMA_CLI_ARGS.testType}`,
+      dir: `coverage/${KARMA_CLI_FLAGS.testType}`,
       fixWebpackSourcePaths: true,
     },
 
@@ -158,7 +158,7 @@ module.exports = function (config) {
     hostname: 'localhost-studio.code.org',
 
     // web server port
-    port: KARMA_CLI_ARGS.port,
+    port: KARMA_CLI_FLAGS.port,
 
     // enable / disable colors in the output (reporters and logs)
     colors: tty.isatty(process.stdout.fd),
@@ -172,11 +172,11 @@ module.exports = function (config) {
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: [KARMA_CLI_ARGS.browser],
+    browsers: [KARMA_CLI_FLAGS.browser],
 
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits
-    singleRun: !KARMA_CLI_ARGS.watchTests,
+    singleRun: !KARMA_CLI_FLAGS.watchTests,
 
     // Concurrency level
     // how many browser should be started simultaneous
@@ -195,4 +195,4 @@ module.exports = function (config) {
   });
 };
 
-module.exports.VALID_KARMA_CLI_ARGS = Object.keys(karmaCliArgs({}));
+module.exports.VALID_KARMA_CLI_FLAGS = Object.keys(karmaCliFlags({}));

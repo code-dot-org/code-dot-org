@@ -5,7 +5,7 @@ import {throwOnConsoleErrorsEverywhere} from './util/throwOnConsole';
 import {clearTimeoutsBetweenTests} from './util/clearTimeoutsBetweenTests';
 import Adapter from 'enzyme-adapter-react-16';
 import enzyme from 'enzyme';
-import KARMA_CLI_ARGS from './util/KARMA_CLI_ARGS';
+import KARMA_CLI_FLAGS from './util/KARMA_CLI_FLAGS';
 enzyme.configure({adapter: new Adapter()});
 
 var __karmaWebpackManifest__ = [];
@@ -25,8 +25,8 @@ if (!runnable.length) {
 
 // Invoked by `karma start --entry=./test/unit/gridUtilsTest.js`
 // Specifies a specific test file or test directory to run.
-if (KARMA_CLI_ARGS.entry) {
-  runnable = runnable.filter(path => path.startsWith(KARMA_CLI_ARGS.entry));
+if (KARMA_CLI_FLAGS.entry) {
+  runnable = runnable.filter(path => path.startsWith(KARMA_CLI_FLAGS.entry));
 }
 
 describe('unit tests', function () {

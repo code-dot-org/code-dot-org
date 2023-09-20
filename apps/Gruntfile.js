@@ -11,7 +11,7 @@ var checkEntryPoints = require('./script/checkEntryPoints');
 const {ALL_APPS, appsEntriesFor} = require('./webpackEntryPoints');
 const {createWebpackConfig} = require('./webpack.config');
 const offlineWebpackConfig = require('./webpackOffline.config');
-const {VALID_KARMA_CLI_ARGS} = require('./karma.conf');
+const {VALID_KARMA_CLI_FLAGS} = require('./karma.conf');
 
 // Review every couple of years to see if an increase improves test performance
 // Should match MEM_PER_KARMA_PROCESS in `run-tests-in-parallel.sh`
@@ -365,13 +365,13 @@ module.exports = function (grunt) {
     grunt.task.run(['preconcatForKarma']);
 
     // Forward select grunt command-line flags to `karma start`
-    const KARMA_CLI_ARGS = VALID_KARMA_CLI_ARGS.flatMap(arg =>
+    const KARMA_CLI_FLAGS = VALID_KARMA_CLI_FLAGS.flatMap(arg =>
       grunt.option(arg) ? [`--${arg}`, grunt.option(arg)] : []
     );
-    KARMA_CLI_ARGS['testType'] = gruntSubtask || KARMA_CLI_ARGS['testType'];
+    KARMA_CLI_FLAGS['testType'] = gruntSubtask || KARMA_CLI_FLAGS['testType'];
 
-    console.log(`>> npx karma start ${KARMA_CLI_ARGS.join(' ')}`);
-    child_process.spawnSync('npx', ['karma', 'start', ...KARMA_CLI_ARGS], {
+    console.log(`>> npx karma start ${KARMA_CLI_FLAGS.join(' ')}`);
+    child_process.spawnSync('npx', ['karma', 'start', ...KARMA_CLI_FLAGS], {
       stdio: 'inherit',
       env: {
         ...process.env,
