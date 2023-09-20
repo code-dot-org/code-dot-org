@@ -367,14 +367,16 @@ module.exports = function (grunt) {
     if (status !== 0) throw new Error(`'grunt ${subtasks.join(' ')}' failed`);
   };
 
-  grunt.registerTask('karma', async function (gruntSubtask) {
+  grunt.registerTask('karma', function (gruntSubtask) {
     runGruntTasksNow(['preconcatForKarma']);
+
+    // `grunt karma:unit` => `npx karma start --testType=unit`
+    if (gruntSubtask) grunt.option('testType', gruntSubtask);
 
     // Forward select grunt command-line flags to `karma start`
     const KARMA_CLI_FLAGS = VALID_KARMA_CLI_FLAGS.flatMap(arg =>
       grunt.option(arg) ? [`--${arg}`, grunt.option(arg)] : []
     );
-    KARMA_CLI_FLAGS['testType'] = gruntSubtask || KARMA_CLI_FLAGS['testType'];
 
     console.log(chalk.green(`>> npx karma start ${KARMA_CLI_FLAGS.join(' ')}`));
     child_process.spawnSync('npx', ['karma', 'start', ...KARMA_CLI_FLAGS], {
