@@ -1,0 +1,8 @@
+%div.flex-container.justify-space-between.align-items-center
+  %figure.col-50
+    %img.rounded-corners{src: "/images/resources-tabs-assessments.png", alt: "", style: "position: relative; width: 100%;"}
+  .text-wrapper.col-45{style: "float: right"}
+    %h3=hoc_s(:donate_tabs_bitpay_title)
+    %p=hoc_s(:donate_tabs_bitpay_desc)
+    %a.link-button{href: CDO.studio_url("/s/csd3-2023/lessons/1"), target: "_blank", rel: "noopener noreferrer"}
+      =hoc_s(:call_to_action_resources_lesson_plan)

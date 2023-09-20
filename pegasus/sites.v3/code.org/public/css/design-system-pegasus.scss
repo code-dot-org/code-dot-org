@@ -1076,6 +1076,7 @@ section.quote {
     border-bottom: 6px solid $brand_primary_default;
     margin: 0 0 3rem;
     align-items: end;
+    gap: 0.25rem;
 
     button.tab {
       color: $neutral_dark;
@@ -1089,6 +1090,7 @@ section.quote {
       cursor: pointer;
       white-space: normal;
       height: -webkit-fit-content;
+      flex: 1;
 
       &:hover {
         background-color: $neutral_dark10;
@@ -1111,10 +1113,6 @@ section.quote {
 
       // Use this class to hide a tab
       // - see computer-vision.haml and resources-tabs.js for an example
-      .hide-tab & {
-        width: 24%;
-      }
-
       &.hide {
         display: none;
       }

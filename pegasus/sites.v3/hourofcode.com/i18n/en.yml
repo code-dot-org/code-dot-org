@@ -219,6 +219,7 @@
   call_to_action_donate_to_cdo: "Donate to Code.org"
   call_to_action_start_fundraiser: "Start a fundraiser"
   call_to_action_view_donation_policy: "View donation policy"
+  call_to_action_view_donate_bitpay: "Donate with BitPay"
 
   aria_label_call_to_action_afe: "Learn more about Amazon Future Engineer"
   aria_label_call_to_action_teaching_csf: "Start the Teaching Computer Science Fundamentals professional learning program"
@@ -1038,6 +1039,16 @@
   donate_page_501c3: "Code.org is registered as a public 501(c)(3) nonprofit organization. Contributions to Code.org are tax-deductible to the extent permitted by law. Code.org's tax identification number is 46-0858543."
   donate_page_donation_policy_title: "Understanding our Donation Policy"
   donate_page_donation_policy_desc: "Learn about how we handle and allocate your contributions."
+  donate_tabs_tab_label_daf_direct: "DAF Direct"
+  donate_tabs_tab_label_amazon: "Amazon"
+  donate_tabs_tab_label_bitpay: "BitPay"
+  donate_tabs_tab_label_employee_match: "Employee Match"
+  donate_tabs_daf_direct_title: "Donate via DAF Direct"
+  donate_tabs_daf_direct_desc: "Donate through your donor-advised fund with Fidelity Charitable, Schwab Charitable, or BNY Mellon and make your grant recommendation to Code.org through the DAF Direct online form."
+  donate_tabs_amazon_title: "Donate via Amazon"
+  donate_tabs_amazon_desc: "Donate directly using your Amazon account. With just a few clicks, seamlessly contribute to Code.org's mission and empower the future of computer science education."
+  donate_tabs_bitpay_title: "Donate with Crypto via BitPay"
+  donate_tabs_bitpay_desc: "Embrace the future of giving with cryptocurrency. Through BitPay, your digital currency can directly support Code.org's endeavors in expanding computer science education."
 
   hoc_live: 'Hour of Code Live'
   hoc_live_sign_up_title: 'Sign up for Hour of Code Live'
