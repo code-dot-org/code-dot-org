@@ -25,6 +25,9 @@ module.exports = function (config) {
   var browser = envConstants.BROWSER || 'ChromeHeadless';
   var KARMA_TEST_TYPE = envConstants.KARMA_TEST_TYPE || 'unit';
 
+  // CLI args like `karma start --grep=foo` are available on the config object
+  const GREP_CLI_ARG = config.grep;
+
   config.set({
     // base path that will be used to resolve all patterns (eg. files, exclude)
     basePath: '.',
@@ -131,6 +134,7 @@ module.exports = function (config) {
       mocha: {
         timeout: 14000,
         bail: browser === 'PhantomJS',
+        grep: GREP_CLI_ARG,
       },
     },
 
