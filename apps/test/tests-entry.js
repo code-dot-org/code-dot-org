@@ -63,9 +63,9 @@ if (testType('storybook')) {
   });
 }
 
-// `npx karma start --testType=storybook`
-if (testType('storybook')) {
-  describe('storybook tests', function () {
-    require('./storybook/renderStoriesTest');
-  });
+// Use to run a karma webpack of tests-entry.js, without running any tests.
+if (KARMA_CLI_FLAGS.testType === 'dontTestJustWebpack') {
+  describe('dontTestJustWebpack', () =>
+    it('webpacks tests-entry.js without running any tests', () =>
+      console.log('dontTestJustWebpack complete: webpacked tests-entry.js')));
 }
