@@ -108,7 +108,6 @@ module.exports = function (config) {
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
       'build/karma/*.js': ['sourcemap'],
-      'test/index.js': ['webpack', 'sourcemap'],
       'test/integration-tests.js': ['webpack', 'sourcemap'],
       'test/unit-tests.js': ['webpack'],
       'test/storybook-tests.js': ['webpack', 'sourcemap'],
