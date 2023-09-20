@@ -1,10 +1,6 @@
 import React, {useState} from 'react';
 import PropTypes from 'prop-types';
-import {
-  BodyTwoText,
-  Heading1,
-  Heading2,
-} from '@cdo/apps/componentLibrary/typography';
+import {BodyTwoText, Heading1} from '@cdo/apps/componentLibrary/typography';
 import Button from '@cdo/apps/templates/Button';
 import {navigateToHref} from '@cdo/apps/utils';
 import RubricEditor from './RubricEditor';
@@ -18,6 +14,7 @@ export default function RubricsContainer({
   levels,
   rubric,
   lessonId,
+  hasSubmittableLevels,
 }) {
   const [learningGoalList, setLearningGoalList] = useState(
     !!rubric
@@ -54,8 +51,6 @@ export default function RubricsContainer({
           },
         ]
   );
-
-  let hasSubmittableLevels;
 
   const generateLearningGoalKey = () => {
     let learningGoalNumber = learningGoalList.length + 1;
@@ -176,8 +171,8 @@ export default function RubricsContainer({
       ? document.querySelector('meta[name="csrf-token"]').attributes['content']
           .value
       : null;
-    const learningGoalListAsData = removeNewIds(
-      transformKeys(learningGoalList)
+    const learningGoalListAsData = resetPositionsOfLearningGoals(
+      removeNewIds(transformKeys(learningGoalList))
     );
 
     const rubric_data = {
@@ -204,6 +199,19 @@ export default function RubricsContainer({
         console.error('Error saving rubric:' + err);
       });
   };
+
+  function resetPositionsOfLearningGoals(keyConceptList) {
+    let position = 1;
+    keyConceptList.forEach(keyConcept => {
+      if (keyConceptList._delete) {
+        keyConcept.position = -1;
+      } else {
+        keyConcept.position = position;
+        position++;
+      }
+    });
+    return keyConceptList;
+  }
 
   /**
    * Removes the Ids from the newly added LearningGoals.
@@ -264,48 +272,59 @@ export default function RubricsContainer({
           {level.name}
         </option>
       ));
-    hasSubmittableLevels = selectOptions.length !== 0;
     return selectOptions;
   }
 
   return (
     <div>
-      <Heading1>Create or modify your rubric</Heading1>
-      <BodyTwoText>
-        This rubric will be used for {unitName}, lesson {lessonNumber}.
-      </BodyTwoText>
-      {hasSubmittableLevels ? (
-        <div style={styles.containerStyle}>
-          <label>Choose a level for this rubric to be evaluated on</label>
-          <select
-            id="rubric_level_id"
-            required={true}
-            onChange={handleDropdownChange}
-            value={selectedLevelForAssessment}
-          >
-            {renderOptions()}
-          </select>
+      {hasSubmittableLevels && (
+        <div>
+          <Heading1>Create or modify your rubric</Heading1>
+          <BodyTwoText>
+            This rubric will be used for {unitName}, lesson {lessonNumber}.
+          </BodyTwoText>
+          <div style={styles.containerStyle}>
+            <label>Choose a level for this rubric to be evaluated on</label>
+            <select
+              id="rubric_level_id"
+              required={true}
+              onChange={handleDropdownChange}
+              value={selectedLevelForAssessment}
+            >
+              {renderOptions()}
+            </select>
+          </div>
+          <RubricEditor
+            learningGoalList={learningGoalList}
+            addNewConcept={addNewConceptHandler}
+            deleteItem={id => deleteKeyConcept(id)}
+            updateLearningGoal={updateLearningGoal}
+            disabled={!hasSubmittableLevels}
+          />
+          <div style={styles.bottomRow}>
+            <Button
+              color={Button.ButtonColor.brandSecondaryDefault}
+              text="Save your rubric"
+              onClick={saveRubric}
+              size={Button.ButtonSize.narrow}
+            />
+          </div>
         </div>
-      ) : (
-        <Heading2>
-          You need to create a submittable level before creating your rubric.
-        </Heading2>
       )}
-      <RubricEditor
-        learningGoalList={learningGoalList}
-        addNewConcept={addNewConceptHandler}
-        deleteItem={id => deleteKeyConcept(id)}
-        updateLearningGoal={updateLearningGoal}
-        disabled={!hasSubmittableLevels}
-      />
-      <div style={styles.bottomRow}>
-        <Button
-          color={Button.ButtonColor.brandSecondaryDefault}
-          text="Save your rubric"
-          onClick={saveRubric}
-          size={Button.ButtonSize.narrow}
-        />
-      </div>
+      {!hasSubmittableLevels && (
+        <div>
+          <Heading1>
+            Go back and add a submittable level to this lesson
+          </Heading1>
+          <BodyTwoText>
+            {unitName}, lesson {lessonNumber} currently has no submittable
+            levels. To create or modify a rubric, there must be a submittable
+            level connected to the rubric. Go back to the lesson landing page
+            and either add a new submittable level or modify an existing level
+            to be submittable.
+          </BodyTwoText>
+        </div>
+      )}
     </div>
   );
 }
@@ -322,6 +341,7 @@ RubricsContainer.propTypes = {
   ),
   rubric: PropTypes.object,
   lessonId: PropTypes.number,
+  hasSubmittableLevels: PropTypes.bool,
 };
 
 const styles = {
