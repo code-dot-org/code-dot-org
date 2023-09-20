@@ -265,3 +265,86 @@ p.errorMessage {
   color: $product_negative_default;
   margin-bottom: 0;
 }
+
+.infoTipIcon {
+  cursor: pointer;
+  margin-left: 5px;
+  margin-right: 5px;
+  font-size: 18px;
+  vertical-align: middle;
+  color: gray;
+}
+
+.aiAssessmentBlock {
+  align-items: flex-start;
+  display: flex;
+  gap: 16px;
+  position: relative;
+}
+
+.aiBot {
+  height: 68px;
+  position: relative;
+  width: 42px;
+}
+
+.assessment {
+  align-items: center;
+  background-color: var(--lightaffirmative-100);
+  border: 1px solid;
+  border-color: var(--lightaffirmative-500);
+  border-radius: 4px;
+  display: flex;
+  flex: 1;
+  flex-grow: 1;
+  gap: 16px;
+  overflow: hidden;
+  padding: 8px;
+  position: relative;
+}
+
+.text {
+  align-items: flex-start;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 8px;
+  justify-content: flex-end;
+  position: relative;
+
+
+.AI-rating {
+  align-self: stretch;
+  color: var(--lightblack);
+  font-family: var(--body-body-2-strong-font-family);
+  font-size: var(--body-body-2-strong-font-size);
+  font-style: var(--body-body-2-strong-font-style);
+  font-weight: var(--body-body-2-strong-font-weight);
+  letter-spacing: var(--body-body-2-strong-letter-spacing);
+  line-height: var(--body-body-2-strong-line-height);
+  margin-top: -1px;
+  position: relative;
+}
+
+.confidence-score {
+  align-items: center;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 8px;
+  position: relative;
+}
+}
+
+.content .div {
+  color: var(--lightblack);
+  font-size: 14px;
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 21px;
+  margin-top: -1px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}

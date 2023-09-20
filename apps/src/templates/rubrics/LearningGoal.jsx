@@ -15,6 +15,7 @@ import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
 import EvidenceLevels from './EvidenceLevels';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
+import AiAssessment from './AiAssessment';
 
 export default function LearningGoal({
   learningGoal,
@@ -66,6 +67,7 @@ export default function LearningGoal({
         </div>
       </summary>
       <div className={style.learningGoalExpanded}>
+        <AiAssessment isAiAssessed={true} />
         <EvidenceLevels
           learningGoalKey={learningGoal.key}
           evidenceLevels={learningGoal.evidenceLevels}
