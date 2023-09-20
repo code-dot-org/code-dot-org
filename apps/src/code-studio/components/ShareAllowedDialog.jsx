@@ -135,13 +135,15 @@ class ShareAllowedDialog extends React.Component {
   checkProjectAndAccountAge = () => {
     if (this.isPublishAllowed()) {
       fetch(
-        `/projects/${dashboard.project.getStandaloneApp()}/${dashboard.project.getCurrentId()}/can_share`
+        `/projects/${dashboard.project.getStandaloneApp()}/${dashboard.project.getCurrentId()}/can_publish_age_status`
       )
         .then(response => response.json())
         .then(data => {
           this.setState({
-            isProjectOldEnoughToPublish: data.can_share_project,
-            isAccountOldEnoughToPublish: data.can_share_user,
+            isProjectOldEnoughToPublish:
+              data.project_existed_long_enough_to_publish,
+            isAccountOldEnoughToPublish:
+              data.user_existed_long_enough_to_publish,
             hasLoadedAccountAndProjectAge: true,
           });
         });

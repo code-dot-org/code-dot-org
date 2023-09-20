@@ -579,8 +579,8 @@ class ChannelsTest < Minitest::Test
 
   def stub_project_age(project_old_enough, user_old_enough)
     test_project = mock
-    test_project.stubs(:old_enough_to_publish?).returns(project_old_enough)
-    test_project.stubs(:user_old_enough_to_publish?).returns(user_old_enough)
+    test_project.stubs(:existed_long_enough_to_publish?).returns(project_old_enough)
+    test_project.stubs(:owner_existed_long_enough_to_publish?).returns(user_old_enough)
 
     Projects.any_instance.stubs(:get_rails_project).returns(test_project)
   end

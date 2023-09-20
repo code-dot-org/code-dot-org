@@ -453,12 +453,11 @@ class ProjectsController < ApplicationController
     redirect_to action: 'edit', channel_id: new_channel_id
   end
 
-  def can_share
+  def can_publish_age_status
     project = Project.find_by_channel_id(params[:channel_id])
     render json: {
-      can_share_project: project.old_enough_to_publish?,
-      can_share_user: project.user_old_enough_to_publish?,
-      created_at: project.created_at
+      project_existed_long_enough_to_publish: project.existed_long_enough_to_publish?,
+      user_existed_long_enough_to_publish: project.owner_existed_long_enough_to_publish?
     }
   end
 
