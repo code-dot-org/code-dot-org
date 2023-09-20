@@ -121,10 +121,11 @@ Dance.prototype.init = function (config) {
     this.studioApp_.init(config);
 
     if (this.usesPreview) {
-      const currentCode = this.studioApp_.getCode();
+      this.currentCode = this.studioApp_.getCode();
       this.studioApp_.addChangeHandler(() => {
         const newCode = Blockly.getWorkspaceCode();
-        if (newCode !== currentCode && !this.studioApp_.isRunning()) {
+        if (newCode !== this.currentCode && !this.studioApp_.isRunning()) {
+          this.currentCode = newCode;
           this.preview();
         }
       });
