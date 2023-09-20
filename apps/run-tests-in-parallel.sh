@@ -65,7 +65,16 @@ echo
 
 
 echo && echo "Pre-webpacking karma tests before running them:"
+
 npx grunt preconcatForKarma
+
+# This pre-webpack is *important* to avoid file-overwriting race conditions
+# as each karma invocation semi-unavoidably does its own webpack. This works
+# because Webpack does NOT overwrite files that turn out identical, and tests
+# all run from the same `test/entry-point.js` => identical webpack output.
+#
+# TODO: figure out how to skip the per-karma-start webpack to save 20s+ test time
+# without breaking sourcemaps.
 npx karma start --testType=dontTestJustWebpack
 
 echo && echo && echo "Starting ${PROCS}x-parallel test jobs:"
