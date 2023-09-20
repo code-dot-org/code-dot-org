@@ -15,8 +15,8 @@ const karmaConfig = {
       path: path.resolve(__dirname, 'build/karma/'),
       publicPath: '/webpack_output/',
     },
-    // Default karma-webpack config splits chunks in a way that
-    // is not currently working with webpack 5.
+    // karma-webpack v5 webpack config splits chunks in a way that
+    // breaks sourcemaps. See: https://github.com/ryanclark/karma-webpack/issues/493
     optimization: undefined,
     mode: 'development',
     // karma-sourcemap-loader only supports inline-source-map and source-map
