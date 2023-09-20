@@ -6,7 +6,7 @@
 #  user_id          :integer
 #  learning_goal_id :integer
 #  prompt_version   :datetime
-#  userstanding     :integer
+#  understanding    :integer
 #  context          :text(65535)
 #  created_at       :datetime         not null
 #  updated_at       :datetime         not null

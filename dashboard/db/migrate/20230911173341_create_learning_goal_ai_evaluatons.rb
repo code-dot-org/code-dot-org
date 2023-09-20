@@ -4,7 +4,7 @@ class CreateLearningGoalAiEvaluatons < ActiveRecord::Migration[6.1]
       t.integer :user_id
       t.integer :learning_goal_id
       t.datetime :prompt_version
-      t.integer :userstanding
+      t.integer :understanding
       t.text :context
 
       t.timestamps

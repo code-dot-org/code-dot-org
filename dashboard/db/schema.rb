@@ -626,7 +626,7 @@ ActiveRecord::Schema.define(version: 2023_09_11_173341) do
     t.integer "user_id"
     t.integer "learning_goal_id"
     t.datetime "prompt_version"
-    t.integer "userstanding"
+    t.integer "understanding"
     t.text "context"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
