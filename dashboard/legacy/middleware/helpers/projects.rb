@@ -133,6 +133,7 @@ class Projects
       published_at: DateTime.now,
     }
 
+    # check on whether this is appropriate empty check
     project_query_result = @table.where(id: project_id).exclude(state: 'deleted')
     project = project_query_result.first
     raise NotFound, "channel `#{channel_id}` not found" unless project
