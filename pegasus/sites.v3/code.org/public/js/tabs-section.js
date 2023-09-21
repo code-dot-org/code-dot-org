@@ -32,15 +32,17 @@ jQuery(document).ready(function ($) {
   var hideResponsiveTabs = function () {
     var ww = $(window).width();
     if (ww > 1023) {
-      $showDesktop.show();
-      $showTabletAndMobile.hide();
+      $showDesktop.add();
+      $showTabletAndMobile.remove();
     } else {
-      $showDesktop.hide();
-      $showTabletAndMobile.show();
+      $showDesktop.remove();
+      $showTabletAndMobile.add();
     }
   };
-  $(window).resize(hideResponsiveTabs);
-  // Fire it when the page first loads:
+  $(window).resize(function () {
+    hideResponsiveTabs();
+  });
+  //Fire it when the page first loads:
   hideResponsiveTabs();
 });
 
