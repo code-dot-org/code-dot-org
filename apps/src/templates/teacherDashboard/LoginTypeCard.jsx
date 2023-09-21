@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import color from '../../util/color';
+import fontConstants from '@cdo/apps/fontConstants';
 
 class LoginTypeCard extends Component {
   static propTypes = {
@@ -91,7 +92,7 @@ const styles = {
     paddingTop: 12,
     fontSize: 12,
     lineHeight: '18px',
-    fontFamily: '"Gotham 4r", sans-serif',
+    ...fontConstants['main-font-regular'],
     zIndex: 2,
     color: color.neutral_dark,
   },

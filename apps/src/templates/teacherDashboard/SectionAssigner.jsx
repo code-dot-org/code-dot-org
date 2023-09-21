@@ -6,6 +6,7 @@ import {sectionForDropdownShape} from './shapes';
 import TeacherSectionSelector from './TeacherSectionSelector';
 import MultipleAssignButton from '@cdo/apps/templates/MultipleAssignButton';
 import {selectSection} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
+import fontConstants from '@cdo/apps/fontConstants';
 
 class SectionAssigner extends Component {
   static propTypes = {
@@ -121,7 +122,7 @@ const styles = {
   },
   confirmText: {
     fontSize: 12,
-    fontFamily: '"Gotham 4r", sans-serif',
+    ...fontConstants['main-font-regular'],
   },
 };
 

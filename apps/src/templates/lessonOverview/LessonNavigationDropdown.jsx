@@ -7,6 +7,7 @@ import color from '@cdo/apps/util/color';
 import {navigationLessonShape} from '@cdo/apps/templates/lessonOverview/lessonPlanShapes';
 import {linkWithQueryParams, navigateToHref} from '@cdo/apps/utils';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
+import fontConstants from '@cdo/apps/fontConstants';
 
 /*
  Component used to navigate between lesson plans. List
@@ -148,11 +149,11 @@ const styles = {
   },
   section: {
     width: 300,
-    fontFamily: '"Gotham 4r", sans-serif',
+    ...fontConstants['main-font-regular'],
     backgroundColor: color.lightest_purple,
   },
   lesson: {
     width: 300,
-    fontFamily: '"Gotham 4r", sans-serif',
+    ...fontConstants['main-font-regular'],
   },
 };

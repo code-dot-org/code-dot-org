@@ -8,6 +8,7 @@ import {getTagString, getTutorialDetailString, DoNotShow} from './util';
 import Image from './image';
 import i18n from '@cdo/tutorialExplorer/locale';
 import FocusTrap from 'focus-trap-react';
+import fontConstants from '@cdo/apps/fontConstants';
 
 export default class TutorialDetail extends React.Component {
   static propTypes = {
@@ -371,16 +372,16 @@ const styles = {
     paddingBottom: 4,
   },
   tutorialDetailPublisher: {
-    fontFamily: '"Gotham 4r", sans-serif',
+    ...fontConstants['main-font-regular'],
     fontSize: 16,
   },
   tutorialDetailSub: {
-    fontFamily: '"Gotham 4r", sans-serif',
+    ...fontConstants['main-font-regular'],
     fontSize: 12,
     paddingBottom: 20,
   },
   tutorialDetailDescription: {
-    fontFamily: '"Gotham 4r", sans-serif',
+    ...fontConstants['main-font-regular'],
     fontSize: 14,
   },
   tutorialDetailDisabled: {
