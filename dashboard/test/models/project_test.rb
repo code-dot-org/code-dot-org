@@ -2,30 +2,47 @@ require 'test_helper'
 
 class ProjectTest < ActiveSupport::TestCase
   test "Projects must be 30 minutes old to publish" do
+    Project.any_instance.stubs(:apply_project_age_publish_limits?).returns(true)
+
     project = create :project
     refute project.existed_long_enough_to_publish?
 
     project.created_at = Time.now - 31.minutes
+
+    assert project.apply_project_age_publish_limits?
     assert project.existed_long_enough_to_publish?
   end
 
   test "Project owner account must have existed for a week to publish" do
+    Project.any_instance.stubs(:apply_project_age_publish_limits?).returns(true)
+
     project_owner = create :student
     project = build :project, owner: project_owner
     refute project.owner_existed_long_enough_to_publish?
 
     project_owner = create :student, created_at: Time.now - 8.days
     project = build :project, owner: project_owner
+
+    assert project.apply_project_age_publish_limits?
     assert project.owner_existed_long_enough_to_publish?
   end
 
-  test "Hour of Code projects can be published immediately" do
+  test "Publish age limits do not apply to Hour of Code projects" do
     Unit.any_instance.stubs(:hoc?).returns(true)
     hoc_script = create :hoc_script
     project = create :project
     create :channel_token, script: hoc_script, storage_app_id: project.id
 
-    assert project.existed_long_enough_to_publish?
-    assert project.owner_existed_long_enough_to_publish?
+    refute project.apply_project_age_publish_limits?
+  end
+
+  test "Publish age limits do not apply to students added to sections within last year" do
+    follower = create :follower
+    project = create :project, owner: follower.student_user
+    refute project.apply_project_age_publish_limits?
+
+    follower = create :follower, created_at: Time.now - 2.years
+    project = create :project, owner: follower.student_user
+    assert project.apply_project_age_publish_limits?
   end
 end

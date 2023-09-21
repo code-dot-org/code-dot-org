@@ -22,7 +22,6 @@ class ChannelsTest < Minitest::Test
   end
 
   def test_create_published_channel
-    # what's up with "publishing" through this shouldPublish param?
     old_user = {name: ' xavier', birthday: 14.years.ago.to_datetime}
     ChannelsApi.any_instance.stubs(:current_user).returns(old_user)
     start = DateTime.now - 1
@@ -352,6 +351,19 @@ class ChannelsTest < Minitest::Test
     assert_cannot_publish('applab', channel_id)
   end
 
+  def test_can_publish_when_override_applied
+    stub_project_age(false, false, false)
+
+    stub_user = {
+      name: ' xavier',
+      birthday: 14.years.ago.to_datetime,
+      properties: {sharing_disabled: false}.to_json
+    }
+    ChannelsApi.any_instance.stubs(:current_user).returns(stub_user)
+
+    assert_can_publish('applab')
+  end
+
   def test_restricted_publish_permissions
     stub_project_age(true, true)
 
@@ -577,10 +589,11 @@ class ChannelsTest < Minitest::Test
     SourceBucket.any_instance.stubs(:get).returns({body: sample_project})
   end
 
-  def stub_project_age(project_old_enough, user_old_enough)
+  def stub_project_age(project_old_enough, user_old_enough, apply_publish_limits = true)
     test_project = mock
     test_project.stubs(:existed_long_enough_to_publish?).returns(project_old_enough)
     test_project.stubs(:owner_existed_long_enough_to_publish?).returns(user_old_enough)
+    test_project.stubs(:apply_project_age_publish_limits?).returns(apply_publish_limits)
 
     Projects.any_instance.stubs(:get_rails_project).returns(test_project)
   end

@@ -54,18 +54,21 @@ class Project < ApplicationRecord
     project_storage.user_id
   end
 
+  def apply_project_age_publish_limits?
+    # Two cases where we override and always allow publishing:
+    # 1) project was created via free play levels on Hour of Code tutorials
+    # 2) user is in a section
+    return false if channel_token&.script&.hoc?
+    return false if owner&.followeds&.any? {|follower| follower.created_at > Time.now - 1.year}
+    true
+  end
+
   def owner_existed_long_enough_to_publish?
-    # Allow projects created via free play levels on Hour of Code tutorials
-    # to be published immediately.
-    return true if channel_token&.script&.hoc?
     return false unless owner
     Time.now > owner.created_at + 7.days
   end
 
   def existed_long_enough_to_publish?
-    # Allow projects created via free play levels on Hour of Code tutorials
-    # to be published immediately.
-    return true if channel_token&.script&.hoc?
     Time.now > created_at + 30.minutes
   end
 end
