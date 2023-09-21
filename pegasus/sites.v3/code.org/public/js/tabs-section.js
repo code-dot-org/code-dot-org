@@ -1,4 +1,4 @@
-// Works with the "resources_tabs.haml" partial.
+// Works with the "resources_tabs.haml" and "donate_tabs.haml" partials.
 // Styles that show and hide sections are in "design-system-pegasus.scss"
 // under the "div.resources-tabs" selector.
 
