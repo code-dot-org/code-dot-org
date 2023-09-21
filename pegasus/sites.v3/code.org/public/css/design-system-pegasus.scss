@@ -972,12 +972,8 @@ form {
 // See code.org/teach for an example
 section.quote {
   background: url("/images/banners/banner-bg-lines-neutral-dark.png") center repeat;
-  background-size: 15%;
+  background-size: 12rem;
   background-color: $neutral-dark;
-
-  @media screen and (max-width: $width-sm) {
-    background-size: 50%;
-  }
 
   p {
     font-size: 1.25rem;
@@ -1266,12 +1262,8 @@ section.quote {
 // See code.org/donate for example
 .action-wrapper {
   background: url("/images/banners/banner-bg-lines-neutral-light.png") center repeat;
-  background-size: 22%;
+  background-size: 10rem;
   background-color: $brand_primary_default;
   border-radius: $border-radius;
   padding: 2rem;
-
-  @media screen and (max-width: $width-md) {
-    background-size: 50%;
-  }
 }
