@@ -39,7 +39,7 @@ class Census::CensusSummary < ApplicationRecord
   def self.seed_all
     Census::CensusSummary.transaction do
       CDO.log.info "Seeding census summary data."
-      AWS::S3.seed_from_file('cdo-census', "access-report-data-files-2023/final_csv/final_csv_2023_08_04.csv") do |filename|
+      AWS::S3.seed_from_file('cdo-census', "access-report-data-files-2023/final_csv/final_csv_2023_09_19.csv") do |filename|
         merge_from_csv(filename) do |row|
           {
             school_id:          row['school_id'],
@@ -65,11 +65,7 @@ class Census::CensusSummary < ApplicationRecord
         parsed = block_given? ? yield(row) : row.to_hash.symbolize_keys
 
         # (As of Sept. 2023) Skip entries with school_id that doesn't match school in our database.
-        # This is likely due to not receiving NCES private school data yet (will be ready in November)
-        # and NCES schools that are being skipped when seeding due to an id conflict issue (tracked
-        # here: https://codedotorg.atlassian.net/browse/ACQ-561). We will skip such entries for now,
-        # and return to ensure all entries are processed once that issue is resolved and we receive
-        # the private school data.
+        # This is likely due to not receiving NCES private school data yet (will be ready in November).
         if School.find_by_id(parsed[:school_id]).nil?
           entries_skipped += 1
           next
