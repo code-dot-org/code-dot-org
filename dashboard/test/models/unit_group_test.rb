@@ -718,9 +718,9 @@ class UnitGroupTest < ActiveSupport::TestCase
 
     [csp_2017, csp_2018, csp_2019, csp_2020].each do |c|
       summary = c.summarize_course_versions(create(:teacher))
-      assert_equal ["Computer Science Principles ('17-'18)", "Computer Science Principles ('18-'19)", "Computer Science Principles ('19-'20)"], summary.values.map {|h| h[:name]}
-      assert_equal [true, true, false], summary.values.map {|h| h[:is_stable]}
-      assert_equal [false, true, false], summary.values.map {|h| h[:is_recommended]}
+      assert_equal(["Computer Science Principles ('17-'18)", "Computer Science Principles ('18-'19)", "Computer Science Principles ('19-'20)"], summary.values.map {|h| h[:name]})
+      assert_equal([true, true, false], summary.values.map {|h| h[:is_stable]})
+      assert_equal([false, true, false], summary.values.map {|h| h[:is_recommended]})
     end
   end
 
@@ -736,9 +736,9 @@ class UnitGroupTest < ActiveSupport::TestCase
 
     [csp_2017, csp_2018, csp_2019, csp_2020].each do |c|
       summary = c.summarize_course_versions(create(:student))
-      assert_equal ["Computer Science Principles ('18-'19)"], summary.values.map {|h| h[:name]}
-      assert_equal [true], summary.values.map {|h| h[:is_stable]}
-      assert_equal [true], summary.values.map {|h| h[:is_recommended]}
+      assert_equal(["Computer Science Principles ('18-'19)"], summary.values.map {|h| h[:name]})
+      assert_equal([true], summary.values.map {|h| h[:is_stable]})
+      assert_equal([true], summary.values.map {|h| h[:is_recommended]})
     end
   end
 
@@ -1177,5 +1177,18 @@ class UnitGroupTest < ActiveSupport::TestCase
     filepath = "#{Rails.root}/test/fixtures/#{unit_group_name}.course"
     UnitGroup.load_from_path(filepath)
     assert UnitGroup.find_by_name(unit_group_name)
+  end
+
+  test 'supported_locale_codes' do
+    csx = create(:unit_group, name: 'csx-2050', published_state: Curriculum::SharedCourseConstants::PUBLISHED_STATE.stable)
+    csx1 = create(:script, name: 'csx1', supported_locales: ['it-IT', 'en-GB', 'zh-TW', 'tlh'])
+    csx2 = create(:script, name: 'csx2', supported_locales: ['it-IT', 'tlh', 'zh-TW', 'es-MX'])
+    csx3 = create(:script, name: 'csx3', supported_locales: ['it-IT', 'en-GB', 'zh-TW'])
+
+    create(:unit_group_unit, position: 1, unit_group: csx, script: csx1)
+    create(:unit_group_unit, position: 2, unit_group: csx, script: csx2)
+    create(:unit_group_unit, position: 3, unit_group: csx, script: csx3)
+
+    assert_equal ['en-US', 'it-IT', 'zh-TW'], csx.supported_locale_codes
   end
 end

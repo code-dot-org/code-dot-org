@@ -481,6 +481,10 @@ function initProjects() {
       teacherHasConfirmedUploadWarning: function () {
         return undefined;
       },
+      setInitialHiddenDefinitions: function (_) {},
+      getHiddenDefinitions: function () {
+        return null;
+      },
       getLevelSource: function () {
         return {
           // This method is expected to return a Promise. Since this file does not go through our

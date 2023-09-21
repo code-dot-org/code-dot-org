@@ -1,5 +1,6 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 41,
   "created_at": "2022-09-21T13:12:25.000Z",
   "level_num": "custom",
@@ -58,7 +59,7 @@
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
-    "makerlab_enabled": "true",
+    "makerlab_enabled": "circuitPlayground",
     "long_instructions": "# Lock/Unlock App\r\n\r\nCreate an app that uses the buttons or toggle switches as if the Circuit Playground were locking or unlocking a device. For example, using the left and right button to lock or unlock the doors in a house as part of an alarm system, or open and close a garage door. You can use design mode elements to represent when the device is locked or unlocked.\r\n\r\nYou may not be able to create the \"perfect\" app yet, but you can develop a **prototype** which shows the general idea of the app and some of the basic features behind how it could work.",
     "parent_level_id": 20595,
     "name_suffix": "_2023",
@@ -72,18 +73,20 @@
       "/courses/csd-2022/guides/circuit-playground",
       "/courses/csd-2022/guides/physical-input",
       "/courses/csd-2022/guides/producing-output",
-      "/courses/csd-2022/guides/board-events"
+      "/courses/csd-2022/guides/board-events",
+      "/maker/setup"
     ],
-    "palette_category_at_start": "Circuit",
     "display_name": "Lock/Unlock App",
     "thumbnail_url": "https://images.code.org/c23af495b29aa1d39d9f0803dabc6f70-image-1649455860507.png",
     "bubble_choice_description": "Create an app prototype where your circuit playground could be used to lock/unlock a device",
     "teacher_markdown": "This level does not contain an exemplar because of how open-ended the directions are. Instead, we encourage you to consider this as a **focused free-play** level: students are free to design an app based on their own interests and creative expression, but focused in a particular area to give some initial guidance. This can be an opportunity to gain insights and offer feedback on the skills students demonstrate while building their app, even if they do not finish the level completely. This type of level can also reinforce the Problem Solving Process as students ideate and develop an app of their own choosing (Define - Prepare - Try - Reflect).\r\n\r\nAs students develop more skills throughout the unit, they may decide to use an idea from this level as the basis for one of their projects or to continue developing on their own time.",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ]
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-21T13:12:25.110+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Board Inputs - ChalG_2222\\\"\"],\"cloned_from\":\"CSD U6 - Board Inputs - ChalG_2222\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-21T13:12:25.110+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Board Inputs - ChalG_2222\\\"\"],\"cloned_from\":\"CSD U6 - Board Inputs - ChalG_2222\"},{\"changed_at\":\"2023-08-16 17:14:03 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"reference_links\",\"palette_category_at_start\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

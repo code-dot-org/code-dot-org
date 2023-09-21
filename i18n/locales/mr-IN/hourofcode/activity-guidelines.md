@@ -14,7 +14,7 @@ Code.org hosts a variety of Hour of Code™ activities, lessons, and videos on t
 
 Want to submit your own self-guided tutorial, teacher-led lesson, or robotics/maker activity that explains a computer science principle? या जागतिक चळवळीत सामील व्हा आणि जगभरातील सहभाग्यांना अवर ऑफ कोड सुरू करण्यासाठी किंवा पुढे जाऊन अनेक-धडे असलेल्या, दिवसभराच्या किंवा आठवडाभराच्या कार्यक्रमात सहभागी होण्यासाठी मदत करा.
 
-**After reading the guidelines, you can submit your activity through our [Hour of Code™ Activity Submission page](https://forms.gle/eeAt6kVuz3RKg5n18). You can submit an activity at any time, but the deadline for inclusion in any given calendar year is October 1. (For example, any activities received after October 1, 2023, will not be listed for 2023's Hour of Code.)** If you have any questions about your activity submission, please reach out to us at support@code.org.
+**After reading the guidelines, you can submit your activity through our [Hour of Code™ Activity and AI Submission page](https://docs.google.com/forms/d/e/1FAIpQLSdsdTKU6pD5qXlPUQWlgrjESRlm2L02wkTcZQuL8hz9OEvzNQ/viewform). You can submit an activity at any time, but the deadline for inclusion in any given calendar year is October 1 for non-AI activities and for 2023, if you are working on an AI submission, the deadline is anytime between now and October 31st.** For clarity, any activities received after October 1, 2023 for non-AI or October 15, 2023 for AI, will not be listed for 2023's Hour of Code. If you have any questions about your activity submission, please reach out to us at support@code.org.
 
 A few tips:
 
@@ -96,13 +96,14 @@ To get a sense of the wide variety of types of tutorials and lesson plans you ca
 
 ## How to submit
 
-Visit the [Hour of Code™ Activity Submission page](https://forms.gle/eeAt6kVuz3RKg5n18) and complete the questions to submit your activity.
+Visit the [Hour of Code™ Activity and AI Submission page](https://docs.google.com/forms/d/e/1FAIpQLSdsdTKU6pD5qXlPUQWlgrjESRlm2L02wkTcZQuL8hz9OEvzNQ/viewform) and complete the questions to submit your activity.
 
 What you’ll need:
 
 * Name and email of the primary contact representing the submitted activity
 * Activity Name (cannot include “Hour of Code” in the name)
 * URL link to the activity
+* Does this activity include AI: Yes or No
 * An activity description (max character count: 400) 
     * Please include in the description whether it’s mainly student-guided or teacher-facilitated. Additionally, some schools are interested in knowing if Hour of Code activities address Common Core or Next Generation Science Standards. If the activity addresses specific standards, consider including this information.
 * Recommended grade level(s) for intended users. You may refer to the \[Computer Science Teachers’ Association’s K-12 Standards\] (https://k12cs.org/framework-statements-by-grade-band/) for grade-appropriate computer science concepts. Example grade levels include: 
@@ -137,7 +138,7 @@ What you’ll need:
         * iOS mobile Safari (mobile-optimized)
         * Android Chrome (mobile-optimized)
     * Non web-based: specify platform for native code (Mac, Win, iOS, Android, xBox, other)
-    * Unplugged
+    * अनप्लग केले
 * Screenshot or marketing image of the Hour of Code activity. Please send at least one image with 4:3 dimensions. It should be at least 520px by 390px. This image should have NO text on it (other than your logo), in order to make it more accessible for non-English speakers. If an appropriate image is not provided, we may take our own screenshot of your tutorial OR we may choose not to list it. All images must be submitted as a URL link to a .jpg, .jpeg, or .png.
 * In order to more accurately track participation, third party tutorial partners need to include 1-pixel tracking images on the first page of their Hour of Code tutorials. See the [Tracking Pixel](#pixel) section below for more details.
 * Upon finishing your activity, users should be directed to [code.org/api/hour/finish](https://code.org/api/hour/finish) where they will be able to: 
@@ -166,7 +167,9 @@ What you’ll need:
 
 ## How activities will be evaluated
 
-A diverse committee of computer science educators will rank submissions based on qualitative and quantitative criteria. All activities that fit the basic criteria will be listed. Teachers will be able to filter and sort to find the best activities for their classroom.
+**For 2023:** AI submissions will have an evaluation process separate from the base coding activities submissions. AI submission will be evaluated based upon level of engagement, creativity, and opportunities for participants to learn about AI.
+
+For traditional coding activities, a diverse committee of computer science educators will rank submissions based on qualitative and quantitative criteria. All activities that fit the basic criteria will be listed. Teachers will be able to filter and sort to find the best activities for their classroom.
 
 The rubric for evaluating activities and lesson plans will look for the following criteria on all activities and rank them accordingly:
 
@@ -203,6 +206,8 @@ Teachers and students will be able to search through and filter our list of acti
 <a id="design"></a>
 
 ## Suggestions for designing one hour self guided tutorials
+
+Activities do not have to include AI, though we are looking to offer more AI related activities.
 
 You can include the [Hour of Code logo](https://hourofcode.com/us/promote/resources#logo) in your tutorial, but this is not required. If you use the Hour of Code logo, see the trademark guidelines below. <u>Under no circumstances can the Code.org logo and name be used.</u> Both are trademarked, and can’t be co-mingled with a 3rd party brand name without express written permission.
 

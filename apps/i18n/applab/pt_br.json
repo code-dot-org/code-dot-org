@@ -34,6 +34,7 @@
   "designElementProperty_zOrder": "profundidade",
   "designElementTheme_classic": "Clássico",
   "designElementTheme_default": "Padrão",
+  "designElement_image": "Imagem",
   "designToolboxDescription": "Arraste os elementos para o seu aplicativo!",
   "designToolboxHeader": "Caixa de ferramentas de design",
   "designWorkspaceDescription": "Clique em um elemento ou escolha-o no menu suspenso abaixo para editar suas propriedades. Crie código em Eventos.",

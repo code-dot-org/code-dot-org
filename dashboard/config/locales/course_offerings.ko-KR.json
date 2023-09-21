@@ -70,6 +70,7 @@
         "hello-world-space": "헬로 월드: 우주",
         "hero": "마인크래프트: 히어로의 여정",
         "hourofcode": "고전 미로게임",
+        "how-ai-works": "AI 작동방법",
         "iceage": "아이스 에이지 Play Lab",
         "infinity": "디즈니 무한 반복 플레이 랩",
         "jigsaw": "직소 퍼즐",
@@ -98,7 +99,6 @@
         "tesstest921": "tesstest921",
         "text-compression": "텍스트 압축",
         "valentine": "발렌타인",
-        "vpl-csp": "CS 원리 가상 전문가 학습",
         "web-development": "웹 개발"
       }
     }

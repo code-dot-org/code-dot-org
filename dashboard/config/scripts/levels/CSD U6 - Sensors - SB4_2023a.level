@@ -1,5 +1,6 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 41,
   "created_at": "2023-03-17T17:04:52.000Z",
   "level_num": "custom",
@@ -51,7 +52,7 @@
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
-    "makerlab_enabled": "true",
+    "makerlab_enabled": "circuitPlayground",
     "disable_procedure_autopopulate": "false",
     "long_instructions": "# Change Event\r\n\r\nThe `data` event is fine if you don't mind your code running constantly, but sometimes that's not the most efficient solution to your problem. The sensor `change` event only fires if the sensor value has changed since the last reading, which can make sure your program isn't running code when it's not necessary.\r\n\r\nLet's write a program that buzzes and updates the screen anytime the temperature sensor changes.\r\n\r\n## Do This\r\n\r\n1) Create an event to check the `tempSensor` when it changes\r\n\t- Drag out an [`onBoardEvent()`(#f78183)](/docs/applab/onBoardEvent/) to check the `tempSensor` for a `change` event\r\n\t- ::: details [**Show Me How**]\r\n    ![](https://images.code.org/6823ee6701d3ce2796fa78fd4679e1e2-image-1648846799197.png)\r\n    :::\r\n2) Play a sound and update the screen when the temperature changes\r\n\t- Inside the [`onBoardEvent()`(#f78183)](/docs/applab/onBoardEvent/) block:\r\n    \t- Have the buzzer make a sound.\r\n        - Update the screen with the new temperature value\r\n\r\n**Run Your Code!** Try placing your thumb over the temperature sensor to warm up the sensor and get it to change. See how your program responds!\r\n\r\n<hr />\r\n\r\n- (Optional): Change the event type to \"data\" and run the program to see what happens. Don't run the program for very long though - you'll hurt your ears!\r\n- ::: details [**Whoa! What Happened?**]\r\n\tThe `data` event happens continuously, which means the code inside it is always happening. This is why you constantly hear the buzzer even when the temperature hasn't changed!\r\n\r\n\tWhen you use the `change` event, the event only happens when a _change_ occurs, which is much less frequent. This is why you only hear the buzzer when the temperature changes\r\n\r\n\tSometimes you can't notice the difference between a \"change\" and \"data\" event, and sometimes it makes a **BIG** difference!\r\n:::\r\n\r\n",
     "start_blocks": "//1) Create an event to check the tempSensor when it changes\r\n//2) Play a sound and update the screen when the temperature changes",
@@ -61,7 +62,8 @@
     "parent_level_id": 20458,
     "name_suffix": "_2023a",
     "reference_links": [
-      "/courses/csd-2022/guides/analog-sensors"
+      "/courses/csd-2022/guides/analog-sensors",
+      "/maker/setup"
     ],
     "map_reference": "/courses/csd-2022/guides/data-and-change-events",
     "mini_rubric": "false",
@@ -71,9 +73,8 @@
     "ai_enabled": "false",
     "preload_asset_list": null
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-03-17T17:04:52.076+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Sensors - SB4_2222\\\"\"],\"cloned_from\":\"CSD U6 - Sensors - SB4_2222\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-03-17T17:04:52.076+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Sensors - SB4_2222\\\"\"],\"cloned_from\":\"CSD U6 - Sensors - SB4_2222\"},{\"changed_at\":\"2023-08-16 19:19:47 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"encrypted_examples\",\"reference_links\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

@@ -1,5 +1,5 @@
 ---
-title: How-to guide for parents
+title: Průvodce pro rodiče
 ---
 
 # Jak dělat Hodinu programování s Vaším dítětem

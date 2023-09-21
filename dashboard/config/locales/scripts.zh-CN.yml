@@ -1795,6 +1795,10 @@ zh-CN:
               display_name: 浏览 Code.org
           name: csa-self-paced-pl
           title: CSA领航教师Code.org导航
+        csa-software-engineering:
+          lessons:
+            lesson-9:
+              name: 设置
         csa-u6-dev:
           lesson_groups:
             lessonGroup-2:
@@ -1871,6 +1875,8 @@ zh-CN:
               display_name: 替补课程
             lessonGroup-6:
               display_name: 单位结束调查
+            lessonGroup-7:
+              display_name: 沙箱
           lessons:
             lesson-1:
               name: 欢迎来到 CSA
@@ -1986,6 +1992,8 @@ zh-CN:
               display_name: 替补课程
             lessonGroup-5:
               display_name: 单位结束调查
+            lessonGroup-6:
+              display_name: 沙箱
           lessons:
             lesson-1:
               name: 属性
@@ -2001,6 +2009,8 @@ zh-CN:
               name: 这个关键字
             lesson-15:
               name: 第 2 单元调查
+            lesson-17:
+              name: 沥青艺术项目 — 第 2 天
             lesson-2:
               name: 无参数构造函数
             lesson-3:
@@ -2084,6 +2094,8 @@ zh-CN:
               display_name: 替补课程
             lessonGroup-5:
               display_name: 单位结束调查
+            lessonGroup-6:
+              display_name: 沙箱
           lessons:
             lesson-1:
               name: 一维（1D）数组
@@ -2097,6 +2109,8 @@ zh-CN:
               name: 社会公益项目数据 [1 天版]
             lesson-14:
               name: 第 3 单元调查
+            lesson-16:
+              name: 沥青艺术项目 — 第 2 天
             lesson-2:
               name: 修改元素
             lesson-3:
@@ -2176,6 +2190,8 @@ zh-CN:
               display_name: 替补课程
             lessonGroup-5:
               display_name: 单位结束调查
+            lessonGroup-6:
+              display_name: 沙箱
           lessons:
             lesson-1:
               name: 抽象数据艺术项目 [1 天版]
@@ -2191,6 +2207,8 @@ zh-CN:
               name: 多选声明
             lesson-15:
               name: 第 4 单元调查
+            lesson-17:
+              name: 沥青艺术项目 — 第 2 天
             lesson-2:
               name: 抽象数据艺术项目
             lesson-3:
@@ -2281,6 +2299,8 @@ zh-CN:
               display_name: 替补课程
             lessonGroup-5:
               display_name: 单位结束调查
+            lessonGroup-6:
+              display_name: 沙箱
           lessons:
             lesson-1:
               name: 二维 (2D) 数组
@@ -2294,6 +2314,8 @@ zh-CN:
               name: 个人叙事项目 [1 天版]
             lesson-14:
               name: 第 5 单元调查
+            lesson-16:
+              name: 沥青艺术项目 — 第 2 天
             lesson-2:
               name: 2D 数组元素
             lesson-3:
@@ -2375,6 +2397,8 @@ zh-CN:
               display_name: 替补课程
             lessonGroup-5:
               display_name: 单位结束调查
+            lessonGroup-6:
+              display_name: 沙箱
           lessons:
             lesson-1:
               name: 项目规划
@@ -2388,6 +2412,8 @@ zh-CN:
               name: 自然语言处理项目 [1 天版]
             lesson-14:
               name: 第 6 单元调查
+            lesson-16:
+              name: 沥青艺术项目 — 第 2 天
             lesson-2:
               name: 子字符串
             lesson-3:
@@ -2472,6 +2498,8 @@ zh-CN:
               display_name: 单位结束调查
             lessonGroup-5:
               display_name: 替补课程
+            lessonGroup-6:
+              display_name: 沙箱
           lessons:
             lesson-1:
               name: 项目规划
@@ -2485,6 +2513,8 @@ zh-CN:
               name: 第 7 单元调查
             lesson-14:
               name: 剧院项目中的创意编程 [1 天版]
+            lesson-16:
+              name: 沥青艺术项目 — 第 2 天
             lesson-2:
               name: 作为参数的对象引用
             lesson-3:
@@ -2587,6 +2617,8 @@ zh-CN:
               display_name: 调查
             lessonGroup-5:
               display_name: 替补课程
+            lessonGroup-6:
+              display_name: 沙箱
           lessons:
             lesson-1:
               name: 项目规划
@@ -2598,6 +2630,8 @@ zh-CN:
               name: 第 8 单元评估
             lesson-13:
               name: 使用控制台项目进行创意编程 [1 天版]
+            lesson-15:
+              name: 沥青艺术项目 — 第 2 天
             lesson-2:
               name: 正在搜索
             lesson-3:
@@ -2688,6 +2722,11 @@ zh-CN:
               display_name: 复习与练习
             lessonGroup-3:
               display_name: 模拟考试
+            lessonGroup-4:
+              display_name: 沙箱
+          lessons:
+            lesson-2:
+              name: 沥青艺术项目 — 第 2 天
           student_description: 本单元通过复习关键概念、练习多选题和自由答题以及强化应试策略，为你准备 AP CSA 考试做好准备。您可以确定优势和需要改进的领域，从而制定个性化的学习计划，集中精力练习并自我评估自己的进度。
         csa9-pilot:
           lesson_groups:
@@ -6876,6 +6915,8 @@ zh-CN:
           description_short: 与许多有趣的人物一起尝试计算机科学的基础知识！
           student_description: 和来自愤怒小鸟，植物大战僵尸，冰川时代中的角色一起来学习计算机科学的基础知识！
           title: 经典迷宫
+        how-ai-works-2023:
+          title: AI 的工作原理
         iceage:
           description: 用冰河世纪游戏实验室创造故事或游戏！
           description_short: 用冰河世纪游戏实验室创造故事或游戏！
@@ -7108,6 +7149,11 @@ zh-CN:
               display_name: 事件
             lessonGroup-7:
               display_name: 课程项目结束
+            lessonGroup-8:
+              display_name: 数据
+          lessons:
+            lesson-1:
+              name: 数据
         nevada-standards-aligned-fourth-grade-2023:
           description: 我们为四年级的学生创建了课程 E。本课程首先介绍了 Sprite Lab 编程工具。学生将学会制作有趣的互动项目，以强化他们将学到的有关在线安全的知识。完成这些课程后，学生将参与更复杂的编程。学生将学习嵌套循环、函数和条件。在课程结束时，学生将结合这些概念来解决具有挑战性的难题。课程以开放式项目结束，学生可以在该项目中创建游戏或绘画。
           description_audience: 年龄：8-12
@@ -7152,6 +7198,11 @@ zh-CN:
               display_name: 事件
             lessonGroup-6:
               display_name: 数据
+            lessonGroup-8:
+              display_name: 计算系统
+          lessons:
+            lesson-1:
+              name: 计算系统
         nevada-standards-aligned-third-grade-2023:
           description: 我们为三年级的学生创建了课程 D。本课程首先回顾了早期课程中的概念，包括循环和事件。之后，学生将加深对算法、嵌套循环以及循环、条件等的理解。
           description_audience: 年龄：7-11
@@ -8344,6 +8395,22 @@ zh-CN:
               name: 模块 6 后期工作：第 6 单元中的字符串方法
           name: vpl-csa-2022
           title: CSA 虚拟专业学习
+        vpl-csa-2023-m1:
+          title: 模块 1
+        vpl-csa-2023-m2:
+          title: 模块 2
+        vpl-csa-2023-m3:
+          title: 模块 3
+        vpl-csa-2023-m4:
+          title: 模块 4
+        vpl-csa-2023-m5:
+          title: 模块 5
+        vpl-csa-2023-m6:
+          title: 模块 6
+        vpl-csa-2023-m7:
+          title: 模块 7
+        vpl-csa-2023-m8:
+          title: 模块 8
         vpl-csd-2020:
           name: vpl-csd-2020
           title: CS Diverys 虚拟专业学习 2020-21
@@ -8371,6 +8438,22 @@ zh-CN:
           title: CS Diverys 虚拟专业学习 2021-22
         vpl-csd-2022:
           title: CS Diverys 虚拟专业学习 2022-23
+        vpl-csd-2023-m1:
+          title: 模块 1
+        vpl-csd-2023-m2:
+          title: 模块 2
+        vpl-csd-2023-m3:
+          title: 模块 3
+        vpl-csd-2023-m4:
+          title: 模块 4
+        vpl-csd-2023-m5:
+          title: 模块 5
+        vpl-csd-2023-m6:
+          title: 模块 6
+        vpl-csd-2023-m7:
+          title: 模块 7
+        vpl-csd-2023-m8:
+          title: 模块 8
         vpl-csd-ci-1:
           description: "这个专业学习模块旨在帮助你准备Code.org的问题解决和计算单元教学。 \n\n**在这个专业学习模块中，你将：**\n\n-
             \  认识问题解决和计算。\n-   实践单元中包含的关键概念。\n-   探索章节结尾项目。\n\n**建议时间：** 30分钟"
@@ -8748,6 +8831,22 @@ zh-CN:
           title: CS 原理虚拟专业学习 21-22
         vpl-csp-2022:
           title: CS 原理虚拟专业学习 22-23
+        vpl-csp-2023-m1:
+          title: 模块 1
+        vpl-csp-2023-m2:
+          title: 模块 2
+        vpl-csp-2023-m3:
+          title: 模块 3
+        vpl-csp-2023-m4:
+          title: 模块 4
+        vpl-csp-2023-m5:
+          title: 模块 5
+        vpl-csp-2023-m6:
+          title: 模块 6
+        vpl-csp-2023-m7:
+          title: 模块 7
+        vpl-csp-2023-m8:
+          title: 模块 8
         web-development-2023:
           lesson_groups:
             lessonGroup-2:

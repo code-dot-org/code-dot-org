@@ -370,6 +370,7 @@ GEM
     factory_bot_rails (6.2.0)
       factory_bot (~> 6.2.0)
       railties (>= 5.0.0)
+    fakefs (2.5.0)
     fakeredis (0.6.0)
       redis (~> 3.2)
     faraday (1.10.3)
@@ -533,6 +534,7 @@ GEM
       builder
       minitest (>= 5.0)
       ruby-progressbar
+    minitest-spec-context (0.0.5)
     minitest-stub-const (0.6)
     mocha (1.1.0)
       metaclass (~> 0.0.1)
@@ -966,6 +968,7 @@ DEPENDENCIES
   execjs
   eyes_selenium (= 3.18.4)
   factory_bot_rails (~> 6.2)
+  fakefs (~> 2.5.0)
   fakeredis
   firebase
   firebase_token_generator
@@ -1000,6 +1003,7 @@ DEPENDENCIES
   minitest (~> 5.15)
   minitest-around
   minitest-reporters (~> 1.2.0.beta3)
+  minitest-spec-context (~> 0.0.3)
   minitest-stub-const (~> 0.6)
   mocha
   mysql2 (>= 0.4.1)

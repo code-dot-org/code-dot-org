@@ -2331,6 +2331,9 @@ mr:
               display_name: डेटा
           description_short: पूर्व-वाचकांसाठी संगणक शास्त्राचा एक परिचय.
         nevada-standards-aligned-first-grade-2023:
+          lessons:
+            lesson-1:
+              name: डेटा
           lesson_groups:
             lessonGroup-2:
               display_name: डिजिटल सिटीझनशिप
@@ -2342,6 +2345,8 @@ mr:
               display_name: ईव्हेंट्स
             lessonGroup-7:
               display_name: अभ्यासक्रमाच्या समाप्तीचा प्रोजेक्ट
+            lessonGroup-8:
+              display_name: डेटा
         nevada-standards-aligned-second-grade-2023:
           lesson_groups:
             lessonGroup-2:
@@ -2383,3 +2388,5 @@ mr:
             lessonGroup-7:
               display_name: अभ्यासक्रमाच्या समाप्तीचा प्रोजेक्ट
           description_short: संगणक शास्त्राच्या मूलभूत गोष्टींच्या सर्व संकल्पना शिका आणि तुमची स्वत:ची कला, गोष्ट किंवा गेम तयार करा.
+        how-ai-works-2023:
+          title: AI कसे कार्य करते

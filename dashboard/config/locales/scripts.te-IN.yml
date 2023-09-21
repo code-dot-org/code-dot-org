@@ -824,6 +824,11 @@ te:
               display_name: ఉచ్చులు
             lessonGroup-6:
               display_name: ఈవెంట్లు
+            lessonGroup-8:
+              display_name: డేటా
+          lessons:
+            lesson-1:
+              name: డేటా
         nevada-standards-aligned-fourth-grade-2023:
           lesson_groups:
             lessonGroup-3:
@@ -851,6 +856,11 @@ te:
               display_name: ఈవెంట్లు
             lessonGroup-6:
               display_name: డేటా
+            lessonGroup-8:
+              display_name: కంప్యూటింగ్ సిస్టమ్స్
+          lessons:
+            lesson-1:
+              name: కంప్యూటింగ్ సిస్టమ్స్
         nevada-standards-aligned-third-grade-2023:
           lesson_groups:
             lessonGroup-2:

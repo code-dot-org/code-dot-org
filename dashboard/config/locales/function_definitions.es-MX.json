@@ -31,7 +31,7 @@
             "name": "dibuja_rectangulo",
             "parameters": {
               "height": "altura",
-              "width": "ancho"
+              "width": "el ancho"
             }
           }
         },
@@ -52,7 +52,7 @@
             "name": "dibujar cuadrado",
             "parameters": {
               "height": "altura",
-              "width": "ancho"
+              "width": "el ancho"
             }
           },
           "jump to controller top left": {
@@ -4793,7 +4793,7 @@
           "rowOfNectar": {
             "name": "filaDeNéctar",
             "parameters": {
-              "width": "ancho"
+              "width": "el ancho"
             }
           }
         },
@@ -4801,7 +4801,7 @@
           "rowOfNectar": {
             "name": "filaDeNéctar",
             "parameters": {
-              "width": "ancho"
+              "width": "el ancho"
             }
           }
         },
@@ -4809,7 +4809,7 @@
           "rowOfNectarOrHoney": {
             "name": "filaDeNéctarOMiel",
             "parameters": {
-              "width": "ancho"
+              "width": "el ancho"
             }
           }
         },
@@ -4817,7 +4817,7 @@
           "rowOfNectarOrHoney": {
             "name": "filaDeNéctarOMiel",
             "parameters": {
-              "width": "ancho"
+              "width": "el ancho"
             }
           }
         },
@@ -4825,7 +4825,7 @@
           "rowOfNectarOrHoney": {
             "name": "filaDeNéctarOMiel",
             "parameters": {
-              "width": "ancho"
+              "width": "el ancho"
             }
           }
         },

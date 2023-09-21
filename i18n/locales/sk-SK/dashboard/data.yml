@@ -732,7 +732,13 @@ sk:
         csa_sorting_algorithms: 'CSA: Triediace algoritmy'
         star_quilts_intro_to_artist: 'Hviezdne deky: Úvod do umelca'
         upload_sprites_backgrounds: Nahrávanie vlastných škriatkov a pozadia
+        how-ai-works-llms-full: Ako fungujú chatboty a veľké jazykové modely
         how-ai-works-creativity-full: Má AI kreativitu a predstavivosť?
+        how-ai-works-llms-part1: Chatboty a veľké jazykové modely Časť 1
+        how-ai-works-llms-part2: Chatboty a veľké jazykové modely, časť 2
+        llms-cobranded: 'Ako funguje AI: Chatboty a veľké jazykové modely'
+        generative-ai-cobranded: 'Ako funguje AI: Generatívna AI'
+        what-is-creativity: Čo je Kreativita?
     callout:
       text:
         drag_blocks: Chyť blok "posuň sa" a pripoj ho pod už použitý blok

@@ -1,5 +1,5 @@
 ---
-title: Sample Resolution Supportive of Computer Science Education Week and Hour of Code
+title: Vzorec Resolucija Podpora računalniške znanosti izobraževanje teden in Ura kode
 ---
 
 {{ signup_button }}

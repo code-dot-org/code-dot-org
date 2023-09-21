@@ -1,5 +1,3 @@
-// TODO: Fix all prop types for this file.
-/* eslint-disable react/prop-types */
 import React, {createRef, useEffect} from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
@@ -193,6 +191,9 @@ const programmingExpressionShape = PropTypes.shape({
   tips: PropTypes.string,
   video: PropTypes.object,
   imageUrl: PropTypes.string,
+  blockName: PropTypes.string,
+  parameters: PropTypes.arrayOf(PropTypes.object),
+  examples: PropTypes.arrayOf(PropTypes.object),
 });
 
 ProgrammingExpressionOverview.propTypes = {

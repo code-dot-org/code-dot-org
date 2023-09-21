@@ -5362,6 +5362,8 @@ uz:
           student_description: '"Angry Birds", "Plants vs Zombies" va "Ice Age" o‘yinidagi
             Skrat personajlari bilan kompyuter savodxonligi asoslarini sinab ko‘ring!'
           title: Klassik labirint
+        how-ai-works-2023:
+          title: SI (AI) qanday ishlaydi
         iceage:
           description: Muzlik Davri Play Lab yordamida hikoya yoki o‘yin yarating!
           description_short: Muzlik Davri Play Lab yordamida hikoya yoki o‘yin yarating!
@@ -5523,6 +5525,11 @@ uz:
               display_name: Hodisalar
             lessonGroup-7:
               display_name: End of Course Project
+            lessonGroup-8:
+              display_name: Maʼlumotlar
+          lessons:
+            lesson-1:
+              name: Maʼlumotlar
         nevada-standards-aligned-fourth-grade-2023:
           description_audience: 'Yosh: 8-12'
           lesson_groups:
@@ -5561,6 +5568,11 @@ uz:
               display_name: Hodisalar
             lessonGroup-6:
               display_name: Maʼlumotlar
+            lessonGroup-8:
+              display_name: Hisoblash tizimlari
+          lessons:
+            lesson-1:
+              name: Hisoblash tizimlari
         nevada-standards-aligned-third-grade-2023:
           description_audience: 'Yosh: 7-11'
           description_short: Learn about conditional statements. Create your own art,
@@ -6071,6 +6083,22 @@ uz:
           lessons:
             lesson-3:
               name: Baholash
+        vpl-csa-2023-m1:
+          title: Modul 1
+        vpl-csa-2023-m2:
+          title: Modul 2
+        vpl-csa-2023-m3:
+          title: Modul 3
+        vpl-csa-2023-m4:
+          title: Modul 4
+        vpl-csa-2023-m5:
+          title: Modul 5
+        vpl-csa-2023-m6:
+          title: Modul 6
+        vpl-csa-2023-m7:
+          title: Modul 7
+        vpl-csa-2023-m8:
+          title: Modul 8
         vpl-csd-2021:
           lesson_groups:
             CSD_Module 1:
@@ -6089,6 +6117,22 @@ uz:
               display_name: Modul 7
             CSD_Module 8:
               display_name: Modul 8
+        vpl-csd-2023-m1:
+          title: Modul 1
+        vpl-csd-2023-m2:
+          title: Modul 2
+        vpl-csd-2023-m3:
+          title: Modul 3
+        vpl-csd-2023-m4:
+          title: Modul 4
+        vpl-csd-2023-m5:
+          title: Modul 5
+        vpl-csd-2023-m6:
+          title: Modul 6
+        vpl-csd-2023-m7:
+          title: Modul 7
+        vpl-csd-2023-m8:
+          title: Modul 8
         vpl-csd1-ayw-pilot-2022:
           lessons:
             lesson-6:
@@ -6101,6 +6145,22 @@ uz:
           name: vpl-csp-2020
         vpl-csp-2021:
           name: vpl-csp-2021
+        vpl-csp-2023-m1:
+          title: Modul 1
+        vpl-csp-2023-m2:
+          title: Modul 2
+        vpl-csp-2023-m3:
+          title: Modul 3
+        vpl-csp-2023-m4:
+          title: Modul 4
+        vpl-csp-2023-m5:
+          title: Modul 5
+        vpl-csp-2023-m6:
+          title: Modul 6
+        vpl-csp-2023-m7:
+          title: Modul 7
+        vpl-csp-2023-m8:
+          title: Modul 8
         web-development-2023:
           lesson_groups:
             lessonGroup-4:

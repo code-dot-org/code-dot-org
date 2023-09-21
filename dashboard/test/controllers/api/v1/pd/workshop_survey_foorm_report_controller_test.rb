@@ -270,7 +270,7 @@ module Api::V1::Pd
         'surveys/pd/workshop_csf_intro_post_test',
         'surveys/pd/csd_csp_facilitator_post_survey'
       ]
-      assert_equal form_names, response.map {|h| h['name']}
+      assert_equal(form_names, response.map {|h| h['name']})
 
       sign_in @workshop_admin
 

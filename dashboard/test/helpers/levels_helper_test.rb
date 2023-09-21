@@ -234,9 +234,9 @@ class LevelsHelperTest < ActionView::TestCase
 
     callouts = select_and_remember_callouts
 
-    assert callouts.any? {|callout| callout['id'] == callout1.id}
-    assert callouts.any? {|callout| callout['id'] == callout2.id}
-    assert callouts.none? {|callout| callout['id'] == irrelevant_callout.id}
+    assert(callouts.any? {|callout| callout['id'] == callout1.id})
+    assert(callouts.any? {|callout| callout['id'] == callout2.id})
+    assert(callouts.none? {|callout| callout['id'] == irrelevant_callout.id})
   end
 
   test "should localize callouts" do
@@ -249,7 +249,7 @@ class LevelsHelperTest < ActionView::TestCase
 
     callouts = select_and_remember_callouts
 
-    assert callouts.any? {|c| c['localized_text'] == 'Hit "Run" to try your program'}
+    assert(callouts.any? {|c| c['localized_text'] == 'Hit "Run" to try your program'})
   end
 
   test 'app_options returns camelCased view option on Blockly level' do

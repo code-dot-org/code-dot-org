@@ -299,6 +299,7 @@
         "CSD U1 processing guess_2021": {
           "1": "1",
           "10": "10",
+          "100": "100",
           "11": "11",
           "12": "12",
           "13": "13",
@@ -388,6 +389,7 @@
         "CSD U1 processing guess_2022": {
           "1": "1",
           "10": "10",
+          "100": "100",
           "11": "11",
           "12": "12",
           "13": "13",
@@ -855,6 +857,13 @@
           "4": "4",
           "5": "5"
         },
+        "CSD U6 - Accelerometer - ChalA_2222": {
+          "pitch:": "pitch:",
+          "roll:": "roll:"
+        },
+        "CSD U6 - Accelerometer - PA_2222": {
+          "Game Over": "Game Over"
+        },
         "CSD U6 - Accelerometer - PB_2222": {
           "0": "0"
         },
@@ -864,47 +873,133 @@
         "CSD U6 - Accelerometer - PF_2222": {
           "0": "0"
         },
+        "CSD U6 - Accelerometer - SB1_2222": {
+          "pitch:": "pitch:",
+          "roll:": "roll:"
+        },
         "CSD U6 - Board Inputs - SB1_2222": {
-          "Success!": "Успіху!"
+          "Board Not Detected!": "Дошку не виявлено",
+          "Follow the instructions in this level, then plug in your board and press Run": "Дотримуйтесь інструкцій на цьому рівні, потім підключіть плату та натисніть Запустити",
+          "Plug the board into a different USB": "Підключіть дошку до іншого порту USB",
+          "Refresh this page and try again": "Оновіть сторінку і спробуйте знову",
+          "Success!": "Успіху!",
+          "Try the following:": "Спробуйте таке:",
+          "Visit studio.code.org/maker/setup": "Зайдіть на studio.code.org/maker/setup"
         },
         "CSD U6 - Board Inputs - SB2_2222": {
-          "Success!": "Успіху!"
+          "Board Not Detected!": "Дошку не виявлено",
+          "Follow the instructions in this level, then plug in your board and press Run": "Follow the instructions in this level, then plug in your board and press Run",
+          "Plug the board into a different USB": "Підключіть дошку до іншого порту USB",
+          "Refresh this page and try again": "Оновіть сторінку і спробуйте знову",
+          "Success!": "Успіху!",
+          "Try the following:": "Спробуйте таке:",
+          "Visit studio.code.org/maker/setup": "Зайдіть на studio.code.org/maker/setup"
         },
         "CSD U6 - Board Inputs - SB3_2222": {
-          "Success!": "Успіху!"
+          "Board Not Detected!": "Дошку не виявлено",
+          "Follow the instructions in this level, then plug in your board and press Run": "Follow the instructions in this level, then plug in your board and press Run",
+          "Plug the board into a different USB": "Підключіть дошку до іншого порту USB",
+          "Refresh this page and try again": "Оновіть сторінку і спробуйте знову",
+          "Success!": "Успіху!",
+          "Try the following:": "Спробуйте таке:",
+          "Visit studio.code.org/maker/setup": "Зайдіть на studio.code.org/maker/setup"
         },
         "CSD U6 - Board Outputs - A_2222": {
           "Happy": "Щаслива"
         },
         "CSD U6 - Board Outputs - P_2222": {
-          "Success!": "Успіху!"
+          "Board Not Detected!": "Дошку не виявлено",
+          "Click Me": "Клацни тут",
+          "Plug the board into a different USB": "Підключіть дошку до іншого порту USB",
+          "Refresh this page and try again": "Оновіть сторінку і спробуйте знову",
+          "Success!": "Успіху!",
+          "Try the following:": "Спробуйте таке:",
+          "Visit studio.code.org/maker/setup": "Зайдіть на studio.code.org/maker/setup"
+        },
+        "CSD U6 - Board Outputs - PracD_2222": {
+          "100": "100",
+          "200": "200",
+          "300": "300",
+          "400": "400",
+          "500": "500",
+          "600": "600",
+          "700": "700",
+          "800": "800",
+          "900": "900"
+        },
+        "CSD U6 - Board Outputs - PracE_2222": {
+          "1 Second": "1 секунда",
+          "100 Milliseconds": "100 мілісекунд",
+          "2 Seconds": "2 секунди",
+          "4 Seconds": "4 секунди",
+          "Half a Second": "Пів секунди",
+          "Quarter of a Second": "Чверть секунди"
         },
         "CSD U6 - Board Outputs - SB1_2222": {
-          "Success!": "Успіху!"
+          "Board Not Detected!": "Дошку не виявлено",
+          "Plug the board into a different USB": "Підключіть дошку до іншого порту USB",
+          "Refresh this page and try again": "Оновіть сторінку і спробуйте знову",
+          "Success!": "Успіху!",
+          "Try the following:": "Спробуйте таке:",
+          "Visit studio.code.org/maker/setup": "Зайдіть на studio.code.org/maker/setup"
         },
         "CSD U6 - Board Outputs - SB2_2222": {
-          "Success!": "Успіху!"
+          "Board Not Detected!": "Дошку не виявлено",
+          "Plug the board into a different USB": "Підключіть дошку до іншого порту USB",
+          "Refresh this page and try again": "Оновіть сторінку і спробуйте знову",
+          "Success!": "Успіху!",
+          "Try the following:": "Спробуйте таке:",
+          "Visit studio.code.org/maker/setup": "Зайдіть на studio.code.org/maker/setup"
         },
         "CSD U6 - Board Outputs - SB4_2222": {
           "Fish": "Риба"
         },
         "CSD U6 - Board Outputs - Setup_2222": {
-          "Success!": "Успіху!"
+          "Board Not Detected!": "Дошку не виявлено",
+          "Connect your board to an LED, then plug it in and press Run": "Підключіть плату до світлодіода, потім підключіть її та натисніть Run",
+          "Plug the board into a different USB": "Підключіть дошку до іншого порту USB",
+          "Refresh this page and try again": "Оновіть сторінку і спробуйте знову",
+          "Success!": "Успіху!",
+          "Try the following:": "Спробуйте таке:",
+          "Visit studio.code.org/maker/setup": "Зайдіть на studio.code.org/maker/setup"
         },
         "CSD U6 - Color LEDs - ChalD_2222": {
           "East": "Схід",
           "North": "Північ",
+          "Off": "Off",
           "South": "Південь",
           "West": "Захід"
         },
         "CSD U6 - Color LEDs - PracA_2222": {
-          "Success!": "Успіху!"
+          "Board Not Detected!": "Дошку не виявлено",
+          "Follow the instructions in this level, then plug in your board and press Run": "Follow the instructions in this level, then plug in your board and press Run",
+          "Plug the board into a different USB": "Підключіть дошку до іншого порту USB",
+          "Refresh this page and try again": "Оновіть сторінку і спробуйте знову",
+          "Success!": "Успіху!",
+          "Try the following:": "Спробуйте таке:",
+          "Visit studio.code.org/maker/setup": "Зайдіть на studio.code.org/maker/setup"
+        },
+        "CSD U6 - Color LEDs - PracC_2222": {
+          "OFF": "OFF",
+          "ON": "ON"
         },
         "CSD U6 - Color LEDs - SB2_2222": {
-          "Success!": "Успіху!"
+          "Board Not Detected!": "Дошку не виявлено",
+          "Follow the instructions in this level, then plug in your board and press Run": "Follow the instructions in this level, then plug in your board and press Run",
+          "Plug the board into a different USB": "Підключіть дошку до іншого порту USB",
+          "Refresh this page and try again": "Оновіть сторінку і спробуйте знову",
+          "Success!": "Успіху!",
+          "Try the following:": "Спробуйте таке:",
+          "Visit studio.code.org/maker/setup": "Зайдіть на studio.code.org/maker/setup"
         },
         "CSD U6 - Color LEDs - SB3_2222": {
-          "Success!": "Успіху!"
+          "Board Not Detected!": "Дошку не виявлено",
+          "Follow the instructions in this level, then plug in your board and press Run": "Follow the instructions in this level, then plug in your board and press Run",
+          "Plug the board into a different USB": "Підключіть дошку до іншого порту USB",
+          "Refresh this page and try again": "Оновіть сторінку і спробуйте знову",
+          "Success!": "Успіху!",
+          "Try the following:": "Спробуйте таке:",
+          "Visit studio.code.org/maker/setup": "Зайдіть на studio.code.org/maker/setup"
         },
         "CSD U6 - Color LEDs - SB4_2222": {
           "Medium": "Середній"
@@ -918,9 +1013,13 @@
           "yellow": "жовтий"
         },
         "CSD U6 - Combine Inputs - CA_2022": {
+          "blink": "blink",
           "fast": "швидко",
+          "high": "high",
           "long": "довго",
+          "low": "low",
           "on": "далі",
+          "pulse": "pulse",
           "short": "коротко",
           "slow": "повільно"
         },
@@ -929,9 +1028,16 @@
           "Green": "Зелена",
           "Red": "Червона"
         },
+        "CSD U6 - Combine Inputs - P_2222": {
+          "Off": "Off"
+        },
         "CSD U6 - Combine Inputs - PracA_2222": {
+          "LED Control": "LED Control",
           "left": "ліворуч",
           "right": "праворуч"
+        },
+        "CSD U6 - Combine Inputs - PracB_2222": {
+          "bright": "bright"
         },
         "CSD U6 - Combine Inputs - PracC_2222": {
           "blue": "синій",
@@ -940,14 +1046,22 @@
           "yellow": "жовтий"
         },
         "CSD U6 - Combine Inputs - PracD_2222": {
+          "Test": "Test",
           "quiet": "тихо"
+        },
+        "CSD U6 - Combine Inputs - SB1_2222": {
+          "Off": "Off",
+          "blink": "blink",
+          "pulse": "pulse"
         },
         "CSD U6 - Combine Inputs - SB2_2222": {
           "long": "довго",
           "short": "коротко"
         },
         "CSD U6 - Combine Inputs - SB3_2222": {
+          "high": "high",
           "long": "довго",
+          "low": "low",
           "short": "коротко"
         },
         "CSD U6 - Combine Inputs - SB4_2222": {
@@ -956,7 +1070,8 @@
         },
         "CSD U6 - Functions - P2C_2222": {
           "Blue": "Синя",
-          "Red": "Червона"
+          "Red": "Червона",
+          "Yellow": "Yellow"
         },
         "CSD U6 - Functions - P_2222": {
           "0": "0"
@@ -976,7 +1091,11 @@
           "0": "0"
         },
         "CSD U6 - Music - A_2222": {
-          "Happy": "Щаслива"
+          "Happy": "Щаслива",
+          "Sad": "Sad"
+        },
+        "CSD U6 - Music - ChalC_2222": {
+          "Alarm Clock Settings": "Alarm Clock Settings"
         },
         "CSD U6 - Music - ChalD_2222": {
           "A": "А",
@@ -987,23 +1106,55 @@
           "F": "Ґ",
           "G": "Д"
         },
+        "CSD U6 - Music - P_2222": {
+          "261": "261",
+          "329": "329",
+          "392": "392",
+          "493": "493",
+          "B4": "B4",
+          "C4": "C4",
+          "E4": "E4",
+          "G4": "G4"
+        },
         "CSD U6 - Music - Piano_2222": {
           "A": "А",
+          "A#": "A#",
           "B": "Б",
           "C": "В",
+          "C#": "C#",
           "D": "Г",
+          "D#": "D#",
           "E": "Сх",
           "F": "Ґ",
-          "G": "Д"
+          "F#": "F#",
+          "G": "Д",
+          "G#": "G#",
+          "Note:": "Note:"
         },
         "CSD U6 - Music - SB1_2222": {
           "A": "А",
+          "A#": "A#",
           "B": "Б",
           "C": "В",
+          "C#": "C#",
           "D": "Г",
+          "D#": "D#",
           "E": "Сх",
           "F": "Ґ",
-          "G": "Д"
+          "F#": "F#",
+          "G": "Д",
+          "G#": "G#"
+        },
+        "CSD U6 - Music - SB2.2_2022": {
+          "Click the buttons from top to bottom to hear a song!": "Натисніть кнопки зверху вниз, щоб почути пісню!",
+          "Note 1": "Note 1",
+          "Note 2": "Note 2",
+          "Note 3": "Note 3",
+          "Note 4": "Note 4",
+          "Note 5": "Note 5",
+          "Note 6": "Note 6",
+          "Note 7": "Note 7",
+          "Note 8": "Note 8"
         },
         "CSD U6 - Music - SB2.5_2222": {
           "A": "А",
@@ -1014,73 +1165,191 @@
           "F": "Ґ",
           "G": "Д"
         },
+        "CSD U6 - Music - SB2_2222": {
+          "C1": "C1",
+          "C2": "C2",
+          "C3": "C3",
+          "C4": "C4",
+          "C5": "C5",
+          "C6": "C6",
+          "C7": "C7",
+          "C8": "C8"
+        },
         "CSD U6 - Music - SB3_2222": {
           "A": "А",
+          "A#": "A#",
           "B": "Б",
           "C": "В",
+          "C#": "C#",
           "D": "Г",
+          "D#": "D#",
           "E": "Сх",
           "F": "Ґ",
-          "G": "Д"
+          "F#": "F#",
+          "G": "Д",
+          "G#": "G#"
         },
         "CSD U6 - Music - SB4_2222": {
-          "Success!": "Успіху!"
+          "Board Not Detected!": "Дошку не виявлено",
+          "Follow the instructions in this level, then plug in your board and press Run": "Дотримуйтесь інструкцій на цьому рівні, потім підключіть плату та натисніть Запустити",
+          "Plug the board into a different USB": "Підключіть дошку до іншого порту USB",
+          "Refresh this page and try again": "Оновіть сторінку і спробуйте знову",
+          "Success!": "Успіху!",
+          "Try the following:": "Спробуйте таке:",
+          "Visit studio.code.org/maker/setup": "Зайдіть на studio.code.org/maker/setup"
         },
         "CSD U6 - Physical Input - A_2222": {
           "1": "1",
           "2": "2"
         },
         "CSD U6 - Physical Input - ChalA_2222": {
-          "Success!": "Успіху!"
+          "Board Not Detected!": "Дошку не виявлено",
+          "Follow the instructions in this level, then plug in your board and press Run": "Follow the instructions in this level, then plug in your board and press Run",
+          "Plug the board into a different USB": "Підключіть дошку до іншого порту USB",
+          "Refresh this page and try again": "Оновіть сторінку і спробуйте знову",
+          "Success!": "Успіху!",
+          "Try the following:": "Спробуйте таке:",
+          "Visit studio.code.org/maker/setup": "Зайдіть на studio.code.org/maker/setup"
         },
         "CSD U6 - Physical Input - ChalB_2222": {
-          "Success!": "Успіху!"
+          "Board Not Detected!": "Дошку не виявлено",
+          "Follow the instructions in this level, then plug in your board and press Run": "Follow the instructions in this level, then plug in your board and press Run",
+          "Plug the board into a different USB": "Підключіть дошку до іншого порту USB",
+          "Refresh this page and try again": "Оновіть сторінку і спробуйте знову",
+          "Success!": "Успіху!",
+          "Try the following:": "Спробуйте таке:",
+          "Visit studio.code.org/maker/setup": "Зайдіть на studio.code.org/maker/setup"
         },
         "CSD U6 - Physical Input - ChalC_2222": {
-          "Success!": "Успіху!"
+          "Board Not Detected!": "Дошку не виявлено",
+          "Follow the instructions in this level, then plug in your board and press Run": "Follow the instructions in this level, then plug in your board and press Run",
+          "Plug the board into a different USB": "Підключіть дошку до іншого порту USB",
+          "Refresh this page and try again": "Оновіть сторінку і спробуйте знову",
+          "Success!": "Успіху!",
+          "Try the following:": "Спробуйте таке:",
+          "Visit studio.code.org/maker/setup": "Зайдіть на studio.code.org/maker/setup"
         },
         "CSD U6 - Physical Input - PA_2222": {
           "0": "0",
           "Score": "Рахунок"
         },
         "CSD U6 - Physical Input - PC_2222": {
-          "Success!": "Успіху!"
+          "Board Not Detected!": "Дошку не виявлено",
+          "Follow the instructions in this level, then plug in your board and press Run": "Follow the instructions in this level, then plug in your board and press Run",
+          "Plug the board into a different USB": "Підключіть дошку до іншого порту USB",
+          "Refresh this page and try again": "Оновіть сторінку і спробуйте знову",
+          "Success!": "Успіху!",
+          "Try the following:": "Спробуйте таке:",
+          "Visit studio.code.org/maker/setup": "Зайдіть на studio.code.org/maker/setup"
         },
         "CSD U6 - Physical Input - PD_2222": {
-          "Success!": "Успіху!"
+          "Board Not Detected!": "Дошку не виявлено",
+          "Follow the instructions in this level, then plug in your board and press Run": "Follow the instructions in this level, then plug in your board and press Run",
+          "Plug the board into a different USB": "Підключіть дошку до іншого порту USB",
+          "Refresh this page and try again": "Оновіть сторінку і спробуйте знову",
+          "Success!": "Успіху!",
+          "Try the following:": "Спробуйте таке:",
+          "Visit studio.code.org/maker/setup": "Зайдіть на studio.code.org/maker/setup"
         },
         "CSD U6 - Physical Input - SB1_2222": {
-          "Success!": "Успіху!"
+          "Board Not Detected!": "Дошку не виявлено",
+          "Follow the instructions in this level, then plug in your board and press Run": "Follow the instructions in this level, then plug in your board and press Run",
+          "Plug the board into a different USB": "Підключіть дошку до іншого порту USB",
+          "Refresh this page and try again": "Оновіть сторінку і спробуйте знову",
+          "Success!": "Успіху!",
+          "Try the following:": "Спробуйте таке:",
+          "Visit studio.code.org/maker/setup": "Зайдіть на studio.code.org/maker/setup"
         },
         "CSD U6 - Physical Output - ChalA_2222": {
-          "Success!": "Успіху!"
+          "Board Not Detected!": "Дошку не виявлено",
+          "Follow the instructions in this level, then plug in your board and press Run": "Follow the instructions in this level, then plug in your board and press Run",
+          "Plug the board into a different USB": "Підключіть дошку до іншого порту USB",
+          "Refresh this page and try again": "Оновіть сторінку і спробуйте знову",
+          "Success!": "Успіху!",
+          "Try the following:": "Спробуйте таке:",
+          "Visit studio.code.org/maker/setup": "Зайдіть на studio.code.org/maker/setup"
         },
         "CSD U6 - Physical Output - ChalB_2222": {
-          "Success!": "Успіху!"
+          "Board Not Detected!": "Дошку не виявлено",
+          "Follow the instructions in this level, then plug in your board and press Run": "Follow the instructions in this level, then plug in your board and press Run",
+          "Plug the board into a different USB": "Підключіть дошку до іншого порту USB",
+          "Refresh this page and try again": "Оновіть сторінку і спробуйте знову",
+          "Success!": "Успіху!",
+          "Try the following:": "Спробуйте таке:",
+          "Visit studio.code.org/maker/setup": "Зайдіть на studio.code.org/maker/setup"
         },
         "CSD U6 - Physical Output - ChalC_2222": {
-          "Success!": "Успіху!"
+          "Board Not Detected!": "Дошку не виявлено",
+          "Follow the instructions in this level, then plug in your board and press Run": "Follow the instructions in this level, then plug in your board and press Run",
+          "Plug the board into a different USB": "Підключіть дошку до іншого порту USB",
+          "Refresh this page and try again": "Оновіть сторінку і спробуйте знову",
+          "Success!": "Успіху!",
+          "Try the following:": "Спробуйте таке:",
+          "Visit studio.code.org/maker/setup": "Зайдіть на studio.code.org/maker/setup"
+        },
+        "CSD U6 - Physical Output - PA_2222": {
+          "Off": "Off",
+          "On": "On"
         },
         "CSD U6 - Physical Output - PB_2222": {
-          "Success!": "Успіху!"
+          "Board Not Detected!": "Дошку не виявлено",
+          "Follow the instructions in this level, then plug in your board and press Run": "Follow the instructions in this level, then plug in your board and press Run",
+          "Plug the board into a different USB": "Підключіть дошку до іншого порту USB",
+          "Refresh this page and try again": "Оновіть сторінку і спробуйте знову",
+          "Success!": "Успіху!",
+          "Try the following:": "Спробуйте таке:",
+          "Visit studio.code.org/maker/setup": "Зайдіть на studio.code.org/maker/setup"
         },
         "CSD U6 - Physical Output - PC_2222": {
-          "Success!": "Успіху!"
+          "Board Not Detected!": "Дошку не виявлено",
+          "Follow the instructions in this level, then plug in your board and press Run": "Follow the instructions in this level, then plug in your board and press Run",
+          "Plug the board into a different USB": "Підключіть дошку до іншого порту USB",
+          "Refresh this page and try again": "Оновіть сторінку і спробуйте знову",
+          "Success!": "Успіху!",
+          "Try the following:": "Спробуйте таке:",
+          "Visit studio.code.org/maker/setup": "Зайдіть на studio.code.org/maker/setup"
         },
         "CSD U6 - Physical Output - P_2222": {
-          "Success!": "Успіху!"
+          "Board Not Detected!": "Дошку не виявлено",
+          "Connect your board to an LED, then plug it in and press Run": "Підключіть плату до світлодіода, потім підключіть її та натисніть Run",
+          "Plug the board into a different USB": "Підключіть дошку до іншого порту USB",
+          "Refresh this page and try again": "Оновіть сторінку і спробуйте знову",
+          "Success!": "Успіху!",
+          "Try the following:": "Спробуйте таке:",
+          "Visit studio.code.org/maker/setup": "Зайдіть на studio.code.org/maker/setup"
         },
         "CSD U6 - Physical Output - SB1_2222": {
-          "Success!": "Успіху!"
+          "Board Not Detected!": "Дошку не виявлено",
+          "Follow the instructions in this level, then plug in your board and press Run": "Follow the instructions in this level, then plug in your board and press Run",
+          "Plug the board into a different USB": "Підключіть дошку до іншого порту USB",
+          "Refresh this page and try again": "Оновіть сторінку і спробуйте знову",
+          "Success!": "Успіху!",
+          "Try the following:": "Спробуйте таке:",
+          "Visit studio.code.org/maker/setup": "Зайдіть на studio.code.org/maker/setup"
         },
         "CSD U6 - Physical Output - SB2.2_2222": {
-          "Success!": "Успіху!"
+          "Board Not Detected!": "Дошку не виявлено",
+          "Follow the instructions in this level, then plug in your board and press Run": "Follow the instructions in this level, then plug in your board and press Run",
+          "Plug the board into a different USB": "Підключіть дошку до іншого порту USB",
+          "Refresh this page and try again": "Оновіть сторінку і спробуйте знову",
+          "Success!": "Успіху!",
+          "Try the following:": "Спробуйте таке:",
+          "Visit studio.code.org/maker/setup": "Зайдіть на studio.code.org/maker/setup"
         },
         "CSD U6 - Physical Output - SB2_2222": {
-          "Success!": "Успіху!"
+          "Board Not Detected!": "Дошку не виявлено",
+          "Follow the instructions in this level, then plug in your board and press Run": "Follow the instructions in this level, then plug in your board and press Run",
+          "Plug the board into a different USB": "Підключіть дошку до іншого порту USB",
+          "Refresh this page and try again": "Оновіть сторінку і спробуйте знову",
+          "Success!": "Успіху!",
+          "Try the following:": "Спробуйте таке:",
+          "Visit studio.code.org/maker/setup": "Зайдіть на studio.code.org/maker/setup"
         },
         "CSD U6 - Screen Inputs - A_2222": {
           "Name:": "Ім’я:"
+        },
+        "CSD U6 - Screen Inputs - ChalA_2222": {
+          "Excitement Meter": "Excitement Meter"
         },
         "CSD U6 - Screen Inputs - ChalB_2222": {
           "Blue": "Синя",
@@ -1094,6 +1363,19 @@
           "Red": "Червона",
           "Save": "Зберегти"
         },
+        "CSD U6 - Screen Inputs - PracA_2222": {
+          "image://bathroom.png": "image://bathroom.png",
+          "image://bedroom.png": "image://bedroom.png",
+          "image://bunny.png": "image://bunny.png",
+          "image://cat.png": "image://cat.png",
+          "image://dog.png": "image://dog.png",
+          "image://fireplace.png": "image://fireplace.png",
+          "image://kitchen.png": "image://kitchen.png",
+          "image://pig.png": "image://pig.png"
+        },
+        "CSD U6 - Screen Inputs - PracB_2222": {
+          "Create!": "Create!"
+        },
         "CSD U6 - Screen Inputs - PracD_2222": {
           "0": "0"
         },
@@ -1105,11 +1387,26 @@
           "white": "білий"
         },
         "CSD U6 - Screen Inputs - SB2.2_2022": {
+          "Update Background": "Update Background",
           "black": "чорний",
           "white": "білий"
         },
+        "CSD U6 - Screen Inputs - SB4_2222": {
+          "Height:": "Height:",
+          "Update!": "Update!",
+          "Width:": "Width:"
+        },
+        "CSD U6 - Screen Inputs - SB5_2222": {
+          "Height:": "Height:",
+          "Update!": "Update!",
+          "Width:": "Width:"
+        },
+        "CSD U6 - Screen Outputs - ChalA_2222": {
+          "OFF": "OFF"
+        },
         "CSD U6 - Screen Outputs - ChalB_2222": {
           "?": "?",
+          "Emotion Machine": "Emotion Machine",
           "Happy": "Щаслива"
         },
         "CSD U6 - Screen Outputs - P_2222": {
@@ -1128,20 +1425,41 @@
           "up": "вгору"
         },
         "CSD U6 - Screen Outputs - SB1.1_2222": {
+          "Welcome To My App!": "Welcome To My App!",
           "name": "ім’я"
         },
         "CSD U6 - Sensors - A_2222": {
           "0": "0"
+        },
+        "CSD U6 - Sensors - ChalC_2222": {
+          "Volume Meter!": "Volume Meter!"
         },
         "CSD U6 - Sensors - PC_2222": {
           "off": "вимкнено",
           "on": "далі"
         },
         "CSD U6 - Sensors - P_2222": {
+          "high": "high",
+          "low": "low",
           "text": "текст"
         },
+        "CSD U6 - Sensors - SB1_2222": {
+          "value": "value"
+        },
         "CSD U6 - Sensors - SB2_2222": {
-          "Update": "Оновити"
+          "Update": "Оновити",
+          "value": "value"
+        },
+        "CSD U6 - Sensors - SB3_2222": {
+          "Sound Sensor Reading": "Sound Sensor Reading",
+          "value": "value"
+        },
+        "CSD U6 - Sensors - SB4.1_2222": {
+          "Sound Sensor Reading": "Sound Sensor Reading",
+          "value": "value"
+        },
+        "CSD U6 - Sensors - SB4_2222": {
+          "value": "value"
         },
         "CSD U6 Driver pt 2": {
           "You did it!": "Ви зробили це!"
@@ -1180,16 +1498,36 @@
           "on": "далі"
         },
         "CSD U6 LED toggle": {
-          "Success!": "Успіху!"
+          "Board Not Detected!": "Дошку не виявлено",
+          "Plug the board into a different USB": "Підключіть дошку до іншого порту USB",
+          "Refresh this page and try again": "Оновіть сторінку і спробуйте знову",
+          "Success!": "Успіху!",
+          "Try the following:": "Спробуйте таке:",
+          "Visit studio.code.org/maker/setup": "Зайдіть на studio.code.org/maker/setup"
         },
         "CSD U6 LED toggle_2018": {
-          "Success!": "Успіху!"
+          "Board Not Detected!": "Дошку не виявлено",
+          "Plug the board into a different USB": "Підключіть дошку до іншого порту USB",
+          "Refresh this page and try again": "Оновіть сторінку і спробуйте знову",
+          "Success!": "Успіху!",
+          "Try the following:": "Спробуйте таке:",
+          "Visit studio.code.org/maker/setup": "Зайдіть на studio.code.org/maker/setup"
         },
         "CSD U6 LED toggle_2019": {
-          "Success!": "Успіху!"
+          "Board Not Detected!": "Дошку не виявлено",
+          "Plug the board into a different USB": "Підключіть дошку до іншого порту USB",
+          "Refresh this page and try again": "Оновіть сторінку і спробуйте знову",
+          "Success!": "Успіху!",
+          "Try the following:": "Спробуйте таке:",
+          "Visit studio.code.org/maker/setup": "Зайдіть на studio.code.org/maker/setup"
         },
         "CSD U6 LED toggle_2021": {
-          "Success!": "Успіху!"
+          "Board Not Detected!": "Дошку не виявлено",
+          "Plug the board into a different USB": "Підключіть дошку до іншого порту USB",
+          "Refresh this page and try again": "Оновіть сторінку і спробуйте знову",
+          "Success!": "Успіху!",
+          "Try the following:": "Спробуйте таке:",
+          "Visit studio.code.org/maker/setup": "Зайдіть на studio.code.org/maker/setup"
         },
         "CSD U6 Pedometer": {
           "0": "0"
@@ -1204,16 +1542,36 @@
           "0": "0"
         },
         "CSD U6 add LED button": {
-          "Success!": "Успіху!"
+          "Board Not Detected!": "Дошку не виявлено",
+          "Plug the board into a different USB": "Підключіть дошку до іншого порту USB",
+          "Refresh this page and try again": "Оновіть сторінку і спробуйте знову",
+          "Success!": "Успіху!",
+          "Try the following:": "Спробуйте таке:",
+          "Visit studio.code.org/maker/setup": "Зайдіть на studio.code.org/maker/setup"
         },
         "CSD U6 add LED button_2018": {
-          "Success!": "Успіху!"
+          "Board Not Detected!": "Дошку не виявлено",
+          "Plug the board into a different USB": "Підключіть дошку до іншого порту USB",
+          "Refresh this page and try again": "Оновіть сторінку і спробуйте знову",
+          "Success!": "Успіху!",
+          "Try the following:": "Спробуйте таке:",
+          "Visit studio.code.org/maker/setup": "Зайдіть на studio.code.org/maker/setup"
         },
         "CSD U6 add LED button_2019": {
-          "Success!": "Успіху!"
+          "Board Not Detected!": "Дошку не виявлено",
+          "Plug the board into a different USB": "Підключіть дошку до іншого порту USB",
+          "Refresh this page and try again": "Оновіть сторінку і спробуйте знову",
+          "Success!": "Успіху!",
+          "Try the following:": "Спробуйте таке:",
+          "Visit studio.code.org/maker/setup": "Зайдіть на studio.code.org/maker/setup"
         },
         "CSD U6 add LED button_2021": {
-          "Success!": "Успіху!"
+          "Board Not Detected!": "Дошку не виявлено",
+          "Plug the board into a different USB": "Підключіть дошку до іншого порту USB",
+          "Refresh this page and try again": "Оновіть сторінку і спробуйте знову",
+          "Success!": "Успіху!",
+          "Try the following:": "Спробуйте таке:",
+          "Visit studio.code.org/maker/setup": "Зайдіть на studio.code.org/maker/setup"
         },
         "CSD U6 analog light": {
           "Update": "Оновити"
@@ -1229,39 +1587,59 @@
         },
         "CSD U6 array piano": {
           "A": "А",
+          "A#": "A#",
           "B": "Б",
           "C": "В",
+          "C#": "C#",
           "D": "Г",
+          "D#": "D#",
           "E": "Сх",
           "F": "Ґ",
-          "G": "Д"
+          "F#": "F#",
+          "G": "Д",
+          "G#": "G#"
         },
         "CSD U6 array piano_2018": {
           "A": "А",
+          "A#": "A#",
           "B": "Б",
           "C": "В",
+          "C#": "C#",
           "D": "Г",
+          "D#": "D#",
           "E": "Сх",
           "F": "Ґ",
-          "G": "Д"
+          "F#": "F#",
+          "G": "Д",
+          "G#": "G#"
         },
         "CSD U6 array piano_2019": {
           "A": "А",
+          "A#": "A#",
           "B": "Б",
           "C": "В",
+          "C#": "C#",
           "D": "Г",
+          "D#": "D#",
           "E": "Сх",
           "F": "Ґ",
-          "G": "Д"
+          "F#": "F#",
+          "G": "Д",
+          "G#": "G#"
         },
         "CSD U6 array piano_2021": {
           "A": "А",
+          "A#": "A#",
           "B": "Б",
           "C": "В",
+          "C#": "C#",
           "D": "Г",
+          "D#": "D#",
           "E": "Сх",
           "F": "Ґ",
-          "G": "Д"
+          "F#": "F#",
+          "G": "Д",
+          "G#": "G#"
         },
         "CSD U6 arrays select predict": {
           "first": "перший"
@@ -1488,16 +1866,40 @@
           "0": "0"
         },
         "CSD U6 predict LED button": {
-          "Success!": "Успіху!"
+          "Board Not Detected!": "Дошку не виявлено",
+          "Click Me": "Клацни тут",
+          "Plug the board into a different USB": "Підключіть дошку до іншого порту USB",
+          "Refresh this page and try again": "Оновіть сторінку і спробуйте знову",
+          "Success!": "Успіху!",
+          "Try the following:": "Спробуйте таке:",
+          "Visit studio.code.org/maker/setup": "Зайдіть на studio.code.org/maker/setup"
         },
         "CSD U6 predict LED button_2018": {
-          "Success!": "Успіху!"
+          "Board Not Detected!": "Дошку не виявлено",
+          "Click Me": "Клацни тут",
+          "Plug the board into a different USB": "Підключіть дошку до іншого порту USB",
+          "Refresh this page and try again": "Оновіть сторінку і спробуйте знову",
+          "Success!": "Успіху!",
+          "Try the following:": "Спробуйте таке:",
+          "Visit studio.code.org/maker/setup": "Зайдіть на studio.code.org/maker/setup"
         },
         "CSD U6 predict LED button_2019": {
-          "Success!": "Успіху!"
+          "Board Not Detected!": "Дошку не виявлено",
+          "Click Me": "Клацни тут",
+          "Plug the board into a different USB": "Підключіть дошку до іншого порту USB",
+          "Refresh this page and try again": "Оновіть сторінку і спробуйте знову",
+          "Success!": "Успіху!",
+          "Try the following:": "Спробуйте таке:",
+          "Visit studio.code.org/maker/setup": "Зайдіть на studio.code.org/maker/setup"
         },
         "CSD U6 predict LED button_2021": {
-          "Success!": "Успіху!"
+          "Board Not Detected!": "Дошку не виявлено",
+          "Click Me": "Клацни тут",
+          "Plug the board into a different USB": "Підключіть дошку до іншого порту USB",
+          "Refresh this page and try again": "Оновіть сторінку і спробуйте знову",
+          "Success!": "Успіху!",
+          "Try the following:": "Спробуйте таке:",
+          "Visit studio.code.org/maker/setup": "Зайдіть на studio.code.org/maker/setup"
         },
         "CSD U6 sensor experiment embedded": {
           "text": "текст"
@@ -1540,16 +1942,40 @@
           "short": "коротко"
         },
         "CSD U6 test LED": {
-          "Success!": "Успіху!"
+          "Board Not Detected!": "Дошку не виявлено",
+          "Plug in your Circuit Playground and click \"Run\"": "Підключіть свій Circuit Playground і натисніть «Виконати»",
+          "Plug the board into a different USB": "Підключіть дошку до іншого порту USB",
+          "Refresh this page and try again": "Оновіть сторінку і спробуйте знову",
+          "Success!": "Успіху!",
+          "Try the following:": "Спробуйте таке:",
+          "Visit studio.code.org/maker/setup": "Зайдіть на studio.code.org/maker/setup"
         },
         "CSD U6 test LED_2018": {
-          "Success!": "Успіху!"
+          "Board Not Detected!": "Дошку не виявлено",
+          "Plug in your Circuit Playground and click \"Run\"": "Підключіть свій Circuit Playground і натисніть «Виконати»",
+          "Plug the board into a different USB": "Підключіть дошку до іншого порту USB",
+          "Refresh this page and try again": "Оновіть сторінку і спробуйте знову",
+          "Success!": "Успіху!",
+          "Try the following:": "Спробуйте таке:",
+          "Visit studio.code.org/maker/setup": "Зайдіть на studio.code.org/maker/setup"
         },
         "CSD U6 test LED_2019": {
-          "Success!": "Успіху!"
+          "Board Not Detected!": "Дошку не виявлено",
+          "Plug in your Circuit Playground and click \"Run\"": "Підключіть свій Circuit Playground і натисніть «Виконати»",
+          "Plug the board into a different USB": "Підключіть дошку до іншого порту USB",
+          "Refresh this page and try again": "Оновіть сторінку і спробуйте знову",
+          "Success!": "Успіху!",
+          "Try the following:": "Спробуйте таке:",
+          "Visit studio.code.org/maker/setup": "Зайдіть на studio.code.org/maker/setup"
         },
         "CSD U6 test LED_2021": {
-          "Success!": "Успіху!"
+          "Board Not Detected!": "Дошку не виявлено",
+          "Plug in your Circuit Playground and click \"Run\"": "Підключіть свій Circuit Playground і натисніть «Виконати»",
+          "Plug the board into a different USB": "Підключіть дошку до іншого порту USB",
+          "Refresh this page and try again": "Оновіть сторінку і спробуйте знову",
+          "Success!": "Успіху!",
+          "Try the following:": "Спробуйте таке:",
+          "Visit studio.code.org/maker/setup": "Зайдіть на studio.code.org/maker/setup"
         },
         "CSDU4 Connecting Screens": {
           "Blue": "Синя",
@@ -1681,91 +2107,161 @@
           "Back": "Назад"
         },
         "CSDU6 Circuit Playground Test": {
-          "Success!": "Успіху!"
+          "Board Not Detected!": "Дошку не виявлено",
+          "Plug in your Circuit Playground and click \"Run\"": "Підключіть свій Circuit Playground і натисніть «Виконати»",
+          "Plug the board into a different USB": "Підключіть дошку до іншого порту USB",
+          "Refresh this page and try again": "Оновіть сторінку і спробуйте знову",
+          "Success!": "Успіху!",
+          "Try the following:": "Спробуйте таке:",
+          "Visit studio.code.org/maker/setup": "Зайдіть на studio.code.org/maker/setup"
         },
         "CSDU6 Circuit Playground Test_2018": {
-          "Success!": "Успіху!"
+          "Board Not Detected!": "Дошку не виявлено",
+          "Plug in your Circuit Playground and click \"Run\"": "Підключіть свій Circuit Playground і натисніть «Виконати»",
+          "Plug the board into a different USB": "Підключіть дошку до іншого порту USB",
+          "Refresh this page and try again": "Оновіть сторінку і спробуйте знову",
+          "Success!": "Успіху!",
+          "Try the following:": "Спробуйте таке:",
+          "Visit studio.code.org/maker/setup": "Зайдіть на studio.code.org/maker/setup"
         },
         "CSDU6 Circuit Playground Test_2019": {
-          "Success!": "Успіху!"
+          "Board Not Detected!": "Дошку не виявлено",
+          "Plug in your Circuit Playground and click \"Run\"": "Підключіть свій Circuit Playground і натисніть «Виконати»",
+          "Plug the board into a different USB": "Підключіть дошку до іншого порту USB",
+          "Refresh this page and try again": "Оновіть сторінку і спробуйте знову",
+          "Success!": "Успіху!",
+          "Try the following:": "Спробуйте таке:",
+          "Visit studio.code.org/maker/setup": "Зайдіть на studio.code.org/maker/setup"
         },
         "CSDU6 Circuit Playground Test_2021": {
-          "Success!": "Успіху!"
+          "Board Not Detected!": "Дошку не виявлено",
+          "Plug in your Circuit Playground and click \"Run\"": "Підключіть свій Circuit Playground і натисніть «Виконати»",
+          "Plug the board into a different USB": "Підключіть дошку до іншого порту USB",
+          "Refresh this page and try again": "Оновіть сторінку і спробуйте знову",
+          "Success!": "Успіху!",
+          "Try the following:": "Спробуйте таке:",
+          "Visit studio.code.org/maker/setup": "Зайдіть на studio.code.org/maker/setup"
         },
         "CSDU6 Circuit Playground Test_2222": {
-          "Success!": "Успіху!"
+          "Board Not Detected!": "Дошку не виявлено",
+          "Plug in your Circuit Playground and click \"Run\"": "Підключіть свій Circuit Playground і натисніть «Виконати»",
+          "Plug the board into a different USB": "Підключіть дошку до іншого порту USB",
+          "Refresh this page and try again": "Оновіть сторінку і спробуйте знову",
+          "Success!": "Успіх!",
+          "Try the following:": "Спробуйте таке:",
+          "Visit studio.code.org/maker/setup": "Зайдіть на studio.code.org/maker/setup"
         },
         "CSDU6 circuit playground piano": {
           "A": "А",
+          "A#": "A#",
           "B": "Б",
           "C": "В",
+          "C#": "C#",
           "D": "Г",
+          "D#": "D#",
           "E": "Сх",
           "F": "Ґ",
-          "G": "Д"
+          "F#": "F#",
+          "G": "Д",
+          "G#": "G#"
         },
         "CSDU6 circuit playground piano_2018": {
           "A": "А",
+          "A#": "A#",
           "B": "Б",
           "C": "В",
+          "C#": "C#",
           "D": "Г",
+          "D#": "D#",
           "E": "Сх",
           "F": "Ґ",
-          "G": "Д"
+          "F#": "F#",
+          "G": "Д",
+          "G#": "G#"
         },
         "CSDU6 circuit playground piano_2019": {
           "A": "А",
+          "A#": "A#",
           "B": "Б",
           "C": "В",
+          "C#": "C#",
           "D": "Г",
+          "D#": "D#",
           "E": "Сх",
           "F": "Ґ",
-          "G": "Д"
+          "F#": "F#",
+          "G": "Д",
+          "G#": "G#"
         },
         "CSDU6 circuit playground piano_2021": {
           "A": "А",
+          "A#": "A#",
           "B": "Б",
           "C": "В",
+          "C#": "C#",
           "D": "Г",
+          "D#": "D#",
           "E": "Сх",
           "F": "Ґ",
-          "G": "Д"
+          "F#": "F#",
+          "G": "Д",
+          "G#": "G#"
         },
         "CSDU6 piano with notes": {
           "A": "А",
+          "A#": "A#",
           "B": "Б",
           "C": "В",
+          "C#": "C#",
           "D": "Г",
+          "D#": "D#",
           "E": "Сх",
           "F": "Ґ",
-          "G": "Д"
+          "F#": "F#",
+          "G": "Д",
+          "G#": "G#"
         },
         "CSDU6 piano with notes_2018": {
           "A": "А",
+          "A#": "A#",
           "B": "Б",
           "C": "В",
+          "C#": "C#",
           "D": "Г",
+          "D#": "D#",
           "E": "Сх",
           "F": "Ґ",
-          "G": "Д"
+          "F#": "F#",
+          "G": "Д",
+          "G#": "G#"
         },
         "CSDU6 piano with notes_2019": {
           "A": "А",
+          "A#": "A#",
           "B": "Б",
           "C": "В",
+          "C#": "C#",
           "D": "Г",
+          "D#": "D#",
           "E": "Сх",
           "F": "Ґ",
-          "G": "Д"
+          "F#": "F#",
+          "G": "Д",
+          "G#": "G#"
         },
         "CSDU6 piano with notes_2021": {
           "A": "А",
+          "A#": "A#",
           "B": "Б",
           "C": "В",
+          "C#": "C#",
           "D": "Г",
+          "D#": "D#",
           "E": "Сх",
           "F": "Ґ",
-          "G": "Д"
+          "F#": "F#",
+          "G": "Д",
+          "G#": "G#"
         },
         "allthethings design mode elements": {
           "text": "текст"

@@ -4375,6 +4375,9 @@
           "url": "https://docs.google.com/document/d/1_fc870l0ndjhUMazjwLSaJOx9lIMsvbd3BYYEtLykIY/edit",
           "type": "詩歌海報"
         },
+        "csf_course_a_lesson_slides/coursea/2022": {
+          "type": "幻燈片"
+        },
         "20_20_20_rule/coursea/2022": {
           "name": "第二條規則",
           "url": "http://www.anthro.com/blog/2013/10/how-to-prevent-eye-strain-with-the-20-20-20-rule#.WOU39BLyu35",
@@ -4394,6 +4397,9 @@
           "name": "威格爾斯麵條",
           "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
           "type": "影片"
+        },
+        "csf_course_a_lesson_slides_1/coursea/2022": {
+          "type": "幻燈片"
         },
         "feeling_faces_-_emotion_image/coursea/2022": {
           "name": "感覺, 臉,-, 情感, 圖",
@@ -4420,6 +4426,9 @@
           "url": "https://youtu.be/hrnhiKAQ1_k",
           "type": "不插電的視頻"
         },
+        "csf_course_a_lesson_slides_2/coursea/2022": {
+          "type": "幻燈片"
+        },
         "unplugged_blockly_blocks_grades_k-1_/coursea/2022": {
           "name": "不插電活動 Blockly 積木（K-1 年級）",
           "url": "https://docs.google.com/presentation/d/1PoSQZUCUj6yw6g1yZImaHu5Gn4Gdok0iDmrrmXInavQ/edit",
@@ -4429,6 +4438,9 @@
           "name": "擺動-角狗",
           "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
           "type": "影片"
+        },
+        "csf_course_a_lesson_slides_3/coursea/2022": {
+          "type": "幻燈片"
         },
         "debugging_with_the_step_button/coursea/2022": {
           "name": "使用步驟按鈕進行偵錯",
@@ -4440,10 +4452,16 @@
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit",
           "type": "資源"
         },
+        "csf_course_a_lesson_slides_4/coursea/2022": {
+          "type": "幻燈片"
+        },
         "feeling_faces_-_emotion_image_1/coursea/2022": {
           "name": "感覺, 臉,-, 情感, 圖",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit",
           "type": "資源"
+        },
+        "csf_course_a_lesson_slides_5/coursea/2022": {
+          "type": "幻燈片"
         },
         "happy_map_cards_xl/coursea/2022": {
           "name": "加大版「快樂地圖」卡片",
@@ -4455,6 +4473,9 @@
           "url": "https://docs.google.com/document/d/14qEVzSR7pr0slqkRn2WM8XxVyeDhdmfhtsmTrERCTNs/edit",
           "type": "操控"
         },
+        "csf_course_a_lesson_slides_6/coursea/2022": {
+          "type": "幻燈片"
+        },
         "feeling_faces/coursea/2022": {
           "name": "各種感受的面孔",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/",
@@ -4465,15 +4486,24 @@
           "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
           "type": "影片"
         },
+        "csf_course_a_lesson_slides_7/coursea/2022": {
+          "type": "幻燈片"
+        },
         "csf_lesson_recommendations/coursea/2022": {
           "name": "CSF 課程推薦",
           "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing",
           "type": "資源"
         },
+        "csf_course_a_lesson_slides_8/coursea/2022": {
+          "type": "幻燈片"
+        },
         "pause_and_think_online/coursea/2022": {
           "name": "在線上，停一停、想一想",
           "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
           "type": "影片"
+        },
+        "csf_course_a_lesson_slides_9/coursea/2022": {
+          "type": "幻燈片"
         },
         "the_big_event/coursea/2022": {
           "name": "大事件",
@@ -4495,9 +4525,15 @@
           "url": "https://docs.google.com/document/d/1A9yAObCTJwHsIKtaBZY8KaGwgbxbfolpbIpeJfZRgvs/edit",
           "type": "控制器映像"
         },
+        "csf_course_a_lesson_slides_10/coursea/2022": {
+          "type": "幻燈片"
+        },
         "cs_fundamentals_main_activity_tips/coursea/2022": {
           "name": "電腦科學基礎主要活動秘訣",
           "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing"
+        },
+        "csf_course_a_lesson_slides_11/coursea/2022": {
+          "type": "幻燈片"
         },
         "artist_project_planning_guide/coursea/2022": {
           "name": "藝術家項目策劃指南",
@@ -4508,6 +4544,9 @@
           "name": "藝術家項目策劃指南",
           "url": "https://docs.google.com/document/d/13AiHjPrDE3DFnwH3qKnty6M3PbHsZcd-0YoZz4ZmC3E/template/preview",
           "type": "答案鍵"
+        },
+        "csf_course_a_lesson_slides_12/coursea/2022": {
+          "type": "幻燈片"
         },
         "common_core_and_ngss_guidance/courseb/2022": {
           "name": "通用核心和 NGSS 指南",
@@ -4563,6 +4602,9 @@
         "digital_trails_lesson_slides/courseb/2022": {
           "name": "數字步道：課程幻燈片",
           "url": "https://docs.google.com/presentation/d/1jNMWXhnNjlqK44LQ_bpAtmDmdHPeYqJeVBwegi5BnM4/edit"
+        },
+        "csf_course_b_lesson_slides/courseb/2022": {
+          "type": "幻燈片"
         },
         "feeling_faces_emotion_image/courseb/2022": {
           "name": "感覺, 臉, 情感, 圖",

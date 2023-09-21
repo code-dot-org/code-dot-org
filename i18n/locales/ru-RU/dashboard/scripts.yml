@@ -4241,6 +4241,10 @@ ru:
           description_short: Изучи все понятия в Основах компьютерных наук и создай собственную картинку, игру или историю!
         self-paced-pl-csp2-2023:
           title: 'Модуль 2: Навигация по инструментам Code.org'
+        csa-software-engineering:
+          lessons:
+            lesson-9:
+              name: Настроить
         csa-frq-practice:
           lesson_groups:
             lessonGroup-5:
@@ -4297,6 +4301,9 @@ ru:
           description_audience: 'Возраст: 4-7'
           description_short: Введение в компьютерные науки для детей, еще не умеющих читать.
         nevada-standards-aligned-first-grade-2023:
+          lessons:
+            lesson-1:
+              name: Данные
           lesson_groups:
             lessonGroup-2:
               display_name: Цифровое гражданство
@@ -4310,8 +4317,13 @@ ru:
               display_name: События
             lessonGroup-7:
               display_name: Завершение Курсового Проекта
+            lessonGroup-8:
+              display_name: Данные
           description_audience: 'Возраст: 5-8'
         nevada-standards-aligned-second-grade-2023:
+          lessons:
+            lesson-1:
+              name: Вычислительные системы
           lesson_groups:
             lessonGroup-2:
               display_name: Цифровое гражданство
@@ -4323,6 +4335,8 @@ ru:
               display_name: События
             lessonGroup-6:
               display_name: Данные
+            lessonGroup-8:
+              display_name: Вычислительные системы
         nevada-standards-aligned-third-grade-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4367,3 +4381,5 @@ ru:
               display_name: Завершение Курсового Проекта
           description_audience: 'Возраст: 9-13'
           description_short: Изучи все понятия в Основах компьютерных наук и создай собственную картинку, игру или историю!
+        how-ai-works-2023:
+          title: Как ИИ Работает

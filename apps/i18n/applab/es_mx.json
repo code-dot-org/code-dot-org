@@ -123,7 +123,7 @@
   "dropletBlock_drawImage_param1_description": "La posición `x` en píxeles de la esquina superior izquierda de la imagen a dibujar.",
   "dropletBlock_drawImage_param2": "y",
   "dropletBlock_drawImage_param2_description": "La posición `y` en píxeles de la esquina superior izquierda de la imagen a dibujar.",
-  "dropletBlock_drawImage_param3": "ancho",
+  "dropletBlock_drawImage_param3": "el ancho",
   "dropletBlock_drawImage_param4": "altura",
   "dropletBlock_dropdown_description": "Crea un menú desplegable, asígnale un identificador de elemento y rellénalo con una lista de elementos",
   "dropletBlock_dropdown_signatureOverride": "desplegable(id, opción1, opción2, ..., opciónX)",

@@ -38,8 +38,9 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>Dance Party</strong></h3>        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Koda ett dansparty att dela med vänner och familj. Featuring Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez, music from Disney's "Encanto," and more!</div>
-        <a class="linktag" id="danceparty" href="/dance" target="_blank"><button>Try activity</button></a>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>Dance Party</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Code a Dance Party att dela med vänner och familj. Med Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez, musik från Disneys ”Encanto” och mer!</div>
+        <a class="linktag" id="danceparty" href="/dance" target="_blank"><button>Prova aktivitet</button></a>
     </span>
   </div>
 </div>
@@ -52,7 +53,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Minecraft Hour of Code</strong></h3>        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Minecraft är tillbaka inför Hour of Code med en helt ny aktivitet! Rese genom Minecraft med kod.</div>        <br>        <a class="linktag" id="minecraft" href="/minecraft" target="_blank"><button>Prova aktiviteten</button></a>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Minecraft Hour of Code</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Minecraft är tillbaka för Hour of Code med en helt ny aktivitet! Rese genom Minecraft med kod.</div>        <br>        <a class="linktag" id="minecraft" href="/minecraft" target="_blank"><button>Prova aktiviteten</button></a>
     </span>
   </div>
 </div>
@@ -65,7 +67,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>AI för haven</strong></h3>        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Hjälp AI rena haven genom att träna på att hitta skräp! Lär dig om data för undervisning och bias och hur AI kan användas för att bidra till lösningar på globala problem. Se <a class="linktag" id="oceans-lesson" href="https://curriculum.code.org/hoc/plugged/9/" target="_blank">lektionsplan</a>.</div>        <a class="linktag" id="aiforoceans" href="https://studio.code.org/s/oceans/lessons/1/levels/1" target="_blank"><button>Prova aktivitet</button></a>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>AI för hav</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Hjälp AI att rengöra haven genom att träna det för att upptäcka skräp! Lär dig om data för undervisning och bias och hur AI kan användas för att bidra till lösningar på globala problem. Se <a class="linktag" id="oceans-lesson" href="https://curriculum.code.org/hoc/plugged/9/" target="_blank">lektionsplan</a>.</div>        <a class="linktag" id="aiforoceans" href="https://studio.code.org/s/oceans/lessons/1/levels/1" target="_blank"><button>Prova aktivitet</button></a>
     </span>
   </div>
 </div>
@@ -90,7 +93,9 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>Så här fungerar datorer</strong></h3>        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Efter en kort introduktion av Bill Gates följer en serie med sex korta videor som förklarar vad en dator är och hur kretskort fungerar.</div>        <a class="linktag" id="howcomputers" href="https://www.youtube.com/watch?v=OAx_6-wdslM&list=PLzdnOPI1iJNcsRwJhvksEo1tJqjIqWbN-" target="_blank"><button>Se videoserien</button></a>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>Hur datorer fungerar</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Med en introduktion av Bill Gates förklarar denna serie med sex korta videor vad som gör en dator till en dator och hur datorkretsar fungerar.</div>
+        <a class="linktag" id="howcomputers" href="https://www.youtube.com/watch?v=OAx_6-wdslM&list=PLzdnOPI1iJNcsRwJhvksEo1tJqjIqWbN-" target="_blank"><button>Titta på videoserien</button></a>
     </span>
   </div>
 </div>
@@ -103,7 +108,9 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Så här fungerar Internet</strong></h3>        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">I den här serien med åtta korta videor lär du dig hur Internet uppfanns, vad HTML är och hur sökmotorer som Google fungerar.</div>        <a class="linktag" id="howinternet" href="https://www.youtube.com/watch?v=Dxcc6ycZ73M&list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7-" target="_blank"><button>Se videoserien</button></a>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Hur Internet fungerar</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">I den här serien med åtta korta videor lär du dig hur internet uppfanns, vad HTML är och hur sökmotorer som Google fungerar.</div>
+        <a class="linktag" id="howinternet" href="https://www.youtube.com/watch?v=Dxcc6ycZ73M&list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7-" target="_blank"><button>Titta på videoserien</button></a>
     </span>
   </div>
 </div>
@@ -116,7 +123,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Så här fungerar AI</strong></h3>        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Lär dig hur AI fungerar och varför det är så viktigt i den här serien med korta videor. Med Microsofts CEO Satya Nadella och flera olika experter.</div>        <a class="linktag" id="ai-videos" href="/ai#ai-videos" target="_blank"><button>Se videoserien</button></a>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Hur AI fungerar</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Lär dig mer om hur AI fungerar och varför det spelar roll med denna serie korta videor. Med Microsofts CEO Satya Nadella och flera olika experter.</div>        <a class="linktag" id="ai-videos" href="/ai#ai-videos" target="_blank"><button>Se videoserien</button></a>
     </span>
   </div>
 </div>
@@ -164,7 +172,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>Introduktion till Game Lab (Leklabbet)</strong></h3>        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Programmera rörliga bilder, interaktiv konst och spel i Game Lab. Börja med enkla former och vidareutveckla till mer avancerade animeringar och spel.</div>        <a class="linktag" id="gamelab-intro" href="https://studio.code.org/s/csd3-virtual" target="_blank"><button>Prova modulen</button></a>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>Introduktion till Game Lab</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Programanimationer, interaktiv konst och spel i Game Lab. Börja med enkla former och vidareutveckla till mer avancerade animeringar och spel.</div>        <a class="linktag" id="gamelab-intro" href="https://studio.code.org/s/csd3-virtual" target="_blank"><button>Prova modulen</button></a>
     </span>
   </div>
 </div>
@@ -177,7 +186,9 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Programmera med sköldpaddan i App Lab</strong></h3>        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Använd enkla kommandon i JavaScript för att rita former och bilder med hjälp av en virtuell ”sköldpadda”. Designa och programmera dig egen digitala scen!</div>        <a class="linktag" id="turtle-applab" href="https://studio.code.org/s/csp3-virtual" target="_blank"><button>Prova modulen</button></a>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Turtle Programmering i App Lab</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Använd enkla JavaScript-kommandon för att rita former och bilder med en virtuell ”sköldpadda”. Designa och programmera din egen digitala scen!</div>
+        <a class="linktag" id="turtle-applab" href="https://studio.code.org/s/csp3-virtual" target="_blank"><button>Prova modulen</button></a>
     </span>
   </div>
 </div>
@@ -190,7 +201,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Händelsedriven programmering i App Lab</strong></h3>        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Lär dig designa appar som reagerar på klick och tangenttryck. Skapa en serie enkla applikationer (appar) på webben!</div>        <a class="linktag" id="events-applab" href="https://studio.code.org/s/csp5-virtual" target="_blank"><button>Prova modulen</button></a>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Händelsedriven programmering i App Lab</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Lär dig att designa appar som svarar på klick och knapptryckningar. Skapa en serie enkla applikationer (appar) på webben!</div>        <a class="linktag" id="events-applab" href="https://studio.code.org/s/csp5-virtual" target="_blank"><button>Prova modulen</button></a>
     </span>
   </div>
 </div>
@@ -294,7 +306,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; margin-top:10px"><strong>CodeBytes</strong></h3>        <div class="smalltext" style="color: dimgray;">CodeBytes är lättillgängliga 20 minuter långa interaktiva lektioner där datavetenskap blandas med verkliga situationer. Träna en AI att läsa teckenspråk, designa en app för ideella ändamål, utforska Minecraft och mycket mer!</div>        <br>        <br>        <a class="linktag" id="codebytes" href="https://code.org/codebytes" target="_blank"><button>Se avsnitt</button></a>
+        <h3 class="tutorial-info-h" style="margin-top:10px"><strong>CodeBytes</strong></h3>
+        <div class="smalltext" style="color: dimgray;">CodeBytes är lätta att smälta, 20 minuters interaktiva lektioner som blandar datavetenskap med verkliga ämnen. Träna en AI att läsa teckenspråk, designa en app för ideella ändamål, utforska Minecraft och mycket mer!</div>        <br>        <br>        <a class="linktag" id="codebytes" href="https://code.org/codebytes" target="_blank"><button>Se avsnitt</button></a>
     </span>
   </div>
 </div>
@@ -307,7 +320,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; margin-top:10px"><strong>Ta en paus från kodning</strong></h3>        <div class="smalltext" style="color: dimgray; ">Håll gnistan uppe genom att ta en paus från kodning! Du kan skapa kryptering tillsammans med Ashton Kutcher, lära dig om variabler med Yara Shahidi och utforska hur Internet fungerar tillsammans med Vint Cerf som en gång faktiskt skapade Internet.</div>        <br>        <a class="linktag" id="codebreak" href="https://code.org/break" target="_blank"><button>Anslut dig</button></a>
+        <h3 class="tutorial-info-h" style="margin-top:10px"><strong>Kodbrytning</strong></h3>
+        <div class="smalltext" style="">Håll datavetenskap roligt genom att ta en kodpaus! Du kan skapa kryptering tillsammans med Ashton Kutcher, lära dig om variabler med Yara Shahidi och utforska hur Internet fungerar tillsammans med Vint Cerf som en gång faktiskt skapade Internet.</div>        <br>        <a class="linktag" id="codebreak" href="https://code.org/break" target="_blank"><button>Anslut dig</button></a>
     </span>
   </div>
 </div>

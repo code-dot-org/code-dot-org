@@ -13,7 +13,7 @@ module Policies
       # If we already have a .level file that matches the given level name, use that.
       level_paths = Dir.glob(Rails.root.join(Policies::LevelFiles.level_file_glob(level.name)))
       raise("Multiple .level files for '#{level.name}' found: #{level_paths}") if level_paths.many?
-      return level_paths.first unless level_paths.empty?
+      return Pathname.new(level_paths.first) unless level_paths.empty?
 
       # If we don't yet have a .level file, create a new one at the default path.
       return Policies::LevelFiles.default_level_file_path(level)

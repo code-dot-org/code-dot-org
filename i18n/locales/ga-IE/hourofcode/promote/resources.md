@@ -1,5 +1,5 @@
 ---
-title: Resources
+title: Acmhainní
 ---
 
 {{ signup_button }}

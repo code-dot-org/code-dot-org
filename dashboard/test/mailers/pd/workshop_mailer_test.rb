@@ -28,7 +28,7 @@ class WorkshopMailerTest < ActionMailer::TestCase
     Pd::Workshop.any_instance.expects(:suppress_reminders?).returns(false).times(3)
 
     assert_emails 3 do
-      Pd::WorkshopMailer.teacher_enrollment_reminder(enrollment).deliver_now
+      Pd::WorkshopMailer.teacher_enrollment_reminder(enrollment, options: {days_before: 10}).deliver_now
       Pd::WorkshopMailer.facilitator_enrollment_reminder(facilitator, workshop).deliver_now
       Pd::WorkshopMailer.organizer_enrollment_reminder(workshop).deliver_now
     end
@@ -41,7 +41,7 @@ class WorkshopMailerTest < ActionMailer::TestCase
     Pd::Workshop.any_instance.expects(:suppress_reminders?).returns(true).times(3)
 
     assert_emails 0 do
-      Pd::WorkshopMailer.teacher_enrollment_reminder(enrollment).deliver_now
+      Pd::WorkshopMailer.teacher_enrollment_reminder(enrollment, options: {days_before: 10}).deliver_now
       Pd::WorkshopMailer.facilitator_enrollment_reminder(facilitator, workshop).deliver_now
       Pd::WorkshopMailer.organizer_enrollment_reminder(workshop).deliver_now
     end
@@ -63,7 +63,7 @@ class WorkshopMailerTest < ActionMailer::TestCase
     enrollment = create :pd_enrollment, workshop: workshop
 
     assert_no_emails do
-      Pd::WorkshopMailer.teacher_enrollment_reminder(enrollment).deliver_now
+      Pd::WorkshopMailer.teacher_enrollment_reminder(enrollment, options: {days_before: 10}).deliver_now
       Pd::WorkshopMailer.facilitator_enrollment_reminder(facilitator, workshop).deliver_now
       Pd::WorkshopMailer.organizer_enrollment_reminder(workshop).deliver_now
     end
@@ -221,7 +221,7 @@ class WorkshopMailerTest < ActionMailer::TestCase
                  end
 
       enrollment = create :pd_enrollment, workshop: workshop
-      mail = Pd::WorkshopMailer.teacher_enrollment_reminder(enrollment, days_before: test_case[:days_before])
+      mail = Pd::WorkshopMailer.teacher_enrollment_reminder(enrollment, options: {days_before: test_case[:days_before]})
 
       assert links_are_complete_urls?(mail)
     end

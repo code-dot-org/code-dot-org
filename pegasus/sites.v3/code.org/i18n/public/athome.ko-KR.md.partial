@@ -38,8 +38,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>댄스 파티</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">댄스 파티를 코딩해 친구들과 가족들과 공유하세요. 비욘세, 해리 스타일스, 리조, 릴 나스 X, 셀레나 고메즈, 디즈니 “엔칸토”의 음악 등이 등장합니다!</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>댄스 파티</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">친구 및 가족과 공유할 댄스 파티를 코딩하세요. 비욘세, 해리 스타일스, 리조, 릴 나스 X, 셀레나 고메즈, 디즈니 “엔칸토”의 음악 등이 등장합니다!</div>
         <a class="linktag" id="danceparty" href="/dance" target="_blank"><button>활동 시도하기</button></a>
     </span>
   </div>
@@ -53,8 +53,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Minecraft 아워 오브 코드</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Minecraft가 새로워진 활동과 함께 아워 오브 코드로 돌아왔습니다! 코드로 Minecraft를 여행하세요.</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>마인크래프트 아워 오브 코드</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">마인크래프트가 새로운 액티비티와 함께 아워 오브 코드에 돌아왔습니다! 코드로 Minecraft를 여행하세요.</div>
         <br>
         <a class="linktag" id="minecraft" href="/minecraft" target="_blank"><button>활동 체험하기</button></a>
     </span>
@@ -69,8 +69,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>바다를 위한 AI</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">AI가 쓰레기를 탐지하도록 훈련해 바다를 청소할 수 있게 도와주세요! 훈련 데이터와 편향, AI가 세계의 문제를 다루는 원리를 알아보세요. <a class="linktag" id="oceans-lesson" href="https://curriculum.code.org/hoc/plugged/9/" target="_blank">수업 계획</a>을 확인하세요.</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>해양용 AI</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">인공지능이 쓰레기를 감지하도록 훈련시켜 바다를 정화하도록 도와주세요! 훈련 데이터와 편향, AI가 세계의 문제를 다루는 원리를 알아보세요. <a class="linktag" id="oceans-lesson" href="https://curriculum.code.org/hoc/plugged/9/" target="_blank">수업 계획</a>을 확인하세요.</div>
         <a class="linktag" id=”aiforoceans" href="https://studio.code.org/s/oceans/lessons/1/levels/1" target="_blank"><button>활동 체험하기</button></a>
     </span>
   </div>
@@ -96,9 +96,9 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>컴퓨터의 작동 원리</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Bill Gates의 소개부터 시작되는 이 여섯 편의 짧은 동영상 시리즈에서는 컴퓨터가 어떻게 컴퓨터가 되는지, 컴퓨터 회로가 어떻게 작동하는지를 설명합니다.</div>
-        <a class="linktag" id="howcomputers" href="https://www.youtube.com/watch?v=OAx_6-wdslM&list=PLzdnOPI1iJNcsRwJhvksEo1tJqjIqWbN-" target="_blank"><button>동영상 시리즈 시청하기</button></a>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>컴퓨터 작동 원리</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">빌 게이츠의 소개와 함께 컴퓨터를 컴퓨터로 만드는 요인과 컴퓨터 회로의 작동 방식에 대해 설명하는 6개의 짧은 동영상 시리즈입니다.</div>
+        <a class="linktag" id="howcomputers" href="https://www.youtube.com/watch?v=OAx_6-wdslM&list=PLzdnOPI1iJNcsRwJhvksEo1tJqjIqWbN-" target="_blank"><button>동영상 시리즈 보기</button></a>
     </span>
   </div>
 </div>
@@ -111,9 +111,9 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>인터넷 작동 원리</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">이 여덟 편의 짧은 동영상 시리즈에서는 인터넷이 어떻게 발명되었는지, HTML이 무엇인지, Google 같은 검색 엔진이 어떻게 작동하는지를 알아볼 수 있습니다.</div>
-        <a class="linktag" id="howinternet" href="https://www.youtube.com/watch?v=Dxcc6ycZ73M&list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7-" target="_blank"><button>동영상 시리즈 시청하기</button></a>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>How the Internet Works</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">In this series of eight short videos, you’ll learn how the internet was invented, what HTML is, and how search engines like Google work.</div>
+        <a class="linktag" id="howinternet" href="https://www.youtube.com/watch?v=Dxcc6ycZ73M&list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7-" target="_blank"><button>Watch the video series</button></a>
     </span>
   </div>
 </div>
@@ -126,8 +126,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>AI 작동 원리</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">AI가 어떻게 작동하는지, 왜 중요한지를 이 짧은 동영상 시리즈에서 알아보세요. Microsoft CEO Satya Nadella와 여러 전문가들이 나옵니다.</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>AI의 작동 원리</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">이 짧은 동영상 시리즈를 통해 AI의 작동 원리와 AI가 중요한 이유에 대해 알아보십시오. Microsoft CEO Satya Nadella와 여러 전문가들이 나옵니다.</div>
         <a class="linktag" id="ai-videos" href="/ai#ai-videos" target="_blank"><button>동영상 시리즈 시청하기</button></a>
     </span>
   </div>
@@ -177,8 +177,8 @@ href="https://studio.code.org/s/20-hour" target="_blank">가속 코스</a>를 �
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>게임 랩 입문</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">게임 랩에서 애니메이션, 대화형 예술, 게임을 프로그래밍하세요. 간단한 모형으로 시작해 보다 정교한 스프라이트 기반의 애니메이션과 게임으로 나아가세요.</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>게임랩 소개</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">게임랩 내 프로그램 애니메이션, 인터랙티브 아트, 게임 간단한 모형으로 시작해 보다 정교한 스프라이트 기반의 애니메이션과 게임으로 나아가세요.</div>
         <a class="linktag" id="gamelab-intro" href="https://studio.code.org/s/csd3-virtual" target="_blank"><button>모듈 체험하기</button></a>
     </span>
   </div>
@@ -192,9 +192,9 @@ href="https://studio.code.org/s/20-hour" target="_blank">가속 코스</a>를 �
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>앱 랩 거북이 프로그래밍</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">간단한 JavaScript 명령어를 사용해 가상의 “거북이”를 이용한 모형과 이미지를 그리세요.</div>
-        <a class="linktag" id="turtle-applab" href="https://studio.code.org/s/csp3-virtual" target="_blank"><button>모듈 체험하기</button></a>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>App Lab에서의 거북이 프로그래밍</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">간단한 자바스크립트 명령을 사용하여 가상의 “거북이”를 사용하여 모양과 이미지를 그립니다.나만의 디지털 장면을 디자인하고 프로그래밍하세요!</div>
+        <a class="linktag" id="turtle-applab" href="https://studio.code.org/s/csp3-virtual" target="_blank"><button>모듈을 사용해 보세요</button></a>
     </span>
   </div>
 </div>
@@ -207,8 +207,8 @@ href="https://studio.code.org/s/20-hour" target="_blank">가속 코스</a>를 �
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>앱 랩 이벤트 기반 프로그래밍</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">클릭과 키 입력에 응답하는 앱을 디자인하는 방법을 배워보세요. 웹에서 동작할 간단한 일련의 애플리케이션(앱)을 만들어보세요!</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>App Lab에서의 이벤트 기반 프로그래밍</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">클릭과 키 누름에 반응하는 앱을 설계하는 방법을 알아봅니다. 웹에서 동작할 간단한 일련의 애플리케이션(앱)을 만들어보세요!</div>
         <a class="linktag" id="events-applab" href="https://studio.code.org/s/csp5-virtual" 
 target="_blank"><button>모듈 체험하기</button></a>
     </span>
@@ -316,8 +316,8 @@ style="color:#7665a0"><strong>codeSpark</strong></h3></a>5~9세 어린이를 위
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; margin-top:10px"><strong>CodeBytes</strong></h3>
-        <div class="smalltext" style="color: dimgray;">CodeBytes는 컴퓨터 과학을 실제 주제를 결합해 이해하기 쉽도록 20분 길이로 만든 대화형 수업입니다. AI가 수화를 읽고 선의의 앱을 디자인하고 Minecraft의 세계를 탐험하는 등 다양한 일을 할 수 있도록 훈련하세요!</div>
+        <h3 class="tutorial-info-h" style="margin-top:10px"><strong>CodeBytes</strong></h3>
+        <div class="smalltext" style="color: dimgray;">CodeBytes는 컴퓨터 과학과 실제 주제를 혼합하여 이해하기 쉬운 20분 대화형 수업입니다. AI가 수화를 읽고 선의의 앱을 디자인하고 Minecraft의 세계를 탐험하는 등 다양한 일을 할 수 있도록 훈련하세요!</div>
         <br>
         <br>
         <a class="linktag" id="codebytes" href="https://code.org/codebytes" target="_blank"><button>에피소드 보기</button></a>
@@ -333,8 +333,8 @@ style="color:#7665a0"><strong>codeSpark</strong></h3></a>5~9세 어린이를 위
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; margin-top:10px"><strong>코드 브레이크</strong></h3>
-        <div class="smalltext" style="color: dimgray; ">코드 브레이크로 컴퓨터 과학을 계속 재미있게 즐기세요! Ashton Kutcher와 암호를 만들고 Yara Shahidi와 변수를 배우며 인터넷의 실제 발명가인 Vint Cerf와 함께 인터넷의 작동 원리를 알아볼 수도 있습니다!</div>
+        <h3 class="tutorial-info-h" style="margin-top:10px"><strong>코드 브레이크</strong></h3>
+        <div class="smalltext" style="">코드 브레이크를 통해 컴퓨터 과학의 재미를 유지하세요! Ashton Kutcher와 암호를 만들고 Yara Shahidi와 변수를 배우며 인터넷의 실제 발명가인 Vint Cerf와 함께 인터넷의 작동 원리를 알아볼 수도 있습니다!</div>
         <br>
         <a class="linktag" id="codebreak" href="https://code.org/break" target="_blank"><button>연결하기</button></a>
     </span>

@@ -187,40 +187,46 @@ es:
     un nuevo catálogo curricular y una página de Teach rediseñada para ayudarte a
     encontrarlo todo!
   in_partnership_with: En asociación con
-  afe_partnership_logo_alt: Logotipo Amazon Future Engineer
-  afe_partnership_thanks_desc: Amazon Future Engineer is a comprehensive childhood-to-career
-    program to inspire, educate, and train low-income and other disadvantaged children
-    and young people to pursue careers in computer science. [Learn about our partnership](%{afe_url}).
+  afe_partnership_logo_alt: Logotipo de Amazon Future Engineer
+  afe_partnership_thanks_desc: Amazon Future Engineer es un programa integral que
+    abarca desde la infancia hasta la carrera profesional y tiene como objetivo inspirar,
+    educar y capacitar a niños y jóvenes de bajos ingresos y otros niños y jóvenes
+    desfavorecidos para que estudien carreras en informatica. [Más información sobre
+    nuestra colaboración](%{amazon_future_engineer_link})
   grade_level: Nivel de grado
   grade_level_label_elementary: Escuela primaria
   grade_level_label_middle: Escuela secundaria
   grade_level_label_high: Escuela secundaria
-  teacher_label_csf: Profesor de fundamentos de informática
+  students_label: Estudiantes
+  teachers_label: Profesores
+  teacher_label_csf: Profesor de fundamentos de la informática
   teacher_label_csd: Profesor de CS Discoveries
-  teacher_label_csp: Profesor de principios de informática
-  teacher_label_csc: Profesor de CS Connections
+  teacher_label_csp: Profesor de principios de la informática
+  teacher_label_csc: Profesor de conexiones de informática
   teacher_label_csa: AP® Computer Science A Teacher
-  required_materials: 'Materiales necesarios:'
+  required_materials: 'Materiales obligatorios:'
   optional_materials: 'Materiales opcionales:'
   call_to_action_learn_more: Conoce más
   call_to_action_watch_now: Ver ahora
   call_to_action_try_activity: Prueba la actividad
   call_to_action_explore_unit: Explora la unidad
   call_to_action_explore_curriculum: Explore el plan de estudios
-  call_to_action_explore_curriculum_options: Explore las opciones curriculares
+  call_to_action_explore_curriculum_options: Explora las opciones de planes de estudio
+  call_to_action_explore_lessons: Explore las lecciones
   call_to_action_explore_modules: Explore los módulos
+  call_to_action_explore_module: Módulo Explore
   call_to_action_explore_workshops: Explore los talleres
   call_to_action_explore_course: Explora el curso
-  call_to_action_explore_courses: Explore los cursos
+  call_to_action_explore_courses: Explora los cursos
   call_to_action_explore_full_course: Explora el curso completo
   call_to_action_explore_widgets: Explora los widgets
-  call_to_action_explore_choice_level: Explore el nivel de elección del ejemplo
-  call_to_action_explore_collection: Explore la colección
+  call_to_action_explore_choice_level: Explora el nivel de elección del ejemplo
+  call_to_action_explore_collection: Explora la colección
   call_to_action_explore_unplugged_lesson: Explora las lecciones desconectadas
-  call_to_action_try_app_lab: Prueba App Lab
+  call_to_action_try_app_lab: Prueba el laboratorio de aplicaciones
   call_to_action_view_lesson_plan: Ver plan de lección
   call_to_action_self_paced_pl: Comience el aprendizaje profesional a su propio ritmo
-  call_to_action_apply_for_pl: Solicite el aprendizaje profesional
+  call_to_action_apply_for_pl: Solicita aprendizaje profesional
   call_to_action_watch_panel: Panel de reloj
   call_to_action_learn_about_challenge: Más información sobre el desafío
   call_to_action_explore_website: Explore el sitio web
@@ -248,15 +254,19 @@ es:
   call_to_action_explore_career_resources: Explore los recursos profesionales
   call_to_action_watch_videos: Ver vídeos
   call_to_action_download_posters: Descargar pósteres
-  call_to_action_contact_support: Ponte en contacto con el equipo de soporte de
-  call_to_action_pick_units: Elige unidades
-  call_to_action_focus_on_topic: Centrarse en un tema
-  call_to_action_teach_full_intro_course: Imparte un curso de introducción completo
+  call_to_action_contact_support: Ponte en contacto con el equipo de soporte de Code.org
+  call_to_action_pick_units: Elige las unidades
+  call_to_action_focus_on_topic: Céntrate en un tema
+  call_to_action_teach_full_intro_course: Impartir un curso de introducción completo
   call_to_action_see_module_details: Ver detalles del módulo
-  call_to_action_start_modules: Módulos de inicio
+  call_to_action_start_modules: Iniciar módulos
   call_to_action_see_course_details: Ver detalles del curso
+  call_to_action_see_lesson_details: Ver detalles de la lección
   call_to_action_learn_about_approach: Más información sobre nuestro enfoque
   call_to_action_try_java_lab: Prueba Java Lab
+  call_to_action_notify_available: Notificarme cuando esté disponible
+  call_to_action_register_early_access: Regístrese para obtener acceso anticipado
+  call_to_action_open_positions: Ver puestos vacantes
   aria_label_call_to_action_afe: Más información sobre Amazon Future Engineer
   aria_label_call_to_action_teaching_csf: Comience el programa de aprendizaje profesional
     para la enseñanza de los fundamentos de la informática
@@ -274,10 +284,10 @@ es:
     profesional Enseñar a crear aplicaciones con dispositivos (micro:bit)
   aria_label_call_to_action_curriculum_csf: Explore el plan de estudios de fundamentos
     de ciencias de la computación
-  aria_label_call_to_action_curriculum_csf_express: Explore el curso Express de Fundamentos
-    de Ciencias de la Computación
-  aria_label_call_to_action_curriculum_csf_express_pre_reader: Explore el curso Pre-Reader
-    Express sobre fundamentos de la informática
+  aria_label_call_to_action_curriculum_csf_express: Explora el curso exprés Fundamentos
+    de la informática
+  aria_label_call_to_action_curriculum_csf_express_pre_reader: Explora el curso exprés
+    para prelectores Fundamentos de la informática
   aria_label_call_to_action_curriculum_csd: Explore el plan de estudios de descubrimientos
     en ciencias de la computación
   aria_label_call_to_action_curriculum_csp: Explore el plan de estudios de Principios
@@ -290,52 +300,69 @@ es:
     creación de aplicaciones con dispositivos (Circuit Playground)
   aria_label_call_to_action_curriculum_maker_microbit: Explore el plan de estudios
     Creación de aplicaciones con dispositivos (micro:bit)
-  aria_label_call_to_action_curriculum_creating_apps_with_devices: Explore la unidad
+  aria_label_call_to_action_curriculum_creating_apps_with_devices: Explora la unidad
     Creación de aplicaciones con dispositivos
-  aria_label_call_to_action_curriculum_problem_solving_computing: Explore la unidad
-    de resolución de problemas y computación
-  aria_label_call_to_action_curriculum_web_development: Explore la unidad de Desarrollo
-    Web
-  aria_label_call_to_action_curriculum_interactive_animations_games: Explore la unidad
-    de juegos y animaciones interactivas
-  aria_label_call_to_action_curriculum_design_process: Explore la unidad de procesos
-    de diseño
-  aria_label_call_to_action_curriculum_data_society: Explore la unidad Datos y sociedad
-  aria_label_call_to_action_collection_hardware: Explore la colección Hardware
-  aria_label_call_to_action_collection_design_purpose: Explore la colección Design
-    with Purpose
-  aria_label_call_to_action_collection_impact_society: Explore la colección Impact
-    in Society
-  aria_label_call_to_action_collection_creativity: Explora la colección Creativity
-  aria_label_call_to_action_collection_coding: Explore la colección Coding
-  aria_label_call_to_action_collection_data: Explore la recopilación de datos
-  aria_label_call_to_action_module_coding_w_poetry: Consulte los detalles del módulo
+  aria_label_call_to_action_curriculum_problem_solving_computing: Explora la unidad
+    Resolución de problemas e informática
+  aria_label_call_to_action_curriculum_web_development: Explora la unidad Desarrollo
+    web
+  aria_label_call_to_action_curriculum_interactive_animations_games: Explora la unidad
+    Juegos y animaciones interactivas
+  aria_label_call_to_action_curriculum_design_process: Explora la unidad Proceso de
+    diseño
+  aria_label_call_to_action_curriculum_data_society: Explora la unidad Datos y sociedad
+  aria_label_call_to_action_collection_hardware: Explora la colección Hardware
+  aria_label_call_to_action_collection_design_purpose: Explora la colección Diseño
+    con propósito
+  aria_label_call_to_action_collection_impact_society: Explora la colección Impacto
+    en la sociedad
+  aria_label_call_to_action_collection_creativity: Explora la colección Creatividad
+  aria_label_call_to_action_collection_coding: Explora la colección Codificación
+  aria_label_call_to_action_collection_data: Explora la colección Datos
+  aria_label_call_to_action_module_coding_w_poetry: Consulta los detalles del módulo
     Codificación con poesía
   aria_label_call_to_action_module_coding_time_capsule: Consulta los detalles del
     módulo Codificación de una cápsula del tiempo
-  aria_label_call_to_action_module_simulating_marine_ecosystem: Consulte los detalles
+  aria_label_call_to_action_module_simulating_marine_ecosystem: Consulta los detalles
     del módulo Simulación de un ecosistema marino
-  aria_label_call_to_action_module_coding_geometric_star_quilt: Consulte los detalles
-    del módulo Coding a Geometric Star Quilt
-  aria_label_call_to_action_module_modeling_animal_adaptations: Consulte los detalles
+  aria_label_call_to_action_module_coding_geometric_star_quilt: Consulta los detalles
+    del módulo Codificación de una colcha de estrellas geométricas
+  aria_label_call_to_action_module_modeling_animal_adaptations: Consulta los detalles
     del módulo Modelado de adaptaciones de animales
-  aria_label_call_to_action_module_coding_book_covers: Consulte los detalles del módulo
-    Coding Book Covers
-  aria_label_call_to_action_module_coding_interactive_maps: Consulte los detalles
-    del módulo Coding Interactive Maps
-  aria_label_call_to_action_csf_course_a: Ver detalles del curso A
-  aria_label_call_to_action_csf_course_b: Ver detalles del curso B
-  aria_label_call_to_action_csf_course_c: Ver detalles del curso C
-  aria_label_call_to_action_csf_course_d: Consulte los detalles del curso D
-  aria_label_call_to_action_csf_course_e: Ver detalles del curso E
-  aria_label_call_to_action_csf_course_f: Ver detalles del curso F
+  aria_label_call_to_action_module_coding_book_covers: Consulta los detalles del módulo
+    Codificación de cubiertas de libros
+  aria_label_call_to_action_module_coding_interactive_maps: Consulta los detalles
+    del módulo Codificación de mapas interactivos
+  aria_label_call_to_action_csf_course_a: Consulta los detalles del curso A
+  aria_label_call_to_action_csf_course_b: Consulta los detalles del curso B
+  aria_label_call_to_action_csf_course_c: Consulta los detalles del curso C
+  aria_label_call_to_action_csf_course_d: Consulta los detalles del curso D
+  aria_label_call_to_action_csf_course_e: Consulta los detalles del curso E
+  aria_label_call_to_action_csf_course_f: Consulta los detalles del curso F
+  aria_label_call_to_action_ai_pl_101_videos: Vea los vídeos de AI 101 para profesores
+  aria_label_call_to_action_ai_teaching_module: Explore el módulo Enseñanza de IA
+    y aprendizaje automático
+  aria_label_call_to_action_how_ai_works_lesson_01: Consulte los detalles de la lección
+    Introducción al aprendizaje automático
+  aria_label_call_to_action_how_ai_works_lesson_02: Consulte los detalles de la lección
+    Computer Vision
+  aria_label_call_to_action_how_ai_works_lesson_03: Consulte los detalles de la lección
+    Redes neuronales
+  aria_label_call_to_action_how_ai_works_lesson_04: Consulte los detalles de la lección
+    Chatbots y modelos de lenguaje grandes
+  aria_label_call_to_action_how_ai_works_lesson_05: Consulte los detalles de la lección
+    Imágenes generativas
+  aria_label_call_to_action_how_ai_works_lesson_06: Consulte los detalles de la lección
+    Sesgo algorítmico
+  aria_label_call_to_action_how_ai_works_lesson_07: Consulte los detalles de la lección
+    Nuestro código ético de IA
   video_title_professional_learning_program: Programa de aprendizaje profesional de
     Code.org
   curriculum_name_csf: Fundamentos de la informática
   curriculum_name_csf_02: Todos los fundamentos de la informática (curso A-F)
   curriculum_name_csf_a_f: Fundamentos de CS A-F
-  curriculum_name_csf_express: Expreso
-  curriculum_name_csf_express_pre_reader: Pre-Reader Express
+  curriculum_name_csf_express: Exprés
+  curriculum_name_csf_express_pre_reader: Exprés para prelectores
   curriculum_name_csf_course_a: Curso A
   curriculum_name_csf_course_b: Curso B
   curriculum_name_csf_course_c: Curso C
@@ -356,79 +383,79 @@ es:
   curriculum_name_creating_apps_with_devices: Creación de aplicaciones con dispositivos
   curriculum_name_poetry: Codificación con poesía
   curriculum_name_dance_party: Fiesta de baile
-  curriculum_name_problem_solving_computing: Resolución de problemas y computación
+  curriculum_name_problem_solving_computing: Resolución de problemas e informática
   curriculum_name_web_development: Desarrollo web
-  curriculum_name_interactive_animations_games: Animaciones Interactivas y Juegos
+  curriculum_name_interactive_animations_games: Animaciones interactivas y juegos
   curriculum_name_design_process: El proceso de diseño
   curriculum_name_data_society: Datos y sociedad
-  curriculum_desc_csf_express: "¡Aprende a crear programas de computadora, desarrolla
+  curriculum_desc_csf_express: "¡Aprende a crear programas de ordenador, desarrolla
     habilidades para resolver problemas y resuelve desafíos divertidos! Crea juegos
     y proyectos creativos para compartir con amigos, familiares y profesores."
   curriculum_desc_csf_express_pre_reader: Aprende los conceptos básicos de la codificación
     de bloques de arrastrar y soltar resolviendo acertijos y creando escenas animadas.
     Crea arte y juegos sencillos para compartir con amigos, familiares y profesores.
-  curriculum_desc_csf_course_a: Programa usando comandos como bucles y eventos. Enseñe
-    a los alumnos a colaborar con otros, a investigar diferentes técnicas de resolución
+  curriculum_desc_csf_course_a: Programa usando comandos como bucles y eventos. Enseña
+    a los estudiantes a colaborar con otros, a investigar diferentes técnicas de resolución
     de problemas, a persistir ante tareas desafiantes y a aprender sobre la seguridad
     en Internet.
   curriculum_desc_csf_course_b: A través de actividades desconectadas y una variedad
     de acertijos, los estudiantes aprenderán los conceptos básicos de la programación,
     las técnicas de colaboración, las habilidades de investigación y pensamiento crítico,
     la persistencia ante las dificultades y la seguridad en Internet.
-  curriculum_desc_csf_course_c: Cree programas con secuencias, bucles y eventos. Investigue
-    las técnicas de resolución de problemas y desarrolle estrategias para crear comunidades
-    positivas tanto en línea como fuera de línea. Cree juegos interactivos que los
+  curriculum_desc_csf_course_c: Crea programas con secuencias, bucles y eventos. Investiga
+    técnicas de resolución de problemas y desarrolla estrategias para crear comunidades
+    positivas tanto en línea como fuera de línea. Crea juegos interactivos que los
     estudiantes puedan compartir.
   curriculum_desc_csf_course_d: Revisión de los conceptos encontrados en cursos anteriores,
     incluidos los bucles y los eventos. Posteriormente, los estudiantes desarrollarán
-    su comprensión de los algoritmos, los bucles anidados, los bucles, los condicionales
-    y mucho más.
-  curriculum_desc_csf_course_e: Cree proyectos divertidos e interactivos que refuercen
-    el aprendizaje sobre la seguridad en línea. Involúcrese en códigos más complejos,
+    su comprensión de los algoritmos, los bucles anidados, los bucles «while», los
+    condicionales y mucho más.
+  curriculum_desc_csf_course_e: Crea proyectos divertidos e interactivos que refuercen
+    el aprendizaje sobre la seguridad en línea. Realiza codificaciones más complejas,
     como bucles anidados, funciones y condicionales.
-  curriculum_desc_csf_course_f: Observe cómo los usuarios toman decisiones en las
-    aplicaciones que utilizan. Cree una variedad de aplicaciones de Sprite Lab que
-    también ofrezcan opciones para el usuario. Aprenda conceptos más avanzados, como
-    las variables y los bucles «para».
+  curriculum_desc_csf_course_f: Observa cómo toman decisiones los usuarios en las
+    aplicaciones que utilizan. Crea una variedad de aplicaciones del laboratorio de
+    sprites que también ofrezcan opciones para el usuario. Aprende conceptos más avanzados,
+    como las variables y los bucles «para».
   curriculum_desc_problem_solving_computing: Usa un proceso de resolución de problemas
-    para abordar acertijos, desafíos y escenarios del mundo real. Aprenda sobre la
-    entrada, la salida, el almacenamiento y el procesamiento de la computadora para
-    ayudar a resolver problemas.
+    para abordar acertijos, desafíos y escenarios del mundo real. Aprende sobre la
+    entrada, la salida, el almacenamiento y el procesamiento del ordenador para ayudar
+    a resolver problemas.
   curriculum_desc_web_development: Crea y comparte contenido en páginas web, explorando
-    el potencial creativo de la web. Desarrolle habilidades de consumo críticas, habilidades
-    de resolución de problemas y trabajo en equipo mientras programa.
+    el potencial creativo de la web. Desarrolla habilidades de consumo críticas, habilidades
+    de resolución de problemas y trabajo en equipo mientras programas.
   curriculum_desc_interactive_animations_games: Crea imágenes programáticas, animaciones,
-    arte interactivo y juegos. Familiarícese con los conceptos de programación y el
+    arte interactivo y juegos. Familiarízate con los conceptos de programación y el
     proceso de diseño.
-  curriculum_desc_design_process: Concéntrese en considerar el impacto social de la
-    informática. A través de los desafíos de diseño, los estudiantes empatizan con
-    las necesidades de los demás y desarrollan soluciones.
-  curriculum_desc_data_society: Hace hincapié en el papel de los datos en la resolución
-    de problemas y en la asistencia de las computadoras en este proceso. Abarca los
-    sistemas de representación y los desafíos asociados. Descubra cómo las recopilaciones
-    de datos ayudan a resolver problemas.
-  curriculum_desc_creating_apps_with_devices: Explore el papel de los dispositivos
-    físicos en la informática. Desarrolle programas que utilicen entradas y salidas
-    de hardware. Hay una versión de esta unidad tanto para el micro:bit como para
-    el Circuit Playground.
-  collection_hardware: Centrarse en el hardware
+  curriculum_desc_design_process: Céntrate en considerar el impacto social de la informática.
+    A través de los desafíos de diseño, los estudiantes empatizan con las necesidades
+    de los demás y desarrollan soluciones.
+  curriculum_desc_data_society: Hace hincapié en el papel que desempeñan los datos
+    en la resolución de problemas y en la asistencia de los ordenadores en este proceso.
+    Abarca los sistemas de representación y los desafíos asociados. Descubre la forma
+    en que las colecciones de datos ayudan a resolver problemas.
+  curriculum_desc_creating_apps_with_devices: Explora el papel que desempeñan los
+    dispositivos físicos en la informática. Desarrolla programas que utilicen entradas
+    y salidas de hardware. Hay una versión de esta unidad tanto para el micro:bit
+    como para el Circuit Playground.
+  collection_hardware: Enfoque en Hardware
   collection_hardware_desc: Capacita a los estudiantes para usar datos y dispositivos
     físicos para resolver problemas.
-  collection_design_purpose: Centrarse en el diseño con un propósito
-  collection_design_purpose_desc: Permite a los estudiantes pensar en las necesidades
+  collection_design_purpose: Enfoque en Diseño con propósito
+  collection_design_purpose_desc: Capacita a los estudiantes para pensar en las necesidades
     de los usuarios al diseñar sitios web y aplicaciones para dispositivos.
-  collection_impact_society: Centrarse en el impacto en la sociedad
-  collection_impact_society_desc: Capacita a los estudiantes para que piensen en las
-    ciencias de la computación como una herramienta para resolver problemas y, al
-    mismo tiempo, considerar los impactos sociales más amplios.
-  collection_creativity: Centrarse en la creatividad
-  collection_creativity_desc: Permite a los estudiantes ser creativos a medida que
-    aprenden a crear sitios web, animaciones, juegos y aplicaciones para dispositivos.
-  collection_coding: Centrarse en la codificación
-  collection_coding_desc: Permite a los estudiantes desarrollar sus habilidades de
-    codificación en el desarrollo web, los juegos y la animación, y la creación de
-    aplicaciones para dispositivos.
-  collection_data: Centrarse en los datos
+  collection_impact_society: Enfoque en Impacto en la sociedad
+  collection_impact_society_desc: Capacita a los estudiantes para que piensen en la
+    informática como una herramienta para resolver problemas y, al mismo tiempo, considerar
+    los impactos sociales más amplios.
+  collection_creativity: Enfoque en Creatividad
+  collection_creativity_desc: Capacita a los estudiantes para ser creativos a medida
+    que aprenden a crear sitios web, animaciones, juegos y aplicaciones para dispositivos.
+  collection_coding: Enfoque en Codificación
+  collection_coding_desc: Capacita a los estudiantes para desarrollar sus habilidades
+    de codificación en el desarrollo web, los juegos y la animación, y la creación
+    de aplicaciones para dispositivos.
+  collection_data: Enfoque en Datos
   collection_data_desc: Capacita a los estudiantes para usar los datos para resolver
     problemas.
   module_label_ages: 'Edades:'
@@ -449,6 +476,10 @@ es:
   module_label_student_tool: Herramienta para estudiantes
   module_label_student_product: Producto
   module_label_student_content_resources: Contenido y recursos
+  module_label_new: Nuevo
+  module_label_coming_soon: Próximamente
+  module_label_video_series: Serie de vídeos
+  module_label_self_paced: Módulo autoguiado
   module_ages_5_10: 5-10
   module_ages_11_18: 11-18
   module_ages_7_18: 7-18
@@ -460,7 +491,7 @@ es:
   module_grade_6_12: 6-12
   module_grade_6_10: 6-10
   module_grade_9_12: 9-12
-  module_grade_kindergarten: Kindergarten
+  module_grade_kindergarten: Jardín de infancia
   module_grade_grade_01: Grado 1
   module_grade_grade_02: Grado 2
   module_grade_grade_03: Grado 3
@@ -469,11 +500,15 @@ es:
   module_grade_k_5_teachers: Maestros de K-5
   module_grade_6_10_teachers: 6-10 maestros
   module_grade_9_12_teachers: 9-12 maestros
-  module_level_beginner: principiante
+  module_level_beginner: Principiante
   module_level_intermediate: Intermedio
+  module_duration_45_mins: 45 minutos
+  module_duration_1_hr: 1 hora
   module_duration_2_hrs: 2 horas
   module_duration_3_hrs: 3 horas
+  module_duration_5_hrs: 5 horas
   module_duration_8_hrs: 8 horas
+  module_duration_20_hrs: 20 horas
   module_duration_35_hrs: 35 horas
   module_duration_lesson: Lección
   module_duration_week: Semana
@@ -495,37 +530,37 @@ es:
     Playground)
   module_label_teaching_maker_microbit: Enseñanza sobre la creación de aplicaciones
     con dispositivos (micro:bit)
-  module_subject_english_language_arts: Artes del lenguaje inglés
+  module_subject_english_language_arts: Lengua y literatura inglesas
   module_subject_social_studies: Estudios sociales
-  module_subject_science: Ciencia
+  module_subject_science: Ciencias
   module_subject_math: Matemáticas
   module_name_coding_w_poetry: Codificación con poesía
   module_name_coding_time_capsule: Codificación de una cápsula del tiempo
   module_name_simulating_marine_ecosystem: Simulación de un ecosistema marino
-  module_name_coding_geometric_star_quilt: Codificación de una colcha geométrica con
-    forma de estrella
+  module_name_coding_geometric_star_quilt: Codificación de una colcha de estrellas
+    geométricas
   module_name_modeling_animal_adaptations: Modelado de adaptaciones de animales
-  module_name_coding_book_covers: Portadas de libros de programación
+  module_name_coding_book_covers: Codificación de portadas de libros
   module_name_coding_interactive_maps: Codificación de mapas interactivos
-  module_desc_coding_w_poetry: Explora la intersección de la programación y las artes
-    del lenguaje mediante la creación de poemas interactivos que ilustren el estado
-    de ánimo y el tono con código.
-  module_desc_coding_time_capsule: Cree una cápsula del tiempo digital para capturar
+  module_desc_coding_w_poetry: Explora la intersección de la codificación y la lengua
+    y literatura creando poemas interactivos que ilustren el estado de ánimo y el
+    tono con código.
+  module_desc_coding_time_capsule: Crea una cápsula del tiempo digital para capturar
     y conservar recuerdos para el futuro.
-  module_desc_simulating_marine_ecosystem: Utilice la codificación para simular un
+  module_desc_simulating_marine_ecosystem: Utiliza la codificación para simular un
     ecosistema marino, explorando las interdependencias entre los diferentes organismos
     y su entorno.
-  module_desc_coding_geometric_star_quilt: Aprende a programar para crear patrones
-    geométricos en impresionantes colchas de estrellas, combinando conceptos matemáticos
+  module_desc_coding_geometric_star_quilt: Aprende a codificar para crear patrones
+    geométricos en increíbles colchas de estrellas, combinando conceptos matemáticos
     con expresión creativa.
   module_desc_modeling_animal_adaptations: Usa el código para modelar las adaptaciones
-    de los animales, profundizando tu comprensión de cómo las diferentes especies
-    han evolucionado para sobrevivir en sus entornos.
-  module_desc_coding_book_covers: Usa código para crear una portada animada de un
-    libro, usando sprites y texto para transmitir los personajes, el escenario, la
-    trama y mucho más.
-  module_desc_coding_interactive_maps: Utilice la codificación para desarrollar un
-    mapa que cuente una historia, lo que le permitirá explorar la información geográfica
+    de los animales, profundizando tu comprensión de la forma en que las diferentes
+    especies han evolucionado para sobrevivir en sus entornos.
+  module_desc_coding_book_covers: Utiliza código para crear una portada animada de
+    un libro, usando sprites y texto para transmitir los personajes, el escenario,
+    la trama y mucho más.
+  module_desc_coding_interactive_maps: Utiliza la codificación para desarrollar un
+    mapa que cuente una historia, lo que te permitirá explorar la información geográfica
     de una manera atractiva e interactiva.
   values_01: Creemos que la informática es fundamental para todos los estudiantes.
   values_02: Estamos comprometidos con la equidad, el acceso y las oportunidades
@@ -534,58 +569,58 @@ es:
   values_05: Actuamos con integridad y transparencia
   values_06: Creemos que un impacto amplio requiere pensar en grande y actuar de manera
     integral.
-  heading_professional_learning: Aprendizaje profesional que satisfaga sus necesidades
+  heading_professional_learning: Aprendizaje profesional que satisface tus necesidades
   heading_additional_resources: Recursos adicionales
   heading_support_and_questions: Soporte y preguntas
   heading_faq: Preguntas frecuentes
   heading_curriculum_at_a_glance: Plan de estudios de un vistazo
-  heading_curricula_at_a_glance: Los planes de estudio de un vistazo
-  heading_engaging_projects: Proyectos y actividades interesantes que inspiran el
-    aprendizaje
-  heading_build_apps: Crea aplicaciones
+  heading_curricula_at_a_glance: Planes de estudio de un vistazo
+  heading_engaging_projects: Proyectos y actividades atractivas que inspiran el aprendizaje
+  heading_build_apps: Crear aplicaciones
   heading_widgets: Widgets
   heading_choice_levels: Niveles de elección
   heading_year_long_intro_course: Curso introductorio de un año
   heading_flexible_units: Unidades flexibles
   heading_collections: Colecciones
-  heading_find_a_module: Encuentre un módulo para su aula
-  heading_no_devices: "¿No hay dispositivos? Lo tenemos cubierto"
-  heading_java_lab: Laboratorio de Java
-  heading_objects_first: Los objetos son lo primero
-  professional_learning_section_desc: Obtenga el apoyo que necesita mientras se prepara
+  heading_find_a_module: Encuentra un módulo para tu aula
+  heading_no_devices: "¿No tienes dispositivos? Tenemos lo que necesitas"
+  heading_java_lab: Java Lab
+  heading_objects_first: Los objetos primero
+  heading_these_lessons_will: 'Estas lecciones permitirán:'
+  professional_learning_section_desc: Recibe el apoyo que necesitas mientras te preparas
     para enseñar. A los profesores les encanta, ¡y más del 90% lo califica como el
     mejor desarrollo profesional de la historia!
-  professional_learning_section_desc_short: Obtenga el apoyo que necesita mientras
-    se prepara para enseñar.
-  professional_learning_section_desc_self_paced: Apoyo justo a tiempo que le permite
-    prepararse para enseñar con confianza en su horario.
+  professional_learning_section_desc_short: Recibe el apoyo que necesitas mientras
+    te preparas para enseñar.
+  professional_learning_section_desc_self_paced: Apoyo justo a tiempo que te permite
+    prepararte para enseñar con confianza de acuerdo a tu horario.
   professional_learning_section_block_facilitator_led_workshops: Nuestro programa
-    de aprendizaje profesional, de gran apoyo, lo reunirá con un grupo de maestros
-    para que aprendan unos de otros, así como con facilitadores expertos durante el
-    primer año de enseñanza del plan de estudios gratuito a sus alumnos. Los talleres
-    presenciales y virtuales comenzarán este verano.
-  professional_learning_section_block_facilitator_led_workshops_csf: Únase a los maestros
+    de aprendizaje profesional, que ofrece un gran apoyo, te reunirá con un grupo
+    de profesors para aprender unos de otros, así como con facilitadores expertos
+    durante el primer año de enseñanza del plan de estudios gratuito a sus estudiantes.
+    Los talleres presenciales y virtuales comenzarán este verano.
+  professional_learning_section_block_facilitator_led_workshops_csf: Únete a profesores
     locales para recibir apoyo inspirador y práctico para implementar la informática
-    en su aula. Nuestros socios regionales ofrecen talleres de Code.org de un día
-    de alta calidad para maestros individuales o para estudiantes de formación profesional
-    en toda la escuela. ¡Inscríbete en un taller de desarrollo profesional cerca de
-    ti!
+    en tu aula. Nuestros socios regionales ofrecen talleres de Code.org de un día
+    de duración de alta calidad para profesores de forma individual o para el desarrollo
+    profesional en toda la escuela. ¡Inscríbete en un taller de desarrollo profesional
+    cerca de ti!
   professional_learning_section_block_csa: Our highly supportive Professional Learning
     Program will bring you together with a group of teachers to learn from each other
     as well as expert facilitators as you take on the first year of teaching the free
     CSA curriculum to your students.
-  professional_learning_section_workshops_starting: Talleres presenciales y virtuales
-    a partir de este verano.
+  professional_learning_section_workshops_starting: Los talleres presenciales y virtuales
+    comenzarán este verano.
   no_devices_section_subhead: "¡Adelante, corta el cable (por un tiempo)!"
-  no_devices_section_desc: La educación en informática no siempre tiene que estar
+  no_devices_section_desc: La educación sobre informática no siempre tiene que impartirse
     frente a una pantalla y el acceso a los dispositivos no debería ser una barrera
-    para aprender conceptos de informática.
-  support_and_questions_section_subhead: "¿Aún tienes preguntas? ¡Comuníquese con
-    nosotros! Estamos aquí para ayudar."
-  support_and_questions_section_desc: Nuestro equipo de soporte está aquí para responder
-    cualquier pregunta que puedas tener sobre cómo empezar a enseñar con Code.org.
-    También puedes preguntar a otros profesores sobre su experiencia en nuestros foros
-    de profesores.
+    para aprender los conceptos de la informática.
+  support_and_questions_section_subhead: "¿Aún tienes preguntas? ¡Comunícate con nosotros!
+    Estamos a tu disposición para ayudar."
+  support_and_questions_section_desc: Nuestro equipo de soporte está a tu disposición
+    para responder cualquier pregunta que puedas tener sobre cómo empezar a enseñar
+    con Code.org. También puedes preguntar a otros profesores sobre su experiencia
+    en nuestros foros de profesores.
   blockchain_hero_heading: Cómo funciona la cadena de bloques
   blockchain_hero_desc: "¡Sumérjase en el mundo de la cadena de bloques con «Cómo
     funciona la cadena de bloques», nuestra nueva serie de vídeos y las lecciones
@@ -636,14 +671,14 @@ es:
     la IA en los planes de estudio de primaria y secundaria de todo el mundo a través
     de nuevos informes, recomendaciones de políticas y oportunidades de participación
     pública.
-  ai_pl_callout_title: AI 101 para profesores
+  ai_pl_callout_title: Introducción a la IA para profesores
   ai_pl_callout_desc_01: Descubra el revolucionario mundo de la inteligencia artificial
     (IA) y su potencial transformador en la educación con nuestra completa serie de
     aprendizaje en línea para profesores.
   ai_pl_callout_desc_02: Code.org, ETS, ISTE y Khan Academy se han asociado para ofrecer
     a los educadores una serie de aprendizaje profesional que ayude a los maestros
     a adaptarse a los impactos de la IA en el aula.
-  ai_hero_heading: La inteligencia artificial no es mgia… ¡Es simplemente código!
+  ai_hero_heading: La inteligencia artificial no es magia… ¡Es simplemente código!
   ai_hero_desc: Desmitifique la inteligencia artificial (IA) aprendiendo cómo está
     cambiando la forma en que vivimos, trabajamos y aprendemos.
   ai_intro_heading: "¿Por qué aprender sobre la IA?"
@@ -689,6 +724,11 @@ es:
   ai_curriculum_grades_03: 'Niveles de grado: 3-12'
   ai_curriculum_duration_03: 'Duración: 1 hora'
   ai_curriculum_btn_aria_label_03: Prueba la actividad AI for Oceans
+  ai_curriculum_title_04: Cómo funciona la IA
+  ai_curriculum_desc_04: Estas lecciones complementan la serie de vídeos Cómo funciona
+    la IA. Cada lección va acompañada de un único vídeo de la serie, en el que se
+    profundiza en los conceptos presentados en los vídeos.
+  ai_curriculum_btn_aria_label_04: Explore las lecciones de cómo funciona la IA
   ai_carousel_heading: 'Qué dicen los profesores sobre la IA con Code.org:'
   ai_carousel_quote_01: Esta lección también les dio a mis alumnos la oportunidad
     de ver que hay un elemento de opinión en los sistemas de clasificación. Más tarde,
@@ -708,6 +748,11 @@ es:
   ai_pl_list_04: Considere las implicaciones reales de la IA y el aprendizaje automático.
   ai_pl_list_05: Explore los proyectos de final de capítulo.
   ai_pl_duration: 'Duración: 2 horas'
+  ai_pl_title: Enseñanza de IA y aprendizaje automático
+  ai_pl_desc: Introducción a la inteligencia artificial y al aprendizaje automático.
+    Entrene un modelo de aprendizaje automático con AI Lab e interactúe con las aplicaciones
+    de aprendizaje automático. Considera las implicaciones de la IA y el aprendizaje
+    automático en el mundo real.
   ai_video_series_title: Cómo funciona la IA
   ai_video_series_desc: Con una introducción del CEO de Microsoft, Satya Nadella,
     esta serie de videos cortos le presentará cómo funciona la inteligencia artificial
@@ -733,14 +778,16 @@ es:
     gratuito, seminarios web, presentaciones en conferencias y oportunidades de aprendizaje
     entre pares.
   ai_resources_btn_aria_label_03: Explore el sitio web AI for Teachers
-  ai_pl_101_hero_heading: AI 101 para profesores
-  ai_pl_101_hero_desc: Descubra el potencial transformador de la inteligencia artificial
-    (IA) en la educación con nuestra serie gratuita de aprendizaje en línea para educadores.
+  ai_pl_101_hero_heading: Introducción a la IA para profesores
+  ai_pl_101_hero_desc: Descubre el revolucionario mundo de la inteligencia artificial
+    (IA) y su potencial transformador en la educación con nuestra serie básica de
+    aprendizaje en línea para profesores.
+  ai_pl_101_hero_desc_02: Una serie completa de aprendizaje en línea para profesores.
   ai_pl_101_hero_presented: Presentado por
-  ai_pl_101_intro_heading: "¿Qué es AI 101 para profesores?"
-  ai_pl_101_intro_text: AI 101 for Teachers es una serie de aprendizaje profesional
-    en línea básica y gratuita para cualquier profesor y educador interesado en el
-    innovador mundo de la inteligencia artificial (IA) y su potencial transformador
+  ai_pl_101_intro_heading: "¿Qué es Introducción a la IA para profesores?"
+  ai_pl_101_intro_text: Introducción a la IA para profesores es una serie de aprendizaje
+    profesional en línea básica y gratuita para cualquier profesor y educador interesado
+    en el revolucionario mundo de la inteligencia artificial (IA) y su potencial transformador
     en la educación. Los socios Code.org, ETS, ISTE y Khan Academy ofrecen sesiones
     interesantes con expertos de renombre que desmitificarán la IA, explorarán la
     implementación responsable, abordarán los prejuicios y mostrarán cómo el aprendizaje
@@ -748,41 +795,138 @@ es:
     en este viaje de exploración y empoderamiento, y descubre el futuro de la enseñanza
     con y sobre la IA.
   ai_pl_101_partnership_between: Una asociación entre
-  ai_pl_101_join_email_title: Regístrese para obtener acceso anticipado a AI 101 for
-    Teachers
+  ai_pl_101_join_email_title: Regístrate para obtener acceso anticipado a Introducción
+    a la IA para profesores
   ai_pl_101_pro_join_email_desc: Sé el primero en enterarte del inicio de cada sesión.
-    Recibe actualizaciones sobre los recursos de IA en Code.org, ETS, ISTE y Khan
+    Recibe actualizaciones sobre los recursos de IA de Code.org, ETS, ISTE y Khan
     Academy.
   ai_pl_101_explore_title: Recursos relacionados con la IA
   ai_pl_101_explore_desc: Tenemos una variedad de recursos adicionales para ti de
-    Code.org, ETS, ISTE y Khan Academy para apoyar a los maestros en este campo nuevo
-    y en crecimiento. Échales un vistazo a continuación.
+    Code.org, ETS, ISTE y Khan Academy para apoyar a los profesores en este campo
+    nuevo y en crecimiento. Échales un vistazo a continuación.
   ai_pl_101_explore_title_1: Khanmigo
-  ai_pl_101_explore__desc_1: 'El material didáctico impulsado por la IA de Khan Academy
-    permite a los maestros dejar de dedicar tiempo a las tareas de preparación que
-    no les gustan y centrarse en lo que sí les encanta: enseñar.'
+  ai_pl_101_explore__desc_1: 'El material didáctico basado en IA de Khan Academy permite
+    a los profesores dejar de dedicar tiempo a las tareas de preparación que no les
+    gustan y centrarse en lo que sí les encanta: enseñar.'
   ai_pl_101_explore__button_1: Prueba Khanmigo
   ai_pl_101_explore_title_2: Exploraciones de inteligencia artificial para educadores
   ai_pl_101_explore__desc_2: Durante seis años, este curso en línea de 15 horas de
-    ISTE ha guiado a los educadores de K-12 sobre los aspectos esenciales de la IA
-    para la enseñanza y el aprendizaje. El curso se ofrece tres veces al año y es
-    totalmente asincrónico con el apoyo continuo de un instructor experto.
-  ai_pl_101_explore__button_2: Comenzar el curso
+    ISTE ha guiado a educadores de grados K-12 sobre los aspectos esenciales de la
+    IA para la enseñanza y el aprendizaje. El curso se ofrece tres veces al año y
+    es totalmente asincrónico con el apoyo continuo de un instructor experto.
+  ai_pl_101_explore__button_2: Iniciar el curso
   ai_pl_101_explore_title_3: Plan de estudios de IA
   ai_pl_101_explore__desc_3: En el plan de estudios de IA de Code.org para los grados
-    3 a 12, los estudiantes utilizan actividades divertidas para ver cómo las computadoras
-    aprenden de los datos. El plan de estudios también invita a los estudiantes a
-    investigar el aprendizaje automático y los datos, a la vez que reflexionan sobre
-    las implicaciones éticas de la IA.
-  ai_pl_101_explore__button_3: Explore los planes de estudio
+    3 a 12, los estudiantes utilizan actividades divertidas para ver la forma en que
+    los ordenadores aprenden de los datos. El plan de estudios también invita a los
+    estudiantes a investigar el aprendizaje automático y los datos, a la vez que reflexionan
+    sobre las implicaciones éticas de la IA.
+  ai_pl_101_explore__button_3: Explora los planes de estudio
   ai_pl_101_explore_title_4: Criterios interactivos de ETS
   ai_pl_101_explore__desc_4: 'Esta plataforma de redacción guiada de cinco párrafos
-    guía a los alumnos a través de cinco fases críticas del proceso de escritura:
-    preparar/planificar, escribir, revisar, editar y reflexionar. ETS personaliza
-    la experiencia de escritura al aprovechar los modelos de calificación más avanzados
-    y la IA, lo que ayuda a los maestros a proporcionar comentarios iterativos y una
-    evaluación formativa a lo largo de la experiencia de escritura.'
-  ai_pl_101_explore__button_4: Explore la herramienta
+    guía a los estudiantes por cinco fases críticas del proceso de escritura: preparar/planificar,
+    escribir, revisar, editar y reflexionar. ETS personaliza la experiencia de escritura
+    aprovechando los modelos de calificación más avanzados y la IA, lo que ayuda a
+    los profesores a dar retroalimentación iterativa y una evaluación formativa a
+    lo largo de la experiencia de escritura.'
+  ai_pl_101_explore__button_4: Explora la herramienta
+  ai_pl_101_video_title_1: Charla junto a la chimenea con Sal Khan y Hadi Partovi
+  ai_pl_101_video_desc_1: Únete a Sal Khan (Khan Academy) y Hadi Partovi (Code.org)
+    en una charla informal sobre cómo incorporar la inteligencia artificial en el
+    aula. Prepárese para un animado debate que incluirá algunos de los temas más controvertidos
+    que rodean a la IA en la actualidad.
+  ai_pl_101_video_title_2: Desmitificando la IA para los educadores
+  ai_pl_101_video_desc_2: Introducción a los fundamentos de la Inteligencia Artificial,
+    que le proporcionará los conocimientos básicos para comprender el profundo impacto
+    de la IA en nuestra sociedad y su creciente relevancia en el campo de la educación.
+    Obtendrá información práctica sobre cómo aprovechar la IA para las tareas del
+    aula y ahorrar tiempo en las tareas administrativas.
+  ai_pl_101_video_title_3: Transformar el aprendizaje con IA
+  ai_pl_101_video_desc_3: Explore la intersección de la IA y la educación. Esta sesión
+    explora cómo se puede combinar la IA con la pedagogía para mejorar el aprendizaje
+    de los estudiantes. Es una visita obligada para los educadores que buscan aprovechar
+    la IA para transformar sus prácticas de enseñanza a fin de enriquecer las experiencias
+    de aprendizaje de sus alumnos.
+  ai_pl_101_video_title_4: Garantizar un enfoque responsable de la IA
+  ai_pl_101_video_desc_4: Explore las consideraciones éticas y las mejores prácticas
+    para incorporar la inteligencia artificial en los entornos educativos. Esta sesión
+    proporcionará estrategias concretas, recursos y ejemplos del mundo real, todos
+    ellos con el objetivo de comprender los posibles sesgos de la IA y las consideraciones
+    éticas que conlleva.
+  ai_pl_101_video_title_5: Llevar la IA al aula
+  ai_pl_101_video_desc_5: Esta sesión se centra en enseñar sobre la IA, evaluar y
+    utilizar las herramientas educativas de IA y aprovechar la IA para la evaluación
+    de los estudiantes. Con una rica combinación de teoría, ejemplos prácticos y recursos,
+    su objetivo es capacitar a los educadores para que naveguen por el panorama de
+    la IA y mejoren las experiencias de aprendizaje de los estudiantes.
+  ai_pl_101_video_desc_6: 'Obtenga más información sobre la nueva tecnología que impulsa
+    los grandes cambios en la IA, con dos nuevos vídeos sobre modelos de lenguaje
+    grandes (como ChatGPT) y la IA generativa. Descubra cómo funcionan estas nuevas
+    tecnologías directamente de la mano de los expertos: Mira Murati, directora de
+    tecnología de OpenAI, y Cristóbal Valenzuela, director ejecutivo de RunwayML.'
+  how_ai_works_hero_heading: Cómo funciona la IA
+  how_ai_works_hero_desc: "¡Sumérjase en el mundo de la IA con «Cómo funciona la IA»,
+    nuestra serie de vídeos y las lecciones que la acompañan!"
+  how_ai_works_intro_desc: Esta serie de vídeos cortos y las lecciones presenciales
+    que los acompañan les presentarán a usted y a sus alumnos cómo funciona la inteligencia
+    artificial y por qué es importante. Puedes elegir lecciones individuales en función
+    del tema, explorar toda la serie de temas en una clase o enseñar las 7 lecciones
+    para profundizar.
+  how_ai_works_intro_list_01: Presentarle la inteligencia artificial y el aprendizaje
+    automático
+  how_ai_works_intro_list_02: Descubra cómo funciona la IA generativa, incluidos los
+    modelos de lenguaje de gran tamaño (LLM) y la generación de imágenes
+  how_ai_works_intro_list_03: Explore los prejuicios, la ética, la privacidad y el
+    uso responsable de la IA
+  how_ai_works_intro_list_04: Aborda las aplicaciones de la IA en el mundo real, incluida
+    la visión artificial
+  how_ai_works_lessons_heading: Clases de IA para tu clase
+  how_ai_works_lesson_title_01: Introducción al aprendizaje automático
+  how_ai_works_lesson_desc_01: Conozca una forma de inteligencia artificial llamada
+    aprendizaje automático y cómo pueden usar el proceso de resolución de problemas
+    para ayudar a entrenar a un robot para que resuelva problemas. Participe en actividades
+    de aprendizaje automático en las que un robot aprende a detectar patrones en los
+    peces.
+  how_ai_works_lesson_title_02: Visión por computador
+  how_ai_works_lesson_desc_02: Descubra cómo funciona la visión artificial. Vea un
+    vídeo en el que se explica la visión artificial y cómo «ve» una computadora. A
+    continuación, diseñe un algoritmo que utilice una red para decidir qué número
+    muestra la pantalla de siete segmentos y pruébelo.
+  how_ai_works_lesson_title_03: Redes neuronales
+  how_ai_works_lesson_desc_03: Descubra cómo funcionan las redes neuronales. Utilice
+    los widgets para explorar las redes neuronales de forma práctica. Vea un vídeo
+    en el que se explican las redes neuronales. Por último, analice la necesidad de
+    contar con perspectivas diversas a la hora de crear sistemas de recomendación.
+  how_ai_works_lesson_title_04: Chatbots y modelos lingüísticos de gran tamaño
+  how_ai_works_lesson_desc_04: Aprenda qué es un modelo de lenguaje grande (LLM) y
+    cómo funciona, luego use un LLM para crear un texto en conjunto con la IA. Por
+    último, analice si los LLM son inteligentes o creativos.
+  how_ai_works_lesson_title_05: Imágenes generativas
+  how_ai_works_lesson_desc_05: Descubra cómo la IA puede generar imágenes y, a continuación,
+    explore un widget de IA de difusión y analice si estos modelos son creativos o
+    no.
+  how_ai_works_lesson_title_06: Sesgo algorítmico
+  how_ai_works_lesson_desc_06: Practica el recorte de imágenes para descubrir el sesgo
+    subyacente al algoritmo de recorte de Twitter y, a continuación, lee y mira un
+    vídeo sobre el descubrimiento de este algoritmo sesgado. Por último, analiza las
+    formas de reconocer y reducir el sesgo en los algoritmos.
+  how_ai_works_lesson_title_07: Nuestro código ético de IA
+  how_ai_works_lesson_desc_07: Realice investigaciones utilizando artículos y vídeos
+    que expongan las dificultades éticas en el área de inteligencia artificial de
+    su elección. Reúna un recurso para toda la clase titulado «Nuestro código ético
+    de la IA» para creadores de IA y legisladores de todo el mundo.
+  how_ai_works_lessons_in_a_day_title: Cómo funciona la IA en un día
+  how_ai_works_lessons_in_a_day_desc: "¿Solo tienes un día? También existe la opción
+    de presentar la serie completa a los estudiantes en un solo día. Perfecto para
+    cualquier profesor de un área temática que quiera introducir a sus alumnos en
+    la IA, o incluso como lección para un profesor invitado."
+  how_ai_works_lessons_in_a_day_desc_02: Presenta todos los vídeos de «Cómo funciona
+    la IA» en un día. Los estudiantes siguen cada vídeo haciendo coincidir el vocabulario
+    del vídeo y, a continuación, responden a una pregunta de reflexión sobre cada
+    vídeo.
+  how_ai_works_resources_desc: "¿Le interesa obtener más información sobre la IA?
+    Estos son algunos recursos adicionales que pueden ayudar a ampliar tu aprendizaje
+    y el de tus alumnos."
   ai_vid_intro_caption: Presentamos cómo funciona la IA
   ai_vid_chatbots_caption: Cómo funcionan los chatbots y los grandes modelos de lenguaje
   ai_vid_creativity_caption: "¿La IA tiene creatividad e imaginación?"
@@ -1109,8 +1253,8 @@ es:
   teach_page_pl_offerings_list_desc_self_paced: Estos módulos le permiten participar
     a su propio ritmo y en su propio tiempo, al mismo tiempo que se centra en las
     áreas más importantes para sus necesidades y contexto de enseñanza.
-  teach_page_pl_offerings_list_heading_workshops_facilitator_led: Facilitator-led
-    Workshops
+  teach_page_pl_offerings_list_heading_workshops_facilitator_led: Talleres dirigidos
+    por facilitadores
   teach_page_pl_offerings_list_heading_workshops: Talleres
   teach_page_pl_offerings_list_desc_workshops_en: With our Regional Partners as hosts
     and our Code.org facilitators as guides, our workshops around the country focus
@@ -1140,21 +1284,21 @@ es:
   teach_page_additional_materials_list_desc_03: Imprima estos pósteres de diversos
     modelos a seguir para colgarlos en su escuela e inspire a sus alumnos a probar
     las ciencias de la computación.
-  csp_page_top_desc: Free set of elementary curricula that introduces students to
-    the foundational concepts of computer science and challenges them to explore how
-    computing and technology can impact the world. Can be taught as an introductory
-    class and as an AP course.
+  csp_page_top_desc: Free year-long curriculum that introduces students to the foundational
+    concepts of computer science and challenges them to explore how computing and
+    technology can impact the world. Can be taught as an introductory class and as
+    an AP course.
   csp_page_intro_heading: Free, AP® CSP endorsed, high school introductory course
-  csp_page_intro_list_01: Culturally responsive pedagogy
-  csp_page_intro_list_02: Real-world problem investigation
-  csp_page_intro_list_03: Explainer videos with diverse presenters
-  csp_page_intro_list_04: Open-ended projects for more personalized learning
-  csp_page_curriculum_glance_topics: Programming, Data, Art and Design, Games and
-    Animation
-  csp_page_curriculum_glance_devices: Laptop, Chromebook
+  csp_page_intro_list_01: Pedagogía culturalmente responsable
+  csp_page_intro_list_02: Investigación de problemas del mundo real
+  csp_page_intro_list_03: Vídeos explicativos con diversos presentadores
+  csp_page_intro_list_04: Proyectos abiertos para un aprendizaje más personalizado
+  csp_page_curriculum_glance_topics: Programación, datos, arte y diseño, juegos y
+    animación
+  csp_page_curriculum_glance_devices: Ordenador portátil, Chromebook
   csp_page_curriculum_glance_tools: Laboratorio de aplicaciones
-  csp_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+  csp_page_curriculum_glance_professional_learning: Talleres dirigidos por facilitadores,
+    módulos a tu propio ritmo
   csp_page_curriculum_glance_professional_languages: Inglés
   csp_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
@@ -1232,14 +1376,15 @@ es:
   csp_page_faq_answer_05_03_list_02: Chart paper
   csp_page_faq_answer_05_03_list_03: Markers
   csp_page_faq_answer_05_03_list_04: Post-it notes
-  csp_page_faq_question_06: How can I access answer keys?
-  csp_page_faq_answer_06_01: With an approved teacher account, you can find answer
-    keys in a blue "Teacher Only" panel that shows in the online lessons and activities.
-  csp_page_faq_answer_06_02: Teachers in our Professional Learning Program will automatically
-    be approved to view answer keys. If you need an approved teacher account, you
-    can apply for access to protected teacher-only materials (answer keys, etc) through
-    [this form](%{form_url}). Please keep in mind that it may take 3-5 business days
-    to verify your account.
+  csp_page_faq_question_06: "¿Cómo puedo acceder a las claves de respuestas?"
+  csp_page_faq_answer_06_01: Con una cuenta de profesor aprobada, puedes encontrar
+    las claves de respuestas en un panel azul "Solo para profesores" que aparece en
+    las lecciones y actividades en línea.
+  csp_page_faq_answer_06_02: Los profesores de nuestro Programa de Aprendizaje Profesional
+    tendrán autorización automática para ver las claves de respuestas. Si necesitas
+    una cuenta de profesor aprobada, puedes solicitar acceso a materiales protegidos
+    solo para profesores (claves de respuestas, etc.) a través de [este formulario](%{form_url}).
+    Ten en cuenta que la verificación de tu cuenta puede tardar entre 3 y 5 días laborables.
   csp_page_faq_question_07: How was the curriculum developed?
   csp_page_faq_answer_07_01: Our CS Principles curriculum has always been designed
     as part of a broader vision of supporting high quality, engaging, and equitable
@@ -1264,211 +1409,216 @@ es:
     our courses, please see our [Curriculum Values](%{curriculum_url}) and our [Professional
     Learning Values](%{pl_url}).
   csd_page_top_desc: El curso más flexible de Code.org, que permite que cada unidad
-    se enseñe por separado, se combine en colecciones que se centren en áreas específicas
+    se enseñe por separado, se combine en colecciones con un enfoque en áreas específicas
     o como un curso de un año completo. El plan de estudios gratuito introduce a los
     estudiantes en la creación de sus propios sitios web, aplicaciones, animaciones,
     juegos y sistemas informáticos físicos.
-  csd_page_intro_heading: Plan de estudios flexible para satisfacer sus necesidades
+  csd_page_intro_heading: Plan de estudios flexible para satisfacer tus necesidades
   csd_page_intro_list_01: Plan de estudios introductorio flexible
   csd_page_intro_list_02: Amplitud de temas
   csd_page_intro_list_03: No se necesita experiencia previa
-  csd_page_intro_list_04: Construye muchos tipos diferentes de proyectos
+  csd_page_intro_list_04: Crea muchos tipos diferentes de proyectos
   csd_page_intro_list_05: Emocionante y divertido
-  csd_page_quote: "¡Este plan de estudios es inclusivo, está bien organizado y se
-    centra en el estudiante! La increíble organización del plan de estudios es lo
-    que me hace usarlo año tras año."
-  csd_page_curriculum_glance_topics: Inteligencia artificial, Datos, Diseño web, Computación
-    física, Diseño de aplicaciones, Juegos y animaciones, Arte y diseño, Programación
-  csd_page_curriculum_glance_devices: Laptop, Chromebook
+  csd_page_quote: "¡Este plan de estudios lo incluye todo, está bien organizado y
+    se centra en el estudiante! La increíble organización del plan de estudios es
+    lo que me hace usarlo año tras año."
+  csd_page_curriculum_glance_topics: Inteligencia artificial, datos, diseño web, informática
+    física, diseño de aplicaciones, juegos y animaciones, arte y diseño, programación
+  csd_page_curriculum_glance_devices: Ordenador portátil, Chromebook
   csd_page_curriculum_glance_tools: Laboratorio de aplicaciones, laboratorio de juegos,
-    laboratorio de inteligencia artificial, laboratorio web
-  csd_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
+    laboratorio de IA, laboratorio web
+  csd_page_curriculum_glance_professional_learning: Talleres dirigidos por facilitadores,
+    módulos a tu propio ritmo
   csd_page_curriculum_glance_professional_languages: Español (España)
-  csd_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
-    Closed captioning, Immersive reader
-  csd_page_pick_a_course_heading: Elegir el curso de CS Discoveries adecuado para
-    su aula
-  csd_page_pick_a_course_desc: Con el diverso conjunto de opciones que ofrece CS Discoveries,
-    hay un curso para todas las necesidades diferentes.
+  csd_page_curriculum_glance_professional_accessibility_features: Texto a voz, subtítulos,
+    lector inmersivo
+  csd_page_pick_a_course_heading: Elige el curso de Descubrimientos informáticos adecuado
+    para tu aula
+  csd_page_pick_a_course_desc: Con el diverso conjunto de opciones que ofrece Descubrimientos
+    informáticos, hay un curso para todas las necesidades diferentes.
   csd_page_pick_a_course_heading_02: "¿Cómo quieres elegir el contenido?"
   csd_page_courses_year_desc: A través de 7 unidades, los estudiantes exploran una
     amplia variedad de temas.
-  csd_page_courses_year_action_block_desc: 'Un curso de introducción a las ciencias
-    de la computación que permite a los estudiantes crear artefactos auténticos e
-    interactuar con las ciencias de la computación como medio para la creatividad,
-    la comunicación, la resolución de problemas y la diversión. '
-  csd_page_courses_flexible_units_desc: Cada unidad de CS Discoveries se puede usar
-    por sí sola sin necesidad de experiencia previa, lo que le permite elegir las
-    unidades exactas que funcionan para su aula.
-  csd_page_courses_collections_desc: Profundice en un área con un conjunto de unidades
+  csd_page_courses_year_action_block_desc: 'Un curso de introducción a la informática
+    que capacita a los estudiantes para crear artefactos auténticos e interactuar
+    con la informática como medio para la creatividad, la comunicación, la resolución
+    de problemas y la diversión. '
+  csd_page_courses_flexible_units_desc: Cada unidad de Descubrimientos informáticos
+    se puede usar por sí sola sin necesidad de experiencia previa, lo que te permite
+    elegir las unidades exactas que funcionan para tu aula.
+  csd_page_courses_collections_desc: Profundiza en un área con un conjunto de unidades
     centradas en un tema específico.
-  csd_page_faq_question_01: "¿CS Discoveries está mapeado según los estándares?"
-  csd_page_faq_answer_01: CS Discoveries was written using both the K-12 Framework
-    for Computer Science and the 2017 CSTA standards as guidance. Currently, every
-    lesson in CS Discoveries contains mappings to the relevant 2017 CSTA standards.
-    [A summary of standards mappings can be found here](%{mappings_url}). A Google
-    Sheets version of the standards can be found at [CSD Standards](%{csd_standards_url}).
+  csd_page_faq_question_01: "¿Descubrimientos informáticos está adaptado a los estándares?"
+  csd_page_faq_answer_01: Descubrimientos informáticos fue escrito utilizando como
+    guía tanto el Marco K-12 para informática como los estándares CSTA 2017. Actualmente,
+    todas las lecciones de Descubrimientos informáticos están adaptadas a los estándares
+    CSTA de 2017. [Se puede encontrar un resumen de las correspondencias de los estándares
+    aquí](%{mappings_url}). Puede encontrar una versión de los estándares en Google
+    Sheets en [CSD Standards](%{csd_standards_url}).
   csd_page_faq_question_02: "¿Cómo/dónde puedo obtener desarrollo profesional para
     este curso?"
   csd_page_faq_answer_02: Nuestro programa de aprendizaje profesional ofrece apoyo
     durante todo el año. El programa comienza con un taller de verano de cinco días
     en el que tendrás la oportunidad de trabajar de manera práctica con el plan de
-    estudios y conocer a otros maestros de tu área. Durante todo el año, ofrecemos
-    talleres de seguimiento y apoyo en foros. No necesitas ninguna experiencia previa
+    estudios y conocer a otros profesores de tu área. Durante todo el año, ofrecemos
+    talleres de seguimiento y apoyo en foros. No necesitas tener experiencia previa
     en informática para empezar. ¡Y a los profesores les encanta! El 90% lo califica
-    como el mejor desarrollo profesional de la historia. [Haga clic aquí para postularse
+    como el mejor desarrollo profesional de la historia. [Haz clic aquí para inscribirte
     y obtener más información] (%{apply_url}).
-  csd_page_faq_question_03: Enseño CS Discoveries, pero tengo menos de un semestre
-    con mis alumnos. ¿Qué recomendarías?
+  csd_page_faq_question_03: Enseño Descubrimientos informáticos, pero tengo menos
+    de un semestre con mis estudiantes. ¿Qué recomendarías?
   csd_page_faq_answer_03_01: Los profesores que tienen un horario restringido y no
-    pueden enseñar todas las unidades de CS Discoveries a lo largo de un año escolar,
-    ahora pueden asignar fácilmente un conjunto específico de unidades de CS Discoveries
-    en función de en qué quieren centrarse. Estas colecciones siguen siendo exactamente
-    las mismas unidades que se encuentran en CS Discoveries. Simplemente hay que agruparlas
-    según nuestras recomendaciones a continuación para profundizar en un área específica
-    de CS Discoveries. Cada colección dura aproximadamente un semestre o un poco menos
-    de un semestre. [Haga clic aquí para ver nuestras opciones de colecciones] (%{collections_url}).
+    pueden enseñar todas las unidades de Descubrimientos informáticos a lo largo de
+    un año escolar, ahora pueden asignar fácilmente un conjunto específico de unidades
+    de Descubrimientos informáticos en función de en qué quieren centrarse. Estas
+    colecciones siguen siendo exactamente las mismas unidades que se encuentran en
+    Descubrimientos informáticos. Simplemente hay que agruparlas según nuestras recomendaciones
+    que aparecen a continuación para profundizar en un área específica de Descubrimientos
+    informáticos. Cada colección dura aproximadamente un semestre o un poco menos
+    de un semestre. [Haz clic aquí para ver nuestras opciones de colecciones] (%{collections_url}).
   csd_page_faq_answer_03_02: Para los profesores que tienen un horario aún más restringido,
-    tienen la posibilidad de asignar solo una unidad a la vez desde CS Discoveries
+    tienen la posibilidad de asignar sólo una unidad a la vez de Descubrimientos informáticos
     sin tener que asignar todo el curso. Esperamos que esto ayude a apoyar a las aulas
-    que enseñan unidades de CS Discoveries integradas como parte de cursos más amplios
-    o cuando enseñan ciencias de la computación con un horario limitado. [Haga clic
-    aquí para ver nuestras unidades flexibles] (%).
-  csd_page_faq_question_04: "¿Qué materiales y suministros se necesitan para CS Discoveries?"
-  csd_page_faq_answer_04_01: Un costo potencial a considerar al impartir este curso
+    que enseñan unidades de Descubrimientos informáticos integradas como parte de
+    cursos más amplios o cuando enseñan informática con un horario limitado. [Haz
+    clic aquí para ver nuestras unidades flexibles] (%).
+  csd_page_faq_question_04: "¿Qué materiales y suministros se necesitan para Descubrimientos
+    informáticos?"
+  csd_page_faq_answer_04_01: Un coste potencial a considerar al impartir este curso
     es la impresión. Muchas lecciones tienen folletos diseñados para guiar a los estudiantes
     a través de las actividades. Si bien no es obligatorio imprimir todos estos folletos,
     muchos se diseñaron para imprimirse y recomendamos encarecidamente que se impriman
     siempre que sea posible.
   csd_page_faq_answer_04_02: 'Además de la impresión, algunas lecciones requieren
-    materiales y materiales de manipulación típicos del aula, como: diarios de los
-    estudiantes, papel para pósters, marcadores o lápices de colores, tijeras, papel
-    de desecho, pegamento o cinta adhesiva, notas adhesivas o fichas (o papel de desecho
-    de tamaño similar) y reglas o algún tipo de borde recto.'
+    suministros y materiales didácticos típicos del aula, como: diarios de estudiantes,
+    papel para carteles, marcadores o lápices de colores, tijeras, papel de desecho,
+    pegamento o cinta adhesiva, notas adhesivas o fichas (o papel de desecho de tamaño
+    similar) y reglas o algún tipo de regleta.'
   csd_page_faq_answer_04_03: 'Además de los materiales generales del curso, se requieren
     los siguientes elementos en unidades específicas:'
-  csd_page_faq_answer_04_04: Resolución de problemas y computación
+  csd_page_faq_answer_04_04: Resolución de problemas e informática
   csd_page_faq_answer_04_05: Papel de aluminio, recipiente para agua, monedas de un
-    centavo (tenga en cuenta que las monedas de un centavo se pueden reemplazar con
+    centavo (ten en cuenta que las monedas de un centavo se pueden reemplazar con
     algún otro tipo de peso del mismo tamaño). Hay actividades alternativas disponibles
-    si no tiene acceso a estos suministros.
+    si no tienes acceso a estos suministros.
   csd_page_faq_answer_04_06: Creación de aplicaciones con dispositivos (opción A y
     opción B)
-  csd_page_faq_answer_04_07: 'Option A: Classroom set of Circuit Playgrounds. Check
-    out [code.org/maker/circuitplayground](%{url}) for more details.'
-  csd_page_faq_answer_04_08: 'Option B: Classroom set of micro:bit devices. Check
-    out [code.org/maker/microbit](%{url}) for more details.'
-  csd_page_faq_answer_04_09: Material de fabricación, como cajas de pañuelos vacías,
-    rollos de cartón o papel para rascar
-  csd_page_faq_answer_04_10: "*Nota: La unidad de creación de aplicaciones con dispositivos
-    tiene dos opciones de implementación: una para quienes usan patios de recreo en
-    circuitos y otra para quienes usan micro:bit. Los profesores no deberían comprar
-    ambos juegos de dispositivos ni enseñar las dos opciones de las unidades, ya que
-    son equivalentes y abarcan el mismo contenido."
-  csd_page_faq_question_06: "¿Cómo encaja CS Discoveries con los demás cursos de Code.org?"
-  csd_page_faq_answer_06_01: CS Discoveries está diseñado para encajar de forma natural
-    entre nuestros cursos de [Fundamentos de informática] (%{csf_url}) y nuestro curso
-    de [Principios de informática] (%{csp_url}). Si bien cada uno de estos cursos
-    está diseñado para ser un punto de partida apropiado para su edad a las ciencias
-    de la computación, los estudiantes con experiencia previa encontrarán muchos temas
-    nuevos que explorar y retomarán temas familiares en contextos novedosos y más
-    desafiantes.
-  csc_page_top_desc: Establezca conexiones entre las ciencias de la computación (CS)
-    y otras materias como matemáticas, artes del lenguaje, ciencias y estudios sociales.
-  csc_page_intro_heading: Enseñe informática mientras cubre los estándares básicos
-    de las materias
-  csc_page_intro_list_01: Incorporar la informática en otras asignaturas
-  csc_page_intro_list_02: Reforzar el aprendizaje en otras materias
-  csc_page_intro_list_03: Cumpla los estándares básicos de la materia
+  csd_page_faq_answer_04_07: 'Opción A: conjunto de Circuit Playgrounds para el aula.
+    Consulta [code.org/maker/circuitplayground](%{url}) para obtener más información.'
+  csd_page_faq_answer_04_08: 'Opción B: conjunto de dispositivos micro:bit para el
+    aula. Consulta [code.org/maker/microbit](%{url}) para obtener más información.'
+  csd_page_faq_answer_04_09: Suministros de fabricación, como cajas de pañuelos vacías,
+    rollos de cartón o papel borrador
+  csd_page_faq_answer_04_10: "*Nota: la unidad Creación de aplicaciones con dispositivos
+    tiene dos opciones de implementación: una para quienes usan Circuit Playgrounds
+    y otra para quienes usan micro:bit. Los profesores no deben comprar ambos conjuntos
+    de dispositivos ni enseñar las dos opciones de las unidades, ya que son equivalentes
+    y abarcan el mismo contenido."
+  csd_page_faq_question_06: "¿Cómo se integra Descubrimientos informáticos con los
+    demás cursos de Code.org?"
+  csd_page_faq_answer_06_01: Descubrimientos informáticos está diseñado para integrarse
+    de forma natural con nuestros cursos de [Fundamentos de la informática] (%{csf_url})
+    y nuestro curso de [Principios de la informática] (%{csp_url}). Si bien cada uno
+    de estos cursos está diseñado para ser un punto de entrada a la informática apropiado
+    para cada edad, los estudiantes con experiencia previa encontrarán muchos temas
+    nuevos que explorar y retomarán temas conocidos en contextos novedosos y más desafiantes.
+  csc_page_top_desc: Establece conexiones entre la informática y otras asignaturas
+    como matemáticas, lengua y literatura, ciencias y estudios sociales.
+  csc_page_intro_heading: Enseña informática mientras cubres los estándares básicos
+    de las asignaturas
+  csc_page_intro_list_01: Incorpora la informática en otras asignaturas
+  csc_page_intro_list_02: Refuerza el aprendizaje en otras asignaturas
+  csc_page_intro_list_03: Cumple los estándares básicos de las asignaturas
   csc_page_intro_list_04: Una forma divertida de enseñar a los estudiantes sobre informática
-  csc_page_intro_list_05: Open-ended projects for more personalized learning
+  csc_page_intro_list_05: Proyectos abiertos para un aprendizaje más personalizado
   csc_page_intro_list_06: Fácil para cualquier profesor con cualquier formación
   csc_page_curriculum_glance_topics: Interdisciplinaria
   csc_page_curriculum_glance_devices: Ordenador portátil, Chromebook, tableta
-  csc_page_curriculum_glance_tools: Laboratorio de Sprite
-  csc_page_curriculum_glance_professional_learning: Módulos autoguiados
+  csc_page_curriculum_glance_tools: Laboratorio de sprites
+  csc_page_curriculum_glance_professional_learning: Módulos a tu propio ritmo
   csc_page_curriculum_glance_professional_languages: Español (España)
   csc_page_curriculum_glance_professional_accessibility_features: Text-to-speech,
     Closed captioning, Immersive reader
   csc_page_quote: Agradezco enormemente lo minuciosas y dinámicas que son las lecciones.
-    No estoy familiarizado con las ciencias de la computación, pero con las lecciones
-    que imparten me siento seguro de poder ayudar a mis alumnos a comprender los conceptos
+    No estoy familiarizado con la informática, pero con las lecciones que imparten
+    me siento seguro de poder ayudar a mis estudiantes a comprender los conceptos
     e incorporarlos a nuestro plan de estudios.
-  csc_page_find_a_module_desc: Nuestras ofertas actuales de CS Connections son para
-    las aulas de tercer a quinto grado y están diseñadas para tomar 1 semana de clases
+  csc_page_find_a_module_desc: Nuestras ofertas actuales de Conexiones de informática
+    son para las aulas de 3º a 5º grado y están diseñadas para tomar 1 semana de lecciones
     de 45 minutos cada día.
-  csc_page_faq_question_01: "¿CS Connections está mapeado según los estándares?"
-  csc_page_faq_answer_01: "¡Sí! CS Connections se basa en los Estándares Estatales
-    Básicos Comunes (CCSS) para la ELA y las Matemáticas, los Estándares de Ciencias
+  csc_page_faq_question_01: "¿Conexiones de informática está adaptado a los estándares??"
+  csc_page_faq_answer_01: "¡Sí! Conexiones de informática está adaptado a los Estándares
+    Estatales Básicos Comunes (CCSS) para ELA y matemáticas, los Estándares de Ciencias
     de la Próxima Generación (NGSS) y los Estándares de la Asociación de Maestros
     de Ciencias de la Computación (CSTA)."
-  csc_page_faq_question_02: "¿Cuánto cuesta enseñar CS Connections?"
-  csc_page_faq_answer_02: Our curriculum and platform are available at [no cost](%{cost_url})
-    for anyone, anywhere, to teach!
-  csc_page_faq_question_03: "¿Cómo y dónde puedo obtener desarrollo profesional para
-    CS Connections?"
-  csc_page_faq_answer_03: Ofrecemos un desarrollo profesional a su propio ritmo para
-    CS Connections. Al leer, ver vídeos, completar acertijos interactivos y reflexionar
-    sobre tu aprendizaje, desarrollarás tu propia comprensión mientras te preparas
-    para enseñar cualquiera de los módulos de CS Connections en tu aula. [Empieza
-    aquí] (%{get_started_url}).
-  csc_page_faq_answer_03_coming_soon: "¡El aprendizaje profesional para CS Connections
-    llegará pronto!"
-  csc_page_faq_question_04: "¿Cuál es el horario recomendado para enseñar CS Connections?"
-  csc_page_faq_answer_04: Cada módulo de CS Connections está diseñado para durar una
-    semana.
-  csc_page_faq_question_05: "¿Qué materiales necesito para CS Connections?"
-  csc_page_faq_answer_05: Lo ideal es que cada alumno tenga su propio ordenador y
-    los profesores tengan un proyector para mostrar la presentación de diapositivas
+  csc_page_faq_question_02: "¿Cuánto cuesta enseñar Conexiones de informática?"
+  csc_page_faq_answer_02: "¡Nuestro plan de estudios y plataforma están disponibles
+    [sin coste](%{cost_url}) para que cualquier persona, en cualquier lugar, pueda
+    enseñar!"
+  csc_page_faq_question_03: "¿Cómo y dónde puedo obtener desarrollo profesional Conexiones
+    de informática?"
+  csc_page_faq_answer_03: Ofrecemos desarrollo profesional a tu propio ritmo para
+    Conexiones de informática. Al leer, ver vídeos, completar acertijos interactivos
+    y reflexionar sobre tu aprendizaje, desarrollarás tu propia comprensión mientras
+    te preparas para enseñar cualquiera de los módulos de Conexiones informáticas
+    en tu aula. [Empieza aquí] (%{get_started_url}).
+  csc_page_faq_answer_03_coming_soon: "¡El aprendizaje profesional para Conexiones
+    informáticas estará disponible pronto!"
+  csc_page_faq_question_04: "¿Cuál es el horario recomendado para enseñar Conexiones
+    de informática?"
+  csc_page_faq_answer_04: Cada módulo de Conexiones de informática está diseñado para
+    durar una semana.
+  csc_page_faq_question_05: "¿Qué materiales necesito para Conexiones de informática?"
+  csc_page_faq_answer_05: Lo ideal es que cada estudiante tenga su propio ordenador
+    y los profesores tengan un proyector para mostrar la presentación de diapositivas
     correspondiente a cada lección.
   csf_page_top_desc: Plan de estudios gratuito de un año que presenta a los estudiantes
-    los conceptos fundamentales de la informática y los desafía a explorar cómo la
-    informática y la tecnología pueden afectar al mundo.
+    los conceptos fundamentales de la informática y los desafía a explorar la forma
+    en que la informática y la tecnología pueden tener un impacto en el mundo.
   csf_page_intro_heading: Cursos de primaria gratuitos y divertidos para cada grado
   csf_page_intro_list_01: Seis cursos, uno para cada grado de primaria
-  csf_page_intro_list_02: Cursos de introducción a la informática equitativos
-  csf_page_intro_list_03: Use el mismo curso para todos los estudiantes del mismo
+  csf_page_intro_list_02: Cursos equitativos de introducción a la informática
+  csf_page_intro_list_03: Usa el mismo curso para todos los estudiantes del mismo
     grado, independientemente de su experiencia
   csf_page_intro_list_04: Todos los cursos son puntos de entrada adecuados para los
     estudiantes
   csf_page_quote: Llevo impartiendo el curso desde el lunes siguiente al taller. A
     los estudiantes y a mí nos ENCANTA (¡¡y también a sus profesores de clase!!!)
-  csf_page_curriculum_glance_topics: Programación, Internet, Juegos y animación, Arte
-    y diseño, Diseño de aplicaciones
+  csf_page_curriculum_glance_topics: Programación, Internet, juegos y animación, arte
+    y diseño, diseño de aplicaciones
   csf_page_curriculum_glance_devices: Ordenador portátil, Chromebook, tableta
   csf_page_curriculum_glance_tools: Laboratorio de sprites, laboratorio de juegos
-  csf_page_curriculum_glance_professional_learning: Facilitator-led Workshops, Self-paced
-    Modules
-  csf_page_curriculum_glance_languages: árabe, bahasa indonesio, catalán, chino simplificado,
+  csf_page_curriculum_glance_professional_learning: Talleres dirigidos por facilitadores,
+    módulos a tu propio ritmo
+  csf_page_curriculum_glance_languages: Árabe, bahasa indonesio, catalán, chino simplificado,
     chino tradicional, checo, francés, alemán, hindi, italiano, japonés, coreano,
     canarés, malayo, marathi, mongol, polaco, portugués-BR, rumano, ruso, eslovaco,
-    tagalo, tamil, tailandés, turco, ucraniano, español de Latam, urdu, español español,
-    uzbeko, vietnamita
-  csf_page_curriculum_glance_accessibility_features: Text-to-speech, Closed captioning,
-    Immersive reader
-  csf_page_pick_a_course_heading: Elegir el curso de Fundamentos de la Informática
-    adecuado para su aula
+    tagalo, tamil, tailandés, turco, ucraniano, español latinoamericano, urdu, español
+    español, uzbeko, vietnamita
+  csf_page_curriculum_glance_accessibility_features: Texto a voz, subtítulos, lector
+    inmersivo
+  csf_page_pick_a_course_heading: Elige el curso de Fundamentos de la informática
+    adecuado para tu aula
   csf_page_pick_a_course_desc: Con el diverso conjunto de opciones que se ofrecen
-    para CS Fundamentals, hay un curso para todas las necesidades diferentes.
-  csf_page_pick_a_course_heading_02: "¿Cómo interactuarán sus alumnos con el contenido?"
+    para Fundamentos de la informática, hay un curso para todas las necesidades diferentes.
+  csf_page_pick_a_course_heading_02: "¿Cómo interactuarán tus estudiantes con el contenido?"
   csf_page_courses_heading: Cursos diseñados específicamente para tu aula de primaria
   csf_page_courses_desc: Busca el curso correspondiente al grado en el que enseñas.
     Cada curso dura aproximadamente un mes.
-  csf_page_courses_self_paced_heading: Planes de estudio de primaria a su propio ritmo
-  csf_page_courses_self_paced_desc: Los maestros desempeñan un papel fundamental en
-    el aprendizaje de los estudiantes al enseñar nuestras actividades desconectadas
-    y dirigir los debates de toda la clase. Sin embargo, reconocemos que los fundamentos
-    de la informática no siempre se enseñan en un aula tradicional. Ofrecemos dos
-    cursos exprés a su propio ritmo junto con los cursos A-F. Estos cursos exprés
-    están diseñados para situaciones en las que los profesores permiten que cada alumno
-    trabaje a su propio ritmo de forma independiente.
-  csf_page_faq_question_01: "¿Los fundamentos de CS están mapeados según los estándares?"
-  csf_page_faq_answer_01_01: 'CS Fundamentals se escribió utilizando como guía el
-    Marco K-12 para Ciencias de la Computación y los estándares de la CSTA. Actualmente,
-    cada lección de CS Fundamentals contiene mapeos con los estándares de la CSTA
-    relevantes. El resumen de todos los mapeos de la CSTA para cada curso se puede
-    encontrar en:'
+  csf_page_courses_self_paced_heading: Planes de estudio de primaria a tu propio ritmo
+  csf_page_courses_self_paced_desc: Los profesores desempeñan un papel fundamental
+    en el aprendizaje de los estudiantes al enseñar nuestras actividades desconectadas
+    y dirigir los debates de toda la clase. Sin embargo, reconocemos que Fundamentos
+    de la informática no siempre se enseña en un aula tradicional. Ofrecemos dos cursos
+    exprés a tu propio ritmo junto con los cursos A-F. Estos cursos exprés están diseñados
+    para situaciones en las que los profesores permiten que cada estudiante trabaje
+    a su propio ritmo de forma independiente.
+  csf_page_faq_question_01: "¿Fundamentos de la informática está adaptado a los estándares?"
+  csf_page_faq_answer_01_01: 'Fundamentos de la informática se escribió utilizando
+    como guía el Marco K-12 para informática como los estándares CSTA. Actualmente,
+    todas las lecciones de Fundamentos de informática están adaptadas a los estándares
+    CSTA relevantes. El resumen de todas las correspondencias de CSTA para cada curso
+    se puede encontrar en:'
   csf_page_faq_answer_01_list_01: "[Estándares del curso A] (%{course_a_url})"
   csf_page_faq_answer_01_list_02: "[Estándares del curso B] (%{course_b_url})"
   csf_page_faq_answer_01_list_03: "[Estándares del curso C] (%{course_c_url})"
@@ -1476,33 +1626,34 @@ es:
   csf_page_faq_answer_01_list_05: "[Estándares del curso E] (%{course_e_url})"
   csf_page_faq_answer_01_list_06: "[Estándares del curso F] (%{course_f_url})"
   csf_page_faq_answer_01_02: Puedes encontrar una versión de los estándares en Google
-    Sheets en [CSF Standards] (%{csf_standards_url}).
-  csf_page_faq_question_02: "¿Cómo puedo llevar los fundamentos de la informática
-    a toda mi escuela?"
+    Sheets en [Estándares CSF] (%{csf_standards_url}).
+  csf_page_faq_question_02: "¿Cómo puedo llevar Fundamentos de la informática a toda
+    mi escuela?"
   csf_page_faq_answer_02: Nuestro programa de primaria, el principal plan de estudios
     de informática de K-12 en los Estados Unidos, ha demostrado su eficacia en los
     principales distritos escolares urbanos, como Dallas, así como en los pequeños
     distritos rurales de Iowa. No es necesario contratar especialistas para enseñar
-    informática. Nuestro programa está diseñado exclusivamente para apoyar a los maestros
+    informática. Nuestro programa está diseñado exclusivamente para apoyar a los profesores
     que recién se inician en la informática y, al mismo tiempo, ofrece la flexibilidad
     de adaptar las lecciones a las necesidades de los estudiantes. [Comparte este
     folleto] (%{brochure_url}) con los administradores de tu escuela y distrito, o
     [sugiéreles que consulten nuestra página de administradores] (%{admins_url}) está
     especialmente diseñado para responder a las preguntas más frecuentes de los administradores.
-  csf_page_faq_question_03: "¿Cuánto cuesta enseñar los fundamentos de la informática?"
+  csf_page_faq_question_03: "¿Cuánto cuesta enseñar Fundamentos de la informática?"
   csf_page_faq_question_04: "¿Cómo/dónde puedo obtener desarrollo profesional para
-    CS Fundamentals?"
-  csf_page_faq_answer_04_01: New to teaching computer science? No worries! Most of
-    our teachers have never taught computer science before. Join local teachers for
-    inspiring and hands-on support to implement computer science in your classroom.
-    Our Regional Partners offer high-quality, one-day Code.org workshops for individual
-    teachers or for schoolwide PD. [Sign up for a professional development workshop
-    near you](%{sign_up_url})!
-  csf_page_faq_answer_04_02: 'Únase a los más de 100 000 profesores que han participado
+    Fundamentos de la informática?"
+  csf_page_faq_answer_04_01: "¿Eres nuevo enseñando informática? ¡No te preocupes!
+    La mayoría de nuestros profesores no han enseñado informática nunca. Únete a profesores
+    locales para recibir apoyo inspirador y práctico para implementar la informática
+    en tu aula. Nuestros socios regionales ofrecen talleres de alta calidad de Code.org
+    de un día de duración para profesores de forma individual o para el desarrollo
+    profesional en toda la escuela. [¡Inscríbete en un taller de desarrollo profesional
+    cerca de ti](%{sign_up_url})!"
+  csf_page_faq_answer_04_02: 'Únete a los más de 100.000 profesores que han participado
     en nuestros talleres. La mayoría de los asistentes a nuestros talleres dicen:
     «Es el mejor desarrollo profesional al que he asistido». De hecho, [el 90% de
     los asistentes recomendaría nuestro programa a otros profesores] (%{rec_url}).'
-  csf_page_faq_question_05: "¿Cuál es el horario recomendado para enseñar los fundamentos
+  csf_page_faq_question_05: "¿Cuál es el horario recomendado para enseñar Fundamentos
     de la informática?"
   csf_page_faq_answer_05: Cada curso de CSF incluye de 13 a 17 lecciones diseñadas
     para períodos de 45 minutos. Recomendamos que todos los estudiantes pasen de una
@@ -1510,27 +1661,28 @@ es:
     dirigidos por el profesor diseñados para experimentarlos al unísono, mientras
     que los estudiantes pueden completar las lecciones de desarrollo de habilidades
     a su propio ritmo.
-  csf_page_faq_question_06: "¿Qué materiales necesito para CS Fundamentals?"
-  csf_page_faq_answer_06: Many lessons have handouts that guide students through activities.
-    These resources can be printed or assigned digitally. Some lessons call for typical
-    classroom supplies and manipulatives. [Visit the CSF Syllabus to learn more](%{syllabus_url}).
+  csf_page_faq_question_06: "¿Qué materiales necesito para Fundamentos de la informática?"
+  csf_page_faq_answer_06: Muchas lecciones tienen folletos que guían a los estudiantes
+    a través de las actividades. Estos recursos pueden imprimirse o asignarse digitalmente.
+    Algunas lecciones requieren suministros y materiales didácticos típicos del aula.
+    [Visita el programa de estudios de CSF para obtener más información](%{syllabus_url}).
   csa_page_top_desc: Introduce students to software engineering and object-oriented
     design while they learn the Java programming language in this free curriculum
     for [AP® Computer Science A (AP® CSA)](%{csa_url}).
   csa_page_intro_heading: A new approach to AP® CSA
-  csa_page_intro_list_01: Culturally responsive pedagogy
-  csa_page_intro_list_02: Real-world problem investigation
-  csa_page_intro_list_03: Explainer videos with diverse presenters
-  csa_page_intro_list_04: Open-ended projects for more personalized learning
+  csa_page_intro_list_01: Pedagogía culturalmente responsable
+  csa_page_intro_list_02: Investigación de problemas del mundo real
+  csa_page_intro_list_03: Vídeos explicativos con diversos presentadores
+  csa_page_intro_list_04: Proyectos abiertos para un aprendizaje más personalizado
   csa_page_intro_list_05: Student-friendly code review tool
-  csa_page_curriculum_glance_topics: Programming, Data, Art and Design, Games and
-    Animation
-  csa_page_curriculum_glance_devices: Laptop, Chromebook
-  csa_page_curriculum_glance_tools: Laboratorio de Java
-  csa_page_curriculum_glance_professional_learning: Facilitator-led Workshops
+  csa_page_curriculum_glance_topics: Programación, datos, arte y diseño, juegos y
+    animación
+  csa_page_curriculum_glance_devices: Ordenador portátil, Chromebook
+  csa_page_curriculum_glance_tools: Java Lab
+  csa_page_curriculum_glance_professional_learning: Talleres dirigidos por facilitadores
   csa_page_curriculum_glance_languages: Español (España)
-  csa_page_curriculum_glance_accessibility_features: Text-to-speech, Closed captioning,
-    Immersive reader
+  csa_page_curriculum_glance_accessibility_features: Texto a voz, subtítulos, lector
+    inmersivo
   csa_page_quote: I could tell last year how different and better this curriculum
     and resources were than anything else out there... but this year, these past few
     weeks preparing students for the exam have been some of my most fun teaching.
@@ -1563,15 +1715,16 @@ es:
   csa_page_faq_answer_06: Java Lab is a unique environment from all other Code.org
     programming environments and requires additional measures to ensure network security
     for all. [Read more about it here](%{read_more_url}).
-  csa_page_faq_question_07: How can I access answer keys?
-  csa_page_faq_answer_07_01: With an approved teacher account, you can find answer
-    keys in a blue "Teacher Only" panel that shows in the online lessons and activities.
-  csa_page_faq_answer_07_02: Teachers in our Professional Learning Program will automatically
-    be approved to view answer keys. If you need an approved teacher account, you
-    can apply for access to protected teacher-only materials (answer keys, etc) through
-    [this form](%{form_url}). Please keep in mind that it may take 3-5 business days
-    to verify your account.
-  csa_page_faq_question_08: How was the curriculum developed?
+  csa_page_faq_question_07: "¿Cómo puedo acceder a las claves de respuestas?"
+  csa_page_faq_answer_07_01: Con una cuenta de profesor aprobada, puedes encontrar
+    las claves de respuestas en un panel azul "Sólo para profesores" que aparece en
+    las lecciones y actividades en línea.
+  csa_page_faq_answer_07_02: Los profesores de nuestro Programa de Aprendizaje Profesional
+    tendrán autorización automática para ver las claves de respuestas. Si necesitas
+    una cuenta de profesor aprobada, puedes solicitar acceso a materiales protegidos
+    solo para profesores (claves de respuestas, etc.) a través de [este formulario](%{form_url}).
+    Ten en cuenta que la verificación de tu cuenta puede tardar entre 3 y 5 días laborables.
+  csa_page_faq_question_08: "¿Cómo se desarrolló el plan de estudios?"
   csa_page_faq_answer_08_01: 'Our CSA curriculum was written by teachers, for teachers
     and was designed with our Curriculum Values in mind. In particular, we focused
     on expanding access to those who historically have been denied opportunities to
@@ -1731,6 +1884,7 @@ es:
   not_found_title: Pagina no encontrada
   not_found_desc: La página solicitada no fue encontrada
   not_found_instructions: Compruebe la dirección web o elige una dirección de la lista.
+  company_code_dot_org: Code.org
   company_4-H: 4-H Youth Development
   company_asa: Afterschool Alliance
   company_asos: ASOS
@@ -1783,6 +1937,7 @@ es:
   company_evsd: East Valley School District
   company_eastonvilleschooldistrict: Eatonville School District
   company_enumclawschooldistrict: Enumclaw School District
+  company_ets: CONJUNTOS
   company_everettsd: Everette Public Schools
   company_fsusd: Fairfield-Suisun Unified School District
   company_fayettecountypublicschools: Fayette County Public Schools
@@ -1804,6 +1959,7 @@ es:
   company_houstonisd: Houston Independent School District
   company_hcpss: Howard County Public Schools
   company_idla: Idaho Digital Learning Academy
+  company_iste: SITIO
   company_janesvilleschooldistrict: Janesville School District
   company_johnstoncountyschools: Johnston County Schools
   company_lps: Lincoln Public School
@@ -12373,8 +12529,10 @@ es:
   tutorial_ai4alldance_string_platforms: Todos los navegadores modernos
   tutorial_ai4allneural_string_platforms: Todos los navegadores modernos
   tutorial_spheroinout_string_platforms: Sin conexión
-  tutorial_edisonblueprint_string_platforms: Todos los navegadores modernos
-  tutorial_edisonmaze_string_platforms: Todos los navegadores modernos
+  tutorial_edisonblueprint_string_platforms: Todos los navegadores modernos, tablets
+    Android, iPad
+  tutorial_edisonmaze_string_platforms: Todos los navegadores modernos, tablets Android,
+    iPad
   tutorial_milnefunctions_string_platforms: Todos los navegadores modernos
   tutorial_sasmap_string_platforms: Todos los navegadores modernos, iPad, Lector de
     pantalla
@@ -13596,7 +13754,7 @@ es:
   accessibility_efforts_card_desc_1: Nuestros equipos de productos e ingeniería completarán
     una formación integral sobre accesibilidad antes de diciembre de 2023.
   accessibility_efforts_card_title_2: Análisis VPAT
-  accessibility_efforts_card_desc_2: Completar la [Plantilla voluntaria de accesibilidad
+  accessibility_efforts_card_desc_2: Cumplimentar la [Plantilla voluntaria de accesibilidad
     del producto] (%{voluntary_url}) para establecer una base de referencia y medir
     el progreso anualmente. Los resultados estarán disponibles en esta página antes
     de septiembre de 2023.
@@ -13606,14 +13764,13 @@ es:
     en cuenta la accesibilidad. '
   accessibility_efforts_card_title_4: Plan de estudios accesible
   accessibility_efforts_card_desc_4: Alcanzaremos el [cumplimiento del nivel AA de
-    las WCAG] (%{wcag_url}) para las primeras unidades de Principios de Ciencias de
-    la Computación y Descubrimientos de Ciencias de la Computación en diciembre de
-    2023.
+    las WCAG] (%{wcag_url}) para las primeras unidades de Principios de la informática
+    y Descubrimientos informáticos en diciembre de 2023.
   accessibility_explore_title: Explora los recursos de accesibilidad de Code.org
-  accessibility_explore_text: Nuestra página de recursos de accesibilidad proporciona
-    documentación y orientación completas sobre nuestras funciones y herramientas,
-    incluidas lecciones accesibles de la Hora del Código, lectores inmersivos, navegación
-    con teclado y opciones de personalización.
+  accessibility_explore_text: Nuestra página de recursos de accesibilidad ofrece documentación
+    y orientación completas sobre nuestras funciones y herramientas, incluidas lecciones
+    accesibles de la Hora del Código, lectores inmersivos, navegación con teclado
+    y opciones de personalización.
   accessibility_explore_button: Ver la página de recursos de accesibilidad
   accessibility_help_us_title: Ayúdanos a mejorar
   accessibility_help_us_text: En Code.org, somos ágiles y respondemos a los comentarios.
@@ -13622,63 +13779,190 @@ es:
     a que la informática esté disponible para todos los estudiantes!
   accessibility_help_us_button: Cuéntanos cómo podemos mejorar
   accessibility_commit_title: El compromiso de Code.org con la accesibilidad
-  accessibility_commit_text_1: En Code.org creemos que las ciencias de la computación
-    son fundamentales para todos los estudiantes y nos comprometemos a garantizar
-    la equidad, el acceso y las oportunidades en nuestra plataforma y en nuestro plan
-    de estudios.
+  accessibility_commit_text_1: En Code.org creemos que la informática es fundamental
+    para todos los estudiantes y nos comprometemos a garantizar la equidad, el acceso
+    y las oportunidades en nuestra plataforma y en nuestro plan de estudios.
   accessibility_commit_text_2: Adoptamos un enfoque holístico para apoyar las necesidades
     de aprendizaje de todos los estudiantes y trabajamos para cerrar las brechas en
-    el acceso a la educación en ciencias de la computación para los estudiantes con
-    discapacidades.
+    el acceso a la educación en informática para los estudiantes con discapacidades.
   accessibility_commit_text_3: Empezamos poco a poco, pero mediremos nuestro progreso
     e iteraremos continuamente hasta que podamos abordar incluso los desafíos de accesibilidad
     más complejos.
-  accessibility_commit_text_4: En Code.org, nos comprometemos a mejorar continuamente
-    la accesibilidad de nuestras herramientas y nos entusiasma dar este importante
+  accessibility_commit_text_4: En Code.org, estamos comprometidos con la mejora continua
+    de la accesibilidad de nuestras herramientas y nos entusiasma dar este importante
     paso hacia una mayor equidad, acceso y oportunidades para todos los estudiantes
     y educadores.
   accessibility_partner_title: Nuestros socios y recomendaciones
   accessibility_partner_desc: Recomendamos los siguientes recursos para estudiantes
     y profesores que buscan contenido de informática más accesible.
-  accessibility_card_title_1: Accede a CS para todos
-  accessibility_card_text_1: Recursos para que los maestros lleven la informática
+  accessibility_card_title_1: AccessCSForAll
+  accessibility_card_text_1: Recursos para que los profesores lleven la informática
     accesible a las escuelas secundarias y para que los estudiantes de secundaria
     con discapacidades se conecten con mentores en el ámbito de la tecnología.
-  accessibility_card_title_2: Bloques 4 All
+  accessibility_card_title_2: Blocks4All
   accessibility_card_text_2: Un entorno de programación basado en bloques para iPad
     que enseña conceptos básicos de programación con el robot Dash. Accesible con
     VoiceOver, Switch Control y Voice Control.
   accessibility_card_title_3: Code Jumper
   accessibility_card_text_3: Una ayuda/recurso de codificación física para estudiantes
     con discapacidades visuales.
-  accessibility_card_title_4: CS para todos
+  accessibility_card_title_4: CSForAll
   accessibility_card_text_4: Una organización que coordina proyectos y programas con
     diferentes organizaciones en los Estados Unidos.
   accessibility_card_title_5: Código para niños sordos
-  accessibility_card_text_5: Promueve la educación en ciencias y tecnología de la
-    computación para capacitar a los estudiantes sordos o con problemas de audición.
-  accessibility_card_title_6: Todos pueden programar
+  accessibility_card_text_5: Promueve la enseñanza de la informática y la tecnología
+    para empoderar a los estudiantes sordos o con discapacidades auditivas.
+  accessibility_card_title_6: Todos pueden codificar
   accessibility_card_text_6: Un plan de estudios diseñado por Apple para Swift Playgrounds
     que ofrece VoiceOver (TTS modificado) y un plan de estudios adaptado para estudiantes
     con necesidades de accesibilidad.
   accessibility_card_title_7: Khan Academy
   accessibility_card_text_7: Un proveedor de planes de estudios con varias adaptaciones,
     que incluyen subtítulos, transcripciones y la capacidad de reducir el movimiento
-    de la animación y ocultar el contenido que depende de la vista. Alberga algunos
+    de la animación y ocultar el contenido que depende de la vista. Contiene algunos
     planes de estudio de Code.org, además de otros planes de estudio de informática.
   accessibility_card_title_8: Circuitos Snap
   accessibility_card_text_8: Un producto educativo que enseña electrónica con componentes
     electrónicos que se unen a presión sin soldadura. Puede incluir un paquete de
     acceso para estudiantes con discapacidades visuales.
   accessibility_card_title_9: Sphero
-  accessibility_card_text_9: Una pelota robótica de codificación interactiva y un
-    kit educativo STEM para estudiantes con discapacidades intelectuales. Debe combinarse
+  accessibility_card_text_9: Una bola robótica de codificación interactiva y un kit
+    educativo STEM para estudiantes con discapacidades intelectuales. Debe combinarse
     con una aplicación adecuada.
   accessibility_card_title_10: 'Quórum '
   accessibility_card_text_10: Una adaptación del plan de estudios de Principios de
-    Ciencias de la Computación AP de Code.org que utiliza Quorum, un lenguaje basado
-    en la evidencia diseñado originalmente para proporcionar accesibilidad a estudiantes
-    ciegos o con discapacidad visual.
+    la informática AP de Code.org que utiliza Quorum, un lenguaje basado en pruebas
+    diseñado originalmente para proporcionar accesibilidad a estudiantes ciegos o
+    con discapacidads visuales.
+  engineering_hero_heading: "¡Únase a nuestro equipo de ingeniería!"
+  engineering_hero_desc: A medida que continuamos ampliando nuestro equipo de ingeniería,
+    queríamos compartir más información sobre nuestra organización de ingeniería en
+    Code.org y algunos de los aspectos únicos de trabajar aquí. Si estás interesado
+    en postularte para uno de nuestros puestos, ¡nos encantaría conocerte!
+  engineering_team_title: Conoce al equipo de ingeniería de Code.org
+  engineering_team_card_text_1: "¡Somos (la mayoría) de nosotros en nuestra reunión
+    en persona durante el verano de 2023! Este grupo está dividido en cuatro subequipos
+    dentro de nuestro equipo de ingeniería que trabajan juntos para construir y ofrecer
+    la plataforma a todos nuestros estudiantes y profesores."
+  engineering_team_card_text_2: Si está interesado en postularse para uno de nuestros
+    puestos, ¡nos encantaría saber de usted! Puedes encontrar una lista de puestos
+    vacantes en nuestra página de empleos.
+  engineering_our_team_title: Nuestro equipo de ingeniería
+  engineering_our_team_desc: 'El equipo de ingeniería de Code.org está dividido en
+    cuatro subequipos que crean y dan soporte a diferentes áreas de nuestra plataforma:'
+  engineering_our_team_sub_title_1: Equipo de aprendizaje estudiantil
+  engineering_our_team_text_1: Nuestro equipo de aprendizaje estudiantil es propietario
+    de todas nuestras actividades (las llamamos laboratorios) que nuestros estudiantes
+    utilizan todos los días. Este equipo trabaja principalmente con tecnología de
+    front-end (utilizamos React y muchos JS personalizados) y tenemos una excelente
+    relación de trabajo con muchos socios y proyectos de código abierto. Por ejemplo,
+    utilizamos [Blockly de Google] (%{youtube_url}) para toda nuestra programación
+    basada en bloques. Apoyamos a los estudiantes en su viaje de aprendizaje desde
+    el jardín de infantes hasta el 12º grado.
+  engineering_our_team_sub_title_2: Equipo de experiencia docente
+  engineering_our_team_text_2: Nuestro equipo de experiencia docente crea las herramientas
+    que atraen a nuevos profesores a Code.org (los denominamos productos de adquisición)
+    y desarrolla la plataforma que permite a nuestros profesores actuales enseñar
+    nuestro plan de estudios (nuestras herramientas para profesores). Al igual que
+    con nuestras herramientas para estudiantes, confiamos en React para crear nuestra
+    interfaz y nuestros componentes del lado del servidor funcionan con Ruby on Rails.
+  engineering_our_team_sub_title_3: Equipo de plataforma
+  engineering_our_team_text_3: Nuestro equipo de plataforma posee componentes principales
+    que satisfacen las necesidades de nuestros equipos de estudiantes y profesores
+    (por ejemplo, autenticación y perfil de usuario) y también tiene la misión de
+    llegar a los estudiantes a los que aún no podemos llegar. Esto incluye crear integraciones
+    que nos conecten con centros educativos que utilizan diferentes sistemas de gestión
+    del aprendizaje (LMS) y empaquetar nuestro plan de estudios para que pueda utilizarse
+    en centros educativos remotos que no tienen acceso a una Internet fiable.
+  engineering_our_team_sub_title_4: Equipo de infraestructura
+  engineering_our_team_text_4: Nuestro equipo de infraestructura proporciona la columna
+    vertebral de la plataforma que apoya a nuestros estudiantes y profesores. Esto
+    incluye nuestra infraestructura de alojamiento y los servicios relacionados (utilizamos
+    AWS), la administración de datos, los programas de seguridad, los servicios de
+    desarrollo e implementación y mucho más. Este equipo también es propietario de
+    nuestros sistemas de escalado y aprovisionamiento, que son fundamentales durante
+    la Hora del Código, donde invitamos a todos los estudiantes del mundo a completar
+    una hora de programación con nosotros.
+  engineering_faq_question_1: "¿Qué hace Code.org?"
+  engineering_faq_answer_1_a: Code.org es una organización sin fines de lucro dedicada
+    a la innovación educativa dedicada a la visión de que todos los estudiantes de
+    todas las escuelas tengan la oportunidad de aprender ciencias de la computación
+    como parte de su educación básica K-12.
+  engineering_faq_answer_1_b: Ampliamos el acceso a las ciencias de la computación
+    en las escuelas, con un enfoque en aumentar la participación de mujeres jóvenes
+    y estudiantes de otros grupos subrepresentados. Code.org, que es uno de los principales
+    proveedores de planes de estudios de ciencias de la computación para educación
+    primaria y secundaria en los distritos escolares más grandes de los Estados Unidos,
+    también organiza la campaña anual La Hora del Código, en la que participan más
+    del 15% de los estudiantes del mundo.
+  engineering_faq_answer_1_c: Code.org cuenta con el apoyo de generosos donantes,
+    como Microsoft, Amazon, Google y muchos otros.
+  engineering_faq_question_2: "¿Cuáles son la experiencia y las herramientas de los
+    desarrolladores de Code.org?"
+  engineering_faq_answer_2: 'Nuestra experiencia de desarrollador puede ser diferente
+    a la que has visto en tus puestos anteriores. En estrecha colaboración con nuestro
+    equipo de producto, empezamos a trabajar en producción todos los días de la semana
+    y tenemos una variedad de cadencias: a veces escribes código que se publica ese
+    día; otras veces, te dedicas a proyectos a largo plazo, y aunque seguimos los
+    sprints de 2 semanas, lo hacemos de forma ligera. Nos inclinamos por hacer las
+    cosas correctas de la manera correcta, en lugar de adoptar una visión purista
+    de cualquier metodología en particular. [Todo nuestro código] (%{code_url}) es
+    de código abierto y utilizamos solicitudes de cambios de JIRA y GitHub para realizar
+    un seguimiento de todos nuestros elementos de trabajo. También nos preocupamos
+    mucho por la calidad y las pruebas, y tenemos la suerte de contar con el increíble
+    apoyo de [SauceLabs](%{saucelabs_url}), quienes nos ayudan a ejecutar nuestro
+    conjunto de pruebas de interfaz de usuario en varios dispositivos de los estudiantes
+    (por ejemplo, iPads) en su granja de dispositivos en la nube.'
+  engineering_faq_question_3: "¿Qué es la rotación de ingenieros de guardia en Code.org?"
+  engineering_faq_answer_3: 'Nuestro equipo de ingeniería de más de 30 años comparte
+    las responsabilidades de guardia. Cada ingeniero trabaja en un turno de 24 horas
+    y utiliza nuestras estrategias y estrategias de escalamiento para responder a
+    las interrupciones del servicio u otros problemas relacionados con las instalaciones.
+    Estamos orgullosos de la fiabilidad de nuestras instalaciones: de media, solo
+    despiertan a cada ingeniero una vez al año por problemas que normalmente se resuelven
+    rápidamente. Por el contrario, el «desarrollador del día» suele dedicar una parte
+    de su jornada laboral a gestionar el despliegue de producción y a resolver los
+    problemas menos urgentes.'
+  engineering_faq_question_4: "¿Es una organización de la FMH que admite el uso remoto?"
+  engineering_faq_answer_4_a: "¡Sí! En 2019, poco antes de la pandemia, Code.org pasó
+    a ser una organización que priorizaba las operaciones remotas. En la actualidad,
+    contamos con ingenieros en todas las zonas horarias de EE. UU. y adaptamos las
+    horas de trabajo en consecuencia. La mayoría de nuestras reuniones tienen lugar
+    entre las 10:00 y las 15:00 PT."
+  engineering_faq_answer_4_b: También reconocemos el valor del tiempo en persona,
+    y cada trimestre nos reunimos en persona, normalmente en Seattle. Dos de estos
+    eventos (los llamamos Semana de Inicio y «Codechella») reúnen a todos los miembros
+    de la organización en enero y junio, y los equipos de ingeniería y producto se
+    reúnen por separado en abril y octubre.
+  engineering_faq_answer_4_c: Creemos firmemente en pasar tiempo con nuestros estudiantes
+    y profesores, por lo que muchos de estos eventos presenciales incluyen visitas
+    a escuelas y aulas para recopilar comentarios o probar nuestros productos
+  engineering_faq_question_5: "¿Qué hace que el equipo de ingeniería de Code.org sea
+    único?"
+  engineering_faq_answer_5_a: 'Además de resolver problemas técnicos desafiantes,
+    tenemos algunas cosas que hacen que nuestra organización de ingeniería sea diferente
+    de otras en las que haya trabajado:'
+  engineering_faq_answer_5_b_1: Todos compartimos la pasión por nuestra misión.
+  engineering_faq_answer_5_b_2: Cada uno de nosotros está aquí para apoyar la misión
+    de ampliar el acceso a la informática para todos los estudiantes del mundo. Todos
+    tenemos una historia y una perspectiva únicas sobre lo que nos impulsa hacia esta
+    misión.
+  engineering_faq_answer_5_c_1: Nos preocupamos profundamente el uno por el otro.
+  engineering_faq_answer_5_c_2: Cuando los ingenieros tienen problemas con un problema,
+    intervenimos y ayudamos. Uno de nuestros principios es que somos duros con los
+    problemas, pero amables los unos con los otros. Promocionamos a los ingenieros
+    con regularidad, pero no prescribimos soluciones sobrediseñadas solo para respaldar
+    la trayectoria de ascenso de alguien. Por el contrario, invertimos en nuestros
+    ingenieros con un generoso presupuesto de desarrollo profesional y acceso a otras
+    oportunidades de aprendizaje.
+  engineering_faq_answer_5_d_1: Trabajamos duro, pero establecemos límites claros.
+  engineering_faq_answer_5_d_2: Si bien apoyamos a los estudiantes de todo el mundo,
+    nos hacemos responsables de establecer límites claros entre el trabajo y la vida
+    familiar. Disfrutamos de no reunirnos los miércoles, aprovechando nuestro tiempo
+    libre de trabajo (5 semanas en total, lo que incluye el cierre de dos semanas
+    en toda la organización al final del año, también conocido como vacaciones de
+    invierno), media jornada laboral los viernes durante el verano, también conocidos
+    como viernes de verano, y otros beneficios generosos.
   language_code:
     ar: Árabe
     az: Azerí

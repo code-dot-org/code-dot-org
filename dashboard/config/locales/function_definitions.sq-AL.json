@@ -498,42 +498,51 @@
         },
         "CourseD_EOC_artist_2021": {
           "draw a circle": {
-            "name": "vizato një rreth"
+            "description": "vizatoni një rreth të rrezes së dhënë",
+            "name": "vizato një rreth",
+            "parameters": {
+              "radius": "rrezja"
+            }
           },
           "draw a house": {
             "name": "vizato një shtëpi",
             "parameters": {
-              "length": "gjatesi"
+              "length": "gjatësia"
             }
           },
           "draw a pinwheel": {
+            "name": "vizato një pinwheel",
             "parameters": {
-              "length": "gjatesi",
-              "repeat": "përsërit"
+              "length": "gjatësia",
+              "repeat": "përsërit",
+              "sides": "anët"
             }
           },
           "draw a shape": {
+            "name": "vizato një formë",
             "parameters": {
-              "length": "gjatesi"
+              "length": "gjatësia",
+              "sides": "anët"
             }
           },
           "draw a square": {
             "name": "vizato një katror",
             "parameters": {
-              "length": "gjatesi"
+              "length": "gjatësia"
             }
           },
           "draw a star": {
+            "description": "vizatoni një yll me pikat e dhëna dhe anët e gjatësisë së dhënë",
             "name": "vizato një yll",
             "parameters": {
-              "length": "gjatesi",
+              "length": "gjatësia",
               "points": "pikët"
             }
           },
           "draw a triangle": {
-            "name": "vizato nje trekendesh",
+            "name": "vizato një trekëndësh",
             "parameters": {
-              "length": "gjatesi"
+              "length": "gjatësia"
             }
           }
         },
@@ -617,6 +626,21 @@
             "parameters": {
               "length": "gjatesi"
             }
+          }
+        },
+        "CourseF_app_computer": {
+          "reset game": {
+            "name": "resetoni lojën"
+          }
+        },
+        "CourseF_app_computer2022": {
+          "reset game": {
+            "name": "resetoni lojën"
+          }
+        },
+        "CourseF_app_computer_-2022-2": {
+          "reset game": {
+            "name": "resetoni lojën"
           }
         },
         "Find the Wizard": {

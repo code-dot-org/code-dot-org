@@ -3463,6 +3463,9 @@ is:
           description_audience: 'Aldur: 4-7'
           description_short: Kynning á tölvunarfræði fyrir byrjendur í lestri.
         nevada-standards-aligned-first-grade-2023:
+          lessons:
+            lesson-1:
+              name: Gögn
           lesson_groups:
             lessonGroup-2:
               display_name: Stafrænn borgari
@@ -3474,6 +3477,8 @@ is:
               display_name: Atvik
             lessonGroup-7:
               display_name: Lokaverkefni námskeiðs
+            lessonGroup-8:
+              display_name: Gögn
           description_audience: 'Aldur: 5 - 8'
         nevada-standards-aligned-second-grade-2023:
           lesson_groups:

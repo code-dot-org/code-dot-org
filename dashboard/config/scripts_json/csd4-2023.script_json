@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-05-17 16:42:55 UTC",
+    "serialized_at": "2023-08-29 22:14:10 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -7390,6 +7390,18 @@
       }
     },
     {
+      "name": "Events in App Lab",
+      "url": "https://docs.google.com/presentation/d/1jYIPe_TXe63sjGUzED8sUyzWXWGJHrA-GQzXe7_tmHU/view",
+      "key": "events_in_app_lab_2",
+      "properties": {
+        "audience": "Teacher",
+        "type": "Slides"
+      },
+      "seeding_key": {
+        "resource.key": "events_in_app_lab_2"
+      }
+    },
+    {
       "name": "Example Apps for Good",
       "url": "https://docs.google.com/document/d/1kCuDUhTJb7Vcrv_pzvA4yL79WyZn_7PorV-F-gTxBuk/edit",
       "key": "example_apps_for_good",
@@ -8429,6 +8441,12 @@
       "seeding_key": {
         "lesson.key": "Events in App Lab",
         "resource.key": "events_in_app_lab_1"
+      }
+    },
+    {
+      "seeding_key": {
+        "lesson.key": "Events in App Lab",
+        "resource.key": "events_in_app_lab_2"
       }
     },
     {
@@ -10156,6 +10174,15 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

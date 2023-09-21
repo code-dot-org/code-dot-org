@@ -1,5 +1,6 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 41,
   "created_at": "2023-03-17T17:01:45.000Z",
   "level_num": "custom",
@@ -95,7 +96,8 @@
       "/courses/csd-2022/guides/circuit-playground",
       "/courses/csd-2022/guides/color-lights",
       "/courses/csd-2022/guides/producing-output",
-      "/courses/csd-2022/guides/board-events"
+      "/courses/csd-2022/guides/board-events",
+      "/maker/setup"
     ],
     "display_name": "Alarm Clock Settings",
     "thumbnail_url": "https://images.code.org/5c2f962ac9d83478a1654e8c656387e2-Practice-b.png",
@@ -109,9 +111,8 @@
     },
     "preload_asset_list": null
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-03-17T17:01:45.290+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Combine Inputs - PracD_2222\\\"\"],\"cloned_from\":\"CSD U6 - Combine Inputs - PracD_2222\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-03-17T17:01:45.290+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Combine Inputs - PracD_2222\\\"\"],\"cloned_from\":\"CSD U6 - Combine Inputs - PracD_2222\"},{\"changed_at\":\"2023-08-16 18:58:01 +0000\",\"changed\":[\"code_functions\",\"reference_links\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

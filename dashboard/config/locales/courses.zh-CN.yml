@@ -67,6 +67,8 @@ zh-CN:
           description_short: 学习基本的计算机科学概念。
         mike-test:
           title: 计算机科学基础
+        vpl-csa-2023:
+          title: CSA 虚拟专业学习
     resources:
       curriculum/csd/2017:
         name: 课程

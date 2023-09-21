@@ -47,7 +47,6 @@
   "starwars": "ვარსკვლავური ომები: გალაქტიკის შექმნა კოდით (JavaScript)",
   "starwarsblocks": "ვარსკვლავური ომები: გალაქტიკის შექმნა კოდით (Blockly)",
   "text-compression": "ტექსტის შეკუმშვა",
-  "vpl-csp": "CS პრინციპები ვირტუალური პროფესიული სწავლება",
   "edit-code": "კოდის რედაქტირება",
   "andrea-test": "ანდრეა-ტესტი",
   "ml-playground": "ml-სათამაშო მოედანი",
@@ -66,5 +65,6 @@
   "hello-world-soccer": "გამარჯობა მსოფლიო: ფეხბურთი",
   "playground": "სათამაშო მოედანი",
   "design-process": "დიზაინის პროცესი",
-  "web-development": "ვებ დეველოპმენტი"
+  "web-development": "ვებ დეველოპმენტი",
+  "how-ai-works": "როგორ მუშაობს AI"
 }

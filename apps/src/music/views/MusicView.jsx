@@ -440,6 +440,10 @@ class UnconnectedMusicView extends React.Component {
   };
 
   saveCode = (forceSave = false) => {
+    // Can't save if this is a read-only workspace.
+    if (this.props.isReadOnlyWorkspace) {
+      return;
+    }
     const workspaceCode = this.musicBlocklyWorkspace.getCode();
     const sourcesToSave = {
       source: JSON.stringify(workspaceCode),

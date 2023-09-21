@@ -1,6 +1,14 @@
 {
-  "continue": "Continue",
   "aichatWorkspaceHeader": "AI Chat",
+  "allMessagesSentAreRecorded": "All messages sent to AI Chat are recorded.",
+  "anythingPersonalCanNotBeSubmitted": "In order to protect your privacy, anything considered personal information (name, phone number, address, etc.) should not be submitted to AI chat.",
+  "continue": "Continue",
+  "inappropriateMessagesAreFlagged": "Inappropriate messages will be flagged and your teacher will be notified.",
   "inappropriateUserMessage": "This message has been flagged as inappropriate.",
-  "tooPersonalUserMessage": "This message has been flagged as too personal."
+  "tooPersonalUserMessage": "This message has been flagged as too personal.",
+  "userChatMessagePlaceholder": "Add a chat message...",
+  "waitingForChatResponse": "Waiting for a response...",
+  "warningModalHeader": "Remember to chat responsibly!",
+  "warningModalOkButtonText": "Start chatting", 
+  "whatIsPersonalInformation": "What is considered personal information?"
 }

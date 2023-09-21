@@ -19,6 +19,14 @@ class LearningGoalEvidenceLevel < ApplicationRecord
 
   validates :understanding, presence: true, inclusion: {in: SharedConstants::RUBRIC_UNDERSTANDING_LEVELS.to_h.values}
 
+  def summarize
+    {
+      id: id,
+      understanding: understanding,
+      teacherDescription: teacher_description
+    }
+  end
+
   def seeding_key(seed_context)
     my_learning_goal = seed_context.learning_goals.find {|lg| lg.id == learning_goal_id}
     my_key = {
@@ -26,5 +34,15 @@ class LearningGoalEvidenceLevel < ApplicationRecord
     }
     learning_goal_seeding_key = my_learning_goal.seeding_key(seed_context)
     my_key.merge!(learning_goal_seeding_key) {|key, _, _| raise "Duplicate key when generating seeding_key: #{key}"}
+  end
+
+  def summarize_for_rubric_edit
+    {
+      id: id,
+      learningGoalId: learning_goal_id,
+      understanding: understanding,
+      teacherDescription: teacher_description,
+      aiPrompt: ai_prompt,
+    }
   end
 end

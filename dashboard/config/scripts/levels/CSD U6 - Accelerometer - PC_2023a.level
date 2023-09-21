@@ -1,5 +1,6 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 41,
   "created_at": "2023-03-17T17:05:38.000Z",
   "level_num": "custom",
@@ -11,7 +12,7 @@
     "long_instructions": "# Combining the Accelerometer and Counter Pattern\r\n\r\nYou can use the accelerometer with variables and the [counter pattern](https://studio.code.org/docs/concepts/app-lab/the-counter-pattern/) to move elements on the screen depending on how the circuit playground is tilted.\r\n\r\nIn this app the goalie is trying to block the soccer ball. The ball will move automatically across the screen using the counter pattern and the player should move when you tilt the board, but the code isn't finished.\r\n\r\n\r\n## Do This\r\n\r\n1) Find the section of the code that says \"Add your code here!\"\r\n2) Use a [`getProperty()`(#fff176)](/docs/applab/getProperty/) block to get the `y` position from the `player` element ([**Show Me Where**](#triggercallout=playery))\r\n3) Use the [`accelerometer.getOrientation()`(#f78183)](/docs/applab/accelerometer.getOrientation/) block to get the `pitch` property from the accelerometer ([**Show Me Where**](#triggercallout=pitch))\r\n4) Add these two variables together to update the player's y-position ([**Show Me Where**](#triggercallout=adding))\r\n\t- You can use a `+`(#FFB74D) block, or you can type in the two variables in the empty box in the block\r\n\r\n**Run Your Program!** You should be able to tilt the Circuit Playground to move the player on the screen!",
     "instructions_important": "false",
     "submittable": "false",
-    "start_blocks": "var pitch;\nvar ballX;\nvar playerY;\nsetProperty(\"ball\", \"y\", randomNumber(50, 400));\nonBoardEvent(accelerometer, \"data\", function() {\n  //This section moves the ball across the screen\n  ballX = getProperty(\"ball\", \"x\");\n  ballX = ballX - 2;\n  setProperty(\"ball\", \"x\", ballX);\n  //This section moves the player up and down, but isn't finished\n  //Add your code here!\n  playerY = __;\n  pitch = __;\n  setProperty(\"player\", \"y\", __);\n});\n",
+    "start_blocks": "var pitch;\r\nvar ballX;\r\nvar playerY;\r\nsetProperty(\"ball\", \"y\", randomNumber(50, 400));\r\nonBoardEvent(accelerometer, \"data\", function() {\r\n  //This section moves the ball across the screen\r\n  ballX = getProperty(\"ball\", \"x\");\r\n  ballX = ballX - 2;\r\n  setProperty(\"ball\", \"x\", ballX);\r\n  //This section moves the player up and down, but isn't finished\r\n  //Add your code here!\r\n  playerY = __;\r\n  pitch = __;\r\n  setProperty(\"player\", \"y\", __);\r\n});\r\n",
     "is_k1": "false",
     "skip_instructions_popup": "false",
     "never_autoplay_video": "false",
@@ -46,7 +47,7 @@
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
-    "makerlab_enabled": "true",
+    "makerlab_enabled": "circuitPlayground",
     "code_functions": {
       "accelerometer.getOrientation": null,
       "declareAssign_x": null,
@@ -69,7 +70,8 @@
     "reference_links": [
       "/courses/csd-2022/guides/accelerometer-events",
       "/courses/csd-2022/guides/the-accelerometer",
-      "/courses/csd-2022/guides/board-events"
+      "/courses/csd-2022/guides/board-events",
+      "/maker/setup"
     ],
     "mini_rubric": "false",
     "text_mode_at_start": "false",
@@ -82,9 +84,8 @@
     "encrypted_examples": "PtOW++z3aBPdWUo2QT0G9tMahvQeh6V+zsR+WGrNtpR32Z75lhRKhxABCP4i\nXlDb72/r0LL1N4BI0HvNmTyKVg==\n",
     "preload_asset_list": null
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-03-17T17:05:38.517+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Accelerometer - PC_2222\\\"\"],\"cloned_from\":\"CSD U6 - Accelerometer - PC_2222\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-03-17T17:05:38.517+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Accelerometer - PC_2222\\\"\"],\"cloned_from\":\"CSD U6 - Accelerometer - PC_2222\"},{\"changed_at\":\"2023-08-16 19:26:55 +0000\",\"changed\":[\"start_blocks\",\"makerlab_enabled\",\"code_functions\",\"reference_links\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

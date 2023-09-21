@@ -6128,6 +6128,8 @@ zh-TW:
               display_name: 替代課程
             lessonGroup-6:
               display_name: 單位調查結束
+            lessonGroup-7:
+              display_name: 沙箱
           title: 面向对象编程
           description: "本單元向學生介紹物件導向程式設計原則，讓他們探索《鄰里》並發現他們身為軟體工程師的身份。學生可以學習 Java 的基本概念，因為他們使用「畫家」對象在「鄰里」中瀏覽和繪畫，並擴展「畫家」課程以擴展其程序的功能。學生練習預測程序代碼的結果，並使用排序，選擇和迭代來開發算法，以瀏覽迷宮和繪畫壁畫。學生也會學習使用註解來記錄程式碼，以描述特定程式碼區段的行為，並進行程式碼檢閱以接收同儕的意見。\n\n<details style=\"padding: 10px; margin-bottom: 10px;\">\n    <summary style=\"font-size: 1.2em; font-weight: bold;\">\U0001F3AF 單元目標</summary>\n    <div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px;\">\n        <p><strong><em>通過本單元的結束，學生將能夠。</em></strong></p>\n\n\\-使用繼承創建擴展現有類的子類\n\n\\-編寫帶有和不帶參數的方法以執行特定任務\n\n\\-實現算法排序，選擇和迭代\n\n\\-使用方法，控制結構和註釋\n\n編寫清晰可讀的代碼-通過基於反饋的迭代開發改進程序\n    </div>\n    </details>\n\n## 完成本單元的教學？\n\n回答這個問題 [\\*\\* 簡短調查 \\*\\*](https://studio.code.org/form/teacher_end_of_unit_survey?survey_data%5Bunit_number%5D=1) ，讓 Code.org 課程團隊知道這個單位的進展情況。"
         csa2-2023:
@@ -6162,6 +6164,8 @@ zh-TW:
               name: 這個關鍵字
             lesson-15:
               name: 第二單元調查
+            lesson-17:
+              name: 瀝青藝術項目 — 第 2 天
           lesson_groups:
             lessonGroup-2:
               display_name: 內容
@@ -6171,6 +6175,8 @@ zh-TW:
               display_name: 替代課程
             lessonGroup-5:
               display_name: 單位調查結束
+            lessonGroup-6:
+              display_name: 沙箱
           title: 班級結構與設計
         csa3-2023:
           lessons:
@@ -6202,6 +6208,8 @@ zh-TW:
               name: 社會公益計劃數據 [1 日版]
             lesson-14:
               name: 第三單元調查
+            lesson-16:
+              name: 瀝青藝術項目 — 第 2 天
           lesson_groups:
             lessonGroup-2:
               display_name: 內容
@@ -6211,6 +6219,8 @@ zh-TW:
               display_name: 替代課程
             lessonGroup-5:
               display_name: 單位調查結束
+            lessonGroup-6:
+              display_name: 沙箱
           title: 陣列和演算法
         csa4-2023:
           lessons:
@@ -6244,6 +6254,8 @@ zh-TW:
               name: 多重選取陳述式
             lesson-15:
               name: 第四單元調查
+            lesson-17:
+              name: 瀝青藝術項目 — 第 2 天
           lesson_groups:
             lessonGroup-2:
               display_name: 內容
@@ -6253,6 +6265,8 @@ zh-TW:
               display_name: 替代課程
             lessonGroup-5:
               display_name: 單位調查結束
+            lessonGroup-6:
+              display_name: 沙箱
           title: 條件和邏輯
         csa5-2023:
           lessons:
@@ -6284,6 +6298,8 @@ zh-TW:
               name: 個人敘事計劃 [1 日版]
             lesson-14:
               name: 單元 5 調查
+            lesson-16:
+              name: 瀝青藝術項目 — 第 2 天
           lesson_groups:
             lessonGroup-2:
               display_name: 內容
@@ -6293,6 +6309,8 @@ zh-TW:
               display_name: 替代課程
             lessonGroup-5:
               display_name: 單位調查結束
+            lessonGroup-6:
+              display_name: 沙箱
           title: 二維數組
         csa6-2023:
           lessons:
@@ -6324,6 +6342,8 @@ zh-TW:
               name: 自然語言處理計劃 [1 日版]
             lesson-14:
               name: 第六單元調查
+            lesson-16:
+              name: 瀝青藝術項目 — 第 2 天
           lesson_groups:
             lessonGroup-2:
               display_name: 內容
@@ -6333,6 +6353,8 @@ zh-TW:
               display_name: 替代課程
             lessonGroup-5:
               display_name: 單位調查結束
+            lessonGroup-6:
+              display_name: 沙箱
           title: 數組列表和字符串方法
         csa7-2023:
           lessons:
@@ -6364,6 +6386,8 @@ zh-TW:
               name: 單元 7 調查
             lesson-14:
               name: 劇場項目的創意編碼 [1 日版]
+            lesson-16:
+              name: 瀝青藝術項目 — 第 2 天
           lesson_groups:
             lessonGroup-2:
               display_name: 內容
@@ -6373,6 +6397,8 @@ zh-TW:
               display_name: 單位調查結束
             lessonGroup-5:
               display_name: 替代課程
+            lessonGroup-6:
+              display_name: 沙箱
           title: 方法分解和遞歸
           student_description: "本單元允許您使用在整個課程中學到的技能來練習軟件設計和開發，同時規劃和開發創造性的編碼項目，以傳達個人興趣或故事。您可以使用分解策略和面向對象的原則來規劃和實施您的想法，同時確保您的項目滿足指定的要求。在這個過程中，您將學習編寫 `private`、多載和覆寫的方法，並在子類別方法中使用 `super` 關鍵字來呼叫父類別方法，同時探索方法及其參數的功能。在整個單元中，您可以練習追蹤和撰寫遞迴方法，並將這些方法與反覆解決方案進行比較。通過一年中獲得的知識和技能，您可以在探索現有程序中的錯誤和問題時考慮到最大程度地提高系統可靠性的需求。\n\n<details style=\"padding: 10px; margin-bottom: 10px;\">\n    <summary style=\"font-size: 1.2em; font-weight: bold;\">\U0001F3AF 單位目標</summary>\n    <div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px;\">\n        <p><strong><em>在本單位結束時，您將能夠。</em></strong></p>\n\n\\-區分傳遞原始值和對象引用作為參數\n\n\\-寫和調用重載，'私有' 和重寫的方法\n\n\\-解釋創建 AI 生成圖像的程序的法律問題和知識產權問題\n\n\\-跟踪遞歸方法以確定其結果\n\n\\-確定最大化系統可靠性的策略\n    </div>\n    </details>"
         csa8-2023:
@@ -6403,6 +6429,8 @@ zh-TW:
               name: 第八單元評估
             lesson-13:
               name: 使用控制台項目進行創意編碼 [1 日版]
+            lesson-15:
+              name: 瀝青藝術項目 — 第 2 天
           lesson_groups:
             lessonGroup-2:
               display_name: 內容
@@ -6412,6 +6440,8 @@ zh-TW:
               display_name: 問卷
             lessonGroup-5:
               display_name: 替代課程
+            lessonGroup-6:
+              display_name: 沙箱
           title: 搜尋與排序
         vpl-csd3-ayw-pilot-2022:
           lessons:
@@ -7545,11 +7575,16 @@ zh-TW:
           description_short: 在實體裝置上開發程式
           name: CSD6
         csa9-2023:
+          lessons:
+            lesson-2:
+              name: 瀝青藝術項目 — 第 2 天
           lesson_groups:
             lessonGroup-2:
               display_name: 檢討與實踐
             lessonGroup-3:
               display_name: 模擬考試
+            lessonGroup-4:
+              display_name: 沙箱
           description_short: 學生通過練習多項選擇題和自由回答題的策略來為 AP CSA 考試做準備。
           description: 本單元通過審查關鍵概念，練習選擇題和自由回答題以及加強應試策略來為 AP CSA 考試做好準備。學生確定優勢和改進的領域，以制定個性化的學習計劃，以集中他們的實踐並自我評估他們的進度。
           student_description: 本單元通過審查關鍵概念，練習選擇題和自由回答題以及加強考試策略來為 AP CSA 考試做好準備。您可以確定優勢和改進領域，以創建個性化的學習計劃，以集中精力練習並自我評估您的進度。
@@ -8095,6 +8130,9 @@ zh-TW:
           description_short: 為學齡前兒童設計的計算機科學指引。
           description: 課程 A 為初學者提供計算機科學課程，包括幼稚園學生。學生將學習使用循環和事件等命令進行編程。本課程的課程還教導學生與他人進行有意義的合作，研究不同的解決問題的技巧，堅持面對具有挑戰性的任務，並了解互聯網安全。
         nevada-standards-aligned-first-grade-2023:
+          lessons:
+            lesson-1:
+              name: 數據
           lesson_groups:
             lessonGroup-2:
               display_name: 數位公民
@@ -8108,10 +8146,15 @@ zh-TW:
               display_name: 事件
             lessonGroup-7:
               display_name: 課程結束專案
+            lessonGroup-8:
+              display_name: 數據
           description_audience: 年齡 5-8
           description_short: 為學前兒童準備的電腦科學介紹。類似課程 A，但採用更深入的概念。
           description: 我們開發了課程 B，考慮到一年級學生。雖然 B 課程中的概念與 A 課程中的概念相同，但學生可以學習更複雜的不插電活動，並通過更多種類的謎題進行工作。學生將學習編程的基礎知識，協作技巧，調查和批判性思維能力，面對困難的堅持和互聯網安全。在本課程結束時，學生在 Play Lab 編程環境中創建遊戲。
         nevada-standards-aligned-second-grade-2023:
+          lessons:
+            lesson-1:
+              name: 計算系統
           lesson_groups:
             lessonGroup-2:
               display_name: 數位公民
@@ -8123,6 +8166,8 @@ zh-TW:
               display_name: 事件
             lessonGroup-6:
               display_name: 數據
+            lessonGroup-8:
+              display_name: 計算系統
           description: 我們為二年級的學生開發了 C 課程。學生將創建包含排序，循環和事件的程序。他們將研究解決問題的技術並制定策略，以建立在線和離線積極的社區。在課程結束時，學生將創建可以分享的互動遊戲。
         nevada-standards-aligned-third-grade-2023:
           lesson_groups:
@@ -8179,3 +8224,53 @@ zh-TW:
           description_audience: 年齡 9-13
           description_short: 學習計算機科學的基礎概念，並創建自己的藝術、故事、遊戲作品。
           description: 我們為五年級的學生創建了 F 課程。課程從研究使用者如何在他們使用的應用程式中做出選擇開始。然後，學生學習製作各種 Sprite Lab 應用程序，這些應用程序也為用戶提供選擇。在課程後期的課程中，學生將學習各種情境中的變數。在整個課程中，學生將獲得更大的自主權和更多選擇。在課程結束時，學生將創建互動項目，與他們的朋友和家人分享。
+        vpl-csp-2023-m1:
+          title: 模組 1
+        vpl-csp-2023-m2:
+          title: 模組 2
+        vpl-csp-2023-m3:
+          title: 模組 3
+        vpl-csp-2023-m4:
+          title: 模組 4
+        vpl-csp-2023-m5:
+          title: 模組 5
+        vpl-csp-2023-m6:
+          title: 模組 6
+        vpl-csp-2023-m7:
+          title: 模組 7
+        vpl-csp-2023-m8:
+          title: 模組 8
+        vpl-csa-2023-m1:
+          title: 模組 1
+        how-ai-works-2023:
+          title: 人工智慧是如何運作的
+        vpl-csa-2023-m2:
+          title: 模組 2
+        vpl-csa-2023-m3:
+          title: 模組 3
+        vpl-csa-2023-m4:
+          title: 模組 4
+        vpl-csa-2023-m5:
+          title: 模組 5
+        vpl-csa-2023-m6:
+          title: 模組 6
+        vpl-csa-2023-m7:
+          title: 模組 7
+        vpl-csa-2023-m8:
+          title: 模組 8
+        vpl-csd-2023-m1:
+          title: 模組 1
+        vpl-csd-2023-m2:
+          title: 模組 2
+        vpl-csd-2023-m3:
+          title: 模組 3
+        vpl-csd-2023-m4:
+          title: 模組 4
+        vpl-csd-2023-m5:
+          title: 模組 5
+        vpl-csd-2023-m6:
+          title: 模組 6
+        vpl-csd-2023-m7:
+          title: 模組 7
+        vpl-csd-2023-m8:
+          title: 模組 8

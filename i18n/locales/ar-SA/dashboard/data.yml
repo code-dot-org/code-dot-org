@@ -747,6 +747,8 @@ ar:
         csa_sorting_algorithms: 'CSA: خوارزميات الفرز'
         star_quilts_intro_to_artist: 'ستار كويلتس: مقدمة للفنان'
         upload_sprites_backgrounds: تحميل العفاريت والخلفيات المخصصة
+        what-is-creativity: ما هو الابداع؟
+        code-break: خذ استراحة من البرمجة
     callout:
       text:
         drag_blocks: اسحب المقطع البرمجي "تقدم للأمام" وثبته تحت مقطع آخر

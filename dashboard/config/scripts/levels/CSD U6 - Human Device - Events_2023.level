@@ -1,5 +1,6 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 41,
   "created_at": "2022-09-21T13:15:27.000Z",
   "level_num": "custom",
@@ -8,7 +9,7 @@
     "skin": "applab",
     "edit_code": true,
     "embed": "false",
-    "long_instructions": "# Add Events\r\n\r\nAdd events to your app using [`onEvent()`(#fff176)](/docs/applab/onEvent/) or [`onBoardEvent()`(#f78183)](/docs/applab/onBoardEvent/) blocks. Include other blocks that will let you test your events to make sure they are working correctly, such as changing the screen or making a small buzz on the circuit playground. Don't worry about any variables or if-statements for right now - you can do that in the next level.\r\n\r\nWhenever your finished, press Run and then Finish to continue to the next level",
+    "long_instructions": "# Add Events\r\n\r\nAdd events to your app using [`onEvent()`(#fff176)](/docs/applab/onEvent/) or [`onBoardEvent()`(#f78183)](/docs/applab/onBoardEvent/) blocks. Include other blocks that will let you test your events to make sure they are working correctly, such as changing the screen or making a small buzz on the circuit playground. Don't worry about any variables or if-statements for right now - you can do that in the next level.\r\n\r\nWhenever your finished, press Run and then Finish to continue to the next level\r\n\r\n_Device not connecting? Go to the Help and Tips section and click \"Maker Setup\" to help re-connect your device._",
     "instructions_important": "false",
     "submittable": "false",
     "is_k1": "false",
@@ -44,7 +45,7 @@
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
-    "makerlab_enabled": "true",
+    "makerlab_enabled": "circuitPlayground",
     "top_level_procedure_autopopulate": "false",
     "parent_level_id": 20376,
     "name_suffix": "_2023",
@@ -62,17 +63,20 @@
       "/courses/csd-2022/guides/circuit-playground",
       "/courses/csd-2022/guides/board-events",
       "/courses/csd-2022/guides/booleans-and-comparison-operators",
-      "/courses/csd-2022/guides/variables"
+      "/courses/csd-2022/guides/variables",
+      "/maker/setup"
     ],
     "widget_mode": "false",
     "libraries_enabled": "false",
     "ai_enabled": "false",
     "project_template_level_name": "CSD U6 - Human Device - template_2023",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ]
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-21T13:15:27.845+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Human Device - Events_2222\\\"\"],\"cloned_from\":\"CSD U6 - Human Device - Events_2222\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-21T13:15:27.845+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Human Device - Events_2222\\\"\"],\"cloned_from\":\"CSD U6 - Human Device - Events_2222\"},{\"changed_at\":\"2023-08-16 19:00:55 +0000\",\"changed\":[\"long_instructions\",\"makerlab_enabled\",\"reference_links\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

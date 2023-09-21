@@ -331,6 +331,10 @@ sq:
             '"x"': x pozicioni
             '"y"': Pozicioni im
             '"speed"': shpejtësia
+      gamelab_getThisSprite:
+        options:
+          CHOICE:
+            '"other"': tjetër
       gamelab_getTime:
         options:
           UNIT:

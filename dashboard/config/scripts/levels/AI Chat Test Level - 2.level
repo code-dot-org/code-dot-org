@@ -1,13 +1,18 @@
 <Aichat>
   <config><![CDATA[{
   "game_id": 71,
-  "created_at": "2023-07-31T21:20:20.000Z",
+  "created_at": "2023-08-23T22:21:29.000Z",
   "level_num": "custom",
   "user_id": 4,
   "properties": {
-    "encrypted": "false"
+    "encrypted": "false",
+    "long_instructions": "# AI Chat 2\r\n\r\n## Sample Instructions\r\n\r\nThis is a chat bot which helps you with grammar and punctuation to improve your writing.\r\n\r\n### Do This\r\n\r\nType in a paragraph that you'd like to revise and press the `Submit`(#7435b2) button.",
+    "system_prompt": "You are taking the voice of a writing instructor for middle school students that is helping with grammar and punctuation. You cannot write, create, or revise any sentences for students. You must help them understand necessary revisions using only Socratic questioning, no examples. Do not respond until students provide text.",
+    "bot_title": "RevisionBot",
+    "bot_description": "This is a chat bot which helps you with grammar and punctuation to improve your writing.",
+    "disable_projects": true
   },
   "published": true,
-  "audit_log": "[{\"changed_at\":\"2023-07-31T21:20:20.654+00:00\",\"changed\":[\"cloned from \\\"AI Chat Test Level\\\"\"],\"cloned_from\":\"AI Chat Test Level\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-07-31T21:20:20.654+00:00\",\"changed\":[\"cloned from \\\"AI Chat Test Level\\\"\"],\"cloned_from\":\"AI Chat Test Level\"},{\"changed_at\":\"2023-08-16 14:45:55 -0700\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"},{\"changed_at\":\"2023-08-17 16:10:06 -0700\",\"changed\":[],\"changed_by_id\":1,\"changed_by_email\":\"sanchit+localhost@code.org\"},{\"changed_at\":\"2023-08-18 18:22:32 +0000\",\"changed\":[\"long_instructions\"],\"changed_by_id\":1,\"changed_by_email\":\"alice+levelbuilder@code.org\"}]"
 }]]></config>
 </Aichat>

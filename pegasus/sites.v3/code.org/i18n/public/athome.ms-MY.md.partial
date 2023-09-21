@@ -38,8 +38,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>Majlis Tari-Menari</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Kodkan Majlis Tari-Menari untuk dikongsi dengan rakan dan keluarga. Menampilkan Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez, muzik dari Disney “Encanto,” dan banyak lagi!</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>Parti Tarian</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Kod Parti Tarian untuk berkongsi dengan rakan dan keluarga. Menampilkan Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez, muzik dari Disney “Encanto,” dan banyak lagi!</div>
         <a class="linktag" id="danceparty" href="/dance" target="_blank"><button>Cuba aktiviti</button></a>
     </span>
   </div>
@@ -53,8 +53,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Jam Kod Minecraft</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Minecraft kini kembali untuk Jam Kod dengan aktiviti baharu! Perjalanan melalui Minecraft dengan kod.</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Minecraft Hour of Code</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Minecraft kembali untuk Hour of Code dengan aktiviti baru! Perjalanan melalui Minecraft dengan kod.</div>
         <br>
         <a class="linktag" id="minecraft" href="/minecraft" target="_blank"><button>Cuba aktiviti</button></a>
     </span>
@@ -69,8 +69,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>AI for Oceans</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Bantu A.I. membersihkan lautan dengan melatihnya mengesan sampah! Ketahui tentang data dan kepincangan latihan, serta cara AI boleh mengatasi masalah dunia. Lihat <a class="linktag" id="oceans-lesson" href="https://curriculum.code.org/hoc/plugged/9/" target="_blank">rancangan pelajaran</a>.</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>AI untuk Lautan</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Bantuan A.I. membersihkan lautan dengan melatihnya untuk mengesan sampah! Ketahui tentang data dan kepincangan latihan, serta cara AI boleh mengatasi masalah dunia. Lihat <a class="linktag" id="oceans-lesson" href="https://curriculum.code.org/hoc/plugged/9/" target="_blank">rancangan pelajaran</a>.</div>
         <a class="linktag" id="aiforoceans" href="https://studio.code.org/s/oceans/lessons/1/levels/1" target="_blank"><button>Cuba aktiviti</button></a>
     </span>
   </div>
@@ -96,8 +96,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>Cara Komputer Berfungsi</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Bersama Bill Gates menyampaikan bahagian pengenalan, siri enam video pendek ini menerangkan perkara yang menjadikan komputer amat berguna dan cara litar komputer berfungsi.</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>Bagaimana Komputer Berfungsi</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Dengan pengenalan oleh Bill Gates, siri enam video pendek ini menerangkan apa yang menjadikan komputer komputer dan bagaimana litar komputer berfungsi.</div>
         <a class="linktag" id="howcomputers" href="https://www.youtube.com/watch?v=OAx_6-wdslM&list=PLzdnOPI1iJNcsRwJhvksEo1tJqjIqWbN-" target="_blank"><button>Tonton siri video</button></a>
     </span>
   </div>
@@ -111,8 +111,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Cara Internet Berfungsi</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Di dalam siri lapan video pendek ini, anda akan mengetahui cara internet dicipta, maklumat tentang HTML dan cara enjin carian seperti Google berfungsi.</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Bagaimana Internet Berfungsi</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Dalam siri lapan video pendek ini, anda akan belajar bagaimana internet dicipta, apa HTML, dan bagaimana enjin carian seperti Google berfungsi.</div>
         <a class="linktag" id="howinternet" href="https://www.youtube.com/watch?v=Dxcc6ycZ73M&list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7-" target="_blank"><button>Tonton siri video</button></a>
     </span>
   </div>
@@ -126,8 +126,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Cara AI Berfungsi</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Ketahui tentang cara AI berfungsi dan sebab ia penting dengan menonton siri video pendek ini. Video ini menampilkan Ketua Pegawai Eksekutif Microsoft, Satya Nadella dan pelbagai pakar bidang.</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Bagaimana AI Berfungsi</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Ketahui tentang cara AI berfungsi dan mengapa ia penting dengan siri video pendek ini. Video ini menampilkan Ketua Pegawai Eksekutif Microsoft, Satya Nadella dan pelbagai pakar bidang.</div>
         <a class="linktag" id="ai-videos" href="/ai#ai-videos" target="_blank"><button>Tonton siri video</button></a>
     </span>
   </div>
@@ -176,8 +176,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>Pengenalan kepada Makmal Permainan</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Atur cara animasi, seni interaktif dan permainan di dalam Makmal Permainan. Mulakan dengan bentuk yang mudah dan berkembang kepada animasi dan permainan berasaskan peperi yang lebih canggih.</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>Pengenalan kepada Makmal Permainan</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Animasi program, seni interaktif dan permainan dalam Game Lab. Mulakan dengan bentuk yang mudah dan berkembang kepada animasi dan permainan berasaskan peperi yang lebih canggih.</div>
         <a class="linktag" id="gamelab-intro" href="https://studio.code.org/s/csd3-virtual" target="_blank"><button>Cuba modul itu</button></a>
     </span>
   </div>
@@ -191,9 +191,9 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Pengaturcaraan Penyu di dalam Makmal Aplikasi</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Gunakan perintah JavaScript yang mudah untuk melukis bentuk dan imej dengan menggunakan “penyu” maya. Reka bentuk dan atur cara adegan digital anda sendiri!</div>
-        <a class="linktag" id="turtle-applab" href="https://studio.code.org/s/csp3-virtual" target="_blank"><button>Cuba modul itu</button></a>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Pengaturcaraan Penyu di App Lab</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Gunakan arahan JavaScript mudah untuk melukis bentuk dan imej menggunakan “penyu” maya. Reka bentuk dan program pemandangan digital anda sendiri!</div>
+        <a class="linktag" id="turtle-applab" href="https://studio.code.org/s/csp3-virtual" target="_blank"><button>Cuba modul</button></a>
     </span>
   </div>
 </div>
@@ -206,8 +206,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Pengaturcaraan Pacuan Peristiwa di dalam Makmal Aplikasi</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Pelajari mereka bentuk aplikasi yang bertindak balas kepada klik dan kekunci ditekan. Cipta siri aplikasi (apps) mudah yang hidup dalam laman web!</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Pengaturcaraan Didorong Acara dalam Makmal Aplikasi</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Belajar untuk mereka bentuk aplikasi yang bertindak balas terhadap klik dan penekanan kekunci. Cipta siri aplikasi (apps) mudah yang hidup dalam laman web!</div>
         <a class="linktag" id="events-applab" href="https://studio.code.org/s/csp5-virtual" target="_blank"><button>Cuba modul itu</button></a>
     </span>
   </div>
@@ -312,8 +312,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; margin-top:10px"><strong>Bait Kod</strong></h3>
-        <div class="smalltext" style="color: dimgray;">Bait Kod ialah pelajaran interaktif 20 minit yang mudah difahami serta menggabungkan sains komputer dengan topik dunia sebenar. Latih AI untuk membaca bahasa isyarat, mereka bentuk aplikasi untuk kebaikan, meneroka dunia Minecraft dan banyak lagi!</div>
+        <h3 class="tutorial-info-h" style="margin-top:10px"><strong>CodeBytes</strong></h3>
+        <div class="smalltext" style="color: dimgray;">CodeBytes mudah dicerna, pelajaran interaktif 20 minit menggabungkan sains komputer dengan topik dunia nyata. Latih AI untuk membaca bahasa isyarat, mereka bentuk aplikasi untuk kebaikan, meneroka dunia Minecraft dan banyak lagi!</div>
         <br>
         <br>
         <a class="linktag" id="codebytes" href="https://code.org/codebytes" target="_blank"><button>Tonton episod</button></a>
@@ -329,8 +329,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; margin-top:10px"><strong>Memecah Kod</strong></h3>
-        <div class="smalltext" style="color: dimgray; ">Pastikan sains komputer menyeronokkan dengan Memecahkan Kod! Anda boleh mencipta sifer dengan Ashton Kutcher, belajar tentang pemboleh ubah dengan Yara Shahidi dan malah meneroka cara Internet berfungsi dengan pencipta Internet yang sebenar iaitu Vint Cerf!</div>
+        <h3 class="tutorial-info-h" style="margin-top:10px"><strong>Kod Break</strong></h3>
+        <div class="smalltext" style="">Pastikan sains komputer menyeronokkan dengan mengambil Kod Break! Anda boleh mencipta sifer dengan Ashton Kutcher, belajar tentang pemboleh ubah dengan Yara Shahidi dan malah meneroka cara Internet berfungsi dengan pencipta Internet yang sebenar iaitu Vint Cerf!</div>
         <br>
         <a class="linktag" id="codebreak" href="https://code.org/break" target="_blank"><button>Sila berhubung</button></a>
     </span>

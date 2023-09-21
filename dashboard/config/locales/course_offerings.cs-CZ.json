@@ -95,6 +95,7 @@
         "hero": "Minecraft: Cesta hrdiny",
         "hoc-encryption": "Hodina kódu: Jednoduché šifrování",
         "hourofcode": "Klasické bludiště",
+        "how-ai-works": "Jak funguje umělá inteligence",
         "iceage": "Doba ledová Play Lab",
         "infinity": "Disney Infinity Play Lab",
         "jess-test-script": "jess-testovací skript",
@@ -132,8 +133,6 @@
         "testtess": "testtess",
         "text-compression": "Komprese textu",
         "valentine": "valentýnka",
-        "vpl-csa": "CSA Virtuální profesionální učení",
-        "vpl-csp": "CS Principy Virtuální profesionální učení",
         "web-development": "Vývoj webových aplikací"
       }
     }

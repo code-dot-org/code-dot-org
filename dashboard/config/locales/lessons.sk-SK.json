@@ -557,6 +557,9 @@
         "pre-express-2017/Programming in Maze": {
           "name": "Programovanie v bludisku"
         },
+        "pre-express-2017/Programming: Star Wars": {
+          "name": "Programovanie: Star Wars"
+        },
         "pre-express-2017/Loops: My Loopy Robotic Friends": {
           "name": "Cykly: Moji zacyklení robotickí kamaráti"
         },
@@ -5402,6 +5405,9 @@
         },
         "applab-2hour/Digital Design": {
           "name": "Digitálny dizajn"
+        },
+        "k1hoc2017/Collector Hour of Code 2017": {
+          "name": "Zberateľská hodina kódu 2017"
         },
         "netsim/Overview and Setup Instructions": {
           "name": "Prehľad a inštrukcie k nastaveniu"

@@ -27,6 +27,7 @@
 class Dancelab < GamelabJr
   serialized_attrs %w(
     default_song
+    uses_lab2
   )
 
   def self.skins

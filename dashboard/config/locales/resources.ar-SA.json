@@ -4166,6 +4166,9 @@
           "url": "https://docs.google.com/document/d/1_fc870l0ndjhUMazjwLSaJOx9lIMsvbd3BYYEtLykIY/edit",
           "type": "ملصق الشعر"
         },
+        "csf_course_a_lesson_slides/coursea/2022": {
+          "type": "شرائح"
+        },
         "20_20_20_rule/coursea/2022": {
           "name": "قاعدة ٢٠/٢٠/٢٠",
           "url": "http://www.anthro.com/blog/2013/10/how-to-prevent-eye-strain-with-the-20-20-20-rule#.WOU39BLyu35",
@@ -4185,6 +4188,9 @@
           "name": "الاهتزاز- جنون المعكرونة",
           "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
           "type": "فيديو"
+        },
+        "csf_course_a_lesson_slides_1/coursea/2022": {
+          "type": "شرائح"
         },
         "feeling_faces_-_emotion_image/coursea/2022": {
           "name": "صورة مشاعر الوجوه",
@@ -4211,6 +4217,9 @@
           "url": "https://youtu.be/hrnhiKAQ1_k",
           "type": "فيديو نشاط"
         },
+        "csf_course_a_lesson_slides_2/coursea/2022": {
+          "type": "شرائح"
+        },
         "unplugged_blockly_blocks_grades_k-1_/coursea/2022": {
           "name": "قطع بلوكلي البرمجية غير المتصلة (الصفوف من رياض الأطفال وحتى الصف الأول)",
           "url": "https://docs.google.com/presentation/d/1PoSQZUCUj6yw6g1yZImaHu5Gn4Gdok0iDmrrmXInavQ/edit",
@@ -4220,6 +4229,9 @@
           "name": "الاهتزاز- جنون المعكرونة",
           "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
           "type": "فيديو"
+        },
+        "csf_course_a_lesson_slides_3/coursea/2022": {
+          "type": "شرائح"
         },
         "debugging_with_the_step_button/coursea/2022": {
           "name": "إيجاد وتصحيح الخلل البرمجي مع زر \"خطوة\"",
@@ -4231,10 +4243,16 @@
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit",
           "type": "مصدر"
         },
+        "csf_course_a_lesson_slides_4/coursea/2022": {
+          "type": "شرائح"
+        },
         "feeling_faces_-_emotion_image_1/coursea/2022": {
           "name": "صورة مشاعر الوجوه",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit",
           "type": "مصدر"
+        },
+        "csf_course_a_lesson_slides_5/coursea/2022": {
+          "type": "شرائح"
         },
         "happy_map_cards_xl/coursea/2022": {
           "name": "بطاقات الخرائط السعيدة الكبيرة جدًا",
@@ -4246,6 +4264,9 @@
           "url": "https://docs.google.com/document/d/14qEVzSR7pr0slqkRn2WM8XxVyeDhdmfhtsmTrERCTNs/edit",
           "type": "أدوات التعلم"
         },
+        "csf_course_a_lesson_slides_6/coursea/2022": {
+          "type": "شرائح"
+        },
         "feeling_faces/coursea/2022": {
           "name": "الإحساس بالوجوه",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/",
@@ -4256,15 +4277,24 @@
           "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
           "type": "فيديو"
         },
+        "csf_course_a_lesson_slides_7/coursea/2022": {
+          "type": "شرائح"
+        },
         "csf_lesson_recommendations/coursea/2022": {
           "name": "أساسيات علم الكمبيوتر - توصيات الدرس",
           "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing",
           "type": "مصدر"
         },
+        "csf_course_a_lesson_slides_8/coursea/2022": {
+          "type": "شرائح"
+        },
         "pause_and_think_online/coursea/2022": {
           "name": "توقف قليلاً وفكر وأنت على الإنترنت",
           "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
           "type": "فيديو"
+        },
+        "csf_course_a_lesson_slides_9/coursea/2022": {
+          "type": "شرائح"
         },
         "the_big_event/coursea/2022": {
           "name": "الحدث الكبير",
@@ -4286,9 +4316,15 @@
           "url": "https://docs.google.com/document/d/1A9yAObCTJwHsIKtaBZY8KaGwgbxbfolpbIpeJfZRgvs/edit",
           "type": "صورة وحدة التحكم"
         },
+        "csf_course_a_lesson_slides_10/coursea/2022": {
+          "type": "شرائح"
+        },
         "cs_fundamentals_main_activity_tips/coursea/2022": {
           "name": "نصائح النشاط الرئيسي في أساسيات علوم الكمبيوتر",
           "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing"
+        },
+        "csf_course_a_lesson_slides_11/coursea/2022": {
+          "type": "شرائح"
         },
         "artist_project_planning_guide/coursea/2022": {
           "name": "دليل تخطيط مشروع الفنان",
@@ -4299,6 +4335,9 @@
           "name": "دليل تخطيط مشروع الفنان",
           "url": "https://docs.google.com/document/d/13AiHjPrDE3DFnwH3qKnty6M3PbHsZcd-0YoZz4ZmC3E/template/preview",
           "type": "الحل النموذجي"
+        },
+        "csf_course_a_lesson_slides_12/coursea/2022": {
+          "type": "شرائح"
         },
         "common_core_and_ngss_guidance/courseb/2022": {
           "name": "الأساسيات المشتركة وتوجيهات معايير جيل العلوم الحديث",
@@ -4354,6 +4393,9 @@
         "digital_trails_lesson_slides/courseb/2022": {
           "name": "المسارات الرقمية: شرائح الدرس",
           "url": "https://docs.google.com/presentation/d/1jNMWXhnNjlqK44LQ_bpAtmDmdHPeYqJeVBwegi5BnM4/edit"
+        },
+        "csf_course_b_lesson_slides/courseb/2022": {
+          "type": "شرائح"
         },
         "feeling_faces_emotion_image/courseb/2022": {
           "name": "صورة مشاعر الوجوه",

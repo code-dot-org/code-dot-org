@@ -3378,6 +3378,11 @@ is:
               display_name: Atvik
             lessonGroup-7:
               display_name: Lokaverkefni námskeiðs
+            lessonGroup-8:
+              display_name: Gögn
+          lessons:
+            lesson-1:
+              name: Gögn
         nevada-standards-aligned-fourth-grade-2023:
           description_audience: 'Aldur: 8 - 12'
           lesson_groups:

@@ -5837,6 +5837,11 @@
           "url": "https://docs.google.com/document/d/1_fc870l0ndjhUMazjwLSaJOx9lIMsvbd3BYYEtLykIY/edit",
           "type": "Plakat z wierszem"
         },
+        "csf_course_a_lesson_slides/coursea/2022": {
+          "name": "Slajdy z lekcji kursu A CSF",
+          "url": "https://docs.google.com/presentation/d/1HeArt7QO9Q7XJuTN_2oDfqBxbo1qKvhWyOCInDB2Emg/template/preview",
+          "type": "Slajdy"
+        },
         "20_20_20_rule/coursea/2022": {
           "name": "Zasada 20/20/20 ",
           "url": "http://www.anthro.com/blog/2013/10/how-to-prevent-eye-strain-with-the-20-20-20-rule#.WOU39BLyu35",
@@ -5856,6 +5861,11 @@
           "name": "Makaron Wiggles-Go",
           "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
           "type": "Wideo"
+        },
+        "csf_course_a_lesson_slides_1/coursea/2022": {
+          "name": "Slajdy z lekcji kursu A CSF",
+          "url": "https://docs.google.com/presentation/d/1HeArt7QO9Q7XJuTN_2oDfqBxbo1qKvhWyOCInDB2Emg/template/preview",
+          "type": "Slajdy"
         },
         "feeling_faces_-_emotion_image/coursea/2022": {
           "name": "Czując twarze - Emotion Image",
@@ -5882,6 +5892,11 @@
           "url": "https://youtu.be/hrnhiKAQ1_k",
           "type": "Wideo w trybie bez komputera"
         },
+        "csf_course_a_lesson_slides_2/coursea/2022": {
+          "name": "Slajdy z lekcji kursu A CSF",
+          "url": "https://docs.google.com/presentation/d/1HeArt7QO9Q7XJuTN_2oDfqBxbo1qKvhWyOCInDB2Emg/template/preview",
+          "type": "Slajdy"
+        },
         "unplugged_blockly_blocks_grades_k-1_/coursea/2022": {
           "name": "Blockly Blocks w trybie \"unplugged\" - bez komputera (Klasy K-1)",
           "url": "https://docs.google.com/presentation/d/1PoSQZUCUj6yw6g1yZImaHu5Gn4Gdok0iDmrrmXInavQ/edit",
@@ -5891,6 +5906,11 @@
           "name": "Wiggles - Gonoodle",
           "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
           "type": "Wideo"
+        },
+        "csf_course_a_lesson_slides_3/coursea/2022": {
+          "name": "Slajdy z lekcji kursu A CSF",
+          "url": "https://docs.google.com/presentation/d/1HeArt7QO9Q7XJuTN_2oDfqBxbo1qKvhWyOCInDB2Emg/template/preview",
+          "type": "Slajdy"
         },
         "debugging_with_the_step_button/coursea/2022": {
           "name": "Debugowanie z użyciem przycisku Krok",
@@ -5902,10 +5922,20 @@
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit",
           "type": "Zasoby"
         },
+        "csf_course_a_lesson_slides_4/coursea/2022": {
+          "name": "Slajdy z lekcji kursu A CSF",
+          "url": "https://docs.google.com/presentation/d/1HeArt7QO9Q7XJuTN_2oDfqBxbo1qKvhWyOCInDB2Emg/template/preview",
+          "type": "Slajdy"
+        },
         "feeling_faces_-_emotion_image_1/coursea/2022": {
           "name": "Czując twarze - Emotion Image",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit",
           "type": "Zasoby"
+        },
+        "csf_course_a_lesson_slides_5/coursea/2022": {
+          "name": "Slajdy z lekcji kursu A CSF",
+          "url": "https://docs.google.com/presentation/d/1HeArt7QO9Q7XJuTN_2oDfqBxbo1qKvhWyOCInDB2Emg/template/preview",
+          "type": "Slajdy"
         },
         "happy_map_cards_xl/coursea/2022": {
           "name": "Karty \"Wesołych map\" w rozmiarze XL",
@@ -5917,6 +5947,11 @@
           "url": "https://docs.google.com/document/d/14qEVzSR7pr0slqkRn2WM8XxVyeDhdmfhtsmTrERCTNs/edit",
           "type": "Manipulacje"
         },
+        "csf_course_a_lesson_slides_6/coursea/2022": {
+          "name": "Slajdy z lekcji kursu A CSF",
+          "url": "https://docs.google.com/presentation/d/1HeArt7QO9Q7XJuTN_2oDfqBxbo1qKvhWyOCInDB2Emg/template/preview",
+          "type": "Slajdy"
+        },
         "feeling_faces/coursea/2022": {
           "name": "Twarze wyrażające uczucia",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/",
@@ -5927,15 +5962,30 @@
           "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
           "type": "Wideo"
         },
+        "csf_course_a_lesson_slides_7/coursea/2022": {
+          "name": "Slajdy z lekcji kursu A CSF",
+          "url": "https://docs.google.com/presentation/d/1HeArt7QO9Q7XJuTN_2oDfqBxbo1qKvhWyOCInDB2Emg/template/preview",
+          "type": "Slajdy"
+        },
         "csf_lesson_recommendations/coursea/2022": {
           "name": "Zalecenia lekcji CSF",
           "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing",
           "type": "Zasoby"
         },
+        "csf_course_a_lesson_slides_8/coursea/2022": {
+          "name": "Slajdy z lekcji kursu A CSF",
+          "url": "https://docs.google.com/presentation/d/1HeArt7QO9Q7XJuTN_2oDfqBxbo1qKvhWyOCInDB2Emg/template/preview",
+          "type": "Slajdy"
+        },
         "pause_and_think_online/coursea/2022": {
           "name": "\"Zatrzymaj się i myśl online\"",
           "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
           "type": "Wideo"
+        },
+        "csf_course_a_lesson_slides_9/coursea/2022": {
+          "name": "Slajdy z lekcji kursu A CSF",
+          "url": "https://docs.google.com/presentation/d/1HeArt7QO9Q7XJuTN_2oDfqBxbo1qKvhWyOCInDB2Emg/template/preview",
+          "type": "Slajdy"
         },
         "the_big_event/coursea/2022": {
           "name": "Wielkie wydarzenie",
@@ -5957,9 +6007,19 @@
           "url": "https://docs.google.com/document/d/1A9yAObCTJwHsIKtaBZY8KaGwgbxbfolpbIpeJfZRgvs/edit",
           "type": "Obrazek kontrolera"
         },
+        "csf_course_a_lesson_slides_10/coursea/2022": {
+          "name": "Slajdy z lekcji kursu A CSF",
+          "url": "https://docs.google.com/presentation/d/1HeArt7QO9Q7XJuTN_2oDfqBxbo1qKvhWyOCInDB2Emg/template/preview",
+          "type": "Slajdy"
+        },
         "cs_fundamentals_main_activity_tips/coursea/2022": {
           "name": "Wskazówki do zajęć głównych \"Podstaw informatyki\"",
           "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing"
+        },
+        "csf_course_a_lesson_slides_11/coursea/2022": {
+          "name": "Slajdy z lekcji kursu A CSF",
+          "url": "https://docs.google.com/presentation/d/1HeArt7QO9Q7XJuTN_2oDfqBxbo1qKvhWyOCInDB2Emg/template/preview",
+          "type": "Slajdy"
         },
         "artist_project_planning_guide/coursea/2022": {
           "name": "Poradnik planowania projektu artysty",
@@ -5970,6 +6030,11 @@
           "name": "Poradnik planowania projektu artysty",
           "url": "https://docs.google.com/document/d/13AiHjPrDE3DFnwH3qKnty6M3PbHsZcd-0YoZz4ZmC3E/template/preview",
           "type": "Klucz odpowiedzi"
+        },
+        "csf_course_a_lesson_slides_12/coursea/2022": {
+          "name": "Slajdy z lekcji kursu A CSF",
+          "url": "https://docs.google.com/presentation/d/1HeArt7QO9Q7XJuTN_2oDfqBxbo1qKvhWyOCInDB2Emg/template/preview",
+          "type": "Slajdy"
         },
         "2022_change_log/courseb/2022": {
           "name": "2022 Dziennik zmian",
@@ -6044,6 +6109,11 @@
           "name": "Trasy cyfrowe: Slajdy lekcji",
           "url": "https://docs.google.com/presentation/d/1jNMWXhnNjlqK44LQ_bpAtmDmdHPeYqJeVBwegi5BnM4/edit",
           "type": "Zestaw slajdów"
+        },
+        "csf_course_b_lesson_slides/courseb/2022": {
+          "name": "Slajdy z lekcji kursu B CSF",
+          "url": "https://docs.google.com/presentation/d/17S-nTFeB0eFK2TU_x7ExRvJKK4kUM01Mumvr22h9wmw/template/preview",
+          "type": "Slajdy"
         },
         "feeling_faces_emotion_image/courseb/2022": {
           "name": "Czucia Twarze Obraz emocji",

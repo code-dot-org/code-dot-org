@@ -2808,6 +2808,9 @@ ms:
           description_audience: 'Umur: 4-7 tahun'
           description_short: Pengenalan kepada sains komputer untuk prapembaca.
         nevada-standards-aligned-first-grade-2023:
+          lessons:
+            lesson-1:
+              name: Data
           lesson_groups:
             lessonGroup-2:
               display_name: Kewarganegaraan Digital
@@ -2821,9 +2824,14 @@ ms:
               display_name: Acara-acara
             lessonGroup-7:
               display_name: Akhir Projek Kursus
+            lessonGroup-8:
+              display_name: Data
           description_audience: 'Umur: 5-8 tahun'
           description_short: Pengenalan kepada sains komputer untuk prapembaca. Serupa dengan Kursus A, tetapi dengan kedalaman konsep tambahan.
         nevada-standards-aligned-second-grade-2023:
+          lessons:
+            lesson-1:
+              name: Sistem Pengkomputeran
           lesson_groups:
             lessonGroup-2:
               display_name: Kewarganegaraan Digital
@@ -2835,6 +2843,8 @@ ms:
               display_name: Acara-acara
             lessonGroup-6:
               display_name: Data
+            lessonGroup-8:
+              display_name: Sistem Pengkomputeran
         nevada-standards-aligned-third-grade-2023:
           lesson_groups:
             lessonGroup-2:
@@ -2880,3 +2890,5 @@ ms:
               display_name: Akhir Projek Kursus
           description_audience: 'Umur: 9-13 tahun'
           description_short: Pelajari semua konsep dalam Asas Sains Komputer dan cipta seni, cerita atau permainan anda sendiri.
+        how-ai-works-2023:
+          title: Cara AI Berfungsi

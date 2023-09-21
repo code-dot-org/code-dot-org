@@ -1029,6 +1029,9 @@ te:
             lessonGroup-6:
               display_name: డేటా
         nevada-standards-aligned-first-grade-2023:
+          lessons:
+            lesson-1:
+              name: డేటా
           lesson_groups:
             lessonGroup-2:
               display_name: డిజిటల్ పౌరసత్వం
@@ -1036,7 +1039,12 @@ te:
               display_name: ఉచ్చులు
             lessonGroup-6:
               display_name: ఈవెంట్లు
+            lessonGroup-8:
+              display_name: డేటా
         nevada-standards-aligned-second-grade-2023:
+          lessons:
+            lesson-1:
+              name: కంప్యూటింగ్ సిస్టమ్స్
           lesson_groups:
             lessonGroup-2:
               display_name: డిజిటల్ పౌరసత్వం
@@ -1046,6 +1054,8 @@ te:
               display_name: ఈవెంట్లు
             lessonGroup-6:
               display_name: డేటా
+            lessonGroup-8:
+              display_name: కంప్యూటింగ్ సిస్టమ్స్
         nevada-standards-aligned-third-grade-2023:
           lesson_groups:
             lessonGroup-2:

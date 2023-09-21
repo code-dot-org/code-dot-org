@@ -23,6 +23,7 @@
         "es-MX",
         "fr-FR",
         "hi-IN",
+        "it-IT",
         "kn-IN",
         "mr-IN",
         "ms-MY",
@@ -39,7 +40,7 @@
     },
     "new_name": null,
     "family_name": "courseb",
-    "serialized_at": "2022-05-16 14:59:10 UTC",
+    "serialized_at": "2023-08-31 17:21:59 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -8257,5 +8258,14 @@
         "opportunity_standard.shortcode": "K-2-ETS1-2"
       }
     }
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
+
   ]
 }

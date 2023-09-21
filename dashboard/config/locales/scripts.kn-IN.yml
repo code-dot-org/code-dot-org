@@ -1441,6 +1441,8 @@ kn:
           name: ಹೀರೋ
         hourofcode:
           title: ಕ್ಲಾಸಿಕ್‌ ಮೇಝ್‌
+        how-ai-works-2023:
+          title: ಎಐ ಹೇಗೆ ಕೆಲಸ ಮಾಡುತ್ತದೆ
         iceage:
           name: ಐಸ್‌ಏಜ್
         infinity:
@@ -1500,6 +1502,11 @@ kn:
               display_name: ಈವೆಂಟ್‌ಗಳು
             lessonGroup-7:
               display_name: ಕೋರ್ಸ್ ಯೋಜನೆಯ ಅಂತ್ಯ
+            lessonGroup-8:
+              display_name: ಡೇಟಾ
+          lessons:
+            lesson-1:
+              name: ಡೇಟಾ
         nevada-standards-aligned-fourth-grade-2023:
           lesson_groups:
             lessonGroup-3:
@@ -1530,6 +1537,11 @@ kn:
               display_name: ಈವೆಂಟ್‌ಗಳು
             lessonGroup-6:
               display_name: ಡೇಟಾ
+            lessonGroup-8:
+              display_name: ಕಂಪ್ಯೂಟಿಂಗ್ ಸಿಸ್ಟಮ್ಸ್
+          lessons:
+            lesson-1:
+              name: ಕಂಪ್ಯೂಟಿಂಗ್ ಸಿಸ್ಟಮ್ಸ್
         nevada-standards-aligned-third-grade-2023:
           lesson_groups:
             lessonGroup-2:

@@ -198,6 +198,8 @@ hu:
   grade_level_label_elementary: Általános Iskola
   grade_level_label_middle: Középiskola
   grade_level_label_high: Gimnázium
+  students_label: Diákok
+  teachers_label: Tanárok
   teacher_label_csf: CS Fundamentals tanár
   teacher_label_csd: CS felfedezések tanár
   teacher_label_csp: CS alapelvek tanár
@@ -211,7 +213,9 @@ hu:
   call_to_action_explore_unit: Fedezze fel az egységet
   call_to_action_explore_curriculum: Fedezze fel a tantervet
   call_to_action_explore_curriculum_options: Fedezze fel a tantervi lehetőségeket
+  call_to_action_explore_lessons: Fedezze fel az órákat
   call_to_action_explore_modules: Fedezze fel a modulokat
+  call_to_action_explore_module: Fedezze fel a modult
   call_to_action_explore_workshops: Fedezze fel a műhelyeket
   call_to_action_explore_course: Fedezze fel a tanfolyamot
   call_to_action_explore_courses: Fedezze fel a tanfolyamokat
@@ -258,8 +262,12 @@ hu:
   call_to_action_see_module_details: Lásd a modul részleteit
   call_to_action_start_modules: Indító modulok
   call_to_action_see_course_details: Lásd a tanfolyam részleteit
+  call_to_action_see_lesson_details: Lásd a lecke részleteit
   call_to_action_learn_about_approach: Tudjon meg többet megközelítésünkről
   call_to_action_try_java_lab: Próbálja ki a Java Lab-ot
+  call_to_action_notify_available: Értesítsen, ha elérhető
+  call_to_action_register_early_access: Regisztráljon a korai hozzáféréshez
+  call_to_action_open_positions: Nyitott pozíciók megtekintése
   aria_label_call_to_action_afe: Tudjon meg többet az Amazon Future Engineer-ről
   aria_label_call_to_action_teaching_csf: Indítsa el a Számítástudomány alapjainak
     oktatása szakmai tanulási programot
@@ -332,6 +340,20 @@ hu:
   aria_label_call_to_action_csf_course_d: Lásd a D tanfolyam részleteit
   aria_label_call_to_action_csf_course_e: Lásd az E tanfolyam részleteit
   aria_label_call_to_action_csf_course_f: Lásd az F tanfolyam részleteit
+  aria_label_call_to_action_ai_pl_101_videos: Nézze meg az AI 101 tanároknak videókat
+  aria_label_call_to_action_ai_teaching_module: Fedezze fel a Teaching AI és a Machine
+    Learning modult
+  aria_label_call_to_action_how_ai_works_lesson_01: Lásd a Bevezetés a gépi tanulásba
+    lecke részleteit
+  aria_label_call_to_action_how_ai_works_lesson_02: Lásd a Computer Vision lecke részleteit
+  aria_label_call_to_action_how_ai_works_lesson_03: Lásd a Neural Networks lecke részleteit
+  aria_label_call_to_action_how_ai_works_lesson_04: Tekintse meg a Chatbots és a Large
+    Language Models lecke részleteit
+  aria_label_call_to_action_how_ai_works_lesson_05: Lásd a Generatív képek lecke részleteit
+  aria_label_call_to_action_how_ai_works_lesson_06: Lásd az Algoritmikus torzítás
+    lecke részleteit
+  aria_label_call_to_action_how_ai_works_lesson_07: Lásd az AI Etikai Kódex lecke
+    részleteit
   video_title_professional_learning_program: A Code.org szakmai tanulási programja
   curriculum_name_csf: Számítástechnika alapjai
   curriculum_name_csf_02: Bármely CS alapismeretek (A-F tanfolyam)
@@ -451,6 +473,10 @@ hu:
   module_label_student_tool: Hallgatói eszköz
   module_label_student_product: Termék
   module_label_student_content_resources: Tartalom és források
+  module_label_new: Új
+  module_label_coming_soon: Hamarosan
+  module_label_video_series: Videó sorozat
+  module_label_self_paced: Saját tempójú modul
   module_ages_5_10: 5-10
   module_ages_11_18: 11-18
   module_ages_7_18: 7-18
@@ -473,9 +499,13 @@ hu:
   module_grade_9_12_teachers: 9-12 Tanárok
   module_level_beginner: Kezdő
   module_level_intermediate: Közbenső
+  module_duration_45_mins: 45 percek
+  module_duration_1_hr: 1 óra
   module_duration_2_hrs: 2 óra
   module_duration_3_hrs: 3 óra
+  module_duration_5_hrs: 5 óra
   module_duration_8_hrs: 8 óra
+  module_duration_20_hrs: 20 óra
   module_duration_35_hrs: 35 óra
   module_duration_lesson: Lecke
   module_duration_week: Hét
@@ -552,6 +582,7 @@ hu:
   heading_no_devices: Nincs eszköz? Mi fedeztük
   heading_java_lab: Java Lab
   heading_objects_first: Objektumok először
+  heading_these_lessons_will: 'Ezek a leckék:'
   professional_learning_section_desc: Szerezd meg a szükséges támogatást, amikor felkészülsz
     a tanításra. A tanárok imádják, több mint 90% -uk rangsorolja a valaha volt legjobb
     szakmai fejlődést!
@@ -684,6 +715,11 @@ hu:
   ai_curriculum_grades_03: 'Fokozat szintek: 3-12'
   ai_curriculum_duration_03: 'Időtartam: 1 óra'
   ai_curriculum_btn_aria_label_03: Próbálja ki az AI for Oceans tevékenységet
+  ai_curriculum_title_04: Hogyan működik az AI
+  ai_curriculum_desc_04: Ezek a leckék kiegészítik a How AI Works videósorozatot.
+    Minden lecke a sorozat egyetlen videójával párosul, mélyebben belemerülve a videókban
+    bemutatott fogalmakba.
+  ai_curriculum_btn_aria_label_04: Fedezze fel, hogyan működik az AI leckéi
   ai_carousel_heading: 'Amit a tanárok mondanak az AI-ról a Code.org segítségével:'
   ai_carousel_quote_01: Ez a lecke lehetőséget adott hallgatóimnak is, hogy lássák,
     van-e véleményelem az osztályozási rendszerekben. Később, amikor elkezdtük látni,
@@ -700,6 +736,10 @@ hu:
   ai_pl_list_04: Vegye figyelembe az AI és a gépi tanulás valós következményeit.
   ai_pl_list_05: Fedezze fel a fejezet végi projekteket.
   ai_pl_duration: 'Időtartam: 2 óra'
+  ai_pl_title: AI és gépi tanulás tanítása
+  ai_pl_desc: Bevezetés a mesterséges intelligenciába és a gépi tanulásba. Képezzen
+    gépi tanulási modellt az AI Lab. segítségével, és vegyen részt a gépi tanulási
+    alkalmazásokkal. Vegye figyelembe az AI és a gépi tanulás valós következményeit.
   ai_video_series_title: Hogyan működik az AI
   ai_video_series_desc: A Microsoft vezérigazgatója, Satya Nadella bevezetésével ez
     a rövid videósorozat bemutatja, hogyan működik a mesterséges intelligencia és
@@ -725,6 +765,7 @@ hu:
   ai_pl_101_hero_heading: AI 101 tanároknak
   ai_pl_101_hero_desc: Fedezze fel a mesterséges intelligencia (AI) átalakító potenciálját
     az oktatásban az oktatóknak szóló ingyenes online tanulási sorozatunkkal.
+  ai_pl_101_hero_desc_02: Átfogó online tanulási sorozat tanárok számára.
   ai_pl_101_hero_presented: Által bemutatott
   ai_pl_101_intro_heading: Mi az AI 101 a tanárok számára?
   ai_pl_101_intro_text: Az AI 101 for Teachers egy ingyenes, alapvető online szakmai
@@ -769,6 +810,100 @@ hu:
     pontozási modellek és az AI kihasználásával, segítve a tanárokat abban, hogy iteratív
     visszajelzést és formatív értékelést nyújtsanak az írási élmény során.'
   ai_pl_101_explore__button_4: Fedezze fel az eszközt
+  ai_pl_101_video_title_1: Tűzparti csevegés Sal Khannal és Hadi Partovival
+  ai_pl_101_video_desc_1: Csatlakozzon Sal Khanhoz (Khan Akadémia) és Hadi Partovi
+    (Code.org) egy tűzparti beszélgetéshez a mesterséges intelligencia befogadásáról
+    az osztályteremben. Várjon egy élénk vitát, amely magában foglalja az AI körüli
+    legvitatottabb témákat.
+  ai_pl_101_video_title_2: Az AI demisztifikálása oktatók számára
+  ai_pl_101_video_desc_2: Bevezetés a mesterséges intelligencia alapjaiba, amely felkészíti
+    Önt az alapvető ismeretekre, hogy megértse az AI mély hatását társadalmunkban
+    és annak növekvő jelentőségét az oktatás területén. Gyakorlati betekintést nyerhet
+    az AI kiaknázásába az osztálytermi feladatokhoz, és időt takaríthat meg az adminisztratív
+    feladatokon.
+  ai_pl_101_video_title_3: A tanulás átalakítása AI-vel
+  ai_pl_101_video_desc_3: Fedezze fel az AI és az oktatás metszéspontját. Ez a foglalkozás
+    azt vizsgálja, hogyan lehet az AI kombinálni a pedagógiával a hallgatók tanulásának
+    fokozása érdekében. Kötelező részvétel azoknak az oktatóknak, akik az AI kihasználására
+    törekednek, hogy átalakítsák tanítási gyakorlatukat, hogy gazdagítsák diákjaik
+    tanulási tapasztalatait.
+  ai_pl_101_video_title_4: A mesterséges intelligencia felelősségteljes megközelítésének
+    biztosítása
+  ai_pl_101_video_desc_4: Fedezze fel a mesterséges intelligencia oktatási környezetbe
+    történő beépítésének etikai megfontolásait és bevált gyakorlatait. Ez az ülés
+    konkrét stratégiákat, erőforrásokat és valós példákat tartalmaz, amelyek mindegyike
+    az AI lehetséges elfogultságainak és az ezzel járó etikai megfontolásoknak a megértését
+    célozza.
+  ai_pl_101_video_title_5: Az AI bevezetése az osztályterembe
+  ai_pl_101_video_desc_5: Ez a foglalkozás az AI oktatására, az AI oktatási eszközök
+    értékelésére és felhasználására, valamint az AI kiaknázására összpontosít a hallgatók
+    értékeléséhez. Az elmélet gazdag keverékével, gyakorlati példák, és források,
+    célja, hogy felhatalmazza az oktatókat az AI tájon való eligazodásra és a diákok
+    tanulási tapasztalatainak javítására.
+  ai_pl_101_video_desc_6: 'Tudjon meg többet az AI nagy változásait előidéző új technológiáról,
+    amely két új videót tartalmaz a nagy nyelvi modelleken (például a ChatGPT) és
+    a Generative AI. Hallgassa meg, hogyan működnek ezek az új technológiák közvetlenül
+    a szakértőktől: Mira Murati, az OpenAI műszaki igazgatója és Cristóbal Valenzuela,
+    a RunwayML vezérigazgatója.'
+  how_ai_works_hero_heading: Hogyan működik az AI
+  how_ai_works_hero_desc: Merüljön el az AI világában a „Hogyan működik az AI” című
+    videósorozatunkkal és a kísérő leckékkel!
+  how_ai_works_intro_desc: Ez a rövid videósorozat és az azt kísérő osztálytermi órák
+    bemutatják Önt és diákjait a mesterséges intelligencia működéséről és miért számít.
+    Választhat egyéni órákat a téma alapján, felfedezheti a témák teljes sorozatát
+    egy osztályban, vagy megtaníthatja mind a 7 órát, hogy mélyebb merülést nyújtson.
+  how_ai_works_intro_list_01: Bemutatjuk a mesterséges intelligenciát és a gépi tanulást
+  how_ai_works_intro_list_02: Merüljön el a generatív AI működésében, beleértve a
+    nagy nyelvi modelleket (LLM) és a képgenerálást
+  how_ai_works_intro_list_03: Fedezze fel az elfogultságot, az etikát, az adatvédelmet
+    és az AI felelősségteljes használatát
+  how_ai_works_intro_list_04: Érintse meg az AI valós alkalmazásait, beleértve a számítógépes
+    látást
+  how_ai_works_lessons_heading: AI órák az osztályod számára
+  how_ai_works_lesson_title_01: Bevezetés a gépi tanulásba
+  how_ai_works_lesson_desc_01: Ismerje meg a mesterséges intelligencia egyik formáját,
+    az úgynevezett gépi tanulást, és hogyan használhatják a problémamegoldási folyamatot
+    egy robot kiképzéséhez a problémák megoldására. Vegyen részt gépi tanulási tevékenységekben,
+    ahol egy robot megtanulja, hogyan kell észlelni a halak mintáit.
+  how_ai_works_lesson_title_02: Számítógépes látás
+  how_ai_works_lesson_desc_02: Ismerje meg, hogyan működik a számítógépes látás. Nézzen
+    meg egy videót, amely elmagyarázza a számítógépes látást és azt, hogy a számítógép
+    hogyan „lát”. Ezután tervezzen egy algoritmust, amely hálózatot használ annak
+    eldöntésére, hogy a hét szegmenses kijelző hány számot jelenít meg, és tesztelje
+    azt.
+  how_ai_works_lesson_title_03: Neurális hálózatok
+  how_ai_works_lesson_desc_03: Ismerje meg, hogyan működnek a neurális hálózatok.
+    Használjon kütyüket a neurális hálózatok felfedezéséhez. Nézzen meg egy videót,
+    amely elmagyarázza a neurális hálózatokat. Végül beszélje meg a különféle perspektívák
+    szükségességét az ajánlási rendszerek létrehozásakor.
+  how_ai_works_lesson_title_04: Chatbotok és nagy nyelvi modellek
+  how_ai_works_lesson_desc_04: Ismerje meg, mi az a nagy nyelvi modell (LLM) és hogyan
+    működik, majd egy LLM segítségével hozzon létre egy szöveget az AI-vel. Végül,
+    beszélje meg, hogy az LLM-ek intelligensek vagy kreatívak-e vagy sem.
+  how_ai_works_lesson_title_05: Generatív képek
+  how_ai_works_lesson_desc_05: Ismerje meg, hogyan hozhat létre képeket az AI, majd
+    fedezze fel a diffúziós AI widgetet, és vitassa meg, hogy ezek a modellek kreatívak-e
+    vagy sem.
+  how_ai_works_lesson_title_06: Algoritmikus torzítás
+  how_ai_works_lesson_desc_06: Gyakorolja a képek kivágását, hogy feltárja a Twitter
+    vágási algoritmus alapjául szolgáló torzítást, majd olvassa el és nézzen meg egy
+    videót ennek az elfogult algoritmusnak a felfedezéséről. Végül beszélje meg az
+    algoritmusok elfogultságának felismerésének és csökkentésének módjait.
+  how_ai_works_lesson_title_07: AI Etikai Kódexünk
+  how_ai_works_lesson_desc_07: Végezzen kutatást olyan cikkek és videók felhasználásával,
+    amelyek etikai buktatókat tárnak fel az általuk választott mesterséges intelligencia
+    területén. Szerelje össze az egész osztályra kiterjedő „AI etikai kódexünk” erőforrást
+    az AI alkotói és törvényhozói számára mindenhol.
+  how_ai_works_lessons_in_a_day_title: Hogyan működik az AI egy nap alatt
+  how_ai_works_lessons_in_a_day_desc: Csak egy napod van? Lehetőség van arra is, hogy
+    az egész sorozatot egyetlen nap alatt bemutassák a hallgatóknak. Tökéletes minden
+    tantárgyi tanár számára, aki meg akarja ismertetni a diákokat az AI-vel, vagy
+    akár vendégtanár órájaként.
+  how_ai_works_lessons_in_a_day_desc_02: Mutassa be az összes „Hogyan működik az AI”
+    videót egy nap alatt. A diákok követik az egyes videókat a videó szókincsének
+    egyeztetésével, majd válaszolnak az egyes videókkal kapcsolatos reflexiós kérdésre.
+  how_ai_works_resources_desc: Szeretne többet megtudni az AI-ről? Íme néhány további
+    forrás, amelyek segíthetnek Önnek és diákjainak tanulásának kiterjesztésében.
   ai_vid_intro_caption: Bemutatjuk, hogyan működik az AI
   ai_vid_chatbots_caption: Hogyan működnek a chatbotok és a nagy nyelvi modellek
   ai_vid_creativity_caption: Van-e mesterséges intelligenciája és kreativitása?
@@ -1105,10 +1240,10 @@ hu:
   teach_page_additional_materials_list_desc_03: Nyomtassa ki ezeket a különféle példaképek
     plakátjait, hogy lógjon az iskolában, és inspirálja diákjait a számítástechnika
     kipróbálására.
-  csp_page_top_desc: Free set of elementary curricula that introduces students to
-    the foundational concepts of computer science and challenges them to explore how
-    computing and technology can impact the world. Can be taught as an introductory
-    class and as an AP course.
+  csp_page_top_desc: Free year-long curriculum that introduces students to the foundational
+    concepts of computer science and challenges them to explore how computing and
+    technology can impact the world. Can be taught as an introductory class and as
+    an AP course.
   csp_page_intro_heading: Free, AP® CSP endorsed, high school introductory course
   csp_page_intro_list_01: Culturally responsive pedagogy
   csp_page_intro_list_02: Real-world problem investigation
@@ -1678,6 +1813,7 @@ hu:
   not_found_desc: A kért oldal nem található
   not_found_instructions: Ellenőrizze a web-címet és töltse újra, vagy válasszon egy
     linket az alábbi listából.
+  company_code_dot_org: Code.org
   company_4-H: 4-H Ifjúság fejlesztés
   company_asa: Posztgraduális szövetség
   company_asos: ASOS
@@ -1730,6 +1866,7 @@ hu:
   company_evsd: East Valley School District
   company_eastonvilleschooldistrict: Eatonville School District
   company_enumclawschooldistrict: Enumclaw School District
+  company_ets: ETS
   company_everettsd: Everette Public Schools
   company_fsusd: Fairfield-Suisun Unified School District
   company_fayettecountypublicschools: Fayette County Public Schools
@@ -1751,6 +1888,7 @@ hu:
   company_houstonisd: Houston Independent School District
   company_hcpss: Howard County Public Schools
   company_idla: Idaho Digital Learning Academy
+  company_iste: ISTE
   company_janesvilleschooldistrict: Janesville School District
   company_johnstoncountyschools: Johnston County Schools
   company_lps: Lincoln Public School
@@ -11976,8 +12114,10 @@ hu:
   tutorial_ai4alldance_string_platforms: Minden modern böngésző
   tutorial_ai4allneural_string_platforms: Minden modern böngésző
   tutorial_spheroinout_string_platforms: Kihúzva
-  tutorial_edisonblueprint_string_platforms: Minden modern böngésző
-  tutorial_edisonmaze_string_platforms: Minden modern böngésző
+  tutorial_edisonblueprint_string_platforms: Minden modern böngésző, Android táblagép,
+    iPad
+  tutorial_edisonmaze_string_platforms: Minden modern böngésző, Android táblagép,
+    iPad
   tutorial_milnefunctions_string_platforms: Minden modern böngésző
   tutorial_sasmap_string_platforms: Minden modern böngésző, iPad, Képernyőolvasó
   tutorial_firstrobotics_string_platforms: Minden modern böngésző
@@ -13270,6 +13410,119 @@ hu:
     adaptációja a Quorum használatával, egy bizonyítékokon alapuló nyelv, amelyet
     eredetileg a vak vagy látássérült hallgatók hozzáférhetőségének biztosítására
     terveztek.
+  engineering_hero_heading: Csatlakozzon mérnöki csapatunkhoz!
+  engineering_hero_desc: Ahogy tovább bővítjük mérnöki csapatunkat, szerettünk volna
+    többet megosztani a Code.org mérnöki szervezetünkről és az itt végzett munka néhány
+    egyedi aspektusáról. Ha érdekel, hogy jelentkezzen valamelyik szerepünkre, szívesen
+    hallanánk rólad!
+  engineering_team_title: Ismerje meg a mérnöki csapatot a Code.org oldalon
+  engineering_team_card_text_1: Ez (legtöbben) a személyes találkozónkon 2023 nyarán!
+    Ez a tömeg négy alcsoportra oszlik mérnöki csapatunkon belül, akik együtt dolgoznak
+    azon, hogy felépítsék és kiszolgálják a platformot minden hallgatónk és tanárunk
+    számára.
+  engineering_team_card_text_2: Ha érdekel, hogy jelentkezzen valamelyik szerepünkre,
+    szívesen hallanánk rólad! A nyitott pozíciók listáját a Karrier oldalon találja.
+  engineering_our_team_title: Mérnöki csapatunk
+  engineering_our_team_desc: 'A Code.org mérnöki csapata négy alcsoportra oszlik,
+    amelyek platformunk különböző területeit építik és támogatják:'
+  engineering_our_team_sub_title_1: Hallgatói tanulási csapat
+  engineering_our_team_text_1: Hallgatói tanulási csapatunk birtokolja minden tevékenységünket
+    (laboratóriumoknak hívjuk őket), amelyeket diákjaink minden nap használnak. Ez
+    a csapat többnyire front-end technológián dolgozik (React-et és sok egyedi JS-t
+    használunk), és nagyszerű munkakapcsolatot ápolunk számos partnerrel és nyílt
+    forráskódú projekttel. Például a [Google's Blockly] (%{youtube_url}) -t használjuk
+    minden blokk alapú programozásunkhoz. Támogatjuk a tanulókat tanulási útjukban
+    az óvodától a 12. osztályig.
+  engineering_our_team_sub_title_2: Tanári tapasztalati csapat
+  engineering_our_team_text_2: Tanári tapasztalati csapatunk felépíti azokat az eszközöket,
+    amelyek új tanárokat vonzanak a Code.org-hoz (ezeket beszerzési termékeknek nevezzük),
+    és kifejleszti azt a platformot, amely felhatalmazza meglévő tanárainkat tantervünk
+    (tanári eszközeink) tanítására. Mint a hallgatói eszközeinknél, a React-re támaszkodunk
+    a front-end felépítésében, és szerveroldali komponenseinket a Ruby on Rails segítségével
+    szolgálják fel.
+  engineering_our_team_sub_title_3: Platform csapat
+  engineering_our_team_text_3: Platform csapatunk olyan alapvető összetevőkkel rendelkezik,
+    amelyek kiszolgálják hallgatói és tanáraink igényeit (például hitelesítés és felhasználói
+    profil), és küldetése az is, hogy elérje azokat a hallgatókat, akiket még nem
+    tudunk elérni. Ez magában foglalja az olyan integrációk építését, amelyek összekapcsolnak
+    minket a különböző tanulási menedzsment rendszereket (LMS) használó iskolákkal,
+    és csomagolják tantervünket, hogy távoli iskolákban is használható legyen, akik
+    nem férnek hozzá megbízható internethez.
+  engineering_our_team_sub_title_4: Infrastruktúra csapat
+  engineering_our_team_text_4: Infrastruktúra csapatunk biztosítja a gerincét annak
+    a platformnak, amely támogatja hallgatóinkat és tanárainkat. Ez magában foglalja
+    a tárhely-infrastruktúránkat és a kapcsolódó szolgáltatásokat (az AWS-t használjuk),
+    az adatkezelést, a biztonsági programokat, a fejlesztői és telepítési szolgáltatásokat
+    és még sok minden mást. Ez a csapat birtokolja skálázási és ellátási rendszereinket
+    is, amelyek kritikusak a Kódolás Órája során, ahol meghívjuk a világ minden hallgatóját,
+    hogy töltsön be egy órás kódolást velünk.
+  engineering_faq_question_1: Mit csinál a Code.org?
+  engineering_faq_answer_1_a: A Code.org egy oktatási innovációs nonprofit szervezet,
+    amely arra a vízióra törekszik, hogy minden iskolában minden tanulónak lehetősége
+    legyen számítástechnikát tanulni a K-12 alapoktatás részeként.
+  engineering_faq_answer_1_b: Bővítjük a számítástechnikához való hozzáférést az iskolákban,
+    különös tekintettel a fiatal nők és más alulreprezentált csoportok diákjainak
+    növekvő részvételére. A K-12 számítástechnikai tanterv vezető szolgáltatója az
+    Egyesült Államok legnagyobb iskolai körzeteiben, a Code.org szervezi az éves Kódolás
+    Órája kampányt is, amely a világ összes hallgatójának több mint 15% -át foglalkoztatta.
+  engineering_faq_answer_1_c: A Code.org-ot nagylelkű adományozók támogatják, köztük
+    a Microsoft, az Amazon, a Google és még sokan mások.
+  engineering_faq_question_2: Mi a Code.org fejlesztői tapasztalata és eszközei?
+  engineering_faq_answer_2: Fejlesztői tapasztalatunk eltérhet attól, amit a korábbi
+    szerepeiben látott. Szorosan együttműködve termékcsapatunkkal, minden hétköznap
+    szállítunk a gyártásba, és különféle kadenciáink vannak - néha olyan kódot ír,
+    amely aznap életbe lép; máskor hosszabb távú projekteken vesz részt - és bár követjük
+    a heti 2 heti sprintet, ezt könnyű módon tesszük. Arra mutatunk, hogy a helyes
+    dolgokat a megfelelő módon végezzük el, szemben az adott módszertan purista nézetével.
+    [Minden kódunk] (%{code_url}) nyílt forráskódú, és JIRA és GitHub pull kéréseket
+    használunk az összes munkadarab nyomon követésére. Sokat törődünk a minőséggel
+    és a teszteléssel is, és szerencsések vagyunk, hogy hihetetlen támogatást kapunk
+    az [SauceLabs](%{saucelabs_url}) -től, akik segítenek nekünk a felhasználói felület
+    tesztcsomagjának futtatásában különböző hallgatói eszközökön (pl. iPads) a felhőeszköz-farmjukon.
+  engineering_faq_question_3: Mi a mérnök ügyeleti rotációja a Code.org-on?
+  engineering_faq_answer_3: 30+ mérnöki csapatunk megosztja az ügyeleti feladatokat.
+    Minden mérnök 24 órás műszakot fed le, és eszkalációs útjainkat és játékkönyveinket
+    használja a webhely leállására vagy más élő webhely problémákra való reagáláshoz.
+    Büszkék vagyunk webhelyünk megbízhatóságára - átlagosan minden mérnököt évente
+    csak egyszer ébresztenek fel olyan problémák miatt, amelyek általában gyorsan
+    megoldhatók. Helyette, a „Nap Fejlesztője” általában munkanapjának egy részét
+    a termelés telepítésének irányításával és a kevésbé sürgős kérdések osztályozásával
+    tölti.
+  engineering_faq_question_4: Ön egy távoli barát/WFH szervezet?
+  engineering_faq_answer_4_a: Igen! 2019-ben, röviddel a járvány előtt, a Code.org
+    távoli szervezet lett. Ma minden amerikai időzónában mérnökeink vannak, és ennek
+    megfelelően fogadják el a munkaidőt. Találkozóink többsége PT 10 és 15 óra között
+    zajlik.
+  engineering_faq_answer_4_b: Felismerjük a személyes idő értékét is, és minden negyedévben
+    személyesen gyűlünk össze, jellemzően Seattle-ben. Ezen események közül kettő
+    (Kick-off Week és „Codechella”) januárban és júniusban mindenkit összehoz a szervezetben
+    - és a mérnöki és termékcsapatok külön találkoznak áprilisban és októberben.
+  engineering_faq_answer_4_c: Határozottan hiszünk abban, hogy időt töltünk diákjainkkal
+    és tanárainkkal, sok ilyen személyes esemény magában foglalja az iskolákba és
+    az osztálytermekbe tett kirándulásokat, hogy visszajelzéseket gyűjtsenek vagy
+    teszteljék termékeinket
+  engineering_faq_question_5: Mi teszi egyedivé a Code.org mérnöki csapatát?
+  engineering_faq_answer_5_a: 'A kihívást jelentő technikai problémák megoldásán túl,
+    van néhány dolog, ami különbözővé teszi mérnöki szervezetünket másoktól, amelyekben
+    esetleg dolgozott:'
+  engineering_faq_answer_5_b_1: Mindannyian osztozunk küldetésünk iránti szenvedélyünkben.
+  engineering_faq_answer_5_b_2: Mindannyian azért vagyunk itt, hogy támogassuk azt
+    a küldetést, hogy kiterjesszük a számítástechnikához való hozzáférést minden hallgató
+    számára szerte a világon. Mindannyiunknak megvan az egyedi története és perspektívája
+    arról, hogy mi vezet minket e küldetés felé.
+  engineering_faq_answer_5_c_1: Mélyen törődünk egymással.
+  engineering_faq_answer_5_c_2: Amikor a mérnökök egy problémával küzdenek, lépünk
+    és segítünk. Az egyik alapelvünk az, hogy kemények vagyunk a problémákkal, de
+    kedvesek egymáshoz. Rendszeresen népszerűsítjük a mérnököket, de nem írunk elő
+    túltervezett megoldásokat csak azért, hogy támogassuk valaki promóciós útját.
+    Ehelyett mérnökeinkbe fektetünk nagyvonalú szakmai fejlesztési költségvetéssel
+    és más tanulási lehetőségekhez való hozzáféréssel.
+  engineering_faq_answer_5_d_1: Keményen dolgozunk, de világos határokat szabunk.
+  engineering_faq_answer_5_d_2: Miközben támogatjuk a diákokat szerte a világon, felelősségre
+    vonjuk magunkat a munka és az otthoni élet közötti egyértelmű határokért. Élvezzük
+    a megbeszélések nélküli szerdákat, a PTO (összesen 5 hét, amely magában foglalja
+    az egész org-szintű 2 hetes irodabezárást az év végén, más néven téli szünetet),
+    fél munkanap pénteken nyáron, más néven nyári péntek, és egyéb nagylelkű előnyök.
   language_code:
     ar: arab
     az: azerbajdzsáni

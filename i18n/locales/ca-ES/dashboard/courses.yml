@@ -83,6 +83,8 @@ ca:
           title: Investigació del pla d'estudis de CS Discoveries
         self-paced-pl-csp-2023:
           title: Ensenyar els principis bàsics de la informàtica
+        vpl-csa-2023:
+          title: Aprenentatge Professional Virtual CSA
     resources:
       curriculum/csd/2017:
         name: Pla d'estudis

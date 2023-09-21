@@ -13,7 +13,7 @@
     },
     "new_name": null,
     "family_name": "csc-starquilts",
-    "serialized_at": "2023-07-25 20:56:11 UTC",
+    "serialized_at": "2023-08-31 20:15:10 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -587,7 +587,7 @@
       "key": "0002695b-097e-483b-8525-e2c039139b8f",
       "position": 1,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Debrief” slide\n \n**Discuss**: _What patterns do you notice?_How did using loops make it easier to make your star patterns?\n\n**Discussion Goal**: Help students realize the following relationship:\n* If the Artist turns less degrees, then the Artist will create more points in a star. \n* If the Artist turns more degrees, then the Artist will create fewer points in a star."
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display**: Show “Debrief” slide\n \n**Discuss**: \n- _What patterns do you notice?_\n- _How does using loops make it easier to code your star patterns?_\n\n**Discussion Goal**: Help students realize the following relationship:\n* If the Artist turns less degrees, then the Artist will create more points in a star. \n* If the Artist turns more degrees, then the Artist will create fewer points in a star."
       },
       "seeding_key": {
         "activity_section.key": "0002695b-097e-483b-8525-e2c039139b8f",
@@ -2214,6 +2214,15 @@
     }
   ],
   "lessons_opportunity_standards": [
+
+  ],
+  "rubrics": [
+
+  ],
+  "learning_goals": [
+
+  ],
+  "learning_goal_evidence_levels": [
 
   ]
 }

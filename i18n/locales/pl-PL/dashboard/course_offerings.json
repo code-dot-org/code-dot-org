@@ -355,7 +355,6 @@
   "csa-labs": "csa-labs",
   "csa-draft-pl": "csa-draft-pl",
   "dlp-csd-mod4": "dlp-csd-mod4",
-  "vpl-csa": "CSA Wirtualne profesjonalne uczenie się",
   "katie-practice": "katie-practice",
   "soccer": "piłka nożna",
   "csa-data-lab": "AP CSA Data Lab",
@@ -434,5 +433,6 @@
   "nevada-standards-aligned-third-grade": "nevada-standards-aligned-third-grade",
   "tesspltest23": "tesspltest23",
   "test-nv-coursea": "test-nv-coursea",
-  "aichat": "aichat"
+  "aichat": "aichat",
+  "how-ai-works": "Jak działa AI"
 }

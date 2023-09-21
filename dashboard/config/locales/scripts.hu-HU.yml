@@ -3268,6 +3268,8 @@ hu:
           student_description: Ismerd meg a számítástechnika alapjait közösen az Angry
             Birds, Plants vs. Zombies karaktereivel valamint Motkányal a Jégkorszakból!
           title: Hagyományos labirintus
+        how-ai-works-2023:
+          title: Hogyan működik az MI?
         iceage:
           description: Mesélj el egy történetet vagy készíts egy játékot a Jégkorszak
             játéklaborral!
@@ -3356,6 +3358,11 @@ hu:
               display_name: Események
             lessonGroup-7:
               display_name: Kurzus Projekt vége
+            lessonGroup-8:
+              display_name: Adat
+          lessons:
+            lesson-1:
+              name: Adat
         nevada-standards-aligned-fourth-grade-2023:
           lesson_groups:
             lessonGroup-3:
@@ -3393,6 +3400,11 @@ hu:
               display_name: Események
             lessonGroup-6:
               display_name: Adat
+            lessonGroup-8:
+              display_name: Számítástechnikai rendszerek
+          lessons:
+            lesson-1:
+              name: Számítástechnikai rendszerek
         nevada-standards-aligned-third-grade-2023:
           lesson_groups:
             lessonGroup-2:

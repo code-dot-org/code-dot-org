@@ -121,7 +121,7 @@
   "dropletBlock_drawImage_param1_description": "La posición `x` en píxeles de la esquina superior izquierda de la imagen a dibujar.",
   "dropletBlock_drawImage_param2": "y",
   "dropletBlock_drawImage_param2_description": "La posición `y` en píxeles de la esquina superior izquierda de la imagen a dibujar.",
-  "dropletBlock_drawImage_param3": "ancho",
+  "dropletBlock_drawImage_param3": "el ancho",
   "dropletBlock_drawImage_param4": "altura",
   "dropletBlock_drawImageURL_description": "Dibuja la imagen en la URL especificada en el elemento del lienzo activo.",
   "dropletBlock_drawImageURL_param0_description": "La URL de una imagen. Puede ser el nombre de un recurso del proyecto o una URL externa.",

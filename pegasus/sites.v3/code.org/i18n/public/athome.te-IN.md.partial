@@ -38,7 +38,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>డాన్స్ పార్టీ</strong></h3>        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">స్నేహితులు మరియు కుటుంబంతో పంచుకోవడానికి ఒక డాన్స్ పార్టీ కోడ్ చేయండి. బియాన్స్, హ్యారీ స్టైల్స్, లిజ్జో, లిల్ నాస్ ఎక్స్, సెలెనా గోమెజ్, డిస్నీ యొక్క “ఎన్కాంటో” నుండి సంగీతం మరియు మరింత మంది నటించారు!</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>డాన్స్ పార్టీ</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">స్నేహితులు మరియు కుటుంబ సభ్యులతో పంచుకోవడానికి డాన్స్ పార్టీని కోడ్ చేయండి. బియాన్స్, హ్యారీ స్టైల్స్, లిజ్జో, లిల్ నాస్ ఎక్స్, సెలెనా గోమెజ్, డిస్నీ యొక్క “ఎన్కాంటో” నుండి సంగీతం మరియు మరింత మంది నటించారు!</div>
         <a class="linktag" id="danceparty" href="/dance" target="_blank"><button>సూచించే ప్రయత్నించండి</button></a>
     </span>
   </div>
@@ -52,7 +53,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>Minecraft అవర్ ఆఫ్ కోడ్</strong></h3>        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">సరికొత్త యాక్టివిటీతో అవర్ ఆఫ్ కోడ్ కోసం Minecraft మళ్లీ వచ్చింది! కోడ్‌తో Minecraft గుండా ప్రయాణం.</div>        <br>        <a class="linktag" id="minecraft" href="/minecraft" target="_blank"><button>యాక్టివిటీ ప్రయత్నించండి</button></a>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Minecraft అవర్ ఆఫ్ కోడ్</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Minecraft సరికొత్త కార్యాచరణతో అవర్ ఆఫ్ కోడ్ కోసం తిరిగి వచ్చింది! కోడ్‌తో Minecraft గుండా ప్రయాణం.</div>        <br>        <a class="linktag" id="minecraft" href="/minecraft" target="_blank"><button>యాక్టివిటీ ప్రయత్నించండి</button></a>
     </span>
   </div>
 </div>
@@ -65,7 +67,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>AI ఫర్ ఓషన్స్</strong></h3>        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">చెత్తను కనుగొనేలా శిక్షణ ఇవ్వడం ద్వారా ఓషన్స్ శుభ్రపరచడానికి A.I. కు తోడ్పడండి! శిక్షణ డేటా మరియు బయాస్ గురించి మరియు ప్రపంచ సమస్యలను AI ఎలా పరిష్కరిస్తుందో తెలుసుకోండి. చూడండి <a class="linktag" id="oceans-lesson" href="https://curriculum.code.org/hoc/plugged/9/" target="_blank">పాఠం ప్రణాళిక</a>.</div>        <a class="linktag" id="aiforoceans" href="https://studio.code.org/s/oceans/lessons/1/levels/1" target="_blank"><button>యాక్టివిటీ ప్రయత్నించండి</button></a>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>AI for Oceans</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Help A.I. clean the oceans by training it to detect trash! శిక్షణ డేటా మరియు బయాస్ గురించి మరియు ప్రపంచ సమస్యలను AI ఎలా పరిష్కరిస్తుందో తెలుసుకోండి. చూడండి <a class="linktag" id="oceans-lesson" href="https://curriculum.code.org/hoc/plugged/9/" target="_blank">పాఠం ప్రణాళిక</a>.</div>        <a class="linktag" id="aiforoceans" href="https://studio.code.org/s/oceans/lessons/1/levels/1" target="_blank"><button>యాక్టివిటీ ప్రయత్నించండి</button></a>
     </span>
   </div>
 </div>
@@ -90,7 +93,9 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>కంప్యూటర్లు ఎలా పని చేస్తాయి</strong></h3>        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">బిల్ గేట్స్ ఇచ్చిన పరిచయంతో, ఆరు వీడియోల ఈ సీరీస్ ఒక కంప్యూటరును కంప్యూటరుగా ఏది చేస్తుంది మరియు కంప్యూటరు సర్క్యూట్లు ఎలా పని చేస్తాయో వివరిస్తుంది.</div>        <a class="linktag" id="howcomputers" href="https://www.youtube.com/watch?v=OAx_6-wdslM&list=PLzdnOPI1iJNcsRwJhvksEo1tJqjIqWbN-" target="_blank"><button>వీడియో సీరీస్ చూడండి</button></a>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>కంప్యూటర్లు ఎలా పనిచేస్తాయి</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">బిల్ గేట్స్ పరిచయంతో, ఈ ఆరు చిన్న వీడియోల శ్రేణి కంప్యూటర్ను కంప్యూటర్గా చేస్తుంది మరియు కంప్యూటర్ సర్క్యూట్లు ఎలా పనిచేస్తాయో వివరిస్తుంది.</div>
+        <a class="linktag" id="howcomputers" href="https://www.youtube.com/watch?v=OAx_6-wdslM&list=PLzdnOPI1iJNcsRwJhvksEo1tJqjIqWbN-" target="_blank"><button>వీడియో సిరీస్</button></a>చూడండి
     </span>
   </div>
 </div>
@@ -103,7 +108,9 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>ఇంటర్నెట్ ఎలా పని చేస్తుంది</strong></h3>        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">ఎనిమిది వీడియోల ఈ సీరీస్‌లో, ఇంటర్నెట్ ఎలా కనిపెట్టబడింది, HTML అంటే ఏమిటి మరియు Google లాంటి సర్చ్ ఇంజన్లు ఎలా పని చేస్తాయి అనేవాటిని తెలుసుకోండి.</div>        <a class="linktag" id="howcomputers" href="https://www.youtube.com/watch?v=OAx_6-wdslM&list=PLzdnOPI1iJNcsRwJhvksEo1tJqjIqWbN-" target="_blank"><button>వీడియో సీరీస్ చూడండి</button></a>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>ఇంటర్నెట్ ఎలా పనిచేస్తుంది</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">ఎనిమిది చిన్న వీడియోల యొక్క ఈ శ్రేణిలో, ఇంటర్నెట్ ఎలా కనుగొనబడింది, HTML అంటే ఏమిటి మరియు గూగుల్ వంటి సెర్చ్ ఇంజన్లు ఎలా పనిచేస్తాయో మీరు నేర్చుకుంటారు.</div>
+        <a class="linktag" id="howinternet" href="https://www.youtube.com/watch?v=Dxcc6ycZ73M&list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7-" target="_blank"><button>వీడియో సిరీస్</button></a>చూడండి
     </span>
   </div>
 </div>
@@ -116,7 +123,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>AI ఎలా పని చేస్తుంది</strong></h3>        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">ఈ చిన్న వీడియోల సీరీస్‌తో AI ఎలా పని చేస్తుందో మరియు ఇది ఎందుకు ముఖ్యమైనదో తెలుసుకోండి. Microsoft సిఇఓ సత్య నాదెళ్ల మరియు విభిన్న నిపుణుల తారాగణంతో.</div>        <a class="linktag" id="ai-videos" href="/ai#ai-videos" target="_blank"><button>వీడియో సీరీస్ చూడండి</button></a>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>AI ఎలా పనిచేస్తుంది</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">AI ఎలా పనిచేస్తుందో మరియు ఈ చిన్న వీడియోల శ్రేణితో ఎందుకు ముఖ్యమైనది అనే దాని గురించి తెలుసుకోండి. Microsoft సిఇఓ సత్య నాదెళ్ల మరియు విభిన్న నిపుణుల తారాగణంతో.</div>        <a class="linktag" id="ai-videos" href="/ai#ai-videos" target="_blank"><button>వీడియో సీరీస్ చూడండి</button></a>
     </span>
   </div>
 </div>
@@ -164,7 +172,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>గేమ్ ల్యాబ్ పరిచయం</strong></h3>        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">గేమ్ ల్యాబ్‌లో ప్రోగ్రామ్ అనిమేషన్స్, ఇంటరాక్టివ్ ఆర్ట్ మరియు గేమ్స్. సరళమైన ఆకృతులతో ప్రారంభించండి మరియు మరింత అధునాతన స్ప్రైట్-ఆధారిత యానిమేషన్‌లు మరియు గేమ్‌ల వరకు రూపొందించండి.</div>        <a class="linktag" id="gamelab-intro" href="https://studio.code.org/s/csd3-virtual" target="_blank"><button>మాడ్యూల్ ప్రయత్నించండి</button></a>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>గేమ్ ల్యాబ్ పరిచయం</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">ప్రోగ్రామ్ యానిమేషన్లు, ఇంటరాక్టివ్ ఆర్ట్, మరియు గేమ్ ల్యాబ్ లో గేమ్స్. సరళమైన ఆకృతులతో ప్రారంభించండి మరియు మరింత అధునాతన స్ప్రైట్-ఆధారిత యానిమేషన్‌లు మరియు గేమ్‌ల వరకు రూపొందించండి.</div>        <a class="linktag" id="gamelab-intro" href="https://studio.code.org/s/csd3-virtual" target="_blank"><button>మాడ్యూల్ ప్రయత్నించండి</button></a>
     </span>
   </div>
 </div>
@@ -177,7 +186,9 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>యాప్ ల్యాబ్‌లో టర్టల్ ప్రోగ్రామింగ్</strong></h3>        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">ఒక వర్చువల్ "టర్టల్" ఉపయోగించి ఆకృతులు మరియు ఇమేజ్‌లు గీయడానికి సరళమైన JavaScript కమాండ్స్ ఉపయోగించండి. మీ సొంత డిజిటల్ సీన్ రూపొందించండి మరియు ప్రోగ్రామ్ చేయండి!</div>        <a class="linktag" id="turtle-applab" href="https://studio.code.org/s/csp3-virtual" target="_blank"><button>మాడ్యూల్ ప్రయత్నించండి</button></a>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>యాప్ ల్యాబ్లో తాబేలు ప్రోగ్రామింగ్</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">వర్చువల్ “తాబేలు” ఉపయోగించి ఆకారాలు మరియు చిత్రాలను గీయడానికి సాధారణ జావాస్క్రిప్ట్ ఆదేశాలను ఉపయోగించండి. మీ స్వంత డిజిటల్ సన్నివేశాన్ని రూపొందించండి మరియు ప్రోగ్రామ్ చేయండి!</div>
+        <a class="linktag" id="turtle-applab" href="https://studio.code.org/s/csp3-virtual" target="_blank"><button>మాడ్యూల్</button></a>ప్రయత్నించండి
     </span>
   </div>
 </div>
@@ -190,7 +201,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>యాప్ ల్యాబ్‌లో ఈవెంట్-డ్రివెన్ ప్రోగ్రామింగ్</strong></h3>        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">క్లిక్‌లు మరియు కీ ప్రెస్‌లకు ప్రతిస్పందించే యాప్‌లు రూపొందించడం నేర్చుకోండి. వెబ్‌లో లైవ్‌గా ఉండే సరళమైన అప్లికేషన్‌ల (యాప్స్) సీరీస్ సృష్టించండి!</div>        <a class="linktag" id="events-applab" href="https://studio.code.org/s/csp5-virtual" target="_blank"><button>మాడ్యూల్ ప్రయత్నించండి</button></a>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>యాప్ ల్యాబ్లో ఈవెంట్-డ్రైవెన్ ప్రోగ్రామింగ్</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">క్లిక్లు మరియు కీ ప్రెస్లకు ప్రతిస్పందించే అనువర్తనాలను రూపొందించడం నేర్చుకోండి. వెబ్‌లో లైవ్‌గా ఉండే సరళమైన అప్లికేషన్‌ల (యాప్స్) సీరీస్ సృష్టించండి!</div>        <a class="linktag" id="events-applab" href="https://studio.code.org/s/csp5-virtual" target="_blank"><button>మాడ్యూల్ ప్రయత్నించండి</button></a>
     </span>
   </div>
 </div>
@@ -294,7 +306,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; margin-top:10px"><strong>CodeBytes</strong></h3>        <div class="smalltext" style="color: dimgray;">CodeBytes కంప్యూటర్ సైన్స్‌ను వాస్తవ-ప్రపంచ అంశాలతో సమ్మిశ్రమం చేసే సులభంగా అర్థం చేసుకోగల, 20 నిమిషాల ఇంటరాక్టివ్ పాఠాలు. సైన్ భాషను చదవడానికి, ఖచ్చితంగా యాప్ రూపొందించడానికి, Minecraft ప్రపంచాన్ని అన్వేషించడానికి మరియు మరెన్నో చేయడానికి AI కు శిక్షణ ఇవ్వండి!</div>        <br>        <br>        <a class="linktag" id="codebytes" href="https://code.org/codebytes" target="_blank"><button>View episodes</button></a>
+        <h3 class="tutorial-info-h" style="margin-top:10px"><strong>కోడ్బైట్స్</strong></h3>
+        <div class="smalltext" style="color: dimgray;">కోడ్బైట్స్ సులభంగా జీర్ణించుకోగల, కంప్యూటర్ సైన్స్ను వాస్తవ ప్రపంచ అంశాలతో మిళితం చేసే 20 నిమిషాల ఇంటరాక్టివ్ పాఠాలు. సైన్ భాషను చదవడానికి, ఖచ్చితంగా యాప్ రూపొందించడానికి, Minecraft ప్రపంచాన్ని అన్వేషించడానికి మరియు మరెన్నో చేయడానికి AI కు శిక్షణ ఇవ్వండి!</div>        <br>        <br>        <a class="linktag" id="codebytes" href="https://code.org/codebytes" target="_blank"><button>View episodes</button></a>
     </span>
   </div>
 </div>
@@ -307,7 +320,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; margin-top:10px"><strong>కోడ్ బ్రేక్</strong></h3>        <div class="smalltext" style="color: dimgray; ">కోడ్ బ్రేక్ తీసుకోవడం ద్వారా కంప్యూటర్ సైన్స్‌ను సరదాగా ఉంచండి! మీరు యాష్టన్ కుచర్‌తో సైఫర్‌ను సృష్టించవచ్చు, యారా షాహిదీతో వేరియబుల్స్ గురించి తెలుసుకోవచ్చు మరియు ఇంటర్నెట్ అసలు ఆవిష్కర్త,వింట్ సెర్ఫ్‌తో ఇంటర్నెట్ ఎలా పనిచేస్తుందో కూడా అన్వేషించవచ్చు, Vint Cerf!</div>        <br>        <a class="linktag" id="codebreak" href="https://code.org/break" target="_blank"><button>కనెక్ట్ అవ్వండి</button></a>
+        <h3 class="tutorial-info-h" style="margin-top:10px"><strong>కోడ్ బ్రేక్</strong></h3>
+        <div class="smalltext" style="">కోడ్ బ్రేక్ తీసుకోవడం ద్వారా కంప్యూటర్ సైన్స్ను సరదాగా ఉంచండి! మీరు యాష్టన్ కుచర్‌తో సైఫర్‌ను సృష్టించవచ్చు, యారా షాహిదీతో వేరియబుల్స్ గురించి తెలుసుకోవచ్చు మరియు ఇంటర్నెట్ అసలు ఆవిష్కర్త,వింట్ సెర్ఫ్‌తో ఇంటర్నెట్ ఎలా పనిచేస్తుందో కూడా అన్వేషించవచ్చు, Vint Cerf!</div>        <br>        <a class="linktag" id="codebreak" href="https://code.org/break" target="_blank"><button>కనెక్ట్ అవ్వండి</button></a>
     </span>
   </div>
 </div>

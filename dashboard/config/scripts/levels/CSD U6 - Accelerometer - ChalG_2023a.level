@@ -1,5 +1,6 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 41,
   "created_at": "2023-03-17T17:05:41.000Z",
   "level_num": "custom",
@@ -99,16 +100,19 @@
       "/courses/csd-2022/guides/analog-sensors",
       "/courses/csd-2022/guides/changing-sensor-scale",
       "/courses/csd-2022/guides/board-events",
-      "/courses/csd-2022/guides/data-and-change-events"
+      "/courses/csd-2022/guides/data-and-change-events",
+      "/maker/setup"
     ],
     "display_name": "Accessibility App",
     "thumbnail_url": "https://images.code.org/c23af495b29aa1d39d9f0803dabc6f70-image-1649455860507.png",
     "bubble_choice_description": "Create an app prototype that could be used in an accessibility setting to make it easier for someone with a disability to use technology",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "encrypted_examples": [
+
+    ]
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-03-17T17:05:41.531+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Accelerometer - ChalG_2222\\\"\"],\"cloned_from\":\"CSD U6 - Accelerometer - ChalG_2222\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-03-17T17:05:41.531+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Accelerometer - ChalG_2222\\\"\"],\"cloned_from\":\"CSD U6 - Accelerometer - ChalG_2222\"},{\"changed_at\":\"2023-08-16 19:28:45 +0000\",\"changed\":[\"code_functions\",\"reference_links\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

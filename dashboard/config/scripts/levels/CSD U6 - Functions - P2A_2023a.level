@@ -1,5 +1,6 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 41,
   "created_at": "2023-03-17T17:06:39.000Z",
   "level_num": "custom",
@@ -114,11 +115,13 @@
     "bubble_choice_description": "Create a program that moves the clouds as you blow on the sensor",
     "thumbnail_url": "https://images.code.org/6a78fb12e01bde21792db9ff53caa436-image-1649197807725.gif",
     "encrypted_examples": "Oi45yaRgAL4b9oM9ND2kIS0g7rvKV0z8fCN4xp875Q+UF6OL063HegmB/v3n\nRIFwGMlkeW6/TkUbX8hy9s0y+g==\n",
-    "preload_asset_list": null
+    "preload_asset_list": null,
+    "reference_links": [
+      "/maker/setup"
+    ]
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-03-17T17:06:39.070+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Functions - P2A_2222\\\"\"],\"cloned_from\":\"CSD U6 - Functions - P2A_2222\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-03-17T17:06:39.070+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Functions - P2A_2222\\\"\"],\"cloned_from\":\"CSD U6 - Functions - P2A_2222\"},{\"changed_at\":\"2023-08-16 19:40:29 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

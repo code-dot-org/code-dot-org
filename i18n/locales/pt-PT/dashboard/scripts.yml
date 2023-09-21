@@ -4874,6 +4874,9 @@ pt:
           description_audience: 'Idade: de 4 a 7 anos'
           description_short: Uma introdução à ciência da computação para pré-leitores.
         nevada-standards-aligned-first-grade-2023:
+          lessons:
+            lesson-1:
+              name: Dados
           lesson_groups:
             lessonGroup-2:
               display_name: Cidadania digital
@@ -4885,9 +4888,14 @@ pt:
               display_name: Impacto da computação
             lessonGroup-6:
               display_name: Eventos
+            lessonGroup-8:
+              display_name: Dados
           description_audience: 'Idades: 5-8'
           description_short: Uma introdução à ciência da computação na alfabetização Semelhante ao curso A, mas com conceitos mais aprofundados.
         nevada-standards-aligned-second-grade-2023:
+          lessons:
+            lesson-1:
+              name: Sistemas de computação
           lesson_groups:
             lessonGroup-2:
               display_name: Cidadania digital
@@ -4899,6 +4907,8 @@ pt:
               display_name: Eventos
             lessonGroup-6:
               display_name: Dados
+            lessonGroup-8:
+              display_name: Sistemas de computação
         nevada-standards-aligned-third-grade-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4938,3 +4948,51 @@ pt:
               display_name: Impacto da computação
           description_audience: 'Idades: 9-13'
           description_short: Aprenda todos os conceitos Fundamentais da Ciência da Computação e crie sua própria arte, história ou jogo.
+        vpl-csp-2023-m1:
+          title: Módulo 1
+        vpl-csp-2023-m2:
+          title: Módulo 2
+        vpl-csp-2023-m3:
+          title: Módulo 3
+        vpl-csp-2023-m4:
+          title: Módulo 4
+        vpl-csp-2023-m5:
+          title: Módulo 5
+        vpl-csp-2023-m6:
+          title: Módulo 6
+        vpl-csp-2023-m7:
+          title: Módulo 7
+        vpl-csp-2023-m8:
+          title: Módulo 8
+        vpl-csa-2023-m1:
+          title: Módulo 1
+        vpl-csa-2023-m2:
+          title: Módulo 2
+        vpl-csa-2023-m3:
+          title: Módulo 3
+        vpl-csa-2023-m4:
+          title: Módulo 4
+        vpl-csa-2023-m5:
+          title: Módulo 5
+        vpl-csa-2023-m6:
+          title: Módulo 6
+        vpl-csa-2023-m7:
+          title: Módulo 7
+        vpl-csa-2023-m8:
+          title: Módulo 8
+        vpl-csd-2023-m1:
+          title: Módulo 1
+        vpl-csd-2023-m2:
+          title: Módulo 2
+        vpl-csd-2023-m3:
+          title: Módulo 3
+        vpl-csd-2023-m4:
+          title: Módulo 4
+        vpl-csd-2023-m5:
+          title: Módulo 5
+        vpl-csd-2023-m6:
+          title: Módulo 6
+        vpl-csd-2023-m7:
+          title: Módulo 7
+        vpl-csd-2023-m8:
+          title: Módulo 8

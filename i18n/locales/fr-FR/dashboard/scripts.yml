@@ -6115,6 +6115,8 @@ fr:
               display_name: Leçons alternatives
             lessonGroup-6:
               display_name: Enquête de fin d'unité
+            lessonGroup-7:
+              display_name: Bacs à sable
           title: Programmation orientée objet
         csa2-2023:
           lessons:
@@ -6148,6 +6150,8 @@ fr:
               name: Ce mot clé
             lesson-15:
               name: 'Unité 2 : Enquête'
+            lesson-17:
+              name: Asphalt Art Project — Jour 2
           lesson_groups:
             lessonGroup-2:
               display_name: Contenu
@@ -6157,6 +6161,8 @@ fr:
               display_name: Leçons alternatives
             lessonGroup-5:
               display_name: Enquête de fin d'unité
+            lessonGroup-6:
+              display_name: Bacs à sable
           title: Structure et conception des classes
         csa3-2023:
           lessons:
@@ -6188,6 +6194,8 @@ fr:
               name: Projet Data for Social Good [Version d'un jour]
             lesson-14:
               name: 'Unité 3 : Enquête'
+            lesson-16:
+              name: Asphalt Art Project — Jour 2
           lesson_groups:
             lessonGroup-2:
               display_name: Contenu
@@ -6197,6 +6205,8 @@ fr:
               display_name: Leçons alternatives
             lessonGroup-5:
               display_name: Enquête de fin d'unité
+            lessonGroup-6:
+              display_name: Bacs à sable
           title: Tableaux et algorithmes
         csa4-2023:
           lessons:
@@ -6230,6 +6240,8 @@ fr:
               name: Déclarations à sélection multiple
             lesson-15:
               name: 'Unité 4 : Enquête'
+            lesson-17:
+              name: Asphalt Art Project — Jour 2
           lesson_groups:
             lessonGroup-2:
               display_name: Contenu
@@ -6239,6 +6251,8 @@ fr:
               display_name: Leçons alternatives
             lessonGroup-5:
               display_name: Enquête de fin d'unité
+            lessonGroup-6:
+              display_name: Bacs à sable
           title: Conditions et logique
         csa5-2023:
           lessons:
@@ -6270,6 +6284,8 @@ fr:
               name: Projet narratif personnel [Version d'un jour]
             lesson-14:
               name: 'Unité 5 : Enquête'
+            lesson-16:
+              name: Asphalt Art Project — Jour 2
           lesson_groups:
             lessonGroup-2:
               display_name: Contenu
@@ -6279,6 +6295,8 @@ fr:
               display_name: Leçons alternatives
             lessonGroup-5:
               display_name: Enquête de fin d'unité
+            lessonGroup-6:
+              display_name: Bacs à sable
           title: Tableaux bidimensionnels
         csa6-2023:
           lessons:
@@ -6310,6 +6328,8 @@ fr:
               name: Projet de traitement du langage naturel [Version d'un jour]
             lesson-14:
               name: 'Unité 6 : Enquête'
+            lesson-16:
+              name: Asphalt Art Project — Jour 2
           lesson_groups:
             lessonGroup-2:
               display_name: Contenu
@@ -6319,6 +6339,8 @@ fr:
               display_name: Leçons alternatives
             lessonGroup-5:
               display_name: Enquête de fin d'unité
+            lessonGroup-6:
+              display_name: Bacs à sable
           title: ArrayLists et méthodes de chaîne
         csa7-2023:
           lessons:
@@ -6350,6 +6372,8 @@ fr:
               name: 'Unité 7 : Enquête'
             lesson-14:
               name: Codage créatif avec The Theater Project [Version d'un jour]
+            lesson-16:
+              name: Asphalt Art Project — Jour 2
           lesson_groups:
             lessonGroup-2:
               display_name: Contenu
@@ -6359,6 +6383,8 @@ fr:
               display_name: Enquête de fin d'unité
             lessonGroup-5:
               display_name: Leçons alternatives
+            lessonGroup-6:
+              display_name: Bacs à sable
           title: 'Méthode : décomposition et récursion'
           description: "Cette unité permet aux étudiants de pratiquer la conception et le développement de logiciels en utilisant les compétences qu'ils ont acquises tout au long du programme tout en planifiant et en développant un projet de codage créatif visant à transmettre un intérêt personnel ou une histoire à l'aide de The Theater. Les élèves utilisent des stratégies de décomposition et des principes orientés objet pour planifier et mettre en œuvre leurs idées tout en s'assurant que leurs projets répondent à des exigences spécifiques. Au cours du processus, les élèves apprennent à écrire des méthodes « privées », surchargées et remplacées et à utiliser le mot clé « super » dans une méthode de sous-classe pour appeler une méthode de superclasse tout en explorant la fonctionnalité des méthodes et leurs paramètres. Tout au long de l'unité, les étudiants s'entraînent à tracer et à écrire des méthodes récursives et à comparer ces méthodes à des solutions itératives. Grâce aux connaissances et aux compétences acquises tout au long de l'année, les étudiants prennent conscience de la nécessité d'optimiser la fiabilité du système lorsqu'ils explorent les bogues et les problèmes des programmes existants.\n\n<details style=\"padding: 10px; margin-bottom: 10px;\">\n    <summary style=\"font-size: 1.2em; font-weight: bold;\">\\U0001Objectifs de l'unité F3AF</summary>\n    <div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px;\">\n        <p><strong><em>À la fin de cette unité, les étudiants seront capables de...</em></strong></p>\n\n-   Faire la différence entre la transmission de valeurs primitives et les références à des objets sous forme de paramètres\n\n-   Écrire et appeler des méthodes surchargées, « privées » et remplacées\n\n-   Expliquer les problèmes juridiques et de propriété intellectuelle liés aux programmes qui créent des images générées par l'IA\n\n-   Tracer une méthode récursive pour déterminer son résultat\n\n-   Identifier des stratégies pour optimiser la fiabilité du système\n    </div>\n    </details>\n\n<details style=\"padding: 10px; margin-bottom: 10px;\">\n    <summary style=\"font-size: 1.2em; font-weight: bold;\">✅ AP Classroom Personal Progress Checks</summary>\n    <div style=\"margin-top: 20px; margin-left: 20px; margin-right: 20px;\">\n        <p>Pour attribuer des questions de la banque de questions AP Classroom qui correspondent à cette unité, créez un questionnaire personnalisé dans AP Classroom en recherchant dans la banque de questions les énoncés de connaissances essentielles figurant sur la page <a href=\"https://studio.code.org/s/csa2-2023/standards\" target=\"_blank\"><strong>Standards</strong></a> de l'unité. Vous pouvez trouver des instructions et des démonstrations vidéo pour ce faire au <a href=\"https://apcentral.collegeboard.org/instructional-resources/ap-classroom\" target=\"_blank\"><strong>AP Central</strong></a>.</p>\n    </div>\n</details>\n\n## Vous avez terminé d'enseigner cette unité ?\n\nRépondez à cette [\\*\\*courte enquête\\*\\*](https://studio.code.org/form/teacher_end_of_unit_survey?survey_data%5Bunit_number%5D=7) pour informer l'équipe du programme de Code.org du déroulement de l'unité."
           student_description: |-
@@ -6408,6 +6434,8 @@ fr:
               name: Unité 8 Évaluation
             lesson-13:
               name: Codage créatif avec le projet Console [Version d'un jour]
+            lesson-15:
+              name: Asphalt Art Project — Jour 2
           lesson_groups:
             lessonGroup-2:
               display_name: Contenu
@@ -6417,6 +6445,8 @@ fr:
               display_name: Enquête
             lessonGroup-5:
               display_name: Leçons alternatives
+            lessonGroup-6:
+              display_name: Bacs à sable
           title: Recherche et tri
         vpl-csd3-ayw-pilot-2022:
           lessons:
@@ -7526,11 +7556,16 @@ fr:
           description_short: Apprend à programmer des objets.
           name: csd6a-2023
         csa9-2023:
+          lessons:
+            lesson-2:
+              name: Asphalt Art Project — Jour 2
           lesson_groups:
             lessonGroup-2:
               display_name: Révision et pratique
             lessonGroup-3:
               display_name: Examens simulés
+            lessonGroup-4:
+              display_name: Bacs à sable
           description_short: Les étudiants se préparent à l'examen AP CSA en mettant en pratique des stratégies pour les questions à choix multiples et à réponse libre.
           description: Cette unité prépare les étudiants à l'examen AP CSA en passant en revue les concepts clés, en pratiquant des questions à choix multiples et à réponse libre, et en renforçant les stratégies de réussite aux tests. Les étudiants identifient les points forts et les points à améliorer afin de créer des plans d'étude individualisés afin de concentrer leur pratique et d'auto-évaluer leurs progrès.
           student_description: Cette unité vous prépare à l'examen AP CSA en passant en revue les concepts clés, en vous entraînant à poser des questions à choix multiples et à réponse libre et en renforçant les stratégies de réussite aux tests. Vous identifiez les points forts et les points à améliorer pour créer des plans d'étude personnalisés afin de vous concentrer sur votre pratique et d'auto-évaluer vos progrès.
@@ -8076,6 +8111,9 @@ fr:
           description_short: Une initiation à l’informatique pour les pré-lecteurs.
           description: Le Cours A propose un programme d'informatique pour les lecteurs débutants, dont les élèves de maternelle. Les élèves apprendront à programmer en utilisant des commandes telles que les boucles et les événements. Les leçons qui se trouvent dans ce cours enseigneront également aux élèves à collaborer sérieusement les uns avec les autres, différentes techniques de résolution de problèmes, à persister face aux tâches plus exigeantes, et comment naviguer l'internet en toute sécurité.
         nevada-standards-aligned-first-grade-2023:
+          lessons:
+            lesson-1:
+              name: Données
           lesson_groups:
             lessonGroup-2:
               display_name: Citoyenneté Numérique
@@ -8089,10 +8127,15 @@ fr:
               display_name: Événements
             lessonGroup-7:
               display_name: Projet de fin de cours
+            lessonGroup-8:
+              display_name: Données
           description_audience: 'Âges : 5 à 8 ans'
           description_short: Une introduction à l'informatique pour les pré-lecteurs. Similaire au cours A, mais avec une profondeur de concept accrue.
           description: Le Cours B a été pensé avec les élèves de CP à l'esprit. Si les notions présentées dans le Cours B suivent de près celles du Cours A, les élèves découvriront néanmoins des activités déconnectées plus complexes et travailleront avec une plus grande variété de casse-têtes. Les élèves apprendront les bases de la programmation, des techniques de collaboration, développeront des compétences d'investigation et leur esprit critique, et apprendront à persévérer face aux difficultés et à naviguer l'internet en toute sécurité. À la fin de ce cours, les élèves créeront leurs propres jeux dans l'environnement Labo Jeux.
         nevada-standards-aligned-second-grade-2023:
+          lessons:
+            lesson-1:
+              name: Systèmes informatiques
           lesson_groups:
             lessonGroup-2:
               display_name: Citoyenneté Numérique
@@ -8104,6 +8147,8 @@ fr:
               display_name: Événements
             lessonGroup-6:
               display_name: Données
+            lessonGroup-8:
+              display_name: Systèmes informatiques
           description: Nous avons développé le Cours C pour des élèves de CE1. Les élèves créeront des programmes avec du séquençage, des boucles et des événements. Ils examineront des techniques de résolution de problèmes et élaboreront des stratégies pour créer des communautés positives en ligne et hors ligne. À la fin du cours, les élèves créeront des jeux interactifs qu'ils pourront partager.
         nevada-standards-aligned-third-grade-2023:
           lesson_groups:
@@ -8160,3 +8205,53 @@ fr:
           description_audience: 'Àges : 9 à 13 ans'
           description_short: Apprends toutes les notions dans les Concepts Fondamentaux de l’Informatique et crée tes propres œuvres d’art, histoires ou jeux.
           description: Nous avons créé le cours F pour les élèves de cinquième année. Le cours commence par examiner comment les utilisateurs font leurs choix dans les applications qu'ils utilisent. Les étudiants apprennent ensuite à créer diverses applications Sprite Lab qui offrent également des choix à l'utilisateur. Au cours des dernières leçons du cours, les étudiants découvriront les variables dans divers contextes. Les étudiants bénéficient d'une plus grande autonomie et d'un plus grand choix tout au long de ce cours. À la fin du cours, les étudiants auront créé des projets interactifs à partager avec leurs amis et leur famille.
+        vpl-csp-2023-m1:
+          title: Module 1
+        vpl-csp-2023-m2:
+          title: Module 2
+        vpl-csp-2023-m3:
+          title: Module 3
+        vpl-csp-2023-m4:
+          title: Module 4
+        vpl-csp-2023-m5:
+          title: Module 5
+        vpl-csp-2023-m6:
+          title: Module 6
+        vpl-csp-2023-m7:
+          title: Module 7
+        vpl-csp-2023-m8:
+          title: Module 8
+        vpl-csa-2023-m1:
+          title: Module 1
+        how-ai-works-2023:
+          title: Comment fonctionne l'IA
+        vpl-csa-2023-m2:
+          title: Module 2
+        vpl-csa-2023-m3:
+          title: Module 3
+        vpl-csa-2023-m4:
+          title: Module 4
+        vpl-csa-2023-m5:
+          title: Module 5
+        vpl-csa-2023-m6:
+          title: Module 6
+        vpl-csa-2023-m7:
+          title: Module 7
+        vpl-csa-2023-m8:
+          title: Module 8
+        vpl-csd-2023-m1:
+          title: Module 1
+        vpl-csd-2023-m2:
+          title: Module 2
+        vpl-csd-2023-m3:
+          title: Module 3
+        vpl-csd-2023-m4:
+          title: Module 4
+        vpl-csd-2023-m5:
+          title: Module 5
+        vpl-csd-2023-m6:
+          title: Module 6
+        vpl-csd-2023-m7:
+          title: Module 7
+        vpl-csd-2023-m8:
+          title: Module 8

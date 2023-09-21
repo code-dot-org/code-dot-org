@@ -1,6 +1,5 @@
 @import 'color.scss';
 
-
 .aichatLab {
   position: absolute;
   width: 100%;
@@ -12,4 +11,13 @@
   display: flex;
   flex-direction: row;
   gap: 2px;
+
+  .instructionsArea {
+    width: 20%;
+    height: 100%;
+  }
+
+  .chatWorkspaceArea {
+    flex: 1;
+  }
 }

@@ -1,0 +1,10 @@
+{
+  "es-MX": {
+    "data": {
+      "failure_message_override": {
+        "MC HOC 2016 Level 2-2": "Usa los comandos `avanzar` y `girar` para mover al pollo.",
+        "MC HOC 2016 Level 3": "Usa el bloque `siempre haz` y los comandos `avanzar` y `girar` para que tu pollo deambule."
+      }
+    }
+  }
+}

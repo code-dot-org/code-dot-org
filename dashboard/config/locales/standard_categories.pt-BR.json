@@ -353,6 +353,9 @@
         "D2.Eco": {
           "description": "Economia"
         },
+        "D2.His": {
+          "description": "História"
+        },
         "D3.Claims": {
           "description": "Desenvolvendo reivindicações e usando evidências"
         },

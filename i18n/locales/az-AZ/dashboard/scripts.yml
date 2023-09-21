@@ -3848,6 +3848,10 @@ az:
               display_name: Kurs layihələrinin sonu!
           description_audience: 'Yaşlar: 9-13'
           description_short: Kompüter Elmlərinin Əsasları üzrə bütün anlayışları öyrənin və öz sənətinizi, hekayənizi və ya oyununuzu yaradın.
+        csa-software-engineering:
+          lessons:
+            lesson-9:
+              name: Qur
         csa-frq-practice:
           lesson_groups:
             lessonGroup-3:
@@ -3900,6 +3904,9 @@ az:
           description_audience: 'Yaşlar: 4-7'
           description_short: Ön-oxucular üçün kompüter elmlərinə giriş.
         nevada-standards-aligned-first-grade-2023:
+          lessons:
+            lesson-1:
+              name: məlumat
           lesson_groups:
             lessonGroup-2:
               display_name: Rəqəmsal vətəndaşlıq
@@ -3911,6 +3918,8 @@ az:
               display_name: Tədbirlər
             lessonGroup-7:
               display_name: Kurs layihələrinin sonu!
+            lessonGroup-8:
+              display_name: məlumat
           description_audience: 'Yaşlar: 5-8'
         nevada-standards-aligned-second-grade-2023:
           lesson_groups:
@@ -3964,3 +3973,53 @@ az:
               display_name: Kurs layihələrinin sonu!
           description_audience: 'Yaşlar: 9-13'
           description_short: Kompüter Elmlərinin Əsasları üzrə bütün anlayışları öyrənin və öz sənətinizi, hekayənizi və ya oyununuzu yaradın.
+        vpl-csp-2023-m1:
+          title: Modul 1
+        vpl-csp-2023-m2:
+          title: Modul 2
+        vpl-csp-2023-m3:
+          title: Modul 3
+        vpl-csp-2023-m4:
+          title: Modul 4
+        vpl-csp-2023-m5:
+          title: Modul 5
+        vpl-csp-2023-m6:
+          title: Modul 6
+        vpl-csp-2023-m7:
+          title: Modul 7
+        vpl-csp-2023-m8:
+          title: Modul 8
+        vpl-csa-2023-m1:
+          title: Modul 1
+        how-ai-works-2023:
+          title: Süni İntelekt (Sİ) necə işləyir?
+        vpl-csa-2023-m2:
+          title: Modul 2
+        vpl-csa-2023-m3:
+          title: Modul 3
+        vpl-csa-2023-m4:
+          title: Modul 4
+        vpl-csa-2023-m5:
+          title: Modul 5
+        vpl-csa-2023-m6:
+          title: Modul 6
+        vpl-csa-2023-m7:
+          title: Modul 7
+        vpl-csa-2023-m8:
+          title: Modul 8
+        vpl-csd-2023-m1:
+          title: Modul 1
+        vpl-csd-2023-m2:
+          title: Modul 2
+        vpl-csd-2023-m3:
+          title: Modul 3
+        vpl-csd-2023-m4:
+          title: Modul 4
+        vpl-csd-2023-m5:
+          title: Modul 5
+        vpl-csd-2023-m6:
+          title: Modul 6
+        vpl-csd-2023-m7:
+          title: Modul 7
+        vpl-csd-2023-m8:
+          title: Modul 8

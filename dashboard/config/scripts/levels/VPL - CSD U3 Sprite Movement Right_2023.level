@@ -1,5 +1,6 @@
 <Gamelab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 50,
   "created_at": "2023-08-01T17:48:03.000Z",
   "level_num": "custom",
@@ -23,7 +24,7 @@
     },
     "edit_code": true,
     "embed": "false",
-    "long_instructions": "**Note:** This is the same level that students will complete in Unit 3 Lesson 12 Level 3 in the CS Discoveries curriculum.\r\n\r\n<img src=\"https://images.code.org/cdf7115bbd6e9c91838cc6c8a78d6607-image-1588350244303.gif\" style=\"float: right; margin-left: 20px\">\r\n\r\n# Sprite Movement\r\n\r\nUsing the counter pattern, you can write programs that animate sprites smoothly. Adding to or removing from a sprite's `x` or `y` property in the draw loop makes your sprite move just a bit each time it is redrawn.\r\n\r\n# Do This\r\n\r\n* Read the code that makes the jet go up the screen.\r\n* Add code that makes the plane move to the right, as in the sample image.",
+    "long_instructions": "**Note:** This is the same level that students will complete in Unit 3 Lesson 13 Level 2 in the CS Discoveries curriculum.\r\n\r\n<img src=\"https://images.code.org/cdf7115bbd6e9c91838cc6c8a78d6607-image-1588350244303.gif\" style=\"float: right; margin-left: 20px\">\r\n\r\n# Sprite Movement\r\n\r\nUsing the counter pattern, you can write programs that animate sprites smoothly. Adding to or removing from a sprite's `x` or `y` property in the draw loop makes your sprite move just a bit each time it is redrawn.\r\n\r\n# Do This\r\n\r\n* Read the code that makes the jet go up the screen.\r\n* Add code that makes the plane move to the right, as in the sample image.",
     "instructions_important": "false",
     "start_blocks": "var jet = createSprite(350, 350);\r\njet.setAnimation(\"jet\");\r\nvar plane = createSprite(50, 200);\r\nplane.setAnimation(\"plane\");\r\n\r\nfunction draw() {\r\n  background(\"skyblue\");\r\n  //move the jet up\r\n  jet.y = jet.y - 3;\r\n  //move the plane over\r\n  // ADD YOUR CODE HERE\r\n  drawSprites();\r\n}",
     "is_k1": "false",
@@ -79,14 +80,13 @@
       "/courses/vpl-csd-2022/guides/drawing-shapes",
       "/courses/vpl-csd-2022/guides/shapes-and-parameters"
     ],
-    "display_name": "Unit 3 Lesson 12 Level 3",
+    "display_name": "Unit 3 Lesson 13 Level 2",
     "thumbnail_url": "https://images.code.org/cdf7115bbd6e9c91838cc6c8a78d6607-image-1588350244303.gif",
     "validation_enabled": "false",
     "preload_asset_list": null
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-08-01T17:48:03.087+00:00\",\"changed\":[\"cloned from \\\"VPL - CSD U3 Sprite Movement Right_2022\\\"\"],\"cloned_from\":\"VPL - CSD U3 Sprite Movement Right_2022\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-08-01T17:48:03.087+00:00\",\"changed\":[\"cloned from \\\"VPL - CSD U3 Sprite Movement Right_2022\\\"\"],\"cloned_from\":\"VPL - CSD U3 Sprite Movement Right_2022\"},{\"changed_at\":\"2023-08-18 03:27:03 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"encrypted_examples\",\"display_name\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":10559,\"changed_by_email\":\"aryanna@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>

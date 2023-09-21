@@ -38,8 +38,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>ダンスパーティー</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">お友達やご家族と共有するためのダンスパーティーコード Beyoncé、Harry Styles、Lizzo、Lil Nas X、Selena Gomez、Disneyの「エンカント」の音楽などが登場！</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>ダンスパーティー</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">ダンスパーティーをコーディングして友達や家族と共有しましょう。 Beyoncé、Harry Styles、Lizzo、Lil Nas X、Selena Gomez、Disneyの「エンカント」の音楽などが登場！</div>
         <a class="linktag" id="danceparty" href="/dance" target="_blank"><button>アクティビティを試します</button></a>
     </span>
   </div>
@@ -53,8 +53,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>マインクラフト一時間コード</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">マインクラフトが最新のアクティビティを携えて1時間コードのために帰ってきました！ Journey through コード付きマインクラフトを通した課程</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>マインクラフトアワーオブコード</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">マインクラフトがまったく新しいアクティビティでアワーオブコードに戻ってきました！ Journey through コード付きマインクラフトを通した課程</div>
         <br>
         <a class="linktag" id="minecraft" href="/minecraft" target="_blank"><button>アクティビティを試す</button></a>
     </span>
@@ -69,8 +69,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>海洋で使用される AI</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">AIにゴミを検知するようにトレーニングして海をきれいにするお手伝いをしましょう。 トレーニングデータおよびバイアス、および AI がどのように世界の問題に対処するかを学びましょう。 <a class="linktag" id="oceans-lesson" href="https://curriculum.code.org/hoc/plugged/9/" target="_blank">レッスンプラン</a>をご覧ください。</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>AI for Oceans</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">ゴミを検出するように訓練することで、人工知能が海をきれいにするのを手伝ってください！ トレーニングデータおよびバイアス、および AI がどのように世界の問題に対処するかを学びましょう。 <a class="linktag" id="oceans-lesson" href="https://curriculum.code.org/hoc/plugged/9/" target="_blank">レッスンプラン</a>をご覧ください。</div>
         <a class="linktag" id="aiforoceans" href="https://studio.code.org/s/oceans/lessons/1/levels/1" target="_blank"><button>Try activity</button></a>
     </span>
   </div>
@@ -96,9 +96,9 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>コンピューターがどのように機能するか</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">ビルゲイツによる紹介、このシリーズの6本の短編動画は何がコンピューターをコンピューターにし、コンピューターサーキットがどのように機能するかを説明します。</div>
-        <a class="linktag" id="howcomputers" href="https://www.youtube.com/watch?v=OAx_6-wdslM&list=PLzdnOPI1iJNcsRwJhvksEo1tJqjIqWbN-" target="_blank"><button>動画シリーズを見る</button></a>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>コンピューターのしくみ</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">ビル・ゲイツによる紹介のもと、この6つの短いビデオシリーズでは、コンピューターがコンピューターになる理由とコンピューター回路の仕組みを説明しています。</div>
+        <a class="linktag" id="howcomputers" href="https://www.youtube.com/watch?v=OAx_6-wdslM&list=PLzdnOPI1iJNcsRwJhvksEo1tJqjIqWbN-" target="_blank"><button>ビデオシリーズを見る</button></a>
     </span>
   </div>
 </div>
@@ -111,9 +111,9 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>インターネットがどのように機能するか</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">このシリーズの8本の短編動画で、インターネットがどのように発明され、HTMLとは何であり、およびグーグルのようなサーチエンジンはどのように機能するかを説明します。</div>
-        <a class="linktag" id="howcomputers" href="https://www.youtube.com/watch?v=OAx_6-wdslM&list=PLzdnOPI1iJNcsRwJhvksEo1tJqjIqWbN-" target="_blank"><button>動画シリーズを見る</button></a>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>How the Internet Works</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">In this series of eight short videos, you’ll learn how the internet was invented, what HTML is, and how search engines like Google work.</div>
+        <a class="linktag" id="howinternet" href="https://www.youtube.com/watch?v=Dxcc6ycZ73M&list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7-" target="_blank"><button>Watch the video series</button></a>
     </span>
   </div>
 </div>
@@ -126,8 +126,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>AI はどのように機能するか</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">AI がどのように機能し、それがなぜこのシリーズの短編動画で重要なのかを学びます。 Microsoft CEO の Satya Nadella および多様な専門家が出演します。 </div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>AI の仕組み</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">このショートビデオシリーズで、AI の仕組みと重要性について学びましょう。 Microsoft CEO の Satya Nadella および多様な専門家が出演します。 </div>
         <a class="linktag" id="ai-videos" href="/ai#ai-videos" target="_blank"><button>本ビデオシリーズを見る</button></a>
     </span>
   </div>
@@ -176,8 +176,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>ゲームラボ入門</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">ゲームラボ内のプログラムアニメーション、インターアクティブアート、およびゲーム。 単純な形状から始めて、 更に洗練されたスプライトベースのアニメーションおよびゲームを構築しましょう。</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>Game Lab 入門</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Game Lab のプログラムアニメーション、インタラクティブアート、ゲーム 単純な形状から始めて、 更に洗練されたスプライトベースのアニメーションおよびゲームを構築しましょう。</div>
         <a class="linktag" id="gamelab-intro" href="https://studio.code.org/s/csd3-virtual" target="_blank"><button>モジュールを試す</button></a>
     </span>
   </div>
@@ -191,9 +191,9 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>アプリラボ内のタートルプログラミング</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">簡単な JavaScript コマンドを使用し、バーチャル「タートル」を使用して形状と画像を描きます。あなた独自のデジタルシーンをデザインしてプログラムしましょう!</div>
-        <a class="linktag" id="turtle-applab" href="https://studio.code.org/s/csp3-virtual" target="_blank"><button>モジュールを試す</button></a>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>App Lab でのタートルプログラミング</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">簡単な JavaScript コマンドを使用して、仮想「タートル」を使用して図形や画像を描画します。自分だけのデジタルシーンをデザインしてプログラミングしよう！</div>
+        <a class="linktag" id="turtle-applab" href="https://studio.code.org/s/csp3-virtual" target="_blank"><button>モジュールをお試しください</button></a>
     </span>
   </div>
 </div>
@@ -206,8 +206,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>アプリラボ内のイベント主導プログラミング</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">クリックおよびキー処理に対応するアプリをデザインする方法を学びます。 ウェブ上で生きる一連の単純なアプリケーション (アプリ) を作成します!</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>アプリラボでのイベント駆動型プログラミング</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">クリックやキーの押下に応答するアプリの設計を学びましょう。 ウェブ上で生きる一連の単純なアプリケーション (アプリ) を作成します!</div>
         <a class="linktag" id="events-applab" href="https://studio.code.org/s/csp5-virtual" target="_blank"><button>モジュールを試す</button></a>
     </span>
   </div>
@@ -312,8 +312,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; margin-top:10px"><strong>CodeBytes</strong></h3>
-        <div class="smalltext" style="color: dimgray;">CodeBytes はコンピューターサイエンスを実世界のトピックとブレンドした、簡単に消化できる、20 分のインターアクティブレッスンです。  AI をトレーニングして手話を読み取る、便利なアプリをデザインする、explore the world of Minecraft, and more!</div>
+        <h3 class="tutorial-info-h" style="margin-top:10px"><strong>CodeBytes</strong></h3>
+        <div class="smalltext" style="color: dimgray;">CodeBytes は、コンピュータサイエンスと現実世界のトピックを融合させた、わかりやすい20分のインタラクティブなレッスンです。 AI をトレーニングして手話を読み取る、便利なアプリをデザインする、explore the world of Minecraft, and more!</div>
         <br>
         <br>
         <a class="linktag" id="codebytes" href="https://code.org/codebytes" target="_blank"><button>エピソードを見る</button></a>
@@ -329,8 +329,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; margin-top:10px"><strong>Code Break</strong></h3>
-        <div class="smalltext" style="color: dimgray; ">暗号解読を履修してコンピューターサイエンスを楽しいものに保ちましょう! Ashton Kutcherと暗号を作成、Yara Shahidiと変数について学び、インターネットの実際の発明者、Vint Cerfとインターネットがどのように機能するかを探索します!</div>
+        <h3 class="tutorial-info-h" style="margin-top:10px"><strong>コードブレーク</strong></h3>
+        <div class="smalltext" style="">コードブレイクをしてコンピュータサイエンスを楽しくしましょう！ Ashton Kutcherと暗号を作成、Yara Shahidiと変数について学び、インターネットの実際の発明者、Vint Cerfとインターネットがどのように機能するかを探索します!</div>
         <br>
         <a class="linktag" id="codebreak" href="https://code.org/break" target="_blank"><button>接続</button></a>
     </span>

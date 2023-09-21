@@ -2633,6 +2633,9 @@ bg:
             lessonGroup-6:
               display_name: Данни
         nevada-standards-aligned-first-grade-2023:
+          lessons:
+            lesson-1:
+              name: Данни
           lesson_groups:
             lessonGroup-2:
               display_name: Цифрови граждани
@@ -2642,6 +2645,8 @@ bg:
               display_name: Събития
             lessonGroup-7:
               display_name: Проект за Края на Курса
+            lessonGroup-8:
+              display_name: Данни
         nevada-standards-aligned-second-grade-2023:
           lesson_groups:
             lessonGroup-2:

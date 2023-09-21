@@ -1,0 +1,339 @@
+{
+  "columnDetailsMaximumValue": "حداکثر",
+  "columnDetailsMinimumValue": "حداقل",
+  "columnInspectorDescription": "توضیحات",
+  "correctAnswer": "صحیح است",
+  "dataCardLastUpdated": "آخرین بروزرسانی",
+  "datasets": {
+    "abalone": {
+      "fields": {
+        "Length": {
+          "id": "طول"
+        }
+      }
+    },
+    "bike_sharing": {
+      "fields": {
+        "Month": {
+          "id": "ماه"
+        },
+        "index": {
+          "id": "شاخص"
+        }
+      }
+    },
+    "billionaires": {
+      "fields": {
+        "Age": {
+          "id": "سن"
+        },
+        "Gender": {
+          "id": "جنسیت"
+        }
+      }
+    },
+    "boba_toy": {
+      "fields": {
+        "banana": {
+          "id": "موز"
+        }
+      }
+    },
+    "census_part": {
+      "fields": {
+        "age": {
+          "id": "سن"
+        }
+      }
+    },
+    "club_random_toy": {
+      "fields": {
+        "color": {
+          "id": "رنگ"
+        },
+        "food": {
+          "id": "ماده خوراکی"
+        },
+        "music": {
+          "id": "موسیقی"
+        }
+      }
+    },
+    "heart": {
+      "fields": {
+        "Age": {
+          "id": "سن"
+        }
+      }
+    },
+    "insurance_cost": {
+      "fields": {
+        "age": {
+          "id": "سن"
+        }
+      }
+    },
+    "loneliness_interests": {
+      "fields": {
+        "Internet": {
+          "id": "اینترنت"
+        },
+        "Writing": {
+          "id": "نوشتن"
+        }
+      }
+    },
+    "loneliness_music": {
+      "fields": {
+        "Country": {
+          "id": "کشور"
+        },
+        "Music": {
+          "id": "موسیقی"
+        }
+      }
+    },
+    "medical_priority": {
+      "fields": {
+        "age": {
+          "id": "سن"
+        }
+      }
+    },
+    "movies": {
+      "fields": {
+        "Country": {
+          "id": "کشور"
+        },
+        "Name": {
+          "id": "نام"
+        },
+        "Score": {
+          "id": "امتیاز"
+        },
+        "Star": {
+          "id": "استار - ستاره (رقص)"
+        }
+      }
+    },
+    "naan_toy": {
+      "fields": {
+        "cheese": {
+          "id": "پنیر"
+        },
+        "chicken": {
+          "id": "مرغ"
+        },
+        "lamb": {
+          "id": "بره"
+        },
+        "onion": {
+          "id": "پیاز"
+        }
+      }
+    },
+    "nutrition": {
+      "fields": {
+        "Category": {
+          "id": "دسته"
+        },
+        "Description": {
+          "id": "توضیحات"
+        }
+      }
+    },
+    "poke_toy": {
+      "fields": {
+        "avocado": {
+          "id": "آواکادو"
+        },
+        "ginger": {
+          "id": "زنجبیل"
+        },
+        "onion": {
+          "id": "پیاز"
+        }
+      }
+    },
+    "poutine_toy": {
+      "fields": {
+        "bacon": {
+          "id": "بیکن"
+        },
+        "cheese": {
+          "id": "پنیر"
+        },
+        "lobster": {
+          "id": "لابستر"
+        },
+        "meat": {
+          "id": "گوشت"
+        },
+        "mushrooms": {
+          "id": "قارچ ها"
+        }
+      }
+    },
+    "raspado_toy": {
+      "fields": {
+        "lime": {
+          "id": "لیموترش"
+        },
+        "strawberry": {
+          "id": "توت فرنگی"
+        }
+      }
+    },
+    "safari_toy": {
+      "fields": {
+        "alligator": {
+          "id": "تمساح\n"
+        },
+        "elephant": {
+          "id": "فیل"
+        },
+        "people": {
+          "id": "افراد"
+        },
+        "rhino": {
+          "id": "کرگدن"
+        },
+        "trees": {
+          "id": "درخت"
+        }
+      },
+      "name": "سافاری"
+    },
+    "salad_toy": {
+      "fields": {
+        "avocado": {
+          "id": "آواکادو"
+        },
+        "beans": {
+          "id": "لوبیا"
+        },
+        "cheese": {
+          "id": "پنیر"
+        },
+        "chicken": {
+          "id": "مرغ"
+        },
+        "fruit": {
+          "id": "میوه"
+        },
+        "tomato": {
+          "id": "گوجه"
+        }
+      }
+    },
+    "salsa_toy": {
+      "fields": {
+        "avocado": {
+          "id": "آواکادو"
+        },
+        "beans": {
+          "id": "لوبیا"
+        },
+        "corn": {
+          "id": "ذرت"
+        },
+        "lime": {
+          "id": "لیموترش"
+        },
+        "onion": {
+          "id": "پیاز"
+        }
+      }
+    },
+    "shapes_v1_toy": {
+      "fields": {
+        "size": {
+          "id": "اندازه"
+        }
+      }
+    },
+    "shapes_v2_toy": {
+      "fields": {
+        "size": {
+          "id": "اندازه"
+        }
+      }
+    },
+    "shoe_survey_toy": {
+      "fields": {
+        "day": {
+          "id": "روز"
+        },
+        "shoe": {
+          "id": "کفش"
+        },
+        "weather": {
+          "id": "آب و هوا"
+        }
+      }
+    },
+    "songs": {
+      "fields": {
+        "Artist": {
+          "id": "هنرمند"
+        }
+      }
+    },
+    "student_alcohol_consumption": {
+      "fields": {
+        "age": {
+          "id": "سن"
+        },
+        "health": {
+          "id": "سلامتی"
+        },
+        "school": {
+          "id": "مدرسه"
+        }
+      }
+    },
+    "student_survey": {
+      "fields": {
+        "Achievements": {
+          "id": "دستاوردها"
+        },
+        "Age": {
+          "description": "سن",
+          "id": "سن"
+        },
+        "Country": {
+          "id": "کشور"
+        },
+        "Gender": {
+          "description": "جنسیت",
+          "id": "جنسیت"
+        },
+        "Internet": {
+          "id": "اینترنت"
+        },
+        "Music": {
+          "id": "موسیقی"
+        },
+        "Writing": {
+          "id": "نوشتن"
+        }
+      }
+    },
+    "zoo": {
+      "fields": {
+        "Aquatic": {
+          "id": "آبزی"
+        }
+      }
+    }
+  },
+  "modelCardPossibleValuesMaximum": "حداکثر",
+  "modelCardPossibleValuesMinimum": "حداقل",
+  "navigateBack": "بازگشت",
+  "navigateDone": "تمام کن",
+  "navigateForward": "ادامه",
+  "predictButton": "پیشبینی کردن",
+  "saveProgress": "ذخيره",
+  "tryAgain": "دوباره تلاش کنید",
+  "uniqueOptionsWarningNotice": "توجه"
+}

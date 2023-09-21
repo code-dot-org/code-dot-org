@@ -462,6 +462,20 @@
             },
             "game_lab": {
               "expressions": {
+                "mouseIsOver": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "Sprite"
+                    }
+                  }
+                },
+                "mousePressedOver": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "Sprite"
+                    }
+                  }
+                },
                 "showMobileControls": {
                   "content": "Ndryshon kontrollet celular të dukshme nën hapësirën e luajtjes.",
                   "short_description": "Ndryshon kontrollet celular të dukshme nën hapësirën e luajtjes."
@@ -470,6 +484,27 @@
             },
             "groups": {
               "expressions": {
+                "add": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "Sprite"
+                    }
+                  }
+                },
+                "contains": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "Sprite"
+                    }
+                  }
+                },
+                "remove": {
+                  "palette_params": {
+                    "sprite": {
+                      "type": "Sprite"
+                    }
+                  }
+                },
                 "setColorEach": {
                   "palette_params": {
                     "color": {
@@ -519,7 +554,8 @@
                 "sprite.width": {
                   "return_value": "Gjerësia e sprite."
                 }
-              }
+              },
+              "name": "Sprites"
             },
             "variables": {
               "expressions": {

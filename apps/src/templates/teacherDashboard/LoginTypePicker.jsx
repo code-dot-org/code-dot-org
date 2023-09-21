@@ -17,6 +17,7 @@ import {OAuthSectionTypes} from '@cdo/apps/lib/ui/accounts/constants';
 import styleConstants from '../../styleConstants';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import color from '@cdo/apps/util/color';
+import experiments from '@cdo/apps/util/experiments';
 
 const LOGIN_TYPE_SELECTED_EVENT = 'Login Type Selected';
 const CANCELLED_EVENT = 'Section Setup Cancelled';
@@ -132,7 +133,9 @@ class LoginTypePicker extends Component {
       <div style={style.container}>
         <Heading3 isRebranded>{title}</Heading3>
         <p>{i18n.addStudentsToSectionInstructionsUpdated()}</p>
-        {window.CPA_EXPERIENCE && (
+        {experiments.isEnabledAllowingQueryString(
+          experiments.CPA_EXPERIENCE
+        ) && (
           <p>
             <span
               className="fa fa-exclamation-triangle"

@@ -38,8 +38,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>Táncos buli</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Kódolj egy Táncos buli-t, hogy megoszd barátaiddal és a családoddal. Fellépnek Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez, zene a Disney "Encanto" című filmjéből, és még sok minden más!</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>Dance Party</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Code a Dance Party to share with friends and family. Fellépnek Beyoncé, Harry Styles, Lizzo, Lil Nas X, Selena Gomez, zene a Disney "Encanto" című filmjéből, és még sok minden más!</div>
         <a class="linktag" id="danceparty" href="/dance" target="_blank"><button>Tevékenység kipróbálása</button></a>
     </span>
   </div>
@@ -53,8 +53,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Minecraft Kódolás órája</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">A Minecraft visszatér a Kódolás órájára egy vadonatúj tevékenységgel! Utazás a Minecrafton keresztül kóddal.</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Minecraft Kódolás Órája</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">A Minecraft vadonatúj tevékenységgel tér vissza a Kódolás Órájára! Utazás a Minecrafton keresztül kóddal.</div>
         <br>
         <a class="linktag" id="minecraft" href="/minecraft" target="_blank"><button>Tevékenység kipróbálása</button></a>
     </span>
@@ -69,8 +69,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>AI for Oceans</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Segíts a mesterséges intelligenciának az óceánok megtisztításában azzal, hogy betanítod a szemét felismerésére! Ismerje meg a tanítási adatokat és az elfogultságot, valamint azt, hogy a mesterséges intelligencia hogyan képes kezelni a világ problémáit. Tekintse meg: <a class="linktag" id="oceans-lesson" href="https://curriculum.code.org/hoc/plugged/9/" target="_blank">lesson plan</a>.</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>AI az óceánok számára</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Segítsen az AI-nek megtisztítani az óceánokat azáltal, hogy kiképzi a szemét észlelésére! Ismerje meg a tanítási adatokat és az elfogultságot, valamint azt, hogy a mesterséges intelligencia hogyan képes kezelni a világ problémáit. Tekintse meg: <a class="linktag" id="oceans-lesson" href="https://curriculum.code.org/hoc/plugged/9/" target="_blank">lesson plan</a>.</div>
         <a class="linktag" id="aiforoceans" href="https://studio.code.org/s/oceans/lessons/1/levels/1" target="_blank"><button>Tevékenység kipróbálása</button></a>
     </span>
   </div>
@@ -96,9 +96,9 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>Hogyan működnek a számítógépek</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Bill Gates bevezetőjével ez a hat rövid videóból álló sorozat elmagyarázza, mitől lesz a számítógép számítógép, és hogyan működnek a számítógépes áramkörök.</div>
-        <a class="linktag" id="howcomputers" href="https://www.youtube.com/watch?v=OAx_6-wdslM&list=PLzdnOPI1iJNcsRwJhvksEo1tJqjIqWbN-" target="_blank"><button>A videósorozat megtekintése</button></a>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>Hogyan működnek a számítógépek</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Bill Gates bevezetésével, ez a hat rövid videóból álló sorozat elmagyarázza, mi teszi a számítógépet számítógéppé, és hogyan működnek a számítógépes áramkörök.</div>
+        <a class="linktag" id="howcomputers" href="https://www.youtube.com/watch?v=OAx_6-wdslM&list=PLzdnOPI1iJNcsRwJhvksEo1tJqjIqWbN-" target="_blank"><button>Nézze meg a videósorozatot</button></a>
     </span>
   </div>
 </div>
@@ -111,9 +111,9 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Hogy működik az Internet</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Ebben a nyolc rövid videóból álló sorozatban megtudhatja, hogyan találták fel az internetet, mi az a HTML, és hogyan működnek az olyan keresőmotorok, mint a Google.</div>
-        <a class="linktag" id="howinternet" href="https://www.youtube.com/watch?v=Dxcc6ycZ73M&list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7-" target="_blank"><button>A videósorozat megtekintése</button></a>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Hogyan működik az internet</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Ebben a nyolc rövid videóból álló sorozatban megtudhatja, hogyan találták ki az internetet, mi a HTML, és hogyan működnek a keresőmotorok, mint a Google.</div>
+        <a class="linktag" id="howinternet" href="https://www.youtube.com/watch?v=Dxcc6ycZ73M&list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7-" target="_blank"><button>Nézze meg a videósorozatot</button></a>
     </span>
   </div>
 </div>
@@ -126,8 +126,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Hogy működik a mesterséges intelligencia</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Ebből a rövid videósorozatból megtudhatja, hogyan működik a mesterséges intelligencia, és miért fontos. Satya Nadella, a Microsoft vezérigazgatója és számos szakértő részvételével.</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Hogyan működik az AI</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Tudjon meg többet arról, hogyan működik az AI és miért számít ez a rövid videósorozat. Satya Nadella, a Microsoft vezérigazgatója és számos szakértő részvételével.</div>
         <a class="linktag" id="ai-videos" href="/ai#ai-videos" target="_blank"><button>A videósorozat megtekintése</button></a>
     </span>
   </div>
@@ -176,8 +176,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>Bevezetés a Game Lab modulba</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Programozz animációkat, interaktív művészeti alkotásokat és játékokat a Game Lab programban. Kezdd egyszerű alakzatokkal, és fejlessz kifinomultabb sprite-alapú animációkat és játékokat.</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>Introduction to Game Lab</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Program animations, interactive art, and games in Game Lab. Kezdd egyszerű alakzatokkal, és fejlessz kifinomultabb sprite-alapú animációkat és játékokat.</div>
         <a class="linktag" id="gamelab-intro" href="https://studio.code.org/s/csd3-virtual" target="_blank"><button>Modul kipróbálása</button></a>
     </span>
   </div>
@@ -191,9 +191,9 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Turtle programozás App Lab-ban</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Egyszerű JavaScript-parancsok segítségével alakzatokat és képeket rajzolhatsz egy virtuális „teknős” segítségével. Tervezd meg és programozd saját digitális jelenetedet!</div>
-        <a class="linktag" id="turtle-applab" href="https://studio.code.org/s/csp3-virtual" target="_blank"><button>Próbáld ki a modult</button></a>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Teknős programozás az App Lab alkalmazásban</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Egyszerű JavaScript parancsokkal rajzolhat alakzatokat és képeket virtuális „teknős” segítségével. Tervezze meg és programozza saját digitális jelenetét!</div>
+        <a class="linktag" id="turtle-applab" href="https://studio.code.org/s/csp3-virtual" target="_blank"><button>Próbálja ki a modult</button></a>
     </span>
   </div>
 </div>
@@ -206,8 +206,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Eseményvezérelt programozás App Lab-ban</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Tanulj meg olyan alkalmazásokat tervezni, amelyek reagálnak a kattintásokra és billentyűleütésekre. Hozz létre egy sor egyszerű alkalmazást (app), amelyek a weben élnek!</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Eseményvezérelt programozás az App Lab-ban</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Tanuljon meg olyan alkalmazásokat tervezni, amelyek reagálnak a kattintásokra és a gombnyomásokra. Hozz létre egy sor egyszerű alkalmazást (app), amelyek a weben élnek!</div>
         <a class="linktag" id="events-applab" href="https://studio.code.org/s/csp5-virtual" target="_blank"><button>Próbáld ki a modult</button></a>
     </span>
   </div>
@@ -312,8 +312,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; margin-top:10px"><strong>CodeBytes</strong></h3>
-        <div class="smalltext" style="color: dimgray;">A CodeBytes könnyen emészthető, 20 perces interaktív leckék, amelyekben az informatika és a valós világ témái keverednek. Taníts meg egy mesterséges intelligenciát jelnyelvi olvasásra, tervezz egy alkalmazást a jó cél érdekében, fedezd fel a Minecraft világát, és még sok minden mást!</div>
+        <h3 class="tutorial-info-h" style="margin-top:10px"><strong>CodeBytes</strong></h3>
+        <div class="smalltext" style="color: dimgray;">A CodeBytes könnyen emészthető, 20 perces interaktív leckék, amelyek ötvözik a számítástechnikát a valós témákkal. Taníts meg egy mesterséges intelligenciát jelnyelvi olvasásra, tervezz egy alkalmazást a jó cél érdekében, fedezd fel a Minecraft világát, és még sok minden mást!</div>
         <br>
         <br>
         <a class="linktag" id="codebytes" href="https://code.org/codebytes" target="_blank"><button>Epizódok megtekintése</button></a>
@@ -329,8 +329,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; margin-top:10px"><strong>Code Break</strong></h3>
-        <div class="smalltext" style="color: dimgray; ">Legyen az informatika szórakoztató Code Break segítségével! Ashton Kutcherrel titkosírást készíthetsz, Yara Shahidival megismerkedhetsz a változókkal, sőt, az internet valódi feltalálójával, Vint Cerffel még azt is felfedezheted, hogyan működik az internet!</div>
+        <h3 class="tutorial-info-h" style="margin-top:10px"><strong>Code Break</strong></h3>
+        <div class="smalltext" style="">Tartsa szórakoztatóan a számítástechnikát egy kódszünet elvégzésével! Ashton Kutcherrel titkosírást készíthetsz, Yara Shahidival megismerkedhetsz a változókkal, sőt, az internet valódi feltalálójával, Vint Cerffel még azt is felfedezheted, hogyan működik az internet!</div>
         <br>
         <a class="linktag" id="codebreak" href="https://code.org/break" target="_blank"><button>Csatlakozz</button></a>
     </span>

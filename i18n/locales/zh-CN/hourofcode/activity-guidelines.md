@@ -8,271 +8,276 @@ title: 教程指南
   }
 </style>
 
-# Guidelines for creating and submitting tutorials and lessons for Hour of Code™ and Computer Science Education Week
+# 为 Hour of Code™ 和 Computer Science 教育周创建和提交教程和课程的指南
 
-Code.org hosts a variety of Hour of Code™ activities, lessons, and videos on the Code.org and Hour of Code websites. The current list is at [hourofcode.com/learn]({{ urls/learn }}).
+Code.org 在 Code.org 和 Hour of Code 网站上举办各种 Hour of Code™ 活动、课程和视频。 The current list is at [hourofcode.com/learn]({{ urls/learn }}).
 
-Want to submit your own self-guided tutorial, teacher-led lesson, or robotics/maker activity that explains a computer science principle? Join this global movement and help participants around the world get started with an hour of code or go further with multi-lesson, day-long, or week-long activities.
+想提交自己的自学教程、教师主导的课程或解释计算机科学原理的机器人/创客活动吗？ 加入这个全球运动，帮助世界各地的参与者从一小时的编程开始学习，或者通过多节课、为期一天或为期一周的活动走得更远。
 
-**After reading the guidelines, you can submit your activity through our [Hour of Code™ Activity Submission page](https://forms.gle/eeAt6kVuz3RKg5n18). You can submit an activity at any time, but the deadline for inclusion in any given calendar year is October 1. (For example, any activities received after October 1, 2023, will not be listed for 2023's Hour of Code.)** If you have any questions about your activity submission, please reach out to us at support@code.org.
+**阅读指南后，你可以通过我们的 [Hour of Code™ 活动提交页面](https://docs.google.com/forms/d/e/1FAIpQLSdsdTKU6pD5qXlPUQWlgrjESRlm2L02wkTcZQuL8hz9OEvzNQ/viewform)提交活动。 您可以随时提交活动，但纳入任何给定日历年的截止日期为 10 月 1 日。 （例如，2023 年 10 月 1 日之后收到的任何活动都不会列在 2023 年的《编程一小时》中。）** 如果您对提交的活动有任何疑问，请通过 support@code.org 联系我们。
 
-A few tips:
+一些小贴士：
 
-1. **Submit more than one activity**: If you’ve built activities for different levels, different ages, or other categories, we list your activities separately so each teacher can find the right thing for their classroom. Submit each tutorial or activity individually. Given the number of submissions we have seen in recent years, we will have time to review **up to 5 activities** per partner. After that, we will make a best effort to review as many as possible before Hour of Code begins.
+1. **提交多个活动**：如果您为不同级别、不同年龄或其他类别创建了活动，我们会单独列出您的活动，以便每位老师都能找到适合自己课堂的内容。 单独提交每个教程或活动。 考虑到我们近年来看到的参赛作品数量，我们将有时间审查 **到 5 项活动，每个合作伙伴** 个。 之后，我们将尽最大努力在 Hour of Code 开始之前尽可能多地进行审查。
 
-2. **Beyond beginner lessons**: In addition to lessons for teachers and students who are learning computer science for the first time, we list learning experiences for computer science-savvy classrooms that want to go a little bit further! Help us by submitting lessons for classes that are already comfortable with the basics.
+2. **超越初学者课程**：除了为第一次学习计算机科学的教师和学生开设的课程外，我们还列出了想要进一步学习计算机科学的精通计算机科学的课堂的学习经历！ 为已经掌握基础知识的课程提交课程，帮助我们。
 
-3. **Subject areas**: Have a great lesson idea that integrates Computer Science into Math? History? Language Arts? Science? Art? Or another subject? We’ve had numerous requests from teachers who want to connect the Hour of Code to their subject area. Teachers can filter for their classroom type (grade band or subject area) so we need your help filling in gaps to offer classroom activities or lesson plans that relate CS to every major subject area for different grade bands. We also continue to have a “Computer Science” category for teachers who are looking for generic CS activities.
+3. **学科领域**：有将计算机科学融入数学的绝佳课程创意吗？ 历史？ 语言艺术？ 科学？ 艺术？ 还是另一个话题？ 我们收到了许多老师的请求，他们希望将 “编程一小时” 与他们的学科领域联系起来。 教师可以根据自己的课堂类型（年级段或学科领域）进行筛选，因此我们需要你的帮助来填补空白，以提供课堂活动或教学计划，将计算机科学与不同年级的每个主要学科领域联系起来。 我们还继续为正在寻找通用 CS 活动的教师提供 “计算机科学” 类别。
 
 <a id="top"></a>
 
-## Index:
+## 索引：
 
-- [What to submit](#whatsubmit)
-- [General guidelines for creating an Hour of Code™ activity](#guidelines)
-- [How to Submit](#submit)
-- [How activities will be evaluated](#inclusion)
-- [Suggestions for designing your activity](#design)
-- [Trademark Guidelines](#tm)
-- [Tracking Pixel](#pixel)
-- [Promoting your activity, CSEdWeek, and Hour of Code](#promote)
+- [要提交什么](#whatsubmit)
+- [创建编程一小时活动的通用指导](#guidelines)
+- [如何提交](#submit)
+- [将如何评估活动](#inclusion)
+- [活动设计建议](#design)
+- [商标指南](#tm)
+- [追踪像素](#pixel)
+- [宣传你的活动、csedWeek 和 Hour of Code](#promote)
 
 <a id="whatsubmit"></a>
 
-## What to submit
+## 要提交什么
 
-**Self-guided puzzle or game ([example](https://code.org/dance))**
+**自学拼图或游戏（[示例](https://code.org/dance)）**
 
-These activities are designed for students to self-direct through a tutorial. They don’t require much instruction from a teacher or teacher prep work.
+这些活动旨在让学生通过教程进行自我指导。 他们不需要老师的太多指导或老师的准备工作。
 
-**Teacher Facilitated lesson ([example](https://studio.code.org/s/course1/lessons/2/levels/1), [template](https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8axKIzv8YI56JGA))**
+**教师辅助课程（[示例](https://studio.code.org/s/course1/lessons/2/levels/1)， [模板](https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8axKIzv8YI56JGA)）**
 
-Now that hundreds of thousands of educators have tried the Hour of Code, many classrooms are ready for more creative activities that teach the basics of computer science. To help more advanced teachers find inspiration, we collect and curate "teacher-led" lessons and activity plans for Hour of Code veterans.
+现在，成千上万的教育工作者已经尝试了 “编程一小时”，许多教室已经为教授计算机科学基础知识的更具创造性的活动做好了准备。 为了帮助更高级的教师找到灵感，我们为 Hour of Code 资深人士收集和策划 “教师主导” 的课程和活动计划。
 
-One type of activity that we will feature for experienced teachers are “open sandbox” creation projects. Activities that encourage students to build their own app, game, website or other project. If facilitated properly, more open-ended activities can better showcase the creative nature of computer science.
+我们将为经验丰富的教师提供的一种活动是 “开放沙盒” 创作项目。 鼓励学生开发自己的应用程序、游戏、网站或其他项目的活动。 如果正确的推进活动，更开放的活动会更好的展示计算机科学的创造性本质。
 
-Some educators may also prefer to host Hour of Code activities that follow a traditional lesson format rather than a guided-puzzle/game experience.
+一些教育工作者可能还更喜欢举办遵循传统课程形式而不是导游解谜/游戏体验的 Hour of Code 活动。
 
-You can start with this [template](https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8axKIzv8YI56JGA) for your lesson plan.
+你可以从这个 [模板](https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8axKIzv8YI56JGA) 开始作为你的教学计划。
 
-**Activities for teachers in other subjects/fields**
+**为教师举办其他学科/领域的活动**
 
-We also feature lesson plans designed for different subject areas. For example, a one-hour lesson plan for teaching code in a geometry class. Or a mad-lib exercise for English class. Or a creative quiz-creation activity for history class. These can help recruit teachers in other subject areas to guide an Hour of Code activity that is unique to their field, while demonstrating how CS can influence and enhance many different subject areas.
+我们还提供针对不同学科领域设计的教学计划。 例如，在几何课堂中讲授编程的一小时教案。 或者英语课堂上的疯狂填词练习。 或者历史课上的创造测验题目的活动。 这些可以帮助招聘其他学科领域的教师来指导他们所在领域独一无二的 Hour of Code 活动，同时演示 CS 如何影响和增强许多不同的学科领域。
 
-Examples:
+例如：
 
-- Mirror Images (an activity for an art teacher)
-- An arduino activity for a physics teacher
-- A history of technology activity for a history teacher
-- And see [this list](https://docs.google.com/document/d/19jQ2VhBUyIn30VFbfdHOVpmlymhNiB0AkEqRxHz3dr0/edit) for more ideas from educators (or add your own to the list to inspire others)
+- 对称图（为美术老师准备的活动）
+- 为物理老师准备的Arduino开发活动
+- 为历史老师准备的技术历史活动
+- 有关教育工作者的更多想法，请参阅 [此列表](https://docs.google.com/document/d/19jQ2VhBUyIn30VFbfdHOVpmlymhNiB0AkEqRxHz3dr0/edit) （或者将自己的想法添加到列表中以激励他人）
 
-**For students with special needs**
+**适合有特殊需要的学生**
 
-If you create an activity or tutorial that is designed for special needs students, please call that out in the description. In particular, there are very few options for the vision-impaired. If your activity is designed for this audience, please let us know.
+如果您创建的活动或教程专为有特殊需要的学生而设计，请在描述中注明。 特别是，视力受损者的选择很少。 如果您的活动是为这些受众设计的，请告诉我们。
 
-[**Back to the top**](#top)
+[**返回页首**](#top)
 
 <a id="guidelines"></a>
 
-## General guidelines for creating an Hour of Code activity
+## 创建一个编程一小时活动的一般准则
 
-The goal of an Hour of Code is to give beginners an accessible first taste of computer science or programming. The tone should be that:
+Hour of Code 的目标是让初学者对计算机科学或编程有初步的了解。 语气应该是：
 
-- Anybody can learn computer science - regardless of age, gender, race, or ability/disability.
-- Computer science is connected to a wide variety of fields and interests. Everybody should learn it!
-- Encourage students to create something unique that can be shared with parents/friends or online.
+- 任何人都可以学习计算机科学，无论年龄、性别、种族或能力/残疾。
+- 计算机科学与各种各样的领域和兴趣息息相关。 每个人都应该学会！
+- 鼓励学生创作一些独特的东西，可以与家长/朋友分享或在线分享。
 
-The activities should teach a computer science concept such as loops, conditionals, encryption, or how the Internet works. An activity can also teach about how computer science connects to real world occupations, events, or history. For example, teaching UX design to make apps that are meaningful for an audience or cause. We discourage activities that focus on the syntax of programming rather than the concepts. For example, we will list, but not highlight, activities that teach HTML. Similarly, we discourage block programming lessons that focus on setting/changing configuration options rather than learning how to model an algorithm or process.
+这些活动应教授计算机科学概念，例如循环、条件、加密或互联网的工作原理。 一项活动还可以讲授计算机科学如何与现实世界中的职业、事件或历史联系起来。 例如，教授用户体验设计以制作对受众或事业有意义的应用程序。 我们不鼓励以编程语法而不是概念为重点的活动。 例如，我们将列出但不重点介绍教学 HTML 的活动。 同样，我们不鼓励将重点放在设置/更改配置选项上，而不是学习如何对算法或流程进行建模的区块编程课程。
 
-*Technical requirements:* Because of the wide variety of school and classroom technology setups, the best activities are Web-based or smartphone-friendly, or otherwise unplugged-style activities that teach computer science concepts without the use of a computer (see <http://csunplugged.com/>). Activities that require an app-install, desktop app, or game-console experiences are okay but not ideal. We will not list activities that require sign up or payment. (Robotics activities can require robotics purchase.)
+*Technical requirements:* Because of the wide variety of school and classroom technology setups, the best activities are Web-based or smartphone-friendly, or otherwise unplugged-style activities that teach computer science concepts without the use of a computer (see <http://csunplugged.com/>). 需要安装应用程序、桌面应用程序或游戏机体验的活动还可以，但并不理想。 我们不会列出需要注册或付款的活动。 （机器人活动可能需要购买机器人。）
 
-*Student-led (Self-Guided) Format:* The original Hour of Code was built mostly on the success of self-guided tutorials or lessons, optionally facilitated by the teacher. There are plenty of existing options, but if you want to create a new one, these activities should be designed so they can be fun for a student working alone, or in a classroom whose teacher has minimal prep or CS background. They should provide directions for students as opposed to an open-ended hour-long challenge. Ideally, the instructions and tutorials are integrated directly into the programming platform, to avoid switching tabs or windows between the tutorial and the programming platform.
+*学生主导（Self-Guided）格式：* 最初的 Hour of Code 主要建立在自学教程或课程的成功基础上，可以选择由老师提供帮助。 现在已经有很多选择了，但如果你想创建一个新的活动，它应该被设计为能让学生们有兴趣的独立完成，或者在课堂上由没有备课或没有计算机背景的老师来指导。 它们应该为学生提供指导，而不是不确定的一小时长的挑战。 理想情况下，说明和教程都会直接集成到编程平台里，以免在教程和编程平台页面间切换。
 
-To get a sense of the wide variety of types of tutorials and lesson plans you can create, visit the [Hour of Code Activities page](https://hourofcode.com/us/learn).
+要了解你可以创建的各种类型的教程和教学计划，请访问 [Hour of Code Activitions 页面](https://hourofcode.com/us/learn)。
 
-[**Back to the top**](#top)
+[**返回页首**](#top)
 
 <a id="submit"></a>
 
-## How to submit
+## 如何提交
 
-Visit the [Hour of Code™ Activity Submission page](https://forms.gle/eeAt6kVuz3RKg5n18) and complete the questions to submit your activity.
+Visit the [Hour of Code™ Activity and AI Submission page](https://docs.google.com/forms/d/e/1FAIpQLSdsdTKU6pD5qXlPUQWlgrjESRlm2L02wkTcZQuL8hz9OEvzNQ/viewform) and complete the questions to submit your activity.
 
-What you’ll need:
+你需要什么：
 
-* Name and email of the primary contact representing the submitted activity
-* Activity Name (cannot include “Hour of Code” in the name)
-* URL link to the activity
-* An activity description (max character count: 400) 
-    * Please include in the description whether it’s mainly student-guided or teacher-facilitated. Additionally, some schools are interested in knowing if Hour of Code activities address Common Core or Next Generation Science Standards. If the activity addresses specific standards, consider including this information.
-* Recommended grade level(s) for intended users. You may refer to the \[Computer Science Teachers’ Association’s K-12 Standards\] (https://k12cs.org/framework-statements-by-grade-band/) for grade-appropriate computer science concepts. Example grade levels include: 
-    * Kindergarten - Grade 1 (ages 4-6)
-    * Grades 2-5 (ages 7-10)
-    * Grades 6-8 (ages 11-13)
-    * Grades 9+ (ages 14+)
-* A list of subject areas your activity covers (in addition to Computer Science). For example, if a math teacher can use your activity to teach about angles or parabolas, list as math. If you have a mad libs activity that teaches verbs/nouns/etc. choose language arts.
-* A list of programming languages your activity teaches. I.e. C/C++, Java, JavaScript, etc. or language independent (for lesson plans that can be taught in multiple languages)
-* A list of supported natural languages. Note: Language-detection is the responsibility of the activity provider; we will redirect all users to the single URL provided.
-* What level of experience should an educator have to use your activity? (e.g. Beginner or Comfortable.) And, what level of experience should the students have? If you’d like to prepare more advanced Hour of Code™ Activities, please include the prior knowledge needed in the description of your activity.
-* The length of your activity 
-    * 1 hour only
-    * 1 hour with follow-on course
-    * 2-6 hours (can be multiple lessons)
-* A list of accessibility accommodations, if your activity has them. These include screen reader compatibility, text-to-speech capabilities, use of high-contrast colors, or any other accommodations made for learners with disabilities.
+* 代表已提交活动的主要联系人的姓名和电子邮件
+* 活动名称（名称中不能包含 “编程一小时”）
+* 活动的 URL 链接
+* 此活动是否包括 AI：是还是否
+* 活动描述（最大字符数：400） 
+    * 请在描述中说明是主要由学生指导还是由教师辅导。 此外，一些学校有兴趣知道 Hour of Code 活动是针对共同核心标准还是下一代科学标准。 如果活动涉及特定标准，请考虑包括此信息。
+* 为目标用户推荐的成绩等级。 你可以参考 \[计算机科学教师协会的 K-12 标准\] (https://k12cs.org/framework-statements-by-grade-band/)，了解适合年级的计算机科学概念。 成绩等级示例包括： 
+    * 幼儿园-一年级（4-6 岁）
+    * 2-5 年级（7-10 岁）
+    * 6-8 年级（11-13 岁）
+    * 9 年级以上（14 岁以上）
+* 您的活动所教授的编程语言列表。 即 C/C++、Java、JavaScript 等 或与语言无关（适用于可以用多种语言教授的教学计划） 选择语言艺术。
+* 支持的自然语言列表。 注意：语言检测由活动提供者负责；我们会将所有用户重定向到提供的单个 URL。 或与语言无关（适用于可以用多种语言教授的教学计划）
+* 教育工作者必须具备什么水平的经验才能使用你的活动？ （例如，初学者或舒适。）而且，学生应该具备什么样的经验水平？
+* 教育工作者必须具备什么水平的经验才能使用你的活动？ （例如，初学者或舒适。）而且，学生应该具备什么样的经验水平？ 如果你想准备更高级的 Hour of Code™ 活动，请在活动描述中包括所需的先验知识。
+* 您的活动时长 
+    * 仅限 1 小时
+    * 1 小时（含后续课程）
+    * 2-6 小时（可以是多节课）
+* 无障碍设施清单（如果您的活动有无障碍设施）。 其中包括屏幕阅读器兼容性、文字转语音功能、高对比度颜色的使用或为残障学习者提供的任何其他便利。
 
-#### Additional things you’ll need when submitting Lesson Plans
+#### 提交教学计划时需要的其他内容
 
-* Link to your lesson plan. This can be a web page, dropbox link, google drive or similar service.
-* What software and/or hardware the teacher will need to do your lesson plan (Scratch? Robots? Nothing?)
+* 链接到您的教学计划。 这可以是网页、dropbox 链接、Google 云端硬盘或类似服务。
+* 老师需要什么软件和/或硬件来制定你的教学计划（Scratch？ 机器人？ 什么都没有？）
 
-#### Additional things you’ll need when submitting Online Activities
+#### 提交在线活动时需要的其他内容
 
-* Name and logo of your organization
-* Whether it is COPPA compliant or not
-* A URL link to teacher notes (optional)
-* A list of tested/compatible platforms: 
-    * Web based: Which platforms have you tested? 
-        * OS - Mac, Win, and other versions
-        * Browsers - IE11, Edge, Firefox, Chrome, Safari
-        * iOS mobile Safari (mobile-optimized)
-        * Android Chrome (mobile-optimized)
-    * Non web-based: specify platform for native code (Mac, Win, iOS, Android, xBox, other)
+* 贵组织的名称和徽标
+* 是否符合 COPPA 标准
+* 教师笔记的 URL 链接（可选）
+* 经过测试/兼容的平台列表： 
+    * 基于 Web：您测试过哪些平台？ 
+        * 操作系统-Mac、Win 和其他版本
+        * 浏览器——IE11、Edge、火狐、Chrome、Safari
+        * iOS 移动版 Safari（针对移动设备优化）
+        * 安卓浏览器（针对移动设备进行了优化）
+    * 非基于 Web：为原生代码（Mac、Win、iOS、Android、XBox 等）指定平台
     * 未插电
-* Screenshot or marketing image of the Hour of Code activity. Please send at least one image with 4:3 dimensions. It should be at least 520px by 390px. This image should have NO text on it (other than your logo), in order to make it more accessible for non-English speakers. If an appropriate image is not provided, we may take our own screenshot of your tutorial OR we may choose not to list it. All images must be submitted as a URL link to a .jpg, .jpeg, or .png.
-* In order to more accurately track participation, third party tutorial partners need to include 1-pixel tracking images on the first page of their Hour of Code tutorials. See the [Tracking Pixel](#pixel) section below for more details.
+* “编程一小时” 活动的屏幕截图或营销图片。 请发送至少一张尺寸为 4:3 的图片。 它应该至少为 520 像素 x 390 像素。 这张图片上不应有文字（徽标除外），以便不讲英语的人更容易理解。 如果没有提供合适的图片，我们可能会为您的教程拍摄自己的屏幕截图，也可以选择不列出。 所有图片必须作为.jpg、.jpeg 或.png 的 URL 链接提交。
+* 为了更准确地跟踪参与情况，第三方教程合作伙伴需要在其 Hour of Code 教程的第一页上包含 1 像素的跟踪图像。 有关更多详细信息，请参阅下面的 [Tracking Pixel](#pixel) 部分。
 * Upon finishing your activity, users should be directed to [code.org/api/hour/finish](https://code.org/api/hour/finish) where they will be able to: 
-    * Share on social media that they completed the Hour of Code
-    * Receive a certificate that they completed the Hour of Code
-    * See leaderboards about which countries/cities have the highest participation rates in Hour of Code activities
+    * 在社交媒体上分享他们完成了《编程一小时》
+    * 收到他们完成编程一小时的证书
+    * 查看排行榜，了解哪些国家/城市在 Hour of Code 活动中的参与率最高
     * For users who spend an hour on your activity and don’t complete it, please include a button on your activity that says “I’m finished with my Hour of Code” which links back to [code.org/api/hour/finish](https://code.org/api/hour/finish) as well.
-* (Optional) We may follow-up with an online survey/form link asking for a report of the following activity metrics: 
-    * For online activities (especially smartphone/tablet apps): 
-        * Number of users
-        * How many completed the task
-        * Average time on task
-        * Number of total lines of code written over all users
-        * How many continued on to further learning (measured as any user who finishes the task and goes onto additional tasks at your site)
-    * For offline activities 
-        * Number of downloads of paper version of activity (if applicable)
+* （可选）我们可能会通过在线调查/表单链接进行跟进，要求提供以下活动指标的报告： 
+    * 对于在线活动（尤其是智能手机/平板电脑应用程序）： 
+        * 用户数量
+        * 有多少人完成了任务
+        * 任务的平均时间
+        * 向所有用户写入的代码总行数
+        * 有多少人继续进一步学习（以完成任务并在您的站点执行其他任务的任何用户来衡量）
+    * 用于线下活动 
+        * 活动纸质版的下载次数（如果适用）
 
-#### Additional things you’ll need when submitting Robotics
+#### 提交 Robotics 时需要的其他内容
 
-* If you submit a robotics activity, we need to know the cost per student for robotics.
-* To evaluate robotics activities for inclusion on the website, we will need you to send sample kits to reviewers.
+* 如果您提交机器人活动，我们需要知道每位学生的机器人费用。
+* 要评估是否包含在网站上的机器人活动，我们需要您向审阅者发送样品套件。
 
-[**Back to the top**](#top)
+[**返回页首**](#top)
 
 <a id="inclusion"></a>
 
-## How activities will be evaluated
+## 将如何评估活动
 
-A diverse committee of computer science educators will rank submissions based on qualitative and quantitative criteria. All activities that fit the basic criteria will be listed. Teachers will be able to filter and sort to find the best activities for their classroom.
+一个由计算机科学教育工作者组成的多元化委员会将根据定性和定量标准对参赛作品进行排名。 将列出所有符合基本标准的活动。
 
-The rubric for evaluating activities and lesson plans will look for the following criteria on all activities and rank them accordingly:
+对于传统的编程活动，由计算机科学教育工作者组成的多元化委员会将根据定性和定量标准对提交的内容进行排名。 将列出所有符合基本标准的活动。 教师将能够进行筛选和排序，找到最适合自己课堂的活动。
 
-- High production quality
-- Promote learning by all demographic groups (esp. students underrepresented in CS, like young women, students from marginalized racial and ethnic groups, and students with disabilities)
-- Educational (teaches computer science concepts well)
-- Fun and engaging
-- Encourages students to create something unique they can share (For younger students: with parents and classmates. For olders students: on the Internet)
+如果审查委员会将该活动的制作质量（由于错误或说明很难使用）、促进代表性不足群体的学习（由于种族主义/性别歧视材料）、教育价值（不教授CS概念）或有趣/引人入胜（由于学生难以完成/令人沮丧）将该活动评为零，则该活动将不被列出。
 
-If the review committee rates the activity a zero in production quality (due to bad bugs or instructions that make it very hard to use), in promoting learning in underrepresented groups (due to racist/sexist material), in educational value (does not teach CS concepts), or fun/engaging (due to being difficult/discouraging for students to work through), the activity will not be listed.
+- 高生产质量
+- 促进所有人口群体的学习（特别是 在计算机科学领域代表性不足的学生，例如年轻女性、来自边缘化种族和族裔群体的学生以及残疾学生）
+- 教育性（很好地教授计算机科学概念）
+- 有趣又引人入胜
+- 鼓励学生创造一些他们可以分享的独特东西（对于年幼的学生：与家长和同学。 对于年龄较大的学生：在互联网上）
 
-In addition, in order to be listed, all activities must:
+此外，为了被列出，所有活动必须：
 
-- Be appropriate for a public school classroom (no guns, no explicit/mature content, no religious content, etc.)
-- Require no sign up
-- Require no payment (exception for robotics activities these can require robot/kit purchase)
+对于新教师和学生的自主活动，审查委员会将寻找是否：
 
-For self-directed activities for new teachers and students the review committee will be looking for whether:
+- 适合公立学校的课堂（没有枪支、没有明确/成熟的内容、没有宗教内容等）
+- 无需注册
+- 无需付款（机器人活动除外，这些活动可能需要购买机器人/套件）
 
-- Teachers can use the tutorial or activity with no background in computer science
-- Students can be successful with no background in computer science
-- Students can direct themselves through the tutorial without parental or teacher guidance
+对于新教师和学生的自主活动，审查委员会将寻找是否：
 
-Teachers and students will be able to search through and filter our list of activities based on filters such as grade, experience level, subject, hardware, etc. By default, we will show lesson plans and activities first that:
+- 教师可以在没有计算机科学背景的情况下使用本教程或活动
+- 没有计算机科学背景的学生也能取得成功
+- 学生可以在没有家长或老师指导的情况下指导自己完成教程
 
-- Receive the highest ratings from the review committee
-- Are one hour self-directed activities designed for beginners (students and teachers)
-- Appeal to a wide range of users (across platforms, languages, and ages)
-- Require no installation
-- Are new this year
+教师和学生将能够根据成绩、经验水平、科目、硬件等筛选条件搜索和筛选我们的活动清单。 默认情况下，我们将首先显示以下教学计划和活动：
 
-[**Back to the top**](#top)
+- 获得审查委员会的最高评级
+- 一小时的自导活动是为初学者（学生和老师）设计的吗
+- 吸引广泛的用户（跨平台、语言和年龄）
+- 无需安装
+- 今年是新的
+
+[**返回页首**](#top)
 
 <a id="design"></a>
 
-## Suggestions for designing one hour self guided tutorials
+## 设计一小时自学教程的建议
 
-You can include the [Hour of Code logo](https://hourofcode.com/us/promote/resources#logo) in your tutorial, but this is not required. If you use the Hour of Code logo, see the trademark guidelines below. <u>Under no circumstances can the Code.org logo and name be used.</u> Both are trademarked, and can’t be co-mingled with a 3rd party brand name without express written permission.
+活动不必包括人工智能，但我们希望提供更多与人工智能相关的活动。
 
-**Make sure that the average student can finish comfortably in an hour.** Consider adding an open-ended activity at the end for students who move more quickly through the lesson. Remember that most kids will be absolute beginners to computer science and coding.
+**包括教师笔记。** 大多数活动都应由学生指导，但如果某项活动是由教师主持或管理的，请在与活动一起提交的单独网址上以教师笔记的形式为教师提供清晰而简单的指导。 学生不仅是新手，有些老师也是新手。 包括以下信息：
 
-**Include teacher notes.** Most activities should be student-directed, but if an activity is facilitated or managed by a teacher, please include clear and simple directions for the teacher in the form of teacher-notes at a separate URL submitted with your activity. Not only are the students novices, some of the teachers are as well. Include info such as:
+**在活动结束时纳入反馈。** （例如 “你完成了 10 个关卡并学会了循环！ 干得好！”）
 
-- What platforms and browsers does the tutorial work best on?
-- Does it work on smartphones? Tablets?
-- Do you recommend pair programming?
-- Considerations for use in a classroom? E.g. if there are videos, advise teachers to show the videos on a projected screen for the entire classroom to view together
+**鼓励学生在完成后在社交媒体上发帖（如适用）。** 例如 “我已经用 ________ 做了一小时编程了吗？ #HourOfCode” 或者 “作为 #CSEdWeek 的一部分我做了 #HourOfCode。 你有吗？
 
-**Incorporate feedback at the end of the activity.** (E.g. “You finished 10 levels and learned about loops! Great job!”)
+- 本教程最适合哪些平台和浏览器？
+- 它可以在智能手机上使用吗？ 平板电脑？
+- 你推荐配对编程吗？
+- 在课堂上使用的注意事项？ 例如，如果有视频，建议教师在投影屏幕上放映视频，让整个教室一起观看
 
-**Encourage students to post to social media (where appropriate) when they've finished.** For example “I’ve done an Hour of Code with ________ Have you? #HourOfCode” or “I’ve done an #HourOfCode as a part of #CSEdWeek. Have you? @Scratch.” Use the hashtag **#HourOfCode** (with capital letters H, O, C)
+**在活动结束时纳入反馈。** （例如 “你完成了 10 个关卡并学会了循环！ 干得好！”）
 
-**Create your activity in Spanish or in other languages besides English.**
+**鼓励学生在完成后在社交媒体上发帖（如适用）。** 例如 “我已经用 ________ 做了一小时编程了吗？ #HourOfCode” 或者 “作为 #CSEdWeek 的一部分我做了 #HourOfCode。 你有吗？ @Scratch。”使用主题标签 **#HourOfCode** （使用大写字母 H、O、C）
 
-**Explain or connect the activity to a socially significant context.** Computer programming becomes a superpower when students see how it can change the world for the better!
+**用西班牙语或英语以外的其他语言创建您的活动。**
 
-**Make sure your tutorial can be used in a [Pair Programming](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) paradigm.** This is particularly useful for the Hour of Code because many classrooms do not have 1:1 hardware for all students.
+**解释活动或将活动与具有社会意义的背景联系起来。** 当学生看到计算机编程如何使世界变得更美好时，它就会成为一种超级大国！
 
-[**Back to the top**](#top)
+**确保您的教程可以在 [对编程](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) 范例中使用。** 这对于编程一小时特别有用，因为许多教室没有适合所有学生的 1:1 硬件。
+
+[**返回页首**](#top)
 
 <a id="tm"></a>
 
-## Trademark Guidelines
+## 商标指南
 
-Hour of Code® and Hora del Código® are registered trademarks of Code.org. Many of our tutorial partners have used our "Hour of Code" trademarks on their web sites in connection with their Hour of Code activities. We don't want to prevent this usage, but we want to make sure the usage falls within a few limits:
+Hour of Code® 和 Hora del Codigo® 是 Code.org 的注册商标。 我们的许多教程合作伙伴都在其网站上使用了我们的 “编程一小时” 商标来进行编程一小时活动。 我们不想阻止这种使用，但我们希望确保使用量在几个限制范围内：
 
-1. Use “Hour of Code” only in connection with non-commercial CS Education activities in the context of the Hour of Code campaign, and for no other purpose.
-2. Any reference to "Hour of Code" should be used in a fashion that doesn't suggest that it's your own brand name, but that it rather references the Hour of Code as a grassroots movement. Good example: "Participate in the Hour of Code ® at ACMECorp.com". Bad example: "Try Hour of Code by ACME Corp".
-3. Use a “®” superscript in the most prominent places you mention "Hour of Code", both on your web site and in app descriptions.
-4. Include language on the page (or in the footer), including links to the Hour of Code, CSEdWeek and Code.org web sites, that discloses both the following: a. Hour of Code® and Hora del Código® are registered trademarks of Code.org; and b. “The '[Hour of Code](http://hourofcode.com/) ® is a nationwide initiative by [Code.org](http://code.org/) to introduce millions of students to one hour of computer science and computer programming.”
-5. Do not use "Hour of Code" in app names.
-6. Do not use “Hour of Code” in connection with any commercial use or purpose (e.g., placing your Hour of Code activity behind a paywall; promoting another paid service as part of your Hour of Code activity; selling Hour of Code merchandise).
-7. Do not use “Hour of Code” in connection with any activity that requires a login or account creation.
+1. “编程一小时” 仅在编程一小时活动背景下的非商业性 CS Education 活动中使用，不得用于其他目的。
+2. 任何提及 “编程一小时” 的方式都不应暗示它是你自己的品牌名称，而是将 Hour of Code 称为基层运动。 很好的例子：“在 AcmeCorp.com 上参加 Hour of Code®”。 坏例子：“试验ACME公司的编程一小时”。
+3. 在网站和应用程序描述中，在您提及 “编程一小时” 的最显眼位置使用 “®” 上标。
+4. 在页面（或页脚）上添加语言，包括指向 Hour of Code、CSEDWeek 和 Code.org 网站的链接，这些网站披露了以下内容：a. Hour of Code® 和 Hora del Codigo® 是 Code.org 的注册商标；b. “'[Hour of Code](http://hourofcode.com/) ® 是 [Code.org](http://code.org/) 发起的一项全国性计划，旨在向数百万学生介绍一小时的计算机科学和计算机编程。”
+5. 请勿在应用程序名称中使用 “编程一小时”。
+6. 请勿将 “编程一小时” 用于任何商业用途或目的（例如，将您的编程一小时活动置于付费专区后面；将其他付费服务作为 “编程一小时” 活动的一部分；销售 Hour of Code 商品）。
+7. 请勿将 “编程一小时” 用于任何需要登录或创建帐户的活动。
 
-[**Back to the top**](#top)
+[**返回页首**](#top)
 
 <a id="pixel"></a>
 
-## Tracking Pixel
+## 追踪像素
 
-In order to more accurately track participation we ask every tutorial partner to include a 1-pixel tracking image on the first page of their Hour of Code tutorials. The pixel-image must be on the start page only. Do not include on any interim pages of your tutorial.
+如果您的教程获得批准并包含在最终教程页面上，Code.org 将为您提供一个独特的追踪像素供您集成到教程中。 参见下面的示例。 请勿在教程的任何临时页面上添加。
 
-This will allow us to count users who do your Hour of Code tutorial. It will lead to more accurate participation counts for your tutorial.
+这将使我们能够统计完成你的 Hour of Code 教程的用户。 这将为您的教程带来更准确的参与次数。
 
-If your tutorial is approved and included on the final tutorial page, Code.org will provide you with a unique tracking pixel for you to integrate into your tutorial. See example below.
+如果您的教程获得批准并包含在最终教程页面上，Code.org 将为您提供一个独特的追踪像素供您集成到教程中。 参见下面的示例。
 
-NOTE: this isn't important to do for installable apps (iOS/Android apps, or desktop-install apps)
+IMG SRC = <http://code.org/api/hour/begin_dance.png>
 
-Example tracking pixels for Dance Party:
+舞会追踪像素示例：
 
 IMG SRC = <http://code.org/api/hour/begin_dance.png>   
 
 
-[**Back to the top**](#top)
+[**返回页首**](#top)
 
 <a id="promote"></a>
 
-## Promoting your activities, CSEdWeek, and Hour of Code
+## 宣传你的活动、csedWeek 和 Hour of Code
 
-Please promote your activity to your network! Direct them to your Hour of Code page. Your users are much more likely to react to a mailing from you about your activity. Use the international Hour of Code campaign during Computer Science Education Week as an excuse to encourage users to invite others to join in, and help us reach more students!
+请在您的网络上推广您的活动！ 引导他们进入你的 Hour of Code 页面。 您的用户更有可能对您发送的有关您活动的邮件做出反应。 以计算机科学教育周期间的国际 Hour of Code 活动为借口，鼓励用户邀请其他人加入，帮助我们吸引更多学生！
 
-- Feature Hour of Code and CSEdWeek on your website. Ex: <http://www.tynker.com/hour-of-code>
-- Promote Hour of Code using social media, traditional media, mailing lists, etc, using hashtag #HourOfCode (with capital letters H, O, C)
-- Host a local event or ask your employees to host an event at local schools or community groups.
-- See our [resource kit](https://hourofcode.com/us/promote) for further information.
+- 在你的网站上精选 Hour of Code 和 csedWeek。 例如： <http://www.tynker.com/hour-of-code>
+- 使用社交媒体、传统媒体、邮件列表等进行宣传 Hour of Code，使用主题标签 #HourOfCode（使用大写字母 H、O、C）
+- 举办本地活动或让您的员工在当地学校或社区团体举办活动。
+- 有关更多信息，请参阅我们的 [资源套件](https://hourofcode.com/us/promote) 。
 
-[**Back to the top**](#top)
+[**返回页首**](#top)
 
 {{ signup_button }}

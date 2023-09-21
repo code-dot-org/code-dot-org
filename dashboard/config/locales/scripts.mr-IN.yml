@@ -1730,6 +1730,8 @@ mr:
             आणि आईस एजमधील स्क्रॅट यांच्याबरोबर संगणक शास्त्रातील मूलभूत गोष्टी करून
             पहा!
           title: क्लासिक मेझ
+        how-ai-works-2023:
+          title: AI कसे कार्य करते
         iceage:
           name: हिमयुग
         infinity:
@@ -1787,6 +1789,11 @@ mr:
               display_name: ईव्हेंट्स
             lessonGroup-7:
               display_name: अभ्यासक्रमाच्या समाप्तीचा प्रोजेक्ट
+            lessonGroup-8:
+              display_name: डेटा
+          lessons:
+            lesson-1:
+              name: डेटा
         nevada-standards-aligned-fourth-grade-2023:
           lesson_groups:
             lessonGroup-3:

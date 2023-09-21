@@ -38,6 +38,7 @@ sk-SK:
   allcancode_shortdescription: Hra, v ktorej sprevádzaš Marca použitím vizuálneho
     programovacieho jazyka.
   anybody_can_learn: Učiť sa môže každý
+  app_lab_tutorials: App Lab Návody
   appinventor_beyond_gradelevel: Druhý stupeň a starší
   appinventor_beyond_longdescription: Pomocou zábavných a rýchlych video návodov vytvoríš
     tri jednoduché aplikácie pre tvoj telefón či tablet s Androidom. Určený pre začiatočníkov
@@ -905,6 +906,7 @@ sk-SK:
     programy.
   finch_beyond_platformtext: Nákup robota
   finch_beyond_shortdescription: Robot na výuku informatiky
+  flappy-impact-study_name: Flappy kód s prieskumom
   flappy_gradelevel: Vek 6-106
   flappy_heading: Všetko najlepšie k narodeninám Code.org
   flappy_longdescription: Vytvor si vlastnú hru Flappy Bird pomocou drag & drop programovania,
@@ -934,6 +936,7 @@ sk-SK:
   frozen_platformtext: Moderné prehliadače + tablety
   frozen_shortdescription: Pomocou programovania sa pripojme k Anne a Else a preskúmajme
     spoločne kúzlo a krásu ľadu.
+  game_lab_documentation: Dokumentácia Game Lab
   game_lab_tutorials: Návody na herné laboratórium
   gamelab_name: Game Lab
   gender: Pohlavie
@@ -1054,6 +1057,7 @@ sk-SK:
     do toho pustím. Čo ty?'
   hoc2018_creativity_what_will_you_create: Čo vytvoríš ty?
   hoc2018_dance_amazon_about_future_engineer_button: Zistiť viac
+  hoc2018_dance_amazon_about_future_engineer_title: O spoločnosti Amazon Future Engineer
   hoc2018_dance_amazon_future_engineer_footer: "* Umelci, ktorých hudba je použitá
     v tomto kurze, týmto licenčným použitím ich hudby pre Code.org nesponzorujú ani
     nepodporujú Amazon.\n\n"
@@ -1182,6 +1186,8 @@ sk-SK:
   hoc2018_mc_watch_videos: Skôr ako začneš, pozri si jedno z týchto inšpiratívnych
     videí
   hoc2018_mc_with_microsoft: V spolupráci s
+  hoc2019_mc_aquatic_description: Preskúmajte a budujte podmorské svety pomocou kódu.
+  hoc2019_mc_mee_title: Minecraft AI pre dobro
   hoc2020_mc_available_code_org: Dostupné na Code.org
   hoc2020_mc_available_mee: 'Dostupné v Minecrafte: verzia pre vzdelávanie'
   hoc2020_mc_mee_title: Minecraft Príbeh dvoch dedín
@@ -1339,6 +1345,7 @@ sk-SK:
   homepage_signpetition_dropdown: Súhlasím &#x25BE;
   homepage_signpetition_dropdown_text: Súhlasím
   homepage_slot_text_blurb_advocates: Podpor diverziu v IT
+  homepage_slot_text_blurb_at_home: Tieto zdroje to uľahčujú
   homepage_slot_text_blurb_educators: Naučte vašich študentov
   homepage_slot_text_blurb_hoc: Učiť sa môže každý. Začni už dnes!
   homepage_slot_text_blurb_hoc_2022: Skúmajte, hrajte sa, tvorte!
@@ -1903,6 +1910,8 @@ sk-SK:
   sports_title: Naprogramuj si vlastný zápas
   sports_video_title: Prekonávaj svoje limity. Učiť sa môže každý!
   sports_watch_video: Pozri si video
+  sprite_lab_documentation: Dokumentácia Sprite Lab
+  sprite_lab_tutorials: Sprite Lab Návody
   start_hoc: Spusti Hodinu kódu teraz
   starwars_blocks_description: Použi bloky "Ťahaj a pusť".
   starwars_blocks_specs: Mnoho jazykov | Moderné prehliadače, chytré telefóny, tablety
@@ -2188,6 +2197,7 @@ sk-SK:
   video_3min: 3 minúty
   video_5min: 5 min
   video_title_anybody_can_learn: Učiť sa môže každý
+  video_title_change_face_of_cs: Zmeňte tvár informatiky
   video_title_chris_bosh: Chris Bosh na informatike
   video_title_cs_intro: Úvod do Sveta Technológií
   video_title_cs_is_everything: Informatika mení svet okolo nás

@@ -12,8 +12,8 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-08-02 00:14:01 UTC",
-    "published_state": null,
+    "serialized_at": "2023-08-17 20:33:33 UTC",
+    "published_state": "in_development",
     "instruction_type": null,
     "instructor_audience": null,
     "participant_audience": null,
@@ -107,6 +107,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csa-module-6-overview_2023"
+        ],
         "progression": "Module 6 Overview (~5 minutes)"
       },
       "bonus": false,
@@ -129,6 +132,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csa-module-6-2022-ap-subset_2023"
+        ],
         "progression": "Strings in Unit 6 (~50 minutes)"
       },
       "bonus": false,
@@ -151,6 +157,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csa-module-6-2022-u6l7-level1-clone_2023"
+        ],
         "progression": "Strings in Unit 6 (~50 minutes)"
       },
       "bonus": false,
@@ -173,6 +182,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csa-module-6-2022-notice-wonder-reflection_2023"
+        ],
         "progression": "Strings in Unit 6 (~50 minutes)"
       },
       "bonus": false,
@@ -195,6 +207,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csa-module-6-2022-substring-method-video_2023"
+        ],
         "progression": "Strings in Unit 6 (~50 minutes)"
       },
       "bonus": false,
@@ -217,6 +232,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csa-module-6-2022-u6l8-level1-clone_2023"
+        ],
         "progression": "Strings in Unit 6 (~50 minutes)"
       },
       "bonus": false,
@@ -239,6 +257,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csa-module-6-2022-compareto-method-video_2023"
+        ],
         "progression": "Strings in Unit 6 (~50 minutes)"
       },
       "bonus": false,
@@ -261,6 +282,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csa-module-6-2022-notice-wonder-2-reflection_2023"
+        ],
         "progression": "Strings in Unit 6 (~50 minutes)"
       },
       "bonus": false,
@@ -283,6 +307,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "vpl-csa-module-6-wrap-up_2023"
+        ],
         "progression": "Wrap-up (~5 minutes)"
       },
       "bonus": false,

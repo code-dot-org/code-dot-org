@@ -1871,6 +1871,8 @@ zh-TW:
               display_name: 替代課程
             lessonGroup-6:
               display_name: 單位調查結束
+            lessonGroup-7:
+              display_name: 沙箱
           lessons:
             lesson-1:
               name: 歡迎來到 CSA
@@ -1986,6 +1988,8 @@ zh-TW:
               display_name: 替代課程
             lessonGroup-5:
               display_name: 單位調查結束
+            lessonGroup-6:
+              display_name: 沙箱
           lessons:
             lesson-1:
               name: 屬性
@@ -2001,6 +2005,8 @@ zh-TW:
               name: 這個關鍵字
             lesson-15:
               name: 第二單元調查
+            lesson-17:
+              name: 瀝青藝術項目 — 第 2 天
             lesson-2:
               name: 無參數構造函數
             lesson-3:
@@ -2084,6 +2090,8 @@ zh-TW:
               display_name: 替代課程
             lessonGroup-5:
               display_name: 單位調查結束
+            lessonGroup-6:
+              display_name: 沙箱
           lessons:
             lesson-1:
               name: 一維（1D）陣列
@@ -2097,6 +2105,8 @@ zh-TW:
               name: 社會公益計劃數據 [1 日版]
             lesson-14:
               name: 第三單元調查
+            lesson-16:
+              name: 瀝青藝術項目 — 第 2 天
             lesson-2:
               name: 修改元素
             lesson-3:
@@ -2176,6 +2186,8 @@ zh-TW:
               display_name: 替代課程
             lessonGroup-5:
               display_name: 單位調查結束
+            lessonGroup-6:
+              display_name: 沙箱
           lessons:
             lesson-1:
               name: 抽象數據藝術計劃 [1 日版]
@@ -2191,6 +2203,8 @@ zh-TW:
               name: 多重選取陳述式
             lesson-15:
               name: 第四單元調查
+            lesson-17:
+              name: 瀝青藝術項目 — 第 2 天
             lesson-2:
               name: 抽象數據藝術計劃
             lesson-3:
@@ -2281,6 +2295,8 @@ zh-TW:
               display_name: 替代課程
             lessonGroup-5:
               display_name: 單位調查結束
+            lessonGroup-6:
+              display_name: 沙箱
           lessons:
             lesson-1:
               name: 二維（2D）數組
@@ -2294,6 +2310,8 @@ zh-TW:
               name: 個人敘事計劃 [1 日版]
             lesson-14:
               name: 單元 5 調查
+            lesson-16:
+              name: 瀝青藝術項目 — 第 2 天
             lesson-2:
               name: 二維數組元素
             lesson-3:
@@ -2374,6 +2392,8 @@ zh-TW:
               display_name: 替代課程
             lessonGroup-5:
               display_name: 單位調查結束
+            lessonGroup-6:
+              display_name: 沙箱
           lessons:
             lesson-1:
               name: 項目規劃
@@ -2387,6 +2407,8 @@ zh-TW:
               name: 自然語言處理計劃 [1 日版]
             lesson-14:
               name: 第六單元調查
+            lesson-16:
+              name: 瀝青藝術項目 — 第 2 天
             lesson-2:
               name: 子字串
             lesson-3:
@@ -2469,6 +2491,8 @@ zh-TW:
               display_name: 單位調查結束
             lessonGroup-5:
               display_name: 替代課程
+            lessonGroup-6:
+              display_name: 沙箱
           lessons:
             lesson-1:
               name: 項目規劃
@@ -2482,6 +2506,8 @@ zh-TW:
               name: 單元 7 調查
             lesson-14:
               name: 劇場項目的創意編碼 [1 日版]
+            lesson-16:
+              name: 瀝青藝術項目 — 第 2 天
             lesson-2:
               name: 對象引用作為參數
             lesson-3:
@@ -2583,6 +2609,8 @@ zh-TW:
               display_name: 問卷
             lessonGroup-5:
               display_name: 替代課程
+            lessonGroup-6:
+              display_name: 沙箱
           lessons:
             lesson-1:
               name: 項目規劃
@@ -2594,6 +2622,8 @@ zh-TW:
               name: 第八單元評估
             lesson-13:
               name: 使用控制台項目進行創意編碼 [1 日版]
+            lesson-15:
+              name: 瀝青藝術項目 — 第 2 天
             lesson-2:
               name: 搜尋
             lesson-3:
@@ -2685,6 +2715,11 @@ zh-TW:
               display_name: 檢討與實踐
             lessonGroup-3:
               display_name: 模擬考試
+            lessonGroup-4:
+              display_name: 沙箱
+          lessons:
+            lesson-2:
+              name: 瀝青藝術項目 — 第 2 天
           student_description: 本單元通過審查關鍵概念，練習選擇題和自由回答題以及加強考試策略來為 AP CSA 考試做好準備。您可以確定優勢和改進領域，以創建個性化的學習計劃，以集中精力練習並自我評估您的進度。
         csa9-pilot:
           lesson_groups:
@@ -6904,6 +6939,8 @@ zh-TW:
           description_short: 和許多有趣的角色一塊兒學學計算機科學基礎！
           student_description: 和來自憤怒鳥、植物大戰殭屍、冰原歷險記的角色一起學習計算機科學的基礎知識！
           title: 經典迷宮
+        how-ai-works-2023:
+          title: 人工智慧是如何運作的
         iceage:
           description: 用冰原歷險記的 Play Lab 來創作一個故事或遊戲!！
           description_short: 用冰原歷險記的 Play Lab 來創作一個故事或遊戲!！
@@ -7138,6 +7175,11 @@ zh-TW:
               display_name: 事件
             lessonGroup-7:
               display_name: 課程結束專案
+            lessonGroup-8:
+              display_name: 數據
+          lessons:
+            lesson-1:
+              name: 數據
         nevada-standards-aligned-fourth-grade-2023:
           description: 我們為四年級的學生創建了 E 課程。課程從 Sprite 實驗室程式設計工具的簡介開始。學生將學習製作有趣的互動項目，以強化他們將學習到的在線安全知識。在這些課程之後，學生將參與更複雜的編碼。學生將學習嵌套循環，函數和條件。在課程結束時，學生將結合這些概念來解決具有挑戰性的難題。課程以開放式專案結束，學生可以在其中創作遊戲或繪圖。
           description_audience: 年齡 8-12
@@ -7182,6 +7224,11 @@ zh-TW:
               display_name: 事件
             lessonGroup-6:
               display_name: 數據
+            lessonGroup-8:
+              display_name: 計算系統
+          lessons:
+            lesson-1:
+              name: 計算系統
         nevada-standards-aligned-third-grade-2023:
           description: 我們為三年級的學生創建了 D 課程。該課程從早期課程中找到的概念開始，包括循環和事件。之後，學生將發展他們對算法，嵌套循環，while
             循環，條件等的理解。
@@ -8424,6 +8471,22 @@ zh-TW:
               name: 模塊 6 後期作品：單元 6 中的字符串方法
           name: VPL-加拿大中華民國科技
           title: CSA 虛擬專業學習
+        vpl-csa-2023-m1:
+          title: 模組 1
+        vpl-csa-2023-m2:
+          title: 模組 2
+        vpl-csa-2023-m3:
+          title: 模組 3
+        vpl-csa-2023-m4:
+          title: 模組 4
+        vpl-csa-2023-m5:
+          title: 模組 5
+        vpl-csa-2023-m6:
+          title: 模組 6
+        vpl-csa-2023-m7:
+          title: 模組 7
+        vpl-csa-2023-m8:
+          title: 模組 8
         vpl-csd-2020:
           name: 企業版社會責任
           title: 政務司司長發現虛擬專業學習
@@ -8451,6 +8514,22 @@ zh-TW:
           title: 政務司司長發現虛擬專業學習
         vpl-csd-2022:
           title: 政務司司長發現虛擬專業學習
+        vpl-csd-2023-m1:
+          title: 模組 1
+        vpl-csd-2023-m2:
+          title: 模組 2
+        vpl-csd-2023-m3:
+          title: 模組 3
+        vpl-csd-2023-m4:
+          title: 模組 4
+        vpl-csd-2023-m5:
+          title: 模組 5
+        vpl-csd-2023-m6:
+          title: 模組 6
+        vpl-csd-2023-m7:
+          title: 模組 7
+        vpl-csd-2023-m8:
+          title: 模組 8
         vpl-csd-ci-1:
           description: "這個專業學習模組旨在幫助你準備Code.org的問題解決和計算單元教學。 \n\n**在這個專業學習模組中，你將：**\n\n-
             \  認識問題解決和計算。\n-   實踐單元中包含的關鍵概念。\n-   探索章節結尾項目。\n\n**建議時間：** 30分鐘"
@@ -8829,6 +8908,22 @@ zh-TW:
           title: CS 原則虛擬專業學習 21-22
         vpl-csp-2022:
           title: 政務司司長原理虛擬專業學習 22-23
+        vpl-csp-2023-m1:
+          title: 模組 1
+        vpl-csp-2023-m2:
+          title: 模組 2
+        vpl-csp-2023-m3:
+          title: 模組 3
+        vpl-csp-2023-m4:
+          title: 模組 4
+        vpl-csp-2023-m5:
+          title: 模組 5
+        vpl-csp-2023-m6:
+          title: 模組 6
+        vpl-csp-2023-m7:
+          title: 模組 7
+        vpl-csp-2023-m8:
+          title: 模組 8
         web-development-2023:
           lesson_groups:
             lessonGroup-2:

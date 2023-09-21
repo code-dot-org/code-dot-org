@@ -4747,6 +4747,11 @@ mn:
               display_name: Тооцооллын нөлөө
             lessonGroup-6:
               display_name: Үйл явдлууд
+            lessonGroup-8:
+              display_name: Өгөгдөл
+          lessons:
+            lesson-1:
+              name: Өгөгдөл
         nevada-standards-aligned-fourth-grade-2023:
           description_audience: 8-12 насныхан
           lesson_groups:
@@ -4783,6 +4788,11 @@ mn:
               display_name: Үйл явдлууд
             lessonGroup-6:
               display_name: Өгөгдөл
+            lessonGroup-8:
+              display_name: Тооцооллын систем
+          lessons:
+            lesson-1:
+              name: Тооцооллын систем
         nevada-standards-aligned-third-grade-2023:
           description_audience: 7-11 насныхан
           description_short: Нөхцөлт мэдэгдлийн талаар мэдэж аваарай. Өөрийн урлаг,
@@ -5224,6 +5234,22 @@ mn:
           lessons:
             lesson-3:
               name: Үнэлгээ
+        vpl-csa-2023-m1:
+          title: Модуль 1
+        vpl-csa-2023-m2:
+          title: Модуль 2
+        vpl-csa-2023-m3:
+          title: Модуль 3
+        vpl-csa-2023-m4:
+          title: Модуль 4
+        vpl-csa-2023-m5:
+          title: Модуль 5
+        vpl-csa-2023-m6:
+          title: Модуль 6
+        vpl-csa-2023-m7:
+          title: Модуль 7
+        vpl-csa-2023-m8:
+          title: Модуль 8
         vpl-csd-2021:
           lesson_groups:
             CSD_Module 1:
@@ -5242,6 +5268,38 @@ mn:
               display_name: Модуль 7
             CSD_Module 8:
               display_name: Модуль 8
+        vpl-csd-2023-m1:
+          title: Модуль 1
+        vpl-csd-2023-m2:
+          title: Модуль 2
+        vpl-csd-2023-m3:
+          title: Модуль 3
+        vpl-csd-2023-m4:
+          title: Модуль 4
+        vpl-csd-2023-m5:
+          title: Модуль 5
+        vpl-csd-2023-m6:
+          title: Модуль 6
+        vpl-csd-2023-m7:
+          title: Модуль 7
+        vpl-csd-2023-m8:
+          title: Модуль 8
+        vpl-csp-2023-m1:
+          title: Модуль 1
+        vpl-csp-2023-m2:
+          title: Модуль 2
+        vpl-csp-2023-m3:
+          title: Модуль 3
+        vpl-csp-2023-m4:
+          title: Модуль 4
+        vpl-csp-2023-m5:
+          title: Модуль 5
+        vpl-csp-2023-m6:
+          title: Модуль 6
+        vpl-csp-2023-m7:
+          title: Модуль 7
+        vpl-csp-2023-m8:
+          title: Модуль 8
         web-development-2023:
           lesson_groups:
             lessonGroup-4:

@@ -39,7 +39,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>حفلة الرقص</strong></h3>        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px"> برمج الحفل الراقص لمشاركته مع الأصدقاء والعائلة. يضم بيونسي وهاري ستايلز وليزو وليل ناس إكس وسيلينا غوميز وموسيقى من فيلم ديزني «إنكانتو» والمزيد!</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>حفلة رقص</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">قم بترميز حفلة رقص لمشاركتها مع الأصدقاء والعائلة. يضم بيونسي وهاري ستايلز وليزو وليل ناس إكس وسيلينا غوميز وموسيقى من فيلم ديزني «إنكانتو» والمزيد!</div>
         <a class="linktag" id="danceparty" href="/dance" target="_blank"><button>جرب النشاط</button></a>
     </span>
   </div>
@@ -53,7 +54,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>ساعة البرمجة - ماينكرافت</strong></h3>        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px"> لعبة Minecraft عادت لـHour of Code بنشاط جديد كليًّا! رحلة داخل Minecraft بالكود.</div>        <br>        <a class="linktag" id="minecraft" href="/minecraft" target="_blank"><button>جرب النشاط</button></a>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Minecraft ساعة البرمجة</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">تعود لعبة Minecraft لساعة البرمجة بنشاط جديد تمامًا! رحلة داخل Minecraft بالكود.</div>        <br>        <a class="linktag" id="minecraft" href="/minecraft" target="_blank"><button>جرب النشاط</button></a>
     </span>
   </div>
 </div>
@@ -66,7 +68,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>الذكاء الاصطناعي في المحيطات</strong></h3>        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px"> ساعد الذكاء الاصطناعي في تنظيف المحيطات من خلال تدريبه على كشف القمامة! تعلم عن انحيازات وبيانات التدريب وكيف يمكن للذكاء الاصطناعي معالجة المشكلات العالمية. View <a class="linktag" id="oceans-lesson" href="https://curriculum.code.org/hoc/plugged/9/" target="_blank">خطة الدرس</a>.</div>        <a class="linktag" id="aiforoceans" href="https://studio.code.org/s/oceans/lessons/1/levels/1" target="_blank"><button>جرب النشاط</button></a>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>الذكاء الاصطناعي للمحيطات</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">ساعد الذكاء الاصطناعي في تنظيف المحيطات من خلال تدريبه على اكتشاف القمامة! تعلم عن انحيازات وبيانات التدريب وكيف يمكن للذكاء الاصطناعي معالجة المشكلات العالمية. View <a class="linktag" id="oceans-lesson" href="https://curriculum.code.org/hoc/plugged/9/" target="_blank">خطة الدرس</a>.</div>        <a class="linktag" id="aiforoceans" href="https://studio.code.org/s/oceans/lessons/1/levels/1" target="_blank"><button>جرب النشاط</button></a>
     </span>
   </div>
 </div>
@@ -91,7 +94,9 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>كيف تعمل أجهزة الكمبيوتر</strong></h3>        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">مع مقدمة من بيل جيتس، تشرح مقاطع الفيديو القصيرة الستة ما يجعل الكمبيوتر كمبيوتر وكيف يعمل.</div>        <a class="linktag" id="howcomputers" href="https://www.youtube.com/watch?v=OAx_6-wdslM&list=PLzdnOPI1iJNcsRwJhvksEo1tJqjIqWbN-" target="_blank"><button>شاهد سلسلة مقاطع الفيديو</button></a>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>كيف تعمل أجهزة الكمبيوتر</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">مع مقدمة بقلم بيل جيتس، تشرح هذه السلسلة المكونة من ستة مقاطع فيديو قصيرة ما يجعل الكمبيوتر جهاز كمبيوتر وكيف تعمل دوائر الكمبيوتر.</div>
+        <a class="linktag" id="howcomputers" href="https://www.youtube.com/watch?v=OAx_6-wdslM&list=PLzdnOPI1iJNcsRwJhvksEo1tJqjIqWbN-" target="_blank"><button>شاهد سلسلة الفيديو</button></a>
     </span>
   </div>
 </div>
@@ -104,7 +109,9 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>كيف يعمل الانترنت</strong></h3>        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">في هذه السلسلة من مقاطع الفيديو الثمانية القصيرة، ستتعلم كيف تم اختراع الإنترنت وما هو الـHTML وكيف تعمل محركات بحث مثل جوجل.</div>        <a class="linktag" id="howinternet" href="https://www.youtube.com/watch?v=Dxcc6ycZ73M&list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7-" target="_blank"><button>شاهد سلسلة مقاطع الفيديو</button></a>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>كيف يعمل الإنترنت</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">في هذه السلسلة المكونة من ثمانية مقاطع فيديو قصيرة، ستتعرف على كيفية اختراع الإنترنت، وما هي HTML، وكيف تعمل محركات البحث مثل Google.</div>
+        <a class="linktag" id="howinternet" href="https://www.youtube.com/watch?v=Dxcc6ycZ73M&list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7-" target="_blank"><button>شاهد سلسلة الفيديو</button></a>
     </span>
   </div>
 </div>
@@ -117,7 +124,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>كيف يعمل الذكاء الاصطناعي</strong></h3>        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px"> تعلم طريقة عمل الذكاء الاصطناعي وأهميته من خلال هذه السلسلة من مقاطع الفيديو القصيرة. عرض ساتيا ناديلا، المدير التنفيذي لميكروسوفت، وطاقم متنوع من الخبراء.</div>        <a class="linktag" id="ai-videos" href="/ai#ai-videos" target="_blank"><button>شاهد سلسلة الفيديو</button></a>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>كيف يعمل الذكاء الاصطناعي</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">تعرف على كيفية عمل الذكاء الاصطناعي وسبب أهميته مع هذه السلسلة من مقاطع الفيديو القصيرة. عرض ساتيا ناديلا، المدير التنفيذي لميكروسوفت، وطاقم متنوع من الخبراء.</div>        <a class="linktag" id="ai-videos" href="/ai#ai-videos" target="_blank"><button>شاهد سلسلة الفيديو</button></a>
     </span>
   </div>
 </div>
@@ -165,7 +173,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>مقدمة لمعمل الألعاب</strong></h3>        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">رسومات البرنامج المتحركة، الفن التفاعلي، والألعاب في معمل الألعاب. ابدأ بأشكال بسيطة وطورها لرسومات متحركة وألعاب قائمة على الرموز وأكثر دقة.</div>        <a class="linktag" id="gamelab-intro" href="https://studio.code.org/s/csd3-virtual" target="_blank"><button>جرب هذه الوحدة</button></a>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>مقدمة إلى Game Lab</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">رسوم متحركة للبرنامج والفن التفاعلي والألعاب في Game Lab. ابدأ بأشكال بسيطة وطورها لرسومات متحركة وألعاب قائمة على الرموز وأكثر دقة.</div>        <a class="linktag" id="gamelab-intro" href="https://studio.code.org/s/csd3-virtual" target="_blank"><button>جرب هذه الوحدة</button></a>
     </span>
   </div>
 </div>
@@ -178,7 +187,9 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>برمجة السلحفاة في معمل الألعاب</strong></h3>        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">استخدم أوامر جافاسكريبت بسيطة لرسم أشكال وصور باستخدام "السلحفاة" الافتراضية. صمم وبرمج مشهدك الرقمي الخاص بك!</div>        <a class="linktag" id="turtle-applab" href="https://studio.code.org/s/csp3-virtual" target="_blank"><button>Try the module</button></a>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>برمجة السلاحف في مختبر التطبيقات</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">استخدم أوامر JavaScript بسيطة لرسم الأشكال والصور باستخدام «سلحفاة» افتراضية. صمم وبرمجة المشهد الرقمي الخاص بك!</div>
+        <a class="linktag" id="turtle-applab" href="https://studio.code.org/s/csp3-virtual" target="_blank"><button>جرب الوحدة</button></a>
     </span>
   </div>
 </div>
@@ -191,7 +202,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>برمجة الأحداث في معمل الألعاب</strong></h3>        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px"> تعلم تصميم التطبيقات التي تستجيب للنقرات وضغطات الأزرار. صمم سلسلة من التطبيقات التي تعمل على متصفح الانترنت!</div>        <a class="linktag" id="events-applab" href="https://studio.code.org/s/csp5-virtual" target="_blank"><button>جرب الوحدة</button></a>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>البرمجة القائمة على الأحداث في App Lab</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">تعلم كيفية تصميم التطبيقات التي تستجيب للنقرات وضغطات المفاتيح. صمم سلسلة من التطبيقات التي تعمل على متصفح الانترنت!</div>        <a class="linktag" id="events-applab" href="https://studio.code.org/s/csp5-virtual" target="_blank"><button>جرب الوحدة</button></a>
     </span>
   </div>
 </div>
@@ -295,7 +307,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; margin-top:10px"><strong>CodeBytes</strong></h3>        <div class="smalltext" style="color: dimgray;">الـCodeBytes سهلة الفهم فهي دروس تفاعلية لمدة 20 دقيقة تدمج بين علوم الكمبيوتر ومواضيع من الحياة الواقعية. درب الذكاء الاصطناعي لقراءة لغة الإشارة، وصمم تطبيقًا لاستكشاف عالم Minecraft والمزيد!</div>        <br>        <br>        <a class="linktag" id="codebytes" href="https://code.org/codebytes" target="_blank"><button>View episodes</button></a>
+        <h3 class="tutorial-info-h" style="margin-top:10px"><strong>CodeBytes</strong></h3>
+        <div class="smalltext" style="color: dimgray;">CodeBytes سهلة الفهم، دروس تفاعلية مدتها 20 دقيقة تمزج علوم الكمبيوتر مع موضوعات العالم الحقيقي. درب الذكاء الاصطناعي لقراءة لغة الإشارة، وصمم تطبيقًا لاستكشاف عالم Minecraft والمزيد!</div>        <br>        <br>        <a class="linktag" id="codebytes" href="https://code.org/codebytes" target="_blank"><button>View episodes</button></a>
     </span>
   </div>
 </div>
@@ -308,8 +321,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; margin-top:10px"><strong>Code Break</strong></h3>        <div      class="smalltext" style="color: dimgray; ">  
-   اجعل تعلم علوم الكمبيوتر ممتعًا من خلال Code Break! يمكنك إنشاء شيفرة مع Ashton Kutcher، وتعلم المتغيرات مع Yara Shahidi واستكشاف كيف يعمل الإنترنت مع مخترع فعلي للإنترنت، Vint Cerf!</div>        <br>        <a class="linktag" id="codebreak" href="https://code.org/break" target="_blank"><button>تواصل معنا</button></a>
+        <h3 class="tutorial-info-h" style="margin-top:10px"><strong>Code Break</strong></h3>
+        <div class="smalltext" style="">حافظ على متعة علوم الكمبيوتر من خلال أخذ استراحة التعليمات البرمجية! يمكنك إنشاء شيفرة مع Ashton Kutcher، وتعلم المتغيرات مع Yara Shahidi واستكشاف كيف يعمل الإنترنت مع مخترع فعلي للإنترنت، Vint Cerf!</div>        <br>        <a class="linktag" id="codebreak" href="https://code.org/break" target="_blank"><button>تواصل معنا</button></a>
     </span>
   </div>
 </div>

@@ -47,6 +47,8 @@ const EVENTS = {
   PROGRESS_TOGGLE: 'Section Progress Toggled',
   PROGRESS_CHANGE_UNIT: 'Section Progress Unit Changed',
   PROGRESS_JUMP_TO_LESSON: 'Section Progress Jump to Lesson',
+  SORT_BY_FAMILY_NAME: 'Sorted by family name',
+  SORT_BY_DISPLAY_NAME: 'Sorted by display name',
 
   // Levels
   FEEDBACK_SUBMITTED: 'Level Feedback Submitted',
@@ -73,6 +75,15 @@ const EVENTS = {
     'Show Only Translated Curriculums Toggled',
   CURRICULUM_CATALOG_NO_AVAILABLE_CURRICULA_EVENT:
     'No Available Curriculums Message Shown',
+  CURRICULUM_CATALOG_QUICK_VIEW_CLICKED_EVENT: 'Quick View Clicked',
+
+  // Rubrics
+  RUBRIC_OPENED_FROM_FAB_EVENT: 'Rubric Opened From FAB',
+  RUBRIC_CLOSED_FROM_FAB_EVENT: 'Rubric Closed From FAB',
+  RUBRIC_LEARNING_GOAL_EXPANDED_EVENT: 'Rubric Learning Goal Expanded',
+  RUBRIC_LEARNING_GOAL_COLLAPSED_EVENT: 'Rubric Learning Goal Collapsed',
+
+  AGE_21_SELECTED_EVENT: 'Age 21+ Selected',
 };
 
 export {EVENTS};

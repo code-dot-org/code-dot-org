@@ -1,5 +1,6 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 41,
   "created_at": "2023-03-17T17:04:51.000Z",
   "level_num": "custom",
@@ -48,7 +49,7 @@
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
-    "makerlab_enabled": "true",
+    "makerlab_enabled": "circuitPlayground",
     "disable_procedure_autopopulate": "false",
     "long_instructions": "# Data Event\r\n\r\nEach of these analog sensors emits a special event called \"data\" which occurs every time new data comes in from the sensor. Using this event, you can rewrite the first program you worked on in this lesson so that it continually updates.\r\n\r\n## Do This\r\n\r\n1) Create an event to continuously check the `soundSensor`\r\n\t- Drag out an [`onBoardEvent()`(#f78183)](/docs/applab/onBoardEvent/) to check the `soundSensor` for a `data` event\r\n    - ::: details [**Show Me How**]\r\n    ![](https://images.code.org/4697dca08b3b3ffad1f103e7eb61c05c-image-1648845372839.png)\r\n    :::\r\n2) Inside the event, update the screen to display the value of the sound sensor\r\n\t- Use the [`setText()`(#fff176)](/docs/applab/setText/) and [`soundSensor.value`(#f78183)](/docs/applab/soundSensor.value/) blocks to update the screen\r\n\r\n**Run Your Code!** You should see the screen update in real-time based on the volume in the room. How low can you make the sensor go? How high can you make it go?",
     "start_blocks": "// Set the text of \"sound_value\"\r\n// to the current sound sensor value\r\nsetText(\"soundValue\", soundSensor.value);\r\n\r\n//Add an event handler to respond to sound sensor's \"data\" event\r\n//Move the existing code into your event handler\r\n\r\n",
@@ -58,7 +59,8 @@
     "parent_level_id": 20457,
     "name_suffix": "_2023a",
     "reference_links": [
-      "/courses/csd-2022/guides/analog-sensors"
+      "/courses/csd-2022/guides/analog-sensors",
+      "/maker/setup"
     ],
     "map_reference": "/courses/csd-2022/guides/data-and-change-events",
     "mini_rubric": "false",
@@ -69,9 +71,8 @@
     "project_template_level_name": "CSD U6 - Sensors - SB - Data Event Template_2023a",
     "preload_asset_list": null
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-03-17T17:04:51.488+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Sensors - SB3_2222\\\"\"],\"cloned_from\":\"CSD U6 - Sensors - SB3_2222\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-03-17T17:04:51.488+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Sensors - SB3_2222\\\"\"],\"cloned_from\":\"CSD U6 - Sensors - SB3_2222\"},{\"changed_at\":\"2023-08-16 19:19:35 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"encrypted_examples\",\"reference_links\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

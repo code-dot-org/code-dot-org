@@ -4641,6 +4641,9 @@ hi:
           description_audience: 'आयु: 4-7'
           description_short: प्री-रीडर्स के लिए कंप्यूटर विज्ञान का परिचय।
         nevada-standards-aligned-first-grade-2023:
+          lessons:
+            lesson-1:
+              name: डेटा
           lesson_groups:
             lessonGroup-2:
               display_name: डिजीटल नागरिकता
@@ -4654,9 +4657,14 @@ hi:
               display_name: घटनाएँ
             lessonGroup-7:
               display_name: कोर्स समाप्ति प्रोजेक्ट
+            lessonGroup-8:
+              display_name: डेटा
           description_audience: 'उम्र: 5-8'
           description_short: आरंभिक-पाठकों के लिए कंप्यूटर साइंस का परिचय। कोर्स A से मिलता-जुलता, लेकिन इसमें अवधारणा को गहराई से शामिल किया गया है।
         nevada-standards-aligned-second-grade-2023:
+          lessons:
+            lesson-1:
+              name: कंप्यूटिंग सिस्टम
           lesson_groups:
             lessonGroup-2:
               display_name: डिजीटल नागरिकता
@@ -4668,6 +4676,8 @@ hi:
               display_name: घटनाएँ
             lessonGroup-6:
               display_name: डेटा
+            lessonGroup-8:
+              display_name: कंप्यूटिंग सिस्टम
         nevada-standards-aligned-third-grade-2023:
           lesson_groups:
             lessonGroup-2:
@@ -4713,3 +4723,53 @@ hi:
               display_name: कोर्स समाप्ति प्रोजेक्ट
           description_audience: 'उम्र: 9-13'
           description_short: कंप्यूटर विज्ञान के बुनियादी बातों में सभी अवधारणाओं को जानें और अपनी खुद की कला, कहानी या खेल बनाएं।
+        vpl-csp-2023-m1:
+          title: मॉड्यूल 1
+        vpl-csp-2023-m2:
+          title: मॉड्यूल 2
+        vpl-csp-2023-m3:
+          title: मॉड्यूल 3
+        vpl-csp-2023-m4:
+          title: मॉड्यूल 4
+        vpl-csp-2023-m5:
+          title: मॉड्यूल 5
+        vpl-csp-2023-m6:
+          title: मॉड्यूल 6
+        vpl-csp-2023-m7:
+          title: मॉड्यूल 7
+        vpl-csp-2023-m8:
+          title: मॉड्यूल 8
+        vpl-csa-2023-m1:
+          title: मॉड्यूल 1
+        how-ai-works-2023:
+          title: AI कैसे काम करता है
+        vpl-csa-2023-m2:
+          title: मॉड्यूल 2
+        vpl-csa-2023-m3:
+          title: मॉड्यूल 3
+        vpl-csa-2023-m4:
+          title: मॉड्यूल 4
+        vpl-csa-2023-m5:
+          title: मॉड्यूल 5
+        vpl-csa-2023-m6:
+          title: मॉड्यूल 6
+        vpl-csa-2023-m7:
+          title: मॉड्यूल 7
+        vpl-csa-2023-m8:
+          title: मॉड्यूल 8
+        vpl-csd-2023-m1:
+          title: मॉड्यूल 1
+        vpl-csd-2023-m2:
+          title: मॉड्यूल 2
+        vpl-csd-2023-m3:
+          title: मॉड्यूल 3
+        vpl-csd-2023-m4:
+          title: मॉड्यूल 4
+        vpl-csd-2023-m5:
+          title: मॉड्यूल 5
+        vpl-csd-2023-m6:
+          title: मॉड्यूल 6
+        vpl-csd-2023-m7:
+          title: मॉड्यूल 7
+        vpl-csd-2023-m8:
+          title: मॉड्यूल 8

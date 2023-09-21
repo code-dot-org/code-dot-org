@@ -8,271 +8,276 @@ title: Жаттығулар бағдары
   }
 </style>
 
-# Guidelines for creating and submitting tutorials and lessons for Hour of Code™ and Computer Science Education Week
+# Код сағаты™ және информатика бойынша білім беру апталығына арналған оқулықтар мен сабақтарды құру және жіберу бойынша нұсқаулық
 
-Code.org hosts a variety of Hour of Code™ activities, lessons, and videos on the Code.org and Hour of Code websites. The current list is at [hourofcode.com/learn]({{ urls/learn }}).
+Code.org Code.org және Code Hour веб -сайттарында әр түрлі Code Hour™ әрекеттерін, сабақтары мен бейнелерін орналастырады. The current list is at [hourofcode.com/learn]({{ urls/learn }}).
 
-Want to submit your own self-guided tutorial, teacher-led lesson, or robotics/maker activity that explains a computer science principle? Join this global movement and help participants around the world get started with an hour of code or go further with multi-lesson, day-long, or week-long activities.
+Информатика принципін түсіндіретін өзіңіздің жеке оқулығыңызды, мұғалім басқаратын сабағыңызды немесе роботтар/жасаушылар әрекетін жібергіңіз келе ме? Осы жаһандық қозғалысқа қосылыңыз және бүкіл әлем бойынша қатысушыларға бір сағаттық кодты бастауға немесе көп сабақты, күндізгі немесе апталық іс-шаралармен әрі қарай жүруге көмектесіңіз.
 
-**After reading the guidelines, you can submit your activity through our [Hour of Code™ Activity Submission page](https://forms.gle/eeAt6kVuz3RKg5n18). You can submit an activity at any time, but the deadline for inclusion in any given calendar year is October 1. (For example, any activities received after October 1, 2023, will not be listed for 2023's Hour of Code.)** If you have any questions about your activity submission, please reach out to us at support@code.org.
+**Нұсқаулықты оқығаннан кейін сіз өз әрекетіңізді біздің [сағаттық код™ Әрекетті жіберу беті](https://docs.google.com/forms/d/e/1FAIpQLSdsdTKU6pD5qXlPUQWlgrjESRlm2L02wkTcZQuL8hz9OEvzNQ/viewform)арқылы жібере аласыз. Сіз әрекетті кез келген уақытта жібере аласыз, бірақ кез келген күнтізбелік жылға қосудың соңғы мерзімі - 1 қазан. (Мысалы, 1 жылдың 2023 қазанынан кейін алынған кез келген іс-шаралар 2023 жылғы Кодекс сағатына тізімделмейді.)** Қызметіңізді жіберуге қатысты сұрақтарыңыз болса, бізге support@code.org мекен-жайына хабарласыңыз.
 
-A few tips:
+Бірнеше кеңестер:
 
-1. **Submit more than one activity**: If you’ve built activities for different levels, different ages, or other categories, we list your activities separately so each teacher can find the right thing for their classroom. Submit each tutorial or activity individually. Given the number of submissions we have seen in recent years, we will have time to review **up to 5 activities** per partner. After that, we will make a best effort to review as many as possible before Hour of Code begins.
+1. **Бірден көп әрекетті жіберіңіз**: Егер сіз әртүрлі деңгейлерге, әртүрлі жастағы немесе басқа санаттарға арналған әрекеттерді жасаған болсаңыз, біз сіздің әрекеттеріңізді бөлек тізімдейміз, осылайша әр мұғалім өз сыныбына дұрыс нәрсені таба алады. Әр оқулықты немесе әрекетті жеке жіберіңіз. Given the number of submissions we have seen in recent years, we will have time to review **up to 5 activities** per partner. Осыдан кейін біз “Код сағаты” басталғанға дейін мүмкіндігінше көп қарауға бар күшімізді саламыз.
 
-2. **Beyond beginner lessons**: In addition to lessons for teachers and students who are learning computer science for the first time, we list learning experiences for computer science-savvy classrooms that want to go a little bit further! Help us by submitting lessons for classes that are already comfortable with the basics.
+2. **Жаңадан бастаушы сабақтардан басқа**: Информатиканы алғаш рет үйреніп жатқан мұғалімдер мен студенттерге арналған сабақтардан басқа, біз сәл әрі қарай жүргісі келетін информатиканы жақсы білетін сыныптардың оқу тәжірибелерін тізімдейміз! Негіздермен ыңғайлы сабақтарға сабақ жіберу арқылы бізге көмектесіңіз.
 
-3. **Subject areas**: Have a great lesson idea that integrates Computer Science into Math? History? Language Arts? Science? Art? Or another subject? We’ve had numerous requests from teachers who want to connect the Hour of Code to their subject area. Teachers can filter for their classroom type (grade band or subject area) so we need your help filling in gaps to offer classroom activities or lesson plans that relate CS to every major subject area for different grade bands. We also continue to have a “Computer Science” category for teachers who are looking for generic CS activities.
+3. **Пәндік бағыттар**: Информатиканы математикаға біріктіретін керемет сабақ идеясы бар ма? Тарих? Тіл өнері? Ғылым? Өнер? Немесе басқа тақырып? Бізде Код сағатын пәндік саламен байланыстырғысы келетін мұғалімдерден көптеген өтініштер болды. Мұғалімдер сынып түрін (сынып диапазоны немесе пәндік аймақ) сүзе алады, сондықтан бізге сыныптағы әрекеттерді немесе CS-ті әр түрлі сыныптарға арналған әрбір негізгі пәндік салаға қатысты сабақ жоспарларын ұсыну үшін олқылықтарды толтыру үшін сіздің көмегіңіз қажет. Біз сондай-ақ жалпы CS қызметін іздейтін мұғалімдерге арналған “Информатика” санатына ие болуды жалғастырамыз.
 
 <a id="top"></a>
 
-## Index:
+## Индекс:
 
-- [What to submit](#whatsubmit)
-- [General guidelines for creating an Hour of Code™ activity](#guidelines)
-- [How to Submit](#submit)
-- [How activities will be evaluated](#inclusion)
-- [Suggestions for designing your activity](#design)
-- [Trademark Guidelines](#tm)
-- [Tracking Pixel](#pixel)
-- [Promoting your activity, CSEdWeek, and Hour of Code](#promote)
+- [Нені ұсыну керек](#whatsubmit)
+- [Код сағаты™ қызметін құру бойынша жалпы нұсқаулар](#guidelines)
+- [Қалай жіберуге болады](#submit)
+- [Іс-шаралар қалай бағаланады](#inclusion)
+- [Сіздің қызметіңізді жобалау бойынша ұсыныстар](#design)
+- [Тауар белгілері бойынша нұсқаулық](#tm)
+- [Пиксельді бақылау](#pixel)
+- [Сіздің белсенділігіңізді, CSEDWeek және код сағатын насихаттау](#promote)
 
 <a id="whatsubmit"></a>
 
-## What to submit
+## Нені ұсыну керек
 
 **Self-guided puzzle or game ([example](https://code.org/dance))**
 
-These activities are designed for students to self-direct through a tutorial. They don’t require much instruction from a teacher or teacher prep work.
+Бұл іс-шаралар студенттерге оқулық арқылы өзін-өзі басқаруға арналған. Олар мұғалімнен немесе мұғалімнің дайындық жұмысынан көп нұсқауларды қажет етпейді.
 
-**Teacher Facilitated lesson ([example](https://studio.code.org/s/course1/lessons/2/levels/1), [template](https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8axKIzv8YI56JGA))**
+**Мұғалім жеңілдетілген сабақ ([мысал](https://studio.code.org/s/course1/lessons/2/levels/1), [шаблон](https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8axKIzv8YI56JGA))**
 
-Now that hundreds of thousands of educators have tried the Hour of Code, many classrooms are ready for more creative activities that teach the basics of computer science. To help more advanced teachers find inspiration, we collect and curate "teacher-led" lessons and activity plans for Hour of Code veterans.
+Қазір жүздеген мың тәрбиешілер “Код сағатын” қолданып көргеннен кейін, көптеген сыныптар информатика негіздерін үйрететін шығармашылық іс-шараларға дайын. Жетілдірілген мұғалімдерге шабыт табуға көмектесу үшін біз Код ардагерлерінің сағаты үшін “мұғалімдер басқаратын” сабақтар мен іс-шаралар жоспарларын жинаймыз және басқарамыз.
 
-One type of activity that we will feature for experienced teachers are “open sandbox” creation projects. Activities that encourage students to build their own app, game, website or other project. If facilitated properly, more open-ended activities can better showcase the creative nature of computer science.
+Тәжірибелі мұғалімдерге арналған қызметтің бір түрі - “ашық құмсалғыш” құру жобалары. Студенттерді өз қосымшасын, ойынын, веб-сайтын немесе басқа жобаны құруға ынталандыратын іс-шаралар. Егер дұрыс жеңілдетілсе, ашық іс-шаралар информатиканың шығармашылық табиғатын жақсы көрсете алады.
 
-Some educators may also prefer to host Hour of Code activities that follow a traditional lesson format rather than a guided-puzzle/game experience.
+Кейбір тәрбиешілер сонымен қатар нұсқаулық-басқатырғыш/ойын тәжірибесінен гөрі дәстүрлі сабақ форматын ұстанатын “Код сағаты” іс-шараларын өткізуді жөн көруі мүмкін.
 
 You can start with this [template](https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8axKIzv8YI56JGA) for your lesson plan.
 
-**Activities for teachers in other subjects/fields**
+**Басқа пәндерде/салалардағы оқытушыларға арналған іс-шаралар**
 
-We also feature lesson plans designed for different subject areas. For example, a one-hour lesson plan for teaching code in a geometry class. Or a mad-lib exercise for English class. Or a creative quiz-creation activity for history class. These can help recruit teachers in other subject areas to guide an Hour of Code activity that is unique to their field, while demonstrating how CS can influence and enhance many different subject areas.
+Сондай-ақ бізде әртүрлі пәндік салаларға арналған сабақ жоспарлары бар. Мысалы, геометрия сабағында кодты оқытудың бір сағаттық сабақ жоспары. Немесе ағылшын сабағына арналған mad-lib жаттығуы. Немесе тарих сабағына арналған шығармашылық викториналық әрекет. Бұл басқа пәндік салалардағы мұғалімдерді өз саласына ғана тән Кодекс сағатын басқаруға көмектеседі, сонымен бірге CS көптеген әртүрлі пәндік салаларға қалай әсер ететінін және күшейтетінін көрсетеді.
 
-Examples:
+Мысалдар:
 
-- Mirror Images (an activity for an art teacher)
-- An arduino activity for a physics teacher
-- A history of technology activity for a history teacher
-- And see [this list](https://docs.google.com/document/d/19jQ2VhBUyIn30VFbfdHOVpmlymhNiB0AkEqRxHz3dr0/edit) for more ideas from educators (or add your own to the list to inspire others)
+- Айна суреттері (өнер мұғаліміне арналған іс-шара)
+- Физика мұғаліміне арналған ардуино әрекеті
+- Тарих пәні мұғаліміне арналған технологиялық қызметтің тарихы
+- Тәрбиешілердің көбірек идеялары үшін осы [тізімді](https://docs.google.com/document/d/19jQ2VhBUyIn30VFbfdHOVpmlymhNiB0AkEqRxHz3dr0/edit) қараңыз (немесе басқаларды шабыттандыру үшін тізімге өзіңізді қосыңыз)
 
-**For students with special needs**
+**Ерекше қажеттіліктері бар студенттер үшін**
 
-If you create an activity or tutorial that is designed for special needs students, please call that out in the description. In particular, there are very few options for the vision-impaired. If your activity is designed for this audience, please let us know.
+Егер сіз ерекше қажеттіліктері бар студенттерге арналған әрекетті немесе оқулықты жасасаңыз, сипаттамада оған қоңырау шалыңыз. Атап айтқанда, көру қабілеті нашар адамдар үшін өте аз нұсқалар бар. Егер сіздің әрекетіңіз осы аудиторияға арналған болса, бізге хабарлаңыз.
 
-[**Back to the top**](#top)
+[**Жоғарыға оралу**](#top)
 
 <a id="guidelines"></a>
 
-## General guidelines for creating an Hour of Code activity
+## “Код сағаты” қызметін құру бойынша жалпы нұсқаулар
 
-The goal of an Hour of Code is to give beginners an accessible first taste of computer science or programming. The tone should be that:
+Код сағатының мақсаты - жаңадан бастаушыларға информатика немесе бағдарламалаудың қол жетімді алғашқы дәмін беру. Тон келесідей болуы керек:
 
-- Anybody can learn computer science - regardless of age, gender, race, or ability/disability.
-- Computer science is connected to a wide variety of fields and interests. Everybody should learn it!
-- Encourage students to create something unique that can be shared with parents/friends or online.
+- Кез келген адам информатиканы жасына, жынысына, нәсіліне немесе қабілетіне/мүгедектігіне қарамастан үйрене алады.
+- Информатика әр түрлі салалар мен қызығушылықтарға байланысты. Мұны бәрі үйренуі керек!
+- Оқушыларды ата-аналармен/достармен немесе желіде бөлісуге болатын ерекше нәрсе жасауға шақырыңыз.
 
-The activities should teach a computer science concept such as loops, conditionals, encryption, or how the Internet works. An activity can also teach about how computer science connects to real world occupations, events, or history. For example, teaching UX design to make apps that are meaningful for an audience or cause. We discourage activities that focus on the syntax of programming rather than the concepts. For example, we will list, but not highlight, activities that teach HTML. Similarly, we discourage block programming lessons that focus on setting/changing configuration options rather than learning how to model an algorithm or process.
+Іс-шаралар ілмектер, шарттар, шифрлау немесе Интернеттің қалай жұмыс істейтіні сияқты информатика тұжырымдамасын үйретуі керек. Әрекет сонымен қатар информатиканың нақты әлемдегі кәсіптермен, оқиғалармен немесе тарихпен қалай байланысатыны туралы сабақ бере алады. Мысалы, UX дизайнын аудитория немесе себеп үшін мағыналы қолданбаларды жасау үшін үйрету. Біз тұжырымдамаларға емес, бағдарламалау синтаксисіне бағытталған әрекеттерден бас тартамыз. Мысалы, біз HTML-ді үйрететін әрекеттерді тізімдейміз, бірақ бөлектемейміз. Сол сияқты, біз алгоритмді немесе процесті модельдеуді үйренуден гөрі конфигурация опцияларын орнатуға/өзгертуге бағытталған блоктық бағдарламалау сабақтарынан бас тартамыз.
 
-*Technical requirements:* Because of the wide variety of school and classroom technology setups, the best activities are Web-based or smartphone-friendly, or otherwise unplugged-style activities that teach computer science concepts without the use of a computer (see <http://csunplugged.com/>). Activities that require an app-install, desktop app, or game-console experiences are okay but not ideal. We will not list activities that require sign up or payment. (Robotics activities can require robotics purchase.)
+*Technical requirements:* Because of the wide variety of school and classroom technology setups, the best activities are Web-based or smartphone-friendly, or otherwise unplugged-style activities that teach computer science concepts without the use of a computer (see <http://csunplugged.com/>). Қолданбаны орнатуды, жұмыс үстелі қолданбасын немесе ойын консолін қажет ететін әрекеттер жақсы, бірақ идеалды емес. Біз тіркелуді немесе төлемді қажет ететін әрекеттерді тізімдемейміз. (Робототехника қызметі робототехниканы сатып алуды қажет етуі мүмкін.)
 
-*Student-led (Self-Guided) Format:* The original Hour of Code was built mostly on the success of self-guided tutorials or lessons, optionally facilitated by the teacher. There are plenty of existing options, but if you want to create a new one, these activities should be designed so they can be fun for a student working alone, or in a classroom whose teacher has minimal prep or CS background. They should provide directions for students as opposed to an open-ended hour-long challenge. Ideally, the instructions and tutorials are integrated directly into the programming platform, to avoid switching tabs or windows between the tutorial and the programming platform.
+*Студент басқаратын (өзін-өзі басқаратын) пішімі:* Бастапқы код сағаты негізінен мұғалімнің қалауы бойынша өздігінен басқарылатын оқулықтардың немесе сабақтардың сәттілігіне негізделген. Қолданыстағы көптеген нұсқалар бар, бірақ егер сіз жаңасын жасағыңыз келсе, бұл әрекеттер жалғыз жұмыс істейтін студент үшін немесе мұғалімнің ең аз дайындық немесе CS білімі бар сыныпта қызықты болатындай етіп жасалуы керек. Олар бір сағаттық ашық сынаққа қарағанда студенттерге бағыт беруі керек. Ең дұрысы, нұсқаулар мен оқулықтар тікелей бағдарламалау платформасына біріктірілген, оқулық пен бағдарламалау платформасы арасында қойындыларды немесе терезелерді ауыстырмау үшін.
 
 To get a sense of the wide variety of types of tutorials and lesson plans you can create, visit the [Hour of Code Activities page](https://hourofcode.com/us/learn).
 
-[**Back to the top**](#top)
+[**Жоғарыға оралу**](#top)
 
 <a id="submit"></a>
 
-## How to submit
+## Қалай жіберуге болады
 
-Visit the [Hour of Code™ Activity Submission page](https://forms.gle/eeAt6kVuz3RKg5n18) and complete the questions to submit your activity.
+[сағаттық код™ Әрекетті жіберу бетіне кіріңіз](https://docs.google.com/forms/d/e/1FAIpQLSdsdTKU6pD5qXlPUQWlgrjESRlm2L02wkTcZQuL8hz9OEvzNQ/viewform) және өз әрекетіңізді жіберу үшін сұрақтарды толтырыңыз.
 
-What you’ll need:
+Сізге не қажет:
 
-* Name and email of the primary contact representing the submitted activity
-* Activity Name (cannot include “Hour of Code” in the name)
-* URL link to the activity
-* An activity description (max character count: 400) 
-    * Please include in the description whether it’s mainly student-guided or teacher-facilitated. Additionally, some schools are interested in knowing if Hour of Code activities address Common Core or Next Generation Science Standards. If the activity addresses specific standards, consider including this information.
-* Recommended grade level(s) for intended users. You may refer to the \[Computer Science Teachers’ Association’s K-12 Standards\] (https://k12cs.org/framework-statements-by-grade-band/) for grade-appropriate computer science concepts. Example grade levels include: 
-    * Kindergarten - Grade 1 (ages 4-6)
-    * Grades 2-5 (ages 7-10)
-    * Grades 6-8 (ages 11-13)
-    * Grades 9+ (ages 14+)
-* A list of subject areas your activity covers (in addition to Computer Science). For example, if a math teacher can use your activity to teach about angles or parabolas, list as math. If you have a mad libs activity that teaches verbs/nouns/etc. choose language arts.
-* A list of programming languages your activity teaches. I.e. C/C++, Java, JavaScript, etc. or language independent (for lesson plans that can be taught in multiple languages)
-* A list of supported natural languages. Note: Language-detection is the responsibility of the activity provider; we will redirect all users to the single URL provided.
-* What level of experience should an educator have to use your activity? (e.g. Beginner or Comfortable.) And, what level of experience should the students have? If you’d like to prepare more advanced Hour of Code™ Activities, please include the prior knowledge needed in the description of your activity.
-* The length of your activity 
-    * 1 hour only
-    * 1 hour with follow-on course
-    * 2-6 hours (can be multiple lessons)
-* A list of accessibility accommodations, if your activity has them. These include screen reader compatibility, text-to-speech capabilities, use of high-contrast colors, or any other accommodations made for learners with disabilities.
+* Ұсынылған әрекетті білдіретін негізгі контактінің атауы мен электрондық поштасы
+* Әрекет атауы (атауына “Код сағатын” қосу мүмкін емес)
+* Әрекетке URL сілтемесі
+* Бұл әрекетке AI кіреді ме: Иә немесе Жоқ
+* Әрекет сипаттамасы (таңбаның максималды саны: 400) 
+    * Сипаттамаға негізінен студенттің басшылығымен немесе мұғаліммен қамтамасыз етілетіндігін қосыңыз. Сонымен қатар, кейбір мектептер “Код сағаты” әрекеттері жалпы негізгі немесе келесі буын ғылым стандарттарына сәйкес келетінін білуге қызығушылық танытады. Егер әрекет нақты стандарттарға қатысты болса, осы ақпаратты қосу туралы ойланыңыз.
+* Мақсатты пайдаланушылар үшін ұсынылатын деңгей деңгейі (лар). Сіз \[Информатика мұғалімдері қауымдастығының K-12 стандарттары\] (https://k12cs.org/framework-statements-by-grade-band/) информатика тұжырымдамаларына сілтеме жасай аласыз. Мысал деңгейлеріне мыналар жатады: 
+    * Балабақша - 1 сынып (4-6 жас)
+    * 2-5 сыныптар (7-10 жас)
+    * 6-8 сыныптар (11-13 жас)
+    * 9+ сыныптар (14 жастан жоғары)
+* Сіздің әрекетіңіз үйрететін бағдарламалау тілдерінің тізімі. Яғни C/C ++, Java, JavaScript және т.б. немесе тілге тәуелсіз (бірнеше тілде оқытылатын сабақ жоспарлары үшін) тілдік өнерді таңдаңыз.
+* Қолдау көрсетілетін табиғи тілдердің тізімі. Ескерту: Тілді анықтау - бұл қызмет провайдерінің жауапкершілігі; біз барлық пайдаланушыларды берілген бір URL мекенжайына бағыттаймыз. немесе тілге тәуелсіз (бірнеше тілде оқытылатын сабақ жоспарлары үшін)
+* Тәрбиеші сіздің іс-әрекетіңізді пайдалану үшін қандай тәжірибе деңгейіне ие болуы керек? (мысалы, бастаушы немесе ыңғайлы.) Ал студенттердің тәжірибесі қандай болуы керек?
+* Тәрбиеші сіздің іс-әрекетіңізді пайдалану үшін қандай тәжірибе деңгейіне ие болуы керек? (мысалы, бастаушы немесе ыңғайлы.) Ал студенттердің тәжірибесі қандай болуы керек? Егер сіз “Код сағаты™” әрекеттерін неғұрлым жетілдірілген дайындағыңыз келсе, сіздің әрекетіңіздің сипаттамасына қажетті алдын ала білімді қосыңыз.
+* Сіздің әрекетіңіздің ұзақтығы 
+    * Тек 1 сағат
+    * 1 сағат кейінгі курспен
+    * 2-6 сағат (бірнеше сабақ болуы мүмкін)
+* Егер сіздің әрекетіңізде болса, қол жетімділік тұрғын үйлерінің тізімі. Оларға экранды оқу құралының үйлесімділігі, мәтіннен сөйлеу мүмкіндіктері, жоғары контрастты түстерді пайдалану немесе мүмкіндігі шектеулі оқушыларға арналған кез келген басқа орналастыру кіреді.
 
-#### Additional things you’ll need when submitting Lesson Plans
+#### Сабақ жоспарларын жіберу кезінде сізге қажет қосымша заттар
 
-* Link to your lesson plan. This can be a web page, dropbox link, google drive or similar service.
-* What software and/or hardware the teacher will need to do your lesson plan (Scratch? Robots? Nothing?)
+* Сабақ жоспарына сілтеме. Бұл веб-бет, dropbox сілтемесі, google дискісі немесе ұқсас қызмет болуы мүмкін.
+* Сіздің сабақ жоспарыңызды орындау үшін мұғалімге қандай бағдарламалық және/немесе аппараттық құралдар қажет болады (Scratch? Роботтар? Ештеңе жоқ па?)
 
-#### Additional things you’ll need when submitting Online Activities
+#### Интернеттегі әрекеттерді жіберу кезінде сізге қажет қосымша заттар
 
-* Name and logo of your organization
-* Whether it is COPPA compliant or not
-* A URL link to teacher notes (optional)
-* A list of tested/compatible platforms: 
-    * Web based: Which platforms have you tested? 
-        * OS - Mac, Win, and other versions
-        * Browsers - IE11, Edge, Firefox, Chrome, Safari
-        * iOS mobile Safari (mobile-optimized)
-        * Android Chrome (mobile-optimized)
-    * Non web-based: specify platform for native code (Mac, Win, iOS, Android, xBox, other)
+* Сіздің ұйымыңыздың атауы мен логотипі
+* Бұл COPPA сәйкес келе ме, жоқ па
+* Мұғалімнің жазбаларына URL сілтемесі (міндетті емес)
+* Сынақталған/үйлесімді платформалардың тізімі: 
+    * Веб-негізделген: Сіз қандай платформаларды сынап көрдіңіз? 
+        * OS - Mac, Win және басқа нұсқалары
+        * Браузерлер - IE11, Edge, Firefox, хром, Safari
+        * IOS мобильді Safari (мобильді оңтайландырылған)
+        * Android Chrome (мобильді оңтайландырылған)
+    * Веб-негізделген емес: жергілікті код үшін платформаны көрсетіңіз (Mac, Win, iOS, Android, XBox, басқа)
     * Интернетсіз
-* Screenshot or marketing image of the Hour of Code activity. Please send at least one image with 4:3 dimensions. It should be at least 520px by 390px. This image should have NO text on it (other than your logo), in order to make it more accessible for non-English speakers. If an appropriate image is not provided, we may take our own screenshot of your tutorial OR we may choose not to list it. All images must be submitted as a URL link to a .jpg, .jpeg, or .png.
-* In order to more accurately track participation, third party tutorial partners need to include 1-pixel tracking images on the first page of their Hour of Code tutorials. See the [Tracking Pixel](#pixel) section below for more details.
+* Скриншот немесе код сағатының маркетингтік бейнесі. 4:3 өлшемдері бар кем дегенде бір суретті жіберіңіз. Ол кем дегенде 520px және 390px болуы керек. Бұл суретте ағылшын тілінде сөйлемейтіндер үшін қол жетімді ету үшін NO мәтіні болуы керек (сіздің логотипіңізден басқа). Сәйкес кескін берілмесе, біз сіздің оқулығыңыздың скриншотын түсіре аламыз НЕМЕСЕ оны тізімдемеуді таңдауымыз мүмкін. Барлық суреттер.jpg, .jpeg немесе.png мекенжайларына URL сілтемесі ретінде жіберілуі керек.
+* Қатысуға дәлірек бақылау үшін үшінші тараптың оқулық серіктестері “Код сағаты” оқулықтарының бірінші бетіне 1 пиксельді бақылау суреттерін қосуы керек. Қосымша мәліметтер алу үшін төмендегі [Tracking Pixel](#pixel) бөлімін қараңыз.
 * Upon finishing your activity, users should be directed to [code.org/api/hour/finish](https://code.org/api/hour/finish) where they will be able to: 
-    * Share on social media that they completed the Hour of Code
-    * Receive a certificate that they completed the Hour of Code
-    * See leaderboards about which countries/cities have the highest participation rates in Hour of Code activities
+    * Әлеуметтік желілерде Кодекс сағатын аяқтағанын бөлісіңіз
+    * Код сағатын аяқтағаны туралы сертификат алыңыз
+    * Код сағаты іс-шараларына қай елдер/қалалар қатысу деңгейі ең жоғары екендігі туралы көшбасшылар тақтасын қараңыз
     * For users who spend an hour on your activity and don’t complete it, please include a button on your activity that says “I’m finished with my Hour of Code” which links back to [code.org/api/hour/finish](https://code.org/api/hour/finish) as well.
-* (Optional) We may follow-up with an online survey/form link asking for a report of the following activity metrics: 
-    * For online activities (especially smartphone/tablet apps): 
-        * Number of users
-        * How many completed the task
-        * Average time on task
-        * Number of total lines of code written over all users
-        * How many continued on to further learning (measured as any user who finishes the task and goes onto additional tasks at your site)
-    * For offline activities 
-        * Number of downloads of paper version of activity (if applicable)
+* (Міндетті емес) Біз келесі белсенділік көрсеткіштерінің есебін сұрайтын онлайн сауалнама/пішін сілтемесін қадағалай аламыз: 
+    * Интернеттегі әрекеттер үшін (әсіресе смартфон/планшет қосымшалары): 
+        * Пайдаланушылар саны
+        * Тапсырманы қанша аяқтады
+        * Тапсырманың орташа уақыты
+        * Барлық пайдаланушылар бойынша жазылған кодтың жалпы жолдарының саны
+        * Қанша әрі қарай оқуды жалғастырды (тапсырманы аяқтаған және сіздің сайтыңыздағы қосымша тапсырмаларға баратын кез келген пайдаланушы ретінде өлшенеді)
+    * Желіден тыс әрекеттер үшін 
+        * Қызметтің қағаз нұсқасын жүктеу саны (егер бар болса)
 
-#### Additional things you’ll need when submitting Robotics
+#### Робототехниканы жіберу кезінде сізге қажет қосымша заттар
 
-* If you submit a robotics activity, we need to know the cost per student for robotics.
-* To evaluate robotics activities for inclusion on the website, we will need you to send sample kits to reviewers.
+* Егер сіз робототехника қызметін ұсынсаңыз, біз робототехника үшін бір оқушының құнын білуіміз керек.
+* Веб-сайтқа енгізу үшін робототехника әрекеттерін бағалау үшін сізге рецензенттерге үлгі жинақтарын жіберу қажет болады.
 
-[**Back to the top**](#top)
+[**Жоғарыға оралу**](#top)
 
 <a id="inclusion"></a>
 
-## How activities will be evaluated
+## Іс-шаралар қалай бағаланады
 
-A diverse committee of computer science educators will rank submissions based on qualitative and quantitative criteria. All activities that fit the basic criteria will be listed. Teachers will be able to filter and sort to find the best activities for their classroom.
+Информатика мұғалімдерінің әртүрлі комитеті сапалы және сандық критерийлерге негізделген жіберулерді бағалайды. Негізгі критерийлерге сәйкес келетін барлық іс-шаралар тізімделеді.
 
-The rubric for evaluating activities and lesson plans will look for the following criteria on all activities and rank them accordingly:
+Дәстүрлі кодтау әрекеттері үшін информатика мұғалімдерінің әр түрлі комитеті сапалы және сандық критерийлерге негізделген жіберулерді бағалайды. Негізгі критерийлерге сәйкес келетін барлық іс-шаралар тізімделеді. Мұғалімдер өз сыныптары үшін ең жақсы әрекеттерді табу үшін сүзгіден өткізіп, сұрыптай алады.
 
-- High production quality
-- Promote learning by all demographic groups (esp. students underrepresented in CS, like young women, students from marginalized racial and ethnic groups, and students with disabilities)
-- Educational (teaches computer science concepts well)
-- Fun and engaging
-- Encourages students to create something unique they can share (For younger students: with parents and classmates. For olders students: on the Internet)
+Егер шолу комитеті белсенділікті өндіріс сапасында нөлге бағаласа (жаман қателерге немесе оны қолдануды қиындататын нұсқауларға байланысты), аз ұсынылған топтарда оқуды ілгерілетуде (нәсілшілдік/сексистік материалға байланысты), тәрбиелік құндылықта (үйретпейді) CS тұжырымдамалары), немесе көңілді/тартымды (студенттердің жұмыс істеуі қиын/көңілсіз болуына байланысты), әрекет тізімде болмайды.
 
-If the review committee rates the activity a zero in production quality (due to bad bugs or instructions that make it very hard to use), in promoting learning in underrepresented groups (due to racist/sexist material), in educational value (does not teach CS concepts), or fun/engaging (due to being difficult/discouraging for students to work through), the activity will not be listed.
+- Өндірістің жоғары сапасы
+- Барлық демографиялық топтардың оқуын ынталандыру (исп. жас әйелдер, маргиналды нәсілдік және этникалық топтардың студенттері және мүмкіндігі шектеулі студенттер сияқты CS -де аз ұсынылған студенттер)
+- Білім беру (информатика ұғымдарын жақсы үйретеді)
+- Көңілді және тартымды
+- Оқушыларды бөлісе алатын ерекше нәрсе жасауға шақырады (Кіші жастағы оқушылар үшін: ата-аналарымен және сыныптастарымен. Студенттердің үлгерімі: Интернетте)
 
-In addition, in order to be listed, all activities must:
+Сонымен қатар, тізімге енгізілу үшін барлық іс-шаралар:
 
-- Be appropriate for a public school classroom (no guns, no explicit/mature content, no religious content, etc.)
-- Require no sign up
-- Require no payment (exception for robotics activities these can require robot/kit purchase)
+Жаңа оқытушылар мен студенттерге арналған өзін-өзі басқаратын іс-шаралар үшін шолу комиссиясы мыналарды іздейді:
 
-For self-directed activities for new teachers and students the review committee will be looking for whether:
+- Мемлекеттік мектептің сыныбына сәйкес болыңыз (мылтық жоқ, анық/жетілген мазмұн, діни мазмұн жоқ және т.б.)
+- Тіркелуді талап етпеңіз
+- Төлем талап етпейді (робототехника бойынша жұмыстарды қоспағанда, робот/жинақ сатып алуды қажет етуі мүмкін)
 
-- Teachers can use the tutorial or activity with no background in computer science
-- Students can be successful with no background in computer science
-- Students can direct themselves through the tutorial without parental or teacher guidance
+Жаңа оқытушылар мен студенттерге арналған өзін-өзі басқаратын іс-шаралар үшін шолу комиссиясы мыналарды іздейді:
 
-Teachers and students will be able to search through and filter our list of activities based on filters such as grade, experience level, subject, hardware, etc. By default, we will show lesson plans and activities first that:
+- Мұғалімдер оқулықты немесе әрекетті информатикадан білімі жоқ пайдалана алады
+- Оқушылар информатикадан білімі жоқ табысты бола алады
+- Оқушылар ата -ананың немесе мұғалімнің басшылығынсыз оқулық арқылы өздерін бағыттай алады
 
-- Receive the highest ratings from the review committee
-- Are one hour self-directed activities designed for beginners (students and teachers)
-- Appeal to a wide range of users (across platforms, languages, and ages)
-- Require no installation
-- Are new this year
+Мұғалімдер мен студенттер сынып, тәжірибе деңгейі, пән, аппараттық құрал және т.б. сияқты сүзгілерге негізделген әрекеттер тізімін іздей алады және сүзе алады. Әдепкі бойынша, біз алдымен сабақ жоспарлары мен іс-әрекеттерін көрсетеміз:
 
-[**Back to the top**](#top)
+- Шолу комиссиясынан ең жоғары рейтингтерді алыңыз
+- Жаңадан бастаушыларға (студенттер мен мұғалімдерге) арналған бір сағаттық өзін-өзі басқаратын іс-шаралар
+- Пайдаланушылардың кең ауқымына үндеу (платформалар, тілдер және жастағылар бойынша)
+- Орнатуды қажет етпейді
+- Биыл жаңа
+
+[**Жоғарыға оралу**](#top)
 
 <a id="design"></a>
 
-## Suggestions for designing one hour self guided tutorials
+## Бір сағаттық өздігінен басқарылатын оқулықтарды жобалау бойынша ұсыныстар
 
-You can include the [Hour of Code logo](https://hourofcode.com/us/promote/resources#logo) in your tutorial, but this is not required. If you use the Hour of Code logo, see the trademark guidelines below. <u>Under no circumstances can the Code.org logo and name be used.</u> Both are trademarked, and can’t be co-mingled with a 3rd party brand name without express written permission.
+Әрекеттерге жасанды интеллект кірудің қажеті жоқ, дегенмен біз АИ-мен байланысты көбірек әрекеттерді ұсынғымыз келеді.
 
-**Make sure that the average student can finish comfortably in an hour.** Consider adding an open-ended activity at the end for students who move more quickly through the lesson. Remember that most kids will be absolute beginners to computer science and coding.
+**Мұғалімнің жазбаларын қосыңыз.** Іс-шаралардың көпшілігі студенттерге бағытталған болуы керек, бірақ егер әрекетті мұғалім жеңілдетсе немесе басқарса, сіздің әрекетіңізбен бірге жіберілген бөлек URL мекенжайындағы мұғалім жазбалары түрінде мұғалімге арналған нақты және қарапайым нұсқауларды енгізіңіз. Студенттер жаңадан ғана емес, кейбір мұғалімдер де бар. Мыналар сияқты ақпаратты қосыңыз:
 
-**Include teacher notes.** Most activities should be student-directed, but if an activity is facilitated or managed by a teacher, please include clear and simple directions for the teacher in the form of teacher-notes at a separate URL submitted with your activity. Not only are the students novices, some of the teachers are as well. Include info such as:
+**Әрекеттің соңында кері байланысты қосыңыз.** (мысалы, “Сіз 10 деңгейді аяқтап, ілмектер туралы білдіңіз! Тамаша жұмыс!”)
 
-- What platforms and browsers does the tutorial work best on?
-- Does it work on smartphones? Tablets?
-- Do you recommend pair programming?
-- Considerations for use in a classroom? E.g. if there are videos, advise teachers to show the videos on a projected screen for the entire classroom to view together
+**Студенттерді аяқтағаннан кейін әлеуметтік желілерге (қажет болған жағдайда) жариялауға шақырыңыз.** Мысалы, “Мен ________ -мен бір сағаттық код жасадым, сізде бар ма? #HourOfCode” немесе “Мен #HourOfCode жасадым #CSEdWeek бөлігі ретінде. Сізде бар ма?
 
-**Incorporate feedback at the end of the activity.** (E.g. “You finished 10 levels and learned about loops! Great job!”)
+- Оқулық қандай платформалар мен браузерлерде жақсы жұмыс істейді?
+- Ол смартфондарда жұмыс істей ме? Планшеттер?
+- Сіз жұптық бағдарламалауды ұсынасыз ба?
+- Сыныпта қолдану туралы ойлар? Мысалы, егер бейнелер болса, мұғалімдерге бейнелерді бүкіл сынып бірге көру үшін жобаланған экранда көрсетуге кеңес беріңіз
 
-**Encourage students to post to social media (where appropriate) when they've finished.** For example “I’ve done an Hour of Code with ________ Have you? #HourOfCode” or “I’ve done an #HourOfCode as a part of #CSEdWeek. Have you? @Scratch.” Use the hashtag **#HourOfCode** (with capital letters H, O, C)
+**Әрекеттің соңында кері байланысты қосыңыз.** (мысалы, “Сіз 10 деңгейді аяқтап, ілмектер туралы білдіңіз! Тамаша жұмыс!”)
 
-**Create your activity in Spanish or in other languages besides English.**
+**Студенттерді аяқтағаннан кейін әлеуметтік желілерге (қажет болған жағдайда) жариялауға шақырыңыз.** Мысалы, “Мен ________ -мен бір сағаттық код жасадым, сізде бар ма? #HourOfCode” немесе “Мен #HourOfCode жасадым #CSEdWeek бөлігі ретінде. Сізде бар ма? @Scratch.” **#HourOfCode** хэштегін қолданыңыз (H, O, C бас әріптерімен)
 
-**Explain or connect the activity to a socially significant context.** Computer programming becomes a superpower when students see how it can change the world for the better!
+**Ағылшын тілінен басқа испан тілінде немесе басқа тілдерде өз әрекетіңізді жасаңыз.**
 
-**Make sure your tutorial can be used in a [Pair Programming](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) paradigm.** This is particularly useful for the Hour of Code because many classrooms do not have 1:1 hardware for all students.
+**Әрекетті әлеуметтік маңызды контекстке түсіндіріңіз немесе байланыстырыңыз.** Компьютерлік бағдарламалау студенттер әлемді қалай жақсы жаққа өзгерте алатынын көргенде супер державаға айналады!
 
-[**Back to the top**](#top)
+**Оқулықты [жұптық бағдарламалау](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) парадигмасында қолдануға болатынына көз жеткізіңіз.** Бұл әсіресе Кодекс сағаты үшін пайдалы, өйткені көптеген сыныптарда барлық студенттер үшін 1:1 аппараттық құралдары жоқ.
+
+[**Жоғарыға оралу**](#top)
 
 <a id="tm"></a>
 
-## Trademark Guidelines
+## Тауар белгілері бойынша нұсқаулық
 
-Hour of Code® and Hora del Código® are registered trademarks of Code.org. Many of our tutorial partners have used our "Hour of Code" trademarks on their web sites in connection with their Hour of Code activities. We don't want to prevent this usage, but we want to make sure the usage falls within a few limits:
+Code® сағаты және Hora del Código® - Code.org сайтының тіркелген сауда белгілері. Біздің көптеген оқулық серіктестеріміз “Код сағаты” сауда белгілерін өздерінің веб -сайттарында Кодекс сағатына байланысты пайдаланды. Біз бұл пайдалануды болдырмағымыз келмейді, бірақ пайдалану бірнеше шектеулерге сәйкес келетініне көз жеткізгіміз келеді:
 
-1. Use “Hour of Code” only in connection with non-commercial CS Education activities in the context of the Hour of Code campaign, and for no other purpose.
-2. Any reference to "Hour of Code" should be used in a fashion that doesn't suggest that it's your own brand name, but that it rather references the Hour of Code as a grassroots movement. Good example: "Participate in the Hour of Code ® at ACMECorp.com". Bad example: "Try Hour of Code by ACME Corp".
-3. Use a “®” superscript in the most prominent places you mention "Hour of Code", both on your web site and in app descriptions.
-4. Include language on the page (or in the footer), including links to the Hour of Code, CSEdWeek and Code.org web sites, that discloses both the following: a. Hour of Code® and Hora del Código® are registered trademarks of Code.org; and b. “The '[Hour of Code](http://hourofcode.com/) ® is a nationwide initiative by [Code.org](http://code.org/) to introduce millions of students to one hour of computer science and computer programming.”
-5. Do not use "Hour of Code" in app names.
-6. Do not use “Hour of Code” in connection with any commercial use or purpose (e.g., placing your Hour of Code activity behind a paywall; promoting another paid service as part of your Hour of Code activity; selling Hour of Code merchandise).
-7. Do not use “Hour of Code” in connection with any activity that requires a login or account creation.
+1. “Код сағатын” тек “Код сағаты” науқаны аясында CS Education коммерциялық емес іс-шараларына байланысты және басқа мақсатсыз пайдаланыңыз.
+2. “Код сағатына” кез келген сілтеме сіздің жеке брендіңіз екенін көрсетпейтін түрде қолданылуы керек, бірақ ол Код сағатын қарапайым қозғалыс ретінде атайды. Жақсы мысал: “Acmecorp.com сайтындағы Code® сағатына қатысыңыз”. Жаман мысал: "Кодтау Сағатын ACME Corp арқылы байқап көріңіз".
+3. Веб-сайтыңызда да, қолданба сипаттамаларында да “Код сағаты” деп аталатын ең көрнекті жерлерде “®” үстіңгі жазбасын пайдаланыңыз.
+4. Бетке тілді қосыңыз (немесе төменгі деректемеде), соның ішінде код сағаты, CSEdWeek және Code.org веб -сайттарына сілтемелерді қоса, төмендегілердің екеуін де ашады: a. Code® сағаты және Hora del Código® Code.org сайтының тіркелген сауда белгілері болып табылады; және б. “The '[Hour of Code](http://hourofcode.com/) ® is a nationwide initiative by [Code.org](http://code.org/) to introduce millions of students to one hour of computer science and computer programming.”
+5. Қолданба атауларында “Код сағатын” қолданбаңыз.
+6. Кез келген коммерциялық мақсатта немесе мақсатқа байланысты “Код сағатын” пайдаланбаңыз (мысалы, “Код сағаты” әрекетін төлем қабырғасының артына қою; “Код сағаты” қызметінің бөлігі ретінде басқа ақылы қызметті жылжыту; “Код сағаты” тауарларын сату).
+7. Кіру немесе тіркелгі жасауды қажет ететін кез келген әрекетке байланысты “Код сағатын” пайдаланбаңыз.
 
-[**Back to the top**](#top)
+[**Жоғарыға оралу**](#top)
 
 <a id="pixel"></a>
 
-## Tracking Pixel
+## Пиксельді бақылау
 
-In order to more accurately track participation we ask every tutorial partner to include a 1-pixel tracking image on the first page of their Hour of Code tutorials. The pixel-image must be on the start page only. Do not include on any interim pages of your tutorial.
+Егер сіздің оқулығыңыз мақұлданған және соңғы оқулық бетіне енгізілген болса, Code.org сізге оқулыққа біріктіру үшін бірегей бақылау пикселін ұсынады. Төмендегі мысалды қараңыз. Оқулықтың кез-келген аралық беттеріне қоспаңыз.
 
-This will allow us to count users who do your Hour of Code tutorial. It will lead to more accurate participation counts for your tutorial.
+Бұл сізге “Код сағаты” оқулығын жасайтын пайдаланушыларды санауға мүмкіндік береді. Бұл сіздің оқулығыңызға қатысуды дәлірек санауға әкеледі.
 
-If your tutorial is approved and included on the final tutorial page, Code.org will provide you with a unique tracking pixel for you to integrate into your tutorial. See example below.
+Егер сіздің оқулығыңыз мақұлданған және соңғы оқулық бетіне енгізілген болса, Code.org сізге оқулыққа біріктіру үшін бірегей бақылау пикселін ұсынады. Төмендегі мысалды қараңыз.
 
-NOTE: this isn't important to do for installable apps (iOS/Android apps, or desktop-install apps)
+ЕСКЕРТПЕ: бұл орнатылатын қолданбалар үшін маңызды емес (iOS/Android apps немесе жұмыс үстелін орнату apps)
 
-Example tracking pixels for Dance Party:
+Би кешіне арналған пиксельдерді бақылау мысалы:
 
 IMG SRC = <http://code.org/api/hour/begin_dance.png>   
 
 
-[**Back to the top**](#top)
+[**Жоғарыға оралу**](#top)
 
 <a id="promote"></a>
 
-## Promoting your activities, CSEdWeek, and Hour of Code
+## Сіздің әрекеттеріңізді, CSEDWeek және код сағатын насихаттау
 
-Please promote your activity to your network! Direct them to your Hour of Code page. Your users are much more likely to react to a mailing from you about your activity. Use the international Hour of Code campaign during Computer Science Education Week as an excuse to encourage users to invite others to join in, and help us reach more students!
+Сіздің белсенділігіңізді желіңізге насихаттаңыз! Оларды “Код сағаты” бетіне бағыттаңыз. Сіздің пайдаланушыларыңыз сіздің әрекетіңіз туралы сізден жіберілімге көбірек жауап береді. Компьютерлік ғылымдар бойынша білім беру апталығында “Код сағаты” халықаралық науқанын пайдаланушыларды басқаларды қосылуға шақыруға шақыру және бізге көбірек студенттерге жетуге көмектесу үшін ақтау ретінде пайдаланыңыз!
 
-- Feature Hour of Code and CSEdWeek on your website. Ex: <http://www.tynker.com/hour-of-code>
-- Promote Hour of Code using social media, traditional media, mailing lists, etc, using hashtag #HourOfCode (with capital letters H, O, C)
-- Host a local event or ask your employees to host an event at local schools or community groups.
-- See our [resource kit](https://hourofcode.com/us/promote) for further information.
+- Веб-сайтыңыздағы код сағаты және CSEDWeek мүмкіндігі. Мысалы: <http://www.tynker.com/hour-of-code>
+- #HourOfCode хэштегін (H, O, C бас әріптерімен) қолдана отырып, әлеуметтік желілерді, дәстүрлі медианы, тарату тізімдерін және т.б. пайдалана отырып, Код сағатын жарнамалаңыз
+- Жергілікті іс-шараны өткізіңіз немесе қызметкерлеріңізден жергілікті мектептерде немесе қауымдастық топтарында іс-шара өткізуді сұраңыз.
+- Қосымша ақпарат алу үшін [ресурс жинағын](https://hourofcode.com/us/promote) қараңыз.
 
-[**Back to the top**](#top)
+[**Жоғарыға оралу**](#top)
 
 {{ signup_button }}

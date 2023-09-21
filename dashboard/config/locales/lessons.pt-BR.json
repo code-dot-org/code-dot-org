@@ -159,13 +159,13 @@
           "name": "Projeto - Protótipo de Papel"
         },
         "csd4-2017/Designing Apps for Good": {
-          "name": "Criando aplicativos para o bem"
+          "name": "Criando Apps for Good"
         },
         "csd4-2017/Market Research": {
           "name": "Pesquisa de mercado"
         },
         "csd4-2017/Paper Prototypes": {
-          "name": "Protótipos de papel"
+          "name": "Protótipos em Papel"
         },
         "csd4-2017/Prototype Testing": {
           "name": "Protótipo de Teste"
@@ -513,7 +513,7 @@
           "name": "Explore Ideias de Projetos"
         },
         "coursee-2017/The Design Process": {
-          "name": "O processo de design"
+          "name": "O Processo de Design"
         },
         "coursee-2017/Build Your Project": {
           "name": "Construir seu projeto"
@@ -603,7 +603,7 @@
           "name": "Explore Ideias de Projetos"
         },
         "coursef-2017/The Design Process": {
-          "name": "O processo de design"
+          "name": "O Processo de Design"
         },
         "coursef-2017/Build Your Project": {
           "name": "Construir seu projeto"
@@ -708,7 +708,7 @@
           "name": "Explore Ideias de Projetos"
         },
         "express-2017/The Design Process": {
-          "name": "O processo de design"
+          "name": "O Processo de Design"
         },
         "express-2017/Build Your Project": {
           "name": "Construir seu projeto"
@@ -924,13 +924,13 @@
           "name": "Projeto - Protótipo de Papel"
         },
         "csd4-2018/Designing Apps for Good": {
-          "name": "Criando aplicativos para o bem"
+          "name": "Criando Apps for Good"
         },
         "csd4-2018/Market Research": {
           "name": "Pesquisa de mercado"
         },
         "csd4-2018/Paper Prototypes": {
-          "name": "Protótipos de papel"
+          "name": "Protótipos em Papel"
         },
         "csd4-2018/Prototype Testing": {
           "name": "Protótipo de Teste"
@@ -1308,7 +1308,7 @@
           "name": "Explore Ideias de Projetos"
         },
         "coursee-2018/The Design Process": {
-          "name": "O processo de design"
+          "name": "O Processo de Design"
         },
         "coursee-2018/Build Your Project": {
           "name": "Construir seu projeto"
@@ -1395,7 +1395,7 @@
           "name": "Explore Ideias de Projetos"
         },
         "coursef-2018/The Design Process": {
-          "name": "O processo de design"
+          "name": "O Processo de Design"
         },
         "coursef-2018/Build Your Project": {
           "name": "Construir seu projeto"
@@ -1521,7 +1521,7 @@
           "name": "Explore Ideias de Projetos"
         },
         "express-2018/The Design Process": {
-          "name": "O processo de design"
+          "name": "O Processo de Design"
         },
         "express-2018/Build Your Project": {
           "name": "Construir seu projeto"
@@ -1749,13 +1749,13 @@
           "name": "Projeto - Protótipo de Papel"
         },
         "csd4-2019/Designing Apps for Good": {
-          "name": "Criando aplicativos para o bem"
+          "name": "Criando Apps for Good"
         },
         "csd4-2019/Market Research": {
           "name": "Pesquisa de mercado"
         },
         "csd4-2019/Paper Prototypes": {
-          "name": "Protótipos de papel"
+          "name": "Protótipos em Papel"
         },
         "csd4-2019/Prototype Testing": {
           "name": "Protótipo de Teste"
@@ -2753,6 +2753,7 @@
         },
         "csd1-2021/Exploring Problem Solving - Games Theme (Alternate Lesson 3)": {
           "assessment_opportunities": "1.  **Aplique o processo de resolução de problemas para abordar uma variedade de problemas**\n\n    Na página 5 do Guia de Atividades, verifique o gráfico para garantir que os alunos estejam adotando medidas razoáveis para cada um dos problemas.\n\n2.  **Avalie se um problema está bem definido e aplique estratégias para definir o problema com mais precisão**\n\n    Para a última pergunta da página 5 do Guia de Atividades, certifique-se de que os alunos tenham pelo menos uma pergunta ou estratégia que seja uma forma eficaz de definir melhor um problema.",
+          "overview": "**Pergunta do Dia: Como podemos aplicar o processo de resolução de problemas a muitos tipos diferentes de problemas?**\n\nNesta lição, os alunos aplicam o processo de resolução de problemas a três problemas diferentes para entender melhor o valor de cada etapa. Eles resolverão um labirinto, organizarão uma equipe para correr o mais rápido possível e criarão um jogo. Os problemas se tornam cada vez mais complexos e mal definidos para destacar como o processo de resolução de problemas é particularmente útil ao lidar com esses tipos de problemas. A aula termina com os alunos refletindo sobre sua experiência com o processo de resolução de problemas. Eles justificarão a inclusão de cada etapa e discutirão questões ou estratégias que possam ajudá-los a definir melhor os problemas abertos, pois essa geralmente é a etapa mais crítica.\n\nEsta lição provavelmente levará dois períodos de aula ou mais para ser concluída. Os dois primeiros problemas podem ser abordados em um único período de aula, mas o terceiro precisará ser transferido para um segundo dia.\n\n**Esta é uma atividade alternativa para [Explorar a solução de problemas](/s/csd1-2021/lessons/3/)**",
           "purpose": "Esta lição oferece aos alunos mais prática no processo de resolução de problemas em diversos contextos. Ela destaca o fato de que o processo de resolução de problemas é particularmente útil para abordar problemas mal definidos. O brainstorming final da lição fornece aos alunos algumas estratégias e perguntas que eles podem se fazer para definir melhor os problemas, já que essa geralmente é a etapa mais crítica. Os problemas apresentados nesta lição também ajudam a conduzir uma discussão na lição a seguir sobre os tipos de problemas que os computadores são preparados para resolver."
         },
         "csd2-2021/Exploring Web Pages": {
@@ -2776,6 +2777,9 @@
         },
         "csd2-2021/Styling Elements with CSS": {
           "name": "Estilizando elementos com CSS"
+        },
+        "csd2-2021/Websites for a Purpose": {
+          "name": "Websites com um Propósito"
         },
         "csd2-2021/Team Problem Solving": {
           "name": "Solução de problemas da equipe"
@@ -2801,6 +2805,7 @@
         "csd3-2021/Programming for Entertainment": {
           "name": "Programação para entretenimento",
           "assessment_opportunities": "1.  **Identifique como a Ciência da Computação é usada em um campo de entretenimento**\n\n    No guia de atividades, consulte a seção “Fatos ou usos interessantes” da segunda página e verifique se os alunos identificaram algum uso da CC nas áreas escolhidas.",
+          "purpose": "Esta lição tem como objetivo iniciar esta unidade de programação de forma a envolver os alunos das mais diferentes origens e interesses. Embora o ponto final desta unidade exija que os alunos desenvolvam um jogo, você deve evitar começar dando muita ênfase aos vídeo games. Em vez disso, queremos ampliar a perspectiva dos alunos sobre como a programação é relevante para uma forma de entretenimento ou autoexpressão que seja pessoalmente envolvente. Isso fornecerá uma ponto de referência para onde os alunos podem voltar ao longo da unidade ao considerarem as possíveis aplicações das várias habilidades de programação que estarão aprendendo.",
           "student_overview": "Aluno\n**Pergunta do Dia: Como a Ciência da Computação é usada no entretenimento?**\n\nNesta lição, você explorará como a Ciência da Computação e, especificamente, a programação, desempenham um papel no entretenimento ou como um veículo para a autoexpressão."
         },
         "csd3-2021/Plotting Shapes": {
@@ -2810,18 +2815,29 @@
         },
         "csd3-2021/Drawing in Game Lab": {
           "name": "Desenhando no Laboratório de Jogos",
+          "overview": "\\*\\*Pergunta do Dia: Como podemos nos instruir um computador a desenhar formas na tela? \\*\\*\n\nOs alunos são apresentados ao Game Lab, o ambiente de programação desta unidade, e começam a usá-lo para posicionar formas na tela. Eles aprendem os conceitos básicos de sequenciamento e depuração, além de alguns comandos simples. No final da aula, os alunos poderão programar imagens como as que fizeram com a ferramenta de desenho da lição anterior.",
+          "purpose": "O objetivo principal desta lição é dar aos alunos a chance de se acostumarem com o ambiente de programação, bem como com o sequenciamento e a depuração em nível básico que eles usarão em toda a unidade. Os alunos começam com uma introdução ao ambiente de desenvolvimento interativo (IDE) do GameLab e, em seguida, aprendem os três comandos ([\\`rect\\` (#4dd0e1)](/docs/gamelab/rect/), [\\`ellipse\\` (#4dd0e1)](/docs/gamelab/ellipse/)e [\\`fill\\` (#4dd0e1)](/docs/gamelab/fill/)) que precisarão para codificar os mesmos tipos de imagens que criaram no papel na lição anterior. Os níveis de desafio oferecem aos estudantes com mais experiência em programação a chance de explorarem ainda mais o Game Lab.",
           "student_overview": "**Pergunta do dia: Como podemos comunicar a um computador como desenhar formas na tela?**\n\nNesta lição, você começará a usar o Laboratório de Jogos para posicionar formas na tela enquanto trabalha com os conceitos de sequenciamento e depuração. "
         },
         "csd3-2021/Shapes and Parameters": {
           "name": "Formas e Parâmetros",
+          "assessment_opportunities": "1.  **Pratique e raciocine sobre como desenhar comandos com vários parâmetros**\n\n    Veja o nível 7 no Code Studio.",
+          "overview": "\\*\\*Pergunta do Dia: Como podemos usar parâmetros para dar instruções mais específicas ao computador? \\*\\*\n\nNesta lição, os alunos continuam desenvolvendo sua familiaridade com o Game Lab ao manipularem a largura e a altura das formas que usam para desenhar. A lição começa com uma discussão que conecta a funcionalidade expandida do bloco (por exemplo, formas de tamanhos diferentes) à necessidade de mais entradas de blocos, ou “parâmetros”. Os alunos aprendem a desenhar com versões de [\\`ellipse()\\`(#4dd0e1)](/docs/gamelab/ellipse/) e [\\`rect()\\`(#4dd0e1)](/docs/gamelab/rect/) que incluem parâmetros de largura e altura. Eles também aprendem a usar o bloco [\\`background() \\`(#4dd0e1)](/docs/gamelab/background/) .",
+          "purpose": "Esta lição oferece aos alunos a chance de expandir um pouco suas habilidades de desenho enquanto continuam desenvolvendo habilidades de programação de uso geral. Eles precisarão raciocinar sobre o plano de coordenadas x-y, considerar a ordem de seu código e aumentar um pouco a complexidade de seus programas. Esta lição deve se concentrar principalmente na construção de habilidades.",
           "student_overview": "**Pergunta do dia: Como podemos usar parâmetros para dar instruções mais específicas ao computador?**\n\nNesta lição, você continuará trabalhando no Laboratório de Jogos e aumentando sua familiaridade com o desenho de formas na tela manipulando os “parâmetros” das formas que está usando para desenhar. "
         },
         "csd3-2021/Variables": {
           "name": "Variáveis",
+          "assessment_opportunities": "1.  **Identifique uma variável como forma de rotular e referenciar um valor num programa**\n\n    Veja o prompt de reflexão no Fechamento.\n\n2.  **Use variáveis num programa para armazenar uma informação usada várias vezes**\n\n    Consulte o Nível 7 no Code Studio.",
+          "overview": "\\*\\*Pergunta do Dia: Como podemos usar variáveis para armazenar informações em nossos programas? \\*\\*\n\nNesta lição, os alunos aprendem a usar variáveis para rotular um número. Os alunos começam a aula com uma descrição muito básica da finalidade de uma variável dentro do contexto do componente de armazenamento do modelo de entrada-saída-armazenamento-processamento. Os alunos então concluem uma progressão de nível que reforça o modelo de uma variável como forma de rotular ou nomear um número.",
+          "purpose": "Esta lição é quando os alunos verão variáveis no curso pela primeira vez que, e não se espera que eles entendam completamente como as variáveis funcionam até a sua conclusão. Os alunos devem sair desta aula sabendo que as variáveis são uma forma de rotular um valor em seus programas para que possam ser reutilizados ou referenciados posteriormente. Na lição a seguir, os alunos conhecerão números aleatórios, nos quais verão um uso mais poderoso das variáveis.  \n\nUsar variáveis para manipular desenhos é uma habilidade surpreendentemente desafiadora que requer muita premeditação e planejamento. Embora os alunos usem ou modifiquem muitos programas nesta lição, não se espera que eles componham programas que usem variáveis para modificar as características de um desenho. Nas aulas posteriores, os alunos expandirão sua compreensão das variáveis e das formas mais avançadas de usá-las.",
           "student_overview": "**Pergunta do dia: Como podemos usar variáveis para armazenar informações em nossos programas?**\n\nNesta lição, você conhecerá as variáveis - um conceito importante em programação usado para armazenar valores em seus programas!"
         },
         "csd3-2021/Random Numbers": {
           "name": "Números Aleatórios",
+          "assessment_opportunities": "**1. Gerar e usar números aleatórios em um programa**\n\nConsulte o nível 6 no Code Studio.\n\n**2. Atualizar um valor armazenado em uma variável**\n\nConsulte o nível 4 no Code Studio. Verifique se os alunos atualizaram o valor de \"petalSize\" entre o desenho das duas flores.",
+          "overview": "**Pergunta do Dia: Como podemos fazer com que nossos programas se comportem de maneira diferente a cada vez que são executados?**\n\nOs alunos conhecem o bloco [\\`randomNumber()\\`(#FFB74D)](/docs/gamelab/randomNumber/) e como ele pode ser usado para criar novos comportamentos em seus programas. Em seguida, eles aprendem como atualizar variáveis durante um programa. Combinando todas essas habilidades, os alunos desenham imagens aleatórias.",
+          "purpose": "Esta lição introduz a aleatoriedade, que é importante tanto para tornar os programas mais interessantes quanto para motivar o uso de variáveis. No meio da atividade, os alunos serão expostos a uma variável que é atualizada várias vezes no programa, expandindo sua compreensão de como as variáveis podem ser usadas.",
           "student_overview": "**Pergunta do dia: Como podemos fazer com que nossos programas se comportem de maneira diferente a cada vez que são executados?**\n\nNesta lição, você aprenderá a usar o bloco randomNumber() para criar comportamentos em seus programas!"
         },
         "csd3-2021/Sprites": {
@@ -2877,6 +2893,7 @@
           "student_overview": "**Pergunta do dia: Como a programação pode ajudar a simplificar problemas complicados?**\n\nNesta lição, você aprenderá sobre detecção de colisões explorando como um computador pode usar a matemática, a localização e o tamanho dos sprites para detectar se eles estão se tocando. "
         },
         "csd3-2021/Mini-Project: Side Scroller": {
+          "name": "Mini-projeto - Rolagem Lateral",
           "student_overview": "**Pergunta do dia: Como os novos tipos de detecção de colisão e movimentos de sprites podem ser usados para criar um jogo?**\n\nNesta lição, você usará o que aprendeu sobre detecção e velocidade de colisão para criar um jogo simples de rolagem lateral!"
         },
         "csd3-2021/Complex Sprite Movement": {
@@ -2911,35 +2928,93 @@
         "csd3-2021/lesson-1": {
           "name": "Pesquisa pós-curso da CS Discoveries"
         },
+        "csd4-2021/Analysis of Design": {
+          "name": "Projetando com Empatia",
+          "purpose": "Os alunos entrarão nesta unidade com uma compreensão do processo de resolução de problemas das unidades anteriores.\n\nO processo de resolução de problemas usado em todas as descobertas de CS é:\n\n-   Definir\n-   Preparar\n-   Experimentar\n-   Refletir\n\nNesta lição, os alunos examinam objetos do mundo real para entender como o processo de resolução de problemas pode ser aplicado para ajudar outras pessoas. A partir desta lição, reformularemos esse processo para incluir uma camada de empatia, incentivando os alunos a considerarem como os outros vivenciarão e usarão o que criaram.\n\nEstamos começando propositadamente examinando objetos não técnicos para incentivar os alunos a pensar de forma mais ampla sobre o que significa considerar o usuário final de um produto antes de nos aprofundarmos em como ele se aplica especificamente ao design de software.",
+          "student_overview": "\\*\\*Pergunta do Dia: Como podemos escolher produtos com base nas necessidades de um usuário? \\*\\*\n\nNesta lição, você explorará a relação entre os usuários, suas necessidades e o design dos objetos que eles usam."
+        },
         "csd4-2021/Understanding Your User": {
-          "name": "Entendendo seu usuário"
+          "name": "Entendendo seu usuário",
+          "overview": "**Pergunta do Dia: Como podemos garantir que um produto atenderá às necessidades de um usuário?**\n\nOs designers precisam entender as necessidades de seus usuários para criar produtos úteis a eles. Esta lição incentiva os alunos a pensarem em como projetar para outra pessoa, colocando-se no lugar dela, usando um perfil de usuário e reagindo a uma série de produtos da mesma forma que esse usuário reagiria. Cada aluno recebe um perfil de usuário descrevendo uma pessoa. Eles devem usar esse perfil para escolher produtos adequados, criticar o design do produto escolhido e sugerir melhorias no design.",
+          "purpose": "Esta lição se baseia na anterior, pedindo aos alunos que não apenas considerem que _existe_ um usuário para o qual os produtos foram projetados, mas também tenham empatia por esses usuários em potencial. Ao longo desta unidade, os alunos trabalharão para aplicar o processo de resolução de problemas desenvolvido na Unidade 1 aos problemas de outras pessoas. A empatia é um elemento-chave desse tipo de design centrado no usuário e uma habilidade difícil para estudantes dessa idade dominarem.",
+          "student_overview": "**Pergunta do Dia: Como podemos garantir que um produto atenda às necessidades do usuário?**\n\nNesta lição, você explorará como diferentes usuários podem reagir a uma variedade de produtos."
+        },
+        "csd4-2021/User-Centered Design 1": {
+          "overview": "**Pergunta do Dia: Como podemos projetar para outras pessoas além de nós mesmos?**\n\nEsta é a primeira parte de uma aula de dois dias em que os alunos são guiados por uma versão abreviada do processo de design que eles verão ao longo desta unidade. Esta lição se concentra nas etapas Definir e Preparar do processo. Os alunos primeiro fazem um brainstorming de uma lista de possíveis usuários de roupas inteligentes. Com a turma toda, eles então agrupam essas ideias em categorias amplas e cada grupo escolhe uma categoria de usuário. Os grupos repetem esse processo para debater as necessidades ou preocupações de seus usuários, eventualmente categorizando essas necessidades e escolhendo uma em que se concentrar. Na próxima lição, os alunos concluirão as etapas Tentar e Refletir do processo de design.",
+          "purpose": "Esta microatividade é o primeiro dos três projetos de design desta unidade. É uma introdução rápida ao processo de design centrado no usuário, cujo objetivo é proporcionar aos alunos uma experiência com o design centrado no usuário que eles possam desenvolver em projetos posteriores. Nesta lição, o objetivo principal é estabelecer que as decisões de design serão tomadas tendo em mente as necessidades do usuário. A prática de categorizar muitas ideias diferentes para ajudar a tomar decisões também reaparecerá mais adiante na unidade.\n\nA atividade desta lição é uma adaptação do [Design Charrette da Universidade de Washington](http://www.hcde.washington.edu/research/archives#UCD-outreach).",
+          "student_overview": "**Pergunta do Dia: Como podemos projetar para outras pessoas além de nós mesmos?**\n\nNesta lição, você usará o processo de design para o desenvolvimento de ideias para a criação de roupas inteligentes. "
+        },
+        "csd4-2021/User-Centered Design 2": {
+          "student_overview": "**Pergunta do Dia: Como podemos projetar um produto para atender às necessidades do usuário?**\n\nNesta lição, você continuará trabalhando no design de uma peça de roupa inteligente, usando as necessidades e as preocupações específicas que você discutiu com sua equipe."
         },
         "csd4-2021/User Interfaces": {
-          "name": "Interfaces de Usuário"
+          "name": "Interfaces de Usuário",
+          "student_overview": "**Pergunta do Dia: Como podemos testar um aplicativo para garantir que ele atenda às necessidades do usuário?**\n\nNesta lição, você examinará um protótipo em papel para um aplicativo de bate-papo e começará a identificar formas de aprimorá-lo."
         },
         "csd4-2021/Feedback and Testing": {
-          "name": "Teste e Feedback"
+          "name": "Teste e Feedback",
+          "student_overview": "**Pergunta do Dia: Como podemos usar o feedback para melhorar um aplicativo?**\n\nNesta lição, você começará a revisar o protótipo em papel usando o feedback e as solicitações dos usuários."
         },
         "csd4-2021/Identifying User Needs": {
-          "name": "Identificando Necessidades do Usuário"
+          "name": "Identificando Necessidades do Usuário",
+          "student_overview": "**Pergunta do Dia: Como as entrevistas com os usuários podem nos ajudar a criar aplicativos que atendam às suas necessidades?**\n\nNesta lição, você entrevistará colegas de turma para identificar as necessidades do usuário que poderiam ser atendidas por meio do desenvolvimento de um aplicativo."
         },
         "csd4-2021/Project - Paper Prototype": {
-          "name": "Projeto - Protótipo de Papel"
+          "name": "Projeto - Protótipo de Papel",
+          "student_overview": "**Pergunta do Dia: Como posso desenvolver um protótipo de aplicativo para um usuário?**\n\nNesta lição, você usará a entrevista com um colega de classe da lição anterior para criar ideias de aplicativos que atendam às necessidades de seus usuários."
         },
         "csd4-2021/Designing Apps for Good": {
-          "name": "Criando aplicativos para o bem"
+          "name": "Criando Apps for Good",
+          "student_overview": "**Pergunta do Dia: O que é um App for Good que queremos criar?**\n\nNesta lição, você iniciará o processo de criação de um aplicativo que durará até o final desta unidade e começará com um plano de como sua equipe funcionará em conjunto durante a criação desse aplicativo, um tópico para seu aplicativo e usuários em potencial."
         },
         "csd4-2021/Market Research": {
-          "name": "Pesquisa de mercado"
+          "name": "Pesquisa de mercado",
+          "student_overview": "**Pergunta do Dia: Como podemos usar os aplicativos existentes como inspiração para nossos próprios aplicativos?**\n\nNesta lição, você mergulhará no desenvolvimento de aplicativos explorando os aplicativos existentes que podem atender usuários semelhantes aos do aplicativo em que você está trabalhando."
+        },
+        "csd4-2021/Exploring UI Elements": {
+          "name": "Explorando Elementos de Interface UI",
+          "student_overview": "**Pergunta do Dia: Quais elementos da interface do usuário serão úteis para nosso aplicativo?**\n\nNesta lição, você explorará alguns exemplos de aplicativos criados no App Lab e usará esses exemplos para ajudar a criar seu primeiro protótipo em papel do seu aplicativo."
+        },
+        "csd4-2021/Paper Prototypes": {
+          "name": "Crie um Protótipo de Papel",
+          "student_overview": "**Pergunta do Dia: Como podemos criar um protótipo em papel para nosso aplicativo?**\n\nNesta lição, você trabalhará com sua equipe para criar um protótipo em papel para seu aplicativo."
         },
         "csd4-2021/Prototype Testing": {
-          "name": "Protótipo de Teste"
+          "name": "Protótipo de Teste",
+          "student_overview": "**Pergunta do Dia: Como nosso protótipo funciona quando testado por usuários reais?**\n\nNesta lição, você trabalhará com sua equipe para testar seu protótipo em papel com outros membros da turma."
+        },
+        "csd4-2021/Digital Design": {
+          "name": "Modo de Design no App Lab",
+          "student_overview": "\\*\\*Pergunta do Dia: Como podemos usar o App Lab e o Design Mode para criar aplicativos? \\*\\*\n\nNesta lição, você trabalhará com sua equipe para começar a criar a próxima iteração do seu aplicativo no App Lab."
+        },
+        "csd4-2021/Build a Digital Prototype": {
+          "name": "Crie um Protótipo Digital",
+          "student_overview": "**Pergunta do Dia: Como posso criar um protótipo digital a partir de um protótipo em papel?**\n\nNesta lição, você trabalhará com sua equipe para criar a próxima iteração do seu aplicativo, com cada membro da equipe criando pelo menos uma página do seu aplicativo."
+        },
+        "csd4-2021/Events In AppLab": {
+          "student_overview": "**Pergunta do Dia: Como posso usar eventos para criar um aplicativo?**\n\nNesta lição, você combinará as telas que cada membro da equipe criou em um único aplicativo e aprenderá a programar eventos para poder navegar entre as telas."
+        },
+        "csd4-2021/Linking Screens": {
+          "name": "Vinculando Telas de Protótipo",
+          "student_overview": "**Pergunta do Dia: Como posso combinar telas para criar um protótipo digital completo?**\n\nNesta lição, você importará a tela de cada colega de equipe para seu próprio aplicativo e trabalhará de forma independente para adicionar eventos ao seu código a fim de vincular as telas."
         },
         "csd4-2021/Testing the App": {
-          "name": "Testando o aplicativo"
+          "name": "Testando o aplicativo",
+          "student_overview": "**Pergunta do Dia: Como nosso protótipo digital funciona quando testado por usuários reais?**\n\nNesta lição, você realizará outra rodada de testes com usuários com seu protótipo digital e coletará feedback que será usado para informar a iteração final do seu aplicativo."
+        },
+        "csd4-2021/Bugs and Features": {
+          "name": "Erros e Recursos",
+          "student_overview": "**Pergunta do Dia: Como podemos criar um plano para resolver bugs e recursos em nosso protótipo?**\n\nNesta lição, você usará o feedback da lição anterior para abordar as necessidades dos usuários, bem como quaisquer bugs que você precise corrigir."
+        },
+        "csd4-2021/Updating Your Prototype": {
+          "name": "Atualizando seu Protótipo",
+          "student_overview": "**Pergunta do Dia: Como podemos monitorar nosso trabalho enquanto fazemos atualizações em nosso aplicativo?**\n\nNesta lição, você trabalhará com sua equipe para implementar mudanças que atendam às necessidades de seus usuários."
         },
         "csd4-2021/Project - App Presentation": {
-          "name": "Projeto - Apresentação do App"
+          "name": "Projeto - Apresentação do App",
+          "overview": "**Pergunta do Dia: Como posso apresentar as etapas do nosso processo de design para pessoas que não fazem parte da nossa equipe?**\n\nAs equipes já pesquisaram um tópico de importância pessoal e social, desenvolveram e testaram um protótipo em papel e um protótipo digital e repetiram o aplicativo inicial para incorporar novos recursos e correções de bugs. Chegou a hora de eles revisarem o que fizeram e elaborarem uma apresentação coerente para demonstrar seu processo de criação. Usando o modelo de apresentação fornecido, as equipes se preparam para apresentar sobre seu processo de desenvolvimento de aplicativos, incluindo o problema que se propuseram a resolver, as formas pelas quais incorporaram o feedback dos testes e seus planos para o futuro.",
+          "purpose": "Esta lição é o ponto culminante das últimas semanas de trabalho no projeto. Ao se prepararem para apresentar seu trabalho, é importante que os alunos vejam essa etapa como mais do que apenas o elemento relacionado à programação do aplicativo. O objetivo da apresentação é reconhecer a pesquisa, o design, os testes e a iteração pelos quais as equipes passaram.",
+          "student_overview": "\\*\\*Pergunta do Dia: Como posso apresentar as etapas do nosso processo de design para pessoas de fora da nossa equipe? \\*\\*\n\nNesta lição, você trabalhará com sua equipe para preparar uma apresentação para “vender” o aplicativo que você desenvolveu."
         },
         "csd4-2021/CS Discoveries Post-Course Survey": {
           "name": "Pesquisa pós-curso da CS Discoveries"
@@ -4084,6 +4159,8 @@
         "csd1-2022/Exploring Problem Solving - Games Theme (Alternate Lesson 3)": {
           "name": "Explorando a Resolução de Problemas - Temática de Jogos (Lição Extra 3)",
           "assessment_opportunities": "1.  **Aplique o processo de resolução de problemas para abordar uma variedade de problemas**\n\n    Na página 5 do Guia de Atividades, verifique o gráfico para garantir que os alunos estejam adotando medidas razoáveis para cada um dos problemas.\n\n2.  **Avalie se um problema está bem definido e aplique estratégias para definir o problema com mais precisão**\n\n    Para a última pergunta da página 5 do Guia de Atividades, certifique-se de que os alunos tenham pelo menos uma pergunta ou estratégia que seja uma forma eficaz de definir melhor um problema.",
+          "overview": "**Pergunta do Dia: Como podemos aplicar o processo de resolução de problemas a muitos tipos diferentes de problemas?**\n\nNesta lição, os alunos aplicam o processo de resolução de problemas a três problemas diferentes para entender melhor o valor de cada etapa. Eles resolverão um labirinto, organizarão uma equipe para correr o mais rápido possível e criarão um jogo. Os problemas se tornam cada vez mais complexos e mal definidos para destacar como o processo de resolução de problemas é particularmente útil ao lidar com esses tipos de problemas. A aula termina com os alunos refletindo sobre sua experiência com o processo de resolução de problemas. Eles justificarão a inclusão de cada etapa e discutirão questões ou estratégias que possam ajudá-los a definir melhor os problemas abertos, pois essa geralmente é a etapa mais crítica.\n\nEsta lição provavelmente levará dois períodos de aula ou mais para ser concluída. Os dois primeiros problemas podem ser abordados em um único período de aula, mas o terceiro precisará ser transferido para um segundo dia.\n\n**Esta é uma atividade alternativa para [Explorar a solução de problemas](/s/csd1-2022/lessons/3/)**",
+          "preparation": "-   Imprima o guia de atividades para cada aluno\n-   Disponibilize papéis para rascunhar o problema da festa de aniversário \n-   Distribua cartolinas para registrar as estratégias para a definição de problemas na discussão de fechamento\n-   Consulte o fórum na [\"Sala dos Professores\"](https://forum.code.org/t/resource-hub-problem-solving-and-computing-chapter-1-lessons-1-3/36188) para os professores autorizados para encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando virtualmente, verifique nossas [Adaptações para Aulas Virtuais](https://docs.google.com/document/d/1420LdkGrISwhKjHu7i4XCbi60ahmCRnQoYf1_JosdgA/preview)",
           "purpose": "Esta lição oferece aos alunos mais prática no processo de resolução de problemas em diversos contextos. Ela destaca o fato de que o processo de resolução de problemas é particularmente útil para abordar problemas mal definidos. O brainstorming final da lição fornece aos alunos algumas estratégias e perguntas que eles podem se fazer para definir melhor os problemas, já que essa geralmente é a etapa mais crítica. Os problemas apresentados nesta lição também ajudam a conduzir uma discussão na lição a seguir sobre os tipos de problemas que os computadores são preparados para resolver.",
           "student_overview": "**Pergunta do Dia: Como podemos aplicar o processo de resolução de problemas a diferentes tipos de problemas?**\n\nNesta lição, você vai aplicar o processo de resolução de problemas a diferentes problemas, sendo que cada um ficará cada vez mais complexo!"
         },
@@ -4146,6 +4223,7 @@
           "student_overview": "\\*\\*Pergunta do Dia: Quais habilidades e práticas ajudam quando codificamos páginas da web? \\*\\*\n\nNesta lição, você trabalhará na criação das páginas da web que planejou nas aulas anteriores. "
         },
         "csd2-2022/Websites for a Purpose": {
+          "name": "Websites com um Propósito",
           "preparation": "-   Consulte o fórum da [\"Sala dos Professores\"](https://forum.code.org/t/resource-hub-web-development-chapter-2-lessons-14-20/36191) para professores autorizados para encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando virtualmente, considere conferir nossas [Modificações para Aulas Virtuais](https://docs.google.com/document/d/15Gkj12vQaZmbJMZbfKk7Ec3krr1aOJeG16zy3wZ83jQ/preview)",
           "student_overview": "\\*\\*Pergunta do dia: Quais são os diferentes motivos pelos quais as pessoas criam sites? \\*\\*\n\nNesta lição, você explorará os diferentes motivos pelos quais as pessoas criam sites e os problemas que podem ser resolvidos com seu próprio site.  "
         },
@@ -4189,6 +4267,7 @@
           "assessment_opportunities": "1.  **Identifique como a Ciência da Computação é usada em um campo de entretenimento**\n\n    No guia de atividades, consulte a seção “Fatos ou usos interessantes” da segunda página e verifique se os alunos identificaram algum uso da CC nas áreas escolhidas.",
           "overview": "**Pergunta do Dia: Como a Ciência da Computação é usada para o entretenimento?**\n\nPede-se aos alunos que considerem os “problemas” do tédio e da autoexpressão e que reflitam sobre como abordam esses problemas em suas próprias vidas. A partir daí, os alunos explorarão como a ciência da computação em geral, e a programação especificamente, desempenham um papel em uma forma específica de entretenimento ou como um veículo para a autoexpressão.",
           "preparation": "-   Revise os recursos de pesquisa vinculados no Code Studio\n-   Imprima uma cópia do guia de atividades para cada grupo de três alunos\n-   Verifique o fórum da [\"Sala dos Professores\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-1-lessons-1-17/36192) para professores verificados para encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando virtualmente, confira nossas [Modificações para Aulas Virtuais](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)",
+          "purpose": "Esta lição tem como objetivo iniciar esta unidade de programação de forma a envolver os alunos das mais diferentes origens e interesses. Embora o ponto final desta unidade exija que os alunos desenvolvam um jogo, você deve evitar começar dando muita ênfase aos vídeo games. Em vez disso, queremos ampliar a perspectiva dos alunos sobre como a programação é relevante para uma forma de entretenimento ou autoexpressão que seja pessoalmente envolvente. Isso fornecerá uma ponto de referência para onde os alunos podem voltar ao longo da unidade ao considerarem as possíveis aplicações das várias habilidades de programação que estarão aprendendo.",
           "student_overview": "Aluno\n**Pergunta do Dia: Como a Ciência da Computação é usada no entretenimento?**\n\nNesta lição, você explorará como a Ciência da Computação e, especificamente, a programação, desempenham um papel no entretenimento ou como um veículo para a autoexpressão."
         },
         "csd3-2022/Plotting Shapes": {
@@ -4200,18 +4279,33 @@
         },
         "csd3-2022/Drawing in Game Lab": {
           "name": "Desenhando no Laboratório de Jogos",
+          "overview": "\\*\\*Pergunta do Dia: Como podemos nos instruir um computador a desenhar formas na tela? \\*\\*\n\nOs alunos são apresentados ao Game Lab, o ambiente de programação desta unidade, e começam a usá-lo para posicionar formas na tela. Eles aprendem os conceitos básicos de sequenciamento e depuração, além de alguns comandos simples. No final da aula, os alunos poderão programar imagens como as que fizeram com a ferramenta de desenho da lição anterior.",
+          "preparation": "-   Faça cópias do guia de atividades\n-   Consulte o fórum da [\"Sala dos Professores\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-1-lessons-1-17/36192) para professores autorizados para encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando virtualmente, confira nossas [Adaptações para Aulas Virtuais](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)",
+          "purpose": "O objetivo principal desta lição é dar aos alunos a chance de se acostumarem com o ambiente de programação, bem como com o sequenciamento e a depuração em nível básico que eles usarão em toda a unidade. Os alunos começam com uma introdução ao ambiente de desenvolvimento interativo (IDE) do GameLab e, em seguida, aprendem os três comandos ([\\`rect\\` (#4dd0e1)](/docs/gamelab/rect/), [\\`ellipse\\` (#4dd0e1)](/docs/gamelab/ellipse/)e [\\`fill\\` (#4dd0e1)](/docs/gamelab/fill/)) que precisarão para codificar os mesmos tipos de imagens que criaram no papel na lição anterior. Os níveis de desafio oferecem aos estudantes com mais experiência em programação a chance de explorarem ainda mais o Game Lab.",
           "student_overview": "\\*\\*Pergunta do Dia: Como podemos explicar a um computador como desenhar formas na tela? \\*\\*\n\nNesta lição, você começará a usar o Game Lab para posicionar formas na tela enquanto trabalha com os conceitos de sequenciamento e depuração. "
         },
         "csd3-2022/Shapes and Parameters": {
           "name": "Formas e Parâmetros",
+          "assessment_opportunities": "1.  **Pratique e raciocine sobre como desenhar comandos com vários parâmetros**\n\n    Veja o nível 7 no Code Studio.",
+          "overview": "\\*\\*Pergunta do Dia: Como podemos usar parâmetros para dar instruções mais específicas ao computador? \\*\\*\n\nNesta lição, os alunos continuam desenvolvendo sua familiaridade com o Game Lab ao manipularem a largura e a altura das formas que usam para desenhar. A lição começa com uma discussão que conecta a funcionalidade expandida do bloco (por exemplo, formas de tamanhos diferentes) à necessidade de mais entradas de blocos, ou “parâmetros”. Os alunos aprendem a desenhar com versões de [\\`ellipse()\\`(#4dd0e1)](/docs/gamelab/ellipse/) e [\\`rect()\\`(#4dd0e1)](/docs/gamelab/rect/) que incluem parâmetros de largura e altura. Eles também aprendem a usar o bloco [\\`background() \\`(#4dd0e1)](/docs/gamelab/background/) .",
+          "preparation": "-   Revise a sequência de níveis no Code Studio\n-   Verifique o fórum na [\"Sala dos Professores\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-1-lessons-1-17/36192) para professores auorizados para encontrar estratégias adicionais ou recursos compartilhados por outros professores\n-   Se estiver ensinando virtualmente, verifique nossas [Adaptações para Aulas Virtuais](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)",
+          "purpose": "Esta lição oferece aos alunos a chance de expandir um pouco suas habilidades de desenho enquanto continuam desenvolvendo habilidades de programação de uso geral. Eles precisarão raciocinar sobre o plano de coordenadas x-y, considerar a ordem de seu código e aumentar um pouco a complexidade de seus programas. Esta lição deve se concentrar principalmente na construção de habilidades.",
           "student_overview": "**Pergunta do Dia: Como podemos usar parâmetros para dar instruções mais específicas ao computador?**\n\nNesta lição, você continuará trabalhando no Game lab e aumentando sua familiaridade com os desenhos de formas na tela manipulando os “parâmetros” das formas que está usando para desenhar. "
         },
         "csd3-2022/Variables": {
           "name": "Variáveis",
+          "assessment_opportunities": "1.  **Identifique uma variável como forma de rotular e referenciar um valor num programa**\n\n    Veja o prompt de reflexão no Fechamento.\n\n2.  **Use variáveis num programa para armazenar uma informação usada várias vezes**\n\n    Consulte o Nível 7 no Code Studio.",
+          "overview": "\\*\\*Pergunta do Dia: Como podemos usar variáveis para armazenar informações em nossos programas? \\*\\*\n\nNesta lição, os alunos aprendem a usar variáveis para rotular um número. Os alunos começam a aula com uma descrição muito básica da finalidade de uma variável dentro do contexto do componente de armazenamento do modelo de entrada-saída-armazenamento-processamento. Os alunos então concluem uma progressão de nível que reforça o modelo de uma variável como forma de rotular ou nomear um número.",
+          "preparation": "-   Revise a progressão de níveis no Code Studio\n-   Verifique o fórum na [\"Sala dos Professores\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-1-lessons-1-17/36192) para professores autorizados para encontrar estratégias adicionais ou recursos compartilhados por outros professores\n-   Se estiver ensinando virtualmente, considere verificar nossas [Adaptações para Aulas Virtuais](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)",
+          "purpose": "Esta lição é quando os alunos verão variáveis no curso pela primeira vez que, e não se espera que eles entendam completamente como as variáveis funcionam até a sua conclusão. Os alunos devem sair desta aula sabendo que as variáveis são uma forma de rotular um valor em seus programas para que possam ser reutilizados ou referenciados posteriormente. Na lição a seguir, os alunos conhecerão números aleatórios, nos quais verão um uso mais poderoso das variáveis.  \n\nUsar variáveis para manipular desenhos é uma habilidade surpreendentemente desafiadora que requer muita premeditação e planejamento. Embora os alunos usem ou modifiquem muitos programas nesta lição, não se espera que eles componham programas que usem variáveis para modificar as características de um desenho. Nas aulas posteriores, os alunos expandirão sua compreensão das variáveis e das formas mais avançadas de usá-las.",
           "student_overview": "**Pergunta do Dia: Como podemos usar variáveis para armazenar informações em nossos programas?**\n\nNesta lição, você conhecerá as variáveis - um conceito importante em programação usado para armazenar valores em seus programas!"
         },
         "csd3-2022/Random Numbers": {
           "name": "Números Aleatórios",
+          "assessment_opportunities": "**1. Gerar e usar números aleatórios em um programa**\n\nConsulte o nível 6 no Code Studio.\n\n**2. Atualizar um valor armazenado em uma variável**\n\nConsulte o nível 4 no Code Studio. Verifique se os alunos atualizaram o valor de \"petalSize\" entre o desenho das duas flores.",
+          "overview": "**Pergunta do Dia: Como podemos fazer com que nossos programas se comportem de maneira diferente a cada vez que são executados?**\n\nOs alunos conhecem o bloco [\\`randomNumber()\\`(#FFB74D)](/docs/gamelab/randomNumber/) e como ele pode ser usado para criar novos comportamentos em seus programas. Em seguida, eles aprendem como atualizar variáveis durante um programa. Combinando todas essas habilidades, os alunos desenham imagens aleatórias.",
+          "preparation": "-   Revise a progressão de níveis no Code Studio\n-   Verifique o fórum na [\"Sala dos Professores\"](https://forum.code.org/t/resource-hub-interactive-animations-and-games-chapter-1-lessons-1-17/36192) para professores autorizados para encontrar estratégias adicionais ou recursos compartilhados por outros professores\n-   Se estiver ensinando virtualmente, considere verificar nossas [Adaptações para Aulas Virtuais](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)",
+          "purpose": "Esta lição introduz a aleatoriedade, que é importante tanto para tornar os programas mais interessantes quanto para motivar o uso de variáveis. No meio da atividade, os alunos serão expostos a uma variável que é atualizada várias vezes no programa, expandindo sua compreensão de como as variáveis podem ser usadas.",
           "student_overview": "**Pergunta do Dia: Como podemos fazer com que nossos programas se comportem de maneira diferente a cada vez que são executados?**\n\nNesta lição, você aprenderá a usar o bloco randomNumber() para criar comportamentos em seus programas!"
         },
         "csd3-2022/Sprites": {
@@ -4276,6 +4370,7 @@
           "student_overview": "**Pergunta do Dia: Como a programação pode ajudar a simplificar problemas complicados?**\n\nNesta lição, você aprenderá sobre detecção de colisões que exploram como um computador pode usar a matemática, a localização e o tamanho dos sprites para detectar se eles estão se tocando. "
         },
         "csd3-2022/Mini-Project - Side Scroller": {
+          "name": "Mini-projeto - Rolagem Lateral",
           "preparation": "-   Consulte o fórum da [\"Sala dos Professores\"](https://forum.code.org/t/project-hub-side-scroller-interactive-animations-and-games-lesson-20/36209) para professores autorizados para encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando virtualmente, considere conferir nossas [Modificações para Aulas Virtuais](https://docs.google.com/document/d/16yHyWom69h5OFd-4yYiuwSq9MOdan9sv3Q0R0tzmtD8/preview)",
           "student_overview": "**Pergunta do Dia: Como os novos tipos de detecção de colisão e movimentos de sprites podem ser usados para criar um jogo?**\n\nNesta lição, você usará o que aprendeu sobre detecção e velocidade de colisão para criar um jogo simples de rolagem lateral!"
         },
@@ -4315,41 +4410,103 @@
         "csd3-2022/CS Discoveries Post-Course Survey": {
           "name": "Pesquisa pós-curso da CS Discoveries"
         },
+        "csd4-2022/Designing With Empathy": {
+          "name": "Projetando com Empatia",
+          "overview": "\\*\\*Pergunta do Dia: Como podemos escolher produtos com base nas necessidades de um usuário?\n\nPara dar início a uma unidade dedicada à resolução de problemas em grupo e ao desenvolvimento de produtos para outros usuários, os alunos começam investigando o design de vários sapatos. Os alunos observam uma variedade de calçados e tentam combinar cada um deles com um usuário em potencial. Os alunos também fornecem feedback sobre esses designs, usando um \"I Like...\" / \"I Wish...\" / \"I Wonder...\" que será repetida ao longo da unidade. Para concluir a atividade, os alunos são solicitados a propor algumas mudanças em um conjunto de calçados que os tornariam mais úteis ou confortáveis.",
+          "preparation": "-   Imprima uma cópia do Guia de Atividades para cada aluno (ou distribua o documento digitalmente).\n-   Verifique o fórum na [\"Sala dos Professores\"](https://forum.code.org/t/resource-hub-the-design-process-chapter-1-lessons-1-8/36194) para professores autorizados para encontrar estratégias adicionais ou recursos compartilhados por outros professores.\n-   Se estiver ensinando virtualmente, verifique nossas [Adaptações para Aulas Virtuais](https://docs.google.com/document/d/1T7aTDpaXW8K8pOeLiz53WP-zGxFY3Q1o_CsaiXRiXpo/preview)",
+          "purpose": "Os alunos entrarão nesta unidade com uma compreensão do processo de resolução de problemas das unidades anteriores.\n\nO processo de resolução de problemas usado em todas as descobertas de CS é:\n\n-   Definir\n-   Preparar\n-   Experimentar\n-   Refletir\n\nNesta lição, os alunos examinam objetos do mundo real para entender como o processo de resolução de problemas pode ser aplicado para ajudar outras pessoas. A partir desta lição, reformularemos esse processo para incluir uma camada de empatia, incentivando os alunos a considerarem como os outros vivenciarão e usarão o que criaram.\n\nEstamos começando propositadamente examinando objetos não técnicos para incentivar os alunos a pensar de forma mais ampla sobre o que significa considerar o usuário final de um produto antes de nos aprofundarmos em como ele se aplica especificamente ao design de software.",
+          "student_overview": "\\*\\*Pergunta do Dia: Como podemos escolher produtos com base nas necessidades de um usuário? \\*\\*\n\nNesta lição, você explorará a relação entre os usuários, suas necessidades e o design dos objetos que eles usam."
+        },
         "csd4-2022/Understanding Your User": {
-          "name": "Entendendo seu usuário"
+          "name": "Entendendo seu usuário",
+          "overview": "**Pergunta do Dia: Como podemos garantir que um produto atenderá às necessidades de um usuário?**\n\nOs designers precisam entender as necessidades de seus usuários para criar produtos úteis a eles. Esta lição incentiva os alunos a pensarem em como projetar para outra pessoa, colocando-se no lugar dela, usando um perfil de usuário e reagindo a uma série de produtos da mesma forma que esse usuário reagiria. Cada aluno recebe um perfil de usuário descrevendo uma pessoa. Eles devem usar esse perfil para escolher produtos adequados, criticar o design do produto escolhido e sugerir melhorias no design.",
+          "preparation": "-   Imprima perfis de usuário em número suficiente para todos os alunos, garantindo a maior variedade possível\n-   Imprima um guia de atividades para cada usuário\n-   Prepare perguntas rápidas para o exercício de aquecimento\n-   Identifique os quatro cantos da sala de aula como A, B, C e D\n-   Organize a sala em grupos de 4 mesas e coloque um número em cada grupo de mesa (1, 2, 3,...)\n-   Consulte o fórum na [\"Sala dos Professores\"](https://forum.code.org/t/resource-hub-the-design-process-chapter-1-lessons-1-8/36194) para professores autorizados para encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando virtualmente, considere conferir nossas [Adaptações para aulas virtuais](https://docs.google.com/document/d/1T7aTDpaXW8K8pOeLiz53WP-zGxFY3Q1o_CsaiXRiXpo/preview)",
+          "purpose": "Esta lição se baseia na anterior, pedindo aos alunos que não apenas considerem que _existe_ um usuário para o qual os produtos foram projetados, mas também tenham empatia por esses usuários em potencial. Ao longo desta unidade, os alunos trabalharão para aplicar o processo de resolução de problemas desenvolvido na Unidade 1 aos problemas de outras pessoas. A empatia é um elemento-chave desse tipo de design centrado no usuário e uma habilidade difícil para estudantes dessa idade dominarem.",
+          "student_overview": "**Pergunta do Dia: Como podemos garantir que um produto atenda às necessidades do usuário?**\n\nNesta lição, você explorará como diferentes usuários podem reagir a uma variedade de produtos."
+        },
+        "csd4-2022/User Centered Design   Define and Prepare": {
+          "name": "Design Centrado no Usuário - Definir e Preparar",
+          "overview": "**Pergunta do Dia: Como podemos projetar para outras pessoas além de nós mesmos?**\n\nEsta é a primeira parte de uma aula de dois dias em que os alunos são guiados por uma versão abreviada do processo de design que eles verão ao longo desta unidade. Esta lição se concentra nas etapas Definir e Preparar do processo. Os alunos primeiro fazem um brainstorming de uma lista de possíveis usuários de roupas inteligentes. Com a turma toda, eles então agrupam essas ideias em categorias amplas e cada grupo escolhe uma categoria de usuário. Os grupos repetem esse processo para debater as necessidades ou preocupações de seus usuários, eventualmente categorizando essas necessidades e escolhendo uma em que se concentrar. Na próxima lição, os alunos concluirão as etapas Tentar e Refletir do processo de design.",
+          "preparation": "-   Certifique-se de que você tenha muitas notas adesivas, canetas e cartolinas para cartazes para os alunos trabalharem\n-   Monte grupos com, de preferência, 3 alunos cada\n-   Verifique o fórum na [\"Sala dos Professores\"](https://forum.code.org/t/resource-hub-the-design-process-chapter-1-lessons-1-8/36194) para professores autorizados para encontrar estratégias adicionais ou recursos compartilhados por outros professores\n-   Se estiver ensinando virtualmente, considere verificar nossas [Adaptações para aulas virtuais](https://docs.google.com/document/d/1T7aTDpaXW8K8pOeLiz53WP-zGxFY3Q1o_CsaiXRiXpo/preview)",
+          "purpose": "Esta microatividade é o primeiro dos três projetos de design desta unidade. É uma introdução rápida ao processo de design centrado no usuário, cujo objetivo é proporcionar aos alunos uma experiência com o design centrado no usuário que eles possam desenvolver em projetos posteriores. Nesta lição, o objetivo principal é estabelecer que as decisões de design serão tomadas tendo em mente as necessidades do usuário. A prática de categorizar muitas ideias diferentes para ajudar a tomar decisões também reaparecerá mais adiante na unidade.\n\nA atividade desta lição é uma adaptação do [Design Charrette da Universidade de Washington](http://www.hcde.washington.edu/research/archives#UCD-outreach).",
+          "student_overview": "**Pergunta do Dia: Como podemos projetar para outras pessoas além de nós mesmos?**\n\nNesta lição, você usará o processo de design para o desenvolvimento de ideias para a criação de roupas inteligentes. "
+        },
+        "csd4-2022/User Centered Design   Try and Reflect": {
+          "name": "Design Centrado no Usuário - Experimente e Reflita",
+          "student_overview": "**Pergunta do Dia: Como podemos projetar um produto para atender às necessidades do usuário?**\n\nNesta lição, você continuará trabalhando no design de uma peça de roupa inteligente, usando as necessidades e as preocupações específicas que você discutiu com sua equipe."
         },
         "csd4-2022/User Interfaces": {
-          "name": "Interfaces de Usuário"
+          "name": "Interfaces de Usuário",
+          "student_overview": "**Pergunta do Dia: Como podemos testar um aplicativo para garantir que ele atenda às necessidades do usuário?**\n\nNesta lição, você examinará um protótipo em papel para um aplicativo de bate-papo e começará a identificar formas de aprimorá-lo."
         },
         "csd4-2022/Feedback and Testing": {
-          "name": "Teste e Feedback"
+          "name": "Teste e Feedback",
+          "student_overview": "**Pergunta do Dia: Como podemos usar o feedback para melhorar um aplicativo?**\n\nNesta lição, você começará a revisar o protótipo em papel usando o feedback e as solicitações dos usuários."
         },
         "csd4-2022/Identifying User Needs": {
-          "name": "Identificando Necessidades do Usuário"
+          "name": "Identificando Necessidades do Usuário",
+          "student_overview": "**Pergunta do Dia: Como as entrevistas com os usuários podem nos ajudar a criar aplicativos que atendam às suas necessidades?**\n\nNesta lição, você entrevistará colegas de turma para identificar as necessidades do usuário que poderiam ser atendidas por meio do desenvolvimento de um aplicativo."
         },
         "csd4-2022/Project - Paper Prototype": {
-          "name": "Projeto - Protótipo de Papel"
+          "name": "Projeto - Protótipo de Papel",
+          "student_overview": "**Pergunta do Dia: Como posso desenvolver um protótipo de aplicativo para um usuário?**\n\nNesta lição, você usará a entrevista com um colega de classe da lição anterior para criar ideias de aplicativos que atendam às necessidades de seus usuários."
         },
         "csd4-2022/Designing Apps for Good": {
-          "name": "Criando aplicativos para o bem"
+          "name": "Criando Apps for Good",
+          "student_overview": "**Pergunta do Dia: O que é um App for Good que queremos criar?**\n\nNesta lição, você iniciará o processo de criação de um aplicativo que durará até o final desta unidade e começará com um plano de como sua equipe funcionará em conjunto durante a criação desse aplicativo, um tópico para seu aplicativo e usuários em potencial."
         },
         "csd4-2022/Market Research": {
-          "name": "Pesquisa de mercado"
+          "name": "Pesquisa de mercado",
+          "student_overview": "**Pergunta do Dia: Como podemos usar os aplicativos existentes como inspiração para nossos próprios aplicativos?**\n\nNesta lição, você mergulhará no desenvolvimento de aplicativos explorando os aplicativos existentes que podem atender usuários semelhantes aos do aplicativo em que você está trabalhando."
+        },
+        "csd4-2022/Exploring UI Elements": {
+          "name": "Explorando Elementos de Interface UI",
+          "student_overview": "**Pergunta do Dia: Quais elementos da interface do usuário serão úteis para nosso aplicativo?**\n\nNesta lição, você explorará alguns exemplos de aplicativos criados no App Lab e usará esses exemplos para ajudar a criar seu primeiro protótipo em papel do seu aplicativo."
+        },
+        "csd4-2022/Build a Paper Prototype": {
+          "name": "Crie um Protótipo de Papel",
+          "student_overview": "**Pergunta do Dia: Como podemos criar um protótipo em papel para nosso aplicativo?**\n\nNesta lição, você trabalhará com sua equipe para criar um protótipo em papel para seu aplicativo."
         },
         "csd4-2022/Prototype Testing": {
-          "name": "Protótipo de Teste"
+          "name": "Protótipo de Teste",
+          "student_overview": "**Pergunta do Dia: Como nosso protótipo funciona quando testado por usuários reais?**\n\nNesta lição, você trabalhará com sua equipe para testar seu protótipo em papel com outros membros da turma."
+        },
+        "csd4-2022/Design Mode in App Lab": {
+          "name": "Modo de Design no App Lab",
+          "student_overview": "\\*\\*Pergunta do Dia: Como podemos usar o App Lab e o Design Mode para criar aplicativos? \\*\\*\n\nNesta lição, você trabalhará com sua equipe para começar a criar a próxima iteração do seu aplicativo no App Lab."
+        },
+        "csd4-2022/Build a Digital Prototype": {
+          "name": "Crie um Protótipo Digital",
+          "student_overview": "**Pergunta do Dia: Como posso criar um protótipo digital a partir de um protótipo em papel?**\n\nNesta lição, você trabalhará com sua equipe para criar a próxima iteração do seu aplicativo, com cada membro da equipe criando pelo menos uma página do seu aplicativo."
         },
         "csd4-2022/Events in AppLab": {
-          "preparation": "-   Consulte o fórum da [\"Sala dos Professores\"](https://forum.code.org/t/resource-hub-the-design-process-chapter-2-lessons-9-21/36195) para professores autorizados para encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando virtualmente, considere conferir nossas [Modificações para Aulas Virtuais](https://docs.google.com/document/d/1T7aTDpaXW8K8pOeLiz53WP-zGxFY3Q1o_CsaiXRiXpo/preview)"
+          "name": "Eventos no App Lab",
+          "preparation": "-   Consulte o fórum da [\"Sala dos Professores\"](https://forum.code.org/t/resource-hub-the-design-process-chapter-2-lessons-9-21/36195) para professores autorizados para encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando virtualmente, considere conferir nossas [Modificações para Aulas Virtuais](https://docs.google.com/document/d/1T7aTDpaXW8K8pOeLiz53WP-zGxFY3Q1o_CsaiXRiXpo/preview)",
+          "student_overview": "**Pergunta do Dia: Como posso usar eventos para criar um aplicativo?**\n\nNesta lição, você combinará as telas que cada membro da equipe criou em um único aplicativo e aprenderá a programar eventos para poder navegar entre as telas."
         },
         "csd4-2022/Linking Prototype Screens": {
-          "preparation": "-   Consulte o fórum da [\"Sala dos Professores\"](https://forum.code.org/t/resource-hub-the-design-process-chapter-2-lessons-9-21/36195) para professores autorizados para encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando virtualmente, considere conferir nossas [Modificações para Aulas Virtuais](https://docs.google.com/document/d/1T7aTDpaXW8K8pOeLiz53WP-zGxFY3Q1o_CsaiXRiXpo/preview)"
+          "name": "Vinculando Telas de Protótipo",
+          "preparation": "-   Consulte o fórum da [\"Sala dos Professores\"](https://forum.code.org/t/resource-hub-the-design-process-chapter-2-lessons-9-21/36195) para professores autorizados para encontrar estratégias ou recursos adicionais compartilhados por outros professores\n-   Se você estiver ensinando virtualmente, considere conferir nossas [Modificações para Aulas Virtuais](https://docs.google.com/document/d/1T7aTDpaXW8K8pOeLiz53WP-zGxFY3Q1o_CsaiXRiXpo/preview)",
+          "student_overview": "**Pergunta do Dia: Como posso combinar telas para criar um protótipo digital completo?**\n\nNesta lição, você importará a tela de cada colega de equipe para seu próprio aplicativo e trabalhará de forma independente para adicionar eventos ao seu código a fim de vincular as telas."
         },
         "csd4-2022/Testing the App": {
-          "name": "Testando o aplicativo"
+          "name": "Testando o aplicativo",
+          "student_overview": "**Pergunta do Dia: Como nosso protótipo digital funciona quando testado por usuários reais?**\n\nNesta lição, você realizará outra rodada de testes com usuários com seu protótipo digital e coletará feedback que será usado para informar a iteração final do seu aplicativo."
+        },
+        "csd4-2022/Bugs and Features": {
+          "name": "Erros e Recursos",
+          "student_overview": "**Pergunta do Dia: Como podemos criar um plano para resolver bugs e recursos em nosso protótipo?**\n\nNesta lição, você usará o feedback da lição anterior para abordar as necessidades dos usuários, bem como quaisquer bugs que você precise corrigir."
+        },
+        "csd4-2022/Updating Your Prototype": {
+          "name": "Atualizando seu Protótipo",
+          "student_overview": "**Pergunta do Dia: Como podemos monitorar nosso trabalho enquanto fazemos atualizações em nosso aplicativo?**\n\nNesta lição, você trabalhará com sua equipe para implementar mudanças que atendam às necessidades de seus usuários."
         },
         "csd4-2022/Project - App Presentation": {
-          "name": "Projeto - Apresentação do App"
+          "name": "Projeto - Apresentação do App",
+          "overview": "**Pergunta do Dia: Como posso apresentar as etapas do nosso processo de design para pessoas que não fazem parte da nossa equipe?**\n\nAs equipes já pesquisaram um tópico de importância pessoal e social, desenvolveram e testaram um protótipo em papel e um protótipo digital e repetiram o aplicativo inicial para incorporar novos recursos e correções de bugs. Chegou a hora de eles revisarem o que fizeram e elaborarem uma apresentação coerente para demonstrar seu processo de criação. Usando o modelo de apresentação fornecido, as equipes se preparam para apresentar sobre seu processo de desenvolvimento de aplicativos, incluindo o problema que se propuseram a resolver, as formas pelas quais incorporaram o feedback dos testes e seus planos para o futuro.",
+          "preparation": "-   Determine quanto tempo cada grupo tem para apresentar. Normalmente, esse tempo é de 8 a 10 minutos por equipe, mas lembre-se de reservar algum tempo para acompanhar as equipes\n-   Crie uma cópia do conjunto de slides do modelo de apresentação para cada equipe\n-   Imprima uma cópia da rubrica para cada equipe.\n-   Verifique o fórum na [\"Sala dos Professores\"](https://forum.code.org/t/project-hub-app-presentation-the-design-process-lesson-21/36213) para professores verificados para estratégias adicionais ou recursos compartilhados por outros professores\n-   Se estiver ensinando virtualmente, considere verificar nossas [Adaptações para Aulas Virtuais](https://docs.google.com/document/d/1T7aTDpaXW8K8pOeLiz53WP-zGxFY3Q1o_CsaiXRiXpo/preview)",
+          "purpose": "Esta lição é o ponto culminante das últimas semanas de trabalho no projeto. Ao se prepararem para apresentar seu trabalho, é importante que os alunos vejam essa etapa como mais do que apenas o elemento relacionado à programação do aplicativo. O objetivo da apresentação é reconhecer a pesquisa, o design, os testes e a iteração pelos quais as equipes passaram.",
+          "student_overview": "\\*\\*Pergunta do Dia: Como posso apresentar as etapas do nosso processo de design para pessoas de fora da nossa equipe? \\*\\*\n\nNesta lição, você trabalhará com sua equipe para preparar uma apresentação para “vender” o aplicativo que você desenvolveu."
         },
         "csd4-2022/CS Discoveries Post-Course Survey": {
           "name": "Pesquisa pós-curso da CS Discoveries"
@@ -5473,7 +5630,7 @@
           "purpose": "Esta lição tem o objetivo de preparar os alunos para criarem projetos de programação simples no Laboratório de Fadas. Com essa habilidade, os alunos poderão criar projetos com qualquer tema, como outros temas da escola ou algo que seja pessoalmente relevante para eles. Visite a [CS Connections](https://code.org/educate/csc) para ver ideias de como integrar a ciência da computação a outros assuntos."
         },
         "hello-world-soccer-2022/Hello World: Food": {
-          "name": "Olá, Mundo: Futebol",
+          "name": "Olá, mundo: Futebol",
           "overview": "Nesta lição, os alunos vão aprender os fundamentos da ciência da computação, programando em um Laboratório de Fadas. O Laboratório de Fadas é uma ferramenta que você pode usar para desenvolver projetos imaginativos e divertidos. Os alunos vão aprender a criar e animar fadas e torná-las interativas utilizando eventos. \n\nExistem várias versões desta lição. Cada versão ensina os mesmos conceitos, mas recursos diferentes com imagens conforme o interesse de cada aluno. Para obter mais informações, visite a [página inicial do Hello World.](https://code.org/helloworld)",
           "preparation": "-   Desvende os enigmas para descobrir qualquer área com possíveis problemas na sua aula. \n-   Use os recursos da [CS Connections](https://code.org/educate/csc) para elaborar um plano de aulas de ciência da computação depois do tutorial inicial.",
           "purpose": "Esta lição tem o objetivo de preparar os alunos para criarem projetos de programação simples no Laboratório de Fadas. Com essa habilidade, os alunos poderão criar projetos com qualquer tema, como outros temas da escola ou algo que seja pessoalmente relevante para eles. Visite a [CS Connections](https://code.org/educate/csc) para ver ideias de como integrar a ciência da computação a outros assuntos."

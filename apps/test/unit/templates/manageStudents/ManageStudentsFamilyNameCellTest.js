@@ -41,6 +41,21 @@ describe('ManageStudentFamilyNameCell', () => {
     expect(wrapper.find('input').exists());
   });
 
+  it('renders disabled family name input when inputDisabled is true', () => {
+    const wrapper = shallow(
+      <ManageStudentFamilyNameCell
+        {...DEFAULT_PROPS}
+        familyName={'FamName'}
+        isEditing={true}
+        inputDisabled={true}
+        editStudent={editStudent}
+      />
+    );
+    const input = wrapper.find('input');
+    expect(input.exists());
+    expect(input.prop('disabled')).to.be.true;
+  });
+
   it('changing the family name from one value to another calls editStudent', () => {
     const wrapper = mount(
       <ManageStudentFamilyNameCell

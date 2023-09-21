@@ -4177,6 +4177,8 @@ ja:
           student_description: アングリーバード、植物対ゾンビ、アイス・エイジのスクラットなどのキャラクターを使って、コンピューター
             サイエンスの基礎を試してみよう！
           title: 古典的な迷路
+        how-ai-works-2023:
+          title: 人工知能のしくみ
         iceage:
           description: アイスエイジ プレイラボでストーリーを作成したり、ゲームを作ったりしましょう！
           description_short: アイスエイジ プレイラボでストーリーを作成したり、ゲームを作ったりしましょう！
@@ -4307,6 +4309,11 @@ ja:
               display_name: イベント
             lessonGroup-7:
               display_name: コース最後のプロジェクト
+            lessonGroup-8:
+              display_name: データ
+          lessons:
+            lesson-1:
+              name: データ
         nevada-standards-aligned-fourth-grade-2023:
           description_audience: '年齢: 8～12才'
           lesson_groups:
@@ -4346,6 +4353,11 @@ ja:
               display_name: イベント
             lessonGroup-6:
               display_name: データ
+            lessonGroup-8:
+              display_name: コンピューティングシステム
+          lessons:
+            lesson-1:
+              name: コンピューティングシステム
         nevada-standards-aligned-third-grade-2023:
           description: 3年生の学生向けにコースDを作成しました。コースは、ループやイベントなど、以前のコースで見つかった概念を復習することから始まります。その後、学生はアルゴリズム、入れ子のループ、whileループ、条件などについての理解を深めます。
           description_audience: '年齢: 7～11才'
@@ -5180,6 +5192,22 @@ ja:
           lessons:
             lesson-3:
               name: 評価
+        vpl-csa-2023-m1:
+          title: モジュール1
+        vpl-csa-2023-m2:
+          title: モジュール2
+        vpl-csa-2023-m3:
+          title: モジュール3
+        vpl-csa-2023-m4:
+          title: モジュール4
+        vpl-csa-2023-m5:
+          title: モジュール5
+        vpl-csa-2023-m6:
+          title: モジュール6
+        vpl-csa-2023-m7:
+          title: モジュール7
+        vpl-csa-2023-m8:
+          title: モジュール8
         vpl-csd-2021:
           lesson_groups:
             CSD_Module 1:
@@ -5198,6 +5226,22 @@ ja:
               display_name: モジュール7
             CSD_Module 8:
               display_name: モジュール8
+        vpl-csd-2023-m1:
+          title: モジュール1
+        vpl-csd-2023-m2:
+          title: モジュール2
+        vpl-csd-2023-m3:
+          title: モジュール3
+        vpl-csd-2023-m4:
+          title: モジュール4
+        vpl-csd-2023-m5:
+          title: モジュール5
+        vpl-csd-2023-m6:
+          title: モジュール6
+        vpl-csd-2023-m7:
+          title: モジュール7
+        vpl-csd-2023-m8:
+          title: モジュール8
         vpl-csd-ci-1:
           description: "この専門学習モジュールは、Code.orgの問題解決と計算ユニットを教えるための準備を支援するよう設計されています。
             \n\n**この専門学習モジュールの学習内容:**\n\n-   問題解決と計算を大まかに知る。\n-   ユニットにある主な概念を訓練。\n-
@@ -5329,6 +5373,22 @@ ja:
             \  AI LabとApp Labに触れる。\n-   チャプタープロジェクトの最後を見て回る。\n-   生徒と一緒にユニットの実施計画を立てる。\n\n**所要目安時間:**
             120分"
           title: 'モジュール 7: AIと機械学習を教えるための準備'
+        vpl-csp-2023-m1:
+          title: モジュール1
+        vpl-csp-2023-m2:
+          title: モジュール2
+        vpl-csp-2023-m3:
+          title: モジュール3
+        vpl-csp-2023-m4:
+          title: モジュール4
+        vpl-csp-2023-m5:
+          title: モジュール5
+        vpl-csp-2023-m6:
+          title: モジュール6
+        vpl-csp-2023-m7:
+          title: モジュール7
+        vpl-csp-2023-m8:
+          title: モジュール8
         web-development-2023:
           lesson_groups:
             lessonGroup-2:

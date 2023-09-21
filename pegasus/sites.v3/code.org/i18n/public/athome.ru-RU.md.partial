@@ -38,8 +38,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>Танцевальная вечеринка</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Напиши программу «Танцевальная вечеринка» и поделись ею с друзьями и со своей семьей. Используйте композиции Бейонсе, Harry Styles, Lizzo, Lil Nas X, Селены Гомес, саундтрек из диснеевского "Энканто" и другую музыку!</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>Танцевальная вечеринка</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Запрограммируйте танцевальную вечеринку, чтобы поделиться ею с друзьями и семьей. Используйте композиции Бейонсе, Harry Styles, Lizzo, Lil Nas X, Селены Гомес, саундтрек из диснеевского "Энканто" и другую музыку!</div>
         <a class="linktag" id="danceparty" href="/dance" target="_blank"><button>Try activity</button></a>
     </span>
   </div>
@@ -53,8 +53,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Час кода с Minecraft</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Возвращение Minecraft с новыми возможностями на «Час кода»! Путешествие по мирам Minecraft с помощью программирования.</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Час кода в Minecraft</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Minecraft возвращается на Час кода с новым занятием! Путешествие по мирам Minecraft с помощью программирования.</div>
         <br>
         <a class="linktag" id="minecraft" href="/minecraft" target="_blank"><button>Пройди занятие</button></a>
     </span>
@@ -69,8 +69,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>ИИ для океанов</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Помогите ИИ очистить океаны, обучив его обнаруживать мусор! Узнайте об обучающих данных и предубеждении, а также о том, как ИИ способен решать мировые проблемы. Просмотрите <a class="linktag" id="oceans-lesson" href="https://curriculum.code.org/hoc/plugged/9/" target="_blank">план урока</a>.</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>Искусственный интеллект для океанов</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Помогите искусственному интеллекту очистить океаны, научив его обнаруживать мусор! Узнайте об обучающих данных и предубеждении, а также о том, как ИИ способен решать мировые проблемы. Просмотрите <a class="linktag" id="oceans-lesson" href="https://curriculum.code.org/hoc/plugged/9/" target="_blank">план урока</a>.</div>
         <a class="linktag" id="aiforoceans" href="https://studio.code.org/s/oceans/lessons/1/levels/1" target="_blank"><button>Пройди занятие</button></a>
     </span>
   </div>
@@ -96,9 +96,9 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>Как работают компьютеры</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Эта серия из шести коротких видео с предисловием Билла Гейтса объясняет, как устроен компьютер и как работают компьютерные схемы.</div>
-        <a class="linktag" id="howcomputers" href="https://www.youtube.com/watch?v=OAx_6-wdslM&list=PLzdnOPI1iJNcsRwJhvksEo1tJqjIqWbN-" target="_blank"><button>Посмотреть серию видео</button></a>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>Как работают компьютеры</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Во вступительном слове Билла Гейтса эта серия из шести коротких видеороликов объясняет, что делает компьютер компьютером и как работают компьютерные схемы.</div>
+        <a class="linktag" id="howcomputers" href="https://www.youtube.com/watch?v=OAx_6-wdslM&list=PLzdnOPI1iJNcsRwJhvksEo1tJqjIqWbN-" target="_blank"><button>Посмотрите серию видеороликов</button></a>
     </span>
   </div>
 </div>
@@ -111,9 +111,9 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Как устроен Интернет</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">В этой серии из восьми коротких видео вы узнаете, как был изобретен Интернет, что такое HTML и как работают поисковые системы, например, Google.</div>
-        <a class="linktag" id="howinternet" href="https://www.youtube.com/watch?v=Dxcc6ycZ73M&list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7-" target="_blank"><button>Посмотреть серию видео</button></a>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Как работает Интернет</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">В этой серии из восьми коротких видеороликов вы узнаете, как был изобретен Интернет, что такое HTML и как работают поисковые системы, такие как Google.</div>
+        <a class="linktag" id="howinternet" href="https://www.youtube.com/watch?v=Dxcc6ycZ73M&list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7-" target="_blank"><button>Посмотрите серию видеороликов</button></a>
     </span>
   </div>
 </div>
@@ -126,8 +126,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Как устроен ИИ</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Из этой серии коротких видеороликов вы можете узнать о том, как устроен искусственный интеллект и почему он важен. С участием генерального директора Microsoft Сатьи Наделлы и различных экспертов.</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Как работает искусственный интеллект</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Узнайте, как работает искусственный интеллект и почему это важно, из этой серии коротких видеороликов. С участием генерального директора Microsoft Сатьи Наделлы и различных экспертов.</div>
         <a class="linktag" id="ai-videos" href="/ai#ai-videos" target="_blank"><button>Посмотреть серию видео</button></a>
     </span>
   </div>
@@ -176,8 +176,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>«Лаборатория игр», введение</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Программирование анимаций, интерактивных иллюстративных материалов и игр в «Лаборатории игр». Начните с простых фигур и переходите к более сложным анимациям и играм на основе спрайтов.</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>Знакомство с Game Lab</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Программируйте анимацию, интерактивное искусство и игры в Game Lab. Начните с простых фигур и переходите к более сложным анимациям и играм на основе спрайтов.</div>
         <a class="linktag" id="gamelab-intro" href="https://studio.code.org/s/csd3-virtual" target="_blank"><button>Попробовать модуль</button></a>
     </span>
   </div>
@@ -191,9 +191,9 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Программирование с помощью черепашки в «Лаборатории приложений»</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Используйте простые команды JavaScript для рисования фигур и изображений с помощью виртуальной «черепахи». Создайте и запрограммируйте свою собственную цифровую сцену!</div>
-        <a class="linktag" id="turtle-applab" href="https://studio.code.org/s/csp3-virtual" target="_blank"><button>Попробовать модуль</button></a>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Программирование черепах в App Lab</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Используйте простые команды JavaScript для рисования фигур и изображений с помощью виртуальной «черепахи». Создайте и запрограммируйте свою собственную цифровую сцену!</div>
+        <a class="linktag" id="turtle-applab" href="https://studio.code.org/s/csp3-virtual" target="_blank"><button>Попробуйте модуль</button></a>
     </span>
   </div>
 </div>
@@ -206,8 +206,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Событийно-управляемое программирование в «Лаборатории приложений»</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">Научитесь разрабатывать приложения, реагирующие на щелчки и нажатия клавиш. Создайте серию простых приложений (apps), которые живут в Интернете!</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>Программирование, управляемое событиями, в App Lab</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">Научитесь создавать приложения, реагирующие на щелчки и нажатия клавиш. Создайте серию простых приложений (apps), которые живут в Интернете!</div>
         <a class="linktag" id="events-applab" href="https://studio.code.org/s/csp5-virtual" target="_blank"><button>Попробовать модуль</button></a>
     </span>
   </div>
@@ -312,8 +312,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; margin-top:10px"><strong>CodeBytes</strong></h3>
-        <div class="smalltext" style="color: dimgray;">CodeBytes — это легко усваиваемые 20-минутные интерактивные уроки, сочетающие в себе занятия по информатике с темами из реального мира. Научите искусственный интеллект понимать язык жестов, разработайте полезное приложение, исследуйте мир Minecraft и многое другое!</div>
+        <h3 class="tutorial-info-h" style="margin-top:10px"><strong>CodeBytes</strong></h3>
+        <div class="smalltext" style="color: dimgray;">CodeBytes — это легко усваиваемые 20-минутные интерактивные уроки, сочетающие информатику с реальными темами. Научите искусственный интеллект понимать язык жестов, разработайте полезное приложение, исследуйте мир Minecraft и многое другое!</div>
         <br>
         <br>
         <a class="linktag" id="codebytes" href="https://code.org/codebytes" target="_blank"><button>Посмотреть эпизоды</button></a>
@@ -329,8 +329,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; margin-top:10px"><strong>Перерыв на программирование</strong></h3>
-        <div class="smalltext" style="color: dimgray; ">Уроки информатики могут быть занимательными, поэтому сделайте перерыв на программирование (Code Break)! Вы можете создать шифр с Эштоном Катчером, узнать о переменных с Ярой Шахиди и даже изучить, как устроен Интернет, с настоящим изобретателем Интернета Винтом Серфом!</div>
+        <h3 class="tutorial-info-h" style="margin-top:10px"><strong>Code Break</strong></h3>
+        <div class="smalltext" style="">Keep computer science fun by taking a Code Break! Вы можете создать шифр с Эштоном Катчером, узнать о переменных с Ярой Шахиди и даже изучить, как устроен Интернет, с настоящим изобретателем Интернета Винтом Серфом!</div>
         <br>
         <a class="linktag" id="codebreak" href="https://code.org/break" target="_blank"><button>Подключайтесь</button></a>
     </span>

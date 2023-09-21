@@ -188,6 +188,8 @@ ca:
   grade_level_label_elementary: Escola primària
   grade_level_label_middle: ESO
   grade_level_label_high: Institut
+  students_label: Estudiants
+  teachers_label: Professors
   teacher_label_csf: CS Fonaments Professor
   teacher_label_csd: Professor CS Discoveries
   teacher_label_csp: CS Principis Professor
@@ -201,7 +203,9 @@ ca:
   call_to_action_explore_unit: Explora la unitat
   call_to_action_explore_curriculum: Explora currículum
   call_to_action_explore_curriculum_options: Explora les opcions curriculars
+  call_to_action_explore_lessons: Explora lliçons
   call_to_action_explore_modules: Explora mòduls
+  call_to_action_explore_module: Explora el mòdul
   call_to_action_explore_workshops: Explora tallers
   call_to_action_explore_course: Explora el curs
   call_to_action_explore_courses: Explora cursos
@@ -249,8 +253,12 @@ ca:
   call_to_action_see_module_details: Veure detalls del mòdul
   call_to_action_start_modules: Mòduls d'inici
   call_to_action_see_course_details: Veure detalls del curs
+  call_to_action_see_lesson_details: Veure detalls de la lliçó
   call_to_action_learn_about_approach: Obteniu més informació sobre el nostre enfocament
   call_to_action_try_java_lab: Prova Java Lab
+  call_to_action_notify_available: Aviseu-me quan estigui disponible
+  call_to_action_register_early_access: Registrar-se per a l'accés anticipat
+  call_to_action_open_positions: Veure posicions obertes
   aria_label_call_to_action_afe: Sabeu més sobre Amazon Future Engineer
   aria_label_call_to_action_teaching_csf: 'Comença el programa d''aprenentatge professional
     d''''Ensenyament de Fonaments de Ciències Informàtiques '
@@ -323,6 +331,23 @@ ca:
   aria_label_call_to_action_csf_course_d: Veure detalls del curs D
   aria_label_call_to_action_csf_course_e: Veure detalls del curs E
   aria_label_call_to_action_csf_course_f: Veure detalls del curs F
+  aria_label_call_to_action_ai_pl_101_videos: Mireu AI 101 per a vídeos de professors
+  aria_label_call_to_action_ai_teaching_module: Explora el mòdul d'Ensenyament d'AI
+    i Aprenentatge Automàtic
+  aria_label_call_to_action_how_ai_works_lesson_01: Vegeu els detalls de la lliçó
+    Introducció a l'aprenentatge automàtic
+  aria_label_call_to_action_how_ai_works_lesson_02: Veure els detalls de la lliçó
+    de Visió per Computador
+  aria_label_call_to_action_how_ai_works_lesson_03: Consulteu els detalls de la lliçó
+    de Xarxes Neuronals
+  aria_label_call_to_action_how_ai_works_lesson_04: Vegeu els detalls de la lliçó
+    de Chatbots i models de llengua gran
+  aria_label_call_to_action_how_ai_works_lesson_05: Vegeu els detalls de la lliçó
+    Imatges generatives
+  aria_label_call_to_action_how_ai_works_lesson_06: Vegeu els detalls de la lliçó
+    de biaix algorítmic
+  aria_label_call_to_action_how_ai_works_lesson_07: Consulteu els detalls de la lliçó
+    del nostre Codi Ètic d'AI
   video_title_professional_learning_program: Programa d'Aprenentatge Professional
     de Code.org
   curriculum_name_csf: Fonaments de Ciències informàtiques
@@ -442,6 +467,10 @@ ca:
   module_label_student_tool: Eina per a estudiants
   module_label_student_product: Producte
   module_label_student_content_resources: Contingut i recursos
+  module_label_new: Nou
+  module_label_coming_soon: Properament
+  module_label_video_series: Sèrie de vídeos
+  module_label_self_paced: Mòdul auto-ritme
   module_ages_5_10: 5-10
   module_ages_11_18: 11-18
   module_ages_7_18: 7-18
@@ -464,9 +493,13 @@ ca:
   module_grade_9_12_teachers: Professors 9-12
   module_level_beginner: Principiant
   module_level_intermediate: Intermedi
+  module_duration_45_mins: 45 minuts
+  module_duration_1_hr: 1 hora
   module_duration_2_hrs: 2 hores
   module_duration_3_hrs: 3 hores
+  module_duration_5_hrs: 5 hores
   module_duration_8_hrs: 8 hores
+  module_duration_20_hrs: 20 hores
   module_duration_35_hrs: 35 hores
   module_duration_lesson: Lliçó
   module_duration_week: Setmana
@@ -544,6 +577,7 @@ ca:
   heading_no_devices: No hi ha dispositius? Us tenim coberts
   heading_java_lab: Java Lab
   heading_objects_first: Objectes primer
+  heading_these_lessons_will: 'Aquestes lliçons seran:'
   professional_learning_section_desc: Obteniu el suport que necessiteu mentre us prepareu
     per ensenyar. Als professors els encanta, amb més del 90% que el classifica el
     millor desenvolupament professional de la història!
@@ -676,6 +710,11 @@ ca:
   ai_curriculum_grades_03: 'Nivells de grau: 3-12'
   ai_curriculum_duration_03: 'Durada: 1 hora'
   ai_curriculum_btn_aria_label_03: Prova l'activitat d'AI per als Oceans
+  ai_curriculum_title_04: Com funciona la IA
+  ai_curriculum_desc_04: Aquestes lliçons complementen la sèrie de vídeos How AI Works.
+    Cada lliçó es combina amb un sol vídeo de la sèrie, aprofundint en els conceptes
+    introduïts en els vídeos.
+  ai_curriculum_btn_aria_label_04: Explora Com funciona la IA lliçons
   ai_carousel_heading: 'Què diuen els professors sobre IA amb Code.org:'
   ai_carousel_quote_01: Aquesta lliçó també va donar als meus estudiants l'oportunitat
     de veure que hi ha un element d'opinió en els sistemes de classificació. Més tard,
@@ -696,6 +735,11 @@ ca:
     automàtic.
   ai_pl_list_05: Explora els projectes de final de capítol.
   ai_pl_duration: 'Durada: 2 hores'
+  ai_pl_title: Ensenyar I.A. i Aprenentatge automàtic
+  ai_pl_desc: Introducció a la intel·ligència artificial i l'aprenentatge automàtic.
+    Entreneu un model d'aprenentatge automàtic mitjançant AI Lab. i comprometi's amb
+    aplicacions d'aprenentatge automàtic. Penseu en les implicacions del món real
+    de la IA i l'aprenentatge automàtic.
   ai_video_series_title: Com funciona la IA
   ai_video_series_desc: Amb una introducció del CEO de Microsoft, Satya Nadella, aquesta
     sèrie de vídeos curts us presentarà com funciona la intel·ligència artificial
@@ -722,6 +766,7 @@ ca:
   ai_pl_101_hero_heading: Uniu-vos a nosaltres per a AI EmpowerED!
   ai_pl_101_hero_desc: Descobriu el potencial transformador de la intel·ligència artificial
     (IA) a l'educació amb la nostra sèrie d'aprenentatge en línia gratuïta per a educadors.
+  ai_pl_101_hero_desc_02: Una sèrie completa d'aprenentatge en línia per a professors.
   ai_pl_101_hero_presented: Presentat per
   ai_pl_101_intro_heading: Què és AI 101 per a professors?
   ai_pl_101_intro_text: AI 101 for Teachers és una sèrie d'aprenentatge professional
@@ -768,6 +813,102 @@ ca:
     ajudant els professors a proporcionar comentaris iteratius i avaluació formativa
     al llarg de l''experiència d''escriptura.'
   ai_pl_101_explore__button_4: Explora l'eina
+  ai_pl_101_video_title_1: Xat de foc amb Sal Khan i Hadi Partovi
+  ai_pl_101_video_desc_1: Uniu-vos a Sal Khan (Khan Academy) i Hadi Partovi (Code.org)
+    per a un xat de foc sobre l'abraçada de la intel·ligència artificial a l'aula.
+    Espereu una discussió animada que inclogui alguns dels temes més controvertits
+    que envolten la IA avui.
+  ai_pl_101_video_title_2: Desmitificant la IA per a educadors
+  ai_pl_101_video_desc_2: Introducció als fonaments de la Intel·ligència Artificial
+    que et dotarà dels coneixements fundacionals per entendre el profund impacte de
+    la IA en la nostra societat i la seva creixent rellevància en l'àmbit educatiu.
+    Obtindreu informació pràctica sobre aprofitar la IA per a tasques a l'aula i estalviar
+    temps en tasques administratives.
+  ai_pl_101_video_title_3: Transformar l'aprenentatge amb IA
+  ai_pl_101_video_desc_3: Explora la intersecció de la IA i l'educació. Aquesta sessió
+    explora com es pot combinar la IA amb la pedagogia per millorar l'aprenentatge
+    dels estudiants. És una assistència obligada per als educadors que busquen aprofitar
+    la IA per transformar les seves pràctiques docents per enriquir les experiències
+    d'aprenentatge dels seus estudiants.
+  ai_pl_101_video_title_4: Garantir un enfocament responsable de la IA
+  ai_pl_101_video_desc_4: Explorar les consideracions ètiques i les millors pràctiques
+    per incorporar la intel·ligència artificial en entorns educatius. Aquesta sessió
+    proporcionarà estratègies concretes, recursos i exemples del món real, tots dirigits
+    a comprendre els biaixos potencials de la IA i les consideracions ètiques que
+    s'hi presenten.
+  ai_pl_101_video_title_5: Portar la IA a l'aula
+  ai_pl_101_video_desc_5: Aquesta sessió se centra en l'ensenyament sobre la IA, l'avaluació
+    i utilització d'eines educatives de la IA i l'aprofitament de la IA per a l'avaluació
+    dels estudiants. Amb una rica barreja de teoria, exemples pràctics i recursos,
+    pretén capacitar els educadors per navegar pel paisatge de la IA i millorar les
+    experiències d'aprenentatge dels estudiants.
+  ai_pl_101_video_desc_6: 'Obteniu més informació sobre la nova tecnologia que impulsa
+    els grans canvis en la IA, amb dos nous vídeos sobre Models de Llengua Gran (com
+    ChatGPT) i Generative AI. Escolta com funcionen aquestes noves tecnologies directament
+    dels experts: Mira Murati, CTO d''OpenAI, i Cristóbal Valenzuela, CEO de RunwayML.'
+  how_ai_works_hero_heading: Com funciona la IA
+  how_ai_works_hero_desc: Submergeix-te en el món de la IA amb “How AI Works”, la
+    nostra sèrie de vídeos i lliçons d'acompanyament!
+  how_ai_works_intro_desc: Aquesta sèrie de vídeos curts i lliçons d'acompanyament
+    a l'aula us presentaran a vosaltres i als vostres estudiants com funciona la intel·ligència
+    artificial i per què importa. Podeu triar lliçons individuals basades en el tema,
+    explorar tota la sèrie de temes en una classe o ensenyar les 7 lliçons per fer
+    una immersió més profunda.
+  how_ai_works_intro_list_01: Introduir-te a la intel·ligència artificial i l'aprenentatge
+    automàtic
+  how_ai_works_intro_list_02: Submergeix-te en com funciona la IA generativa, inclosos
+    els models de llenguatge gran (LLM) i la generació d'imatges
+  how_ai_works_intro_list_03: Explora el biaix, l'ètica, la privacitat i l'ús responsable
+    de la IA
+  how_ai_works_intro_list_04: Toqueu aplicacions del món real de la IA, inclosa la
+    visió per ordinador
+  how_ai_works_lessons_heading: Classes d'IA per a la vostra classe
+  how_ai_works_lesson_title_01: Introducció al Machine Learning
+  how_ai_works_lesson_desc_01: Obteniu informació sobre una forma d'intel·ligència
+    artificial anomenada machine learning i com poden utilitzar el Procés de Resolució
+    de Problemes per ajudar a entrenar un robot per resoldre problemes. Participa
+    en activitats d'aprenentatge automàtic on un robot està aprenent a detectar patrons
+    en peixos.
+  how_ai_works_lesson_title_02: Visió per computador
+  how_ai_works_lesson_desc_02: Aprendre com funciona la visió per computador. Mireu
+    un vídeo explicant la visió per computador i com “veu” un ordinador. A continuació,
+    dissenyeu un algorisme que utilitzi una xarxa per decidir quin nombre està mostrant
+    la pantalla de set segments i provar-la.
+  how_ai_works_lesson_title_03: Xarxes Neuronals
+  how_ai_works_lesson_desc_03: Coneix com funcionen les xarxes neuronals. Utilitzeu
+    un widgets per explorar xarxes neuronals en un camí. Mireu un vídeo explicant
+    les xarxes neuronals. Finalment discutir la necessitat de diverses perspectives
+    a l'hora de crear sistemes de recomanació.
+  how_ai_works_lesson_title_04: Chatbots i models de llengua gran
+  how_ai_works_lesson_desc_04: Apreneu què és i com funciona un model de llengua gran
+    (LLM) i, a continuació, utilitzeu un LLM per co-crear un text amb IA. Finalment,
+    discutiu sobre si els LLM són o no intel·ligents o creatius.
+  how_ai_works_lesson_title_05: Imatges generatives
+  how_ai_works_lesson_desc_05: Obteniu informació sobre com la IA pot generar imatges
+    i, a continuació, exploreu un giny d'IA de difusió i discutiu si aquests models
+    són creatius o no.
+  how_ai_works_lesson_title_06: Biaix algorítmic
+  how_ai_works_lesson_desc_06: Practiqueu imatges de retallada per descobrir el biaix
+    subjacent a l'algoritme de retallada de Twitter i, a continuació, llegiu i mireu
+    un vídeo sobre el descobriment d'aquest algoritme esbiaixat. Finalment, discutir
+    maneres de reconèixer i reduir el biaix en els algoritmes.
+  how_ai_works_lesson_title_07: El nostre Codi Ètic d'IA
+  how_ai_works_lesson_desc_07: Realitzar investigacions mitjançant articles i vídeos
+    que exposin trampes ètiques en una àrea d'intel·ligència artificial que triïn.
+    Munteu un recurs “Our AI Code of Ethics” a tota classe per a creadors i legisladors
+    d'IA a tot arreu.
+  how_ai_works_lessons_in_a_day_title: Com funciona la IA en un dia
+  how_ai_works_lessons_in_a_day_desc: Només tens un dia? També hi ha l'opció d'introduir
+    tota la sèrie als estudiants en un sol dia. Perfecte per a qualsevol professor
+    d'àrea de la matèria que vulgui introduir els estudiants a la IA, o fins i tot
+    per a com a lliçó per a un professor convidat.
+  how_ai_works_lessons_in_a_day_desc_02: Introduïu tots els vídeos de “Com funciona
+    la IA” en un dia. Els estudiants segueixen juntament amb cada vídeo fent coincidir
+    el vocabulari del vídeo, i després respondre a una pregunta de reflexió sobre
+    cada vídeo.
+  how_ai_works_resources_desc: Interessat en aprendre més sobre la IA? Aquests són
+    alguns recursos addicionals que us poden ajudar a estendre l'aprenentatge dels
+    vostres estudiants i vosaltres.
   ai_vid_intro_caption: Presentació de com funciona la IA
   ai_vid_chatbots_caption: Com funcionen els chatbots i els models de llengua gran
   ai_vid_creativity_caption: La IA té creativitat i imaginació?
@@ -1111,10 +1252,10 @@ ca:
   teach_page_additional_materials_list_desc_03: Imprimeix aquests pòsters de diversos
     models per penjar a la teva escola i inspira els teus alumnes a provar les ciències
     informàtiques.
-  csp_page_top_desc: Free set of elementary curricula that introduces students to
-    the foundational concepts of computer science and challenges them to explore how
-    computing and technology can impact the world. Can be taught as an introductory
-    class and as an AP course.
+  csp_page_top_desc: Free year-long curriculum that introduces students to the foundational
+    concepts of computer science and challenges them to explore how computing and
+    technology can impact the world. Can be taught as an introductory class and as
+    an AP course.
   csp_page_intro_heading: Free, AP® CSP endorsed, high school introductory course
   csp_page_intro_list_01: Culturally responsive pedagogy
   csp_page_intro_list_02: Real-world problem investigation
@@ -1693,6 +1834,7 @@ ca:
   not_found_desc: No es pot trobar la pàgina sol·licitada
   not_found_instructions: Comproveu l'adreça web i envieu o trieu un enllaç a la llista
     següent.
+  company_code_dot_org: Code.org
   company_4-H: 4-H Desenvolupament Juvenil
   company_asa: Afterschool Alliance
   company_asos: ASOS
@@ -1745,6 +1887,7 @@ ca:
   company_evsd: Districte Escolar de la Vall de l'Est
   company_eastonvilleschooldistrict: Districte escolar d'Eatonville
   company_enumclawschooldistrict: Enumclaw Districte Escolar
+  company_ets: ETS
   company_everettsd: Escoles Públiques Everette
   company_fsusd: Districte escolar unificat de Fairfield-Suisun
   company_fayettecountypublicschools: Escoles públiques del comtat de Fayette
@@ -1766,6 +1909,7 @@ ca:
   company_houstonisd: Districte escolar independent de Houston
   company_hcpss: Escoles públiques del comtat de Howard
   company_idla: Idaho Digital Learning Academy
+  company_iste: ISTE
   company_janesvilleschooldistrict: Districte Escolar de Janesville
   company_johnstoncountyschools: Escoles del Comtat de Johnston
   company_lps: Escola Pública Lincoln
@@ -12178,8 +12322,10 @@ ca:
   tutorial_ai4alldance_string_platforms: Tots els navegadors moderns
   tutorial_ai4allneural_string_platforms: Tots els navegadors moderns
   tutorial_spheroinout_string_platforms: Unplugged
-  tutorial_edisonblueprint_string_platforms: Tots els navegadors moderns
-  tutorial_edisonmaze_string_platforms: Tots els navegadors moderns
+  tutorial_edisonblueprint_string_platforms: Tots els navegadors moderns, tauleta
+    Android, iPad
+  tutorial_edisonmaze_string_platforms: Tots els navegadors moderns, tauleta Android,
+    iPad
   tutorial_milnefunctions_string_platforms: Tots els navegadors moderns, Lector de
     pantalla
   tutorial_sasmap_string_platforms: Tots els navegadors moderns, iPad, Lector de pantalla
@@ -13479,6 +13625,127 @@ ca:
     Principles de Code.org utilitzant Quorum, un llenguatge basat en l'evidència dissenyat
     originalment per proporcionar accessibilitat a estudiants cecs o amb discapacitat
     visual.
+  engineering_hero_heading: Uneix-te al nostre equip d'enginyeria!
+  engineering_hero_desc: A mesura que continuem ampliant el nostre equip d'enginyeria,
+    volíem compartir més sobre la nostra organització d'enginyeria a Code.org i alguns
+    dels aspectes únics de treballar aquí. Si esteu interessats en sol·licitar un
+    dels nostres rols, ens encantaria saber de vosaltres!
+  engineering_team_title: Coneix l'equip d'enginyeria a Code.org
+  engineering_team_card_text_1: Això és (la majoria) de nosaltres en la nostra trobada
+    presencial durant l'estiu de 2023! Aquesta multitud es divideix en quatre subequips
+    dins del nostre equip d'enginyeria que treballen junts per construir i servir
+    la plataforma per a tots els nostres estudiants i professors.
+  engineering_team_card_text_2: Si esteu interessats en sol·licitar un dels nostres
+    rols, ens encantaria saber de vosaltres! Podeu trobar una llista de posicions
+    obertes a la nostra pàgina de Carreres Professionals.
+  engineering_our_team_title: El nostre equip d'enginyeria
+  engineering_our_team_desc: 'L''equip d''enginyeria de Code.org es divideix en quatre
+    sub-equips que construeixen i donen suport a diferents àrees de la nostra plataforma:'
+  engineering_our_team_sub_title_1: Equip d'Aprenentatge d'Estudiants
+  engineering_our_team_text_1: El nostre Equip d'Aprenentatge d'Estudiants posseeix
+    totes les nostres activitats (els anomenem laboratoris) que els nostres estudiants
+    utilitzen cada dia. Aquest equip treballa principalment en tecnologia frontal
+    (utilitzem React i molts JS personalitzats) i tenim una gran relació de treball
+    amb molts socis i projectes de codi obert. Per exemple, utilitzem [Google's Blockly]
+    (%{youtube_url}) per a tota la nostra programació basada en blocs. Donem suport
+    als estudiants en el seu viatge d'aprenentatge tot el camí des de Kindergarten
+    fins a 12è grau.
+  engineering_our_team_sub_title_2: Equip d'Experiència Docent
+  engineering_our_team_text_2: El nostre Team Team Experience construeix les eines
+    que atrauen nous professors a Code.org (anomenem aquests productes d'adquisició)
+    i desenvolupa la plataforma que capacita als nostres professors existents per
+    ensenyar el nostre currículum (les nostres eines per a professors). Igual que
+    amb les nostres eines per a estudiants, confiem en React per construir el nostre
+    front-end i els nostres components del costat del servidor es serveixen utilitzant
+    Ruby on Rails.
+  engineering_our_team_sub_title_3: Equip de plataforma
+  engineering_our_team_text_3: El nostre equip de plataformes posseeix components
+    bàsics que serveixen a les necessitats dels nostres equips d'estudiants i professors
+    (per exemple, autenticació i perfil d'usuari) i també té la missió d'arribar a
+    estudiants als quals encara no podem arribar. Això inclou la construcció d'integracions
+    que ens connecten amb escoles que utilitzen diferents sistemes de gestió de l'aprenentatge
+    (LMS) i empaquetar el nostre currículum perquè pugui ser utilitzat en escoles
+    remotes que no tenen accés a internet fiable.
+  engineering_our_team_sub_title_4: Equip d'Infraestructura
+  engineering_our_team_text_4: El nostre Equip d'Infraestructures proporciona la columna
+    vertebral de la plataforma que dóna suport als nostres estudiants i professors.
+    Això inclou la nostra infraestructura d'allotjament i serveis relacionats (utilitzem
+    AWS), gestió de dades, programes de seguretat, desenvolupadors i serveis de desplegament
+    i molt més. Aquest equip també posseeix els nostres sistemes d'escalat i aprovisionament,
+    que són crítics durant l'Hour of Code, on convidem a tots els estudiants del món
+    a completar una hora de codificació amb nosaltres.
+  engineering_faq_question_1: Què fa Code.org?
+  engineering_faq_answer_1_a: Code.org és una innovació educativa sense ànim de lucre
+    dedicada a la visió que tots els estudiants de cada escola tenen l'oportunitat
+    d'aprendre ciències de la computació com a part de la seva educació bàsica K-12.
+  engineering_faq_answer_1_b: Ampliem l'accés a la informàtica a les escoles, amb
+    un enfocament en l'augment de la participació de dones joves i estudiants d'altres
+    grups poc representats. El principal proveïdor de currículum de ciències de la
+    computació K-12 als districtes escolars més grans dels Estats Units, Code.org
+    també organitza la campanya anual de l'Hora del Codi, que ha involucrat més del
+    15% de tots els estudiants del món.
+  engineering_faq_answer_1_c: Code.org és recolzat per generosos donants, inclosos
+    Microsoft, Amazon, Google i molts altres.
+  engineering_faq_question_2: Què és l'experiència i l'utillatge per a desenvolupadors
+    de Code.org?
+  engineering_faq_answer_2: Our developer experience may be different to what you’ve
+    seen in your past roles. Working closely with our product team, we ship to production
+    every weekday and we have a variety of cadences - sometimes you are writing code
+    that goes live that day; other times you are on longer term projects - and while
+    we do follow 2-weekly sprints, we do so in a lightweight way. We index towards
+    getting the right things done the right way vs. taking a purist view of any particular
+    methodology. [All our code](%{code_url}) is open source and we use JIRA and GitHub
+    pull requests to track all of our work items. We also care a lot about quality
+    and testing and are fortunate to have incredible support from [SauceLabs](%{saucelabs_url}),
+    who help us run our suite of UI tests on various student devices (e.g., iPads)
+    in their cloud device farm.
+  engineering_faq_question_3: Què és l'enginyer de rotació de trucades a Code.org?
+  engineering_faq_answer_3: 'El nostre equip d''enginyeria més de 30 anys comparteix
+    responsabilitats a la trucada. Cada enginyer cobreix un torn de 24 hores i utilitza
+    els nostres camins d''escalada i llibres de joc per respondre a les interrupcions
+    del lloc o altres problemes del lloc en directe. Estem orgullosos de la fiabilitat
+    del nostre lloc: de mitjana, cada enginyer només es desperta una vegada a l''any
+    per problemes que solen ser ràpids de resoldre. En canvi, el “Desenvolupador del
+    Dia” sol passar una part de la seva jornada laboral gestionant el desplegament
+    de producció i triant problemes menys urgents.'
+  engineering_faq_question_4: Ets una organització remota o WFH?
+  engineering_faq_answer_4_a: Sí! El 2019, poc abans de la pandèmia, Code.org es va
+    convertir en una organització de primera distància. Avui en dia, tenim enginyers
+    a totes les zones horàries dels Estats Units i s'adapten a les hores de treball
+    en conseqüència. La majoria de les nostres reunions succeeixen entre les hores
+    de 10am i 3pm PT.
+  engineering_faq_answer_4_b: També reconeixem el valor del temps presencial, i cada
+    trimestre ens reunim en persona, normalment a Seattle. Dos d'aquests esdeveniments
+    (els anomenem Kick-off week i “Codechella”) reuneixen a tots els de l'organització
+    al gener i al juny, i els equips d'enginyeria i producte es reuneixen per separat
+    a l'abril i l'octubre.
+  engineering_faq_answer_4_c: Creiem fermament en passar temps amb els nostres estudiants
+    i professors, de manera que molts d'aquests esdeveniments presencials inclouen
+    viatges a escoles i aules per recollir comentaris o jugar a provar els nostres
+    productes
+  engineering_faq_question_5: Què fa que l'equip d'enginyeria de Code.org sigui únic?
+  engineering_faq_answer_5_a: 'Més enllà de resoldre problemes tècnics difícils, tenim
+    algunes coses que fan que el nostre org d''enginyeria sigui diferent d''altres
+    en què podeu haver treballat:'
+  engineering_faq_answer_5_b_1: Tots compartim la nostra passió per la nostra missió.
+  engineering_faq_answer_5_b_2: Cadascun de nosaltres és aquí per donar suport a la
+    missió d'ampliar l'accés a la informàtica per a tots els estudiants de tot el
+    món. Tots tenim la nostra història i perspectiva úniques sobre el que ens impulsa
+    cap a aquesta missió.
+  engineering_faq_answer_5_c_1: Ens preocupem profundament els uns dels altres.
+  engineering_faq_answer_5_c_2: Quan els enginyers lluiten amb un problema, fem un
+    pas i ajudem. Un dels nostres principis és que som durs en problemes, però amables
+    entre nosaltres. Promovem enginyers regularment, però no prescrivim solucions
+    sobre-enginyades només per donar suport al camí de promoció d'algú. En canvi,
+    invertim en els nostres enginyers amb un pressupost generós de desenvolupament
+    professional i accés a altres oportunitats d'aprenentatge.
+  engineering_faq_answer_5_d_1: Treballem dur, però establim límits clars.
+  engineering_faq_answer_5_d_2: Mentre donem suport als estudiants de tot el món,
+    ens responsabilitzem dels límits clars entre el treball i la vida a la llar. Gaudim
+    dels dimecres sense reunions, prenent la nostra presa de força (5 setmanes totals,
+    que inclou un tancament d'oficina de 2 setmanes org-wide al final de l'any aka
+    Winter Break), mig dia laborable els divendres durant l'estiu aka Summer Fridays,
+    i altres beneficis generosos.
   language_code:
     ar: Àrab
     az: Àzeri

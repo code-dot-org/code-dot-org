@@ -950,7 +950,7 @@ class LessonTest < ActiveSupport::TestCase
       assert_equal 2, copied_lesson.script_levels.length
       assert_equal [level1, level2], copied_lesson.script_levels.map(&:level)
       assert_equal 2, copied_lesson.resources.length
-      assert_equal @original_lesson.resources.map {|r| r.attributes.slice('name', 'url', 'properties').to_a}, copied_lesson.resources.map {|r| r.attributes.slice('name', 'url', 'properties').to_a}
+      assert_equal(@original_lesson.resources.map {|r| r.attributes.slice('name', 'url', 'properties').to_a}, copied_lesson.resources.map {|r| r.attributes.slice('name', 'url', 'properties').to_a})
       assert_equal 2, copied_lesson.vocabularies.length
       assert_equal @original_lesson.vocabularies.map(&:word), copied_lesson.vocabularies.map(&:word)
       assert_equal 2, copied_lesson.objectives.length
@@ -1006,7 +1006,7 @@ class LessonTest < ActiveSupport::TestCase
       copied_lesson = @original_lesson.copy_to_unit(@destination_script)
       assert_equal @destination_script, copied_lesson.script
       assert_equal 1, copied_lesson.resources.length
-      assert_equal @original_lesson.resources.map {|r| r.attributes.slice('name', 'url', 'properties').to_a}, copied_lesson.resources.map {|r| r.attributes.slice('name', 'url', 'properties').to_a}
+      assert_equal(@original_lesson.resources.map {|r| r.attributes.slice('name', 'url', 'properties').to_a}, copied_lesson.resources.map {|r| r.attributes.slice('name', 'url', 'properties').to_a})
 
       copied_resource1 = @destination_course_version.resources.find_by_name('resource1')
       refute_nil copied_resource1
@@ -1014,7 +1014,7 @@ class LessonTest < ActiveSupport::TestCase
       refute_nil copied_resource2
       assert_equal @destination_script.lessons.last.lesson_activities.last.activity_sections.first.description, "Resource 1: [r #{Services::GloballyUniqueIdentifiers.build_resource_key(copied_resource1)}]. Resource 2: [r #{Services::GloballyUniqueIdentifiers.build_resource_key(copied_resource2)}]."
       assert_equal 2, @destination_script.lessons.last.lesson_activities.last.activity_sections.last.tips.length
-      assert_equal ["Resource 1: [r #{Services::GloballyUniqueIdentifiers.build_resource_key(copied_resource1)}]", "description without resource"], @destination_script.lessons.last.lesson_activities.last.activity_sections.last.tips.map {|t| t['markdown']}
+      assert_equal(["Resource 1: [r #{Services::GloballyUniqueIdentifiers.build_resource_key(copied_resource1)}]", "description without resource"], @destination_script.lessons.last.lesson_activities.last.activity_sections.last.tips.map {|t| t['markdown']})
     end
 
     test "preparation resource markdown is updated when cloning lesson" do
@@ -1028,7 +1028,7 @@ class LessonTest < ActiveSupport::TestCase
       copied_lesson = @original_lesson.copy_to_unit(@destination_script)
       assert_equal @destination_script, copied_lesson.script
       assert_equal 1, copied_lesson.resources.length
-      assert_equal @original_lesson.resources.map {|r| r.attributes.slice('name', 'url', 'properties').to_a}, copied_lesson.resources.map {|r| r.attributes.slice('name', 'url', 'properties').to_a}
+      assert_equal(@original_lesson.resources.map {|r| r.attributes.slice('name', 'url', 'properties').to_a}, copied_lesson.resources.map {|r| r.attributes.slice('name', 'url', 'properties').to_a})
 
       copied_resource1 = @destination_course_version.resources.find_by_name('resource1')
       refute_nil copied_resource1

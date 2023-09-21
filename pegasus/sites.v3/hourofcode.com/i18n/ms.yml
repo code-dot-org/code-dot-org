@@ -195,6 +195,8 @@ ms:
   grade_level_label_elementary: Sekolah Rendah
   grade_level_label_middle: Sekolah Menengah
   grade_level_label_high: Sekolah Menengah
+  students_label: Pelajar
+  teachers_label: Guru
   teacher_label_csf: Guru Asas CS
   teacher_label_csd: Guru Penemuan CS
   teacher_label_csp: Guru Prinsip CS
@@ -208,7 +210,9 @@ ms:
   call_to_action_explore_unit: Terokai unit
   call_to_action_explore_curriculum: Terokai kurikulum
   call_to_action_explore_curriculum_options: Terokai pilihan kurikulum
+  call_to_action_explore_lessons: Terokai pelajaran
   call_to_action_explore_modules: Terokai modul
+  call_to_action_explore_module: Terokai modul
   call_to_action_explore_workshops: Terokai bengkel
   call_to_action_explore_course: Terokai kursus
   call_to_action_explore_courses: Terokai kursus
@@ -216,11 +220,11 @@ ms:
   call_to_action_explore_widgets: Terokai widget
   call_to_action_explore_choice_level: Terokai contoh tahap pilihan
   call_to_action_explore_collection: Terokai koleksi
-  call_to_action_explore_unplugged_lesson: Terokai pelajaran yang tidak dicabut
+  call_to_action_explore_unplugged_lesson: Terokai pelajaran secara tradisional
   call_to_action_try_app_lab: Cuba App Lab
   call_to_action_view_lesson_plan: Lihat rancangan pelajaran
   call_to_action_self_paced_pl: Mulakan pembelajaran profesional kendiri
-  call_to_action_apply_for_pl: Memohon Pembelajaran Profesional
+  call_to_action_apply_for_pl: Memohon untuk Pembelajaran Profesional
   call_to_action_watch_panel: Panel jam tangan
   call_to_action_learn_about_challenge: Ketahui tentang cabaran
   call_to_action_explore_website: Terokai laman web
@@ -251,12 +255,16 @@ ms:
   call_to_action_contact_support: Hubungi sokongan Code.org
   call_to_action_pick_units: Pilih unit
   call_to_action_focus_on_topic: Fokus pada topik
-  call_to_action_teach_full_intro_course: Ajar kursus intro penuh
+  call_to_action_teach_full_intro_course: Ajar kursus pengenalan penuh
   call_to_action_see_module_details: Lihat butiran modul
   call_to_action_start_modules: Mulakan modul
   call_to_action_see_course_details: Lihat butiran kursus
-  call_to_action_learn_about_approach: Ketahui lebih lanjut mengenai pendekatan kami
+  call_to_action_see_lesson_details: Lihat butiran pelajaran
+  call_to_action_learn_about_approach: Ketahui lebih lanjut tentang pendekatan kami
   call_to_action_try_java_lab: Cuba Java Lab
+  call_to_action_notify_available: Beritahu saya apabila tersedia
+  call_to_action_register_early_access: Daftar untuk akses awal
+  call_to_action_open_positions: Lihat kedudukan terbuka
   aria_label_call_to_action_afe: Ketahui lebih lanjut mengenai Jurutera Masa Depan
     Amazon
   aria_label_call_to_action_teaching_csf: Mulakan program pembelajaran profesional
@@ -301,43 +309,58 @@ ms:
   aria_label_call_to_action_collection_impact_society: Terokai koleksi Impak dalam
     Masyarakat
   aria_label_call_to_action_collection_creativity: Terokai koleksi Kreativiti
-  aria_label_call_to_action_collection_coding: Terokai koleksi Coding
+  aria_label_call_to_action_collection_coding: Terokai koleksi Pengekodan
   aria_label_call_to_action_collection_data: Terokai Pengumpulan Data
-  aria_label_call_to_action_module_coding_w_poetry: Lihat butiran modul Coding with
-    Poetry
-  aria_label_call_to_action_module_coding_time_capsule: Lihat butiran modul Coding
-    a Time Capsule
+  aria_label_call_to_action_module_coding_w_poetry: Lihat butiran modul Pengekodan
+    menerusi Puisi
+  aria_label_call_to_action_module_coding_time_capsule: Lihat butiran modul Pengekodan
+    Kapsul Masa
   aria_label_call_to_action_module_simulating_marine_ecosystem: Lihat butiran modul
     Simulasi Ekosistem Marin
   aria_label_call_to_action_module_coding_geometric_star_quilt: Lihat butiran modul
-    Coding a Geometric Star Quilt
+    Mengekodkan Kuilt Bintang Geometrik
   aria_label_call_to_action_module_modeling_animal_adaptations: Lihat butiran modul
     Pemodelan Penyesuaian Haiwan
-  aria_label_call_to_action_module_coding_book_covers: Lihat butiran modul Coding
-    Book Covers
-  aria_label_call_to_action_module_coding_interactive_maps: Lihat butiran modul Coding
-    Interactive Maps
+  aria_label_call_to_action_module_coding_book_covers: Lihat butiran modul Mengekod
+    Kulit Buku
+  aria_label_call_to_action_module_coding_interactive_maps: Lihat butiran modul Mengekod
+    Peta Interaktif
   aria_label_call_to_action_csf_course_a: Lihat butiran Kursus A
   aria_label_call_to_action_csf_course_b: Lihat butiran Kursus B
   aria_label_call_to_action_csf_course_c: Lihat butiran Kursus C
   aria_label_call_to_action_csf_course_d: Lihat butiran Kursus D
   aria_label_call_to_action_csf_course_e: Lihat butiran Kursus E
   aria_label_call_to_action_csf_course_f: Lihat butiran Kursus F
+  aria_label_call_to_action_ai_pl_101_videos: Tonton video AI 101 untuk Guru
+  aria_label_call_to_action_ai_teaching_module: Terokai modul Pengajaran AI dan Pembelajaran
+    Mesin
+  aria_label_call_to_action_how_ai_works_lesson_01: Lihat butiran pelajaran Pengenalan
+    kepada Pembelajaran Mesin
+  aria_label_call_to_action_how_ai_works_lesson_02: Lihat butiran pelajaran Computer
+    Vision
+  aria_label_call_to_action_how_ai_works_lesson_03: Lihat butiran pelajaran Neural
+    Networks
+  aria_label_call_to_action_how_ai_works_lesson_04: Lihat butiran pelajaran Chatbots
+    dan Model Bahasa Besar
+  aria_label_call_to_action_how_ai_works_lesson_05: Lihat butiran pelajaran Imej Generatif
+  aria_label_call_to_action_how_ai_works_lesson_06: Lihat butiran pelajaran Bias Algoritma
+  aria_label_call_to_action_how_ai_works_lesson_07: Lihat butiran pelajaran Kod Etika
+    AI Kami
   video_title_professional_learning_program: Program Pembelajaran Profesional Code.org
   curriculum_name_csf: Asas Sains Komputer
   curriculum_name_csf_02: Mana-mana Asas CS (Kursus A-F)
   curriculum_name_csf_a_f: Asas CS A-F
   curriculum_name_csf_express: Ekspres
-  curriculum_name_csf_express_pre_reader: Ekspres Pra-Pembaca
+  curriculum_name_csf_express_pre_reader: Ekspres Prapembaca
   curriculum_name_csf_course_a: Kursus A
   curriculum_name_csf_course_b: Kursus B
   curriculum_name_csf_course_c: Kursus C
   curriculum_name_csf_course_d: Kursus D
   curriculum_name_csf_course_e: Kursus E
   curriculum_name_csf_course_f: Kursus F
-  curriculum_name_csf_no_device: Tiada Peranti/Dicabut
+  curriculum_name_csf_no_device: Tiada Peranti/Tradisional
   curriculum_name_csf_self_paced: Pelajaran kendiri
-  curriculum_name_csf_teacher_led: Guru membawa pelajaran
+  curriculum_name_csf_teacher_led: Guru memimpin pelajar untuk pembelajaran
   curriculum_name_csd: Penemuan Sains Komputer
   curriculum_name_csp: Prinsip Sains Komputer
   curriculum_name_csc: Rangkaian Sains Komputer
@@ -439,6 +462,10 @@ ms:
   module_label_student_tool: Alat pelajar
   module_label_student_product: Produk
   module_label_student_content_resources: Kandungan & sumber
+  module_label_new: Baru
+  module_label_coming_soon: Akan datang tidak lama lagi
+  module_label_video_series: Siri video
+  module_label_self_paced: Modul kendiri
   module_ages_5_10: 5-10
   module_ages_11_18: 11-18
   module_ages_7_18: 7-18
@@ -461,9 +488,13 @@ ms:
   module_grade_9_12_teachers: Guru 9-12
   module_level_beginner: Pemula
   module_level_intermediate: Perantaraan
+  module_duration_45_mins: 45 minit
+  module_duration_1_hr: 1 jam
   module_duration_2_hrs: 2 jam
   module_duration_3_hrs: 3 jam
+  module_duration_5_hrs: 5 jam
   module_duration_8_hrs: 8 jam
+  module_duration_20_hrs: 20 jam
   module_duration_35_hrs: 35 jam
   module_duration_lesson: Pelajaran
   module_duration_week: Minggu
@@ -525,8 +556,8 @@ ms:
   heading_additional_resources: Sumber tambahan
   heading_support_and_questions: Sokongan dan soalan
   heading_faq: Soalan lazim
-  heading_curriculum_at_a_glance: Kurikulum sekilas
-  heading_curricula_at_a_glance: Kurikulum sekilas
+  heading_curriculum_at_a_glance: Kurikulum sepintas lalu
+  heading_curricula_at_a_glance: Kurikulum sepintas lalu
   heading_engaging_projects: Melibatkan projek dan aktiviti yang memberi inspirasi
     kepada pembelajaran
   heading_build_apps: Bina apl
@@ -536,21 +567,22 @@ ms:
   heading_flexible_units: Unit fleksibel
   heading_collections: Koleksi
   heading_find_a_module: Cari modul untuk bilik darjah anda
-  heading_no_devices: Tiada peranti? Kami telah melindungi anda
+  heading_no_devices: Tiada peranti? Kami akan membantu anda
   heading_java_lab: Makmal Java
   heading_objects_first: Objek pertama
+  heading_these_lessons_will: 'Pelajaran ini akan:'
   professional_learning_section_desc: Dapatkan sokongan yang anda perlukan semasa
     anda bersedia untuk mengajar. Guru menyukainya, dengan lebih daripada 90% kedudukannya
-    pembangunan profesional terbaik yang pernah ada!
+    sebagai pembangunan profesional terbaik yang pernah ada!
   professional_learning_section_desc_short: Dapatkan sokongan yang anda perlukan semasa
     anda bersedia untuk mengajar.
   professional_learning_section_desc_self_paced: Hanya dalam masa sokongan yang membolehkan
     anda bersedia untuk mengajar dengan yakin pada jadual anda.
   professional_learning_section_block_facilitator_led_workshops: Program Pembelajaran
     Profesional kami yang sangat menyokong akan membawa anda bersama-sama dengan sekumpulan
-    guru untuk belajar dari satu sama lain serta fasilitator pakar seperti yang anda
-    ambil pada tahun pertama mengajar kurikulum percuma kepada pelajar anda. Bengkel
-    secara peribadi dan maya bermula pada musim panas ini.
+    guru untuk belajar daripada satu sama lain serta fasilitator pakar seperti yang
+    anda ambil pada tahun pertama mengajar kurikulum percuma kepada pelajar anda.
+    Bengkel secara peribadi dan maya bermula pada musim panas ini.
   professional_learning_section_block_facilitator_led_workshops_csf: Sertai guru tempatan
     untuk memberi inspirasi dan sokongan langsung untuk melaksanakan sains komputer
     di dalam bilik darjah anda. Rakan Serantau kami menawarkan bengkel Code.org berkualiti
@@ -562,11 +594,11 @@ ms:
     CSA curriculum to your students.
   professional_learning_section_workshops_starting: Bengkel peribadi dan maya bermula
     musim panas ini.
-  no_devices_section_subhead: Teruskan, potong kord (untuk seketika)!
+  no_devices_section_subhead: Teruskan, mula bertindak sendiri (untuk seketika)!
   no_devices_section_desc: Pendidikan CS tidak semestinya perlu berada di hadapan
     skrin dan akses peranti tidak seharusnya menjadi penghalang untuk mempelajari
     konsep sains komputer.
-  support_and_questions_section_subhead: Masih ada soalan? Jangkau kami! Kami di sini
+  support_and_questions_section_subhead: Masih ada soalan? Hubungi kami! Kami di sini
     untuk membantu.
   support_and_questions_section_desc: Pasukan sokongan kami berada di sini untuk menjawab
     sebarang soalan yang anda ada tentang memulakan pengajaran dengan Code.org. Anda
@@ -670,6 +702,11 @@ ms:
   ai_curriculum_grades_03: 'Tahap Gred: 3-12'
   ai_curriculum_duration_03: 'Tempoh: 1 jam'
   ai_curriculum_btn_aria_label_03: Cuba aktiviti AI untuk Lautan
+  ai_curriculum_title_04: Bagaimana AI Berfungsi
+  ai_curriculum_desc_04: Pelajaran ini melengkapkan siri video How AI Works. Setiap
+    pelajaran dipasangkan dengan satu video dari siri ini, menyelam lebih mendalam
+    ke dalam konsep yang diperkenalkan dalam video.
+  ai_curriculum_btn_aria_label_04: Terokai pelajaran Bagaimana AI Berfungsi
   ai_carousel_heading: 'Apa yang guru katakan mengenai AI dengan Code.org:'
   ai_carousel_quote_01: Pelajaran ini juga memberi peluang kepada pelajar saya untuk
     melihat bahawa terdapat unsur pendapat dalam sistem klasifikasi. Kemudian, ketika
@@ -688,6 +725,10 @@ ms:
   ai_pl_list_04: Pertimbangkan implikasi dunia nyata AI dan pembelajaran mesin.
   ai_pl_list_05: Terokai projek akhir bab.
   ai_pl_duration: 'Tempoh: 2 jam'
+  ai_pl_title: Mengajar AI dan Pembelajaran Mesin
+  ai_pl_desc: Pengenalan kecerdasan buatan dan pembelajaran mesin. Latih model pembelajaran
+    mesin menggunakan AI Lab. dan terlibat dengan aplikasi pembelajaran mesin. Pertimbangkan
+    implikasi dunia nyata AI dan pembelajaran mesin.
   ai_video_series_title: Bagaimana AI Berfungsi
   ai_video_series_desc: Dengan pengenalan oleh Ketua Pegawai Eksekutif Microsoft Satya
     Nadella, siri video pendek ini akan memperkenalkan anda kepada bagaimana kecerdasan
@@ -714,7 +755,8 @@ ms:
   ai_resources_btn_aria_label_03: Terokai laman web AI untuk Guru
   ai_pl_101_hero_heading: Sertai kami untuk AI EmpowerED!
   ai_pl_101_hero_desc: Temukan potensi transformatif kecerdasan buatan (AI) dalam
-    pendidikan dengan siri pembelajaran dalam talian percuma kami untuk pendidik.
+    pendidikan dengan siri pembelajaran dalam talian secara percuma untuk pendidik.
+  ai_pl_101_hero_desc_02: Siri pembelajaran dalam talian yang komprehensif untuk guru.
   ai_pl_101_hero_presented: Dibentangkan oleh
   ai_pl_101_intro_heading: Apakah AI 101 untuk guru?
   ai_pl_101_intro_text: AI 101 for Teachers adalah siri pembelajaran profesional dalam
@@ -726,10 +768,10 @@ ms:
     hasil pelajar. Sertai kami dalam perjalanan penerokaan dan pemberdayaan ini, dan
     buka masa depan pengajaran dengan dan tentang AI.
   ai_pl_101_partnership_between: Perkongsian antara
-  ai_pl_101_join_email_title: Daftar untuk akses awal kepada AI 101 untuk Guru
+  ai_pl_101_join_email_title: Daftar untuk akses awal ke AI 101 untuk Guru
   ai_pl_101_pro_join_email_desc: Jadilah yang pertama mendengar apabila setiap sesi
-    dilancarkan. Dapatkan kemas kini mengenai sumber AI dari Code.org, ETS, ISTE dan
-    Khan Academy.
+    dilancarkan. Dapatkan kemas kini tentang sumber AI daripada Code.org, ETS, ISTE
+    dan Khan Academy.
   ai_pl_101_explore_title: Sumber berkaitan AI
   ai_pl_101_explore_desc: Kami mempunyai pelbagai sumber tambahan untuk anda dari
     Code.org, ETS, ISTE dan Khan Academy untuk menyokong guru dalam bidang baru dan
@@ -758,6 +800,99 @@ ms:
     pemarkahan canggih dan AI, membantu guru dalam memberikan maklum balas berulang
     dan penilaian formatif sepanjang pengalaman menulis.'
   ai_pl_101_explore__button_4: Terokai alat
+  ai_pl_101_video_title_1: Sembang Fireside dengan Sal Khan dan Hadi Partovi
+  ai_pl_101_video_desc_1: Sertai Sal Khan (Khan Academy) dan Hadi Partovi (Code.org)
+    untuk sembang perapian mengenai memeluk kecerdasan buatan di dalam kelas. Jangkakan
+    perbincangan yang meriah termasuk beberapa topik paling kontroversial mengenai
+    AI hari ini.
+  ai_pl_101_video_title_2: Demystifying AI untuk Pendidik
+  ai_pl_101_video_desc_2: Pengenalan kepada asas-asas Kecerdasan Buatan yang akan
+    melengkapkan anda dengan pengetahuan asas untuk memahami kesan mendalam AI dalam
+    masyarakat kita dan peningkatan kaitannya dengan bidang pendidikan. Anda akan
+    mendapat pandangan praktikal untuk memanfaatkan AI untuk tugas di dalam kelas,
+    dan menjimatkan masa untuk tugas pentadbiran.
+  ai_pl_101_video_title_3: Mengubah Pembelajaran dengan AI
+  ai_pl_101_video_desc_3: Terokai persimpangan AI dan pendidikan. Sesi ini meneroka
+    bagaimana AI dapat digabungkan dengan pedagogi untuk meningkatkan pembelajaran
+    pelajar. Ini mesti dihadiri oleh pendidik yang ingin memanfaatkan AI untuk mengubah
+    amalan pengajaran mereka untuk memperkayakan pengalaman pembelajaran pelajar mereka.
+  ai_pl_101_video_title_4: Memastikan Pendekatan Bertanggungjawab terhadap AI
+  ai_pl_101_video_desc_4: Terokai pertimbangan etika dan amalan terbaik untuk menggabungkan
+    kecerdasan buatan dalam persekitaran pendidikan. Sesi ini akan memberikan strategi
+    konkrit, sumber daya, dan contoh dunia nyata, semuanya bertujuan untuk memahami
+    potensi bias AI, dan pertimbangan etika yang disertakan dengannya.
+  ai_pl_101_video_title_5: Membawa AI ke Bilik Darjah
+  ai_pl_101_video_desc_5: Sesi ini memberi tumpuan kepada pengajaran tentang AI, menilai
+    dan menggunakan alat pendidikan AI, dan memanfaatkan AI untuk penilaian pelajar.
+    Dengan gabungan teori, contoh praktikal dan sumber yang kaya, ia bertujuan untuk
+    memperkasakan pendidik untuk menavigasi landskap AI dan meningkatkan pengalaman
+    pembelajaran pelajar.
+  ai_pl_101_video_desc_6: 'Ketahui lebih lanjut mengenai teknologi baru yang mendorong
+    perubahan besar dalam AI, yang menampilkan dua video baru pada Model Bahasa Besar
+    (seperti ChatGPT) dan Generative AI. Dengar bagaimana teknologi baru ini berfungsi
+    secara langsung dari pakar: Mira Murati, CTO OpenAI, dan Cristóbal Valenzuela,
+    Ketua Pegawai Eksekutif RunwayML.'
+  how_ai_works_hero_heading: Bagaimana AI Berfungsi
+  how_ai_works_hero_desc: Selami dunia AI dengan “How AI Works,” siri video kami dan
+    pelajaran yang menyertainya!
+  how_ai_works_intro_desc: Siri video pendek dan pelajaran dalam kelas yang disertakan
+    ini akan memperkenalkan anda dan pelajar anda bagaimana kecerdasan buatan berfungsi
+    dan mengapa ia penting. Anda boleh memilih pelajaran individu berdasarkan topik,
+    meneroka keseluruhan siri topik dalam satu kelas atau mengajar semua 7 pelajaran
+    untuk menyelam lebih mendalam.
+  how_ai_works_intro_list_01: Memperkenalkan anda kepada kecerdasan buatan dan pembelajaran
+    mesin
+  how_ai_works_intro_list_02: Selami cara AI generatif berfungsi, termasuk model bahasa
+    besar (LLM) dan penjanaan imej
+  how_ai_works_intro_list_03: Terokai bias, etika, privasi dan penggunaan AI yang
+    bertanggungjawab
+  how_ai_works_intro_list_04: Sentuh aplikasi dunia nyata AI, termasuk penglihatan
+    komputer
+  how_ai_works_lessons_heading: Pelajaran AI untuk kelas anda
+  how_ai_works_lesson_title_01: Pengenalan Pembelajaran Mesin
+  how_ai_works_lesson_desc_01: Ketahui tentang bentuk kecerdasan buatan yang dipanggil
+    pembelajaran mesin dan bagaimana mereka boleh menggunakan Proses Penyelesaian
+    Masalah untuk membantu melatih robot untuk menyelesaikan masalah. Mengambil bahagian
+    dalam aktiviti pembelajaran mesin di mana robot sedang belajar bagaimana mengesan
+    corak dalam ikan.
+  how_ai_works_lesson_title_02: Visi Komputer
+  how_ai_works_lesson_desc_02: Ketahui cara penglihatan komputer berfungsi. Tonton
+    video yang menerangkan penglihatan komputer dan bagaimana komputer “melihat”.
+    Kemudian reka bentuk algoritma yang menggunakan rangkaian untuk menentukan nombor
+    yang dipaparkan oleh paparan tujuh segmen dan mengujinya.
+  how_ai_works_lesson_title_03: Rangkaian Neural
+  how_ai_works_lesson_desc_03: Ketahui bagaimana rangkaian saraf berfungsi. Gunakan
+    widget untuk meneroka rangkaian saraf dengan tangan dalam perjalanan. Tonton video
+    yang menerangkan rangkaian saraf. Akhirnya bincangkan keperluan untuk perspektif
+    yang pelbagai semasa membuat sistem cadangan.
+  how_ai_works_lesson_title_04: Chatbots dan Model Bahasa Besar
+  how_ai_works_lesson_desc_04: Ketahui apa Model Bahasa Besar (LLM) dan bagaimana
+    ia berfungsi, kemudian gunakan LLM untuk mencipta teks dengan AI. Akhirnya, bincangkan
+    sama ada LLM pintar atau kreatif atau tidak.
+  how_ai_works_lesson_title_05: Imej Generatif
+  how_ai_works_lesson_desc_05: Ketahui cara AI dapat menghasilkan gambar, kemudian
+    terokai widget AI penyebaran dan bincangkan sama ada model ini kreatif atau tidak.
+  how_ai_works_lesson_title_06: Bias Algoritma
+  how_ai_works_lesson_desc_06: Berlatih memangkas gambar untuk mengungkap bias yang
+    mendasari algoritma pemangkasan Twitter, kemudian baca dan tonton video mengenai
+    penemuan algoritma berat sebelah ini. Akhirnya, bincangkan cara untuk mengenali
+    dan mengurangkan berat sebelah dalam algoritma.
+  how_ai_works_lesson_title_07: Kod Etika AI kami
+  how_ai_works_lesson_desc_07: Menjalankan penyelidikan menggunakan artikel dan video
+    yang mendedahkan perangkap etika dalam bidang kecerdasan buatan pilihan mereka.
+    Kumpulkan sumber “Kod Etika AI Kami” di seluruh kelas untuk pencipta dan penggubal
+    undang-undang AI di mana-mana sahaja.
+  how_ai_works_lessons_in_a_day_title: Bagaimana AI Berfungsi dalam Sehari
+  how_ai_works_lessons_in_a_day_desc: Hanya mempunyai satu hari? Terdapat juga pilihan
+    untuk memperkenalkan keseluruhan siri kepada pelajar dalam satu hari. Sesuai untuk
+    mana-mana guru bidang mata pelajaran yang ingin memperkenalkan pelajar kepada
+    AI, atau bahkan sebagai pelajaran untuk guru tetamu.
+  how_ai_works_lessons_in_a_day_desc_02: Perkenalkan semua video “Bagaimana AI Berfungsi”
+    dalam satu hari. Pelajar mengikuti setiap video dengan memadankan perbendaharaan
+    kata dari video, kemudian menjawab soalan refleksi mengenai setiap video.
+  how_ai_works_resources_desc: Berminat untuk mengetahui lebih lanjut mengenai AI?
+    Berikut adalah beberapa sumber tambahan yang boleh membantu memanjangkan pembelajaran
+    anda dan pelajar anda.
   ai_vid_intro_caption: Memperkenalkan Bagaimana AI Berfungsi
   ai_vid_chatbots_caption: Bagaimana Chatbots dan Model Bahasa Besar Berfungsi
   ai_vid_creativity_caption: Adakah AI Mempunyai Kreativiti dan Imaginasi?
@@ -1100,10 +1235,10 @@ ms:
   teach_page_additional_materials_list_desc_03: Cetak poster pelbagai model peranan
     ini untuk digantung di sekolah anda dan berikan inspirasi kepada pelajar anda
     untuk mencuba sains komputer.
-  csp_page_top_desc: Free set of elementary curricula that introduces students to
-    the foundational concepts of computer science and challenges them to explore how
-    computing and technology can impact the world. Can be taught as an introductory
-    class and as an AP course.
+  csp_page_top_desc: Free year-long curriculum that introduces students to the foundational
+    concepts of computer science and challenges them to explore how computing and
+    technology can impact the world. Can be taught as an introductory class and as
+    an AP course.
   csp_page_intro_heading: Free, AP® CSP endorsed, high school introductory course
   csp_page_intro_list_01: Culturally responsive pedagogy
   csp_page_intro_list_02: Real-world problem investigation
@@ -1296,15 +1431,14 @@ ms:
     [Klik di sini untuk melihat unit fleksibel kami] (%).
   csd_page_faq_question_04: Apakah bahan dan bekalan yang diperlukan untuk CS Discoveries?
   csd_page_faq_answer_04_01: Satu kos yang berpotensi untuk dipertimbangkan semasa
-    mengajar kursus ini adalah percetakan. Banyak pelajaran mempunyai pemberian yang
-    dirancang untuk membimbing pelajar melalui aktiviti. Walaupun tidak diperlukan
-    semua pemberian ini dicetak, banyak yang dirancang untuk dicetak dan kami sangat
-    mengesyorkan mencetak apabila mungkin.
-  csd_page_faq_answer_04_02: 'Di luar percetakan, beberapa pelajaran memerlukan bekalan
-    dan manipulatif kelas biasa seperti: Jurnal pelajar, kertas poster, penanda/pensel
-    berwarna, gunting, kertas sekerap, gam atau pita, nota pasca atau kad indeks (atau
-    kertas sekerap bersaiz serupa), dan penguasa atau kelebihan lurus dari beberapa
-    jenis.'
+    mengajar kursus ini ialah percetakan. Banyak pelajaran mempunyai edaran yang direka
+    bentuk untuk membimbing pelajar melalui aktiviti. Walaupun tidak semua edaran
+    ini perlu dicetak, banyak yang direka untuk dicetak dan kami sangat mengesyorkan
+    pencetakan apabila diperlukan.
+  csd_page_faq_answer_04_02: 'Selain daripada percetakan, beberapa pelajaran memerlukan
+    bekalan bilik darjah dan manipulatif biasa seperti: Jurnal pelajar, kertas poster,
+    penanda/pensel warna, gunting, kertas sekerap, gam atau pita, nota pos atau kad
+    indeks (atau kertas sekerap bersaiz serupa), dan pembaris atau sejenis tepi lurus.'
   csd_page_faq_answer_04_03: 'Sebagai tambahan kepada bahan kursus umum, item berikut
     dipanggil dalam unit tertentu:'
   csd_page_faq_answer_04_04: Penyelesaian Masalah dan Pengkomputeran
@@ -1314,10 +1448,10 @@ ms:
     ini.
   csd_page_faq_answer_04_06: Membuat Aplikasi dengan Peranti (Pilihan A dan Pilihan
     B)
-  csd_page_faq_answer_04_07: 'Option A: Classroom set of Circuit Playgrounds. Check
-    out [code.org/maker/circuitplayground](%{url}) for more details.'
-  csd_page_faq_answer_04_08: 'Option B: Classroom set of micro:bit devices. Check
-    out [code.org/maker/microbit](%{url}) for more details.'
+  csd_page_faq_answer_04_07: 'Pilihan A: Set Bilik Darjah Taman Permainan Litar. Lihat
+    [code.org/maker/circuitplayground](%{url}) untuk mendapatkan butiran lanjut.'
+  csd_page_faq_answer_04_08: 'Pilihan B: Set bilik darjah peranti mikro:bit. Lihat
+    [code.org/maker/microbit](%{url}) untuk mendapatkan butiran lanjut.'
   csd_page_faq_answer_04_09: Bekalan pembuat, seperti kotak tisu kosong atau gulungan
     kadbod atau kertas calar
   csd_page_faq_answer_04_10: "* Nota: Unit Mencipta Apl dengan Peranti mempunyai dua
@@ -1681,6 +1815,7 @@ ms:
   not_found_desc: Halaman yang diminta tidak ditemui
   not_found_instructions: Semak alamat laman web dan hantar semula atau pilih pautan
     daripada senarai di bawah.
+  company_code_dot_org: Code.org
   company_4-H: Pembangunan Belia 4-H
   company_asa: Perikatan Selepas Sekolah
   company_asos: ASOS
@@ -1733,6 +1868,7 @@ ms:
   company_evsd: Daerah Sekolah East Valley
   company_eastonvilleschooldistrict: Daerah Sekolah Eatonville
   company_enumclawschooldistrict: Daerah Sekolah Enumclaw
+  company_ets: ETS
   company_everettsd: Sekolah Awam Everette
   company_fsusd: Daerah Sekolah Gabungan Fairfield-Suisun
   company_fayettecountypublicschools: Sekolah Awam Wilayah Fayette
@@ -1754,6 +1890,7 @@ ms:
   company_houstonisd: Sekolah Persendirian Daerah Houston
   company_hcpss: Sekolah Awam Wilayah Howard
   company_idla: Akademi Pembelajaran Digital Idaho
+  company_iste: ISTE
   company_janesvilleschooldistrict: Daerah Sekolah Janesville
   company_johnstoncountyschools: Sekolah Wilayah Johnston
   company_lps: Sekolah Awam Lincoln
@@ -12257,8 +12394,9 @@ ms:
   tutorial_ai4alldance_string_platforms: Semua pelayar moden
   tutorial_ai4allneural_string_platforms: Semua pelayar moden
   tutorial_spheroinout_string_platforms: Nirplag
-  tutorial_edisonblueprint_string_platforms: Semua pelayar moden
-  tutorial_edisonmaze_string_platforms: Semua pelayar moden
+  tutorial_edisonblueprint_string_platforms: Semua pelayar moden, tablet Android,
+    iPad
+  tutorial_edisonmaze_string_platforms: Semua pelayar moden, tablet Android, iPad
   tutorial_milnefunctions_string_platforms: Semua pelayan moden, Pembaca skrin
   tutorial_sasmap_string_platforms: Semua pelayar moden, iPad, pembaca skrin
   tutorial_firstrobotics_string_platforms: Semua pelayar moden
@@ -13540,6 +13678,128 @@ ms:
   accessibility_card_text_10: Penyesuaian kurikulum Prinsip Sains Komputer AP Code.org
     menggunakan Quorum, bahasa berasaskan bukti yang pada asalnya direka untuk menyediakan
     akses kepada pelajar buta atau cacat penglihatan.
+  engineering_hero_heading: Sertai pasukan kejuruteraan kami!
+  engineering_hero_desc: Semasa kami terus mengembangkan pasukan kejuruteraan kami,
+    kami ingin berkongsi lebih lanjut mengenai organisasi kejuruteraan kami di Code.org
+    dan beberapa aspek unik bekerja di sini. Jika anda berminat untuk memohon salah
+    satu peranan kami, kami ingin mendengar daripada anda!
+  engineering_team_title: Temui pasukan kejuruteraan di Code.org
+  engineering_team_card_text_1: Ini adalah (kebanyakan) kita berkumpul secara peribadi
+    pada musim panas 2023! Orang ramai ini dibahagikan kepada empat sub-pasukan dalam
+    pasukan kejuruteraan kami yang bekerjasama untuk membina dan melayani platform
+    untuk semua pelajar dan guru kami.
+  engineering_team_card_text_2: Jika anda berminat untuk memohon salah satu peranan
+    kami, kami ingin mendengar daripada anda! Anda boleh mendapatkan senarai jawatan
+    terbuka di halaman Kerjaya kami.
+  engineering_our_team_title: Pasukan kejuruteraan kami
+  engineering_our_team_desc: 'Pasukan kejuruteraan di Code.org dibahagikan kepada
+    empat sub-pasukan yang membina dan menyokong pelbagai bidang platform kami:'
+  engineering_our_team_sub_title_1: Pasukan Pembelajaran Pelajar
+  engineering_our_team_text_1: Pasukan Pembelajaran Pelajar kami memiliki semua aktiviti
+    kami (kami memanggil mereka makmal) yang digunakan oleh pelajar kami setiap hari.
+    Pasukan ini bekerja kebanyakannya pada teknologi front-end (kami menggunakan React
+    dan banyak JS adat) dan kami mempunyai hubungan kerja yang hebat dengan banyak
+    rakan kongsi dan projek sumber terbuka. Sebagai contoh, kami menggunakan [Google
+    Blockly] (%{youtube_url}) untuk semua pengaturcaraan berasaskan blok kami. Kami
+    menyokong pelajar dalam perjalanan pembelajaran mereka dari Tadika hingga gred
+    12.
+  engineering_our_team_sub_title_2: Teacher Experience Team
+  engineering_our_team_text_2: Pasukan Pengalaman Guru kami membina alat yang menarik
+    guru baru ke Code.org (kami memanggil produk pemerolehan ini) dan mengembangkan
+    platform yang memberi kuasa kepada guru kami yang ada untuk mengajar kurikulum
+    kami (alat guru kami). Seperti alat pelajar kami, kami bergantung pada React untuk
+    membina bahagian depan kami dan komponen sisi pelayan kami dihidangkan menggunakan
+    Ruby on Rails.
+  engineering_our_team_sub_title_3: Pasukan Platform
+  engineering_our_team_text_3: Pasukan Platform kami memiliki komponen teras yang
+    memenuhi keperluan pasukan pelajar dan guru kami (contohnya, pengesahan dan profil
+    pengguna) dan juga mempunyai misi untuk menjangkau pelajar yang belum dapat kami
+    jangkau. Ini termasuk membina integrasi yang menghubungkan kami dengan sekolah
+    yang menggunakan Sistem Pengurusan Pembelajaran (LMS) yang berbeza dan mengemas
+    kurikulum kami sehingga dapat digunakan di sekolah terpencil yang tidak mempunyai
+    akses ke internet yang boleh dipercayai.
+  engineering_our_team_sub_title_4: Pasukan Infrastruktur
+  engineering_our_team_text_4: Pasukan Infrastruktur kami menyediakan tulang belakang
+    untuk platform yang menyokong pelajar dan guru kami. Ini termasuk infrastruktur
+    hosting kami dan perkhidmatan yang berkaitan (kami menggunakan AWS), pengurusan
+    data, program keselamatan, perkhidmatan pemaju dan penggunaan dan banyak lagi.
+    Pasukan ini juga memiliki sistem penskalaan dan peruntukan kami, yang sangat penting
+    semasa Hour of Code, di mana kami menjemput setiap pelajar di dunia untuk menyelesaikan
+    satu jam pengekodan dengan kami.
+  engineering_faq_question_1: Apa yang Code.org lakukan?
+  engineering_faq_answer_1_a: Code.org adalah inovasi pendidikan bukan keuntungan
+    khusus untuk visi bahawa setiap pelajar di setiap sekolah mempunyai peluang untuk
+    belajar sains komputer sebagai sebahagian daripada pendidikan K-12 teras mereka.
+  engineering_faq_answer_1_b: Kami memperluas akses kepada sains komputer di sekolah,
+    dengan fokus pada peningkatan penyertaan oleh wanita muda dan pelajar dari kumpulan
+    lain yang kurang diwakili. Pembekal utama kurikulum sains komputer K-12 di daerah
+    sekolah terbesar di Amerika Syarikat, Code.org juga menganjurkan kempen Hour of
+    Code tahunan, yang telah melibatkan lebih daripada 15% daripada semua pelajar
+    di dunia.
+  engineering_faq_answer_1_c: Code.org disokong oleh penderma murah hati termasuk
+    Microsoft, Amazon, Google dan banyak lagi.
+  engineering_faq_question_2: Apakah pengalaman dan perkakas pemaju Code.org?
+  engineering_faq_answer_2: Pengalaman pembangun kami mungkin berbeza dengan apa yang
+    anda lihat dalam peranan masa lalu anda. Bekerja rapat dengan pasukan produk kami,
+    kami menghantar ke pengeluaran setiap hari bekerja dan kami mempunyai pelbagai
+    irama - kadangkala anda menulis kod yang disiarkan pada hari itu; pada masa lain
+    anda berada dalam projek jangka panjang - dan semasa kami mengikuti pecut 2 minggu,
+    kami melakukannya dengan cara yang ringan. Kami mengindeks ke arah mendapatkan
+    perkara yang betul dilakukan dengan cara yang betul berbanding mengambil pandangan
+    murni mengenai sebarang metodologi tertentu. [Semua kod kami] (%{code_url}) adalah
+    sumber terbuka dan kami menggunakan permintaan tarik JIRA dan GitHub untuk mengesan
+    semua item kerja kami. Kami juga mengambil berat tentang kualiti dan ujian dan
+    bernasib baik kerana mendapat sokongan yang luar biasa dari [SauceLabs](%{saucelabs_url}),
+    yang membantu kami menjalankan rangkaian ujian UI kami pada pelbagai peranti pelajar
+    (contohnya, iPad) di ladang peranti awan mereka.
+  engineering_faq_question_3: Apakah putaran panggilan jurutera di Code.org?
+  engineering_faq_answer_3: 30+ pasukan kejuruteraan kami berkongsi tanggungjawab
+    semasa panggilan. Setiap jurutera meliputi peralihan 24 jam dan menggunakan laluan
+    peningkatan dan buku permainan kami untuk bertindak balas terhadap gangguan tapak
+    atau isu tapak langsung yang lain. Kami berbangga dengan kebolehpercayaan laman
+    web kami - rata-rata, setiap jurutera hanya bangun sekali setahun untuk masalah
+    yang biasanya cepat diselesaikan. Sebaliknya, “Pembangun Hari” biasanya membelanjakan
+    sebahagian daripada hari kerja mereka menguruskan penggunaan pengeluaran dan triaging
+    isu-isu yang kurang mendesak.
+  engineering_faq_question_4: Adakah anda organisasi mesra jauh/WFH?
+  engineering_faq_answer_4_a: Ya! Pada tahun 2019, tidak lama sebelum wabak itu, Code.org
+    menjadi organisasi jarak jauh. Hari ini, kami mempunyai jurutera di setiap zon
+    waktu AS dan menampung waktu bekerja dengan sewajarnya. Kebanyakan mesyuarat kami
+    berlaku antara jam 10 pagi dan 3 petang PT.
+  engineering_faq_answer_4_b: Kami juga menyedari nilai masa secara peribadi, dan
+    setiap suku tahun kami berkumpul secara peribadi, biasanya di Seattle. Dua daripada
+    peristiwa ini (kami memanggilnya Minggu Kick-off dan “Codechella”) membawa semua
+    orang dalam organisasi bersama-sama pada bulan Januari dan Jun - dan pasukan kejuruteraan
+    dan produk bertemu secara berasingan pada bulan April dan Oktober.
+  engineering_faq_answer_4_c: Kami sangat percaya untuk meluangkan masa bersama pelajar
+    dan guru kami, begitu banyak acara bersemuka ini termasuk perjalanan ke sekolah
+    dan bilik darjah untuk mengumpulkan maklum balas atau menguji produk kami
+  engineering_faq_question_5: Apa yang menjadikan pasukan kejuruteraan di Code.org
+    unik?
+  engineering_faq_answer_5_a: 'Selain menyelesaikan masalah teknikal yang mencabar,
+    kami mempunyai beberapa perkara yang menjadikan organisasi kejuruteraan kami berbeza
+    daripada yang lain yang mungkin pernah anda kerjakan:'
+  engineering_faq_answer_5_b_1: Kami semua berkongsi semangat kami untuk misi kami.
+  engineering_faq_answer_5_b_2: Setiap daripada kita berada di sini untuk menyokong
+    misi untuk mengembangkan akses kepada sains komputer untuk setiap pelajar di seluruh
+    dunia. Kita semua mempunyai kisah dan perspektif unik tentang apa yang mendorong
+    kita ke arah misi ini.
+  engineering_faq_answer_5_c_1: Kami sangat peduli antara satu sama lain.
+  engineering_faq_answer_5_c_2: Apabila jurutera bergelut dengan masalah, kami melangkah
+    masuk dan kami membantu. Salah satu prinsip kami ialah kami sukar menghadapi masalah,
+    tetapi baik antara satu sama lain. Kami mempromosikan jurutera secara berkala,
+    tetapi kami tidak menetapkan penyelesaian yang terlalu banyak kejuruteraan hanya
+    untuk menyokong jalan promosi seseorang. Sebaliknya, kami melabur dalam jurutera
+    kami dengan bajet pembangunan profesional yang murah hati dan akses kepada peluang
+    pembelajaran yang lain.
+  engineering_faq_answer_5_d_1: Kami bekerja keras, tetapi kami menetapkan sempadan
+    yang jelas.
+  engineering_faq_answer_5_d_2: Walaupun kami menyokong pelajar di seluruh dunia,
+    kami bertanggungjawab untuk sempadan yang jelas antara kerja dan kehidupan rumah.
+    Kami menikmati hari Rabu tanpa mesyuarat, mengambil PTO kami (jumlah minggu 5,
+    yang merangkumi penutupan pejabat 2 minggu di seluruh dunia pada akhir tahun aka
+    Cuti Musim Sejuk), separuh hari bekerja pada hari Jumaat semasa musim panas aka
+    Jumaat Musim Panas, dan faedah lain yang murah hati.
   language_code:
     ar: Bahasa Arab
     az: Azerbaijan

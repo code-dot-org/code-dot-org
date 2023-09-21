@@ -90,7 +90,7 @@ class Block < ApplicationRecord
     FileUtils.rm_f js_path_was
   end
 
-  def js_path(old=false)
+  def js_path(old = false)
     Pathname.new(file_path(old)).sub_ext('.js')
   end
 

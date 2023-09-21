@@ -430,11 +430,16 @@ sm:
             lessonGroup-6:
               display_name: Faamaumauga
         nevada-standards-aligned-first-grade-2023:
+          lessons:
+            lesson-1:
+              name: Faamaumauga
           lesson_groups:
             lessonGroup-4:
               display_name: taamiloga
             lessonGroup-6:
               display_name: events
+            lessonGroup-8:
+              display_name: Faamaumauga
         nevada-standards-aligned-second-grade-2023:
           lesson_groups:
             lessonGroup-4:

@@ -27,7 +27,7 @@
         },
         "csd-2022/applab-overview": {
           "display_name": "Panoramica",
-          "content": "Sviluppo App è uno strumento creato con [JavaScript](/concepts/javascript/) che può essere utilizzato per creare app. Scopri di più sulle istruzioni di Sviluppo App nella [documentazione Sviluppo App](/docs/applab/)."
+          "content": "Sviluppo App è uno strumento creato con [JavaScript](./javascript-overview) che può essere utilizzato per creare app. Scopri di più sulle istruzioni di Sviluppo App nella [documentazione Sviluppo App](/docs/applab/)."
         },
         "csd-2022/arrays": {
           "display_name": "Matrici (arrays)",
@@ -63,7 +63,7 @@
         },
         "csd-2022/circuit-playground-parent": {
           "display_name": "Adafruit Circuit Playground",
-          "content": "Queste risorse fanno riferimento a funzionalità specifiche di [Circuit Playground](/maker/circuitplayground)."
+          "content": "Queste risorse fanno riferimento a funzionalità specifiche di [Circuit Playground](https://code.org/maker/circuitplayground)."
         },
         "csd-2022/circuits-and-buttons": {
           "display_name": "Tasti esterni sul Circuit Playground",
@@ -157,7 +157,7 @@
         },
         "csd-2022/game-lab-overview": {
           "display_name": "Panoramica",
-          "content": "Sviluppo Giochi è uno strumento costruito con [JavaScript](/concepts/javascript/) che può essere utilizzato per creare arte, giochi e animazioni. Scopri di più sulle istruzioni di Sviluppo Giochi nella [documentazione di Sviluppo Giochi](https://studio.code.org/docs/gamelab/)."
+          "content": "Sviluppo Giochi è uno strumento costruito con [JavaScript](./javascript-overview) che può essere utilizzato per creare arte, giochi e animazioni. Scopri di più sulle istruzioni di Sviluppo Giochi nella [documentazione di Sviluppo Giochi](https://studio.code.org/docs/gamelab/)."
         },
         "csd-2022/headings-and-paragraphs": {
           "display_name": "Intestazioni e Paragrafi",
@@ -212,7 +212,7 @@
         },
         "csd-2022/javascript-overview": {
           "display_name": "Panoramica",
-          "content": "JavaScript è un linguaggio di programmazione utilizzato su Internet e come linguaggio di programmazione principale in molti degli strumenti e programmi di Code.org, come [Sviluppo App](/concepts/app-lab/), [Sviluppo Giochi](/concepts/game-lab/) e [Maker Toolkit](/concepts/maker-toolkit/)."
+          "content": "JavaScript è un linguaggio di programmazione utilizzato su Internet e come linguaggio di programmazione principale in molti degli strumenti e programmi di Code.org, come [Sviluppo App](./applab-overview), [Sviluppo Giochi](./game-lab-overview) e [Maker Toolkit](./maker-toolkit-overview)."
         },
         "csd-2022/layout-properties": {
           "display_name": "Proprietà della disposizione della pagina (layout)",
@@ -240,7 +240,7 @@
         },
         "csd-2022/maker-toolkit-overview": {
           "display_name": "Panoramica",
-          "content": "Il Maker Toolkit è uno strumento creato con [JavaScript](/concepts/javascript/) che consente di scrivere programmi che comunicano con [Adafruit Circuit Playground](https://code.org/maker/circuitplayground) o [BBC micro:bit](https://code.org/maker/microbit). Maggiori informazioni sui comandi di Maker Toolkit nella [documentazione di Sviluppo App](https://code.org/maker/microbit)."
+          "content": "Il Maker Toolkit è uno strumento creato con [JavaScript](./javascript-overview) che consente di scrivere programmi che comunicano con [Adafruit Circuit Playground](https://code.org/maker/circuitplayground) o [BBC micro:bit](https://code.org/maker/microbit). Maggiori informazioni sui comandi di Maker Toolkit nella [documentazione di Sviluppo App](https://code.org/maker/microbit)."
         },
         "csd-2022/microbit-circuits-buttons": {
           "display_name": "Pulsanti esterni su un micro:bit",
@@ -260,7 +260,7 @@
         },
         "csd-2022/microbit-parent": {
           "display_name": "Il micro:bit della BBC",
-          "content": "Queste risorse fanno riferimento a funzionalità specifiche di [BBC micro:bit](/maker/microbit)"
+          "content": "Queste risorse fanno riferimento a funzionalità specifiche di [BBC micro:bit](https://code.org/maker/microbit)"
         },
         "csd-2022/microbit-physical-input": {
           "display_name": "ingresso fisico micro:bit",

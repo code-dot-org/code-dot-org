@@ -223,7 +223,7 @@ class Api::V1::SectionsStudentsControllerTest < ActionController::TestCase
 
   test 'teacher can add one student to a word section' do
     sign_in @teacher
-    post :bulk_add, params: {section_id: @section.id, students: [{gender_teacher_input: 'f', age: 9, name: 'name'}]}
+    post :bulk_add, params: {section_id: @section.id, students: [{gender_teacher_input: 'f', age: 9, name: 'name', family_name: 'famname'}]}
     assert_response :success
 
     parsed_response = JSON.parse(@response.body)
@@ -234,6 +234,7 @@ class Api::V1::SectionsStudentsControllerTest < ActionController::TestCase
     new_student = User.find_by_id(parsed_response[0]['id'])
 
     assert_equal 'name', new_student.name
+    assert_equal 'famname', new_student.family_name
     assert_equal 9, new_student.age
     assert_equal 'f', new_student.gender
   end

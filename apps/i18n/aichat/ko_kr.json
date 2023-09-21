@@ -1,3 +1,9 @@
 {
-  "continue": "계속"
+  "allMessagesSentAreRecorded": "'AI 챗'으로 전송한 모든 메시지가 기록됩니다.",
+  "anythingPersonalCanNotBeSubmitted": "개인 정보 보호를 위해, 이름, 전화번호, 주소 등 개인 정보로 간주되는 정보를 'AI 챗'에 전송해서는 안 됩니다.",
+  "continue": "계속",
+  "inappropriateMessagesAreFlagged": "부적절한 메시지는 신고되며 선생님에게 알려집니다.",
+  "inappropriateUserMessage": "부적절한 메시지입니다.",
+  "tooPersonalUserMessage": "개인 정보 유출의 위험이 있는 메시지입니다.",
+  "warningModalOkButtonText": "채팅 시작"
 }

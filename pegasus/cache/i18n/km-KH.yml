@@ -69,7 +69,7 @@ km-KH:
   arduino_beyond_shortdescription: រៀន Arduino ជាមួយនិង Sparkfun's Digital Sandbox។
   are_you_teacher: តើ​អ្នក​ជា​គ្រូ​បង្រៀន​មែនទេ?
   artist_gradelevel: អាយុពី ៨ ទៅ ១០៨ ឆ្នាំ
-  artist_name: សិល្បករ
+  artist_name: វិចិត្រករ
   basketball_name: បង្កើតហ្គេមបោះបាល់
   beginner: អ្នកកម្រិត​ដំបូង
   beyond_an_hour: លើសពី Hour of Code
@@ -729,6 +729,7 @@ km-KH:
   dashboard_sections_table_code: លេខកូដផ្នែក
   dashboard_sections_table_course: វគ្គសិក្សា
   dashboard_sections_table_grade: ថ្នាក់
+  dashboard_sections_table_pairing_allowed: ការសរសេរកម្មវិធីជាគូ
   dashboard_sections_table_secret: ប្រភេទ ចូលគណនី
   dashboard_sections_table_section: " ថ្មី\n"
   dashboard_sections_table_stage_extras: ដំណាក់កាលផ្សេងទៀត
@@ -811,7 +812,7 @@ km-KH:
   enter_valid_age: សូមជ្រើសរើសអាយុដែលត្រឹមត្រូវ
   enter_valid_email: សូម​បំពេញ​អាសយដ្ឋាន​អ៊ីម៉ែល​ដែលត្រឹមត្រូវ
   express-2018_name: វគ្គសិក្សារហ័ស (២០១៨)
-  express-2022_name: វគ្គសិក្សារហ័ស (2022)
+  express-2022_name: Express Course (2022)
   finch_beyond_gradelevel: អាយុ ៨ ឆ្នាំឡើង
   finch_beyond_longdescription: The Finch គឺជាមនុស្សយន្តថ្មីសម្រាប់ការអប់រំវិទ្យាសាស្ត្រកុំព្យូទ័រ។
     ការរចនារបស់វា គឺជាលទ្ធផលនៃការសិក្សារយៈពេលបួនឆ្នាំនៅមន្ទីរពិសោធន៍ Carnegie Mellon's
@@ -1009,7 +1010,7 @@ km-KH:
   hoc2018_dance_amazon_try_coding_this_summer_title: សាកល្បងសរសេរកូដនៅរដូវក្តៅនេះ
   hoc2018_dance_create_your_own_dance_title: បង្កើត Dance Party ដោយខ្លួនអ្នក
   hoc2018_dance_featured_student_creations_title: Featured Student Creations
-  hoc2018_dance_keep_on_dancing_box_title: Keep On Dancing
+  hoc2018_dance_keep_on_dancing_box_title: បន្តបង្កើតក្បាច់រាំ
   hoc2018_dance_keep_on_dancing_button: ចាប់ផ្តើមវគ្គ ២
   hoc2018_dance_keep_on_dancing_description: បន្តលើសពីមួយម៉ោងដំបូង ជាមួយនឹងគំនិតគម្រោងបន្ថែមទៀត។
   hoc2018_dance_keep_on_dancing_specs: ភាសា | ទម្រង់ | អាយុ ១៣ ឆ្នាំឡើង
@@ -1795,11 +1796,13 @@ km-KH:
   sports_athletes_title: អត្តពលិកដែលមានលក្ខណៈពិសេស
   sports_basketball_title: បង្កើតហ្គេមបោះបាល់
   sports_featured_athletes: មើលអត្តពលិកដែលមានលក្ខណៈពិសេស
+  sports_name: សរសេរកូដបង្កើតហ្គេមកីឡាផ្ទាល់ខ្លួន
   sports_og_description: ជើងឯក និងម្ចាស់មេដាយមាស លើកទឹកចិត្តអ្នកឲ្យសាកល្បងកម្មវិធី
     Hour of Code។ សរសេរកូដសម្រាប់ហ្គេមប្រភេទកីឡាដោយខ្លួនអ្នកផ្ទាល់។
   sports_og_title: ជំរុញខ្លួនអ្នក។ នរណាៗក៏អាចរៀនបានដែរ។
   sports_page_title: Hour of Code Sports
   sports_select_theme: ជ្រើសរើសទម្រង់នៃការបង្រៀនរបស់អ្នក
+  sports_title: សរសេរកូដបង្កើតហ្គេមកីឡាផ្ទាល់ខ្លួន
   sports_video_title: ជំរុញខ្លួនអ្នក។ នរណាៗក៏អាចរៀនបានដែរ។
   sports_watch_video: មេីលវីដេអូ
   sprite_lab_documentation: ឯកសារ Sprite Lab
@@ -2117,7 +2120,7 @@ km-KH:
     និងតារាល្បីៗ"
   videos_more_markdown: " [វីដេអូដែលបំផុសគំនិត] (%{inspiring_videos_playlist}) ច្រើនទៀត
     ដែលនិយាយអំពីជនគំរូ និងតារាល្បីៗ"
-  view_all_sections: មើលផ្នែកទាំងអស់
+  view_all_sections: មើលថ្នាក់ទាំងអស់
   view_course: មើលវគ្គសិក្សា
   view_english_site: បើកមើលផ្នែកភាសាអង់គ្លេស
   view_named_section: មើល %{section_name}

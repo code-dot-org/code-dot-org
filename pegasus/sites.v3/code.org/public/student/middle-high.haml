@@ -21,9 +21,9 @@ theme: responsive
 
 %h2 Learn the fundamentals with our self-paced courses
 
-%h3
-  %strong
-    Express course
+%hr{style: "margin: 2rem 0"}
+
+%h3 Express course
 
 A great option for students getting started on their own. You'll learn the fundamentals of computer science with drag & drop blocks. Create your own drawings and games. Note: Express courses are currently only available in English, Hindi, Italian, and Spanish. For other languages, we recommend our 20-hour
 %a{href: CDO.studio_url('/s/20-hour')} Accelerated Course.
@@ -34,39 +34,41 @@ To see what's available in your language, visit our
   %a{href: CDO.studio_url('/s/express')}
     %img{src: "/images/curriculum/course-tile-express.png", style: "max-width: 100%"}
 
+%hr{style: "margin: 2rem 0"}
+
 = view :athome_olderstudents
 
 %div{style: "clear: both;"}
-%br/
-%br/
+
+%hr{style: "margin: 2rem 0"}
+
 %h2 Make your own apps, games, and webpages
 .hoc-tiles-container
-
 %div{style: "clear: both;"}
-%br/
-%br/
-%h2 Videos: Watch these easy 3-5 minute educational videos
-%br/
-= view :athome_videos
-%br/
-%hr/
 
-%h1 Learning in the classroom
-%h2 Computer Science Discoveries
-%br/
+%hr{style: "margin: 2rem 0"}
+
+%h2{style: "margin: 0 0 2rem"} Videos: Watch these easy 3-5 minute educational videos
+= view :athome_videos
+
+%hr{style: "margin: 2rem 0"}
+
+%h2 Learning in the classroom
+%h3 Computer Science Discoveries
 = view :csd_information
 %div{style: "clear: both;"}
-%br/
-%h2 Computer Science Principles (intro and AP course)
-%br/
-= view :csp_information
-%br/
-%br/
-%h2 Computer Science A
-%br/
-= view :csa_information
-%br/
 
-%hr/
-%h1 Courses from 3rd parties
+%hr{style: "margin: 2rem 0"}
+
+%h3 Computer Science Principles (intro and AP course)
+= view :csp_information
+
+%hr{style: "margin: 2rem 0"}
+
+%h3 Computer Science A
+= view :csa_information
+
+%hr{style: "margin: 2rem 0"}
+
+%h2{style: "margin-bottom: 2rem"} Courses from 3rd parties
 = view :learn_carousels, variation:'middle_high'

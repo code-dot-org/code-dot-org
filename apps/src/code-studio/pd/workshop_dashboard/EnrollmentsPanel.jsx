@@ -34,6 +34,7 @@ export default class EnrollmentsPanel extends React.Component {
       ['scholarship_workshop?']: PropTypes.bool,
       sessions: PropTypes.array,
       subject: PropTypes.string,
+      state: PropTypes.string,
     }),
     enrollments: PropTypes.array,
     isLoadingEnrollments: PropTypes.bool,
@@ -318,8 +319,6 @@ export default class EnrollmentsPanel extends React.Component {
 
           {viewSurveyUrl &&
             shouldShowSurveyResults(
-              // TODO: Add prop types for this field
-              // eslint-disable-next-line react/prop-types
               workshop.state,
               workshop.course,
               workshop.subject,

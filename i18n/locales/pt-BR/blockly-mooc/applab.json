@@ -18,6 +18,7 @@
   "designToolboxHeader": "Caixa de ferramentas de design",
   "designWorkspaceDescription": "Clique em um elemento ou escolha-o no menu suspenso abaixo para editar suas propriedades. Crie código em Eventos.",
   "designWorkspaceHeader": "Área de trabalho: ",
+  "designElement_image": "Imagem",
   "designElementPhotoSelectClickName": "Mudança",
   "designElementPhotoSelectClickDescription": "Acionada quando uma foto é selecionada.",
   "designElementEvent_change": "Mudança",

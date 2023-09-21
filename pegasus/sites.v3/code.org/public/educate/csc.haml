@@ -13,7 +13,7 @@ theme: responsive_full_width
         =hoc_s(:curriculum_name_csc)
       %p{style: "color: white"}
         =hoc_s(:csc_page_top_desc)
-      %a.link-button{href: "#csc-modules"}
+      %a.link-button.white{href: "#csc-modules"}
         =hoc_s(:call_to_action_explore_modules)
     %figure
       %img{src: "/images/banners/banner-csc-octopus.png", alt: ""}
@@ -146,5 +146,9 @@ theme: responsive_full_width
 %section
   .wrapper
     = view :support_and_questions_section
+
+%section{style: "padding-top: 2rem"}
+  .wrapper
+    = view :curriculum_subscribe_form, subscribe_form_section_desc: hoc_s(:subscribe_form_section_desc_csc), form_src: "http://go.pardot.com/l/153401/2018-10-02/lzp5jd"
 
 = view :visit_partial_event_logger

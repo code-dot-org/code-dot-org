@@ -38,7 +38,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>《舞會》</strong></h3>        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">程式設計設計一款《舞會》遊戲，與親朋好友共用。 精選碧昂斯、哈裡·斯泰爾斯、麗佐、利爾·納斯、賽琳娜·戈麥斯、迪士尼《魔法滿屋》中的音樂等等！</div>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>舞蹈派對</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">編碼舞蹈派對與朋友和家人分享。 精選碧昂斯、哈裡·斯泰爾斯、麗佐、利爾·納斯、賽琳娜·戈麥斯、迪士尼《魔法滿屋》中的音樂等等！</div>
         <a class="linktag" id="danceparty" href="/dance" target="_blank"><button>嘗試活動</button></a>
     </span>
   </div>
@@ -52,7 +53,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>《我的世界》程式設計一小時</strong></h3>        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">《我的世界》回歸《程式設計一小時》的課堂，並且引入了全新的活動！ 在《我的世界》體驗程式設計樂趣。</div>        <br>        <a class="linktag" id="minecraft" href="/minecraft" target="_blank"><button>嘗試活動</button></a>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>《我的世界》一小時玩程式</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">《我的世界》以全新的活動回歸了一小時玩程式！ 在《我的世界》體驗程式設計樂趣。</div>        <br>        <a class="linktag" id="minecraft" href="/minecraft" target="_blank"><button>嘗試活動</button></a>
     </span>
   </div>
 </div>
@@ -65,7 +67,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>海洋人工智慧</strong></h3>        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">訓練人工智慧探測垃圾，助力海洋的淨化！ 了解訓練資料和偏差，以及人工智慧如何解決世界難題。 查看<a class="linktag" id="oceans-lesson" href="https://curriculum.code.org/hoc/plugged/9/" target="_blank">教案</a>。</div>        <a class="linktag" id="aiforoceans" href="https://studio.code.org/s/oceans/lessons/1/levels/1" target="_blank"><button>嘗試活動</button></a>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>海洋人工智能</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">通過訓練海洋來檢測垃圾來幫助人工智能清潔海洋！ 了解訓練資料和偏差，以及人工智慧如何解決世界難題。 查看<a class="linktag" id="oceans-lesson" href="https://curriculum.code.org/hoc/plugged/9/" target="_blank">教案</a>。</div>        <a class="linktag" id="aiforoceans" href="https://studio.code.org/s/oceans/lessons/1/levels/1" target="_blank"><button>嘗試活動</button></a>
     </span>
   </div>
 </div>
@@ -90,9 +93,9 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>電腦的工作原理</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">這一系列共有六個短片，透過比爾·蓋茨的介紹，解釋了是什麼成就了電腦以及計算機電路的工作原理。</div>
-        <a class="linktag" id="howcomputers" href="https://www.youtube.com/watch?v=OAx_6-wdslM&list=PLzdnOPI1iJNcsRwJhvksEo1tJqjIqWbN-" target="_blank"><button>觀看系列視頻</button></a>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>計算機如何工作</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">隨著比爾·蓋茨的介紹，這一系列的六個短片解釋了什麼使計算機成為計算機以及計算機電路如何工作。</div>
+        <a class="linktag" id="howcomputers" href="https://www.youtube.com/watch?v=OAx_6-wdslM&list=PLzdnOPI1iJNcsRwJhvksEo1tJqjIqWbN-" target="_blank"><button>觀看視頻系列</button></a>
     </span>
   </div>
 </div>
@@ -105,7 +108,9 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>互聯網的工作原理</strong></h3>        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">這一系列共有八個短片，講述了互聯網是如何發明的、HTML是什麼以及Google等搜尋引擎是如何工作的。</div>        <a class="linktag" id="howinternet" href="https://www.youtube.com/watch?v=Dxcc6ycZ73M&list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7-" target="_blank"><button>觀看系列視頻</button></a>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>互聯網的運作方式</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">在這一系列的八個短片中，您將了解互聯網是如何發明的，HTML 是什麼以及 Google 這樣的搜索引擎是如何工作的。</div>
+        <a class="linktag" id="howinternet" href="https://www.youtube.com/watch?v=Dxcc6ycZ73M&list=PLzdnOPI1iJNfMRZm5DDxco3UdsFegvuB7-" target="_blank"><button>觀看視頻系列</button></a>
     </span>
   </div>
 </div>
@@ -118,8 +123,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>人工智慧的工作原理</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">透過這一系列的短片，了解人工智慧的工作原理及其重要的原因。 微軟首席執行官薩提亞·納德拉及不同專家大咖現身傳授。</div>        <a class="linktag" id="ai-videos" href="/ai#ai-videos" target="_blank"><button>觀看系列視頻</button></a>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>人工智慧的運作方式</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">透過這一系列的短片瞭解 AI 的運作方式以及其重要性。 微軟首席執行官薩提亞·納德拉及不同專家大咖現身傳授。</div>        <a class="linktag" id="ai-videos" href="/ai#ai-videos" target="_blank"><button>觀看系列視頻</button></a>
     </span>
   </div>
 </div>
@@ -167,7 +172,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom:10px"><strong>遊戲實驗室入門</strong></h3>        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">在遊戲實驗室中練習動畫、互動藝術和遊戲的程式設計。 從簡單的圖形入手，設計更為複雜的精靈圖動畫和遊戲。</div>        <a class="linktag" id="gamelab-intro" href="https://studio.code.org/s/csd3-virtual" target="_blank"><button>試聽模組</button></a>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom:10px"><strong>遊戲實驗室介紹遊戲實驗室</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">程序動畫，互動美術和遊戲實驗室。 從簡單的圖形入手，設計更為複雜的精靈圖動畫和遊戲。</div>        <a class="linktag" id="gamelab-intro" href="https://studio.code.org/s/csd3-virtual" target="_blank"><button>試聽模組</button></a>
     </span>
   </div>
 </div>
@@ -180,9 +186,9 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>應用實驗室中的海龜程式設計</strong></h3>
-        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">使用簡單的JavaScript命令，借助虛擬的「海龜」，繪製形狀和圖像。設計和程式設計你自己的數位場景！</div>
-        <a class="linktag" id="turtle-applab" href="https://studio.code.org/s/csp3-virtual" target="_blank"><button>試聽模組</button></a>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>應用程序實驗室中的海龜編程</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">使用簡單的 JavaScript 命令使用虛擬的「海龜」繪製形狀和圖像。設計和編程您自己的數字場景！</div>
+        <a class="linktag" id="turtle-applab" href="https://studio.code.org/s/csp3-virtual" target="_blank"><button>嘗試使用模塊</button></a>
     </span>
   </div>
 </div>
@@ -195,7 +201,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid #696969; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; text-align: left; margin-top:10px; margin-bottom: 10px"><strong>應用實驗室中的事件驅動程式設計</strong></h3>        <div class="smalltext" style="color: dimgray; text-align: left; margin-bottom: 10px">學習如何設計對點擊和按鍵做出回應的應用。 創建一系列簡單的應用，並在網路上運行！</div>        <a class="linktag" id="events-applab" href="https://studio.code.org/s/csp5-virtual" target="_blank"><button>試聽模組</button></a>
+        <h3 class="tutorial-info-h" style="text-align: left; margin-top:10px; margin-bottom: 10px"><strong>App Lab 中的事件驅動程式設計</strong></h3>
+        <div class="smalltext" style="text-align: left; margin-bottom: 10px">瞭解如何設計回應點擊和按鍵的應用程式。 創建一系列簡單的應用，並在網路上運行！</div>        <a class="linktag" id="events-applab" href="https://studio.code.org/s/csp5-virtual" target="_blank"><button>試聽模組</button></a>
     </span>
   </div>
 </div>
@@ -299,7 +306,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; margin-top:10px"><strong>CodeBytes</strong></h3>        <div class="smalltext" style="color: dimgray;">CodeBytes是一類易於理解的20分鐘互動課程，將電腦科學與現實世界的主題融會貫通。 訓練人工智慧閱讀手語、設計應用、探索《我的世界》等等！</div>        <br>        <br>        <a class="linktag" id="codebytes" href="https://code.org/codebytes" target="_blank"><button>查看視頻</button></a>
+        <h3 class="tutorial-info-h" style="margin-top:10px"><strong>代碼字節</strong></h3>
+        <div class="smalltext" style="color: dimgray;">代碼易於消化，20 分鐘的互動課程，將計算機科學與真實世界主題融合在一起。 訓練人工智慧閱讀手語、設計應用、探索《我的世界》等等！</div>        <br>        <br>        <a class="linktag" id="codebytes" href="https://code.org/codebytes" target="_blank"><button>查看視頻</button></a>
     </span>
   </div>
 </div>
@@ -312,8 +320,8 @@ theme: responsive
       </a>
     <div class="tutorial-info" style="background-color: #ffffff; border: 1px solid black; border-top: none; border-radius: 0 0 15px 15px; padding: 15px 25px 25px 25px">
       <span>
-        <h3 class="tutorial-info-h" style="color: dimgray; margin-top:10px"><strong>《代碼小憩》</strong></h3>
-        <div class="smalltext" style="color: dimgray; ">透過《代碼小憩》，保持對電腦科學的興趣！ 你可以與阿什頓·庫徹一起創建密碼，與亞拉·沙希迪一起了解變數，甚至可以與互聯網的實際發明者溫特·瑟夫一起探索互聯網的運行原理！</div>
+        <h3 class="tutorial-info-h" style="margin-top:10px"><strong>代碼破解</strong></h3>
+        <div class="smalltext" style="">通過破解密碼保持計算機科學的樂趣！ 你可以與阿什頓·庫徹一起創建密碼，與亞拉·沙希迪一起了解變數，甚至可以與互聯網的實際發明者溫特·瑟夫一起探索互聯網的運行原理！</div>
         <br>
         <a class="linktag" id="codebreak" href="https://code.org/break" target="_blank"><button>立即加入</button></a>
     </span>

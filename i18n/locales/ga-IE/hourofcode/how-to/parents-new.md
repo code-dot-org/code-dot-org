@@ -1,5 +1,5 @@
 ---
-title: How-to guide for parents
+title: Conas-chun treoir a thabhairt do thuismitheoirí
 ---
 
 # How to do an Hour of Code with your child

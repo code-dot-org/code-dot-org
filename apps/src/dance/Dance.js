@@ -14,12 +14,7 @@ import DanceParty from '@code-dot-org/dance-party/src/p5.dance';
 import DanceAPI from '@code-dot-org/dance-party/src/api';
 import ResourceLoader from '@code-dot-org/dance-party/src/ResourceLoader';
 import danceMsg from './locale';
-import {
-  reducers,
-  setSelectedSong,
-  setSongData,
-  setRunIsStarting,
-} from './redux';
+import {reducers, setRunIsStarting, initSongs, setSong} from './danceRedux';
 import trackEvent from '../util/trackEvent';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import logToCloud from '../logToCloud';
@@ -29,20 +24,13 @@ import {
   setThumbnailBlobFromCanvas,
 } from '../util/thumbnail';
 import project from '../code-studio/initApp/project';
-import {
-  getSongManifest,
-  getSelectedSong,
-  loadSong,
-  loadSongMetadata,
-  parseSongOptions,
-  unloadSong,
-  fetchSignedCookies,
-} from './songs';
+import {loadSongMetadata} from './songs';
 import {SongTitlesToArtistTwitterHandle} from '../code-studio/dancePartySongArtistTags';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 import {showArrowButtons} from '@cdo/apps/templates/arrowDisplayRedux';
-import queryString from 'query-string';
 import danceCode from '@code-dot-org/dance-party/src/p5.dance.interpreted.js';
+import HttpClient from '@cdo/apps/util/HttpClient';
+import {CHAT_COMPLETION_URL} from '@cdo/apps/aichat/constants';
 
 const ButtonState = {
   UP: 0,
@@ -184,87 +172,65 @@ Dance.prototype.awaitTimingMetrics = function () {
 };
 
 Dance.prototype.initSongs = async function (config) {
-  // Check for a user-specified manifest file.
-  const manifest = queryString.parse(window.location.search).manifest;
-  const songManifest = await getSongManifest(
-    config.useRestrictedSongs,
-    manifest
+  getStore().dispatch(
+    initSongs({
+      useRestrictedSongs: config.useRestrictedSongs,
+      selectSongOptions: config.level,
+      onAuthError: () => {
+        firehoseClient.putRecord(
+          {
+            study: 'restricted-song-auth',
+            event: 'initial-auth-error',
+            data_json: JSON.stringify({
+              currentUrl: window.location.href,
+              channelId: config.channel,
+            }),
+          },
+          {includeUserId: true}
+        );
+      },
+      onSongSelected: songId => {
+        this.updateSongMetadata(songId);
+
+        if (config.channel) {
+          // Ensure that the selected song will be stored in the project the first
+          // time we run the level. This ensures that if we are on a project-backed
+          // script level, then the correct song will still be selected after we
+          // share.
+          config.level.selectedSong = songId;
+        }
+      },
+    })
   );
-  const songData = parseSongOptions(songManifest);
-  const selectedSong = getSelectedSong(songManifest, config);
-
-  // Set selectedSong first, so we don't initially show the wrong song.
-  getStore().dispatch(setSelectedSong(selectedSong));
-  getStore().dispatch(setSongData(songData));
-
-  loadSong(selectedSong, songData, status => {
-    if (status === 403) {
-      // Something is wrong, because we just fetched cloudfront credentials.
-      firehoseClient.putRecord(
-        {
-          study: 'restricted-song-auth',
-          event: 'initial-auth-error',
-          data_json: JSON.stringify({
-            currentUrl: window.location.href,
-            channelId: config.channel,
-          }),
-        },
-        {includeUserId: true}
-      );
-    }
-  });
-  this.updateSongMetadata(selectedSong);
-
-  if (config.channel) {
-    // Ensure that the selected song will be stored in the project the first
-    // time we run the level. This ensures that if we are on a project-backed
-    // script level, then the correct song will still be selected after we
-    // share.
-    config.level.selectedSong = selectedSong;
-  }
 };
 
 Dance.prototype.setSongCallback = function (songId) {
-  const lastSongId = getStore().getState().songs.selectedSong;
-  const songData = getStore().getState().songs.songData;
+  getStore().dispatch(
+    setSong({
+      songId,
+      onAuthError: () => {
+        firehoseClient.putRecord(
+          {
+            study: 'restricted-song-auth',
+            event: 'repeated-auth-error',
+            data_json: JSON.stringify({
+              currentUrl: window.location.href,
+              channelId: getStore().getState().pageConstants.channelId,
+            }),
+          },
+          {includeUserId: true}
+        );
+      },
+      onSongSelected: songId => {
+        this.updateSongMetadata(songId);
 
-  if (lastSongId === songId) {
-    return;
-  }
-
-  getStore().dispatch(setSelectedSong(songId));
-
-  unloadSong(lastSongId, songData);
-  loadSong(songId, songData, status => {
-    if (status === 403) {
-      // The cloudfront signed cookies may have expired.
-      fetchSignedCookies().then(() =>
-        loadSong(songId, songData, status => {
-          if (status === 403) {
-            // Something is wrong, because we just re-fetched cloudfront credentials.
-            firehoseClient.putRecord(
-              {
-                study: 'restricted-song-auth',
-                event: 'repeated-auth-error',
-                data_json: JSON.stringify({
-                  currentUrl: window.location.href,
-                  channelId: getStore().getState().pageConstants.channelId,
-                }),
-              },
-              {includeUserId: true}
-            );
-          }
-        })
-      );
-    }
-  });
-
-  this.updateSongMetadata(songId);
-
-  const hasChannel = !!getStore().getState().pageConstants.channelId;
-  if (hasChannel) {
-    project.saveSelectedSong(songId);
-  }
+        const hasChannel = !!getStore().getState().pageConstants.channelId;
+        if (hasChannel) {
+          project.saveSelectedSong(songId);
+        }
+      },
+    })
+  );
 };
 
 Dance.prototype.loadAudio_ = function () {
@@ -400,6 +366,7 @@ Dance.prototype.afterInject_ = function () {
     spriteConfig: new Function('World', this.level.customHelperLibrary),
     container: 'divDance',
     i18n: danceMsg,
+    doAi: this.doAi.bind(this),
     resourceLoader: new ResourceLoader(
       'https://curriculum.code.org/images/sprites/dance_20191106/'
     ),
@@ -521,7 +488,7 @@ Dance.prototype.runButtonClick = async function () {
   // Block re-entrancy since starting a run is async
   // (not strictly needed since we disable the run button,
   // but better to be safe)
-  if (getStore().getState().songs.runIsStarting) {
+  if (getStore().getState().dance.runIsStarting) {
     return;
   }
 
@@ -540,7 +507,7 @@ Dance.prototype.runButtonClick = async function () {
   await this.danceReadyPromise;
 
   //Log song count in Dance Lab
-  trackEvent('HoC_Song', 'Play-2019', getStore().getState().songs.selectedSong);
+  trackEvent('HoC_Song', 'Play-2019', getStore().getState().dance.selectedSong);
 
   Blockly.mainBlockSpace.traceOn(true);
   this.studioApp_.attempts++;
@@ -725,5 +692,37 @@ Dance.prototype.captureThumbnailImage = function () {
     captureThumbnailFromCanvas(canvas);
   } else {
     setThumbnailBlobFromCanvas(canvas);
+  }
+};
+
+Dance.prototype.doAi = async function (input) {
+  const systemPrompt =
+    'You are a helper which can accept a request for a mood or atmosphere, and you then generate JSON like the following format: {backgroundColor: "black", backgroundEffect: "splatter", foregroundEffect: "rain"}.  The only valid values for backgroundEffect are circles, color_cycle, diamonds, disco_ball, fireworks, swirl, kaleidoscope, lasers, splatter, rainbow, snowflakes, galaxy, sparkles, spiral, disco, stars.  The only valid values for backgroundColor are rave, cool, electronic, iceCream, neon, tropical, vintage, warm.  The only valid values for foregroundEffect are bubbles, confetti, hearts_red, music_notes, pineapples, pizzas, smiling_poop, rain, floating_rainbows, smile_face, spotlight, color_lights, raining_tacos.  Make sure you always generate all three of those values.  Also, if you receive a request to place a dancer somewhere, then add {setDancer: "true"} to the result JSON.  Also, add a field called "explanation" to the result JSON, which contains a single-sentence explanation of why you chose the values that you did, at the reading level of a 5th-grade school student.';
+
+  const messages = [
+    {
+      role: 'system',
+      content: systemPrompt,
+    },
+    {
+      role: 'user',
+      content: input,
+    },
+  ];
+
+  const response = await HttpClient.post(
+    CHAT_COMPLETION_URL,
+    JSON.stringify({messages}),
+    true,
+    {
+      'Content-Type': 'application/json; charset=UTF-8',
+    }
+  );
+
+  if (response.status === 200) {
+    const res = await response.json();
+    return res.content;
+  } else {
+    return null;
   }
 };

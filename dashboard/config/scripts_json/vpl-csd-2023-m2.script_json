@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-08-02 00:10:08 UTC",
+    "serialized_at": "2023-08-18 03:50:29 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -58,6 +58,8 @@
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
+        "overview": "**Purpose:**\nThis session brings participants together in synchronous learning to continue to build on the workshop theme, “Role of the Teacher”.\n\n**Objectives:**\n\n* Participants are aware of the theme for the day.\n* Participants are thinking about how things are going and what they want to work on/get help with.\n\n**Suggested time:** 15 minutes",
+        "student_overview": "**You will:**\n\n* Be aware of the theme for the day.\n* Think about how things are going and what you want to work on/get help with.\n"
       },
       "seeding_key": {
         "lesson.key": "lesson-2",
@@ -73,6 +75,8 @@
       "has_lesson_plan": true,
       "relative_position": 3,
       "properties": {
+        "overview": "**Purpose:**\nThe purpose of this session is for participants to a) review key CS concepts for Unit 3, b) share reflections about the role of the teacher, and c) focus on how that role changes and stays the same throughout various lessons.\n\n**Objectives:**\n\n* Participants review core CS Concepts, lesson investigation, conclusions and connections, as well as focus areas for planning within Unit 3 in order to know what to expect and prepare for.\n* Participants reflect on and identify key takeaways about the role of the teacher for Unit 3.\n\n**Suggested time:** 20 minutes",
+        "student_overview": "**You will:**\n\n* Review core CS concepts to prepare to teach your students.\n* Reflect on and identify key takeaways about the role of the teacher for Unit 3."
       },
       "seeding_key": {
         "lesson.key": "lesson-3",
@@ -88,6 +92,8 @@
       "has_lesson_plan": true,
       "relative_position": 4,
       "properties": {
+        "overview": "**Purpose:**\nThe goal of this session is for participants to familiarize themselves with the Unit 3 Chapter 1 project expectations while gaining confidence in providing feedback to students using the provided rubric.\n\n**Objectives:**\n\n* Participants become familiar with the resources available to support the assessment of a summative project.\n* Participants gain comfort in applying the project rubric to assess student work.\n\n**Suggested time:** 20 minutes",
+        "student_overview": "**You will:**\n\n* Become familiar with the resources available to support the assessment of a summative project.\n* Gain comfort in applying the project rubric to assess student work."
       },
       "seeding_key": {
         "lesson.key": "lesson-4",
@@ -103,6 +109,8 @@
       "has_lesson_plan": true,
       "relative_position": 5,
       "properties": {
+        "overview": "**Purpose:**\nThe purpose of this session is for participants to continue conversations that were started in the 5-day summer workshop about identity and inclusion. Participants will focus on how the role of the teacher impacts creating a culture of inclusion for students in CS.\n\n**Objectives:**\n\n* Participants use a shared definition of inclusion and identity.\n* Participants are able to describe how their identity, experiences, and beliefs shape how they see their role as a CS teacher.\n* Participants are able to describe the influence they have over culture and success in a CS classroom.\n\n**Suggested time:** 20 minutes",
+        "student_overview": "**You will:**\n\n* Use a shared definition of inclusion and identity.\n* Describe how your identity, experiences, and beliefs shape how you see your role as a CS teacher.\n* Describe the influence you have over culture and success in a CS classroom.\n"
       },
       "seeding_key": {
         "lesson.key": "lesson-5",
@@ -118,6 +126,8 @@
       "has_lesson_plan": true,
       "relative_position": 6,
       "properties": {
+        "overview": "**Purpose:**\nThis session introduces participants to Module 3 Asynchronous work and wraps up the theme for the day - “Role of the Teacher”.\n\n**Objectives:**\n\n* Participants are prepared to engage in Module 3 asynchronous work.\n* Participants share final thoughts and ideas around the “Role of the Teacher” theme.\n* Participants provide feedback on the workshop by completing the workshop survey.\n\n**Suggested time:** 15 minutes",
+        "student_overview": "**You will:**\n\n* Prepare to engage in Module 3 asynchronous work.\n* Share final thoughts and ideas around the “Role of the Teacher” theme.\n* Provide feedback on the workshop by completing the workshop survey.\n"
       },
       "seeding_key": {
         "lesson.key": "lesson-6",
@@ -148,6 +158,54 @@
       "seeding_key": {
         "lesson_activity.key": "476bdbf9-2952-4758-837f-623031cf41f4",
         "lesson.key": "lesson-2",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2023-m2"
+      }
+    },
+    {
+      "key": "fe243b76-f568-4ecf-9232-8ed80aefbe7c",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "fe243b76-f568-4ecf-9232-8ed80aefbe7c",
+        "lesson.key": "lesson-3",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2023-m2"
+      }
+    },
+    {
+      "key": "d9ed86b2-4458-4d5b-b938-ad0acbf3195d",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "d9ed86b2-4458-4d5b-b938-ad0acbf3195d",
+        "lesson.key": "lesson-4",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2023-m2"
+      }
+    },
+    {
+      "key": "528768c0-2e61-45a6-8b48-70ac32659dff",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "528768c0-2e61-45a6-8b48-70ac32659dff",
+        "lesson.key": "lesson-5",
+        "lesson_group.key": "",
+        "script.name": "vpl-csd-2023-m2"
+      }
+    },
+    {
+      "key": "160acec4-1607-4984-b5b4-d7cd6e33a714",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "lesson_activity.key": "160acec4-1607-4984-b5b4-d7cd6e33a714",
+        "lesson.key": "lesson-6",
         "lesson_group.key": "",
         "script.name": "vpl-csd-2023-m2"
       }
@@ -208,6 +266,46 @@
         "activity_section.key": "d8267019-6fcb-45ed-b9d4-0eca22f8bee4",
         "lesson_activity.key": "476bdbf9-2952-4758-837f-623031cf41f4"
       }
+    },
+    {
+      "key": "1025536f-4850-4cfa-8b7d-c51541b293b1",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "1025536f-4850-4cfa-8b7d-c51541b293b1",
+        "lesson_activity.key": "fe243b76-f568-4ecf-9232-8ed80aefbe7c"
+      }
+    },
+    {
+      "key": "04e44ebc-df41-4cb0-85ad-240e2ae78081",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "04e44ebc-df41-4cb0-85ad-240e2ae78081",
+        "lesson_activity.key": "d9ed86b2-4458-4d5b-b938-ad0acbf3195d"
+      }
+    },
+    {
+      "key": "45d58635-5c1c-40fe-9561-c0fdd535f61b",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "45d58635-5c1c-40fe-9561-c0fdd535f61b",
+        "lesson_activity.key": "528768c0-2e61-45a6-8b48-70ac32659dff"
+      }
+    },
+    {
+      "key": "89e53ae3-d25a-433a-9199-947f9a9d4043",
+      "position": 1,
+      "properties": {
+      },
+      "seeding_key": {
+        "activity_section.key": "89e53ae3-d25a-433a-9199-947f9a9d4043",
+        "lesson_activity.key": "160acec4-1607-4984-b5b4-d7cd6e33a714"
+      }
     }
   ],
   "script_levels": [
@@ -217,6 +315,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD Module 2 Overview_2023"
+        ],
         "progression": "Module 2 Overview"
       },
       "bonus": false,
@@ -239,6 +340,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 1 - CI_2023"
+        ],
         "progression": "Lesson Investigation (~ 60 min)"
       },
       "bonus": false,
@@ -261,6 +365,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD: Introduction to the Draw Loop_2023"
+        ],
         "progression": "Lesson Investigation (~ 60 min)"
       },
       "bonus": false,
@@ -283,6 +390,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD 2021 - Module 2 CI - Draw Loop_2023"
+        ],
         "progression": "Lesson Investigation (~ 60 min)"
       },
       "bonus": false,
@@ -305,6 +415,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD Module 2 CI The Draw Loop Reflection_2023"
+        ],
         "progression": "Lesson Investigation (~ 60 min)"
       },
       "bonus": false,
@@ -327,6 +440,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD: Animating Sprite Movement_2023"
+        ],
         "progression": "Lesson Investigation (~ 60 min)"
       },
       "bonus": false,
@@ -349,6 +465,9 @@
       "activity_section_position": 6,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD 2020 - Module 2 CI - Sprite Movement_2023"
+        ],
         "progression": "Lesson Investigation (~ 60 min)"
       },
       "bonus": false,
@@ -371,6 +490,9 @@
       "activity_section_position": 7,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD Module 2 CI Sprite Movement Reflection_2023"
+        ],
         "progression": "Lesson Investigation (~ 60 min)"
       },
       "bonus": false,
@@ -393,6 +515,9 @@
       "activity_section_position": 8,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD U3 - Booleans Video_2023"
+        ],
         "progression": "Lesson Investigation (~ 60 min)"
       },
       "bonus": false,
@@ -415,6 +540,9 @@
       "activity_section_position": 9,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL-CSD 2020 - Module 2 CI - Conditionals_2023"
+        ],
         "progression": "Lesson Investigation (~ 60 min)"
       },
       "bonus": false,
@@ -437,6 +565,9 @@
       "activity_section_position": 10,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD Module 2 CI Conditionals Reflection_2023"
+        ],
         "progression": "Lesson Investigation (~ 60 min)"
       },
       "bonus": false,
@@ -459,6 +590,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Conclusions and Connections_2023"
+        ],
         "progression": "Conclusions and Connections (~ 20 mins)"
       },
       "bonus": false,
@@ -481,6 +615,9 @@
       "activity_section_position": 2,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD U3 Chapter 1 Project_2023"
+        ],
         "progression": "Conclusions and Connections (~ 20 mins)"
       },
       "bonus": false,
@@ -503,6 +640,9 @@
       "activity_section_position": 3,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD: Sprite Velocity_2023"
+        ],
         "progression": "Conclusions and Connections (~ 20 mins)"
       },
       "bonus": false,
@@ -525,6 +665,9 @@
       "activity_section_position": 4,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD U3 collisions car intro_2023"
+        ],
         "progression": "Conclusions and Connections (~ 20 mins)"
       },
       "bonus": false,
@@ -547,6 +690,9 @@
       "activity_section_position": 5,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD U3 game intro_2018_2019_pilot_2023"
+        ],
         "progression": "Conclusions and Connections (~ 20 mins)"
       },
       "bonus": false,
@@ -569,6 +715,9 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
+        "level_keys": [
+          "VPL - CSD - Module 2 Wrap Up_2023"
+        ],
         "progression": "Module 2 Asynchronous Wrap Up (~ 10 mins)"
       },
       "bonus": false,
@@ -793,13 +942,43 @@
     }
   ],
   "resources": [
-
+    {
+      "name": "23-24 CS Discoveries Virtual M2 Agenda",
+      "url": "https://docs.google.com/document/d/154IcQMYNsEyN5EhjjQfKXDrWjGhvJwXCI0N58YVfyfQ/edit?usp=drive_link",
+      "key": "23-24_cs_discoveries_virtual_m2_agenda",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "23-24_cs_discoveries_virtual_m2_agenda"
+      }
+    },
+    {
+      "name": "23-24 CS Discoveries Virtual M2 Slides",
+      "url": "https://docs.google.com/presentation/d/1IJfhIKA0QD3IpfVwNzLVSrrYhv13j_lVHYc9YMLJR10/edit?usp=drive_link",
+      "key": "23-24_cs_discoveries_virtual_m2_slides",
+      "properties": {
+      },
+      "seeding_key": {
+        "resource.key": "23-24_cs_discoveries_virtual_m2_slides"
+      }
+    }
   ],
   "lessons_resources": [
 
   ],
   "scripts_resources": [
-
+    {
+      "seeding_key": {
+        "resource.key": "23-24_cs_discoveries_virtual_m2_agenda",
+        "script.name": "vpl-csd-2023-m2"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "23-24_cs_discoveries_virtual_m2_slides",
+        "script.name": "vpl-csd-2023-m2"
+      }
+    }
   ],
   "scripts_student_resources": [
 

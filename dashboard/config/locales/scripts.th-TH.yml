@@ -2409,6 +2409,8 @@ th:
           student_description: ลองทำความคุ้นเคยกับวิทยาการคอมพิวเตอร์พื้นฐานผ่านตัวละครจากเจ้านกขี้โมโห
             แพล็นส์ วีเอส. ซอมบีส์และเจ้ากระรอกจากไอซ์ เอจ!
           title: เขาวงกตสุดคลาสสิค
+        how-ai-works-2023:
+          title: AI ทำงานอย่างไร
         iceage:
           name: ยุคน้ำแข็ง
         infinity:
@@ -2490,6 +2492,11 @@ th:
               display_name: เหตุการณ์
             lessonGroup-7:
               display_name: โปรเจกต์ปิดท้ายหลักสูตร
+            lessonGroup-8:
+              display_name: ข้อมูล
+          lessons:
+            lesson-1:
+              name: ข้อมูล
         nevada-standards-aligned-fourth-grade-2023:
           description_audience: 'อายุ: 8-12 ปี'
           lesson_groups:
@@ -2528,6 +2535,11 @@ th:
               display_name: เหตุการณ์
             lessonGroup-6:
               display_name: ข้อมูล
+            lessonGroup-8:
+              display_name: ระบบคอมพิวเตอร์
+          lessons:
+            lesson-1:
+              name: ระบบคอมพิวเตอร์
         nevada-standards-aligned-third-grade-2023:
           description_audience: 'อายุ: 7-11 ปี'
           description_short: เรียนรู้คำสั่งแบบมีเงื่อนไข ก่อนคิดงานศิลปะ เกม และแม้แต่ปาร์ตี้เต้นรำของคุณเอง

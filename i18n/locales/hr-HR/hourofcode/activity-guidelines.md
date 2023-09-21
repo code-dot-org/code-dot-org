@@ -8,271 +8,276 @@ title: Smjernice za tutorijale
   }
 </style>
 
-# Guidelines for creating and submitting tutorials and lessons for Hour of Code™ and Computer Science Education Week
+# Smjernice za izradu i slanje tutorijala i lekcija za Sat kodiranja™ i Tjedan obrazovanja računalnih znanosti
 
-Code.org hosts a variety of Hour of Code™ activities, lessons, and videos on the Code.org and Hour of Code websites. The current list is at [hourofcode.com/learn]({{ urls/learn }}).
+Code.org domaćin je raznih aktivnosti, lekcija i videozapisa Hour of Code™ na web stranicama Code.org i Hour of Code. The current list is at [hourofcode.com/learn]({{ urls/learn }}).
 
-Want to submit your own self-guided tutorial, teacher-led lesson, or robotics/maker activity that explains a computer science principle? Join this global movement and help participants around the world get started with an hour of code or go further with multi-lesson, day-long, or week-long activities.
+Želite li predati vlastiti samoupravljeni vodič, lekciju koju vodi učitelj ili aktivnost robotike/tvorca koja objašnjava princip računalne znanosti? Pridružite se ovom globalnom pokretu i pomozite sudionicima širom svijeta da započnu s sat vremena koda ili krenu dalje s aktivnostima s više lekcija, dan-dugo ili tjedan dana.
 
-**After reading the guidelines, you can submit your activity through our [Hour of Code™ Activity Submission page](https://forms.gle/eeAt6kVuz3RKg5n18). You can submit an activity at any time, but the deadline for inclusion in any given calendar year is October 1. (For example, any activities received after October 1, 2023, will not be listed for 2023's Hour of Code.)** If you have any questions about your activity submission, please reach out to us at support@code.org.
+**Nakon čitanja smjernica, svoju aktivnost možete poslati putem naše stranice [Sat koda™ Podnošenje aktivnosti](https://docs.google.com/forms/d/e/1FAIpQLSdsdTKU6pD5qXlPUQWlgrjESRlm2L02wkTcZQuL8hz9OEvzNQ/viewform). Aktivnost možete podnijeti u bilo kojem trenutku, ali rok za uključivanje u bilo koju kalendarsku godinu je 1. listopada. (Na primjer, sve aktivnosti primljene nakon 1. listopada 2023., neće biti navedene za Sat kodiranja 2023.)** Ako imate bilo kakvih pitanja o prijavi aktivnosti, obratite nam se na support@code.org.
 
-A few tips:
+Nekoliko savjeta:
 
-1. **Submit more than one activity**: If you’ve built activities for different levels, different ages, or other categories, we list your activities separately so each teacher can find the right thing for their classroom. Submit each tutorial or activity individually. Given the number of submissions we have seen in recent years, we will have time to review **up to 5 activities** per partner. After that, we will make a best effort to review as many as possible before Hour of Code begins.
+1. **Pošaljite više aktivnosti**: Ako ste izgradili aktivnosti za različite razine, različite dobi ili druge kategorije, vaše aktivnosti navodimo odvojeno kako bi svaki nastavnik mogao pronaći pravu stvar za svoju učionicu. Pošaljite svaki vodič ili aktivnost pojedinačno. S obzirom na broj podnesaka koje smo vidjeli posljednjih godina, imat ćemo vremena pregledati **do 5 aktivnosti** po partneru. Nakon toga, potrudit ćemo se pregledati što je više moguće prije početka sata kodiranja.
 
-2. **Beyond beginner lessons**: In addition to lessons for teachers and students who are learning computer science for the first time, we list learning experiences for computer science-savvy classrooms that want to go a little bit further! Help us by submitting lessons for classes that are already comfortable with the basics.
+2. **Osim početnih lekcija**: Pored lekcija za učitelje i učenike koji prvi put uče informatiku, navodimo iskustva učenja za učionice koje pamte računalne znanosti koje žele ići malo dalje! Pomozite nam slanjem lekcija za nastavu koji su već zadovoljni osnovama.
 
-3. **Subject areas**: Have a great lesson idea that integrates Computer Science into Math? History? Language Arts? Science? Art? Or another subject? We’ve had numerous requests from teachers who want to connect the Hour of Code to their subject area. Teachers can filter for their classroom type (grade band or subject area) so we need your help filling in gaps to offer classroom activities or lesson plans that relate CS to every major subject area for different grade bands. We also continue to have a “Computer Science” category for teachers who are looking for generic CS activities.
+3. **Predmetna područja**: Imate sjajnu ideju lekcije koja integrira računalne znanosti u matematiku? Povijest? Jezik umjetnost? Znanost? Umjetnost? Ili neki drugi subjekt? Imali smo brojne zahtjeve nastavnika koji žele povezati Sat kodiranja sa svojim predmetnim područjem. Nastavnici mogu filtrirati svoj tip učionice (razred ili predmetno područje), tako da nam je potrebna vaša pomoć u popunjavanju praznina kako bismo ponudili aktivnosti u učionici ili planove lekcija koji povezuju CS sa svakim glavnim predmetnim područjem za različite razrede razreda. Također nastavljamo imati kategoriju "Computer Science" za nastavnike koji traže generičke CS aktivnosti.
 
 <a id="top"></a>
 
-## Index:
+## Indeks:
 
-- [What to submit](#whatsubmit)
-- [General guidelines for creating an Hour of Code™ activity](#guidelines)
-- [How to Submit](#submit)
-- [How activities will be evaluated](#inclusion)
-- [Suggestions for designing your activity](#design)
-- [Trademark Guidelines](#tm)
-- [Tracking Pixel](#pixel)
-- [Promoting your activity, CSEdWeek, and Hour of Code](#promote)
+- [Što podnijeti](#whatsubmit)
+- [Opće smjernice za kreiranje aktivnosti Hour of Code™](#guidelines)
+- [Kako poslati](#submit)
+- [Kako će se vrednovati aktivnosti](#inclusion)
+- [Prijedlozi za projektiranje vaše aktivnosti](#design)
+- [Smjernice za zaštitni znak](#tm)
+- [Praćenje piksela](#pixel)
+- [Promicanje vaše aktivnosti, CsedWeek i Sat kodiranja](#promote)
 
 <a id="whatsubmit"></a>
 
-## What to submit
+## Što podnijeti
 
-**Self-guided puzzle or game ([example](https://code.org/dance))**
+**Samovođena zagonetka ili igra ([primjer](https://code.org/dance))**
 
-These activities are designed for students to self-direct through a tutorial. They don’t require much instruction from a teacher or teacher prep work.
+Te su aktivnosti namijenjene studentima da se samostalno usmjeravaju kroz udžbenik. Oni ne zahtijevaju puno poduka od nastavnika ili nastavnika pripremnog rada.
 
 **Teacher Facilitated lesson ([example](https://studio.code.org/s/course1/lessons/2/levels/1), [template](https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8axKIzv8YI56JGA))**
 
-Now that hundreds of thousands of educators have tried the Hour of Code, many classrooms are ready for more creative activities that teach the basics of computer science. To help more advanced teachers find inspiration, we collect and curate "teacher-led" lessons and activity plans for Hour of Code veterans.
+Sada kada su stotine tisuća nastavnika isprobali Sat kodiranja, mnoge učionice spremne su za kreativnije aktivnosti koje podučavaju osnove računalne znanosti. Kako bismo pomogli naprednijim nastavnicima da pronađu inspiraciju, prikupljamo i kuriramo lekcije i planove aktivnosti "vođenih učiteljima" za veterane Sata kodiranja.
 
-One type of activity that we will feature for experienced teachers are “open sandbox” creation projects. Activities that encourage students to build their own app, game, website or other project. If facilitated properly, more open-ended activities can better showcase the creative nature of computer science.
+Jedna vrsta aktivnosti koju ćemo predstaviti za iskusne učitelje su projekti stvaranja "otvorenog pješčanika". Aktivnosti koje potiču studente da izgrade vlastitu aplikaciju, igru, web stranicu ili drugi projekt. Ako se pravilno olakša, više otvorenih aktivnosti mogu bolje prikazati kreativnu prirodu računalne znanosti.
 
-Some educators may also prefer to host Hour of Code activities that follow a traditional lesson format rather than a guided-puzzle/game experience.
+Neki nastavnici također mogu radije ugostiti aktivnosti Hour of Code koje slijede tradicionalni format lekcije, a ne iskustvo vođene zagonetke/igre.
 
-You can start with this [template](https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8axKIzv8YI56JGA) for your lesson plan.
+Možete započeti s ovim [predloškom](https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8axKIzv8YI56JGA) za svoj plan lekcije.
 
-**Activities for teachers in other subjects/fields**
+**Aktivnosti za nastavnike iz drugih predmeta/područja**
 
-We also feature lesson plans designed for different subject areas. For example, a one-hour lesson plan for teaching code in a geometry class. Or a mad-lib exercise for English class. Or a creative quiz-creation activity for history class. These can help recruit teachers in other subject areas to guide an Hour of Code activity that is unique to their field, while demonstrating how CS can influence and enhance many different subject areas.
+Također imamo planove lekcija dizajnirane za različita predmetna područja. Na primjer, jednosatni plan lekcije za podučavanje koda u razredu geometrije. Ili ludi lib vježba za engleski sat. Ili kreativna aktivnost kreiranja kviza za nastavu povijesti. Oni mogu pomoći u zapošljavanju nastavnika u drugim predmetnim područjima kako bi vodili aktivnost Sata kodiranja koja je jedinstvena za njihovo područje, istovremeno pokazujući kako CS može utjecati i poboljšati mnoga različita predmetna područja.
 
-Examples:
+Primjeri:
 
-- Mirror Images (an activity for an art teacher)
-- An arduino activity for a physics teacher
-- A history of technology activity for a history teacher
-- And see [this list](https://docs.google.com/document/d/19jQ2VhBUyIn30VFbfdHOVpmlymhNiB0AkEqRxHz3dr0/edit) for more ideas from educators (or add your own to the list to inspire others)
+- Zrcalne slike (aktivnost za nastavnika umjetnosti)
+- Arduino aktivnost za nastavnika fizike
+- Povijest tehnološke aktivnosti za učitelja povijesti
+- I pogledajte [ovaj popis](https://docs.google.com/document/d/19jQ2VhBUyIn30VFbfdHOVpmlymhNiB0AkEqRxHz3dr0/edit) za više ideja odgajatelja (ili dodajte svoje na popis kako biste inspirirali druge)
 
-**For students with special needs**
+**Za studente s posebnim potrebama**
 
-If you create an activity or tutorial that is designed for special needs students, please call that out in the description. In particular, there are very few options for the vision-impaired. If your activity is designed for this audience, please let us know.
+Ako izradite aktivnost ili udžbenik koji je dizajniran za studente s posebnim potrebama, nazovite to u opisu. Konkretno, postoji vrlo malo mogućnosti za osobe s oštećenjem vida. Ako je vaša aktivnost dizajnirana za ovu publiku, javite nam.
 
-[**Back to the top**](#top)
+[**Natrag na vrh**](#top)
 
 <a id="guidelines"></a>
 
-## General guidelines for creating an Hour of Code activity
+## Opće smjernice za kreiranje aktivnosti Sata kodiranja
 
-The goal of an Hour of Code is to give beginners an accessible first taste of computer science or programming. The tone should be that:
+Cilj Sata kodiranja je dati početnicima pristupačan prvi okus informatike ili programiranja. Ton bi trebao biti da:
 
-- Anybody can learn computer science - regardless of age, gender, race, or ability/disability.
-- Computer science is connected to a wide variety of fields and interests. Everybody should learn it!
-- Encourage students to create something unique that can be shared with parents/friends or online.
+- Svatko može naučiti informatiku - bez obzira na dob, spol, rasu ili sposobnost/invaliditet.
+- Informatika je povezana s raznim područjima i interesima. Svi bi to trebali naučiti!
+- Potaknite učenike da stvore nešto jedinstveno što se može podijeliti s roditeljima/prijateljima ili na mreži.
 
-The activities should teach a computer science concept such as loops, conditionals, encryption, or how the Internet works. An activity can also teach about how computer science connects to real world occupations, events, or history. For example, teaching UX design to make apps that are meaningful for an audience or cause. We discourage activities that focus on the syntax of programming rather than the concepts. For example, we will list, but not highlight, activities that teach HTML. Similarly, we discourage block programming lessons that focus on setting/changing configuration options rather than learning how to model an algorithm or process.
+Aktivnosti bi trebale podučavati koncept računalne znanosti kao što su petlje, uvjetnici, enkripcija ili kako Internet funkcionira. Aktivnost također može podučavati o tome kako se računalna znanost povezuje sa zanimanjima, događajima ili poviješću iz stvarnog svijeta. Na primjer, podučavanje UX dizajna za izradu aplikacija značajnih za publiku ili uzrok. Obeshrabrujemo aktivnosti koje se fokusiraju na sintaksu programiranja, a ne na koncepte. Na primjer, popisat ćemo, ali ne i istaknuti aktivnosti koje podučavaju HTML. Slično tome, obeshrabrujemo lekcije blokiranja programiranja koje se usredotočuju na postavljanje/promjenu opcija konfiguracije, a ne na učenje modeliranja algoritma ili procesa.
 
-*Technical requirements:* Because of the wide variety of school and classroom technology setups, the best activities are Web-based or smartphone-friendly, or otherwise unplugged-style activities that teach computer science concepts without the use of a computer (see <http://csunplugged.com/>). Activities that require an app-install, desktop app, or game-console experiences are okay but not ideal. We will not list activities that require sign up or payment. (Robotics activities can require robotics purchase.)
+*Technical requirements:* Because of the wide variety of school and classroom technology setups, the best activities are Web-based or smartphone-friendly, or otherwise unplugged-style activities that teach computer science concepts without the use of a computer (see <http://csunplugged.com/>). Aktivnosti koje zahtijevaju instalaciju aplikacije, desktop aplikaciju ili doživljaje igraćih konzola su u redu, ali nisu idealne. Nećemo navesti aktivnosti koje zahtijevaju prijavu ili plaćanje. (Aktivnosti robotike mogu zahtijevati kupnju robotike.)
 
-*Student-led (Self-Guided) Format:* The original Hour of Code was built mostly on the success of self-guided tutorials or lessons, optionally facilitated by the teacher. There are plenty of existing options, but if you want to create a new one, these activities should be designed so they can be fun for a student working alone, or in a classroom whose teacher has minimal prep or CS background. They should provide directions for students as opposed to an open-ended hour-long challenge. Ideally, the instructions and tutorials are integrated directly into the programming platform, to avoid switching tabs or windows between the tutorial and the programming platform.
+*Studentski (Self-Guided) Format:* Izvorni sat kodiranja izgrađen je uglavnom na uspjehu samo-vođenih tutorijala ili lekcija, opcionalno olakšan od strane učitelja. Postoji mnogo postojećih opcija, ali ako želite stvoriti novu, ove aktivnosti trebaju biti dizajnirane tako da mogu biti zabavne za učenika koji radi sam ili u učionici čiji učitelj ima minimalnu pripremu ili CS pozadinu. Oni bi trebali pružiti upute za studente, za razliku od otvorenog satnog izazova. U idealnom slučaju, upute i vodiči integrirani su izravno u programsku platformu, kako bi se izbjeglo prebacivanje kartica ili prozora između vodiča i programske platforme.
 
 To get a sense of the wide variety of types of tutorials and lesson plans you can create, visit the [Hour of Code Activities page](https://hourofcode.com/us/learn).
 
-[**Back to the top**](#top)
+[**Natrag na vrh**](#top)
 
 <a id="submit"></a>
 
-## How to submit
+## Kako podnijeti
 
-Visit the [Hour of Code™ Activity Submission page](https://forms.gle/eeAt6kVuz3RKg5n18) and complete the questions to submit your activity.
+Posjetite stranicu [Hour of Code™ Podnošenje aktivnosti](https://docs.google.com/forms/d/e/1FAIpQLSdsdTKU6pD5qXlPUQWlgrjESRlm2L02wkTcZQuL8hz9OEvzNQ/viewform) i ispunite pitanja kako biste poslali svoju aktivnost.
 
-What you’ll need:
+Što će vam trebati:
 
-* Name and email of the primary contact representing the submitted activity
-* Activity Name (cannot include “Hour of Code” in the name)
-* URL link to the activity
-* An activity description (max character count: 400) 
-    * Please include in the description whether it’s mainly student-guided or teacher-facilitated. Additionally, some schools are interested in knowing if Hour of Code activities address Common Core or Next Generation Science Standards. If the activity addresses specific standards, consider including this information.
-* Recommended grade level(s) for intended users. You may refer to the \[Computer Science Teachers’ Association’s K-12 Standards\] (https://k12cs.org/framework-statements-by-grade-band/) for grade-appropriate computer science concepts. Example grade levels include: 
-    * Kindergarten - Grade 1 (ages 4-6)
-    * Grades 2-5 (ages 7-10)
-    * Grades 6-8 (ages 11-13)
-    * Grades 9+ (ages 14+)
-* A list of subject areas your activity covers (in addition to Computer Science). For example, if a math teacher can use your activity to teach about angles or parabolas, list as math. If you have a mad libs activity that teaches verbs/nouns/etc. choose language arts.
-* A list of programming languages your activity teaches. I.e. C/C++, Java, JavaScript, etc. or language independent (for lesson plans that can be taught in multiple languages)
-* A list of supported natural languages. Note: Language-detection is the responsibility of the activity provider; we will redirect all users to the single URL provided.
-* What level of experience should an educator have to use your activity? (e.g. Beginner or Comfortable.) And, what level of experience should the students have? If you’d like to prepare more advanced Hour of Code™ Activities, please include the prior knowledge needed in the description of your activity.
-* The length of your activity 
-    * 1 hour only
-    * 1 hour with follow-on course
-    * 2-6 hours (can be multiple lessons)
-* A list of accessibility accommodations, if your activity has them. These include screen reader compatibility, text-to-speech capabilities, use of high-contrast colors, or any other accommodations made for learners with disabilities.
+* Ime i e-pošta primarnog kontakta koji predstavlja poslanu djelatnost
+* Naziv aktivnosti (ne može sadržavati "Sat koda" u ime)
+* URL veza na aktivnost
+* Uključuje li ova aktivnost AI: Da ili Ne
+* Opis aktivnosti (maksimalni broj znakova: 400) 
+    * U opis navedite je li uglavnom vođen studentima ili olakšan nastavnik. Uz to, neke škole zainteresirane su znati rješavaju li se aktivnosti Sata kodiranja zajedničke jezgre ili sljedeće generacije znanstvenih standarda. Ako se aktivnost odnosi na određene standarde, razmislite o uključivanju tih podataka.
+* Preporučena razina (e) ocjena (e) za namjeravane korisnike. Možete se pozvati na \[Standardi K-12 Udruženja nastavnika računalnih znanosti\] (https://k12cs.org/framework-statements-by-grade-band/) za koncepte računalne znanosti primjerene razredu. Razine primjera razreda uključuju: 
+    * Dječji vrtić - 1. razred (4-6 godina)
+    * Razredi 2-5 (u dobi od 7-10 godina)
+    * Razredi 6-8 (11-13 godina)
+    * Razredi 9+ (dob 14+)
+* Popis programskih jezika koje vaša aktivnost podučava. Tj. C/C ++, Java, JavaScript itd. ili jezik neovisan (za nastavne planove koji se mogu podučavati na više jezika) odaberite jezične umjetnosti.
+* Popis podržanih prirodnih jezika. Napomena: Otkrivanje jezika odgovornost je pružatelja aktivnosti; preusmjerit ćemo sve korisnike na navedeni jedinstveni URL. ili jezik neovisan (za nastavne planove koji se mogu podučavati na više jezika)
+* Koju razinu iskustva treba odgajatelj morati koristiti vašu aktivnost? (npr. Početnik ili udoban.) I, kakvu razinu iskustva studenti trebaju imati?
+* Koju razinu iskustva treba odgajatelj morati koristiti vašu aktivnost? (npr. Početnik ili udoban.) I, kakvu razinu iskustva studenti trebaju imati? Ako želite pripremiti naprednije aktivnosti Hour of Code™, molimo da u opis svoje aktivnosti uključite prethodno znanje potrebno.
+* Duljina vaše aktivnosti 
+    * Samo 1 sat
+    * 1 sat uz nastavak tečaja
+    * 2-6 sati (može biti više lekcija)
+* Popis pristupačnosti smještaja, ako ih vaša aktivnost ima. To uključuje kompatibilnost čitača zaslona, mogućnosti teksta u govor, korištenje boja visokog kontrasta ili bilo koji drugi smještaj napravljen za učenike s invaliditetom.
 
-#### Additional things you’ll need when submitting Lesson Plans
+#### Dodatne stvari koje će vam trebati prilikom slanja planova lekcija
 
-* Link to your lesson plan. This can be a web page, dropbox link, google drive or similar service.
-* What software and/or hardware the teacher will need to do your lesson plan (Scratch? Robots? Nothing?)
+* Povežite se s vašim planom lekcije. To može biti web stranica, dropbox veza, google disk ili slična usluga.
+* Koji softver i/ili hardver učitelj će trebati napraviti svoj plan lekcije (Scratch? Roboti? Ništa?)
 
-#### Additional things you’ll need when submitting Online Activities
+#### Dodatne stvari koje će vam trebati prilikom slanja internetskih aktivnosti
 
-* Name and logo of your organization
-* Whether it is COPPA compliant or not
-* A URL link to teacher notes (optional)
-* A list of tested/compatible platforms: 
-    * Web based: Which platforms have you tested? 
-        * OS - Mac, Win, and other versions
-        * Browsers - IE11, Edge, Firefox, Chrome, Safari
-        * iOS mobile Safari (mobile-optimized)
-        * Android Chrome (mobile-optimized)
-    * Non web-based: specify platform for native code (Mac, Win, iOS, Android, xBox, other)
+* Ime i logotip vaše organizacije
+* Bilo da je COPPA sukladan ili ne
+* URL veza na bilješke nastavnika (opcionalno)
+* Popis testiranih/kompatibilnih platformi: 
+    * Web baziran: Koje ste platforme testirali? 
+        * OS - Mac, Win i druge verzije
+        * Preglednici - IE11, Edge, Firefox, Chrome, Safari
+        * iOS mobilni Safari (optimiziran za mobilne uređaje)
+        * Android Chrome (optimiziran za mobilne uređaje)
+    * Ne temelji se na webu: odredite platformu za izvorni kod (Mac, Win, iOS, Android, XBox, ostalo)
     * Unplugged
-* Screenshot or marketing image of the Hour of Code activity. Please send at least one image with 4:3 dimensions. It should be at least 520px by 390px. This image should have NO text on it (other than your logo), in order to make it more accessible for non-English speakers. If an appropriate image is not provided, we may take our own screenshot of your tutorial OR we may choose not to list it. All images must be submitted as a URL link to a .jpg, .jpeg, or .png.
-* In order to more accurately track participation, third party tutorial partners need to include 1-pixel tracking images on the first page of their Hour of Code tutorials. See the [Tracking Pixel](#pixel) section below for more details.
+* Snimak zaslona ili marketinška slika aktivnosti Sat koda. Pošaljite barem jednu sliku s dimenzijama 4:3. Trebao bi biti najmanje 520px po 390px. Ova slika ne bi trebala imati tekst na sebi (osim vašeg logotipa), kako bi bila pristupačnija govornicima koji nisu engleski. Ako odgovarajuća slika nije pružena, možemo napraviti vlastitu snimku zaslona vašeg udžbenika ILI možemo odlučiti da je ne navedemo. Sve slike moraju biti poslane kao URL link na .jpg, .jpeg ili .png.
+* Kako bi preciznije pratili sudjelovanje, partneri udžbenika trećih strana trebaju uključiti slike za praćenje od 1 piksela na prvu stranicu svojih vodiča za sat koda. Pogledajte odjeljak [Praćenje Pixel](#pixel) u nastavku za više detalja.
 * Upon finishing your activity, users should be directed to [code.org/api/hour/finish](https://code.org/api/hour/finish) where they will be able to: 
-    * Share on social media that they completed the Hour of Code
-    * Receive a certificate that they completed the Hour of Code
-    * See leaderboards about which countries/cities have the highest participation rates in Hour of Code activities
+    * Podijelite na društvenim mrežama da su završili Sat kodiranja
+    * Primite potvrdu da su završili Sat kodiranja
+    * Pogledajte tabele s rezultatima o tome koje zemlje/gradovi imaju najviše stope sudjelovanja u aktivnostima Hour of Code
     * For users who spend an hour on your activity and don’t complete it, please include a button on your activity that says “I’m finished with my Hour of Code” which links back to [code.org/api/hour/finish](https://code.org/api/hour/finish) as well.
-* (Optional) We may follow-up with an online survey/form link asking for a report of the following activity metrics: 
-    * For online activities (especially smartphone/tablet apps): 
-        * Number of users
-        * How many completed the task
-        * Average time on task
-        * Number of total lines of code written over all users
-        * How many continued on to further learning (measured as any user who finishes the task and goes onto additional tasks at your site)
-    * For offline activities 
-        * Number of downloads of paper version of activity (if applicable)
+* (Neobavezno) Možemo pratiti internetsku anketu/vezu obrasca koja traži izvješće o sljedećim mjernim podacima aktivnosti: 
+    * Za mrežne aktivnosti (posebno aplikacije za pametne telefone/tablete): 
+        * Broj korisnika
+        * Koliko je završilo zadatak
+        * Prosječno vrijeme na zadatku
+        * Broj ukupnih redaka koda napisanih nad svim korisnicima
+        * Koliko je nastavilo dalje učenje (mjereno kao svaki korisnik koji završi zadatak i odlazi na dodatne zadatke na vašoj web lokaciji)
+    * Za izvanmrežne aktivnosti 
+        * Broj preuzimanja papirnate verzije aktivnosti (ako je primjenjivo)
 
-#### Additional things you’ll need when submitting Robotics
+#### Dodatne stvari koje će vam trebati prilikom slanja robotike
 
-* If you submit a robotics activity, we need to know the cost per student for robotics.
-* To evaluate robotics activities for inclusion on the website, we will need you to send sample kits to reviewers.
+* Ako pošaljete robotičku aktivnost, moramo znati cijenu po učeniku za robotiku.
+* Da bismo procijenili aktivnosti robotike za uključivanje na web mjesto, morat ćete recenzentima poslati setove uzoraka.
 
-[**Back to the top**](#top)
+[**Natrag na vrh**](#top)
 
 <a id="inclusion"></a>
 
-## How activities will be evaluated
+## Kako će se vrednovati aktivnosti
 
-A diverse committee of computer science educators will rank submissions based on qualitative and quantitative criteria. All activities that fit the basic criteria will be listed. Teachers will be able to filter and sort to find the best activities for their classroom.
+Raznovrsni odbor nastavnika informatike rangirat će prijave na temelju kvalitativnih i kvantitativnih kriterija. Sve aktivnosti koje odgovaraju osnovnim kriterijima bit će navedene.
 
-The rubric for evaluating activities and lesson plans will look for the following criteria on all activities and rank them accordingly:
+Za tradicionalne aktivnosti kodiranja, raznolik odbor nastavnika informatike rangirat će prijave na temelju kvalitativnih i kvantitativnih kriterija. Sve aktivnosti koje odgovaraju osnovnim kriterijima bit će navedene. Nastavnici će moći filtrirati i sortirati kako bi pronašli najbolje aktivnosti za svoju učionicu.
 
-- High production quality
-- Promote learning by all demographic groups (esp. students underrepresented in CS, like young women, students from marginalized racial and ethnic groups, and students with disabilities)
-- Educational (teaches computer science concepts well)
-- Fun and engaging
-- Encourages students to create something unique they can share (For younger students: with parents and classmates. For olders students: on the Internet)
+Ako odbor za pregled ocjenjuje aktivnost nulu u kvaliteti proizvodnje (zbog loših grešaka ili uputa zbog kojih je vrlo teško koristiti), u promicanju učenja u nedovoljno zastupljenim skupinama (zbog rasistički/seksističkog materijala), u obrazovnoj vrijednosti (ne podučava CS koncepte), ili zabavno/angažirano (zbog teško/obeshrabrujuće za studente da rade), aktivnost neće biti navedena.
 
-If the review committee rates the activity a zero in production quality (due to bad bugs or instructions that make it very hard to use), in promoting learning in underrepresented groups (due to racist/sexist material), in educational value (does not teach CS concepts), or fun/engaging (due to being difficult/discouraging for students to work through), the activity will not be listed.
+- Visoka kvaliteta proizvodnje
+- Promicanje učenja od strane svih demografskih skupina (esp. studenti nedovoljno zastupljeni u CS-u, poput mladih žena, studenata iz marginaliziranih rasnih i etničkih skupina, te studenata s invaliditetom)
+- Obrazovni (dobro podučava koncepte računalne znanosti)
+- Zabavno i zanimljivo
+- Potiče učenike da stvore nešto jedinstveno što mogu podijeliti (Za mlađe učenike: s roditeljima i kolegama iz razreda. Za starije studente: na internetu)
 
-In addition, in order to be listed, all activities must:
+Osim toga, kako bi bile navedene, sve aktivnosti moraju:
 
-- Be appropriate for a public school classroom (no guns, no explicit/mature content, no religious content, etc.)
-- Require no sign up
-- Require no payment (exception for robotics activities these can require robot/kit purchase)
+Za samousmjerene aktivnosti za nove nastavnike i studente odbor za reviziju tražit će hoće li:
 
-For self-directed activities for new teachers and students the review committee will be looking for whether:
+- Budite prikladni za učionicu javne škole (bez oružja, bez eksplicitnih/zrelog sadržaja, bez vjerskog sadržaja itd.)
+- Zahtijevaju bez prijave
+- Ne zahtijevaju plaćanje (iznimka za robotičke aktivnosti koje mogu zahtijevati kupnju robota/kompleta)
 
-- Teachers can use the tutorial or activity with no background in computer science
-- Students can be successful with no background in computer science
-- Students can direct themselves through the tutorial without parental or teacher guidance
+Za samousmjerene aktivnosti za nove nastavnike i studente odbor za reviziju tražit će hoće li:
 
-Teachers and students will be able to search through and filter our list of activities based on filters such as grade, experience level, subject, hardware, etc. By default, we will show lesson plans and activities first that:
+- Nastavnici mogu koristiti udžbenik ili aktivnost bez pozadine u računalnoj znanosti
+- Studenti mogu biti uspješni bez pozadine u računalnoj znanosti
+- Učenici se mogu usmjeriti kroz udžbenik bez roditeljskog ili učiteljskog vodstva
 
-- Receive the highest ratings from the review committee
-- Are one hour self-directed activities designed for beginners (students and teachers)
-- Appeal to a wide range of users (across platforms, languages, and ages)
-- Require no installation
-- Are new this year
+Nastavnici i učenici moći će pretraživati i filtrirati naš popis aktivnosti na temelju filtera kao što su ocjena, razina iskustva, predmet, hardver itd. Prema zadanim postavkama prvo ćemo prikazati planove lekcija i aktivnosti koje:
 
-[**Back to the top**](#top)
+- Primite najviše ocjene od povjerenstva za pregled
+- Jesu li jednosatne samostalne aktivnosti namijenjene početnicima (učenicima i nastavnicima)
+- Žalba širokom krugu korisnika (na različitim platformama, jezicima i dobima)
+- Ne zahtijevaju instalaciju
+- Nove su ove godine
+
+[**Natrag na vrh**](#top)
 
 <a id="design"></a>
 
-## Suggestions for designing one hour self guided tutorials
+## Prijedlozi za dizajniranje jednosatnih vodiča
 
-You can include the [Hour of Code logo](https://hourofcode.com/us/promote/resources#logo) in your tutorial, but this is not required. If you use the Hour of Code logo, see the trademark guidelines below. <u>Under no circumstances can the Code.org logo and name be used.</u> Both are trademarked, and can’t be co-mingled with a 3rd party brand name without express written permission.
+Aktivnosti ne moraju uključivati AI, iako želimo ponuditi više aktivnosti povezanih s umjetnom inteligencijom.
 
-**Make sure that the average student can finish comfortably in an hour.** Consider adding an open-ended activity at the end for students who move more quickly through the lesson. Remember that most kids will be absolute beginners to computer science and coding.
+**Uključite bilješke učitelja.** Većina aktivnosti treba biti usmjerena prema studentima, ali ako je neka aktivnost olakšana ili kojom upravlja učitelj, navedite jasne i jednostavne upute za nastavnika u obliku bilješki nastavnika na zasebnom URL-u koji se šalje s vašom aktivnošću. Ne samo da su studenti početnici, neki od nastavnika su kao dobro. Uključite informacije kao što su:
 
-**Include teacher notes.** Most activities should be student-directed, but if an activity is facilitated or managed by a teacher, please include clear and simple directions for the teacher in the form of teacher-notes at a separate URL submitted with your activity. Not only are the students novices, some of the teachers are as well. Include info such as:
+**Uključite povratne informacije na kraju aktivnosti.** (Npr. "Završili ste 10 razina i naučili o petljama! Odličan posao!")
 
-- What platforms and browsers does the tutorial work best on?
-- Does it work on smartphones? Tablets?
-- Do you recommend pair programming?
-- Considerations for use in a classroom? E.g. if there are videos, advise teachers to show the videos on a projected screen for the entire classroom to view together
+**Potaknite studente da objavljuju na društvenim mrežama (gdje je to prikladno) kada završe.** Na primjer "Napravio sam sat kodiranja s ________ Jeste li? #HourOfCode" ili "Učinio sam #HourOfCode kao dio #CSEdWeek. Jeste li?
 
-**Incorporate feedback at the end of the activity.** (E.g. “You finished 10 levels and learned about loops! Great job!”)
+- Na kojim platformama i preglednicima najbolje funkcionira tutorial?
+- Radi li na pametnim telefonima? Tablete?
+- Preporučujete li programiranje parova?
+- Razmatranja za upotrebu u učionici? Na primjer, ako postoje videozapisi, savjetujte nastavnicima da prikazuju videozapise na projiciranom zaslonu za cijelu učionicu kako bi ih pregledali zajedno
 
-**Encourage students to post to social media (where appropriate) when they've finished.** For example “I’ve done an Hour of Code with ________ Have you? #HourOfCode” or “I’ve done an #HourOfCode as a part of #CSEdWeek. Have you? @Scratch.” Use the hashtag **#HourOfCode** (with capital letters H, O, C)
+**Uključite povratne informacije na kraju aktivnosti.** (Npr. "Završili ste 10 razina i naučili o petljama! Odličan posao!")
 
-**Create your activity in Spanish or in other languages besides English.**
+**Potaknite studente da objavljuju na društvenim mrežama (gdje je to prikladno) kada završe.** Na primjer "Napravio sam sat kodiranja s ________ Jeste li? #HourOfCode" ili "Učinio sam #HourOfCode kao dio #CSEdWeek. Jeste li? @Scratch." Upotrijebite hashtag **#HourOfCode** (s velikim slovima H, O, C)
 
-**Explain or connect the activity to a socially significant context.** Computer programming becomes a superpower when students see how it can change the world for the better!
+**Stvorite svoju aktivnost na španjolskom ili na drugim jezicima osim engleskog.**
 
-**Make sure your tutorial can be used in a [Pair Programming](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) paradigm.** This is particularly useful for the Hour of Code because many classrooms do not have 1:1 hardware for all students.
+**Objasnite ili povežite aktivnost s društveno značajnim kontekstom.** Računalno programiranje postaje supersila kada studenti vide kako to može promijeniti svijet na bolje!
 
-[**Back to the top**](#top)
+**Pobrinite se da se vaš vodič može koristiti u paradigmi [Pair Programming](http://www.ncwit.org/resources/pair-programming-box-power-collaborative-learning) .** Ovo je posebno korisno za Sat kodiranja jer mnoge učionice nemaju hardver 1:1 za sve učenike.
+
+[**Natrag na vrh**](#top)
 
 <a id="tm"></a>
 
-## Trademark Guidelines
+## Smjernice za zaštitni znak
 
-Hour of Code® and Hora del Código® are registered trademarks of Code.org. Many of our tutorial partners have used our "Hour of Code" trademarks on their web sites in connection with their Hour of Code activities. We don't want to prevent this usage, but we want to make sure the usage falls within a few limits:
+Hour of Code® i Hora del Código® registrirani su zaštitni znakovi tvrtke Code.org. Mnogi naši partneri za udžbenike koristili su naše zaštitne znakove "Sat kodiranja" na svojim web stranicama u vezi sa svojim aktivnostima Hour of Code. Ne želimo spriječiti ovu upotrebu, ali želimo osigurati da upotreba padne unutar nekoliko granica:
 
-1. Use “Hour of Code” only in connection with non-commercial CS Education activities in the context of the Hour of Code campaign, and for no other purpose.
-2. Any reference to "Hour of Code" should be used in a fashion that doesn't suggest that it's your own brand name, but that it rather references the Hour of Code as a grassroots movement. Good example: "Participate in the Hour of Code ® at ACMECorp.com". Bad example: "Try Hour of Code by ACME Corp".
-3. Use a “®” superscript in the most prominent places you mention "Hour of Code", both on your web site and in app descriptions.
-4. Include language on the page (or in the footer), including links to the Hour of Code, CSEdWeek and Code.org web sites, that discloses both the following: a. Hour of Code® and Hora del Código® are registered trademarks of Code.org; and b. “The '[Hour of Code](http://hourofcode.com/) ® is a nationwide initiative by [Code.org](http://code.org/) to introduce millions of students to one hour of computer science and computer programming.”
-5. Do not use "Hour of Code" in app names.
-6. Do not use “Hour of Code” in connection with any commercial use or purpose (e.g., placing your Hour of Code activity behind a paywall; promoting another paid service as part of your Hour of Code activity; selling Hour of Code merchandise).
-7. Do not use “Hour of Code” in connection with any activity that requires a login or account creation.
+1. Koristite "Sat kodiranja" samo u vezi s nekomercijalnim CS edukacijskim aktivnostima u kontekstu kampanje Sat kodiranja i ni u jednu drugu svrhu.
+2. Bilo koja referenca na "Sat kodiranja" trebala bi se koristiti na način koji ne sugerira da je to vaša vlastita robna marka, već da radije upućuje na Sat kodiranja kao pokret na lokalnoj razini. Dobar primjer: "Sudjelujte u satu kodiranja® na AcmeCorp.com". Loš primjer: "Pokušajte sat koda od strane ACME Corp".
+3. Upotrijebite natpis "®" na najistaknutijim mjestima koja spominjete "Sat koda", kako na svojoj web stranici tako i u opisima aplikacija.
+4. Uključite jezik na stranicu (ili u podnožje), uključujući linkove na web stranice Hour of Code, CsedWeek i Code.org, koji otkriva i sljedeće: a. Hour of Code® i Hora del Código® registrirani su zaštitni znakovi tvrtke Code.org; i b. "The"[Hour of Code](http://hourofcode.com/) ® nacionalna je inicijativa tvrtke [Code.org](http://code.org/) za uvođenje milijuna studenata u jedan sat računalne znanosti i računalnog programiranja."
+5. Nemojte koristiti "Sat koda" u imenima aplikacija.
+6. Nemojte koristiti "Sat kodiranja" u vezi s bilo kojom komercijalnom uporabom ili svrhom (npr. Stavljanje aktivnosti Sata koda iza platnog zida; promoviranje druge plaćene usluge kao dio aktivnosti Sata koda; prodaja robe Sata koda).
+7. Nemojte koristiti "Sat koda" u vezi s bilo kojom aktivnošću koja zahtijeva prijavu ili stvaranje računa.
 
-[**Back to the top**](#top)
+[**Natrag na vrh**](#top)
 
 <a id="pixel"></a>
 
-## Tracking Pixel
+## Praćenje piksela
 
-In order to more accurately track participation we ask every tutorial partner to include a 1-pixel tracking image on the first page of their Hour of Code tutorials. The pixel-image must be on the start page only. Do not include on any interim pages of your tutorial.
+Ako je vaš vodič odobren i uključen na završnu stranicu udžbenika, Code.org će vam pružiti jedinstveni piksel za praćenje koji ćete se integrirati u svoj vodič. Pogledajte primjer u nastavku. Nemojte uključivati na privremene stranice vašeg udžbenika.
 
-This will allow us to count users who do your Hour of Code tutorial. It will lead to more accurate participation counts for your tutorial.
+To će nam omogućiti da brojimo korisnike koji rade vaš vodič za sat koda. To će dovesti do točnijih broja sudjelovanja za vaš udžbenik.
 
-If your tutorial is approved and included on the final tutorial page, Code.org will provide you with a unique tracking pixel for you to integrate into your tutorial. See example below.
+Ako je vaš vodič odobren i uključen na završnu stranicu udžbenika, Code.org će vam pružiti jedinstveni piksel za praćenje koji ćete se integrirati u svoj vodič. Pogledajte primjer u nastavku.
 
-NOTE: this isn't important to do for installable apps (iOS/Android apps, or desktop-install apps)
+NAPOMENA: ovo nije važno učiniti za instalirane aplikacije (iOS/Android aplikacije ili aplikacije za instalaciju stolnog računala)
 
-Example tracking pixels for Dance Party:
+Primjer praćenja piksela za Dance Party:
 
 IMG SRC = <http://code.org/api/hour/begin_dance.png>   
 
 
-[**Back to the top**](#top)
+[**Natrag na vrh**](#top)
 
 <a id="promote"></a>
 
-## Promoting your activities, CSEdWeek, and Hour of Code
+## Promicanje vaših aktivnosti, CsedWeek i Sat kodiranja
 
-Please promote your activity to your network! Direct them to your Hour of Code page. Your users are much more likely to react to a mailing from you about your activity. Use the international Hour of Code campaign during Computer Science Education Week as an excuse to encourage users to invite others to join in, and help us reach more students!
+Promovirajte svoju aktivnost na svoju mrežu! Usmjerite ih na stranicu Sat koda. Vaši korisnici imaju veću vjerojatnost da će reagirati na slanje e-pošte od vas o vašoj aktivnosti. Iskoristite međunarodnu kampanju Sat kodiranja tijekom Tjedna obrazovanja za računalne znanosti kao izgovor da potaknete korisnike da pozovu druge da se pridruže i pomozite nam da dosegnemo više učenika!
 
-- Feature Hour of Code and CSEdWeek on your website. Ex: <http://www.tynker.com/hour-of-code>
-- Promote Hour of Code using social media, traditional media, mailing lists, etc, using hashtag #HourOfCode (with capital letters H, O, C)
-- Host a local event or ask your employees to host an event at local schools or community groups.
-- See our [resource kit](https://hourofcode.com/us/promote) for further information.
+- Značajka Sat koda i CsedWeek na vašoj web stranici. Prijašnjenje: <http://www.tynker.com/hour-of-code>
+- Promovirajte sat koda pomoću društvenih medija, tradicionalnih medija, mailing lista itd., Koristeći hashtag #HourOfCode (velikim slovima H, O, C)
+- Organizirajte lokalni događaj ili zatražite od svojih zaposlenika da organizuju događaj u lokalnim školama ili grupama zajednice.
+- Pogledajte naš [resurs kit](https://hourofcode.com/us/promote) za dodatne informacije.
 
-[**Back to the top**](#top)
+[**Natrag na vrh**](#top)
 
 {{ signup_button }}

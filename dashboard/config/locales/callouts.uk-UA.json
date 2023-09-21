@@ -203,8 +203,20 @@
         "CSD U6 - Color LEDs - SB4_2222": {
           "CSDU6L10_rainbow": "Додай свій код тут"
         },
+        "CSD U6 - Combine Inputs - A_2222": {
+          "CSD U6L10.7 - brightnessVar": "Create your variable here"
+        },
         "CSD U6 - Combine Inputs - PracD_2222": {
           "CSD U6L9.7 - if-statement": "Додай сюди команду умови "
+        },
+        "CSD U6 - Functions - P2C_2222": {
+          "CSD U6L14.PB - todo1": "Define your function here!"
+        },
+        "CSD U6 - Functions - SB4_2222": {
+          "CSD U6L5.14B - define": "Add your function here!"
+        },
+        "CSD U6 - Functions - SB6_2222": {
+          "CSD U6L14.6 - define": "Add your function here!"
         },
         "CSD U6 - If Variables - A_2222": {
           "U6L6.4 - If": "Додай сюди команду умови "

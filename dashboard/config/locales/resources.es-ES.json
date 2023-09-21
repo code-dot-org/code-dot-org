@@ -6737,6 +6737,9 @@
           "url": "https://drive.google.com/file/d/1MoM8U9voKQzx2muHW7rncHsbqSE0pAsX/view",
           "type": "Póster de Poemas"
         },
+        "csf_course_a_lesson_slides/coursea/2022": {
+          "type": "Diapositivas"
+        },
         "20_20_20_rule/coursea/2022": {
           "name": "Regla 20/20/20",
           "url": "http://www.anthro.com/blog/2013/10/how-to-prevent-eye-strain-with-the-20-20-20-rule#.WOU39BLyu35",
@@ -6756,6 +6759,9 @@
           "name": "Meneos - Go Noodle",
           "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
           "type": "Vídeo"
+        },
+        "csf_course_a_lesson_slides_1/coursea/2022": {
+          "type": "Diapositivas"
         },
         "feeling_faces_-_emotion_image/coursea/2022": {
           "name": "Caras de Sentimiento - Imagen de Emoción",
@@ -6782,6 +6788,9 @@
           "url": "https://youtu.be/hrnhiKAQ1_k",
           "type": "Vídeo Sin Conexión"
         },
+        "csf_course_a_lesson_slides_2/coursea/2022": {
+          "type": "Diapositivas"
+        },
         "unplugged_blockly_blocks_grades_k-1_/coursea/2022": {
           "name": "Bloques Blockly Sin Conexión (Cursos K-1)",
           "url": "https://drive.google.com/file/d/1uOyob3Bn6F9zXH5ZCWS2jOk3v9PsKAlc/view",
@@ -6791,6 +6800,9 @@
           "name": "Meneos - GoNoodle",
           "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
           "type": "Vídeo"
+        },
+        "csf_course_a_lesson_slides_3/coursea/2022": {
+          "type": "Diapositivas"
         },
         "debugging_with_the_step_button/coursea/2022": {
           "name": "Depuración con el Botón Paso",
@@ -6802,10 +6814,16 @@
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit",
           "type": "Recurso"
         },
+        "csf_course_a_lesson_slides_4/coursea/2022": {
+          "type": "Diapositivas"
+        },
         "feeling_faces_-_emotion_image_1/coursea/2022": {
           "name": "Caras de Sentimiento - Imagen de Emoción",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/edit",
           "type": "Recurso"
+        },
+        "csf_course_a_lesson_slides_5/coursea/2022": {
+          "type": "Diapositivas"
         },
         "happy_map_cards_xl/coursea/2022": {
           "name": "Tarjetas XL Mapa Feliz",
@@ -6817,6 +6835,9 @@
           "url": "https://docs.google.com/document/d/14qEVzSR7pr0slqkRn2WM8XxVyeDhdmfhtsmTrERCTNs/edit",
           "type": "Manipulativos"
         },
+        "csf_course_a_lesson_slides_6/coursea/2022": {
+          "type": "Diapositivas"
+        },
         "feeling_faces/coursea/2022": {
           "name": "Caras de Emociones",
           "url": "https://docs.google.com/document/d/1qdt7Y-wVkqFas_TkNO4iITz2K-LEmEVWDWLM50NNAOs/",
@@ -6827,15 +6848,24 @@
           "url": "https://www.youtube.com/watch?v=vgkahOzFH2Q",
           "type": "Vídeo"
         },
+        "csf_course_a_lesson_slides_7/coursea/2022": {
+          "type": "Diapositivas"
+        },
         "csf_lesson_recommendations/coursea/2022": {
           "name": "CSF Recomendaciones de Lecciones ",
           "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing",
           "type": "Recurso"
         },
+        "csf_course_a_lesson_slides_8/coursea/2022": {
+          "type": "Diapositivas"
+        },
         "pause_and_think_online/coursea/2022": {
           "name": "Detente y Piensa Online",
           "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
           "type": "Vídeo"
+        },
+        "csf_course_a_lesson_slides_9/coursea/2022": {
+          "type": "Diapositivas"
         },
         "the_big_event/coursea/2022": {
           "name": "El Gran Evento",
@@ -6857,9 +6887,15 @@
           "url": "https://docs.google.com/document/d/1A9yAObCTJwHsIKtaBZY8KaGwgbxbfolpbIpeJfZRgvs/edit",
           "type": "Imagen del Mando a Distancia"
         },
+        "csf_course_a_lesson_slides_10/coursea/2022": {
+          "type": "Diapositivas"
+        },
         "cs_fundamentals_main_activity_tips/coursea/2022": {
           "name": "Sugerencias para la Actividad Principal de Fundamentos de Ciencias de la Computación",
           "url": "https://docs.google.com/document/d/1N3aiitOxz_cut1AQn90g1nYJouKT5dC_4m1M0KFNzP8/edit?usp=sharing"
+        },
+        "csf_course_a_lesson_slides_11/coursea/2022": {
+          "type": "Diapositivas"
         },
         "artist_project_planning_guide/coursea/2022": {
           "name": "Proyecto de Artista - Guía de Planificación",
@@ -6870,6 +6906,9 @@
           "name": "Proyecto de Artista - Guía de Planificación",
           "url": "https://docs.google.com/document/d/13AiHjPrDE3DFnwH3qKnty6M3PbHsZcd-0YoZz4ZmC3E/template/preview",
           "type": "Clave de Respuesta"
+        },
+        "csf_course_a_lesson_slides_12/coursea/2022": {
+          "type": "Diapositivas"
         },
         "2022_change_log/courseb/2022": {
           "name": "Registro de Cambios de 2022",
@@ -6943,6 +6982,9 @@
         "digital_trails_lesson_slides/courseb/2022": {
           "name": "Rutas Digitales: Diapositivas de la Lección",
           "url": "https://docs.google.com/presentation/d/1uaBcFUzCVrJzh0imHe9goiMMncic8rfD/view"
+        },
+        "csf_course_b_lesson_slides/courseb/2022": {
+          "type": "Diapositivas"
         },
         "feeling_faces_emotion_image/courseb/2022": {
           "name": "Caras de Sentimiento - Imagen de Emoción",

@@ -747,6 +747,8 @@ ru:
         csa_sorting_algorithms: 'CSA: алгоритмы сортировки'
         star_quilts_intro_to_artist: 'Одеяла Star: знакомство с художником'
         upload_sprites_backgrounds: Загрузка собственных спрайтов и фонов
+        what-is-creativity: Что такое творчество?
+        code-break: Возьми перерыв на код.
     callout:
       text:
         drag_blocks: Перетащите блок «переместить» и поставьте его ниже другого блока

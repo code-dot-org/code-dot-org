@@ -32,7 +32,7 @@ module MultiFileSeeded
     validates_uniqueness_of :name, case_sensitive: true
   end
 
-  def directory(old=false)
+  def directory(old = false)
     directories = ['config', self.class::CONFIG_DIRECTORY]
     directories += self.class::SUBDIRECTORY_ATTRIBUTES.map do |attr|
       (old && attribute_was(attr)) || attributes[attr.to_s]
@@ -40,7 +40,7 @@ module MultiFileSeeded
     Rails.root.join(*directories)
   end
 
-  def file_path(old=false)
+  def file_path(old = false)
     extension = self.class::EXTENSION
     Rails.root.join "config", directory(old), "#{(old && name_was) || name}.#{extension}"
   end
@@ -63,7 +63,7 @@ module MultiFileSeeded
   end
 
   module ClassMethods
-    def load_records(blob="config/#{self::CONFIG_DIRECTORY}/**/*.#{self::EXTENSION}")
+    def load_records(blob = "config/#{self::CONFIG_DIRECTORY}/**/*.#{self::EXTENSION}")
       removed_records = all.pluck(:name)
       Dir.glob(Rails.root.join(blob)).each do |path|
         removed_records -= [load_record(path)]

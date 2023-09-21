@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-08-07 22:43:18 UTC",
+    "serialized_at": "2023-08-30 22:06:08 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -3593,11 +3593,9 @@
     },
     {
       "name": "Code.org CSP Topic Coverage",
-      "url": "https://docs.google.com/document/d/1RniAGymLBBpIpDaNNR5Ea8CgiiUKv0tMvaDixSj6m_Q/view",
+      "url": "https://docs.google.com/document/d/1l9VDL92DCIbTNhTiLGIr-enBOTM4wEDTTQOBlJ7bBhM/edit?usp=sharing",
       "key": "code_org_csp_topic_coverage",
       "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
       },
       "seeding_key": {
         "resource.key": "code_org_csp_topic_coverage"
@@ -3614,16 +3612,15 @@
       }
     },
     {
-      "name": "CSP Bingo Cards - Unit Seven",
-      "url": "https://drive.google.com/file/d/1Wi7aIio59YiLOaGNK23lgTzPFa3ES3-u/view?usp=sharing",
-      "key": "csp_bingo_cards_-_unit_seven",
+      "name": "CSP Bingo Cards - Unit 6 & 7",
+      "url": "https://docs.google.com/presentation/d/1nkBhCExqdR0DbT28N1x5oEEkn4PGbPl7zaNZZNXqsF8/edit?usp=sharing",
+      "key": "csp_bingo_cards_-_unit_6_7",
       "properties": {
         "audience": "Teacher",
-        "download_url": "https://drive.google.com/uc?export=download&id=1Wi7aIio59YiLOaGNK23lgTzPFa3ES3-u",
         "type": "Handout"
       },
       "seeding_key": {
-        "resource.key": "csp_bingo_cards_-_unit_seven"
+        "resource.key": "csp_bingo_cards_-_unit_6_7"
       }
     },
     {
@@ -4063,7 +4060,7 @@
     {
       "seeding_key": {
         "lesson.key": "Project   Make a Library Part 3",
-        "resource.key": "csp_bingo_cards_-_unit_seven"
+        "resource.key": "csp_bingo_cards_-_unit_6_7"
       }
     },
     {

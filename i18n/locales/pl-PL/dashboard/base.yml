@@ -1275,6 +1275,7 @@ pl:
       error_invalid_user: 'Nieważny identyfikator użytkownika. Prosimy spróbować zalogować się ponownie.'
       error_no_code: 'Prosimy wpisać swój kod logowania.'
       confirm_login: "Wybierz Potwierdź, aby zalogować się ze swoim kontem Google.\n"
+    setup_page_title: 'Konfiguracja Maker'
   parent_email_banner:
     text: "**Czy jesteś rodzicem lub opiekunem?** Połącz swój adres e-mail z tym kontem, aby być na bieżąco z postępami i projektami swojego dziecka!"
     link_your_email: "Połącz swój e-mail"
@@ -1310,3 +1311,7 @@ pl:
     binary: "Binarny"
     hexadecimal: "Szesnastkowy"
     pixel_format_header: "Format pikseli"
+  course_deprecated:
+    title: "Głowy do góry! Ten program nauczania nie jest już dostępny, ale Code.org ma dla Ciebie nowsze opcje."
+    button: "Zobacz nowy program nauczania"
+

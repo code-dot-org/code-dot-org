@@ -2200,6 +2200,10 @@ ca:
               display_name: Navegant per Code.org
           name: csa-auto-paced-pl
           title: Navegant per Code.org per CSA Pilot Professors
+        csa-software-engineering:
+          lessons:
+            lesson-9:
+              name: Configuració
         csa-u6-dev:
           lesson_groups:
             lessonGroup-2:
@@ -2268,6 +2272,8 @@ ca:
               display_name: Lliçons alternatives
             lessonGroup-6:
               display_name: Enquesta de final d'unitat
+            lessonGroup-7:
+              display_name: Caixes de sorra
           lessons:
             lesson-1:
               name: Benvingut a CSA
@@ -2398,6 +2404,8 @@ ca:
               display_name: Lliçons alternatives
             lessonGroup-5:
               display_name: Enquesta de final d'unitat
+            lessonGroup-6:
+              display_name: Caixes de sorra
           lessons:
             lesson-1:
               name: Atributs
@@ -2413,6 +2421,8 @@ ca:
               name: La paraula clau aquesta
             lesson-15:
               name: Unitat 2 Enquesta
+            lesson-17:
+              name: Projecte Art Asfalt — Dia 2
             lesson-2:
               name: No Argument Constructors
             lesson-3:
@@ -2526,6 +2536,8 @@ ca:
               display_name: Lliçons alternatives
             lessonGroup-5:
               display_name: Enquesta de final d'unitat
+            lessonGroup-6:
+              display_name: Caixes de sorra
           lessons:
             lesson-1:
               name: Unidimensional (1D) Matrius
@@ -2539,6 +2551,8 @@ ca:
               name: Dades per a Social Good Project [Versió d'1 dia]
             lesson-14:
               name: Unitat 3 Enquesta
+            lesson-16:
+              name: Projecte Art Asfalt — Dia 2
             lesson-2:
               name: Modificar Elements
             lesson-3:
@@ -2636,6 +2650,8 @@ ca:
               display_name: Lliçons alternatives
             lessonGroup-5:
               display_name: Enquesta de final d'unitat
+            lessonGroup-6:
+              display_name: Caixes de sorra
           lessons:
             lesson-1:
               name: Projecte d'art de dades abstractes [Versió 1 dia]
@@ -2651,6 +2667,8 @@ ca:
               name: Declaracions de selecció múltiple
             lesson-15:
               name: Unitat 4 Enquesta
+            lesson-17:
+              name: Projecte Art Asfalt — Dia 2
             lesson-2:
               name: Projecte d'art de dades abstractes
             lesson-3:
@@ -2766,6 +2784,8 @@ ca:
               display_name: Lliçons alternatives
             lessonGroup-5:
               display_name: Enquesta de final d'unitat
+            lessonGroup-6:
+              display_name: Caixes de sorra
           lessons:
             lesson-1:
               name: Matrius bidimensionals (2D)
@@ -2779,6 +2799,8 @@ ca:
               name: Projecte de Narrativa Personal [Versió 1 Dia]
             lesson-14:
               name: Unitat 5 Enquesta
+            lesson-16:
+              name: Projecte Art Asfalt — Dia 2
             lesson-2:
               name: Elements de matriu 2D
             lesson-3:
@@ -2869,6 +2891,8 @@ ca:
               display_name: Lliçons alternatives
             lessonGroup-5:
               display_name: Enquesta de final d'unitat
+            lessonGroup-6:
+              display_name: Caixes de sorra
           lessons:
             lesson-1:
               name: Planificació del projecte
@@ -2882,6 +2906,8 @@ ca:
               name: Projecte de Processament del Llenguatge Natural [Versió d'1 dia]
             lesson-14:
               name: Unitat 6 Enquesta
+            lesson-16:
+              name: Projecte Art Asfalt — Dia 2
             lesson-2:
               name: Substracions
             lesson-3:
@@ -2987,6 +3013,8 @@ ca:
               display_name: Enquesta de final d'unitat
             lessonGroup-5:
               display_name: Lliçons alternatives
+            lessonGroup-6:
+              display_name: Caixes de sorra
           lessons:
             lesson-1:
               name: Planificació del projecte
@@ -3000,6 +3028,8 @@ ca:
               name: Unitat 7 Enquesta
             lesson-14:
               name: Codificació creativa amb el projecte teatral [Versió d'1 dia]
+            lesson-16:
+              name: Projecte Art Asfalt — Dia 2
             lesson-2:
               name: Referències d'objectes com a paràmetres
             lesson-3:
@@ -3114,6 +3144,8 @@ ca:
               display_name: Enquesta
             lessonGroup-5:
               display_name: Lliçons alternatives
+            lessonGroup-6:
+              display_name: Caixes de sorra
           lessons:
             lesson-1:
               name: Planificació del projecte
@@ -3126,6 +3158,8 @@ ca:
             lesson-13:
               name: Codificació creativa amb el projecte de la consola [Versió d'1
                 dia]
+            lesson-15:
+              name: Projecte Art Asfalt — Dia 2
             lesson-2:
               name: Buscant
             lesson-3:
@@ -3244,6 +3278,11 @@ ca:
               display_name: Revisió i pràctica
             lessonGroup-3:
               display_name: Exàmens simulacre
+            lessonGroup-4:
+              display_name: Caixes de sorra
+          lessons:
+            lesson-2:
+              name: Projecte Art Asfalt — Dia 2
           student_description: Aquesta unitat us prepara per a l'examen AP CSA mitjançant
             la revisió dels conceptes clau, la pràctica de preguntes d'elecció múltiple
             i de resposta lliure, i l'enfortiment de les estratègies de presa de proves.
@@ -10008,6 +10047,11 @@ ca:
               display_name: Esdeveniments
             lessonGroup-7:
               display_name: Projecte de final de curs
+            lessonGroup-8:
+              display_name: Dades
+          lessons:
+            lesson-1:
+              name: Dades
         nevada-standards-aligned-fourth-grade-2023:
           description: Hem creat el Curs E per a alumnes de quart de primària. El
             curs comença amb una introducció a l'eina de programació Sprite Lab. Els
@@ -10071,6 +10115,11 @@ ca:
               display_name: Esdeveniments
             lessonGroup-6:
               display_name: Dades
+            lessonGroup-8:
+              display_name: Sistemes Informàtics
+          lessons:
+            lesson-1:
+              name: Sistemes Informàtics
         nevada-standards-aligned-third-grade-2023:
           description: Hem creat el curs D per a estudiants de tercer de primària.
             El curs comença amb una revisió dels conceptes trobats en cursos anteriors,
@@ -11573,6 +11622,22 @@ ca:
               name: 'Mòdul 6 post-treball: Mètodes de corda en la Unitat 6'
           name: vpl-csa-2022
           title: Aprenentatge Professional Virtual CSA
+        vpl-csa-2023-m1:
+          title: Mòdul 1
+        vpl-csa-2023-m2:
+          title: Mòdul 2
+        vpl-csa-2023-m3:
+          title: Mòdul 3
+        vpl-csa-2023-m4:
+          title: Mòdul 4
+        vpl-csa-2023-m5:
+          title: Mòdul 5
+        vpl-csa-2023-m6:
+          title: Mòdul 6
+        vpl-csa-2023-m7:
+          title: Mòdul 7
+        vpl-csa-2023-m8:
+          title: Mòdul 8
         vpl-csd-2020:
           name: vpl-csd-2020
           title: CS Descobriments Aprenentatge Professional Virtual 2020 - 21
@@ -11600,6 +11665,22 @@ ca:
           title: CS Descobriments d'aprenentatge professional virtual 2021 - 22
         vpl-csd-2022:
           title: CS Descobriments Aprenentatge Professional Virtual 2022 - 23
+        vpl-csd-2023-m1:
+          title: Mòdul 1
+        vpl-csd-2023-m2:
+          title: Mòdul 2
+        vpl-csd-2023-m3:
+          title: Mòdul 3
+        vpl-csd-2023-m4:
+          title: Mòdul 4
+        vpl-csd-2023-m5:
+          title: Mòdul 5
+        vpl-csd-2023-m6:
+          title: Mòdul 6
+        vpl-csd-2023-m7:
+          title: Mòdul 7
+        vpl-csd-2023-m8:
+          title: Mòdul 8
         vpl-csd-ci-1:
           description: "Aquest mòdul d'aprenentatge professional està dissenyat per
             ajudar-vos a preparar-vos per ensenyar la unitat de resolució de problemes
@@ -12079,6 +12160,22 @@ ca:
           title: CS Principis d'aprenentatge professional virtual 21 - 22
         vpl-csp-2022:
           title: CS Principis d'aprenentatge professional virtual 22 - 23
+        vpl-csp-2023-m1:
+          title: Mòdul 1
+        vpl-csp-2023-m2:
+          title: Mòdul 2
+        vpl-csp-2023-m3:
+          title: Mòdul 3
+        vpl-csp-2023-m4:
+          title: Mòdul 4
+        vpl-csp-2023-m5:
+          title: Mòdul 5
+        vpl-csp-2023-m6:
+          title: Mòdul 6
+        vpl-csp-2023-m7:
+          title: Mòdul 7
+        vpl-csp-2023-m8:
+          title: Mòdul 8
         web-development-2023:
           lesson_groups:
             lessonGroup-2:

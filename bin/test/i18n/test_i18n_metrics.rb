@@ -17,4 +17,10 @@ class I18nMetricsTest < Minitest::Test
     expect_metric(:Runtime, 1, [{name: 'MethodName', value: 'method'}, {name: 'SyncStep', value: 'step'}, {name: 'Environment', value: :test}, {name: 'MachineId', value: 'local_machine'}], 'Milliseconds')
     I18n::Metrics.report_runtime('method', 'step') {sleep 0.001.second}
   end
+
+  def test_report_filesize
+    fixture_path = CDO.dir('bin/test/fixtures/filesize_metrics_test.txt')
+    expect_metric(:FileSize, 8, [{name: 'SyncStep', value: 'step'}, {name: 'FileName', value: 'filesize_metrics_test.txt'}, {name: 'FileDir', value: CDO.dir('bin/test/fixtures')}, {name: 'Environment', value: :test}, {name: 'MachineId', value: 'local_machine'}], 'Bytes')
+    I18n::Metrics.report_filesize(fixture_path, 'step')
+  end
 end

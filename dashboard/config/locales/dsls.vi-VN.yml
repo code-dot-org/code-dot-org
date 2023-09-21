@@ -3724,6 +3724,14 @@ vi-VN:
           * Lập trình viên cần phải hiểu nhu cầu của mọi người và thiết kế ứng dụng phù hợp với họ!
 
           ![](https://images.code.org/fb17eeb9238d2f26c6ab40c9841517a7-image-1555611687284.png)
+      Unit 1 Lesson 1 Overview:
+        markdown: "# Tổng quan\n\nCả lớp đang hoạt động nhóm để thiết kế những con
+          tàu bằng lá nhôm mang được nhiều đồng xu nhất có thể. Vào cuối buổi học,
+          các nhóm suy nghĩ về trải nghiệm của họ với hoạt động và liên kết với các
+          phương án giải quyết vấn đề mà họ sẽ làm xuyên suốt khóa học. \n\n\n## Nguồn
+          dẫn\n\n* [Những con thuyền nhôm](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=pdf)
+          - Hướng dẫn hoạt động (sao chép lại dưới dạng [MS Word](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/export?format=doc),
+          [Google Tài Liệu](https://docs.google.com/document/d/1C5RMzH0811r8e2XdVbWV-GANm3uIar2_N8hI9jqX2rk/copy))"
       aiml-ch1-pulse-survey-q1_2021:
         answers:
         - correct: true

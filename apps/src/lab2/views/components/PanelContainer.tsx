@@ -1,6 +1,7 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import classNames from 'classnames';
 import moduleStyles from './panelContainer.module.scss';
+import {ThemeContext} from '../ThemeWrapper';
 
 interface PanelContainerProps {
   id: string;
@@ -9,6 +10,7 @@ interface PanelContainerProps {
   rightHeaderContent?: React.ReactNode;
   leftHeaderContent?: React.ReactNode;
   hideHeaders?: boolean;
+  className?: string;
 }
 
 /**
@@ -25,17 +27,24 @@ const PanelContainer: React.FunctionComponent<PanelContainerProps> = ({
   leftHeaderContent,
   children,
   hideHeaders,
+  className,
 }) => {
+  const {theme} = useContext(ThemeContext);
+
   return (
     <div
-      className={classNames('panelContainer', moduleStyles.panelContainer)}
+      className={classNames(
+        'panelContainer',
+        moduleStyles.panelContainer,
+        className
+      )}
       id={id}
     >
       {!hideHeaders && (
         <div
           className={classNames(
             'panelContainerHeader',
-            moduleStyles.panelContainerHeader
+            moduleStyles['panelContainerHeader-' + theme]
           )}
         >
           {leftHeaderContent && (

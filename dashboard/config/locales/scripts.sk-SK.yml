@@ -3635,6 +3635,8 @@ sk:
           student_description: Chceš napísať vlastnú hru za menej než 10 minút? Vyskúšaj
             náš Flappy kód!
           title: Flappy kód
+        flappy-impact-study:
+          title: Flappy kód s prieskumom
         fmscsd3preview:
           title: CSD - Kreslenie v Game Labe
         focus-on-coding-post-survey-2023:
@@ -3959,6 +3961,8 @@ sk:
           student_description: Vyskúšaj si základy informatiky s postavičkami ako
             sú Angry Birds, Plants vs Zombies a Scrat z Doby ľadovej!
           title: Klasické bludisko
+        how-ai-works-2023:
+          title: Ako funguje umelá inteligencia
         iceage:
           description: Vytvor príbeh alebo hru s Play Labom v Dobe ľadovej!
           description_short: Vytvor príbeh alebo hru s Play Labom v Dobe ľadovej!
@@ -4089,6 +4093,11 @@ sk:
               display_name: Udalosti
             lessonGroup-7:
               display_name: Záverečný projekt
+            lessonGroup-8:
+              display_name: Dáta
+          lessons:
+            lesson-1:
+              name: Dáta
         nevada-standards-aligned-fourth-grade-2023:
           description_audience: Vek 8-12
           lesson_groups:
@@ -4127,6 +4136,11 @@ sk:
               display_name: Udalosti
             lessonGroup-6:
               display_name: Dáta
+            lessonGroup-8:
+              display_name: Výpočtové systémy
+          lessons:
+            lesson-1:
+              name: Výpočtové systémy
         nevada-standards-aligned-third-grade-2023:
           description_audience: Vek 7-11
           description_short: Nauč sa používať podmienky. Vytvor vlastný obraz, príbeh,

@@ -174,3 +174,31 @@ $container-width: 309px;
     width: math.div($container-width - (2 * 16) - 12, 2);
   }
 }
+
+.centerExpandedCard {
+  display: flex;
+}
+
+.cardsContainer:nth-child(3n + 1) .centerExpandedCard {
+  justify-content: flex-start;
+}
+
+.cardsContainer:nth-child(3n + 2) .centerExpandedCard {
+  justify-content: center;
+}
+
+.cardsContainer:nth-child(3n + 3) {
+  .centerExpandedCard {
+    justify-content: flex-end;
+  }
+
+  .arrowContainer:before {
+    background: $neutral_light;
+  }
+}
+
+.expandedCard {
+  .curriculumInfoContainer {
+    border-color: $neutral-dark !important;
+  }
+}

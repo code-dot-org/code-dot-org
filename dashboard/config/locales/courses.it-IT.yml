@@ -14,12 +14,12 @@ it:
           assignment_family_title: Alla scoperta dell'informatica
           description_short: Corso di introduzione all'informatica che conduce gli
             studenti alla realizzazione di autentici artefatti digitali.
-          description_student: Alla Scoperta dell'informatica (CSD - Computer Science
+          description_student: Alla scoperta dell'informatica (CSD - Computer Science
             Discoveries) è un corso di introduzione all'informatica che conduce gli
             studenti alla realizzazione di autentici artefatti digitali e che introduce
             l'uso dell'informatica come strumento per la creatività, la comunicazione,
             il problem-solving e il divertimento.
-          description_teacher: Alla Scoperta dell'informatica (CSD - Computer Science
+          description_teacher: Alla scoperta dell'informatica (CSD - Computer Science
             Discoveries) è un corso di introduzione all'informatica che conduce gli
             studenti alla realizzazione di autentici artefatti digitali e che introduce
             l'uso dell'informatica come strumento per la creatività, la comunicazione,
@@ -30,12 +30,12 @@ it:
           assignment_family_title: Alla scoperta dell'informatica
           description_short: Corso di introduzione all'informatica che conduce gli
             studenti alla realizzazione di autentici artefatti digitali.
-          description_student: Alla Scoperta dell'informatica (CSD - Computer Science
+          description_student: Alla scoperta dell'informatica (CSD - Computer Science
             Discoveries) è un corso di introduzione all'informatica che conduce gli
             studenti alla realizzazione di autentici artefatti digitali e che introduce
             l'uso dell'informatica come strumento per la creatività, la comunicazione,
             il problem-solving e il divertimento.
-          description_teacher: Alla Scoperta dell'informatica (CSD - Computer Science
+          description_teacher: Alla scoperta dell'informatica (CSD - Computer Science
             Discoveries) è un corso di introduzione all'informatica che conduce gli
             studenti alla realizzazione di autentici artefatti digitali e che introduce
             l'uso dell'informatica come strumento per la creatività, la comunicazione,
@@ -45,12 +45,12 @@ it:
         csd-2019:
           description_short: Corso di introduzione all'informatica che conduce gli
             studenti alla realizzazione di autentici artefatti digitali.
-          description_student: Alla Scoperta dell'informatica (CSD - Computer Science
+          description_student: Alla scoperta dell'informatica (CSD - Computer Science
             Discoveries) è un corso di introduzione all'informatica che conduce gli
             studenti alla realizzazione di autentici artefatti digitali e che introduce
             l'uso dell'informatica come strumento per la creatività, la comunicazione,
             il problem-solving e il divertimento.
-          description_teacher: Alla Scoperta dell'informatica (CSD - Computer Science
+          description_teacher: Alla scoperta dell'informatica (CSD - Computer Science
             Discoveries) è un corso di introduzione all'informatica che conduce gli
             studenti alla realizzazione di autentici artefatti digitali e che introduce
             l'uso dell'informatica come strumento per la creatività, la comunicazione,
@@ -60,20 +60,59 @@ it:
         csd-2020:
           description_short: Corso di introduzione all'informatica che conduce gli
             studenti alla realizzazione di autentici artefatti digitali.
-          description_student: Alla Scoperta dell'informatica (CSD - Computer Science
+          description_student: Alla scoperta dell'informatica (CSD - Computer Science
             Discoveries) è un corso di introduzione all'informatica che conduce gli
             studenti alla realizzazione di autentici artefatti digitali e che introduce
             l'uso dell'informatica come strumento per la creatività, la comunicazione,
             il problem-solving e il divertimento.
-          description_teacher: Alla Scoperta dell'informatica (CSD - Computer Science
+          description_teacher: Alla scoperta dell'informatica (CSD - Computer Science
             Discoveries) è un corso di introduzione all'informatica che conduce gli
             studenti alla realizzazione di autentici artefatti digitali e che introduce
             l'uso dell'informatica come strumento per la creatività, la comunicazione,
             il problem-solving e il divertimento.
+        csd-2021:
+          description_student: |-
+            Alla scoperta dell'informatica (CSD - Computer Science Discoveries) è un corso di introduzione all'informatica che conduce gli studenti alla realizzazione di autentici artefatti digitali e che introduce l'uso dell'informatica come strumento per la creatività, la comunicazione, il problem-solving e il divertimento.
+
+            **Sei interessato a insegnare il corso Alla scoperta dell'informatica?** È disponibile un corso in autoapprendimento (in inglese) per aiutarti a iniziare al meglio l'insegnamento di questo corso. [Clicca qui](https://code.org/educate/professional-development-online) per saperne di più.
+          description_teacher: |-
+            Alla scoperta dell'informatica (CSD - Computer Science Discoveries) è un corso di introduzione all'informatica che conduce gli studenti alla realizzazione di autentici artefatti digitali e che introduce l'uso dell'informatica come strumento per la creatività, la comunicazione, il problem-solving e il divertimento.
+
+            **Lo sapevi?**
+
+            Se te la cavi bene con l'inglese hai molti materiali di supporto a disposizione.
+
+            -   È disponibile un corso in autoapprendimento per aiutarti a iniziare al meglio l'insegnamento di questo corso. [Clicca qui](https://code.org/educate/professional-development-online) per saperne di più.
+
+            -   Questo corso è modulare e può essere insegnato in diverse configurazioni in base alle esigenze di ogni classe. Per conoscere le diverse possibilità, consulta la guida _Implementation guide_ nel menù "Risorse per gli insegnanti" qui sotto.
+
+            -   Sempre nel menù "Risorse per gli insegnanti" qui sotto puoi anche trovare la _Guida al piano di studi_, la guida _Getting started with CSD_, la guida _CSD Guide to Assessment_ e molte altre risorse.
+          title: Alla scoperta dell'informatica ('21-'22)
+        csd-2022:
+          description_student: |-
+            Alla scoperta dell'informatica (CSD - Computer Science Discoveries) è un corso di introduzione all'informatica che conduce gli studenti alla realizzazione di autentici artefatti digitali e che introduce l'uso dell'informatica come strumento per la creatività, la comunicazione, il problem-solving e il divertimento.
+
+            **Sei interessato a insegnare il corso Alla scoperta dell'informatica?** È disponibile un corso in autoapprendimento (in inglese) per aiutarti a iniziare al meglio l'insegnamento di questo corso. [Clicca qui](https://code.org/educate/professional-development-online) per saperne di più.
+          description_teacher: |-
+            Alla scoperta dell'informatica (CSD - Computer Science Discoveries) è un corso di introduzione all'informatica che conduce gli studenti alla realizzazione di autentici artefatti digitali e che introduce l'uso dell'informatica come strumento per la creatività, la comunicazione, il problem-solving e il divertimento.
+
+            **Lo sapevi?**
+
+            Se te la cavi bene con l'inglese hai molti materiali di supporto a disposizione.
+
+            -   È disponibile un corso in autoapprendimento per aiutarti a iniziare al meglio l'insegnamento di questo corso. [Clicca qui](https://code.org/educate/professional-development-online) per saperne di più.
+
+            -   Questo corso è modulare e può essere insegnato in diverse configurazioni in base alle esigenze di ogni classe. Per conoscere le diverse possibilità, consulta la guida [CSD Implementation Guide](https://docs.google.com/document/d/112OA3_KbicOotqopqUyvXoWPWszz3_LHeMlg0ikCabk/preview).
+
+            -   Puoi anche consultare le guide [Curriculum Guide](https://docs.google.com/document/d/1VUbXHxXqHj5QCb4eSb756KKc7NDzbOLZUE5bPPQmJR8/preview) e [Getting Started Guide](https://docs.google.com/document/d/1dMdllds_bhoi-SgtLH7eDdpSHjV_mHOD0-gf9VIgwZk/preview) per saperne di più sul corso e su come iniziare.
         csd-2023:
+          description_student: |-
+            Alla scoperta dell'informatica (CSD - Computer Science Discoveries) è un corso di introduzione all'informatica che conduce gli studenti alla realizzazione di autentici artefatti digitali e che introduce l'uso dell'informatica come strumento per la creatività, la comunicazione, il problem-solving e il divertimento.
+
+            **Sei interessato a insegnare il corso Alla scoperta dell'informatica?** È disponibile un corso in autoapprendimento (in inglese) per aiutarti a iniziare al meglio l'insegnamento di questo corso. [Clicca qui](https://code.org/educate/professional-development-online) per saperne di più.
           title: Alla scoperta dell'informatica
         csd-pilot:
-          description_student: Alla Scoperta dell'informatica (CSD - Computer Science
+          description_student: Alla scoperta dell'informatica (CSD - Computer Science
             Discoveries) è un corso di introduzione all'informatica che conduce gli
             studenti alla realizzazione di autentici artefatti digitali e che introduce
             l'uso dell'informatica come strumento per la creatività, la comunicazione,

@@ -1,5 +1,6 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 41,
   "created_at": "2023-03-17T17:04:53.000Z",
   "level_num": "custom",
@@ -98,7 +99,8 @@
       "/courses/csd-2022/guides/analog-sensors",
       "/courses/csd-2022/guides/changing-sensor-scale",
       "/courses/csd-2022/guides/board-events",
-      "/courses/csd-2022/guides/data-and-change-events"
+      "/courses/csd-2022/guides/data-and-change-events",
+      "/maker/setup"
     ],
     "start_html": "<div id=\"designModeViz\" class=\"appModern\" tabindex=\"1\" data-radium=\"true\" style=\"display: none; width: 320px; height: 450px;\"><div class=\"screen\" tabindex=\"1\" id=\"screen1\" style=\"display: block; height: 450px; width: 320px; left: 0px; top: 0px; position: absolute; z-index: 0; background-color: rgb(255, 255, 255);\" data-theme=\"classic\"><button id=\"volumeButton\" style=\"padding: 0px; margin: 0px; width: 275px; font-size: 23px; color: rgb(255, 255, 255); background-color: rgb(23, 0, 255); position: absolute; left: 20px; top: 5px; height: 30px; border-style: solid; border-width: 0px; border-color: rgb(0, 0, 0); border-radius: 0px; font-family: Arial, Helvetica, sans-serif;\">Volume Meter!</button></div></div>",
     "display_name": "Volume Meter",
@@ -108,9 +110,8 @@
     "encrypted_examples": "6xYUNTFX9BMu8/87mTEa3jVvOlEVHlf7WNaGEfvQbkNTvxhp9XpkCfWNm+Sh\n1COiP0oh3LTgio39uVIiRh4ogA==\n",
     "preload_asset_list": null
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-03-17T17:04:53.230+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Sensors - PD_2222\\\"\"],\"cloned_from\":\"CSD U6 - Sensors - PD_2222\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-03-17T17:04:53.230+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Sensors - PD_2222\\\"\"],\"cloned_from\":\"CSD U6 - Sensors - PD_2222\"},{\"changed_at\":\"2023-08-16 19:20:37 +0000\",\"changed\":[\"code_functions\",\"reference_links\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

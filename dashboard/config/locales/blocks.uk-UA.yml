@@ -1375,6 +1375,7 @@ uk:
               ліс
             '"sound://category_background/wavering_wind.mp3"': сонний
             '"sound://category_loops/stabilizing_breath_loop1.mp3"': повільно
+            '"sound://category_loops/vibrant_game_harping_down_forever_loop_2_accent.mp3"': арфи
             '"sound://category_nature/forest_woodland_ambience_2.mp3"': ліс
             '"sound://category_nature/summer_night_loop.mp3"': ніч
       Poetry_playSound:
@@ -2168,6 +2169,10 @@ uk:
             '"when"': коли
             '"while"': поки
         text: "{CONDITION} {SPRITE} клацнули"
+      gamelab_spriteSayTime:
+        text: "{SPRITE}говорить{TEXT1}протягом{NUM}секунд"
+      gamelab_spriteThinkTime:
+        text: "{SPRITE}думає{TEXT1}протягом{NUM}секунд"
       gamelab_spriteThink_fables4:
         options:
           THOUGHT:

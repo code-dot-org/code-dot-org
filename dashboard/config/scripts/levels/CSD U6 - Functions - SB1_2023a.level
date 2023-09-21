@@ -1,5 +1,6 @@
 <Applab>
   <config><![CDATA[{
+  "published": true,
   "game_id": 41,
   "created_at": "2023-03-17T17:06:35.000Z",
   "level_num": "custom",
@@ -51,7 +52,7 @@
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
-    "makerlab_enabled": "true",
+    "makerlab_enabled": "circuitPlayground",
     "long_instructions": "# Calling Functions\r\n\r\nThis app lets you click on aliens on the screen and the LEDs will light up to match the color of the aliens. The app only has two colors for each alien: yellow or green.\r\n\r\nThe app has already been started for you and has already **defined** two functions: `greenLEDs` and `yellowLEDs` [**(Show Me Where)**](#triggercallout=functions)\r\n\r\nYou still need to **call** these functions within your program. Two of the aliens are already working correctly. Your task is to make the other aliens work correctly too!\r\n\r\n\r\n## Do This:\r\n1) Look at the two examples that have already been completed [**(Show Me Where)**](#triggercallout=examples)\r\n2) When you click an alien, change the LEDs to the color of that alien\r\n\t- Inside each [`onEvent()`(#fff176)](/docs/applab/onEvent/), drag out a green [`myFunction()`(#68D995)](/docs/applab/callMyFunction/) block.\r\n\t- Replace `myFunction` with either `greenLEDs` or `yellowLEDs` to match the alien you click\r\n\r\n**Run your code!** Try clicking on each of the aliens and see the circuit playground light up!",
     "parent_level_id": 20595,
     "name_suffix": "_2023a",
@@ -67,7 +68,8 @@
       "/courses/csd-2022/guides/board-events",
       "/courses/csd-2022/guides/data-and-change-events",
       "/courses/csd-2022/guides/variables",
-      "/courses/csd-2022/guides/random-numbers"
+      "/courses/csd-2022/guides/random-numbers",
+      "/maker/setup"
     ],
     "starter_assets": {
       "Alien_01.png": "24cea49b-e503-4ae5-8cdd-2e56ba07b6b5.png",
@@ -86,9 +88,8 @@
     "encrypted_examples": "VaYyRjySCIzpcGGKoCy7TFP/g/5RnDYPwyY7rSOJJl50Q6y0i4O5KqBbflqT\nvglWtOj6EYTtAity2BzSLwr1Ow==\n",
     "preload_asset_list": null
   },
-  "published": true,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2023-03-17T17:06:35.436+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Functions - SB1_2222\\\"\"],\"cloned_from\":\"CSD U6 - Functions - SB1_2222\"}]"
+  "audit_log": "[{\"changed_at\":\"2023-03-17T17:06:35.436+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Functions - SB1_2222\\\"\"],\"cloned_from\":\"CSD U6 - Functions - SB1_2222\"},{\"changed_at\":\"2023-08-16 19:39:12 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"reference_links\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

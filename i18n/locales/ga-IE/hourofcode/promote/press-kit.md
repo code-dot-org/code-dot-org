@@ -1,5 +1,5 @@
 ---
-title: Press Kit
+title: Preas Kit
 ---
 
 {{ signup_button }}

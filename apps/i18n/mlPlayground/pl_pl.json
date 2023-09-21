@@ -882,6 +882,7 @@
           "id": "furikake"
         },
         "ginger": {
+          "description": "Czy poke ma domieszkę imbiru?",
           "id": "imbir"
         },
         "masago": {

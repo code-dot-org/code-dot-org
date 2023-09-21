@@ -10,10 +10,8 @@ require 'cdo/crowdin/legacy_utils'
 require 'cdo/crowdin/project'
 
 def with_elapsed
-  before = Time.now
-  yield
-  after = Time.now
-  return Time.at(after - before).utc.strftime('%H:%M:%S')
+  runtime = Benchmark.realtime {yield}
+  return Time.at(runtime).utc.strftime('%H:%M:%S')
 end
 
 def sync_down

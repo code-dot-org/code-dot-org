@@ -4,6 +4,7 @@
     "wrapup_video_id": null,
     "login_required": false,
     "properties": {
+      "curriculum_umbrella": "CSF",
       "hideable_lessons": true,
       "is_course": true,
       "is_migrated": true,
@@ -19,7 +20,7 @@
     },
     "new_name": null,
     "family_name": "nevada-standards-aligned-fourth-grade",
-    "serialized_at": "2023-08-09 22:34:52 UTC",
+    "serialized_at": "2023-08-29 20:25:51 UTC",
     "published_state": "stable",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -4132,15 +4133,12 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "level_keys": [
-          "coursee_helloworld_introtosprites_2023"
-        ],
         "progression": "Video: Hello World: Welcome to Sprite Lab"
       },
       "bonus": false,
       "seeding_key": {
         "script_level.level_keys": [
-          "coursee_helloworld_introtosprites_2023"
+          "Nevada_video_introSpriteLab_2023"
         ],
         "lesson.key": "Hello World",
         "lesson_group.key": "lessonGroup-2",
@@ -4148,7 +4146,7 @@
         "activity_section.key": "5fca5b45-0ca0-4ba0-ad3b-22a881de777d"
       },
       "level_keys": [
-        "coursee_helloworld_introtosprites_2023"
+        "Nevada_video_introSpriteLab_2023"
       ]
     },
     {
@@ -6834,9 +6832,9 @@
     },
     {
       "seeding_key": {
-        "level.key": "coursee_helloworld_introtosprites_2023",
+        "level.key": "Nevada_video_introSpriteLab_2023",
         "script_level.level_keys": [
-          "coursee_helloworld_introtosprites_2023"
+          "Nevada_video_introSpriteLab_2023"
         ],
         "lesson.key": "Hello World",
         "lesson_group.key": "lessonGroup-2",

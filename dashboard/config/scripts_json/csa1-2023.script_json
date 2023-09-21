@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-08-15 14:52:31 UTC",
+    "serialized_at": "2023-08-15 19:21:24 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -463,7 +463,7 @@
       "name": "Sandbox: The Neighborhood",
       "absolute_position": 21,
       "lockable": false,
-      "has_lesson_plan": true,
+      "has_lesson_plan": false,
       "relative_position": 20,
       "properties": {
       },
@@ -6091,7 +6091,7 @@
       "key": "38d82083-6f0c-4a44-9f4e-98c8718a057f",
       "position": 1,
       "properties": {
-        "progression_name": "Neighborhood Sandboxes"
+        "progression_name": "With Paint Bucket"
       },
       "seeding_key": {
         "activity_section.key": "38d82083-6f0c-4a44-9f4e-98c8718a057f",
@@ -6102,6 +6102,7 @@
       "key": "88326380-e0f6-42e6-95b7-fed281cb4511",
       "position": 2,
       "properties": {
+        "progression_name": "No Paint Bucket"
       },
       "seeding_key": {
         "activity_section.key": "88326380-e0f6-42e6-95b7-fed281cb4511",
@@ -8090,7 +8091,7 @@
       "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Neighborhood Sandboxes"
+        "progression": "With Paint Bucket"
       },
       "bonus": false,
       "seeding_key": {
@@ -8109,10 +8110,10 @@
     {
       "chapter": 81,
       "position": 2,
-      "activity_section_position": 2,
+      "activity_section_position": 1,
       "assessment": false,
       "properties": {
-        "progression": "Neighborhood Sandboxes"
+        "progression": "No Paint Bucket"
       },
       "bonus": false,
       "seeding_key": {
@@ -8122,7 +8123,7 @@
         "lesson.key": "lesson-18",
         "lesson_group.key": "lessonGroup-7",
         "script.name": "csa1-2023",
-        "activity_section.key": "38d82083-6f0c-4a44-9f4e-98c8718a057f"
+        "activity_section.key": "88326380-e0f6-42e6-95b7-fed281cb4511"
       },
       "level_keys": [
         "CSA 2023 Neighborhood - No Bucket Sandbox"
@@ -9099,7 +9100,7 @@
         "lesson.key": "lesson-18",
         "lesson_group.key": "lessonGroup-7",
         "script.name": "csa1-2023",
-        "activity_section.key": "38d82083-6f0c-4a44-9f4e-98c8718a057f"
+        "activity_section.key": "88326380-e0f6-42e6-95b7-fed281cb4511"
       }
     }
   ],
@@ -9895,6 +9896,7 @@
       "key": "investigate_working_with_java_files",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {
@@ -10282,6 +10284,7 @@
       "key": "u1l2_extra_practice",
       "properties": {
         "audience": "Student",
+        "include_in_pdf": true,
         "type": "Handout"
       },
       "seeding_key": {

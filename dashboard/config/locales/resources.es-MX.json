@@ -7482,7 +7482,7 @@
           "type": "Recurso"
         },
         "2022_change_log/coursea/2022": {
-          "name": "Registro de Cambios de 2022",
+          "name": "2022 Cambio de registro",
           "url": "https://docs.google.com/document/d/1sX7-ByjcMmuYt8EvJdA9ON2sOYEWn0Cuzifbsyc8bUc/preview"
         },
         "all_resources/coursea/2022": {
@@ -7555,6 +7555,11 @@
           "url": "https://drive.google.com/file/d/1MoM8U9voKQzx2muHW7rncHsbqSE0pAsX/view",
           "type": "Póster de poemas"
         },
+        "csf_course_a_lesson_slides/coursea/2022": {
+          "name": "CSF Curso A Lección Diapositivas ",
+          "url": "https://docs.google.com/presentation/d/1HeArt7QO9Q7XJuTN_2oDfqBxbo1qKvhWyOCInDB2Emg/template/preview",
+          "type": "Diapositivas"
+        },
         "20_20_20_rule/coursea/2022": {
           "name": "Regla 20/20/20",
           "url": "http://www.anthro.com/blog/2013/10/how-to-prevent-eye-strain-with-the-20-20-20-rule#.WOU39BLyu35",
@@ -7574,6 +7579,11 @@
           "name": "Wiggles-Go Fideos",
           "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
           "type": "Vídeo"
+        },
+        "csf_course_a_lesson_slides_1/coursea/2022": {
+          "name": "CSF Curso A Lección Diapositivas",
+          "url": "https://docs.google.com/presentation/d/1HeArt7QO9Q7XJuTN_2oDfqBxbo1qKvhWyOCInDB2Emg/template/preview",
+          "type": "Diapositivas"
         },
         "feeling_faces_-_emotion_image/coursea/2022": {
           "name": "Caras de sensaciones - Imagen de emociones",
@@ -7600,6 +7610,11 @@
           "url": "https://youtu.be/hrnhiKAQ1_k",
           "type": "Video sin conexión"
         },
+        "csf_course_a_lesson_slides_2/coursea/2022": {
+          "name": "CSF Curso A Lección Diapositivas",
+          "url": "https://docs.google.com/presentation/d/1HeArt7QO9Q7XJuTN_2oDfqBxbo1qKvhWyOCInDB2Emg/template/preview",
+          "type": "Diapositivas"
+        },
         "unplugged_blockly_blocks_grades_k-1_/coursea/2022": {
           "name": "Bloques Blockly sin conexión (cursos K-1)",
           "url": "https://drive.google.com/file/d/1uOyob3Bn6F9zXH5ZCWS2jOk3v9PsKAlc/view",
@@ -7609,6 +7624,11 @@
           "name": "Wiggles - GoNoodle",
           "url": "https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll",
           "type": "Vídeo"
+        },
+        "csf_course_a_lesson_slides_3/coursea/2022": {
+          "name": "CSF Curso A Lección Diapositivas",
+          "url": "https://docs.google.com/presentation/d/1HeArt7QO9Q7XJuTN_2oDfqBxbo1qKvhWyOCInDB2Emg/template/preview",
+          "type": "Diapositivas"
         },
         "debugging_with_the_step_button/coursea/2022": {
           "name": "Depuración con el botón Paso",
@@ -7620,10 +7640,20 @@
           "url": "https://docs.google.com/document/d/1lO2nhygYbQjfXrybjoqoSd3YJOvTLkhAd8D0-gEFlZU/view",
           "type": "Recurso"
         },
+        "csf_course_a_lesson_slides_4/coursea/2022": {
+          "name": "CSF Curso A Lección Diapositivas",
+          "url": "https://docs.google.com/presentation/d/1HeArt7QO9Q7XJuTN_2oDfqBxbo1qKvhWyOCInDB2Emg/template/preview",
+          "type": "Diapositivas"
+        },
         "feeling_faces_-_emotion_image_1/coursea/2022": {
           "name": "Caras de sensaciones - Imagen de emociones",
           "url": "https://docs.google.com/document/d/1lO2nhygYbQjfXrybjoqoSd3YJOvTLkhAd8D0-gEFlZU/view",
           "type": "Recurso"
+        },
+        "csf_course_a_lesson_slides_5/coursea/2022": {
+          "name": "CSF Curso A Lección Diapositivas",
+          "url": "https://docs.google.com/presentation/d/1HeArt7QO9Q7XJuTN_2oDfqBxbo1qKvhWyOCInDB2Emg/template/preview",
+          "type": "Diapositivas"
         },
         "happy_map_cards_xl/coursea/2022": {
           "name": "Fichas de mapas felices XL",
@@ -7635,6 +7665,11 @@
           "url": "https://drive.google.com/file/d/1_zsiyqgSUl4BOuLjJLomktTd6x_RE0vw/view",
           "type": "Manipulativos"
         },
+        "csf_course_a_lesson_slides_6/coursea/2022": {
+          "name": "CSF Curso A Lección Diapositivas",
+          "url": "https://docs.google.com/presentation/d/1HeArt7QO9Q7XJuTN_2oDfqBxbo1qKvhWyOCInDB2Emg/template/preview",
+          "type": "Diapositivas"
+        },
         "feeling_faces/coursea/2022": {
           "name": "Caras de emociones",
           "url": "https://docs.google.com/document/d/1lO2nhygYbQjfXrybjoqoSd3YJOvTLkhAd8D0-gEFlZU/view/",
@@ -7645,15 +7680,30 @@
           "url": "https://www.youtube.com/watch?v=fpOpnQ60Mso&ab_channel=Code.org",
           "type": "Vídeo"
         },
+        "csf_course_a_lesson_slides_7/coursea/2022": {
+          "name": "CSF Curso A Lección Diapositivas",
+          "url": "https://docs.google.com/presentation/d/1HeArt7QO9Q7XJuTN_2oDfqBxbo1qKvhWyOCInDB2Emg/template/preview",
+          "type": "Diapositivas"
+        },
         "csf_lesson_recommendations/coursea/2022": {
           "name": "Recomendaciones de lecciones FCC ",
           "url": "https://drive.google.com/file/d/1BIYZWnW6XpMn3invgXKLIAdw1QhGmlU7/view",
           "type": "Recurso"
         },
+        "csf_course_a_lesson_slides_8/coursea/2022": {
+          "name": "CSF Curso A Lección Diapositivas",
+          "url": "https://docs.google.com/presentation/d/1HeArt7QO9Q7XJuTN_2oDfqBxbo1qKvhWyOCInDB2Emg/template/preview",
+          "type": "Diapositivas"
+        },
         "pause_and_think_online/coursea/2022": {
           "name": "Momento de reflexión en línea",
           "url": "https://www.youtube.com/watch?v=rgbZAWnOWOo",
           "type": "Vídeo"
+        },
+        "csf_course_a_lesson_slides_9/coursea/2022": {
+          "name": "CSF Curso A Lección Diapositivas",
+          "url": "https://docs.google.com/presentation/d/1HeArt7QO9Q7XJuTN_2oDfqBxbo1qKvhWyOCInDB2Emg/template/preview",
+          "type": "Diapositivas"
         },
         "the_big_event/coursea/2022": {
           "name": "El gran evento",
@@ -7675,9 +7725,19 @@
           "url": "https://drive.google.com/file/d/14YFB9NnoF6XZYfCEXrBcn8i5tMoXTbJK/view",
           "type": "Imagen del control"
         },
+        "csf_course_a_lesson_slides_10/coursea/2022": {
+          "name": "CSF Curso A Lección Diapositivas",
+          "url": "https://docs.google.com/presentation/d/1HeArt7QO9Q7XJuTN_2oDfqBxbo1qKvhWyOCInDB2Emg/template/preview",
+          "type": "Diapositivas"
+        },
         "cs_fundamentals_main_activity_tips/coursea/2022": {
           "name": "FCC: consejos para la actividad principal",
           "url": "https://drive.google.com/file/d/1BIYZWnW6XpMn3invgXKLIAdw1QhGmlU7/view"
+        },
+        "csf_course_a_lesson_slides_11/coursea/2022": {
+          "name": "CSF Curso A Lección Diapositivas",
+          "url": "https://docs.google.com/presentation/d/1HeArt7QO9Q7XJuTN_2oDfqBxbo1qKvhWyOCInDB2Emg/template/preview",
+          "type": "Diapositivas"
         },
         "artist_project_planning_guide/coursea/2022": {
           "name": "Guía de planificación del proyecto del Artista",
@@ -7689,21 +7749,26 @@
           "url": "https://docs.google.com/document/d/1PJuX7wMCE5rhYw-5rxA9hr8P04BiGTfT9rhy8KB6iU0/view",
           "type": "Guía de respuestas"
         },
+        "csf_course_a_lesson_slides_12/coursea/2022": {
+          "name": "CSF Curso A Lección Diapositivas",
+          "url": "https://docs.google.com/presentation/d/1HeArt7QO9Q7XJuTN_2oDfqBxbo1qKvhWyOCInDB2Emg/template/preview",
+          "type": "Diapositivas"
+        },
         "2022_change_log/courseb/2022": {
-          "name": "Registro de Cambios de 2022",
+          "name": "2022 Cambio de registro",
           "url": "https://docs.google.com/document/d/1sX7-ByjcMmuYt8EvJdA9ON2sOYEWn0Cuzifbsyc8bUc/preview"
         },
         "all_resources/courseb/2022": {
           "name": "Todos los Recursos",
-          "url": "/s/coursob-2022/recursos"
+          "url": "/s/cursob-2022/recursos"
         },
         "all_standards/courseb/2022": {
           "name": "Todos los Estándares",
-          "url": "/s/coursob-2022/normas"
+          "url": "/s/curso-2022/normas"
         },
         "all_vocabulary/courseb/2022": {
           "name": "Todo el Vocabulario",
-          "url": "/s/coursob-2022/vocab"
+          "url": "/s/curso-2022/vocab"
         },
         "common_core_and_ngss_guidance/courseb/2022": {
           "name": "Guía de Common Core y NGSS",
@@ -7762,6 +7827,11 @@
           "name": "Rastro digital: diapositivas",
           "url": "https://docs.google.com/presentation/d/1uaBcFUzCVrJzh0imHe9goiMMncic8rfD/view",
           "type": "Conjunto de Diapositivas"
+        },
+        "csf_course_b_lesson_slides/courseb/2022": {
+          "name": "CSF Curso B Diapositivas de la lección",
+          "url": "https://docs.google.com/presentation/d/17S-nTFeB0eFK2TU_x7ExRvJKK4kUM01Mumvr22h9wmw/template/preview",
+          "type": "Diapositivas"
         },
         "feeling_faces_emotion_image/courseb/2022": {
           "name": "Caras de sensaciones - Imagen de emociones",
@@ -7911,7 +7981,7 @@
           "type": "Guía de respuestas"
         },
         "2022_change_log/coursec/2022": {
-          "name": "Registro de Cambios de 2022",
+          "name": "2022 Cambio de registro",
           "url": "https://docs.google.com/document/d/1sX7-ByjcMmuYt8EvJdA9ON2sOYEWn0Cuzifbsyc8bUc/preview"
         },
         "all_resources/coursec/2022": {
@@ -7965,7 +8035,7 @@
           "url": "https://docs.google.com/document/d/1p71nZ3SqyNNVIJtQwPA_LTdcnL9RDsxIo5mQe9Gd-hQ/view"
         },
         "extension_lessons_micro_bit/coursec/2022": {
-          "name": "Lecciones de Ampliación con el micro:bit",
+          "name": "Lecciones de extensión con el micro:bit",
           "url": "https://code.org/maker/csf-microbit",
           "type": "Recurso"
         },
@@ -8139,20 +8209,20 @@
           "type": "Recursos de la lección"
         },
         "2022_change_log/coursed/2022": {
-          "name": "Registro de Cambios de 2022",
+          "name": "2022 Cambio de registro",
           "url": "https://docs.google.com/document/d/1sX7-ByjcMmuYt8EvJdA9ON2sOYEWn0Cuzifbsyc8bUc/preview"
         },
         "all_resources/coursed/2022": {
           "name": "Todos los Recursos",
-          "url": "/s/cursod-2022/recursos"
+          "url": "/s/curso-2022/recursos"
         },
         "all_standards/coursed/2022": {
           "name": "Todos los Estándares",
-          "url": "/s/cursod-2022/normas"
+          "url": "/s/curso-2022/normas"
         },
         "all_vocabulary/coursed/2022": {
           "name": "Todo el Vocabulario",
-          "url": "/s/cursod-2022/vocabulario"
+          "url": "/s/curso-2022/vocab"
         },
         "common_core_and_ngss_guidance/coursed/2022": {
           "name": "Guía de Common Core y NGSS",
@@ -8193,7 +8263,7 @@
           "url": "https://docs.google.com/document/d/1X139Yy8C3WPxE3g1j2LlE89hzeREex8QVPzKITDSuF4/view"
         },
         "extension_lessons_micro_bit/coursed/2022": {
-          "name": "Lecciones de Ampliación con el micro:bit",
+          "name": "Lecciones de extensión con el micro:bit",
           "url": "https://code.org/maker/csf-microbit",
           "type": "Recurso"
         },
@@ -8387,20 +8457,20 @@
           "type": "Guía de Proyecto"
         },
         "2022_change_log/coursee/2022": {
-          "name": "Registro de Cambios de 2022",
+          "name": "2022 Cambio de registro",
           "url": "https://docs.google.com/document/d/1sX7-ByjcMmuYt8EvJdA9ON2sOYEWn0Cuzifbsyc8bUc/preview"
         },
         "all_resources/coursee/2022": {
           "name": "Todos los Recursos",
-          "url": "/s/cursoe-2022/recursos"
+          "url": "/s/curso-2022/recursos"
         },
         "all_standards/coursee/2022": {
           "name": "Todos los Estándares",
-          "url": "/s/cursoe-2022/normas"
+          "url": "/s/curso-2022/normas"
         },
         "all_vocabulary/coursee/2022": {
           "name": "Todo el Vocabulario",
-          "url": "/s/cursoe-2022/vocabulario"
+          "url": "/s/curso-2022/vocab"
         },
         "common_core_and_ngss_guidance/coursee/2022": {
           "name": "Guía de Common Core y NGSS",
@@ -8446,7 +8516,7 @@
           "url": "https://docs.google.com/document/d/1WDr-KRGUThXMzL1ppDIkbueQrJfF0lwrwFhEsO6ET5s/view"
         },
         "extension_lessons_micro_bit/coursee/2022": {
-          "name": "Lecciones de Ampliación con el micro:bit",
+          "name": "Lecciones de extensión con el micro:bit",
           "url": "https://code.org/maker/csf-microbit",
           "type": "Recurso"
         },
@@ -8574,20 +8644,20 @@
           "type": "Guía de Actividades"
         },
         "2022_change_log/coursef/2022": {
-          "name": "Registro de Cambios de 2022",
+          "name": "2022 Cambio de registro",
           "url": "https://docs.google.com/document/d/1sX7-ByjcMmuYt8EvJdA9ON2sOYEWn0Cuzifbsyc8bUc/preview"
         },
         "all_resources/coursef/2022": {
           "name": "Todos los Recursos",
-          "url": "/s/cursof-2022/recursos"
+          "url": "/s/curso-2022/recursos"
         },
         "all_standards/coursef/2022": {
           "name": "Todos los Estándares",
-          "url": "/s/cursof-2022/normas"
+          "url": "/s/curso-2022/normas"
         },
         "all_vocabulary/coursef/2022": {
           "name": "Todo el Vocabulario",
-          "url": "/s/cursof-2022/vocabulario"
+          "url": "/s/curso-2022/vocab"
         },
         "common_core_and_ngss_guidance/coursef/2022": {
           "name": "Guía de Common Core y NGSS",
@@ -8633,7 +8703,7 @@
           "url": "https://docs.google.com/document/d/10v_thWkO0aJNWsCFtv_bpVbiIy-meYs_vbUiHi-ZCH0/preview"
         },
         "extension_lessons_micro_bit/coursef/2022": {
-          "name": "Lecciones de Ampliación con el micro:bit",
+          "name": "Lecciones de extensión con el micro:bit",
           "url": "https://code.org/maker/csf-microbit",
           "type": "Recurso"
         },
@@ -8774,15 +8844,15 @@
         },
         "all_resources/express/2022": {
           "name": "Todos los Recursos",
-          "url": "/s/exprés-2022/recursos"
+          "url": "/s/express-2022/recursos"
         },
         "all_standards/express/2022": {
           "name": "Todos los Estándares",
-          "url": "/s/exprés-2022/normas"
+          "url": "/s/express-2022/normas"
         },
         "all_vocabulary/express/2022": {
           "name": "Todo el Vocabulario",
-          "url": "/s/exprés-2022/vocab"
+          "url": "/s/express-2022/vocab"
         },
         "debugging_guide/express/2022": {
           "name": "Guia de Depuración",
@@ -8886,15 +8956,15 @@
         },
         "all_resources/pre-express/2022": {
           "name": "Todos los Recursos",
-          "url": "/s/pre-exprés-2022/recursos"
+          "url": "/s/pre-express-2022/recursos"
         },
         "all_standards/pre-express/2022": {
           "name": "Todos los Estándares",
-          "url": "/s/pre-exprés-2022/normas"
+          "url": "/s/pre-express-2022/normas"
         },
         "all_vocabulary/pre-express/2022": {
           "name": "Todo el Vocabulario",
-          "url": "/s/pre-exprés-2022/vocab"
+          "url": "/s/pre-express-2022/vocab"
         },
         "debugging_guide/pre-express/2022": {
           "name": "Guia de Depuración",

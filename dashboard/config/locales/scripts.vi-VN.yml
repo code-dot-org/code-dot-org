@@ -3221,6 +3221,8 @@ vi:
           student_description: Hãy thử những nền tảng của khoa học máy tính với các
             nhân vật từ Angry Birds, Plants vs Zombies và Scrat từ Ice Age!
           title: Mê cung cổ điển
+        how-ai-works-2023:
+          title: Cách thức hoạt động của AI
         iceage:
           description: Tạo ra một câu chuyện hoặc làm cho một trò chơi với Ice Age
             Play Lab!
@@ -3333,6 +3335,11 @@ vi:
               display_name: Các sự kiện
             lessonGroup-7:
               display_name: Dự án tổng kết khóa học
+            lessonGroup-8:
+              display_name: Dữ liệu
+          lessons:
+            lesson-1:
+              name: Dữ liệu
         nevada-standards-aligned-fourth-grade-2023:
           description_audience: 'Độ tuổi: 8-12'
           lesson_groups:
@@ -3371,6 +3378,11 @@ vi:
               display_name: Các sự kiện
             lessonGroup-6:
               display_name: Dữ liệu
+            lessonGroup-8:
+              display_name: Hệ thống máy tính
+          lessons:
+            lesson-1:
+              name: Hệ thống máy tính
         nevada-standards-aligned-third-grade-2023:
           description_audience: 'Độ tuổi: 7-11'
           description_short: Tìm hiểu về câu lệnh điều kiện. Sáng tạo tác phẩm nghệ

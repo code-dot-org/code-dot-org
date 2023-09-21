@@ -11,8 +11,26 @@
         "processing/csd/2021": {
           "word": "Processando"
         },
+        "html_element/csd/2021": {
+          "word": "Elemento HTML"
+        },
+        "html_tag/csd/2021": {
+          "word": "Tag HTML"
+        },
+        "website_content/csd/2021": {
+          "word": "Conteúdo do Site"
+        },
+        "website_structure/csd/2021": {
+          "word": "Estrutura do Site"
+        },
+        "heading/csd/2021": {
+          "word": "Cabeçalho"
+        },
         "digital_footprint/csd/2021": {
           "word": "Pegada Digital"
+        },
+        "css_selector/csd/2021": {
+          "word": "Seletor CSS"
         },
         "copyright/csd/2021": {
           "word": "Direitos Autorais",
@@ -49,12 +67,29 @@
         "function/csd/2021": {
           "word": "Função"
         },
+        "empathy/csd/2021": {
+          "word": "Empatia",
+          "definition": "No design, refere-se a prestar atenção aos sentimentos e às necessidades do usuário ao projetar um produto."
+        },
         "user/csd/2021": {
           "word": "Usuário",
           "definition": "Alguém que usa um objeto, incluindo software e hardware."
         },
+        "usability/csd/2021": {
+          "word": "Usabilidade",
+          "definition": "Como é fácil, eficiente e gratificante usar um objeto ou dispositivo feito por humanos (incluindo software)."
+        },
+        "prototype/csd/2021": {
+          "word": "Protótipo",
+          "definition": "Um primeiro modelo ou modelo inicial de um produto que permite testar suposições antes de desenvolver uma versão final."
+        },
         "user_interface/csd/2021": {
-          "word": "Interface do Usuário"
+          "word": "Interface do Usuário",
+          "definition": "Os elementos visuais de um programa por meio dos quais um usuário controla ou se comunica com o aplicativo; frequentemente abreviada como UI."
+        },
+        "feature/csd/2021": {
+          "word": "Recurso",
+          "definition": "Parte de um programa que adiciona funcionalidade para o usuário"
         },
         "for_loop/csd/2021": {
           "word": "Laço “for”",
@@ -606,18 +641,23 @@
           "definition": "Hypertext Markup Language, uma linguagem usada para criar páginas na web"
         },
         "html_element/csd/2022": {
+          "word": "Elemento HTML",
           "definition": "Uma parte de um site, marcada por uma tag inicial e geralmente fechada com uma tag final"
         },
         "html_tag/csd/2022": {
+          "word": "Tag HTML",
           "definition": "O conjunto especial de caracteres que indica o início e o fim de um elemento HTML e o tipo desse elemento"
         },
         "website_content/csd/2022": {
+          "word": "Conteúdo do Site",
           "definition": "o texto e as imagens em um site"
         },
         "website_structure/csd/2022": {
+          "word": "Estrutura do Site",
           "definition": "como o conteúdo de um site é organizado"
         },
         "heading/csd/2022": {
+          "word": "Cabeçalho",
           "definition": "Um título ou resumo de um documento ou seção de um documento."
         },
         "digital_footprint/csd/2022": {
@@ -628,6 +668,7 @@
           "definition": "Folhas de estilo em cascata; uma linguagem usada para descrever como os elementos HTML devem ser estilizados"
         },
         "css_selector/csd/2022": {
+          "word": "Seletor CSS",
           "definition": "a parte de um conjunto de regras CSS que define a quais elementos HTML o estilo deve ser aplicado"
         },
         "copyright/csd/2022": {
@@ -702,12 +743,29 @@
           "word": "Função",
           "definition": "Um trecho nomeado de instruções de programação."
         },
+        "empathy/csd/2022": {
+          "word": "Empatia",
+          "definition": "No design, refere-se a prestar atenção aos sentimentos e às necessidades do usuário ao projetar um produto."
+        },
         "user/csd/2022": {
           "word": "Usuário",
           "definition": "Alguém que usa um objeto, incluindo software e hardware."
         },
+        "usability/csd/2022": {
+          "word": "Usabilidade",
+          "definition": "Como é fácil, eficiente e gratificante usar um objeto ou dispositivo feito por humanos (incluindo software)."
+        },
+        "prototype/csd/2022": {
+          "word": "Protótipo",
+          "definition": "Um primeiro modelo ou modelo inicial de um produto que permite testar suposições antes de desenvolver uma versão final."
+        },
         "user_interface/csd/2022": {
-          "word": "Interface do Usuário"
+          "word": "Interface do Usuário",
+          "definition": "Os elementos visuais de um programa por meio dos quais um usuário controla ou se comunica com o aplicativo; frequentemente abreviada como UI."
+        },
+        "feature/csd/2022": {
+          "word": "Recurso",
+          "definition": "Parte de um programa que adiciona funcionalidade para o usuário"
         },
         "output/csd/2022": {
           "word": "Saída",

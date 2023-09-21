@@ -2775,6 +2775,8 @@ nl:
           student_description: Probeer de grondbeginselen van de informatica met figuren
             uit angry Birds, Plant vs. Zombies en Scrat van Ice Age!
           title: Klassiek doolhof
+        how-ai-works-2023:
+          title: Hoe AI werkt
         iceage:
           description: Maken een verhaal of een spel met de ijs tijd Speel Lab!
           description_short: Maken een verhaal of een spel met de ijs tijd Speel Lab!
@@ -2871,6 +2873,11 @@ nl:
               display_name: Lussen
             lessonGroup-6:
               display_name: Gebeurtenissen
+            lessonGroup-8:
+              display_name: Data
+          lessons:
+            lesson-1:
+              name: Data
         nevada-standards-aligned-fourth-grade-2023:
           description_audience: 'Leeftijden: 8-12'
           lesson_groups:
@@ -3240,6 +3247,22 @@ nl:
           description_short: Gebruik Sprite Lab om een simulatie van een virusuitbraak
             te simuleren.
           title: Een uitbraak simuleren
+        vpl-csa-2023-m1:
+          title: Module 1
+        vpl-csa-2023-m2:
+          title: Module 2
+        vpl-csa-2023-m3:
+          title: Module 3
+        vpl-csa-2023-m4:
+          title: Module 4
+        vpl-csa-2023-m5:
+          title: Module 5
+        vpl-csa-2023-m6:
+          title: Module 6
+        vpl-csa-2023-m7:
+          title: Module 7
+        vpl-csa-2023-m8:
+          title: Module 8
         vpl-csd-2021:
           lesson_groups:
             CSD_Module 1:
@@ -3258,6 +3281,38 @@ nl:
               display_name: Module 7
             CSD_Module 8:
               display_name: Module 8
+        vpl-csd-2023-m1:
+          title: Module 1
+        vpl-csd-2023-m2:
+          title: Module 2
+        vpl-csd-2023-m3:
+          title: Module 3
+        vpl-csd-2023-m4:
+          title: Module 4
+        vpl-csd-2023-m5:
+          title: Module 5
+        vpl-csd-2023-m6:
+          title: Module 6
+        vpl-csd-2023-m7:
+          title: Module 7
+        vpl-csd-2023-m8:
+          title: Module 8
+        vpl-csp-2023-m1:
+          title: Module 1
+        vpl-csp-2023-m2:
+          title: Module 2
+        vpl-csp-2023-m3:
+          title: Module 3
+        vpl-csp-2023-m4:
+          title: Module 4
+        vpl-csp-2023-m5:
+          title: Module 5
+        vpl-csp-2023-m6:
+          title: Module 6
+        vpl-csp-2023-m7:
+          title: Module 7
+        vpl-csp-2023-m8:
+          title: Module 8
         web-development-2023:
           lesson_groups:
             lessonGroup-4:

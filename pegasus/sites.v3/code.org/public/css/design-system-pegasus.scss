@@ -10,15 +10,6 @@ $border-radius: 4px;
 }
 
 // Start styles
-html {
-  scroll-behavior: smooth;
-  font-size: 100%;
-}
-
-body {
-  color: $neutral-dark;
-}
-
 p {
   @include body-two;
 }
@@ -150,34 +141,6 @@ hr {
   }
 }
 
-// Text links
-p a,
-p a:visited,
-p a:link,
-a,
-a:visited,
-a:link {
-  font-family: $gotham-bold, sans-serif;
-  color: $brand_secondary_default;
-  text-decoration: underline;
-  transition: color ease-in-out .2s;
-
-  &:hover {
-    color: $brand_secondary_dark;
-    text-decoration: underline;
-  }
-}
-
-// Footer links
-a.whitefooterlink {
-  text-decoration: none;
-
-  &:hover {
-    text-decoration: underline;
-    color: $neutral_white;
-  }
-}
-
 // Buttons
 a.link-button,
 button,
@@ -212,6 +175,10 @@ input[type=submit] {
 
   &:focus {
     @include focus-outline;
+
+    &:not(:focus-visible) {
+      outline: none;
+    }
   }
 
   &:disabled {
@@ -225,8 +192,8 @@ input[type=submit] {
 a.link-button {
   &.secondary {
     background: none;
-    border-color: $neutral-dark;
-    color: $neutral-dark;
+    border-color: $neutral_dark;
+    color: $neutral_dark;
 
     &:hover {
       background: $neutral_dark10;
@@ -234,12 +201,13 @@ a.link-button {
   }
 
   &.white {
-    background-color: $neutral-white;
-    border-color: $neutral-white;
-    color: $neutral-dark;
+    background-color: $neutral_white;
+    border-color: $neutral_white;
+    color: $neutral_dark;
 
     &:hover {
       background: $neutral_dark10;
+      border-color: $neutral_dark10;
     }
   }
 
@@ -771,6 +739,45 @@ form {
     padding-bottom: 1rem;
   }
 
+  // Carousel with prev and next button navigation
+  button.carousel__prev,
+  button.carousel__next {
+    display: none !important;
+  }
+
+  @media screen and (min-width: 1280px) {
+    button.carousel__prev {
+      position: absolute;
+      left: -3.5rem;
+    }
+
+    button.carousel__next {
+      position: absolute;
+      right: -3.5rem;
+    }
+
+    button.carousel__prev,
+    button.carousel__next {
+      display: block !important;
+      top: calc(50% - 50px);
+      background: none;
+      border: none;
+      transform: translateY(-50%);
+      transition: .3s;
+      padding: 0;
+      width: 1.75rem;
+
+      &:hover {
+        background: none;
+        opacity: .8;
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
   // Set a min-height inline on the .carousel div
   // inside .carousel-wrapper to account for varying
   // quote lengths and prevent vertical height changes
@@ -822,6 +829,10 @@ form {
 
       &:focus {
         @include focus-outline;
+
+        &:not(:focus-visible) {
+          outline: none;
+        }
       }
     }
   }
@@ -1037,12 +1048,6 @@ section.quote {
   }
 }
 
-// Overrides styles on the
-// display_video_thumbnail partial
-.video_caption_link {
-  @include figcaption;
-}
-
 // Blog post callout
 .blog-post-callout {
 
@@ -1104,6 +1109,16 @@ section.quote {
         background-color: $neutral_dark10;
         color: $neutral_dark;
       }
+
+      // Use this class to hide a tab
+      // - see computer-vision.haml and resources-tabs.js for an example
+      .resources-tabs-hide-tab & {
+        width: 24%;
+      }
+
+      &.hide {
+        display: none;
+      }
     }
   }
 
@@ -1127,6 +1142,7 @@ section.quote {
 
   &.show-tablet-and-mobile {
     height: unset;
+    min-height: unset;
 
     details {
       padding-left: 0;
@@ -1157,21 +1173,25 @@ section.quote {
   }
 }
 
-// Curriculum at a glance section
-// Works with curriculum_glance_section.haml partial
-// See code.org/educate/csp for an example
-.curriculum-glance {
+
+// At a glance sections
+// See code.org/educate/csp and code.org/teach for examples
+.at-a-glance {
   background: $neutral-white;
   border: 1px solid $neutral_dark10;
   border-radius: $border-radius;
-  margin-top: 2rem;
   padding: 1.5rem;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
+  display: grid;
 
-  @media screen and (max-width: $width-md) {
-    grid-template-columns: unset;
-    gap: 1rem;
+  // Used with two ul elements
+  &.two-col {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+
+    @media screen and (max-width: $width-md) {
+      grid-template-columns: unset;
+      gap: 1rem;
+    }
   }
 
   ul {
@@ -1194,6 +1214,48 @@ section.quote {
         @include body-two;
         margin-bottom: 0;
         width: 100%;
+      }
+    }
+  }
+}
+
+// Subscribe form
+// See code.org/csf for an example
+.subscribe-form {
+  background: url("/images/banners/banner-bg-lines-neutral-dark.png") center repeat;
+  background-size: 22%;
+  background-color: $neutral_dark;
+  border-radius: $border-radius;
+  padding: 2rem;
+
+  @media screen and (max-width: $width-md) {
+    gap: 1rem;
+  }
+
+  @media screen and (max-width: $width-sm) {
+    padding: 1rem;
+  }
+
+  .text-wrapper {
+    width: 48%;
+
+    @media screen and (max-width: $width-md) {
+      width: 100%;
+    }
+
+    h2, p {
+      color: $neutral-white;
+    }
+  }
+
+  figure {
+    background: $neutral_light;
+    border-radius: $border-radius;
+    padding: 1rem 0 0;
+
+    @media screen and (max-width: $width-sm) {
+      iframe {
+        height: 500px !important;
       }
     }
   }

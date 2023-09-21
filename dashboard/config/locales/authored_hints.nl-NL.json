@@ -77,6 +77,7 @@
           "2-3_Artist_Functions_4_a": "De kunstenaar moet 120 graden draaien tussen elk vierkant om dit ontwerp te voltooien."
         },
         "2-3 Artist Loops New 11": {
+          "2-3_Artist_Loops_New_11_a": "Onthoud wat de code van de laatste puzzel was:\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">8</title>\n        <statement name=\"DO\">\n          <block type=\"draw_colour\" inline=\"true\">\n            <value name=\"COLOUR\">\n              <block type=\"colour_random\"/>\n            </value>\n            <next>\n              <block type=\"draw_turn_by_constant_dropdown\">\n                <title name=\"DIR\">turnRight</title>\n                <title name=\"VALUE\" config=\"45,60,90,120,180\">45</title>\n                <next>\n                  <block type=\"draw_move_by_constant\">\n                    <title name=\"DIR\">moveForward</title>\n                    <title name=\"VALUE\">50</title>\n                    <next>\n                      <block type=\"draw_turn_by_constant_dropdown\">\n                        <title name=\"DIR\">turnLeft</title>\n                        <title name=\"VALUE\" config=\"45,60,90,120,180\">90</title>\n                        <next>\n                          <block type=\"draw_move_by_constant\">\n                            <title name=\"DIR\">moveForward</title>\n                            <title name=\"VALUE\">50</title>\n                          </block>\n                        </next>\n                      </block>\n                    </next>\n                  </block>\n                </next>\n              </block>\n            </next>\n          </block>\n        </statement>\n      </block>\n    </next>\n  </block>\n</xml>",
           "2-3_Artist_Loops_New_11_b": "Je nieuwe bocht moet komen aan het \\*\\* einde \\*\\* van de code binnen de lus."
         },
         "2-3 Artist Loops New 12": {
@@ -85,7 +86,8 @@
           "2-3_Artist Loops_New_12_c": "De kunstenaar moet maar 60 graden naar rechts om een stompe hoek te maken."
         },
         "2-3 Artist Loops New 13": {
-          "2-3_Artist_Loops_New_13_a": "Aan het eind van iedere diamant kijkt de kunstenaar al de goede kant op om de volgende diamant te starten.\nDaarom hoeven we geen extra 'draai links met' blok toe te voegen voor we weer starten."
+          "2-3_Artist_Loops_New_13_a": "Aan het eind van iedere diamant kijkt de kunstenaar al de goede kant op om de volgende diamant te starten.\nDaarom hoeven we geen extra 'draai links met' blok toe te voegen voor we weer starten.",
+          "2-3_Artist_Loops_New_13_b": "Om elke diamant te maken, moet de kunstenaar:   \n\n-   vooruit gaan\n-   120 graden draaien naar rechts\n-   vooruit gaan\n-   60 graden draaien naar rechts  \n\nDan allemaal opnieuw doen!"
         },
         "2-3 Artist Loops New 9": {
           "2-3_Artist_Loops_New_9_a": "De kunstenaar moet 45 graden naar rechts draaien voordat hij begint te tekenen.",
@@ -112,7 +114,8 @@
         },
         "2-3 Bee Conditionals 14": {
           "2-3_Bee_Conditionals_14_a": "Vind je het lastig om te bedenken hoe je de blokken beneden kunt krijgen? Probeer de rode bloem op precies dezelfde manier te behandelen als de paarse bloem!",
-          "2-3_Bee_Conditionals_14_b": "Als de rode bloem paars zou zijn, kun je dan uitzoeken hoe je een extra 'herhaal-lus' kunt gebruiken om de code korter te maken?"
+          "2-3_Bee_Conditionals_14_b": "Als de rode bloem paars zou zijn, kun je dan uitzoeken hoe je een extra 'herhaal-lus' kunt gebruiken om de code korter te maken?",
+          "2-3_Bee_Conditionals_14_c": "Probeer dit op te delen in twee delen:\n\n![](https://images.code.org/895a52f3febff9edb83979f7861cf67a-image-1469640892331.png)\n\n1.  Verzamel 3 keer nectar\n    -   Beweeg 5 keer vooruit \n    -   Kijk of er nectar is, zo ja: haal het\n    -   Draai linksom\n\n2.  Maak honing\n    -   Beweeg een keer vooruit\n    -   Maak twee honing"
         },
         "2-3 Bee Conditionals 15": {
           "2-3_Bee_Conditionals_15_a": "Denk er aan: Paarse bloemen hebben 0 of 1 nectar en ze kunnen veranderen, iedere keer dat je het programma uitvoert."
@@ -1283,6 +1286,8 @@
           "courseA_playlab_events_challenge2_c": "Je kan een boos monster laten grommen.\n\n<xml>  <block type=\"studio_whenSpriteClicked\">\n\n<title name=\"SPRITE\">5</title>\n<next>\n<block type=\"studio_setSpriteEmotion\">\n<title name=\"SPRITE\">5</title>\n<title name=\"VALUE\">2</title>\n<next>\n<block type=\"studio_saySprite\">\n<title name=\"SPRITE\">5</title>\n<title name=\"TEXT\">Roar!</title>\n<next>\n<block type=\"studio_setSpriteEmotion\">\n<title name=\"SPRITE\">5</title>\n<title name=\"VALUE\">0</title>\n</block>\n</next>\n</block>\n</next>\n</block>\n</next>\n</block></xml>"
         },
         "course2_artist_nestedLoops_challenge1": {
+          "courseD_artist_nestedLoops_challenge1_a": "Begin met het maken van een geneste loop om vier achthoeken te maken. Draai 45 graden om de achthoek te maken. Spring en draai dan na elke stap 90 graden.",
+          "courseD_artist_nestedLoops_challenge1_b": "Voeg code toe om een driehoek in je geneste loop te tekenen. Gebruik bochten van 120 graden voor je driehoek.",
           "courseD_artist_nestedLoops_challenge1_c": "Gebruik een geneste lus:\n\n-   Herhaal 8 keer\n-   teken een achthoek\n-   teken een driehoek\n-   spring 50 pixels voorwaarts\n-   beweeg 90 graden naar rechts"
         },
         "course2_artist_nestedLoops_challenge2": {
@@ -1292,15 +1297,30 @@
         "course2_artist_prog_challenge1": {
           "courseC_artist_prog_challenge1_a": "De rechthoek is 200 pixels breed en 100 pixels hoog."
         },
+        "course2_artist_prog_challenge2": {
+          "courseC_artist_prog_challenge2_a": "Je kan blokken in een 'herhaal' blok stoppen om ze opnieuw en opnieuw te herhalen. Probeer het!"
+        },
         "course2_bee_conditionals_challenge1": {
+          "courseD_bee_conditionals_challenge1_a": "Kun je een pad vinden dat elke bloem en honingraat bereikt zonder bomen te raken? De beste weg is een spiraal.\n\n\\*\\*Je kunt dit oplossen zonder ooit linksom te draaien. \\*\\*",
           "courseD_bee_conditionals_challenge1_b": "In deze puzzle kan elke plek een bloem bevatten, of een honingraat, of niets.  Dat betekent dat je je `als/anders`-blok op elke plek moet herhalen."
         },
+        "course2_bee_conditionals_challenge2": {
+          "courseD_bee_conditionals_challenge1_b": "Net als bij het `als op de bloem` blok, zal de code binnenin een `terwijl nectar > 0` blok alleen uitgevoerd worden als de bij op een bloem is. Het verschil is dat de code in het blok net zolang herhaald wordt tot er geen honing meer is.  Probeer het volgende patroon:\n\n<xml>  <block type=\"bee_whileNectarAmount\">\n    <title name=\"ARG1\">nectarRemaining</title>\n    <title name=\"OP\">&gt;</title>\n    <title name=\"ARG2\">0</title>                    <statement name=\"DO\">\n                      <block type=\"maze_nectar\"/>\n                    </statement>\n  </block></xml>"
+        },
         "course2_collector_loops_challenge2": {
+          "courseC_maze_loops_challenge2_a": "De originele code zou prima werken - als er maar één schatstuk in elke stapel zat!",
           "courseC_maze_loops_challenge2_b": "Gebruik lussen, want anders heb je niet genoeg `verzamel`-blokken!"
+        },
+        "course2_collector_prog_challenge1": {
+          "courseC_collector_prog_challenge1_a": "Je kunt het `verzamel` blok meerdere keren gebruiken om alle extra schatten te verzamelen."
+        },
+        "course2_collector_prog_challenge2": {
+          "courseC_collector_prog_challenge1_a": "Je kunt het `verzamel` blok meerdere keren gebruiken om alle extra schatten te verzamelen."
         },
         "course2_harvester_loops_challenge1": {
           "courseC_harvester_loops_challenge1_a": "Denk er maar zelfs niet aan om hier aan te beginnen zonder lussen!",
-          "courseC_harvester_loops_challenge1_b": "Je kan `beweeg voorwaarts` en `maïs plukken` herhalen zoveel je maar wilt. Gebruik `draai rechts` aan elke hoek."
+          "courseC_harvester_loops_challenge1_b": "Je kan `beweeg voorwaarts` en `maïs plukken` herhalen zoveel je maar wilt. Gebruik `draai rechts` aan elke hoek.",
+          "courseC_harvester_loops_challenge1_c": "De beste manier om de eerste vier mais te verzamelen gebruikt een `herhaal` blok in een ander `herhaal` blok. Je kan dit patroon ook voor de rest van de puzzel gebruiken!\n\n<xml>\n  <block type=\"when_run\" deletable=\"false\" movable=\"false\">\n    <next>\n      <block type=\"controls_repeat\">\n        <title name=\"TIMES\">2</title>\n        <statement name=\"DO\">\n          <block type=\"controls_repeat\">\n            <title name=\"TIMES\">2</title>\n            <statement name=\"DO\">\n              <block type=\"maze_move\">\n                <title name=\"DIR\">moveForward</title>\n                <next>\n                  <block type=\"harvester_corn\"/>\n                </next>\n              </block>\n            </statement>\n            <next>\n              <block type=\"maze_turn\">\n                <title name=\"DIR\">turnRight</title>\n              </block>\n            </next>\n          </block>\n        </statement>\n        </block></next></block></xml>"
         },
         "course2_harvester_loops_challenge2": {
           "courseC_harvester_loops_challenge2_a": "Je zou deze puzzle kunnen oplossen met een zigzag-patroon.  Maar je kunt hem ook oplossen met een spiraalvormige route!  Dit soort puzzles heeft een heleboel verschillende oplossingen.  Houd vol!",
@@ -1308,7 +1328,13 @@
           "courseC_harvester_loops_challenge2_c": "Door dit zigzag-patroon te herhalen kun je de puzzle oplossen met slechts 20 blokken!\n\n![](<https://images.code.org/26cfaf6fe4a275e266b51e9ef3711171-image-1493502306380.18.52 PM copy.png>)",
           "courseC_harvester_loops_challenge2_d": "Deze spiraal route kun je programmeren met slechts 18 blokken!!\n\n![](<https://images.code.org/0bfc0a0ed6783fae908368a6e6d12c02-image-1493501358990.18.52 PM.png>)"
         },
+        "course2_maze_loops_challenge1": {
+          "courseC_maze_loops_challenge1_a": "Bedenk dit pad als drie verschillende stukken. Elk heeft een patroon dat je kunt herhalen.",
+          "courseC_maze_loops_challenge1_b": "Tussen elk `herhaal` blok moet je `draai linksom` of `draai rechtsom` gebruiken om Scrat klaar te maken voor het volgende patroon.",
+          "courseC_maze_loops_challenge1_c": "Als je zover komt, hoef je alleen maar `draai linksom` te gebruiken en dan een paar keer `ga vooruit`. Geef niet op! \n\n![](<https://images.code.org/7696c5c16b8ddf1d53436cdc7fb6346d-image-1494101728016.14.34 PM.png>)"
+        },
         "course2_maze_programming_challenge2": {
+          "courseC_maze_programming_challenge2_a": "\\_Als je me achteruit stuurt, wees dan extra voorzichtig dat ik de juiste kant op ga! \\_",
           "courseC_maze_programming_challenge2_b": "De kortste oplossing gebruikt enkel 5 blokken, gebruik makende van de `herhaal` blok!"
         },
         "course3_artist_functions_challenge2": {

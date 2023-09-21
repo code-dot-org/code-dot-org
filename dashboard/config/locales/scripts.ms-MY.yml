@@ -2225,6 +2225,8 @@ ms:
           student_description: Cuba asas sains komputer dengan watak daripada Angry
             Birds, Tumbuhan lwn. Zombi dan Scrat daripada Ice Age!
           title: Pagar Sesat Klasik
+        how-ai-works-2023:
+          title: Cara AI Berfungsi
         iceage:
           name: zaman ais
         infinity:
@@ -2304,6 +2306,11 @@ ms:
               display_name: Acara-acara
             lessonGroup-7:
               display_name: Akhir Projek Kursus
+            lessonGroup-8:
+              display_name: Data
+          lessons:
+            lesson-1:
+              name: Data
         nevada-standards-aligned-fourth-grade-2023:
           description_audience: 'Umur: 8-12 tahun'
           lesson_groups:
@@ -2342,6 +2349,11 @@ ms:
               display_name: Acara-acara
             lessonGroup-6:
               display_name: Data
+            lessonGroup-8:
+              display_name: Sistem Pengkomputeran
+          lessons:
+            lesson-1:
+              name: Sistem Pengkomputeran
         nevada-standards-aligned-third-grade-2023:
           description_audience: 'Umur: 7-11 tahun'
           description_short: Pelajari tentang pernyataan bersyarat. Cipta seni, permainan

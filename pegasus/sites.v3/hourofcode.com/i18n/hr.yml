@@ -181,6 +181,8 @@ hr:
   grade_level_label_elementary: Osnovna škola
   grade_level_label_middle: Srednja škola
   grade_level_label_high: Srednja škola
+  students_label: Učenici
+  teachers_label: Učitelji
   teacher_label_csf: Nastavnik Osnova računarstva
   teacher_label_csd: CS Otkrića Učitelj
   teacher_label_csp: Nastavnik Principa računarstva
@@ -194,7 +196,9 @@ hr:
   call_to_action_explore_unit: Istražite jedinicu
   call_to_action_explore_curriculum: Istražite kurikulum
   call_to_action_explore_curriculum_options: Istražite opcije kurikuluma
+  call_to_action_explore_lessons: Istražite lekcije
   call_to_action_explore_modules: Istražite module
+  call_to_action_explore_module: Istražite modul
   call_to_action_explore_workshops: Istražite radionice
   call_to_action_explore_course: Istražite tečaj
   call_to_action_explore_courses: Istražite tečajeve
@@ -242,8 +246,12 @@ hr:
   call_to_action_see_module_details: Pogledajte detalje modula
   call_to_action_start_modules: Započnite module
   call_to_action_see_course_details: Pogledajte detalje kursa
+  call_to_action_see_lesson_details: Pogledajte pojedinosti o lekciji
   call_to_action_learn_about_approach: Saznajte više o našem pristupu
   call_to_action_try_java_lab: Isprobajte Java Lab
+  call_to_action_notify_available: Obavijesti me kada je dostupno
+  call_to_action_register_early_access: Registrirajte se za rani pristup
+  call_to_action_open_positions: Prikaz otvorenih pozicija
   aria_label_call_to_action_afe: Saznajte više o Amazon Future Engineer
   aria_label_call_to_action_teaching_csf: Pokrenite program stručnog učenja Osnove
     računalnih znanosti
@@ -313,6 +321,23 @@ hr:
   aria_label_call_to_action_csf_course_d: Pogledajte detalje tečaja D
   aria_label_call_to_action_csf_course_e: Pogledajte detalje tečaja E
   aria_label_call_to_action_csf_course_f: Pogledajte detalje tečaja F
+  aria_label_call_to_action_ai_pl_101_videos: Pogledajte videozapise AI 101 za nastavnike
+  aria_label_call_to_action_ai_teaching_module: Istražite modul za podučavanje umjetne
+    inteligencije i strojnog učenja
+  aria_label_call_to_action_how_ai_works_lesson_01: Pogledajte detalje lekcije Uvod
+    u strojno učenje
+  aria_label_call_to_action_how_ai_works_lesson_02: Pogledajte pojedinosti o lekciji
+    Computer Vision
+  aria_label_call_to_action_how_ai_works_lesson_03: Pogledajte detalje lekcije neuronskih
+    mreža
+  aria_label_call_to_action_how_ai_works_lesson_04: Pogledajte detalje lekcije Chatbots
+    i velikih jezičnih modela
+  aria_label_call_to_action_how_ai_works_lesson_05: Pogledajte detalje lekcije o generativnim
+    slikama
+  aria_label_call_to_action_how_ai_works_lesson_06: Pogledajte detalje lekcije o algoritamskoj
+    pristranosti
+  aria_label_call_to_action_how_ai_works_lesson_07: Pogledajte detalje naše lekcije
+    o etičkom kodeksu AI
   video_title_professional_learning_program: Program profesionalnog učenja Code.org
   curriculum_name_csf: Osnove računalnih znanosti
   curriculum_name_csf_02: Bilo koji CS osnove (tečaj A-F)
@@ -423,6 +448,10 @@ hr:
   module_label_student_tool: Alat za učenike
   module_label_student_product: Proizvod
   module_label_student_content_resources: Sadržaj i resursi
+  module_label_new: Novi
+  module_label_coming_soon: Dolazi uskoro
+  module_label_video_series: Video serija
+  module_label_self_paced: Modul s vlastitim tempom
   module_ages_5_10: 5-10
   module_ages_11_18: 11-18
   module_ages_7_18: 7-18
@@ -445,9 +474,13 @@ hr:
   module_grade_9_12_teachers: 9-12 Nastavnici
   module_level_beginner: Početnik
   module_level_intermediate: Srednji
+  module_duration_45_mins: 45 minuta
+  module_duration_1_hr: 1 sat
   module_duration_2_hrs: 2 sata
   module_duration_3_hrs: 3 sata
+  module_duration_5_hrs: 5 sati
   module_duration_8_hrs: 8 sati
+  module_duration_20_hrs: 20 sati
   module_duration_35_hrs: 35 sati
   module_duration_lesson: Lekcija
   module_duration_week: Tjedan
@@ -523,6 +556,7 @@ hr:
   heading_no_devices: Bez uređaja? Imamo rješenje za to
   heading_java_lab: Java Lab
   heading_objects_first: Prvo predmeti
+  heading_these_lessons_will: 'Ove lekcije će:'
   professional_learning_section_desc: Dobijte podršku koja vam je potrebna dok se
     pripremate za podučavanje. Nastavnici je vole, a više od 90% je smatra najboljim
     profesionalnim razvojem ikad!
@@ -652,6 +686,11 @@ hr:
   ai_curriculum_grades_03: 'Razine razreda: 3-12'
   ai_curriculum_duration_03: 'Trajanje: 1 sat'
   ai_curriculum_btn_aria_label_03: Isprobajte aktivnost AI za Oceane
+  ai_curriculum_title_04: Kako funkcionira AI
+  ai_curriculum_desc_04: Ove lekcije nadopunjuju video seriju Kako AI radi. Svaka
+    lekcija uparena je s jednim videozapisom iz serije, dublje u koncepte uvedene
+    u videozapise.
+  ai_curriculum_btn_aria_label_04: Istražite kako AI radi lekcije
   ai_carousel_heading: 'Što učitelji kažu o AI s Code.org:'
   ai_carousel_quote_01: Ova lekcija također je dala mojim učenicima priliku vidjeti
     da postoji element mišljenja u klasifikacijskim sustavima. Kasnije, kad smo počeli
@@ -669,6 +708,10 @@ hr:
   ai_pl_list_04: Razmotrite stvarne implikacije umjetne inteligencije i strojnog učenja.
   ai_pl_list_05: Istražite projekte na kraju poglavlja.
   ai_pl_duration: 'Trajanje: 2 sata'
+  ai_pl_title: Podučavanje AI i strojnog učenja
+  ai_pl_desc: Uvod u umjetnu inteligenciju i strojno učenje. Trenirajte model strojnog
+    učenja koristeći AI Lab. i uključite se u aplikacije za strojno učenje. Razmotrite
+    stvarne implikacije umjetne inteligencije i strojnog učenja.
   ai_video_series_title: Kako funkcionira AI
   ai_video_series_desc: Uvodom izvršnog direktora Microsofta Satya Nadella, ova serija
     kratkih videozapisa upoznat će vas s načinom rada umjetne inteligencije i zašto
@@ -694,6 +737,7 @@ hr:
   ai_pl_101_hero_heading: AI 101 za nastavnike
   ai_pl_101_hero_desc: Otkrijte transformativni potencijal umjetne inteligencije (AI)
     u obrazovanju pomoću naše besplatne internetske serije lekcija za nastavnike.
+  ai_pl_101_hero_desc_02: Sveobuhvatna serija online učenja za nastavnike.
   ai_pl_101_hero_presented: Predstavio
   ai_pl_101_intro_heading: Što je AI 101 za nastavnike?
   ai_pl_101_intro_text: AI 101 za nastavnike je besplatna, temeljna serija profesionalnog
@@ -735,6 +779,93 @@ hr:
     modela bodovanja i umjetne inteligencije, pomažući nastavnicima u pružanju učestalih
     povratnih informacija i formativnoj procjeni tijekom iskustva pisanja.'
   ai_pl_101_explore__button_4: Istražite alat
+  ai_pl_101_video_title_1: Razgovarajte s kaminom sa Sal Khanom i Hadi Partovijem
+  ai_pl_101_video_desc_1: Pridružite se Sal Khanu (Khan Academy) i Hadi Partovi (Code.org)
+    za razgovor uz kamin o prihvaćanju umjetne inteligencije u učionici. Očekujte
+    živahnu raspravu koja uključuje neke od najkontroverznijih tema oko AI danas.
+  ai_pl_101_video_title_2: Demistificiranje umjetne inteligencije za nastavnike
+  ai_pl_101_video_desc_2: Uvod u osnove umjetne inteligencije koja će vas opremiti
+    temeljnim znanjem kako biste razumjeli duboki utjecaj umjetne inteligencije u
+    našem društvu i njegovu sve veću važnost za područje obrazovanja. Dobit ćete praktične
+    uvide u iskorištavanje umjetne inteligencije za zadatke u učionici i uštedu vremena
+    na administrativnim zadacima.
+  ai_pl_101_video_title_3: Transformacija učenja s AI
+  ai_pl_101_video_desc_3: Istražite raskrižje umjetne inteligencije i obrazovanja.
+    Ova sesija istražuje kako se AI može kombinirati s pedagogijom kako bi se poboljšalo
+    učenje učenika. Obavezno je prisustvovati nastavnicima koji žele iskoristiti AI
+    kako bi transformirali svoje nastavne prakse kako bi obogatili iskustva učenja
+    svojih učenika.
+  ai_pl_101_video_title_4: Osiguravanje odgovornog pristupa umjetnoj inteligenci
+  ai_pl_101_video_desc_4: Istražite etička razmatranja i najbolje prakse za uključivanje
+    umjetne inteligencije u obrazovna okruženja. Ova sesija pružit će konkretne strategije,
+    resurse i primjere iz stvarnog svijeta, a sve usmjerene na razumijevanje potencijalnih
+    pristranosti AI i etičkih razmatranja koja dolaze s njom.
+  ai_pl_101_video_title_5: Dovođenje AI u učionicu
+  ai_pl_101_video_desc_5: Ova se sesija fokusira na podučavanje o AI, vrednovanje
+    i korištenje obrazovnih alata AI i iskorištavanje AI za procjenu učenika. Uz bogatu
+    mješavinu teorije, praktičnih primjera i resursa, cilj je osnažiti nastavnike
+    da se kreću kroz AI krajolik i poboljšaju iskustva učenja učenika.
+  ai_pl_101_video_desc_6: 'Saznajte više o novoj tehnologiji koja pokreće velike promjene
+    u AI, koja sadrži dva nova videozapisa na velikim jezičnim modelima (poput ChatGPT-a)
+    i Generativnoj umjetnoj inteligenciji. Poslušajte kako ove nove tehnologije djeluju
+    izravno od stručnjaka: Mira Murati, CTO OpenAI, i Cristóbal Valenzuela, izvršni
+    direktor RunwayML-a.'
+  how_ai_works_hero_heading: Kako funkcionira AI
+  how_ai_works_hero_desc: Uronite u svijet umjetne inteligencije s "Kako AI funkcionira",
+    našom video serijom i popratnim lekcijama!
+  how_ai_works_intro_desc: Ova serija kratkih videozapisa i pratećih lekcija u učionici
+    upoznat će vas i vaše učenike s načinom rada umjetne inteligencije i zašto je
+    to važno. Možete odabrati pojedinačne lekcije na temelju teme, istražiti cijeli
+    niz tema u jednom razredu ili naučiti svih 7 lekcija kako biste dali dublji zaron.
+  how_ai_works_intro_list_01: Upoznati vas s umjetnom inteligencijom i strojnim učenjem
+  how_ai_works_intro_list_02: Uronite u to kako funkcionira generativni AI, uključujući
+    velike jezične modele (LLM) i generiranje slika
+  how_ai_works_intro_list_03: Istražite pristranost, etiku, privatnost i odgovorno
+    korištenje umjetne inteligencije
+  how_ai_works_intro_list_04: Dodirnite aplikacije umjetne inteligencije iz stvarnog
+    svijeta, uključujući računalni vid
+  how_ai_works_lessons_heading: Lekcije umjetne inteligencije za vaš razred
+  how_ai_works_lesson_title_01: Uvod u strojno učenje
+  how_ai_works_lesson_desc_01: Saznajte više o obliku umjetne inteligencije koji se
+    naziva strojno učenje i kako mogu koristiti postupak rješavanja problema kako
+    bi pomogli osposobljavanju robota za rješavanje problema. Sudjelujte u aktivnostima
+    strojnog učenja gdje robot uči kako otkriti obrasce u ribi.
+  how_ai_works_lesson_title_02: Računalni vid
+  how_ai_works_lesson_desc_02: Saznajte kako funkcionira računalni vid. Pogledajte
+    videozapis koji objašnjava računalni vid i kako računalo "vidi". Zatim dizajnirajte
+    algoritam koji koristi mrežu kako bi odlučio koji broj prikazuje zaslon od sedam
+    segmenta i testirajte ga.
+  how_ai_works_lesson_title_03: Neuronske mreže
+  how_ai_works_lesson_desc_03: Saznajte kako funkcioniraju neuronske mreže. Upotrijebite
+    widgete za istraživanje neuronskih mreža u rukama na putu. Pogledajte videozapis
+    koji objašnjava neuronske mreže. Konačno raspravljati o potrebi za različitim
+    perspektivama pri izradi sustava preporuka.
+  how_ai_works_lesson_title_04: Chatbots i veliki jezični modeli
+  how_ai_works_lesson_desc_04: Saznajte što je model velikog jezika (LLM) i kako funkcionira,
+    a zatim upotrijebite LLM da biste zajedno stvorili tekst s umjetnom inteligencijom.
+    Konačno, raspravite o tome jesu li LLM-ovi inteligentni ili kreativni.
+  how_ai_works_lesson_title_05: Generativne slike
+  how_ai_works_lesson_desc_05: Saznajte kako AI može generirati slike, a zatim istražite
+    difuzijski AI widget i raspravite jesu li ti modeli kreativni ili ne.
+  how_ai_works_lesson_title_06: Algoritamska pristranost
+  how_ai_works_lesson_desc_06: Vježbajte obrezivanje slika kako biste otkrili pristranost
+    koja se temelji na algoritmu obrezivanja Twittera, a zatim pročitajte i gledajte
+    videozapis o otkriću ovog pristranog algoritma. Konačno, raspravite o načinima
+    prepoznavanja i smanjenja pristranosti u algoritmima.
+  how_ai_works_lesson_title_07: Naš Etički kodeks AI
+  how_ai_works_lesson_desc_07: Provesti istraživanje koristeći članke i videozapise
+    koji izlažu etičke zamke u području umjetne inteligencije po svom izboru. Sastavite
+    resurs "Naš AI etički kodeks" za kreatore i zakonodavce AI svugdje.
+  how_ai_works_lessons_in_a_day_title: Kako AI radi u jednom danu
+  how_ai_works_lessons_in_a_day_desc: Imate samo jedan dan? Postoji i mogućnost uvođenja
+    cijele serije studentima u jednom danu. Savršeno za svakog nastavnika iz područja
+    predmeta koji žele upoznati studente s umjetnom inteligencijom ili čak kao lekciju
+    za gostujućeg učitelja.
+  how_ai_works_lessons_in_a_day_desc_02: Uvesti sve videozapise "Kako AI radi" u jednom
+    danu. Studenti prate svaki videozapis podudaranjem vokabulara iz videozapisa,
+    a zatim odgovarajući na pitanje razmišljanja o svakom videozapisu.
+  how_ai_works_resources_desc: Zainteresirani ste da saznate više o AI? Evo nekoliko
+    dodatnih resursa koji vam mogu pomoći proširiti učenje vas i vaših učenika.
   ai_vid_intro_caption: Predstavljamo kako funkcionira AI
   ai_vid_chatbots_caption: Kako funkcioniraju chatbotovi i veliki jezični modeli
   ai_vid_creativity_caption: Ima li AI kreativnost i maštu?
@@ -1064,10 +1195,10 @@ hr:
   teach_page_additional_materials_list_heading_03: Posteri u učionici
   teach_page_additional_materials_list_desc_03: Ispišite ove plakate različitih uzora
     kako biste se objesili u vašoj školi i potaknuli svoje učenike da isprobaju informatiku.
-  csp_page_top_desc: Free set of elementary curricula that introduces students to
-    the foundational concepts of computer science and challenges them to explore how
-    computing and technology can impact the world. Can be taught as an introductory
-    class and as an AP course.
+  csp_page_top_desc: Free year-long curriculum that introduces students to the foundational
+    concepts of computer science and challenges them to explore how computing and
+    technology can impact the world. Can be taught as an introductory class and as
+    an AP course.
   csp_page_intro_heading: Free, AP® CSP endorsed, high school introductory course
   csp_page_intro_list_01: Culturally responsive pedagogy
   csp_page_intro_list_02: Real-world problem investigation
@@ -1627,6 +1758,7 @@ hr:
   not_found_desc: Tražena stranica nije pronađena
   not_found_instructions: Provjerite mrežnu adresu i pokuštajte ponovno ili odaberite
     poveznicu s popisa u nastavku.
+  company_code_dot_org: Code.org
   company_4-H: 4-H Razvoj mladih
   company_asa: Afterschool Savez
   company_asos: ASOS
@@ -1679,6 +1811,7 @@ hr:
   company_evsd: Školska četvrt Istočne doline
   company_eastonvilleschooldistrict: Školska četvrt Eatonville
   company_enumclawschooldistrict: Školska četvrt Ehumclaw
+  company_ets: ETS
   company_everettsd: Everette javne škole
   company_fsusd: Jedinstvena školska četvrt Fairfield-Suisun
   company_fayettecountypublicschools: Javne škole okruga Fayette
@@ -1700,6 +1833,7 @@ hr:
   company_houstonisd: Nezavisni školski okrug Houston
   company_hcpss: Javne škole okruga Howard
   company_idla: Idaho digitalno učenje akademija
+  company_iste: ISTE
   company_janesvilleschooldistrict: Školska četvrt Janesville
   company_johnstoncountyschools: Škole okruga Johnston
   company_lps: Lincoln Public School
@@ -11677,8 +11811,9 @@ hr:
   tutorial_ai4alldance_string_platforms: Svi moderni preglednici
   tutorial_ai4allneural_string_platforms: Svi moderni preglednici
   tutorial_spheroinout_string_platforms: Unplugged
-  tutorial_edisonblueprint_string_platforms: Svi moderni preglednici
-  tutorial_edisonmaze_string_platforms: Svi moderni preglednici
+  tutorial_edisonblueprint_string_platforms: Svi moderni preglednici, Android tablet,
+    iPad
+  tutorial_edisonmaze_string_platforms: Svi moderni preglednici, Android tablet, iPad
   tutorial_milnefunctions_string_platforms: novi micro:bit sa zvukom (ili simulator
     u MakeCodeu) Uređivač MakeCode ili Python baterije (prema potrebi)
   tutorial_sasmap_string_platforms: Svi moderni preglednici, iPad, Čitač zaslona
@@ -12936,6 +13071,118 @@ hr:
   accessibility_card_text_10: Prilagodba kurikuluma Code.org za naprednu nastavu Principa
     računarstva pomoću Quoruma, jezika temeljenog na dokazima koji je izvorno osmišljen
     kako bi osigurao pristupačnost slijepim ili slabovidnim učenicima.
+  engineering_hero_heading: Pridružite se našem inženjerskom timu!
+  engineering_hero_desc: Dok nastavljamo širiti naš inženjerski tim, željeli smo podijeliti
+    više o našoj inženjerskoj organizaciji na Code.org i nekim jedinstvenim aspektima
+    rada ovdje. Ako ste zainteresirani za prijavu za jednu od naših uloga, voljeli
+    bismo čuti od vas!
+  engineering_team_title: Upoznajte inženjerski tim na Code.org
+  engineering_team_card_text_1: Ovo je (većina) nas na našem osobnom okupljaju tijekom
+    ljeta 2023! Ova publika podijeljena je u četiri podtima unutar našeg inženjerskog
+    tima koji zajedno rade na izgradnji i opsluživanju platforme za sve naše učenike
+    i nastavnike.
+  engineering_team_card_text_2: Ako ste zainteresirani za prijavu za jednu od naših
+    uloga, voljeli bismo čuti od vas! Popis otvorenih pozicija možete pronaći na našoj
+    stranici Karijera.
+  engineering_our_team_title: Naš inženjerski tim
+  engineering_our_team_desc: 'Inženjerski tim na Code.org podijeljen je u četiri pod-tima
+    koji grade i podržavaju različita područja naše platforme:'
+  engineering_our_team_sub_title_1: Tim za učenje učenika
+  engineering_our_team_text_1: Naš tim za učenje učenika posjeduje sve naše aktivnosti
+    (nazivamo ih laboratorijima) koje naši učenici koriste svaki dan. Ovaj tim uglavnom
+    radi na front-end tehnologiji (koristimo React i puno prilagođenih JS) i imamo
+    odličan radni odnos s mnogim partnerima i projektima otvorenog koda. Na primjer,
+    koristimo [Google's Blockly] (%{youtube_url}) za sve naše programiranje temeljeno
+    na blokovima. Podržavamo učenike u njihovom putovanju učenja sve od vrtića do
+    12. razreda.
+  engineering_our_team_sub_title_2: Tim za iskustvo učitelja
+  engineering_our_team_text_2: Naš tim za iskustvo učitelja gradi alate koji privlače
+    nove učitelje na Code.org (ove proizvode za stjecanje nazivamo) i razvija platformu
+    koja omogućuje našim postojećim nastavnicima da podučavaju naš kurikulum (naši
+    alati za učitelje). Kao i kod naših studentskih alata, oslanjamo se na React kako
+    bismo izgradili naš prednji dio, a komponente na strani poslužitelja poslužuju
+    se pomoću Ruby on Rails.
+  engineering_our_team_sub_title_3: Platforma tim
+  engineering_our_team_text_3: Naš tim platforme posjeduje osnovne komponente koje
+    služe potrebama naših studentskih i nastavničkih timova (na primjer, provjera
+    autentičnosti i korisničkog profila), a također ima misiju doprijeti do učenika
+    do kojih još ne možemo doći. To uključuje izgradnju integracija koje nas povezuju
+    sa školama koje koriste različite sisteme upravljanja učenjem (LMS) i pakiraju
+    naš kurikulum kako bi se mogao koristiti u udaljenim školama koje nemaju pristup
+    pouzdanom internetu.
+  engineering_our_team_sub_title_4: Infrastrukturni tim
+  engineering_our_team_text_4: Naš infrastrukturni tim pruža okosnicu platforme koja
+    podržava naše učenike i nastavnike. To uključuje našu hosting infrastrukturu i
+    povezane usluge (koristimo AWS), upravljanje podacima, sigurnosne programe, usluge
+    razvojnih programera i implementacije i još mnogo toga. Ovaj tim također posjeduje
+    naše sustave za skaliranje i rezerviranje, koji su kritični tijekom Sata kodiranja,
+    gdje pozivamo svakog učenika na svijetu da završi sat vremena kodiranja s nama.
+  engineering_faq_question_1: Što radi Code.org?
+  engineering_faq_answer_1_a: Code.org je neprofitna organizacija za inovacije u obrazovanju
+    posvećena viziji da svaki učenik u svakoj školi ima priliku učiti informatiku
+    kao dio svog osnovnog K-12 obrazovanja.
+  engineering_faq_answer_1_b: Proširujemo pristup računalnim znanostima u školama,
+    s naglaskom na povećanje sudjelovanja mladih žena i učenika iz drugih nedovoljno
+    zastupljenih skupina. Vodeći pružatelj K-12 nastavnog plana i programa informatike
+    u najvećim školskim okruzima u Sjedinjenim Državama, Code.org također organizira
+    godišnju kampanju Hour of Code, koja je angažirala više od 15% svih učenika u
+    svijetu.
+  engineering_faq_answer_1_c: Code.org podržavaju velikodušni donatori, uključujući
+    Microsoft, Amazon, Google i mnoge druge.
+  engineering_faq_question_2: Što je Code.org iskustvo i alat za razvojne programere?
+  engineering_faq_answer_2: Naše iskustvo programera može se razlikovati od onoga
+    što ste vidjeli u svojim prošlim ulogama. Usko surađujući s našim proizvodnim
+    timom, isporučujemo se u proizvodnju svaki radni dan i imamo razne kadence - ponekad
+    pišete kod koji ide uživo tog dana; drugi puta ste na dugoročnim projektima -
+    i dok pratimo dvotjedni sprintovi, to činimo na lagan način. Mi indeks prema uzimajući
+    prave stvari učinio na pravi način vs uzimajući puristički pogled na bilo koju
+    određenu metodologiju. [Sav naš kod] (%{code_url}) je open source i koristimo
+    JIRA i GitHub zahtjeve za povlačenje kako bismo pratili sve naše radne stavke.
+    Također nam je stalo do kvalitete i testiranja i imamo sreću da imamo nevjerojatnu
+    podršku od [SauceLabs](%{saucelabs_url}), koji nam pomažu pokrenuti naš paket
+    korisničkih testova na raznim studentskim uređajima (npr. iPadi) u njihovoj farmi
+    oblačnih uređaja.
+  engineering_faq_question_3: Što je rotacija inženjera na poziv na Code.org?
+  engineering_faq_answer_3: Naš 30+ inženjerski tim dijeli odgovornosti na poziv.
+    Svaki inženjer pokriva 24-satnu smjenu i koristi naše staze eskalacije i knjige
+    za reprodukciju kako bi odgovorio na prekide web mjesta ili druge probleme uživo.
+    Ponosni smo na pouzdanost naše web stranice - u prosjeku se svaki inženjer budi
+    samo jednom godišnje zbog problema koji se obično brzo rješavaju. Umjesto toga,
+    "Razvojni programer dana" obično provodi dio svog radnog dana upravljajući proizvodnjom
+    i pokušavajući manje hitne probleme.
+  engineering_faq_question_4: Jeste li daljinski prihvatljivi/WFH organizacija?
+  engineering_faq_answer_4_a: Da! 2019. godine, neposredno prije pandemije, Code.org
+    je postao organizacija na daljinu. Danas imamo inženjere u svakoj američkoj vremenskoj
+    zoni i u skladu s tim prilagodimo radno vrijeme. Većina naših sastanaka događa
+    se između 10 i 15 sati PT.
+  engineering_faq_answer_4_b: Također prepoznajemo vrijednost osobnog vremena i svakog
+    tromjesečja osobno se okupljamo, obično u Seattleu. Dva od tih događaja (zovemo
+    ih Kick-off week i "Codechella") okupljaju sve u organizaciji u siječnju i lipnju
+    - a inženjerski i proizvodni timovi sastaju se odvojeno u travnju i listopadu.
+  engineering_faq_answer_4_c: Čvrsto vjerujemo u provođenje vremena s našim učenicima
+    i nastavnicima, tako da mnogi od tih osobnih događaja uključuju izlete u škole
+    i učionice kako bi prikupili povratne informacije ili testirali naše proizvode
+  engineering_faq_question_5: Što čini inženjerski tim na Code.org jedinstvenim?
+  engineering_faq_answer_5_a: 'Osim rješavanja izazovnih tehničkih problema, imamo
+    nekoliko stvari koje čine naš inženjerski org drugačijim od drugih u kojima ste
+    možda radili:'
+  engineering_faq_answer_5_b_1: Svi dijelimo strast prema našoj misiji.
+  engineering_faq_answer_5_b_2: Svatko od nas je ovdje kako bi podržao misiju proširenja
+    pristupa računalnim znanostima za svakog studenta širom svijeta. Svi imamo svoju
+    jedinstvenu priču i perspektivu o tome što nas vodi ka ovoj misiji.
+  engineering_faq_answer_5_c_1: Duboko nam je stalo jedno do drugog.
+  engineering_faq_answer_5_c_2: Kada se inženjeri bore s problemom, uđemo i pomažemo.
+    Jedan od naših principa je da smo teški prema problemima, ali ljubazni jedni prema
+    drugima. Redovito promoviramo inženjere, ali ne propisujemo pretjerano dizajnirana
+    rješenja samo da bismo podržali nečiji put promocije. Umjesto toga, ulažemo u
+    naše inženjere s izdašnim proračunom za profesionalni razvoj i pristupom drugim
+    mogućnostima učenja.
+  engineering_faq_answer_5_d_1: Naporno radimo, ali postavljamo jasne granice.
+  engineering_faq_answer_5_d_2: Dok podržavamo studente širom svijeta, smatramo se
+    odgovornim za jasne granice između posla i kućnog života. Uživamo u ne-sastancima
+    srijedom, uzimajući naš PTO (ukupno 5 tjedana, što uključuje zatvaranje ureda
+    za 2 tjedna na kraju godine aka Winter Break), poluradni dan petkom tijekom ljeta
+    ili ljetnih petaka i druge velikodušne pogodnosti.
   language_code:
     ar: arapski
     az: Azerbejdžanski

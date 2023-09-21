@@ -53,7 +53,7 @@ Nje lloj i aktivitetit te cilin do ta mundesojme per mesuesit me eksperience jan
 
 Disa mesues mund te preferojne te mbajne aktivitetet e Ores se Kodimit duke ndjekur nje format leksioni tradiconal, ndryshe nga nje pazell udhezues ose eksperience loje.
 
-You can start with this [template](https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8axKIzv8YI56JGA) for your lesson plan.
+Ju mund të filloni me këtë model [](https://docs.google.com/document/d/1DhaLNd6uim9rRPkHrglnOvVcgzGc8axKIzv8YI56JGA) për planin tuaj të mësimit.
 
 **Aktivitete per mesuesit ne fusha dhe lende tjera**
 
@@ -64,7 +64,7 @@ Shembuj:
 - Imazhe pasqyre (nje aktivitet per nje mesues arti)
 - Nje aktivitet per nje mesues fizike
 - Nje histori per aktivitetin e teknologjise per nje mesues historie
-- And see [this list](https://docs.google.com/document/d/19jQ2VhBUyIn30VFbfdHOVpmlymhNiB0AkEqRxHz3dr0/edit) for more ideas from educators (or add your own to the list to inspire others)
+- Dhe shihni [kjo listë](https://docs.google.com/document/d/19jQ2VhBUyIn30VFbfdHOVpmlymhNiB0AkEqRxHz3dr0/edit) për më shumë ide nga edukatorët (ose shtoni tuajat në listë për të frymëzuar të tjerët)
 
 **Per nxenesit me nevoja te veqanta**
 
@@ -103,16 +103,17 @@ Vizitoni [faqen e Dorzimit të Aktivitetit të Orës së Kodimit™](https://goo
 * Emri dhe mbiemri i kontaktit primar ne aktivitetin e derguar
 * Emrin e aktivitetit (Nuk mund te perfshije "Ora e Kodit" ne emer)
 * Linku URL për tek aktiviteti
+* A përfshin ky aktivitet AI: Po ose Jo
 * Nje pershkrim per aktivitetin (maksimumi i karaktereve: 400) 
     * Ju lutemi të përfshini në përshkrimin nëse kjo është kryesisht udhëzues drejtuar për nxënësit ose lehtësim për mësues. Përveç kësaj, disa shkolla janë të interesuara të dinë nëse aktivitetet e Orës së Kodimit janë të adresuara si një trung i përbashkët ose Gjenerata Tjetër e Standarteve të Shkencës. Nëse aktiviteti i drejtohet standardeve specifike, e konsiderojeni duke e përfshirë edhe këtë informacion.
-* Niveli klasor i rekomanduar per perdoruesit You may refer to the \[Computer Science Teachers’ Association’s K-12 Standards\] (https://k12cs.org/framework-statements-by-grade-band/) for grade-appropriate computer science concepts. Shembujt per nivelet klasore perfshijne: 
+* Niveli klasor i rekomanduar per perdoruesit Ju mund t'i referoheni \[Standardeve K-12 të Shoqatës së Mësuesve të Shkencave Kompjuterike\] (https://k12cs.org/framework-statements-by-grade-band/) për konceptet e shkencave kompjuterike të përshtatshme për klasën. Shembujt per nivelet klasore perfshijne: 
     * Parashkollor - Klasa 1 (mosha 4-6)
     * Klasat 2-5 (moshat 7-10)
     * Klasat 6-8 (mosha 11-13)
     * Klasat 9+ (Mosha 14+)
-* Nje liste e lendeve te cilat aktiviteti juaj i mbulon (me shkencat kompjuterike si pjese e tyre) Per shembull, nese nje mesues matematike mund te perdor aktivitetin tuaj qe te mesoj per kendet ose parabolat, listoje si matematike. Nese keni nje aktivitet gjuhesore i cili i meson nxnenesit per foljet/emrat etj. zgjedhni artet gjuhesore.
-* Nje liste te gjuheve programuese te cilat mesohen ne aktivitetin tuaj. p.sh C/C++, Java, Javascript etj. ose te varura nga gjuha (per plane mesimore qe mund te mesohen ne gjuhe te ndryshme)
-* Nje liste e gjuheve natyrale te mbeshtetura. Shënim: Gjuha-zbuluese është punë e aprovuesit të tutorialit, ne do të përcjellim të gjithë përdoruesit në një URL të vetme të aprovuar.
+* Nje liste te gjuheve programuese te cilat mesohen ne aktivitetin tuaj. p.sh C/C++, Java, Javascript etj. ose te varura nga gjuha (per plane mesimore qe mund te mesohen ne gjuhe te ndryshme) zgjedhni artet gjuhesore.
+* Nje liste e gjuheve natyrale te mbeshtetura. Shënim: Gjuha-zbuluese është punë e aprovuesit të tutorialit, ne do të përcjellim të gjithë përdoruesit në një URL të vetme të aprovuar. ose te varura nga gjuha (per plane mesimore qe mund te mesohen ne gjuhe te ndryshme)
+* Cfar niveli te eksperiences duhet te kete nje edukator ne menyre qe te perdor aktivitetin tuaj? (p.sh Fillestar) Dhe, cfar niveli te eksperiences duhet te kene nxenesit?
 * Cfar niveli te eksperiences duhet te kete nje edukator ne menyre qe te perdor aktivitetin tuaj? (p.sh Fillestar) Dhe, cfar niveli te eksperiences duhet te kene nxenesit? Nese ti pelqen te pergatitesh ne nivelin e mesem dhe te avancuar te Ores se Kodimit, ju lutem perfshij njohurite kryesore qe duhen ne pershkrimin e aktivitetit tend.
 * Kohezgjatja e aktivitetit 
     * Vetem 1 ore
@@ -128,7 +129,7 @@ Vizitoni [faqen e Dorzimit të Aktivitetit të Orës së Kodimit™](https://goo
 #### Gjera shtese qe do te ju duhen kur dergoni aktivitete online
 
 * Emri dhe logo e organizates tuaj
-* Whether it is COPPA compliant or not
+* Pavarësisht nëse është në përputhje me COPPA apo jo
 * Nje link me shenimet e mesuesit (opsionale)
 * Një listë e platformave të testuara/përshtatshme: 
     * Bazuar ne Web: Cilat platforma ke testuar ? 
@@ -137,7 +138,7 @@ Vizitoni [faqen e Dorzimit të Aktivitetit të Orës së Kodimit™](https://goo
         * iOS mobile Safari ( e përshtatur për mobile)
         * Android Chrome (e përshtatur për mobile)
     * Pa bazuar ne Web: specifiko platformen per kodin lokal (Mac, Win, iOS, Android, xBox, tjeter)
-    * Unplugged
+    * Shkëputur
 * Nje screenshot ose imazh marketingu e aktivitetit te ores se kodit. Ju lutemi dergoni te pakte nje foto me dimensione 4:3 Duhet te jete te pakten 520px me 390px Kjo foto nuk duhet te kete tekst ne te (perveq logos tuaj), ne menyre qe ta beni me te qasshme per ata te cilet nuk e flasin gjuhen angleze. Nëse një imazh i duhur nuk është aprovuar, ne mund të marrim fotot tona të tutorialit tuaj OSE ne mund të zgjedhim mos e listojmë atë. Te gjitha fotot duhet te dergohen si URL linqe ne formatin jpg, jpeg ose png.
 * Në mënyrë për të gjetur më shumë pjesmarrës me saktësi ne duam që cdo palë e tretë e partnerve të përfshijë 1-pixel të shoqëruar me foto në faqen e parë dhe të fundit të tutorialeve të tyre të Orës së Kodimit. Shih seksionin Tracking Pixel më poshtë për më shumë detaje.
 * Pas perfundimit te aktivitetit, perdoruesit duhet te shkojne tek [code.org/api/hour/finish](https://code.org/api/hour/finish) ku do te jene ne gjendje te: 
@@ -166,9 +167,11 @@ Vizitoni [faqen e Dorzimit të Aktivitetit të Orës së Kodimit™](https://goo
 
 ## Si do te vleresohen aktivitetet
 
-Nje komunitet divers i edukatoreve te shkencave kompjuterike do te rankoje materialet e pranuara duke u bazuar ne kriteret e kualitetit dhe quantitetit. Te gjitha aktivitetet qe i pershtaten kriterit bazik do te listohen. Mesuesit do te jene ne gjendje te filterojne dhe te sortojne aktivitetet me te mire per klasen e tyre.
+Nje komunitet divers i edukatoreve te shkencave kompjuterike do te rankoje materialet e pranuara duke u bazuar ne kriteret e kualitetit dhe quantitetit. Te gjitha aktivitetet qe i pershtaten kriterit bazik do te listohen.
 
-Rubrika per vleresimin e aktiviteteve dhe planeve mesimore do te kerkoje per keto kritere ne te gjitha aktivitetet dhe ti rendis ato:
+Për aktivitetet tradicionale të kodimit, një komitet i larmishëm i edukatorëve të shkencave kompjuterike do të rendisë parashtresat bazuar në kritere cilësore dhe sasiore. Te gjitha aktivitetet qe i pershtaten kriterit bazik do te listohen. Mesuesit do te jene ne gjendje te filterojne dhe te sortojne aktivitetet me te mire per klasen e tyre.
+
+Nese komiteti i rishikimit vlereson kete aktivitet si nje zero ne produksion dhe kualtitet (si shkak i gabimeve ose udhezimeve te cilat e bejen ate te veshtire per t'u perdorur), ne promovimin e mesimit ne grupet e nenperfaqesuara (si shkak i materialit racist ose seksist), ne vlere edukative (nuk meson konceptet e shkencave kompjuterike), ose zbavites dhe interaktiv (si shkak i veshtiresive dhe diskurajimit te nxenesve qe te punojne ne te) aktiviteti nuk do te listohet.
 
 - Kualiteti i produksionit
 - Promovimi i mesimit ne te gjitha grupet demografike sidomos studentet e nenperfaqesuar ne shkenca kompjuterike, sic jane vajzat e reja, nxenesit nga grupet e margjinalizuara etnike dhe racore, dhe nxenesit me nevoja te veqanta.
@@ -176,9 +179,9 @@ Rubrika per vleresimin e aktiviteteve dhe planeve mesimore do te kerkoje per ket
 - Zbavitese dhe interaktive
 - inkurajon nxenesit te krijojne dicka unike qe mund te ndajne me te tjeret (Per nxenesit me te rinje: me prinder dhe shoke te klases. Per studentet me te vjeter: permes internetit)
 
-Nese komiteti i rishikimit vlereson kete aktivitet si nje zero ne produksion dhe kualtitet (si shkak i gabimeve ose udhezimeve te cilat e bejen ate te veshtire per t'u perdorur), ne promovimin e mesimit ne grupet e nenperfaqesuara (si shkak i materialit racist ose seksist), ne vlere edukative (nuk meson konceptet e shkencave kompjuterike), ose zbavites dhe interaktiv (si shkak i veshtiresive dhe diskurajimit te nxenesve qe te punojne ne te) aktiviteti nuk do te listohet.
-
 Si rezultat, ne menyre qe te listoheni, te gjitha aktivitetet duhet te:
+
+Per aktivitete vetanake per mesuesit e rinj dhe nxenesit:
 
 - Jene te pershtatshme per shkollat publike (nuk duhet te permbajne arme, permbajtje eksplicite, nuk duhet te permbajne permbajtje fetare, etj)
 - Kerkojnë regjistrim
@@ -204,14 +207,16 @@ Mesuesit dhe nxenesit do te mund te kerkojne dhe te sistemojne nje liste te akti
 
 ## Sugjerime per dizajnimin e tutorialeve nje oresh
 
-Mund te perfshini [logon e ores se kodimit](https://hourofcode.com/us/promote/resources#logo) ne tutorialin tuaj mirepo kjo nuk eshte e domosdoshme. Nese ti perdor logon e ores se kodimit, shiko shenjat udhezuese me poshte Emri dhe logo i code.org nuk mund te perdoret ne asnje rrethane. Te dyja i kane te drejtat e rezervuara, dhe nuk mund te perdoren me nje aplikacion te trete pa pasur leje te shkruar te perdorimit.
-
-**Sigurohuni që studenti mesatar mund të përfundojë i qetë në një orë. **Konsideroni duke shtuar një aktivitet të pakufizuar në fund për studentët të cilët ecin më shpejt në mësime. Mos harroni se shumica e fëmijëve do të jenë fillestar absolut në shkenca kompjuterike dhe kodim.
+Aktivitetet nuk duhet të përfshijnë AI, megjithëse ne po kërkojmë të ofrojmë më shumë aktivitete të lidhura me AI.
 
 **Përfshini shënimet e mësuesve.**Shumica e aktiviteteve duhet të jenë të drejtuar për nxënës, por në qoftë se një aktivitet është lehtësuar ose menaxhohet nga një mësues, ju lutem të përfshijë udhëzime të qarta dhe të thjeshta për mësuesit në formën e shënimeve të mësuesve në një URL të veçantë dorëzuar me aktivitetin tuaj. Jo vetëm studentët janë fillestar, disa prej mësuesve janë gjithashtu. Përfshi informacion si:
 
+**Inkorporoni reagime në fund të aktivitetit** (p.sh: "Ju përfunduat 10 nivele dhe mësuat për ciklet! Punë e shkëlqyer!") Punë e mrekullueshme!
+
+** Inkurajoni studentet te postojne ne rrjetet sociale (kur eshte moment i pershtatshem) kur ata te perfundojne. ** Pershembull: "Une kam bere nje Ore Kodim me ________. Po ti ? #HourOfCode" ose Unë kam bërë një #HourOfCode si pjesë e #CSEdWeek. A keni ju?
+
 - Ne cilat platform dhe shfletues te internetit funksionon me se mirti tutoriali?
-- A punon në telefona të mençur? tabletë? Tablets?
+- A punon në telefona të mençur? tabletë? Pllakat?
 - A ju rekomandojmë programimin çift?
 - Gjerat qe te keni ne konsiderate per perdorimin brenda klases? Konsideroni për përdorim në një klasë? p.sh. nëse ka video, këshillojë mësuesit për të treguar video në një ekran të projektuar për të gjithë klasën për ta parë së bashku
 
@@ -236,7 +241,7 @@ Ora e Kodit eshte nje marke e regjistruar e Code.org Shume nga partneret tane te
 1. Perdor "Ora e Kodit" vetem ne lidhje me edukimin jo komercial te shkencave kompjuterike dhe ne kontekstin e kampanjes se ores se kodit, dhe per asnje qellim tjeter.
 2. Çdo referencë për "Orën e Kodimit" duhet të përdoret në një mënyrë që nuk sugjeron që është emri i markës suaj, por më tepër referenca për Orën e Kodimit si një lëvizje bazë. Shembull i mirë: "Merrni pjesë në Orën e Kodimit në ACMECorp.com". Shembull i keq: "Provo Orën e Kodimit nga ACME Corp".
 3. Përdorni një "TM"si indeks të sipërm në vendet më të dukshme që ju përmendni "Orën e Kodimit", në faqen tuaj web dhe në përshkrimet e aplikacionit.
-4. Përfshini gjuhën në faqe (ose në fund), duke përfshirë edhe lidhjet me faqet e web-it të CSEdWeek dhe Code.org, që thonë si në vijim: Ora e Kodimit eshte nje marke e regjistruar e Code.org “The '[Hour of Code](http://hourofcode.com/) ® is a nationwide initiative by [Code.org](http://code.org/) to introduce millions of students to one hour of computer science and computer programming.”
+4. Përfshini gjuhën në faqe (ose në fund), duke përfshirë edhe lidhjet me faqet e web-it të CSEdWeek dhe Code.org, që thonë si në vijim: Ora e Kodimit eshte nje marke e regjistruar e Code.org “[Hour of Code](http://hourofcode.com/) ® është një iniciativë mbarëkombëtare nga [Code.org](http://code.org/) për të prezantuar miliona studentë me një orë shkenca kompjuterike dhe programim kompjuterik.”
 5. Mos e perdorni "Oren e Kodit" ne emra aplikacionesh.
 6. Mos e perdorni "Oren e Kodit" ne lidhje me ndonje perdorim komercial
 7. Mos e perdorni "Oren e Kodit" ne lidhje me ndonje aktivitet qe kerkon krijim te llogarive ose qasje.
@@ -247,7 +252,7 @@ Ora e Kodit eshte nje marke e regjistruar e Code.org Shume nga partneret tane te
 
 ## Pixel-ët përcjellës
 
-Në mënyrë për të gjetur më shumë pjesmarrës me saktësi ne duam që cdo palë e tretë e partnerve të përfshijë 1-pixel të shoqëruar me foto në faqen e parë dhe të fundit të tutorialeve të tyre të Orës së Kodimit. Imazhi me pixel duhet te jete vetem ne faqen fillestare. Mos perfshini faqe te tutorialave tuaja.
+Nëse tutoriali juaj është aprovuar dhe është përfshirë në faqen e fundit të tutorialit, Code.org do t'ju ofrojë një pixel unik ndjekjeje për ju që ta integroni në tutorialin tuaj. Shiko shembullin më poshtë. Shihni shembujt me poshte: Mos perfshini faqe te tutorialave tuaja.
 
 Kjo do te na ndihmoje te njehim perdoruesit e tutorialit te ores se kodit. Do te na drejtoj drejt pjesemarrjes me te madhe per tutorialian tuaj.
 

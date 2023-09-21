@@ -131,6 +131,8 @@ ar:
           description_short: تعلَّم المفاهيم الأساسية لعلم الحاسوب.
         mike-test:
           title: أساسيات علم الحاسوب
+        vpl-csa-2023:
+          title: التعلم المهني الافتراضي CSA
     resources:
       curriculum/csd/2017:
         name: المناهج
