@@ -25,9 +25,11 @@ tabs.forEach((tab) => {
 });
 
 // Hide the Programming Tools section on code.org/curriculum/computer-vision
-document
-  .querySelector(".hide-tab .resources-tabs button.tab.tools")
-  .classList.add("hide");
-document
-  .querySelector(".hide-tab .resources-tabs details.tools")
-  .classList.add("hide");
+if (document.querySelector(".hide-tab")) {
+  document
+    .querySelector(".hide-tab .resources-tabs button.tab.tools")
+    .classList.add("hide");
+  document
+    .querySelector(".hide-tab .resources-tabs details.tools")
+    .classList.add("hide");
+}
