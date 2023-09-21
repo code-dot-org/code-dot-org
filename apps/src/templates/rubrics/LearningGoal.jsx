@@ -22,6 +22,7 @@ export default function LearningGoal({
   teacherHasEnabledAi,
   canProvideFeedback,
   reportingData,
+  studentName,
 }) {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -67,7 +68,9 @@ export default function LearningGoal({
         </div>
       </summary>
       <div className={style.learningGoalExpanded}>
-        <AiAssessment isAiAssessed={true} />
+        {aiEnabled && (
+          <AiAssessment isAiAssessed={true} studentName={studentName} />
+        )}
         <EvidenceLevels
           learningGoalKey={learningGoal.key}
           evidenceLevels={learningGoal.evidenceLevels}
@@ -91,6 +94,7 @@ LearningGoal.propTypes = {
   teacherHasEnabledAi: PropTypes.bool,
   canProvideFeedback: PropTypes.bool,
   reportingData: reportingDataShape,
+  studentName: PropTypes.string,
 };
 
 const AiToken = () => {

@@ -2,9 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
 import style from './rubrics.module.scss';
-import {EmText, Heading6} from '@cdo/apps/componentLibrary/typography';
-import FontAwesome from '@cdo/apps/templates/FontAwesome';
-import ReactTooltip from 'react-tooltip';
+import {Heading6} from '@cdo/apps/componentLibrary/typography';
+import AiAssessmentBox from './AiAssessmentBox';
 const icon = require('@cdo/static/AI-FAB.png');
 
 export default function AiAssessment({
@@ -13,31 +12,18 @@ export default function AiAssessment({
   aiAssessmentLevel,
   aiConfidence,
 }) {
-  // TO DO: Internationalize all text
+  // TO DO: pass through props from parent to child component below
   return (
     <div>
       <Heading6>{i18n.aiAssessment()}</Heading6>
-      <div className="aiAssessmentBlock">
+      <div className={style.aiAssessmentBlock}>
         <img className="aiBot" alt="Ai bot" src={icon} />
-        <div className="assessment">
-          <div className="text">
-            <Heading6 className="AI-rating">
-              {studentName} has achieved {aiAssessmentLevel} for this learning
-              goal.
-            </Heading6>
-            <div className="confidence-score">
-              <EmText>
-                AI is {aiConfidence}% confident in this assessment
-              </EmText>
-              <span data-tip data-for="info-tip">
-                <FontAwesome icon="info-circle" className={style.infoTipIcon} />
-              </span>
-              <ReactTooltip id="info-tip" effect="solid">
-                <p>text here</p>
-              </ReactTooltip>
-            </div>
-          </div>
-        </div>
+        <AiAssessmentBox
+          isAiAssessed={true}
+          aiAssessmentLevel={3}
+          studentName={studentName}
+          aiConfidence={50}
+        />
       </div>
     </div>
   );

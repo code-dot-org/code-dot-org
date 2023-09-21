@@ -282,17 +282,11 @@ p.errorMessage {
   position: relative;
 }
 
-.aiBot {
-  height: 68px;
-  position: relative;
-  width: 42px;
-}
-
-.assessment {
-  align-items: center;
-  background-color: var(--lightaffirmative-100);
+.greenAiAssessment {
+  align-items: left;
+  background-color: rgba(226 241 226 1);
   border: 1px solid;
-  border-color: var(--lightaffirmative-500);
+  border-color: rgba(62 163 62 1);
   border-radius: 4px;
   display: flex;
   flex: 1;
@@ -303,48 +297,32 @@ p.errorMessage {
   position: relative;
 }
 
-.text {
-  align-items: flex-start;
+.redAiAssessment {
+  align-items: left;
+  background-color: rgba(251 224 221 1);
+  border: 1px solid;
+  border-color: rgba(229 49 26 1);
+  border-radius: 4px;
   display: flex;
   flex: 1;
-  flex-direction: column;
   flex-grow: 1;
-  gap: 8px;
-  justify-content: flex-end;
-  position: relative;
-
-
-.AI-rating {
-  align-self: stretch;
-  color: var(--lightblack);
-  font-family: var(--body-body-2-strong-font-family);
-  font-size: var(--body-body-2-strong-font-size);
-  font-style: var(--body-body-2-strong-font-style);
-  font-weight: var(--body-body-2-strong-font-weight);
-  letter-spacing: var(--body-body-2-strong-letter-spacing);
-  line-height: var(--body-body-2-strong-line-height);
-  margin-top: -1px;
+  gap: 16px;
+  overflow: hidden;
+  padding: 8px;
   position: relative;
 }
 
-.confidence-score {
-  align-items: center;
-  display: inline-flex;
-  flex: 0 0 auto;
-  gap: 8px;
+.noAiAssessment {
+  align-items: left;
+  background-color: rgba(234 235 235 1);
+  border: 1px solid;
+  border-color: rgba(148 151 155 1);
+  border-radius: 4px;
+  display: flex;
+  flex: 1;
+  flex-grow: 1;
+  gap: 16px;
+  overflow: hidden;
+  padding: 8px;
   position: relative;
-}
-}
-
-.content .div {
-  color: var(--lightblack);
-  font-size: 14px;
-  font-style: italic;
-  font-weight: 400;
-  letter-spacing: 0;
-  line-height: 21px;
-  margin-top: -1px;
-  position: relative;
-  white-space: nowrap;
-  width: fit-content;
 }
