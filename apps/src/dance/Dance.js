@@ -119,11 +119,21 @@ Dance.prototype.init = function (config) {
     config.valueTypeTabShapeMap = {[Blockly.BlockValueType.SPRITE]: 'angle'};
 
     this.studioApp_.init(config);
-
+    this.currentCode = this.studioApp_.getCode();
     if (this.usesPreview) {
-      this.currentCode = this.studioApp_.getCode();
-      this.studioApp_.addChangeHandler(() => {
+      this.studioApp_.addChangeHandler(e => {
+        // We want to check if the workspace code changed only when a block has been moved or
+        // if a block hass changed.
+        // A move event is fired when a block is dragged and then dropped.
+        if (
+          e.type !== Blockly.Events.BLOCK_MOVE &&
+          e.type !== Blockly.Events.BLOCK_CHANGE
+        ) {
+          return;
+        }
+
         const newCode = Blockly.getWorkspaceCode();
+        // Only execute preview if the student code has changed and we are not running the program.
         if (newCode !== this.currentCode && !this.studioApp_.isRunning()) {
           this.currentCode = newCode;
           this.preview();
