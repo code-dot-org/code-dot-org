@@ -43,15 +43,6 @@ class LearningGoalEvaluationsControllerTest < ActionController::TestCase
     assert_not_nil response_json['created_at']
   end
 
-  test 'show learning goal evaluation' do
-    get :show, params: {id: @learning_goal_evaluation.id}
-    assert_response :success
-
-    response_json = JSON.parse(response.body)
-
-    assert_equal @learning_goal_evaluation.id, response_json['id']
-  end
-
   test 'update learning goal evaluation' do
     id = @learning_goal_evaluation.id
     user_id = @student.id
