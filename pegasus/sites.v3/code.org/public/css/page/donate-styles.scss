@@ -28,10 +28,33 @@ section.bg-primary-light {
   }
 }
 
-.tabs-section {
-  min-height: 465px;
+section.donate-options {
 
-  #dafdirectdiv {
-    width: 262px !important;
+  @media screen and (max-width: $width-md) {
+    .wrapper > hr {
+      display: none;
+    }
+  }
+
+  .tabs-section {
+    min-height: 518px;
+
+    @media screen and (max-width: $width-md) {
+      margin-bottom: 2rem;
+    }
+
+    #dafdirectdiv {
+      width: 262px !important;
+
+      .dafdirectInput, .dafdirectSelect {
+        margin: 0 !important;
+      }
+
+      .dafdirectInputAmount > br {
+        display: none !important;
+      }
+    }
   }
 }
+
+

@@ -1138,8 +1138,8 @@ section.quote {
   }
 
   &.show-tablet-and-mobile {
-    height: unset;
-    min-height: unset;
+    height: unset !important;
+    min-height: unset !important;
 
     details {
       padding-left: 0;
@@ -1270,4 +1270,8 @@ section.quote {
   background-color: $brand_primary_default;
   border-radius: $border-radius;
   padding: 2rem;
+
+  @media screen and (max-width: $width-md) {
+    background-size: 50%;
+  }
 }
