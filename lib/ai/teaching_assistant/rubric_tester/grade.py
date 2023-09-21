@@ -15,9 +15,9 @@ class Grade:
         pass
 
     def grade_student_work(self, prompt, rubric, student_code, student_id, examples=[], use_cached=False, num_responses=0, temperature=0.0, llm_model=""):
-        if use_cached and os.path.exists(f"cached_responses/{student_id}.json"):
-            with open(f"cached_responses/{student_id}.json", 'r') as f:
-                return json.load(f)
+        # if use_cached and os.path.exists(f"cached_responses/{student_id}.json"):
+        #     with open(f"cached_responses/{student_id}.json", 'r') as f:
+        #         return json.load(f)
 
         api_url = 'https://api.openai.com/v1/chat/completions'
         headers = {
@@ -59,9 +59,9 @@ class Grade:
             tsv_data = self.get_consensus_response(tsv_data_choices, student_id)
 
         # only write to cache if the response is valid
-        if tsv_data:
-            with open(f"cached_responses/{student_id}.json", 'w') as f:
-                json.dump(tsv_data, f, indent=4)
+        # if tsv_data:
+        #     with open(f"cached_responses/{student_id}.json", 'w') as f:
+        #         json.dump(tsv_data, f, indent=4)
 
         return tsv_data
 
