@@ -218,6 +218,10 @@
   call_to_action_get_guide: "Get the guide"
   call_to_action_make_a_donation: "Make a donation"
   call_to_action_other_ways_to_give: "Other ways to give"
+  call_to_action_become_partner_usa: "Become a United States partner"
+  call_to_action_become_partner_intl: "Become an international partner"
+  call_to_action_become_become_a_volunteer: "Become a volunteer"
+  call_to_action_become_start_translating: "Start translating"
 
   aria_label_call_to_action_afe: "Learn more about Amazon Future Engineer"
   aria_label_call_to_action_teaching_csf: "Start the Teaching Computer Science Fundamentals professional learning program"
@@ -1032,6 +1036,12 @@
   help_page_top_desc: "Support our mission to make computer science accessible for every child, everywhere. Your efforts help us inspire future innovators and bridge the tech education gap."
   help_page_top_subhead: "Make a donation to Code.org"
   help_page_top_desc_02: "We're working to give every student the opportunity to learn computer science — both online AND in schools, where we establish permanent courses and train teachers. For every dollar you donate, one child is introduced to computer science."
+  help_page_partners_heading: "Become a partner"
+  help_page_partners_desc: "Code.org works with other nonprofit organizations as partners to help spread computer science in a local, sustainable fashion. Learn more about our program."
+  help_page_volunteer_heading: "Volunteer in a classroom"
+  help_page_volunteer_desc: "Volunteer to teach the Hour of Code or be a guest speaker in a local classroom. Sign up to hear about opportunities near you."
+  help_page_translate_heading: "Help us translate"
+  help_page_volunteer_desc: "Volunteers have translated our tutorials in over 45 languages. Help us continue to expand our tutorials for students around the world!"
 
   hoc_live: 'Hour of Code Live'
   hoc_live_sign_up_title: 'Sign up for Hour of Code Live'
