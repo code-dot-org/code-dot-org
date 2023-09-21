@@ -14,12 +14,15 @@ export interface DanceState {
   selectedSong: string;
   songData: SongData;
   runIsStarting: boolean;
+  // Fields below are used only by Lab2 Dance
+  isRunning: boolean;
 }
 
 const initialState: DanceState = {
   selectedSong: 'macklemore90',
   songData: {},
   runIsStarting: false,
+  isRunning: false,
 };
 
 // THUNKS
@@ -36,7 +39,7 @@ export const initSongs = createAsyncThunk(
         isProjectLevel: boolean;
         freePlay: boolean;
       };
-      onAuthError: () => void;
+      onAuthError: (songId: string) => void;
       onSongSelected?: (songId: string) => void;
     },
     {dispatch}
@@ -60,7 +63,7 @@ export const initSongs = createAsyncThunk(
     loadSong(selectedSong, songData, (status: number) => {
       if (status === 403) {
         // Something is wrong, because we just fetched cloudfront credentials.
-        onAuthError();
+        onAuthError(selectedSong);
       }
     });
 
@@ -76,7 +79,7 @@ export const setSong = createAsyncThunk(
   async (
     payload: {
       songId: string;
-      onAuthError: () => void;
+      onAuthError: (songId: string) => void;
       onSongSelected?: (songId: string) => void;
     },
     {dispatch, getState}
@@ -99,7 +102,7 @@ export const setSong = createAsyncThunk(
         loadSong(songId, songData, (status: number) => {
           if (status === 403) {
             // Something is wrong, because we just re-fetched cloudfront credentials.
-            onAuthError();
+            onAuthError(songId);
           }
         });
       }
