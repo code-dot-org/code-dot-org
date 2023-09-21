@@ -35,7 +35,7 @@ describe('RubricContent', () => {
     rubric: defaultRubric,
     teacherHasEnabledAi: true,
     studentLevelInfo: {},
-    currentLevelName: 'test_level',
+    canProvideFeedback: true,
   };
 
   const processEventLoop = () => new Promise(resolve => setTimeout(resolve, 0));
@@ -68,7 +68,7 @@ describe('RubricContent', () => {
       <RubricContent
         {...defaultProps}
         studentLevelInfo={{name: 'Grace Hopper', timeSpent: 706}}
-        currentLevelName="non_assessment_level"
+        canProvideFeedback={false}
       />
     );
     const renderedLearningGoals = wrapper.find('LearningGoal');
@@ -89,7 +89,11 @@ describe('RubricContent', () => {
 
   it('shows learning goals with correct props when not viewing student work', () => {
     const wrapper = shallow(
-      <RubricContent {...defaultProps} studentLevelInfo={null} />
+      <RubricContent
+        {...defaultProps}
+        studentLevelInfo={null}
+        canProvideFeedback={false}
+      />
     );
     const renderedLearningGoals = wrapper.find('LearningGoal');
     expect(renderedLearningGoals).to.have.lengthOf(2);
@@ -164,7 +168,7 @@ describe('RubricContent', () => {
           name: 'Grace Hopper',
           attempts: 6,
         }}
-        currentLevelName="not_test_level"
+        canProvideFeedback={false}
       />
     );
     expect(wrapper.text()).to.include('Grace Hopper');
@@ -176,7 +180,6 @@ describe('RubricContent', () => {
     const wrapper = shallow(
       <RubricContent
         rubric={defaultRubric}
-        currentLevelName="test_level"
         studentLevelInfo={{name: 'Grace Hopper'}}
         canProvideFeedback
       />
@@ -189,7 +192,7 @@ describe('RubricContent', () => {
       <RubricContent
         rubric={defaultRubric}
         teacherHasEnabledAi
-        currentLevelName="test_level"
+        canProvideFeedback
         studentLevelInfo={{name: 'Grace Hopper'}}
       />
     );
@@ -218,7 +221,7 @@ describe('RubricContent', () => {
         rubric={defaultRubric}
         teacherHasEnabledAi
         studentLevelInfo={{name: 'Grace Hopper'}}
-        currentLevelName="test_level"
+        canProvideFeedback
       />
     );
     const postStub = sinon.stub(HttpClient, 'post').returns(Promise.reject());

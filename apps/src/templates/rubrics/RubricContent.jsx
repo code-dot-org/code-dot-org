@@ -35,11 +35,9 @@ export default function RubricContent({
   studentLevelInfo,
   rubric,
   teacherHasEnabledAi,
-  currentLevelName,
+  canProvideFeedback,
   reportingData,
 }) {
-  const onLevelForEvaluation = currentLevelName === rubric.level.name;
-  const canProvideFeedback = !!studentLevelInfo && onLevelForEvaluation;
   const {lesson} = rubric;
   const rubricLevel = rubric.level;
 
@@ -81,7 +79,7 @@ export default function RubricContent({
                 lessonName: lesson.name,
               })}
             </Heading5>
-            {onLevelForEvaluation && (
+            {canProvideFeedback && (
               <div className={style.studentMetadata}>
                 {studentLevelInfo.timeSpent && (
                   <BodyThreeText className={style.singleMetadatum}>
@@ -105,7 +103,7 @@ export default function RubricContent({
                 )}
               </div>
             )}
-            {!onLevelForEvaluation && rubricLevel?.position && (
+            {!canProvideFeedback && rubricLevel?.position && (
               <BodyThreeText>
                 {i18n.feedbackAvailableOnLevel({
                   levelPosition: rubricLevel.position,
@@ -156,7 +154,7 @@ export default function RubricContent({
 }
 
 RubricContent.propTypes = {
-  currentLevelName: PropTypes.string,
+  canProvideFeedback: PropTypes.bool,
   rubric: rubricShape.isRequired,
   reportingData: reportingDataShape,
   studentLevelInfo: studentLevelInfoShape,

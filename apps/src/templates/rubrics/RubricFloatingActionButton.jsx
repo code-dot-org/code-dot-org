@@ -43,7 +43,7 @@ export default function RubricFloatingActionButton({
           studentLevelInfo={studentLevelInfo}
           reportingData={reportingData}
           currentLevelName={currentLevelName}
-          teacherHasEnabledAi
+          initialTeacherHasEnabledAi
         />
       )}
     </div>

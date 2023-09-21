@@ -10,6 +10,7 @@ import {
   studentLevelInfoShape,
 } from './rubricShapes';
 import RubricContent from './RubricContent';
+import RubricSettings from './RubricSettings';
 
 const TAB_NAMES = {
   RUBRIC: 'rubric',
@@ -19,11 +20,17 @@ const TAB_NAMES = {
 export default function RubricContainer({
   rubric,
   studentLevelInfo,
-  teacherHasEnabledAi,
+  initialTeacherHasEnabledAi,
   currentLevelName,
   reportingData,
 }) {
+  const onLevelForEvaluation = currentLevelName === rubric.level.name;
+  const canProvideFeedback = !!studentLevelInfo && onLevelForEvaluation;
+
   const [selectedTab, setSelectedTab] = useState(TAB_NAMES.RUBRIC);
+  const [teacherHasEnabledAi, setTeacherHasEnabledAi] = useState(
+    initialTeacherHasEnabledAi
+  );
 
   return (
     <div className={style.rubricContainer}>
@@ -41,13 +48,22 @@ export default function RubricContainer({
           />
         </div>
       </div>
-      <RubricContent
-        rubric={rubric}
-        studentLevelInfo={studentLevelInfo}
-        teacherHasEnabledAi={teacherHasEnabledAi}
-        currentLevelName={currentLevelName}
-        reportingData={reportingData}
-      />
+      {selectedTab === TAB_NAMES.RUBRIC && (
+        <RubricContent
+          rubric={rubric}
+          studentLevelInfo={studentLevelInfo}
+          teacherHasEnabledAi={teacherHasEnabledAi}
+          canProvideFeedback={canProvideFeedback}
+          reportingData={reportingData}
+        />
+      )}
+      {selectedTab === TAB_NAMES.SETTINGS && (
+        <RubricSettings
+          canProvideFeedback={canProvideFeedback}
+          teacherHasEnabledAi={teacherHasEnabledAi}
+          updateTeacherAiSetting={setTeacherHasEnabledAi}
+        />
+      )}
     </div>
   );
 }
@@ -56,7 +72,7 @@ RubricContainer.propTypes = {
   rubric: rubricShape,
   reportingData: reportingDataShape,
   studentLevelInfo: studentLevelInfoShape,
-  teacherHasEnabledAi: PropTypes.bool,
+  initialTeacherHasEnabledAi: PropTypes.bool,
   currentLevelName: PropTypes.string,
 };
 
