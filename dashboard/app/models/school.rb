@@ -16,6 +16,7 @@
 #  address_line3               :string(30)
 #  latitude                    :decimal(8, 6)
 #  longitude                   :decimal(9, 6)
+#  state_school_id             :string(255)
 #  school_category             :string(255)
 #  last_known_school_year_open :string(9)
 #
@@ -25,6 +26,7 @@
 #  index_schools_on_last_known_school_year_open  (last_known_school_year_open)
 #  index_schools_on_name_and_city                (name,city)
 #  index_schools_on_school_district_id           (school_district_id)
+#  index_schools_on_state_school_id              (state_school_id) UNIQUE
 #  index_schools_on_zip                          (zip)
 #
 
@@ -448,7 +450,7 @@ class School < ApplicationRecord
   # @param ignore_attributes [Array] List of attributes included in a given import that should not be used to determine whether a record is being "updated" or "unchanged". Allows us to more clearly identify which schools have real changes to existing data.
   # @param insert_new [Boolean] Determines whether to insert (or if false, skip) importing new schools in this import
   # @param limit [Integer] Limits the number of rows parsed from the csv file (for testing). Default to nil for no limit.
-  def self.merge_from_csv(filename, options = CSV_IMPORT_OPTIONS, update_existing = true, is_dry_run: true, ignore_attributes: [], insert_new: true, limit: nil)
+  def self.merge_from_csv(filename, options = CSV_IMPORT_OPTIONS, update_existing = true, is_dry_run: false, ignore_attributes: [], insert_new: true, limit: nil)
     schools = nil
     new_schools = []
     updated_schools = 0
