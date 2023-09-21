@@ -13,7 +13,7 @@ dashboard/brakeman_security_report.htm
 .tmputils
 .rakeTasks
 .tscache/
-.idea/
+**/.idea/
 .irb_history
 jsconfig.json
 /bin/i18n/*_credentials.yml
