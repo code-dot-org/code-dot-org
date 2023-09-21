@@ -32,6 +32,7 @@ class PublishDialog extends Component {
 
   state = {
     publishFailedStatus: null,
+    publishFailedReason: '',
   };
 
   confirm = () => {
@@ -52,21 +53,38 @@ class PublishDialog extends Component {
   };
 
   onPublishError = err => {
-    this.setState({publishFailedStatus: err.status});
+    this.setState({
+      publishFailedStatus: err.status,
+      publishFailedReason: err.response,
+    });
   };
 
   getErrorMessage = () => {
-    const {publishFailedStatus} = this.state;
+    const {publishFailedStatus, publishFailedReason} = this.state;
     const {projectType} = this.props;
     if (!publishFailedStatus) {
       return null;
     } else if (
       publishFailedStatus === 403 &&
-      RestrictedPublishProjectTypes.includes(projectType)
+      RestrictedPublishProjectTypes.includes(projectType) &&
+      publishFailedReason === 'restricted share'
     ) {
       return i18n.publishFailedRestrictedShare();
-    } else if (publishFailedStatus === 403) {
+    } else if (
+      publishFailedStatus === 403 &&
+      publishFailedReason === 'teacher restricted'
+    ) {
       return i18n.publishFailedForbidden();
+    } else if (
+      publishFailedStatus === 403 &&
+      publishFailedReason.startsWith('User too new to publish channel')
+    ) {
+      return 'user too new';
+    } else if (
+      publishFailedStatus === 403 &&
+      publishFailedReason.startsWith('Project too new to publish channel')
+    ) {
+      return 'project too new';
     } else if (publishFailedStatus === 400 || publishFailedStatus === 401) {
       return i18n.publishFailedNotAllowed();
     } else {

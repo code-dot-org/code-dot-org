@@ -207,15 +207,15 @@ class ChannelsApi < Sinatra::Base
   post %r{/v3/channels/([^/]+)/publish/([^/]+)} do |channel_id, project_type|
     not_authorized unless owns_channel?(channel_id)
     bad_request unless ALL_PUBLISHABLE_PROJECT_TYPES.include?(project_type)
-    forbidden if sharing_disabled? && CONDITIONALLY_PUBLISHABLE_PROJECT_TYPES.include?(project_type)
-    forbidden if Projects.in_restricted_share_mode(channel_id, project_type)
+    forbidden('teacher restricted') if sharing_disabled? && CONDITIONALLY_PUBLISHABLE_PROJECT_TYPES.include?(project_type)
+    forbidden('restricted share') if Projects.in_restricted_share_mode(channel_id, project_type)
 
     begin
       # Once we have back-filled the project_type column for all channels,
       # it will no longer be necessary to specify the project type here.
       Projects.new(get_storage_id).publish(channel_id, project_type, current_user).to_json
-    rescue Projects::PublishError
-      forbidden
+    rescue Projects::PublishError => exception
+      forbidden(exception.message)
     end
   end
 

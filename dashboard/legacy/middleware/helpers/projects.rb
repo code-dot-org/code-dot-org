@@ -139,8 +139,8 @@ class Projects
     raise NotFound, "channel `#{channel_id}` not found" unless project
 
     rails_project = get_rails_project(project_id)
-    raise PublishError, "channel `#{channel_id}` too new to be published" unless rails_project.existed_long_enough_to_publish?
-    raise PublishError, "user too new to publish channel `#{channel_id}`" unless rails_project.owner_existed_long_enough_to_publish?
+    raise PublishError, "User too new to publish channel `#{channel_id}`" unless rails_project.owner_existed_long_enough_to_publish?
+    raise PublishError, "Project too new to publish channel `#{channel_id}`" unless rails_project.existed_long_enough_to_publish?
 
     project_query_result.update(row)
 
