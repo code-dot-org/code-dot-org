@@ -17,10 +17,10 @@ export default function AiAssessment({
     <div>
       <Heading6>{i18n.aiAssessment()}</Heading6>
       <div className={style.aiAssessmentBlock}>
-        <img className="aiBot" alt="Ai bot" src={icon} />
+        <img alt="Ai bot" src={icon} />
         <AiAssessmentBox
           isAiAssessed={true}
-          aiAssessmentLevel={3}
+          aiUnderstandingLevel={2}
           studentName={studentName}
           aiConfidence={50}
         />

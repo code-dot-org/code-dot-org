@@ -5,7 +5,7 @@ import style from './rubrics.module.scss';
 import {EmText, Heading6} from '@cdo/apps/componentLibrary/typography';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import ReactTooltip from 'react-tooltip';
-// import classNames from 'classnames';
+import {RubricUnderstandingLevels} from '@cdo/apps/util/sharedConstants';
 
 export default function AiAssessmentBox({
   isAiAssessed,
@@ -14,27 +14,19 @@ export default function AiAssessmentBox({
   aiConfidence,
 }) {
   // TO DO: Create color constants in the css file
-  // TO DO: Get conditional formatting to work
-  //   const boxColor = () => {
-  //     console.log('inside boxColor');
-  //     if (isAiAssessed) {
-  //       return aiUnderstandingLevel >= 2
-  //         ? style.greenAiAssessment
-  //         : style.redAiAssessment;
-  //     } else {
-  //       return style.noAiAssessment;
-  //     }
-  //   };
-  //   const className = classNames({
-  //     [style.greenAiAssessment]: isAiAssessed && aiUnderstandingLevel >= 2,
-  //     [style.redAiAssessment]: isAiAssessed && aiUnderstandingLevel < 2,
-  //     [style.noAiAssessment]: !isAiAssessed,
-  //   });
+  const boxColor = () => {
+    if (isAiAssessed) {
+      return aiUnderstandingLevel >= RubricUnderstandingLevels.CONVINCING
+        ? style.greenAiAssessment
+        : style.redAiAssessment;
+    } else {
+      return style.noAiAssessment;
+    }
+  };
 
-  // should this be a const instead?
   const studentAchievment = () => {
     const assessment =
-      aiUnderstandingLevel >= 2
+      aiUnderstandingLevel >= RubricUnderstandingLevels.CONVINCING
         ? i18n.aiAssessmentDoesMeet()
         : i18n.aiAssessmentDoesNotMeet();
     return i18n.aiStudentAssessment({
@@ -44,8 +36,8 @@ export default function AiAssessmentBox({
   };
 
   return (
-    <div className={style.greenAiAssessment}>
-      <div className="text">
+    <div className={boxColor()}>
+      <div>
         <Heading6>{studentAchievment()}</Heading6>
         <div>
           <EmText>{i18n.aiConfidence({aiConfidence: aiConfidence})}</EmText>
