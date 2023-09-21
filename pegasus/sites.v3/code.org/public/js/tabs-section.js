@@ -24,6 +24,26 @@ tabs.forEach((tab) => {
   });
 });
 
+// Hide the desktop or tablet/mobile version in the DOM
+jQuery(document).ready(function ($) {
+  var $showDesktop = $(".show-desktop");
+  var $showTabletAndMobile = $(".show-tablet-and-mobile");
+
+  var hideResponsiveTabs = function () {
+    var ww = $(window).width();
+    if (ww > 1023) {
+      $showDesktop.show();
+      $showTabletAndMobile.hide();
+    } else {
+      $showDesktop.hide();
+      $showTabletAndMobile.show();
+    }
+  };
+  $(window).resize(hideResponsiveTabs);
+  // Fire it when the page first loads:
+  hideResponsiveTabs();
+});
+
 // Hide the Programming Tools section on code.org/curriculum/computer-vision
 if (document.querySelector(".hide-tab")) {
   document
@@ -33,20 +53,3 @@ if (document.querySelector(".hide-tab")) {
     .querySelector(".hide-tab .resources-tabs details.tools")
     .classList.add("hide");
 }
-
-// Hide the desktop or tablet/mobile version in the DOM
-jQuery(document).ready(function ($) {
-  var hideResponsiveTabs = function () {
-    var ww = document.body.clientWidth;
-    if (ww > 1024) {
-      document.querySelector(".show-tablet-and-mobile").remove();
-    } else if (ww <= 1024) {
-      document.querySelector(".show-desktop").remove();
-    }
-  };
-  $(window).resize(function () {
-    hideResponsiveTabs();
-  });
-  //Fire it when the page first loads:
-  hideResponsiveTabs();
-});
