@@ -56,3 +56,11 @@ section.donate-options {
     }
   }
 }
+
+section.seals{
+  padding-bottom: 0;
+
+  @media screen and (max-width: $width-sm) {
+    padding: 0;
+  }
+}

@@ -5,7 +5,14 @@ theme: responsive_full_width
 
 %link{href: "/css/generated/design-system-pegasus.css", rel: "stylesheet"}
 %link{href: "/css/generated/page/donate-styles.css", rel: "stylesheet"}
+
+-# Donate with Amazon
 %script{async: "", src: "https://static-na.payments-amazon.com/OffAmazonPayments/us/js/Widgets.js"}
+
+-# Double the Donation
+:javascript
+  var DDCONF = { API_KEY: "#{CDO.ddconf_api_key}" };
+%script{src: "https://doublethedonation.com/api/js/ddplugin.js"}
 
 %section.top
   .wrapper.flex-container.justify-space-between.align-items-center.wrap
@@ -48,6 +55,6 @@ theme: responsive_full_width
       %a.link-button{href: "/about/donation-policy"}
         =hoc_s(:call_to_action_view_donation_policy)
 
-%section.no-padding-bottom
+%section.seals
   .wrapper
     = view :about_seals

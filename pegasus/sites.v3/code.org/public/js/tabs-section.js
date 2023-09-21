@@ -33,3 +33,20 @@ if (document.querySelector(".hide-tab")) {
     .querySelector(".hide-tab .resources-tabs details.tools")
     .classList.add("hide");
 }
+
+// Hide the desktop or tablet/mobile version in the DOM
+jQuery(document).ready(function ($) {
+  var hideResponsiveTabs = function () {
+    var ww = document.body.clientWidth;
+    if (ww > 1024) {
+      document.querySelector(".show-tablet-and-mobile").remove();
+    } else if (ww <= 1024) {
+      document.querySelector(".show-desktop").remove();
+    }
+  };
+  $(window).resize(function () {
+    hideResponsiveTabs();
+  });
+  //Fire it when the page first loads:
+  hideResponsiveTabs();
+});

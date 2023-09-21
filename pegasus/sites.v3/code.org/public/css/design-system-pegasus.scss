@@ -161,10 +161,6 @@ input[type=submit] {
   text-align: center;
   transition: all ease-in-out .2s;
 
-  @media screen and (max-width: $width-sm) {
-    font-size: 0.875rem;
-  }
-
   &:hover {
     color: white;
     background-color: $brand_secondary_dark;
@@ -1113,10 +1109,6 @@ section.quote {
         display: none;
       }
     }
-  }
-
-  div.content {
-    text-align: left;
   }
 
   // Hides tab content
