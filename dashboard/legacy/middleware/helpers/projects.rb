@@ -243,7 +243,6 @@ class Projects
   end
 
   def users_paired_on_level?(project_id, current_user_id, owner_user_id, owner_storage_id)
-    # use this!
     channel_tokens_table = DASHBOARD_DB[:channel_tokens]
     level_id_row = channel_tokens_table.where(storage_app_id: project_id, storage_id: owner_storage_id).first
     return false if level_id_row.nil?

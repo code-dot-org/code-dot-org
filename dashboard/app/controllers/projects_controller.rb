@@ -455,6 +455,13 @@ class ProjectsController < ApplicationController
 
   def can_publish_age_status
     project = Project.find_by_channel_id(params[:channel_id])
+    unless project.apply_project_age_publish_limits?
+      return render json: {
+        project_existed_long_enough_to_publish: true,
+        user_existed_long_enough_to_publish: true
+      }
+    end
+
     render json: {
       project_existed_long_enough_to_publish: project.existed_long_enough_to_publish?,
       user_existed_long_enough_to_publish: project.owner_existed_long_enough_to_publish?
