@@ -2,8 +2,6 @@ require 'test_helper'
 
 class ProjectTest < ActiveSupport::TestCase
   test "Projects must be 30 minutes old to publish" do
-    Project.any_instance.stubs(:apply_project_age_publish_limits?).returns(true)
-
     project = create :project
     refute project.existed_long_enough_to_publish?
 
@@ -14,8 +12,6 @@ class ProjectTest < ActiveSupport::TestCase
   end
 
   test "Project owner account must have existed for a week to publish" do
-    Project.any_instance.stubs(:apply_project_age_publish_limits?).returns(true)
-
     project_owner = create :student
     project = build :project, owner: project_owner
     refute project.owner_existed_long_enough_to_publish?
