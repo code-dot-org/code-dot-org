@@ -90,7 +90,7 @@ class Grade:
             return None
 
     def parse_tsv(self, tsv_text):
-        rows = tsv_text.split("\n")
+        rows = [row.strip('\r') for row in tsv_text.split("\n")]
         header = rows.pop(0).split("\t")
         return [dict(zip(header, row.split("\t"))) for row in rows]
 
