@@ -2191,12 +2191,6 @@
           "courseC_PlayLab_events_challenge_b": "Provoni të përdorni \"vendos aktorin 1 në pozicionin e mesit majtas\" kur ai prek njërin nga aktorët e tjerë. Kjo do të rivendosë lojën në mënyrë që lojtari të vazhdojë të përpiqet!",
           "courseC_PlayLab_events_challenge_c": "Ju gjithashtu mund të dëshironi të provoni të ndryshoni shpejtësinë e aktorëve të ndryshëm për ta bërë lojën më të lehtë ose më sfiduese!\n\n<xml>  <block type=\"studio_setSpriteSpeed\">\n    <title name=\"SPRITE\">0</title>\n    <title name=\"VALUE\">Studio.SpriteSpeed.FAST</title>\n  </block></xml>"
         },
-        "courseC_artist_loop1_2019": {
-          "": "[empty string]"
-        },
-        "courseC_artist_loop1_2020": {
-          "": "[empty string]"
-        },
         "courseC_artist_loops1a2022": {
           "courseC_artist_loops1a_a": "Ky është blloku i parë që do t'ju duhet:\n\n<xml>\n  <block type=\"jump_to\">\n    <title name=\"VALUE\">13</title>\n  </block>\n</xml>",
           "courseC_artist_loops1a_b": "Përdoreni këtë bllok për të vizatuar stikera!\n\n<xml>\n<block type=\"sticker\">\n    <title name=\"VALUE\">Bird</title>\n  </block>\n</xml>"
