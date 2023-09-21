@@ -30,6 +30,10 @@ module I18n
         FileUtils.cp(CDO.dir('dashboard/config/locales/slides.en.yml'), File.join(I18N_SOURCE_DIR_PATH, 'slides.yml'))
         FileUtils.cp(CDO.dir('dashboard/config/locales/unplugged.en.yml'), File.join(I18N_SOURCE_DIR_PATH, 'unplugged.yml'))
       end
+
+      def self.sync_out
+        Blocks.sync_out
+      end
     end
   end
 end

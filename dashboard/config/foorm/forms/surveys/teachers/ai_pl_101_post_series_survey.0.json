@@ -72,8 +72,8 @@
         {
           "type": "checkbox",
           "name": "grade",
-          "title": "At what grade levels did you teach this year?",
-          "description": " (Select all that apply)",
+          "title": "At what grade levels are you teaching this year?",
+          "description": "(Select all that apply)",
           "choices": [
             {
               "value": "k",
@@ -142,7 +142,7 @@
           "name": "teach_courses",
           "visibleIf": "{teacher_role} <> 'classroom_teacher' and {teacher_role} <> 'cs_teacher' and {teacher_role} <> 'stem_teacher'",
           "title": "What courses or subjects do you teach?",
-          "description": "Please select all that apply",
+          "description": "(Select all that apply)",
           "choices": [
             {
               "value": "none",
@@ -205,7 +205,7 @@
           "type": "matrix",
           "name": "ai_pl_101",
           "title": "Are you planning to use what you learned in your role as {teacher_role}?",
-          "description": "Choose a response for each of the videos Listed. If you did not watch a video, please select that option.",
+          "description": "Choose a response for each of the videos listed. If you did not watch a video, please select that option.",
           "columns": [
             {
               "value": "yes_already_did",
@@ -252,6 +252,7 @@
           "name": "ai_pl_101_barriers",
           "visibleIf": "{ai_pl_101.video1} <> 'didnt_watch' or {ai_pl_101.video2} <> 'didnt_watch' or {ai_pl_101.video3} <> 'didnt_watch' or {ai_pl_101.video4} <> 'didnt_watch' or {ai_pl_101.video5} <> 'didnt_watch'",
           "title": "What are the main barriers to using what you’ve learned?",
+          "description": "(Select all that apply)",
           "choices": [
             {
               "value": "none",
@@ -266,8 +267,12 @@
               "text": "AI use has been discouraged in my school/district"
             },
             {
-              "value": "need_more_preparation",
-              "text": "I need more preparation before applying the content"
+              "value": "need_learn_more",
+              "text": "I need to learn more about AI before using it in my classroom/role"
+            },
+            {
+              "value": "need_more_practice",
+              "text": "I need more practice on my own before using it in my classroom/role"
             },
             {
               "value": "other",
@@ -398,74 +403,25 @@
           "maxRateDescription": "More confident than before"
         },
         {
-          "type": "radiogroup",
-          "name": "ai_101_pl_share",
-          "visibleIf": "{ai_pl_101.video1} <> 'didnt_watch' or {ai_pl_101.video2} <> 'didnt_watch' or {ai_pl_101.video3} <> 'didnt_watch' or {ai_pl_101.video4} <> 'didnt_watch' or {ai_pl_101.video5} <> 'didnt_watch'",
-          "title": "Did you share any videos from the AI 101 Professional Learning series with other educators?",
-          "choices": [
-            {
-              "value": "yes",
-              "text": "Yes"
-            },
-            {
-              "value": "no",
-              "text": "No"
-            }
-          ]
-        },
-        {
           "type": "rating",
           "name": "nps_ai_101_pl",
           "visibleIf": "{ai_pl_101.video1} <> 'didnt_watch' or {ai_pl_101.video2} <> 'didnt_watch' or {ai_pl_101.video3} <> 'didnt_watch' or {ai_pl_101.video4} <> 'didnt_watch' or {ai_pl_101.video5} <> 'didnt_watch'",
           "title": "After watching these videos, would you recommend them to other educators?",
           "autoGenerate": false,
-          "rateCount": 10,
-          "rateValues": [
-            {
-              "value": 0,
-              "text": "1"
-            },
-            {
-              "value": 1,
-              "text": "2"
-            },
-            {
-              "value": 2,
-              "text": "3"
-            },
-            {
-              "value": 3,
-              "text": "4"
-            },
-            {
-              "value": 4,
-              "text": "5"
-            },
-            {
-              "value": 5,
-              "text": "6"
-            },
-            {
-              "value": 6,
-              "text": "7"
-            },
-            {
-              "value": 7,
-              "text": "8"
-            },
-            {
-              "value": 8,
-              "text": "9"
-            },
-            {
-              "value": 9,
-              "text": "10"
-            }
-          ],
-          "rateMin": 0,
-          "rateMax": 9,
+          "rateCount": 7,
+          "rateMax": 7,
           "minRateDescription": "I wouldn't recommend them",
           "maxRateDescription": "I would definitely recommend them"
+        },
+        {
+          "type": "rating",
+          "name": "pl_interest_ai",
+          "title": "Would you be interested in engaging with further professional learning about teaching with AI?",
+          "autoGenerate": false,
+          "rateCount": 7,
+          "rateMax": 7,
+          "minRateDescription": "Not interested at all",
+          "maxRateDescription": "Very interested"
         },
         {
           "type": "radiogroup",
@@ -519,11 +475,11 @@
             },
             {
               "value": "practice_using_ai",
-              "text": "Guided and supported hands-on practice for using AI"
+              "text": "Guided and supported hands-on practice prompting AI"
             },
             {
               "value": "ai_for_assessments",
-              "text": "Using AI for assessments"
+              "text": "Using AI to create lesson plans and assessments"
             },
             {
               "value": "ai_ethics",
