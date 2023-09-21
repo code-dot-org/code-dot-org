@@ -123,7 +123,7 @@ Dance.prototype.init = function (config) {
     if (this.usesPreview) {
       this.studioApp_.addChangeHandler(e => {
         // We want to check if the workspace code changed only when a block has been moved or
-        // if a block hass changed.
+        // if a block has changed.
         // A move event is fired when a block is dragged and then dropped.
         if (
           e.type !== Blockly.Events.BLOCK_MOVE &&
