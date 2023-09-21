@@ -5,7 +5,7 @@ const {
 } = require("@aws-sdk/client-secrets-manager");
 const mysql = require("mysql");
 
-var response = require("cfn-response");
+var response = require("./cfn-response");
 
 const queryPromise = (connection, query) => {
   return new Promise((resolve, reject) => {
@@ -21,22 +21,25 @@ exports.handler = async (event, context) => {
 
   const props = event.ResourceProperties;
   const secretsClient = new SecretsManagerClient();
+
   const getAdminSecretCommand = new GetSecretValueCommand({
     SecretId: props.DBCredentialAdminSecret,
   });
   const adminSecretResponse = await secretsClient.send(getAdminSecretCommand);
+
   const getSQLUserSecretCommand = new GetSecretValueCommand({
     SecretId: props.DBCredentialSecret,
   });
   const sqlUserSecretResponse = await secretsClient.send(
     getSQLUserSecretCommand
   );
+
   const dbCredentialAdmin = JSON.parse(adminSecretResponse.SecretString);
   const dbCredentialSQLUser = JSON.parse(sqlUserSecretResponse.SecretString);
 
-  let physicalResourceId =
+  const physicalResourceId =
     event.PhysicalResourceId || dbCredentialSQLUser.username;
-  let responseData = event.ResponseData || {};
+  const responseData = event.ResponseData || {};
 
   const connection = mysql.createConnection({
     host: props.DBServerHost,
@@ -58,16 +61,16 @@ exports.handler = async (event, context) => {
           password: dbCredentialSQLUser.password,
           privileges: props.Privileges,
         });
-        console.log(results.createUser); // Results from the CREATE USER query.
-        console.log(results.updateUser); // Results from the UPDATE USER query.
-        console.log(results.grantResults); // Array of results from each GRANT operation.
+        console.log("createUser", results.createUser); // Results from the CREATE USER query.
+        console.log("updateUser", results.updateUser); // Results from the UPDATE USER query.
+        console.log("grantResults", results.grantResults); // Array of results from each GRANT operation.
         break;
       case "Delete":
         results = await deleteSQLUser(connection, {
           name: dbCredentialSQLUser.username,
           clientHost: clientHost,
         });
-        console.log(results);
+        console.log("Delete Results", results);
         break;
       default:
         throw new Error("Unsupported Resource Event type.");
