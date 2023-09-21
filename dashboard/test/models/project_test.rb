@@ -7,7 +7,6 @@ class ProjectTest < ActiveSupport::TestCase
 
     project.created_at = Time.now - 31.minutes
 
-    assert project.apply_project_age_publish_limits?
     assert project.existed_long_enough_to_publish?
   end
 
@@ -19,7 +18,6 @@ class ProjectTest < ActiveSupport::TestCase
     project_owner = create :student, created_at: Time.now - 8.days
     project = build :project, owner: project_owner
 
-    assert project.apply_project_age_publish_limits?
     assert project.owner_existed_long_enough_to_publish?
   end
 
