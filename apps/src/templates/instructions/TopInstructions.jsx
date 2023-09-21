@@ -750,6 +750,7 @@ class TopInstructions extends Component {
                 serverScriptId={this.props.serverScriptId}
                 serverLevelId={this.props.serverLevelId}
                 teacher={user}
+                allowUnverified={isCSF}
               />
             )}
             {tabSelected === TabType.DOCUMENTATION && (
