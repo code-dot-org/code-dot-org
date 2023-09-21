@@ -207,8 +207,8 @@ class ChannelsApi < Sinatra::Base
   post %r{/v3/channels/([^/]+)/publish/([^/]+)} do |channel_id, project_type|
     not_authorized unless owns_channel?(channel_id)
     bad_request unless ALL_PUBLISHABLE_PROJECT_TYPES.include?(project_type)
-    forbidden('teacher restricted') if sharing_disabled? && CONDITIONALLY_PUBLISHABLE_PROJECT_TYPES.include?(project_type)
-    forbidden('restricted share') if Projects.in_restricted_share_mode(channel_id, project_type)
+    forbidden('Teacher disabled sharing for project owner') if sharing_disabled? && CONDITIONALLY_PUBLISHABLE_PROJECT_TYPES.include?(project_type)
+    forbidden('Project in restricted share mode') if Projects.in_restricted_share_mode(channel_id, project_type)
 
     begin
       # Once we have back-filled the project_type column for all channels,

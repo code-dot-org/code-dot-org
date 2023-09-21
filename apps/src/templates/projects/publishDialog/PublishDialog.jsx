@@ -10,6 +10,13 @@ import {hidePublishDialog, publishProject} from './publishDialogRedux';
 import {RestrictedPublishProjectTypes} from '@cdo/apps/util/sharedConstants';
 import color from '@cdo/apps/util/color';
 
+const PUBLISH_FAILED_RESPONSE_MESSAGES = {
+  teacherRestricted: 'Teacher disabled sharing for project owner',
+  projectInRestrictedShareMode: 'Project in restricted share mode',
+  userTooNew: 'User too new to publish channel',
+  projectTooNew: 'Project too new to publish channel',
+};
+
 class PublishDialog extends Component {
   static propTypes = {
     // from redux state
@@ -67,24 +74,29 @@ class PublishDialog extends Component {
     } else if (
       publishFailedStatus === 403 &&
       RestrictedPublishProjectTypes.includes(projectType) &&
-      publishFailedReason === 'restricted share'
+      publishFailedReason ===
+        PUBLISH_FAILED_RESPONSE_MESSAGES.projectInRestrictedShareMode
     ) {
       return i18n.publishFailedRestrictedShare();
     } else if (
       publishFailedStatus === 403 &&
-      publishFailedReason === 'teacher restricted'
+      publishFailedReason === PUBLISH_FAILED_RESPONSE_MESSAGES.teacherRestricted
     ) {
       return i18n.publishFailedForbidden();
     } else if (
       publishFailedStatus === 403 &&
-      publishFailedReason.startsWith('User too new to publish channel')
+      publishFailedReason.startsWith(
+        PUBLISH_FAILED_RESPONSE_MESSAGES.userTooNew
+      )
     ) {
-      return 'user too new';
+      return `${i18n.publishFailed()}. ${i18n.publishFailedAccountTooNew()}`;
     } else if (
       publishFailedStatus === 403 &&
-      publishFailedReason.startsWith('Project too new to publish channel')
+      publishFailedReason.startsWith(
+        PUBLISH_FAILED_RESPONSE_MESSAGES.projectTooNew
+      )
     ) {
-      return 'project too new';
+      return `${i18n.publishFailed()}. ${i18n.publishFailedProjectTooNew()}`;
     } else if (publishFailedStatus === 400 || publishFailedStatus === 401) {
       return i18n.publishFailedNotAllowed();
     } else {
