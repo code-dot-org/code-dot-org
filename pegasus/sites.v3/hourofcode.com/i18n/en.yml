@@ -142,7 +142,6 @@
   required_materials: "Required Materials:"
   optional_materials: "Optional Materials:"
 
-  call_to_action_explore_roles: "Explore open roles"
   call_to_action_learn_more: 'Learn more'
   call_to_action_watch_now: 'Watch now'
   call_to_action_try_activity: 'Try activity'
@@ -215,7 +214,10 @@
   call_to_action_notify_available: "Notify me when available"
   call_to_action_register_early_access: "Register for early access"
   call_to_action_open_positions: "View open positions"
+  call_to_action_explore_roles: "Explore open roles"
   call_to_action_get_guide: "Get the guide"
+  call_to_action_make_a_donation: "Make a donation"
+  call_to_action_other_ways_to_give: "Other ways to give"
 
   aria_label_call_to_action_afe: "Learn more about Amazon Future Engineer"
   aria_label_call_to_action_teaching_csf: "Start the Teaching Computer Science Fundamentals professional learning program"
@@ -1025,6 +1027,11 @@
   csa_page_faq_answer_08_list_03: "Goal 3: Design Relevant, Engaging Activities"
   csa_page_faq_answer_08_list_04: "Goal 4: Incorporate Best Practices from the Field"
   csa_page_faq_answer_08_02: "For more information about the values that guided our work, please see our [curriculum values](%{curriculum_values_url}) and our [professional learning values](%{pl_values_url})."
+
+  help_page_top_heading: "How you can help"
+  help_page_top_desc: "Support our mission to make computer science accessible for every child, everywhere. Your efforts help us inspire future innovators and bridge the tech education gap."
+  help_page_top_subhead: "Make a donation to Code.org"
+  help_page_top_desc_02: "We're working to give every student the opportunity to learn computer science — both online AND in schools, where we establish permanent courses and train teachers. For every dollar you donate, one child is introduced to computer science."
 
   hoc_live: 'Hour of Code Live'
   hoc_live_sign_up_title: 'Sign up for Hour of Code Live'

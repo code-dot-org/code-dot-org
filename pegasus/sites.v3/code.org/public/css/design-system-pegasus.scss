@@ -220,6 +220,17 @@ a.link-button {
   }
 }
 
+// Button wrapper for side-by-side buttons
+.button-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+
+  @media screen and (max-width: $width-sm) {
+    gap: 0;
+  }
+}
+
 // Basic hero banner
 // Used on common landing pages
 // (not homepage or campaign pages)
