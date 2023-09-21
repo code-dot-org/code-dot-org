@@ -35,11 +35,9 @@ export default function RubricContent({
   studentLevelInfo,
   rubric,
   teacherHasEnabledAi,
-  currentLevelName,
+  canProvideFeedback,
   reportingData,
 }) {
-  const onLevelForEvaluation = currentLevelName === rubric.level.name;
-  const canProvideFeedback = !!studentLevelInfo && onLevelForEvaluation;
   const {lesson} = rubric;
   const rubricLevel = rubric.level;
 
@@ -213,7 +211,7 @@ export default function RubricContent({
 }
 
 RubricContent.propTypes = {
-  currentLevelName: PropTypes.string,
+  canProvideFeedback: PropTypes.bool,
   rubric: rubricShape.isRequired,
   reportingData: reportingDataShape,
   studentLevelInfo: studentLevelInfoShape,
