@@ -200,7 +200,7 @@ p.aiTokenText {
   padding: 1.25rem 1rem;
 
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 2rem;
   align-self: stretch;
 }
@@ -227,6 +227,7 @@ p.aiTokenText {
   flex-direction: column;
   gap: 1rem;
   align-self: stretch;
+  flex: 1;
 }
 
 .evidenceLevelOption {
@@ -267,12 +268,6 @@ p.errorMessage {
   margin-bottom: 0;
 }
 
-.teacherFeedbackLabel {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-
 .inputTextbox {
   width: 95%;
   height: 5rem;
@@ -283,6 +278,9 @@ p.errorMessage {
   float: right;
   line-height: 100%;
   padding: 0;
-  margin-right: 2rem;
-  color: #3EA33E;
+  color: #3ea33e;
+}
+
+.feedbackArea {
+  flex: 1;
 }

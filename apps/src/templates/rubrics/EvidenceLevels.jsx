@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import i18n from '@cdo/locale';
@@ -15,8 +15,6 @@ export default function EvidenceLevels({
   understanding,
   radioButtonCallback,
 }) {
-  const [understandingChecked, setUnderstandingChecked] =
-    useState(understanding);
   if (canProvideFeedback) {
     const radioGroupName = `evidence-levels-${learningGoalKey}`;
     return (
@@ -36,12 +34,10 @@ export default function EvidenceLevels({
               name={radioGroupName}
               value={evidenceLevel.id}
               size="s"
-              checked={understandingChecked === evidenceLevel.id}
-              defaultChecked={understanding === evidenceLevel.id ? true : false}
               onChange={() => {
                 radioButtonCallback(evidenceLevel.id);
-                setUnderstandingChecked(evidenceLevel.id);
               }}
+              checked={understanding === evidenceLevel.id}
             />
             <BodyThreeText
               className={classNames(style.evidenceLevelDescriptionIndented)}

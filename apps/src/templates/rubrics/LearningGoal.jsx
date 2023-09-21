@@ -35,7 +35,6 @@ export default function LearningGoal({
   const [errorAutosaving, setErrorAutosaving] = useState(false);
   const [learningGoalEval, setLearningGoalEval] = useState(null);
   const [displayFeedback, setDisplayFeedback] = useState('');
-  const [displayUnderstanding, setDisplayUnderstanding] = useState(null);
   const understandingLevel = useRef(0);
   const teacherFeedback = useRef('');
 
@@ -72,7 +71,6 @@ export default function LearningGoal({
   };
 
   const autosave = () => {
-    console.log('autosaving');
     setAutosaved(false);
     setIsAutosaving(true);
     setErrorAutosaving(false);
@@ -82,25 +80,18 @@ export default function LearningGoal({
       feedback: teacherFeedback.current,
       understanding: understandingLevel.current,
     });
-    fetch('/get_token').then(response => {
-      fetch(`${base_endpoint}/${learningGoalEval.id}`, {
-        method: 'PUT',
-        headers: {
-          'Content-Type': 'application/json',
-          'X-CSRF-Token': response.headers.get('csrf-token'),
-        },
-        body: bodyData,
+    HttpClient.put(`${base_endpoint}/${learningGoalEval.id}`, bodyData, true, {
+      'Content-Type': 'application/json',
+    })
+      .then(() => {
+        setIsAutosaving(false);
+        setAutosaved(true);
       })
-        .then(() => {
-          setIsAutosaving(false);
-          setAutosaved(true);
-        })
-        .catch(error => {
-          console.log(error);
-          setIsAutosaving(false);
-          setErrorAutosaving(true);
-        });
-    });
+      .catch(error => {
+        console.log(error);
+        setIsAutosaving(false);
+        setErrorAutosaving(true);
+      });
     clearTimeout(autosaveTimer.current);
   };
 
@@ -124,7 +115,6 @@ export default function LearningGoal({
           }
           if (json.understanding) {
             understandingLevel.current = json.understanding;
-            setDisplayUnderstanding(understandingLevel.current);
           }
         })
         .catch(error => console.log(error));
@@ -163,7 +153,9 @@ export default function LearningGoal({
         <div className={style.learningGoalHeaderRightSide}>
           {aiEnabled && <AiToken />}
           {/*TODO: Display status of feedback*/}
-          {canProvideFeedback && <BodyThreeText>Needs approval</BodyThreeText>}
+          {canProvideFeedback && (
+            <BodyThreeText>{i18n.needsApproval()}</BodyThreeText>
+          )}
         </div>
       </summary>
       <div className={style.learningGoalExpanded}>
@@ -171,7 +163,7 @@ export default function LearningGoal({
           learningGoalKey={learningGoal.key}
           evidenceLevels={learningGoal.evidenceLevels}
           canProvideFeedback={canProvideFeedback}
-          understanding={displayUnderstanding}
+          understanding={understandingLevel.current}
           radioButtonCallback={radioButtonCallback}
         />
         {learningGoal.tips && (
@@ -182,29 +174,29 @@ export default function LearningGoal({
             </div>
           </div>
         )}
-        <div>
-          <label className={style.teacherFeedbackLabel}>
-            <span>Teacher Feedback</span>
+        <div className={style.feedbackArea}>
+          <label className={style.evidenceLevelLabel}>
+            <span>{i18n.feedback()}</span>
             <textarea
               className={style.inputTextbox}
               name="teacherFeedback"
               value={displayFeedback}
               onChange={handleFeedbackChange}
-              disabled={!studentLevelInfo ? true : false}
+              disabled={!studentLevelInfo}
             />
           </label>
           {isAutosaving ? (
-            <span className={style.autosaveMessage}>Saving...</span>
+            <span className={style.autosaveMessage}>{i18n.saving()}</span>
           ) : (
             autosaved && (
               <span className={style.autosaveMessage}>
-                <FontAwesome icon="circle-check" /> Saved
+                <FontAwesome icon="circle-check" /> {i18n.savedToGallery()}
               </span>
             )
           )}
           {errorAutosaving && (
             <span className={style.autosaveMessage}>
-              There was an error autosaving your feedback
+              {i18n.feedbackSaveError()}
             </span>
           )}
         </div>

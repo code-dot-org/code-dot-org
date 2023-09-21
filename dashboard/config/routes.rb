@@ -1044,7 +1044,7 @@ Dashboard::Application.routes.draw do
 
     resources :code_review_comments, only: [:create, :update, :destroy]
 
-    resources :learning_goal_evaluations, only: [:create, :update, :show, :index] do
+    resources :learning_goal_evaluations, only: [:create, :update] do
       collection do
         get :get_evaluation
         post :get_or_create_evaluation

@@ -1544,6 +1544,7 @@
   "nameRequired": "Student name (required)",
   "nameFailureDialogTitle": "Unable to rename project",
   "nameFailureDialogBody": "It appears that your project name contains inappropriate language or personally identifiable information like your address, email, or phone number. Please pick a new name that doesn't contain \"{text}.\"",
+  "needsApproval": "Needs approval",
   "needsReview": "Needs review",
   "nestedForSameVariable": "You're using the same variable inside two or more nested loops. Use unique variable names to avoid infinite loops.",
   "newExclame": "New!",
