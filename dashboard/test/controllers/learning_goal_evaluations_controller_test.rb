@@ -111,7 +111,7 @@ class LearningGoalEvaluationsControllerTest < ActionController::TestCase
       learningGoalId: learning_goal_id,
     }
     assert_response :success
-    
+
     response_json = JSON.parse(response.body)
     assert_not_nil response_json['id']
     assert_not_equal response_json['id'], @learning_goal_evaluation.id
