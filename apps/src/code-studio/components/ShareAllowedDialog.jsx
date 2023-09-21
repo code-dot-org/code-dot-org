@@ -134,9 +134,9 @@ class ShareAllowedDialog extends React.Component {
 
   checkProjectAndAccountAge = () => {
     if (this.isPublishAllowed()) {
-      fetch(
-        `/projects/${dashboard.project.getStandaloneApp()}/${dashboard.project.getCurrentId()}/can_publish_age_status`
-      )
+      const appType = dashboard.project.getStandaloneApp();
+      const channelId = dashboard.project.getCurrentId();
+      fetch(`/projects/${appType}/${channelId}/can_publish_age_status`)
         .then(response => response.json())
         .then(data => {
           this.setState({

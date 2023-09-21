@@ -133,10 +133,8 @@ class Projects
       published_at: DateTime.now,
     }
 
-    # check on whether this is appropriate empty check
     project_query_result = @table.where(id: project_id).exclude(state: 'deleted')
-    project = project_query_result.first
-    raise NotFound, "channel `#{channel_id}` not found" unless project
+    raise NotFound, "channel `#{channel_id}` not found" if project_query_result.empty?
 
     rails_project = get_rails_project(project_id)
     if rails_project.apply_project_age_publish_limits?
@@ -243,7 +241,6 @@ class Projects
   end
 
   def users_paired_on_level?(project_id, current_user_id, owner_user_id, owner_storage_id)
-    # use this!
     channel_tokens_table = DASHBOARD_DB[:channel_tokens]
     level_id_row = channel_tokens_table.where(storage_app_id: project_id, storage_id: owner_storage_id).first
     return false if level_id_row.nil?
