@@ -4,17 +4,24 @@
 exports.SUCCESS = "SUCCESS";
 exports.FAILED = "FAILED";
 
-exports.send = function(event, context, responseStatus, responseData, physicalResourceId, noEcho) {
-
+exports.send = function (
+  event,
+  context,
+  responseStatus,
+  responseData,
+  physicalResourceId,
+  noEcho
+) {
   var responseBody = JSON.stringify({
     Status: responseStatus,
-    Reason: "See the details in CloudWatch Log Stream: " + context.logStreamName,
+    Reason:
+      "See the details in CloudWatch Log Stream: " + context.logStreamName,
     PhysicalResourceId: physicalResourceId || context.logStreamName,
     StackId: event.StackId,
     RequestId: event.RequestId,
     LogicalResourceId: event.LogicalResourceId,
     NoEcho: noEcho || false,
-    Data: responseData
+    Data: responseData,
   });
 
   console.log("Response body:\n", responseBody);
@@ -30,20 +37,20 @@ exports.send = function(event, context, responseStatus, responseData, physicalRe
     method: "PUT",
     headers: {
       "content-type": "",
-      "content-length": responseBody.length
-    }
+      "content-length": responseBody.length,
+    },
   };
 
-  var request = https.request(options, function(response) {
+  var request = https.request(options, function (response) {
     console.log("Status code: " + parseInt(response.statusCode));
     context.done();
   });
 
-  request.on("error", function(error) {
+  request.on("error", function (error) {
     console.log("send(..) failed executing https.request(..): " + error);
     context.done();
   });
 
   request.write(responseBody);
   request.end();
-}
+};
