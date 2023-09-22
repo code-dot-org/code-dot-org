@@ -17,7 +17,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-09-13 16:32:56 UTC",
+    "serialized_at": "2023-09-20 16:34:23 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -9591,18 +9591,6 @@
       }
     },
     {
-      "name": "Extra Code in Challenge Levels",
-      "url": "https://docs.google.com/document/d/1Zx8e-b_GJFNxsuXx10tIdh3EPSGoqPwpxGh2Hz70B2w/view",
-      "key": "extra_code_in_challenge_levels",
-      "properties": {
-        "audience": "Teacher",
-        "type": "Resource"
-      },
-      "seeding_key": {
-        "resource.key": "extra_code_in_challenge_levels"
-      }
-    },
-    {
       "name": "Formatting HTML",
       "url": "https://drive.google.com/file/d/1LHg1qYSF9pA22M7grp0DKgXmSh_yBgoF/view",
       "key": "formatting_html",
@@ -11024,12 +11012,6 @@
     {
       "seeding_key": {
         "lesson.key": "Project - Personal Web Page",
-        "resource.key": "extra_code_in_challenge_levels"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Personal Web Page",
         "resource.key": "peer_review_-_personal_website"
       }
     },
@@ -11085,12 +11067,6 @@
       "seeding_key": {
         "lesson.key": "Project - Personal Web Page",
         "resource.key": "publishing_your_website"
-      }
-    },
-    {
-      "seeding_key": {
-        "lesson.key": "Project - Website for a Purpose",
-        "resource.key": "extra_code_in_challenge_levels"
       }
     },
     {
