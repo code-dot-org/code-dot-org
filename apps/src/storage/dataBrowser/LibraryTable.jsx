@@ -130,7 +130,7 @@ const styles = {
   import: {
     backgroundColor: color.orange,
     border: 'none',
-    fontFamily: '"Gotham 5r", sans-serif',
+    ...fontConstants['main-font-semi-bold'],
     fontSize: '14px',
     color: color.white,
     padding: '1px 7px 2px',

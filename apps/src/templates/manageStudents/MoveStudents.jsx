@@ -316,7 +316,7 @@ const styles = {
     ...fontConstants['main-font-regular'],
   },
   error: {
-    fontFamily: '"Gotham 5r", sans-serif',
+    ...fontConstants['main-font-semi-bold'],
     color: color.red,
     paddingBottom: PADDING / 2,
   },

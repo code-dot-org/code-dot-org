@@ -367,7 +367,7 @@ const styles = {
     marginTop: 20,
   },
   tutorialDetailName: {
-    fontFamily: '"Gotham 5r", sans-serif',
+    ...fontConstants['main-font-semi-bold'],
     fontSize: 22,
     paddingBottom: 4,
   },
@@ -385,7 +385,7 @@ const styles = {
     fontSize: 14,
   },
   tutorialDetailDisabled: {
-    fontFamily: '"Gotham 5r", sans-serif',
+    ...fontConstants['main-font-semi-bold'],
     fontSize: 16,
     paddingTop: 40,
   },
@@ -399,7 +399,7 @@ const styles = {
   tutorialDetailsTableTitle: {
     padding: 5,
     width: '40%',
-    fontFamily: '"Gotham 5r", sans-serif',
+    ...fontConstants['main-font-semi-bold'],
     border: '1px solid lightgrey',
   },
   tutorialDetailsTableBody: {

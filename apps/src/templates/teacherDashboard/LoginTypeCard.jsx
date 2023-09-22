@@ -84,7 +84,7 @@ const styles = {
     paddingBottom: 0,
     fontSize: 12,
     lineHeight: '18px',
-    fontFamily: '"Gotham 5r", sans-serif',
+    ...fontConstants['main-font-semi-bold'],
     zIndex: 2,
     color: color.neutral_dark,
   },

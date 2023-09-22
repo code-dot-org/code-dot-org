@@ -191,7 +191,7 @@ const styles = {
   },
   linkToViewAll: {
     fontSize: 14,
-    fontFamily: `'Gotham 5r', sans-serif`,
+    ...fontConstants['main-font-semi-bold'],
     marginTop: -2,
     display: 'inline',
   },

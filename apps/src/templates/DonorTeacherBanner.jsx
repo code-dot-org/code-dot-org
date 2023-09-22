@@ -221,7 +221,7 @@ const styles = {
   button: {
     marginLeft: 7,
     marginRight: 7,
-    fontFamily: '"Gotham 5r", sans-serif',
+    ...fontConstants['main-font-semi-bold'],
     lineHeight: '30px',
     borderWidth: 2,
     borderStyle: 'solid',
@@ -232,7 +232,7 @@ const styles = {
     marginRight: 7,
     marginTop: 5,
     boxShadow: 'none',
-    fontFamily: '"Gotham 5r", sans-serif',
+    ...fontConstants['main-font-semi-bold'],
     color: color.neutral_dark,
     lineHeight: '30px',
     borderWidth: 2,

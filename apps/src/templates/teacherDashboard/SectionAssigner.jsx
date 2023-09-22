@@ -114,7 +114,7 @@ const styles = {
   label: {
     width: '100%',
     fontSize: 16,
-    fontFamily: '"Gotham 5r", sans-serif',
+    ...fontConstants['main-font-semi-bold'],
     paddingTop: 10,
     paddingBottom: 10,
     display: 'flex',

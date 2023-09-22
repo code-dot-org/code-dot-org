@@ -255,7 +255,7 @@ const styles = {
     color: color.charcoal,
   },
   detailsLink: {
-    fontFamily: '"Gotham 5r", sans-serif',
+    ...fontConstants['main-font-semi-bold'],
     color: color.teal,
   },
   wordBox: {

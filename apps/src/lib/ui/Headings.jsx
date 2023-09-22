@@ -7,8 +7,7 @@ import fontConstants from '@cdo/apps/fontConstants';
 
 const baseHeadingStyle = {
   display: 'block',
-  fontFamily: '"Gotham 5r", sans-serif',
-  fontWeight: 'normal',
+  ...fontConstants['main-font-semi-bold'],
   margin: '10px 0',
   color: color.dark_charcoal,
 };
@@ -49,7 +48,7 @@ export class Heading2 extends Component {
 
 export const h3Style = {
   ...baseHeadingStyle,
-  fontFamily: '"Gotham 5r", sans-serif',
+  ...fontConstants['main-font-semi-bold'],
   fontSize: 16,
   lineHeight: '24px',
 };

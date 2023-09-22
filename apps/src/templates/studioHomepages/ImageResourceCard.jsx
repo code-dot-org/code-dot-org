@@ -95,7 +95,7 @@ const styles = {
     fontSize: 14,
     paddingBottom: 10,
     margin: '0px 8px',
-    fontFamily: '"Gotham 5r", sans-serif',
+    ...fontConstants['main-font-semi-bold'],
     color: color.white,
   },
   description: {

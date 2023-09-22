@@ -68,7 +68,7 @@ export default class SchoolTypeDropdown extends Component {
 const styles = {
   asterisk: {
     fontSize: 20,
-    fontFamily: '"Gotham 5r", sans-serif',
+    ...fontConstants['main-font-semi-bold'],
     color: color.red,
   },
   errors: {

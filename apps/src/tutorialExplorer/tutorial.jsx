@@ -89,7 +89,7 @@ const styles = {
     border: '1px solid rgb(162, 162, 162)',
   },
   tutorialName: {
-    fontFamily: '"Gotham 5r", sans-serif',
+    ...fontConstants['main-font-semi-bold'],
     fontSize: 15,
     textOverflow: 'ellipsis',
     whiteSpace: 'nowrap',

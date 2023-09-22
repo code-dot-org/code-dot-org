@@ -8,6 +8,7 @@ import {studio} from '@cdo/apps/lib/util/urlHelpers';
 const PROJECT_DEFAULT_IMAGE = '/blockly/media/projects/project_default.png';
 
 import {UnlocalizedTimeAgo} from '../TimeAgo';
+import fontConstants from '@cdo/apps/fontConstants';
 
 export default class ProjectCard extends React.Component {
   static propTypes = {
@@ -119,7 +120,7 @@ const styles = {
     paddingTop: 18,
     paddingBottom: 5,
     fontSize: 16,
-    fontFamily: '"Gotham 5r", sans-serif',
+    ...fontConstants['main-font-semi-bold'],
     color: color.neutral_dark,
     overflow: 'hidden',
     textOverflow: 'ellipsis',
@@ -171,7 +172,7 @@ const styles = {
     weight: '100%',
   },
   bold: {
-    fontFamily: '"Gotham 5r", sans-serif',
+    ...fontConstants['main-font-semi-bold'],
   },
   noTime: {
     paddingBottom: 10,

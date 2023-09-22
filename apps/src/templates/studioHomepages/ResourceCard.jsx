@@ -137,7 +137,7 @@ const styles = {
     flex: 'none',
     fontSize: 14,
     margin: '0px 8px',
-    fontFamily: '"Gotham 5r", sans-serif',
+    ...fontConstants['main-font-semi-bold'],
     color: color.brand_accent_default,
   },
   description: {
