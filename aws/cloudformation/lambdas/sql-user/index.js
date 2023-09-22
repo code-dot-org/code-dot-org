@@ -5,7 +5,7 @@ const {
 } = require("@aws-sdk/client-secrets-manager");
 const mysql = require("mysql");
 
-var response = require("cfn-response");
+const response = require("cfn-response-promise");
 
 const queryPromise = (connection, query) => {
   return new Promise((resolve, reject) => {
@@ -73,7 +73,7 @@ exports.handler = async (event, context) => {
         throw new Error("Unsupported Resource Event type.");
     }
 
-    response.send(
+    return await response.send(
       event,
       context,
       response.SUCCESS,
@@ -82,7 +82,7 @@ exports.handler = async (event, context) => {
     );
   } catch (error) {
     console.error("Error:", error);
-    response.send(
+    return await response.send(
       event,
       context,
       response.FAILED,
