@@ -1050,7 +1050,7 @@ class User < ApplicationRecord
 
     # Remove family name, in case it was set on the student account.
     # Must do this before updating user_type, to prevent validation failure.
-    if DCDO.get('family-name-features', false)
+    if DCDO.get('family-name-features', CDO.default_family_name_mode)
       self.family_name = nil
     end
 
@@ -2078,7 +2078,7 @@ class User < ApplicationRecord
       id: id,
       name: name,
       username: username,
-      family_name: DCDO.get('family-name-features', false) ? family_name : nil,
+      family_name: DCDO.get('family-name-features', CDO.default_family_name_mode) ? family_name : nil,
       email: email,
       hashed_email: hashed_email,
       user_type: user_type,
