@@ -130,6 +130,13 @@
   curricula_title_high: "High School Curricula"
   curricula_desc_high: "Browse the compelling courses and activities that invite you and your high school students to dig deeper into computer science."
 
+  for_administrators_heading: "For administrators"
+  for_administrators_desc: "Join the thousands of schools who have already incorporated computer science into their curriculum."
+  for_parents_heading: "For parents"
+  for_parents_desc: "You can help encourage your student's school to offer or expand computer science education."
+  for_educators_heading: "For educators"
+  for_educators_desc: "Start teaching today — no computer science experience necessary — with our professional learning workshops."
+
   students_label: "Students"
   teachers_label: "Teachers"
 
@@ -220,8 +227,9 @@
   call_to_action_other_ways_to_give: "Other ways to give"
   call_to_action_become_partner_usa: "Become a United States partner"
   call_to_action_become_partner_intl: "Become an international partner"
-  call_to_action_become_become_a_volunteer: "Become a volunteer"
-  call_to_action_become_start_translating: "Start translating"
+  call_to_action_become_a_volunteer: "Become a volunteer"
+  call_to_action_start_translating: "Start translating"
+  call_to_action_learn_about_advocacy: "Learn about our advocacy"
 
   aria_label_call_to_action_afe: "Learn more about Amazon Future Engineer"
   aria_label_call_to_action_teaching_csf: "Start the Teaching Computer Science Fundamentals professional learning program"
@@ -471,6 +479,7 @@
   heading_these_lessons_will: "These lessons will:"
   heading_explore_curriculum_catalog: "Explore all of our courses in the Curriculum Catalog"
   heading_csa_ai: "Looking for things to do after the AP® exam?"
+  heading_bring_cs_to_school: "Bring computer science to your school"
 
   professional_learning_section_desc: "Get the support you need as you prepare to teach. Teachers love it, with over 90% ranking it the best professional development ever!"
   professional_learning_section_desc_short: "Get the support you need as you prepare to teach."
@@ -1042,6 +1051,8 @@
   help_page_volunteer_desc: "Volunteer to teach the Hour of Code or be a guest speaker in a local classroom. Sign up to hear about opportunities near you."
   help_page_translate_heading: "Help us translate"
   help_page_volunteer_desc: "Volunteers have translated our tutorials in over 45 languages. Help us continue to expand our tutorials for students around the world!"
+  help_page_speak_for_cs_heading: "Speak up for computer science education"
+  help_page_speak_for_cs_desc: "Learn more about Code.org's advocacy work across the U.S. and the ten policies we recommend states adopt to make computer science foundational for all students. Plus, find out how you can drive change in your state."
 
   hoc_live: 'Hour of Code Live'
   hoc_live_sign_up_title: 'Sign up for Hour of Code Live'

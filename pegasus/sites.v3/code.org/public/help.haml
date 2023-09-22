@@ -41,10 +41,30 @@ theme: responsive_full_width
         %h2=hoc_s(:help_page_volunteer_heading)
         %p=hoc_s(:help_page_volunteer_desc)
         %a.link-button{href: "/volunteer"}
-          =hoc_s(:call_to_action_become_become_a_volunteer)
+          =hoc_s(:call_to_action_become_a_volunteer)
       .content-wrapper.col-45{style: "float: right"}
         %img.rounded-corners{src: "/images/help-page-translate.png", alt: "", style: "width: 100%; margin-bottom: 1.5rem"}
         %h2=hoc_s(:help_page_translate_heading)
         %p=hoc_s(:help_page_volunteer_desc)
         %a.link-button{href: "/translate"}
-          =hoc_s(:call_to_action_become_start_translating)
+          =hoc_s(:call_to_action_start_translating)
+      .clear
+
+%section.bg-neutral-dark
+  .wrapper.centered
+    %h2{style: "color: white"}
+      =hoc_s(:help_page_speak_for_cs_heading)
+    %p{style: "color: white"}
+      =hoc_s(:help_page_speak_for_cs_desc)
+    .button-wrapper.flex-container.justify-center
+      %a.link-button{href: "https://advocacy.code.org", target: "_blank", rel: "noopener noreferrer"}
+        =hoc_s(:call_to_action_learn_about_advocacy)
+
+%section
+  .wrapper.centered
+    %h2=hoc_s(:heading_bring_cs_to_school)
+    = view :help_page_bring_cs_to_school
+
+
+
+
