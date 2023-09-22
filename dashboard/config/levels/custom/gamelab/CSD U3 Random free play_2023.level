@@ -1,5 +1,10 @@
 <Gamelab>
   <config><![CDATA[{
+  "published": true,
+  "game_id": 50,
+  "created_at": "2022-09-19T22:52:58.000Z",
+  "level_num": "custom",
+  "user_id": 1,
   "properties": {
     "skin": "gamelab",
     "code_functions": {
@@ -69,7 +74,7 @@
     "mini_rubric": "false",
     "text_mode_at_start": "false",
     "teacher_markdown": "This level does not contain an exemplar because of how open-ended the directions are. Instead, we encourage you to consider this as a focused free-play level: students are free to design a drawing based on their own interests and creative expression, but focused in a particular area to give some initial guidance. This can be an opportunity to gain insights and offer feedback on the skills students demonstrate while building their drawing, even if they do not finish the level completely. This type of level can also reinforce the Problem Solving Process as students ideate and develop a web page of their own choosing (Define - Prepare - Try - Reflect).\r\n\r\nAs students develop more skills throughout the unit, they may decide to use an idea from this level as the basis for one of their projects or to continue developing on their own time.",
-    "bubble_choice_description": "Use what you've learned to so far to create a drawing that represents your favorite song!",
+    "bubble_choice_description": "Use what you've learned so far to create a drawing that represents your favorite song!",
     "libraries_enabled": "false",
     "validation_enabled": "false",
     "preload_asset_list": null,
@@ -77,13 +82,8 @@
 
     ]
   },
-  "game_id": 50,
-  "published": true,
-  "created_at": "2022-09-19T22:52:58.000Z",
-  "level_num": "custom",
-  "user_id": 1,
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-19T22:52:58.029+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Random free play_2022\\\"\"],\"cloned_from\":\"CSD U3 Random free play_2022\"},{\"changed_at\":\"2022-10-05 19:50:40 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"display_name\",\"thumbnail_url\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-05 20:04:38 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"encrypted_examples\",\"bubble_choice_description\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-05 23:32:46 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-13 22:50:08 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-19T22:52:58.029+00:00\",\"changed\":[\"cloned from \\\"CSD U3 Random free play_2022\\\"\"],\"cloned_from\":\"CSD U3 Random free play_2022\"},{\"changed_at\":\"2022-10-05 19:50:40 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"display_name\",\"thumbnail_url\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-05 20:04:38 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"encrypted_examples\",\"bubble_choice_description\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-05 23:32:46 +0000\",\"changed\":[\"code_functions\",\"long_instructions\",\"preload_asset_list\",\"encrypted_examples\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2022-10-13 22:50:08 +0000\",\"changed\":[\"code_functions\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-09-21 17:08:52 +0000\",\"changed\":[\"code_functions\",\"bubble_choice_description\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>

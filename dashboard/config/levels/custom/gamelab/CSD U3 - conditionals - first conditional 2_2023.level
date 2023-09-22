@@ -76,7 +76,13 @@
       "World.frameRate": null,
       "visible": null,
       "ifBlock": null,
-      "console.log": null
+      "console.log": null,
+      "greaterThanOperator": null,
+      "greaterThanOrEqualOperator": null,
+      "lessThanOperator": null,
+      "lessThanOrEqualOperator": null,
+      "equalityOperator": null,
+      "inequalityOperator": null
     },
     "show_debug_watch": "true",
     "palette_category_at_start": "sprites",
@@ -113,7 +119,7 @@
     "preload_asset_list": null
   },
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-19T22:57:38.608+00:00\",\"changed\":[\"cloned from \\\"CSD U3 - conditionals - first conditional 2_2022\\\"\"],\"cloned_from\":\"CSD U3 - conditionals - first conditional 2_2022\"},{\"changed_at\":\"2023-01-14 18:56:11 +0000\",\"changed\":[\"long_instructions\",\"code_functions\",\"encrypted_examples\",\"start_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-01-14 18:57:38 +0000\",\"changed\":[\"long_instructions\",\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-07-13 18:34:31 +0000\",\"changed\":[\"all_animations_single_frame\",\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-19T22:57:38.608+00:00\",\"changed\":[\"cloned from \\\"CSD U3 - conditionals - first conditional 2_2022\\\"\"],\"cloned_from\":\"CSD U3 - conditionals - first conditional 2_2022\"},{\"changed_at\":\"2023-01-14 18:56:11 +0000\",\"changed\":[\"long_instructions\",\"code_functions\",\"encrypted_examples\",\"start_blocks\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-01-14 18:57:38 +0000\",\"changed\":[\"long_instructions\",\"code_functions\",\"encrypted_examples\",\"preload_asset_list\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-07-13 18:34:31 +0000\",\"changed\":[\"all_animations_single_frame\",\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"},{\"changed_at\":\"2023-09-20 16:27:26 +0000\",\"changed\":[\"code_functions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18602,\"changed_by_email\":\"angelina+levelbuilder@code.org\"}]"
 }]]></config>
   <blocks/>
 </Gamelab>
