@@ -79,8 +79,6 @@ class UnconnectedReportAbusePopUp extends React.Component {
   cleanUpCaptcha() {
     const captchaScript = document.getElementById('captcha');
     if (captchaScript) {
-      const adjacentDiv = captchaScript.nextElementSibling;
-      adjacentDiv.remove();
       captchaScript.remove();
     }
     this.setState({loadedCaptcha: false});
@@ -215,16 +213,22 @@ class UnconnectedReportAbusePopUp extends React.Component {
               </button>
             </div>
             <hr className={style.lines} />
-            <BodyTwoText className={style.body}>{i18n.whyReport()}</BodyTwoText>
-            <div>
+            <BodyTwoText style={{marginTop: '1rem', marginBottom: '0.5rem'}}>
+              {i18n.whyReport()}
+            </BodyTwoText>
+            <div style={{display: 'flex', flexDirection: 'column'}}>
               {checkboxes.map(checkbox => (
-                <CheckBox
+                <div
                   key={checkbox.key}
-                  label={checkbox.label}
-                  checked={checkbox.checked}
-                  onChange={() => this.handleCheckboxChange(checkbox.key)}
-                  size="s"
-                />
+                  style={{marginTop: '0.5rem', marginBottom: '0.5rem'}}
+                >
+                  <CheckBox
+                    label={checkbox.label}
+                    checked={checkbox.checked}
+                    onChange={() => this.handleCheckboxChange(checkbox.key)}
+                    size="m"
+                  />
+                </div>
               ))}
             </div>
             {showRecaptcha ? (
