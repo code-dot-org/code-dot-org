@@ -95,7 +95,7 @@ theme: responsive_full_width
 
 %section.bg-neutral-light
   .wrapper
-    = view :resources_tabs
+    = view :"tabs_section/resources/resources_tabs"
 
 %section
   .wrapper
@@ -111,6 +111,10 @@ theme: responsive_full_width
 %section
   .wrapper
     = view :support_and_questions_section
+
+%section{style: "padding-top: 2rem"}
+  .wrapper
+    = view :curriculum_subscribe_form, subscribe_form_section_desc: hoc_s(:subscribe_form_section_desc_csd), form_src: "http://go.pardot.com/l/153401/2017-08-24/jjjmqx"
 
 = view :analytics_event_log_helper, event_name: AnalyticsConstants::CSD_CURRICULUM_PAGE_VISITED_EVENT
 
