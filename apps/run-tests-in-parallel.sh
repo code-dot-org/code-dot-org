@@ -1,4 +1,10 @@
 #!/bin/bash
+# This is the implementation of `yarn test`. It runs all the tests 
+# (just like `npx karma start`) would, but it splits them into parallel jobs.
+#
+# If you want to add a new levelType or testType to `yarn test`, add an
+# `npx karma start` invocation to the list below.
+
 set -e
 
 MEM_PER_KARMA_PROCESS_MB=$(node -e "console.log(require('./Gruntfile').MEM_PER_KARMA_PROCESS_MB)" 2>/dev/null)
