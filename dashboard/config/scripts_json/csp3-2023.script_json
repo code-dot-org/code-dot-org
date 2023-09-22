@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-08-02 21:03:15 UTC",
+    "serialized_at": "2023-09-22 16:52:58 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -3942,7 +3942,7 @@
     },
     {
       "name": "Assessment Day - Intro to App Development",
-      "url": "https://docs.google.com/presentation/d/1TgJ5dvncE-Ch_svWzAn53-9jryR-k1XF4Oue6MhVEso/edit?usp=sharing",
+      "url": "https://docs.google.com/presentation/d/10seNCnYOXM3rbamENm6uq91HEHob3UjbFtF5zhyTllY/edit?usp=sharing",
       "key": "assessment_day_-_intro_to_app_development",
       "properties": {
         "audience": "Teacher",
