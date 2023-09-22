@@ -138,7 +138,7 @@ def parse_options
       opts.on("-f", "--feature Feature", Array, "Single feature or comma separated list of features to run") do |f|
         options.features = f
       end
-      opts.on("-l", "--local", "Use local domains. Also use local webdriver (not Saucelabs) unless -c is specified.") do
+      opts.on("-l", "--local", "Use local domains. Also use local webdriver (not Saucelabs) unless -c or the SELENIUM_URL environment variable is specified.") do
         options.local = 'true'
         options.pegasus_domain = 'localhost.code.org:3000'
         options.dashboard_domain = 'localhost-studio.code.org:3000'
