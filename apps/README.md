@@ -17,11 +17,11 @@ cd apps
 
 # Machine setup (OSX with Homebrew)
 brew install node
-npm install -g grunt-cli yarn@1.22.5
+npm install -g yarn@1.22.5
 
 # Perform first full build
 yarn
-npm run build
+yarn build
 
 # automatically rebuild every time you make changes to source files
 yarn start
@@ -56,74 +56,74 @@ If the symlink is in place, then as you rebuild apps, your results should show u
 To run a full development build (minus localization):
 
 ```
-npm run build
+yarn build
 ```
 
-- `npm run build` builds a 'debug' version with more readable javascript
-- `npm run build -- --app=maze` builds a 'debug' version of only the maze app
-- `npm run build:dist` builds a minified version suitable for production
-- `npm run clean` will clean the build directory
+- `yarn build` builds a 'debug' version with more readable javascript
+- `yarn build --app=maze` builds a 'debug' version of only the maze app
+- `yarn build:dist` builds a minified version suitable for production
+- `yarn clean` will clean the build/ directory
 
 See also: [Full build with blockly changes](#full-build-with-blockly-changes)
 
 #### Running tests
 
 ```
-npm test
+yarn test
 ```
 
-- If you see an error ~like `ReferenceError: Blockly is not defined` or notes~ about missing npm packages, double check that you've run `npm run build` beforehand.
-- ~Right now, the tests require a full/production build to pass. Failures like `Cannot set property 'imageDimensions_' of undefined` in setup steps may indicate that you are testing against a debug build.~
-- These tests will also be run via Circle CI when you create a pull request
+- Run Drone CI when you create a pull request.
+- Run `yarn build` before testing. If you see errors like `Module not found: Error: Can't resolve '../../../build/` double-check you built.
 
-To run an individual unit test, use the `--entry` option to target a file:
-
+Only run unit tests:
 ```
-npm run test:unit -- --entry=./test/unit/gridUtilsTest.js
+yarn test:unit
 ```
 
-This option also works on directories, in which case all files within that
-directory and any subdirectories will be run:
-
+Run an individual unit test:
 ```
-npm run test:unit -- --entry=./test/unit/applab/
+yarn test:unit --entry=./test/unit/gridUtilsTest.js
 ```
 
-It's also possible to run an individual test or subset of tests with:
+Run unit tests in the `applab` folder:
 
 ```
-npm run test:unit -- --grep='TutorialExplorer'
+yarn test:unit --entry=./test/unit/applab/
 ```
 
-To run integration tests for a certain level type:
+Run unit tests with `TutorialExplorer` in their name:
+```
+yarn test:unit --grep='TutorialExplorer'
+```
+
+Run integration tests with `ec_data_blocks` in their name:
 
 ```
-npm run test:integration -- --levelType=maze
+yarn test:integration --grep=ec_data_blocks
 ```
 
-You can also use the `--grep` flag with integration tests:
+Run integration tests for `maze` levels:
 
 ```
-npm run test:integration -- --grep=ec_data_blocks
+yarn test:integration --levelType=maze
 ```
 
 ##### Rerun Tests Automatically
 
-To rerun tests automatically on every file change, use the `--watchTests` flag.
+Rerun tests automatically on every file change:
 
 ```
-npm run test:unit -- --watchTests
+yarn test:unit --watchTests
 ```
 
 This will work on any of the test commands.
 
 ##### Debugging Tests
 
-To debug tests, your best bet is to run them in Chrome. To run the tests in
-Chrome, use the `--browser=Chrome` flag in conjunction with `--watchTests`:
+To debug tests, your best bet is to run them in Chrome:
 
 ```
-npm run test:unit -- --browser=Chrome --watchTests --grep='TutorialExplorer'
+yarn test:unit --browser=Chrome --watchTests
 ```
 
 A new chrome browser window will open where the tests will be running. You can
@@ -138,7 +138,7 @@ Coverage reports can be generated for any collection of tests by specifying the
 folder. For example, to see what code gets executed by unit tests, run:
 
 ```
-COVERAGE=1 npm run test:unit
+COVERAGE=1 yarn test:unit
 ```
 
 Then you can open up the html report with (note that the exact file path may be
@@ -206,15 +206,15 @@ Running a full localization build can take several minutes. Since localization r
 
 Note: Using the live-reload server with localization builds is prone to the `Error: EMFILE, too many open files` problem. See the `ulimit` fix [under the live-reload server heading](#running-with-live-reload-server).
 
-#### Forwarding new strings on to CrowdIn
+#### Sending new i18n strings to CrowdIn
 
 To get new strings localized using CrowdIn, we currently run a script in a private repository. Contact a code.org engineer to trigger an update.
 
 ### Adding a new npm package
 
-To add a new package using npm, e.g., `lodash`, run: `npm i --save-dev lodash`
+To add a new package using npm, e.g., `lodash`, run: `yarn add --dev lodash`
 
-- `--save-dev` adds the dependency to node's package.json, freezing the current version
+- `--dev` adds the dependency to node's package.json, freezing the current version
 - Because the build process is done in dev mode, include dependencies as devDependencies rather than production dependencies
 
 ### Typescript Migration
@@ -233,7 +233,7 @@ For notes on our pull process, where to find tasks to work on, etc., see the [Co
 - 80 character line length.
 - 2 space indent.
 - 4 space indent on long line breaks.
-- `yarn lint` should report 0 warnings or errors.
+- `yarn lint` should report 0 warnings or errors. Try `yarn lint:fix`.
 - See our [project style guide](../STYLEGUIDE.md) for more details, including CSS/SCSS styling.
 
 ## Other Docs
