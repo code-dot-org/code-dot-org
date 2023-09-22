@@ -74,7 +74,7 @@ en:
         reset_password_token: "The reset password link you have followed"
         error:
           future: can't be in the future
-        user_type: "Account Type"
+        user_type: 'Account Type'
         us_state: 'State'
 
   beta: "beta"

@@ -189,7 +189,7 @@ class User < ApplicationRecord
   ].freeze
 
   validates_presence_of :user_type
-  validates_inclusion_of :user_type, in: USER_TYPE_OPTIONS, if: -> {user_type.present?}
+  validates_inclusion_of :user_type, in: USER_TYPE_OPTIONS, if: :user_type?
 
   belongs_to :studio_person, optional: true
   has_many :hint_view_requests
