@@ -115,6 +115,27 @@
 
   in_partnership_with: "In partnership with"
 
+  shop_code_dot_org_heading: "Shop Code.org"
+  shop_code_dot_org_desc: "Support our work and wear the movement with pride. Our hats have been worn by President Obama and celebrities too."
+
+  spread_the_word_heading: "Spread the word"
+  spread_the_word_desc: "Amplify our impact by sharing Code.org with your network. From social media to email updates, discover how you can help us reach more educators, students, and advocates."
+
+  follow_us_heading: "Follow us on social media"
+  follow_us_desc: "Stay up to date with us on social media and share our posts with your network to stay informed and help drive awareness."
+  facebook: "Facebook"
+  twitter: "Twitter"
+  linked_in: "LinkedIn"
+  instagram: "Instagram"
+  tik_tok: "TikTok"
+
+  subscribe_to_emails_heading: "Subscribe to emails"
+  subscribe_to_emails_desc: "Read about what's happening at Code.org and in computer science education through quarterly updates via our mailing list."
+  subscribe_to_emails_intl: "Subscribe to international updates"
+
+  promote_code_dot_org_heading: "Promote Code.org"
+  promote_code_dot_org_desc: "Promote computer science in your area with the help of stats, quotes, and videos."
+
   afe_partnership_logo_alt: "Amazon Future Engineer logo"
   afe_partnership_thanks_desc: "Amazon Future Engineer is a comprehensive childhood-to-career program to inspire, educate, and train low-income and other disadvantaged children and young people to pursue careers in computer science. [Learn about our partnership](%{afe_url})."
 
@@ -230,6 +251,7 @@
   call_to_action_become_a_volunteer: "Become a volunteer"
   call_to_action_start_translating: "Start translating"
   call_to_action_learn_about_advocacy: "Learn about our advocacy"
+  call_to_action_visit_store: "Visit the store"
 
   aria_label_call_to_action_afe: "Learn more about Amazon Future Engineer"
   aria_label_call_to_action_teaching_csf: "Start the Teaching Computer Science Fundamentals professional learning program"

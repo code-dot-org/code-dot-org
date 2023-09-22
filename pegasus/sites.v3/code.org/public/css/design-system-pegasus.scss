@@ -87,6 +87,8 @@ i.fa-fw {
   &.align-items-start { align-items: flex-start; }
   &.wrap { flex-wrap: wrap; }
   &.wrap-reverse { flex-wrap: wrap-reverse; }
+  &.gap-1 { gap: 1rem }
+  &.gap-2 { gap: 2rem }
 }
 
 // Grid container

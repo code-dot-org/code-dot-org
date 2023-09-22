@@ -3,4 +3,47 @@
 
 @import 'color', 'font', 'typography', 'breakpoints', 'barlow-semi-condensed-font';
 
+section.shop {
 
+  .wrapper {
+    max-width: 1100px;
+  }
+
+  img {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+section.spread-the-word {
+
+  div.content-wrapper {
+    gap: 2rem;
+  }
+
+  ul.icon-bullet-list {
+    margin: 0;
+    width: 55%;
+
+    @media screen and (max-width: $width-md) {
+      width: 100%;
+    }
+  }
+
+  figure {
+    background: url("/images/help-page-spread-word.png") center no-repeat;
+    background-size: cover;
+    height: auto;
+    flex-grow: 1;
+    margin: 1.5rem 0;
+
+    @media screen and (max-width: $width-md) {
+      height: 28rem;
+      margin-bottom: 0;
+    }
+
+    @media screen and (max-width: $width-sm) {
+      height: 20rem;
+    }
+  }
+}

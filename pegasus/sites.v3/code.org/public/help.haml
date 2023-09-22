@@ -35,7 +35,7 @@ theme: responsive_full_width
 
 %section
   .wrapper
-    %div.flex-wrapper.justify-space-between.wrap
+    %div.flex-container.justify-space-between.wrap{style: "gap: 3rem"}
       .content-wrapper.col-45
         %img.rounded-corners{src: "/images/help-page-volunteer.png", alt: "", style: "width: 100%; margin-bottom: 1.5rem"}
         %h2=hoc_s(:help_page_volunteer_heading)
@@ -48,7 +48,7 @@ theme: responsive_full_width
         %p=hoc_s(:help_page_volunteer_desc)
         %a.link-button{href: "/translate"}
           =hoc_s(:call_to_action_start_translating)
-      .clear
+    .clear
 
 %section.bg-neutral-dark
   .wrapper.centered
@@ -56,15 +56,37 @@ theme: responsive_full_width
       =hoc_s(:help_page_speak_for_cs_heading)
     %p{style: "color: white"}
       =hoc_s(:help_page_speak_for_cs_desc)
-    .button-wrapper.flex-container.justify-center
-      %a.link-button{href: "https://advocacy.code.org", target: "_blank", rel: "noopener noreferrer"}
-        =hoc_s(:call_to_action_learn_about_advocacy)
+    %a.link-button{href: "https://advocacy.code.org", target: "_blank", rel: "noopener noreferrer"}
+      =hoc_s(:call_to_action_learn_about_advocacy)
 
 %section
   .wrapper.centered
     %h2=hoc_s(:heading_bring_cs_to_school)
-    = view :help_page_bring_cs_to_school
+    = view :"help/help_page_bring_cs_to_school"
 
+%section.shop.bg-neutral-dark
+  .wrapper.centered.flex-container.align-items-center.gap-2
+    .flex-container.justify-space-between.gap-1
+      %img{src: "/images/help-page-shop-01.png", alt: ""}
+      %img{src: "/images/help-page-shop-02.png", alt: ""}
+    .text-wrapper
+      %h2{style: "color: white"}
+        =hoc_s(:shop_code_dot_org_heading)
+      %p{style: "color: white"}
+        =hoc_s(:shop_code_dot_org_desc)
+      %a.link-button{href: "https://store.code.org", target: "_blank", rel: "noopener noreferrer"}
+        =hoc_s(:call_to_action_visit_store)
+    .flex-container.justify-space-between.gap-1
+      %img{src: "/images/help-page-shop-03.png", alt: ""}
+      %img{src: "/images/help-page-shop-04.png", alt: ""}
 
-
-
+%section.spread-the-word
+  .wrapper
+    %h2
+      =hoc_s(:spread_the_word_heading)
+    %p
+      =hoc_s(:spread_the_word_desc)
+    %div.content-wrapper.flex-container.justify-space-between.wrap-reverse
+      = view :"help/help_page_spread_the_word"
+      %figure.rounded-corners.col-33
+    .clear
