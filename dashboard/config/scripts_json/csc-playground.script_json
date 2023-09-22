@@ -11,7 +11,7 @@
     },
     "new_name": null,
     "family_name": "playground",
-    "serialized_at": "2023-08-30 18:54:18 UTC",
+    "serialized_at": "2023-09-22 19:26:45 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -1573,6 +1573,27 @@
     },
     {
       "chapter": 45,
+      "position": 2,
+      "activity_section_position": 2,
+      "assessment": false,
+      "properties": {
+      },
+      "bonus": false,
+      "seeding_key": {
+        "script_level.level_keys": [
+          "kjf_test_landmarks_2"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "csc-playground",
+        "activity_section.key": "4789b720-e7e6-44ff-9fe3-327a4d7c5e75"
+      },
+      "level_keys": [
+        "kjf_test_landmarks_2"
+      ]
+    },
+    {
+      "chapter": 46,
       "position": 1,
       "activity_section_position": 1,
       "assessment": false,
@@ -1596,7 +1617,7 @@
       ]
     },
     {
-      "chapter": 46,
+      "chapter": 47,
       "position": 2,
       "activity_section_position": 2,
       "assessment": false,
@@ -1620,7 +1641,7 @@
       ]
     },
     {
-      "chapter": 47,
+      "chapter": 48,
       "position": 3,
       "activity_section_position": 3,
       "assessment": false,
@@ -2166,6 +2187,18 @@
         "level.key": "kjf_test_landmarks",
         "script_level.level_keys": [
           "kjf_test_landmarks"
+        ],
+        "lesson.key": "lesson-6",
+        "lesson_group.key": "",
+        "script.name": "csc-playground",
+        "activity_section.key": "4789b720-e7e6-44ff-9fe3-327a4d7c5e75"
+      }
+    },
+    {
+      "seeding_key": {
+        "level.key": "kjf_test_landmarks_2",
+        "script_level.level_keys": [
+          "kjf_test_landmarks_2"
         ],
         "lesson.key": "lesson-6",
         "lesson_group.key": "",

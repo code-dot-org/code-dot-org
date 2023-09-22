@@ -288,7 +288,10 @@ function baseName(themeName) {
 
 function setAllWorkspacesTheme(theme) {
   Blockly.Workspace.getAll().forEach(workspace => {
-    workspace.setTheme(theme);
+    // Headless workspaces do not have the ability to set the theme.
+    if (typeof workspace.setTheme === 'function') {
+      workspace.setTheme(theme);
+    }
   });
 }
 
