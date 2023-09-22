@@ -2378,8 +2378,6 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test 'upgrade_to_teacher given valid params should delete family_name property' do
-    DCDO.stubs(:get).with('family-name-features', false).returns(true)
-
     family_name = 'TestFamName'
     user = User.create(@good_data.merge({family_name: family_name}))
     user.reload
@@ -2390,8 +2388,6 @@ class UserTest < ActiveSupport::TestCase
 
     user.reload
     assert_nil user.family_name
-
-    DCDO.unstub(:get)
   end
 
   def assert_parent_email_params_equals_email_preference(parent_email_params, email_preference)
@@ -3924,7 +3920,7 @@ class UserTest < ActiveSupport::TestCase
       @pl_script.reload
     end
 
-    def put_participant_in_section(participant, instructor, script, unit_group=nil, participant_type='student')
+    def put_participant_in_section(participant, instructor, script, unit_group = nil, participant_type = 'student')
       section = create :section, user_id: instructor.id, script_id: script.try(:id), course_id: unit_group.try(:id), participant_type: participant_type, grades: participant_type == 'student' ? ['9'] : ['pl']
       Follower.create!(section_id: section.id, student_user_id: participant.id, user: instructor)
       section
@@ -4809,14 +4805,8 @@ class UserTest < ActiveSupport::TestCase
     family_name = 'TestFamilyName'
     user.family_name = family_name
 
-    assert_nil(user.summarize[:family_name])
-
-    DCDO.stubs(:get).with('family-name-features', false).returns(true)
-
     assert(user.summarize.key?(:family_name))
     assert_equal(family_name, user.summarize[:family_name])
-
-    DCDO.unstub(:get)
   end
 
   test 'family name is not allowed on pl participants' do

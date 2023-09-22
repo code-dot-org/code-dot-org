@@ -2,17 +2,46 @@
 sq:
   data:
     progressions:
+      Add Content and HTML: Shtoni përmbajtje dhe HTML
+      Add Content and Structure to Your Page: Shtoni përmbajtje dhe strukturë në faqen
+        tuaj
+      Add Style: Shtoni stil
+      Add Style to Your Page: Shtoni stil në faqen tuaj
+      Adding Pages: Shtimi i faqeve
+      'App: Choose a Kid''s Movie': 'Aplikacioni: Zgjedhni një film për fëmijë'
+      'App: Friend Finder': 'Aplikacioni: Gjetësi i shokut'
+      'App: Guess the Number': 'Aplikacioni: Qëlloni numrin'
+      'App: How Many Countries': 'Aplikacioni: Sa shtete'
+      'App: Improved Pet App': 'Aplikacioni: Aplikacioni i përmirësuar i kafshëve
+        shtëpiake'
+      'App: Is It Your Birthday?': 'Aplikacioni: A është ditëlindja juaj?'
+      'App: My Famous Birthday': 'Aplikacioni: Ditëlindja ime e famshme'
+      'App: National Parks': 'Aplikacioni: Parqet Kombëtare'
+      'App: Outfit Picker': 'Aplikacioni: Zgjedhësi i veshjeve'
+      'App: Pet Chooser': 'Aplikacioni: Zgjedhësi i kafshëve shtëpiake'
+      'App: Stamp Notebook': 'Aplikacioni: Fletore e vulës'
+      'App: Story Creator': 'Aplikacioni: Krijuesi i historisë'
+      'App: The Fastest Finger': 'Aplikacioni: Gishti më i shpejtë'
+      'App: Where Should I Live?': 'Aplikacioni: Ku duhet të jetoj?'
       'Artist: Variables': 'Artist: Variablat'
       Assessment: Vlerësim
       Back and Forth: Prapa dhe perpara
       Bass, Mid, and Treble: Bass, Mes, dhe Treble
       Challenge: Sfidë
+      'Challenge: Lists': 'Sfida: Listat'
+      'Challenge: RGB Colors': 'Sfida: Ngjyrat RGB'
+      Challenges: Sfidat
+      Check Your Work: Kontrolloni punën tuaj
+      Code Your Page: Kodoni faqen tuaj
       Customize: Personalizo
       Dance Crews: Ekipet e Vallezimit
       Debugging: Debugging
       Design Mode: dan is a masive dick-
+      End-Of-Unit Survey: Anketa në fund të njësisë
+      End-of-Unit Survey: Anketa në fund të njësisë
       Events: Ngjarje
       Example: Shëmbull
+      Experiment with Web Lab: Eksperimentoni me Web Lab
       Exploration: Eksplorimi
       'Exploration: Sample Project': 'Hulumtim: Shembull i projektit'
       For Loops: Për Ciklet
@@ -22,6 +51,7 @@ sq:
       Functions: funksione
       Functions with Parameters: Funksionet me parametra
       Get In Formation: Hyni ne rradhe
+      Incorporate Feedback: Përfshini Feedback
       Introducing Sprite Lab: Prezantimi i Sprite Lab
       Lesson Extras: Mësim shtesë
       Levels: Nivelet
@@ -30,32 +60,54 @@ sq:
       'Mini-Project: Create a Virtual Pet': 'Mini-projekt: Krijoni një kafshë shtëpiake
         virtuale'
       'Mini-Project: Outbreak Simulator': 'Mini-projekt: Simulimi i shpërthimit'
+      'Mini-Project: Royal Battle': 'Mini-Projekti: Beteja Mbretërore'
       'Mini-Project: Sticker Art': 'Mini-Projekt: Arti i Stikerave'
       'Mini-Project: User Input Programs': 'Mini-projekt: Programet e hyrjes (input)
         së përdoruesit'
       'Mini-Project: Virtual Pet': 'Mini-projekt: Kafshë shtëpiake virtuale'
+      'Mini-project: Jorge the Dog': 'Mini-projekt: Qeni Jorge'
       Modify simulation variables: Modifikoni variablat e simulimit
       More Buttons: Më shumë butona
       Move It Move it Video  - Unplugged Activity: Video Move it Move it- Aktivitet
         i shkëputur
+      My Online Neighborhood: Lagja ime në Internet
       My Robotic Friends - Unplugged Activity: Shokët e mi robotik - Aktivitet i shkëputur
       Overview: Përmbledhja
       Pair Programming: Programim në çift
       Picturing Data: Vizualizimi i të dhënave
+      Post-Course Survey Instructions: Udhëzimet e anketës pas kursit
       Practice: Ushtrime
       Prediction: Parashikimi
+      Programming with Rey and BB-8: Programimi me Rey dhe BB-8
       Project: Projekt
+      Project Guide: Udhëzuesi i projektit
+      Publishing Your Website: Publikimi i webfaqes tuaj
       Quarter Notes: Quarter Notes
+      Quick Check: Kontroll i shpejtë
       Reflection: Reflektim
+      Review Your Page: Rishikoni faqen tuaj
+      'Review: CSS': 'Rishikimi: CSS'
+      'Review: HTML': 'Rishikimi: HTML'
       Run a simulation: Ekzekutoni një simulim
+      Sample Personal Web Pages: Shembull i webfaqeve personale
+      Sample Personal Websites: Shembull i webfaqeve personale
+      Sample Web Page: Mostër Webfaqe-je
+      Sample Website: Mostër Webfaqeje
+      Share Your Pages: Ndani faqet tuaja
+      Share Your Stylesheets: Ndani sildesheet-et e juaja
       Skill Building: Zhvillimi i shkathtësive
       Skill-Building: Zhvillimi i shkathtësive
+      Social Sleuth: Detektiv Social
       Speed it Up, Slow it Down: Shpejtoje, Ngadalesoje
+      The Big Event - Unplugged Activity: Eventi i madh - Aktivitet i shkëputur
       The Internet - Unplugged Activity: Interneti - Aktivitet i shkëputur
+      The Right App - Unplugged Activity: Aplikacioni i duhur - Aktiviteti i Shkëputur
+      Top Websites: Webfaqet kryesore
       Train AI to Clean the Ocean: Trajnoni IA-në për të pastruar oqeanin
+      Upload Your Images: Ngarkoni imazhet tuaja
       Variables: variabla
       Video: Video
-      'Video - Maze Intro: Programming with Blocks': 'Video - Maze Intro: Programimi
+      'Video - Maze Intro: Programming with Blocks': 'Video - Hyrje në labirint: Programimi
         me blloqe'
       'Video:  Debugging with the Step Button': 'Video: Korigjimi me butonin Hapi'
       'Video: Artist Intro with JR Hildebrand': 'Video: Hyrja e Artistit me JR Hildebrand'
@@ -63,12 +115,22 @@ sq:
       'Video: Conditionals: If and If/Else Statements': 'Video: Kushtet: If dhe If/Else
         deklaratat'
       'Video: Dance Party Warm Up': 'Video: Parapërgatitje për festë vallëzimi '
+      'Video: Debugging': 'Video: Debugging'
       'Video: Debugging with Scrat ': 'Video: Debugging me Scrat '
       'Video: Debugging with the Step Button': 'Video: Korigjimi me butonin e hapit'
       'Video: Follow The Digital Trail': 'Video: Ndiqni rrugën digjitale'
+      'Video: Getting Loopy': 'Video: Getting Loopy'
+      'Video: Happy Maps - Unplugged Activity': 'Video: Happy Maps - Aktivitet i shkëputur'
+      'Video: How Search Works': 'Video: Si funksionon kërkimi'
       'Video: How to Make a Sprite': 'Video: Si të krijoni një Sprite'
+      'Video: IOSP Model': 'Video: Modeli IOSP'
+      'Video: Ice Age Loops': 'Video: Epoka e Akullit Loops'
+      'Video: Intro to CSS - Part 1': 'Video: Hyrje në CSS - Pjesa 1'
+      'Video: Intro to CSS - Part 2': 'Video: Hyrje në CSS - Pjesa 2'
       'Video: Introducing Sprite Lab': 'Video: Prezantimi i Sprite Lab'
       'Video: Introduction to Play Lab': 'Video: Hyrje në Play Lab'
+      'Video: Loops in Artist': 'Video: Loops me Artistin'
+      'Video: Managing Disagreement': 'Video: Menaxhimi i mosmarrëveshjeve'
       'Video: Maze Intro - Programming with Blocks': 'Video: Hyrje në Labirint - Programimi
         me blloqe'
       'Video: Maze Intro - Programming with Blocks ': 'Video: Hyrje në Labirint -
@@ -77,16 +139,26 @@ sq:
         e lirë'
       'Video: Outbreak Simulator: Introduction': 'Video: Simulimi i shpërthimit: Hyrje'
       'Video: Pair Programming': Video- Programimi në çift
+      'Video: Pair Programming ': 'Video - Programimi në ekip '
+      'Video: Programming with Blocks': 'Video: Programimi me blloqe'
       'Video: Programming with Rey and BB-8': 'Video: Programimi me Rey dhe BB-8'
+      'Video: Publishing Your Website': 'Video: Publikimi i faqes suaj të internetit'
       'Video: Repeat Blocks': 'Video: Përsëritni blloqet'
       'Video: Repeat Blocks with BB-8': 'Video: Përsëritni blloqet me BB-8'
+      'Video: Repeat Blocks with the Artist': 'Video: Përsëritja e blloqeve me Artistin'
       'Video: Sprites in Action': 'Video: Sprites në veprim'
+      'Video: Teamwork': 'Video: Puna në ekip'
+      'Video: The Artist in Code Studio': 'Video: Artisti në Code Studio'
+      'Video: The Big Event - Unplugged Activity': 'Video: Eventi i madh - Aktivitet
+        i Shkëputur'
       'Video: The Collector': 'Video: Mbledhësi'
       'Video: The Harvester': 'Video: Korrësi'
       'Video: Training Data & Bias': 'Video: Të dhënat e trajnimit dhe paragjykimet'
       'Video: Using the Repeat Block': 'Video: Përdorimi i bllokut të përsëritur'
       'Video: While Loops with the Farmer': 'Video: While Loops me fermeren'
       Warm Up: Parapërgatitje
+      Website Project: Projekti i Webfaqes
       Welcome to Monster Town: Mirë se vini në Qytetin e Përbindëshave
       Where'd They Go?: Ku shkuan ata?
       Wrap-up: Mbështjell
+      Your Team Project: Projekti i Ekipit Tuaj

@@ -162,16 +162,16 @@ sq:
         Custom_builder: Lëviz blloqet nga toolboxi tek vendi i punës për të vizatuar nivelin që dëshiron të krijosh. Shtyp "Run" kur të jesh gati.
         jigsaw_1: Kliko bllokun
         jigsaw_2: Tërhiqeni bllokun te objektivi
-        jigsaw_3: Rregullo blloqet për të formuar imazhin
-        jigsaw_4: Rregullo blloqet për të formuar imazhin
-        jigsaw_5: Rregullo blloqet për të formuar imazhin
-        jigsaw_6: Rregullo blloqet për të formuar imazhin
-        jigsaw_7: Rregullo blloqet për të formuar imazhin
-        jigsaw_8: Rregullo blloqet për të formuar imazhin
-        jigsaw_9: Rregullo blloqet për të formuar imazhin
-        jigsaw_10: Rregullo blloqet për të formuar imazhin
-        jigsaw_11: Vendos këto blloqe sipas numrit
-        jigsaw_12: Vendos këto blloqe sipas numrit
+        jigsaw_3: Bashkoni blloqet për të formuar imazhin 
+        jigsaw_4: Bashkoni blloqet për të formuar imazhin
+        jigsaw_5: Bashkoni blloqet për të formuar imazhin
+        jigsaw_6: Bashkoni blloqet për të formuar imazhin
+        jigsaw_7: Bashkoni blloqet për të formuar imazhin 
+        jigsaw_8: Bashkoni blloqet për të formuar imazhin 
+        jigsaw_9: Bashkoni blloqet për të formuar imazhin 
+        jigsaw_10: Bashkoni blloqet për të formuar imazhin 
+        jigsaw_11: Vendosni këto blloqe në rend sipas numrit
+        jigsaw_12: Vendosni këto blloqe në rend sipas numrit
         jigsaw_13: Rregullo puzzle-in!
         mazestep_1: Përshkrimi i hapave të labirintit është këtu
         mazestep_2: Përshkrimi i hapave të Maze është këtu
@@ -354,7 +354,7 @@ sq:
         C4_unplugged_binary: Binare
         CSF_debugging_k1_blocks: Debugging
         CSF_debugging_text_blocks: Debugging
-        CSF_maze_intro_k1_blocks: Hyrje Code Studio
+        CSF_maze_intro_k1_blocks: Hyrje në Code Studio
         CSF_maze_intro_text_blocks: Hyrje Code Studio
         CSF_my_robotic_friends: Shokët e mi robotik
         frozen_intro: Hyrja e Orës së Kodimit
@@ -400,12 +400,15 @@ sq:
         CSF_SpriteLab_SpritesInAction_CDEF: Sprites në veprim
         csd_pair_programming: Programim në çift
         csd_applab_parameters: Funksionet me parametra
+        CSF_Going_Places_Safely: Lagja ime në Internet
         CSF_SpriteLab_Intro_v2: Prezantimi i Sprite Lab
         CSF_SpriteLab_SpritesInAction_v2: Sprites në veprim
         csd_debugging: Debugging
         oceans_machine_learning: Mësimi i Makinave
+        csf_my_online_neighborhood_2020: Lagja ime në Internet
         playlab_2021: Hyrje në Play Lab
         playlab_2021_reader: Hyrje në Play Lab
+        csd_u6_input_output: Inputet dhe Outputet
         csp_applab_parameters: Funksionet me parametra
     callout:
       text:

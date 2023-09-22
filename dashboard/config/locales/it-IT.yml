@@ -164,8 +164,8 @@ it:
       collections: Collezioni
       csa_labs: Laboratori CSA
       csc: Informatica interdisciplinare
-      csf: Corsi base
-      express: Esprimi
+      csf: Fondamenti di informatica
+      express: Corsi rapidi
       favorites: Preferiti
       hello_world: Ciao mondo
       labs_and_skills: Laboratori e competenze
@@ -583,11 +583,11 @@ it:
       documentation: Documentazione
       educate_beyond: Dopo Code.org
       educate_community: Comunità Online
-      educate_elementary: Scuola elementare
-      educate_high: Scuola superiore
+      educate_elementary: Scuola primaria
+      educate_high: Scuola secondaria di secondo grado
       educate_hoc: L'Ora del Codice
       educate_inspire: Ispira uno studente
-      educate_middle: Scuola media
+      educate_middle: Scuola secondaria di primo grado
       educate_overview: Panoramica dei corsi
       educate_partner: Collabora con noi
       educate_requirements: Requisiti Tecnici

@@ -5,7 +5,10 @@ import ReactTooltip from 'react-tooltip';
 import _ from 'lodash';
 import i18n from '@cdo/locale';
 import {editStudent} from './manageStudentsRedux';
-import {tableLayoutStyles} from '../tables/tableConstants';
+import {
+  tableLayoutStyles,
+  NAME_CELL_INPUT_WIDTH,
+} from '../tables/tableConstants';
 
 export default function ManageStudentFamilyNameCell({
   id,
@@ -53,7 +56,7 @@ export default function ManageStudentFamilyNameCell({
 
 const styles = {
   inputBox: {
-    width: 210,
+    width: NAME_CELL_INPUT_WIDTH,
   },
 };
 

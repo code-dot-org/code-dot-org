@@ -521,11 +521,15 @@ Resources:
         # EBS Volume is manually modified via CLI or Console to prevent instance recreation.
         # https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-ec2-instance.html#cfn-ec2-instance-blockdevicemappings
         <%
-          # Most of our instances use 64-gigabyte volumes, but we want to use a
-          # slightly larger one for production and a larger one still for test.
+          # Historically, our instances have used 64-gigabyte volumes. That's
+          # smaller than we'd like, but updating the volume size requires
+          # recreating the whole stack. We have been gradually rolling out
+          # updates on a per-environment basis, with the goal of eventually
+          # upgrading everything to 256.
           default_volume_size = 64
           volume_size_overrides = {
             production: 128,
+            staging: 256,
             test: 256
           }
         %>

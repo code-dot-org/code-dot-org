@@ -333,7 +333,7 @@ id:
         personal_login_created_username: 'Anda berhasil membuat sebuah login pribadi. Anda sekarang dapat masuk ke akun Anda dengan nama pengguna (%{username}) dan kata sandi Anda'
   nav:
     header:
-      finished_hoc: "Saya selesai!"
+      finished_hoc: "Saya sudah selesai!"
       sign_in_to_save: 'Masuk untuk mencatat kemajuan belajar'
       my_dashboard: "Dashboard Saya"
       course_catalog: "Katalog Kursus"
@@ -590,7 +590,7 @@ id:
     art_from_html_old: 'Minecraft&#8482; &copy; %{current_year} Microsoft. Hak Cipta Dilindungi. Star Wars &#8482; &copy; %{current_year} Disney dan Lucasfilm. Hak Cipta Dilindungi. Frozen&#8482; &copy; %{current_year} Disney. Hak Cipta Dilindungi. Ice Age&#8482; &copy; %{current_year} 20th Century Fox. Hak Cipta Dilindungi. Angry Birds&#8482; &copy; 2009-%{current_year} Rovio Entertainment Ltd. Hak Cipta Dilindungi. Plants vs. Zombies&#8482; &copy; %{current_year} Electronic Arts Inc. Hak Cipta Dilindungi. The Amazing World of Gumball adalah merek dagang dan &copy; 2015 Cartoon Network.'
     code_from_html: 'Code.org menggunakan p5.play, yang berlisensi <a href="http://www.gnu.org/licenses/old-licenses/lgpl-2.1-standalone.html"> GNU LGPL 2.1</a>.'
     powered_by_aws: 'Didukung oleh Amazon Web Services'
-    built_on_github: 'Bawaan GitHub dari Microsoft'
+    built_on_github: 'Dibangun di GitHub dari Microsoft'
     google_copyright: '&copy: Google inc. digunakan dalam ijin. Google Clasroom adalah merek dagang dari Google Inc.'
     trademark: '&copy; Code.org, %{current_year}. Code.org&reg;, the CODE logo and Hour of Code&reg; adalah merk dagang dari Code.org.'
     copyright: 'Hak cipta'

@@ -1050,7 +1050,7 @@ class User < ApplicationRecord
 
     # Remove family name, in case it was set on the student account.
     # Must do this before updating user_type, to prevent validation failure.
-    if DCDO.get('family-name-features', false)
+    if DCDO.get('family-name-features', CDO.default_family_name_mode)
       self.family_name = nil
     end
 
@@ -1577,7 +1577,7 @@ class User < ApplicationRecord
   # stored hashed (and not in plaintext), we can still allow them to
   # reset their password with their email (by looking up the hash)
 
-  def self.send_reset_password_instructions(attributes={})
+  def self.send_reset_password_instructions(attributes = {})
     # override of Devise method
     if attributes[:email].blank?
       user = User.new
@@ -1712,9 +1712,9 @@ class User < ApplicationRecord
   # Query to get the user_script the user was most recently assigned.
   def most_recently_assigned_user_script
     user_scripts.
-    where("assigned_at").
-    order(assigned_at: :desc).
-    first
+      where("assigned_at").
+      order(assigned_at: :desc).
+      first
   end
 
   # Get script object of the user_script the user was most recently
@@ -1733,9 +1733,9 @@ class User < ApplicationRecord
   # in.
   def user_script_with_most_recent_progress
     user_scripts.
-    where("last_progress_at").
-    order(last_progress_at: :desc).
-    first
+      where("last_progress_at").
+      order(last_progress_at: :desc).
+      first
   end
 
   # Get script object of the user_script the user made the most recent
@@ -1754,7 +1754,7 @@ class User < ApplicationRecord
   # recent progress in a script.
   def last_assignment_after_most_recent_progress?
     most_recently_assigned_user_script[:assigned_at] >=
-    user_script_with_most_recent_progress[:last_progress_at]
+      user_script_with_most_recent_progress[:last_progress_at]
   end
 
   # Check if the user's most recently assigned script is associated with at least
@@ -1979,10 +1979,10 @@ class User < ApplicationRecord
       script = Unit.get_from_cache(script_id)
       script_valid = script.csf? && script.name != Unit::COURSE1_NAME
       if (!user_level.perfect? || user_level.best_result == ActivityConstants::MANUAL_PASS_RESULT) &&
-        new_result >= ActivityConstants::BEST_PASS_RESULT &&
-        script_valid &&
-        HintViewRequest.no_hints_used?(user_id, script_id, level_id) &&
-        AuthoredHintViewRequest.no_hints_used?(user_id, script_id, level_id)
+          new_result >= ActivityConstants::BEST_PASS_RESULT &&
+          script_valid &&
+          HintViewRequest.no_hints_used?(user_id, script_id, level_id) &&
+          AuthoredHintViewRequest.no_hints_used?(user_id, script_id, level_id)
         new_csf_level_perfected = true
       end
 
@@ -2078,7 +2078,7 @@ class User < ApplicationRecord
       id: id,
       name: name,
       username: username,
-      family_name: DCDO.get('family-name-features', false) ? family_name : nil,
+      family_name: DCDO.get('family-name-features', CDO.default_family_name_mode) ? family_name : nil,
       email: email,
       hashed_email: hashed_email,
       user_type: user_type,
@@ -2364,7 +2364,7 @@ class User < ApplicationRecord
   # course, we will create a UserScript entry so that they get a course card
   # In addition, we want to have green bubbles for the levels associated with these
   # channels, so we create level progress.
-  def generate_progress_from_storage_id(storage_id, script_name='applab-intro')
+  def generate_progress_from_storage_id(storage_id, script_name = 'applab-intro')
     # applab-intro is not seeded in our minimal test env used on test/circle. We
     # should be able to handle this gracefully
     script = begin

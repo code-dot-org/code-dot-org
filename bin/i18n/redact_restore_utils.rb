@@ -7,7 +7,7 @@ require 'yaml'
 require_relative 'i18n_script_utils'
 
 class RedactRestoreUtils
-  def self.redact_file(source_path, plugins=[], format='md')
+  def self.redact_file(source_path, plugins = [], format = 'md')
     args = [CDO.dir('bin/i18n/node_modules/.bin/redact')]
     args.push("-p #{plugins_to_arg(plugins)}") unless plugins.empty?
     args.push("-f #{format}")
@@ -17,7 +17,7 @@ class RedactRestoreUtils
     return JSON.parse(stdout)
   end
 
-  def self.restore_file(source_path, redacted_path, plugins=[], format='md')
+  def self.restore_file(source_path, redacted_path, plugins = [], format = 'md')
     args = [CDO.dir('bin/i18n/node_modules/.bin/restore')]
     args.push("-p #{plugins_to_arg(plugins)}") unless plugins.empty?
     args.push("-f #{format}")
@@ -29,7 +29,7 @@ class RedactRestoreUtils
     return JSON.parse(stdout)
   end
 
-  def self.redact_data(source_data, plugins=[], format='md')
+  def self.redact_data(source_data, plugins = [], format = 'md')
     args = [CDO.dir('bin/i18n/node_modules/.bin/redact')]
     args.push("-p #{plugins_to_arg(plugins)}") unless plugins.empty?
     args.push("-f #{format}")
@@ -42,7 +42,7 @@ class RedactRestoreUtils
     return JSON.parse(stdout)
   end
 
-  def self.restore_data(source_data, redacted_data, plugins=[], format='md')
+  def self.restore_data(source_data, redacted_data, plugins = [], format = 'md')
     source_json = Tempfile.new(['source', '.json'])
     redacted_json = Tempfile.new(['redacted', '.json'])
 
@@ -60,7 +60,7 @@ class RedactRestoreUtils
     return restored
   end
 
-  def self.restore(source, redacted, dest, plugins=[], format='md')
+  def self.restore(source, redacted, dest, plugins = [], format = 'md')
     return unless File.exist?(source)
     return unless File.exist?(redacted)
     is_json = File.extname(source) == '.json'
@@ -105,7 +105,7 @@ class RedactRestoreUtils
     end
   end
 
-  def self.redact(source, dest, plugins=[], format='md')
+  def self.redact(source, dest, plugins = [], format = 'md')
     return unless File.exist? source
     FileUtils.mkdir_p File.dirname(dest)
 

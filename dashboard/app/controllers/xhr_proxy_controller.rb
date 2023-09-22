@@ -28,6 +28,7 @@ class XhrProxyController < ApplicationController
   # 'code.org' is included so applab apps can access the tables and properties of other applab apps.
   ALLOWED_HOSTNAME_SUFFIXES = %w(
     api.amadeus.com
+    api.arasaac.org
     api.blizzard.com
     api.census.gov
     api.coinlayer.com

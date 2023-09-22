@@ -34,7 +34,7 @@ System.out.println("You say "goodbye",\\nI say "hello".");
 **Option C**
 
 ```
-System.out.println("You say \\"goodbye\",\\nI say \\"hello\\".");
+System.out.println("You say \\"goodbye\\",\\nI say \\"hello\\".");
 ```
 
 </br>

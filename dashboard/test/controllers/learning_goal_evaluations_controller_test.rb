@@ -3,13 +3,14 @@ require 'test_helper'
 class LearningGoalEvaluationsControllerTest < ActionController::TestCase
   setup do
     @teacher = create :teacher
+    @student = create :student
     sign_in @teacher
     @learning_goal = create :learning_goal
-    @learning_goal_evaluation = create :learning_goal_evaluation, teacher_id: @teacher.id
+    @learning_goal_evaluation = create :learning_goal_evaluation, teacher_id: @teacher.id, user_id: @student.id, learning_goal_id: @learning_goal.id
   end
 
   test 'create learning goal evaluation' do
-    user_id = 1
+    user_id = @student.id
     level_id = 2
     unit_id = 3
     teacher_id = @teacher.id
@@ -44,7 +45,7 @@ class LearningGoalEvaluationsControllerTest < ActionController::TestCase
 
   test 'update learning goal evaluation' do
     id = @learning_goal_evaluation.id
-    user_id = 0
+    user_id = @student.id
     level_id = 9
     unit_id = 8
     teacher_id = @teacher.id

@@ -75,9 +75,5 @@ Dashboard::Application.configure do
   # Set to :debug to see everything in the log.
   config.log_level = :info
 
-  # Whether or not to skip script preloading. Setting this to true
-  # significantly speeds up server startup time.
-  config.skip_script_preload = false
-
   config.experiment_cache_time_seconds = 0
 end

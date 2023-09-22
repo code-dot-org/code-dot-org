@@ -20,6 +20,7 @@ describe I18n::Resources::Apps do
 
       I18n::Resources::Apps::Animations.expects(:sync_out).in_sequence(exec_seq)
       I18n::Resources::Apps::ExternalSources.expects(:sync_out).in_sequence(exec_seq)
+      I18n::Resources::Apps::Labs.expects(:sync_out).in_sequence(exec_seq)
 
       I18n::Resources::Apps.sync_out
     end

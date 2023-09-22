@@ -436,6 +436,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
   #
 
   test "hard-deletes all of a hard-deleted student's follower rows" do
+    DCDO.stubs(:get).with('family-name-features', false).returns(false)
     user = create :student
     section = create :section
     section.students << user
@@ -450,6 +451,7 @@ class DeleteAccountsHelperTest < ActionView::TestCase
     assert_empty user.sections_as_student
     refute_includes section.students, user
     assert_empty Follower.with_deleted.where(student_user: user)
+    DCDO.unstub(:get)
   end
 
   #
