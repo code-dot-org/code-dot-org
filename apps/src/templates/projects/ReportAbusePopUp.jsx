@@ -246,6 +246,7 @@ class UnconnectedReportAbusePopUp extends React.Component {
                 onClick={this.cancel}
                 text={i18n.cancel()}
                 color={Button.ButtonColor.neutralDark}
+                style={{fontSize: '1rem', fontFamily: 'Gotham 4r, sans-serif'}}
               />
               <Button
                 onClick={this.handleSubmit}
@@ -255,6 +256,7 @@ class UnconnectedReportAbusePopUp extends React.Component {
                 }
                 text={i18n.submit()}
                 className={style.submitButton}
+                style={{fontSize: '1rem', fontFamily: 'Gotham 4r, sans-serif'}}
                 color={Button.ButtonColor.brandSecondaryDefault}
               />
             </div>

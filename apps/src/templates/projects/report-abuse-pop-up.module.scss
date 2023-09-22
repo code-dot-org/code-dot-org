@@ -37,10 +37,6 @@
   justify-content: flex-end;
 }
 
-.submitButton {
-  outline: none;
-}
-
 .xButton {
   box-shadow: none;
   outline: none;
@@ -60,4 +56,8 @@
 
 .xIcon {
   color: $neutral_dark20;
+}
+
+.submitButton {
+  outline: none;
 }
