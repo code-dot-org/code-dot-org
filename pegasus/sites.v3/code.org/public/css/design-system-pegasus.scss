@@ -169,10 +169,6 @@ input[type=submit] {
   text-align: center;
   transition: all ease-in-out .2s;
 
-  @media screen and (max-width: $width-sm) {
-    font-size: 0.875rem;
-  }
-
   &:hover {
     color: white;
     background-color: $brand_secondary_dark;
@@ -1022,12 +1018,8 @@ form {
 // See code.org/teach for an example
 section.quote {
   background: url("/images/banners/banner-bg-lines-neutral-dark.png") center repeat;
-  background-size: 15%;
+  background-size: 12rem;
   background-color: $neutral-dark;
-
-  @media screen and (max-width: $width-sm) {
-    background-size: 50%;
-  }
 
   p {
     font-size: 1.25rem;
@@ -1116,10 +1108,9 @@ section.quote {
   }
 }
 
-// Resources tabs section
-// Works with resources_tabs.haml partial
-// See code.org/teach for an example
-.resources-tabs{
+// Tabs section
+// See code.org/teach or code.org/donate for examples
+.tabs-section{
   margin-top: 2rem;
   min-height: 408px;
 
@@ -1127,6 +1118,7 @@ section.quote {
     border-bottom: 6px solid $brand_primary_default;
     margin: 0 0 3rem;
     align-items: end;
+    gap: 0.25rem;
 
     button.tab {
       color: $neutral_dark;
@@ -1140,6 +1132,7 @@ section.quote {
       cursor: pointer;
       white-space: normal;
       height: -webkit-fit-content;
+      flex: 1;
 
       &:hover {
         background-color: $neutral_dark10;
@@ -1161,19 +1154,11 @@ section.quote {
       }
 
       // Use this class to hide a tab
-      // - see computer-vision.haml and resources-tabs.js for an example
-      .resources-tabs-hide-tab & {
-        width: 24%;
-      }
-
+      // - see computer-vision.haml and tabs-section.js for an example
       &.hide {
         display: none;
       }
     }
-  }
-
-  div.content {
-    text-align: left;
   }
 
   // Hides tab content
@@ -1191,12 +1176,16 @@ section.quote {
   }
 
   &.show-tablet-and-mobile {
-    height: unset;
-    min-height: unset;
+    height: unset !important;
+    min-height: unset !important;
 
     details {
       padding-left: 0;
       padding-right: 0;
+
+      &:hover {
+        background: none;
+      }
 
       summary {
         @include heading-md;
@@ -1309,4 +1298,14 @@ section.quote {
       }
     }
   }
+}
+
+// Action wrapper
+// See code.org/donate for example
+.action-wrapper {
+  background: url("/images/banners/banner-bg-lines-neutral-light.png") center repeat;
+  background-size: 10rem;
+  background-color: $brand_primary_default;
+  border-radius: $border-radius;
+  padding: 2rem;
 }
