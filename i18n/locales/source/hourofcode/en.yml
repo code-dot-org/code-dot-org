@@ -289,6 +289,7 @@
   curriculum_name_csp: "Computer Science Principles"
   curriculum_name_csc: "Computer Science Connections"
   curriculum_name_csa: "AP® Computer Science A"
+  curriculum_name_csa_ai: "Software Engineering & Computer Vision"
   curriculum_name_csc_02: "Any CS Connections Module"
   curriculum_name_ai: "AI & Machine Learning"
   curriculum_name_artificial_intelligence: "Artificial Intelligence (AI)"
@@ -323,6 +324,8 @@
   curriculum_desc_maker_short: "Maker education invites hands-on experience and collaboration into the classroom to help teach problem solving and critical thinking."
   curriculum_desc_csd: "Flexible course, allowing each unit to be taught alone or combined. Introduces students to building websites, apps, animations, games, and physical computing systems."
   curriculum_desc_csp: "Free, AP® CSP endorsed, high school introductory course that introduces students to the foundational concepts of computer science."
+  curriculum_desc_csa_ai_long: "This two-chapter post-AP® CSA module offers high school students hands-on experience with professional software development tools, including GitHub and GitHub Copilot, and imparts them with the real-world skills to develop a computer vision program."
+  curriculum_desc_csa_ai_short: "This post-AP® CSA module offers high school students hands-on experience with professional software development tools."
 
   collection_hardware: "Focus on Hardware"
   collection_hardware_desc: "Empowers students to use data and physical devices to solve problems."
@@ -393,6 +396,7 @@
   module_duration_2_hrs: "2 hours"
   module_duration_3_hrs: "3 hours"
   module_duration_5_hrs: "5 hours"
+  module_duration_5_hrs_plus: "5+ hours"
   module_duration_8_hrs: "8 hours"
   module_duration_20_hrs: "20 hours"
   module_duration_35_hrs: "35 hours"
@@ -460,6 +464,7 @@
   heading_objects_first: "Objects first"
   heading_these_lessons_will: "These lessons will:"
   heading_explore_curriculum_catalog: "Explore all of our courses in the Curriculum Catalog"
+  heading_csa_ai: "Looking for things to do after the AP® exam?"
 
   professional_learning_section_desc: "Get the support you need as you prepare to teach. Teachers love it, with over 90% ranking it the best professional development ever!"
   professional_learning_section_desc_short: "Get the support you need as you prepare to teach."
@@ -474,6 +479,14 @@
 
   support_and_questions_section_subhead: "Still have questions? Reach out to us! We are here to help."
   support_and_questions_section_desc: "Our support team is here to answer any questions you may have about starting teaching with Code.org. You can also ask other teachers about their experience on our teacher forums."
+
+  subscribe_form_section_title: "Subscribe for updates"
+  subscribe_form_section_desc_csa: "Sign up to receive monthly emails about Code.org's AP® Computer Science A and get helpful reminders, tips, and updates sent right to your inbox."
+  subscribe_form_section_desc_csc: "Sign up to receive monthly emails about Code.org's Computer Science Connections and get helpful reminders, tips, and updates sent right to your inbox."
+  subscribe_form_section_desc_csd: "Sign up to receive monthly emails about Code.org's Computer Science Discoveries and get helpful reminders, tips, and updates sent right to your inbox."
+  subscribe_form_section_desc_csf: "Sign up to receive monthly emails about Code.org's Computer Science Fundamentals and get helpful reminders, tips, and updates sent right to your inbox."
+  subscribe_form_section_desc_csp: "Sign up to receive monthly emails about Code.org's Computer Science Principles and get helpful reminders, tips, and updates sent right to your inbox."
+  subscribe_form_section_unsubscribe: "You can unsubscribe at any time."
 
   blockchain_hero_heading: 'How Blockchain Works'
   blockchain_hero_desc: 'Dive into the world of blockchain with "How Blockchain Works," our new video series and accompanying lessons!'
@@ -550,6 +563,8 @@
   ai_curriculum_title_04: "How AI Works"
   ai_curriculum_desc_04: "These lessons supplement the How AI Works video series. Each lesson is paired with a single video from the series, diving-deeper into the concepts introduced in the videos."
   ai_curriculum_btn_aria_label_04: "Explore How AI Works lessons"
+  ai_curriculum_grades_05: "Grade Levels: 9-12"
+  ai_curriculum_btn_aria_label_05: "Explore the Software Engineering & Computer Vision module"
   ai_carousel_heading: "What teachers say about AI with Code.org:"
   ai_carousel_quote_01: "This lesson also gave my students the opportunity to see that there is an element of opinion in classification systems. Later, when we started to see how bias can end up in AI, I was able to pull them back and remind them that the data used to train their models was based on choices."
   ai_carousel_quote_02: "My students learned that they don't have to just be consumers when it comes to technological advances that they are experiencing on almost a daily basis. They can actually be creators!"
@@ -613,6 +628,7 @@
   ai_pl_101_video_desc_6: "Learn more about the new technology driving the large changes in AI, featuring two new videos on Large Language Models (like ChatGPT) and Generative AI. Hear how these new technologies work directly from the experts: Mira Murati, CTO of OpenAI, and Cristóbal Valenzuela, CEO of RunwayML."
   ai_pl_101_llm_slides_title: "Large Language Model Prompts for Educators"
   ai_pl_101_llm_slides_desc: "Tools for getting the best possible output from LLMs like ChatGPT, from beginner to advanced. Includes starter prompts for those just dipping their toes in, as well as advanced tools for those looking to maximize their potential."
+  ai_pl_101_resources_3: "AI Prompts for Transforming Student Learning"
 
   how_ai_works_hero_heading: "How AI Works"
   how_ai_works_hero_desc: "Dive into the world of AI with \"How AI Works,\" our video series and accompanying lessons!"
@@ -8315,7 +8331,7 @@
   careers_approach_section_description_2: "We will ensure that individuals with disabilities are provided reasonable accommodation to participate in the job application or interview process, to perform essential job functions, and to receive other benefits and privileges of employment. If you have individual needs related to a disability, please reach out to accommodations@code.org."
 
   csa_ai_page_hero_title: "Software Engineering & Computer Vision"
-  csa_ai_page_hero_description: "This two-chapter post-AP CSA module offers high school students hands-on experience with professional software development tools, including GitHub and GitHub Copilot, and imparts them with the real-world skills to develop a computer vision program. "
+  csa_ai_page_hero_description: "This two-chapter post-AP® CSA module offers high school students hands-on experience with professional software development tools, including GitHub and GitHub Copilot, and imparts them with the real-world skills to develop a computer vision program."
   csa_ai_page_video_section_title: "Step beyond the world of Code.org programming environments"
   csa_ai_page_video_section_li_1: "Learn about AI and its applications"
   csa_ai_page_video_section_li_2: "Hands-on experience with professional software development tools"
