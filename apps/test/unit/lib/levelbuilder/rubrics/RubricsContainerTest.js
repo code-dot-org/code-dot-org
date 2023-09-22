@@ -1,8 +1,8 @@
 import React from 'react';
 import {mount, shallow} from 'enzyme';
-import {act} from 'react-dom/test-utils';
 import {expect} from '../../../../util/reconfiguredChai';
 import RubricsContainer from '@cdo/apps/lib/levelbuilder/rubrics/RubricsContainer';
+import * as rubricHelper from '@cdo/apps/lib/levelbuilder/rubrics/rubricHelper';
 import LearningGoalItem from '@cdo/apps/lib/levelbuilder/rubrics/LearningGoalItem';
 import Button from '@cdo/apps/templates/Button';
 import {RubricUnderstandingLevels} from '@cdo/apps/util/sharedConstants';
@@ -150,14 +150,37 @@ describe('RubricsContainerTest', () => {
     saveButton = wrapper.find('Button.ui-test-save-button');
     expect(saveButton.props().disabled).to.be.true;
 
-    await act(async () => {
-      await Promise.resolve();
-    });
+    // Allow state to change from the fetch request and the re-render of components
+    await new Promise(resolve => setTimeout(resolve, 0));
+    await new Promise(resolve => setTimeout(resolve, 0));
     wrapper.update();
 
     expect(notification.text()).to.contain('Save complete!');
     saveButton = wrapper.find('Button.ui-test-save-button');
     expect(saveButton.props().disabled).to.be.false;
+    sinon.restore();
+  });
+
+  it('calls the save helper on save click', () => {
+    const mockSave = sinon.stub(rubricHelper, 'saveRubricToTable');
+    mockSave.returns(
+      Promise.resolve(new Response(JSON.stringify({redirectUrl: 'test_url'})))
+    );
+
+    const props = {...defaultProps, rubric: rubricInfo};
+
+    const wrapper = mount(<RubricsContainer {...props} />);
+    const notification = wrapper.find('BodyThreeText');
+
+    expect(notification.text()).not.to.contain('Saving...');
+    expect(notification.text()).not.to.contain('Save complete!');
+
+    // Simulate the save button click
+    let saveButton = wrapper.find('Button.ui-test-save-button');
+    expect(saveButton.props().disabled).to.be.false;
+    saveButton.simulate('click');
+    sinon.assert.calledWith(mockSave);
+
     sinon.restore();
   });
 });
