@@ -62,7 +62,7 @@ The census_submissions table is replicated into Redshift via [dms task](https://
 
 # Historic Notes
 
-Before 2022, census summaries were computed via a nightly [cron job](https://github.com/code-dot-org/code-dot-org/blob/80777d646a9351de59404fbd173c67799c43dbda/bin/cron/update_census_mapbox) by an algorithm maintained by the engineering team. Inputs to this algorithm were stored in the ap_cs_offerings, ap_school_codes, ib_cs_offerings, and ib_school_codes tables. 
+Before 2022, census summaries were computed via a nightly [cron job](https://github.com/code-dot-org/code-dot-org/blob/80777d646a9351de59404fbd173c67799c43dbda/bin/cron/update_census_mapbox) by an algorithm maintained by the engineering team. Inputs to this algorithm were stored in the ap_cs_offerings, ap_school_codes, ib_cs_offerings, ib_school_codes and state_cs_offerings tables. 
 
 Originally, the Hour of Code and /yourschool census form submissions were written to the Pegasus `forms` table. That data was migrated into `census_submissions` and the mapping between the original `forms` row and the `census_submissions` row is stored in `census_submission_form_maps`. The old Pegasus form handlers are [here](https://github.com/code-dot-org/code-dot-org/blob/staging/pegasus/forms/census.rb) and [here](https://github.com/code-dot-org/code-dot-org/blob/staging/pegasus/forms/hoc_census.rb) and the script used to migrate the data is [here](https://github.com/code-dot-org/code-dot-org/blob/staging/bin/oneoff/move_census_data.rb). 
 
