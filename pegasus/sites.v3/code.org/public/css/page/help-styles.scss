@@ -3,6 +3,13 @@
 
 @import 'color', 'font', 'typography', 'breakpoints', 'barlow-semi-condensed-font';
 
+section.speak-for-cs,
+section.shop {
+  background: url("/images/banners/banner-bg-lines-neutral-dark.png") center repeat;
+  background-size: 12rem;
+  background-color: $neutral_dark;
+}
+
 section.shop {
 
   .wrapper {
