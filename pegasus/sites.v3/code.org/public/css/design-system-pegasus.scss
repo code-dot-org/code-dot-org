@@ -233,10 +233,6 @@ a.link-button {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
-
-  @media screen and (max-width: $width-sm) {
-    gap: 0;
-  }
 }
 
 // Basic hero banner
