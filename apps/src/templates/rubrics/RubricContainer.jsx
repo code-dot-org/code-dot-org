@@ -78,15 +78,16 @@ RubricContainer.propTypes = {
 
 const HeaderTab = ({text, isSelected, onClick}) => {
   return (
-    <div
+    <button
       className={classnames(style.rubricHeaderTab, {
         [style.selectedTab]: isSelected,
         [style.unselectedTab]: !isSelected,
       })}
       onClick={onClick}
+      type="button"
     >
       <Heading6>{text}</Heading6>
-    </div>
+    </button>
   );
 };
 

@@ -169,13 +169,18 @@
   align-items: center;
 }
 
-.rubricHeaderTab {
+button.rubricHeaderTab {
   display: flex;
   height: 40px;
   padding: 0 16px;
   align-items: center;
-  // gap: 12px;
   border-radius: 4px 4px 0 0;
+  border-width: 0;
+  margin: 0;
+
+  &:hover {
+    box-shadow: none;
+  }
 }
 
 .selectedTab {
@@ -188,6 +193,7 @@
 }
 
 .unselectedTab {
+  background: $neutral_dark;
   h6 {
     color: $neutral_white;
     margin-bottom: 0;
