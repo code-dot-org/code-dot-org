@@ -1,3 +1,8 @@
+// This is the webpack entry point for all our karma tests, see: karma.conf.js
+//
+// Invocations of `karma start` run this file, which uses KARMA_CLI_FLAGS
+// to dynamically require and execute the tests specified on the `karma start` CLI.
+
 import '@babel/polyfill/noConflict';
 import 'whatwg-fetch';
 import {throwOnConsoleErrorsEverywhere} from './util/throwOnConsole';
