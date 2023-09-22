@@ -164,9 +164,36 @@
 
 .rubricHeaderLeftSide {
   display: flex;
-  width: 261.333px;
-  height: 40px;
+  //height: 40px;
   align-items: center;
+}
+
+.rubricHeaderRightSide {
+  display: flex;
+  // height: 40px;
+  // justify-content: flex-end;
+  align-items: flex-start;
+  align-self: stretch;
+}
+
+button.buttonStyle {
+  border-width: 0;
+  margin: 0;
+
+  &:hover {
+    box-shadow: none;
+  }
+}
+
+.closeButton {
+  display: flex;
+  padding: 11px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  align-self: stretch;
+  background-color: $neutral_dark;
+  color: $neutral_white;
 }
 
 button.rubricHeaderTab {
@@ -175,12 +202,6 @@ button.rubricHeaderTab {
   padding: 0 16px;
   align-items: center;
   border-radius: 4px 4px 0 0;
-  border-width: 0;
-  margin: 0;
-
-  &:hover {
-    box-shadow: none;
-  }
 }
 
 .selectedTab {

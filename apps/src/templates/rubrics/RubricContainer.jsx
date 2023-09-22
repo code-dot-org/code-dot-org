@@ -4,6 +4,7 @@ import style from './rubrics.module.scss';
 import classnames from 'classnames';
 import i18n from '@cdo/locale';
 import {Heading6} from '@cdo/apps/componentLibrary/typography';
+import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import {
   reportingDataShape,
   rubricShape,
@@ -23,6 +24,7 @@ export default function RubricContainer({
   initialTeacherHasEnabledAi,
   currentLevelName,
   reportingData,
+  closeRubric,
 }) {
   const onLevelForEvaluation = currentLevelName === rubric.level.name;
   const canProvideFeedback = !!studentLevelInfo && onLevelForEvaluation;
@@ -46,6 +48,15 @@ export default function RubricContainer({
             isSelected={selectedTab === TAB_NAMES.SETTINGS}
             onClick={() => setSelectedTab(TAB_NAMES.SETTINGS)}
           />
+        </div>
+        <div className={style.rubricHeaderRightSide}>
+          <button
+            type="button"
+            onClick={closeRubric}
+            className={classnames(style.buttonStyle, style.closeButton)}
+          >
+            <FontAwesome icon="dash" />
+          </button>
         </div>
       </div>
       {selectedTab === TAB_NAMES.RUBRIC && (
@@ -74,12 +85,13 @@ RubricContainer.propTypes = {
   studentLevelInfo: studentLevelInfoShape,
   initialTeacherHasEnabledAi: PropTypes.bool,
   currentLevelName: PropTypes.string,
+  closeRubric: PropTypes.func,
 };
 
 const HeaderTab = ({text, isSelected, onClick}) => {
   return (
     <button
-      className={classnames(style.rubricHeaderTab, {
+      className={classnames(style.rubricHeaderTab, style.buttonStyle, {
         [style.selectedTab]: isSelected,
         [style.unselectedTab]: !isSelected,
       })}
