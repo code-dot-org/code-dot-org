@@ -16,8 +16,7 @@ const teacherFeedbackStyles = {
     color: color.charcoal,
     fontSize: 18,
     lineHeight: '18px',
-    fontFamily: '"Gotham 5r", sans-serif',
-    fontWeight: 'normal',
+    ...fontConstants['main-font-semi-bold'],
   },
   commentAndFooter: {
     padding: '8px 16px',
