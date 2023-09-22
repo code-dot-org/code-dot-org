@@ -71,6 +71,8 @@
   "aiAssessmentDoesNotMeet": "limited or no evidence",
   "aiAssessmentEnabled": "AI Assessment Enabled",
   "aiAssessmentExplanation": "PLACEHOLDER TEXT FOR INFO TIP",
+  "aiCannotAssess": "This learning goal is too subjective for AI to evaluate.",
+  "aiCannotAssessExplanation": "PLACEHOLDER TEXT FOR INFO TIP",
   "aiConfidence": "AI is {aiConfidence}% confident in this assessment",
   "aiStudentAssessment": "{studentName} has achieved {understandingLevel} for this learning goal.",
   "aiTrainedModels": "AI Trained Models",

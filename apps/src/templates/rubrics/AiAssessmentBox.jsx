@@ -37,18 +37,31 @@ export default function AiAssessmentBox({
 
   return (
     <div className={boxColor()}>
-      <div>
-        <Heading6>{studentAchievment()}</Heading6>
+      {isAiAssessed && (
         <div>
-          <EmText>{i18n.aiConfidence({aiConfidence: aiConfidence})}</EmText>
+          <Heading6>{studentAchievment()}</Heading6>
+          <div>
+            <EmText>{i18n.aiConfidence({aiConfidence: aiConfidence})}</EmText>
+            <span data-tip data-for="info-tip">
+              <FontAwesome icon="info-circle" className={style.infoTipIcon} />
+            </span>
+            <ReactTooltip id="info-tip" effect="solid">
+              {i18n.aiAssessmentExplanation()}
+            </ReactTooltip>
+          </div>
+        </div>
+      )}
+      {!isAiAssessed && (
+        <div>
+          <EmText>{i18n.aiCannotAssess()}</EmText>
           <span data-tip data-for="info-tip">
             <FontAwesome icon="info-circle" className={style.infoTipIcon} />
           </span>
           <ReactTooltip id="info-tip" effect="solid">
-            {i18n.aiAssessmentExplanation}
+            {i18n.aiCannotAssessExplanation()}
           </ReactTooltip>
         </div>
-      </div>
+      )}
     </div>
   );
 }

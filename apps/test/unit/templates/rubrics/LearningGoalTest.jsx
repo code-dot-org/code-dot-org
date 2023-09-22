@@ -25,6 +25,38 @@ describe('LearningGoal', () => {
     expect(wrapper.find('SafeMarkdown')).to.have.lengthOf(0);
   });
 
+  it('renders AiAssessment when teacher has AiEnabled and the learning goal can be tested by AI', () => {
+    const wrapper = shallow(
+      <LearningGoal
+        learningGoal={{
+          learningGoal: 'Testing',
+          evidenceLevels: [{understanding: 1, teacherDescription: 'test'}],
+          aiEnabled: true,
+        }}
+        teacherHasEnabledAi={true}
+        studentName={'Frank'}
+      />
+    );
+    expect(wrapper.find('AiAssessment')).to.have.lengthOf(1);
+    expect(wrapper.find('AiAssessment').props().studentName).to.equal('Frank');
+    expect(wrapper.find('AiAssessment').props().isAiAssessed).to.equal(true);
+  });
+
+  it('does not renders AiAssessment when teacher has disabled ai', () => {
+    const wrapper = shallow(
+      <LearningGoal
+        learningGoal={{
+          learningGoal: 'Testing',
+          evidenceLevels: [{understanding: 1, teacherDescription: 'test'}],
+          aiEnabled: true,
+        }}
+        teacherHasEnabledAi={false}
+        studentName={'Frank'}
+      />
+    );
+    expect(wrapper.find('AiAssessment')).to.have.lengthOf(0);
+  });
+
   it('renders tips', () => {
     const wrapper = shallow(
       <LearningGoal

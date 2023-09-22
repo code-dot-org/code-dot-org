@@ -69,7 +69,12 @@ export default function LearningGoal({
       </summary>
       <div className={style.learningGoalExpanded}>
         {aiEnabled && (
-          <AiAssessment isAiAssessed={true} studentName={studentName} />
+          <AiAssessment
+            isAiAssessed={learningGoal.aiEnabled}
+            studentName={studentName}
+            aiConfidence={50}
+            aiUnderstandingLevel={3}
+          />
         )}
         <EvidenceLevels
           learningGoalKey={learningGoal.key}

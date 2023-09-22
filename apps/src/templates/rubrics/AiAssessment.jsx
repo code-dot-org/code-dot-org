@@ -9,7 +9,7 @@ const icon = require('@cdo/static/AI-FAB.png');
 export default function AiAssessment({
   isAiAssessed,
   studentName,
-  aiAssessmentLevel,
+  aiUnderstandingLevel,
   aiConfidence,
 }) {
   // TO DO: pass through props from parent to child component below
@@ -19,10 +19,10 @@ export default function AiAssessment({
       <div className={style.aiAssessmentBlock}>
         <img alt="Ai bot" src={icon} />
         <AiAssessmentBox
-          isAiAssessed={true}
-          aiUnderstandingLevel={2}
+          isAiAssessed={isAiAssessed}
+          aiUnderstandingLevel={aiUnderstandingLevel}
           studentName={studentName}
-          aiConfidence={50}
+          aiConfidence={aiConfidence}
         />
       </div>
     </div>
@@ -32,6 +32,6 @@ export default function AiAssessment({
 AiAssessment.propTypes = {
   isAiAssessed: PropTypes.bool.isRequired,
   studentName: PropTypes.string,
-  aiAssessmentLevel: PropTypes.number,
+  aiUnderstandingLevel: PropTypes.number,
   aiConfidence: PropTypes.number,
 };
