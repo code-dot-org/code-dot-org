@@ -9,8 +9,6 @@ with csa as
       when cso.school_code is null and ss.school_type in ('public', 'charter') then 0 -- only include known status for public and charter schools, as we don't have data for private schools
     end as teaches_csa
   from analysis.school_stats ss
-    left join dashboard_production.ap_school_codes sc on sc.school_id = ss.school_id
-    left join dashboard_production.ap_cs_offerings cso on cso.school_code = sc.school_code and cso.course = 'CSA'
 ),
 csp as
 (
@@ -20,8 +18,6 @@ csp as
       when cso.school_code is null and ss.school_type in ('public', 'charter') then 0 -- only include known status for public and charter schools, as we don't have data for private schools
     end as teaches_csp
   from analysis.school_stats ss
-    left join dashboard_production.ap_school_codes sc on sc.school_id = ss.school_id
-    left join dashboard_production.ap_cs_offerings cso on cso.school_code = sc.school_code and cso.course = 'CSP'
 ),
 census as 
 (
