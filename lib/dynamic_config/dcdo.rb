@@ -49,8 +49,8 @@ class DCDOBase < DynamicConfigBase
       'curriculum-launch-hero-banner': DCDO.get('curriculum-launch-hero-banner', false),
       'curriculum-launch-skinny-banner': DCDO.get('curriculum-launch-skinny-banner', false),
       'ai-pl-launch-banners': DCDO.get('ai-pl-launch-banners', false),
-      'family-name-features': DCDO.get('family-name-features', false),
-      'family-name-stats-tab': DCDO.get('family-name-stats-tab', false),
+      'family-name-features': DCDO.get('family-name-features', true),
+      'family-name-stats-tab': DCDO.get('family-name-stats-tab', true),
       cpa_experience: DCDO.get('cpa_experience', false),
       gender: DCDO.get('gender', false),
     }
