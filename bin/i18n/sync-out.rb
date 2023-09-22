@@ -28,6 +28,7 @@ module I18n
     def self.perform
       puts "Sync out starting"
       I18n::Resources::Apps.sync_out
+      I18n::Resources::Dashboard.sync_out
       I18n::Resources::Pegasus.sync_out
       rename_from_crowdin_name_to_locale
       restore_redacted_files
@@ -129,8 +130,7 @@ module I18n
           next unless File.file?(translated_path)
 
           if original_path == 'i18n/locales/original/dashboard/blocks.yml'
-            # Blocks are text, not markdown
-            RedactRestoreUtils.restore(original_path, translated_path, translated_path, ['blockfield'], 'txt')
+            next # moved to I18n::Resources::Dashboard::Blocks::SyncOut#restore
           elsif original_path.starts_with? "i18n/locales/original/course_content"
             # Course content should be merged with existing content, so existing
             # data doesn't get lost
@@ -310,6 +310,9 @@ module I18n
 
         ### Dashboard
         Dir.glob("i18n/locales/#{locale}/dashboard/*.{json,yml}") do |loc_file|
+          # Moved to I18n::Resources::Dashboard::Blocks::SyncOut#distribute_localization
+          next if loc_file == File.join('i18n/locales', locale, 'dashboard/blocks.yml')
+
           ext = File.extname(loc_file)
           relative_path = loc_file.delete_prefix(locale_dir)
           next unless I18nScriptUtils.file_changed?(locale, relative_path)
