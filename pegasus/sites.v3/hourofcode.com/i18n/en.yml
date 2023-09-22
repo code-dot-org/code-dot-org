@@ -501,7 +501,7 @@
   heading_these_lessons_will: "These lessons will:"
   heading_explore_curriculum_catalog: "Explore all of our courses in the Curriculum Catalog"
   heading_csa_ai: "Looking for things to do after the AP® exam?"
-  heading_bring_cs_to_school: "Bring computer science to your school"
+  heading_bring_cs_to_students: "Bring computer science to students"
 
   professional_learning_section_desc: "Get the support you need as you prepare to teach. Teachers love it, with over 90% ranking it the best professional development ever!"
   professional_learning_section_desc_short: "Get the support you need as you prepare to teach."
@@ -1072,7 +1072,7 @@
   help_page_volunteer_heading: "Volunteer in a classroom"
   help_page_volunteer_desc: "Volunteer to teach the Hour of Code or be a guest speaker in a local classroom. Sign up to hear about opportunities near you."
   help_page_translate_heading: "Help us translate"
-  help_page_volunteer_desc: "Volunteers have translated our tutorials in over 45 languages. Help us continue to expand our tutorials for students around the world!"
+  help_page_translate_desc: "Volunteers have translated our tutorials in over 45 languages. Help us continue to expand our tutorials for students around the world!"
   help_page_speak_for_cs_heading: "Speak up for computer science education"
   help_page_speak_for_cs_desc: "Learn more about Code.org's advocacy work across the U.S. and the ten policies we recommend states adopt to make computer science foundational for all students. Plus, find out how you can drive change in your state."
 
