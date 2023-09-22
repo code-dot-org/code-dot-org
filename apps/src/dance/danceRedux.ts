@@ -14,6 +14,7 @@ export interface DanceState {
   selectedSong: string;
   songData: SongData;
   runIsStarting: boolean;
+  showingAi: boolean;
   // Fields below are used only by Lab2 Dance
   isRunning: boolean;
 }
@@ -22,6 +23,7 @@ const initialState: DanceState = {
   selectedSong: 'macklemore90',
   songData: {},
   runIsStarting: false,
+  showingAi: false,
   isRunning: false,
 };
 
@@ -127,9 +129,12 @@ const danceSlice = createSlice({
     setRunIsStarting: (state, action: PayloadAction<boolean>) => {
       state.runIsStarting = action.payload;
     },
+    setShowingAi: (state, action: PayloadAction<boolean>) => {
+      state.showingAi = action.payload;
+    },
   },
 });
 
-export const {setSongData, setSelectedSong, setRunIsStarting} =
+export const {setSongData, setSelectedSong, setRunIsStarting, setShowingAi} =
   danceSlice.actions;
 export const reducers = {dance: danceSlice.reducer};

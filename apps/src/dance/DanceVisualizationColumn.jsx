@@ -1,4 +1,6 @@
 import React from 'react';
+import {getStore} from '../redux';
+import {setShowingAi} from './danceRedux';
 import GameButtons from '../templates/GameButtons';
 import ArrowButtons from '../templates/ArrowButtons';
 import BelowVisualization from '../templates/BelowVisualization';
@@ -10,6 +12,7 @@ import {connect} from 'react-redux';
 import i18n from '@cdo/locale';
 import AgeDialog from '../templates/AgeDialog';
 import {getFilteredSongKeys, getFilterStatus} from '@cdo/apps/dance/songs';
+import DanceAi from './DanceAi';
 
 export const SongSelector = Radium(
   class extends React.Component {
@@ -67,6 +70,7 @@ class DanceVisualizationColumn extends React.Component {
     songData: PropTypes.objectOf(PropTypes.object).isRequired,
     userType: PropTypes.string.isRequired,
     under13: PropTypes.bool.isRequired,
+    showingAi: PropTypes.bool.isRequired,
   };
 
   state = {
@@ -89,6 +93,12 @@ class DanceVisualizationColumn extends React.Component {
 
     const enableSongSelection =
       !this.props.levelIsRunning && !this.props.levelRunIsStarting;
+
+    if (this.props.showingAi) {
+      //this.props.showingAi.size_.width = 100;
+      this.props.showingAi.setValue(JSON.stringify({text: 'hello'}));
+      //this.props.showingAi.renderContent();
+    }
 
     return (
       <div>
@@ -128,6 +138,9 @@ class DanceVisualizationColumn extends React.Component {
             <ArrowButtons />
           </GameButtons>
           <BelowVisualization />
+          {this.props.showingAi && (
+            <DanceAi onClose={() => getStore().dispatch(setShowingAi(false))} />
+          )}
         </div>
       </div>
     );
@@ -168,4 +181,5 @@ export default connect(state => ({
   under13: state.currentUser.under13,
   levelIsRunning: state.runState.isRunning,
   levelRunIsStarting: state.dance.runIsStarting,
+  showingAi: state.dance.showingAi,
 }))(DanceVisualizationColumn);

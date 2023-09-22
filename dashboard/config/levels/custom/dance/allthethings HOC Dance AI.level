@@ -23,7 +23,7 @@
     "use_modal_function_editor": "false",
     "hide_share_and_remix": "false",
     "disable_if_else_editing": "false",
-    "free_play": "false",
+    "free_play": "true",
     "validation_enabled": "false",
     "submittable": "false",
     "show_debug_watch": "false",
@@ -51,6 +51,9 @@
         <block type="Dancelab_makeAnonymousDanceSprite" id="#fB38o)sp,8;#`^9=*z=" x="28" y="39">
           <field name="COSTUME">"ALIEN"</field>
           <field name="LOCATION">{x: 200, y: 100}</field>
+        </block>
+        <block type="Dancelab_aiText" id="oI~{H6txi14$UD=w/d2:" x="32" y="114">
+          <field name="VALUE"/>
         </block>
         <block type="Dancelab_ai" id="oI~{H6txi14$UD=w/d1:" x="32" y="114">
           <field name="VALUE"/>

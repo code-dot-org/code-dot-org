@@ -1,0 +1,31 @@
+{
+  "items": [
+    {
+      "id": "smile",
+      "name": "smile"
+    },
+    {
+      "id": "heart",
+      "name": "heart"
+    },
+    {
+      "id": "laugh",
+      "name": "laughter"
+    },
+    {
+      "id": "thumbs-up",
+      "name": "thumbs up"
+    }
+  ],
+  "options": [
+    [
+      "smile", "heart", "thumbs-up"
+    ],
+    [
+      "smile", "laugh", "thumbs-up"
+    ],
+    [
+      "smile", "heart", "laugh", "thumbs-up"
+    ]
+  ]
+}
