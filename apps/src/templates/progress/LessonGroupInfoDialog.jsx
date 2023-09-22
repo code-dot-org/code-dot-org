@@ -54,8 +54,7 @@ const styles = {
     paddingBottom: 20,
   },
   bigQuestion: {
-    fontWeight: 'bolder',
-    fontFamily: '"Gotham 7r", sans-serif',
+    ...fontConstants['main-font-bold'],
   },
   lessonGroupName: {
     color: color.purple,

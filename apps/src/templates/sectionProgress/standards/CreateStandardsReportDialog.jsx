@@ -70,7 +70,7 @@ const styles = {
     color: color.dark_charcoal,
   },
   boldText: {
-    fontFamily: '"Gotham 7r", sans-serif',
+    ...fontConstants['main-font-bold'],
   },
   dialog: {
     paddingLeft: 20,

@@ -48,8 +48,7 @@ const styles = {
     ...fontConstants['main-font-regular'],
   },
   bigQuestion: {
-    fontWeight: 'bolder',
-    fontFamily: '"Gotham 7r", sans-serif',
+    ...fontConstants['main-font-bold'],
   },
   subTitle: {
     color: color.teal,

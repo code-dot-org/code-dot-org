@@ -117,7 +117,7 @@ const styles = {
   },
   title: {
     color: color.neutral_dark,
-    fontFamily: '"Gotham 7r", sans-serif',
+    ...fontConstants['main-font-bold'],
     fontSize: 27,
     lineHeight: '29px',
     boxSizing: 'border-box',

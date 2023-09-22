@@ -25,7 +25,7 @@ export const styles = {
   },
   pledge: {
     fontSize: 18,
-    fontFamily: '"Gotham 7r", sans-serif',
+    ...fontConstants['main-font-bold'],
     color: color.charcoal,
     paddingBottom: 10,
     paddingTop: 10,

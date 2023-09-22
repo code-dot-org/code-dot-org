@@ -156,7 +156,7 @@ const wrapperStyle = {
   width: '100%',
 };
 const chartTitleStyle = {
-  fontFamily: '"Gotham 7r", sans-serif',
+  ...fontConstants['main-font-bold'],
   fontSize: 16,
   lineHeight: '16px',
   color: 'black',

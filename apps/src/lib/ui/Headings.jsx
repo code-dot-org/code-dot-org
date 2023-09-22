@@ -14,7 +14,7 @@ const baseHeadingStyle = {
 
 export const h1Style = {
   ...baseHeadingStyle,
-  fontFamily: '"Gotham 7r", sans-serif',
+  ...fontConstants['main-font-bold'],
   fontSize: 32,
   lineHeight: '48px',
 };

@@ -144,7 +144,7 @@ const styles = {
     lineHeight: '1.5em',
   },
   mapFooter: {
-    fontFamily: '"Gotham 7r", sans-serif',
+    ...fontConstants['main-font-bold'],
     fontSize: 20,
     marginLeft: 25,
     marginRight: 25,

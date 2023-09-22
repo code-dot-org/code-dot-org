@@ -34,6 +34,7 @@ import {
 } from '@cdo/apps/code-studio/components/progress/teacherPanel/teacherPanelData';
 import SortByNameDropdown from '@cdo/apps/templates/SortByNameDropdown';
 import DCDO from '@cdo/apps/dcdo';
+import fontConstants from '@cdo/apps/fontConstants';
 
 const TEACHER_PANEL = 'TeacherPanel';
 
@@ -287,7 +288,7 @@ const styles = {
     display: 'inline',
     marginLeft: 10,
     fontSize: 16,
-    fontFamily: '"Gotham 7r", sans-serif',
+    ...fontConstants['main-font-bold'],
   },
   sectionHeader: {
     margin: 10,

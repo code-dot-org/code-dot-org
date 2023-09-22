@@ -12,8 +12,7 @@ export const styles = {
     color: color.dark_charcoal,
   },
   categoryShortcode: {
-    fontFamily: "'Gotham 7r', sans-serif",
-    fontWeight: 'bold',
+    ...fontConstants['main-font-bold'],
     color: color.link_color,
     ':hover': {
       textDecoration: 'underline',

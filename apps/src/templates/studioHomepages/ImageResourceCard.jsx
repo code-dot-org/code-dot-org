@@ -87,7 +87,7 @@ const styles = {
   title: {
     fontSize: 24,
     paddingBottom: 10,
-    fontFamily: '"Gotham 7r", sans-serif',
+    ...fontConstants['main-font-bold'],
     whiteSpace: 'nowrap',
   },
   callout: {

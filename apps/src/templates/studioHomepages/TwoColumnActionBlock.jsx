@@ -255,7 +255,7 @@ const styles = {
     paddingBottom: 20,
     fontSize: 27,
     lineHeight: 1.2,
-    fontFamily: '"Gotham 7r", sans-serif',
+    ...fontConstants['main-font-bold'],
     color: color.neutral_dark,
   },
   subHeadingSmallFont: {
@@ -263,7 +263,7 @@ const styles = {
     paddingBottom: 20,
     fontSize: 25,
     lineHeight: 1.2,
-    fontFamily: '"Gotham 7r", sans-serif',
+    ...fontConstants['main-font-bold'],
     color: color.neutral_dark,
   },
   image: {

@@ -107,7 +107,7 @@ class LibraryTable extends React.Component {
 
 const styles = {
   tableName: {
-    fontFamily: '"Gotham 7r", sans-serif',
+    ...fontConstants['main-font-bold'],
     cursor: 'pointer',
     color: color.dark_charcoal,
   },

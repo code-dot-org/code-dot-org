@@ -145,7 +145,7 @@ const styles = {
     display: 'inline-block',
   },
   boldText: {
-    fontFamily: '"Gotham 7r", sans-serif',
+    ...fontConstants['main-font-bold'],
   },
   section: {
     width: 300,

@@ -42,7 +42,7 @@ const style = {
     color: color.red,
   },
   bold: {
-    fontFamily: "'Gotham 7r', sans-serif",
+    ...fontConstants['main-font-bold'],
   },
   root: {
     marginTop: 20,
