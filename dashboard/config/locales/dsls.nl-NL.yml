@@ -14,15 +14,17 @@ nl-NL:
             <br/> zet een driehoek rechts van de parallellogram
         - text: Begin met een vierkant <br/> zet een driehoek onder het vierkant <br/>
             zet een parallellogram rechts van de driehoek
+        content1: "/script_assets/2-3_images/unplugged/algorithms_1_q.png"
         questions:
         - text: Kies een algoritme voor de gegeven afbeelding.
         title: Meerkeuze
       2-3 Algorithms Multi 2:
         answers:
-        - {}
+        - text: "/script_assets/2-3_images/unplugged/algorithms_2_a1.png"
         - correct: true
-        - {}
-        - {}
+          text: "/script_assets/2-3_images/unplugged/algorithms_2_a2.png"
+        - text: "/script_assets/2-3_images/unplugged/algorithms_2_a3.png"
+        - text: "/script_assets/2-3_images/unplugged/algorithms_2_a4.png"
         content1: Start met een driehoek<br />Plaats een vierkant onder de driehoek<br/>Plaats
           nog een driehoek onder het vierkant
         questions:
@@ -30,23 +32,25 @@ nl-NL:
         title: Meerkeuze
       2-3 Big Event Match 1:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a1.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a2.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a3.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a4.png"
+        content1: "/script_assets/k_1_images/unplugged_images/big_event_1_desc.png"
         content2: Verbind de knoppencombinatie aan de dansbewegingen.
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_q1.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_q2.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_q3.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_q4.png"
         title: Koppelen
       2-3 Binary Match 1:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/unplugged/binary_1_a3.png"
+        - text: "/script_assets/2-3_images/unplugged/binary_1_a1.png"
+        - text: "/script_assets/2-3_images/unplugged/binary_1_a2.png"
+        - text: "/script_assets/2-3_images/unplugged/binary_1_a4.png"
+        content1: "/script_assets/2-3_images/unplugged/binary_1_q.png, 250"
         content2: Gebruik de sleutel om elke code met zijn letter te combineren
         questions:
         - text: "<strong>N</strong>"
@@ -56,74 +60,93 @@ nl-NL:
         title: Koppelen
       2-3 Conditionals Multi 1:
         answers:
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/unplugged/conditionals_1_a1.png"
+        - text: "/script_assets/2-3_images/unplugged/conditionals_1_a2.png"
         - correct: true
-        - {}
+          text: "/script_assets/2-3_images/unplugged/conditionals_1_a3.png"
+        - text: "/script_assets/2-3_images/unplugged/conditionals_1_a4.png"
+        content1: "/script_assets/2-3_images/unplugged/conditionals_1_q.png"
         questions:
         - text: Welke set van kaarten is volgens de spelregels goed geturfd?
+        teacher_markdown: |
+          ## Leraren:
+
+          Leerlingen werken mogelijk vanuit een misverstand, en dit is een geweldige plek om dat uit te zoeken. Als leerlingen denken dat er *geen* juist antwoord is dan hebben ze waarschijnlijk een misverstand over conditionals.
+
+          Hier is een video die helpt met uitleggen wat er in deze vraag aan de hand is:
+
+          https://youtu.be/TbUaEnAYPjI
         title: Meerkeuze
       2-3 Getting Loopy Multi 1:
         answers:
         - correct: true
-        - {}
-        - {}
-        - {}
+          text: "/script_assets/2-3_images/unplugged/getting_loopy_1_a1.png"
+        - text: "/script_assets/2-3_images/unplugged/getting_loopy_1_a2.png"
+        - text: "/script_assets/2-3_images/unplugged/getting_loopy_1_a3.png"
+        - text: "/script_assets/2-3_images/unplugged/getting_loopy_1_a4.png"
+        content1: "/script_assets/2-3_images/unplugged/getting_loopy_1_q.png"
         questions:
         - text: Hoe zou je deze reeks vereenvoudigen met lussen?
         title: Meerkeuze
       2-3 Graph Paper Match 1:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_2_a3.png"
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_2_a2.png"
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_2_a1.png"
         content1: Combineer het raster met het programma.
         questions:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_2_q1.png"
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_2_q2.png"
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_2_q3.png"
         title: Koppelen
       2-3 Graph Paper Multi 1:
         answers:
-        - {}
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_1_a1.png"
         - correct: true
-        - {}
+          text: "/script_assets/2-3_images/unplugged/graph_paper_1_a2.png"
+        - text: "/script_assets/2-3_images/unplugged/graph_paper_1_a3.png"
+        content1: "/script_assets/2-3_images/unplugged/graph_paper_1_q.png"
         questions:
         - text: Welk programma maakt het plaatje?
         title: Meerkeuze
       2-3 Maze Match 2:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_2_a1.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_2_a2.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_2_a3.png"
         content1: Koppel de juiste puzzels aan de juiste blokken
         questions:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_2_q1.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_2_q2.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_2_q3.png"
         title: Doolhof Combinatie
       2-3 Maze Multi 2:
         answers:
-        - {}
+        - text: "/script_assets/2-3_images/maze/2-3_maze_multi_2_a1.png"
         - correct: true
-        - {}
-        - {}
+          text: "/script_assets/2-3_images/maze/2-3_maze_multi_2_a2.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_multi_2_a3.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_multi_2_a4.png"
+        content1: "/script_assets/2-3_images/maze/2-3_maze_multi_2_q.png, 500"
         questions:
-        - {}
+        - text: Met welke blokken kom ik bij het varken?
         title: Doolhof Meerkeuze
       2-3 Relay Programming Multi 1:
         answers:
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/unplugged/relay_programming_1_a1.png"
+        - text: "/script_assets/2-3_images/unplugged/relay_programming_1_a2.png"
         - correct: true
+          text: "/script_assets/2-3_images/unplugged/relay_programming_1_a3.png"
+        content1: "/script_assets/2-3_images/unplugged/relay_programming_1_q.png"
         questions:
-        - {}
+        - text: Welk programma maakt deze afbeelding **niet**?
         title: Meerkeuze
       2-3 Relay Programming Multi 2:
         answers:
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/unplugged/relay_programming_2_a1.png"
+        - text: "/script_assets/2-3_images/unplugged/relay_programming_2_a2.png"
         - correct: true
+          text: "/script_assets/2-3_images/unplugged/relay_programming_2_a3.png"
         questions:
         - text: In welke combinatie van afbeeldingsprogramma's zitten geen vergissingen?
         title: Meerkeuze
@@ -134,8 +157,11 @@ nl-NL:
           text: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png"
         - text: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png"
         - text: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_a4.png"
+        content1: "/script_assets/2-3_images/artist/2-3_artistdebug_multi_1_q1.png,
+          700"
         questions:
-        - {}
+        - text: Wat zou je moeten oplossen om er een volledige cirkel van te maken?
+        title: Kunstenaar Debugging Meerkeuze 1
       2-3 artist functions multi 1:
         answers:
         - correct: true
@@ -147,91 +173,106 @@ nl-NL:
         title: Kunstenaar Functies Meerkeuze Eén
       2-3 artist loops match 1:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a1.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a2.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a3.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_a4.png"
         content2: Koppel de juiste lus op de juiste vorm
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q1.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q2.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q3.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_match_1_q4.png"
+        title: Kunstenaar Loops Matchen 1
       2-3 artist loops multi 1:
         answers:
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q1.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png"
         - correct: true
-        - {}
+          text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png"
+        content1: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_a3.png,
+          500"
         questions:
         - text: Welke vorm wordt door deze lus gemaakt?
         title: Kunstenaar lussen meerkeuze
       2-3 artist loops multi 2:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q1.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q2.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q3.png"
         - correct: true
+          text: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_q4.png"
+        content1: "/script_assets/2-3_images/artist/2-3_artistloops_multi_1_a4.png,
+          500"
         questions:
         - text: Welke vorm is door dit programma gemaakt?
         title: Kunstenaar lussen meerkeuze
       2-3 artist match 1:
         answers:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_a1.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_a2.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_a3.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_a4.png"
         content1: Combineer de vorm met het blok dat het afmaakt.
         questions:
-        - {}
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_q1.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_q2.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_q3.png"
+        - text: "/script_assets/2-3_images/artist/2-3_artist_match_1_q4.png"
         title: Kunstenaar koppelen
       2-3 bee conditionals multi 1:
         answers:
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a1.png"
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a2.png"
         - correct: true
-        - {}
+          text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a3.png"
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_1_a4.png"
         questions:
         - text: Welke van de volgende vergelijkingen is waar?
         title: Bij Condities Meerkeuze
       2-3 bee conditionals multi 3:
         answers:
-        - {}
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a1.png"
         - correct: true
-        - {}
-        - {}
+          text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a2.png"
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a3.png"
+        - text: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_a4.png"
+        content1: "/script_assets/2-3_images/bee/2-3_beeconditionals_multi_3_q.png,
+          500"
         questions:
         - text: Kies de beste blokken.
         title: Bij Condities Meerkeuze
       2-3 bee loops multi 1:
         answers:
         - correct: true
-        - {}
-        - {}
-        - {}
+          text: "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a1.png"
+        - text: "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a2.png"
+        - text: "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a3.png"
+        - text: "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_a4.png"
+        content1: "/script_assets/2-3_images/bee/2-3_beeloops_multi_1_q.png, 500"
         questions:
         - text: Welke blokken verzamelen alle nectar?
         title: Bij Lussen Meerkeuze Eén
       2-3 maze match 1:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_1_a1.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_1_a2.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_1_a3.png"
         content1: Koppel de juiste puzzels aan de juiste blokken
         questions:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_1_q1.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_1_q2.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_match_1_q3.png"
         title: Doolhof koppelen één
       2-3 maze multi 1:
         answers:
-        - {}
+        - text: "/script_assets/2-3_images/maze/2-3_maze_multi_1_a1.png"
         - correct: true
-        - {}
-        - {}
+          text: "/script_assets/2-3_images/maze/2-3_maze_multi_1_a2.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_multi_1_a3.png"
+        - text: "/script_assets/2-3_images/maze/2-3_maze_multi_1_a4.png"
+        content1: "/script_assets/2-3_images/maze/2-3_maze_multi_1_q.png, 500"
         questions:
         - text: Welke blokken zijn het goede antwoord?
         title: Meerkeuze doolhof één
@@ -2463,20 +2504,23 @@ nl-NL:
         title: Koppelen
       K-1 Big Event Match 1:
         answers:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a1.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a2.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_a3.png"
+        content1: "/script_assets/k_1_images/unplugged_images/big_event_1_desc.png"
         content2: Verbind de knoppencombinatie aan de dansbewegingen.
         questions:
-        - {}
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_q1.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_q2.png"
+        - text: "/script_assets/k_1_images/unplugged_images/big_event_1_q3.png"
         title: Koppelen
       K-1 Digital Footprint Multi 1:
         answers:
-        - {}
-        - {}
+        - text: "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a1.png"
+        - text: "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a2.png"
         - correct: true
+          text: "/script_assets/k_1_images/unplugged_images/digital_footprint_1_a3.png"
+        content1: "/script_assets/k_1_images/unplugged_images/digital_footprint_1_q.png"
         questions:
         - text: Welk dier heeft de grootste digitale voetafdruk wat hem of haar de
             <strong>meest onveilige</strong> maakt?

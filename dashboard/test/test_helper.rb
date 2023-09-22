@@ -356,7 +356,7 @@ class ActiveSupport::TestCase
   #   class MyTest < ActiveSupport::TestCase
   #     freeze_time
   #     #...
-  def self.freeze_time(time=nil)
+  def self.freeze_time(time = nil)
     time ||= Time.now.utc.to_date + 9.hours
     setup do
       Timecop.freeze time
@@ -533,7 +533,7 @@ class ActionController::TestCase
     end
   end
 
-  def assert_sharing_meta_tags(opts={})
+  def assert_sharing_meta_tags(opts = {})
     # example:
     # <meta content="500177453358606" property="fb:app_id" />
     # <meta content="article" property="og:type" />

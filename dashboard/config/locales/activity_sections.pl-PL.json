@@ -23547,7 +23547,7 @@
         },
         "63df0c6e-ae3d-4724-9c1d-2ecd5bf8986a": {
           "tips": [
-            "Jednym ze sposobów na wprowadzenie Godziny Kodowania, jeśli sama nie znasz się zbyt dobrze na kodowaniu jest pokazanie jednego z [naszych inspirujących filmów wideo][0]. Wybierz ten, który Twoim zdaniem będzie inspirujący dla Twoich uczniów i udostępnij go teraz. Uczniom w klasach średnich proponujemy [Godzina Kodowania jest tutaj][1].”"
+            "Jednym ze sposobów na wprowadzenie Godziny Kodowania, jeśli sama nie znasz się zbyt dobrze na kodowaniu jest pokazanie jednego z [naszych inspirujących filmów wideo](https://hourofcode.com/us/resources#videos). Wybierz ten, który Twoim zdaniem będzie inspirujący dla Twoich uczniów i udostępnij go teraz. Uczniom w klasach średnich proponujemy [Godzina Kodowania jest tutaj](https://youtu.be/FC5FbmsH4fw).”"
           ]
         },
         "f96053ea-387e-47d5-a018-65619ec093b0": {
@@ -23560,7 +23560,7 @@
         },
         "91cc858b-9f90-4134-b890-237f457e8423": {
           "name": "Minecraft: Wodna podróż",
-          "description": "Zachęć swoich uczniów do przejścia tego samouczka [Minecraft: Wodna podróż][0].\n\nW zależności od wieku i umiejętności uczniów można rozważyć: \n\n-   w przypadku młodszych uczniów zaproponowanie im, aby podzielili się na pary i poproszenie każdej grupy, aby razem przeszła samouczek korzystając z opcji [programowanie w parach][1].\n-   w przypadku uczniów w środkowych klasach, przekonaliśmy się, że przechodzenia samouczków dobrze sprawdza się praca indywidualna . Czasami warto pozwolić uczniom na wybranie samouczka według uznania. Jeśli uczniowie nie są zainteresowani grą Minecraft, podobne doświadczenia mogą zdobyć korzystając z samouczków w ramach opcji [Koduj z Anną i Elsą][2] lub [Star Wars][3].\n-   w przypadku uczniów starszych lub dorosłych samouczek [Minecraft: Wodna podróż][4] sprawdza się niezwykle dobrze zarówno jako zadanie niezależne lub w ramach opcji programowania w parach."
+          "description": "Zachęć swoich uczniów do przejścia tego samouczka [Minecraft: Wodna podróż](http://studio.code.org/s/aquatic/lessons/1/levels/1).\n\nW zależności od wieku i umiejętności uczniów można rozważyć: \n\n-   w przypadku młodszych uczniów zaproponowanie im, aby podzielili się na pary i poproszenie każdej grupy, aby razem przeszła samouczek korzystając z opcji [programowanie w parach](https://youtu.be/vgkahOzFH2Q).\n-   w przypadku uczniów w środkowych klasach, przekonaliśmy się, że przechodzenia samouczków dobrze sprawdza się praca indywidualna . Czasami warto pozwolić uczniom na wybranie samouczka według uznania. Jeśli uczniowie nie są zainteresowani grą Minecraft, podobne doświadczenia mogą zdobyć korzystając z samouczków w ramach opcji [Koduj z Anną i Elsą](https://studio.code.org/s/frozen/stage/1/puzzle/1) lub [Star Wars](https://code.org/starwars).\n-   w przypadku uczniów starszych lub dorosłych samouczek [Minecraft: Wodna podróż](http://studio.code.org/s/aquatic/lessons/1/levels/1) sprawdza się niezwykle dobrze zarówno jako zadanie niezależne lub w ramach opcji programowania w parach."
         },
         "900f3fd4-40aa-42f7-89fc-e5240b2db143": {
           "tips": [
@@ -23568,7 +23568,7 @@
           ]
         },
         "1be305a6-52f5-40bb-a8d5-f851a3c61a3a": {
-          "description": "Jeśli grupa lub pojedynczy uczeń skończy wcześniej, może spróbować kolejnego samouczka, odwiedzając stronę [code.org/learn][0]."
+          "description": "Jeśli grupa lub pojedynczy uczeń skończy wcześniej, może spróbować kolejnego samouczka, odwiedzając stronę [code.org/learn](http://code.org/learn)."
         },
         "29412a26-dd7b-4990-a8bb-7e6f7bfa00d6": {
           "name": "Zdać sprawozdanie",
@@ -23576,18 +23576,18 @@
         },
         "7e26ffea-ccaa-4969-9b40-01573fbe4303": {
           "name": "Świętuj",
-          "description": "Wyjaśnij, że dzisiejsza lekcja jest poświęcona kodowaniu, ponieważ w tym tygodniu przypada \"Tydzień edukacji informatycznej\" i miliony uczniów na całym świecie równiez odbywają lekcję \"Godzina kodowania\". Pogratuluj uczniom udziału w tym światowym ruchu. \n\nWręcz każdemu uczniowi [świadectwo][0] z jego imieniem."
+          "description": "Wyjaśnij, że dzisiejsza lekcja jest poświęcona kodowaniu, ponieważ w tym tygodniu przypada \"Tydzień edukacji informatycznej\" i miliony uczniów na całym świecie równiez odbywają lekcję \"Godzina kodowania\". Pogratuluj uczniom udziału w tym światowym ruchu. \n\nWręcz każdemu uczniowi [świadectwo](https://studio.code.org/certificates/batch?course=bWM=) z jego imieniem."
         },
         "de9c3d28-c38a-4d2e-af91-a72a92d31f52": {
           "name": "Następne Kroki",
-          "description": "Poinformuj uczniów, że jeśli podobały im się dzisiejsze zajęcia, mają wiele możliwości kontynuowania nauki programowania. Zachęć uczniów do odwiedzenia strony [code.org/learn][0] w celu uzyskania listy opcji lub, jeśli planujesz dodatkowe ćwiczenia, które będziesz realizować, powiedz uczniom, jakie są dalsze plany na dalsze zajęcia w Twojej klasie."
+          "description": "Poinformuj uczniów, że jeśli podobały im się dzisiejsze zajęcia, mają wiele możliwości kontynuowania nauki programowania. Zachęć uczniów do odwiedzenia strony [code.org/learn](<>) w celu uzyskania listy opcji lub, jeśli planujesz dodatkowe ćwiczenia, które będziesz realizować, powiedz uczniom, jakie są dalsze plany na dalsze zajęcia w Twojej klasie."
         },
         "ebf68fd6-9cfe-4fc2-93b4-e61860fc853b": {
-          "description": "Daj każdemu uczniowi [“Przepustkę na wyjście”][0] i poproś, aby podsumowali to, czego się dzisiaj nauczyli, jak się czuli lub czego doświadczyli. Uczniowie mogą narysować, napisać ub wyrazić się w dowolny  sposób, w zakresie którego czują się komfortowo. Odbierz \"Przepustkę na wyjście\" od każdego ucznia wychodzącego z sali. Jeśli chcesz, możesz zamieścić \"Przepustki na wyjście\" na tablicy ogłoszeń lub w innym widocznym miejscu w szkole jako przypomnienie o Twojej \"Godzinie kodowania\"."
+          "description": "Daj każdemu uczniowi [“Przepustkę na wyjście”](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) i poproś, aby podsumowali to, czego się dzisiaj nauczyli, jak się czuli lub czego doświadczyli. Uczniowie mogą narysować, napisać ub wyrazić się w dowolny  sposób, w zakresie którego czują się komfortowo. Odbierz \"Przepustkę na wyjście\" od każdego ucznia wychodzącego z sali. Jeśli chcesz, możesz zamieścić \"Przepustki na wyjście\" na tablicy ogłoszeń lub w innym widocznym miejscu w szkole jako przypomnienie o Twojej \"Godzinie kodowania\"."
         },
         "f3360f34-a0a8-4d3d-98e2-fe6176ad0e2e": {
           "name": "Poza Godziną Kodowania",
-          "description": "#### Poza Godziną Kodowania\n\nPo przeprowadzeniu zajęć Godzina Kodowania można na wiele sposobów kontynuować nauczanie informatyki w klasach K-5. Oto kilka pomysłów:\n\n\\*\\* Prowadzić kursy [Podstawy informatyki w Code Studio][0]. Te sześć kursów jest przeznaczonych dla młodych uczniów. Uczniowie przechodzą przez serię łamigłówek, które uczą ich kodowania, a nauczyciele mają dostęp do angażujących planów lekcji, które pomagają ożywić naukę. Code.org oferuje bezpłatny rozwój zawodowy na bazie tych kursów, online lub osobiście.\n\\*\\* Odwiedź stronę [Możesz uczyć informatyki][1], aby uzyskać więcej propozycji kursów.\n\\*\\* Zaproś eksperta ds. informatyki, aby porozmawiał z klasą o jego pracy. Nie znasz lokalnych informatyków? Skontaktuj się z wolontariuszem na naszej [mapa wolontariatu][2]."
+          "description": "#### Poza Godziną Kodowania\n\nPo przeprowadzeniu zajęć Godzina Kodowania można na wiele sposobów kontynuować nauczanie informatyki w klasach K-5. Oto kilka pomysłów:\n\n\\*\\* Prowadzić kursy [Podstawy informatyki w Code Studio](http://code.org/educate/k5). Te sześć kursów jest przeznaczonych dla młodych uczniów. Uczniowie przechodzą przez serię łamigłówek, które uczą ich kodowania, a nauczyciele mają dostęp do angażujących planów lekcji, które pomagają ożywić naukę. Code.org oferuje bezpłatny rozwój zawodowy na bazie tych kursów, online lub osobiście.\n\\*\\* Odwiedź stronę [Możesz uczyć informatyki](https://code.org/teach), aby uzyskać więcej propozycji kursów.\n\\*\\* Zaproś eksperta ds. informatyki, aby porozmawiał z klasą o jego pracy. Nie znasz lokalnych informatyków? Skontaktuj się z wolontariuszem na naszej [mapa wolontariatu](https://code.org/volunteer/local)."
         },
         "6b51b4f1-5b1d-4b29-af25-c48d716a2d22": {
           "description": "#### Budowanie atmosfery\n\nPrzywitaj uczniów w klasie i bardzo krótko wyjaśnij plan zajęć na ten dzień. \n\n**Powiedz:** _Dzisiaj poświęcimy godzinę na naukę kodowania. Czy ktoś już słyszał termin: \"kod\"? Czy wie, co to znaczy?”_\n\nUczniowie mogą wspomnieć, że \"kod\" przypomina tajną wiadomość lub jest w jakiś sposób powiązany z komputerami.",
@@ -23978,7 +23978,7 @@
         },
         "aced2726-6ed1-4645-9fd2-eccfe982584f": {
           "tips": [
-            "Jednym ze sposobów wprowadzenia Godziny Kodowania, jeśli nie znasz się zbyt dobrze na kodowaniu, jest pokazanie jednego z [naszych inspirujących filmów wideo][0]. Wybierz ten, który Twoim zdaniem będzie inspirujący dla Twoich uczniów i udostępnij go teraz. Dla młodszych uczniów, proponujemy [Każdy może nauczyć się kodować][1].”"
+            "Jednym ze sposobów wprowadzenia Godziny Kodowania, jeśli nie znasz się zbyt dobrze na kodowaniu, jest pokazanie jednego z [naszych inspirujących filmów wideo](https://hourofcode.com/us/resources#videos). Wybierz ten, który Twoim zdaniem będzie inspirujący dla Twoich uczniów i udostępnij go teraz. Dla młodszych uczniów, proponujemy [Każdy może nauczyć się kodować](https://youtu.be/qYZF6oIZtfc).”"
           ]
         },
         "a0692bbb-9e61-49d2-ac85-96bd4a922f5a": {
@@ -23986,7 +23986,7 @@
         },
         "8af57fdb-d7be-4cc2-9964-8f7eed4102f9": {
           "name": "Kod Flappiego",
-          "description": "Podstaw uczniom zadanie przejścia samouczka [Utwórz grę dla Flappy'ego][0].\n\nW zależności od wieku i umiejętności uczniów można rozważyć: \n\n-   W przypadku uczniów gimnazjum i liceum proponujemy samouczki, które umożliwiają swobodną zabawę i tworzenie aplikacji i gier. Uczniowie mogą pracować w samodzielnie, w parach lub w małych grupach. Na stronie [code.org/learn][1] jest wiele innych samouczków, które pozwalają na swobodne tworzenie, w tym [Playlab][2] i nasze nowe narzędzie beta [AppLab][3].\n-   w przypadku młodszych uczniów proponujemy podzielenie klasy na pary lub bardzo małe grupy (trzech do czterech uczniów) i poproszenie każdej grupy, aby razem przeszła samouczek korzystając z opcji [programowanie w parach][4].\n-   W przypadku uczniów dorosłych szczególnie dobrze sprawdza się samouczek [Napisz swój pierwszy program komputerowy][5] jako zadanie do samodzielnego wykonania zadania programowania w parach."
+          "description": "Podstaw uczniom zadanie przejścia samouczka [Utwórz grę dla Flappy'ego](https://studio.code.org/flappy/1).\n\nW zależności od wieku i umiejętności uczniów można rozważyć: \n\n-   W przypadku uczniów gimnazjum i liceum proponujemy samouczki, które umożliwiają swobodną zabawę i tworzenie aplikacji i gier. Uczniowie mogą pracować w samodzielnie, w parach lub w małych grupach. Na stronie [code.org/learn](http://code.org/learn) jest wiele innych samouczków, które pozwalają na swobodne tworzenie, w tym [Playlab](https://studio.code.org/s/playlab/stage/1/puzzle/1) i nasze nowe narzędzie beta [AppLab](https://code.org/educate/applab).\n-   w przypadku młodszych uczniów proponujemy podzielenie klasy na pary lub bardzo małe grupy (trzech do czterech uczniów) i poproszenie każdej grupy, aby razem przeszła samouczek korzystając z opcji [programowanie w parach](https://youtu.be/vgkahOzFH2Q).\n-   W przypadku uczniów dorosłych szczególnie dobrze sprawdza się samouczek [Napisz swój pierwszy program komputerowy](https://studio.code.org/hoc/1) jako zadanie do samodzielnego wykonania zadania programowania w parach."
         },
         "47fe47af-9de3-4ba5-8193-1f489bef9544": {
           "tips": [
@@ -23994,7 +23994,7 @@
           ]
         },
         "55f2f6a9-8e6b-49c2-8988-e2a09956e222": {
-          "description": "Jeśli grupa lub pojedynczy uczeń skończy wcześniej, może spróbować kolejnego samouczka, odwiedzając stronę [code.org/learn][0]."
+          "description": "Jeśli grupa lub pojedynczy uczeń skończy wcześniej, może spróbować kolejnego samouczka, odwiedzając stronę [code.org/learn](http://code.org/learn)."
         },
         "cd649101-5c1f-4bcb-9258-3cabf2bfccb6": {
           "name": "Zdać sprawozdanie",
@@ -24002,7 +24002,7 @@
         },
         "ca7d5e61-0396-4885-934c-0d70ab63b072": {
           "name": "Świętuj",
-          "description": "Wyjaśnij, że dzisiejsza lekcja jest poświęcona kodowaniu, ponieważ w tym tygodniu przypada \"Tydzień edukacji informatycznej\" i miliony uczniów na całym świecie równiez odbywają lekcję \"Godziny kodowania\" w tym tygodniu. Pogratuluj uczniom udziału w tym światowym ruchu. \n\nWręcz każdemu uczniowi [certyfikat][0] z jego imieniem."
+          "description": "Wyjaśnij, że dzisiejsza lekcja jest poświęcona kodowaniu, ponieważ w tym tygodniu przypada \"Tydzień edukacji informatycznej\" i miliony uczniów na całym świecie równiez odbywają lekcję \"Godziny kodowania\" w tym tygodniu. Pogratuluj uczniom udziału w tym światowym ruchu. \n\nWręcz każdemu uczniowi [certyfikat](http://code.org/certificates) z jego imieniem."
         },
         "d4bf5db5-6884-4166-ae90-3a5cd01b9695": {
           "name": "Następne Kroki",
@@ -24014,7 +24014,7 @@
         },
         "f7c11887-da26-4c7b-be7a-1b84d330ed30": {
           "name": "Poza Godziną Kodowania",
-          "description": "### Po zakończeniu Godziny Kodowania\n\nPo przeprowadzeniu zajęć Godzina Kodowania można na wiele sposobów kontynuować nauczanie informatyki w klasach K-5. Oto kilka pomysłów: \n\n-   **Przerób kursy [Podstawy informatyki w Code Studio][0]**. Tych sześć kursów jest przeznaczonych dla młodszych uczniów. Uczniowie przechodzą przez serię łamigłówek,  które uczą ich kodowania, a nauczyciele mają dostęp do planów lekcji, które angażują do pomocy w uczeniu się. Code.org oferuje bezpłatny rozwój zawodowy dla tych kursów, online lub osobiście. \n-   **Zaproś eksperta ds. Informatyki, aby porozmawiał z Twoją klasą o swojej pracy**. Nie znasz żadnych miejscowych informatyków? Zawróć się wolontariusza na naszej [mapie wolontariuszy][2]."
+          "description": "### Po zakończeniu Godziny Kodowania\n\nPo przeprowadzeniu zajęć Godzina Kodowania można na wiele sposobów kontynuować nauczanie informatyki w klasach K-5. Oto kilka pomysłów: \n\n-   **Przerób kursy [Podstawy informatyki w Code Studio](http://code.org/educate/k5)**. Tych sześć kursów jest przeznaczonych dla młodszych uczniów. Uczniowie przechodzą przez serię łamigłówek,  które uczą ich kodowania, a nauczyciele mają dostęp do planów lekcji, które angażują do pomocy w uczeniu się. Code.org oferuje bezpłatny rozwój zawodowy dla tych kursów, online lub osobiście. \n-   **Zaproś eksperta ds. Informatyki, aby porozmawiał z Twoją klasą o swojej pracy**. Nie znasz żadnych miejscowych informatyków? Zawróć się wolontariusza na naszej [mapie wolontariuszy][2]."
         },
         "4fddbdf5-8e43-4536-bdaa-98b0b8c240ad": {
           "name": "Ustawianie sceny",
@@ -24022,7 +24022,7 @@
         },
         "55cc55a9-45cb-4bbd-bf37-2de8a2abd9db": {
           "tips": [
-            "Jeśli masz czas lub Twoim uczniom przyda się więcej informacji, możesz rozważyć przeprowadzenie zdarzenia [\"Maszyna do rysowania\"][0] przed przeprowadzeniem zajęć Godzina Kodowania. W ramach tych krótkich zajęć przybliża się uczniom koncepcję rysowania wspomaganego komputerowo, dzięki czemu lepiej sobie poradzą z materiałem z samouczka \\[Koduj z Anną i Elsą[1]."
+            "Jeśli masz czas lub Twoim uczniom przyda się więcej informacji, możesz rozważyć przeprowadzenie zdarzenia [\"Maszyna do rysowania\"](https://code.org/curriculum/misc/hocunplugged/Teacher) przed przeprowadzeniem zajęć Godzina Kodowania. W ramach tych krótkich zajęć przybliża się uczniom koncepcję rysowania wspomaganego komputerowo, dzięki czemu lepiej sobie poradzą z materiałem z samouczka \\[Koduj z Anną i Elsą[1]."
           ]
         },
         "46e7088b-b207-46ae-be95-3ceacecc3f35": {
@@ -24030,7 +24030,7 @@
         },
         "063fb28a-8520-4c66-9821-3be0f0d1ed5f": {
           "tips": [
-            "Jednym ze sposobów na wprowadzenie Godziny Kodowania, jeśli sama nie jesteś zaznajomiona z kodowaniem, jest pokazanie jednego z [naszych inspirujących filmów wideo][0]. Wybierz ten, który Twoim zdaniem będzie inspirujący dla Twoich uczniów i udostępnij go teraz. Uczniom w klasach średnich proponujemy [Godzina Kodowania jest tutaj][1].”"
+            "Jednym ze sposobów na wprowadzenie Godziny Kodowania, jeśli sama nie jesteś zaznajomiona z kodowaniem, jest pokazanie jednego z [naszych inspirujących filmów wideo](https://hourofcode.com/us/resources#videos). Wybierz ten, który Twoim zdaniem będzie inspirujący dla Twoich uczniów i udostępnij go teraz. Uczniom w klasach średnich proponujemy [Godzina Kodowania jest tutaj](https://youtu.be/FC5FbmsH4fw).”"
           ]
         },
         "c18f0050-ba65-4f12-8cc6-fe7f16b5806b": {
@@ -24038,7 +24038,7 @@
         },
         "e5e802d6-9ee4-4ef3-aab2-616ac241b5f8": {
           "name": "Koduj z Anną i Elsą",
-          "description": "Postaw swoim uczniom zadanie przejścia tego samouczka [Koduj z Anną i Elsą][0].\n\nW zależności od wieku i umiejętności uczniów można rozważyć: \n\n-   w przypadku młodszych uczniów zaproponuj im, aby podzielili się na pary lub bardzo małe grupy (trzech do czterech uczniów) i poproś każdą grupę, aby razem przeszła samouczek korzystając z opcji [programowanie w parach][1].\n-   w przypadku uczniów w środkowych klasach, przekonaliśmy się, że dobrze sprawdza się praca indywidualna. Czasami warto pozwolić uczniom na wybranie samouczka według uznania. Jeśli uczniowie nie są zainteresowani grą Angry Birds, podobne doświadczenia mogą zdobyć korzystając z samouczków w ramach opcji [Koduj z Anną i Elzą][2] lub [Utwórz grę dla Flappy'ego][3]. Uczniowie w klasach poziomu K-5 mogą mieć problemy z matematyką w samouczku (ponieważ wymaga to podstawowego zrozumienia zagadnienia pomiaru kątów). Jeśli twoi uczniowie należą do grupy młodszych dzieci zastanów się, czy nie warto stworzyć planu lekcji uzupełniającej [\"Maszyna do rysowania\"][2], aby wprowadzić podstawy, które ułatwią realizację Godziny Kodowania.\n-   w przypadku uczniów starszych stwierdzamy, że samodzielne przejście samouczka sprawdza się bardzo dobrze. Czasami warto pozwolić uczniom wybrać samouczek samodzielnie. Jeśli uczniowie nie są zainteresowani tematyką filmu Kraina Lodu, mogą zdobyć podobne doświadczenia korzystając z samouczka \\[Napisz swój pierwszy program komputerowy[3].\n-   w przypadku uczniów dorosłych samouczek [Koduj z Anną i Elsą][4] sprawdza się niezwykle dobrze jako zadanie niezależne lub w ramach programowania w parach."
+          "description": "Postaw swoim uczniom zadanie przejścia tego samouczka [Koduj z Anną i Elsą](https://studio.code.org/s/frozen/stage/1/puzzle/1).\n\nW zależności od wieku i umiejętności uczniów można rozważyć: \n\n-   w przypadku młodszych uczniów zaproponuj im, aby podzielili się na pary lub bardzo małe grupy (trzech do czterech uczniów) i poproś każdą grupę, aby razem przeszła samouczek korzystając z opcji [programowanie w parach](https://youtu.be/vgkahOzFH2Q).\n-   w przypadku uczniów w środkowych klasach, przekonaliśmy się, że dobrze sprawdza się praca indywidualna. Czasami warto pozwolić uczniom na wybranie samouczka według uznania. Jeśli uczniowie nie są zainteresowani grą Angry Birds, podobne doświadczenia mogą zdobyć korzystając z samouczków w ramach opcji [Koduj z Anną i Elzą](https://code.org/curriculum/misc/hocunplugged/Teacher) lub [Utwórz grę dla Flappy'ego](https://studio.code.org/hoc/1). Uczniowie w klasach poziomu K-5 mogą mieć problemy z matematyką w samouczku (ponieważ wymaga to podstawowego zrozumienia zagadnienia pomiaru kątów). Jeśli twoi uczniowie należą do grupy młodszych dzieci zastanów się, czy nie warto stworzyć planu lekcji uzupełniającej [\"Maszyna do rysowania\"](https://code.org/curriculum/misc/hocunplugged/Teacher), aby wprowadzić podstawy, które ułatwią realizację Godziny Kodowania.\n-   w przypadku uczniów starszych stwierdzamy, że samodzielne przejście samouczka sprawdza się bardzo dobrze. Czasami warto pozwolić uczniom wybrać samouczek samodzielnie. Jeśli uczniowie nie są zainteresowani tematyką filmu Kraina Lodu, mogą zdobyć podobne doświadczenia korzystając z samouczka \\[Napisz swój pierwszy program komputerowy[3].\n-   w przypadku uczniów dorosłych samouczek [Koduj z Anną i Elsą](https://studio.code.org/s/frozen/stage/1/puzzle/1) sprawdza się niezwykle dobrze jako zadanie niezależne lub w ramach programowania w parach."
         },
         "bdb8b54a-c21d-4bcf-a960-67ecf0468a7f": {
           "tips": [
@@ -24046,15 +24046,15 @@
           ]
         },
         "da8b52b2-8db6-440d-add3-8578161f59e2": {
-          "description": "Jeśli grupa lub pojedynczy uczeń skończy wcześniej, może spróbować kolejnego samouczka, odwiedzając stronę [code.org/learn][0]."
+          "description": "Jeśli grupa lub pojedynczy uczeń skończy wcześniej, może spróbować kolejnego samouczka, odwiedzając stronę [code.org/learn](http://code.org/learn)."
         },
         "38799019-2b81-4c28-a239-762b90e0f5e3": {
           "name": "Zdać sprawozdanie",
-          "description": "Daj każdemu uczniowi samoprzylepną kartkę lub kartki do zapisywania notatek. Przeprowadź krótkie ćwiczenie [“Wywołanie znienacka do odpowiedzi\"][0]:\n\n-   Rzuć pytanie, na które można udzielić kilku odpowiedzi na przykład: “Powiedz, co spodobało ci się szczególnie w ćwiczeniu \"Godzina Kodowania\", które właśnie wykonałeś lub \"Powidz, jakie nowe umiętności dziś nabyłeś.\"\n-   Poleć uczniom, by zapisali jak najwięcej odpowiedzi. Jedną na każdej kartce samoprzylepnej lub na kartce do notatek.\n    Przechadzając się po sali \"wywołuj znienacka do odowiedzi\", za każdym razem jednego ucznia. Niech poda swoją odpowiedź. Wywołany uczeń nie powinien powtarzać odpowiedzi. Musi dodać nową. \n-   Po zakończeniu ćwiczenia uczniowie mają przedyskutować swoje pomysły i tematy, które pojawiły się wśród odpowiedzi."
+          "description": "Daj każdemu uczniowi samoprzylepną kartkę lub kartki do zapisywania notatek. Przeprowadź krótkie ćwiczenie [“Wywołanie znienacka do odpowiedzi\"](http://www.theteachertoolkit.com/index.php/tool/whip-around):\n\n-   Rzuć pytanie, na które można udzielić kilku odpowiedzi na przykład: “Powiedz, co spodobało ci się szczególnie w ćwiczeniu \"Godzina Kodowania\", które właśnie wykonałeś lub \"Powidz, jakie nowe umiętności dziś nabyłeś.\"\n-   Poleć uczniom, by zapisali jak najwięcej odpowiedzi. Jedną na każdej kartce samoprzylepnej lub na kartce do notatek.\n    Przechadzając się po sali \"wywołuj znienacka do odowiedzi\", za każdym razem jednego ucznia. Niech poda swoją odpowiedź. Wywołany uczeń nie powinien powtarzać odpowiedzi. Musi dodać nową. \n-   Po zakończeniu ćwiczenia uczniowie mają przedyskutować swoje pomysły i tematy, które pojawiły się wśród odpowiedzi."
         },
         "e9751fff-a71d-4d90-b401-0ccbf3356c44": {
           "name": "Świętuj",
-          "description": "Wyjaśnij, że dzisiejsza lekcja jest poświęcona kodowaniu, ponieważ w tym tygodniu przypada \"Tydzień edukacji informatycznej\" i miliony uczniów na całym świecie równiez odbywają lekcję \"Godziny kodowania\" w tym tygodniu. Pogratuluj uczniom udziału w tym światowym ruchu. \n\nWręcz każdemu uczniowi [certyfikat][0] z jego imieniem."
+          "description": "Wyjaśnij, że dzisiejsza lekcja jest poświęcona kodowaniu, ponieważ w tym tygodniu przypada \"Tydzień edukacji informatycznej\" i miliony uczniów na całym świecie równiez odbywają lekcję \"Godziny kodowania\" w tym tygodniu. Pogratuluj uczniom udziału w tym światowym ruchu. \n\nWręcz każdemu uczniowi [certyfikat](http://code.org/certificates) z jego imieniem."
         },
         "3596cc47-e661-4d00-943e-ed858c4f6f5d": {
           "name": "Następne Kroki",
@@ -24065,7 +24065,7 @@
         },
         "3a8c30ae-50bb-4a85-99d8-b62c9f7e1bbf": {
           "name": "Poza Godziną Kodowania",
-          "description": "Po zakończeniu zajęć Godzina Kodowania można na wiele sposobów kontynuować nauczanie informatyki w klasach K-5. Oto kilka pomysłów: \n\n-   **Przerób kursy [Podstawy informatyki w Code Studio][0]**. Tych sześć kursów jest przeznaczonych dla młodszych uczniów. Uczniowie przechodzą przez serię łamigłówek,  które uczą ich kodowania, a nauczyciele mają dostęp do planów lekcji, które angażują do pomocy w uczeniu się. Code.org oferuje bezpłatny rozwój zawodowy dla tych kursów, online lub osobiście. \n-   Zbadaj niektóre kariery związane z kodowaniem, na które się natknęłaś. Znajdź w witrynie [Sharemylesson.com][1] zasoby dotyczące projektów badawczych związanych z planowaniem kariery. \n-   **Zaproś eksperta ds. Informatyki, aby porozmawiał z Twoją klasą o swojej pracy**. Nie znasz żadnego wolontariusza, zawróć się do kilku na [mapie wolontariuszy][2]."
+          "description": "Po zakończeniu zajęć Godzina Kodowania można na wiele sposobów kontynuować nauczanie informatyki w klasach K-5. Oto kilka pomysłów: \n\n-   **Przerób kursy [Podstawy informatyki w Code Studio](http://code.org/educate/k5)**. Tych sześć kursów jest przeznaczonych dla młodszych uczniów. Uczniowie przechodzą przez serię łamigłówek,  które uczą ich kodowania, a nauczyciele mają dostęp do planów lekcji, które angażują do pomocy w uczeniu się. Code.org oferuje bezpłatny rozwój zawodowy dla tych kursów, online lub osobiście. \n-   Zbadaj niektóre kariery związane z kodowaniem, na które się natknęłaś. Znajdź w witrynie [Sharemylesson.com](http://www.sharemylesson.com/TaxonomySearchResults.aspx?area=resources&keywords=career+research) zasoby dotyczące projektów badawczych związanych z planowaniem kariery. \n-   **Zaproś eksperta ds. Informatyki, aby porozmawiał z Twoją klasą o swojej pracy**. Nie znasz żadnego wolontariusza, zawróć się do kilku na [mapie wolontariuszy](https://code.org/volunteer/local)."
         },
         "a2f60a17-c25f-4c4d-9f2d-384486d7a67d": {
           "name": "Ustawianie sceny",
@@ -24073,7 +24073,7 @@
         },
         "c857d03e-91e3-4949-8ccc-79a2aec463c8": {
           "tips": [
-            "Jednym ze sposobów wprowadzenia Godziny Kodowania, jeśli nie znasz się zbyt dobrze na kodowaniu, jest pokazanie jednego z [naszych inspirujących filmów wideo][0]. Wybierz ten, który Twoim zdaniem będzie inspirujący dla Twoich uczniów i udostępnij go teraz. Dla młodszych uczniów, proponujemy [Każdy może nauczyć się kodować][1].”"
+            "Jednym ze sposobów wprowadzenia Godziny Kodowania, jeśli nie znasz się zbyt dobrze na kodowaniu, jest pokazanie jednego z [naszych inspirujących filmów wideo](https://hourofcode.com/us/resources#videos). Wybierz ten, który Twoim zdaniem będzie inspirujący dla Twoich uczniów i udostępnij go teraz. Dla młodszych uczniów, proponujemy [Każdy może nauczyć się kodować](https://youtu.be/qYZF6oIZtfc).”"
           ]
         },
         "8ad0974f-b2ad-4632-bfe5-8c8760cd2e45": {
@@ -24081,7 +24081,7 @@
         },
         "0e395269-9740-4229-a7ac-b18b9f4eced9": {
           "name": "Gumball Play Lab",
-          "description": "Zachęć uczniów do przejścia samouczka [Gumball Play Lab][0].\n\nW zależności od wieku i umiejętności uczniów można rozważyć: \n\n-   W przypadku uczniów gimnazjum i liceum proponujemy samouczki, które umożliwiają swobodną zabawę i tworzenie aplikacji i gier. Uczniowie mogą pracować w samodzielnie, w parach lub w małych grupach. Na stronie [code.org/learn][1] jest wiele innych samouczków, które pozwalają na swobodne tworzenie, w tym [Utwórz grę dla Flappy'ego][2] i nasze nowe narzędzie beta [AppLab][3].\n-   w przypadku młodszych uczniów proponujemy podzielenie klasy na pary lub bardzo małe grupy (trzech do czterech uczniów) i poproszenie każdej grupy, aby razem przeszła samouczek korzystając z opcji [programowanie w parach][4].\n-   W przypadku uczniów dorosłych szczególnie dobrze sprawdza się samouczek [Napisz swój pierwszy program komputerowy][5] jako zadanie do samodzielnego wykonania zadania programowania w parach."
+          "description": "Zachęć uczniów do przejścia samouczka [Gumball Play Lab](https://studio.code.org/s/gumball/lessons/1/levels/1).\n\nW zależności od wieku i umiejętności uczniów można rozważyć: \n\n-   W przypadku uczniów gimnazjum i liceum proponujemy samouczki, które umożliwiają swobodną zabawę i tworzenie aplikacji i gier. Uczniowie mogą pracować w samodzielnie, w parach lub w małych grupach. Na stronie [code.org/learn](http://code.org/learn) jest wiele innych samouczków, które pozwalają na swobodne tworzenie, w tym [Utwórz grę dla Flappy'ego](https://studio.code.org/s/flappy) i nasze nowe narzędzie beta [AppLab](https://code.org/educate/applab).\n-   w przypadku młodszych uczniów proponujemy podzielenie klasy na pary lub bardzo małe grupy (trzech do czterech uczniów) i poproszenie każdej grupy, aby razem przeszła samouczek korzystając z opcji [programowanie w parach](https://youtu.be/vgkahOzFH2Q).\n-   W przypadku uczniów dorosłych szczególnie dobrze sprawdza się samouczek [Napisz swój pierwszy program komputerowy](https://studio.code.org/hoc/1) jako zadanie do samodzielnego wykonania zadania programowania w parach."
         },
         "eea63453-59c2-4c48-8d04-d6612d379584": {
           "tips": [
@@ -24089,7 +24089,7 @@
           ]
         },
         "fd77d784-72d9-4687-843d-7d1ecd17b9a1": {
-          "description": "Jeśli grupa lub pojedynczy uczeń skończy wcześniej, może spróbować kolejnego samouczka, odwiedzając stronę [code.org/learn][0]."
+          "description": "Jeśli grupa lub pojedynczy uczeń skończy wcześniej, może spróbować kolejnego samouczka, odwiedzając stronę [code.org/learn](http://code.org/learn)."
         },
         "0815f2e7-8336-48ae-8ac0-5d0af1f956d9": {
           "name": "Zdać sprawozdanie",
@@ -24097,7 +24097,7 @@
         },
         "3b92bb05-ac4c-4717-afce-ed3d10f54527": {
           "name": "Świętuj",
-          "description": "Wyjaśnij, że dzisiejsza lekcja jest poświęcona kodowaniu, ponieważ w tym tygodniu przypada \"Tydzień edukacji informatycznej\" i miliony uczniów na całym świecie równiez odbywają lekcję \"Godziny kodowania\" w tym tygodniu. Pogratuluj uczniom udziału w tym światowym ruchu. \n\nWręcz każdemu uczniowi [certyfikat][0] z jego imieniem."
+          "description": "Wyjaśnij, że dzisiejsza lekcja jest poświęcona kodowaniu, ponieważ w tym tygodniu przypada \"Tydzień edukacji informatycznej\" i miliony uczniów na całym świecie równiez odbywają lekcję \"Godziny kodowania\" w tym tygodniu. Pogratuluj uczniom udziału w tym światowym ruchu. \n\nWręcz każdemu uczniowi [certyfikat](http://code.org/certificates) z jego imieniem."
         },
         "59cd05df-cb4d-4280-8700-840826c01845": {
           "name": "Następne Kroki",
@@ -24109,7 +24109,7 @@
         },
         "2836d5f0-0808-4868-bc34-bbd3cf8b631f": {
           "name": "Poza Godziną Kodowania",
-          "description": "### Po zakończeniu Godziny Kodowania\n\nPo przeprowadzeniu zajęć Godzina Kodowania można na wiele sposobów kontynuować nauczanie informatyki w klasach K-5. Oto kilka pomysłów: \n\n-   **Przerób kursy [Podstawy informatyki w Code Studio][0]**. Te cztery kursy są przeznaczone dla młodszych uczniów. Uczniowie przechodzą przez serię łamigłówek,  które uczą ich kodowania, a nauczyciele mają dostęp do planów lekcji, które angażują do pomocy w uczeniu się. Code.org oferuje bezpłatny rozwój zawodowy dla tych kursów, online lub osobiście. \n-   **Zaproś eksperta ds. Informatyki, aby porozmawiał z Twoją klasą o swojej pracy**. Nie znasz żadnych miejscowych informatyków? Zawróć się wolontariusza na naszej [mapie wolontariuszy][2]."
+          "description": "### Po zakończeniu Godziny Kodowania\n\nPo przeprowadzeniu zajęć Godzina Kodowania można na wiele sposobów kontynuować nauczanie informatyki w klasach K-5. Oto kilka pomysłów: \n\n-   **Przerób kursy [Podstawy informatyki w Code Studio](http://code.org/educate/k5)**. Te cztery kursy są przeznaczone dla młodszych uczniów. Uczniowie przechodzą przez serię łamigłówek,  które uczą ich kodowania, a nauczyciele mają dostęp do planów lekcji, które angażują do pomocy w uczeniu się. Code.org oferuje bezpłatny rozwój zawodowy dla tych kursów, online lub osobiście. \n-   **Zaproś eksperta ds. Informatyki, aby porozmawiał z Twoją klasą o swojej pracy**. Nie znasz żadnych miejscowych informatyków? Zawróć się wolontariusza na naszej [mapie wolontariuszy][2]."
         },
         "c4d6d315-bb5c-47d7-bc5e-f5fce2e4ae67": {
           "name": "Ustawianie sceny",
@@ -24123,18 +24123,18 @@
         },
         "ce182c47-efed-4526-bb9c-f4ec66b052a4": {
           "name": "Ogólne wsparcie",
-          "description": "Oto kilka wskazówek, które powinny pomóc uczniom niezależnie od poziomu, na którym pracują\n\n-   **Współpracuj z Sąsiadami:** Zachęcaj uczniów, aby kontaktowali się z sąsiadem, gdy \"utkną\" na czymś. W zależności od wieku i możliwości Twoich uczniów, możesz zastanowić się nad podzieleniem swojej klasy na pary, aby ukończyli samouczek korzystając z [programowania w parach][0].  \n\n-   **Przeczytaj instrukcje:** W instrukcjach podsuwa się zwykle pomocne wskazówki na temat tego, jak przejść poziom. Zanim podaniem uczniom odpowiedzi upewnij się, czy uważnie zapoznali się z instrukcjami, wskazówkami, filmami i kodem pocztkowym.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Utknąłeś? Szukaj wskazówek:** Każdy poziom zawiera wskazówkę z poradą, jak go przejść, z uwzględnieniem bloków kodu do wypróbowania.\n\n-   **Nie spiesz się i eksperymentuj.** Instrukcje zasadniczo \"mówią\" uczniom co mają robić, ale powinni czuć, że mają swobodę, która pozwala wypróbowywać własne pomysły."
+          "description": "Oto kilka wskazówek, które powinny pomóc uczniom niezależnie od poziomu, na którym pracują\n\n-   **Współpracuj z Sąsiadami:** Zachęcaj uczniów, aby kontaktowali się z sąsiadem, gdy \"utkną\" na czymś. W zależności od wieku i możliwości Twoich uczniów, możesz zastanowić się nad podzieleniem swojej klasy na pary, aby ukończyli samouczek korzystając z [programowania w parach](https://youtu.be/vgkahOzFH2Q).  \n\n-   **Przeczytaj instrukcje:** W instrukcjach podsuwa się zwykle pomocne wskazówki na temat tego, jak przejść poziom. Zanim podaniem uczniom odpowiedzi upewnij się, czy uważnie zapoznali się z instrukcjami, wskazówkami, filmami i kodem pocztkowym.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Utknąłeś? Szukaj wskazówek:** Każdy poziom zawiera wskazówkę z poradą, jak go przejść, z uwzględnieniem bloków kodu do wypróbowania.\n\n-   **Nie spiesz się i eksperymentuj.** Instrukcje zasadniczo \"mówią\" uczniom co mają robić, ale powinni czuć, że mają swobodę, która pozwala wypróbowywać własne pomysły."
         },
         "893dba56-7c8e-4897-949b-de514de76011": {
           "name": "Witaj świecie",
           "progression_name": "Witaj świecie"
         },
         "05ad915a-32e0-4799-90a2-2a53efb937f1": {
-          "description": "Jeśli jakaś grupa lub osoba skończy szybciej, zachęcaj do kontynuowania budowania projektu na ostatnim poziomie. Jeśli uczniowie nie mają pewności, co jeszcze mają zrobić, możesz podpowiedzieć im posługując się następującymi pytaniami:\n\n-   Jakie inne duszki mógłbyś dodać do swojego projektu?\n-   Czy przeglądałeś bibliotekę kostiumów, czy próbowałeś rysować swój własny kostium duszka?\n-   Do mówienia czego jeszcze mógłbyś skłaniać swoje duszki?\n-   Co powinny robić Twoje duszki, gdy ktoś je kliknie?\n-   Zachęć uczniów do ujawniania swoich pomysłów i uczenia się od siebie wzajemnie. Mogą również wypróbowywać inny samouczek wchodząc na [code.org/learn][0]."
+          "description": "Jeśli jakaś grupa lub osoba skończy szybciej, zachęcaj do kontynuowania budowania projektu na ostatnim poziomie. Jeśli uczniowie nie mają pewności, co jeszcze mają zrobić, możesz podpowiedzieć im posługując się następującymi pytaniami:\n\n-   Jakie inne duszki mógłbyś dodać do swojego projektu?\n-   Czy przeglądałeś bibliotekę kostiumów, czy próbowałeś rysować swój własny kostium duszka?\n-   Do mówienia czego jeszcze mógłbyś skłaniać swoje duszki?\n-   Co powinny robić Twoje duszki, gdy ktoś je kliknie?\n-   Zachęć uczniów do ujawniania swoich pomysłów i uczenia się od siebie wzajemnie. Mogą również wypróbowywać inny samouczek wchodząc na [code.org/learn](https://code.org/learn)."
         },
         "d5d3f8eb-f17e-4f26-88a8-ca6422ed7a1f": {
           "name": "Refleksja",
-          "description": "#### Zdawanie sprawozdania\n\nPoproś uczniów, aby przedstawili przemyślenia dotyczące czynności wykonanych w ciągu dnia. Czego nauczyli się na temat kodowania? Duszków? Zdarzeń?\n\nJakie wrażenia wywołuje w nich informatyka i kodowanie po spędzeniu godziny eksplorowania?\n\n#### Dalsze kroki\n\nPowiedz uczniom, że jeśli podobało im się dzisiejsze ćwiczenie, mają wiele możliwości dalszego kodowania. Zapraszamy na [Powiązania informatyki][0], aby poznać pomysły dotyczące tego, jak włączyć informatykę w inne przedmioty lub przeczytać więcej na temat naszej [oferty kursów dla szkół podstawowych][1]."
+          "description": "#### Zdawanie sprawozdania\n\nPoproś uczniów, aby przedstawili przemyślenia dotyczące czynności wykonanych w ciągu dnia. Czego nauczyli się na temat kodowania? Duszków? Zdarzeń?\n\nJakie wrażenia wywołuje w nich informatyka i kodowanie po spędzeniu godziny eksplorowania?\n\n#### Dalsze kroki\n\nPowiedz uczniom, że jeśli podobało im się dzisiejsze ćwiczenie, mają wiele możliwości dalszego kodowania. Zapraszamy na [Powiązania informatyki](https://code.org/educate/csc), aby poznać pomysły dotyczące tego, jak włączyć informatykę w inne przedmioty lub przeczytać więcej na temat naszej [oferty kursów dla szkół podstawowych](https://code.org/educate/curriculum/elementary-school)."
         },
         "aad08892-e7b6-4fdc-bfd6-8199118fc2d6": {
           "name": "Ustawianie sceny",
@@ -24148,18 +24148,18 @@
         },
         "0a05af25-05aa-4e56-92ce-f14570cc1c64": {
           "name": "Ogólne wsparcie",
-          "description": "Oto kilka wskazówek, które powinny pomóc uczniom niezależnie od poziomu, na którym pracują\n\n-   **Współpracuj z Sąsiadami:** Zachęcaj uczniów, aby kontaktowali się z sąsiadem, gdy \"utkną\" na czymś. W zależności od wieku i możliwości Twoich uczniów, możesz zastanowić się nad podzieleniem swojej klasy na pary, aby ukończyli samouczek korzystając z [programowania w parach][0].  \n\n-   **Przeczytaj instrukcje:** W instrukcjach podsuwa się zwykle pomocne wskazówki na temat tego, jak przejść poziom. Zanim podaniem uczniom odpowiedzi upewnij się, czy uważnie zapoznali się z instrukcjami, wskazówkami, filmami i kodem pocztkowym.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Utknąłeś? Szukaj wskazówek:** Każdy poziom zawiera wskazówkę z poradą, jak go przejść, z uwzględnieniem bloków kodu do wypróbowania.\n\n-   **Nie spiesz się i eksperymentuj.** Instrukcje zasadniczo \"mówią\" uczniom co mają robić, ale powinni czuć, że mają swobodę, która pozwala wypróbowywać własne pomysły."
+          "description": "Oto kilka wskazówek, które powinny pomóc uczniom niezależnie od poziomu, na którym pracują\n\n-   **Współpracuj z Sąsiadami:** Zachęcaj uczniów, aby kontaktowali się z sąsiadem, gdy \"utkną\" na czymś. W zależności od wieku i możliwości Twoich uczniów, możesz zastanowić się nad podzieleniem swojej klasy na pary, aby ukończyli samouczek korzystając z [programowania w parach](https://youtu.be/vgkahOzFH2Q).  \n\n-   **Przeczytaj instrukcje:** W instrukcjach podsuwa się zwykle pomocne wskazówki na temat tego, jak przejść poziom. Zanim podaniem uczniom odpowiedzi upewnij się, czy uważnie zapoznali się z instrukcjami, wskazówkami, filmami i kodem pocztkowym.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Utknąłeś? Szukaj wskazówek:** Każdy poziom zawiera wskazówkę z poradą, jak go przejść, z uwzględnieniem bloków kodu do wypróbowania.\n\n-   **Nie spiesz się i eksperymentuj.** Instrukcje zasadniczo \"mówią\" uczniom co mają robić, ale powinni czuć, że mają swobodę, która pozwala wypróbowywać własne pomysły."
         },
         "f6a21949-1c94-4269-acae-98046f6a9052": {
           "name": "Witaj świecie",
           "progression_name": "Witaj świecie"
         },
         "3e2a74f4-d574-42fd-9bf3-5b319526299a": {
-          "description": "Jeśli jakaś grupa lub osoba skończy szybciej, zachęcaj do kontynuowania budowania projektu na ostatnim poziomie. Jeśli uczniowie nie mają pewności, co jeszcze mają zrobić, możesz podpowiedzieć im posługując się następującymi pytaniami:\n\n-   Jakie inne duszki mógłbyś dodać do swojego projektu?\n-   Czy przeglądałeś bibliotekę kostiumów, czy próbowałeś rysować swój własny kostium duszka?\n-   Do mówienia czego jeszcze mógłbyś skłaniać swoje duszki?\n-   Co powinny robić Twoje duszki, gdy ktoś je kliknie?\n-   Zachęć uczniów do ujawniania swoich pomysłów i uczenia się od siebie wzajemnie. Mogą również wypróbowywać inny samouczek wchodząc na [code.org/learn][0]."
+          "description": "Jeśli jakaś grupa lub osoba skończy szybciej, zachęcaj do kontynuowania budowania projektu na ostatnim poziomie. Jeśli uczniowie nie mają pewności, co jeszcze mają zrobić, możesz podpowiedzieć im posługując się następującymi pytaniami:\n\n-   Jakie inne duszki mógłbyś dodać do swojego projektu?\n-   Czy przeglądałeś bibliotekę kostiumów, czy próbowałeś rysować swój własny kostium duszka?\n-   Do mówienia czego jeszcze mógłbyś skłaniać swoje duszki?\n-   Co powinny robić Twoje duszki, gdy ktoś je kliknie?\n-   Zachęć uczniów do ujawniania swoich pomysłów i uczenia się od siebie wzajemnie. Mogą również wypróbowywać inny samouczek wchodząc na [code.org/learn](https://code.org/learn)."
         },
         "f95b4eed-639e-483e-bef7-ead9abf4808e": {
           "name": "Refleksja",
-          "description": "#### Zdawanie sprawozdania\n\nPoproś uczniów, aby przedstawili przemyślenia dotyczące czynności wykonanych w ciągu dnia. Czego nauczyli się na temat kodowania? Duszków? Zdarzeń?\n\nJakie wrażenia wywołuje w nich informatyka i kodowanie po spędzeniu godziny eksplorowania?\n\n#### Dalsze kroki\n\nPowiedz uczniom, że jeśli podobało im się dzisiejsze ćwiczenie, mają wiele możliwości dalszego kodowania. Zapraszamy na [Powiązania informatyki][0], aby poznać pomysły dotyczące tego, jak włączyć informatykę w inne przedmioty lub przeczytać więcej na temat naszej [oferty kursów dla szkół podstawowych][1]."
+          "description": "#### Zdawanie sprawozdania\n\nPoproś uczniów, aby przedstawili przemyślenia dotyczące czynności wykonanych w ciągu dnia. Czego nauczyli się na temat kodowania? Duszków? Zdarzeń?\n\nJakie wrażenia wywołuje w nich informatyka i kodowanie po spędzeniu godziny eksplorowania?\n\n#### Dalsze kroki\n\nPowiedz uczniom, że jeśli podobało im się dzisiejsze ćwiczenie, mają wiele możliwości dalszego kodowania. Zapraszamy na [Powiązania informatyki](https://code.org/educate/csc), aby poznać pomysły dotyczące tego, jak włączyć informatykę w inne przedmioty lub przeczytać więcej na temat naszej [oferty kursów dla szkół podstawowych](https://code.org/educate/curriculum/elementary-school)."
         },
         "5ba761c1-02df-411f-96cd-69a8327e0d2c": {
           "name": "Ustawianie sceny",
@@ -24173,18 +24173,18 @@
         },
         "11f167ca-2cf6-4e6b-8857-316c5cb55f82": {
           "name": "Ogólne wsparcie",
-          "description": "Oto kilka wskazówek, które powinny pomóc uczniom niezależnie od poziomu, na którym pracują\n\n-   **Współpracuj z Sąsiadami:** Zachęcaj uczniów, aby kontaktowali się z sąsiadem, gdy \"utkną\" na czymś. W zależności od wieku i możliwości Twoich uczniów, możesz zastanowić się nad podzieleniem swojej klasy na pary, aby ukończyli samouczek korzystając z [programowania w parach][0].  \n\n-   **Przeczytaj instrukcje:** W instrukcjach podsuwa się zwykle pomocne wskazówki na temat tego, jak przejść poziom. Zanim podaniem uczniom odpowiedzi upewnij się, czy uważnie zapoznali się z instrukcjami, wskazówkami, filmami i kodem pocztkowym.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Utknąłeś? Szukaj wskazówek:** Każdy poziom zawiera wskazówkę z poradą, jak go przejść, z uwzględnieniem bloków kodu do wypróbowania.\n\n-   **Nie spiesz się i eksperymentuj.** Instrukcje zasadniczo \"mówią\" uczniom co mają robić, ale powinni czuć, że mają swobodę, która pozwala wypróbowywać własne pomysły."
+          "description": "Oto kilka wskazówek, które powinny pomóc uczniom niezależnie od poziomu, na którym pracują\n\n-   **Współpracuj z Sąsiadami:** Zachęcaj uczniów, aby kontaktowali się z sąsiadem, gdy \"utkną\" na czymś. W zależności od wieku i możliwości Twoich uczniów, możesz zastanowić się nad podzieleniem swojej klasy na pary, aby ukończyli samouczek korzystając z [programowania w parach](https://youtu.be/vgkahOzFH2Q).  \n\n-   **Przeczytaj instrukcje:** W instrukcjach podsuwa się zwykle pomocne wskazówki na temat tego, jak przejść poziom. Zanim podaniem uczniom odpowiedzi upewnij się, czy uważnie zapoznali się z instrukcjami, wskazówkami, filmami i kodem pocztkowym.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Utknąłeś? Szukaj wskazówek:** Każdy poziom zawiera wskazówkę z poradą, jak go przejść, z uwzględnieniem bloków kodu do wypróbowania.\n\n-   **Nie spiesz się i eksperymentuj.** Instrukcje zasadniczo \"mówią\" uczniom co mają robić, ale powinni czuć, że mają swobodę, która pozwala wypróbowywać własne pomysły."
         },
         "c721eddb-4cfb-4237-a031-0730bbfdc926": {
           "name": "Witaj świecie",
           "progression_name": "Witaj świecie"
         },
         "8341212e-8528-4ad8-9c02-22066467054b": {
-          "description": "Jeśli jakaś grupa lub osoba skończy szybciej, zachęcaj do kontynuowania budowania projektu na ostatnim poziomie. Jeśli uczniowie nie mają pewności, co jeszcze mają zrobić, możesz podpowiedzieć im posługując się następującymi pytaniami:\n\n-   Jakie inne duszki mógłbyś dodać do swojego projektu?\n-   Czy przeglądałeś bibliotekę kostiumów, czy próbowałeś rysować swój własny kostium duszka?\n-   Do mówienia czego jeszcze mógłbyś skłaniać swoje duszki?\n-   Co powinny robić Twoje duszki, gdy ktoś je kliknie?\n-   Zachęć uczniów do ujawniania swoich pomysłów i uczenia się od siebie wzajemnie. Mogą również wypróbowywać inny samouczek wchodząc na [code.org/learn][0]."
+          "description": "Jeśli jakaś grupa lub osoba skończy szybciej, zachęcaj do kontynuowania budowania projektu na ostatnim poziomie. Jeśli uczniowie nie mają pewności, co jeszcze mają zrobić, możesz podpowiedzieć im posługując się następującymi pytaniami:\n\n-   Jakie inne duszki mógłbyś dodać do swojego projektu?\n-   Czy przeglądałeś bibliotekę kostiumów, czy próbowałeś rysować swój własny kostium duszka?\n-   Do mówienia czego jeszcze mógłbyś skłaniać swoje duszki?\n-   Co powinny robić Twoje duszki, gdy ktoś je kliknie?\n-   Zachęć uczniów do ujawniania swoich pomysłów i uczenia się od siebie wzajemnie. Mogą również wypróbowywać inny samouczek wchodząc na [code.org/learn](https://code.org/learn)."
         },
         "656eee11-dc6d-428e-8849-6e4b31dc8c81": {
           "name": "Refleksja",
-          "description": "#### Zdawanie sprawozdania\n\nPoproś uczniów, aby przedstawili przemyślenia dotyczące czynności wykonanych w ciągu dnia. Czego nauczyli się na temat kodowania? Duszków? Zdarzeń?\n\nJakie wrażenia wywołuje w nich informatyka i kodowanie po spędzeniu godziny eksplorowania?\n\n#### Dalsze kroki\n\nPowiedz uczniom, że jeśli podobało im się dzisiejsze ćwiczenie, mają wiele możliwości dalszego kodowania. Zapraszamy na [Powiązania informatyki][0], aby poznać pomysły dotyczące tego, jak włączyć informatykę w inne przedmioty lub przeczytać więcej na temat naszej [oferty kursów dla szkół podstawowych][1]."
+          "description": "#### Zdawanie sprawozdania\n\nPoproś uczniów, aby przedstawili przemyślenia dotyczące czynności wykonanych w ciągu dnia. Czego nauczyli się na temat kodowania? Duszków? Zdarzeń?\n\nJakie wrażenia wywołuje w nich informatyka i kodowanie po spędzeniu godziny eksplorowania?\n\n#### Dalsze kroki\n\nPowiedz uczniom, że jeśli podobało im się dzisiejsze ćwiczenie, mają wiele możliwości dalszego kodowania. Zapraszamy na [Powiązania informatyki](https://code.org/educate/csc), aby poznać pomysły dotyczące tego, jak włączyć informatykę w inne przedmioty lub przeczytać więcej na temat naszej [oferty kursów dla szkół podstawowych](https://code.org/educate/curriculum/elementary-school)."
         },
         "9d3ef78a-4043-489e-898b-f407c914f698": {
           "name": "Ustawianie sceny",
@@ -24198,18 +24198,18 @@
         },
         "2ff80a97-db35-4d10-9703-4d0cc3ff0c3a": {
           "name": "Ogólne wsparcie",
-          "description": "Oto kilka wskazówek, które powinny pomóc uczniom niezależnie od poziomu, na którym pracują\n\n-   **Współpracuj z Sąsiadami:** Zachęcaj uczniów, aby kontaktowali się z sąsiadem, gdy \"utkną\" na czymś. W zależności od wieku i możliwości Twoich uczniów, możesz zastanowić się nad podzieleniem swojej klasy na pary, aby ukończyli samouczek korzystając z [programowania w parach][0].  \n\n-   **Przeczytaj instrukcje:** W instrukcjach podsuwa się zwykle pomocne wskazówki na temat tego, jak przejść poziom. Zanim podaniem uczniom odpowiedzi upewnij się, czy uważnie zapoznali się z instrukcjami, wskazówkami, filmami i kodem pocztkowym.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Utknąłeś? Szukaj wskazówek:** Każdy poziom zawiera wskazówkę z poradą, jak go przejść, z uwzględnieniem bloków kodu do wypróbowania.\n\n-   **Nie spiesz się i eksperymentuj.** Instrukcje zasadniczo \"mówią\" uczniom co mają robić, ale powinni czuć, że mają swobodę, która pozwala wypróbowywać własne pomysły."
+          "description": "Oto kilka wskazówek, które powinny pomóc uczniom niezależnie od poziomu, na którym pracują\n\n-   **Współpracuj z Sąsiadami:** Zachęcaj uczniów, aby kontaktowali się z sąsiadem, gdy \"utkną\" na czymś. W zależności od wieku i możliwości Twoich uczniów, możesz zastanowić się nad podzieleniem swojej klasy na pary, aby ukończyli samouczek korzystając z [programowania w parach](https://youtu.be/vgkahOzFH2Q).  \n\n-   **Przeczytaj instrukcje:** W instrukcjach podsuwa się zwykle pomocne wskazówki na temat tego, jak przejść poziom. Zanim podaniem uczniom odpowiedzi upewnij się, czy uważnie zapoznali się z instrukcjami, wskazówkami, filmami i kodem pocztkowym.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Utknąłeś? Szukaj wskazówek:** Każdy poziom zawiera wskazówkę z poradą, jak go przejść, z uwzględnieniem bloków kodu do wypróbowania.\n\n-   **Nie spiesz się i eksperymentuj.** Instrukcje zasadniczo \"mówią\" uczniom co mają robić, ale powinni czuć, że mają swobodę, która pozwala wypróbowywać własne pomysły."
         },
         "70daba44-c26e-4286-95ae-50cbd8724b2d": {
           "name": "Witaj świecie",
           "progression_name": "Witaj świecie"
         },
         "77cef9f9-1949-455b-a0bd-f2cbc4a32986": {
-          "description": "Jeśli jakaś grupa lub osoba skończy szybciej, zachęcaj do kontynuowania budowania projektu na ostatnim poziomie. Jeśli uczniowie nie mają pewności, co jeszcze mają zrobić, możesz podpowiedzieć im posługując się następującymi pytaniami:\n\n-   Jakie inne duszki mógłbyś dodać do swojego projektu?\n-   Czy przeglądałeś bibliotekę kostiumów, czy próbowałeś rysować swój własny kostium duszka?\n-   Do mówienia czego jeszcze mógłbyś skłaniać swoje duszki?\n-   Co powinny robić Twoje duszki, gdy ktoś je kliknie?\n-   Zachęć uczniów do ujawniania swoich pomysłów i uczenia się od siebie wzajemnie. Mogą również wypróbowywać inny samouczek wchodząc na [code.org/learn][0]."
+          "description": "Jeśli jakaś grupa lub osoba skończy szybciej, zachęcaj do kontynuowania budowania projektu na ostatnim poziomie. Jeśli uczniowie nie mają pewności, co jeszcze mają zrobić, możesz podpowiedzieć im posługując się następującymi pytaniami:\n\n-   Jakie inne duszki mógłbyś dodać do swojego projektu?\n-   Czy przeglądałeś bibliotekę kostiumów, czy próbowałeś rysować swój własny kostium duszka?\n-   Do mówienia czego jeszcze mógłbyś skłaniać swoje duszki?\n-   Co powinny robić Twoje duszki, gdy ktoś je kliknie?\n-   Zachęć uczniów do ujawniania swoich pomysłów i uczenia się od siebie wzajemnie. Mogą również wypróbowywać inny samouczek wchodząc na [code.org/learn](https://code.org/learn)."
         },
         "ec905c64-2e80-49d0-8da3-7d75ed8d0693": {
           "name": "Refleksja",
-          "description": "#### Zdawanie sprawozdania\n\nPoproś uczniów, aby przedstawili przemyślenia dotyczące czynności wykonanych w ciągu dnia. Czego nauczyli się na temat kodowania? Duszków? Zdarzeń?\n\nJakie wrażenia wywołuje w nich informatyka i kodowanie po spędzeniu godziny eksplorowania?\n\n#### Dalsze kroki\n\nPowiedz uczniom, że jeśli podobało im się dzisiejsze ćwiczenie, mają wiele możliwości dalszego kodowania. Zapraszamy na [Powiązania informatyki][0], aby poznać pomysły dotyczące tego, jak włączyć informatykę w inne przedmioty lub przeczytać więcej na temat naszej [oferty kursów dla szkół podstawowych][1]."
+          "description": "#### Zdawanie sprawozdania\n\nPoproś uczniów, aby przedstawili przemyślenia dotyczące czynności wykonanych w ciągu dnia. Czego nauczyli się na temat kodowania? Duszków? Zdarzeń?\n\nJakie wrażenia wywołuje w nich informatyka i kodowanie po spędzeniu godziny eksplorowania?\n\n#### Dalsze kroki\n\nPowiedz uczniom, że jeśli podobało im się dzisiejsze ćwiczenie, mają wiele możliwości dalszego kodowania. Zapraszamy na [Powiązania informatyki](https://code.org/educate/csc), aby poznać pomysły dotyczące tego, jak włączyć informatykę w inne przedmioty lub przeczytać więcej na temat naszej [oferty kursów dla szkół podstawowych](https://code.org/educate/curriculum/elementary-school)."
         },
         "6c387b78-14b7-4209-919a-97dbf64b9bc2": {
           "name": "Ustawianie sceny",
@@ -24223,18 +24223,18 @@
         },
         "cc4e7bc2-813a-4d4a-be58-83d08ca5d970": {
           "name": "Ogólne wsparcie",
-          "description": "Oto kilka wskazówek, które powinny pomóc uczniom niezależnie od poziomu, na którym pracują\n\n-   **Współpracuj z Sąsiadami:** Zachęcaj uczniów, aby kontaktowali się z sąsiadem, gdy \"utkną\" na czymś. W zależności od wieku i możliwości Twoich uczniów, możesz zastanowić się nad podzieleniem swojej klasy na pary, aby ukończyli samouczek korzystając z [programowania w parach][0].  \n\n-   **Przeczytaj instrukcje:** W instrukcjach podsuwa się zwykle pomocne wskazówki na temat tego, jak przejść poziom. Zanim podaniem uczniom odpowiedzi upewnij się, czy uważnie zapoznali się z instrukcjami, wskazówkami, filmami i kodem pocztkowym.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Utknąłeś? Szukaj wskazówek:** Każdy poziom zawiera wskazówkę z poradą, jak go przejść, z uwzględnieniem bloków kodu do wypróbowania.\n\n-   **Nie spiesz się i eksperymentuj.** Instrukcje zasadniczo \"mówią\" uczniom co mają robić, ale powinni czuć, że mają swobodę, która pozwala wypróbowywać własne pomysły."
+          "description": "Oto kilka wskazówek, które powinny pomóc uczniom niezależnie od poziomu, na którym pracują\n\n-   **Współpracuj z Sąsiadami:** Zachęcaj uczniów, aby kontaktowali się z sąsiadem, gdy \"utkną\" na czymś. W zależności od wieku i możliwości Twoich uczniów, możesz zastanowić się nad podzieleniem swojej klasy na pary, aby ukończyli samouczek korzystając z [programowania w parach](https://youtu.be/vgkahOzFH2Q).  \n\n-   **Przeczytaj instrukcje:** W instrukcjach podsuwa się zwykle pomocne wskazówki na temat tego, jak przejść poziom. Zanim podaniem uczniom odpowiedzi upewnij się, czy uważnie zapoznali się z instrukcjami, wskazówkami, filmami i kodem pocztkowym.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Utknąłeś? Szukaj wskazówek:** Każdy poziom zawiera wskazówkę z poradą, jak go przejść, z uwzględnieniem bloków kodu do wypróbowania.\n\n-   **Nie spiesz się i eksperymentuj.** Instrukcje zasadniczo \"mówią\" uczniom co mają robić, ale powinni czuć, że mają swobodę, która pozwala wypróbowywać własne pomysły."
         },
         "062143a1-3063-4af1-864a-2ad1f9c88dd5": {
           "name": "Witaj świecie",
           "progression_name": "Witaj świecie"
         },
         "da91f0fe-e142-453f-a093-8e367d0a1454": {
-          "description": "Jeśli jakaś grupa lub osoba skończy szybciej, zachęcaj do kontynuowania budowania projektu na ostatnim poziomie. Jeśli uczniowie nie mają pewności, co jeszcze mają zrobić, możesz podpowiedzieć im posługując się następującymi pytaniami:\n\n-   Jakie inne duszki mógłbyś dodać do swojego projektu?\n-   Czy przeglądałeś bibliotekę kostiumów, czy próbowałeś rysować swój własny kostium duszka?\n-   Do mówienia czego jeszcze mógłbyś skłaniać swoje duszki?\n-   Co powinny robić Twoje duszki, gdy ktoś je kliknie?\n-   Zachęć uczniów do ujawniania swoich pomysłów i uczenia się od siebie wzajemnie. Mogą również wypróbowywać inny samouczek wchodząc na [code.org/learn][0]."
+          "description": "Jeśli jakaś grupa lub osoba skończy szybciej, zachęcaj do kontynuowania budowania projektu na ostatnim poziomie. Jeśli uczniowie nie mają pewności, co jeszcze mają zrobić, możesz podpowiedzieć im posługując się następującymi pytaniami:\n\n-   Jakie inne duszki mógłbyś dodać do swojego projektu?\n-   Czy przeglądałeś bibliotekę kostiumów, czy próbowałeś rysować swój własny kostium duszka?\n-   Do mówienia czego jeszcze mógłbyś skłaniać swoje duszki?\n-   Co powinny robić Twoje duszki, gdy ktoś je kliknie?\n-   Zachęć uczniów do ujawniania swoich pomysłów i uczenia się od siebie wzajemnie. Mogą również wypróbowywać inny samouczek wchodząc na [code.org/learn](https://code.org/learn)."
         },
         "f5756484-7296-4391-99e2-7b2678653934": {
           "name": "Refleksja",
-          "description": "#### Zdawanie sprawozdania\n\nPoproś uczniów, aby przedstawili przemyślenia dotyczące czynności wykonanych w ciągu dnia. Czego nauczyli się na temat kodowania? Duszków? Zdarzeń?\n\nJakie wrażenia wywołuje w nich informatyka i kodowanie po spędzeniu godziny eksplorowania?\n\n#### Dalsze kroki\n\nPowiedz uczniom, że jeśli podobało im się dzisiejsze ćwiczenie, mają wiele możliwości dalszego kodowania. Zapraszamy na [Powiązania informatyki][0], aby poznać pomysły dotyczące tego, jak włączyć informatykę w inne przedmioty lub przeczytać więcej na temat naszej [oferty kursów dla szkół podstawowych][1]."
+          "description": "#### Zdawanie sprawozdania\n\nPoproś uczniów, aby przedstawili przemyślenia dotyczące czynności wykonanych w ciągu dnia. Czego nauczyli się na temat kodowania? Duszków? Zdarzeń?\n\nJakie wrażenia wywołuje w nich informatyka i kodowanie po spędzeniu godziny eksplorowania?\n\n#### Dalsze kroki\n\nPowiedz uczniom, że jeśli podobało im się dzisiejsze ćwiczenie, mają wiele możliwości dalszego kodowania. Zapraszamy na [Powiązania informatyki](https://code.org/educate/csc), aby poznać pomysły dotyczące tego, jak włączyć informatykę w inne przedmioty lub przeczytać więcej na temat naszej [oferty kursów dla szkół podstawowych](https://code.org/educate/curriculum/elementary-school)."
         },
         "bcc9e44c-ad4e-4efc-a12e-e9c74a5c1960": {
           "name": "Ustawianie sceny",
@@ -24248,25 +24248,25 @@
         },
         "0d1c3be1-c6e4-437f-85b9-4912d1cd725b": {
           "name": "Ogólne wsparcie",
-          "description": "Oto kilka wskazówek, które powinny pomóc uczniom niezależnie od poziomu, na którym pracują\n\n-   **Współpracuj z Sąsiadami:** Zachęcaj uczniów, aby kontaktowali się z sąsiadem, gdy \"utkną\" na czymś. W zależności od wieku i możliwości Twoich uczniów, możesz zastanowić się nad podzieleniem swojej klasy na pary, aby ukończyli samouczek korzystając z [programowania w parach][0].  \n\n-   **Przeczytaj instrukcje:** W instrukcjach podsuwa się zwykle pomocne wskazówki na temat tego, jak przejść poziom. Zanim podaniem uczniom odpowiedzi upewnij się, czy uważnie zapoznali się z instrukcjami, wskazówkami, filmami i kodem pocztkowym.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Utknąłeś? Szukaj wskazówek:** Każdy poziom zawiera wskazówkę z poradą, jak go przejść, z uwzględnieniem bloków kodu do wypróbowania.\n\n-   **Nie spiesz się i eksperymentuj.** Instrukcje zasadniczo \"mówią\" uczniom co mają robić, ale powinni czuć, że mają swobodę, która pozwala wypróbowywać własne pomysły."
+          "description": "Oto kilka wskazówek, które powinny pomóc uczniom niezależnie od poziomu, na którym pracują\n\n-   **Współpracuj z Sąsiadami:** Zachęcaj uczniów, aby kontaktowali się z sąsiadem, gdy \"utkną\" na czymś. W zależności od wieku i możliwości Twoich uczniów, możesz zastanowić się nad podzieleniem swojej klasy na pary, aby ukończyli samouczek korzystając z [programowania w parach](https://youtu.be/vgkahOzFH2Q).  \n\n-   **Przeczytaj instrukcje:** W instrukcjach podsuwa się zwykle pomocne wskazówki na temat tego, jak przejść poziom. Zanim podaniem uczniom odpowiedzi upewnij się, czy uważnie zapoznali się z instrukcjami, wskazówkami, filmami i kodem pocztkowym.\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **Utknąłeś? Szukaj wskazówek:** Każdy poziom zawiera wskazówkę z poradą, jak go przejść, z uwzględnieniem bloków kodu do wypróbowania.\n\n-   **Nie spiesz się i eksperymentuj.** Instrukcje zasadniczo \"mówią\" uczniom co mają robić, ale powinni czuć, że mają swobodę, która pozwala wypróbowywać własne pomysły."
         },
         "fcf13574-b04a-42a7-9e17-ef0dba0bfe33": {
           "name": "Witaj świecie",
           "progression_name": "Witaj świecie"
         },
         "7cccfa6d-83c2-4d74-a71f-c9134fb1d0c2": {
-          "description": "Jeśli jakaś grupa lub osoba skończy szybciej, zachęcaj do kontynuowania budowania projektu na ostatnim poziomie. Jeśli uczniowie nie mają pewności, co jeszcze mają zrobić, możesz podpowiedzieć im posługując się następującymi pytaniami:\n\n-   Jakie inne duszki mógłbyś dodać do swojego projektu?\n-   Czy przeglądałeś bibliotekę kostiumów, czy próbowałeś rysować swój własny kostium duszka?\n-   Do mówienia czego jeszcze mógłbyś skłaniać swoje duszki?\n-   Co powinny robić Twoje duszki, gdy ktoś je kliknie?\n-   Zachęć uczniów do ujawniania swoich pomysłów i uczenia się od siebie wzajemnie. Mogą również wypróbowywać inny samouczek wchodząc na [code.org/learn][0]."
+          "description": "Jeśli jakaś grupa lub osoba skończy szybciej, zachęcaj do kontynuowania budowania projektu na ostatnim poziomie. Jeśli uczniowie nie mają pewności, co jeszcze mają zrobić, możesz podpowiedzieć im posługując się następującymi pytaniami:\n\n-   Jakie inne duszki mógłbyś dodać do swojego projektu?\n-   Czy przeglądałeś bibliotekę kostiumów, czy próbowałeś rysować swój własny kostium duszka?\n-   Do mówienia czego jeszcze mógłbyś skłaniać swoje duszki?\n-   Co powinny robić Twoje duszki, gdy ktoś je kliknie?\n-   Zachęć uczniów do ujawniania swoich pomysłów i uczenia się od siebie wzajemnie. Mogą również wypróbowywać inny samouczek wchodząc na [code.org/learn](https://code.org/learn)."
         },
         "574954ea-9128-428b-9965-b0d34518c11d": {
           "name": "Refleksja",
-          "description": "#### Zdawanie sprawozdania\n\nPoproś uczniów, aby przedstawili przemyślenia dotyczące czynności wykonanych w ciągu dnia. Czego nauczyli się na temat kodowania? Duszków? Zdarzeń?\n\nJakie wrażenia wywołuje w nich informatyka i kodowanie po spędzeniu godziny eksplorowania?\n\n#### Dalsze kroki\n\nPowiedz uczniom, że jeśli podobało im się dzisiejsze ćwiczenie, mają wiele możliwości dalszego kodowania. Zapraszamy na [Powiązania informatyki][0], aby poznać pomysły dotyczące tego, jak włączyć informatykę w inne przedmioty lub przeczytać więcej na temat naszej [oferty kursów dla szkół podstawowych][1]."
+          "description": "#### Zdawanie sprawozdania\n\nPoproś uczniów, aby przedstawili przemyślenia dotyczące czynności wykonanych w ciągu dnia. Czego nauczyli się na temat kodowania? Duszków? Zdarzeń?\n\nJakie wrażenia wywołuje w nich informatyka i kodowanie po spędzeniu godziny eksplorowania?\n\n#### Dalsze kroki\n\nPowiedz uczniom, że jeśli podobało im się dzisiejsze ćwiczenie, mają wiele możliwości dalszego kodowania. Zapraszamy na [Powiązania informatyki](https://code.org/educate/csc), aby poznać pomysły dotyczące tego, jak włączyć informatykę w inne przedmioty lub przeczytać więcej na temat naszej [oferty kursów dla szkół podstawowych](https://code.org/educate/curriculum/elementary-school)."
         },
         "79f9bd46-60a5-4891-ad3b-8369879847fc": {
           "description": "#### Tworzenie scenerii\n\nPowitaj uczniów na zajęciach i bardzo krótko omów plan na dzisiejszy dzień.\n\nTa lekcja stanowi dla uczniów szczególną atrakcję. Prawdopodobnie większość z nich słyszała już o grze Minecraft, niemniej dokonaj krótkiego wprowadzenia dla tych spośród uczestników, którzy być może o niej nie wiedzą.\nMinecraft jest grą, w której najważniejsze są bloki. Możesz grać jako Alex lub Steve, którzy przechodzą przez labirynty. Będziesz musiał zbierać różne przedmioty i eksporować świat, na który składają się różne rzeczy utworzone z bloków.\n\n_Powiedz: “Dzisiaj poświęcimy godzinę na naukę kodowania. Czy ktoś już wcześniej słyszał słowo \"kod\"? Co to znaczy?_\n\nUczniowie mogą mówić, że \"kod\" jest niczym tajna wiadomość albo że w jakiś sposób słowo to wiąże się z komputerami. "
         },
         "cc1ed89e-268e-472b-9bce-4f976d8c2ea3": {
           "tips": [
-            "Jednym ze sposobów na wprowadzenie Godziny Kodowania, jeśli sama nie znasz się zbyt dobrze na kodowaniu jest pokazanie jednego z [naszych inspirujących filmów wideo][0]. Wybierz ten, który Twoim zdaniem będzie inspirujący dla Twoich uczniów i udostępnij go teraz. Uczniom w klasach średnich proponujemy [Godzina Kodowania jest tutaj][1].”"
+            "Jednym ze sposobów na wprowadzenie Godziny Kodowania, jeśli sama nie znasz się zbyt dobrze na kodowaniu jest pokazanie jednego z [naszych inspirujących filmów wideo](https://hourofcode.com/us/resources#videos). Wybierz ten, który Twoim zdaniem będzie inspirujący dla Twoich uczniów i udostępnij go teraz. Uczniom w klasach średnich proponujemy [Godzina Kodowania jest tutaj](https://youtu.be/FC5FbmsH4fw).”"
           ]
         },
         "850945f6-6352-403b-a73f-3fb613f4728a": {
@@ -24279,7 +24279,7 @@
         },
         "fc5c47f6-08fa-4702-86a3-e687a2ad5bc1": {
           "name": "Minecraft: Podróż Bohatera",
-          "description": "Postaw swoim uczniom zadanie wykonania tej [Minecraft: Designer][0] czynności.\n\nW zależności od wieku i umiejętności uczniów można rozważyć: \n\n-   w przypadku młodszych uczniów zaproponowanie im, aby podzielili się na pary i poproszenie każdej grupy, aby razem przeszła samouczek korzystając z opcji [programowanie w parach][1].\n-   w przypadku uczniów w środkowych klasach, przekonaliśmy się, że dobrze sprawdza się praca indywidualna. Czasami warto pozwolić uczniom na wybranie samouczka według uznania. Jeśli uczniowie nie są zainteresowani grą Minecraft, podobne doświadczenia mogą zdobyć korzystając z samouczków w ramach opcji [Koduj z Anną i Elsą][2] lub [Star Wars][3].\n-   w przypadku uczniów starszych lub dorosłych samouczek [Minecraft: Designer][4] sprawdza się niezwykle dobrze zarówno jako zadanie niezależne lub w ramach opcji programowania w parach."
+          "description": "Postaw swoim uczniom zadanie wykonania tej [Minecraft: Designer](https://studio.code.org/s/hero/lessons/1/levels/1) czynności.\n\nW zależności od wieku i umiejętności uczniów można rozważyć: \n\n-   w przypadku młodszych uczniów zaproponowanie im, aby podzielili się na pary i poproszenie każdej grupy, aby razem przeszła samouczek korzystając z opcji [programowanie w parach](https://youtu.be/vgkahOzFH2Q).\n-   w przypadku uczniów w środkowych klasach, przekonaliśmy się, że dobrze sprawdza się praca indywidualna. Czasami warto pozwolić uczniom na wybranie samouczka według uznania. Jeśli uczniowie nie są zainteresowani grą Minecraft, podobne doświadczenia mogą zdobyć korzystając z samouczków w ramach opcji [Koduj z Anną i Elsą](https://studio.code.org/s/frozen/stage/1/puzzle/1) lub [Star Wars](https://code.org/starwars).\n-   w przypadku uczniów starszych lub dorosłych samouczek [Minecraft: Designer](https://studio.code.org/s/hero/lessons/1/levels/1) sprawdza się niezwykle dobrze zarówno jako zadanie niezależne lub w ramach opcji programowania w parach."
         },
         "296703c2-cad7-43bb-b3cf-4ffb525e7ad1": {
           "tips": [
@@ -24287,7 +24287,7 @@
           ]
         },
         "b518cf9c-9568-4e85-a520-0e2a81c3b330": {
-          "description": "Jeśli grupa lub pojedynczy uczeń skończy wcześniej, może spróbować kolejnego samouczka, odwiedzając stronę [code.org/learn][0]."
+          "description": "Jeśli grupa lub pojedynczy uczeń skończy wcześniej, może spróbować kolejnego samouczka, odwiedzając stronę [code.org/learn](http://code.org/learn)."
         },
         "34238f3b-6699-4e27-b77a-54bcd8d57459": {
           "progression_name": "Minecraft: Podróż Bohatera"
@@ -24298,18 +24298,18 @@
         },
         "145782a9-a436-4615-9827-0f75d7e4b3a0": {
           "name": "Świętuj",
-          "description": "Wyjaśnij, że dzisiejsza lekcja jest poświęcona kodowaniu, ponieważ w tym tygodniu przypada \"Tydzień edukacji informatycznej\" i miliony uczniów na całym świecie równiez odbywają lekcję \"Godzina kodowania\". Pogratuluj uczniom udziału w tym światowym ruchu. \n\nWręcz każdemu uczniowi [świadectwo][0] z jego imieniem."
+          "description": "Wyjaśnij, że dzisiejsza lekcja jest poświęcona kodowaniu, ponieważ w tym tygodniu przypada \"Tydzień edukacji informatycznej\" i miliony uczniów na całym świecie równiez odbywają lekcję \"Godzina kodowania\". Pogratuluj uczniom udziału w tym światowym ruchu. \n\nWręcz każdemu uczniowi [świadectwo](https://studio.code.org/certificates/batch?course=bWM=) z jego imieniem."
         },
         "cc38f575-4db4-4ca6-ab2f-a9d8557f16cf": {
           "name": "Następne Kroki",
-          "description": "Poinformuj uczniów, że jeśli podobały im się dzisiejsze zajęcia, mają wiele możliwości kontynuowania nauki programowania. Zachęć uczniów do odwiedzenia strony [code.org/learn][0] w celu uzyskania listy opcji lub, jeśli planujesz dodatkowe ćwiczenia, które będziesz realizować, powiedz uczniom, jakie są dalsze plany na dalsze zajęcia w Twojej klasie."
+          "description": "Poinformuj uczniów, że jeśli podobały im się dzisiejsze zajęcia, mają wiele możliwości kontynuowania nauki programowania. Zachęć uczniów do odwiedzenia strony [code.org/learn](<>) w celu uzyskania listy opcji lub, jeśli planujesz dodatkowe ćwiczenia, które będziesz realizować, powiedz uczniom, jakie są dalsze plany na dalsze zajęcia w Twojej klasie."
         },
         "e276fe28-3302-4ba2-94cc-aaf03b3d2d06": {
-          "description": "Daj każdemu uczniowi [“Przepustkę na wyjście”][0] i poproś, aby podsumowali to, czego się dzisiaj nauczyli, jak się czuli lub czego doświadczyli. Uczniowie mogą narysować, napisać ub wyrazić się w dowolny  sposób, w zakresie którego czują się komfortowo. Odbierz \"Przepustkę na wyjście\" od każdego ucznia wychodzącego z sali. Jeśli chcesz, możesz zamieścić \"Przepustki na wyjście\" na tablicy ogłoszeń lub w innym widocznym miejscu w szkole jako przypomnienie o Twojej \"Godzinie kodowania\"."
+          "description": "Daj każdemu uczniowi [“Przepustkę na wyjście”](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) i poproś, aby podsumowali to, czego się dzisiaj nauczyli, jak się czuli lub czego doświadczyli. Uczniowie mogą narysować, napisać ub wyrazić się w dowolny  sposób, w zakresie którego czują się komfortowo. Odbierz \"Przepustkę na wyjście\" od każdego ucznia wychodzącego z sali. Jeśli chcesz, możesz zamieścić \"Przepustki na wyjście\" na tablicy ogłoszeń lub w innym widocznym miejscu w szkole jako przypomnienie o Twojej \"Godzinie kodowania\"."
         },
         "147a2b22-0cba-4505-81ef-770b81eee73e": {
           "name": "Poza Godziną Kodowania",
-          "description": "#### Poza Godziną Kodowania\n\nPo przeprowadzeniu zajęć Godzina Kodowania można na wiele sposobów kontynuować nauczanie informatyki w klasach K-5. Oto kilka pomysłów:\n\n\\*\\* Prowadzić kursy [Podstawy informatyki w Code Studio][0]. Te sześć kursów jest przeznaczonych dla młodych uczniów. Uczniowie przechodzą przez serię łamigłówek, które uczą ich kodowania, a nauczyciele mają dostęp do angażujących planów lekcji, które pomagają ożywić naukę. Code.org oferuje bezpłatny rozwój zawodowy na bazie tych kursów, online lub osobiście.\n\\*\\* Odwiedź stronę [Możesz uczyć informatyki][1], aby uzyskać więcej propozycji kursów.\n\\*\\* Zaproś eksperta ds. informatyki, aby porozmawiał z klasą o jego pracy. Nie znasz lokalnych informatyków? Skontaktuj się z wolontariuszem na naszej [mapa wolontariatu][2]."
+          "description": "#### Poza Godziną Kodowania\n\nPo przeprowadzeniu zajęć Godzina Kodowania można na wiele sposobów kontynuować nauczanie informatyki w klasach K-5. Oto kilka pomysłów:\n\n\\*\\* Prowadzić kursy [Podstawy informatyki w Code Studio](http://code.org/educate/k5). Te sześć kursów jest przeznaczonych dla młodych uczniów. Uczniowie przechodzą przez serię łamigłówek, które uczą ich kodowania, a nauczyciele mają dostęp do angażujących planów lekcji, które pomagają ożywić naukę. Code.org oferuje bezpłatny rozwój zawodowy na bazie tych kursów, online lub osobiście.\n\\*\\* Odwiedź stronę [Możesz uczyć informatyki](https://code.org/teach), aby uzyskać więcej propozycji kursów.\n\\*\\* Zaproś eksperta ds. informatyki, aby porozmawiał z klasą o jego pracy. Nie znasz lokalnych informatyków? Skontaktuj się z wolontariuszem na naszej [mapa wolontariatu](https://code.org/volunteer/local)."
         },
         "9475b0bd-6a58-4318-b3e5-0d77cfe5a35d": {
           "tips": [
@@ -24408,7 +24408,7 @@
         },
         "6b55015f-aebc-401b-b0c9-c40a5fd0056e": {
           "tips": [
-            "Jednym ze sposobów na wprowadzenie Godziny Kodowania, jeśli sama nie znasz się zbyt dobrze na kodowaniu jest pokazanie jednego z [naszych inspirujących filmów wideo][0]. Wybierz ten, który Twoim zdaniem będzie inspirujący dla Twoich uczniów i udostępnij go teraz. Uczniom w klasach średnich proponujemy [Godzina Kodowania jest tutaj][1].”"
+            "Jednym ze sposobów na wprowadzenie Godziny Kodowania, jeśli sama nie znasz się zbyt dobrze na kodowaniu jest pokazanie jednego z [naszych inspirujących filmów wideo](https://hourofcode.com/us/resources#videos). Wybierz ten, który Twoim zdaniem będzie inspirujący dla Twoich uczniów i udostępnij go teraz. Uczniom w klasach średnich proponujemy [Godzina Kodowania jest tutaj](https://youtu.be/FC5FbmsH4fw).”"
           ]
         },
         "e841a687-1da5-46c7-b31e-42629fe0377c": {
@@ -24421,7 +24421,7 @@
         },
         "9aba0e85-a709-43f5-8cfb-251671159b3a": {
           "name": "Labirynt",
-          "description": "Postaw swoim uczniom zadanie przejścia tego samouczka [Napisz swój pierwszy program komputerowy][0].\n\nW zależności od wieku i umiejętności uczniów można rozważyć: \n\n-   w przypadku młodszych uczniów zaproponuj im, aby podzielili się na pary i poproś każdą grupę, aby razem przeszła samouczek korzystając z opcji [programowanie w parach][1].\n-   w przypadku uczniów w środkowych klasach, przekonaliśmy się, że dobrze sprawdza się praca indywidualna. Czasami warto pozwolić uczniom na wybranie samouczka według uznania. Jeśli uczniowie nie są zainteresowani grą Angry Birds, podobne doświadczenia mogą zdobyć korzystając z samouczków w ramach opcji [Koduj z Anną i Elsą][2] lub [Utwórz grę dla Flappy'ego][3].\n-   w przypadku uczniów starszych lub dorosłych samouczek [Napisz swój pierwszy program komputerowy][4] sprawdza się niezwykle dobrze zarówno jako zadanie niezależne lub w ramach opcji programowania w parach."
+          "description": "Postaw swoim uczniom zadanie przejścia tego samouczka [Napisz swój pierwszy program komputerowy](https://studio.code.org/hoc/1).\n\nW zależności od wieku i umiejętności uczniów można rozważyć: \n\n-   w przypadku młodszych uczniów zaproponuj im, aby podzielili się na pary i poproś każdą grupę, aby razem przeszła samouczek korzystając z opcji [programowanie w parach](https://youtu.be/vgkahOzFH2Q).\n-   w przypadku uczniów w środkowych klasach, przekonaliśmy się, że dobrze sprawdza się praca indywidualna. Czasami warto pozwolić uczniom na wybranie samouczka według uznania. Jeśli uczniowie nie są zainteresowani grą Angry Birds, podobne doświadczenia mogą zdobyć korzystając z samouczków w ramach opcji [Koduj z Anną i Elsą](https://studio.code.org/s/frozen/stage/1/puzzle/1) lub [Utwórz grę dla Flappy'ego](https://studio.code.org/flappy/1).\n-   w przypadku uczniów starszych lub dorosłych samouczek [Napisz swój pierwszy program komputerowy](https://studio.code.org/hoc/1) sprawdza się niezwykle dobrze zarówno jako zadanie niezależne lub w ramach opcji programowania w parach."
         },
         "524f2e35-6286-4585-879e-96e7286e8a6d": {
           "tips": [
@@ -24429,7 +24429,7 @@
           ]
         },
         "3f29a14c-3903-4615-8a6b-d1961b57dc7b": {
-          "description": "Jeśli grupa lub pojedynczy uczeń skończy wcześniej, może spróbować kolejnego samouczka, odwiedzając stronę [code.org/learn][0]."
+          "description": "Jeśli grupa lub pojedynczy uczeń skończy wcześniej, może spróbować kolejnego samouczka, odwiedzając stronę [code.org/learn](http://code.org/learn)."
         },
         "50db3674-3387-4932-ba7e-c9f176ebd976": {
           "name": "Zdać sprawozdanie",
@@ -24437,18 +24437,18 @@
         },
         "46f387e2-c275-4c57-acec-c9709e7f44fc": {
           "name": "Świętuj",
-          "description": "Wyjaśnij, że dzisiejsza lekcja jest poświęcona kodowaniu, ponieważ w tym tygodniu przypada \"Tydzień edukacji informatycznej\" i miliony uczniów na całym świecie równiez odbywają lekcję \"Godzina kodowania\". Pogratuluj uczniom udziału w tym światowym ruchu. \n\nWręcz każdemu uczniowi [świadectwo][0] z jego imieniem."
+          "description": "Wyjaśnij, że dzisiejsza lekcja jest poświęcona kodowaniu, ponieważ w tym tygodniu przypada \"Tydzień edukacji informatycznej\" i miliony uczniów na całym świecie równiez odbywają lekcję \"Godzina kodowania\". Pogratuluj uczniom udziału w tym światowym ruchu. \n\nWręcz każdemu uczniowi [świadectwo](http://code.org/certificates) z jego imieniem."
         },
         "692a60f1-d3a2-44d3-8c58-19461d6b5999": {
           "name": "Następne Kroki",
           "description": "Poinformuj uczniów, że jeśli podobały im się dzisiejsze zajęcia, mają wiele możliwości kontynuowania nauki programowania. Zachęć ich do odwiedzenia strony code.org/learn w celu uzyskania listy opcji lub, jeśli planujesz dodatkowe ćwiczenia, które będziesz realizować, powiedz uczniom, jakie są plany na dalsze zajęcia w Twojej klasie."
         },
         "c00f4730-69b0-4533-bf47-253647c6715f": {
-          "description": "Daj każdemu uczniowi [“Przepustkę na wyjście”][0] i poproś, aby podsumowali to, czego się dzisiaj nauczyli, jak się czuli lub czego doświadczyli. Uczniowie mogą narysować, napisać ub wyrazić się w dowolny  sposób, w zakresie którego czują się komfortowo. Odbierz \"Przepustkę na wyjście\" od każdego ucznia wychodzącego z sali. Jeśli chcesz, możesz zamieścić \"Przepustki na wyjście\" na tablicy ogłoszeń lub w innym widocznym miejscu w szkole jako przypomnienie o Twojej \"Godzinie kodowania\"."
+          "description": "Daj każdemu uczniowi [“Przepustkę na wyjście”](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) i poproś, aby podsumowali to, czego się dzisiaj nauczyli, jak się czuli lub czego doświadczyli. Uczniowie mogą narysować, napisać ub wyrazić się w dowolny  sposób, w zakresie którego czują się komfortowo. Odbierz \"Przepustkę na wyjście\" od każdego ucznia wychodzącego z sali. Jeśli chcesz, możesz zamieścić \"Przepustki na wyjście\" na tablicy ogłoszeń lub w innym widocznym miejscu w szkole jako przypomnienie o Twojej \"Godzinie kodowania\"."
         },
         "6e6e32c8-6dfd-4075-b1c7-0c96b6853b09": {
           "name": "Poza Godziną Kodowania",
-          "description": "### Po zakończeniu Godziny Kodowania\n\nPo przeprowadzeniu zajęć Godzina Kodowania można na wiele sposobów kontynuować nauczanie informatyki w klasach K-5. Oto kilka pomysłów: \n\n-   **Przerób kursy [Podstawy informatyki w Code Studio][0]**. Tych sześć kursów jest przeznaczonych dla młodszych uczniów. Uczniowie przechodzą przez serię łamigłówek,  które uczą ich kodowania, a nauczyciele mają dostęp do planów lekcji, które angażują do pomocy w uczeniu się. Code.org oferuje bezpłatny rozwój zawodowy dla tych kursów, online lub osobiście. "
+          "description": "### Po zakończeniu Godziny Kodowania\n\nPo przeprowadzeniu zajęć Godzina Kodowania można na wiele sposobów kontynuować nauczanie informatyki w klasach K-5. Oto kilka pomysłów: \n\n-   **Przerób kursy [Podstawy informatyki w Code Studio](http://code.org/educate/k5)**. Tych sześć kursów jest przeznaczonych dla młodszych uczniów. Uczniowie przechodzą przez serię łamigłówek,  które uczą ich kodowania, a nauczyciele mają dostęp do planów lekcji, które angażują do pomocy w uczeniu się. Code.org oferuje bezpłatny rozwój zawodowy dla tych kursów, online lub osobiście. "
         },
         "5858c0fa-a7a6-44c2-afcb-bfb816b18a5b": {
           "name": "Sposoby dostosowania dla nauczycieli K-2",
@@ -24460,7 +24460,7 @@
         },
         "fc04ef5f-0d78-418b-9311-e12201106453": {
           "tips": [
-            "Jednym ze sposobów wprowadzenia Godziny Kodowania, jeśli nie znasz się zbyt dobrze na kodowaniu, jest pokazanie jednego z [naszych inspirujących filmów wideo][0]. Wybierz ten, który Twoim zdaniem będzie inspirujący dla Twoich uczniów i udostępnij go teraz. Dla młodszych uczniów, proponujemy [Każdy może nauczyć się kodować][1].”"
+            "Jednym ze sposobów wprowadzenia Godziny Kodowania, jeśli nie znasz się zbyt dobrze na kodowaniu, jest pokazanie jednego z [naszych inspirujących filmów wideo](https://hourofcode.com/us/resources#videos). Wybierz ten, który Twoim zdaniem będzie inspirujący dla Twoich uczniów i udostępnij go teraz. Dla młodszych uczniów, proponujemy [Każdy może nauczyć się kodować](https://youtu.be/qYZF6oIZtfc).”"
           ]
         },
         "ea8a3bf2-1425-482a-9f98-a5b30d6ee809": {
@@ -24468,7 +24468,7 @@
         },
         "c628ba28-35c2-4ded-a19d-74079377b309": {
           "name": "Epoka Lodowcowa w Play Lab",
-          "description": "Podstaw uczniom zadanie przejścia samouczka [Playlab Kraina Lodu][0].\n\nW zależności od wieku i umiejętności uczniów można rozważyć: \n\n-   W przypadku uczniów gimnazjum i liceum proponujemy samouczki, które umożliwiają swobodną zabawę i tworzenie aplikacji i gier. Uczniowie mogą pracować w samodzielnie, w parach lub w małych grupach. Na stronie [code.org/learn][1] jest wiele innych samouczków, które pozwalają na swobodne tworzenie, w tym [Utwórz grę dla Flappy'ego][2] i nasze nowe narzędzie beta [AppLab][3].\n-   w przypadku młodszych uczniów proponujemy podzielenie klasy na pary lub bardzo małe grupy (trzech do czterech uczniów) i poproszenie każdej grupy, aby razem przeszła samouczek korzystając z opcji [programowanie w parach][4].\n-   W przypadku uczniów dorosłych szczególnie dobrze sprawdza się samouczek [Napisz swój pierwszy program komputerowy][5] jako zadanie do samodzielnego wykonania zadania programowania w parach."
+          "description": "Podstaw uczniom zadanie przejścia samouczka [Playlab Kraina Lodu](https://studio.code.org/s/iceage/lessons/1/levels/1).\n\nW zależności od wieku i umiejętności uczniów można rozważyć: \n\n-   W przypadku uczniów gimnazjum i liceum proponujemy samouczki, które umożliwiają swobodną zabawę i tworzenie aplikacji i gier. Uczniowie mogą pracować w samodzielnie, w parach lub w małych grupach. Na stronie [code.org/learn](http://code.org/learn) jest wiele innych samouczków, które pozwalają na swobodne tworzenie, w tym [Utwórz grę dla Flappy'ego](https://studio.code.org/s/flappy) i nasze nowe narzędzie beta [AppLab](https://code.org/educate/applab).\n-   w przypadku młodszych uczniów proponujemy podzielenie klasy na pary lub bardzo małe grupy (trzech do czterech uczniów) i poproszenie każdej grupy, aby razem przeszła samouczek korzystając z opcji [programowanie w parach](https://youtu.be/vgkahOzFH2Q).\n-   W przypadku uczniów dorosłych szczególnie dobrze sprawdza się samouczek [Napisz swój pierwszy program komputerowy](https://studio.code.org/hoc/1) jako zadanie do samodzielnego wykonania zadania programowania w parach."
         },
         "548dc37b-f338-4a52-a77e-7380794c64f2": {
           "tips": [
@@ -24476,7 +24476,7 @@
           ]
         },
         "86d8427e-15bf-420c-b405-3d1f1c3c46c6": {
-          "description": "Jeśli grupa lub pojedynczy uczeń skończy wcześniej, może spróbować kolejnego samouczka, odwiedzając stronę [code.org/learn][0]."
+          "description": "Jeśli grupa lub pojedynczy uczeń skończy wcześniej, może spróbować kolejnego samouczka, odwiedzając stronę [code.org/learn](http://code.org/learn)."
         },
         "d8b92f56-a741-43ac-9d6f-3fdf1c452001": {
           "name": "Zdać sprawozdanie",
@@ -24484,7 +24484,7 @@
         },
         "3d63393a-9146-4027-8783-247e19637d25": {
           "name": "Świętuj",
-          "description": "Wyjaśnij, że dzisiejsza lekcja jest poświęcona kodowaniu, ponieważ w tym tygodniu przypada \"Tydzień edukacji informatycznej\" i miliony uczniów na całym świecie równiez odbywają lekcję \"Godziny kodowania\" w tym tygodniu. Pogratuluj uczniom udziału w tym światowym ruchu. \n\nWręcz każdemu uczniowi [certyfikat][0] z jego imieniem."
+          "description": "Wyjaśnij, że dzisiejsza lekcja jest poświęcona kodowaniu, ponieważ w tym tygodniu przypada \"Tydzień edukacji informatycznej\" i miliony uczniów na całym świecie równiez odbywają lekcję \"Godziny kodowania\" w tym tygodniu. Pogratuluj uczniom udziału w tym światowym ruchu. \n\nWręcz każdemu uczniowi [certyfikat](http://code.org/certificates) z jego imieniem."
         },
         "4ae122fa-da6f-4aaf-b2f8-c68fd0bb68af": {
           "name": "Następne Kroki",
@@ -24496,7 +24496,7 @@
         },
         "4ae8bc68-25be-4eaa-ae1e-b9bfe8623a23": {
           "name": "Poza Godziną Kodowania",
-          "description": "### Po zakończeniu Godziny Kodowania\n\nPo przeprowadzeniu zajęć Godzina Kodowania można na wiele sposobów kontynuować nauczanie informatyki w klasach K-5. Oto kilka pomysłów: \n\n-   **Przerób kursy [Podstawy informatyki w Code Studio][0]**. Te cztery kursy są przeznaczone dla młodszych uczniów. Uczniowie przechodzą przez serię łamigłówek,  które uczą ich kodowania, a nauczyciele mają dostęp do planów lekcji, które angażują do pomocy w uczeniu się. Code.org oferuje bezpłatny rozwój zawodowy dla tych kursów, online lub osobiście. \n-   **Zaproś eksperta ds. Informatyki, aby porozmawiał z Twoją klasą o swojej pracy**. Nie znasz żadnych miejscowych informatyków? Zawróć się wolontariusza na naszej [mapie wolontariuszy][2]."
+          "description": "### Po zakończeniu Godziny Kodowania\n\nPo przeprowadzeniu zajęć Godzina Kodowania można na wiele sposobów kontynuować nauczanie informatyki w klasach K-5. Oto kilka pomysłów: \n\n-   **Przerób kursy [Podstawy informatyki w Code Studio](http://code.org/educate/k5)**. Te cztery kursy są przeznaczone dla młodszych uczniów. Uczniowie przechodzą przez serię łamigłówek,  które uczą ich kodowania, a nauczyciele mają dostęp do planów lekcji, które angażują do pomocy w uczeniu się. Code.org oferuje bezpłatny rozwój zawodowy dla tych kursów, online lub osobiście. \n-   **Zaproś eksperta ds. Informatyki, aby porozmawiał z Twoją klasą o swojej pracy**. Nie znasz żadnych miejscowych informatyków? Zawróć się wolontariusza na naszej [mapie wolontariuszy][2]."
         },
         "88079aec-5c42-4f3f-bbb6-cba4f8866c92": {
           "name": "Ustawianie sceny",
@@ -24504,7 +24504,7 @@
         },
         "6874de98-8778-447b-8453-0138809b2c7e": {
           "tips": [
-            "Jednym ze sposobów wprowadzenia Godziny Kodowania, jeśli nie znasz się zbyt dobrze na kodowaniu, jest pokazanie jednego z [naszych inspirujących filmów wideo][0]. Wybierz ten, który Twoim zdaniem będzie inspirujący dla Twoich uczniów i udostępnij go teraz. Dla młodszych uczniów, proponujemy [Każdy może nauczyć się kodować][1].”"
+            "Jednym ze sposobów wprowadzenia Godziny Kodowania, jeśli nie znasz się zbyt dobrze na kodowaniu, jest pokazanie jednego z [naszych inspirujących filmów wideo](https://hourofcode.com/us/resources#videos). Wybierz ten, który Twoim zdaniem będzie inspirujący dla Twoich uczniów i udostępnij go teraz. Dla młodszych uczniów, proponujemy [Każdy może nauczyć się kodować](https://youtu.be/qYZF6oIZtfc).”"
           ]
         },
         "82e4a494-65fb-40ac-b2c2-323044e15b77": {
@@ -24512,7 +24512,7 @@
         },
         "bd5d11f4-9c4c-4f24-bb9f-482392bd65aa": {
           "name": "Disney Infinity Play Lab",
-          "description": "Podstaw uczniom zadanie przejścia samouczka [Disney Infinity Playlab][0].\n\nW zależności od wieku i umiejętności uczniów można rozważyć: \n\n-   W przypadku uczniów gimnazjum i liceum proponujemy samouczki, które umożliwiają swobodną zabawę i tworzenie aplikacji i gier. Uczniowie mogą pracować w samodzielnie, w parach lub w małych grupach. Na stronie [code.org/learn][1] jest wiele innych samouczków, które pozwalają na swobodne tworzenie, w tym [Utwórz grę dla Flappy'ego][2] i nasze nowe narzędzie beta [AppLab][3].\n-   w przypadku młodszych uczniów proponujemy podzielenie klasy na pary lub bardzo małe grupy (trzech do czterech uczniów) i poproszenie każdej grupy, aby razem przeszła samouczek korzystając z opcji [programowanie w parach][4].\n-   W przypadku uczniów dorosłych szczególnie dobrze sprawdza się samouczek [Napisz swój pierwszy program komputerowy][5] jako zadanie do samodzielnego wykonania zadania programowania w parach."
+          "description": "Podstaw uczniom zadanie przejścia samouczka [Disney Infinity Playlab](https://studio.code.org/s/infinity/lessons/1/levels/1).\n\nW zależności od wieku i umiejętności uczniów można rozważyć: \n\n-   W przypadku uczniów gimnazjum i liceum proponujemy samouczki, które umożliwiają swobodną zabawę i tworzenie aplikacji i gier. Uczniowie mogą pracować w samodzielnie, w parach lub w małych grupach. Na stronie [code.org/learn](http://code.org/learn) jest wiele innych samouczków, które pozwalają na swobodne tworzenie, w tym [Utwórz grę dla Flappy'ego](https://studio.code.org/s/flappy) i nasze nowe narzędzie beta [AppLab](https://code.org/educate/applab).\n-   w przypadku młodszych uczniów proponujemy podzielenie klasy na pary lub bardzo małe grupy (trzech do czterech uczniów) i poproszenie każdej grupy, aby razem przeszła samouczek korzystając z opcji [programowanie w parach](https://youtu.be/vgkahOzFH2Q).\n-   W przypadku uczniów dorosłych szczególnie dobrze sprawdza się samouczek [Napisz swój pierwszy program komputerowy](https://studio.code.org/hoc/1) jako zadanie do samodzielnego wykonania zadania programowania w parach."
         },
         "b1ea2c15-24bb-475a-bb3f-bbc8ea1a51c0": {
           "tips": [
@@ -24520,7 +24520,7 @@
           ]
         },
         "712a8a98-3ab7-43d0-8f6f-a68e6984b009": {
-          "description": "Jeśli grupa lub pojedynczy uczeń skończy wcześniej, może spróbować kolejnego samouczka, odwiedzając stronę [code.org/learn][0]."
+          "description": "Jeśli grupa lub pojedynczy uczeń skończy wcześniej, może spróbować kolejnego samouczka, odwiedzając stronę [code.org/learn](http://code.org/learn)."
         },
         "a0530acf-3bce-4de9-b392-fe8725044086": {
           "name": "Zdać sprawozdanie",
@@ -24528,7 +24528,7 @@
         },
         "ceaf9d96-e806-48e1-9a95-30566999264e": {
           "name": "Świętuj",
-          "description": "Wyjaśnij, że dzisiejsza lekcja jest poświęcona kodowaniu, ponieważ w tym tygodniu przypada \"Tydzień edukacji informatycznej\" i miliony uczniów na całym świecie równiez odbywają lekcję \"Godzina kodowania\". Pogratuluj uczniom udziału w tym światowym ruchu. \n\nWręcz każdemu uczniowi [świadectwo][0] z jego imieniem."
+          "description": "Wyjaśnij, że dzisiejsza lekcja jest poświęcona kodowaniu, ponieważ w tym tygodniu przypada \"Tydzień edukacji informatycznej\" i miliony uczniów na całym świecie równiez odbywają lekcję \"Godzina kodowania\". Pogratuluj uczniom udziału w tym światowym ruchu. \n\nWręcz każdemu uczniowi [świadectwo](http://code.org/certificates) z jego imieniem."
         },
         "680268d8-e3db-4f80-b56d-dfe40ada4d77": {
           "name": "Następne Kroki",
@@ -24540,7 +24540,7 @@
         },
         "38f15942-4a08-48f7-a0c4-e04232bc9bdc": {
           "name": "Poza Godziną Kodowania",
-          "description": "### Po zakończeniu Godziny Kodowania\n\nPo przeprowadzeniu zajęć Godzina Kodowania można na wiele sposobów kontynuować nauczanie informatyki w klasach K-5. Oto kilka pomysłów: \n\n-   **Przerób kursy [Podstawy informatyki w Code Studio][0]**. Te cztery kursy są przeznaczone dla młodszych uczniów. Uczniowie przechodzą przez serię łamigłówek,  które uczą ich kodowania, a nauczyciele mają dostęp do planów lekcji, które angażują do pomocy w uczeniu się. Code.org oferuje bezpłatny rozwój zawodowy dla tych kursów, online lub osobiście. \n-   **Zaproś eksperta ds. Informatyki, aby porozmawiał z Twoją klasą o swojej pracy**. Nie znasz żadnych miejscowych informatyków? Zawróć się wolontariusza na naszej [mapie wolontariuszy][2]."
+          "description": "### Po zakończeniu Godziny Kodowania\n\nPo przeprowadzeniu zajęć Godzina Kodowania można na wiele sposobów kontynuować nauczanie informatyki w klasach K-5. Oto kilka pomysłów: \n\n-   **Przerób kursy [Podstawy informatyki w Code Studio](http://code.org/educate/k5)**. Te cztery kursy są przeznaczone dla młodszych uczniów. Uczniowie przechodzą przez serię łamigłówek,  które uczą ich kodowania, a nauczyciele mają dostęp do planów lekcji, które angażują do pomocy w uczeniu się. Code.org oferuje bezpłatny rozwój zawodowy dla tych kursów, online lub osobiście. \n-   **Zaproś eksperta ds. Informatyki, aby porozmawiał z Twoją klasą o swojej pracy**. Nie znasz żadnych miejscowych informatyków? Zawróć się wolontariusza na naszej [mapie wolontariuszy][2]."
         },
         "a16594a7-8312-4ac3-87c8-fd2d5d6e5bfb": {
           "name": "Wstęp",
@@ -24548,7 +24548,7 @@
         },
         "6415b9b2-1e23-43ee-9d0c-e65efcb0d65c": {
           "tips": [
-            "Jednym ze sposobów na wprowadzenie Godziny Kodowania, jeśli sama nie znasz się zbyt dobrze na kodowaniu jest pokazanie jednego z [naszych inspirujących filmów wideo][0]. Wybierz ten, który Twoim zdaniem będzie inspirujący dla Twoich uczniów i udostępnij go teraz. Uczniom w klasach średnich proponujemy [Godzina Kodowania jest tutaj][1].”"
+            "Jednym ze sposobów na wprowadzenie Godziny Kodowania, jeśli sama nie znasz się zbyt dobrze na kodowaniu jest pokazanie jednego z [naszych inspirujących filmów wideo](https://hourofcode.com/us/resources#videos). Wybierz ten, który Twoim zdaniem będzie inspirujący dla Twoich uczniów i udostępnij go teraz. Uczniom w klasach średnich proponujemy [Godzina Kodowania jest tutaj](https://youtu.be/FC5FbmsH4fw).”"
           ]
         },
         "3fee530c-6d5f-44da-89f7-cfae73040787": {
@@ -24561,16 +24561,16 @@
         },
         "aafa75c2-9439-415c-b42f-cac8ddfc2874": {
           "name": "Poszukiwacz przygód z Minecraftem",
-          "description": "Postaw swoim uczniom zadanie wykonania tej [Minecraft: Łowca przygód][0] czynności.\n\nW zależności od wieku i umiejętności uczniów można rozważyć: \n\n-   w przypadku młodszych uczniów zaproponowanie im, aby podzielili się na pary i poproszenie każdej grupy, aby razem przeszła samouczek korzystając z opcji [programowanie w parach][1].\n-   w przypadku uczniów w środkowych klasach, przekonaliśmy się, że dobrze sprawdza się praca indywidualna. Czasami warto pozwolić uczniom na wybranie samouczka według uznania. Jeśli uczniowie nie są zainteresowani grą Minecraft, podobne doświadczenia mogą zdobyć korzystając z samouczków w ramach opcji [Koduj z Anną i Elsą][2] lub [Star Wars][3].\n-   w przypadku uczniów starszych lub dorosłych samouczek [Minecraft][4] sprawdza się niezwykle dobrze zarówno jako zadanie niezależne lub w ramach opcji programowania w parach.",
+          "description": "Postaw swoim uczniom zadanie wykonania tej [Minecraft: Łowca przygód](studio.code.org/s/mc/lessons/1/levels/1) czynności.\n\nW zależności od wieku i umiejętności uczniów można rozważyć: \n\n-   w przypadku młodszych uczniów zaproponowanie im, aby podzielili się na pary i poproszenie każdej grupy, aby razem przeszła samouczek korzystając z opcji [programowanie w parach](https://youtu.be/vgkahOzFH2Q).\n-   w przypadku uczniów w środkowych klasach, przekonaliśmy się, że dobrze sprawdza się praca indywidualna. Czasami warto pozwolić uczniom na wybranie samouczka według uznania. Jeśli uczniowie nie są zainteresowani grą Minecraft, podobne doświadczenia mogą zdobyć korzystając z samouczków w ramach opcji [Koduj z Anną i Elsą](https://studio.code.org/s/frozen/stage/1/puzzle/1) lub [Star Wars](https://code.org/starwars).\n-   w przypadku uczniów starszych lub dorosłych samouczek [Minecraft](https://hourofcode.com/mc) sprawdza się niezwykle dobrze zarówno jako zadanie niezależne lub w ramach opcji programowania w parach.",
           "tips": [
             "Sam też koniecznie przejdź przez wybrane  samouczki, zanim polecisz uczniom, aby podjęli próbę ich przejścia. W ten sposób dowiesz się, czego można oczekiwać i będziesz mógł podjąć decyzję czy można pozwolić uczniom, aby sami wybrali sobie samouczek czy też wolisz zadać przejście samouczków zgodnie z potrzebami ucznia."
           ]
         },
         "1766511d-3639-46a3-911f-acc7f8c4b922": {
-          "description": "Jeśli grupa lub pojedynczy uczeń skończy wcześniej, może spróbować kolejnego samouczka, odwiedzając stronę [code.org/learn][0]."
+          "description": "Jeśli grupa lub pojedynczy uczeń skończy wcześniej, może spróbować kolejnego samouczka, odwiedzając stronę [code.org/learn](http://code.org/learn)."
         },
         "8c990fee-4a0f-4d70-a635-ab66a8195193": {
-          "description": "Daj każdemu uczniowi [“Przepustkę na wyjście”][0] i poproś, aby podsumowali to, czego się dzisiaj nauczyli, jak się czuli lub czego doświadczyli. Uczniowie mogą narysować, napisać ub wyrazić się w dowolny  sposób, w zakresie którego czują się komfortowo. Odbierz \"Przepustkę na wyjście\" od każdego ucznia wychodzącego z sali. Jeśli chcesz, możesz zamieścić \"Przepustki na wyjście\" na tablicy ogłoszeń lub w innym widocznym miejscu w szkole jako przypomnienie o Twojej \"Godzinie kodowania\"."
+          "description": "Daj każdemu uczniowi [“Przepustkę na wyjście”](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) i poproś, aby podsumowali to, czego się dzisiaj nauczyli, jak się czuli lub czego doświadczyli. Uczniowie mogą narysować, napisać ub wyrazić się w dowolny  sposób, w zakresie którego czują się komfortowo. Odbierz \"Przepustkę na wyjście\" od każdego ucznia wychodzącego z sali. Jeśli chcesz, możesz zamieścić \"Przepustki na wyjście\" na tablicy ogłoszeń lub w innym widocznym miejscu w szkole jako przypomnienie o Twojej \"Godzinie kodowania\"."
         },
         "bcdecd77-2efb-44b5-9fdc-e244d1f5ccf6": {
           "name": "Zdać sprawozdanie",
@@ -24578,7 +24578,7 @@
         },
         "6b574c8b-2319-4244-acc8-fb8405fa5737": {
           "name": "Świętuj",
-          "description": "Wyjaśnij, że dzisiejsza lekcja jest poświęcona kodowaniu, ponieważ w tym tygodniu przypada \"Tydzień edukacji informatycznej\" i miliony uczniów na całym świecie równiez odbywają lekcję \"Godzina kodowania\". Pogratuluj uczniom udziału w tym światowym ruchu. \n\nWręcz każdemu uczniowi [świadectwo][0] z jego imieniem."
+          "description": "Wyjaśnij, że dzisiejsza lekcja jest poświęcona kodowaniu, ponieważ w tym tygodniu przypada \"Tydzień edukacji informatycznej\" i miliony uczniów na całym świecie równiez odbywają lekcję \"Godzina kodowania\". Pogratuluj uczniom udziału w tym światowym ruchu. \n\nWręcz każdemu uczniowi [świadectwo](https://studio.code.org/certificates/batch?course=bWM=) z jego imieniem."
         },
         "02dfa607-4f9e-404c-bdae-f9f423fa526c": {
           "name": "Następne Kroki",
@@ -24586,7 +24586,7 @@
         },
         "5bc8aefa-7bb0-4f22-a555-321738755b8c": {
           "name": "Poza Godziną Kodowania",
-          "description": "Po przeprowadzeniu zajęć Godzina Kodowania można na wiele sposobów kontynuować nauczanie informatyki w klasach K-5. Oto kilka pomysłów:\n\n\\*\\* Prowadzić kursy [Podstawy informatyki w Code Studio][0]. Te cztery kursy jest przeznaczonych dla młodych uczniów. Uczniowie przechodzą przez serię łamigłówek, które uczą ich kodowania, a nauczyciele mają dostęp do angażujących planów lekcji, które pomagają ożywić naukę. Code.org oferuje bezpłatny rozwój zawodowy na bazie tych kursów, online lub osobiście.\n\\*\\* Odwiedź stronę [Możesz uczyć informatyki][1], aby uzyskać więcej propozycji kursów.\n\\*\\* Zaproś eksperta ds. informatyki, aby porozmawiał z klasą o jego pracy. Nie znasz lokalnych informatyków? Skontaktuj się z wolontariuszem na naszej [mapa wolontariatu][2]."
+          "description": "Po przeprowadzeniu zajęć Godzina Kodowania można na wiele sposobów kontynuować nauczanie informatyki w klasach K-5. Oto kilka pomysłów:\n\n\\*\\* Prowadzić kursy [Podstawy informatyki w Code Studio](http://code.org/educate/k5). Te cztery kursy jest przeznaczonych dla młodych uczniów. Uczniowie przechodzą przez serię łamigłówek, które uczą ich kodowania, a nauczyciele mają dostęp do angażujących planów lekcji, które pomagają ożywić naukę. Code.org oferuje bezpłatny rozwój zawodowy na bazie tych kursów, online lub osobiście.\n\\*\\* Odwiedź stronę [Możesz uczyć informatyki](https://code.org/teach), aby uzyskać więcej propozycji kursów.\n\\*\\* Zaproś eksperta ds. informatyki, aby porozmawiał z klasą o jego pracy. Nie znasz lokalnych informatyków? Skontaktuj się z wolontariuszem na naszej [mapa wolontariatu](https://code.org/volunteer/local)."
         },
         "563d9088-3ce6-48c1-aa79-6f673e089247": {
           "name": "Wstęp",
@@ -24594,7 +24594,7 @@
         },
         "9f1107d0-cde6-4f78-911c-5018ea9264e0": {
           "tips": [
-            "Jednym ze sposobów na wprowadzenie Godziny Kodowania, jeśli sama nie znasz się zbyt dobrze na kodowaniu jest pokazanie jednego z [naszych inspirujących filmów wideo][0]. Wybierz ten, który Twoim zdaniem będzie inspirujący dla Twoich uczniów i udostępnij go teraz. Uczniom w klasach średnich proponujemy [Godzina Kodowania jest tutaj][1].”"
+            "Jednym ze sposobów na wprowadzenie Godziny Kodowania, jeśli sama nie znasz się zbyt dobrze na kodowaniu jest pokazanie jednego z [naszych inspirujących filmów wideo](https://hourofcode.com/us/resources#videos). Wybierz ten, który Twoim zdaniem będzie inspirujący dla Twoich uczniów i udostępnij go teraz. Uczniom w klasach średnich proponujemy [Godzina Kodowania jest tutaj](https://youtu.be/FC5FbmsH4fw).”"
           ]
         },
         "ed8509fa-59b4-43a4-bd4a-05a5018387c2": {
@@ -24607,7 +24607,7 @@
         },
         "75d779c4-24f7-40be-bf92-b0c094c16d11": {
           "name": "Minecraft w Godzinie Kodowania - Projektant",
-          "description": "Postaw swoim uczniom zadanie wykonania tej [Minecraft: Designer][0] czynności.\n\nW zależności od wieku i umiejętności uczniów można rozważyć: \n\n-   w przypadku młodszych uczniów zaproponowanie im, aby podzielili się na pary i poproszenie każdej grupy, aby razem przeszła samouczek korzystając z opcji [programowanie w parach][1].\n-   w przypadku uczniów w środkowych klasach, przekonaliśmy się, że dobrze sprawdza się praca indywidualna. Czasami warto pozwolić uczniom na wybranie samouczka według uznania. Jeśli uczniowie nie są zainteresowani grą Minecraft, podobne doświadczenia mogą zdobyć korzystając z samouczków w ramach opcji [Koduj z Anną i Elsą][2] lub [Star Wars][3].\n-   w przypadku uczniów starszych lub dorosłych samouczek [Minecraft: Designer][4] sprawdza się niezwykle dobrze zarówno jako zadanie niezależne lub w ramach opcji programowania w parach."
+          "description": "Postaw swoim uczniom zadanie wykonania tej [Minecraft: Designer](http://studio.code.org/s/minecraft/lessons/1/levels/1) czynności.\n\nW zależności od wieku i umiejętności uczniów można rozważyć: \n\n-   w przypadku młodszych uczniów zaproponowanie im, aby podzielili się na pary i poproszenie każdej grupy, aby razem przeszła samouczek korzystając z opcji [programowanie w parach](https://youtu.be/vgkahOzFH2Q).\n-   w przypadku uczniów w środkowych klasach, przekonaliśmy się, że dobrze sprawdza się praca indywidualna. Czasami warto pozwolić uczniom na wybranie samouczka według uznania. Jeśli uczniowie nie są zainteresowani grą Minecraft, podobne doświadczenia mogą zdobyć korzystając z samouczków w ramach opcji [Koduj z Anną i Elsą](https://studio.code.org/s/frozen/stage/1/puzzle/1) lub [Star Wars](https://code.org/starwars).\n-   w przypadku uczniów starszych lub dorosłych samouczek [Minecraft: Designer](http://studio.code.org/s/minecraft/lessons/1/levels/1) sprawdza się niezwykle dobrze zarówno jako zadanie niezależne lub w ramach opcji programowania w parach."
         },
         "8d4ecee7-5f04-4f80-9673-c2aec0c5ab9d": {
           "tips": [
@@ -24615,7 +24615,7 @@
           ]
         },
         "307ffdf6-e274-484b-a10f-329ddfe568dc": {
-          "description": "Jeśli grupa lub pojedynczy uczeń skończy wcześniej, może spróbować kolejnego samouczka, odwiedzając stronę [code.org/learn][0]."
+          "description": "Jeśli grupa lub pojedynczy uczeń skończy wcześniej, może spróbować kolejnego samouczka, odwiedzając stronę [code.org/learn](http://code.org/learn)."
         },
         "70935a98-82e9-4553-94f7-90a4e615dd34": {
           "name": "Zdać sprawozdanie",
@@ -24623,18 +24623,18 @@
         },
         "5f00e31d-70fa-4bb2-9bef-223793082f5c": {
           "name": "Świętuj",
-          "description": "Wyjaśnij, że dzisiejsza lekcja jest poświęcona kodowaniu, ponieważ w tym tygodniu przypada \"Tydzień edukacji informatycznej\" i miliony uczniów na całym świecie równiez odbywają lekcję \"Godzina kodowania\". Pogratuluj uczniom udziału w tym światowym ruchu. \n\nWręcz każdemu uczniowi [świadectwo][0] z jego imieniem."
+          "description": "Wyjaśnij, że dzisiejsza lekcja jest poświęcona kodowaniu, ponieważ w tym tygodniu przypada \"Tydzień edukacji informatycznej\" i miliony uczniów na całym świecie równiez odbywają lekcję \"Godzina kodowania\". Pogratuluj uczniom udziału w tym światowym ruchu. \n\nWręcz każdemu uczniowi [świadectwo](https://studio.code.org/certificates/batch?course=bWM=) z jego imieniem."
         },
         "20b7009c-3a45-4211-a9ad-c65f56099200": {
           "name": "Następne Kroki",
-          "description": "Poinformuj uczniów, że jeśli podobały im się dzisiejsze zajęcia, mają wiele możliwości kontynuowania nauki programowania. Zachęć uczniów do odwiedzenia strony [code.org/learn][0] w celu uzyskania listy opcji lub, jeśli planujesz dodatkowe ćwiczenia, które będziesz realizować, powiedz uczniom, jakie są dalsze plany na dalsze zajęcia w Twojej klasie."
+          "description": "Poinformuj uczniów, że jeśli podobały im się dzisiejsze zajęcia, mają wiele możliwości kontynuowania nauki programowania. Zachęć uczniów do odwiedzenia strony [code.org/learn](<>) w celu uzyskania listy opcji lub, jeśli planujesz dodatkowe ćwiczenia, które będziesz realizować, powiedz uczniom, jakie są dalsze plany na dalsze zajęcia w Twojej klasie."
         },
         "85fc4f24-eb97-4ff5-813f-4af3e5497034": {
-          "description": "Daj każdemu uczniowi [“Przepustkę na wyjście”][0] i poproś, aby podsumowali to, czego się dzisiaj nauczyli, jak się czuli lub czego doświadczyli. Uczniowie mogą narysować, napisać ub wyrazić się w dowolny  sposób, w zakresie którego czują się komfortowo. Odbierz \"Przepustkę na wyjście\" od każdego ucznia wychodzącego z sali. Jeśli chcesz, możesz zamieścić \"Przepustki na wyjście\" na tablicy ogłoszeń lub w innym widocznym miejscu w szkole jako przypomnienie o Twojej \"Godzinie kodowania\"."
+          "description": "Daj każdemu uczniowi [“Przepustkę na wyjście”](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing) i poproś, aby podsumowali to, czego się dzisiaj nauczyli, jak się czuli lub czego doświadczyli. Uczniowie mogą narysować, napisać ub wyrazić się w dowolny  sposób, w zakresie którego czują się komfortowo. Odbierz \"Przepustkę na wyjście\" od każdego ucznia wychodzącego z sali. Jeśli chcesz, możesz zamieścić \"Przepustki na wyjście\" na tablicy ogłoszeń lub w innym widocznym miejscu w szkole jako przypomnienie o Twojej \"Godzinie kodowania\"."
         },
         "7f24d7ca-8a9e-417c-ac8e-18ca3ab48ac1": {
           "name": "Poza Godziną Kodowania",
-          "description": "#### Poza Godziną Kodowania\n\nPo przeprowadzeniu zajęć Godzina Kodowania można na wiele sposobów kontynuować nauczanie informatyki w klasach K-5. Oto kilka pomysłów:\n\n\\*\\* Prowadzić kursy [Podstawy informatyki w Code Studio][0]. Te sześć kursów jest przeznaczonych dla młodych uczniów. Uczniowie przechodzą przez serię łamigłówek, które uczą ich kodowania, a nauczyciele mają dostęp do angażujących planów lekcji, które pomagają ożywić naukę. Code.org oferuje bezpłatny rozwój zawodowy na bazie tych kursów, online lub osobiście.\n\\*\\* Odwiedź stronę [Możesz uczyć informatyki][1], aby uzyskać więcej propozycji kursów.\n\\*\\* Zaproś eksperta ds. informatyki, aby porozmawiał z klasą o jego pracy. Nie znasz lokalnych informatyków? Skontaktuj się z wolontariuszem na naszej [mapa wolontariatu][2]."
+          "description": "#### Poza Godziną Kodowania\n\nPo przeprowadzeniu zajęć Godzina Kodowania można na wiele sposobów kontynuować nauczanie informatyki w klasach K-5. Oto kilka pomysłów:\n\n\\*\\* Prowadzić kursy [Podstawy informatyki w Code Studio](http://code.org/educate/k5). Te sześć kursów jest przeznaczonych dla młodych uczniów. Uczniowie przechodzą przez serię łamigłówek, które uczą ich kodowania, a nauczyciele mają dostęp do angażujących planów lekcji, które pomagają ożywić naukę. Code.org oferuje bezpłatny rozwój zawodowy na bazie tych kursów, online lub osobiście.\n\\*\\* Odwiedź stronę [Możesz uczyć informatyki](https://code.org/teach), aby uzyskać więcej propozycji kursów.\n\\*\\* Zaproś eksperta ds. informatyki, aby porozmawiał z klasą o jego pracy. Nie znasz lokalnych informatyków? Skontaktuj się z wolontariuszem na naszej [mapa wolontariatu](https://code.org/volunteer/local)."
         },
         "54b95e4d-58b7-4551-9782-7ce134f4e457": {
           "name": "Buduj napięcie!",
@@ -24902,7 +24902,7 @@
         },
         "6fa68bdd-8f9b-4d69-b54e-28141ee6d732": {
           "tips": [
-            "Jednym ze sposobów na wprowadzenie Godziny Kodowania, jeśli sam nie znasz się zbyt dobrze na kodowaniu, jest pokazanie jednego z naszych [inspirujących filmów wideo][0]. Wybierz ten, który Twoim zdaniem, będzie inspirujący dla Twoich uczniów i udostępnij go teraz. Uczniom w klasach młodszych proponujemy [Godzina Kodowania jest tutaj][1]."
+            "Jednym ze sposobów na wprowadzenie Godziny Kodowania, jeśli sam nie znasz się zbyt dobrze na kodowaniu, jest pokazanie jednego z naszych [inspirujących filmów wideo](https://hourofcode.com/us/resources#videos). Wybierz ten, który Twoim zdaniem, będzie inspirujący dla Twoich uczniów i udostępnij go teraz. Uczniom w klasach młodszych proponujemy [Godzina Kodowania jest tutaj](https://youtu.be/FC5FbmsH4fw)."
           ]
         },
         "7f1244d9-811b-410c-96b2-9f7086959c6b": {
@@ -24910,7 +24910,7 @@
         },
         "a69a3310-4b81-4e04-8313-51044489351a": {
           "name": "Star Wars: Tworzenie Galaktyki za pomocą kodu",
-          "description": "Zachęć uczniów do przejścia tego samouczka [Star Wars: Budowanie galaktyki przy pomocy kodu][0] czynności.\n\nW zależności od wieku i umiejętności uczniów można rozważyć: \n\n-   w przypadku młodszych uczniów zaproponowanie im, aby podzielili się na pary i poproszenie każdej pary, aby razem przeszła samouczek korzystając z opcji [programowanie w parach][1].\n-   w przypadku uczniów starszych przekonaliśmy się, że dobrze sprawdza się praca indywidualna w ramach przechodzenia samouczka. Czasami warto pozwolić uczniom na wybranie samouczka według uznania. Jeśli uczniowie nie są zainteresowani grą Star Wars, podobne doświadczenia mogą zdobyć korzystając z samouczków w ramach opcji [Napisz swój pierwszy program komputerowy][2].\n-   w przypadku uczniów dorosłych doskonale sprawdza się samouczek [Star Wars: Budowanie galaktyki przy pomocy kodu][3] dobrze zarówno jako zadanie niezależne lub w ramach opcji programowania w parach."
+          "description": "Zachęć uczniów do przejścia tego samouczka [Star Wars: Budowanie galaktyki przy pomocy kodu](https://studio.code.org/s/starwars/lessons/1/levels/1) czynności.\n\nW zależności od wieku i umiejętności uczniów można rozważyć: \n\n-   w przypadku młodszych uczniów zaproponowanie im, aby podzielili się na pary i poproszenie każdej pary, aby razem przeszła samouczek korzystając z opcji [programowanie w parach](https://youtu.be/vgkahOzFH2Q).\n-   w przypadku uczniów starszych przekonaliśmy się, że dobrze sprawdza się praca indywidualna w ramach przechodzenia samouczka. Czasami warto pozwolić uczniom na wybranie samouczka według uznania. Jeśli uczniowie nie są zainteresowani grą Star Wars, podobne doświadczenia mogą zdobyć korzystając z samouczków w ramach opcji [Napisz swój pierwszy program komputerowy](https://studio.code.org/hoc/1).\n-   w przypadku uczniów dorosłych doskonale sprawdza się samouczek [Star Wars: Budowanie galaktyki przy pomocy kodu](https://studio.code.org/s/starwars/lessons/1/levels/1) dobrze zarówno jako zadanie niezależne lub w ramach opcji programowania w parach."
         },
         "b17f8e8a-6b46-4f46-a4fc-894cf561bb9d": {
           "tips": [
@@ -24918,15 +24918,15 @@
           ]
         },
         "eb72d828-788d-4090-9e4f-71423c081948": {
-          "description": "Na koniec samouczka uczniowie będą mieli okazję do stworzenia gry Star Wars. Jeśli uczniowie skończą wcześniej, zachęć ich, aby wypróbowali wzajemnie swoje gry, a potem, aby postarali się jeszcze je uatrakcyjnić lub lub utrudnić. \n\nMożesz również umożliwić grupową lub indywidualną próbę przejścia kolejnego samouczka wchodząc na stronę[code.org/learn][0]."
+          "description": "Na koniec samouczka uczniowie będą mieli okazję do stworzenia gry Star Wars. Jeśli uczniowie skończą wcześniej, zachęć ich, aby wypróbowali wzajemnie swoje gry, a potem, aby postarali się jeszcze je uatrakcyjnić lub lub utrudnić. \n\nMożesz również umożliwić grupową lub indywidualną próbę przejścia kolejnego samouczka wchodząc na stronę[code.org/learn](http://code.org/learn)."
         },
         "bec776b1-a8cd-4e18-a1bc-be30f2942863": {
           "name": "Zdać sprawozdanie",
-          "description": "Daj każdemu uczniowi samoprzylepną kartkę lub kartki do zapisywania notatek. Przeprowadź krótkie ćwiczenie [“Wywołanie znienacka do odpowiedzi\"][0]:\n\n-   Rzuć pytanie, na które można udzielić kilku odpowiedzi na przykład: “Powiedz, co spodobało ci się szczególnie w ćwiczeniu \"Godzina Kodowania\", które właśnie wykonałeś lub \"Powidz, jakie nowe umiętności dziś nabyłeś.\"\n-   Poleć uczniom, by zapisali jak najwięcej odpowiedzi. Jedną na każdej kartce samoprzylepnej lub na kartce do notatek.\n    Przechadzając się po sali \"wywołuj znienacka do odowiedzi\", za każdym razem jednego ucznia. Niech poda swoją odpowiedź. Wywołany uczeń nie powinien powtarzać odpowiedzi. Musi dodać nową. \n-   Po zakończeniu ćwiczenia uczniowie mają przedyskutować swoje pomysły i tematy, które pojawiły się wśród odpowiedzi."
+          "description": "Daj każdemu uczniowi samoprzylepną kartkę lub kartki do zapisywania notatek. Przeprowadź krótkie ćwiczenie [“Wywołanie znienacka do odpowiedzi\"](http://www.theteachertoolkit.com/index.php/tool/whip-around):\n\n-   Rzuć pytanie, na które można udzielić kilku odpowiedzi na przykład: “Powiedz, co spodobało ci się szczególnie w ćwiczeniu \"Godzina Kodowania\", które właśnie wykonałeś lub \"Powidz, jakie nowe umiętności dziś nabyłeś.\"\n-   Poleć uczniom, by zapisali jak najwięcej odpowiedzi. Jedną na każdej kartce samoprzylepnej lub na kartce do notatek.\n    Przechadzając się po sali \"wywołuj znienacka do odowiedzi\", za każdym razem jednego ucznia. Niech poda swoją odpowiedź. Wywołany uczeń nie powinien powtarzać odpowiedzi. Musi dodać nową. \n-   Po zakończeniu ćwiczenia uczniowie mają przedyskutować swoje pomysły i tematy, które pojawiły się wśród odpowiedzi."
         },
         "4cb35c62-404e-42b9-9eaf-09ec2f485a2b": {
           "name": "Świętuj",
-          "description": "Wyjaśnij, że dzisiejsza lekcja jest poświęcona kodowaniu, ponieważ w tym tygodniu przypada \"Tydzień edukacji informatycznej\" i miliony uczniów na całym świecie równiez odbywają lekcję \"Godziny kodowania\" w tym tygodniu. Pogratuluj uczniom udziału w tym światowym ruchu. \n\nWręcz każdemu uczniowi [certyfikat][0] z jego imieniem."
+          "description": "Wyjaśnij, że dzisiejsza lekcja jest poświęcona kodowaniu, ponieważ w tym tygodniu przypada \"Tydzień edukacji informatycznej\" i miliony uczniów na całym świecie równiez odbywają lekcję \"Godziny kodowania\" w tym tygodniu. Pogratuluj uczniom udziału w tym światowym ruchu. \n\nWręcz każdemu uczniowi [certyfikat](http://code.org/certificates) z jego imieniem."
         },
         "80ff32c9-0373-4125-a65e-bef5f0e21cba": {
           "name": "Następne Kroki",
@@ -24934,7 +24934,7 @@
         },
         "57e403d7-a8be-47fc-bb97-1a068e2469ed": {
           "name": "Poza Godziną Kodowania",
-          "description": "Po zakończeniu zajęć Godzina Kodowania można na wiele sposobów kontynuować nauczanie informatyki w klasach K-5. Oto kilka pomysłów: \n\n-   **Przerób kursy [Podstawy informatyki w Code Studio][0]**. Tych sześć kursów jest przeznaczonych dla młodszych uczniów. Uczniowie przechodzą przez serię łamigłówek,  które uczą ich kodowania, a nauczyciele mają dostęp do planów lekcji, które angażują do pomocy w uczeniu się. Code.org oferuje bezpłatny rozwój zawodowy dla tych kursów, online lub osobiście. \n-   Zbadaj niektóre kariery związane z kodowaniem, na które się natknęłaś. Znajdź w witrynie [Sharemylesson.com][1] zasoby dotyczące projektów badawczych związanych z planowaniem kariery. \n-   **Zaproś eksperta ds. Informatyki, aby porozmawiał z Twoją klasą o swojej pracy**. Nie znasz żadnego wolontariusza, zawróć się do kilku na [mapie wolontariuszy][2]."
+          "description": "Po zakończeniu zajęć Godzina Kodowania można na wiele sposobów kontynuować nauczanie informatyki w klasach K-5. Oto kilka pomysłów: \n\n-   **Przerób kursy [Podstawy informatyki w Code Studio](http://code.org/educate/k5)**. Tych sześć kursów jest przeznaczonych dla młodszych uczniów. Uczniowie przechodzą przez serię łamigłówek,  które uczą ich kodowania, a nauczyciele mają dostęp do planów lekcji, które angażują do pomocy w uczeniu się. Code.org oferuje bezpłatny rozwój zawodowy dla tych kursów, online lub osobiście. \n-   Zbadaj niektóre kariery związane z kodowaniem, na które się natknęłaś. Znajdź w witrynie [Sharemylesson.com](http://www.sharemylesson.com/TaxonomySearchResults.aspx?area=resources&keywords=career+research) zasoby dotyczące projektów badawczych związanych z planowaniem kariery. \n-   **Zaproś eksperta ds. Informatyki, aby porozmawiał z Twoją klasą o swojej pracy**. Nie znasz żadnego wolontariusza, zawróć się do kilku na [mapie wolontariuszy](https://code.org/volunteer/local)."
         },
         "d0f5c55b-b19c-418c-8dc6-f87a80e08f45": {
           "description": "Poproś uczniów, aby dodali swoje karteczki samoprzylepne \"Notatki\" lub karty z notatkami do Twojej mapy myśli \"Informatyka\" wychodząc po zajęciach. Spróbuj zapełnić planszę wieloma pomysłami na temat tego, czym jest informatyka i dlaczego ma takie znaczenie."
@@ -24945,14 +24945,14 @@
         },
         "88f6ccc1-0efa-4c60-985c-971a235d5645": {
           "tips": [
-            "Jednym ze sposobów na wprowadzenie Godziny Kodowania, jeśli sam nie znasz się zbyt dobrze na kodowaniu, jest pokazanie jednego z naszych [inspirujących filmów wideo][0]. Wybierz ten, który Twoim zdaniem, będzie inspirujący dla Twoich uczniów i udostępnij go teraz. Uczniom w klasach młodszych proponujemy [Godzina Kodowania jest tutaj][1]."
+            "Jednym ze sposobów na wprowadzenie Godziny Kodowania, jeśli sam nie znasz się zbyt dobrze na kodowaniu, jest pokazanie jednego z naszych [inspirujących filmów wideo](https://hourofcode.com/us/resources#videos). Wybierz ten, który Twoim zdaniem, będzie inspirujący dla Twoich uczniów i udostępnij go teraz. Uczniom w klasach młodszych proponujemy [Godzina Kodowania jest tutaj](https://youtu.be/FC5FbmsH4fw)."
           ]
         },
         "dbeab27b-4231-4281-be73-ae2aaa3d94b2": {
           "description": "Wyjaśnij, że w informatyce \"kod\" oznacza zbiór instrukcji, które komputer będzie mógł zrozumieć. Powiedz uczniom, że będą ćwiczyć \"kodowanie, “programowanie” i “debugowanie”. \n\nZdefiniuj: \n\n-   **Kodowanie** oznacza pisanie kodu lub pisanie instrukcji dla komputera. \n-   **Programowanie**, podobnie oznacza pisanie kodu lub instrukcji. Dzisiaj będziemy programować przy pomocy bloków na komputerze (jeśli korzystasz z samouczka online) albo przy pomocy długopisu i papieru (jeśli korzystasz z zajęć \"unplugged\" - bez komputera). \n-   **Debugowanie** oznacza sprawdzenie kodu pod kątem pomyłek i próbę naprawienia błędów. \n\nPoproś uczniów o nazwanie niektórych zawodów, o których słyszeli, że łączą się z kodowaniem. Uczniowie mogą wymienić rzeczy takie jak: \"programista\", \"informatyk\", \"projektant oprogramowania\" lub \"inżynier\". Wychwytuj odpowiedzi ucznia na swojej tablicy \"Informatyka\", tworząc mapę myśli informacji, które podawali Twoi uczniowie. \n\n**Powiedz**: \\_Macie rację, kochani! Tutaj nie ma odpowiedzi prawidłowych i nieprawidłowych...w obecnych czasach prawie każda praca wiąże się, w jakimś stopniu, ze znajomością kodu. Natomiast istnieje mnóstwo zawodów wymagających pewnej znajomości kodowania; każdy może nauczyć się kodowania. My będziemy dziś właśnie tego się uczyć. Rzeczy, którymi się dzisiaj zajmiemy, mogą nie wydawać się bezpośrednio czymś takim, ale wszystko, czego się dzisiaj uczymy może prowadzić do powstania kolejnych odpowiedników gry Angry Birds czy Twittera.\""
         },
         "0ac387c0-d67a-4177-aacf-837ce03c55aa": {
-          "description": "Zachęć uczniów do przejścia tego samouczka [Star Wars: Budowanie galaktyki przy pomocy kodu][0] czynności.\n\nW zależności od wieku i umiejętności uczniów można rozważyć: \n\n-   w przypadku młodszych uczniów zaproponowanie im, aby podzielili się na pary i poproszenie każdej pary, aby razem przeszła samouczek korzystając z opcji [programowanie w parach][1].\n-   w przypadku uczniów starszych przekonaliśmy się, że dobrze sprawdza się praca indywidualna w ramach przechodzenia samouczka. Czasami warto pozwolić uczniom na wybranie samouczka według uznania. Jeśli uczniowie nie są zainteresowani grą Star Wars, podobne doświadczenia mogą zdobyć korzystając z samouczków w ramach opcji [Napisz swój pierwszy program komputerowy][2].\n-   w przypadku uczniów dorosłych doskonale sprawdza się samouczek [Star Wars: Budowanie galaktyki przy pomocy kodu][3] dobrze zarówno jako zadanie niezależne lub w ramach opcji programowania w parach."
+          "description": "Zachęć uczniów do przejścia tego samouczka [Star Wars: Budowanie galaktyki przy pomocy kodu](https://studio.code.org/s/starwarsblocks/lessons/1/levels/1) czynności.\n\nW zależności od wieku i umiejętności uczniów można rozważyć: \n\n-   w przypadku młodszych uczniów zaproponowanie im, aby podzielili się na pary i poproszenie każdej pary, aby razem przeszła samouczek korzystając z opcji [programowanie w parach](https://youtu.be/vgkahOzFH2Q).\n-   w przypadku uczniów starszych przekonaliśmy się, że dobrze sprawdza się praca indywidualna w ramach przechodzenia samouczka. Czasami warto pozwolić uczniom na wybranie samouczka według uznania. Jeśli uczniowie nie są zainteresowani grą Star Wars, podobne doświadczenia mogą zdobyć korzystając z samouczków w ramach opcji [Napisz swój pierwszy program komputerowy](https://studio.code.org/hoc/1).\n-   w przypadku uczniów dorosłych doskonale sprawdza się samouczek [Star Wars: Budowanie galaktyki przy pomocy kodu](https://studio.code.org/s/starwarsblocks/lessons/1/levels/1) dobrze zarówno jako zadanie niezależne lub w ramach opcji programowania w parach."
         },
         "88879c41-12f5-4d2e-86e6-93925b83d7d0": {
           "tips": [
@@ -24960,15 +24960,15 @@
           ]
         },
         "719affd9-c1a0-4b0c-8bc3-22060893f5e0": {
-          "description": "Na koniec samouczka uczniowie będą mieli okazję do stworzenia gry Star Wars. Jeśli uczniowie skończą wcześniej, zachęć ich, aby wypróbowali wzajemnie swoje gry, a potem, aby postarali się jeszcze je uatrakcyjnić lub lub utrudnić. \nMożesz również umożliwić grupową lub indywidualną próbę przejścia kolejnego samouczka wchodząc na stronę[code.org/learn][0]."
+          "description": "Na koniec samouczka uczniowie będą mieli okazję do stworzenia gry Star Wars. Jeśli uczniowie skończą wcześniej, zachęć ich, aby wypróbowali wzajemnie swoje gry, a potem, aby postarali się jeszcze je uatrakcyjnić lub lub utrudnić. \nMożesz również umożliwić grupową lub indywidualną próbę przejścia kolejnego samouczka wchodząc na stronę[code.org/learn](http://code.org/learn)."
         },
         "afb5ecc7-af66-492d-96bb-2412754005e0": {
           "name": "Zdać sprawozdanie",
-          "description": "Daj każdemu uczniowi samoprzylepną kartkę lub kartki do zapisywania notatek. Przeprowadź krótkie ćwiczenie [“Wywołanie znienacka do odpowiedzi\"][0]:\n\n-   Rzuć pytanie, na które można udzielić kilku odpowiedzi na przykład: “Powiedz, co spodobało ci się szczególnie w ćwiczeniu \"Godzina Kodowania\", które właśnie wykonałeś lub \"Powidz, jakie nowe umiętności dziś nabyłeś.\"\n-   Poleć uczniom, by zapisali jak najwięcej odpowiedzi. Jedną na każdej kartce samoprzylepnej lub na kartce do notatek.\n    Przechadzając się po sali \"wywołuj znienacka do odowiedzi\", za każdym razem jednego ucznia. Niech poda swoją odpowiedź. Wywołany uczeń nie powinien powtarzać odpowiedzi. Musi dodać nową. \n-   Po zakończeniu ćwiczenia uczniowie mają przedyskutować swoje pomysły i tematy, które pojawiły się wśród odpowiedzi."
+          "description": "Daj każdemu uczniowi samoprzylepną kartkę lub kartki do zapisywania notatek. Przeprowadź krótkie ćwiczenie [“Wywołanie znienacka do odpowiedzi\"](http://www.theteachertoolkit.com/index.php/tool/whip-around):\n\n-   Rzuć pytanie, na które można udzielić kilku odpowiedzi na przykład: “Powiedz, co spodobało ci się szczególnie w ćwiczeniu \"Godzina Kodowania\", które właśnie wykonałeś lub \"Powidz, jakie nowe umiętności dziś nabyłeś.\"\n-   Poleć uczniom, by zapisali jak najwięcej odpowiedzi. Jedną na każdej kartce samoprzylepnej lub na kartce do notatek.\n    Przechadzając się po sali \"wywołuj znienacka do odowiedzi\", za każdym razem jednego ucznia. Niech poda swoją odpowiedź. Wywołany uczeń nie powinien powtarzać odpowiedzi. Musi dodać nową. \n-   Po zakończeniu ćwiczenia uczniowie mają przedyskutować swoje pomysły i tematy, które pojawiły się wśród odpowiedzi."
         },
         "16a6a4db-d853-478e-9945-3f0d17865e80": {
           "name": "Świętuj",
-          "description": "Wyjaśnij, że dzisiejsza lekcja jest poświęcona kodowaniu, ponieważ w tym tygodniu przypada \"Tydzień edukacji informatycznej\" i miliony uczniów na całym świecie równiez odbywają lekcję \"Godziny kodowania\" w tym tygodniu. Pogratuluj uczniom udziału w tym światowym ruchu. \n\nWręcz każdemu uczniowi [certyfikat][0] z jego imieniem."
+          "description": "Wyjaśnij, że dzisiejsza lekcja jest poświęcona kodowaniu, ponieważ w tym tygodniu przypada \"Tydzień edukacji informatycznej\" i miliony uczniów na całym świecie równiez odbywają lekcję \"Godziny kodowania\" w tym tygodniu. Pogratuluj uczniom udziału w tym światowym ruchu. \n\nWręcz każdemu uczniowi [certyfikat](http://code.org/certificates) z jego imieniem."
         },
         "450db873-f55e-4f30-bbb9-5dfde5bf47e4": {
           "name": "Następne Kroki",
@@ -24976,7 +24976,7 @@
         },
         "5ec42aed-0b79-49f8-bd64-0716e60498a4": {
           "name": "Poza Godziną Kodowania",
-          "description": "Po zakończeniu zajęć Godzina Kodowania można na wiele sposobów kontynuować nauczanie informatyki w klasach K-5. Oto kilka pomysłów: \n\n-   **Przerób kursy [Podstawy informatyki w Code Studio][0]**. Tych sześć kursów jest przeznaczonych dla młodszych uczniów. Uczniowie przechodzą przez serię łamigłówek,  które uczą ich kodowania, a nauczyciele mają dostęp do planów lekcji, które angażują do pomocy w uczeniu się. Code.org oferuje bezpłatny rozwój zawodowy dla tych kursów, online lub osobiście. \n-   Zbadaj niektóre kariery związane z kodowaniem, na które się natknęłaś. Znajdź w witrynie [Sharemylesson.com][1] zasoby dotyczące projektów badawczych związanych z planowaniem kariery. \n-   **Zaproś eksperta ds. Informatyki, aby porozmawiał z Twoją klasą o swojej pracy**. Nie znasz żadnego wolontariusza, zawróć się do kilku na [mapie wolontariuszy][2]."
+          "description": "Po zakończeniu zajęć Godzina Kodowania można na wiele sposobów kontynuować nauczanie informatyki w klasach K-5. Oto kilka pomysłów: \n\n-   **Przerób kursy [Podstawy informatyki w Code Studio](http://code.org/educate/k5)**. Tych sześć kursów jest przeznaczonych dla młodszych uczniów. Uczniowie przechodzą przez serię łamigłówek,  które uczą ich kodowania, a nauczyciele mają dostęp do planów lekcji, które angażują do pomocy w uczeniu się. Code.org oferuje bezpłatny rozwój zawodowy dla tych kursów, online lub osobiście. \n-   Zbadaj niektóre kariery związane z kodowaniem, na które się natknęłaś. Znajdź w witrynie [Sharemylesson.com](http://www.sharemylesson.com/TaxonomySearchResults.aspx?area=resources&keywords=career+research) zasoby dotyczące projektów badawczych związanych z planowaniem kariery. \n-   **Zaproś eksperta ds. Informatyki, aby porozmawiał z Twoją klasą o swojej pracy**. Nie znasz żadnego wolontariusza, zawróć się do kilku na [mapie wolontariuszy](https://code.org/volunteer/local)."
         },
         "b0fff664-80cc-4318-b031-edf88ad1aebc": {
           "description": "Poproś uczniów, aby dodali swoje karteczki samoprzylepne \"Notatki\" lub karty z notatkami do Twojej mapy myśli \"Informatyka\" wychodząc po zajęciach. Spróbuj zapełnić planszę wieloma pomysłami na temat tego, czym jest informatyka i dlaczego ma takie znaczenie."

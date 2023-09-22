@@ -1,4 +1,0 @@
-[submodule "apps/test/interpreter/test262"]
-	path = apps/test/interpreter/test262
-	url = https://github.com/tc39/test262.git
-	shallow = true

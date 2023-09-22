@@ -72,7 +72,7 @@
     "hide_design_mode": "true",
     "beginner_mode": "false",
     "hide_view_data_button": "true",
-    "show_debug_watch": "false",
+    "show_debug_watch": "true",
     "expand_debugger": "false",
     "fail_on_lint_errors": "false",
     "debugger_disabled": "false",
@@ -96,7 +96,7 @@
     "preload_asset_list": null
   },
   "notes": "",
-  "audit_log": "[{\"changed_at\":\"2022-09-21T13:19:19.798+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Physical Output - SB1_2222\\\"\"],\"cloned_from\":\"CSD U6 - Physical Output - SB1_2222\"},{\"changed_at\":\"2023-08-16 22:23:18 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-08-24 20:52:47 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"}]"
+  "audit_log": "[{\"changed_at\":\"2022-09-21T13:19:19.798+00:00\",\"changed\":[\"cloned from \\\"CSD U6 - Physical Output - SB1_2222\\\"\"],\"cloned_from\":\"CSD U6 - Physical Output - SB1_2222\"},{\"changed_at\":\"2023-08-16 22:23:18 +0000\",\"changed\":[\"code_functions\",\"makerlab_enabled\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-08-24 20:52:47 +0000\",\"changed\":[\"code_functions\",\"start_blocks\",\"long_instructions\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":14639,\"changed_by_email\":\"dan+teacher@code.org\"},{\"changed_at\":\"2023-09-08 23:35:33 +0000\",\"changed\":[\"code_functions\",\"show_debug_watch\",\"encrypted_examples\",\"preload_asset_list\",\"contained_level_names\"],\"changed_by_id\":18414,\"changed_by_email\":\"thomas.wang@code.org\"}]"
 }]]></config>
   <blocks/>
 </Applab>

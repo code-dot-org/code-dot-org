@@ -18,7 +18,7 @@ export const tableLayoutStyles = {
     backgroundColor: color.table_light_row,
   },
   cell: {
-    maxWidth: 225,
+    maxWidth: 200,
     border: '1px solid',
     borderColor: color.border_light_gray,
     padding: 10,
@@ -56,3 +56,5 @@ export const sortableOptions = {
   // Dim inactive sorting icons in the column headers
   default: {color: 'rgba(0, 0, 0, 0.2 )'},
 };
+
+export const NAME_CELL_INPUT_WIDTH = 160;

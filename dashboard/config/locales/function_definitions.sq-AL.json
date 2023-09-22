@@ -498,7 +498,11 @@
         },
         "CourseD_EOC_artist_2021": {
           "draw a circle": {
-            "name": "vizato një rreth"
+            "description": "vizatoni një rreth të rrezes së dhënë",
+            "name": "vizato një rreth",
+            "parameters": {
+              "radius": "rrezja"
+            }
           },
           "draw a house": {
             "name": "vizato një shtëpi",
@@ -507,14 +511,18 @@
             }
           },
           "draw a pinwheel": {
+            "name": "vizato një pinwheel",
             "parameters": {
               "length": "gjatësia",
-              "repeat": "përsërit"
+              "repeat": "përsërit",
+              "sides": "anët"
             }
           },
           "draw a shape": {
+            "name": "vizato një formë",
             "parameters": {
-              "length": "gjatësia"
+              "length": "gjatësia",
+              "sides": "anët"
             }
           },
           "draw a square": {
@@ -524,6 +532,7 @@
             }
           },
           "draw a star": {
+            "description": "vizatoni një yll me pikat e dhëna dhe anët e gjatësisë së dhënë",
             "name": "vizato një yll",
             "parameters": {
               "length": "gjatësia",
@@ -617,6 +626,21 @@
             "parameters": {
               "length": "gjatesi"
             }
+          }
+        },
+        "CourseF_app_computer": {
+          "reset game": {
+            "name": "resetoni lojën"
+          }
+        },
+        "CourseF_app_computer2022": {
+          "reset game": {
+            "name": "resetoni lojën"
+          }
+        },
+        "CourseF_app_computer_-2022-2": {
+          "reset game": {
+            "name": "resetoni lojën"
           }
         },
         "Find the Wizard": {

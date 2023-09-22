@@ -162,8 +162,8 @@ module Cdo
       @buffer.synchronize do
         batch << @buffer.shift until
           @buffer.empty? ||
-            batch.length >= @batch_count ||
-            size((batch + [@buffer.first]).map(&:object)) > @batch_size
+              batch.length >= @batch_count ||
+              size((batch + [@buffer.first]).map(&:object)) > @batch_size
       end
       batch
     end

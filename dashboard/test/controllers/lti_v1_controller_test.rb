@@ -21,7 +21,7 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     JWT.encode(payload, @key)
   end
 
-  def create_jwt_and_stub(payload, raises_error=false)
+  def create_jwt_and_stub(payload, raises_error = false)
     if raises_error
       LtiV1Controller.any_instance.stubs(:get_decoded_jwt).raises JWT::DecodeError
     else
@@ -30,7 +30,7 @@ class LtiV1ControllerTest < ActionDispatch::IntegrationTest
     create_jwt(payload)
   end
 
-  def get_valid_payload(aud_is_array=false)
+  def get_valid_payload(aud_is_array = false)
     # an example redirect URI, any URI should work here.
     target_link_uri = CDO.studio_url('/', CDO.default_scheme)
     aud = if aud_is_array

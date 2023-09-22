@@ -18,7 +18,7 @@
     },
     "new_name": null,
     "family_name": null,
-    "serialized_at": "2023-08-07 22:28:00 UTC",
+    "serialized_at": "2023-09-19 17:25:48 UTC",
     "published_state": null,
     "instruction_type": null,
     "instructor_audience": null,
@@ -6347,12 +6347,10 @@
       }
     },
     {
-      "name": "CSP Unit 4 - Variables, Conditionals, and Functions",
+      "name": "CSP Unit 4 - Slides",
       "url": "https://docs.google.com/presentation/d/17DOii-3gPXZrNszMyiLnHUt7VhbCULJ9Jddlb_Xss5o/copy",
       "key": "csp_unit_4_-_variables_conditionals_and_functions",
       "properties": {
-        "audience": "Teacher",
-        "download_url": "https://docs.google.com/presentation/d/17DOii-3gPXZrNszMyiLnHUt7VhbCULJ9Jddlb_Xss5o/export?format=pdf",
         "type": "Slides"
       },
       "seeding_key": {
@@ -7241,6 +7239,12 @@
     {
       "seeding_key": {
         "resource.key": "course_vocabulary",
+        "script.name": "csp4-2023"
+      }
+    },
+    {
+      "seeding_key": {
+        "resource.key": "csp_unit_4_-_variables_conditionals_and_functions",
         "script.name": "csp4-2023"
       }
     },

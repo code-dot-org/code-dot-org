@@ -23550,7 +23550,7 @@
         },
         "63df0c6e-ae3d-4724-9c1d-2ecd5bf8986a": {
           "tips": [
-            "如果你自己對程式設計不是很熟悉，介紹一小時玩程式時，可以播放其中一個[our inspirational videos][0]。選擇一個你認為能夠啟發學生靈感的視頻，並立即分享。對於年輕學員，我們推薦“[The Hour of Code is Here][1]”。"
+            "如果你自己對程式設計不是很熟悉，介紹一小時玩程式時，可以播放其中一個[our inspirational videos](https://hourofcode.com/us/resources#videos)。選擇一個你認為能夠啟發學生靈感的視頻，並立即分享。對於年輕學員，我們推薦“[The Hour of Code is Here](https://youtu.be/FC5FbmsH4fw)”。"
           ]
         },
         "f96053ea-387e-47d5-a018-65619ec093b0": {
@@ -23563,7 +23563,7 @@
         },
         "91cc858b-9f90-4134-b890-237f457e8423": {
           "name": "Minecraft: 水上巡航",
-          "description": "挑戰你的學生完成[Minecraft: Voyage Aquatic][0]教程。  \n\n根據學生的年齡和能力，你可以考慮：  \n\n-   對於年齡較小的學生，我們建議你將班級分成兩人一組，讓每組一起使用[pair programming][1]完成教程。  \n-   對於中年級的學員，我們發現獨立學習教程效果很好。有時，允許學生選擇他們自己的教程會有幫助。如果學生對《我的世界》不感興趣，他們可以通過[Code with Anna and Elsa][2]或[Star Wars][3]教程獲得類似的體驗。  \n-   對於年長或成年學員，[Minecraft: Voyage Aquatic][4]教程作為獨立挑戰或結對程式設計活動都非常好。"
+          "description": "挑戰你的學生完成[Minecraft: Voyage Aquatic](http://studio.code.org/s/aquatic/lessons/1/levels/1)教程。  \n\n根據學生的年齡和能力，你可以考慮：  \n\n-   對於年齡較小的學生，我們建議你將班級分成兩人一組，讓每組一起使用[pair programming](https://youtu.be/vgkahOzFH2Q)完成教程。  \n-   對於中年級的學員，我們發現獨立學習教程效果很好。有時，允許學生選擇他們自己的教程會有幫助。如果學生對《我的世界》不感興趣，他們可以通過[Code with Anna and Elsa](https://studio.code.org/s/frozen/stage/1/puzzle/1)或[Star Wars](https://code.org/starwars)教程獲得類似的體驗。  \n-   對於年長或成年學員，[Minecraft: Voyage Aquatic](http://studio.code.org/s/aquatic/lessons/1/levels/1)教程作為獨立挑戰或結對程式設計活動都非常好。"
         },
         "900f3fd4-40aa-42f7-89fc-e5240b2db143": {
           "tips": [
@@ -23571,7 +23571,7 @@
           ]
         },
         "1be305a6-52f5-40bb-a8d5-f851a3c61a3a": {
-          "description": "如果一個組或個人提前完成，他們可以訪問[code.org/learn][0]嘗試另一個教程。"
+          "description": "如果一個組或個人提前完成，他們可以訪問[code.org/learn](http://code.org/learn)嘗試另一個教程。"
         },
         "29412a26-dd7b-4990-a8bb-7e6f7bfa00d6": {
           "name": "匯報",
@@ -23579,18 +23579,18 @@
         },
         "7e26ffea-ccaa-4969-9b40-01573fbe4303": {
           "name": "讚美",
-          "description": "解釋你今天花了一個小時寫代碼，因為這周是電腦科學教育周，全球數以百萬計的學生也在這周學習程式設計一小時。祝賀學生參與這個世界性運動。\n\n給每個學生一張寫有其名字的[certificate][0]。"
+          "description": "解釋你今天花了一個小時寫代碼，因為這周是電腦科學教育周，全球數以百萬計的學生也在這周學習程式設計一小時。祝賀學生參與這個世界性運動。\n\n給每個學生一張寫有其名字的[certificate](https://studio.code.org/certificates/batch?course=bWM=)。"
         },
         "de9c3d28-c38a-4d2e-af91-a72a92d31f52": {
           "name": "下一步",
-          "description": "讓學生知道，如果他們喜歡今天的活動，他們有很多繼續編碼的選擇。鼓勵學生訪問[code.org/learn][0]獲取選項清單。此外，如果你正在計畫接下來的任何擴展活動，告訴學生你的課堂接下來會發生什麼。"
+          "description": "讓學生知道，如果他們喜歡今天的活動，他們有很多繼續編碼的選擇。鼓勵學生訪問[code.org/learn](<>)獲取選項清單。此外，如果你正在計畫接下來的任何擴展活動，告訴學生你的課堂接下來會發生什麼。"
         },
         "ebf68fd6-9cfe-4fc2-93b4-e61860fc853b": {
-          "description": "給每位學生髮一張[“Exit Ticket”][0]，並讓他們總結今天所學的知識、自己的感受或體驗的內容。學生可以畫出、寫出或用任何自己喜歡的方式來表達自己。在每位學生離開教室時收集其“課堂回饋條”。如果你喜歡的話，你可以在公告欄或學校某個顯眼的地方張貼“課堂回饋條”，作為一小時玩程式的提示。"
+          "description": "給每位學生髮一張[“Exit Ticket”](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing)，並讓他們總結今天所學的知識、自己的感受或體驗的內容。學生可以畫出、寫出或用任何自己喜歡的方式來表達自己。在每位學生離開教室時收集其“課堂回饋條”。如果你喜歡的話，你可以在公告欄或學校某個顯眼的地方張貼“課堂回饋條”，作為一小時玩程式的提示。"
         },
         "f3360f34-a0a8-4d3d-98e2-fe6176ad0e2e": {
           "name": "超越一小時玩程式",
-          "description": "一小時玩程式結束後，有多種方法可以繼續在K-5課堂教授電腦科學。這裡有一些思路：\n\n-   **教授[Code Studio Computer Science Fundamentals][0]課程**。這六門課程專為低齡學習者而設計。學生通過一系列謎題學習編碼，教師使用有趣的課程計畫，有助於讓學習變得更生動\\*\\*。Code.org線上或面對面為這些課程提供免費輔導。\n-   \\*\\*訪問[You can Teach Computer Science][1]獲取更多課程建議。\n-   **邀請電腦科學專家向班上學生講述其工作**。不認識任何本地電腦科學家？通過我們的[volunteer map][2]聯絡志工。"
+          "description": "一小時玩程式結束後，有多種方法可以繼續在K-5課堂教授電腦科學。這裡有一些思路：\n\n-   **教授[Code Studio Computer Science Fundamentals](http://code.org/educate/k5)課程**。這六門課程專為低齡學習者而設計。學生通過一系列謎題學習編碼，教師使用有趣的課程計畫，有助於讓學習變得更生動\\*\\*。Code.org線上或面對面為這些課程提供免費輔導。\n-   \\*\\*訪問[You can Teach Computer Science](https://code.org/teach)獲取更多課程建議。\n-   **邀請電腦科學專家向班上學生講述其工作**。不認識任何本地電腦科學家？通過我們的[volunteer map](https://code.org/volunteer/local)聯絡志工。"
         },
         "6b51b4f1-5b1d-4b29-af25-c48d716a2d22": {
           "description": "#### 搭建舞臺\n\n歡迎學生來上課，簡單介紹當天的活動。  \n\n**說：**_今天我們要花一個小時學習編碼。有人聽說過“密碼”這個詞嗎？這是什麼意思？_\n\n學生們可能會提到“代碼”就像一個秘密訊息，或者它在某種程度上與電腦有關。",
@@ -23981,7 +23981,7 @@
         },
         "aced2726-6ed1-4645-9fd2-eccfe982584f": {
           "tips": [
-            "如果你自己對程式設計不是很熟悉，介紹一小時玩程式時，可以播放其中一個[our inspirational videos][0]。選擇一個你認為能夠啟發學生靈感的視頻，並立即分享。對於年輕學員，我們推薦“[Anybody Can Learn][1]”。"
+            "如果你自己對程式設計不是很熟悉，介紹一小時玩程式時，可以播放其中一個[our inspirational videos](https://hourofcode.com/us/resources#videos)。選擇一個你認為能夠啟發學生靈感的視頻，並立即分享。對於年輕學員，我們推薦“[Anybody Can Learn](https://youtu.be/qYZF6oIZtfc)”。"
           ]
         },
         "a0692bbb-9e61-49d2-ac85-96bd4a922f5a": {
@@ -23989,7 +23989,7 @@
         },
         "8af57fdb-d7be-4cc2-9964-8f7eed4102f9": {
           "name": "像素鳥程式",
-          "description": "挑戰你的學生完成[Make a Flappy Game][0]教程。\n\n 根據學生的年齡和能力，你可以考慮：\n\n-   對於初高中學生，我們建議你選擇可以自由發揮和創建應用程式或遊戲的教程。你可以讓學生獨立學習、結對學習或分組學習。在[code.org/learn][1]上還有許多其他的教程，包括[Playlab][2]和我們的新測試版工具[AppLab][3]。  \n-   對於年齡較小的學生，我們建議你將班級分成兩人一組或非常小的小組（每個小組3-4名學生），並要求每個小組一起使用[pair programming][4]完成教程。  \n-   對於成人學員來說，[Write your first computer program][5]教程作為獨立挑戰或結對程式設計活動非常適合。"
+          "description": "挑戰你的學生完成[Make a Flappy Game](https://studio.code.org/flappy/1)教程。\n\n 根據學生的年齡和能力，你可以考慮：\n\n-   對於初高中學生，我們建議你選擇可以自由發揮和創建應用程式或遊戲的教程。你可以讓學生獨立學習、結對學習或分組學習。在[code.org/learn](http://code.org/learn)上還有許多其他的教程，包括[Playlab](https://studio.code.org/s/playlab/stage/1/puzzle/1)和我們的新測試版工具[AppLab](https://code.org/educate/applab)。  \n-   對於年齡較小的學生，我們建議你將班級分成兩人一組或非常小的小組（每個小組3-4名學生），並要求每個小組一起使用[pair programming](https://youtu.be/vgkahOzFH2Q)完成教程。  \n-   對於成人學員來說，[Write your first computer program](https://studio.code.org/hoc/1)教程作為獨立挑戰或結對程式設計活動非常適合。"
         },
         "47fe47af-9de3-4ba5-8193-1f489bef9544": {
           "tips": [
@@ -23997,7 +23997,7 @@
           ]
         },
         "55f2f6a9-8e6b-49c2-8988-e2a09956e222": {
-          "description": "如果一個組或個人提前完成，他們可以訪問[code.org/learn][0]嘗試另一個教程。"
+          "description": "如果一個組或個人提前完成，他們可以訪問[code.org/learn](http://code.org/learn)嘗試另一個教程。"
         },
         "cd649101-5c1f-4bcb-9258-3cabf2bfccb6": {
           "name": "匯報",
@@ -24005,7 +24005,7 @@
         },
         "ca7d5e61-0396-4885-934c-0d70ab63b072": {
           "name": "讚美",
-          "description": "解釋你今天花了一個小時寫代碼，因為這周是電腦科學教育周，全球數以百萬計的學生也在這周學習程式設計一小時。祝賀學生參與這個世界性運動。\n\n給每個學生一張寫有其名字的[certificate][0]。"
+          "description": "解釋你今天花了一個小時寫代碼，因為這周是電腦科學教育周，全球數以百萬計的學生也在這周學習程式設計一小時。祝賀學生參與這個世界性運動。\n\n給每個學生一張寫有其名字的[certificate](http://code.org/certificates)。"
         },
         "d4bf5db5-6884-4166-ae90-3a5cd01b9695": {
           "name": "下一步",
@@ -24017,7 +24017,7 @@
         },
         "f7c11887-da26-4c7b-be7a-1b84d330ed30": {
           "name": "超越一小時玩程式",
-          "description": "一小時玩程式結束後，有多種方法可以繼續在K-5教室教授電腦科學。這裡有一些思路：\n\n-   **教授[Code Studio Computer Science Fundamentals][0]課程**。這六門課程專為低齡學習者而設計。學生們通過一系列謎題學習編碼，教師使用有趣的課程計畫，有助於讓學習變得更生動。Code.org線上或面對面為這些課程提供免費輔導。\n-   **邀請電腦科學專家向班上學生講述其工作**。不認識志願者？可以在[volunteer map][1]上聯絡一些。"
+          "description": "一小時玩程式結束後，有多種方法可以繼續在K-5教室教授電腦科學。這裡有一些思路：\n\n-   **教授[Code Studio Computer Science Fundamentals](http://code.org/educate/k5)課程**。這六門課程專為低齡學習者而設計。學生們通過一系列謎題學習編碼，教師使用有趣的課程計畫，有助於讓學習變得更生動。Code.org線上或面對面為這些課程提供免費輔導。\n-   **邀請電腦科學專家向班上學生講述其工作**。不認識志願者？可以在[volunteer map](https://code.org/volunteer/local)上聯絡一些。"
         },
         "4fddbdf5-8e43-4536-bdaa-98b0b8c240ad": {
           "name": "搭建舞臺",
@@ -24025,7 +24025,7 @@
         },
         "55cc55a9-45cb-4bbd-bf37-2de8a2abd9db": {
           "tips": [
-            "如果你有時間，或者你的學生需要更多背景資訊，你可能會考慮在一小時玩程式活動之前講授[\"The Drawing Machine\"][0]。這節簡短的課程向學生介紹電腦輔助繪圖的思路，這將幫助他們在[Code with Anna and Elsa tutorial][1]上更成功。"
+            "如果你有時間，或者你的學生需要更多背景資訊，你可能會考慮在一小時玩程式活動之前講授[\"The Drawing Machine\"](https://code.org/curriculum/misc/hocunplugged/Teacher)。這節簡短的課程向學生介紹電腦輔助繪圖的思路，這將幫助他們在[Code with Anna and Elsa tutorial](https://studio.code.org/s/frozen/stage/1/puzzle/1)上更成功。"
           ]
         },
         "46e7088b-b207-46ae-be95-3ceacecc3f35": {
@@ -24033,7 +24033,7 @@
         },
         "063fb28a-8520-4c66-9821-3be0f0d1ed5f": {
           "tips": [
-            "如果你自己對程式設計不是很熟悉，介紹一小時玩程式時，可以播放其中一個[our inspirational videos][0]。選擇一個你認為能夠啟發學生靈感的視頻，並立即分享。對於中年級學員，我們推薦“[The Hour of Code is Here][1]”。"
+            "如果你自己對程式設計不是很熟悉，介紹一小時玩程式時，可以播放其中一個[our inspirational videos](https://hourofcode.com/us/resources#videos)。選擇一個你認為能夠啟發學生靈感的視頻，並立即分享。對於中年級學員，我們推薦“[The Hour of Code is Here](https://youtu.be/FC5FbmsH4fw)”。"
           ]
         },
         "c18f0050-ba65-4f12-8cc6-fe7f16b5806b": {
@@ -24041,7 +24041,7 @@
         },
         "e5e802d6-9ee4-4ef3-aab2-616ac241b5f8": {
           "name": "與安娜與艾莎一同玩程式",
-          "description": "挑戰你的學生完成[Code with Anna and Elsa][0]教程。  \n\n根據學生的年齡和能力，你可以考慮：  \n\n-   對於年齡較小的學生，我們建議你將班級分成兩人一組或非常小的小組（每組3-4名學生），讓每組一起使用[pair programming][1]完成教程。K-5年級的學生可能會在教程中的數學部分遇到困難（需要對角度測量有基本的瞭解）。如果你的學生比較年輕，考慮提供補充課程計畫，[\"The Drawing Machine\"][2]在程式設計一小時之前介紹基礎知識。\n-   對於年齡較大的學生，我們發現獨立學習教程效果很好。有時，允許學生選擇他們自己的教程會有幫助。如果學生對《冰雪奇緣》不感興趣，他們可以通過[Write Your First Computer Program][3]教程獲得類似的體驗。  \n-   對於成年學員，[Code with Anna and Elsa][4]教程作為獨立挑戰或結對程式設計活動都非常好。"
+          "description": "挑戰你的學生完成[Code with Anna and Elsa](https://studio.code.org/s/frozen/stage/1/puzzle/1)教程。  \n\n根據學生的年齡和能力，你可以考慮：  \n\n-   對於年齡較小的學生，我們建議你將班級分成兩人一組或非常小的小組（每組3-4名學生），讓每組一起使用[pair programming](https://youtu.be/vgkahOzFH2Q)完成教程。K-5年級的學生可能會在教程中的數學部分遇到困難（需要對角度測量有基本的瞭解）。如果你的學生比較年輕，考慮提供補充課程計畫，[\"The Drawing Machine\"](https://code.org/curriculum/misc/hocunplugged/Teacher)在程式設計一小時之前介紹基礎知識。\n-   對於年齡較大的學生，我們發現獨立學習教程效果很好。有時，允許學生選擇他們自己的教程會有幫助。如果學生對《冰雪奇緣》不感興趣，他們可以通過[Write Your First Computer Program](https://studio.code.org/hoc/1)教程獲得類似的體驗。  \n-   對於成年學員，[Code with Anna and Elsa](https://studio.code.org/s/frozen/stage/1/puzzle/1)教程作為獨立挑戰或結對程式設計活動都非常好。"
         },
         "bdb8b54a-c21d-4bcf-a960-67ecf0468a7f": {
           "tips": [
@@ -24049,15 +24049,15 @@
           ]
         },
         "da8b52b2-8db6-440d-add3-8578161f59e2": {
-          "description": "如果一個組或個人提前完成，他們可以訪問[code.org/learn][0]嘗試另一個教程。"
+          "description": "如果一個組或個人提前完成，他們可以訪問[code.org/learn](http://code.org/learn)嘗試另一個教程。"
         },
         "38799019-2b81-4c28-a239-762b90e0f5e3": {
           "name": "匯報",
-          "description": "給每個學生一些便利貼或便簽。推進快速[“Whip Around”][0]活動：\n\n-   提出一個有多個答案的提示，如“分享你完成的一小時玩程式活動中你真正喜歡的東西”或“分享你今天學到的一些技能”。  \n-   讓學生寫下盡可能多的答案，每張便利貼或便簽卡寫下一個想法。  \n-   在教室裡“打轉”，一次叫一個學生。讓學生分享他們的一個回答。被點名時，學生不能重複回答；他們必須添加一些新的東西。"
+          "description": "給每個學生一些便利貼或便簽。推進快速[“Whip Around”](http://www.theteachertoolkit.com/index.php/tool/whip-around)活動：\n\n-   提出一個有多個答案的提示，如“分享你完成的一小時玩程式活動中你真正喜歡的東西”或“分享你今天學到的一些技能”。  \n-   讓學生寫下盡可能多的答案，每張便利貼或便簽卡寫下一個想法。  \n-   在教室裡“打轉”，一次叫一個學生。讓學生分享他們的一個回答。被點名時，學生不能重複回答；他們必須添加一些新的東西。"
         },
         "e9751fff-a71d-4d90-b401-0ccbf3356c44": {
           "name": "讚美",
-          "description": "解釋你今天花了一個小時寫代碼，因為這周是電腦科學教育周，全球數以百萬計的學生也在這周學習程式設計一小時。祝賀學生參與這個世界性運動。\n\n給每個學生一張寫有其名字的[certificate][0]。"
+          "description": "解釋你今天花了一個小時寫代碼，因為這周是電腦科學教育周，全球數以百萬計的學生也在這周學習程式設計一小時。祝賀學生參與這個世界性運動。\n\n給每個學生一張寫有其名字的[certificate](http://code.org/certificates)。"
         },
         "3596cc47-e661-4d00-943e-ed858c4f6f5d": {
           "name": "下一步",
@@ -24068,7 +24068,7 @@
         },
         "3a8c30ae-50bb-4a85-99d8-b62c9f7e1bbf": {
           "name": "超越一小時玩程式",
-          "description": "一小時玩程式結束後，有多種方法可以繼續在K-5教室教授電腦科學。這裡有一些思路：\n\n-   **教授[Code Studio Computer Science Fundamentals][0]課程**。這六門課程專為低齡學習者而設計。學生們通過一系列謎題學習編碼，教師使用有趣的課程計畫，有助於讓學習變得更生動。Code.org線上或面對面為這些課程提供免費輔導。\n-   研究你今天瞭解到的一些程式設計職業。在[Sharemylesson.com][1]上找到關於職業規劃研究專案的資源。\n-   **邀請電腦科學專家向班上學生講述其工作**。如果不認識任何志願者，可通過[volunteer map][2]聯繫一些。"
+          "description": "一小時玩程式結束後，有多種方法可以繼續在K-5教室教授電腦科學。這裡有一些思路：\n\n-   **教授[Code Studio Computer Science Fundamentals](http://code.org/educate/k5)課程**。這六門課程專為低齡學習者而設計。學生們通過一系列謎題學習編碼，教師使用有趣的課程計畫，有助於讓學習變得更生動。Code.org線上或面對面為這些課程提供免費輔導。\n-   研究你今天瞭解到的一些程式設計職業。在[Sharemylesson.com](http://www.sharemylesson.com/TaxonomySearchResults.aspx?area=resources&keywords=career+research)上找到關於職業規劃研究專案的資源。\n-   **邀請電腦科學專家向班上學生講述其工作**。如果不認識任何志願者，可通過[volunteer map](https://code.org/volunteer/local)聯繫一些。"
         },
         "a2f60a17-c25f-4c4d-9f2d-384486d7a67d": {
           "name": "搭建舞臺",
@@ -24076,7 +24076,7 @@
         },
         "c857d03e-91e3-4949-8ccc-79a2aec463c8": {
           "tips": [
-            "如果你自己對程式設計不是很熟悉，介紹一小時玩程式時，可以播放其中一個[our inspirational videos][0]。選擇一個你認為能夠啟發學生靈感的視頻，並立即分享。對於年輕學員，我們推薦“[Anybody Can Learn][1]”。"
+            "如果你自己對程式設計不是很熟悉，介紹一小時玩程式時，可以播放其中一個[our inspirational videos](https://hourofcode.com/us/resources#videos)。選擇一個你認為能夠啟發學生靈感的視頻，並立即分享。對於年輕學員，我們推薦“[Anybody Can Learn](https://youtu.be/qYZF6oIZtfc)”。"
           ]
         },
         "8ad0974f-b2ad-4632-bfe5-8c8760cd2e45": {
@@ -24084,7 +24084,7 @@
         },
         "0e395269-9740-4229-a7ac-b18b9f4eced9": {
           "name": "陶阿甘的 Play Lab",
-          "description": "挑戰你的學生完成[Gumball Play Lab][0]教程。\n\n 根據學生的年齡和能力，你可以考慮：\n\n-   對於初高中學生，我們建議你選擇可以自由發揮和創建應用程式或遊戲的教程。你可以讓學生獨立學習、結對學習或分組學習。在[code.org/learn][1]上還有許多其他的教程，包括[Make a Flappy Game][2]和我們的新測試版工具[AppLab][3]。  \n-   對於年齡較小的學生，我們建議你將班級分成兩人一組或非常小的小組（每個小組3-4名學生），並要求每個小組一起使用[pair programming][4]完成教程。  \n-   對於成人學員來說，[Write your first computer program][5]教程作為獨立挑戰或結對程式設計活動非常適合。"
+          "description": "挑戰你的學生完成[Gumball Play Lab](https://studio.code.org/s/gumball/lessons/1/levels/1)教程。\n\n 根據學生的年齡和能力，你可以考慮：\n\n-   對於初高中學生，我們建議你選擇可以自由發揮和創建應用程式或遊戲的教程。你可以讓學生獨立學習、結對學習或分組學習。在[code.org/learn](http://code.org/learn)上還有許多其他的教程，包括[Make a Flappy Game](https://studio.code.org/s/flappy)和我們的新測試版工具[AppLab](https://code.org/educate/applab)。  \n-   對於年齡較小的學生，我們建議你將班級分成兩人一組或非常小的小組（每個小組3-4名學生），並要求每個小組一起使用[pair programming](https://youtu.be/vgkahOzFH2Q)完成教程。  \n-   對於成人學員來說，[Write your first computer program](https://studio.code.org/hoc/1)教程作為獨立挑戰或結對程式設計活動非常適合。"
         },
         "eea63453-59c2-4c48-8d04-d6612d379584": {
           "tips": [
@@ -24092,7 +24092,7 @@
           ]
         },
         "fd77d784-72d9-4687-843d-7d1ecd17b9a1": {
-          "description": "如果一個組或個人提前完成，他們可以訪問[code.org/learn][0]嘗試另一個教程。"
+          "description": "如果一個組或個人提前完成，他們可以訪問[code.org/learn](http://code.org/learn)嘗試另一個教程。"
         },
         "0815f2e7-8336-48ae-8ac0-5d0af1f956d9": {
           "name": "匯報",
@@ -24100,7 +24100,7 @@
         },
         "3b92bb05-ac4c-4717-afce-ed3d10f54527": {
           "name": "讚美",
-          "description": "解釋你今天花了一個小時寫代碼，因為這周是電腦科學教育周，全球數以百萬計的學生也在這周學習程式設計一小時。祝賀學生參與這個世界性運動。\n\n給每個學生一張寫有其名字的[certificate][0]。"
+          "description": "解釋你今天花了一個小時寫代碼，因為這周是電腦科學教育周，全球數以百萬計的學生也在這周學習程式設計一小時。祝賀學生參與這個世界性運動。\n\n給每個學生一張寫有其名字的[certificate](http://code.org/certificates)。"
         },
         "59cd05df-cb4d-4280-8700-840826c01845": {
           "name": "下一步",
@@ -24112,7 +24112,7 @@
         },
         "2836d5f0-0808-4868-bc34-bbd3cf8b631f": {
           "name": "超越一小時玩程式",
-          "description": "一小時玩程式結束後，有多種方法可以繼續在K-5教室教授電腦科學。這裡有一些思路：\n\n-   **教授[Code Studio Computer Science Fundamentals][0]課程**。這四門課程專為低齡學習者而設計。學生們通過一系列謎題學習編碼，教師使用有趣的課程計畫，有助於讓學習變得更生動。Code.org線上或面對面為這些課程提供免費輔導。\n-   **邀請電腦科學專家向班上學生講述其工作**。不認識志願者？可以在[volunteer map][1]上聯絡一些。"
+          "description": "一小時玩程式結束後，有多種方法可以繼續在K-5教室教授電腦科學。這裡有一些思路：\n\n-   **教授[Code Studio Computer Science Fundamentals](http://code.org/educate/k5)課程**。這四門課程專為低齡學習者而設計。學生們通過一系列謎題學習編碼，教師使用有趣的課程計畫，有助於讓學習變得更生動。Code.org線上或面對面為這些課程提供免費輔導。\n-   **邀請電腦科學專家向班上學生講述其工作**。不認識志願者？可以在[volunteer map](https://code.org/volunteer/local)上聯絡一些。"
         },
         "c4d6d315-bb5c-47d7-bc5e-f5fce2e4ae67": {
           "name": "搭建舞臺",
@@ -24126,18 +24126,18 @@
         },
         "ce182c47-efed-4526-bb9c-f4ec66b052a4": {
           "name": "一般支持",
-          "description": "這裡有一些建議，無論學生的學習水準如何，對他們都應該有幫助\n\n-   **與周圍的人合作：**鼓勵學生在被卡住時與周圍的人檢查。根據學生的年齡和能力，你可能會考慮正式地將你的班級分成兩人一組，使用[結對程式設計][0]來完成教程。  \n\n-   **閱讀說明：**說明通常提供如何完成級別的有用提示。在給學生答案之前，確保他們已經仔細地查看了說明、提示、視訊和任何入門代碼。\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **卡住了？尋找提示：**每個級別都包含關於如何通過級別的建議提示，包括要嘗試哪些代碼積木。 \n\n-   **花時間去嘗試。**說明通常告訴學生該做什麼，但他們也可以自由嘗試自己的思路。"
+          "description": "這裡有一些建議，無論學生的學習水準如何，對他們都應該有幫助\n\n-   **與周圍的人合作：**鼓勵學生在被卡住時與周圍的人檢查。根據學生的年齡和能力，你可能會考慮正式地將你的班級分成兩人一組，使用[結對程式設計](https://youtu.be/vgkahOzFH2Q)來完成教程。  \n\n-   **閱讀說明：**說明通常提供如何完成級別的有用提示。在給學生答案之前，確保他們已經仔細地查看了說明、提示、視訊和任何入門代碼。\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **卡住了？尋找提示：**每個級別都包含關於如何通過級別的建議提示，包括要嘗試哪些代碼積木。 \n\n-   **花時間去嘗試。**說明通常告訴學生該做什麼，但他們也可以自由嘗試自己的思路。"
         },
         "893dba56-7c8e-4897-949b-de514de76011": {
           "name": "你好世界",
           "progression_name": "你好世界"
         },
         "05ad915a-32e0-4799-90a2-2a53efb937f1": {
-          "description": "如果團隊或個人提前完成，鼓勵他們在最後一個級別繼續構建項目。如果學生不確定還能做什麼，你可以用問題來提示他們：\n\n-   你還可以在項目中添加其他哪些精靈圖？\n-   你有沒有看過服裝庫或嘗試繪製自己的精靈圖服裝？\n-   你的精靈圖還能說些什麼？\n-   當你點擊精靈圖時，它們應該做什麼？\n-   邀請學生分享想法，互相學習。他們還可以訪問[code.org/learn][0]嘗試其他教程。"
+          "description": "如果團隊或個人提前完成，鼓勵他們在最後一個級別繼續構建項目。如果學生不確定還能做什麼，你可以用問題來提示他們：\n\n-   你還可以在項目中添加其他哪些精靈圖？\n-   你有沒有看過服裝庫或嘗試繪製自己的精靈圖服裝？\n-   你的精靈圖還能說些什麼？\n-   當你點擊精靈圖時，它們應該做什麼？\n-   邀請學生分享想法，互相學習。他們還可以訪問[code.org/learn](https://code.org/learn)嘗試其他教程。"
         },
         "d5d3f8eb-f17e-4f26-88a8-ca6422ed7a1f": {
           "name": "反思",
-          "description": "#### 匯報\n\n要求學生反思當天的活動。關於程式設計、精靈圖、事件，他們學到了什麼？\n\n在花了一個小時進行探索之後，他們對電腦科學和程式設計有什麼感覺？\n\n#### 後續步驟\n\n讓學生知道，如果他們喜歡今天的活動，他們擁有許多繼續程式設計的選擇。訪問[CS Connections][0]瞭解如何將電腦科學整合到其他學科的思路，或進一步閱讀我們[為小學提供的課程][1]。"
+          "description": "#### 匯報\n\n要求學生反思當天的活動。關於程式設計、精靈圖、事件，他們學到了什麼？\n\n在花了一個小時進行探索之後，他們對電腦科學和程式設計有什麼感覺？\n\n#### 後續步驟\n\n讓學生知道，如果他們喜歡今天的活動，他們擁有許多繼續程式設計的選擇。訪問[CS Connections](https://code.org/educate/csc)瞭解如何將電腦科學整合到其他學科的思路，或進一步閱讀我們[為小學提供的課程](https://code.org/educate/curriculum/elementary-school)。"
         },
         "aad08892-e7b6-4fdc-bfd6-8199118fc2d6": {
           "name": "搭建舞臺",
@@ -24151,18 +24151,18 @@
         },
         "0a05af25-05aa-4e56-92ce-f14570cc1c64": {
           "name": "一般支持",
-          "description": "這裡有一些建議，無論學生的學習水準如何，對他們都應該有幫助\n\n-   **與周圍的人合作：**鼓勵學生在被卡住時與周圍的人檢查。根據學生的年齡和能力，你可能會考慮正式地將你的班級分成兩人一組，使用[結對程式設計][0]來完成教程。  \n\n-   **閱讀說明：**說明通常提供如何完成級別的有用提示。在給學生答案之前，確保他們已經仔細地查看了說明、提示、視訊和任何入門代碼。\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **卡住了？尋找提示：**每個級別都包含關於如何通過級別的建議提示，包括要嘗試哪些代碼積木。 \n\n-   **花時間去嘗試。**說明通常告訴學生該做什麼，但他們也可以自由嘗試自己的思路。"
+          "description": "這裡有一些建議，無論學生的學習水準如何，對他們都應該有幫助\n\n-   **與周圍的人合作：**鼓勵學生在被卡住時與周圍的人檢查。根據學生的年齡和能力，你可能會考慮正式地將你的班級分成兩人一組，使用[結對程式設計](https://youtu.be/vgkahOzFH2Q)來完成教程。  \n\n-   **閱讀說明：**說明通常提供如何完成級別的有用提示。在給學生答案之前，確保他們已經仔細地查看了說明、提示、視訊和任何入門代碼。\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **卡住了？尋找提示：**每個級別都包含關於如何通過級別的建議提示，包括要嘗試哪些代碼積木。 \n\n-   **花時間去嘗試。**說明通常告訴學生該做什麼，但他們也可以自由嘗試自己的思路。"
         },
         "f6a21949-1c94-4269-acae-98046f6a9052": {
           "name": "你好世界",
           "progression_name": "你好世界"
         },
         "3e2a74f4-d574-42fd-9bf3-5b319526299a": {
-          "description": "如果團隊或個人提前完成，鼓勵他們在最後一個級別繼續構建項目。如果學生不確定還能做什麼，你可以用問題來提示他們：\n\n-   你還可以在項目中添加其他哪些精靈圖？\n-   你有沒有看過服裝庫或嘗試繪製自己的精靈圖服裝？\n-   你的精靈圖還能說些什麼？\n-   當你點擊精靈圖時，它們應該做什麼？\n-   邀請學生分享想法，互相學習。他們還可以訪問[code.org/learn][0]嘗試其他教程。"
+          "description": "如果團隊或個人提前完成，鼓勵他們在最後一個級別繼續構建項目。如果學生不確定還能做什麼，你可以用問題來提示他們：\n\n-   你還可以在項目中添加其他哪些精靈圖？\n-   你有沒有看過服裝庫或嘗試繪製自己的精靈圖服裝？\n-   你的精靈圖還能說些什麼？\n-   當你點擊精靈圖時，它們應該做什麼？\n-   邀請學生分享想法，互相學習。他們還可以訪問[code.org/learn](https://code.org/learn)嘗試其他教程。"
         },
         "f95b4eed-639e-483e-bef7-ead9abf4808e": {
           "name": "反思",
-          "description": "#### 匯報\n\n要求學生反思當天的活動。關於程式設計、精靈圖、事件，他們學到了什麼？\n\n在花了一個小時進行探索之後，他們對電腦科學和程式設計有什麼感覺？\n\n#### 後續步驟\n\n讓學生知道，如果他們喜歡今天的活動，他們擁有許多繼續程式設計的選擇。訪問[CS Connections][0]瞭解如何將電腦科學整合到其他學科的思路，或進一步閱讀我們[為小學提供的課程][1]。"
+          "description": "#### 匯報\n\n要求學生反思當天的活動。關於程式設計、精靈圖、事件，他們學到了什麼？\n\n在花了一個小時進行探索之後，他們對電腦科學和程式設計有什麼感覺？\n\n#### 後續步驟\n\n讓學生知道，如果他們喜歡今天的活動，他們擁有許多繼續程式設計的選擇。訪問[CS Connections](https://code.org/educate/csc)瞭解如何將電腦科學整合到其他學科的思路，或進一步閱讀我們[為小學提供的課程](https://code.org/educate/curriculum/elementary-school)。"
         },
         "5ba761c1-02df-411f-96cd-69a8327e0d2c": {
           "name": "搭建舞臺",
@@ -24176,18 +24176,18 @@
         },
         "11f167ca-2cf6-4e6b-8857-316c5cb55f82": {
           "name": "一般支持",
-          "description": "這裡有一些建議，無論學生的學習水準如何，對他們都應該有幫助\n\n-   **與周圍的人合作：**鼓勵學生在被卡住時與周圍的人檢查。根據學生的年齡和能力，你可能會考慮正式地將你的班級分成兩人一組，使用[結對程式設計][0]來完成教程。  \n\n-   **閱讀說明：**說明通常提供如何完成級別的有用提示。在給學生答案之前，確保他們已經仔細地查看了說明、提示、視訊和任何入門代碼。\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **卡住了？尋找提示：**每個級別都包含關於如何通過級別的建議提示，包括要嘗試哪些代碼積木。 \n\n-   **花時間去嘗試。**說明通常告訴學生該做什麼，但他們也可以自由嘗試自己的思路。"
+          "description": "這裡有一些建議，無論學生的學習水準如何，對他們都應該有幫助\n\n-   **與周圍的人合作：**鼓勵學生在被卡住時與周圍的人檢查。根據學生的年齡和能力，你可能會考慮正式地將你的班級分成兩人一組，使用[結對程式設計](https://youtu.be/vgkahOzFH2Q)來完成教程。  \n\n-   **閱讀說明：**說明通常提供如何完成級別的有用提示。在給學生答案之前，確保他們已經仔細地查看了說明、提示、視訊和任何入門代碼。\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **卡住了？尋找提示：**每個級別都包含關於如何通過級別的建議提示，包括要嘗試哪些代碼積木。 \n\n-   **花時間去嘗試。**說明通常告訴學生該做什麼，但他們也可以自由嘗試自己的思路。"
         },
         "c721eddb-4cfb-4237-a031-0730bbfdc926": {
           "name": "你好世界",
           "progression_name": "你好世界"
         },
         "8341212e-8528-4ad8-9c02-22066467054b": {
-          "description": "如果團隊或個人提前完成，鼓勵他們在最後一個級別繼續構建項目。如果學生不確定還能做什麼，你可以用問題來提示他們：\n\n-   你還可以在項目中添加其他哪些精靈圖？\n-   你有沒有看過服裝庫或嘗試繪製自己的精靈圖服裝？\n-   你的精靈圖還能說些什麼？\n-   當你點擊精靈圖時，它們應該做什麼？\n-   邀請學生分享想法，互相學習。他們還可以訪問[code.org/learn][0]嘗試其他教程。"
+          "description": "如果團隊或個人提前完成，鼓勵他們在最後一個級別繼續構建項目。如果學生不確定還能做什麼，你可以用問題來提示他們：\n\n-   你還可以在項目中添加其他哪些精靈圖？\n-   你有沒有看過服裝庫或嘗試繪製自己的精靈圖服裝？\n-   你的精靈圖還能說些什麼？\n-   當你點擊精靈圖時，它們應該做什麼？\n-   邀請學生分享想法，互相學習。他們還可以訪問[code.org/learn](https://code.org/learn)嘗試其他教程。"
         },
         "656eee11-dc6d-428e-8849-6e4b31dc8c81": {
           "name": "反思",
-          "description": "#### 匯報\n\n要求學生反思當天的活動。關於程式設計、精靈圖、事件，他們學到了什麼？\n\n在花了一個小時進行探索之後，他們對電腦科學和程式設計有什麼感覺？\n\n#### 後續步驟\n\n讓學生知道，如果他們喜歡今天的活動，他們擁有許多繼續程式設計的選擇。訪問[CS Connections][0]瞭解如何將電腦科學整合到其他學科的思路，或進一步閱讀我們[為小學提供的課程][1]。"
+          "description": "#### 匯報\n\n要求學生反思當天的活動。關於程式設計、精靈圖、事件，他們學到了什麼？\n\n在花了一個小時進行探索之後，他們對電腦科學和程式設計有什麼感覺？\n\n#### 後續步驟\n\n讓學生知道，如果他們喜歡今天的活動，他們擁有許多繼續程式設計的選擇。訪問[CS Connections](https://code.org/educate/csc)瞭解如何將電腦科學整合到其他學科的思路，或進一步閱讀我們[為小學提供的課程](https://code.org/educate/curriculum/elementary-school)。"
         },
         "9d3ef78a-4043-489e-898b-f407c914f698": {
           "name": "搭建舞臺",
@@ -24201,18 +24201,18 @@
         },
         "2ff80a97-db35-4d10-9703-4d0cc3ff0c3a": {
           "name": "一般支持",
-          "description": "這裡有一些建議，無論學生的學習水準如何，對他們都應該有幫助\n\n-   **與周圍的人合作：**鼓勵學生在被卡住時與周圍的人檢查。根據學生的年齡和能力，你可能會考慮正式地將你的班級分成兩人一組，使用[結對程式設計][0]來完成教程。  \n\n-   **閱讀說明：**說明通常提供如何完成級別的有用提示。在給學生答案之前，確保他們已經仔細地查看了說明、提示、視訊和任何入門代碼。\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **卡住了？尋找提示：**每個級別都包含關於如何通過級別的建議提示，包括要嘗試哪些代碼積木。 \n\n-   **花時間去嘗試。**說明通常告訴學生該做什麼，但他們也可以自由嘗試自己的思路。"
+          "description": "這裡有一些建議，無論學生的學習水準如何，對他們都應該有幫助\n\n-   **與周圍的人合作：**鼓勵學生在被卡住時與周圍的人檢查。根據學生的年齡和能力，你可能會考慮正式地將你的班級分成兩人一組，使用[結對程式設計](https://youtu.be/vgkahOzFH2Q)來完成教程。  \n\n-   **閱讀說明：**說明通常提供如何完成級別的有用提示。在給學生答案之前，確保他們已經仔細地查看了說明、提示、視訊和任何入門代碼。\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **卡住了？尋找提示：**每個級別都包含關於如何通過級別的建議提示，包括要嘗試哪些代碼積木。 \n\n-   **花時間去嘗試。**說明通常告訴學生該做什麼，但他們也可以自由嘗試自己的思路。"
         },
         "70daba44-c26e-4286-95ae-50cbd8724b2d": {
           "name": "你好世界",
           "progression_name": "你好世界"
         },
         "77cef9f9-1949-455b-a0bd-f2cbc4a32986": {
-          "description": "如果團隊或個人提前完成，鼓勵他們在最後一個級別繼續構建項目。如果學生不確定還能做什麼，你可以用問題來提示他們：\n\n-   你還可以在項目中添加其他哪些精靈圖？\n-   你有沒有看過服裝庫或嘗試繪製自己的精靈圖服裝？\n-   你的精靈圖還能說些什麼？\n-   當你點擊精靈圖時，它們應該做什麼？\n-   邀請學生分享想法，互相學習。他們還可以訪問[code.org/learn][0]嘗試其他教程。"
+          "description": "如果團隊或個人提前完成，鼓勵他們在最後一個級別繼續構建項目。如果學生不確定還能做什麼，你可以用問題來提示他們：\n\n-   你還可以在項目中添加其他哪些精靈圖？\n-   你有沒有看過服裝庫或嘗試繪製自己的精靈圖服裝？\n-   你的精靈圖還能說些什麼？\n-   當你點擊精靈圖時，它們應該做什麼？\n-   邀請學生分享想法，互相學習。他們還可以訪問[code.org/learn](https://code.org/learn)嘗試其他教程。"
         },
         "ec905c64-2e80-49d0-8da3-7d75ed8d0693": {
           "name": "反思",
-          "description": "#### 匯報\n\n要求學生反思當天的活動。關於程式設計、精靈圖、事件，他們學到了什麼？\n\n在花了一個小時進行探索之後，他們對電腦科學和程式設計有什麼感覺？\n\n#### 後續步驟\n\n讓學生知道，如果他們喜歡今天的活動，他們擁有許多繼續程式設計的選擇。訪問[CS Connections][0]瞭解如何將電腦科學整合到其他學科的思路，或進一步閱讀我們[為小學提供的課程][1]。"
+          "description": "#### 匯報\n\n要求學生反思當天的活動。關於程式設計、精靈圖、事件，他們學到了什麼？\n\n在花了一個小時進行探索之後，他們對電腦科學和程式設計有什麼感覺？\n\n#### 後續步驟\n\n讓學生知道，如果他們喜歡今天的活動，他們擁有許多繼續程式設計的選擇。訪問[CS Connections](https://code.org/educate/csc)瞭解如何將電腦科學整合到其他學科的思路，或進一步閱讀我們[為小學提供的課程](https://code.org/educate/curriculum/elementary-school)。"
         },
         "6c387b78-14b7-4209-919a-97dbf64b9bc2": {
           "name": "搭建舞臺",
@@ -24226,18 +24226,18 @@
         },
         "cc4e7bc2-813a-4d4a-be58-83d08ca5d970": {
           "name": "一般支持",
-          "description": "這裡有一些建議，無論學生的學習水準如何，對他們都應該有幫助\n\n-   **與周圍的人合作：**鼓勵學生在被卡住時與周圍的人檢查。根據學生的年齡和能力，你可能會考慮正式地將你的班級分成兩人一組，使用[結對程式設計][0]來完成教程。  \n\n-   **閱讀說明：**說明通常提供如何完成級別的有用提示。在給學生答案之前，確保他們已經仔細地查看了說明、提示、視訊和任何入門代碼。\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **卡住了？尋找提示：**每個級別都包含關於如何通過級別的建議提示，包括要嘗試哪些代碼積木。 \n\n-   **花時間去嘗試。**說明通常告訴學生該做什麼，但他們也可以自由嘗試自己的思路。"
+          "description": "這裡有一些建議，無論學生的學習水準如何，對他們都應該有幫助\n\n-   **與周圍的人合作：**鼓勵學生在被卡住時與周圍的人檢查。根據學生的年齡和能力，你可能會考慮正式地將你的班級分成兩人一組，使用[結對程式設計](https://youtu.be/vgkahOzFH2Q)來完成教程。  \n\n-   **閱讀說明：**說明通常提供如何完成級別的有用提示。在給學生答案之前，確保他們已經仔細地查看了說明、提示、視訊和任何入門代碼。\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **卡住了？尋找提示：**每個級別都包含關於如何通過級別的建議提示，包括要嘗試哪些代碼積木。 \n\n-   **花時間去嘗試。**說明通常告訴學生該做什麼，但他們也可以自由嘗試自己的思路。"
         },
         "062143a1-3063-4af1-864a-2ad1f9c88dd5": {
           "name": "你好世界",
           "progression_name": "你好世界"
         },
         "da91f0fe-e142-453f-a093-8e367d0a1454": {
-          "description": "如果團隊或個人提前完成，鼓勵他們在最後一個級別繼續構建項目。如果學生不確定還能做什麼，你可以用問題來提示他們：\n\n-   你還可以在項目中添加其他哪些精靈圖？\n-   你有沒有看過服裝庫或嘗試繪製自己的精靈圖服裝？\n-   你的精靈圖還能說些什麼？\n-   當你點擊精靈圖時，它們應該做什麼？\n-   邀請學生分享想法，互相學習。他們還可以訪問[code.org/learn][0]嘗試其他教程。"
+          "description": "如果團隊或個人提前完成，鼓勵他們在最後一個級別繼續構建項目。如果學生不確定還能做什麼，你可以用問題來提示他們：\n\n-   你還可以在項目中添加其他哪些精靈圖？\n-   你有沒有看過服裝庫或嘗試繪製自己的精靈圖服裝？\n-   你的精靈圖還能說些什麼？\n-   當你點擊精靈圖時，它們應該做什麼？\n-   邀請學生分享想法，互相學習。他們還可以訪問[code.org/learn](https://code.org/learn)嘗試其他教程。"
         },
         "f5756484-7296-4391-99e2-7b2678653934": {
           "name": "反思",
-          "description": "#### 匯報\n\n要求學生反思當天的活動。關於程式設計、精靈圖、事件，他們學到了什麼？\n\n在花了一個小時進行探索之後，他們對電腦科學和程式設計有什麼感覺？\n\n#### 後續步驟\n\n讓學生知道，如果他們喜歡今天的活動，他們擁有許多繼續程式設計的選擇。訪問[CS Connections][0]瞭解如何將電腦科學整合到其他學科的思路，或進一步閱讀我們[為小學提供的課程][1]。"
+          "description": "#### 匯報\n\n要求學生反思當天的活動。關於程式設計、精靈圖、事件，他們學到了什麼？\n\n在花了一個小時進行探索之後，他們對電腦科學和程式設計有什麼感覺？\n\n#### 後續步驟\n\n讓學生知道，如果他們喜歡今天的活動，他們擁有許多繼續程式設計的選擇。訪問[CS Connections](https://code.org/educate/csc)瞭解如何將電腦科學整合到其他學科的思路，或進一步閱讀我們[為小學提供的課程](https://code.org/educate/curriculum/elementary-school)。"
         },
         "bcc9e44c-ad4e-4efc-a12e-e9c74a5c1960": {
           "name": "搭建舞臺",
@@ -24251,25 +24251,25 @@
         },
         "0d1c3be1-c6e4-437f-85b9-4912d1cd725b": {
           "name": "一般支持",
-          "description": "這裡有一些建議，無論學生的學習水準如何，對他們都應該有幫助\n\n-   **與周圍的人合作：**鼓勵學生在被卡住時與周圍的人檢查。根據學生的年齡和能力，你可能會考慮正式地將你的班級分成兩人一組，使用[結對程式設計][0]來完成教程。  \n\n-   **閱讀說明：**說明通常提供如何完成級別的有用提示。在給學生答案之前，確保他們已經仔細地查看了說明、提示、視訊和任何入門代碼。\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **卡住了？尋找提示：**每個級別都包含關於如何通過級別的建議提示，包括要嘗試哪些代碼積木。 \n\n-   **花時間去嘗試。**說明通常告訴學生該做什麼，但他們也可以自由嘗試自己的思路。"
+          "description": "這裡有一些建議，無論學生的學習水準如何，對他們都應該有幫助\n\n-   **與周圍的人合作：**鼓勵學生在被卡住時與周圍的人檢查。根據學生的年齡和能力，你可能會考慮正式地將你的班級分成兩人一組，使用[結對程式設計](https://youtu.be/vgkahOzFH2Q)來完成教程。  \n\n-   **閱讀說明：**說明通常提供如何完成級別的有用提示。在給學生答案之前，確保他們已經仔細地查看了說明、提示、視訊和任何入門代碼。\n\n-   <img src=\"https://curriculum.code.org/media/uploads/hint.png\" style=\"height: 35px;\"> **卡住了？尋找提示：**每個級別都包含關於如何通過級別的建議提示，包括要嘗試哪些代碼積木。 \n\n-   **花時間去嘗試。**說明通常告訴學生該做什麼，但他們也可以自由嘗試自己的思路。"
         },
         "fcf13574-b04a-42a7-9e17-ef0dba0bfe33": {
           "name": "你好世界",
           "progression_name": "你好世界"
         },
         "7cccfa6d-83c2-4d74-a71f-c9134fb1d0c2": {
-          "description": "如果團隊或個人提前完成，鼓勵他們在最後一個級別繼續構建項目。如果學生不確定還能做什麼，你可以用問題來提示他們：\n\n-   你還可以在項目中添加其他哪些精靈圖？\n-   你有沒有看過服裝庫或嘗試繪製自己的精靈圖服裝？\n-   你的精靈圖還能說些什麼？\n-   當你點擊精靈圖時，它們應該做什麼？\n-   邀請學生分享想法，互相學習。他們還可以訪問[code.org/learn][0]嘗試其他教程。"
+          "description": "如果團隊或個人提前完成，鼓勵他們在最後一個級別繼續構建項目。如果學生不確定還能做什麼，你可以用問題來提示他們：\n\n-   你還可以在項目中添加其他哪些精靈圖？\n-   你有沒有看過服裝庫或嘗試繪製自己的精靈圖服裝？\n-   你的精靈圖還能說些什麼？\n-   當你點擊精靈圖時，它們應該做什麼？\n-   邀請學生分享想法，互相學習。他們還可以訪問[code.org/learn](https://code.org/learn)嘗試其他教程。"
         },
         "574954ea-9128-428b-9965-b0d34518c11d": {
           "name": "反思",
-          "description": "#### 匯報\n\n要求學生反思當天的活動。關於程式設計、精靈圖、事件，他們學到了什麼？\n\n在花了一個小時進行探索之後，他們對電腦科學和程式設計有什麼感覺？\n\n#### 後續步驟\n\n讓學生知道，如果他們喜歡今天的活動，他們擁有許多繼續程式設計的選擇。訪問[CS Connections][0]瞭解如何將電腦科學整合到其他學科的思路，或進一步閱讀我們[為小學提供的課程][1]。"
+          "description": "#### 匯報\n\n要求學生反思當天的活動。關於程式設計、精靈圖、事件，他們學到了什麼？\n\n在花了一個小時進行探索之後，他們對電腦科學和程式設計有什麼感覺？\n\n#### 後續步驟\n\n讓學生知道，如果他們喜歡今天的活動，他們擁有許多繼續程式設計的選擇。訪問[CS Connections](https://code.org/educate/csc)瞭解如何將電腦科學整合到其他學科的思路，或進一步閱讀我們[為小學提供的課程](https://code.org/educate/curriculum/elementary-school)。"
         },
         "79f9bd46-60a5-4891-ad3b-8369879847fc": {
           "description": "#### 搭建舞臺\n\n歡迎學生來上課，簡單介紹當天的活動。  \n\n這節課對學生來說是一種真正的享受。你的大多數學生可能聽說過《我的世界》，但給那些可能不知道的人簡單介紹一下。\n《我的世界》是一個方塊遊戲。你可以扮演Alex或Steve穿越迷宮。你需要撿起物品，在一個由立方體組成的世界中探索。  \n\n_說：“今天我們要花一個小時學習編碼。有人聽說過“代碼”這個詞嗎？這是什麼意思？”_\n\n學生可能會提到“代碼”就像一個秘密資訊，或者它在某種程度上與電腦有關。"
         },
         "cc1ed89e-268e-472b-9bce-4f976d8c2ea3": {
           "tips": [
-            "如果你自己對程式設計不是很熟悉，介紹一小時玩程式時，可以播放其中一個[our inspirational videos][0]。選擇一個你認為能夠啟發學生靈感的視頻，並立即分享。對於年輕學員，我們推薦“[The Hour of Code is Here][1]”。"
+            "如果你自己對程式設計不是很熟悉，介紹一小時玩程式時，可以播放其中一個[our inspirational videos](https://hourofcode.com/us/resources#videos)。選擇一個你認為能夠啟發學生靈感的視頻，並立即分享。對於年輕學員，我們推薦“[The Hour of Code is Here](https://youtu.be/FC5FbmsH4fw)”。"
           ]
         },
         "850945f6-6352-403b-a73f-3fb613f4728a": {
@@ -24282,7 +24282,7 @@
         },
         "fc5c47f6-08fa-4702-86a3-e687a2ad5bc1": {
           "name": "Minecraft：英雄之旅",
-          "description": "挑戰你的學生完成[Minecraft: Hero's Journey][0]教程。  \n\n根據學生的年齡和能力，你可以考慮：  \n\n-   對於年齡較小的學生，我們建議你將班級分成兩人一組，讓每組一起使用[pair programming][1]完成教程。  \n-   對於中年級的學員，我們發現獨立學習教程效果很好。有時，允許學生選擇他們自己的教程會有幫助。如果學生對《我的世界》不感興趣，他們可以通過[Code with Anna and Elsa][2]或[Star Wars][3]教程獲得類似的體驗。  \n-   對於年長或成年學員，[Minecraft: Hero's Journey][4]教程作為獨立挑戰或結對程式設計活動都非常好。"
+          "description": "挑戰你的學生完成[Minecraft: Hero's Journey](https://studio.code.org/s/hero/lessons/1/levels/1)教程。  \n\n根據學生的年齡和能力，你可以考慮：  \n\n-   對於年齡較小的學生，我們建議你將班級分成兩人一組，讓每組一起使用[pair programming](https://youtu.be/vgkahOzFH2Q)完成教程。  \n-   對於中年級的學員，我們發現獨立學習教程效果很好。有時，允許學生選擇他們自己的教程會有幫助。如果學生對《我的世界》不感興趣，他們可以通過[Code with Anna and Elsa](https://studio.code.org/s/frozen/stage/1/puzzle/1)或[Star Wars](https://code.org/starwars)教程獲得類似的體驗。  \n-   對於年長或成年學員，[Minecraft: Hero's Journey](https://studio.code.org/s/hero/lessons/1/levels/1)教程作為獨立挑戰或結對程式設計活動都非常好。"
         },
         "296703c2-cad7-43bb-b3cf-4ffb525e7ad1": {
           "tips": [
@@ -24290,7 +24290,7 @@
           ]
         },
         "b518cf9c-9568-4e85-a520-0e2a81c3b330": {
-          "description": "如果一個組或個人提前完成，他們可以訪問[code.org/learn][0]嘗試另一個教程。"
+          "description": "如果一個組或個人提前完成，他們可以訪問[code.org/learn](http://code.org/learn)嘗試另一個教程。"
         },
         "34238f3b-6699-4e27-b77a-54bcd8d57459": {
           "progression_name": "Minecraft：英雄之旅"
@@ -24301,18 +24301,18 @@
         },
         "145782a9-a436-4615-9827-0f75d7e4b3a0": {
           "name": "讚美",
-          "description": "解釋你今天花了一個小時寫代碼，因為這周是電腦科學教育周，全球數以百萬計的學生也在這周學習程式設計一小時。祝賀學生參與這個世界性運動。\n\n給每個學生一張寫有其名字的[certificate][0]。"
+          "description": "解釋你今天花了一個小時寫代碼，因為這周是電腦科學教育周，全球數以百萬計的學生也在這周學習程式設計一小時。祝賀學生參與這個世界性運動。\n\n給每個學生一張寫有其名字的[certificate](https://studio.code.org/certificates/batch?course=bWM=)。"
         },
         "cc38f575-4db4-4ca6-ab2f-a9d8557f16cf": {
           "name": "下一步",
-          "description": "讓學生知道，如果他們喜歡今天的活動，他們有很多繼續編碼的選擇。鼓勵學生訪問[code.org/learn][0]獲取選項清單。此外，如果你正在計畫接下來的任何擴展活動，告訴學生你的課堂接下來會發生什麼。"
+          "description": "讓學生知道，如果他們喜歡今天的活動，他們有很多繼續編碼的選擇。鼓勵學生訪問[code.org/learn](<>)獲取選項清單。此外，如果你正在計畫接下來的任何擴展活動，告訴學生你的課堂接下來會發生什麼。"
         },
         "e276fe28-3302-4ba2-94cc-aaf03b3d2d06": {
-          "description": "給每位學生髮一張[“Exit Ticket”][0]，並讓他們總結今天所學的知識、自己的感受或體驗的內容。學生可以畫出、寫出或用任何自己喜歡的方式來表達自己。在每位學生離開教室時收集其“課堂回饋條”。如果你喜歡的話，你可以在公告欄或學校某個顯眼的地方張貼“課堂回饋條”，作為一小時玩程式的提示。"
+          "description": "給每位學生髮一張[“Exit Ticket”](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing)，並讓他們總結今天所學的知識、自己的感受或體驗的內容。學生可以畫出、寫出或用任何自己喜歡的方式來表達自己。在每位學生離開教室時收集其“課堂回饋條”。如果你喜歡的話，你可以在公告欄或學校某個顯眼的地方張貼“課堂回饋條”，作為一小時玩程式的提示。"
         },
         "147a2b22-0cba-4505-81ef-770b81eee73e": {
           "name": "超越一小時玩程式",
-          "description": "一小時玩程式結束後，有多種方法可以繼續在K-5課堂教授電腦科學。這裡有一些思路：\n\n-   **教授[Code Studio Computer Science Fundamentals][0]課程**。這六門課程專為低齡學習者而設計。學生通過一系列謎題學習編碼，教師使用有趣的課程計畫，有助於讓學習變得更生動\\*\\*。Code.org線上或面對面為這些課程提供免費輔導。\n-   \\*\\*訪問[You can Teach Computer Science][1]獲取更多課程建議。\n-   **邀請電腦科學專家向班上學生講述其工作**。不認識任何本地電腦科學家？通過我們的[volunteer map][2]聯絡志工。"
+          "description": "一小時玩程式結束後，有多種方法可以繼續在K-5課堂教授電腦科學。這裡有一些思路：\n\n-   **教授[Code Studio Computer Science Fundamentals](http://code.org/educate/k5)課程**。這六門課程專為低齡學習者而設計。學生通過一系列謎題學習編碼，教師使用有趣的課程計畫，有助於讓學習變得更生動\\*\\*。Code.org線上或面對面為這些課程提供免費輔導。\n-   \\*\\*訪問[You can Teach Computer Science](https://code.org/teach)獲取更多課程建議。\n-   **邀請電腦科學專家向班上學生講述其工作**。不認識任何本地電腦科學家？通過我們的[volunteer map](https://code.org/volunteer/local)聯絡志工。"
         },
         "9475b0bd-6a58-4318-b3e5-0d77cfe5a35d": {
           "tips": [
@@ -24411,7 +24411,7 @@
         },
         "6b55015f-aebc-401b-b0c9-c40a5fd0056e": {
           "tips": [
-            "如果你自己對程式設計不是很熟悉，介紹一小時玩程式時，可以播放其中一個[our inspirational videos][0]。選擇一個你認為能夠啟發學生靈感的視頻，並立即分享。對於年輕學員，我們推薦“[The Hour of Code is Here][1]”。"
+            "如果你自己對程式設計不是很熟悉，介紹一小時玩程式時，可以播放其中一個[our inspirational videos](https://hourofcode.com/us/resources#videos)。選擇一個你認為能夠啟發學生靈感的視頻，並立即分享。對於年輕學員，我們推薦“[The Hour of Code is Here](https://youtu.be/FC5FbmsH4fw)”。"
           ]
         },
         "e841a687-1da5-46c7-b31e-42629fe0377c": {
@@ -24424,7 +24424,7 @@
         },
         "9aba0e85-a709-43f5-8cfb-251671159b3a": {
           "name": "迷宮",
-          "description": "挑戰你的學生完成[Write your first computer program][0]教程。  \n\n根據學生的年齡和能力，你可以考慮：  \n\n-   對於年齡較小的學生，我們建議你將班級分成兩人一組或非常小的小組（每組3-4名學生），讓每組一起使用[pair programming][1]完成教程。  \n-   對於中年級的學員，我們發現獨立學習教程效果很好。有時，允許學生選擇他們自己的教程會有幫助。如果學生對《憤怒的小鳥》不感興趣，他們可以通過[Code with Anna and Elsa][2]或[Make a Flappy Game][3]教程獲得類似的體驗。  \n-   對於年長或成年學員，[Write your first computer program][4]教程作為獨立挑戰或結對程式設計活動都非常好。"
+          "description": "挑戰你的學生完成[Write your first computer program](https://studio.code.org/hoc/1)教程。  \n\n根據學生的年齡和能力，你可以考慮：  \n\n-   對於年齡較小的學生，我們建議你將班級分成兩人一組或非常小的小組（每組3-4名學生），讓每組一起使用[pair programming](https://youtu.be/vgkahOzFH2Q)完成教程。  \n-   對於中年級的學員，我們發現獨立學習教程效果很好。有時，允許學生選擇他們自己的教程會有幫助。如果學生對《憤怒的小鳥》不感興趣，他們可以通過[Code with Anna and Elsa](https://studio.code.org/s/frozen/stage/1/puzzle/1)或[Make a Flappy Game](https://studio.code.org/flappy/1)教程獲得類似的體驗。  \n-   對於年長或成年學員，[Write your first computer program](https://studio.code.org/hoc/1)教程作為獨立挑戰或結對程式設計活動都非常好。"
         },
         "524f2e35-6286-4585-879e-96e7286e8a6d": {
           "tips": [
@@ -24432,7 +24432,7 @@
           ]
         },
         "3f29a14c-3903-4615-8a6b-d1961b57dc7b": {
-          "description": "如果一個組或個人提前完成，他們可以訪問[code.org/learn][0]嘗試另一個教程。"
+          "description": "如果一個組或個人提前完成，他們可以訪問[code.org/learn](http://code.org/learn)嘗試另一個教程。"
         },
         "50db3674-3387-4932-ba7e-c9f176ebd976": {
           "name": "匯報",
@@ -24440,18 +24440,18 @@
         },
         "46f387e2-c275-4c57-acec-c9709e7f44fc": {
           "name": "讚美",
-          "description": "解釋你今天花了一個小時寫代碼，因為這周是電腦科學教育周，全球數以百萬計的學生也在這周學習程式設計一小時。祝賀學生參與這個世界性運動。\n\n給每個學生一張寫有其名字的[certificate][0]。"
+          "description": "解釋你今天花了一個小時寫代碼，因為這周是電腦科學教育周，全球數以百萬計的學生也在這周學習程式設計一小時。祝賀學生參與這個世界性運動。\n\n給每個學生一張寫有其名字的[certificate](http://code.org/certificates)。"
         },
         "692a60f1-d3a2-44d3-8c58-19461d6b5999": {
           "name": "下一步",
           "description": "讓學生知道，如果他們喜歡今天的活動，他們有很多繼續編碼的選擇。鼓勵學生訪問code.org/learn獲取選項清單。此外，如果你正在計畫接下來的任何擴展活動，告訴學生你的課堂接下來會發生什麼。"
         },
         "c00f4730-69b0-4533-bf47-253647c6715f": {
-          "description": "給每位學生髮一張[“Exit Ticket”][0]，並讓他們總結今天所學的知識、自己的感受或體驗的內容。學生可以畫出、寫出或用任何自己喜歡的方式來表達自己。在每位學生離開教室時收集其“課堂回饋條”。如果你喜歡的話，你可以在公告欄或學校某個顯眼的地方張貼“課堂回饋條”，作為一小時玩程式的提示。"
+          "description": "給每位學生髮一張[“Exit Ticket”](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing)，並讓他們總結今天所學的知識、自己的感受或體驗的內容。學生可以畫出、寫出或用任何自己喜歡的方式來表達自己。在每位學生離開教室時收集其“課堂回饋條”。如果你喜歡的話，你可以在公告欄或學校某個顯眼的地方張貼“課堂回饋條”，作為一小時玩程式的提示。"
         },
         "6e6e32c8-6dfd-4075-b1c7-0c96b6853b09": {
           "name": "超越一小時玩程式",
-          "description": "一小時玩程式結束後，有多種方法可以繼續在K-5課堂教授電腦科學。這裡有一些思路：\n\n-   **教授[Code Studio Computer Science Fundamentals][0]課程**。這六門課程專為低齡學習者而設計。學生通過一系列謎題學習編碼，教師使用有趣的課程計畫，有助於讓學習變得更生動。Code.org線上或面對面為這些課程提供免費輔導。"
+          "description": "一小時玩程式結束後，有多種方法可以繼續在K-5課堂教授電腦科學。這裡有一些思路：\n\n-   **教授[Code Studio Computer Science Fundamentals](http://code.org/educate/k5)課程**。這六門課程專為低齡學習者而設計。學生通過一系列謎題學習編碼，教師使用有趣的課程計畫，有助於讓學習變得更生動。Code.org線上或面對面為這些課程提供免費輔導。"
         },
         "5858c0fa-a7a6-44c2-afcb-bfb816b18a5b": {
           "name": "K-2教師調整",
@@ -24463,7 +24463,7 @@
         },
         "fc04ef5f-0d78-418b-9311-e12201106453": {
           "tips": [
-            "如果你自己對程式設計不是很熟悉，介紹一小時玩程式時，可以播放其中一個[our inspirational videos][0]。選擇一個你認為能夠啟發學生靈感的視頻，並立即分享。對於年輕學員，我們推薦“[Anybody Can Learn][1]”。"
+            "如果你自己對程式設計不是很熟悉，介紹一小時玩程式時，可以播放其中一個[our inspirational videos](https://hourofcode.com/us/resources#videos)。選擇一個你認為能夠啟發學生靈感的視頻，並立即分享。對於年輕學員，我們推薦“[Anybody Can Learn](https://youtu.be/qYZF6oIZtfc)”。"
           ]
         },
         "ea8a3bf2-1425-482a-9f98-a5b30d6ee809": {
@@ -24471,7 +24471,7 @@
         },
         "c628ba28-35c2-4ded-a19d-74079377b309": {
           "name": "冰原歷險記 Play Lab",
-          "description": "挑戰你的學生完成[Ice Age Play Lab][0]教程。\n\n 根據學生的年齡和能力，你可以考慮：\n\n-   對於初高中學生，我們建議你選擇可以自由發揮和創建應用程式或遊戲的教程。你可以讓學生獨立學習、結對學習或分組學習。在[code.org/learn][1]上還有許多其他的教程，包括[Make a Flappy Game][2]和我們的新測試版工具[AppLab][3]。  \n-   對於年齡較小的學生，我們建議你將班級分成兩人一組或非常小的小組（每個小組3-4名學生），並要求每個小組一起使用[pair programming][4]完成教程。  \n-   對於成人學員來說，[Write your first computer program][5]教程作為獨立挑戰或結對程式設計活動非常適合。"
+          "description": "挑戰你的學生完成[Ice Age Play Lab](https://studio.code.org/s/iceage/lessons/1/levels/1)教程。\n\n 根據學生的年齡和能力，你可以考慮：\n\n-   對於初高中學生，我們建議你選擇可以自由發揮和創建應用程式或遊戲的教程。你可以讓學生獨立學習、結對學習或分組學習。在[code.org/learn](http://code.org/learn)上還有許多其他的教程，包括[Make a Flappy Game](https://studio.code.org/s/flappy)和我們的新測試版工具[AppLab](https://code.org/educate/applab)。  \n-   對於年齡較小的學生，我們建議你將班級分成兩人一組或非常小的小組（每個小組3-4名學生），並要求每個小組一起使用[pair programming](https://youtu.be/vgkahOzFH2Q)完成教程。  \n-   對於成人學員來說，[Write your first computer program](https://studio.code.org/hoc/1)教程作為獨立挑戰或結對程式設計活動非常適合。"
         },
         "548dc37b-f338-4a52-a77e-7380794c64f2": {
           "tips": [
@@ -24479,7 +24479,7 @@
           ]
         },
         "86d8427e-15bf-420c-b405-3d1f1c3c46c6": {
-          "description": "如果一個組或個人提前完成，他們可以訪問[code.org/learn][0]嘗試另一個教程。"
+          "description": "如果一個組或個人提前完成，他們可以訪問[code.org/learn](http://code.org/learn)嘗試另一個教程。"
         },
         "d8b92f56-a741-43ac-9d6f-3fdf1c452001": {
           "name": "匯報",
@@ -24487,7 +24487,7 @@
         },
         "3d63393a-9146-4027-8783-247e19637d25": {
           "name": "讚美",
-          "description": "解釋你今天花了一個小時寫代碼，因為這周是電腦科學教育周，全球數以百萬計的學生也在這周學習程式設計一小時。祝賀學生參與這個世界性運動。\n\n給每個學生一張寫有其名字的[certificate][0]。"
+          "description": "解釋你今天花了一個小時寫代碼，因為這周是電腦科學教育周，全球數以百萬計的學生也在這周學習程式設計一小時。祝賀學生參與這個世界性運動。\n\n給每個學生一張寫有其名字的[certificate](http://code.org/certificates)。"
         },
         "4ae122fa-da6f-4aaf-b2f8-c68fd0bb68af": {
           "name": "下一步",
@@ -24499,7 +24499,7 @@
         },
         "4ae8bc68-25be-4eaa-ae1e-b9bfe8623a23": {
           "name": "超越一小時玩程式",
-          "description": "一小時玩程式結束後，有多種方法可以繼續在K-5教室教授電腦科學。這裡有一些思路：\n\n-   **教授[Code Studio Computer Science Fundamentals][0]課程**。這四門課程專為低齡學習者而設計。學生們通過一系列謎題學習編碼，教師使用有趣的課程計畫，有助於讓學習變得更生動。Code.org線上或面對面為這些課程提供免費輔導。\n-   **邀請電腦科學專家向班上學生講述其工作**。不認識志願者？可以在[volunteer map][1]上聯絡一些。"
+          "description": "一小時玩程式結束後，有多種方法可以繼續在K-5教室教授電腦科學。這裡有一些思路：\n\n-   **教授[Code Studio Computer Science Fundamentals](http://code.org/educate/k5)課程**。這四門課程專為低齡學習者而設計。學生們通過一系列謎題學習編碼，教師使用有趣的課程計畫，有助於讓學習變得更生動。Code.org線上或面對面為這些課程提供免費輔導。\n-   **邀請電腦科學專家向班上學生講述其工作**。不認識志願者？可以在[volunteer map](https://code.org/volunteer/local)上聯絡一些。"
         },
         "88079aec-5c42-4f3f-bbb6-cba4f8866c92": {
           "name": "搭建舞臺",
@@ -24507,7 +24507,7 @@
         },
         "6874de98-8778-447b-8453-0138809b2c7e": {
           "tips": [
-            "如果你自己對程式設計不是很熟悉，介紹一小時玩程式時，可以播放其中一個[our inspirational videos][0]。選擇一個你認為能夠啟發學生靈感的視頻，並立即分享。對於年輕學員，我們推薦“[Anybody Can Learn][1]”。"
+            "如果你自己對程式設計不是很熟悉，介紹一小時玩程式時，可以播放其中一個[our inspirational videos](https://hourofcode.com/us/resources#videos)。選擇一個你認為能夠啟發學生靈感的視頻，並立即分享。對於年輕學員，我們推薦“[Anybody Can Learn](https://youtu.be/qYZF6oIZtfc)”。"
           ]
         },
         "82e4a494-65fb-40ac-b2c2-323044e15b77": {
@@ -24515,7 +24515,7 @@
         },
         "bd5d11f4-9c4c-4f24-bb9f-482392bd65aa": {
           "name": "迪士尼無限 Play Lab",
-          "description": "挑戰你的學生完成[Disney Infinity Play Lab][0]教程。\n\n 根據學生的年齡和能力，你可以考慮：\n\n-   對於初高中學生，我們建議你選擇可以自由發揮和創建應用程式或遊戲的教程。你可以讓學生獨立學習、結對學習或分組學習。在[code.org/learn][1]上還有許多其他的教程，包括[Make a Flappy Game][2]和我們的新測試版工具[AppLab][3]。  \n-   對於年齡較小的學生，我們建議你將班級分成兩人一組或非常小的小組（每個小組3-4名學生），並要求每個小組一起使用[pair programming][4]完成教程。  \n-   對於成人學員來說，[Write your first computer program][5]教程作為獨立挑戰或結對程式設計活動非常適合。"
+          "description": "挑戰你的學生完成[Disney Infinity Play Lab](https://studio.code.org/s/infinity/lessons/1/levels/1)教程。\n\n 根據學生的年齡和能力，你可以考慮：\n\n-   對於初高中學生，我們建議你選擇可以自由發揮和創建應用程式或遊戲的教程。你可以讓學生獨立學習、結對學習或分組學習。在[code.org/learn](http://code.org/learn)上還有許多其他的教程，包括[Make a Flappy Game](https://studio.code.org/s/flappy)和我們的新測試版工具[AppLab](https://code.org/educate/applab)。  \n-   對於年齡較小的學生，我們建議你將班級分成兩人一組或非常小的小組（每個小組3-4名學生），並要求每個小組一起使用[pair programming](https://youtu.be/vgkahOzFH2Q)完成教程。  \n-   對於成人學員來說，[Write your first computer program](https://studio.code.org/hoc/1)教程作為獨立挑戰或結對程式設計活動非常適合。"
         },
         "b1ea2c15-24bb-475a-bb3f-bbc8ea1a51c0": {
           "tips": [
@@ -24523,7 +24523,7 @@
           ]
         },
         "712a8a98-3ab7-43d0-8f6f-a68e6984b009": {
-          "description": "如果一個組或個人提前完成，他們可以訪問[code.org/learn][0]嘗試另一個教程。"
+          "description": "如果一個組或個人提前完成，他們可以訪問[code.org/learn](http://code.org/learn)嘗試另一個教程。"
         },
         "a0530acf-3bce-4de9-b392-fe8725044086": {
           "name": "匯報",
@@ -24531,7 +24531,7 @@
         },
         "ceaf9d96-e806-48e1-9a95-30566999264e": {
           "name": "讚美",
-          "description": "解釋你今天花了一個小時寫代碼，因為這周是電腦科學教育周，全球數以百萬計的學生也在這周學習程式設計一小時。祝賀學生參與這個世界性運動。\n\n給每個學生一張寫有其名字的[certificate][0]。"
+          "description": "解釋你今天花了一個小時寫代碼，因為這周是電腦科學教育周，全球數以百萬計的學生也在這周學習程式設計一小時。祝賀學生參與這個世界性運動。\n\n給每個學生一張寫有其名字的[certificate](http://code.org/certificates)。"
         },
         "680268d8-e3db-4f80-b56d-dfe40ada4d77": {
           "name": "下一步",
@@ -24543,7 +24543,7 @@
         },
         "38f15942-4a08-48f7-a0c4-e04232bc9bdc": {
           "name": "超越一小時玩程式",
-          "description": "一小時玩程式結束後，有多種方法可以繼續在K-5教室教授電腦科學。這裡有一些思路：\n\n-   **教授[Code Studio Computer Science Fundamentals][0]課程**。這四門課程專為低齡學習者而設計。學生們通過一系列謎題學習編碼，教師使用有趣的課程計畫，有助於讓學習變得更生動。Code.org線上或面對面為這些課程提供免費輔導。\n-   **邀請電腦科學專家向班上學生講述其工作**。不認識志願者？可以在[volunteer map][1]上聯絡一些。"
+          "description": "一小時玩程式結束後，有多種方法可以繼續在K-5教室教授電腦科學。這裡有一些思路：\n\n-   **教授[Code Studio Computer Science Fundamentals](http://code.org/educate/k5)課程**。這四門課程專為低齡學習者而設計。學生們通過一系列謎題學習編碼，教師使用有趣的課程計畫，有助於讓學習變得更生動。Code.org線上或面對面為這些課程提供免費輔導。\n-   **邀請電腦科學專家向班上學生講述其工作**。不認識志願者？可以在[volunteer map](https://code.org/volunteer/local)上聯絡一些。"
         },
         "a16594a7-8312-4ac3-87c8-fd2d5d6e5bfb": {
           "name": "介紹",
@@ -24551,7 +24551,7 @@
         },
         "6415b9b2-1e23-43ee-9d0c-e65efcb0d65c": {
           "tips": [
-            "如果你自己對程式設計不是很熟悉，介紹一小時玩程式時，可以播放其中一個[our inspirational videos][0]。選擇一個你認為能夠啟發學生靈感的視頻，並立即分享。對於年輕學員，我們推薦“[The Hour of Code is Here][1]”。"
+            "如果你自己對程式設計不是很熟悉，介紹一小時玩程式時，可以播放其中一個[our inspirational videos](https://hourofcode.com/us/resources#videos)。選擇一個你認為能夠啟發學生靈感的視頻，並立即分享。對於年輕學員，我們推薦“[The Hour of Code is Here](https://youtu.be/FC5FbmsH4fw)”。"
           ]
         },
         "3fee530c-6d5f-44da-89f7-cfae73040787": {
@@ -24564,16 +24564,16 @@
         },
         "aafa75c2-9439-415c-b42f-cac8ddfc2874": {
           "name": "Minecraft 探險家",
-          "description": "挑戰你的學生完成[Minecraft: Adventurer][0]教程。  \n\n根據學生的年齡和能力，你可以考慮：  \n\n-   對於年齡較小的學生，我們建議你將班級分成兩人一組，讓每組一起使用[pair programming][1]完成教程。  \n-   對於中年級的學員，我們發現獨立學習教程效果很好。有時，允許學生選擇他們自己的教程會有幫助。如果學生對《我的世界》不感興趣，他們可以通過[Code with Anna and Elsa][2]或[Star Wars][3]教程獲得類似的體驗。  \n-   對於年長或成年學員，[Minecraft][4]教程作為獨立挑戰或結對程式設計活動都非常好。",
+          "description": "挑戰你的學生完成[Minecraft: Adventurer](studio.code.org/s/mc/lessons/1/levels/1)教程。  \n\n根據學生的年齡和能力，你可以考慮：  \n\n-   對於年齡較小的學生，我們建議你將班級分成兩人一組，讓每組一起使用[pair programming](https://youtu.be/vgkahOzFH2Q)完成教程。  \n-   對於中年級的學員，我們發現獨立學習教程效果很好。有時，允許學生選擇他們自己的教程會有幫助。如果學生對《我的世界》不感興趣，他們可以通過[Code with Anna and Elsa](https://studio.code.org/s/frozen/stage/1/puzzle/1)或[Star Wars](https://code.org/starwars)教程獲得類似的體驗。  \n-   對於年長或成年學員，[Minecraft](https://hourofcode.com/mc)教程作為獨立挑戰或結對程式設計活動都非常好。",
           "tips": [
             "在讓學生嘗試之前，記得讓自己先體驗你選擇的教程。這樣你就會知道會發生什麼，並可以決定是讓學生選擇他們自己的教程，還是你想根據學生的需要分配教程。"
           ]
         },
         "1766511d-3639-46a3-911f-acc7f8c4b922": {
-          "description": "如果一個組或個人提前完成，他們可以訪問[code.org/learn][0]嘗試另一個教程。"
+          "description": "如果一個組或個人提前完成，他們可以訪問[code.org/learn](http://code.org/learn)嘗試另一個教程。"
         },
         "8c990fee-4a0f-4d70-a635-ab66a8195193": {
-          "description": "給每位學生髮一張[“Exit Ticket”][0]，並讓他們總結今天所學的知識、自己的感受或體驗的內容。學生可以畫出、寫出或用任何自己喜歡的方式來表達自己。在每位學生離開教室時收集其“課堂回饋條”。如果你喜歡的話，你可以在公告欄或學校某個顯眼的地方張貼“課堂回饋條”，作為一小時玩程式的提示。"
+          "description": "給每位學生髮一張[“Exit Ticket”](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing)，並讓他們總結今天所學的知識、自己的感受或體驗的內容。學生可以畫出、寫出或用任何自己喜歡的方式來表達自己。在每位學生離開教室時收集其“課堂回饋條”。如果你喜歡的話，你可以在公告欄或學校某個顯眼的地方張貼“課堂回饋條”，作為一小時玩程式的提示。"
         },
         "bcdecd77-2efb-44b5-9fdc-e244d1f5ccf6": {
           "name": "匯報",
@@ -24581,7 +24581,7 @@
         },
         "6b574c8b-2319-4244-acc8-fb8405fa5737": {
           "name": "讚美",
-          "description": "解釋你今天花了一個小時寫代碼，因為這周是電腦科學教育周，全球數以百萬計的學生也在這周學習程式設計一小時。祝賀學生參與這個世界性運動。\n\n給每個學生一張寫有其名字的[certificate][0]。"
+          "description": "解釋你今天花了一個小時寫代碼，因為這周是電腦科學教育周，全球數以百萬計的學生也在這周學習程式設計一小時。祝賀學生參與這個世界性運動。\n\n給每個學生一張寫有其名字的[certificate](https://studio.code.org/certificates/batch?course=bWM=)。"
         },
         "02dfa607-4f9e-404c-bdae-f9f423fa526c": {
           "name": "下一步",
@@ -24589,7 +24589,7 @@
         },
         "5bc8aefa-7bb0-4f22-a555-321738755b8c": {
           "name": "超越一小時玩程式",
-          "description": "一小時玩程式結束後，有多種方法可以繼續在K-5課堂教授電腦科學。這裡有一些思路：\n\n-   **教授[Code Studio Computer Science Fundamentals][0]課程**。這四門課程專為低齡學習者而設計。學生通過一系列謎題學習編碼，教師使用有趣的課程計畫，有助於讓學習變得更生動\\*\\*。Code.org線上或面對面為這些課程提供免費輔導。\n-   \\*\\*訪問[You can Teach Computer Science][1]獲取更多課程建議。\n-   **邀請電腦科學專家向班上學生講述其工作**。不認識任何本地電腦科學家？通過我們的[volunteer map][2]聯絡志工。"
+          "description": "一小時玩程式結束後，有多種方法可以繼續在K-5課堂教授電腦科學。這裡有一些思路：\n\n-   **教授[Code Studio Computer Science Fundamentals](http://code.org/educate/k5)課程**。這四門課程專為低齡學習者而設計。學生通過一系列謎題學習編碼，教師使用有趣的課程計畫，有助於讓學習變得更生動\\*\\*。Code.org線上或面對面為這些課程提供免費輔導。\n-   \\*\\*訪問[You can Teach Computer Science](https://code.org/teach)獲取更多課程建議。\n-   **邀請電腦科學專家向班上學生講述其工作**。不認識任何本地電腦科學家？通過我們的[volunteer map](https://code.org/volunteer/local)聯絡志工。"
         },
         "563d9088-3ce6-48c1-aa79-6f673e089247": {
           "name": "介紹",
@@ -24597,7 +24597,7 @@
         },
         "9f1107d0-cde6-4f78-911c-5018ea9264e0": {
           "tips": [
-            "如果你自己對程式設計不是很熟悉，介紹一小時玩程式時，可以播放其中一個[our inspirational videos][0]。選擇一個你認為能夠啟發學生靈感的視頻，並立即分享。對於年輕學員，我們推薦“[The Hour of Code is Here][1]”。"
+            "如果你自己對程式設計不是很熟悉，介紹一小時玩程式時，可以播放其中一個[our inspirational videos](https://hourofcode.com/us/resources#videos)。選擇一個你認為能夠啟發學生靈感的視頻，並立即分享。對於年輕學員，我們推薦“[The Hour of Code is Here](https://youtu.be/FC5FbmsH4fw)”。"
           ]
         },
         "ed8509fa-59b4-43a4-bd4a-05a5018387c2": {
@@ -24610,7 +24610,7 @@
         },
         "75d779c4-24f7-40be-bf92-b0c094c16d11": {
           "name": "一小時玩 Minecraft 設計師",
-          "description": "挑戰你的學生完成這個[Minecraft: Designer][0]活動。  \n\n根據學生的年齡和能力，你可以考慮：  \n\n-   對於年齡較小的學生，我們建議你將班級分成兩人一組，讓每組一起使用[pair programming][1]完成教程。  \n-   對於中年級的學員，我們發現獨立學習教程效果很好。有時，允許學生選擇他們自己的教程會有幫助。如果學生對《我的世界》不感興趣，他們可以通過[Code with Anna and Elsa][2]或[Star Wars][3]教程獲得類似的體驗。  \n-   對於年長或成年學員，[Minecraft: Designer][4]教程作為獨立挑戰或結對程式設計活動都非常好。"
+          "description": "挑戰你的學生完成這個[Minecraft: Designer](http://studio.code.org/s/minecraft/lessons/1/levels/1)活動。  \n\n根據學生的年齡和能力，你可以考慮：  \n\n-   對於年齡較小的學生，我們建議你將班級分成兩人一組，讓每組一起使用[pair programming](https://youtu.be/vgkahOzFH2Q)完成教程。  \n-   對於中年級的學員，我們發現獨立學習教程效果很好。有時，允許學生選擇他們自己的教程會有幫助。如果學生對《我的世界》不感興趣，他們可以通過[Code with Anna and Elsa](https://studio.code.org/s/frozen/stage/1/puzzle/1)或[Star Wars](https://code.org/starwars)教程獲得類似的體驗。  \n-   對於年長或成年學員，[Minecraft: Designer](http://studio.code.org/s/minecraft/lessons/1/levels/1)教程作為獨立挑戰或結對程式設計活動都非常好。"
         },
         "8d4ecee7-5f04-4f80-9673-c2aec0c5ab9d": {
           "tips": [
@@ -24618,7 +24618,7 @@
           ]
         },
         "307ffdf6-e274-484b-a10f-329ddfe568dc": {
-          "description": "如果一個組或個人提前完成，他們可以訪問[code.org/learn][0]嘗試另一個教程。"
+          "description": "如果一個組或個人提前完成，他們可以訪問[code.org/learn](http://code.org/learn)嘗試另一個教程。"
         },
         "70935a98-82e9-4553-94f7-90a4e615dd34": {
           "name": "匯報",
@@ -24626,18 +24626,18 @@
         },
         "5f00e31d-70fa-4bb2-9bef-223793082f5c": {
           "name": "讚美",
-          "description": "解釋你今天花了一個小時寫代碼，因為這周是電腦科學教育周，全球數以百萬計的學生也在這周學習程式設計一小時。祝賀學生參與這個世界性運動。\n\n給每個學生一張寫有其名字的[certificate][0]。"
+          "description": "解釋你今天花了一個小時寫代碼，因為這周是電腦科學教育周，全球數以百萬計的學生也在這周學習程式設計一小時。祝賀學生參與這個世界性運動。\n\n給每個學生一張寫有其名字的[certificate](https://studio.code.org/certificates/batch?course=bWM=)。"
         },
         "20b7009c-3a45-4211-a9ad-c65f56099200": {
           "name": "下一步",
-          "description": "讓學生知道，如果他們喜歡今天的活動，他們有很多繼續編碼的選擇。鼓勵學生訪問[code.org/learn][0]獲取選項清單。此外，如果你正在計畫接下來的任何擴展活動，告訴學生你的課堂接下來會發生什麼。"
+          "description": "讓學生知道，如果他們喜歡今天的活動，他們有很多繼續編碼的選擇。鼓勵學生訪問[code.org/learn](<>)獲取選項清單。此外，如果你正在計畫接下來的任何擴展活動，告訴學生你的課堂接下來會發生什麼。"
         },
         "85fc4f24-eb97-4ff5-813f-4af3e5497034": {
-          "description": "給每位學生髮一張[“Exit Ticket”][0]，並讓他們總結今天所學的知識、自己的感受或體驗的內容。學生可以畫出、寫出或用任何自己喜歡的方式來表達自己。在每位學生離開教室時收集其“課堂回饋條”。如果你喜歡的話，你可以在公告欄或學校某個顯眼的地方張貼“課堂回饋條”，作為一小時玩程式的提示。"
+          "description": "給每位學生髮一張[“Exit Ticket”](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing)，並讓他們總結今天所學的知識、自己的感受或體驗的內容。學生可以畫出、寫出或用任何自己喜歡的方式來表達自己。在每位學生離開教室時收集其“課堂回饋條”。如果你喜歡的話，你可以在公告欄或學校某個顯眼的地方張貼“課堂回饋條”，作為一小時玩程式的提示。"
         },
         "7f24d7ca-8a9e-417c-ac8e-18ca3ab48ac1": {
           "name": "超越一小時玩程式",
-          "description": "一小時玩程式結束後，有多種方法可以繼續在K-5課堂教授電腦科學。這裡有一些思路：\n\n-   **教授[Code Studio Computer Science Fundamentals][0]課程**。這六門課程專為低齡學習者而設計。學生通過一系列謎題學習編碼，教師使用有趣的課程計畫，有助於讓學習變得更生動\\*\\*。Code.org線上或面對面為這些課程提供免費輔導。\n-   \\*\\*訪問[You can Teach Computer Science][1]獲取更多課程建議。\n-   **邀請電腦科學專家向班上學生講述其工作**。不認識任何本地電腦科學家？通過我們的[volunteer map][2]聯絡志工。"
+          "description": "一小時玩程式結束後，有多種方法可以繼續在K-5課堂教授電腦科學。這裡有一些思路：\n\n-   **教授[Code Studio Computer Science Fundamentals](http://code.org/educate/k5)課程**。這六門課程專為低齡學習者而設計。學生通過一系列謎題學習編碼，教師使用有趣的課程計畫，有助於讓學習變得更生動\\*\\*。Code.org線上或面對面為這些課程提供免費輔導。\n-   \\*\\*訪問[You can Teach Computer Science](https://code.org/teach)獲取更多課程建議。\n-   **邀請電腦科學專家向班上學生講述其工作**。不認識任何本地電腦科學家？通過我們的[volunteer map](https://code.org/volunteer/local)聯絡志工。"
         },
         "54b95e4d-58b7-4551-9782-7ce134f4e457": {
           "name": "動員大會！",
@@ -24905,7 +24905,7 @@
         },
         "6fa68bdd-8f9b-4d69-b54e-28141ee6d732": {
           "tips": [
-            "如果你自己對程式設計不是很熟悉，介紹一小時玩程式時，可以播放其中一個[inspirational videos][0]。選擇一個你認為能夠啟發學生靈感的視頻，並立即分享。對於年輕學員，我們推薦[The Hour of Code is Here][1].。"
+            "如果你自己對程式設計不是很熟悉，介紹一小時玩程式時，可以播放其中一個[inspirational videos](https://hourofcode.com/us/resources#videos)。選擇一個你認為能夠啟發學生靈感的視頻，並立即分享。對於年輕學員，我們推薦[The Hour of Code is Here](https://youtu.be/FC5FbmsH4fw).。"
           ]
         },
         "7f1244d9-811b-410c-96b2-9f7086959c6b": {
@@ -24913,7 +24913,7 @@
         },
         "a69a3310-4b81-4e04-8313-51044489351a": {
           "name": "星際大戰：用程式建立一個銀河系",
-          "description": "挑戰你的學生完成[Star Wars: Building a Galaxy with Code][0]教程。  \n\n根據學生的年齡和能力，你可以考慮：  \n\n-   對於年齡較小的學生，我們建議你將班級分成兩人一組，讓每組一起使用[pair programming][1]完成教程。\n-   對於年齡較大的學生，我們發現獨立學習教程效果很好。有時，允許學生選擇他們自己的教程會有幫助。如果學生對《星球大戰》不感興趣，他們可以通過[Write Your First Computer Program][2]教程獲得類似的體驗。  \n-   對於成年學員，[Star Wars: Building a Galaxy with Code][3]教程作為獨立挑戰或結對程式設計活動都非常好。"
+          "description": "挑戰你的學生完成[Star Wars: Building a Galaxy with Code](https://studio.code.org/s/starwars/lessons/1/levels/1)教程。  \n\n根據學生的年齡和能力，你可以考慮：  \n\n-   對於年齡較小的學生，我們建議你將班級分成兩人一組，讓每組一起使用[pair programming](https://youtu.be/vgkahOzFH2Q)完成教程。\n-   對於年齡較大的學生，我們發現獨立學習教程效果很好。有時，允許學生選擇他們自己的教程會有幫助。如果學生對《星球大戰》不感興趣，他們可以通過[Write Your First Computer Program](https://studio.code.org/hoc/1)教程獲得類似的體驗。  \n-   對於成年學員，[Star Wars: Building a Galaxy with Code](https://studio.code.org/s/starwars/lessons/1/levels/1)教程作為獨立挑戰或結對程式設計活動都非常好。"
         },
         "b17f8e8a-6b46-4f46-a4fc-894cf561bb9d": {
           "tips": [
@@ -24921,15 +24921,15 @@
           ]
         },
         "eb72d828-788d-4090-9e4f-71423c081948": {
-          "description": "在教程的最後，學生有機會構建一個星球大戰遊戲。如果學生完成的早，鼓勵他們嘗試彼此的遊戲，然後使自己的遊戲更有趣或更具挑戰性。  \n\n你也可以通過訪問[code.org/learn][0]讓小組或個人嘗試另一個教程。"
+          "description": "在教程的最後，學生有機會構建一個星球大戰遊戲。如果學生完成的早，鼓勵他們嘗試彼此的遊戲，然後使自己的遊戲更有趣或更具挑戰性。  \n\n你也可以通過訪問[code.org/learn](http://code.org/learn)讓小組或個人嘗試另一個教程。"
         },
         "bec776b1-a8cd-4e18-a1bc-be30f2942863": {
           "name": "匯報",
-          "description": "給每個學生一些便利貼或便簽。推進快速[“Whip Around”][0]活動：\n\n-   提出一個有多個答案的提示，如“分享你完成的一小時玩程式活動中你真正喜歡的東西”或“分享你今天學到的一些技能”。  \n-   讓學生寫下盡可能多的答案，每張便利貼或便簽卡寫下一個想法。  \n-   在教室裡“打轉”，一次叫一個學生。讓學生分享他們的一個回答。被點名時，學生不能重複回答；他們必須添加一些新的東西。"
+          "description": "給每個學生一些便利貼或便簽。推進快速[“Whip Around”](http://www.theteachertoolkit.com/index.php/tool/whip-around)活動：\n\n-   提出一個有多個答案的提示，如“分享你完成的一小時玩程式活動中你真正喜歡的東西”或“分享你今天學到的一些技能”。  \n-   讓學生寫下盡可能多的答案，每張便利貼或便簽卡寫下一個想法。  \n-   在教室裡“打轉”，一次叫一個學生。讓學生分享他們的一個回答。被點名時，學生不能重複回答；他們必須添加一些新的東西。"
         },
         "4cb35c62-404e-42b9-9eaf-09ec2f485a2b": {
           "name": "讚美",
-          "description": "解釋你今天花了一個小時寫代碼，因為這周是電腦科學教育周，全球數以百萬計的學生也在這周學習程式設計一小時。祝賀學生參與這個世界性運動。\n\n給每個學生一張寫有其名字的[certificate][0]。"
+          "description": "解釋你今天花了一個小時寫代碼，因為這周是電腦科學教育周，全球數以百萬計的學生也在這周學習程式設計一小時。祝賀學生參與這個世界性運動。\n\n給每個學生一張寫有其名字的[certificate](http://code.org/certificates)。"
         },
         "80ff32c9-0373-4125-a65e-bef5f0e21cba": {
           "name": "下一步",
@@ -24937,7 +24937,7 @@
         },
         "57e403d7-a8be-47fc-bb97-1a068e2469ed": {
           "name": "超越一小時玩程式",
-          "description": "一小時玩程式結束後，有多種方法可以繼續在K-5教室教授電腦科學。這裡有一些思路：\n\n-   **教授[Code Studio Computer Science Fundamentals][0]課程**。這六門課程專為低齡學習者而設計。學生們通過一系列謎題學習編碼，教師使用有趣的課程計畫，有助於讓學習變得更生動。Code.org線上或面對面為這些課程提供免費輔導。\n-   研究你今天瞭解到的一些程式設計職業。在[Sharemylesson.com][1]上找到關於職業規劃研究專案的資源。\n-   **邀請電腦科學專家向班上學生講述其工作**。如果不認識任何志願者，可通過[volunteer map][2]聯繫一些。"
+          "description": "一小時玩程式結束後，有多種方法可以繼續在K-5教室教授電腦科學。這裡有一些思路：\n\n-   **教授[Code Studio Computer Science Fundamentals](http://code.org/educate/k5)課程**。這六門課程專為低齡學習者而設計。學生們通過一系列謎題學習編碼，教師使用有趣的課程計畫，有助於讓學習變得更生動。Code.org線上或面對面為這些課程提供免費輔導。\n-   研究你今天瞭解到的一些程式設計職業。在[Sharemylesson.com](http://www.sharemylesson.com/TaxonomySearchResults.aspx?area=resources&keywords=career+research)上找到關於職業規劃研究專案的資源。\n-   **邀請電腦科學專家向班上學生講述其工作**。如果不認識任何志願者，可通過[volunteer map](https://code.org/volunteer/local)聯繫一些。"
         },
         "d0f5c55b-b19c-418c-8dc6-f87a80e08f45": {
           "description": "請學生在離開時，在您的「電腦科學」思維地圖上，貼上他們的「集思廣益」便利貼或紙卡。嘗試在板子上填入許多很棒的想法，說明 CS 是什麼以及為什麼很重要。"
@@ -24948,14 +24948,14 @@
         },
         "88f6ccc1-0efa-4c60-985c-971a235d5645": {
           "tips": [
-            "如果你自己對程式設計不是很熟悉，介紹一小時玩程式時，可以播放其中一個[inspirational videos][0]。選擇一個你認為能夠啟發學生靈感的視頻，並立即分享。對於年輕學員，我們推薦[The Hour of Code is Here][1].。"
+            "如果你自己對程式設計不是很熟悉，介紹一小時玩程式時，可以播放其中一個[inspirational videos](https://hourofcode.com/us/resources#videos)。選擇一個你認為能夠啟發學生靈感的視頻，並立即分享。對於年輕學員，我們推薦[The Hour of Code is Here](https://youtu.be/FC5FbmsH4fw).。"
           ]
         },
         "dbeab27b-4231-4281-be73-ae2aaa3d94b2": {
           "description": "解釋在電腦科學中，“代碼”是指一組電腦可以理解的指令。讓學生知道，今天他們要練習“編碼”、“程式設計”和“調試”。  \n\n定義：  \n\n-   **編碼**指編寫代碼，或為電腦編寫指令。 \n-   **程式設計**，類似地，指編寫代碼或指令。今天，你可以在電腦上使用模組程式設計（如果你使用的是線上教程）或使用紙筆程式設計（如果你使用的是離線活動）。  \n-   **調試**指檢查代碼中的錯誤並試圖修復錯誤。  \n\n讓學生說出一些他們聽說過的與編碼相關的工作。學生可能會提到“程式師”、“電腦科學家”、“軟體發展人員”或“工程師”。在你的“電腦科學”面板上捕捉學生的反應，把學生分享的資訊做成思維導圖。  \n\n**說：**_大家說得對！這裡沒有正確或錯誤的答案。如今，幾乎任何工作都需要一些代碼知識。有很多很多的職業需要一些編碼知識，學習編碼是任何人都可以做的事情。我們今天就要來做。我們今天做的事情可能跟這些不完全一樣，但你今天學到的一切可能會引領你製作下一個《憤怒的小鳥》或Twitter。_"
         },
         "0ac387c0-d67a-4177-aacf-837ce03c55aa": {
-          "description": "挑戰你的學生完成[Star Wars: Building a Galaxy with Code][0]教程。  \n\n根據學生的年齡和能力，你可以考慮：  \n\n-   對於年齡較小的學生，我們建議你將班級分成兩人一組，讓每組一起使用[pair programming][1]完成教程。\n-   對於年齡較大的學生，我們發現獨立學習教程效果很好。有時，允許學生選擇他們自己的教程會有幫助。如果學生對《星球大戰》不感興趣，他們可以通過[Write Your First Computer Program][2]教程獲得類似的體驗。  \n-   對於成年學員，[Star Wars: Building a Galaxy with Code][3]教程作為獨立挑戰或結對程式設計活動都非常好。"
+          "description": "挑戰你的學生完成[Star Wars: Building a Galaxy with Code](https://studio.code.org/s/starwarsblocks/lessons/1/levels/1)教程。  \n\n根據學生的年齡和能力，你可以考慮：  \n\n-   對於年齡較小的學生，我們建議你將班級分成兩人一組，讓每組一起使用[pair programming](https://youtu.be/vgkahOzFH2Q)完成教程。\n-   對於年齡較大的學生，我們發現獨立學習教程效果很好。有時，允許學生選擇他們自己的教程會有幫助。如果學生對《星球大戰》不感興趣，他們可以通過[Write Your First Computer Program](https://studio.code.org/hoc/1)教程獲得類似的體驗。  \n-   對於成年學員，[Star Wars: Building a Galaxy with Code](https://studio.code.org/s/starwarsblocks/lessons/1/levels/1)教程作為獨立挑戰或結對程式設計活動都非常好。"
         },
         "88879c41-12f5-4d2e-86e6-93925b83d7d0": {
           "tips": [
@@ -24963,15 +24963,15 @@
           ]
         },
         "719affd9-c1a0-4b0c-8bc3-22060893f5e0": {
-          "description": "在教程的最後，學生有機會構建一個星球大戰遊戲。如果學生完成的早，鼓勵他們嘗試彼此的遊戲，然後使自己的遊戲更有趣或更具挑戰性。  \n\n你也可以通過訪問[code.org/learn][0]讓小組或個人嘗試另一個教程。"
+          "description": "在教程的最後，學生有機會構建一個星球大戰遊戲。如果學生完成的早，鼓勵他們嘗試彼此的遊戲，然後使自己的遊戲更有趣或更具挑戰性。  \n\n你也可以通過訪問[code.org/learn](http://code.org/learn)讓小組或個人嘗試另一個教程。"
         },
         "afb5ecc7-af66-492d-96bb-2412754005e0": {
           "name": "匯報",
-          "description": "給每個學生一些便利貼或便簽。推進快速[“Whip Around”][0]活動：\n\n-   提出一個有多個答案的提示，如“分享你完成的一小時玩程式活動中你真正喜歡的東西”或“分享你今天學到的一些技能”。  \n-   讓學生寫下盡可能多的答案，每張便利貼或便簽卡寫下一個想法。  \n-   在教室裡“打轉”，一次叫一個學生。讓學生分享他們的一個回答。被點名時，學生不能重複回答；他們必須添加一些新的東西。"
+          "description": "給每個學生一些便利貼或便簽。推進快速[“Whip Around”](http://www.theteachertoolkit.com/index.php/tool/whip-around)活動：\n\n-   提出一個有多個答案的提示，如“分享你完成的一小時玩程式活動中你真正喜歡的東西”或“分享你今天學到的一些技能”。  \n-   讓學生寫下盡可能多的答案，每張便利貼或便簽卡寫下一個想法。  \n-   在教室裡“打轉”，一次叫一個學生。讓學生分享他們的一個回答。被點名時，學生不能重複回答；他們必須添加一些新的東西。"
         },
         "16a6a4db-d853-478e-9945-3f0d17865e80": {
           "name": "讚美",
-          "description": "解釋你今天花了一個小時寫代碼，因為這周是電腦科學教育周，全球數以百萬計的學生也在這周學習程式設計一小時。祝賀學生參與這個世界性運動。\n\n給每個學生一張寫有其名字的[certificate][0]。"
+          "description": "解釋你今天花了一個小時寫代碼，因為這周是電腦科學教育周，全球數以百萬計的學生也在這周學習程式設計一小時。祝賀學生參與這個世界性運動。\n\n給每個學生一張寫有其名字的[certificate](http://code.org/certificates)。"
         },
         "450db873-f55e-4f30-bbb9-5dfde5bf47e4": {
           "name": "下一步",
@@ -24979,7 +24979,7 @@
         },
         "5ec42aed-0b79-49f8-bd64-0716e60498a4": {
           "name": "超越一小時玩程式",
-          "description": "一小時玩程式結束後，有多種方法可以繼續在K-5教室教授電腦科學。這裡有一些思路：\n\n-   **教授[Code Studio Computer Science Fundamentals][0]課程**。這六門課程專為低齡學習者而設計。學生們通過一系列謎題學習編碼，教師使用有趣的課程計畫，有助於讓學習變得更生動。Code.org線上或面對面為這些課程提供免費輔導。\n-   研究你今天瞭解到的一些程式設計職業。在[Sharemylesson.com][1]上找到關於職業規劃研究專案的資源。\n-   **邀請電腦科學專家向班上學生講述其工作**。如果不認識任何志願者，可通過[volunteer map][2]聯繫一些。"
+          "description": "一小時玩程式結束後，有多種方法可以繼續在K-5教室教授電腦科學。這裡有一些思路：\n\n-   **教授[Code Studio Computer Science Fundamentals](http://code.org/educate/k5)課程**。這六門課程專為低齡學習者而設計。學生們通過一系列謎題學習編碼，教師使用有趣的課程計畫，有助於讓學習變得更生動。Code.org線上或面對面為這些課程提供免費輔導。\n-   研究你今天瞭解到的一些程式設計職業。在[Sharemylesson.com](http://www.sharemylesson.com/TaxonomySearchResults.aspx?area=resources&keywords=career+research)上找到關於職業規劃研究專案的資源。\n-   **邀請電腦科學專家向班上學生講述其工作**。如果不認識任何志願者，可通過[volunteer map](https://code.org/volunteer/local)聯繫一些。"
         },
         "b0fff664-80cc-4318-b031-edf88ad1aebc": {
           "description": "請學生在離開時，在您的「電腦科學」思維地圖上，貼上他們的「集思廣益」便利貼或紙卡。嘗試在板子上填入許多很棒的想法，說明 CS 是什麼以及為什麼很重要。"
@@ -25105,7 +25105,7 @@
         },
         "bacf1db7-dc91-41b8-ad71-9fb655e18dfa": {
           "tips": [
-            "-   在教室裏使用平靜的肢體動作\n-   不要嚼口香糖或糖果\n-   對你的手進行消毒\n-   與你的夥伴坐在一臺電腦前\n-   確保第一個 \"司機 \"可以拿到滑鼠\n-   當你感到煩躁時，不要拍打或搖晃電腦或螢幕。\n-   遵循[20/20/20Rule][0]\n-   如何應對每20-30分鐘一次的[Wiggles][1]（需要免費登錄GoNoodle）。\n-   在問老師問題之前先問你的同學\n-   降低音量，以便其他人都能聽到他們的隔壁同學。\n-   用你的筆記來記錄感受和解決方案"
+            "-   在教室裏使用平靜的肢體動作\n-   不要嚼口香糖或糖果\n-   對你的手進行消毒\n-   與你的夥伴坐在一臺電腦前\n-   確保第一個 \"司機 \"可以拿到滑鼠\n-   當你感到煩躁時，不要拍打或搖晃電腦或螢幕。\n-   遵循[20/20/20Rule](http://www.anthro.com/blog/2013/10/how-to-prevent-eye-strain-with-the-20-20-20-rule#.WOU39BLyu35)\n-   如何應對每20-30分鐘一次的[Wiggles](https://app.gonoodle.com/channels/brainercise-with-mr-catman/shoulder-rock-n-roll)（需要免費登錄GoNoodle）。\n-   在問老師問題之前先問你的同學\n-   降低音量，以便其他人都能聽到他們的隔壁同學。\n-   用你的筆記來記錄感受和解決方案"
           ]
         },
         "aa328958-bd87-4dbb-8585-cb33f905051f": {
@@ -25128,7 +25128,7 @@
           ]
         },
         "66f2f042-aa67-41db-a756-4ab6e5623f77": {
-          "description": "挑戰你的學生完成[Jigsaw][0]教程。\n\n-   鼓勵有問題/挑戰的學生從問他們的搭檔開始。\n-   未回答的問題可以升級到附近的團隊，他們可能已經知道解決方案。\n-   讓學生描述他們看到的問題。它應該做什麼？它會做什麼的？這說明了什麼？\n-   提醒沮喪的學生，挫折是學習道路上的一步，堅持會有回報。\n-   如果一個學生在所有這些之後仍然卡住，詢問一些引導性問題，讓學生自己發現錯誤。"
+          "description": "挑戰你的學生完成[Jigsaw](http://studio.code.org/s/jigsaw/lessons/1/levels/1)教程。\n\n-   鼓勵有問題/挑戰的學生從問他們的搭檔開始。\n-   未回答的問題可以升級到附近的團隊，他們可能已經知道解決方案。\n-   讓學生描述他們看到的問題。它應該做什麼？它會做什麼的？這說明了什麼？\n-   提醒沮喪的學生，挫折是學習道路上的一步，堅持會有回報。\n-   如果一個學生在所有這些之後仍然卡住，詢問一些引導性問題，讓學生自己發現錯誤。"
         },
         "11068ad0-f20b-4daf-94cd-7b4549b76f3a": {
           "progression_name": "關卡"
@@ -25138,10 +25138,10 @@
           "description": "讓學生寫下或畫出他們所學到的東西或他們完成難題後的感受。\n\n**提示：**\n\n-   你能畫出準備去電腦實驗室的序列嗎?\n-   繪製出電腦實驗室中的“做”和“不做”\n-   繪製和標記你在難題期間點擊和拖動時使用的電腦部件的名稱。（滑鼠按鈕、觸控式螢幕、觸控板）"
         },
         "8f47b370-5569-4a34-b105-c765a39c8460": {
-          "description": "給每個學生一張[課堂回饋條][0]，請他們總結今天的學習內容、感受或體驗。學生可以用自己喜歡的方式來畫、寫或表達。在學生離開教室時，向每位學生收取「課堂回饋條」。如果你願意，你可以把「課堂回饋條」貼在公告欄或學校的醒目位置，作為「一小時玩程式」的回憶。"
+          "description": "給每個學生一張[課堂回饋條](https://docs.google.com/a/code.org/document/d/1ylIlO7Pppk6W3Jt58VHS5mjvnshg9URvj3iCU0Ok6qY/edit?usp=sharing)，請他們總結今天的學習內容、感受或體驗。學生可以用自己喜歡的方式來畫、寫或表達。在學生離開教室時，向每位學生收取「課堂回饋條」。如果你願意，你可以把「課堂回饋條」貼在公告欄或學校的醒目位置，作為「一小時玩程式」的回憶。"
         },
         "6ddc599f-da51-4adc-9dcc-f13b8b53e760": {
-          "description": "#### 超越「一小時玩程式」活動\n\n在你的「一小時玩程式」結束後，有很多方法可以在你的 K-5 課堂上繼續教授電腦科學。以下是一些點子：\n\n-   講授[代碼工作室電腦科學基礎][0] 課程。這六門課程是為年輕的學習者設計的。學生們透過一系列的關卡來學習代碼，教育者們可以獲得引人入勝的教案，幫助學生們將學習變得生動起來。Code.org為這些課程提供免費的專業發展，可線上或面授。\n\n-   邀請一位電腦科學專家為您的班級講授他或她的工作。不認識當地的電腦科學家？請在我們的[志工地圖][1]上聯繫志工"
+          "description": "#### 超越「一小時玩程式」活動\n\n在你的「一小時玩程式」結束後，有很多方法可以在你的 K-5 課堂上繼續教授電腦科學。以下是一些點子：\n\n-   講授[代碼工作室電腦科學基礎](http://code.org/educate/k5) 課程。這六門課程是為年輕的學習者設計的。學生們透過一系列的關卡來學習代碼，教育者們可以獲得引人入勝的教案，幫助學生們將學習變得生動起來。Code.org為這些課程提供免費的專業發展，可線上或面授。\n\n-   邀請一位電腦科學專家為您的班級講授他或她的工作。不認識當地的電腦科學家？請在我們的[志工地圖](https://code.org/volunteer/local)上聯繫志工"
         },
         "b16d189d-d990-44c4-be49-8f81ac81a96e": {
           "description": "#### 課程鋪墊\n\n歡迎學生上課，並簡要介紹當天的活動。",

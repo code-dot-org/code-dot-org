@@ -1,5 +1,5 @@
 {
-  "title": "AI 101 PL - Post Series Survey",
+  "title": "AI 101 for Teachers - Post Series Survey",
   "logoPosition": "right",
   "pages": [
     {
@@ -8,7 +8,7 @@
         {
           "type": "html",
           "name": "survey_preamble_header_and_text",
-          "html": "<h1>Welcome to the AI 101 Professional Learning - Post Series Survey</h2>\n\n<p><strong>Code.org relies on surveys as a crucial tool to remain connected to educators, and to give you the opportunity to provide feedback about your experience with our programming.</strong></p>\n<p>This survey asks questions about your experience with the AI 101 Professional Learning series.&nbsp;</p>\n<p><strong>Privacy and Confidentiality</strong></p>\n<ul>\n<li>Your individual responses here are completely <strong>confidential.</strong></li>\n<li>Your identity will&nbsp;<strong>never</strong> be revealed publicly or used to tie any responses back to you personally.</li>\n<li>We may share <strong>de-identified</strong>, aggregate data (representing all responses) publicly.</li>\n<li>Your <strong>de-identified&nbsp;</strong>responses will be used by Code.org, our Regional Partners, and our facilitators for program improvement.</li>\n</ul>\n<p><strong>At the end, you will be offered a $10 Amazon gift card for your time (supplies limited to first 1000 respondents).</strong></P>\n<p>This survey should take <strong>less than 10 minutes</strong> to complete.&nbsp;&nbsp;<strong>Your complete honesty and candor are appreciated.</strong></p>"
+          "html": "<h1>Welcome to the AI 101 for Teachers Professional Learning - Post Series Survey</h2>\n\n<p><strong>Code.org, ETS, ISTE, and Khan Academy rely on surveys as a crucial tool to remain connected to educators, and to give you the opportunity to provide feedback about your experience with our programming.</strong></p>\n<p>This survey asks questions about your experience with the <a href=https://code.org/ai/pl/101 target=_blank>AI 101 for Teachers</a> Professional Learning series.&nbsp;</p>\n<p><strong>Privacy and Confidentiality</strong></p>\n<ul>\n<li>Your individual responses here are completely <strong>confidential.</strong></li>\n<li>Your identity will&nbsp;<strong>never</strong> be revealed publicly or used to tie any responses back to you personally.</li>\n<li>We may share <strong>de-identified</strong>, aggregate data (representing all responses) publicly.</li>\n<li>Your <strong>de-identified&nbsp;</strong>responses will be used by Code.org, ETS, ISTE, and Khan Academy for program improvement.</li>\n</ul>\n\n<p>This survey should take <strong>less than 5 minutes</strong> to complete.&nbsp;&nbsp;<strong>Your complete honesty and candor are appreciated.</strong></p>"
         }
       ]
     },
@@ -26,12 +26,16 @@
           "title": "Which best describes you?",
           "choices": [
             {
-              "value": "cs_teacher",
-              "text": "Computer Science teacher"
-            },
-            {
               "value": "classroom_teacher",
               "text": "Classroom teacher"
+            },
+            {
+              "value": "subject_area",
+              "text": "Subject area teacher"
+            },
+            {
+              "value": "cs_teacher",
+              "text": "Computer Science teacher"
             },
             {
               "value": "stem_teacher",
@@ -68,8 +72,8 @@
         {
           "type": "checkbox",
           "name": "grade",
-          "title": "At what grade levels did you teach this year?",
-          "description": " (Select all that apply)",
+          "title": "At what grade levels are you teaching this year?",
+          "description": "(Select all that apply)",
           "choices": [
             {
               "value": "k",
@@ -135,10 +139,10 @@
         },
         {
           "type": "checkbox",
-          "name": "teach_other_courses",
-          "visibleIf": "{teacher_role} anyof ['cs_teacher', 'stem_teacher', 'Librarian', 'other']",
-          "title": "Are you responsible for teaching other courses or subjects at your school?",
-          "description": "(If so, please select all that apply)",
+          "name": "teach_courses",
+          "visibleIf": "{teacher_role} <> 'classroom_teacher' and {teacher_role} <> 'cs_teacher' and {teacher_role} <> 'stem_teacher'",
+          "title": "What courses or subjects do you teach?",
+          "description": "(Select all that apply)",
           "choices": [
             {
               "value": "none",
@@ -198,9 +202,15 @@
       "name": "page2",
       "elements": [
         {
+          "type": "html",
+          "name": "section2_ai_pl_101",
+          "html": "<h1>AI 101 for Teachers - Professional Learning Series</h1>\n<p><span style='font-size: 12pt;'>The purpose of this section of the survey is to understand your experience with the <a href=https://code.org/ai/pl/101 target=_blank>AI 101 for Teachers</a> Professional Learning series.</span></p>"
+        },
+        {
           "type": "matrix",
           "name": "ai_pl_101",
-          "title": "Are you planning to use what you learned in your role as {teacher_role}?",
+          "title": "Are you planning to use what you learned in the AI 101 for Teachers professional learning series in your role as {teacher_role}?",
+          "description": "Choose a response for each of the videos listed. If you did not watch a video, please select that option.",
           "columns": [
             {
               "value": "yes_already_did",
@@ -222,23 +232,23 @@
           "rows": [
             {
               "value": "video1",
-              "text": "Video 1 - Fireside Chat"
+              "text": "Video 1: Fireside chat with Hadi Partovi and Sal Khan"
             },
             {
               "value": "video2",
-              "text": "Video 2"
+              "text": "Video 2: Demystifying AI for Educators"
             },
             {
               "value": "video3",
-              "text": "Video 3"
+              "text": "Video 3: Transforming Learning with AI"
             },
             {
               "value": "video4",
-              "text": "Video 4"
+              "text": "Video 4: Ensuring a Responsible Approach to AI"
             },
             {
               "value": "video5",
-              "text": "Video 5"
+              "text": "Video 5: Bringing AI to the Classroom"
             }
           ]
         },
@@ -247,6 +257,7 @@
           "name": "ai_pl_101_barriers",
           "visibleIf": "{ai_pl_101.video1} <> 'didnt_watch' or {ai_pl_101.video2} <> 'didnt_watch' or {ai_pl_101.video3} <> 'didnt_watch' or {ai_pl_101.video4} <> 'didnt_watch' or {ai_pl_101.video5} <> 'didnt_watch'",
           "title": "What are the main barriers to using what you’ve learned?",
+          "description": "(Select all that apply)",
           "choices": [
             {
               "value": "none",
@@ -261,8 +272,12 @@
               "text": "AI use has been discouraged in my school/district"
             },
             {
-              "value": "need_more_preparation",
-              "text": "I need more preparation before applying the content"
+              "value": "need_learn_more",
+              "text": "I need to learn more about AI before using it in my classroom/role"
+            },
+            {
+              "value": "need_more_practice",
+              "text": "I need more practice on my own before using it in my classroom/role"
             },
             {
               "value": "other",
@@ -279,7 +294,8 @@
         {
           "type": "matrix",
           "name": "ai_pl_101_relevance",
-          "title": "Was the content of each video relevant to your role as {teacher_role}?",
+          "visibleIf": "{ai_pl_101.video1} <> 'didnt_watch' or {ai_pl_101.video2} <> 'didnt_watch' or {ai_pl_101.video3} <> 'didnt_watch' or {ai_pl_101.video4} <> 'didnt_watch' or {ai_pl_101.video5} <> 'didnt_watch'",
+          "title": "Was the content of each video in the AI 101 for Teachers series relevant to your role as {teacher_role}?",
           "columns": [
             {
               "value": "5",
@@ -305,27 +321,27 @@
           "rows": [
             {
               "value": "video1",
-              "text": "Video 1 - Fireside Chat",
+              "text": "Video 1: Fireside chat with Hadi Partovi and Sal Khan",
               "visibleIf": "{ai_pl_101.video1} <> 'didnt_watch'"
             },
             {
               "value": "video2",
-              "text": "Video 2",
+              "text": "Video 2: Demystifying AI for Educators",
               "visibleIf": "{ai_pl_101.video2} <> 'didnt_watch'"
             },
             {
               "value": "video3",
-              "text": "Video 3",
+              "text": "Video 3: Transforming Learning with AI",
               "visibleIf": "{ai_pl_101.video3} <> 'didnt_watch'"
             },
             {
               "value": "video4",
-              "text": "Video 4",
+              "text": "Video 4: Ensuring a Responsible Approach to AI",
               "visibleIf": "{ai_pl_101.video4} <> 'didnt_watch'"
             },
             {
               "value": "video5",
-              "text": "Video 5",
+              "text": "Video 5: Bringing AI to the Classroom",
               "visibleIf": "{ai_pl_101.video5} <> 'didnt_watch'"
             }
           ]
@@ -352,27 +368,27 @@
           "rows": [
             {
               "value": "video1",
-              "text": "Video 1 - Fireside Chat",
+              "text": "Video 1: Fireside chat with Hadi Partovi and Sal Khan",
               "visibleIf": "{ai_pl_101.video1} = 'didnt_watch'"
             },
             {
               "value": "video2",
-              "text": "Video 2",
+              "text": "Video 2: Demystifying AI for Educators",
               "visibleIf": "{ai_pl_101.video2} = 'didnt_watch'"
             },
             {
               "value": "video3",
-              "text": "Video 3",
+              "text": "Video 3: Transforming Learning with AI",
               "visibleIf": "{ai_pl_101.video3} = 'didnt_watch'"
             },
             {
               "value": "video4",
-              "text": "Video 4",
+              "text": "Video 4: Ensuring a Responsible Approach to AI",
               "visibleIf": "{ai_pl_101.video4} = 'didnt_watch'"
             },
             {
               "value": "video5",
-              "text": "Video 5",
+              "text": "Video 5: Bringing AI to the Classroom",
               "visibleIf": "{ai_pl_101.video5} = 'didnt_watch'"
             }
           ]
@@ -386,113 +402,37 @@
           "type": "rating",
           "name": "post_pl_teaching_ai_confidence",
           "visibleIf": "{ai_pl_101.video1} <> 'didnt_watch' or {ai_pl_101.video2} <> 'didnt_watch' or {ai_pl_101.video3} <> 'didnt_watch' or {ai_pl_101.video4} <> 'didnt_watch' or {ai_pl_101.video5} <> 'didnt_watch'",
-          "title": "After watching these videos, do you feel more or less confident than before about using AI in your school or classroom? ",
+          "title": "After watching the videos in the AI for Teachers series, do you feel more or less confident than before about using AI in your school or classroom? ",
           "rateCount": 7,
           "rateMax": 7,
           "minRateDescription": "Less confident than before",
           "maxRateDescription": "More confident than before"
         },
         {
-          "type": "radiogroup",
-          "name": "ai_101_pl_share",
-          "visibleIf": "{ai_pl_101.video1} <> 'didnt_watch' or {ai_pl_101.video2} <> 'didnt_watch' or {ai_pl_101.video3} <> 'didnt_watch' or {ai_pl_101.video4} <> 'didnt_watch' or {ai_pl_101.video5} <> 'didnt_watch'",
-          "title": "Did you share any videos from the AI 101 Professional Learning series with other educators?",
-          "choices": [
-            {
-              "value": "yes",
-              "text": "Yes"
-            },
-            {
-              "value": "no",
-              "text": "No"
-            }
-          ]
-        },
-        {
           "type": "rating",
           "name": "nps_ai_101_pl",
           "visibleIf": "{ai_pl_101.video1} <> 'didnt_watch' or {ai_pl_101.video2} <> 'didnt_watch' or {ai_pl_101.video3} <> 'didnt_watch' or {ai_pl_101.video4} <> 'didnt_watch' or {ai_pl_101.video5} <> 'didnt_watch'",
-          "title": "After watching these videos, would you recommend them to other educators?",
+          "title": "Would you recommend the videos in the AI 101 for Teachers series to other educators?",
           "autoGenerate": false,
-          "rateCount": 10,
-          "rateValues": [
-            {
-              "value": 0,
-              "text": "1"
-            },
-            {
-              "value": 1,
-              "text": "2"
-            },
-            {
-              "value": 2,
-              "text": "3"
-            },
-            {
-              "value": 3,
-              "text": "4"
-            },
-            {
-              "value": 4,
-              "text": "5"
-            },
-            {
-              "value": 5,
-              "text": "6"
-            },
-            {
-              "value": 6,
-              "text": "7"
-            },
-            {
-              "value": 7,
-              "text": "8"
-            },
-            {
-              "value": 8,
-              "text": "9"
-            },
-            {
-              "value": 9,
-              "text": "10"
-            }
-          ],
-          "rateMin": 0,
-          "rateMax": 9,
+          "rateCount": 7,
+          "rateMax": 7,
           "minRateDescription": "I wouldn't recommend them",
           "maxRateDescription": "I would definitely recommend them"
         },
         {
-          "type": "radiogroup",
-          "name": "how_ai_works_pl_interest",
-          "title": "Would you be interested in a professional learning experience to teach the ‘How AI Works’ video series? ",
-          "choices": [
-            {
-              "value": "yes",
-              "text": "Yes"
-            },
-            {
-              "value": "maybe",
-              "text": "Maybe"
-            },
-            {
-              "value": "dont_know",
-              "text": "I don't know what is the 'How AI Works’ video series"
-            },
-            {
-              "value": "already_know",
-              "text": "No, I already know about that topic"
-            },
-            {
-              "value": "not_relevant",
-              "text": "No, it is not relevant to my classroom/role"
-            }
-          ]
+          "type": "rating",
+          "name": "pl_interest_ai",
+          "title": "Would you be interested in engaging with further professional learning about teaching with AI?",
+          "autoGenerate": false,
+          "rateCount": 7,
+          "rateMax": 7,
+          "minRateDescription": "Not interested at all",
+          "maxRateDescription": "Very interested"
         },
         {
           "type": "checkbox",
           "name": "additional_topics",
-          "visibleIf": "{ai_pl_101.video1} <> 'didnt_watch' or {ai_pl_101.video2} <> 'didnt_watch' or {ai_pl_101.video3} <> 'didnt_watch' or {ai_pl_101.video4} <> 'didnt_watch' or {ai_pl_101.video5} <> 'didnt_watch'",
+          "visibleIf": "{pl_interest_ai}>3",
           "title": "What AI topics are you interested in exploring further?",
           "description": "select all that apply)",
           "choices": [
@@ -502,7 +442,7 @@
             },
             {
               "value": "train_other_teachers",
-              "text": "How to train other teachers about using AI (TtT)"
+              "text": "How to train other teachers about using AI"
             },
             {
               "value": "inform_policy_use_ai",
@@ -514,11 +454,15 @@
             },
             {
               "value": "practice_using_ai",
-              "text": "Guided and supported hands-on practice for using AI"
+              "text": "Guided and supported hands-on practice prompting AI"
             },
             {
               "value": "ai_for_assessments",
-              "text": "Using AI for assessments"
+              "text": "Using AI to create lesson plans and assessments"
+            },
+            {
+              "value": "ai_ethics",
+              "text": "AI ethics"
             },
             {
               "value": "other",
@@ -534,7 +478,43 @@
           "type": "text",
           "name": "general_feedback",
           "visibleIf": "{ai_pl_101.video1} <> 'didnt_watch' or {ai_pl_101.video2} <> 'didnt_watch' or {ai_pl_101.video3} <> 'didnt_watch' or {ai_pl_101.video4} <> 'didnt_watch' or {ai_pl_101.video5} <> 'didnt_watch'",
-          "title": "Is there anything else you would like to share about your experience with this AI-focused professional learning series?"
+          "title": "Is there anything you would like to share about your experience with this AI-focused professional learning series? Your thoughts about how valuable you found the series would be highly appreciated."
+        },
+        {
+          "type": "radiogroup",
+          "name": "permission",
+          "title": "I give Code.org permission to quote my written feedback from this survey for use on social media, promotional materials, and other communications.",
+          "choices": [
+            {
+              "value": "yes_anon",
+              "text": "Yes, I give permission to quote me, anonymously."
+            },
+            {
+              "value": "no",
+              "text": "No, I do not give permission to quote me."
+            }
+          ]
+        },
+        {
+          "type": "radiogroup",
+          "name": "can_contact",
+          "title": "Would you be open to code.org reaching out to you to gather additional feedback direct feedback about AI-focused professional learning?",
+          "choices": [
+            {
+              "value": "yes",
+              "text": "Yes"
+            },
+            {
+              "value": "no",
+              "text": "No"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "name": "contact_email",
+          "visibleIf": "{can_contact} = 'yes'",
+          "title": "Please enter the email address wherewe can contact you to gather additional feedback direct feedback about AI-focused professional learning."
         }
       ]
     }
