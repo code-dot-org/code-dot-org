@@ -35,6 +35,12 @@ section.bg-primary-light {
   }
 }
 
+// Hide random whitespace at the bottom
+//  of the page from legacy code
+.container_responsive_full_width > .desktop-feature {
+  display: none;
+}
+
 // Show elements based on screen size
 .show-desktop {
   display: block;
