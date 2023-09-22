@@ -1832,4 +1832,15 @@ FactoryBot.define do
   factory :learning_goal_evaluation do
     association :learning_goal
   end
+
+  factory :learning_goal_teacher_evaluation do
+    association :learning_goal
+    association :teacher, factory: :teacher
+    association :user, factory: :student
+    understanding {0}
+  end
+
+  factory :learning_goal_ai_evaluation do
+    association :learning_goal
+  end
 end
