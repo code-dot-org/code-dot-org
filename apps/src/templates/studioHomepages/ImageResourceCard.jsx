@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
+import fontConstants from '@cdo/apps/fontConstants';
 import Button from '../Button';
 import color from '../../util/color';
 
@@ -100,7 +101,7 @@ const styles = {
   description: {
     fontSize: 14,
     lineHeight: '21px',
-    fontFamily: '"Gotham 4r", sans-serif',
+    ...fontConstants['main-font-regular'],
     height: 80,
   },
   button: {

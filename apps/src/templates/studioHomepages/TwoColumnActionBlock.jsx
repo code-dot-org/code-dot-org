@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import color from '../../util/color';
+import fontConstants from '@cdo/apps/fontConstants';
 import Button from '@cdo/apps/templates/Button';
 import i18n from '@cdo/locale';
 import {pegasus} from '@cdo/apps/lib/util/urlHelpers';
@@ -239,7 +240,7 @@ const styles = {
     marginBottom: 0,
     fontSize: 24,
     lineHeight: '26px',
-    fontFamily: 'Gotham 4r',
+    ...fontConstants['main-font-regular'],
     color: color.neutral_dark,
   },
   textItem: {
@@ -275,7 +276,7 @@ const styles = {
     paddingRight: 10,
     paddingBottom: 20,
     fontSize: 14,
-    fontFamily: 'Gotham 4r',
+    ...fontConstants['main-font-regular'],
     lineHeight: '22px',
     color: color.neutral_dark,
   },

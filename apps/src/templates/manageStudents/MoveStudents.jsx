@@ -16,6 +16,7 @@ import {
   cancelStudentTransfer,
 } from './manageStudentsRedux';
 import color from '@cdo/apps/util/color';
+import fontConstants from '@cdo/apps/fontConstants';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
 
@@ -312,7 +313,7 @@ const styles = {
   },
   radioOption: {
     paddingLeft: PADDING / 2,
-    fontFamily: '"Gotham 4r", sans-serif',
+    ...fontConstants['main-font-regular'],
   },
   error: {
     fontFamily: '"Gotham 5r", sans-serif',
