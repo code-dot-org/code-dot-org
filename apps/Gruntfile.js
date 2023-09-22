@@ -14,7 +14,7 @@ const offlineWebpackConfig = require('./webpackOffline.config');
 const {VALID_KARMA_CLI_FLAGS} = require('./karma.conf');
 
 // Review every couple of years to see if an increase improves test performance
-const MEM_PER_KARMA_PROCESS = 4300;
+const MEM_PER_KARMA_PROCESS_MB = 4300;
 
 module.exports = function (grunt) {
   var config = {};
@@ -372,7 +372,7 @@ module.exports = function (grunt) {
       stdio: 'inherit',
       env: {
         ...process.env,
-        NODE_OPTIONS: `--max-old-space-size=${MEM_PER_KARMA_PROCESS}`,
+        NODE_OPTIONS: `--max-old-space-size=${MEM_PER_KARMA_PROCESS_MB}`,
       },
     });
   });
@@ -653,4 +653,4 @@ module.exports = function (grunt) {
 };
 
 // Exported for matching use in `run-tests-in-parallel.sh`
-module.exports.MEM_PER_KARMA_PROCESS = MEM_PER_KARMA_PROCESS;
+module.exports.MEM_PER_KARMA_PROCESS_MB = MEM_PER_KARMA_PROCESS_MB;

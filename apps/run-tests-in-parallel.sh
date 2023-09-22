@@ -1,8 +1,8 @@
 #!/bin/bash
 set -e
 
-MEM_PER_KARMA_PROCESS=$(node -e "console.log(require('./Gruntfile').MEM_PER_KARMA_PROCESS)" 2>/dev/null)
-NODE_OPTIONS="--max-old-space-size=${MEM_PER_KARMA_PROCESS}"
+MEM_PER_KARMA_PROCESS_MB=$(node -e "console.log(require('./Gruntfile').MEM_PER_KARMA_PROCESS_MB)" 2>/dev/null)
+NODE_OPTIONS="--max-old-space-size=${MEM_PER_KARMA_PROCESS_MB}"
 
 function linuxNumProcs() {
   local nprocs=$(nproc)
@@ -15,7 +15,7 @@ function linuxNumProcs() {
   fi
 
   # Don't run more processes than can fit in free memory.
-  local mem_procs=$(awk "/${mem_metric}/ {printf \"%d\", \$2/1024/${MEM_PER_KARMA_PROCESS}}" /proc/meminfo)
+  local mem_procs=$(awk "/${mem_metric}/ {printf \"%d\", \$2/1024/${MEM_PER_KARMA_PROCESS_MB}}" /proc/meminfo)
   local procs=$(( ${mem_procs} < ${nprocs} ? ${mem_procs} : ${nprocs} ))
 
   if ((procs == 0)); then
@@ -37,7 +37,7 @@ function macMemAvailableMB() {
 }
 
 function macNumProcs() {
-  local mem_procs=$(( $(macMemAvailableMB) / MEM_PER_KARMA_PROCESS ))
+  local mem_procs=$(( $(macMemAvailableMB) / MEM_PER_KARMA_PROCESS_MB ))
   local procs=$(( ${mem_procs} < $(nproc) ? ${mem_procs} : $(nproc) ))
 
   # Run at least two copies in parallel
