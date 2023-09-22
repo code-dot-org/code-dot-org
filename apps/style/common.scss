@@ -1646,7 +1646,7 @@ $see-examples-thick-underline-color: $yellow;
 
 .droplet-block-tooltipster .tooltipster-content {
   font-family: $tooltip-font;
-  font-weight: 400;
+  font-weight: $regular-font-weight;
   font-size: 12px;
   line-height: 16px;
   padding: 8px 10px;
