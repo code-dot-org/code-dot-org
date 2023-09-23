@@ -74,6 +74,7 @@ const DanceAi: React.FunctionComponent<DanceAiProps> = ({
   const [inputs, setInputs] = useState<string[]>([]);
   const [responseParams, setResponseParams] = useState<string>('');
   const [responseExplanation, setResponseExplanation] = useState<string>('');
+  const [typingDone, setTypingDone] = useState<boolean>(false);
 
   const showingAi = useSelector((state: {dance: any}) => state.dance.showingAi);
 
@@ -101,6 +102,10 @@ const DanceAi: React.FunctionComponent<DanceAiProps> = ({
       setInputs([...inputs, id]);
       setCurrentInputSlot(currentInputSlot + 1);
     }
+  };
+
+  const handleGeneratingClick = () => {
+    setMode('results');
   };
 
   const handleGenerateClick = () => {
@@ -131,7 +136,7 @@ const DanceAi: React.FunctionComponent<DanceAiProps> = ({
     setResponseParams(`ai(${pickedString})`);
     setResponseExplanation(params.explanation);
 
-    setMode('results');
+    //setMode('results');
   };
 
   const handleDoneClick = () => {
@@ -140,45 +145,51 @@ const DanceAi: React.FunctionComponent<DanceAiProps> = ({
 
   return (
     <AccessibleDialog className={moduleStyles.dialog} onClose={onClose}>
-      <div tabIndex={0}>
+      <div>
         <Heading3>AI</Heading3>
       </div>
 
       {mode === 'selectInputs' && (
         <div>
-          <div className={moduleStyles.itemContainer}>
-            {getAllItems(currentInputSlot).map((item: any) => {
+          <div className={moduleStyles.prompt}>
+            {promptString}
+            {Array.from(Array(SLOT_COUNT).keys()).map(index => {
               return (
-                <img
-                  key={item.id}
-                  onClick={() => handleItemClick(item.id)}
-                  src={item.url}
-                  className={moduleStyles.item}
-                />
+                <div key={index} className={moduleStyles.inputContainer}>
+                  <div className={moduleStyles.inputBackground}>&nbsp;</div>
+                  {index === currentInputSlot && (
+                    <div className={moduleStyles.arrowUp}>&nbsp;</div>
+                  )}
+                  {inputs[index] && (
+                    <img
+                      src={getImageUrl(inputs[index])}
+                      className={classNames(
+                        moduleStyles.inputItem,
+                        moduleStyles.item
+                      )}
+                    />
+                  )}
+                </div>
               );
             })}
           </div>
-          <div className={moduleStyles.body}>
-            <div className={moduleStyles.prompt}>
-              {promptString}
-              {Array.from(Array(SLOT_COUNT).keys()).map(index => {
+          {currentInputSlot < SLOT_COUNT && (
+            <div className={moduleStyles.itemContainer}>
+              {getAllItems(currentInputSlot).map((item: any, index: number) => {
                 return (
-                  <div key={index} className={moduleStyles.inputContainer}>
-                    <div className={moduleStyles.inputBackground}>&nbsp;</div>
-                    {inputs[index] && (
-                      <img
-                        src={getImageUrl(inputs[index])}
-                        className={classNames(
-                          moduleStyles.inputItem,
-                          moduleStyles.item
-                        )}
-                      />
-                    )}
-                  </div>
+                  <img
+                    tabIndex={
+                      index === 0 && currentInputSlot === 0 ? 0 : undefined
+                    }
+                    key={item.id}
+                    onClick={() => handleItemClick(item.id)}
+                    src={item.url}
+                    className={moduleStyles.item}
+                  />
                 );
               })}
             </div>
-          </div>
+          )}
         </div>
       )}
       {mode === 'generating' && (
@@ -194,7 +205,14 @@ const DanceAi: React.FunctionComponent<DanceAiProps> = ({
           <div className={moduleStyles.botContainer}>
             <img src={aiBotBorder} className={moduleStyles.bot} />
           </div>
-          <Typist startDelay={0} avgTypingDelay={30} cursor={{show: false}}>
+          <Typist
+            startDelay={0}
+            avgTypingDelay={15}
+            cursor={{show: false}}
+            onTypingDone={() => {
+              setTypingDone(true);
+            }}
+          >
             <Heading5>Code</Heading5>
             <pre className={classNames(moduleStyles.code, moduleStyles.pre)}>
               {responseParams}
@@ -216,7 +234,16 @@ const DanceAi: React.FunctionComponent<DanceAiProps> = ({
           />
         )}
 
-        {mode === 'results' && (
+        {mode === 'generating' && responseParams !== '' && (
+          <Button
+            id="done"
+            text={'Next'}
+            onClick={handleGeneratingClick}
+            color={Button.ButtonColor.brandSecondaryDefault}
+          />
+        )}
+
+        {mode === 'results' && typingDone && (
           <Button
             id="done"
             text={'Done'}
