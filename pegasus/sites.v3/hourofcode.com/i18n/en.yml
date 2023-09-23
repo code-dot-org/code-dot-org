@@ -480,6 +480,14 @@
   support_and_questions_section_subhead: "Still have questions? Reach out to us! We are here to help."
   support_and_questions_section_desc: "Our support team is here to answer any questions you may have about starting teaching with Code.org. You can also ask other teachers about their experience on our teacher forums."
 
+  subscribe_form_section_title: "Subscribe for updates"
+  subscribe_form_section_desc_csa: "Sign up to receive monthly emails about Code.org's AP® Computer Science A and get helpful reminders, tips, and updates sent right to your inbox."
+  subscribe_form_section_desc_csc: "Sign up to receive monthly emails about Code.org's Computer Science Connections and get helpful reminders, tips, and updates sent right to your inbox."
+  subscribe_form_section_desc_csd: "Sign up to receive monthly emails about Code.org's Computer Science Discoveries and get helpful reminders, tips, and updates sent right to your inbox."
+  subscribe_form_section_desc_csf: "Sign up to receive monthly emails about Code.org's Computer Science Fundamentals and get helpful reminders, tips, and updates sent right to your inbox."
+  subscribe_form_section_desc_csp: "Sign up to receive monthly emails about Code.org's Computer Science Principles and get helpful reminders, tips, and updates sent right to your inbox."
+  subscribe_form_section_unsubscribe: "You can unsubscribe at any time."
+
   blockchain_hero_heading: 'How Blockchain Works'
   blockchain_hero_desc: 'Dive into the world of blockchain with "How Blockchain Works," our new video series and accompanying lessons!'
   blockchain_intro_heading: 'See how blockchain works'
@@ -620,6 +628,7 @@
   ai_pl_101_video_desc_6: "Learn more about the new technology driving the large changes in AI, featuring two new videos on Large Language Models (like ChatGPT) and Generative AI. Hear how these new technologies work directly from the experts: Mira Murati, CTO of OpenAI, and Cristóbal Valenzuela, CEO of RunwayML."
   ai_pl_101_llm_slides_title: "Large Language Model Prompts for Educators"
   ai_pl_101_llm_slides_desc: "Tools for getting the best possible output from LLMs like ChatGPT, from beginner to advanced. Includes starter prompts for those just dipping their toes in, as well as advanced tools for those looking to maximize their potential."
+  ai_pl_101_resources_3: "AI Prompts for Transforming Student Learning"
 
   how_ai_works_hero_heading: "How AI Works"
   how_ai_works_hero_desc: "Dive into the world of AI with \"How AI Works,\" our video series and accompanying lessons!"

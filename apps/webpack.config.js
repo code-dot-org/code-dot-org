@@ -117,7 +117,7 @@ const localeDoNotImportP5Lab = (cdo, dir = 'src') => [
 // Our base webpack config, from which our other webpack configs are derived,
 // including our main config, the karma config, and the storybook config.
 //
-// To find our main webpack config (that runs on e.g. `npm run build`),
+// To find our main webpack config (that runs on e.g. `yarn build`),
 // see `createWepbackConfig()` below. That function extends this config
 // with many more plugins etc.
 const WEBPACK_BASE_CONFIG = {
@@ -304,7 +304,7 @@ function addPollyfillsToEntryPoints(entries, polyfills) {
  * Generate the primary webpack config for building `apps/`.
  * Extends `WEBPACK_BASE_CONFIG` from above.
  *
- * Invoked by `Gruntfile.js` for `yarn start`, `npm run build`, etc
+ * Invoked by `Gruntfile.js` for `yarn start`, `yarn build`, etc
  *
  * @param {Object} appEntries - defaults to building all apps, to build only one app pass in e.g. `appEntriesFor('maze')`
  * @param {boolean} minify - whether to minify the output

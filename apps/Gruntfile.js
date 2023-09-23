@@ -11,51 +11,12 @@ var checkEntryPoints = require('./script/checkEntryPoints');
 const {ALL_APPS, appsEntriesFor} = require('./webpackEntryPoints');
 const {createWebpackConfig} = require('./webpack.config');
 const offlineWebpackConfig = require('./webpackOffline.config');
+const {VALID_KARMA_CLI_FLAGS} = require('./karma.conf');
 
-const {customizeKarmaConfigFor} = require('./karma.conf.js');
+// Review every couple of years to see if an increase improves test performance
+const MEM_PER_KARMA_PROCESS_MB = 4300;
 
 module.exports = function (grunt) {
-  process.env.mocha_entry = grunt.option('entry') || '';
-  if (process.env.mocha_entry) {
-    if (
-      path.resolve(process.env.mocha_entry).indexOf('/apps/test/integration') >
-      -1
-    ) {
-      throw new Error('Cannot use karma:entry to run integration tests');
-    }
-    const isDirectory = fs
-      .lstatSync(path.resolve(process.env.mocha_entry))
-      .isDirectory();
-    const loadContext = isDirectory
-      ? `let testsContext = require.context(${JSON.stringify(
-          path.resolve(process.env.mocha_entry)
-        )}, true, /\\.[j|t]sx?$/);`
-      : '';
-    const runTests = isDirectory
-      ? 'testsContext.keys().forEach(testsContext);'
-      : `require('${path.resolve(process.env.mocha_entry)}');`;
-    const file = `/* eslint-disable */
-// Auto-generated from Gruntfile.js
-import '@babel/polyfill/noConflict';
-import 'whatwg-fetch';
-import Adapter from 'enzyme-adapter-react-16';
-import enzyme from 'enzyme';
-enzyme.configure({adapter: new Adapter()});
-import { throwOnConsoleErrorsEverywhere } from './util/throwOnConsole';
-${loadContext}
-describe('entry tests', () => {
-  throwOnConsoleErrorsEverywhere();
-
-  // TODO: Add warnings back once we've run the rename-unsafe-lifecycles codemod.
-  // https://codedotorg.atlassian.net/browse/XTEAM-377
-  // throwOnConsoleWarningsEverywhere();
-
-  ${runTests}
-});
-`;
-    fs.writeFileSync('test/entry-tests.js', file);
-  }
-
   var config = {};
 
   /**
@@ -399,25 +360,33 @@ describe('entry tests', () => {
     generateSharedConstants: 'bundle exec ./script/generateSharedConstants.rb',
   };
 
-  config.karma = {
-    options: {
-      // Most karma configuration should live in `karma.conf.js`
-      configFile: 'karma.conf.js',
-      client: {
-        mocha: {
-          grep: grunt.option('grep'),
-        },
+  grunt.registerTask('karma', ['preconcatForKarma', 'karma start']);
+  grunt.registerTask('karma start', () => {
+    // Forward select grunt command-line flags to `karma start`
+    const KARMA_CLI_FLAGS = VALID_KARMA_CLI_FLAGS.flatMap(arg =>
+      grunt.option(arg) ? [`--${arg}`, grunt.option(arg)] : []
+    );
+
+    console.log(chalk.green(`>> npx karma start ${KARMA_CLI_FLAGS.join(' ')}`));
+    child_process.spawnSync('npx', ['karma', 'start', ...KARMA_CLI_FLAGS], {
+      stdio: 'inherit',
+      env: {
+        ...process.env,
+        NODE_OPTIONS: `--max-old-space-size=${MEM_PER_KARMA_PROCESS_MB}`,
       },
-    },
-    unit: customizeKarmaConfigFor('unit'),
-    integration: customizeKarmaConfigFor('integration'),
-    storybook: customizeKarmaConfigFor('storybook'),
-    entry: customizeKarmaConfigFor('entry'),
-  };
+    });
+  });
+
+  grunt.registerTask('preconcatForKarma', [
+    'newer:messages',
+    'exec:convertScssVars',
+    'exec:generateSharedConstants',
+    'newer:copy:static',
+  ]);
 
   config.clean = {
     build: ['build'],
-    unitTest: {
+    karma: {
       options: {force: true},
       src: ['build/karma'],
     },
@@ -673,13 +642,6 @@ describe('entry tests', () => {
 
   grunt.registerTask('rebuild', ['clean', 'build']);
 
-  grunt.registerTask('preconcat', [
-    'newer:messages',
-    'exec:convertScssVars',
-    'exec:generateSharedConstants',
-    'newer:copy:static',
-  ]);
-
   grunt.registerTask('dev', [
     'prebuild',
     'newer:sass',
@@ -687,17 +649,8 @@ describe('entry tests', () => {
     'postbuild',
   ]);
 
-  grunt.registerTask('unitTest', [
-    'newer:messages',
-    'exec:convertScssVars',
-    'exec:generateSharedConstants',
-    'karma:unit',
-    'clean:unitTest',
-  ]);
-
-  grunt.registerTask('storybookTest', ['karma:storybook']);
-
-  grunt.registerTask('integrationTest', ['preconcat', 'karma:integration']);
-
   grunt.registerTask('default', ['rebuild', 'test']);
 };
+
+// Exported for matching use in `run-tests-in-parallel.sh`
+module.exports.MEM_PER_KARMA_PROCESS_MB = MEM_PER_KARMA_PROCESS_MB;
