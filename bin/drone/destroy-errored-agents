@@ -1,0 +1,34 @@
+#!/bin/bash
+
+set -e
+
+# This script will terminate all drone agents that are in 'error' state. This
+# happens occasionally, and we have not been able to pin down the exact reason
+# why. This was created when we were using the following versions, and may not
+# be needed if future bugfixes resolve this issue.
+#
+# - drone/autoscaler:1.8.2
+# - drone/drone:1.9.0
+#
+# If it's too fancy for you, you can always run the following command.
+#
+# ```
+# drone server ls -l | grep error | awk '{print $1}' | xargs -tL1 drone server destroy`
+# ```
+
+# Check if DRONE_TOKEN is valid
+output=$(drone server ls -l 2>&1)
+if [[ "$output" == *"Error: you must provide your Drone access token."* ]]; then
+    echo "DRONE_TOKEN is either not set or invalid. Follow instructions at https://drone.cdn-code.org/account to set your token."
+    exit 1
+fi
+
+# Get the total count of drone agents and those in error state
+total_count=$(drone server ls -l | tail -n +2 | wc -l)
+error_ids=$(drone server ls -l | grep error | awk '{print $1}')
+
+# Calculate error count, considering empty string as zero
+error_count=$(if [ -z "$error_ids" ]; then echo 0; else echo "$error_ids" | wc -l; fi)
+
+echo "Terminating ${error_count} of ${total_count} drone agents that were in 'error' state"
+[ -z "$error_ids" ] || echo "$error_ids" | xargs -tL1 drone server destroy
