@@ -1,4 +1,4 @@
-import xml from './xml';
+import * as xml from './xml';
 import msg from '@cdo/locale';
 import _ from 'lodash';
 

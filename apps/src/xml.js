@@ -38,9 +38,3 @@ export function visitAll(node, callback) {
     exports.visitAll(child, callback);
   }
 }
-
-export default {
-  serialize,
-  parseElement,
-  visitAll,
-};
