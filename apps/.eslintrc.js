@@ -1,8 +1,10 @@
+/* eslint-disable import/no-commonjs */
+
 // This config defines globals available especially in apps,
 // enables es6, and enables apps-specific plugins and rules.
 // See the root .eslintrc.js for generic eslint linting rules.
 
-// const import_error = 2; // import plugin uses numbers for warning/error
+const import_error = 2; // import plugin uses numbers for warning/error
 
 module.exports = {
   parser: '@babel/eslint-parser',
@@ -79,10 +81,9 @@ module.exports = {
   rules: {
     'babel/semi': 'error', // autofixable
     'cdo-custom-rules/style-blocks-below-class': 'error',
-    // 'import/no-amd': import_error,
-    // 'import/no-commonjs': import_error,
-    // 'import/no-import-module-exports': import_error,
-    // 'import/unambiguous': import_error,
+    'import/no-amd': import_error,
+    'import/no-commonjs': import_error,
+    'import/no-import-module-exports': import_error,
     'mocha/no-exclusive-tests': 'error',
     'react/button-has-type': 'error',
     'react/display-name': 'off',

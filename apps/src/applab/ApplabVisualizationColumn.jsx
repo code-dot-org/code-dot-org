@@ -13,7 +13,7 @@ import {isResponsiveFromState} from '../templates/ProtectedVisualizationDiv';
 import {connect} from 'react-redux';
 import classNames from 'classnames';
 import i18n from '@cdo/locale';
-import * as dom from '../dom';
+import dom from '../dom';
 
 class ApplabVisualizationColumn extends React.Component {
   static propTypes = {

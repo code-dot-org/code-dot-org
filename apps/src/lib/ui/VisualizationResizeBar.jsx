@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {connect} from 'react-redux';
 import commonStyles from '../../commonStyles';
-import * as dom from '../../dom';
+import dom from '../../dom';
 
 const MOUSE_UP_EVENT_NAME = 'mouseup';
 const MOUSE_UP_TOUCH_EVENT_NAME = dom.getTouchEventName(MOUSE_UP_EVENT_NAME);
