@@ -1,4 +1,4 @@
-// todo - i think our prepoluated code counts as LOCs
+// todo - i think our prepoluated code cousnts as LOCs
 
 import constants from './constants';
 
@@ -63,7 +63,7 @@ var anchoredBlock = function (type, child) {
       complete (indicating failure if success condition not met)
   */
 
-export default {
+const toExport = {
   1: {
     instructionsImportant: true,
     requiredBlocks: [[{test: 'flap', type: 'flappy_flap'}]],
@@ -469,7 +469,7 @@ export default {
   },
 };
 
-export const k1_1 = {
+toExport.k1_1 = {
   isK1: true,
   grayOutUndeletableBlocks: true,
   requiredBlocks: [],
@@ -496,22 +496,22 @@ export const k1_1 = {
 };
 
 // flap to goal
-export const k1_2 = extend(module.exports['1'], {isK1: true});
+toExport.k1_2 = extend(toExport.exports['1'], {isK1: true});
 
 // hit ground
-export const k1_3 = extend(module.exports['2'], {isK1: true});
+toExport.k1_3 = extend(toExport.exports['2'], {isK1: true});
 
 // set speed
-export const k1_4 = extend(module.exports['3'], {isK1: true});
+toExport.k1_4 = extend(toExport.exports['3'], {isK1: true});
 
 // crash into obstacle
-export const k1_5 = extend(module.exports['4'], {isK1: true});
+toExport.k1_5 = extend(toExport.exports['4'], {isK1: true});
 
 // pass through obstacle, score a point
-export const k1_6 = extend(module.exports['5'], {isK1: true});
+toExport.k1_6 = extend(toExport.exports['5'], {isK1: true});
 
 // score multiple points for each pass
-export const k1_7 = {
+toExport.k1_7 = {
   isK1: true,
   requiredBlocks: [
     [{test: 'incrementPlayerScore', type: 'flappy_incrementPlayerScore'}],
@@ -560,7 +560,7 @@ export const k1_7 = {
 };
 
 // change the scene
-export const k1_8 = extend(module.exports['7'], {
+toExport.k1_8 = extend(toExport.exports['7'], {
   isK1: true,
   // override regular flappy so that we dont use variable flap block
   toolbox: tb(
@@ -580,7 +580,7 @@ export const k1_8 = extend(module.exports['7'], {
 });
 
 // changing the player
-export const k1_9 = {
+toExport.k1_9 = {
   isK1: true,
   requiredBlocks: [[{test: 'setPlayer', type: 'flappy_setPlayer'}]],
   obstacles: true,
@@ -613,7 +613,7 @@ export const k1_9 = {
 };
 
 // custom
-export const custom = {
+toExport.custom = {
   requiredBlocks: [],
   obstacles: true,
   ground: true,
@@ -643,3 +643,5 @@ export const custom = {
     eventBlock('flappy_whenEnterObstacle', incrementScoreBlock) +
     eventBlock('when_run', setSpeedBlock),
 };
+
+export {toExport as default};
