@@ -7,7 +7,7 @@
     "node": "^18.16.0",
     "npm": "^9.5.1"
   },
-  "scripts": {    
+  "scripts": {
     "lint": "yarn lint:scss && yarn lint:js",
     "lint:fix": "yarn lint:scss --fix && yarn lint:js --fix",
     "lint:js": "eslint --format ./.eslintCustomMessagesFormatter.js --ext .js,.jsx,.ts,.tsx src test --resolve-plugins-relative-to .",
@@ -152,6 +152,7 @@
     "karma-mocha": "^1.3.0",
     "karma-mocha-reporter": "^2.2.3",
     "karma-sourcemap-loader": "^0.4.0",
+    "karma-spec-reporter": "^0.0.36",
     "karma-webpack": "^5.0.0",
     "lazysizes": "^4.0.0-rc1",
     "load-grunt-tasks": "3.5.0",
