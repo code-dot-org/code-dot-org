@@ -54,6 +54,9 @@
 .dialog {
   max-width: initial !important;
   width: 800px !important;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
 
   .heading {
     font-size: 16px;
@@ -70,10 +73,19 @@
     overflow: hidden;
   }
 
+  .body {
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-size: 18px;
+  }
+
   .itemContainer {
     background-color: $neutral_dark10;
     border-radius: 4px;
     padding: 12px;
+    height: 110px;
   }
 
   .item {
@@ -81,17 +93,61 @@
     padding: 8px;
   }
 
+  .prompt {
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+  }
+
+  .inputContainer {
+    position: relative;
+    margin: 0 4px;
+
+    .inputBackground {
+      background-color: $neutral_dark10;
+      border-radius: 4px;
+      width: 56px;
+      height: 56px;
+    }
+
+    .inputItem {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+
   .botContainer {
-    float: left;
+    flex: 0 0 140px;
 
     .bot {
-      width: 60px;
+      width: 110px;
     }
+  }
+
+  .resultsContainer {
+    display: flex;
   }
 
   .output {
     float: left;
     margin-left: 20px;
     margin-top: 15px;
+  }
+
+  .pre {
+    white-space: pre-wrap;
+    word-break: initial;
+  }
+
+  .code {
+    font-size: 14px;
+  }
+
+  .buttonContainer {
+    margin-top: auto;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
   }
 }
