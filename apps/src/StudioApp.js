@@ -53,7 +53,7 @@ import {
 import {getStore} from './redux';
 import {getValidatedResult, initializeContainedLevel} from './containedLevels';
 import {lockContainedLevelAnswers} from './code-studio/levels/codeStudioLevels';
-import {parseElement as parseXmlElement} from './xml';
+import {parseElement} from './xml';
 import {setIsRunning, setIsEditWhileRun, setStepSpeed} from './redux/runState';
 import {
   getIdleTimeSinceLastReport,
@@ -1273,7 +1273,7 @@ StudioApp.prototype.loadBlocks = function (source, hiddenDefinitions) {
 StudioApp.prototype.arrangeBlockPosition = function (startBlocks, arrangement) {
   var type, xmlChild;
 
-  var xml = parseXmlElement(startBlocks);
+  var xml = parseElement(startBlocks);
 
   var xmlChildNodes = xml.childNodes || [];
   arrangement = arrangement || {};
@@ -2001,7 +2001,7 @@ StudioApp.prototype.setConfigValues_ = function (config) {
   this.nativeVizWidth = config.nativeVizWidth || this.maxVisualizationWidth;
 
   if (config.level.initializationBlocks) {
-    var xml = parseXmlElement(config.level.initializationBlocks);
+    var xml = parseElement(config.level.initializationBlocks);
     this.initializationBlocks = Blockly.Generator.xmlToBlocks(
       'JavaScript',
       xml

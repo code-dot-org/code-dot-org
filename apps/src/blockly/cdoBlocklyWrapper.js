@@ -2,7 +2,7 @@ import {BlocklyVersion} from '@cdo/apps/blockly/constants';
 import {CLAMPED_NUMBER_REGEX, stringIsXml} from './constants';
 import {APP_HEIGHT} from '@cdo/apps/p5lab/constants';
 import customBlocks from './customBlocks/cdoBlockly/index.js';
-import {parseElement as parseXmlElement} from '../xml';
+import {parseElement} from '@cdo/apps/xml';
 
 const INFINITE_LOOP_TRAP =
   '  executionInfo.checkTimeout(); if (executionInfo.isTerminated()){return;}\n';
@@ -254,7 +254,7 @@ function initializeBlocklyWrapper(blocklyInstance) {
         );
         source = '';
       }
-      Blockly.Xml.domToBlockSpace(blockSpace, parseXmlElement(source));
+      Blockly.Xml.domToBlockSpace(blockSpace, parseElement(source));
     },
     blockLimitExceeded: function (blockType) {
       const blockLimits = Blockly.mainBlockSpace.blockSpaceEditor.blockLimits;

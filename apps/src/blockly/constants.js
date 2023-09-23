@@ -1,5 +1,5 @@
 import {makeEnum} from '@cdo/apps/utils';
-import {parseElement as parseXmlElement} from '../xml';
+import {parseElement} from '@cdo/apps/xml';
 
 export const BlocklyVersion = {
   CDO: 'CDO',
@@ -59,7 +59,7 @@ export function stringIsXml(str) {
     return false;
   } catch (e) {
     try {
-      parseXmlElement(str);
+      parseElement(str);
       // If parsed successfully, string is not xml.
       return true;
     } catch (e) {

@@ -1,8 +1,8 @@
 // Serializes an XML DOM node to a string.
-exports.serialize = function (node) {
+export function serialize(node) {
   var serializer = new XMLSerializer();
   return serializer.serializeToString(node);
-};
+}
 
 /**
  * Parses a single root element string, optionally wrapping it in an <xml/> element.
@@ -10,7 +10,7 @@ exports.serialize = function (node) {
  * @param {?boolean} noWrap if true, don't wrap in <xml/> element
  * @return {Element}
  */
-exports.parseElement = function (text, noWrap = false) {
+export function parseElement(text, noWrap = false) {
   var parser = new DOMParser();
   text = text.trim();
   var dom =
@@ -29,12 +29,18 @@ exports.parseElement = function (text, noWrap = false) {
     throw new Error('Parsed multiple elements');
   }
   return element;
-};
+}
 
 // Apply a function to a node and all of its descendants
-exports.visitAll = function (node, callback) {
+export function visitAll(node, callback) {
   callback(node);
   for (let child of node.childNodes) {
     exports.visitAll(child, callback);
   }
+}
+
+export default {
+  serialize,
+  parseElement,
+  visitAll,
 };

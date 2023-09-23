@@ -3,7 +3,7 @@ import FeedbackBlocks from './feedbackBlocks';
 
 import {trySetLocalStorage} from './utils';
 
-import xml from './xml';
+import {parseElement} from './xml';
 import msg from '@cdo/locale';
 
 /**
@@ -264,9 +264,7 @@ authoredHintUtils.submitHints = function (url) {
  */
 authoredHintUtils.createContextualHintsFromBlocks = function (blocks) {
   var hints = blocks.map(function (block) {
-    var xmlBlock = xml.parseXmlElement(
-      FeedbackBlocks.generateXMLForBlocks([block])
-    );
+    var xmlBlock = parseElement(FeedbackBlocks.generateXMLForBlocks([block]));
     var blockType = xmlBlock.firstChild.getAttribute('type');
     return {
       markdown: msg.recommendedBlockContextualHintTitle(),
