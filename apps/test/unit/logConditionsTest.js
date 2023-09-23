@@ -1,7 +1,7 @@
 import {assert} from '../util/reconfiguredChai';
 import {TestResults} from '@cdo/apps/constants';
 
-var executionLog = require('@cdo/apps/executionLog');
+import executionLog from '@cdo/apps/executionLog';
 
 describe('logConditions: getResultsFromLog', function () {
   it('returns ALL_PASS with empty logConditions and executionLog', function () {

@@ -1,6 +1,6 @@
-var tickWrapper = require('../../util/tickWrapper');
+import tickWrapper from '../../util/tickWrapper';
 import {TestResults} from '@cdo/apps/constants';
-var Emotions = require('@cdo/apps/studio/constants.js').Emotions;
+import {Emotions} from '@cdo/apps/studio/constants.js';
 
 var levelDef = {
   map: [
@@ -17,7 +17,7 @@ var levelDef = {
   isK1: false,
 };
 
-module.exports = {
+export default {
   app: 'studio',
   skinId: 'studio',
   levelDefinition: levelDef,

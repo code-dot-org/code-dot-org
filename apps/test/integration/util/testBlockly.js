@@ -1,22 +1,21 @@
 // Note: Putting ES6 in this test file breaks the test build, for reasons we
 // haven't figured out yet.  It's got something to do with require-globify.
-var assert = require('../../util/reconfiguredChai').assert;
-var testBlockFactory = require('./testBlockFactory');
-
-/** @type {StudioApp} instance reference internal to this module  */
-var studioApp;
+import {assert} from '../../util/reconfiguredChai';
+import {installTestBlocks} from './testBlockFactory';
+import setupBlocklyGlobal from '../../util/setupBlocklyGlobal';
+import {singleton as studioApp} from '@cdo/apps/StudioApp';
 
 /**
  * Initializes an instance of blockly for testing
  */
-exports.setupTestBlockly = function () {
-  exports.setupBlocklyFrame();
+export const setupTestBlockly = function () {
+  setupBlocklyFrame();
   var options = {
     assetUrl: studioApp().assetUrl,
   };
   var blocklyAppDiv = document.getElementById('app');
   Blockly.inject(blocklyAppDiv, options);
-  testBlockFactory.installTestBlocks(Blockly);
+  installTestBlocks(Blockly);
 
   assert(Blockly.Blocks.text_print, 'text_print block exists');
   assert(Blockly.Blocks.text, 'text block exists');
@@ -31,15 +30,14 @@ exports.setupTestBlockly = function () {
   );
 };
 
-exports.setupBlocklyFrame = function () {
-  require('../../util/setupBlocklyGlobal')();
+export const setupBlocklyFrame = function () {
+  setupBlocklyGlobal();
   assert(global.Blockly, 'Frame loaded Blockly into global namespace');
   assert(Object.keys(global.Blockly).length > 0);
   Blockly.JavaScript.INFINITE_LOOP_TRAP = null;
 
   // c, n, v, p, s get added to global namespace by messageformat module, which
   // is loaded when we require our locale msg files
-  studioApp = require('@cdo/apps/StudioApp').singleton;
   studioApp().reset = function () {};
 
   var blocklyAppDiv = document.getElementById('app');
@@ -54,7 +52,7 @@ exports.setupBlocklyFrame = function () {
  * Gets the singleton loaded by setupTestBlockly. Throws if setupTestBlockly
  * was not used (this will be true in the case of level tests).
  */
-exports.getStudioAppSingleton = function () {
+export const getStudioAppSingleton = function () {
   if (!studioApp()) {
     throw new Error('Expect singleton to exist');
   }

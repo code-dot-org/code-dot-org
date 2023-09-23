@@ -25,7 +25,7 @@ var levelDef = {
   spritesHiddenToStart: true,
 };
 
-module.exports = {
+export default {
   app: 'studio',
   skinId: 'studio',
   levelDefinition: levelDef,

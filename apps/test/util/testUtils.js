@@ -1,8 +1,9 @@
 import React from 'react';
 import $ from 'jquery';
 import sinon from 'sinon';
-const project = require('@cdo/apps/code-studio/initApp/project').default;
-const assets = require('@cdo/apps/code-studio/assets');
+import project from '@cdo/apps/code-studio/initApp/project';
+import assets from '@cdo/apps/code-studio/assets';
+import ArtistAPI from '@cdo/apps/turtle/api';
 export {
   throwOnConsoleErrorsEverywhere,
   throwOnConsoleWarningsEverywhere,
@@ -49,7 +50,6 @@ export function setExternalGlobals(beforeFunc = before, afterFunc = after) {
  * }
  */
 export function generateArtistAnswer(generatedCode) {
-  var ArtistAPI = require('@cdo/apps/turtle/api');
   var api = new ArtistAPI();
 
   api.log = [];

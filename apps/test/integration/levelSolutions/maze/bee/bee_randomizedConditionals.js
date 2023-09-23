@@ -88,7 +88,7 @@ var levelDef = {
   flowerType: 'redWithNectar',
 };
 
-module.exports = {
+export default {
   app: 'maze',
   skinId: 'bee',
   levelDefinition: levelDef,

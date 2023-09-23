@@ -1,5 +1,5 @@
 import {TestResults} from '@cdo/apps/constants';
-var calcMsg = require('@cdo/apps/calc/locale');
+import calcMsg from '@cdo/apps/calc/locale';
 
 var level = {
   // f(x, y) = x + y
@@ -59,7 +59,7 @@ var level = {
   freePlay: false,
 };
 
-module.exports = {
+export default {
   app: 'calc',
   skinId: 'calc',
   levelDefinition: level,

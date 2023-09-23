@@ -7,7 +7,7 @@
  * which is important for making locale setup work seamlessly in tests.
  */
 // make sure Blockly is loaded
-require('../setupBlocklyGlobal')();
-require('../../../build/package/js/en_us/weblab_locale.js');
-
-module.exports = window.locales.weblab_locale;
+import setupBlocklyGlobal from '../setupBlocklyGlobal.js';
+import '../../../build/package/js/en_us/weblab_locale.js';
+setupBlocklyGlobal();
+export default window.locales.weblab_locale;

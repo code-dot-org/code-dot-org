@@ -3,8 +3,9 @@ import sinon from 'sinon';
 import React from 'react';
 import {shallow} from 'enzyme';
 import AppLabCrosshairOverlay from '@cdo/apps/applab/AppLabCrosshairOverlay';
-// ES5-style require necessary to stub gridUtils.draggedElementDropPoint
-var gridUtils = require('@cdo/apps/applab/gridUtils');
+
+// using the default export required to stub gridUtils.draggedElementDropPoint
+import gridUtils from '@cdo/apps/applab/gridUtils';
 
 describe('AppLabCrosshairOverlay', () => {
   const TEST_APP_WIDTH = Math.random(),

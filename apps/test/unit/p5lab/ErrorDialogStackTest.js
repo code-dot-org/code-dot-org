@@ -1,4 +1,4 @@
-var errorDialogStack = require('@cdo/apps/p5lab/redux/errorDialogStack');
+import reducer, * as errorDialogStack from '@cdo/apps/p5lab/redux/errorDialogStack';
 import {expect} from '../../util/reconfiguredChai';
 import {UnconnectedErrorDialogStack as ErrorDialogStack} from '@cdo/apps/p5lab/ErrorDialogStack';
 import {mount} from 'enzyme';
@@ -6,8 +6,6 @@ import React from 'react';
 
 describe('ErrorDialogStack', function () {
   describe('reducer', function () {
-    var reducer = errorDialogStack.default;
-
     it('has empty array as default state', function () {
       expect(reducer(undefined, {})).to.deep.equal([]);
     });

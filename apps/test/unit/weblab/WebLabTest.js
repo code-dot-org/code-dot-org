@@ -23,8 +23,8 @@ import {TestResults} from '@cdo/apps/constants';
 import project from '@cdo/apps/code-studio/initApp/project';
 import {onSubmitComplete} from '@cdo/apps/submitHelper';
 import * as utils from '@cdo/apps/utils';
-var filesApi = require('@cdo/apps/clientApi').files;
-var assetListStore = require('@cdo/apps/code-studio/assets/assetListStore');
+import {files as filesApi} from '@cdo/apps/clientApi';
+import assetListStore from '@cdo/apps/code-studio/assets/assetListStore';
 import dom from '@cdo/apps/dom';
 
 describe('WebLab', () => {

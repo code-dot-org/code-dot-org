@@ -1,8 +1,9 @@
 /** @file Tests for clientState.js */
 
-var assert = require('assert');
-var state = require('@cdo/apps/code-studio/clientState').default;
-var chai = require('chai');
+import assert from 'assert';
+
+import state from '@cdo/apps/code-studio/clientState';
+import chai from 'chai';
 
 chai.should();
 

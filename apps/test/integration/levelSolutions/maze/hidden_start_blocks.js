@@ -32,7 +32,7 @@ var levelDef = {
   ideal: 32,
 };
 
-module.exports = {
+export default {
   app: 'maze',
   skinId: 'bee',
   levelDefinition: levelDef,

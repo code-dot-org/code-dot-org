@@ -26,7 +26,7 @@ var levelDef = {
   allowSpritesOutsidePlayspace: false,
 };
 
-module.exports = {
+export default {
   app: 'studio',
   skinId: 'studio',
   levelDefinition: levelDef,

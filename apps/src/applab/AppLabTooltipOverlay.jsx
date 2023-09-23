@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import TooltipOverlay, {coordinatesProvider} from '../templates/TooltipOverlay';
 import {getId} from './designElements/elementUtils';
-import {draggedElementDropPoint} from './gridUtils';
+import gridUtils from './gridUtils';
 import {connect} from 'react-redux';
 import {ApplabInterfaceMode} from './constants';
 import {ellipsify} from '../utils';
@@ -82,7 +82,7 @@ export class AppLabTooltipOverlay extends React.Component {
     'id: ' + ellipsify(this.state.hoveredControlId, ELEMENT_ID_TEXT_MAX_CHAR);
 
   render() {
-    const dragPoint = draggedElementDropPoint();
+    const dragPoint = gridUtils.draggedElementDropPoint();
     let tooltipProviders = [coordinatesProvider(false, this.props.isRtl)];
     if (this.state.hoveredControlId) {
       tooltipProviders.push(this.getElementIdText);

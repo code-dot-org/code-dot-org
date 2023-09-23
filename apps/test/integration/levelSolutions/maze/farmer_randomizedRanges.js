@@ -87,7 +87,7 @@ var levelDef = {
   ],
 };
 
-module.exports = {
+export default {
   app: 'maze',
   skinId: 'farmer',
   levelDefinition: levelDef,

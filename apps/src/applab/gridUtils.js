@@ -78,19 +78,6 @@ export function getDraggedElement() {
 }
 
 /**
- * If a drag is underway, returns the target coordinates of the dragged element
- * if they were dropped right now.  If no drag is underway, returns null.
- * @returns {TopLeft|null}
- */
-export function draggedElementDropPoint() {
-  const draggedElement = getDraggedElement();
-  if (!draggedElement.length) {
-    return null;
-  }
-  return scaledDropPoint(draggedElement);
-}
-
-/**
  * Given a coordinate on either axis and a grid size, returns a coordinate
  * near the given coordinate that snaps to the given grid size.
  * @param {number} coordinate
@@ -112,3 +99,21 @@ export function growToGridSize(dimension) {
 }
 
 export {isPointInBounds};
+
+/**
+ * If a drag is underway, returns the target coordinates of the dragged element
+ * if they were dropped right now.  If no drag is underway, returns null.
+ * @returns {TopLeft|null}
+ */
+function draggedElementDropPoint() {
+  const draggedElement = getDraggedElement();
+  if (!draggedElement.length) {
+    return null;
+  }
+  return scaledDropPoint(draggedElement);
+}
+
+// Using a default export required for stubing draggedElementDropPoint in tests
+export default {
+  draggedElementDropPoint,
+};

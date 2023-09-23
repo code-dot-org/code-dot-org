@@ -20,7 +20,7 @@ var levelDef = {
   timeoutFailureTick: 200,
 };
 
-module.exports = {
+export default {
   app: 'studio',
   skinId: 'studio',
   levelDefinition: levelDef,

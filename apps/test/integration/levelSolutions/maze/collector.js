@@ -87,7 +87,7 @@ const levelDef = {
   ],
 };
 
-module.exports = {
+export default {
   app: 'maze',
   skinId: 'collector',
   levelDefinition: levelDef,

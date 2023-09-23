@@ -137,7 +137,7 @@ var invalidExampleMissingResult =
   '  </functional_input>' +
   '</block>';
 
-module.exports = {
+export default {
   app: 'studio',
   skinId: 'studio',
   levelDefinition: {

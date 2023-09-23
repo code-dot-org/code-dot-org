@@ -1,5 +1,5 @@
 import {TestResults} from '@cdo/apps/constants';
-var blockUtils = require('@cdo/apps/block_utils');
+import blockUtils from '@cdo/apps/block_utils';
 
 // Bee level in which we have a flower with zero nectar
 var levelDef = {
@@ -28,7 +28,7 @@ var levelDef = {
   flowerType: 'redWithNectar',
 };
 
-module.exports = {
+export default {
   app: 'maze',
   skinId: 'bee',
   levelDefinition: levelDef,

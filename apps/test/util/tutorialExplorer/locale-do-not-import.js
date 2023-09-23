@@ -7,6 +7,7 @@
  * which is important for making locale setup work seamlessly in tests.
  */
 // make sure Blockly is loaded
-require('../setupBlocklyGlobal')();
-require('../../../build/package/js/en_us/tutorialExplorer_locale.js');
+import setupBlocklyGlobal from '../setupBlocklyGlobal';
+import '../../../build/package/js/en_us/tutorialExplorer_locale.js';
+setupBlocklyGlobal();
 export default window.locales.tutorialExplorer_locale;

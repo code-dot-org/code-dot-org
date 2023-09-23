@@ -1,5 +1,5 @@
 import {TestResults} from '@cdo/apps/constants';
-var PlanterHandler = require('@cdo/apps/maze/results/planter');
+import PlanterHandler from '@cdo/apps/maze/results/planter';
 
 var levelDef = {
   startDirection: 1, // Direction.EAST,
@@ -87,7 +87,7 @@ var levelDef = {
   ],
 };
 
-module.exports = {
+export default {
   app: 'maze',
   skinId: 'planter',
   levelDefinition: levelDef,

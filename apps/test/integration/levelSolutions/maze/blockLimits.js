@@ -1,5 +1,5 @@
 import {TestResults} from '@cdo/apps/constants';
-const blockUtils = require('@cdo/apps/block_utils');
+import blockUtils from '@cdo/apps/block_utils';
 
 const levelDef = {
   map: [
@@ -30,7 +30,7 @@ const levelDef = {
   honeyGoal: 1,
 };
 
-module.exports = {
+export default {
   app: 'maze',
   skinId: 'bee',
   levelDefinition: levelDef,

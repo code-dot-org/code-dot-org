@@ -1,5 +1,5 @@
 import {assert} from '../util/reconfiguredChai';
-var testUtils = require('./../util/testUtils');
+import * as testUtils from './../util/testUtils';
 
 import instructions, {
   toggleInstructionsCollapsed,

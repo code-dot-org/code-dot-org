@@ -1,8 +1,8 @@
 import {assert} from '../../util/reconfiguredChai';
 import sinon from 'sinon';
-var NetSimTestUtils = require('../../util/netsimTestUtils');
-var NetSimTable = require('@cdo/apps/netsim/NetSimTable');
-var NetSimGlobals = require('@cdo/apps/netsim/NetSimGlobals');
+import * as NetSimTestUtils from '../../util/netsimTestUtils';
+import NetSimTable from '@cdo/apps/netsim/NetSimTable';
+import NetSimGlobals from '@cdo/apps/netsim/NetSimGlobals';
 
 describe('NetSimTable', function () {
   let clock,

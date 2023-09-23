@@ -11,7 +11,7 @@ var levelDef = {
   useModalFunctionEditor: true,
 };
 
-module.exports = {
+export default {
   app: 'turtle',
   levelDefinition: levelDef,
   tests: [

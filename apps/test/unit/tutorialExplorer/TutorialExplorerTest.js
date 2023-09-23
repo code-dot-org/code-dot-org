@@ -1,6 +1,7 @@
 /** @file Tests for tutorialExplorer.js */
 
-var assert = require('assert');
+import assert from 'assert';
+
 import TutorialExplorer from '@cdo/apps/tutorialExplorer/tutorialExplorer';
 import {
   orgNameCodeOrg,

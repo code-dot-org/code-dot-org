@@ -1,12 +1,12 @@
 /** @file Tests for NetSimRemoteNodeSelectionPanel */
 import $ from 'jquery';
 import {assert} from '../../util/reconfiguredChai';
-var NetSimTestUtils = require('../../util/netsimTestUtils');
-var NetSimRemoteNodeSelectionPanel = require('@cdo/apps/netsim/NetSimRemoteNodeSelectionPanel');
-var NetSimClientNode = require('@cdo/apps/netsim/NetSimClientNode');
-var NetSimGlobals = require('@cdo/apps/netsim/NetSimGlobals');
-var NetSimRouterNode = require('@cdo/apps/netsim/NetSimRouterNode');
-var DashboardUser = require('@cdo/apps/netsim/DashboardUser');
+import * as NetSimTestUtils from '../../util/netsimTestUtils';
+import NetSimRemoteNodeSelectionPanel from '@cdo/apps/netsim/NetSimRemoteNodeSelectionPanel';
+import NetSimClientNode from '@cdo/apps/netsim/NetSimClientNode';
+import NetSimGlobals from '@cdo/apps/netsim/NetSimGlobals';
+import NetSimRouterNode from '@cdo/apps/netsim/NetSimRouterNode';
+import DashboardUser from '@cdo/apps/netsim/DashboardUser';
 
 describe('NetSimRemoteNodeSelectionPanel', function () {
   var rootDiv, emptyCallbacks;

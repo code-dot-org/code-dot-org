@@ -1,8 +1,8 @@
-var testUtils = require('../../../util/testUtils');
+import * as testUtils from '../../../util/testUtils';
 import {TestResults} from '@cdo/apps/constants';
-var blockUtils = require('@cdo/apps/block_utils.js');
+import blockUtils from '@cdo/apps/block_utils.js';
 
-module.exports = {
+export default {
   app: 'turtle',
   skinId: 'elsa',
 

@@ -2,7 +2,7 @@ import {
   TestResults,
   BeeTerminationValue as TerminationValue,
 } from '@cdo/apps/constants';
-var blockUtils = require('@cdo/apps/block_utils');
+import blockUtils from '@cdo/apps/block_utils';
 
 // Nectar goal of 2.  Two directly in front of us, one more a square later
 var levelDef = {
@@ -31,7 +31,7 @@ var levelDef = {
   flowerType: 'redWithNectar',
 };
 
-module.exports = {
+export default {
   app: 'maze',
   skinId: 'bee',
   levelDefinition: levelDef,

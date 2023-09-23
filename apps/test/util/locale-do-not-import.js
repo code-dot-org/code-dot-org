@@ -8,7 +8,8 @@
  */
 
 // make sure Blockly is loaded
-require('./setupBlocklyGlobal')();
+import setupBlocklyGlobal from './setupBlocklyGlobal';
+setupBlocklyGlobal();
 var context = require.context(
   '../../build/package/js/en_us/',
   false,
@@ -16,4 +17,4 @@ var context = require.context(
 );
 context.keys().forEach(context);
 
-module.exports = window.locales.common_locale;
+export default window.locales.common_locale;

@@ -1,6 +1,6 @@
 import {assert} from '../../util/reconfiguredChai';
-var NetSimTestUtils = require('../../util/netsimTestUtils');
-var Packet = require('@cdo/apps/netsim/Packet');
+import * as NetSimTestUtils from '../../util/netsimTestUtils';
+import Packet from '@cdo/apps/netsim/Packet';
 
 describe('Packet.Encoder', function () {
   beforeEach(function () {

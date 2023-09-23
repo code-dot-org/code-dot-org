@@ -39,7 +39,7 @@ var level = {
   freePlay: false,
 };
 
-module.exports = {
+export default {
   app: 'calc',
   skinId: 'calc',
   levelDefinition: level,

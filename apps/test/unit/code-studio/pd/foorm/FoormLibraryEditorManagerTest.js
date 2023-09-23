@@ -6,8 +6,9 @@ import FoormEntityEditor from '@cdo/apps/code-studio/pd/foorm/editor/components/
 import FoormEntityLoadButtons from '@cdo/apps/code-studio/pd/foorm/editor/components/FoormEntityLoadButtons';
 import {UnconnectedFoormLibraryEditorManager as FoormLibraryEditorManager} from '@cdo/apps/code-studio/pd/foorm/editor/library/FoormLibraryEditorManager';
 import sinon from 'sinon';
+import jquery from 'jquery';
 
-global.$ = require('jquery');
+global.$ = jquery;
 
 describe('FoormLibraryEditorManager', () => {
   let defaultProps, server, wrapper;

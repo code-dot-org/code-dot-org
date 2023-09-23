@@ -3,8 +3,9 @@ import sinon from 'sinon';
 import React from 'react';
 import {mount, shallow} from 'enzyme';
 import {AppLabTooltipOverlay} from '@cdo/apps/applab/AppLabTooltipOverlay';
-// ES5-style require necessary to stub gridUtils.draggedElementDropPoint
-var gridUtils = require('@cdo/apps/applab/gridUtils');
+
+// using the default export required to stub gridUtils.draggedElementDropPoint
+import gridUtils from '@cdo/apps/applab/gridUtils';
 
 describe('AppLabTooltipOverlay', () => {
   const TEST_APP_WIDTH = 100 * Math.random(),

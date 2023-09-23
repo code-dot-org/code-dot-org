@@ -1,5 +1,5 @@
 import {assert} from '../../util/reconfiguredChai';
-var ArgumentUtils = require('@cdo/apps/netsim/ArgumentUtils');
+import ArgumentUtils from '@cdo/apps/netsim/ArgumentUtils';
 
 describe('ArgumentUtils', function () {
   describe('validateRequired', function () {

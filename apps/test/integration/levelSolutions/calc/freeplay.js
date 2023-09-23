@@ -1,7 +1,7 @@
 import {TestResults} from '@cdo/apps/constants';
-var blockUtils = require('@cdo/apps/block_utils');
+import blockUtils from '@cdo/apps/block_utils';
 
-module.exports = {
+export default {
   app: 'calc',
   skinId: 'calc',
   levelDefinition: {

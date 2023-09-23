@@ -1,7 +1,7 @@
 import {TestResults} from '@cdo/apps/constants';
 import blockUtils from '@cdo/apps/block_utils';
 
-let _ = require('lodash');
+import _ from 'lodash';
 
 let blankPlane = _.range(100).map(function () {
   return '';
@@ -9,7 +9,7 @@ let blankPlane = _.range(100).map(function () {
 let actionPlane = _.clone(blankPlane);
 actionPlane[4 * 10 + 6] = 'sheep';
 
-module.exports = {
+export default {
   app: 'craft',
   skinId: 'craft',
   levelDefinition: {

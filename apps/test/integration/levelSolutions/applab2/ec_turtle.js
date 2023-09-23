@@ -1,10 +1,10 @@
-var testUtils = require('../../../util/testUtils');
-var tickWrapper = require('../../util/tickWrapper');
+import * as testUtils from '../../../util/testUtils';
+import tickWrapper from '../../util/tickWrapper';
 import {TestResults} from '@cdo/apps/constants';
-var levels = require('@cdo/apps/applab/levels');
-var $ = require('jquery');
+import levels from '@cdo/apps/applab/levels';
+import $ from 'jquery';
 
-module.exports = {
+export default {
   app: 'applab',
   skinId: 'applab',
   levelDefinition: Object.assign({}, levels.ec_simple, {

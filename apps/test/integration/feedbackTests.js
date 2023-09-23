@@ -1,12 +1,14 @@
 import {assert} from '../util/reconfiguredChai';
-var testUtils = require('../util/testUtils');
 import {setupTestBlockly, getStudioAppSingleton} from './util/testBlockly';
 
-var testCollectionUtils = require('./util/testCollectionUtils');
-var sharedFunctionalBlocks = require('@cdo/apps/sharedFunctionalBlocks');
+import testCollectionUtils from './util/testCollectionUtils';
+import sharedFunctionalBlocks from '@cdo/apps/sharedFunctionalBlocks';
 import {TestResults} from '@cdo/apps/constants';
 import * as redux from '@cdo/apps/redux';
 import sinon from 'sinon';
+import blocksCommon from '@cdo/apps/blocksCommon';
+import data from './util/data';
+import turtleBlocks from '@cdo/apps/turtle/blocks';
 
 /**
  * Loads blocks into the workspace, then calls
@@ -16,13 +18,10 @@ import sinon from 'sinon';
 describe('checkForEmptyContainerBlockFailure_', function () {
   var studioApp;
 
-  testUtils.setExternalGlobals();
-
   // create our environment
   beforeEach(function () {
     setupTestBlockly();
     var blockInstallOptions = {isK1: false};
-    var blocksCommon = require('@cdo/apps/blocksCommon');
     blocksCommon.install(Blockly, blockInstallOptions);
 
     studioApp = getStudioAppSingleton();
@@ -607,7 +606,7 @@ describe('getMissingBlocks_ tests', function () {
 
     var skinForTests;
     if (testCollection.skinId) {
-      var appSkins = require('@cdo/apps/' + testCollection.app + '/skins');
+      var appSkins = require('@cdo/apps/' + testCollection.app + '/skins'); // eslint-disable-line import/no-commonjs
       skinForTests = appSkins.load(studioApp.assetUrl, testCollection.skinId);
     } else {
       skinForTests = {
@@ -618,9 +617,8 @@ describe('getMissingBlocks_ tests', function () {
     }
 
     var blockInstallOptions = {skin: skinForTests, isK1: false};
-    var blocksCommon = require('@cdo/apps/blocksCommon');
     blocksCommon.install(Blockly, blockInstallOptions);
-    var blocks = require('@cdo/apps/' + testCollection.app + '/blocks');
+    var blocks = require('@cdo/apps/' + testCollection.app + '/blocks'); // eslint-disable-line import/no-commonjs
     assert(blocks);
     blocks.install(Blockly, blockInstallOptions);
     validateBlocks({
@@ -638,7 +636,7 @@ describe('getMissingBlocks_ tests', function () {
       var app = testCollection.app;
 
       testCollection.tests.forEach(function (testData, index) {
-        var dataItem = require('./util/data')(app);
+        var dataItem = data(app);
 
         if (testData.missingBlocks) {
           it('MissingBlocks: ' + testData.description, function () {
@@ -655,7 +653,7 @@ describe('getMissingBlocks_ tests', function () {
 });
 
 describe('getCountableBlocks_', function () {
-  var blocks = require('@cdo/apps/turtle/blocks');
+  var blocks = turtleBlocks;
   var blockInstallOptions = {
     skin: {
       assetUrl: function (str) {
@@ -834,7 +832,6 @@ describe('unusedBlocks', function () {
     });
     setupTestBlockly();
     var blockInstallOptions = {isK1: false};
-    var blocksCommon = require('@cdo/apps/blocksCommon');
     blocksCommon.install(Blockly, blockInstallOptions);
 
     studioApp = getStudioAppSingleton();

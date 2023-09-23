@@ -1,11 +1,11 @@
 /** @file Tests for NetSimRouterLogModal */
 import $ from 'jquery';
 import {assert, expect} from '../../util/reconfiguredChai';
-var NetSimLocalClientNode = require('@cdo/apps/netsim/NetSimLocalClientNode');
-var NetSimTestUtils = require('../../util/netsimTestUtils');
-var NetSimRouterLogModal = require('@cdo/apps/netsim/NetSimRouterLogModal');
-var NetSimRouterNode = require('@cdo/apps/netsim/NetSimRouterNode');
-var NetSimGlobals = require('@cdo/apps/netsim/NetSimGlobals');
+import NetSimLocalClientNode from '@cdo/apps/netsim/NetSimLocalClientNode';
+import * as NetSimTestUtils from '../../util/netsimTestUtils';
+import NetSimRouterLogModal from '@cdo/apps/netsim/NetSimRouterLogModal';
+import NetSimRouterNode from '@cdo/apps/netsim/NetSimRouterNode';
+import NetSimGlobals from '@cdo/apps/netsim/NetSimGlobals';
 
 var fakeShard = NetSimTestUtils.fakeShard;
 

@@ -1,11 +1,11 @@
 import $ from 'jquery';
-var testUtils = require('../../../util/testUtils');
-var tickWrapper = require('../../util/tickWrapper');
+import * as testUtils from '../../../util/testUtils';
+import tickWrapper from '../../util/tickWrapper';
 import {TestResults} from '@cdo/apps/constants';
 import {globalFunctions} from '@cdo/apps/dropletUtilsGlobalFunctions';
 import sinon from 'sinon';
 
-module.exports = {
+export default {
   app: 'applab',
   skinId: 'applab',
   levelFile: 'levels',

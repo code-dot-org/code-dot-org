@@ -1,8 +1,8 @@
 import {TestResults} from '@cdo/apps/constants';
-var Calc = require('@cdo/apps/calc/calc.js');
-var EquationSet = require('@cdo/apps/calc/equationSet.js');
-var Equation = require('@cdo/apps//calc/equation.js');
-var ExpressionNode = require('@cdo/apps/calc/expressionNode.js');
+import Calc from '@cdo/apps/calc/calc.js';
+import EquationSet from '@cdo/apps/calc/equationSet.js';
+import Equation from '@cdo/apps//calc/equation.js';
+import ExpressionNode from '@cdo/apps/calc/expressionNode.js';
 
 /**
  * This is another example of me taking advantage of the fact that our level
@@ -13,7 +13,7 @@ var ExpressionNode = require('@cdo/apps/calc/expressionNode.js');
 var displayComplexUserExpressions =
   Calc.__testonly__.displayComplexUserExpressions;
 
-module.exports = {
+export default {
   app: 'calc',
   skinId: 'calc',
   levelDefinition: {

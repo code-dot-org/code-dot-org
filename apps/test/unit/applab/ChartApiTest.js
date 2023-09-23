@@ -1,6 +1,6 @@
 import {assert} from '../../util/reconfiguredChai';
-var ChartApi = require('@cdo/apps/applab/ChartApi');
-var GoogleChart = require('@cdo/apps/applab/GoogleChart');
+import ChartApi from '@cdo/apps/applab/ChartApi';
+import GoogleChart from '@cdo/apps/applab/GoogleChart';
 
 var fakeDiv = document.createElement('div');
 var fakeImg = document.createElement('img');

@@ -1,7 +1,7 @@
 import {assert, expect} from '../../util/reconfiguredChai';
 import sinon from 'sinon';
 
-var testUtils = require('../../util/testUtils');
+import * as testUtils from '../../util/testUtils';
 import * as assetPrefix from '@cdo/apps/assetManagement/assetPrefix';
 import Exporter from '@cdo/apps/p5lab/gamelab/Exporter';
 import pageConstantsReducer, {
@@ -13,6 +13,7 @@ import {
   __testing_stubRedux,
   __testing_restoreRedux,
 } from '@cdo/apps/redux';
+import jquery from 'jquery';
 
 const emptyAnimationOpts = {
   animationList: {
@@ -299,11 +300,11 @@ describe('The Gamelab Exporter,', function () {
               htmlFile.indexOf('<body>') + '<body>'.length,
               htmlFile.indexOf('</body>')
             );
-            window.$ = require('jquery');
+            window.$ = jquery;
 
             // webpack-runtime must appear exactly once on any page containing webpack entries.
-            require('../../../build/package/js/webpack-runtime.js');
-            require('../../../build/package/js/gamelab-api.js');
+            require('../../../build/package/js/webpack-runtime.js'); // eslint-disable-line import/no-commonjs
+            require('../../../build/package/js/gamelab-api.js'); // eslint-disable-line import/no-commonjs
 
             //
             // Note: we are simulating a p5.js environment and manually calling
@@ -311,7 +312,7 @@ describe('The Gamelab Exporter,', function () {
             //
             // (dynamic require on p5.play.js has issues with its p5 module dependency)
             //
-            window.p5 = require('../../../build/package/js/p5play/p5.js');
+            window.p5 = require('../../../build/package/js/p5play/p5.js'); // eslint-disable-line import/no-commonjs
 
             eval(zipFiles['my-app/code.js']); // eslint-disable-line no-eval
 

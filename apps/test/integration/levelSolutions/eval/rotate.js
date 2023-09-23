@@ -1,5 +1,5 @@
 import {TestResults} from '@cdo/apps/constants';
-var blockUtils = require('@cdo/apps/block_utils');
+import blockUtils from '@cdo/apps/block_utils';
 
 var solutionXml = blockUtils.mathBlockXml('rotate', {
   IMAGE: blockUtils.mathBlockXml('functional_rectangle', {
@@ -11,7 +11,7 @@ var solutionXml = blockUtils.mathBlockXml('rotate', {
   DEGREES: blockUtils.mathBlockXml('functional_math_number', null, {NUM: 45}),
 });
 
-module.exports = {
+export default {
   app: 'eval',
   skinId: 'eval',
   levelDefinition: {

@@ -1,6 +1,8 @@
+/* eslint-disable import/no-commonjs */
+
 var appCache = {};
 
-module.exports = function (app) {
+export default function (app) {
   if (appCache[app]) {
     return appCache[app];
   }
@@ -86,4 +88,4 @@ module.exports = function (app) {
   if (appCache[app]) {
     return appCache[app];
   }
-};
+}

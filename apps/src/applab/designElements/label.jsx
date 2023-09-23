@@ -15,7 +15,7 @@ import TextAlignmentPropertyRow, {
 import BorderProperties from './BorderProperties';
 import * as applabConstants from '../constants';
 import * as elementUtils from './elementUtils';
-import * as gridUtils from '../gridUtils';
+import {isDraggableContainer} from '../gridUtils';
 import designMode from '../designMode';
 import themeValues from '../themeValues';
 import elementLibrary from './library';
@@ -316,7 +316,7 @@ export default {
       }
       // Don't move text past the left side.
       element.style.left = Math.max(0, left) + 'px';
-      if (gridUtils.isDraggableContainer(element.parentNode)) {
+      if (isDraggableContainer(element.parentNode)) {
         element.parentNode.style.left = element.style.left;
       }
     }

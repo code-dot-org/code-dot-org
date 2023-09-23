@@ -1,6 +1,6 @@
 import {TestResults} from '@cdo/apps/constants';
 
-module.exports = {
+export default {
   app: 'studio',
   skinId: 'studio',
   levelFile: 'levels',

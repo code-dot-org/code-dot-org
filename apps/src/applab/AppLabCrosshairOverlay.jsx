@@ -3,7 +3,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import CrosshairOverlay from '../templates/CrosshairOverlay';
-import {draggedElementDropPoint} from './gridUtils';
+import gridUtils from './gridUtils';
 
 export default class AppLabCrosshairOverlay extends React.Component {
   static propTypes = {
@@ -15,7 +15,7 @@ export default class AppLabCrosshairOverlay extends React.Component {
   };
 
   render() {
-    const dragPoint = draggedElementDropPoint();
+    const dragPoint = gridUtils.draggedElementDropPoint();
     return (
       <CrosshairOverlay
         width={this.props.width}

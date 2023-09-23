@@ -1,4 +1,4 @@
-var _ = require('lodash');
+import _ from 'lodash';
 
 /**
  * tickWrapper allows us to insert functions that get run at the beginning of
@@ -24,14 +24,14 @@ function insert(app, fn) {
   preTickFunctions.push(fn);
 }
 
-module.exports.reset = function reset() {
+function reset() {
   if (originalOnTick) {
     originalApp.onTick = originalOnTick;
     originalOnTick = undefined;
     originalApp = undefined;
   }
   preTickFunctions = [];
-};
+}
 
 /**
  * Insert a preTick method that calls fn on the given tick
@@ -39,14 +39,14 @@ module.exports.reset = function reset() {
  * @param {number} tick - Tick on which to run
  * @param {function} fn - Function to call on given tick
  */
-module.exports.runOnAppTick = function runOnAppTick(app, tick, fn) {
+function runOnAppTick(app, tick, fn) {
   insert(
     app,
     takeActionConditionally(fn, function () {
       return app.tickCount === tick;
     })
   );
-};
+}
 
 /**
  * Insert a preTick method that resolves a promise when predicate is first
@@ -56,7 +56,7 @@ module.exports.runOnAppTick = function runOnAppTick(app, tick, fn) {
  *   to resolve
  * @returns the promise
  */
-module.exports.tickAppUntil = function tickAppUntil(app, predicate) {
+function tickAppUntil(app, predicate) {
   return new Promise(function (resolve) {
     // Create an action that will resolve our promise the first time it's hit
     var tookAction = false;
@@ -70,7 +70,7 @@ module.exports.tickAppUntil = function tickAppUntil(app, predicate) {
 
     insert(app, takeActionConditionally(action, predicate));
   });
-};
+}
 
 /**
  * Wrap app's onTick method to execute all the preTick functions before executing
@@ -109,3 +109,9 @@ function takeActionConditionally(action, condition) {
     }
   };
 }
+
+export default {
+  reset,
+  runOnAppTick,
+  tickAppUntil,
+};

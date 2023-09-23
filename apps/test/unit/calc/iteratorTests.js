@@ -1,6 +1,6 @@
 import {assert} from '../../util/reconfiguredChai';
 
-var InputIterator = require('@cdo/apps/calc/inputIterator');
+import InputIterator from '@cdo/apps/calc/inputIterator';
 
 describe('InputIterator', function () {
   it('works for a single param', function () {

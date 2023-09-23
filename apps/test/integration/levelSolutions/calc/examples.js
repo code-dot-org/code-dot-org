@@ -181,7 +181,7 @@ var validExampleRationalFloat =
   '  </functional_input>' +
   '</block>';
 
-module.exports = {
+export default {
   app: 'calc',
   skinId: 'calc',
   levelDefinition: {

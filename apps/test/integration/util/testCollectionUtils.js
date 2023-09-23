@@ -1,5 +1,5 @@
-var _ = require('lodash');
-const KARMA_CLI_FLAGS = require('../../util/KARMA_CLI_FLAGS');
+import _ from 'lodash';
+import KARMA_CLI_FLAGS from '../../util/KARMA_CLI_FLAGS';
 
 /**
  * Given a list of levelSolutions subdirectories, returns only those matching
@@ -37,7 +37,7 @@ function filterFiles(files) {
   return files;
 }
 
-module.exports = {
+export default {
   // Get all json files under directory path
   getCollections: function () {
     var context = require.context('../levelSolutions/', true, /.*\.js$/);
