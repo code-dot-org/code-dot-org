@@ -1,4 +1,4 @@
-exports.load = function (assetUrl) {
+const load = function (assetUrl) {
   return {
     patternDefault: assetUrl('media/common_images/defaultline-menuicon.png'), // default first, then alphabetical
     brickLine: assetUrl('media/common_images/brick.png'),
@@ -52,4 +52,7 @@ exports.load = function (assetUrl) {
     waterLine: assetUrl('media/common_images/water.png'),
     waterMenu: assetUrl('media/common_images/water-menuicon.png'),
   };
+};
+export default {
+  load,
 };

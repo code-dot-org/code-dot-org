@@ -2,10 +2,11 @@
  * @overview Wires in the visualization that map to simulation entities.
  */
 
-require('../utils'); // Provides Function.prototype.inherits
-var NetSimGlobals = require('./NetSimGlobals');
-var NetSimVizNode = require('./NetSimVizNode');
-var NetSimVizWire = require('./NetSimVizWire');
+import '../utils'; // Provides Function.prototype.inherits
+
+import NetSimGlobals from './NetSimGlobals';
+import NetSimVizNode from './NetSimVizNode';
+import NetSimVizWire from './NetSimVizWire';
 
 /**
  * @param {NetSimWire} sourceWire
@@ -14,10 +15,7 @@ var NetSimVizWire = require('./NetSimVizWire');
  * @constructor
  * @augments NetSimVizWire
  */
-var NetSimVizSimulationWire = (module.exports = function (
-  sourceWire,
-  getElementByEntityId
-) {
+var NetSimVizSimulationWire = function (sourceWire, getElementByEntityId) {
   var localNode = getElementByEntityId(NetSimVizNode, sourceWire.localNodeID);
   var remoteNode = getElementByEntityId(NetSimVizNode, sourceWire.remoteNodeID);
   NetSimVizWire.call(this, localNode, remoteNode);
@@ -44,7 +42,8 @@ var NetSimVizSimulationWire = (module.exports = function (
 
   this.configureFrom(sourceWire);
   this.render();
-});
+};
+export default NetSimVizSimulationWire;
 NetSimVizSimulationWire.inherits(NetSimVizWire);
 
 /**

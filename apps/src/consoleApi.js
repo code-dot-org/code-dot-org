@@ -1,6 +1,6 @@
-var vsprintf = require('sprintf-js').vsprintf;
+import {vsprintf} from 'sprintf-js';
 
-var consoleApi = module.exports;
+const consoleApi = {};
 var logMethod = function () {};
 var clearMethod = function () {};
 
@@ -34,3 +34,5 @@ consoleApi.log = function () {
 consoleApi.clear = function () {
   clearMethod();
 };
+
+export {consoleApi as default};

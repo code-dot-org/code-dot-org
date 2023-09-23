@@ -1,4 +1,4 @@
-var evalUtils = require('./evalUtils');
+import * as evalUtils from './evalUtils';
 
 var EvalImage = function (style, color) {
   // x/y location in pixel space of object's center
@@ -12,7 +12,7 @@ var EvalImage = function (style, color) {
   this.style_ = style;
   this.color_ = color;
 };
-module.exports = EvalImage;
+export default EvalImage;
 
 EvalImage.prototype.updatePosition = function (x, y) {
   this.x_ = x;

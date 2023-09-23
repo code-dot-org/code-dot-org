@@ -12,7 +12,7 @@
  * methods with no-op functions.
  * @param {!Window} window
  */
-module.exports = function (window) {
+export default function (window) {
   // Add console if it doesn't exist
   var console = (window.console = window.console || {});
 
@@ -48,4 +48,4 @@ module.exports = function (window) {
       console[method] = function () {};
     }
   }
-};
+}

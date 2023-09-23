@@ -4,7 +4,7 @@
  * Copyright 2013 Code.org
  *
  */
-var levels = require('./levels');
+import levels from './levels';
 
 var patternCache = {
   queued: [],
@@ -139,7 +139,7 @@ function addQueuedWhenReady() {
 }
 
 // Install extensions to Blockly's language and JavaScript generator.
-exports.install = function (blockly, blockInstallOptions) {
+function install(blockly, blockInstallOptions) {
   var skin = blockInstallOptions.skin;
   // could make this settable on the level if I need
   var HSV = [0, 1.0, 0.98];
@@ -199,7 +199,7 @@ exports.install = function (blockly, blockInstallOptions) {
 
   delete blockly.Blocks.procedures_defreturn;
   delete blockly.Blocks.procedures_ifreturn;
-};
+}
 
 function generateBlankBlock(blockly, skin, name, hsv, width, label) {
   blockly.Blocks[name] = {
@@ -266,3 +266,7 @@ function generateJigsawBlocksForLevel(blockly, skin, options) {
     generateBlock(i);
   }
 }
+
+export default {
+  install,
+};

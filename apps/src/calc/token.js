@@ -1,4 +1,4 @@
-var jsnums = require('@code-dot-org/js-numbers');
+import jsnums from '@code-dot-org/js-numbers';
 
 // Unicode character for non-breaking space
 var NBSP = '\u00A0';
@@ -25,7 +25,7 @@ var Token = function (val, marked) {
   this.repeated_ = null;
   this.setStringRepresentation_();
 };
-module.exports = Token;
+export default Token;
 
 Token.prototype.isParenthesis = function () {
   return this.val_ === '(' || this.val_ === ')';

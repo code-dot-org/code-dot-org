@@ -30,7 +30,7 @@ var Cell = function (tileType, speed, size, direction, emotion, sprite) {
   this.sprite_ = sprite;
 };
 
-module.exports = Cell;
+export default Cell;
 
 /**
  * @return {Number}

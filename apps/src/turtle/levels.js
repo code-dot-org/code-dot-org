@@ -1,8 +1,29 @@
-var levelBase = require('../level_base');
-var answer = require('./answers').answer;
-var msg = require('./locale');
-var blockUtils = require('../block_utils');
-var utils = require('../utils');
+import * as levelBase from '../level_base';
+import {answer} from './answers';
+import msg from './locale';
+import blockUtils from '../block_utils';
+import {extend} from '../utils';
+
+import {
+  defineWithArg,
+  drawASnowman,
+  drawASquare,
+  drawTurn,
+  drawTurnRestricted,
+  makeMathNumber,
+  move,
+  moveForwardInline,
+  MOVE_BACKWARD_INLINE,
+  MOVE_FORWARD_INLINE,
+  MOVE_FORWARD_OR_BACKWARD_INLINE,
+  repeat,
+  simpleBlock,
+  turnLeft,
+  turnLeftRestricted,
+  turnRight,
+  turnRightByConstant,
+  turnRightRestricted,
+} from './requiredBlocks';
 
 // An early hack introduced some levelbuilder levels as page 5, level 7. Long
 // term we can probably do something much cleaner, but for now I'm calling
@@ -24,26 +45,6 @@ var startBlocks = function (page, level) {
     level: level,
   });
 };
-
-var req = require('./requiredBlocks');
-var makeMathNumber = req.makeMathNumber;
-var simpleBlock = req.simpleBlock;
-var repeat = req.repeat;
-var drawASquare = req.drawASquare;
-var drawASnowman = req.drawASnowman;
-var MOVE_FORWARD_INLINE = req.MOVE_FORWARD_INLINE;
-var MOVE_FORWARD_OR_BACKWARD_INLINE = req.MOVE_FORWARD_OR_BACKWARD_INLINE;
-var moveForwardInline = req.moveForwardInline;
-var MOVE_BACKWARD_INLINE = req.MOVE_BACKWARD_INLINE;
-var turnLeftRestricted = req.turnLeftRestricted;
-var turnRightRestricted = req.turnRightRestricted;
-var turnRightByConstant = req.turnRightByConstant;
-var turnRight = req.turnRight;
-var turnLeft = req.turnLeft;
-var move = req.move;
-var drawTurnRestricted = req.drawTurnRestricted;
-var drawTurn = req.drawTurn;
-var defineWithArg = req.defineWithArg;
 
 var blocks = {
   SIMPLE_MOVE_UP: blockUtils.blockOfType('simple_move_up'),
@@ -87,7 +88,7 @@ var blocks = {
 /**
  * Information about level-specific requirements.
  */
-var levels = (module.exports = {
+var levels = {
   // Level 1: El.
   '1_1': {
     instructionsImportant: true,
@@ -837,9 +838,11 @@ var levels = (module.exports = {
     startDirection: 0,
     sliderSpeed: 1.0,
   },
-});
+};
 
-levels.ec_1_1 = utils.extend(levels['1_1'], {
+export default levels;
+
+levels.ec_1_1 = extend(levels['1_1'], {
   editCode: true,
   codeFunctions: {
     moveForward: null,
@@ -847,7 +850,7 @@ levels.ec_1_1 = utils.extend(levels['1_1'], {
   },
   startBlocks: 'moveForward(100);\n',
 });
-levels.ec_1_2 = utils.extend(levels['1_2'], {
+levels.ec_1_2 = extend(levels['1_2'], {
   editCode: true,
   codeFunctions: {
     moveForward: null,
@@ -856,7 +859,7 @@ levels.ec_1_2 = utils.extend(levels['1_2'], {
   },
   startBlocks: "penColour('#ff0000');\nmoveForward(100);\n",
 });
-levels.ec_1_3 = utils.extend(levels['1_3'], {
+levels.ec_1_3 = extend(levels['1_3'], {
   editCode: true,
   codeFunctions: {
     moveForward: null,
@@ -866,7 +869,7 @@ levels.ec_1_3 = utils.extend(levels['1_3'], {
   },
   startBlocks: 'for (var i = 0; i < 4; i++) {\n  __\n}\n',
 });
-levels.ec_1_4 = utils.extend(levels['1_4'], {
+levels.ec_1_4 = extend(levels['1_4'], {
   editCode: true,
   codeFunctions: {
     moveForward: null,
@@ -876,7 +879,7 @@ levels.ec_1_4 = utils.extend(levels['1_4'], {
   },
   startBlocks: "for (var i = 0; i < 3; i++) {\n  penColour('#ff0000');\n}\n",
 });
-levels.ec_1_10 = utils.extend(levels['1_10'], {
+levels.ec_1_10 = extend(levels['1_10'], {
   editCode: true,
   codeFunctions: {
     moveForward: null,

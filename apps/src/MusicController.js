@@ -1,7 +1,8 @@
 /** @file The maestro! Helper that knows which music tracks can be played, and
  *        which one is playing now, and selects and plays them appropriately. */
-var utils = require('./utils');
-var _ = require('lodash');
+import * as utils from './utils';
+
+import _ from 'lodash';
 
 var debugLogging = false;
 function debug(msg) {
@@ -118,7 +119,7 @@ var MusicController = function (
 
   debug('constructed');
 };
-module.exports = MusicController;
+export default MusicController;
 
 /**
  * Build up initial internal track metadata.

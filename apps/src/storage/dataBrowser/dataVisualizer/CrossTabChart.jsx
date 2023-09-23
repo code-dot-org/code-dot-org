@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import {CROSS_TAB_CHART_AREA} from './constants';
-import * as color from '../../../util/color';
+import color from '../../../util/color';
 
 export default function CrossTabChart(props) {
   if (!props.records || !props.selectedColumn1 || !props.selectedColumn2) {

@@ -3,9 +3,9 @@
  * Keyed by "puzzle_number", which is the order of a given level in its script.
  */
 
-var i18n = require('../locale');
+import i18n from '../locale';
 
-module.exports = {
+export default {
   1: {
     appSpecificFailError: i18n.level1FailureMessage(),
     tooFewBlocksMsg: i18n.level1TooFewBlocksMessage(),

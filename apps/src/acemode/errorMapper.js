@@ -32,7 +32,7 @@ var errorMap = [
  * our mapping. Note this makes changes in place to the passed in results
  * object.
  */
-module.exports.processResults = function (results, appType) {
+export const processResults = function (results, appType) {
   results.data.forEach(function (item) {
     if (item.type === 'info') {
       item.type = 'warning';

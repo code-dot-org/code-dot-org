@@ -3,27 +3,27 @@
  * in the range 0..3 and that opposites have an absolute difference of 2.
  * @enum {number}
  */
-exports.Direction = {
+export const Direction = {
   NORTH: 0,
   EAST: 1,
   SOUTH: 2,
   WEST: 3,
 };
 
-exports.PADDLE_BALL_COLLIDE_DISTANCE = 0.7;
-exports.FINISH_COLLIDE_DISTANCE = 0.5;
-exports.DEFAULT_BALL_SPEED = 0.1;
-exports.DEFAULT_BALL_DIRECTION = 1.25 * Math.PI;
-exports.DEFAULT_PADDLE_SPEED = 0.1;
-exports.DEFAULT_BALL_START_Y = 2;
-exports.Y_TOP_BOUNDARY = -0.2;
+export const PADDLE_BALL_COLLIDE_DISTANCE = 0.7;
+export const FINISH_COLLIDE_DISTANCE = 0.5;
+export const DEFAULT_BALL_SPEED = 0.1;
+export const DEFAULT_BALL_DIRECTION = 1.25 * Math.PI;
+export const DEFAULT_PADDLE_SPEED = 0.1;
+export const DEFAULT_BALL_START_Y = 2;
+export const Y_TOP_BOUNDARY = -0.2;
 
 /**
  * The types of squares in the maze, which is represented
  * as a 2D array of SquareType values.
  * @enum {number}
  */
-exports.SquareType = {
+export const SquareType = {
   OPEN: 0,
   WALL: 1,
   GOAL: 2,

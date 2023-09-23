@@ -7,8 +7,9 @@
 // specified, otherwise, use background.png.
 // graph: Colour of optional grid lines, or false.
 
-var skinsBase = require('../skins');
-var msg = require('./locale');
+import skinsBase from '../skins';
+
+import msg from './locale';
 
 var CONFIGS = {
   bounce: {
@@ -232,7 +233,7 @@ var CONFIGS = {
   },
 };
 
-exports.load = function (assetUrl, id) {
+function load(assetUrl, id) {
   var skin = skinsBase.load(assetUrl, id);
   var config = CONFIGS[skin.id];
 
@@ -335,4 +336,8 @@ exports.load = function (assetUrl, id) {
   skin.flagHeight = 43;
   skin.flagWidth = 50;
   return skin;
+}
+
+export default {
+  load,
 };

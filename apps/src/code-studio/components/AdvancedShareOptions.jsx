@@ -1,7 +1,7 @@
 import React from 'react';
 import Radium from 'radium'; // eslint-disable-line no-restricted-imports
 import PropTypes from 'prop-types';
-import * as color from '../../util/color';
+import color from '../../util/color';
 import {CIPHER, ALPHABET} from '../../constants';
 import {connect} from 'react-redux';
 import i18n from '@cdo/locale';

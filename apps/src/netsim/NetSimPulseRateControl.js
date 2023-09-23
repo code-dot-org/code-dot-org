@@ -5,9 +5,10 @@
  */
 
 // Utils required only for Function.prototype.inherits()
-require('../utils');
-var i18n = require('@cdo/netsim/locale');
-var NetSimSlider = require('./NetSimSlider');
+import '../utils';
+
+import i18n from '@cdo/netsim/locale';
+import NetSimSlider from './NetSimSlider';
 
 /**
  * Generator and controller for packet size slider/selector
@@ -16,7 +17,7 @@ var NetSimSlider = require('./NetSimSlider');
  * @param {function} sliderChangeCallback
  * @constructor
  */
-var NetSimPulseRateControl = (module.exports = function (
+var NetSimPulseRateControl = function (
   rootDiv,
   initialValue,
   sliderChangeCallback
@@ -31,7 +32,8 @@ var NetSimPulseRateControl = (module.exports = function (
 
   // Auto-render, unlike our base class
   this.render();
-});
+};
+export default NetSimPulseRateControl;
 NetSimPulseRateControl.inherits(NetSimSlider.DecimalPrecisionSlider);
 
 /**

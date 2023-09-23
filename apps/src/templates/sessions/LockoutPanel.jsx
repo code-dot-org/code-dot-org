@@ -5,7 +5,7 @@ import i18n from '@cdo/locale';
 import {getStore} from '../../redux';
 import {isEmail} from '@cdo/apps/util/formatValidation';
 import cookies from 'js-cookie';
-import * as color from '../../util/color';
+import color from '../../util/color';
 import headerImage from './images/lockout_penguin.png';
 import headerThanksImage from './images/dancing_penguin.png';
 import {hashString} from '../../utils';

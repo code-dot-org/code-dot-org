@@ -1,7 +1,7 @@
-var React = require('react');
-var ReactDOM = require('react-dom');
-var utils = require('./utils');
-var ShareWarningsDialog = require('./templates/ShareWarningsDialog');
+import React from 'react';
+import ReactDOM from 'react-dom';
+import * as utils from './utils';
+import ShareWarningsDialog from './templates/ShareWarningsDialog';
 
 function hasSeenDataAlert(channelId) {
   var dataAlerts = localStorage.getItem('dataAlerts');
@@ -68,7 +68,7 @@ function onCloseShareWarnings(showedStoreDataAlert, options) {
  *        redirected to /too_young
  * @returns {ReactElement}
  */
-exports.checkSharedAppWarnings = function (options) {
+export const checkSharedAppWarnings = function (options) {
   const hasDataAPIs = options.hasDataAPIs && options.hasDataAPIs();
 
   if (hasDataAPIs && options.isTooYoung) {

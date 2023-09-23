@@ -1,10 +1,9 @@
-var tiles = require('@code-dot-org/maze').tiles;
+import {tiles} from '@code-dot-org/maze';
 var Direction = tiles.Direction;
 
-var blockUtils = require('../block_utils');
-var levelBase = require('../level_base');
-
-var msg = require('./locale');
+import blockUtils from '../block_utils';
+import * as levelBase from '../level_base';
+import msg from './locale';
 
 //TODO: Fix hacky level-number-dependent toolbox.
 var toolbox = function (page, level) {
@@ -187,7 +186,7 @@ var FILL_HOLES = {
   titles: {NAME: msg.fillStack({shovelfuls: 2})},
 };
 
-module.exports = {
+export default {
   // Formerly page 1
   '1_1': {
     instructionsImportant: true,

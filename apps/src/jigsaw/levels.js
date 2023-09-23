@@ -1,4 +1,4 @@
-var createToolbox = require('../block_utils').createToolbox;
+import {createToolbox} from '../block_utils';
 
 var jigsawBlock = function (type, x, y, child, childType) {
   return jigsawBlockWithDeletableAttr(type, x, y, child, childType, true);
@@ -95,7 +95,7 @@ var validateSimplePuzzle = function (types, options) {
  * Configuration for all levels.
  */
 
-module.exports = {
+export default {
   1: {
     instructionsIcon: 'apple',
     isK1: true,

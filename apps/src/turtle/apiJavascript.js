@@ -1,137 +1,137 @@
 var ArtistApi;
 
-exports.injectArtistAPI = function (artistApi) {
+export const injectArtistAPI = function (artistApi) {
   ArtistApi = artistApi;
 };
 
-exports.moveForward = function (distance) {
+export const moveForward = function (distance) {
   ArtistApi.log.push(['FD', distance, null]);
 };
 
-exports.moveBackward = function (distance) {
+export const moveBackward = function (distance) {
   ArtistApi.log.push(['FD', -distance, null]);
 };
 
-exports.moveUp = function (distance) {
+export const moveUp = function (distance) {
   ArtistApi.log.push(['MV', distance, 0, null]);
 };
 
-exports.moveDown = function (distance) {
+export const moveDown = function (distance) {
   ArtistApi.log.push(['MV', distance, 180, null]);
 };
 
-exports.moveLeft = function (distance) {
+export const moveLeft = function (distance) {
   ArtistApi.log.push(['MV', distance, 270, null]);
 };
 
-exports.moveRight = function (distance) {
+export const moveRight = function (distance) {
   ArtistApi.log.push(['MV', distance, 90, null]);
 };
 
-exports.moveUpRight = function (distance) {
+export const moveUpRight = function (distance) {
   ArtistApi.log.push(['MD', distance, 45, null]);
 };
 
-exports.moveDownRight = function (distance) {
+export const moveDownRight = function (distance) {
   ArtistApi.log.push(['MD', distance, 135, null]);
 };
 
-exports.moveDownLeft = function (distance) {
+export const moveDownLeft = function (distance) {
   ArtistApi.log.push(['MD', distance, 225, null]);
 };
 
-exports.moveUpLeft = function (distance) {
+export const moveUpLeft = function (distance) {
   ArtistApi.log.push(['MD', distance, 315, null]);
 };
 
-exports.jumpUp = function (distance) {
+export const jumpUp = function (distance) {
   ArtistApi.log.push(['JD', distance, 0, null]);
 };
 
-exports.jumpDown = function (distance) {
+export const jumpDown = function (distance) {
   ArtistApi.log.push(['JD', distance, 180, null]);
 };
 
-exports.jumpLeft = function (distance) {
+export const jumpLeft = function (distance) {
   ArtistApi.log.push(['JD', distance, 270, null]);
 };
 
-exports.jumpRight = function (distance) {
+export const jumpRight = function (distance) {
   ArtistApi.log.push(['JD', distance, 90, null]);
 };
 
-exports.jumpUpRight = function (distance) {
+export const jumpUpRight = function (distance) {
   ArtistApi.log.push(['JD', distance, 45, null]);
 };
 
-exports.jumpDownRight = function (distance) {
+export const jumpDownRight = function (distance) {
   ArtistApi.log.push(['JD', distance, 135, null]);
 };
 
-exports.jumpDownLeft = function (distance) {
+export const jumpDownLeft = function (distance) {
   ArtistApi.log.push(['JD', distance, 225, null]);
 };
 
-exports.jumpUpLeft = function (distance) {
+export const jumpUpLeft = function (distance) {
   ArtistApi.log.push(['JD', distance, 315, null]);
 };
 
-exports.jumpForward = function (distance) {
+export const jumpForward = function (distance) {
   ArtistApi.log.push(['JF', distance, null]);
 };
 
-exports.jumpBackward = function (distance) {
+export const jumpBackward = function (distance) {
   ArtistApi.log.push(['JF', -distance, null]);
 };
 
-exports.turnRight = function (angle) {
+export const turnRight = function (angle) {
   ArtistApi.log.push(['RT', angle, null]);
 };
 
-exports.turnLeft = function (angle) {
+export const turnLeft = function (angle) {
   ArtistApi.log.push(['RT', -angle, null]);
 };
 
-exports.globalAlpha = function (alpha) {
+export const globalAlpha = function (alpha) {
   ArtistApi.log.push(['GA', alpha, null]);
 };
 
-exports.penUp = function (id) {
+export const penUp = function (id) {
   ArtistApi.log.push(['PU', null]);
 };
 
-exports.penDown = function (id) {
+export const penDown = function (id) {
   ArtistApi.log.push(['PD', null]);
 };
 
-exports.penWidth = function (width) {
+export const penWidth = function (width) {
   ArtistApi.log.push(['PW', Math.max(width, 0), null]);
 };
 
-exports.penColour = function (colour) {
+export const penColour = function (colour) {
   ArtistApi.log.push(['PC', colour, null]);
 };
 
-exports.penPattern = function (pattern) {
+export const penPattern = function (pattern) {
   ArtistApi.log.push(['PS', pattern, null]);
 };
 
-exports.hideTurtle = function (id) {
+export const hideTurtle = function (id) {
   ArtistApi.log.push(['HT', null]);
 };
 
-exports.showTurtle = function (id) {
+export const showTurtle = function (id) {
   ArtistApi.log.push(['ST', null]);
 };
 
-exports.drawShape = function (sticker) {
+export const drawShape = function (sticker) {
   ArtistApi.log.push(['shape', sticker, null]);
 };
 
-exports.drawSticker = function (sticker) {
+export const drawSticker = function (sticker) {
   ArtistApi.log.push(['sticker', sticker, null]);
 };
 
-exports.setArtist = function (artist) {
+export const setArtist = function (artist) {
   ArtistApi.log.push(['setArtist', artist, null]);
 };

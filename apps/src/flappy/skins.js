@@ -5,13 +5,13 @@
 // specified, otherwise, use background.png.
 // graph: Colour of optional grid lines, or false.
 
-var skinsBase = require('../skins');
+import skinsBase from '../skins';
 
 var CONFIGS = {
   flappy: {},
 };
 
-exports.load = function (assetUrl, id) {
+function load(assetUrl, id) {
   var skin = skinsBase.load(assetUrl, id);
   var config = CONFIGS[skin.id];
 
@@ -177,4 +177,7 @@ exports.load = function (assetUrl, id) {
   skin.background = skin.assetUrl('background.png');
 
   return skin;
+}
+export default {
+  load,
 };

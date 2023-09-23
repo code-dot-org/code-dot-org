@@ -1,6 +1,6 @@
-var studioApp = require('../StudioApp').singleton;
+import {singleton as studioApp} from '../StudioApp';
 
-exports.FlapHeight = {
+export const FlapHeight = {
   VERY_SMALL: -6,
   SMALL: -8,
   NORMAL: -11,
@@ -8,7 +8,7 @@ exports.FlapHeight = {
   VERY_LARGE: -15,
 };
 
-exports.LevelSpeed = {
+export const LevelSpeed = {
   VERY_SLOW: 1,
   SLOW: 3,
   NORMAL: 4,
@@ -16,7 +16,7 @@ exports.LevelSpeed = {
   VERY_FAST: 8,
 };
 
-exports.GapHeight = {
+export const GapHeight = {
   VERY_SMALL: 65,
   SMALL: 75,
   NORMAL: 100,
@@ -24,7 +24,7 @@ exports.GapHeight = {
   VERY_LARGE: 150,
 };
 
-exports.Gravity = {
+export const Gravity = {
   VERY_LOW: 0.5,
   LOW: 0.75,
   NORMAL: 1,
@@ -32,68 +32,68 @@ exports.Gravity = {
   VERY_HIGH: 1.5,
 };
 
-exports.random = function (values) {
+export const random = function (values) {
   var key = Math.floor(Math.random() * values.length);
   return values[key];
 };
 
-exports.setScore = function (id, value) {
+export const setScore = function (id, value) {
   studioApp().highlight(id);
   Flappy.playerScore = value;
   Flappy.displayScore();
 };
 
-exports.setGravity = function (id, value) {
+export const setGravity = function (id, value) {
   studioApp().highlight(id);
   Flappy.gravity = value;
 };
 
-exports.setGround = function (id, value) {
+export const setGround = function (id, value) {
   studioApp().highlight(id);
   Flappy.setGround(value);
 };
 
-exports.setObstacle = function (id, value) {
+export const setObstacle = function (id, value) {
   studioApp().highlight(id);
   Flappy.setObstacle(value);
 };
 
-exports.setPlayer = function (id, value) {
+export const setPlayer = function (id, value) {
   studioApp().highlight(id);
   Flappy.setPlayer(value);
 };
 
-exports.setGapHeight = function (id, value) {
+export const setGapHeight = function (id, value) {
   studioApp().highlight(id);
   Flappy.setGapHeight(value);
 };
 
-exports.setBackground = function (id, value) {
+export const setBackground = function (id, value) {
   studioApp().highlight(id);
   Flappy.setBackground(value);
 };
 
-exports.setSpeed = function (id, value) {
+export const setSpeed = function (id, value) {
   studioApp().highlight(id);
   Flappy.SPEED = value;
 };
 
-exports.playSound = function (id, soundName) {
+export const playSound = function (id, soundName) {
   studioApp().highlight(id);
   studioApp().playAudio(soundName);
 };
 
-exports.flap = function (id, amount) {
+export const flap = function (id, amount) {
   studioApp().highlight(id);
   Flappy.flap(amount);
 };
 
-exports.endGame = function (id) {
+export const endGame = function (id) {
   studioApp().highlight(id);
   Flappy.gameState = Flappy.GameStates.ENDING;
 };
 
-exports.incrementPlayerScore = function (id) {
+export const incrementPlayerScore = function (id) {
   studioApp().highlight(id);
   Flappy.playerScore++;
   Flappy.displayScore();

@@ -1,17 +1,19 @@
-var tiles = require('@code-dot-org/maze').tiles;
+import {tiles} from '@code-dot-org/maze';
 var Direction = tiles.Direction;
 
-var blockUtils = require('../block_utils');
-var utils = require('../utils');
+import blockUtils from '../block_utils';
+import {extend} from '../utils';
+import karelLevels from './karelLevels';
+import mazeMsg from './locale';
+import * as reqBlocks from './requiredBlocks';
+import wordsearchLevels from './wordsearchLevels';
 
-var karelLevels = require('./karelLevels');
-var mazeMsg = require('./locale');
-var reqBlocks = require('./requiredBlocks');
-var wordsearchLevels = require('./wordsearchLevels');
+import mazeXmlEjs from './toolboxes/maze.xml.ejs';
+import startBlocksXmlEjs from './startBlocks.xml.ejs';
 
 //TODO: Fix hacky level-number-dependent toolbox.
 var toolbox = function (page, level) {
-  return require('./toolboxes/maze.xml.ejs')({
+  return mazeXmlEjs({
     page: page,
     level: level,
   });
@@ -19,7 +21,7 @@ var toolbox = function (page, level) {
 
 //TODO: Fix hacky level-number-dependent startBlocks.
 var startBlocks = function (page, level) {
-  return require('./startBlocks.xml.ejs')({
+  return startBlocksXmlEjs({
     page: page,
     level: level,
   });
@@ -28,7 +30,7 @@ var startBlocks = function (page, level) {
 /*
  * Configuration for all levels.
  */
-module.exports = {
+let toExport = {
   // Formerly Page 2
 
   '2_1': {
@@ -585,21 +587,21 @@ module.exports = {
 
 // Merge in Karel levels.
 for (var levelId in karelLevels) {
-  module.exports['karel_' + levelId] = karelLevels[levelId];
+  toExport['karel_' + levelId] = karelLevels[levelId];
 }
 
 // Merge in Wordsearch levels.
 for (levelId in wordsearchLevels) {
-  module.exports['wordsearch_' + levelId] = wordsearchLevels[levelId];
+  toExport['wordsearch_' + levelId] = wordsearchLevels[levelId];
 }
 
 // Add some step levels
 function cloneWithStep(level, step, stepOnly) {
-  var obj = utils.extend({}, module.exports[level]);
+  var obj = extend({}, toExport[level]);
 
   obj.step = step;
   obj.stepOnly = stepOnly;
-  module.exports[level + '_step'] = obj;
+  toExport[level + '_step'] = obj;
 }
 
 cloneWithStep('2_1', true, true);
@@ -607,3 +609,5 @@ cloneWithStep('2_2', true, false);
 cloneWithStep('2_17', true, false);
 cloneWithStep('karel_1_9', true, false);
 cloneWithStep('karel_2_9', true, false);
+
+export {toExport as default};

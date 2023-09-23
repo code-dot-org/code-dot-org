@@ -14,7 +14,7 @@ var InputIterator = function (values, numParams) {
     this.indices_[i] = 0;
   }
 };
-module.exports = InputIterator;
+export default InputIterator;
 
 /**
  * Get the next set of values, throwing if none remaing

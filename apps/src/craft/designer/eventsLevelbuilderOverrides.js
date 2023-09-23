@@ -3,7 +3,7 @@
  * Keyed by "puzzle_number", which is the order of a given level in its script.
  */
 
-module.exports = {
+export default {
   1: {
     songs: ['vignette4-intro'],
   },

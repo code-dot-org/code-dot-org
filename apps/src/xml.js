@@ -23,7 +23,7 @@ export function parseElement(text, noWrap = false) {
     throw new Error('Nothing parsed');
   }
   if (errors.length > 0) {
-    throw new Error(exports.serialize(errors[0]));
+    throw new Error(serialize(errors[0]));
   }
   if (element !== dom.lastChild) {
     throw new Error('Parsed multiple elements');
@@ -35,6 +35,6 @@ export function parseElement(text, noWrap = false) {
 export function visitAll(node, callback) {
   callback(node);
   for (let child of node.childNodes) {
-    exports.visitAll(child, callback);
+    visitAll(child, callback);
   }
 }

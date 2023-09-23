@@ -1,4 +1,4 @@
-var ObservableEventDEPRECATED = require('./ObservableEventDEPRECATED');
+import ObservableEventDEPRECATED from './ObservableEventDEPRECATED';
 
 // It is more accurate to use performance.now(), but we use Date.now()
 // for compatibility with Safari and older browsers. This should only cause
@@ -44,7 +44,7 @@ var FALLBACK_MS_PER_FRAME = 1000 / FALLBACK_FPS;
  * Simple run-loop manager
  * @constructor
  */
-var RunLoop = (module.exports = function () {
+var RunLoop = function () {
   /**
    * Whether the run-loop will continue running.
    * @type {boolean}
@@ -88,7 +88,9 @@ var RunLoop = (module.exports = function () {
 
   /** @type {ObservableEventDEPRECATED} */
   this.render = new ObservableEventDEPRECATED();
-});
+};
+
+export default RunLoop;
 
 /**
  * Simple tracking for time values

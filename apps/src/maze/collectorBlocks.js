@@ -1,7 +1,7 @@
-var msg = require('./locale');
-var blockUtils = require('../block_utils');
+import msg from './locale';
+import blockUtils from '../block_utils';
 
-exports.install = function (blockly, blockInstallOptions) {
+function install(blockly, blockInstallOptions) {
   var skin = blockInstallOptions.skin;
   var isK1 = blockInstallOptions.isK1;
 
@@ -74,4 +74,8 @@ exports.install = function (blockly, blockInstallOptions) {
     branch = Blockly.getInfiniteLoopTrap() + branch;
     return `while (${argument}) {\n${branch}}\n`;
   };
+}
+
+export default {
+  install,
 };

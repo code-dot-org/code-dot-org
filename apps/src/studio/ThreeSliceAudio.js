@@ -1,6 +1,6 @@
 /** @file A three-part loopable audio effect (start-loop-end). */
 
-var utils = require('../utils');
+import {valueOr} from '../utils';
 
 var debugLogging = false;
 function debug(msg) {
@@ -34,7 +34,7 @@ var PlaybackState = {
  * @constructor
  */
 var ThreeSliceAudio = function (audioPlayer, options) {
-  options = utils.valueOr(options, {});
+  options = valueOr(options, {});
   /** @private {PlaybackState} */
   this.state_ = PlaybackState.NONE;
 
@@ -51,9 +51,9 @@ var ThreeSliceAudio = function (audioPlayer, options) {
   this.endClipName_ = options.end;
 
   /** @private {number} */
-  this.volume_ = utils.valueOr(options.volume, 1);
+  this.volume_ = valueOr(options.volume, 1);
 };
-module.exports = ThreeSliceAudio;
+export default ThreeSliceAudio;
 
 /**
  * Turn on the audio effect, causing it to begin and then transition to the loop.

@@ -4,11 +4,12 @@
  * Copyright 2013 Code.org
  *
  */
-var msg = require('./locale');
-var commonMsg = require('@cdo/locale');
-var utils = require('../utils');
-var _ = require('lodash');
-var studioApp = require('../StudioApp').singleton;
+import msg from './locale';
+
+import commonMsg from '@cdo/locale';
+import {stripQuotes} from '../utils';
+import _ from 'lodash';
+import {singleton as studioApp} from '../StudioApp';
 
 var FLAPPY_VALUE = '"flappy"';
 var RANDOM_VALUE = 'random';
@@ -30,7 +31,7 @@ var generateSetterCode = function (ctx, name) {
 };
 
 // Install extensions to Blockly's language and JavaScript generator.
-exports.install = function (blockly, blockInstallOptions) {
+function install(blockly, blockInstallOptions) {
   var skin = blockInstallOptions.skin;
   var isK1 = blockInstallOptions.isK1;
 
@@ -188,7 +189,7 @@ exports.install = function (blockly, blockInstallOptions) {
     if (soundValue === RANDOM_VALUE) {
       return;
     }
-    studioApp().playAudio(utils.stripQuotes(soundValue));
+    studioApp().playAudio(stripQuotes(soundValue));
   }
 
   blockly.Blocks.flappy_playSound = {
@@ -659,4 +660,7 @@ exports.install = function (blockly, blockInstallOptions) {
 
   delete blockly.Blocks.procedures_defreturn;
   delete blockly.Blocks.procedures_ifreturn;
+}
+export default {
+  install,
 };

@@ -1,7 +1,9 @@
-var api = require('./apiJavascript.js');
-var paramLists = require('./paramLists.js');
+import api from './apiJavascript.js';
+import {playSoundDropdown} from './paramLists.js';
 
-module.exports.blocks = [
+const toExport = {};
+
+toExport.blocks = [
   {
     func: 'setDroid',
     parent: api,
@@ -52,7 +54,7 @@ module.exports.blocks = [
     parent: api,
     category: '',
     params: ['"R2-D2sound1"'],
-    dropdown: {0: paramLists.playSoundDropdown},
+    dropdown: {0: playSoundDropdown},
   },
 
   {
@@ -502,7 +504,7 @@ module.exports.blocks = [
   },
 ];
 
-module.exports.categories = {
+toExport.categories = {
   '': {
     color: 'red',
     blocks: [],
@@ -521,5 +523,7 @@ module.exports.categories = {
   },
 };
 
-module.exports.autocompleteFunctionsWithSemicolon = true;
-module.exports.showParamDropdowns = true;
+toExport.autocompleteFunctionsWithSemicolon = true;
+toExport.showParamDropdowns = true;
+
+export {toExport as default};

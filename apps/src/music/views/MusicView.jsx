@@ -315,8 +315,7 @@ class UnconnectedMusicView extends React.Component {
       return this.props.levelData.startSources;
     } else {
       const startSourcesFilename = 'startSources' + getBlockMode();
-      // TODO @snickell ESM how do we convert this require? dynamic import() but not async?
-      return require(`@cdo/static/music/${startSourcesFilename}.json`);
+      return require(`@cdo/static/music/${startSourcesFilename}.json`); // eslint-disable-line import/no-commonjs
     }
   };
 

@@ -2,9 +2,10 @@
  * @overview Utility class for encoding and decoding simulated packets.
  */
 
-var NetSimUtils = require('./NetSimUtils');
-var DataConverters = require('./DataConverters');
-var NetSimGlobals = require('./NetSimGlobals');
+import NetSimUtils from './NetSimUtils';
+
+import * as DataConverters from './DataConverters';
+import NetSimGlobals from './NetSimGlobals';
 
 /**
  * Wraps binary packet content with the format information required to

@@ -22,7 +22,8 @@
  * @author fraser@google.com (Neil Fraser)
  */
 
-var ArtistAPI = require('./api');
+import ArtistAPI from './api';
+
 var api = new ArtistAPI();
 
 var setRandomVisibleColour = function () {
@@ -87,7 +88,7 @@ var drawHouse = function (length) {
  * resulting JavaScript here, moving any functions to the beginning of
  * this function.
  */
-exports.answer = function (page, level) {
+export const answer = function (page, level) {
   api.log = [];
   var count, sideIdx, len;
   if (page === 1) {

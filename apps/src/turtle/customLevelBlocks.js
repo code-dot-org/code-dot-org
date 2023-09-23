@@ -2,9 +2,9 @@
  * A set of blocks used by some of our custom levels (i.e. built by level builder)
  */
 
-var msg = require('./locale');
+import msg from './locale';
 
-exports.install = function (blockly, generator, gensym) {
+function install(blockly, generator, gensym) {
   installDrawASquare(blockly, generator, gensym);
   installCreateACircle(blockly, generator, gensym);
   installCreateASnowflakeBranch(blockly, generator, gensym);
@@ -22,7 +22,7 @@ exports.install = function (blockly, generator, gensym) {
   installDrawLowerWave(blockly, generator, gensym);
 
   installCreateASnowflakeDropdown(blockly, generator, gensym);
-};
+}
 
 var LENGTH_PARAM = msg.lengthParameter();
 
@@ -593,3 +593,7 @@ function installCreateASnowflakeDropdown(blockly, generator, gensym) {
     return "Turtle.drawSnowflake('" + type + "', 'block_id_" + this.id + "');";
   };
 }
+
+export default {
+  install,
+};

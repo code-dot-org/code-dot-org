@@ -11,7 +11,7 @@ import {singleton as studioApp} from '../StudioApp';
 import commonMsg from '@cdo/locale';
 import flappyMsg from './locale';
 import CustomMarshalingInterpreter from '../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
-import api from './api';
+import * as api from './api';
 import {Provider} from 'react-redux';
 import AppView from '../templates/AppView';
 import FlappyVisualizationColumn from './FlappyVisualizationColumn';

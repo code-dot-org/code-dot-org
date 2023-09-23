@@ -4,7 +4,7 @@
  * Copyright 2013 Code.org
  *
  */
-var msg = require('./locale');
+import msg from './locale';
 
 var generateSetterCode = function (ctx, name) {
   var value = ctx.getFieldValue('VALUE');
@@ -19,7 +19,7 @@ var generateSetterCode = function (ctx, name) {
 };
 
 // Install extensions to Blockly's language and JavaScript generator.
-exports.install = function (blockly, blockInstallOptions) {
+function install(blockly, blockInstallOptions) {
   var skin = blockInstallOptions.skin;
 
   var generator = blockly.getGenerator();
@@ -537,4 +537,8 @@ exports.install = function (blockly, blockInstallOptions) {
 
   delete blockly.Blocks.procedures_defreturn;
   delete blockly.Blocks.procedures_ifreturn;
+}
+
+export default {
+  install,
 };

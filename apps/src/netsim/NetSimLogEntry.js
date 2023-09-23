@@ -7,7 +7,7 @@ import i18n from '@cdo/netsim/locale';
 import NetSimEntity from './NetSimEntity';
 import Packet from './Packet';
 import NetSimNodeFactory from './NetSimNodeFactory';
-var NetSimLogger = require('./NetSimLogger');
+import NetSimLogger from './NetSimLogger';
 import {valueOr, setupFunctionPrototypeInherits} from '../utils';
 import {BITS_PER_BYTE} from './NetSimConstants';
 

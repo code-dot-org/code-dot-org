@@ -1,10 +1,11 @@
 /**
  * @overview UI slider used to control router memory size.
  */
-require('../utils'); // Provides Function.prototype.inherits
-var NetSimConstants = require('./NetSimConstants');
-var NetSimUtils = require('./NetSimUtils');
-var NetSimSlider = require('./NetSimSlider');
+import '../utils'; // Provides Function.prototype.inherits
+
+import NetSimConstants from './NetSimConstants';
+import NetSimUtils from './NetSimUtils';
+import NetSimSlider from './NetSimSlider';
 
 /**
  * Generator and controller for packet size slider/selector
@@ -13,7 +14,7 @@ var NetSimSlider = require('./NetSimSlider');
  * @param {function} sliderStopCallback
  * @constructor
  */
-var NetSimMemoryControl = (module.exports = function (
+var NetSimMemoryControl = function (
   rootDiv,
   sliderChangeCallback,
   sliderStopCallback
@@ -29,7 +30,8 @@ var NetSimMemoryControl = (module.exports = function (
 
   // Auto-render, unlike our base class
   this.render();
-});
+};
+export default NetSimMemoryControl;
 NetSimMemoryControl.inherits(NetSimSlider.LogarithmicSlider);
 
 /**

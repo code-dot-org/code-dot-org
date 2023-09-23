@@ -1,8 +1,8 @@
 /** @file Reusable styles for interface mode toggle buttons. */
 
-var color = require('../util/color');
+import color from '../util/color';
 
-module.exports = {
+export default {
   buttonStyle: {
     display: 'inline-block',
     verticalAlign: 'top',

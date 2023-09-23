@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React, {useContext} from 'react';
 import FieldGroupComponent from '../../form_components/FieldGroup';
-import utils from '../../form_components/utils';
+import {normalizeAnswer} from '../../form_components/utils';
 import {getValidationState, FormContext} from '../FormComponent';
 
 /**
@@ -13,7 +13,7 @@ export const SelectFieldGroup = props => {
   let renderedOptions;
   if (Array.isArray(options)) {
     renderedOptions = options.map(value => {
-      const {answerText, answerValue} = utils.normalizeAnswer(value);
+      const {answerText, answerValue} = normalizeAnswer(value);
       return (
         <option key={answerValue} value={answerValue}>
           {answerText}

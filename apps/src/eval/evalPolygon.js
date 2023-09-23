@@ -1,6 +1,6 @@
-var EvalImage = require('./evalImage');
-var evalUtils = require('./evalUtils');
-require('../utils'); // Provides Function.prototype.inherits
+import EvalImage from './evalImage';
+import * as evalUtils from './evalUtils';
+import '../utils'; // Provides Function.prototype.inherits
 
 var EvalPolygon = function (sideCount, length, style, color) {
   evalUtils.ensureNumber(sideCount);
@@ -16,7 +16,7 @@ var EvalPolygon = function (sideCount, length, style, color) {
   this.element_ = null;
 };
 EvalPolygon.inherits(EvalImage);
-module.exports = EvalPolygon;
+export default EvalPolygon;
 
 EvalPolygon.prototype.draw = function (parent) {
   if (!this.element_) {

@@ -4,7 +4,7 @@ import {makeTestsFromBuilderRequiredBlocks} from './required_block_utils';
 import {singleton as studioApp} from './StudioApp';
 import {generateAuthoredHints} from './authoredHintUtils';
 import {addReadyListener} from './dom';
-import * as blocksCommon from './blocksCommon';
+import blocksCommon from './blocksCommon';
 import commonReducers from './redux/commonReducers';
 import {
   installCustomBlocks,

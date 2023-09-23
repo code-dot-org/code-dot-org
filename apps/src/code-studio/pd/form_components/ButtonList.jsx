@@ -11,7 +11,7 @@ import {
 } from 'react-bootstrap';
 /* eslint-enable no-restricted-imports */
 
-import utils from './utils';
+import {normalizeAnswer} from './utils';
 
 const otherString = 'Other:';
 
@@ -96,7 +96,7 @@ class ButtonList extends React.Component {
     }
 
     const options = answers.map((answer, i) => {
-      const {answerText, answerValue} = utils.normalizeAnswer(answer);
+      const {answerText, answerValue} = normalizeAnswer(answer);
 
       const checked =
         this.props.type === 'radio'

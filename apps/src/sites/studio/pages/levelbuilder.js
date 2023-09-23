@@ -40,8 +40,7 @@ _.extend(window.levelbuilder, {
 });
 
 window.levelbuilder.installBlocks = function (app, blockly, options) {
-  // TODO @snickell ESM - what do we do with this? dynamic import() would be async...
-  var appBlocks = require('@cdo/apps/' + app + '/blocks');
+  var appBlocks = require('@cdo/apps/' + app + '/blocks'); // eslint-disable-line import/no-commonjs
 
   commonBlocks.install(blockly, options);
   appBlocks.install(blockly, options);

@@ -1,6 +1,6 @@
 import $ from 'jquery';
 import DropletFunctionTooltipMarkup from './DropletParameterTooltip.html.ejs';
-import tooltipUtils from './tooltipUtils.js';
+import {findFunctionAndParamNumber} from './tooltipUtils.js';
 import dom from '../dom';
 import {getAllAvailableDropletBlocks} from '../dropletUtils';
 
@@ -72,7 +72,7 @@ DropletAutocompleteParameterTooltipManager.prototype.onCursorMovement_ =
 
     var cursorPosition = editor.selection.getCursor();
 
-    var currentParameterInfo = tooltipUtils.findFunctionAndParamNumber(
+    var currentParameterInfo = findFunctionAndParamNumber(
       editor,
       cursorPosition
     );

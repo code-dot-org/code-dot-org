@@ -1,6 +1,6 @@
-var EvalImage = require('./evalImage');
-var evalUtils = require('./evalUtils');
-require('../utils'); // Provides Function.prototype.inherits
+import EvalImage from './evalImage';
+import * as evalUtils from './evalUtils';
+import '../utils'; // Provides Function.prototype.inherits
 
 var EvalCircle = function (width, height, style, color) {
   evalUtils.ensureNumber(width);
@@ -16,7 +16,7 @@ var EvalCircle = function (width, height, style, color) {
   this.element_ = null;
 };
 EvalCircle.inherits(EvalImage);
-module.exports = EvalCircle;
+export default EvalCircle;
 
 EvalCircle.prototype.draw = function (parent) {
   if (!this.element_) {

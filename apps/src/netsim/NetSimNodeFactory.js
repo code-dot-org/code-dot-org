@@ -3,6 +3,8 @@
  *           from raw node table rows.
  */
 import {NodeType} from './NetSimConstants';
+import NetSimClientNode from './NetSimClientNode';
+import NetSimRouterNode from './NetSimRouterNode';
 
 const NetSimNodeFactory = {};
 
@@ -28,10 +30,8 @@ NetSimNodeFactory.nodesFromRows = function (shard, nodeRows) {
  */
 NetSimNodeFactory.nodeFromRow = function (shard, nodeRow) {
   if (nodeRow.type === NodeType.CLIENT) {
-    var NetSimClientNode = require('./NetSimClientNode');
     return new NetSimClientNode(shard, nodeRow);
   } else if (nodeRow.type === NodeType.ROUTER) {
-    var NetSimRouterNode = require('./NetSimRouterNode');
     return new NetSimRouterNode(shard, nodeRow);
   }
 

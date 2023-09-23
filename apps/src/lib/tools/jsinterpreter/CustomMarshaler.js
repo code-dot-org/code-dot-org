@@ -1,6 +1,6 @@
 // we use module.exports instead of export default to make this compatible with
 // node.js
-module.exports = class CustomMarshaler {
+export default class CustomMarshaler {
   constructor({globalProperties, blockedProperties, objectList}) {
     this.globalProperties = globalProperties || {};
     this.blockedProperties = blockedProperties || [];
@@ -98,4 +98,4 @@ module.exports = class CustomMarshaler {
     }
     return obj;
   }
-};
+}

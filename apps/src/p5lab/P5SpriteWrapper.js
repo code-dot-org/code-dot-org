@@ -1,14 +1,16 @@
 var jsInterpreter;
-module.exports.injectJSInterpreter = function (jsi) {
+
+export const injectJSInterpreter = function (jsi) {
   jsInterpreter = jsi;
 };
 
 var createWithDebug;
-module.exports.setCreateWithDebug = function (debug) {
+
+export const setCreateWithDebug = function (debug) {
   createWithDebug = debug;
 };
 
-module.exports.createSprite = function (x, y, width, height) {
+export const createSprite = function (x, y, width, height) {
   /*
    * Copied code from p5play from createSprite()
    *

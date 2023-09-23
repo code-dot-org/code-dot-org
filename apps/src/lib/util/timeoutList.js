@@ -97,7 +97,7 @@ export function timedLoop(interval, fn) {
  */
 export function stopTimedLoop(key) {
   if (key === undefined) {
-    timedLoopList.slice().forEach(k => exports.clearInterval(k));
+    timedLoopList.slice().forEach(k => clearInterval(k));
   } else {
     clearInterval(key);
   }

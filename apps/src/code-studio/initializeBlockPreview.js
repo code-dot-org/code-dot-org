@@ -22,7 +22,7 @@ function update(blockSpace, container, editor) {
   Blockly.cdoUtils.resizeSvg(blockSpace);
 }
 
-module.exports = function (editor, container) {
+export default function (editor, container) {
   var xml = Blockly.Xml.textToDom(editor.getValue() || '<xml></xml>');
   var blockSpace = Blockly.BlockSpace.createReadOnlyBlockSpace(container, xml, {
     noScrolling: true,
@@ -33,4 +33,4 @@ module.exports = function (editor, container) {
   });
 
   update(blockSpace, container, editor);
-};
+}

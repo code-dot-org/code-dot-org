@@ -4,9 +4,10 @@
  * @see NetSimPulseRateControl
  */
 // Utils required only for Function.prototype.inherits()
-require('../utils');
-var NetSimUtils = require('./NetSimUtils');
-var NetSimSlider = require('./NetSimSlider');
+import '../utils';
+
+import NetSimUtils from './NetSimUtils';
+import NetSimSlider from './NetSimSlider';
 
 /**
  * Generator and controller for packet size slider/selector
@@ -15,7 +16,7 @@ var NetSimSlider = require('./NetSimSlider');
  * @param {function} sliderChangeCallback
  * @constructor
  */
-var NetSimBitRateControl = (module.exports = function (
+export default function NetSimBitRateControl(
   rootDiv,
   initialValue,
   sliderChangeCallback
@@ -30,7 +31,7 @@ var NetSimBitRateControl = (module.exports = function (
 
   // Auto-render, unlike our base class
   this.render();
-});
+}
 NetSimBitRateControl.inherits(NetSimSlider);
 
 /**

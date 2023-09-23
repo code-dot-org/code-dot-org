@@ -24,7 +24,7 @@ var Equation = function (name, params, expression) {
   }
 };
 
-module.exports = Equation;
+export default Equation;
 
 /**
  * @returns True if a function

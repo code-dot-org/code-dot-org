@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   WORKSPACE_BUFFER: 20,
   WORKSPACE_COL_WIDTH: 210,
   WORKSPACE_ROW_HEIGHT: 120,

@@ -2,7 +2,7 @@
  * @overview Extended error type returned for failed interactions with NetSim
  * server API (net_sim_api.rb) that extracts and exposes additional error info.
  */
-require('../utils'); // provide Function.prototype.inherits
+import '../utils'; // provide Function.prototype.inherits
 
 /**
  * Special error type for failed server requests, which tries to extract
@@ -11,7 +11,7 @@ require('../utils'); // provide Function.prototype.inherits
  * @constructor
  * @extends Error
  */
-var NetSimApiError = (module.exports = function (request) {
+var NetSimApiError = function (request) {
   /** @type {string} */
   this.name = 'NetSimApiError';
 
@@ -42,7 +42,8 @@ var NetSimApiError = (module.exports = function (request) {
       this.details = null;
     }
   }
-});
+};
+export default NetSimApiError;
 NetSimApiError.inherits(Error);
 
 /**

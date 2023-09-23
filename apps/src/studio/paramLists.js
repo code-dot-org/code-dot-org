@@ -1,14 +1,14 @@
-var studioApp = require('../StudioApp').singleton;
-var utils = require('../utils');
-var _ = require('lodash');
+import {singleton as studioApp} from '../StudioApp';
+import {quote, valueOr} from '../utils';
+import _ from 'lodash';
 var skin, level;
 
-exports.initWithSkinAndLevel = function (skinData, levelData) {
+const initWithSkinAndLevel = function (skinData, levelData) {
   skin = skinData;
   level = levelData;
 };
 
-exports.getPlaySoundValues = function (withRandom) {
+const getPlaySoundValues = function (withRandom) {
   var names;
   if (withRandom) {
     names = ['random'];
@@ -45,10 +45,10 @@ exports.getPlaySoundValues = function (withRandom) {
  * Returns a list of sounds for our droplet playSound block.
  */
 
-exports.playSoundDropdown = function () {
-  var skinSoundMetadata = utils.valueOr(skin.soundMetadata, []);
+const playSoundDropdown = function () {
+  var skinSoundMetadata = valueOr(skin.soundMetadata, []);
 
-  return exports.getPlaySoundValues(true).map(function (sound) {
+  return getPlaySoundValues(true).map(function (sound) {
     var lowercaseSound = sound.toLowerCase().trim();
     var handleChooseClick = function (callback) {
       var playbackOptions = Object.assign(
@@ -61,12 +61,18 @@ exports.playSoundDropdown = function () {
       );
 
       studioApp().playAudio(lowercaseSound, playbackOptions);
-      callback(utils.quote(sound));
+      callback(quote(sound));
     };
     return {
-      text: utils.quote(sound),
-      display: utils.quote(sound),
+      text: quote(sound),
+      display: quote(sound),
       click: handleChooseClick,
     };
   });
+};
+
+export default {
+  initWithSkinAndLevel,
+  getPlaySoundValues,
+  playSoundDropdown,
 };

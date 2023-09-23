@@ -1,7 +1,7 @@
-var tiles = require('./tiles');
-var studioApp = require('../StudioApp').singleton;
+import tiles from './tiles';
+import {singleton as studioApp} from '../StudioApp';
 
-exports.PaddleSpeed = {
+export const PaddleSpeed = {
   VERY_SLOW: 0.04,
   SLOW: 0.06,
   NORMAL: 0.1,
@@ -9,7 +9,7 @@ exports.PaddleSpeed = {
   VERY_FAST: 0.23,
 };
 
-exports.BallSpeed = {
+export const BallSpeed = {
   VERY_SLOW: 0.04,
   SLOW: 0.06,
   NORMAL: 0.1,
@@ -17,12 +17,12 @@ exports.BallSpeed = {
   VERY_FAST: 0.23,
 };
 
-exports.random = function (values) {
+export const random = function (values) {
   var key = Math.floor(Math.random() * values.length);
   return values[key];
 };
 
-exports.setBallSpeed = function (id, value) {
+export const setBallSpeed = function (id, value) {
   studioApp().highlight(id);
   Bounce.currentBallSpeed = value;
   for (var i = 0; i < Bounce.ballCount; i++) {
@@ -30,42 +30,37 @@ exports.setBallSpeed = function (id, value) {
   }
 };
 
-exports.setBackground = function (id, value) {
-  studioApp().highlight(id);
-  Bounce.setBackground(value);
-};
-
-exports.setTeam = function (id, value) {
+export const setTeam = function (id, value) {
   studioApp().highlight(id);
   Bounce.setTeam(value);
 };
 
-exports.setBall = function (id, value) {
+export const setBall = function (id, value) {
   studioApp().highlight(id);
   Bounce.setBall(value);
 };
 
-exports.setPaddle = function (id, value) {
+export const setPaddle = function (id, value) {
   studioApp().highlight(id);
   Bounce.setPaddle(value);
 };
 
-exports.setBackground = function (id, value) {
+export const setBackground = function (id, value) {
   studioApp().highlight(id);
   Bounce.setBackground(value);
 };
 
-exports.setPaddleSpeed = function (id, value) {
+export const setPaddleSpeed = function (id, value) {
   studioApp().highlight(id);
   Bounce.paddleSpeed = value;
 };
 
-exports.playSound = function (id, soundName) {
+export const playSound = function (id, soundName) {
   studioApp().highlight(id);
   studioApp().playAudio(soundName);
 };
 
-exports.moveLeft = function (id) {
+export const moveLeft = function (id) {
   studioApp().highlight(id);
   Bounce.paddleX -= Bounce.paddleSpeed;
   if (Bounce.paddleX < 0) {
@@ -73,7 +68,7 @@ exports.moveLeft = function (id) {
   }
 };
 
-exports.moveRight = function (id) {
+export const moveRight = function (id) {
   studioApp().highlight(id);
   Bounce.paddleX += Bounce.paddleSpeed;
   if (Bounce.paddleX > Bounce.COLS - 1) {
@@ -81,7 +76,7 @@ exports.moveRight = function (id) {
   }
 };
 
-exports.moveUp = function (id) {
+export const moveUp = function (id) {
   studioApp().highlight(id);
   Bounce.paddleY -= Bounce.paddleSpeed;
   if (Bounce.paddleY < 0) {
@@ -89,7 +84,7 @@ exports.moveUp = function (id) {
   }
 };
 
-exports.moveDown = function (id) {
+export const moveDown = function (id) {
   studioApp().highlight(id);
   Bounce.paddleY += Bounce.paddleSpeed;
   if (Bounce.paddleY > Bounce.ROWS - 1) {
@@ -97,19 +92,19 @@ exports.moveDown = function (id) {
   }
 };
 
-exports.incrementOpponentScore = function (id) {
+export const incrementOpponentScore = function (id) {
   studioApp().highlight(id);
   Bounce.opponentScore++;
   Bounce.displayScore();
 };
 
-exports.incrementPlayerScore = function (id) {
+export const incrementPlayerScore = function (id) {
   studioApp().highlight(id);
   Bounce.playerScore++;
   Bounce.displayScore();
 };
 
-exports.launchBall = function (id) {
+export const launchBall = function (id) {
   studioApp().highlight(id);
 
   // look for an "out of play" ball to re-launch:
@@ -131,7 +126,7 @@ exports.launchBall = function (id) {
   Bounce.playSoundAndResetBall(i);
 };
 
-exports.bounceBall = function (id) {
+export const bounceBall = function (id) {
   studioApp().highlight(id);
 
   var i;

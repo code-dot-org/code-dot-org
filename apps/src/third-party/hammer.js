@@ -1,3 +1,6 @@
+/* eslint-disable import/no-commonjs */
+/* eslint-disable import/no-amd */
+
 /*! Hammer.JS - v1.1.3 - 2014-05-22
  * http://eightmedia.github.io/hammer.js
  *
