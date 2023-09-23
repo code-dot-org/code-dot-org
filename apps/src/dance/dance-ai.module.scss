@@ -94,9 +94,21 @@
   }
 
   .prompt {
+    margin-left: 140px;
     display: flex;
     align-items: center;
-    margin-top: 40px;
+    font-size: 18px;
+    margin-bottom: 14px;
+  }
+
+  .arrowUp {
+    position: absolute;
+    margin-left: 18px;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 14px solid $neutral_dark10;
   }
 
   .inputContainer {
@@ -118,6 +130,7 @@
   }
 
   .botContainer {
+    margin-top: 50px;
     flex: 0 0 140px;
 
     .bot {
@@ -127,6 +140,7 @@
 
   .resultsContainer {
     display: flex;
+    flex: 1;
   }
 
   .output {
@@ -145,6 +159,7 @@
   }
 
   .buttonContainer {
+    height: 44px;
     margin-top: auto;
     display: flex;
     align-items: flex-end;
