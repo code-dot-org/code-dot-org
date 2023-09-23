@@ -2,8 +2,9 @@
  * Blocks specific to Harvester
  */
 
-var msg = require('./locale');
-var blockUtils = require('../block_utils');
+import msg from './locale';
+
+import blockUtils from '../block_utils';
 
 const CROPS = ['corn', 'pumpkin', 'lettuce'];
 
@@ -191,7 +192,7 @@ function addUntilSpecificCropHasBlock(blockly, generator, crop) {
   };
 }
 
-exports.install = function (blockly, blockInstallOptions) {
+function install(blockly, blockInstallOptions) {
   var skin = blockInstallOptions.skin;
   var isK1 = blockInstallOptions.isK1;
 
@@ -405,4 +406,8 @@ exports.install = function (blockly, blockInstallOptions) {
     var code = `while (!${argument}) {\n${branch}}\n`;
     return code;
   };
+}
+
+export default {
+  install,
 };

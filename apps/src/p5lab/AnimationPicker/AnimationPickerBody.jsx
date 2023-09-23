@@ -4,7 +4,7 @@ import React from 'react';
 import color from '@cdo/apps/util/color';
 import msg from '@cdo/locale';
 import ScrollableList from '../AnimationTab/ScrollableList.jsx';
-import * as dialogStyles from './styles';
+import dialogStyles from './styles';
 import AnimationPickerListItem, {
   getCategory,
 } from './AnimationPickerListItem.jsx';

@@ -28,4 +28,4 @@ var Colours = {
   FROZEN9: '#aea4ff',
 };
 
-module.exports = Colours;
+export default Colours;

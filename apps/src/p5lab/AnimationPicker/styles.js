@@ -1,7 +1,7 @@
 /** @file Shared styles for the animation picker dialog. */
-var color = require('@cdo/apps/util/color');
+import color from '@cdo/apps/util/color';
 
-module.exports = {
+export default {
   dialog: {
     /**
      * Constrain the width of the dialog so that it is always vertically scrollable,

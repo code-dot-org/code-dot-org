@@ -39,17 +39,17 @@ function convertScssToJs(scssPath, jsPath) {
       "// GENERATED FILE: DO NOT MODIFY DIRECTLY",
       "// This generated file exports all variables defined in " + relativeScss,
       "// for use in JavaScript. The generator script is convert-scss-variables.js",
-      "module.exports = {\n"
+      "export default {\n",
     ].join("\n")
   );
 
   var rl = readline.createInterface({
     input: fs.createReadStream(scssPath),
-    terminal: false
+    terminal: false,
   });
 
   var currentLine = 0;
-  rl.on("line", function(line) {
+  rl.on("line", function (line) {
     currentLine++;
     var match = variableRe.exec(line);
     if (match === null) {
@@ -64,7 +64,7 @@ function convertScssToJs(scssPath, jsPath) {
           "Unable to resolve variable " + variableName,
           scssPath + ":" + currentLine,
           line,
-          " ^"
+          " ^",
         ].join("\n")
       );
     }
@@ -83,7 +83,7 @@ function convertScssToJs(scssPath, jsPath) {
 
     out.write('  "' + variableName + '": ' + variableValue + ",\n");
   });
-  rl.on("close", function() {
+  rl.on("close", function () {
     out.write("};\n");
   });
 }

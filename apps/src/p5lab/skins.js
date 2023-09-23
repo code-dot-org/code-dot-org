@@ -1,7 +1,10 @@
-var skinBase = require('@cdo/apps/skins');
+import skinBase from '@cdo/apps/skins';
 
-exports.load = function (assetUrl, id) {
+function load(assetUrl, id) {
   var skin = skinBase.load(assetUrl, id);
 
   return skin;
+}
+export default {
+  load,
 };

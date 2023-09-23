@@ -1,4 +1,4 @@
-var msg = require('@cdo/locale');
+import msg from '@cdo/locale';
 
 /**
  * @fileoverview Representation of a droplet function/block's tooltip
@@ -167,4 +167,4 @@ DropletFunctionTooltip.prototype.getFullDocumentationURL = function (appType) {
   return '/docs/' + appType + '/' + this.functionName + '/';
 };
 
-module.exports = DropletFunctionTooltip;
+export default DropletFunctionTooltip;

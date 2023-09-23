@@ -27,7 +27,7 @@ import {singleton as studioApp} from '../StudioApp';
 import commonMsg from '@cdo/locale';
 import evalMsg from './locale';
 import CustomMarshalingInterpreter from '../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
-import api from './api';
+import * as api from './api';
 import {Provider} from 'react-redux';
 import AppView from '../templates/AppView';
 import EvalVisualizationColumn from './EvalVisualizationColumn';
@@ -301,6 +301,7 @@ function evalCode(code) {
     if (window.onerror) {
       window.onerror('UserCode:' + e.message, document.URL, 0);
     }
+
     if (console && console.log) {
       console.log(e);
     }

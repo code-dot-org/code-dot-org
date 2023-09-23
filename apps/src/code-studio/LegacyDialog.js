@@ -264,4 +264,4 @@ LegacyDialog.prototype.processHideOptions = function (options) {
     });
 };
 
-export default LegacyDialog;
+export {LegacyDialog as default};

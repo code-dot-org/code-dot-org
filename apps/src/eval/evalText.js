@@ -1,11 +1,11 @@
-var EvalImage = require('./evalImage');
-var evalUtils = require('./evalUtils');
-require('../utils'); // Provides Function.prototype.inherits
+import EvalImage from './evalImage';
+import {ensureString, ensureNumber, ensureColor} from './evalUtils';
+import '../utils'; // Provides Function.prototype.inherits
 
 var EvalText = function (text, fontSize, color) {
-  evalUtils.ensureString(text);
-  evalUtils.ensureNumber(fontSize);
-  evalUtils.ensureColor(color);
+  ensureString(text);
+  ensureNumber(fontSize);
+  ensureColor(color);
 
   EvalImage.apply(this, ['solid', color]);
 
@@ -15,7 +15,7 @@ var EvalText = function (text, fontSize, color) {
   this.element_ = null;
 };
 EvalText.inherits(EvalImage);
-module.exports = EvalText;
+export default EvalText;
 
 EvalText.prototype.draw = function (parent) {
   if (!this.element_) {

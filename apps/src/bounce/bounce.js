@@ -10,7 +10,7 @@ import {singleton as studioApp} from '../StudioApp';
 import bounceMsg from './locale';
 import tiles from './tiles';
 import CustomMarshalingInterpreter from '../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
-import api from './api';
+import * as api from './api';
 import {Provider} from 'react-redux';
 import AppView from '../templates/AppView';
 import BounceVisualizationColumn from './BounceVisualizationColumn';

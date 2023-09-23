@@ -21,12 +21,12 @@
  * @fileoverview Demonstration of Blockly: Calc Graphics.
  * @author fraser@google.com (Neil Fraser)
  */
-var msg = require('./locale');
+import msg from './locale';
 
-var sharedFunctionalBlocks = require('../sharedFunctionalBlocks');
+import sharedFunctionalBlocks from '../sharedFunctionalBlocks';
 
 // Install extensions to Blockly's language and JavaScript generator.
-exports.install = function (blockly, blockInstallOptions) {
+function install(blockly, blockInstallOptions) {
   var generator = blockly.getGenerator();
   blockly.JavaScript = generator;
 
@@ -38,7 +38,7 @@ exports.install = function (blockly, blockInstallOptions) {
   sharedFunctionalBlocks.install(blockly, generator, gensym);
 
   installCompute(blockly, generator, gensym);
-};
+}
 
 function installCompute(blockly, generator, gensym) {
   blockly.Blocks.functional_compute = {
@@ -58,3 +58,6 @@ function installCompute(blockly, generator, gensym) {
     return 'Calc.compute(' + arg1 + ", 'block_id_" + this.id + "');\n";
   };
 }
+export default {
+  install,
+};

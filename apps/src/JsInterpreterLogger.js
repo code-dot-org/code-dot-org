@@ -1,5 +1,5 @@
 /** @file Observes a JSInterpreter and logs to the designated browser console. */
-var Observer = require('./Observer');
+import Observer from './Observer';
 
 /**
  * Observer responsible for logging to the provided browser console when
@@ -8,13 +8,13 @@ var Observer = require('./Observer');
  * @implements LogTarget
  * @param {Console} window console API
  */
-var JsInterpreterLogger = (module.exports = function (outputConsole) {
+var JsInterpreterLogger = function (outputConsole) {
   /** @private {Console} */
   this.outputConsole_ = outputConsole;
 
   /** @private {Observer} */
   this.observer_ = new Observer();
-});
+};
 
 /**
  * Attach the logger to a particular JSInterpreter instance.
@@ -53,3 +53,5 @@ JsInterpreterLogger.prototype.clear = function () {
     this.outputConsole_.clear();
   }
 };
+
+export {JsInterpreterLogger as default};

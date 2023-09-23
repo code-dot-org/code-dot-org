@@ -36,4 +36,4 @@ function testImageAccess(
   window.testImages = window.testImages || [];
   window.testImages.push(element);
 }
-module.exports = testImageAccess;
+export default testImageAccess;

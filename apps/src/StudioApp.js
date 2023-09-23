@@ -36,7 +36,7 @@ import logToCloud from './logToCloud';
 import msg from '@cdo/locale';
 import project from './code-studio/initApp/project';
 import puzzleRatingUtils from './puzzleRatingUtils';
-import userAgentParser from './code-studio/initApp/userAgentParser';
+import * as userAgentParser from './code-studio/initApp/userAgentParser';
 import {
   KeyCodes,
   TestResults,

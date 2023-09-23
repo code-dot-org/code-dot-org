@@ -2,7 +2,7 @@ import * as testUtils from '../util/testUtils';
 import {assert, expect} from '../util/reconfiguredChai';
 import ReactDOM from 'react-dom';
 import sinon from 'sinon';
-import shareWarnings from '@cdo/apps/shareWarnings';
+import * as shareWarnings from '@cdo/apps/shareWarnings';
 import * as utils from '@cdo/apps/utils';
 
 describe('shareWarnings', function () {

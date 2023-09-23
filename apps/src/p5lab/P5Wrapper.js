@@ -3,8 +3,8 @@ import {allAnimationsSingleFrameSelector} from './redux/animationList';
 import p5 from '@code-dot-org/p5';
 window.p5 = p5;
 import '@code-dot-org/p5.play/lib/p5.play';
-import p5SpriteWrapper from './P5SpriteWrapper';
-import p5GroupWrapper from './P5GroupWrapper';
+import {createSprite, setCreateWithDebug} from './P5SpriteWrapper';
+import {Group} from './P5GroupWrapper';
 import backgroundsJSON from './spritelab/backgrounds.json';
 import * as assetPrefix from '@cdo/apps/assetManagement/assetPrefix';
 
@@ -138,12 +138,9 @@ P5Wrapper.prototype.init = function (options) {
   if (!options.spritelab) {
     // Override p5.createSprite and p5.Group so we can override the methods that
     // take callback parameters
-    window.p5.prototype.createSprite = p5SpriteWrapper.createSprite;
+    window.p5.prototype.createSprite = createSprite;
     var baseGroupConstructor = window.p5.prototype.Group;
-    window.p5.prototype.Group = p5GroupWrapper.Group.bind(
-      null,
-      baseGroupConstructor
-    );
+    window.p5.prototype.Group = Group.bind(null, baseGroupConstructor);
   }
 
   window.p5.prototype.gamelabPreload = function () {
@@ -158,7 +155,7 @@ P5Wrapper.prototype.init = function (options) {
  * Reset P5Wrapper to its initial state. Called before each time it is used.
  */
 P5Wrapper.prototype.resetExecution = function () {
-  p5SpriteWrapper.setCreateWithDebug(false);
+  setCreateWithDebug(false);
 
   if (this.p5) {
     this.p5.remove();
@@ -549,7 +546,7 @@ P5Wrapper.prototype.getFrameRate = function () {
  */
 P5Wrapper.prototype.debugSprites = function (debugSprites) {
   if (this.p5) {
-    p5SpriteWrapper.setCreateWithDebug(debugSprites);
+    setCreateWithDebug(debugSprites);
     this.p5.allSprites.forEach(sprite => {
       sprite.debug = debugSprites;
     });

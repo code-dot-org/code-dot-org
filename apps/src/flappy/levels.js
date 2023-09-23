@@ -1,9 +1,10 @@
 // todo - i think our prepoluated code counts as LOCs
 
-var constants = require('./constants');
-var flappyMsg = require('./locale');
-var tb = require('../block_utils').createToolbox;
-var utils = require('../utils');
+import constants from './constants';
+
+import flappyMsg from './locale';
+import {createToolbox as tb} from '../block_utils';
+import {extend} from '../utils';
 
 var flapBlock = '<block type="flappy_flap"></block>';
 var flapHeightBlock = '<block type="flappy_flap_height"></block>';
@@ -62,7 +63,7 @@ var anchoredBlock = function (type, child) {
       complete (indicating failure if success condition not met)
   */
 
-module.exports = {
+export default {
   1: {
     instructionsImportant: true,
     requiredBlocks: [[{test: 'flap', type: 'flappy_flap'}]],
@@ -468,7 +469,7 @@ module.exports = {
   },
 };
 
-module.exports.k1_1 = {
+export const k1_1 = {
   isK1: true,
   grayOutUndeletableBlocks: true,
   requiredBlocks: [],
@@ -495,22 +496,22 @@ module.exports.k1_1 = {
 };
 
 // flap to goal
-module.exports.k1_2 = utils.extend(module.exports['1'], {isK1: true});
+export const k1_2 = extend(module.exports['1'], {isK1: true});
 
 // hit ground
-module.exports.k1_3 = utils.extend(module.exports['2'], {isK1: true});
+export const k1_3 = extend(module.exports['2'], {isK1: true});
 
 // set speed
-module.exports.k1_4 = utils.extend(module.exports['3'], {isK1: true});
+export const k1_4 = extend(module.exports['3'], {isK1: true});
 
 // crash into obstacle
-module.exports.k1_5 = utils.extend(module.exports['4'], {isK1: true});
+export const k1_5 = extend(module.exports['4'], {isK1: true});
 
 // pass through obstacle, score a point
-module.exports.k1_6 = utils.extend(module.exports['5'], {isK1: true});
+export const k1_6 = extend(module.exports['5'], {isK1: true});
 
 // score multiple points for each pass
-module.exports.k1_7 = {
+export const k1_7 = {
   isK1: true,
   requiredBlocks: [
     [{test: 'incrementPlayerScore', type: 'flappy_incrementPlayerScore'}],
@@ -559,7 +560,7 @@ module.exports.k1_7 = {
 };
 
 // change the scene
-module.exports.k1_8 = utils.extend(module.exports['7'], {
+export const k1_8 = extend(module.exports['7'], {
   isK1: true,
   // override regular flappy so that we dont use variable flap block
   toolbox: tb(
@@ -579,7 +580,7 @@ module.exports.k1_8 = utils.extend(module.exports['7'], {
 });
 
 // changing the player
-module.exports.k1_9 = {
+export const k1_9 = {
   isK1: true,
   requiredBlocks: [[{test: 'setPlayer', type: 'flappy_setPlayer'}]],
   obstacles: true,
@@ -612,7 +613,7 @@ module.exports.k1_9 = {
 };
 
 // custom
-module.exports.custom = {
+export const custom = {
   requiredBlocks: [],
   obstacles: true,
   ground: true,

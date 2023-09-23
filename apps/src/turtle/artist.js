@@ -34,7 +34,7 @@ import CustomMarshalingInterpreter, {
   DEFAULT_EXECUTION_INFO,
 } from '../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 import ArtistAPI from './api';
-import apiJavascript from './apiJavascript';
+import {injectArtistAPI} from './apiJavascript';
 import {Provider} from 'react-redux';
 import AppView from '../templates/AppView';
 import ArtistVisualizationColumn from './ArtistVisualizationColumn';
@@ -170,7 +170,7 @@ function Artist() {
   this.level = null;
 
   this.api = new ArtistAPI();
-  apiJavascript.injectArtistAPI(this.api);
+  injectArtistAPI(this.api);
 
   /** @type {JSInterpreter} */
   this.JSInterpreter = null;

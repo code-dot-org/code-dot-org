@@ -7,7 +7,7 @@
  * @return {Object} A required blocks dictionary able to check for and
  *     generate the specified block.
  */
-exports.call = function (name) {
+export const call = function (name) {
   return {
     test: function (block) {
       return (
@@ -27,7 +27,7 @@ exports.call = function (name) {
  * @return {Object} A required blocks dictionary able to check for and
  *     generate the specified block.
  */
-exports.callWithArg = function (func_name, arg_name) {
+export const callWithArg = function (func_name, arg_name) {
   return {
     test: function (block) {
       return (
@@ -53,7 +53,7 @@ exports.callWithArg = function (func_name, arg_name) {
  * @return {Object} A required blocks dictionary able to check for and
  *     generate the specified block.
  */
-exports.define = function (name) {
+export const define = function (name) {
   return {
     test: function (block) {
       return (

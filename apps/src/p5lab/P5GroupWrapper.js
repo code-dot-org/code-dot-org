@@ -1,10 +1,10 @@
 var jsInterpreter;
 
-module.exports.injectJSInterpreter = function (jsi) {
+export const injectJSInterpreter = function (jsi) {
   jsInterpreter = jsi;
 };
 
-module.exports.Group = function (baseConstructor) {
+export const Group = function (baseConstructor) {
   var array = baseConstructor();
 
   /*

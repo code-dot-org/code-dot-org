@@ -1,4 +1,4 @@
-var evalMsg = require('./locale');
+import evalMsg from './locale';
 
 /**
  * An Eval error indicating that something bad happened, but we understand
@@ -26,7 +26,7 @@ var CustomEvalError = function (type, val) {
       break;
   }
 };
-module.exports = CustomEvalError;
+export default CustomEvalError;
 
 CustomEvalError.Type = {
   BadStyle: 0,

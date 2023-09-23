@@ -1,4 +1,4 @@
-var flatten = require('../utils').flatten;
+import {flatten} from '../utils';
 
 /**
  * Stores information about a current Maze execution.  Execution consists of a
@@ -13,7 +13,7 @@ var ExecutionInfo = function (options) {
   this.collection_ = null;
 };
 
-module.exports = ExecutionInfo;
+export default ExecutionInfo;
 
 /**
  * Sets termination value to one of the following:

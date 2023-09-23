@@ -1,6 +1,6 @@
 /** @file Provide browsable command history to a textbox with limited depth. */
 
-var CommandHistory = (module.exports = function () {
+var CommandHistory = function () {
   /**
    * Ordered collection of command entries.
    * @private {string[]}
@@ -19,7 +19,9 @@ var CommandHistory = (module.exports = function () {
    * @private {number}
    */
   this.maxEntries_ = 64;
-});
+};
+
+export default CommandHistory;
 
 /**
  * Add the given command to the current command history.  If the command

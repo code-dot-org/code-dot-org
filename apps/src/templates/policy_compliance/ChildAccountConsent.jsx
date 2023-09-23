@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import i18n from '@cdo/locale';
-import * as color from '../../util/color';
+import color from '../../util/color';
 import cookies from 'js-cookie';
 import {
   Heading1,

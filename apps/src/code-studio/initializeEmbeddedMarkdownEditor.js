@@ -2,7 +2,7 @@
  * @file Defines a function for initializing an embedded markdown editor using
  *       CodeMirror
  */
-var initializeCodeMirror = require('./initializeCodeMirror');
+import initializeCodeMirror from './initializeCodeMirror';
 
 /**
  * Initializes a live preview markdown editor that spits its contents out into
@@ -21,11 +21,7 @@ var initializeCodeMirror = require('./initializeCodeMirror');
  *                                  of textarea where editor will live
  * @param {string} name of the property within the textarea
  */
-module.exports = function (
-  embeddedElement,
-  markdownTextArea,
-  markdownProperty
-) {
+export default function (embeddedElement, markdownTextArea, markdownProperty) {
   var regex = new RegExp(
     '^' + markdownProperty + ' <<(\\w*)\\n([\\s\\S]*?)\\n\\1\\s*$',
     'm'
@@ -65,4 +61,4 @@ module.exports = function (
   } else {
     mdEditor.setValue('');
   }
-};
+}

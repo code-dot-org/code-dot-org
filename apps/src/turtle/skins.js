@@ -1,7 +1,7 @@
-const skinBase = require('../skins');
-const linePatterns = require('./linePatterns');
+import skinBase from '../skins';
+import linePatterns from './linePatterns';
 
-exports.load = function (assetUrl, id) {
+function load(assetUrl, id) {
   const skin = skinBase.load(assetUrl, id);
   skin.linePatterns = linePatterns.load(assetUrl);
 
@@ -274,4 +274,8 @@ exports.load = function (assetUrl, id) {
   skin.lineStylePatternOptions = lineStylePatternOptions;
 
   return skin;
+}
+
+export default {
+  load,
 };

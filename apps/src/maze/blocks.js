@@ -21,27 +21,31 @@
  * @fileoverview Demonstration of Blockly: Solving a maze.
  * @author fraser@google.com (Neil Fraser)
  */
-var commonMsg = require('@cdo/locale');
-var mazeUtils = require('@code-dot-org/maze').utils;
+import commonMsg from '@cdo/locale';
 
-var blockUtils = require('../block_utils');
+import {utils as mazeUtils} from '@code-dot-org/maze';
+import blockUtils from '../block_utils';
+import msg from './locale';
 
-var msg = require('./locale');
+import beeBlocks from './beeBlocks';
+import collectorBlocks from './collectorBlocks';
+import harvesterBlocks from './harvesterBlocks';
+import planterBlocks from './planterBlocks';
 
 // Install extensions to Blockly's language and JavaScript generator.
-exports.install = function (blockly, blockInstallOptions) {
+function install(blockly, blockInstallOptions) {
   var skin = blockInstallOptions.skin;
   var generator = blockly.getGenerator();
   blockly.JavaScript = generator;
 
   if (mazeUtils.isBeeSkin(skin.id)) {
-    require('./beeBlocks').install(blockly, blockInstallOptions);
+    beeBlocks.install(blockly, blockInstallOptions);
   } else if (mazeUtils.isCollectorSkin(skin.id)) {
-    require('./collectorBlocks').install(blockly, blockInstallOptions);
+    collectorBlocks.install(blockly, blockInstallOptions);
   } else if (mazeUtils.isHarvesterSkin(skin.id)) {
-    require('./harvesterBlocks').install(blockly, blockInstallOptions);
+    harvesterBlocks.install(blockly, blockInstallOptions);
   } else if (mazeUtils.isPlanterSkin(skin.id)) {
-    require('./planterBlocks').install(blockly, blockInstallOptions);
+    planterBlocks.install(blockly, blockInstallOptions);
   }
 
   var SimpleMove = {
@@ -439,4 +443,7 @@ exports.install = function (blockly, blockInstallOptions) {
 
   delete blockly.Blocks.procedures_defreturn;
   delete blockly.Blocks.procedures_ifreturn;
+}
+export default {
+  install,
 };

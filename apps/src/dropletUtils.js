@@ -593,6 +593,7 @@ export function generateDropletPalette(codeFunctions, dropletConfig) {
       expansion: expansion,
       title: funcInfo.modeOptionName || funcInfo.func,
     };
+
     mergedCategories[funcInfo.category].blocks.push(blockPair);
   }
 

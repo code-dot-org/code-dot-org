@@ -1,4 +1,4 @@
-module.exports = {};
+export default {};
 
 /**
  * The most standard kind of answer, simply provides for a way to specify the
@@ -43,7 +43,7 @@ module.exports = {};
  * @param {(Answer|SimpleAnswer)} answer
  * @returns {(Answer)}
  */
-module.exports.normalizeAnswer = answer => {
+export const normalizeAnswer = answer => {
   const answerText = typeof answer === 'string' ? answer : answer.answerText;
   const answerValue =
     typeof answer === 'string' ? answer : answer.answerValue || answerText;

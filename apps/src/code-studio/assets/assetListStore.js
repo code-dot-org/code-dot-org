@@ -1,6 +1,6 @@
 var assets = [];
 
-module.exports = {
+export default {
   reset: function (list) {
     return (assets = list.slice());
   },

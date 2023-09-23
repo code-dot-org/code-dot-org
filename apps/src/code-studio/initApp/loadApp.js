@@ -7,7 +7,7 @@ import {files} from '@cdo/apps/clientApi';
 import renderAbusive from './renderAbusive';
 import renderProjectNotFound from './renderProjectNotFound';
 import renderVersionNotFound from './renderVersionNotFound';
-import userAgentParser from './userAgentParser';
+import * as userAgentParser from './userAgentParser';
 import clientState from '../clientState';
 import getScriptData from '../../util/getScriptData';
 import PlayZone from '@cdo/apps/code-studio/components/playzone';

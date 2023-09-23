@@ -6,13 +6,15 @@
  * stop observing those things.
  * @constructor
  */
-var Observer = (module.exports = function () {
+var Observer = function () {
   /**
    * @private {Array.<Object>} event-key pairs of observed events, for easy
    *          unregistering later.
    */
   this.observed_ = [];
-});
+};
+
+export default Observer;
 
 /**
  * Begin observing the given event, forwarding it to the provided callback

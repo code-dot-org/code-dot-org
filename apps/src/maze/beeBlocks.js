@@ -2,8 +2,9 @@
  * Blocks specific to Bee
  */
 
-var msg = require('./locale');
-var blockUtils = require('../block_utils');
+import msg from './locale';
+
+import blockUtils from '../block_utils';
 
 var OPERATORS = [
   ['=', '=='],
@@ -23,7 +24,7 @@ var TOOLTIPS = {
 };
 
 // Install extensions to Blockly's language and JavaScript generator.
-exports.install = function (blockly, blockInstallOptions) {
+function install(blockly, blockInstallOptions) {
   var skin = blockInstallOptions.skin;
   var isK1 = blockInstallOptions.isK1;
 
@@ -125,7 +126,7 @@ exports.install = function (blockly, blockInstallOptions) {
     tooltip: msg.honeyTooltip(),
     functionName: 'Maze.makeHoney',
   });
-};
+}
 
 /**
  * Are we at a flower
@@ -363,3 +364,7 @@ function addConditionalComparisonBlock(blockly, generator, name, type, arg1) {
     );
   };
 }
+
+export default {
+  install,
+};

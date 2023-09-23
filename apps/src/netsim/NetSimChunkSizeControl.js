@@ -2,9 +2,10 @@
  * @overview UI slider used to change the local device's chunk size, which
  *           is used when interpreting binary to other formats.
  */
-var i18n = require('@cdo/netsim/locale');
-var NetSimSlider = require('./NetSimSlider');
-require('../utils'); // Provides Function.prototype.inherits
+import i18n from '@cdo/netsim/locale';
+
+import NetSimSlider from './NetSimSlider';
+import '../utils'; // Provides Function.prototype.inherits
 
 /**
  * Generator and controller for chunk size slider/selector
@@ -13,10 +14,7 @@ require('../utils'); // Provides Function.prototype.inherits
  * @constructor
  * @augments NetSimSlider
  */
-var NetSimChunkSizeControl = (module.exports = function (
-  rootDiv,
-  chunkSizeChangeCallback
-) {
+var NetSimChunkSizeControl = function (rootDiv, chunkSizeChangeCallback) {
   NetSimSlider.call(this, rootDiv, {
     onChange: chunkSizeChangeCallback,
     min: 1,
@@ -25,7 +23,8 @@ var NetSimChunkSizeControl = (module.exports = function (
 
   // Auto-render, unlike our parent class
   this.render();
-});
+};
+export default NetSimChunkSizeControl;
 NetSimChunkSizeControl.inherits(NetSimSlider);
 
 /**

@@ -23,7 +23,7 @@ import {DnsMode, NodeType, BITS_PER_BYTE} from './NetSimConstants';
 setupFunctionPrototypeInherits(Function);
 
 var logger = NetSimLogger.getSingleton();
-var NetSimGlobals = require('./NetSimGlobals');
+import NetSimGlobals from './NetSimGlobals';
 
 /**
  * @type {number}

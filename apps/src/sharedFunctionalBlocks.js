@@ -1,12 +1,13 @@
 /**
  * A set of functional blocks
  */
-var _ = require('lodash');
-var msg = require('@cdo/locale');
+import _ from 'lodash';
+
+import msg from '@cdo/locale';
 
 var ARITHMETIC_TITLE_FONT_SIZE = 25;
 
-exports.install = function (blockly, generator, gensym) {
+function install(blockly, generator, gensym) {
   installPlus(blockly, generator, gensym);
   installMinus(blockly, generator, gensym);
   installTimes(blockly, generator, gensym);
@@ -25,7 +26,7 @@ exports.install = function (blockly, generator, gensym) {
   installSqrt(blockly, generator);
   installPow(blockly, generator);
   installSquared(blockly, generator);
-};
+}
 
 function installPlus(blockly, generator, gensym) {
   blockly.Blocks.functional_plus = {
@@ -663,3 +664,7 @@ function installCondForType(blockly, generator, type) {
     return code;
   };
 }
+
+export default {
+  install,
+};

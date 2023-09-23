@@ -19,15 +19,13 @@ $(document).ready(() => {
     const associatedBlocks = getScriptData('associatedblocks');
     try {
       // Install the custom CDO blocks for the associated level type.
-      // TODO @snickell ESM: what do we do here? a dynamic ESM import() would be async...
-      const appBlocks = require(`@cdo/apps/${associatedBlocks}/blocks`);
+      const appBlocks = require(`@cdo/apps/${associatedBlocks}/blocks`); // eslint-disable-line import/no-commonjs
       let skin = {};
       // Some apps require an app skin to be defined. Currently all of these
       // can use a skin that has the same name as the app itself. In the future,
       // we might need to allow specifying which skin to use or define a default.
       if (['bounce', 'flappy', 'jigsaw', 'studio'].includes(associatedBlocks)) {
-        // TODO @snickell ESM: what do we do here? a dynamic ESM import() would be async...
-        const appSkins = require(`@cdo/apps/${associatedBlocks}/skins`);
+        const appSkins = require(`@cdo/apps/${associatedBlocks}/skins`); // eslint-disable-line import/no-commonjs
         skin = appSkins.load(assetUrl, associatedBlocks);
       }
       appBlocks.install(window.Blockly, {

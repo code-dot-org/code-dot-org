@@ -1,10 +1,10 @@
-import utils from '@cdo/apps/code-studio/pd/form_components/utils';
+import {normalizeAnswer} from '@cdo/apps/code-studio/pd/form_components/utils';
 import {expect} from '../../../../util/reconfiguredChai';
 
 describe('FormComponents Utils', () => {
   it('normalizes SimpleAnswer to Answer', () => {
     const input = 'simple answer';
-    const output = utils.normalizeAnswer(input);
+    const output = normalizeAnswer(input);
     const expected = {
       answerText: 'simple answer',
       answerValue: 'simple answer',
@@ -17,7 +17,7 @@ describe('FormComponents Utils', () => {
       answerText: 'display text',
       answerValue: 'form value',
     };
-    const output = utils.normalizeAnswer(input);
+    const output = normalizeAnswer(input);
     expect(output).to.deep.equal(input);
   });
 
@@ -29,7 +29,7 @@ describe('FormComponents Utils', () => {
       answerText: 'display text',
       answerValue: 'display text',
     };
-    const output = utils.normalizeAnswer(input);
+    const output = normalizeAnswer(input);
     expect(output).to.deep.equal(expected);
   });
 });

@@ -21,11 +21,12 @@
  * @fileoverview Demonstration of Blockly: Eval Graphics.
  * @author fraser@google.com (Neil Fraser)
  */
-var msg = require('./locale');
-var sharedFunctionalBlocks = require('../sharedFunctionalBlocks');
+import msg from './locale';
+
+import sharedFunctionalBlocks from '../sharedFunctionalBlocks';
 
 // Install extensions to Blockly's language and JavaScript generator.
-exports.install = function (blockly, blockInstallOptions) {
+function install(blockly, blockInstallOptions) {
   var generator = blockly.getGenerator();
   blockly.JavaScript = generator;
 
@@ -245,7 +246,7 @@ exports.install = function (blockly, blockInstallOptions) {
       [msg.outline(), 'outline'],
     ],
   });
-};
+}
 
 function installFunctionalBlock(blockly, generator, gensym, options) {
   var blockName = options.blockName;
@@ -289,3 +290,6 @@ function installFunctionalBlock(blockly, generator, gensym, options) {
     return 'Eval.' + apiName + '(' + apiArgs.join(', ') + ')';
   };
 }
+export default {
+  install,
+};

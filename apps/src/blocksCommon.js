@@ -1,13 +1,13 @@
 /**
  * Defines blocks useful in multiple blockly apps
  */
-var commonMsg = require('@cdo/locale');
+import commonMsg from '@cdo/locale';
 
 /**
  * Install extensions to Blockly's language and JavaScript generator
  * @param blockly instance of Blockly
  */
-exports.install = function (blockly, blockInstallOptions) {
+function install(blockly, blockInstallOptions) {
   var skin = blockInstallOptions.skin;
   var isK1 = blockInstallOptions.isK1;
 
@@ -19,7 +19,7 @@ exports.install = function (blockly, blockInstallOptions) {
   installWhenRun(blockly, skin, isK1);
   installJoinBlock(blockly);
   installCommentBlock(blockly);
-};
+}
 
 function installControlsRepeatSimplified(blockly, skin) {
   // Re-uses the repeat block generator from core
@@ -327,3 +327,7 @@ function installCommentBlock(blockly) {
     return `// ${comment}\n`;
   };
 }
+
+export default {
+  install,
+};

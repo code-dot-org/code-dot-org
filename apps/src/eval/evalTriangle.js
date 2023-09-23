@@ -1,6 +1,6 @@
-var EvalImage = require('./evalImage');
-var evalUtils = require('./evalUtils');
-require('../utils'); // Provides Function.prototype.inherits
+import EvalImage from './evalImage';
+import * as evalUtils from './evalUtils';
+import '../utils'; // Provides Function.prototype.inherits
 
 var EvalTriangle = function (edge, style, color) {
   evalUtils.ensureNumber(edge);
@@ -14,7 +14,7 @@ var EvalTriangle = function (edge, style, color) {
   this.element_ = null;
 };
 EvalTriangle.inherits(EvalImage);
-module.exports = EvalTriangle;
+export default EvalTriangle;
 
 EvalTriangle.prototype.draw = function (parent) {
   if (!this.element_) {

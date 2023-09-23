@@ -1,9 +1,9 @@
-var blockUtils = require('../block_utils');
+import blockUtils from '../block_utils';
 
 /**
  * Information about level-specific requirements.
  */
-module.exports = {
+export default {
   eval1: {
     solutionBlocks: blockUtils.mathBlockXml('functional_star', {
       COLOR: blockUtils.mathBlockXml('functional_string', null, {VAL: 'green'}),

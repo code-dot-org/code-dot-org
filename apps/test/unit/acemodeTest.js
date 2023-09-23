@@ -1,6 +1,6 @@
 import {assert} from '../util/reconfiguredChai';
 
-import errorMapper from '@cdo/apps/acemode/errorMapper';
+import * as errorMapper from '@cdo/apps/acemode/errorMapper';
 
 describe('errorMapper correctly maps different errors', function () {
   it('defined but never used', function () {

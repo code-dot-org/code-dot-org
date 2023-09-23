@@ -1,8 +1,8 @@
-var EvalImage = require('./evalImage');
-var evalUtils = require('./evalUtils');
-require('../utils'); // Provides Function.prototype.inherits
+import EvalImage from './evalImage';
+import * as evalUtils from './evalUtils';
+import '../utils'; // Provides Function.prototype.inherits
 
-var EvalStar = function (pointCount, inner, outer, style, color) {
+export default function EvalStar(pointCount, inner, outer, style, color) {
   evalUtils.ensureNumber(pointCount);
   evalUtils.ensureNumber(inner);
   evalUtils.ensureNumber(outer);
@@ -16,9 +16,8 @@ var EvalStar = function (pointCount, inner, outer, style, color) {
   this.pointCount_ = pointCount;
 
   this.element_ = null;
-};
+}
 EvalStar.inherits(EvalImage);
-module.exports = EvalStar;
 
 EvalStar.prototype.draw = function (parent) {
   if (!this.element_) {

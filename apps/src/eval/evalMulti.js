@@ -1,6 +1,6 @@
-var EvalImage = require('./evalImage');
-var evalUtils = require('./evalUtils');
-require('../utils'); // Provides Function.prototype.inherits
+import EvalImage from './evalImage';
+import * as evalUtils from './evalUtils';
+import '../utils'; // Provides Function.prototype.inherits
 
 var EvalMulti = function (image1, image2) {
   evalUtils.ensureType(image1, EvalImage);
@@ -25,7 +25,7 @@ var EvalMulti = function (image1, image2) {
   this.element_ = null;
 };
 EvalMulti.inherits(EvalImage);
-module.exports = EvalMulti;
+export default EvalMulti;
 
 EvalMulti.prototype.draw = function (parent) {
   if (!this.element_) {

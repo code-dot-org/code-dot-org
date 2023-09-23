@@ -1,8 +1,8 @@
-var _ = require('lodash');
-var ExpressionNode = require('./expressionNode');
-var Equation = require('./equation');
-var jsnums = require('@code-dot-org/js-numbers');
-var utils = require('../utils');
+import _ from 'lodash';
+import ExpressionNode from './expressionNode';
+import Equation from './equation';
+import jsnums from '@code-dot-org/js-numbers';
+import {isInfiniteRecursionError} from '../utils';
 
 /**
  * An EquationSet consists of a top level (compute) equation, and optionally
@@ -22,7 +22,7 @@ var EquationSet = function (blocks) {
     }, this);
   }
 };
-module.exports = EquationSet;
+export default EquationSet;
 
 EquationSet.prototype.clone = function () {
   var clone = new EquationSet();
@@ -301,7 +301,7 @@ EquationSet.prototype.evaluateWithExpression = function (computeExpression) {
           if (
             evaluation.err instanceof ExpressionNode.DivideByZeroError ||
             evaluation.err instanceof ExpressionNode.ImaginaryNumberError ||
-            utils.isInfiniteRecursionError(evaluation.err)
+            isInfiniteRecursionError(evaluation.err)
           ) {
             return {err: evaluation.err};
           }

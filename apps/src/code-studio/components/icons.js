@@ -7,7 +7,7 @@
  *
  * (Font Awesome by Dave Gandy - http://fontawesome.io/)
  */
-module.exports = {
+export default {
   aliases: {
     music: [
       'music',

@@ -2,10 +2,11 @@
  * @overview UI Slider control used for changing simulated router bandwidth.
  */
 // Utils required only for Function.prototype.inherits()
-require('../utils');
-var NetSimConstants = require('./NetSimConstants');
-var NetSimUtils = require('./NetSimUtils');
-var NetSimSlider = require('./NetSimSlider');
+import '../utils';
+
+import NetSimConstants from './NetSimConstants';
+import NetSimUtils from './NetSimUtils';
+import NetSimSlider from './NetSimSlider';
 
 /**
  * Generator and controller for packet size slider/selector
@@ -14,7 +15,7 @@ var NetSimSlider = require('./NetSimSlider');
  * @param {function} sliderStopCallback
  * @constructor
  */
-var NetSimBandwidthControl = (module.exports = function (
+export default function NetSimBandwidthControl(
   rootDiv,
   sliderChangeCallback,
   sliderStopCallback
@@ -30,7 +31,7 @@ var NetSimBandwidthControl = (module.exports = function (
 
   // Auto-render, unlike our base class
   this.render();
-});
+}
 NetSimBandwidthControl.inherits(NetSimSlider.LogarithmicSlider);
 
 /**

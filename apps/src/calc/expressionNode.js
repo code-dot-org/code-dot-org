@@ -1,7 +1,7 @@
-var utils = require('../utils');
-var _ = require('lodash');
-var Token = require('./token');
-var jsnums = require('@code-dot-org/js-numbers');
+import {valueOr} from '../utils';
+import _ from 'lodash';
+import Token from './token';
+import jsnums from '@code-dot-org/js-numbers';
 
 var ValueType = {
   ARITHMETIC: 1,
@@ -69,7 +69,7 @@ var ExpressionNode = function (val, args, blockId) {
     throw new Error('Arithmetic ExpressionNode needs 2 args');
   }
 };
-module.exports = ExpressionNode;
+export default ExpressionNode;
 ExpressionNode.DivideByZeroError = DivideByZeroError;
 ExpressionNode.ImaginaryNumberError = ImaginaryNumberError;
 
@@ -161,7 +161,7 @@ ExpressionNode.prototype.evaluate = function (globalMapping, localMapping) {
     var val;
 
     if (type === ValueType.VARIABLE) {
-      var mappedVal = utils.valueOr(
+      var mappedVal = valueOr(
         localMapping[this.value_],
         globalMapping[this.value_]
       );
@@ -175,7 +175,7 @@ ExpressionNode.prototype.evaluate = function (globalMapping, localMapping) {
     }
 
     if (type === ValueType.FUNCTION_CALL) {
-      var functionDef = utils.valueOr(
+      var functionDef = valueOr(
         localMapping[this.value_],
         globalMapping[this.value_]
       );
@@ -201,10 +201,7 @@ ExpressionNode.prototype.evaluate = function (globalMapping, localMapping) {
           throw evaluation.err;
         }
         var childVal = evaluation.result;
-        newLocalMapping[variable] = utils.valueOr(
-          localMapping[childVal],
-          childVal
-        );
+        newLocalMapping[variable] = valueOr(localMapping[childVal], childVal);
       }, this);
       return functionDef.expression.evaluate(globalMapping, newLocalMapping);
     }

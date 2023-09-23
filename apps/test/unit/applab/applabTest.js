@@ -19,7 +19,7 @@ import Applab from '@cdo/apps/applab/applab';
 import designMode from '@cdo/apps/applab/designMode';
 import applabCommands from '@cdo/apps/applab/commands';
 import * as constants from '@cdo/apps/applab/constants';
-import shareWarnings from '@cdo/apps/shareWarnings';
+import * as shareWarnings from '@cdo/apps/shareWarnings';
 
 function setupVizDom() {
   // Create a sample DOM to test against

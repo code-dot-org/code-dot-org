@@ -1,9 +1,8 @@
-var tiles = require('@code-dot-org/maze').tiles;
-var Direction = tiles.Direction;
+import {tiles} from '@code-dot-org/maze';
+import blockUtils from '../block_utils';
+import * as reqBlocks from './requiredBlocks';
 
-var blockUtils = require('../block_utils');
-
-var reqBlocks = require('./requiredBlocks');
+const Direction = tiles.Direction;
 
 var wordSearchToolbox = function () {
   return blockUtils.createToolbox(
@@ -20,7 +19,7 @@ var wordSearchToolbox = function () {
 /*
  * Configuration for all levels.
  */
-module.exports = {
+export default {
   k_1: {
     isK1: true,
     instructionsImportant: true,

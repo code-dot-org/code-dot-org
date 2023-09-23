@@ -1,4 +1,4 @@
-var errorMapper = require('./errorMapper');
+import * as errorMapper from './errorMapper';
 
 var lintAnnotations = [];
 var runtimeAnnotations = [];
@@ -30,7 +30,7 @@ function updateGutter() {
  * When code runs, display jslint errors and runtime errors. Runtime errors will
  * go away the next time jstlint gets run (when code changes)
  */
-module.exports = {
+export default {
   detachFromSession: function () {
     aceSession = null;
     dropletEditor = null;

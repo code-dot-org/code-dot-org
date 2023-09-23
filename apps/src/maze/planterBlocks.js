@@ -1,10 +1,11 @@
 /**
  * Blocks specific to Planter
  */
-var msg = require('./locale');
-var blockUtils = require('../block_utils');
+import msg from './locale';
 
-exports.install = function (blockly, blockInstallOptions) {
+import blockUtils from '../block_utils';
+
+function install(blockly, blockInstallOptions) {
   var generator = blockly.getGenerator();
   blockly.JavaScript = generator;
 
@@ -58,4 +59,8 @@ exports.install = function (blockly, blockInstallOptions) {
     var code = `if (${argument}) {\n${branch}}\n`;
     return code;
   };
+}
+
+export default {
+  install,
 };
