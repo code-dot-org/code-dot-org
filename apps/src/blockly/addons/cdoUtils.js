@@ -12,7 +12,7 @@ import {
   convertXmlToJson,
   positionBlocksOnWorkspace,
 } from './cdoSerializationHelpers';
-import {parseElement as parseXmlElement} from '../../xml';
+import {parseElement} from '@cdo/apps/xml';
 import {unregisterProcedureBlocks} from '@blockly/block-shareable-procedures';
 import {blocks as procedureBlocks} from '../customBlocks/googleBlockly/proceduresBlocks';
 import experiments from '@cdo/apps/util/experiments';
@@ -100,7 +100,7 @@ function parseSourceAndHiddenDefinitions(source, hiddenDefinitions) {
   let blockOrderMap;
   hiddenDefinitions = hiddenDefinitions || '{}';
   if (isXml) {
-    const xml = parseXmlElement(source);
+    const xml = parseElement(source);
     parsedSource = convertXmlToJson(xml);
     blockOrderMap = Blockly.Xml.createBlockOrderMap(xml);
   } else {
