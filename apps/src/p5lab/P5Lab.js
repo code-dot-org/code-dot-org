@@ -9,7 +9,7 @@ import {
   SpritelabReservedWords,
   valueTypeTabShapeMap,
 } from './spritelab/constants';
-import {TOOLBOX_EDIT_MODE} from '../constants';
+import {TOOLBOX_EDIT_MODE, TestResults, ResultType} from '../constants';
 import experiments from '@cdo/apps/util/experiments';
 import {
   outputError,
@@ -55,7 +55,6 @@ import {actions as jsDebugger} from '@cdo/apps/lib/tools/jsdebugger/redux';
 import {addConsoleMessage, clearConsole} from './redux/textConsole';
 import {captureThumbnailFromCanvas} from '@cdo/apps/util/thumbnail';
 import Sounds from '@cdo/apps/Sounds';
-import {TestResults, ResultType} from '@cdo/apps/constants';
 import {showHideWorkspaceCallouts} from '@cdo/apps/code-studio/callouts';
 import wrap from './gamelab/debugger/replay';
 import firehoseClient from '@cdo/apps/lib/util/firehose';

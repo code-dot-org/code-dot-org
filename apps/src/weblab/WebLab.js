@@ -16,14 +16,13 @@ import reducers from './reducers';
 import * as actions from './actions';
 import {files as filesApi} from '@cdo/apps/clientApi';
 import assetListStore from '../code-studio/assets/assetListStore';
-import project from '@cdo/apps/code-studio/initApp/project';
+import project, {getCurrentId} from '@cdo/apps/code-studio/initApp/project';
 import {getStore} from '../redux';
 import {TestResults} from '../constants';
 import {FatalErrorType} from '@cdo/apps/weblab/constants';
 import {queryParams} from '@cdo/apps/code-studio/utils';
 import {reload} from '../utils';
 import firehoseClient from '../lib/util/firehose';
-import {getCurrentId} from '../code-studio/initApp/project';
 import logToCloud from '../logToCloud';
 
 export const WEBLAB_FOOTER_HEIGHT = 30;

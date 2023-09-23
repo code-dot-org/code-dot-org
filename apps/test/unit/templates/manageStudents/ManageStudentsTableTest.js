@@ -14,6 +14,7 @@ import {shallow, mount} from 'enzyme';
 import ManageStudentsTable, {
   UnconnectedManageStudentsTable,
   sortRows,
+  ManageStudentsNotificationFull,
 } from '@cdo/apps/templates/manageStudents/ManageStudentsTable';
 import CodeReviewGroupsDialog from '@cdo/apps/templates/manageStudents/CodeReviewGroupsDialog';
 import ManageStudentsActionsCell from '@cdo/apps/templates/manageStudents/ManageStudentsActionsCell';
@@ -42,7 +43,6 @@ import teacherSections, {
 import unitSelection from '@cdo/apps/redux/unitSelectionRedux';
 import isRtl from '@cdo/apps/code-studio/isRtlRedux';
 import NoSectionCodeDialog from '@cdo/apps/templates/manageStudents/NoSectionCodeDialog';
-import {ManageStudentsNotificationFull} from '../../../../src/templates/manageStudents/ManageStudentsTable';
 import {allowConsoleWarnings} from '../../../util/throwOnConsole';
 
 describe('ManageStudentsTable', () => {

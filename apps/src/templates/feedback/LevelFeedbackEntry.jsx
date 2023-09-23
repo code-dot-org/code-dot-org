@@ -3,11 +3,10 @@ import PropTypes from 'prop-types';
 import ReactDOM from 'react-dom';
 import i18n from '@cdo/locale';
 import color from '@cdo/apps/util/color';
-import {feedbackShape} from './types';
+import {feedbackShape, ReviewStates} from './types';
 import {UnlocalizedTimeAgo as TimeAgo} from '@cdo/apps/templates/TimeAgo';
 import FontAwesome from '@cdo/apps/templates/FontAwesome';
 import firehoseClient from '@cdo/apps/lib/util/firehose';
-import {ReviewStates} from '@cdo/apps/templates/feedback/types';
 import {KeepWorkingBadge} from '@cdo/apps/templates/progress/BubbleBadge';
 
 const getElementHeight = element => {

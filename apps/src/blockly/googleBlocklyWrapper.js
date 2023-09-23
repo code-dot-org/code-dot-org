@@ -5,7 +5,12 @@ import {
 } from '@blockly/plugin-scroll-options';
 import {NavigationController} from '@blockly/keyboard-navigation';
 import {CrossTabCopyPaste} from '@blockly/plugin-cross-tab-copy-paste';
-import {BlocklyVersion} from '@cdo/apps/blockly/constants';
+import {
+  BlocklyVersion,
+  ToolboxType,
+  Themes,
+  Renderers,
+} from '@cdo/apps/blockly/constants';
 import styleConstants from '@cdo/apps/styleConstants';
 import * as utils from '@cdo/apps/utils';
 import initializeCdoConstants from './addons/cdoConstants';
@@ -50,7 +55,6 @@ import CdoConnectionChecker from './addons/cdoConnectionChecker';
 import {UNKNOWN_BLOCK} from './addons/unknownBlock';
 import {registerAllContextMenuItems} from './addons/contextMenu';
 import BlockSvgUnused, {onBlockClickDragDelete} from './addons/blockSvgUnused';
-import {ToolboxType, Themes, Renderers} from './constants';
 import {flyoutCategory as functionsFlyoutCategory} from './customBlocks/googleBlockly/proceduresBlocks';
 import {flyoutCategory as behaviorsFlyoutCategory} from './customBlocks/googleBlockly/behaviorBlocks';
 import CdoBlockSerializer from './addons/cdoBlockSerializer.js';

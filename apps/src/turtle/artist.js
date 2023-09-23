@@ -30,7 +30,9 @@ import ReactDOM from 'react-dom';
 import color from '../util/color';
 import commonMsg from '@cdo/locale';
 import turtleMsg from './locale';
-import CustomMarshalingInterpreter from '../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
+import CustomMarshalingInterpreter, {
+  DEFAULT_EXECUTION_INFO,
+} from '../lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 import ArtistAPI from './api';
 import apiJavascript from './apiJavascript';
 import {Provider} from 'react-redux';
@@ -56,7 +58,6 @@ import dom from '../dom';
 import {SignInState} from '@cdo/apps/templates/currentUserRedux';
 import Visualization from '@code-dot-org/artist';
 import experiments from '../util/experiments';
-import {DEFAULT_EXECUTION_INFO} from '@cdo/apps/lib/tools/jsinterpreter/CustomMarshalingInterpreter';
 
 const CANVAS_HEIGHT = 400;
 const CANVAS_WIDTH = 400;

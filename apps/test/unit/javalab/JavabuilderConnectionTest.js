@@ -7,14 +7,12 @@ import {
   STATUS_MESSAGE_PREFIX,
   ExecutionType,
   CsaViewMode,
+  UserTestResultSignalType,
+  TestStatus,
 } from '@cdo/apps/javalab/constants';
 import * as ExceptionHandler from '@cdo/apps/javalab/javabuilderExceptionHandler';
 import * as TestResultHandler from '@cdo/apps/javalab/testResultHandler';
 import project from '@cdo/apps/code-studio/initApp/project';
-import {
-  UserTestResultSignalType,
-  TestStatus,
-} from '../../../src/javalab/constants';
 
 describe('JavabuilderConnection', () => {
   let onOutputMessage,

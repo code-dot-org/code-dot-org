@@ -2,12 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import {studio, pegasus} from '../util/urlHelpers';
-import {SectionLoginType} from '../../util/sharedConstants';
+import {SectionLoginType, EmailLinks} from '../../util/sharedConstants';
 import {queryParams} from '../../code-studio/utils';
 import color from '../../util/color';
 import i18n from '@cdo/locale';
 import SafeMarkdown from '@cdo/apps/templates/SafeMarkdown';
-import {EmailLinks} from '@cdo/apps/util/sharedConstants';
 
 const RESEARCH_ARTICLE_URL =
   'https://medium.com/@codeorg/cs-helps-students-outperform-in-school-college-and-workplace-66dd64a69536';

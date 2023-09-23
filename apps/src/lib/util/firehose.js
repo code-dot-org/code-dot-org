@@ -4,13 +4,11 @@ import {
   createUuid,
   trySetLocalStorage,
   tryGetLocalStorage,
-} from '@cdo/apps/utils';
-import {getStore} from '@cdo/apps/redux';
-import {
   getEnvironment,
   isDevelopmentEnvironment,
   isTestEnvironment,
-} from '../../utils';
+} from '@cdo/apps/utils';
+import {getStore} from '@cdo/apps/redux';
 
 /**
  * A barebones client for posting data to an AWS Firehose stream.
