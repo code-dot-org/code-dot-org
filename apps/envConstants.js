@@ -1,3 +1,4 @@
+/* eslint-disable import/no-commonjs */
 /**
  * Check environment to see if provided variable is set to be anything
  * @returns {bool}

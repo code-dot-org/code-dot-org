@@ -1,3 +1,4 @@
+/* eslint-disable import/no-commonjs */
 /**
  * An eslint formatter which extends the default formatter to customize the
  * messages for certain rules.
@@ -24,9 +25,7 @@ const RULE_MESSAGE_OVERRIDES = {
   // component as an alternative and include the original error message for
   // clarity.
   'react/no-danger': messageObject =>
-    `${
-      messageObject.message
-    }. Please use the SafeMarkdown React Component instead if possible.`
+    `${messageObject.message}. Please use the SafeMarkdown React Component instead if possible.`,
 };
 
 /**

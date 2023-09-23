@@ -1,3 +1,4 @@
+/* eslint-disable import/no-commonjs */
 var webpackKarmaConfig = require('./webpackKarma.config');
 var envConstants = require('./envConstants');
 
