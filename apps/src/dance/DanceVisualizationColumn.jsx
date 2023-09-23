@@ -70,7 +70,7 @@ class DanceVisualizationColumn extends React.Component {
     songData: PropTypes.objectOf(PropTypes.object).isRequired,
     userType: PropTypes.string.isRequired,
     under13: PropTypes.bool.isRequired,
-    showingAi: PropTypes.bool.isRequired,
+    showingAi: PropTypes.object,
   };
 
   state = {
@@ -94,11 +94,11 @@ class DanceVisualizationColumn extends React.Component {
     const enableSongSelection =
       !this.props.levelIsRunning && !this.props.levelRunIsStarting;
 
-    if (this.props.showingAi) {
+    /*if (this.props.showingAi) {
       //this.props.showingAi.size_.width = 100;
       this.props.showingAi.setValue(JSON.stringify({text: 'hello'}));
       //this.props.showingAi.renderContent();
-    }
+    }*/
 
     return (
       <div>

@@ -7,6 +7,17 @@ import {CHAT_COMPLETION_URL} from '@cdo/apps/aichat/constants';
 import {useSelector} from 'react-redux';
 import {useAppDispatch} from '@cdo/apps/util/reduxHooks';
 import {setShowingAi} from './danceRedux';
+import {
+  Heading3,
+  Heading5,
+  BodyTwoText,
+} from '@cdo/apps/componentLibrary/typography';
+import classNames from 'classnames';
+const Typist = require('react-typist').default;
+
+//const aiBotHead = require('@cdo/static/dance/ai/ai-bot-head.png');
+//const aiBotBody = require('@cdo/static/dance/ai/ai-bot-head.png');
+const aiBotBorder = require('@cdo/static/dance/ai-bot-border.png');
 
 const promptString = 'Generate a scene using this mood:';
 
@@ -53,7 +64,7 @@ const DanceAi: React.FunctionComponent<DanceAiProps> = ({
 }) => {
   const dispatch = useAppDispatch();
 
-  const ITEM_COUNT = 3;
+  const SLOT_COUNT = 3;
 
   const inputLibraryFilename = 'ai-inputs';
   const inputLibrary = require(`@cdo/static/dance/${inputLibraryFilename}.json`);
@@ -61,6 +72,8 @@ const DanceAi: React.FunctionComponent<DanceAiProps> = ({
   const [mode, setMode] = useState('selectInputs');
   const [currentInputSlot, setCurrentInputSlot] = useState(0);
   const [inputs, setInputs] = useState<string[]>([]);
+  const [responseParams, setResponseParams] = useState<string>('');
+  const [responseExplanation, setResponseExplanation] = useState<string>('');
 
   const showingAi = useSelector((state: {dance: any}) => state.dance.showingAi);
 
@@ -69,7 +82,7 @@ const DanceAi: React.FunctionComponent<DanceAiProps> = ({
   };
 
   const getAllItems = (slotIndex: number) => {
-    if (slotIndex >= ITEM_COUNT) {
+    if (slotIndex >= SLOT_COUNT) {
       return [];
     }
 
@@ -84,7 +97,7 @@ const DanceAi: React.FunctionComponent<DanceAiProps> = ({
   };
 
   const handleItemClick = (id: string) => {
-    if (currentInputSlot < ITEM_COUNT) {
+    if (currentInputSlot < SLOT_COUNT) {
       setInputs([...inputs, id]);
       setCurrentInputSlot(currentInputSlot + 1);
     }
@@ -101,35 +114,36 @@ const DanceAi: React.FunctionComponent<DanceAiProps> = ({
     // block's value into a useful response.
     const response = await doAi(value);
 
-    setMode('results');
-
     const params = JSON.parse(response);
     console.log('handle AI:', params);
 
     showingAi.setValue(response);
 
-    /*
-      this.setBackgroundEffect(
-        params.backgroundEffect,
-        params.backgroundColor
-      );
+    const picked = (({
+      backgroundEffect,
+      backgroundColor,
+      foregroundEffect,
+    }) => ({backgroundEffect, backgroundColor, foregroundEffect}))(params);
 
-      this.setForegroundEffect(params.foregroundEffect);
+    const pickedString = JSON.stringify(picked)
+      .replace(/":"/g, '": "')
+      .replace(/","/g, '", "');
+    setResponseParams(`ai(${pickedString})`);
+    setResponseExplanation(params.explanation);
 
-      if (params.setDancer) {
-        this.makeNewDanceSprite('MOOSE', 'harold', null);
-      }*/
+    setMode('results');
   };
 
   const handleDoneClick = () => {
-    dispatch(setShowingAi(false));
+    dispatch(setShowingAi(undefined));
   };
 
   return (
     <AccessibleDialog className={moduleStyles.dialog} onClose={onClose}>
-      <div tabIndex={0}>AI</div>
+      <div tabIndex={0}>
+        <Heading3>AI</Heading3>
+      </div>
 
-      {mode === 'generating' && <div>Please wait</div>}
       {mode === 'selectInputs' && (
         <div>
           <div className={moduleStyles.itemContainer}>
@@ -144,41 +158,73 @@ const DanceAi: React.FunctionComponent<DanceAiProps> = ({
               );
             })}
           </div>
-          <div>
-            {promptString}
-            {inputs.map((input, index) => {
-              return (
-                inputs[index] && (
-                  <img
-                    key={inputs[index]}
-                    src={getImageUrl(inputs[index])}
-                    className={moduleStyles.item}
-                  />
-                )
-              );
-            })}
+          <div className={moduleStyles.body}>
+            <div className={moduleStyles.prompt}>
+              {promptString}
+              {Array.from(Array(SLOT_COUNT).keys()).map(index => {
+                return (
+                  <div key={index} className={moduleStyles.inputContainer}>
+                    <div className={moduleStyles.inputBackground}>&nbsp;</div>
+                    {inputs[index] && (
+                      <img
+                        src={getImageUrl(inputs[index])}
+                        className={classNames(
+                          moduleStyles.inputItem,
+                          moduleStyles.item
+                        )}
+                      />
+                    )}
+                  </div>
+                );
+              })}
+            </div>
           </div>
-          {currentInputSlot >= ITEM_COUNT && (
-            <Button
-              id="select-all-sections"
-              text={'Generate'}
-              onClick={handleGenerateClick}
-              color={Button.ButtonColor.brandSecondaryDefault}
-            />
-          )}
+        </div>
+      )}
+      {mode === 'generating' && (
+        <div className={moduleStyles.resultsContainer}>
+          <div className={moduleStyles.botContainer}>
+            <img src={aiBotBorder} className={moduleStyles.bot} />
+          </div>
+          <div className={moduleStyles.body}>Please wait</div>
         </div>
       )}
       {mode === 'results' && (
-        <div>
-          Done!
+        <div className={moduleStyles.resultsContainer}>
+          <div className={moduleStyles.botContainer}>
+            <img src={aiBotBorder} className={moduleStyles.bot} />
+          </div>
+          <Typist startDelay={0} avgTypingDelay={30} cursor={{show: false}}>
+            <Heading5>Code</Heading5>
+            <pre className={classNames(moduleStyles.code, moduleStyles.pre)}>
+              {responseParams}
+            </pre>
+            <Heading5>Explanation</Heading5>
+            <pre className={classNames(moduleStyles.code, moduleStyles.pre)}>
+              {responseExplanation}
+            </pre>
+          </Typist>
+        </div>
+      )}
+      <div className={moduleStyles.buttonContainer}>
+        {mode === 'selectInputs' && currentInputSlot >= SLOT_COUNT && (
+          <Button
+            id="select-all-sections"
+            text={'Generate'}
+            onClick={handleGenerateClick}
+            color={Button.ButtonColor.brandSecondaryDefault}
+          />
+        )}
+
+        {mode === 'results' && (
           <Button
             id="done"
             text={'Done'}
             onClick={handleDoneClick}
             color={Button.ButtonColor.brandSecondaryDefault}
           />
-        </div>
-      )}
+        )}
+      </div>
     </AccessibleDialog>
   );
 };
