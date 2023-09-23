@@ -13,7 +13,7 @@ import * as assetPrefix from './assetManagement/assetPrefix';
 import * as assets from './code-studio/assets';
 import * as blockUtils from './block_utils';
 import codegen from './lib/tools/jsinterpreter/codegen';
-import * as dom from './dom';
+import dom from './dom';
 import * as dropletUtils from './dropletUtils';
 import * as shareWarnings from './shareWarnings';
 import * as utils from './utils';
