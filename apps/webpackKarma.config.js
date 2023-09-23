@@ -18,6 +18,7 @@ const karmaConfig = {
     mode: 'development',
     // karma-sourcemap-loader only supports inline-source-map and source-map
     devtool: 'source-map',
+    stats: 'minimal',
     resolve: {
       ...WEBPACK_BASE_CONFIG.resolve,
       ...{
