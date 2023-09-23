@@ -124,7 +124,6 @@ module.exports = function (config) {
 
     // test results reporter to use
     reporters: [
-      'mocha',
       'spec',
       ...(envConstants.DRONE ? ['junit', 'coverage-istanbul'] : []),
       ...(envConstants.COVERAGE ? ['coverage-istanbul'] : []),
