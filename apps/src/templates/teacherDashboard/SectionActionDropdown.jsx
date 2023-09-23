@@ -12,6 +12,7 @@ import {
   removeSection,
   toggleSectionHidden,
   importOrUpdateRoster,
+  setRosterProvider,
 } from './teacherSectionsRedux';
 import {connect} from 'react-redux';
 import PrintCertificates from './PrintCertificates';
@@ -21,7 +22,6 @@ import Button from '../Button';
 import DialogFooter from './DialogFooter';
 import QuickActionsCell from '@cdo/apps/templates/tables/QuickActionsCell';
 import {getStore} from '@cdo/apps/redux';
-import {setRosterProvider} from '@cdo/apps/templates/teacherDashboard/teacherSectionsRedux';
 import {SectionLoginType} from '@cdo/apps/util/sharedConstants';
 
 class SectionActionDropdown extends Component {

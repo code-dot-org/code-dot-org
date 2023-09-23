@@ -1,8 +1,7 @@
-import {SVG_NS} from '@cdo/apps/constants';
+import {SVG_NS, TOOLBOX_EDIT_MODE} from '@cdo/apps/constants';
 import {getStore} from '@cdo/apps/redux';
 import {getLocation} from '../redux/locationPicker';
 import {P5LabInterfaceMode} from '../constants';
-import {TOOLBOX_EDIT_MODE} from '../../constants';
 import {NO_OPTIONS_MESSAGE} from '@cdo/apps/blockly/constants';
 import {animationSourceUrl} from '../redux/animationList';
 import {changeInterfaceMode} from '../actions';

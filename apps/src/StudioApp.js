@@ -29,7 +29,7 @@ import Sounds from './Sounds';
 import VersionHistory from './templates/VersionHistory';
 import WireframeButtons from './lib/ui/WireframeButtons';
 import annotationList from './acemode/annotationList';
-import color from './util/color';
+import color, {workspace_running_background, white} from './util/color';
 import firehoseClient from './lib/util/firehose';
 import getAchievements from './achievements';
 import logToCloud from './logToCloud';
@@ -84,7 +84,6 @@ import {queryParams} from '@cdo/apps/code-studio/utils';
 import {RESIZE_VISUALIZATION_EVENT} from './lib/ui/VisualizationResizeBar';
 import {userAlreadyReportedAbuse} from '@cdo/apps/reportAbuse';
 import {setArrowButtonDisabled} from '@cdo/apps/templates/arrowDisplayRedux';
-import {workspace_running_background, white} from '@cdo/apps/util/color';
 import WorkspaceAlert from '@cdo/apps/code-studio/components/WorkspaceAlert';
 import {closeWorkspaceAlert} from './code-studio/projectRedux';
 

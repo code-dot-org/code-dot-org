@@ -7,8 +7,11 @@ import {
   __testing_restoreRedux,
 } from '@cdo/apps/redux';
 import {ApplabInterfaceMode} from '@cdo/apps/applab/constants';
-import {reducers, actions} from '@cdo/apps/applab/redux/applab';
-import {REDIRECT_RESPONSE} from '../../../../src/applab/redux/applab';
+import {
+  reducers,
+  actions,
+  REDIRECT_RESPONSE,
+} from '@cdo/apps/applab/redux/applab';
 
 describe('App Lab redux module', () => {
   let store;
