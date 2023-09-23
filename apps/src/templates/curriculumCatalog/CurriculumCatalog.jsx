@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import PropTypes from 'prop-types';
 import {curriculumDataShape} from './curriculumCatalogShapes';
 import i18n from '@cdo/locale';
@@ -12,7 +12,6 @@ import CurriculumCatalogFilters from './CurriculumCatalogFilters';
 import CurriculumCatalogCard from '@cdo/apps/templates/curriculumCatalog/CurriculumCatalogCard';
 import analyticsReporter from '@cdo/apps/lib/util/AnalyticsReporter';
 import {EVENTS} from '@cdo/apps/lib/util/AnalyticsConstants';
-import {queryParams} from '../../code-studio/utils';
 
 const CurriculumCatalog = ({
   curriculaData,
@@ -27,7 +26,17 @@ const CurriculumCatalog = ({
     useState(false);
   const [expandedCardKey, setExpandedCardKey] = useState(null);
 
-  const isQuickViewDisplayed = queryParams()['quick_view'] === 'true';
+  const isQuickViewDisplayed = true;
+
+  useEffect(() => {
+    const expandedCardFound = filteredCurricula.some(
+      co => expandedCardKey === co['key']
+    );
+
+    if (!expandedCardFound) {
+      setExpandedCardKey(null);
+    }
+  }, [expandedCardKey, filteredCurricula]);
 
   const handleAssignSuccess = assignmentData => {
     setAssignSuccessMessage(

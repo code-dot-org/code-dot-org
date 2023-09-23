@@ -34,18 +34,15 @@ module.exports = {
   // For details, see:
   // https://github.com/code-dot-org/code-dot-org/blob/staging/apps/docs/build.md
   DEBUG_MINIFIED: !!getMoocEnv('DEBUG_MINIFIED'),
-  // Used by karma to force singleRun mode
-  WATCH: !!getMoocEnv('WATCH'),
   // If set, will collect code coverage info
   COVERAGE: getBoolEnv('COVERAGE'),
+  // 'unit', 'integration', 'storybook', or 'entry'
   NODE_ENV: process.env.NODE_ENV,
   CIRCLECI: process.env.CIRCLECI,
   DRONE: process.env.DRONE,
   CIRCLE_TEST_REPORTS: process.env.CIRCLE_TEST_REPORTS,
-  BROWSER: process.env.BROWSER,
   // If set, will turn on react hot loader and run the webpack dev server
   HOT: !!process.env.HOT,
-  LEVEL_TYPE: process.env.LEVEL_TYPE,
   // Include static assets when serving storybook locally
   STORYBOOK_STATIC_ASSETS: process.env.STORYBOOK_STATIC_ASSETS,
 };

@@ -12,7 +12,7 @@
     },
     "new_name": null,
     "family_name": "ai-ethics",
-    "serialized_at": "2023-09-14 03:22:42 UTC",
+    "serialized_at": "2023-09-15 23:22:32 UTC",
     "published_state": "in_development",
     "instruction_type": "teacher_led",
     "instructor_audience": "teacher",
@@ -60,6 +60,8 @@
       "has_lesson_plan": true,
       "relative_position": 2,
       "properties": {
+        "overview": "Students explore the impact of generative AI by participating in a collaborative game. They start by watching a video introducing how large language models work, like chatbots or generative images. Then, students take on a persona of someone impacted by generative AI to read a few articles and react in-character. Then, students form groups and are given a scenario involving their persona and generative AI. Working together, they come up with guidelines for how generative AI should be implemented in this scenario that includes the voices and perspectives of all stakeholders. Finally, students share their results with the class and reflect on this process.",
+        "student_overview": "Learn about generative AI by taking on a persona and coming up with appropriate guidelines for generative AI"
       },
       "seeding_key": {
         "lesson.key": "lesson-2",
@@ -454,18 +456,8 @@
       }
     },
     {
-      "key": "5ba09a86-be17-454f-90df-684f4a092b9d",
-      "position": 14,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "5ba09a86-be17-454f-90df-684f4a092b9d",
-        "lesson_activity.key": "fe088a05-31b9-4a26-991c-1a12e71d6648"
-      }
-    },
-    {
       "key": "a45155ff-19af-43ac-bf11-6ca4001816f4",
-      "position": 15,
+      "position": 14,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Read over the introduction on the activity guide. Have groups choose an area of specialization, encouraging groups to pick different topics if possible. Students should skim 2-3 articles on their topic."
       },
@@ -475,18 +467,8 @@
       }
     },
     {
-      "key": "c65c33f1-1c86-47fe-848c-c3e18622bbdd",
-      "position": 16,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "c65c33f1-1c86-47fe-848c-c3e18622bbdd",
-        "lesson_activity.key": "fe088a05-31b9-4a26-991c-1a12e71d6648"
-      }
-    },
-    {
       "key": "d314fbbc-6eef-46ca-9e01-26cabb1aca65",
-      "position": 17,
+      "position": 15,
       "properties": {
         "description": "<i class=\"fa fa-file-text-o\" aria-hidden=\"true\"></i> **Distribute:** Provide each student with one copy of the [r research_reflection_guide/ai-ethics/2023] handout.\n\n\n"
       },
@@ -496,18 +478,8 @@
       }
     },
     {
-      "key": "b487b403-1b0f-48eb-80cc-7182193d477c",
-      "position": 18,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "b487b403-1b0f-48eb-80cc-7182193d477c",
-        "lesson_activity.key": "fe088a05-31b9-4a26-991c-1a12e71d6648"
-      }
-    },
-    {
       "key": "a7d5069b-aa1c-4efa-a8d8-b58bd43a6c7b",
-      "position": 19,
+      "position": 16,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students research their area with fellow group members, answering questions on the handout along the way. Have students only consider the front page of the reflection for now. Students can skim the longer articles for key ideas, take notes, pose additional questions, and use a search engine to investigate further if time permits."
       },
@@ -517,18 +489,8 @@
       }
     },
     {
-      "key": "bef341c8-4ebd-4e78-959c-f515a899f303",
-      "position": 20,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "bef341c8-4ebd-4e78-959c-f515a899f303",
-        "lesson_activity.key": "fe088a05-31b9-4a26-991c-1a12e71d6648"
-      }
-    },
-    {
       "key": "378dbba8-2a98-4d7b-8695-141021465608",
-      "position": 21,
+      "position": 17,
       "properties": {
         "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Monitor students as they perform their research. Consider prompting students for their reactions as they read certain articles, especially on unexpected impacts of technology on society."
       },
@@ -538,18 +500,8 @@
       }
     },
     {
-      "key": "7d86841b-85ce-495d-8f6f-35ee070dd23d",
-      "position": 22,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "7d86841b-85ce-495d-8f6f-35ee070dd23d",
-        "lesson_activity.key": "fe088a05-31b9-4a26-991c-1a12e71d6648"
-      }
-    },
-    {
       "key": "5cb9d6e8-b73f-4bfd-829d-8f43c3e84b66",
-      "position": 23,
+      "position": 18,
       "properties": {
         "description": "**Regroup:** Regroup the class for a class shareout"
       },
@@ -559,18 +511,8 @@
       }
     },
     {
-      "key": "bcfaff85-6fd4-4ba3-8334-8cfac4ae170b",
-      "position": 24,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "bcfaff85-6fd4-4ba3-8334-8cfac4ae170b",
-        "lesson_activity.key": "fe088a05-31b9-4a26-991c-1a12e71d6648"
-      }
-    },
-    {
       "key": "98b65021-bdf1-49a1-a85d-58102b4d4347",
-      "position": 25,
+      "position": 19,
       "properties": {
         "description": "<i class=\"fa fa-comments\" aria-hidden=\"true\"></i> **Prompt:** What is one thing that surprised you in your research? This could be about a positive use of this technology, or something concerning you didn't know about."
       },
@@ -580,18 +522,8 @@
       }
     },
     {
-      "key": "acaf8cca-a1ff-4f7d-8cec-8dfe087a137e",
-      "position": 26,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "acaf8cca-a1ff-4f7d-8cec-8dfe087a137e",
-        "lesson_activity.key": "fe088a05-31b9-4a26-991c-1a12e71d6648"
-      }
-    },
-    {
       "key": "58aa1c76-1932-4388-a141-a2efb19b3fee",
-      "position": 27,
+      "position": 20,
       "properties": {
         "description": "<i class=\"fa fa-lightbulb-o\" aria-hidden=\"true\"></i> **Discussion Goal:** This is an opportunity for students to share their thoughts and reflections from the articles, processing their thoughts and emotions. Some students may have strong reactions to the way AI is being used in society, both positively and negatively. Try to guide the discussion so a variety of perspectives are heard, possibly even complicating people's thoughts on the technology as they weigh the pros and cons of these technologies and whether the benefits are worth the other consequences."
       },
@@ -601,18 +533,8 @@
       }
     },
     {
-      "key": "5294e2d8-fcf9-481d-9462-3011e22f6086",
-      "position": 28,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "5294e2d8-fcf9-481d-9462-3011e22f6086",
-        "lesson_activity.key": "fe088a05-31b9-4a26-991c-1a12e71d6648"
-      }
-    },
-    {
       "key": "32c2d10f-8f5b-4143-8905-120466671907",
-      "position": 29,
+      "position": 21,
       "properties": {
         "description": "Any new technology can be complicated, as we've heard so far. One of the challenges is figuring out how to weigh the benefits with the harms - what potential downsides are we willing to accept in order to reap the benefits of a new technology? Or do we need to make changes so the harms are minimized? Or rethink things entirely?\n\nThis line of thinking is related to **ethics**, or guidelines on how a person or society should behave.  After reading the articles, you may have an opinion on what ethical uses of this technology are. We're going to imagine what these ethical uses might be on the back of your activity guide.",
         "remarks": true
@@ -623,18 +545,8 @@
       }
     },
     {
-      "key": "0e34de41-9d70-466f-8928-7589911b4058",
-      "position": 30,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "0e34de41-9d70-466f-8928-7589911b4058",
-        "lesson_activity.key": "fe088a05-31b9-4a26-991c-1a12e71d6648"
-      }
-    },
-    {
       "key": "9b1e32fb-7b7e-4387-8267-5ba5c7d51f18",
-      "position": 31,
+      "position": 22,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students flip to the back of their handout and read the introduction."
       },
@@ -644,20 +556,16 @@
       }
     },
     {
-      "key": "839e8e8a-bcca-45e3-a3bb-795717cc536e",
-      "position": 32,
-      "properties": {
-      },
-      "seeding_key": {
-        "activity_section.key": "839e8e8a-bcca-45e3-a3bb-795717cc536e",
-        "lesson_activity.key": "fe088a05-31b9-4a26-991c-1a12e71d6648"
-      }
-    },
-    {
       "key": "871eb332-b63a-430f-958a-075cbe3bf544",
-      "position": 33,
+      "position": 23,
       "properties": {
-        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Display the slide with the ethical frameworks on them:\n\n* Utilitarianism - Does this generate the best outcome for the largest number of people?\n* Deontology - What are the rules?\n* Rights-Based Ethics - Are people's rights being honored?\n* Care-Based Ethics - Are people receiving appropriate care for their wellbeing?\n* Fairness Approach - What action treats everyone the same?"
+        "description": "<i class=\"fa fa-list-alt\" aria-hidden=\"true\"></i> **Display:** Display the slide with the ethical frameworks on them as well as the hypothetical scenario",
+        "tips": [
+          {
+            "type": "teachingTip",
+            "markdown": "**Why Introduce Ethical Frameworks?** This lesson introduces 5 ethical frameworks: Utilitarianism, Rights-Based Ethics, Care-Based Ethics, Equality-based, Values-Based. The goal of this lesson is _not_ to become an expert on each framework, nor is it to become an expert on ethical thinking in general. Instead, the hope is students start to recognize that anytime they make a choice, that choice is influenced by covert factors on how they see and value the world **and those values have names**. For example:\n\n- Deciding to do something because \"it's what most of us want\" has a name - Utilitarianism.\n- Or, deciding _not_ to do something because \"first, do no harm\" has a name - Care-Based Ethics. \n\nBy introducing students to these frameworks, we give them the language to talk about these values so they can see how they are informing the decisions they (and others) are making. And, they can also start to see other ways of thinking that might lead to different decisions that they may not have previously considered."
+          }
+        ]
       },
       "seeding_key": {
         "activity_section.key": "871eb332-b63a-430f-958a-075cbe3bf544",
@@ -666,7 +574,7 @@
     },
     {
       "key": "aa83e171-956b-407c-a1ac-34e4e9686393",
-      "position": 34,
+      "position": 24,
       "properties": {
       },
       "seeding_key": {
@@ -676,7 +584,7 @@
     },
     {
       "key": "9c748f44-3f3d-446b-9f1b-dd90930ec84d",
-      "position": 35,
+      "position": 25,
       "properties": {
         "description": "These are examples of **ethical frameworks**, which are different viewpoints on how to make ethical decisions. Take some consider which viewpoint resonates with your own on how to address some of the issues with the technology that you researched",
         "remarks": true
@@ -688,7 +596,7 @@
     },
     {
       "key": "32b5ea10-df25-4a76-977c-d4a55f183c18",
-      "position": 36,
+      "position": 26,
       "properties": {
       },
       "seeding_key": {
@@ -698,7 +606,7 @@
     },
     {
       "key": "501981ff-3864-4b52-8bd6-f11c031cc49c",
-      "position": 37,
+      "position": 27,
       "properties": {
         "description": "<i class=\"fa fa-check-square-o\" aria-hidden=\"true\"></i> **Do This:** Have students fill in the back of their reflection guide"
       },
@@ -709,7 +617,7 @@
     },
     {
       "key": "a732598f-26a0-4f40-b858-3aa59356a5ab",
-      "position": 38,
+      "position": 28,
       "properties": {
       },
       "seeding_key": {
@@ -719,7 +627,7 @@
     },
     {
       "key": "1e292fb2-2f86-4eee-89b1-ffc0d5b7ccb2",
-      "position": 39,
+      "position": 29,
       "properties": {
         "description": "<i class=\"fa fa-refresh\" aria-hidden=\"true\"></i> **Circulate:** Monitor students as they complete the task, connecting their own ideas with different ethical frameworks. The frameworks are meant to help students shape their thoughts and potentially make them more coherent, and introduce them to other viewpoints on how to solve a particular problem. For example, students may default to a Utilitarian point of view where as long as the most people get the benefits everything is fine, but may shift their thinking when considering an Ethics of Care perspective and reconsider how technology impacts different groups."
       },
@@ -730,7 +638,7 @@
     },
     {
       "key": "95365002-deff-4808-941f-896faa80774f",
-      "position": 40,
+      "position": 30,
       "properties": {
       },
       "seeding_key": {
@@ -740,7 +648,7 @@
     },
     {
       "key": "8b198500-9c3c-4195-8697-61812677b22c",
-      "position": 41,
+      "position": 31,
       "properties": {
         "description": "**Regroup:** Regroup students to introduce the culminating activity of the lesson."
       },
@@ -751,7 +659,7 @@
     },
     {
       "key": "85e90e0c-c779-40a4-b12c-9baa70d0ae3d",
-      "position": 42,
+      "position": 32,
       "properties": {
       },
       "seeding_key": {
@@ -761,7 +669,7 @@
     },
     {
       "key": "8be6b726-ddca-4424-aa12-21bc80c263bc",
-      "position": 43,
+      "position": 33,
       "properties": {
         "tips": [
           {
@@ -1655,7 +1563,7 @@
       "key": "bedaca2d-4f48-45b4-b6e9-431f6a38cc13",
       "position": 30,
       "properties": {
-        "description": "**Share Out:** Have groups share out their scenario and the guidelines they created, especially since each group had a different scenario and read a different set of articles."
+        "description": "**Share Out:** Have groups share out their scenario and the guidelines they created, especially since each group had a different scenario and read a different set of articles. Groups should share what their problem was, what their biggest challenges were, and the organization rules they came up with!"
       },
       "seeding_key": {
         "activity_section.key": "bedaca2d-4f48-45b4-b6e9-431f6a38cc13",
